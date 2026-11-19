@@ -1,632 +1,758 @@
 export const id = 281;
-export const ids = [281];
+export const ids = [281, 282];
 export const modules = {
-  40011: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => gT,
-      e: () => UT,
-      i: () => MT,
-      j: () => rT,
-      k: () => LT,
-      o: () => KT,
-      q: () => cT,
-      s: () => xT
+  40493: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      CharacterCustomisationUI: () => Uz
     });
-    var iT = IT(36118),
-      zT = IT(36177),
-      kT = IT(36156),
-      WT = IT(40016),
-      XT = IT(38994),
-      BT = IT(38790),
-      FT = IT(38835),
-      ST = IT(38799),
-      DT = IT(36166);
-    const LT = Object.freeze(new iT.c(0, 0, 0, 0)),
-      xT = Object.freeze(iT.m.Zero()),
-      cT = Object.freeze(iT.j.Zero()),
-      KT = Object.freeze(BT.d.Zero()),
-      MT = Object.freeze(zT.e.Black()),
-      rT = Object.freeze(new zT.i(0, 0, 0, 0)),
-      AT = {
-        key: 0,
-        repeatCount: 0,
-        Kz: 2
-      };
-    class gT {
-      static _PrepareAnimation(TT, oT, IT, kT, WT, XT, FT, ST) {
-        let DT;
-        if (!isNaN(parseFloat(WT)) && isFinite(WT) ? DT = gT.ANIMATIONTYPE_FLOAT : WT instanceof iT.c ? DT = gT.ANIMATIONTYPE_QUATERNION : WT instanceof iT.m ? DT = gT.ANIMATIONTYPE_VECTOR3 : WT instanceof iT.j ? DT = gT.ANIMATIONTYPE_VECTOR2 : WT instanceof zT.e ? DT = gT.ANIMATIONTYPE_COLOR3 : WT instanceof zT.i ? DT = gT.ANIMATIONTYPE_COLOR4 : WT instanceof BT.d && (DT = gT.ANIMATIONTYPE_SIZE), void 0 == DT) return null;
-        const LT = new gT(TT, oT, IT, DT, FT),
-          xT = [{
-            frame: 0,
-            value: WT
-          }, {
-            frame: kT,
-            value: XT
-          }];
-        return LT.setKeys(xT), void 0 !== ST && LT.setEasingFunction(ST), LT
-      }
-      get runtimeAnimations() {
-        return this._runtimeAnimations
-      }
-      get hasRunningRuntimeAnimations() {
-        for (const TT of this._runtimeAnimations)
-          if (!TT.isStopped()) return !0;
-        return !1
-      }
-      constructor(TT, oT, IT, iT, zT, kT) {
-        this.name = TT, this.targetProperty = oT, this.framePerSecond = IT, this.dataType = iT, this.Kz = zT, this.enableBlending = kT, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = oT.split("."), this.dataType = iT, this.Kz = void 0 === zT ? gT.ANIMATIONLOOPMODE_CYCLE : zT, this.uniqueId = gT._UniqueIdGenerator++
-      }
-      toString(TT) {
-        let oT = "Name: " + this.name + ", property: " + this.targetProperty;
-        if (oT += ", datatype: " + ["Float", "sc", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], oT += ", nKeys: " + (this._keys ? this._keys.length : "none"), oT += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), TT) {
-          oT += ", Ranges: {";
-          let TT = !0;
-          for (const IT in this._ranges) TT || (oT += ", "), TT = !1, oT += IT;
-          oT += "}"
-        }
-        return oT
-      }
-      addEvent(TT) {
-        this._events.push(TT), this._events.sort(((TT, oT) => TT.frame - oT.frame))
-      }
-      removeEvents(TT) {
-        for (let oT = 0; oT < this._events.length; oT++) this._events[oT].frame === TT && (this._events.splice(oT, 1), oT--)
-      }
-      getEvents() {
-        return this._events
-      }
-      createRange(TT, oT, IT) {
-        this._ranges[TT] || (this._ranges[TT] = new WT.e(TT, oT, IT))
-      }
-      deleteRange(TT) {
-        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const IT = this._ranges[TT];
-        if (IT) {
-          if (oT) {
-            const TT = IT.from,
-              oT = IT.to;
-            for (let IT = this._keys.length - 1; IT >= 0; IT--) this._keys[IT].frame >= TT && this._keys[IT].frame <= oT && this._keys.splice(IT, 1)
-          }
-          this._ranges[TT] = null
-        }
-      }
-      getRange(TT) {
-        return this._ranges[TT]
-      }
-      getKeys() {
-        return this._keys
-      }
-      getHighestFrame() {
-        let TT = 0;
-        for (let oT = 0, IT = this._keys.length; oT < IT; oT++) TT < this._keys[oT].frame && (TT = this._keys[oT].frame);
-        return TT
-      }
-      getEasingFunction() {
-        return this._easingFunction
-      }
-      setEasingFunction(TT) {
-        this._easingFunction = TT
-      }
-      floatInterpolateFunction(TT, oT, IT) {
-        return (0, kT.Lerp)(TT, oT, IT)
-      }
-      floatInterpolateFunctionWithTangents(TT, oT, IT, iT, zT) {
-        return (0, kT.Hermite)(TT, oT, IT, iT, zT)
-      }
-      quaternionInterpolateFunction(TT, oT, IT) {
-        return iT.c.Slerp(TT, oT, IT)
-      }
-      quaternionInterpolateFunctionWithTangents(TT, oT, IT, zT, kT) {
-        return iT.c.Hermite(TT, oT, IT, zT, kT).normalize()
-      }
-      vector3InterpolateFunction(TT, oT, IT) {
-        return iT.m.Lerp(TT, oT, IT)
-      }
-      vector3InterpolateFunctionWithTangents(TT, oT, IT, zT, kT) {
-        return iT.m.Hermite(TT, oT, IT, zT, kT)
-      }
-      vector2InterpolateFunction(TT, oT, IT) {
-        return iT.j.Lerp(TT, oT, IT)
-      }
-      vector2InterpolateFunctionWithTangents(TT, oT, IT, zT, kT) {
-        return iT.j.Hermite(TT, oT, IT, zT, kT)
-      }
-      sizeInterpolateFunction(TT, oT, IT) {
-        return BT.d.Lerp(TT, oT, IT)
-      }
-      color3InterpolateFunction(TT, oT, IT) {
-        return zT.e.Lerp(TT, oT, IT)
-      }
-      color3InterpolateFunctionWithTangents(TT, oT, IT, iT, kT) {
-        return zT.e.Hermite(TT, oT, IT, iT, kT)
-      }
-      color4InterpolateFunction(TT, oT, IT) {
-        return zT.i.Lerp(TT, oT, IT)
-      }
-      color4InterpolateFunctionWithTangents(TT, oT, IT, iT, kT) {
-        return zT.i.Hermite(TT, oT, IT, iT, kT)
-      }
-      _getKeyValue(TT) {
-        return "function" === typeof TT ? TT() : TT
-      }
-      evaluate(TT) {
-        return AT.key = 0, this._interpolate(TT, AT)
-      }
-      _interpolate(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (oT.Kz === gT.ANIMATIONLOOPMODE_CONSTANT && oT.repeatCount > 0) return oT.highLimitValue.clone ? oT.highLimitValue.clone() : oT.highLimitValue;
-        const iT = this._keys;
-        let zT;
-        if (this._coreAnimation) zT = this._coreAnimation._key;
-        else {
-          const kT = iT.length;
-          for (zT = oT.key; zT >= 0 && TT < iT[zT].frame;) --zT;
-          for (; zT + 1 <= kT - 1 && TT >= iT[zT + 1].frame;) ++zT;
-          if (oT.key = zT, zT < 0) return IT ? void 0 : this._getKeyValue(iT[0].value);
-          if (zT + 1 > kT - 1) return IT ? void 0 : this._getKeyValue(iT[kT - 1].value);
-          this._key = zT
-        }
-        const kT = iT[zT],
-          WT = iT[zT + 1];
-        if (IT && (TT === kT.frame || TT === WT.frame)) return;
-        const XT = this._getKeyValue(kT.value),
-          BT = this._getKeyValue(WT.value);
-        if (1 === kT.interpolation) return WT.frame > TT ? XT : BT;
-        const FT = void 0 !== kT.outTangent && void 0 !== WT.inTangent,
-          ST = WT.frame - kT.frame;
-        let DT = (TT - kT.frame) / ST;
-        const AT = kT.easingFunction || this.getEasingFunction();
-        switch (AT && (DT = AT.ease(DT)), this.dataType) {
-          case gT.ANIMATIONTYPE_FLOAT: {
-            const TT = FT ? this.floatInterpolateFunctionWithTangents(XT, kT.outTangent * ST, BT, WT.inTangent * ST, DT) : this.floatInterpolateFunction(XT, BT, DT);
-            switch (oT.Kz) {
-              case gT.ANIMATIONLOOPMODE_CYCLE:
-              case gT.ANIMATIONLOOPMODE_CONSTANT:
-              case gT.ANIMATIONLOOPMODE_YOYO:
-                return TT;
-              case gT.ANIMATIONLOOPMODE_RELATIVE:
-              case gT.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return (oT.offsetValue ?? 0) * oT.repeatCount + TT
-            }
-            break
-          }
-          case gT.ANIMATIONTYPE_QUATERNION: {
-            const TT = FT ? this.quaternionInterpolateFunctionWithTangents(XT, kT.outTangent.scale(ST), BT, WT.inTangent.scale(ST), DT) : this.quaternionInterpolateFunction(XT, BT, DT);
-            switch (oT.Kz) {
-              case gT.ANIMATIONLOOPMODE_CYCLE:
-              case gT.ANIMATIONLOOPMODE_CONSTANT:
-              case gT.ANIMATIONLOOPMODE_YOYO:
-                return TT;
-              case gT.ANIMATIONLOOPMODE_RELATIVE:
-              case gT.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return TT.addInPlace((oT.offsetValue || LT).scale(oT.repeatCount))
-            }
-            return TT
-          }
-          case gT.ANIMATIONTYPE_VECTOR3: {
-            const TT = FT ? this.vector3InterpolateFunctionWithTangents(XT, kT.outTangent.scale(ST), BT, WT.inTangent.scale(ST), DT) : this.vector3InterpolateFunction(XT, BT, DT);
-            switch (oT.Kz) {
-              case gT.ANIMATIONLOOPMODE_CYCLE:
-              case gT.ANIMATIONLOOPMODE_CONSTANT:
-              case gT.ANIMATIONLOOPMODE_YOYO:
-                return TT;
-              case gT.ANIMATIONLOOPMODE_RELATIVE:
-              case gT.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return TT.add((oT.offsetValue || xT).scale(oT.repeatCount))
-            }
-            break
-          }
-          case gT.ANIMATIONTYPE_VECTOR2: {
-            const TT = FT ? this.vector2InterpolateFunctionWithTangents(XT, kT.outTangent.scale(ST), BT, WT.inTangent.scale(ST), DT) : this.vector2InterpolateFunction(XT, BT, DT);
-            switch (oT.Kz) {
-              case gT.ANIMATIONLOOPMODE_CYCLE:
-              case gT.ANIMATIONLOOPMODE_CONSTANT:
-              case gT.ANIMATIONLOOPMODE_YOYO:
-                return TT;
-              case gT.ANIMATIONLOOPMODE_RELATIVE:
-              case gT.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return TT.add((oT.offsetValue || cT).scale(oT.repeatCount))
-            }
-            break
-          }
-          case gT.ANIMATIONTYPE_SIZE:
-            switch (oT.Kz) {
-              case gT.ANIMATIONLOOPMODE_CYCLE:
-              case gT.ANIMATIONLOOPMODE_CONSTANT:
-              case gT.ANIMATIONLOOPMODE_YOYO:
-                return this.sizeInterpolateFunction(XT, BT, DT);
-              case gT.ANIMATIONLOOPMODE_RELATIVE:
-              case gT.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return this.sizeInterpolateFunction(XT, BT, DT).add((oT.offsetValue || KT).scale(oT.repeatCount))
-            }
-            break;
-          case gT.ANIMATIONTYPE_COLOR3: {
-            const TT = FT ? this.color3InterpolateFunctionWithTangents(XT, kT.outTangent.scale(ST), BT, WT.inTangent.scale(ST), DT) : this.color3InterpolateFunction(XT, BT, DT);
-            switch (oT.Kz) {
-              case gT.ANIMATIONLOOPMODE_CYCLE:
-              case gT.ANIMATIONLOOPMODE_CONSTANT:
-              case gT.ANIMATIONLOOPMODE_YOYO:
-                return TT;
-              case gT.ANIMATIONLOOPMODE_RELATIVE:
-              case gT.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return TT.add((oT.offsetValue || MT).scale(oT.repeatCount))
-            }
-            break
-          }
-          case gT.ANIMATIONTYPE_COLOR4: {
-            const TT = FT ? this.color4InterpolateFunctionWithTangents(XT, kT.outTangent.scale(ST), BT, WT.inTangent.scale(ST), DT) : this.color4InterpolateFunction(XT, BT, DT);
-            switch (oT.Kz) {
-              case gT.ANIMATIONLOOPMODE_CYCLE:
-              case gT.ANIMATIONLOOPMODE_CONSTANT:
-              case gT.ANIMATIONLOOPMODE_YOYO:
-                return TT;
-              case gT.ANIMATIONLOOPMODE_RELATIVE:
-              case gT.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return TT.add((oT.offsetValue || rT).scale(oT.repeatCount))
-            }
-            break
-          }
-          case gT.ANIMATIONTYPE_MATRIX:
-            switch (oT.Kz) {
-              case gT.ANIMATIONLOOPMODE_CYCLE:
-              case gT.ANIMATIONLOOPMODE_CONSTANT:
-              case gT.ANIMATIONLOOPMODE_YOYO:
-                return gT.AllowMatricesInterpolation ? this.matrixInterpolateFunction(XT, BT, DT, oT.workValue) : XT;
-              case gT.ANIMATIONLOOPMODE_RELATIVE:
-              case gT.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return XT
-            }
-        }
-        return 0
-      }
-      matrixInterpolateFunction(TT, oT, IT, zT) {
-        return gT.AllowMatrixDecomposeForInterpolation ? zT ? (iT.b.DecomposeLerpToRef(TT, oT, IT, zT), zT) : iT.b.DecomposeLerp(TT, oT, IT) : zT ? (iT.b.LerpToRef(TT, oT, IT, zT), zT) : iT.b.Lerp(TT, oT, IT)
-      }
-      clone() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const oT = new gT(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.Kz);
-        if (oT.enableBlending = this.enableBlending, oT.blendingSpeed = this.blendingSpeed, this._keys && oT.setKeys(this._keys, !1, TT), this._ranges) {
-          oT._ranges = {};
-          for (const TT in this._ranges) {
-            const IT = this._ranges[TT];
-            IT && (oT._ranges[TT] = IT.clone())
-          }
-        }
-        return oT
-      }
-      setKeys(TT) {
-        let oT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = TT;
-        else if (this._keys = TT.slice(0), oT)
-          for (let IT = 0; IT < this._keys.length; IT++) {
-            const TT = this._keys[IT];
-            this._keys[IT] = {
-              frame: TT.frame,
-              value: TT.value.clone ? TT.value.clone() : TT.value,
-              inTangent: TT.inTangent && TT.inTangent.clone ? TT.inTangent.clone() : TT.inTangent,
-              outTangent: TT.outTangent && TT.outTangent.clone ? TT.outTangent.clone() : TT.outTangent,
-              interpolation: TT.interpolation,
-              lockedTangent: TT.lockedTangent,
-              easingFunction: TT.easingFunction
-            }
-          }
-      }
-      createKeyForFrame(TT) {
-        AT.key = 0;
-        const oT = this._interpolate(TT, AT, !0);
-        if (!oT) return this._keys[AT.key].frame === TT ? AT.key : AT.key + 1;
-        const IT = {
-          frame: TT,
-          value: oT.clone ? oT.clone() : oT
-        };
-        return this._keys.splice(AT.key + 1, 0, IT), AT.key + 1
-      }
-      serialize() {
-        const TT = {};
-        TT.name = this.name, TT.property = this.targetProperty, TT.framePerSecond = this.framePerSecond, TT.dataType = this.dataType, TT.loopBehavior = this.Kz, TT.enableBlending = this.enableBlending, TT.blendingSpeed = this.blendingSpeed;
-        const oT = this.dataType;
-        TT.keys = [];
-        const IT = this.getKeys();
-        for (let iT = 0; iT < IT.length; iT++) {
-          const zT = IT[iT],
-            kT = {};
-          switch (kT.frame = zT.frame, oT) {
-            case gT.ANIMATIONTYPE_FLOAT:
-              kT.values = [zT.value], void 0 !== zT.inTangent && kT.values.push(zT.inTangent), void 0 !== zT.outTangent && (void 0 === zT.inTangent && kT.values.push(void 0), kT.values.push(zT.outTangent)), void 0 !== zT.interpolation && (void 0 === zT.inTangent && kT.values.push(void 0), void 0 === zT.outTangent && kT.values.push(void 0), kT.values.push(zT.interpolation));
-              break;
-            case gT.ANIMATIONTYPE_QUATERNION:
-            case gT.ANIMATIONTYPE_MATRIX:
-            case gT.ANIMATIONTYPE_VECTOR3:
-            case gT.ANIMATIONTYPE_COLOR3:
-            case gT.ANIMATIONTYPE_COLOR4:
-              kT.values = zT.value.bIT(), void 0 != zT.inTangent && kT.values.push(zT.inTangent.bIT()), void 0 != zT.outTangent && (void 0 === zT.inTangent && kT.values.push(void 0), kT.values.push(zT.outTangent.bIT())), void 0 !== zT.interpolation && (void 0 === zT.inTangent && kT.values.push(void 0), void 0 === zT.outTangent && kT.values.push(void 0), kT.values.push(zT.interpolation))
-          }
-          TT.keys.push(kT)
-        }
-        TT.ec = [];
-        for (const iT in this._ranges) {
-          const oT = this._ranges[iT];
-          if (!oT) continue;
-          const IT = {};
-          IT.name = iT, IT.from = oT.from, IT.to = oT.to, TT.ec.push(IT)
-        }
-        return TT
-      }
-      static _UniversalLerp(TT, oT, IT) {
-        const iT = TT.constructor;
-        return iT.Lerp ? iT.Lerp(TT, oT, IT) : iT.Slerp ? iT.Slerp(TT, oT, IT) : TT.toFixed ? TT * (1 - IT) + IT * oT : oT
-      }
+    var Ez = bz(56),
+      nz = bz(2756),
+      iz = bz(1114),
+      lz = bz(1871),
+      Mz = bz(1038),
+      tz = bz.n(Mz),
+      Hz = bz(1226),
+      Oz = bz(577),
+      pz = bz(1181),
+      dz = bz(2132),
+      Fz = bz(1531),
+      Zz = bz(8494),
+      Rz = bz(2136),
+      Kz = bz(2858),
+      wz = bz(1912),
+      Xz = bz(1419),
+      fz = bz(2171),
+      sz = bz(20),
+      rz = bz(1473),
+      oz = bz(328),
+      Nz = bz(40500),
+      vz = bz(1527),
+      xz = bz(2222),
+      Jz = bz(2754),
+      Az = bz(2067),
+      Tz = bz(2455),
+      Lz = bz(1047);
+    bz(9020), bz(2860);
+    Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
+    var Pz = bz(2178),
+      Gz = bz(1332),
+      az = bz(1089);
+
+    function Vz(zz, uz, bz) {
+      return (0, dz.n)(zz, uz).purchasable && !(0, xz.q)(zz, uz, bz)
     }
 
-    function hT(TT, oT, IT) {
-      let zT;
-      zT = "object" === typeof oT ? oT : {
-        referenceFrame: oT ?? 0,
-        range: IT,
-        cloneOriginalAnimation: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        clonedAnimationName: arguments.length > 4 ? arguments[4] : void 0
-      };
-      let kT = TT;
-      zT.cloneOriginalAnimation && (kT = TT.clone(), kT.name = zT.clonedAnimationName || kT.name);
-      const WT = kT.getKeys();
-      if (!WT.length) return kT;
-      const XT = zT.referenceFrame && zT.referenceFrame >= 0 ? zT.referenceFrame : 0;
-      let BT = 0;
-      const FT = WT[0];
-      let ST = WT.length - 1;
-      const DT = WT[ST],
-        LT = {
-          referenceValue: FT.value,
-          referencePosition: iT.i.sc[0],
-          referenceQuaternion: iT.i.Quaternion[0],
-          referenceScaling: iT.i.sc[1],
-          keyPosition: iT.i.sc[2],
-          keyQuaternion: iT.i.Quaternion[1],
-          keyScaling: iT.i.sc[3]
-        };
-      let xT = FT.frame,
-        cT = DT.frame;
-      if (zT.range) {
-        const TT = kT.getRange(zT.range);
-        TT && (xT = TT.from, cT = TT.to)
-      } else xT = zT.fromFrame ?? xT, cT = zT.toFrame ?? cT;
-      xT !== FT.frame && (BT = kT.createKeyForFrame(xT)), cT !== DT.frame && (ST = kT.createKeyForFrame(cT));
-      const KT = kT.getKeys();
-      if (1 === KT.length) {
-        const TT = kT._getKeyValue(KT[0].value);
-        LT.referenceValue = TT.clone ? TT.clone() : TT
-      } else if (XT <= FT.frame) {
-        const TT = kT._getKeyValue(FT.value);
-        LT.referenceValue = TT.clone ? TT.clone() : TT
-      } else if (XT >= DT.frame) {
-        const TT = kT._getKeyValue(DT.value);
-        LT.referenceValue = TT.clone ? TT.clone() : TT
-      } else {
-        AT.key = 0;
-        const TT = kT._interpolate(XT, AT);
-        LT.referenceValue = TT.clone ? TT.clone() : TT
-      }
-      kT.dataType === gT.ANIMATIONTYPE_QUATERNION ? LT.referenceValue.normalize().conjugateInPlace() : kT.dataType === gT.ANIMATIONTYPE_MATRIX && (LT.referenceValue.decompose(LT.referenceScaling, LT.referenceQuaternion, LT.referencePosition), LT.referenceQuaternion.normalize().conjugateInPlace());
-      let MT = Number.MAX_VALUE;
-      const rT = zT.clipKeys ? [] : null;
-      for (let AT = BT; AT <= ST; AT++) {
-        let TT = KT[AT];
-        if ((rT || zT.cloneOriginalAnimation) && (TT = {
-            frame: TT.frame,
-            value: TT.value.clone ? TT.value.clone() : TT.value,
-            inTangent: TT.inTangent,
-            outTangent: TT.outTangent,
-            interpolation: TT.interpolation,
-            lockedTangent: TT.lockedTangent,
-            easingFunction: TT.easingFunction
-          }, rT && (MT === Number.MAX_VALUE && (MT = TT.frame), TT.frame -= MT, rT.push(TT))), !AT || kT.dataType === gT.ANIMATIONTYPE_FLOAT || TT.value !== FT.value) switch (kT.dataType) {
-          case gT.ANIMATIONTYPE_MATRIX:
-            TT.value.decompose(LT.keyScaling, LT.keyQuaternion, LT.keyPosition), LT.keyPosition.SiT(LT.referencePosition), LT.keyScaling.divideInPlace(LT.referenceScaling), LT.referenceQuaternion.multiplyToRef(LT.keyQuaternion, LT.keyQuaternion), iT.b.ComposeToRef(LT.keyScaling, LT.keyQuaternion, LT.keyPosition, TT.value);
-            break;
-          case gT.ANIMATIONTYPE_QUATERNION:
-            LT.referenceValue.multiplyToRef(TT.value, TT.value);
-            break;
-          case gT.ANIMATIONTYPE_VECTOR2:
-          case gT.ANIMATIONTYPE_VECTOR3:
-          case gT.ANIMATIONTYPE_COLOR3:
-          case gT.ANIMATIONTYPE_COLOR4:
-            TT.value.subtractToRef(LT.referenceValue, TT.value);
-            break;
-          case gT.ANIMATIONTYPE_SIZE:
-            TT.value.width -= LT.referenceValue.width, TT.value.height -= LT.referenceValue.height;
-            break;
-          default:
-            TT.value -= LT.referenceValue
-        }
-      }
-      return rT && kT.setKeys(rT, !0), kT
-    }
-
-    function wT(TT, oT, IT, iT) {
-      const zT = new gT(TT + "Animation", TT, IT, oT, gT.ANIMATIONLOOPMODE_CONSTANT);
-      return zT.setEasingFunction(iT), zT
-    }
-
-    function mT(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT, ST) {
-      const DT = gT._PrepareAnimation(TT, IT, iT, zT, kT, WT, XT, BT);
-      return DT ? (oT.pC && (ST = oT.pC()), ST ? ST.beginDirectAnimation(oT, [DT], 0, zT, DT.Kz !== gT.ANIMATIONLOOPMODE_CONSTANT, 1, FT) : null) : null
-    }
-
-    function eT(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT, ST) {
-      const DT = gT._PrepareAnimation(TT, iT, zT, kT, WT, XT, BT, FT);
-      if (!DT) return null;
-      return oT.pC().beginDirectHierarchyAnimation(oT, IT, [DT], 0, kT, 1 === DT.Kz, 1, ST)
-    }
-
-    function RT(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT) {
-      const ST = gT._PrepareAnimation(TT, IT, iT, zT, kT, WT, XT, BT);
-      return ST ? (oT.animations.push(ST), oT.pC().beginAnimation(oT, 0, zT, 1 === ST.Kz, 1, FT)) : null
-    }
-
-    function uT(TT, oT, IT, iT, zT, kT, WT) {
-      let XT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-        BT = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-        FT = arguments.length > 9 ? arguments[9] : void 0;
-      if (WT <= 0) return IT[TT] = oT, XT && XT(), null;
-      const ST = zT * (WT / 1e3);
-      kT.setKeys(FT ?? [{
-        frame: 0,
-        value: IT[TT].clone ? IT[TT].clone() : IT[TT]
-      }, {
-        frame: ST,
-        value: oT
-      }]), IT.animations || (IT.animations = []), IT.animations.push(kT);
-      return iT.beginAnimation(IT, 0, ST, !1, 1, XT ?? void 0, void 0, BT)
-    }
-
-    function vT(TT, oT) {
-      ST.c.AppendSerializedAnimations(TT, oT)
-    }
-
-    function ET(TT) {
-      const oT = new gT(TT.name, TT.property, TT.framePerSecond, TT.dataType, TT.loopBehavior),
-        IT = TT.dataType,
-        kT = [];
-      let WT, XT;
-      for (TT.enableBlending && (oT.enableBlending = TT.enableBlending), TT.blendingSpeed && (oT.blendingSpeed = TT.blendingSpeed), XT = 0; XT < TT.keys.length; XT++) {
-        const oT = TT.keys[XT];
-        let BT, FT, ST;
-        switch (IT) {
-          case gT.ANIMATIONTYPE_FLOAT:
-            WT = oT.values[0], oT.values.length >= 2 && (BT = oT.values[1]), oT.values.length >= 3 && (FT = oT.values[2]), oT.values.length >= 4 && (ST = oT.values[3]);
-            break;
-          case gT.ANIMATIONTYPE_QUATERNION:
-            if (WT = iT.c.FromArray(oT.values), oT.values.length >= 8) {
-              const TT = iT.c.FromArray(oT.values.slice(4, 8));
-              TT.equals(iT.c.Zero()) || (BT = TT)
-            }
-            if (oT.values.length >= 12) {
-              const TT = iT.c.FromArray(oT.values.slice(8, 12));
-              TT.equals(iT.c.Zero()) || (FT = TT)
-            }
-            oT.values.length >= 13 && (ST = oT.values[12]);
-            break;
-          case gT.ANIMATIONTYPE_MATRIX:
-            WT = iT.b.FromArray(oT.values), oT.values.length >= 17 && (ST = oT.values[16]);
-            break;
-          case gT.ANIMATIONTYPE_COLOR3:
-            WT = zT.e.FromArray(oT.values), oT.values[3] && (BT = zT.e.FromArray(oT.values[3])), oT.values[4] && (FT = zT.e.FromArray(oT.values[4])), oT.values[5] && (ST = oT.values[5]);
-            break;
-          case gT.ANIMATIONTYPE_COLOR4:
-            WT = zT.i.FromArray(oT.values), oT.values[4] && (BT = zT.i.FromArray(oT.values[4])), oT.values[5] && (FT = zT.i.FromArray(oT.values[5])), oT.values[6] && (ST = oT.values[6]);
-            break;
-          case gT.ANIMATIONTYPE_VECTOR3:
-          default:
-            WT = iT.m.FromArray(oT.values), oT.values[3] && (BT = iT.m.FromArray(oT.values[3])), oT.values[4] && (FT = iT.m.FromArray(oT.values[4])), oT.values[5] && (ST = oT.values[5])
-        }
-        const DT = {};
-        DT.frame = oT.frame, DT.value = WT, void 0 != BT && (DT.inTangent = BT), void 0 != FT && (DT.outTangent = FT), void 0 != ST && (DT.interpolation = ST), kT.push(DT)
-      }
-      if (oT.setKeys(kT), TT.ec)
-        for (XT = 0; XT < TT.ec.length; XT++) WT = TT.ec[XT], oT.createRange(WT.name, WT.from, WT.to);
-      return oT
-    }
-    async function fT(TT, oT) {
-      return await new Promise(((IT, iT) => {
-        const zT = new FT.b;
-        zT.addEventListener("readystatechange", (() => {
-          if (4 == zT.readyState)
-            if (200 == zT.status) {
-              let oT = JSON.parse(zT.responseText);
-              if (oT.animations && (oT = oT.animations), oT.length) {
-                const TT = [];
-                for (const IT of oT) TT.push(ET(IT));
-                IT(TT)
-              } else {
-                const iT = ET(oT);
-                TT && (iT.name = TT), IT(iT)
-              }
-            } else iT("Unable to load the animation")
-        })), zT.open("GET", oT), zT.send()
+    function mz(zz, uz) {
+      return Object.entries(zz).some((zz => {
+        let [bz, Ez] = zz;
+        return Vz(bz, Ez, uz)
       }))
     }
-    async function CT(TT) {
-      const oT = this?.SnippetUrl ?? gT.SnippetUrl;
-      return await new Promise(((IT, iT) => {
-        const zT = new FT.b;
-        zT.addEventListener("readystatechange", (() => {
-          if (4 == zT.readyState)
-            if (200 == zT.status) {
-              const oT = JSON.parse(JSON.parse(zT.responseText).jsonPayload);
-              if (oT.animations) {
-                const iT = JSON.parse(oT.animations),
-                  zT = [];
-                for (const oT of iT.animations) {
-                  const IT = ET(oT);
-                  IT.snippetId = TT, zT.push(IT)
-                }
-                IT(zT)
-              } else {
-                const iT = ET(JSON.parse(oT.animation));
-                iT.snippetId = TT, IT(iT)
-              }
-            } else iT("Unable to load the snippet " + TT)
-        })), zT.open("GET", oT + "/" + TT.replace(/#/g, "/")), zT.send()
-      }))
-    }
-    gT._UniqueIdGenerator = 0, gT.AllowMatricesInterpolation = !1, gT.AllowMatrixDecomposeForInterpolation = !0, gT.InheritOriginalValueFromActiveAnimations = !1, gT.SnippetUrl = "https://snippet.babylonjs.com", gT.ANIMATIONTYPE_FLOAT = 0, gT.ANIMATIONTYPE_VECTOR3 = 1, gT.ANIMATIONTYPE_QUATERNION = 2, gT.ANIMATIONTYPE_MATRIX = 3, gT.ANIMATIONTYPE_COLOR3 = 4, gT.ANIMATIONTYPE_COLOR4 = 7, gT.ANIMATIONTYPE_VECTOR2 = 5, gT.ANIMATIONTYPE_SIZE = 6, gT.ANIMATIONLOOPMODE_RELATIVE = 0, gT.ANIMATIONLOOPMODE_CYCLE = 1, gT.ANIMATIONLOOPMODE_CONSTANT = 2, gT.ANIMATIONLOOPMODE_YOYO = 4, gT.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
-    const jT = CT;
-    let JT = !1;
 
-    function UT() {
-      JT || (JT = !0, gT.Parse = ET, gT.ParseFromFileAsync = fT, gT.ParseFromSnippetAsync = CT, gT.CreateFromSnippetAsync = jT, gT.CreateAnimation = wT, gT.CreateAndStartAnimation = mT, gT.CreateAndStartHierarchyAnimation = eT, gT.CreateMergeAndStartAnimation = RT, gT.MakeAnimationAdditive = hT, gT.TransitionTo = uT, gT.AppendSerializedAnimations = vT, (0, DT.h)("BABYLON.Animation", gT), XT.c._AnimationRangeFactory = (TT, oT, IT) => new WT.e(TT, oT, IT))
+    function qz(zz) {
+      var uz;
+      let {
+        pack: bz,
+        ownedPacks: Ez,
+        showStoreLink: nz = !1,
+        children: iz
+      } = zz;
+      const {
+        t: lz
+      } = (0, pz.F)(), Mz = vz.e[bz], Hz = Mz.purchasable && !Ez.includes(bz) && vz.p.includes(bz), Oz = Jz.h[bz];
+      return (0, az.jsxs)("div", {
+        className: tz()("CosmeticPackGroup", {
+          CosmeticPackGroupLocked: Hz
+        }),
+        children: [Oz && (0, az.jsx)(Oz, {}), (0, az.jsxs)("div", {
+          className: "CosmeticPackGroupLabel",
+          children: [(0, az.jsx)("span", {
+            className: "CosmeticPackGroupLabelName",
+            children: null !== (uz = Mz.displayName) && void 0 !== uz ? uz : bz
+          }), (Hz || nz) && (0, az.jsxs)(Xz.G, {
+            onClick: () => {
+              Hz ? (0, Jz.e)(bz) : (0, fz.o)({
+                mode: "self",
+                source: "characterCustomisation"
+              })
+            },
+            children: [(0, az.jsx)(Lz.c, {
+              name: "store"
+            }), " ", lz("general:viewInShop")]
+          })]
+        }), Hz && "bee" === bz && (0, az.jsx)(Jz.b, {}), iz]
+      })
     }
-  },
-  40016: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => iT
-    });
-    class iT {
-      constructor(TT, oT, IT) {
-        this.name = TT, this.from = oT, this.to = IT
+
+    function hz(zz) {
+      let {
+        equippedEmoteIds: uz,
+        ownedPacks: bz,
+        canBuy: Ez,
+        onUpdateLoadout: nz,
+        onEmoteSelected: iz,
+        onEquipPreviewSkin: lz
+      } = zz;
+      const {
+        t: Mz
+      } = (0, pz.F)(), Oz = new Set(uz), Fz = new Map, Zz = Object.keys(dz.h.emote).sort(((zz, uz) => {
+        var bz, Ez, nz, iz;
+        return (null !== (bz = null === (Ez = (0, dz.m)("emote", zz)) || void 0 === Ez ? void 0 : Ez.clientIdx) && void 0 !== bz ? bz : 0) - (null !== (nz = null === (iz = (0, dz.m)("emote", uz)) || void 0 === iz ? void 0 : iz.clientIdx) && void 0 !== nz ? nz : 0)
+      })).filter((zz => {
+        const uz = (0, dz.n)("emote", zz),
+          nz = (0, xz.q)("emote", zz, bz);
+        return !(uz.purchasable && !nz && !Ez) && (uz.clientSelectable || nz)
+      }));
+      for (const tz of Zz) {
+        const zz = (0, dz.m)("emote", tz).cosmeticPack;
+        Fz.has(zz) || Fz.set(zz, []), Fz.get(zz).push(tz)
       }
-      clone() {
-        return new iT(this.name, this.from, this.to)
-      }
+      const Kz = Array.from(Fz.keys());
+      return (0, az.jsxs)("div", {
+        className: "CharCustomisPartSelectorWrapper",
+        children: [!1, (0, az.jsxs)("div", {
+          className: "EmoteLoadoutSummary",
+          children: [(0, az.jsx)("span", {
+            className: "EmoteLoadoutSummaryText SmallTextBold",
+            children: Mz("emotes:equippedCount", {
+              count: uz.length,
+              max: Hz.o
+            })
+          }), (0, az.jsx)("span", {
+            className: "EmoteLoadoutSummaryHint SmallTextLight",
+            children: Mz("emotes:loadoutHint")
+          })]
+        }), Kz.map((zz => {
+          const Ez = Fz.get(zz);
+          return (0, az.jsx)(qz, {
+            pack: zz,
+            ownedPacks: bz,
+            children: (0, az.jsx)("div", {
+              className: "CosmeticPackGroupItems",
+              children: Ez.map((zz => {
+                var Ez;
+                const lz = uz.indexOf(zz),
+                  pz = -1 !== lz,
+                  dz = uz.length >= Hz.o,
+                  Fz = Vz("emote", zz, bz),
+                  Zz = Fz || !pz && dz,
+                  Kz = (0, Rz.j)(zz);
+                return (0, az.jsxs)("div", {
+                  className: tz()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
+                    SelectedCharCustomPartWrapper: pz
+                  }),
+                  onClick: () => {
+                    iz(zz)
+                  },
+                  children: [(0, az.jsxs)("div", {
+                    className: "CharCustomPart EmoteCustomPart",
+                    children: [(0, az.jsx)("div", {
+                      className: "EmoteCustomPartIcon",
+                      style: {
+                        backgroundImage: `url(/textures/charSkins/previews/emote_${zz}_preview.png)`
+                      },
+                      "aria-hidden": !0
+                    }), (0, az.jsx)("span", {
+                      className: "EmoteCustomPartLabel SmallTextBold",
+                      children: null !== (Ez = null === Kz || void 0 === Kz ? void 0 : Kz.displayName) && void 0 !== Ez ? Ez : zz
+                    })]
+                  }), (0, az.jsxs)("div", {
+                    className: "EmoteCustomPartToggleContainer",
+                    children: [pz && (0, az.jsx)("span", {
+                      className: "EmoteCustomPartSlotBadge",
+                      children: lz + 1
+                    }), Fz && (0, az.jsx)(Lz.c, {
+                      name: "lock",
+                      className: "LockedCosmeticIcon"
+                    }), (0, az.jsx)(Gz.f, {
+                      tooltipInner: (0, az.jsx)(az.Fragment, {
+                        children: Mz(pz ? "general:remove" : "general:add")
+                      }),
+                      delayShow: 0,
+                      delayHide: 0,
+                      children: (0, az.jsx)("div", {
+                        className: tz()("EmoteCustomPartToggle", {
+                          EmoteCustomPartToggleDisabled: Zz,
+                          EmoteCustomPartToggleEquipped: pz
+                        }),
+                        onClick: bz => {
+                          bz.stopPropagation(), Zz || function(zz) {
+                            Oz.has(zz) ? nz(uz.filter((uz => uz !== zz))) : uz.length >= Hz.o || nz([...uz, zz])
+                          }(zz)
+                        },
+                        children: (0, az.jsx)(Lz.c, {
+                          name: pz ? "minus" : "plus",
+                          "aria-hidden": !0
+                        })
+                      })
+                    })]
+                  })]
+                }, zz)
+              }))
+            })
+          }, zz)
+        }))]
+      })
     }
+    const Uz = (0, Ez.memo)((function(zz) {
+      let {
+        selectedTab: uz
+      } = zz;
+      const bz = "characters" === uz ? "skin" : uz,
+        {
+          t: Mz
+        } = (0, pz.F)(),
+        {
+          userContext: Rz,
+          isUserContextUpdating: Jz
+        } = (0, iz.c)(),
+        Gz = (0, nz.c)(),
+        {
+          gameState: Uz,
+          initSdkSelectorFinished: cz
+        } = (0, sz.m)(["gameState", "initSdkSelectorFinished"]),
+        [gz, Sz] = (0, Ez.useState)({}),
+        [yz, Dz] = (0, Ez.useState)({}),
+        {
+          previewEmote: Qz,
+          triggerEmote: Wz
+        } = (0, Kz.e)(),
+        ez = (0, Ez.useRef)(Hz.u.reduce(((zz, uz) => (zz[uz] = (0, Zz.b)(uz), zz)), {})),
+        jz = (0, Ez.useRef)(!1),
+        Iz = (0, Ez.useRef)(null),
+        Bz = (0, Ez.useRef)(null),
+        Cz = (0, Ez.useRef)(null);
+
+      function Yz() {
+        null !== Bz.current && (clearTimeout(Bz.current), Bz.current = null);
+        const zz = Cz.current;
+        if (null === zz) return;
+        Cz.current = null;
+        const uz = {
+          kb: "emote",
+          zE: zz
+        };
+        null !== lz.gameBridge.latest("connectedGame").websocketUrl ? lz.gameBridge.send("updateMyCosmetic", uz) : rz.c.updateCosmetics(Rz, [uz]).catch((zz => {
+          console.error("Failed to update emote loadout", zz)
+        }))
+      }
+
+      function kz(zz, uz, bz) {
+        var Ez, nz, iz;
+        if (ez.current = {
+            ...ez.current,
+            [zz]: uz
+          }, Gz(), bz) {
+          const bz = {
+            kb: zz,
+            zE: uz
+          };
+          null !== lz.gameBridge.latest("connectedGame").websocketUrl ? lz.gameBridge.send("updateMyCosmetic", bz) : rz.c.updateCosmetics(Rz, [bz]).catch((zz => {
+            console.error("Failed to update cosmetic", zz)
+          })), Rz.setPlayerCosmetics(zz, uz)
+        }
+        const Mz = (0, dz.m)(zz, uz);
+        if (null !== Mz && void 0 !== Mz && Mz.colourGroup && null !== (Ez = vz.e[Mz.cosmeticPack].colourGroups) && void 0 !== Ez && null !== (nz = Ez[Mz.colourGroup]) && void 0 !== nz && nz.showSwatchSelector) {
+          const bz = (0, dz.i)(uz);
+          bz && Dz((uz => ({
+            ...uz,
+            [`${Mz.cosmeticPack}_${zz}_${Mz.colourGroup}`]: parseInt(bz[1])
+          })))
+        }
+        null !== (iz = Iz.current) && void 0 !== iz && iz.isReady() && Iz.current.updateCosmetic(zz, uz)
+      }
+
+      function zu(zz) {
+        return Object.entries(zz).every((zz => {
+          let [uz, bz] = zz;
+          return gz[uz] === bz
+        }))
+      }(0, wz.d)("cosmeticsUpdated", (zz => {
+        let uz = !1;
+        for (const {
+            local: bz,
+            kb: Ez,
+            zE: nz
+          }
+          of zz) {
+          if (!bz) return;
+          uz = !0, jz.current || kz(Ez, nz, !1), Gz()
+        }
+        uz && (jz.current = !0)
+      })), (0, Ez.useEffect)((() => {
+        if (!Jz) {
+          for (const [zz, uz] of Object.entries(Rz.getPlayerCosmetics())) kz(zz, uz, !1);
+          Gz()
+        }
+      }), [Jz]), (0, Ez.useEffect)((() => () => {
+        Yz()
+      }), []);
+      const uu = Rz.getOwnedCosmeticPacks(),
+        bu = (0, Pz.purchasesAllowed)(),
+        Eu = Object.keys(dz.h[bz]).filter((zz => {
+          const uz = (0, dz.n)(bz, zz),
+            Ez = (0, xz.q)(bz, zz, uu);
+          return !(uz.purchasable && !Ez && !bu) && (uz.clientSelectable || Ez)
+        })).sort(((zz, uz) => {
+          var Ez, nz, iz, lz;
+          return (null !== (Ez = null === (nz = (0, dz.m)(bz, zz)) || void 0 === nz ? void 0 : nz.clientIdx) && void 0 !== Ez ? Ez : 0) - (null !== (iz = null === (lz = (0, dz.m)(bz, uz)) || void 0 === lz ? void 0 : lz.clientIdx) && void 0 !== iz ? iz : 0)
+        })),
+        nu = new Map;
+      for (const Ez of Eu) {
+        var iu;
+        const zz = null === (iu = (0, dz.m)(bz, Ez)) || void 0 === iu ? void 0 : iu.cosmeticPack;
+        nu.has(zz) || nu.set(zz, []), nu.get(zz).push(Ez)
+      }
+      const lu = function(zz, uz) {
+          const bz = new Set,
+            Ez = new Set;
+          for (const [nz, iz] of Object.entries(dz.h[zz])) {
+            if (void 0 === iz.colourGroup) continue;
+            const lz = `${iz.cosmeticPack}_${iz.colourGroup}`;
+            (Vz(zz, nz, uz) ? Ez : bz).add(lz)
+          }
+          return new Set([...bz].filter((zz => Ez.has(zz))))
+        }(bz, uu),
+        Mu = new Map;
+      for (const [Ez, nz] of nu) {
+        const zz = [],
+          uz = new Map;
+        for (const Ez of nz) {
+          var tu, Hu;
+          const nz = null !== (tu = null === (Hu = (0, dz.m)(bz, Ez)) || void 0 === Hu ? void 0 : Hu.colourGroup) && void 0 !== tu ? tu : null;
+          uz.has(nz) || (uz.set(nz, []), zz.push(nz)), uz.get(nz).push(Ez)
+        }
+        const iz = zz.map((zz => {
+          var nz;
+          const iz = uz.get(zz),
+            lz = zz ? null === (nz = vz.e[Ez].colourGroups) || void 0 === nz ? void 0 : nz[zz] : void 0,
+            Mz = !0 === (null === lz || void 0 === lz ? void 0 : lz.showSwatchSelector) && !lu.has(`${Ez}_${zz}`);
+          if (Mz && lz) {
+            var tz;
+            const uz = null !== (tz = yz[`${Ez}_${bz}_${zz}`]) && void 0 !== tz ? tz : (0, vz.i)(lz.colours);
+            return {
+              groupName: zz,
+              showSwatch: Mz,
+              cosmetics: iz.filter((zz => {
+                const bz = (0, dz.i)(zz);
+                return !bz || uz.toString() === bz[1].toString()
+              }))
+            }
+          }
+          return {
+            groupName: zz,
+            cosmetics: iz,
+            showSwatch: Mz
+          }
+        }));
+        Mu.set(Ez, iz)
+      }
+      const Ou = Array.from(nu.keys()),
+        pu = new Map;
+      for (const [Ez, nz] of Object.entries(Fz.c)) {
+        const zz = vz.e[nz.cosmeticPack],
+          uz = !mz(nz.cosmetics, uu),
+          bz = vz.l.some((zz => (0, vz.g)(zz) === Ez));
+        (zz.clientSelectable || bz || uz) && ((!zz.purchasable || uz || bu) && (pu.has(nz.cosmeticPack) || pu.set(nz.cosmeticPack, []), pu.get(nz.cosmeticPack).push([Ez, nz])))
+      }
+      const du = Array.from(pu.keys());
+      return (0, az.jsxs)("div", {
+        className: "CharCustomisationBody",
+        children: [("cape" === bz || "nameColour" === bz) && !Rz.playerHasRank("super") && (0, az.jsxs)("div", {
+          className: "CharCustomisationBodyHeader",
+          children: [(0, az.jsx)(Lz.c, {
+            name: "bolt"
+          }), Mz("homePage:unlockWithSuperRank"), bu && (0, az.jsx)(Xz.q, {
+            onClick: () => {
+              (0, fz.o)({
+                mode: "self",
+                source: "characterCustomisation",
+                openItem: "superRank"
+              })
+            },
+            children: Mz("general:getItNow")
+          })]
+        }), (0, az.jsxs)("div", {
+          className: "CharCustomisationBodyInner",
+          children: ["characters" === uz && (0, az.jsxs)("div", {
+            className: "CharCustomisPartSelectorWrapper",
+            children: [!1, du.map((zz => {
+              const uz = pu.get(zz);
+              return (0, az.jsx)(qz, {
+                pack: zz,
+                ownedPacks: uu,
+                showStoreLink: !vz.m.includes(zz) && uz.some((zz => {
+                  let [, {
+                    cosmetics: uz
+                  }] = zz;
+                  return mz(uz, uu)
+                })),
+                children: (0, az.jsx)("div", {
+                  className: "CharacterPresetsGrid",
+                  children: uz.map((zz => {
+                    let [uz, {
+                      cosmetics: bz
+                    }] = zz;
+                    const Ez = mz(bz, uu),
+                      nz = zu(bz),
+                      iz = !nz && Object.entries(bz).every((zz => {
+                        let [uz, bz] = zz;
+                        return ez.current[uz] === bz
+                      }));
+                    return (0, az.jsxs)("div", {
+                      "data-pad-focusable": !0,
+                      className: tz()("CharacterPresetCard", {
+                        CharacterPresetCardActive: iz,
+                        CharacterPresetCardTryingOn: nz
+                      }),
+                      onClick: () => {
+                        if (Ez) ! function(zz) {
+                          zu(zz) ? Sz({}) : Sz({
+                            ...zz
+                          })
+                        }(bz);
+                        else {
+                          Object.keys(gz).length > 0 && Sz({});
+                          const zz = Object.entries(bz);
+                          for (const [uz, bz] of zz) kz(uz, bz, !1), Rz.setPlayerCosmetics(uz, bz);
+                          if (null !== lz.gameBridge.latest("connectedGame").websocketUrl)
+                            for (const [uz, bz] of zz) lz.gameBridge.send("updateMyCosmetic", {
+                              kb: uz,
+                              zE: bz
+                            });
+                          else rz.c.updateCosmetics(Rz, zz.map((zz => {
+                            let [uz, bz] = zz;
+                            return {
+                              kb: uz,
+                              zE: bz
+                            }
+                          }))).catch((zz => {
+                            console.error("Failed to update cosmetics", zz)
+                          }))
+                        }
+                      },
+                      children: [(0, az.jsx)("div", {
+                        className: "CharacterPresetCardPreview",
+                        style: {
+                          backgroundImage: `url(/textures/charSkins/previews/character_${uz}_preview.png)`
+                        }
+                      }), Ez && (0, az.jsx)(Lz.c, {
+                        name: "lock",
+                        className: "LockedCosmeticIcon"
+                      })]
+                    }, uz)
+                  }))
+                })
+              }, zz)
+            }))]
+          }), "emote" === uz && (0, az.jsx)(hz, {
+            equippedEmoteIds: (0, Zz.e)(ez.current.emote),
+            ownedPacks: uu,
+            canBuy: bu,
+            onUpdateLoadout: zz => {
+              const uz = (0, Zz.g)(zz);
+              var bz;
+              ez.current = {
+                ...ez.current,
+                emote: uz
+              }, Rz.setPlayerCosmetics("emote", uz), Gz(), bz = uz, Cz.current = bz, null !== Bz.current && clearTimeout(Bz.current), Bz.current = setTimeout(Yz, 350)
+            },
+            onEmoteSelected: Wz,
+            onEquipPreviewSkin: () => {
+              ! function(zz, uz) {
+                for (const bz of Hz.u) "cape" !== bz && "nameColour" !== bz && "emote" !== bz && zz(bz, "skin" === bz ? "skin_preview" : `${bz}_none`, !1);
+                uz()
+              }(kz, Gz)
+            }
+          }), "characters" !== uz && "emote" !== uz && (0, az.jsxs)("div", {
+            className: "CharCustomisPartSelectorWrapper",
+            children: [!1, Ou.map((zz => {
+              const uz = Mu.get(zz);
+              return (0, az.jsx)(qz, {
+                pack: zz,
+                ownedPacks: uu,
+                children: uz.map((uz => {
+                  var Ez;
+                  let {
+                    groupName: nz,
+                    cosmetics: iz,
+                    showSwatch: lz
+                  } = uz;
+                  const Mz = nz ? null === (Ez = vz.e[zz].colourGroups) || void 0 === Ez ? void 0 : Ez[nz] : void 0,
+                    Hz = `${zz}_${bz}_${nz}`;
+                  return (0, az.jsxs)("div", {
+                    className: "CosmeticPackGroupItems",
+                    children: [lz && Mz && (0, az.jsx)("div", {
+                      className: "CosmeticColorSwatchCell",
+                      children: [...Mz.colours.map(((zz, uz) => ({
+                        color: zz,
+                        index: uz
+                      })))].sort(((zz, uz) => zz.color.order - uz.color.order)).map((uz => {
+                        var Ez;
+                        let {
+                          color: iz,
+                          index: lz
+                        } = uz;
+                        return (0, az.jsx)("div", {
+                          className: tz()("CosmeticColorOption", {
+                            CosmeticColorOptionSelected: (null !== (Ez = yz[Hz]) && void 0 !== Ez ? Ez : (0, vz.i)(Mz.colours)) === lz
+                          }),
+                          style: {
+                            backgroundColor: `rgb(${iz.rbg.join(",")})`
+                          },
+                          onClick: () => {
+                            var uz;
+                            Dz((zz => ({
+                              ...zz,
+                              [Hz]: lz
+                            })));
+                            const Ez = gz[bz],
+                              iz = Ez ? (0, dz.m)(bz, Ez) : null,
+                              Mz = (null === iz || void 0 === iz ? void 0 : iz.cosmeticPack) === zz,
+                              tz = Mz ? Ez : ez.current[bz],
+                              Oz = Mz ? iz : (0, dz.m)(bz, tz);
+                            if ((null === Oz || void 0 === Oz ? void 0 : Oz.cosmeticPack) !== zz) return;
+                            if ((null !== (uz = null === Oz || void 0 === Oz ? void 0 : Oz.colourGroup) && void 0 !== uz ? uz : null) !== nz) return;
+                            const pz = (0, dz.i)(tz);
+                            if (pz) {
+                              const zz = `${bz}_${pz[0]}_${lz}`;
+                              Mz ? Sz((uz => ({
+                                ...uz,
+                                [bz]: zz
+                              }))) : kz(bz, zz, !0)
+                            }
+                          }
+                        }, iz.rbg.join())
+                      }))
+                    }), iz.map((zz => {
+                      const uz = zz === ez.current[bz],
+                        Ez = gz[bz] === zz,
+                        nz = Vz(bz, zz, uu);
+                      let iz = !0;
+                      return nz || uz || ("cape" !== bz || (0, oz.Rd)(Rz.getPlayerRanks(), zz)) && ("nameColour" !== bz || Rz.playerHasRank("super")) || (iz = !1), (0, az.jsxs)("div", {
+                        className: tz()("CharCustomPartWrapper", {
+                          SelectedCharCustomPartWrapper: uz && !Ez,
+                          TryingOnCharCustomPartWrapper: Ez,
+                          DisabledCharCustomPartWrapper: !iz,
+                          CharCustomPartWrapperProfileEffect: "profileEffect" === bz
+                        }),
+                        onClick: () => {
+                          if (iz)
+                            if (nz) Sz((uz => {
+                              if (uz[bz] === zz) {
+                                const zz = {
+                                  ...uz
+                                };
+                                return delete zz[bz], zz
+                              }
+                              return {
+                                ...uz,
+                                [bz]: zz
+                              }
+                            }));
+                            else {
+                              var uz;
+                              if (gz[bz] && Sz((zz => {
+                                  const uz = {
+                                    ...zz
+                                  };
+                                  return delete uz[bz], uz
+                                })), zz === ez.current[bz]) return;
+                              null !== (uz = Iz.current) && void 0 !== uz && uz.isReady() && kz(bz, zz, !0)
+                            }
+                        },
+                        children: ["profileEffect" === bz ? (0, az.jsx)("div", {
+                          className: "CharCustomPart CharCustomProfileEffect",
+                          children: (0, az.jsx)(Tz.i, {
+                            playerSocialPreview: (0, Az.c)(zz, {
+                              name: Rz.getPlayerName(),
+                              cosmetics: Rz.getPlayerCosmetics()
+                            }),
+                            showLocation: !1,
+                            opensProfileCard: !1
+                          })
+                        }) : (0, az.jsx)("div", {
+                          className: tz()("CharCustomPart", {
+                            PixelatedImage: "cape" === bz
+                          }),
+                          style: (0, dz.m)(bz, zz).previewTex ? {
+                            backgroundImage: `url(/textures/charSkins/previews/${(0,dz.m)(bz,zz).previewTex}.png)`
+                          } : {
+                            backgroundColor: Oz.n[zz]
+                          }
+                        }), nz && (0, az.jsx)(Lz.c, {
+                          name: "lock",
+                          className: "LockedCosmeticIcon"
+                        })]
+                      }, zz)
+                    }))]
+                  }, null !== nz && void 0 !== nz ? nz : "ungrouped")
+                }))
+              }, zz)
+            }))]
+          }), (0, az.jsx)(Nz.CharacterPreview, {
+            ref: Iz,
+            forcedCosmetics: gz,
+            GM: Qz.id,
+            emotePlaySeq: Qz.seq,
+            onReady: () => {
+              for (const zz of Hz.u) kz(zz, ez.current[zz], !1)
+            }
+          })]
+        })]
+      })
+    }))
   },
-  40072: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => iT.d,
-      d: () => iT.i
+  40500: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      CharacterPreview: () => pz
     });
-    var iT = IT(38923);
-    (0, iT.e)()
-  },
-  40055: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => iT.g
-    });
-    var iT = IT(39270);
-    (0, iT.c)()
-  },
-  40029: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => iT.c
-    });
-    var iT = IT(39256);
-    (0, iT.f)()
-  },
-  40079: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => iT.e
-    });
-    var iT = IT(39192);
-    (0, iT.i)()
-  },
-  40023: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => iT.g
-    });
-    var iT = IT(39233);
-    (0, iT.c)()
+    var Ez = bz(56),
+      nz = bz(2602),
+      iz = bz(1226),
+      lz = bz(8494),
+      Mz = bz(9020),
+      tz = bz(3382),
+      Hz = bz(1089);
+    const Oz = .6 * Math.PI,
+      pz = (0, Ez.memo)((0, Ez.forwardRef)((function(zz, uz) {
+        let {
+          onReady: bz,
+          onDrawn: pz,
+          owner: dz = "other",
+          framing: Fz = "player",
+          forcedCosmetics: Zz,
+          GM: Rz,
+          emotePlaySeq: Kz,
+          turntableFromYaw: wz = null
+        } = zz;
+        const Xz = (0, Ez.useRef)(null),
+          {
+            width: fz,
+            height: sz
+          } = (0, nz.e)(Xz),
+          rz = (0, Ez.useRef)(null),
+          oz = (0, Ez.useRef)({}),
+          Nz = (0, Ez.useRef)({}),
+          [vz, xz] = (0, Ez.useState)(!1),
+          Jz = (0, Ez.useRef)(bz);
+        Jz.current = bz;
+        const Az = (0, Ez.useRef)(pz);
+        Az.current = pz;
+        const Tz = (0, Ez.useRef)(null),
+          Lz = (0, Ez.useRef)(!1),
+          Pz = (0, Ez.useRef)(!1),
+          Gz = (0, Ez.useCallback)((() => {
+            const zz = rz.current;
+            if (!zz || !Az.current || Lz.current || !Pz.current) return;
+            const uz = {};
+            Tz.current = uz, queueMicrotask((() => {
+              if (Tz.current !== uz) return;
+              const bz = Promise.all(iz.u.map((uz => zz.untilDrawn(uz)))).catch((zz => {
+                  console.error("Failed to draw the character preview", zz)
+                })),
+                Ez = new Promise((zz => {
+                  setTimeout(zz, 1e4)
+                }));
+              Promise.race([bz, Ez]).then((() => {
+                var bz;
+                rz.current !== zz || Tz.current !== uz || Lz.current || (Lz.current = !0, null === (bz = Az.current) || void 0 === bz || bz.call(Az))
+              }))
+            }))
+          }), []);
+        return (0, Ez.useImperativeHandle)(uz, (() => {
+          const zz = (zz, uz) => {
+            var bz;
+            (oz.current[zz] = uz, null !== Zz && void 0 !== Zz && Zz[zz]) || (null === (bz = rz.current) || void 0 === bz || bz.setCosmetic(zz, uz), Gz())
+          };
+          return {
+            updateCosmetic: zz,
+            setAllCosmetics(uz) {
+              for (const Ez of iz.u) {
+                var bz;
+                zz(Ez, null !== (bz = uz[Ez]) && void 0 !== bz ? bz : (0, lz.b)(Ez))
+              }
+            },
+            isReady() {
+              var zz, uz;
+              return null !== (zz = null === (uz = rz.current) || void 0 === uz ? void 0 : uz.isReady()) && void 0 !== zz && zz
+            },
+            resetCamera() {
+              var zz;
+              null === (zz = rz.current) || void 0 === zz || zz.resetCamera()
+            },
+            setOrbit(zz) {
+              var uz;
+              null === (uz = rz.current) || void 0 === uz || uz.setOrbit(zz)
+            },
+            async ensureReadyForCapture(zz) {
+              var uz;
+              await (null === (uz = rz.current) || void 0 === uz ? void 0 : uz.untilDrawn(zz))
+            },
+            getDevTools() {
+              var zz;
+              return null !== (zz = rz.current) && void 0 !== zz && zz.isReady() ? rz.current.dev : null
+            }
+          }
+        }), [Zz, Gz]), (0, Ez.useEffect)((() => {
+          const zz = tz.c.register(dz),
+            uz = Mz.j.openCharacter(Xz.current, Fz);
+          rz.current = uz;
+          let bz = !0;
+          return uz.ready.then((() => {
+            bz && (xz(!0), Jz.current())
+          })).catch((zz => {
+            console.error("Failed to set up the character preview", zz)
+          })), () => {
+            bz = !1, zz(), uz.resetCamera(), uz.close(), rz.current = null
+          }
+        }), []), (0, Ez.useEffect)((() => {
+          fz <= 0 || sz <= 0 || rz.current.resize(fz, sz)
+        }), [fz, sz]), (0, Ez.useEffect)((() => {
+          if (!vz) return;
+          const zz = Nz.current;
+          for (const uz of iz.u) {
+            const bz = null === Zz || void 0 === Zz ? void 0 : Zz[uz],
+              Ez = zz[uz];
+            bz && bz !== Ez ? rz.current.setCosmetic(uz, bz) : !bz && Ez && oz.current[uz] && rz.current.setCosmetic(uz, oz.current[uz])
+          }
+          Nz.current = {
+            ...Zz
+          }, Pz.current = !0, Gz()
+        }), [Zz, vz, Gz]), (0, Ez.useEffect)((() => {
+          vz && rz.current.playEmote(null !== Rz && void 0 !== Rz ? Rz : null)
+        }), [Rz, Kz, vz]), (0, Ez.useEffect)((() => {
+          if (!vz || null === wz) return;
+          const zz = rz.current,
+            {
+              pitch: uz,
+              radius: bz
+            } = Mz.c[Fz];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return zz.setOrbit({
+            yaw: wz + Oz,
+            pitch: uz,
+            radius: bz
+          }), () => {
+            zz.resetCamera()
+          };
+          const Ez = performance.now();
+          let nz = 0;
+          const iz = lz => {
+            zz.setOrbit({
+              yaw: wz + (lz - Ez) / 6e3 * 2 * Math.PI,
+              pitch: uz,
+              radius: bz
+            }), nz = requestAnimationFrame(iz)
+          };
+          return nz = requestAnimationFrame(iz), () => {
+            cancelAnimationFrame(nz), zz.resetCamera()
+          }
+        }), [vz, wz]), (0, Hz.jsx)("div", {
+          className: "CharCustomisationPreview",
+          ref: Xz
+        })
+      })))
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

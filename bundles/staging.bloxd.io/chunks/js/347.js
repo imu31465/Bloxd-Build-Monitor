@@ -1,26 +1,26 @@
 export const id = 347;
 export const ids = [347];
 export const modules = {
-  60037: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      WorldCodeAiDeepSeekNotice: () => WT,
-      deepSeekPrivacyPolicyUrl: () => kT
+  60356: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      WorldCodeAiDeepSeekNotice: () => lz,
+      deepSeekPrivacyPolicyUrl: () => iz
     });
-    var iT = IT(1171),
-      zT = IT(1083);
-    const kT = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html";
+    var Ez = bz(1181),
+      nz = bz(1089);
+    const iz = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html";
 
-    function WT() {
+    function lz() {
       const {
-        t: TT
-      } = (0, iT.t)();
-      return (0, zT.jsxs)(zT.Fragment, {
-        children: [TT("superBotXd:deepSeekNotice"), " ", (0, zT.jsxs)("a", {
+        t: zz
+      } = (0, Ez.F)();
+      return (0, nz.jsxs)(nz.Fragment, {
+        children: [zz("superBotXd:deepSeekNotice"), " ", (0, nz.jsxs)("a", {
           className: "WorldCodeAiDeepSeekPolicyLink",
-          href: kT,
+          href: iz,
           target: "_blank",
           rel: "noreferrer noopener",
-          children: [TT("superBotXd:deepSeekPrivacyPolicy"), " ", (0, zT.jsx)("span", {
+          children: [zz("superBotXd:deepSeekPrivacyPolicy"), " ", (0, nz.jsx)("span", {
             "aria-hidden": "true",
             children: "\u2197"
           })]
@@ -30,4 +30,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

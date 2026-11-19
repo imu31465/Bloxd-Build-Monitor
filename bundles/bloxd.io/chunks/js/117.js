@@ -1,1100 +1,226 @@
 export const id = 117;
 export const ids = [117];
 export const modules = {
-  6012: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      default: () => KT
+  6252: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      default: () => iz
     });
-    var iT = IT(1171),
-      zT = IT(139),
-      kT = IT(231),
-      WT = IT(1408),
-      XT = IT(1280),
-      BT = IT(12),
-      FT = IT(1635),
-      ST = IT(2950),
-      DT = IT(2690),
-      LT = IT(1083);
+    var Ez = bz(1181),
+      nz = bz(1089);
 
-    function xT() {
+    function iz() {
       const {
-        t: TT
-      } = (0, iT.t)(), oT = !(0, kT.shouldUseUkPrivacyPolicy)();
-      return (0, LT.jsxs)("div", {
+        t: zz
+      } = (0, Ez.F)();
+      return (0, nz.jsxs)("div", {
         className: "LegalText",
-        children: [(0, LT.jsx)("div", {
+        children: [(0, nz.jsx)("div", {
           className: "BloxdInformationHeader FullyFancyText",
-          children: TT("homePage:privacyPolicy")
-        }), (0, LT.jsx)("p", {
-          children: (0, LT.jsxs)("em", {
-            children: ["Last updated: ", ST.f.toLocaleDateString()]
+          children: zz("homePage:termsOfService")
+        }), (0, nz.jsx)("p", {
+          children: (0, nz.jsx)("em", {
+            children: "Last updated: July 15, 2025"
           })
-        }), (0, LT.jsx)("p", {
-          children: "This Privacy Policy outlines how Bloxd LTD collects, uses, and protects your information when you visit and interact with Bloxd.io. This document is intended to provide clarity on our practices and your rights concerning your data."
-        }), (0, LT.jsx)("h2", {
-          children: "1. Who We Are"
-        }), (0, LT.jsx)("p", {
-          children: "At Bloxd.io, we take your privacy\u2014and the privacy of your children\u2014very seriously. This Privacy Policy explains how we collect, use, and protect the information of both you and your child when you use our website. Our goal is to make sure you understand what information we collect, why we collect it, and how we keep it safe. We also want to ensure that you know your rights and how you can exercise them."
-        }), (0, LT.jsx)("p", {
-          children: "Whether you\u2019re a parent, guardian, or player, this document is designed to provide you with clear and straightforward information about our privacy practices. We\u2019re committed to providing a safe and enjoyable environment for our younger players while respecting the privacy and concerns of parents and guardians."
-        }), (0, LT.jsx)("h2", {
-          children: "2. Information We Collect, Why We Collect It, and How It Is Used"
-        }), (0, LT.jsx)("h3", {
-          children: "2.1 Visitors"
-        }), (0, LT.jsx)("h4", {
-          children: "2.1.1 Data Collection and Usage"
-        }), (0, LT.jsxs)("p", {
-          children: ["When you interact with Bloxd.io, certain data is collected to ensure the website operates correctly and securely. By default, we apply the highest level of privacy protection for all visitors. This means that we collect only the minimal amount of information necessary to operate the website and ensure its functionality. The following types of information may be collected:", " "]
-        }), (0, LT.jsxs)("table", {
-          children: [(0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Type of Information"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What We Collect"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Why We Collect It"
-              })
+        }), (0, nz.jsx)("p", {
+          children: 'These Terms of Service ("Terms") govern your access to and use of the Bloxd.io website and services (the "Services"). These Terms form a legally binding agreement between you and Bloxd LTD ("we," "us" or "our"). By using our Services, you agree to these Terms in full. If you do not agree, you may not access or use our Services.'
+        }), (0, nz.jsx)("h3", {
+          children: "1. General Information"
+        }), (0, nz.jsx)("p", {
+          children: "We may update these Terms at any time. When we do, we\u2019ll post the revised version on our website with the new effective date. Your continued use of Bloxd.io after the changes take effect means you accept the updated Terms. If you do not agree to the changes, you must stop using the Services."
+        }), (0, nz.jsx)("h3", {
+          children: "2. Definitions"
+        }), (0, nz.jsx)("p", {
+          children: (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: '"Account" means the account you create to access the Services on Bloxd.io.'
+            }), (0, nz.jsx)("li", {
+              children: '"Company" refers to Bloxd LTD and its affiliates, subsidiaries, and associated entities.'
+            }), (0, nz.jsx)("li", {
+              children: '"Services" includes the Bloxd.io website, games, content, and related services provided by us.'
+            }), (0, nz.jsx)("li", {
+              children: '"User", "you", or "your" refers to anyone using the Services.'
+            }), (0, nz.jsx)("li", {
+              children: '"Content" means all text, graphics, logos, images, software, and other material found on Bloxd.io.'
+            }), (0, nz.jsx)("li", {
+              children: '"Virtual Goods" refers to virtual items available for purchase within Bloxd.io, such as game items and in-game currency.'
             })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Technical Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "IP address, browser type, device type, screen resolution, language selection"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To ensure the website functions correctly and displays in your preferred language."
-              })
+          })
+        }), (0, nz.jsx)("h3", {
+          children: "3. Age Requirements"
+        }), (0, nz.jsx)("p", {
+          children: "To use Bloxd.io, you must be at least 13 years old. If you are under 13, you need permission from a parent or guardian. By using our Services, you confirm that you meet this age or permission requirement."
+        }), (0, nz.jsx)("h3", {
+          children: "4. Account Creation and Security"
+        }), (0, nz.jsx)("p", {
+          children: (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: "Account Information: You agree to provide accurate and complete information when creating your account. You are responsible for keeping your account information secure and confidential."
+            }), (0, nz.jsx)("li", {
+              children: "Account Security: Notify us immediately if you suspect unauthorized access to your account. We are not liable for any loss or damage arising from your failure to secure your account."
             })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Usage Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Pages visited, time spent on pages, clicks, and interactions"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To analyze how the website is used and to improve player experience."
-              })
+          })
+        }), (0, nz.jsx)("h3", {
+          children: "5. User Conduct and Community Guidelines"
+        }), (0, nz.jsx)("p", {
+          children: "We are committed to creating a fun, safe, and inclusive environment for everyone. By using Bloxd.io, you agree to follow our Community Conduct Guidelines and adhere to the following rules:"
+        }), (0, nz.jsx)("h4", {
+          children: "Expected Behavior"
+        }), (0, nz.jsx)("p", {
+          children: (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: "Show Respect: Treat others with kindness and consideration in all interactions."
+            }), (0, nz.jsx)("li", {
+              children: "Promote Positivity: Engage in activities that contribute to a positive community experience."
+            }), (0, nz.jsx)("li", {
+              children: "Play Fairly: Participate honestly and with integrity, respecting the rules and spirit of the game."
             })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Cookie Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsxs)("p", {
-                children: ["Cookies that store settings, advert frequency, fraud prevention", oT ? ", and with your consent, enable personalized advertising" : ""]
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsxs)("p", {
-                children: ["To enhance your experience by remembering your preferences, save your game progress, and ensure ads are displayed an appropriate number of times and to prevent fraudulent activity.", oT ? " With your consent, cookies may also be used to enable personalized advertising based on your interests." : ""]
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Moderation Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Anonymized IP address, Chat logs, username, reports"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To maintain a safe environment in chat rooms and enforce community guidelines."
-              })
+          })
+        }), (0, nz.jsx)("h4", {
+          children: "Prohibited Behavior"
+        }), (0, nz.jsxs)("p", {
+          children: ["To maintain a safe and welcoming environment, the following actions are strictly prohibited:", (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: "Harassment and Threats: Any form of bullying, stalking, or harassment, including making threats or inciting violence."
+            }), (0, nz.jsx)("li", {
+              children: "Discrimination and Hate Speech: Discriminating against or mocking others based on age, race, ethnicity, gender, sexual orientation, religion, disability, or any other protected characteristic."
+            }), (0, nz.jsx)("li", {
+              children: "Inappropriate Content and Behavior: Sharing or promoting content that is sexually explicit, violent, or otherwise inappropriate."
+            }), (0, nz.jsx)("li", {
+              children: "Impersonation: Impersonating other players, staff, or developers with the intent to deceive or harm."
+            }), (0, nz.jsx)("li", {
+              children: "Account Security and Privacy: Sharing, selling, or trading accounts, or using someone else's account without permission."
+            }), (0, nz.jsx)("li", {
+              children: "Spam and Advertising: Spamming chat, boards, or other communication channels with repetitive or irrelevant messages."
+            }), (0, nz.jsx)("li", {
+              children: "Inappropriate World Creation: Creating worlds or lobbies with inappropriate or offensive themes or content."
             })]
           })]
-        }), (0, LT.jsx)("p", {
-          children: "Data Retention:\xa0Data related to visitors is retained as long as the account is active, or 14 months after your last play session. If a user requests account deletion, the associated data will be deleted promptly, typically within 30 days after the request is processed."
-        }), (0, LT.jsx)("h3", {
-          children: "2.2 Chat Rooms"
-        }), (0, LT.jsx)("p", {
-          children: "Bloxd.io includes online social features, such as chat rooms, where players can interact. We implement several measures to ensure chat safety:"
-        }), (0, LT.jsxs)("ul", {
-          children: [(0, LT.jsx)("li", {
-            children: "Automated Moderation: Tools are used to automatically detect and filter inappropriate content."
-          }), (0, LT.jsx)("li", {
-            children: "Manual Moderation: Human moderators review flagged content to ensure compliance with our chat safety rules."
-          }), (0, LT.jsx)("li", {
-            children: "User Reports: players can report content they believe violates guidelines, and it will be reviewed by moderators."
-          })]
-        }), (0, LT.jsx)("p", {
-          children: "Before participating in chat rooms, players and their guardians are encouraged to review our Community Conduct."
-        }), (0, LT.jsx)("h3", {
-          children: "2.3 Registered players"
-        }), (0, LT.jsx)("h4", {
-          children: "2.3.1 Age Requirements and Parental Consent"
-        }), (0, LT.jsxs)("p", {
-          children: ["Accounts on Bloxd.io can only be created by players aged 13 or older, or by younger players with parental consent. For those registering through Google, Google will verify the user\u2019s age and obtain parental consent if required. For more details, refer to", " ", (0, LT.jsx)("a", {
-            href: "https://families.google.com/familylink/privacy/child-policy",
-            children: "Google\u2019s Child Privacy Policy"
-          }), "."]
-        }), (0, LT.jsx)("h4", {
-          children: "2.3.2 Data Collection for Registered Players"
-        }), (0, LT.jsx)("p", {
-          children: "When creating an account, the following data is collected to provide personalized services and enhance user experience:"
-        }), (0, LT.jsxs)("table", {
-          children: [(0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Type of Information"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What We Collect"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Why We Collect It"
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Account Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Username, email address"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To create and manage user accounts."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Profile Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Optional profile details (e.g., avatar)"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To personalize the user experience."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Technical Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "IP address, device type, browser type"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To secure accounts and ensure the website functions correctly."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Usage Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Pages visited, site interactions"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To improve the user experience and offer tailored features."
-              })
+        }), (0, nz.jsx)("h4", {
+          children: "Cheating and Unfair Play"
+        }), (0, nz.jsxs)("p", {
+          children: ["You may not make, use, share, or promote any cheats, hacks, bots, scripts, or other tools that change how the game works or give players an unfair advantage.", (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: "This includes trying to bypass any form of security - including, but not limited to, protections related to client integrity or gameplay action security."
+            }), (0, nz.jsx)("li", {
+              children: "It also includes trying to reverse engineer our game's code in any way, or trying to gain unauthorised access to our systems."
+            }), (0, nz.jsx)("li", {
+              children: "If you do any of these things, we may suspend or ban your account, and we reserve the right to take civil and/or criminal legal action for your actions harming our game, our players, and our business."
+            }), (0, nz.jsx)("li", {
+              children: "If you break these rules - like hacking, cheating, or trying to mess with our game or servers - you agree to pay us \xa325,000 for each violation. This is because it's hard to measure exactly how much damage those actions cause, and this amount is a fair estimate of the harm they can do. This doesn't stop us from taking other legal steps if needed, like our right to seek injunctive relief or any other remedy available at law or in equity."
+            }), (0, nz.jsx)("li", {
+              children: "These rules apply to everyone, whether or not you have a game account, and even if you used a bot or other automated tool to do it."
             })]
           })]
-        }), (0, LT.jsx)("p", {
-          children: "Data Retention: Data related to registered players is retained for as long as the account is active, 14 months after your last play session or If a user requests account deletion, the associated data will be deleted promptly, typically within 30 days after the request is processed."
-        }), (0, LT.jsx)("h3", {
-          children: "2.3.3 Data Collection for Store Purchases"
-        }), (0, LT.jsx)("p", {
-          children: "When making a store purchase as a registered player, the following data is collected by us or our payment partners listed in section 3.3 to provide a compliant checkout experience and access to their purchase:"
-        }), (0, LT.jsxs)("table", {
-          children: [(0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Type of Information"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What We Collect"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Why We Collect It"
-              })
+        }), (0, nz.jsx)("h3", {
+          children: "6. Software License and IP Restrictions"
+        }), (0, nz.jsxs)("ul", {
+          children: [(0, nz.jsx)("li", {
+            children: "License Grant: We grant you a limited, non-exclusive, non-transferable right to download and run the Bloxd game client solely to access and play our Services."
+          }), (0, nz.jsx)("li", {
+            children: "What You Can't Do: You may not copy, modify, distribute, or create derivative works of the game client, or attempt to reverse-engineer, decompile, disassemble, hack, bypass security, inject cheats, bots, scripts, or any unauthorized tools. Any such action automatically terminates your license and may lead to legal remedies. For the avoidance of doubt, any use of hacks and cheats including but not limited to killaura, fly exploits, and speed exploits automatically terminates your license and may lead to legal remedies."
+          }), (0, nz.jsx)("li", {
+            children: "Our Ownership: All intellectual property rights in the game client and Services stay with Bloxd LTD. You get no ownership or other rights here beyond this limited license."
+          })]
+        }), (0, nz.jsx)("h3", {
+          children: "7. Virtual Goods and In-Game Purchases"
+        }), (0, nz.jsx)("p", {
+          children: (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: "Purchases: Virtual Goods can be purchased within the Services. All purchases are final and non-refundable unless required by law."
+            }), (0, nz.jsx)("li", {
+              children: "License: When you purchase Virtual Goods, you receive a limited, non-transferable license to use them within the Services."
+            }), (0, nz.jsx)("li", {
+              children: "Termination: We may terminate your access to Virtual Goods if you violate these Terms or our Community Conduct Guidelines."
             })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Account Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "User ID, email address"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To attach any purchase made to your account."
-              })
+          })
+        }), (0, nz.jsx)("h3", {
+          children: "8. Modifications and Updates"
+        }), (0, nz.jsx)("p", {
+          children: (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: "Service Changes: We may update or modify the Services at any time without prior notice. We are not liable for any changes, suspensions, or discontinuations of the Services."
+            }), (0, nz.jsx)("li", {
+              children: "Terms Updates: These Terms may be updated periodically. We will notify you of significant changes, and your continued use of the Services constitutes your acceptance of the new Terms."
             })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Technical Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Transaction ID, IP address, device type, browser type"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Combat fraud and reporting."
-              })
+          })
+        }), (0, nz.jsx)("h3", {
+          children: "9. Termination"
+        }), (0, nz.jsx)("p", {
+          children: (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: "Termination by You: You can terminate your account at any time by contacting us."
+            }), (0, nz.jsx)("li", {
+              children: "Termination by Us: We reserve the right to terminate or suspend your account if you violate these Terms, the Community Conduct Guidelines, or engage in harmful behavior."
             })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Usage Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Pages visited, site interactions, purchase history"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To secure accounts and ensure the website functions correctly."
-              })
+          })
+        }), (0, nz.jsx)("h3", {
+          children: "10. Reporting and Consequences"
+        }), (0, nz.jsx)("p", {
+          children: (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: "Reporting Violations: If you encounter behavior that violates these Terms or the Community Conduct Guidelines, report it using the in-game tools. Your reports help us maintain a high-quality, enjoyable experience for everyone."
+            }), (0, nz.jsx)("li", {
+              children: "Consequences for Violations: Breaking these guidelines can result in penalties ranging from temporary suspensions to permanent bans. Players who demonstrate positive behavior over time may see a reduction in penalties."
             })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Usage Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Pages visited, site interactions"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To improve the user experience and offer tailored features after purchase."
-              })
+          })
+        }), (0, nz.jsx)("h3", {
+          children: "11. Disclaimer of Warranties"
+        }), (0, nz.jsx)("p", {
+          children: (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: 'As-Is Basis: The Services are provided "as is" and "as available", without any warranties, either express or implied.'
+            }), (0, nz.jsx)("li", {
+              children: "No Warranty: We do not guarantee that the Services will be uninterrupted or error-free."
             })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Payment Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Payment Information, Billing address "
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To complete and validate your purchase"
-              })
+          })
+        }), (0, nz.jsx)("h3", {
+          children: "12. Limitation of Liability"
+        }), (0, nz.jsx)("p", {
+          children: (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: "No Liability: To the maximum extent permitted by law, we are not liable for any indirect, incidental, special, or consequential damages arising from your use of the Services."
+            }), (0, nz.jsx)("li", {
+              children: "Total Liability: Our total liability to you for any claims related to the Services is limited to the amount you paid us in the past 12 months."
+            })]
+          })
+        }), (0, nz.jsx)("h3", {
+          children: "13. Governing Law and Dispute Resolution"
+        }), (0, nz.jsx)("p", {
+          children: (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: "Governing Law: These Terms are governed by the laws of England and Wales."
+            }), (0, nz.jsx)("li", {
+              children: "Small-Claims Court Option: If you or we seek only money damages up to the small-claims track limit set by the Civil Procedure Rules (currently \xa310,000), you may choose to bring that claim in the County Court small-claims track in England and Wales. This does not cover any other kinds of relief (like injunctions), nor can you split one dispute into several small claims to get around this limit."
+            }), (0, nz.jsx)("li", {
+              children: "Dispute Resolution: Any other disputes arising from these Terms will be resolved through binding arbitration in London, United Kingdom. You waive any right to participate in a class action or jury trial."
+            }), (0, nz.jsx)("li", {
+              children: "Equitable Relief for Bloxd: Even though we agree to arbitrate all other non-small claim disputes, only Bloxd LTD (not you) may go to an English or Welsh court for urgent orders - like injunctions or specific-performance - to protect our IP, confidential data, account security, gameplay experience, or the integrity of our service. Asking a court for such relief won't count as breaking our arbitration agreement."
+            }), (0, nz.jsx)("li", {
+              children: "Identity Verification: If the arbitrator issues any award against you (including for hacks, cheats, or other breaches), you agree that upon request you will promptly provide your full legal name, current address, relevant IP logs, and a copy of a government-issued photo ID to confirm your identity and enable enforcement of the award (including collection of any monetary damages)."
+            })]
+          })
+        }), (0, nz.jsx)("h3", {
+          children: "14. Severability"
+        }), (0, nz.jsx)("p", {
+          children: "If any part of these Terms is found to be unenforceable, the remaining provisions will continue to be in full force and effect."
+        }), (0, nz.jsx)("h3", {
+          children: "15. Contact Information"
+        }), (0, nz.jsxs)("p", {
+          children: ["If you have any questions about these Terms, please contact us at:", (0, nz.jsxs)("ul", {
+            children: [(0, nz.jsx)("li", {
+              children: "Email: privacy@bloxd.io"
+            }), (0, nz.jsx)("li", {
+              children: "Address: Bloxd LTD, 86-90 Paul Street, London, England, United Kingdom, EC2A 4NE"
             })]
           })]
-        }), (0, LT.jsx)("p", {
-          children: "Our payment providers, who act as our merchant of record, securely collect payment information and handle it according to the required security & law. Payment information is not shared with or processed by bloxd."
-        }), (0, LT.jsx)("p", {
-          children: "Data Retention: Data related to purchases can be stored for up to 5 years after fulfilling the purposes for which the data were collected to combat fraud and for reporting purposes."
-        }), (0, LT.jsx)("h3", {
-          children: "2.4 When You Contact Us"
-        }), (0, LT.jsx)("p", {
-          children: "When you reach out to us, we collect information to help us respond to you effectively:"
-        }), (0, LT.jsxs)("table", {
-          children: [(0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Type of Information"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What We Collect"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Why We Collect It"
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Contact Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Your email address or phone number"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To get back to you about your questions or concerns."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Message Content"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What you say in your message"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "To understand and address your issue or feedback."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Technical Info"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Date, time, and details of how you contacted us"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "For security and to ensure we respond appropriately."
-              })
-            })]
-          })]
-        }), (0, LT.jsx)("p", {
-          children: "Data Retention:\xa0We will retain the personal data collected from your inquiries for up to\xa0three months after your query is resolved or closed. This extended period allows us to ensure that any follow-up questions can be addressed. If the inquiry is from a child under the age of 13, any data collected will be deleted as soon as possible."
-        }), (0, LT.jsx)("h2", {
-          children: "3. Third-Party Data Use"
-        }), (0, LT.jsx)("h3", {
-          children: "3.1 Scope of This Privacy Policy"
-        }), (0, LT.jsxs)("p", {
-          children: ["This Privacy Policy applies only to the Bloxd.io game and its related services when accessed through the official Bloxd.io website or our mobile apps (such as those on iOS and Android).", " "]
-        }), (0, LT.jsx)("p", {
-          children: "If you use Bloxd.io through a third-party platform or website, this Privacy Policy does not cover those environments. We recommend checking the privacy policies of those sites or platforms and making sure you understand how your data is used before engaging with them."
-        }), (0, LT.jsx)("p", {
-          children: "We may also work with third-party services for some features in our game. These third parties have their own privacy policies, which apply in addition to ours. We encourage you to review those policies as well."
-        }), (0, LT.jsx)("h3", {
-          children: "3.2 Advertisers"
-        }), (0, LT.jsx)("p", {
-          children: "Bloxd.io displays ads from selected partners. On our website, ads are managed and delivered by our web advertising partners; within our mobile apps (available on iOS and Android), ads are delivered through Google AdMob."
-        }), oT && (0, LT.jsx)("p", {
-          children: "With your consent, we may display personalized ads tailored to your interests based on information such as your browsing history, device information, your device\u2019s advertising identifier, and your interactions with our site and apps. Where you do not provide consent, you will only be shown non-personalized ads."
-        }), !oT && (0, LT.jsx)("p", {
-          children: "These ads are non-personalized, meaning they are not based on your personal data or browsing behavior, but rather on general context. We do not collect personal data from children under 13 for advertising purposes."
-        }), (0, LT.jsx)("p", {
-          children: "Where the EU or UK General Data Protection Regulation (GDPR) applies, our website asks for your advertising and cookie choices through a consent prompt registered with the IAB Transparency and Consent Framework when you first visit. You can review, change or withdraw your consent at any time through the consent settings link shown in the footer of our home page and at the top of this Privacy Policy, or by contacting us. Withdrawing consent does not affect processing carried out before you withdrew it."
-        }), (0, LT.jsx)("h3", {
-          children: "3.3 Service Providers"
-        }), (0, LT.jsx)("p", {
-          children: "We work with trusted third-party service providers to help operate the website and deliver services effectively. These providers only receive the data necessary to perform their functions and are required to maintain the confidentiality and security of your information. The key service providers we work with are categorized as follows:"
-        }), (0, LT.jsx)("h4", {
-          children: "Hosting and Data Storage"
-        }), (0, LT.jsxs)("table", {
-          children: [(0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "AWS Cloud"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Data storage and processing"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Hosts our servers and stores backup, data securely."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Digital Ocean"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Data storage and processing"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Hosts our servers and stores data securely."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Google Firebase"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Email, User data, app usage data, device information"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Provides backend services including database for registered users"
-              })
-            })]
-          })]
-        }), (0, LT.jsx)("h4", {
-          children: "Website Security and Performance"
-        }), (0, LT.jsxs)("table", {
-          children: [(0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "https://www.cloudflare.com/en-gb/privacypolicy/",
-                  children: "Cloudflare"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "IP addresses, browser types, device information"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Provides\xa0website security, performance optimization, and protection against malicious attacks."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "https://policies.google.com/privacy",
-                  children: "Google reCAPTCHA"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "IP addresses, browser types, device information"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Protection against malicious attacks."
-              })
-            })]
-          })]
-        }), (0, LT.jsx)("h4", {
-          children: "Advertising Management"
-        }), (0, LT.jsxs)("table", {
-          children: [(0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "https://adinplay.com/privacy-policy",
-                  children: "Adinplay"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", oT ? ", personalized with your consent" : ""]
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Manages and delivers in-game advertisements on our website."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "https://aditude.com/privacy",
-                  children: "Aditude"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", oT ? ", personalized with your consent" : ""]
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Manages and delivers in-game advertisements on our website."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "https://policies.google.com/privacy",
-                  children: "Google Ads Manager"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", oT ? ", personalized with your consent" : ""]
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Manages and optimizes the display of advertisements on our website."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "https://nitropay.com/privacy",
-                  children: "Nitro (NitroPay)"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", oT ? ", personalized with your consent" : ""]
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Manages and delivers in-game advertisements on our website, and manages advertising consent and opt-out choices."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "https://policies.google.com/privacy",
-                  children: "Google AdMob"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsxs)("p", {
-                children: ["Device advertising identifier, IP address, app usage and ad interaction data", oT ? ", personalized with your consent" : ""]
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Delivers banner, interstitial, and rewarded ads within our iOS and Android mobile apps."
-              })
-            })]
-          })]
-        }), (0, LT.jsx)("h4", {
-          children: "Analytics"
-        }), (0, LT.jsxs)("table", {
-          children: [(0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "https://policies.google.com/technologies/partner-sites",
-                  children: "Google Analytics"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Usage data, pages visited, interactions on the site"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Analyzes website usage to help us understand how the site is used and improve user experience."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "https://docs.bytebrew.io/BBSettings/privacypolicy",
-                  children: "ByteBrew"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Usage data, device data, interactions on the site"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Analyzes website usage to help us understand how the site is used and improve user experience."
-              })
-            })]
-          })]
-        }), (0, LT.jsx)("h4", {
-          children: "Content Moderation"
-        }), (0, LT.jsxs)("table", {
-          children: [(0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "https://www.lassomoderation.com/privacy-policy/",
-                  children: "Lasso Moderation"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Anonymized IP addresses, chat logs, usernames, reports, custom lobby metadata, custom game metadata, thumbnail uploads"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Provides automated and manual moderation services to ensure chat safety and compliance with guidelines."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "https://www.purgomalum.com/",
-                  children: "PurgoMalum"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Chat logs"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Provides profanity filtering for moderating chat messages."
-              })
-            })]
-          })]
-        }), (0, LT.jsx)("h4", {
-          children: "Payment Providers"
-        }), (0, LT.jsxs)("table", {
-          children: [(0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "https://xsolla.com/privacypolicy",
-                  children: "Xsolla"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "User ID, Email Address, IP addresses, Purchase History, Purchase Request"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Act as our merchant of record, handling all our secure payment protection insurance and checkout experience to complete your purchase and handle payment support."
-              })
-            })]
-          })]
-        }), (0, LT.jsx)("h4", {
-          children: "Platform Integrations"
-        }), (0, LT.jsxs)("table", {
-          children: [(0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Information Processed"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: (0, LT.jsx)("a", {
-                  href: "http://www.google.com/policies/privacy",
-                  children: "YouTube API Services"
-                })
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Public YouTube channel identifiers submitted by creators"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Retrieves and displays publicly available YouTube content."
-              })
-            })]
-          })]
-        }), (0, LT.jsx)("h3", {
-          children: "3.4 YouTube API Services"
-        }), (0, LT.jsxs)("p", {
-          children: ["Bloxd.io uses YouTube API Services to show YouTube videos, livestreams and Shorts from Bloxd creators on our homepage, and to find the YouTube channel that a creator links to their Bloxd profile. By using these features, you agree to be bound by the", " ", (0, LT.jsx)("a", {
-            href: "https://www.youtube.com/t/terms",
-            children: "YouTube Terms of Service"
-          }), "."]
-        }), (0, LT.jsxs)("p", {
-          children: ["YouTube API Services are provided by Google. Google\u2019s use of information is described in the Google Privacy Policy at", " ", (0, LT.jsx)("a", {
-            href: "http://www.google.com/policies/privacy",
-            children: "http://www.google.com/policies/privacy"
-          }), "."]
-        }), (0, LT.jsx)("p", {
-          children: "We only retrieve publicly available YouTube data: video titles, thumbnails, publish dates, view and live viewer counts and live status, and the channel ID for a YouTube handle a creator adds to their profile. We do not ask you to sign in with YouTube or Google for these features, and we do not access your YouTube account. Creators can remove their linked YouTube handle from their profile, or contact us to remove it, at any time; this deletes the stored channel ID straight away, and deleting an account removes it too."
-        }), (0, LT.jsx)("h2", {
-          children: "4. Cookies and Tracking Technologies"
-        }), (0, LT.jsx)("h3", {
-          children: "4.1 What Are Cookies?"
-        }), (0, LT.jsx)("p", {
-          children: "Cookies are small data files stored on your device that help identify you when you visit a website. They allow the site to remember your preferences and provide a smoother experience."
-        }), (0, LT.jsx)("h3", {
-          children: "4.2 Types of Cookies We Use"
-        }), (0, LT.jsx)("p", {
-          children: "We use different types of cookies to enhance your experience and ensure that Bloxd.io\xa0functions properly. Here\u2019s what each type of cookie does:"
-        }), (0, LT.jsxs)("table", {
-          children: [(0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Type of Cookie"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Purpose"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Example"
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Functional Cookies"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Ensure the website works properly by enabling basic functions like navigation and settings."
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Remembering your game settings, progress or language preferences."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Analytical Cookies"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Help us understand how players use the site by collecting anonymized data (e.g., pages visited)."
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Tracking the number of visitors or identifying popular game features."
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Ad Cookies"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsxs)("p", {
-                children: ["Manage ad display frequency, prevent repetitive ads, and help detect fraudulent activity", oT ? ", and with your consent, enable personalized advertising based on your interests and browsing behavior." : "."]
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsxs)("p", {
-                children: ["Ensuring the same ad doesn\u2019t appear too frequently or detecting fraudulent ad interactions", oT ? ", and when you consent, showing you ads that are more relevant to your interests." : "."]
-              })
-            })]
-          }), (0, LT.jsxs)("tr", {
-            children: [(0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Notice Acceptance Cookies"
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Record whether you have acknowledged or accepted notices, such as our cookie policy."
-              })
-            }), (0, LT.jsx)("td", {
-              children: (0, LT.jsx)("p", {
-                children: "Storing your acceptance of our cookie banner or other notifications."
-              })
-            })]
-          })]
-        }), (0, LT.jsx)("h3", {
-          children: "4.3 Managing Cookies"
-        }), (0, LT.jsx)("p", {
-          children: "You can control cookie settings through your browser. Below are links to guides on how to manage cookies for common browsers:"
-        }), (0, LT.jsxs)("ul", {
-          children: [(0, LT.jsx)("li", {
-            children: "Google Chrome: Go to Settings > Privacy and Security > Clear browsing data > Cookies and other site data."
-          }), (0, LT.jsx)("li", {
-            children: "Mozilla Firefox: Go to Options > Privacy & Security > Cookies and Site Data > Clear Data."
-          }), (0, LT.jsx)("li", {
-            children: "Safari: Go to Preferences > Privacy > Manage Website Data > Remove All."
-          }), (0, LT.jsx)("li", {
-            children: "Microsoft Edge: Go to Settings > Cookies and site permissions > Manage and delete cookies and site data."
-          })]
-        }), (0, LT.jsx)("h2", {
-          children: "5. Security Measures"
-        }), (0, LT.jsx)("p", {
-          children: "We take the security of your data seriously. We implement various measures to ensure your personal information is protected and manage it according to applicable data protection laws."
-        }), (0, LT.jsx)("h3", {
-          children: "5.1 Technologies and Procedures"
-        }), (0, LT.jsxs)("ul", {
-          children: [(0, LT.jsx)("li", {
-            children: "We use encryption\xa0and other security technologies to safeguard your personal information during transmission and storage."
-          }), (0, LT.jsx)("li", {
-            children: "Our servers are hosted by trusted partners who apply high security standards to protect the data we store."
-          }), (0, LT.jsx)("li", {
-            children: "We regularly monitor our systems for potential vulnerabilities and use firewalls and anti-virus software to prevent unauthorized access."
-          })]
-        }), (0, LT.jsx)("h3", {
-          children: "5.2 Staff Training and Compliance"
-        }), (0, LT.jsxs)("ul", {
-          children: [(0, LT.jsx)("li", {
-            children: "Our team is trained to manage your data securely and in accordance with data protection laws like GDPR\xa0and COPPA."
-          }), (0, LT.jsx)("li", {
-            children: "Internal procedures are in place to ensure that only authorized personnel can access sensitive data."
-          })]
-        }), (0, LT.jsx)("h3", {
-          children: "5.3 Data Breach Notification"
-        }), (0, LT.jsx)("p", {
-          children: "In the unlikely event of a data breach that affects your personal information:"
-        }), (0, LT.jsxs)("ul", {
-          children: [(0, LT.jsx)("li", {
-            children: "We will promptly notify\xa0affected users, as required by law."
-          }), (0, LT.jsx)("li", {
-            children: "The notification will include:"
-          })]
-        }), (0, LT.jsxs)("ul", {
-          children: [(0, LT.jsx)("li", {
-            children: "What data was compromised."
-          }), (0, LT.jsx)("li", {
-            children: "The steps we are taking to resolve the issue and protect your data."
-          }), (0, LT.jsx)("li", {
-            children: "Recommendations for what you can do to protect yourself (e.g., change passwords)."
-          })]
-        }), (0, LT.jsx)("p", {
-          children: "We take all necessary steps to ensure that breaches are addressed swiftly to minimize any potential harm."
-        }), (0, LT.jsx)("h2", {
-          children: "6. International Data Transfers"
-        }), (0, LT.jsx)("p", {
-          children: "Your data may be transferred to servers in other countries. All international transfers comply with relevant data protection regulations, ensuring that your information is safeguarded."
-        }), (0, LT.jsx)("h2", {
-          children: "7. Data Retention"
-        }), (0, LT.jsx)("p", {
-          children: "We retain your data only for as long as necessary to fulfil the purposes outlined in this policy:"
-        }), (0, LT.jsxs)("ul", {
-          children: [(0, LT.jsx)("li", {
-            children: "Technical and Usage Data:\xa0Retained for 14 months after your last visit to the site or until you request removal and the removal is verified."
-          }), (0, LT.jsx)("li", {
-            children: "Personal Data for Registered players:\xa0Retained for as long as the account is active. Upon request for account deletion, data will be removed promptly, typically within 30 days after the request is processed."
-          }), (0, LT.jsx)("li", {
-            children: "Contact Information:\xa0Retained for three months after the query is resolved or closed. If personal data from children is collected, it will be deleted as soon as possible."
-          }), (0, LT.jsx)("li", {
-            children: "Cookies:\xa0Cookies are retained for varying periods, depending on their purpose. Functional cookies are typically retained for as long as they are needed to operate the site, while analytical cookies may be retained for a shorter period to analyze site performance."
-          }), (0, LT.jsx)("li", {
-            children: "YouTube API Data:\xa0Public video metadata retrieved from YouTube API Services is refreshed every hour and is never kept for more than 24 hours. Creator-linked YouTube handles and channel IDs are retained while the link remains on the account and deleted as soon as it is removed."
-          })]
-        }), (0, LT.jsx)("p", {
-          children: "If we collect personal data beyond what is outlined above, we will remove it as soon as possible once it is no longer needed."
-        }), (0, LT.jsx)("h2", {
-          children: "8. Your Rights"
-        }), (0, LT.jsx)("h3", {
-          children: "8.1 Your Choices and Control"
-        }), (0, LT.jsx)("p", {
-          children: "As a user of Bloxd.io, you have the right to:"
-        }), (0, LT.jsxs)("ul", {
-          children: [(0, LT.jsx)("li", {
-            children: "Access Your Data: Request a copy of the personal information we hold about you."
-          }), (0, LT.jsx)("li", {
-            children: "Correct Your Data: Ask us to correct any inaccurate or incomplete information."
-          }), (0, LT.jsx)("li", {
-            children: "Delete Your Data: Request the deletion of your personal information when it is no longer needed."
-          }), (0, LT.jsx)("li", {
-            children: "Limit Data Collection: Request that we limit the collection or use of your data."
-          }), (0, LT.jsx)("li", {
-            children: "Object to Data Processing: Object to certain types of data processing, such as for marketing purposes."
-          }), (0, LT.jsx)("li", {
-            children: "Withdraw Consent: Where we rely on your consent, withdraw it at any time, as described in section 3.2."
-          })]
-        }), (0, LT.jsx)("h3", {
-          children: "8.2 Parental Choices and Control "
-        }), (0, LT.jsx)("p", {
-          children: "As a verified parent or guardian of a child using Bloxd.io, you have the right to:"
-        }), (0, LT.jsxs)("ul", {
-          children: [(0, LT.jsx)("li", {
-            children: "Access Your Child\u2019s Data: Request a copy of the personal information we\u2019ve collected about your child, including details like username, email address, and chat logs."
-          }), (0, LT.jsx)("li", {
-            children: "Correct Your Child\u2019s Data: Ask us to correct any inaccurate or incomplete information about your child."
-          }), (0, LT.jsx)("li", {
-            children: "Delete Your Child\u2019s Data: Request the deletion of your child\u2019s account and all associated data. Once verified, we will delete this data promptly, typically within 30 days. This will also remove any saved progress in the game."
-          }), (0, LT.jsx)("li", {
-            children: "Limit Data Collection for Your Child: Request that we limit the collection or use of certain types of data, such as usage information, from your child."
-          })]
-        }), (0, LT.jsx)("h3", {
-          children: "8.3 How to Exercise Your Rights"
-        }), (0, LT.jsx)("p", {
-          children: "To exercise any of these rights, contact us using the information provided below. We may require proof of identity before proceeding with your request. Responses will typically be provided within 30 days."
-        }), (0, LT.jsx)("h3", {
-          children: "8.4 Your California Privacy Rights"
-        }), (0, LT.jsx)("p", {
-          children: "If you are a California resident, the California Consumer Privacy Act, as amended by the California Privacy Rights Act (together, the \u201cCCPA\u201d), gives you the rights below. This section supplements the rest of this Privacy Policy."
-        }), (0, LT.jsx)("p", {
-          children: "Personal Information We Collect: In the past 12 months we have collected the following categories of personal information, from you, from your device, and from the service providers listed in section 3.3, for the purposes described in sections 2 and 3:"
-        }), (0, LT.jsxs)("ul", {
-          children: [(0, LT.jsx)("li", {
-            children: "Identifiers, such as your username, email address, user ID, IP address and device advertising identifiers."
-          }), (0, LT.jsx)("li", {
-            children: "Internet or other electronic network activity information, such as pages visited, interactions with our website and ad interactions."
-          }), (0, LT.jsx)("li", {
-            children: "Commercial information, such as your purchase history."
-          })]
-        }), (0, LT.jsx)("p", {
-          children: "Sale and Sharing of Personal Information: Our advertising partners listed in section 3.3 may collect identifiers and internet or other electronic network activity information through cookies and similar technologies on our website to deliver and measure ads. This may be considered a \u201csale\u201d or \u201csharing\u201d of personal information under the CCPA."
-        }), (0, LT.jsx)("p", {
-          children: "Under the CCPA, you have the right to:"
-        }), (0, LT.jsxs)("ul", {
-          children: [(0, LT.jsx)("li", {
-            children: "Know: Request the categories and specific pieces of personal information we have collected about you, and how we use and disclose it."
-          }), (0, LT.jsx)("li", {
-            children: "Delete: Request the deletion of personal information we have collected from you."
-          }), (0, LT.jsx)("li", {
-            children: "Correct: Ask us to correct inaccurate personal information we hold about you."
-          }), (0, LT.jsx)("li", {
-            children: "Opt Out of Sale or Sharing: Opt out of the sale or sharing of your personal information."
-          }), (0, LT.jsx)("li", {
-            children: "Non-Discrimination: Exercise any of these rights without being treated differently by us."
-          })]
-        }), (0, LT.jsxs)("p", {
-          children: ["To opt out of the sale or sharing of your personal information, use the \u201cDo Not Sell My Personal Information\u201d link shown to California visitors in the footer of our home page and at the top of this Privacy Policy, or email us at", " ", (0, LT.jsx)("a", {
-            href: "mailto:privacy@bloxd.io",
-            children: "privacy@bloxd.io"
-          }), ". To exercise your other rights, contact us as described in section 8.3. You may also ask an authorized agent to make a request on your behalf; we may ask the agent for proof of your permission and ask you to verify your identity with us."]
-        }), (0, LT.jsx)("h2", {
-          children: "9. Contact Us"
-        }), (0, LT.jsx)("p", {
-          children: "Got questions or concerns? We\u2019re here to help. Reach out to us at:"
-        }), (0, LT.jsxs)("ul", {
-          children: [(0, LT.jsxs)("li", {
-            children: ["Email: ", (0, LT.jsx)("a", {
-              href: "mailto:privacy@bloxd.io",
-              children: "privacy@bloxd.io"
-            })]
-          }), (0, LT.jsx)("li", {
-            children: "Address: Bloxd LTD, 86-90 Paul Street, London, England, United Kingdom, EC2A 4NE"
-          })]
-        }), (0, LT.jsx)("h2", {
-          children: "10. Updates to This Policy"
-        }), (0, LT.jsx)("p", {
-          children: "We may update this policy occasionally to reflect changes in our practices or the law. When we do, we\u2019ll update the \u201cLast updated\u201d date at the top. Please check back occasionally to stay informed."
+        }), (0, nz.jsx)("h3", {
+          children: "16. Entire Agreement"
+        }), (0, nz.jsx)("p", {
+          children: "These Terms, together with our Privacy Policy and Community Conduct Guidelines, constitute the entire agreement between you and Bloxd LTD regarding your use of the Services. They supersede any prior agreements or communications."
         })]
-      })
-    }
-
-    function cT() {
-      const {
-        adMobPrivacyOptionsRequired: TT
-      } = (0, BT.k)(["adMobPrivacyOptionsRequired"]);
-      if (!TT) return null;
-      return (0, LT.jsx)(WT.e, {
-        className: "PrivacyChoicesButton",
-        onClick: () => {
-          (async () => {
-            try {
-              await FT.c.request("ads.showPrivacyOptions", {})
-            } catch (TT) {
-              console.error("Failed to open AdMob privacy options:", TT)
-            }
-          })()
-        },
-        children: "Manage Privacy Choices"
-      })
-    }
-
-    function KT() {
-      return (0, LT.jsxs)(LT.Fragment, {
-        children: [(0, zT.c)() && (0, LT.jsx)(LT.Fragment, {
-          children: (0, LT.jsx)(WT.e, {
-            className: "PrivacyChoicesButton",
-            onClick: () => {
-              (0, XT.s)()
-            },
-            children: "Adjust Discord Privacy Choices"
-          })
-        }), (0, LT.jsx)(cT, {}), (0, LT.jsx)(DT.e, {
-          className: "PrivacyPolicyLinks"
-        }), (0, LT.jsx)(xT, {})]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

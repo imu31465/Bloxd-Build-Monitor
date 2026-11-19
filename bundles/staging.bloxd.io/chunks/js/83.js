@@ -1,53 +1,53 @@
 export const id = 83;
 export const ids = [83];
 export const modules = {
-  4266: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => hT,
-      f: () => rT
+  4540: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => sz,
+      f: () => wz
     });
-    var iT = IT(1272),
-      zT = IT(16);
-    var kT = IT(314);
-    var WT = IT(618);
-    var XT = IT(2201),
-      BT = IT(4269),
-      FT = IT(4292),
-      ST = IT(4299);
-    class DT {
-      constructor(TT, oT, IT, iT, zT, kT) {
-        this.id = TT, this.type = oT, this.parameters = IT, this.tearDownNotification = iT, this.onDonePromise = zT, this.resolveRequest = kT
+    var Ez = bz(1279),
+      nz = bz(22);
+    var iz = bz(328);
+    var lz = bz(588);
+    var Mz = bz(2289),
+      tz = bz(4544),
+      Hz = bz(4567),
+      Oz = bz(4575);
+    class pz {
+      constructor(zz, uz, bz, Ez, nz, iz) {
+        this.id = zz, this.type = uz, this.parameters = bz, this.tearDownNotification = Ez, this.onDonePromise = nz, this.resolveRequest = iz
       }
     }
-    const LT = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
-    class xT {
-      constructor(TT, oT, IT, iT, zT, kT) {
-        this.id = TT, this.type = oT, this.parameters = IT, this.resolveRequest = iT, this.onDonePromise = zT, this.tearDownNotification = kT, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
-        const WT = rT[oT];
-        if (!WT) throw console.error(`No QTE implementation registered for type: ${oT}`), new Error(`No QTE implementation registered for type: ${oT}`);
-        this.implementation = new WT(IT, (TT => {
-          this.isCompleted = !0, this.resolveRequest(TT)
+    const dz = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class Fz {
+      constructor(zz, uz, bz, Ez, nz, iz) {
+        this.id = zz, this.type = uz, this.parameters = bz, this.resolveRequest = Ez, this.onDonePromise = nz, this.tearDownNotification = iz, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const lz = wz[uz];
+        if (!lz) throw console.error(`No QTE implementation registered for type: ${uz}`), new Error(`No QTE implementation registered for type: ${uz}`);
+        this.implementation = new lz(bz, (zz => {
+          this.isCompleted = !0, this.resolveRequest(zz)
         }), this.tearDownNotification), this.setupInputHandlers()
       }
       setupInputHandlers() {
-        this.mouseSub = zT.h.subscribe("QTEMouseState", (TT => {
+        this.mouseSub = nz.k.subscribe("QTEMouseState", (zz => {
           let {
-            isDown: oT
-          } = TT;
-          this.isCompleted || this.implementation.handleMouseInput(oT)
-        })), this.stopInputActions = (0, FT.f)((TT => {
-          this.isCompleted || !LT.has(TT.action) && !(0, FT.e)(TT) || this.implementation.handleMouseInput(TT.down)
-        })), this.tickSub = zT.h.subscribe("noaTick", (TT => {
+            isDown: uz
+          } = zz;
+          this.isCompleted || this.implementation.handleMouseInput(uz)
+        })), this.stopInputActions = (0, Hz.g)((zz => {
+          this.isCompleted || !dz.has(zz.action) && !(0, Hz.c)(zz) || this.implementation.handleMouseInput(zz.down)
+        })), this.tickSub = nz.k.subscribe("noaTick", (zz => {
           if (this.isCompleted) return;
-          const oT = TT / 1e3;
-          this.implementation.handleTick(oT)
-        })), this.stopShellTicks = (0, BT.y)((() => {
-          this.isCompleted || this.implementation.handleTick(XT.u / 1e3)
+          const uz = zz / 1e3;
+          this.implementation.handleTick(uz)
+        })), this.stopShellTicks = (0, tz.A)((() => {
+          this.isCompleted || this.implementation.handleTick(Mz.s / 1e3)
         }))
       }
       cleanup() {
-        var TT, oT;
-        this.mouseSub && (zT.h.unsubscribe(this.mouseSub), this.mouseSub = null), null === (TT = this.stopInputActions) || void 0 === TT || TT.call(this), this.stopInputActions = null, null === (oT = this.stopShellTicks) || void 0 === oT || oT.call(this), this.stopShellTicks = null, this.tickSub && (zT.h.unsubscribe(this.tickSub), this.tickSub = null)
+        var zz, uz;
+        this.mouseSub && (nz.k.unsubscribe(this.mouseSub), this.mouseSub = null), null === (zz = this.stopInputActions) || void 0 === zz || zz.call(this), this.stopInputActions = null, null === (uz = this.stopShellTicks) || void 0 === uz || uz.call(this), this.stopShellTicks = null, this.tickSub && (nz.k.unsubscribe(this.tickSub), this.tickSub = null)
       }
       async waitUntilDone() {
         await this.onDonePromise
@@ -59,28 +59,28 @@ export const modules = {
         this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
-    const cT = new iT.d,
-      KT = new Map;
-    let MT = null;
-    const rT = {
+    const Zz = new Ez.b,
+      Rz = new Map;
+    let Kz = null;
+    const wz = {
       progressBar: class {
-        constructor(TT, oT, IT) {
-          var iT, zT, kT, WT;
-          this.resolveRequest = oT, this.tearDownNotification = IT, this.progress = 0, this.GI = void 0, this.pI = void 0, this.bI = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
-          const XT = TT;
-          this.GI = null !== (iT = XT.GI) && void 0 !== iT ? iT : .075, this.pI = null !== (zT = XT.pI) && void 0 !== zT ? zT : 1, this.progress = null !== (kT = XT.tI) && void 0 !== kT ? kT : 30, this.bI = null !== (WT = XT.bI) && void 0 !== WT && WT, this.parameters = XT
+        constructor(zz, uz, bz) {
+          var Ez, nz, iz, lz;
+          this.resolveRequest = uz, this.tearDownNotification = bz, this.progress = 0, this.mz = void 0, this.qz = void 0, this.hz = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const Mz = zz;
+          this.mz = null !== (Ez = Mz.mz) && void 0 !== Ez ? Ez : .075, this.qz = null !== (nz = Mz.qz) && void 0 !== nz ? nz : 1, this.progress = null !== (iz = Mz.Vz) && void 0 !== iz ? iz : 30, this.hz = null !== (lz = Mz.hz) && void 0 !== lz && lz, this.parameters = Mz
         }
-        handleMouseInput(TT) {
-          TT && !this.isCompleted && (this.clickCount++, this.progress += this.pI, this.progress >= 100 && this.complete(!0))
+        handleMouseInput(zz) {
+          zz && !this.isCompleted && (this.clickCount++, this.progress += this.qz, this.progress >= 100 && this.complete(!0))
         }
         handleTick() {
           if (!this.isCompleted)
-            if (this.progress -= this.GI, this.bI && this.progress <= 0) this.complete(!1);
+            if (this.progress -= this.mz, this.hz && this.progress <= 0) this.complete(!1);
             else if (this.progress <= 0) this.progress = 0;
           else if (this.progress >= 100) return void this.complete(!0)
         }
-        complete(TT) {
-          this.isCompleted = !0, this.resolveRequest(TT)
+        complete(zz) {
+          this.isCompleted = !0, this.resolveRequest(zz)
         }
         getState() {
           return {
@@ -98,30 +98,30 @@ export const modules = {
         }
       },
       timedClick: class {
-        constructor(TT, oT, IT) {
-          var iT;
-          this.resolveRequest = oT, this.tearDownNotification = IT, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = TT, this.timeWindowMs = null !== (iT = this.parameters.dI) && void 0 !== iT ? iT : 3e3, this.startTime = Date.now()
+        constructor(zz, uz, bz) {
+          var Ez;
+          this.resolveRequest = uz, this.tearDownNotification = bz, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = zz, this.timeWindowMs = null !== (Ez = this.parameters.Dz) && void 0 !== Ez ? Ez : 3e3, this.startTime = Date.now()
         }
-        handleMouseInput(TT) {
-          if (!TT || this.isCompleted) return;
+        handleMouseInput(zz) {
+          if (!zz || this.isCompleted) return;
           Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
         }
         handleTick() {
           if (this.isCompleted) return;
           Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
         }
-        complete(TT) {
-          this.isCompleted = !0, this.resolveRequest(TT)
+        complete(zz) {
+          this.isCompleted = !0, this.resolveRequest(zz)
         }
         getState() {
-          const TT = Date.now() - this.startTime,
-            oT = Math.max(0, this.timeWindowMs - TT);
+          const zz = Date.now() - this.startTime,
+            uz = Math.max(0, this.timeWindowMs - zz);
           return {
             type: this.type,
             parameters: this.parameters,
             state: {
-              timeRemaining: oT,
-              dI: this.timeWindowMs
+              timeRemaining: uz,
+              Dz: this.timeWindowMs
             },
             isActive: !0
           }
@@ -131,49 +131,49 @@ export const modules = {
         }
       },
       gravityBar: class {
-        constructor(TT, oT, IT) {
-          var iT;
-          this.resolveRequest = oT, this.tearDownNotification = IT, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
-          const zT = TT;
+        constructor(zz, uz, bz) {
+          var Ez;
+          this.resolveRequest = uz, this.tearDownNotification = bz, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const nz = zz;
           this.parameters = {
-            ...zT,
-            Ii: kT.e.clamp(zT.Ii, .05, 1)
-          }, this.progress = null !== (iT = zT.tI) && void 0 !== iT ? iT : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+            ...nz,
+            jz: iz.d.clamp(nz.jz, .05, 1)
+          }, this.progress = null !== (Ez = nz.Vz) && void 0 !== Ez ? Ez : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
-        handleMouseInput(TT) {
-          this.isMouseDown = TT
+        handleMouseInput(zz) {
+          this.isMouseDown = zz
         }
-        handleTick(TT) {
-          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(TT))
+        handleTick(zz) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(zz))
         }
         updateMover() {
           this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
-          const TT = Math.sign(this.moverTarget - this.moverPosition);
-          this.moverPosition += TT * this.parameters.ii * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+          const zz = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += zz * this.parameters.Iz * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
         }
         pickNewMoverTarget() {
           this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
         randomNumTicksUntilDirectionChange() {
-          const TT = kT.e.clamp(1 - .7 * this.parameters.zi, 0, 1.4);
-          return Math.floor(60 * TT + 40 * Math.random())
+          const zz = iz.d.clamp(1 - .7 * this.parameters.Bz, 0, 1.4);
+          return Math.floor(60 * zz + 40 * Math.random())
         }
         updateCatchZone() {
-          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.ki : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = kT.e.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
-          const TT = this.parameters.Ii / 2,
-            oT = TT,
-            IT = 1 - TT;
-          this.catchZonePosition <= oT ? (this.catchZonePosition = oT, this.catchZoneVelocity = 0) : this.catchZonePosition >= IT && (this.catchZonePosition = IT, this.catchZoneVelocity = 0)
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.Cz : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = iz.d.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const zz = this.parameters.jz / 2,
+            uz = zz,
+            bz = 1 - zz;
+          this.catchZonePosition <= uz ? (this.catchZonePosition = uz, this.catchZoneVelocity = 0) : this.catchZonePosition >= bz && (this.catchZonePosition = bz, this.catchZoneVelocity = 0)
         }
         isMoverInCatchZone() {
-          const TT = this.parameters.Ii / 2;
-          return this.moverPosition >= this.catchZonePosition - TT && this.moverPosition <= this.catchZonePosition + TT
+          const zz = this.parameters.jz / 2;
+          return this.moverPosition >= this.catchZonePosition - zz && this.moverPosition <= this.catchZonePosition + zz
         }
-        updateProgress(TT) {
-          this.isMoverInCatchZone() ? this.progress += this.parameters.Wi * TT : this.progress -= this.parameters.Xi * TT, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.bI && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        updateProgress(zz) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.Yz * zz : this.progress -= this.parameters.kz * zz, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.hz && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
         }
-        complete(TT) {
-          this.isCompleted = !0, this.resolveRequest(TT)
+        complete(zz) {
+          this.isCompleted = !0, this.resolveRequest(zz)
         }
         getState() {
           return {
@@ -181,7 +181,7 @@ export const modules = {
             parameters: this.parameters,
             state: {
               catchZonePosition: this.catchZonePosition,
-              Ii: this.parameters.Ii,
+              jz: this.parameters.jz,
               moverPosition: this.moverPosition,
               progress: this.progress,
               isCatching: this.isMoverInCatchZone()
@@ -194,38 +194,38 @@ export const modules = {
         }
       },
       precisionBar: class {
-        constructor(TT, oT, IT) {
-          var iT, zT, WT, XT, BT;
-          this.resolveRequest = oT, this.tearDownNotification = IT, this.startTime = void 0, this.speed = void 0, this.Fi = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
-          const FT = TT;
+        constructor(zz, uz, bz) {
+          var Ez, nz, lz, Mz, tz;
+          this.resolveRequest = uz, this.tearDownNotification = bz, this.startTime = void 0, this.speed = void 0, this.uu = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const Hz = zz;
           this.parameters = {
-            ...FT,
-            speed: null !== (iT = FT.speed) && void 0 !== iT ? iT : .5,
-            Fi: kT.e.clamp(FT.Fi, .05, 1),
-            label: null !== (zT = FT.label) && void 0 !== zT ? zT : [{
+            ...Hz,
+            speed: null !== (Ez = Hz.speed) && void 0 !== Ez ? Ez : .5,
+            uu: iz.d.clamp(Hz.uu, .05, 1),
+            label: null !== (nz = Hz.label) && void 0 !== nz ? nz : [{
               str: "Click when the marker is within the green zone."
             }],
-            icon: null !== (WT = FT.icon) && void 0 !== WT ? WT : null,
-            scale: null !== (XT = FT.scale) && void 0 !== XT ? XT : 1,
-            rotation: null !== (BT = FT.rotation) && void 0 !== BT ? BT : 0
-          }, this.speed = this.parameters.speed, this.Fi = this.parameters.Fi, this.startTime = Date.now()
+            icon: null !== (lz = Hz.icon) && void 0 !== lz ? lz : null,
+            scale: null !== (Mz = Hz.scale) && void 0 !== Mz ? Mz : 1,
+            rotation: null !== (tz = Hz.rotation) && void 0 !== tz ? tz : 0
+          }, this.speed = this.parameters.speed, this.uu = this.parameters.uu, this.startTime = Date.now()
         }
-        handleMouseInput(TT) {
-          if (TT) {
+        handleMouseInput(zz) {
+          if (zz) {
             this.updateMarkerPosition();
-            const TT = Math.abs(this.markerPosition - .5) <= this.Fi / 2;
-            this.complete(TT)
+            const zz = Math.abs(this.markerPosition - .5) <= this.uu / 2;
+            this.complete(zz)
           }
         }
         handleTick() {
           this.isCompleted || this.updateMarkerPosition()
         }
         updateMarkerPosition() {
-          const TT = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
-          this.markerPosition = TT <= .5 ? 2 * TT : 2 - 2 * TT
+          const zz = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = zz <= .5 ? 2 * zz : 2 - 2 * zz
         }
-        complete(TT) {
-          this.isCompleted = !0, this.resolveRequest(TT)
+        complete(zz) {
+          this.isCompleted = !0, this.resolveRequest(zz)
         }
         getState() {
           return this.updateMarkerPosition(), {
@@ -242,29 +242,29 @@ export const modules = {
         }
       },
       rhythmClick: class {
-        constructor(TT, oT, IT) {
-          this.resolveRequest = oT, this.tearDownNotification = IT, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = TT, this.shrinkStartTime = Date.now()
+        constructor(zz, uz, bz) {
+          this.resolveRequest = uz, this.tearDownNotification = bz, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = zz, this.shrinkStartTime = Date.now()
         }
-        handleMouseInput(TT) {
-          if (!TT || this.isCompleted) return;
-          const oT = this.getOuterCircleProgress();
-          if (oT <= this.parameters.xi && oT >= -this.parameters.xi) {
-            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.Di) return void this.complete(!0)
+        handleMouseInput(zz) {
+          if (!zz || this.isCompleted) return;
+          const uz = this.getOuterCircleProgress();
+          if (uz <= this.parameters.lu && uz >= -this.parameters.lu) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.nu) return void this.complete(!0)
           } else this.handleMiss();
           this.shrinkStartTime = Date.now()
         }
         handleMiss() {
-          this.misses++, this.lastClickResult = !1, !(0, WT.K)(this.parameters.Ki) && this.misses > this.parameters.Ki ? this.complete(!1) : this.shrinkStartTime = Date.now()
+          this.misses++, this.lastClickResult = !1, !(0, lz.F)(this.parameters.Mu) && this.misses > this.parameters.Mu ? this.complete(!1) : this.shrinkStartTime = Date.now()
         }
         handleTick() {
           if (this.isCompleted) return;
-          this.getOuterCircleProgress() < -this.parameters.xi && this.handleMiss()
+          this.getOuterCircleProgress() < -this.parameters.lu && this.handleMiss()
         }
         getOuterCircleProgress() {
-          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.Li
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.iu
         }
-        complete(TT) {
-          this.isCompleted = !0, this.resolveRequest(TT)
+        complete(zz) {
+          this.isCompleted = !0, this.resolveRequest(zz)
         }
         getState() {
           return {
@@ -273,7 +273,7 @@ export const modules = {
             state: {
               outerCircleProgress: this.getOuterCircleProgress(),
               successes: this.successes,
-              Di: this.parameters.Di,
+              nu: this.parameters.nu,
               misses: this.misses,
               lastClickResult: this.lastClickResult
             },
@@ -286,61 +286,61 @@ export const modules = {
       }
     };
 
-    function AT() {
-      (0, ST.g)(XT.A.Qte, MT ? XT.A.Qte : 0), MT ? zT.h.XM("qteStateUpdated", MT.getState()) : zT.h.XM("qteStateUpdated", {
+    function Xz() {
+      (0, Oz.i)(Mz.z.Qte, Kz ? Mz.z.Qte : 0), Kz ? nz.k.sK("qteStateUpdated", Kz.getState()) : nz.k.sK("qteStateUpdated", {
         type: null,
         typeSpecificParameters: null,
         isActive: !1
       })
     }
-    class gT {
-      constructor(TT, oT) {
-        this.resultPromise = TT, this.tearDownQTE = oT
+    class fz {
+      constructor(zz, uz) {
+        this.resultPromise = zz, this.tearDownQTE = uz
       }
-      static create(TT, oT, IT) {
-        const iT = Promise.race([TT, oT]);
-        return new gT(iT, IT)
+      static create(zz, uz, bz) {
+        const Ez = Promise.race([zz, uz]);
+        return new fz(Ez, bz)
       }
       async getResult() {
         return await this.resultPromise
       }
     }
-    class hT {
-      static queueQTE(TT, oT, IT) {
-        let iT, zT;
-        const kT = new Promise((TT => {
-            iT = TT
+    class sz {
+      static queueQTE(zz, uz, bz) {
+        let Ez, nz;
+        const iz = new Promise((zz => {
+            Ez = zz
           })),
-          WT = new Promise((TT => {
-            zT = () => {
-              TT("qteTornDown")
+          lz = new Promise((zz => {
+            nz = () => {
+              zz("qteTornDown")
             }
           })),
-          XT = Promise.race([kT, WT]).then((() => {})),
-          BT = new DT(TT, oT, IT, zT, XT, iT);
-        return KT.set(TT, BT), cT.enqueue(BT), MT || this.processNextQTE(), gT.create(kT, WT, zT)
+          Mz = Promise.race([iz, lz]).then((() => {})),
+          tz = new pz(zz, uz, bz, nz, Mz, Ez);
+        return Rz.set(zz, tz), Zz.enqueue(tz), Kz || this.processNextQTE(), fz.create(iz, lz, nz)
       }
       static async processNextQTE() {
-        if (MT || cT.Mc()) return void(cT.Mc() && MT && (MT = null, AT()));
-        const TT = await cT.dequeue();
-        if (!KT.has(TT.id)) return void await this.processNextQTE();
-        KT.delete(TT.id);
-        const oT = new xT(TT.id, TT.type, TT.parameters, TT.resolveRequest, TT.onDonePromise, TT.tearDownNotification);
-        MT = oT, AT();
+        if (Kz || Zz.aZ()) return void(Zz.aZ() && Kz && (Kz = null, Xz()));
+        const zz = await Zz.dequeue();
+        if (!Rz.has(zz.id)) return void await this.processNextQTE();
+        Rz.delete(zz.id);
+        const uz = new Fz(zz.id, zz.type, zz.parameters, zz.resolveRequest, zz.onDonePromise, zz.tearDownNotification);
+        Kz = uz, Xz();
         try {
-          await oT.waitUntilDone()
-        } catch (IT) {
-          console.error("Error while waiting for QTE to resolve:", IT.stack)
+          await uz.waitUntilDone()
+        } catch (bz) {
+          console.error("Error while waiting for QTE to resolve:", bz.stack)
         }
-        MT === oT && (MT.cleanup(), MT = null, AT()), await this.processNextQTE()
+        Kz === uz && (Kz.cleanup(), Kz = null, Xz()), await this.processNextQTE()
       }
-      static cancelQTE(TT) {
-        if (MT && MT.id === TT) return MT.tearDown(), MT = null, AT(), void this.processNextQTE();
-        const oT = KT.get(TT);
-        oT && (KT.delete(TT), oT.tearDownNotification())
+      static cancelQTE(zz) {
+        if (Kz && Kz.id === zz) return Kz.tearDown(), Kz = null, Xz(), void this.processNextQTE();
+        const uz = Rz.get(zz);
+        uz && (Rz.delete(zz), uz.tearDownNotification())
       }
       static getCurrentState() {
-        return MT ? MT.getState() : {
+        return Kz ? Kz.getState() : {
           type: null,
           parameters: null,
           state: null,
@@ -348,60 +348,60 @@ export const modules = {
         }
       }
       static reset() {
-        MT && (MT.tearDown(), MT = null), KT.forEach(((TT, oT) => {
-          this.cancelQTE(oT)
-        })), cT.emptyQueue(), KT.clear(), AT()
+        Kz && (Kz.tearDown(), Kz = null), Rz.forEach(((zz, uz) => {
+          this.cancelQTE(uz)
+        })), Zz.emptyQueue(), Rz.clear(), Xz()
       }
     }
   },
-  4285: (TT, oT, IT) => {
-    IT.d(oT, {
-      $b: () => tT,
-      A: () => kT,
-      Ab: () => xT,
-      Bb: () => mT,
-      C: () => cT,
-      F: () => GT,
-      Fb: () => wT,
-      Gb: () => jT,
-      J: () => FT,
-      Jb: () => HT,
-      Kb: () => UT,
-      N: () => KT,
-      Nb: () => YT,
-      P: () => BT,
-      Pb: () => QT,
-      Rb: () => gT,
-      T: () => LT,
-      Tb: () => hT,
-      Ub: () => qT,
-      W: () => DT,
-      Yb: () => zT,
-      _: () => eT,
-      bb: () => uT,
-      c: () => sT,
-      d: () => lT,
-      eb: () => vT,
-      f: () => ST,
-      gb: () => RT,
-      hb: () => ET,
-      j: () => AT,
-      kb: () => nT,
-      l: () => ZT,
-      mb: () => OT,
-      n: () => rT,
-      o: () => MT,
-      qb: () => aT,
-      r: () => WT,
-      u: () => XT,
-      ub: () => fT,
-      vb: () => JT,
-      xb: () => CT,
-      y: () => iT
+  4564: (zz, uz, bz) => {
+    bz.d(uz, {
+      $: () => Jz,
+      A: () => iz,
+      Ab: () => Pz,
+      Cb: () => Uz,
+      E: () => Zz,
+      Eb: () => az,
+      Gb: () => mz,
+      I: () => Wz,
+      Jb: () => qz,
+      M: () => Hz,
+      Mb: () => fz,
+      N: () => Rz,
+      Ob: () => sz,
+      P: () => tz,
+      Q: () => dz,
+      Qb: () => gz,
+      S: () => pz,
+      Tb: () => nz,
+      W: () => Nz,
+      Wb: () => Qz,
+      Z: () => xz,
+      ab: () => vz,
+      bb: () => Az,
+      c: () => Dz,
+      cb: () => cz,
+      fb: () => hz,
+      g: () => yz,
+      j: () => Oz,
+      jb: () => Vz,
+      m: () => Xz,
+      mb: () => Tz,
+      o: () => Sz,
+      pb: () => Gz,
+      q: () => wz,
+      qb: () => Lz,
+      s: () => Kz,
+      u: () => lz,
+      ub: () => Fz,
+      vb: () => oz,
+      wb: () => rz,
+      x: () => Mz,
+      y: () => Ez
     });
-    const iT = 32,
-      zT = 33.333333333333336,
-      kT = {
+    const Ez = 32,
+      nz = 33.333333333333336,
+      iz = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -435,18 +435,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      WT = {
+      lz = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      XT = {
+      Mz = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      BT = {
+      tz = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -454,20 +454,20 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      FT = {
+      Hz = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      ST = {
+      Oz = {
         Look: 0,
         Remesh: 1
       },
-      DT = 8,
-      LT = 1,
-      xT = {
+      pz = 8,
+      dz = 1,
+      Fz = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -476,7 +476,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      cT = {
+      Zz = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -504,12 +504,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      KT = {
+      Rz = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      MT = {
+      Kz = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -561,7 +561,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      rT = {
+      wz = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -571,10 +571,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      AT = 4,
-      gT = 4,
-      hT = 65535,
-      wT = {
+      Xz = 4,
+      fz = 4,
+      sz = 65535,
+      rz = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -587,7 +587,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      mT = {
+      oz = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -595,12 +595,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      eT = 88,
-      RT = 0,
-      uT = 24,
-      vT = 48,
-      ET = 80,
-      fT = {
+      Nz = 88,
+      vz = 0,
+      xz = 24,
+      Jz = 48,
+      Az = 80,
+      Tz = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -611,18 +611,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      CT = {
+      Lz = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      jT = {
+      Pz = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      JT = {
+      Gz = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -640,34 +640,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      UT = {
+      az = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      aT = 65535,
-      YT = {
+      Vz = 65535,
+      mz = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      QT = {
+      qz = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      OT = 2,
-      HT = {
+      hz = 2,
+      Uz = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      nT = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      qT = {
+      cz = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      gz = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -679,7 +679,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      ZT = {
+      Sz = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -706,7 +706,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      lT = {
+      yz = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -864,8 +864,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      sT = 8,
-      tT = {
+      Dz = 8,
+      Qz = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -890,289 +890,289 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      GT = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      Wz = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  4269: (TT, oT, IT) => {
-    IT.d(oT, {
-      C: () => ET,
-      G: () => fT,
-      J: () => AT,
-      M: () => WT,
-      O: () => XT,
-      S: () => uT,
-      c: () => RT,
-      e: () => hT,
-      i: () => jT,
-      m: () => CT,
-      o: () => rT,
-      q: () => mT,
-      s: () => gT,
-      u: () => wT,
-      y: () => vT
+  4544: (zz, uz, bz) => {
+    bz.d(uz, {
+      A: () => Jz,
+      C: () => Az,
+      F: () => Tz,
+      H: () => Xz,
+      L: () => lz,
+      M: () => Mz,
+      O: () => xz,
+      b: () => vz,
+      c: () => sz,
+      g: () => Pz,
+      j: () => Lz,
+      l: () => wz,
+      o: () => oz,
+      s: () => fz,
+      w: () => rz
     });
-    var iT = IT(4274);
-    const zT = {
+    var Ez = bz(4552);
+    const nz = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let kT = zT;
+    let iz = nz;
 
-    function WT(TT) {
-      kT = null !== TT && void 0 !== TT ? TT : zT
+    function lz(zz) {
+      iz = null !== zz && void 0 !== zz ? zz : nz
     }
 
-    function XT() {
-      return kT
+    function Mz() {
+      return iz
     }
-    const BT = new Set,
-      FT = new Set;
-    let ST = -1;
-    const DT = new Set,
-      LT = new Set;
-    let xT = 0,
-      cT = 0;
-    const KT = new Set,
-      MT = new Set;
+    const tz = new Set,
+      Hz = new Set;
+    let Oz = -1;
+    const pz = new Set,
+      dz = new Set;
+    let Fz = 0,
+      Zz = 0;
+    const Rz = new Set,
+      Kz = new Set;
 
-    function rT(TT) {
-      return BT.add(TT), () => {
-        BT.delete(TT)
+    function wz(zz) {
+      return tz.add(zz), () => {
+        tz.delete(zz)
       }
     }
 
-    function AT(TT, oT) {
-      for (const iT of BT) try {
-        iT(TT)
-      } catch (IT) {
-        oT(IT)
+    function Xz(zz, uz) {
+      for (const Ez of tz) try {
+        Ez(zz)
+      } catch (bz) {
+        uz(bz)
       }
     }
 
-    function gT(TT) {
-      return FT.add(TT), () => {
-        FT.delete(TT)
+    function fz(zz) {
+      return Hz.add(zz), () => {
+        Hz.delete(zz)
       }
     }
 
-    function hT(TT, oT) {
-      const IT = ST < 0 ? 0 : TT - ST;
-      ST = TT;
-      for (const zT of FT) try {
-        zT(IT)
-      } catch (iT) {
-        oT(iT)
+    function sz(zz, uz) {
+      const bz = Oz < 0 ? 0 : zz - Oz;
+      Oz = zz;
+      for (const nz of Hz) try {
+        nz(bz)
+      } catch (Ez) {
+        uz(Ez)
       }
     }
 
-    function wT(TT) {
-      return DT.add(TT), () => {
-        DT.delete(TT)
+    function rz(zz) {
+      return pz.add(zz), () => {
+        pz.delete(zz)
       }
     }
 
-    function mT(TT) {
-      return LT.add(TT), () => {
-        LT.delete(TT)
+    function oz(zz) {
+      return dz.add(zz), () => {
+        dz.delete(zz)
       }
     }
-    let eT = 0;
+    let Nz = 0;
 
-    function RT(TT) {
-      eT += TT
+    function vz(zz) {
+      Nz += zz
     }
 
-    function uT() {
-      const TT = eT;
-      return eT = 0, TT
+    function xz() {
+      const zz = Nz;
+      return Nz = 0, zz
     }
 
-    function vT(TT) {
-      return KT.add(TT), () => {
-        KT.delete(TT)
-      }
-    }
-
-    function ET(TT) {
-      return MT.add(TT), () => {
-        MT.delete(TT)
+    function Jz(zz) {
+      return Rz.add(zz), () => {
+        Rz.delete(zz)
       }
     }
 
-    function fT() {
-      xT = 0, cT = 0, ST = -1
+    function Az(zz) {
+      return Kz.add(zz), () => {
+        Kz.delete(zz)
+      }
     }
 
-    function CT(TT, oT) {
-      if ("paced" === TT) return cT += oT, null;
-      if ("drawn" !== TT && "skipped" !== TT) return null;
-      const IT = oT + cT;
-      return cT = 0, IT
+    function Tz() {
+      Fz = 0, Zz = 0, Oz = -1
     }
 
-    function jT(TT, oT, IT, zT) {
-      const kT = (0, iT.j)(oT),
-        WT = TT > 0 ? performance.now() : 0;
-      for (let iT = 0; iT < TT; iT++)
-        for (const TT of KT) try {
-          TT()
-        } catch (XT) {
-          zT(XT)
+    function Lz(zz, uz) {
+      if ("paced" === zz) return Zz += uz, null;
+      if ("drawn" !== zz && "skipped" !== zz) return null;
+      const bz = uz + Zz;
+      return Zz = 0, bz
+    }
+
+    function Pz(zz, uz, bz, nz) {
+      const iz = (0, Ez.l)(uz),
+        lz = zz > 0 ? performance.now() : 0;
+      for (let Ez = 0; Ez < zz; Ez++)
+        for (const zz of Rz) try {
+          zz()
+        } catch (Mz) {
+          nz(Mz)
         }
-      if (TT > 0 && RT(performance.now() - WT), null !== IT) {
-        for (const TT of DT) try {
-          TT(IT)
-        } catch (XT) {
-          zT(XT)
+      if (zz > 0 && vz(performance.now() - lz), null !== bz) {
+        for (const zz of pz) try {
+          zz(bz)
+        } catch (Mz) {
+          nz(Mz)
         }
-        xT += IT
+        Fz += bz
       }
-      if ("drawn" === oT) {
-        const TT = xT;
-        xT = 0;
-        for (const oT of LT) try {
-          oT(TT)
-        } catch (XT) {
-          zT(XT)
+      if ("drawn" === uz) {
+        const zz = Fz;
+        Fz = 0;
+        for (const uz of dz) try {
+          uz(zz)
+        } catch (Mz) {
+          nz(Mz)
         }
       }
-      for (const iT of MT) try {
-        iT(TT, kT)
-      } catch (XT) {
-        zT(XT)
+      for (const Ez of Kz) try {
+        Ez(zz, iz)
+      } catch (Mz) {
+        nz(Mz)
       }
     }
   },
-  4276: (TT, oT, IT) => {
-    IT.d(oT, {
-      $c: () => dT,
-      B: () => WT,
-      Bb: () => VT,
-      Cb: () => oo,
-      Cc: () => iT.hb,
-      D: () => JT,
-      Dc: () => iT.qb,
-      Dd: () => kT,
-      Eb: () => zT.f,
-      F: () => Lo,
-      G: () => PT,
-      Gb: () => RT,
-      Hc: () => xo,
-      Hd: () => MT,
-      I: () => iT.d,
-      J: () => FT,
-      Jb: () => OT,
-      Jd: () => Xo,
-      K: () => iT.f,
-      Kc: () => Fo,
-      M: () => iT.j,
-      Nb: () => CT,
-      Nd: () => nT,
-      Oc: () => io,
-      Od: () => ZT,
-      P: () => yT,
-      Qb: () => ET,
-      Qc: () => iT.ub,
-      R: () => iT.o,
-      Rb: () => iT.N,
-      Rd: () => HT,
-      Sb: () => jT,
-      Uc: () => iT.vb,
-      V: () => iT.r,
-      Vb: () => wT,
-      Vd: () => tT,
-      Xc: () => iT.xb,
-      Z: () => iT.u,
-      Zb: () => ko,
-      ab: () => DT,
-      ae: () => lT,
-      bb: () => AT,
-      bc: () => gT,
-      be: () => pT,
-      ce: () => GT,
-      dd: () => iT.Bb,
-      e: () => To,
-      eb: () => iT.y,
-      ed: () => iT.Fb,
-      ee: () => Wo,
-      fc: () => So,
-      g: () => KT,
-      gb: () => iT.A,
-      gd: () => iT.Gb,
-      h: () => cT,
-      he: () => co,
-      ic: () => zT.m,
-      ie: () => hT,
-      je: () => bT,
-      kb: () => qT,
-      kd: () => iT.Kb,
-      l: () => Bo,
-      lc: () => rT,
-      ld: () => iT.Nb,
-      le: () => YT,
-      m: () => uT,
-      ne: () => aT,
-      ob: () => zo,
-      pc: () => Io,
-      pd: () => iT.Pb,
-      pe: () => UT,
-      q: () => eT,
-      qe: () => BT,
-      rd: () => vT,
-      sb: () => ST,
-      se: () => QT,
-      t: () => iT.c,
-      tc: () => iT._,
-      te: () => Ko,
-      ud: () => iT.Rb,
-      vb: () => iT.C,
-      wb: () => sT,
-      wd: () => iT.Tb,
-      we: () => xT,
-      x: () => Do,
-      xb: () => NT,
-      xc: () => iT.bb,
-      y: () => fT,
-      yc: () => iT.eb,
-      zc: () => iT.gb,
-      zd: () => iT.Yb
+  4560: (zz, uz, bz) => {
+    bz.d(uz, {
+      $c: () => Ez.Gb,
+      Ab: () => uu,
+      B: () => du,
+      Bc: () => Fu,
+      Bd: () => Uz,
+      C: () => Cz,
+      Dd: () => Qz,
+      Eb: () => nz.e,
+      Fb: () => vz,
+      Fc: () => Hu,
+      G: () => Ez.g,
+      H: () => Hz,
+      Ic: () => Eu,
+      Id: () => yz,
+      Jb: () => hz,
+      L: () => Ez.j,
+      Lc: () => Ez.mb,
+      Ld: () => ez,
+      Mc: () => Ez.pb,
+      Nb: () => Lz,
+      Nd: () => Wz,
+      P: () => Ez.m,
+      Pb: () => Az,
+      Pc: () => Ez.qb,
+      Qb: () => Ez.N,
+      Qc: () => Yz,
+      Qd: () => lu,
+      S: () => Iz,
+      Tb: () => Pz,
+      Tc: () => Ez.vb,
+      Td: () => Zu,
+      V: () => Ez.s,
+      Vb: () => rz,
+      Vc: () => Ez.wb,
+      W: () => Ez.u,
+      Wd: () => sz,
+      Y: () => Ez.x,
+      Yb: () => iu,
+      Yc: () => Ez.Ab,
+      Z: () => pz,
+      Zc: () => Ez.Eb,
+      _b: () => fz,
+      _d: () => jz,
+      ab: () => Xz,
+      bc: () => Ou,
+      be: () => mz,
+      c: () => zu,
+      cb: () => Ez.y,
+      ce: () => Vz,
+      db: () => Ez.A,
+      dd: () => Ez.Jb,
+      de: () => az,
+      f: () => Rz,
+      fc: () => nz.i,
+      fd: () => Jz,
+      ge: () => tz,
+      h: () => Zz,
+      hb: () => gz,
+      i: () => tu,
+      ic: () => wz,
+      ie: () => qz,
+      jc: () => bu,
+      jd: () => Ez.Mb,
+      kb: () => nu,
+      l: () => xz,
+      mb: () => Oz,
+      me: () => Ru,
+      n: () => Nz,
+      nc: () => Ez.W,
+      nd: () => Ez.Ob,
+      od: () => Ez.Tb,
+      p: () => Ez.c,
+      pb: () => Ez.E,
+      pe: () => Fz,
+      qc: () => Ez.Z,
+      qd: () => iz,
+      rc: () => Ez.$,
+      s: () => pu,
+      sb: () => Dz,
+      sd: () => Kz,
+      tc: () => Ez.ab,
+      td: () => Mu,
+      u: () => Tz,
+      ub: () => Bz,
+      vd: () => cz,
+      w: () => lz,
+      wc: () => Ez.bb,
+      xd: () => Sz,
+      yb: () => kz,
+      yc: () => Ez.jb,
+      z: () => Gz
     });
-    var iT = IT(4285),
-      zT = IT(2201);
-    const kT = Math.round(1e3 / iT.Yb),
-      WT = 4,
-      XT = 2;
+    var Ez = bz(4564),
+      nz = bz(2289);
+    const iz = Math.round(1e3 / Ez.Tb),
+      lz = 4,
+      Mz = 2;
 
-    function BT() {
-      return crypto.getRandomValues(new Uint32Array(XT))
+    function tz() {
+      return crypto.getRandomValues(new Uint32Array(Mz))
     }
-    const FT = {
+    const Hz = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      ST = 16,
-      DT = {
+      Oz = 16,
+      pz = {
         Draws: 1,
         NetAll: 2
       },
-      LT = {
+      dz = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function xT(TT) {
-      return (TT.nametagsHidden ? mT.NametagsHidden : 0) | (TT.crouchToggle ? mT.CrouchToggle : 0) | (TT.bhopDisabled ? mT.BhopDisabled : 0) | (TT.disableBobbing ? mT.DisableBobbing : 0) | (TT.ezTowering ? mT.EzTowering : 0) | (TT.ezBridging ? mT.EzBridging : 0) | (TT.showChunkBorders ? mT.ShowChunkBorders : 0)
+    function Fz(zz) {
+      return (zz.nametagsHidden ? oz.NametagsHidden : 0) | (zz.crouchToggle ? oz.CrouchToggle : 0) | (zz.bhopDisabled ? oz.BhopDisabled : 0) | (zz.disableBobbing ? oz.DisableBobbing : 0) | (zz.ezTowering ? oz.EzTowering : 0) | (zz.ezBridging ? oz.EzBridging : 0) | (zz.showChunkBorders ? oz.ShowChunkBorders : 0)
     }
-    const cT = {
+    const Zz = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      KT = {
+      Rz = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -1180,7 +1180,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      MT = {
+      Kz = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -1189,7 +1189,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      rT = {
+      wz = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -1198,20 +1198,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      AT = 5,
-      gT = 4294967295;
+      Xz = 5,
+      fz = 4294967295;
 
-    function hT(TT) {
-      return (TT.showFog ? LT.ShowFog : 0) | (TT.lighting ? LT.Lighting : 0) | (TT.chunkFade ? LT.ChunkFade : 0)
+    function sz(zz) {
+      return (zz.showFog ? dz.ShowFog : 0) | (zz.lighting ? dz.Lighting : 0) | (zz.chunkFade ? dz.ChunkFade : 0)
     }
-    const wT = {
+    const rz = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      mT = {
+      oz = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -1221,50 +1221,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      eT = {
+      Nz = {
         Release: 1,
         KeepTouches: 2
       },
-      RT = {
+      vz = {
         Point: 1,
         Stamped: 2
       },
-      uT = {
+      xz = {
         Add: 1,
         Clear: 2
       },
-      vT = 1,
-      ET = 8,
-      fT = 16777215,
-      CT = 4,
-      jT = {
+      Jz = 1,
+      Az = 8,
+      Tz = 16777215,
+      Lz = 4,
+      Pz = {
         Resume: 1
       },
-      JT = {
+      Gz = {
         Held: 1
       };
 
-    function UT(TT, oT) {
-      return (TT | oT << 8) >>> 0
+    function az(zz, uz) {
+      return (zz | uz << 8) >>> 0
     }
 
-    function aT(TT) {
-      return 255 & TT
+    function Vz(zz) {
+      return 255 & zz
     }
 
-    function YT(TT) {
-      return TT >>> 8
+    function mz(zz) {
+      return zz >>> 8
     }
 
-    function QT(TT) {
-      return TT + 3 & -4
+    function qz(zz) {
+      return zz + 3 & -4
     }
-    const OT = 16777216,
-      HT = 20;
-    const nT = 8,
-      qT = 8,
-      ZT = 16777216,
-      lT = {
+    const hz = 16777216,
+      Uz = 20;
+    const cz = 8,
+      gz = 8,
+      Sz = 16777216,
+      yz = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -1272,19 +1272,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      sT = {
+      Dz = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      tT = 16,
-      GT = {
+      Qz = 16,
+      Wz = {
         Lost: 0,
         Gone: 1
       },
-      pT = {
+      ez = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -1292,18 +1292,18 @@ export const modules = {
         Retire: 5
       };
 
-    function bT(TT) {
-      return TT === pT.WorldgenSeed || TT === pT.Generate
+    function jz(zz) {
+      return zz === ez.WorldgenSeed || zz === ez.Generate
     }
-    const yT = 4,
-      NT = 99,
-      PT = {
+    const Iz = 4,
+      Bz = 99,
+      Cz = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      dT = {
+      Yz = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -1311,40 +1311,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      VT = 12,
-      To = 16,
-      oo = 4,
-      Io = 12,
-      io = {
+      kz = 12,
+      zu = 16,
+      uu = 4,
+      bu = 12,
+      Eu = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      zo = 4,
-      ko = 8,
-      Wo = 8,
-      Xo = {
+      nu = 4,
+      iu = 8,
+      lu = 8,
+      Mu = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      Bo = {
+      tu = {
         Crit: 1,
         HitSelf: 2
       },
-      Fo = {
+      Hu = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      So = {
+      Ou = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      Do = 12,
-      Lo = {
+      pu = 12,
+      du = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -1353,102 +1353,102 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      xo = 67108864;
+      Fu = 67108864;
 
-    function co(TT) {
-      for (const [oT, IT] of Object.entries(iT.d))
-        if (IT === TT) return oT;
-      return `Unknown${TT}`
+    function Zu(zz) {
+      for (const [uz, bz] of Object.entries(Ez.g))
+        if (bz === zz) return uz;
+      return `Unknown${zz}`
     }
 
-    function Ko(TT) {
+    function Ru(zz) {
       return {
-        status: TT[iT.A.Status],
-        lastError: TT[iT.A.LastError],
-        lastErrorDetail: TT[iT.A.LastErrorDetail],
-        errorCount: TT[iT.A.ErrorCount],
-        frameIndex: TT[iT.A.FrameIndex],
-        tickIndex: TT[iT.A.TickIndex],
-        renderPending: TT[iT.A.RenderPending],
-        firstView: TT[iT.A.FirstView],
-        chunksCancelled: TT[iT.A.ChunksCancelled]
+        status: zz[Ez.A.Status],
+        lastError: zz[Ez.A.LastError],
+        lastErrorDetail: zz[Ez.A.LastErrorDetail],
+        errorCount: zz[Ez.A.ErrorCount],
+        frameIndex: zz[Ez.A.FrameIndex],
+        tickIndex: zz[Ez.A.TickIndex],
+        renderPending: zz[Ez.A.RenderPending],
+        firstView: zz[Ez.A.FirstView],
+        chunksCancelled: zz[Ez.A.ChunksCancelled]
       }
     }
   },
-  4274: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => WT,
-      h: () => kT,
-      j: () => zT
+  4552: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => lz,
+      h: () => iz,
+      l: () => nz
     });
-    var iT = IT(4276);
+    var Ez = bz(4560);
 
-    function zT(TT) {
-      return "none" !== TT
+    function nz(zz) {
+      return "none" !== zz
     }
 
-    function kT(TT, oT) {
-      if (!TT) return "none";
-      switch (oT) {
-        case iT.Z.Drawn:
+    function iz(zz, uz) {
+      if (!zz) return "none";
+      switch (uz) {
+        case Ez.Y.Drawn:
           return "drawn";
-        case iT.Z.Paced:
+        case Ez.Y.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function WT(TT) {
-      return "drawn" === TT
+    function lz(zz) {
+      return "drawn" === zz
     }
   },
-  4292: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => BT,
-      e: () => kT,
-      f: () => XT
+  4567: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => tz,
+      c: () => iz,
+      g: () => Mz
     });
-    var iT = IT(2201),
-      zT = IT(4295);
+    var Ez = bz(2289),
+      nz = bz(4571);
 
-    function kT(TT) {
+    function iz(zz) {
       let {
-        action: oT,
-        flags: IT
-      } = TT;
-      return "mid-fire" === oT && 0 !== (IT & iT.d.AltLeftClick)
+        action: uz,
+        flags: bz
+      } = zz;
+      return "mid-fire" === uz && 0 !== (bz & Ez.b.AltLeftClick)
     }
-    const WT = new Set;
+    const lz = new Set;
 
-    function XT(TT) {
-      return WT.add(TT), () => {
-        WT.delete(TT)
+    function Mz(zz) {
+      return lz.add(zz), () => {
+        lz.delete(zz)
       }
     }
 
-    function BT(TT) {
-      const oT = zT.d[255 & TT];
-      if (void 0 === oT) return;
-      const IT = TT >>> 8 & 255,
-        kT = {
-          action: oT,
-          down: 0 !== (IT & iT.d.Down),
-          flags: IT,
-          press: TT >>> 16
+    function tz(zz) {
+      const uz = nz.d[255 & zz];
+      if (void 0 === uz) return;
+      const bz = zz >>> 8 & 255,
+        iz = {
+          action: uz,
+          down: 0 !== (bz & Ez.b.Down),
+          flags: bz,
+          press: zz >>> 16
         };
-      for (const iT of WT) iT(kT)
+      for (const Ez of lz) Ez(iz)
     }
   },
-  4295: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => zT,
-      e: () => kT,
-      h: () => WT,
-      i: () => iT,
-      j: () => XT
+  4571: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz,
+      f: () => iz,
+      i: () => lz,
+      m: () => Ez,
+      n: () => Mz
     });
-    const iT = {
+    const Ez = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -1645,8 +1645,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      zT = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      kT = {
+      nz = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      iz = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -1709,63 +1709,63 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      WT = {
+      lz = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      XT = [16]
+      Mz = [16]
   },
-  4299: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => XT,
-      f: () => WT,
-      g: () => FT
+  4575: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Mz,
+      g: () => lz,
+      i: () => Hz
     });
-    var iT = IT(2201),
-      zT = IT(2204);
-    const kT = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var Ez = bz(2289),
+      nz = bz(2294);
+    const iz = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function WT(TT) {
-      return TT instanceof HTMLElement && (!!(TT.isContentEditable || TT instanceof HTMLTextAreaElement || TT instanceof HTMLSelectElement) || TT instanceof HTMLInputElement && !kT.has(TT.type))
+    function lz(zz) {
+      return zz instanceof HTMLElement && (!!(zz.isContentEditable || zz instanceof HTMLTextAreaElement || zz instanceof HTMLSelectElement) || zz instanceof HTMLInputElement && !iz.has(zz.type))
     }
 
-    function XT(TT) {
-      let oT = null;
-      const IT = IT => {
-          const zT = WT(IT);
-          zT !== oT && (oT = zT, TT(iT.j.UiCapture, iT.A.Keyboard, 0, 0, zT ? iT.A.Keyboard : 0))
+    function Mz(zz) {
+      let uz = null;
+      const bz = bz => {
+          const nz = lz(bz);
+          nz !== uz && (uz = nz, zz(Ez.f.UiCapture, Ez.z.Keyboard, 0, 0, nz ? Ez.z.Keyboard : 0))
         },
-        zT = TT => {
-          IT(TT.target)
+        nz = zz => {
+          bz(zz.target)
         },
-        kT = TT => {
-          IT(TT.relatedTarget)
+        iz = zz => {
+          bz(zz.relatedTarget)
         },
-        XT = () => {
-          IT(document.activeElement)
+        Mz = () => {
+          bz(document.activeElement)
         },
-        BT = {
+        tz = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", zT, BT), document.addEventListener("focusout", kT, BT), document.addEventListener("keydown", XT, BT), IT(document.activeElement), () => {
-        document.removeEventListener("focusin", zT, BT), document.removeEventListener("focusout", kT, BT), document.removeEventListener("keydown", XT, BT)
+      return document.addEventListener("focusin", nz, tz), document.addEventListener("focusout", iz, tz), document.addEventListener("keydown", Mz, tz), bz(document.activeElement), () => {
+        document.removeEventListener("focusin", nz, tz), document.removeEventListener("focusout", iz, tz), document.removeEventListener("keydown", Mz, tz)
       }
     }
-    const BT = new Map;
+    const tz = new Map;
 
-    function FT(TT, oT) {
-      var IT;
-      let iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      BT.set(iT, (null !== (IT = BT.get(iT)) && void 0 !== IT ? IT : 0) & ~TT | oT & TT);
-      let kT = 0;
-      for (const zT of BT.values()) kT |= zT;
-      return (0, zT.D)(TT, kT & TT)
+    function Hz(zz, uz) {
+      var bz;
+      let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      tz.set(Ez, (null !== (bz = tz.get(Ez)) && void 0 !== bz ? bz : 0) & ~zz | uz & zz);
+      let iz = 0;
+      for (const nz of tz.values()) iz |= nz;
+      return (0, nz.x)(zz, iz & zz)
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

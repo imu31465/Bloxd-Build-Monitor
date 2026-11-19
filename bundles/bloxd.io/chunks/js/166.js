@@ -1,43 +1,37 @@
 export const id = 166;
 export const ids = [166];
 export const modules = {
-  8386: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      pageBody: () => iT
+  8636: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const iT = {
-      whatIs: ["It all starts on one tiny island floating high in the sky. In Bloxd Skyblock, that little island becomes a full RPG. You'll level up skills, take on quests, beat dungeon bosses and trade at the auction house, and bit by bit your island turns into something special. There's nothing to install, so you can be standing on it in seconds. Fancy starting from a single block instead? Try One Block. After island PvP? That's Sky Islands."],
-      howToPlay: ["Your first quest is an easy one. Gather logs on your island, craft a bridge and cross to the portal to get to the Hub. That's where everyone hangs out. Up Dog the auctioneer runs the Open Market, so you can buy and sell items with other players there. The Banker looks after your Gold Coins, and the quest givers always have something for you to do. From the Hub, portals take you to Manor Farm, the Dungeons and Cragrock Mines (a meteor has just crashed there).", "You've got five skills to level: Foraging, Combat, Mining, Farming and Fishing. Each one goes up by doing the thing. Chop wood and pick flowers for Foraging. Beat creatures for Combat. Break ores for Mining, harvest fully grown crops for Farming and catch fish for Fishing. Every skill has a starter quest that hands you a tool to speed things up, and each Combat level adds a bit more damage. Got Gold Coins to spare? Spend them on decorative blocks in the Instant Buy shop and make your island look exactly how you want."],
-      features: ["Your Own Private Sky Island to Grow and Decorate", "5 Skills to Level Up: Foraging, Combat, Mining, Farming and Fishing", "Quests That Give You an Axe, Sword, Pickaxe, Hoe and Fishing Rod", "Explore the Hub, Manor Farm, Cragrock Mines and the Dungeons", "Timed Dungeons with Boss Fights on Easy, Medium, Hard and Insane", "Buy and Sell Items with Other Players at the Auction House", "Visit Other Players' Islands", "Daily Rewards, Streaks and Leaderboards"],
-      tips: ["Do the skill starter quests early. The tools they give you make everything faster", "Level up Combat before you go into the Dungeons, since every level adds extra damage", "Start each dungeon on Easy and work your way up to Insane", "You can only trade in the Hub, so pop over to Up Dog to sell stuff you don't need", "Play every day to keep your daily reward streak going", "Type /home to get back to your island from anywhere"],
-      similarGames: ["classic_survival", "oneBlock", "skyIslands", "survivalFactory"],
+    const Ez = {
+      whatIs: ["Your own little slice of the world to shape, share and show off. Bloxd Plots gives every player their own plot in a shared creative world. Each plot starts out completely blank, so you can build whatever you like with whoever you like. It's different from the open world of Bloxd Creative because your plot really is yours. Only you and the players you add can change it."],
+      howToPlay: ["Join Plots and claim a plot. Each one is a 91\xd791 block build area, with 5-block-wide roads between the plots. There's no height limit, so build as tall as you dare. You're in creative mode, which means no health to worry about and nothing stopping you from building.", "Want to build with friends? Add them to your plot and they can build with you, or use Go To Shared Plot to visit plots they've shared with you. You can own up to 5 plots and hop between them. Tp To Plot takes you to any plot in the world if you know its coordinates. Change at least 500 blocks and your plot is saved for good."],
+      features: ["Your Own 91\xd791 Plot to Build On", "Own Up to 5 Plots", "No Height Limit", "Add Friends to Build Together", "Teleport to Any Plot with Coordinates", "Plots Saved Forever Once You've Built Enough", "Spawn Mobs on Your Own Plot"],
+      tips: ["Get to 500 changed blocks quickly, because unsaved plots can be reset", "Add Player to Plot lets a friend build with you", "If you don't want someone editing anymore, use Remove Player from Plot", "Starting something new? Get New Plot gives you a fresh one without losing your old build", "Use Tp To Plot to check out other players' plots for ideas", "Keep your build inside the plot edges, since you can't place blocks on the roads", "Place spawner blocks if you want mobs on your plot"],
+      similarGames: ["classic_creative", "greenville", "classic", "parkourPlace"],
       faq: [{
-        question: "What is Bloxd Skyblock?",
-        answer: "It's a Skyblock RPG. You grow your own private sky island, level up skills, do quests, trade at the auction house and fight dungeon bosses."
+        question: "What is Bloxd Plots?",
+        answer: "A building mode where you get your own 91\xd791 plot and can build anything you like in creative mode."
       }, {
-        question: "How do you play Bloxd Skyblock?",
-        answer: "Gather some logs, craft a bridge and cross to the portal to reach the Hub. After that, follow the quests, level your skills and go exploring in Manor Farm, Cragrock Mines and the Dungeons."
+        question: "How do I save my plot in Bloxd Plots?",
+        answer: "Change at least 500 blocks on it. From then on your plot is saved permanently. Plots that haven't been saved yet can be reset."
       }, {
-        question: "What skills are in Bloxd Skyblock?",
-        answer: "Five of them: Foraging, Combat, Mining, Farming and Fishing. You level each one just by doing it, so breaking ores levels Mining and catching fish levels Fishing."
+        question: "How do I build with friends in Bloxd Plots?",
+        answer: "Use Add Player to Plot to give a friend access. They can find it with Go To Shared Plot, and you can remove them whenever you want."
       }, {
-        question: "What are the Dungeons in Bloxd Skyblock?",
-        answer: "Timed challenges like the Crumbling Crypt and the Frozen Hollow. You fight through the rooms and then face a boss, such as the Gravewarden or the Frostbound Knight. You can play each dungeon on Easy, Medium, Hard or Insane, and your best times are saved."
+        question: "Can other players break my build?",
+        answer: "No. Only you and the players you've added can change blocks on your plot. Changed your mind about someone? Use Remove Player from Plot."
       }, {
-        question: "How do I trade in Bloxd Skyblock?",
-        answer: "Find Up Dog the auctioneer in the Hub and open the Open Market. That's where you buy and sell items with other players, and it only works in the Hub."
+        question: "How big is a plot in Bloxd Plots?",
+        answer: "Each plot is a 91\xd791 block build area with no height limit. Roads 5 blocks wide run between them."
       }, {
-        question: "Can I visit other players' islands?",
-        answer: "You can. Type /visit and a player's name, as long as they're in the same game and their island is open. Owners pick who's allowed in, and /home brings you back to your own island."
-      }, {
-        question: "What happened at Cragrock Mines?",
-        answer: "A huge meteor crashed into it, and the dwarves who live there need your help. Take the portal from the Hub, explore the mines and dig for ores."
-      }, {
-        question: "Does my island save between sessions?",
-        answer: "Yep. Your island, skills, Gold Coins, quests and dungeon progress all save. Log in to an account so nothing gets lost if your browser data is cleared."
+        question: "How many plots can one player own?",
+        answer: "Up to 5 each."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

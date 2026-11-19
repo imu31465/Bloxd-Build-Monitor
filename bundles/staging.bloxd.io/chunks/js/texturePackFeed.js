@@ -1,30 +1,30 @@
 export const id = 51;
 export const ids = [51];
 export const modules = {
-  42147: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      startPageTexturePackFeed: () => WT
+  42628: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      startPageTexturePackFeed: () => lz
     });
-    var iT = IT(1183),
-      zT = IT(26),
-      kT = IT(42141);
+    var Ez = bz(1195),
+      nz = bz(33),
+      iz = bz(42615);
 
-    function WT(TT, oT) {
-      const IT = new kT.e({
-        store: zT.c,
-        warn: TT,
-        oneShot: oT,
-        fetchLatest: async TT => {
-          const oT = await fetch(`${iT.clientSideServerUrls.texturePackUrl}/${TT}.json`, {
+    function lz(zz, uz) {
+      const bz = new iz.b({
+        store: nz.d,
+        warn: zz,
+        oneShot: uz,
+        fetchLatest: async zz => {
+          const uz = await fetch(`${Ez.clientSideServerUrls.texturePackUrl}/${zz}.json`, {
             cache: "reload"
           });
-          if (!oT.ok) throw new Error(`fetching texture pack ${TT} answered HTTP ${oT.status}`);
-          return await oT.json()
+          if (!uz.ok) throw new Error(`fetching texture pack ${zz} answered HTTP ${uz.status}`);
+          return await uz.json()
         }
       });
-      return (0, kT.h)(IT), IT
+      return (0, iz.c)(bz), bz
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

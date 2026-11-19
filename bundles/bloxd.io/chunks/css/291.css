@@ -312,6 +312,17 @@
   padding: 1.25rem
 }
 
+.DocsPanel .DocsContent>:first-child {
+  padding-right: calc(-.45rem + var(--panelCloseGap) + var(--panelCloseWidth))
+}
+
+@media(max-height:520px) {
+  .DocsPanel .DocsContent>:first-child {
+    padding-right: 0;
+    padding-top: calc(var(--panelHeaderHeight) - 1.75rem)
+  }
+}
+
 .DocsPanel .DocsContent .DocsH1 {
   color: #cba6f7;
   font-size: 1.6rem;

@@ -1,377 +1,377 @@
 export const id = 77;
 export const ids = [77];
 export const modules = {
-  4229: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => iT,
-      e: () => WT,
-      f: () => MT,
-      j: () => KT,
-      l: () => XT,
-      p: () => zT,
-      r: () => kT,
-      s: () => cT,
-      v: () => xT,
-      y: () => LT
+  4489: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Ez,
+      c: () => lz,
+      e: () => Kz,
+      f: () => Rz,
+      g: () => Mz,
+      h: () => nz,
+      k: () => iz,
+      n: () => Zz,
+      q: () => Fz,
+      t: () => dz
     });
-    const iT = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const Ez = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function zT(TT) {
+    function nz(zz) {
       try {
-        return decodeURIComponent(TT.slice(1))
+        return decodeURIComponent(zz.slice(1))
       } catch {
-        return TT.slice(1)
+        return zz.slice(1)
       }
     }
 
-    function kT(TT) {
-      return TT.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function iz(zz) {
+      return zz.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const WT = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${iT.source}`, "g");
+    const lz = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Ez.source}`, "g");
 
-    function XT(TT, oT) {
-      return 2 === TT.length ? oT.replace(/^ (.*) $/, "$1") : oT
-    }
-
-    function BT(TT) {
-      return "" === TT.trim()
+    function Mz(zz, uz) {
+      return 2 === zz.length ? uz.replace(/^ (.*) $/, "$1") : uz
     }
 
-    function FT(TT) {
-      const oT = [];
-      for (const IT of TT.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) oT.length > 0 && oT[oT.length - 1].endsWith("\\") ? oT[oT.length - 1] += `|${IT}` : oT.push(IT);
-      return oT.map((TT => TT.trim().replaceAll("\\|", "|")))
+    function tz(zz) {
+      return "" === zz.trim()
     }
-    const ST = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function DT(TT) {
-      const oT = [],
-        IT = [{
+    function Hz(zz) {
+      const uz = [];
+      for (const bz of zz.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) uz.length > 0 && uz[uz.length - 1].endsWith("\\") ? uz[uz.length - 1] += `|${bz}` : uz.push(bz);
+      return uz.map((zz => zz.trim().replaceAll("\\|", "|")))
+    }
+    const Oz = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function pz(zz) {
+      const uz = [],
+        bz = [{
           indent: -1,
-          items: oT
+          items: uz
         }];
-      let iT = null;
-      for (const zT of TT) {
-        const TT = zT.match(ST);
-        if (!TT) {
-          iT && (iT.text += ` ${zT.trim()}`);
+      let Ez = null;
+      for (const nz of zz) {
+        const zz = nz.match(Oz);
+        if (!zz) {
+          Ez && (Ez.text += ` ${nz.trim()}`);
           continue
         }
-        const oT = TT[1].replace(/\t/g, "  ").length;
-        for (; oT <= IT[IT.length - 1].indent;) IT.pop();
-        iT = {
-          text: TT[3].trim(),
+        const uz = zz[1].replace(/\t/g, "  ").length;
+        for (; uz <= bz[bz.length - 1].indent;) bz.pop();
+        Ez = {
+          text: zz[3].trim(),
           children: []
-        }, IT[IT.length - 1].items.push(iT), IT.push({
-          indent: oT,
-          items: iT.children
+        }, bz[bz.length - 1].items.push(Ez), bz.push({
+          indent: uz,
+          items: Ez.children
         })
       }
-      return oT
+      return uz
     }
 
-    function LT(TT) {
-      const oT = TT.replace(/\r\n/g, "\n").split("\n"),
-        IT = [];
-      let iT = 0;
-      for (; iT < oT.length;) {
-        const TT = oT[iT];
-        if (BT(TT)) {
-          iT++;
+    function dz(zz) {
+      const uz = zz.replace(/\r\n/g, "\n").split("\n"),
+        bz = [];
+      let Ez = 0;
+      for (; Ez < uz.length;) {
+        const zz = uz[Ez];
+        if (tz(zz)) {
+          Ez++;
           continue
         }
-        const zT = TT.match(/^\s*```\s*(\w*)\s*$/);
-        if (zT) {
-          const TT = [];
-          for (iT++; iT < oT.length && !/^\s*```\s*$/.test(oT[iT]);) TT.push(oT[iT]), iT++;
-          iT++, IT.push({
+        const nz = zz.match(/^\s*```\s*(\w*)\s*$/);
+        if (nz) {
+          const zz = [];
+          for (Ez++; Ez < uz.length && !/^\s*```\s*$/.test(uz[Ez]);) zz.push(uz[Ez]), Ez++;
+          Ez++, bz.push({
             kind: "code",
-            lang: zT[1] || "text",
-            code: TT.join("\n").replace(/\s+$/, "")
+            lang: nz[1] || "text",
+            code: zz.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const WT = TT.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (WT) {
-          const TT = WT[2].trim();
-          IT.push({
+        const lz = zz.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (lz) {
+          const zz = lz[2].trim();
+          bz.push({
             kind: "heading",
-            level: WT[1].length,
-            text: TT,
-            anchor: kT(TT)
-          }), iT++;
+            level: lz[1].length,
+            text: zz,
+            anchor: iz(zz)
+          }), Ez++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(TT)) {
-          IT.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(zz)) {
+          bz.push({
             kind: "rule"
-          }), iT++;
+          }), Ez++;
           continue
         }
-        if (TT.trim().startsWith("|") && iT + 1 < oT.length && /^\s*\|[\s:|-]+\|\s*$/.test(oT[iT + 1])) {
-          const zT = FT(TT),
-            kT = [];
-          for (iT += 2; iT < oT.length && oT[iT].trim().startsWith("|");) kT.push(FT(oT[iT])), iT++;
-          IT.push({
+        if (zz.trim().startsWith("|") && Ez + 1 < uz.length && /^\s*\|[\s:|-]+\|\s*$/.test(uz[Ez + 1])) {
+          const nz = Hz(zz),
+            iz = [];
+          for (Ez += 2; Ez < uz.length && uz[Ez].trim().startsWith("|");) iz.push(Hz(uz[Ez])), Ez++;
+          bz.push({
             kind: "table",
-            header: zT,
-            rows: kT
+            header: nz,
+            rows: iz
           });
           continue
         }
-        if (TT.startsWith(">")) {
-          const TT = [];
-          for (; iT < oT.length && oT[iT].startsWith(">");) TT.push(oT[iT].replace(/^>\s?/, "")), iT++;
-          IT.push({
+        if (zz.startsWith(">")) {
+          const zz = [];
+          for (; Ez < uz.length && uz[Ez].startsWith(">");) zz.push(uz[Ez].replace(/^>\s?/, "")), Ez++;
+          bz.push({
             kind: "quote",
-            blocks: LT(TT.join("\n"))
+            blocks: dz(zz.join("\n"))
           });
           continue
         }
-        if (ST.test(TT)) {
-          const zT = [],
-            kT = /^\s*\d+\./.test(TT);
-          for (; iT < oT.length && !BT(oT[iT]) && (ST.test(oT[iT]) || /^\s+\S/.test(oT[iT]));) zT.push(oT[iT]), iT++;
-          IT.push({
+        if (Oz.test(zz)) {
+          const nz = [],
+            iz = /^\s*\d+\./.test(zz);
+          for (; Ez < uz.length && !tz(uz[Ez]) && (Oz.test(uz[Ez]) || /^\s+\S/.test(uz[Ez]));) nz.push(uz[Ez]), Ez++;
+          bz.push({
             kind: "list",
-            ordered: kT,
-            items: DT(zT)
+            ordered: iz,
+            items: pz(nz)
           });
           continue
         }
-        const XT = [];
-        for (; iT < oT.length && !BT(oT[iT]) && !/^\s*```/.test(oT[iT]) && !/^#{1,6}\s/.test(oT[iT]) && !oT[iT].startsWith(">") && !ST.test(oT[iT]) && (!oT[iT].trim().startsWith("|") || 0 !== XT.length);) XT.push(oT[iT].trim()), iT++;
-        0 === XT.length && (XT.push(oT[iT].trim()), iT++), IT.push({
+        const Mz = [];
+        for (; Ez < uz.length && !tz(uz[Ez]) && !/^\s*```/.test(uz[Ez]) && !/^#{1,6}\s/.test(uz[Ez]) && !uz[Ez].startsWith(">") && !Oz.test(uz[Ez]) && (!uz[Ez].trim().startsWith("|") || 0 !== Mz.length);) Mz.push(uz[Ez].trim()), Ez++;
+        0 === Mz.length && (Mz.push(uz[Ez].trim()), Ez++), bz.push({
           kind: "paragraph",
-          text: XT.join(" ")
+          text: Mz.join(" ")
         })
       }
-      return IT
+      return bz
     }
 
-    function xT(TT) {
-      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const IT = LT(TT);
-      let iT = "";
-      const zT = [],
-        kT = [],
-        WT = new Map;
-      for (const FT of IT) {
-        if ("heading" === FT.kind) {
-          var XT;
-          const TT = (null !== (XT = WT.get(FT.anchor)) && void 0 !== XT ? XT : 0) + 1;
-          WT.set(FT.anchor, TT), TT > 1 && (FT.anchor = `${FT.anchor}-${TT}`)
+    function Fz(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const bz = dz(zz);
+      let Ez = "";
+      const nz = [],
+        iz = [],
+        lz = new Map;
+      for (const Hz of bz) {
+        if ("heading" === Hz.kind) {
+          var Mz;
+          const zz = (null !== (Mz = lz.get(Hz.anchor)) && void 0 !== Mz ? Mz : 0) + 1;
+          lz.set(Hz.anchor, zz), zz > 1 && (Hz.anchor = `${Hz.anchor}-${zz}`)
         }
-        if ("heading" === FT.kind && 1 === FT.level && !iT) {
-          iT = FT.text;
+        if ("heading" === Hz.kind && 1 === Hz.level && !Ez) {
+          Ez = Hz.text;
           continue
         }
-        if ("heading" === FT.kind && FT.level <= oT) {
-          kT.push({
-            heading: FT,
+        if ("heading" === Hz.kind && Hz.level <= uz) {
+          iz.push({
+            heading: Hz,
             blocks: []
           });
           continue
         }
-        const TT = kT.at(-1);
-        TT ? TT.blocks.push(FT) : zT.push(FT)
+        const zz = iz.at(-1);
+        zz ? zz.blocks.push(Hz) : nz.push(Hz)
       }
-      const BT = TT => {
+      const tz = zz => {
         for (;
-          "rule" === (null === (oT = TT.at(-1)) || void 0 === oT ? void 0 : oT.kind);) {
-          var oT;
-          TT.pop()
+          "rule" === (null === (uz = zz.at(-1)) || void 0 === uz ? void 0 : uz.kind);) {
+          var uz;
+          zz.pop()
         }
       };
-      BT(zT);
-      for (const FT of kT) BT(FT.blocks);
+      tz(nz);
+      for (const Hz of iz) tz(Hz.blocks);
       return {
-        title: iT,
-        intro: zT,
-        sections: kT
+        title: Ez,
+        intro: nz,
+        sections: iz
       }
     }
 
-    function cT(TT) {
+    function Zz(zz) {
       return [{
         heading: null,
-        blocks: TT.intro
-      }, ...TT.sections.map((TT => ({
-        heading: TT.heading,
-        blocks: TT.blocks
+        blocks: zz.intro
+      }, ...zz.sections.map((zz => ({
+        heading: zz.heading,
+        blocks: zz.blocks
       })))]
     }
 
-    function KT(TT) {
-      return TT.flatMap((TT => "code" === TT.kind ? [TT] : "quote" === TT.kind ? KT(TT.blocks) : []))
+    function Rz(zz) {
+      return zz.flatMap((zz => "code" === zz.kind ? [zz] : "quote" === zz.kind ? Rz(zz.blocks) : []))
     }
 
-    function MT(TT) {
-      switch (TT.kind) {
+    function Kz(zz) {
+      switch (zz.kind) {
         case "heading":
         case "paragraph":
-          return TT.text;
+          return zz.text;
         case "code":
-          return TT.code;
+          return zz.code;
         case "table":
-          return [TT.header, ...TT.rows].map((TT => TT.join(" "))).join(" ");
+          return [zz.header, ...zz.rows].map((zz => zz.join(" "))).join(" ");
         case "list": {
-          const oT = TT => TT.map((TT => `${TT.text} ${oT(TT.children)}`)).join(" ");
-          return oT(TT.items)
+          const uz = zz => zz.map((zz => `${zz.text} ${uz(zz.children)}`)).join(" ");
+          return uz(zz.items)
         }
         case "quote":
-          return TT.blocks.map(MT).join(" ");
+          return zz.blocks.map(Kz).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  6001: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => DT,
-      f: () => WT,
-      i: () => XT
+  6226: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => pz,
+      h: () => lz,
+      l: () => Mz
     });
-    IT(5992);
-    var iT = IT(46),
-      zT = IT(4229),
-      kT = IT(1083);
-    const WT = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    bz(6220);
+    var Ez = bz(56),
+      nz = bz(4489),
+      iz = bz(1089);
+    const lz = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function XT(TT, oT) {
-      return TT === oT ? TT : `${TT} (${oT})`
+    function Mz(zz, uz) {
+      return zz === uz ? zz : `${zz} (${uz})`
     }
 
-    function BT(TT) {
-      const oT = [];
-      let IT = 0;
-      for (const iT of TT.matchAll(WT)) {
-        iT.index > IT && oT.push(TT.slice(IT, iT.index));
-        const [, zT, WT, BT, FT, ST, DT] = iT;
-        void 0 !== zT ? oT.push(XT(zT, WT)) : void 0 !== BT || void 0 !== FT ? oT.push((0, kT.jsx)("strong", {
-          children: null !== BT && void 0 !== BT ? BT : FT
-        }, iT.index)) : void 0 !== ST ? oT.push((0, kT.jsx)("em", {
-          children: ST
-        }, iT.index)) : oT.push((0, kT.jsx)("code", {
-          children: DT
-        }, iT.index)), IT = iT.index + iT[0].length
+    function tz(zz) {
+      const uz = [];
+      let bz = 0;
+      for (const Ez of zz.matchAll(lz)) {
+        Ez.index > bz && uz.push(zz.slice(bz, Ez.index));
+        const [, nz, lz, tz, Hz, Oz, pz] = Ez;
+        void 0 !== nz ? uz.push(Mz(nz, lz)) : void 0 !== tz || void 0 !== Hz ? uz.push((0, iz.jsx)("strong", {
+          children: null !== tz && void 0 !== tz ? tz : Hz
+        }, Ez.index)) : void 0 !== Oz ? uz.push((0, iz.jsx)("em", {
+          children: Oz
+        }, Ez.index)) : uz.push((0, iz.jsx)("code", {
+          children: pz
+        }, Ez.index)), bz = Ez.index + Ez[0].length
       }
-      return IT < TT.length && oT.push(TT.slice(IT)), oT
+      return bz < zz.length && uz.push(zz.slice(bz)), uz
     }
 
-    function FT(TT, oT) {
-      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const iT = TT.map(((TT, oT) => (0, kT.jsxs)("li", {
-        children: [BT(TT.text), TT.children.length > 0 && FT(TT.children, !1)]
-      }, oT)));
-      return oT ? (0, kT.jsx)("ol", {
-        start: IT,
-        children: iT
-      }) : (0, kT.jsx)("ul", {
-        children: iT
+    function Hz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const Ez = zz.map(((zz, uz) => (0, iz.jsxs)("li", {
+        children: [tz(zz.text), zz.children.length > 0 && Hz(zz.children, !1)]
+      }, uz)));
+      return uz ? (0, iz.jsx)("ol", {
+        start: bz,
+        children: Ez
+      }) : (0, iz.jsx)("ul", {
+        children: Ez
       })
     }
 
-    function ST(TT, oT) {
-      switch (TT.kind) {
+    function Oz(zz, uz) {
+      switch (zz.kind) {
         case "heading":
-          return TT.level <= 2 ? (0, kT.jsx)("h3", {
-            children: BT(TT.text)
-          }, oT) : (0, kT.jsx)("h4", {
-            children: BT(TT.text)
-          }, oT);
+          return zz.level <= 2 ? (0, iz.jsx)("h3", {
+            children: tz(zz.text)
+          }, uz) : (0, iz.jsx)("h4", {
+            children: tz(zz.text)
+          }, uz);
         case "paragraph":
-          return (0, kT.jsx)("p", {
-            children: BT(TT.text)
-          }, oT);
+          return (0, iz.jsx)("p", {
+            children: tz(zz.text)
+          }, uz);
         case "list":
-          return (0, kT.jsx)(iT.Fragment, {
-            children: FT(TT.items, TT.ordered)
-          }, oT);
+          return (0, iz.jsx)(Ez.Fragment, {
+            children: Hz(zz.items, zz.ordered)
+          }, uz);
         case "quote":
-          return (0, kT.jsx)("blockquote", {
-            children: TT.blocks.map(((TT, oT) => ST(TT, oT)))
-          }, oT);
+          return (0, iz.jsx)("blockquote", {
+            children: zz.blocks.map(((zz, uz) => Oz(zz, uz)))
+          }, uz);
         case "code":
-          return (0, kT.jsx)("pre", {
-            children: (0, kT.jsx)("code", {
-              children: TT.code
+          return (0, iz.jsx)("pre", {
+            children: (0, iz.jsx)("code", {
+              children: zz.code
             })
-          }, oT);
+          }, uz);
         case "table":
-          return (0, kT.jsxs)("table", {
-            children: [(0, kT.jsx)("thead", {
-              children: (0, kT.jsx)("tr", {
-                children: TT.header.map(((TT, oT) => (0, kT.jsx)("th", {
-                  children: BT(TT)
-                }, oT)))
+          return (0, iz.jsxs)("table", {
+            children: [(0, iz.jsx)("thead", {
+              children: (0, iz.jsx)("tr", {
+                children: zz.header.map(((zz, uz) => (0, iz.jsx)("th", {
+                  children: tz(zz)
+                }, uz)))
               })
-            }), (0, kT.jsx)("tbody", {
-              children: TT.rows.map(((TT, oT) => (0, kT.jsx)("tr", {
-                children: TT.map(((TT, oT) => (0, kT.jsx)("td", {
-                  children: BT(TT)
-                }, oT)))
-              }, oT)))
+            }), (0, iz.jsx)("tbody", {
+              children: zz.rows.map(((zz, uz) => (0, iz.jsx)("tr", {
+                children: zz.map(((zz, uz) => (0, iz.jsx)("td", {
+                  children: tz(zz)
+                }, uz)))
+              }, uz)))
             })]
-          }, oT);
+          }, uz);
         case "rule":
-          return (0, kT.jsx)("hr", {}, oT)
+          return (0, iz.jsx)("hr", {}, uz)
       }
     }
 
-    function DT(TT) {
+    function pz(zz) {
       let {
-        markdown: oT
-      } = TT, IT = 0;
-      return (0, kT.jsx)("div", {
+        markdown: uz
+      } = zz, bz = 0;
+      return (0, iz.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, zT.y)(oT).map(((TT, oT) => {
-          if ("list" !== TT.kind || !TT.ordered) return IT = 0, ST(TT, oT);
-          const zT = IT + 1;
-          return IT += TT.items.length, (0, kT.jsx)(iT.Fragment, {
-            children: FT(TT.items, !0, zT)
-          }, oT)
+        children: (0, nz.t)(uz).map(((zz, uz) => {
+          if ("list" !== zz.kind || !zz.ordered) return bz = 0, Oz(zz, uz);
+          const nz = bz + 1;
+          return bz += zz.items.length, (0, iz.jsx)(Ez.Fragment, {
+            children: Hz(zz.items, !0, nz)
+          }, uz)
         }))
       })
     }
   },
-  5986: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => AT,
-      g: () => gT,
-      d: () => wT,
-      j: () => cT
+  6214: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Xz,
+      k: () => fz,
+      g: () => rz,
+      l: () => Zz
     });
-    var iT = IT(3210),
-      zT = IT(5936),
-      kT = IT(4355);
-    const WT = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var Ez = bz(1768),
+      nz = bz(6176),
+      iz = bz(4629);
+    const lz = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function XT(TT) {
-      return (0, kT.f)(TT, WT, (oT => !/^my/i.test(oT[0]) || !/follow $/i.test(TT.slice(0, oT.index)))).length > 0
+    function Mz(zz) {
+      return (0, iz.e)(zz, lz, (uz => !/^my/i.test(uz[0]) || !/follow $/i.test(zz.slice(0, uz.index)))).length > 0
     }
-    const BT = /\byou(?:r|'re|'ll)?\b/i,
-      FT = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      ST = 2;
+    const tz = /\byou(?:r|'re|'ll)?\b/i,
+      Hz = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      Oz = 2;
 
-    function DT(TT) {
-      return function(TT) {
-        const oT = [];
-        let IT = !1;
-        for (const iT of TT.split("\n")) {
-          if (/^\s*(```|~~~)/.test(iT)) {
-            IT = !IT;
+    function pz(zz) {
+      return function(zz) {
+        const uz = [];
+        let bz = !1;
+        for (const Ez of zz.split("\n")) {
+          if (/^\s*(```|~~~)/.test(Ez)) {
+            bz = !bz;
             continue
           }
-          if (IT || /^\s*>/.test(iT)) continue;
-          const TT = iT.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          oT.push(...(0, zT.q)(TT))
+          if (bz || /^\s*>/.test(Ez)) continue;
+          const zz = Ez.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          uz.push(...(0, nz.l)(zz))
         }
-        return oT
-      }(TT).filter((TT => XT(TT) || FT.test(TT) && !BT.test(TT)))
+        return uz
+      }(zz).filter((zz => Mz(zz) || Hz.test(zz) && !tz.test(zz)))
     }
-    const LT = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      xT = [{
+    const dz = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      Fz = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function cT(TT) {
-      const oT = xT.findIndex((oT => oT.name === TT));
-      return -1 === oT ? xT.length : oT
+    function Zz(zz) {
+      const uz = Fz.findIndex((uz => uz.name === zz));
+      return -1 === uz ? Fz.length : uz
     }
-    const KT = 2500,
-      MT = 12e4;
-    class rT extends Error {
-      constructor(TT) {
-        super(`Studio AI chat ${TT}`), this.reason = TT
+    const Rz = 2500,
+      Kz = 12e4;
+    class wz extends Error {
+      constructor(zz) {
+        super(`Studio AI chat ${zz}`), this.reason = zz
       }
     }
 
-    function AT(TT, oT) {
-      const IT = new AbortController,
-        iT = () => {
-          IT.abort()
+    function Xz(zz, uz) {
+      const bz = new AbortController,
+        Ez = () => {
+          bz.abort()
         },
-        zT = setTimeout(iT, TT);
-      return null !== oT && void 0 !== oT && oT.aborted && iT(), null === oT || void 0 === oT || oT.addEventListener("abort", iT, {
+        nz = setTimeout(Ez, zz);
+      return null !== uz && void 0 !== uz && uz.aborted && Ez(), null === uz || void 0 === uz || uz.addEventListener("abort", Ez, {
         once: !0
       }), {
-        signal: IT.signal,
+        signal: bz.signal,
         clear: () => {
-          clearTimeout(zT), null === oT || void 0 === oT || oT.removeEventListener("abort", iT)
+          clearTimeout(nz), null === uz || void 0 === uz || uz.removeEventListener("abort", Ez)
         }
       }
     }
 
-    function gT(TT, oT, IT) {
-      return new Promise(((zT, kT) => {
-        const WT = new AbortController,
-          XT = () => {
-            WT.abort(), kT((0, iT.f)(IT))
+    function fz(zz, uz, bz) {
+      return new Promise(((nz, iz) => {
+        const lz = new AbortController,
+          Mz = () => {
+            lz.abort(), iz((0, Ez.g)(bz))
           };
-        if (null !== IT && void 0 !== IT && IT.aborted) return void XT();
-        null === IT || void 0 === IT || IT.addEventListener("abort", XT, {
+        if (null !== bz && void 0 !== bz && bz.aborted) return void Mz();
+        null === bz || void 0 === bz || bz.addEventListener("abort", Mz, {
           once: !0
         });
-        const BT = xT.map((() => !1));
-        let FT = null;
-        const ST = xT.map((() => !1)),
-          DT = xT.map((() => !1));
-        xT.forEach(((iT, LT) => {
-          const cT = AT(MT, WT.signal);
-          mT(iT, [{
+        const tz = Fz.map((() => !1));
+        let Hz = null;
+        const Oz = Fz.map((() => !1)),
+          pz = Fz.map((() => !1));
+        Fz.forEach(((Ez, dz) => {
+          const Zz = Xz(Kz, lz.signal);
+          oz(Ez, [{
             role: "user",
-            content: TT
-          }], cT.signal).then((TT => {
-            WT.signal.aborted || ("busy" === TT || "failed" === TT ? (ST[LT] = "busy" === TT, DT[LT] = !0) : null !== TT && (null === FT || LT < FT.rank) && (FT = {
-              rank: LT,
+            content: zz
+          }], Zz.signal).then((zz => {
+            lz.signal.aborted || ("busy" === zz || "failed" === zz ? (Oz[dz] = "busy" === zz, pz[dz] = !0) : null !== zz && (null === Hz || dz < Hz.rank) && (Hz = {
+              rank: dz,
               answer: {
-                text: TT.text,
-                model: iT.name
+                text: zz.text,
+                model: Ez.name
               }
-            }, oT(FT.answer)))
-          }), (TT => {
-            WT.signal.aborted || (DT[LT] = !0, console.warn(`Studio AI: ${iT.name} couldn't be reached`, TT))
+            }, uz(Hz.answer)))
+          }), (zz => {
+            lz.signal.aborted || (pz[dz] = !0, console.warn(`Studio AI: ${Ez.name} couldn't be reached`, zz))
           })).finally((() => {
-            cT.clear(), BT[LT] = !0, WT.signal.aborted || (() => {
-              var TT, oT;
-              const iT = null !== (TT = null === (oT = FT) || void 0 === oT ? void 0 : oT.rank) && void 0 !== TT ? TT : xT.length;
-              BT.slice(0, iT).includes(!1) || (null === IT || void 0 === IT || IT.removeEventListener("abort", XT), WT.abort(), null !== FT ? zT({
-                ...FT.answer,
-                isFinal: !DT.slice(0, FT.rank).includes(!0)
-              }) : kT(new rT(ST.includes(!0) ? "busy" : "failed")))
+            Zz.clear(), tz[dz] = !0, lz.signal.aborted || (() => {
+              var zz, uz;
+              const Ez = null !== (zz = null === (uz = Hz) || void 0 === uz ? void 0 : uz.rank) && void 0 !== zz ? zz : Fz.length;
+              tz.slice(0, Ez).includes(!1) || (null === bz || void 0 === bz || bz.removeEventListener("abort", Mz), lz.abort(), null !== Hz ? nz({
+                ...Hz.answer,
+                isFinal: !pz.slice(0, Hz.rank).includes(!0)
+              }) : iz(new wz(Oz.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((TT => {
-            console.error("Studio AI: showing an answer failed", TT)
+          })).catch((zz => {
+            console.error("Studio AI: showing an answer failed", zz)
           }))
         }))
       }))
     }
 
-    function hT(TT) {
-      var oT, IT;
-      return "length" === (null === TT || void 0 === TT || null === (oT = TT.choices) || void 0 === oT || null === (IT = oT[0]) || void 0 === IT ? void 0 : IT.finish_reason)
+    function sz(zz) {
+      var uz, bz;
+      return "length" === (null === zz || void 0 === zz || null === (uz = zz.choices) || void 0 === uz || null === (bz = uz[0]) || void 0 === bz ? void 0 : bz.finish_reason)
     }
-    async function wT(TT, oT, IT) {
-      const iT = xT.find((oT => oT.name === TT));
-      if (void 0 === iT) return "failed";
-      const zT = AT(MT, IT);
+    async function rz(zz, uz, bz) {
+      const Ez = Fz.find((uz => uz.name === zz));
+      if (void 0 === Ez) return "failed";
+      const nz = Xz(Kz, bz);
       try {
-        const TT = await mT(iT, oT, zT.signal);
-        return null !== TT && "object" === typeof TT ? TT.isCutOff ? (console.warn(`Studio AI: ${iT.name}'s answer was cut off at the token limit`), null) : {
-          text: TT.text
-        } : TT
+        const zz = await oz(Ez, uz, nz.signal);
+        return null !== zz && "object" === typeof zz ? zz.isCutOff ? (console.warn(`Studio AI: ${Ez.name}'s answer was cut off at the token limit`), null) : {
+          text: zz.text
+        } : zz
       } finally {
-        zT.clear()
+        nz.clear()
       }
     }
-    async function mT(TT, oT, IT) {
-      const iT = await fetch(LT, {
+    async function oz(zz, uz, bz) {
+      const Ez = await fetch(dz, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: TT.name,
-          messages: oT,
-          max_tokens: KT,
-          temperature: TT.temperature,
-          reasoning_effort: TT.reasoningEffort
+          model: zz.name,
+          messages: uz,
+          max_tokens: Rz,
+          temperature: zz.temperature,
+          reasoning_effort: zz.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: IT
+        signal: bz
       });
-      if (429 === iT.status) return "busy";
-      if (!iT.ok) return console.warn(`Studio AI: ${TT.name} answered ${iT.status}`), "failed";
-      const zT = await iT.json().catch((() => null)),
-        kT = function(TT) {
-          var oT, IT, iT;
-          const zT = null === TT || void 0 === TT || null === (oT = TT.choices) || void 0 === oT || null === (IT = oT[0]) || void 0 === IT || null === (iT = IT.message) || void 0 === iT ? void 0 : iT.content;
-          if ("string" !== typeof zT) return null;
-          const kT = zT.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === kT ? null : kT
-        }(zT);
-      return null !== kT && function(TT) {
-        const oT = DT(TT);
-        return oT.length >= ST || oT.some((TT => XT(TT)))
-      }(kT) ? (console.warn(`Studio AI: ${TT.name} thought out loud instead of answering`), "failed") : null === kT ? null : {
-        text: kT,
-        isCutOff: hT(zT)
+      if (429 === Ez.status) return "busy";
+      if (!Ez.ok) return console.warn(`Studio AI: ${zz.name} answered ${Ez.status}`), "failed";
+      const nz = await Ez.json().catch((() => null)),
+        iz = function(zz) {
+          var uz, bz, Ez;
+          const nz = null === zz || void 0 === zz || null === (uz = zz.choices) || void 0 === uz || null === (bz = uz[0]) || void 0 === bz || null === (Ez = bz.message) || void 0 === Ez ? void 0 : Ez.content;
+          if ("string" !== typeof nz) return null;
+          const iz = nz.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === iz ? null : iz
+        }(nz);
+      return null !== iz && function(zz) {
+        const uz = pz(zz);
+        return uz.length >= Oz || uz.some((zz => Mz(zz)))
+      }(iz) ? (console.warn(`Studio AI: ${zz.name} thought out loud instead of answering`), "failed") : null === iz ? null : {
+        text: iz,
+        isCutOff: sz(nz)
       }
     }
   },
-  5936: (TT, oT, IT) => {
-    IT.d(oT, {
-      B: () => MT,
-      D: () => gT,
-      F: () => wT,
-      G: () => AT,
-      K: () => DT,
-      N: () => FT,
-      R: () => xT,
-      c: () => cT,
-      e: () => XT,
-      g: () => WT,
-      j: () => KT,
-      m: () => LT,
-      q: () => ST,
-      s: () => kT,
-      t: () => zT,
-      w: () => hT,
-      y: () => mT
+  6176: (zz, uz, bz) => {
+    bz.d(uz, {
+      A: () => fz,
+      B: () => rz,
+      D: () => Xz,
+      F: () => pz,
+      I: () => Hz,
+      K: () => Fz,
+      b: () => Zz,
+      c: () => Mz,
+      d: () => lz,
+      g: () => Rz,
+      k: () => dz,
+      l: () => Oz,
+      m: () => iz,
+      q: () => nz,
+      t: () => sz,
+      v: () => oz,
+      x: () => Kz
     });
-    var iT = IT(4355);
-    const zT = 2e3,
-      kT = 2e4;
+    var Ez = bz(4629);
+    const nz = 2e3,
+      iz = 2e4;
 
-    function WT(TT) {
-      return TT.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function lz(zz) {
+      return zz.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function XT(TT) {
-      return TT.replace(/\$/g, "\\$")
+    function Mz(zz) {
+      return zz.replace(/\$/g, "\\$")
     }
-    const BT = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const tz = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function FT(TT, oT) {
-      BT.lastIndex = oT;
-      const IT = BT.exec(TT);
-      return IT.index + IT[0].length
-    }
-
-    function ST(TT) {
-      return (0, iT.u)(TT, /\s+/g, (0, iT.p)(".!?")).flatMap((TT => TT.split("\n")))
+    function Hz(zz, uz) {
+      tz.lastIndex = uz;
+      const bz = tz.exec(zz);
+      return bz.index + bz[0].length
     }
 
-    function DT(TT, oT) {
-      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : oT;
-      const iT = [...TT.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((TT => TT.index)),
-        zT = iT.filter((TT => TT < oT)),
-        kT = iT.find((TT => TT >= IT));
-      return [0 === zT.length ? 0 : zT.at(-1) + 1, void 0 === kT ? TT.length : kT + 1]
+    function Oz(zz) {
+      return (0, Ez.u)(zz, /\s+/g, (0, Ez.q)(".!?")).flatMap((zz => zz.split("\n")))
     }
 
-    function LT(TT, oT) {
-      const IT = TT.charCodeAt(oT - 1);
-      return TT.slice(0, oT > 0 && oT < TT.length && IT >= 55296 && IT <= 56319 ? oT - 1 : oT)
+    function pz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uz;
+      const Ez = [...zz.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((zz => zz.index)),
+        nz = Ez.filter((zz => zz < uz)),
+        iz = Ez.find((zz => zz >= bz));
+      return [0 === nz.length ? 0 : nz.at(-1) + 1, void 0 === iz ? zz.length : iz + 1]
     }
 
-    function xT(TT, oT) {
-      return `${oT}${TT.replace(/\\/g,"\\\\").split(oT).join(`\\${oT}`)}${oT}`
+    function dz(zz, uz) {
+      const bz = zz.charCodeAt(uz - 1);
+      return zz.slice(0, uz > 0 && uz < zz.length && bz >= 55296 && bz <= 56319 ? uz - 1 : uz)
     }
 
-    function cT(TT) {
-      return TT.charAt(0).toUpperCase() + TT.slice(1)
+    function Fz(zz, uz) {
+      return `${uz}${zz.replace(/\\/g,"\\\\").split(uz).join(`\\${uz}`)}${uz}`
     }
 
-    function KT(TT) {
-      return Math.round(TT).toLocaleString("en-US")
+    function Zz(zz) {
+      return zz.charAt(0).toUpperCase() + zz.slice(1)
     }
 
-    function MT(TT) {
-      return TT.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((TT => "" !== TT))
-    }
-    const rT = 3;
-
-    function AT(TT, oT) {
-      return MT(TT).filter((TT => TT.length >= rT && !/\d/.test(TT))).map((TT => `${TT} ${oT}`))
+    function Rz(zz) {
+      return Math.round(zz).toLocaleString("en-US")
     }
 
-    function gT(TT) {
-      return TT.split(/[\s:_]+/).filter((TT => "" !== TT)).map(WT).join("[`:_\\s]+")
+    function Kz(zz) {
+      return zz.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((zz => "" !== zz))
+    }
+    const wz = 3;
+
+    function Xz(zz, uz) {
+      return Kz(zz).filter((zz => zz.length >= wz && !/\d/.test(zz))).map((zz => `${zz} ${uz}`))
     }
 
-    function hT(TT) {
-      return MT(TT.split(".").pop())
+    function fz(zz) {
+      return zz.split(/[\s:_]+/).filter((zz => "" !== zz)).map(lz).join("[`:_\\s]+")
     }
 
-    function wT(TT) {
-      return TT.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function sz(zz) {
+      return Kz(zz.split(".").pop())
     }
 
-    function mT(TT) {
-      let oT = null;
+    function rz(zz) {
+      return zz.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function oz(zz) {
+      let uz = null;
       return () => {
-        const IT = oT ??= TT();
-        return IT.catch((() => {
-          oT === IT && (oT = null)
-        })), IT
+        const bz = uz ??= zz();
+        return bz.catch((() => {
+          uz === bz && (uz = null)
+        })), bz
       }
     }
   },
-  4355: (TT, oT, IT) => {
-    function iT(TT) {
+  4629: (zz, uz, bz) => {
+    function Ez(zz) {
       return {
-        notAfter: TT
+        notAfter: zz
       }
     }
-    IT.d(oT, {
-      d: () => BT,
-      f: () => FT,
-      g: () => XT,
-      i: () => iT,
-      k: () => zT,
-      m: () => kT,
-      p: () => WT,
-      r: () => ST,
-      u: () => DT
+    bz.d(uz, {
+      c: () => tz,
+      e: () => Hz,
+      i: () => Mz,
+      j: () => Ez,
+      l: () => nz,
+      m: () => iz,
+      q: () => lz,
+      t: () => Oz,
+      u: () => pz
     });
-    const zT = iT("\\w$."),
-      kT = iT("\\w.,");
+    const nz = Ez("\\w$."),
+      iz = Ez("\\w.,");
 
-    function WT(TT) {
-      return oT => BT(oT, TT)
+    function lz(zz) {
+      return uz => tz(uz, zz)
     }
 
-    function XT(TT) {
-      return oT => !TT.test(oT.input.slice(0, oT.index))
+    function Mz(zz) {
+      return uz => !zz.test(uz.input.slice(0, uz.index))
     }
 
-    function BT(TT, oT) {
-      return TT.index > 0 && new RegExp(`[${oT}]`).test(TT.input[TT.index - 1])
+    function tz(zz, uz) {
+      return zz.index > 0 && new RegExp(`[${uz}]`).test(zz.input[zz.index - 1])
     }
 
-    function FT(TT, oT, IT) {
-      return function(TT) {
-        return void 0 !== TT && "function" !== typeof TT
-      }(IT) ? function(TT, oT, IT) {
-        const iT = oT.flags.replace(/[gy]/g, ""),
-          zT = new RegExp(`[^${IT}](?:${oT.source})`, `${iT}g`),
-          kT = [],
-          WT = IT => {
-            const iT = IT.index + IT[0].length;
-            return ("" === IT[0] ? LT(TT, oT, iT) : iT) - 1
+    function Hz(zz, uz, bz) {
+      return function(zz) {
+        return void 0 !== zz && "function" !== typeof zz
+      }(bz) ? function(zz, uz, bz) {
+        const Ez = uz.flags.replace(/[gy]/g, ""),
+          nz = new RegExp(`[^${bz}](?:${uz.source})`, `${Ez}g`),
+          iz = [],
+          lz = bz => {
+            const Ez = bz.index + bz[0].length;
+            return ("" === bz[0] ? dz(zz, uz, Ez) : Ez) - 1
           },
-          XT = new RegExp(`(?:${oT.source})`, `${iT}y`).exec(TT);
-        if (XT) {
-          if (kT.push(XT), !oT.global) return kT;
-          zT.lastIndex = WT(XT)
+          Mz = new RegExp(`(?:${uz.source})`, `${Ez}y`).exec(zz);
+        if (Mz) {
+          if (iz.push(Mz), !uz.global) return iz;
+          nz.lastIndex = lz(Mz)
         }
-        for (let BT = zT.exec(TT); BT; BT = zT.exec(TT)) {
-          const IT = LT(TT, oT, BT.index) - BT.index;
-          if (BT[0] = BT[0].slice(IT), BT.index += IT, kT.push(BT), !oT.global) break;
-          zT.lastIndex = WT(BT)
+        for (let tz = nz.exec(zz); tz; tz = nz.exec(zz)) {
+          const bz = dz(zz, uz, tz.index) - tz.index;
+          if (tz[0] = tz[0].slice(bz), tz.index += bz, iz.push(tz), !uz.global) break;
+          nz.lastIndex = lz(tz)
         }
-        return kT
-      }(TT, oT, IT.notAfter) : function(TT, oT, IT) {
-        const iT = new RegExp(oT.source, `${oT.flags.replace(/[gy]/g,"")}g`),
-          zT = [];
-        for (let kT = iT.exec(TT); kT; kT = iT.exec(TT))
-          if (!IT || IT(kT)) {
-            if (zT.push(kT), !oT.global) break;
-            "" === kT[0] && (iT.lastIndex = LT(TT, oT, iT.lastIndex))
-          } else iT.lastIndex = LT(TT, oT, kT.index);
-        return zT
-      }(TT, oT, IT)
+        return iz
+      }(zz, uz, bz.notAfter) : function(zz, uz, bz) {
+        const Ez = new RegExp(uz.source, `${uz.flags.replace(/[gy]/g,"")}g`),
+          nz = [];
+        for (let iz = Ez.exec(zz); iz; iz = Ez.exec(zz))
+          if (!bz || bz(iz)) {
+            if (nz.push(iz), !uz.global) break;
+            "" === iz[0] && (Ez.lastIndex = dz(zz, uz, Ez.lastIndex))
+          } else Ez.lastIndex = dz(zz, uz, iz.index);
+        return nz
+      }(zz, uz, bz)
     }
 
-    function ST(TT, oT, IT, iT) {
-      let zT = "",
-        kT = 0;
-      for (const WT of FT(TT, oT, IT)) zT += TT.slice(kT, WT.index) + iT(WT), kT = WT.index + WT[0].length;
-      return zT + TT.slice(kT)
+    function Oz(zz, uz, bz, Ez) {
+      let nz = "",
+        iz = 0;
+      for (const lz of Hz(zz, uz, bz)) nz += zz.slice(iz, lz.index) + Ez(lz), iz = lz.index + lz[0].length;
+      return nz + zz.slice(iz)
     }
 
-    function DT(TT, oT, IT) {
-      const iT = [];
-      let zT = 0;
-      for (const kT of FT(TT, oT, IT)) iT.push(TT.slice(zT, kT.index)), zT = kT.index + kT[0].length;
-      return [...iT, TT.slice(zT)]
+    function pz(zz, uz, bz) {
+      const Ez = [];
+      let nz = 0;
+      for (const iz of Hz(zz, uz, bz)) Ez.push(zz.slice(nz, iz.index)), nz = iz.index + iz[0].length;
+      return [...Ez, zz.slice(nz)]
     }
 
-    function LT(TT, oT, IT) {
-      var iT;
-      return IT + (oT.unicode && (null !== (iT = TT.codePointAt(IT)) && void 0 !== iT ? iT : 0) > 65535 ? 2 : 1)
+    function dz(zz, uz, bz) {
+      var Ez;
+      return bz + (uz.unicode && (null !== (Ez = zz.codePointAt(bz)) && void 0 !== Ez ? Ez : 0) > 65535 ? 2 : 1)
     }
   },
-  5992: () => {}
+  6220: () => {}
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

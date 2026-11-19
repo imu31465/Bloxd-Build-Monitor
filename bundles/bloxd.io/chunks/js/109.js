@@ -1,665 +1,1078 @@
 export const id = 109;
 export const ids = [109];
 export const modules = {
-  8317: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      default: () => Fo
+  4746: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Zz,
+      e: () => fz,
+      f: () => Rz,
+      j: () => Xz
     });
-    var iT = IT(1484),
-      zT = IT(12),
-      kT = IT(4163),
-      WT = IT(46),
-      XT = IT(1403);
-    var BT = IT(1751),
-      FT = IT(1468),
-      ST = IT(1325),
-      DT = IT(1171),
-      LT = IT(4137);
-    const xT = {
-      private: "customLobby:cantJoinPrivate",
-      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
-      banned: "customLobby:cantJoinBanned",
-      adminLocked: "customLobby:cantJoinAdminLocked"
-    };
-    var cT = IT(4098),
-      KT = IT(159),
-      MT = IT(1117),
-      rT = IT(16),
-      AT = IT(1216),
-      gT = IT(1665),
-      hT = IT(90),
-      wT = IT(1280),
-      mT = IT(1398),
-      eT = IT(4046),
-      RT = IT(3888),
-      uT = IT(2814),
-      vT = IT(1083);
-    const ET = "https://discord.gg/playbloxd";
+    var Ez = bz(56),
+      nz = bz(4753),
+      iz = bz(4144),
+      lz = bz(1332),
+      Mz = bz(4770),
+      tz = bz(1038),
+      Hz = bz.n(tz),
+      Oz = bz(1322),
+      pz = bz(1673),
+      dz = bz(4776),
+      Fz = bz(1089);
 
-    function fT(TT) {
+    function Zz(zz) {
       let {
-        failure: oT
-      } = TT;
+        label: uz,
+        onClick: bz,
+        checked: Ez,
+        circleInfoText: nz,
+        className: Mz,
+        disabled: tz,
+        note: Oz
+      } = zz;
+      return (0, Fz.jsxs)("div", {
+        "aria-disabled": tz || void 0,
+        "data-pad-focusable": !0,
+        className: Hz()("SettingBox CheckboxContainer", {
+          [Mz]: Mz,
+          SettingBoxDisabled: tz
+        }),
+        onClick: () => {
+          tz || bz(!Ez)
+        },
+        children: [(0, Fz.jsxs)("div", {
+          className: "CheckboxInputAndText",
+          children: [(0, Fz.jsx)("label", {
+            className: "CheckboxClickableLabel",
+            children: (0, Fz.jsx)(iz.b, {
+              className: "SettingsCheckbox",
+              checked: Ez,
+              disabled: tz,
+              onChange: () => {}
+            })
+          }), (0, Fz.jsxs)("div", {
+            className: "CheckboxText",
+            children: [uz, nz && (0, Fz.jsx)("span", {
+              onClick: zz => zz.stopPropagation(),
+              children: (0, Fz.jsx)(lz.b, {
+                className: "SettingsTextInputCircleInfo",
+                hoverInfo: nz
+              })
+            })]
+          })]
+        }), Oz && (0, Fz.jsx)("div", {
+          className: "SettingNote",
+          children: Oz
+        })]
+      })
+    }
+
+    function Rz(zz) {
+      let {
+        name: uz,
+        onChange: bz,
+        min: nz,
+        max: iz,
+        step: Mz,
+        initValue: tz,
+        circleInfoText: Oz,
+        format: pz,
+        className: dz,
+        padStep: Zz,
+        disabled: Rz = !1,
+        selectableMax: Kz,
+        cappedNote: Xz,
+        onChangeComplete: fz
+      } = zz;
+      const [sz, rz] = (0, Ez.useState)(tz), oz = (0, Ez.useRef)(tz);
+      (0, Ez.useEffect)((() => {
+        oz.current = tz, rz(tz)
+      }), [tz]);
+      const Nz = void 0 !== Kz && Kz < iz,
+        vz = Nz ? {
+          "--slider-selectable": (Kz - nz) / (iz - nz)
+        } : void 0;
+      return (0, Fz.jsxs)("div", {
+        className: Hz()("SettingBox SettingsSliderDiv", {
+          [dz]: dz,
+          SettingBoxDisabled: Rz,
+          SliderCapped: Nz
+        }),
+        style: vz,
+        children: [(0, Fz.jsxs)("div", {
+          className: "SliderText",
+          children: [`${uz}: ${pz?pz(sz):sz}`, Oz && (0, Fz.jsx)(lz.b, {
+            className: "SettingsTextInputCircleInfo",
+            hoverInfo: Oz
+          })]
+        }), (0, Fz.jsx)("div", {
+          className: "SliderDiv",
+          children: (0, Fz.jsx)(wz, {
+            value: sz,
+            min: nz,
+            max: iz,
+            step: Mz,
+            onChange: zz => {
+              if (Nz && zz >= Kz && sz === Kz) return;
+              const uz = Nz ? Math.min(zz, Kz) : zz;
+              oz.current = uz, rz(uz), bz(uz)
+            },
+            onChangeComplete: fz && (() => {
+              fz(oz.current)
+            }),
+            format: pz,
+            padStep: Zz,
+            disabled: Rz
+          })
+        }), Nz && Xz && (0, Fz.jsx)("div", {
+          className: "SettingNote",
+          children: Xz
+        })]
+      })
+    }
+    const Kz = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+
+    function wz(zz) {
+      var uz;
+      let {
+        value: bz,
+        min: iz,
+        max: lz,
+        step: Mz,
+        onChange: tz,
+        orientation: Hz,
+        reverse: Oz,
+        setIsChanging: pz,
+        tooltip: Zz,
+        labels: Rz,
+        handleLabel: wz,
+        format: Xz,
+        onChangeStart: fz,
+        onChangeComplete: sz,
+        padStep: rz,
+        disabled: oz = !1
+      } = zz;
+      const Nz = (0, Ez.useRef)(null),
+        vz = (0, Ez.useRef)(null);
+      (0, Ez.useLayoutEffect)((() => {
+        var zz, uz, bz;
+        const Ez = null !== (zz = null === (uz = Nz.current) || void 0 === uz ? void 0 : uz.querySelector(".rangeslider")) && void 0 !== zz ? zz : null;
+        null === Ez || void 0 === Ez || Ez.setAttribute("data-pad-slider", ""), null === Ez || void 0 === Ez || Ez.setAttribute("data-pad-focusable", ""), null === Ez || void 0 === Ez || null === (bz = Ez.querySelector(".rangeslider__handle")) || void 0 === bz || bz.setAttribute("data-pad-slider-handle", ""), vz.current = Ez
+      }), []), (0, Ez.useLayoutEffect)((() => {
+        var zz, uz;
+        oz ? null === (zz = vz.current) || void 0 === zz || zz.setAttribute("aria-disabled", "true") : null === (uz = vz.current) || void 0 === uz || uz.removeAttribute("aria-disabled")
+      }), [oz]);
+      const xz = (null !== (uz = String(Mz).split(".")[1]) && void 0 !== uz ? uz : "").length,
+        Jz = zz => {
+          const uz = Number((Math.round((zz - iz) / Mz) * Mz + iz).toFixed(xz));
+          return Math.min(lz, Math.max(iz, uz))
+        },
+        Az = (0, Ez.useRef)(sz);
+      Az.current = sz, (0, Ez.useEffect)((() => {
+        const zz = Nz.current;
+        if (!zz) return;
+        const uz = zz => {
+          var uz;
+          Kz.has(zz.key) && (null === (uz = Az.current) || void 0 === uz || uz.call(Az))
+        };
+        return zz.addEventListener("keyup", uz), () => {
+          zz.removeEventListener("keyup", uz)
+        }
+      }), []);
+      const Tz = (0, Ez.useRef)(!1);
+      return (0, dz.f)(vz, {
+        adjust: zz => {
+          if (oz) return;
+          const uz = null !== rz && void 0 !== rz ? rz : Math.max(Mz, Math.round((lz - iz) / 20 / Mz) * Mz),
+            Ez = Jz(bz + zz * uz * (Oz ? -1 : 1));
+          Ez !== bz && (null === fz || void 0 === fz || fz(), tz(Ez), null === sz || void 0 === sz || sz())
+        },
+        setFraction: zz => {
+          if (oz) return;
+          const uz = Jz(iz + (Oz ? 1 - zz : zz) * (lz - iz));
+          uz !== bz && (Tz.current || (Tz.current = !0, null === fz || void 0 === fz || fz()), tz(uz))
+        },
+        endDrag: () => {
+          Tz.current && (Tz.current = !1, null === sz || void 0 === sz || sz())
+        }
+      }), (0, Fz.jsx)("div", {
+        ref: Nz,
+        style: {
+          display: "contents"
+        },
+        children: (0, Fz.jsx)(nz.c, {
+          value: bz,
+          min: iz,
+          max: lz,
+          step: Mz,
+          onChange: tz,
+          orientation: Hz,
+          reverse: Oz,
+          tooltip: Zz,
+          labels: Rz,
+          handleLabel: wz,
+          format: Xz,
+          onChangeStart: () => {
+            null === fz || void 0 === fz || fz(), null === pz || void 0 === pz || pz(!0)
+          },
+          onChangeComplete: () => {
+            null === pz || void 0 === pz || pz(!1), null === sz || void 0 === sz || sz()
+          }
+        })
+      })
+    }
+    async function Xz() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const uz = Oz.NotificationProvider.showPromptPopup({
+        title: "settingsMenu:reloadPagePopupTitle",
+        subtitle: "settingsMenu:reloadPagePopupSubtitle",
+        confirmText: "settingsMenu:reloadPagePopupConfirm",
+        confirmTooltip: "",
+        cancelText: "general:cancel",
+        cancelTooltip: "",
+        unlockPointerKey: zz
+      });
+      !0 === await uz.getResult() && (0, pz.reloadBloxd)()
+    }
+
+    function fz(zz) {
+      let {
+        label: uz,
+        options: bz,
+        value: Ez,
+        onChange: nz,
+        circleInfoText: iz
+      } = zz;
+      return (0, Fz.jsxs)("div", {
+        className: "SettingBox SegmentedSettingRow",
+        children: [(0, Fz.jsxs)("div", {
+          className: "SliderText",
+          children: [uz, iz && (0, Fz.jsx)(lz.b, {
+            className: "SettingsTextInputCircleInfo",
+            hoverInfo: iz
+          })]
+        }), (0, Fz.jsx)(Mz.d, {
+          ariaLabel: uz,
+          options: bz,
+          value: Ez,
+          onChange: nz
+        })]
+      })
+    }
+  },
+  6389: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      default: () => Iz
+    });
+    var Ez = bz(56),
+      nz = bz(1490),
+      iz = bz(6283),
+      lz = bz(1212),
+      Mz = bz(328),
+      tz = bz(1305),
+      Hz = bz(1482),
+      Oz = bz(1419),
+      pz = bz(1332),
+      dz = bz(2455),
+      Fz = bz(2584),
+      Zz = bz(4305),
+      Rz = bz(1114),
+      Kz = bz(1473),
+      wz = bz(96),
+      Xz = bz(1181);
+    const fz = bz.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
+    var sz = bz(1038),
+      rz = bz.n(sz),
+      oz = bz(1047),
+      Nz = bz(1322),
+      vz = bz(6274),
+      xz = bz(1089);
+    const Jz = (0, Ez.lazy)((() => Promise.all([bz.e(105), bz.e(74), bz.e(131), bz.e(125), bz.e(124)]).then((() => bz(6301))).then((zz => ({
+      default: zz.ShaderPackPublishForm
+    })))));
+
+    function Az(zz) {
+      let {
+        details: uz,
+        owner: bz,
+        onChanged: nz
+      } = zz;
       const {
-        t: IT
-      } = (0, DT.t)(), iT = "chosen" === oT.packSource, zT = hT.featureFlags.useDiscord ? iT ? "texturePackLoad:failedHelpCustomPack" : "texturePackLoad:failedHelp" : iT ? "texturePackLoad:failedHelpCustomPackNoDiscord" : "texturePackLoad:failedHelpNoDiscord";
-      return (0, vT.jsxs)(vT.Fragment, {
-        children: [IT(zT, {
-          code: oT.code
-        }), "default" !== oT.packSource && oT.code === uT.m.Error && (0, vT.jsxs)("div", {
-          style: {
-            paddingTop: "1rem",
-            overflowWrap: "anywhere"
-          },
-          children: [IT("texturePackLoad:details"), " ", oT.reason]
-        }), hT.featureFlags.useDiscord && (0, vT.jsx)("div", {
-          style: {
-            paddingTop: "1rem"
-          },
-          children: (0, vT.jsx)("a", {
-            href: ET,
-            target: "_blank",
-            rel: "noreferrer",
-            children: IT("texturePackLoad:reportOnDiscord")
+        t: lz
+      } = (0, Xz.F)(), Mz = (0, Hz.useNavigatePreserveSearch)(), {
+        userContext: pz
+      } = (0, Rz.c)(), [dz, Fz] = (0, Ez.useState)(!1), [Zz, wz] = (0, Ez.useState)(null), [fz, sz] = (0, Ez.useState)(!1), {
+        packId: Az,
+        name: Tz,
+        description: Lz,
+        live: Pz
+      } = uz;
+      async function Gz(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nz;
+        Fz(!0), wz(null);
+        try {
+          await zz(), uz()
+        } catch (bz) {
+          console.error("Failed to change a shader pack", bz), wz((0, vz.v)(bz, lz, "shaderPackListing:ownerActionFailed"))
+        } finally {
+          Fz(!1)
+        }
+      }
+      const az = (0, vz.q)(pz);
+      return (0, xz.jsxs)("section", {
+        className: "ShaderPackOwnerPanel",
+        children: [(0, xz.jsx)("h2", {
+          className: "ShaderPackSectionTitle",
+          children: lz("general:manage")
+        }), (0, vz.T)(bz, !(null === Pz || void 0 === Pz || !Pz.renderId), Date.now(), lz).map((zz => (0, xz.jsxs)("div", {
+          className: rz()("ShaderPackOwnerNotice", {
+            Warning: "warning" === zz.tone
+          }),
+          children: [(0, xz.jsx)(oz.c, {
+            name: "warning" === zz.tone ? "triangle-exclamation" : "circle-info"
+          }), (0, xz.jsxs)("div", {
+            children: [zz.text, zz.detail && (0, xz.jsx)("pre", {
+              className: "ShaderPackOwnerNoticeDetail",
+              children: zz.detail
+            })]
+          })]
+        }, zz.text))), uz.ban && (0, xz.jsxs)("div", {
+          className: "ShaderPackOwnerNotice Warning",
+          children: [(0, xz.jsx)(oz.c, {
+            name: "ban"
+          }), (0, xz.jsxs)("div", {
+            children: ["Banned by ", uz.ban.byName, " on ", new Date(uz.ban.at).toLocaleString()]
+          })]
+        }), Zz && (0, xz.jsx)("div", {
+          className: "ShaderPackOwnerError",
+          children: Zz
+        }), (0, xz.jsxs)("div", {
+          className: "ShaderPackOwnerActions",
+          children: [(0, xz.jsxs)(Oz.V, {
+            disabled: dz,
+            onClick: () => {
+              !async function() {
+                const zz = await Nz.NotificationProvider.showInputPopup({
+                  title: "shaderPackListing:renameTitle",
+                  initialValue: Tz,
+                  maxLength: iz.y,
+                  submitText: "general:save",
+                  validate: zz => zz.trim().length < iz.z ? lz("shaderPackListing:nameTooShort", {
+                    min: String(iz.z)
+                  }) : null
+                }).getResult();
+                "notificationTornDown" !== zz && "submit" === (null === zz || void 0 === zz ? void 0 : zz.type) && zz.value.trim() !== Tz && await Gz((() => Kz.c.updateShaderPack(pz, {
+                  packId: Az,
+                  name: zz.value.trim()
+                })))
+              }()
+            },
+            children: [(0, xz.jsx)(oz.c, {
+              name: "pen"
+            }), " ", lz("shaderPackListing:rename")]
+          }), (0, xz.jsxs)(Oz.V, {
+            disabled: dz,
+            onClick: () => {
+              !async function() {
+                const zz = await Nz.NotificationProvider.showInputPopup({
+                  title: "shaderPackListing:editDescription",
+                  initialValue: Lz,
+                  maxLength: iz.l,
+                  multiline: !0,
+                  allowEmptySubmit: !0,
+                  submitText: "general:save"
+                }).getResult();
+                "notificationTornDown" !== zz && "submit" === (null === zz || void 0 === zz ? void 0 : zz.type) && zz.value.trim() !== Lz && await Gz((() => Kz.c.updateShaderPack(pz, {
+                  packId: Az,
+                  description: zz.value.trim()
+                })))
+              }()
+            },
+            children: [(0, xz.jsx)(oz.c, {
+              name: "file-lines"
+            }), " ", lz("shaderPackListing:editDescription")]
+          }), (0, xz.jsxs)(Oz.V, {
+            disabled: dz || bz.isBanned && !bz.listed,
+            onClick: () => {
+              Gz((() => Kz.c.updateShaderPack(pz, {
+                packId: Az,
+                listed: !bz.listed
+              })))
+            },
+            children: [(0, xz.jsx)(oz.c, {
+              name: bz.listed ? "eye-slash" : "eye"
+            }), " ", lz(bz.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
+          }), !bz.isBanned && (0, xz.jsxs)(Oz.f, {
+            disabled: dz,
+            onClick: () => {
+              sz(!fz)
+            },
+            children: [(0, xz.jsx)(oz.c, {
+              name: "upload"
+            }), " ", lz("shaderPackListing:uploadVersion")]
+          }), (0, xz.jsxs)(Oz.O, {
+            disabled: dz || bz.isBanned,
+            onClick: () => {
+              !async function() {
+                !0 === await Nz.NotificationProvider.showPromptPopup({
+                  title: "shaderPackListing:deleteTitle",
+                  subtitle: "shaderPackListing:deleteSubtitle",
+                  confirmText: "general:delete",
+                  cancelText: "general:cancel",
+                  destructive: !0
+                }).getResult() && await Gz((() => Kz.c.deleteShaderPack(pz, Az)), (() => {
+                  Mz(`${vz.P}?section=mine`, {
+                    replace: !0
+                  })
+                }))
+              }()
+            },
+            children: [(0, xz.jsx)(oz.c, {
+              name: "trash-can"
+            }), " ", lz("general:delete")]
+          }), az && (0, xz.jsxs)(Oz.O, {
+            disabled: dz,
+            onClick: () => {
+              Gz((() => Kz.c.setShaderPackBanned(pz, Az, !bz.isBanned)))
+            },
+            children: [(0, xz.jsx)(oz.c, {
+              name: bz.isBanned ? "circle-check" : "ban"
+            }), " ", bz.isBanned ? "Unban" : "Ban"]
+          })]
+        }), fz && (0, xz.jsx)(Ez.Suspense, {
+          fallback: (0, xz.jsx)(tz.c, {}),
+          children: (0, xz.jsx)(Jz, {
+            existing: {
+              packId: Az,
+              name: Tz,
+              description: Lz
+            },
+            onPublished: () => {
+              sz(!1), nz()
+            }
           })
         })]
       })
     }
-    var CT = IT(2174),
-      jT = IT(1296),
-      JT = IT(748),
-      UT = IT(1199),
-      aT = IT(1007),
-      YT = IT(1451),
-      QT = IT(1193),
-      OT = IT(2851),
-      HT = IT(2710),
-      nT = IT(1332),
-      qT = IT(1310),
-      ZT = IT(4465),
-      lT = IT(8325),
-      sT = IT(2585);
+    var Tz = bz(79),
+      Lz = bz(1840),
+      Pz = bz(1266),
+      Gz = bz(4776),
+      az = bz(1195),
+      Vz = bz(6289),
+      mz = bz(6286),
+      qz = bz(6296);
 
-    function tT(TT) {
+    function hz(zz) {
       let {
-        onApply: oT,
-        onSkip: IT
-      } = TT;
+        item: uz
+      } = zz;
       const {
-        t: iT
-      } = (0, DT.t)();
-      return (0, WT.useEffect)((() => {
-        sT.g.skipPlayWait()
-      }), []), (0, vT.jsx)(nT.l, {
-        icon: "download",
-        title: "customTexturePack:downloadTitle",
-        subtitle: (0, vT.jsxs)("div", {
-          className: "CustomTexturePackDownloaderSubtitleText",
-          children: [iT("customTexturePack:downloadPrompt"), (0, vT.jsx)("div", {
-            className: "CustomTexturePackDownloaderWarningText",
-            children: iT("customTexturePack:authorWarning")
-          }), (0, vT.jsx)("div", {
-            className: "CustomTexturePackDownloaderSecondaryText",
-            children: iT("customTexturePack:existingPackSaved")
-          })]
-        }),
-        confirm: {
-          text: "general:apply",
-          onClick: oT
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: IT
-        }
-      })
-    }
-    async function GT() {
-      let TT = !1;
-      const oT = ST.NotificationProvider.showCustomPopup({
-        body: oT => (0, vT.jsx)(tT, {
-          onApply: () => {
-            TT = !0, oT()
+        t: bz
+      } = (0, Xz.F)(), [nz] = (0, Vz.k)(), [lz, Mz] = (0, Ez.useState)(nz), [tz, Hz] = (0, Ez.useState)(!1), [Oz, pz] = (0, Ez.useState)(!1), {
+        s3Url: dz
+      } = az.clientSideServerUrls, {
+        width: Fz,
+        height: Zz
+      } = iz.m.large, Rz = (0, iz.q)(dz, uz, lz, "large"), {
+        renderVersion: Kz
+      } = uz;
+      return (0, xz.jsxs)("div", {
+        className: "ShaderPackPreviews",
+        children: [(0, xz.jsx)(qz.d, {
+          selected: lz,
+          onSelect: zz => {
+            Mz(zz), Hz(!1)
           },
-          onSkip: oT
-        }),
-        disableExitButton: !0,
-        disablePressBackgroundToClose: !0
-      });
-      return await oT.getResult(), TT
+          imageUrl: zz => (0, iz.q)(dz, uz, zz, "thumb")
+        }), (0, xz.jsxs)("div", {
+          className: "ShaderPackPreviewStage",
+          children: [!tz && (0, xz.jsxs)("button", {
+            type: "button",
+            className: "ShaderPackPreviewMain",
+            title: null === Kz ? void 0 : bz("shaderPackListing:fullSize"),
+            disabled: null === Kz,
+            onClick: () => {
+              pz(!0)
+            },
+            children: [(0, xz.jsx)("img", {
+              src: Rz,
+              width: Fz,
+              height: Zz,
+              alt: bz(vz.db[lz]),
+              draggable: !1
+            }), (0, xz.jsx)(mz.c, {
+              item: uz
+            })]
+          }), !tz && null !== Kz && (0, xz.jsxs)(Sz, {
+            side: "Right",
+            onClick: () => {
+              Hz(!0)
+            },
+            children: [(0, xz.jsx)(oz.c, {
+              name: "arrows-left-right"
+            }), " ", bz("shaderPackListing:compare")]
+          }), tz && null !== Kz && (0, xz.jsx)(gz, {
+            item: uz,
+            packUrl: Rz,
+            baselineUrl: (0, iz.i)(dz, Kz, lz, "large")
+          }), tz && (0, xz.jsx)(Sz, {
+            side: "Left",
+            onClick: () => {
+              Hz(!1)
+            },
+            children: bz("shaderPackListing:withPack")
+          }), tz && (0, xz.jsx)(Sz, {
+            side: "Right",
+            onClick: () => {
+              Hz(!1)
+            },
+            children: bz("shaderPackListing:withoutPack")
+          })]
+        }), Oz && (0, xz.jsx)(Uz, {
+          fullUrl: (0, iz.q)(dz, uz, lz, "full"),
+          largeUrl: Rz,
+          alt: bz(vz.db[lz]),
+          onClose: () => {
+            pz(!1)
+          }
+        })]
+      })
     }
-    let pT = {
-      wanted: !1
-    };
-    let bT = null;
 
-    function yT(TT) {
-      TT.setGamePackConfirm(GT), bT = TT
-    }
-    var NT = IT(3049);
-
-    function PT(TT) {
+    function Uz(zz) {
       let {
-        schematicId: oT,
-        texturePackKey: IT,
-        onClose: iT
-      } = TT;
-      const [zT, kT] = (0, WT.useState)("prompt"), [XT, BT] = (0, WT.useState)(null), FT = (0, NT.c)();
-
-      function ST() {
-        iT()
-      }
-      return "prompt" === zT ? (0, vT.jsx)(tT, {
-        onApply: async function() {
-          kT("downloading");
-          try {
-            const TT = await async function(TT, oT) {
-              const IT = await (0, ZT.c)(oT);
-              if (IT) return {
-                pack: IT,
-                key: oT
-              };
-              const iT = await MT.userContextManager.getCurrentUserContext(),
-                zT = (await YT.e.getGame(iT, TT, !0)).customTexturePackKey;
-              if (!zT) return null;
-              const kT = await (0, ZT.c)(zT);
-              if (!kT) throw new Error("The texture pack could not be found");
-              return {
-                pack: kT,
-                key: zT
-              }
-            }(oT, IT);
-            if (!FT.current) return;
-            if (!TT) return void iT();
-            if ((0, OT.h)(TT.pack)) return void kT("refused");
-            HT.e.setFromJson(TT.pack, "customGame"), await HT.e.saveTemporaryTexturePack(TT.key), FT.current && (0, gT.reloadBloxd)()
-          } catch (TT) {
-            BT(TT instanceof Error ? TT.message : String(TT)), kT("error")
+        fullUrl: uz,
+        largeUrl: bz,
+        alt: nz,
+        onClose: iz
+      } = zz;
+      const lz = (0, Ez.useRef)(null);
+      return (0, Pz.u)("popup", lz, iz), (0, Ez.useEffect)((() => {
+        function zz(zz) {
+          "Escape" === zz.key && (zz.stopPropagation(), iz())
+        }
+        return window.addEventListener("keydown", zz, !0), () => {
+          window.removeEventListener("keydown", zz, !0)
+        }
+      }), [iz]), (0, Tz.createPortal)((0, xz.jsxs)("div", {
+        ref: lz,
+        className: "ShaderPackFullSize",
+        onClick: iz,
+        children: [(0, xz.jsx)("img", {
+          className: "ShaderPackFullSizeImage",
+          src: uz,
+          alt: nz,
+          draggable: !1,
+          style: {
+            backgroundImage: `url(${bz})`
           }
+        }), (0, xz.jsx)(Oz.m, {
+          className: "ShaderPackFullSizeClose",
+          onClick: iz
+        })]
+      }), document.body)
+    }
+    const cz = 5;
+
+    function gz(zz) {
+      let {
+        item: uz,
+        packUrl: bz,
+        baselineUrl: nz
+      } = zz;
+      const {
+        t: lz
+      } = (0, Xz.F)(), [Mz, tz] = (0, Ez.useState)(50), Hz = (0, Ez.useRef)(!1), Oz = (0, Ez.useRef)(null), {
+        width: pz,
+        height: dz
+      } = iz.m.large;
+
+      function Fz(zz) {
+        tz((uz => (0, Lz.f)(uz + zz, 0, 100)))
+      }
+
+      function Zz(zz) {
+        const uz = zz.currentTarget.getBoundingClientRect();
+        tz((0, Lz.f)((zz.clientX - uz.left) / uz.width * 100, 0, 100))
+      }
+      return (0, Gz.f)(Oz, {
+        adjust: zz => {
+          Fz(zz * cz)
         },
-        onSkip: ST
-      }) : "downloading" === zT ? (0, vT.jsx)(nT.l, {
-        icon: "download",
-        title: "customTexturePack:downloading",
-        subtitle: (0, vT.jsx)("div", {
-          className: "CustomTexturePackDownloaderLogoLoaderContainer",
-          children: (0, vT.jsx)(qT.d, {
-            showFace: !0
-          })
+        setFraction: zz => {
+          tz(100 * zz)
+        },
+        endDrag: () => {}
+      }), (0, xz.jsxs)("div", {
+        ref: Oz,
+        className: "ShaderPackCompare",
+        "data-pad-slider": "",
+        "data-pad-focusable": "",
+        role: "slider",
+        tabIndex: 0,
+        "aria-label": lz("shaderPackListing:compare"),
+        "aria-valuemin": 0,
+        "aria-valuemax": 100,
+        "aria-valuenow": Math.round(Mz),
+        style: {
+          "--split": `${Mz}%`
+        },
+        onKeyDown: function(zz) {
+          const uz = "ArrowLeft" === zz.key ? -cz : "ArrowRight" === zz.key ? cz : 0;
+          0 !== uz && (zz.preventDefault(), Fz(uz))
+        },
+        onPointerDown: zz => {
+          Hz.current = !0, zz.currentTarget.setPointerCapture(zz.pointerId), Zz(zz)
+        },
+        onPointerMove: zz => {
+          Hz.current && Zz(zz)
+        },
+        onPointerUp: () => {
+          Hz.current = !1
+        },
+        onPointerCancel: () => {
+          Hz.current = !1
+        },
+        children: [(0, xz.jsx)("img", {
+          className: "ShaderPackCompareBaseline",
+          src: nz,
+          width: pz,
+          height: dz,
+          alt: "",
+          draggable: !1,
+          style: {
+            backgroundImage: `url(${bz})`
+          }
+        }), (0, xz.jsx)("div", {
+          className: "ShaderPackCompareLine"
+        }), (0, xz.jsx)("img", {
+          className: "ShaderPackComparePack",
+          src: bz,
+          width: pz,
+          height: dz,
+          alt: "",
+          draggable: !1
+        }), (0, xz.jsx)(mz.c, {
+          item: uz,
+          className: "ShaderPackCompareNotice"
+        })]
+      })
+    }
+
+    function Sz(zz) {
+      let {
+        side: uz,
+        onClick: bz,
+        children: Ez
+      } = zz;
+      return (0, xz.jsx)("button", {
+        type: "button",
+        className: `ShaderPackStageButton ${uz}`,
+        onClick: bz,
+        children: (0, xz.jsx)("span", {
+          className: "ShaderPackStageButtonFace SmallTextBold",
+          children: Ez
         })
-      }) : "error" === zT ? (0, vT.jsx)(nT.l, {
-        icon: "face-worried",
-        title: "customTexturePack:errorTitle",
-        subtitle: XT,
-        confirm: {
-          text: "customTexturePack:refreshPage",
-          onClick: () => {
-            window.location.reload()
-          }
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: ST
-        }
-      }) : "refused" === zT ? (0, vT.jsx)(nT.l, {
-        icon: "face-worried",
-        title: "customTexturePack:cantApplyTitle",
-        subtitle: "customTexturePack:gamePackHasExternalUrls",
-        confirm: {
-          text: "general:continue",
-          onClick: ST
-        }
-      }) : null
+      })
     }
-    var dT = IT(8335),
-      VT = IT(3867),
-      To = IT(1684),
-      oo = IT(2788),
-      Io = IT(2992),
-      io = IT(4181),
-      zo = IT(1266),
-      ko = IT(637),
-      Wo = IT(712);
+    var yz = bz(4746),
+      Dz = bz(298),
+      Qz = bz(6382);
+    const Wz = {
+      compiler: "shaderPack:compilerUnavailable",
+      download: "shaderPackListing:useDownloadFailed",
+      apiVersion: "shaderPackListing:useOtherApiVersion",
+      invalid: "shaderPackListing:useInvalid",
+      errors: "shaderPackListing:useFailsHere",
+      save: "shaderPack:saveFailed"
+    };
 
-    function Xo() {
-      const TT = zT.c.get("clientEscMenuOptions");
-      BT.gameBridge.send("setLookSensitivity", zT.c.get("isTouchScreen") ? (0, Wo.n)(TT) : TT.mouseSensitivity)
-    }
-    async function Bo(TT, oT, IT) {
-      const iT = (0, io.L)(oT);
-      async function WT(TT, oT, IT, iT) {
-        var WT;
-        if (iT.aborted) return null;
-        null === zT.c.get("gameEntrySource") && (0, zT.h)("directPlayUrl"), ko.u && (0, lT.c)().catch((() => {})), zT.c.set({
-          gameState: "findingLobby"
-        }), rT.h.XM("loadingScreenState", "loadingPage:findingLobby");
-        const XT = await MT.userContextManager.getCurrentUserContext();
-        BT.gameBridge.send("setRequestedGame", {
-          gameNameWithVariation: oT,
-          discordContext: TT instanceof UT.i ? TT.getSerialisableParams() : null
-        }), (0, To.i)();
-        const FT = await async function(TT, oT, IT, iT, zT) {
-          try {
-            await kT.reqLibsLoadedPromise
-          } catch (WT) {
-            return AT.b.errorWithCode(WT.toString(), KT.j.LOAD_REQUIRED_LIBS, {
-              error: WT,
-              severity: "medium"
-            })
-          }
-          return rT.h.XM("matchmakeAndPlayStepCompleted", {
-            step: KT.j.LOAD_REQUIRED_LIBS,
-            totalSubSteps: 1
-          }), (0, kT.matchmakeAndPlayMaybeUnloaded)(TT, oT, IT, iT, zT)
-        }(TT, oT, IT, XT, iT), ST = FT.isError() ? FT.asError() : null;
-        if (ST && !ST.debugResult.Jo) {
-          console.log("Failed to join lobby:", ST.message);
-          const TT = "timedOut" === ST.debugResult.gameServerUnreachable;
-          (0, oo.i)("matchmake_failed", ST.message, TT ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : KT.j[ST.code])
-        }
-        if (iT.aborted) return BT.gameBridge.send("leaveGame", {
-          reloadPath: null
-        }), null;
-        if (null !== ST && void 0 !== ST && ST.debugResult.Jo) return console.log("Join cancelled:", ST.message), null;
-        if (ST) return FT;
-        const {
-          gameNameWithVariation: DT,
-          lobbyName: LT,
-          addLobbyToRecentlyPlayed: xT
-        } = FT.getValue();
-        let cT;
-        Xo(), (0, zo.A)().setGameViewShown(!0);
-        const gT = null === (WT = JT.d[DT]) || void 0 === WT ? void 0 : WT.recentlyPlayedAs;
-        return cT = (0, aT.m)(DT) ? {
-          type: "custom",
-          name: "",
-          schematicId: (0, aT.p)(DT),
-          recentLobbies: []
-        } : "classic" !== DT || (0, QT.L)(LT) ? gT ? {
-          type: "bloxd",
-          gameNameWithVariation: gT,
-          recentLobbies: []
-        } : {
-          type: "bloxd",
-          gameNameWithVariation: DT,
-          recentLobbies: []
-        } : {
-          type: "bloxd",
-          gameNameWithVariation: "classic_worlds",
-          recentLobbies: []
-        }, YT.e.addRecentlyPlayedGame(XT, cT, xT && !gT ? LT : void 0).then((TT => {
-          XT.setRecentlyPlayedGames(TT)
-        })).catch((TT => {
-          console.error("Failed to record recently played game", TT)
-        })), (0, wT.Q)(), FT
-      }
-      return iT && (0, zT.h)("updateRejoin"), (0, Io.k)((async zT => {
-        try {
-          let XT = TT,
-            BT = await WT(XT, oT, IT, zT);
-          for (let TT = 0; iT && TT < io.k; TT++) {
-            var kT;
-            if (null === (kT = BT) || void 0 === kT || !kT.isError() || BT.asError().code !== KT.j.REQUEST_TO_MATCHMAKING) break;
-            if (!await (0, io.N)((0, io.t)(TT), zT)) return BT;
-            XT = (0, io.x)(XT, TT + 1, "string" === typeof XT && (0, QT.L)(XT)), BT = await WT(XT, oT, IT, zT)
-          }
-          return BT
-        } catch (XT) {
-          if ((0, oo.i)("matchmake_failed", XT, "unexpected"), BT.gameBridge.send("leaveGame", {
-              reloadPath: zT.aborted ? null : "/"
-            }), zT.aborted) return null;
-          throw XT
-        }
-      }), (async TT => {
-        var IT;
-        if (iT) return;
-        const zT = (0, wT.J)();
-        null !== zT && (await zT, TT.aborted) || (null !== (IT = JT.d[oT]) && void 0 !== IT && IT.playAdBeforeMatchmaking ? (sT.g.skipPlayWait(), await new Promise((TT => {
-          (0, wT.db)((() => {
-            TT(!0)
-          }), "video_start")
-        }))) : (0, wT.db)((() => {}), "video_start"))
-      }))
-    }
-
-    function Fo() {
+    function ez(zz) {
       const {
-        t: TT
-      } = (0, DT.t)(), oT = (0, FT.useNavigatePreserveSearch)(), IT = (0, iT.t)(), rT = (0, iT.C)(), AT = (0, WT.useRef)({
-        t: TT,
-        navigate: oT
-      });
-      AT.current = {
-        t: TT,
-        navigate: oT
-      };
-      const ET = (0, WT.useRef)("");
-      ET.current = IT.pathname + IT.search;
-      const {
-        gameState: JT,
-        clientEscMenuOptions: UT
-      } = (0, zT.k)(["gameState", "clientEscMenuOptions"]), OT = (0, WT.useRef)(null), nT = (0, WT.useRef)(null);
-      var qT;
-      (0, Io.l)(), (0, Io.o)(), qT = ko.u, (0, WT.useEffect)((() => {
-        if (!qT) return;
-        let TT = !0;
-        return (0, lT.c)().then((oT => {
-          TT && yT(oT)
-        })).catch((() => {})), () => {
-          var oT;
-          TT = !1, pT.wanted = !1, null === (oT = bT) || void 0 === oT || oT.setGamePackConfirm(null), bT = null
-        }
-      }), [qT]), (0, WT.useEffect)((() => {
-        var TT;
-        (0, kT.needGameClientNow)();
-        const {
-          t: oT,
-          navigate: iT
-        } = AT.current, WT = (0, dT.d)(rT, IT.search);
-        if (rT.lobbyName && !new URLSearchParams(IT.search).has("lobby")) return void iT((0, jT.c)(WT.gameNameWithVariation, WT.lobbyName), {
-          replace: !0
-        });
-        let XT = Promise.resolve({
-          shouldMatchmake: !0
-        });
-        if ("/play/discord-custom-lobby" === IT.pathname) {
-          const TT = zT.c.get("discordContext");
-          if (!TT) return void iT("/");
-          XT = cT.e.setupDiscordLobby(TT, "classic").then((() => ({
-            shouldMatchmake: !0,
-            discordContext: TT
-          }))).catch((oT => (console.error("Failed to setup discord lobby", oT), {
-            shouldMatchmake: !1,
-            discordContext: TT
-          })))
-        } else if (!WT.gameNameWithVariation || !(0, QT.J)(WT.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${WT.gameNameWithVariation}`), void iT(-1);
-        if (WT.gameNameWithVariation === OT.current && WT.lobbyName === nT.current) return;
-        if (BT.gameBridge.latest("connectedGame").replay) return void(0, Io.g)(null);
-        (0, wT.L)(), zT.c.set({
-          gameState: "loadingScreen"
-        });
-        const FT = function() {
-          pT.wanted = !1;
-          const TT = {
-            wanted: !0
-          };
-          return pT = TT, () => TT.wanted
-        }();
-        if ("releaseCountdown" === (null === (TT = (0, CT.c)(WT.gameNameWithVariation)) || void 0 === TT ? void 0 : TT.type)) return console.error(`Game hasn't been released yet: ${WT.gameNameWithVariation}`), void iT(-1);
-        const DT = WT.gameNameWithVariation;
-        if (DT && (ko.u || (0, aT.m)(DT))) {
-          const TT = ko.u ? Promise.all([(0, lT.c)(), MT.userContextManager.getCurrentUserContext()]).then((TT => {
-            let [oT, IT] = TT;
-            if (FT()) return yT(oT), oT.packForGame(DT, IT, FT)
-          })) : async function(TT) {
-            await HT.e.indexedDbValuesAreLoaded();
-            const oT = await MT.userContextManager.getCurrentUserContext(),
-              IT = (0, aT.p)(TT);
-            let iT;
-            try {
-              iT = await YT.e.getGame(oT, IT, !0)
-            } catch (WT) {
-              return void console.error("Failed to get game", WT)
-            }
-            const zT = iT.customTexturePackKey;
-            if (!zT) return void(HT.e.isUsingTemporaryTexturePack() && ((0, gT.reloadBloxd)(), await new Promise((() => {}))));
-            if (HT.e.isUsingTemporaryTexturePack() && HT.e.getTemporaryTexturePackSource() === zT) return;
-            const kT = ST.NotificationProvider.showCustomPopup({
-              body: TT => (0, vT.jsx)(PT, {
-                schematicId: IT,
-                texturePackKey: zT,
-                onClose: TT
-              }),
-              disableExitButton: !0,
-              disablePressBackgroundToClose: !0
-            });
-            await kT.getResult()
-          }(DT), oT = XT;
-          XT = TT.catch((TT => {
-            console.error("Failed to check for custom texture pack", TT)
-          })).then((() => oT))
-        }(0, Io.g)(null);
-        let mT = !1;
-        const JT = IT.pathname + IT.search,
-          UT = () => !mT && ET.current === JT;
-        return XT.then((TT => {
-          let {
-            shouldMatchmake: IT,
-            discordContext: kT
-          } = TT;
-          UT() && (IT ? Bo(null !== kT && void 0 !== kT ? kT : WT.lobbyName, kT ? "classic" : WT.gameNameWithVariation, WT.directJoinVmUrl).then((TT => {
-            var IT, kT;
-            if (null !== TT && UT())
-              if (TT.isError()) {
-                var XT;
-                const FT = TT.asError(),
-                  DT = null !== (XT = FT.debugResult.severity) && void 0 !== XT ? XT : "high";
-                if (FT.code === KT.j.SHADER_PACK) return void(0, VT.e)(FT.message, iT);
-                const cT = zT.c.get("gameEntrySource"),
-                  MT = FT.code === KT.j.INITIALISE_WEBGL ? (0, RT.b)() : null,
-                  {
-                    error: rT
-                  } = FT.debugResult,
-                  AT = FT.code === KT.j.REQUEST_TO_MATCHMAKING ? function(TT) {
-                    var oT;
-                    return null !== (oT = Object.keys(LT.c).find((oT => LT.c[oT] === TT))) && void 0 !== oT ? oT : null
-                  }(FT.message) : null;
-                let wT;
-                if (null !== AT) ST.NotificationProvider.showPromptPopup({
-                  icon: "lock",
-                  title: oT((kT = AT, "notWhitelisted" === kT ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld")),
-                  subtitle: oT(xT[AT]),
-                  confirmText: oT("general:ok"),
-                  cancelText: ""
-                }), wT = Promise.resolve(!1);
-                else if (null !== MT) wT = (0, RT.g)(MT);
-                else if (rT instanceof uT.q) IT = rT, wT = ST.NotificationProvider.showPromptPopup({
-                  icon: "face-dizzy",
-                  title: "texturePackLoad:failedTitle",
-                  subtitle: (0, vT.jsx)(fT, {
-                    failure: IT
-                  }),
-                  confirmText: "general:tryAgain",
-                  cancelText: "general:back"
-                }).getResult().then((TT => !0 === TT));
-                else {
-                  let TT;
-                  switch (DT) {
-                    case "low":
-                      TT = "face-diagonal-mouth";
-                      break;
-                    case "medium":
-                      TT = "face-worried";
-                      break;
-                    case "high":
-                      TT = "face-dizzy"
-                  }
-                  wT = ST.NotificationProvider.showPromptPopup({
-                    icon: TT,
-                    title: KT.C[FT.code],
-                    subtitle: (0, vT.jsxs)(vT.Fragment, {
-                      children: [FT.debugResult.gameServerUnreachable ? oT((0, hT.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable") : FT.message, FT.debugResult.error instanceof Error && (0, vT.jsx)("div", {
-                        style: {
-                          fontSize: "0.9rem",
-                          paddingTop: "1rem"
-                        },
-                        children: (0, vT.jsx)(eT.e, {
-                          errorString: FT.debugResult.error.stack
-                        })
-                      })]
-                    }),
-                    confirmText: oT("general:tryAgain"),
-                    cancelText: oT("general:cancel")
-                  }).getResult().then((TT => !0 === TT))
-                }
-                wT.then((TT => {
-                  if (TT) {
-                    (0, zT.h)(cT);
-                    const TT = (0, jT.c)(WT.gameNameWithVariation, WT.lobbyName);
-                    "low" === DT ? iT(TT) : (0, gT.reloadBloxd)(TT)
-                  }
-                })), BT.gameBridge.send("leaveGame", {
-                  reloadPath: "/"
-                }), iT(-1)
-              } else {
-                OT.current = TT.getValue().gameNameWithVariation, nT.current = TT.getValue().lobbyName;
-                const oT = (0, jT.c)(OT.current, TT.getValue().lobbyName);
-                iT(oT, {
-                  replace: !0
-                })
-              }
-          })).catch((TT => {
-            if (!UT()) return;
-            ST.NotificationProvider.showPromptPopup({
-              icon: "face-dizzy",
-              title: "Unexpected Error",
-              subtitle: (0, vT.jsxs)(vT.Fragment, {
-                children: [oT("homePage:pleaseCopyError"), (0, vT.jsx)("div", {
-                  style: {
-                    fontSize: "0.9rem",
-                    paddingTop: "1rem"
-                  },
-                  children: (0, vT.jsx)(eT.e, {
-                    errorString: TT.stack
-                  })
-                })]
-              }),
-              confirmText: oT("general:tryAgain"),
-              cancelText: oT("general:cancel")
-            }).getResult().then((TT => {
-              !0 === TT && (0, gT.reloadBloxd)((0, jT.c)(WT.gameNameWithVariation, WT.lobbyName))
-            })), iT(-1)
-          })) : iT(-1))
+        userContext: uz
+      } = (0, Rz.c)(), [nz, iz] = (0, Ez.useState)(null), [lz, Mz] = (0, Ez.useState)(!1), [tz, Hz] = (0, Ez.useState)(!1), [Oz, pz] = (0, Ez.useState)(null), dz = null === zz || void 0 === zz ? void 0 : zz.packId, Fz = null === zz || void 0 === zz ? void 0 : zz.sourceHash;
+      return (0, Ez.useEffect)((() => {
+        if (Mz(!1), pz(null), void 0 === dz) return;
+        let zz = !1;
+        return Promise.all([(0, wz.hasUsableWebGpuAdapter)(), (0, Qz.e)()]).then((uz => {
+          let [bz, Ez] = uz;
+          var nz;
+          zz || (iz(bz), Mz((null === Ez || void 0 === Ez || null === (nz = Ez.listing) || void 0 === nz ? void 0 : nz.packId) === dz && Ez.listing.sourceHash === Fz))
+        })).catch((uz => {
+          console.error("Failed to check whether this shader pack can be used", uz), zz || iz(!1)
         })), () => {
-          mT = !0
+          zz = !0
         }
-      }), [rT, IT.search, IT.pathname]), (0, WT.useEffect)((() => {
-        UT.disableFullscreen && (0, mT.e)() ? (0, mT.j)() : !UT.disableFullscreen && (0, mT.f)() && (0, mT.p)()
-      }), [JT, UT]), (0, WT.useEffect)((() => {
-        "inGame" === JT && Xo()
-      }), [JT, UT]), (0, WT.useEffect)((() => {
-        "inGame" !== JT && zT.c.set({
-          openInGameMenuName: null
+      }), [dz, Fz]), {
+        webGpuUsable: nz,
+        inUse: lz,
+        busy: tz,
+        errorKey: Oz,
+        use: () => {
+          null !== zz && async function(zz) {
+            Hz(!0), pz(null);
+            try {
+              const {
+                installListedShaderPack: Ez
+              } = await Promise.all([bz.e(74), bz.e(131), bz.e(126)]).then((() => bz(39648))), nz = await Ez({
+                packId: zz.packId,
+                sourceHash: zz.sourceHash,
+                name: zz.name,
+                ownerName: zz.ownerName,
+                description: zz.description
+              });
+              if ("failed" === nz.kind) return void pz(Wz[nz.reason]);
+              Mz(!0), Kz.c.recordShaderPackDownload(uz, zz.packId).catch((zz => {
+                console.error("Failed to count a shader pack's download", zz)
+              })), (0, yz.j)()
+            } catch (Ez) {
+              console.error("Failed to use the shader pack", Ez), pz("shaderPack:unexpectedError")
+            } finally {
+              Hz(!1)
+            }
+          }(zz)
+        }
+      }
+    }
+
+    function jz(zz) {
+      let {
+        packUse: uz
+      } = zz;
+      const {
+        t: bz
+      } = (0, Xz.F)(), {
+        webGpuUsable: Ez,
+        inUse: nz,
+        busy: iz,
+        errorKey: lz,
+        use: Mz
+      } = uz;
+      return (0, xz.jsxs)("div", {
+        className: "ShaderPackUse",
+        children: [(0, xz.jsxs)(Oz.q, {
+          disabled: !0 !== Ez || nz,
+          loading: iz,
+          onClick: Mz,
+          children: [(0, xz.jsx)(oz.c, {
+            name: nz ? "check" : "download"
+          }), " ", bz(nz ? "shaderPackListing:inUse" : "shaderPackListing:use")]
+        }), !1 === Ez && (0, xz.jsx)("div", {
+          className: "ShaderPackUseNote",
+          children: bz((0, Dz.g)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), lz && (0, xz.jsx)("div", {
+          className: "ShaderPackUseNote Error",
+          children: bz(lz)
+        })]
+      })
+    }
+
+    function Iz() {
+      var zz;
+      const {
+        t: uz
+      } = (0, Xz.F)(), bz = (0, Hz.useNavigatePreserveSearch)(), {
+        packId: iz
+      } = (0, nz.D)(), {
+        userContext: lz,
+        isUserContextUpdating: Mz
+      } = (0, Rz.c)(), [pz, dz] = (0, Ez.useState)(null), [Fz, wz] = (0, Ez.useState)(null), [fz, sz] = (0, Ez.useState)(0), rz = (0, Ez.useRef)(0);
+
+      function oz() {
+        var zz;
+        null !== (zz = (0, Hz.getPreviousLocation)()) && void 0 !== zz && zz.startsWith(vz.P) ? bz(-1) : bz(vz.P)
+      }(0, Zz.e)(oz), (0, Vz.e)(), (0, Ez.useEffect)((() => {
+        if (Mz || void 0 === iz) return;
+        const zz = ++rz.current;
+        wz(null), Kz.c.getShaderPack(lz, iz).then((uz => {
+          rz.current === zz && dz(uz)
+        })).catch((uz => {
+          rz.current === zz && (console.error("Failed to get the shader pack", uz), dz(null), wz({
+            error: uz
+          }))
+        }))
+      }), [iz, lz, Mz, fz]);
+      const Nz = () => {
+          sz((zz => zz + 1))
+        },
+        Jz = (null === pz || void 0 === pz ? void 0 : pz.packId) === iz ? pz : null,
+        Tz = (0, Vz.m)(),
+        Lz = ez(null !== (zz = null === Jz || void 0 === Jz ? void 0 : Jz.live) && void 0 !== zz ? zz : null),
+        Pz = null !== Jz && void 0 !== Jz && Jz.live ? (0, xz.jsx)(Bz, {
+          item: Jz.live,
+          favourites: Tz,
+          packUse: Lz
+        }) : null;
+      return (0, xz.jsxs)("article", {
+        className: "ShaderPackInformation AnimFadeIn",
+        children: [(0, xz.jsx)(Oz.d, {
+          onClick: oz,
+          children: uz("shaderPackListing:backToPacks")
+        }), null === Jz && null === Fz && (0, xz.jsx)("div", {
+          className: "ShaderPackInformationMessage",
+          children: (0, xz.jsx)(tz.c, {})
+        }), null !== Fz && (0, xz.jsxs)("div", {
+          className: "ShaderPackInformationMessage",
+          children: [(0, vz.v)(Fz.error, uz, "shaderPackListing:loadPackFailed"), (0, xz.jsx)(Oz.f, {
+            onClick: Nz,
+            children: uz("general:tryAgain")
+          })]
+        }), null !== Jz && null === Fz && (0, xz.jsxs)("div", {
+          className: "ShaderPackInformationBody",
+          children: [(0, xz.jsxs)("header", {
+            className: "ShaderPackInformationHeader",
+            children: [(0, xz.jsx)("h1", {
+              className: "FullyFancyText",
+              children: Jz.name
+            }), Pz]
+          }), Jz.live && (0, xz.jsx)(hz, {
+            item: Jz.live
+          }), Jz.live && (0, xz.jsx)(Cz, {
+            item: Jz.live,
+            ownerPreview: Jz.ownerPreview,
+            bloxdhubSlug: Jz.bloxdhubSlug,
+            actions: Pz
+          }), Jz.owner && (0, xz.jsx)(Az, {
+            details: Jz,
+            owner: Jz.owner,
+            onChanged: Nz
+          })]
+        })]
+      })
+    }
+
+    function Bz(zz) {
+      let {
+        item: uz,
+        favourites: bz,
+        packUse: Ez
+      } = zz;
+      const nz = bz.isFavourite(uz.packId);
+      return (0, xz.jsxs)("div", {
+        className: "ShaderPackInformationActions",
+        children: [wz.featureFlags.settings.canUseShaderPacks && (0, xz.jsx)(jz, {
+          packUse: Ez
+        }), (0, xz.jsx)(Oz.z, {
+          className: "ShaderPackInformationLike",
+          onClick: () => {
+            bz.toggle(uz.packId)
+          },
+          isLiked: !0 === nz,
+          isLoading: null === nz
+        })]
+      })
+    }
+
+    function Cz(zz) {
+      let {
+        item: uz,
+        ownerPreview: bz,
+        bloxdhubSlug: Ez,
+        actions: nz
+      } = zz;
+      const {
+        t: Mz
+      } = (0, Xz.F)(), tz = (0, Fz.k)(), Oz = null === Ez ? null : (0, iz.e)(Ez);
+      return (0, xz.jsxs)("div", {
+        className: "ShaderPackFacts",
+        children: [uz.description && (0, xz.jsx)("p", {
+          className: "ShaderPackDescription",
+          children: uz.description
+        }), (0, xz.jsxs)("div", {
+          className: "ShaderPackFeatureList",
+          children: [(null !== bz || null !== Oz) && (0, xz.jsx)("div", {
+            className: "ShaderPackAuthor",
+            children: null !== bz ? (0, xz.jsxs)(xz.Fragment, {
+              children: [(0, xz.jsx)(dz.i, {
+                playerSocialPreview: bz,
+                showLocation: !1,
+                linkToProfile: !0
+              }), null !== Oz && (0, xz.jsx)("a", {
+                className: "ShaderPackBloxdhubLogo",
+                href: Oz,
+                target: "_blank",
+                rel: "noopener noreferrer",
+                children: (0, xz.jsx)("img", {
+                  src: fz,
+                  alt: iz.b
+                })
+              })]
+            }) : (0, xz.jsxs)("a", {
+              className: "ShaderPackBloxdhubName",
+              href: Oz,
+              target: "_blank",
+              rel: "noopener noreferrer",
+              children: [iz.b, (0, xz.jsx)("img", {
+                src: fz,
+                alt: ""
+              })]
+            })
+          }), vz.z.filter((zz => uz.features.includes(zz))).map((zz => (0, xz.jsx)(Hz.LinkPreserveSearch, {
+            className: "ShaderPackFeature",
+            to: (0, vz.J)(zz),
+            children: Mz(vz.M[zz])
+          }, zz)))]
+        }), nz, (0, xz.jsxs)("dl", {
+          className: "ShaderPackFactList",
+          children: [(0, xz.jsxs)("div", {
+            children: [(0, xz.jsx)("dt", {
+              children: Mz("shaderPackListing:downloads")
+            }), (0, xz.jsx)("dd", {
+              children: (0, lz.T)(uz.downloads)
+            })]
+          }), (0, xz.jsx)(Yz, {
+            label: Mz("shaderPackListing:updated"),
+            time: uz.listedUpdatedAt,
+            now: tz
+          }), (0, xz.jsx)(Yz, {
+            label: Mz("shaderPackListing:created"),
+            time: uz.publishedAt,
+            now: tz
+          }), null !== uz.gpuCost && (0, xz.jsxs)("div", {
+            children: [(0, xz.jsx)("dt", {
+              children: Mz("shaderPackListing:lag")
+            }), (0, xz.jsx)("dd", {
+              children: Mz("shaderPackListing:lagPercent", {
+                percent: String((0, vz.O)(uz.gpuCost))
+              })
+            })]
+          }), (0, xz.jsxs)("div", {
+            children: [(0, xz.jsx)("dt", {
+              children: Mz("shaderPackListing:size")
+            }), (0, xz.jsx)("dd", {
+              children: Mz("shaderPackListing:sizeValue", {
+                kilobytes: String((0, vz.N)(uz.sourceBytes))
+              })
+            })]
+          }), (0, xz.jsxs)("div", {
+            children: [(0, xz.jsx)("dt", {
+              children: Mz("shaderPackListing:files")
+            }), (0, xz.jsx)("dd", {
+              children: uz.fileCount
+            })]
+          })]
+        })]
+      })
+    }
+
+    function Yz(zz) {
+      let {
+        label: uz,
+        time: bz,
+        now: Ez
+      } = zz;
+      const {
+        t: nz,
+        selectedLanguage: iz
+      } = (0, Xz.F)(), lz = new Date(bz);
+      let tz = lz.toLocaleDateString();
+      if (Ez - bz <= 30 * Mz.j) {
+        const zz = (0, Xz.p)(iz.code, "shaderPackListing:timeAgo");
+        tz = nz("shaderPackListing:timeAgo", {
+          time: (0, Mz.fb)(zz, bz, Ez)
         })
-      }), [JT]);
-      const ZT = function(TT) {
-        const oT = (0, zT.e)(TT),
-          [IT, iT] = (0, WT.useState)(0),
-          [kT, BT] = (0, WT.useState)(!1);
-        (0, XT.g)("gameJoined", (() => {
-          (0, zT.e)(zT.c.get("gameState")) && (iT((TT => TT + 1)), BT(!0))
-        })), (0, WT.useEffect)((() => {
-          oT || BT(!1)
-        }), [oT]);
-        const FT = "inGame" === TT;
-        return {
-          mounted: FT || oT && kT,
-          shown: FT,
-          key: IT
-        }
-      }(JT);
-      return (0, vT.jsx)(vT.Fragment, {
-        children: ZT.mounted && (0, vT.jsx)(kT.InGameUi, {
-          shown: ZT.shown
-        }, ZT.key)
+      }
+      return (0, xz.jsx)(pz.f, {
+        tooltipInner: lz.toLocaleString(),
+        children: (0, xz.jsxs)("div", {
+          children: [(0, xz.jsx)("dt", {
+            children: uz
+          }), (0, xz.jsx)("dd", {
+            children: tz
+          })]
+        })
       })
     }
   },
-  4465: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => zT
+  4770: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => lz
     });
-    var iT = IT(1183);
-    async function zT(TT) {
-      const oT = await fetch(`${iT.clientSideServerUrls.s3Url}/${TT}`, {
-        headers: {
-          Accept: "application/json"
-        }
-      });
-      if (404 === oT.status || 403 === oT.status) return null;
-      if (!oT.ok) throw new Error(`Failed to download the texture pack (${oT.status})`);
-      return await oT.json()
+    var Ez = bz(1038),
+      nz = bz.n(Ez),
+      iz = bz(1089);
+
+    function lz(zz) {
+      let {
+        options: uz,
+        value: bz,
+        onChange: Ez,
+        ariaLabel: lz,
+        className: Mz,
+        reselectable: tz = !1,
+        keepsFocus: Hz = !1
+      } = zz;
+      return (0, iz.jsx)("div", {
+        className: nz()("SegmentedToggle", Mz),
+        role: "group",
+        "aria-label": lz,
+        children: uz.map((zz => {
+          const uz = zz.value === bz;
+          return (0, iz.jsx)("button", {
+            type: "button",
+            "aria-pressed": uz,
+            "aria-label": zz.ariaLabel,
+            title: zz.ariaLabel,
+            className: nz()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: uz
+            }),
+            onMouseDown: Hz ? zz => {
+              zz.preventDefault()
+            } : void 0,
+            onClick: () => {
+              uz && !tz || Ez(zz.value)
+            },
+            children: zz.label
+          }, zz.value)
+        }))
+      })
     }
   },
-  8335: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => WT
+  4776: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => iz,
+      f: () => lz
     });
-    var iT = IT(1296),
-      zT = IT(1193),
-      kT = IT(618);
-
-    function WT(TT) {
-      return TT = function(TT, oT) {
-        var IT;
-        const iT = new URLSearchParams(oT),
-          zT = iT.get("lobby"),
-          kT = iT.get("vm"),
-          WT = null !== (IT = zT) && void 0 !== IT ? IT : TT.lobbyName,
-          XT = null !== kT && void 0 !== kT ? kT : TT.directJoinVmUrl;
-        if (WT === TT.lobbyName && XT === TT.directJoinVmUrl) return TT;
-        return {
-          ...TT,
-          lobbyName: WT,
-          directJoinVmUrl: XT
-        }
-      }(TT, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), TT = function(TT) {
-        if ((0, kT.K)(TT.directJoinVmUrl)) return TT;
-        const oT = (0, zT.db)(TT.directJoinVmUrl);
-        null === oT && (TT.directJoinVmUrl = void 0);
-        return TT
-      }(TT = function(TT) {
-        if ((0, kT.K)(TT.gameNameWithVariation)) return TT;
-        return TT.gameNameWithVariation = (0, iT.i)(TT.gameNameWithVariation), TT
-      }(TT))
-    }
+    var Ez = bz(56);
+    const nz = new WeakMap,
+      iz = zz => {
+        var uz;
+        const bz = zz.closest("[data-pad-slider]");
+        return bz && null !== (uz = nz.get(bz)) && void 0 !== uz ? uz : null
+      },
+      lz = (zz, uz) => {
+        const bz = (0, Ez.useRef)(uz);
+        bz.current = uz, (0, Ez.useEffect)((() => {
+          if (zz.current) return ((zz, uz) => (nz.set(zz, uz), () => {
+            nz.get(zz) === uz && nz.delete(zz)
+          }))(zz.current, {
+            adjust: zz => {
+              bz.current.adjust(zz)
+            },
+            setFraction: zz => {
+              bz.current.setFraction(zz)
+            },
+            endDrag: () => {
+              bz.current.endDrag()
+            }
+          })
+        }), [zz])
+      }
   },
-  8329: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => kT,
-      f: () => zT
+  6382: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz,
+      e: () => iz
     });
-    let iT = !1;
-
-    function zT() {
-      iT = !0
-    }
-
-    function kT() {
-      return iT
-    }
-  },
-  8325: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => ST,
-      e: () => DT
-    });
-    var iT = IT(2710),
-      zT = IT(2089),
-      kT = IT(2750),
-      WT = IT(4152),
-      XT = IT(3061),
-      BT = IT(8329);
-    let FT = null;
-
-    function ST() {
-      return WT.b.cancelDownloadForJoin(), (0, XT.e)(), (0, zT.d)(), (0, BT.f)(), (0, kT.i)(), Promise.all([IT.e(69), IT.e(72), IT.e(71), IT.e(70), IT.e(83), IT.e(258), IT.e(237), IT.e(211), IT.e(235), IT.e(207), IT.e(46)]).then((() => IT(39457))).catch((() => {})), Promise.all([IT.e(74), IT.e(133), IT.e(87), IT.e(55)]).then((() => IT(39544))).then((TT => {
-        let {
-          startJoinLoad: oT
-        } = TT;
-        oT()
-      }), (() => {})), FT ??= Promise.all([IT.e(71), IT.e(74), IT.e(130), IT.e(73), IT.e(133), IT.e(261), IT.e(185), IT.e(87), IT.e(86), IT.e(85), IT.e(207), IT.e(60)]).then((() => IT(39647))).then((TT => (TT.startWasmPlay(), TT.followPageUiPack((TT => {
-        iT.e.showGamePack(TT)
-      })), TT)), (TT => {
-        throw FT = null, TT
-      })), FT
-    }
-
-    function DT() {
-      return Promise.all([IT.e(71), IT.e(74), IT.e(130), IT.e(73), IT.e(133), IT.e(261), IT.e(185), IT.e(87), IT.e(86), IT.e(85), IT.e(207), IT.e(60)]).then((() => IT(39647))).then((TT => {
-        TT.startWasmPreviews(), TT.prefetchWasmPreviews()
-      }))
+    var Ez = bz(33);
+    const nz = "shaderPack";
+    async function iz() {
+      var zz;
+      let uz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (zz = await Ez.d.getItem(nz, uz)) && void 0 !== zz ? zz : null
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

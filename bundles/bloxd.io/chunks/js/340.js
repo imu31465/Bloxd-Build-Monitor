@@ -1,77 +1,77 @@
 export const id = 340;
 export const ids = [340];
 export const modules = {
-  41302: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => WT
+  41708: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => lz
     });
-    var iT = IT(38617);
-    const zT = "clipPlaneFragment",
-      kT = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fragmentInputs.fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fragmentInputs.fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fragmentInputs.fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fragmentInputs.fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fragmentInputs.fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fragmentInputs.fClipDistance6>0.0)\n{discard;}\n#endif\n";
-    iT.c.IncludesShadersStoreWGSL[zT] || (iT.c.IncludesShadersStoreWGSL[zT] = kT);
-    const WT = {
-      name: zT,
-      shader: kT
+    var Ez = bz(39033);
+    const nz = "clipPlaneFragment",
+      iz = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fragmentInputs.fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fragmentInputs.fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fragmentInputs.fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fragmentInputs.fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fragmentInputs.fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fragmentInputs.fClipDistance6>0.0)\n{discard;}\n#endif\n";
+    Ez.e.IncludesShadersStoreWGSL[nz] || (Ez.e.IncludesShadersStoreWGSL[nz] = iz);
+    const lz = {
+      name: nz,
+      shader: iz
     }
   },
-  41291: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => WT
+  41700: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => lz
     });
-    var iT = IT(38617);
-    const zT = "clipPlaneFragmentDeclaration",
-      kT = "#ifdef CLIPPLANE\nvarying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nvarying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nvarying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nvarying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nvarying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nvarying fClipDistance6: f32;\n#endif\n";
-    iT.c.IncludesShadersStoreWGSL[zT] || (iT.c.IncludesShadersStoreWGSL[zT] = kT);
-    const WT = {
-      name: zT,
-      shader: kT
+    var Ez = bz(39033);
+    const nz = "clipPlaneFragmentDeclaration",
+      iz = "#ifdef CLIPPLANE\nvarying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nvarying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nvarying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nvarying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nvarying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nvarying fClipDistance6: f32;\n#endif\n";
+    Ez.e.IncludesShadersStoreWGSL[nz] || (Ez.e.IncludesShadersStoreWGSL[nz] = iz);
+    const lz = {
+      name: nz,
+      shader: iz
     }
   },
-  41335: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => WT
+  41751: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz
     });
-    var iT = IT(38617);
-    const zT = "fogFragment",
-      kT = "#ifdef FOG\nvar fog: f32=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor= vec4f(mix(uniforms.vFogColor,color.rgb,fog),color.a);\n#endif\n";
-    iT.c.IncludesShadersStoreWGSL[zT] || (iT.c.IncludesShadersStoreWGSL[zT] = kT);
-    const WT = {
-      name: zT,
-      shader: kT
+    var Ez = bz(39033);
+    const nz = "fogFragment",
+      iz = "#ifdef FOG\nvar fog: f32=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor= vec4f(mix(uniforms.vFogColor,color.rgb,fog),color.a);\n#endif\n";
+    Ez.e.IncludesShadersStoreWGSL[nz] || (Ez.e.IncludesShadersStoreWGSL[nz] = iz);
+    const lz = {
+      name: nz,
+      shader: iz
     }
   },
-  41293: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => WT
+  41706: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => lz
     });
-    var iT = IT(38617);
-    const zT = "fogFragmentDeclaration",
-      kT = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\nconst E=2.71828;uniform vFogInfos: vec4f;uniform vFogColor: vec3f;varying vFogDistance: vec3f;fn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;var fogStart: f32=uniforms.vFogInfos.y;var fogEnd: f32=uniforms.vFogInfos.z;var fogDensity: f32=uniforms.vFogInfos.w;var fogDistance: f32=length(fragmentInputs.vFogDistance);if (FOGMODE_LINEAR==uniforms.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
-    iT.c.IncludesShadersStoreWGSL[zT] || (iT.c.IncludesShadersStoreWGSL[zT] = kT);
-    const WT = {
-      name: zT,
-      shader: kT
+    var Ez = bz(39033);
+    const nz = "fogFragmentDeclaration",
+      iz = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\nconst E=2.71828;uniform vFogInfos: vec4f;uniform vFogColor: vec3f;varying vFogDistance: vec3f;fn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;var fogStart: f32=uniforms.vFogInfos.y;var fogEnd: f32=uniforms.vFogInfos.z;var fogDensity: f32=uniforms.vFogInfos.w;var fogDistance: f32=length(fragmentInputs.vFogDistance);if (FOGMODE_LINEAR==uniforms.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
+    Ez.e.IncludesShadersStoreWGSL[nz] || (Ez.e.IncludesShadersStoreWGSL[nz] = iz);
+    const lz = {
+      name: nz,
+      shader: iz
     }
   },
-  41366: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      colorPixelShaderWGSL: () => DT
+  41784: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      colorPixelShaderWGSL: () => pz
     });
-    var iT = IT(38617),
-      zT = IT(41291),
-      kT = IT(41293),
-      WT = IT(41302),
-      XT = IT(41335);
-    const BT = "colorPixelShader",
-      FT = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\n#define VERTEXCOLOR\nvarying vColor: vec4f;\n#else\nuniform color: vec4f;\n#endif\n#include<clipPlaneFragmentDeclaration>\n#include<fogFragmentDeclaration>\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nfragmentOutputs.color=input.vColor;\n#else\nfragmentOutputs.color=uniforms.color;\n#endif\n#include<fogFragment>(color,fragmentOutputs.color)\n#define CUSTOM_FRAGMENT_MAIN_END\n}";
-    iT.c.ShadersStoreWGSL[BT] || (iT.c.ShadersStoreWGSL[BT] = FT);
-    const ST = [zT.b, kT.b, WT.d, XT.e];
-    for (const LT of ST) iT.c.IncludesShadersStoreWGSL[LT.name] || (iT.c.IncludesShadersStoreWGSL[LT.name] = LT.shader);
-    const DT = {
-      name: BT,
-      shader: FT
+    var Ez = bz(39033),
+      nz = bz(41700),
+      iz = bz(41706),
+      lz = bz(41708),
+      Mz = bz(41751);
+    const tz = "colorPixelShader",
+      Hz = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\n#define VERTEXCOLOR\nvarying vColor: vec4f;\n#else\nuniform color: vec4f;\n#endif\n#include<clipPlaneFragmentDeclaration>\n#include<fogFragmentDeclaration>\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nfragmentOutputs.color=input.vColor;\n#else\nfragmentOutputs.color=uniforms.color;\n#endif\n#include<fogFragment>(color,fragmentOutputs.color)\n#define CUSTOM_FRAGMENT_MAIN_END\n}";
+    Ez.e.ShadersStoreWGSL[tz] || (Ez.e.ShadersStoreWGSL[tz] = Hz);
+    const Oz = [nz.e, iz.b, lz.e, Mz.c];
+    for (const dz of Oz) Ez.e.IncludesShadersStoreWGSL[dz.name] || (Ez.e.IncludesShadersStoreWGSL[dz.name] = dz.shader);
+    const pz = {
+      name: tz,
+      shader: Hz
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

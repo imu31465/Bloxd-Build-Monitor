@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  4328: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => aT,
-      h: () => UT
+  4601: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Vz,
+      g: () => az
     });
-    var iT = IT(4336),
-      zT = IT(306);
-    const kT = 120,
-      WT = 260,
-      XT = 1.15,
-      BT = 1.2,
-      FT = 2,
-      ST = 1.08,
-      DT = .8,
-      LT = .95,
-      xT = 8,
-      cT = "[\"')\\]\u300d\u300f\uff09]*",
-      KT = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${cT}$`),
-      MT = new RegExp(`[?\uff1f]${cT}$`),
-      rT = new RegExp(`[!\uff01]${cT}$`),
-      AT = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      gT = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      hT = new RegExp(`[${gT}]`),
-      wT = new RegExp(`[${gT}]|[^${gT}]+`, "g"),
-      mT = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Ez = bz(4605),
+      nz = bz(316);
+    const iz = 120,
+      lz = 260,
+      Mz = 1.15,
+      tz = 1.2,
+      Hz = 2,
+      Oz = 1.08,
+      pz = .8,
+      dz = .95,
+      Fz = 8,
+      Zz = "[\"')\\]\u300d\u300f\uff09]*",
+      Rz = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Zz}$`),
+      Kz = new RegExp(`[?\uff1f]${Zz}$`),
+      wz = new RegExp(`[!\uff01]${Zz}$`),
+      Xz = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      fz = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      sz = new RegExp(`[${fz}]`),
+      rz = new RegExp(`[${fz}]|[^${fz}]+`, "g"),
+      oz = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function eT(TT) {
-      let oT = 2166136261;
-      for (let IT = 0; IT < TT.length; IT++) oT ^= TT.charCodeAt(IT), oT = Math.imul(oT, 16777619);
-      return (oT >>> 0) / 4294967295 * 2 - 1
+    function Nz(zz) {
+      let uz = 2166136261;
+      for (let bz = 0; bz < zz.length; bz++) uz ^= zz.charCodeAt(bz), uz = Math.imul(uz, 16777619);
+      return (uz >>> 0) / 4294967295 * 2 - 1
     }
 
-    function RT(TT) {
-      var oT;
-      if (hT.test(TT)) return 1;
-      const IT = TT.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        iT = IT.replace(/[^0-9]/g, "");
-      if (iT.length > 0 && !/\p{L}/u.test(IT)) return Math.min(iT.length, 4);
-      const zT = null !== (oT = IT.match(mT)) && void 0 !== oT ? oT : [];
-      if (0 === zT.length) {
-        var kT, WT;
-        const TT = null !== (kT = null === (WT = IT.match(/\p{L}/gu)) || void 0 === WT ? void 0 : WT.length) && void 0 !== kT ? kT : 0;
-        return 0 === TT ? 0 : Math.min(Math.max(1, Math.round(TT / 2.5)), xT)
+    function vz(zz) {
+      var uz;
+      if (sz.test(zz)) return 1;
+      const bz = zz.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Ez = bz.replace(/[^0-9]/g, "");
+      if (Ez.length > 0 && !/\p{L}/u.test(bz)) return Math.min(Ez.length, 4);
+      const nz = null !== (uz = bz.match(oz)) && void 0 !== uz ? uz : [];
+      if (0 === nz.length) {
+        var iz, lz;
+        const zz = null !== (iz = null === (lz = bz.match(/\p{L}/gu)) || void 0 === lz ? void 0 : lz.length) && void 0 !== iz ? iz : 0;
+        return 0 === zz ? 0 : Math.min(Math.max(1, Math.round(zz / 2.5)), Fz)
       }
-      const XT = IT.replace(/[^\p{L}]/gu, ""),
-        BT = zT.length > 1 && "e" === zT.at(-1) && XT.endsWith("e") && !XT.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(TT.replace(/[^\p{L}]/gu, ""));
-      return Math.min(zT.length - (BT ? 1 : 0), xT)
+      const Mz = bz.replace(/[^\p{L}]/gu, ""),
+        tz = nz.length > 1 && "e" === nz.at(-1) && Mz.endsWith("e") && !Mz.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(zz.replace(/[^\p{L}]/gu, ""));
+      return Math.min(nz.length - (tz ? 1 : 0), Fz)
     }
 
-    function uT(TT) {
-      return TT.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function xz(zz) {
+      return zz.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function vT(TT) {
-      const oT = TT.replace(/[^\p{L}]/gu, "");
-      return oT.length >= 2 && oT === oT.toUpperCase() && oT !== oT.toLowerCase()
+    function Jz(zz) {
+      const uz = zz.replace(/[^\p{L}]/gu, "");
+      return uz.length >= 2 && uz === uz.toUpperCase() && uz !== uz.toLowerCase()
     }
 
-    function ET(TT, oT) {
-      var IT;
-      const xT = oT && (0, iT.j)(oT),
-        cT = null !== (IT = null === xT || void 0 === xT ? void 0 : xT.syllableMs) && void 0 !== IT ? IT : iT.d,
-        gT = function(TT) {
-          const oT = [];
-          for (const iT of (0, zT.ac)(TT))
-            if ("string" === typeof iT)
-              for (const TT of iT.split(/(\s+)/)) {
-                if ("" === TT) continue;
-                if (/^\s+$/.test(TT)) {
-                  oT.push({
+    function Az(zz, uz) {
+      var bz;
+      const Fz = uz && (0, Ez.k)(uz),
+        Zz = null !== (bz = null === Fz || void 0 === Fz ? void 0 : Fz.syllableMs) && void 0 !== bz ? bz : Ez.e,
+        fz = function(zz) {
+          const uz = [];
+          for (const Ez of (0, nz.uc)(zz))
+            if ("string" === typeof Ez)
+              for (const zz of Ez.split(/(\s+)/)) {
+                if ("" === zz) continue;
+                if (/^\s+$/.test(zz)) {
+                  uz.push({
                     kind: "space",
-                    text: TT
+                    text: zz
                   });
                   continue
                 }
-                if (!hT.test(TT)) {
-                  oT.push({
+                if (!sz.test(zz)) {
+                  uz.push({
                     kind: "word",
-                    text: TT,
+                    text: zz,
                     delayMs: 0
                   });
                   continue
                 }
-                let iT = !0;
-                for (const zT of null !== (IT = TT.match(wT)) && void 0 !== IT ? IT : []) {
-                  var IT;
-                  const TT = oT.at(-1);
-                  iT || "word" !== (null === TT || void 0 === TT ? void 0 : TT.kind) || hT.test(zT) || /[\p{L}\p{N}]/u.test(zT) ? (iT || oT.push({
+                let Ez = !0;
+                for (const nz of null !== (bz = zz.match(rz)) && void 0 !== bz ? bz : []) {
+                  var bz;
+                  const zz = uz.at(-1);
+                  Ez || "word" !== (null === zz || void 0 === zz ? void 0 : zz.kind) || sz.test(nz) || /[\p{L}\p{N}]/u.test(nz) ? (Ez || uz.push({
                     kind: "space",
                     text: "\u200b"
-                  }), oT.push({
+                  }), uz.push({
                     kind: "word",
-                    text: zT,
+                    text: nz,
                     delayMs: 0
-                  }), iT = !1) : TT.text += zT
+                  }), Ez = !1) : zz.text += nz
                 }
-              } else oT.push({
+              } else uz.push({
                 kind: "icon",
-                text: iT.icon,
+                text: Ez.icon,
                 delayMs: 0
               });
-          return oT
-        }(TT),
-        mT = [];
-      let ET = [];
-      for (const iT of gT) "space" !== iT.kind && (ET.push(iT), KT.test(iT.text) && (mT.push(ET), ET = []));
-      mT.push(ET);
-      const fT = [];
-      let CT = 0;
-      for (const iT of mT) {
-        var jT, JT;
-        const TT = null !== (jT = null === (JT = iT.at(-1)) || void 0 === JT ? void 0 : JT.text) && void 0 !== jT ? jT : "",
-          oT = MT.test(TT),
-          IT = rT.test(TT),
-          zT = iT.map((TT => "word" === TT.kind ? RT(TT.text) : 1)),
-          gT = zT.findLastIndex((TT => TT > 0));
-        for (const [MT, rT] of iT.entries()) {
-          const TT = "word" === rT.kind,
-            iT = zT[MT];
-          rT.delayMs = CT;
-          for (let zT = 0; xT && zT < iT; zT++) {
+          return uz
+        }(zz),
+        oz = [];
+      let Az = [];
+      for (const Ez of fz) "space" !== Ez.kind && (Az.push(Ez), Rz.test(Ez.text) && (oz.push(Az), Az = []));
+      oz.push(Az);
+      const Tz = [];
+      let Lz = 0;
+      for (const Ez of oz) {
+        var Pz, Gz;
+        const zz = null !== (Pz = null === (Gz = Ez.at(-1)) || void 0 === Gz ? void 0 : Gz.text) && void 0 !== Pz ? Pz : "",
+          uz = Kz.test(zz),
+          bz = wz.test(zz),
+          nz = Ez.map((zz => "word" === zz.kind ? vz(zz.text) : 1)),
+          fz = nz.findLastIndex((zz => zz > 0));
+        for (const [Kz, wz] of Ez.entries()) {
+          const zz = "word" === wz.kind,
+            Ez = nz[Kz];
+          wz.delayMs = Lz;
+          for (let nz = 0; Fz && nz < Ez; nz++) {
             const {
-              intonation: kT
-            } = xT;
-            let WT = gT > 0 ? -kT.declineSemitones * (MT / gT) : 0;
-            WT += eT(`${uT(rT.text)}|${zT}`) * kT.variationSemitones;
-            const KT = Math.min(1, kT.variationSemitones);
-            let AT = xT.glideSemitones,
-              hT = 1;
-            IT && (WT += kT.exclaimLiftSemitones, hT *= XT), oT && MT === gT && (WT += kT.questionRiseSemitones * (iT > 1 ? .5 + .5 * zT / (iT - 1) : 1), zT === iT - 1 && (AT = Math.abs(AT) + kT.questionRiseSemitones / 2)), TT && vT(rT.text) && (WT += FT * KT, hT *= BT), iT > 1 && 0 === zT && (WT += DT * KT, hT *= ST), fT.push({
-              atMs: CT + zT * cT,
-              semitones: WT,
-              glideSemitones: AT,
-              durationMs: zT < iT - 1 ? Math.min(xT.durationMs, cT * LT) : xT.durationMs,
-              level: hT
+              intonation: iz
+            } = Fz;
+            let lz = fz > 0 ? -iz.declineSemitones * (Kz / fz) : 0;
+            lz += Nz(`${xz(wz.text)}|${nz}`) * iz.variationSemitones;
+            const Rz = Math.min(1, iz.variationSemitones);
+            let Xz = Fz.glideSemitones,
+              sz = 1;
+            bz && (lz += iz.exclaimLiftSemitones, sz *= Mz), uz && Kz === fz && (lz += iz.questionRiseSemitones * (Ez > 1 ? .5 + .5 * nz / (Ez - 1) : 1), nz === Ez - 1 && (Xz = Math.abs(Xz) + iz.questionRiseSemitones / 2)), zz && Jz(wz.text) && (lz += Hz * Rz, sz *= tz), Ez > 1 && 0 === nz && (lz += pz * Rz, sz *= Oz), Tz.push({
+              atMs: Lz + nz * Zz,
+              semitones: lz,
+              glideSemitones: Xz,
+              durationMs: nz < Ez - 1 ? Math.min(Fz.durationMs, Zz * dz) : Fz.durationMs,
+              level: sz
             })
           }
-          CT += iT * cT + (KT.test(rT.text) ? WT : AT.test(rT.text) ? kT : 0)
+          Lz += Ez * Zz + (Rz.test(wz.text) ? lz : Xz.test(wz.text) ? iz : 0)
         }
       }
       return {
-        pieces: gT.map((TT => "space" === TT.kind ? TT : "icon" === TT.kind ? {
+        pieces: fz.map((zz => "space" === zz.kind ? zz : "icon" === zz.kind ? {
           kind: "icon",
-          icon: TT.text,
-          delayMs: TT.delayMs
+          icon: zz.text,
+          delayMs: zz.delayMs
         } : {
           kind: "word",
-          text: TT.text,
-          delayMs: TT.delayMs
+          text: zz.text,
+          delayMs: zz.delayMs
         })),
-        blips: fT
+        blips: Tz
       }
     }
-    var fT = IT(1171),
-      CT = IT(1220),
-      jT = IT(1755);
+    var Tz = bz(1181),
+      Lz = bz(1241),
+      Pz = bz(1873);
 
-    function JT(TT) {
-      if ("string" === typeof TT) return TT;
-      const oT = CT.d.get().getCurrentLanguageCode();
-      return (0, fT.n)(oT, TT.translationKey, (0, fT.m)(TT.params, jT.e.shown))
+    function Gz(zz) {
+      if ("string" === typeof zz) return zz;
+      const uz = Lz.h.get().getCurrentLanguageCode();
+      return (0, Tz.s)(uz, zz.translationKey, (0, Tz.q)(zz.params, Pz.b.shown))
     }
 
-    function UT(TT) {
-      const oT = void 0 === TT.voice ? null : (0, iT.m)(TT.voice),
-        IT = oT && (0, iT.j)(oT);
+    function az(zz) {
+      const uz = void 0 === zz.voice ? null : (0, Ez.n)(zz.voice),
+        bz = uz && (0, Ez.k)(uz);
       return {
-        plan: ET(JT(TT.line), IT),
-        synth: IT
+        plan: Az(Gz(zz.line), bz),
+        synth: bz
       }
     }
 
-    function aT(TT) {
-      const oT = [];
-      let IT = [];
-      for (const [zT, kT] of TT.entries()) {
-        var iT;
-        "space" === kT.kind && (" " !== kT.text || "icon" !== (null === (iT = TT[zT + 1]) || void 0 === iT ? void 0 : iT.kind)) ? (IT.length > 0 && oT.push(IT), oT.push([kT]), IT = []) : IT.push(kT)
+    function Vz(zz) {
+      const uz = [];
+      let bz = [];
+      for (const [nz, iz] of zz.entries()) {
+        var Ez;
+        "space" === iz.kind && (" " !== iz.text || "icon" !== (null === (Ez = zz[nz + 1]) || void 0 === Ez ? void 0 : Ez.kind)) ? (bz.length > 0 && uz.push(bz), uz.push([iz]), bz = []) : bz.push(iz)
       }
-      return IT.length > 0 && oT.push(IT), oT
+      return bz.length > 0 && uz.push(bz), uz
     }
   },
-  4339: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => ST,
-      e: () => DT
+  4609: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Oz,
+      d: () => pz
     });
-    var iT = IT(4341),
-      zT = IT(12);
-    const kT = .25,
-      WT = .85,
-      XT = .02,
-      BT = .01;
+    var Ez = bz(4616),
+      nz = bz(20);
+    const iz = .25,
+      lz = .85,
+      Mz = .02,
+      tz = .01;
 
-    function FT(TT, oT, IT, iT, zT, kT, XT) {
+    function Hz(zz, uz, bz, Ez, nz, iz, Mz) {
       const {
-        waveform: BT,
-        pitchHz: FT,
-        attackMs: ST,
-        releaseMs: DT,
-        lowpassHz: LT
-      } = IT, xT = zT + iT.durationMs / 1e3, cT = FT * 2 ** (iT.semitones / 12), KT = TT.createOscillator();
-      KT.type = BT, KT.frequency.setValueAtTime(cT, zT), KT.frequency.exponentialRampToValueAtTime(cT * 2 ** (iT.glideSemitones / 12), xT);
-      const MT = zT + Math.min(ST, iT.durationMs) / 1e3,
-        rT = TT.createGain();
-      rT.gain.setValueAtTime(0, zT), rT.gain.linearRampToValueAtTime(kT, MT), rT.gain.linearRampToValueAtTime(kT * WT, Math.max(MT, xT - DT / 1e3)), rT.gain.linearRampToValueAtTime(0, xT);
-      const AT = [KT];
-      if (null !== LT) {
-        const oT = TT.createBiquadFilter();
-        oT.type = "lowpass", oT.frequency.value = LT, AT.push(oT)
+        waveform: tz,
+        pitchHz: Hz,
+        attackMs: Oz,
+        releaseMs: pz,
+        lowpassHz: dz
+      } = bz, Fz = nz + Ez.durationMs / 1e3, Zz = Hz * 2 ** (Ez.semitones / 12), Rz = zz.createOscillator();
+      Rz.type = tz, Rz.frequency.setValueAtTime(Zz, nz), Rz.frequency.exponentialRampToValueAtTime(Zz * 2 ** (Ez.glideSemitones / 12), Fz);
+      const Kz = nz + Math.min(Oz, Ez.durationMs) / 1e3,
+        wz = zz.createGain();
+      wz.gain.setValueAtTime(0, nz), wz.gain.linearRampToValueAtTime(iz, Kz), wz.gain.linearRampToValueAtTime(iz * lz, Math.max(Kz, Fz - pz / 1e3)), wz.gain.linearRampToValueAtTime(0, Fz);
+      const Xz = [Rz];
+      if (null !== dz) {
+        const uz = zz.createBiquadFilter();
+        uz.type = "lowpass", uz.frequency.value = dz, Xz.push(uz)
       }
-      AT.push(rT, oT);
-      for (let WT = 1; WT < AT.length; WT++) AT[WT - 1].connect(AT[WT]);
-      return KT.onended = () => {
-        for (const TT of AT.slice(0, -1)) TT.disconnect();
-        XT()
-      }, KT.start(zT), KT.stop(xT), KT
+      Xz.push(wz, uz);
+      for (let lz = 1; lz < Xz.length; lz++) Xz[lz - 1].connect(Xz[lz]);
+      return Rz.onended = () => {
+        for (const zz of Xz.slice(0, -1)) zz.disconnect();
+        Mz()
+      }, Rz.start(nz), Rz.stop(Fz), Rz
     }
 
-    function ST(TT, oT, IT, iT, zT, WT) {
-      if (0 === iT.length) return WT(), () => {};
-      const ST = kT * IT.volume * zT,
-        DT = TT.createGain();
-      DT.connect(oT);
-      const LT = TT.currentTime + XT,
-        xT = new Set;
-      for (const kT of iT) {
-        const oT = FT(TT, DT, IT, kT, LT + kT.atMs / 1e3, ST * kT.level, (() => {
-          xT.delete(oT), 0 === xT.size && (DT.disconnect(), WT())
+    function Oz(zz, uz, bz, Ez, nz, lz) {
+      if (0 === Ez.length) return lz(), () => {};
+      const Oz = iz * bz.volume * nz,
+        pz = zz.createGain();
+      pz.connect(uz);
+      const dz = zz.currentTime + Mz,
+        Fz = new Set;
+      for (const iz of Ez) {
+        const uz = Hz(zz, pz, bz, iz, dz + iz.atMs / 1e3, Oz * iz.level, (() => {
+          Fz.delete(uz), 0 === Fz.size && (pz.disconnect(), lz())
         }));
-        xT.add(oT)
+        Fz.add(uz)
       }
       return () => {
-        const oT = TT.currentTime;
-        DT.gain.setTargetAtTime(0, oT, BT);
-        for (const TT of xT) try {
-          TT.stop(oT + 5 * BT)
+        const uz = zz.currentTime;
+        pz.gain.setTargetAtTime(0, uz, tz);
+        for (const zz of Fz) try {
+          zz.stop(uz + 5 * tz)
         } catch {}
       }
     }
 
-    function DT(TT, oT) {
-      var IT;
-      const kT = iT.Howler.ctx,
-        WT = iT.Howler.masterGain;
-      if (!kT || !WT || !zT.c.get("soundOnFromAd")) return () => {};
-      const XT = iT.Howler;
-      return null === (IT = XT._autoResume) || void 0 === IT || IT.call(XT), ST(kT, WT, TT, oT, zT.c.get("soundVolume"), (() => {
-        var TT;
-        null === (TT = XT._autoSuspend) || void 0 === TT || TT.call(XT)
+    function pz(zz, uz) {
+      var bz;
+      const iz = Ez.Howler.ctx,
+        lz = Ez.Howler.masterGain;
+      if (!iz || !lz || !nz.e.get("soundOnFromAd")) return () => {};
+      const Mz = Ez.Howler;
+      return null === (bz = Mz._autoResume) || void 0 === bz || bz.call(Mz), Oz(iz, lz, zz, uz, nz.e.get("soundVolume"), (() => {
+        var zz;
+        null === (zz = Mz._autoSuspend) || void 0 === zz || zz.call(Mz)
       }))
     }
   },
-  38098: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      closeClientGame: () => YT,
-      createDefaultClientPlugins: () => aT
+  38489: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      closeClientGame: () => mz,
+      createDefaultClientPlugins: () => Vz
     });
-    var iT = IT(314);
+    var Ez = bz(328);
 
-    function zT() {
-      let TT;
+    function nz() {
+      let zz;
       return {
-        onCreate(oT) {
-          TT = oT
+        onCreate(uz) {
+          zz = uz
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(oT, IT, zT, kT, WT, XT) {
-          var BT, FT;
-          if ("Iron Chest" !== TT.getMetaInfo(WT).rootName) return;
-          if (!TT.hasEffect(oT, "Thief")) return;
-          const ST = TT.getBlockData(IT, zT, kT);
-          return TT.getPlayerDbId(oT) !== (null === ST || void 0 === ST || null === (BT = ST.persisted) || void 0 === BT || null === (FT = BT.shared) || void 0 === FT ? void 0 : FT.ownerDbId) ? (TT.sendMessage(oT, [{
+        onPlayerAttemptAltAction(uz, bz, nz, iz, lz, Mz) {
+          var tz, Hz;
+          if ("Iron Chest" !== zz.getMetaInfo(lz).rootName) return;
+          if (!zz.hasEffect(uz, "Thief")) return;
+          const Oz = zz.getBlockData(bz, nz, iz);
+          return zz.getPlayerDbId(uz) !== (null === Oz || void 0 === Oz || null === (tz = Oz.persisted) || void 0 === tz || null === (Hz = tz.shared) || void 0 === Hz ? void 0 : Hz.ownerDbId) ? (zz.sendMessage(uz, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: iT.L.redUiText
+              color: Ez.N.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var kT = IT(3811),
-      WT = IT(1214);
-    const XT = 8.4,
-      BT = 1e-4,
-      FT = .15,
-      ST = .04,
-      DT = [.12, .04, .12],
-      LT = 26,
-      xT = {
+    var iz = bz(4035),
+      lz = bz(1226);
+    const Mz = 8.4,
+      tz = 1e-4,
+      Hz = .15,
+      Oz = .04,
+      pz = [.12, .04, .12],
+      dz = 26,
+      Fz = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        fD: 1,
-        minLifeTime: BT,
-        maxLifeTime: BT,
+        Bp: 1,
+        minLifeTime: tz,
+        maxLifeTime: tz,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: kT.h.Standard
+        blendMode: iz.d.Standard
       },
-      cT = {
+      Zz = {
         texture: "bubble",
         mipmaps: !1,
-        fD: 96,
+        Bp: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: LT,
+        emitRate: dz,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: kT.h.Standard
+        blendMode: iz.d.Standard
       },
-      KT = [0, 0, 0],
-      MT = [0, 0, 0];
+      Rz = [0, 0, 0],
+      Kz = [0, 0, 0];
 
-    function rT(TT) {
-      const oT = new Map;
-      let IT = null;
+    function wz(zz) {
+      const uz = new Map;
+      let bz = null;
 
-      function iT(TT) {
-        var oT, IT;
-        null === (oT = TT.bubbles) || void 0 === oT || oT.stop(), null === (IT = TT.fish) || void 0 === IT || IT.stop()
+      function Ez(zz) {
+        var uz, bz;
+        null === (uz = zz.bubbles) || void 0 === uz || uz.stop(), null === (bz = zz.fish) || void 0 === bz || bz.stop()
       }
 
-      function zT(IT) {
-        if (!IT.readDrawnPosition(TT, MT)) {
-          for (const TT of oT.values()) {
-            var iT;
-            null === (iT = TT.bubbles) || void 0 === iT || iT.setEmitRate(0)
+      function nz(bz) {
+        if (!bz.readDrawnPosition(zz, Kz)) {
+          for (const zz of uz.values()) {
+            var Ez;
+            null === (Ez = zz.bubbles) || void 0 === Ez || Ez.setEmitRate(0)
           }
           return
         }
-        const zT = performance.now();
-        for (const [TT, WT] of oT) {
-          var kT;
-          if (null === (kT = WT.bubbles) || void 0 === kT || kT.setEmitRate(0), !IT.readDrawnPosition(TT, KT)) continue;
-          if (!((KT[0] - MT[0]) ** 2 + (KT[1] - MT[1]) ** 2 + (KT[2] - MT[2]) ** 2 < 900)) continue;
-          const oT = Math.max(0, WT.biteAt - zT),
-            iT = WT.approachDurationMs > 0 ? Math.min(1, 1 - oT / WT.approachDurationMs) : 1,
-            BT = (WT.approachDurationMs - oT) / 1e3,
-            rT = WT.phase + .25 * Math.sin(1.7 * BT + WT.phase),
-            AT = Math.min(WT.approachDurationMs / 3e3 * 2.8, XT) * (1 - iT) * (1 + .15 * Math.sin(2.1 * BT + WT.phase)),
-            gT = Math.min(1, 4 * (1 - iT)),
-            hT = (.45 * Math.sin(4.1 * BT + WT.phase) + .18 * Math.sin(9.7 * BT + 2 * WT.phase)) * gT,
-            wT = KT[0] + Math.cos(rT) * AT - Math.sin(rT) * hT,
-            mT = Math.ceil(WT.surfaceY),
-            eT = KT[2] + Math.sin(rT) * AT + Math.cos(rT) * hT,
+        const nz = performance.now();
+        for (const [zz, lz] of uz) {
+          var iz;
+          if (null === (iz = lz.bubbles) || void 0 === iz || iz.setEmitRate(0), !bz.readDrawnPosition(zz, Rz)) continue;
+          if (!((Rz[0] - Kz[0]) ** 2 + (Rz[1] - Kz[1]) ** 2 + (Rz[2] - Kz[2]) ** 2 < 900)) continue;
+          const uz = Math.max(0, lz.biteAt - nz),
+            Ez = lz.approachDurationMs > 0 ? Math.min(1, 1 - uz / lz.approachDurationMs) : 1,
+            tz = (lz.approachDurationMs - uz) / 1e3,
+            wz = lz.phase + .25 * Math.sin(1.7 * tz + lz.phase),
+            Xz = Math.min(lz.approachDurationMs / 3e3 * 2.8, Mz) * (1 - Ez) * (1 + .15 * Math.sin(2.1 * tz + lz.phase)),
+            fz = Math.min(1, 4 * (1 - Ez)),
+            sz = (.45 * Math.sin(4.1 * tz + lz.phase) + .18 * Math.sin(9.7 * tz + 2 * lz.phase)) * fz,
+            rz = Rz[0] + Math.cos(wz) * Xz - Math.sin(wz) * sz,
+            oz = Math.ceil(lz.surfaceY),
+            Nz = Rz[2] + Math.sin(wz) * Xz + Math.cos(wz) * sz,
             {
-              fishAt: RT,
-              bubblesAt: uT
-            } = WT;
-          RT[0] = uT[0] = wT, RT[1] = mT + FT, uT[1] = mT + ST, RT[2] = uT[2] = eT, WT.fish ??= IT.createParticles(xT, {
-            pos: RT
-          }), WT.fish.moveTo(RT), WT.fish.emit(1), WT.bubbles ??= IT.createParticles(cT, {
-            pos: uT,
-            half: DT
-          }), WT.bubbles.moveTo(uT), WT.bubbles.setEmitRate(LT + 32 * (.5 + .5 * Math.sin(9 * BT + WT.phase)) ** 4 + 13 * iT)
+              fishAt: vz,
+              bubblesAt: xz
+            } = lz;
+          vz[0] = xz[0] = rz, vz[1] = oz + Hz, xz[1] = oz + Oz, vz[2] = xz[2] = Nz, lz.fish ??= bz.createParticles(Fz, {
+            pos: vz
+          }), lz.fish.moveTo(vz), lz.fish.emit(1), lz.bubbles ??= bz.createParticles(Zz, {
+            pos: xz,
+            half: pz
+          }), lz.bubbles.moveTo(xz), lz.bubbles.setEmitRate(dz + 32 * (.5 + .5 * Math.sin(9 * tz + lz.phase)) ** 4 + 13 * Ez)
         }
       }
       return {
-        onCreate(TT) {
-          IT = TT
+        onCreate(zz) {
+          bz = zz
         },
         onAfterRender() {
-          IT && zT(IT)
+          bz && nz(bz)
         },
         onClose() {
-          for (const TT of oT.values()) iT(TT);
-          oT.clear(), IT = null
+          for (const zz of uz.values()) Ez(zz);
+          uz.clear(), bz = null
         },
-        onReceivedMessageFromServer(TT, IT) {
-          if (TT !== WT.y) return;
+        onReceivedMessageFromServer(zz, bz) {
+          if (zz !== lz.y) return;
           const {
-            hookId: zT,
-            waiting: kT
-          } = IT;
-          if (kT) oT.has(zT) || oT.set(zT, {
+            hookId: nz,
+            waiting: iz
+          } = bz;
+          if (iz) uz.has(nz) || uz.set(nz, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + kT.remainingMs,
-            approachDurationMs: kT.durationMs,
-            surfaceY: kT.surfaceY,
+            biteAt: performance.now() + iz.remainingMs,
+            approachDurationMs: iz.durationMs,
+            surfaceY: iz.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const TT = oT.get(zT);
-            TT && iT(TT), oT.delete(zT)
+            const zz = uz.get(nz);
+            zz && Ez(zz), uz.delete(nz)
           }
         }
       }
     }
-    var AT = IT(4339),
-      gT = IT(4328);
+    var Xz = bz(4609),
+      fz = bz(4601);
 
-    function hT(TT) {
-      let oT, IT = null,
-        iT = null;
-      const zT = () => {
-        var TT;
-        null === (TT = iT) || void 0 === TT || TT(), iT = null
+    function sz(zz) {
+      let uz, bz = null,
+        Ez = null;
+      const nz = () => {
+        var zz;
+        null === (zz = Ez) || void 0 === zz || zz(), Ez = null
       };
       return {
-        onCreate(iT) {
-          oT = iT, IT = oT.getClientOption(TT, "dialogue")
+        onCreate(Ez) {
+          uz = Ez, bz = uz.getClientOption(zz, "dialogue")
         },
         onAfterRender() {
-          if (!oT) return;
-          const kT = oT.getClientOption(TT, "dialogue");
-          if (kT === IT) return;
-          if (IT = kT, zT(), !kT || !1 === kT.animateIn) return;
+          if (!uz) return;
+          const iz = uz.getClientOption(zz, "dialogue");
+          if (iz === bz) return;
+          if (bz = iz, nz(), !iz || !1 === iz.animateIn) return;
           const {
-            plan: WT,
-            synth: XT
-          } = (0, gT.h)(kT);
-          XT && (iT = (0, AT.e)(XT, WT.blips))
+            plan: lz,
+            synth: Mz
+          } = (0, fz.g)(iz);
+          Mz && (Ez = (0, Xz.d)(Mz, lz.blips))
         },
-        onClose: zT
+        onClose: nz
       }
     }
-    var wT = IT(38100);
-    const mT = [
+    var rz = bz(38496);
+    const oz = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      eT = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      RT = [0, 1, 2, 0, 2, 3];
+      Nz = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      vz = [0, 1, 2, 0, 2, 3];
 
-    function uT(TT, oT, IT) {
-      var iT;
-      let [zT, kT, WT] = oT;
-      if (TT.hasPackModel("Furnace")) return null;
-      const XT = ((null !== (iT = TT.getMetaInfo(IT).rot) && void 0 !== iT ? iT : 1) - 1) * Math.PI / 2,
-        BT = Math.PI + XT,
-        FT = Math.cos(BT),
-        ST = Math.sin(BT),
-        DT = [];
-      for (const [cT, KT] of mT) DT.push(cT * FT, KT, -cT * ST);
-      const LT = {
-          positions: DT,
-          indices: RT,
-          uvs: eT
+    function xz(zz, uz, bz) {
+      var Ez;
+      let [nz, iz, lz] = uz;
+      if (zz.hasPackModel("Furnace")) return null;
+      const Mz = ((null !== (Ez = zz.getMetaInfo(bz).rot) && void 0 !== Ez ? Ez : 1) - 1) * Math.PI / 2,
+        tz = Math.PI + Mz,
+        Hz = Math.cos(tz),
+        Oz = Math.sin(tz),
+        pz = [];
+      for (const [Zz, Rz] of oz) pz.push(Zz * Hz, Rz, -Zz * Oz);
+      const dz = {
+          positions: pz,
+          indices: vz,
+          uvs: Nz
         },
-        xT = [zT + .5 + .51 * Math.sin(XT), kT + .375, WT + .5 + .51 * Math.cos(XT)];
-      return TT.createGameMesh(LT, {
+        Fz = [nz + .5 + .51 * Math.sin(Mz), iz + .375, lz + .5 + .51 * Math.cos(Mz)];
+      return zz.createGameMesh(dz, {
         kind: "furnaceFire"
-      }, xT)
+      }, Fz)
     }
 
-    function vT(TT) {
-      return Math.floor(TT / 200) % 3
+    function Jz(zz) {
+      return Math.floor(zz / 200) % 3
     }
 
-    function ET(TT, oT, IT) {
-      TT.setGameMesh(oT, {
-        uvOffset: [0, IT / 3]
+    function Az(zz, uz, bz) {
+      zz.setGameMesh(uz, {
+        uvOffset: [0, bz / 3]
       })
     }
-    const fT = [.12, .025, .12],
-      CT = [{
+    const Tz = [.12, .025, .12],
+      Lz = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: kT.h.Standard,
+          blendMode: iz.d.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: kT.h.Add,
+          blendMode: iz.d.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class jT {
+    class Pz {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(TT, oT) {
-        const IT = TT.getBlockId(oT[0], oT[1], oT[2]);
-        if ("Furnace" !== TT.getMetaInfo(IT).rootName) return;
-        const iT = performance.now();
-        let zT = this.smokes.find((TT => TT.pos[0] === oT[0] && TT.pos[1] === oT[1] && TT.pos[2] === oT[2] && TT.mS === IT));
-        if (zT || (zT = {
-            pos: [oT[0], oT[1], oT[2]],
-            mS: IT,
-            endMs: iT,
+      start(zz, uz) {
+        const bz = zz.getBlockId(uz[0], uz[1], uz[2]);
+        if ("Furnace" !== zz.getMetaInfo(bz).rootName) return;
+        const Ez = performance.now();
+        let nz = this.smokes.find((zz => zz.pos[0] === uz[0] && zz.pos[1] === uz[1] && zz.pos[2] === uz[2] && zz.hO === bz));
+        if (nz || (nz = {
+            pos: [uz[0], uz[1], uz[2]],
+            hO: bz,
+            endMs: Ez,
             lastBurstMs: -1 / 0,
-            pending: new Array(CT.length).fill(0),
-            fire: uT(TT, oT, IT)
-          }, this.smokes.push(zT), null !== zT.fire && (ET(TT, zT.fire, vT(iT)), this.shownFireFrame = -1)), zT.endMs = iT + 6e3, this.smokes.length > 4) {
-          const oT = this.smokes.reduce(((TT, oT) => oT.endMs < TT.endMs ? oT : TT));
-          JT(TT, oT), this.smokes.splice(this.smokes.indexOf(oT), 1)
+            pending: new Array(Lz.length).fill(0),
+            fire: xz(zz, uz, bz)
+          }, this.smokes.push(nz), null !== nz.fire && (Az(zz, nz.fire, Jz(Ez)), this.shownFireFrame = -1)), nz.endMs = Ez + 6e3, this.smokes.length > 4) {
+          const uz = this.smokes.reduce(((zz, uz) => uz.endMs < zz.endMs ? uz : zz));
+          Gz(zz, uz), this.smokes.splice(this.smokes.indexOf(uz), 1)
         }
-        iT - zT.lastBurstMs >= 300 && (zT.lastBurstMs = iT, CT.forEach(((TT, oT) => {
-          zT.pending[oT] += TT.style.count
+        Ez - nz.lastBurstMs >= 300 && (nz.lastBurstMs = Ez, Lz.forEach(((zz, uz) => {
+          nz.pending[uz] += zz.style.count
         })))
       }
-      onAfterRender(TT, oT) {
+      onAfterRender(zz, uz) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const IT = performance.now();
-        this.smokes = this.smokes.filter((oT => {
-          const [iT, zT, kT] = oT.pos, WT = IT < oT.endMs && TT.getBlockId(iT, zT, kT) === oT.mS;
-          return WT || JT(TT, oT), WT
+        const bz = performance.now();
+        this.smokes = this.smokes.filter((uz => {
+          const [Ez, nz, iz] = uz.pos, lz = bz < uz.endMs && zz.getBlockId(Ez, nz, iz) === uz.hO;
+          return lz || Gz(zz, uz), lz
         }));
-        const iT = vT(IT);
-        if (iT !== this.shownFireFrame) {
-          this.shownFireFrame = iT;
-          for (const oT of this.smokes) null !== oT.fire && ET(TT, oT.fire, iT)
+        const Ez = Jz(bz);
+        if (Ez !== this.shownFireFrame) {
+          this.shownFireFrame = Ez;
+          for (const uz of this.smokes) null !== uz.fire && Az(zz, uz.fire, Ez)
         }
-        if (!TT.particlesEnabled()) {
-          for (const TT of this.smokes) TT.pending.fill(0);
+        if (!zz.particlesEnabled()) {
+          for (const zz of this.smokes) zz.pending.fill(0);
           return
         }
-        const zT = Math.min(oT, 250) / 1e3;
-        for (const kT of this.smokes) {
-          const [oT, iT, WT] = kT.pos;
-          if (0 !== TT.getBlockId(oT, iT + 1, WT)) {
-            kT.pending.fill(0);
+        const nz = Math.min(uz, 250) / 1e3;
+        for (const iz of this.smokes) {
+          const [uz, Ez, lz] = iz.pos;
+          if (0 !== zz.getBlockId(uz, Ez + 1, lz)) {
+            iz.pending.fill(0);
             continue
           }
-          const XT = (kT.endMs - IT) / 6e3,
-            BT = this.centre;
-          BT[0] = oT + .5, BT[1] = iT + 1.275, BT[2] = WT + .5, CT.forEach(((oT, IT) => {
-            kT.pending[IT] += oT.perSecond * XT * zT;
-            const iT = Math.floor(kT.pending[IT]);
-            iT > 0 && this.emit(TT, IT, BT, iT) && (kT.pending[IT] -= iT)
+          const Mz = (iz.endMs - bz) / 6e3,
+            tz = this.centre;
+          tz[0] = uz + .5, tz[1] = Ez + 1.275, tz[2] = lz + .5, Lz.forEach(((uz, bz) => {
+            iz.pending[bz] += uz.perSecond * Mz * nz;
+            const Ez = Math.floor(iz.pending[bz]);
+            Ez > 0 && this.emit(zz, bz, tz, Ez) && (iz.pending[bz] -= Ez)
           }))
         }
       }
-      dispose(TT) {
-        for (const IT of this.smokes) JT(TT, IT);
+      dispose(zz) {
+        for (const bz of this.smokes) Gz(zz, bz);
         this.smokes = [];
-        for (const IT of null !== (oT = this.puffers) && void 0 !== oT ? oT : []) {
-          var oT;
-          IT.dispose()
+        for (const bz of null !== (uz = this.puffers) && void 0 !== uz ? uz : []) {
+          var uz;
+          bz.dispose()
         }
         this.puffers = null
       }
-      emit(TT, oT, IT, iT) {
-        return this.puffers ??= CT.map((TT => {
+      emit(zz, uz, bz, Ez) {
+        return this.puffers ??= Lz.map((zz => {
           let {
-            style: oT,
-            perSecond: IT
-          } = TT;
-          const iT = (oT.count / .3 + IT) * oT.life[1];
-          return new wT.e(oT, Math.ceil(4 * iT), fT)
-        })), this.puffers[oT].emit(TT, IT, this.renderFrame, iT)
+            style: uz,
+            perSecond: bz
+          } = zz;
+          const Ez = (uz.count / .3 + bz) * uz.life[1];
+          return new rz.f(uz, Math.ceil(4 * Ez), Tz)
+        })), this.puffers[uz].emit(zz, bz, this.renderFrame, Ez)
       }
     }
 
-    function JT(TT, oT) {
-      null !== oT.fire && (TT.disposeGameMesh(oT.fire), oT.fire = null)
+    function Gz(zz, uz) {
+      null !== uz.fire && (zz.disposeGameMesh(uz.fire), uz.fire = null)
     }
 
-    function UT() {
-      let TT;
-      const oT = new jT;
+    function az() {
+      let zz;
+      const uz = new Pz;
       return {
-        onCreate(oT) {
-          TT = oT
+        onCreate(uz) {
+          zz = uz
         },
-        onReceivedMessageFromServer(IT, iT) {
-          IT === WT.z && oT.start(TT, iT)
+        onReceivedMessageFromServer(bz, Ez) {
+          bz === lz.A && uz.start(zz, Ez)
         },
-        onAfterRender(IT) {
-          oT.onAfterRender(TT, IT)
+        onAfterRender(bz) {
+          uz.onAfterRender(zz, bz)
         },
         onClose() {
-          oT.dispose(TT)
+          uz.dispose(zz)
         }
       }
     }
 
-    function aT(TT, oT, IT, iT) {
+    function Vz(zz, uz, bz, Ez) {
       return {
-        dialogue: hT(iT.localPlayerId),
-        fishing: rT(iT.localPlayerId),
-        furnaceSmoke: UT(),
-        ironChest: zT()
+        dialogue: sz(Ez.localPlayerId),
+        fishing: wz(Ez.localPlayerId),
+        furnaceSmoke: az(),
+        ironChest: nz()
       }
     }
 
-    function YT(TT, oT) {
-      for (const zT of [TT, ...null !== oT && void 0 !== oT ? oT : []]) try {
-        var IT;
-        null === zT || void 0 === zT || null === (IT = zT.onClose) || void 0 === IT || IT.call(zT)
-      } catch (iT) {
-        console.error("Error in client onClose callback", iT)
+    function mz(zz, uz) {
+      for (const nz of [zz, ...null !== uz && void 0 !== uz ? uz : []]) try {
+        var bz;
+        null === nz || void 0 === nz || null === (bz = nz.onClose) || void 0 === bz || bz.call(nz)
+      } catch (Ez) {
+        console.error("Error in client onClose callback", Ez)
       }
     }
   },
-  38100: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => iT,
-      e: () => kT
+  38496: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Ez,
+      f: () => iz
     });
-    const iT = 1 / .6,
-      zT = {
+    const Ez = 1 / .6,
+      nz = {
         kind: "smokePuff"
       };
-    class kT {
-      constructor(TT, oT, IT) {
-        this.style = TT, this.fD = oT, this.half = IT, this.particles = null, this.lastFrame = -1
+    class iz {
+      constructor(zz, uz, bz) {
+        this.style = zz, this.Bp = uz, this.half = bz, this.particles = null, this.lastFrame = -1
       }
-      emit(TT, oT, IT) {
-        let kT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return IT !== this.lastFrame && (this.lastFrame = IT, this.particles || (this.particles = TT.createParticles(function(TT, oT) {
+      emit(zz, uz, bz) {
+        let iz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return bz !== this.lastFrame && (this.lastFrame = bz, this.particles || (this.particles = zz.createParticles(function(zz, uz) {
           const [
-            [IT, kT, WT],
-            [XT, BT, FT]
-          ] = TT.colours;
+            [bz, iz, lz],
+            [Mz, tz, Hz]
+          ] = zz.colours;
           return {
-            texture: TT.soft ? zT : "square_particle",
-            fD: oT,
-            minLifeTime: TT.life[0] / iT,
-            maxLifeTime: TT.life[1] / iT,
-            minEmitPower: TT.power[0] * iT,
-            maxEmitPower: TT.power[1] * iT,
-            minSize: TT.size[0],
-            maxSize: TT.size[1],
+            texture: zz.soft ? nz : "square_particle",
+            Bp: uz,
+            minLifeTime: zz.life[0] / Ez,
+            maxLifeTime: zz.life[1] / Ez,
+            minEmitPower: zz.power[0] * Ez,
+            maxEmitPower: zz.power[1] * Ez,
+            minSize: zz.size[0],
+            maxSize: zz.size[1],
             emitRate: 0,
-            gravity: [0, TT.lift * iT * iT, 0],
-            dir1: [-TT.spread, 1, -TT.spread],
-            dir2: [TT.spread, 1, TT.spread],
+            gravity: [0, zz.lift * Ez * Ez, 0],
+            dir1: [-zz.spread, 1, -zz.spread],
+            dir2: [zz.spread, 1, zz.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [IT, kT, WT, TT.alpha],
-              maxColor: [XT, BT, FT, TT.alpha]
+              minColor: [bz, iz, lz, zz.alpha],
+              maxColor: [Mz, tz, Hz, zz.alpha]
             }, {
               timeFraction: 1,
-              minColor: [IT, kT, WT, 0],
-              maxColor: [XT, BT, FT, 0]
+              minColor: [bz, iz, lz, 0],
+              maxColor: [Mz, tz, Hz, 0]
             }],
-            blendMode: TT.blendMode
+            blendMode: zz.blendMode
           }
-        }(this.style, this.fD), {
-          pos: oT,
+        }(this.style, this.Bp), {
+          pos: uz,
           half: this.half
-        })), this.particles.moveTo(oT, this.half), this.particles.emit(kT), !0)
+        })), this.particles.moveTo(uz, this.half), this.particles.emit(iz), !0)
       }
       dispose() {
-        var TT;
-        null === (TT = this.particles) || void 0 === TT || TT.stop(), this.particles = null
+        var zz;
+        null === (zz = this.particles) || void 0 === zz || zz.stop(), this.particles = null
       }
     }
   },
-  4336: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => zT,
-      f: () => iT,
-      g: () => kT,
-      j: () => BT,
-      m: () => WT
+  4605: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => nz,
+      h: () => Ez,
+      i: () => iz,
+      k: () => tz,
+      n: () => lz
     });
-    const iT = ["sine", "triangle", "square", "sawtooth"],
-      zT = 55,
-      kT = {
+    const Ez = ["sine", "triangle", "square", "sawtooth"],
+      nz = 55,
+      iz = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function WT(TT) {
-      return "string" !== typeof TT ? TT : Object.hasOwn(kT, TT) ? kT[TT] : null
+    function lz(zz) {
+      return "string" !== typeof zz ? zz : Object.hasOwn(iz, zz) ? iz[zz] : null
     }
 
-    function XT(TT, oT, IT) {
-      return Math.min(IT, Math.max(oT, TT))
+    function Mz(zz, uz, bz) {
+      return Math.min(bz, Math.max(uz, zz))
     }
 
-    function BT(TT) {
-      const oT = XT(TT.durationMs, 10, 500),
-        IT = XT(TT.attackMs, 0, oT),
+    function tz(zz) {
+      const uz = Mz(zz.durationMs, 10, 500),
+        bz = Mz(zz.attackMs, 0, uz),
         {
-          intonation: zT
-        } = TT;
+          intonation: nz
+        } = zz;
       return {
-        waveform: iT.includes(TT.waveform) ? TT.waveform : "sine",
-        pitchHz: XT(TT.pitchHz, 20, 4e3),
-        glideSemitones: XT(TT.glideSemitones, -24, 24),
-        durationMs: oT,
-        attackMs: IT,
-        releaseMs: XT(TT.releaseMs, 0, oT - IT),
-        lowpassHz: null === TT.lowpassHz ? null : XT(TT.lowpassHz, 20, 2e4),
-        volume: XT(TT.volume, 0, 2),
+        waveform: Ez.includes(zz.waveform) ? zz.waveform : "sine",
+        pitchHz: Mz(zz.pitchHz, 20, 4e3),
+        glideSemitones: Mz(zz.glideSemitones, -24, 24),
+        durationMs: uz,
+        attackMs: bz,
+        releaseMs: Mz(zz.releaseMs, 0, uz - bz),
+        lowpassHz: null === zz.lowpassHz ? null : Mz(zz.lowpassHz, 20, 2e4),
+        volume: Mz(zz.volume, 0, 2),
         intonation: {
-          variationSemitones: XT(zT.variationSemitones, 0, 6),
-          declineSemitones: XT(zT.declineSemitones, 0, 12),
-          questionRiseSemitones: XT(zT.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: XT(zT.exclaimLiftSemitones, 0, 12)
+          variationSemitones: Mz(nz.variationSemitones, 0, 6),
+          declineSemitones: Mz(nz.declineSemitones, 0, 12),
+          questionRiseSemitones: Mz(nz.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: Mz(nz.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: XT(TT.syllableMs, 25, 200)
+        syllableMs: Mz(zz.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

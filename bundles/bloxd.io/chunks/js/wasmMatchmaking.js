@@ -1,57 +1,30 @@
-/*! For license information please see qsji88.wasmMatchmaking.a0385d85.chunk.js.LICENSE.txt */
+/*! For license information please see ad2avs.wasmMatchmaking.1767c3a0.chunk.js.LICENSE.txt */
 export const id = 59;
-export const ids = [59];
+export const ids = [59, 91];
 export const modules = {
-  35680: TT => {
-    TT.exports = function TT(oT, IT) {
-      if (oT === IT) return !0;
-      if (oT && IT && "object" == typeof oT && "object" == typeof IT) {
-        if (oT.constructor !== IT.constructor) return !1;
-        var iT, zT, kT;
-        if (Array.isArray(oT)) {
-          if ((iT = oT.length) != IT.length) return !1;
-          for (zT = iT; 0 !== zT--;)
-            if (!TT(oT[zT], IT[zT])) return !1;
-          return !0
-        }
-        if (oT.constructor === RegExp) return oT.source === IT.source && oT.flags === IT.flags;
-        if (oT.valueOf !== Object.prototype.valueOf) return oT.valueOf() === IT.valueOf();
-        if (oT.toString !== Object.prototype.toString) return oT.toString() === IT.toString();
-        if ((iT = (kT = Object.keys(oT)).length) !== Object.keys(IT).length) return !1;
-        for (zT = iT; 0 !== zT--;)
-          if (!Object.prototype.hasOwnProperty.call(IT, kT[zT])) return !1;
-        for (zT = iT; 0 !== zT--;) {
-          var WT = kT[zT];
-          if (!TT(oT[WT], IT[WT])) return !1
-        }
-        return !0
+  36019: (zz, uz) => {
+    function bz(zz) {
+      if (zz && "object" === typeof zz) {
+        var uz = zz.which || zz.keyCode || zz.charCode;
+        uz && (zz = uz)
       }
-      return oT !== oT && IT !== IT
+      if ("number" === typeof zz) return lz[zz];
+      var bz, iz = String(zz);
+      return (bz = Ez[iz.toLowerCase()]) ? bz : (bz = nz[iz.toLowerCase()]) || (1 === iz.length ? iz.charCodeAt(0) : void 0)
     }
-  },
-  35546: (TT, oT) => {
-    function IT(TT) {
-      if (TT && "object" === typeof TT) {
-        var oT = TT.which || TT.keyCode || TT.charCode;
-        oT && (TT = oT)
-      }
-      if ("number" === typeof TT) return WT[TT];
-      var IT, kT = String(TT);
-      return (IT = iT[kT.toLowerCase()]) ? IT : (IT = zT[kT.toLowerCase()]) || (1 === kT.length ? kT.charCodeAt(0) : void 0)
-    }
-    IT.isEventKey = function(TT, oT) {
-      if (TT && "object" === typeof TT) {
-        var IT = TT.which || TT.keyCode || TT.charCode;
-        if (null === IT || void 0 === IT) return !1;
-        if ("string" === typeof oT) {
-          var kT;
-          if (kT = iT[oT.toLowerCase()]) return kT === IT;
-          if (kT = zT[oT.toLowerCase()]) return kT === IT
-        } else if ("number" === typeof oT) return oT === IT;
+    bz.isEventKey = function(zz, uz) {
+      if (zz && "object" === typeof zz) {
+        var bz = zz.which || zz.keyCode || zz.charCode;
+        if (null === bz || void 0 === bz) return !1;
+        if ("string" === typeof uz) {
+          var iz;
+          if (iz = Ez[uz.toLowerCase()]) return iz === bz;
+          if (iz = nz[uz.toLowerCase()]) return iz === bz
+        } else if ("number" === typeof uz) return uz === bz;
         return !1
       }
     };
-    var iT = (oT = TT.exports = IT).code = oT.codes = {
+    var Ez = (uz = zz.exports = bz).code = uz.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -96,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      zT = oT.aliases = {
+      nz = uz.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -118,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (kT = 97; kT < 123; kT++) iT[String.fromCharCode(kT)] = kT - 32;
-    for (var kT = 48; kT < 58; kT++) iT[kT - 48] = kT;
-    for (kT = 1; kT < 13; kT++) iT["f" + kT] = kT + 111;
-    for (kT = 0; kT < 10; kT++) iT["numpad " + kT] = kT + 96;
-    var WT = oT.names = oT.title = {};
-    for (kT in iT) WT[iT[kT]] = kT;
-    for (var XT in zT) iT[XT] = zT[XT]
+    for (iz = 97; iz < 123; iz++) Ez[String.fromCharCode(iz)] = iz - 32;
+    for (var iz = 48; iz < 58; iz++) Ez[iz - 48] = iz;
+    for (iz = 1; iz < 13; iz++) Ez["f" + iz] = iz + 111;
+    for (iz = 0; iz < 10; iz++) Ez["numpad " + iz] = iz + 96;
+    var lz = uz.names = uz.title = {};
+    for (iz in Ez) lz[Ez[iz]] = iz;
+    for (var Mz in nz) Ez[Mz] = nz[Mz]
   },
-  35700: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => WT
+  36179: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz
     });
-    var iT = IT(46);
-    const zT = iT.useLayoutEffect;
-    const kT = function(TT) {
-      var oT = (0, iT.useRef)(TT);
-      return zT((function() {
-        oT.current = TT
-      })), oT
+    var Ez = bz(56);
+    const nz = Ez.useLayoutEffect;
+    const iz = function(zz) {
+      var uz = (0, Ez.useRef)(zz);
+      return nz((function() {
+        uz.current = zz
+      })), uz
     };
-    var WT = function(TT) {
-      var oT = kT(TT);
-      (0, iT.useEffect)((function() {
-        var TT = function(TT) {
-          var IT;
-          if (null != oT.current && (IT = oT.current(TT)), TT.defaultPrevented && (TT.returnValue = ""), "string" === typeof IT) return TT.returnValue = IT, IT
+    var lz = function(zz) {
+      var uz = iz(zz);
+      (0, Ez.useEffect)((function() {
+        var zz = function(zz) {
+          var bz;
+          if (null != uz.current && (bz = uz.current(zz)), zz.defaultPrevented && (zz.returnValue = ""), "string" === typeof bz) return zz.returnValue = bz, bz
         };
-        return window.addEventListener("beforeunload", TT),
+        return window.addEventListener("beforeunload", zz),
           function() {
-            window.removeEventListener("beforeunload", TT)
+            window.removeEventListener("beforeunload", zz)
           }
       }), [])
     }
   },
-  35587: TT => {
-    var oT, IT = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      iT = /OS X/.test(IT),
-      zT = /Opera/.test(IT),
-      kT = !/like Gecko/.test(IT) && !zT,
-      WT = TT.exports = {
-        0: iT ? "<menu>" : "<UNK>",
+  36053: zz => {
+    var uz, bz = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Ez = /OS X/.test(bz),
+      nz = /Opera/.test(bz),
+      iz = !/like Gecko/.test(bz) && !nz,
+      lz = zz.exports = {
+        0: Ez ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -201,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: iT ? "<meta>" : "<menu>",
+        93: Ez ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -224,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: iT && kT ? "-" : "<volume-mute>",
+        173: Ez && iz ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -250,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: zT ? "`" : "<unicode>",
+        231: nz ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -261,171 +234,454 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (oT = 58; oT < 65; ++oT) WT[oT] = String.fromCharCode(oT);
-    for (oT = 48; oT < 58; ++oT) WT[oT] = oT - 48 + "";
-    for (oT = 65; oT < 91; ++oT) WT[oT] = String.fromCharCode(oT);
-    for (oT = 96; oT < 106; ++oT) WT[oT] = "<num-" + (oT - 96) + ">";
-    for (oT = 112; oT < 136; ++oT) WT[oT] = "F" + (oT - 111)
+    for (uz = 58; uz < 65; ++uz) lz[uz] = String.fromCharCode(uz);
+    for (uz = 48; uz < 58; ++uz) lz[uz] = uz - 48 + "";
+    for (uz = 65; uz < 91; ++uz) lz[uz] = String.fromCharCode(uz);
+    for (uz = 96; uz < 106; ++uz) lz[uz] = "<num-" + (uz - 96) + ">";
+    for (uz = 112; uz < 136; ++uz) lz[uz] = "F" + (uz - 111)
   },
-  6158: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => zT,
-      e: () => kT
+  36096: (zz, uz, bz) => {
+    function Ez(zz, uz, bz, Ez) {
+      return !(bz && !zz.aimable) && (!uz || zz.gun && "head" !== Ez)
+    }
+
+    function nz(zz) {
+      return Math.max(.1 * zz, 1)
+    }
+
+    function iz(zz, uz) {
+      return !zz && uz
+    }
+    bz.d(uz, {
+      c: () => iz,
+      e: () => nz,
+      g: () => Ez
+    })
+  },
+  36103: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Mz,
+      g: () => lz
     });
-    var iT = IT(26);
-    const zT = "shaderPack";
-    async function kT() {
-      var TT;
-      let oT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (TT = await iT.c.getItem(zT, oT)) && void 0 !== TT ? TT : null
+    let Ez = null;
+    const nz = {
+        crosshairAccuracy: [],
+        turnDamageIndicators: []
+      },
+      iz = {
+        crosshairAccuracy: zz => {
+          const uz = nz.crosshairAccuracy.at(-1);
+          uz ? uz.hook(zz) : Ez = zz
+        },
+        turnDamageIndicators: zz => {
+          var uz;
+          null === (uz = nz.turnDamageIndicators.at(-1)) || void 0 === uz || uz.hook(zz)
+        }
+      };
+
+    function lz(zz, uz) {
+      const bz = {
+          hook: uz
+        },
+        lz = nz[zz];
+      if (lz.push(bz), "crosshairAccuracy" === zz && null !== Ez) {
+        const zz = Ez;
+        Ez = null, iz.crosshairAccuracy(zz)
+      }
+      return () => {
+        const zz = lz.indexOf(bz); - 1 !== zz && lz.splice(zz, 1)
+      }
+    }
+
+    function Mz() {
+      return iz
     }
   },
-  8329: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => kT,
-      f: () => zT
+  6382: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz,
+      e: () => iz
     });
-    let iT = !1;
-
-    function zT() {
-      iT = !0
-    }
-
-    function kT() {
-      return iT
+    var Ez = bz(33);
+    const nz = "shaderPack";
+    async function iz() {
+      var zz;
+      let uz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (zz = await Ez.d.getItem(nz, uz)) && void 0 !== zz ? zz : null
     }
   },
-  35449: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      InGameUi: () => gT.e,
-      LobbyLeaderboard: () => hT.b,
-      loadCharacterCustomisationUI: () => wT,
-      loadCharacterPreview: () => mT,
-      matchmakeAndPlay: () => vT,
-      setUpGame: () => eT
+  8581: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      g: () => nz
     });
-    var iT = IT(1216),
-      zT = IT(159),
-      kT = IT(12),
-      WT = IT(35451),
-      XT = IT(35458),
-      BT = IT(1770),
-      FT = IT(35490);
+    let Ez = !1;
 
-    function ST() {
-      return !1 !== BT.e.get("canCustomiseChar")
-    }
-    let DT = !1;
-    var LT = IT(1293),
-      xT = IT(1220),
-      cT = IT(690),
-      KT = IT(8329);
-    var MT = IT(8325),
-      rT = IT(3138),
-      AT = IT(1706);
-    var gT = IT(35503),
-      hT = IT(35974);
-
-    function wT() {
-      return Promise.all([IT.e(279), IT.e(387)]).then((() => IT(39967)))
+    function nz() {
+      Ez = !0
     }
 
-    function mT() {
-      return IT.e(280).then((() => IT(39976)))
+    function iz() {
+      return Ez
+    }
+  },
+  35927: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      InGameUi: () => fz.e,
+      LobbyLeaderboard: () => sz.b,
+      loadCharacterCustomisationUI: () => rz,
+      loadCharacterPreview: () => oz,
+      matchmakeAndPlay: () => Jz,
+      setUpGame: () => Nz
+    });
+    var Ez = bz(1232),
+      nz = bz(158),
+      iz = bz(20),
+      lz = bz(35936),
+      Mz = bz(35939),
+      tz = bz(1892),
+      Hz = bz(35965);
+
+    function Oz() {
+      return !1 !== tz.b.get("canCustomiseChar")
+    }
+    let pz = !1;
+    var dz = bz(1296),
+      Fz = bz(1241),
+      Zz = bz(677),
+      Rz = bz(8581);
+    var Kz = bz(8572),
+      wz = bz(3332),
+      Xz = bz(1755);
+    var fz = bz(35977),
+      sz = bz(36447);
+
+    function rz() {
+      return Promise.all([bz.e(281), bz.e(387)]).then((() => bz(40493)))
     }
 
-    function eT() {
-      return (0, MT.e)()
+    function oz() {
+      return bz.e(282).then((() => bz(40500)))
     }
-    DT || (DT = !0, document.addEventListener("keydown", (TT => {
-        (0, FT.c)(TT, ST)
+
+    function Nz() {
+      return (0, Kz.h)()
+    }
+    pz || (pz = !0, document.addEventListener("keydown", (zz => {
+        (0, Hz.d)(zz, Oz)
       }))),
-      function(TT) {
-        var oT;
-        return !0 !== (null === TT || void 0 === TT ? void 0 : TT.saveData) && !/2g$/.test(null !== (oT = null === TT || void 0 === TT ? void 0 : TT.effectiveType) && void 0 !== oT ? oT : "")
-      }(navigator.connection) && (0, cT.b)((() => {
-        (0, KT.e)() || Promise.all([IT.e(74), IT.e(133), IT.e(87), IT.e(55)]).then((() => IT(39544))).then((TT => {
-          (0, KT.e)() || TT.startLoadAheadOfJoin({
-            joinStarted: KT.e,
-            language: xT.d.get().getCurrentLanguageCode()
+      function(zz) {
+        var uz;
+        return !0 !== (null === zz || void 0 === zz ? void 0 : zz.saveData) && !/2g$/.test(null !== (uz = null === zz || void 0 === zz ? void 0 : zz.effectiveType) && void 0 !== uz ? uz : "")
+      }(navigator.connection) && (0, Zz.e)((() => {
+        (0, Rz.c)() || Promise.all([bz.e(74), bz.e(132), bz.e(87), bz.e(55)]).then((() => bz(39931))).then((zz => {
+          (0, Rz.c)() || zz.startLoadAheadOfJoin({
+            joinStarted: Rz.c,
+            language: Fz.h.get().getCurrentLanguageCode()
           })
-        }), (TT => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", TT)
+        }), (zz => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", zz)
         }))
       }));
-    const RT = kT.c.get("router");
-    null === RT ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function TT(oT) {
-      if ((0, AT.c)(oT.state.location.pathname)) return void(0, MT.c)().catch((() => {}));
-      const IT = oT.subscribe((iT => {
-        (0, AT.c)(iT.location.pathname) && (IT(), (0, rT.c)().then((() => {
-          TT(oT)
+    const vz = iz.e.get("router");
+    null === vz ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function zz(uz) {
+      if ((0, Xz.e)(uz.state.location.pathname)) return void(0, Kz.d)().catch((() => {}));
+      const bz = uz.subscribe((Ez => {
+        (0, Xz.e)(Ez.location.pathname) && (bz(), (0, wz.e)().then((() => {
+          zz(uz)
         })))
       }))
-    }(RT), (0, WT.e)();
-    const uT = (0, XT.d)((async function(TT, oT) {
+    }(vz), (0, lz.c)();
+    const xz = (0, Mz.c)((async function(zz, uz) {
       let {
-        place: IT,
-        userContext: kT,
-        direct: WT,
-        rematch: XT
-      } = TT;
-      const BT = WT ? 1 / 0 : performance.now();
-      let FT;
+        place: bz,
+        userContext: iz,
+        direct: lz,
+        rematch: Mz
+      } = zz;
+      const tz = lz ? 1 / 0 : performance.now();
+      let Hz;
       try {
-        FT = await (0, MT.c)()
-      } catch (ST) {
-        return console.error("The wasm client did not load:", ST), (0, LT.o)({
+        Hz = await (0, Kz.d)()
+      } catch (Oz) {
+        return console.error("The wasm client did not load:", Oz), (0, dz.o)({
           websocketUrl: null
-        }), iT.b.errorWithCode(String(ST), zT.j.CONNECT_TO_GAME_SERVER, {
-          error: ST,
-          severity: oT.aborted ? "low" : "medium",
-          Jo: oT.aborted
+        }), Ez.b.errorWithCode(String(Oz), nz.k.CONNECT_TO_GAME_SERVER, {
+          error: Oz,
+          severity: uz.aborted ? "low" : "medium",
+          ob: uz.aborted
         })
       }
-      return FT.playWasmGame({
-        userContext: kT,
-        place: IT,
-        matchedAt: BT,
-        rematch: XT
-      }, oT)
+      return Hz.playWasmGame({
+        userContext: iz,
+        place: bz,
+        matchedAt: tz,
+        rematch: Mz
+      }, uz)
     }));
 
-    function vT() {
-      return (0, MT.c)().catch((() => {})), uT(...arguments)
+    function Jz() {
+      return (0, Kz.d)().catch((() => {})), xz(...arguments)
     }
   },
-  8325: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => ST,
-      e: () => DT
+  8572: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Oz,
+      h: () => pz
     });
-    var iT = IT(2710),
-      zT = IT(2089),
-      kT = IT(2750),
-      WT = IT(4152),
-      XT = IT(3061),
-      BT = IT(8329);
-    let FT = null;
+    var Ez = bz(2899),
+      nz = bz(2181),
+      iz = bz(2954),
+      lz = bz(4400),
+      Mz = bz(3248),
+      tz = bz(8581);
+    let Hz = null;
 
-    function ST() {
-      return WT.b.cancelDownloadForJoin(), (0, XT.e)(), (0, zT.d)(), (0, BT.f)(), (0, kT.i)(), Promise.all([IT.e(69), IT.e(72), IT.e(71), IT.e(70), IT.e(83), IT.e(258), IT.e(237), IT.e(211), IT.e(235), IT.e(207), IT.e(46)]).then((() => IT(39457))).catch((() => {})), Promise.all([IT.e(74), IT.e(133), IT.e(87), IT.e(55)]).then((() => IT(39544))).then((TT => {
+    function Oz() {
+      return lz.b.cancelDownloadForJoin(), (0, Mz.d)(), (0, nz.h)(), (0, tz.g)(), (0, iz.f)(), Promise.all([bz.e(69), bz.e(72), bz.e(71), bz.e(70), bz.e(83), bz.e(259), bz.e(199), bz.e(216), bz.e(237), bz.e(212), bz.e(46)]).then((() => bz(39840))).catch((() => {})), Promise.all([bz.e(74), bz.e(132), bz.e(87), bz.e(55)]).then((() => bz(39931))).then((zz => {
         let {
-          startJoinLoad: oT
-        } = TT;
-        oT()
-      }), (() => {})), FT ??= Promise.all([IT.e(71), IT.e(74), IT.e(130), IT.e(73), IT.e(133), IT.e(261), IT.e(185), IT.e(87), IT.e(86), IT.e(85), IT.e(207), IT.e(60)]).then((() => IT(39647))).then((TT => (TT.startWasmPlay(), TT.followPageUiPack((TT => {
-        iT.e.showGamePack(TT)
-      })), TT)), (TT => {
-        throw FT = null, TT
-      })), FT
+          startJoinLoad: uz
+        } = zz;
+        uz()
+      }), (() => {})), Hz ??= Promise.all([bz.e(71), bz.e(74), bz.e(129), bz.e(73), bz.e(132), bz.e(262), bz.e(186), bz.e(87), bz.e(86), bz.e(85), bz.e(212), bz.e(60)]).then((() => bz(40042))).then((zz => (zz.startWasmPlay(), zz.followPageUiPack((zz => {
+        Ez.e.showGamePack(zz)
+      })), zz)), (zz => {
+        throw Hz = null, zz
+      })), Hz
     }
 
-    function DT() {
-      return Promise.all([IT.e(71), IT.e(74), IT.e(130), IT.e(73), IT.e(133), IT.e(261), IT.e(185), IT.e(87), IT.e(86), IT.e(85), IT.e(207), IT.e(60)]).then((() => IT(39647))).then((TT => {
-        TT.startWasmPreviews(), TT.prefetchWasmPreviews()
+    function pz() {
+      return Promise.all([bz.e(71), bz.e(74), bz.e(129), bz.e(73), bz.e(132), bz.e(262), bz.e(186), bz.e(87), bz.e(86), bz.e(85), bz.e(212), bz.e(60)]).then((() => bz(40042))).then((zz => {
+        zz.startWasmPreviews(), zz.prefetchWasmPreviews()
       }))
     }
+  },
+  4616: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      Howl: () => nz.Howl,
+      Howler: () => nz.Howler,
+      iosAudio: () => tz,
+      musicOutput: () => Kz,
+      readyAudioContext: () => wz
+    });
+    var Ez, nz = bz(4625),
+      iz = bz(96);
+    const lz = nz.Howler;
+    let Mz;
+
+    function tz() {
+      return Mz ??= "ios" === (0, iz.getOperatingSystem)(), Mz
+    }
+
+    function Hz() {
+      var zz, uz;
+      if (lz.ctx || !lz.usingWebAudio || "undefined" === typeof AudioContext || !tz()) return;
+      const bz = navigator.audioSession;
+      let Ez;
+      "auto" === (null === bz || void 0 === bz ? void 0 : bz.type) && (bz.type = "ambient");
+      try {
+        Ez = new AudioContext({
+          sampleRate: 44100
+        })
+      } catch {
+        return
+      }
+      const nz = Ez.createGain();
+      nz.gain.setValueAtTime(lz._muted ? 0 : null !== (zz = lz._volume) && void 0 !== zz ? zz : 1, Ez.currentTime), nz.connect(Ez.destination), lz.ctx = Ez, lz.masterGain = nz, null === (uz = lz._setup) || void 0 === uz || uz.call(lz)
+    }
+    lz._mobileUnloaded = !0;
+    const Oz = lz.volume.bind(nz.Howler);
+    lz.volume = function() {
+      return Hz(), Oz(...arguments)
+    };
+    const pz = lz.mute.bind(nz.Howler);
+    lz.mute = zz => (Hz(), pz(zz));
+    const dz = nz.Howl.prototype,
+      Fz = dz.init;
+    dz.init = function(zz) {
+      return Hz(), Fz.call(this, zz)
+    };
+    let Zz = 0;
+    const Rz = null === (Ez = lz._autoSuspend) || void 0 === Ez ? void 0 : Ez.bind(nz.Howler);
+
+    function Kz() {
+      wz();
+      const {
+        ctx: zz,
+        masterGain: uz
+      } = lz;
+      return zz && uz ? {
+        ctx: zz,
+        destination: uz,
+        holdAwake: zz => {
+          var uz, bz;
+          (Zz += zz ? 1 : -1, zz) ? null === (uz = lz._autoResume) || void 0 === uz || uz.call(lz): null === (bz = lz._autoSuspend) || void 0 === bz || bz.call(lz)
+        },
+        wake: () => {
+          var uz;
+          "running" !== zz.state && (null === (uz = lz._autoResume) || void 0 === uz || uz.call(lz), zz.resume().catch((() => {})))
+        }
+      } : null
+    }
+
+    function wz() {
+      var zz;
+      (lz.volume(), lz.ctx && lz.autoUnlock) && (null === (zz = lz._unlockAudio) || void 0 === zz || zz.call(lz))
+    }
+    Rz && (lz._autoSuspend = () => Zz > 0 ? nz.Howler : Rz())
+  },
+  36205: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => lz,
+      e: () => nz,
+      h: () => Ez
+    });
+
+    function Ez(zz) {
+      return zz.replace(/[_\-\s]*\d+$/, "") || zz
+    }
+
+    function nz(zz, uz, bz) {
+      return bz <= 0 ? 0 : zz * bz / Math.max(uz, bz)
+    }
+
+    function iz(zz, uz) {
+      const bz = zz.getDurationMs();
+      return bz > 0 ? zz.loudness * Math.max(0, 1 - (uz - zz.startMs) / bz) : 0
+    }
+    class lz {
+      constructor() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = zz, this.maxPerGroup = uz, this.voices = []
+      }
+      admit(zz) {
+        if (this.voices = this.voices.filter((zz => zz.isAlive())), null !== zz.group) {
+          const uz = this.voices.filter((uz => uz.group === zz.group));
+          if (uz.length >= this.maxPerGroup && !this.dropLeastWorth(uz, zz)) return !1
+        }
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, zz)) && (this.voices.push(zz), !0)
+      }
+      dropLeastWorth(zz, uz) {
+        let bz = null,
+          Ez = 1 / 0;
+        for (const nz of zz) {
+          if (!nz.canStop()) continue;
+          const zz = iz(nz, uz.startMs);
+          zz < Ez && (bz = nz, Ez = zz)
+        }
+        return !(!bz || uz.loudness < Ez) && (this.voices.splice(this.voices.indexOf(bz), 1), bz.stop(), !0)
+      }
+    }
+  },
+  36222: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => iz,
+      h: () => lz,
+      j: () => Ez
+    });
+    class Ez {
+      constructor(zz) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = zz
+      }
+      setMultiplierType(zz, uz) {
+        var bz;
+        this.multipliers[zz] = uz, null === (bz = this._onUpdate) || void 0 === bz || bz.call(this)
+      }
+      removeMultiplier(zz) {
+        var uz;
+        delete this.multipliers[zz], null === (uz = this._onUpdate) || void 0 === uz || uz.call(this)
+      }
+      getMultiplierType(zz) {
+        return this.multipliers[zz]
+      }
+      getTotalMultipliedVal() {
+        let zz = 1;
+        for (const uz in this.multipliers) zz *= this.multipliers[uz];
+        return zz
+      }
+    }
+    class nz {
+      constructor() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = zz
+      }
+      setBooleanType(zz, uz) {
+        const bz = this._getTotalBooleanVal();
+        this.booleans[zz] = !!uz;
+        const Ez = this.getTotalBooleanVal();
+        var nz;
+        Ez !== bz && (null === (nz = this._onUpdate) || void 0 === nz || nz.call(this, Ez, this.booleans));
+        return Ez
+      }
+      removeBoolean(zz) {
+        const uz = this._getTotalBooleanVal();
+        delete this.booleans[zz];
+        const bz = this._getTotalBooleanVal();
+        var Ez;
+        null !== bz && bz !== uz && (null === (Ez = this._onUpdate) || void 0 === Ez || Ez.call(this, bz, this.booleans));
+        return null !== bz && void 0 !== bz && bz
+      }
+      getBooleanType(zz) {
+        return this.booleans[zz]
+      }
+      getTotalBooleanVal() {
+        throw new Error("This is an abstract class, use BooleanAndCombinator")
+      }
+      forceUpdate() {
+        var zz;
+        null === (zz = this._onUpdate) || void 0 === zz || zz.call(this, this.getTotalBooleanVal(), this.booleans)
+      }
+      _getTotalBooleanVal() {
+        throw new Error("This is an abstract class, use BooleanAndCombinator")
+      }
+    }
+    class iz extends nz {
+      getTotalBooleanVal() {
+        const zz = this._getTotalBooleanVal();
+        if (null === zz) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return zz
+      }
+      _getTotalBooleanVal() {
+        let zz = !1,
+          uz = !0;
+        for (const bz in this.booleans) zz = !0, uz &&= this.booleans[bz];
+        return zz ? uz : null
+      }
+    }
+    class lz extends nz {
+      getTotalBooleanVal() {
+        const zz = this._getTotalBooleanVal();
+        if (null === zz) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return zz
+      }
+      _getTotalBooleanVal() {
+        let zz = !1,
+          uz = !1;
+        for (const bz in this.booleans) zz = !0, uz ||= this.booleans[bz];
+        return zz ? uz : null
+      }
+    }
+  },
+  9165: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => nz,
+      c: () => iz
+    });
+    var Ez = bz(9125);
+    const nz = "Air",
+      iz = Object.freeze(new Ez.f(nz, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+  },
+  36214: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      e: () => Ez,
+      h: () => nz
+    });
+    const Ez = 15,
+      nz = 3,
+      iz = 30
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

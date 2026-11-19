@@ -1,1037 +1,624 @@
 export const id = 247;
 export const ids = [247];
 export const modules = {
-  38979: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => vT
+  39402: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => lz,
+      i: () => Mz
     });
-    var iT = IT(38764),
-      zT = IT(38773),
-      kT = IT(36118),
-      WT = IT(38983),
-      XT = IT(39016),
-      BT = IT(38963),
-      FT = IT(38886);
-    let ST = (() => {
-      var TT;
-      let oT, IT, WT, XT, ST, DT, LT, xT, cT, KT, MT, rT = [],
-        AT = [],
-        gT = [],
-        hT = [],
-        wT = [],
-        mT = [],
-        eT = [],
-        RT = [],
-        uT = [],
-        vT = [],
-        ET = [],
-        fT = [],
-        CT = [],
-        jT = [],
-        JT = [],
-        UT = [],
-        aT = [],
-        YT = [],
-        QT = [],
-        OT = [],
-        HT = [],
-        nT = [];
-      return TT = class {
-        constructor() {
-          this.keysUp = (0, iT.j)(this, rT, [38]), this.keysUpward = ((0, iT.j)(this, AT), (0, iT.j)(this, gT, [33])), this.keysDown = ((0, iT.j)(this, hT), (0, iT.j)(this, wT, [40])), this.keysDownward = ((0, iT.j)(this, mT), (0, iT.j)(this, eT, [34])), this.keysLeft = ((0, iT.j)(this, RT), (0, iT.j)(this, uT, [37])), this.keysRight = ((0, iT.j)(this, vT), (0, iT.j)(this, ET, [39])), this.rotationSpeed = ((0, iT.j)(this, fT), (0, iT.j)(this, CT, .5)), this.keysRotateLeft = ((0, iT.j)(this, jT), (0, iT.j)(this, JT, [])), this.keysRotateRight = ((0, iT.j)(this, UT), (0, iT.j)(this, aT, [])), this.keysRotateUp = ((0, iT.j)(this, YT), (0, iT.j)(this, QT, [])), this.keysRotateDown = ((0, iT.j)(this, OT), (0, iT.j)(this, HT, [])), this._keys = ((0, iT.j)(this, nT), new Array)
-        }
-        attachControl(TT) {
-          TT = FT.i.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.pC(), this._engine = this._scene.Zc(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
-            this._keys.length = 0
-          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((oT => {
-            const IT = oT.event;
-            if (!IT.metaKey)
-              if (oT.type === BT.b.KEYDOWN) {
-                if (-1 !== this.keysUp.indexOf(IT.keyCode) || -1 !== this.keysDown.indexOf(IT.keyCode) || -1 !== this.keysLeft.indexOf(IT.keyCode) || -1 !== this.keysRight.indexOf(IT.keyCode) || -1 !== this.keysUpward.indexOf(IT.keyCode) || -1 !== this.keysDownward.indexOf(IT.keyCode) || -1 !== this.keysRotateLeft.indexOf(IT.keyCode) || -1 !== this.keysRotateRight.indexOf(IT.keyCode) || -1 !== this.keysRotateUp.indexOf(IT.keyCode) || -1 !== this.keysRotateDown.indexOf(IT.keyCode)) {
-                  -1 === this._keys.indexOf(IT.keyCode) && this._keys.push(IT.keyCode), TT || IT.preventDefault()
-                }
-              } else if (-1 !== this.keysUp.indexOf(IT.keyCode) || -1 !== this.keysDown.indexOf(IT.keyCode) || -1 !== this.keysLeft.indexOf(IT.keyCode) || -1 !== this.keysRight.indexOf(IT.keyCode) || -1 !== this.keysUpward.indexOf(IT.keyCode) || -1 !== this.keysDownward.indexOf(IT.keyCode) || -1 !== this.keysRotateLeft.indexOf(IT.keyCode) || -1 !== this.keysRotateRight.indexOf(IT.keyCode) || -1 !== this.keysRotateUp.indexOf(IT.keyCode) || -1 !== this.keysRotateDown.indexOf(IT.keyCode)) {
-              const oT = this._keys.indexOf(IT.keyCode);
-              oT >= 0 && this._keys.splice(oT, 1), TT || IT.preventDefault()
-            }
-          })))
-        }
-        detachControl() {
-          this._scene && (this._onKeyboardObserver && this._scene.onKeyboardObservable.remove(this._onKeyboardObserver), this._onCanvasBlurObserver && this._engine.onCanvasBlurObservable.remove(this._onCanvasBlurObserver), this._onKeyboardObserver = null, this._onCanvasBlurObserver = null), this._keys.length = 0
-        }
-        checkInputs() {
-          if (this._onKeyboardObserver) {
-            const TT = this.camera,
-              oT = TT.movement.input,
-              IT = oT.getEntry("keyboard", "translate"),
-              iT = oT.getEntry("keyboard", "rotate"),
-              zT = iT?.sensitivity ?? 1,
-              WT = TT._localDirection.S_(0, 0, 0);
-            for (let kT = 0; kT < this._keys.length; kT++) {
-              const oT = this._keys[kT]; - 1 !== this.keysLeft.indexOf(oT) ? WT.x -= 1 : -1 !== this.keysUp.indexOf(oT) ? WT.z += 1 : -1 !== this.keysRight.indexOf(oT) ? WT.x += 1 : -1 !== this.keysDown.indexOf(oT) ? WT.z -= 1 : -1 !== this.keysUpward.indexOf(oT) ? WT.y += 1 : -1 !== this.keysDownward.indexOf(oT) ? WT.y -= 1 : -1 !== this.keysRotateLeft.indexOf(oT) ? iT && (TT.cameraRotation.y -= this._getLocalRotation() * zT) : -1 !== this.keysRotateRight.indexOf(oT) ? iT && (TT.cameraRotation.y += this._getLocalRotation() * zT) : -1 !== this.keysRotateUp.indexOf(oT) ? iT && (TT.cameraRotation.x -= this._getLocalRotation() * zT) : -1 !== this.keysRotateDown.indexOf(oT) && iT && (TT.cameraRotation.x += this._getLocalRotation() * zT)
-            }
-            if (IT && (0 !== WT.x || 0 !== WT.y || 0 !== WT.z)) {
-              const oT = TT._computeLocalCameraSpeed() * (IT.sensitivity ?? 1);
-              WT.normalize().scaleInPlace(oT), TT.pC().useRightHandedSystem && (WT.z *= -1), TT.getViewMatrix().invertToRef(TT._cameraTransformMatrix), kT.m.TransformNormalToRef(WT, TT._cameraTransformMatrix, TT._transformedDirection), TT.cameraDirection.addInPlace(TT._transformedDirection)
-            }
-          }
-        }
-        getClassName() {
-          return "FreeCameraKeyboardMoveInput"
-        }
-        _onLostFocus() {
-          this._keys.length = 0
-        }
-        getSimpleName() {
-          return "keyboard"
-        }
-        _getLocalRotation() {
-          const TT = this.camera._calculateHandednessMultiplier();
-          return this.rotationSpeed * this._engine.getDeltaTime() / 1e3 * TT
-        }
-      }, (() => {
-        const kT = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        oT = [(0, zT.P)()], IT = [(0, zT.P)()], WT = [(0, zT.P)()], XT = [(0, zT.P)()], ST = [(0, zT.P)()], DT = [(0, zT.P)()], LT = [(0, zT.P)()], xT = [(0, zT.P)()], cT = [(0, zT.P)()], KT = [(0, zT.P)()], MT = [(0, zT.P)()], (0, iT.h)(null, null, oT, {
-          kind: "field",
-          name: "keysUp",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "keysUp" in TT,
-            get: TT => TT.keysUp,
-            set: (TT, oT) => {
-              TT.keysUp = oT
-            }
-          },
-          metadata: kT
-        }, rT, AT), (0, iT.h)(null, null, IT, {
-          kind: "field",
-          name: "keysUpward",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "keysUpward" in TT,
-            get: TT => TT.keysUpward,
-            set: (TT, oT) => {
-              TT.keysUpward = oT
-            }
-          },
-          metadata: kT
-        }, gT, hT), (0, iT.h)(null, null, WT, {
-          kind: "field",
-          name: "keysDown",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "keysDown" in TT,
-            get: TT => TT.keysDown,
-            set: (TT, oT) => {
-              TT.keysDown = oT
-            }
-          },
-          metadata: kT
-        }, wT, mT), (0, iT.h)(null, null, XT, {
-          kind: "field",
-          name: "keysDownward",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "keysDownward" in TT,
-            get: TT => TT.keysDownward,
-            set: (TT, oT) => {
-              TT.keysDownward = oT
-            }
-          },
-          metadata: kT
-        }, eT, RT), (0, iT.h)(null, null, ST, {
-          kind: "field",
-          name: "keysLeft",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "keysLeft" in TT,
-            get: TT => TT.keysLeft,
-            set: (TT, oT) => {
-              TT.keysLeft = oT
-            }
-          },
-          metadata: kT
-        }, uT, vT), (0, iT.h)(null, null, DT, {
-          kind: "field",
-          name: "keysRight",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "keysRight" in TT,
-            get: TT => TT.keysRight,
-            set: (TT, oT) => {
-              TT.keysRight = oT
-            }
-          },
-          metadata: kT
-        }, ET, fT), (0, iT.h)(null, null, LT, {
-          kind: "field",
-          name: "rotationSpeed",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "rotationSpeed" in TT,
-            get: TT => TT.rotationSpeed,
-            set: (TT, oT) => {
-              TT.rotationSpeed = oT
-            }
-          },
-          metadata: kT
-        }, CT, jT), (0, iT.h)(null, null, xT, {
-          kind: "field",
-          name: "keysRotateLeft",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "keysRotateLeft" in TT,
-            get: TT => TT.keysRotateLeft,
-            set: (TT, oT) => {
-              TT.keysRotateLeft = oT
-            }
-          },
-          metadata: kT
-        }, JT, UT), (0, iT.h)(null, null, cT, {
-          kind: "field",
-          name: "keysRotateRight",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "keysRotateRight" in TT,
-            get: TT => TT.keysRotateRight,
-            set: (TT, oT) => {
-              TT.keysRotateRight = oT
-            }
-          },
-          metadata: kT
-        }, aT, YT), (0, iT.h)(null, null, KT, {
-          kind: "field",
-          name: "keysRotateUp",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "keysRotateUp" in TT,
-            get: TT => TT.keysRotateUp,
-            set: (TT, oT) => {
-              TT.keysRotateUp = oT
-            }
-          },
-          metadata: kT
-        }, QT, OT), (0, iT.h)(null, null, MT, {
-          kind: "field",
-          name: "keysRotateDown",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "keysRotateDown" in TT,
-            get: TT => TT.keysRotateDown,
-            set: (TT, oT) => {
-              TT.keysRotateDown = oT
-            }
-          },
-          metadata: kT
-        }, HT, nT), kT && Object.defineProperty(TT, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: kT
-        })
-      })(), TT
-    })();
-    XT.b.FreeCameraKeyboardMoveInput = ST;
-    var DT = IT(36149),
-      LT = IT(38957);
-    let xT = (() => {
-      var TT;
-      let oT, IT, kT = [],
-        WT = [],
-        XT = [],
-        BT = [];
-      return TT = class {
-        _applyPointerRotation(TT, oT) {
-          this._pointerConditions.button = this._currentActiveButton;
-          const IT = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions);
-          if (!IT || "rotate" !== IT.interaction) return;
-          const iT = IT.Kl ?? IT.sensitivity ?? 1 / this.angularSensibility,
-            zT = IT.Ml ?? IT.sensitivity ?? 1 / this.angularSensibility;
-          this.camera.cameraRotation.y += TT * iT, this.camera.cameraRotation.x += oT * zT
-        }
-        constructor() {
-          let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-          this.touchEnabled = TT, this.buttons = (0, iT.j)(this, kT, [0, 1, 2]), this.angularSensibility = ((0, iT.j)(this, WT), (0, iT.j)(this, XT, 2e3)), this._pointerInput = (0, iT.j)(this, BT), this._previousPosition = null, this.onPointerMovedObservable = new DT.d, this._allowCameraRotation = !0, this._currentActiveButton = -1, this._activePointerId = -1, this._pointerConditions = {}
-        }
-        attachControl(TT) {
-          TT = FT.i.BackCompatCameraNoPreventDefault(arguments);
-          const oT = this.camera.Zc(),
-            IT = oT.getInputElement();
-          this._pointerInput || (this._pointerInput = iT => {
-            const zT = iT.event,
-              kT = "touch" === zT.pointerType;
-            if (!this.touchEnabled && kT) return;
-            if (iT.type !== LT.c.POINTERMOVE && -1 === this.buttons.indexOf(zT.button)) return;
-            const WT = zT.target;
-            if (iT.type === LT.c.POINTERDOWN) {
-              if (kT && -1 !== this._activePointerId || !kT && -1 !== this._currentActiveButton) return;
-              this._activePointerId = zT.pointerId;
-              try {
-                WT?.setPointerCapture(zT.pointerId)
-              } catch (XT) {} - 1 === this._currentActiveButton && (this._currentActiveButton = zT.button), this._previousPosition = {
-                x: zT.clientX,
-                y: zT.clientY
-              }, TT || (zT.preventDefault(), IT && IT.focus()), oT.isPointerLock && this._onMouseMove && this._onMouseMove(iT.event)
-            } else if (iT.type === LT.c.POINTERUP) {
-              if (kT && this._activePointerId !== zT.pointerId || !kT && this._currentActiveButton !== zT.button) return;
-              try {
-                WT?.releasePointerCapture(zT.pointerId)
-              } catch (XT) {}
-              this._currentActiveButton = -1, this._previousPosition = null, TT || zT.preventDefault(), this._activePointerId = -1
-            } else if (iT.type === LT.c.POINTERMOVE && (this._activePointerId === zT.pointerId || !kT))
-              if (oT.isPointerLock && this._onMouseMove) this._onMouseMove(iT.event);
-              else if (this._previousPosition) {
-              const oT = this.camera._calculateHandednessMultiplier(),
-                IT = (zT.clientX - this._previousPosition.x) * oT,
-                iT = (zT.clientY - this._previousPosition.y) * oT;
-              this._allowCameraRotation && this._applyPointerRotation(IT, iT), this.onPointerMovedObservable.notifyObservers({
-                offsetX: IT,
-                offsetY: iT
-              }), this._previousPosition = {
-                x: zT.clientX,
-                y: zT.clientY
-              }, TT || zT.preventDefault()
-            }
-          }), this._onMouseMove = IT => {
-            if (!oT.isPointerLock) return;
-            const iT = this.camera._calculateHandednessMultiplier();
-            this._applyPointerRotation(IT.movementX * iT, IT.movementY * iT), this._previousPosition = null, TT || IT.preventDefault()
-          }, this._observer = this.camera.pC()._inputManager._addCameraPointerObserver(this._pointerInput, LT.c.POINTERDOWN | LT.c.POINTERUP | LT.c.POINTERMOVE), IT && (this._contextMenuBind = TT => this.onContextMenu(TT), IT.addEventListener("contextmenu", this._contextMenuBind, !1))
-        }
-        onContextMenu(TT) {
-          TT.preventDefault()
-        }
-        detachControl() {
-          if (this._observer) {
-            if (this.camera.pC()._inputManager._removeCameraPointerObserver(this._observer), this._contextMenuBind) {
-              const TT = this.camera.Zc().getInputElement();
-              TT && TT.removeEventListener("contextmenu", this._contextMenuBind)
-            }
-            this.onPointerMovedObservable && this.onPointerMovedObservable.clear(), this._observer = null, this._onMouseMove = null, this._previousPosition = null
-          }
-          this._activePointerId = -1, this._currentActiveButton = -1
-        }
-        getClassName() {
-          return "FreeCameraMouseInput"
-        }
-        getSimpleName() {
-          return "mouse"
-        }
-      }, (() => {
-        const FT = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        oT = [(0, zT.P)()], IT = [(0, zT.P)()], (0, iT.h)(null, null, oT, {
-          kind: "field",
-          name: "buttons",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "buttons" in TT,
-            get: TT => TT.buttons,
-            set: (TT, oT) => {
-              TT.buttons = oT
-            }
-          },
-          metadata: FT
-        }, kT, WT), (0, iT.h)(null, null, IT, {
-          kind: "field",
-          name: "angularSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "angularSensibility" in TT,
-            get: TT => TT.angularSensibility,
-            set: (TT, oT) => {
-              TT.angularSensibility = oT
-            }
-          },
-          metadata: FT
-        }, XT, BT), FT && Object.defineProperty(TT, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: FT
-        })
-      })(), TT
-    })();
-    XT.b.FreeCameraMouseInput = xT;
-    var cT = IT(38966);
-    let KT = (() => {
-      var TT;
-      let oT, IT, kT, WT = [],
-        XT = [],
-        BT = [],
-        ST = [],
-        xT = [],
-        KT = [];
-      return TT = class {
-        constructor() {
-          this.wheelPrecisionX = (0, iT.j)(this, WT, 3), this.wheelPrecisionY = ((0, iT.j)(this, XT), (0, iT.j)(this, BT, 3)), this.wheelPrecisionZ = ((0, iT.j)(this, ST), (0, iT.j)(this, xT, 3)), this.onChangedObservable = ((0, iT.j)(this, KT), new DT.d), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0, this._ffMultiplier = 12, this._normalize = 120
-        }
-        attachControl(TT) {
-          TT = FT.i.BackCompatCameraNoPreventDefault(arguments), this._wheel = oT => {
-            if (oT.type !== LT.c.POINTERWHEEL) return;
-            const IT = oT.event,
-              iT = IT.deltaMode === cT.b.DOM_DELTA_LINE ? this._ffMultiplier : 1;
-            this._wheelDeltaX += this.wheelPrecisionX * iT * IT.deltaX / this._normalize, this._wheelDeltaY -= this.wheelPrecisionY * iT * IT.deltaY / this._normalize, this._wheelDeltaZ += this.wheelPrecisionZ * iT * IT.deltaZ / this._normalize, IT.preventDefault && (TT || IT.preventDefault())
-          }, this._observer = this.camera.pC()._inputManager._addCameraPointerObserver(this._wheel, LT.c.POINTERWHEEL)
-        }
-        detachControl() {
-          this._observer && (this.camera.pC()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null), this.onChangedObservable && this.onChangedObservable.clear()
-        }
-        checkInputs() {
-          this.onChangedObservable.notifyObservers({
-            wheelDeltaX: this._wheelDeltaX,
-            wheelDeltaY: this._wheelDeltaY,
-            wheelDeltaZ: this._wheelDeltaZ
-          }), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0
-        }
-        getClassName() {
-          return "BaseCameraMouseWheelInput"
-        }
-        getSimpleName() {
-          return "mousewheel"
-        }
-      }, (() => {
-        const FT = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        oT = [(0, zT.P)()], IT = [(0, zT.P)()], kT = [(0, zT.P)()], (0, iT.h)(null, null, oT, {
-          kind: "field",
-          name: "wheelPrecisionX",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "wheelPrecisionX" in TT,
-            get: TT => TT.wheelPrecisionX,
-            set: (TT, oT) => {
-              TT.wheelPrecisionX = oT
-            }
-          },
-          metadata: FT
-        }, WT, XT), (0, iT.h)(null, null, IT, {
-          kind: "field",
-          name: "wheelPrecisionY",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "wheelPrecisionY" in TT,
-            get: TT => TT.wheelPrecisionY,
-            set: (TT, oT) => {
-              TT.wheelPrecisionY = oT
-            }
-          },
-          metadata: FT
-        }, BT, ST), (0, iT.h)(null, null, kT, {
-          kind: "field",
-          name: "wheelPrecisionZ",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "wheelPrecisionZ" in TT,
-            get: TT => TT.wheelPrecisionZ,
-            set: (TT, oT) => {
-              TT.wheelPrecisionZ = oT
-            }
-          },
-          metadata: FT
-        }, xT, KT), FT && Object.defineProperty(TT, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: FT
-        })
-      })(), TT
-    })();
-    var MT;
-    ! function(TT) {
-      TT[TT.MoveRelative = 0] = "MoveRelative", TT[TT.RotateRelative = 1] = "RotateRelative", TT[TT.MoveScene = 2] = "MoveScene"
-    }(MT || (MT = {}));
-    let rT = (() => {
-      var TT;
-      let oT, IT, WT, XT, BT, FT, ST, DT, LT, xT = KT,
-        cT = [];
-      return TT = class extends xT {
-        constructor() {
-          super(...arguments), this.camera = (0, iT.j)(this, cT), this._moveRelative = kT.m.Zero(), this._rotateRelative = kT.m.Zero(), this._moveScene = kT.m.Zero(), this._wheelXAction = MT.MoveRelative, this._wheelXActionCoordinate = 0, this._wheelYAction = MT.MoveRelative, this._wheelYActionCoordinate = 2, this._wheelZAction = null, this._wheelZActionCoordinate = null
-        }
-        getClassName() {
-          return "FreeCameraMouseWheelInput"
-        }
-        set wheelXMoveRelative(TT) {
-          null === TT && this._wheelXAction !== MT.MoveRelative || (this._wheelXAction = MT.MoveRelative, this._wheelXActionCoordinate = TT)
-        }
-        get wheelXMoveRelative() {
-          return this._wheelXAction !== MT.MoveRelative ? null : this._wheelXActionCoordinate
-        }
-        set wheelYMoveRelative(TT) {
-          null === TT && this._wheelYAction !== MT.MoveRelative || (this._wheelYAction = MT.MoveRelative, this._wheelYActionCoordinate = TT)
-        }
-        get wheelYMoveRelative() {
-          return this._wheelYAction !== MT.MoveRelative ? null : this._wheelYActionCoordinate
-        }
-        set wheelZMoveRelative(TT) {
-          null === TT && this._wheelZAction !== MT.MoveRelative || (this._wheelZAction = MT.MoveRelative, this._wheelZActionCoordinate = TT)
-        }
-        get wheelZMoveRelative() {
-          return this._wheelZAction !== MT.MoveRelative ? null : this._wheelZActionCoordinate
-        }
-        set wheelXRotateRelative(TT) {
-          null === TT && this._wheelXAction !== MT.RotateRelative || (this._wheelXAction = MT.RotateRelative, this._wheelXActionCoordinate = TT)
-        }
-        get wheelXRotateRelative() {
-          return this._wheelXAction !== MT.RotateRelative ? null : this._wheelXActionCoordinate
-        }
-        set wheelYRotateRelative(TT) {
-          null === TT && this._wheelYAction !== MT.RotateRelative || (this._wheelYAction = MT.RotateRelative, this._wheelYActionCoordinate = TT)
-        }
-        get wheelYRotateRelative() {
-          return this._wheelYAction !== MT.RotateRelative ? null : this._wheelYActionCoordinate
-        }
-        set wheelZRotateRelative(TT) {
-          null === TT && this._wheelZAction !== MT.RotateRelative || (this._wheelZAction = MT.RotateRelative, this._wheelZActionCoordinate = TT)
-        }
-        get wheelZRotateRelative() {
-          return this._wheelZAction !== MT.RotateRelative ? null : this._wheelZActionCoordinate
-        }
-        set wheelXMoveScene(TT) {
-          null === TT && this._wheelXAction !== MT.MoveScene || (this._wheelXAction = MT.MoveScene, this._wheelXActionCoordinate = TT)
-        }
-        get wheelXMoveScene() {
-          return this._wheelXAction !== MT.MoveScene ? null : this._wheelXActionCoordinate
-        }
-        set wheelYMoveScene(TT) {
-          null === TT && this._wheelYAction !== MT.MoveScene || (this._wheelYAction = MT.MoveScene, this._wheelYActionCoordinate = TT)
-        }
-        get wheelYMoveScene() {
-          return this._wheelYAction !== MT.MoveScene ? null : this._wheelYActionCoordinate
-        }
-        set wheelZMoveScene(TT) {
-          null === TT && this._wheelZAction !== MT.MoveScene || (this._wheelZAction = MT.MoveScene, this._wheelZActionCoordinate = TT)
-        }
-        get wheelZMoveScene() {
-          return this._wheelZAction !== MT.MoveScene ? null : this._wheelZActionCoordinate
-        }
-        checkInputs() {
-          if (0 === this._wheelDeltaX && 0 === this._wheelDeltaY && 0 == this._wheelDeltaZ) return;
-          this._moveRelative.W8(0), this._rotateRelative.W8(0), this._moveScene.W8(0), this._updateCamera(), this.camera.pC().useRightHandedSystem && (this._moveRelative.z *= -1);
-          const TT = kT.b.Zero();
-          this.camera.getViewMatrix().invertToRef(TT);
-          const oT = kT.m.Zero();
-          kT.m.TransformNormalToRef(this._moveRelative, TT, oT), this.camera.cameraRotation.x += this._rotateRelative.x / 200, this.camera.cameraRotation.y += this._rotateRelative.y / 200, this.camera.cameraDirection.addInPlace(oT), this.camera.cameraDirection.addInPlace(this._moveScene), super.checkInputs()
-        }
-        _updateCamera() {
-          this._updateCameraProperty(this._wheelDeltaX, this._wheelXAction, this._wheelXActionCoordinate), this._updateCameraProperty(this._wheelDeltaY, this._wheelYAction, this._wheelYActionCoordinate), this._updateCameraProperty(this._wheelDeltaZ, this._wheelZAction, this._wheelZActionCoordinate)
-        }
-        _updateCameraProperty(TT, oT, IT) {
-          if (0 === TT) return;
-          if (null === oT || null === IT) return;
-          let iT = null;
-          switch (oT) {
-            case MT.MoveRelative:
-              iT = this._moveRelative;
-              break;
-            case MT.RotateRelative:
-              iT = this._rotateRelative;
-              break;
-            case MT.MoveScene:
-              iT = this._moveScene
-          }
-          switch (IT) {
-            case 0:
-              iT.set(TT, 0, 0);
-              break;
-            case 1:
-              iT.set(0, TT, 0);
-              break;
-            case 2:
-              iT.set(0, 0, TT)
-          }
-        }
-      }, (() => {
-        const kT = "function" === typeof Symbol && Symbol.metadata ? Object.create(xT[Symbol.metadata] ?? null) : void 0;
-        oT = [(0, zT.P)()], IT = [(0, zT.P)()], WT = [(0, zT.P)()], XT = [(0, zT.P)()], BT = [(0, zT.P)()], FT = [(0, zT.P)()], ST = [(0, zT.P)()], DT = [(0, zT.P)()], LT = [(0, zT.P)()], (0, iT.h)(TT, null, oT, {
-          kind: "setter",
-          name: "wheelXMoveRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "wheelXMoveRelative" in TT,
-            set: (TT, oT) => {
-              TT.wheelXMoveRelative = oT
-            }
-          },
-          metadata: kT
-        }, null, cT), (0, iT.h)(TT, null, IT, {
-          kind: "setter",
-          name: "wheelYMoveRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "wheelYMoveRelative" in TT,
-            set: (TT, oT) => {
-              TT.wheelYMoveRelative = oT
-            }
-          },
-          metadata: kT
-        }, null, cT), (0, iT.h)(TT, null, WT, {
-          kind: "setter",
-          name: "wheelZMoveRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "wheelZMoveRelative" in TT,
-            set: (TT, oT) => {
-              TT.wheelZMoveRelative = oT
-            }
-          },
-          metadata: kT
-        }, null, cT), (0, iT.h)(TT, null, XT, {
-          kind: "setter",
-          name: "wheelXRotateRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "wheelXRotateRelative" in TT,
-            set: (TT, oT) => {
-              TT.wheelXRotateRelative = oT
-            }
-          },
-          metadata: kT
-        }, null, cT), (0, iT.h)(TT, null, BT, {
-          kind: "setter",
-          name: "wheelYRotateRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "wheelYRotateRelative" in TT,
-            set: (TT, oT) => {
-              TT.wheelYRotateRelative = oT
-            }
-          },
-          metadata: kT
-        }, null, cT), (0, iT.h)(TT, null, FT, {
-          kind: "setter",
-          name: "wheelZRotateRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "wheelZRotateRelative" in TT,
-            set: (TT, oT) => {
-              TT.wheelZRotateRelative = oT
-            }
-          },
-          metadata: kT
-        }, null, cT), (0, iT.h)(TT, null, ST, {
-          kind: "setter",
-          name: "wheelXMoveScene",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "wheelXMoveScene" in TT,
-            set: (TT, oT) => {
-              TT.wheelXMoveScene = oT
-            }
-          },
-          metadata: kT
-        }, null, cT), (0, iT.h)(TT, null, DT, {
-          kind: "setter",
-          name: "wheelYMoveScene",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "wheelYMoveScene" in TT,
-            set: (TT, oT) => {
-              TT.wheelYMoveScene = oT
-            }
-          },
-          metadata: kT
-        }, null, cT), (0, iT.h)(TT, null, LT, {
-          kind: "setter",
-          name: "wheelZMoveScene",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "wheelZMoveScene" in TT,
-            set: (TT, oT) => {
-              TT.wheelZMoveScene = oT
-            }
-          },
-          metadata: kT
-        }, null, cT), kT && Object.defineProperty(TT, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: kT
-        })
-      })(), TT
-    })();
-    XT.b.FreeCameraMouseWheelInput = rT;
-    let AT = (() => {
-      var TT;
-      let oT, IT, WT = [],
-        XT = [],
-        BT = [],
-        ST = [];
-      return TT = class {
-        constructor() {
-          let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          this.allowMouse = TT, this.touchAngularSensibility = (0, iT.j)(this, WT, 2e5), this.touchMoveSensibility = ((0, iT.j)(this, XT), (0, iT.j)(this, BT, 250)), this.singleFingerRotate = ((0, iT.j)(this, ST), !1), this._offsetX = null, this._offsetY = null, this._pointerPressed = new Array, this._isSafari = FT.i.IsSafari()
-        }
-        attachControl(TT) {
-          TT = FT.i.BackCompatCameraNoPreventDefault(arguments);
-          let oT = null;
-          if (void 0 === this._pointerInput && (this._onLostFocus = () => {
-              this._offsetX = null, this._offsetY = null
-            }, this._pointerInput = IT => {
-              const iT = IT.event,
-                zT = "mouse" === iT.pointerType || this._isSafari && "undefined" === typeof iT.pointerType;
-              if (this.allowMouse || !zT)
-                if (IT.type === LT.c.POINTERDOWN) {
-                  if (TT || iT.preventDefault(), this._pointerPressed.push(iT.pointerId), 1 !== this._pointerPressed.length) return;
-                  oT = {
-                    x: iT.clientX,
-                    y: iT.clientY
-                  }
-                } else if (IT.type === LT.c.POINTERUP) {
-                TT || iT.preventDefault();
-                const IT = this._pointerPressed.indexOf(iT.pointerId);
-                if (-1 === IT) return;
-                if (this._pointerPressed.splice(IT, 1), 0 != IT) return;
-                oT = null, this._offsetX = null, this._offsetY = null
-              } else if (IT.type === LT.c.POINTERMOVE) {
-                if (TT || iT.preventDefault(), !oT) return;
-                if (0 != this._pointerPressed.indexOf(iT.pointerId)) return;
-                this._offsetX = iT.clientX - oT.x, this._offsetY = -(iT.clientY - oT.y)
-              }
-            }), this._observer = this.camera.pC()._inputManager._addCameraPointerObserver(this._pointerInput, LT.c.POINTERDOWN | LT.c.POINTERUP | LT.c.POINTERMOVE), this._onLostFocus) {
-            const TT = this.camera.Zc().getInputElement();
-            TT && TT.addEventListener("blur", this._onLostFocus)
-          }
-        }
-        detachControl() {
-          if (this._pointerInput) {
-            if (this._observer && (this.camera.pC()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null), this._onLostFocus) {
-              const TT = this.camera.Zc().getInputElement();
-              TT && TT.removeEventListener("blur", this._onLostFocus), this._onLostFocus = null
-            }
-            this._pointerPressed.length = 0, this._offsetX = null, this._offsetY = null
-          }
-        }
-        checkInputs() {
-          if (null === this._offsetX || null === this._offsetY) return;
-          if (0 === this._offsetX && 0 === this._offsetY) return;
-          const TT = this.camera,
-            oT = TT.movement.input,
-            IT = oT.getEntry("touch", "rotate"),
-            iT = oT.getEntry("touch", "translate"),
-            zT = TT._calculateHandednessMultiplier(),
-            WT = this.singleFingerRotate && 1 === this._pointerPressed.length || !this.singleFingerRotate && this._pointerPressed.length > 1;
-          if (IT) {
-            const oT = IT.sensitivity ?? 1 / this.touchAngularSensibility;
-            TT.cameraRotation.y = this._offsetX * zT * oT, WT && (TT.cameraRotation.x = -this._offsetY * zT * oT)
-          }
-          if (!WT && iT) {
-            const oT = TT._computeLocalCameraSpeed(),
-              IT = iT.sensitivity ?? (0 !== this.touchMoveSensibility ? 1 / this.touchMoveSensibility : 0),
-              zT = kT.i.sc[0];
-            zT.S_(0, 0, oT * this._offsetY * IT), kT.b.RotationYawPitchRollToRef(TT.rotation.y, TT.rotation.x, 0, TT._cameraRotationMatrix), kT.m.TransformCoordinatesToRef(zT, TT._cameraRotationMatrix, zT), TT.cameraDirection.addInPlace(zT)
-          }
-        }
-        getClassName() {
-          return "FreeCameraTouchInput"
-        }
-        getSimpleName() {
-          return "touch"
-        }
-      }, (() => {
-        const kT = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        oT = [(0, zT.P)()], IT = [(0, zT.P)()], (0, iT.h)(null, null, oT, {
-          kind: "field",
-          name: "touchAngularSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "touchAngularSensibility" in TT,
-            get: TT => TT.touchAngularSensibility,
-            set: (TT, oT) => {
-              TT.touchAngularSensibility = oT
-            }
-          },
-          metadata: kT
-        }, WT, XT), (0, iT.h)(null, null, IT, {
-          kind: "field",
-          name: "touchMoveSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: TT => "touchMoveSensibility" in TT,
-            get: TT => TT.touchMoveSensibility,
-            set: (TT, oT) => {
-              TT.touchMoveSensibility = oT
-            }
-          },
-          metadata: kT
-        }, BT, ST), kT && Object.defineProperty(TT, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: kT
-        })
-      })(), TT
-    })();
-    XT.b.FreeCameraTouchInput = AT;
-    var gT, hT, wT, mT = IT(38643);
-    class eT extends XT.e {
-      constructor(TT) {
-        super(TT), this._mouseInput = null, this._mouseWheelInput = null
+    var Ez = bz(38060),
+      nz = bz(39182),
+      iz = bz(39376),
+      lz = {};
+    class Mz {
+      constructor(zz) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = zz, this.checkInputs = () => {}
       }
-      addKeyboard() {
-        return this.add(new ST), this
+      add(zz) {
+        const uz = zz.getSimpleName();
+        this.attached[uz] ? Ez.e.Warn("camera input of type " + uz + " already exists on camera") : (this.attached[uz] = zz, zz.camera = this.camera, zz.checkInputs && (this.checkInputs = this._addCheckInputs(zz.checkInputs.bind(zz))), this.attachedToElement && zz.attachControl(this.noPreventDefault))
       }
-      addMouse() {
-        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._mouseInput || (this._mouseInput = new xT(TT), this.add(this._mouseInput)), this
+      remove(zz) {
+        for (const uz in this.attached) {
+          const bz = this.attached[uz];
+          if (bz === zz) return bz.detachControl(), bz.camera = null, delete this.attached[uz], void this.rebuildInputCheck()
+        }
       }
-      removeMouse() {
-        return this._mouseInput && this.remove(this._mouseInput), this
+      removeByType(zz) {
+        for (const uz in this.attached) {
+          const bz = this.attached[uz];
+          bz.getClassName() === zz && (bz.detachControl(), bz.camera = null, delete this.attached[uz], this.rebuildInputCheck())
+        }
       }
-      addMouseWheel() {
-        return this._mouseWheelInput || (this._mouseWheelInput = new rT, this.add(this._mouseWheelInput)), this
+      _addCheckInputs(zz) {
+        const uz = this.checkInputs;
+        return () => {
+          uz(), zz()
+        }
       }
-      removeMouseWheel() {
-        return this._mouseWheelInput && this.remove(this._mouseWheelInput), this
+      attachInput(zz) {
+        this.attachedToElement && zz.attachControl(this.noPreventDefault)
       }
-      addTouch() {
-        return this.add(new AT), this
+      attachElement() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if (!this.attachedToElement) {
+          zz = !iz.d.ForceAttachControlToAlwaysPreventDefault && zz, this.attachedToElement = !0, this.noPreventDefault = zz;
+          for (const uz in this.attached) this.attached[uz].attachControl(zz)
+        }
+      }
+      detachElement() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const uz in this.attached) this.attached[uz].detachControl(), zz && (this.attached[uz].camera = null);
+        this.attachedToElement = !1
+      }
+      rebuildInputCheck() {
+        this.checkInputs = () => {};
+        for (const zz in this.attached) {
+          const uz = this.attached[zz];
+          uz.checkInputs && (this.checkInputs = this._addCheckInputs(uz.checkInputs.bind(uz)))
+        }
       }
       clear() {
-        super.clear(), this._mouseInput = null
+        this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
       }
-    }(gT = eT.prototype).addDeviceOrientation ?? (gT.addDeviceOrientation = (0, mT.i)("FreeCameraInputsManager", "addDeviceOrientation")), (hT = eT.prototype).addVirtualJoystick ?? (hT.addVirtualJoystick = (0, mT.i)("FreeCameraInputsManager", "addVirtualJoystick")), (wT = eT.prototype).addGamepad ?? (wT.addGamepad = (0, mT.i)("FreeCameraInputsManager", "addGamepad"));
-    var RT = IT(38659),
-      uT = IT(36166);
-    let vT = (() => {
-        var TT;
-        let oT, IT, XT, BT, ST = WT.d,
-          DT = [],
-          LT = [],
-          xT = [],
-          cT = [],
-          KT = [],
-          MT = [],
-          rT = [],
-          AT = [];
-        return TT = class extends ST {
-          get angularSensibility() {
-            const TT = this.inputs.attached.mouse;
-            return TT ? TT.angularSensibility : 0
+      serialize(zz) {
+        const uz = {};
+        for (const bz in this.attached) {
+          const zz = this.attached[bz],
+            Ez = nz.e.Serialize(zz);
+          uz[zz.getClassName()] = Ez
+        }
+        zz.inputsmgr = uz
+      }
+      parse(zz) {
+        const uz = zz.inputsmgr;
+        if (uz) {
+          this.clear();
+          for (const zz in uz) {
+            const bz = lz[zz];
+            if (bz) {
+              const Ez = uz[zz],
+                iz = nz.e.Parse((() => new bz), Ez, null);
+              this.add(iz)
+            }
           }
-          set angularSensibility(TT) {
-            const oT = this.inputs.attached.mouse;
-            oT && (oT.angularSensibility = TT)
+        } else
+          for (const bz in this.attached) {
+            const uz = lz[this.attached[bz].getClassName()];
+            if (uz) {
+              const Ez = nz.e.Parse((() => new uz), zz, null);
+              this.remove(this.attached[bz]), this.add(Ez)
+            }
           }
-          get keysUp() {
-            const TT = this.inputs.attached.keyboard;
-            return TT ? TT.keysUp : []
+      }
+    }
+  },
+  40334: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => fz
+    });
+    var Ez = bz(39170),
+      nz = bz(39172),
+      iz = bz(39071),
+      lz = bz(36519),
+      Mz = bz(39167),
+      tz = bz(39636),
+      Hz = bz(36564),
+      Oz = bz(36547),
+      pz = bz(39182),
+      dz = bz(39011),
+      Fz = bz(38060),
+      Zz = bz(39202),
+      Rz = bz(37335),
+      Kz = bz(39241);
+    var wz = bz(39079);
+    let Xz = !1;
+    let fz = (() => {
+        var zz;
+        let uz, bz, Hz, fz, sz, rz, oz, Nz, vz, xz = Mz.b,
+          Jz = [],
+          Az = [],
+          Tz = [],
+          Lz = [],
+          Pz = [],
+          Gz = [],
+          az = [],
+          Vz = [],
+          mz = [],
+          qz = [],
+          hz = [],
+          Uz = [],
+          cz = [],
+          gz = [],
+          Sz = [];
+        return zz = class extends xz {
+          set boundingBoxSize(zz) {
+            if (this._boundingBoxSize && this._boundingBoxSize.equals(zz)) return;
+            this._boundingBoxSize = zz;
+            const uz = this.XT();
+            uz && uz.markAllMaterialsAsDirty(1)
           }
-          set keysUp(TT) {
-            const oT = this.inputs.attached.keyboard;
-            oT && (oT.keysUp = TT)
+          get boundingBoxSize() {
+            return this._boundingBoxSize
           }
-          get keysUpward() {
-            const TT = this.inputs.attached.keyboard;
-            return TT ? TT.keysUpward : []
+          set rotationY(zz) {
+            this._rotationY = zz, this.setReflectionTextureMatrix(lz.d.RotationY(this._rotationY))
           }
-          set keysUpward(TT) {
-            const oT = this.inputs.attached.keyboard;
-            oT && (oT.keysUpward = TT)
+          get rotationY() {
+            return this._rotationY
           }
-          get keysDown() {
-            const TT = this.inputs.attached.keyboard;
-            return TT ? TT.keysDown : []
+          get noMipmap() {
+            return this._noMipmap
           }
-          set keysDown(TT) {
-            const oT = this.inputs.attached.keyboard;
-            oT && (oT.keysDown = TT)
+          get forcedExtension() {
+            return this._forcedExtension
           }
-          get keysDownward() {
-            const TT = this.inputs.attached.keyboard;
-            return TT ? TT.keysDownward : []
-          }
-          set keysDownward(TT) {
-            const oT = this.inputs.attached.keyboard;
-            oT && (oT.keysDownward = TT)
-          }
-          get keysLeft() {
-            const TT = this.inputs.attached.keyboard;
-            return TT ? TT.keysLeft : []
-          }
-          set keysLeft(TT) {
-            const oT = this.inputs.attached.keyboard;
-            oT && (oT.keysLeft = TT)
-          }
-          get keysRight() {
-            const TT = this.inputs.attached.keyboard;
-            return TT ? TT.keysRight : []
-          }
-          set keysRight(TT) {
-            const oT = this.inputs.attached.keyboard;
-            oT && (oT.keysRight = TT)
-          }
-          get keysRotateLeft() {
-            const TT = this.inputs.attached.keyboard;
-            return TT ? TT.keysRotateLeft : []
-          }
-          set keysRotateLeft(TT) {
-            const oT = this.inputs.attached.keyboard;
-            oT && (oT.keysRotateLeft = TT)
-          }
-          get keysRotateRight() {
-            const TT = this.inputs.attached.keyboard;
-            return TT ? TT.keysRotateRight : []
-          }
-          set keysRotateRight(TT) {
-            const oT = this.inputs.attached.keyboard;
-            oT && (oT.keysRotateRight = TT)
-          }
-          get keysRotateUp() {
-            const TT = this.inputs.attached.keyboard;
-            return TT ? TT.keysRotateUp : []
-          }
-          set keysRotateUp(TT) {
-            const oT = this.inputs.attached.keyboard;
-            oT && (oT.keysRotateUp = TT)
-          }
-          get keysRotateDown() {
-            const TT = this.inputs.attached.keyboard;
-            return TT ? TT.keysRotateDown : []
-          }
-          set keysRotateDown(TT) {
-            const oT = this.inputs.attached.keyboard;
-            oT && (oT.keysRotateDown = TT)
-          }
-          constructor(TT, oT, IT) {
-            var zT;
-            super(TT, oT, IT, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), zT = this, this.ellipsoid = (0, iT.j)(this, DT, new kT.m(.5, 1, .5)), this.ellipsoidOffset = ((0, iT.j)(this, LT), (0, iT.j)(this, xT, new kT.m(0, 0, 0))), this.checkCollisions = ((0, iT.j)(this, cT), (0, iT.j)(this, KT, !1)), this.applyGravity = ((0, iT.j)(this, MT), (0, iT.j)(this, rT, !1)), this.inputs = (0, iT.j)(this, AT), this._needMoveForGravity = !1, this._oldPosition = kT.m.Zero(), this._diffPosition = kT.m.Zero(), this._newPosition = kT.m.Zero(), this._collisionMask = -1, this._onCollisionPositionChange = function(TT, oT) {
-              let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-              zT._newPosition.SIT(oT), zT._newPosition.subtractToRef(zT._oldPosition, zT._diffPosition), zT._diffPosition.length() > RT.b.CollisionsEpsilon && (zT.position.addToRef(zT._diffPosition, zT._deferredPositionUpdate), zT._deferOnly ? zT._deferredUpdated = !0 : zT.position.SIT(zT._deferredPositionUpdate), zT.cL && IT && zT.cL(IT))
-            }, this.inputs = new eT(this), this.inputs.addKeyboard().addMouse()
-          }
-          attachControl(TT, oT) {
-            oT = FT.i.BackCompatCameraNoPreventDefault(arguments), this.inputs.attachElement(oT)
-          }
-          detachControl() {
-            this.inputs.detachElement(), this.cameraDirection = new kT.m(0, 0, 0), this.cameraRotation = new kT.j(0, 0)
-          }
-          get collisionMask() {
-            return this._collisionMask
-          }
-          set collisionMask(TT) {
-            this._collisionMask = isNaN(TT) ? -1 : TT
-          }
-          _collideWithWorld(TT) {
-            let oT;
-            oT = this.parent ? kT.m.TransformCoordinates(this.position, this.parent.getWorldMatrix()) : this.position, oT.subtractFromFloatsToRef(0, this.ellipsoid.y, 0, this._oldPosition), this._oldPosition.addInPlace(this.ellipsoidOffset);
-            const IT = this.pC().collisionCoordinator;
-            this._collider || (this._collider = IT.createCollider()), this._collider._radius = this.ellipsoid, this._collider.collisionMask = this._collisionMask;
-            let iT = TT;
-            this.applyGravity && (iT = TT.add(this.pC().gravity)), IT.getNewPosition(this._oldPosition, iT, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
-          }
-          _checkInputs() {
-            this._localDirection || (this._localDirection = kT.m.Zero(), this._transformedDirection = kT.m.Zero()), this.inputs.checkInputs(), super._checkInputs()
-          }
-          set needMoveForGravity(TT) {
-            this._needMoveForGravity = TT
-          }
-          get needMoveForGravity() {
-            return this._needMoveForGravity
-          }
-          _decideIfNeedsToMove() {
-            return this._needMoveForGravity || Math.abs(this.cameraDirection.x) > 0 || Math.abs(this.cameraDirection.y) > 0 || Math.abs(this.cameraDirection.z) > 0
-          }
-          _updatePosition() {
-            this.checkCollisions && this.pC().collisionsEnabled ? this._collideWithWorld(this.cameraDirection) : super._updatePosition()
-          }
-          dispose() {
-            this.inputs.clear(), super.dispose()
+          constructor(zz, uz) {
+            let bz, nz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              iz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              Mz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+              Hz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              pz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              fz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 5,
+              sz = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              rz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+              oz = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
+              Nz = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : .8,
+              vz = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 0,
+              xz = arguments.length > 13 ? arguments[13] : void 0,
+              yz = arguments.length > 14 ? arguments[14] : void 0;
+            super(uz), this._delayedOnLoad = (0, Ez.j)(this, Jz), this.onLoadObservable = new Oz.b, this.url = (0, Ez.j)(this, Az, void 0), this.boundingBoxPosition = ((0, Ez.j)(this, Tz), (0, Ez.j)(this, Lz, lz.n.Zero())), this._boundingBoxSize = (0, Ez.j)(this, Pz), this._rotationY = 0, this._files = (0, Ez.j)(this, Gz, null), this._forcedExtension = ((0, Ez.j)(this, az), (0, Ez.j)(this, Vz, null)), this._extensions = ((0, Ez.j)(this, mz), (0, Ez.j)(this, qz, null)), this._textureMatrix = ((0, Ez.j)(this, hz), (0, Ez.j)(this, Uz, void 0)), this._textureMatrixRefraction = ((0, Ez.j)(this, cz), (0, Ez.j)(this, gz, new lz.d)), this._format = (0, Ez.j)(this, Sz), this._buffer = null, Xz || (Xz = !0, wz.b.prototype._partialLoadFile = function(zz, uz, bz, Ez) {
+              let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+              this._loadFile(zz, (zz => {
+                bz[uz] = zz, bz._internalCount++, 6 === bz._internalCount && Ez(bz)
+              }), void 0, void 0, !0, ((zz, uz) => {
+                nz && zz && nz(zz.status + " " + zz.statusText, uz)
+              }))
+            }, wz.b.prototype._cascadeLoadFiles = function(zz, uz, bz) {
+              let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+              const nz = [];
+              nz._internalCount = 0;
+              for (let iz = 0; iz < 6; iz++) this._partialLoadFile(bz[iz], iz, nz, uz, Ez)
+            }, wz.b.prototype._cascadeLoadImgs = function(zz, uz, bz, Ez) {
+              let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+                iz = arguments.length > 5 ? arguments[5] : void 0;
+              const lz = [];
+              lz._internalCount = 0;
+              for (let Mz = 0; Mz < 6; Mz++) this._partialLoadImg(Ez[Mz], Mz, lz, zz, uz, bz, nz, iz)
+            }, wz.b.prototype._partialLoadImg = function(zz, uz, bz, Ez, nz, iz) {
+              let lz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+                Mz = arguments.length > 7 ? arguments[7] : void 0;
+              const tz = (0, Rz.c)();
+              (0, Zz.t)(zz, (zz => {
+                bz[uz] = zz, bz._internalCount++, Ez && Ez.removePendingData(tz), 6 === bz._internalCount && iz && iz(nz, bz)
+              }), ((zz, uz) => {
+                Ez && Ez.removePendingData(tz), lz && lz(zz, uz)
+              }), Ez ? Ez.offlineProvider : null, Mz), Ez && Ez.addPendingData(tz)
+            }, wz.b.prototype.createCubeTextureBase = function(zz, uz, bz, Ez) {
+              let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+                iz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+                lz = arguments.length > 6 ? arguments[6] : void 0,
+                Mz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+                tz = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+                Hz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+                Oz = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
+                pz = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
+                Zz = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
+                Rz = arguments.length > 13 && void 0 !== arguments[13] ? arguments[13] : null,
+                wz = arguments.length > 14 && void 0 !== arguments[14] && arguments[14],
+                Xz = arguments.length > 15 && void 0 !== arguments[15] ? arguments[15] : null;
+              const fz = pz || new dz.c(this, 7);
+              fz.isCube = !0, fz.url = zz, fz.generateMipMaps = !Ez, fz._lodGenerationScale = Hz, fz._lodGenerationOffset = Oz, fz._useSRGBBuffer = !!wz && this._caps.supportSRGBBuffers && (this.version > 1 || this.isWebGPU || !!Ez), fz !== pz && (fz.label = zz.substring(0, 60)), this._doNotHandleContextLost || (fz._extension = Mz, fz._files = bz, fz._buffer = Xz);
+              const sz = zz;
+              this._transformTextureUrl && !pz && (zz = this._transformTextureUrl(zz));
+              const rz = Mz ?? function(zz) {
+                  const uz = zz.split("?")[0],
+                    bz = uz.lastIndexOf(".");
+                  return bz > -1 ? uz.substring(bz).toLowerCase() : ""
+                }(zz),
+                oz = (0, Kz.c)(rz),
+                Nz = (zz, uz) => {
+                  fz.dispose(), iz ? iz(zz, uz) : zz && Fz.e.Warn(zz)
+                },
+                vz = (iz, pz) => {
+                  zz === sz ? iz && Nz(iz.status + " " + iz.statusText, pz) : (Fz.e.Warn(`Failed to load ${zz}, falling back to the ${sz}`), this.createCubeTextureBase(sz, uz, bz, !!Ez, nz, Nz, lz, Mz, tz, Hz, Oz, fz, Zz, Rz, wz, Xz))
+                };
+              if (oz) oz.then((Ez => {
+                const iz = zz => {
+                  Zz && Zz(fz, zz), Ez.loadCubeData(zz, fz, tz, nz, ((zz, uz) => {
+                    Nz(zz, uz)
+                  }))
+                };
+                Xz ? iz(Xz) : bz && 6 === bz.length ? Ez.supportCascades ? this._cascadeLoadFiles(uz, (zz => iz(zz.map((zz => new Uint8Array(zz))))), bz, Nz) : Nz("Textures type does not support cascades.") : this._loadFile(zz, (zz => iz(new Uint8Array(zz))), void 0, uz ? uz.offlineProvider || null : void 0, !0, vz)
+              }));
+              else {
+                if (!bz || 0 === bz.length) throw new Error("Cannot load cubemap because files were not defined, or the correct loader was not found.");
+                this._cascadeLoadImgs(uz, fz, ((zz, uz) => {
+                  Rz && Rz(zz, uz)
+                }), bz, Nz)
+              }
+              return this._internalTexturesCache.push(fz), fz
+            }), this.name = zz, this.url = zz, this._noMipmap = iz, this.hasAlpha = !1, this.isCube = !0, this._textureMatrix = lz.d.Identity(), this.coordinatesMode = tz.e.CUBIC_MODE;
+            let Dz = null;
+            null === nz || Array.isArray(nz) ? (this._noMipmap = iz, this._format = fz, this._createPolynomials = oz, bz = nz, this._loaderOptions = xz, this._useSRGBBuffer = yz, this._lodScale = Nz, this._lodOffset = vz) : (bz = nz.extensions ?? null, this._noMipmap = nz.noMipmap ?? !1, Mz = nz.files ?? null, Dz = nz.buffer ?? null, this._format = nz.format ?? 5, sz = nz.prefiltered ?? !1, rz = nz.forcedExtension ?? null, this._createPolynomials = nz.createPolynomials ?? !1, this._lodScale = nz.lodScale ?? .8, this._lodOffset = nz.lodOffset ?? 0, this._loaderOptions = nz.loaderOptions, this._useSRGBBuffer = nz.useSRGBBuffer, this._sphericalPolynomialTargetSize = nz.sphericalPolynomialTargetSize ?? 0, Hz = nz.onLoad ?? null, pz = nz.onError ?? null), (zz || Mz) && this.updateURL(zz, rz, Hz, sz, pz, bz, this.XT()?.useDelayedTextureLoading, Mz, Dz)
           }
           getClassName() {
-            return "FreeCamera"
+            return "CubeTexture"
+          }
+          updateURL(zz) {
+            let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+              iz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              lz = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+              Mz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              tz = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null;
+            this.name && !this.name.startsWith("data:") || (this.name = zz), this.url = zz, uz && (this._forcedExtension = uz);
+            const Hz = zz.lastIndexOf("."),
+              Oz = uz || (Hz > -1 ? zz.substring(Hz).toLowerCase() : ""),
+              pz = 0 === Oz.indexOf(".dds"),
+              dz = 0 === Oz.indexOf(".env"),
+              Fz = 0 === Oz.indexOf(".basis");
+            if (dz ? (this.gammaSpace = !1, this._prefiltered = !1, this.anisotropicFilteringLevel = 1) : (this._prefiltered = Ez, Ez && (this.gammaSpace = !1, this.anisotropicFilteringLevel = 1)), Mz) this._files = Mz;
+            else if (Fz || dz || pz || iz || (iz = ["_px.jpg", "_py.jpg", "_pz.jpg", "_nx.jpg", "_ny.jpg", "_nz.jpg"]), this._files = this._files || [], this._files.length = 0, iz) {
+              for (let uz = 0; uz < iz.length; uz++) this._files.push(zz + iz[uz]);
+              this._extensions = iz
+            }
+            this._buffer = tz, lz ? (this.delayLoadState = 4, this._delayedOnLoad = bz, this._delayedOnError = nz) : this._loadTexture(bz, nz)
+          }
+          delayLoad(zz) {
+            4 === this.delayLoadState && (zz && (this._forcedExtension = zz), this.delayLoadState = 1, this._loadTexture(this._delayedOnLoad, this._delayedOnError))
+          }
+          getReflectionTextureMatrix() {
+            return this._textureMatrix
+          }
+          setReflectionTextureMatrix(zz) {
+            if (zz.updateFlag === this._textureMatrix.updateFlag) return;
+            if (zz.isIdentity() !== this._textureMatrix.isIdentity() && this.XT()?.markAllMaterialsAsDirty(1, (zz => -1 !== zz.getActiveTextures().indexOf(this))), this._textureMatrix = zz, !this.XT()?.useRightHandedSystem) return;
+            const uz = lz.l.ER[0],
+              bz = lz.l.Quaternion[0],
+              Ez = lz.l.ER[1];
+            this._textureMatrix.decompose(uz, bz, Ez), bz.z *= -1, bz.w *= -1, lz.d.ComposeToRef(uz, bz, Ez, this._textureMatrixRefraction)
+          }
+          getRefractionTextureMatrix() {
+            return this.XT()?.useRightHandedSystem ? this._textureMatrixRefraction : this._textureMatrix
+          }
+          _loadTexture() {
+            let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+              uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            const bz = this.XT(),
+              Ez = this._texture;
+            this._texture = this._getFromCache(this.url, this._noMipmap, void 0, void 0, this._useSRGBBuffer, this.isCube);
+            const nz = () => {
+                this.onLoadObservable.notifyObservers(this), Ez && (Ez.dispose(), this.XT()?.markAllMaterialsAsDirty(1)), zz && zz()
+              },
+              lz = (zz, bz) => {
+                this._loadingError = !0, this._errorObject = {
+                  message: zz,
+                  exception: bz
+                }, uz && uz(zz, bz), tz.e.OnTextureLoadErrorObservable.notifyObservers(this)
+              };
+            this._texture ? this._texture.isReady ? iz.c.SetImmediate((() => nz())) : this._texture.onLoadedObservable.add((() => nz())) : (this._prefiltered ? this._texture = this._getEngine().createPrefilteredCubeTexture(this.url, bz, this._lodScale, this._lodOffset, zz, lz, this._format, this._forcedExtension, this._createPolynomials, this._buffer) : this._texture = this._getEngine().createCubeTexture(this.url, bz, this._files, this._noMipmap, zz, lz, this._format, this._forcedExtension, !1, this._lodScale, this._lodOffset, null, this._loaderOptions, !!this._useSRGBBuffer, this._buffer), this._texture?.onLoadedObservable.add((() => this.onLoadObservable.notifyObservers(this))))
+          }
+          clone() {
+            let uz = 0;
+            const bz = this.irradianceTexture,
+              Ez = pz.e.Clone((() => {
+                const bz = new zz(this.url, this.XT() || this._getEngine(), this._extensions, this._noMipmap, this._files);
+                return uz = bz.uniqueId, bz
+              }), this);
+            return Ez.uniqueId = uz, bz && !this.irradianceTexture && (this.irradianceTexture = bz), Ez
           }
         }, (() => {
-          const kT = "function" === typeof Symbol && Symbol.metadata ? Object.create(ST[Symbol.metadata] ?? null) : void 0;
-          oT = [(0, zT.M)()], IT = [(0, zT.M)()], XT = [(0, zT.P)()], BT = [(0, zT.P)()], (0, iT.h)(null, null, oT, {
-            kind: "field",
-            name: "ellipsoid",
+          const iz = "function" === typeof Symbol && Symbol.metadata ? Object.create(xz[Symbol.metadata] ?? null) : void 0;
+          uz = [(0, nz.G)()], bz = [(0, nz.D)()], Hz = [(0, nz.D)()], fz = [(0, nz.G)("rotationY")], sz = [(0, nz.G)("files")], rz = [(0, nz.G)("forcedExtension")], oz = [(0, nz.G)("extensions")], Nz = [(0, nz.w)("textureMatrix")], vz = [(0, nz.w)("textureMatrixRefraction")], (0, Ez.h)(zz, null, Hz, {
+            kind: "getter",
+            name: "boundingBoxSize",
             static: !1,
             private: !1,
             access: {
-              has: TT => "ellipsoid" in TT,
-              get: TT => TT.ellipsoid,
-              set: (TT, oT) => {
-                TT.ellipsoid = oT
-              }
+              has: zz => "boundingBoxSize" in zz,
+              get: zz => zz.boundingBoxSize
             },
-            metadata: kT
-          }, DT, LT), (0, iT.h)(null, null, IT, {
-            kind: "field",
-            name: "ellipsoidOffset",
+            metadata: iz
+          }, null, Jz), (0, Ez.h)(zz, null, fz, {
+            kind: "setter",
+            name: "rotationY",
             static: !1,
             private: !1,
             access: {
-              has: TT => "ellipsoidOffset" in TT,
-              get: TT => TT.ellipsoidOffset,
-              set: (TT, oT) => {
-                TT.ellipsoidOffset = oT
+              has: zz => "rotationY" in zz,
+              set: (zz, uz) => {
+                zz.rotationY = uz
               }
             },
-            metadata: kT
-          }, xT, cT), (0, iT.h)(null, null, XT, {
+            metadata: iz
+          }, null, Jz), (0, Ez.h)(null, null, uz, {
             kind: "field",
-            name: "checkCollisions",
+            name: "url",
             static: !1,
             private: !1,
             access: {
-              has: TT => "checkCollisions" in TT,
-              get: TT => TT.checkCollisions,
-              set: (TT, oT) => {
-                TT.checkCollisions = oT
+              has: zz => "url" in zz,
+              get: zz => zz.url,
+              set: (zz, uz) => {
+                zz.url = uz
               }
             },
-            metadata: kT
-          }, KT, MT), (0, iT.h)(null, null, BT, {
+            metadata: iz
+          }, Az, Tz), (0, Ez.h)(null, null, bz, {
             kind: "field",
-            name: "applyGravity",
+            name: "boundingBoxPosition",
             static: !1,
             private: !1,
             access: {
-              has: TT => "applyGravity" in TT,
-              get: TT => TT.applyGravity,
-              set: (TT, oT) => {
-                TT.applyGravity = oT
+              has: zz => "boundingBoxPosition" in zz,
+              get: zz => zz.boundingBoxPosition,
+              set: (zz, uz) => {
+                zz.boundingBoxPosition = uz
               }
             },
-            metadata: kT
-          }, rT, AT), kT && Object.defineProperty(TT, Symbol.metadata, {
+            metadata: iz
+          }, Lz, Pz), (0, Ez.h)(null, null, sz, {
+            kind: "field",
+            name: "_files",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "_files" in zz,
+              get: zz => zz._files,
+              set: (zz, uz) => {
+                zz._files = uz
+              }
+            },
+            metadata: iz
+          }, Gz, az), (0, Ez.h)(null, null, rz, {
+            kind: "field",
+            name: "_forcedExtension",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "_forcedExtension" in zz,
+              get: zz => zz._forcedExtension,
+              set: (zz, uz) => {
+                zz._forcedExtension = uz
+              }
+            },
+            metadata: iz
+          }, Vz, mz), (0, Ez.h)(null, null, oz, {
+            kind: "field",
+            name: "_extensions",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "_extensions" in zz,
+              get: zz => zz._extensions,
+              set: (zz, uz) => {
+                zz._extensions = uz
+              }
+            },
+            metadata: iz
+          }, qz, hz), (0, Ez.h)(null, null, Nz, {
+            kind: "field",
+            name: "_textureMatrix",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "_textureMatrix" in zz,
+              get: zz => zz._textureMatrix,
+              set: (zz, uz) => {
+                zz._textureMatrix = uz
+              }
+            },
+            metadata: iz
+          }, Uz, cz), (0, Ez.h)(null, null, vz, {
+            kind: "field",
+            name: "_textureMatrixRefraction",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "_textureMatrixRefraction" in zz,
+              get: zz => zz._textureMatrixRefraction,
+              set: (zz, uz) => {
+                zz._textureMatrixRefraction = uz
+              }
+            },
+            metadata: iz
+          }, gz, Sz), iz && Object.defineProperty(zz, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: kT
+            value: iz
           })
-        })(), TT
+        })(), zz
       })(),
-      ET = !1;
-    ET || (ET = !0, (0, uT.h)("BABYLON.FreeCamera", vT))
+      sz = !1;
+
+    function rz(zz, uz, bz) {
+      let Ez = "";
+      for (const nz of zz) Ez += nz;
+      return new fz(Ez, uz, null, bz, zz)
+    }
+
+    function oz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        Ez = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const nz = uz.useDelayedTextureLoading;
+      uz.useDelayedTextureLoading = !1;
+      const iz = new fz(zz, uz, null, !1, null, null, null, void 0, !0, bz, Ez);
+      return uz.useDelayedTextureLoading = nz, iz
+    }
+
+    function Nz(zz, uz, bz) {
+      const Ez = pz.e.Parse((() => {
+        let Ez = !1;
+        return zz.prefiltered && (Ez = zz.prefiltered), new fz(bz + (zz.url ?? zz.name), uz, zz.extensions, !1, zz.files || null, null, null, void 0, Ez, zz.forcedExtension)
+      }), zz, uz);
+      if (zz.boundingBoxPosition && (Ez.boundingBoxPosition = lz.n.FromArray(zz.boundingBoxPosition)), zz.boundingBoxSize && (Ez.boundingBoxSize = lz.n.FromArray(zz.boundingBoxSize)), zz.animations)
+        for (let nz = 0; nz < zz.animations.length; nz++) {
+          const uz = zz.animations[nz],
+            bz = (0, Hz.b)("BABYLON.Animation");
+          bz && Ez.animations.push(bz.Parse(uz))
+        }
+      return Ez
+    }
+    sz || (sz = !0, fz.CreateFromImages = rz, fz.CreateFromPrefilteredData = oz, fz.Parse = Nz, tz.e._CubeTextureParser = Nz, (0, Hz.c)("BABYLON.CubeTexture", fz))
+  },
+  40379: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Hz
+    });
+    var Ez = bz(38060),
+      nz = bz(39636),
+      iz = bz(39118),
+      lz = bz(39022),
+      Mz = bz(39011);
+    let tz = !1;
+    class Hz extends nz.e {
+      constructor(zz, uz, bz) {
+        let Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          Hz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
+          Oz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5,
+          pz = arguments.length > 6 ? arguments[6] : void 0;
+        const dz = !bz || bz._isScene;
+        super(null, dz ? bz : bz?.tK, dz ? !Ez : bz, pz, Hz, void 0, void 0, void 0, void 0, Oz), tz || (tz = !0, lz.ThinEngine.prototype.createDynamicTexture = function(zz, uz, bz, Ez) {
+          const nz = new Mz.c(this, 4);
+          return nz.baseWidth = zz, nz.baseHeight = uz, bz && (zz = this.needPOTTextures ? (0, iz.e)(zz, this._caps.maxTextureSize) : zz, uz = this.needPOTTextures ? (0, iz.e)(uz, this._caps.maxTextureSize) : uz), nz.width = zz, nz.height = uz, nz.isReady = !1, nz.generateMipMaps = bz, nz.samplingMode = Ez, this.updateTextureSamplingMode(Ez, nz), this._internalTexturesCache.push(nz), nz
+        }, lz.ThinEngine.prototype.updateDynamicTexture = function(zz, uz, bz) {
+          let Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            nz = arguments.length > 4 ? arguments[4] : void 0,
+            iz = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+          if (!zz) return;
+          const lz = this._gl,
+            Mz = lz.TEXTURE_2D,
+            tz = this._bindTextureDirectly(Mz, zz, !0, iz);
+          this._unpackFlipY(void 0 === bz ? zz.invertY : bz), Ez && lz.pixelStorei(lz.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 1);
+          const Hz = this._getWebGLTextureType(zz.type),
+            Oz = this._getInternalFormat(nz || zz.format),
+            pz = this._getRGBABufferInternalSizedFormat(zz.type, Oz);
+          lz.texImage2D(Mz, 0, pz, Oz, Hz, uz), zz.generateMipMaps && lz.generateMipmap(Mz), tz || this._bindTextureDirectly(Mz, null), Ez && lz.pixelStorei(lz.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), nz && (zz.format = nz), zz._dynamicTextureSource = uz, zz._premulAlpha = Ez, zz.invertY = bz || !1, zz.isReady = !0
+        }), this.name = zz, this.wrapU = nz.e.CLAMP_ADDRESSMODE, this.wrapV = nz.e.CLAMP_ADDRESSMODE, this._generateMipMaps = Ez;
+        const Fz = this._getEngine();
+        if (!Fz) return;
+        if (uz.getContext) this._canvas = uz, this._ownCanvas = !1, this._texture = Fz.createDynamicTexture(this._canvas.width, this._canvas.height, Ez, Hz);
+        else {
+          this._canvas = Fz.createCanvas(1, 1), this._ownCanvas = !0;
+          const zz = uz;
+          zz.width || 0 === zz.width ? this._texture = Fz.createDynamicTexture(zz.width, zz.height, Ez, Hz) : this._texture = Fz.createDynamicTexture(uz, uz, Ez, Hz)
+        }
+        const Zz = this.getSize();
+        this._canvas.width !== Zz.width && (this._canvas.width = Zz.width), this._canvas.height !== Zz.height && (this._canvas.height = Zz.height), this._context = this._canvas.getContext("2d")
+      }
+      getClassName() {
+        return "DynamicTexture"
+      }
+      get canRescale() {
+        return !0
+      }
+      _recreate(zz) {
+        this._canvas.width = zz.width, this._canvas.height = zz.height, this.releaseInternalTexture(), this._texture = this._getEngine().createDynamicTexture(zz.width, zz.height, this._generateMipMaps, this.samplingMode)
+      }
+      scale(zz) {
+        const uz = this.getSize();
+        uz.width *= zz, uz.height *= zz, this._recreate(uz)
+      }
+      scaleTo(zz, uz) {
+        const bz = this.getSize();
+        bz.width = zz, bz.height = uz, this._recreate(bz)
+      }
+      getContext() {
+        return this._context
+      }
+      clear(zz) {
+        const uz = this.getSize();
+        zz && (this._context.fillStyle = zz), this._context.clearRect(0, 0, uz.width, uz.height)
+      }
+      update(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this._texture && this._getEngine().updateDynamicTexture(this._texture, this._canvas, void 0 === zz || zz, uz, this._format || void 0, void 0, bz)
+      }
+      drawText(zz, uz, bz, Ez, nz, iz, lz) {
+        let Mz = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
+        const tz = this.getSize();
+        if (iz && (this._context.fillStyle = iz, this._context.fillRect(0, 0, tz.width, tz.height)), this._context.font = Ez, null === uz || void 0 === uz) {
+          const bz = this._context.measureText(zz);
+          uz = (tz.width - bz.width) / 2
+        }
+        if (null === bz || void 0 === bz) {
+          const zz = parseInt(Ez.replace(/\D/g, ""));
+          bz = tz.height / 2 + zz / 3.65
+        }
+        this._context.fillStyle = nz || "", this._context.fillText(zz, uz, bz), Mz && this.update(lz)
+      }
+      dispose() {
+        super.dispose(), this._ownCanvas && this._canvas?.remove?.(), this._canvas = null, this._context = null
+      }
+      clone() {
+        const zz = this.XT();
+        if (!zz) return this;
+        const uz = this.getSize(),
+          bz = new Hz(this.name, uz, zz, this._generateMipMaps);
+        return bz.hasAlpha = this.hasAlpha, bz.level = this.level, bz.wrapU = this.wrapU, bz.wrapV = this.wrapV, bz
+      }
+      serialize() {
+        const zz = this.XT();
+        zz && !zz.isReady() && Ez.e.Warn("The scene must be ready before serializing the dynamic texture");
+        const uz = super.serialize();
+        return Hz._IsCanvasElement(this._canvas) && (uz.base64String = this._canvas.toDataURL()), uz.invertY = this._invertY, uz.samplingMode = this.samplingMode, uz
+      }
+      static _IsCanvasElement(zz) {
+        return void 0 !== zz.toDataURL
+      }
+      _rebuild() {
+        this.update()
+      }
+    }
+  },
+  40354: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => nz
+    });
+    var Ez = bz(39636);
+    class nz extends Ez.e {
+      get depth() {
+        return this._depth
+      }
+      constructor(zz, uz, bz, nz, iz, lz) {
+        let Mz = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          tz = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+          Hz = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Ez.e.TRILINEAR_SAMPLINGMODE,
+          Oz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+          pz = arguments.length > 10 ? arguments[10] : void 0,
+          dz = arguments.length > 11 ? arguments[11] : void 0;
+        super(null, lz, !Mz, tz), this.format = iz, this._texture = lz.uR().createRawTexture2DArray(zz, uz, bz, nz, iz, Mz, tz, Hz, null, Oz, pz ?? 0, dz), this._depth = nz, this.is2DArray = !0
+      }
+      update(zz) {
+        this.updateMipLevel(zz, 0)
+      }
+      updateMipLevel(zz, uz) {
+        this._texture && this._getEngine().updateRawTexture2DArray(this._texture, zz, this._texture.format, this._texture.invertY, null, this._texture.type, uz)
+      }
+      static CreateRGBATexture(zz, uz, bz, Ez, iz) {
+        return new nz(zz, uz, bz, Ez, 5, iz, !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5], arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0)
+      }
+    }
+  },
+  40350: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Ez.e
+    });
+    var Ez = bz(39537);
+    (0, Ez.h)()
+  },
+  39250: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Ez.e
+    });
+    var Ez = bz(39253);
+    (0, Ez.b)()
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

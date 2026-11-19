@@ -1,691 +1,710 @@
 export const id = 108;
-export const ids = [108, 125];
+export const ids = [108];
 export const modules = {
-  4444: (TT, oT, IT) => {
-    var iT = IT(4451);
-
-    function zT() {}
-
-    function kT() {}
-    kT.resetWarningCache = zT, TT.exports = function() {
-      function TT(TT, oT, IT, zT, kT, WT) {
-        if (WT !== iT) {
-          var XT = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw XT.name = "Invariant Violation", XT
-        }
-      }
-
-      function oT() {
-        return TT
-      }
-      TT.isRequired = TT;
-      var IT = {
-        array: TT,
-        bigint: TT,
-        bool: TT,
-        func: TT,
-        number: TT,
-        object: TT,
-        string: TT,
-        symbol: TT,
-        any: TT,
-        arrayOf: oT,
-        element: TT,
-        elementType: TT,
-        instanceOf: oT,
-        node: TT,
-        objectOf: oT,
-        oneOf: oT,
-        oneOfType: oT,
-        shape: oT,
-        exact: oT,
-        checkPropTypes: kT,
-        resetWarningCache: zT
-      };
-      return IT.PropTypes = IT, IT
-    }
-  },
-  4442: (TT, oT, IT) => {
-    TT.exports = IT(4444)()
-  },
-  4451: TT => {
-    TT.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
-  },
-  6085: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      ShaderPackPublishForm: () => gT
+  8567: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      default: () => Ou
     });
-    var iT = IT(46),
-      zT = IT(6045),
-      kT = IT(195),
-      WT = IT(6092),
-      XT = IT(1055),
-      BT = IT(1408),
-      FT = IT(1624),
-      ST = IT(1110),
-      DT = IT(6099),
-      LT = IT(6107),
-      xT = IT(1451),
-      cT = IT(1171),
-      KT = IT(6114),
-      MT = IT(6146),
-      rT = IT(6042),
-      AT = IT(1083);
+    var Ez = bz(1490),
+      nz = bz(20),
+      iz = bz(4407),
+      lz = bz(56),
+      Mz = bz(1417);
+    var tz = bz(1871),
+      Hz = bz(1482),
+      Oz = bz(1322),
+      pz = bz(1181),
+      dz = bz(158),
+      Fz = bz(1212),
+      Zz = bz(2258),
+      Rz = bz(8569);
 
-    function gT(TT) {
-      var oT, IT, DT;
+    function Kz(zz, uz) {
+      const bz = !0 === uz.debugResult.gameRefused,
+        Ez = bz || uz.code === dz.k.REQUEST_TO_MATCHMAKING ? (0, Rz.g)(uz.message) : null;
+      return null !== Ez ? (wz(zz, zz((0, Rz.l)(Ez)), zz(Rz.i[Ez])), !0) : !!bz && (async function(zz) {
+        const {
+          gameNameWithVariation: uz,
+          lobbyName: bz,
+          shownLobbyName: Ez
+        } = tz.gameBridge.latest("connectedGame"), nz = "classic" === uz && (0, Fz.H)(bz) ? Ez : await (0, Zz.e)(zz, uz, bz);
+        return "" !== nz ? zz("general:cantJoinGame", {
+          game: nz
+        }) : zz("general:cantJoinThisGame")
+      }(zz).then((bz => {
+        wz(zz, bz, uz.message)
+      })), !0)
+    }
+
+    function wz(zz, uz, bz) {
+      Oz.NotificationProvider.showPromptPopup({
+        icon: "lock",
+        title: uz,
+        subtitle: bz,
+        confirmText: zz("general:ok"),
+        cancelText: ""
+      })
+    }
+    var Xz = bz(4335),
+      fz = bz(1118),
+      sz = bz(22),
+      rz = bz(1232),
+      oz = bz(1673),
+      Nz = bz(96),
+      vz = bz(1283),
+      xz = bz(1405),
+      Jz = bz(4288),
+      Az = bz(4132),
+      Tz = bz(3016),
+      Lz = bz(1089);
+    const Pz = "https://discord.gg/playbloxd";
+
+    function Gz(zz) {
       let {
-        existing: gT,
-        onPublished: wT
-      } = TT;
+        failure: uz
+      } = zz;
       const {
-        t: eT
-      } = (0, cT.t)(), {
-        userContext: RT,
-        isUserContextUpdating: uT
-      } = (0, ST.b)(), [vT, ET] = (0, iT.useState)(null), [fT, CT] = (0, iT.useState)(0), [jT, JT] = (0, iT.useState)(null !== (oT = null === gT || void 0 === gT ? void 0 : gT.name) && void 0 !== oT ? oT : ""), UT = (0, iT.useRef)(jT), aT = (0, iT.useRef)(""), YT = TT => {
-        UT.current = TT, JT(TT)
-      }, [QT, OT] = (0, iT.useState)(null !== (IT = null === gT || void 0 === gT ? void 0 : gT.description) && void 0 !== IT ? IT : ""), HT = (0, iT.useRef)(QT), nT = (0, iT.useRef)(""), qT = TT => {
-        HT.current = TT, OT(TT)
-      }, [ZT, lT] = (0, iT.useState)(!1), {
-        loading: sT,
-        error: tT,
-        setError: GT,
-        onFiles: pT
-      } = (0, LT.d)((async TT => {
-        const oT = await (0, KT.loadPageShaderPackCompiler)();
-        if (!oT) return void GT(eT("shaderPack:compilerUnavailable"));
-        const IT = await (0, MT.c)(oT, TT.files);
-        if (ET({
-            pack: TT,
-            validation: IT,
-            sourceBytes: (0, WT.u)(TT.files)
-          }), !gT) {
-          var iT;
-          if ("" !== UT.current.trim() && UT.current !== aT.current || (aT.current = (0, zT.Y)(TT.manifest.name.trim(), zT.E), YT(aT.current)), "" === HT.current.trim() || HT.current === nT.current) nT.current = (0, zT.Y)((null !== (iT = TT.manifest.description) && void 0 !== iT ? iT : "").trim(), zT.s), qT(nT.current);
-          CT((TT => TT + 1))
-        }
-      })), bT = !uT && !RT.isLoggedIn() && !kT.d.offlineMode, yT = jT.trim(), NT = yT.length < zT.I, PT = null !== vT && !1 !== (null === (DT = vT.validation) || void 0 === DT ? void 0 : DT.ok) && !sT && !NT && !bT && !uT;
-      return (0, AT.jsxs)("div", {
-        className: "ShaderPackPublishForm",
-        children: [(0, AT.jsx)("p", {
-          className: "ShaderPackPublishIntro",
-          children: gT ? eT("shaderPackListing:uploadIntro", {
-            minutes: String(zT.N / 6e4)
-          }) : eT("shaderPackListing:publishIntro")
-        }), (0, AT.jsx)(mT, {}), bT && (0, AT.jsx)("div", {
-          className: "ShaderPackPublishNote Warning",
-          children: eT("shaderPackListing:publishNeedsLogin")
-        }), (0, AT.jsx)(LT.b, {
-          busy: sT,
-          disabled: sT || ZT,
-          onFiles: TT => {
-            ET(null), pT(TT)
-          }
-        }), vT && (0, AT.jsxs)("div", {
-          className: "ShaderPackPublishSummary",
-          children: [(0, AT.jsx)("div", {
-            className: "ShaderPackPublishPackName",
-            children: vT.pack.manifest.name
-          }), (0, AT.jsxs)("div", {
-            className: "ShaderPackPublishPackSize",
-            children: [eT("shaderPackListing:sizeValue", {
-              kilobytes: String((0, rT.P)(vT.sourceBytes))
-            }), " \xb7", " ", eT("shaderPackListing:filesValue", {
-              files: String(vT.pack.files.length)
-            })]
-          }), (0, AT.jsx)(hT, {
-            picked: vT
-          })]
-        }), !gT && (0, AT.jsxs)(AT.Fragment, {
-          children: [(0, AT.jsxs)("label", {
-            className: "ShaderPackPublishField",
-            children: [(0, AT.jsx)("span", {
-              children: eT("general:name")
-            }), (0, AT.jsx)(FT.e, {
-              className: "ShaderPackPublishInput",
-              defaultValue: jT,
-              maxLength: zT.E,
-              onValueChange: YT
-            }, fT), vT && NT && (0, AT.jsx)("span", {
-              className: "ShaderPackPublishHint",
-              children: eT("shaderPackListing:nameTooShort", {
-                min: String(zT.I)
-              })
-            })]
-          }), (0, AT.jsxs)("label", {
-            className: "ShaderPackPublishField",
-            children: [(0, AT.jsx)("span", {
-              children: eT("general:description")
-            }), (0, AT.jsx)(FT.e, {
-              className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: QT,
-              maxLength: zT.s,
-              onValueChange: qT,
-              useTextarea: !0
-            }, fT)]
-          })]
-        }), tT && (0, AT.jsx)("div", {
-          className: "ShaderPackPublishNote Error",
-          children: tT
-        }), (0, AT.jsxs)(BT.m, {
-          className: "ShaderPackPublishButton",
-          disabled: !PT,
-          loading: ZT,
-          onClick: () => {
-            !async function() {
-              var TT;
-              if (!vT) return;
-              const {
-                name: oT,
-                description: IT
-              } = null !== gT && void 0 !== gT ? gT : {
-                name: yT,
-                description: QT.trim()
-              }, iT = {
-                packId: null !== (TT = null === gT || void 0 === gT ? void 0 : gT.packId) && void 0 !== TT ? TT : null,
-                name: oT,
-                description: IT,
-                apiVersion: vT.pack.manifest.apiVersion,
-                files: (0, WT.t)(vT.pack.files),
-                keepCircleShadows: !0 === vT.pack.manifest.keepCircleShadows
-              };
-              if ((new TextEncoder).encode(JSON.stringify(iT)).byteLength > 1024 * zT.U) GT(eT("shaderPackListing:publishTooBig", {
-                kilobytes: String(zT.U)
-              }));
-              else {
-                lT(!0), GT(null);
-                try {
-                  wT(await xT.e.publishShaderPack(RT, iT))
-                } catch (kT) {
-                  console.error("Failed to publish the shader pack", kT), GT((0, rT.A)(kT, eT, "shaderPackListing:publishFailed"))
-                } finally {
-                  lT(!1)
-                }
-              }
-            }()
+        t: bz
+      } = (0, pz.F)(), Ez = "chosen" === uz.packSource, nz = Nz.featureFlags.useDiscord ? Ez ? "texturePackLoad:failedHelpCustomPack" : "texturePackLoad:failedHelp" : Ez ? "texturePackLoad:failedHelpCustomPackNoDiscord" : "texturePackLoad:failedHelpNoDiscord";
+      return (0, Lz.jsxs)(Lz.Fragment, {
+        children: [bz(nz, {
+          code: uz.code
+        }), "default" !== uz.packSource && uz.code === Tz.m.Error && (0, Lz.jsxs)("div", {
+          style: {
+            paddingTop: "1rem",
+            overflowWrap: "anywhere"
           },
-          children: [(0, AT.jsx)(XT.e, {
-            name: "upload"
-          }), " ", eT(gT ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
-        })]
-      })
-    }
-
-    function hT(TT) {
-      let {
-        picked: oT
-      } = TT;
-      const {
-        t: IT
-      } = (0, cT.t)(), {
-        validation: iT
-      } = oT;
-      return null === iT ? (0, AT.jsx)("div", {
-        className: "ShaderPackPublishNote",
-        children: IT("shaderPackListing:publishUnchecked")
-      }) : iT.ok ? (0, AT.jsxs)(AT.Fragment, {
-        children: [(0, AT.jsxs)("div", {
-          className: "ShaderPackPublishNote Ready",
-          children: [(0, AT.jsx)(XT.e, {
-            name: "circle-check"
-          }), " ", IT("shaderPackListing:publishReady")]
-        }), iT.offInStrict.length > 0 && (0, AT.jsxs)(AT.Fragment, {
-          children: [(0, AT.jsxs)("div", {
-            className: "ShaderPackPublishNote Warning",
-            children: [(0, AT.jsx)(XT.e, {
-              name: "triangle-exclamation"
-            }), " ", IT("shaderPack:offInStrict")]
-          }), (0, AT.jsx)(DT.e, {
-            diagnostics: iT.offInStrict,
-            t: IT
-          })]
-        })]
-      }) : (0, AT.jsxs)(AT.Fragment, {
-        children: [(0, AT.jsxs)("div", {
-          className: "ShaderPackPublishNote Error",
-          children: [(0, AT.jsx)(XT.e, {
-            name: "triangle-exclamation"
-          }), " ", IT("shaderPackListing:publishHasErrors")]
-        }), (0, AT.jsx)(DT.e, {
-          diagnostics: iT.errors,
-          more: iT.moreErrors,
-          t: IT
-        })]
-      })
-    }
-    const wT = "\0";
-
-    function mT() {
-      const {
-        t: TT
-      } = (0, cT.t)(), [oT, IT] = TT("shaderPackListing:bloxdhubHelp", {
-        site: wT
-      }).split(wT);
-      return (0, AT.jsxs)("p", {
-        className: "ShaderPackPublishIntro",
-        children: [oT, (0, AT.jsx)("a", {
-          className: "ShaderPackPublishLink",
-          href: zT.i,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          children: zT.c
-        }), IT]
-      })
-    }
-  },
-  6076: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      default: () => ST
-    });
-    var iT = IT(1468),
-      zT = IT(1408),
-      kT = IT(1171),
-      WT = IT(6085),
-      XT = IT(6059),
-      BT = IT(6042),
-      FT = IT(1083);
-
-    function ST() {
-      const {
-        t: TT
-      } = (0, kT.t)(), oT = (0, iT.useNavigatePreserveSearch)();
-      return (0, XT.b)(), (0, FT.jsxs)("div", {
-        className: "ShaderPackPublishPage AnimFadeIn",
-        children: [(0, FT.jsx)("div", {
-          className: "ShaderPackPublishBack",
-          children: (0, FT.jsx)(zT.c, {
-            onClick: () => {
-              oT(BT.V)
-            },
-            children: TT("shaderPackListing:backToPacks")
+          children: [bz("texturePackLoad:details"), " ", uz.reason]
+        }), Nz.featureFlags.useDiscord && (0, Lz.jsx)("div", {
+          style: {
+            paddingTop: "1rem"
+          },
+          children: (0, Lz.jsx)("a", {
+            href: Pz,
+            target: "_blank",
+            rel: "noreferrer",
+            children: bz("texturePackLoad:reportOnDiscord")
           })
-        }), (0, FT.jsx)("h1", {
-          className: "ShaderPackPublishTitle",
-          children: TT("shaderPackListing:publishTitle")
-        }), (0, FT.jsx)(WT.ShaderPackPublishForm, {
-          existing: null,
-          onPublished: TT => {
-            oT((0, BT.ab)(TT.packId), {
-              replace: !0
+        })]
+      })
+    }
+    var az = bz(1298),
+      Vz = bz(738),
+      mz = bz(1219),
+      qz = bz(994),
+      hz = bz(1473),
+      Uz = bz(3059),
+      cz = bz(2899),
+      gz = bz(1326),
+      Sz = bz(1305),
+      yz = bz(4737),
+      Dz = bz(8572),
+      Qz = bz(2737);
+
+    function Wz(zz) {
+      let {
+        onApply: uz,
+        onSkip: bz
+      } = zz;
+      const {
+        t: Ez
+      } = (0, pz.F)();
+      return (0, lz.useEffect)((() => {
+        Qz.g.skipPlayWait()
+      }), []), (0, Lz.jsx)(gz.g, {
+        icon: "download",
+        title: "customTexturePack:downloadTitle",
+        subtitle: (0, Lz.jsxs)("div", {
+          className: "CustomTexturePackDownloaderSubtitleText",
+          children: [Ez("customTexturePack:downloadPrompt"), (0, Lz.jsx)("div", {
+            className: "CustomTexturePackDownloaderWarningText",
+            children: Ez("customTexturePack:authorWarning")
+          }), (0, Lz.jsx)("div", {
+            className: "CustomTexturePackDownloaderSecondaryText",
+            children: Ez("customTexturePack:existingPackSaved")
+          })]
+        }),
+        confirm: {
+          text: "general:apply",
+          onClick: uz
+        },
+        cancel: {
+          text: "customTexturePack:skip",
+          onClick: bz
+        }
+      })
+    }
+    async function ez() {
+      let zz = !1;
+      const uz = Oz.NotificationProvider.showCustomPopup({
+        body: uz => (0, Lz.jsx)(Wz, {
+          onApply: () => {
+            zz = !0, uz()
+          },
+          onSkip: uz
+        }),
+        disableExitButton: !0,
+        disablePressBackgroundToClose: !0
+      });
+      return await uz.getResult(), zz
+    }
+    let jz = {
+      wanted: !1
+    };
+    let Iz = null;
+
+    function Bz(zz) {
+      zz.setGamePackConfirm(ez), Iz = zz
+    }
+    var Cz = bz(3238);
+
+    function Yz(zz) {
+      let {
+        schematicId: uz,
+        texturePackKey: bz,
+        onClose: Ez
+      } = zz;
+      const [nz, iz] = (0, lz.useState)("prompt"), [Mz, tz] = (0, lz.useState)(null), Hz = (0, Cz.e)();
+
+      function Oz() {
+        Ez()
+      }
+      return "prompt" === nz ? (0, Lz.jsx)(Wz, {
+        onApply: async function() {
+          iz("downloading");
+          try {
+            const zz = await async function(zz, uz) {
+              const bz = await (0, yz.c)(uz);
+              if (bz) return {
+                pack: bz,
+                key: uz
+              };
+              const Ez = await fz.userContextManager.getCurrentUserContext(),
+                nz = (await hz.c.getGame(Ez, zz, !0)).customTexturePackKey;
+              if (!nz) return null;
+              const iz = await (0, yz.c)(nz);
+              if (!iz) throw new Error("The texture pack could not be found");
+              return {
+                pack: iz,
+                key: nz
+              }
+            }(uz, bz);
+            if (!Hz.current) return;
+            if (!zz) return void Ez();
+            if ((0, Uz.p)(zz.pack)) return void iz("refused");
+            cz.e.setFromJson(zz.pack, "customGame"), await cz.e.saveTemporaryTexturePack(zz.key), Hz.current && (0, oz.reloadBloxd)()
+          } catch (zz) {
+            tz(zz instanceof Error ? zz.message : String(zz)), iz("error")
+          }
+        },
+        onSkip: Oz
+      }) : "downloading" === nz ? (0, Lz.jsx)(gz.g, {
+        icon: "download",
+        title: "customTexturePack:downloading",
+        subtitle: (0, Lz.jsx)("div", {
+          className: "CustomTexturePackDownloaderLogoLoaderContainer",
+          children: (0, Lz.jsx)(Sz.c, {
+            showFace: !0
+          })
+        })
+      }) : "error" === nz ? (0, Lz.jsx)(gz.g, {
+        icon: "face-worried",
+        title: "customTexturePack:errorTitle",
+        subtitle: Mz,
+        confirm: {
+          text: "customTexturePack:refreshPage",
+          onClick: () => {
+            window.location.reload()
+          }
+        },
+        cancel: {
+          text: "customTexturePack:skip",
+          onClick: Oz
+        }
+      }) : "refused" === nz ? (0, Lz.jsx)(gz.g, {
+        icon: "face-worried",
+        title: "customTexturePack:cantApplyTitle",
+        subtitle: "customTexturePack:gamePackHasExternalUrls",
+        confirm: {
+          text: "general:continue",
+          onClick: Oz
+        }
+      }) : null
+    }
+    var kz = bz(8584),
+      zu = bz(4106),
+      uu = bz(1723),
+      bu = bz(2982),
+      Eu = bz(3189),
+      nu = bz(4425),
+      iu = bz(1273),
+      lu = bz(606),
+      Mu = bz(696);
+
+    function tu() {
+      const zz = nz.e.get("clientEscMenuOptions");
+      tz.gameBridge.send("setLookSensitivity", nz.e.get("isTouchScreen") ? (0, Mu.n)(zz) : zz.mouseSensitivity)
+    }
+    async function Hu(zz, uz, bz) {
+      const Ez = (0, nu.I)(uz);
+      async function lz(zz, uz, bz, Ez) {
+        var lz;
+        if (Ez.aborted) return null;
+        null === nz.e.get("gameEntrySource") && (0, nz.k)("directPlayUrl"), lu.x && (0, Dz.d)().catch((() => {})), nz.e.set({
+          gameState: "findingLobby"
+        }), sz.k.sK("loadingScreenState", "loadingPage:findingLobby");
+        const Mz = await fz.userContextManager.getCurrentUserContext();
+        tz.gameBridge.send("setRequestedGame", {
+          gameNameWithVariation: uz,
+          discordContext: zz instanceof mz.h ? zz.getSerialisableParams() : null
+        }), (0, uu.e)();
+        const Hz = await async function(zz, uz, bz, Ez, nz) {
+          try {
+            await iz.reqLibsLoadedPromise
+          } catch (lz) {
+            return rz.b.errorWithCode(lz.toString(), dz.k.LOAD_REQUIRED_LIBS, {
+              error: lz,
+              severity: "medium"
             })
           }
-        })]
+          return sz.k.sK("matchmakeAndPlayStepCompleted", {
+            step: dz.k.LOAD_REQUIRED_LIBS,
+            totalSubSteps: 1
+          }), (0, iz.matchmakeAndPlayMaybeUnloaded)(zz, uz, bz, Ez, nz)
+        }(zz, uz, bz, Mz, Ez), Oz = Hz.isError() ? Hz.asError() : null;
+        if (Oz && !Oz.debugResult.ob) {
+          console.log("Failed to join lobby:", Oz.message);
+          const zz = "timedOut" === Oz.debugResult.gameServerUnreachable;
+          (0, bu.f)("matchmake_failed", Oz.message, zz ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : dz.k[Oz.code])
+        }
+        if (Ez.aborted) return tz.gameBridge.send("leaveGame", {
+          reloadPath: null
+        }), null;
+        if (null !== Oz && void 0 !== Oz && Oz.debugResult.ob) return console.log("Join cancelled:", Oz.message), null;
+        if (Oz) return Hz;
+        const {
+          gameNameWithVariation: pz,
+          lobbyName: Zz,
+          addLobbyToRecentlyPlayed: Rz
+        } = Hz.getValue();
+        let Kz;
+        tu(), (0, iu.y)().setGameViewShown(!0);
+        const wz = null === (lz = Vz.b[pz]) || void 0 === lz ? void 0 : lz.recentlyPlayedAs;
+        return Kz = (0, qz.k)(pz) ? {
+          type: "custom",
+          name: "",
+          schematicId: (0, qz.q)(pz),
+          recentLobbies: []
+        } : "classic" !== pz || (0, Fz.M)(Zz) ? wz ? {
+          type: "bloxd",
+          gameNameWithVariation: wz,
+          recentLobbies: []
+        } : {
+          type: "bloxd",
+          gameNameWithVariation: pz,
+          recentLobbies: []
+        } : {
+          type: "bloxd",
+          gameNameWithVariation: "classic_worlds",
+          recentLobbies: []
+        }, hz.c.addRecentlyPlayedGame(Mz, Kz, Rz && !wz ? Zz : void 0).then((zz => {
+          Mz.setRecentlyPlayedGames(zz)
+        })).catch((zz => {
+          console.error("Failed to record recently played game", zz)
+        })), (0, vz.E)(), Hz
+      }
+      return Ez && (0, nz.k)("updateRejoin"), (0, Eu.f)((async nz => {
+        try {
+          let Mz = zz,
+            tz = await lz(Mz, uz, bz, nz);
+          for (let zz = 0; Ez && zz < nu.h; zz++) {
+            var iz;
+            if (null === (iz = tz) || void 0 === iz || !iz.isError() || tz.asError().code !== dz.k.REQUEST_TO_MATCHMAKING) break;
+            if (!await (0, nu.J)((0, nu.t)(zz), nz)) return tz;
+            Mz = (0, nu.w)(Mz, zz + 1, "string" === typeof Mz && (0, Fz.M)(Mz)), tz = await lz(Mz, uz, bz, nz)
+          }
+          return tz
+        } catch (Mz) {
+          if ((0, bu.f)("matchmake_failed", Mz, "unexpected"), tz.gameBridge.send("leaveGame", {
+              reloadPath: nz.aborted ? null : "/"
+            }), nz.aborted) return null;
+          throw Mz
+        }
+      }), (async zz => {
+        var bz;
+        if (Ez) return;
+        const nz = (0, vz.y)();
+        null !== nz && (await nz, zz.aborted) || (null !== (bz = Vz.b[uz]) && void 0 !== bz && bz.playAdBeforeMatchmaking ? (Qz.g.skipPlayWait(), await new Promise((zz => {
+          (0, vz.$)((() => {
+            zz(!0)
+          }), "video_start")
+        }))) : (0, vz.$)((() => {}), "video_start"))
+      }))
+    }
+
+    function Ou() {
+      const {
+        t: zz
+      } = (0, pz.F)(), uz = (0, Hz.useNavigatePreserveSearch)(), bz = (0, Ez.v)(), Rz = (0, Ez.D)(), wz = (0, lz.useRef)({
+        t: zz,
+        navigate: uz
+      });
+      wz.current = {
+        t: zz,
+        navigate: uz
+      };
+      const sz = (0, lz.useRef)("");
+      sz.current = bz.pathname + bz.search;
+      const {
+        gameState: rz,
+        clientEscMenuOptions: Pz
+      } = (0, nz.m)(["gameState", "clientEscMenuOptions"]), Vz = (0, lz.useRef)(null), mz = (0, lz.useRef)(null);
+      var Uz;
+      (0, Eu.i)(), (0, Eu.m)(), Uz = lu.x, (0, lz.useEffect)((() => {
+        if (!Uz) return;
+        let zz = !0;
+        return (0, Dz.d)().then((uz => {
+          zz && Bz(uz)
+        })).catch((() => {})), () => {
+          var uz;
+          zz = !1, jz.wanted = !1, null === (uz = Iz) || void 0 === uz || uz.setGamePackConfirm(null), Iz = null
+        }
+      }), [Uz]), (0, lz.useEffect)((() => {
+        var zz;
+        (0, iz.needGameClientNow)();
+        const {
+          t: uz,
+          navigate: Ez
+        } = wz.current, lz = (0, kz.e)(Rz, bz.search);
+        if (Rz.lobbyName && !new URLSearchParams(bz.search).has("lobby")) return void Ez((0, az.c)(lz.gameNameWithVariation, lz.lobbyName), {
+          replace: !0
+        });
+        let Mz = Promise.resolve({
+          shouldMatchmake: !0
+        });
+        if ("/play/discord-custom-lobby" === bz.pathname) {
+          const zz = nz.e.get("discordContext");
+          if (!zz) return void Ez("/");
+          Mz = Xz.e.setupDiscordLobby(zz, "classic").then((() => ({
+            shouldMatchmake: !0,
+            discordContext: zz
+          }))).catch((uz => (console.error("Failed to setup discord lobby", uz), {
+            shouldMatchmake: !1,
+            discordContext: zz
+          })))
+        } else if (!lz.gameNameWithVariation || !(0, Fz.J)(lz.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${lz.gameNameWithVariation}`), void Ez(-1);
+        if (lz.gameNameWithVariation === Vz.current && lz.lobbyName === mz.current) return;
+        if (tz.gameBridge.latest("connectedGame").replay) return void(0, Eu.e)(null);
+        (0, vz.z)(), nz.e.set({
+          gameState: "loadingScreen"
+        });
+        const Hz = function() {
+          jz.wanted = !1;
+          const zz = {
+            wanted: !0
+          };
+          return jz = zz, () => zz.wanted
+        }();
+        if ("releaseCountdown" === (null === (zz = (0, Zz.f)(lz.gameNameWithVariation)) || void 0 === zz ? void 0 : zz.type)) return console.error(`Game hasn't been released yet: ${lz.gameNameWithVariation}`), void Ez(-1);
+        const pz = lz.gameNameWithVariation;
+        if (pz && (lu.x || (0, qz.k)(pz))) {
+          const zz = lu.x ? Promise.all([(0, Dz.d)(), fz.userContextManager.getCurrentUserContext()]).then((zz => {
+            let [uz, bz] = zz;
+            if (Hz()) return Bz(uz), uz.packForGame(pz, bz, Hz)
+          })) : async function(zz) {
+            await cz.e.indexedDbValuesAreLoaded();
+            const uz = await fz.userContextManager.getCurrentUserContext(),
+              bz = (0, qz.q)(zz);
+            let Ez;
+            try {
+              Ez = await hz.c.getGame(uz, bz, !0)
+            } catch (lz) {
+              return void console.error("Failed to get game", lz)
+            }
+            const nz = Ez.customTexturePackKey;
+            if (!nz) return void(cz.e.isUsingTemporaryTexturePack() && ((0, oz.reloadBloxd)(), await new Promise((() => {}))));
+            if (cz.e.isUsingTemporaryTexturePack() && cz.e.getTemporaryTexturePackSource() === nz) return;
+            const iz = Oz.NotificationProvider.showCustomPopup({
+              body: zz => (0, Lz.jsx)(Yz, {
+                schematicId: bz,
+                texturePackKey: nz,
+                onClose: zz
+              }),
+              disableExitButton: !0,
+              disablePressBackgroundToClose: !0
+            });
+            await iz.getResult()
+          }(pz), uz = Mz;
+          Mz = zz.catch((zz => {
+            console.error("Failed to check for custom texture pack", zz)
+          })).then((() => uz))
+        }(0, Eu.e)(null);
+        let rz = !1;
+        const xz = bz.pathname + bz.search,
+          Pz = () => !rz && sz.current === xz;
+        return Mz.then((zz => {
+          let {
+            shouldMatchmake: bz,
+            discordContext: iz
+          } = zz;
+          Pz() && (bz ? Hu(null !== iz && void 0 !== iz ? iz : lz.lobbyName, iz ? "classic" : lz.gameNameWithVariation, lz.directJoinVmUrl).then((zz => {
+            var bz;
+            if (null !== zz && Pz())
+              if (zz.isError()) {
+                var iz;
+                const Mz = zz.asError(),
+                  Hz = null !== (iz = Mz.debugResult.severity) && void 0 !== iz ? iz : "high";
+                if (Mz.code === dz.k.SHADER_PACK) return void(0, zu.c)(Mz.message, Ez);
+                const pz = nz.e.get("gameEntrySource"),
+                  Fz = Mz.code === dz.k.INITIALISE_WEBGL ? (0, Az.b)() : null,
+                  {
+                    error: Zz
+                  } = Mz.debugResult;
+                let Rz;
+                if (Kz(uz, Mz)) Rz = Promise.resolve(!1);
+                else if (null !== Fz) Rz = (0, Az.g)(Fz);
+                else if (Zz instanceof Tz.p) bz = Zz, Rz = Oz.NotificationProvider.showPromptPopup({
+                  icon: "face-dizzy",
+                  title: "texturePackLoad:failedTitle",
+                  subtitle: (0, Lz.jsx)(Gz, {
+                    failure: bz
+                  }),
+                  confirmText: "general:tryAgain",
+                  cancelText: "general:back"
+                }).getResult().then((zz => !0 === zz));
+                else {
+                  let zz;
+                  switch (Hz) {
+                    case "low":
+                      zz = "face-diagonal-mouth";
+                      break;
+                    case "medium":
+                      zz = "face-worried";
+                      break;
+                    case "high":
+                      zz = "face-dizzy"
+                  }
+                  Rz = Oz.NotificationProvider.showPromptPopup({
+                    icon: zz,
+                    title: dz.w[Mz.code],
+                    subtitle: (0, Lz.jsxs)(Lz.Fragment, {
+                      children: [Mz.debugResult.gameServerUnreachable ? uz((0, Nz.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable") : Mz.message, Mz.debugResult.error instanceof Error && (0, Lz.jsx)("div", {
+                        style: {
+                          fontSize: "0.9rem",
+                          paddingTop: "1rem"
+                        },
+                        children: (0, Lz.jsx)(Jz.c, {
+                          errorString: Mz.debugResult.error.stack
+                        })
+                      })]
+                    }),
+                    confirmText: uz("general:tryAgain"),
+                    cancelText: uz("general:cancel")
+                  }).getResult().then((zz => !0 === zz))
+                }
+                Rz.then((zz => {
+                  if (zz) {
+                    (0, nz.k)(pz);
+                    const zz = (0, az.c)(lz.gameNameWithVariation, lz.lobbyName);
+                    "low" === Hz ? Ez(zz) : (0, oz.reloadBloxd)(zz)
+                  }
+                })), tz.gameBridge.send("leaveGame", {
+                  reloadPath: "/"
+                }), Ez(-1)
+              } else {
+                Vz.current = zz.getValue().gameNameWithVariation, mz.current = zz.getValue().lobbyName;
+                const uz = (0, az.c)(Vz.current, zz.getValue().lobbyName);
+                Ez(uz, {
+                  replace: !0
+                })
+              }
+          })).catch((zz => {
+            if (!Pz()) return;
+            Oz.NotificationProvider.showPromptPopup({
+              icon: "face-dizzy",
+              title: "Unexpected Error",
+              subtitle: (0, Lz.jsxs)(Lz.Fragment, {
+                children: [uz("homePage:pleaseCopyError"), (0, Lz.jsx)("div", {
+                  style: {
+                    fontSize: "0.9rem",
+                    paddingTop: "1rem"
+                  },
+                  children: (0, Lz.jsx)(Jz.c, {
+                    errorString: zz.stack
+                  })
+                })]
+              }),
+              confirmText: uz("general:tryAgain"),
+              cancelText: uz("general:cancel")
+            }).getResult().then((zz => {
+              !0 === zz && (0, oz.reloadBloxd)((0, az.c)(lz.gameNameWithVariation, lz.lobbyName))
+            })), Ez(-1)
+          })) : Ez(-1))
+        })), () => {
+          rz = !0
+        }
+      }), [Rz, bz.search, bz.pathname]), (0, lz.useEffect)((() => {
+        Pz.disableFullscreen && (0, xz.e)() ? (0, xz.k)() : !Pz.disableFullscreen && (0, xz.g)() && (0, xz.u)()
+      }), [rz, Pz]), (0, lz.useEffect)((() => {
+        "inGame" === rz && tu()
+      }), [rz, Pz]), (0, lz.useEffect)((() => {
+        "inGame" !== rz && nz.e.set({
+          openInGameMenuName: null
+        })
+      }), [rz]);
+      const gz = function(zz) {
+        const uz = (0, nz.g)(zz),
+          [bz, Ez] = (0, lz.useState)(0),
+          [iz, tz] = (0, lz.useState)(!1);
+        (0, Mz.g)("gameJoined", (() => {
+          (0, nz.g)(nz.e.get("gameState")) && (Ez((zz => zz + 1)), tz(!0))
+        })), (0, lz.useEffect)((() => {
+          uz || tz(!1)
+        }), [uz]);
+        const Hz = "inGame" === zz;
+        return {
+          mounted: Hz || uz && iz,
+          shown: Hz,
+          key: bz
+        }
+      }(rz);
+      return (0, Lz.jsx)(Lz.Fragment, {
+        children: gz.mounted && (0, Lz.jsx)(iz.InGameUi, {
+          shown: gz.shown
+        }, gz.key)
       })
     }
   },
-  6059: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => LT,
-      e: () => xT,
-      g: () => DT,
-      i: () => cT
+  4737: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => nz
     });
-    var iT = IT(46),
-      zT = IT(6045),
-      kT = IT(1451),
-      WT = IT(6042),
-      XT = IT(6062),
-      BT = IT(1110);
-    const FT = "shaderPackListingView",
-      ST = "shaderPackListingFilterOpen";
-
-    function DT() {
-      var TT;
-      const [oT, IT] = (0, XT.c)(FT, zT.J[0]);
-      return [null !== (TT = zT.J.find((TT => TT === oT))) && void 0 !== TT ? TT : zT.J[0], IT]
-    }
-
-    function LT() {
-      (0, iT.useEffect)((() => () => {
-        window.location.pathname.startsWith(WT.V) || (0, WT.m)()
-      }), [])
-    }
-
-    function xT() {
-      return (0, XT.c)(ST, !1)
-    }
-
-    function cT() {
-      const {
-        userContext: TT,
-        isUserContextUpdating: oT
-      } = (0, BT.b)(), [IT, zT] = (0, iT.useState)(null), WT = (0, iT.useRef)(new Set);
-
-      function XT(TT, oT) {
-        zT((IT => {
-          const iT = new Set(IT);
-          return oT ? iT.add(TT) : iT.delete(TT), iT
-        }))
-      }
-      return (0, iT.useEffect)((() => {
-        if (oT) return;
-        let IT = !1;
-        return kT.e.getFavouriteShaderPacks(TT).then((TT => {
-          IT || zT(new Set(TT))
-        })).catch((TT => {
-          console.error("Failed to get favourite shader packs", TT), IT || zT(new Set)
-        })), () => {
-          IT = !0
+    var Ez = bz(1195);
+    async function nz(zz) {
+      const uz = await fetch(`${Ez.clientSideServerUrls.s3Url}/${zz}`, {
+        headers: {
+          Accept: "application/json"
         }
-      }), [TT, oT]), {
-        isFavourite: TT => null === IT ? null : IT.has(TT),
-        toggle: function(oT) {
-          if (null === IT || WT.current.has(oT)) return;
-          WT.current.add(oT);
-          const iT = !IT.has(oT);
-          XT(oT, iT), (iT ? kT.e.favouriteShaderPack(TT, oT) : kT.e.unfavouriteShaderPack(TT, oT)).catch((TT => {
-            console.error("Failed to change a favourite shader pack", TT), XT(oT, !iT)
-          })).finally((() => {
-            WT.current.delete(oT)
-          }))
-        }
-      }
-    }
-  },
-  6042: (TT, oT, IT) => {
-    IT.d(oT, {
-      A: () => nT,
-      D: () => cT,
-      G: () => rT,
-      I: () => ET,
-      K: () => ST,
-      L: () => CT,
-      N: () => KT,
-      P: () => HT,
-      S: () => QT,
-      V: () => WT,
-      Y: () => OT,
-      ab: () => BT,
-      d: () => AT,
-      db: () => XT,
-      f: () => uT,
-      fb: () => aT,
-      i: () => MT,
-      jb: () => YT,
-      kb: () => gT,
-      m: () => LT,
-      mb: () => fT,
-      p: () => DT,
-      t: () => jT,
-      u: () => xT,
-      x: () => JT
-    });
-    var iT = IT(6045),
-      zT = IT(159),
-      kT = IT(4074);
-    const WT = "/shader-packs",
-      XT = `${WT}/publish`;
-
-    function BT(TT) {
-      return `${WT}/${encodeURIComponent(TT)}`
-    }
-    let FT = null;
-
-    function ST(TT) {
-      FT = TT
-    }
-
-    function DT() {
-      return FT
-    }
-
-    function LT() {
-      FT = null
-    }
-
-    function xT(TT) {
-      return TT.playerHasRank("developer") || TT.playerHasRank("admin")
-    }
-    const cT = ["terrain", "water", "models", "sunShadows", "strict"],
-      KT = {
-        terrain: "shaderPackListing:filterTerrain",
-        water: "shaderPackListing:filterWater",
-        models: "shaderPackListing:filterModels",
-        sunShadows: "shaderPackListing:filterShadows",
-        strict: "shaderPackListing:filterAllGames"
-      };
-
-    function MT(TT, oT) {
-      return TT.withFeatures.includes(oT) ? "with" : TT.withoutFeatures.includes(oT) ? "without" : null
-    }
-
-    function rT(TT) {
-      return null === TT ? "with" : "with" === TT ? "without" : null
-    }
-
-    function AT(TT) {
-      return "with" === TT ? "only" : null === TT ? "include" : void 0
-    }
-
-    function gT(TT, oT) {
-      const IT = MT(TT, oT),
-        iT = TT => TT.filter((TT => TT !== oT));
-      return {
-        withFeatures: null === IT ? [...TT.withFeatures, oT] : iT(TT.withFeatures),
-        withoutFeatures: "with" === IT ? [...TT.withoutFeatures, oT] : iT(TT.withoutFeatures)
-      }
-    }
-    const hT = "section",
-      wT = "sort",
-      mT = "filters",
-      eT = "q",
-      RT = "banned",
-      uT = "popular",
-      vT = "strict";
-
-    function ET(TT) {
-      var oT, IT, zT;
-      const WT = TT.get(hT),
-        XT = (null !== (oT = TT.get(mT)) && void 0 !== oT ? oT : vT).split(","),
-        BT = TT.get(RT);
-      return {
-        section: "favourites" === WT || "mine" === WT ? WT : "explore",
-        sort: null !== (IT = iT.A.find((oT => oT === TT.get(wT)))) && void 0 !== IT ? IT : uT,
-        withFeatures: cT.filter((TT => XT.includes(TT) && !XT.includes(`-${TT}`))),
-        withoutFeatures: cT.filter((TT => XT.includes(`-${TT}`))),
-        searchQuery: (null === (zT = TT.get(eT)) || void 0 === zT ? void 0 : zT.slice(0, iT.Q)) || null,
-        pageNumber: (0, kT.i)(TT.get(kT.e)),
-        banned: "only" === BT ? "with" : "include" === BT ? null : "without"
-      }
-    }
-
-    function fT(TT, oT) {
-      var IT;
-      const iT = UT(oT);
-      (0, kT.l)(TT, hT, "explore" === oT.section ? null : oT.section), (0, kT.l)(TT, wT, oT.sort === uT ? null : oT.sort), (0, kT.l)(TT, mT, iT === vT ? null : iT), (0, kT.l)(TT, eT, oT.searchQuery), (0, kT.l)(TT, RT, null !== (IT = AT(oT.banned)) && void 0 !== IT ? IT : null), (0, kT.n)(TT, oT.pageNumber)
-    }
-
-    function CT(TT) {
-      const oT = new URLSearchParams;
-      return fT(oT, {
-        section: "explore",
-        sort: uT,
-        withFeatures: "strict" === TT ? [TT] : [TT, "strict"],
-        withoutFeatures: [],
-        searchQuery: null,
-        pageNumber: 1,
-        banned: "without"
-      }), `${WT}?${oT.toString()}`
-    }
-
-    function jT(TT) {
-      return UT(TT) === vT
-    }
-
-    function JT(TT) {
-      return null !== TT.searchQuery || "with" === TT.banned || UT(TT) !== vT
-    }
-
-    function UT(TT) {
-      return cT.flatMap((oT => {
-        const IT = MT(TT, oT);
-        return "with" === IT ? [oT] : "without" === IT ? [`-${oT}`] : []
-      })).join(",")
-    }
-    const aT = {
-        popular: "shaderPackListing:sortPopular",
-        updated: "shaderPackListing:sortUpdated",
-        newest: "shaderPackListing:sortNewest"
-      },
-      YT = {
-        forest: "shaderPackListing:viewForest",
-        desert: "shaderPackListing:viewDesert",
-        water: "shaderPackListing:viewWater",
-        night: "shaderPackListing:viewNight",
-        cave: "shaderPackListing:viewCave"
-      };
-
-    function QT(TT) {
-      return Math.round(100 * Math.max(0, 1 - 1 / TT))
-    }
-
-    function OT(TT, oT, IT, zT) {
-      const kT = [];
-      TT.isBanned && kT.push({
-        tone: "warning",
-        text: zT("shaderPackListing:ownerBanned"),
-        detail: null
       });
-      const {
-        pending: WT
-      } = TT;
-      if (null === TT.brokenError || WT && !WT.error || kT.push({
-          tone: "warning",
-          text: zT("shaderPackListing:ownerBroken"),
-          detail: TT.brokenError
-        }), null !== WT && void 0 !== WT && WT.error) kT.push({
-        tone: "warning",
-        text: zT(oT ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, iT.l)(WT.error) ? null : WT.error
-      });
-      else if (WT) {
-        const TT = null === WT.renderNotBefore ? 0 : WT.renderNotBefore - IT,
-          iT = String(Math.ceil(TT / 6e4)),
-          XT = zT(oT ? TT > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : TT > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: iT
-          });
-        kT.push({
-          tone: "info",
-          text: XT,
-          detail: null
-        })
-      }
-      return TT.listed || kT.push({
-        tone: "info",
-        text: zT("shaderPackListing:ownerUnlisted"),
-        detail: null
-      }), kT
-    }
-
-    function HT(TT) {
-      return Math.max(1, Math.round(TT / 1024))
-    }
-
-    function nT(TT, oT, IT) {
-      return TT instanceof zT.d && TT.errorMessageForUser ? TT.errorMessageForUser : oT(IT)
+      if (404 === uz.status || 403 === uz.status) return null;
+      if (!uz.ok) throw new Error(`Failed to download the texture pack (${uz.status})`);
+      return await uz.json()
     }
   },
-  6062: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => kT
+  8584: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => lz
     });
-    var iT = IT(46),
-      zT = IT(26);
+    var Ez = bz(1298),
+      nz = bz(1212),
+      iz = bz(588);
 
-    function kT(TT, oT) {
-      var IT;
-      const [kT, WT] = (0, iT.useState)(null !== (IT = zT.e.getItem(TT)) && void 0 !== IT ? IT : oT);
-      return [kT, oT => {
-        zT.e.setItem(TT, oT), WT(oT)
-      }]
-    }
-  },
-  6158: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => zT,
-      e: () => kT
-    });
-    var iT = IT(26);
-    const zT = "shaderPack";
-    async function kT() {
-      var TT;
-      let oT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (TT = await iT.c.getItem(zT, oT)) && void 0 !== TT ? TT : null
-    }
-  },
-  6045: (TT, oT, IT) => {
-    IT.d(oT, {
-      A: () => kT,
-      E: () => XT,
-      I: () => WT,
-      J: () => iT,
-      N: () => LT,
-      Q: () => ST,
-      T: () => gT,
-      U: () => DT,
-      Y: () => FT,
-      c: () => xT,
-      g: () => KT,
-      i: () => cT,
-      l: () => AT,
-      o: () => wT,
-      s: () => BT,
-      v: () => zT,
-      y: () => hT
-    });
-    const iT = ["forest", "desert", "water", "night", "cave"];
-    const zT = {
-        full: {
-          width: 3840,
-          height: 2160
-        },
-        large: {
-          width: 1920,
-          height: 1080
-        },
-        thumb: {
-          width: 640,
-          height: 360
+    function lz(zz) {
+      return zz = function(zz, uz) {
+        var bz;
+        const Ez = new URLSearchParams(uz),
+          nz = Ez.get("lobby"),
+          iz = Ez.get("vm"),
+          lz = null !== (bz = nz) && void 0 !== bz ? bz : zz.lobbyName,
+          Mz = null !== iz && void 0 !== iz ? iz : zz.directJoinVmUrl;
+        if (lz === zz.lobbyName && Mz === zz.directJoinVmUrl) return zz;
+        return {
+          ...zz,
+          lobbyName: lz,
+          directJoinVmUrl: Mz
         }
-      },
-      kT = ["popular", "updated", "newest"],
-      WT = 3,
-      XT = 32,
-      BT = 300;
-
-    function FT(TT, oT) {
-      return TT.slice(0, oT).replace(/[\uD800-\uDBFF]$/, "")
+      }(zz, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), zz = function(zz) {
+        if ((0, iz.F)(zz.directJoinVmUrl)) return zz;
+        const uz = (0, nz.cb)(zz.directJoinVmUrl);
+        null === uz && (zz.directJoinVmUrl = void 0);
+        return zz
+      }(zz = function(zz) {
+        if ((0, iz.F)(zz.gameNameWithVariation)) return zz;
+        return zz.gameNameWithVariation = (0, Ez.l)(zz.gameNameWithVariation), zz
+      }(zz))
     }
-    const ST = 64,
-      DT = 512,
-      LT = 18e5;
-    const xT = "Bloxdhub",
-      cT = "https://bloxdhub.com/shaders";
+  },
+  8581: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      g: () => nz
+    });
+    let Ez = !1;
 
-    function KT(TT) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(TT)}`
-    }
-    const MT = "Screenshot generation failed.",
-      rT = "Its screenshots couldn't be generated:";
-
-    function AT(TT) {
-      var oT;
-      return TT === MT || null !== (oT = null === TT || void 0 === TT ? void 0 : TT.startsWith(rT)) && void 0 !== oT && oT
+    function nz() {
+      Ez = !0
     }
 
-    function gT(TT, oT) {
-      return `shaderPacks/${TT}/${oT}.json`
+    function iz() {
+      return Ez
+    }
+  },
+  8572: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Oz,
+      h: () => pz
+    });
+    var Ez = bz(2899),
+      nz = bz(2181),
+      iz = bz(2954),
+      lz = bz(4400),
+      Mz = bz(3248),
+      tz = bz(8581);
+    let Hz = null;
+
+    function Oz() {
+      return lz.b.cancelDownloadForJoin(), (0, Mz.d)(), (0, nz.h)(), (0, tz.g)(), (0, iz.f)(), Promise.all([bz.e(69), bz.e(72), bz.e(71), bz.e(70), bz.e(83), bz.e(259), bz.e(199), bz.e(216), bz.e(237), bz.e(212), bz.e(46)]).then((() => bz(39840))).catch((() => {})), Promise.all([bz.e(74), bz.e(132), bz.e(87), bz.e(55)]).then((() => bz(39931))).then((zz => {
+        let {
+          startJoinLoad: uz
+        } = zz;
+        uz()
+      }), (() => {})), Hz ??= Promise.all([bz.e(71), bz.e(74), bz.e(129), bz.e(73), bz.e(132), bz.e(262), bz.e(186), bz.e(87), bz.e(86), bz.e(85), bz.e(212), bz.e(60)]).then((() => bz(40042))).then((zz => (zz.startWasmPlay(), zz.followPageUiPack((zz => {
+        Ez.e.showGamePack(zz)
+      })), zz)), (zz => {
+        throw Hz = null, zz
+      })), Hz
     }
 
-    function hT(TT, oT, IT, iT) {
-      return null === oT.renderId ? wT(TT, oT.baselineVersion, IT, iT) : `${TT}/${function(TT,oT,IT,iT){return`shaderPacks/${TT}/${oT}/${IT}-${iT}.webp`}(oT.packId,oT.renderId,IT,iT)}`
+    function pz() {
+      return Promise.all([bz.e(71), bz.e(74), bz.e(129), bz.e(73), bz.e(132), bz.e(262), bz.e(186), bz.e(87), bz.e(86), bz.e(85), bz.e(212), bz.e(60)]).then((() => bz(40042))).then((zz => {
+        zz.startWasmPreviews(), zz.prefetchWasmPreviews()
+      }))
+    }
+  },
+  8569: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => iz,
+      e: () => lz,
+      g: () => Mz,
+      i: () => Hz,
+      l: () => tz
+    });
+    var Ez = bz(195),
+      nz = bz(4385);
+
+    function iz(zz) {
+      return lz(zz) === Ez.b.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function wT(TT, oT, IT, iT) {
-      return `${TT}/${function(TT,oT,IT){return`shaderPacks/baseline/${TT}/${oT}-${IT}.webp`}(oT,IT,iT)}`
+    function lz(zz) {
+      return "object" === typeof zz && null !== zz ? zz.code : void 0
+    }
+
+    function Mz(zz) {
+      var uz;
+      return null !== (uz = Object.keys(nz.e).find((uz => nz.e[uz] === zz))) && void 0 !== uz ? uz : null
+    }
+
+    function tz(zz) {
+      return "notWhitelisted" === zz ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    }
+    const Hz = {
+      private: "customLobby:cantJoinPrivate",
+      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
+      banned: "customLobby:cantJoinBanned",
+      adminLocked: "customLobby:cantJoinAdminLocked"
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

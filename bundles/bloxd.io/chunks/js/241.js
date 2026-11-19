@@ -1,9634 +1,7753 @@
 export const id = 241;
 export const ids = [241];
 export const modules = {
-  38923: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => XT,
-      e: () => KT,
-      h: () => FT,
-      i: () => BT
+  39376: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Kz,
+      g: () => fz
     });
-    var iT = IT(38691),
-      zT = IT(37660),
-      kT = IT(38851),
-      WT = IT(38740);
-    class XT {
-      get IIT() {
-        return this._isDisposed
-      }
-      constructor(TT, oT, IT) {
-        let zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          kT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          XT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          BT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-          FT = arguments.length > 7 ? arguments[7] : void 0,
-          ST = arguments.length > 8 ? arguments[8] : void 0;
-        this._isAlreadyOwned = !1, this._isDisposed = !1, (0, WT.b)(), TT && TT.pC ? this._engine = TT.pC().Zc() : this._engine = TT, this._updatable = IT, this._instanced = XT, this._divisor = FT || 1, this._label = ST, oT instanceof iT.d ? (this._data = null, this._buffer = oT) : (this._data = oT, this._buffer = null), this.byteStride = BT ? zT : zT * Float32Array.BYTES_PER_ELEMENT, kT || this.create()
-      }
-      createVertexBuffer(TT, oT, IT, iT, zT) {
-        let kT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          WT = arguments.length > 6 ? arguments[6] : void 0;
-        const XT = kT ? oT : oT * Float32Array.BYTES_PER_ELEMENT,
-          FT = iT ? kT ? iT : iT * Float32Array.BYTES_PER_ELEMENT : this.byteStride;
-        return new BT(this._engine, this, TT, this._updatable, !0, FT, void 0 === zT ? this._instanced : zT, XT, IT, void 0, void 0, !0, this._divisor || WT)
-      }
-      isUpdatable() {
-        return this._updatable
-      }
-      getData() {
-        return this._data
-      }
-      getBuffer() {
-        return this._buffer
-      }
-      getStrideSize() {
-        return this.byteStride / Float32Array.BYTES_PER_ELEMENT
-      }
-      create() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        !TT && this._buffer || (TT = TT || this._data, TT && (this._buffer ? this._updatable && (this._engine.updateDynamicVertexBuffer(this._buffer, TT), this._data = TT) : this._updatable ? (this._buffer = this._engine.createDynamicVertexBuffer(TT, this._label), this._data = TT) : this._buffer = this._engine.createVertexBuffer(TT, void 0, this._label)))
-      }
-      _rebuild() {
-        if (this._data) this._buffer = null, this.create(this._data);
-        else {
-          if (!this._buffer) return;
-          if (this._buffer.fD > 0) return void(this._updatable ? this._buffer = this._engine.createDynamicVertexBuffer(this._buffer.fD, this._label) : this._buffer = this._engine.createVertexBuffer(this._buffer.fD, void 0, this._label));
-          zT.d.Warn(`Missing data for buffer "${this._label}" ${this._buffer?"(uniqueId: "+this._buffer.uniqueId+")":""}. Buffer reconstruction failed.`), this._buffer = null
+    var Ez = bz(39170),
+      nz = bz(39172),
+      iz = bz(39267),
+      lz = bz(36547),
+      Mz = bz(36519),
+      tz = bz(39384),
+      Hz = bz(38060),
+      Oz = bz(36564),
+      pz = bz(39061),
+      dz = bz(37519),
+      Fz = bz(37235),
+      Zz = bz(39145),
+      Rz = bz(39182);
+    let Kz = (() => {
+      var zz;
+      let uz, bz, Oz, Kz, wz, Xz, fz, sz, rz, oz, Nz, vz, xz, Jz, Az, Tz, Lz, Pz, Gz = tz.c,
+        az = [],
+        Vz = [],
+        mz = [],
+        qz = [],
+        hz = [],
+        Uz = [],
+        cz = [],
+        gz = [],
+        Sz = [],
+        yz = [],
+        Dz = [],
+        Qz = [],
+        Wz = [],
+        ez = [],
+        jz = [],
+        Iz = [],
+        Bz = [],
+        Cz = [],
+        Yz = [],
+        kz = [],
+        zu = [],
+        uu = [],
+        bu = [],
+        Eu = [],
+        nu = [];
+      return zz = class extends Gz {
+        get position() {
+          return this._position
         }
-      }
-      update(TT) {
-        this.create(TT)
-      }
-      updateDirectly(TT, oT, IT) {
-        let iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        this._buffer && this._updatable && (this._engine.updateDynamicVertexBuffer(this._buffer, TT, iT ? oT : oT * Float32Array.BYTES_PER_ELEMENT, IT ? IT * this.byteStride : void 0), this._data = 0 === oT && void 0 === IT ? TT : null)
-      }
-      _increaseReferences() {
-        this._buffer && (this._isAlreadyOwned ? this._buffer.references++ : this._isAlreadyOwned = !0)
-      }
-      dispose() {
-        this._buffer && this._engine._releaseBuffer(this._buffer) && (this._isDisposed = !0, this._data = null, this._buffer = null)
-      }
-    }
-    class BT {
-      get IIT() {
-        return this._isDisposed
-      }
-      get instanceDivisor() {
-        return this._instanceDivisor
-      }
-      set instanceDivisor(TT) {
-        const oT = 0 != TT;
-        this._instanceDivisor = TT, oT !== this._instanced && (this._instanced = oT, this._computeHashCode())
-      }
-      get _maxVerticesCount() {
-        const TT = this.getData();
-        return TT ? Array.isArray(TT) ? TT.length / (this.byteStride / 4) - this.byteOffset / 4 : (TT.byteLength - this.byteOffset) / this.byteStride : 0
-      }
-      constructor(TT, oT, IT, iT, zT, WT, DT, LT, xT, cT) {
-        let KT, MT = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
-          rT = arguments.length > 11 && void 0 !== arguments[11] && arguments[11],
-          AT = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 1,
-          gT = arguments.length > 13 && void 0 !== arguments[13] && arguments[13];
-        if (this._isDisposed = !1, this.engine = TT, "object" === typeof iT && null !== iT ? (KT = iT.updatable ?? !1, zT = iT.postponeInternalCreation, WT = iT.stride, DT = iT.instanced, LT = iT.offset, xT = iT.size, cT = iT.type, MT = iT.normalized ?? !1, rT = iT.useBytes ?? !1, AT = iT.divisor ?? 1, gT = iT.takeBufferOwnership ?? !1, this._label = iT.label) : KT = !!iT, oT instanceof XT ? (this._buffer = oT, this._ownsBuffer = gT) : (this._buffer = new XT(TT, oT, KT, WT, zT, DT, rT, AT, this._label), this._ownsBuffer = !0), this.uniqueId = BT._Counter++, this._kind = IT, void 0 === cT) {
-          const TT = this.getData();
-          this.type = TT ? ST(TT) : BT.FLOAT
-        } else this.type = cT;
-        const hT = (0, kT.n)(this.type);
-        rT ? (this._size = xT || (WT ? WT / hT : FT(IT)), this.byteStride = WT || this._buffer.byteStride || this._size * hT, this.byteOffset = LT || 0) : (this._size = xT || WT || FT(IT), this.byteStride = WT ? WT * hT : this._buffer.byteStride || this._size * hT, this.byteOffset = (LT || 0) * hT), this.normalized = MT, this._instanced = void 0 !== DT && DT, this._instanceDivisor = DT ? AT : 0, this._alignBuffer(), this._computeHashCode()
-      }
-      static _GetTypeHashIndex(TT) {
-        switch (TT) {
-          case BT.BYTE:
-            return 0;
-          case BT.UNSIGNED_BYTE:
-            return 1;
-          case BT.SHORT:
-            return 2;
-          case BT.UNSIGNED_SHORT:
-            return 3;
-          case BT.INT:
-            return 4;
-          case BT.UNSIGNED_INT:
-            return 5;
-          case BT.FLOAT:
-            return 6;
-          case BT.HALF_FLOAT:
-            return 7;
-          default:
-            throw new Error(`Invalid vertex buffer type '${TT}'`)
+        set position(zz) {
+          this._position = zz
         }
-      }
-      _computeHashCode() {
-        this.hashCode = (BT._GetTypeHashIndex(this.type) | 0) + ((this.normalized ? 1 : 0) << 3) + (this._size - 1 << 4) + ((this._instanced ? 1 : 0) << 6) + (this.byteStride << 12)
-      }
-      _rebuild() {
-        this._buffer?._rebuild()
-      }
-      getKind() {
-        return this._kind
-      }
-      isUpdatable() {
-        return this._buffer.isUpdatable()
-      }
-      getData() {
-        return this._buffer.getData()
-      }
-      getFloatData(TT, oT) {
-        const IT = this.getData();
-        return IT ? (0, kT.m)(IT, this._size, this.type, this.byteOffset, this.byteStride, this.normalized, TT, oT) : null
-      }
-      getBuffer() {
-        return this._buffer.getBuffer()
-      }
-      getWrapperBuffer() {
-        return this._buffer
-      }
-      getStrideSize() {
-        return this.byteStride / (0, kT.n)(this.type)
-      }
-      toT() {
-        return this.byteOffset / (0, kT.n)(this.type)
-      }
-      getSize() {
-        return arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? this._size * (0, kT.n)(this.type) : this._size
-      }
-      getIsInstanced() {
-        return this._instanced
-      }
-      getInstanceDivisor() {
-        return this._instanceDivisor
-      }
-      create(TT) {
-        this._buffer.create(TT), this._alignBuffer()
-      }
-      update(TT) {
-        this._buffer.update(TT), this._alignBuffer()
-      }
-      updateDirectly(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this._buffer.updateDirectly(TT, oT, void 0, IT), this._alignBuffer()
-      }
-      dispose() {
-        this._ownsBuffer && this._buffer.dispose(), this._isDisposed = !0
-      }
-      forEach(TT, oT) {
-        (0, kT.g)(this._buffer.getData(), this.byteOffset, this.byteStride, this._size, this.type, TT, this.normalized, ((TT, IT) => {
-          for (let iT = 0; iT < this._size; iT++) oT(TT[iT], IT + iT)
-        }))
-      }
-      _alignBuffer() {}
-    }
-
-    function FT(TT) {
-      switch (TT) {
-        case BT.UVKind:
-        case BT.UV2Kind:
-        case BT.UV3Kind:
-        case BT.UV4Kind:
-        case BT.UV5Kind:
-        case BT.UV6Kind:
-          return 2;
-        case BT.NormalKind:
-        case BT.PositionKind:
-          return 3;
-        case BT.ColorKind:
-        case BT.ColorInstanceKind:
-        case BT.MatricesIndicesKind:
-        case BT.MatricesIndicesExtraKind:
-        case BT.MatricesWeightsKind:
-        case BT.MatricesWeightsExtraKind:
-        case BT.TangentKind:
-          return 4;
-        default:
-          throw new Error("Invalid kind '" + TT + "'")
-      }
-    }
-
-    function ST(TT) {
-      return TT instanceof Int8Array ? BT.BYTE : TT instanceof Uint8Array ? BT.UNSIGNED_BYTE : TT instanceof Int16Array ? BT.SHORT : TT instanceof Uint16Array ? BT.UNSIGNED_SHORT : TT instanceof Int32Array ? BT.INT : TT instanceof Uint32Array ? BT.UNSIGNED_INT : BT.FLOAT
-    }
-
-    function DT(TT) {
-      return (0, kT.n)(TT)
-    }
-
-    function LT(TT, oT, IT, iT, zT, WT, XT, BT) {
-      (0, kT.g)(TT, oT, IT, iT, zT, WT, XT, ((TT, oT) => {
-        for (let IT = 0; IT < iT; IT++) BT(TT[IT], oT + IT)
-      }))
-    }
-
-    function xT(TT, oT, IT, iT, zT, WT, XT, BT) {
-      return (0, kT.m)(TT, oT, IT, iT, zT, WT, XT, BT)
-    }
-    BT._Counter = 0, BT.BYTE = 5120, BT.UNSIGNED_BYTE = 5121, BT.SHORT = 5122, BT.UNSIGNED_SHORT = 5123, BT.INT = 5124, BT.UNSIGNED_INT = 5125, BT.FLOAT = 5126, BT.HALF_FLOAT = 5131, BT.PositionKind = "position", BT.NormalKind = "normal", BT.TangentKind = "tangent", BT.UVKind = "uv", BT.UV2Kind = "uv2", BT.UV3Kind = "uv3", BT.UV4Kind = "uv4", BT.UV5Kind = "uv5", BT.UV6Kind = "uv6", BT.ColorKind = "color", BT.ColorInstanceKind = "instanceColor", BT.MatricesIndicesKind = "matricesIndices", BT.MatricesWeightsKind = "matricesWeights", BT.MatricesIndicesExtraKind = "matricesIndicesExtra", BT.MatricesWeightsExtraKind = "matricesWeightsExtra";
-    let cT = !1;
-
-    function KT() {
-      cT || (cT = !0, BT.DeduceStride = FT, BT.GetDataType = ST, BT.GetTypeByteLength = DT, BT.ForEach = LT, BT.GetFloatData = xT)
-    }
-  },
-  38691: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => iT
-    });
-    class iT {
-      get underlyingResource() {
-        return null
-      }
-      constructor() {
-        this.references = 0, this.fD = 0, this.is32Bits = !1, this.uniqueId = iT._Counter++
-      }
-    }
-    iT._Counter = 0
-  },
-  38918: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => kT
-    });
-    var iT = IT(36118),
-      zT = IT(38923);
-    class kT {
-      constructor() {
-        this.hit = !1, this.distance = 0, this.pickedPoint = null, this.pickedMesh = null, this.bu = 0, this.bv = 0, this.faceId = -1, this.subMeshFaceId = -1, this.subMeshId = 0, this.pickedSprite = null, this.thinInstanceIndex = -1, this.ray = null, this.originMesh = null, this.aimTransform = null, this.gripTransform = null
-      }
-      getNormal() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!this.pickedMesh || oT && !this.pickedMesh.isVerticesDataPresent(zT.i.NormalKind)) return null;
-        let IT, kT = this.pickedMesh.hWT();
-        0 === kT?.length && (kT = null);
-        const WT = iT.i.sc[0],
-          XT = iT.i.sc[1],
-          BT = iT.i.sc[2];
-        if (oT) {
-          const TT = this.pickedMesh.getVerticesData(zT.i.NormalKind);
-          let oT = kT ? iT.m.FromArrayToRef(TT, 3 * kT[3 * this.faceId], WT) : WT.S_(TT[3 * this.faceId * 3], TT[3 * this.faceId * 3 + 1], TT[3 * this.faceId * 3 + 2]),
-            FT = kT ? iT.m.FromArrayToRef(TT, 3 * kT[3 * this.faceId + 1], XT) : XT.S_(TT[3 * (3 * this.faceId + 1)], TT[3 * (3 * this.faceId + 1) + 1], TT[3 * (3 * this.faceId + 1) + 2]),
-            ST = kT ? iT.m.FromArrayToRef(TT, 3 * kT[3 * this.faceId + 2], BT) : BT.S_(TT[3 * (3 * this.faceId + 2)], TT[3 * (3 * this.faceId + 2) + 1], TT[3 * (3 * this.faceId + 2) + 2]);
-          oT = oT.scale(this.bu), FT = FT.scale(this.bv), ST = ST.scale(1 - this.bu - this.bv), IT = new iT.m(oT.x + FT.x + ST.x, oT.y + FT.y + ST.y, oT.z + FT.z + ST.z)
-        } else {
-          const TT = this.pickedMesh.getVerticesData(zT.i.PositionKind),
-            oT = kT ? iT.m.FromArrayToRef(TT, 3 * kT[3 * this.faceId], WT) : WT.S_(TT[3 * this.faceId * 3], TT[3 * this.faceId * 3 + 1], TT[3 * this.faceId * 3 + 2]),
-            FT = kT ? iT.m.FromArrayToRef(TT, 3 * kT[3 * this.faceId + 1], XT) : XT.S_(TT[3 * (3 * this.faceId + 1)], TT[3 * (3 * this.faceId + 1) + 1], TT[3 * (3 * this.faceId + 1) + 2]),
-            ST = kT ? iT.m.FromArrayToRef(TT, 3 * kT[3 * this.faceId + 2], BT) : BT.S_(TT[3 * (3 * this.faceId + 2)], TT[3 * (3 * this.faceId + 2) + 1], TT[3 * (3 * this.faceId + 2) + 2]),
-            DT = oT.subtract(FT),
-            LT = ST.subtract(FT);
-          IT = iT.m.Cross(DT, LT)
+        set upVector(zz) {
+          this._upVector = zz
         }
-        const FT = (TT, oT) => {
-          if (-1 !== this.thinInstanceIndex) {
-            const IT = TT._thinInstanceDataStorage.matrixData,
-              zT = this.thinInstanceIndex << 4;
-            if (IT && IT.length > zT) {
-              const TT = iT.i.Matrix[0];
-              iT.b.FromArrayToRef(IT, zT, TT), iT.m.TransformNormalToRef(oT, TT, oT)
-            }
-          }
-          let IT = TT.getWorldMatrix();
-          TT.nonUniformScaling && (iT.i.Matrix[0].SIT(IT), IT = iT.i.Matrix[0], IT.setTranslationFromFloats(0, 0, 0), IT.invert(), IT.transposeToRef(iT.i.Matrix[1]), IT = iT.i.Matrix[1]), iT.m.TransformNormalToRef(oT, IT, oT)
-        };
-        if (TT && FT(this.pickedMesh, IT), this.ray) {
-          const oT = iT.i.sc[0].SIT(IT);
-          TT || FT(this.pickedMesh, oT), iT.m.Dot(oT, this.ray.direction) > 0 && IT.negateInPlace()
+        get upVector() {
+          return this._upVector
         }
-        return IT.normalize(), IT
-      }
-      getTextureCoordinates() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zT.i.UVKind;
-        if (!this.pickedMesh || !this.pickedMesh.isVerticesDataPresent(TT)) return null;
-        const oT = this.pickedMesh.hWT();
-        if (!oT) return null;
-        const IT = this.pickedMesh.getVerticesData(TT);
-        if (!IT) return null;
-        let kT = iT.j.FromArray(IT, 2 * oT[3 * this.faceId]),
-          WT = iT.j.FromArray(IT, 2 * oT[3 * this.faceId + 1]),
-          XT = iT.j.FromArray(IT, 2 * oT[3 * this.faceId + 2]);
-        return kT = kT.scale(this.bu), WT = WT.scale(this.bv), XT = XT.scale(1 - this.bu - this.bv), new iT.j(kT.x + WT.x + XT.x, kT.y + WT.y + XT.y)
-      }
-    }
-  },
-  38740: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => kT
-    });
-    var iT = IT(38607);
-    let zT = !1;
-
-    function kT() {
-      zT || (zT = !0, iT.ThinEngine.prototype.updateDynamicIndexBuffer = function(TT, oT) {
-        let IT;
-        this._currentBoundBuffer[this._gl.ELEMENT_ARRAY_BUFFER] = null, this.bindIndexBuffer(TT), IT = TT.is32Bits ? oT instanceof Uint32Array ? oT : new Uint32Array(oT) : oT instanceof Uint16Array ? oT : new Uint16Array(oT), this._gl.bufferData(this._gl.ELEMENT_ARRAY_BUFFER, IT, this._gl.DYNAMIC_DRAW), this._resetIndexBufferBinding()
-      }, iT.ThinEngine.prototype.updateDynamicVertexBuffer = function(TT, oT, IT, iT) {
-        this.bindArrayBuffer(TT), void 0 === IT && (IT = 0);
-        const zT = oT.byteLength || oT.length;
-        void 0 === iT || iT >= zT && 0 === IT ? oT instanceof Array ? this._gl.bufferSubData(this._gl.ARRAY_BUFFER, IT, new Float32Array(oT)) : this._gl.bufferSubData(this._gl.ARRAY_BUFFER, IT, oT) : oT instanceof Array ? this._gl.bufferSubData(this._gl.ARRAY_BUFFER, IT, new Float32Array(oT).subarray(0, iT / 4)) : (oT = ArrayBuffer.isView(oT) ? new Uint8Array(oT.buffer, oT.byteOffset, iT) : new Uint8Array(oT, 0, iT), this._gl.bufferSubData(this._gl.ARRAY_BUFFER, IT, oT)), this._resetVertexBufferBinding()
-      })
-    }
-  },
-  38700: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => iT
-    });
-    class iT {
-      get underlyingResource() {
-        return this._webGLTexture
-      }
-      constructor() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          oT = arguments.length > 1 ? arguments[1] : void 0;
-        if (this._MSAARenderBuffers = null, this._context = oT, !TT && (TT = oT.createTexture(), !TT)) throw new Error("Unable to create webGL texture");
-        this.set(TT)
-      }
-      setUsage() {}
-      set(TT) {
-        this._webGLTexture = TT
-      }
-      reset() {
-        this._webGLTexture = null, this._MSAARenderBuffers = null
-      }
-      addMSAARenderBuffer(TT) {
-        this._MSAARenderBuffers || (this._MSAARenderBuffers = []), this._MSAARenderBuffers.push(TT)
-      }
-      releaseMSAARenderBuffers() {
-        if (this._MSAARenderBuffers) {
-          for (const TT of this._MSAARenderBuffers) this._context.deleteRenderbuffer(TT);
-          this._MSAARenderBuffers = null
-        }
-      }
-      getMSAARenderBuffer() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._MSAARenderBuffers?.[TT] ?? null
-      }
-      release() {
-        this.releaseMSAARenderBuffers(), this._webGLTexture && this._context.deleteTexture(this._webGLTexture), this.reset()
-      }
-    }
-  },
-  38659: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => AT
-    });
-    var iT = IT(36149),
-      zT = IT(38609),
-      kT = IT(36146),
-      WT = IT(37660),
-      XT = IT(36137),
-      BT = IT(38667);
-    class FT {
-      constructor() {
-        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        this._isDepthTestDirty = !1, this._isDepthMaskDirty = !1, this._isDepthFuncDirty = !1, this._isCullFaceDirty = !1, this._isCullDirty = !1, this._isZOffsetDirty = !1, this._isFrontFaceDirty = !1, TT && this.reset()
-      }
-      get isDirty() {
-        return this._isDepthFuncDirty || this._isDepthTestDirty || this._isDepthMaskDirty || this._isCullFaceDirty || this._isCullDirty || this._isZOffsetDirty || this._isFrontFaceDirty
-      }
-      get zOffset() {
-        return this._zOffset
-      }
-      set zOffset(TT) {
-        this._zOffset !== TT && (this._zOffset = TT, this._isZOffsetDirty = !0)
-      }
-      get zOffsetUnits() {
-        return this._zOffsetUnits
-      }
-      set zOffsetUnits(TT) {
-        this._zOffsetUnits !== TT && (this._zOffsetUnits = TT, this._isZOffsetDirty = !0)
-      }
-      get cullFace() {
-        return this._cullFace
-      }
-      set cullFace(TT) {
-        this._cullFace !== TT && (this._cullFace = TT, this._isCullFaceDirty = !0)
-      }
-      get cull() {
-        return this._cull
-      }
-      set cull(TT) {
-        this._cull !== TT && (this._cull = TT, this._isCullDirty = !0)
-      }
-      get depthFunc() {
-        return this._depthFunc
-      }
-      set depthFunc(TT) {
-        this._depthFunc !== TT && (this._depthFunc = TT, this._isDepthFuncDirty = !0)
-      }
-      get depthMask() {
-        return this._depthMask
-      }
-      set depthMask(TT) {
-        this._depthMask !== TT && (this._depthMask = TT, this._isDepthMaskDirty = !0)
-      }
-      get depthTest() {
-        return this._depthTest
-      }
-      set depthTest(TT) {
-        this._depthTest !== TT && (this._depthTest = TT, this._isDepthTestDirty = !0)
-      }
-      get frontFace() {
-        return this._frontFace
-      }
-      set frontFace(TT) {
-        this._frontFace !== TT && (this._frontFace = TT, this._isFrontFaceDirty = !0)
-      }
-      reset() {
-        this._depthMask = !0, this._depthTest = !0, this._depthFunc = null, this._cullFace = null, this._cull = null, this._zOffset = 0, this._zOffsetUnits = 0, this._frontFace = null, this._isDepthTestDirty = !0, this._isDepthMaskDirty = !0, this._isDepthFuncDirty = !1, this._isCullFaceDirty = !1, this._isCullDirty = !1, this._isZOffsetDirty = !0, this._isFrontFaceDirty = !1
-      }
-      apply(TT) {
-        this.isDirty && (this._isCullDirty && (this.cull ? TT.enable(TT.CULL_FACE) : TT.disable(TT.CULL_FACE), this._isCullDirty = !1), this._isCullFaceDirty && (TT.cullFace(this.cullFace), this._isCullFaceDirty = !1), this._isDepthMaskDirty && (TT.depthMask(this.depthMask), this._isDepthMaskDirty = !1), this._isDepthTestDirty && (this.depthTest ? TT.enable(TT.DEPTH_TEST) : TT.disable(TT.DEPTH_TEST), this._isDepthTestDirty = !1), this._isDepthFuncDirty && (TT.depthFunc(this.depthFunc), this._isDepthFuncDirty = !1), this._isZOffsetDirty && (this.zOffset || this.zOffsetUnits ? (TT.enable(TT.POLYGON_OFFSET_FILL), TT.polygonOffset(this.zOffset, this.zOffsetUnits)) : TT.disable(TT.POLYGON_OFFSET_FILL), this._isZOffsetDirty = !1), this._isFrontFaceDirty && (TT.frontFace(this.frontFace), this._isFrontFaceDirty = !1))
-      }
-    }
-    class ST {
-      get isDirty() {
-        return this._isStencilTestDirty || this._isStencilMaskDirty || this._isStencilFuncDirty || this._isStencilOpDirty
-      }
-      get func() {
-        return this._func
-      }
-      set func(TT) {
-        this._func !== TT && (this._func = TT, this._isStencilFuncDirty = !0)
-      }
-      get backFunc() {
-        return this._func
-      }
-      set backFunc(TT) {
-        this._backFunc !== TT && (this._backFunc = TT, this._isStencilFuncDirty = !0)
-      }
-      get funcRef() {
-        return this._funcRef
-      }
-      set funcRef(TT) {
-        this._funcRef !== TT && (this._funcRef = TT, this._isStencilFuncDirty = !0)
-      }
-      get funcMask() {
-        return this._funcMask
-      }
-      set funcMask(TT) {
-        this._funcMask !== TT && (this._funcMask = TT, this._isStencilFuncDirty = !0)
-      }
-      get opStencilFail() {
-        return this._opStencilFail
-      }
-      set opStencilFail(TT) {
-        this._opStencilFail !== TT && (this._opStencilFail = TT, this._isStencilOpDirty = !0)
-      }
-      get opDepthFail() {
-        return this._opDepthFail
-      }
-      set opDepthFail(TT) {
-        this._opDepthFail !== TT && (this._opDepthFail = TT, this._isStencilOpDirty = !0)
-      }
-      get opStencilDepthPass() {
-        return this._opStencilDepthPass
-      }
-      set opStencilDepthPass(TT) {
-        this._opStencilDepthPass !== TT && (this._opStencilDepthPass = TT, this._isStencilOpDirty = !0)
-      }
-      get backOpStencilFail() {
-        return this._backOpStencilFail
-      }
-      set backOpStencilFail(TT) {
-        this._backOpStencilFail !== TT && (this._backOpStencilFail = TT, this._isStencilOpDirty = !0)
-      }
-      get backOpDepthFail() {
-        return this._backOpDepthFail
-      }
-      set backOpDepthFail(TT) {
-        this._backOpDepthFail !== TT && (this._backOpDepthFail = TT, this._isStencilOpDirty = !0)
-      }
-      get backOpStencilDepthPass() {
-        return this._backOpStencilDepthPass
-      }
-      set backOpStencilDepthPass(TT) {
-        this._backOpStencilDepthPass !== TT && (this._backOpStencilDepthPass = TT, this._isStencilOpDirty = !0)
-      }
-      get mask() {
-        return this._mask
-      }
-      set mask(TT) {
-        this._mask !== TT && (this._mask = TT, this._isStencilMaskDirty = !0)
-      }
-      get enabled() {
-        return this._enabled
-      }
-      set enabled(TT) {
-        this._enabled !== TT && (this._enabled = TT, this._isStencilTestDirty = !0)
-      }
-      constructor() {
-        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        this._isStencilTestDirty = !1, this._isStencilMaskDirty = !1, this._isStencilFuncDirty = !1, this._isStencilOpDirty = !1, this.useStencilGlobalOnly = !1, TT && this.reset()
-      }
-      reset() {
-        this.stencilMaterial = void 0, this.stencilGlobal?.reset(), this._isStencilTestDirty = !0, this._isStencilMaskDirty = !0, this._isStencilFuncDirty = !0, this._isStencilOpDirty = !0
-      }
-      apply(TT) {
-        if (!TT) return;
-        const oT = !this.useStencilGlobalOnly && !!this.stencilMaterial?.enabled;
-        this.enabled = oT ? this.stencilMaterial.enabled : this.stencilGlobal.enabled, this.func = oT ? this.stencilMaterial.func : this.stencilGlobal.func, this.backFunc = oT ? this.stencilMaterial.backFunc : this.stencilGlobal.backFunc, this.funcRef = oT ? this.stencilMaterial.funcRef : this.stencilGlobal.funcRef, this.funcMask = oT ? this.stencilMaterial.funcMask : this.stencilGlobal.funcMask, this.opStencilFail = oT ? this.stencilMaterial.opStencilFail : this.stencilGlobal.opStencilFail, this.opDepthFail = oT ? this.stencilMaterial.opDepthFail : this.stencilGlobal.opDepthFail, this.opStencilDepthPass = oT ? this.stencilMaterial.opStencilDepthPass : this.stencilGlobal.opStencilDepthPass, this.backOpStencilFail = oT ? this.stencilMaterial.backOpStencilFail : this.stencilGlobal.backOpStencilFail, this.backOpDepthFail = oT ? this.stencilMaterial.backOpDepthFail : this.stencilGlobal.backOpDepthFail, this.backOpStencilDepthPass = oT ? this.stencilMaterial.backOpStencilDepthPass : this.stencilGlobal.backOpStencilDepthPass, this.mask = oT ? this.stencilMaterial.mask : this.stencilGlobal.mask, this.isDirty && (this._isStencilTestDirty && (this.enabled ? TT.enable(TT.STENCIL_TEST) : TT.disable(TT.STENCIL_TEST), this._isStencilTestDirty = !1), this._isStencilMaskDirty && (TT.stencilMask(this.mask), this._isStencilMaskDirty = !1), this._isStencilFuncDirty && (TT.stencilFuncSeparate(TT.FRONT, this.func, this.funcRef, this.funcMask), TT.stencilFuncSeparate(TT.BACK, this.backFunc, this.funcRef, this.funcMask), this._isStencilFuncDirty = !1), this._isStencilOpDirty && (TT.stencilOpSeparate(TT.FRONT, this.opStencilFail, this.opDepthFail, this.opStencilDepthPass), TT.stencilOpSeparate(TT.BACK, this.backOpStencilFail, this.backOpDepthFail, this.backOpStencilDepthPass), this._isStencilOpDirty = !1))
-      }
-    }
-    class DT {
-      constructor() {
-        this.reset()
-      }
-      reset() {
-        this.enabled = !1, this.mask = 255, this.funcRef = 1, this.funcMask = 255, this.func = DT.ALWAYS, this.opStencilFail = DT.KEEP, this.opDepthFail = DT.KEEP, this.opStencilDepthPass = DT.REPLACE, this.backFunc = DT.ALWAYS, this.backOpStencilFail = DT.KEEP, this.backOpDepthFail = DT.KEEP, this.backOpStencilDepthPass = DT.REPLACE
-      }
-      get stencilFunc() {
-        return this.func
-      }
-      set stencilFunc(TT) {
-        this.func = TT
-      }
-      get stencilBackFunc() {
-        return this.backFunc
-      }
-      set stencilBackFunc(TT) {
-        this.backFunc = TT
-      }
-      get stencilFuncRef() {
-        return this.funcRef
-      }
-      set stencilFuncRef(TT) {
-        this.funcRef = TT
-      }
-      get stencilFuncMask() {
-        return this.funcMask
-      }
-      set stencilFuncMask(TT) {
-        this.funcMask = TT
-      }
-      get stencilOpStencilFail() {
-        return this.opStencilFail
-      }
-      set stencilOpStencilFail(TT) {
-        this.opStencilFail = TT
-      }
-      get stencilOpDepthFail() {
-        return this.opDepthFail
-      }
-      set stencilOpDepthFail(TT) {
-        this.opDepthFail = TT
-      }
-      get stencilOpStencilDepthPass() {
-        return this.opStencilDepthPass
-      }
-      set stencilOpStencilDepthPass(TT) {
-        this.opStencilDepthPass = TT
-      }
-      get stencilBackOpStencilFail() {
-        return this.backOpStencilFail
-      }
-      set stencilBackOpStencilFail(TT) {
-        this.backOpStencilFail = TT
-      }
-      get stencilBackOpDepthFail() {
-        return this.backOpDepthFail
-      }
-      set stencilBackOpDepthFail(TT) {
-        this.backOpDepthFail = TT
-      }
-      get stencilBackOpStencilDepthPass() {
-        return this.backOpStencilDepthPass
-      }
-      set stencilBackOpStencilDepthPass(TT) {
-        this.backOpStencilDepthPass = TT
-      }
-      get stencilMask() {
-        return this.mask
-      }
-      set stencilMask(TT) {
-        this.mask = TT
-      }
-      get stencilTest() {
-        return this.enabled
-      }
-      set stencilTest(TT) {
-        this.enabled = TT
-      }
-    }
-    DT.ALWAYS = 519, DT.KEEP = 7680, DT.REPLACE = 7681;
-    var LT = IT(38673),
-      xT = IT(38643),
-      cT = IT(38594),
-      KT = IT(38626),
-      MT = IT(38635);
-
-    function rT(TT, oT) {
-      if (oT) {
-        const {
-          requestAnimationFrame: IT
-        } = oT;
-        if ("function" === typeof IT) return IT(TT)
-      }
-      if ((0, KT.k)()) {
-        const {
-          requestAnimationFrame: IT
-        } = oT || window;
-        if ("function" === typeof IT) return IT(TT)
-      } else if ("function" === typeof requestAnimationFrame) return requestAnimationFrame(TT);
-      return setTimeout(TT, 16)
-    }
-    class AT {
-      get frameId() {
-        return this._frameId
-      }
-      get isWebGPU() {
-        return this._isWebGPU
-      }
-      _getShaderProcessor(TT) {
-        return this._shaderProcessor
-      }
-      _resetAlphaMode() {
-        this._alphaMode.fill(-1), this._alphaEquation.fill(-1)
-      }
-      get shaderPlatformName() {
-        return this._shaderPlatformName
-      }
-      _clearEmptyResources() {
-        this._emptyTexture = null, this._emptyCubeTexture = null, this._emptyTexture3D = null, this._emptyTexture2DArray = null
-      }
-      get lIT() {
-        return this._useReverseDepthBuffer
-      }
-      set lIT(TT) {
-        TT !== this._useReverseDepthBuffer && (this._useReverseDepthBuffer = TT, this._depthCullingState.depthFunc = TT ? 518 : 515)
-      }
-      setColorWrite(TT) {
-        TT !== this._colorWrite && (this._colorWriteChanged = !0, this._colorWrite = TT)
-      }
-      getColorWrite() {
-        return this._colorWrite
-      }
-      get depthCullingState() {
-        return this._depthCullingState
-      }
-      get alphaState() {
-        return this._alphaState
-      }
-      get stencilState() {
-        return this._stencilState
-      }
-      get stencilStateComposer() {
-        return this._stencilStateComposer
-      }
-      _getGlobalDefines(TT) {
-        if (TT) return this.isNDCHalfZRange ? TT.IS_NDC_HALF_ZRANGE = "" : delete TT.IS_NDC_HALF_ZRANGE, this.lIT ? TT.USE_REVERSE_DEPTHBUFFER = "" : delete TT.USE_REVERSE_DEPTHBUFFER, void(this.useExactSrgbConversions ? TT.USE_EXACT_SRGB_CONVERSIONS = "" : delete TT.USE_EXACT_SRGB_CONVERSIONS);
-        {
-          let TT = "";
-          return this.isNDCHalfZRange && (TT += "#define IS_NDC_HALF_ZRANGE"), this.lIT && (TT && (TT += "\n"), TT += "#define USE_REVERSE_DEPTHBUFFER"), this.useExactSrgbConversions && (TT && (TT += "\n"), TT += "#define USE_EXACT_SRGB_CONVERSIONS"), TT
-        }
-      }
-      _rebuildInternalTextures() {
-        const TT = this._internalTexturesCache.slice();
-        for (const oT of TT) oT._rebuild()
-      }
-      _rebuildRenderTargetWrappers() {
-        const TT = this._renderTargetWrapperCache.slice();
-        for (const oT of TT) oT.textures?.some((TT => 15 === TT.source)) || oT._rebuild()
-      }
-      _rebuildEffects() {
-        for (const TT in this._compiledEffects) {
-          const oT = this._compiledEffects[TT];
-          oT._pipelineContext = null, oT._prepareEffect()
-        }
-        zT.c.ResetCache()
-      }
-      _rebuildGraphicsResources() {
-        this.wipeCaches(!0), this._rebuildEffects(), this._rebuildComputeEffects?.(), this._rebuildBuffers(), this._rebuildInternalTextures(), this._rebuildTextures(), this._rebuildRenderTargetWrappers(), this.wipeCaches(!0)
-      }
-      _flagContextRestored() {
-        WT.d.Warn(this.name + " context successfully restored."), this.onContextRestoredObservable.notifyObservers(this), this._contextWasLost = !1
-      }
-      _restoreEngineAfterContextLost(TT) {
-        setTimeout((() => {
-          this._clearEmptyResources();
-          const oT = this._depthCullingState.depthTest,
-            IT = this._depthCullingState.depthFunc,
-            iT = this._depthCullingState.depthMask,
-            zT = this._stencilState.stencilTest;
-          TT(), this._rebuildGraphicsResources(), this._depthCullingState.depthTest = oT, this._depthCullingState.depthFunc = IT, this._depthCullingState.depthMask = iT, this._stencilState.stencilTest = zT, this._flagContextRestored()
-        }), 0)
-      }
-      get IIT() {
-        return this._isDisposed
-      }
-      get snapshotRendering() {
-        return !1
-      }
-      set snapshotRendering(TT) {}
-      get snapshotRenderingMode() {
-        return 0
-      }
-      set snapshotRenderingMode(TT) {}
-      getClassName() {
-        return "AbstractEngine"
-      }
-      get emptyTexture() {
-        return this._emptyTexture || (this._emptyTexture = this.createRawTexture(new Uint8Array(4), 1, 1, 5, !1, !1, 1)), this._emptyTexture
-      }
-      get emptyTexture3D() {
-        return this._emptyTexture3D || (this._emptyTexture3D = this.createRawTexture3D(new Uint8Array(4), 1, 1, 1, 5, !1, !1, 1)), this._emptyTexture3D
-      }
-      get emptyTexture2DArray() {
-        return this._emptyTexture2DArray || (this._emptyTexture2DArray = this.createRawTexture2DArray(new Uint8Array(4), 1, 1, 1, 5, !1, !1, 1)), this._emptyTexture2DArray
-      }
-      get emptyCubeTexture() {
-        if (!this._emptyCubeTexture) {
-          const TT = new Uint8Array(4),
-            oT = [TT, TT, TT, TT, TT, TT];
-          this._emptyCubeTexture = this.createRawCubeTexture(oT, 1, 5, 0, !1, !1, 1)
-        }
-        return this._emptyCubeTexture
-      }
-      set framebufferDimensionsObject(TT) {
-        this._framebufferDimensionsObject = TT
-      }
-      get activeRenderLoops() {
-        return this._activeRenderLoops
-      }
-      stopRenderLoop(TT) {
-        if (!TT) return this._activeRenderLoops.length = 0, void this._cancelFrame();
-        const oT = this._activeRenderLoops.indexOf(TT);
-        oT >= 0 && (this._activeRenderLoops.splice(oT, 1), 0 == this._activeRenderLoops.length && this._cancelFrame())
-      }
-      _cancelFrame() {
-        if (this.customAnimationFrameRequester) {
-          if (0 !== this._frameHandler) {
-            this._frameHandler = 0;
-            const {
-              cancelAnimationFrame: TT
-            } = this.customAnimationFrameRequester;
-            TT && TT(this.customAnimationFrameRequester.tc), delete this.customAnimationFrameRequester.tc
-          }
-        } else if (0 !== this._frameHandler) {
-          const TT = this._frameHandler;
-          if (this._frameHandler = 0, (0, KT.k)()) {
-            const {
-              cancelAnimationFrame: oT
-            } = this.getHostWindow() || window;
-            if ("function" === typeof oT) return oT(TT)
-          } else if ("function" === typeof cancelAnimationFrame) return cancelAnimationFrame(TT);
-          return clearTimeout(TT)
-        }
-      }
-      xR() {
-        this.onBeginFrameObservable.notifyObservers(this)
-      }
-      gR() {
-        this._frameId++, this.onEndFrameObservable.notifyObservers(this)
-      }
-      get maxFPS() {
-        return this._maxFPS
-      }
-      set maxFPS(TT) {
-        this._maxFPS = TT, void 0 !== TT && (this._minFrameTime = TT <= 0 ? Number.MAX_VALUE : 1e3 / TT)
-      }
-      _isOverFrameTime(TT) {
-        if (!TT || void 0 === this._maxFPS) return !1;
-        const oT = TT - this._lastFrameTime;
-        return this._lastFrameTime = TT, this._renderAccumulator += oT, this._renderAccumulator < this._minFrameTime || (this._renderAccumulator -= this._minFrameTime, this._renderAccumulator > this._minFrameTime && (this._renderAccumulator = this._minFrameTime), !1)
-      }
-      _processFrame(TT) {
-        if (this._frameHandler = 0, !this._contextWasLost && !this._isOverFrameTime(TT)) {
-          let TT = !0;
-          (this.IIT || !this.renderEvenInBackground && this._windowIsBackground) && (TT = !1), TT && (this.xR(), this.skipFrameRender || this._renderViews() || this._renderFrame(), this.gR())
-        }
-      }
-      _renderLoop(TT) {
-        this._processFrame(TT), this._activeRenderLoops.length > 0 && 0 === this._frameHandler && this._queueNewFrameForRenderLoop()
-      }
-      _renderFrame() {
-        for (let TT = 0; TT < this._activeRenderLoops.length; TT++) {
-          (0, this._activeRenderLoops[TT])()
-        }
-      }
-      _renderViews() {
-        return !1
-      }
-      _queueNewFrame(TT, oT) {
-        return rT(TT, oT)
-      }
-      _queueNewFrameForRenderLoop() {
-        this.customAnimationFrameRequester ? (this.customAnimationFrameRequester.tc = this._queueNewFrame(this.customAnimationFrameRequester.renderFunction || this._boundRenderFunction, this.customAnimationFrameRequester), this._frameHandler = this.customAnimationFrameRequester.tc) : this._frameHandler = this._queueNewFrame(this._boundRenderFunction, this.getHostWindow())
-      }
-      runRenderLoop(TT) {
-        -1 === this._activeRenderLoops.indexOf(TT) && (this._activeRenderLoops.push(TT), 1 === this._activeRenderLoops.length && 0 === this._frameHandler && this._queueNewFrameForRenderLoop())
-      }
-      getDepthBuffer() {
-        return this._depthCullingState.depthTest
-      }
-      setDepthBuffer(TT) {
-        this._depthCullingState.depthTest = TT
-      }
-      setZOffset(TT) {
-        this._depthCullingState.zOffset = this.lIT ? -TT : TT
-      }
-      getZOffset() {
-        const TT = this._depthCullingState.zOffset;
-        return this.lIT ? -TT : TT
-      }
-      setZOffsetUnits(TT) {
-        this._depthCullingState.zOffsetUnits = this.lIT ? -TT : TT
-      }
-      getZOffsetUnits() {
-        const TT = this._depthCullingState.zOffsetUnits;
-        return this.lIT ? -TT : TT
-      }
-      getHostWindow() {
-        return (0, KT.k)() ? this._renderingCanvas && this._renderingCanvas.ownerDocument && this._renderingCanvas.ownerDocument.defaultView ? this._renderingCanvas.ownerDocument.defaultView : window : null
-      }
-      get compatibilityMode() {
-        return this._compatibilityMode
-      }
-      set compatibilityMode(TT) {
-        this._compatibilityMode = !0
-      }
-      _rebuildTextures() {
-        for (const TT of this.scenes) TT._rebuildTextures();
-        for (const TT of this._virtualScenes) TT._rebuildTextures()
-      }
-      _releaseRenderTargetWrapper(TT) {
-        const oT = this._renderTargetWrapperCache.indexOf(TT); - 1 !== oT && this._renderTargetWrapperCache.splice(oT, 1)
-      }
-      get currentViewport() {
-        return this._cachedViewport
-      }
-      setViewport(TT, oT, IT) {
-        const iT = oT || this.getRenderWidth(),
-          zT = IT || this.getRenderHeight(),
-          kT = TT.x || 0,
-          WT = TT.y || 0;
-        this._cachedViewport = TT, this._viewport(kT * iT, WT * zT, iT * TT.width, zT * TT.height)
-      }
-      createCanvasImage() {
-        return document.createElement("img")
-      }
-      createCanvasPath2D(TT) {
-        return new Path2D(TT)
-      }
-      get description() {
-        let TT = this.name + this.version;
-        return this._caps.parallelShaderCompile && (TT += " - Parallel shader compilation"), TT
-      }
-      _createTextureBase(TT, oT, IT, iT) {
-        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
-          XT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-          BT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-          FT = arguments.length > 7 ? arguments[7] : void 0,
-          ST = arguments.length > 8 ? arguments[8] : void 0,
-          DT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-          LT = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : null,
-          xT = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
-          KT = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
-          MT = arguments.length > 13 ? arguments[13] : void 0,
-          rT = arguments.length > 14 ? arguments[14] : void 0,
-          gT = arguments.length > 15 ? arguments[15] : void 0;
-        const hT = "data:" === (TT = TT || "").substring(0, 5),
-          wT = "blob:" === TT.substring(0, 5),
-          mT = hT && -1 !== TT.indexOf(";base64,"),
-          eT = LT || new cT.e(this, 1);
-        eT !== LT && (eT.label = TT.substring(0, 60));
-        const RT = TT;
-        !this._transformTextureUrl || mT || LT || DT || (TT = this._transformTextureUrl(TT)), RT !== TT && (eT._originalUrl = RT);
-        const uT = TT.lastIndexOf(".");
-        let vT = KT || (uT > -1 ? TT.substring(uT).toLowerCase() : "");
-        vT.indexOf("?") > -1 && (vT = vT.split("?")[0]);
-        const ET = AT.GetCompatibleTextureLoader(vT, MT);
-        iT && iT.addPendingData(eT), eT.url = TT, eT.generateMipMaps = !oT, eT.samplingMode = zT, eT.invertY = IT, eT._useSRGBBuffer = this._getUseSRGBBuffer(!!gT, oT), this._doNotHandleContextLost || (eT._buffer = DT);
-        let fT = null;
-        XT && !LT && (fT = eT.onLoadedObservable.add(XT)), LT || this._internalTexturesCache.push(eT);
-        const CT = (IT, LT) => {
-          iT && iT.removePendingData(eT), TT === RT ? (fT && eT.onLoadedObservable.remove(fT), kT.d.UseFallbackTexture && TT !== kT.d.FallbackTexture && this._createTextureBase(kT.d.FallbackTexture, oT, eT.invertY, iT, zT, null, BT, FT, ST, DT, eT), IT = (IT || "Unknown error") + (kT.d.UseFallbackTexture ? " - Fallback texture was used" : ""), eT.onErrorObservable.notifyObservers({
-            message: IT,
-            exception: LT
-          }), BT && BT(IT, LT)) : (WT.d.Warn(`Failed to load ${TT}, falling back to ${RT}`), this._createTextureBase(RT, oT, eT.invertY, iT, zT, XT, BT, FT, ST, DT, eT, xT, KT, MT, rT, gT))
-        };
-        if (ET) {
-          const oT = async TT => {
-            (await ET).loadData(TT, eT, ((TT, oT, IT, kT, WT, XT) => {
-              XT ? CT("TextureLoader failed to load data") : FT(eT, vT, iT, {
-                width: TT,
-                height: oT
-              }, eT.invertY, !IT, kT, (() => (WT(), !1)), zT)
-            }), rT)
-          };
-          if (DT) {
-            const TT = async TT => {
-              try {
-                await oT(TT)
-              } catch (IT) {
-                CT("Failed to parse texture data", IT)
-              }
-            };
-            DT instanceof ArrayBuffer ? TT(new Uint8Array(DT)) : ArrayBuffer.isView(DT) ? TT(DT) : BT && BT("Unable to load: only ArrayBuffer or ArrayBufferView is supported", null)
-          } else this._loadFile(TT, (async TT => {
-            try {
-              await oT(new Uint8Array(TT))
-            } catch (IT) {
-              CT("Failed to parse texture data", IT)
-            }
-          }), void 0, iT ? iT.offlineProvider : void 0, !0, ((TT, oT) => {
-            CT("Unable to load " + (TT && TT.responseURL, oT))
-          }))
-        } else {
-          const IT = TT => {
-            wT && !this._doNotHandleContextLost && (eT._buffer = TT), FT(eT, vT, iT, TT, eT.invertY, oT, !1, ST, zT)
-          };
-          !hT || mT ? DT && ("string" === typeof DT.decoding || DT.close) ? IT(DT) : AT._FileToolsLoadImage(TT || "", IT, CT, iT ? iT.offlineProvider : null, MT, eT.invertY && this._features.needsInvertingBitmap ? {
-            imageOrientation: "flipY"
-          } : void 0, this) : "string" === typeof DT || DT instanceof ArrayBuffer || ArrayBuffer.isView(DT) || DT instanceof Blob ? AT._FileToolsLoadImage(DT, IT, CT, iT ? iT.offlineProvider : null, MT, eT.invertY && this._features.needsInvertingBitmap ? {
-            imageOrientation: "flipY"
-          } : void 0, this) : DT && IT(DT)
-        }
-        return eT
-      }
-      _rebuildBuffers() {
-        for (const TT of this._uniformBuffers) TT._rebuildAfterContextLost()
-      }
-      get _shouldUseHighPrecisionShader() {
-        return !(!this._caps.highPrecisionShaderSupported || !this._highPrecisionShadersAllowed)
-      }
-      getHostDocument() {
-        return this._renderingCanvas && this._renderingCanvas.ownerDocument ? this._renderingCanvas.ownerDocument : (0, KT.e)() ? document : null
-      }
-      getLoadedTexturesCache() {
-        return this._internalTexturesCache
-      }
-      clearInternalTexturesCache() {
-        this._internalTexturesCache.length = 0
-      }
-      getCaps() {
-        return this._caps
-      }
-      resetTextureCache() {
-        for (const TT in this._boundTexturesCache) Object.prototype.hasOwnProperty.call(this._boundTexturesCache, TT) && (this._boundTexturesCache[TT] = null);
-        this._currentTextureChannel = -1
-      }
-      get name() {
-        return this._name
-      }
-      set name(TT) {
-        this._name = TT
-      }
-      static get NpmPackage() {
-        return "babylonjs@9.28.0"
-      }
-      static get Version() {
-        return "9.28.0"
-      }
-      getRenderingCanvas() {
-        return this._renderingCanvas
-      }
-      getAudioContext() {
-        return this._audioContext
-      }
-      getAudioDestination() {
-        return this._audioDestination
-      }
-      setHardwareScalingLevel(TT) {
-        this._hardwareScalingLevel = TT, this.resize()
-      }
-      getHardwareScalingLevel() {
-        return this._hardwareScalingLevel
-      }
-      get doNotHandleContextLost() {
-        return this._doNotHandleContextLost
-      }
-      set doNotHandleContextLost(TT) {
-        this._doNotHandleContextLost = TT
-      }
-      get isStencilEnable() {
-        return this._isStencilEnable
-      }
-      getCreationOptions() {
-        return this._creationOptions
-      }
-      constructor(TT, oT, IT) {
-        this._colorWrite = !0, this._colorWriteChanged = !0, this._depthCullingState = new FT, this._stencilStateComposer = new ST, this._stencilState = new DT, this._alphaState = new LT.b(!1), this._alphaMode = Array(8).fill(-1), this._alphaEquation = Array(8).fill(-1), this._activeRequests = [], this._badOS = !1, this._badDesktopOS = !1, this._compatibilityMode = !0, this._internalTexturesCache = new Array, this._currentRenderTarget = null, this._boundTexturesCache = {}, this._activeChannel = 0, this._currentTextureChannel = -1, this._viewportCached = {
-          x: 0,
-          y: 0,
-          z: 0,
-          w: 0
-        }, this._isWebGPU = !1, this._enableGPUDebugMarkers = !1, this.onCanvasBlurObservable = new iT.d, this.onCanvasFocusObservable = new iT.d, this.onNewSceneAddedObservable = new iT.d, this.onResizeObservable = new iT.d, this.onCanvasPointerOutObservable = new iT.d, this.onEffectErrorObservable = new iT.d, this.disablePerformanceMonitorInBackground = !1, this.disableVertexArrayObjects = !1, this._frameId = 0, this.hostInformation = {
-          isMobile: !1
-        }, this.isFullscreen = !1, this.enableOfflineSupport = !1, this.disableManifestCheck = !1, this.disableContextMenu = !0, this.currentRenderPassId = 0, this.isPointerLock = !1, this.postProcesses = [], this.canvasTabIndex = 1, this._contextWasLost = !1, this._useReverseDepthBuffer = !1, this.isNDCHalfZRange = !1, this.hasOriginBottomLeft = !0, this._renderTargetWrapperCache = new Array, this._compiledEffects = {}, this._isDisposed = !1, this.scenes = [], this._virtualScenes = new Array, this.onBeforeTextureInitObservable = new iT.d, this.renderEvenInBackground = !0, this.preventCacheWipeBetweenFrames = !1, this._frameHandler = 0, this._activeRenderLoops = new Array, this.customAnimationFrameRequester = null, this._windowIsBackground = !1, this._boundRenderFunction = TT => this._renderLoop(TT), this._lastFrameTime = 0, this._renderAccumulator = 0, this.skipFrameRender = !1, this.onBeforeShaderCompilationObservable = new iT.d, this.onAfterShaderCompilationObservable = new iT.d, this.onBeginFrameObservable = new iT.d, this.onEndFrameObservable = new iT.d, this._transformTextureUrl = null, this._uniformBuffers = new Array, this._storageBuffers = new Array, this._highPrecisionShadersAllowed = !0, this.onContextLostObservable = new iT.d, this.onContextRestoredObservable = new iT.d, this._name = "", this.premultipliedAlpha = !0, this.adaptToDeviceRatio = !1, this._lastDevicePixelRatio = 1, this._doNotHandleContextLost = !1, this.cullBackFaces = null, this._renderPassNames = ["main"], this._onReleaseRenderPassObservable = null, this._fps = 60, this._deltaTime = 0, this._deterministicLockstep = !1, this._lockstepMaxSteps = 4, this._timeStep = 1 / 60, this.bC = new iT.d, this.onReleaseEffectsObservable = new iT.d, kT.d.Instances.push(this), this.startTime = BT.c.Now, this._stencilStateComposer.stencilGlobal = this._stencilState, XT.c.SetMatrixPrecision(!!oT.useLargeWorldRendering || !!oT.useHighPrecisionMatrix), (0, KT.g)() && navigator.userAgent && (this._badOS = /iPad/i.test(navigator.userAgent) || /iPhone/i.test(navigator.userAgent), this._badDesktopOS = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)), oT.antialias = TT ?? oT.antialias, oT.deterministicLockstep = oT.deterministicLockstep ?? !1, oT.lockstepMaxSteps = oT.lockstepMaxSteps ?? 4, oT.timeStep = oT.timeStep ?? 1 / 60, oT.stencil = oT.stencil ?? !0, this._audioContext = oT.audioEngineOptions?.audioContext ?? null, this._audioDestination = oT.audioEngineOptions?.audioDestination ?? null, this.premultipliedAlpha = oT.premultipliedAlpha ?? !0, this._doNotHandleContextLost = !!oT.doNotHandleContextLost, this._isStencilEnable = !!oT.stencil, this.useExactSrgbConversions = oT.useExactSrgbConversions ?? !1, this.canvasTabIndex = oT.canvasTabIndex ?? this.canvasTabIndex;
-        const zT = (0, KT.k)() && window.devicePixelRatio || 1,
-          WT = oT.limitDeviceRatio || zT;
-        IT = IT || oT.adaptToDeviceRatio || !1, this.adaptToDeviceRatio = IT, this._hardwareScalingLevel = IT ? 1 / Math.min(WT, zT) : 1, this._lastDevicePixelRatio = zT, this._creationOptions = oT
-      }
-      resize() {
-        let TT, oT, IT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (this.adaptToDeviceRatio) {
-          const TT = (0, KT.k)() && window.devicePixelRatio || 1,
-            oT = this._lastDevicePixelRatio / TT;
-          this._lastDevicePixelRatio = TT, this._hardwareScalingLevel *= oT
-        }
-        if ((0, KT.k)() && (0, KT.e)())
-          if (this._renderingCanvas) {
-            const IT = this._renderingCanvas.getBoundingClientRect?.();
-            TT = this._renderingCanvas.clientWidth || IT?.width || this._renderingCanvas.width * this._hardwareScalingLevel || 100, oT = this._renderingCanvas.clientHeight || IT?.height || this._renderingCanvas.height * this._hardwareScalingLevel || 100
-          } else TT = window.innerWidth, oT = window.innerHeight;
-        else TT = this._renderingCanvas ? this._renderingCanvas.width : 100, oT = this._renderingCanvas ? this._renderingCanvas.height : 100;
-        this.setSize(TT / this._hardwareScalingLevel, oT / this._hardwareScalingLevel, IT)
-      }
-      setSize(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (!this._renderingCanvas) return !1;
-        if (TT |= 0, oT |= 0, !IT && this._renderingCanvas.width === TT && this._renderingCanvas.height === oT) return !1;
-        if (this._renderingCanvas.width = TT, this._renderingCanvas.height = oT, this.scenes) {
-          for (let TT = 0; TT < this.scenes.length; TT++) {
-            const oT = this.scenes[TT];
-            for (let TT = 0; TT < oT.cameras.length; TT++) {
-              oT.cameras[TT]._currentRenderId = 0
-            }
-          }
-          this.onResizeObservable.hasObservers() && this.onResizeObservable.notifyObservers(this)
-        }
-        return !0
-      }
-      createRawTexture(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT, ST, DT) {
-        throw (0, xT.k)("engine.rawTexture")
-      }
-      createRawCubeTexture(TT, oT, IT, iT, zT, kT, WT, XT) {
-        throw (0, xT.k)("engine.rawTexture")
-      }
-      createRawTexture3D(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT, ST) {
-        throw (0, xT.k)("engine.rawTexture")
-      }
-      createRawTexture2DArray(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT, ST, DT) {
-        throw (0, xT.k)("engine.rawTexture")
-      }
-      _sharedInit(TT) {
-        this._renderingCanvas = TT
-      }
-      _setupMobileChecks() {
-        navigator && navigator.userAgent && (this._checkForMobile = () => {
-          const TT = navigator.userAgent;
-          this.hostInformation.isMobile = -1 !== TT.indexOf("Mobile") || -1 !== TT.indexOf("Mac") && (0, KT.e)() && "ontouchend" in document
-        }, this._checkForMobile(), (0, KT.k)() && window.addEventListener("resize", this._checkForMobile))
-      }
-      createVideoElement(TT) {
-        return document.createElement("video")
-      }
-      _reportDrawCall() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        this._drawCalls?.addCount(TT, !1)
-      }
-      getFps() {
-        return this._fps
-      }
-      getDeltaTime() {
-        return this._deltaTime
-      }
-      isDeterministicLockStep() {
-        return this._deterministicLockstep
-      }
-      getLockstepMaxSteps() {
-        return this._lockstepMaxSteps
-      }
-      getTimeStep() {
-        return 1e3 * this._timeStep
-      }
-      _createImageBitmapFromSource(TT, oT) {
-        throw new Error("createImageBitmapFromSource is not implemented")
-      }
-      createImageBitmap(TT, oT) {
-        return createImageBitmap(TT, oT)
-      }
-      resizeImageBitmap(TT, oT, IT) {
-        throw new Error("resizeImageBitmap is not implemented")
-      }
-      getFontOffset(TT) {
-        throw new Error("getFontOffset is not implemented")
-      }
-      static _CreateCanvas(TT, oT) {
-        if ("undefined" === typeof document) return new OffscreenCanvas(TT, oT);
-        const IT = document.createElement("canvas");
-        return IT.width = TT, IT.height = oT, IT
-      }
-      createCanvas(TT, oT) {
-        return AT._CreateCanvas(TT, oT)
-      }
-      static _FileToolsLoadImage(TT, oT, IT, iT, zT, kT, WT) {
-        if (!MT.d.loadImage) throw (0, xT.k)("FileTools");
-        return MT.d.loadImage(TT, oT, IT, iT, zT, kT, WT)
-      }
-      _loadFile(TT, oT, IT, iT, zT, kT) {
-        const WT = (0, MT.m)(TT, oT, IT, iT, zT, kT);
-        return this._activeRequests.push(WT), WT.onCompleteObservable.add((() => {
-          const TT = this._activeRequests.indexOf(WT); - 1 !== TT && this._activeRequests.splice(TT, 1)
-        })), WT
-      }
-      static _FileToolsLoadFile(TT, oT, IT, iT, zT, kT) {
-        if (MT.d.loadFile) return MT.d.loadFile(TT, oT, IT, iT, zT, kT);
-        throw (0, xT.k)("FileTools")
-      }
-      dispose() {
-        for (this.releaseEffects(), this._isDisposed = !0, this.stopRenderLoop(), this._emptyTexture && (this._releaseTexture(this._emptyTexture), this._emptyTexture = null), this._emptyCubeTexture && (this._releaseTexture(this._emptyCubeTexture), this._emptyCubeTexture = null), this._renderingCanvas = null, this.onBeforeTextureInitObservable && this.onBeforeTextureInitObservable.clear(); this.postProcesses.length;) this.postProcesses[0].dispose();
-        for (; this.scenes.length;) this.scenes[0].dispose();
-        for (; this._virtualScenes.length;) this._virtualScenes[0].dispose();
-        this.releaseComputeEffects?.(), zT.c.ResetCache();
-        for (const oT of this._activeRequests) oT.abort();
-        this._boundRenderFunction = null, this.bC.notifyObservers(this), this.bC.clear(), this.onResizeObservable.clear(), this.onCanvasBlurObservable.clear(), this.onCanvasFocusObservable.clear(), this.onCanvasPointerOutObservable.clear(), this.onNewSceneAddedObservable.clear(), this.onEffectErrorObservable.clear(), (0, KT.k)() && window.removeEventListener("resize", this._checkForMobile);
-        const TT = kT.d.Instances.indexOf(this);
-        TT >= 0 && kT.d.Instances.splice(TT, 1), kT.d.Instances.length || (kT.d.OnEnginesDisposedObservable.notifyObservers(this), kT.d.OnEnginesDisposedObservable.clear()), this.onBeginFrameObservable.clear(), this.onEndFrameObservable.clear(), this._onReleaseRenderPassObservable?.clear(), this._onReleaseRenderPassObservable = null
-      }
-      static DefaultLoadingScreenFactory(TT) {
-        throw (0, xT.k)("LoadingScreen")
-      }
-      static MarkAllMaterialsAsDirty(TT, oT) {
-        for (let IT = 0; IT < kT.d.Instances.length; IT++) {
-          const iT = kT.d.Instances[IT];
-          for (let IT = 0; IT < iT.scenes.length; IT++) iT.scenes[IT].markAllMaterialsAsDirty(TT, oT)
-        }
-      }
-      static GetCompatibleTextureLoader(TT, oT) {
-        return null
-      }
-    }
-    AT._RenderPassIdCounter = 0, AT._RescalePostProcessFactory = null, AT.CollisionsEpsilon = .001, AT.QueueNewFrame = rT
-  },
-  38617: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => iT
-    });
-    class iT {
-      static GetShadersRepository() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? iT.ShadersRepository : iT.ShadersRepositoryWGSL
-      }
-      static GetShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? iT.ShadersStore : iT.ShadersStoreWGSL
-      }
-      static GetIncludesShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? iT.IncludesShadersStore : iT.IncludesShadersStoreWGSL
-      }
-    }
-    iT.ShadersRepository = "src/Shaders/", iT.ShadersStore = {}, iT.IncludesShadersStore = {}, iT.ShadersRepositoryWGSL = "src/ShadersWGSL/", iT.ShadersStoreWGSL = {}, iT.IncludesShadersStoreWGSL = {}
-  },
-  38631: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => LT,
-      c: () => gT,
-      f: () => cT,
-      g: () => xT,
-      j: () => KT,
-      l: () => AT,
-      o: () => DT,
-      p: () => FT,
-      t: () => ST,
-      x: () => BT,
-      A: () => XT
-    });
-    class iT {
-      constructor() {
-        this._valueCache = {}, this._matrixValueCache = {}, this.vertexCompilationError = null, this.fragmentCompilationError = null, this.programLinkError = null, this.programValidationError = null, this._isDisposed = !1
-      }
-      get isAsync() {
-        return this.isParallelCompiled
-      }
-      get isReady() {
-        return !!this.program && (!this.isParallelCompiled || this.engine._isRenderingStateCompiled(this))
-      }
-      _handlesSpectorRebuildCallback(TT) {
-        TT && this.program && TT(this.program)
-      }
-      setEngine(TT) {
-        this.engine = TT
-      }
-      _fillEffectInformation(TT, oT, IT, iT, zT, kT, WT, XT) {
-        const BT = this.engine;
-        if (BT.supportsUniformBuffers)
-          for (const ST in oT) TT.bindUniformBlock(ST, oT[ST]);
-        let FT;
-        for (this.engine.getUniforms(this, IT).forEach(((TT, oT) => {
-            iT[IT[oT]] = TT
-          })), this._uniforms = iT, FT = 0; FT < zT.length; FT++) {
-          null == TT.getUniform(zT[FT]) && (zT.splice(FT, 1), FT--)
-        }
-        zT.forEach(((TT, oT) => {
-          kT[TT] = oT
-        }));
-        for (const ST of BT.getAttributes(this, WT)) XT.push(ST)
-      }
-      dispose() {
-        this._uniforms = {}, this._isDisposed = !0
-      }
-      _cacheMatrix(TT, oT) {
-        const IT = this._valueCache[TT],
-          iT = oT.updateFlag;
-        if (void 0 !== IT && IT === iT) return !1;
-        const zT = oT.bIT();
-        let kT = this._matrixValueCache[TT];
-        if (void 0 !== IT && null !== IT && void 0 !== kT) {
-          let oT = !0;
-          for (let TT = 15; TT >= 0; TT--)
-            if (kT[TT] !== zT[TT]) {
-              oT = !1;
-              break
-            } if (oT) return this._valueCache[TT] = iT, !1
-        }
-        return void 0 === kT && (kT = this._matrixValueCache[TT] = new Float32Array(16)), kT.set(zT), this._valueCache[TT] = iT, !0
-      }
-      _cacheFloat2(TT, oT, IT) {
-        let iT = this._valueCache[TT];
-        if (!iT || 2 !== iT.length) return iT = [oT, IT], this._valueCache[TT] = iT, !0;
-        let zT = !1;
-        return iT[0] !== oT && (iT[0] = oT, zT = !0), iT[1] !== IT && (iT[1] = IT, zT = !0), zT
-      }
-      _cacheFloat3(TT, oT, IT, iT) {
-        let zT = this._valueCache[TT];
-        if (!zT || 3 !== zT.length) return zT = [oT, IT, iT], this._valueCache[TT] = zT, !0;
-        let kT = !1;
-        return zT[0] !== oT && (zT[0] = oT, kT = !0), zT[1] !== IT && (zT[1] = IT, kT = !0), zT[2] !== iT && (zT[2] = iT, kT = !0), kT
-      }
-      _cacheFloat4(TT, oT, IT, iT, zT) {
-        let kT = this._valueCache[TT];
-        if (!kT || 4 !== kT.length) return kT = [oT, IT, iT, zT], this._valueCache[TT] = kT, !0;
-        let WT = !1;
-        return kT[0] !== oT && (kT[0] = oT, WT = !0), kT[1] !== IT && (kT[1] = IT, WT = !0), kT[2] !== iT && (kT[2] = iT, WT = !0), kT[3] !== zT && (kT[3] = zT, WT = !0), WT
-      }
-      setInt(TT, oT) {
-        const IT = this._valueCache[TT];
-        void 0 !== IT && IT === oT || this.engine.setInt(this._uniforms[TT], oT) && (this._valueCache[TT] = oT)
-      }
-      setInt2(TT, oT, IT) {
-        this._cacheFloat2(TT, oT, IT) && (this.engine.setInt2(this._uniforms[TT], oT, IT) || (this._valueCache[TT] = null))
-      }
-      setInt3(TT, oT, IT, iT) {
-        this._cacheFloat3(TT, oT, IT, iT) && (this.engine.setInt3(this._uniforms[TT], oT, IT, iT) || (this._valueCache[TT] = null))
-      }
-      setInt4(TT, oT, IT, iT, zT) {
-        this._cacheFloat4(TT, oT, IT, iT, zT) && (this.engine.setInt4(this._uniforms[TT], oT, IT, iT, zT) || (this._valueCache[TT] = null))
-      }
-      setIntArray(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setIntArray(this._uniforms[TT], oT)
-      }
-      setIntArray2(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setIntArray2(this._uniforms[TT], oT)
-      }
-      setIntArray3(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setIntArray3(this._uniforms[TT], oT)
-      }
-      setIntArray4(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setIntArray4(this._uniforms[TT], oT)
-      }
-      setUInt(TT, oT) {
-        const IT = this._valueCache[TT];
-        void 0 !== IT && IT === oT || this.engine.setUInt(this._uniforms[TT], oT) && (this._valueCache[TT] = oT)
-      }
-      setUInt2(TT, oT, IT) {
-        this._cacheFloat2(TT, oT, IT) && (this.engine.setUInt2(this._uniforms[TT], oT, IT) || (this._valueCache[TT] = null))
-      }
-      setUInt3(TT, oT, IT, iT) {
-        this._cacheFloat3(TT, oT, IT, iT) && (this.engine.setUInt3(this._uniforms[TT], oT, IT, iT) || (this._valueCache[TT] = null))
-      }
-      setUInt4(TT, oT, IT, iT, zT) {
-        this._cacheFloat4(TT, oT, IT, iT, zT) && (this.engine.setUInt4(this._uniforms[TT], oT, IT, iT, zT) || (this._valueCache[TT] = null))
-      }
-      setUIntArray(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setUIntArray(this._uniforms[TT], oT)
-      }
-      setUIntArray2(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setUIntArray2(this._uniforms[TT], oT)
-      }
-      setUIntArray3(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setUIntArray3(this._uniforms[TT], oT)
-      }
-      setUIntArray4(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setUIntArray4(this._uniforms[TT], oT)
-      }
-      setArray(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setArray(this._uniforms[TT], oT)
-      }
-      setArray2(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setArray2(this._uniforms[TT], oT)
-      }
-      setArray3(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setArray3(this._uniforms[TT], oT)
-      }
-      setArray4(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setArray4(this._uniforms[TT], oT)
-      }
-      setMatrices(TT, oT) {
-        oT && (this._valueCache[TT] = null, this.engine.setMatrices(this._uniforms[TT], oT))
-      }
-      setMatrix(TT, oT) {
-        this._cacheMatrix(TT, oT) && (this.engine.setMatrices(this._uniforms[TT], oT.bIT()) || (this._valueCache[TT] = null))
-      }
-      setMatrix3x3(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setMatrix3x3(this._uniforms[TT], oT)
-      }
-      setMatrix2x2(TT, oT) {
-        this._valueCache[TT] = null, this.engine.setMatrix2x2(this._uniforms[TT], oT)
-      }
-      setFloat(TT, oT) {
-        const IT = this._valueCache[TT];
-        void 0 !== IT && IT === oT || this.engine.setFloat(this._uniforms[TT], oT) && (this._valueCache[TT] = oT)
-      }
-      setVector2(TT, oT) {
-        this._cacheFloat2(TT, oT.x, oT.y) && (this.engine.setFloat2(this._uniforms[TT], oT.x, oT.y) || (this._valueCache[TT] = null))
-      }
-      setFloat2(TT, oT, IT) {
-        this._cacheFloat2(TT, oT, IT) && (this.engine.setFloat2(this._uniforms[TT], oT, IT) || (this._valueCache[TT] = null))
-      }
-      setVector3(TT, oT) {
-        this._cacheFloat3(TT, oT.x, oT.y, oT.z) && (this.engine.setFloat3(this._uniforms[TT], oT.x, oT.y, oT.z) || (this._valueCache[TT] = null))
-      }
-      setFloat3(TT, oT, IT, iT) {
-        this._cacheFloat3(TT, oT, IT, iT) && (this.engine.setFloat3(this._uniforms[TT], oT, IT, iT) || (this._valueCache[TT] = null))
-      }
-      setVector4(TT, oT) {
-        this._cacheFloat4(TT, oT.x, oT.y, oT.z, oT.w) && (this.engine.setFloat4(this._uniforms[TT], oT.x, oT.y, oT.z, oT.w) || (this._valueCache[TT] = null))
-      }
-      setQuaternion(TT, oT) {
-        this._cacheFloat4(TT, oT.x, oT.y, oT.z, oT.w) && (this.engine.setFloat4(this._uniforms[TT], oT.x, oT.y, oT.z, oT.w) || (this._valueCache[TT] = null))
-      }
-      setFloat4(TT, oT, IT, iT, zT) {
-        this._cacheFloat4(TT, oT, IT, iT, zT) && (this.engine.setFloat4(this._uniforms[TT], oT, IT, iT, zT) || (this._valueCache[TT] = null))
-      }
-      setColor3(TT, oT) {
-        this._cacheFloat3(TT, oT.r, oT.g, oT.b) && (this.engine.setFloat3(this._uniforms[TT], oT.r, oT.g, oT.b) || (this._valueCache[TT] = null))
-      }
-      setColor4(TT, oT, IT) {
-        this._cacheFloat4(TT, oT.r, oT.g, oT.b, IT) && (this.engine.setFloat4(this._uniforms[TT], oT.r, oT.g, oT.b, IT) || (this._valueCache[TT] = null))
-      }
-      setDirectColor4(TT, oT) {
-        this._cacheFloat4(TT, oT.r, oT.g, oT.b, oT.a) && (this.engine.setFloat4(this._uniforms[TT], oT.r, oT.g, oT.b, oT.a) || (this._valueCache[TT] = null))
-      }
-      _getVertexShaderCode() {
-        return this.vertexShader ? this.engine._getShaderSource(this.vertexShader) : null
-      }
-      _getFragmentShaderCode() {
-        return this.fragmentShader ? this.engine._getShaderSource(this.fragmentShader) : null
-      }
-    }
-    var zT = IT(38635);
-    const kT = new WeakMap,
-      WT = {
-        _webGLVersion: 2,
-        cachedPipelines: {}
-      };
-
-    function XT(TT) {
-      let oT = kT.get(TT);
-      if (!oT) {
-        if (!TT) return WT;
-        oT = {
-          _webGLVersion: TT.TEXTURE_BINDING_3D ? 2 : 1,
-          _context: TT,
-          parallelShaderCompile: TT.getExtension("KHR_parallel_shader_compile") || void 0,
-          cachedPipelines: {}
-        }, kT.set(TT, oT)
-      }
-      return oT
-    }
-
-    function BT(TT) {
-      kT.delete(TT)
-    }
-
-    function FT(TT, oT, IT, iT, zT, kT) {
-      const WT = XT(iT);
-      kT || (kT = WT._createShaderProgramInjection ?? LT);
-      return kT(TT, rT(oT, "vertex", iT, WT._contextWasLost), rT(IT, "fragment", iT, WT._contextWasLost), iT, zT, WT.validateShaderPrograms)
-    }
-
-    function ST(TT, oT, IT, iT, zT) {
-      let kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-        WT = arguments.length > 6 ? arguments[6] : void 0;
-      const BT = XT(zT);
-      WT || (WT = BT._createShaderProgramInjection ?? LT);
-      const FT = BT._webGLVersion > 1 ? "#version 300 es\n#define WEBGL2 \n" : "";
-      return WT(TT, MT(oT, "vertex", iT, FT, zT, BT._contextWasLost), MT(IT, "fragment", iT, FT, zT, BT._contextWasLost), zT, kT, BT.validateShaderPrograms)
-    }
-
-    function DT(TT, oT) {
-      const IT = new iT,
-        zT = XT(TT);
-      return zT.parallelShaderCompile && !zT.disableParallelShaderCompile && (IT.isParallelCompiled = !0), IT.context = zT._context, IT
-    }
-
-    function LT(TT, oT, IT, iT) {
-      let zT = arguments.length > 5 ? arguments[5] : void 0;
-      const kT = iT.createProgram();
-      if (TT.program = kT, !kT) throw new Error("Unable to create program");
-      return iT.attachShader(kT, oT), iT.attachShader(kT, IT), iT.linkProgram(kT), TT.context = iT, TT.vertexShader = oT, TT.fragmentShader = IT, TT.isParallelCompiled || cT(TT, iT, zT), kT
-    }
-
-    function xT(TT, oT, IT) {
-      const iT = TT;
-      if (iT._isDisposed) return !1;
-      const zT = XT(oT);
-      return !!(zT && zT.parallelShaderCompile && zT.parallelShaderCompile.COMPLETION_STATUS_KHR && iT.program && oT.getProgramParameter(iT.program, zT.parallelShaderCompile.COMPLETION_STATUS_KHR)) && (cT(iT, oT, IT), !0)
-    }
-
-    function cT(TT, oT, IT) {
-      const iT = TT.context,
-        zT = TT.vertexShader,
-        kT = TT.fragmentShader,
-        WT = TT.program;
-      if (!iT.getProgramParameter(WT, iT.LINK_STATUS)) {
-        if (!oT.getShaderParameter(zT, oT.COMPILE_STATUS)) {
-          const IT = oT.getShaderInfoLog(zT);
-          if (IT) throw TT.vertexCompilationError = IT, new Error("VERTEX SHADER " + IT)
-        }
-        if (!oT.getShaderParameter(kT, oT.COMPILE_STATUS)) {
-          const IT = oT.getShaderInfoLog(kT);
-          if (IT) throw TT.fragmentCompilationError = IT, new Error("FRAGMENT SHADER " + IT)
-        }
-        const IT = iT.getProgramInfoLog(WT);
-        if (IT) throw TT.programLinkError = IT, new Error(IT)
-      }
-      if (IT) {
-        iT.validateProgram(WT);
-        if (!iT.getProgramParameter(WT, iT.VALIDATE_STATUS)) {
-          const oT = iT.getProgramInfoLog(WT);
-          if (oT) throw TT.programValidationError = oT, new Error(oT)
-        }
-      }
-      iT.deleteShader(zT), iT.deleteShader(kT), TT.vertexShader = void 0, TT.fragmentShader = void 0, TT.onCompiled && (TT.onCompiled(), TT.onCompiled = void 0)
-    }
-
-    function KT(TT, oT, IT, iT, zT, kT, WT, BT, DT) {
-      let LT = arguments.length > 10 ? arguments[10] : void 0,
-        xT = arguments.length > 11 ? arguments[11] : void 0,
-        cT = arguments.length > 12 ? arguments[12] : void 0;
-      const KT = XT(TT.context);
-      xT || (xT = KT.createRawShaderProgramInjection ?? FT), cT || (cT = KT.createShaderProgramInjection ?? ST);
-      const MT = TT;
-      MT.program = iT ? xT(MT, oT, IT, MT.context, DT) : cT(MT, oT, IT, BT, MT.context, DT), MT.program.__SPECTOR_rebuildProgram = WT, LT()
-    }
-
-    function MT(TT, oT, IT, iT, kT, WT) {
-      return rT((0, zT.f)(TT, IT, iT), oT, kT, WT)
-    }
-
-    function rT(TT, oT, IT, iT) {
-      const zT = IT.createShader("vertex" === oT ? IT.VERTEX_SHADER : IT.FRAGMENT_SHADER);
-      if (!zT) {
-        let TT, zT = IT.NO_ERROR;
-        for (;
-          (TT = IT.getError()) !== IT.NO_ERROR;) zT = TT;
-        throw new Error(`Something went wrong while creating a gl ${oT} shader object. gl error=${zT}, gl isContextLost=${IT.isContextLost()}, _contextWasLost=${iT}`)
-      }
-      return IT.shaderSource(zT, TT), IT.compileShader(zT), zT
-    }
-
-    function AT(TT, oT) {
-      oT.useProgram(TT)
-    }
-
-    function gT(TT, oT) {
-      const IT = TT;
-      if (!IT.isParallelCompiled) return void oT(TT);
-      const iT = IT.onCompiled;
-      IT.onCompiled = () => {
-        iT?.(), oT(TT)
-      }
-    }
-  },
-  38607: (TT, oT, IT) => {
-    IT.d(oT, {
-      ThinEngine: () => wT
-    });
-    var iT = IT(38609),
-      zT = IT(38631),
-      kT = IT(38659),
-      WT = IT(38679),
-      XT = IT(37660),
-      BT = IT(38626);
-    class FT {
-      constructor() {
-        this.shaderLanguage = 0
-      }
-      postProcessor(TT, oT, IT, iT, zT) {
-        if (zT.drawBuffersExtensionDisabled) {
-          const oT = /#extension.+GL_EXT_draw_buffers.+(enable|require)/g;
-          TT = TT.replace(oT, "")
-        }
-        return TT
-      }
-    }
-    const ST = /(flat\s)?\s*varying\s*.*/;
-    class DT {
-      constructor() {
-        this.shaderLanguage = 0
-      }
-      attributeProcessor(TT) {
-        return TT.replace("attribute", "in")
-      }
-      varyingCheck(TT, oT) {
-        return ST.test(TT)
-      }
-      varyingProcessor(TT, oT) {
-        return TT.replace("varying", oT ? "in" : "out")
-      }
-      postProcessor(TT, oT, IT) {
-        const iT = -1 !== TT.search(/#extension.+GL_EXT_draw_buffers.+require/);
-        if (TT = (TT = TT.replace(/#extension.+(GL_OVR_multiview2|GL_OES_standard_derivatives|GL_EXT_shader_texture_lod|GL_EXT_frag_depth|GL_EXT_draw_buffers).+(enable|require)/g, "")).replace(/texture2D\s*\(/g, "texture("), IT) {
-          const IT = -1 !== TT.search(/layout *\(location *= *0\) *out/g),
-            zT = -1 !== oT.indexOf("#define DUAL_SOURCE_BLENDING"),
-            kT = zT ? "layout(location = 0, index = 0) out vec4 glFragColor;\nlayout(location = 0, index = 1) out vec4 glFragColor2;\n" : "layout(location = 0) out vec4 glFragColor;\n";
-          zT && (TT = "#extension GL_EXT_blend_func_extended : require\n" + TT), TT = (TT = (TT = (TT = (TT = (TT = (TT = TT.replace(/texture2DLodEXT\s*\(/g, "textureLod(")).replace(/textureCubeLodEXT\s*\(/g, "textureLod(")).replace(/textureCube\s*\(/g, "texture(")).replace(/gl_FragDepthEXT/g, "gl_FragDepth")).replace(/gl_FragColor/g, "glFragColor")).replace(/gl_FragData/g, "glFragData")).replace(/void\s+?main\s*\(/g, (iT || IT ? "" : kT) + "void main(")
-        } else {
-          oT.indexOf("#define VERTEXOUTPUT_INVARIANT") >= 0 && (TT = "invariant gl_Position;\n" + TT);
-          if (-1 !== oT.indexOf("#define MULTIVIEW")) return "#extension GL_OVR_multiview2 : require\nlayout (num_views = 2) in;\n" + TT
-        }
-        return TT
-      }
-    }
-    var LT = IT(38687),
-      xT = IT(38698),
-      cT = IT(38700),
-      KT = IT(38594),
-      MT = IT(38635),
-      rT = IT(38624),
-      AT = IT(38708),
-      gT = IT(38673);
-    class hT {}
-    class wT extends kT.b {
-      get name() {
-        return this._name
-      }
-      set name(TT) {
-        this._name = TT
-      }
-      get version() {
-        return this._webGLVersion
-      }
-      static get ShadersRepository() {
-        return iT.c.ShadersRepository
-      }
-      static set ShadersRepository(TT) {
-        iT.c.ShadersRepository = TT
-      }
-      get supportsUniformBuffers() {
-        return this.rK > 1 && !this.disableUniformBuffers
-      }
-      get needPOTTextures() {
-        return this._webGLVersion < 2 || this.forcePOTTextures
-      }
-      get _supportsHardwareTextureRescaling() {
-        return !1
-      }
-      snapshotRenderingReset() {
-        this.snapshotRendering = !1
-      }
-      constructor(TT, oT, IT, iT) {
-        if (IT = IT || {}, super(oT ?? IT.antialias, IT, iT), this._name = "WebGL", this.forcePOTTextures = !1, this.validateShaderPrograms = !1, this.disableUniformBuffers = !1, this._webGLVersion = 1, this._integerMRTAttachmentsMask = 0, this._vertexAttribArraysEnabled = [], this._uintIndicesCurrentlySet = !1, this._currentBoundBuffer = new Array, this._currentFramebuffer = null, this._dummyFramebuffer = null, this._currentBufferPointers = new Array, this._currentInstanceLocations = new Array, this._currentInstanceBuffers = new Array, this._vaoRecordInProgress = !1, this._mustWipeVertexAttributes = !1, this._nextFreeTextureSlots = new Array, this._maxSimultaneousTextures = 0, this._maxMSAASamplesOverride = null, this._unpackFlipYCached = null, this.enableUnpackFlipYCached = !0, this._boundUniforms = {}, !TT) return;
-        let kT;
-        if (TT.getContext) {
-          if (kT = TT, void 0 === IT.preserveDrawingBuffer && (IT.preserveDrawingBuffer = !1), void 0 === IT.xrCompatible && (IT.xrCompatible = !1), navigator && navigator.userAgent) {
-            this._setupMobileChecks();
-            const TT = navigator.userAgent;
-            for (const oT of wT.ExceptionList) {
-              const iT = oT.key,
-                zT = oT.targets;
-              if (new RegExp(iT).test(TT)) {
-                if (oT.capture && oT.captureConstraint) {
-                  const IT = oT.capture,
-                    iT = oT.captureConstraint,
-                    zT = new RegExp(IT).exec(TT);
-                  if (zT && zT.length > 0) {
-                    if (parseInt(zT[zT.length - 1]) >= iT) continue
-                  }
-                }
-                for (const TT of zT) switch (TT) {
-                  case "uniformBuffer":
-                    this.disableUniformBuffers = !0;
-                    break;
-                  case "vao":
-                    this.disableVertexArrayObjects = !0;
-                    break;
-                  case "antialias":
-                    IT.antialias = !1;
-                    break;
-                  case "maxMSAASamples":
-                    this._maxMSAASamplesOverride = 1
-                }
-              }
-            }
-          }
-          if (this._doNotHandleContextLost ? this._onContextLost = () => {
-              (0, zT.x)(this._gl)
-            } : (this._onContextLost = TT => {
-              TT.preventDefault(), this._contextWasLost = !0, (0, zT.x)(this._gl), XT.d.Warn("WebGL context lost."), this.onContextLostObservable.notifyObservers(this)
-            }, this._onContextRestored = () => {
-              this._restoreEngineAfterContextLost((() => this._initGLContext()))
-            }, kT.addEventListener("webglcontextrestored", this._onContextRestored, !1), IT.powerPreference = IT.powerPreference || "high-performance"), kT.addEventListener("webglcontextlost", this._onContextLost, !1), this._badDesktopOS && (IT.xrCompatible = !1), !IT.disableWebGL2Support) try {
-            this._gl = kT.getContext("webgl2", IT) || kT.getContext("experimental-webgl2", IT), this._gl && (this._webGLVersion = 2, this._shaderPlatformName = "WEBGL2", this._gl.deleteQuery || (this._webGLVersion = 1, this._shaderPlatformName = "WEBGL1"))
-          } catch (ST) {}
-          if (!this._gl) {
-            if (!kT) throw new Error("The provided canvas is null or undefined.");
-            try {
-              this._gl = kT.getContext("webgl", IT) || kT.getContext("experimental-webgl", IT)
-            } catch (ST) {
-              throw new Error("WebGL not supported", {
-                cause: ST
-              })
-            }
-          }
-          if (!this._gl) throw new Error("WebGL not supported")
-        } else {
-          this._gl = TT, kT = this._gl.canvas, this._gl.renderbufferStorageMultisample ? (this._webGLVersion = 2, this._shaderPlatformName = "WEBGL2") : this._shaderPlatformName = "WEBGL1";
-          const oT = this._gl.getContextAttributes();
-          oT && (IT.stencil = oT.stencil)
-        }
-        this._sharedInit(kT), this._gl.pixelStorei(this._gl.UNPACK_COLORSPACE_CONVERSION_WEBGL, this._gl.NONE), void 0 !== IT.useHighPrecisionFloats && (this._highPrecisionShadersAllowed = IT.useHighPrecisionFloats), this.resize(), this._initGLContext(), this._initFeatures();
-        for (let zT = 0; zT < this._caps.maxVertexAttribs; zT++) this._currentBufferPointers[zT] = new hT;
-        this._shaderProcessor = this.rK > 1 ? new DT : new FT;
-        const WT = `Babylon.js v${wT.Version}`;
-        XT.d.Log(WT + ` - ${this.description}`), this._renderingCanvas && this._renderingCanvas.setAttribute && this._renderingCanvas.setAttribute("data-engine", WT);
-        const BT = (0, zT.A)(this._gl);
-        BT.validateShaderPrograms = this.validateShaderPrograms, BT.parallelShaderCompile = this._caps.parallelShaderCompile
-      }
-      _clearEmptyResources() {
-        this._dummyFramebuffer = null, super._clearEmptyResources()
-      }
-      _getShaderProcessingContext(TT) {
-        return null
-      }
-      areAllEffectsReady() {
-        for (const TT in this._compiledEffects) {
-          if (!this._compiledEffects[TT].isReady()) return !1
-        }
-        return !0
-      }
-      _initGLContext() {
-        this._caps = {
-          maxTexturesImageUnits: this._gl.getParameter(this._gl.MAX_TEXTURE_IMAGE_UNITS),
-          maxCombinedTexturesImageUnits: this._gl.getParameter(this._gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS),
-          maxVertexTextureImageUnits: this._gl.getParameter(this._gl.MAX_VERTEX_TEXTURE_IMAGE_UNITS),
-          maxTextureSize: this._gl.getParameter(this._gl.MAX_TEXTURE_SIZE),
-          maxSamples: this._webGLVersion > 1 ? this._gl.getParameter(this._gl.MAX_SAMPLES) : 1,
-          maxCubemapTextureSize: this._gl.getParameter(this._gl.MAX_CUBE_MAP_TEXTURE_SIZE),
-          maxRenderTextureSize: this._gl.getParameter(this._gl.MAX_RENDERBUFFER_SIZE),
-          maxVertexAttribs: this._gl.getParameter(this._gl.MAX_VERTEX_ATTRIBS),
-          maxVaryingVectors: this._gl.getParameter(this._gl.MAX_VARYING_VECTORS),
-          maxFragmentUniformVectors: this._gl.getParameter(this._gl.MAX_FRAGMENT_UNIFORM_VECTORS),
-          maxVertexUniformVectors: this._gl.getParameter(this._gl.MAX_VERTEX_UNIFORM_VECTORS),
-          shaderFloatPrecision: 0,
-          parallelShaderCompile: this._gl.getExtension("KHR_parallel_shader_compile") || void 0,
-          standardDerivatives: this._webGLVersion > 1 || null !== this._gl.getExtension("OES_standard_derivatives"),
-          maxAnisotropy: 1,
-          astc: this._gl.getExtension("WEBGL_compressed_texture_astc") || this._gl.getExtension("WEBKIT_WEBGL_compressed_texture_astc"),
-          bptc: this._gl.getExtension("EXT_texture_compression_bptc") || this._gl.getExtension("WEBKIT_EXT_texture_compression_bptc"),
-          s3tc: this._gl.getExtension("WEBGL_compressed_texture_s3tc") || this._gl.getExtension("WEBKIT_WEBGL_compressed_texture_s3tc"),
-          s3tc_srgb: this._gl.getExtension("WEBGL_compressed_texture_s3tc_srgb") || this._gl.getExtension("WEBKIT_WEBGL_compressed_texture_s3tc_srgb"),
-          pvrtc: this._gl.getExtension("WEBGL_compressed_texture_pvrtc") || this._gl.getExtension("WEBKIT_WEBGL_compressed_texture_pvrtc"),
-          etc1: this._gl.getExtension("WEBGL_compressed_texture_etc1") || this._gl.getExtension("WEBKIT_WEBGL_compressed_texture_etc1"),
-          etc2: this._gl.getExtension("WEBGL_compressed_texture_etc") || this._gl.getExtension("WEBKIT_WEBGL_compressed_texture_etc") || this._gl.getExtension("WEBGL_compressed_texture_es3_0"),
-          textureAnisotropicFilterExtension: this._gl.getExtension("EXT_texture_filter_anisotropic") || this._gl.getExtension("WEBKIT_EXT_texture_filter_anisotropic") || this._gl.getExtension("MOZ_EXT_texture_filter_anisotropic"),
-          uintIndices: this._webGLVersion > 1 || null !== this._gl.getExtension("OES_element_index_uint"),
-          fragmentDepthSupported: this._webGLVersion > 1 || null !== this._gl.getExtension("EXT_frag_depth"),
-          highPrecisionShaderSupported: !1,
-          timerQuery: this._gl.getExtension("EXT_disjoint_timer_query_webgl2") || this._gl.getExtension("EXT_disjoint_timer_query"),
-          supportOcclusionQuery: this._webGLVersion > 1,
-          canUseTimestampForTimerQuery: !1,
-          drawBuffersExtension: !1,
-          maxMSAASamples: 1,
-          colorBufferFloat: !!(this._webGLVersion > 1 && this._gl.getExtension("EXT_color_buffer_float")),
-          blendFloat: null !== this._gl.getExtension("EXT_float_blend"),
-          supportFloatTexturesResolve: !1,
-          rg11b10ufColorRenderable: !1,
-          colorBufferHalfFloat: !!(this._webGLVersion > 1 && this._gl.getExtension("EXT_color_buffer_half_float")),
-          textureFloat: !!(this._webGLVersion > 1 || this._gl.getExtension("OES_texture_float")),
-          textureHalfFloat: !!(this._webGLVersion > 1 || this._gl.getExtension("OES_texture_half_float")),
-          textureHalfFloatRender: !1,
-          textureFloatLinearFiltering: !1,
-          textureFloatRender: !1,
-          textureHalfFloatLinearFiltering: !1,
-          vertexArrayObject: !1,
-          instancedArrays: !1,
-          textureLOD: !!(this._webGLVersion > 1 || this._gl.getExtension("EXT_shader_texture_lod")),
-          texelFetch: 1 !== this._webGLVersion,
-          blendMinMax: !1,
-          multiview: this._gl.getExtension("OVR_multiview2"),
-          oculusMultiview: this._gl.getExtension("OCULUS_multiview"),
-          depthTextureExtension: !1,
-          canUseGLInstanceID: this._webGLVersion > 1,
-          canUseGLVertexID: this._webGLVersion > 1,
-          supportComputeShaders: !1,
-          supportSRGBBuffers: !1,
-          supportTransformFeedbacks: this._webGLVersion > 1,
-          textureMaxLevel: this._webGLVersion > 1,
-          texture2DArrayMaxLayerCount: this._webGLVersion > 1 ? this._gl.getParameter(this._gl.MAX_ARRAY_TEXTURE_LAYERS) : 128,
-          disableMorphTargetTexture: !1,
-          textureNorm16: !!this._gl.getExtension("EXT_texture_norm16"),
-          blendParametersPerTarget: !1,
-          dualSourceBlending: !1,
-          supportReadWriteStorageTextures: !1
-        }, this._caps.supportFloatTexturesResolve = this._caps.colorBufferFloat, this._caps.rg11b10ufColorRenderable = this._caps.colorBufferFloat, this._glVersion = this._gl.getParameter(this._gl.VERSION);
-        const TT = this._gl.getExtension("WEBGL_debug_renderer_info");
-        null != TT && (this._glRenderer = this._gl.getParameter(TT.UNMASKED_RENDERER_WEBGL), this._glVendor = this._gl.getParameter(TT.UNMASKED_VENDOR_WEBGL)), this._glVendor || (this._glVendor = this._gl.getParameter(this._gl.VENDOR) || "Unknown vendor"), this._glRenderer || (this._glRenderer = this._gl.getParameter(this._gl.RENDERER) || "Unknown renderer"), 36193 !== this._gl.HALF_FLOAT_OES && (this._gl.HALF_FLOAT_OES = 36193), 34842 !== this._gl.RGBA16F && (this._gl.RGBA16F = 34842), 34836 !== this._gl.RGBA32F && (this._gl.RGBA32F = 34836), 35056 !== this._gl.DEPTH24_STENCIL8 && (this._gl.DEPTH24_STENCIL8 = 35056), this._caps.timerQuery && (1 === this._webGLVersion && (this._gl.getQuery = this._caps.timerQuery.getQueryEXT.bind(this._caps.timerQuery)), this._caps.canUseTimestampForTimerQuery = (this._gl.getQuery(this._caps.timerQuery.TIMESTAMP_EXT, this._caps.timerQuery.QUERY_COUNTER_BITS_EXT) ?? 0) > 0), this._caps.maxAnisotropy = this._caps.textureAnisotropicFilterExtension ? this._gl.getParameter(this._caps.textureAnisotropicFilterExtension.MAX_TEXTURE_MAX_ANISOTROPY_EXT) : 0, this._caps.textureFloatLinearFiltering = !(!this._caps.textureFloat || !this._gl.getExtension("OES_texture_float_linear")), this._caps.textureFloatRender = !(!this._caps.textureFloat || !this._canRenderToFloatFramebuffer()), this._caps.textureHalfFloatLinearFiltering = !!(this._webGLVersion > 1 || this._caps.textureHalfFloat && this._gl.getExtension("OES_texture_half_float_linear")), this._caps.textureNorm16 && (this._gl.R16_EXT = 33322, this._gl.RG16_EXT = 33324, this._gl.RGB16_EXT = 32852, this._gl.RGBA16_EXT = 32859, this._gl.R16_SNORM_EXT = 36760, this._gl.RG16_SNORM_EXT = 36761, this._gl.RGB16_SNORM_EXT = 36762, this._gl.RGBA16_SNORM_EXT = 36763);
-        const oT = this._gl.getExtension("OES_draw_buffers_indexed");
-        if (this._caps.blendParametersPerTarget = !!oT, this._alphaState = new gT.b(this._caps.blendParametersPerTarget), oT && (this._gl.blendEquationSeparateIndexed = oT.blendEquationSeparateiOES.bind(oT), this._gl.blendEquationIndexed = oT.blendEquationiOES.bind(oT), this._gl.blendFuncSeparateIndexed = oT.blendFuncSeparateiOES.bind(oT), this._gl.blendFuncIndexed = oT.blendFunciOES.bind(oT), this._gl.colorMaskIndexed = oT.colorMaskiOES.bind(oT), this._gl.disableIndexed = oT.disableiOES.bind(oT), this._gl.enableIndexed = oT.enableiOES.bind(oT)), this._caps.dualSourceBlending = !!this._gl.getExtension("WEBGL_blend_func_extended"), this._caps.astc && (this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR, this._gl.COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = this._caps.astc.COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR), this._caps.bptc && (this._gl.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT = this._caps.bptc.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT), this._caps.s3tc_srgb && (this._gl.COMPRESSED_SRGB_S3TC_DXT1_EXT = this._caps.s3tc_srgb.COMPRESSED_SRGB_S3TC_DXT1_EXT, this._gl.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = this._caps.s3tc_srgb.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT, this._gl.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = this._caps.s3tc_srgb.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT), this._caps.etc2 && (this._gl.COMPRESSED_SRGB8_ETC2 = this._caps.etc2.COMPRESSED_SRGB8_ETC2, this._gl.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = this._caps.etc2.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC), this._webGLVersion > 1 && 5131 !== this._gl.HALF_FLOAT_OES && (this._gl.HALF_FLOAT_OES = 5131), this._caps.textureHalfFloatRender = this._caps.textureHalfFloat && this._canRenderToHalfFloatFramebuffer(), this._webGLVersion > 1) this._caps.drawBuffersExtension = !0, this._caps.maxMSAASamples = null !== this._maxMSAASamplesOverride ? this._maxMSAASamplesOverride : this._gl.getParameter(this._gl.MAX_SAMPLES), this._caps.maxDrawBuffers = this._gl.getParameter(this._gl.MAX_DRAW_BUFFERS);
-        else {
-          const TT = this._gl.getExtension("WEBGL_draw_buffers");
-          if (null !== TT) {
-            this._caps.drawBuffersExtension = !0, this._gl.drawBuffers = TT.drawBuffersWEBGL.bind(TT), this._caps.maxDrawBuffers = this._gl.getParameter(TT.MAX_DRAW_BUFFERS_WEBGL), this._gl.DRAW_FRAMEBUFFER = this._gl.FRAMEBUFFER;
-            for (let oT = 0; oT < 16; oT++) this._gl["COLOR_ATTACHMENT" + oT + "_WEBGL"] = TT["COLOR_ATTACHMENT" + oT + "_WEBGL"]
-          }
-        }
-        if (this._webGLVersion > 1) this._caps.depthTextureExtension = !0;
-        else {
-          const TT = this._gl.getExtension("WEBGL_depth_texture");
-          null != TT && (this._caps.depthTextureExtension = !0, this._gl.UNSIGNED_INT_24_8 = TT.UNSIGNED_INT_24_8_WEBGL)
-        }
-        if (this.disableVertexArrayObjects) this._caps.vertexArrayObject = !1;
-        else if (this._webGLVersion > 1) this._caps.vertexArrayObject = !0;
-        else {
-          const TT = this._gl.getExtension("OES_vertex_array_object");
-          null != TT && (this._caps.vertexArrayObject = !0, this._gl.createVertexArray = TT.createVertexArrayOES.bind(TT), this._gl.bindVertexArray = TT.bindVertexArrayOES.bind(TT), this._gl.deleteVertexArray = TT.deleteVertexArrayOES.bind(TT))
-        }
-        if (this._webGLVersion > 1) this._caps.instancedArrays = !0;
-        else {
-          const TT = this._gl.getExtension("ANGLE_instanced_arrays");
-          null != TT ? (this._caps.instancedArrays = !0, this._gl.drawArraysInstanced = TT.drawArraysInstancedANGLE.bind(TT), this._gl.drawElementsInstanced = TT.drawElementsInstancedANGLE.bind(TT), this._gl.vertexAttribDivisor = TT.vertexAttribDivisorANGLE.bind(TT)) : this._caps.instancedArrays = !1
-        }
-        if (this._gl.getShaderPrecisionFormat) {
-          const TT = this._gl.getShaderPrecisionFormat(this._gl.VERTEX_SHADER, this._gl.HIGH_FLOAT),
-            oT = this._gl.getShaderPrecisionFormat(this._gl.FRAGMENT_SHADER, this._gl.HIGH_FLOAT);
-          if (TT && oT && (this._caps.highPrecisionShaderSupported = 0 !== TT.precision && 0 !== oT.precision, this._caps.shaderFloatPrecision = Math.min(TT.precision, oT.precision)), !this._shouldUseHighPrecisionShader) {
-            const TT = this._gl.getShaderPrecisionFormat(this._gl.VERTEX_SHADER, this._gl.MEDIUM_FLOAT),
-              oT = this._gl.getShaderPrecisionFormat(this._gl.FRAGMENT_SHADER, this._gl.MEDIUM_FLOAT);
-            TT && oT && (this._caps.shaderFloatPrecision = Math.min(TT.precision, oT.precision))
-          }
-          this._caps.shaderFloatPrecision < 10 && (this._caps.shaderFloatPrecision = 10)
-        }
-        if (this._webGLVersion > 1) this._caps.blendMinMax = !0;
-        else {
-          const TT = this._gl.getExtension("EXT_blend_minmax");
-          null != TT && (this._caps.blendMinMax = !0, this._gl.MAX = TT.MAX_EXT, this._gl.MIN = TT.MIN_EXT)
-        }
-        if (!this._caps.supportSRGBBuffers) {
-          if (this._webGLVersion > 1) this._caps.supportSRGBBuffers = !0, this._glSRGBExtensionValues = {
-            SRGB: WebGL2RenderingContext.SRGB,
-            SRGB8: WebGL2RenderingContext.SRGB8,
-            SRGB8_ALPHA8: WebGL2RenderingContext.SRGB8_ALPHA8
-          };
+        get screenArea() {
+          let uz, bz;
+          if (this.mode === zz.PERSPECTIVE_CAMERA) this.fovMode === zz.FOVMODE_VERTICAL_FIXED ? (bz = 2 * this.minZ * Math.tan(this.fov / 2), uz = this.uR().getAspectRatio(this) * bz) : (uz = 2 * this.minZ * Math.tan(this.fov / 2), bz = uz / this.uR().getAspectRatio(this));
           else {
-            const TT = this._gl.getExtension("EXT_sRGB");
-            null != TT && (this._caps.supportSRGBBuffers = !0, this._glSRGBExtensionValues = {
-              SRGB: TT.SRGB_EXT,
-              SRGB8: TT.SRGB_ALPHA_EXT,
-              SRGB8_ALPHA8: TT.SRGB_ALPHA_EXT
-            })
+            const zz = this.uR().getRenderWidth() / 2,
+              Ez = this.uR().getRenderHeight() / 2;
+            uz = (this.orthoRight ?? zz) - (this.orthoLeft ?? -zz), bz = (this.orthoTop ?? Ez) - (this.orthoBottom ?? -Ez)
           }
-          if (this._creationOptions) {
-            const TT = this._creationOptions.forceSRGBBufferSupportState;
-            void 0 !== TT && (this._caps.supportSRGBBuffers = this._caps.supportSRGBBuffers && TT)
-          }
+          return uz * bz
         }
-        this._depthCullingState.depthTest = !0, this._depthCullingState.depthFunc = this._gl.LEQUAL, this._depthCullingState.depthMask = !0, this._maxSimultaneousTextures = this._caps.maxCombinedTexturesImageUnits;
-        for (let IT = 0; IT < this._maxSimultaneousTextures; IT++) this._nextFreeTextureSlots.push(IT);
-        "Mali-G72" === this._glRenderer && (this._caps.disableMorphTargetTexture = !0)
-      }
-      _initFeatures() {
-        this._features = {
-          forceBitmapOverHTMLImageElement: "undefined" === typeof HTMLImageElement,
-          supportRenderAndCopyToLodForFloatTextures: 1 !== this._webGLVersion,
-          supportDepthStencilTexture: 1 !== this._webGLVersion,
-          supportShadowSamplers: 1 !== this._webGLVersion,
-          uniformBufferHardCheckMatrix: !1,
-          allowTexturePrefiltering: 1 !== this._webGLVersion,
-          trackUbosInFrame: !1,
-          checkUbosContentBeforeUpload: !1,
-          supportCSM: 1 !== this._webGLVersion,
-          basisNeedsPOT: 1 === this._webGLVersion,
-          support3DTextures: 1 !== this._webGLVersion,
-          needTypeSuffixInShaderConstants: 1 !== this._webGLVersion,
-          supportMSAA: 1 !== this._webGLVersion,
-          supportSSAO2: 1 !== this._webGLVersion,
-          supportIBLShadows: 1 !== this._webGLVersion,
-          supportExtendedTextureFormats: 1 !== this._webGLVersion,
-          supportSwitchCaseInShader: 1 !== this._webGLVersion,
-          supportSyncTextureRead: !0,
-          needsInvertingBitmap: !0,
-          useUBOBindingCache: !0,
-          needShaderCodeInlining: !1,
-          needToAlwaysBindUniformBuffers: !1,
-          supportRenderPasses: !1,
-          supportSpriteInstancing: !0,
-          forceVertexBufferStrideAndOffsetMultiple4Bytes: !1,
-          _checkNonFloatVertexBuffersDontRecreatePipelineContext: !1
+        set orthoLeft(zz) {
+          this._orthoLeft = zz;
+          for (const uz of this._rigCameras) uz.orthoLeft = zz
         }
-      }
-      get rK() {
-        return this._webGLVersion
-      }
-      getClassName() {
-        return "ThinEngine"
-      }
-      _prepareWorkingCanvas() {
-        if (this._workingCanvas) return;
-        this._workingCanvas = this.createCanvas(1, 1);
-        const TT = this._workingCanvas.getContext("2d");
-        TT && (this._workingContext = TT)
-      }
-      getInfo() {
-        return this.getGlInfo()
-      }
-      getGlInfo() {
-        return {
-          vendor: this._glVendor,
-          renderer: this._glRenderer,
-          version: this._glVersion
+        get orthoLeft() {
+          return this._orthoLeft
         }
-      }
-      extractDriverInfo() {
-        const TT = this.getGlInfo();
-        return TT && TT.renderer ? TT.renderer : ""
-      }
-      getRenderWidth() {
-        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && this._currentRenderTarget ? this._currentRenderTarget.width : this._framebufferDimensionsObject ? this._framebufferDimensionsObject.framebufferWidth : this._gl.drawingBufferWidth
-      }
-      getRenderHeight() {
-        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && this._currentRenderTarget ? this._currentRenderTarget.height : this._framebufferDimensionsObject ? this._framebufferDimensionsObject.framebufferHeight : this._gl.drawingBufferHeight
-      }
-      clear(TT, oT, IT) {
-        let iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-        const kT = this.stencilStateComposer.useStencilGlobalOnly;
-        this.stencilStateComposer.useStencilGlobalOnly = !0, this.applyStates(), this.stencilStateComposer.useStencilGlobalOnly = kT;
-        let WT = 0;
-        if (oT && TT) {
-          let oT = !0;
-          if (this._currentRenderTarget) {
-            const IT = this._currentRenderTarget.texture?.format;
-            if (void 0 !== IT && (0, AT.i)(IT)) {
-              const IT = this._currentRenderTarget.texture?.type;
-              void 0 !== IT && (0, AT.m)(IT) ? (wT._TempClearColorUint32[0] = 255 * TT.r, wT._TempClearColorUint32[1] = 255 * TT.g, wT._TempClearColorUint32[2] = 255 * TT.b, wT._TempClearColorUint32[3] = 255 * TT.a, this._gl.clearBufferuiv(this._gl.COLOR, 0, wT._TempClearColorUint32), oT = !1) : (wT._TempClearColorInt32[0] = 255 * TT.r, wT._TempClearColorInt32[1] = 255 * TT.g, wT._TempClearColorInt32[2] = 255 * TT.b, wT._TempClearColorInt32[3] = 255 * TT.a, this._gl.clearBufferiv(this._gl.COLOR, 0, wT._TempClearColorInt32), oT = !1)
-            }
-          }
-          oT && (this._gl.clearColor(TT.r, TT.g, TT.b, void 0 !== TT.a ? TT.a : 1), WT |= this._gl.COLOR_BUFFER_BIT)
+        set orthoRight(zz) {
+          this._orthoRight = zz;
+          for (const uz of this._rigCameras) uz.orthoRight = zz
         }
-        IT && (this.lIT ? (this._depthCullingState.depthFunc = this._gl.GEQUAL, this._gl.clearDepth(0)) : this._gl.clearDepth(1), WT |= this._gl.DEPTH_BUFFER_BIT), iT && (this._gl.clearStencil(zT), WT |= this._gl.STENCIL_BUFFER_BIT), this._gl.clear(WT)
-      }
-      _clearColorAttachment(TT, oT, IT, iT) {
-        if ((0, AT.i)(IT)) {
-          const IT = (0, AT.m)(iT),
-            zT = IT ? wT._TempClearColorUint32 : wT._TempClearColorInt32;
-          return zT[0] = oT.r, zT[1] = oT.g, zT[2] = oT.b, zT[3] = oT.a, void(IT ? this._gl.clearBufferuiv(this._gl.COLOR, TT, zT) : this._gl.clearBufferiv(this._gl.COLOR, TT, zT))
+        get orthoRight() {
+          return this._orthoRight
         }
-        wT._TempClearColorFloat32[0] = oT.r, wT._TempClearColorFloat32[1] = oT.g, wT._TempClearColorFloat32[2] = oT.b, wT._TempClearColorFloat32[3] = oT.a, this._gl.clearBufferfv(this._gl.COLOR, TT, wT._TempClearColorFloat32)
-      }
-      _viewport(TT, oT, IT, iT) {
-        TT === this._viewportCached.x && oT === this._viewportCached.y && IT === this._viewportCached.z && iT === this._viewportCached.w || (this._viewportCached.x = TT, this._viewportCached.y = oT, this._viewportCached.z = IT, this._viewportCached.w = iT, this._gl.viewport(TT, oT, IT, iT))
-      }
-      gR() {
-        super.gR(), this._badOS && this.flushFramebuffer()
-      }
-      get performanceMonitor() {
-        throw new Error("Not Supported by ThinEngine")
-      }
-      bindFramebuffer(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          IT = arguments.length > 2 ? arguments[2] : void 0,
-          iT = arguments.length > 3 ? arguments[3] : void 0,
-          zT = arguments.length > 4 ? arguments[4] : void 0,
-          kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          WT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-        const BT = TT;
-        this._currentRenderTarget && this._resolveAndGenerateMipMapsFramebuffer(this._currentRenderTarget), this._currentRenderTarget = TT, this._integerMRTAttachmentsMask = !TT.isMulti && TT.texture && (0, AT.i)(TT.texture.format) ? 1 : 0, this._bindUnboundFramebuffer(BT._framebuffer);
-        const FT = this._gl;
-        TT.isMulti || (TT.is2DArray || TT.is3D ? (FT.framebufferTextureLayer(FT.FRAMEBUFFER, FT.COLOR_ATTACHMENT0, TT.texture._hardwareTexture?.underlyingResource, kT, WT), BT._currentLOD = kT) : TT.isCube ? FT.framebufferTexture2D(FT.FRAMEBUFFER, FT.COLOR_ATTACHMENT0, FT.TEXTURE_CUBE_MAP_POSITIVE_X + oT, TT.texture._hardwareTexture?.underlyingResource, kT) : BT._currentLOD !== kT && (FT.framebufferTexture2D(FT.FRAMEBUFFER, FT.COLOR_ATTACHMENT0, FT.TEXTURE_2D, TT.texture._hardwareTexture?.underlyingResource, kT), BT._currentLOD = kT));
-        const ST = TT._depthStencilTexture;
-        if (ST) {
-          TT.is3D && (TT.texture.width === ST.width && TT.texture.height === ST.height && TT.texture.depth === ST.depth || XT.d.Warn("Depth/Stencil attachment for 3D target must have same dimensions as color attachment"));
-          const IT = TT._depthStencilTextureWithStencil ? FT.DEPTH_STENCIL_ATTACHMENT : FT.DEPTH_ATTACHMENT;
-          TT.is2DArray || TT.is3D ? FT.framebufferTextureLayer(FT.FRAMEBUFFER, IT, ST._hardwareTexture?.underlyingResource, kT, WT) : TT.isCube ? FT.framebufferTexture2D(FT.FRAMEBUFFER, IT, FT.TEXTURE_CUBE_MAP_POSITIVE_X + oT, ST._hardwareTexture?.underlyingResource, kT) : FT.framebufferTexture2D(FT.FRAMEBUFFER, IT, FT.TEXTURE_2D, ST._hardwareTexture?.underlyingResource, kT)
+        set orthoBottom(zz) {
+          this._orthoBottom = zz;
+          for (const uz of this._rigCameras) uz.orthoBottom = zz
         }
-        BT._MSAAFramebuffer && this._bindUnboundFramebuffer(BT._MSAAFramebuffer), this._cachedViewport && !zT ? this.setViewport(this._cachedViewport, IT, iT) : (IT || (IT = TT.width, kT && (IT /= Math.pow(2, kT))), iT || (iT = TT.height, kT && (iT /= Math.pow(2, kT))), this._viewport(0, 0, IT, iT)), this.wipeCaches()
-      }
-      setStateCullFaceType(TT, oT) {
-        const IT = this.cullBackFaces ?? TT ?? 1 ? this._gl.BACK : this._gl.FRONT;
-        (this._depthCullingState.cullFace !== IT || oT) && (this._depthCullingState.cullFace = IT)
-      }
-      setState(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          IT = arguments.length > 2 ? arguments[2] : void 0,
-          iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          zT = arguments.length > 4 ? arguments[4] : void 0,
-          kT = arguments.length > 5 ? arguments[5] : void 0,
-          WT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-        (this._depthCullingState.cull !== TT || IT) && (this._depthCullingState.cull = TT), this.setStateCullFaceType(zT, IT), this.setZOffset(oT), this.setZOffsetUnits(WT);
-        const XT = iT ? this._gl.CW : this._gl.CCW;
-        (this._depthCullingState.frontFace !== XT || IT) && (this._depthCullingState.frontFace = XT), this._stencilStateComposer.stencilMaterial = kT
-      }
-      _resolveAndGenerateMipMapsFramebuffer(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        TT.disableAutomaticMSAAResolve || (TT.isMulti ? this.resolveMultiFramebuffer(TT) : this.resolveFramebuffer(TT)), oT || (TT.isMulti ? this.generateMipMapsMultiFramebuffer(TT) : this.generateMipMapsFramebuffer(TT))
-      }
-      _bindUnboundFramebuffer(TT) {
-        this._currentFramebuffer !== TT && (this._gl.bindFramebuffer(this._gl.FRAMEBUFFER, TT), this._currentFramebuffer = TT)
-      }
-      _currentFrameBufferIsDefaultFrameBuffer() {
-        return null === this._currentFramebuffer
-      }
-      generateMipmaps(TT) {
-        const oT = this._getTextureTarget(TT);
-        this._bindTextureDirectly(oT, TT, !0), this._gl.generateMipmap(oT), this._bindTextureDirectly(oT, null)
-      }
-      unBindFramebuffer(TT, oT, IT) {
-        const iT = TT;
-        this._currentRenderTarget = null, this._integerMRTAttachmentsMask = 0, this._resolveAndGenerateMipMapsFramebuffer(TT, oT), IT && (iT._MSAAFramebuffer && this._bindUnboundFramebuffer(iT._framebuffer), IT()), this._bindUnboundFramebuffer(null)
-      }
-      generateMipMapsFramebuffer(TT) {
-        TT.isMulti || !TT.texture?.generateMipMaps || TT.isCube || this.generateMipmaps(TT.texture)
-      }
-      resolveFramebuffer(TT) {
-        const oT = TT,
-          IT = this._gl;
-        if (!oT._MSAAFramebuffer || oT.isMulti) return;
-        let iT = oT.resolveMSAAColors ? IT.COLOR_BUFFER_BIT : 0;
-        iT |= oT._generateDepthBuffer && oT.resolveMSAADepth ? IT.DEPTH_BUFFER_BIT : 0, iT |= oT._generateStencilBuffer && oT.resolveMSAAStencil ? IT.STENCIL_BUFFER_BIT : 0, IT.bindFramebuffer(IT.READ_FRAMEBUFFER, oT._MSAAFramebuffer), IT.bindFramebuffer(IT.DRAW_FRAMEBUFFER, oT._framebuffer), IT.blitFramebuffer(0, 0, TT.width, TT.height, 0, 0, TT.width, TT.height, iT, IT.NEAREST)
-      }
-      flushFramebuffer() {
-        this._gl.flush()
-      }
-      restoreDefaultFramebuffer() {
-        this._currentRenderTarget ? this.unBindFramebuffer(this._currentRenderTarget) : this._bindUnboundFramebuffer(null), this._cachedViewport && this.setViewport(this._cachedViewport), this.wipeCaches()
-      }
-      _resetVertexBufferBinding() {
-        this.bindArrayBuffer(null), this._cachedVertexBuffers = null
-      }
-      createVertexBuffer(TT, oT, IT) {
-        return this._createVertexBuffer(TT, this._gl.STATIC_DRAW)
-      }
-      _createVertexBuffer(TT, oT) {
-        const IT = this._gl.createBuffer();
-        if (!IT) throw new Error("Unable to create vertex buffer");
-        const iT = new LT.e(IT);
-        return this.bindArrayBuffer(iT), "number" !== typeof TT ? TT instanceof Array ? (this._gl.bufferData(this._gl.ARRAY_BUFFER, new Float32Array(TT), oT), iT.fD = 4 * TT.length) : (this._gl.bufferData(this._gl.ARRAY_BUFFER, TT, oT), iT.fD = TT.byteLength) : (this._gl.bufferData(this._gl.ARRAY_BUFFER, new Uint8Array(TT), oT), iT.fD = TT), this._resetVertexBufferBinding(), iT.references = 1, iT
-      }
-      createDynamicVertexBuffer(TT, oT) {
-        return this._createVertexBuffer(TT, this._gl.DYNAMIC_DRAW)
-      }
-      _resetIndexBufferBinding() {
-        this.bindIndexBuffer(null), this._cachedIndexBuffer = null
-      }
-      createIndexBuffer(TT, oT, IT) {
-        const iT = this._gl.createBuffer(),
-          zT = new LT.e(iT);
-        if (!iT) throw new Error("Unable to create index buffer");
-        this.bindIndexBuffer(zT);
-        const kT = this._normalizeIndexData(TT);
-        return this._gl.bufferData(this._gl.ELEMENT_ARRAY_BUFFER, kT, oT ? this._gl.DYNAMIC_DRAW : this._gl.STATIC_DRAW), this._resetIndexBufferBinding(), zT.references = 1, zT.is32Bits = 4 === kT.BYTES_PER_ELEMENT, zT
-      }
-      _normalizeIndexData(TT) {
-        if (2 === TT.BYTES_PER_ELEMENT) return TT;
-        if (this._caps.uintIndices) {
-          if (TT instanceof Uint32Array) return TT;
-          for (let oT = 0; oT < TT.length; oT++)
-            if (TT[oT] >= 65535) return new Uint32Array(TT);
-          return new Uint16Array(TT)
+        get orthoBottom() {
+          return this._orthoBottom
         }
-        return new Uint16Array(TT)
-      }
-      bindArrayBuffer(TT) {
-        this._vaoRecordInProgress || this._unbindVertexArrayObject(), this._bindBuffer(TT, this._gl.ARRAY_BUFFER)
-      }
-      bindUniformBlock(TT, oT, IT) {
-        const iT = TT.program,
-          zT = this._gl.getUniformBlockIndex(iT, oT);
-        this._gl.uniformBlockBinding(iT, zT, IT)
-      }
-      bindIndexBuffer(TT) {
-        this._vaoRecordInProgress || this._unbindVertexArrayObject(), this._bindBuffer(TT, this._gl.ELEMENT_ARRAY_BUFFER)
-      }
-      _bindBuffer(TT, oT) {
-        (this._vaoRecordInProgress || this._currentBoundBuffer[oT] !== TT) && (this._gl.bindBuffer(oT, TT ? TT.underlyingResource : null), this._currentBoundBuffer[oT] = TT)
-      }
-      updateArrayBuffer(TT) {
-        this._gl.bufferSubData(this._gl.ARRAY_BUFFER, 0, TT)
-      }
-      _vertexAttribPointer(TT, oT, IT, iT, zT, kT, WT) {
-        const XT = this._currentBufferPointers[oT];
-        if (!XT) return;
-        let BT = !1;
-        XT.active ? (XT.buffer !== TT && (XT.buffer = TT, BT = !0), XT.size !== IT && (XT.size = IT, BT = !0), XT.type !== iT && (XT.type = iT, BT = !0), XT.normalized !== zT && (XT.normalized = zT, BT = !0), XT.stride !== kT && (XT.stride = kT, BT = !0), XT.offset !== WT && (XT.offset = WT, BT = !0)) : (BT = !0, XT.active = !0, XT.index = oT, XT.size = IT, XT.type = iT, XT.normalized = zT, XT.stride = kT, XT.offset = WT, XT.buffer = TT), (BT || this._vaoRecordInProgress) && (this.bindArrayBuffer(TT), iT === this._gl.UNSIGNED_INT || iT === this._gl.INT ? this._gl.vertexAttribIPointer(oT, IT, iT, kT, WT) : this._gl.vertexAttribPointer(oT, IT, iT, zT, kT, WT))
-      }
-      _bindIndexBufferWithCache(TT) {
-        null != TT && this._cachedIndexBuffer !== TT && (this._cachedIndexBuffer = TT, this.bindIndexBuffer(TT), this._uintIndicesCurrentlySet = TT.is32Bits)
-      }
-      _bindVertexBuffersAttributes(TT, oT, IT) {
-        const iT = oT.getAttributesNames();
-        this._vaoRecordInProgress || this._unbindVertexArrayObject(), this.unbindAllAttributes();
-        for (let zT = 0; zT < iT.length; zT++) {
-          const kT = oT.getAttributeLocation(zT);
-          if (kT >= 0) {
-            const oT = iT[zT];
-            let WT = null;
-            if (IT && (WT = IT[oT]), WT || (WT = TT[oT]), !WT) continue;
-            this._gl.enableVertexAttribArray(kT), this._vaoRecordInProgress || (this._vertexAttribArraysEnabled[kT] = !0);
-            const XT = WT.getBuffer();
-            XT && (this._vertexAttribPointer(XT, kT, WT.getSize(), WT.type, WT.normalized, WT.byteStride, WT.byteOffset), WT.getIsInstanced() && (this._gl.vertexAttribDivisor(kT, WT.getInstanceDivisor()), this._vaoRecordInProgress || (this._currentInstanceLocations.push(kT), this._currentInstanceBuffers.push(XT))))
-          }
+        set orthoTop(zz) {
+          this._orthoTop = zz;
+          for (const uz of this._rigCameras) uz.orthoTop = zz
         }
-      }
-      recordVertexArrayObject(TT, oT, IT, iT) {
-        const zT = this._gl.createVertexArray();
-        if (!zT) throw new Error("Unable to create VAO");
-        return this._vaoRecordInProgress = !0, this._gl.bindVertexArray(zT), this._mustWipeVertexAttributes = !0, this._bindVertexBuffersAttributes(TT, IT, iT), this.bindIndexBuffer(oT), this._vaoRecordInProgress = !1, this._gl.bindVertexArray(null), zT
-      }
-      bindVertexArrayObject(TT, oT) {
-        this._cachedVertexArrayObject !== TT && (this._cachedVertexArrayObject = TT, this._gl.bindVertexArray(TT), this._cachedVertexBuffers = null, this._cachedIndexBuffer = null, this._uintIndicesCurrentlySet = null != oT && oT.is32Bits, this._mustWipeVertexAttributes = !0)
-      }
-      bindBuffersDirectly(TT, oT, IT, iT, zT) {
-        if (this._cachedVertexBuffers !== TT || this._cachedEffectForVertexBuffers !== zT) {
-          this._cachedVertexBuffers = TT, this._cachedEffectForVertexBuffers = zT;
-          const oT = zT.getAttributesCount();
-          this._unbindVertexArrayObject(), this.unbindAllAttributes();
-          let kT = 0;
-          for (let WT = 0; WT < oT; WT++)
-            if (WT < IT.length) {
-              const oT = zT.getAttributeLocation(WT);
-              oT >= 0 && (this._gl.enableVertexAttribArray(oT), this._vertexAttribArraysEnabled[oT] = !0, this._vertexAttribPointer(TT, oT, IT[WT], this._gl.FLOAT, !1, iT, kT)), kT += 4 * IT[WT]
-            }
+        get orthoTop() {
+          return this._orthoTop
         }
-        this._bindIndexBufferWithCache(oT)
-      }
-      _unbindVertexArrayObject() {
-        this._cachedVertexArrayObject && (this._cachedVertexArrayObject = null, this._gl.bindVertexArray(null))
-      }
-      bindBuffers(TT, oT, IT, iT) {
-        this._cachedVertexBuffers === TT && this._cachedEffectForVertexBuffers === IT || (this._cachedVertexBuffers = TT, this._cachedEffectForVertexBuffers = IT, this._bindVertexBuffersAttributes(TT, IT, iT)), this._bindIndexBufferWithCache(oT)
-      }
-      unbindInstanceAttributes() {
-        let TT;
-        for (let oT = 0, IT = this._currentInstanceLocations.length; oT < IT; oT++) {
-          const IT = this._currentInstanceBuffers[oT];
-          TT != IT && IT.references && (TT = IT, this.bindArrayBuffer(IT));
-          const iT = this._currentInstanceLocations[oT];
-          this._gl.vertexAttribDivisor(iT, 0)
+        setFocalLength(zz) {
+          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 36;
+          this.fov = 2 * Math.atan(uz / (2 * zz))
         }
-        this._currentInstanceBuffers.length = 0, this._currentInstanceLocations.length = 0
-      }
-      releaseVertexArrayObject(TT) {
-        this._gl.deleteVertexArray(TT)
-      }
-      _releaseBuffer(TT) {
-        return TT.references--, 0 === TT.references && (this._deleteBuffer(TT), !0)
-      }
-      _deleteBuffer(TT) {
-        this._gl.deleteBuffer(TT.underlyingResource)
-      }
-      updateAndBindInstancesBuffer(TT, oT, IT) {
-        if (this.bindArrayBuffer(TT), oT && this._gl.bufferSubData(this._gl.ARRAY_BUFFER, 0, oT), void 0 !== IT[0].index) this.bindInstancesBuffer(TT, IT, !0);
-        else
-          for (let iT = 0; iT < 4; iT++) {
-            const oT = IT[iT];
-            this._vertexAttribArraysEnabled[oT] || (this._gl.enableVertexAttribArray(oT), this._vertexAttribArraysEnabled[oT] = !0), this._vertexAttribPointer(TT, oT, 4, this._gl.FLOAT, !1, 64, 16 * iT), this._gl.vertexAttribDivisor(oT, 1), this._currentInstanceLocations.push(oT), this._currentInstanceBuffers.push(TT)
-          }
-      }
-      bindInstancesBuffer(TT, oT) {
-        let IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.bindArrayBuffer(TT);
-        let iT = 0;
-        if (IT)
-          for (let zT = 0; zT < oT.length; zT++) {
-            iT += 4 * oT[zT].attributeSize
-          }
-        for (let zT = 0; zT < oT.length; zT++) {
-          const IT = oT[zT];
-          void 0 === IT.index && (IT.index = this._currentEffect.getAttributeLocationByName(IT.attributeName)), IT.index < 0 || (this._vertexAttribArraysEnabled[IT.index] || (this._gl.enableVertexAttribArray(IT.index), this._vertexAttribArraysEnabled[IT.index] = !0), this._vertexAttribPointer(TT, IT.index, IT.attributeSize, IT.attributeType || this._gl.FLOAT, IT.normalized || !1, iT, IT.offset), this._gl.vertexAttribDivisor(IT.index, void 0 === IT.divisor ? 1 : IT.divisor), this._currentInstanceLocations.push(IT.index), this._currentInstanceBuffers.push(TT))
+        get inertia() {
+          return this._baseInertia
         }
-      }
-      disableInstanceAttributeByName(TT) {
-        if (!this._currentEffect) return;
-        const oT = this._currentEffect.getAttributeLocationByName(TT);
-        this.disableInstanceAttribute(oT)
-      }
-      disableInstanceAttribute(TT) {
-        let oT, IT = !1;
-        for (; - 1 !== (oT = this._currentInstanceLocations.indexOf(TT));) this._currentInstanceLocations.splice(oT, 1), this._currentInstanceBuffers.splice(oT, 1), IT = !0;
-        IT && (this._gl.vertexAttribDivisor(TT, 0), this.disableAttributeByIndex(TT))
-      }
-      disableAttributeByIndex(TT) {
-        this._gl.disableVertexAttribArray(TT), this._vertexAttribArraysEnabled[TT] = !1, this._currentBufferPointers[TT].active = !1
-      }
-      draw(TT, oT, IT, iT) {
-        this.drawElementsType(TT ? 0 : 1, oT, IT, iT)
-      }
-      drawPointClouds(TT, oT, IT) {
-        this.drawArraysType(2, TT, oT, IT)
-      }
-      drawUnIndexed(TT, oT, IT, iT) {
-        this.drawArraysType(TT ? 0 : 1, oT, IT, iT)
-      }
-      drawElementsType(TT, oT, IT, iT) {
-        this.applyStates(), this._reportDrawCall();
-        const zT = this._drawMode(TT),
-          kT = this._uintIndicesCurrentlySet ? this._gl.UNSIGNED_INT : this._gl.UNSIGNED_SHORT,
-          WT = this._uintIndicesCurrentlySet ? 4 : 2;
-        iT ? this._gl.drawElementsInstanced(zT, IT, kT, oT * WT, iT) : this._gl.drawElements(zT, IT, kT, oT * WT)
-      }
-      drawArraysType(TT, oT, IT, iT) {
-        this.applyStates(), this._reportDrawCall();
-        const zT = this._drawMode(TT);
-        iT ? this._gl.drawArraysInstanced(zT, oT, IT, iT) : this._gl.drawArrays(zT, oT, IT)
-      }
-      _drawMode(TT) {
-        switch (TT) {
-          case 0:
-          default:
-            return this._gl.TRIANGLES;
-          case 2:
-          case 3:
-            return this._gl.POINTS;
-          case 1:
-          case 4:
-            return this._gl.LINES;
-          case 5:
-            return this._gl.LINE_LOOP;
-          case 6:
-            return this._gl.LINE_STRIP;
-          case 7:
-            return this._gl.TRIANGLE_STRIP;
-          case 8:
-            return this._gl.TRIANGLE_FAN
+        set inertia(zz) {
+          this._baseInertia = zz
         }
-      }
-      _releaseEffect(TT) {
-        this._compiledEffects[TT._key] && delete this._compiledEffects[TT._key];
-        const oT = TT.getPipelineContext();
-        oT && this._deletePipelineContext(oT)
-      }
-      _deletePipelineContext(TT) {
-        const oT = TT;
-        oT && oT.program && (oT.program.__SPECTOR_rebuildProgram = null, (0, rT.i)(oT), this._gl && (this._currentProgram === oT.program && this._setProgram(null), this._gl.deleteProgram(oT.program)))
-      }
-      _getGlobalDefines(TT) {
-        return (0, MT.j)(TT, this.isNDCHalfZRange, this.lIT, this.useExactSrgbConversions)
-      }
-      createEffect(TT, oT, IT, kT, WT, XT, BT, FT, ST) {
-        let DT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-          LT = arguments.length > 10 ? arguments[10] : void 0;
-        const xT = "string" === typeof TT ? TT : TT.vertexToken || TT.vertexSource || TT.vertexElement || TT.vertex,
-          cT = "string" === typeof TT ? TT : TT.fragmentToken || TT.fragmentSource || TT.fragmentElement || TT.fragment,
-          KT = this._getGlobalDefines(),
-          MT = void 0 !== oT.attributes;
-        let rT = WT ?? oT.defines ?? "";
-        KT && (rT += KT);
-        const AT = xT + "+" + cT + "@" + rT;
-        if (this._compiledEffects[AT]) {
-          const TT = this._compiledEffects[AT];
-          return BT && TT.isReady() && BT(TT), TT._refCount++, TT
+        set mode(zz) {
+          this._mode = zz;
+          for (const uz of this._rigCameras) uz.mode = zz
         }
-        this._gl && (0, zT.A)(this._gl);
-        const gT = new iT.c(TT, oT, MT ? this : IT, kT, this, WT, XT, BT, FT, ST, AT, oT.shaderLanguage ?? DT, oT.extraInitializationsAsync ?? LT);
-        return this._compiledEffects[AT] = gT, gT
-      }
-      _getShaderSource(TT) {
-        return this._gl.getShaderSource(TT)
-      }
-      createRawShaderProgram(TT, oT, IT, iT) {
-        let kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-        const WT = (0, zT.A)(this._gl);
-        return WT._contextWasLost = this._contextWasLost, WT.validateShaderPrograms = this.validateShaderPrograms, (0, zT.p)(TT, oT, IT, iT || this._gl, kT)
-      }
-      createShaderProgram(TT, oT, IT, iT, kT) {
-        let WT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
-        const XT = (0, zT.A)(this._gl);
-        return XT._contextWasLost = this._contextWasLost, XT.validateShaderPrograms = this.validateShaderPrograms, (0, zT.t)(TT, oT, IT, iT, kT || this._gl, WT)
-      }
-      inlineShaderCode(TT) {
-        return TT
-      }
-      createPipelineContext(TT) {
-        if (this._gl) {
-          (0, zT.A)(this._gl).parallelShaderCompile = this._caps.parallelShaderCompile
+        get mode() {
+          return this._mode
         }
-        const oT = (0, zT.o)(this._gl, TT);
-        return oT.engine = this, oT
-      }
-      createMaterialContext() {}
-      createDrawContext() {}
-      _finalizePipelineContext(TT) {
-        return (0, zT.f)(TT, this._gl, this.validateShaderPrograms)
-      }
-      _preparePipelineContextAsync(TT, oT, IT, iT, kT, WT, XT, BT, FT, ST, DT) {
-        const LT = (0, zT.A)(this._gl);
-        return LT._contextWasLost = this._contextWasLost, LT.validateShaderPrograms = this.validateShaderPrograms, LT._createShaderProgramInjection = this._createShaderProgram.bind(this), LT.createRawShaderProgramInjection = this.createRawShaderProgram.bind(this), LT.createShaderProgramInjection = this.createShaderProgram.bind(this), LT.loadFileInjection = this._loadFile.bind(this), (0, zT.j)(TT, oT, IT, iT, kT, WT, XT, BT, FT, ST, DT)
-      }
-      _createShaderProgram(TT, oT, IT, iT) {
-        let kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-        return (0, zT.b)(TT, oT, IT, iT, kT)
-      }
-      _isRenderingStateCompiled(TT) {
-        return !this._isDisposed && (0, zT.g)(TT, this._gl, this.validateShaderPrograms)
-      }
-      _executeWhenRenderingStateIsCompiled(TT, oT) {
-        (0, zT.c)(TT, oT)
-      }
-      getUniforms(TT, oT) {
-        const IT = new Array,
-          iT = TT;
-        for (let zT = 0; zT < oT.length; zT++) IT.push(this._gl.getUniformLocation(iT.program, oT[zT]));
-        return IT
-      }
-      getAttributes(TT, oT) {
-        const IT = [],
-          iT = TT;
-        for (let kT = 0; kT < oT.length; kT++) try {
-          IT.push(this._gl.getAttribLocation(iT.program, oT[kT]))
-        } catch (zT) {
-          IT.push(-1)
+        get hasMoved() {
+          return this._hasMoved
         }
-        return IT
-      }
-      enableEffect(TT) {
-        (TT = null !== TT && (0, WT.d)(TT) ? TT.effect : TT) && TT !== this._currentEffect && (this._stencilStateComposer.stencilMaterial = void 0, this.bindSamplers(TT), this._currentEffect = TT, TT.onBind && TT.onBind(TT), TT._onBindObservable && TT._onBindObservable.notifyObservers(TT))
-      }
-      setInt(TT, oT) {
-        return !!TT && (this._gl.uniform1i(TT, oT), !0)
-      }
-      setInt2(TT, oT, IT) {
-        return !!TT && (this._gl.uniform2i(TT, oT, IT), !0)
-      }
-      setInt3(TT, oT, IT, iT) {
-        return !!TT && (this._gl.uniform3i(TT, oT, IT, iT), !0)
-      }
-      setInt4(TT, oT, IT, iT, zT) {
-        return !!TT && (this._gl.uniform4i(TT, oT, IT, iT, zT), !0)
-      }
-      setIntArray(TT, oT) {
-        return !!TT && (this._gl.uniform1iv(TT, oT), !0)
-      }
-      setIntArray2(TT, oT) {
-        return !(!TT || oT.length % 2 !== 0) && (this._gl.uniform2iv(TT, oT), !0)
-      }
-      setIntArray3(TT, oT) {
-        return !(!TT || oT.length % 3 !== 0) && (this._gl.uniform3iv(TT, oT), !0)
-      }
-      setIntArray4(TT, oT) {
-        return !(!TT || oT.length % 4 !== 0) && (this._gl.uniform4iv(TT, oT), !0)
-      }
-      setUInt(TT, oT) {
-        return !!TT && (this._gl.uniform1ui(TT, oT), !0)
-      }
-      setUInt2(TT, oT, IT) {
-        return !!TT && (this._gl.uniform2ui(TT, oT, IT), !0)
-      }
-      setUInt3(TT, oT, IT, iT) {
-        return !!TT && (this._gl.uniform3ui(TT, oT, IT, iT), !0)
-      }
-      setUInt4(TT, oT, IT, iT, zT) {
-        return !!TT && (this._gl.uniform4ui(TT, oT, IT, iT, zT), !0)
-      }
-      setUIntArray(TT, oT) {
-        return !!TT && (this._gl.uniform1uiv(TT, oT), !0)
-      }
-      setUIntArray2(TT, oT) {
-        return !(!TT || oT.length % 2 !== 0) && (this._gl.uniform2uiv(TT, oT), !0)
-      }
-      setUIntArray3(TT, oT) {
-        return !(!TT || oT.length % 3 !== 0) && (this._gl.uniform3uiv(TT, oT), !0)
-      }
-      setUIntArray4(TT, oT) {
-        return !(!TT || oT.length % 4 !== 0) && (this._gl.uniform4uiv(TT, oT), !0)
-      }
-      setArray(TT, oT) {
-        return !!TT && (!(oT.length < 1) && (this._gl.uniform1fv(TT, oT), !0))
-      }
-      setArray2(TT, oT) {
-        return !(!TT || oT.length % 2 !== 0) && (this._gl.uniform2fv(TT, oT), !0)
-      }
-      setArray3(TT, oT) {
-        return !(!TT || oT.length % 3 !== 0) && (this._gl.uniform3fv(TT, oT), !0)
-      }
-      setArray4(TT, oT) {
-        return !(!TT || oT.length % 4 !== 0) && (this._gl.uniform4fv(TT, oT), !0)
-      }
-      setMatrices(TT, oT) {
-        return !!TT && (this._gl.uniformMatrix4fv(TT, !1, oT), !0)
-      }
-      setMatrix3x3(TT, oT) {
-        return !!TT && (this._gl.uniformMatrix3fv(TT, !1, oT), !0)
-      }
-      setMatrix2x2(TT, oT) {
-        return !!TT && (this._gl.uniformMatrix2fv(TT, !1, oT), !0)
-      }
-      setFloat(TT, oT) {
-        return !!TT && (this._gl.uniform1f(TT, oT), !0)
-      }
-      setFloat2(TT, oT, IT) {
-        return !!TT && (this._gl.uniform2f(TT, oT, IT), !0)
-      }
-      setFloat3(TT, oT, IT, iT) {
-        return !!TT && (this._gl.uniform3f(TT, oT, IT, iT), !0)
-      }
-      setFloat4(TT, oT, IT, iT, zT) {
-        return !!TT && (this._gl.uniform4f(TT, oT, IT, iT, zT), !0)
-      }
-      _applyColorWriteState() {
-        if (this._colorWriteChanged) {
-          this._colorWriteChanged = !1;
-          const TT = this._colorWrite;
-          this._gl.colorMask(TT, TT, TT, TT)
+        constructor(uz, bz, nz) {
+          let tz = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+          (0, Zz.d)(), super(uz, nz, !1), this.inputs = (0, Ez.j)(this, az), this._position = (0, Ez.j)(this, Vz, Mz.n.Zero()), this._upVector = ((0, Ez.j)(this, mz), (0, Ez.j)(this, qz, Mz.n.Up())), this.oblique = ((0, Ez.j)(this, hz), null), this._orthoLeft = null, this._orthoRight = null, this._orthoBottom = null, this._orthoTop = null, this.fov = (0, Ez.j)(this, Uz, .8), this.projectionPlaneTilt = ((0, Ez.j)(this, cz), (0, Ez.j)(this, gz, 0)), this.minZ = ((0, Ez.j)(this, Sz), (0, Ez.j)(this, yz, 1)), this.maxZ = ((0, Ez.j)(this, Dz), (0, Ez.j)(this, Qz, 1e4)), this._baseInertia = ((0, Ez.j)(this, Wz), .9), this._mode = zz.PERSPECTIVE_CAMERA, this.isIntermediate = !1, this.viewport = new dz.d(0, 0, 1, 1), this.layerMask = (0, Ez.j)(this, ez, 268435455), this.fovMode = ((0, Ez.j)(this, jz), (0, Ez.j)(this, Iz, zz.FOVMODE_VERTICAL_FIXED)), this.cameraRigMode = ((0, Ez.j)(this, Bz), (0, Ez.j)(this, Cz, zz.RIG_MODE_NONE)), this.interaxialDistance = ((0, Ez.j)(this, Yz), (0, Ez.j)(this, kz, void 0)), this.isStereoscopicSideBySide = ((0, Ez.j)(this, zu), (0, Ez.j)(this, uu, void 0)), this.ignoreCameraMaxZ = ((0, Ez.j)(this, bu), (0, Ez.j)(this, Eu, !1)), this.customRenderTargets = ((0, Ez.j)(this, nu), []), this.outputRenderTarget = null, this.onViewMatrixChangedObservable = new lz.b, this.onProjectionMatrixChangedObservable = new lz.b, this.onAfterCheckInputsObservable = new lz.b, this.onRestoreStateObservable = new lz.b, this.isRigCamera = !1, this._hasMoved = !1, this._rigCameras = new Array, this._skipRendering = !1, this._projectionMatrix = new Mz.d, this._postProcesses = new Array, this._activeMeshes = new iz.e(256), this._globalPosition = Mz.n.Zero(), this._computedViewMatrix = Mz.d.Identity(), this._doNotComputeProjectionMatrix = !1, this._transformMatrix = Mz.d.Zero(), this._refreshFrustumPlanes = !0, this._absoluteRotation = Mz.h.Identity(), this._isCamera = !0, this._isLeftCamera = !1, this._isRightCamera = !1, this.layerMask = this.XT().defaultCameraLayerMask, this.XT().addCamera(this), tz && !this.XT().activeCamera && (this.XT().activeCamera = this), this.position = bz, this.renderPassId = this.XT().uR().createRenderPassId(`Camera ${uz}`)
         }
-      }
-      applyStates() {
-        this._depthCullingState.apply(this._gl), this._stencilStateComposer.apply(this._gl), this._alphaState.apply(this._gl, this._currentRenderTarget && this._currentRenderTarget.textures ? this._currentRenderTarget.textures.length : 1, this._integerMRTAttachmentsMask), this._applyColorWriteState()
-      }
-      wipeCaches(TT) {
-        this.preventCacheWipeBetweenFrames && !TT || (this._currentEffect = null, this._viewportCached.x = 0, this._viewportCached.y = 0, this._viewportCached.z = 0, this._viewportCached.w = 0, this._unbindVertexArrayObject(), TT && (this._currentProgram = null, this.resetTextureCache(), this._stencilStateComposer.reset(), this._depthCullingState.reset(), this._depthCullingState.depthFunc = this._gl.LEQUAL, this._alphaState.reset(), this._resetAlphaMode(), this._colorWrite = !0, this._colorWriteChanged = !0, this._unpackFlipYCached = null, this._gl.pixelStorei(this._gl.UNPACK_COLORSPACE_CONVERSION_WEBGL, this._gl.NONE), this._gl.pixelStorei(this._gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), this._mustWipeVertexAttributes = !0, this.unbindAllAttributes()), this._resetVertexBufferBinding(), this._cachedIndexBuffer = null, this._cachedEffectForVertexBuffers = null, this.bindIndexBuffer(null))
-      }
-      _getSamplingParameters(TT, oT) {
-        const IT = this._gl;
-        let iT = IT.NEAREST,
-          zT = IT.NEAREST,
-          kT = !1;
-        switch (TT) {
-          case 11:
-            iT = IT.LINEAR, zT = oT ? IT.LINEAR_MIPMAP_NEAREST : IT.LINEAR;
-            break;
-          case 3:
-            iT = IT.LINEAR, kT = !0, zT = oT ? IT.LINEAR_MIPMAP_LINEAR : IT.LINEAR;
-            break;
-          case 8:
-            kT = !0, iT = IT.NEAREST, zT = oT ? IT.NEAREST_MIPMAP_LINEAR : IT.NEAREST;
-            break;
-          case 4:
-            iT = IT.NEAREST, zT = oT ? IT.NEAREST_MIPMAP_NEAREST : IT.NEAREST;
-            break;
-          case 5:
-            iT = IT.NEAREST, zT = oT ? IT.LINEAR_MIPMAP_NEAREST : IT.LINEAR;
-            break;
-          case 6:
-            kT = !0, iT = IT.NEAREST, zT = oT ? IT.LINEAR_MIPMAP_LINEAR : IT.LINEAR;
-            break;
-          case 7:
-            iT = IT.NEAREST, zT = IT.LINEAR;
-            break;
-          case 1:
-            iT = IT.NEAREST, zT = IT.NEAREST;
-            break;
-          case 9:
-            iT = IT.LINEAR, zT = oT ? IT.NEAREST_MIPMAP_NEAREST : IT.NEAREST;
-            break;
-          case 10:
-            kT = !0, iT = IT.LINEAR, zT = oT ? IT.NEAREST_MIPMAP_LINEAR : IT.NEAREST;
-            break;
-          case 2:
-            iT = IT.LINEAR, zT = IT.LINEAR;
-            break;
-          case 12:
-            iT = IT.LINEAR, zT = IT.NEAREST
+        storeState() {
+          return this._stateStored = !0, this._storedFov = this.fov, this
         }
-        return {
-          min: zT,
-          mag: iT,
-          hasMipMaps: kT
+        hasStateStored() {
+          return !!this._stateStored
         }
-      }
-      _createTexture() {
-        const TT = this._gl.createTexture();
-        if (!TT) throw new Error("Unable to create texture");
-        return TT
-      }
-      _createHardwareTexture() {
-        return new cT.c(this._createTexture(), this._gl)
-      }
-      _createInternalTexture(TT, oT) {
-        let IT, iT, zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          kT = !1,
-          WT = 0,
-          BT = 3,
-          FT = 5,
-          ST = !1,
-          DT = 1,
-          LT = !1,
-          xT = 0,
-          cT = !1;
-        void 0 !== oT && "object" === typeof oT ? (IT = !!oT.generateMipMaps, kT = !!oT.createMipMaps, WT = void 0 === oT.type ? 0 : oT.type, BT = void 0 === oT.samplingMode ? 3 : oT.samplingMode, FT = void 0 === oT.format ? 5 : oT.format, ST = void 0 !== oT.useSRGBBuffer && oT.useSRGBBuffer, DT = oT.samples ?? 1, iT = oT.label, LT = !!oT.createMSAATexture, xT = oT.comparisonFunction || 0, cT = !!oT.isCube) : IT = !!oT, ST && (ST = this._caps.supportSRGBBuffers && (this.rK > 1 || this.isWebGPU)), (1 !== WT || this._caps.textureFloatLinearFiltering) && (2 !== WT || this._caps.textureHalfFloatLinearFiltering) || (BT = 1), 1 !== WT || this._caps.textureFloat || (WT = 0, XT.d.Warn("Float textures are not supported. Type forced to TEXTURETYPE_UNSIGNED_BYTE"));
-        const MT = (0, AT.f)(FT),
-          rT = (0, AT.d)(FT),
-          gT = this._gl,
-          hT = new KT.e(this, zT),
-          wT = TT.width || TT,
-          mT = TT.height || TT,
-          eT = TT.depth || 0,
-          RT = TT.layers || 0,
-          uT = this._getSamplingParameters(BT, (IT || kT) && !MT),
-          vT = 0 !== RT ? gT.TEXTURE_2D_ARRAY : 0 !== eT ? gT.TEXTURE_3D : cT ? gT.TEXTURE_CUBE_MAP : gT.TEXTURE_2D,
-          ET = MT ? this._getInternalFormatFromDepthTextureFormat(FT, !0, rT) : this._getRGBABufferInternalSizedFormat(WT, FT, ST),
-          fT = MT ? rT ? gT.DEPTH_STENCIL : gT.DEPTH_COMPONENT : this._getInternalFormat(FT),
-          CT = MT ? this._getWebGLTextureTypeFromDepthTextureFormat(FT) : this._getWebGLTextureType(WT);
-        if (this._bindTextureDirectly(vT, hT), 0 !== RT) hT.is2DArray = !0, gT.texImage3D(vT, 0, ET, wT, mT, RT, 0, fT, CT, null);
-        else if (0 !== eT) hT.is3D = !0, gT.texImage3D(vT, 0, ET, wT, mT, eT, 0, fT, CT, null);
-        else if (cT) {
-          hT.isCube = !0;
-          for (let TT = 0; TT < 6; TT++) gT.texImage2D(gT.TEXTURE_CUBE_MAP_POSITIVE_X + TT, 0, ET, wT, mT, 0, fT, CT, null)
-        } else gT.texImage2D(vT, 0, ET, wT, mT, 0, fT, CT, null);
-        if (gT.texParameteri(vT, gT.TEXTURE_MAG_FILTER, uT.mag), gT.texParameteri(vT, gT.TEXTURE_MIN_FILTER, uT.min), gT.texParameteri(vT, gT.TEXTURE_WRAP_S, gT.CLAMP_TO_EDGE), gT.texParameteri(vT, gT.TEXTURE_WRAP_T, gT.CLAMP_TO_EDGE), MT && this.rK > 1 && (0 === xT ? (gT.texParameteri(vT, gT.TEXTURE_COMPARE_FUNC, 515), gT.texParameteri(vT, gT.TEXTURE_COMPARE_MODE, gT.NONE)) : (gT.texParameteri(vT, gT.TEXTURE_COMPARE_FUNC, xT), gT.texParameteri(vT, gT.TEXTURE_COMPARE_MODE, gT.COMPARE_REF_TO_TEXTURE))), (IT || kT) && this._gl.generateMipmap(vT), this._bindTextureDirectly(vT, null), hT._useSRGBBuffer = ST, hT.baseWidth = wT, hT.baseHeight = mT, hT.width = wT, hT.height = mT, hT.depth = RT || eT, hT.isReady = !0, hT.samples = DT, hT.generateMipMaps = IT, hT.samplingMode = BT, hT.type = WT, hT.format = FT, hT.label = iT, hT.comparisonFunction = xT, this._internalTexturesCache.push(hT), LT) {
-          let TT;
-          if (TT = (0, AT.f)(hT.format) ? this._setupFramebufferDepthAttachments((0, AT.d)(hT.format), 19 !== hT.format, hT.width, hT.height, DT, hT.format, !0) : this._createRenderBuffer(hT.width, hT.height, DT, -1, this._getRGBABufferInternalSizedFormat(hT.type, hT.format, hT._useSRGBBuffer), -1), !TT) throw new Error("Unable to create render buffer");
-          hT._autoMSAAManagement = !0;
-          let oT = hT._hardwareTexture;
-          oT || (oT = hT._hardwareTexture = this._createHardwareTexture()), oT.addMSAARenderBuffer(TT)
+        _restoreStateValues() {
+          return !!this._stateStored && (this.fov = this._storedFov, !0)
         }
-        return hT
-      }
-      _getUseSRGBBuffer(TT, oT) {
-        return TT && this._caps.supportSRGBBuffers && (this.rK > 1 || oT)
-      }
-      createTexture(TT, oT, IT, iT) {
-        var zT = this;
-        let kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
-          WT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-          XT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-          BT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-          FT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
-          ST = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-          DT = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : null,
-          LT = arguments.length > 11 ? arguments[11] : void 0,
-          xT = arguments.length > 12 ? arguments[12] : void 0,
-          cT = arguments.length > 13 ? arguments[13] : void 0,
-          MT = arguments.length > 14 ? arguments[14] : void 0;
-        return this._createTextureBase(TT, oT, IT, iT, kT, WT, XT, (function() {
-          for (var TT = arguments.length, oT = new Array(TT), IT = 0; IT < TT; IT++) oT[IT] = arguments[IT];
-          return zT._prepareWebGLTexture(...oT, ST)
-        }), ((TT, oT, IT, zT, kT, WT) => {
-          const XT = this._gl,
-            BT = IT.width === TT && IT.height === oT;
-          kT._creationFlags = cT ?? 0;
-          const FT = this._getTexImageParametersForCreateTexture(kT.format, kT._useSRGBBuffer);
-          if (BT) return XT.texImage2D(XT.TEXTURE_2D, 0, FT.internalFormat, FT.format, FT.type, IT), !1;
-          const ST = this._caps.maxTextureSize;
-          if (IT.width > ST || IT.height > ST || !this._supportsHardwareTextureRescaling) return this._prepareWorkingCanvas(), !(!this._workingCanvas || !this._workingContext) && (this._workingCanvas.width = TT, this._workingCanvas.height = oT, this._workingContext.drawImage(IT, 0, 0, IT.width, IT.height, 0, 0, TT, oT), XT.texImage2D(XT.TEXTURE_2D, 0, FT.internalFormat, FT.format, FT.type, this._workingCanvas), kT.width = TT, kT.height = oT, !1);
-          {
-            const TT = new KT.e(this, 2);
-            this._bindTextureDirectly(XT.TEXTURE_2D, TT, !0), XT.texImage2D(XT.TEXTURE_2D, 0, FT.internalFormat, FT.format, FT.type, IT), this._rescaleTexture(TT, kT, iT, FT.format, (() => {
-              this._releaseTexture(TT), this._bindTextureDirectly(XT.TEXTURE_2D, kT, !0), WT()
-            }))
-          }
-          return !0
-        }), BT, FT, ST, DT, LT, xT, MT)
-      }
-      _getTexImageParametersForCreateTexture(TT, oT) {
-        let IT, iT;
-        return 1 === this.rK ? (IT = this._getInternalFormat(TT, oT), iT = IT) : (IT = this._getInternalFormat(TT, !1), iT = this._getRGBABufferInternalSizedFormat(0, TT, oT)), {
-          internalFormat: iT,
-          format: IT,
-          type: this._gl.UNSIGNED_BYTE
-        }
-      }
-      _rescaleTexture(TT, oT, IT, iT, zT) {}
-      _unpackFlipY(TT) {
-        this._unpackFlipYCached !== TT && (this._gl.pixelStorei(this._gl.UNPACK_FLIP_Y_WEBGL, TT ? 1 : 0), this.enableUnpackFlipYCached && (this._unpackFlipYCached = TT))
-      }
-      _getUnpackAlignement() {
-        return this._gl.getParameter(this._gl.UNPACK_ALIGNMENT)
-      }
-      _getTextureTarget(TT) {
-        return TT.isCube ? this._gl.TEXTURE_CUBE_MAP : TT.is3D ? this._gl.TEXTURE_3D : TT.is2DArray || TT.isMultiview ? this._gl.TEXTURE_2D_ARRAY : this._gl.TEXTURE_2D
-      }
-      updateTextureSamplingMode(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const iT = this._getTextureTarget(oT),
-          zT = this._getSamplingParameters(TT, oT.useMipMaps || IT);
-        this._setTextureParameterInteger(iT, this._gl.TEXTURE_MAG_FILTER, zT.mag, oT), this._setTextureParameterInteger(iT, this._gl.TEXTURE_MIN_FILTER, zT.min), IT && zT.hasMipMaps && (oT.generateMipMaps = !0, this._gl.generateMipmap(iT)), this._bindTextureDirectly(iT, null), oT.samplingMode = TT
-      }
-      updateTextureDimensions(TT, oT, IT) {}
-      updateTextureWrappingMode(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const zT = this._getTextureTarget(TT);
-        null !== oT && (this._setTextureParameterInteger(zT, this._gl.TEXTURE_WRAP_S, this._getTextureWrapMode(oT), TT), TT._cachedWrapU = oT), null !== IT && (this._setTextureParameterInteger(zT, this._gl.TEXTURE_WRAP_T, this._getTextureWrapMode(IT), TT), TT._cachedWrapV = IT), (TT.is2DArray || TT.is3D) && null !== iT && (this._setTextureParameterInteger(zT, this._gl.TEXTURE_WRAP_R, this._getTextureWrapMode(iT), TT), TT._cachedWrapR = iT), this._bindTextureDirectly(zT, null)
-      }
-      _uploadCompressedDataToTextureDirectly(TT, oT, IT, iT, zT) {
-        let kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          WT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-        const XT = this._gl;
-        let BT = XT.TEXTURE_2D;
-        if (TT.isCube && (BT = XT.TEXTURE_CUBE_MAP_POSITIVE_X + kT), TT._useSRGBBuffer) switch (oT) {
-          case 37492:
-          case 36196:
-            this._caps.etc2 ? oT = XT.COMPRESSED_SRGB8_ETC2 : TT._useSRGBBuffer = !1;
-            break;
-          case 37496:
-            this._caps.etc2 ? oT = XT.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC : TT._useSRGBBuffer = !1;
-            break;
-          case 36492:
-            oT = XT.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT;
-            break;
-          case 37808:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR;
-            break;
-          case 37809:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR;
-            break;
-          case 37810:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR;
-            break;
-          case 37811:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR;
-            break;
-          case 37812:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR;
-            break;
-          case 37813:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR;
-            break;
-          case 37814:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR;
-            break;
-          case 37815:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR;
-            break;
-          case 37816:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR;
-            break;
-          case 37817:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR;
-            break;
-          case 37818:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR;
-            break;
-          case 37819:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR;
-            break;
-          case 37820:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR;
-            break;
-          case 37821:
-            oT = XT.COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR;
-            break;
-          case 33776:
-            this._caps.s3tc_srgb ? oT = XT.COMPRESSED_SRGB_S3TC_DXT1_EXT : TT._useSRGBBuffer = !1;
-            break;
-          case 33777:
-            this._caps.s3tc_srgb ? oT = XT.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT : TT._useSRGBBuffer = !1;
-            break;
-          case 33779:
-            this._caps.s3tc_srgb ? oT = XT.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT : TT._useSRGBBuffer = !1;
-            break;
-          default:
-            TT._useSRGBBuffer = !1
-        }
-        if (TT.generateMipMaps) {
-          const kT = TT._hardwareTexture;
-          kT.memoryAllocated || (XT.texStorage2D(TT.isCube ? XT.TEXTURE_CUBE_MAP : XT.TEXTURE_2D, Math.floor(Math.log2(Math.max(IT, iT))) + 1, oT, TT.width, TT.height), kT.memoryAllocated = !0), this._gl.compressedTexSubImage2D(BT, WT, 0, 0, IT, iT, oT, zT)
-        } else this._gl.compressedTexImage2D(BT, WT, oT, IT, iT, 0, zT)
-      }
-      _uploadDataToTextureDirectly(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          zT = arguments.length > 4 ? arguments[4] : void 0,
-          kT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const WT = this._gl,
-          XT = this._getWebGLTextureType(TT.type),
-          BT = this._getInternalFormat(TT.format),
-          FT = void 0 === zT ? this._getRGBABufferInternalSizedFormat(TT.type, TT.format, TT._useSRGBBuffer) : this._getInternalFormat(zT, TT._useSRGBBuffer);
-        this._unpackFlipY(TT.invertY);
-        let ST = WT.TEXTURE_2D;
-        TT.isCube && (ST = WT.TEXTURE_CUBE_MAP_POSITIVE_X + IT);
-        const DT = Math.round(Math.log(TT.width) * Math.LOG2E),
-          LT = Math.round(Math.log(TT.height) * Math.LOG2E),
-          xT = kT ? TT.width : Math.pow(2, Math.max(DT - iT, 0)),
-          cT = kT ? TT.height : Math.pow(2, Math.max(LT - iT, 0));
-        WT.texImage2D(ST, iT, FT, xT, cT, 0, BT, XT, oT)
-      }
-      updateTextureData(TT, oT, IT, iT, zT, kT) {
-        let WT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
-          XT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
-          BT = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
-        const FT = this._gl,
-          ST = this._getWebGLTextureType(TT.type),
-          DT = this._getInternalFormat(TT.format);
-        this._unpackFlipY(TT.invertY);
-        let LT = FT.TEXTURE_2D,
-          xT = FT.TEXTURE_2D;
-        TT.isCube && (xT = FT.TEXTURE_CUBE_MAP_POSITIVE_X + WT, LT = FT.TEXTURE_CUBE_MAP), this._bindTextureDirectly(LT, TT, !0), FT.texSubImage2D(xT, XT, IT, iT, zT, kT, DT, ST, oT), BT && this._gl.generateMipmap(xT), this._bindTextureDirectly(LT, null)
-      }
-      _uploadArrayBufferViewToTexture(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const zT = this._gl,
-          kT = TT.isCube ? zT.TEXTURE_CUBE_MAP : zT.TEXTURE_2D;
-        this._bindTextureDirectly(kT, TT, !0), this._uploadDataToTextureDirectly(TT, oT, IT, iT), this._bindTextureDirectly(kT, null, !0)
-      }
-      _prepareWebGLTextureContinuation(TT, oT, IT, iT, zT) {
-        const kT = this._gl;
-        if (!kT) return;
-        const WT = this._getSamplingParameters(zT, !IT);
-        kT.texParameteri(kT.TEXTURE_2D, kT.TEXTURE_MAG_FILTER, WT.mag), kT.texParameteri(kT.TEXTURE_2D, kT.TEXTURE_MIN_FILTER, WT.min), IT || iT || kT.generateMipmap(kT.TEXTURE_2D), this._bindTextureDirectly(kT.TEXTURE_2D, null), oT && oT.removePendingData(TT), TT.onLoadedObservable.notifyObservers(TT), TT.onLoadedObservable.clear()
-      }
-      _prepareWebGLTexture(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT) {
-        const ST = this.getCaps().maxTextureSize,
-          DT = Math.min(ST, this.needPOTTextures ? (0, xT.e)(iT.width, ST) : iT.width),
-          LT = Math.min(ST, this.needPOTTextures ? (0, xT.e)(iT.height, ST) : iT.height),
-          cT = this._gl;
-        cT && (TT._hardwareTexture ? (this._bindTextureDirectly(cT.TEXTURE_2D, TT, !0), this._unpackFlipY(void 0 === zT || !!zT), TT.baseWidth = iT.width, TT.baseHeight = iT.height, TT.width = DT, TT.height = LT, TT.isReady = !0, TT.type = -1 !== TT.type ? TT.type : 0, TT.format = -1 !== TT.format ? TT.format : FT ?? (".jpg" !== oT || TT._useSRGBBuffer ? 5 : 4), XT(DT, LT, iT, oT, TT, (() => {
-          this._prepareWebGLTextureContinuation(TT, IT, kT, WT, BT)
-        })) || this._prepareWebGLTextureContinuation(TT, IT, kT, WT, BT)) : IT && IT.removePendingData(TT))
-      }
-      _getInternalFormatFromDepthTextureFormat(TT, oT, IT) {
-        const iT = this._gl;
-        if (!oT) return iT.STENCIL_INDEX8;
-        let zT = IT ? iT.DEPTH_STENCIL : iT.DEPTH_COMPONENT;
-        return this.rK > 1 ? 15 === TT ? zT = iT.DEPTH_COMPONENT16 : 16 === TT ? zT = iT.DEPTH_COMPONENT24 : 17 === TT || 13 === TT ? zT = IT ? iT.DEPTH24_STENCIL8 : iT.DEPTH_COMPONENT24 : 14 === TT ? zT = iT.DEPTH_COMPONENT32F : 18 === TT && (zT = IT ? iT.DEPTH32F_STENCIL8 : iT.DEPTH_COMPONENT32F) : zT = iT.DEPTH_COMPONENT16, zT
-      }
-      _getWebGLTextureTypeFromDepthTextureFormat(TT) {
-        const oT = this._gl;
-        let IT = oT.UNSIGNED_INT;
-        return 15 === TT ? IT = oT.UNSIGNED_SHORT : 17 === TT || 13 === TT ? IT = oT.UNSIGNED_INT_24_8 : 14 === TT ? IT = oT.FLOAT : 18 === TT ? IT = oT.FLOAT_32_UNSIGNED_INT_24_8_REV : 19 === TT && (IT = oT.UNSIGNED_BYTE), IT
-      }
-      _setupFramebufferDepthAttachments(TT, oT, IT, iT) {
-        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-          kT = arguments.length > 5 ? arguments[5] : void 0,
-          WT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        const XT = this._gl;
-        kT = kT ?? (TT ? 13 : 14);
-        const BT = this._getInternalFormatFromDepthTextureFormat(kT, oT, TT);
-        return TT && oT ? this._createRenderBuffer(IT, iT, zT, XT.DEPTH_STENCIL, BT, WT ? -1 : XT.DEPTH_STENCIL_ATTACHMENT) : oT ? this._createRenderBuffer(IT, iT, zT, BT, BT, WT ? -1 : XT.DEPTH_ATTACHMENT) : TT ? this._createRenderBuffer(IT, iT, zT, BT, BT, WT ? -1 : XT.STENCIL_ATTACHMENT) : null
-      }
-      _createRenderBuffer(TT, oT, IT, iT, zT, kT) {
-        let WT = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-        const XT = this._gl.createRenderbuffer();
-        return this._updateRenderBuffer(XT, TT, oT, IT, iT, zT, kT, WT)
-      }
-      _updateRenderBuffer(TT, oT, IT, iT, zT, kT, WT) {
-        let XT = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
-        const BT = this._gl;
-        return BT.bindRenderbuffer(BT.RENDERBUFFER, TT), iT > 1 && BT.renderbufferStorageMultisample ? BT.renderbufferStorageMultisample(BT.RENDERBUFFER, iT, kT, oT, IT) : BT.renderbufferStorage(BT.RENDERBUFFER, zT, oT, IT), -1 !== WT && BT.framebufferRenderbuffer(BT.FRAMEBUFFER, WT, BT.RENDERBUFFER, TT), XT && BT.bindRenderbuffer(BT.RENDERBUFFER, null), TT
-      }
-      _releaseTexture(TT) {
-        this._deleteTexture(TT._hardwareTexture), this.unbindAllTextures();
-        const oT = this._internalTexturesCache.indexOf(TT); - 1 !== oT && this._internalTexturesCache.splice(oT, 1), TT._lodTextureHigh && TT._lodTextureHigh.dispose(), TT._lodTextureMid && TT._lodTextureMid.dispose(), TT._lodTextureLow && TT._lodTextureLow.dispose(), TT._irradianceTexture && TT._irradianceTexture.dispose()
-      }
-      _deleteTexture(TT) {
-        TT?.release()
-      }
-      _setProgram(TT) {
-        this._currentProgram !== TT && ((0, zT.l)(TT, this._gl), this._currentProgram = TT)
-      }
-      bindSamplers(TT) {
-        const oT = TT.getPipelineContext();
-        this._setProgram(oT.program);
-        const IT = TT.getSamplers();
-        for (let iT = 0; iT < IT.length; iT++) {
-          const oT = TT.getUniform(IT[iT]);
-          oT && (this._boundUniforms[iT] = oT)
-        }
-        this._currentEffect = null
-      }
-      _activateCurrentTexture() {
-        this._currentTextureChannel !== this._activeChannel && (this._gl.activeTexture(this._gl.TEXTURE0 + this._activeChannel), this._currentTextureChannel = this._activeChannel)
-      }
-      _bindTextureDirectly(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          zT = !1;
-        const kT = oT && oT._associatedChannel > -1;
-        IT && kT && (this._activeChannel = oT._associatedChannel);
-        if (this._boundTexturesCache[this._activeChannel] !== oT || iT) {
-          if (this._activateCurrentTexture(), oT && oT.isMultiview) throw XT.d.Error(["_bindTextureDirectly called with a multiview texture!", TT, oT]), "_bindTextureDirectly called with a multiview texture!";
-          this._gl.bindTexture(TT, oT?._hardwareTexture?.underlyingResource ?? null), this._boundTexturesCache[this._activeChannel] = oT, oT && (oT._associatedChannel = this._activeChannel)
-        } else IT && (zT = !0, this._activateCurrentTexture());
-        return kT && !IT && this._bindSamplerUniformToChannel(oT._associatedChannel, this._activeChannel), zT
-      }
-      _bindTexture(TT, oT, IT) {
-        if (void 0 === TT) return;
-        oT && (oT._associatedChannel = TT), this._activeChannel = TT;
-        const iT = oT ? this._getTextureTarget(oT) : this._gl.TEXTURE_2D;
-        this._bindTextureDirectly(iT, oT)
-      }
-      unbindAllTextures() {
-        for (let TT = 0; TT < this._maxSimultaneousTextures; TT++) this._activeChannel = TT, this._bindTextureDirectly(this._gl.TEXTURE_2D, null), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null), this.rK > 1 && (this._bindTextureDirectly(this._gl.TEXTURE_3D, null), this._bindTextureDirectly(this._gl.TEXTURE_2D_ARRAY, null))
-      }
-      setTexture(TT, oT, IT, iT) {
-        void 0 !== TT && (oT && (this._boundUniforms[TT] = oT), this._setTexture(TT, IT))
-      }
-      _bindSamplerUniformToChannel(TT, oT) {
-        const IT = this._boundUniforms[TT];
-        IT && IT._currentState !== oT && (this._gl.uniform1i(IT, oT), IT._currentState = oT)
-      }
-      _getTextureWrapMode(TT) {
-        switch (TT) {
-          case 1:
-            return this._gl.REPEAT;
-          case 0:
-            return this._gl.CLAMP_TO_EDGE;
-          case 2:
-            return this._gl.MIRRORED_REPEAT
-        }
-        return this._gl.REPEAT
-      }
-      _setTexture(TT, oT) {
-        let IT, iT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          zT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (!oT) return null != this._boundTexturesCache[TT] && (this._activeChannel = TT, this._bindTextureDirectly(this._gl.TEXTURE_2D, null), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null), this.rK > 1 && (this._bindTextureDirectly(this._gl.TEXTURE_3D, null), this._bindTextureDirectly(this._gl.TEXTURE_2D_ARRAY, null))), !1;
-        if (oT.video) {
-          this._activeChannel = TT;
-          const IT = oT.getInternalTexture();
-          IT && (IT._associatedChannel = TT), oT.update()
-        } else if (4 === oT.delayLoadState) return oT.delayLoad(), !1;
-        IT = zT ? oT.depthStencilTexture : oT.isReady() ? oT.getInternalTexture() : oT.isCube ? this.emptyCubeTexture : oT.is3D ? this.emptyTexture3D : oT.is2DArray ? this.emptyTexture2DArray : this.emptyTexture, !iT && IT && (IT._associatedChannel = TT);
-        let kT = !0;
-        this._boundTexturesCache[TT] === IT && (iT || this._bindSamplerUniformToChannel(IT._associatedChannel, TT), kT = !1), this._activeChannel = TT;
-        const WT = this._getTextureTarget(IT);
-        if (kT && this._bindTextureDirectly(WT, IT, iT), IT && !IT.isMultiview) {
-          if (IT.isCube && IT._cachedCoordinatesMode !== oT.coordinatesMode) {
-            IT._cachedCoordinatesMode = oT.coordinatesMode;
-            const TT = 3 !== oT.coordinatesMode && 5 !== oT.coordinatesMode ? 1 : 0;
-            oT.wrapU = TT, oT.wrapV = TT
-          }
-          IT._cachedWrapU !== oT.wrapU && (IT._cachedWrapU = oT.wrapU, this._setTextureParameterInteger(WT, this._gl.TEXTURE_WRAP_S, this._getTextureWrapMode(oT.wrapU), IT)), IT._cachedWrapV !== oT.wrapV && (IT._cachedWrapV = oT.wrapV, this._setTextureParameterInteger(WT, this._gl.TEXTURE_WRAP_T, this._getTextureWrapMode(oT.wrapV), IT)), IT.is3D && IT._cachedWrapR !== oT.wrapR && (IT._cachedWrapR = oT.wrapR, this._setTextureParameterInteger(WT, this._gl.TEXTURE_WRAP_R, this._getTextureWrapMode(oT.wrapR), IT)), this._setAnisotropicLevel(WT, IT, oT.anisotropicFilteringLevel)
-        }
-        return !0
-      }
-      setTextureArray(TT, oT, IT, iT) {
-        if (void 0 !== TT && oT) {
-          this._textureUnits && this._textureUnits.length === IT.length || (this._textureUnits = new Int32Array(IT.length));
-          for (let oT = 0; oT < IT.length; oT++) {
-            const iT = IT[oT].getInternalTexture();
-            iT ? (this._textureUnits[oT] = TT + oT, iT._associatedChannel = TT + oT) : this._textureUnits[oT] = -1
-          }
-          this._gl.uniform1iv(oT, this._textureUnits);
-          for (let TT = 0; TT < IT.length; TT++) this._setTexture(this._textureUnits[TT], IT[TT], !0)
-        }
-      }
-      _setAnisotropicLevel(TT, oT, IT) {
-        const iT = this._caps.textureAnisotropicFilterExtension;
-        11 !== oT.samplingMode && 3 !== oT.samplingMode && 2 !== oT.samplingMode && (IT = 1), iT && oT._cachedAnisotropicFilteringLevel !== IT && (this._setTextureParameterFloat(TT, iT.TEXTURE_MAX_ANISOTROPY_EXT, Math.min(IT, this._caps.maxAnisotropy), oT), oT._cachedAnisotropicFilteringLevel = IT)
-      }
-      _setTextureParameterFloat(TT, oT, IT, iT) {
-        this._bindTextureDirectly(TT, iT, !0, !0), this._gl.texParameterf(TT, oT, IT)
-      }
-      _setTextureParameterInteger(TT, oT, IT, iT) {
-        iT && this._bindTextureDirectly(TT, iT, !0, !0), this._gl.texParameteri(TT, oT, IT)
-      }
-      unbindAllAttributes() {
-        if (this._mustWipeVertexAttributes) {
-          this._mustWipeVertexAttributes = !1;
-          for (let TT = 0; TT < this._caps.maxVertexAttribs; TT++) this.disableAttributeByIndex(TT)
-        } else
-          for (let TT = 0, oT = this._vertexAttribArraysEnabled.length; TT < oT; TT++) TT >= this._caps.maxVertexAttribs || !this._vertexAttribArraysEnabled[TT] || this.disableAttributeByIndex(TT)
-      }
-      releaseEffects() {
-        this._compiledEffects = {}, this.onReleaseEffectsObservable.notifyObservers(this)
-      }
-      dispose() {
-        (0, BT.k)() && this._renderingCanvas && (this._renderingCanvas.removeEventListener("webglcontextlost", this._onContextLost), this._onContextRestored && this._renderingCanvas.removeEventListener("webglcontextrestored", this._onContextRestored)), super.dispose(), this._dummyFramebuffer && this._gl.deleteFramebuffer(this._dummyFramebuffer), this.unbindAllAttributes(), this._boundUniforms = {}, this._workingCanvas = null, this._workingContext = null, this._currentBufferPointers.length = 0, this._currentProgram = null, this._creationOptions.loseContextOnDispose && this._gl.getExtension("WEBGL_lose_context")?.loseContext(), (0, zT.x)(this._gl)
-      }
-      attachContextLostEvent(TT) {
-        this._renderingCanvas && this._renderingCanvas.addEventListener("webglcontextlost", TT, !1)
-      }
-      attachContextRestoredEvent(TT) {
-        this._renderingCanvas && this._renderingCanvas.addEventListener("webglcontextrestored", TT, !1)
-      }
-      getError() {
-        return this._gl.getError()
-      }
-      _canRenderToFloatFramebuffer() {
-        return this._webGLVersion > 1 ? this._caps.colorBufferFloat : this._canRenderToFramebuffer(1)
-      }
-      _canRenderToHalfFloatFramebuffer() {
-        return this._webGLVersion > 1 ? this._caps.colorBufferFloat : this._canRenderToFramebuffer(2)
-      }
-      _canRenderToFramebuffer(TT) {
-        const oT = this._gl;
-        for (; oT.getError() !== oT.NO_ERROR;);
-        let IT = !0;
-        const iT = oT.createTexture();
-        oT.bindTexture(oT.TEXTURE_2D, iT), oT.texImage2D(oT.TEXTURE_2D, 0, this._getRGBABufferInternalSizedFormat(TT), 1, 1, 0, oT.RGBA, this._getWebGLTextureType(TT), null), oT.texParameteri(oT.TEXTURE_2D, oT.TEXTURE_MIN_FILTER, oT.NEAREST), oT.texParameteri(oT.TEXTURE_2D, oT.TEXTURE_MAG_FILTER, oT.NEAREST);
-        const zT = oT.createFramebuffer();
-        oT.bindFramebuffer(oT.FRAMEBUFFER, zT), oT.framebufferTexture2D(oT.FRAMEBUFFER, oT.COLOR_ATTACHMENT0, oT.TEXTURE_2D, iT, 0);
-        const kT = oT.checkFramebufferStatus(oT.FRAMEBUFFER);
-        if (IT = IT && kT === oT.FRAMEBUFFER_COMPLETE, IT = IT && oT.getError() === oT.NO_ERROR, IT && (oT.clear(oT.COLOR_BUFFER_BIT), IT = IT && oT.getError() === oT.NO_ERROR), IT) {
-          oT.bindFramebuffer(oT.FRAMEBUFFER, null);
-          const TT = oT.RGBA,
-            iT = oT.UNSIGNED_BYTE,
-            zT = new Uint8Array(4);
-          oT.readPixels(0, 0, 1, 1, TT, iT, zT), IT = IT && oT.getError() === oT.NO_ERROR
-        }
-        for (oT.deleteTexture(iT), oT.deleteFramebuffer(zT), oT.bindFramebuffer(oT.FRAMEBUFFER, null); !IT && oT.getError() !== oT.NO_ERROR;);
-        return IT
-      }
-      _getWebGLTextureType(TT) {
-        if (1 === this._webGLVersion) {
-          switch (TT) {
-            case 1:
-              return this._gl.FLOAT;
-            case 2:
-              return this._gl.HALF_FLOAT_OES;
-            case 0:
-              return this._gl.UNSIGNED_BYTE;
-            case 8:
-              return this._gl.UNSIGNED_SHORT_4_4_4_4;
-            case 9:
-              return this._gl.UNSIGNED_SHORT_5_5_5_1;
-            case 10:
-              return this._gl.UNSIGNED_SHORT_5_6_5
-          }
-          return this._gl.UNSIGNED_BYTE
-        }
-        switch (TT) {
-          case 3:
-            return this._gl.BYTE;
-          case 0:
-            return this._gl.UNSIGNED_BYTE;
-          case 4:
-            return this._gl.SHORT;
-          case 5:
-            return this._gl.UNSIGNED_SHORT;
-          case 6:
-            return this._gl.INT;
-          case 7:
-            return this._gl.UNSIGNED_INT;
-          case 1:
-            return this._gl.FLOAT;
-          case 2:
-            return this._gl.HALF_FLOAT;
-          case 8:
-            return this._gl.UNSIGNED_SHORT_4_4_4_4;
-          case 9:
-            return this._gl.UNSIGNED_SHORT_5_5_5_1;
-          case 10:
-            return this._gl.UNSIGNED_SHORT_5_6_5;
-          case 11:
-            return this._gl.UNSIGNED_INT_2_10_10_10_REV;
-          case 12:
-            return this._gl.UNSIGNED_INT_24_8;
-          case 13:
-            return this._gl.UNSIGNED_INT_10F_11F_11F_REV;
-          case 14:
-            return this._gl.UNSIGNED_INT_5_9_9_9_REV;
-          case 15:
-            return this._gl.FLOAT_32_UNSIGNED_INT_24_8_REV
-        }
-        return this._gl.UNSIGNED_BYTE
-      }
-      _getInternalFormat(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          IT = oT ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : this._gl.RGBA;
-        switch (TT) {
-          case 0:
-            IT = this._gl.ALPHA;
-            break;
-          case 1:
-            IT = this._gl.LUMINANCE;
-            break;
-          case 2:
-            IT = this._gl.LUMINANCE_ALPHA;
-            break;
-          case 6:
-          case 33322:
-          case 36760:
-            IT = this._gl.RED;
-            break;
-          case 7:
-          case 33324:
-          case 36761:
-            IT = this._gl.RG;
-            break;
-          case 4:
-          case 32852:
-          case 36762:
-            IT = oT ? this._glSRGBExtensionValues.SRGB : this._gl.RGB;
-            break;
-          case 5:
-          case 32859:
-          case 36763:
-            IT = oT ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : this._gl.RGBA
-        }
-        if (this._webGLVersion > 1) switch (TT) {
-          case 8:
-            IT = this._gl.RED_INTEGER;
-            break;
-          case 9:
-            IT = this._gl.RG_INTEGER;
-            break;
-          case 10:
-            IT = this._gl.RGB_INTEGER;
-            break;
-          case 11:
-            IT = this._gl.RGBA_INTEGER
-        }
-        return IT
-      }
-      _getRGBABufferInternalSizedFormat(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (1 === this._webGLVersion) {
-          if (void 0 !== oT) switch (oT) {
-            case 0:
-              return this._gl.ALPHA;
-            case 1:
-              return this._gl.LUMINANCE;
-            case 2:
-              return this._gl.LUMINANCE_ALPHA;
-            case 4:
-              return IT ? this._glSRGBExtensionValues.SRGB : this._gl.RGB
-          }
-          return this._gl.RGBA
-        }
-        switch (TT) {
-          case 3:
-            switch (oT) {
-              case 6:
-                return this._gl.R8_SNORM;
-              case 7:
-                return this._gl.RG8_SNORM;
-              case 4:
-                return this._gl.RGB8_SNORM;
-              case 8:
-                return this._gl.R8I;
-              case 9:
-                return this._gl.RG8I;
-              case 10:
-                return this._gl.RGB8I;
-              case 11:
-                return this._gl.RGBA8I;
-              default:
-                return this._gl.RGBA8_SNORM
-            }
-          case 0:
-            switch (oT) {
-              case 6:
-                return this._gl.R8;
-              case 7:
-                return this._gl.RG8;
-              case 4:
-                return IT ? this._glSRGBExtensionValues.SRGB8 : this._gl.RGB8;
-              case 5:
-                return IT ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : this._gl.RGBA8;
-              case 8:
-                return this._gl.R8UI;
-              case 9:
-                return this._gl.RG8UI;
-              case 10:
-                return this._gl.RGB8UI;
-              case 11:
-                return this._gl.RGBA8UI;
-              case 0:
-                return this._gl.ALPHA;
-              case 1:
-                return this._gl.LUMINANCE;
-              case 2:
-                return this._gl.LUMINANCE_ALPHA;
-              default:
-                return this._gl.RGBA8
-            }
-          case 4:
-            switch (oT) {
-              case 8:
-                return this._gl.R16I;
-              case 36760:
-                return this._gl.R16_SNORM_EXT;
-              case 36761:
-                return this._gl.RG16_SNORM_EXT;
-              case 36762:
-                return this._gl.RGB16_SNORM_EXT;
-              case 36763:
-                return this._gl.RGBA16_SNORM_EXT;
-              case 9:
-                return this._gl.RG16I;
-              case 10:
-                return this._gl.RGB16I;
-              default:
-                return this._gl.RGBA16I
-            }
-          case 5:
-            switch (oT) {
-              case 8:
-                return this._gl.R16UI;
-              case 33322:
-                return this._gl.R16_EXT;
-              case 33324:
-                return this._gl.RG16_EXT;
-              case 32852:
-                return this._gl.RGB16_EXT;
-              case 32859:
-                return this._gl.RGBA16_EXT;
-              case 9:
-                return this._gl.RG16UI;
-              case 10:
-                return this._gl.RGB16UI;
-              default:
-                return this._gl.RGBA16UI
-            }
-          case 6:
-            switch (oT) {
-              case 8:
-                return this._gl.R32I;
-              case 9:
-                return this._gl.RG32I;
-              case 10:
-                return this._gl.RGB32I;
-              default:
-                return this._gl.RGBA32I
-            }
-          case 7:
-            switch (oT) {
-              case 8:
-                return this._gl.R32UI;
-              case 9:
-                return this._gl.RG32UI;
-              case 10:
-                return this._gl.RGB32UI;
-              default:
-                return this._gl.RGBA32UI
-            }
-          case 1:
-            switch (oT) {
-              case 6:
-                return this._gl.R32F;
-              case 7:
-                return this._gl.RG32F;
-              case 4:
-                return this._gl.RGB32F;
-              default:
-                return this._gl.RGBA32F
-            }
-          case 2:
-            switch (oT) {
-              case 6:
-                return this._gl.R16F;
-              case 7:
-                return this._gl.RG16F;
-              case 4:
-                return this._gl.RGB16F;
-              default:
-                return this._gl.RGBA16F
-            }
-          case 10:
-            return this._gl.RGB565;
-          case 13:
-            return this._gl.R11F_G11F_B10F;
-          case 14:
-            return this._gl.RGB9_E5;
-          case 8:
-            return this._gl.RGBA4;
-          case 9:
-            return this._gl.RGB5_A1;
-          case 11:
-            switch (oT) {
-              case 5:
-              default:
-                return this._gl.RGB10_A2;
-              case 11:
-                return this._gl.RGB10_A2UI
-            }
-        }
-        return IT ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : this._gl.RGBA8
-      }
-      readPixels(TT, oT, IT, iT) {
-        let zT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          kT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          WT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
-        const BT = zT ? 4 : 3,
-          FT = zT ? this._gl.RGBA : this._gl.RGB,
-          ST = IT * iT * BT;
-        if (WT) {
-          if (WT.length < ST) return XT.d.Error(`Data buffer is too small to store the read pixels (${WT.length} should be more than ${ST})`), Promise.resolve(WT)
-        } else WT = new Uint8Array(ST);
-        return kT && this.flushFramebuffer(), this._gl.readPixels(TT, oT, IT, iT, FT, this._gl.UNSIGNED_BYTE, WT), Promise.resolve(WT)
-      }
-      static get IsSupportedAsync() {
-        return Promise.resolve(this.isSupported())
-      }
-      static get IsSupported() {
-        return this.isSupported()
-      }
-      static isSupported() {
-        if (null !== this._HasMajorPerformanceCaveat) return !this._HasMajorPerformanceCaveat;
-        if (null === this._IsSupported) try {
-          const TT = kT.b._CreateCanvas(1, 1),
-            oT = TT.getContext("webgl") || TT.getContext("experimental-webgl");
-          this._IsSupported = null != oT && !!globalThis.WebGLRenderingContext
-        } catch (TT) {
-          this._IsSupported = !1
-        }
-        return this._IsSupported
-      }
-      static get HasMajorPerformanceCaveat() {
-        if (null === this._HasMajorPerformanceCaveat) try {
-          const TT = kT.b._CreateCanvas(1, 1),
-            oT = TT.getContext("webgl", {
-              failIfMajorPerformanceCaveat: !0
-            }) || TT.getContext("experimental-webgl", {
-              failIfMajorPerformanceCaveat: !0
-            });
-          this._HasMajorPerformanceCaveat = !oT
-        } catch (TT) {
-          this._HasMajorPerformanceCaveat = !1
-        }
-        return this._HasMajorPerformanceCaveat
-      }
-    }
-    wT._TempClearColorUint32 = new Uint32Array(4), wT._TempClearColorInt32 = new Int32Array(4), wT._TempClearColorFloat32 = new Float32Array(4), wT.ExceptionList = [{
-      key: "Chrome/63.0",
-      capture: "63\\.0\\.3239\\.(\\d+)",
-      captureConstraint: 108,
-      targets: ["uniformBuffer"]
-    }, {
-      key: "Firefox/58",
-      capture: null,
-      captureConstraint: null,
-      targets: ["uniformBuffer"]
-    }, {
-      key: "Firefox/59",
-      capture: null,
-      captureConstraint: null,
-      targets: ["uniformBuffer"]
-    }, {
-      key: "Chrome/72.+?Mobile",
-      capture: null,
-      captureConstraint: null,
-      targets: ["vao"]
-    }, {
-      key: "Chrome/73.+?Mobile",
-      capture: null,
-      captureConstraint: null,
-      targets: ["vao"]
-    }, {
-      key: "Chrome/74.+?Mobile",
-      capture: null,
-      captureConstraint: null,
-      targets: ["vao"]
-    }, {
-      key: "Mac OS.+Chrome/71",
-      capture: null,
-      captureConstraint: null,
-      targets: ["vao"]
-    }, {
-      key: "Mac OS.+Chrome/72",
-      capture: null,
-      captureConstraint: null,
-      targets: ["vao"]
-    }, {
-      key: "Mac OS.+Chrome",
-      capture: null,
-      captureConstraint: null,
-      targets: ["uniformBuffer"]
-    }, {
-      key: "Chrome/12\\d\\..+?Mobile",
-      capture: null,
-      captureConstraint: null,
-      targets: ["uniformBuffer"]
-    }, {
-      key: ".*AppleWebKit.*(15.4).*Safari",
-      capture: null,
-      captureConstraint: null,
-      targets: ["antialias", "maxMSAASamples"]
-    }, {
-      key: ".*(15.4).*AppleWebKit.*Safari",
-      capture: null,
-      captureConstraint: null,
-      targets: ["antialias", "maxMSAASamples"]
-    }], wT._ConcatenateShader = MT.f, wT._IsSupported = null, wT._HasMajorPerformanceCaveat = null
-  },
-  38966: (TT, oT, IT) => {
-    var iT;
-    IT.d(oT, {
-        b: () => zT
-      }),
-      function(TT) {
-        TT[TT.PointerMove = 0] = "PointerMove", TT[TT.PointerDown = 1] = "PointerDown", TT[TT.PointerUp = 2] = "PointerUp"
-      }(iT || (iT = {}));
-    class zT {}
-    zT.DOM_DELTA_PIXEL = 0, zT.DOM_DELTA_LINE = 1, zT.DOM_DELTA_PAGE = 2
-  },
-  38963: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => iT,
-      d: () => kT,
-      h: () => zT
-    });
-    class iT {}
-    iT.KEYDOWN = 1, iT.KEYUP = 2;
-    class zT {
-      constructor(TT, oT) {
-        this.type = TT, this.event = oT
-      }
-    }
-    class kT extends zT {
-      get skipOnPointerObservable() {
-        return this.skipOnKeyboardObservable
-      }
-      set skipOnPointerObservable(TT) {
-        this.skipOnKeyboardObservable = TT
-      }
-      constructor(TT, oT) {
-        super(TT, oT), this.type = TT, this.event = oT, this.skipOnKeyboardObservable = !1
-      }
-    }
-  },
-  38957: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => zT,
-      e: () => WT,
-      h: () => XT
-    });
-    var iT = IT(36118);
-    class zT {}
-    zT.POINTERDOWN = 1, zT.POINTERUP = 2, zT.POINTERMOVE = 4, zT.POINTERWHEEL = 8, zT.POINTERPICK = 16, zT.POINTERTAP = 32, zT.POINTERDOUBLETAP = 64;
-    class kT {
-      constructor(TT, oT) {
-        this.type = TT, this.event = oT
-      }
-    }
-    class WT extends kT {
-      constructor(TT, oT, IT, zT) {
-        super(TT, oT), this.ray = null, this.originalPickingInfo = null, this.skipOnPointerObservable = !1, this.localPosition = new iT.j(IT, zT)
-      }
-    }
-    class XT extends kT {
-      get pickInfo() {
-        return this._pickInfo || this._generatePickInfo(), this._pickInfo
-      }
-      constructor(TT, oT, IT) {
-        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        super(TT, oT), this._pickInfo = IT, this._inputManager = iT
-      }
-      _generatePickInfo() {
-        this._inputManager && (this._pickInfo = this._inputManager._pickMove(this.event), this._inputManager._setRayOnPointerInfo(this._pickInfo, this.event), this._inputManager = null)
-      }
-    }
-  },
-  38976: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => iT
-    });
-    class iT {
-      static CompareLightsPriority(TT, oT) {
-        return TT.shadowEnabled !== oT.shadowEnabled ? (oT.shadowEnabled ? 1 : 0) - (TT.shadowEnabled ? 1 : 0) : oT.renderPriority - TT.renderPriority
-      }
-    }
-    iT.FALLOFF_DEFAULT = 0, iT.FALLOFF_PHYSICAL = 1, iT.FALLOFF_GLTF = 2, iT.FALLOFF_STANDARD = 3, iT.LIGHTMAP_DEFAULT = 0, iT.LIGHTMAP_SPECULAR = 1, iT.LIGHTMAP_SHADOWSONLY = 2, iT.INTENSITYMODE_AUTOMATIC = 0, iT.INTENSITYMODE_LUMINOUSPOWER = 1, iT.INTENSITYMODE_LUMINOUSINTENSITY = 2, iT.INTENSITYMODE_ILLUMINANCE = 3, iT.INTENSITYMODE_LUMINANCE = 4, iT.LIGHTTYPEID_POINTLIGHT = 0, iT.LIGHTTYPEID_DIRECTIONALLIGHT = 1, iT.LIGHTTYPEID_SPOTLIGHT = 2, iT.LIGHTTYPEID_HEMISPHERICLIGHT = 3, iT.LIGHTTYPEID_RECT_AREALIGHT = 4, iT.LIGHTTYPEID_CLUSTERED_CONTAINER = 5
-  },
-  38594: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => WT
-    });
-    var iT, zT = IT(36149),
-      kT = IT(38599);
-    ! function(TT) {
-      TT[TT.Unknown = 0] = "Unknown", TT[TT.Url = 1] = "Url", TT[TT.Temp = 2] = "Temp", TT[TT.Raw = 3] = "Raw", TT[TT.Dynamic = 4] = "Dynamic", TT[TT.RenderTarget = 5] = "RenderTarget", TT[TT.MultiRenderTarget = 6] = "MultiRenderTarget", TT[TT.Cube = 7] = "Cube", TT[TT.CubeRaw = 8] = "CubeRaw", TT[TT.CubePrefiltered = 9] = "CubePrefiltered", TT[TT.Raw3D = 10] = "Raw3D", TT[TT.Raw2DArray = 11] = "Raw2DArray", TT[TT.DepthStencil = 12] = "DepthStencil", TT[TT.CubeRawRGBD = 13] = "CubeRawRGBD", TT[TT.Depth = 14] = "Depth", TT[TT.External = 15] = "External"
-    }(iT || (iT = {}));
-    class WT extends kT.e {
-      get useMipMaps() {
-        return null === this._useMipMaps ? this.generateMipMaps : this._useMipMaps
-      }
-      set useMipMaps(TT) {
-        this._useMipMaps = TT
-      }
-      get uniqueId() {
-        return this._uniqueId
-      }
-      _setUniqueId(TT) {
-        this._uniqueId = TT
-      }
-      Zc() {
-        return this._engine
-      }
-      get source() {
-        return this._source
-      }
-      constructor(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(), this.isReady = !1, this.isCube = !1, this.is3D = !1, this.is2DArray = !1, this.isMultiview = !1, this.url = "", this.generateMipMaps = !1, this._useMipMaps = null, this.mipLevelCount = 1, this.samples = 0, this.type = -1, this.format = -1, this.onLoadedObservable = new zT.d, this.onErrorObservable = new zT.d, this.onRebuildCallback = null, this.width = 0, this.height = 0, this.depth = 0, this.baseWidth = 0, this.baseHeight = 0, this.baseDepth = 0, this.invertY = !1, this._invertVScale = !1, this._associatedChannel = -1, this._source = 0, this._buffer = null, this._bufferView = null, this._bufferViewArray = null, this._bufferViewArrayArray = null, this._size = 0, this._extension = "", this._files = null, this._workingCanvas = null, this._workingContext = null, this._cachedCoordinatesMode = null, this._isDisabled = !1, this._compression = null, this._sphericalPolynomial = null, this._sphericalPolynomialPromise = null, this._sphericalPolynomialComputed = !1, this._lodGenerationScale = 0, this._lodGenerationOffset = 0, this._useSRGBBuffer = !1, this._creationFlags = 0, this._lodTextureHigh = null, this._lodTextureMid = null, this._lodTextureLow = null, this._isRGBD = !1, this._linearSpecularLOD = !1, this._irradianceTexture = null, this._hardwareTexture = null, this._maxLodLevel = null, this._references = 1, this._gammaSpace = null, this._premulAlpha = !1, this._dynamicTextureSource = null, this._autoMSAAManagement = !1, this._engine = TT, this._source = oT, this._uniqueId = WT._Counter++, IT || (this._hardwareTexture = TT._createHardwareTexture())
-      }
-      incrementReferences() {
-        this._references++
-      }
-      updateSize(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-        this._engine.updateTextureDimensions(this, TT, oT, IT), this.width = TT, this.height = oT, this.depth = IT, this.baseWidth = TT, this.baseHeight = oT, this.baseDepth = IT, this._size = TT * oT * IT
-      }
-      _rebuild() {
-        if (this.isReady = !1, this._cachedCoordinatesMode = null, this._cachedWrapU = null, this._cachedWrapV = null, this._cachedWrapR = null, this._cachedAnisotropicFilteringLevel = null, this.onRebuildCallback) {
-          const TT = this.onRebuildCallback(this),
-            oT = oT => {
-              oT._swapAndDie(this, !1), this.isReady = TT.isReady
-            };
-          return void(TT.isAsync ? TT.proxy.then(oT) : oT(TT.proxy))
-        }
-        let TT;
-        switch (this.source) {
-          case 2:
-          case 12:
-          case 14:
-          case 15:
-            break;
-          case 1:
-            return void(TT = this._engine.createTexture(this._originalUrl ?? this.url, !this.generateMipMaps, this.invertY, null, this.samplingMode, (TT => {
-              TT._swapAndDie(this, !1), this.isReady = !0
-            }), null, this._buffer, void 0, this.format, this._extension, void 0, void 0, void 0, this._useSRGBBuffer));
-          case 3:
-            if (TT = this._engine.createRawTexture(this._bufferView, this.baseWidth, this.baseHeight, this.format, this.generateMipMaps, this.invertY, this.samplingMode, this._compression, this.type, this._creationFlags, this._useSRGBBuffer, this.mipLevelCount), TT._swapAndDie(this, !1), this._bufferViewArray)
-              for (let TT = 0; TT < this._bufferViewArray.length; TT++) {
-                const oT = this._bufferViewArray[TT];
-                oT && this._engine.updateRawTexture(this, oT, this.format, this.invertY, this._compression, this.type, this._useSRGBBuffer, TT)
-              }
-            this.isReady = !0;
-            break;
-          case 10:
-            TT = this._engine.createRawTexture3D(this._bufferView, this.baseWidth, this.baseHeight, this.baseDepth, this.format, this.generateMipMaps, this.invertY, this.samplingMode, this._compression, this.type), TT._swapAndDie(this, !1), this.isReady = !0;
-            break;
-          case 11:
-            if (TT = this._engine.createRawTexture2DArray(this._bufferView, this.baseWidth, this.baseHeight, this.baseDepth, this.format, this.generateMipMaps, this.invertY, this.samplingMode, this._compression, this.type, this._creationFlags, this.mipLevelCount), TT._swapAndDie(this, !1), this._bufferViewArray)
-              for (let TT = 0; TT < this._bufferViewArray.length; TT++) {
-                const oT = this._bufferViewArray[TT];
-                oT && this._engine.updateRawTexture2DArray(this, oT, this.format, this.invertY, this._compression, this.type, TT)
-              }
-            this.isReady = !0;
-            break;
-          case 4:
-            TT = this._engine.createDynamicTexture(this.baseWidth, this.baseHeight, this.generateMipMaps, this.samplingMode), TT._swapAndDie(this, !1), this._dynamicTextureSource && this._engine.updateDynamicTexture(this, this._dynamicTextureSource, this.invertY, this._premulAlpha, this.format, !0);
-            break;
-          case 7:
-            return void(TT = this._engine.createCubeTexture(this.url, null, this._files, !this.generateMipMaps, (() => {
-              TT._swapAndDie(this, !1), this.isReady = !0
-            }), null, this.format, this._extension, !1, 0, 0, null, void 0, this._useSRGBBuffer, ArrayBuffer.isView(this._buffer) ? this._buffer : null));
-          case 8:
-            TT = this._engine.createRawCubeTexture(this._bufferViewArray, this.width, this._originalFormat ?? this.format, this.type, this.generateMipMaps, this.invertY, this.samplingMode, this._compression), TT._swapAndDie(this, !1), this.isReady = !0;
-            break;
-          case 13:
-            return;
-          case 9:
-            return TT = this._engine.createPrefilteredCubeTexture(this.url, null, this._lodGenerationScale, this._lodGenerationOffset, (TT => {
-              TT && TT._swapAndDie(this, !1), this.isReady = !0
-            }), null, this.format, this._extension, void 0, ArrayBuffer.isView(this._buffer) ? this._buffer : null), void(TT._sphericalPolynomial = this._sphericalPolynomial)
-        }
-      }
-      _swapAndDie(TT) {
-        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        this._hardwareTexture?.setUsage(TT._source, this.generateMipMaps, this.is2DArray, this.isCube, this.is3D, this.width, this.height, this.depth), TT._hardwareTexture = this._hardwareTexture, TT._setUniqueId(WT._Counter++), oT && (TT._isRGBD = this._isRGBD), this._lodTextureHigh && (TT._lodTextureHigh && TT._lodTextureHigh.dispose(), TT._lodTextureHigh = this._lodTextureHigh), this._lodTextureMid && (TT._lodTextureMid && TT._lodTextureMid.dispose(), TT._lodTextureMid = this._lodTextureMid), this._lodTextureLow && (TT._lodTextureLow && TT._lodTextureLow.dispose(), TT._lodTextureLow = this._lodTextureLow), this._irradianceTexture && (TT._irradianceTexture && TT._irradianceTexture.dispose(), TT._irradianceTexture = this._irradianceTexture);
-        const IT = this._engine.getLoadedTexturesCache();
-        let iT = IT.indexOf(this); - 1 !== iT && IT.splice(iT, 1), iT = IT.indexOf(TT), -1 === iT && IT.push(TT)
-      }
-      dispose() {
-        this._references--, 0 === this._references && (this.onLoadedObservable.clear(), this.onErrorObservable.clear(), this._engine._releaseTexture(this), this._hardwareTexture = null, this._dynamicTextureSource = null)
-      }
-    }
-    WT._Counter = 0
-  },
-  38708: (TT, oT, IT) => {
-    function iT(TT) {
-      return 13 === TT || 14 === TT || 15 === TT || 16 === TT || 17 === TT || 18 === TT || 19 === TT
-    }
-
-    function zT(TT) {
-      return 8 === TT || 9 === TT || 10 === TT || 11 === TT
-    }
-
-    function kT(TT) {
-      return 0 === TT || 5 === TT || 7 === TT || 11 === TT
-    }
-
-    function WT(TT) {
-      return 13 === TT || 17 === TT || 18 === TT || 19 === TT
-    }
-    IT.d(oT, {
-      d: () => WT,
-      f: () => iT,
-      i: () => zT,
-      m: () => kT
-    })
-  },
-  38599: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => iT
-    });
-    class iT {
-      get wrapU() {
-        return this._cachedWrapU
-      }
-      set wrapU(TT) {
-        this._cachedWrapU = TT
-      }
-      get wrapV() {
-        return this._cachedWrapV
-      }
-      set wrapV(TT) {
-        this._cachedWrapV = TT
-      }
-      get wrapR() {
-        return this._cachedWrapR
-      }
-      set wrapR(TT) {
-        this._cachedWrapR = TT
-      }
-      get anisotropicFilteringLevel() {
-        return this._cachedAnisotropicFilteringLevel
-      }
-      set anisotropicFilteringLevel(TT) {
-        this._cachedAnisotropicFilteringLevel = TT
-      }
-      get comparisonFunction() {
-        return this._comparisonFunction
-      }
-      set comparisonFunction(TT) {
-        this._comparisonFunction = TT
-      }
-      get useMipMaps() {
-        return this._useMipMaps
-      }
-      set useMipMaps(TT) {
-        this._useMipMaps = TT
-      }
-      constructor() {
-        this.samplingMode = -1, this._useMipMaps = !0, this._cachedWrapU = null, this._cachedWrapV = null, this._cachedWrapR = null, this._cachedAnisotropicFilteringLevel = null, this._comparisonFunction = 0
-      }
-      setParameters() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2,
-          kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        return this._cachedWrapU = TT, this._cachedWrapV = oT, this._cachedWrapR = IT, this._cachedAnisotropicFilteringLevel = iT, this.samplingMode = zT, this._comparisonFunction = kT, this
-      }
-      compareSampler(TT) {
-        return this._cachedWrapU === TT._cachedWrapU && this._cachedWrapV === TT._cachedWrapV && this._cachedWrapR === TT._cachedWrapR && this._cachedAnisotropicFilteringLevel === TT._cachedAnisotropicFilteringLevel && this.samplingMode === TT.samplingMode && this._comparisonFunction === TT._comparisonFunction && this._useMipMaps === TT._useMipMaps
-      }
-    }
-  },
-  38902: (TT, oT, IT) => {
-    function iT(TT) {
-      TT.push("vCameraColorCurveNeutral", "vCameraColorCurvePositive", "vCameraColorCurveNegative")
-    }
-    IT.d(oT, {
-      e: () => iT
-    })
-  },
-  38679: (TT, oT, IT) => {
-    function iT(TT) {
-      return void 0 === TT.getPipelineContext
-    }
-    IT.d(oT, {
-      d: () => iT
-    })
-  },
-  39105: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => zT
-    });
-    var iT = IT(38653);
-    class zT {
-      static GetEffect(TT) {
-        return void 0 === TT.getPipelineContext ? TT.effect : TT
-      }
-      constructor(TT) {
-        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        this._wasPreviouslyReady = !1, this._forceRebindOnNextCall = !0, this._wasPreviouslyUsingInstances = null, this.effect = null, this.defines = null, this.drawContext = TT.createDrawContext(), oT && (this.materialContext = TT.createMaterialContext())
-      }
-      setEffect(TT, oT) {
-        let IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        IT || this.effect === TT || this.drawContext?._releaseUniformBufferSlots?.(), this.effect = TT, void 0 !== oT && (this.defines = oT), IT && this.drawContext?.reset()
-      }
-      dispose() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (this.effect) {
-          const oT = this.effect;
-          TT ? oT.dispose() : iT.c.SetImmediate((() => {
-            oT.Zc().onEndFrameObservable.addOnce((() => {
-              oT.dispose()
-            }))
-          })), this.effect = null
-        }
-        this.drawContext?.dispose()
-      }
-    }
-  },
-  38624: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => DT,
-      f: () => xT,
-      h: () => FT,
-      i: () => ST
-    });
-    var iT = IT(38626),
-      zT = IT(38631),
-      kT = IT(38617),
-      WT = IT(37660),
-      XT = IT(38647),
-      BT = IT(38635);
-
-    function FT(TT, oT) {
-      return (0, zT.A)(oT).cachedPipelines[TT]
-    }
-
-    function ST(TT) {
-      const oT = TT._name,
-        IT = TT.context;
-      if (oT && IT) {
-        const TT = (0, zT.A)(IT),
-          iT = TT.cachedPipelines[oT];
-        iT?.dispose(), delete TT.cachedPipelines[oT]
-      }
-    }
-
-    function DT(TT, oT, IT, zT, kT, WT, BT) {
-      let FT, ST;
-      const DT = (0, iT.k)() ? WT?.getHostDocument() : null;
-      FT = "string" === typeof oT ? oT : "string" === typeof oT.vertexSource ? "source:" + oT.vertexSource : "string" === typeof oT.vertexElement ? DT?.getElementById(oT.vertexElement) || oT.vertexElement : oT.vertex || oT, ST = "string" === typeof oT ? oT : "string" === typeof oT.fragmentSource ? "source:" + oT.fragmentSource : "string" === typeof oT.fragmentElement ? DT?.getElementById(oT.fragmentElement) || oT.fragmentElement : oT.fragment || oT;
-      const xT = [void 0, void 0],
-        cT = () => {
-          if (xT[0] && xT[1]) {
-            const [iT, FT] = xT;
-            (0, XT.f)(TT), (0, XT.j)(iT, TT, ((iT, ST) => {
-              BT && (BT._vertexSourceCodeBeforeMigration = ST), IT && (iT = IT("vertex", iT)), TT.isFragment = !0, (0, XT.j)(FT, TT, ((WT, FT) => {
-                BT && (BT._fragmentSourceCodeBeforeMigration = FT), IT && (WT = IT("fragment", WT));
-                const ST = (0, XT.b)(iT, WT, TT);
-                TT = null;
-                const DT = function(TT, oT, IT, iT) {
-                  if (IT) {
-                    return {
-                      vertexSourceCode: (1 === iT ? "//" : "") + "#define SHADER_NAME vertex:" + (IT.vertexElement || IT.vertex || IT.spectorName || IT) + "\n" + TT,
-                      fragmentSourceCode: (1 === iT ? "//" : "") + "#define SHADER_NAME fragment:" + (IT.fragmentElement || IT.fragment || IT.spectorName || IT) + "\n" + oT
-                    }
-                  }
-                  return {
-                    vertexSourceCode: TT,
-                    fragmentSourceCode: oT
-                  }
-                }(ST.vertexCode, ST.fragmentCode, oT, kT);
-                zT?.(DT.vertexSourceCode, DT.fragmentSourceCode)
-              }), WT)
-            }), WT)
-          }
-        };
-      LT(FT, "Vertex", "", (TT => {
-        BT && (BT._rawVertexSourceCode = TT), xT[0] = TT, cT()
-      }), kT), LT(ST, "Fragment", "Pixel", (TT => {
-        BT && (BT._rawFragmentSourceCode = TT), xT[1] = TT, cT()
-      }), kT)
-    }
-
-    function LT(TT, oT, IT, zT, WT, XT) {
-      if ("undefined" !== typeof HTMLElement && TT instanceof HTMLElement) {
-        return void zT((0, iT.d)(TT))
-      }
-      if ("source:" === TT.substring(0, 7)) return void zT(TT.substring(7));
-      if ("base64:" === TT.substring(0, 7)) {
-        return void zT(window.atob(TT.substring(7)))
-      }
-      const FT = kT.c.GetShadersStore(WT);
-      if (FT[TT + oT + "Shader"]) return void zT(FT[TT + oT + "Shader"]);
-      if (IT && FT[TT + IT + "Shader"]) return void zT(FT[TT + IT + "Shader"]);
-      let ST;
-      if (ST = "." === TT[0] || "/" === TT[0] || TT.indexOf("http") > -1 ? TT : kT.c.GetShadersRepository(WT) + TT, !(XT = XT || BT.m)) throw new Error("loadFileInjection is not defined");
-      XT(ST + "." + oT.toLowerCase() + ".fx", zT)
-    }
-    const xT = (TT, oT, IT, iT) => {
-      try {
-        const kT = TT.context ? (0, zT.A)(TT.context) : null;
-        kT && (kT.disableParallelShaderCompile = TT.disableParallelCompilation);
-        const WT = TT.existingPipelineContext || oT(TT.shaderProcessingContext);
-        return WT._name = TT.name, TT.name && kT && (kT.cachedPipelines[TT.name] = WT), IT(WT, TT.vertex, TT.fragment, !!TT.createAsRaw, "", "", TT.rebuildRebind, TT.defines, TT.transformFeedbackVaryings, "", (() => {
-          iT(WT, (() => {
-            TT.onRenderingStateCompiled?.(WT)
-          }))
-        })), WT
-      } catch (kT) {
-        throw WT.d.Error("Error compiling effect"), kT
-      }
-    }
-  },
-  38609: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => BT
-    });
-    var iT = IT(36149),
-      zT = IT(37660),
-      kT = IT(38617),
-      WT = IT(38624),
-      XT = IT(38653);
-    class BT {
-      static get ShadersRepository() {
-        return kT.c.ShadersRepository
-      }
-      static set ShadersRepository(TT) {
-        kT.c.ShadersRepository = TT
-      }
-      get IIT() {
-        return this._isDisposed
-      }
-      get onBindObservable() {
-        return this._onBindObservable || (this._onBindObservable = new iT.d), this._onBindObservable
-      }
-      get shaderLanguage() {
-        return this._shaderLanguage
-      }
-      constructor(TT, oT, IT) {
-        let zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          kT = arguments.length > 4 ? arguments[4] : void 0,
-          XT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-          FT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-          ST = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-          DT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
-          LT = arguments.length > 9 ? arguments[9] : void 0,
-          xT = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : "",
-          cT = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 0,
-          KT = arguments.length > 12 ? arguments[12] : void 0;
-        this.defines = "", this.onCompiled = null, this.onError = null, this.onBind = null, this.uniqueId = 0, this.onCompileObservable = new iT.d, this.onErrorObservable = new iT.d, this._onBindObservable = null, this._isDisposed = !1, this._refCount = 1, this._bonesComputationForcedToCPU = !1, this._uniformBuffersNames = {}, this._multiTarget = !1, this._samplers = {}, this._isReady = !1, this._compilationError = "", this._allFallbacksProcessed = !1, this._uniforms = {}, this._key = "", this._fallbacks = null, this._vertexSourceCodeOverride = "", this._fragmentSourceCodeOverride = "", this._transformFeedbackVaryings = null, this._disableParallelShaderCompilation = !1, this._pipelineContext = null, this._vertexSourceCode = "", this._fragmentSourceCode = "", this._vertexSourceCodeBeforeMigration = "", this._fragmentSourceCodeBeforeMigration = "", this._rawVertexSourceCode = "", this._rawFragmentSourceCode = "", this._processCodeAfterIncludes = void 0, this._processFinalCode = null, this._onReleaseEffectsObserver = null, this.name = TT, this._key = xT;
-        const MT = this._key.replace(/\r/g, "").replace(/\n/g, "|");
-        let rT;
-        if (oT.attributes) {
-          const TT = oT;
-          if (this._engine = IT, this._attributesNames = TT.attributes, this._uniformsNames = TT.uniformsNames.concat(TT.samplers), this._samplerList = TT.samplers.slice(), this.defines = TT.defines, this.onError = TT.onError, this.onCompiled = TT.onCompiled, this._fallbacks = TT.fallbacks, this._indexParameters = TT.indexParameters, this._transformFeedbackVaryings = TT.transformFeedbackVaryings || null, this._multiTarget = !!TT.multiTarget, this._shaderLanguage = TT.shaderLanguage ?? 0, this._disableParallelShaderCompilation = !!TT.disableParallelShaderCompilation, TT.uniformBuffersNames) {
-            this._uniformBuffersNamesList = TT.uniformBuffersNames.slice();
-            for (let oT = 0; oT < TT.uniformBuffersNames.length; oT++) this._uniformBuffersNames[TT.uniformBuffersNames[oT]] = oT
-          }
-          this._processFinalCode = TT.processFinalCode ?? null, this._processCodeAfterIncludes = TT.processCodeAfterIncludes ?? void 0, KT = TT.extraInitializationsAsync, rT = TT.existingPipelineContext
-        } else this._engine = kT, this.defines = null == XT ? "" : XT, this._uniformsNames = IT.concat(zT), this._samplerList = zT ? zT.slice() : [], this._attributesNames = oT, this._uniformBuffersNamesList = [], this._shaderLanguage = cT, this.onError = DT, this.onCompiled = ST, this._indexParameters = LT, this._fallbacks = FT;
-        "WEBGL2" === this._engine.shaderPlatformName && (rT = (0, WT.h)(MT, this._engine._gl) ?? rT), this._attributeLocationByName = {}, this.uniqueId = BT._UniqueIdSeed++, rT ? (this._pipelineContext = rT, this._pipelineContext.setEngine(this._engine), this._onRenderingStateCompiled(this._pipelineContext), this._pipelineContext.program && (this._pipelineContext.program.__SPECTOR_rebuildProgram = this._rebuildProgram.bind(this))) : this._processShaderCodeAsync(null, !1, null, KT).catch((TT => {
-          const oT = TT?.message ?? String(TT),
-            IT = new Error(`Effect async shader preparation failed for "${String(this.name)}": ${oT}`);
-          TT && "string" === typeof TT.stack && (IT.stack = `${IT.message}\nCaused by: ${TT.stack}`), this._processCompilationErrors(IT)
-        })), this._onReleaseEffectsObserver = this._engine.onReleaseEffectsObservable.addOnce((() => {
-          this._onReleaseEffectsObserver = null, this.IIT || this.dispose(!0)
-        }))
-      }
-      async _processShaderCodeAsync() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          iT = arguments.length > 3 ? arguments[3] : void 0;
-        iT && await iT(), this._processingContext = IT || this._engine._getShaderProcessingContext(this._shaderLanguage, !1);
-        const zT = {
-          defines: this.defines.split("\n"),
-          indexParameters: this._indexParameters,
-          isFragment: !1,
-          shouldUseHighPrecisionShader: this._engine._shouldUseHighPrecisionShader,
-          processor: TT ?? this._engine._getShaderProcessor(this._shaderLanguage),
-          supportsUniformBuffers: this._engine.supportsUniformBuffers,
-          shadersRepository: kT.c.GetShadersRepository(this._shaderLanguage),
-          includesShadersStore: kT.c.GetIncludesShadersStore(this._shaderLanguage),
-          version: (100 * this._engine.version).toString(),
-          platformName: this._engine.shaderPlatformName,
-          processingContext: this._processingContext,
-          isNDCHalfZRange: this._engine.isNDCHalfZRange,
-          lIT: this._engine.lIT,
-          processCodeAfterIncludes: this._processCodeAfterIncludes
-        };
-        (0, WT.e)(zT, this.name, this._processFinalCode, ((TT, IT) => {
-          this._vertexSourceCode = TT, this._fragmentSourceCode = IT, this._prepareEffect(oT)
-        }), this._shaderLanguage, this._engine, this)
-      }
-      get key() {
-        return this._key
-      }
-      isReady() {
-        try {
-          return this._isReadyInternal()
-        } catch {
-          return !1
-        }
-      }
-      _isReadyInternal() {
-        return !!this._engine.IIT || (!!this._isReady || !!this._pipelineContext && this._pipelineContext.isReady)
-      }
-      Zc() {
-        return this._engine
-      }
-      getPipelineContext() {
-        return this._pipelineContext
-      }
-      getAttributesNames() {
-        return this._attributesNames
-      }
-      getAttributeLocation(TT) {
-        return this._attributes[TT]
-      }
-      getAttributeLocationByName(TT) {
-        return this._attributeLocationByName[TT]
-      }
-      getAttributesCount() {
-        return this._attributes.length
-      }
-      getUniformIndex(TT) {
-        return this._uniformsNames.indexOf(TT)
-      }
-      getUniform(TT) {
-        return this._uniforms[TT]
-      }
-      getSamplers() {
-        return this._samplerList
-      }
-      getUniformNames() {
-        return this._uniformsNames
-      }
-      getUniformBuffersNames() {
-        return this._uniformBuffersNamesList
-      }
-      getIndexParameters() {
-        return this._indexParameters
-      }
-      getCompilationError() {
-        return this._compilationError
-      }
-      allFallbacksProcessed() {
-        return this._allFallbacksProcessed
-      }
-      async whenCompiledAsync() {
-        return await new Promise((TT => {
-          this.executeWhenCompiled(TT)
-        }))
-      }
-      executeWhenCompiled(TT) {
-        this.isReady() ? TT(this) : (this.onCompileObservable.add((oT => {
-          TT(oT)
-        })), this._pipelineContext && !this._pipelineContext.isAsync || this._checkIsReady(null))
-      }
-      _checkIsReady(TT) {
-        (0, XT.e)((() => this._isReadyInternal() || this._isDisposed), (() => {}), (oT => {
-          this._processCompilationErrors(oT, TT)
-        }), 16, 12e4, !0, ` - Effect: ${"string"===typeof this.name?this.name:this.key}`)
-      }
-      get vertexSourceCode() {
-        return this._vertexSourceCodeOverride && this._fragmentSourceCodeOverride ? this._vertexSourceCodeOverride : this._pipelineContext?._getVertexShaderCode() ?? this._vertexSourceCode
-      }
-      get fragmentSourceCode() {
-        return this._vertexSourceCodeOverride && this._fragmentSourceCodeOverride ? this._fragmentSourceCodeOverride : this._pipelineContext?._getFragmentShaderCode() ?? this._fragmentSourceCode
-      }
-      get vertexSourceCodeBeforeMigration() {
-        return this._vertexSourceCodeBeforeMigration
-      }
-      get fragmentSourceCodeBeforeMigration() {
-        return this._fragmentSourceCodeBeforeMigration
-      }
-      get rawVertexSourceCode() {
-        return this._rawVertexSourceCode
-      }
-      get rawFragmentSourceCode() {
-        return this._rawFragmentSourceCode
-      }
-      getPipelineGenerationOptions() {
-        return {
-          platformName: this._engine.shaderPlatformName,
-          shaderLanguage: this._shaderLanguage,
-          shaderNameOrContent: this.name,
-          key: this._key,
-          defines: this.defines.split("\n"),
-          addGlobalDefines: !1,
-          extendedProcessingOptions: {
-            indexParameters: this._indexParameters,
-            isNDCHalfZRange: this._engine.isNDCHalfZRange,
-            lIT: this._engine.lIT,
-            supportsUniformBuffers: this._engine.supportsUniformBuffers
-          },
-          extendedCreatePipelineOptions: {
-            transformFeedbackVaryings: this._transformFeedbackVaryings,
-            createAsRaw: !(!this._vertexSourceCodeOverride || !this._fragmentSourceCodeOverride)
-          }
-        }
-      }
-      _rebuildProgram(TT, oT, IT, iT) {
-        this._isReady = !1, this._vertexSourceCodeOverride = TT, this._fragmentSourceCodeOverride = oT, this.onError = (TT, oT) => {
-          iT && iT(oT)
-        }, this.onCompiled = () => {
-          const TT = this.Zc().scenes;
-          if (TT)
-            for (let oT = 0; oT < TT.length; oT++) TT[oT].markAllMaterialsAsDirty(127);
-          this._pipelineContext._handlesSpectorRebuildCallback?.(IT)
-        }, this._fallbacks = null, this._prepareEffect()
-      }
-      _onRenderingStateCompiled(TT) {
-        if (this._pipelineContext = TT, this._pipelineContext.setEngine(this._engine), this._attributes = [], this._pipelineContext._fillEffectInformation(this, this._uniformBuffersNames, this._uniformsNames, this._uniforms, this._samplerList, this._samplers, this._attributesNames, this._attributes), this._attributesNames)
-          for (let oT = 0; oT < this._attributesNames.length; oT++) {
-            const TT = this._attributesNames[oT];
-            this._attributeLocationByName[TT] = this._attributes[oT]
-          }
-        this._engine.bindSamplers(this), this._compilationError = "", this._isReady = !0, this.onCompiled && this.onCompiled(this), this.onCompileObservable.notifyObservers(this), this.onCompileObservable.clear(), this._fallbacks && this._fallbacks.unBindMesh(), BT.AutomaticallyClearCodeCache && this.clearCodeCache()
-      }
-      _prepareEffect() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const oT = this._pipelineContext;
-        this._isReady = !1;
-        try {
-          const IT = !(!this._vertexSourceCodeOverride || !this._fragmentSourceCodeOverride),
-            iT = IT ? null : this.defines,
-            zT = IT ? this._vertexSourceCodeOverride : this._vertexSourceCode,
-            kT = IT ? this._fragmentSourceCodeOverride : this._fragmentSourceCode,
-            XT = this._engine;
-          this._pipelineContext = (0, WT.f)({
-            existingPipelineContext: TT ? oT : null,
-            vertex: zT,
-            fragment: kT,
-            context: "WEBGL2" === XT.shaderPlatformName || "WEBGL1" === XT.shaderPlatformName ? XT._gl : void 0,
-            rebuildRebind: (TT, oT, IT, iT) => this._rebuildProgram(TT, oT, IT, iT),
-            defines: iT,
-            transformFeedbackVaryings: this._transformFeedbackVaryings,
-            name: this._key.replace(/\r/g, "").replace(/\n/g, "|"),
-            createAsRaw: IT,
-            disableParallelCompilation: this._disableParallelShaderCompilation,
-            shaderProcessingContext: this._processingContext,
-            onRenderingStateCompiled: IT => {
-              oT && !TT && this._engine._deletePipelineContext(oT), IT && this._onRenderingStateCompiled(IT)
-            }
-          }, this._engine.createPipelineContext.bind(this._engine), this._engine._preparePipelineContextAsync.bind(this._engine), this._engine._executeWhenRenderingStateIsCompiled.bind(this._engine)), this._pipelineContext.isAsync && this._checkIsReady(oT)
-        } catch (IT) {
-          this._processCompilationErrors(IT, oT)
-        }
-      }
-      _getShaderCodeAndErrorLine(TT, oT, IT) {
-        const iT = IT ? /FRAGMENT SHADER ERROR: 0:(\d+?):/ : /VERTEX SHADER ERROR: 0:(\d+?):/;
-        let zT = null;
-        if (oT && TT) {
-          const kT = oT.match(iT);
-          if (kT && 2 === kT.length) {
-            const oT = parseInt(kT[1]),
-              iT = TT.split("\n", -1);
-            iT.length >= oT && (zT = `Offending line [${oT}] in ${IT?"fragment":"vertex"} code: ${iT[oT-1]}`)
-          }
-        }
-        return [TT, zT]
-      }
-      _processCompilationErrors(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this._compilationError = "string" === typeof TT?.stack ? TT.stack : TT?.message ?? String(TT);
-        const IT = this._attributesNames,
-          iT = this._fallbacks;
-        if (zT.d.Error("Unable to compile effect:"), zT.d.Error(`Uniforms: ${this._uniformsNames.join(" ")}`), zT.d.Error(`Attributes: ${IT.join(" ")}`), zT.d.Error("Defines:\n" + this.defines), BT.LogShaderCodeOnCompilationError) {
-          let TT, oT = null,
-            IT = null;
-          this._pipelineContext?._getVertexShaderCode() && ([TT, oT] = this._getShaderCodeAndErrorLine(this._pipelineContext._getVertexShaderCode(), this._compilationError, !1), TT && (zT.d.Error("Vertex code:"), zT.d.Error(TT))), this._pipelineContext?._getFragmentShaderCode() && ([TT, IT] = this._getShaderCodeAndErrorLine(this._pipelineContext?._getFragmentShaderCode(), this._compilationError, !0), TT && (zT.d.Error("Fragment code:"), zT.d.Error(TT))), oT && zT.d.Error(oT), IT && zT.d.Error(IT)
-        }
-        zT.d.Error("Error: " + this._compilationError);
-        const kT = () => {
-          this.onError && this.onError(this, this._compilationError), this.onErrorObservable.notifyObservers(this), this._engine.onEffectErrorObservable.notifyObservers({
-            effect: this,
-            errors: this._compilationError
-          })
-        };
-        oT && (this._pipelineContext = oT, this._isReady = !0, kT()), iT ? (this._pipelineContext = null, iT.hasMoreFallbacks ? (this._allFallbacksProcessed = !1, zT.d.Error("Trying next fallback."), this.defines = iT.reduce(this.defines, this), this._prepareEffect()) : (this._allFallbacksProcessed = !0, kT(), this.onErrorObservable.clear(), this._fallbacks && this._fallbacks.unBindMesh())) : (this._allFallbacksProcessed = !0, oT || kT())
-      }
-      get isSupported() {
-        return "" === this._compilationError
-      }
-      _bindTexture(TT, oT) {
-        this._engine._bindTexture(this._samplers[TT], oT, TT)
-      }
-      setTexture(TT, oT) {
-        this._engine.setTexture(this._samplers[TT], this._uniforms[TT], oT, TT)
-      }
-      setTextureArray(TT, oT) {
-        const IT = TT + "Ex";
-        if (-1 === this._samplerList.indexOf(IT + "0")) {
-          const iT = this._samplerList.indexOf(TT);
-          for (let TT = 1; TT < oT.length; TT++) {
-            const oT = IT + (TT - 1).toString();
-            this._samplerList.splice(iT + TT, 0, oT)
-          }
-          let zT = 0;
-          for (const TT of this._samplerList) this._samplers[TT] = zT, zT += 1
-        }
-        this._engine.setTextureArray(this._samplers[TT], this._uniforms[TT], oT, TT)
-      }
-      bindUniformBuffer(TT, oT) {
-        const IT = this._uniformBuffersNames[oT];
-        void 0 === IT || BT._BaseCache[IT] === TT && this._engine._features.useUBOBindingCache || (BT._BaseCache[IT] = TT, this._engine.bindUniformBufferBase(TT, IT, oT))
-      }
-      bindUniformBlock(TT, oT) {
-        this._engine.bindUniformBlock(this._pipelineContext, TT, oT)
-      }
-      setInt(TT, oT) {
-        return this._pipelineContext.setInt(TT, oT), this
-      }
-      setInt2(TT, oT, IT) {
-        return this._pipelineContext.setInt2(TT, oT, IT), this
-      }
-      setInt3(TT, oT, IT, iT) {
-        return this._pipelineContext.setInt3(TT, oT, IT, iT), this
-      }
-      setInt4(TT, oT, IT, iT, zT) {
-        return this._pipelineContext.setInt4(TT, oT, IT, iT, zT), this
-      }
-      setIntArray(TT, oT) {
-        return this._pipelineContext.setIntArray(TT, oT), this
-      }
-      setIntArray2(TT, oT) {
-        return this._pipelineContext.setIntArray2(TT, oT), this
-      }
-      setIntArray3(TT, oT) {
-        return this._pipelineContext.setIntArray3(TT, oT), this
-      }
-      setIntArray4(TT, oT) {
-        return this._pipelineContext.setIntArray4(TT, oT), this
-      }
-      setUInt(TT, oT) {
-        return this._pipelineContext.setUInt(TT, oT), this
-      }
-      setUInt2(TT, oT, IT) {
-        return this._pipelineContext.setUInt2(TT, oT, IT), this
-      }
-      setUInt3(TT, oT, IT, iT) {
-        return this._pipelineContext.setUInt3(TT, oT, IT, iT), this
-      }
-      setUInt4(TT, oT, IT, iT, zT) {
-        return this._pipelineContext.setUInt4(TT, oT, IT, iT, zT), this
-      }
-      setUIntArray(TT, oT) {
-        return this._pipelineContext.setUIntArray(TT, oT), this
-      }
-      setUIntArray2(TT, oT) {
-        return this._pipelineContext.setUIntArray2(TT, oT), this
-      }
-      setUIntArray3(TT, oT) {
-        return this._pipelineContext.setUIntArray3(TT, oT), this
-      }
-      setUIntArray4(TT, oT) {
-        return this._pipelineContext.setUIntArray4(TT, oT), this
-      }
-      setFloatArray(TT, oT) {
-        return this._pipelineContext.setArray(TT, oT), this
-      }
-      setFloatArray2(TT, oT) {
-        return this._pipelineContext.setArray2(TT, oT), this
-      }
-      setFloatArray3(TT, oT) {
-        return this._pipelineContext.setArray3(TT, oT), this
-      }
-      setFloatArray4(TT, oT) {
-        return this._pipelineContext.setArray4(TT, oT), this
-      }
-      setArray(TT, oT) {
-        return this._pipelineContext.setArray(TT, oT), this
-      }
-      setArray2(TT, oT) {
-        return this._pipelineContext.setArray2(TT, oT), this
-      }
-      setArray3(TT, oT) {
-        return this._pipelineContext.setArray3(TT, oT), this
-      }
-      setArray4(TT, oT) {
-        return this._pipelineContext.setArray4(TT, oT), this
-      }
-      setMatrices(TT, oT) {
-        return this._pipelineContext.setMatrices(TT, oT), this
-      }
-      setMatrix(TT, oT) {
-        return this._pipelineContext.setMatrix(TT, oT), this
-      }
-      setMatrix3x3(TT, oT) {
-        return this._pipelineContext.setMatrix3x3(TT, oT), this
-      }
-      setMatrix2x2(TT, oT) {
-        return this._pipelineContext.setMatrix2x2(TT, oT), this
-      }
-      setFloat(TT, oT) {
-        return this._pipelineContext.setFloat(TT, oT), this
-      }
-      setBool(TT, oT) {
-        return this._pipelineContext.setInt(TT, oT ? 1 : 0), this
-      }
-      setVector2(TT, oT) {
-        return this._pipelineContext.setVector2(TT, oT), this
-      }
-      setFloat2(TT, oT, IT) {
-        return this._pipelineContext.setFloat2(TT, oT, IT), this
-      }
-      setVector3(TT, oT) {
-        return this._pipelineContext.setVector3(TT, oT), this
-      }
-      setFloat3(TT, oT, IT, iT) {
-        return this._pipelineContext.setFloat3(TT, oT, IT, iT), this
-      }
-      setVector4(TT, oT) {
-        return this._pipelineContext.setVector4(TT, oT), this
-      }
-      setQuaternion(TT, oT) {
-        return this._pipelineContext.setQuaternion(TT, oT), this
-      }
-      setFloat4(TT, oT, IT, iT, zT) {
-        return this._pipelineContext.setFloat4(TT, oT, IT, iT, zT), this
-      }
-      setColor3(TT, oT) {
-        return this._pipelineContext.setColor3(TT, oT), this
-      }
-      setColor4(TT, oT, IT) {
-        return this._pipelineContext.setColor4(TT, oT, IT), this
-      }
-      setDirectColor4(TT, oT) {
-        return this._pipelineContext.setDirectColor4(TT, oT), this
-      }
-      clearCodeCache() {
-        this._vertexSourceCode = "", this._fragmentSourceCode = "", this._fragmentSourceCodeBeforeMigration = "", this._vertexSourceCodeBeforeMigration = ""
-      }
-      dispose() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) this._refCount = 0;
-        else {
-          if (BT.PersistentMode) return;
-          this._refCount--
-        }
-        this._refCount > 0 || this._isDisposed || (this._onReleaseEffectsObserver && (this._engine.onReleaseEffectsObservable.remove(this._onReleaseEffectsObserver), this._onReleaseEffectsObserver = null), this._pipelineContext && (0, WT.i)(this._pipelineContext), this._engine._releaseEffect(this), this.clearCodeCache(), this._isDisposed = !0)
-      }
-      static RegisterShader(TT, oT, IT) {
-        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        oT && (kT.c.GetShadersStore(iT)[`${TT}PixelShader`] = oT), IT && (kT.c.GetShadersStore(iT)[`${TT}VertexShader`] = IT)
-      }
-      static ResetCache() {
-        BT._BaseCache = {}
-      }
-    }
-    BT.LogShaderCodeOnCompilationError = !0, BT.PersistentMode = !1, BT.AutomaticallyClearCodeCache = !1, BT._UniqueIdSeed = 0, BT._BaseCache = {}, BT.ShadersStore = kT.c.ShadersStore, BT.IncludesShadersStore = kT.c.IncludesShadersStore
-  },
-  38936: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => ST,
-      e: () => eT,
-      i: () => mT
-    });
-    var iT = IT(38609),
-      zT = IT(36118),
-      kT = IT(36159),
-      WT = IT(38911);
-    const XT = new zT.b,
-      BT = new zT.b,
-      FT = new zT.b,
-      ST = {
-        pC: () => {},
-        eyeAtCamera: !0
-      };
-
-    function DT(TT, oT, IT) {
-      const iT = IT.bIT(),
-        zT = oT.bIT();
-      for (let kT = 0; kT < 16; kT++) iT[kT] = zT[kT];
-      return iT[12] -= TT.x, iT[13] -= TT.y, iT[14] -= TT.z, IT.markAsUpdated(), IT
-    }
-
-    function LT(TT, oT, IT) {
-      return (0, kT.i)(oT, BT), DT(TT, BT, FT), (0, kT.i)(FT, IT), IT
-    }
-
-    function xT(TT, oT, IT) {
-      if (!ST.eyeAtCamera) return LT(TT, oT, IT);
-      const iT = IT.bIT(),
-        zT = oT.bIT();
-      for (let kT = 0; kT < 16; kT++) iT[kT] = zT[kT];
-      return iT[12] = 0, iT[13] = 0, iT[14] = 0, IT.markAsUpdated(), IT
-    }
-
-    function cT(TT, oT, IT, iT) {
-      return (0, kT.p)(xT(TT, oT, iT), IT, iT), iT
-    }
-
-    function KT(TT, oT, IT, iT) {
-      return (0, kT.i)(IT, BT), (0, kT.p)(oT, BT, FT), DT(TT, FT, BT), xT(TT, IT, FT), (0, kT.p)(BT, FT, iT), iT
-    }
-
-    function MT(TT, oT, IT, iT, zT, WT) {
-      return (0, kT.i)(IT, BT), (0, kT.p)(oT, BT, FT), DT(TT, FT, BT), cT(TT, iT, zT, FT), (0, kT.p)(BT, FT, WT), WT
-    }
-
-    function rT(TT, oT) {
-      const IT = ST.pC();
-      if (!IT || XT === oT) return oT;
-      XT.updateFlag = oT.updateFlag;
-      const iT = IT.floatingOriginOffset;
-      switch (TT) {
-        case "world":
-          return DT(iT, oT, XT);
-        case "view":
-          return xT(iT, oT, XT);
-        case "worldView":
-          return KT(iT, oT, IT.getViewMatrix(), XT);
-        case "viewProjection":
-          return cT(iT, IT.getViewMatrix(), IT.getProjectionMatrix(), XT);
-        case "worldViewProjection":
-          return MT(iT, oT, IT.getTransformMatrix(), IT.getViewMatrix(), IT.getProjectionMatrix(), XT);
-        default:
-          if (TT.startsWith("u_")) {
-            const zT = TT.toLowerCase();
-            if (zT.startsWith("u_worldviewprojection")) return MT(iT, oT, IT.getTransformMatrix(), IT.getViewMatrix(), IT.getProjectionMatrix(), XT);
-            if (zT.startsWith("u_viewprojection")) return cT(iT, IT.getViewMatrix(), IT.getProjectionMatrix(), XT);
-            if (zT.startsWith("u_worldview")) return KT(iT, oT, IT.getViewMatrix(), XT);
-            if (zT.startsWith("u_world")) return DT(iT, oT, XT);
-            if (zT.startsWith("u_view")) return xT(iT, oT, XT)
-          }
-          return oT
-      }
-    }
-    const AT = WT.e,
-      gT = iT.c,
-      hT = AT.prototype._updateMatrixForUniform,
-      wT = iT.c.prototype.setMatrix;
-
-    function mT() {
-      iT.c.prototype.setMatrix = wT, gT._setMatrixOverride = void 0, AT.prototype._updateMatrixForUniform = hT, AT.prototype._updateMatrixForUniformOverride = void 0
-    }
-
-    function eT() {
-      gT.prototype._setMatrixOverride = wT, gT.prototype.setMatrix = function(TT, oT) {
-        return this._setMatrixOverride(TT, rT(TT, oT)), this
-      }, AT.prototype._updateMatrixForUniformOverride = hT, AT.prototype._updateMatrixForUniform = function(TT, oT) {
-        this._updateMatrixForUniformOverride(TT, rT(TT, oT))
-      }
-    }
-  },
-  38906: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => kT,
-      e: () => zT
-    });
-    var iT = IT(38902);
-
-    function zT(TT, oT) {
-      oT.WHITEBALANCE && TT.push("whiteBalanceMatrix"), oT.EXPOSURE && TT.push("exposureLinear"), oT.CONTRAST && TT.push("contrast"), oT.COLORGRADING && TT.push("colorTransformSettings"), (oT.VIGNETTE || oT.DITHER) && TT.push("vInverseScreenSize"), oT.VIGNETTE && (TT.push("vignetteSettings1"), TT.push("vignetteSettings2")), oT.COLORCURVES && (0, iT.e)(TT), oT.DITHER && TT.push("ditherIntensity")
-    }
-
-    function kT(TT, oT) {
-      oT.COLORGRADING && TT.push("txColorTransform")
-    }
-  },
-  38899: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => fT,
-      e: () => JT
-    });
-    var iT = IT(38764),
-      zT = IT(38773),
-      kT = IT(36149),
-      WT = IT(36177),
-      XT = IT(36156),
-      BT = IT(36118);
-    const FT = [
-        [0, .18006, .26352, -.24341],
-        [10, .18066, .26589, -.25479],
-        [20, .18133, .26846, -.26876],
-        [30, .18208, .27119, -.28539],
-        [40, .18293, .27407, -.3047],
-        [50, .18388, .27709, -.32675],
-        [60, .18494, .28021, -.35156],
-        [70, .18611, .28342, -.37915],
-        [80, .1874, .28668, -.40955],
-        [90, .1888, .28997, -.44278],
-        [100, .19032, .29326, -.47888],
-        [125, .19462, .30141, -.58204],
-        [150, .19962, .30921, -.70471],
-        [175, .20525, .31647, -.84901],
-        [200, .21142, .32312, -1.0182],
-        [225, .21807, .32909, -1.2168],
-        [250, .22511, .33439, -1.4512],
-        [275, .23247, .33904, -1.7298],
-        [300, .2401, .34308, -2.0637],
-        [325, .24792, .34655, -2.4681],
-        [350, .25591, .34951, -2.9641],
-        [375, .264, .352, -3.5814],
-        [400, .27218, .35407, -4.3633],
-        [425, .28039, .35577, -5.3762],
-        [450, .28863, .35714, -6.7262],
-        [475, .29685, .35823, -8.5955],
-        [500, .30505, .35907, -11.324],
-        [525, .3132, .35968, -15.628],
-        [550, .32129, .36011, -23.325],
-        [575, .32931, .36038, -40.77],
-        [600, .33724, .36051, -116.45]
-      ],
-      ST = 1e6 / FT[FT.length - 1][0],
-      DT = 150;
-
-    function LT(TT, oT) {
-      const IT = Number.isNaN(TT) ? ST : Math.max(TT, ST),
-        iT = (0, XT.Clamp)(1e6 / IT, FT[0][0], FT[FT.length - 1][0]);
-      let zT = 0,
-        kT = FT.length - 1;
-      for (; kT - zT > 1;) {
-        const TT = zT + kT >> 1;
-        FT[TT][0] <= iT ? zT = TT : kT = TT
-      }
-      const WT = zT,
-        [LT, xT, cT, KT] = FT[WT],
-        [MT, rT, AT, gT] = FT[WT + 1],
-        hT = (iT - LT) / (MT - LT),
-        wT = BT.j.Lerp(new BT.j(xT, cT), new BT.j(rT, AT), hT),
-        mT = BT.j.Normalize(new BT.j(1, KT)),
-        eT = BT.j.Normalize(new BT.j(1, gT)),
-        RT = BT.j.Normalize(BT.j.Lerp(mT, eT, hT)),
-        uT = (0, XT.Clamp)(oT, -150, DT);
-      wT.SiT(RT.scale(uT / 3e3));
-      const vT = 2 * wT.x - 8 * wT.y + 4,
-        ET = 3 * wT.x / vT,
-        fT = 2 * wT.y / vT;
-      return new BT.m(ET / fT, 1, (1 - ET - fT) / fT)
-    }
-    const xT = BT.b.FromArray([.8951, -.7502, .0389, 0, .2664, 1.7135, -.0685, 0, -.1614, .0367, 1.0296, 0, 0, 0, 0, 1]),
-      cT = BT.b.Invert(xT);
-
-    function KT(TT, oT) {
-      const IT = oT > 0 ? TT / oT : 10;
-      return (0, XT.Clamp)(IT, .1, 10)
-    }
-
-    function MT(TT, oT) {
-      const IT = BT.m.TransformNormal(TT, xT),
-        iT = BT.m.TransformNormal(oT, xT),
-        zT = BT.b.FromArray([KT(iT.x, IT.x), 0, 0, 0, 0, KT(iT.y, IT.y), 0, 0, 0, 0, KT(iT.z, IT.z), 0, 0, 0, 0, 1]);
-      return xT.multiply(zT).multiply(cT)
-    }
-    const rT = new BT.m(.95047, 1, 1.08883),
-      AT = BT.b.FromArray([.4124564, .2126729, .0193339, 0, .3575761, .7151522, .119192, 0, .1804375, .072175, .9503041, 0, 0, 0, 0, 1]).multiply(MT(rT, LT(6500, 0))),
-      gT = BT.b.Invert(AT),
-      hT = BT.m.TransformNormal(new BT.m(1, 1, 1), AT);
-    var wT = IT(38799),
-      mT = IT(38902);
-    let eT = (() => {
-      var TT;
-      let oT, IT, kT, XT, BT, FT, ST, DT, LT, xT, cT, KT, MT = [],
-        rT = [],
-        AT = [],
-        gT = [],
-        hT = [],
-        eT = [],
-        RT = [],
-        uT = [],
-        vT = [],
-        ET = [],
-        fT = [],
-        CT = [],
-        jT = [],
-        JT = [],
-        UT = [],
-        aT = [],
-        YT = [],
-        QT = [],
-        OT = [],
-        HT = [],
-        nT = [],
-        qT = [],
-        ZT = [],
-        lT = [];
-      return TT = class {
-        constructor() {
-          this._dirty = !0, this._tempColor = new WT.i(0, 0, 0, 0), this._globalCurve = new WT.i(0, 0, 0, 0), this._highlightsCurve = new WT.i(0, 0, 0, 0), this._midtonesCurve = new WT.i(0, 0, 0, 0), this._shadowsCurve = new WT.i(0, 0, 0, 0), this._positiveCurve = new WT.i(0, 0, 0, 0), this._negativeCurve = new WT.i(0, 0, 0, 0), this._globalHue = (0, iT.j)(this, MT, 30), this._globalDensity = ((0, iT.j)(this, rT), (0, iT.j)(this, AT, 0)), this._globalSaturation = ((0, iT.j)(this, gT), (0, iT.j)(this, hT, 0)), this._globalExposure = ((0, iT.j)(this, eT), (0, iT.j)(this, RT, 0)), this._highlightsHue = ((0, iT.j)(this, uT), (0, iT.j)(this, vT, 30)), this._highlightsDensity = ((0, iT.j)(this, ET), (0, iT.j)(this, fT, 0)), this._highlightsSaturation = ((0, iT.j)(this, CT), (0, iT.j)(this, jT, 0)), this._highlightsExposure = ((0, iT.j)(this, JT), (0, iT.j)(this, UT, 0)), this._midtonesHue = ((0, iT.j)(this, aT), (0, iT.j)(this, YT, 30)), this._midtonesDensity = ((0, iT.j)(this, QT), (0, iT.j)(this, OT, 0)), this._midtonesSaturation = ((0, iT.j)(this, HT), (0, iT.j)(this, nT, 0)), this._midtonesExposure = ((0, iT.j)(this, qT), (0, iT.j)(this, ZT, 0)), this._shadowsHue = ((0, iT.j)(this, lT), 30), this._shadowsDensity = 0, this._shadowsSaturation = 0, this._shadowsExposure = 0
-        }
-        get globalHue() {
-          return this._globalHue
-        }
-        set globalHue(TT) {
-          this._globalHue = TT, this._dirty = !0
-        }
-        get globalDensity() {
-          return this._globalDensity
-        }
-        set globalDensity(TT) {
-          this._globalDensity = TT, this._dirty = !0
-        }
-        get globalSaturation() {
-          return this._globalSaturation
-        }
-        set globalSaturation(TT) {
-          this._globalSaturation = TT, this._dirty = !0
-        }
-        get globalExposure() {
-          return this._globalExposure
-        }
-        set globalExposure(TT) {
-          this._globalExposure = TT, this._dirty = !0
-        }
-        get highlightsHue() {
-          return this._highlightsHue
-        }
-        set highlightsHue(TT) {
-          this._highlightsHue = TT, this._dirty = !0
-        }
-        get highlightsDensity() {
-          return this._highlightsDensity
-        }
-        set highlightsDensity(TT) {
-          this._highlightsDensity = TT, this._dirty = !0
-        }
-        get highlightsSaturation() {
-          return this._highlightsSaturation
-        }
-        set highlightsSaturation(TT) {
-          this._highlightsSaturation = TT, this._dirty = !0
-        }
-        get highlightsExposure() {
-          return this._highlightsExposure
-        }
-        set highlightsExposure(TT) {
-          this._highlightsExposure = TT, this._dirty = !0
-        }
-        get midtonesHue() {
-          return this._midtonesHue
-        }
-        set midtonesHue(TT) {
-          this._midtonesHue = TT, this._dirty = !0
-        }
-        get midtonesDensity() {
-          return this._midtonesDensity
-        }
-        set midtonesDensity(TT) {
-          this._midtonesDensity = TT, this._dirty = !0
-        }
-        get midtonesSaturation() {
-          return this._midtonesSaturation
-        }
-        set midtonesSaturation(TT) {
-          this._midtonesSaturation = TT, this._dirty = !0
-        }
-        get midtonesExposure() {
-          return this._midtonesExposure
-        }
-        set midtonesExposure(TT) {
-          this._midtonesExposure = TT, this._dirty = !0
-        }
-        get shadowsHue() {
-          return this._shadowsHue
-        }
-        set shadowsHue(TT) {
-          this._shadowsHue = TT, this._dirty = !0
-        }
-        get shadowsDensity() {
-          return this._shadowsDensity
-        }
-        set shadowsDensity(TT) {
-          this._shadowsDensity = TT, this._dirty = !0
-        }
-        get shadowsSaturation() {
-          return this._shadowsSaturation
-        }
-        set shadowsSaturation(TT) {
-          this._shadowsSaturation = TT, this._dirty = !0
-        }
-        get shadowsExposure() {
-          return this._shadowsExposure
-        }
-        set shadowsExposure(TT) {
-          this._shadowsExposure = TT, this._dirty = !0
+        restoreState() {
+          return !!this._restoreStateValues() && (this.onRestoreStateObservable.notifyObservers(this), !0)
         }
         getClassName() {
-          return "ColorCurves"
+          return "JK"
         }
-        _getColorGradingDataToRef(oT, IT, iT, zT, kT) {
-          null != oT && (oT = TT._Clamp(oT, 0, 360), IT = TT._Clamp(IT, -100, 100), iT = TT._Clamp(iT, -100, 100), zT = TT._Clamp(zT, -100, 100), IT = TT._ApplyColorGradingSliderNonlinear(IT), IT *= .5, zT = TT._ApplyColorGradingSliderNonlinear(zT), IT < 0 && (IT *= -1, oT = (oT + 180) % 360), TT._FromHSBToRef(oT, IT, 50 + .25 * zT, kT), kT.scaleToRef(2, kT), kT.a = 1 + .01 * iT)
+        toString(zz) {
+          let uz = "Name: " + this.name;
+          if (uz += ", type: " + this.getClassName(), this.animations)
+            for (let bz = 0; bz < this.animations.length; bz++) uz += ", animation[0]: " + this.animations[bz].toString(zz);
+          return uz
         }
-        static _ApplyColorGradingSliderNonlinear(TT) {
-          TT /= 100;
-          let oT = Math.abs(TT);
-          return oT = Math.pow(oT, 2), TT < 0 && (oT *= -1), oT *= 100, oT
+        applyVerticalCorrection() {
+          const zz = this.absoluteRotation.toEulerAngles();
+          this.projectionPlaneTilt = this._scene.useRightHandedSystem ? -zz.x : zz.x
         }
-        static _FromHSBToRef(oT, IT, iT, zT) {
-          let kT = TT._Clamp(oT, 0, 360);
-          const WT = TT._Clamp(IT / 100, 0, 1),
-            XT = TT._Clamp(iT / 100, 0, 1);
-          if (0 === WT) zT.r = XT, zT.g = XT, zT.b = XT;
+        get globalPosition() {
+          return this._globalPosition
+        }
+        getActiveMeshes() {
+          return this._activeMeshes
+        }
+        isActiveMesh(zz) {
+          return -1 !== this._activeMeshes.indexOf(zz)
+        }
+        isReady() {
+          let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (zz)
+            for (const uz of this._postProcesses)
+              if (uz && !uz.isReady()) return !1;
+          return super.isReady(zz)
+        }
+        _initCache() {
+          super._initCache(), this._cache.position = new Mz.n(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.upVector = new Mz.n(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.mode = void 0, this._cache.minZ = void 0, this._cache.maxZ = void 0, this._cache.fov = void 0, this._cache.fovMode = void 0, this._cache.aspectRatio = void 0, this._cache.orthoLeft = void 0, this._cache.orthoRight = void 0, this._cache.orthoBottom = void 0, this._cache.orthoTop = void 0, this._cache.obliqueAngle = void 0, this._cache.obliqueLength = void 0, this._cache.obliqueOffset = void 0, this._cache.renderWidth = void 0, this._cache.renderHeight = void 0
+        }
+        _updateCache(zz) {
+          zz || super._updateCache(), this._cache.position.euz(this.position), this._cache.upVector.euz(this.upVector)
+        }
+        _isSynchronized() {
+          return this._isSynchronizedViewMatrix() && this._isSynchronizedProjectionMatrix()
+        }
+        _isSynchronizedViewMatrix() {
+          return !!super._isSynchronized() && (this._cache.position.equals(this.position) && this._cache.upVector.equals(this.upVector) && this.isSynchronizedWithParent())
+        }
+        _isSynchronizedProjectionMatrix() {
+          const uz = this.ignoreCameraMaxZ ? 0 : this.maxZ;
+          let bz = this._cache.mode === this.mode && this._cache.minZ === this.minZ && this._cache.maxZ === uz;
+          if (!bz) return !1;
+          const Ez = this.uR();
+          return this.mode === zz.PERSPECTIVE_CAMERA ? bz = this._cache.fov === this.fov && this._cache.fovMode === this.fovMode && this._cache.aspectRatio === Ez.getAspectRatio(this) && this._cache.projectionPlaneTilt === this.projectionPlaneTilt : (bz = this._cache.orthoLeft === this.orthoLeft && this._cache.orthoRight === this.orthoRight && this._cache.orthoBottom === this.orthoBottom && this._cache.orthoTop === this.orthoTop && this._cache.renderWidth === Ez.getRenderWidth() && this._cache.renderHeight === Ez.getRenderHeight(), this.oblique && (bz = bz && this._cache.obliqueAngle === this.oblique.angle && this._cache.obliqueLength === this.oblique.length && this._cache.obliqueOffset === this.oblique.offset)), bz
+        }
+        attachControl(zz, uz) {}
+        detachControl(zz) {}
+        update() {
+          this._hasMoved = !1, this._checkInputs(), this.cameraRigMode !== zz.RIG_MODE_NONE && this._updateRigCameras(), this.getViewMatrix(), this.getProjectionMatrix()
+        }
+        _checkInputs() {
+          this.onAfterCheckInputsObservable.notifyObservers(this)
+        }
+        get rigCameras() {
+          return this._rigCameras
+        }
+        get rigPostProcess() {
+          return this._rigPostProcess
+        }
+        _getFirstPostProcess() {
+          for (let zz = 0; zz < this._postProcesses.length; zz++)
+            if (null !== this._postProcesses[zz]) return this._postProcesses[zz];
+          return null
+        }
+        _cascadePostProcessesToRigCams() {
+          const zz = this._getFirstPostProcess();
+          zz && zz.markTextureDirty();
+          for (let uz = 0, bz = this._rigCameras.length; uz < bz; uz++) {
+            const zz = this._rigCameras[uz],
+              bz = zz._rigPostProcess;
+            if (bz) {
+              "pass" === bz.getEffectName() && (zz.isIntermediate = 0 === this._postProcesses.length), zz._postProcesses = this._postProcesses.slice(0).concat(bz), bz.markTextureDirty()
+            } else zz._postProcesses = this._postProcesses.slice(0)
+          }
+        }
+        attachPostProcess(zz) {
+          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          return !zz.isReusable() && this._postProcesses.indexOf(zz) > -1 ? (Hz.e.Error("You're trying to reuse a post process not defined as reusable."), 0) : (null == uz || uz < 0 ? this._postProcesses.push(zz) : null === this._postProcesses[uz] ? this._postProcesses[uz] = zz : this._postProcesses.splice(uz, 0, zz), this._cascadePostProcessesToRigCams(), this._scene.prePassRenderer && this._scene.prePassRenderer.zuz(), this._postProcesses.indexOf(zz))
+        }
+        detachPostProcess(zz) {
+          const uz = this._postProcesses.indexOf(zz); - 1 !== uz && (this._postProcesses[uz] = null), this._scene.prePassRenderer && this._scene.prePassRenderer.zuz(), this._cascadePostProcessesToRigCams()
+        }
+        getWorldMatrix() {
+          return this._isSynchronizedViewMatrix() || this.getViewMatrix(), this._worldMatrix
+        }
+        _getViewMatrix() {
+          return Mz.d.Identity()
+        }
+        getViewMatrix(zz) {
+          return !zz && this._isSynchronizedViewMatrix() || (this._hasMoved = !0, this.updateCache(), this._computedViewMatrix = this._getViewMatrix(), this._currentRenderId = this.XT().getRenderId(), this._childUpdateId++, this._refreshFrustumPlanes = !0, this._cameraRigParams && this._cameraRigParams.vrPreViewMatrix && this._computedViewMatrix.multiplyToRef(this._cameraRigParams.vrPreViewMatrix, this._computedViewMatrix), this.parent && this.parent.onViewMatrixChangedObservable && this.parent.onViewMatrixChangedObservable.notifyObservers(this.parent), this.onViewMatrixChangedObservable.notifyObservers(this), this._computedViewMatrix.invertToRef(this._worldMatrix), this._worldMatrix.getTranslationToRef(this._globalPosition)), this._computedViewMatrix
+        }
+        freezeProjectionMatrix(zz) {
+          this._doNotComputeProjectionMatrix = !0, void 0 !== zz && (this._projectionMatrix = zz)
+        }
+        unfreezeProjectionMatrix() {
+          this._doNotComputeProjectionMatrix = !1
+        }
+        getProjectionMatrix(uz) {
+          if (this._doNotComputeProjectionMatrix || !uz && this._isSynchronizedProjectionMatrix()) return this._projectionMatrix;
+          const bz = this.ignoreCameraMaxZ ? 0 : this.maxZ;
+          this._cache.mode = this.mode, this._cache.minZ = this.minZ, this._cache.maxZ = bz, this._refreshFrustumPlanes = !0;
+          const Ez = this.uR(),
+            nz = this.XT(),
+            iz = Ez.fbz;
+          if (this.mode === zz.PERSPECTIVE_CAMERA) {
+            let uz;
+            this._cache.fov = this.fov, this._cache.fovMode = this.fovMode, this._cache.aspectRatio = Ez.getAspectRatio(this), this._cache.projectionPlaneTilt = this.projectionPlaneTilt, this.minZ <= 0 && (this.minZ = .1), uz = nz.useRightHandedSystem ? Mz.d.PerspectiveFovRHToRef : Mz.d.PerspectiveFovLHToRef, uz(this.fov, Ez.getAspectRatio(this), iz ? bz : this.minZ, iz ? this.minZ : bz, this._projectionMatrix, this.fovMode === zz.FOVMODE_VERTICAL_FIXED, Ez.isNDCHalfZRange, this.projectionPlaneTilt, iz)
+          } else {
+            const zz = Ez.getRenderWidth() / 2,
+              uz = Ez.getRenderHeight() / 2;
+            nz.useRightHandedSystem ? this.oblique ? Mz.d.ObliqueOffCenterRHToRef(this.orthoLeft ?? -zz, this.orthoRight ?? zz, this.orthoBottom ?? -uz, this.orthoTop ?? uz, iz ? bz : this.minZ, iz ? this.minZ : bz, this.oblique.length, this.oblique.angle, this._computeObliqueDistance(this.oblique.offset), this._projectionMatrix, Ez.isNDCHalfZRange) : Mz.d.OrthoOffCenterRHToRef(this.orthoLeft ?? -zz, this.orthoRight ?? zz, this.orthoBottom ?? -uz, this.orthoTop ?? uz, iz ? bz : this.minZ, iz ? this.minZ : bz, this._projectionMatrix, Ez.isNDCHalfZRange) : this.oblique ? Mz.d.ObliqueOffCenterLHToRef(this.orthoLeft ?? -zz, this.orthoRight ?? zz, this.orthoBottom ?? -uz, this.orthoTop ?? uz, iz ? bz : this.minZ, iz ? this.minZ : bz, this.oblique.length, this.oblique.angle, this._computeObliqueDistance(this.oblique.offset), this._projectionMatrix, Ez.isNDCHalfZRange) : Mz.d.OrthoOffCenterLHToRef(this.orthoLeft ?? -zz, this.orthoRight ?? zz, this.orthoBottom ?? -uz, this.orthoTop ?? uz, iz ? bz : this.minZ, iz ? this.minZ : bz, this._projectionMatrix, Ez.isNDCHalfZRange), this._cache.orthoLeft = this.orthoLeft, this._cache.orthoRight = this.orthoRight, this._cache.orthoBottom = this.orthoBottom, this._cache.orthoTop = this.orthoTop, this._cache.obliqueAngle = this.oblique?.angle, this._cache.obliqueLength = this.oblique?.length, this._cache.obliqueOffset = this.oblique?.offset, this._cache.renderWidth = Ez.getRenderWidth(), this._cache.renderHeight = Ez.getRenderHeight()
+          }
+          return this.onProjectionMatrixChangedObservable.notifyObservers(this), this._projectionMatrix
+        }
+        getTransformationMatrix() {
+          return this._computedViewMatrix.multiplyToRef(this._projectionMatrix, this._transformMatrix), this._transformMatrix
+        }
+        _computeObliqueDistance(zz) {
+          return (this.radius || (this.target ? Mz.n.Distance(this.position, this.target) : this.position.length())) + zz
+        }
+        _updateFrustumPlanes() {
+          this._refreshFrustumPlanes && (this.getTransformationMatrix(), this._frustumPlanes ? Fz.e.GetPlanesToRef(this._transformMatrix, this._frustumPlanes) : this._frustumPlanes = Fz.e.GetPlanes(this._transformMatrix), this._refreshFrustumPlanes = !1)
+        }
+        isInFrustum(zz) {
+          let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._updateFrustumPlanes(), uz && this.rigCameras.length > 0) {
+            let uz = !1;
+            for (const bz of this.rigCameras) bz._updateFrustumPlanes(), uz = uz || zz.isInFrustum(bz._frustumPlanes);
+            return uz
+          }
+          return zz.isInFrustum(this._frustumPlanes)
+        }
+        isCompletelyInFrustum(zz) {
+          return this._updateFrustumPlanes(), zz.isCompletelyInFrustum(this._frustumPlanes)
+        }
+        getForwardRay() {
+          throw (0, pz.l)("Ray")
+        }
+        getForwardRayToRef(zz) {
+          throw (0, pz.l)("Ray")
+        }
+        dispose(uz) {
+          let bz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          for (this.onViewMatrixChangedObservable.clear(), this.onProjectionMatrixChangedObservable.clear(), this.onAfterCheckInputsObservable.clear(), this.onRestoreStateObservable.clear(), this.inputs && this.inputs.clear(), this.XT().stopAnimation(this), this.XT().removeCamera(this); this._rigCameras.length > 0;) {
+            const zz = this._rigCameras.pop();
+            zz && zz.dispose()
+          }
+          if (this._parentContainer) {
+            const zz = this._parentContainer.cameras.indexOf(this);
+            zz > -1 && this._parentContainer.cameras.splice(zz, 1), this._parentContainer = null
+          }
+          if (this._rigPostProcess) this._rigPostProcess.dispose(this), this._rigPostProcess = null, this._postProcesses.length = 0;
+          else if (this.cameraRigMode !== zz.RIG_MODE_NONE) this._rigPostProcess = null, this._postProcesses.length = 0;
           else {
-            kT /= 60;
-            const TT = Math.floor(kT),
-              oT = kT - TT,
-              IT = XT * (1 - WT),
-              iT = XT * (1 - WT * oT),
-              BT = XT * (1 - WT * (1 - oT));
-            switch (TT) {
-              case 0:
-                zT.r = XT, zT.g = BT, zT.b = IT;
-                break;
-              case 1:
-                zT.r = iT, zT.g = XT, zT.b = IT;
-                break;
-              case 2:
-                zT.r = IT, zT.g = XT, zT.b = BT;
-                break;
-              case 3:
-                zT.r = IT, zT.g = iT, zT.b = XT;
-                break;
-              case 4:
-                zT.r = BT, zT.g = IT, zT.b = XT;
-                break;
-              default:
-                zT.r = XT, zT.g = IT, zT.b = iT
+            let zz = this._postProcesses.length;
+            for (; --zz >= 0;) {
+              const uz = this._postProcesses[zz];
+              uz && uz.dispose(this)
             }
           }
-          zT.a = 1
+          let Ez = this.customRenderTargets.length;
+          for (; --Ez >= 0;) this.customRenderTargets[Ez].dispose();
+          this.customRenderTargets.length = 0, this._activeMeshes.dispose(), this.XT().uR().releaseRenderPassId(this.renderPassId), super.dispose(uz, bz)
         }
-        static _Clamp(TT, oT, IT) {
-          return Math.min(Math.max(TT, oT), IT)
+        get isLeftCamera() {
+          return this._isLeftCamera
         }
-        clone() {
-          return wT.c.Clone((() => new TT), this)
+        get isRightCamera() {
+          return this._isRightCamera
         }
+        get leftCamera() {
+          return this._rigCameras.length < 1 ? null : this._rigCameras[0]
+        }
+        get rightCamera() {
+          return this._rigCameras.length < 2 ? null : this._rigCameras[1]
+        }
+        getLeftTarget() {
+          return this._rigCameras.length < 1 ? null : this._rigCameras[0].getTarget()
+        }
+        getRightTarget() {
+          return this._rigCameras.length < 2 ? null : this._rigCameras[1].getTarget()
+        }
+        setCameraRigMode(uz, bz) {
+          if (this.cameraRigMode !== uz) {
+            for (; this._rigCameras.length > 0;) {
+              const zz = this._rigCameras.pop();
+              zz && zz.dispose()
+            }
+            if (this.cameraRigMode = uz, this._cameraRigParams = {}, this._cameraRigParams.interaxialDistance = bz.interaxialDistance || .0637, this._cameraRigParams.stereoHalfAngle = this._cameraRigParams.interaxialDistance / .0637 * (Math.PI / 180), this.cameraRigMode !== zz.RIG_MODE_NONE) {
+              const zz = this.createRigCamera(this.name + "_L", 0);
+              zz && (zz._isLeftCamera = !0);
+              const uz = this.createRigCamera(this.name + "_R", 1);
+              uz && (uz._isRightCamera = !0), zz && uz && (this._rigCameras.push(zz), this._rigCameras.push(uz))
+            }
+            this._setRigMode(bz), this._cascadePostProcessesToRigCams(), this.update()
+          }
+        }
+        _setRigMode(zz) {}
+        _getVRProjectionMatrix() {
+          return Mz.d.PerspectiveFovLHToRef(this._cameraRigParams.vrMetrics.aspectRatioFov, this._cameraRigParams.vrMetrics.aspectRatio, this.minZ, this.ignoreCameraMaxZ ? 0 : this.maxZ, this._cameraRigParams.vrWorkMatrix, !0, this.uR().isNDCHalfZRange), this._cameraRigParams.vrWorkMatrix.multiplyToRef(this._cameraRigParams.vrHMatrix, this._projectionMatrix), this._projectionMatrix
+        }
+        setCameraRigParameter(zz, uz) {
+          this._cameraRigParams || (this._cameraRigParams = {}), this._cameraRigParams[zz] = uz, "interaxialDistance" === zz && (this._cameraRigParams.stereoHalfAngle = uz / .0637 * (Math.PI / 180))
+        }
+        createRigCamera(zz, uz) {
+          return null
+        }
+        _updateRigCameras() {
+          for (let zz = 0; zz < this._rigCameras.length; zz++) this._rigCameras[zz].minZ = this.minZ, this._rigCameras[zz].maxZ = this.ignoreCameraMaxZ ? 0 : this.maxZ, this._rigCameras[zz].fov = this.fov, this._rigCameras[zz].upVector.euz(this.upVector);
+          this.cameraRigMode === zz.RIG_MODE_STEREOSCOPIC_ANAGLYPH && (this._rigCameras[0].viewport = this._rigCameras[1].viewport = this.viewport)
+        }
+        _setupInputs() {}
         serialize() {
-          return wT.c.Serialize(this)
+          const zz = Rz.e.Serialize(this);
+          return zz.uniqueId = this.uniqueId, zz.type = this.getClassName(), this.parent && this.parent._serializeAsParent(zz), this.inputs && this.inputs.serialize(zz), Rz.e.AppendSerializedAnimations(this, zz), zz.al = this.serializeAnimationRanges(), zz.isEnabled = this.isEnabled(), zz
         }
-        _bind(TT) {
-          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vCameraColorCurvePositive",
-            IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "vCameraColorCurveNeutral",
-            iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "vCameraColorCurveNegative";
-          this._dirty && (this._dirty = !1, this._getColorGradingDataToRef(this._globalHue, this._globalDensity, this._globalSaturation, this._globalExposure, this._globalCurve), this._getColorGradingDataToRef(this._highlightsHue, this._highlightsDensity, this._highlightsSaturation, this._highlightsExposure, this._tempColor), this._tempColor.multiplyToRef(this._globalCurve, this._highlightsCurve), this._getColorGradingDataToRef(this._midtonesHue, this._midtonesDensity, this._midtonesSaturation, this._midtonesExposure, this._tempColor), this._tempColor.multiplyToRef(this._globalCurve, this._midtonesCurve), this._getColorGradingDataToRef(this._shadowsHue, this._shadowsDensity, this._shadowsSaturation, this._shadowsExposure, this._tempColor), this._tempColor.multiplyToRef(this._globalCurve, this._shadowsCurve), this._highlightsCurve.subtractToRef(this._midtonesCurve, this._positiveCurve), this._midtonesCurve.subtractToRef(this._shadowsCurve, this._negativeCurve)), TT && (TT.setFloat4(oT, this._positiveCurve.r, this._positiveCurve.g, this._positiveCurve.b, this._positiveCurve.a), TT.setFloat4(IT, this._midtonesCurve.r, this._midtonesCurve.g, this._midtonesCurve.b, this._midtonesCurve.a), TT.setFloat4(iT, this._negativeCurve.r, this._negativeCurve.g, this._negativeCurve.b, this._negativeCurve.a))
+        clone(uz) {
+          let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const Ez = Rz.e.Clone(zz.GetConstructorFromName(this.getClassName(), uz, this.XT(), this.interaxialDistance, this.isStereoscopicSideBySide), this);
+          return Ez.name = uz, Ez.parent = bz, this.onClonedObservable.notifyObservers(Ez), Ez
+        }
+        dW(zz) {
+          const uz = Mz.n.Zero();
+          return this.getDirectionToRef(zz, uz), uz
+        }
+        get absoluteRotation() {
+          return this.getWorldMatrix().decompose(void 0, this._absoluteRotation), this._absoluteRotation
+        }
+        getDirectionToRef(zz, uz) {
+          Mz.n.TransformNormalToRef(zz, this.getWorldMatrix(), uz)
+        }
+        static GetConstructorFromName(uz, bz, Ez) {
+          let nz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+            iz = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+          const lz = tz.c.Construct(uz, bz, Ez, {
+            interaxial_distance: nz,
+            isStereoscopicSideBySide: iz
+          });
+          return lz || (() => zz._CreateDefaultParsedCamera(bz, Ez))
+        }
+        computeWorldMatrix() {
+          return this.getWorldMatrix()
+        }
+        _calculateHandednessMultiplier() {
+          let zz = this.XT().useRightHandedSystem ? -1 : 1;
+          return this.parent && this.parent._getWorldMatrixDeterminant() < 0 && (zz *= -1), zz
         }
       }, (() => {
-        const WT = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        oT = [(0, zT.P)()], IT = [(0, zT.P)()], kT = [(0, zT.P)()], XT = [(0, zT.P)()], BT = [(0, zT.P)()], FT = [(0, zT.P)()], ST = [(0, zT.P)()], DT = [(0, zT.P)()], LT = [(0, zT.P)()], xT = [(0, zT.P)()], cT = [(0, zT.P)()], KT = [(0, zT.P)()], (0, iT.h)(null, null, oT, {
-          kind: "field",
-          name: "_globalHue",
+        const iz = "function" === typeof Symbol && Symbol.metadata ? Object.create(Gz[Symbol.metadata] ?? null) : void 0;
+        uz = [(0, nz.D)("position")], bz = [(0, nz.D)("upVector")], Oz = [(0, nz.G)()], Kz = [(0, nz.G)()], wz = [(0, nz.G)()], Xz = [(0, nz.G)()], fz = [(0, nz.G)()], sz = [(0, nz.G)()], rz = [(0, nz.G)()], oz = [(0, nz.G)()], Nz = [(0, nz.G)()], vz = [(0, nz.G)()], xz = [(0, nz.G)()], Jz = [(0, nz.G)()], Az = [(0, nz.G)()], Tz = [(0, nz.G)()], Lz = [(0, nz.G)()], Pz = [(0, nz.G)()], (0, Ez.h)(zz, null, Oz, {
+          kind: "getter",
+          name: "orthoLeft",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_globalHue" in TT,
-            get: TT => TT._globalHue,
-            set: (TT, oT) => {
-              TT._globalHue = oT
-            }
+            has: zz => "orthoLeft" in zz,
+            get: zz => zz.orthoLeft
           },
-          metadata: WT
-        }, MT, rT), (0, iT.h)(null, null, IT, {
-          kind: "field",
-          name: "_globalDensity",
+          metadata: iz
+        }, null, az), (0, Ez.h)(zz, null, Kz, {
+          kind: "getter",
+          name: "orthoRight",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_globalDensity" in TT,
-            get: TT => TT._globalDensity,
-            set: (TT, oT) => {
-              TT._globalDensity = oT
-            }
+            has: zz => "orthoRight" in zz,
+            get: zz => zz.orthoRight
           },
-          metadata: WT
-        }, AT, gT), (0, iT.h)(null, null, kT, {
-          kind: "field",
-          name: "_globalSaturation",
+          metadata: iz
+        }, null, az), (0, Ez.h)(zz, null, wz, {
+          kind: "getter",
+          name: "orthoBottom",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_globalSaturation" in TT,
-            get: TT => TT._globalSaturation,
-            set: (TT, oT) => {
-              TT._globalSaturation = oT
-            }
+            has: zz => "orthoBottom" in zz,
+            get: zz => zz.orthoBottom
           },
-          metadata: WT
-        }, hT, eT), (0, iT.h)(null, null, XT, {
-          kind: "field",
-          name: "_globalExposure",
+          metadata: iz
+        }, null, az), (0, Ez.h)(zz, null, Xz, {
+          kind: "getter",
+          name: "orthoTop",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_globalExposure" in TT,
-            get: TT => TT._globalExposure,
-            set: (TT, oT) => {
-              TT._globalExposure = oT
-            }
+            has: zz => "orthoTop" in zz,
+            get: zz => zz.orthoTop
           },
-          metadata: WT
-        }, RT, uT), (0, iT.h)(null, null, BT, {
-          kind: "field",
-          name: "_highlightsHue",
+          metadata: iz
+        }, null, az), (0, Ez.h)(zz, null, Nz, {
+          kind: "getter",
+          name: "inertia",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_highlightsHue" in TT,
-            get: TT => TT._highlightsHue,
-            set: (TT, oT) => {
-              TT._highlightsHue = oT
-            }
+            has: zz => "inertia" in zz,
+            get: zz => zz.inertia
           },
-          metadata: WT
-        }, vT, ET), (0, iT.h)(null, null, FT, {
-          kind: "field",
-          name: "_highlightsDensity",
+          metadata: iz
+        }, null, az), (0, Ez.h)(zz, null, vz, {
+          kind: "getter",
+          name: "mode",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_highlightsDensity" in TT,
-            get: TT => TT._highlightsDensity,
-            set: (TT, oT) => {
-              TT._highlightsDensity = oT
-            }
+            has: zz => "mode" in zz,
+            get: zz => zz.mode
           },
-          metadata: WT
-        }, fT, CT), (0, iT.h)(null, null, ST, {
+          metadata: iz
+        }, null, az), (0, Ez.h)(null, null, uz, {
           kind: "field",
-          name: "_highlightsSaturation",
+          name: "_position",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_highlightsSaturation" in TT,
-            get: TT => TT._highlightsSaturation,
-            set: (TT, oT) => {
-              TT._highlightsSaturation = oT
+            has: zz => "_position" in zz,
+            get: zz => zz._position,
+            set: (zz, uz) => {
+              zz._position = uz
             }
           },
-          metadata: WT
-        }, jT, JT), (0, iT.h)(null, null, DT, {
+          metadata: iz
+        }, Vz, mz), (0, Ez.h)(null, null, bz, {
           kind: "field",
-          name: "_highlightsExposure",
+          name: "_upVector",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_highlightsExposure" in TT,
-            get: TT => TT._highlightsExposure,
-            set: (TT, oT) => {
-              TT._highlightsExposure = oT
+            has: zz => "_upVector" in zz,
+            get: zz => zz._upVector,
+            set: (zz, uz) => {
+              zz._upVector = uz
             }
           },
-          metadata: WT
-        }, UT, aT), (0, iT.h)(null, null, LT, {
+          metadata: iz
+        }, qz, hz), (0, Ez.h)(null, null, fz, {
           kind: "field",
-          name: "_midtonesHue",
+          name: "fov",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_midtonesHue" in TT,
-            get: TT => TT._midtonesHue,
-            set: (TT, oT) => {
-              TT._midtonesHue = oT
+            has: zz => "fov" in zz,
+            get: zz => zz.fov,
+            set: (zz, uz) => {
+              zz.fov = uz
             }
           },
-          metadata: WT
-        }, YT, QT), (0, iT.h)(null, null, xT, {
+          metadata: iz
+        }, Uz, cz), (0, Ez.h)(null, null, sz, {
           kind: "field",
-          name: "_midtonesDensity",
+          name: "projectionPlaneTilt",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_midtonesDensity" in TT,
-            get: TT => TT._midtonesDensity,
-            set: (TT, oT) => {
-              TT._midtonesDensity = oT
+            has: zz => "projectionPlaneTilt" in zz,
+            get: zz => zz.projectionPlaneTilt,
+            set: (zz, uz) => {
+              zz.projectionPlaneTilt = uz
             }
           },
-          metadata: WT
-        }, OT, HT), (0, iT.h)(null, null, cT, {
+          metadata: iz
+        }, gz, Sz), (0, Ez.h)(null, null, rz, {
           kind: "field",
-          name: "_midtonesSaturation",
+          name: "minZ",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_midtonesSaturation" in TT,
-            get: TT => TT._midtonesSaturation,
-            set: (TT, oT) => {
-              TT._midtonesSaturation = oT
+            has: zz => "minZ" in zz,
+            get: zz => zz.minZ,
+            set: (zz, uz) => {
+              zz.minZ = uz
             }
           },
-          metadata: WT
-        }, nT, qT), (0, iT.h)(null, null, KT, {
+          metadata: iz
+        }, yz, Dz), (0, Ez.h)(null, null, oz, {
           kind: "field",
-          name: "_midtonesExposure",
+          name: "maxZ",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_midtonesExposure" in TT,
-            get: TT => TT._midtonesExposure,
-            set: (TT, oT) => {
-              TT._midtonesExposure = oT
+            has: zz => "maxZ" in zz,
+            get: zz => zz.maxZ,
+            set: (zz, uz) => {
+              zz.maxZ = uz
             }
           },
-          metadata: WT
-        }, ZT, lT), WT && Object.defineProperty(TT, Symbol.metadata, {
+          metadata: iz
+        }, Qz, Wz), (0, Ez.h)(null, null, xz, {
+          kind: "field",
+          name: "layerMask",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "layerMask" in zz,
+            get: zz => zz.layerMask,
+            set: (zz, uz) => {
+              zz.layerMask = uz
+            }
+          },
+          metadata: iz
+        }, ez, jz), (0, Ez.h)(null, null, Jz, {
+          kind: "field",
+          name: "fovMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "fovMode" in zz,
+            get: zz => zz.fovMode,
+            set: (zz, uz) => {
+              zz.fovMode = uz
+            }
+          },
+          metadata: iz
+        }, Iz, Bz), (0, Ez.h)(null, null, Az, {
+          kind: "field",
+          name: "cameraRigMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "cameraRigMode" in zz,
+            get: zz => zz.cameraRigMode,
+            set: (zz, uz) => {
+              zz.cameraRigMode = uz
+            }
+          },
+          metadata: iz
+        }, Cz, Yz), (0, Ez.h)(null, null, Tz, {
+          kind: "field",
+          name: "interaxialDistance",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "interaxialDistance" in zz,
+            get: zz => zz.interaxialDistance,
+            set: (zz, uz) => {
+              zz.interaxialDistance = uz
+            }
+          },
+          metadata: iz
+        }, kz, zu), (0, Ez.h)(null, null, Lz, {
+          kind: "field",
+          name: "isStereoscopicSideBySide",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "isStereoscopicSideBySide" in zz,
+            get: zz => zz.isStereoscopicSideBySide,
+            set: (zz, uz) => {
+              zz.isStereoscopicSideBySide = uz
+            }
+          },
+          metadata: iz
+        }, uu, bu), (0, Ez.h)(null, null, Pz, {
+          kind: "field",
+          name: "ignoreCameraMaxZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "ignoreCameraMaxZ" in zz,
+            get: zz => zz.ignoreCameraMaxZ,
+            set: (zz, uz) => {
+              zz.ignoreCameraMaxZ = uz
+            }
+          },
+          metadata: iz
+        }, Eu, nu), iz && Object.defineProperty(zz, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: WT
+          value: iz
         })
-      })(), TT.PrepareUniforms = mT.e, TT
+      })(), zz._CreateDefaultParsedCamera = (zz, uz) => {
+        throw (0, pz.l)("UniversalCamera")
+      }, zz.PERSPECTIVE_CAMERA = 0, zz.ORTHOGRAPHIC_CAMERA = 1, zz.FOVMODE_VERTICAL_FIXED = 0, zz.FOVMODE_HORIZONTAL_FIXED = 1, zz.RIG_MODE_NONE = 0, zz.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, zz.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, zz.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, zz.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, zz.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, zz.RIG_MODE_VR = 20, zz.RIG_MODE_CUSTOM = 22, zz.ForceAttachControlToAlwaysPreventDefault = !1, zz
     })();
 
-    function RT(TT, oT) {
-      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "vCameraColorCurvePositive",
-        iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "vCameraColorCurveNeutral",
-        zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "vCameraColorCurveNegative";
-      TT._bind(oT, IT, iT, zT)
+    function wz(zz, uz) {
+      const bz = zz.type,
+        Ez = Kz.GetConstructorFromName(bz, zz.name, uz, zz.interaxial_distance, zz.isStereoscopicSideBySide),
+        nz = Rz.e.Parse(Ez, zz, uz);
+      if (void 0 !== zz.parentId && (nz._waitingParentId = zz.parentId), void 0 !== zz.parentInstanceIndex && (nz._waitingParentInstanceIndex = zz.parentInstanceIndex), nz.inputs && (nz.inputs.parse(zz), nz._setupInputs()), zz.upVector && (nz.upVector = Mz.n.FromArray(zz.upVector)), nz.setPosition && (nz.position.P_(0, 0, 0), nz.setPosition(Mz.n.FromArray(zz.position))), zz.target && nz.setTarget && nz.setTarget(Mz.n.FromArray(zz.target)), zz.cameraRigMode) {
+        const uz = zz.interaxial_distance ? {
+          interaxialDistance: zz.interaxial_distance
+        } : {};
+        nz.setCameraRigMode(zz.cameraRigMode, uz)
+      }
+      if (zz.animations) {
+        for (let uz = 0; uz < zz.animations.length; uz++) {
+          const bz = zz.animations[uz],
+            Ez = (0, Oz.b)("BABYLON.Animation");
+          Ez && nz.animations.push(Ez.Parse(bz))
+        }
+        tz.c.ParseAnimationRanges(nz, zz, uz)
+      }
+      return zz.autoAnimate && uz.beginAnimation(nz, zz.autoAnimateFrom, zz.autoAnimateTo, zz.autoAnimateLoop, zz.autoAnimateSpeed || 1), void 0 !== zz.isEnabled && nz.Zx(zz.isEnabled), nz
     }
-    var uT = IT(38698),
-      vT = IT(38906),
-      ET = IT(36166);
-    let fT = (() => {
-        var TT;
-        let oT, IT, FT, xT, cT, KT, rT, mT, ET, fT, CT, jT, JT, UT, aT, YT, QT, OT, HT, nT, qT, ZT, lT, sT, tT, GT, pT, bT, yT = [],
-          NT = [],
-          PT = [],
-          dT = [],
-          VT = [],
-          To = [],
-          oo = [],
-          Io = [],
-          io = [],
-          zo = [],
-          ko = [],
-          Wo = [],
-          Xo = [],
-          Bo = [],
-          Fo = [],
-          So = [],
-          Do = [],
-          Lo = [],
-          xo = [],
-          co = [],
-          Ko = [],
-          Mo = [],
-          ro = [],
-          Ao = [],
-          go = [],
-          ho = [],
-          wo = [],
-          mo = [],
-          eo = [],
-          Ro = [],
-          uo = [],
-          vo = [],
-          Eo = [],
-          fo = [],
-          Co = [],
-          jo = [],
-          Jo = [],
-          Uo = [],
-          ao = [],
-          Yo = [],
-          Qo = [],
-          Oo = [],
-          Ho = [],
-          no = [],
-          qo = [],
-          Zo = [],
-          so = [],
-          to = [],
-          Go = [],
-          po = [],
-          bo = [],
-          yo = [],
-          No = [],
-          Po = [],
-          Vo = [],
-          TI = [];
-        return TT = class {
-          constructor() {
-            this.colorCurves = (0, iT.j)(this, yT, new eT), this._colorCurvesEnabled = ((0, iT.j)(this, NT), (0, iT.j)(this, PT, !1)), this._colorGradingTexture = ((0, iT.j)(this, dT), (0, iT.j)(this, VT, void 0)), this._colorGradingEnabled = ((0, iT.j)(this, To), (0, iT.j)(this, oo, !1)), this._colorGradingWithGreenDepth = ((0, iT.j)(this, Io), (0, iT.j)(this, io, !0)), this._colorGradingBGR = ((0, iT.j)(this, zo), (0, iT.j)(this, ko, !0)), this._exposure = ((0, iT.j)(this, Wo), (0, iT.j)(this, Xo, 1)), this._toneMappingEnabled = ((0, iT.j)(this, Bo), (0, iT.j)(this, Fo, !1)), this._toneMappingType = ((0, iT.j)(this, So), (0, iT.j)(this, Do, TT.TONEMAPPING_STANDARD)), this._contrast = ((0, iT.j)(this, Lo), (0, iT.j)(this, xo, 1)), this._whiteBalanceEnabled = ((0, iT.j)(this, co), (0, iT.j)(this, Ko, !1)), this._temperature = ((0, iT.j)(this, Mo), (0, iT.j)(this, ro, 6500)), this._tint = ((0, iT.j)(this, Ao), (0, iT.j)(this, go, 0)), this._whiteBalanceMatrix = ((0, iT.j)(this, ho), null), this._whiteBalanceMatrixTemperature = null, this._whiteBalanceMatrixTint = null, this.vignetteStretch = (0, iT.j)(this, wo, 0), this.vignetteCenterX = ((0, iT.j)(this, mo), (0, iT.j)(this, eo, 0)), this.vignetteCenterY = ((0, iT.j)(this, Ro), (0, iT.j)(this, uo, 0)), this.vignetteWeight = ((0, iT.j)(this, vo), (0, iT.j)(this, Eo, 1.5)), this.vignetteColor = ((0, iT.j)(this, fo), (0, iT.j)(this, Co, new WT.i(0, 0, 0, 0))), this.vignetteCameraFov = ((0, iT.j)(this, jo), (0, iT.j)(this, Jo, .5)), this._vignetteBlendMode = ((0, iT.j)(this, Uo), (0, iT.j)(this, ao, TT.VIGNETTEMODE_MULTIPLY)), this._vignetteEnabled = ((0, iT.j)(this, Yo), (0, iT.j)(this, Qo, !1)), this._ditheringEnabled = ((0, iT.j)(this, Oo), (0, iT.j)(this, Ho, !1)), this._ditheringIntensity = ((0, iT.j)(this, no), (0, iT.j)(this, qo, 1 / 255)), this._skipFinalColorClamp = ((0, iT.j)(this, Zo), (0, iT.j)(this, so, !1)), this._applyByPostProcess = ((0, iT.j)(this, to), (0, iT.j)(this, Go, !1)), this._isEnabled = ((0, iT.j)(this, po), (0, iT.j)(this, bo, !0)), this.outputTextureWidth = ((0, iT.j)(this, yo), (0, iT.j)(this, No, 0)), this.outputTextureHeight = ((0, iT.j)(this, Po), (0, iT.j)(this, Vo, 0)), this.onUpdateParameters = ((0, iT.j)(this, TI), new kT.d)
+    let Xz = !1;
+
+    function fz() {
+      Xz || (Xz = !0, Kz.Parse = wz)
+    }
+  },
+  39393: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => nz
+    });
+    var Ez = bz(36519);
+    class nz {
+      constructor(zz, uz, bz) {
+        this._cameraPosition = uz, this._behavior = bz, this.activeInput = !1, this.speed = 1, this.Qy = 1, this.panSpeed = 1, this.rotationXSpeed = 1, this.rotationYSpeed = 1, this._zoomSpeedMultiplier = 1, this._panSpeedMultiplier = 1, this.zoomInertia = .9, this.panInertia = .9, this.rotationInertia = .9, this.zoomAccumulatedPixels = 0, this.panAccumulatedPixels = new Ez.n, this.rotationAccumulatedPixels = new Ez.n, this.zoomDeltaCurrentFrame = 0, this.panDeltaCurrentFrame = Ez.n.Zero(), this.rotationDeltaCurrentFrame = Ez.n.Zero(), this._zoomVelocity = 0, this._panVelocity = new Ez.n, this.referenceFrameRate = 60, this._rotationVelocity = new Ez.n, this._prevFrameTimeMs = 0, this._scene = zz
+      }
+      computeCurrentFrameDeltas() {
+        const zz = this._scene.uR().getDeltaTime(),
+          uz = this._getEffectiveDeltaMs(zz);
+        if (0 === this._zoomVelocity && 0 === this.zoomAccumulatedPixels && 0 === this._panVelocity.x && 0 === this._panVelocity.y && 0 === this._panVelocity.z && 0 === this.panAccumulatedPixels.x && 0 === this.panAccumulatedPixels.y && 0 === this.panAccumulatedPixels.z && 0 === this._rotationVelocity.x && 0 === this._rotationVelocity.y && 0 === this._rotationVelocity.z && 0 === this.rotationAccumulatedPixels.x && 0 === this.rotationAccumulatedPixels.y && 0 === this.rotationAccumulatedPixels.z && !this.activeInput) return this.panDeltaCurrentFrame.Vk(0), this.rotationDeltaCurrentFrame.Vk(0), this.zoomDeltaCurrentFrame = 0, void(zz > 0 && (this._prevFrameTimeMs = zz));
+        this.panDeltaCurrentFrame.Vk(0), this.rotationDeltaCurrentFrame.Vk(0), this.zoomDeltaCurrentFrame = 0;
+        (this.panAccumulatedPixels.lengthSquared() > 0 || this.rotationAccumulatedPixels.lengthSquared() > 0 || 0 !== this.zoomAccumulatedPixels) && this._behavior?.isInterpolating && this._behavior.stopAllAnimations(), this._panVelocity.P_(this._calculateCurrentVelocity(this._panVelocity.x, this.panAccumulatedPixels.x, this.panInertia), this._calculateCurrentVelocity(this._panVelocity.y, this.panAccumulatedPixels.y, this.panInertia), this._calculateCurrentVelocity(this._panVelocity.z, this.panAccumulatedPixels.z, this.panInertia)), this._panVelocity.scaleToRef(this.speed * this.panSpeed * this._panSpeedMultiplier * uz, this.panDeltaCurrentFrame), this._rotationVelocity.P_(this._calculateCurrentVelocity(this._rotationVelocity.x, this.rotationAccumulatedPixels.x, this.rotationInertia), this._calculateCurrentVelocity(this._rotationVelocity.y, this.rotationAccumulatedPixels.y, this.rotationInertia), this._calculateCurrentVelocity(this._rotationVelocity.z, this.rotationAccumulatedPixels.z, this.rotationInertia)), this.rotationDeltaCurrentFrame.P_(this._rotationVelocity.x * this.speed * this.rotationXSpeed * uz, this._rotationVelocity.y * this.speed * this.rotationYSpeed * uz, 0), this._zoomVelocity = this._calculateCurrentVelocity(this._zoomVelocity, this.zoomAccumulatedPixels, this.zoomInertia), this.zoomDeltaCurrentFrame = this._zoomVelocity * (this.speed * this.Qy * this._zoomSpeedMultiplier) * uz, zz > 0 && (this._prevFrameTimeMs = zz), this.zoomAccumulatedPixels = 0, this.panAccumulatedPixels.Vk(0), this.rotationAccumulatedPixels.Vk(0), this.activeInput = !1
+      }
+      resetRotationVelocity() {
+        this._rotationVelocity.Vk(0), this.rotationAccumulatedPixels.Vk(0)
+      }
+      resetPanVelocity() {
+        this._panVelocity.Vk(0), this.panAccumulatedPixels.Vk(0)
+      }
+      resetZoomVelocity() {
+        this._zoomVelocity = 0, this.zoomAccumulatedPixels = 0
+      }
+      get isInterpolating() {
+        return !!this._behavior?.isInterpolating
+      }
+      getFrameIndependentDecay(zz) {
+        const uz = this._scene.uR().getDeltaTime(),
+          bz = this._getEffectiveDeltaMs(uz),
+          Ez = 1e3 / this.referenceFrameRate;
+        return Math.pow(zz, bz / Ez)
+      }
+      getFrameIndependentInputScale(zz) {
+        const uz = 1 - zz;
+        if (uz <= 0) return 1;
+        return (1 - this.getFrameIndependentDecay(zz)) / uz
+      }
+      _getEffectiveDeltaMs(zz) {
+        return zz > 0 ? zz : this._prevFrameTimeMs > 0 ? this._prevFrameTimeMs : 1e3 / this.referenceFrameRate
+      }
+      _calculateCurrentVelocity(zz, uz, bz) {
+        let Ez = zz;
+        const nz = this._scene.uR().getDeltaTime(),
+          iz = this._getEffectiveDeltaMs(nz);
+        if (0 === iz) return Ez;
+        const lz = this.getFrameIndependentDecay(bz);
+        if (Ez *= lz, 0 !== uz || this.activeInput) {
+          const zz = 1 - bz;
+          Ez += uz / iz * (zz > 0 ? (1 - lz) / zz : 1)
+        } else Math.abs(Ez) < 1e-6 && (Ez = 0);
+        return Ez
+      }
+    }
+  },
+  39397: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Ez
+    });
+    class Ez {
+      constructor(zz, uz) {
+        this.inputMap = [], this.handlers = zz, this._createDefaultEntries = uz, this.resetInputMap()
+      }
+      resolveInteraction(zz, uz) {
+        for (const bz of this.inputMap)
+          if (bz.source === zz && this._entryMatches(bz, uz)) return bz;
+        return null
+      }
+      resetInputMap() {
+        this.inputMap = this._createDefaultEntries?.() ?? []
+      }
+      getEntry(zz, uz, bz) {
+        const Ez = this.inputMap;
+        for (let nz = 0; nz < Ez.length; nz++) {
+          const iz = Ez[nz];
+          if (iz.source === zz && iz.interaction === uz && this._entryConditionsMatch(iz, bz)) return iz
+        }
+      }
+      getEntries(zz, uz, bz) {
+        const Ez = [],
+          nz = this.inputMap;
+        for (let iz = 0; iz < nz.length; iz++) {
+          const lz = nz[iz];
+          lz.source === zz && lz.interaction === uz && this._entryConditionsMatch(lz, bz) && Ez.push(lz)
+        }
+        return Ez
+      }
+      addEntry(zz) {
+        const uz = this._entrySpecificity(zz);
+        let bz = this.inputMap.length;
+        for (let Ez = 0; Ez < this.inputMap.length; Ez++)
+          if (this._entrySpecificity(this.inputMap[Ez]) < uz) {
+            bz = Ez;
+            break
+          } this.inputMap.splice(bz, 0, zz)
+      }
+      setInteraction(zz, uz, bz) {
+        const Ez = this.resolveInteraction(zz, uz);
+        return Ez && this._entryCoversAllConditionsOf(Ez, uz) ? (Ez.interaction = bz, !0) : (this.addEntry({
+          source: zz,
+          ...uz ?? {},
+          interaction: bz
+        }), !0)
+      }
+      _entryCoversAllConditionsOf(zz, uz) {
+        if (!uz) return !0;
+        const bz = zz;
+        for (const Ez of Object.keys(uz)) {
+          const zz = uz[Ez];
+          if (void 0 !== zz)
+            if ("modifiers" === Ez) {
+              const uz = bz.modifiers ?? {};
+              for (const bz of Object.keys(zz))
+                if (void 0 !== zz[bz] && void 0 === uz[bz]) return !1
+            } else if (void 0 === bz[Ez]) return !1
+        }
+        return !0
+      }
+      setInteractions(zz, uz, bz) {
+        let Ez = 0;
+        const nz = this.inputMap;
+        for (let iz = 0; iz < nz.length; iz++) {
+          const lz = nz[iz];
+          lz.source === zz && this._entryMatches(lz, uz) && (lz.interaction = bz, Ez++)
+        }
+        return Ez
+      }
+      _entryMatches(zz, uz) {
+        switch (zz.source) {
+          case "pointer":
+            return (void 0 === zz.button || zz.button === uz?.button) && this._matchModifiers(zz.modifiers, uz?.modifiers);
+          case "wheel":
+            return this._matchModifiers(zz.modifiers, uz?.modifiers);
+          case "touch":
+            return void 0 === zz.touchCount || zz.touchCount === uz?.touchCount;
+          case "keyboard":
+            return (void 0 === zz.key || (Array.isArray(zz.key) ? -1 !== zz.key.indexOf(uz?.key ?? -1) : zz.key === uz?.key)) && this._matchModifiers(zz.modifiers, uz?.modifiers)
+        }
+      }
+      _entryConditionsMatch(zz, uz) {
+        if (!uz) return !0;
+        switch (zz.source) {
+          case "pointer":
+            return (!("button" in uz) || zz.button === uz.button) && (!("modifiers" in uz) || this._entryModifiersMatch(zz.modifiers, uz.modifiers));
+          case "wheel":
+            return !("modifiers" in uz) || this._entryModifiersMatch(zz.modifiers, uz.modifiers);
+          case "touch":
+            return !("touchCount" in uz) || zz.touchCount === uz.touchCount;
+          case "keyboard":
+            if ("key" in uz) {
+              if (void 0 === zz.key) return void 0 === uz.key;
+              if (void 0 === uz.key || (Array.isArray(zz.key) ? -1 === zz.key.indexOf(uz.key) : zz.key !== uz.key)) return !1
+            }
+            return !("modifiers" in uz) || this._entryModifiersMatch(zz.modifiers, uz.modifiers)
+        }
+      }
+      _entrySpecificity(zz) {
+        let uz = 0;
+        return "button" in zz && void 0 !== zz.button && uz++, "key" in zz && void 0 !== zz.key && uz++, "touchCount" in zz && void 0 !== zz.touchCount && uz++, "modifiers" in zz && zz.modifiers && uz++, uz
+      }
+      _matchModifiers(zz, uz) {
+        return !zz || (void 0 === zz.ctrl || zz.ctrl === (uz?.ctrl ?? !1)) && ((void 0 === zz.shift || zz.shift === (uz?.shift ?? !1)) && (void 0 === zz.alt || zz.alt === (uz?.alt ?? !1)))
+      }
+      _entryModifiersMatch(zz, uz) {
+        if (!uz) return !zz;
+        return void 0 !== uz.ctrl || void 0 !== uz.shift || void 0 !== uz.alt ? (void 0 === uz.ctrl || zz?.ctrl === uz.ctrl) && ((void 0 === uz.shift || zz?.shift === uz.shift) && (void 0 === uz.alt || zz?.alt === uz.alt)) : !zz || void 0 === zz.ctrl && void 0 === zz.shift && void 0 === zz.alt
+      }
+    }
+  },
+  39372: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => wz,
+      i: () => Rz
+    });
+    var Ez = bz(39170),
+      nz = bz(39172),
+      iz = bz(39376),
+      lz = bz(36519),
+      Mz = bz(36526),
+      tz = bz(39386),
+      Hz = bz(39384),
+      Oz = bz(39393),
+      pz = bz(39397);
+    class dz extends Oz.c {
+      constructor(zz, uz, bz) {
+        super(zz, uz, bz), this.input = new pz.d({
+          translate: (zz, uz, bz) => {
+            this.panAccumulatedPixels.x += zz, this.panAccumulatedPixels.y += uz, this.panAccumulatedPixels.z += bz
+          },
+          rotate: (zz, uz) => {
+            this.rotationAccumulatedPixels.x += zz, this.rotationAccumulatedPixels.y += uz
           }
-          get colorCurvesEnabled() {
-            return this._colorCurvesEnabled
+        }, (() => this._createDefaultInputMap()))
+      }
+      _createDefaultInputMap() {
+        return [{
+          source: "pointer",
+          interaction: "rotate"
+        }, {
+          source: "keyboard",
+          interaction: "translate"
+        }, {
+          source: "keyboard",
+          interaction: "rotate"
+        }, {
+          source: "touch",
+          interaction: "rotate"
+        }, {
+          source: "touch",
+          interaction: "translate"
+        }]
+      }
+    }
+    const Fz = lz.d.Zero(),
+      Zz = lz.h.Identity();
+    let Rz = (() => {
+        var zz;
+        let uz, bz, Hz, Oz, pz = iz.d,
+          Rz = [],
+          Kz = [],
+          wz = [],
+          Xz = [],
+          fz = [],
+          sz = [],
+          rz = [],
+          oz = [];
+        return zz = class extends pz {
+          get inertia() {
+            return this._targetInertia
           }
-          set colorCurvesEnabled(TT) {
-            this._colorCurvesEnabled !== TT && (this._colorCurvesEnabled = TT, this._updateParameters())
+          set inertia(zz) {
+            this._targetInertia = zz, this.movement && (this.movement.panInertia = zz, this.movement.rotationInertia = zz)
           }
-          get colorGradingTexture() {
-            return this._colorGradingTexture
+          constructor(zz, uz, bz) {
+            super(zz, uz, bz, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), this.cameraDirection = new lz.n(0, 0, 0), this.cameraRotation = new lz.m(0, 0), this._targetInertia = .9, this.updateUpVectorFromRotation = (0, Ez.j)(this, Rz, !1), this.rotation = ((0, Ez.j)(this, Kz), (0, Ez.j)(this, wz, void 0)), this.rotationQuaternion = (0, Ez.j)(this, Xz), this.speed = (0, Ez.j)(this, fz, 2), this.noRotationConstraint = ((0, Ez.j)(this, sz), !1), this.invertRotation = !1, this.inverseRotationSpeed = .2, this._panningEpsilon = Mz.b, this._rotationEpsilon = Mz.b, this.lockedTarget = (0, Ez.j)(this, rz, null), this._currentTarget = ((0, Ez.j)(this, oz), lz.n.Zero()), this._initialFocalDistance = 1, this._viewMatrix = lz.d.Zero(), this._cameraTransformMatrix = lz.d.Zero(), this._cameraRotationMatrix = lz.d.Zero(), this._transformedReferencePoint = lz.n.Zero(), this._deferredPositionUpdate = new lz.n, this._deferredRotationQuaternionUpdate = new lz.h, this._deferredRotationUpdate = new lz.n, this._deferredUpdated = !1, this._deferOnly = !1, this._cachedRotationZ = 0, this._cachedQuaternionRotationZ = 0, this._referencePoint = lz.n.Forward(this.XT().useRightHandedSystem), this.rotation = new lz.n(0, this.XT().useRightHandedSystem ? Math.PI : 0, 0), this.movement = new dz(this.XT(), this.position), this.movement.panInertia = this.inertia, this.movement.rotationInertia = this.inertia
           }
-          set colorGradingTexture(TT) {
-            this._colorGradingTexture !== TT && (this._colorGradingTexture = TT, this._updateParameters())
+          getFrontPosition(zz) {
+            this.getWorldMatrix();
+            const uz = lz.l.ER[0],
+              bz = lz.l.ER[1];
+            return bz.set(0, 0, this._scene.useRightHandedSystem ? -1 : 1), this.getDirectionToRef(bz, uz), uz.scaleInPlace(zz), this.globalPosition.add(uz)
           }
-          get colorGradingEnabled() {
-            return this._colorGradingEnabled
+          _getLockedTargetPosition() {
+            if (!this.lockedTarget) return null;
+            if (this.lockedTarget.absolutePosition) {
+              const zz = this.lockedTarget;
+              zz.computeWorldMatrix().getTranslationToRef(zz.absolutePosition)
+            }
+            return this.lockedTarget.absolutePosition || this.lockedTarget
           }
-          set colorGradingEnabled(TT) {
-            this._colorGradingEnabled !== TT && (this._colorGradingEnabled = TT, this._updateParameters())
+          storeState() {
+            return this._storedPosition = this.position.clone(), this._storedRotation = this.rotation.clone(), this.rotationQuaternion && (this._storedRotationQuaternion = this.rotationQuaternion.clone()), super.storeState()
           }
-          get colorGradingWithGreenDepth() {
-            return this._colorGradingWithGreenDepth
+          _restoreStateValues() {
+            return !!super._restoreStateValues() && (this.position = this._storedPosition.clone(), this.rotation = this._storedRotation.clone(), this.rotationQuaternion && this._storedRotationQuaternion && (this.rotationQuaternion = this._storedRotationQuaternion.clone()), this.cameraDirection.P_(0, 0, 0), this.cameraRotation.P_(0, 0), !0)
           }
-          set colorGradingWithGreenDepth(TT) {
-            this._colorGradingWithGreenDepth !== TT && (this._colorGradingWithGreenDepth = TT, this._updateParameters())
+          _initCache() {
+            super._initCache(), this._cache.lockedTarget = new lz.n(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.rotation = new lz.n(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.rotationQuaternion = new lz.h(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE)
           }
-          get colorGradingBGR() {
-            return this._colorGradingBGR
+          _updateCache(zz) {
+            zz || super._updateCache();
+            const uz = this._getLockedTargetPosition();
+            uz ? this._cache.lockedTarget ? this._cache.lockedTarget.euz(uz) : this._cache.lockedTarget = uz.clone() : this._cache.lockedTarget = null, this._cache.rotation.euz(this.rotation), this.rotationQuaternion && this._cache.rotationQuaternion.euz(this.rotationQuaternion)
           }
-          set colorGradingBGR(TT) {
-            this._colorGradingBGR !== TT && (this._colorGradingBGR = TT, this._updateParameters())
+          _isSynchronizedViewMatrix() {
+            if (!super._isSynchronizedViewMatrix()) return !1;
+            const zz = this._getLockedTargetPosition();
+            return (this._cache.lockedTarget ? this._cache.lockedTarget.equals(zz) : !zz) && (this.rotationQuaternion ? this.rotationQuaternion.equals(this._cache.rotationQuaternion) : this._cache.rotation.equals(this.rotation))
           }
-          get exposure() {
-            return this._exposure
+          _computeLocalCameraSpeed() {
+            const zz = this.uR();
+            return this.speed * Math.sqrt(zz.getDeltaTime() / (100 * zz.getFps()))
           }
-          set exposure(TT) {
-            this._exposure !== TT && (this._exposure = TT, this._updateParameters())
+          setTarget(zz) {
+            this.upVector.normalize(), this._initialFocalDistance = zz.subtract(this.position).length(), this.position.z === zz.z && (this.position.z += Mz.b), this._referencePoint.normalize().scaleInPlace(this._initialFocalDistance), this.XT().useRightHandedSystem ? lz.d.LookAtRHToRef(this.position, zz, lz.n.UpReadOnly, Fz) : lz.d.LookAtLHToRef(this.position, zz, lz.n.UpReadOnly, Fz), Fz.invert();
+            const uz = this.rotationQuaternion || Zz;
+            lz.h.FromRotationMatrixToRef(Fz, uz), uz.toEulerAnglesToRef(this.rotation), this.rotation.z = 0
           }
-          get toneMappingEnabled() {
-            return this._toneMappingEnabled
+          get target() {
+            return this.getTarget()
           }
-          set toneMappingEnabled(TT) {
-            this._toneMappingEnabled !== TT && (this._toneMappingEnabled = TT, this._updateParameters())
+          set target(zz) {
+            this.setTarget(zz)
           }
-          get toneMappingType() {
-            return this._toneMappingType
+          getTarget() {
+            return this._currentTarget
           }
-          set toneMappingType(TT) {
-            this._toneMappingType !== TT && (this._toneMappingType = TT, this._updateParameters())
+          _decideIfNeedsToMove() {
+            return Math.abs(this.cameraDirection.x) > 0 || Math.abs(this.cameraDirection.y) > 0 || Math.abs(this.cameraDirection.z) > 0
           }
-          get contrast() {
-            return this._contrast
+          _updatePosition() {
+            if (this.parent) return this.parent.getWorldMatrix().invertToRef(lz.l.Matrix[0]), lz.n.TransformNormalToRef(this.cameraDirection, lz.l.Matrix[0], lz.l.ER[0]), this._deferredPositionUpdate.addInPlace(lz.l.ER[0]), void(this._deferOnly ? this._deferredUpdated = !0 : this.position.euz(this._deferredPositionUpdate));
+            this._deferredPositionUpdate.addInPlace(this.cameraDirection), this._deferOnly ? this._deferredUpdated = !0 : this.position.euz(this._deferredPositionUpdate)
           }
-          set contrast(TT) {
-            this._contrast !== TT && (this._contrast = TT, this._updateParameters())
+          _checkInputs() {
+            const zz = this.movement,
+              uz = 0 !== this.cameraDirection.x || 0 !== this.cameraDirection.y || 0 !== this.cameraDirection.z;
+            zz.panAccumulatedPixels.addInPlace(this.cameraDirection), zz.rotationAccumulatedPixels.x += this.cameraRotation.x, zz.rotationAccumulatedPixels.y += this.cameraRotation.y, zz.computeCurrentFrameDeltas(), this.cameraDirection.euz(zz.panDeltaCurrentFrame), this.cameraRotation.set(zz.rotationDeltaCurrentFrame.x, zz.rotationDeltaCurrentFrame.y);
+            const bz = this.speed * this._panningEpsilon;
+            !uz && Math.abs(this.cameraDirection.x) < bz && Math.abs(this.cameraDirection.y) < bz && Math.abs(this.cameraDirection.z) < bz && (this.cameraDirection.Vk(0), zz.resetPanVelocity());
+            const Ez = this.invertRotation ? -this.inverseRotationSpeed : 1,
+              nz = this._decideIfNeedsToMove(),
+              iz = !(!this.cameraRotation.x && !this.cameraRotation.y);
+            if (this._deferredUpdated = !1, this._deferredRotationUpdate.euz(this.rotation), this._deferredPositionUpdate.euz(this.position), this.rotationQuaternion && this._deferredRotationQuaternionUpdate.euz(this.rotationQuaternion), nz && this._updatePosition(), iz) {
+              if (this.rotationQuaternion && this.rotationQuaternion.toEulerAnglesToRef(this._deferredRotationUpdate), this._deferredRotationUpdate.x += this.cameraRotation.x * Ez, this._deferredRotationUpdate.y += this.cameraRotation.y * Ez, !this.noRotationConstraint) {
+                const zz = 1.570796;
+                this._deferredRotationUpdate.x > zz && (this._deferredRotationUpdate.x = zz), this._deferredRotationUpdate.x < -zz && (this._deferredRotationUpdate.x = -zz)
+              }
+              if (this._deferOnly ? this._deferredUpdated = !0 : this.rotation.euz(this._deferredRotationUpdate), this.rotationQuaternion) {
+                this._deferredRotationUpdate.lengthSquared() && (lz.h.RotationYawPitchRollToRef(this._deferredRotationUpdate.y, this._deferredRotationUpdate.x, this._deferredRotationUpdate.z, this._deferredRotationQuaternionUpdate), this._deferOnly ? this._deferredUpdated = !0 : this.rotationQuaternion.euz(this._deferredRotationQuaternionUpdate))
+              }
+            }
+            this.cameraDirection.Vk(0), this.cameraRotation.set(0, 0), super._checkInputs()
           }
-          get whiteBalanceEnabled() {
-            return this._whiteBalanceEnabled
+          _updateCameraRotationMatrix() {
+            this.rotationQuaternion ? this.rotationQuaternion.toRotationMatrix(this._cameraRotationMatrix) : lz.d.RotationYawPitchRollToRef(this.rotation.y, this.rotation.x, this.rotation.z, this._cameraRotationMatrix)
           }
-          set whiteBalanceEnabled(TT) {
-            this._whiteBalanceEnabled !== TT && (this._whiteBalanceEnabled = TT, this._updateParameters())
+          _rotateUpVectorWithCameraRotationMatrix() {
+            return lz.n.TransformNormalToRef(lz.n.UpReadOnly, this._cameraRotationMatrix, this.upVector), this
           }
-          get temperature() {
-            return this._temperature
+          _getViewMatrix() {
+            return this.lockedTarget && this.setTarget(this._getLockedTargetPosition()), this._updateCameraRotationMatrix(), this.rotationQuaternion && this._cachedQuaternionRotationZ != this.rotationQuaternion.z ? (this._rotateUpVectorWithCameraRotationMatrix(), this._cachedQuaternionRotationZ = this.rotationQuaternion.z) : this._cachedRotationZ !== this.rotation.z && (this._rotateUpVectorWithCameraRotationMatrix(), this._cachedRotationZ = this.rotation.z), lz.n.TransformCoordinatesToRef(this._referencePoint, this._cameraRotationMatrix, this._transformedReferencePoint), this.position.addToRef(this._transformedReferencePoint, this._currentTarget), this.updateUpVectorFromRotation && (this.rotationQuaternion ? tz.b.Y.rotateByQuaternionToRef(this.rotationQuaternion, this.upVector) : (lz.h.FromEulerVectorToRef(this.rotation, Zz), tz.b.Y.rotateByQuaternionToRef(Zz, this.upVector))), this._computeViewMatrix(this.position, this._currentTarget, this.upVector), this._viewMatrix
           }
-          set temperature(TT) {
-            TT = Number.isNaN(TT) ? ST : Math.max(TT, ST), this._temperature !== TT && (this._temperature = TT, this._updateParameters())
+          _computeViewMatrix(zz, uz, bz) {
+            if (this.XT().useRightHandedSystem ? lz.d.LookAtRHToRef(zz, uz, bz, this._viewMatrix) : lz.d.LookAtLHToRef(zz, uz, bz, this._viewMatrix), this.parent) {
+              const zz = this.parent.getWorldMatrix();
+              this._viewMatrix.invert(), this._viewMatrix.multiplyToRef(zz, this._viewMatrix), this._viewMatrix.invert(), this._markSyncedWithParent()
+            }
           }
-          get tint() {
-            return this._tint
+          createRigCamera(uz, bz) {
+            if (this.cameraRigMode !== iz.d.RIG_MODE_NONE) {
+              const bz = new zz(uz, this.position.clone(), this.XT());
+              return bz.isRigCamera = !0, bz.rigParent = this, this.cameraRigMode === iz.d.RIG_MODE_VR && (this.rotationQuaternion || (this.rotationQuaternion = new lz.h), bz._cameraRigParams = {}, bz.rotationQuaternion = new lz.h), bz.mode = this.mode, bz.orthoLeft = this.orthoLeft, bz.orthoRight = this.orthoRight, bz.orthoTop = this.orthoTop, bz.orthoBottom = this.orthoBottom, bz
+            }
+            return null
           }
-          set tint(TT) {
-            TT = (0, XT.Clamp)(TT, -150, DT), this._tint !== TT && (this._tint = TT, this._updateParameters())
+          _updateRigCameras() {
+            const zz = this._rigCameras[0],
+              uz = this._rigCameras[1];
+            switch (this.computeWorldMatrix(), this.cameraRigMode) {
+              case iz.d.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
+              case iz.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
+              case iz.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
+              case iz.d.RIG_MODE_STEREOSCOPIC_OVERUNDER:
+              case iz.d.RIG_MODE_STEREOSCOPIC_INTERLACED: {
+                const bz = this.cameraRigMode === iz.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED ? 1 : -1,
+                  Ez = this.cameraRigMode === iz.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED ? -1 : 1;
+                this._getRigCamPositionAndTarget(this._cameraRigParams.stereoHalfAngle * bz, zz), this._getRigCamPositionAndTarget(this._cameraRigParams.stereoHalfAngle * Ez, uz);
+                break
+              }
+              case iz.d.RIG_MODE_VR:
+                zz.rotationQuaternion && uz.rotationQuaternion && this.rotationQuaternion ? (zz.rotationQuaternion.euz(this.rotationQuaternion), uz.rotationQuaternion.euz(this.rotationQuaternion)) : (zz.rotation.euz(this.rotation), uz.rotation.euz(this.rotation)), zz.position.euz(this.position), uz.position.euz(this.position)
+            }
+            super._updateRigCameras()
           }
-          _getWhiteBalanceMatrix() {
-            return null !== this._whiteBalanceMatrix && this._whiteBalanceMatrixTemperature === this._temperature && this._whiteBalanceMatrixTint === this._tint || (this._whiteBalanceMatrixTemperature = this._temperature, this._whiteBalanceMatrixTint = this._tint, this._whiteBalanceMatrix = function(TT, oT) {
-              const IT = MT(LT(TT, oT), hT),
-                iT = AT.multiply(IT).multiply(gT);
-              return BT.b.GetAsMatrix3x3(iT)
-            }(this._temperature, this._tint)), this._whiteBalanceMatrix
-          }
-          get vignetteCentreY() {
-            return this.vignetteCenterY
-          }
-          set vignetteCentreY(TT) {
-            this.vignetteCenterY = TT
-          }
-          get vignetteCentreX() {
-            return this.vignetteCenterX
-          }
-          set vignetteCentreX(TT) {
-            this.vignetteCenterX = TT
-          }
-          get vignetteBlendMode() {
-            return this._vignetteBlendMode
-          }
-          set vignetteBlendMode(TT) {
-            this._vignetteBlendMode !== TT && (this._vignetteBlendMode = TT, this._updateParameters())
-          }
-          get vignetteEnabled() {
-            return this._vignetteEnabled
-          }
-          set vignetteEnabled(TT) {
-            this._vignetteEnabled !== TT && (this._vignetteEnabled = TT, this._updateParameters())
-          }
-          get ditheringEnabled() {
-            return this._ditheringEnabled
-          }
-          set ditheringEnabled(TT) {
-            this._ditheringEnabled !== TT && (this._ditheringEnabled = TT, this._updateParameters())
-          }
-          get ditheringIntensity() {
-            return this._ditheringIntensity
-          }
-          set ditheringIntensity(TT) {
-            this._ditheringIntensity !== TT && (this._ditheringIntensity = TT, this._updateParameters())
-          }
-          get skipFinalColorClamp() {
-            return this._skipFinalColorClamp
-          }
-          set skipFinalColorClamp(TT) {
-            this._skipFinalColorClamp !== TT && (this._skipFinalColorClamp = TT, this._updateParameters())
-          }
-          get applyByPostProcess() {
-            return this._applyByPostProcess
-          }
-          set applyByPostProcess(TT) {
-            this._applyByPostProcess !== TT && (this._applyByPostProcess = TT, this._updateParameters())
-          }
-          get isEnabled() {
-            return this._isEnabled
-          }
-          set isEnabled(TT) {
-            this._isEnabled !== TT && (this._isEnabled = TT, this._updateParameters())
-          }
-          _updateParameters() {
-            this.onUpdateParameters.notifyObservers(this)
+          _getRigCamPositionAndTarget(uz, bz) {
+            this.getTarget().subtractToRef(this.position, zz._TargetFocalPoint), zz._TargetFocalPoint.normalize().scaleInPlace(this._initialFocalDistance);
+            const Ez = zz._TargetFocalPoint.addInPlace(this.position);
+            lz.d.TranslationToRef(-Ez.x, -Ez.y, -Ez.z, zz._TargetTransformMatrix), zz._TargetTransformMatrix.multiplyToRef(lz.d.RotationAxis(bz.upVector, uz), zz._RigCamTransformMatrix), lz.d.TranslationToRef(Ez.x, Ez.y, Ez.z, zz._TargetTransformMatrix), zz._RigCamTransformMatrix.multiplyToRef(zz._TargetTransformMatrix, zz._RigCamTransformMatrix), lz.n.TransformCoordinatesToRef(this.position, zz._RigCamTransformMatrix, bz.position), bz.setTarget(Ez)
           }
           getClassName() {
-            return "ImageProcessingConfiguration"
-          }
-          prepareDefines(oT) {
-            if ((arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) !== this.applyByPostProcess || !this._isEnabled) return oT.WHITEBALANCE = !1, oT.VIGNETTE = !1, oT.TONEMAPPING = 0, oT.CONTRAST = !1, oT.EXPOSURE = !1, oT.COLORCURVES = !1, oT.COLORGRADING = !1, oT.COLORGRADING3D = !1, oT.DITHER = !1, oT.IMAGEPROCESSING = !1, oT.SKIPFINALCOLORCLAMP = this.skipFinalColorClamp, void(oT.IMAGEPROCESSINGPOSTPROCESS = this.applyByPostProcess && this._isEnabled);
-            if (oT.WHITEBALANCE = this._whiteBalanceEnabled, oT.VIGNETTE = this.vignetteEnabled, oT.VIGNETTEBLENDMODEMULTIPLY = this.vignetteBlendMode === TT._VIGNETTEMODE_MULTIPLY, oT.VIGNETTEBLENDMODEOPAQUE = !oT.VIGNETTEBLENDMODEMULTIPLY, this._toneMappingEnabled) switch (this._toneMappingType) {
-              case TT.TONEMAPPING_KHR_PBR_NEUTRAL:
-                oT.TONEMAPPING = 3;
-                break;
-              case TT.TONEMAPPING_ACES:
-                oT.TONEMAPPING = 2;
-                break;
-              default:
-                oT.TONEMAPPING = 1
-            } else oT.TONEMAPPING = 0;
-            oT.CONTRAST = 1 !== this.contrast, oT.EXPOSURE = 1 !== this.exposure, oT.COLORCURVES = this.colorCurvesEnabled && !!this.colorCurves, oT.COLORGRADING = this.colorGradingEnabled && !!this.colorGradingTexture, oT.COLORGRADING ? oT.COLORGRADING3D = this.colorGradingTexture.is3D : oT.COLORGRADING3D = !1, oT.SAMPLER3DGREENDEPTH = this.colorGradingWithGreenDepth, oT.SAMPLER3DBGRMAP = this.colorGradingBGR, oT.DITHER = this._ditheringEnabled, oT.IMAGEPROCESSINGPOSTPROCESS = this.applyByPostProcess, oT.SKIPFINALCOLORCLAMP = this.skipFinalColorClamp, oT.IMAGEPROCESSING = oT.WHITEBALANCE || oT.VIGNETTE || !!oT.TONEMAPPING || oT.CONTRAST || oT.EXPOSURE || oT.COLORCURVES || oT.COLORGRADING || oT.DITHER
-          }
-          isReady() {
-            return !this.colorGradingEnabled || !this.colorGradingTexture || this.colorGradingTexture.isReady()
-          }
-          bind(TT, oT) {
-            if (this._whiteBalanceEnabled && TT.setMatrix3x3("whiteBalanceMatrix", this._getWhiteBalanceMatrix()), this._colorCurvesEnabled && this.colorCurves && RT(this.colorCurves, TT), this._vignetteEnabled || this._ditheringEnabled) {
-              const IT = 1 / (this.outputTextureWidth || TT.Zc().getRenderWidth()),
-                iT = 1 / (this.outputTextureHeight || TT.Zc().getRenderHeight());
-              if (TT.setFloat2("vInverseScreenSize", IT, iT), this._ditheringEnabled && TT.setFloat("ditherIntensity", .5 * this._ditheringIntensity), this._vignetteEnabled) {
-                const zT = null != oT ? oT : iT / IT;
-                let kT = Math.tan(.5 * this.vignetteCameraFov),
-                  WT = kT * zT;
-                const XT = Math.sqrt(WT * kT);
-                WT = (0, uT.k)(WT, XT, this.vignetteStretch), kT = (0, uT.k)(kT, XT, this.vignetteStretch), TT.setFloat4("vignetteSettings1", WT, kT, -WT * this.vignetteCenterX, -kT * this.vignetteCenterY);
-                const BT = -2 * this.vignetteWeight;
-                TT.setFloat4("vignetteSettings2", this.vignetteColor.r, this.vignetteColor.g, this.vignetteColor.b, BT)
-              }
-            }
-            if (TT.setFloat("exposureLinear", this.exposure), TT.setFloat("contrast", this.contrast), this.colorGradingTexture) {
-              TT.setTexture("txColorTransform", this.colorGradingTexture);
-              const oT = this.colorGradingTexture.getSize().height;
-              TT.setFloat4("colorTransformSettings", (oT - 1) / oT, .5 / oT, oT, this.colorGradingTexture.level)
-            }
-          }
-          clone() {
-            return wT.c.Clone((() => new TT), this)
-          }
-          serialize() {
-            return wT.c.Serialize(this)
-          }
-          static get VIGNETTEMODE_MULTIPLY() {
-            return this._VIGNETTEMODE_MULTIPLY
-          }
-          static get VIGNETTEMODE_OPAQUE() {
-            return this._VIGNETTEMODE_OPAQUE
+            return "TargetCamera"
           }
         }, (() => {
-          const kT = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          oT = [(0, zT.m)()], IT = [(0, zT.P)()], FT = [(0, zT.H)("colorGradingTexture")], xT = [(0, zT.P)()], cT = [(0, zT.P)()], KT = [(0, zT.P)()], rT = [(0, zT.P)()], mT = [(0, zT.P)()], ET = [(0, zT.P)()], fT = [(0, zT.P)()], CT = [(0, zT.P)()], jT = [(0, zT.P)()], JT = [(0, zT.P)()], UT = [(0, zT.P)()], aT = [(0, zT.P)()], YT = [(0, zT.P)()], QT = [(0, zT.P)()], OT = [(0, zT.u)()], HT = [(0, zT.P)()], nT = [(0, zT.P)()], qT = [(0, zT.P)()], ZT = [(0, zT.P)()], lT = [(0, zT.P)()], sT = [(0, zT.P)()], tT = [(0, zT.P)()], GT = [(0, zT.P)()], pT = [(0, zT.P)()], bT = [(0, zT.P)()], (0, iT.h)(null, null, oT, {
+          const iz = "function" === typeof Symbol && Symbol.metadata ? Object.create(pz[Symbol.metadata] ?? null) : void 0;
+          uz = [(0, nz.G)()], bz = [(0, nz.D)()], Hz = [(0, nz.G)()], Oz = [(0, nz.y)("lockedTargetId")], (0, Ez.h)(null, null, uz, {
             kind: "field",
-            name: "colorCurves",
+            name: "updateUpVectorFromRotation",
             static: !1,
             private: !1,
             access: {
-              has: TT => "colorCurves" in TT,
-              get: TT => TT.colorCurves,
-              set: (TT, oT) => {
-                TT.colorCurves = oT
+              has: zz => "updateUpVectorFromRotation" in zz,
+              get: zz => zz.updateUpVectorFromRotation,
+              set: (zz, uz) => {
+                zz.updateUpVectorFromRotation = uz
               }
             },
-            metadata: kT
-          }, yT, NT), (0, iT.h)(null, null, IT, {
+            metadata: iz
+          }, Rz, Kz), (0, Ez.h)(null, null, bz, {
             kind: "field",
-            name: "_colorCurvesEnabled",
+            name: "rotation",
             static: !1,
             private: !1,
             access: {
-              has: TT => "_colorCurvesEnabled" in TT,
-              get: TT => TT._colorCurvesEnabled,
-              set: (TT, oT) => {
-                TT._colorCurvesEnabled = oT
+              has: zz => "rotation" in zz,
+              get: zz => zz.rotation,
+              set: (zz, uz) => {
+                zz.rotation = uz
               }
             },
-            metadata: kT
-          }, PT, dT), (0, iT.h)(null, null, FT, {
+            metadata: iz
+          }, wz, Xz), (0, Ez.h)(null, null, Hz, {
             kind: "field",
-            name: "_colorGradingTexture",
+            name: "speed",
             static: !1,
             private: !1,
             access: {
-              has: TT => "_colorGradingTexture" in TT,
-              get: TT => TT._colorGradingTexture,
-              set: (TT, oT) => {
-                TT._colorGradingTexture = oT
+              has: zz => "speed" in zz,
+              get: zz => zz.speed,
+              set: (zz, uz) => {
+                zz.speed = uz
               }
             },
-            metadata: kT
-          }, VT, To), (0, iT.h)(null, null, xT, {
+            metadata: iz
+          }, fz, sz), (0, Ez.h)(null, null, Oz, {
             kind: "field",
-            name: "_colorGradingEnabled",
+            name: "lockedTarget",
             static: !1,
             private: !1,
             access: {
-              has: TT => "_colorGradingEnabled" in TT,
-              get: TT => TT._colorGradingEnabled,
-              set: (TT, oT) => {
-                TT._colorGradingEnabled = oT
+              has: zz => "lockedTarget" in zz,
+              get: zz => zz.lockedTarget,
+              set: (zz, uz) => {
+                zz.lockedTarget = uz
               }
             },
-            metadata: kT
-          }, oo, Io), (0, iT.h)(null, null, cT, {
-            kind: "field",
-            name: "_colorGradingWithGreenDepth",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_colorGradingWithGreenDepth" in TT,
-              get: TT => TT._colorGradingWithGreenDepth,
-              set: (TT, oT) => {
-                TT._colorGradingWithGreenDepth = oT
-              }
-            },
-            metadata: kT
-          }, io, zo), (0, iT.h)(null, null, KT, {
-            kind: "field",
-            name: "_colorGradingBGR",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_colorGradingBGR" in TT,
-              get: TT => TT._colorGradingBGR,
-              set: (TT, oT) => {
-                TT._colorGradingBGR = oT
-              }
-            },
-            metadata: kT
-          }, ko, Wo), (0, iT.h)(null, null, rT, {
-            kind: "field",
-            name: "_exposure",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_exposure" in TT,
-              get: TT => TT._exposure,
-              set: (TT, oT) => {
-                TT._exposure = oT
-              }
-            },
-            metadata: kT
-          }, Xo, Bo), (0, iT.h)(null, null, mT, {
-            kind: "field",
-            name: "_toneMappingEnabled",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_toneMappingEnabled" in TT,
-              get: TT => TT._toneMappingEnabled,
-              set: (TT, oT) => {
-                TT._toneMappingEnabled = oT
-              }
-            },
-            metadata: kT
-          }, Fo, So), (0, iT.h)(null, null, ET, {
-            kind: "field",
-            name: "_toneMappingType",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_toneMappingType" in TT,
-              get: TT => TT._toneMappingType,
-              set: (TT, oT) => {
-                TT._toneMappingType = oT
-              }
-            },
-            metadata: kT
-          }, Do, Lo), (0, iT.h)(null, null, fT, {
-            kind: "field",
-            name: "_contrast",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_contrast" in TT,
-              get: TT => TT._contrast,
-              set: (TT, oT) => {
-                TT._contrast = oT
-              }
-            },
-            metadata: kT
-          }, xo, co), (0, iT.h)(null, null, CT, {
-            kind: "field",
-            name: "_whiteBalanceEnabled",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_whiteBalanceEnabled" in TT,
-              get: TT => TT._whiteBalanceEnabled,
-              set: (TT, oT) => {
-                TT._whiteBalanceEnabled = oT
-              }
-            },
-            metadata: kT
-          }, Ko, Mo), (0, iT.h)(null, null, jT, {
-            kind: "field",
-            name: "_temperature",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_temperature" in TT,
-              get: TT => TT._temperature,
-              set: (TT, oT) => {
-                TT._temperature = oT
-              }
-            },
-            metadata: kT
-          }, ro, Ao), (0, iT.h)(null, null, JT, {
-            kind: "field",
-            name: "_tint",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_tint" in TT,
-              get: TT => TT._tint,
-              set: (TT, oT) => {
-                TT._tint = oT
-              }
-            },
-            metadata: kT
-          }, go, ho), (0, iT.h)(null, null, UT, {
-            kind: "field",
-            name: "vignetteStretch",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "vignetteStretch" in TT,
-              get: TT => TT.vignetteStretch,
-              set: (TT, oT) => {
-                TT.vignetteStretch = oT
-              }
-            },
-            metadata: kT
-          }, wo, mo), (0, iT.h)(null, null, aT, {
-            kind: "field",
-            name: "vignetteCenterX",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "vignetteCenterX" in TT,
-              get: TT => TT.vignetteCenterX,
-              set: (TT, oT) => {
-                TT.vignetteCenterX = oT
-              }
-            },
-            metadata: kT
-          }, eo, Ro), (0, iT.h)(null, null, YT, {
-            kind: "field",
-            name: "vignetteCenterY",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "vignetteCenterY" in TT,
-              get: TT => TT.vignetteCenterY,
-              set: (TT, oT) => {
-                TT.vignetteCenterY = oT
-              }
-            },
-            metadata: kT
-          }, uo, vo), (0, iT.h)(null, null, QT, {
-            kind: "field",
-            name: "vignetteWeight",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "vignetteWeight" in TT,
-              get: TT => TT.vignetteWeight,
-              set: (TT, oT) => {
-                TT.vignetteWeight = oT
-              }
-            },
-            metadata: kT
-          }, Eo, fo), (0, iT.h)(null, null, OT, {
-            kind: "field",
-            name: "vignetteColor",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "vignetteColor" in TT,
-              get: TT => TT.vignetteColor,
-              set: (TT, oT) => {
-                TT.vignetteColor = oT
-              }
-            },
-            metadata: kT
-          }, Co, jo), (0, iT.h)(null, null, HT, {
-            kind: "field",
-            name: "vignetteCameraFov",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "vignetteCameraFov" in TT,
-              get: TT => TT.vignetteCameraFov,
-              set: (TT, oT) => {
-                TT.vignetteCameraFov = oT
-              }
-            },
-            metadata: kT
-          }, Jo, Uo), (0, iT.h)(null, null, nT, {
-            kind: "field",
-            name: "_vignetteBlendMode",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_vignetteBlendMode" in TT,
-              get: TT => TT._vignetteBlendMode,
-              set: (TT, oT) => {
-                TT._vignetteBlendMode = oT
-              }
-            },
-            metadata: kT
-          }, ao, Yo), (0, iT.h)(null, null, qT, {
-            kind: "field",
-            name: "_vignetteEnabled",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_vignetteEnabled" in TT,
-              get: TT => TT._vignetteEnabled,
-              set: (TT, oT) => {
-                TT._vignetteEnabled = oT
-              }
-            },
-            metadata: kT
-          }, Qo, Oo), (0, iT.h)(null, null, ZT, {
-            kind: "field",
-            name: "_ditheringEnabled",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_ditheringEnabled" in TT,
-              get: TT => TT._ditheringEnabled,
-              set: (TT, oT) => {
-                TT._ditheringEnabled = oT
-              }
-            },
-            metadata: kT
-          }, Ho, no), (0, iT.h)(null, null, lT, {
-            kind: "field",
-            name: "_ditheringIntensity",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_ditheringIntensity" in TT,
-              get: TT => TT._ditheringIntensity,
-              set: (TT, oT) => {
-                TT._ditheringIntensity = oT
-              }
-            },
-            metadata: kT
-          }, qo, Zo), (0, iT.h)(null, null, sT, {
-            kind: "field",
-            name: "_skipFinalColorClamp",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_skipFinalColorClamp" in TT,
-              get: TT => TT._skipFinalColorClamp,
-              set: (TT, oT) => {
-                TT._skipFinalColorClamp = oT
-              }
-            },
-            metadata: kT
-          }, so, to), (0, iT.h)(null, null, tT, {
-            kind: "field",
-            name: "_applyByPostProcess",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_applyByPostProcess" in TT,
-              get: TT => TT._applyByPostProcess,
-              set: (TT, oT) => {
-                TT._applyByPostProcess = oT
-              }
-            },
-            metadata: kT
-          }, Go, po), (0, iT.h)(null, null, GT, {
-            kind: "field",
-            name: "_isEnabled",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "_isEnabled" in TT,
-              get: TT => TT._isEnabled,
-              set: (TT, oT) => {
-                TT._isEnabled = oT
-              }
-            },
-            metadata: kT
-          }, bo, yo), (0, iT.h)(null, null, pT, {
-            kind: "field",
-            name: "outputTextureWidth",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "outputTextureWidth" in TT,
-              get: TT => TT.outputTextureWidth,
-              set: (TT, oT) => {
-                TT.outputTextureWidth = oT
-              }
-            },
-            metadata: kT
-          }, No, Po), (0, iT.h)(null, null, bT, {
-            kind: "field",
-            name: "outputTextureHeight",
-            static: !1,
-            private: !1,
-            access: {
-              has: TT => "outputTextureHeight" in TT,
-              get: TT => TT.outputTextureHeight,
-              set: (TT, oT) => {
-                TT.outputTextureHeight = oT
-              }
-            },
-            metadata: kT
-          }, Vo, TI), kT && Object.defineProperty(TT, Symbol.metadata, {
+            metadata: iz
+          }, rz, oz), iz && Object.defineProperty(zz, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: kT
+            value: iz
           })
-        })(), TT.TONEMAPPING_STANDARD = 0, TT.TONEMAPPING_ACES = 1, TT.TONEMAPPING_KHR_PBR_NEUTRAL = 2, TT.PrepareUniforms = vT.e, TT.PrepareSamplers = vT.d, TT._VIGNETTEMODE_MULTIPLY = 0, TT._VIGNETTEMODE_OPAQUE = 1, TT
+        })(), zz._RigCamTransformMatrix = new lz.d, zz._TargetTransformMatrix = new lz.d, zz._TargetFocalPoint = new lz.n, zz
       })(),
-      CT = !1;
+      Kz = !1;
 
-    function jT(TT) {
-      const oT = wT.c.Parse((() => new fT), TT, null, null);
-      return void 0 !== TT.vignetteCentreX && (oT.vignetteCenterX = TT.vignetteCentreX), void 0 !== TT.vignetteCentreY && (oT.vignetteCenterY = TT.vignetteCentreY), oT
-    }
-
-    function JT() {
-      CT || (CT = !0, fT.Parse = jT, wT.c._ImageProcessingConfigurationParser = jT, (0, ET.h)("BABYLON.ImageProcessingConfiguration", fT))
+    function wz() {
+      Kz || (Kz = !0, Hz.c.AddNodeConstructor("TargetCamera", ((zz, uz) => () => new Rz(zz, lz.n.Zero(), uz))))
     }
   },
-  38911: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => kT
+  39140: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz
     });
-    var iT = IT(37660),
-      zT = IT(38886);
-    class kT {
-      constructor(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          iT = arguments.length > 3 ? arguments[3] : void 0,
-          zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          kT = arguments.length > 5 ? arguments[5] : void 0;
-        this._uniformNames = [], this._valueCache = {}, this._engine = TT, this._noUBO = !TT.supportsUniformBuffers || zT, this._dynamic = IT, this._name = iT ?? "no-name", this._data = oT || [], this._uniformLocations = {}, this._uniformSizes = {}, this._uniformArraySizes = {}, this._uniformLocationPointer = 0, this._needSync = !1, this._dataGeneration = 0, this._trackUBOsInFrame = !1, (void 0 === kT && this._engine._features.trackUbosInFrame || !0 === kT) && (this._buffers = [], this._bufferIndex = -1, this._bufferUpdatedLastFrame = !1, this._createBufferOnWrite = !1, this._currentFrameId = 0, this._trackUBOsInFrame = !0, this._resetOwnerSlots()), this._noUBO ? (this.updateMatrix3x3 = this._updateMatrix3x3ForEffect, this.updateMatrix2x2 = this._updateMatrix2x2ForEffect, this.updateFloat = this._updateFloatForEffect, this.updateFloat2 = this._updateFloat2ForEffect, this.updateFloat3 = this._updateFloat3ForEffect, this.updateFloat4 = this._updateFloat4ForEffect, this.updateFloatArray = this._updateFloatArrayForEffect, this.updateArray = this._updateArrayForEffect, this.updateIntArray = this._updateIntArrayForEffect, this.updateUIntArray = this._updateUIntArrayForEffect, this.Y1 = this._updateMatrixForEffect, this.updateMatrices = this._updateMatricesForEffect, this.updateVector3 = this._updateVector3ForEffect, this.updateVector4 = this._updateVector4ForEffect, this.updateColor3 = this._updateColor3ForEffect, this.updateColor4 = this._updateColor4ForEffect, this.updateDirectColor4 = this._updateDirectColor4ForEffect, this.updateInt = this._updateIntForEffect, this.updateInt2 = this._updateInt2ForEffect, this.updateInt3 = this._updateInt3ForEffect, this.updateInt4 = this._updateInt4ForEffect, this.updateUInt = this._updateUIntForEffect, this.updateUInt2 = this._updateUInt2ForEffect, this.updateUInt3 = this._updateUInt3ForEffect, this.updateUInt4 = this._updateUInt4ForEffect) : (this._engine._uniformBuffers.push(this), this.updateMatrix3x3 = this._updateMatrix3x3ForUniform, this.updateMatrix2x2 = this._updateMatrix2x2ForUniform, this.updateFloat = this._updateFloatForUniform, this.updateFloat2 = this._updateFloat2ForUniform, this.updateFloat3 = this._updateFloat3ForUniform, this.updateFloat4 = this._updateFloat4ForUniform, this.updateFloatArray = this._updateFloatArrayForUniform, this.updateArray = this._updateArrayForUniform, this.updateIntArray = this._updateIntArrayForUniform, this.updateUIntArray = this._updateUIntArrayForUniform, this.Y1 = this._updateMatrixForUniform, this.updateMatrices = this._updateMatricesForUniform, this.updateVector3 = this._updateVector3ForUniform, this.updateVector4 = this._updateVector4ForUniform, this.updateColor3 = this._updateColor3ForUniform, this.updateColor4 = this._updateColor4ForUniform, this.updateDirectColor4 = this._updateDirectColor4ForUniform, this.updateInt = this._updateIntForUniform, this.updateInt2 = this._updateInt2ForUniform, this.updateInt3 = this._updateInt3ForUniform, this.updateInt4 = this._updateInt4ForUniform, this.updateUInt = this._updateUIntForUniform, this.updateUInt2 = this._updateUInt2ForUniform, this.updateUInt3 = this._updateUInt3ForUniform, this.updateUInt4 = this._updateUInt4ForUniform)
-      }
-      get useUbo() {
-        return !this._noUBO
-      }
-      get isSync() {
-        return !this._needSync
-      }
-      isDynamic() {
-        return this._dynamic
-      }
-      getData() {
-        return this._bufferData
-      }
-      getBuffer() {
-        return this._buffer
-      }
-      getUniformNames() {
-        return this._uniformNames
-      }
-      _fillAlignment(TT) {
-        let oT;
-        if (oT = TT <= 2 ? TT : 4, this._uniformLocationPointer % oT !== 0) {
-          const TT = this._uniformLocationPointer;
-          this._uniformLocationPointer += oT - this._uniformLocationPointer % oT;
-          const IT = this._uniformLocationPointer - TT;
-          for (let oT = 0; oT < IT; oT++) this._data.push(0)
-        }
-      }
-      addUniform(TT, oT) {
-        let IT, iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (iT > 0 && "number" === typeof oT && (this._uniformArraySizes[TT] = {
-            strideSize: oT,
-            arraySize: iT
-          }), void 0 === this._uniformLocations[TT] && (this._uniformNames.push(TT), !this._noUBO)) {
-          if (iT > 0) {
-            if (oT instanceof Array) throw "addUniform should not be use with Array in UBO: " + TT;
-            if (this._fillAlignment(4), 16 == oT) oT *= iT;
-            else {
-              oT = oT * iT + (4 - oT) * iT
-            }
-            IT = [];
-            for (let TT = 0; TT < oT; TT++) IT.push(0)
-          } else {
-            if (oT instanceof Array) IT = oT, oT = IT.length;
-            else {
-              IT = [];
-              for (let TT = 0; TT < oT; TT++) IT.push(0)
-            }
-            this._fillAlignment(oT)
-          }
-          this._uniformSizes[TT] = oT, this._uniformLocations[TT] = this._uniformLocationPointer, this._uniformLocationPointer += oT;
-          for (let TT = 0; TT < oT; TT++) this._data.push(IT[TT]);
-          this._needSync = !0
-        }
-      }
-      addMatrix(TT, oT) {
-        this.addUniform(TT, Array.prototype.slice.call(oT.bIT()))
-      }
-      addFloat2(TT, oT, IT) {
-        const iT = [oT, IT];
-        this.addUniform(TT, iT)
-      }
-      addFloat3(TT, oT, IT, iT) {
-        const zT = [oT, IT, iT];
-        this.addUniform(TT, zT)
-      }
-      addColor3(TT, oT) {
-        const IT = [oT.r, oT.g, oT.b];
-        this.addUniform(TT, IT)
-      }
-      addColor4(TT, oT, IT) {
-        const iT = [oT.r, oT.g, oT.b, IT];
-        this.addUniform(TT, iT)
-      }
-      addVector3(TT, oT) {
-        const IT = [oT.x, oT.y, oT.z];
-        this.addUniform(TT, IT)
-      }
-      addMatrix3x3(TT) {
-        this.addUniform(TT, 12)
-      }
-      addMatrix2x2(TT) {
-        this.addUniform(TT, 8)
-      }
-      create() {
-        this._noUBO || this._buffer || (this._fillAlignment(4), this._bufferData = new Float32Array(this._data), this._dataGeneration++, this._rebuild(), this._needSync = !0)
-      }
-      _getNamesDebug() {
-        const TT = [];
-        let oT = 0;
-        for (const IT in this._uniformLocations)
-          if (TT.push(IT), 10 === ++oT) break;
-        return TT.join(",")
-      }
-      _rebuild() {
-        !this._noUBO && this._bufferData && (this._dynamic ? this._buffer = this._engine.createDynamicUniformBuffer(this._bufferData, this._name + "_UniformList:" + this._getNamesDebug()) : this._buffer = this._engine.createUniformBuffer(this._bufferData, this._name + "_UniformList:" + this._getNamesDebug()), this._trackUBOsInFrame && (this._buffers.push([this._buffer, this._engine._features.checkUbosContentBeforeUpload ? this._bufferData.slice() : void 0]), this._bufferIndex = this._buffers.length - 1, this._createBufferOnWrite = !1))
-      }
-      _rebuildAfterContextLost() {
-        this._trackUBOsInFrame && (this._buffers = [], this._currentFrameId = 0, this._resetOwnerSlots()), this._rebuild()
-      }
-      _resetOwnerSlots() {
-        if (this._ownerListsBySlot)
-          for (const TT of this._ownerListsBySlot.values()) this._removeOwnerBacklink(TT);
-        this._ownerListsBySlot = new Map, this._slotByOwner = new WeakMap, this._slotFrameId = [], this._ownerCount = 0, this._freeSlots = [], this._slotGeneration = []
-      }
-      get _numBuffers() {
-        return this._buffers.length
-      }
-      get _indexBuffer() {
-        return this._bufferIndex
-      }
-      get name() {
-        return this._name
-      }
-      set name(TT) {
-        this._name = TT
-      }
-      get currentEffect() {
-        return this._currentEffect
-      }
-      _buffersEqual(TT, oT) {
-        for (let IT = 0; IT < TT.length; ++IT)
-          if (TT[IT] !== oT[IT]) return !1;
-        return !0
-      }
-      _copyBuffer(TT, oT) {
-        for (let IT = 0; IT < TT.length; ++IT) oT[IT] = TT[IT]
-      }
-      update() {
-        if (!this._noUBO)
-          if (this.bindUniformBuffer(), this._buffer)
-            if (this._dynamic || this._needSync) {
-              if (this._buffers && this._buffers.length > 1 && this._buffers[this._bufferIndex][1]) {
-                if (this._buffersEqual(this._bufferData, this._buffers[this._bufferIndex][1])) return this._needSync = !1, void(this._createBufferOnWrite = this._trackUBOsInFrame);
-                this._copyBuffer(this._bufferData, this._buffers[this._bufferIndex][1])
-              }
-              this._bufferUpdatedLastFrame = !0, this._engine.updateUniformBuffer(this._buffer, this._bufferData), this._needSync = !1, this._createBufferOnWrite = this._trackUBOsInFrame
-            } else this._createBufferOnWrite = this._trackUBOsInFrame;
-        else this.create()
-      }
-      _updateOwnerKeyed(TT) {
-        if (this._noUBO || !this._trackUBOsInFrame) return void this.update();
-        this._buffer || this.create(), this._checkNewFrame();
-        let oT = this._slotByOwner.get(TT);
-        if (void 0 === oT && (oT = 0 === this._ownerCount && 1 === this._buffers.length && 0 === this._freeSlots.length ? 0 : this._takeFreeSlot(!0), this._slotByOwner.set(TT, oT), this._ownerCount++, TT._uniformBuffersWithOwnedSlot || (TT._uniformBuffersWithOwnedSlot = []), TT._uniformBuffersWithOwnedSlot.push(this), this._ownerListsBySlot.set(oT, TT._uniformBuffersWithOwnedSlot)), this._slotGeneration[oT] === this._dataGeneration) return this._bufferIndex = oT, this._buffer = this._buffers[oT][0], this.bindUniformBuffer(), this._slotFrameId[oT] = this._currentFrameId, this._needSync = !1, void(this._createBufferOnWrite = !1);
-        const IT = this._buffers[oT][1];
-        this._slotFrameId[oT] === this._currentFrameId && IT && !this._buffersEqual(this._bufferData, IT) && (oT = this._takeFreeSlot(!1)), this._bufferIndex = oT, this._buffer = this._buffers[oT][0], this.bindUniformBuffer();
-        const iT = this._buffers[oT][1];
-        iT && this._buffersEqual(this._bufferData, iT) || (iT && this._copyBuffer(this._bufferData, iT), this._bufferUpdatedLastFrame = !0, this._engine.updateUniformBuffer(this._buffer, this._bufferData)), this._slotFrameId[oT] = this._currentFrameId, this._slotGeneration[oT] = this._dataGeneration, this._needSync = !1, this._createBufferOnWrite = !1
-      }
-      _takeFreeSlot(TT) {
-        for (let IT = 0; IT < this._freeSlots.length; ++IT) {
-          const oT = this._freeSlots[IT];
-          if (this._slotFrameId[oT] !== this._currentFrameId) return TT && (this._freeSlots[IT] = this._freeSlots[this._freeSlots.length - 1], this._freeSlots.pop()), oT
-        }
-        this._rebuild();
-        const oT = this._buffers.length - 1;
-        return TT || this._freeSlots.push(oT), oT
-      }
-      _releaseOwnerSlot(TT) {
-        const oT = this._slotByOwner?.get(TT);
-        if (void 0 === oT) return;
-        this._slotByOwner.delete(TT);
-        const IT = this._ownerListsBySlot.get(oT);
-        IT && (this._removeOwnerBacklink(IT), this._ownerListsBySlot.delete(oT)), this._ownerCount--, this._freeSlots.push(oT)
-      }
-      _removeOwnerBacklink(TT) {
-        const oT = TT.indexOf(this); - 1 !== oT && (TT[oT] = TT[TT.length - 1], TT.pop())
-      }
-      _createNewBuffer() {
-        this._bufferIndex + 1 < this._buffers.length ? (this._bufferIndex++, this._buffer = this._buffers[this._bufferIndex][0], this._createBufferOnWrite = !1, this._needSync = !0) : this._rebuild()
-      }
-      _checkNewFrame() {
-        this._trackUBOsInFrame && this._currentFrameId !== this._engine.frameId && (this._currentFrameId = this._engine.frameId, this._createBufferOnWrite = !1, this._buffers && this._buffers.length > 0 ? (1 === this._buffers.length ? this._needSync = !this._bufferUpdatedLastFrame : this._needSync = 0 !== this._bufferIndex, this._bufferIndex = 0, this._buffer = this._buffers[this._bufferIndex][0]) : this._bufferIndex = -1)
-      }
-      updateUniform(TT, oT, IT) {
-        this._checkNewFrame();
-        let zT = this._uniformLocations[TT];
-        if (void 0 === zT) {
-          if (this._buffer) return void iT.d.Error("Cannot add an uniform after UBO has been created. uniformName=" + TT);
-          this.addUniform(TT, IT), zT = this._uniformLocations[TT]
-        }
-        if (this._buffer || this.create(), this._dynamic) {
-          for (let TT = 0; TT < IT; TT++) this._bufferData[zT + TT] = oT[TT];
-          this._dataGeneration++
-        } else {
-          let TT = !1;
-          for (let iT = 0; iT < IT; iT++)(16 === IT && !this._engine._features.uniformBufferHardCheckMatrix || this._bufferData[zT + iT] !== Math.fround(oT[iT])) && (TT = !0, this._createBufferOnWrite && this._createNewBuffer(), this._bufferData[zT + iT] = oT[iT]);
-          this._needSync = this._needSync || TT, TT && this._dataGeneration++
-        }
-      }
-      updateUniformArray(TT, oT, IT) {
-        this._checkNewFrame();
-        const kT = this._uniformLocations[TT];
-        if (void 0 === kT) return void iT.d.Error("Cannot add an uniform Array dynamically. Please, add it using addUniform and make sure that uniform buffers are supported by the current engine.");
-        this._buffer || this.create();
-        const WT = this._uniformArraySizes[TT];
-        if (this._dynamic) {
-          for (let TT = 0; TT < IT; TT++) this._bufferData[kT + TT] = oT[TT];
-          this._dataGeneration++
-        } else {
-          let TT = !1,
-            iT = 0,
-            XT = 0;
-          for (let BT = 0; BT < IT; BT++)
-            if (this._bufferData[kT + 4 * XT + iT] !== zT.i.FloatRound(oT[BT]) && (TT = !0, this._createBufferOnWrite && this._createNewBuffer(), this._bufferData[kT + 4 * XT + iT] = oT[BT]), iT++, iT === WT.strideSize) {
-              for (; iT < 4; iT++) this._bufferData[kT + 4 * XT + iT] = 0;
-              iT = 0, XT++
-            } this._needSync = this._needSync || TT, TT && this._dataGeneration++
-        }
-      }
-      _cacheMatrix(TT, oT) {
-        this._checkNewFrame();
-        const IT = this._valueCache[TT],
-          iT = oT.updateFlag;
-        return (void 0 === IT || IT !== iT) && (this._valueCache[TT] = iT, !0)
-      }
-      _updateMatrix3x3ForUniform(TT, oT) {
-        for (let IT = 0; IT < 3; IT++) kT._TempBuffer[4 * IT] = oT[3 * IT], kT._TempBuffer[4 * IT + 1] = oT[3 * IT + 1], kT._TempBuffer[4 * IT + 2] = oT[3 * IT + 2], kT._TempBuffer[4 * IT + 3] = 0;
-        this.updateUniform(TT, kT._TempBuffer, 12)
-      }
-      _updateMatrix3x3ForEffect(TT, oT) {
-        this._currentEffect.setMatrix3x3(TT, oT)
-      }
-      _updateMatrix2x2ForEffect(TT, oT) {
-        this._currentEffect.setMatrix2x2(TT, oT)
-      }
-      _updateMatrix2x2ForUniform(TT, oT) {
-        for (let IT = 0; IT < 2; IT++) kT._TempBuffer[4 * IT] = oT[2 * IT], kT._TempBuffer[4 * IT + 1] = oT[2 * IT + 1], kT._TempBuffer[4 * IT + 2] = 0, kT._TempBuffer[4 * IT + 3] = 0;
-        this.updateUniform(TT, kT._TempBuffer, 8)
-      }
-      _updateFloatForEffect(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        this._currentEffect.setFloat(TT + IT, oT)
-      }
-      _updateFloatForUniform(TT, oT) {
-        kT._TempBuffer[0] = oT, this.updateUniform(TT, kT._TempBuffer, 1)
-      }
-      _updateFloat2ForEffect(TT, oT, IT) {
-        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-        this._currentEffect.setFloat2(TT + iT, oT, IT)
-      }
-      _updateFloat2ForUniform(TT, oT, IT) {
-        kT._TempBuffer[0] = oT, kT._TempBuffer[1] = IT, this.updateUniform(TT, kT._TempBuffer, 2)
-      }
-      _updateFloat3ForEffect(TT, oT, IT, iT) {
-        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        this._currentEffect.setFloat3(TT + zT, oT, IT, iT)
-      }
-      _updateFloat3ForUniform(TT, oT, IT, iT) {
-        kT._TempBuffer[0] = oT, kT._TempBuffer[1] = IT, kT._TempBuffer[2] = iT, this.updateUniform(TT, kT._TempBuffer, 3)
-      }
-      _updateFloat4ForEffect(TT, oT, IT, iT, zT) {
-        let kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "";
-        this._currentEffect.setFloat4(TT + kT, oT, IT, iT, zT)
-      }
-      _updateFloat4ForUniform(TT, oT, IT, iT, zT) {
-        kT._TempBuffer[0] = oT, kT._TempBuffer[1] = IT, kT._TempBuffer[2] = iT, kT._TempBuffer[3] = zT, this.updateUniform(TT, kT._TempBuffer, 4)
-      }
-      _updateFloatArrayForEffect(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        switch (this._uniformArraySizes[TT]?.strideSize) {
-          case 2:
-            this._currentEffect.setFloatArray2(TT + IT, oT);
-            break;
-          case 3:
-            this._currentEffect.setFloatArray3(TT + IT, oT);
-            break;
-          case 4:
-            this._currentEffect.setFloatArray4(TT + IT, oT);
-            break;
-          default:
-            this._currentEffect.setFloatArray(TT + IT, oT)
-        }
-      }
-      _updateFloatArrayForUniform(TT, oT) {
-        this.updateUniformArray(TT, oT, oT.length)
-      }
-      _updateArrayForEffect(TT, oT) {
-        this._currentEffect.setArray(TT, oT)
-      }
-      _updateArrayForUniform(TT, oT) {
-        this.updateUniformArray(TT, oT, oT.length)
-      }
-      _updateIntArrayForEffect(TT, oT) {
-        this._currentEffect.setIntArray(TT, oT)
-      }
-      _updateIntArrayForUniform(TT, oT) {
-        kT._TempBufferInt32View.set(oT), this.updateUniformArray(TT, kT._TempBuffer, oT.length)
-      }
-      _updateUIntArrayForEffect(TT, oT) {
-        this._currentEffect.setUIntArray(TT, oT)
-      }
-      _updateUIntArrayForUniform(TT, oT) {
-        kT._TempBufferUInt32View.set(oT), this.updateUniformArray(TT, kT._TempBuffer, oT.length)
-      }
-      _updateMatrixForEffect(TT, oT) {
-        this._currentEffect.setMatrix(TT, oT)
-      }
-      _updateMatrixForUniform(TT, oT) {
-        this._cacheMatrix(TT, oT) && this.updateUniform(TT, oT.bIT(), 16)
-      }
-      _updateMatricesForEffect(TT, oT) {
-        this._currentEffect.setMatrices(TT, oT)
-      }
-      _updateMatricesForUniform(TT, oT) {
-        this.updateUniform(TT, oT, oT.length)
-      }
-      _updateVector3ForEffect(TT, oT) {
-        this._currentEffect.setVector3(TT, oT)
-      }
-      _updateVector3ForUniform(TT, oT) {
-        kT._TempBuffer[0] = oT.x, kT._TempBuffer[1] = oT.y, kT._TempBuffer[2] = oT.z, this.updateUniform(TT, kT._TempBuffer, 3)
-      }
-      _updateVector4ForEffect(TT, oT) {
-        this._currentEffect.setVector4(TT, oT)
-      }
-      _updateVector4ForUniform(TT, oT) {
-        kT._TempBuffer[0] = oT.x, kT._TempBuffer[1] = oT.y, kT._TempBuffer[2] = oT.z, kT._TempBuffer[3] = oT.w, this.updateUniform(TT, kT._TempBuffer, 4)
-      }
-      _updateColor3ForEffect(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        this._currentEffect.setColor3(TT + IT, oT)
-      }
-      _updateColor3ForUniform(TT, oT) {
-        kT._TempBuffer[0] = oT.r, kT._TempBuffer[1] = oT.g, kT._TempBuffer[2] = oT.b, this.updateUniform(TT, kT._TempBuffer, 3)
-      }
-      _updateColor4ForEffect(TT, oT, IT) {
-        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-        this._currentEffect.setColor4(TT + iT, oT, IT)
-      }
-      _updateDirectColor4ForEffect(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        this._currentEffect.setDirectColor4(TT + IT, oT)
-      }
-      _updateColor4ForUniform(TT, oT, IT) {
-        kT._TempBuffer[0] = oT.r, kT._TempBuffer[1] = oT.g, kT._TempBuffer[2] = oT.b, kT._TempBuffer[3] = IT, this.updateUniform(TT, kT._TempBuffer, 4)
-      }
-      _updateDirectColor4ForUniform(TT, oT) {
-        kT._TempBuffer[0] = oT.r, kT._TempBuffer[1] = oT.g, kT._TempBuffer[2] = oT.b, kT._TempBuffer[3] = oT.a, this.updateUniform(TT, kT._TempBuffer, 4)
-      }
-      _updateIntForEffect(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        this._currentEffect.setInt(TT + IT, oT)
-      }
-      _updateIntForUniform(TT, oT) {
-        kT._TempBufferInt32View[0] = oT, this.updateUniform(TT, kT._TempBuffer, 1)
-      }
-      _updateInt2ForEffect(TT, oT, IT) {
-        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-        this._currentEffect.setInt2(TT + iT, oT, IT)
-      }
-      _updateInt2ForUniform(TT, oT, IT) {
-        kT._TempBufferInt32View[0] = oT, kT._TempBufferInt32View[1] = IT, this.updateUniform(TT, kT._TempBuffer, 2)
-      }
-      _updateInt3ForEffect(TT, oT, IT, iT) {
-        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        this._currentEffect.setInt3(TT + zT, oT, IT, iT)
-      }
-      _updateInt3ForUniform(TT, oT, IT, iT) {
-        kT._TempBufferInt32View[0] = oT, kT._TempBufferInt32View[1] = IT, kT._TempBufferInt32View[2] = iT, this.updateUniform(TT, kT._TempBuffer, 3)
-      }
-      _updateInt4ForEffect(TT, oT, IT, iT, zT) {
-        let kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "";
-        this._currentEffect.setInt4(TT + kT, oT, IT, iT, zT)
-      }
-      _updateInt4ForUniform(TT, oT, IT, iT, zT) {
-        kT._TempBufferInt32View[0] = oT, kT._TempBufferInt32View[1] = IT, kT._TempBufferInt32View[2] = iT, kT._TempBufferInt32View[3] = zT, this.updateUniform(TT, kT._TempBuffer, 4)
-      }
-      _updateUIntForEffect(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        this._currentEffect.setUInt(TT + IT, oT)
-      }
-      _updateUIntForUniform(TT, oT) {
-        kT._TempBufferUInt32View[0] = oT, this.updateUniform(TT, kT._TempBuffer, 1)
-      }
-      _updateUInt2ForEffect(TT, oT, IT) {
-        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-        this._currentEffect.setUInt2(TT + iT, oT, IT)
-      }
-      _updateUInt2ForUniform(TT, oT, IT) {
-        kT._TempBufferUInt32View[0] = oT, kT._TempBufferUInt32View[1] = IT, this.updateUniform(TT, kT._TempBuffer, 2)
-      }
-      _updateUInt3ForEffect(TT, oT, IT, iT) {
-        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        this._currentEffect.setUInt3(TT + zT, oT, IT, iT)
-      }
-      _updateUInt3ForUniform(TT, oT, IT, iT) {
-        kT._TempBufferUInt32View[0] = oT, kT._TempBufferUInt32View[1] = IT, kT._TempBufferUInt32View[2] = iT, this.updateUniform(TT, kT._TempBuffer, 3)
-      }
-      _updateUInt4ForEffect(TT, oT, IT, iT, zT) {
-        let kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "";
-        this._currentEffect.setUInt4(TT + kT, oT, IT, iT, zT)
-      }
-      _updateUInt4ForUniform(TT, oT, IT, iT, zT) {
-        kT._TempBufferUInt32View[0] = oT, kT._TempBufferUInt32View[1] = IT, kT._TempBufferUInt32View[2] = iT, kT._TempBufferUInt32View[3] = zT, this.updateUniform(TT, kT._TempBuffer, 4)
-      }
-      setTexture(TT, oT) {
-        this._currentEffect.setTexture(TT, oT)
-      }
-      setTextureArray(TT, oT) {
-        this._currentEffect.setTextureArray(TT, oT)
-      }
-      bindTexture(TT, oT) {
-        this._currentEffect._bindTexture(TT, oT)
-      }
-      updateUniformDirectly(TT, oT) {
-        this.updateUniform(TT, oT, oT.length), this.update()
-      }
-      bindToEffect(TT, oT) {
-        this._currentEffect = TT, this._currentEffectName = oT
-      }
-      bindUniformBuffer() {
-        !this._noUBO && this._buffer && this._currentEffect && this._currentEffect.bindUniformBuffer(this._buffer, this._currentEffectName)
-      }
-      unbindEffect() {
-        this._currentEffect = void 0, this._currentEffectName = void 0
-      }
-      setDataBuffer(TT) {
-        if (!this._buffers) return this._buffer === TT;
-        for (let oT = 0; oT < this._buffers.length; ++oT) {
-          if (this._buffers[oT][0] === TT) return this._bufferIndex = oT, this._buffer = TT, this._createBufferOnWrite = !1, this._currentEffect = void 0, this._buffers.length > 1 && this._buffers[oT][1] && (this._bufferData.set(this._buffers[oT][1]), this._dataGeneration++), this._valueCache = {}, this._currentFrameId = this._engine.frameId, !0
-        }
-        return !1
-      }
-      has(TT) {
-        return void 0 !== this._uniformLocations[TT]
-      }
-      dispose() {
-        if (this._noUBO) return;
-        const TT = this._engine._uniformBuffers,
-          oT = TT.indexOf(this);
-        if (-1 !== oT && (TT[oT] = TT[TT.length - 1], TT.pop()), this._trackUBOsInFrame && this._buffers) {
-          this._resetOwnerSlots();
-          for (let TT = 0; TT < this._buffers.length; ++TT) {
-            const oT = this._buffers[TT][0];
-            this._engine._releaseBuffer(oT)
-          }
-          this._buffers = [], this._buffer = null, this._bufferIndex = -1
-        } else this._buffer && this._engine._releaseBuffer(this._buffer) && (this._buffer = null)
-      }
-    }
-    kT._MAX_UNIFORM_SIZE = 256, kT._TempBuffer = new Float32Array(kT._MAX_UNIFORM_SIZE), kT._TempBufferInt32View = new Int32Array(kT._TempBuffer.buffer), kT._TempBufferUInt32View = new Uint32Array(kT._TempBuffer.buffer)
-  },
-  38687: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => zT
-    });
-    var iT = IT(38691);
-    class zT extends iT.d {
-      constructor(TT) {
-        super(), this._buffer = TT
-      }
-      get underlyingResource() {
-        return this._buffer
-      }
-    }
-  },
-  38781: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => BT,
-      g: () => FT
-    });
-    const iT = "__bjs_serializable__",
-      zT = new WeakMap;
+    var Ez = bz(39079);
+    let nz = !1;
 
-    function kT(TT, oT) {
-      return Object.prototype.hasOwnProperty.call(TT, oT)
-    }
-    const WT = function() {
-      let TT = Symbol.metadata;
-      return TT || (TT = Symbol("Symbol.metadata"), Object.defineProperty(Symbol, "metadata", {
-        configurable: !0,
-        writable: !0,
-        value: TT
-      })), TT
-    }();
-
-    function XT(TT) {
-      return "function" === typeof TT ? TT : TT?.constructor
-    }
-
-    function BT(TT) {
-      if (!TT) throw new Error(`Decorator metadata is unavailable; the Symbol.metadata (${String(WT)}) polyfill must run before decorated classes are evaluated.`);
-      return kT(TT, iT) || (TT[iT] = {}), TT[iT]
-    }
-
-    function FT(TT) {
-      const oT = XT(TT),
-        IT = oT ? oT[WT] : void 0;
-      if (!IT) return {};
-      const BT = zT.get(IT);
-      if (BT) return BT;
-      const FT = {},
-        ST = [];
-      let DT = IT;
-      for (; DT;) ST.push(DT), DT = Object.getPrototypeOf(DT);
-      for (const zT of ST)
-        if (kT(zT, iT)) {
-          const TT = zT[iT];
-          for (const oT in TT) FT[oT] = TT[oT]
-        } return zT.set(IT, FT), FT
-    }
-  },
-  38773: (TT, oT, IT) => {
-    IT.d(oT, {
-      B: () => MT,
-      E: () => LT,
-      G: () => KT,
-      H: () => XT,
-      I: () => ST,
-      M: () => DT,
-      P: () => WT,
-      d: () => gT,
-      h: () => kT,
-      l: () => AT,
-      m: () => xT,
-      q: () => BT,
-      u: () => cT,
-      x: () => FT
-    });
-    var iT = IT(38781);
-
-    function zT(TT, oT) {
-      return (IT, zT) => {
-        if (!zT.metadata) return;
-        const kT = String(zT.name),
-          WT = (0, iT.c)(zT.metadata);
-        WT[kT] || (WT[kT] = {
-          type: TT,
-          sourceName: oT
-        })
-      }
-    }
-
-    function kT(TT) {
-      return function(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        return (IT, iT) => {
-          const zT = oT || "_" + String(iT.name);
-          return {
-            init(TT) {
-              return void 0 === TT && zT in this || (this[zT] = TT), TT
-            },
-            get() {
-              return this[zT]
-            },
-            set(oT) {
-              "function" === typeof this[zT]?.equals && this[zT].equals(oT) || this[zT] !== oT && (this[zT] = oT, this[TT]())
-            }
-          }
-        }
-      }(TT, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null)
-    }
-
-    function WT(TT) {
-      return zT(0, TT)
-    }
-
-    function XT(TT) {
-      return zT(1, TT)
-    }
-
-    function BT(TT) {
-      return zT(2, TT)
-    }
-
-    function FT(TT) {
-      return zT(3, TT)
-    }
-
-    function ST(TT) {
-      return zT(4, TT)
-    }
-
-    function DT(TT) {
-      return zT(5, TT)
-    }
-
-    function LT(TT) {
-      return zT(6, TT)
-    }
-
-    function xT(TT) {
-      return zT(7, TT)
-    }
-
-    function cT(TT) {
-      return zT(8, TT)
-    }
-
-    function KT(TT) {
-      return zT(10, TT)
-    }
-
-    function MT(TT) {
-      return zT(12, TT)
-    }
-
-    function rT(TT, oT, IT) {
-      const iT = String(oT.name);
-      let zT = null;
-      const kT = function() {
-        if (null === zT) {
-          zT = TT, "undefined" !== typeof _native && _native[iT] && (zT = IT(_native[iT], TT));
-          const WT = this && (oT.static ? this : Object.getPrototypeOf(this));
-          WT?.[iT] === kT && (WT[iT] = zT)
-        }
-        for (var WT = arguments.length, XT = new Array(WT), BT = 0; BT < WT; BT++) XT[BT] = arguments[BT];
-        return zT.apply(this, XT)
-      };
-      return kT
-    }
-
-    function AT(TT, oT) {
-      return rT(TT, oT, (TT => TT))
-    }
-
-    function gT(TT) {
-      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return (IT, iT) => {
-        const zT = oT || "_" + String(iT.name);
-        return {
-          get() {
-            return this[zT]?.value
-          },
-          set(oT) {
-            "function" === typeof this[zT]?.value?.equals && this[zT].value.equals(oT) || this[zT].value !== oT && (this[zT].value = oT, this[TT]())
-          }
-        }
-      }
-    }
-    AT.filter = function(TT) {
-      return (oT, IT) => rT(oT, IT, ((oT, IT) => function() {
-        for (var iT = arguments.length, zT = new Array(iT), kT = 0; kT < iT; kT++) zT[kT] = arguments[kT];
-        return TT(...zT) ? oT(...zT) : IT.apply(this, zT)
-      }))
-    }
-  },
-  38799: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => FT
-    });
-    var iT = IT(38643),
-      zT = IT(38808),
-      kT = IT(36177),
-      WT = IT(36118),
-      XT = IT(38781);
-    const BT = function(TT, oT, IT) {
-      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const kT = TT();
-      zT.c && zT.c.HasTags(oT) && zT.c.AddTagsTo(kT, zT.c.GetTags(oT, !0));
-      const WT = (0, XT.g)(kT),
-        BT = {};
-      for (const zT in WT) {
-        const TT = WT[zT],
-          XT = oT[zT],
-          ST = TT.type;
-        if (void 0 !== XT && null !== XT && ("uniqueId" !== zT || FT.AllowLoadingUniqueId)) switch (ST) {
-          case 0:
-          case 6:
-          case 9:
-          case 11:
-            "function" === typeof XT.slice ? kT[zT] = XT.slice() : kT[zT] = XT;
-            break;
-          case 1:
-            iT.cloneTexturesOnlyOnce && BT[XT.uniqueId] ? kT[zT] = BT[XT.uniqueId] : (kT[zT] = IT || XT.isRenderTarget ? XT : XT.clone(), BT[XT.uniqueId] = kT[zT]);
-            break;
-          case 2:
-          case 3:
-          case 4:
-          case 5:
-          case 7:
-          case 8:
-          case 10:
-          case 12:
-          case 13:
-            kT[zT] = IT ? XT : XT.clone()
-        }
-      }
-      return kT
-    };
-    class FT {
-      static AppendSerializedAnimations(TT, oT) {
-        if (TT.animations) {
-          oT.animations = [];
-          for (let IT = 0; IT < TT.animations.length; IT++) {
-            const iT = TT.animations[IT];
-            oT.animations.push(iT.serialize())
-          }
-        }
-      }
-      static Serialize(TT, oT) {
-        oT || (oT = {}), zT.c && (oT.tags = zT.c.GetTags(TT));
-        const IT = (0, XT.g)(TT);
-        for (const iT in IT) {
-          const zT = IT[iT],
-            kT = zT.sourceName || iT,
-            WT = zT.type,
-            XT = TT[iT];
-          if (void 0 !== XT && null !== XT && ("uniqueId" !== iT || FT.AllowLoadingUniqueId)) switch (WT) {
-            case 0:
-              Array.isArray(XT) ? oT[kT] = XT.slice() : oT[kT] = XT;
-              break;
-            case 1:
-            case 3:
-            case 7:
-            case 9:
-              oT[kT] = XT.serialize();
-              break;
-            case 2:
-            case 4:
-            case 5:
-            case 8:
-            case 10:
-            case 12:
-            case 13:
-              oT[kT] = XT.bIT();
-              break;
-            case 6:
-            case 11:
-              oT[kT] = XT.id
-          }
-        }
-        return oT
-      }
-      static ParseProperties(TT, oT, IT, iT) {
-        iT || (iT = "");
-        const zT = (0, XT.g)(oT);
-        for (const XT in zT) {
-          const BT = zT[XT],
-            ST = TT[BT.sourceName || XT],
-            DT = BT.type;
-          if (void 0 !== ST && null !== ST && ("uniqueId" !== XT || FT.AllowLoadingUniqueId)) {
-            const TT = oT;
-            switch (DT) {
-              case 0:
-                TT[XT] = ST;
-                break;
-              case 1:
-                IT && (TT[XT] = FT._TextureParser(ST, IT, iT));
-                break;
-              case 2:
-                TT[XT] = kT.e.FromArray(ST);
-                break;
-              case 3:
-                TT[XT] = FT._FresnelParametersParser(ST);
-                break;
-              case 4:
-                TT[XT] = WT.j.FromArray(ST);
-                break;
-              case 5:
-                TT[XT] = WT.m.FromArray(ST);
-                break;
-              case 6:
-                IT && (TT[XT] = IT.getLastMeshById(ST));
-                break;
-              case 7:
-                TT[XT] = FT._ColorCurvesParser(ST);
-                break;
-              case 8:
-                TT[XT] = kT.i.FromArray(ST);
-                break;
-              case 9:
-                TT[XT] = FT._ImageProcessingConfigurationParser(ST);
-                break;
-              case 10:
-                TT[XT] = WT.c.FromArray(ST);
-                break;
-              case 11:
-                IT && (TT[XT] = IT.getCameraById(ST));
-                break;
-              case 12:
-                TT[XT] = WT.b.FromArray(ST);
-                break;
-              case 13:
-                TT[XT] = WT.n.FromArray(ST)
-            }
-          }
-        }
-      }
-      static Parse(TT, oT, IT) {
-        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const kT = TT();
-        return zT.c && zT.c.AddTagsTo(kT, oT.tags), FT.ParseProperties(oT, kT, IT, iT), kT
-      }
-      static Clone(TT, oT) {
-        return BT(TT, oT, !1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {})
-      }
-      static Instanciate(TT, oT) {
-        return BT(TT, oT, !0)
-      }
-    }
-    FT.AllowLoadingUniqueId = !1, FT._ImageProcessingConfigurationParser = TT => {
-      throw (0, iT.k)("ImageProcessingConfiguration")
-    }, FT._FresnelParametersParser = TT => {
-      throw (0, iT.k)("FresnelParameters")
-    }, FT._ColorCurvesParser = TT => {
-      throw (0, iT.k)("ColorCurves")
-    }, FT._TextureParser = (TT, oT, IT) => {
-      throw (0, iT.k)("Texture")
-    }
-  },
-  38716: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => zT
-    });
-    var iT = IT(38667);
-    class zT {
-      get min() {
-        return this._min
-      }
-      get max() {
-        return this._max
-      }
-      get average() {
-        return this._average
-      }
-      get lastSecAverage() {
-        return this._lastSecAverage
-      }
-      get current() {
-        return this._current
-      }
-      get total() {
-        return this._totalAccumulated
-      }
-      get count() {
-        return this._totalValueCount
-      }
-      constructor() {
-        this._startMonitoringTime = 0, this._min = 0, this._max = 0, this._hasResult = !1, this._hasCurrentValue = !1, this._average = 0, this._lastSecAverage = 0, this._current = 0, this._totalValueCount = 0, this._totalAccumulated = 0, this._lastSecAccumulated = 0, this._lastSecTime = 0, this._lastSecValueCount = 0
-      }
-      fetchNewFrame() {
-        this._totalValueCount++, this._current = 0, this._hasCurrentValue = zT.Enabled, this._lastSecValueCount++
-      }
-      addCount(TT, oT) {
-        zT.Enabled && (this._current += TT, this._hasCurrentValue = !0, oT && this._fetchResult())
-      }
-      beginMonitoring() {
-        zT.Enabled && (this._startMonitoringTime = iT.c.Now)
-      }
-      endMonitoring() {
-        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        if (!zT.Enabled) return;
-        TT && this.fetchNewFrame();
-        const oT = iT.c.Now;
-        this._current = oT - this._startMonitoringTime, this._hasCurrentValue = !0, TT && this._fetchResult()
-      }
-      gR() {
-        this._fetchResult()
-      }
-      _fetchResult() {
-        if (!this._hasCurrentValue) return;
-        this._totalAccumulated += this._current, this._lastSecAccumulated += this._current, this._hasResult ? (this._min = Math.min(this._min, this._current), this._max = Math.max(this._max, this._current)) : (this._min = this._current, this._max = this._current, this._hasResult = !0), this._average = this._totalAccumulated / this._totalValueCount;
-        const TT = iT.c.Now;
-        TT - this._lastSecTime > 1e3 && (this._lastSecAverage = this._lastSecAccumulated / this._lastSecValueCount, this._lastSecTime = TT, this._lastSecAccumulated = 0, this._lastSecValueCount = 0)
-      }
-    }
-    zT.Enabled = !0
-  },
-  38897: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => zT,
-      f: () => iT
-    });
-    class iT {
-      constructor(TT) {
-        this.length = 0, this.data = new Array(TT), this._id = iT._GlobalId++
-      }
-      push(TT) {
-        this.data[this.length++] = TT, this.length > this.data.length && (this.data.length *= 2)
-      }
-      forEach(TT) {
-        for (let oT = 0; oT < this.length; oT++) TT(this.data[oT])
-      }
-      sort(TT) {
-        this.data.sort(TT)
-      }
-      reset() {
-        this.length = 0
-      }
-      dispose() {
-        this.reset(), this.data && (this.data.length = 0)
-      }
-      concat(TT) {
-        if (0 !== TT.length) {
-          this.length + TT.length > this.data.length && (this.data.length = 2 * (this.length + TT.length));
-          for (let oT = 0; oT < TT.length; oT++) this.data[this.length++] = (TT.data || TT)[oT]
-        }
-      }
-      indexOf(TT) {
-        const oT = this.data.indexOf(TT);
-        return oT >= this.length ? -1 : oT
-      }
-      contains(TT) {
-        return -1 !== this.indexOf(TT)
-      }
-    }
-    iT._GlobalId = 0;
-    class zT extends iT {
-      constructor() {
-        super(...arguments), this._duplicateId = 0
-      }
-      push(TT) {
-        super.push(TT), TT.__smartArrayFlags || (TT.__smartArrayFlags = {}), TT.__smartArrayFlags[this._id] = this._duplicateId
-      }
-      pushNoDuplicate(TT) {
-        return (!TT.__smartArrayFlags || TT.__smartArrayFlags[this._id] !== this._duplicateId) && (this.push(TT), !0)
-      }
-      reset() {
-        super.reset(), this._duplicateId++
-      }
-      concatWithNoDuplicate(TT) {
-        if (0 !== TT.length) {
-          this.length + TT.length > this.data.length && (this.data.length = 2 * (this.length + TT.length));
-          for (let oT = 0; oT < TT.length; oT++) {
-            const IT = (TT.data || TT)[oT];
-            this.pushNoDuplicate(IT)
-          }
-        }
-      }
-    }
-  },
-  38808: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => zT
-    });
-    class iT {
-      static Eval(TT, oT) {
-        return "true" === (TT = TT.match(/\([^()]*\)/g) ? TT.replace(/\([^()]*\)/g, (TT => (TT = TT.slice(1, TT.length - 1), iT._HandleParenthesisContent(TT, oT)))) : iT._HandleParenthesisContent(TT, oT)) || "false" !== TT && iT.Eval(TT, oT)
-      }
-      static _HandleParenthesisContent(TT, oT) {
-        let IT;
-        oT = oT || (TT => "true" === TT);
-        const zT = TT.split("||");
-        for (const kT in zT)
-          if (Object.prototype.hasOwnProperty.call(zT, kT)) {
-            let TT = iT._SimplifyNegation(zT[kT].trim());
-            const WT = TT.split("&&");
-            if (WT.length > 1)
-              for (let zT = 0; zT < WT.length; ++zT) {
-                const kT = iT._SimplifyNegation(WT[zT].trim());
-                if (IT = "true" !== kT && "false" !== kT ? "!" === kT[0] ? !oT(kT.substring(1)) : oT(kT) : "true" === kT, !IT) {
-                  TT = "false";
-                  break
-                }
-              }
-            if (IT || "true" === TT) {
-              IT = !0;
-              break
-            }
-            IT = "true" !== TT && "false" !== TT ? "!" === TT[0] ? !oT(TT.substring(1)) : oT(TT) : "true" === TT
-          } return IT ? "true" : "false"
-      }
-      static _SimplifyNegation(TT) {
-        return "!true" === (TT = (TT = TT.replace(/^[\s!]+/, (TT => (TT = TT.replace(/[\s]/g, (() => ""))).length % 2 ? "!" : ""))).trim()) ? TT = "false" : "!false" === TT && (TT = "true"), TT
-      }
-    }
-    class zT {
-      static EnableFor(TT) {
-        TT._tags = TT._tags || {}, TT.hasTags = () => zT.HasTags(TT), TT.addTags = oT => zT.AddTagsTo(TT, oT), TT.removeTags = oT => zT.RemoveTagsFrom(TT, oT), TT.matchesTagsQuery = oT => zT.MatchesQuery(TT, oT)
-      }
-      static DisableFor(TT) {
-        delete TT._tags, delete TT.hasTags, delete TT.addTags, delete TT.removeTags, delete TT.matchesTagsQuery
-      }
-      static HasTags(TT) {
-        if (!TT._tags) return !1;
-        const oT = TT._tags;
-        for (const IT in oT)
-          if (Object.prototype.hasOwnProperty.call(oT, IT)) return !0;
-        return !1
-      }
-      static GetTags(TT) {
-        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!TT._tags) return null;
-        if (oT) {
-          const oT = [];
-          for (const IT in TT._tags) Object.prototype.hasOwnProperty.call(TT._tags, IT) && !0 === TT._tags[IT] && oT.push(IT);
-          return oT.join(" ")
-        }
-        return TT._tags
-      }
-      static AddTagsTo(TT, oT) {
-        if (!oT) return;
-        if ("string" !== typeof oT) return;
-        const IT = oT.split(" ");
-        for (const iT of IT) zT._AddTagTo(TT, iT)
-      }
-      static _AddTagTo(TT, oT) {
-        "" !== (oT = oT.trim()) && "true" !== oT && "false" !== oT && (oT.match(/[\s]/) || oT.match(/^([!]|([|]|[&]){2})/) || (zT.EnableFor(TT), TT._tags[oT] = !0))
-      }
-      static RemoveTagsFrom(TT, oT) {
-        if (!zT.HasTags(TT)) return;
-        const IT = oT.split(" ");
-        for (const iT in IT) zT._RemoveTagFrom(TT, IT[iT])
-      }
-      static _RemoveTagFrom(TT, oT) {
-        delete TT._tags[oT]
-      }
-      static MatchesQuery(TT, oT) {
-        return void 0 === oT || ("" === oT ? zT.HasTags(TT) : iT.Eval(oT, (oT => zT.HasTags(TT) && TT._tags[oT])))
-      }
-    }
-  },
-  38931: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => kT
-    });
-    var iT = IT(38923),
-      zT = IT(36149);
-    class kT {
-      constructor(TT) {
-        this._vertexBuffers = {}, this._activePostProcesses = [], this.onBeforeRenderObservable = new zT.d, this._scene = TT
-      }
-      _prepareBuffers() {
-        if (this._vertexBuffers[iT.i.PositionKind]) return;
-        const TT = [];
-        TT.push(1, 1), TT.push(-1, 1), TT.push(-1, -1), TT.push(1, -1), this._vertexBuffers[iT.i.PositionKind] = new iT.i(this._scene.Zc(), TT, iT.i.PositionKind, !1, !1, 2), this._buildIndexBuffer()
-      }
-      _buildIndexBuffer() {
-        const TT = [];
-        TT.push(0), TT.push(1), TT.push(2), TT.push(0), TT.push(2), TT.push(3), this._indexBuffer = this._scene.Zc().createIndexBuffer(TT)
-      }
-      _getActivePostProcesses(TT) {
-        const oT = this._activePostProcesses;
-        oT.length = 0;
-        for (let IT = 0; IT < TT.length; IT++) {
-          const iT = TT[IT];
-          iT && oT.push(iT)
-        }
-        return oT
-      }
-      _rebuild() {
-        const TT = this._vertexBuffers[iT.i.PositionKind];
-        TT && (TT._rebuild(), this._buildIndexBuffer())
-      }
-      _prepareFrame() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const IT = this._scene.activeCamera;
-        return !!IT && (oT = oT || this._getActivePostProcesses(IT._postProcesses), !(!oT || 0 === oT.length || !this._scene.postProcessesEnabled) && (oT[0].activate(IT, TT, null !== oT && void 0 !== oT), !0))
-      }
-      directRender(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-          kT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          WT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : TT.length;
-        const XT = this._scene.Zc();
-        for (let BT = 0; BT < WT; BT++) {
-          BT < TT.length - 1 ? TT[BT + 1].activate(this._scene.activeCamera || this._scene, oT?.texture) : (oT ? XT.bindFramebuffer(oT, iT, void 0, void 0, IT, zT) : kT || XT.restoreDefaultFramebuffer(), XT._debugInsertMarker?.(`post process ${TT[BT].name} output`));
-          const WT = TT[BT],
-            FT = WT.apply();
-          FT && (WT.onBeforeRenderObservable.notifyObservers(FT), this._prepareBuffers(), XT.bindBuffers(this._vertexBuffers, this._indexBuffer, FT), XT.drawElementsType(0, 0, 6), WT.onAfterRenderObservable.notifyObservers(FT))
-        }
-        XT.setDepthBuffer(!0), XT.setDepthWrite(!0)
-      }
-      _finalizeFrame(TT, oT, IT, iT) {
-        let zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const kT = this._scene.activeCamera;
-        if (!kT) return;
-        if (this.onBeforeRenderObservable.notifyObservers(this), 0 === (iT = iT || this._getActivePostProcesses(kT._postProcesses)).length || !this._scene.postProcessesEnabled) return;
-        const WT = this._scene.Zc();
-        for (let XT = 0, BT = iT.length; XT < BT; XT++) {
-          const FT = iT[XT];
-          if (XT < BT - 1 ? FT._outputTexture = iT[XT + 1].activate(kT, oT?.texture) : (oT ? (WT.bindFramebuffer(oT, IT, void 0, void 0, zT), FT._outputTexture = oT) : (WT.restoreDefaultFramebuffer(), FT._outputTexture = null), WT._debugInsertMarker?.(`post process ${iT[XT].name} output`)), TT) break;
-          const ST = FT.apply();
-          ST && (FT.onBeforeRenderObservable.notifyObservers(ST), this._prepareBuffers(), WT.bindBuffers(this._vertexBuffers, this._indexBuffer, ST), WT.drawElementsType(0, 0, 6), FT.onAfterRenderObservable.notifyObservers(ST))
-        }
-        WT.setDepthBuffer(!0), WT.setDepthWrite(!0), WT.setAlphaMode(0)
-      }
-      dispose() {
-        const TT = this._vertexBuffers[iT.i.PositionKind];
-        TT && (TT.dispose(), this._vertexBuffers[iT.i.PositionKind] = null), this._indexBuffer && (this._scene.Zc()._releaseBuffer(this._indexBuffer), this._indexBuffer = null)
-      }
-    }
-  },
-  38946: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => kT
-    });
-    var iT = IT(38897),
-      zT = IT(36118);
-    class kT {
-      set opaqueSortCompareFn(TT) {
-        this._opaqueSortCompareFn = TT || kT.PainterSortCompare, this._renderOpaque = this._renderOpaqueSorted
-      }
-      set alphaTestSortCompareFn(TT) {
-        this._alphaTestSortCompareFn = TT || kT.PainterSortCompare, this._renderAlphaTest = this._renderAlphaTestSorted
-      }
-      set transparentSortCompareFn(TT) {
-        this._transparentSortCompareFn = TT || kT.defaultTransparentSortCompare, this._renderTransparent = this._renderTransparentSorted
-      }
-      constructor(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-        this.index = TT, this._opaqueSubMeshes = new iT.f(256), this._transparentSubMeshes = new iT.f(256), this._alphaTestSubMeshes = new iT.f(256), this._depthOnlySubMeshes = new iT.f(256), this._particleSystems = new iT.f(256), this._spriteManagers = new iT.f(256), this._empty = !0, this._edgesRenderers = new iT.c(16), this.disableDepthPrePass = !1, this._scene = oT, this.opaqueSortCompareFn = IT, this.alphaTestSortCompareFn = zT, this.transparentSortCompareFn = kT
-      }
-      render(TT, oT, IT, iT) {
-        let zT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          kT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          WT = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          XT = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          BT = arguments.length > 8 ? arguments[8] : void 0;
-        if (TT) return void TT(this._opaqueSubMeshes, this._alphaTestSubMeshes, this._transparentSubMeshes, this._depthOnlySubMeshes);
-        const FT = this._scene.Zc();
-        zT && 0 !== this._depthOnlySubMeshes.length && (FT.setColorWrite(!1), this._renderAlphaTest(this._depthOnlySubMeshes), FT.setColorWrite(!0)), kT && 0 !== this._opaqueSubMeshes.length && this._renderOpaque(this._opaqueSubMeshes), WT && 0 !== this._alphaTestSubMeshes.length && this._renderAlphaTest(this._alphaTestSubMeshes);
-        const ST = FT.getStencilBuffer();
-        if (FT.setStencilBuffer(!1), oT && this._renderSprites(), IT && this._renderParticles(iT), this.onBeforeTransparentRendering && this.onBeforeTransparentRendering(), XT && (BT || 0 !== this._transparentSubMeshes.length || this._scene.useOrderIndependentTransparency)) {
-          if (FT.setStencilBuffer(ST), BT) BT(this._transparentSubMeshes, this);
-          else if (this._scene.useOrderIndependentTransparency) {
-            const TT = this._scene.depthPeelingRenderer.render(this._transparentSubMeshes);
-            TT.length && this._renderTransparent(TT)
-          } else this._renderTransparent(this._transparentSubMeshes);
-          FT.setAlphaMode(0)
-        }
-        if (FT.setStencilBuffer(!1), kT && this._edgesRenderers.length) {
-          for (let TT = 0; TT < this._edgesRenderers.length; TT++) this._edgesRenderers.data[TT].render();
-          FT.setAlphaMode(0)
-        }
-        FT.setStencilBuffer(ST)
-      }
-      _renderOpaqueSorted(TT) {
-        kT._RenderSorted(TT, this._opaqueSortCompareFn, this._scene.activeCamera, !1, this.disableDepthPrePass)
-      }
-      _renderAlphaTestSorted(TT) {
-        kT._RenderSorted(TT, this._alphaTestSortCompareFn, this._scene.activeCamera, !1, this.disableDepthPrePass)
-      }
-      _renderTransparentSorted(TT) {
-        kT._RenderSorted(TT, this._transparentSortCompareFn, this._scene.activeCamera, !0, this.disableDepthPrePass)
-      }
-      static _RenderSorted(TT, oT, IT, iT, WT) {
-        let XT, BT = 0;
-        const FT = IT ? IT.globalPosition : kT._ZeroVector;
-        if (iT && oT !== kT.PainterSortCompare)
-          for (; BT < TT.length; BT++) XT = TT.data[BT], XT._alphaIndex = XT.getMesh().alphaIndex, XT._distanceToCamera = zT.m.Distance(XT.GJ().KiT.centerWorld, FT);
-        const ST = TT.length === TT.data.length ? TT.data : TT.data.slice(0, TT.length);
-        oT && ST.sort(oT);
-        const DT = ST[0].getMesh().pC();
-        for (BT = 0; BT < ST.length; BT++) {
-          if (XT = ST[BT], DT._activeMeshesFrozenButKeepClipping && !XT.isInFrustum(DT._frustumPlanes)) continue;
-          let TT = !1;
-          if (iT) {
-            const oT = XT.bc();
-            if (oT && oT.needDepthPrePass && !WT) {
-              TT = !0;
-              const IT = oT.pC().Zc();
-              IT.setColorWrite(!1), IT.setAlphaMode(0), XT.render(!1), IT.setColorWrite(!0)
-            }
-          }
-          const oT = XT._renderingMesh;
-          !TT && oT._renderRunFollower(XT, iT) || XT.render(iT)
-        }
-      }
-      static defaultTransparentSortCompare(TT, oT) {
-        return TT._alphaIndex > oT._alphaIndex ? 1 : TT._alphaIndex < oT._alphaIndex ? -1 : kT.backToFrontSortCompare(TT, oT)
-      }
-      static backToFrontSortCompare(TT, oT) {
-        return TT._distanceToCamera < oT._distanceToCamera ? 1 : TT._distanceToCamera > oT._distanceToCamera ? -1 : 0
-      }
-      static frontToBackSortCompare(TT, oT) {
-        return TT._distanceToCamera < oT._distanceToCamera ? -1 : TT._distanceToCamera > oT._distanceToCamera ? 1 : 0
-      }
-      static PainterSortCompare(TT, oT) {
-        const IT = TT.getMesh(),
-          iT = oT.getMesh();
-        return IT.material && iT.material ? IT.material.uniqueId - iT.material.uniqueId : IT.uniqueId - iT.uniqueId
-      }
-      prepare() {
-        this._opaqueSubMeshes.reset(), this._transparentSubMeshes.reset(), this._alphaTestSubMeshes.reset(), this._depthOnlySubMeshes.reset(), this._particleSystems.reset(), this.prepareSprites(), this._edgesRenderers.reset(), this._empty = !0
-      }
-      prepareSprites() {
-        this._spriteManagers.reset()
-      }
-      dispose() {
-        this._opaqueSubMeshes.dispose(), this._transparentSubMeshes.dispose(), this._alphaTestSubMeshes.dispose(), this._depthOnlySubMeshes.dispose(), this._particleSystems.dispose(), this._spriteManagers.dispose(), this._edgesRenderers.dispose()
-      }
-      dispatch(TT, oT, IT) {
-        void 0 === oT && (oT = TT.getMesh()), void 0 === IT && (IT = TT.bc()), null !== IT && void 0 !== IT && (IT.needAlphaBlendingForMesh(oT) ? this._transparentSubMeshes.push(TT) : IT.needAlphaTestingForMesh(oT) ? (IT.needDepthPrePass && !this.disableDepthPrePass && this._depthOnlySubMeshes.push(TT), this._alphaTestSubMeshes.push(TT)) : (IT.needDepthPrePass && !this.disableDepthPrePass && this._depthOnlySubMeshes.push(TT), this._opaqueSubMeshes.push(TT)), oT._renderingGroup = this, oT._edgesRenderer && oT.isEnabled() && oT.isVisible && oT._edgesRenderer.isEnabled && this._edgesRenderers.pushNoDuplicate(oT._edgesRenderer), this._empty = !1)
-      }
-      dispatchSprites(TT) {
-        this._spriteManagers.push(TT), this._empty = !1
-      }
-      dispatchParticles(TT) {
-        this._particleSystems.push(TT), this._empty = !1
-      }
-      _renderParticles(TT) {
-        if (0 === this._particleSystems.length) return;
-        const oT = this._scene.activeCamera;
-        this._scene.onBeforeParticlesRenderingObservable.notifyObservers(this._scene);
-        for (let IT = 0; IT < this._particleSystems.length; IT++) {
-          const iT = this._particleSystems.data[IT];
-          if (0 === (oT && oT.layerMask & iT.layerMask)) continue;
-          const zT = iT.emitter;
-          zT.position && TT && -1 === TT.indexOf(zT) || this._scene._activeParticles.addCount(iT.render(), !1)
-        }
-        this._scene.onAfterParticlesRenderingObservable.notifyObservers(this._scene)
-      }
-      _renderSprites() {
-        if (!this._scene.spritesEnabled || 0 === this._spriteManagers.length) return;
-        const TT = this._scene.activeCamera;
-        this._scene.onBeforeSpritesRenderingObservable.notifyObservers(this._scene);
-        for (let oT = 0; oT < this._spriteManagers.length; oT++) {
-          const IT = this._spriteManagers.data[oT];
-          0 !== (TT && TT.layerMask & IT.layerMask) && IT.render()
-        }
-        this._scene.onAfterSpritesRenderingObservable.notifyObservers(this._scene)
-      }
-    }
-    kT._ZeroVector = zT.m.Zero()
-  },
-  38941: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => kT
-    });
-    var iT = IT(38946);
-    class zT {}
-    class kT {
-      get disableDepthPrePass() {
-        return this._disableDepthPrePass
-      }
-      set disableDepthPrePass(TT) {
-        this._disableDepthPrePass = TT;
-        for (const oT of this._renderingGroups) oT.disableDepthPrePass = TT
-      }
-      get maintainStateBetweenFrames() {
-        return this._maintainStateBetweenFrames
-      }
-      set maintainStateBetweenFrames(TT) {
-        TT !== this._maintainStateBetweenFrames && (this._maintainStateBetweenFrames = TT, this._maintainStateBetweenFrames || this.restoreDispachedFlags())
-      }
-      restoreDispachedFlags() {
-        for (const TT of this._scene.meshes)
-          if (TT.pR)
-            for (const oT of TT.pR) oT._wasDispatched = !1;
-        if (this._scene.spriteManagers)
-          for (const TT of this._scene.spriteManagers) TT._wasDispatched = !1;
-        for (const TT of this._scene.bR) TT._wasDispatched = !1
-      }
-      constructor(TT) {
-        this._useSceneAutoClearSetup = !1, this._disableDepthPrePass = !1, this._renderingGroups = new Array, this._autoClearDepthStencil = {}, this._customOpaqueSortCompareFn = {}, this._customAlphaTestSortCompareFn = {}, this._customTransparentSortCompareFn = {}, this._renderingGroupInfo = new zT, this._maintainStateBetweenFrames = !1, this._scene = TT;
-        for (let oT = kT.MIN_RENDERINGGROUPS; oT < kT.MAX_RENDERINGGROUPS; oT++) this._autoClearDepthStencil[oT] = {
-          autoClear: !0,
-          depth: !0,
-          stencil: !0
-        }
-      }
-      get renderingGroups() {
-        return this._renderingGroups
-      }
-      getRenderingGroup(TT) {
-        const oT = TT || 0;
-        return this._prepareRenderingGroup(oT), this._renderingGroups[oT]
-      }
-      _clearDepthStencilBuffer() {
-        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        this._depthStencilBufferAlreadyCleaned || (this._scene.Zc().clear(null, !1, TT, oT), this._depthStencilBufferAlreadyCleaned = !0)
-      }
-      render(TT, oT, IT, iT) {
-        let zT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          WT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          XT = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          BT = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          FT = arguments.length > 8 ? arguments[8] : void 0,
-          ST = arguments.length > 9 ? arguments[9] : void 0;
-        const DT = this._renderingGroupInfo;
-        DT.NK = this._scene, DT.camera = this._scene.activeCamera, DT.renderingManager = this;
-        const LT = ST ?? this._scene.spriteManagers;
-        if (LT && iT)
-          for (let kT = 0; kT < LT.length; kT++) {
-            const TT = LT[kT];
-            this.dispatchSprites(TT)
-          }
-        for (let xT = kT.MIN_RENDERINGGROUPS; xT < kT.MAX_RENDERINGGROUPS; xT++) {
-          this._depthStencilBufferAlreadyCleaned = xT === kT.MIN_RENDERINGGROUPS;
-          const ST = this._renderingGroups[xT];
-          if (!ST || ST._empty) continue;
-          const LT = 1 << xT;
-          if (DT.renderingGroupId = xT, this._scene.onBeforeRenderingGroupObservable.notifyObservers(DT, LT), kT.AUTOCLEAR) {
-            const TT = this._useSceneAutoClearSetup ? this._scene.getAutoClearDepthStencilSetup(xT) : this._autoClearDepthStencil[xT];
-            TT && TT.autoClear && this._clearDepthStencilBuffer(TT.depth, TT.stencil)
-          }
-          for (let TT = 0, oT = this._scene._beforeRenderingGroupDrawStage; TT < oT.length; TT++) {
-            oT[TT].action(xT)
-          }
-          ST.render(TT, iT, IT, oT, zT, WT, XT, BT, FT);
-          for (let TT = 0, oT = this._scene._afterRenderingGroupDrawStage; TT < oT.length; TT++) {
-            oT[TT].action(xT)
-          }
-          this._scene.onAfterRenderingGroupObservable.notifyObservers(DT, LT)
-        }
-      }
-      reset() {
-        if (!this.maintainStateBetweenFrames)
-          for (let TT = kT.MIN_RENDERINGGROUPS; TT < kT.MAX_RENDERINGGROUPS; TT++) {
-            const oT = this._renderingGroups[TT];
-            oT && oT.prepare()
-          }
-      }
-      resetSprites() {
-        if (!this.maintainStateBetweenFrames)
-          for (let TT = kT.MIN_RENDERINGGROUPS; TT < kT.MAX_RENDERINGGROUPS; TT++) {
-            const oT = this._renderingGroups[TT];
-            oT && oT.prepareSprites()
-          }
-      }
-      dispose() {
-        this.freeRenderingGroups(), this._renderingGroups.length = 0, this._renderingGroupInfo = null
-      }
-      freeRenderingGroups() {
-        for (let TT = kT.MIN_RENDERINGGROUPS; TT < kT.MAX_RENDERINGGROUPS; TT++) {
-          const oT = this._renderingGroups[TT];
-          oT && oT.dispose()
-        }
-      }
-      _prepareRenderingGroup(TT) {
-        void 0 === this._renderingGroups[TT] && (this._renderingGroups[TT] = new iT.e(TT, this._scene, this._customOpaqueSortCompareFn[TT], this._customAlphaTestSortCompareFn[TT], this._customTransparentSortCompareFn[TT]), this._renderingGroups[TT].disableDepthPrePass = this._disableDepthPrePass)
-      }
-      dispatchSprites(TT) {
-        this.maintainStateBetweenFrames && TT._wasDispatched || (TT._wasDispatched = !0, this.getRenderingGroup(TT.renderingGroupId).dispatchSprites(TT))
-      }
-      dispatchParticles(TT) {
-        this.maintainStateBetweenFrames && TT._wasDispatched || (TT._wasDispatched = !0, this.getRenderingGroup(TT.renderingGroupId).dispatchParticles(TT))
-      }
-      dispatch(TT, oT, IT) {
-        void 0 === oT && (oT = TT.getMesh()), this.maintainStateBetweenFrames && TT._wasDispatched || (TT._wasDispatched = !0, this.getRenderingGroup(oT.renderingGroupId).dispatch(TT, oT, IT))
-      }
-      setRenderingOrder(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        if (this._customOpaqueSortCompareFn[TT] = oT, this._customAlphaTestSortCompareFn[TT] = IT, this._customTransparentSortCompareFn[TT] = iT, this._renderingGroups[TT]) {
-          const oT = this._renderingGroups[TT];
-          oT.opaqueSortCompareFn = this._customOpaqueSortCompareFn[TT], oT.alphaTestSortCompareFn = this._customAlphaTestSortCompareFn[TT], oT.transparentSortCompareFn = this._customTransparentSortCompareFn[TT]
-        }
-      }
-      setRenderingAutoClearDepthStencil(TT, oT) {
-        let IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-          iT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        this._autoClearDepthStencil[TT] = {
-          autoClear: oT,
-          depth: IT,
-          stencil: iT
-        }
-      }
-      getAutoClearDepthStencilSetup(TT) {
-        return this._autoClearDepthStencil[TT]
-      }
-    }
-    kT.MAX_RENDERINGGROUPS = 4, kT.MIN_RENDERINGGROUPS = 0, kT.AUTOCLEAR = !0
-  },
-  38673: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => iT
-    });
-    class iT {
-      constructor(TT) {
-        this._supportBlendParametersPerTarget = TT, this._blendFunctionParameters = new Array(32), this._blendEquationParameters = new Array(16), this._blendConstants = new Array(4), this._isBlendConstantsDirty = !1, this._alphaBlend = Array(8).fill(!1), this._numTargetEnabled = 0, this._isAlphaBlendDirty = !1, this._isBlendFunctionParametersDirty = !1, this._isBlendEquationParametersDirty = !1, this._blendDisabledTargetsMask = 0, this._numTargets = 1, this.reset()
-      }
-      get isDirty() {
-        return this._isAlphaBlendDirty || this._isBlendFunctionParametersDirty || this._isBlendEquationParametersDirty
-      }
-      get alphaBlend() {
-        return this._numTargetEnabled > 0
-      }
-      set alphaBlend(TT) {
-        this.setAlphaBlend(TT)
-      }
-      setAlphaBlend(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this._alphaBlend[oT] !== TT && (TT ? this._numTargetEnabled++ : this._numTargetEnabled--, this._alphaBlend[oT] = TT, this._isAlphaBlendDirty = !0)
-      }
-      setAlphaBlendConstants(TT, oT, IT, iT) {
-        this._blendConstants[0] === TT && this._blendConstants[1] === oT && this._blendConstants[2] === IT && this._blendConstants[3] === iT || (this._blendConstants[0] = TT, this._blendConstants[1] = oT, this._blendConstants[2] = IT, this._blendConstants[3] = iT, this._isBlendConstantsDirty = !0)
-      }
-      setAlphaBlendFunctionParameters(TT, oT, IT, iT) {
-        const zT = 4 * (arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0);
-        this._blendFunctionParameters[zT + 0] === TT && this._blendFunctionParameters[zT + 1] === oT && this._blendFunctionParameters[zT + 2] === IT && this._blendFunctionParameters[zT + 3] === iT || (this._blendFunctionParameters[zT + 0] = TT, this._blendFunctionParameters[zT + 1] = oT, this._blendFunctionParameters[zT + 2] = IT, this._blendFunctionParameters[zT + 3] = iT, this._isBlendFunctionParametersDirty = !0)
-      }
-      setAlphaEquationParameters(TT, oT) {
-        const IT = 2 * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0);
-        this._blendEquationParameters[IT + 0] === TT && this._blendEquationParameters[IT + 1] === oT || (this._blendEquationParameters[IT + 0] = TT, this._blendEquationParameters[IT + 1] = oT, this._isBlendEquationParametersDirty = !0)
-      }
-      reset() {
-        this._alphaBlend.fill(!1), this._numTargetEnabled = 0, this._blendFunctionParameters.fill(null), this._blendEquationParameters.fill(null), this._blendConstants[0] = null, this._blendConstants[1] = null, this._blendConstants[2] = null, this._blendConstants[3] = null, this._isAlphaBlendDirty = !0, this._isBlendFunctionParametersDirty = !1, this._isBlendEquationParametersDirty = !1, this._isBlendConstantsDirty = !1, this._blendDisabledTargetsMask = 0, this._numTargets = 1
-      }
-      apply(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (this._numTargets !== oT && (this._numTargets = oT, this._isAlphaBlendDirty = !0), this._blendDisabledTargetsMask !== IT && (this._blendDisabledTargetsMask = IT, this._isAlphaBlendDirty = !0), !this.isDirty) return;
-        if (this._isBlendConstantsDirty && (TT.blendColor(this._blendConstants[0], this._blendConstants[1], this._blendConstants[2], this._blendConstants[3]), this._isBlendConstantsDirty = !1), 1 === oT || !this._supportBlendParametersPerTarget) {
-          if (this._isAlphaBlendDirty) {
-            if (oT > 1 && 0 !== IT && this.alphaBlend) throw new Error("AlphaState: blending with integer MRT attachments requires per-target blend parameters");
-            this._alphaBlend[0] && 0 === (1 & IT) ? TT.enable(TT.BLEND) : TT.disable(TT.BLEND), this._isAlphaBlendDirty = !1
-          }
-          return this._isBlendFunctionParametersDirty && (TT.blendFuncSeparate(this._blendFunctionParameters[0], this._blendFunctionParameters[1], this._blendFunctionParameters[2], this._blendFunctionParameters[3]), this._isBlendFunctionParametersDirty = !1), void(this._isBlendEquationParametersDirty && (TT.blendEquationSeparate(this._blendEquationParameters[0], this._blendEquationParameters[1]), this._isBlendEquationParametersDirty = !1))
-        }
-        const iT = TT;
-        if (this._isAlphaBlendDirty) {
-          for (let zT = 0; zT < oT; zT++) {
-            const oT = zT < this._numTargetEnabled ? zT : 0;
-            this._alphaBlend[oT] && 0 === (IT & 1 << zT) ? iT.enableIndexed(TT.BLEND, zT) : iT.disableIndexed(TT.BLEND, zT)
-          }
-          this._isAlphaBlendDirty = !1
-        }
-        if (this._isBlendFunctionParametersDirty) {
-          for (let TT = 0; TT < oT; TT++) {
-            const oT = TT < this._numTargetEnabled ? 4 * TT : 0;
-            iT.blendFuncSeparateIndexed(TT, this._blendFunctionParameters[oT + 0], this._blendFunctionParameters[oT + 1], this._blendFunctionParameters[oT + 2], this._blendFunctionParameters[oT + 3])
-          }
-          this._isBlendFunctionParametersDirty = !1
-        }
-        if (this._isBlendEquationParametersDirty) {
-          for (let TT = 0; TT < oT; TT++) {
-            const oT = TT < this._numTargetEnabled ? 2 * TT : 0;
-            iT.blendEquationSeparateIndexed(TT, this._blendEquationParameters[oT + 0], this._blendEquationParameters[oT + 1])
-          }
-          this._isBlendEquationParametersDirty = !1
-        }
-      }
-      setAlphaMode(TT, oT) {
-        let IT = 32774;
-        switch (TT) {
-          case 0:
-            break;
-          case 7:
-            this.setAlphaBlendFunctionParameters(1, 771, 1, 1, oT);
-            break;
-          case 8:
-          case 14:
-            this.setAlphaBlendFunctionParameters(1, 771, 1, 771, oT);
-            break;
-          case 2:
-            this.setAlphaBlendFunctionParameters(770, 771, 1, 1, oT);
-            break;
-          case 6:
-            this.setAlphaBlendFunctionParameters(1, 1, 0, 1, oT);
-            break;
-          case 1:
-            this.setAlphaBlendFunctionParameters(770, 1, 0, 1, oT);
-            break;
-          case 3:
-            this.setAlphaBlendFunctionParameters(0, 769, 1, 1, oT);
-            break;
-          case 4:
-            this.setAlphaBlendFunctionParameters(774, 0, 1, 1, oT);
-            break;
-          case 5:
-            this.setAlphaBlendFunctionParameters(770, 769, 1, 1, oT);
-            break;
-          case 9:
-            this.setAlphaBlendFunctionParameters(32769, 32770, 32771, 32772, oT);
-            break;
-          case 10:
-            this.setAlphaBlendFunctionParameters(1, 769, 1, 771, oT);
-            break;
-          case 11:
-            this.setAlphaBlendFunctionParameters(1, 1, 1, 1, oT);
-            break;
-          case 12:
-            this.setAlphaBlendFunctionParameters(772, 1, 0, 0, oT);
-            break;
-          case 13:
-            this.setAlphaBlendFunctionParameters(775, 769, 773, 771, oT);
-            break;
-          case 15:
-            this.setAlphaBlendFunctionParameters(1, 1, 1, 0, oT);
-            break;
-          case 16:
-            this.setAlphaBlendFunctionParameters(775, 769, 0, 1, oT);
-            break;
-          case 17:
-            this.setAlphaBlendFunctionParameters(770, 771, 1, 771, oT);
-            break;
-          case 18:
-            this.setAlphaBlendFunctionParameters(1, 1, 1, 1, oT), IT = 32775;
-            break;
-          case 19:
-            this.setAlphaBlendFunctionParameters(1, 1, 1, 1, oT), IT = 32776;
-            break;
-          case 20:
-            this.setAlphaBlendFunctionParameters(1, 35065, 0, 1, oT);
-            break;
-          case 21:
-            this.setAlphaBlendFunctionParameters(1, 0, 1, 771, oT)
-        }
-        this.setAlphaEquationParameters(IT, IT, oT)
-      }
-    }
-  },
-  38974: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => iT
-    });
-    class iT {}
-    iT._IsPickingAvailable = !1
-  },
-  38882: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => FI,
-      d: () => XI
-    });
-    var iT = IT(38886),
-      zT = IT(38653),
-      kT = IT(38667),
-      WT = IT(36149),
-      XT = IT(38897);
-    class BT {
-      constructor() {
-        this._count = 0, this._data = {}
-      }
-      SIT(TT) {
-        this.clear(), TT.forEach(((TT, oT) => this.add(TT, oT)))
-      }
-      get(TT) {
-        const oT = this._data[TT];
-        if (void 0 !== oT) return oT
-      }
-      getOrAddWithFactory(TT, oT) {
-        let IT = this.get(TT);
-        return void 0 !== IT || (IT = oT(TT), IT && this.add(TT, IT)), IT
-      }
-      getOrAdd(TT, oT) {
-        const IT = this.get(TT);
-        return void 0 !== IT ? IT : (this.add(TT, oT), oT)
-      }
-      contains(TT) {
-        return void 0 !== this._data[TT]
-      }
-      add(TT, oT) {
-        return void 0 === this._data[TT] && (this._data[TT] = oT, ++this._count, !0)
-      }
-      set(TT, oT) {
-        return void 0 !== this._data[TT] && (this._data[TT] = oT, !0)
-      }
-      getAndRemove(TT) {
-        const oT = this.get(TT);
-        return void 0 !== oT ? (delete this._data[TT], --this._count, oT) : null
-      }
-      remove(TT) {
-        return !!this.contains(TT) && (delete this._data[TT], --this._count, !0)
-      }
-      clear() {
-        this._data = {}, this._count = 0
-      }
-      get count() {
-        return this._count
-      }
-      forEach(TT) {
-        for (const oT in this._data) {
-          TT(oT, this._data[oT])
-        }
-      }
-      first(TT) {
-        for (const oT in this._data) {
-          const IT = TT(oT, this._data[oT]);
-          if (IT) return IT
-        }
-        return null
-      }
-    }
-    var FT = IT(38808),
-      ST = IT(36118),
-      DT = IT(38899),
-      LT = IT(38911),
-      xT = IT(38918);
-    class cT {
-      constructor(TT, oT, IT, iT, zT, kT) {
-        this.source = TT, this.pointerX = oT, this.pointerY = IT, this.meshUnderPointer = iT, this.sourceEvent = zT, this.additionalData = kT
-      }
-      static CreateNew(TT, oT, IT) {
-        const iT = TT.pC();
-        return new cT(TT, iT.pointerX, iT.pointerY, iT.meshUnderPointer || TT, oT, IT)
-      }
-      static CreateNewFromSprite(TT, oT, IT, iT) {
-        return new cT(TT, oT.pointerX, oT.pointerY, oT.meshUnderPointer, IT, iT)
-      }
-      static CreateNewFromScene(TT, oT) {
-        return new cT(null, TT.pointerX, TT.pointerY, TT.meshUnderPointer, oT)
-      }
-      static CreateNewFromPrimitive(TT, oT, IT, iT) {
-        return new cT(TT, oT.x, oT.y, null, IT, iT)
-      }
-    }
-    var KT = IT(38931),
-      MT = IT(38936),
-      rT = IT(38941),
-      AT = IT(38949),
-      gT = IT(38626),
-      hT = IT(36146),
-      wT = IT(38643),
-      mT = IT(38957);
-    class eT {
-      constructor() {
-        this.hoverCursor = "", this.actions = [], this.isRecursive = !1, this.disposeWhenUnowned = !0
-      }
-      static get HasTriggers() {
-        for (const TT in eT.Triggers)
-          if (Object.prototype.hasOwnProperty.call(eT.Triggers, TT)) return !0;
-        return !1
-      }
-      static get HasPickTriggers() {
-        for (const TT in eT.Triggers)
-          if (Object.prototype.hasOwnProperty.call(eT.Triggers, TT)) {
-            const oT = parseInt(TT);
-            if (oT >= 1 && oT <= 7) return !0
-          } return !1
-      }
-      static HasSpecificTrigger(TT) {
-        for (const oT in eT.Triggers)
-          if (Object.prototype.hasOwnProperty.call(eT.Triggers, oT)) {
-            if (parseInt(oT) === TT) return !0
-          } return !1
-      }
-    }
-    eT.Triggers = {};
-    var RT, uT, vT, ET, fT, CT, jT, JT = IT(38963);
-    ! function(TT) {
-      TT[TT.Generic = 0] = "Generic", TT[TT.Keyboard = 1] = "Keyboard", TT[TT.Mouse = 2] = "Mouse", TT[TT.Touch = 3] = "Touch", TT[TT.DualShock = 4] = "DualShock", TT[TT.Xbox = 5] = "Xbox", TT[TT.Switch = 6] = "Switch", TT[TT.DualSense = 7] = "DualSense"
-    }(RT || (RT = {})),
-    function(TT) {
-      TT[TT.Horizontal = 0] = "Horizontal", TT[TT.Vertical = 1] = "Vertical", TT[TT.LeftClick = 2] = "LeftClick", TT[TT.MiddleClick = 3] = "MiddleClick", TT[TT.RightClick = 4] = "RightClick", TT[TT.BrowserBack = 5] = "BrowserBack", TT[TT.BrowserForward = 6] = "BrowserForward", TT[TT.MouseWheelX = 7] = "MouseWheelX", TT[TT.MouseWheelY = 8] = "MouseWheelY", TT[TT.MouseWheelZ = 9] = "MouseWheelZ", TT[TT.Move = 12] = "Move"
-    }(uT || (uT = {})),
-    function(TT) {
-      TT[TT.Horizontal = 0] = "Horizontal", TT[TT.Vertical = 1] = "Vertical", TT[TT.LeftClick = 2] = "LeftClick", TT[TT.MiddleClick = 3] = "MiddleClick", TT[TT.RightClick = 4] = "RightClick", TT[TT.BrowserBack = 5] = "BrowserBack", TT[TT.BrowserForward = 6] = "BrowserForward", TT[TT.MouseWheelX = 7] = "MouseWheelX", TT[TT.MouseWheelY = 8] = "MouseWheelY", TT[TT.MouseWheelZ = 9] = "MouseWheelZ", TT[TT.DeltaHorizontal = 10] = "DeltaHorizontal", TT[TT.DeltaVertical = 11] = "DeltaVertical"
-    }(vT || (vT = {})),
-    function(TT) {
-      TT[TT.Cross = 0] = "Cross", TT[TT.Circle = 1] = "Circle", TT[TT.Square = 2] = "Square", TT[TT.Triangle = 3] = "Triangle", TT[TT.L1 = 4] = "L1", TT[TT.R1 = 5] = "R1", TT[TT.L2 = 6] = "L2", TT[TT.R2 = 7] = "R2", TT[TT.Share = 8] = "Share", TT[TT.Options = 9] = "Options", TT[TT.L3 = 10] = "L3", TT[TT.R3 = 11] = "R3", TT[TT.DPadUp = 12] = "DPadUp", TT[TT.DPadDown = 13] = "DPadDown", TT[TT.DPadLeft = 14] = "DPadLeft", TT[TT.DPadRight = 15] = "DPadRight", TT[TT.Home = 16] = "Home", TT[TT.TouchPad = 17] = "TouchPad", TT[TT.LStickXAxis = 18] = "LStickXAxis", TT[TT.LStickYAxis = 19] = "LStickYAxis", TT[TT.RStickXAxis = 20] = "RStickXAxis", TT[TT.RStickYAxis = 21] = "RStickYAxis"
-    }(ET || (ET = {})),
-    function(TT) {
-      TT[TT.Cross = 0] = "Cross", TT[TT.Circle = 1] = "Circle", TT[TT.Square = 2] = "Square", TT[TT.Triangle = 3] = "Triangle", TT[TT.L1 = 4] = "L1", TT[TT.R1 = 5] = "R1", TT[TT.L2 = 6] = "L2", TT[TT.R2 = 7] = "R2", TT[TT.Create = 8] = "Create", TT[TT.Options = 9] = "Options", TT[TT.L3 = 10] = "L3", TT[TT.R3 = 11] = "R3", TT[TT.DPadUp = 12] = "DPadUp", TT[TT.DPadDown = 13] = "DPadDown", TT[TT.DPadLeft = 14] = "DPadLeft", TT[TT.DPadRight = 15] = "DPadRight", TT[TT.Home = 16] = "Home", TT[TT.TouchPad = 17] = "TouchPad", TT[TT.LStickXAxis = 18] = "LStickXAxis", TT[TT.LStickYAxis = 19] = "LStickYAxis", TT[TT.RStickXAxis = 20] = "RStickXAxis", TT[TT.RStickYAxis = 21] = "RStickYAxis"
-    }(fT || (fT = {})),
-    function(TT) {
-      TT[TT.A = 0] = "A", TT[TT.B = 1] = "B", TT[TT.X = 2] = "X", TT[TT.Y = 3] = "Y", TT[TT.LB = 4] = "LB", TT[TT.RB = 5] = "RB", TT[TT.LT = 6] = "LT", TT[TT.RT = 7] = "RT", TT[TT.Back = 8] = "Back", TT[TT.Start = 9] = "Start", TT[TT.LS = 10] = "LS", TT[TT.RS = 11] = "RS", TT[TT.DPadUp = 12] = "DPadUp", TT[TT.DPadDown = 13] = "DPadDown", TT[TT.DPadLeft = 14] = "DPadLeft", TT[TT.DPadRight = 15] = "DPadRight", TT[TT.Home = 16] = "Home", TT[TT.LStickXAxis = 17] = "LStickXAxis", TT[TT.LStickYAxis = 18] = "LStickYAxis", TT[TT.RStickXAxis = 19] = "RStickXAxis", TT[TT.RStickYAxis = 20] = "RStickYAxis"
-    }(CT || (CT = {})),
-    function(TT) {
-      TT[TT.B = 0] = "B", TT[TT.A = 1] = "A", TT[TT.Y = 2] = "Y", TT[TT.X = 3] = "X", TT[TT.L = 4] = "L", TT[TT.R = 5] = "R", TT[TT.ZL = 6] = "ZL", TT[TT.ZR = 7] = "ZR", TT[TT.Minus = 8] = "Minus", TT[TT.Plus = 9] = "Plus", TT[TT.LS = 10] = "LS", TT[TT.RS = 11] = "RS", TT[TT.DPadUp = 12] = "DPadUp", TT[TT.DPadDown = 13] = "DPadDown", TT[TT.DPadLeft = 14] = "DPadLeft", TT[TT.DPadRight = 15] = "DPadRight", TT[TT.Home = 16] = "Home", TT[TT.Capture = 17] = "Capture", TT[TT.LStickXAxis = 18] = "LStickXAxis", TT[TT.LStickYAxis = 19] = "LStickYAxis", TT[TT.RStickXAxis = 20] = "RStickXAxis", TT[TT.RStickYAxis = 21] = "RStickYAxis"
-    }(jT || (jT = {}));
-    var UT = IT(38966);
-    class aT {
-      static CreateDeviceEvent(TT, oT, IT, iT, zT, kT, WT) {
-        switch (TT) {
-          case RT.Keyboard:
-            return this._CreateKeyboardEvent(IT, iT, zT, kT);
-          case RT.Mouse:
-            if (IT === uT.MouseWheelX || IT === uT.MouseWheelY || IT === uT.MouseWheelZ) return this._CreateWheelEvent(TT, oT, IT, iT, zT, kT);
-          case RT.Touch:
-            return this._CreatePointerEvent(TT, oT, IT, iT, zT, kT, WT);
-          default:
-            throw `Unable to generate event for device ${RT[TT]}`
-        }
-      }
-      static _CreatePointerEvent(TT, oT, IT, iT, zT, kT, WT) {
-        const XT = this._CreateMouseEvent(TT, oT, IT, iT, zT, kT);
-        TT === RT.Mouse ? (XT.deviceType = RT.Mouse, XT.pointerId = 1, XT.pointerType = "mouse") : (XT.deviceType = RT.Touch, XT.pointerId = WT ?? oT, XT.pointerType = "touch");
-        let BT = 0;
-        return BT += zT.pollInput(TT, oT, uT.LeftClick), BT += 2 * zT.pollInput(TT, oT, uT.RightClick), BT += 4 * zT.pollInput(TT, oT, uT.MiddleClick), XT.buttons = BT, IT === uT.Move ? XT.type = "pointermove" : IT >= uT.LeftClick && IT <= uT.RightClick && (XT.type = 1 === iT ? "pointerdown" : "pointerup", XT.button = IT - 2), XT
-      }
-      static _CreateWheelEvent(TT, oT, IT, iT, zT, kT) {
-        const WT = this._CreateMouseEvent(TT, oT, IT, iT, zT, kT);
-        switch (WT.pointerId = 1, WT.type = "wheel", WT.deltaMode = UT.b.DOM_DELTA_PIXEL, WT.deltaX = 0, WT.deltaY = 0, WT.deltaZ = 0, IT) {
-          case uT.MouseWheelX:
-            WT.deltaX = iT;
-            break;
-          case uT.MouseWheelY:
-            WT.deltaY = iT;
-            break;
-          case uT.MouseWheelZ:
-            WT.deltaZ = iT
-        }
-        return WT
-      }
-      static _CreateMouseEvent(TT, oT, IT, iT, zT, kT) {
-        const WT = this._CreateEvent(kT),
-          XT = zT.pollInput(TT, oT, uT.Horizontal),
-          BT = zT.pollInput(TT, oT, uT.Vertical);
-        return kT ? (WT.movementX = 0, WT.movementY = 0, WT.offsetX = WT.movementX - kT.getBoundingClientRect().x, WT.offsetY = WT.movementY - kT.getBoundingClientRect().y) : (WT.movementX = zT.pollInput(TT, oT, 10), WT.movementY = zT.pollInput(TT, oT, 11), WT.offsetX = 0, WT.offsetY = 0), this._CheckNonCharacterKeys(WT, zT), WT.clientX = XT, WT.clientY = BT, WT.x = XT, WT.y = BT, WT.deviceType = TT, WT.deviceSlot = oT, WT.inputIndex = IT, WT
-      }
-      static _CreateKeyboardEvent(TT, oT, IT, iT) {
-        const zT = this._CreateEvent(iT);
-        return this._CheckNonCharacterKeys(zT, IT), zT.deviceType = RT.Keyboard, zT.deviceSlot = 0, zT.inputIndex = TT, zT.type = 1 === oT ? "keydown" : "keyup", zT.key = String.fromCharCode(TT), zT.keyCode = TT, zT
-      }
-      static _CheckNonCharacterKeys(TT, oT) {
-        const IT = oT.isDeviceAvailable(RT.Keyboard),
-          iT = IT && 1 === oT.pollInput(RT.Keyboard, 0, 18),
-          zT = IT && 1 === oT.pollInput(RT.Keyboard, 0, 17),
-          kT = IT && (1 === oT.pollInput(RT.Keyboard, 0, 91) || 1 === oT.pollInput(RT.Keyboard, 0, 92) || 1 === oT.pollInput(RT.Keyboard, 0, 93)),
-          WT = IT && 1 === oT.pollInput(RT.Keyboard, 0, 16);
-        TT.altKey = iT, TT.ctrlKey = zT, TT.metaKey = kT, TT.shiftKey = WT
-      }
-      static _CreateEvent(TT) {
-        const oT = {
-          preventDefault: () => {}
-        };
-        return oT.target = TT, oT
-      }
-    }
-    class YT {
-      constructor(TT, oT, IT) {
-        this._nativeInput = _native.DeviceInputSystem ? new _native.DeviceInputSystem(TT, oT, ((TT, oT, iT, zT) => {
-          const kT = aT.CreateDeviceEvent(TT, oT, iT, zT, this);
-          IT(TT, oT, kT)
-        })) : this._createDummyNativeInput()
-      }
-      pollInput(TT, oT, IT) {
-        return this._nativeInput.pollInput(TT, oT, IT)
-      }
-      isDeviceAvailable(TT) {
-        return TT === RT.Mouse || TT === RT.Touch
-      }
-      dispose() {
-        this._nativeInput.dispose()
-      }
-      _createDummyNativeInput() {
-        return {
-          pollInput: () => 0,
-          isDeviceAvailable: () => !1,
-          dispose: () => {}
-        }
-      }
-    }
-    const QT = Object.keys(uT).length / 2;
-    class OT {
-      constructor(TT, oT, IT, zT) {
-        this._inputs = [], this._keyboardActive = !1, this._pointerActive = !1, this._usingSafari = iT.i.IsSafari(), this._usingMacOs = (0, gT.g)() && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform), this._keyboardDownEvent = TT => {}, this._keyboardUpEvent = TT => {}, this._keyboardBlurEvent = TT => {}, this._pointerMoveEvent = TT => {}, this._pointerDownEvent = TT => {}, this._pointerUpEvent = TT => {}, this._pointerCancelEvent = TT => {}, this._pointerCancelTouch = TT => {}, this._pointerLeaveEvent = TT => {}, this._pointerWheelEvent = TT => {}, this._pointerBlurEvent = TT => {}, this._pointerMacOsChromeOutEvent = TT => {}, this._eventsAttached = !1, this._mouseId = -1, this._isUsingFirefox = (0, gT.g)() && navigator.userAgent && -1 !== navigator.userAgent.indexOf("Firefox"), this._isUsingChromium = (0, gT.g)() && navigator.userAgent && -1 !== navigator.userAgent.indexOf("Chrome"), this._maxTouchPoints = 0, this._pointerInputClearObserver = null, this._gamepadConnectedEvent = TT => {}, this._gamepadDisconnectedEvent = TT => {}, this._eventPrefix = iT.i.GetPointerPrefix(TT), this._engine = TT, this._onDeviceConnected = oT, this._onDeviceDisconnected = IT, this._onInputChanged = zT, this._mouseId = this._isUsingFirefox ? 0 : 1, this._enableEvents(), this._usingMacOs && (this._metaKeys = []), this._engine._onEngineViewChanged || (this._engine._onEngineViewChanged = () => {
-          this._enableEvents()
-        })
-      }
-      pollInput(TT, oT, IT) {
-        const zT = this._inputs[TT][oT];
-        if (!zT) throw `Unable to find device ${RT[TT]}`;
-        TT >= RT.DualShock && TT <= RT.DualSense && this._updateDevice(TT, oT, IT);
-        const kT = zT[IT];
-        if (void 0 === kT) throw `Unable to find input ${IT} for device ${RT[TT]} in slot ${oT}`;
-        return IT === uT.Move && iT.i.Warn("Unable to provide information for PointerInput.Move.  Try using PointerInput.Horizontal or PointerInput.Vertical for move data."), kT
-      }
-      isDeviceAvailable(TT) {
-        return void 0 !== this._inputs[TT]
-      }
-      dispose() {
-        this._onDeviceConnected = () => {}, this._onDeviceDisconnected = () => {}, this._onInputChanged = () => {}, delete this._engine._onEngineViewChanged, this._elementToAttachTo && this._disableEvents()
-      }
-      _enableEvents() {
-        const TT = this?._engine.getInputElement();
-        if (TT && (!this._eventsAttached || this._elementToAttachTo !== TT)) {
-          if (this._disableEvents(), this._inputs)
-            for (const TT of this._inputs)
-              if (TT)
-                for (const oT in TT) {
-                  const IT = TT[+oT];
-                  if (IT)
-                    for (let TT = 0; TT < IT.length; TT++) IT[TT] = 0
-                }
-          this._elementToAttachTo = TT, this._elementToAttachTo.tabIndex = -1 !== this._elementToAttachTo.tabIndex ? this._elementToAttachTo.tabIndex : this._engine.canvasTabIndex, this._handleKeyActions(), this._handlePointerActions(), this._handleGamepadActions(), this._eventsAttached = !0, this._checkForConnectedDevices()
-        }
-      }
-      _disableEvents() {
-        this._elementToAttachTo && (this._elementToAttachTo.removeEventListener("blur", this._keyboardBlurEvent), this._elementToAttachTo.removeEventListener("blur", this._pointerBlurEvent), this._elementToAttachTo.removeEventListener("keydown", this._keyboardDownEvent), this._elementToAttachTo.removeEventListener("keyup", this._keyboardUpEvent), this._elementToAttachTo.removeEventListener(this._eventPrefix + "move", this._pointerMoveEvent), this._elementToAttachTo.removeEventListener(this._eventPrefix + "down", this._pointerDownEvent), this._elementToAttachTo.removeEventListener(this._eventPrefix + "up", this._pointerUpEvent), this._elementToAttachTo.removeEventListener(this._eventPrefix + "cancel", this._pointerCancelEvent), this._elementToAttachTo.removeEventListener(this._eventPrefix + "leave", this._pointerLeaveEvent), this._elementToAttachTo.removeEventListener(this._wheelEventName, this._pointerWheelEvent), this._usingMacOs && this._isUsingChromium && this._elementToAttachTo.removeEventListener("lostpointercapture", this._pointerMacOsChromeOutEvent), window.removeEventListener("gamepadconnected", this._gamepadConnectedEvent), window.removeEventListener("gamepaddisconnected", this._gamepadDisconnectedEvent)), this._pointerInputClearObserver && this._engine.onEndFrameObservable.remove(this._pointerInputClearObserver), this._eventsAttached = !1
-      }
-      _checkForConnectedDevices() {
-        if (navigator.getGamepads) {
-          const TT = navigator.getGamepads();
-          for (const oT of TT) oT && this._addGamePad(oT)
-        }
-        "function" === typeof matchMedia && matchMedia("(pointer:fine)").matches && this._addPointerDevice(RT.Mouse, 0, 0, 0)
-      }
-      _addGamePad(TT) {
-        const oT = this._getGamepadDeviceType(TT.id),
-          IT = TT.index;
-        this._gamepads = this._gamepads || new Array(TT.index + 1), this._registerDevice(oT, IT, TT.buttons.length + TT.axes.length), this._gamepads[IT] = oT
-      }
-      _addPointerDevice(TT, oT, IT, iT) {
-        this._pointerActive || (this._pointerActive = !0), this._registerDevice(TT, oT, QT);
-        const zT = this._inputs[TT][oT];
-        zT[0] = IT, zT[1] = iT
-      }
-      _registerDevice(TT, oT, IT) {
-        if (void 0 === oT) throw `Unable to register device ${RT[TT]} to undefined slot.`;
-        if (this._inputs[TT] || (this._inputs[TT] = {}), !this._inputs[TT][oT]) {
-          const iT = new Array(IT);
-          iT.fill(0), this._inputs[TT][oT] = iT, this._onDeviceConnected(TT, oT)
-        }
-      }
-      _unregisterDevice(TT, oT) {
-        this._inputs[TT][oT] && (delete this._inputs[TT][oT], this._onDeviceDisconnected(TT, oT))
-      }
-      _handleKeyActions() {
-        this._keyboardDownEvent = TT => {
-          this._keyboardActive || (this._keyboardActive = !0, this._registerDevice(RT.Keyboard, 0, 255));
-          const oT = this._inputs[RT.Keyboard][0];
-          if (oT) {
-            oT[TT.keyCode] = 1;
-            const IT = TT;
-            IT.inputIndex = TT.keyCode, this._usingMacOs && TT.metaKey && "Meta" !== TT.key && (this._metaKeys.includes(TT.keyCode) || this._metaKeys.push(TT.keyCode)), this._onInputChanged(RT.Keyboard, 0, IT)
-          }
-        }, this._keyboardUpEvent = TT => {
-          this._keyboardActive || (this._keyboardActive = !0, this._registerDevice(RT.Keyboard, 0, 255));
-          const oT = this._inputs[RT.Keyboard][0];
-          if (oT) {
-            oT[TT.keyCode] = 0;
-            const IT = TT;
-            if (IT.inputIndex = TT.keyCode, this._usingMacOs && "Meta" === TT.key && this._metaKeys.length > 0) {
-              for (const TT of this._metaKeys) {
-                const IT = aT.CreateDeviceEvent(RT.Keyboard, 0, TT, 0, this, this._elementToAttachTo);
-                oT[TT] = 0, this._onInputChanged(RT.Keyboard, 0, IT)
-              }
-              this._metaKeys.splice(0, this._metaKeys.length)
-            }
-            this._onInputChanged(RT.Keyboard, 0, IT)
-          }
-        }, this._keyboardBlurEvent = () => {
-          if (this._keyboardActive) {
-            const TT = this._inputs[RT.Keyboard][0];
-            for (let oT = 0; oT < TT.length; oT++)
-              if (0 !== TT[oT]) {
-                TT[oT] = 0;
-                const IT = aT.CreateDeviceEvent(RT.Keyboard, 0, oT, 0, this, this._elementToAttachTo);
-                this._onInputChanged(RT.Keyboard, 0, IT)
-              } this._usingMacOs && this._metaKeys.splice(0, this._metaKeys.length)
-          }
-        }, this._elementToAttachTo.addEventListener("keydown", this._keyboardDownEvent), this._elementToAttachTo.addEventListener("keyup", this._keyboardUpEvent), this._elementToAttachTo.addEventListener("blur", this._keyboardBlurEvent)
-      }
-      _handlePointerActions() {
-        this._maxTouchPoints = (0, gT.g)() && navigator.maxTouchPoints || 2, this._activeTouchIds || (this._activeTouchIds = new Array(this._maxTouchPoints));
-        for (let iT = 0; iT < this._maxTouchPoints; iT++) this._activeTouchIds[iT] = -1;
-        this._pointerMoveEvent = TT => {
-          const oT = this._getPointerType(TT);
-          let IT = oT === RT.Mouse ? 0 : this._activeTouchIds.indexOf(TT.pointerId);
-          if (oT === RT.Touch && -1 === IT) {
-            if (0 === TT.buttons) return;
-            const zT = this._activeTouchIds.indexOf(-1);
-            if (!(zT >= 0)) return void iT.i.Warn(`Max number of touches exceeded.  Ignoring touches in excess of ${this._maxTouchPoints}`);
-            IT = zT, this._activeTouchIds[zT] = TT.pointerId, this._onDeviceConnected(oT, IT)
-          }
-          this._inputs[oT] || (this._inputs[oT] = {}), this._inputs[oT][IT] || this._addPointerDevice(oT, IT, TT.clientX, TT.clientY);
-          const zT = this._inputs[oT][IT];
-          if (zT) {
-            const iT = TT;
-            iT.inputIndex = uT.Move, zT[uT.Horizontal] = TT.clientX, zT[uT.Vertical] = TT.clientY, oT === RT.Touch && 0 === zT[uT.LeftClick] && (zT[uT.LeftClick] = 1), void 0 === TT.pointerId && (TT.pointerId = this._mouseId), this._onInputChanged(oT, IT, iT), this._usingSafari || -1 === TT.button || (iT.inputIndex = TT.button + 2, zT[TT.button + 2] = zT[TT.button + 2] ? 0 : 1, this._onInputChanged(oT, IT, iT))
-          }
-        }, this._pointerDownEvent = TT => {
-          const oT = this._getPointerType(TT);
-          let IT = oT === RT.Mouse ? 0 : TT.pointerId;
-          if (oT === RT.Touch) {
-            let oT = this._activeTouchIds.indexOf(TT.pointerId);
-            if (-1 === oT && (oT = this._activeTouchIds.indexOf(-1)), !(oT >= 0)) return void iT.i.Warn(`Max number of touches exceeded.  Ignoring touches in excess of ${this._maxTouchPoints}`);
-            IT = oT, this._activeTouchIds[oT] = TT.pointerId
-          }
-          this._inputs[oT] || (this._inputs[oT] = {}), this._inputs[oT][IT] ? oT === RT.Touch && this._onDeviceConnected(oT, IT) : this._addPointerDevice(oT, IT, TT.clientX, TT.clientY);
-          const zT = this._inputs[oT][IT];
-          if (zT) {
-            const iT = zT[uT.Horizontal],
-              WT = zT[uT.Vertical];
-            if (oT === RT.Mouse) {
-              if (void 0 === TT.pointerId && (TT.pointerId = this._mouseId), !document.pointerLockElement) try {
-                this._elementToAttachTo.setPointerCapture(this._mouseId)
-              } catch (kT) {}
-            } else if (TT.pointerId && !document.pointerLockElement) try {
-              this._elementToAttachTo.setPointerCapture(TT.pointerId)
-            } catch (kT) {}
-            zT[uT.Horizontal] = TT.clientX, zT[uT.Vertical] = TT.clientY, zT[TT.button + 2] = 1;
-            const XT = TT;
-            XT.inputIndex = TT.button + 2, this._onInputChanged(oT, IT, XT), iT === TT.clientX && WT === TT.clientY || (XT.inputIndex = uT.Move, this._onInputChanged(oT, IT, XT))
-          }
-        }, this._pointerUpEvent = TT => {
-          const oT = this._getPointerType(TT),
-            IT = oT === RT.Mouse ? 0 : this._activeTouchIds.indexOf(TT.pointerId);
-          if (oT === RT.Touch) {
-            if (-1 === IT) return;
-            this._activeTouchIds[IT] = -1
-          }
-          const iT = this._inputs[oT]?.[IT];
-          let zT = TT.button,
-            kT = iT && 0 !== iT[zT + 2];
-          if (!kT && this._isUsingFirefox && this._usingMacOs && iT && (zT = 2 === zT ? 0 : 2, kT = 0 !== iT[zT + 2]), kT) {
-            const kT = iT[uT.Horizontal],
-              WT = iT[uT.Vertical];
-            iT[uT.Horizontal] = TT.clientX, iT[uT.Vertical] = TT.clientY, iT[zT + 2] = 0;
-            const XT = TT;
-            void 0 === TT.pointerId && (TT.pointerId = this._mouseId), kT === TT.clientX && WT === TT.clientY || (XT.inputIndex = uT.Move, this._onInputChanged(oT, IT, XT)), XT.inputIndex = zT + 2, oT === RT.Mouse && this._mouseId >= 0 && this._elementToAttachTo.hasPointerCapture?.(this._mouseId) ? this._elementToAttachTo.releasePointerCapture(this._mouseId) : TT.pointerId && this._elementToAttachTo.hasPointerCapture?.(TT.pointerId) && this._elementToAttachTo.releasePointerCapture(TT.pointerId), this._onInputChanged(oT, IT, XT), oT === RT.Touch && this._onDeviceDisconnected(oT, IT)
-          }
-        }, this._pointerCancelTouch = TT => {
-          const oT = this._activeTouchIds.indexOf(TT);
-          if (-1 === oT) return;
-          this._elementToAttachTo.hasPointerCapture?.(TT) && this._elementToAttachTo.releasePointerCapture(TT), this._inputs[RT.Touch][oT][uT.LeftClick] = 0;
-          const IT = aT.CreateDeviceEvent(RT.Touch, oT, uT.LeftClick, 0, this, this._elementToAttachTo, TT);
-          this._onInputChanged(RT.Touch, oT, IT), this._activeTouchIds[oT] = -1, this._onDeviceDisconnected(RT.Touch, oT)
-        }, this._pointerCancelEvent = TT => {
-          if ("mouse" === TT.pointerType) {
-            const TT = this._inputs[RT.Mouse][0];
-            this._mouseId >= 0 && this._elementToAttachTo.hasPointerCapture?.(this._mouseId) && this._elementToAttachTo.releasePointerCapture(this._mouseId);
-            for (let oT = uT.LeftClick; oT <= uT.BrowserForward; oT++)
-              if (1 === TT[oT]) {
-                TT[oT] = 0;
-                const IT = aT.CreateDeviceEvent(RT.Mouse, 0, oT, 0, this, this._elementToAttachTo);
-                this._onInputChanged(RT.Mouse, 0, IT)
-              }
-          } else this._pointerCancelTouch(TT.pointerId)
-        }, this._pointerLeaveEvent = TT => {
-          "pen" === TT.pointerType && this._pointerCancelTouch(TT.pointerId)
-        }, this._wheelEventName = "onwheel" in document.createElement("div") ? "wheel" : void 0 !== document.onmousewheel ? "mousewheel" : "DOMMouseScroll";
-        let TT = !1;
-        const oT = function() {};
-        try {
-          const IT = Object.defineProperty({}, "passive", {
-            get: function() {
-              TT = !0
-            }
-          });
-          this._elementToAttachTo.addEventListener("test", oT, IT), this._elementToAttachTo.removeEventListener("test", oT, IT)
-        } catch (IT) {}
-        this._pointerBlurEvent = () => {
-          if (this.isDeviceAvailable(RT.Mouse)) {
-            const TT = this._inputs[RT.Mouse][0];
-            this._mouseId >= 0 && this._elementToAttachTo.hasPointerCapture?.(this._mouseId) && this._elementToAttachTo.releasePointerCapture(this._mouseId);
-            for (let oT = uT.LeftClick; oT <= uT.BrowserForward; oT++)
-              if (1 === TT[oT]) {
-                TT[oT] = 0;
-                const IT = aT.CreateDeviceEvent(RT.Mouse, 0, oT, 0, this, this._elementToAttachTo);
-                this._onInputChanged(RT.Mouse, 0, IT)
-              }
-          }
-          if (this.isDeviceAvailable(RT.Touch)) {
-            const TT = this._inputs[RT.Touch];
-            for (let oT = 0; oT < this._activeTouchIds.length; oT++) {
-              const IT = this._activeTouchIds[oT];
-              if (this._elementToAttachTo.hasPointerCapture?.(IT) && this._elementToAttachTo.releasePointerCapture(IT), -1 !== IT && 1 === TT[oT]?.[uT.LeftClick]) {
-                TT[oT][uT.LeftClick] = 0;
-                const iT = aT.CreateDeviceEvent(RT.Touch, oT, uT.LeftClick, 0, this, this._elementToAttachTo, IT);
-                this._onInputChanged(RT.Touch, oT, iT), this._activeTouchIds[oT] = -1, this._onDeviceDisconnected(RT.Touch, oT)
-              }
-            }
-          }
-        }, this._pointerWheelEvent = TT => {
-          const oT = RT.Mouse;
-          this._inputs[oT] || (this._inputs[oT] = []), this._inputs[oT][0] || (this._pointerActive = !0, this._registerDevice(oT, 0, QT));
-          const IT = this._inputs[oT][0];
-          if (IT) {
-            IT[uT.MouseWheelX] = TT.deltaX || 0, IT[uT.MouseWheelY] = TT.deltaY || TT.wheelDelta || 0, IT[uT.MouseWheelZ] = TT.deltaZ || 0;
-            const iT = TT;
-            void 0 === TT.pointerId && (TT.pointerId = this._mouseId), 0 !== IT[uT.MouseWheelX] && (iT.inputIndex = uT.MouseWheelX, this._onInputChanged(oT, 0, iT)), 0 !== IT[uT.MouseWheelY] && (iT.inputIndex = uT.MouseWheelY, this._onInputChanged(oT, 0, iT)), 0 !== IT[uT.MouseWheelZ] && (iT.inputIndex = uT.MouseWheelZ, this._onInputChanged(oT, 0, iT))
-          }
-        }, this._usingMacOs && this._isUsingChromium && (this._pointerMacOsChromeOutEvent = TT => {
-          TT.buttons > 1 && this._pointerCancelEvent(TT)
-        }, this._elementToAttachTo.addEventListener("lostpointercapture", this._pointerMacOsChromeOutEvent)), this._elementToAttachTo.addEventListener(this._eventPrefix + "move", this._pointerMoveEvent), this._elementToAttachTo.addEventListener(this._eventPrefix + "down", this._pointerDownEvent), this._elementToAttachTo.addEventListener(this._eventPrefix + "up", this._pointerUpEvent), this._elementToAttachTo.addEventListener(this._eventPrefix + "cancel", this._pointerCancelEvent), this._elementToAttachTo.addEventListener(this._eventPrefix + "leave", this._pointerLeaveEvent), this._elementToAttachTo.addEventListener("blur", this._pointerBlurEvent), this._elementToAttachTo.addEventListener(this._wheelEventName, this._pointerWheelEvent, !!TT && {
-          passive: !1
-        }), this._pointerInputClearObserver = this._engine.onEndFrameObservable.add((() => {
-          if (this.isDeviceAvailable(RT.Mouse)) {
-            const TT = this._inputs[RT.Mouse][0];
-            TT[uT.MouseWheelX] = 0, TT[uT.MouseWheelY] = 0, TT[uT.MouseWheelZ] = 0
-          }
-        }))
-      }
-      _handleGamepadActions() {
-        this._gamepadConnectedEvent = TT => {
-          this._addGamePad(TT.gamepad)
-        }, this._gamepadDisconnectedEvent = TT => {
-          if (this._gamepads) {
-            const oT = this._getGamepadDeviceType(TT.gamepad.id),
-              IT = TT.gamepad.index;
-            this._unregisterDevice(oT, IT), delete this._gamepads[IT]
-          }
-        }, window.addEventListener("gamepadconnected", this._gamepadConnectedEvent), window.addEventListener("gamepaddisconnected", this._gamepadDisconnectedEvent)
-      }
-      _updateDevice(TT, oT, IT) {
-        const iT = navigator.getGamepads()[oT];
-        if (iT && TT === this._gamepads[oT]) {
-          const zT = this._inputs[TT][oT];
-          IT >= iT.buttons.length ? zT[IT] = iT.axes[IT - iT.buttons.length].valueOf() : zT[IT] = iT.buttons[IT].value
-        }
-      }
-      _getGamepadDeviceType(TT) {
-        return -1 !== TT.indexOf("054c") ? -1 !== TT.indexOf("0ce6") ? RT.DualSense : RT.DualShock : -1 !== TT.indexOf("Xbox One") || -1 !== TT.search("Xbox 360") || -1 !== TT.search("xinput") || -1 !== TT.indexOf("045e") && -1 === TT.indexOf("Surface Dock") ? RT.Xbox : -1 !== TT.indexOf("057e") ? RT.Switch : RT.Generic
-      }
-      _getPointerType(TT) {
-        let oT = RT.Mouse;
-        return ("touch" === TT.pointerType || "pen" === TT.pointerType || TT.touches) && (oT = RT.Touch), oT
-      }
-    }
-    class HT {
-      constructor(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.deviceType = oT, this.deviceSlot = IT, this.onInputChangedObservable = new WT.d, this._deviceInputSystem = TT
-      }
-      getInput(TT) {
-        return this._deviceInputSystem.pollInput(this.deviceType, this.deviceSlot, TT)
-      }
-    }
-    class nT {
-      constructor(TT) {
-        this._registeredManagers = new Array, this._refCount = 0, this.registerManager = TT => {
-          for (let oT = 0; oT < this._devices.length; oT++) {
-            const IT = this._devices[oT];
-            for (const iT in IT) {
-              const IT = +iT;
-              TT._addDevice(new HT(this._deviceInputSystem, oT, IT))
-            }
-          }
-          this._registeredManagers.push(TT)
-        }, this.unregisterManager = TT => {
-          const oT = this._registeredManagers.indexOf(TT);
-          oT > -1 && this._registeredManagers.splice(oT, 1)
-        };
-        const oT = Object.keys(RT).length / 2;
-        this._devices = new Array(oT);
-        const IT = (TT, oT) => {
-            this._devices[TT] || (this._devices[TT] = new Array), this._devices[TT][oT] || (this._devices[TT][oT] = oT);
-            for (const IT of this._registeredManagers) {
-              const iT = new HT(this._deviceInputSystem, TT, oT);
-              IT._addDevice(iT)
-            }
-          },
-          iT = (TT, oT) => {
-            this._devices[TT]?.[oT] && delete this._devices[TT][oT];
-            for (const IT of this._registeredManagers) IT._removeDevice(TT, oT)
-          },
-          zT = (TT, oT, IT) => {
-            if (IT)
-              for (const iT of this._registeredManagers) iT._onInputChanged(TT, oT, IT)
-          };
-        "undefined" !== typeof _native ? this._deviceInputSystem = new YT(IT, iT, zT) : this._deviceInputSystem = new OT(TT, IT, iT, zT)
-      }
-      dispose() {
-        this._deviceInputSystem.dispose()
-      }
-    }
-    class qT {
-      getDeviceSource(TT, oT) {
-        if (void 0 === oT) {
-          if (void 0 === this._firstDevice[TT]) return null;
-          oT = this._firstDevice[TT]
-        }
-        return this._devices[TT] && void 0 !== this._devices[TT][oT] ? this._devices[TT][oT] : null
-      }
-      getDeviceSources(TT) {
-        return this._devices[TT] ? this._devices[TT].filter((TT => !!TT)) : []
-      }
-      constructor(TT) {
-        const oT = Object.keys(RT).length / 2;
-        this._devices = new Array(oT), this._firstDevice = new Array(oT), this._engine = TT, this._engine._deviceSourceManager || (this._engine._deviceSourceManager = new nT(TT)), this._engine._deviceSourceManager._refCount++, this.onDeviceConnectedObservable = new WT.d((TT => {
-          for (const oT of this._devices)
-            if (oT)
-              for (const IT of oT) IT && this.onDeviceConnectedObservable.notifyObserver(TT, IT)
-        })), this.onDeviceDisconnectedObservable = new WT.d, this._engine._deviceSourceManager.registerManager(this), this._onDisposeObserver = TT.bC.add((() => {
-          this.dispose()
-        }))
-      }
-      dispose() {
-        this.onDeviceConnectedObservable.clear(), this.onDeviceDisconnectedObservable.clear(), this._engine._deviceSourceManager && (this._engine._deviceSourceManager.unregisterManager(this), --this._engine._deviceSourceManager._refCount < 1 && (this._engine._deviceSourceManager.dispose(), delete this._engine._deviceSourceManager)), this._engine.bC.remove(this._onDisposeObserver)
-      }
-      _addDevice(TT) {
-        this._devices[TT.deviceType] || (this._devices[TT.deviceType] = []), this._devices[TT.deviceType][TT.deviceSlot] || (this._devices[TT.deviceType][TT.deviceSlot] = TT, this._updateFirstDevices(TT.deviceType)), this.onDeviceConnectedObservable.notifyObservers(TT)
-      }
-      _removeDevice(TT, oT) {
-        const IT = this._devices[TT]?.[oT];
-        this.onDeviceDisconnectedObservable.notifyObservers(IT), this._devices[TT]?.[oT] && delete this._devices[TT][oT], this._updateFirstDevices(TT)
-      }
-      _onInputChanged(TT, oT, IT) {
-        this._devices[TT]?.[oT]?.onInputChangedObservable.notifyObservers(IT)
-      }
-      _updateFirstDevices(TT) {
-        switch (TT) {
-          case RT.Keyboard:
-          case RT.Mouse:
-            this._firstDevice[TT] = 0;
-            break;
-          case RT.Touch:
-          case RT.DualSense:
-          case RT.DualShock:
-          case RT.Xbox:
-          case RT.Switch:
-          case RT.Generic: {
-            delete this._firstDevice[TT];
-            const oT = this._devices[TT];
-            if (oT)
-              for (let IT = 0; IT < oT.length; IT++)
-                if (oT[IT]) {
-                  this._firstDevice[TT] = IT;
-                  break
-                } break
-          }
-        }
-      }
-    }
-    var ZT = IT(38974);
-    class lT {
-      constructor() {
-        this._singleClick = !1, this._doubleClick = !1, this._hasSwiped = !1, this._ignore = !1
-      }
-      get singleClick() {
-        return this._singleClick
-      }
-      get YW() {
-        return this._doubleClick
-      }
-      get hasSwiped() {
-        return this._hasSwiped
-      }
-      get ignore() {
-        return this._ignore
-      }
-      set singleClick(TT) {
-        this._singleClick = TT
-      }
-      set YW(TT) {
-        this._doubleClick = TT
-      }
-      set hasSwiped(TT) {
-        this._hasSwiped = TT
-      }
-      set ignore(TT) {
-        this._ignore = TT
-      }
-    }
-    class sT {
-      constructor(TT) {
-        this._alreadyAttached = !1, this._meshPickProceed = !1, this._currentPickResult = null, this._previousPickResult = null, this._activePointerIds = new Array, this._activePointerIdsCount = 0, this._doubleClickOccured = !1, this._isSwiping = !1, this._swipeButtonPressed = -1, this._skipPointerTap = !1, this._isMultiTouchGesture = !1, this._pointerX = 0, this._pointerY = 0, this._startingPointerPosition = new ST.j(0, 0), this._previousStartingPointerPosition = new ST.j(0, 0), this._startingPointerTime = 0, this._previousStartingPointerTime = 0, this._pointerCaptures = {}, this._meshUnderPointerId = {}, this._movePointerInfo = null, this._latestPointerMoveEvents = new Map, this._cameraObserverCount = 0, this._delayedClicks = [null, null, null, null, null], this._deviceSourceManager = null, this._scene = TT || hT.d.LastCreatedScene, this._scene
-      }
-      get meshUnderPointer() {
-        return this._movePointerInfo && (this._movePointerInfo._generatePickInfo(), this._movePointerInfo = null), this._pointerOverMesh
-      }
-      getMeshUnderPointerByPointerId(TT) {
-        return this._meshUnderPointerId[TT] || null
-      }
-      get unTranslatedPointer() {
-        return new ST.j(this._unTranslatedPointerX, this._unTranslatedPointerY)
-      }
-      get pointerX() {
-        return this._pointerX
-      }
-      set pointerX(TT) {
-        this._pointerX = TT
-      }
-      get pointerY() {
-        return this._pointerY
-      }
-      set pointerY(TT) {
-        this._pointerY = TT
-      }
-      _updatePointerPosition(TT) {
-        const oT = this._scene.Zc().getInputElementClientRect();
-        oT && (this._pointerX = TT.clientX - oT.left, this._pointerY = TT.clientY - oT.top, this._unTranslatedPointerX = this._pointerX, this._unTranslatedPointerY = this._pointerY)
-      }
-      _processPointerMove(TT, oT) {
-        const IT = this._scene,
-          iT = IT.Zc(),
-          zT = iT.getInputElement();
-        zT && (zT.tabIndex = iT.canvasTabIndex, IT.doNotHandleCursors || (zT.style.cursor = IT.defaultCursor)), this._setCursorAndPointerOverMesh(TT, oT, IT);
-        for (const XT of IT._pointerMoveStage) {
-          TT = TT || this._pickMove(oT);
-          const IT = !!TT?.pickedMesh;
-          TT = XT.action(this._unTranslatedPointerX, this._unTranslatedPointerY, TT, IT, zT)
-        }
-        const kT = oT.inputIndex >= uT.MouseWheelX && oT.inputIndex <= uT.MouseWheelZ ? mT.c.POINTERWHEEL : mT.c.POINTERMOVE;
-        let WT;
-        IT.onPointerMove && (TT = TT || this._pickMove(oT), IT.onPointerMove(oT, TT, kT)), TT ? (WT = new mT.h(kT, oT, TT), this._setRayOnPointerInfo(TT, oT)) : (WT = new mT.h(kT, oT, null, this), this._movePointerInfo = WT), IT.onPointerObservable.hasObservers() && IT.onPointerObservable.notifyObservers(WT, kT)
-      }
-      _setRayOnPointerInfo(TT, oT) {
-        const IT = this._scene;
-        TT && ZT.c._IsPickingAvailable && (TT.ray || (TT.ray = IT.createPickingRay(oT.offsetX, oT.offsetY, ST.b.Identity(), IT.activeCamera)))
-      }
-      _addCameraPointerObserver(TT, oT) {
-        return this._cameraObserverCount++, this._scene.onPointerObservable.add(TT, oT)
-      }
-      _removeCameraPointerObserver(TT) {
-        return this._cameraObserverCount--, this._scene.onPointerObservable.remove(TT)
-      }
-      _checkForPicking() {
-        return !!(this._scene.onPointerObservable.observers.length > this._cameraObserverCount || this._scene.onPointerPick)
-      }
-      _checkPrePointerObservable(TT, oT, IT) {
-        const iT = this._scene,
-          zT = new mT.e(IT, oT, this._unTranslatedPointerX, this._unTranslatedPointerY);
-        return TT && (zT.originalPickingInfo = TT, zT.ray = TT.ray, "xr-near" === oT.pointerType && TT.originMesh && (zT.nearInteractionPickingInfo = TT)), iT.onPrePointerObservable.notifyObservers(zT, IT), !!zT.skipOnPointerObservable
-      }
-      _pickMove(TT) {
-        const oT = this._scene,
-          IT = oT.PL(this._unTranslatedPointerX, this._unTranslatedPointerY, oT.pointerMovePredicate, oT.pointerMoveFastCheck, oT.cameraToUseForPointers, oT.pointerMoveTrianglePredicate);
-        return this._setCursorAndPointerOverMesh(IT, TT, oT), IT
-      }
-      _updateMeshUnderPointer() {
-        const TT = this._scene;
-        if (!TT.constantlyUpdateMeshUnderPointer || 0 === this._latestPointerMoveEvents.size || TT.skipPointerMovePicking || !TT.cameraToUseForPointers && !TT.activeCamera) return;
-        this._ensurePointerMovePredicate();
-        const oT = this._pointerX,
-          IT = this._pointerY,
-          iT = this._unTranslatedPointerX,
-          zT = this._unTranslatedPointerY;
-        for (const kT of this._latestPointerMoveEvents.values()) this._pointerX = kT.pointerX, this._pointerY = kT.pointerY, this._unTranslatedPointerX = kT.unTranslatedPointerX, this._unTranslatedPointerY = kT.unTranslatedPointerY, this._pickMove(kT.event);
-        this._pointerX = oT, this._pointerY = IT, this._unTranslatedPointerX = iT, this._unTranslatedPointerY = zT
-      }
-      _ensurePointerMovePredicate() {
-        const TT = this._scene;
-        TT.pointerMovePredicate || (TT.pointerMovePredicate = oT => (oT._isPointerMovePickable ?? oT.dK) && oT.isVisible && oT.isReady() && oT.isEnabled() && (oT.enablePointerMoveEvents || TT.constantlyUpdateMeshUnderPointer || null !== oT._getActionManagerForTrigger()) && (!TT.cameraToUseForPointers || 0 !== (TT.cameraToUseForPointers.layerMask & oT.layerMask)))
-      }
-      _setCursorAndPointerOverMesh(TT, oT, IT) {
-        const iT = IT.Zc().getInputElement();
-        if (TT?.pickedMesh) {
-          if (this.setPointerOverMesh(TT.pickedMesh, oT.pointerId, TT, oT), !IT.doNotHandleCursors && iT && this._pointerOverMesh) {
-            const TT = this._pointerOverMesh._getActionManagerForTrigger();
-            TT && TT.hasPointerTriggers && (iT.style.cursor = TT.hoverCursor || IT.hoverCursor)
-          }
-        } else this.setPointerOverMesh(null, oT.pointerId, TT, oT)
-      }
-      simulatePointerMove(TT, oT) {
-        const IT = new PointerEvent("pointermove", oT);
-        IT.inputIndex = uT.Move, this._checkPrePointerObservable(TT, IT, mT.c.POINTERMOVE) || this._processPointerMove(TT, IT)
-      }
-      simulatePointerDown(TT, oT) {
-        const IT = new PointerEvent("pointerdown", oT);
-        IT.inputIndex = IT.button + 2, this._checkPrePointerObservable(TT, IT, mT.c.POINTERDOWN) || this._processPointerDown(TT, IT)
-      }
-      _processPointerDown(TT, oT) {
-        const IT = this._scene;
-        if (TT?.pickedMesh) {
-          this._pickedDownMesh = TT.pickedMesh;
-          const iT = TT.pickedMesh._getActionManagerForTrigger();
-          if (iT) {
-            if (iT.hasPickTriggers) switch (iT.processTrigger(5, new cT(TT.pickedMesh, IT.pointerX, IT.pointerY, TT.pickedMesh, oT, TT)), oT.button) {
-              case 0:
-                iT.processTrigger(2, new cT(TT.pickedMesh, IT.pointerX, IT.pointerY, TT.pickedMesh, oT, TT));
-                break;
-              case 1:
-                iT.processTrigger(4, new cT(TT.pickedMesh, IT.pointerX, IT.pointerY, TT.pickedMesh, oT, TT));
-                break;
-              case 2:
-                iT.processTrigger(3, new cT(TT.pickedMesh, IT.pointerX, IT.pointerY, TT.pickedMesh, oT, TT))
-            }
-            iT.hasSpecificTrigger(8) && window.setTimeout((() => {
-              const TT = IT.PL(this._unTranslatedPointerX, this._unTranslatedPointerY, (TT => TT.dK && TT.isVisible && TT.isReady() && TT.actionManager && TT.actionManager.hasSpecificTrigger(8) && TT === this._pickedDownMesh), !1, IT.cameraToUseForPointers);
-              TT?.pickedMesh && iT && 0 !== this._activePointerIdsCount && Date.now() - this._startingPointerTime > sT.LongPressDelay && !this._isPointerSwiping() && (this._startingPointerTime = 0, iT.processTrigger(8, cT.CreateNew(TT.pickedMesh, oT)))
-            }), sT.LongPressDelay)
-          }
-        } else
-          for (const kT of IT._pointerDownStage) TT = kT.action(this._unTranslatedPointerX, this._unTranslatedPointerY, TT, oT, !1);
-        let iT;
-        const zT = mT.c.POINTERDOWN;
-        TT ? (IT.onPointerDown && IT.onPointerDown(oT, TT, zT), iT = new mT.h(zT, oT, TT), this._setRayOnPointerInfo(TT, oT)) : iT = new mT.h(zT, oT, null, this), IT.onPointerObservable.hasObservers() && IT.onPointerObservable.notifyObservers(iT, zT)
-      }
-      _isPointerSwiping() {
-        return this._isSwiping
-      }
-      simulatePointerUp(TT, oT, IT) {
-        const iT = new PointerEvent("pointerup", oT);
-        iT.inputIndex = uT.Move;
-        const zT = new lT;
-        IT ? zT.YW = !0 : zT.singleClick = !0, this._checkPrePointerObservable(TT, iT, mT.c.POINTERUP) || this._processPointerUp(TT, iT, zT)
-      }
-      _processPointerUp(TT, oT, IT) {
-        const iT = this._scene;
-        if (TT?.pickedMesh) {
-          if (this._pickedUpMesh = TT.pickedMesh, this._pickedDownMesh === this._pickedUpMesh && (iT.onPointerPick && iT.onPointerPick(oT, TT), IT.singleClick && !IT.ignore && iT.onPointerObservable.observers.length > this._cameraObserverCount)) {
-            const IT = mT.c.POINTERPICK,
-              zT = new mT.h(IT, oT, TT);
-            this._setRayOnPointerInfo(TT, oT), iT.onPointerObservable.notifyObservers(zT, IT)
-          }
-          const zT = TT.pickedMesh._getActionManagerForTrigger();
-          if (zT && !IT.ignore) {
-            zT.processTrigger(7, cT.CreateNew(TT.pickedMesh, oT, TT)), !IT.hasSwiped && IT.singleClick && zT.processTrigger(1, cT.CreateNew(TT.pickedMesh, oT, TT));
-            const iT = TT.pickedMesh._getActionManagerForTrigger(6);
-            IT.YW && iT && iT.processTrigger(6, cT.CreateNew(TT.pickedMesh, oT, TT))
-          }
-        } else if (!IT.ignore)
-          for (const zT of iT._pointerUpStage) TT = zT.action(this._unTranslatedPointerX, this._unTranslatedPointerY, TT, oT, IT.YW);
-        if (this._pickedDownMesh && this._pickedDownMesh !== this._pickedUpMesh) {
-          const TT = this._pickedDownMesh._getActionManagerForTrigger(16);
-          TT && TT.processTrigger(16, cT.CreateNew(this._pickedDownMesh, oT))
-        }
-        if (!IT.ignore) {
-          const zT = new mT.h(mT.c.POINTERUP, oT, TT);
-          if (this._setRayOnPointerInfo(TT, oT), iT.onPointerObservable.notifyObservers(zT, mT.c.POINTERUP), iT.onPointerUp && iT.onPointerUp(oT, TT, mT.c.POINTERUP), !IT.hasSwiped && !this._skipPointerTap && !this._isMultiTouchGesture) {
-            let zT = 0;
-            if (IT.singleClick ? zT = mT.c.POINTERTAP : IT.YW && (zT = mT.c.POINTERDOUBLETAP), zT) {
-              const IT = new mT.h(zT, oT, TT);
-              iT.onPointerObservable.hasObservers() && iT.onPointerObservable.hasSpecificMask(zT) && iT.onPointerObservable.notifyObservers(IT, zT)
-            }
-          }
-        }
-      }
-      isPointerCaptured() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._pointerCaptures[TT]
-      }
-      attachControl() {
-        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const zT = this._scene,
-          kT = zT.Zc();
-        iT || (iT = kT.getInputElement()), this._alreadyAttached && this.detachControl(), iT && (this._alreadyAttachedTo = iT), this._deviceSourceManager = new qT(kT), this._initActionManager = TT => {
-          if (!this._meshPickProceed) {
-            const oT = zT.skipPointerUpPicking || 0 === zT._registeredActions && !this._checkForPicking() && !zT.onPointerUp ? null : zT.PL(this._unTranslatedPointerX, this._unTranslatedPointerY, zT.pointerUpPredicate, zT.pointerUpFastCheck, zT.cameraToUseForPointers, zT.pointerUpTrianglePredicate);
-            this._currentPickResult = oT, oT && (TT = oT.hit && oT.pickedMesh ? oT.pickedMesh._getActionManagerForTrigger() : null), this._meshPickProceed = !0
-          }
-          return TT
-        }, this._delayedSimpleClick = (TT, oT, IT) => {
-          if ((Date.now() - this._previousStartingPointerTime > sT.DoubleClickDelay && !this._doubleClickOccured || TT !== this._previousButtonPressed) && (this._doubleClickOccured = !1, oT.singleClick = !0, oT.ignore = !1, this._delayedClicks[TT])) {
-            const oT = this._delayedClicks[TT].evt,
-              IT = mT.c.POINTERTAP,
-              iT = new mT.h(IT, oT, this._currentPickResult);
-            zT.onPointerObservable.hasObservers() && zT.onPointerObservable.hasSpecificMask(IT) && zT.onPointerObservable.notifyObservers(iT, IT), this._delayedClicks[TT] = null
-          }
-        }, this._initClickEvent = (TT, oT, IT, iT) => {
-          const zT = new lT;
-          this._currentPickResult = null;
-          let kT = null,
-            WT = TT.hasSpecificMask(mT.c.POINTERPICK) || oT.hasSpecificMask(mT.c.POINTERPICK) || TT.hasSpecificMask(mT.c.POINTERTAP) || oT.hasSpecificMask(mT.c.POINTERTAP) || TT.hasSpecificMask(mT.c.POINTERDOUBLETAP) || oT.hasSpecificMask(mT.c.POINTERDOUBLETAP);
-          !WT && eT && (kT = this._initActionManager(kT, zT), kT && (WT = kT.hasPickTriggers));
-          let XT = !1;
-          if (WT = WT && !this._isMultiTouchGesture, WT) {
-            const WT = IT.button;
-            if (zT.hasSwiped = this._isPointerSwiping(), !zT.hasSwiped) {
-              let BT = !sT.ExclusiveDoubleClickMode;
-              if (BT || (BT = !TT.hasSpecificMask(mT.c.POINTERDOUBLETAP) && !oT.hasSpecificMask(mT.c.POINTERDOUBLETAP), BT && !eT.HasSpecificTrigger(6) && (kT = this._initActionManager(kT, zT), kT && (BT = !kT.hasSpecificTrigger(6)))), BT)(Date.now() - this._previousStartingPointerTime > sT.DoubleClickDelay || WT !== this._previousButtonPressed) && (zT.singleClick = !0, iT(zT, this._currentPickResult), XT = !0);
-              else {
-                const TT = {
-                  evt: IT,
-                  clickInfo: zT,
-                  timeoutId: window.setTimeout(this._delayedSimpleClick.bind(this, WT, zT, iT), sT.DoubleClickDelay)
-                };
-                this._delayedClicks[WT] = TT
-              }
-              let FT = TT.hasSpecificMask(mT.c.POINTERDOUBLETAP) || oT.hasSpecificMask(mT.c.POINTERDOUBLETAP);
-              !FT && eT.HasSpecificTrigger(6) && (kT = this._initActionManager(kT, zT), kT && (FT = kT.hasSpecificTrigger(6))), FT && (WT === this._previousButtonPressed && Date.now() - this._previousStartingPointerTime < sT.DoubleClickDelay && !this._doubleClickOccured ? (zT.hasSwiped || this._isPointerSwiping() ? (this._doubleClickOccured = !1, this._previousStartingPointerTime = this._startingPointerTime, this._previousStartingPointerPosition.x = this._startingPointerPosition.x, this._previousStartingPointerPosition.y = this._startingPointerPosition.y, this._previousButtonPressed = WT, sT.ExclusiveDoubleClickMode ? (this._delayedClicks[WT] && (clearTimeout(this._delayedClicks[WT]?.timeoutId), this._delayedClicks[WT] = null), iT(zT, this._previousPickResult)) : iT(zT, this._currentPickResult)) : (this._previousStartingPointerTime = 0, this._doubleClickOccured = !0, zT.YW = !0, zT.ignore = !1, sT.ExclusiveDoubleClickMode && this._delayedClicks[WT] && (clearTimeout(this._delayedClicks[WT]?.timeoutId), this._delayedClicks[WT] = null), iT(zT, this._currentPickResult)), XT = !0) : (this._doubleClickOccured = !1, this._previousStartingPointerTime = this._startingPointerTime, this._previousStartingPointerPosition.x = this._startingPointerPosition.x, this._previousStartingPointerPosition.y = this._startingPointerPosition.y, this._previousButtonPressed = WT))
-            }
-          }
-          XT || iT(zT, this._currentPickResult)
-        }, this._onPointerMove = TT => {
-          if (this._updatePointerPosition(TT), this._latestPointerMoveEvents.set(TT.pointerId, {
-              event: TT,
-              pointerX: this._pointerX,
-              pointerY: this._pointerY,
-              unTranslatedPointerX: this._unTranslatedPointerX,
-              unTranslatedPointerY: this._unTranslatedPointerY
-            }), this._isSwiping || -1 === this._swipeButtonPressed || (this._isSwiping = Math.abs(this._startingPointerPosition.x - this._pointerX) > sT.DragMovementThreshold || Math.abs(this._startingPointerPosition.y - this._pointerY) > sT.DragMovementThreshold), kT.isPointerLock && kT._verifyPointerLock(), this._checkPrePointerObservable(null, TT, TT.inputIndex >= uT.MouseWheelX && TT.inputIndex <= uT.MouseWheelZ ? mT.c.POINTERWHEEL : mT.c.POINTERMOVE)) return;
-          if (!zT.cameraToUseForPointers && !zT.activeCamera) return;
-          if (zT.skipPointerMovePicking) return void this._processPointerMove(new xT.d, TT);
-          this._ensurePointerMovePredicate();
-          const oT = zT._registeredActions > 0 || zT.constantlyUpdateMeshUnderPointer ? this._pickMove(TT) : null;
-          this._processPointerMove(oT, TT)
-        }, this._onPointerDown = TT => {
-          const oT = this._activePointerIds.indexOf(-1);
-          if (-1 === oT ? this._activePointerIds.push(TT.pointerId) : this._activePointerIds[oT] = TT.pointerId, this._activePointerIdsCount++, this._pickedDownMesh = null, this._meshPickProceed = !1, sT.ExclusiveDoubleClickMode)
-            for (let iT = 0; iT < this._delayedClicks.length; iT++)
-              if (this._delayedClicks[iT])
-                if (TT.button === iT) clearTimeout(this._delayedClicks[iT]?.timeoutId);
-                else {
-                  const TT = this._delayedClicks[iT].clickInfo;
-                  this._doubleClickOccured = !1, TT.singleClick = !0, TT.ignore = !1;
-                  const oT = this._delayedClicks[iT].evt,
-                    IT = mT.c.POINTERTAP,
-                    kT = new mT.h(IT, oT, this._currentPickResult);
-                  zT.onPointerObservable.hasObservers() && zT.onPointerObservable.hasSpecificMask(IT) && zT.onPointerObservable.notifyObservers(kT, IT), this._delayedClicks[iT] = null
-                } if (this._updatePointerPosition(TT), -1 === this._swipeButtonPressed && (this._swipeButtonPressed = TT.button), zT.preventDefaultOnPointerDown && iT && (TT.preventDefault(), iT.focus()), this._startingPointerPosition.x = this._pointerX, this._startingPointerPosition.y = this._pointerY, this._startingPointerTime = Date.now(), this._checkPrePointerObservable(null, TT, mT.c.POINTERDOWN)) return;
-          if (!zT.cameraToUseForPointers && !zT.activeCamera) return;
-          let IT;
-          this._pointerCaptures[TT.pointerId] = !0, zT.pointerDownPredicate || (zT.pointerDownPredicate = TT => TT.dK && TT.isVisible && TT.isReady() && TT.isEnabled() && (!zT.cameraToUseForPointers || 0 !== (zT.cameraToUseForPointers.layerMask & TT.layerMask))), this._pickedDownMesh = null, IT = zT.skipPointerDownPicking || 0 === zT._registeredActions && !this._checkForPicking() && !zT.onPointerDown ? new xT.d : zT.PL(this._unTranslatedPointerX, this._unTranslatedPointerY, zT.pointerDownPredicate, zT.pointerDownFastCheck, zT.cameraToUseForPointers, zT.pointerDownTrianglePredicate), this._processPointerDown(IT, TT)
-        }, this._onPointerUp = TT => {
-          const oT = this._activePointerIds.indexOf(TT.pointerId); - 1 !== oT && (this._activePointerIds[oT] = -1, this._activePointerIdsCount--, "touch" === TT.pointerType && this._latestPointerMoveEvents.delete(TT.pointerId), this._pickedUpMesh = null, this._meshPickProceed = !1, this._updatePointerPosition(TT), zT.preventDefaultOnPointerUp && iT && (TT.preventDefault(), iT.focus()), this._initClickEvent(zT.onPrePointerObservable, zT.onPointerObservable, TT, ((oT, IT) => {
-            if (zT.onPrePointerObservable.hasObservers() && (this._skipPointerTap = !1, !oT.ignore)) {
-              if (this._checkPrePointerObservable(null, TT, mT.c.POINTERUP)) return this._swipeButtonPressed === TT.button && (this._isSwiping = !1, this._swipeButtonPressed = -1), void(0 === TT.buttons && (this._pointerCaptures[TT.pointerId] = !1));
-              oT.hasSwiped || (oT.singleClick && zT.onPrePointerObservable.hasSpecificMask(mT.c.POINTERTAP) && this._checkPrePointerObservable(null, TT, mT.c.POINTERTAP) && (this._skipPointerTap = !0), oT.YW && zT.onPrePointerObservable.hasSpecificMask(mT.c.POINTERDOUBLETAP) && this._checkPrePointerObservable(null, TT, mT.c.POINTERDOUBLETAP) && (this._skipPointerTap = !0))
-            }
-            this._pointerCaptures[TT.pointerId] ? (0 === TT.buttons && (this._pointerCaptures[TT.pointerId] = !1), (zT.cameraToUseForPointers || zT.activeCamera) && (zT.pointerUpPredicate || (zT.pointerUpPredicate = TT => TT.dK && TT.isVisible && TT.isReady() && TT.isEnabled() && (!zT.cameraToUseForPointers || 0 !== (zT.cameraToUseForPointers.layerMask & TT.layerMask))), !this._meshPickProceed && (eT && eT.HasTriggers || this._checkForPicking() || zT.onPointerUp) && this._initActionManager(null, oT), IT || (IT = this._currentPickResult), this._processPointerUp(IT, TT, oT), this._previousPickResult = this._currentPickResult, this._swipeButtonPressed === TT.button && (this._isSwiping = !1, this._swipeButtonPressed = -1))) : this._swipeButtonPressed === TT.button && (this._isSwiping = !1, this._swipeButtonPressed = -1)
-          })))
-        }, this._onKeyDown = TT => {
-          const oT = JT.b.KEYDOWN;
-          if (zT.onPreKeyboardObservable.hasObservers()) {
-            const IT = new JT.d(oT, TT);
-            if (zT.onPreKeyboardObservable.notifyObservers(IT, oT), IT.skipOnKeyboardObservable) return
-          }
-          if (zT.onKeyboardObservable.hasObservers()) {
-            const IT = new JT.h(oT, TT);
-            zT.onKeyboardObservable.notifyObservers(IT, oT)
-          }
-          zT.actionManager && zT.actionManager.processTrigger(14, cT.CreateNewFromScene(zT, TT))
-        }, this._onKeyUp = TT => {
-          const oT = JT.b.KEYUP;
-          if (zT.onPreKeyboardObservable.hasObservers()) {
-            const IT = new JT.d(oT, TT);
-            if (zT.onPreKeyboardObservable.notifyObservers(IT, oT), IT.skipOnKeyboardObservable) return
-          }
-          if (zT.onKeyboardObservable.hasObservers()) {
-            const IT = new JT.h(oT, TT);
-            zT.onKeyboardObservable.notifyObservers(IT, oT)
-          }
-          zT.actionManager && zT.actionManager.processTrigger(15, cT.CreateNewFromScene(zT, TT))
-        }, this._deviceSourceManager.onDeviceConnectedObservable.add((iT => {
-          iT.deviceType === RT.Mouse ? iT.onInputChangedObservable.add((zT => {
-            this._originMouseEvent = zT, zT.inputIndex === uT.LeftClick || zT.inputIndex === uT.MiddleClick || zT.inputIndex === uT.RightClick || zT.inputIndex === uT.BrowserBack || zT.inputIndex === uT.BrowserForward ? oT && 1 === iT.getInput(zT.inputIndex) ? this._onPointerDown(zT) : TT && 0 === iT.getInput(zT.inputIndex) && this._onPointerUp(zT) : IT && (zT.inputIndex === uT.Move ? this._onPointerMove(zT) : zT.inputIndex !== uT.MouseWheelX && zT.inputIndex !== uT.MouseWheelY && zT.inputIndex !== uT.MouseWheelZ || this._onPointerMove(zT))
-          })) : iT.deviceType === RT.Touch ? iT.onInputChangedObservable.add((zT => {
-            zT.inputIndex === uT.LeftClick && (oT && 1 === iT.getInput(zT.inputIndex) ? (this._onPointerDown(zT), this._activePointerIdsCount > 1 && (this._isMultiTouchGesture = !0)) : TT && 0 === iT.getInput(zT.inputIndex) && (this._onPointerUp(zT), 0 === this._activePointerIdsCount && (this._isMultiTouchGesture = !1))), IT && zT.inputIndex === uT.Move && this._onPointerMove(zT)
-          })) : iT.deviceType === RT.Keyboard && iT.onInputChangedObservable.add((TT => {
-            "keydown" === TT.type ? this._onKeyDown(TT) : "keyup" === TT.type && this._onKeyUp(TT)
-          }))
-        })), this._alreadyAttached = !0
-      }
-      detachControl() {
-        this._alreadyAttached && (this._deviceSourceManager.dispose(), this._deviceSourceManager = null, this._alreadyAttachedTo && !this._scene.doNotHandleCursors && (this._alreadyAttachedTo.style.cursor = this._scene.defaultCursor), this._alreadyAttached = !1, this._alreadyAttachedTo = null, this._latestPointerMoveEvents.clear())
-      }
-      setPointerOverMesh(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          IT = arguments.length > 2 ? arguments[2] : void 0,
-          iT = arguments.length > 3 ? arguments[3] : void 0;
-        if (this._meshUnderPointerId[oT] === TT && (!TT || !TT._internalAbstractMeshDataInfo._pointerOverDisableMeshTesting)) return;
-        const zT = this._meshUnderPointerId[oT];
-        let kT;
-        zT && (kT = zT._getActionManagerForTrigger(10), kT && kT.processTrigger(10, new cT(zT, this._pointerX, this._pointerY, TT, iT, {
-          pointerId: oT
-        }))), TT ? (this._meshUnderPointerId[oT] = TT, this._pointerOverMesh = TT, kT = TT._getActionManagerForTrigger(9), kT && kT.processTrigger(9, new cT(TT, this._pointerX, this._pointerY, TT, iT, {
-          pointerId: oT,
-          pickResult: IT
-        }))) : (delete this._meshUnderPointerId[oT], this._pointerOverMesh = null), this._scene.onMeshUnderPointerUpdatedObservable.hasObservers() && this._scene.onMeshUnderPointerUpdatedObservable.notifyObservers({
-          mesh: TT,
-          pointerId: oT
-        })
-      }
-      getPointerOverMesh() {
-        return this.meshUnderPointer
-      }
-      _invalidateMesh(TT) {
-        this._pointerOverMesh === TT && (this._pointerOverMesh = null), this._pickedDownMesh === TT && (this._pickedDownMesh = null), this._pickedUpMesh === TT && (this._pickedUpMesh = null);
-        for (const oT in this._meshUnderPointerId) this._meshUnderPointerId[oT] === TT && delete this._meshUnderPointerId[oT]
-      }
-    }
-    sT.DragMovementThreshold = 10, sT.LongPressDelay = 500, sT.DoubleClickDelay = 300, sT.ExclusiveDoubleClickMode = !1;
-    var tT = IT(38716),
-      GT = IT(36177),
-      pT = IT(36710);
-    class bT {
-      static get UniqueId() {
-        const TT = this._UniqueIdCounter;
-        return this._UniqueIdCounter++, TT
-      }
-    }
-    bT._UniqueIdCounter = 1;
-    var yT = IT(38827),
-      NT = IT(38976),
-      PT = IT(36134);
-    class dT {
-      constructor() {
-        this.pointerDownFastCheck = !1, this.pointerUpFastCheck = !1, this.pointerMoveFastCheck = !1, this.skipPointerMovePicking = !1, this.skipPointerDownPicking = !1, this.skipPointerUpPicking = !1
-      }
-    }
-    var VT, To, oo, Io, io, zo, ko, Wo, Xo, Bo, Fo, So, Do, Lo, xo, co, Ko, Mo, ro, Ao, go, ho, wo, mo, eo, Ro, uo, vo, Eo, fo, Co, jo, Jo, Uo, ao, Yo, Qo, Oo, Ho, no, qo, Zo, so, to, Go, po, bo, yo, No, Po, Vo, TI, oI, II = IT(37660),
-      iI = IT(36166);
-    const zI = new ST.n,
-      kI = new ST.n;
-    var WI;
-    ! function(TT) {
-      TT[TT.BackwardCompatible = 0] = "BackwardCompatible", TT[TT.Intermediate = 1] = "Intermediate", TT[TT.Aggressive = 2] = "Aggressive"
-    }(WI || (WI = {}));
-    class XI {
-      static DefaultMaterialFactory(TT) {
-        throw (0, wT.k)("StandardMaterial")
-      }
-      static CollisionCoordinatorFactory() {
-        throw (0, wT.k)("DefaultCollisionCoordinator")
-      }
-      get clearColor() {
-        return this._clearColor
-      }
-      set clearColor(TT) {
-        TT !== this._clearColor && (this._clearColor = TT, this.onClearColorChangedObservable.notifyObservers(this._clearColor))
-      }
-      get imageProcessingConfiguration() {
-        return this._imageProcessingConfiguration
-      }
-      get performancePriority() {
-        return this._performancePriority
-      }
-      set performancePriority(TT) {
-        if (TT !== this._performancePriority) {
-          switch (this._performancePriority = TT, TT) {
-            case 0:
-              this.skipFrustumClipping = !1, this._renderingManager.maintainStateBetweenFrames = !1, this.skipPointerMovePicking = !1, this.autoClear = !0;
-              break;
-            case 1:
-              this.skipFrustumClipping = !1, this._renderingManager.maintainStateBetweenFrames = !1, this.skipPointerMovePicking = !0, this.autoClear = !1;
-              break;
-            case 2:
-              this.skipFrustumClipping = !0, this._renderingManager.maintainStateBetweenFrames = !0, this.skipPointerMovePicking = !0, this.autoClear = !1
-          }
-          this.onScenePerformancePriorityChangedObservable.notifyObservers(TT)
-        }
-      }
-      set forceWireframe(TT) {
-        this._forceWireframe !== TT && (this._forceWireframe = TT, this.markAllMaterialsAsDirty(16))
-      }
-      get forceWireframe() {
-        return this._forceWireframe
-      }
-      set skipFrustumClipping(TT) {
-        this._skipFrustumClipping !== TT && (this._skipFrustumClipping = TT)
-      }
-      get skipFrustumClipping() {
-        return this._skipFrustumClipping
-      }
-      set forcePointsCloud(TT) {
-        this._forcePointsCloud !== TT && (this._forcePointsCloud = TT, this.markAllMaterialsAsDirty(16))
-      }
-      get forcePointsCloud() {
-        return this._forcePointsCloud
-      }
-      get environmentTexture() {
-        return this._environmentTexture
-      }
-      set environmentTexture(TT) {
-        this._environmentTexture !== TT && (this._environmentTexture = TT, this.onEnvironmentTextureChangedObservable.notifyObservers(TT), this.markAllMaterialsAsDirty(1))
-      }
-      getNodes() {
-        let TT = [];
-        TT = TT.concat(this.meshes), TT = TT.concat(this.lights), TT = TT.concat(this.cameras), TT = TT.concat(this.transformNodes);
-        for (const oT of this.skeletons) TT = TT.concat(oT.bones);
-        return TT
-      }
-      get animationPropertiesOverride() {
-        return this._animationPropertiesOverride
-      }
-      set animationPropertiesOverride(TT) {
-        this._animationPropertiesOverride = TT
-      }
-      set onDispose(TT) {
-        this._onDisposeObserver && this.bC.remove(this._onDisposeObserver), this._onDisposeObserver = this.bC.add(TT)
-      }
-      set beforeRender(TT) {
-        this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), TT && (this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(TT))
-      }
-      set afterRender(TT) {
-        this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), TT && (this._onAfterRenderObserver = this.onAfterRenderObservable.add(TT))
-      }
-      set beforeCameraRender(TT) {
-        this._onBeforeCameraRenderObserver && this.onBeforeCameraRenderObservable.remove(this._onBeforeCameraRenderObserver), this._onBeforeCameraRenderObserver = this.onBeforeCameraRenderObservable.add(TT)
-      }
-      set afterCameraRender(TT) {
-        this._onAfterCameraRenderObserver && this.onAfterCameraRenderObservable.remove(this._onAfterCameraRenderObserver), this._onAfterCameraRenderObserver = this.onAfterCameraRenderObservable.add(TT)
-      }
-      get pointerDownPredicate() {
-        return this._pointerPickingConfiguration.pointerDownPredicate
-      }
-      set pointerDownPredicate(TT) {
-        this._pointerPickingConfiguration.pointerDownPredicate = TT
-      }
-      get pointerUpPredicate() {
-        return this._pointerPickingConfiguration.pointerUpPredicate
-      }
-      set pointerUpPredicate(TT) {
-        this._pointerPickingConfiguration.pointerUpPredicate = TT
-      }
-      get pointerMovePredicate() {
-        return this._pointerPickingConfiguration.pointerMovePredicate
-      }
-      set pointerMovePredicate(TT) {
-        this._pointerPickingConfiguration.pointerMovePredicate = TT
-      }
-      get pointerDownFastCheck() {
-        return this._pointerPickingConfiguration.pointerDownFastCheck
-      }
-      set pointerDownFastCheck(TT) {
-        this._pointerPickingConfiguration.pointerDownFastCheck = TT
-      }
-      get pointerUpFastCheck() {
-        return this._pointerPickingConfiguration.pointerUpFastCheck
-      }
-      set pointerUpFastCheck(TT) {
-        this._pointerPickingConfiguration.pointerUpFastCheck = TT
-      }
-      get pointerMoveFastCheck() {
-        return this._pointerPickingConfiguration.pointerMoveFastCheck
-      }
-      set pointerMoveFastCheck(TT) {
-        this._pointerPickingConfiguration.pointerMoveFastCheck = TT
-      }
-      get skipPointerMovePicking() {
-        return this._pointerPickingConfiguration.skipPointerMovePicking
-      }
-      set skipPointerMovePicking(TT) {
-        this._pointerPickingConfiguration.skipPointerMovePicking = TT
-      }
-      get skipPointerDownPicking() {
-        return this._pointerPickingConfiguration.skipPointerDownPicking
-      }
-      set skipPointerDownPicking(TT) {
-        this._pointerPickingConfiguration.skipPointerDownPicking = TT
-      }
-      get skipPointerUpPicking() {
-        return this._pointerPickingConfiguration.skipPointerUpPicking
-      }
-      set skipPointerUpPicking(TT) {
-        this._pointerPickingConfiguration.skipPointerUpPicking = TT
-      }
-      get unTranslatedPointer() {
-        return this._inputManager.unTranslatedPointer
-      }
-      static get DragMovementThreshold() {
-        return sT.DragMovementThreshold
-      }
-      static set DragMovementThreshold(TT) {
-        sT.DragMovementThreshold = TT
-      }
-      static get LongPressDelay() {
-        return sT.LongPressDelay
-      }
-      static set LongPressDelay(TT) {
-        sT.LongPressDelay = TT
-      }
-      static get DoubleClickDelay() {
-        return sT.DoubleClickDelay
-      }
-      static set DoubleClickDelay(TT) {
-        sT.DoubleClickDelay = TT
-      }
-      static get ExclusiveDoubleClickMode() {
-        return sT.ExclusiveDoubleClickMode
-      }
-      static set ExclusiveDoubleClickMode(TT) {
-        sT.ExclusiveDoubleClickMode = TT
-      }
-      get _eyePosition() {
-        return this._forcedViewPosition ?? this.activeCamera?.globalPosition ?? ST.m.ZeroReadOnly
-      }
-      bindEyePosition(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vEyePosition",
-          IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const iT = this._eyePosition,
-          zT = this.useRightHandedSystem === (null != this._mirroredCameraPosition),
-          kT = this.floatingOriginOffset,
-          WT = zI.set(iT.x, iT.y, iT.z, zT ? -1 : 1),
-          XT = WT.subtractFromFloatsToRef(kT.x, kT.y, kT.z, 0, kI);
-        return TT && (IT ? TT.setFloat3(oT, XT.x, XT.y, XT.z) : TT.setVector4(oT, XT)), WT
-      }
-      finalizeSceneUbo() {
-        const TT = this.getSceneUniformBuffer(),
-          oT = this.bindEyePosition(null),
-          IT = this.floatingOriginOffset;
-        return TT.updateFloat4("vEyePosition", oT.x - IT.x, oT.y - IT.y, oT.z - IT.z, oT.w), TT.update(), TT
-      }
-      set useRightHandedSystem(TT) {
-        this._useRightHandedSystem !== TT && (this._useRightHandedSystem = TT, this.markAllMaterialsAsDirty(16))
-      }
-      get useRightHandedSystem() {
-        return this._useRightHandedSystem
-      }
-      setStepId(TT) {
-        this._currentStepId = TT
-      }
-      getStepId() {
-        return this._currentStepId
-      }
-      getInternalStep() {
-        return this._currentInternalStep
-      }
-      set fogEnabled(TT) {
-        this._fogEnabled !== TT && (this._fogEnabled = TT, this.markAllMaterialsAsDirty(16))
-      }
-      get fogEnabled() {
-        return this._fogEnabled
-      }
-      set fogMode(TT) {
-        this._fogMode !== TT && (this._fogMode = TT, this.markAllMaterialsAsDirty(16))
-      }
-      get fogMode() {
-        return this._fogMode
-      }
-      get prePass() {
-        return !!this.prePassRenderer && this.prePassRenderer.defaultRT.enabled
-      }
-      set shadowsEnabled(TT) {
-        this._shadowsEnabled !== TT && (this._shadowsEnabled = TT, this.markAllMaterialsAsDirty(2))
-      }
-      get shadowsEnabled() {
-        return this._shadowsEnabled
-      }
-      set lightsEnabled(TT) {
-        this._lightsEnabled !== TT && (this._lightsEnabled = TT, this.markAllMaterialsAsDirty(2))
-      }
-      get lightsEnabled() {
-        return this._lightsEnabled
-      }
-      get activeCameras() {
-        return this._activeCameras
-      }
-      set activeCameras(TT) {
-        this._unObserveActiveCameras && (this._unObserveActiveCameras(), this._unObserveActiveCameras = null), TT && (this._unObserveActiveCameras = (0, PT.j)(TT, (() => {
-          this.onActiveCamerasChanged.notifyObservers(this)
-        }))), this._activeCameras = TT
-      }
-      get activeCamera() {
-        return this._activeCamera
-      }
-      set activeCamera(TT) {
-        TT !== this._activeCamera && (this._activeCamera = TT, this.onActiveCameraChanged.notifyObservers(this))
-      }
-      get _hasDefaultMaterial() {
-        return XI.DefaultMaterialFactory !== XI._OriginalDefaultMaterialFactory
-      }
-      get defaultMaterial() {
-        return this._defaultMaterial || (this._defaultMaterial = XI.DefaultMaterialFactory(this)), this._defaultMaterial
-      }
-      set defaultMaterial(TT) {
-        this._defaultMaterial = TT
-      }
-      set texturesEnabled(TT) {
-        this._texturesEnabled !== TT && (this._texturesEnabled = TT, this.markAllMaterialsAsDirty(1))
-      }
-      get texturesEnabled() {
-        return this._texturesEnabled
-      }
-      get frameGraph() {
-        return this._frameGraph
-      }
-      set frameGraph(TT) {
-        if (this._frameGraph) return this._frameGraph = TT, void(TT || (this.customRenderFunction = this._currentCustomRenderFunction));
-        this._frameGraph = TT, TT && (this._currentCustomRenderFunction = this.customRenderFunction, this.customRenderFunction = this._renderWithFrameGraph, this.activeCamera = null)
-      }
-      set skeletonsEnabled(TT) {
-        this._skeletonsEnabled !== TT && (this._skeletonsEnabled = TT, this.markAllMaterialsAsDirty(8))
-      }
-      get skeletonsEnabled() {
-        return this._skeletonsEnabled
-      }
-      get collisionCoordinator() {
-        return this._collisionCoordinator || (this._collisionCoordinator = XI.CollisionCoordinatorFactory(), this._collisionCoordinator.init(this)), this._collisionCoordinator
-      }
-      get renderingManager() {
-        return this._renderingManager
-      }
-      get frustumPlanes() {
-        return this._frustumPlanes
-      }
-      _registerTransientComponents() {
-        if (this._transientComponents.length > 0) {
-          for (const TT of this._transientComponents) TT.register();
-          this._transientComponents.length = 0
-        }
-      }
-      fIT(TT) {
-        this._components.push(TT), this._transientComponents.push(TT);
-        const oT = TT;
-        oT.addFromContainer && oT.serialize && this._serializableComponents.push(oT)
-      }
-      _getComponent(TT) {
-        for (const oT of this._components)
-          if (oT.name === TT) return oT;
-        return null
-      }
-      get uniqueId() {
-        return this._uniqueId
-      }
-      constructor(TT, oT) {
-        this._inputManager = new sT(this), this.cameraToUseForPointers = null, this._isScene = !0, this._blockEntityCollection = !1, this.autoClear = !0, this.autoClearDepthAndStencil = !0, this._clearColor = new GT.i(.2, .2, .3, 1), this.onClearColorChangedObservable = new WT.d, this.ambientColor = new GT.e(0, 0, 0), this.environmentIntensity = 1, this.iblIntensity = 1, this._performancePriority = 0, this.onScenePerformancePriorityChangedObservable = new WT.d, this._forceWireframe = !1, this._skipFrustumClipping = !1, this._forcePointsCloud = !1, this.rootNodes = [], this.cameras = [], this.lights = [], this.meshes = [], this.skeletons = [], this.bR = [], this.animations = [], this.animationGroups = [], this.multiMaterials = [], this.materials = [], this.morphTargetManagers = [], this.geometries = [], this.transformNodes = [], this.actionManagers = [], this.objectRenderers = [], this.textures = [], this._environmentTexture = null, this.postProcesses = [], this.effectLayers = [], this.sounds = null, this.layers = [], this.lensFlareSystems = [], this.proceduralTextures = [], this.animationsEnabled = !0, this._animationPropertiesOverride = null, this.useConstantAnimationDeltaTime = !1, this.constantlyUpdateMeshUnderPointer = !1, this.hoverCursor = "pointer", this.defaultCursor = "", this.doNotHandleCursors = !1, this.preventDefaultOnPointerDown = !0, this.preventDefaultOnPointerUp = !0, this.metadata = null, this.reservedDataStore = null, this.disableOfflineSupportExceptionRules = [], this.bC = new WT.d, this._onDisposeObserver = null, this.onBeforeRenderObservable = new WT.d, this._onBeforeRenderObserver = null, this.onAfterRenderObservable = new WT.d, this.onAfterRenderCameraObservable = new WT.d, this._onAfterRenderObserver = null, this.onBeforeAnimationsObservable = new WT.d, this.onAfterAnimationsObservable = new WT.d, this.onBeforeDrawPhaseObservable = new WT.d, this.onAfterDrawPhaseObservable = new WT.d, this.onReadyObservable = new WT.d, this.onBeforeCameraRenderObservable = new WT.d, this._onBeforeCameraRenderObserver = null, this.onAfterCameraRenderObservable = new WT.d, this._onAfterCameraRenderObserver = null, this.onBeforeActiveMeshesEvaluationObservable = new WT.d, this.onAfterActiveMeshesEvaluationObservable = new WT.d, this.onBeforeParticlesRenderingObservable = new WT.d, this.onAfterParticlesRenderingObservable = new WT.d, this.onDataLoadedObservable = new WT.d, this.onNewCameraAddedObservable = new WT.d, this.onCameraRemovedObservable = new WT.d, this.onNewLightAddedObservable = new WT.d, this.onLightRemovedObservable = new WT.d, this.onNewGeometryAddedObservable = new WT.d, this.onGeometryRemovedObservable = new WT.d, this.onNewTransformNodeAddedObservable = new WT.d, this.onTransformNodeRemovedObservable = new WT.d, this.onNewMeshAddedObservable = new WT.d, this.onMeshRemovedObservable = new WT.d, this.onNewSkeletonAddedObservable = new WT.d, this.onSkeletonRemovedObservable = new WT.d, this.onNewParticleSystemAddedObservable = new WT.d, this.onParticleSystemRemovedObservable = new WT.d, this.onNewAnimationGroupAddedObservable = new WT.d, this.onAnimationGroupRemovedObservable = new WT.d, this.onNewMaterialAddedObservable = new WT.d, this.onNewMultiMaterialAddedObservable = new WT.d, this.onMaterialRemovedObservable = new WT.d, this.onMultiMaterialRemovedObservable = new WT.d, this.onNewTextureAddedObservable = new WT.d, this.onTextureRemovedObservable = new WT.d, this.onNewFrameGraphAddedObservable = new WT.d, this.onFrameGraphRemovedObservable = new WT.d, this.onNewObjectRendererAddedObservable = new WT.d, this.onObjectRendererRemovedObservable = new WT.d, this.onNewPostProcessAddedObservable = new WT.d, this.onPostProcessRemovedObservable = new WT.d, this.onNewEffectLayerAddedObservable = new WT.d, this.onEffectLayerRemovedObservable = new WT.d, this.onBeforeRenderTargetsRenderObservable = new WT.d, this.onAfterRenderTargetsRenderObservable = new WT.d, this.onBeforeStepObservable = new WT.d, this.onAfterStepObservable = new WT.d, this.onActiveCameraChanged = new WT.d, this.onActiveCamerasChanged = new WT.d, this.onBeforeRenderingGroupObservable = new WT.d, this.onAfterRenderingGroupObservable = new WT.d, this.onMeshImportedObservable = new WT.d, this.onAnimationFileImportedObservable = new WT.d, this.onEnvironmentTextureChangedObservable = new WT.d, this.onMeshUnderPointerUpdatedObservable = new WT.d, this._registeredForLateAnimationBindings = new XT.c(256), this._pointerPickingConfiguration = new dT, this.onPrePointerObservable = new WT.d, this.onPointerObservable = new WT.d, this.onPreKeyboardObservable = new WT.d, this.onKeyboardObservable = new WT.d, this._useRightHandedSystem = !1, this._timeAccumulator = 0, this._currentStepId = 0, this._currentInternalStep = 0, this._fogEnabled = !0, this._fogMode = XI.FOGMODE_NONE, this.fogColor = new GT.e(.2, .2, .3), this.fogDensity = .1, this.fogStart = 0, this.fogEnd = 1e3, this.needsPreviousWorldMatrices = !1, this._shadowsEnabled = !0, this._lightsEnabled = !0, this._unObserveActiveCameras = null, this._texturesEnabled = !0, this._frameGraph = null, this.frameGraphs = [], this.EY = !0, this.particlesEnabled = !0, this.spritesEnabled = !0, this._skeletonsEnabled = !0, this.lensFlaresEnabled = !0, this.collisionsEnabled = !0, this.gravity = new ST.m(0, -9.807, 0), this.postProcessesEnabled = !0, this.renderTargetsEnabled = !0, this.dumpNextRenderTargets = !1, this.customRenderTargets = [], this.importedMeshesFiles = [], this.probesEnabled = !0, this._meshesForIntersections = new XT.c(256), this.proceduralTexturesEnabled = !0, this._totalVertices = new tT.c, this._activeIndices = new tT.c, this._activeParticles = new tT.c, this._activeBones = new tT.c, this._animationTime = 0, this.animationTimeScale = 1, this._renderId = 0, this._frameId = 0, this._renderingMeshEvaluationDepth = 0, this._executeWhenReadyTimeoutId = null, this._intermediateRendering = !1, this._defaultFrameBufferCleared = !1, this._viewUpdateFlag = -1, this._projectionUpdateFlag = -1, this._toBeDisposed = new Array(256), this._activeRequests = new Array, this._delayedFileRequests = null, this._pendingData = [], this._isDisposed = !1, this._isDisposing = !1, this._isReadyChecks = [], this.dispatchAllSubMeshesOfActiveMeshes = !1, this._activeMeshes = new XT.f(256), this._processedMaterials = new XT.f(256), this._renderTargets = new XT.c(256), this._materialsRenderTargets = new XT.c(256), this._activeParticleSystems = new XT.f(256), this._activeSkeletons = new XT.c(32), this._softwareSkinnedMeshes = new XT.c(32), this._activeAnimatables = new Array, this._animationWrites = new Array, this._animationWriteCount = 0, this._animationStepWriteCount = 0, this._animationStepEvaluated = !1, this._transformMatrix = ST.b.Zero(), this.requireLightSorting = !1, this._components = [], this._serializableComponents = [], this._transientComponents = [], this._beforeCameraUpdateStage = AT.f.Create(), this._beforeClearStage = AT.f.Create(), this._beforeRenderTargetClearStage = AT.f.Create(), this._gatherRenderTargetsStage = AT.f.Create(), this._gatherActiveCameraRenderTargetsStage = AT.f.Create(), this._isReadyForMeshStage = AT.f.Create(), this._beforeEvaluateActiveMeshStage = AT.f.Create(), this._evaluateSubMeshStage = AT.f.Create(), this._preActiveMeshStage = AT.f.Create(), this._cameraDrawRenderTargetStage = AT.f.Create(), this._beforeCameraDrawStage = AT.f.Create(), this._beforeRenderTargetDrawStage = AT.f.Create(), this._beforeRenderingGroupDrawStage = AT.f.Create(), this._beforeRenderingMeshStage = AT.f.Create(), this._afterRenderingMeshStage = AT.f.Create(), this._afterRenderingGroupDrawStage = AT.f.Create(), this._afterCameraDrawStage = AT.f.Create(), this._afterCameraPostProcessStage = AT.f.Create(), this._afterRenderTargetDrawStage = AT.f.Create(), this._afterRenderTargetPostProcessStage = AT.f.Create(), this._afterRenderStage = AT.f.Create(), this._pointerMoveStage = AT.f.Create(), this._pointerDownStage = AT.f.Create(), this._pointerUpStage = AT.f.Create(), this._geometriesByUniqueId = null, this._uniqueId = 0, this._defaultMeshCandidates = {
-          data: [],
-          length: 0
-        }, this._defaultSubMeshCandidates = {
-          data: [],
-          length: 0
-        }, this.onReadyTimeoutObservable = new WT.d, this.onReadyTimeoutDuration = 12e4, this._timeoutChecksStartTime = 0, this._floatingOriginScene = void 0, this._preventFreeActiveMeshesAndRenderingGroups = !1, this._activeMeshesFrozen = !1, this._activeMeshesFrozenButKeepClipping = !1, this._skipEvaluateActiveMeshesCompletely = !1, this._freezeActiveMeshesCancel = null, this._useCurrentFrameBuffer = !1, this._allowPostProcessClearColor = !0, this.getDeterministicFrameTime = () => this._engine.getTimeStep(), this._getFloatingOriginScene = () => this._floatingOriginScene, this._registeredActions = 0, this._blockMaterialDirtyMechanism = !1, this._perfCollector = null, this.activeCameras = [], this._uniqueId = this.getUniqueId();
-        const IT = {
-          useGeometryUniqueIdsMap: !0,
-          useMaterialMeshMap: !0,
-          useClonedMeshMap: !0,
-          virtual: !1,
-          defaultCameraLayerMask: 268435455,
-          defaultRenderableLayerMask: 268435455,
-          ...oT
-        };
-        this.defaultCameraLayerMask = IT.defaultCameraLayerMask, this.defaultRenderableLayerMask = IT.defaultRenderableLayerMask, TT = this._engine = TT || hT.d.LastCreatedEngine, IT.virtual ? TT._virtualScenes.push(this) : (hT.d._LastCreatedScene = this, TT.scenes.push(this)), (TT.getCreationOptions().useLargeWorldRendering || oT?.useFloatingOrigin) && ((0, MT.e)(), this._floatingOriginScene = this, MT.b.pC = this._getFloatingOriginScene), this._uid = null, this._renderingManager = new rT.d(this), KT.d && (this.postProcessManager = new KT.d(this)), (0, gT.k)() && this.attachControl(), this._createUbo(), DT.c && (this._imageProcessingConfiguration = new DT.c), this.setDefaultCandidateProviders(), IT.useGeometryUniqueIdsMap && (this._geometriesByUniqueId = {}), this.useMaterialMeshMap = IT.useMaterialMeshMap, this.useClonedMeshMap = IT.useClonedMeshMap, oT && oT.virtual || TT.onNewSceneAddedObservable.notifyObservers(this)
-      }
-      getClassName() {
-        return "Scene"
-      }
-      _getDefaultMeshCandidates() {
-        return this._defaultMeshCandidates.data = this.meshes, this._defaultMeshCandidates.length = this.meshes.length, this._defaultMeshCandidates
-      }
-      _getDefaultSubMeshCandidates(TT) {
-        return this._defaultSubMeshCandidates.data = TT.pR, this._defaultSubMeshCandidates.length = TT.pR.length, this._defaultSubMeshCandidates
-      }
-      setDefaultCandidateProviders() {
-        this.getActiveMeshCandidates = () => this._getDefaultMeshCandidates(), this.getActiveSubMeshCandidates = TT => this._getDefaultSubMeshCandidates(TT), this.getIntersectingSubMeshCandidates = (TT, oT) => this._getDefaultSubMeshCandidates(TT), this.getCollidingSubMeshCandidates = (TT, oT) => this._getDefaultSubMeshCandidates(TT)
-      }
-      get meshUnderPointer() {
-        return this._inputManager.meshUnderPointer
-      }
-      get pointerX() {
-        return this._inputManager.pointerX
-      }
-      set pointerX(TT) {
-        this._inputManager.pointerX = TT
-      }
-      get pointerY() {
-        return this._inputManager.pointerY
-      }
-      set pointerY(TT) {
-        this._inputManager.pointerY = TT
-      }
-      getCachedMaterial() {
-        return this._cachedMaterial
-      }
-      getCachedEffect() {
-        return this._cachedEffect
-      }
-      getCachedVisibility() {
-        return this._cachedVisibility
-      }
-      isCachedMaterialInvalid(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-        return this._cachedEffect !== oT || this._cachedMaterial !== TT || this._cachedVisibility !== IT
-      }
-      Zc() {
-        return this._engine
-      }
-      getTotalVertices() {
-        return this._totalVertices.current
-      }
-      get totalVerticesPerfCounter() {
-        return this._totalVertices
-      }
-      getActiveIndices() {
-        return this._activeIndices.current
-      }
-      get totalActiveIndicesPerfCounter() {
-        return this._activeIndices
-      }
-      getActiveParticles() {
-        return this._activeParticles.current
-      }
-      get activeParticlesPerfCounter() {
-        return this._activeParticles
-      }
-      getActiveBones() {
-        return this._activeBones.current
-      }
-      get activeBonesPerfCounter() {
-        return this._activeBones
-      }
-      getActiveMeshes() {
-        return this._activeMeshes
-      }
-      getAnimationRatio() {
-        return void 0 !== this._animationRatio ? this._animationRatio : 1
-      }
-      getRenderId() {
-        return this._renderId
-      }
-      getFrameId() {
-        return this._frameId
-      }
-      incrementRenderId() {
-        this._renderId++
-      }
-      _createUbo() {
-        this.setSceneUniformBuffer(this.createSceneUniformBuffer())
-      }
-      simulatePointerMove(TT, oT) {
-        return this._inputManager.simulatePointerMove(TT, oT), this
-      }
-      simulatePointerDown(TT, oT) {
-        return this._inputManager.simulatePointerDown(TT, oT), this
-      }
-      simulatePointerUp(TT, oT, IT) {
-        return this._inputManager.simulatePointerUp(TT, oT, IT), this
-      }
-      isPointerCaptured() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._inputManager.isPointerCaptured(TT)
-      }
-      attachControl() {
-        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this._inputManager.attachControl(TT, oT, IT)
-      }
-      detachControl() {
-        this._inputManager.detachControl()
-      }
-      isReady() {
-        let TT, oT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        if (this._isDisposed) return !1;
-        const IT = this.Zc(),
-          iT = IT.currentRenderPassId;
-        IT.currentRenderPassId = this.activeCamera?.renderPassId ?? iT;
-        let zT = !0;
-        for (this._pendingData.length > 0 && (zT = !1), this.prePassRenderer?.update(), this.useOrderIndependentTransparency && this.depthPeelingRenderer && zT && (zT = this.depthPeelingRenderer.isReady()), oT && (this._processedMaterials.reset(), this._materialsRenderTargets.reset()), TT = 0; TT < this.meshes.length; TT++) {
-          const iT = this.meshes[TT];
-          if (!iT.pR || 0 === iT.pR.length) continue;
-          if (!iT.isReady(!0)) {
-            zT = !1;
-            continue
-          }
-          const kT = iT.hasThinInstances || "InstancedMesh" === iT.getClassName() || "InstancedLinesMesh" === iT.getClassName() || IT.getCaps().instancedArrays && iT.instances.length > 0;
-          for (let TT = 0, oT = this._isReadyForMeshStage; TT < oT.length; TT++) {
-            oT[TT].action(iT, kT) || (zT = !1)
-          }
-          if (!oT) continue;
-          const WT = iT.material || this.defaultMaterial;
-          if (WT)
-            if (WT._storeEffectOnSubMeshes)
-              for (const TT of iT.pR) {
-                const oT = TT.bc();
-                oT && oT.hasRenderTargetTextures && null != oT.getRenderTargetTextures && -1 === this._processedMaterials.indexOf(oT) && (this._processedMaterials.push(oT), this._materialsRenderTargets.concatWithNoDuplicate(oT.getRenderTargetTextures()))
-              } else WT.hasRenderTargetTextures && null != WT.getRenderTargetTextures && -1 === this._processedMaterials.indexOf(WT) && (this._processedMaterials.push(WT), this._materialsRenderTargets.concatWithNoDuplicate(WT.getRenderTargetTextures()))
-        }
-        if (oT) {
-          for (TT = 0; TT < this._materialsRenderTargets.length; ++TT) {
-            this._materialsRenderTargets.data[TT].isReadyForRendering() || (zT = !1)
-          }
-          for (TT = 0; TT < this.customRenderTargets.length; ++TT) {
-            this.customRenderTargets[TT].isReadyForRendering() || (zT = !1)
-          }
-        }
-        for (TT = 0; TT < this.geometries.length; TT++) {
-          2 === this.geometries[TT].delayLoadState && (zT = !1)
-        }
-        if (this.activeCameras && this.activeCameras.length > 0)
-          for (const kT of this.activeCameras) kT.isReady(!0) || (zT = !1);
-        else this.activeCamera && (this.activeCamera.isReady(!0) || (zT = !1));
-        for (const kT of this.bR) kT.isReady() || (zT = !1);
-        if (this.proceduralTexturesEnabled)
-          for (const kT of this.proceduralTextures) kT.isReady() || (zT = !1);
-        if (this.layers)
-          for (const kT of this.layers) kT.isReady() || (zT = !1);
-        if (this.effectLayers)
-          for (const kT of this.effectLayers) kT.isLayerReady() || (zT = !1);
-        for (const kT of this._isReadyChecks) kT.isReady() || (zT = !1);
-        return IT.areAllEffectsReady() || (zT = !1), IT.currentRenderPassId = iT, zT
-      }
-      resetCachedMaterial() {
-        this._cachedMaterial = null, this._cachedEffect = null, this._cachedVisibility = null
-      }
-      registerBeforeRender(TT) {
-        this.onBeforeRenderObservable.add(TT)
-      }
-      unregisterBeforeRender(TT) {
-        this.onBeforeRenderObservable.removeCallback(TT)
-      }
-      registerAfterRender(TT) {
-        this.onAfterRenderObservable.add(TT)
-      }
-      unregisterAfterRender(TT) {
-        this.onAfterRenderObservable.removeCallback(TT)
-      }
-      _executeOnceBeforeRender(TT) {
-        const oT = () => {
-          TT(), setTimeout((() => {
-            this.unregisterBeforeRender(oT)
-          }))
-        };
-        this.registerBeforeRender(oT)
-      }
-      executeOnceBeforeRender(TT, oT) {
-        void 0 !== oT ? setTimeout((() => {
-          this._executeOnceBeforeRender(TT)
-        }), oT) : this._executeOnceBeforeRender(TT)
-      }
-      addPendingData(TT) {
-        this._pendingData.push(TT)
-      }
-      removePendingData(TT) {
-        const oT = this.isLoading,
-          IT = this._pendingData.indexOf(TT); - 1 !== IT && this._pendingData.splice(IT, 1), oT && !this.isLoading && this.onDataLoadedObservable.notifyObservers(this)
-      }
-      getWaitingItemsCount() {
-        return this._pendingData.length
-      }
-      get isLoading() {
-        return this._pendingData.length > 0
-      }
-      addIsReadyCheck(TT) {
-        -1 === this._isReadyChecks.indexOf(TT) && this._isReadyChecks.push(TT)
-      }
-      removeIsReadyCheck(TT) {
-        const oT = this._isReadyChecks.indexOf(TT); - 1 !== oT && this._isReadyChecks.splice(oT, 1)
-      }
-      executeWhenReady(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.onReadyObservable.addOnce(TT), null === this._executeWhenReadyTimeoutId && this._checkIsReady(oT)
-      }
-      async whenReadyAsync() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return await new Promise((oT => {
-          this.executeWhenReady((() => {
-            oT()
-          }), TT)
-        }))
-      }
-      _clearReadynessChecksData() {
-        this._timeoutChecksStartTime = 0, this.onReadyTimeoutObservable.clear(), this.onReadyObservable.clear(), this._executeWhenReadyTimeoutId = null
-      }
-      _checkIsReady() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (this._registerTransientComponents(), 0 === this._timeoutChecksStartTime) this._timeoutChecksStartTime = kT.c.Now;
-        else if (this.onReadyTimeoutDuration > 0 && kT.c.Now - this._timeoutChecksStartTime > this.onReadyTimeoutDuration) return this.onReadyTimeoutObservable.notifyObservers(this), void this._clearReadynessChecksData();
-        if (this.isReady(TT)) return this.onReadyObservable.notifyObservers(this), void this._clearReadynessChecksData();
-        this._isDisposed ? this._clearReadynessChecksData() : this._executeWhenReadyTimeoutId = setTimeout((() => {
-          this.incrementRenderId(), this._checkIsReady(TT)
-        }), 100)
-      }
-      get animatables() {
-        return this._activeAnimatables
-      }
-      resetLastAnimationTimeFrame() {
-        this._animationTimeLast = kT.c.Now
-      }
-      getViewMatrix() {
-        return this._viewMatrix
-      }
-      getProjectionMatrix() {
-        return this._projectionMatrix
-      }
-      getInverseProjectionMatrix() {
-        return this._inverseProjectionMatrix
-      }
-      getTransformMatrix() {
-        return this._transformMatrix
-      }
-      setTransformMatrix(TT, oT, IT, iT) {
-        this._multiviewSceneUboIsActive = !!(IT && iT && this._multiviewSceneUbo), this._viewUpdateFlag === TT.updateFlag && this._projectionUpdateFlag === oT.updateFlag || (this._viewUpdateFlag = TT.updateFlag, this._projectionUpdateFlag = oT.updateFlag, this._viewMatrix = TT, this._projectionMatrix = oT, this._inverseProjectionMatrix || (this._inverseProjectionMatrix = new ST.b), this._projectionMatrix.invertToRef(this._inverseProjectionMatrix), this._viewMatrix.multiplyToRef(this._projectionMatrix, this._transformMatrix), this._frustumPlanes ? pT.b.GetPlanesToRef(this._transformMatrix, this._frustumPlanes) : this._frustumPlanes = pT.b.GetPlanes(this._transformMatrix), this._multiviewSceneUboIsActive && this._multiviewSceneUbo.useUbo ? this._updateMultiviewUbo(IT, iT) : this._sceneUbo.useUbo && (this._sceneUbo.Y1("viewProjection", this._transformMatrix), this._sceneUbo.Y1("view", this._viewMatrix), this._sceneUbo.Y1("projection", this._projectionMatrix), this._sceneUbo.Y1("inverseProjection", this._inverseProjectionMatrix)))
-      }
-      getSceneUniformBuffer() {
-        return this._multiviewSceneUboIsActive && this._multiviewSceneUbo ? this._multiviewSceneUbo : this._sceneUbo
-      }
-      createSceneUniformBuffer(TT, oT) {
-        const IT = "boolean" === typeof oT ? oT : oT?.trackUBOsInFrame,
-          iT = new LT.e(this._engine, void 0, !1, TT ?? "NK", void 0, IT);
-        return iT.addUniform("viewProjection", 16), iT.addUniform("view", 16), iT.addUniform("projection", 16), iT.addUniform("vEyePosition", 4), iT.addUniform("inverseProjection", 16), iT
-      }
-      setSceneUniformBuffer(TT) {
-        this._sceneUbo = TT, this._viewUpdateFlag = -1, this._projectionUpdateFlag = -1
-      }
-      get floatingOriginMode() {
-        return void 0 !== this._floatingOriginScene
-      }
-      get floatingOriginOffset() {
-        return this.floatingOriginMode ? this._eyePosition : ST.m.ZeroReadOnly
-      }
-      getUniqueId() {
-        return bT.UniqueId
-      }
-      tIT(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (!this._blockEntityCollection && (this.meshes.push(TT), TT._resyncLightSources(), TT.parent || TT._addToSceneRootNodes(), zT.c.SetImmediate((() => {
-            this.onNewMeshAddedObservable.notifyObservers(TT)
-          })), oT)) {
-          const oT = TT.getChildMeshes();
-          for (const TT of oT) this.tIT(TT)
-        }
-      }
-      KJ(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const IT = this.meshes.indexOf(TT);
-        if (-1 !== IT && (this.meshes.splice(IT, 1), TT.parent || TT._removeFromSceneRootNodes()), this._inputManager._invalidateMesh(TT), this.onMeshRemovedObservable.notifyObservers(TT), oT) {
-          const oT = TT.getChildMeshes();
-          for (const TT of oT) this.KJ(TT)
-        }
-        return IT
-      }
-      addTransformNode(TT) {
-        this._blockEntityCollection || TT.pC() === this && -1 !== TT._indexInSceneTransformNodesArray || (TT._indexInSceneTransformNodesArray = this.transformNodes.length, this.transformNodes.push(TT), TT.parent || TT._addToSceneRootNodes(), this.onNewTransformNodeAddedObservable.notifyObservers(TT))
-      }
-      removeTransformNode(TT) {
-        const oT = TT._indexInSceneTransformNodesArray;
-        if (-1 !== oT) {
-          if (oT !== this.transformNodes.length - 1) {
-            const TT = this.transformNodes[this.transformNodes.length - 1];
-            this.transformNodes[oT] = TT, TT._indexInSceneTransformNodesArray = oT
-          }
-          TT._indexInSceneTransformNodesArray = -1, this.transformNodes.pop(), TT.parent || TT._removeFromSceneRootNodes()
-        }
-        return this.onTransformNodeRemovedObservable.notifyObservers(TT), oT
-      }
-      removeSkeleton(TT) {
-        const oT = this.skeletons.indexOf(TT);
-        return -1 !== oT && (this.skeletons.splice(oT, 1), this.onSkeletonRemovedObservable.notifyObservers(TT), this._executeActiveContainerCleanup(this._activeSkeletons)), oT
-      }
-      removeMorphTargetManager(TT) {
-        const oT = this.morphTargetManagers.indexOf(TT);
-        return -1 !== oT && this.morphTargetManagers.splice(oT, 1), oT
-      }
-      removeLight(TT) {
-        const oT = this.lights.indexOf(TT);
-        if (-1 !== oT) {
-          for (const oT of this.meshes) oT._removeLightSource(TT, !1);
-          this.lights.splice(oT, 1), this.sortLightsByPriority(), TT.parent || TT._removeFromSceneRootNodes(), this.onLightRemovedObservable.notifyObservers(TT)
-        }
-        return oT
-      }
-      removeCamera(TT) {
-        const oT = this.cameras.indexOf(TT);
-        if (-1 !== oT && (this.cameras.splice(oT, 1), TT.parent || TT._removeFromSceneRootNodes()), this.activeCameras) {
-          const oT = this.activeCameras.indexOf(TT); - 1 !== oT && this.activeCameras.splice(oT, 1)
-        }
-        return this.activeCamera === TT && (this.cameras.length > 0 ? this.activeCamera = this.cameras[0] : this.activeCamera = null), this.onCameraRemovedObservable.notifyObservers(TT), oT
-      }
-      removeParticleSystem(TT) {
-        const oT = this.bR.indexOf(TT);
-        return -1 !== oT && (this.bR.splice(oT, 1), this._executeActiveContainerCleanup(this._activeParticleSystems)), this.onParticleSystemRemovedObservable.notifyObservers(TT), oT
-      }
-      removeAnimation(TT) {
-        const oT = this.animations.indexOf(TT);
-        return -1 !== oT && this.animations.splice(oT, 1), oT
-      }
-      stopAnimation(TT, oT, IT) {}
-      removeAnimationGroup(TT) {
-        const oT = this.animationGroups.indexOf(TT);
-        return -1 !== oT && this.animationGroups.splice(oT, 1), this.onAnimationGroupRemovedObservable.notifyObservers(TT), oT
-      }
-      removeMultiMaterial(TT) {
-        const oT = this.multiMaterials.indexOf(TT);
-        return -1 !== oT && this.multiMaterials.splice(oT, 1), this.onMultiMaterialRemovedObservable.notifyObservers(TT), oT
-      }
-      removeMaterial(TT) {
-        const oT = TT._indexInSceneMaterialArray;
-        if (-1 !== oT && oT < this.materials.length) {
-          if (oT !== this.materials.length - 1) {
-            const TT = this.materials[this.materials.length - 1];
-            this.materials[oT] = TT, TT._indexInSceneMaterialArray = oT
-          }
-          TT._indexInSceneMaterialArray = -1, this.materials.pop()
-        }
-        return this.onMaterialRemovedObservable.notifyObservers(TT), oT
-      }
-      removeActionManager(TT) {
-        const oT = this.actionManagers.indexOf(TT);
-        return -1 !== oT && this.actionManagers.splice(oT, 1), oT
-      }
-      removeTexture(TT) {
-        const oT = this.textures.indexOf(TT);
-        return -1 !== oT && this.textures.splice(oT, 1), this.onTextureRemovedObservable.notifyObservers(TT), oT
-      }
-      removeFrameGraph(TT) {
-        const oT = this.frameGraphs.indexOf(TT);
-        return -1 !== oT && this.frameGraphs.splice(oT, 1), this.onFrameGraphRemovedObservable.notifyObservers(TT), oT
-      }
-      removeObjectRenderer(TT) {
-        const oT = this.objectRenderers.indexOf(TT);
-        return -1 !== oT && this.objectRenderers.splice(oT, 1), this.onObjectRendererRemovedObservable.notifyObservers(TT), oT
-      }
-      removePostProcess(TT) {
-        const oT = this.postProcesses.indexOf(TT);
-        return -1 !== oT && this.postProcesses.splice(oT, 1), this.onPostProcessRemovedObservable.notifyObservers(TT), oT
-      }
-      removeEffectLayer(TT) {
-        const oT = this.effectLayers.indexOf(TT);
-        return -1 !== oT && this.effectLayers.splice(oT, 1), this.onEffectLayerRemovedObservable.notifyObservers(TT), oT
-      }
-      addLight(TT) {
-        if (!this._blockEntityCollection) {
-          this.lights.push(TT), this.sortLightsByPriority(), TT.parent || TT._addToSceneRootNodes();
-          for (const oT of this.meshes) - 1 === oT.lightSources.indexOf(TT) && (oT.lightSources.push(TT), oT._resyncLightSources());
-          zT.c.SetImmediate((() => {
-            this.onNewLightAddedObservable.notifyObservers(TT)
-          }))
-        }
-      }
-      sortLightsByPriority() {
-        this.requireLightSorting && this.lights.sort(NT.c.CompareLightsPriority)
-      }
-      addCamera(TT) {
-        this._blockEntityCollection || (this.cameras.push(TT), zT.c.SetImmediate((() => {
-          this.onNewCameraAddedObservable.notifyObservers(TT)
-        })), TT.parent || TT._addToSceneRootNodes())
-      }
-      addSkeleton(TT) {
-        this._blockEntityCollection || (this.skeletons.push(TT), zT.c.SetImmediate((() => {
-          this.onNewSkeletonAddedObservable.notifyObservers(TT)
-        })))
-      }
-      addParticleSystem(TT) {
-        this._blockEntityCollection || (this.bR.push(TT), zT.c.SetImmediate((() => {
-          this.onNewParticleSystemAddedObservable.notifyObservers(TT)
-        })))
-      }
-      addAnimation(TT) {
-        this._blockEntityCollection || this.animations.push(TT)
-      }
-      addAnimationGroup(TT) {
-        this._blockEntityCollection || (this.animationGroups.push(TT), zT.c.SetImmediate((() => {
-          this.onNewAnimationGroupAddedObservable.notifyObservers(TT)
-        })))
-      }
-      addMultiMaterial(TT) {
-        this._blockEntityCollection || (this.multiMaterials.push(TT), zT.c.SetImmediate((() => {
-          this.onNewMultiMaterialAddedObservable.notifyObservers(TT)
-        })))
-      }
-      addMaterial(TT) {
-        this._blockEntityCollection || TT.pC() === this && -1 !== TT._indexInSceneMaterialArray || (TT._indexInSceneMaterialArray = this.materials.length, this.materials.push(TT), zT.c.SetImmediate((() => {
-          this.onNewMaterialAddedObservable.notifyObservers(TT)
-        })))
-      }
-      addMorphTargetManager(TT) {
-        this._blockEntityCollection || this.morphTargetManagers.push(TT)
-      }
-      addGeometry(TT) {
-        this._blockEntityCollection || (this._geometriesByUniqueId && (this._geometriesByUniqueId[TT.uniqueId] = this.geometries.length), this.geometries.push(TT))
-      }
-      addActionManager(TT) {
-        this.actionManagers.push(TT)
-      }
-      addTexture(TT) {
-        this._blockEntityCollection || (this.textures.push(TT), this.onNewTextureAddedObservable.notifyObservers(TT))
-      }
-      addFrameGraph(TT) {
-        this.frameGraphs.push(TT), zT.c.SetImmediate((() => {
-          this.onNewFrameGraphAddedObservable.notifyObservers(TT)
-        }))
-      }
-      addObjectRenderer(TT) {
-        this.objectRenderers.push(TT), zT.c.SetImmediate((() => {
-          this.onNewObjectRendererAddedObservable.notifyObservers(TT)
-        }))
-      }
-      addPostProcess(TT) {
-        this._blockEntityCollection || (this.postProcesses.push(TT), zT.c.SetImmediate((() => {
-          this.onNewPostProcessAddedObservable.notifyObservers(TT)
-        })))
-      }
-      addEffectLayer(TT) {
-        this._blockEntityCollection || (this.effectLayers.push(TT), zT.c.SetImmediate((() => {
-          this.onNewEffectLayerAddedObservable.notifyObservers(TT)
-        })))
-      }
-      switchActiveCamera(TT) {
-        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        this._engine.getInputElement() && (this.activeCamera && this.activeCamera.detachControl(), this.activeCamera = TT, oT && TT.attachControl())
-      }
-      setActiveCameraById(TT) {
-        const oT = this.getCameraById(TT);
-        return oT ? (this.activeCamera = oT, oT) : null
-      }
-      setActiveCameraByName(TT) {
-        const oT = this.getCameraByName(TT);
-        return oT ? (this.activeCamera = oT, oT) : null
-      }
-      getAnimationGroupByName(TT) {
-        for (let oT = 0; oT < this.animationGroups.length; oT++)
-          if (this.animationGroups[oT].name === TT) return this.animationGroups[oT];
-        return null
-      }
-      _getMaterial(TT, oT) {
-        for (let IT = 0; IT < this.materials.length; IT++) {
-          const TT = this.materials[IT];
-          if (oT(TT)) return TT
-        }
-        if (TT)
-          for (let IT = 0; IT < this.multiMaterials.length; IT++) {
-            const TT = this.multiMaterials[IT];
-            if (oT(TT)) return TT
-          }
-        return null
-      }
-      getMaterialByUniqueID(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.getMaterialByUniqueId(TT, oT)
-      }
-      getMaterialByUniqueId(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this._getMaterial(oT, (oT => oT.uniqueId === TT))
-      }
-      getMaterialById(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this._getMaterial(oT, (oT => oT.id === TT))
-      }
-      getMaterialByName(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this._getMaterial(oT, (oT => oT.name === TT))
-      }
-      getLastMaterialById(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        for (let IT = this.materials.length - 1; IT >= 0; IT--)
-          if (this.materials[IT].id === TT) return this.materials[IT];
-        if (oT)
-          for (let IT = this.multiMaterials.length - 1; IT >= 0; IT--)
-            if (this.multiMaterials[IT].id === TT) return this.multiMaterials[IT];
-        return null
-      }
-      getTextureByUniqueId(TT) {
-        for (let oT = 0; oT < this.textures.length; oT++)
-          if (this.textures[oT].uniqueId === TT) return this.textures[oT];
-        return null
-      }
-      getTextureByName(TT) {
-        for (let oT = 0; oT < this.textures.length; oT++)
-          if (this.textures[oT].name === TT) return this.textures[oT];
-        return null
-      }
-      getCameraById(TT) {
-        for (let oT = 0; oT < this.cameras.length; oT++)
-          if (this.cameras[oT].id === TT) return this.cameras[oT];
-        return null
-      }
-      getCameraByUniqueId(TT) {
-        for (let oT = 0; oT < this.cameras.length; oT++)
-          if (this.cameras[oT].uniqueId === TT) return this.cameras[oT];
-        return null
-      }
-      getCameraByName(TT) {
-        for (let oT = 0; oT < this.cameras.length; oT++)
-          if (this.cameras[oT].name === TT) return this.cameras[oT];
-        return null
-      }
-      getBoneById(TT) {
-        for (let oT = 0; oT < this.skeletons.length; oT++) {
-          const IT = this.skeletons[oT];
-          for (let oT = 0; oT < IT.bones.length; oT++)
-            if (IT.bones[oT].id === TT) return IT.bones[oT]
-        }
-        return null
-      }
-      getBoneByName(TT) {
-        for (let oT = 0; oT < this.skeletons.length; oT++) {
-          const IT = this.skeletons[oT];
-          for (let oT = 0; oT < IT.bones.length; oT++)
-            if (IT.bones[oT].name === TT) return IT.bones[oT]
-        }
-        return null
-      }
-      getLightByName(TT) {
-        for (let oT = 0; oT < this.lights.length; oT++)
-          if (this.lights[oT].name === TT) return this.lights[oT];
-        return null
-      }
-      getLightById(TT) {
-        for (let oT = 0; oT < this.lights.length; oT++)
-          if (this.lights[oT].id === TT) return this.lights[oT];
-        return null
-      }
-      getLightByUniqueId(TT) {
-        for (let oT = 0; oT < this.lights.length; oT++)
-          if (this.lights[oT].uniqueId === TT) return this.lights[oT];
-        return null
-      }
-      getParticleSystemById(TT) {
-        for (let oT = 0; oT < this.bR.length; oT++)
-          if (this.bR[oT].id === TT) return this.bR[oT];
-        return null
-      }
-      getGeometryById(TT) {
-        for (let oT = 0; oT < this.geometries.length; oT++)
-          if (this.geometries[oT].id === TT) return this.geometries[oT];
-        return null
-      }
-      _getGeometryByUniqueId(TT) {
-        if (this._geometriesByUniqueId) {
-          const oT = this._geometriesByUniqueId[TT];
-          if (void 0 !== oT) return this.geometries[oT]
-        } else
-          for (let oT = 0; oT < this.geometries.length; oT++)
-            if (this.geometries[oT].uniqueId === TT) return this.geometries[oT];
-        return null
-      }
-      getFrameGraphByName(TT) {
-        for (let oT = 0; oT < this.frameGraphs.length; oT++)
-          if (this.frameGraphs[oT].name === TT) return this.frameGraphs[oT];
-        return null
-      }
-      pushGeometry(TT, oT) {
-        return !(!oT && this._getGeometryByUniqueId(TT.uniqueId)) && (this.addGeometry(TT), zT.c.SetImmediate((() => {
-          this.onNewGeometryAddedObservable.notifyObservers(TT)
-        })), !0)
-      }
-      removeGeometry(TT) {
-        let oT;
-        if (this._geometriesByUniqueId) {
-          if (oT = this._geometriesByUniqueId[TT.uniqueId], void 0 === oT) return !1
-        } else if (oT = this.geometries.indexOf(TT), oT < 0) return !1;
-        if (oT !== this.geometries.length - 1) {
-          const TT = this.geometries[this.geometries.length - 1];
-          TT && (this.geometries[oT] = TT, this._geometriesByUniqueId && (this._geometriesByUniqueId[TT.uniqueId] = oT))
-        }
-        return this._geometriesByUniqueId && (this._geometriesByUniqueId[TT.uniqueId] = void 0), this.geometries.pop(), this.onGeometryRemovedObservable.notifyObservers(TT), !0
-      }
-      getGeometries() {
-        return this.geometries
-      }
-      getMeshById(TT) {
-        for (let oT = 0; oT < this.meshes.length; oT++)
-          if (this.meshes[oT].id === TT) return this.meshes[oT];
-        return null
-      }
-      getMeshesById(TT) {
-        return this.meshes.filter((function(oT) {
-          return oT.id === TT
-        }))
-      }
-      getTransformNodeById(TT) {
-        for (let oT = 0; oT < this.transformNodes.length; oT++)
-          if (this.transformNodes[oT].id === TT) return this.transformNodes[oT];
-        return null
-      }
-      getTransformNodeByUniqueId(TT) {
-        for (let oT = 0; oT < this.transformNodes.length; oT++)
-          if (this.transformNodes[oT].uniqueId === TT) return this.transformNodes[oT];
-        return null
-      }
-      getTransformNodesById(TT) {
-        return this.transformNodes.filter((function(oT) {
-          return oT.id === TT
-        }))
-      }
-      getMeshByUniqueId(TT) {
-        for (let oT = 0; oT < this.meshes.length; oT++)
-          if (this.meshes[oT].uniqueId === TT) return this.meshes[oT];
-        return null
-      }
-      getLastMeshById(TT) {
-        for (let oT = this.meshes.length - 1; oT >= 0; oT--)
-          if (this.meshes[oT].id === TT) return this.meshes[oT];
-        return null
-      }
-      getLastTransformNodeById(TT) {
-        for (let oT = this.transformNodes.length - 1; oT >= 0; oT--)
-          if (this.transformNodes[oT].id === TT) return this.transformNodes[oT];
-        return null
-      }
-      getLastEntryById(TT) {
-        let oT;
-        for (oT = this.meshes.length - 1; oT >= 0; oT--)
-          if (this.meshes[oT].id === TT) return this.meshes[oT];
-        for (oT = this.transformNodes.length - 1; oT >= 0; oT--)
-          if (this.transformNodes[oT].id === TT) return this.transformNodes[oT];
-        for (oT = this.cameras.length - 1; oT >= 0; oT--)
-          if (this.cameras[oT].id === TT) return this.cameras[oT];
-        for (oT = this.lights.length - 1; oT >= 0; oT--)
-          if (this.lights[oT].id === TT) return this.lights[oT];
-        for (oT = this.skeletons.length - 1; oT >= 0; oT--) {
-          const IT = this.skeletons[oT];
-          for (let oT = IT.bones.length - 1; oT >= 0; oT--)
-            if (IT.bones[oT].id === TT) return IT.bones[oT]
-        }
-        return null
-      }
-      getNodeById(TT) {
-        const oT = this.getMeshById(TT);
-        if (oT) return oT;
-        const IT = this.getTransformNodeById(TT);
-        if (IT) return IT;
-        const iT = this.getLightById(TT);
-        if (iT) return iT;
-        const zT = this.getCameraById(TT);
-        if (zT) return zT;
-        const kT = this.getBoneById(TT);
-        return kT || null
-      }
-      getNodeByName(TT) {
-        const oT = this.getMeshByName(TT);
-        if (oT) return oT;
-        const IT = this.getTransformNodeByName(TT);
-        if (IT) return IT;
-        const iT = this.getLightByName(TT);
-        if (iT) return iT;
-        const zT = this.getCameraByName(TT);
-        if (zT) return zT;
-        const kT = this.getBoneByName(TT);
-        return kT || null
-      }
-      getMeshByName(TT) {
-        for (let oT = 0; oT < this.meshes.length; oT++)
-          if (this.meshes[oT].name === TT) return this.meshes[oT];
-        return null
-      }
-      getTransformNodeByName(TT) {
-        for (let oT = 0; oT < this.transformNodes.length; oT++)
-          if (this.transformNodes[oT].name === TT) return this.transformNodes[oT];
-        return null
-      }
-      getLastSkeletonById(TT) {
-        for (let oT = this.skeletons.length - 1; oT >= 0; oT--)
-          if (this.skeletons[oT].id === TT) return this.skeletons[oT];
-        return null
-      }
-      getSkeletonByUniqueId(TT) {
-        for (let oT = 0; oT < this.skeletons.length; oT++)
-          if (this.skeletons[oT].uniqueId === TT) return this.skeletons[oT];
-        return null
-      }
-      getSkeletonById(TT) {
-        for (let oT = 0; oT < this.skeletons.length; oT++)
-          if (this.skeletons[oT].id === TT) return this.skeletons[oT];
-        return null
-      }
-      getSkeletonByName(TT) {
-        for (let oT = 0; oT < this.skeletons.length; oT++)
-          if (this.skeletons[oT].name === TT) return this.skeletons[oT];
-        return null
-      }
-      getMorphTargetManagerById(TT) {
-        for (let oT = 0; oT < this.morphTargetManagers.length; oT++)
-          if (this.morphTargetManagers[oT].uniqueId === TT) return this.morphTargetManagers[oT];
-        return null
-      }
-      getMorphTargetById(TT) {
-        for (let oT = 0; oT < this.morphTargetManagers.length; ++oT) {
-          const IT = this.morphTargetManagers[oT];
-          for (let oT = 0; oT < IT.numTargets; ++oT) {
-            const iT = IT.getTarget(oT);
-            if (iT.id === TT) return iT
-          }
-        }
-        return null
-      }
-      getMorphTargetByName(TT) {
-        for (let oT = 0; oT < this.morphTargetManagers.length; ++oT) {
-          const IT = this.morphTargetManagers[oT];
-          for (let oT = 0; oT < IT.numTargets; ++oT) {
-            const iT = IT.getTarget(oT);
-            if (iT.name === TT) return iT
-          }
-        }
-        return null
-      }
-      getPostProcessByName(TT) {
-        for (let oT = 0; oT < this.postProcesses.length; ++oT) {
-          const IT = this.postProcesses[oT];
-          if (IT.name === TT) return IT
-        }
-        return null
-      }
-      isActiveMesh(TT) {
-        return -1 !== this._activeMeshes.indexOf(TT)
-      }
-      get uid() {
-        return this._uid || (this._uid = iT.i.RandomId()), this._uid
-      }
-      addExternalData(TT, oT) {
-        return this._externalData || (this._externalData = new BT), this._externalData.add(TT, oT)
-      }
-      getExternalData(TT) {
-        return this._externalData ? this._externalData.get(TT) : null
-      }
-      getOrAddExternalDataWithFactory(TT, oT) {
-        return this._externalData || (this._externalData = new BT), this._externalData.getOrAddWithFactory(TT, oT)
-      }
-      removeExternalData(TT) {
-        return this._externalData.remove(TT)
-      }
-      _evaluateSubMesh(TT, oT, IT, iT) {
-        if (iT || TT.isInFrustum(this._frustumPlanes)) {
-          for (let iT = 0, zT = this._evaluateSubMeshStage; iT < zT.length; iT++) {
-            zT[iT].action(oT, TT)
-          }
-          const IT = TT.bc();
-          null !== IT && void 0 !== IT && (IT.hasRenderTargetTextures && null != IT.getRenderTargetTextures && -1 === this._processedMaterials.indexOf(IT) && (this._processedMaterials.push(IT), this._materialsRenderTargets.concatWithNoDuplicate(IT.getRenderTargetTextures())), this._renderingManager.dispatch(TT, oT, IT))
-        }
-      }
-      freeProcessedMaterials() {
-        this._processedMaterials.dispose()
-      }
-      get blockfreeActiveMeshesAndRenderingGroups() {
-        return this._preventFreeActiveMeshesAndRenderingGroups
-      }
-      set blockfreeActiveMeshesAndRenderingGroups(TT) {
-        this._preventFreeActiveMeshesAndRenderingGroups !== TT && (TT && (this.freeActiveMeshes(), this.freeRenderingGroups()), this._preventFreeActiveMeshesAndRenderingGroups = TT)
-      }
-      freeActiveMeshes() {
-        if (!this.blockfreeActiveMeshesAndRenderingGroups && (this._activeMeshes.dispose(), this.activeCamera && this.activeCamera._activeMeshes && this.activeCamera._activeMeshes.dispose(), this.activeCameras))
-          for (let TT = 0; TT < this.activeCameras.length; TT++) {
-            const oT = this.activeCameras[TT];
-            oT && oT._activeMeshes && oT._activeMeshes.dispose()
-          }
-      }
-      freeRenderingGroups() {
-        if (!this.blockfreeActiveMeshesAndRenderingGroups && (this._renderingManager && this._renderingManager.freeRenderingGroups(), this.textures))
-          for (let TT = 0; TT < this.textures.length; TT++) {
-            const oT = this.textures[TT];
-            oT && oT.renderList && oT.freeRenderingGroups()
-          }
-      }
-      _isInIntermediateRendering() {
-        return this._intermediateRendering
-      }
-      _isInRenderingMeshEvaluation() {
-        return this._renderingMeshEvaluationDepth > 0
-      }
-      freezeActiveMeshes() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          oT = arguments.length > 1 ? arguments[1] : void 0,
-          IT = arguments.length > 2 ? arguments[2] : void 0,
-          iT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-          kT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (this.frameGraph) {
-          this._renderWithFrameGraph(!0, !1, !0);
-          const WT = this.frameGraph.getTasksByClassName(["FrameGraphObjectRendererTask", "FrameGraphGeometryRendererTask"]);
-          for (const TT of WT) TT.objectRenderer._freezeActiveMeshes(iT);
-          return this._freezeActiveMeshesCancel = (0, zT.e)((() => {
-            let TT = !0,
-              oT = !0;
-            for (const IT of WT) TT && (TT = IT.objectRenderer._isFrozen), oT && (oT = null !== IT.objectRenderer._freezeActiveMeshesCancel);
-            if (TT) return !0;
-            if (!oT) throw new Error("Freezing active meshes was cancelled");
-            return !1
-          }), (() => {
-            this._freezeActiveMeshesCancel = null, this._activeMeshesFrozen = !0, this._activeMeshesFrozenButKeepClipping = kT, this._skipEvaluateActiveMeshesCompletely = TT, oT?.()
-          }), ((TT, oT) => {
-            if (this._freezeActiveMeshesCancel = null, this.unfreezeActiveMeshes(), oT) {
-              const oT = "Scene: Timeout while waiting for meshes to be frozen.";
-              IT ? IT(oT) : (II.d.Error(oT), TT && II.d.Error(TT))
-            } else {
-              const oT = "Scene: An unexpected error occurred while trying to freeze active meshes.";
-              IT ? IT(oT) : (II.d.Error(oT), TT && (II.d.Error(TT), TT.stack && II.d.Error(TT.stack)))
-            }
-          })), this
-        }
-        return this.executeWhenReady((() => {
-          if (this.activeCamera) {
-            if (this._frustumPlanes || this.updateTransformMatrix(), this._evaluateActiveMeshes(), this._activeMeshesFrozen = !0, this._activeMeshesFrozenButKeepClipping = kT, this._skipEvaluateActiveMeshesCompletely = TT, iT)
-              for (let TT = 0; TT < this._activeMeshes.length; TT++) this._activeMeshes.data[TT]._freeze();
-            oT && oT()
-          } else IT && IT("No active camera found")
-        })), this
-      }
-      unfreezeActiveMeshes() {
-        for (let TT = 0; TT < this.meshes.length; TT++) {
-          const oT = this.meshes[TT];
-          oT._internalAbstractMeshDataInfo && (oT._internalAbstractMeshDataInfo._isActive = !1)
-        }
-        if (this._freezeActiveMeshesCancel?.(), this._freezeActiveMeshesCancel = null, this.frameGraph) {
-          const TT = this.frameGraph.getTasksByClassName(["FrameGraphObjectRendererTask", "FrameGraphGeometryRendererTask"]);
-          for (const oT of TT) oT.objectRenderer._unfreezeActiveMeshes()
-        } else
-          for (let TT = 0; TT < this._activeMeshes.length; TT++) this._activeMeshes.data[TT]._unFreeze();
-        return this._activeMeshesFrozen = !1, this
-      }
-      _executeActiveContainerCleanup(TT) {
-        (!this._engine.snapshotRendering || 1 !== this._engine.snapshotRenderingMode) && this._activeMeshesFrozen && this._activeMeshes.length || this.onBeforeRenderObservable.addOnce((() => TT.dispose()))
-      }
-      _evaluateActiveMeshes() {
-        if (this._engine.snapshotRendering && 1 === this._engine.snapshotRenderingMode) return void(this._activeMeshes.length > 0 && (this.activeCamera?._activeMeshes.reset(), this._activeMeshes.reset(), this._renderingManager.reset(), this._processedMaterials.reset(), this._activeParticleSystems.reset(), this._activeSkeletons.reset(), this._softwareSkinnedMeshes.reset()));
-        if (this._activeMeshesFrozen && this._activeMeshes.length) {
-          if (!this._skipEvaluateActiveMeshesCompletely) {
-            const TT = this._activeMeshes.length;
-            for (let oT = 0; oT < TT; oT++) {
-              this._activeMeshes.data[oT].computeWorldMatrix()
-            }
-          }
-          if (this._activeParticleSystems) {
-            const TT = this._activeParticleSystems.length;
-            for (let oT = 0; oT < TT; oT++) this._activeParticleSystems.data[oT].animate()
-          }
-          return void this._renderingManager.resetSprites()
-        }
-        if (!this.activeCamera) return;
-        this.onBeforeActiveMeshesEvaluationObservable.notifyObservers(this), this.activeCamera._activeMeshes.reset(), this._activeMeshes.reset(), this._renderingManager.reset(), this._processedMaterials.reset(), this._activeParticleSystems.reset(), this._activeSkeletons.reset(), this._softwareSkinnedMeshes.reset(), this._materialsRenderTargets.reset();
-        for (let zT = 0, kT = this._beforeEvaluateActiveMeshStage; zT < kT.length; zT++) {
-          kT[zT].action()
-        }
-        const TT = this.getActiveMeshCandidates(),
-          oT = TT.length,
-          IT = tT.c.Enabled,
-          iT = this.customLODSelector;
-        for (let zT = 0; zT < oT; zT++) {
-          const oT = TT.data[zT],
-            kT = !iT && !oT.yC && !oT._internalMeshDataInfo?._LODLevels.length;
-          let WT, XT;
-          if ((kT || (WT = oT._internalAbstractMeshDataInfo._currentLOD.get(this.activeCamera), WT ? WT[1] = -1 : (WT = [oT, -1], oT._internalAbstractMeshDataInfo._currentLOD.set(this.activeCamera, WT))), !oT.isBlocked) && (IT && this._totalVertices.addCount(oT.getTotalVertices(), !1), oT.isReady() && oT.isEnabled() && !oT.ti.hasAZeroComponent)) {
-            if (oT.computeWorldMatrix(), oT.actionManager && oT.actionManager.hasSpecificTriggers2(12, 13) && this._meshesForIntersections.pushNoDuplicate(oT), kT) XT = oT;
-            else if (XT = iT ? iT(oT, this.activeCamera) : oT.getLOD(this.activeCamera), WT[0] = XT, WT[1] = this._frameId, void 0 === XT || null === XT) continue;
-            if (XT !== oT && 0 !== XT.billboardMode && XT.computeWorldMatrix(), oT._preActivate(), oT.isVisible && oT.visibility > 0 && 0 !== (oT.layerMask & this.activeCamera.layerMask) && (this._skipFrustumClipping || oT.lc || oT.isInFrustum(this._frustumPlanes))) {
-              this._activeMeshes.push(oT), this.activeCamera._activeMeshes.push(oT), XT !== oT && XT._activate(this._renderId, !1);
-              for (let TT = 0, IT = this._preActiveMeshStage; TT < IT.length; TT++) {
-                IT[TT].action(oT)
-              }
-              oT._activate(this._renderId, !1) && (oT.yC ? oT._internalAbstractMeshDataInfo._actAsRegularMesh && (XT = oT) : XT._internalAbstractMeshDataInfo._onlyForInstances = !1, XT._internalAbstractMeshDataInfo._isActive = !0, this._activeMesh(oT, XT)), oT._postActivate()
-            }
-          }
-        }
-        if (this.onAfterActiveMeshesEvaluationObservable.notifyObservers(this), this.particlesEnabled) {
-          this.onBeforeParticlesRenderingObservable.notifyObservers(this);
-          for (let TT = 0; TT < this.bR.length; TT++) {
-            const oT = this.bR[TT];
-            if (!oT.isStarted() || !oT.emitter) continue;
-            const IT = oT.emitter;
-            IT.position && !IT.isEnabled() || (this._activeParticleSystems.push(oT), oT.animate(), this._renderingManager.dispatchParticles(oT))
-          }
-          this.onAfterParticlesRenderingObservable.notifyObservers(this)
-        }
-      }
-      _prepareSkeleton(TT) {
-        this._skeletonsEnabled && TT.skeleton && (this._activeSkeletons.pushNoDuplicate(TT.skeleton) && (TT.skeleton.prepare(), this._activeBones.addCount(TT.skeleton.bones.length, !1)), TT.computeBonesUsingShaders || this._softwareSkinnedMeshes.pushNoDuplicate(TT) && this.frameGraph && TT.applySkeleton(TT.skeleton))
-      }
-      _activeMesh(TT, oT) {
-        this._prepareSkeleton(oT);
-        let IT = TT.OiT || TT.yC || this.dispatchAllSubMeshesOfActiveMeshes || this._skipFrustumClipping || oT.lc;
-        if (oT && oT.pR && oT.pR.length > 0) {
-          const iT = this.getActiveSubMeshCandidates(oT),
-            zT = iT.length;
-          IT = IT || 1 === zT;
-          for (let kT = 0; kT < zT; kT++) {
-            const zT = iT.data[kT];
-            this._evaluateSubMesh(zT, oT, TT, IT)
-          }
-        }
-      }
-      updateTransformMatrix(TT) {
-        const oT = this.activeCamera;
-        if (oT)
-          if (oT._renderingMultiview) {
-            const IT = oT._rigCameras[0],
-              iT = oT._rigCameras[1];
-            this.setTransformMatrix(IT.getViewMatrix(), IT.getProjectionMatrix(TT), iT.getViewMatrix(), iT.getProjectionMatrix(TT))
-          } else this.setTransformMatrix(oT.getViewMatrix(), oT.getProjectionMatrix(TT))
-      }
-      _bindFrameBuffer(TT) {
-        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        this._useCurrentFrameBuffer || (TT && TT._multiviewTexture ? TT._multiviewTexture._bindFrameBuffer() : TT && TT.outputRenderTarget ? TT.outputRenderTarget._bindFrameBuffer() : this._engine._currentFrameBufferIsDefaultFrameBuffer() || this._engine.restoreDefaultFramebuffer()), oT && this._clearFrameBuffer(TT)
-      }
-      _clearFrameBuffer(TT) {
-        if (TT && TT._multiviewTexture);
-        else if (TT && TT.outputRenderTarget && !TT._renderingMultiview) {
-          const oT = TT.outputRenderTarget;
-          oT.onClearObservable.hasObservers() ? oT.onClearObservable.notifyObservers(this._engine) : oT.skipInitialClear || TT.isRightCamera || (this.autoClear && this._engine.clear(oT.clearColor || this._clearColor, !oT._cleared, !0, !0), oT._cleared = !0)
-        } else this._defaultFrameBufferCleared ? this._engine.clear(null, !1, !0, !0) : (this._defaultFrameBufferCleared = !0, this._clear())
-      }
-      _renderForCamera(TT, oT) {
-        let IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        if (TT && TT._skipRendering) return;
-        const zT = this._engine;
-        if (this._activeCamera = TT, !this.activeCamera) throw new Error("Active camera not set");
-        if (zT.setViewport(this.activeCamera.viewport), this.resetCachedMaterial(), this._renderId++, !this.prePass && IT) {
-          let oT = !0;
-          TT._renderingMultiview && TT.outputRenderTarget && (oT = TT.outputRenderTarget.skipInitialClear, this.autoClear && (this._defaultFrameBufferCleared = !1, TT.outputRenderTarget.skipInitialClear = !1)), this._bindFrameBuffer(this._activeCamera), TT._renderingMultiview && TT.outputRenderTarget && (TT.outputRenderTarget.skipInitialClear = oT)
-        }
-        this.updateTransformMatrix(), this.onBeforeCameraRenderObservable.notifyObservers(this.activeCamera), this._engine.currentRenderPassId = TT.outputRenderTarget?.renderPassId ?? TT.renderPassId ?? 0, this._evaluateActiveMeshes();
-        for (let iT = 0; iT < this._softwareSkinnedMeshes.length; iT++) {
-          const TT = this._softwareSkinnedMeshes.data[iT];
-          TT.applySkeleton(TT.skeleton)
-        }
-        this.onBeforeRenderTargetsRenderObservable.notifyObservers(this), this._renderTargets.concatWithNoDuplicate(this._materialsRenderTargets), TT.customRenderTargets && TT.customRenderTargets.length > 0 && this._renderTargets.concatWithNoDuplicate(TT.customRenderTargets), oT && oT.customRenderTargets && oT.customRenderTargets.length > 0 && this._renderTargets.concatWithNoDuplicate(oT.customRenderTargets), this.environmentTexture && this.environmentTexture.isRenderTarget && this._renderTargets.pushNoDuplicate(this.environmentTexture);
-        for (let iT = 0, XT = this._gatherActiveCameraRenderTargetsStage; iT < XT.length; iT++) {
-          XT[iT].action(this._renderTargets)
-        }
-        let kT = !1;
-        if (this.renderTargetsEnabled) {
-          let TT;
-          if (this._intermediateRendering = !0, this._renderTargets.length > 0) {
-            iT.i.StartPerformanceCounter("Render targets", this._renderTargets.length > 0);
-            const oT = this.getBoundingBoxRenderer?.();
-            for (let IT = 0; IT < this._renderTargets.length; IT++) {
-              const iT = this._renderTargets.data[IT];
-              if (iT._shouldRender()) {
-                this._renderId++;
-                const IT = iT.activeCamera && iT.activeCamera !== this.activeCamera;
-                oT && !TT && (TT = oT.renderList.length > 0 ? oT.renderList.data.slice() : [], TT.length = oT.renderList.length), iT.render(IT, this.dumpNextRenderTargets), kT = !0
-              }
-            }
-            oT && TT && (oT.renderList.data = TT, oT.renderList.length = TT.length), iT.i.EndPerformanceCounter("Render targets", this._renderTargets.length > 0), this._renderId++
-          }
-          if (this._cameraDrawRenderTargetStage.length > 0) {
-            const oT = this.getBoundingBoxRenderer?.();
-            oT && !TT && (TT = oT.renderList.length > 0 ? oT.renderList.data.slice() : [], TT.length = oT.renderList.length);
-            for (let TT = 0, IT = this._cameraDrawRenderTargetStage; TT < IT.length; TT++) {
-              kT = IT[TT].action(this.activeCamera) || kT
-            }
-            oT && TT && (oT.renderList.data = TT, oT.renderList.length = TT.length)
-          }
-          this._intermediateRendering = !1
-        }
-        kT && !this.prePass && (this._bindFrameBuffer(this._activeCamera, !1), this.updateTransformMatrix()), this.onAfterRenderTargetsRenderObservable.notifyObservers(this), !this.postProcessManager || TT._multiviewTexture || this.prePass || this.postProcessManager._prepareFrame();
-        for (let iT = 0, XT = this._beforeCameraDrawStage; iT < XT.length; iT++) {
-          XT[iT].action(this.activeCamera)
-        }
-        this.onBeforeDrawPhaseObservable.notifyObservers(this);
-        const WT = zT.snapshotRendering && 1 === zT.snapshotRenderingMode;
-        WT && this.finalizeSceneUbo(), this._renderingManager.render(null, null, !0, !WT), this.onAfterDrawPhaseObservable.notifyObservers(this);
-        for (let iT = 0, XT = this._afterCameraDrawStage; iT < XT.length; iT++) {
-          XT[iT].action(this.activeCamera)
-        }
-        if (this.postProcessManager && !TT._multiviewTexture) {
-          const oT = TT.outputRenderTarget ? TT.outputRenderTarget.renderTarget : void 0;
-          this.postProcessManager._finalizeFrame(TT.isIntermediate, oT)
-        }
-        for (let iT = 0, XT = this._afterCameraPostProcessStage; iT < XT.length; iT++) {
-          XT[iT].action(this.activeCamera)
-        }
-        this._renderTargets.reset(), this.onAfterCameraRenderObservable.notifyObservers(this.activeCamera)
-      }
-      _processSubCameras(TT) {
-        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (0 === TT.cameraRigMode || TT._renderingMultiview) return TT._renderingMultiview && !this._multiviewSceneUbo && this._createMultiviewUbo(), this._renderForCamera(TT, void 0, oT), void this.onAfterRenderCameraObservable.notifyObservers(TT);
-        if (TT._useMultiviewToSingleView) this._renderMultiviewToSingleView(TT);
-        else {
-          this.onBeforeCameraRenderObservable.notifyObservers(TT);
-          for (let oT = 0; oT < TT._rigCameras.length; oT++) this._renderForCamera(TT._rigCameras[oT], TT)
-        }
-        this._activeCamera = TT, this.updateTransformMatrix(), this.onAfterRenderCameraObservable.notifyObservers(TT)
-      }
-      _checkIntersections() {
-        for (let TT = 0; TT < this._meshesForIntersections.length; TT++) {
-          const oT = this._meshesForIntersections.data[TT];
-          if (oT.actionManager)
-            for (let TT = 0; oT.actionManager && TT < oT.actionManager.actions.length; TT++) {
-              const IT = oT.actionManager.actions[TT];
-              if (12 === IT.trigger || 13 === IT.trigger) {
-                const TT = IT.getTriggerParameter(),
-                  iT = TT.mesh ? TT.mesh : TT,
-                  zT = iT.jiT(oT, TT.usePreciseIntersection),
-                  kT = oT._intersectionsInProgress.indexOf(iT);
-                zT && -1 === kT ? 12 === IT.trigger ? (IT._executeCurrent(cT.CreateNew(oT, void 0, iT)), oT._intersectionsInProgress.push(iT)) : 13 === IT.trigger && oT._intersectionsInProgress.push(iT) : !zT && kT > -1 && (13 === IT.trigger && IT._executeCurrent(cT.CreateNew(oT, void 0, iT)), oT.actionManager.hasSpecificTrigger(13, (TT => {
-                  const oT = TT.mesh ? TT.mesh : TT;
-                  return iT === oT
-                })) && 13 !== IT.trigger || oT._intersectionsInProgress.splice(kT, 1))
-              }
-            }
-        }
-      }
-      _advancePhysicsEngineStep(TT) {}
-      _animate(TT) {}
-      animate() {
-        if (this._engine.isDeterministicLockStep()) {
-          let TT = Math.max(XI.MinDeltaTime, Math.min(this._engine.getDeltaTime(), XI.MaxDeltaTime)) + this._timeAccumulator;
-          const oT = this._engine.getTimeStep(),
-            IT = 1e3 / oT / 1e3;
-          let iT = 0;
-          const zT = this._engine.getLockstepMaxSteps();
-          let kT = Math.floor(TT / oT);
-          for (kT = Math.min(kT, zT); TT > 0 && iT < kT;) this.onBeforeStepObservable.notifyObservers(this), this._animationRatio = oT * IT, this._animate(oT), this.onAfterAnimationsObservable.notifyObservers(this), this.EY && this._advancePhysicsEngineStep(oT), this.onAfterStepObservable.notifyObservers(this), this._currentStepId++, iT++, TT -= oT;
-          this._timeAccumulator = TT < 0 ? 0 : TT
-        } else {
-          const TT = this.useConstantAnimationDeltaTime ? 16 : Math.max(XI.MinDeltaTime, Math.min(this._engine.getDeltaTime(), XI.MaxDeltaTime));
-          this._animationRatio = .06 * TT, this._animate(), this.onAfterAnimationsObservable.notifyObservers(this), this.EY && this._advancePhysicsEngineStep(TT)
-        }
-      }
-      _clear() {
-        (this.autoClearDepthAndStencil || this.autoClear) && this._engine.clear(this._clearColor, this.autoClear || this.forceWireframe || this.forcePointsCloud, this.autoClearDepthAndStencil, this.autoClearDepthAndStencil)
-      }
-      _checkCameraRenderTarget(TT) {
-        if (TT?.outputRenderTarget && !TT?.isRigCamera && (TT.outputRenderTarget._cleared = !1), TT?.rigCameras?.length)
-          for (let oT = 0; oT < TT.rigCameras.length; ++oT) {
-            const IT = TT.rigCameras[oT].outputRenderTarget;
-            IT && (IT._cleared = !1)
-          }
-      }
-      resetDrawCache(TT) {
-        if (this.meshes)
-          for (const oT of this.meshes) oT.resetDrawCache(TT)
-      }
-      _renderWithFrameGraph() {
-        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          oT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (this.activeCamera = null, this.activeCameras = null, TT)
-          for (const IT of this.cameras)
-            if (IT.update(), 0 !== IT.cameraRigMode)
-              for (let TT = 0; TT < IT._rigCameras.length; TT++) IT._rigCameras[TT].update();
-        this.onBeforeRenderObservable.notifyObservers(this), this._renderingMeshEvaluationDepth++;
-        try {
-          this._renderWithFrameGraphAfterBeforeRender(oT)
-        } finally {
-          this._renderingMeshEvaluationDepth--
-        }
-      }
-      _renderWithFrameGraphAfterBeforeRender(TT) {
-        this.onBeforeRenderTargetsRenderObservable.notifyObservers(this), this._renderTargets.reset();
-        const oT = this._frameGraph?.findMainCamera() ?? null;
-        if (this.renderTargetsEnabled) {
-          this.environmentTexture && this.environmentTexture.isRenderTarget && this._renderTargets.pushNoDuplicate(this.environmentTexture), this._renderTargets.concatWithNoDuplicate(this.customRenderTargets), iT.i.StartPerformanceCounter("Custom render targets", this._renderTargets.length > 0);
-          for (let TT = 0; TT < this._renderTargets.length; TT++) {
-            const IT = this._renderTargets.data[TT],
-              iT = IT.activeCamera || oT;
-            this._renderRenderTarget(IT, iT, !0, this.dumpNextRenderTargets)
-          }
-          iT.i.EndPerformanceCounter("Custom render targets", this._renderTargets.length > 0), this._renderId++
-        }
-        this.onAfterRenderTargetsRenderObservable.notifyObservers(this);
-        for (let IT = 0, iT = this._beforeClearStage; IT < iT.length; IT++) {
-          iT[IT].action()
-        }
-        if (this._engine.snapshotRendering && 1 === this._engine.snapshotRenderingMode) this._activeParticleSystems.reset(), this._activeSkeletons.reset(), this._softwareSkinnedMeshes.reset();
-        else {
-          const oT = this.getActiveMeshCandidates(),
-            IT = oT.length;
-          if (this._activeMeshesFrozen) {
-            if (!this._skipEvaluateActiveMeshesCompletely)
-              for (let TT = 0; TT < IT; TT++) {
-                const IT = oT.data[TT];
-                IT._internalAbstractMeshDataInfo._wasActiveLastFrame && IT.computeWorldMatrix()
-              }
-            if (this.particlesEnabled) {
-              const TT = this._activeParticleSystems.length;
-              for (let oT = 0; oT < TT; oT++) this._activeParticleSystems.data[oT].animate()
-            }
-          } else {
-            this._activeParticleSystems.reset(), this._activeSkeletons.reset(), this._softwareSkinnedMeshes.reset();
-            for (let iT = 0; iT < IT; iT++) {
-              const IT = oT.data[iT];
-              IT._internalAbstractMeshDataInfo._wasActiveLastFrame = !1, IT.isBlocked || (this._totalVertices.addCount(IT.getTotalVertices(), !1), IT.isReady() && IT.isEnabled() && !IT.ti.hasAZeroComponent && (IT.computeWorldMatrix(TT), IT.actionManager && IT.actionManager.hasSpecificTriggers2(12, 13) && this._meshesForIntersections.pushNoDuplicate(IT)))
-            }
-            if (this.particlesEnabled)
-              for (let TT = 0; TT < this.bR.length; TT++) {
-                const oT = this.bR[TT];
-                if (!oT.isStarted() || !oT.emitter) continue;
-                const IT = oT.emitter;
-                IT.position && !IT.isEnabled() || (this._activeParticleSystems.push(oT), oT.animate())
-              }
-          }
-        }
-        this.frameGraph?.execute()
-      }
-      _renderRenderTarget(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (this._intermediateRendering = !0, TT._shouldRender()) {
-          if (this._renderId++, this.activeCamera = oT, !this.activeCamera) throw new Error("Active camera not set");
-          this._engine.setViewport(this.activeCamera.viewport), this.updateTransformMatrix(), TT.render(IT, iT)
-        }
-        this._intermediateRendering = !1
-      }
-      render() {
-        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.IIT) return;
-        const IT = this._renderingMeshEvaluationDepth;
-        try {
-          this._renderFrame(TT, oT)
-        } finally {
-          this._renderingMeshEvaluationDepth = IT
-        }
-      }
-      _renderFrame(TT, oT) {
-        if (this.onReadyObservable.hasObservers() && null === this._executeWhenReadyTimeoutId && this._checkIsReady(), MT.b.pC = this._getFloatingOriginScene, this._frameId++, this._defaultFrameBufferCleared = !1, this._checkCameraRenderTarget(this.activeCamera), this.activeCameras?.length)
-          for (const IT of this.activeCameras) this._checkCameraRenderTarget(IT);
-        this._registerTransientComponents(), this._activeParticles.fetchNewFrame(), this._totalVertices.fetchNewFrame(), this._activeIndices.fetchNewFrame(), this._activeBones.fetchNewFrame(), this._meshesForIntersections.reset(), this.resetCachedMaterial(), this.onBeforeAnimationsObservable.notifyObservers(this), this.actionManager && this.actionManager.processTrigger(11), oT || this.animate();
-        for (let IT = 0, iT = this._beforeCameraUpdateStage; IT < iT.length; IT++) {
-          iT[IT].action()
-        }
-        if (TT)
-          if (this.activeCameras && this.activeCameras.length > 0)
-            for (let IT = 0; IT < this.activeCameras.length; IT++) {
-              const TT = this.activeCameras[IT];
-              if (TT.update(), 0 !== TT.cameraRigMode)
-                for (let oT = 0; oT < TT._rigCameras.length; oT++) TT._rigCameras[oT].update()
-            } else if (this.activeCamera && (this.activeCamera.update(), 0 !== this.activeCamera.cameraRigMode))
-              for (let IT = 0; IT < this.activeCamera._rigCameras.length; IT++) this.activeCamera._rigCameras[IT].update();
-        if (this.customRenderFunction) this._renderId++, this._engine.currentRenderPassId = 0, this._renderingMeshEvaluationDepth++, this.customRenderFunction(TT, oT);
-        else {
-          this.onBeforeRenderObservable.notifyObservers(this), this._renderingMeshEvaluationDepth++, this.onBeforeRenderTargetsRenderObservable.notifyObservers(this);
-          const TT = this.activeCameras?.length ? this.activeCameras[0] : this.activeCamera;
-          if (this.renderTargetsEnabled) {
-            iT.i.StartPerformanceCounter("Custom render targets", this.customRenderTargets.length > 0);
-            for (let oT = 0; oT < this.customRenderTargets.length; oT++) {
-              const IT = this.customRenderTargets[oT],
-                iT = IT.activeCamera || this.activeCamera;
-              this._renderRenderTarget(IT, iT, TT !== iT, this.dumpNextRenderTargets)
-            }
-            iT.i.EndPerformanceCounter("Custom render targets", this.customRenderTargets.length > 0), this._renderId++
-          }
-          this._engine.currentRenderPassId = TT?.renderPassId ?? 0, this.activeCamera = TT, this._activeCamera && 22 !== this._activeCamera.cameraRigMode && !this.prePass && this._bindFrameBuffer(this._activeCamera, !1), this.onAfterRenderTargetsRenderObservable.notifyObservers(this);
-          for (let oT = 0, IT = this._beforeClearStage; oT < IT.length; oT++) {
-            IT[oT].action()
-          }
-          this._clearFrameBuffer(this.activeCamera);
-          for (let oT = 0, IT = this._gatherRenderTargetsStage; oT < IT.length; oT++) {
-            IT[oT].action(this._renderTargets)
-          }
-          if (this.activeCameras && this.activeCameras.length > 0)
-            for (let oT = 0; oT < this.activeCameras.length; oT++) this._processSubCameras(this.activeCameras[oT], oT > 0);
-          else {
-            if (!this.activeCamera) throw new Error("No camera defined");
-            this._processSubCameras(this.activeCamera, !!this.activeCamera.outputRenderTarget)
-          }
-        }
-        this._inputManager._updateMeshUnderPointer(), this._checkIntersections();
-        for (let IT = 0, iT = this._afterRenderStage; IT < iT.length; IT++) {
-          iT[IT].action()
-        }
-        if (this.afterRender && this.afterRender(), this.onAfterRenderObservable.notifyObservers(this), this._toBeDisposed.length) {
-          for (let TT = 0; TT < this._toBeDisposed.length; TT++) {
-            const oT = this._toBeDisposed[TT];
-            oT && oT.dispose()
-          }
-          this._toBeDisposed.length = 0
-        }
-        this.dumpNextRenderTargets && (this.dumpNextRenderTargets = !1), this._activeBones.addCount(0, !0), this._activeIndices.addCount(0, !0), this._activeParticles.addCount(0, !0), this._engine.restoreDefaultFramebuffer()
-      }
-      freezeMaterials() {
-        for (let TT = 0; TT < this.materials.length; TT++) this.materials[TT].freeze()
-      }
-      unfreezeMaterials() {
-        for (let TT = 0; TT < this.materials.length; TT++) this.materials[TT].unfreeze()
-      }
-      dispose() {
-        if (this.IIT) return;
-        if (this._isDisposing = !0, this.beforeRender = null, this.afterRender = null, this.metadata = null, this.skeletons.length = 0, this.morphTargetManagers.length = 0, this._transientComponents.length = 0, this._isReadyForMeshStage.clear(), this._beforeEvaluateActiveMeshStage.clear(), this._evaluateSubMeshStage.clear(), this._preActiveMeshStage.clear(), this._cameraDrawRenderTargetStage.clear(), this._beforeCameraDrawStage.clear(), this._beforeRenderTargetDrawStage.clear(), this._beforeRenderingGroupDrawStage.clear(), this._beforeRenderingMeshStage.clear(), this._afterRenderingMeshStage.clear(), this._afterRenderingGroupDrawStage.clear(), this._afterCameraDrawStage.clear(), this._afterRenderTargetDrawStage.clear(), this._afterRenderStage.clear(), this._beforeCameraUpdateStage.clear(), this._beforeClearStage.clear(), this._gatherRenderTargetsStage.clear(), this._gatherActiveCameraRenderTargetsStage.clear(), this._pointerMoveStage.clear(), this._pointerDownStage.clear(), this._pointerUpStage.clear(), this._isReadyChecks.length = 0, this.importedMeshesFiles = [], this._activeAnimatables && (0, wT.d)(this.stopAllAnimations)) {
-          for (const TT of this._activeAnimatables) TT.onAnimationEndObservable.clear(), TT.onAnimationEnd = null;
-          this.stopAllAnimations()
-        }
-        this.resetCachedMaterial(), this.activeCamera && (this.activeCamera._activeMeshes.dispose(), this.activeCamera = null), this.activeCameras = null, this._activeMeshes.dispose(), this._renderingManager.dispose(), this._processedMaterials.dispose(), this._activeParticleSystems.dispose(), this._activeSkeletons.dispose(), this._softwareSkinnedMeshes.dispose(), this._renderTargets.dispose(), this._materialsRenderTargets.dispose(), this._registeredForLateAnimationBindings.dispose(), this._animationWrites.length = 0, this._animationWriteCount = 0, this._animationStepWriteCount = 0, this._meshesForIntersections.dispose(), this._toBeDisposed.length = 0;
-        const TT = this._activeRequests.slice();
-        for (const kT of TT) kT.abort();
-        this._activeRequests.length = 0;
-        try {
-          this.bC.notifyObservers(this)
-        } catch (zT) {
-          II.d.Error("An error occurred while calling onDisposeObservable!", zT)
-        }
-        this.detachControl();
-        const oT = this._engine.getInputElement?.();
-        if (oT)
-          for (let kT = 0; kT < this.cameras.length; kT++) this.cameras[kT].detachControl();
-        this._disposeList(this.animationGroups), this._disposeList(this.lights), this._defaultMaterial && this._defaultMaterial.dispose(), this._disposeList(this.multiMaterials), this._disposeList(this.materials), this._disposeList(this.meshes, (TT => TT.dispose(!0))), this._disposeList(this.transformNodes, (TT => TT.dispose(!0)));
-        const IT = this.cameras;
-        this._disposeList(IT), this._disposeList(this.bR), this._disposeList(this.postProcesses), this._disposeList(this.textures), this._disposeList(this.morphTargetManagers), this._disposeList(this.frameGraphs), this._sceneUbo.dispose(), this._multiviewSceneUbo && this._multiviewSceneUbo.dispose(), this.postProcessManager.dispose(), this._disposeList(this._components);
-        let iT = this._engine.scenes.indexOf(this);
-        if (iT > -1 && this._engine.scenes.splice(iT, 1), this._floatingOriginScene = void 0, 0 === this._engine.scenes.length && (0, MT.i)(), hT.d._LastCreatedScene === this) {
-          hT.d._LastCreatedScene = null;
-          let TT = hT.d.Instances.length - 1;
-          for (; TT >= 0;) {
-            const oT = hT.d.Instances[TT];
-            if (oT.scenes.length > 0) {
-              hT.d._LastCreatedScene = oT.scenes[this._engine.scenes.length - 1];
-              break
-            }
-            TT--
-          }
-        }
-        iT = this._engine._virtualScenes.indexOf(this), iT > -1 && this._engine._virtualScenes.splice(iT, 1), this._engine.wipeCaches(!0), this.bC.clear(), this.onBeforeRenderObservable.clear(), this.onAfterRenderObservable.clear(), this.onBeforeRenderTargetsRenderObservable.clear(), this.onAfterRenderTargetsRenderObservable.clear(), this.onAfterStepObservable.clear(), this.onBeforeStepObservable.clear(), this.onBeforeActiveMeshesEvaluationObservable.clear(), this.onAfterActiveMeshesEvaluationObservable.clear(), this.onBeforeParticlesRenderingObservable.clear(), this.onAfterParticlesRenderingObservable.clear(), this.onBeforeDrawPhaseObservable.clear(), this.onAfterDrawPhaseObservable.clear(), this.onBeforeAnimationsObservable.clear(), this.onAfterAnimationsObservable.clear(), this.onDataLoadedObservable.clear(), this.onBeforeRenderingGroupObservable.clear(), this.onAfterRenderingGroupObservable.clear(), this.onMeshImportedObservable.clear(), this.onBeforeCameraRenderObservable.clear(), this.onAfterCameraRenderObservable.clear(), this.onAfterRenderCameraObservable.clear(), this.onReadyObservable.clear(), this.onNewCameraAddedObservable.clear(), this.onCameraRemovedObservable.clear(), this.onNewLightAddedObservable.clear(), this.onLightRemovedObservable.clear(), this.onNewGeometryAddedObservable.clear(), this.onGeometryRemovedObservable.clear(), this.onNewTransformNodeAddedObservable.clear(), this.onTransformNodeRemovedObservable.clear(), this.onNewMeshAddedObservable.clear(), this.onMeshRemovedObservable.clear(), this.onNewSkeletonAddedObservable.clear(), this.onSkeletonRemovedObservable.clear(), this.onNewMaterialAddedObservable.clear(), this.onNewMultiMaterialAddedObservable.clear(), this.onMaterialRemovedObservable.clear(), this.onMultiMaterialRemovedObservable.clear(), this.onNewTextureAddedObservable.clear(), this.onTextureRemovedObservable.clear(), this.onNewFrameGraphAddedObservable.clear(), this.onFrameGraphRemovedObservable.clear(), this.onNewObjectRendererAddedObservable.clear(), this.onObjectRendererRemovedObservable.clear(), this.onPrePointerObservable.clear(), this.onPointerObservable.clear(), this.onPreKeyboardObservable.clear(), this.onKeyboardObservable.clear(), this.onActiveCameraChanged.clear(), this.onScenePerformancePriorityChangedObservable.clear(), this.onClearColorChangedObservable.clear(), this.onEnvironmentTextureChangedObservable.clear(), this.onMeshUnderPointerUpdatedObservable.clear(), this._isDisposed = !0
-      }
-      _disposeList(TT, oT) {
-        const IT = TT.slice(0);
-        oT = oT ?? (TT => TT.dispose());
-        for (const iT of IT) oT(iT);
-        TT.length = 0
-      }
-      get IIT() {
-        return this._isDisposed
-      }
-      clearCachedVertexData() {
-        for (let TT = 0; TT < this.meshes.length; TT++) {
-          const oT = this.meshes[TT].geometry;
-          oT && oT.clearCachedData()
-        }
-      }
-      cleanCachedTextureBuffer() {
-        for (const TT of this.textures) {
-          TT._buffer && (TT._buffer = null)
-        }
-      }
-      getWorldExtends(TT) {
-        const oT = new ST.m(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-          IT = new ST.m(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-        TT = TT || (() => !0);
-        const iT = this.meshes.filter(TT);
-        for (const zT of iT) {
-          if (zT.computeWorldMatrix(!0), !zT.pR || 0 === zT.pR.length || zT.infiniteDistance) continue;
-          const TT = zT.GJ(),
-            iT = TT.boundingBox.minimumWorld,
-            kT = TT.boundingBox.maximumWorld;
-          ST.m.CheckExtends(iT, oT, IT), ST.m.CheckExtends(kT, oT, IT)
-        }
-        return oT.x === Number.MAX_VALUE ? {
-          min: ST.m.Zero(),
-          max: ST.m.Zero()
-        } : {
-          min: oT,
-          max: IT
-        }
-      }
-      createPickingRay(TT, oT, IT, iT) {
-        throw (0, wT.k)("Ray")
-      }
-      createPickingRayToRef(TT, oT, IT, iT, zT) {
-        throw (0, wT.k)("Ray")
-      }
-      createPickingRayInCameraSpace(TT, oT, IT) {
-        throw (0, wT.k)("Ray")
-      }
-      createPickingRayInCameraSpaceToRef(TT, oT, IT, iT) {
-        throw (0, wT.k)("Ray")
-      }
-      PL(TT, oT, IT, iT, zT, kT) {
-        const WT = (0, wT.k)("Ray", !0);
-        return WT && II.d.Warn(WT), new xT.d
-      }
-      pickWithBoundingInfo(TT, oT, IT, iT, zT) {
-        const kT = (0, wT.k)("Ray", !0);
-        return kT && II.d.Warn(kT), new xT.d
-      }
-      pickWithRay(TT, oT, IT, iT) {
-        throw (0, wT.k)("Ray")
-      }
-      multiPick(TT, oT, IT, iT, zT) {
-        throw (0, wT.k)("Ray")
-      }
-      multiPickWithRay(TT, oT, IT) {
-        throw (0, wT.k)("Ray")
-      }
-      setPointerOverMesh(TT, oT, IT) {
-        this._inputManager.setPointerOverMesh(TT, oT, IT)
-      }
-      getPointerOverMesh() {
-        return this._inputManager.getPointerOverMesh()
-      }
-      _rebuildGeometries() {
-        for (const TT of this.geometries) TT._rebuild();
-        for (const TT of this.meshes) TT._rebuild();
-        this.postProcessManager && this.postProcessManager._rebuild();
-        for (const TT of this._components) TT.rebuild();
-        for (const TT of this.bR) TT.rebuild();
-        if (this.spriteManagers)
-          for (const TT of this.spriteManagers) TT.rebuild()
-      }
-      _rebuildTextures() {
-        for (const TT of this.textures) TT._rebuild(!0);
-        this.markAllMaterialsAsDirty(1)
-      }
-      _getByTags(TT, oT, IT) {
-        if (void 0 === oT) return TT;
-        const iT = [];
-        for (const zT in TT) {
-          const kT = TT[zT];
-          FT.c && FT.c.MatchesQuery(kT, oT) && (!IT || IT(kT)) && iT.push(kT)
-        }
-        return iT
-      }
-      getMeshesByTags(TT, oT) {
-        return this._getByTags(this.meshes, TT, oT)
-      }
-      getCamerasByTags(TT, oT) {
-        return this._getByTags(this.cameras, TT, oT)
-      }
-      getLightsByTags(TT, oT) {
-        return this._getByTags(this.lights, TT, oT)
-      }
-      getMaterialByTags(TT, oT) {
-        return this._getByTags(this.materials, TT, oT).concat(this._getByTags(this.multiMaterials, TT, oT))
-      }
-      getTransformNodesByTags(TT, oT) {
-        return this._getByTags(this.transformNodes, TT, oT)
-      }
-      setRenderingOrder(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this._renderingManager.setRenderingOrder(TT, oT, IT, iT)
-      }
-      setRenderingAutoClearDepthStencil(TT, oT) {
-        let IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-          iT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        this._renderingManager.setRenderingAutoClearDepthStencil(TT, oT, IT, iT)
-      }
-      getAutoClearDepthStencilSetup(TT) {
-        return this._renderingManager.getAutoClearDepthStencilSetup(TT)
-      }
-      _forceBlockMaterialDirtyMechanism(TT) {
-        this._blockMaterialDirtyMechanism = TT
-      }
-      get blockMaterialDirtyMechanism() {
-        return this._blockMaterialDirtyMechanism
-      }
-      set blockMaterialDirtyMechanism(TT) {
-        this._blockMaterialDirtyMechanism !== TT && (this._blockMaterialDirtyMechanism = TT, TT || this.markAllMaterialsAsDirty(127))
-      }
-      markAllMaterialsAsDirty(TT, oT) {
-        if (!this._blockMaterialDirtyMechanism)
-          for (const IT of this.materials) oT && !oT(IT) || IT.roT(TT)
-      }
-      _loadFile(TT, oT, IT, iT, zT, kT, WT) {
-        const XT = (0, yT.q)(TT, oT, IT, iT ? this.offlineProvider : void 0, zT, kT, WT);
-        return this._activeRequests.push(XT), XT.onCompleteObservable.add((TT => {
-          this._activeRequests.splice(this._activeRequests.indexOf(TT), 1)
-        })), XT
-      }
-      async _loadFileAsync(TT, oT, IT, iT, zT) {
-        return await new Promise(((kT, WT) => {
-          this._loadFile(TT, (TT => {
-            kT(TT)
-          }), oT, IT, iT, ((TT, oT) => {
-            WT(oT)
-          }), zT)
-        }))
-      }
-      async _loadDelayedFileAsync(TT, oT, IT) {
-        this._delayedFileRequests || (this._delayedFileRequests = new Map);
-        const iT = `${TT}|${oT?"binary":"string"}`;
-        let zT = this._delayedFileRequests.get(iT);
-        if (!zT) {
-          zT = oT ? this._loadFileAsync(TT, void 0, IT, !0) : this._loadFileAsync(TT, void 0, IT, !1);
-          const kT = zT;
-          (async () => {
-            try {
-              await kT
-            } catch {}
-            this._delayedFileRequests?.delete(iT)
-          })(), this._delayedFileRequests.set(iT, zT)
-        }
-        return await zT
-      }
-      _requestFile(TT, oT, IT, iT, zT, kT, WT) {
-        const XT = (0, yT.y)(TT, oT, IT, iT ? this.offlineProvider : void 0, zT, kT, WT);
-        return this._activeRequests.push(XT), XT.onCompleteObservable.add((TT => {
-          this._activeRequests.splice(this._activeRequests.indexOf(TT), 1)
-        })), XT
-      }
-      async _requestFileAsync(TT, oT, IT, iT, zT) {
-        return await new Promise(((kT, WT) => {
-          this._requestFile(TT, (TT => {
-            kT(TT)
-          }), oT, IT, iT, (TT => {
-            WT(TT)
-          }), zT)
-        }))
-      }
-      _readFile(TT, oT, IT, iT, zT) {
-        const kT = (0, yT.u)(TT, oT, IT, iT, zT);
-        return this._activeRequests.push(kT), kT.onCompleteObservable.add((TT => {
-          this._activeRequests.splice(this._activeRequests.indexOf(TT), 1)
-        })), kT
-      }
-      async _readFileAsync(TT, oT, IT) {
-        return await new Promise(((iT, zT) => {
-          this._readFile(TT, (TT => {
-            iT(TT)
-          }), oT, IT, (TT => {
-            zT(TT)
-          }))
-        }))
-      }
-      getPerfCollector() {
-        throw (0, wT.k)("performanceViewerSceneExtension")
-      }
-      setActiveCameraByID(TT) {
-        return this.setActiveCameraById(TT)
-      }
-      getMaterialByID(TT) {
-        return this.getMaterialById(TT)
-      }
-      getLastMaterialByID(TT) {
-        return this.getLastMaterialById(TT)
-      }
-      getTextureByUniqueID(TT) {
-        return this.getTextureByUniqueId(TT)
-      }
-      getCameraByID(TT) {
-        return this.getCameraById(TT)
-      }
-      getCameraByUniqueID(TT) {
-        return this.getCameraByUniqueId(TT)
-      }
-      getBoneByID(TT) {
-        return this.getBoneById(TT)
-      }
-      getLightByID(TT) {
-        return this.getLightById(TT)
-      }
-      getLightByUniqueID(TT) {
-        return this.getLightByUniqueId(TT)
-      }
-      getParticleSystemByID(TT) {
-        return this.getParticleSystemById(TT)
-      }
-      getGeometryByID(TT) {
-        return this.getGeometryById(TT)
-      }
-      getMeshByID(TT) {
-        return this.getMeshById(TT)
-      }
-      getMeshByUniqueID(TT) {
-        return this.getMeshByUniqueId(TT)
-      }
-      getLastMeshByID(TT) {
-        return this.getLastMeshById(TT)
-      }
-      getMeshesByID(TT) {
-        return this.getMeshesById(TT)
-      }
-      getTransformNodeByID(TT) {
-        return this.getTransformNodeById(TT)
-      }
-      getTransformNodeByUniqueID(TT) {
-        return this.getTransformNodeByUniqueId(TT)
-      }
-      getTransformNodesByID(TT) {
-        return this.getTransformNodesById(TT)
-      }
-      getNodeByID(TT) {
-        return this.getNodeById(TT)
-      }
-      getLastEntryByID(TT) {
-        return this.getLastEntryById(TT)
-      }
-      getLastSkeletonByID(TT) {
-        return this.getLastSkeletonById(TT)
-      }
-    }
-    XI.FOGMODE_NONE = 0, XI.FOGMODE_EXP = 1, XI.FOGMODE_EXP2 = 2, XI.FOGMODE_LINEAR = 3, XI.MinDeltaTime = 1, XI.MaxDeltaTime = 1e3, XI._OriginalDefaultMaterialFactory = XI.DefaultMaterialFactory;
-    let BI = !1;
-
-    function FI() {
-      BI || (BI = !0, (0, iI.h)("BABYLON.Scene", XI))
-    }(VT = XI.prototype).sortActiveAnimatables ?? (VT.sortActiveAnimatables = (0, wT.i)("Scene", "sortActiveAnimatables")), (To = XI.prototype).beginWeightedAnimation ?? (To.beginWeightedAnimation = (0, wT.i)("Scene", "beginWeightedAnimation")), (oo = XI.prototype).beginAnimation ?? (oo.beginAnimation = (0, wT.i)("Scene", "beginAnimation")), (Io = XI.prototype).beginHierarchyAnimation ?? (Io.beginHierarchyAnimation = (0, wT.i)("Scene", "beginHierarchyAnimation")), (io = XI.prototype).beginDirectAnimation ?? (io.beginDirectAnimation = (0, wT.i)("Scene", "beginDirectAnimation")), (zo = XI.prototype).beginDirectHierarchyAnimation ?? (zo.beginDirectHierarchyAnimation = (0, wT.i)("Scene", "beginDirectHierarchyAnimation")), (ko = XI.prototype).getAnimatableByTarget ?? (ko.getAnimatableByTarget = (0, wT.i)("Scene", "getAnimatableByTarget")), (Wo = XI.prototype).getAllAnimatablesByTarget ?? (Wo.getAllAnimatablesByTarget = (0, wT.i)("Scene", "getAllAnimatablesByTarget")), (Xo = XI.prototype).stopAllAnimations ?? (Xo.stopAllAnimations = (0, wT.i)("Scene", "stopAllAnimations")), (Bo = XI.prototype).getSoundByName ?? (Bo.getSoundByName = (0, wT.i)("Scene", "getSoundByName")), (Fo = XI.prototype).createOrUpdateSelectionOctree ?? (Fo.createOrUpdateSelectionOctree = (0, wT.i)("Scene", "createOrUpdateSelectionOctree")), (So = XI.prototype).createDefaultLight ?? (So.createDefaultLight = (0, wT.i)("Scene", "createDefaultLight")), (Do = XI.prototype).createDefaultCamera ?? (Do.createDefaultCamera = (0, wT.i)("Scene", "createDefaultCamera")), (Lo = XI.prototype).createDefaultCameraOrLight ?? (Lo.createDefaultCameraOrLight = (0, wT.i)("Scene", "createDefaultCameraOrLight")), (xo = XI.prototype).createDefaultSkybox ?? (xo.createDefaultSkybox = (0, wT.i)("Scene", "createDefaultSkybox")), (co = XI.prototype).createDefaultEnvironment ?? (co.createDefaultEnvironment = (0, wT.i)("Scene", "createDefaultEnvironment")), (Ko = XI.prototype).createDefaultVRExperience ?? (Ko.createDefaultVRExperience = (0, wT.i)("Scene", "createDefaultVRExperience")), (Mo = XI.prototype).createDefaultXRExperienceAsync ?? (Mo.createDefaultXRExperienceAsync = (0, wT.i)("Scene", "createDefaultXRExperienceAsync")), (ro = XI.prototype).getGlowLayerByName ?? (ro.getGlowLayerByName = (0, wT.i)("Scene", "getGlowLayerByName")), (Ao = XI.prototype).getHighlightLayerByName ?? (Ao.getHighlightLayerByName = (0, wT.i)("Scene", "getHighlightLayerByName")), (go = XI.prototype).getSelectionOutlineLayerByName ?? (go.getSelectionOutlineLayerByName = (0, wT.i)("Scene", "getSelectionOutlineLayerByName")), (ho = XI.prototype).removeLensFlareSystem ?? (ho.removeLensFlareSystem = (0, wT.i)("Scene", "removeLensFlareSystem")), (wo = XI.prototype).addLensFlareSystem ?? (wo.addLensFlareSystem = (0, wT.i)("Scene", "addLensFlareSystem")), (mo = XI.prototype).getLensFlareSystemByName ?? (mo.getLensFlareSystemByName = (0, wT.i)("Scene", "getLensFlareSystemByName")), (eo = XI.prototype).getLensFlareSystemByID ?? (eo.getLensFlareSystemByID = (0, wT.i)("Scene", "getLensFlareSystemByID")), (Ro = XI.prototype).getLensFlareSystemById ?? (Ro.getLensFlareSystemById = (0, wT.i)("Scene", "getLensFlareSystemById")), (uo = XI.prototype).getPhysicsEngine ?? (uo.getPhysicsEngine = (0, wT.i)("Scene", "getPhysicsEngine")), (vo = XI.prototype).enablePhysics ?? (vo.enablePhysics = (0, wT.i)("Scene", "enablePhysics")), (Eo = XI.prototype).disablePhysicsEngine ?? (Eo.disablePhysicsEngine = (0, wT.i)("Scene", "disablePhysicsEngine")), (fo = XI.prototype).isPhysicsEnabled ?? (fo.isPhysicsEnabled = (0, wT.i)("Scene", "isPhysicsEnabled")), (Co = XI.prototype).deleteCompoundImpostor ?? (Co.deleteCompoundImpostor = (0, wT.i)("Scene", "deleteCompoundImpostor")), (jo = XI.prototype).removeReflectionProbe ?? (jo.removeReflectionProbe = (0, wT.i)("Scene", "removeReflectionProbe")), (Jo = XI.prototype).addReflectionProbe ?? (Jo.addReflectionProbe = (0, wT.i)("Scene", "addReflectionProbe")), (Uo = XI.prototype).getBoundingBoxRenderer ?? (Uo.getBoundingBoxRenderer = (0, wT.i)("Scene", "getBoundingBoxRenderer")), (ao = XI.prototype).enableDepthRenderer ?? (ao.enableDepthRenderer = (0, wT.i)("Scene", "enableDepthRenderer")), (Yo = XI.prototype).disableDepthRenderer ?? (Yo.disableDepthRenderer = (0, wT.i)("Scene", "disableDepthRenderer")), (Qo = XI.prototype).enableFluidRenderer ?? (Qo.enableFluidRenderer = (0, wT.i)("Scene", "enableFluidRenderer")), (Oo = XI.prototype).disableFluidRenderer ?? (Oo.disableFluidRenderer = (0, wT.i)("Scene", "disableFluidRenderer")), (Ho = XI.prototype).enableGeometryBufferRenderer ?? (Ho.enableGeometryBufferRenderer = (0, wT.i)("Scene", "enableGeometryBufferRenderer")), (no = XI.prototype).disableGeometryBufferRenderer ?? (no.disableGeometryBufferRenderer = (0, wT.i)("Scene", "disableGeometryBufferRenderer")), (qo = XI.prototype).enableIblCdfGenerator ?? (qo.enableIblCdfGenerator = (0, wT.i)("Scene", "enableIblCdfGenerator")), (Zo = XI.prototype).disableIblCdfGenerator ?? (Zo.disableIblCdfGenerator = (0, wT.i)("Scene", "disableIblCdfGenerator")), (so = XI.prototype).getOutlineRenderer ?? (so.getOutlineRenderer = (0, wT.i)("Scene", "getOutlineRenderer")), (to = XI.prototype).enablePrePassRenderer ?? (to.enablePrePassRenderer = (0, wT.i)("Scene", "enablePrePassRenderer")), (Go = XI.prototype).disablePrePassRenderer ?? (Go.disablePrePassRenderer = (0, wT.i)("Scene", "disablePrePassRenderer")), (po = XI.prototype).enableSubSurfaceForPrePass ?? (po.enableSubSurfaceForPrePass = (0, wT.i)("Scene", "enableSubSurfaceForPrePass")), (bo = XI.prototype).disableSubSurfaceForPrePass ?? (bo.disableSubSurfaceForPrePass = (0, wT.i)("Scene", "disableSubSurfaceForPrePass")), (yo = XI.prototype).pickSprite ?? (yo.pickSprite = (0, wT.i)("Scene", "pickSprite")), (No = XI.prototype).pickSpriteWithRay ?? (No.pickSpriteWithRay = (0, wT.i)("Scene", "pickSpriteWithRay")), (Po = XI.prototype).multiPickSprite ?? (Po.multiPickSprite = (0, wT.i)("Scene", "multiPickSprite")), (Vo = XI.prototype).multiPickSpriteWithRay ?? (Vo.multiPickSpriteWithRay = (0, wT.i)("Scene", "multiPickSpriteWithRay")), (TI = XI.prototype).setPointerOverSprite ?? (TI.setPointerOverSprite = (0, wT.i)("Scene", "setPointerOverSprite")), (oI = XI.prototype).getPointerOverSprite ?? (oI.getPointerOverSprite = (0, wT.i)("Scene", "getPointerOverSprite")), Object.getOwnPropertyDescriptor(XI.prototype, "mainSoundTrack") || Object.defineProperty(XI.prototype, "mainSoundTrack", (0, wT.f)("Scene", "mainSoundTrack")), Object.getOwnPropertyDescriptor(XI.prototype, "soundTracks") || Object.defineProperty(XI.prototype, "soundTracks", (0, wT.f)("Scene", "soundTracks")), Object.getOwnPropertyDescriptor(XI.prototype, "audioEnabled") || Object.defineProperty(XI.prototype, "audioEnabled", (0, wT.f)("Scene", "audioEnabled")), Object.getOwnPropertyDescriptor(XI.prototype, "headphone") || Object.defineProperty(XI.prototype, "headphone", (0, wT.f)("Scene", "headphone")), Object.getOwnPropertyDescriptor(XI.prototype, "audioListenerPositionProvider") || Object.defineProperty(XI.prototype, "audioListenerPositionProvider", (0, wT.f)("Scene", "audioListenerPositionProvider")), Object.getOwnPropertyDescriptor(XI.prototype, "audioListenerRotationProvider") || Object.defineProperty(XI.prototype, "audioListenerRotationProvider", (0, wT.f)("Scene", "audioListenerRotationProvider")), Object.getOwnPropertyDescriptor(XI.prototype, "audioPositioningRefreshRate") || Object.defineProperty(XI.prototype, "audioPositioningRefreshRate", (0, wT.f)("Scene", "audioPositioningRefreshRate")), Object.getOwnPropertyDescriptor(XI.prototype, "selectionOctree") || Object.defineProperty(XI.prototype, "selectionOctree", (0, wT.f)("Scene", "selectionOctree")), Object.getOwnPropertyDescriptor(XI.prototype, "debugLayer") || Object.defineProperty(XI.prototype, "debugLayer", (0, wT.f)("Scene", "debugLayer")), Object.getOwnPropertyDescriptor(XI.prototype, "gamepadManager") || Object.defineProperty(XI.prototype, "gamepadManager", (0, wT.f)("Scene", "gamepadManager")), Object.getOwnPropertyDescriptor(XI.prototype, "simplificationQueue") || Object.defineProperty(XI.prototype, "simplificationQueue", (0, wT.f)("Scene", "simplificationQueue")), Object.getOwnPropertyDescriptor(XI.prototype, "onBeforePhysicsObservable") || Object.defineProperty(XI.prototype, "onBeforePhysicsObservable", (0, wT.f)("Scene", "onBeforePhysicsObservable")), Object.getOwnPropertyDescriptor(XI.prototype, "onAfterPhysicsObservable") || Object.defineProperty(XI.prototype, "onAfterPhysicsObservable", (0, wT.f)("Scene", "onAfterPhysicsObservable")), Object.getOwnPropertyDescriptor(XI.prototype, "reflectionProbes") || Object.defineProperty(XI.prototype, "reflectionProbes", (0, wT.f)("Scene", "reflectionProbes")), Object.getOwnPropertyDescriptor(XI.prototype, "forceShowBoundingBoxes") || Object.defineProperty(XI.prototype, "forceShowBoundingBoxes", (0, wT.f)("Scene", "forceShowBoundingBoxes")), Object.getOwnPropertyDescriptor(XI.prototype, "depthPeelingRenderer") || Object.defineProperty(XI.prototype, "depthPeelingRenderer", (0, wT.f)("Scene", "depthPeelingRenderer")), Object.getOwnPropertyDescriptor(XI.prototype, "useOrderIndependentTransparency") || Object.defineProperty(XI.prototype, "useOrderIndependentTransparency", (0, wT.f)("Scene", "useOrderIndependentTransparency")), Object.getOwnPropertyDescriptor(XI.prototype, "fluidRenderer") || Object.defineProperty(XI.prototype, "fluidRenderer", (0, wT.f)("Scene", "fluidRenderer")), Object.getOwnPropertyDescriptor(XI.prototype, "geometryBufferRenderer") || Object.defineProperty(XI.prototype, "geometryBufferRenderer", (0, wT.f)("Scene", "geometryBufferRenderer")), Object.getOwnPropertyDescriptor(XI.prototype, "iblCdfGenerator") || Object.defineProperty(XI.prototype, "iblCdfGenerator", (0, wT.f)("Scene", "iblCdfGenerator")), Object.getOwnPropertyDescriptor(XI.prototype, "prePassRenderer") || Object.defineProperty(XI.prototype, "prePassRenderer", (0, wT.f)("Scene", "prePassRenderer")), Object.getOwnPropertyDescriptor(XI.prototype, "subSurfaceConfiguration") || Object.defineProperty(XI.prototype, "subSurfaceConfiguration", (0, wT.f)("Scene", "subSurfaceConfiguration")), Object.getOwnPropertyDescriptor(XI.prototype, "spriteManagers") || Object.defineProperty(XI.prototype, "spriteManagers", (0, wT.f)("Scene", "spriteManagers")), Object.getOwnPropertyDescriptor(XI.prototype, "onBeforeSpritesRenderingObservable") || Object.defineProperty(XI.prototype, "onBeforeSpritesRenderingObservable", (0, wT.f)("Scene", "onBeforeSpritesRenderingObservable")), Object.getOwnPropertyDescriptor(XI.prototype, "onAfterSpritesRenderingObservable") || Object.defineProperty(XI.prototype, "onAfterSpritesRenderingObservable", (0, wT.f)("Scene", "onAfterSpritesRenderingObservable"))
-  },
-  38949: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => iT,
-      f: () => zT
-    });
-    class iT {}
-    iT.NAME_EFFECTLAYER = "EffectLayer", iT.NAME_LAYER = "Layer", iT.NAME_LENSFLARESYSTEM = "LensFlareSystem", iT.NAME_BOUNDINGBOXRENDERER = "BoundingBoxRenderer", iT.NAME_PARTICLESYSTEM = "ParticleSystem", iT.NAME_GAMEPAD = "Gamepad", iT.NAME_SIMPLIFICATIONQUEUE = "SimplificationQueue", iT.NAME_GEOMETRYBUFFERRENDERER = "GeometryBufferRenderer", iT.NAME_PREPASSRENDERER = "PrePassRenderer", iT.NAME_DEPTHRENDERER = "DepthRenderer", iT.NAME_DEPTHPEELINGRENDERER = "DepthPeelingRenderer", iT.NAME_POSTPROCESSRENDERPIPELINEMANAGER = "PostProcessRenderPipelineManager", iT.NAME_SPRITE = "Sprite", iT.NAME_SUBSURFACE = "SubSurface", iT.NAME_OUTLINERENDERER = "Outline", iT.NAME_PROCEDURALTEXTURE = "ProceduralTexture", iT.NAME_SHADOWGENERATOR = "ShadowGenerator", iT.NAME_OCTREE = "TiT", iT.NAME_PHYSICSENGINE = "PhysicsEngine", iT.NAME_AUDIO = "Audio", iT.NAME_FLUIDRENDERER = "FluidRenderer", iT.NAME_IBLCDFGENERATOR = "iblCDFGenerator", iT.NAME_CLUSTEREDLIGHTING = "ClusteredLighting", iT.STEP_ISREADYFORMESH_EFFECTLAYER = 0, iT.STEP_ISREADYFORMESH_DEPTHRENDERER = 1, iT.STEP_BEFOREEVALUATEACTIVEMESH_BOUNDINGBOXRENDERER = 0, iT.STEP_EVALUATESUBMESH_BOUNDINGBOXRENDERER = 0, iT.STEP_PREACTIVEMESH_BOUNDINGBOXRENDERER = 0, iT.STEP_CAMERADRAWRENDERTARGET_EFFECTLAYER = 1, iT.STEP_BEFORECAMERADRAW_PREPASS = 0, iT.STEP_BEFORECAMERADRAW_EFFECTLAYER = 1, iT.STEP_BEFORECAMERADRAW_LAYER = 2, iT.STEP_BEFORERENDERTARGETDRAW_PREPASS = 0, iT.STEP_BEFORERENDERTARGETDRAW_LAYER = 1, iT.STEP_BEFORERENDERINGMESH_PREPASS = 0, iT.STEP_BEFORERENDERINGMESH_OUTLINE = 1, iT.STEP_AFTERRENDERINGMESH_PREPASS = 0, iT.STEP_AFTERRENDERINGMESH_OUTLINE = 1, iT.STEP_AFTERRENDERINGGROUPDRAW_EFFECTLAYER_DRAW = 0, iT.STEP_AFTERRENDERINGGROUPDRAW_BOUNDINGBOXRENDERER = 1, iT.STEP_BEFORECAMERAUPDATE_SIMPLIFICATIONQUEUE = 0, iT.STEP_BEFORECLEAR_PROCEDURALTEXTURE = 0, iT.STEP_BEFORECLEAR_PREPASS = 1, iT.STEP_BEFORERENDERTARGETCLEAR_PREPASS = 0, iT.STEP_AFTERRENDERTARGETDRAW_PREPASS = 0, iT.STEP_AFTERRENDERTARGETDRAW_LAYER = 1, iT.STEP_AFTERCAMERADRAW_PREPASS = 0, iT.STEP_AFTERCAMERADRAW_EFFECTLAYER = 1, iT.STEP_AFTERCAMERADRAW_LENSFLARESYSTEM = 2, iT.STEP_AFTERCAMERADRAW_EFFECTLAYER_DRAW = 3, iT.STEP_AFTERCAMERADRAW_LAYER = 4, iT.STEP_AFTERCAMERADRAW_FLUIDRENDERER = 5, iT.STEP_AFTERCAMERAPOSTPROCESS_LAYER = 0, iT.STEP_AFTERRENDERTARGETPOSTPROCESS_LAYER = 0, iT.STEP_AFTERRENDER_AUDIO = 0, iT.STEP_GATHERRENDERTARGETS_DEPTHRENDERER = 0, iT.STEP_GATHERRENDERTARGETS_GEOMETRYBUFFERRENDERER = 1, iT.STEP_GATHERRENDERTARGETS_SHADOWGENERATOR = 2, iT.STEP_GATHERRENDERTARGETS_POSTPROCESSRENDERPIPELINEMANAGER = 3, iT.STEP_GATHERACTIVECAMERARENDERTARGETS_DEPTHRENDERER = 0, iT.STEP_GATHERACTIVECAMERARENDERTARGETS_FLUIDRENDERER = 1, iT.STEP_GATHERACTIVECAMERARENDERTARGETS_CLUSTEREDLIGHTING = 2, iT.STEP_POINTERMOVE_SPRITE = 0, iT.STEP_POINTERDOWN_SPRITE = 0, iT.STEP_POINTERUP_SPRITE = 0;
-    class zT extends Array {
-      constructor(TT) {
-        super(...TT)
-      }
-      static Create() {
-        return Object.create(zT.prototype)
-      }
-      registerStep(TT, oT, IT) {
-        let iT, zT = 0;
-        for (; zT < this.length; zT++) {
-          if (iT = this[zT].index, TT < iT) break
-        }
-        this.splice(zT, 0, {
-          index: TT,
-          component: oT,
-          action: IT.bind(oT)
-        })
-      }
-      clear() {
-        this.length = 0
-      }
-    }
-  },
-  38764: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => WT,
-      e: () => XT,
-      h: () => iT,
-      j: () => zT,
-      n: () => kT
-    });
-
-    function iT(TT, oT, IT, iT, zT, kT) {
-      function WT(TT) {
-        if (void 0 !== TT && "function" !== typeof TT) throw new TypeError("Function expected");
-        return TT
-      }
-      for (var XT, BT = iT.kind, FT = "getter" === BT ? "get" : "setter" === BT ? "set" : "value", ST = !oT && TT ? iT.static ? TT : TT.prototype : null, DT = oT || (ST ? Object.getOwnPropertyDescriptor(ST, iT.name) : {}), LT = !1, xT = IT.length - 1; xT >= 0; xT--) {
-        var cT = {};
-        for (var KT in iT) cT[KT] = "access" === KT ? {} : iT[KT];
-        for (var KT in iT.access) cT.access[KT] = iT.access[KT];
-        cT.addInitializer = function(TT) {
-          if (LT) throw new TypeError("Cannot add initializers after decoration has completed");
-          kT.push(WT(TT || null))
-        };
-        var MT = (0, IT[xT])("accessor" === BT ? {
-          get: DT.get,
-          set: DT.set
-        } : DT[FT], cT);
-        if ("accessor" === BT) {
-          if (void 0 === MT) continue;
-          if (null === MT || "object" !== typeof MT) throw new TypeError("Object expected");
-          (XT = WT(MT.get)) && (DT.get = XT), (XT = WT(MT.set)) && (DT.set = XT), (XT = WT(MT.init)) && zT.unshift(XT)
-        } else(XT = WT(MT)) && ("field" === BT ? zT.unshift(XT) : DT[FT] = XT)
-      }
-      ST && Object.defineProperty(ST, iT.name, DT), LT = !0
-    }
-
-    function zT(TT, oT, IT) {
-      for (var iT = arguments.length > 2, zT = 0; zT < oT.length; zT++) IT = iT ? oT[zT].call(TT, IT) : oT[zT].call(TT);
-      return iT ? IT : void 0
-    }
-
-    function kT(TT, oT, IT) {
-      return "symbol" === typeof oT && (oT = oT.description ? "[".concat(oT.description, "]") : ""), Object.defineProperty(TT, "name", {
-        configurable: !0,
-        value: IT ? "".concat(IT, " ", oT) : oT
+    function iz() {
+      nz || (nz = !0, Ez.b.prototype.getInputElement = function() {
+        return this._renderingCanvas
+      }, Ez.b.prototype.getRenderingCanvasClientRect = function() {
+        return this._renderingCanvas ? this._renderingCanvas.getBoundingClientRect() : null
+      }, Ez.b.prototype.getInputElementClientRect = function() {
+        return this._renderingCanvas ? this.getInputElement().getBoundingClientRect() : null
+      }, Ez.b.prototype.getAspectRatio = function(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const bz = zz.viewport;
+        return this.getRenderWidth(uz) * bz.width / (this.getRenderHeight(uz) * bz.height)
+      }, Ez.b.prototype.getScreenAspectRatio = function() {
+        return this.getRenderWidth(!0) / this.getRenderHeight(!0)
+      }, Ez.b.prototype._verifyPointerLock = function() {
+        this._onPointerLockChange?.()
       })
     }
-    Object.create;
-    Object.create;
+  },
+  39193: (zz, uz, bz) => {
+    var Ez = bz(39079),
+      nz = bz(39202);
+    let iz = !1;
+    iz || (iz = !0, (0, nz.z)(), Ez.b.prototype._loadFileAsync = async function(zz, uz, bz) {
+      return await new Promise(((Ez, nz) => {
+        this._loadFile(zz, (zz => {
+          Ez(zz)
+        }), void 0, uz, bz, ((zz, uz) => {
+          nz(uz)
+        }))
+      }))
+    })
+  },
+  39191: (zz, uz, bz) => {
+    (0, bz(39145).d)()
+  },
+  39145: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => iz
+    });
+    var Ez = bz(39079);
+    let nz = !1;
 
-    function WT(TT, oT, IT, iT) {
-      if ("a" === IT && !iT) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof oT ? TT !== oT || !iT : !oT.has(TT)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === IT ? iT : "a" === IT ? iT.call(TT) : iT ? iT.value : oT.get(TT)
+    function iz() {
+      nz || (nz = !0, Ez.b.prototype.getRenderPassNames = function() {
+        return this._renderPassNames
+      }, Ez.b.prototype.getCurrentRenderPassName = function() {
+        return this._renderPassNames[this.currentRenderPassId]
+      }, Ez.b.prototype.createRenderPassId = function(zz) {
+        const uz = ++Ez.b._RenderPassIdCounter;
+        return this._renderPassNames[uz] = zz ?? "NONAME", uz
+      }, Ez.b.prototype.releaseRenderPassId = function(zz) {
+        this._renderPassNames[zz] = void 0;
+        for (let uz = 0; uz < this.scenes.length; ++uz) {
+          const bz = this.scenes[uz];
+          for (let uz = 0; uz < bz.meshes.length; ++uz) {
+            const Ez = bz.meshes[uz];
+            if (Ez._releaseRenderPassId(zz), Ez.hN)
+              for (let uz = 0; uz < Ez.hN.length; ++uz) {
+                Ez.hN[uz]._removeDrawWrapper(zz)
+              }
+          }
+        }
+        this._onReleaseRenderPassObservable?.notifyObservers(zz)
+      })
+    }
+  },
+  39233: (zz, uz, bz) => {
+    var Ez = bz(39241),
+      nz = bz(39079);
+    let iz = !1;
+    iz || (iz = !0, nz.b.GetCompatibleTextureLoader = Ez.c)
+  },
+  39147: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => iz
+    });
+    var Ez = bz(39022);
+    let nz = !1;
+
+    function iz() {
+      nz || (nz = !0, Ez.ThinEngine.prototype.setAlphaMode = function(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (this._alphaMode[bz] === zz) {
+          if (!uz) {
+            const uz = 0 === zz;
+            this.depthCullingState.depthMask !== uz && (this.depthCullingState.depthMask = uz)
+          }
+          return
+        }
+        const Ez = 0 === zz;
+        this._alphaState.setAlphaBlend(!Ez, bz), this._alphaState.setAlphaMode(zz, bz), uz || (this.depthCullingState.depthMask = Ez), this._alphaMode[bz] = zz
+      })
+    }
+  },
+  39157: (zz, uz, bz) => {
+    var Ez = bz(39011),
+      nz = bz(38060),
+      iz = bz(39022),
+      lz = bz(39162),
+      Mz = bz(39128);
+    class tz extends lz.d {
+      setDepthStencilTexture(zz) {
+        let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (super.setDepthStencilTexture(zz, uz), !zz) return;
+        const bz = this._engine,
+          Ez = this._context,
+          nz = zz._hardwareTexture;
+        if (nz && zz._autoMSAAManagement && this._MSAAFramebuffer) {
+          const uz = bz._currentFramebuffer;
+          bz._bindUnboundFramebuffer(this._MSAAFramebuffer), Ez.framebufferRenderbuffer(Ez.FRAMEBUFFER, (0, Mz.d)(zz.format) ? Ez.DEPTH_STENCIL_ATTACHMENT : Ez.DEPTH_ATTACHMENT, Ez.RENDERBUFFER, nz.getMSAARenderBuffer()), bz._bindUnboundFramebuffer(uz)
+        }
+      }
+      constructor(zz, uz, bz, Ez, nz) {
+        super(zz, uz, bz, Ez), this._framebuffer = null, this._depthStencilBuffer = null, this._MSAAFramebuffer = null, this._colorTextureArray = null, this._depthStencilTextureArray = null, this._disposeOnlyFramebuffers = !1, this._currentLOD = 0, this._context = nz
+      }
+      _cloneRenderTargetWrapper() {
+        let zz;
+        return this._colorTextureArray && this._depthStencilTextureArray ? (zz = this._engine.createMultiviewRenderTargetTexture(this.width, this.height), zz.texture.isReady = !0) : zz = super._cloneRenderTargetWrapper(), zz
+      }
+      _swapRenderTargetWrapper(zz) {
+        super._swapRenderTargetWrapper(zz), zz._framebuffer = this._framebuffer, zz._depthStencilBuffer = this._depthStencilBuffer, zz._MSAAFramebuffer = this._MSAAFramebuffer, zz._colorTextureArray = this._colorTextureArray, zz._depthStencilTextureArray = this._depthStencilTextureArray, this._framebuffer = this._depthStencilBuffer = this._MSAAFramebuffer = this._colorTextureArray = this._depthStencilTextureArray = null
+      }
+      createDepthStencilTexture() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
+          iz = arguments.length > 5 ? arguments[5] : void 0;
+        if (this._depthStencilBuffer) {
+          const zz = this._engine,
+            uz = zz._currentFramebuffer,
+            bz = this._context;
+          zz._bindUnboundFramebuffer(this._framebuffer), bz.framebufferRenderbuffer(bz.FRAMEBUFFER, bz.DEPTH_STENCIL_ATTACHMENT, bz.RENDERBUFFER, null), bz.framebufferRenderbuffer(bz.FRAMEBUFFER, bz.DEPTH_ATTACHMENT, bz.RENDERBUFFER, null), bz.framebufferRenderbuffer(bz.FRAMEBUFFER, bz.STENCIL_ATTACHMENT, bz.RENDERBUFFER, null), zz._bindUnboundFramebuffer(uz), bz.deleteRenderbuffer(this._depthStencilBuffer), this._depthStencilBuffer = null
+        }
+        return super.createDepthStencilTexture(zz, uz, bz, Ez, nz, iz)
+      }
+      shareDepth(zz) {
+        super.shareDepth(zz);
+        const uz = this._context,
+          bz = this._depthStencilBuffer,
+          Ez = zz._MSAAFramebuffer || zz._framebuffer,
+          nz = this._engine;
+        zz._depthStencilBuffer && zz._depthStencilBuffer !== bz && uz.deleteRenderbuffer(zz._depthStencilBuffer), zz._depthStencilBuffer = bz;
+        const iz = zz._generateStencilBuffer ? uz.DEPTH_STENCIL_ATTACHMENT : uz.DEPTH_ATTACHMENT;
+        nz._bindUnboundFramebuffer(Ez), uz.framebufferRenderbuffer(uz.FRAMEBUFFER, iz, uz.RENDERBUFFER, bz), nz._bindUnboundFramebuffer(null)
+      }
+      _bindTextureRenderTarget(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          bz = arguments.length > 2 ? arguments[2] : void 0,
+          Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const nz = zz._hardwareTexture;
+        if (!nz) return;
+        const iz = this._framebuffer,
+          lz = this._engine,
+          Mz = lz._currentFramebuffer;
+        let tz;
+        if (lz._bindUnboundFramebuffer(iz), lz.PR > 1) {
+          const iz = this._context;
+          tz = iz["COLOR_ATTACHMENT" + uz], zz.is2DArray || zz.is3D ? (bz = bz ?? this.layerIndices?.[uz] ?? 0, iz.framebufferTextureLayer(iz.FRAMEBUFFER, tz, nz.underlyingResource, Ez, bz)) : zz.isCube ? (bz = bz ?? this.faceIndices?.[uz] ?? 0, iz.framebufferTexture2D(iz.FRAMEBUFFER, tz, iz.TEXTURE_CUBE_MAP_POSITIVE_X + bz, nz.underlyingResource, Ez)) : iz.framebufferTexture2D(iz.FRAMEBUFFER, tz, iz.TEXTURE_2D, nz.underlyingResource, Ez)
+        } else {
+          const zz = this._context;
+          tz = zz["COLOR_ATTACHMENT" + uz + "_WEBGL"];
+          const iz = void 0 !== bz ? zz.TEXTURE_CUBE_MAP_POSITIVE_X + bz : zz.TEXTURE_2D;
+          zz.framebufferTexture2D(zz.FRAMEBUFFER, tz, iz, nz.underlyingResource, Ez)
+        }
+        if (zz._autoMSAAManagement && this._MSAAFramebuffer) {
+          const zz = this._context;
+          lz._bindUnboundFramebuffer(this._MSAAFramebuffer), zz.framebufferRenderbuffer(zz.FRAMEBUFFER, tz, zz.RENDERBUFFER, nz.getMSAARenderBuffer())
+        }
+        lz._bindUnboundFramebuffer(Mz)
+      }
+      setTexture(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          bz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        super.setTexture(zz, uz, bz), this._bindTextureRenderTarget(zz, uz)
+      }
+      setLayerAndFaceIndices(zz, uz) {
+        if (super.setLayerAndFaceIndices(zz, uz), !this.textures || !this.layerIndices || !this.faceIndices) return;
+        const bz = this._attachments?.length ?? this.textures.length;
+        for (let Ez = 0; Ez < bz; Ez++) {
+          const zz = this.textures[Ez];
+          zz && (zz.is2DArray || zz.is3D ? this._bindTextureRenderTarget(zz, Ez, this.layerIndices[Ez]) : zz.isCube ? this._bindTextureRenderTarget(zz, Ez, this.faceIndices[Ez]) : this._bindTextureRenderTarget(zz, Ez))
+        }
+      }
+      setLayerAndFaceIndex() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          uz = arguments.length > 1 ? arguments[1] : void 0,
+          bz = arguments.length > 2 ? arguments[2] : void 0;
+        if (super.setLayerAndFaceIndex(zz, uz, bz), !this.textures || !this.layerIndices || !this.faceIndices) return;
+        const Ez = this.textures[zz];
+        Ez.is2DArray || Ez.is3D ? this._bindTextureRenderTarget(this.textures[zz], zz, this.layerIndices[zz]) : Ez.isCube && this._bindTextureRenderTarget(this.textures[zz], zz, this.faceIndices[zz])
+      }
+      resolveMSAATextures() {
+        const zz = this._engine,
+          uz = zz._currentFramebuffer;
+        zz._bindUnboundFramebuffer(this._MSAAFramebuffer), super.resolveMSAATextures(), zz._bindUnboundFramebuffer(uz)
+      }
+      dispose() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._disposeOnlyFramebuffers;
+        const uz = this._context;
+        zz || (this._colorTextureArray && (this._context.deleteTexture(this._colorTextureArray), this._colorTextureArray = null), this._depthStencilTextureArray && (this._context.deleteTexture(this._depthStencilTextureArray), this._depthStencilTextureArray = null)), this._framebuffer && (uz.deleteFramebuffer(this._framebuffer), this._framebuffer = null), this._depthStencilBuffer && (uz.deleteRenderbuffer(this._depthStencilBuffer), this._depthStencilBuffer = null), this._MSAAFramebuffer && (uz.deleteFramebuffer(this._MSAAFramebuffer), this._MSAAFramebuffer = null), super.dispose(zz)
+      }
+    }
+    let Hz = !1;
+    Hz || (Hz = !0, iz.ThinEngine.prototype._createHardwareRenderTargetWrapper = function(zz, uz, bz) {
+      const Ez = new tz(zz, uz, bz, this, this._gl);
+      return this._renderTargetWrapperCache.push(Ez), Ez
+    }, iz.ThinEngine.prototype.createRenderTargetTexture = function(zz, uz) {
+      const bz = this._createHardwareRenderTargetWrapper(!1, !1, zz);
+      let Ez, nz, iz = !0,
+        lz = !1,
+        Mz = !1,
+        tz = 1;
+      void 0 !== uz && "object" === typeof uz && (iz = uz.generateDepthBuffer ?? !0, lz = !!uz.generateStencilBuffer, Mz = !!uz.noColorAttachment, Ez = uz.colorAttachment, tz = uz.samples ?? 1, nz = uz.label);
+      const Hz = Ez || (Mz ? null : this._createInternalTexture(zz, uz, !0, 5)),
+        Oz = zz.width || zz,
+        pz = zz.height || zz,
+        dz = this._currentFramebuffer,
+        Fz = this._gl,
+        Zz = Fz.createFramebuffer();
+      if (this._bindUnboundFramebuffer(Zz), bz._depthStencilBuffer = this._setupFramebufferDepthAttachments(lz, iz, Oz, pz), !Hz || Hz.is2DArray || Hz.is3D || Fz.framebufferTexture2D(Fz.FRAMEBUFFER, Fz.COLOR_ATTACHMENT0, Fz.TEXTURE_2D, Hz._hardwareTexture.underlyingResource, 0), this._bindUnboundFramebuffer(dz), bz.label = nz ?? "RenderTargetWrapper", bz._framebuffer = Zz, bz._generateDepthBuffer = iz, bz._generateStencilBuffer = lz, bz.setTextures(Hz), Ez) {
+        if (bz._samples = Ez.samples, Ez.samples > 1) {
+          const zz = Ez._hardwareTexture.getMSAARenderBuffer(0);
+          bz._MSAAFramebuffer = Fz.createFramebuffer(), this._bindUnboundFramebuffer(bz._MSAAFramebuffer), Fz.framebufferRenderbuffer(Fz.FRAMEBUFFER, Fz.COLOR_ATTACHMENT0, Fz.RENDERBUFFER, zz), this._bindUnboundFramebuffer(null)
+        }
+      } else this.updateRenderTargetTextureSampleCount(bz, tz);
+      return bz
+    }, iz.ThinEngine.prototype._createDepthStencilTexture = function(zz, uz, bz) {
+      const iz = this._gl,
+        lz = zz.layers || 0,
+        tz = zz.depth || 0;
+      let Hz = iz.TEXTURE_2D;
+      0 !== lz ? Hz = iz.TEXTURE_2D_ARRAY : 0 !== tz && (Hz = iz.TEXTURE_3D);
+      const Oz = new Ez.c(this, 12);
+      if (Oz.label = uz.label, !this._caps.depthTextureExtension) return nz.e.Error("Depth texture is not supported by your browser or hardware."), Oz;
+      const pz = {
+        bilinearFiltering: !1,
+        comparisonFunction: 0,
+        generateStencil: !1,
+        ...uz
+      };
+      if (this._bindTextureDirectly(Hz, Oz, !0), this._setupDepthStencilTexture(Oz, zz, 0 !== pz.comparisonFunction && pz.bilinearFiltering, pz.comparisonFunction, pz.samples), void 0 !== pz.depthTextureFormat) {
+        if (15 !== pz.depthTextureFormat && 16 !== pz.depthTextureFormat && 17 !== pz.depthTextureFormat && 13 !== pz.depthTextureFormat && 14 !== pz.depthTextureFormat && 18 !== pz.depthTextureFormat) return nz.e.Error(`Depth texture ${pz.depthTextureFormat} format is not supported.`), Oz;
+        Oz.format = pz.depthTextureFormat
+      } else Oz.format = pz.generateStencil ? 13 : 16;
+      const dz = (0, Mz.d)(Oz.format),
+        Fz = this._getWebGLTextureTypeFromDepthTextureFormat(Oz.format),
+        Zz = dz ? iz.DEPTH_STENCIL : iz.DEPTH_COMPONENT,
+        Rz = this._getInternalFormatFromDepthTextureFormat(Oz.format, !0, dz);
+      return Oz.is2DArray ? iz.texImage3D(Hz, 0, Rz, Oz.width, Oz.height, lz, 0, Zz, Fz, null) : Oz.is3D ? iz.texImage3D(Hz, 0, Rz, Oz.width, Oz.height, tz, 0, Zz, Fz, null) : iz.texImage2D(Hz, 0, Rz, Oz.width, Oz.height, 0, Zz, Fz, null), this._bindTextureDirectly(Hz, null), this._internalTexturesCache.push(Oz), bz._depthStencilBuffer && (iz.deleteRenderbuffer(bz._depthStencilBuffer), bz._depthStencilBuffer = null), this._bindUnboundFramebuffer(bz._MSAAFramebuffer ?? bz._framebuffer), bz._generateStencilBuffer = dz, bz._depthStencilTextureWithStencil = dz, bz._depthStencilBuffer = this._setupFramebufferDepthAttachments(bz._generateStencilBuffer, bz._generateDepthBuffer, bz.width, bz.height, bz.samples, Oz.format), this._bindUnboundFramebuffer(null), Oz
+    }, iz.ThinEngine.prototype.updateRenderTargetTextureSampleCount = function(zz, uz) {
+      if (this.PR < 2 || !zz) return 1;
+      if (zz.samples === uz) return uz;
+      const bz = this._gl;
+      uz = Math.min(uz, this.getCaps().maxMSAASamples), zz._depthStencilBuffer && (bz.deleteRenderbuffer(zz._depthStencilBuffer), zz._depthStencilBuffer = null), zz._MSAAFramebuffer && (bz.deleteFramebuffer(zz._MSAAFramebuffer), zz._MSAAFramebuffer = null);
+      const Ez = zz.texture?._hardwareTexture;
+      if (Ez?.releaseMSAARenderBuffers(), zz.texture && uz > 1 && "function" === typeof bz.renderbufferStorageMultisample) {
+        const nz = bz.createFramebuffer();
+        if (!nz) throw new Error("Unable to create multi sampled framebuffer");
+        zz._MSAAFramebuffer = nz, this._bindUnboundFramebuffer(zz._MSAAFramebuffer);
+        const iz = this._createRenderBuffer(zz.texture.width, zz.texture.height, uz, -1, this._getRGBABufferInternalSizedFormat(zz.texture.type, zz.texture.format, zz.texture._useSRGBBuffer), bz.COLOR_ATTACHMENT0, !1);
+        if (!iz) throw new Error("Unable to create multi sampled framebuffer");
+        Ez?.addMSAARenderBuffer(iz)
+      }
+      this._bindUnboundFramebuffer(zz._MSAAFramebuffer ?? zz._framebuffer), zz.texture && (zz.texture.samples = uz), zz._samples = uz;
+      const nz = zz._depthStencilTexture ? zz._depthStencilTexture.format : void 0;
+      return zz._depthStencilBuffer = this._setupFramebufferDepthAttachments(zz._generateStencilBuffer, zz._generateDepthBuffer, zz.width, zz.height, uz, nz), this._bindUnboundFramebuffer(null), uz
+    }, iz.ThinEngine.prototype._setupDepthStencilTexture = function(zz, uz, bz, Ez) {
+      let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
+      const iz = uz.width ?? uz,
+        lz = uz.height ?? uz,
+        Mz = uz.layers || 0,
+        tz = uz.depth || 0;
+      zz.baseWidth = iz, zz.baseHeight = lz, zz.width = iz, zz.height = lz, zz.is2DArray = Mz > 0, zz.depth = Mz || tz, zz.isReady = !0, zz.samples = nz, zz.generateMipMaps = !1, zz.samplingMode = bz ? 2 : 1, zz.type = 0, zz._comparisonFunction = Ez;
+      const Hz = this._gl,
+        Oz = this._getTextureTarget(zz),
+        pz = this._getSamplingParameters(zz.samplingMode, !1);
+      Hz.texParameteri(Oz, Hz.TEXTURE_MAG_FILTER, pz.mag), Hz.texParameteri(Oz, Hz.TEXTURE_MIN_FILTER, pz.min), Hz.texParameteri(Oz, Hz.TEXTURE_WRAP_S, Hz.CLAMP_TO_EDGE), Hz.texParameteri(Oz, Hz.TEXTURE_WRAP_T, Hz.CLAMP_TO_EDGE), this.PR > 1 && (0 === Ez ? (Hz.texParameteri(Oz, Hz.TEXTURE_COMPARE_FUNC, 515), Hz.texParameteri(Oz, Hz.TEXTURE_COMPARE_MODE, Hz.NONE)) : (Hz.texParameteri(Oz, Hz.TEXTURE_COMPARE_FUNC, Ez), Hz.texParameteri(Oz, Hz.TEXTURE_COMPARE_MODE, Hz.COMPARE_REF_TO_TEXTURE)))
+    })
+  },
+  38998: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Ez.b
+    });
+    var Ez = bz(39002);
+    (0, bz(39147).e)();
+    var nz = bz(39022);
+    let iz = !1;
+    ! function() {
+      if (iz) return;
+      iz = !0;
+      const zz = new WeakMap,
+        uz = new WeakMap,
+        bz = new WeakMap,
+        Ez = new WeakMap;
+      nz.ThinEngine.prototype.getAlphaToCoverage = function() {
+        return zz.get(this) ?? !1
+      }, nz.ThinEngine.prototype.setAlphaToCoverage = function(bz) {
+        (zz.get(this) !== bz || this._gl && uz.get(this) !== this._gl) && (zz.set(this, bz), this._gl && (bz ? this._gl.enable(this._gl.SAMPLE_ALPHA_TO_COVERAGE) : this._gl.disable(this._gl.SAMPLE_ALPHA_TO_COVERAGE), uz.set(this, this._gl)))
+      }, Object.defineProperty(nz.ThinEngine.prototype, "currentSampleCount", {
+        get: function() {
+          return this._currentRenderTarget ? this._currentRenderTarget.samples : this._gl ? (Ez.get(this) !== this._gl && (bz.set(this, this._gl.getContextAttributes()?.antialias ? Math.max(1, this._gl.getParameter(this._gl.SAMPLES)) : 1), Ez.set(this, this._gl)), bz.get(this)) : 1
+        },
+        enumerable: !1,
+        configurable: !0
+      })
+    }();
+    var lz = bz(39011),
+      Mz = bz(38060),
+      tz = bz(39118);
+    let Hz = !1;
+    ! function() {
+      function zz(zz, uz, bz, Ez) {
+        let nz, iz = 1;
+        1 === Ez ? nz = new Float32Array(uz * bz * 4) : 2 === Ez ? (nz = new Uint16Array(uz * bz * 4), iz = 15360) : nz = 7 === Ez ? new Uint32Array(uz * bz * 4) : new Uint8Array(uz * bz * 4);
+        for (let lz = 0; lz < uz; lz++)
+          for (let Ez = 0; Ez < bz; Ez++) {
+            const bz = 3 * (Ez * uz + lz),
+              Mz = 4 * (Ez * uz + lz);
+            nz[Mz + 0] = zz[bz + 0], nz[Mz + 1] = zz[bz + 1], nz[Mz + 2] = zz[bz + 2], nz[Mz + 3] = iz
+          }
+        return nz
+      }
+
+      function uz(zz) {
+        return function(uz, bz, Ez, nz, iz, Mz, tz, Hz) {
+          let Oz = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+            pz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
+          const dz = zz ? this._gl.TEXTURE_3D : this._gl.TEXTURE_2D_ARRAY,
+            Fz = zz ? 10 : 11,
+            Zz = new lz.c(this, Fz);
+          Zz.baseWidth = bz, Zz.baseHeight = Ez, Zz.baseDepth = nz, Zz.width = bz, Zz.height = Ez, Zz.depth = nz, Zz.format = iz, Zz.type = pz, Zz.generateMipMaps = Mz, Zz.samplingMode = Hz, zz ? Zz.is3D = !0 : Zz.is2DArray = !0, this._doNotHandleContextLost || (Zz._bufferView = uz), zz ? this.updateRawTexture3D(Zz, uz, iz, tz, Oz, pz) : this.updateRawTexture2DArray(Zz, uz, iz, tz, Oz, pz), this._bindTextureDirectly(dz, Zz, !0);
+          const Rz = this._getSamplingParameters(Hz, Mz);
+          return this._gl.texParameteri(dz, this._gl.TEXTURE_MAG_FILTER, Rz.mag), this._gl.texParameteri(dz, this._gl.TEXTURE_MIN_FILTER, Rz.min), Mz && this._gl.generateMipmap(dz), this._bindTextureDirectly(dz, null), this._internalTexturesCache.push(Zz), Zz
+        }
+      }
+
+      function bz(zz) {
+        return function(uz, bz, Ez, nz) {
+          let iz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+            lz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+          const Mz = zz ? this._gl.TEXTURE_3D : this._gl.TEXTURE_2D_ARRAY,
+            tz = this._getWebGLTextureType(lz),
+            Hz = this._getInternalFormat(Ez),
+            Oz = this._getRGBABufferInternalSizedFormat(lz, Ez);
+          this._bindTextureDirectly(Mz, uz, !0), this._unpackFlipY(void 0 === nz || !!nz), this._doNotHandleContextLost || (uz._bufferView = bz, uz.format = Ez, uz.invertY = nz, uz._compression = iz), uz.width % 4 !== 0 && this._gl.pixelStorei(this._gl.UNPACK_ALIGNMENT, 1), iz && bz ? this._gl.compressedTexImage3D(Mz, 0, this.getCaps().s3tc[iz], uz.width, uz.height, uz.depth, 0, bz) : this._gl.texImage3D(Mz, 0, Oz, uz.width, uz.height, uz.depth, 0, Hz, tz, bz), uz.generateMipMaps && this._gl.generateMipmap(Mz), this._bindTextureDirectly(Mz, null), uz.isReady = !0
+        }
+      }
+      Hz || (Hz = !0, nz.ThinEngine.prototype.updateRawTexture = function(zz, uz, bz, Ez) {
+        let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+          iz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          lz = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        if (!zz) return;
+        const Mz = this._getRGBABufferInternalSizedFormat(iz, bz, lz),
+          tz = this._getInternalFormat(bz),
+          Hz = this._getWebGLTextureType(iz);
+        this._bindTextureDirectly(this._gl.TEXTURE_2D, zz, !0), this._unpackFlipY(void 0 === Ez || !!Ez), this._doNotHandleContextLost || (zz._bufferView = uz, zz.format = bz, zz.type = iz, zz.invertY = Ez, zz._compression = nz), zz.width % 4 !== 0 && this._gl.pixelStorei(this._gl.UNPACK_ALIGNMENT, 1), nz && uz ? this._gl.compressedTexImage2D(this._gl.TEXTURE_2D, 0, this.getCaps().s3tc[nz], zz.width, zz.height, 0, uz) : this._gl.texImage2D(this._gl.TEXTURE_2D, 0, Mz, zz.width, zz.height, 0, tz, Hz, uz), zz.generateMipMaps && this._gl.generateMipmap(this._gl.TEXTURE_2D), this._bindTextureDirectly(this._gl.TEXTURE_2D, null), zz.isReady = !0
+      }, nz.ThinEngine.prototype.createRawTexture = function(zz, uz, bz, Ez, nz, iz, Mz) {
+        let tz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+          Hz = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+          Oz = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
+        const pz = new lz.c(this, 3);
+        pz.baseWidth = uz, pz.baseHeight = bz, pz.width = uz, pz.height = bz, pz.format = Ez, pz.generateMipMaps = nz, pz.samplingMode = Mz, pz.invertY = iz, pz._compression = tz, pz.type = Hz, pz._useSRGBBuffer = this._getUseSRGBBuffer(Oz, !nz), this._doNotHandleContextLost || (pz._bufferView = zz), this.updateRawTexture(pz, zz, Ez, iz, tz, Hz, pz._useSRGBBuffer), this._bindTextureDirectly(this._gl.TEXTURE_2D, pz, !0);
+        const dz = this._getSamplingParameters(Mz, nz);
+        return this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MAG_FILTER, dz.mag), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MIN_FILTER, dz.min), nz && this._gl.generateMipmap(this._gl.TEXTURE_2D), this._bindTextureDirectly(this._gl.TEXTURE_2D, null), this._internalTexturesCache.push(pz), pz
+      }, nz.ThinEngine.prototype.createRawCubeTexture = function(zz, uz, bz, Ez, nz, iz, Hz) {
+        let Oz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null;
+        const pz = this._gl,
+          dz = new lz.c(this, 8);
+        dz.isCube = !0, dz.format = bz, dz.type = Ez, this._doNotHandleContextLost || (dz._bufferViewArray = zz);
+        const Fz = this._getWebGLTextureType(Ez);
+        let Zz = this._getInternalFormat(bz);
+        Zz === pz.RGB && (Zz = pz.RGBA), Fz !== pz.FLOAT || this._caps.textureFloatLinearFiltering ? Fz !== this._gl.HALF_FLOAT_OES || this._caps.textureHalfFloatLinearFiltering ? Fz !== pz.FLOAT || this._caps.textureFloatRender ? Fz !== pz.HALF_FLOAT || this._caps.colorBufferFloat || (nz = !1, Mz.e.Warn("Render to half float textures is not supported. Mipmap generation forced to false.")) : (nz = !1, Mz.e.Warn("Render to float textures is not supported. Mipmap generation forced to false.")) : (nz = !1, Hz = 1, Mz.e.Warn("Half float texture filtering is not supported. Mipmap generation and sampling mode are forced to false and TEXTURE_NEAREST_SAMPLINGMODE, respectively.")) : (nz = !1, Hz = 1, Mz.e.Warn("Float texture filtering is not supported. Mipmap generation and sampling mode are forced to false and TEXTURE_NEAREST_SAMPLINGMODE, respectively."));
+        const Rz = uz,
+          Kz = Rz;
+        dz.width = Rz, dz.height = Kz, dz.invertY = iz, dz._compression = Oz;
+        if (!this.needPOTTextures || (0, tz.i)(dz.width) && (0, tz.i)(dz.height) || (nz = !1), zz) this.updateRawCubeTexture(dz, zz, bz, Ez, iz, Oz);
+        else {
+          const zz = this._getRGBABufferInternalSizedFormat(Ez),
+            uz = 0;
+          this._bindTextureDirectly(pz.TEXTURE_CUBE_MAP, dz, !0);
+          for (let bz = 0; bz < 6; bz++) Oz ? pz.compressedTexImage2D(pz.TEXTURE_CUBE_MAP_POSITIVE_X + bz, uz, this.getCaps().s3tc[Oz], dz.width, dz.height, 0, void 0) : pz.texImage2D(pz.TEXTURE_CUBE_MAP_POSITIVE_X + bz, uz, zz, dz.width, dz.height, 0, Zz, Fz, null);
+          this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null)
+        }
+        this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, dz, !0), zz && nz && this._gl.generateMipmap(this._gl.TEXTURE_CUBE_MAP);
+        const wz = this._getSamplingParameters(Hz, nz);
+        return pz.texParameteri(pz.TEXTURE_CUBE_MAP, pz.TEXTURE_MAG_FILTER, wz.mag), pz.texParameteri(pz.TEXTURE_CUBE_MAP, pz.TEXTURE_MIN_FILTER, wz.min), pz.texParameteri(pz.TEXTURE_CUBE_MAP, pz.TEXTURE_WRAP_S, pz.CLAMP_TO_EDGE), pz.texParameteri(pz.TEXTURE_CUBE_MAP, pz.TEXTURE_WRAP_T, pz.CLAMP_TO_EDGE), this._bindTextureDirectly(pz.TEXTURE_CUBE_MAP, null), dz.generateMipMaps = nz, dz.samplingMode = Hz, dz.isReady = !0, dz
+      }, nz.ThinEngine.prototype.updateRawCubeTexture = function(uz, bz, Ez, nz, iz) {
+        let lz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+          Mz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+        uz._bufferViewArray = bz, uz.format = Ez, uz.type = nz, uz.invertY = iz, uz._compression = lz;
+        const Hz = this._gl,
+          Oz = this._getWebGLTextureType(nz);
+        let pz = this._getInternalFormat(Ez);
+        const dz = this._getRGBABufferInternalSizedFormat(nz);
+        let Fz = !1;
+        pz === Hz.RGB && (pz = Hz.RGBA, Fz = !0), this._bindTextureDirectly(Hz.TEXTURE_CUBE_MAP, uz, !0), this._unpackFlipY(void 0 === iz || !!iz), uz.width % 4 !== 0 && Hz.pixelStorei(Hz.UNPACK_ALIGNMENT, 1);
+        for (let tz = 0; tz < 6; tz++) {
+          let Ez = bz[tz];
+          lz ? Hz.compressedTexImage2D(Hz.TEXTURE_CUBE_MAP_POSITIVE_X + tz, Mz, this.getCaps().s3tc[lz], uz.width, uz.height, 0, Ez) : (Fz && (Ez = zz(Ez, uz.width, uz.height, nz)), Hz.texImage2D(Hz.TEXTURE_CUBE_MAP_POSITIVE_X + tz, Mz, dz, uz.width, uz.height, 0, pz, Oz, Ez))
+        }(!this.needPOTTextures || (0, tz.i)(uz.width) && (0, tz.i)(uz.height)) && uz.generateMipMaps && 0 === Mz && this._gl.generateMipmap(this._gl.TEXTURE_CUBE_MAP), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null), uz.isReady = !0
+      }, nz.ThinEngine.prototype.createRawCubeTextureFromUrl = function(uz, bz, Ez, nz, iz, lz, Mz, tz) {
+        let Hz = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+          Oz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+          pz = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 3,
+          dz = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
+        const Fz = this._gl,
+          Zz = this.createRawCubeTexture(null, Ez, nz, iz, !lz, dz, pz, null);
+        bz?.addPendingData(Zz), Zz.url = uz, Zz.isReady = !1, this._internalTexturesCache.push(Zz);
+        const Rz = (zz, uz) => {
+            bz?.removePendingData(Zz), Oz && Oz(zz ? zz.status + " " + zz.statusText : "Failed to parse texture data", uz)
+          },
+          Kz = async uz => {
+            if (!Zz._hardwareTexture) return;
+            const Ez = Mz(uz);
+            if (!Ez) return;
+            const lz = Ez instanceof Promise ? await Ez : Ez,
+              Oz = Zz.width;
+            if (tz) {
+              const uz = this._getWebGLTextureType(iz);
+              let bz = this._getInternalFormat(nz);
+              const Ez = this._getRGBABufferInternalSizedFormat(iz);
+              let Mz = !1;
+              bz === Fz.RGB && (bz = Fz.RGBA, Mz = !0), this._bindTextureDirectly(Fz.TEXTURE_CUBE_MAP, Zz, !0), this._unpackFlipY(!1);
+              const Hz = tz(lz);
+              for (let nz = 0; nz < Hz.length; nz++) {
+                const lz = Oz >> nz;
+                for (let tz = 0; tz < 6; tz++) {
+                  let Oz = Hz[nz][tz];
+                  Mz && (Oz = zz(Oz, lz, lz, iz)), Fz.texImage2D(tz, nz, Ez, lz, lz, 0, bz, uz, Oz)
+                }
+              }
+              this._bindTextureDirectly(Fz.TEXTURE_CUBE_MAP, null)
+            } else this.updateRawCubeTexture(Zz, lz, nz, iz, dz);
+            Zz.isReady = !0, bz?.removePendingData(Zz), Zz.onLoadedObservable.notifyObservers(Zz), Zz.onLoadedObservable.clear(), Hz && Hz()
+          };
+        return this._loadFile(uz, (zz => {
+          Kz(zz).catch((zz => {
+            Rz(void 0, zz)
+          }))
+        }), void 0, bz?.offlineProvider, !0, Rz), Zz
+      }, nz.ThinEngine.prototype.createRawTexture2DArray = uz(!1), nz.ThinEngine.prototype.createRawTexture3D = uz(!0), nz.ThinEngine.prototype.updateRawTexture2DArray = bz(!1), nz.ThinEngine.prototype.updateRawTexture3D = bz(!0))
+    }();
+    var Oz = bz(39057);
+    let pz = !1;
+    pz || (pz = !0, nz.ThinEngine.prototype._readTexturePixelsSync = function(zz, uz, bz) {
+      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1,
+        nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+        iz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        lz = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+        Mz = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        tz = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+        Hz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
+      const pz = this._gl;
+      if (!pz) throw new Error("Engine does not have gl rendering context.");
+      if (!this._dummyFramebuffer) {
+        const zz = pz.createFramebuffer();
+        if (!zz) throw new Error("Unable to create dummy framebuffer");
+        this._dummyFramebuffer = zz
+      }
+      pz.bindFramebuffer(pz.FRAMEBUFFER, this._dummyFramebuffer), Ez > -1 && (zz.is2DArray || zz.is3D) ? pz.framebufferTextureLayer(pz.FRAMEBUFFER, pz.COLOR_ATTACHMENT0, zz._hardwareTexture?.underlyingResource, nz, Ez) : Ez > -1 ? pz.framebufferTexture2D(pz.FRAMEBUFFER, pz.COLOR_ATTACHMENT0, pz.TEXTURE_CUBE_MAP_POSITIVE_X + Ez, zz._hardwareTexture?.underlyingResource, nz) : pz.framebufferTexture2D(pz.FRAMEBUFFER, pz.COLOR_ATTACHMENT0, pz.TEXTURE_2D, zz._hardwareTexture?.underlyingResource, nz);
+      let dz = void 0 !== zz.type ? this._getWebGLTextureType(zz.type) : pz.UNSIGNED_BYTE;
+      return Mz ? iz || (iz = (0, Oz.s)(zz.type, 4 * uz * bz)) : dz === pz.UNSIGNED_BYTE ? (iz || (iz = new Uint8Array(4 * uz * bz)), dz = pz.UNSIGNED_BYTE) : (iz || (iz = new Float32Array(4 * uz * bz)), dz = pz.FLOAT), lz && this.flushFramebuffer(), pz.readPixels(tz, Hz, uz, bz, pz.RGBA, dz, iz), pz.bindFramebuffer(pz.FRAMEBUFFER, this._currentFramebuffer), iz
+    }, nz.ThinEngine.prototype._readTexturePixels = function(zz, uz, bz) {
+      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1,
+        nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+        iz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        lz = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+        Mz = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        tz = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+        Hz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
+      return Promise.resolve(this._readTexturePixelsSync(zz, uz, bz, Ez, nz, iz, lz, Mz, tz, Hz))
+    }), (0, bz(39155).b)();
+    let dz = !1;
+    dz || (dz = !0, nz.ThinEngine.prototype._createDepthStencilCubeTexture = function(zz, uz) {
+      const bz = new lz.c(this, 12);
+      if (bz.isCube = !0, 1 === this.PR) return Mz.e.Error("Depth cube texture is not supported by WebGL 1."), bz;
+      const Ez = {
+          bilinearFiltering: !1,
+          comparisonFunction: 0,
+          generateStencil: !1,
+          ...uz
+        },
+        nz = this._gl;
+      this._bindTextureDirectly(nz.TEXTURE_CUBE_MAP, bz, !0), this._setupDepthStencilTexture(bz, zz, Ez.bilinearFiltering, Ez.comparisonFunction);
+      for (let iz = 0; iz < 6; iz++) Ez.generateStencil ? nz.texImage2D(nz.TEXTURE_CUBE_MAP_POSITIVE_X + iz, 0, nz.DEPTH24_STENCIL8, zz, zz, 0, nz.DEPTH_STENCIL, nz.UNSIGNED_INT_24_8, null) : nz.texImage2D(nz.TEXTURE_CUBE_MAP_POSITIVE_X + iz, 0, nz.DEPTH_COMPONENT24, zz, zz, 0, nz.DEPTH_COMPONENT, nz.UNSIGNED_INT, null);
+      return this._bindTextureDirectly(nz.TEXTURE_CUBE_MAP, null), this._internalTexturesCache.push(bz), bz
+    }, nz.ThinEngine.prototype._setCubeMapTextureParams = function(zz, uz, bz) {
+      const Ez = this._gl;
+      Ez.texParameteri(Ez.TEXTURE_CUBE_MAP, Ez.TEXTURE_MAG_FILTER, Ez.LINEAR), Ez.texParameteri(Ez.TEXTURE_CUBE_MAP, Ez.TEXTURE_MIN_FILTER, uz ? Ez.LINEAR_MIPMAP_LINEAR : Ez.LINEAR), Ez.texParameteri(Ez.TEXTURE_CUBE_MAP, Ez.TEXTURE_WRAP_S, Ez.CLAMP_TO_EDGE), Ez.texParameteri(Ez.TEXTURE_CUBE_MAP, Ez.TEXTURE_WRAP_T, Ez.CLAMP_TO_EDGE), zz.samplingMode = uz ? 3 : 2, uz && this.getCaps().textureMaxLevel && void 0 !== bz && bz > 0 && (Ez.texParameteri(Ez.TEXTURE_CUBE_MAP, Ez.TEXTURE_MAX_LEVEL, bz), zz._maxLodLevel = bz), this._bindTextureDirectly(Ez.TEXTURE_CUBE_MAP, null)
+    }, nz.ThinEngine.prototype.createCubeTexture = function(zz, uz, bz, Ez) {
+      let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+        iz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        lz = arguments.length > 6 ? arguments[6] : void 0,
+        Hz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        Oz = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        pz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+        dz = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
+        Fz = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
+        Zz = arguments.length > 13 && void 0 !== arguments[13] && arguments[13],
+        Rz = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : null;
+      const Kz = this._gl;
+      return this.createCubeTextureBase(zz, uz, bz, !!Ez, nz, iz, lz, Hz, Oz, pz, dz, Fz, (zz => this._bindTextureDirectly(Kz.TEXTURE_CUBE_MAP, zz, !0)), ((zz, uz) => {
+        const bz = this.needPOTTextures ? (0, tz.e)(uz[0].width, this._caps.maxCubemapTextureSize) : uz[0].width,
+          iz = bz,
+          Hz = [Kz.TEXTURE_CUBE_MAP_POSITIVE_X, Kz.TEXTURE_CUBE_MAP_POSITIVE_Y, Kz.TEXTURE_CUBE_MAP_POSITIVE_Z, Kz.TEXTURE_CUBE_MAP_NEGATIVE_X, Kz.TEXTURE_CUBE_MAP_NEGATIVE_Y, Kz.TEXTURE_CUBE_MAP_NEGATIVE_Z];
+        this._bindTextureDirectly(Kz.TEXTURE_CUBE_MAP, zz, !0), this._unpackFlipY(!1);
+        const Oz = lz ? this._getInternalFormat(lz, zz._useSRGBBuffer) : zz._useSRGBBuffer ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : Kz.RGBA;
+        let pz = lz ? this._getInternalFormat(lz) : Kz.RGBA;
+        zz._useSRGBBuffer && 1 === this.PR && (pz = Oz);
+        for (let Ez = 0; Ez < Hz.length; Ez++)
+          if (uz[Ez].width !== bz || uz[Ez].height !== iz) {
+            if (this._prepareWorkingCanvas(), !this._workingCanvas || !this._workingContext) return void Mz.e.Warn("Cannot create canvas to resize texture.");
+            this._workingCanvas.width = bz, this._workingCanvas.height = iz, this._workingContext.drawImage(uz[Ez], 0, 0, uz[Ez].width, uz[Ez].height, 0, 0, bz, iz), Kz.texImage2D(Hz[Ez], 0, Oz, pz, Kz.UNSIGNED_BYTE, this._workingCanvas)
+          } else Kz.texImage2D(Hz[Ez], 0, Oz, pz, Kz.UNSIGNED_BYTE, uz[Ez]);
+        Ez || Kz.generateMipmap(Kz.TEXTURE_CUBE_MAP), this._setCubeMapTextureParams(zz, !Ez), zz.width = bz, zz.height = iz, zz.isReady = !0, lz && (zz.format = lz), zz.onLoadedObservable.notifyObservers(zz), zz.onLoadedObservable.clear(), nz && nz()
+      }), !!Zz, Rz)
+    }, nz.ThinEngine.prototype.generateMipMapsForCubemap = function(zz) {
+      let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (zz.generateMipMaps) {
+        const bz = this._gl;
+        this._bindTextureDirectly(bz.TEXTURE_CUBE_MAP, zz, !0), bz.generateMipmap(bz.TEXTURE_CUBE_MAP), uz && this._bindTextureDirectly(bz.TEXTURE_CUBE_MAP, null)
+      }
+    });
+    bz(39157);
+    let Fz = !1;
+    Fz || (Fz = !0, nz.ThinEngine.prototype.setDepthStencilTexture = function(zz, uz, bz, Ez) {
+      void 0 !== zz && (uz && (this._boundUniforms[zz] = uz), bz && bz.depthStencilTexture ? this._setTexture(zz, bz, !1, !0, Ez) : this._setTexture(zz, null, void 0, void 0, Ez))
+    });
+    let Zz = !1;
+    Zz || (Zz = !0, nz.ThinEngine.prototype.createRenderTargetCubeTexture = function(zz, uz) {
+      const bz = this._createHardwareRenderTargetWrapper(!1, !0, zz),
+        Ez = {
+          generateMipMaps: !0,
+          generateDepthBuffer: !0,
+          generateStencilBuffer: !1,
+          type: 0,
+          samplingMode: 3,
+          format: 5,
+          ...uz
+        };
+      Ez.generateStencilBuffer = Ez.generateDepthBuffer && Ez.generateStencilBuffer, (1 !== Ez.type || this._caps.textureFloatLinearFiltering) && (2 !== Ez.type || this._caps.textureHalfFloatLinearFiltering) || (Ez.samplingMode = 1);
+      const nz = this._gl,
+        iz = new lz.c(this, 5);
+      this._bindTextureDirectly(nz.TEXTURE_CUBE_MAP, iz, !0);
+      const tz = this._getSamplingParameters(Ez.samplingMode, Ez.generateMipMaps);
+      1 !== Ez.type || this._caps.textureFloat || (Ez.type = 0, Mz.e.Warn("Float textures are not supported. Cube render target forced to TEXTURETYPE_UNESIGNED_BYTE type")), nz.texParameteri(nz.TEXTURE_CUBE_MAP, nz.TEXTURE_MAG_FILTER, tz.mag), nz.texParameteri(nz.TEXTURE_CUBE_MAP, nz.TEXTURE_MIN_FILTER, tz.min), nz.texParameteri(nz.TEXTURE_CUBE_MAP, nz.TEXTURE_WRAP_S, nz.CLAMP_TO_EDGE), nz.texParameteri(nz.TEXTURE_CUBE_MAP, nz.TEXTURE_WRAP_T, nz.CLAMP_TO_EDGE);
+      for (let lz = 0; lz < 6; lz++) nz.texImage2D(nz.TEXTURE_CUBE_MAP_POSITIVE_X + lz, 0, this._getRGBABufferInternalSizedFormat(Ez.type, Ez.format), zz, zz, 0, this._getInternalFormat(Ez.format), this._getWebGLTextureType(Ez.type), null);
+      const Hz = nz.createFramebuffer();
+      return this._bindUnboundFramebuffer(Hz), bz._depthStencilBuffer = this._setupFramebufferDepthAttachments(Ez.generateStencilBuffer, Ez.generateDepthBuffer, zz, zz), Ez.generateMipMaps && nz.generateMipmap(nz.TEXTURE_CUBE_MAP), this._bindTextureDirectly(nz.TEXTURE_CUBE_MAP, null), this._bindUnboundFramebuffer(null), bz._framebuffer = Hz, bz._generateDepthBuffer = Ez.generateDepthBuffer, bz._generateStencilBuffer = Ez.generateStencilBuffer, iz.width = zz, iz.height = zz, iz.isReady = !0, iz.isCube = !0, iz.samples = 1, iz.generateMipMaps = Ez.generateMipMaps, iz.samplingMode = Ez.samplingMode, iz.type = Ez.type, iz.format = Ez.format, this._internalTexturesCache.push(iz), bz.setTextures(iz), bz
+    });
+    var Rz = bz(39164),
+      Kz = bz(39167);
+    let wz = !1;
+    wz || (wz = !0, nz.ThinEngine.prototype.createPrefilteredCubeTexture = function(zz, uz, Ez, nz) {
+      let iz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+        tz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        Hz = arguments.length > 6 ? arguments[6] : void 0,
+        Oz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        pz = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+        dz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null;
+      return this.createCubeTexture(zz, uz, null, !1, (async zz => {
+        if (!zz) return void(iz && iz(null));
+        const tz = zz.texture;
+        if (pz ? zz.info.sphericalPolynomial && (tz._sphericalPolynomial = zz.info.sphericalPolynomial) : tz._sphericalPolynomial = tz._sphericalPolynomial ?? new Rz.g, tz._source = 9, this.getCaps().textureLOD) return void(iz && iz(tz));
+        const Hz = this._gl,
+          Oz = zz.width;
+        if (!Oz) return;
+        const {
+          DDSTools: dz
+        } = await bz.e(296).then((() => bz(40967))), Fz = [];
+        for (let bz = 0; bz < 3; bz++) {
+          const iz = 1 - bz / 2,
+            pz = nz,
+            Zz = Math.log2(Oz) * Ez + nz,
+            Rz = pz + (Zz - pz) * iz,
+            wz = Math.round(Math.min(Math.max(Rz, 0), Zz)),
+            Xz = new lz.c(this, 2);
+          if (Xz.type = tz.type, Xz.format = tz.format, Xz.width = Math.pow(2, Math.max(Math.log2(Oz) - wz, 0)), Xz.height = Xz.width, Xz.isCube = !0, Xz._cachedWrapU = 0, Xz._cachedWrapV = 0, this._bindTextureDirectly(Hz.TEXTURE_CUBE_MAP, Xz, !0), Xz.samplingMode = 2, Hz.texParameteri(Hz.TEXTURE_CUBE_MAP, Hz.TEXTURE_MAG_FILTER, Hz.LINEAR), Hz.texParameteri(Hz.TEXTURE_CUBE_MAP, Hz.TEXTURE_MIN_FILTER, Hz.LINEAR), Hz.texParameteri(Hz.TEXTURE_CUBE_MAP, Hz.TEXTURE_WRAP_S, Hz.CLAMP_TO_EDGE), Hz.texParameteri(Hz.TEXTURE_CUBE_MAP, Hz.TEXTURE_WRAP_T, Hz.CLAMP_TO_EDGE), zz.isDDS) {
+            const uz = zz.info,
+              bz = zz.data;
+            this._unpackFlipY(uz.isCompressed), dz.UploadDDSLevels(this, Xz, bz, uz, !0, 6, wz)
+          } else Mz.e.Warn("DDS is the only prefiltered cube map supported so far.");
+          this._bindTextureDirectly(Hz.TEXTURE_CUBE_MAP, null);
+          const fz = new Kz.b(uz);
+          fz._isCube = !0, fz._texture = Xz, Xz.isReady = !0, Fz.push(fz)
+        }
+        tz._lodTextureHigh = Fz[2], tz._lodTextureMid = Fz[1], tz._lodTextureLow = Fz[0], iz && iz(tz)
+      }), tz, Hz, Oz, pz, Ez, nz, null, void 0, !1, dz)
+    });
+    var Xz = bz(39107);
+    let fz = !1;
+    fz || (fz = !0, nz.ThinEngine.prototype.createUniformBuffer = function(zz, uz) {
+      const bz = this._gl.createBuffer();
+      if (!bz) throw new Error("Unable to create uniform buffer");
+      const Ez = new Xz.e(bz);
+      return this.bindUniformBuffer(Ez), zz instanceof Float32Array ? this._gl.bufferData(this._gl.UNIFORM_BUFFER, zz, this._gl.STATIC_DRAW) : this._gl.bufferData(this._gl.UNIFORM_BUFFER, new Float32Array(zz), this._gl.STATIC_DRAW), this.bindUniformBuffer(null), Ez.references = 1, Ez
+    }, nz.ThinEngine.prototype.createDynamicUniformBuffer = function(zz, uz) {
+      const bz = this._gl.createBuffer();
+      if (!bz) throw new Error("Unable to create dynamic uniform buffer");
+      const Ez = new Xz.e(bz);
+      return this.bindUniformBuffer(Ez), zz instanceof Float32Array ? this._gl.bufferData(this._gl.UNIFORM_BUFFER, zz, this._gl.DYNAMIC_DRAW) : this._gl.bufferData(this._gl.UNIFORM_BUFFER, new Float32Array(zz), this._gl.DYNAMIC_DRAW), this.bindUniformBuffer(null), Ez.references = 1, Ez
+    }, nz.ThinEngine.prototype.updateUniformBuffer = function(zz, uz, bz, Ez) {
+      this.bindUniformBuffer(zz), void 0 === bz && (bz = 0), void 0 === Ez ? uz instanceof Float32Array ? this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, bz, uz) : this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, bz, new Float32Array(uz)) : uz instanceof Float32Array ? this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, 0, uz.subarray(bz, bz + Ez)) : this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, 0, new Float32Array(uz).subarray(bz, bz + Ez)), this.bindUniformBuffer(null)
+    }, nz.ThinEngine.prototype.bindUniformBuffer = function(zz) {
+      this._gl.bindBuffer(this._gl.UNIFORM_BUFFER, zz ? zz.underlyingResource : null)
+    }, nz.ThinEngine.prototype.bindUniformBufferBase = function(zz, uz, bz) {
+      this._gl.bindBufferBase(this._gl.UNIFORM_BUFFER, uz, zz ? zz.underlyingResource : null)
+    }, nz.ThinEngine.prototype.bindUniformBlock = function(zz, uz, bz) {
+      const Ez = zz.program,
+        nz = this._gl.getUniformBlockIndex(Ez, uz);
+      4294967295 !== nz && this._gl.uniformBlockBinding(Ez, nz, bz)
+    });
+    var sz = bz(39043),
+      rz = bz(39079);
+    let oz = !1;
+    oz || (oz = !0, rz.b.prototype.displayLoadingUI = function() {
+      if (!(0, sz.i)()) return;
+      const zz = this.loadingScreen;
+      zz && zz.displayLoadingUI()
+    }, rz.b.prototype.hideLoadingUI = function() {
+      if (!(0, sz.i)()) return;
+      const zz = this._loadingScreen;
+      zz && zz.hideLoadingUI()
+    }, Object.defineProperty(rz.b.prototype, "loadingScreen", {
+      get: function() {
+        return !this._loadingScreen && this._renderingCanvas && (this._loadingScreen = rz.b.DefaultLoadingScreenFactory(this._renderingCanvas)), this._loadingScreen
+      },
+      set: function(zz) {
+        this._loadingScreen = zz
+      },
+      enumerable: !0,
+      configurable: !0
+    }), Object.defineProperty(rz.b.prototype, "loadingUIText", {
+      set: function(zz) {
+        this.loadingScreen.loadingUIText = zz
+      },
+      enumerable: !0,
+      configurable: !0
+    }), Object.defineProperty(rz.b.prototype, "loadingUIBackgroundColor", {
+      set: function(zz) {
+        this.loadingScreen.loadingUIBackgroundColor = zz
+      },
+      enumerable: !0,
+      configurable: !0
+    })), (0, bz(39140).c)();
+    let Nz = !1;
+    Nz || (Nz = !0, rz.b.prototype.getInputElement = function() {
+      return this._renderingCanvas
+    }, rz.b.prototype.getDepthFunction = function() {
+      return this._depthCullingState.depthFunc
+    }, rz.b.prototype.setDepthFunction = function(zz) {
+      this._depthCullingState.depthFunc = zz
+    }, rz.b.prototype.setDepthFunctionToGreater = function() {
+      this.setDepthFunction(516)
+    }, rz.b.prototype.setDepthFunctionToGreaterOrEqual = function() {
+      this.setDepthFunction(518)
+    }, rz.b.prototype.setDepthFunctionToLess = function() {
+      this.setDepthFunction(513)
+    }, rz.b.prototype.setDepthFunctionToLessOrEqual = function() {
+      this.setDepthFunction(515)
+    }, rz.b.prototype.getDepthWrite = function() {
+      return this._depthCullingState.depthMask
+    }, rz.b.prototype.setDepthWrite = function(zz) {
+      this._depthCullingState.depthMask = zz
+    }, rz.b.prototype.setAlphaConstants = function(zz, uz, bz, Ez) {
+      this._alphaState.setAlphaBlendConstants(zz, uz, bz, Ez)
+    }, rz.b.prototype.getAlphaMode = function() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+      return this._alphaMode[zz]
+    }, rz.b.prototype.getAlphaEquation = function() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+      return this._alphaEquation[zz]
+    });
+    let vz = !1;
+    vz || (vz = !0, rz.b.prototype.getStencilBuffer = function() {
+      return this._stencilState.stencilTest
+    }, rz.b.prototype.setStencilBuffer = function(zz) {
+      this._stencilState.stencilTest = zz
+    }, rz.b.prototype.getStencilMask = function() {
+      return this._stencilState.stencilMask
+    }, rz.b.prototype.setStencilMask = function(zz) {
+      this._stencilState.stencilMask = zz
+    }, rz.b.prototype.getStencilFunction = function() {
+      return this._stencilState.stencilFunc
+    }, rz.b.prototype.getStencilBackFunction = function() {
+      return this._stencilState.stencilBackFunc
+    }, rz.b.prototype.getStencilFunctionReference = function() {
+      return this._stencilState.stencilFuncRef
+    }, rz.b.prototype.getStencilFunctionMask = function() {
+      return this._stencilState.stencilFuncMask
+    }, rz.b.prototype.setStencilFunction = function(zz) {
+      this._stencilState.stencilFunc = zz
+    }, rz.b.prototype.setStencilBackFunction = function(zz) {
+      this._stencilState.stencilBackFunc = zz
+    }, rz.b.prototype.setStencilFunctionReference = function(zz) {
+      this._stencilState.stencilFuncRef = zz
+    }, rz.b.prototype.setStencilFunctionMask = function(zz) {
+      this._stencilState.stencilFuncMask = zz
+    }, rz.b.prototype.getStencilOperationFail = function() {
+      return this._stencilState.stencilOpStencilFail
+    }, rz.b.prototype.getStencilBackOperationFail = function() {
+      return this._stencilState.stencilBackOpStencilFail
+    }, rz.b.prototype.getStencilOperationDepthFail = function() {
+      return this._stencilState.stencilOpDepthFail
+    }, rz.b.prototype.getStencilBackOperationDepthFail = function() {
+      return this._stencilState.stencilBackOpDepthFail
+    }, rz.b.prototype.getStencilOperationPass = function() {
+      return this._stencilState.stencilOpStencilDepthPass
+    }, rz.b.prototype.getStencilBackOperationPass = function() {
+      return this._stencilState.stencilBackOpStencilDepthPass
+    }, rz.b.prototype.setStencilOperationFail = function(zz) {
+      this._stencilState.stencilOpStencilFail = zz
+    }, rz.b.prototype.setStencilBackOperationFail = function(zz) {
+      this._stencilState.stencilBackOpStencilFail = zz
+    }, rz.b.prototype.setStencilOperationDepthFail = function(zz) {
+      this._stencilState.stencilOpDepthFail = zz
+    }, rz.b.prototype.setStencilBackOperationDepthFail = function(zz) {
+      this._stencilState.stencilBackOpDepthFail = zz
+    }, rz.b.prototype.setStencilOperationPass = function(zz) {
+      this._stencilState.stencilOpStencilDepthPass = zz
+    }, rz.b.prototype.setStencilBackOperationPass = function(zz) {
+      this._stencilState.stencilBackOpStencilDepthPass = zz
+    }, rz.b.prototype.cacheStencilState = function() {
+      this._cachedStencilBuffer = this.getStencilBuffer(), this._cachedStencilFunction = this.getStencilFunction(), this._cachedStencilMask = this.getStencilMask(), this._cachedStencilOperationPass = this.getStencilOperationPass(), this._cachedStencilOperationFail = this.getStencilOperationFail(), this._cachedStencilOperationDepthFail = this.getStencilOperationDepthFail(), this._cachedStencilReference = this.getStencilFunctionReference()
+    }, rz.b.prototype.restoreStencilState = function() {
+      this.setStencilFunction(this._cachedStencilFunction), this.setStencilMask(this._cachedStencilMask), this.setStencilBuffer(this._cachedStencilBuffer), this.setStencilOperationPass(this._cachedStencilOperationPass), this.setStencilOperationFail(this._cachedStencilOperationFail), this.setStencilOperationDepthFail(this._cachedStencilOperationDepthFail), this.setStencilFunctionReference(this._cachedStencilReference)
+    });
+    bz(39191);
+    let xz = !1;
+    xz || (xz = !0, rz.b.prototype.createDepthStencilTexture = function(zz, uz, bz) {
+      if (uz.isCube) {
+        const bz = zz.width || zz;
+        return this._createDepthStencilCubeTexture(bz, uz)
+      }
+      return this._createDepthStencilTexture(zz, uz, bz)
+    });
+    bz(39193), bz(39233);
+    let Jz = !1;
+    Jz || (Jz = !0, nz.ThinEngine.prototype.enableScissor = function(zz, uz, bz, Ez) {
+      const nz = this._gl;
+      nz.enable(nz.SCISSOR_TEST), nz.scissor(zz, uz, bz, Ez)
+    }, nz.ThinEngine.prototype.disableScissor = function() {
+      const zz = this._gl;
+      zz.disable(zz.SCISSOR_TEST)
+    })
+  },
+  39002: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => rz
+    });
+    var Ez = bz(39011),
+      nz = bz(36543),
+      iz = bz(39022),
+      lz = bz(39085);
+    class Mz {
+      constructor() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
+        this._enabled = !0, this._rollingFrameTime = new tz(zz)
+      }
+      sampleFrame() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lz.b.Now;
+        if (this._enabled) {
+          if (null != this._lastFrameTimeMs) {
+            const uz = zz - this._lastFrameTimeMs;
+            this._rollingFrameTime.add(uz)
+          }
+          this._lastFrameTimeMs = zz
+        }
+      }
+      get averageFrameTime() {
+        return this._rollingFrameTime.average
+      }
+      get averageFrameTimeVariance() {
+        return this._rollingFrameTime.variance
+      }
+      get instantaneousFrameTime() {
+        return this._rollingFrameTime.history(0)
+      }
+      get averageFPS() {
+        return 1e3 / this._rollingFrameTime.average
+      }
+      get instantaneousFPS() {
+        const zz = this._rollingFrameTime.history(0);
+        return 0 === zz ? 0 : 1e3 / zz
+      }
+      get isSaturated() {
+        return this._rollingFrameTime.isSaturated()
+      }
+      enable() {
+        this._enabled = !0
+      }
+      disable() {
+        this._enabled = !1, this._lastFrameTimeMs = null
+      }
+      get isEnabled() {
+        return this._enabled
+      }
+      reset() {
+        this._lastFrameTimeMs = null, this._rollingFrameTime.reset()
+      }
+    }
+    class tz {
+      constructor(zz) {
+        this._samples = new Array(zz), this.reset()
+      }
+      add(zz) {
+        let uz;
+        if (this.isSaturated()) {
+          const zz = this._samples[this._pos];
+          uz = zz - this.average, this.average -= uz / (this._sampleCount - 1), this._m2 -= uz * (zz - this.average)
+        } else this._sampleCount++;
+        uz = zz - this.average, this.average += uz / this._sampleCount, this._m2 += uz * (zz - this.average), this.variance = this._m2 / (this._sampleCount - 1), this._samples[this._pos] = zz, this._pos++, this._pos %= this._samples.length
+      }
+      history(zz) {
+        if (zz >= this._sampleCount || zz >= this._samples.length) return 0;
+        const uz = this._wrapPosition(this._pos - 1);
+        return this._samples[this._wrapPosition(uz - zz)]
+      }
+      isSaturated() {
+        return this._sampleCount >= this._samples.length
+      }
+      reset() {
+        this.average = 0, this.variance = 0, this._sampleCount = 0, this._pos = 0, this._m2 = 0
+      }
+      _wrapPosition(zz) {
+        const uz = this._samples.length;
+        return (zz % uz + uz) % uz
+      }
+    }
+    var Hz = bz(39107),
+      Oz = bz(38060),
+      pz = bz(39125),
+      dz = bz(39079),
+      Fz = bz(39043);
+
+    function Zz(zz) {
+      const uz = function(zz) {
+        if (!(0, Fz.e)() || !document.body) return null;
+        const uz = document.createElement("span");
+        uz.textContent = "Hg", uz.style.font = zz;
+        const bz = document.createElement("div");
+        bz.style.display = "inline-block", bz.style.width = "1px", bz.style.height = "0px", bz.style.verticalAlign = "bottom";
+        const Ez = document.createElement("div");
+        let nz, iz;
+        Ez.style.whiteSpace = "nowrap", Ez.appendChild(uz), Ez.appendChild(bz), document.body.appendChild(Ez);
+        try {
+          iz = bz.getBoundingClientRect().top - uz.getBoundingClientRect().top, bz.style.verticalAlign = "baseline", nz = bz.getBoundingClientRect().top - uz.getBoundingClientRect().top
+        } finally {
+          document.body.removeChild(Ez)
+        }
+        const lz = {
+          ascent: nz,
+          height: iz,
+          descent: iz - nz
+        };
+        return Rz(lz) ? lz : null
+      }(zz);
+      if (uz) return uz;
+      const bz = function(zz) {
+        let uz = null;
+        try {
+          "undefined" !== typeof OffscreenCanvas ? uz = new OffscreenCanvas(64, 64) : (0, Fz.e)() && "function" === typeof document.createElement && (uz = document.createElement("canvas"), uz.width = 64, uz.height = 64);
+          const bz = uz?.getContext("2d");
+          if (!bz) return null;
+          bz.font = zz;
+          const Ez = bz.measureText("Hg"),
+            nz = Number(Ez.actualBoundingBoxAscent ?? Ez.fontBoundingBoxAscent),
+            iz = Number(Ez.actualBoundingBoxDescent ?? Ez.fontBoundingBoxDescent),
+            lz = {
+              ascent: nz,
+              height: nz + iz,
+              descent: iz
+            };
+          return Rz(lz) ? lz : null
+        } catch {
+          return null
+        } finally {
+          const zz = uz;
+          "function" === typeof zz?.dispose && zz.dispose()
+        }
+      }(zz);
+      return bz || function(zz) {
+        const uz = Math.max(1, function(zz) {
+            const uz = /(?:^|\s)([0-9]+(?:\.[0-9]+)?)px(?:\/|\s|$)/.exec(String(zz || ""));
+            return uz ? Number(uz[1]) : 16
+          }(zz)),
+          bz = .8 * uz,
+          Ez = .2 * uz;
+        return {
+          ascent: bz,
+          height: bz + Ez,
+          descent: Ez
+        }
+      }(zz)
     }
 
-    function XT(TT, oT, IT, iT, zT) {
-      if ("m" === iT) throw new TypeError("Private method is not writable");
-      if ("a" === iT && !zT) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof oT ? TT !== oT || !zT : !oT.has(TT)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === iT ? zT.call(TT, IT) : zT ? zT.value = IT : oT.set(TT, IT), IT
+    function Rz(zz) {
+      return Number.isFinite(zz.ascent) && Number.isFinite(zz.height) && Number.isFinite(zz.descent) && zz.height > 0
     }
-    "function" === typeof SuppressedError && SuppressedError
+
+    function Kz(zz) {
+      if (zz.requestPointerLock) {
+        const uz = zz.requestPointerLock();
+        uz instanceof Promise ? uz.then((() => {
+          zz.focus()
+        })).catch((() => {})) : zz.focus()
+      }
+    }
+    var wz = bz(39135),
+      Xz = bz(39071),
+      fz = bz(39140),
+      sz = bz(39145);
+    class rz extends iz.ThinEngine {
+      static get NpmPackage() {
+        return dz.b.NpmPackage
+      }
+      static get Version() {
+        return dz.b.Version
+      }
+      static get Instances() {
+        return nz.d.Instances
+      }
+      static get LastCreatedEngine() {
+        return nz.d.LastCreatedEngine
+      }
+      static get LastCreatedScene() {
+        return nz.d.LastCreatedScene
+      }
+      static DefaultLoadingScreenFactory(zz) {
+        return dz.b.DefaultLoadingScreenFactory(zz)
+      }
+      get _supportsHardwareTextureRescaling() {
+        return !!rz._RescalePostProcessFactory
+      }
+      _measureFps() {
+        this._performanceMonitor.sampleFrame(), this._fps = this._performanceMonitor.averageFPS, this._deltaTime = this._performanceMonitor.instantaneousFrameTime || 0
+      }
+      get performanceMonitor() {
+        return this._performanceMonitor
+      }
+      constructor(zz, uz, bz) {
+        let Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        (0, fz.c)(), (0, sz.d)(), super(zz, uz, bz, Ez), this._performanceMonitor = new Mz, this._drawCalls = new wz.d, zz && (this._features.supportRenderPasses = !0)
+      }
+      _initGLContext() {
+        super._initGLContext(), this._rescalePostProcess = null
+      }
+      _sharedInit(zz) {
+        super._sharedInit(zz),
+          function(zz, uz, bz) {
+            zz._onCanvasFocus = () => {
+              zz.onCanvasFocusObservable.notifyObservers(zz)
+            }, zz._onCanvasBlur = () => {
+              zz.onCanvasBlurObservable.notifyObservers(zz)
+            }, zz._onCanvasContextMenu = uz => {
+              zz.disableContextMenu && uz.preventDefault()
+            }, uz.addEventListener("focus", zz._onCanvasFocus), uz.addEventListener("blur", zz._onCanvasBlur), uz.addEventListener("contextmenu", zz._onCanvasContextMenu), zz._onBlur = () => {
+              zz.disablePerformanceMonitorInBackground && zz.performanceMonitor.disable(), zz._windowIsBackground = !0
+            }, zz._onFocus = () => {
+              zz.disablePerformanceMonitorInBackground && zz.performanceMonitor.enable(), zz._windowIsBackground = !1
+            }, zz._onCanvasPointerOut = bz => {
+              document.elementFromPoint(bz.clientX, bz.clientY) !== uz && zz.onCanvasPointerOutObservable.notifyObservers(bz)
+            };
+            const Ez = zz.getHostWindow();
+            Ez && "function" === typeof Ez.addEventListener && (Ez.addEventListener("blur", zz._onBlur), Ez.addEventListener("focus", zz._onFocus)), uz.addEventListener("pointerout", zz._onCanvasPointerOut), bz.doNotHandleTouchAction || function(zz) {
+              zz && zz.setAttribute && (zz.setAttribute("touch-action", "none"), zz.style.touchAction = "none", zz.style.webkitTapHighlightColor = "transparent")
+            }(uz), !dz.b.audioEngine && bz.audioEngine && dz.b.AudioEngineFactory && (dz.b.audioEngine = dz.b.AudioEngineFactory(zz.getRenderingCanvas(), zz.getAudioContext(), zz.getAudioDestination())), (0, Fz.e)() && (zz._onFullscreenChange = () => {
+              zz.isFullscreen = !!document.fullscreenElement, zz.isFullscreen && zz._pointerLockRequested && uz && Kz(uz)
+            }, document.addEventListener("fullscreenchange", zz._onFullscreenChange, !1), document.addEventListener("webkitfullscreenchange", zz._onFullscreenChange, !1), zz._onPointerLockChange = () => {
+              zz.isPointerLock = document.pointerLockElement === uz
+            }, document.addEventListener("pointerlockchange", zz._onPointerLockChange, !1), document.addEventListener("webkitpointerlockchange", zz._onPointerLockChange, !1)), zz.enableOfflineSupport = void 0 !== dz.b.OfflineProviderFactory, zz._deterministicLockstep = !!bz.deterministicLockstep, zz._lockstepMaxSteps = bz.lockstepMaxSteps || 0, zz._timeStep = bz.timeStep || 1 / 60
+          }(this, zz, this._creationOptions)
+      }
+      resizeImageBitmap(zz, uz, bz) {
+        return function(zz, uz, bz, Ez) {
+          const nz = zz.createCanvas(bz, Ez).getContext("2d");
+          if (!nz) throw new Error("Unable to get 2d context for resizeImageBitmap");
+          return nz.drawImage(uz, 0, 0), nz.getImageData(0, 0, bz, Ez).data
+        }(this, zz, uz, bz)
+      }
+      async _createImageBitmapFromSource(zz, uz) {
+        return await async function(zz, uz, bz) {
+          return await new Promise(((Ez, nz) => {
+            const iz = new Image;
+            iz.onload = () => {
+              iz.decode().then((() => {
+                zz.createImageBitmap(iz, bz).then((zz => {
+                  Ez(zz)
+                }))
+              }))
+            }, iz.onerror = () => {
+              nz(`Error loading image ${iz.src}`)
+            }, iz.src = uz
+          }))
+        }(this, zz, uz)
+      }
+      switchFullscreen(zz) {
+        this.isFullscreen ? this.exitFullscreen() : this.enterFullscreen(zz)
+      }
+      enterFullscreen(zz) {
+        this.isFullscreen || (this._pointerLockRequested = zz, this._renderingCanvas && function(zz) {
+          const uz = zz.requestFullscreen || zz.webkitRequestFullscreen;
+          uz && uz.call(zz)
+        }(this._renderingCanvas))
+      }
+      exitFullscreen() {
+        this.isFullscreen && function() {
+          const zz = document;
+          document.exitFullscreen ? document.exitFullscreen() : zz.webkitCancelFullScreen && zz.webkitCancelFullScreen()
+        }()
+      }
+      setDitheringState(zz) {
+        zz ? this._gl.enable(this._gl.DITHER) : this._gl.disable(this._gl.DITHER)
+      }
+      setRasterizerState(zz) {
+        zz ? this._gl.disable(this._gl.RASTERIZER_DISCARD) : this._gl.enable(this._gl.RASTERIZER_DISCARD)
+      }
+      setDirectViewport(zz, uz, bz, Ez) {
+        const nz = this._cachedViewport;
+        return this._cachedViewport = null, this._viewport(zz, uz, bz, Ez), nz
+      }
+      scissorClear(zz, uz, bz, Ez, nz) {
+        this.enableScissor(zz, uz, bz, Ez), this.clear(nz, !0, !0, !0), this.disableScissor()
+      }
+      getVertexShaderSource(zz) {
+        const uz = this._gl.getAttachedShaders(zz);
+        return uz ? this._gl.getShaderSource(uz[0]) : null
+      }
+      getFragmentShaderSource(zz) {
+        const uz = this._gl.getAttachedShaders(zz);
+        return uz ? this._gl.getShaderSource(uz[1]) : null
+      }
+      set framebufferDimensionsObject(zz) {
+        this._framebufferDimensionsObject = zz, this._framebufferDimensionsObject && this.onResizeObservable.notifyObservers(this)
+      }
+      _rebuildBuffers() {
+        for (const zz of this.scenes) zz.resetCachedMaterial(), zz._rebuildGeometries();
+        for (const zz of this._virtualScenes) zz.resetCachedMaterial(), zz._rebuildGeometries();
+        super._rebuildBuffers()
+      }
+      getFontOffset(zz) {
+        return Zz(zz)
+      }
+      enterPointerlock() {
+        this._renderingCanvas && Kz(this._renderingCanvas)
+      }
+      exitPointerlock() {
+        document.exitPointerLock && document.exitPointerLock()
+      }
+      ZN() {
+        this._measureFps(), super.ZN()
+      }
+      _deletePipelineContext(zz) {
+        const uz = zz;
+        uz && uz.program && uz.transformFeedback && (this.deleteTransformFeedback(uz.transformFeedback), uz.transformFeedback = null), super._deletePipelineContext(zz)
+      }
+      createShaderProgram(zz, uz, bz, Ez, nz) {
+        let iz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
+        nz = nz || this._gl, this.onBeforeShaderCompilationObservable.notifyObservers(this);
+        const lz = super.createShaderProgram(zz, uz, bz, Ez, nz, iz);
+        return this.onAfterShaderCompilationObservable.notifyObservers(this), lz
+      }
+      _createShaderProgram(zz, uz, bz, Ez) {
+        let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+        const iz = Ez.createProgram();
+        if (zz.program = iz, !iz) throw new Error("Unable to create program");
+        if (Ez.attachShader(iz, uz), Ez.attachShader(iz, bz), this.PR > 1 && nz) {
+          const uz = this.createTransformFeedback();
+          this.bindTransformFeedback(uz), this.setTranformFeedbackVaryings(iz, nz), zz.transformFeedback = uz
+        }
+        return Ez.linkProgram(iz), this.PR > 1 && nz && this.bindTransformFeedback(null), zz.context = Ez, zz.vertexShader = uz, zz.fragmentShader = bz, zz.isParallelCompiled || this._finalizePipelineContext(zz), iz
+      }
+      _releaseTexture(zz) {
+        super._releaseTexture(zz)
+      }
+      _releaseRenderTargetWrapper(zz) {
+        super._releaseRenderTargetWrapper(zz);
+        for (const uz of this.scenes) {
+          for (const bz of uz.postProcesses) bz._outputTexture === zz && (bz._outputTexture = null);
+          for (const bz of uz.cameras)
+            for (const uz of bz._postProcesses) uz && uz._outputTexture === zz && (uz._outputTexture = null)
+        }
+      }
+      _rescaleTexture(zz, uz, bz, Ez, nz) {
+        this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MAG_FILTER, this._gl.LINEAR), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MIN_FILTER, this._gl.LINEAR), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_WRAP_S, this._gl.CLAMP_TO_EDGE), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_WRAP_T, this._gl.CLAMP_TO_EDGE);
+        const iz = this.createRenderTargetTexture({
+          width: uz.width,
+          height: uz.height
+        }, {
+          generateMipMaps: !1,
+          type: 0,
+          samplingMode: 2,
+          generateDepthBuffer: !1,
+          generateStencilBuffer: !1
+        });
+        if (!this._rescalePostProcess && rz._RescalePostProcessFactory && (this._rescalePostProcess = rz._RescalePostProcessFactory(this)), this._rescalePostProcess) {
+          this._rescalePostProcess.externalTextureSamplerBinding = !0;
+          const lz = () => {
+              this._rescalePostProcess.onApply = function(uz) {
+                uz._bindTexture("textureSampler", zz)
+              };
+              let lz = bz;
+              lz || (lz = this.scenes[this.scenes.length - 1]), lz.postProcessManager.directRender([this._rescalePostProcess], iz, !0), this._bindTextureDirectly(this._gl.TEXTURE_2D, uz, !0), this._gl.copyTexImage2D(this._gl.TEXTURE_2D, 0, Ez, 0, 0, uz.width, uz.height, 0), this.unBindFramebuffer(iz), iz.dispose(), nz && nz()
+            },
+            Mz = this._rescalePostProcess.getEffect();
+          Mz ? Mz.executeWhenCompiled(lz) : this._rescalePostProcess.onEffectCreatedObservable.addOnce((zz => {
+            zz.executeWhenCompiled(lz)
+          }))
+        }
+      }
+      wrapWebGLTexture(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 3,
+          nz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          iz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+        const lz = new pz.d(zz, this._gl),
+          Mz = new Ez.c(this, 15, !0);
+        return Mz._hardwareTexture = lz, Mz.baseWidth = nz, Mz.baseHeight = iz, Mz.width = nz, Mz.height = iz, Mz.isReady = !0, Mz.useMipMaps = uz, this.updateTextureSamplingMode(bz, Mz), Mz
+      }
+      updateWrappedWebGLTexture(zz, uz) {
+        if (15 !== zz.source) throw new Error("updateWrappedWebGLTexture: target InternalTexture was not produced by wrapWebGLTexture.");
+        for (const Ez of this._renderTargetWrapperCache)
+          if (Ez.textures?.includes(zz)) {
+            if (Ez.isMulti) throw new Error("updateWrappedWebGLTexture: wrapped texture is part of a multi render-target; not supported. Dispose and re-wrap.");
+            if (Ez._depthStencilTexture) throw new Error("updateWrappedWebGLTexture: wrapped texture's render-target wrapper has a depth/stencil texture; not supported. Dispose and re-wrap.")
+          } zz._hardwareTexture = new pz.d(uz, this._gl), zz.isReady = !0, zz._cachedCoordinatesMode = null, zz._cachedWrapU = null, zz._cachedWrapV = null, zz._cachedWrapR = null, zz._cachedAnisotropicFilteringLevel = null;
+        for (const Ez in this._boundTexturesCache) this._boundTexturesCache[Ez] === zz && (this._boundTexturesCache[Ez] = null);
+        this.updateTextureSamplingMode(zz.samplingMode, zz);
+        const bz = this._gl;
+        for (const Ez of this._renderTargetWrapperCache) {
+          if (Ez.texture !== zz) continue;
+          const nz = Ez,
+            iz = Ez.samples,
+            lz = iz > 1;
+          nz._framebuffer && bz.deleteFramebuffer(nz._framebuffer), !lz && nz._depthStencilBuffer && (bz.deleteRenderbuffer(nz._depthStencilBuffer), nz._depthStencilBuffer = null);
+          const Mz = this._currentFramebuffer,
+            tz = bz.createFramebuffer();
+          this._bindUnboundFramebuffer(tz), bz.framebufferTexture2D(bz.FRAMEBUFFER, bz.COLOR_ATTACHMENT0, bz.TEXTURE_2D, uz, 0), lz || (nz._depthStencilBuffer = this._setupFramebufferDepthAttachments(Ez._generateStencilBuffer, Ez._generateDepthBuffer, Ez.width, Ez.height)), this._bindUnboundFramebuffer(Mz), nz._framebuffer = tz, lz && (Ez._samples = 1, this.updateRenderTargetTextureSampleCount(nz, iz))
+        }
+      }
+      _uploadImageToTexture(zz, uz) {
+        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const nz = this._gl,
+          iz = this._getWebGLTextureType(zz.type),
+          lz = this._getInternalFormat(zz.format),
+          Mz = this._getRGBABufferInternalSizedFormat(zz.type, lz),
+          tz = zz.isCube ? nz.TEXTURE_CUBE_MAP : nz.TEXTURE_2D;
+        this._bindTextureDirectly(tz, zz, !0), this._unpackFlipY(zz.invertY);
+        let Hz = nz.TEXTURE_2D;
+        zz.isCube && (Hz = nz.TEXTURE_CUBE_MAP_POSITIVE_X + bz), nz.texImage2D(Hz, Ez, Mz, lz, iz, uz), this._bindTextureDirectly(tz, null, !0)
+      }
+      updateTextureComparisonFunction(zz, uz) {
+        if (1 === this.PR) return void Oz.e.Error("WebGL 1 does not support texture comparison.");
+        const bz = this._gl;
+        zz.isCube ? (this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, zz, !0), 0 === uz ? (bz.texParameteri(bz.TEXTURE_CUBE_MAP, bz.TEXTURE_COMPARE_FUNC, 515), bz.texParameteri(bz.TEXTURE_CUBE_MAP, bz.TEXTURE_COMPARE_MODE, bz.NONE)) : (bz.texParameteri(bz.TEXTURE_CUBE_MAP, bz.TEXTURE_COMPARE_FUNC, uz), bz.texParameteri(bz.TEXTURE_CUBE_MAP, bz.TEXTURE_COMPARE_MODE, bz.COMPARE_REF_TO_TEXTURE)), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null)) : (this._bindTextureDirectly(this._gl.TEXTURE_2D, zz, !0), 0 === uz ? (bz.texParameteri(bz.TEXTURE_2D, bz.TEXTURE_COMPARE_FUNC, 515), bz.texParameteri(bz.TEXTURE_2D, bz.TEXTURE_COMPARE_MODE, bz.NONE)) : (bz.texParameteri(bz.TEXTURE_2D, bz.TEXTURE_COMPARE_FUNC, uz), bz.texParameteri(bz.TEXTURE_2D, bz.TEXTURE_COMPARE_MODE, bz.COMPARE_REF_TO_TEXTURE)), this._bindTextureDirectly(this._gl.TEXTURE_2D, null)), zz._comparisonFunction = uz
+      }
+      createInstancesBuffer(zz) {
+        const uz = this._gl.createBuffer();
+        if (!uz) throw new Error("Unable to create instance buffer");
+        const bz = new Hz.e(uz);
+        return bz.Bp = zz, this.bindArrayBuffer(bz), this._gl.bufferData(this._gl.ARRAY_BUFFER, zz, this._gl.DYNAMIC_DRAW), bz.references = 1, bz
+      }
+      deleteInstancesBuffer(zz) {
+        this._gl.deleteBuffer(zz)
+      }
+      async _clientWaitAsync(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10;
+        const Ez = this._gl;
+        return await new Promise(((nz, iz) => {
+          (0, Xz.g)((() => {
+            const bz = Ez.clientWaitSync(zz, uz, 0);
+            if (bz == Ez.WAIT_FAILED) throw new Error("clientWaitSync failed");
+            return bz != Ez.TIMEOUT_EXPIRED
+          }), nz, iz, bz)
+        }))
+      }
+      _readPixelsAsync(zz, uz, bz, Ez, nz, iz, lz) {
+        if (this._webGLVersion < 2) throw new Error("_readPixelsAsync only work on WebGL2+");
+        const Mz = this._gl,
+          tz = Mz.createBuffer();
+        Mz.bindBuffer(Mz.PIXEL_PACK_BUFFER, tz), Mz.bufferData(Mz.PIXEL_PACK_BUFFER, lz.byteLength, Mz.STREAM_READ), Mz.readPixels(zz, uz, bz, Ez, nz, iz, 0), Mz.bindBuffer(Mz.PIXEL_PACK_BUFFER, null);
+        const Hz = Mz.fenceSync(Mz.SYNC_GPU_COMMANDS_COMPLETE, 0);
+        return Hz ? (Mz.flush(), this._clientWaitAsync(Hz, 0, 10).then((() => (Mz.deleteSync(Hz), Mz.bindBuffer(Mz.PIXEL_PACK_BUFFER, tz), Mz.getBufferSubData(Mz.PIXEL_PACK_BUFFER, 0, lz), Mz.bindBuffer(Mz.PIXEL_PACK_BUFFER, null), Mz.deleteBuffer(tz), lz)))) : null
+      }
+      dispose() {
+        this.hideLoadingUI?.(), this._rescalePostProcess && this._rescalePostProcess.dispose(),
+          function(zz, uz) {
+            1 === nz.d.Instances.length && dz.b.audioEngine && (dz.b.audioEngine.dispose(), dz.b.audioEngine = null);
+            const bz = zz.getHostWindow();
+            bz && "function" === typeof bz.removeEventListener && (bz.removeEventListener("blur", zz._onBlur), bz.removeEventListener("focus", zz._onFocus)), uz && (uz.removeEventListener("focus", zz._onCanvasFocus), uz.removeEventListener("blur", zz._onCanvasBlur), uz.removeEventListener("pointerout", zz._onCanvasPointerOut), uz.removeEventListener("contextmenu", zz._onCanvasContextMenu)), (0, Fz.e)() && (document.removeEventListener("fullscreenchange", zz._onFullscreenChange), document.removeEventListener("mozfullscreenchange", zz._onFullscreenChange), document.removeEventListener("webkitfullscreenchange", zz._onFullscreenChange), document.removeEventListener("msfullscreenchange", zz._onFullscreenChange), document.removeEventListener("pointerlockchange", zz._onPointerLockChange), document.removeEventListener("mspointerlockchange", zz._onPointerLockChange), document.removeEventListener("mozpointerlockchange", zz._onPointerLockChange), document.removeEventListener("webkitpointerlockchange", zz._onPointerLockChange))
+          }(this, this._renderingCanvas), super.dispose()
+      }
+    }
+    rz.ALPHA_DISABLE = 0, rz.ALPHA_ADD = 1, rz.ALPHA_COMBINE = 2, rz.ALPHA_SUBTRACT = 3, rz.ALPHA_MULTIPLY = 4, rz.ALPHA_MAXIMIZED = 5, rz.ALPHA_ONEONE = 6, rz.ALPHA_PREMULTIPLIED = 7, rz.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, rz.ALPHA_INTERPOLATE = 9, rz.ALPHA_SCREENMODE = 10, rz.DELAYLOADSTATE_NONE = 0, rz.DELAYLOADSTATE_LOADED = 1, rz.DELAYLOADSTATE_LOADING = 2, rz.DELAYLOADSTATE_NOTLOADED = 4, rz.NEVER = 512, rz.ALWAYS = 519, rz.LESS = 513, rz.EQUAL = 514, rz.LEQUAL = 515, rz.GREATER = 516, rz.GEQUAL = 518, rz.NOTEQUAL = 517, rz.KEEP = 7680, rz.REPLACE = 7681, rz.INCR = 7682, rz.DECR = 7683, rz.INVERT = 5386, rz.INCR_WRAP = 34055, rz.DECR_WRAP = 34056, rz.TEXTURE_CLAMP_ADDRESSMODE = 0, rz.TEXTURE_WRAP_ADDRESSMODE = 1, rz.TEXTURE_MIRROR_ADDRESSMODE = 2, rz.TEXTUREFORMAT_ALPHA = 0, rz.TEXTUREFORMAT_LUMINANCE = 1, rz.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, rz.TEXTUREFORMAT_RGB = 4, rz.TEXTUREFORMAT_RGBA = 5, rz.TEXTUREFORMAT_RED = 6, rz.TEXTUREFORMAT_R = 6, rz.TEXTUREFORMAT_R16_UNORM = 33322, rz.TEXTUREFORMAT_RG16_UNORM = 33324, rz.TEXTUREFORMAT_RGB16_UNORM = 32852, rz.TEXTUREFORMAT_RGBA16_UNORM = 32859, rz.TEXTUREFORMAT_R16_SNORM = 36760, rz.TEXTUREFORMAT_RG16_SNORM = 36761, rz.TEXTUREFORMAT_RGB16_SNORM = 36762, rz.TEXTUREFORMAT_RGBA16_SNORM = 36763, rz.TEXTUREFORMAT_RG = 7, rz.TEXTUREFORMAT_RED_INTEGER = 8, rz.TEXTUREFORMAT_R_INTEGER = 8, rz.TEXTUREFORMAT_RG_INTEGER = 9, rz.TEXTUREFORMAT_RGB_INTEGER = 10, rz.TEXTUREFORMAT_RGBA_INTEGER = 11, rz.TEXTURETYPE_UNSIGNED_BYTE = 0, rz.TEXTURETYPE_UNSIGNED_INT = 0, rz.TEXTURETYPE_FLOAT = 1, rz.TEXTURETYPE_HALF_FLOAT = 2, rz.TEXTURETYPE_BYTE = 3, rz.TEXTURETYPE_SHORT = 4, rz.TEXTURETYPE_UNSIGNED_SHORT = 5, rz.TEXTURETYPE_INT = 6, rz.TEXTURETYPE_UNSIGNED_INTEGER = 7, rz.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, rz.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, rz.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, rz.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, rz.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, rz.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, rz.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, rz.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, rz.TEXTURE_NEAREST_SAMPLINGMODE = 1, rz.TEXTURE_BILINEAR_SAMPLINGMODE = 2, rz.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, rz.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, rz.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, rz.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, rz.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, rz.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, rz.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, rz.TEXTURE_NEAREST_LINEAR = 7, rz.TEXTURE_NEAREST_NEAREST = 1, rz.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, rz.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, rz.TEXTURE_LINEAR_LINEAR = 2, rz.TEXTURE_LINEAR_NEAREST = 12, rz.TEXTURE_EXPLICIT_MODE = 0, rz.TEXTURE_SPHERICAL_MODE = 1, rz.TEXTURE_PLANAR_MODE = 2, rz.TEXTURE_CUBIC_MODE = 3, rz.TEXTURE_PROJECTION_MODE = 4, rz.TEXTURE_SKYBOX_MODE = 5, rz.TEXTURE_INVCUBIC_MODE = 6, rz.TEXTURE_EQUIRECTANGULAR_MODE = 7, rz.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, rz.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, rz.SCALEMODE_FLOOR = 1, rz.SCALEMODE_NEAREST = 2, rz.SCALEMODE_CEILING = 3
+  },
+  39162: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz
+    });
+    var Ez = bz(39128);
+    class nz {
+      get depthStencilTexture() {
+        return this._depthStencilTexture
+      }
+      setDepthStencilTexture(zz) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && this._depthStencilTexture && this._depthStencilTexture.dispose(), this._depthStencilTexture = zz, this._generateDepthBuffer = this._generateStencilBuffer = this._depthStencilTextureWithStencil = !1, zz && (this._generateDepthBuffer = !0, this._generateStencilBuffer = this._depthStencilTextureWithStencil = (0, Ez.d)(zz.format))
+      }
+      get depthStencilTextureWithStencil() {
+        return this._depthStencilTextureWithStencil
+      }
+      get isCube() {
+        return this._isCube
+      }
+      get isMulti() {
+        return this._isMulti
+      }
+      get is2DArray() {
+        return this.layers > 0
+      }
+      get is3D() {
+        return this.depth > 0
+      }
+      get size() {
+        return this.width
+      }
+      get width() {
+        return this._size.width ?? this._size
+      }
+      get height() {
+        return this._size.height ?? this._size
+      }
+      get layers() {
+        return this._size.layers || 0
+      }
+      get depth() {
+        return this._size.depth || 0
+      }
+      get texture() {
+        return this._textures?.[0] ?? null
+      }
+      get textures() {
+        return this._textures
+      }
+      get faceIndices() {
+        return this._faceIndices
+      }
+      get layerIndices() {
+        return this._layerIndices
+      }
+      getBaseArrayLayer(zz) {
+        if (!this._textures) return -1;
+        const uz = this._textures[zz],
+          bz = this._layerIndices?.[zz] ?? 0,
+          Ez = this._faceIndices?.[zz] ?? 0;
+        return uz.isCube ? 6 * bz + Ez : uz.is3D ? 0 : bz
+      }
+      get samples() {
+        return this._samples
+      }
+      setSamples(zz) {
+        let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (this.samples === zz && !bz) return zz;
+        const Ez = this._isMulti ? this._engine.updateMultipleRenderTargetTextureSampleCount(this, zz, uz) : this._engine.updateRenderTargetTextureSampleCount(this, zz);
+        return this._samples = zz, Ez
+      }
+      resolveMSAATextures() {
+        this.isMulti ? this._engine.resolveMultiFramebuffer(this) : this._engine.resolveFramebuffer(this)
+      }
+      generateMipMaps() {
+        this._engine._currentRenderTarget === this && (this.isMulti ? this._engine.unBindMultiColorAttachmentFramebuffer(this, !0) : this._engine.unBindFramebuffer(this, !0)), this.isMulti ? this._engine.generateMipMapsMultiFramebuffer(this) : this._engine.generateMipMapsFramebuffer(this)
+      }
+      constructor(zz, uz, bz, Ez, nz) {
+        this._textures = null, this._faceIndices = null, this._layerIndices = null, this._samples = 1, this._attachments = null, this._generateStencilBuffer = !1, this._generateDepthBuffer = !1, this._depthStencilTextureWithStencil = !1, this.disableAutomaticMSAAResolve = !1, this.resolveMSAAColors = !0, this.resolveMSAADepth = !1, this.resolveMSAAStencil = !1, this.depthReadOnly = !1, this.stencilReadOnly = !1, this._isMulti = zz, this._isCube = uz, this._size = bz, this._engine = Ez, this._depthStencilTexture = null, this.label = nz
+      }
+      setTextures(zz) {
+        Array.isArray(zz) ? this._textures = zz : this._textures = zz ? [zz] : null
+      }
+      setTexture(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          bz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this._textures || (this._textures = []), this._textures[uz] !== zz && (this._textures[uz] && bz && this._textures[uz].dispose(), this._textures[uz] = zz)
+      }
+      setLayerAndFaceIndices(zz, uz) {
+        this._layerIndices = zz, this._faceIndices = uz
+      }
+      setLayerAndFaceIndex() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          uz = arguments.length > 1 ? arguments[1] : void 0,
+          bz = arguments.length > 2 ? arguments[2] : void 0;
+        this._layerIndices || (this._layerIndices = []), this._faceIndices || (this._faceIndices = []), void 0 !== uz && uz >= 0 && (this._layerIndices[zz] = uz), void 0 !== bz && bz >= 0 && (this._faceIndices[zz] = bz)
+      }
+      createDepthStencilTexture() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
+          iz = arguments.length > 5 ? arguments[5] : void 0;
+        return this._depthStencilTexture?.dispose(), this._depthStencilTextureWithStencil = bz, this._depthStencilTextureLabel = iz, this._depthStencilTexture = this._engine.createDepthStencilTexture(this._size, {
+          bilinearFiltering: uz,
+          comparisonFunction: zz,
+          generateStencil: bz,
+          isCube: this._isCube,
+          samples: Ez,
+          depthTextureFormat: nz,
+          label: iz
+        }, this), this._depthStencilTexture
+      }
+      _shareDepth(zz) {
+        this.shareDepth(zz)
+      }
+      shareDepth(zz) {
+        this._depthStencilTexture && (zz._depthStencilTexture && zz._depthStencilTexture.dispose(), zz._depthStencilTexture = this._depthStencilTexture, zz._depthStencilTextureWithStencil = this._depthStencilTextureWithStencil, this._depthStencilTexture.incrementReferences())
+      }
+      _swapAndDie(zz) {
+        this.texture && this.texture._swapAndDie(zz), this._textures = null, this.dispose(!0)
+      }
+      _cloneRenderTargetWrapper() {
+        let zz = null;
+        if (this._isMulti) {
+          const uz = this.textures;
+          if (uz && uz.length > 0) {
+            let bz = !1,
+              Ez = uz.length,
+              nz = -1;
+            const iz = uz[uz.length - 1]._source;
+            14 !== iz && 12 !== iz || (bz = !0, nz = uz[uz.length - 1].format, Ez--);
+            const lz = [],
+              Mz = [],
+              tz = [],
+              Hz = [],
+              Oz = [],
+              pz = [],
+              dz = [],
+              Fz = {};
+            for (let zz = 0; zz < Ez; ++zz) {
+              const bz = uz[zz];
+              lz.push(bz.samplingMode), Mz.push(bz.type), tz.push(bz.format);
+              void 0 !== Fz[bz.uniqueId] ? (Hz.push(-1), dz.push(0)) : (Fz[bz.uniqueId] = zz, bz.is2DArray ? (Hz.push(35866), dz.push(bz.depth)) : bz.isCube ? (Hz.push(34067), dz.push(0)) : bz.is3D ? (Hz.push(32879), dz.push(bz.depth)) : (Hz.push(3553), dz.push(0))), this._faceIndices && Oz.push(this._faceIndices[zz] ?? 0), this._layerIndices && pz.push(this._layerIndices[zz] ?? 0)
+            }
+            const Zz = {
+                samplingModes: lz,
+                generateMipMaps: uz[0].generateMipMaps,
+                generateDepthBuffer: this._generateDepthBuffer,
+                generateStencilBuffer: this._generateStencilBuffer,
+                generateDepthTexture: bz,
+                depthTextureFormat: nz,
+                types: Mz,
+                formats: tz,
+                Yiz: Ez,
+                targetTypes: Hz,
+                faceIndex: Oz,
+                layerIndex: pz,
+                layerCounts: dz,
+                label: this.label
+              },
+              Rz = {
+                width: this.width,
+                height: this.height,
+                depth: this.depth
+              };
+            zz = this._engine.createMultipleRenderTarget(Rz, Zz);
+            for (let Kz = 0; Kz < Ez; ++Kz) {
+              if (-1 !== Hz[Kz]) continue;
+              const bz = Fz[uz[Kz].uniqueId];
+              zz.setTexture(zz.textures[bz], Kz)
+            }
+          }
+        } else {
+          const uz = {};
+          if (uz.generateDepthBuffer = this._generateDepthBuffer, uz.generateMipMaps = this.texture?.generateMipMaps ?? !1, uz.generateStencilBuffer = this._generateStencilBuffer, uz.samplingMode = this.texture?.samplingMode, uz.type = this.texture?.type, uz.format = this.texture?.format, uz.noColorAttachment = !this._textures, uz.label = this.label, this.isCube) zz = this._engine.createRenderTargetCubeTexture(this.width, uz);
+          else {
+            const bz = {
+              width: this.width,
+              height: this.height,
+              layers: this.is2DArray || this.is3D ? this.texture?.depth : void 0
+            };
+            zz = this._engine.createRenderTargetTexture(bz, uz)
+          }
+          zz.texture && (zz.texture.isReady = !0)
+        }
+        return zz
+      }
+      _swapRenderTargetWrapper(zz) {
+        if (this._textures && zz._textures)
+          for (let uz = 0; uz < this._textures.length; ++uz) this._textures[uz]._swapAndDie(zz._textures[uz], !1), zz._textures[uz].isReady = !0;
+        this._depthStencilTexture && zz._depthStencilTexture && (this._depthStencilTexture._swapAndDie(zz._depthStencilTexture), zz._depthStencilTexture.isReady = !0), this._textures = null, this._depthStencilTexture = null
+      }
+      _rebuild() {
+        const zz = this._cloneRenderTargetWrapper();
+        if (zz) {
+          if (this._depthStencilTexture) {
+            const uz = this._depthStencilTexture.samplingMode,
+              bz = this._depthStencilTexture.format,
+              Ez = 2 === uz || 3 === uz || 11 === uz;
+            zz.createDepthStencilTexture(this._depthStencilTexture._comparisonFunction, Ez, this._depthStencilTextureWithStencil, this._depthStencilTexture.samples, bz, this._depthStencilTextureLabel)
+          }
+          this.samples > 1 && zz.setSamples(this.samples), zz._swapRenderTargetWrapper(this), zz.dispose()
+        }
+      }
+      releaseTextures() {
+        if (this._textures)
+          for (let zz = 0; zz < this._textures.length; ++zz) this._textures[zz].dispose();
+        this._textures = null
+      }
+      dispose() {
+        arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (this._depthStencilTexture?.dispose(), this._depthStencilTexture = null, this.releaseTextures()), this._engine._releaseRenderTargetWrapper(this)
+      }
+    }
+  },
+  39607: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Ez
+    });
+    class Ez {
+      static get ForceFullSceneLoadingForIncremental() {
+        return Ez._ForceFullSceneLoadingForIncremental
+      }
+      static set ForceFullSceneLoadingForIncremental(zz) {
+        Ez._ForceFullSceneLoadingForIncremental = zz
+      }
+      static get ShowLoadingScreen() {
+        return Ez._ShowLoadingScreen
+      }
+      static set ShowLoadingScreen(zz) {
+        Ez._ShowLoadingScreen = zz
+      }
+      static get loggingLevel() {
+        return Ez._LoggingLevel
+      }
+      static set loggingLevel(zz) {
+        Ez._LoggingLevel = zz
+      }
+      static get CleanBoneMatrixWeights() {
+        return Ez._CleanBoneMatrixWeights
+      }
+      static set CleanBoneMatrixWeights(zz) {
+        Ez._CleanBoneMatrixWeights = zz
+      }
+    }
+    Ez._ForceFullSceneLoadingForIncremental = !1, Ez._ShowLoadingScreen = !0, Ez._CleanBoneMatrixWeights = !1, Ez._LoggingLevel = 0
+  },
+  39241: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz
+    });
+    var Ez = bz(38060);
+    const nz = new Map;
+
+    function iz(zz, uz) {
+      (function(zz) {
+        return nz.delete(zz)
+      })(zz) && Ez.e.Warn(`Extension with the name '${zz}' already exists`), nz.set(zz, uz)
+    }
+
+    function lz(zz, uz) {
+      "image/ktx" !== uz && "image/ktx2" !== uz || (zz = ".ktx"), nz.has(zz) || (zz.endsWith(".ies") && iz(".ies", (async () => await bz.e(299).then((() => bz(40979))).then((zz => new zz._IESTextureLoader)))), zz.endsWith(".dds") && iz(".dds", (async () => await bz.e(297).then((() => bz(40983))).then((zz => new zz._DDSTextureLoader)))), zz.endsWith(".basis") && iz(".basis", (async () => await bz.e(300).then((() => bz(40992))).then((zz => new zz._BasisTextureLoader)))), zz.endsWith(".env") && iz(".env", (async () => await Promise.all([bz.e(301), bz.e(298)]).then((() => bz(40996))).then((zz => new zz._ENVTextureLoader)))), zz.endsWith(".hdr") && iz(".hdr", (async () => await bz.e(302).then((() => bz(41043))).then((zz => new zz._HDRTextureLoader)))), (zz.endsWith(".ktx") || zz.endsWith(".ktx2")) && (iz(".ktx", (async () => await bz.e(303).then((() => bz(41050))).then((zz => new zz._KTXTextureLoader)))), iz(".ktx2", (async () => await bz.e(303).then((() => bz(41050))).then((zz => new zz._KTXTextureLoader))))), zz.endsWith(".tga") && iz(".tga", (async () => await bz.e(304).then((() => bz(41065))).then((zz => new zz._TGATextureLoader)))), zz.endsWith(".exr") && iz(".exr", (async () => await bz.e(305).then((() => bz(41074))).then((zz => new zz._ExrTextureLoader)))));
+      const Ez = nz.get(zz);
+      return Ez ? Promise.resolve(Ez(uz)) : null
+    }
+  },
+  39622: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => lz,
+      f: () => Hz
+    });
+    var Ez = bz(39451),
+      nz = bz(39189),
+      iz = bz(36564);
+    class lz extends Ez.c {
+      get J_() {
+        return this._subMaterials
+      }
+      set J_(zz) {
+        this._subMaterials = zz, this._hookArray(zz)
+      }
+      getChildren() {
+        return this.J_
+      }
+      constructor(zz, uz) {
+        super(zz, uz, !0), this._waitingSubMaterialsUniqueIds = [], this.XT().addMultiMaterial(this), this.J_ = [], this._storeEffectOnSubMeshes = !0
+      }
+      _hookArray(zz) {
+        var uz = this;
+        const bz = zz.push;
+        zz.push = function() {
+          for (var Ez = arguments.length, nz = new Array(Ez), iz = 0; iz < Ez; iz++) nz[iz] = arguments[iz];
+          const lz = bz.apply(zz, nz);
+          return uz._markAllSubMeshesAsTexturesDirty(), lz
+        };
+        const Ez = zz.splice;
+        zz.splice = (uz, bz) => {
+          const nz = Ez.call(zz, uz, bz ?? zz.length);
+          return this._markAllSubMeshesAsTexturesDirty(), nz
+        }
+      }
+      getSubMaterial(zz) {
+        return zz < 0 || zz >= this.J_.length ? this.XT().defaultMaterial : this.J_[zz]
+      }
+      getActiveTextures() {
+        return super.getActiveTextures().concat(...this.J_.map((zz => zz ? zz.getActiveTextures() : [])))
+      }
+      hasTexture(zz) {
+        if (super.hasTexture(zz)) return !0;
+        for (let uz = 0; uz < this.J_.length; uz++)
+          if (this.J_[uz]?.hasTexture(zz)) return !0;
+        return !1
+      }
+      getClassName() {
+        return "MultiMaterial"
+      }
+      isReadyForSubMesh(zz, uz, bz) {
+        for (let Ez = 0; Ez < this.J_.length; Ez++) {
+          const nz = this.J_[Ez];
+          if (nz) {
+            if (nz._storeEffectOnSubMeshes) {
+              if (!nz.isReadyForSubMesh(zz, uz, bz)) return !1;
+              continue
+            }
+            if (!nz.isReady(zz)) return !1
+          }
+        }
+        return !0
+      }
+      clone(zz, uz) {
+        const bz = new lz(zz, this.XT());
+        for (let Ez = 0; Ez < this.J_.length; Ez++) {
+          let nz;
+          const iz = this.J_[Ez];
+          nz = uz && iz ? iz.clone(zz + "-" + iz.name) : this.J_[Ez], bz.J_.push(nz)
+        }
+        return bz
+      }
+      serialize() {
+        const zz = {};
+        zz.name = this.name, zz.id = this.id, zz.uniqueId = this.uniqueId, nz.e && (zz.tags = nz.e.GetTags(this)), zz.materialsUniqueIds = [], zz.materials = [];
+        for (let uz = 0; uz < this.J_.length; uz++) {
+          const bz = this.J_[uz];
+          bz ? (zz.materialsUniqueIds.push(bz.uniqueId), zz.materials.push(bz.id)) : (zz.materialsUniqueIds.push(null), zz.materials.push(null))
+        }
+        return zz
+      }
+      dispose(zz, uz, bz) {
+        const Ez = this.XT();
+        if (!Ez) return;
+        if (bz)
+          for (let iz = 0; iz < this.J_.length; iz++) {
+            const bz = this.J_[iz];
+            bz && bz.dispose(zz, uz)
+          }
+        const nz = Ez.multiMaterials.indexOf(this);
+        nz >= 0 && Ez.multiMaterials.splice(nz, 1), super.dispose(zz, uz)
+      }
+    }
+    let Mz = !1;
+
+    function tz(zz, uz) {
+      const bz = new lz(zz.name, uz);
+      if (bz.id = zz.id, bz._loadedUniqueId = zz.uniqueId, nz.e && nz.e.AddTagsTo(bz, zz.tags), zz.materialsUniqueIds) bz._waitingSubMaterialsUniqueIds = zz.materialsUniqueIds;
+      else
+        for (const Ez of zz.materials) bz.J_.push(uz.getLastMaterialById(Ez));
+      return bz
+    }
+
+    function Hz() {
+      Mz || (Mz = !0, lz.ParseMultiMaterial = tz, (0, iz.c)("BABYLON.MultiMaterial", lz))
+    }
+  },
+  39386: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => lz
+    });
+    var Ez, nz, iz = bz(36519);
+    ! function(zz) {
+      zz[zz.LOCAL = 0] = "LOCAL", zz[zz.WORLD = 1] = "WORLD", zz[zz.BONE = 2] = "BONE"
+    }(Ez || (Ez = {}));
+    class lz {}
+    lz.X = new iz.n(1, 0, 0), lz.Y = new iz.n(0, 1, 0), lz.Z = new iz.n(0, 0, 1),
+      function(zz) {
+        zz[zz.X = 0] = "X", zz[zz.Y = 1] = "Y", zz[zz.Z = 2] = "Z"
+      }(nz || (nz = {}))
+  },
+  39164: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => tz,
+      g: () => Hz
+    });
+    var Ez = bz(36519);
+    const nz = [Math.sqrt(1 / (4 * Math.PI)), -Math.sqrt(3 / (4 * Math.PI)), Math.sqrt(3 / (4 * Math.PI)), -Math.sqrt(3 / (4 * Math.PI)), Math.sqrt(15 / (4 * Math.PI)), -Math.sqrt(15 / (4 * Math.PI)), Math.sqrt(5 / (16 * Math.PI)), -Math.sqrt(15 / (4 * Math.PI)), Math.sqrt(15 / (16 * Math.PI))],
+      iz = [() => 1, zz => zz.y, zz => zz.z, zz => zz.x, zz => zz.x * zz.y, zz => zz.y * zz.z, zz => 3 * zz.z * zz.z - 1, zz => zz.x * zz.z, zz => zz.x * zz.x - zz.y * zz.y],
+      lz = (zz, uz) => nz[zz] * iz[zz](uz),
+      Mz = [Math.PI, 2 * Math.PI / 3, 2 * Math.PI / 3, 2 * Math.PI / 3, Math.PI / 4, Math.PI / 4, Math.PI / 4, Math.PI / 4, Math.PI / 4];
+    class tz {
+      constructor() {
+        this.preScaled = !1, this.l00 = Ez.n.Zero(), this.l1_1 = Ez.n.Zero(), this.l10 = Ez.n.Zero(), this.l11 = Ez.n.Zero(), this.l2_2 = Ez.n.Zero(), this.l2_1 = Ez.n.Zero(), this.l20 = Ez.n.Zero(), this.l21 = Ez.n.Zero(), this.l22 = Ez.n.Zero()
+      }
+      addLight(zz, uz, bz) {
+        Ez.l.ER[0].set(uz.r, uz.g, uz.b);
+        const nz = Ez.l.ER[0],
+          iz = Ez.l.ER[1];
+        nz.scaleToRef(bz, iz), iz.scaleToRef(lz(0, zz), Ez.l.ER[2]), this.l00.addInPlace(Ez.l.ER[2]), iz.scaleToRef(lz(1, zz), Ez.l.ER[2]), this.l1_1.addInPlace(Ez.l.ER[2]), iz.scaleToRef(lz(2, zz), Ez.l.ER[2]), this.l10.addInPlace(Ez.l.ER[2]), iz.scaleToRef(lz(3, zz), Ez.l.ER[2]), this.l11.addInPlace(Ez.l.ER[2]), iz.scaleToRef(lz(4, zz), Ez.l.ER[2]), this.l2_2.addInPlace(Ez.l.ER[2]), iz.scaleToRef(lz(5, zz), Ez.l.ER[2]), this.l2_1.addInPlace(Ez.l.ER[2]), iz.scaleToRef(lz(6, zz), Ez.l.ER[2]), this.l20.addInPlace(Ez.l.ER[2]), iz.scaleToRef(lz(7, zz), Ez.l.ER[2]), this.l21.addInPlace(Ez.l.ER[2]), iz.scaleToRef(lz(8, zz), Ez.l.ER[2]), this.l22.addInPlace(Ez.l.ER[2])
+      }
+      scaleInPlace(zz) {
+        this.l00.scaleInPlace(zz), this.l1_1.scaleInPlace(zz), this.l10.scaleInPlace(zz), this.l11.scaleInPlace(zz), this.l2_2.scaleInPlace(zz), this.l2_1.scaleInPlace(zz), this.l20.scaleInPlace(zz), this.l21.scaleInPlace(zz), this.l22.scaleInPlace(zz)
+      }
+      convertIncidentRadianceToIrradiance() {
+        this.l00.scaleInPlace(Mz[0]), this.l1_1.scaleInPlace(Mz[1]), this.l10.scaleInPlace(Mz[2]), this.l11.scaleInPlace(Mz[3]), this.l2_2.scaleInPlace(Mz[4]), this.l2_1.scaleInPlace(Mz[5]), this.l20.scaleInPlace(Mz[6]), this.l21.scaleInPlace(Mz[7]), this.l22.scaleInPlace(Mz[8])
+      }
+      convertIrradianceToLambertianRadiance() {
+        this.scaleInPlace(1 / Math.PI)
+      }
+      preScaleForRendering() {
+        this.preScaled = !0, this.l00.scaleInPlace(nz[0]), this.l1_1.scaleInPlace(nz[1]), this.l10.scaleInPlace(nz[2]), this.l11.scaleInPlace(nz[3]), this.l2_2.scaleInPlace(nz[4]), this.l2_1.scaleInPlace(nz[5]), this.l20.scaleInPlace(nz[6]), this.l21.scaleInPlace(nz[7]), this.l22.scaleInPlace(nz[8])
+      }
+      updateFromArray(zz) {
+        return Ez.n.FromArrayToRef(zz[0], 0, this.l00), Ez.n.FromArrayToRef(zz[1], 0, this.l1_1), Ez.n.FromArrayToRef(zz[2], 0, this.l10), Ez.n.FromArrayToRef(zz[3], 0, this.l11), Ez.n.FromArrayToRef(zz[4], 0, this.l2_2), Ez.n.FromArrayToRef(zz[5], 0, this.l2_1), Ez.n.FromArrayToRef(zz[6], 0, this.l20), Ez.n.FromArrayToRef(zz[7], 0, this.l21), Ez.n.FromArrayToRef(zz[8], 0, this.l22), this
+      }
+      updateFromFloatsArray(zz) {
+        return Ez.n.FromFloatsToRef(zz[0], zz[1], zz[2], this.l00), Ez.n.FromFloatsToRef(zz[3], zz[4], zz[5], this.l1_1), Ez.n.FromFloatsToRef(zz[6], zz[7], zz[8], this.l10), Ez.n.FromFloatsToRef(zz[9], zz[10], zz[11], this.l11), Ez.n.FromFloatsToRef(zz[12], zz[13], zz[14], this.l2_2), Ez.n.FromFloatsToRef(zz[15], zz[16], zz[17], this.l2_1), Ez.n.FromFloatsToRef(zz[18], zz[19], zz[20], this.l20), Ez.n.FromFloatsToRef(zz[21], zz[22], zz[23], this.l21), Ez.n.FromFloatsToRef(zz[24], zz[25], zz[26], this.l22), this
+      }
+      static FromArray(zz) {
+        return (new tz).updateFromArray(zz)
+      }
+      static FromPolynomial(zz) {
+        const uz = new tz;
+        return uz.l00 = zz.xx.scale(.376127).add(zz.yy.scale(.376127)).add(zz.zz.scale(.376126)), uz.l1_1 = zz.y.scale(.977204), uz.l10 = zz.z.scale(.977204), uz.l11 = zz.x.scale(.977204), uz.l2_2 = zz.xy.scale(1.16538), uz.l2_1 = zz.yz.scale(1.16538), uz.l20 = zz.zz.scale(1.34567).subtract(zz.xx.scale(.672834)).subtract(zz.yy.scale(.672834)), uz.l21 = zz.zx.scale(1.16538), uz.l22 = zz.xx.scale(1.16538).subtract(zz.yy.scale(1.16538)), uz.l1_1.scaleInPlace(-1), uz.l11.scaleInPlace(-1), uz.l2_1.scaleInPlace(-1), uz.l21.scaleInPlace(-1), uz.scaleInPlace(Math.PI), uz
+      }
+    }
+    class Hz {
+      constructor() {
+        this.x = Ez.n.Zero(), this.y = Ez.n.Zero(), this.z = Ez.n.Zero(), this.xx = Ez.n.Zero(), this.yy = Ez.n.Zero(), this.zz = Ez.n.Zero(), this.xy = Ez.n.Zero(), this.yz = Ez.n.Zero(), this.zx = Ez.n.Zero()
+      }
+      get preScaledHarmonics() {
+        return this._harmonics || (this._harmonics = tz.FromPolynomial(this)), this._harmonics.preScaled || this._harmonics.preScaleForRendering(), this._harmonics
+      }
+      addAmbient(zz) {
+        Ez.l.ER[0].P_(zz.r, zz.g, zz.b);
+        const uz = Ez.l.ER[0];
+        this.xx.addInPlace(uz), this.yy.addInPlace(uz), this.zz.addInPlace(uz)
+      }
+      scaleInPlace(zz) {
+        this.x.scaleInPlace(zz), this.y.scaleInPlace(zz), this.z.scaleInPlace(zz), this.xx.scaleInPlace(zz), this.yy.scaleInPlace(zz), this.zz.scaleInPlace(zz), this.yz.scaleInPlace(zz), this.zx.scaleInPlace(zz), this.xy.scaleInPlace(zz)
+      }
+      updateFromHarmonics(zz) {
+        return this._harmonics = zz, this.x.euz(zz.l11), this.x.scaleInPlace(1.02333).scaleInPlace(-1), this.y.euz(zz.l1_1), this.y.scaleInPlace(1.02333).scaleInPlace(-1), this.z.euz(zz.l10), this.z.scaleInPlace(1.02333), this.xx.euz(zz.l00), Ez.l.ER[0].euz(zz.l20).scaleInPlace(.247708), Ez.l.ER[1].euz(zz.l22).scaleInPlace(.429043), this.xx.scaleInPlace(.886277).Qbz(Ez.l.ER[0]).addInPlace(Ez.l.ER[1]), this.yy.euz(zz.l00), this.yy.scaleInPlace(.886277).Qbz(Ez.l.ER[0]).Qbz(Ez.l.ER[1]), this.zz.euz(zz.l00), Ez.l.ER[0].euz(zz.l20).scaleInPlace(.495417), this.zz.scaleInPlace(.886277).addInPlace(Ez.l.ER[0]), this.yz.euz(zz.l2_1), this.yz.scaleInPlace(.858086).scaleInPlace(-1), this.zx.euz(zz.l21), this.zx.scaleInPlace(.858086).scaleInPlace(-1), this.xy.euz(zz.l2_2), this.xy.scaleInPlace(.858086), this.scaleInPlace(1 / Math.PI), this
+      }
+      static FromHarmonics(zz) {
+        return (new Hz).updateFromHarmonics(zz)
+      }
+      static FromArray(zz) {
+        const uz = new Hz;
+        return Ez.n.FromArrayToRef(zz[0], 0, uz.x), Ez.n.FromArrayToRef(zz[1], 0, uz.y), Ez.n.FromArrayToRef(zz[2], 0, uz.z), Ez.n.FromArrayToRef(zz[3], 0, uz.xx), Ez.n.FromArrayToRef(zz[4], 0, uz.yy), Ez.n.FromArrayToRef(zz[5], 0, uz.zz), Ez.n.FromArrayToRef(zz[6], 0, uz.yz), Ez.n.FromArrayToRef(zz[7], 0, uz.zx), Ez.n.FromArrayToRef(zz[8], 0, uz.xy), uz
+      }
+    }
+  },
+  39614: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Gz,
+      f: () => Vz
+    });
+    var Ez = bz(39170),
+      nz = bz(36547),
+      iz = bz(36519),
+      lz = bz(39299),
+      Mz = bz(39596),
+      tz = bz(39618),
+      Hz = bz(39296),
+      Oz = bz(39474),
+      pz = bz(39291);
+    class dz {
+      constructor() {
+        this._checkCollisions = !1, this._collisionMask = -1, this._collisionGroup = -1, this._surroundingMeshes = null, this._collider = null, this._oldPositionForCollisions = new iz.n(0, 0, 0), this._diffPositionForCollisions = new iz.n(0, 0, 0), this._collisionResponse = !0
+      }
+    }
+    var Fz, Zz, Rz, Kz = bz(39061),
+      wz = bz(39231),
+      Xz = bz(39492),
+      fz = bz(36715),
+      sz = bz(36526),
+      rz = bz(39386),
+      oz = bz(38060),
+      Nz = bz(39172),
+      vz = bz(39079),
+      xz = bz(36564);
+
+    function Jz(zz, uz) {
+      return zz - Math.floor(zz / uz) * uz
+    }
+
+    function Az(zz, uz, bz) {
+      zz instanceof Float32Array ? iz.d.FromArrayToRef(zz, uz, bz) : bz.P_((0, wz.e)(zz[uz]), (0, wz.e)(zz[uz + 1]), (0, wz.e)(zz[uz + 2]), (0, wz.e)(zz[uz + 3]), (0, wz.e)(zz[uz + 4]), (0, wz.e)(zz[uz + 5]), (0, wz.e)(zz[uz + 6]), (0, wz.e)(zz[uz + 7]), (0, wz.e)(zz[uz + 8]), (0, wz.e)(zz[uz + 9]), (0, wz.e)(zz[uz + 10]), (0, wz.e)(zz[uz + 11]), (0, wz.e)(zz[uz + 12]), (0, wz.e)(zz[uz + 13]), (0, wz.e)(zz[uz + 14]), (0, wz.e)(zz[uz + 15]))
+    }
+
+    function Tz(zz, uz, bz, Ez, nz, Mz, tz, Hz, Oz) {
+      const pz = bz.texture,
+        dz = pz?.getInternalTexture(),
+        Fz = dz?._bufferView;
+      if (!(Fz instanceof Float32Array) && !(Fz instanceof Uint16Array)) return oz.e.Warn("Baked vertex animation bounding info requires CPU-readable Float32Array or Uint16Array texture data.", 1), !1;
+      const Zz = pz.getSize(),
+        Rz = function(zz, uz) {
+          const bz = zz.y - zz.x + 1,
+            Ez = uz * zz.w / bz,
+            nz = Ez < 1 ? 0 : 1,
+            iz = bz - nz;
+          let lz = Jz(Ez - Math.floor(Ez), 1) * iz;
+          return lz = Jz(lz + zz.z, iz), Math.floor(lz) + zz.x + nz
+        }(Ez, bz.time);
+      if (!isFinite(Rz) || Rz < 0 || Rz >= Zz.height) return oz.e.Warn("Baked vertex animation bounding info could not be refreshed because the computed frame is outside the texture.", 1), !1;
+      const Kz = iz.l.ER[0],
+        wz = iz.l.Matrix[0],
+        Xz = iz.l.Matrix[1],
+        fz = Rz * Zz.width * 4,
+        sz = uz === lz.j.NormalKind ? iz.n.TransformNormalFromFloatsToRef : iz.n.TransformCoordinatesFromFloatsToRef;
+      for (let iz = 0, lz = 0; iz < zz.length; iz += 3, lz += 4) {
+        let uz, bz;
+        for (wz.reset(), uz = 0; uz < 4 && uz < Oz; uz++) bz = Mz[lz + uz], bz > 0 && (Az(Fz, fz + 16 * Math.floor(nz[lz + uz]), Xz), Xz.scaleAndAddToRef(bz, wz));
+        if (tz && Hz)
+          for (uz = 0; uz < 4 && uz + 4 < Oz; uz++) bz = Hz[lz + uz], bz > 0 && (Az(Fz, fz + 16 * Math.floor(tz[lz + uz]), Xz), Xz.scaleAndAddToRef(bz, wz));
+        sz(zz[iz], zz[iz + 1], zz[iz + 2], wz, Kz), Kz.toArray(zz, iz)
+      }
+      return !0
+    }
+    class Lz {
+      constructor() {
+        this.facetNb = 0, this.partitioningSubdivisions = 10, this.partitioningBBoxRatio = 1.01, this.facetDataEnabled = !1, this.facetParameters = {}, this.bbSize = iz.n.Zero(), this.subDiv = {
+          max: 1,
+          X: 1,
+          Y: 1,
+          Z: 1
+        }, this.facetDepthSort = !1, this.facetDepthSortEnabled = !1
+      }
+    }
+    class Pz {
+      constructor() {
+        this._hasVertexAlpha = !1, this._useVertexColors = !0, this._numBoneInfluencers = 4, this._applyFog = !0, this._receiveShadows = !1, this._facetData = new Lz, this._visibility = 1, this._skeleton = null, this._layerMask = 268435455, this._computeBonesUsingShaders = !0, this._isActive = !1, this._onlyForInstances = !1, this._isActiveIntermediate = !1, this._onlyForInstancesIntermediate = !1, this._actAsRegularMesh = !1, this._currentLOD = new Map, this._collisionRetryCount = 3, this._morphTargetManager = null, this._renderingGroupId = 0, this._meshBlendingTag = 0, this._bakedVertexAnimationManager = null, this._material = null, this._positions = null, this._pointerOverDisableMeshTesting = !1, this._meshCollisionData = new dz, this._enableDistantPicking = !1, this._rawBoundingInfo = null, this._sideOrientationHint = !1, this._wasActiveLastFrame = !1
+      }
+    }
+    let Gz = (() => {
+        var zz;
+        let uz, dz = tz.g,
+          Fz = [];
+        return zz = class extends dz {
+          static get BILLBOARDMODE_NONE() {
+            return tz.g.BILLBOARDMODE_NONE
+          }
+          static get BILLBOARDMODE_X() {
+            return tz.g.BILLBOARDMODE_X
+          }
+          static get BILLBOARDMODE_Y() {
+            return tz.g.BILLBOARDMODE_Y
+          }
+          static get BILLBOARDMODE_Z() {
+            return tz.g.BILLBOARDMODE_Z
+          }
+          static get BILLBOARDMODE_ALL() {
+            return tz.g.BILLBOARDMODE_ALL
+          }
+          static get BILLBOARDMODE_USE_POSITION() {
+            return tz.g.BILLBOARDMODE_USE_POSITION
+          }
+          get facetNb() {
+            return this._internalAbstractMeshDataInfo._facetData.facetNb
+          }
+          get partitioningSubdivisions() {
+            return this._internalAbstractMeshDataInfo._facetData.partitioningSubdivisions
+          }
+          set partitioningSubdivisions(zz) {
+            this._internalAbstractMeshDataInfo._facetData.partitioningSubdivisions = zz
+          }
+          get partitioningBBoxRatio() {
+            return this._internalAbstractMeshDataInfo._facetData.partitioningBBoxRatio
+          }
+          set partitioningBBoxRatio(zz) {
+            this._internalAbstractMeshDataInfo._facetData.partitioningBBoxRatio = zz
+          }
+          get mustDepthSortFacets() {
+            return this._internalAbstractMeshDataInfo._facetData.facetDepthSort
+          }
+          set mustDepthSortFacets(zz) {
+            this._internalAbstractMeshDataInfo._facetData.facetDepthSort = zz
+          }
+          get facetDepthSortFrom() {
+            return this._internalAbstractMeshDataInfo._facetData.facetDepthSortFrom
+          }
+          set facetDepthSortFrom(zz) {
+            this._internalAbstractMeshDataInfo._facetData.facetDepthSortFrom = zz
+          }
+          get collisionRetryCount() {
+            return this._internalAbstractMeshDataInfo._collisionRetryCount
+          }
+          set collisionRetryCount(zz) {
+            this._internalAbstractMeshDataInfo._collisionRetryCount = zz
+          }
+          get isFacetDataEnabled() {
+            return this._internalAbstractMeshDataInfo._facetData.facetDataEnabled
+          }
+          get morphTargetManager() {
+            return this._internalAbstractMeshDataInfo._morphTargetManager
+          }
+          set morphTargetManager(zz) {
+            this._internalAbstractMeshDataInfo._morphTargetManager !== zz && (this._internalAbstractMeshDataInfo._morphTargetManager = zz, this._syncGeometryWithMorphTargetManager())
+          }
+          get bakedVertexAnimationManager() {
+            return this._internalAbstractMeshDataInfo._bakedVertexAnimationManager
+          }
+          set bakedVertexAnimationManager(zz) {
+            this._internalAbstractMeshDataInfo._bakedVertexAnimationManager !== zz && (this._internalAbstractMeshDataInfo._bakedVertexAnimationManager = zz, this._markSubMeshesAsAttributesDirty())
+          }
+          _syncGeometryWithMorphTargetManager() {}
+          _updateNonUniformScalingState(zz) {
+            return !!super._updateNonUniformScalingState(zz) && (this._markSubMeshesAsMiscDirty(), !0)
+          }
+          get rawBoundingInfo() {
+            return this._internalAbstractMeshDataInfo._rawBoundingInfo
+          }
+          set rawBoundingInfo(zz) {
+            this._internalAbstractMeshDataInfo._rawBoundingInfo = zz
+          }
+          set Ud(zz) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver && this.onCollideObservable.remove(this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver), this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver = this.onCollideObservable.add(zz)
+          }
+          set onCollisionPositionChange(zz) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver && this.onCollisionPositionChangeObservable.remove(this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver), this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver = this.onCollisionPositionChangeObservable.add(zz)
+          }
+          get visibility() {
+            return this._internalAbstractMeshDataInfo._visibility
+          }
+          set visibility(zz) {
+            if (this._internalAbstractMeshDataInfo._visibility === zz) return;
+            const uz = this._internalAbstractMeshDataInfo._visibility;
+            this._internalAbstractMeshDataInfo._visibility = zz, (1 === uz && 1 !== zz || 1 !== uz && 1 === zz) && this._markSubMeshesAsDirty((zz => {
+              zz.markAsMiscDirty(), zz.markAsPrePassDirty()
+            }))
+          }
+          get pointerOverDisableMeshTesting() {
+            return this._internalAbstractMeshDataInfo._pointerOverDisableMeshTesting
+          }
+          set pointerOverDisableMeshTesting(zz) {
+            this._internalAbstractMeshDataInfo._pointerOverDisableMeshTesting = zz
+          }
+          get renderingGroupId() {
+            return this._internalAbstractMeshDataInfo._renderingGroupId
+          }
+          set renderingGroupId(zz) {
+            this._internalAbstractMeshDataInfo._renderingGroupId = zz
+          }
+          get meshBlendingTag() {
+            return this._internalAbstractMeshDataInfo._meshBlendingTag
+          }
+          set meshBlendingTag(zz) {
+            if (!Number.isInteger(zz) || zz < 0 || zz > 255 || 0 !== zz && 0 === (63 & zz)) throw new RangeError("Mesh-blending tag must be 0 or contain a group ID between 1 and 63.");
+            this._internalAbstractMeshDataInfo._meshBlendingTag = zz
+          }
+          get material() {
+            return this._internalAbstractMeshDataInfo._material
+          }
+          set material(zz) {
+            this._setMaterial(zz)
+          }
+          _setMaterial(zz) {
+            this._internalAbstractMeshDataInfo._material !== zz && (this._internalAbstractMeshDataInfo._material && this._internalAbstractMeshDataInfo._material.meshMap && (this._internalAbstractMeshDataInfo._material.meshMap[this.uniqueId] = void 0), this._internalAbstractMeshDataInfo._material = zz, zz && zz.meshMap && (zz.meshMap[this.uniqueId] = this), this.onMaterialChangedObservable.hasObservers() && this.onMaterialChangedObservable.notifyObservers(this), this.hN && (this.resetDrawCache(void 0, null == zz), this._unBindEffect()))
+          }
+          getMaterialForRenderPass(zz) {
+            return this._internalAbstractMeshDataInfo._materialForRenderPass?.[zz]
+          }
+          setMaterialForRenderPass(zz, uz) {
+            this.resetDrawCache(zz), this._internalAbstractMeshDataInfo._materialForRenderPass || (this._internalAbstractMeshDataInfo._materialForRenderPass = []);
+            const bz = this._internalAbstractMeshDataInfo._materialForRenderPass[zz];
+            bz?.meshMap?.[this.uniqueId] && (bz.meshMap[this.uniqueId] = void 0), this._internalAbstractMeshDataInfo._materialForRenderPass[zz] = uz, uz && uz.meshMap && (uz.meshMap[this.uniqueId] = this)
+          }
+          get receiveShadows() {
+            return this._internalAbstractMeshDataInfo._receiveShadows
+          }
+          set receiveShadows(zz) {
+            this._internalAbstractMeshDataInfo._receiveShadows !== zz && (this._internalAbstractMeshDataInfo._receiveShadows = zz, this._markSubMeshesAsLightDirty())
+          }
+          get hasVertexAlpha() {
+            return this._internalAbstractMeshDataInfo._hasVertexAlpha
+          }
+          set hasVertexAlpha(zz) {
+            this._internalAbstractMeshDataInfo._hasVertexAlpha !== zz && (this._internalAbstractMeshDataInfo._hasVertexAlpha = zz, this._markSubMeshesAsAttributesDirty(), this._markSubMeshesAsMiscDirty())
+          }
+          get useVertexColors() {
+            return this._internalAbstractMeshDataInfo._useVertexColors
+          }
+          set useVertexColors(zz) {
+            this._internalAbstractMeshDataInfo._useVertexColors !== zz && (this._internalAbstractMeshDataInfo._useVertexColors = zz, this._markSubMeshesAsAttributesDirty())
+          }
+          get computeBonesUsingShaders() {
+            return this._internalAbstractMeshDataInfo._computeBonesUsingShaders
+          }
+          set computeBonesUsingShaders(zz) {
+            this._internalAbstractMeshDataInfo._computeBonesUsingShaders !== zz && (this._internalAbstractMeshDataInfo._computeBonesUsingShaders = zz, this._markSubMeshesAsAttributesDirty())
+          }
+          get numBoneInfluencers() {
+            return this._internalAbstractMeshDataInfo._numBoneInfluencers
+          }
+          set numBoneInfluencers(zz) {
+            this._internalAbstractMeshDataInfo._numBoneInfluencers !== zz && (this._internalAbstractMeshDataInfo._numBoneInfluencers = zz, this._markSubMeshesAsAttributesDirty())
+          }
+          get applyFog() {
+            return this._internalAbstractMeshDataInfo._applyFog
+          }
+          set applyFog(zz) {
+            this._internalAbstractMeshDataInfo._applyFog !== zz && (this._internalAbstractMeshDataInfo._applyFog = zz, this._markSubMeshesAsMiscDirty())
+          }
+          get enableDistantPicking() {
+            return this._internalAbstractMeshDataInfo._enableDistantPicking
+          }
+          set enableDistantPicking(zz) {
+            this._internalAbstractMeshDataInfo._enableDistantPicking = zz
+          }
+          get layerMask() {
+            return this._internalAbstractMeshDataInfo._layerMask
+          }
+          set layerMask(zz) {
+            zz !== this._internalAbstractMeshDataInfo._layerMask && (this._internalAbstractMeshDataInfo._layerMask = zz, this._resyncLightSources())
+          }
+          get collisionMask() {
+            return this._internalAbstractMeshDataInfo._meshCollisionData._collisionMask
+          }
+          set collisionMask(zz) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._collisionMask = isNaN(zz) ? -1 : zz
+          }
+          get collisionResponse() {
+            return this._internalAbstractMeshDataInfo._meshCollisionData._collisionResponse
+          }
+          set collisionResponse(zz) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._collisionResponse = zz
+          }
+          get collisionGroup() {
+            return this._internalAbstractMeshDataInfo._meshCollisionData._collisionGroup
+          }
+          set collisionGroup(zz) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._collisionGroup = isNaN(zz) ? -1 : zz
+          }
+          get surroundingMeshes() {
+            return this._internalAbstractMeshDataInfo._meshCollisionData._surroundingMeshes
+          }
+          set surroundingMeshes(zz) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._surroundingMeshes = zz
+          }
+          get lightSources() {
+            return this._lightSources
+          }
+          set skeleton(zz) {
+            const uz = this._internalAbstractMeshDataInfo._skeleton;
+            uz && uz.needInitialSkinMatrix && uz._unregisterMeshWithPoseMatrix(this), zz && zz.needInitialSkinMatrix && zz._registerMeshWithPoseMatrix(this), this._internalAbstractMeshDataInfo._skeleton = zz, this._internalAbstractMeshDataInfo._skeleton || (this._bonesTransformMatrices = null), this._markSubMeshesAsAttributesDirty()
+          }
+          get skeleton() {
+            return this._internalAbstractMeshDataInfo._skeleton
+          }
+          constructor(uz) {
+            var bz;
+            let Ez = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            switch (super(uz, Ez, !1), bz = this, this._internalAbstractMeshDataInfo = new Pz, this._waitingMaterialId = null, this._waitingMorphTargetManagerId = null, this._waitingSkeletonId = null, this._waitingSkeletonUniqueId = null, this.cullingStrategy = zz.CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY, this.onCollideObservable = new nz.b, this.onCollisionPositionChangeObservable = new nz.b, this.onMaterialChangedObservable = new nz.b, this.definedFacingForward = !0, this._occlusionQuery = null, this._renderingGroup = null, this.alphaIndex = Number.MAX_VALUE, this.pK = zz.DefaultIsPickable, this.isNearPickable = !1, this.isNearGrabbable = !1, this.showSubMeshesBoundingBox = !1, this.isBlocker = !1, this.enablePointerMoveEvents = !1, this.outlineColor = fz.c.Red(), this.outlineWidth = .02, this.overlayColor = fz.c.Red(), this.overlayAlpha = .5, this.useOctreeForRenderingSelection = !0, this.useOctreeForPicking = !0, this.useOctreeForCollisions = !0, this.bR = !1, this.iR = !1, this.actionManager = null, this.ellipsoid = new iz.n(.5, 1, .5), this.ellipsoidOffset = new iz.n(0, 0, 0), this.edgesWidth = 1, this.edgesColor = new fz.g(1, 0, 0, 1), this._edgesRenderer = null, this._masterMesh = null, this._boundingInfo = null, this._boundingInfoIsDirty = !0, this._renderId = 0, this._intersectionsInProgress = new Array, this._unIndexed = !1, this._lightSources = new Array, this._waitingData = {
+                lods: null,
+                actions: null,
+                jT: null
+              }, this._bonesTransformMatrices = null, this._transformMatrixTexture = null, this.onRebuildObservable = new nz.b, this._onCollisionPositionChange = function(zz, uz) {
+                let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+                uz.subtractToRef(bz._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions, bz._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions), bz._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions.length() > vz.b.CollisionsEpsilon && bz.position.addInPlace(bz._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions), Ez && bz.onCollideObservable.notifyObservers(Ez), bz.onCollisionPositionChangeObservable.notifyObservers(bz.position)
+              }, Ez = this.XT(), this.layerMask = Ez.defaultRenderableLayerMask, Ez.vbz(this), this._resyncLightSources(), this._uniformBuffer = new pz.b(this.XT().uR(), void 0, void 0, uz, !this.XT().uR().isWebGPU), this._buildUniformLayout(), Ez.performancePriority) {
+              case 2:
+                this.iR = !0;
+              case 1:
+                this.bR = !0, this.pK = !1
+            }
+          }
+          _buildUniformLayout() {
+            this._uniformBuffer.addUniform("world", 16), this._uniformBuffer.addUniform("visibility", 1), this._uniformBuffer.create()
+          }
+          transferToEffect(zz) {
+            const uz = this._uniformBuffer;
+            uz.M_("world", zz), uz.updateFloat("visibility", this._internalAbstractMeshDataInfo._visibility), uz.update()
+          }
+          getMeshUniformBuffer() {
+            return this._uniformBuffer
+          }
+          get _isGaussianSplatting() {
+            return !1
+          }
+          getClassName() {
+            return "AbstractMesh"
+          }
+          toString(zz) {
+            let uz = "Name: " + this.name + ", isInstance: " + ("InstancedMesh" === this.getClassName() ? "YES" : "NO");
+            uz += ", # of submeshes: " + (this.hN ? this.hN.length : 0);
+            const bz = this._internalAbstractMeshDataInfo._skeleton;
+            return bz && (uz += ", skeleton: " + bz.name), zz && (uz += ", billboard mode: " + ["NONE", "X", "Y", null, "Z", null, null, "ALL"][this.billboardMode], uz += ", freeze wrld mat: " + (this._isWorldMatrixFrozen || this._waitingData.jT ? "YES" : "NO")), uz
+          }
+          _getEffectiveParent() {
+            return this._masterMesh && this.billboardMode !== tz.g.BILLBOARDMODE_NONE ? this._masterMesh : super._getEffectiveParent()
+          }
+          _getActionManagerForTrigger(zz) {
+            let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+            if (this.actionManager && (uz || this.actionManager.isRecursive)) {
+              if (!zz) return this.actionManager;
+              if (this.actionManager.hasSpecificTrigger(zz)) return this.actionManager
+            }
+            return this.parent ? this.parent._getActionManagerForTrigger(zz, !1) : null
+          }
+          _releaseRenderPassId(zz) {}
+          _rebuild() {
+            if (this.onRebuildObservable.notifyObservers(this), null !== this._occlusionQuery && (this._occlusionQuery = null), this.hN) {
+              for (const zz of this.hN) zz._rebuild();
+              this.resetDrawCache()
+            }
+          }
+          _resyncLightSources() {
+            this._lightSources.length = 0;
+            for (const zz of this.XT().lights) zz.isEnabled() && zz.canAffectMesh(this) && this._lightSources.push(zz);
+            this._markSubMeshesAsLightDirty()
+          }
+          _resyncLightSource(zz) {
+            const uz = zz.isEnabled() && zz.canAffectMesh(this),
+              bz = this._lightSources.indexOf(zz);
+            let Ez = !1;
+            if (-1 === bz) {
+              if (!uz) return;
+              this._lightSources.push(zz)
+            } else {
+              if (uz) return;
+              Ez = !0, this._lightSources.splice(bz, 1)
+            }
+            this._markSubMeshesAsLightDirty(Ez)
+          }
+          _unBindEffect() {
+            for (const zz of this.hN) zz.setEffect(null)
+          }
+          _removeLightSource(zz, uz) {
+            const bz = this._lightSources.indexOf(zz); - 1 !== bz && (this._lightSources.splice(bz, 1), this._markSubMeshesAsLightDirty(uz))
+          }
+          _markSubMeshesAsDirty(zz) {
+            if (this.hN)
+              for (const uz of this.hN)
+                for (let bz = 0; bz < uz._drawWrappers.length; ++bz) {
+                  const Ez = uz._drawWrappers[bz];
+                  Ez && Ez.defines && Ez.defines.markAllAsDirty && zz(Ez.defines)
+                }
+          }
+          _markSubMeshesAsLightDirty() {
+            let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            this._markSubMeshesAsDirty((uz => uz.markAsLightDirty(zz)))
+          }
+          _markSubMeshesAsAttributesDirty() {
+            this._markSubMeshesAsDirty((zz => zz.markAsAttributesDirty()))
+          }
+          _markSubMeshesAsMiscDirty() {
+            this._markSubMeshesAsDirty((zz => zz.markAsMiscDirty()))
+          }
+          zuz(zz) {
+            return this._currentRenderId = Number.MAX_VALUE, super.zuz(zz), this._isDirty = !0, this
+          }
+          resetDrawCache(zz) {
+            let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (this.hN)
+              for (const bz of this.hN) bz.resetDrawCache(zz, uz)
+          }
+          get isBlocked() {
+            return !1
+          }
+          getLOD(zz) {
+            return this
+          }
+          getTotalVertices() {
+            return 0
+          }
+          getTotalIndices() {
+            return 0
+          }
+          Nbz() {
+            return null
+          }
+          getVerticesData(zz) {
+            return null
+          }
+          setVerticesData(zz, uz, bz, Ez) {
+            return this
+          }
+          updateVerticesData(zz, uz, bz, Ez) {
+            return this
+          }
+          setIndices(zz, uz) {
+            return this
+          }
+          isVerticesDataPresent(zz) {
+            return !1
+          }
+          lG() {
+            return this._masterMesh ? this._masterMesh.lG() : (this._boundingInfoIsDirty && (this._boundingInfoIsDirty = !1, this._updateBoundingInfo()), this._boundingInfo)
+          }
+          getRawBoundingInfo() {
+            return this.rawBoundingInfo ?? this.lG()
+          }
+          setBoundingInfo(zz) {
+            return this._boundingInfo = zz, this
+          }
+          get hasBoundingInfo() {
+            return null !== this._boundingInfo
+          }
+          buildBoundingInfo(zz, uz, bz) {
+            return this._boundingInfo = new Oz.e(zz, uz, bz), this._boundingInfo
+          }
+          normalizeToUnitCube() {
+            let zz = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+              uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              bz = arguments.length > 2 ? arguments[2] : void 0;
+            return super.normalizeToUnitCube(zz, uz, bz)
+          }
+          get useBones() {
+            return this.skeleton && this.XT().skeletonsEnabled && this.isVerticesDataPresent(lz.j.MatricesIndicesKind) && this.isVerticesDataPresent(lz.j.MatricesWeightsKind)
+          }
+          _preActivate() {}
+          _preActivateForIntermediateRendering(zz) {}
+          _activate(zz, uz) {
+            return this._renderId = zz, !0
+          }
+          _postActivate() {}
+          _freeze() {}
+          _unFreeze() {}
+          getWorldMatrix() {
+            return this._masterMesh && this.billboardMode === tz.g.BILLBOARDMODE_NONE ? this._masterMesh.getWorldMatrix() : super.getWorldMatrix()
+          }
+          _getWorldMatrixDeterminant() {
+            return this._masterMesh ? this._masterMesh._getWorldMatrixDeterminant() : super._getWorldMatrixDeterminant()
+          }
+          get qT() {
+            return !1
+          }
+          get KEz() {
+            return !1
+          }
+          get hasThinInstances() {
+            return !1
+          }
+          movePOV(zz, uz, bz) {
+            return this.position.addInPlace(this.calcMovePOV(zz, uz, bz)), this
+          }
+          calcMovePOV(zz, uz, bz) {
+            const Ez = new iz.d;
+            (this.rotationQuaternion ? this.rotationQuaternion : iz.h.RotationYawPitchRoll(this.rotation.y, this.rotation.x, this.rotation.z)).toRotationMatrix(Ez);
+            const nz = iz.n.Zero(),
+              lz = this.definedFacingForward ? -1 : 1;
+            return iz.n.TransformCoordinatesFromFloatsToRef(zz * lz, uz, bz * lz, Ez, nz), nz
+          }
+          rotatePOV(zz, uz, bz) {
+            return this.rotation.addInPlace(this.calcRotatePOV(zz, uz, bz)), this
+          }
+          calcRotatePOV(zz, uz, bz) {
+            const Ez = this.definedFacingForward ? 1 : -1;
+            return new iz.n(zz * Ez, uz, bz * Ez)
+          }
+          _refreshBoundingInfo(zz, uz) {
+            if (zz) {
+              const bz = (0, Xz.c)(zz, 0, this.getTotalVertices(), uz);
+              this._boundingInfo ? this._boundingInfo.reConstruct(bz.minimum, bz.maximum) : this._boundingInfo = new Oz.e(bz.minimum, bz.maximum)
+            }
+            if (this.hN)
+              for (let bz = 0; bz < this.hN.length; bz++) this.hN[bz].refreshBoundingInfo(zz);
+            this._updateBoundingInfo()
+          }
+          _refreshBoundingInfoDirect(zz) {
+            if (this._boundingInfo ? this._boundingInfo.reConstruct(zz.minimum, zz.maximum) : this._boundingInfo = new Oz.e(zz.minimum, zz.maximum), this.hN)
+              for (let uz = 0; uz < this.hN.length; uz++) this.hN[uz].refreshBoundingInfo(null);
+            this._updateBoundingInfo()
+          }
+          static _ApplySkeleton(zz, uz, bz, Ez, nz, Mz, tz) {
+            ! function(zz, uz, bz, Ez, nz, Mz, tz) {
+              const Hz = iz.l.ER[0],
+                Oz = iz.l.Matrix[0],
+                pz = iz.l.Matrix[1],
+                dz = uz === lz.j.NormalKind ? iz.n.TransformNormalFromFloatsToRef : iz.n.TransformCoordinatesFromFloatsToRef;
+              for (let lz = 0, Fz = 0; lz < zz.length; lz += 3, Fz += 4) {
+                let uz, Zz;
+                for (Oz.reset(), uz = 0; uz < 4; uz++) Zz = nz[Fz + uz], Zz > 0 && (iz.d.FromFloat32ArrayToRefScaled(bz, Math.floor(16 * Ez[Fz + uz]), Zz, pz), Oz.addToSelf(pz));
+                if (Mz && tz)
+                  for (uz = 0; uz < 4; uz++) Zz = tz[Fz + uz], Zz > 0 && (iz.d.FromFloat32ArrayToRefScaled(bz, Math.floor(16 * Mz[Fz + uz]), Zz, pz), Oz.addToSelf(pz));
+                dz(zz[lz], zz[lz + 1], zz[lz + 2], Oz, Hz), Hz.toArray(zz, lz)
+              }
+            }(zz, uz, bz, Ez, nz, Mz, tz)
+          }
+          _getData(uz, bz) {
+            let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : lz.j.PositionKind;
+            const nz = uz.cache,
+              Mz = zz => {
+                if (nz) {
+                  const uz = nz._vertexData || (nz._vertexData = {});
+                  return uz[zz] || this.copyVerticesData(zz, uz), uz[zz]
+                }
+                return this.getVerticesData(zz)
+              };
+            if (bz || (bz = Mz(Ez)), !bz) return null;
+            nz ? (nz._outputData ? nz._outputData.set(bz) : nz._outputData = new Float32Array(bz), bz = nz._outputData) : (uz.applyMorph && this.morphTargetManager || uz.applySkeleton && this.skeleton || uz.applyBakedVertexAnimation && this.bakedVertexAnimationManager?.isEnabled) && (bz = bz.slice()), uz.applyMorph && this.morphTargetManager && function(zz, uz, bz) {
+              let Ez;
+              switch (uz) {
+                case lz.j.PositionKind:
+                  Ez = zz => zz.getPositions();
+                  break;
+                case lz.j.NormalKind:
+                  Ez = zz => zz.getNormals();
+                  break;
+                case lz.j.TangentKind:
+                  Ez = zz => zz.getTangents();
+                  break;
+                case lz.j.UVKind:
+                  Ez = zz => zz.getUVs();
+                  break;
+                case lz.j.UV2Kind:
+                  Ez = zz => zz.getUV2s();
+                  break;
+                case lz.j.ColorKind:
+                  Ez = zz => zz.getColors();
+                  break;
+                default:
+                  return
+              }
+              for (let nz = 0; nz < zz.length; nz++) {
+                let uz = zz[nz];
+                for (let iz = 0; iz < bz.numTargets; iz++) {
+                  const lz = bz.getTarget(iz),
+                    Mz = lz.influence;
+                  if (0 !== Mz) {
+                    const bz = Ez(lz);
+                    bz && (uz += (bz[nz] - zz[nz]) * Mz)
+                  }
+                }
+                zz[nz] = uz
+              }
+            }(bz, Ez, this.morphTargetManager);
+            const tz = this.bakedVertexAnimationManager;
+            let Hz = !1;
+            if (uz.applyBakedVertexAnimation && tz?.isEnabled) {
+              const zz = Mz(lz.j.MatricesIndicesKind),
+                nz = Mz(lz.j.MatricesWeightsKind);
+              if (nz && zz) {
+                const iz = this.numBoneInfluencers > 4,
+                  Oz = iz ? Mz(lz.j.MatricesIndicesExtraKind) : null,
+                  pz = iz ? Mz(lz.j.MatricesWeightsExtraKind) : null;
+                Hz = Tz(bz, Ez, tz, uz.bakedVertexAnimationSettings ?? tz.animationParameters, zz, nz, Oz, pz, this.numBoneInfluencers)
+              }
+            }
+            if (!Hz && uz.applySkeleton && this.skeleton) {
+              const uz = Mz(lz.j.MatricesIndicesKind),
+                nz = Mz(lz.j.MatricesWeightsKind);
+              if (nz && uz) {
+                const iz = this.numBoneInfluencers > 4,
+                  tz = iz ? Mz(lz.j.MatricesIndicesExtraKind) : null,
+                  Hz = iz ? Mz(lz.j.MatricesWeightsExtraKind) : null,
+                  Oz = this.skeleton.getTransformMatrices(this);
+                zz._ApplySkeleton(bz, Ez, Oz, uz, nz, tz, Hz)
+              }
+            }
+            if (!1 !== uz.updatePositionsArray && Ez === lz.j.PositionKind) {
+              const zz = this._internalAbstractMeshDataInfo._positions || [],
+                uz = zz.length;
+              if (zz.length = bz.length / 3, uz < zz.length)
+                for (let bz = uz; bz < zz.length; bz++) zz[bz] = new iz.n;
+              for (let Ez = 0, nz = 0; Ez < zz.length; Ez++, nz += 3) zz[Ez].P_(bz[nz], bz[nz + 1], bz[nz + 2]);
+              this._internalAbstractMeshDataInfo._positions = zz
+            }
+            return bz
+          }
+          getNormalsData() {
+            let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+              uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            return this._getData({
+              applySkeleton: zz,
+              applyMorph: uz,
+              updatePositionsArray: !1
+            }, null, lz.j.NormalKind)
+          }
+          Iy() {
+            let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+              uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+            return this._getData({
+              applySkeleton: zz,
+              applyMorph: uz,
+              updatePositionsArray: !1
+            }, bz, lz.j.PositionKind)
+          }
+          _updateBoundingInfo() {
+            return this._boundingInfo ? this._boundingInfo.update(this.worldMatrixFromCache) : this._boundingInfo = new Oz.e(iz.n.Zero(), iz.n.Zero(), this.worldMatrixFromCache), this._updateSubMeshesBoundingInfo(this.worldMatrixFromCache), this
+          }
+          _updateSubMeshesBoundingInfo(zz) {
+            if (!this.hN) return this;
+            const uz = this.hN.length;
+            for (let bz = 0; bz < uz; bz++) {
+              const Ez = this.hN[bz];
+              (uz > 1 || !Ez.IsGlobal) && Ez.updateBoundingInfo(zz)
+            }
+            return this
+          }
+          _afterComputeWorldMatrix() {
+            this.iR || (this._boundingInfoIsDirty = !0)
+          }
+          isInFrustum(zz) {
+            return this.lG().isInFrustum(zz, this.cullingStrategy)
+          }
+          isCompletelyInFrustum(zz) {
+            return this.lG().isCompletelyInFrustum(zz)
+          }
+          OEz(zz) {
+            let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              bz = arguments.length > 2 ? arguments[2] : void 0;
+            const Ez = this.lG(),
+              nz = zz.lG();
+            if (Ez.intersects(nz, uz)) return !0;
+            if (bz)
+              for (const iz of this.getChildMeshes())
+                if (iz.OEz(zz, uz, !0)) return !0;
+            return !1
+          }
+          intersectsPoint(zz) {
+            return this.lG().intersectsPoint(zz)
+          }
+          get checkCollisions() {
+            return this._internalAbstractMeshDataInfo._meshCollisionData._checkCollisions
+          }
+          set checkCollisions(zz) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._checkCollisions = zz
+          }
+          get collider() {
+            return this._internalAbstractMeshDataInfo._meshCollisionData._collider
+          }
+          moveWithCollisions(zz) {
+            let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+            this.getAbsolutePosition().addToRef(this.ellipsoidOffset, this._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions);
+            const bz = this.XT().collisionCoordinator;
+            return this._internalAbstractMeshDataInfo._meshCollisionData._collider || (this._internalAbstractMeshDataInfo._meshCollisionData._collider = bz.createCollider()), this._internalAbstractMeshDataInfo._meshCollisionData._collider._radius = this.ellipsoid, bz.getNewPosition(this._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions, zz, this._internalAbstractMeshDataInfo._meshCollisionData._collider, this.collisionRetryCount, this, this._onCollisionPositionChange, this.uniqueId, uz), this
+          }
+          _collideForSubMesh(zz, uz, bz) {
+            if (this._generatePointsArray(), !this._positions) return this;
+            if (!zz._lastColliderWorldVertices || !zz._lastColliderTransformMatrix.equals(uz)) {
+              zz._lastColliderTransformMatrix = uz.clone(), zz._lastColliderWorldVertices = [], zz._trianglePlanes = [];
+              const bz = zz.verticesStart,
+                Ez = zz.verticesStart + zz.verticesCount;
+              for (let nz = bz; nz < Ez; nz++) zz._lastColliderWorldVertices.push(iz.n.TransformCoordinates(this._positions[nz], uz))
+            }
+            return bz._collide(zz._trianglePlanes, zz._lastColliderWorldVertices, this.Nbz(), zz.indexStart, zz.indexStart + zz.indexCount, zz.verticesStart, !!zz.lR(), this, this._shouldConvertRHS(), 7 === zz.lR()?.fillMode), this
+          }
+          _processCollisionsForSubMeshes(zz, uz) {
+            const bz = this._scene.getCollidingSubMeshCandidates(this, zz),
+              Ez = bz.length;
+            for (let nz = 0; nz < Ez; nz++) {
+              const iz = bz.data[nz];
+              Ez > 1 && !iz._checkCollision(zz) || this._collideForSubMesh(iz, uz, zz)
+            }
+            return this
+          }
+          _shouldConvertRHS() {
+            return !1
+          }
+          _checkCollision(zz) {
+            if (!this.lG()._checkCollision(zz)) return this;
+            const uz = iz.l.Matrix[0],
+              bz = iz.l.Matrix[1];
+            return iz.d.ScalingToRef(1 / zz._radius.x, 1 / zz._radius.y, 1 / zz._radius.z, uz), this.worldMatrixFromCache.multiplyToRef(uz, bz), this._processCollisionsForSubMeshes(zz, bz), this
+          }
+          _generatePointsArray() {
+            return !1
+          }
+          intersects(zz, uz, bz) {
+            let Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              nz = arguments.length > 4 ? arguments[4] : void 0,
+              lz = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+            const Mz = new Hz.c,
+              tz = this.getClassName(),
+              Oz = "InstancedLinesMesh" === tz || "LinesMesh" === tz || "GreasedLineMesh" === tz ? this.intersectionThreshold : 0,
+              pz = this.lG();
+            if (!this.hN) return Mz;
+            if (!lz && (!zz.intersectsSphere(pz.Ibz, Oz) || !zz.intersectsBox(pz.boundingBox, Oz))) return Mz;
+            if (Ez) return Mz.hit = !lz, Mz.pickedMesh = lz ? null : this, Mz.distance = lz ? 0 : iz.n.Distance(zz.origin, pz.Ibz.center), Mz.subMeshId = 0, Mz;
+            if (!this._generatePointsArray()) return Mz;
+            let dz = null;
+            const Fz = this._scene.getIntersectingSubMeshCandidates(this, zz),
+              Zz = Fz.length;
+            let Rz = !1;
+            for (let iz = 0; iz < Zz; iz++) {
+              const zz = Fz.data[iz].lR();
+              if (zz && (7 == zz.fillMode || 0 == zz.fillMode || 1 == zz.fillMode || 2 == zz.fillMode || 4 == zz.fillMode)) {
+                Rz = !0;
+                break
+              }
+            }
+            if (!Rz) return Mz.hit = !0, Mz.pickedMesh = this, Mz.distance = iz.n.Distance(zz.origin, pz.Ibz.center), Mz.subMeshId = -1, Mz;
+            for (let iz = 0; iz < Zz; iz++) {
+              const Ez = Fz.data[iz];
+              if (Zz > 1 && !lz && !Ez.canIntersects(zz)) continue;
+              const nz = Ez.intersects(zz, this._positions, this.Nbz(), uz, bz);
+              if (nz && (uz || !dz || nz.distance < dz.distance) && (dz = nz, dz.subMeshId = Ez._id, dz._internalSubMeshId = iz, uz)) break
+            }
+            if (dz) {
+              const uz = nz ?? this.getWorldMatrix(),
+                bz = iz.l.ER[0],
+                Ez = iz.l.ER[1];
+              iz.n.TransformCoordinatesToRef(zz.origin, uz, bz), zz.direction.scaleToRef(dz.distance, Ez);
+              const lz = iz.n.TransformNormal(Ez, uz).addInPlace(bz);
+              return Mz.hit = !0, Mz.distance = iz.n.Distance(bz, lz), Mz.pickedPoint = lz, Mz.pickedMesh = this, Mz.bu = dz.bu || 0, Mz.bv = dz.bv || 0, Mz.subMeshFaceId = dz.faceId, Mz.faceId = dz.faceId + Fz.data[dz._internalSubMeshId].indexStart / (-1 !== this.getClassName().indexOf("LinesMesh") ? 2 : 3), Mz.subMeshId = dz.subMeshId, Mz
+            }
+            return Mz
+          }
+          clone(zz, uz, bz) {
+            return null
+          }
+          releaseSubMeshes() {
+            let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            if (this.hN)
+              for (; this.hN.length;) this.hN[0].dispose(zz);
+            else this.hN = [];
+            return this
+          }
+          dispose(zz) {
+            let uz, bz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            const Ez = this.XT();
+            for (this._scene.useMaterialMeshMap && this._internalAbstractMeshDataInfo._material && this._internalAbstractMeshDataInfo._material.meshMap && (this._internalAbstractMeshDataInfo._material.meshMap[this.uniqueId] = void 0), Ez.freeActiveMeshes(), Ez.freeRenderingGroups(), Ez.renderingManager.maintainStateBetweenFrames && Ez.renderingManager.restoreDispachedFlags(), void 0 !== this.actionManager && null !== this.actionManager && (this.actionManager.disposeWhenUnowned && !this._scene.meshes.some((zz => zz !== this && zz.actionManager === this.actionManager)) && this.actionManager.dispose(), this.actionManager = null), this._internalAbstractMeshDataInfo._skeleton = null, this._transformMatrixTexture && (this._transformMatrixTexture.dispose(), this._transformMatrixTexture = null), uz = 0; uz < this._intersectionsInProgress.length; uz++) {
+              const zz = this._intersectionsInProgress[uz],
+                bz = zz._intersectionsInProgress.indexOf(this);
+              zz._intersectionsInProgress.splice(bz, 1)
+            }
+            this._intersectionsInProgress.length = 0;
+            const nz = Ez.lights;
+            for (const lz of nz) {
+              let zz = lz.includedOnlyMeshes.indexOf(this); - 1 !== zz && lz.includedOnlyMeshes.splice(zz, 1), zz = lz.excludedMeshes.indexOf(this), -1 !== zz && lz.excludedMeshes.splice(zz, 1);
+              const uz = lz.getShadowGenerators();
+              if (uz) {
+                const bz = uz.values();
+                for (let uz = bz.next(); !0 !== uz.done; uz = bz.next()) {
+                  const bz = uz.value.getShadowMap();
+                  bz && bz.renderList && (zz = bz.renderList.indexOf(this), -1 !== zz && bz.renderList.splice(zz, 1))
+                }
+              }
+            }
+            this.releaseSubMeshes(Ez._isDisposing);
+            const iz = Ez.uR();
+            if (null !== this._occlusionQuery && (this.isOcclusionQueryInProgress = !1, iz.deleteQuery(this._occlusionQuery), this._occlusionQuery = null), iz.wipeCaches(), Ez.lL(this), this._parentContainer) {
+              const zz = this._parentContainer.meshes.indexOf(this);
+              zz > -1 && this._parentContainer.meshes.splice(zz, 1), this._parentContainer = null
+            }
+            if (bz && this.material && ("MultiMaterial" === this.material.getClassName() ? this.material.dispose(!1, !0, !0) : this.material.dispose(!1, !0)), !zz)
+              for (uz = 0; uz < Ez.yN.length; uz++) Ez.yN[uz].emitter === this && (Ez.yN[uz].dispose(), uz--);
+            this._internalAbstractMeshDataInfo._facetData.facetDataEnabled && this.disableFacetData(), this._uniformBuffer.dispose(), this.onAfterWorldMatrixUpdateObservable.clear(), this.onCollideObservable.clear(), this.onCollisionPositionChangeObservable.clear(), this.onRebuildObservable.clear(), super.dispose(zz, bz)
+          }
+          _initFacetData() {
+            const zz = this._internalAbstractMeshDataInfo._facetData;
+            zz.facetNormals || (zz.facetNormals = []), zz.facetPositions || (zz.facetPositions = []), zz.facetPartitioning || (zz.facetPartitioning = new Array), zz.facetNb = this.Nbz().length / 3 | 0, zz.partitioningSubdivisions = zz.partitioningSubdivisions ? zz.partitioningSubdivisions : 10, zz.partitioningBBoxRatio = zz.partitioningBBoxRatio ? zz.partitioningBBoxRatio : 1.01;
+            for (let uz = 0; uz < zz.facetNb; uz++) zz.facetNormals[uz] = iz.n.Zero(), zz.facetPositions[uz] = iz.n.Zero();
+            return zz.facetDataEnabled = !0, this
+          }
+          updateFacetData() {
+            const zz = this._internalAbstractMeshDataInfo._facetData;
+            zz.facetDataEnabled || this._initFacetData();
+            const uz = this.getVerticesData(lz.j.PositionKind),
+              bz = this.Nbz(),
+              Ez = this.getVerticesData(lz.j.NormalKind)?.slice(),
+              nz = this.lG();
+            if (zz.facetDepthSort && !zz.facetDepthSortEnabled) {
+              if (zz.facetDepthSortEnabled = !0, bz instanceof Uint16Array) zz.depthSortedIndices = new Uint16Array(bz);
+              else if (bz instanceof Uint32Array) zz.depthSortedIndices = new Uint32Array(bz);
+              else {
+                let uz = !1;
+                for (let zz = 0; zz < bz.length; zz++)
+                  if (bz[zz] > 65535) {
+                    uz = !0;
+                    break
+                  } zz.depthSortedIndices = uz ? new Uint32Array(bz) : new Uint16Array(bz)
+              }
+              if (zz.facetDepthSortFunction = function(zz, uz) {
+                  return uz.sqDistance - zz.sqDistance
+                }, !zz.facetDepthSortFrom) {
+                const uz = this.XT().activeCamera;
+                zz.facetDepthSortFrom = uz ? uz.position : iz.n.Zero()
+              }
+              zz.depthSortedFacets = [];
+              for (let uz = 0; uz < zz.facetNb; uz++) {
+                const bz = {
+                  ind: 3 * uz,
+                  sqDistance: 0
+                };
+                zz.depthSortedFacets.push(bz)
+              }
+              zz.invertedMatrix = iz.d.Identity(), zz.facetDepthSortOrigin = iz.n.Zero()
+            }
+            zz.bbSize.x = nz.maximum.x - nz.minimum.x > sz.b ? nz.maximum.x - nz.minimum.x : sz.b, zz.bbSize.y = nz.maximum.y - nz.minimum.y > sz.b ? nz.maximum.y - nz.minimum.y : sz.b, zz.bbSize.z = nz.maximum.z - nz.minimum.z > sz.b ? nz.maximum.z - nz.minimum.z : sz.b;
+            let tz = zz.bbSize.x > zz.bbSize.y ? zz.bbSize.x : zz.bbSize.y;
+            if (tz = tz > zz.bbSize.z ? tz : zz.bbSize.z, zz.subDiv.max = zz.partitioningSubdivisions, zz.subDiv.X = Math.floor(zz.subDiv.max * zz.bbSize.x / tz), zz.subDiv.Y = Math.floor(zz.subDiv.max * zz.bbSize.y / tz), zz.subDiv.Z = Math.floor(zz.subDiv.max * zz.bbSize.z / tz), zz.subDiv.X = zz.subDiv.X < 1 ? 1 : zz.subDiv.X, zz.subDiv.Y = zz.subDiv.Y < 1 ? 1 : zz.subDiv.Y, zz.subDiv.Z = zz.subDiv.Z < 1 ? 1 : zz.subDiv.Z, zz.facetParameters.facetNormals = this.getFacetLocalNormals(), zz.facetParameters.facetPositions = this.getFacetLocalPositions(), zz.facetParameters.facetPartitioning = this.getFacetLocalPartitioning(), zz.facetParameters.bInfo = nz, zz.facetParameters.bbSize = zz.bbSize, zz.facetParameters.subDiv = zz.subDiv, zz.facetParameters.ratio = this.partitioningBBoxRatio, zz.facetParameters.depthSort = zz.facetDepthSort, zz.facetDepthSort && zz.facetDepthSortEnabled && (this.computeWorldMatrix(!0), this._worldMatrix.invertToRef(zz.invertedMatrix), iz.n.TransformCoordinatesToRef(zz.facetDepthSortFrom, zz.invertedMatrix, zz.facetDepthSortOrigin), zz.facetParameters.distanceTo = zz.facetDepthSortOrigin), zz.facetParameters.depthSortedFacets = zz.depthSortedFacets, Ez && Mz.b.ComputeNormals(uz, bz, Ez, zz.facetParameters), zz.facetDepthSort && zz.facetDepthSortEnabled) {
+              zz.depthSortedFacets.sort(zz.facetDepthSortFunction);
+              const uz = zz.depthSortedIndices.length / 3 | 0;
+              for (let Ez = 0; Ez < uz; Ez++) {
+                const uz = zz.depthSortedFacets[Ez].ind;
+                zz.depthSortedIndices[3 * Ez] = bz[uz], zz.depthSortedIndices[3 * Ez + 1] = bz[uz + 1], zz.depthSortedIndices[3 * Ez + 2] = bz[uz + 2]
+              }
+              this.updateIndices(zz.depthSortedIndices, void 0, !0)
+            }
+            return this
+          }
+          getFacetLocalNormals() {
+            const zz = this._internalAbstractMeshDataInfo._facetData;
+            return zz.facetNormals || this.updateFacetData(), zz.facetNormals
+          }
+          getFacetLocalPositions() {
+            const zz = this._internalAbstractMeshDataInfo._facetData;
+            return zz.facetPositions || this.updateFacetData(), zz.facetPositions
+          }
+          getFacetLocalPartitioning() {
+            const zz = this._internalAbstractMeshDataInfo._facetData;
+            return zz.facetPartitioning || this.updateFacetData(), zz.facetPartitioning
+          }
+          getFacetPosition(zz) {
+            const uz = iz.n.Zero();
+            return this.getFacetPositionToRef(zz, uz), uz
+          }
+          getFacetPositionToRef(zz, uz) {
+            const bz = this.getFacetLocalPositions()[zz],
+              Ez = this.getWorldMatrix();
+            return iz.n.TransformCoordinatesToRef(bz, Ez, uz), this
+          }
+          getFacetNormal(zz) {
+            const uz = iz.n.Zero();
+            return this.getFacetNormalToRef(zz, uz), uz
+          }
+          getFacetNormalToRef(zz, uz) {
+            const bz = this.getFacetLocalNormals()[zz];
+            return iz.n.TransformNormalToRef(bz, this.getWorldMatrix(), uz), this
+          }
+          getFacetsAtLocalCoordinates(zz, uz, bz) {
+            const Ez = this.lG(),
+              nz = this._internalAbstractMeshDataInfo._facetData,
+              iz = Math.floor((zz - Ez.minimum.x * nz.partitioningBBoxRatio) * nz.subDiv.X * nz.partitioningBBoxRatio / nz.bbSize.x),
+              lz = Math.floor((uz - Ez.minimum.y * nz.partitioningBBoxRatio) * nz.subDiv.Y * nz.partitioningBBoxRatio / nz.bbSize.y),
+              Mz = Math.floor((bz - Ez.minimum.z * nz.partitioningBBoxRatio) * nz.subDiv.Z * nz.partitioningBBoxRatio / nz.bbSize.z);
+            return iz < 0 || iz > nz.subDiv.max || lz < 0 || lz > nz.subDiv.max || Mz < 0 || Mz > nz.subDiv.max ? null : nz.facetPartitioning[iz + nz.subDiv.max * lz + nz.subDiv.max * nz.subDiv.max * Mz]
+          }
+          getClosestFacetAtCoordinates(zz, uz, bz, Ez) {
+            let nz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+              lz = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const Mz = this.getWorldMatrix(),
+              tz = iz.l.Matrix[5];
+            Mz.invertToRef(tz);
+            const Hz = iz.l.ER[8];
+            iz.n.TransformCoordinatesFromFloatsToRef(zz, uz, bz, tz, Hz);
+            const Oz = this.getClosestFacetAtLocalCoordinates(Hz.x, Hz.y, Hz.z, Ez, nz, lz);
+            return Ez && iz.n.TransformCoordinatesFromFloatsToRef(Ez.x, Ez.y, Ez.z, Mz, Ez), Oz
+          }
+          getClosestFacetAtLocalCoordinates(zz, uz, bz, Ez) {
+            let nz, iz, lz, Mz, tz, Hz, Oz, pz, dz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+              Fz = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+              Zz = null;
+            const Rz = this.getFacetLocalPositions(),
+              Kz = this.getFacetLocalNormals(),
+              wz = this.getFacetsAtLocalCoordinates(zz, uz, bz);
+            if (!wz) return null;
+            let Xz, fz, sz, rz, oz = Number.MAX_VALUE;
+            for (let Nz = 0; Nz < wz.length; Nz++) fz = wz[Nz], sz = Kz[fz], rz = Rz[fz], Mz = (zz - rz.x) * sz.x + (uz - rz.y) * sz.y + (bz - rz.z) * sz.z, (!dz || dz && Fz && Mz >= 0 || dz && !Fz && Mz <= 0) && (Mz = sz.x * rz.x + sz.y * rz.y + sz.z * rz.z, tz = -(sz.x * zz + sz.y * uz + sz.z * bz - Mz) / (sz.x * sz.x + sz.y * sz.y + sz.z * sz.z), Hz = zz + sz.x * tz, Oz = uz + sz.y * tz, pz = bz + sz.z * tz, nz = Hz - zz, iz = Oz - uz, lz = pz - bz, Xz = nz * nz + iz * iz + lz * lz, Xz < oz && (oz = Xz, Zz = fz, Ez && (Ez.x = Hz, Ez.y = Oz, Ez.z = pz)));
+            return Zz
+          }
+          getFacetDataParameters() {
+            return this._internalAbstractMeshDataInfo._facetData.facetParameters
+          }
+          disableFacetData() {
+            const zz = this._internalAbstractMeshDataInfo._facetData;
+            return zz.facetDataEnabled && (zz.facetDataEnabled = !1, zz.facetPositions = [], zz.facetNormals = [], zz.facetPartitioning = new Array, zz.facetParameters = {}, zz.depthSortedIndices = new Uint32Array(0)), this
+          }
+          updateIndices(zz, uz) {
+            return this
+          }
+          createNormals(zz) {
+            const uz = this.getVerticesData(lz.j.PositionKind),
+              bz = this.Nbz();
+            let Ez;
+            return Ez = this.isVerticesDataPresent(lz.j.NormalKind) ? this.getVerticesData(lz.j.NormalKind) : [], Mz.b.ComputeNormals(uz, bz, Ez, {
+              useRightHandedSystem: this.XT().useRightHandedSystem
+            }), this.setVerticesData(lz.j.NormalKind, Ez, zz), this
+          }
+          async optimizeIndicesAsync() {
+            const zz = this.Nbz();
+            if (!zz) return this;
+            const {
+              OptimizeIndices: uz
+            } = await bz.e(341).then((() => bz(41770)));
+            return uz(zz), this.setIndices(zz, this.getTotalVertices()), this
+          }
+          alignWithNormal(zz, uz) {
+            uz || (uz = rz.b.Y);
+            const bz = iz.l.ER[0],
+              Ez = iz.l.ER[1];
+            return iz.n.CrossToRef(uz, zz, Ez), iz.n.CrossToRef(zz, Ez, bz), this.rotationQuaternion ? iz.h.RotationQuaternionFromAxisToRef(bz, zz, Ez, this.rotationQuaternion) : iz.n.RotationFromAxisToRef(bz, zz, Ez, this.rotation), this
+          }
+          _checkOcclusionQuery() {
+            return !1
+          }
+          disableEdgesRendering() {
+            throw (0, Kz.l)("EdgesRenderer")
+          }
+          enableEdgesRendering(zz, uz, bz) {
+            throw (0, Kz.l)("EdgesRenderer")
+          }
+          getConnectedParticleSystems() {
+            return this._scene.yN.filter((zz => zz.emitter === this))
+          }
+        }, (() => {
+          const bz = "function" === typeof Symbol && Symbol.metadata ? Object.create(dz[Symbol.metadata] ?? null) : void 0;
+          uz = [Nz.l.filter((function() {
+            return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0]) && !Array.isArray(arguments.length <= 3 ? void 0 : arguments[3]) && !Array.isArray(arguments.length <= 4 ? void 0 : arguments[4]) && !Array.isArray(arguments.length <= 5 ? void 0 : arguments[5]) && !Array.isArray(arguments.length <= 6 ? void 0 : arguments[6])
+          }))], (0, Ez.h)(zz, null, uz, {
+            kind: "method",
+            name: "_ApplySkeleton",
+            static: !0,
+            private: !1,
+            access: {
+              has: zz => "_ApplySkeleton" in zz,
+              get: zz => zz._ApplySkeleton
+            },
+            metadata: bz
+          }, null, Fz), bz && Object.defineProperty(zz, Symbol.metadata, {
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+            value: bz
+          })
+        })(), zz.OCCLUSION_TYPE_NONE = ((0, Ez.j)(zz, Fz), 0), zz.OCCLUSION_TYPE_OPTIMISTIC = 1, zz.OCCLUSION_TYPE_STRICT = 2, zz.OCCLUSION_ALGORITHM_TYPE_ACCURATE = 0, zz.OCCLUSION_ALGORITHM_TYPE_CONSERVATIVE = 1, zz.CULLINGSTRATEGY_STANDARD = 0, zz.CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, zz.CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, zz.CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, zz.DefaultIsPickable = !0, zz
+      })(),
+      az = !1;
+
+    function Vz() {
+      az || (az = !0, (0, xz.c)("BABYLON.AbstractMesh", Gz))
+    }(Fz = Gz.prototype).createOrUpdateSubmeshesOctree ?? (Fz.createOrUpdateSubmeshesOctree = (0, Kz.h)("AbstractMesh", "createOrUpdateSubmeshesOctree")), (Zz = Gz.prototype).getPhysicsImpostor ?? (Zz.getPhysicsImpostor = (0, Kz.h)("AbstractMesh", "getPhysicsImpostor")), (Rz = Gz.prototype).setPhysicsLinkWith ?? (Rz.setPhysicsLinkWith = (0, Kz.h)("AbstractMesh", "setPhysicsLinkWith")), Object.getOwnPropertyDescriptor(Gz.prototype, "occlusionRetryCount") || Object.defineProperty(Gz.prototype, "occlusionRetryCount", (0, Kz.f)("AbstractMesh", "occlusionRetryCount")), Object.getOwnPropertyDescriptor(Gz.prototype, "occlusionType") || Object.defineProperty(Gz.prototype, "occlusionType", (0, Kz.f)("AbstractMesh", "occlusionType")), Object.getOwnPropertyDescriptor(Gz.prototype, "occlusionQueryAlgorithmType") || Object.defineProperty(Gz.prototype, "occlusionQueryAlgorithmType", (0, Kz.f)("AbstractMesh", "occlusionQueryAlgorithmType")), Object.getOwnPropertyDescriptor(Gz.prototype, "isOccluded") || Object.defineProperty(Gz.prototype, "isOccluded", (0, Kz.f)("AbstractMesh", "isOccluded")), Object.getOwnPropertyDescriptor(Gz.prototype, "isOcclusionQueryInProgress") || Object.defineProperty(Gz.prototype, "isOcclusionQueryInProgress", (0, Kz.f)("AbstractMesh", "isOcclusionQueryInProgress")), Object.getOwnPropertyDescriptor(Gz.prototype, "forceRenderingWhenOccluded") || Object.defineProperty(Gz.prototype, "forceRenderingWhenOccluded", (0, Kz.f)("AbstractMesh", "forceRenderingWhenOccluded")), Object.getOwnPropertyDescriptor(Gz.prototype, "occlusionForRenderPassId") || Object.defineProperty(Gz.prototype, "occlusionForRenderPassId", (0, Kz.f)("AbstractMesh", "occlusionForRenderPassId")), Object.getOwnPropertyDescriptor(Gz.prototype, "decalMap") || Object.defineProperty(Gz.prototype, "decalMap", (0, Kz.f)("AbstractMesh", "decalMap")), Object.getOwnPropertyDescriptor(Gz.prototype, "RP") || Object.defineProperty(Gz.prototype, "RP", (0, Kz.f)("AbstractMesh", "RP")), Object.getOwnPropertyDescriptor(Gz.prototype, "physicsImpostor") || Object.defineProperty(Gz.prototype, "physicsImpostor", (0, Kz.f)("AbstractMesh", "physicsImpostor")), Object.getOwnPropertyDescriptor(Gz.prototype, "showBoundingBox") || Object.defineProperty(Gz.prototype, "showBoundingBox", (0, Kz.f)("AbstractMesh", "showBoundingBox")), Object.getOwnPropertyDescriptor(Gz.prototype, "edgesRenderer") || Object.defineProperty(Gz.prototype, "edgesRenderer", (0, Kz.f)("AbstractMesh", "edgesRenderer")), Object.getOwnPropertyDescriptor(Gz.prototype, "renderOutline") || Object.defineProperty(Gz.prototype, "renderOutline", (0, Kz.f)("AbstractMesh", "renderOutline")), Object.getOwnPropertyDescriptor(Gz.prototype, "renderOverlay") || Object.defineProperty(Gz.prototype, "renderOverlay", (0, Kz.f)("AbstractMesh", "renderOverlay"))
+  },
+  39605: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => wz
+    });
+    var Ez = bz(36519),
+      nz = bz(36715),
+      iz = bz(39596),
+      lz = bz(39299),
+      Mz = bz(39459),
+      tz = bz(39607),
+      Hz = bz(39474),
+      Oz = bz(39258),
+      pz = bz(38060),
+      dz = bz(39189),
+      Fz = bz(39492),
+      Zz = bz(36543),
+      Rz = bz(39609),
+      Kz = bz(39226);
+    class wz {
+      get boundingBias() {
+        return this._boundingBias
+      }
+      set boundingBias(zz) {
+        this._boundingBias ? this._boundingBias.euz(zz) : this._boundingBias = zz.clone(), this._updateBoundingInfo(!0, null)
+      }
+      static CreateGeometryForMesh(zz) {
+        const uz = new wz(wz.RandomId(), zz.XT());
+        return uz.applyToMesh(zz), uz
+      }
+      get meshes() {
+        return this._meshes
+      }
+      constructor(zz, uz, bz) {
+        let nz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          iz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+          lz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
+        this.delayLoadState = 0, this._totalVertices = 0, this._isDisposed = !1, this._extend = {
+          minimum: new Ez.n(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE),
+          maximum: new Ez.n(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE)
+        }, this._indexBufferIsUpdatable = !1, this._positionsCache = [], this._parentContainer = null, this.useBoundingInfoFromGeometry = !1, this._scene = uz || Zz.d.LastCreatedScene, this._scene && (this.id = zz, this.uniqueId = this._scene.getUniqueId(), this._engine = this._scene.uR(), this._meshes = [], this._vertexBuffers = {}, this._indices = [], this._updatable = nz, null !== lz && (this._totalVertices = lz), bz ? this.setAllVerticesData(bz, nz) : null === lz && (this._totalVertices = 0), this._engine.getCaps().vertexArrayObject && (this._vertexArrayObjects = {}), iz && (this.applyToMesh(iz), iz.computeWorldMatrix(!0)))
+      }
+      get extend() {
+        return this._extend
+      }
+      XT() {
+        return this._scene
+      }
+      uR() {
+        return this._engine
+      }
+      isReady() {
+        return 1 === this.delayLoadState || 0 === this.delayLoadState
+      }
+      get doNotSerialize() {
+        for (let zz = 0; zz < this._meshes.length; zz++)
+          if (!this._meshes[zz].doNotSerialize) return !1;
+        return !0
+      }
+      _rebuild() {
+        this._vertexArrayObjects && (this._vertexArrayObjects = {}), 0 !== this._meshes.length && this._indices && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, this._updatable, "Geometry_" + this.id + "_IndexBuffer"));
+        const zz = new Set;
+        for (const uz in this._vertexBuffers) zz.add(this._vertexBuffers[uz].getWrapperBuffer());
+        zz.forEach((zz => {
+          zz._rebuild()
+        }))
+      }
+      setAllVerticesData(zz, uz) {
+        zz.applyToGeometry(this, uz), this._notifyUpdate()
+      }
+      setVerticesData(zz, uz) {
+        let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Ez = arguments.length > 3 ? arguments[3] : void 0;
+        bz && Array.isArray(uz) && (uz = new Float32Array(uz));
+        const nz = new lz.j(this._engine, uz, zz, {
+          updatable: bz,
+          postponeInternalCreation: 0 === this._meshes.length,
+          stride: Ez,
+          label: "Geometry_" + this.id + "_" + zz
+        });
+        this.setVerticesBuffer(nz)
+      }
+      removeVerticesData(zz) {
+        this._vertexBuffers[zz] && (this._vertexBuffers[zz].dispose(), delete this._vertexBuffers[zz]), this._vertexArrayObjects && this._disposeVertexArrayObjects()
+      }
+      setVerticesBuffer(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          bz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        const nz = zz.getKind();
+        this._vertexBuffers[nz] && bz && this._vertexBuffers[nz].dispose(), zz._buffer && zz._ownsBuffer && zz._buffer._increaseReferences(), this._vertexBuffers[nz] = zz;
+        const iz = this._meshes,
+          Mz = iz.length;
+        if (nz === lz.j.PositionKind) {
+          this._totalVertices = uz ?? zz._maxVerticesCount, this._updateExtend(this.useBoundingInfoFromGeometry && this._boundingInfo ? null : zz.getFloatData(this._totalVertices)), this._resetPointsArrayCache();
+          const bz = this._extend && this._extend.minimum || new Ez.n(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE),
+            nz = this._extend && this._extend.maximum || new Ez.n(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE);
+          for (let zz = 0; zz < Mz; zz++) {
+            const uz = iz[zz];
+            uz.buildBoundingInfo(bz, nz), uz._createGlobalSubMesh(uz.isUnIndexed), uz.computeWorldMatrix(!0), uz.synchronizeInstances()
+          }
+        }
+        this._notifyUpdate(nz)
+      }
+      updateVerticesDataDirectly(zz, uz, bz) {
+        let Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const nz = this.getVertexBuffer(zz);
+        nz && (nz.updateDirectly(uz, bz, Ez), this._notifyUpdate(zz))
+      }
+      updateVerticesData(zz, uz) {
+        let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Ez = this.getVertexBuffer(zz);
+        Ez && (Ez.update(uz), zz === lz.j.PositionKind && this._updateBoundingInfo(bz, uz), this._notifyUpdate(zz))
+      }
+      _updateBoundingInfo(zz, uz) {
+        if (zz && this._updateExtend(uz), this._resetPointsArrayCache(), zz) {
+          const zz = this._meshes;
+          for (const uz of zz) {
+            uz.hasBoundingInfo ? uz.lG().reConstruct(this._extend.minimum, this._extend.maximum) : uz.buildBoundingInfo(this._extend.minimum, this._extend.maximum);
+            const zz = uz.hN;
+            for (const uz of zz) uz.refreshBoundingInfo()
+          }
+        }
+      }
+      _bind(zz, uz, bz, Ez) {
+        if (!zz) return;
+        void 0 === uz && (uz = this._indexBuffer);
+        const nz = this.getVertexBuffers();
+        if (!nz) return;
+        if (uz != this._indexBuffer || !this._vertexArrayObjects && !Ez) return void this._engine.bindBuffers(nz, uz, zz, bz);
+        const iz = Ez || this._vertexArrayObjects,
+          lz = this._engine;
+        iz[zz.key] || (iz[zz.key] = lz.recordVertexArrayObject(nz, uz, zz, bz)), lz.bindVertexArrayObject(iz[zz.key], uz)
+      }
+      getTotalVertices() {
+        return this.isReady() ? this._totalVertices : 0
+      }
+      getVerticesData(zz, uz, bz) {
+        const Ez = this.getVertexBuffer(zz);
+        return Ez ? Ez.getFloatData(this._totalVertices, bz || uz && 1 !== this._meshes.length) : null
+      }
+      copyVerticesData(zz, uz) {
+        const bz = this.getVertexBuffer(zz);
+        if (!bz) return;
+        uz[zz] || (uz[zz] = new Float32Array(this._totalVertices * bz.getSize()));
+        const Ez = bz.getData();
+        Ez && (0, Kz.h)(Ez, bz.getSize(), bz.type, bz.byteOffset, bz.byteStride, bz.normalized, this._totalVertices, uz[zz])
+      }
+      isVertexBufferUpdatable(zz) {
+        const uz = this._vertexBuffers[zz];
+        return !!uz && uz.isUpdatable()
+      }
+      getVertexBuffer(zz) {
+        return this.isReady() ? this._vertexBuffers[zz] : null
+      }
+      getVertexBuffers() {
+        return this.isReady() ? this._vertexBuffers : null
+      }
+      isVerticesDataPresent(zz) {
+        return this._vertexBuffers ? void 0 !== this._vertexBuffers[zz] : !!this._delayInfo && -1 !== this._delayInfo.indexOf(zz)
+      }
+      getVerticesDataKinds() {
+        const zz = [];
+        let uz;
+        if (!this._vertexBuffers && this._delayInfo)
+          for (uz in this._delayInfo) zz.push(uz);
+        else
+          for (uz in this._vertexBuffers) zz.push(uz);
+        return zz
+      }
+      updateIndices(zz, uz) {
+        let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (this._indexBuffer)
+          if (this._indexBufferIsUpdatable) {
+            const Ez = zz.length !== this._indices.length;
+            if (bz || (this._indices = zz.slice()), this._engine.updateDynamicIndexBuffer(this._indexBuffer, zz, uz), Ez)
+              for (const zz of this._meshes) zz._createGlobalSubMesh(!0)
+          } else this.setIndices(zz, null, !0)
+      }
+      setIndexBuffer(zz, uz, bz) {
+        let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this._indices = [], this._indexBufferIsUpdatable = !1, this._indexBuffer = zz, this._totalVertices = uz, this._totalIndices = bz, zz.is32Bits = null === Ez ? uz > 65535 : Ez;
+        for (const nz of this._meshes) nz._createGlobalSubMesh(!0), nz.synchronizeInstances();
+        this._notifyUpdate()
+      }
+      setIndices(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        this._indexBuffer && this._engine._releaseBuffer(this._indexBuffer), this._indices = zz, this._indexBufferIsUpdatable = bz, 0 !== this._meshes.length && this._indices && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, bz, "Geometry_" + this.id + "_IndexBuffer")), void 0 != uz && (this._totalVertices = uz);
+        for (const nz of this._meshes) nz._createGlobalSubMesh(!Ez), nz.synchronizeInstances();
+        this._notifyUpdate()
+      }
+      getTotalIndices() {
+        return this.isReady() ? void 0 !== this._totalIndices ? this._totalIndices : this._indices.length : 0
+      }
+      Nbz(zz, uz) {
+        if (!this.isReady()) return null;
+        const bz = this._indices;
+        return uz || zz && 1 !== this._meshes.length ? bz.slice() : bz
+      }
+      getIndexBuffer() {
+        return this.isReady() ? this._indexBuffer : null
+      }
+      _releaseVertexArrayObject() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        zz && this._vertexArrayObjects && this._vertexArrayObjects[zz.key] && (this._engine.releaseVertexArrayObject(this._vertexArrayObjects[zz.key]), delete this._vertexArrayObjects[zz.key])
+      }
+      releaseForMesh(zz, uz) {
+        const bz = this._meshes,
+          Ez = bz.indexOf(zz); - 1 !== Ez && (bz.splice(Ez, 1), this._vertexArrayObjects && zz._invalidateInstanceVertexArrayObject(), zz._geometry = null, 0 === bz.length && uz && this.dispose())
+      }
+      applyToMesh(zz) {
+        if (zz._geometry === this) return;
+        const uz = zz._geometry;
+        uz && uz.releaseForMesh(zz), this._vertexArrayObjects && zz._invalidateInstanceVertexArrayObject();
+        const bz = this._meshes;
+        zz._geometry = this, zz._internalAbstractMeshDataInfo._positions = null, this._scene.pushGeometry(this), bz.push(zz), this.isReady() ? this._applyToMesh(zz) : this._boundingInfo && zz.setBoundingInfo(this._boundingInfo)
+      }
+      _updateExtend() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        if (this.useBoundingInfoFromGeometry && this._boundingInfo) this._extend = {
+          minimum: this._boundingInfo.minimum.clone(),
+          maximum: this._boundingInfo.maximum.clone()
+        };
+        else {
+          if (!zz && (zz = this.getVerticesData(lz.j.PositionKind), !zz)) return;
+          this._extend = (0, Fz.c)(zz, 0, this._totalVertices, this.boundingBias, 3)
+        }
+      }
+      _applyToMesh(zz) {
+        for (const uz in this._vertexBuffers) {
+          const bz = this._vertexBuffers[uz];
+          bz._buffer.getBuffer() || bz.create(), uz === lz.j.PositionKind && (this._extend || this._updateExtend(), zz.buildBoundingInfo(this._extend.minimum, this._extend.maximum), zz._createGlobalSubMesh(zz.isUnIndexed), zz._updateBoundingInfo())
+        }!this._indexBuffer && this._indices && this._indices.length > 0 && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, this._updatable, "Geometry_" + this.id + "_IndexBuffer")), zz._syncGeometryWithMorphTargetManager(), zz.synchronizeInstances()
+      }
+      _notifyUpdate(zz) {
+        this.onGeometryUpdated && this.onGeometryUpdated(this, zz), this._vertexArrayObjects && this._disposeVertexArrayObjects();
+        for (const uz of this._meshes) uz._markSubMeshesAsAttributesDirty()
+      }
+      load(zz, uz) {
+        2 !== this.delayLoadState && (this.isReady() ? uz && uz() : (this.delayLoadState = 2, this._queueLoad(zz, uz)))
+      }
+      _queueLoad(zz, uz) {
+        this.delayLoadingFile && (zz.addPendingData(this), (async () => {
+          try {
+            const bz = await zz._loadDelayedFileAsync(this.delayLoadingFile, !1, !0);
+            if (!this._delayLoadingFunction) return void zz.removePendingData(this);
+            this._delayLoadingFunction(JSON.parse(bz), this), this.delayLoadState = 1, this._delayInfo = [], zz.removePendingData(this);
+            const Ez = this._meshes,
+              nz = Ez.length;
+            for (let zz = 0; zz < nz; zz++) this._applyToMesh(Ez[zz]);
+            uz && uz()
+          } catch (bz) {
+            zz.removePendingData(this), zz.Uuz || pz.e.Error(`Unable to delay load geometry "${this.id}" from "${this.delayLoadingFile}": ${bz}`)
+          }
+        })())
+      }
+      toLeftHanded() {
+        const zz = this.Nbz(!1);
+        if (null != zz && zz.length > 0) {
+          for (let uz = 0; uz < zz.length; uz += 3) {
+            const bz = zz[uz + 0];
+            zz[uz + 0] = zz[uz + 2], zz[uz + 2] = bz
+          }
+          this.setIndices(zz)
+        }
+        const uz = this.getVerticesData(lz.j.PositionKind, !1);
+        if (null != uz && uz.length > 0) {
+          for (let zz = 0; zz < uz.length; zz += 3) uz[zz + 2] = -uz[zz + 2];
+          this.setVerticesData(lz.j.PositionKind, uz, !1)
+        }
+        const bz = this.getVerticesData(lz.j.NormalKind, !1);
+        if (null != bz && bz.length > 0) {
+          for (let zz = 0; zz < bz.length; zz += 3) bz[zz + 2] = -bz[zz + 2];
+          this.setVerticesData(lz.j.NormalKind, bz, !1)
+        }
+      }
+      _resetPointsArrayCache() {
+        this._positions = null
+      }
+      _generatePointsArray() {
+        if (this._positions) return !0;
+        const zz = this.getVerticesData(lz.j.PositionKind);
+        if (!zz || 0 === zz.length) return !1;
+        for (let uz = 3 * this._positionsCache.length, bz = this._positionsCache.length; uz < zz.length; uz += 3, ++bz) this._positionsCache[bz] = Ez.n.FromArray(zz, uz);
+        for (let uz = 0, bz = 0; uz < zz.length; uz += 3, ++bz) this._positionsCache[bz].set(zz[0 + uz], zz[1 + uz], zz[2 + uz]);
+        return this._positionsCache.length = zz.length / 3, this._positions = this._positionsCache, !0
+      }
+      Uuz() {
+        return this._isDisposed
+      }
+      _disposeVertexArrayObjects() {
+        if (this._vertexArrayObjects) {
+          for (const bz in this._vertexArrayObjects) this._engine.releaseVertexArrayObject(this._vertexArrayObjects[bz]);
+          this._vertexArrayObjects = {};
+          const zz = this._meshes,
+            uz = zz.length;
+          for (let bz = 0; bz < uz; bz++) zz[bz]._invalidateInstanceVertexArrayObject()
+        }
+      }
+      dispose() {
+        const zz = this._meshes,
+          uz = zz.length;
+        let bz;
+        for (bz = 0; bz < uz; bz++) this.releaseForMesh(zz[bz]);
+        this._meshes.length = 0, this._disposeVertexArrayObjects();
+        for (const Ez in this._vertexBuffers) this._vertexBuffers[Ez].dispose();
+        if (this._vertexBuffers = {}, this._totalVertices = 0, this._indexBuffer && this._engine._releaseBuffer(this._indexBuffer), this._indexBuffer = null, this._indices = [], this.delayLoadState = 0, this.delayLoadingFile = null, this._delayLoadingFunction = null, this._delayInfo = [], this._boundingInfo = null, this._scene.removeGeometry(this), this._parentContainer) {
+          const zz = this._parentContainer.geometries.indexOf(this);
+          zz > -1 && this._parentContainer.geometries.splice(zz, 1), this._parentContainer = null
+        }
+        this._isDisposed = !0
+      }
+      copy(zz) {
+        const uz = new wz(zz, this._scene),
+          bz = this.Nbz(void 0, !0);
+        bz && uz.setIndices(bz);
+        let Ez, nz = !1;
+        for (Ez in this._vertexBuffers) {
+          const zz = this.getVertexBuffer(Ez),
+            bz = zz.getData();
+          if (!bz) continue;
+          const iz = zz.isUpdatable(),
+            Mz = zz.getSize(),
+            {
+              type: tz,
+              byteOffset: Hz,
+              byteStride: Oz,
+              normalized: pz
+            } = zz;
+          nz = nz || iz;
+          let dz = this._totalVertices;
+          if (zz.getIsInstanced()) {
+            let zz;
+            zz = bz instanceof Array ? 4 * bz.length : bz.byteLength, dz = zz / Oz
+          }
+          const Fz = (0, Kz.u)(bz, Mz, tz, Hz, Oz, dz, !0),
+            Zz = new lz.j(this._engine, Fz, Ez, {
+              updatable: iz,
+              useBytes: !1,
+              stride: Mz,
+              size: Mz,
+              offset: 0,
+              type: tz,
+              normalized: pz,
+              takeBufferOwnership: !0,
+              instanced: zz.getIsInstanced()
+            });
+          uz.setVerticesBuffer(Zz, dz)
+        }
+        for (Ez in uz._updatable = nz, uz.delayLoadState = this.delayLoadState, uz.delayLoadingFile = this.delayLoadingFile, uz._delayLoadingFunction = this._delayLoadingFunction, this._delayInfo) uz._delayInfo = uz._delayInfo || [], uz._delayInfo.push(Ez);
+        return uz._boundingInfo = new Hz.e(this._extend.minimum, this._extend.maximum), uz
+      }
+      serialize() {
+        const zz = {};
+        return zz.id = this.id, zz.uniqueId = this.uniqueId, zz.updatable = this._updatable, dz.e && dz.e.HasTags(this) && (zz.tags = dz.e.GetTags(this)), zz
+      }
+      _toNumberArray(zz) {
+        return Array.isArray(zz) ? zz : Array.prototype.slice.call(zz)
+      }
+      clearCachedData() {
+        this._totalIndices = this._indices.length, this._indices = [], this._resetPointsArrayCache();
+        for (const zz in this._vertexBuffers) Object.prototype.hasOwnProperty.call(this._vertexBuffers, zz) && (this._vertexBuffers[zz]._buffer._data = null)
+      }
+      serializeVerticeData() {
+        const zz = this.serialize();
+        return this.isVerticesDataPresent(lz.j.PositionKind) && (zz.positions = this._toNumberArray(this.getVerticesData(lz.j.PositionKind)), this.isVertexBufferUpdatable(lz.j.PositionKind) && (zz.positionsUpdatable = !0)), this.isVerticesDataPresent(lz.j.NormalKind) && (zz.normals = this._toNumberArray(this.getVerticesData(lz.j.NormalKind)), this.isVertexBufferUpdatable(lz.j.NormalKind) && (zz.normalsUpdatable = !0)), this.isVerticesDataPresent(lz.j.TangentKind) && (zz.tangents = this._toNumberArray(this.getVerticesData(lz.j.TangentKind)), this.isVertexBufferUpdatable(lz.j.TangentKind) && (zz.tangentsUpdatable = !0)), this.isVerticesDataPresent(lz.j.UVKind) && (zz.uvs = this._toNumberArray(this.getVerticesData(lz.j.UVKind)), this.isVertexBufferUpdatable(lz.j.UVKind) && (zz.uvsUpdatable = !0)), this.isVerticesDataPresent(lz.j.UV2Kind) && (zz.uvs2 = this._toNumberArray(this.getVerticesData(lz.j.UV2Kind)), this.isVertexBufferUpdatable(lz.j.UV2Kind) && (zz.uvs2Updatable = !0)), this.isVerticesDataPresent(lz.j.UV3Kind) && (zz.uvs3 = this._toNumberArray(this.getVerticesData(lz.j.UV3Kind)), this.isVertexBufferUpdatable(lz.j.UV3Kind) && (zz.uvs3Updatable = !0)), this.isVerticesDataPresent(lz.j.UV4Kind) && (zz.uvs4 = this._toNumberArray(this.getVerticesData(lz.j.UV4Kind)), this.isVertexBufferUpdatable(lz.j.UV4Kind) && (zz.uvs4Updatable = !0)), this.isVerticesDataPresent(lz.j.UV5Kind) && (zz.uvs5 = this._toNumberArray(this.getVerticesData(lz.j.UV5Kind)), this.isVertexBufferUpdatable(lz.j.UV5Kind) && (zz.uvs5Updatable = !0)), this.isVerticesDataPresent(lz.j.UV6Kind) && (zz.uvs6 = this._toNumberArray(this.getVerticesData(lz.j.UV6Kind)), this.isVertexBufferUpdatable(lz.j.UV6Kind) && (zz.uvs6Updatable = !0)), this.isVerticesDataPresent(lz.j.ColorKind) && (zz.colors = this._toNumberArray(this.getVerticesData(lz.j.ColorKind)), this.isVertexBufferUpdatable(lz.j.ColorKind) && (zz.colorsUpdatable = !0)), this.isVerticesDataPresent(lz.j.MatricesIndicesKind) && (zz.matricesIndices = this._toNumberArray(this.getVerticesData(lz.j.MatricesIndicesKind)), zz.matricesIndicesExpanded = !0, this.isVertexBufferUpdatable(lz.j.MatricesIndicesKind) && (zz.matricesIndicesUpdatable = !0)), this.isVerticesDataPresent(lz.j.MatricesWeightsKind) && (zz.matricesWeights = this._toNumberArray(this.getVerticesData(lz.j.MatricesWeightsKind)), this.isVertexBufferUpdatable(lz.j.MatricesWeightsKind) && (zz.matricesWeightsUpdatable = !0)), zz.indices = this._toNumberArray(this.Nbz()), zz
+      }
+      static ExtractFromMesh(zz, uz) {
+        const bz = zz._geometry;
+        return bz ? bz.copy(uz) : null
+      }
+      static RandomId() {
+        return Oz.h.RandomId()
+      }
+      static _GetGeometryByLoadedUniqueId(zz, uz) {
+        for (let bz = 0; bz < uz.geometries.length; bz++)
+          if (uz.geometries[bz]._loadedUniqueId === zz) return uz.geometries[bz];
+        return null
+      }
+      static _ImportGeometry(zz, uz) {
+        const bz = uz.XT(),
+          Ez = zz.geometryUniqueId,
+          iz = zz.geometryId;
+        if (Ez || iz) {
+          const zz = Ez ? this._GetGeometryByLoadedUniqueId(Ez, bz) : bz.getGeometryById(iz);
+          zz && zz.applyToMesh(uz)
+        } else if (zz instanceof ArrayBuffer) {
+          const bz = uz._binaryInfo;
+          if (bz.positionsAttrDesc && bz.positionsAttrDesc.count > 0) {
+            const Ez = new Float32Array(zz, bz.positionsAttrDesc.offset, bz.positionsAttrDesc.count);
+            uz.setVerticesData(lz.j.PositionKind, Ez, !1)
+          }
+          if (bz.normalsAttrDesc && bz.normalsAttrDesc.count > 0) {
+            const Ez = new Float32Array(zz, bz.normalsAttrDesc.offset, bz.normalsAttrDesc.count);
+            uz.setVerticesData(lz.j.NormalKind, Ez, !1)
+          }
+          if (bz.tangetsAttrDesc && bz.tangetsAttrDesc.count > 0) {
+            const Ez = new Float32Array(zz, bz.tangetsAttrDesc.offset, bz.tangetsAttrDesc.count);
+            uz.setVerticesData(lz.j.TangentKind, Ez, !1)
+          }
+          if (bz.uvsAttrDesc && bz.uvsAttrDesc.count > 0) {
+            const Ez = new Float32Array(zz, bz.uvsAttrDesc.offset, bz.uvsAttrDesc.count);
+            if (Rz.b)
+              for (let zz = 1; zz < Ez.length; zz += 2) Ez[zz] = 1 - Ez[zz];
+            uz.setVerticesData(lz.j.UVKind, Ez, !1)
+          }
+          if (bz.uvs2AttrDesc && bz.uvs2AttrDesc.count > 0) {
+            const Ez = new Float32Array(zz, bz.uvs2AttrDesc.offset, bz.uvs2AttrDesc.count);
+            if (Rz.b)
+              for (let zz = 1; zz < Ez.length; zz += 2) Ez[zz] = 1 - Ez[zz];
+            uz.setVerticesData(lz.j.UV2Kind, Ez, !1)
+          }
+          if (bz.uvs3AttrDesc && bz.uvs3AttrDesc.count > 0) {
+            const Ez = new Float32Array(zz, bz.uvs3AttrDesc.offset, bz.uvs3AttrDesc.count);
+            if (Rz.b)
+              for (let zz = 1; zz < Ez.length; zz += 2) Ez[zz] = 1 - Ez[zz];
+            uz.setVerticesData(lz.j.UV3Kind, Ez, !1)
+          }
+          if (bz.uvs4AttrDesc && bz.uvs4AttrDesc.count > 0) {
+            const Ez = new Float32Array(zz, bz.uvs4AttrDesc.offset, bz.uvs4AttrDesc.count);
+            if (Rz.b)
+              for (let zz = 1; zz < Ez.length; zz += 2) Ez[zz] = 1 - Ez[zz];
+            uz.setVerticesData(lz.j.UV4Kind, Ez, !1)
+          }
+          if (bz.uvs5AttrDesc && bz.uvs5AttrDesc.count > 0) {
+            const Ez = new Float32Array(zz, bz.uvs5AttrDesc.offset, bz.uvs5AttrDesc.count);
+            if (Rz.b)
+              for (let zz = 1; zz < Ez.length; zz += 2) Ez[zz] = 1 - Ez[zz];
+            uz.setVerticesData(lz.j.UV5Kind, Ez, !1)
+          }
+          if (bz.uvs6AttrDesc && bz.uvs6AttrDesc.count > 0) {
+            const Ez = new Float32Array(zz, bz.uvs6AttrDesc.offset, bz.uvs6AttrDesc.count);
+            if (Rz.b)
+              for (let zz = 1; zz < Ez.length; zz += 2) Ez[zz] = 1 - Ez[zz];
+            uz.setVerticesData(lz.j.UV6Kind, Ez, !1)
+          }
+          if (bz.colorsAttrDesc && bz.colorsAttrDesc.count > 0) {
+            const Ez = new Float32Array(zz, bz.colorsAttrDesc.offset, bz.colorsAttrDesc.count);
+            uz.setVerticesData(lz.j.ColorKind, Ez, !1, bz.colorsAttrDesc.stride)
+          }
+          if (bz.matricesIndicesAttrDesc && bz.matricesIndicesAttrDesc.count > 0) {
+            const Ez = new Int32Array(zz, bz.matricesIndicesAttrDesc.offset, bz.matricesIndicesAttrDesc.count),
+              nz = [];
+            for (let zz = 0; zz < Ez.length; zz++) {
+              const uz = Ez[zz];
+              nz.push(255 & uz), nz.push((65280 & uz) >> 8), nz.push((16711680 & uz) >> 16), nz.push(uz >> 24 & 255)
+            }
+            uz.setVerticesData(lz.j.MatricesIndicesKind, nz, !1)
+          }
+          if (bz.matricesIndicesExtraAttrDesc && bz.matricesIndicesExtraAttrDesc.count > 0) {
+            const Ez = new Int32Array(zz, bz.matricesIndicesExtraAttrDesc.offset, bz.matricesIndicesExtraAttrDesc.count),
+              nz = [];
+            for (let zz = 0; zz < Ez.length; zz++) {
+              const uz = Ez[zz];
+              nz.push(255 & uz), nz.push((65280 & uz) >> 8), nz.push((16711680 & uz) >> 16), nz.push(uz >> 24 & 255)
+            }
+            uz.setVerticesData(lz.j.MatricesIndicesExtraKind, nz, !1)
+          }
+          if (bz.matricesWeightsAttrDesc && bz.matricesWeightsAttrDesc.count > 0) {
+            const Ez = new Float32Array(zz, bz.matricesWeightsAttrDesc.offset, bz.matricesWeightsAttrDesc.count);
+            uz.setVerticesData(lz.j.MatricesWeightsKind, Ez, !1)
+          }
+          if (bz.indicesAttrDesc && bz.indicesAttrDesc.count > 0) {
+            const Ez = new Int32Array(zz, bz.indicesAttrDesc.offset, bz.indicesAttrDesc.count);
+            uz.setIndices(Ez, null)
+          }
+          if (bz.subMeshesAttrDesc && bz.subMeshesAttrDesc.count > 0) {
+            const Ez = new Int32Array(zz, bz.subMeshesAttrDesc.offset, 5 * bz.subMeshesAttrDesc.count);
+            uz.hN = [];
+            for (let zz = 0; zz < bz.subMeshesAttrDesc.count; zz++) {
+              const bz = Ez[5 * zz + 0],
+                nz = Ez[5 * zz + 1],
+                iz = Ez[5 * zz + 2],
+                lz = Ez[5 * zz + 3],
+                tz = Ez[5 * zz + 4];
+              Mz.e.AddToMesh(bz, nz, iz, lz, tz, uz)
+            }
+          }
+        } else if (zz.positions && zz.normals && zz.indices) {
+          if (uz.setVerticesData(lz.j.PositionKind, zz.positions, zz.positions._updatable || zz.positionsUpdatable), uz.setVerticesData(lz.j.NormalKind, zz.normals, zz.normals._updatable || zz.normalsUpdatable), zz.tangents && uz.setVerticesData(lz.j.TangentKind, zz.tangents, zz.tangents._updatable || zz.tangentsUpdatable), zz.uvs && uz.setVerticesData(lz.j.UVKind, zz.uvs, zz.uvs._updatable || zz.uvsUpdatable), zz.uvs2 && uz.setVerticesData(lz.j.UV2Kind, zz.uvs2, zz.uvs2._updatable || zz.uvs2Updatable), zz.uvs3 && uz.setVerticesData(lz.j.UV3Kind, zz.uvs3, zz.uvs3._updatable || zz.uvs3Updatable), zz.uvs4 && uz.setVerticesData(lz.j.UV4Kind, zz.uvs4, zz.uvs4._updatable || zz.uvs4Updatable), zz.uvs5 && uz.setVerticesData(lz.j.UV5Kind, zz.uvs5, zz.uvs5._updatable || zz.uvs5Updatable), zz.uvs6 && uz.setVerticesData(lz.j.UV6Kind, zz.uvs6, zz.uvs6._updatable || zz.uvs6Updatable), zz.colors && uz.setVerticesData(lz.j.ColorKind, nz.g.CheckColors4(zz.colors, zz.positions.length / 3), zz.colors._updatable), zz.matricesIndices)
+            if (zz.matricesIndices._isExpanded || zz.matricesIndicesExpanded) delete zz.matricesIndices._isExpanded, delete zz.matricesIndicesExpanded, uz.setVerticesData(lz.j.MatricesIndicesKind, zz.matricesIndices, zz.matricesIndices._updatable || zz.matricesIndicesUpdatable);
+            else {
+              const bz = [];
+              for (let uz = 0; uz < zz.matricesIndices.length; uz++) {
+                const Ez = zz.matricesIndices[uz];
+                bz.push(255 & Ez), bz.push((65280 & Ez) >> 8), bz.push((16711680 & Ez) >> 16), bz.push(Ez >> 24 & 255)
+              }
+              uz.setVerticesData(lz.j.MatricesIndicesKind, bz, zz.matricesIndices._updatable || zz.matricesIndicesUpdatable)
+            } if (zz.matricesIndicesExtra)
+            if (zz.matricesIndicesExtraExpanded || zz.matricesIndicesExtra._isExpanded) delete zz.matricesIndices._isExpanded, delete zz.matricesIndicesExtraExpanded, uz.setVerticesData(lz.j.MatricesIndicesExtraKind, zz.matricesIndicesExtra, zz.matricesIndicesExtra._updatable || zz.matricesIndicesExtraUpdatable);
+            else {
+              const bz = [];
+              for (let uz = 0; uz < zz.matricesIndicesExtra.length; uz++) {
+                const Ez = zz.matricesIndicesExtra[uz];
+                bz.push(255 & Ez), bz.push((65280 & Ez) >> 8), bz.push((16711680 & Ez) >> 16), bz.push(Ez >> 24 & 255)
+              }
+              uz.setVerticesData(lz.j.MatricesIndicesExtraKind, bz, zz.matricesIndicesExtra._updatable || zz.matricesIndicesExtraUpdatable)
+            } zz.matricesWeights && (wz._CleanMatricesWeights(zz, uz), uz.setVerticesData(lz.j.MatricesWeightsKind, zz.matricesWeights, zz.matricesWeights._updatable)), zz.matricesWeightsExtra && uz.setVerticesData(lz.j.MatricesWeightsExtraKind, zz.matricesWeightsExtra, zz.matricesWeights._updatable), uz.setIndices(zz.indices, null)
+        }
+        if (zz.hN) {
+          uz.hN = [];
+          for (let bz = 0; bz < zz.hN.length; bz++) {
+            const Ez = zz.hN[bz];
+            Mz.e.AddToMesh(Ez.materialIndex, Ez.verticesStart, Ez.verticesCount, Ez.indexStart, Ez.indexCount, uz)
+          }
+        }
+        uz._shouldGenerateFlatShading && (uz.convertToFlatShadedMesh(), uz._shouldGenerateFlatShading = !1), uz.computeWorldMatrix(!0), bz.onMeshImportedObservable.notifyObservers(uz)
+      }
+      static _CleanMatricesWeights(zz, uz) {
+        const bz = .001;
+        if (!tz.b.CleanBoneMatrixWeights) return;
+        let Ez;
+        if (!(zz.skeletonId > -1)) return;
+        {
+          const bz = uz.XT().getLastSkeletonById(zz.skeletonId);
+          if (!bz) return;
+          Ez = bz.bones.length
+        }
+        const nz = uz.getVerticesData(lz.j.MatricesIndicesKind),
+          iz = uz.getVerticesData(lz.j.MatricesIndicesExtraKind),
+          Mz = zz.matricesWeights,
+          Hz = zz.matricesWeightsExtra,
+          Oz = zz.numBoneInfluencer,
+          pz = Mz.length;
+        for (let lz = 0; lz < pz; lz += 4) {
+          let zz = 0,
+            uz = -1;
+          for (let Ez = 0; Ez < 4; Ez++) {
+            const nz = Mz[lz + Ez];
+            zz += nz, nz < bz && uz < 0 && (uz = Ez)
+          }
+          if (Hz)
+            for (let Ez = 0; Ez < 4; Ez++) {
+              const nz = Hz[lz + Ez];
+              zz += nz, nz < bz && uz < 0 && (uz = Ez + 4)
+            }
+          if ((uz < 0 || uz > Oz - 1) && (uz = Oz - 1), zz > bz) {
+            const uz = 1 / zz;
+            for (let zz = 0; zz < 4; zz++) Mz[lz + zz] *= uz;
+            if (Hz)
+              for (let zz = 0; zz < 4; zz++) Hz[lz + zz] *= uz
+          } else uz >= 4 ? (Hz[lz + uz - 4] = 1 - zz, iz[lz + uz - 4] = Ez) : (Mz[lz + uz] = 1 - zz, nz[lz + uz] = Ez)
+        }
+        uz.setVerticesData(lz.j.MatricesIndicesKind, nz), zz.matricesWeightsExtra && uz.setVerticesData(lz.j.MatricesIndicesExtraKind, iz)
+      }
+      static Parse(zz, uz, bz) {
+        const nz = new wz(zz.id, uz, void 0, zz.updatable);
+        return nz._loadedUniqueId = zz.uniqueId, dz.e && dz.e.AddTagsTo(nz, zz.tags), zz.delayLoadingFile ? (nz.delayLoadState = 4, nz.delayLoadingFile = bz + zz.delayLoadingFile, nz._boundingInfo = new Hz.e(Ez.n.FromArray(zz.boundingBoxMinimum), Ez.n.FromArray(zz.boundingBoxMaximum)), nz._delayInfo = [], zz.hasUVs && nz._delayInfo.push(lz.j.UVKind), zz.hasUVs2 && nz._delayInfo.push(lz.j.UV2Kind), zz.hasUVs3 && nz._delayInfo.push(lz.j.UV3Kind), zz.hasUVs4 && nz._delayInfo.push(lz.j.UV4Kind), zz.hasUVs5 && nz._delayInfo.push(lz.j.UV5Kind), zz.hasUVs6 && nz._delayInfo.push(lz.j.UV6Kind), zz.hasColors && nz._delayInfo.push(lz.j.ColorKind), zz.hasMatricesIndices && nz._delayInfo.push(lz.j.MatricesIndicesKind), zz.hasMatricesWeights && nz._delayInfo.push(lz.j.MatricesWeightsKind), nz._delayLoadingFunction = iz.b.ImportVertexData) : iz.b.ImportVertexData(zz, nz), uz.pushGeometry(nz, !0), nz
+      }
+    }
+  },
+  39631: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => pz,
+      g: () => Zz
+    });
+    var Ez = bz(36519),
+      nz = bz(38060),
+      iz = bz(39614),
+      lz = bz(39584),
+      Mz = bz(38054),
+      tz = bz(39618),
+      Hz = bz(39299),
+      Oz = bz(36564);
+    class pz extends iz.e {
+      constructor(zz, uz) {
+        super(zz, uz.XT()), this._indexInSourceMeshInstanceArray = -1, this._distanceToCamera = 0, uz.n_(this), this._sourceMesh = uz, this._unIndexed = uz._unIndexed, this.position.euz(uz.position), this.rotation.euz(uz.rotation), this.ti.euz(uz.ti), uz.rotationQuaternion && (this.rotationQuaternion = uz.rotationQuaternion.clone()), this.animations = uz.animations.slice();
+        for (const bz of uz.getAnimationRanges()) null != bz && this.createAnimationRange(bz.name, bz.from, bz.to);
+        if (this.infiniteDistance = uz.infiniteDistance, this.setPivotMatrix(uz.getPivotMatrix()), uz.skeleton || uz.morphTargetManager || !uz.hasBoundingInfo) this.refreshBoundingInfo(!0, !0);
+        else {
+          const zz = uz.lG();
+          this.buildBoundingInfo(zz.minimum, zz.maximum)
+        }
+        this._syncSubMeshes()
+      }
+      getClassName() {
+        return "InstancedMesh"
+      }
+      get lightSources() {
+        return this._sourceMesh._lightSources
+      }
+      _resyncLightSources() {}
+      _resyncLightSource() {}
+      _removeLightSource() {}
+      get receiveShadows() {
+        return this._sourceMesh.receiveShadows
+      }
+      set receiveShadows(zz) {
+        this._sourceMesh?.receiveShadows !== zz && nz.e.Warn("Setting receiveShadows on an instanced mesh has no effect")
+      }
+      get material() {
+        return this._sourceMesh.material
+      }
+      set material(zz) {
+        this._sourceMesh?.material !== zz && nz.e.Warn("Setting material on an instanced mesh has no effect")
+      }
+      get visibility() {
+        return this._sourceMesh.visibility
+      }
+      set visibility(zz) {
+        this._sourceMesh?.visibility !== zz && nz.e.Warn("Setting visibility on an instanced mesh has no effect")
+      }
+      get skeleton() {
+        return this._sourceMesh.skeleton
+      }
+      set skeleton(zz) {
+        this._sourceMesh?.skeleton !== zz && nz.e.Warn("Setting skeleton on an instanced mesh has no effect")
+      }
+      get renderingGroupId() {
+        return this._sourceMesh.renderingGroupId
+      }
+      set renderingGroupId(zz) {
+        this._sourceMesh && zz !== this._sourceMesh.renderingGroupId && nz.e.Warn("Note - setting renderingGroupId of an instanced mesh has no effect on the scene")
+      }
+      get meshBlendingTag() {
+        return this._sourceMesh.meshBlendingTag
+      }
+      set meshBlendingTag(zz) {
+        this._sourceMesh && zz !== this._sourceMesh.meshBlendingTag && nz.e.Warn("Setting meshBlendingTag on an instanced mesh has no effect")
+      }
+      getTotalVertices() {
+        return this._sourceMesh ? this._sourceMesh.getTotalVertices() : 0
+      }
+      getTotalIndices() {
+        return this._sourceMesh.getTotalIndices()
+      }
+      get wEz() {
+        return this._sourceMesh
+      }
+      get geometry() {
+        return this._sourceMesh._geometry
+      }
+      createInstance(zz) {
+        return this._sourceMesh.createInstance(zz)
+      }
+      isReady() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        return this._sourceMesh.isReady(zz, !0)
+      }
+      getVerticesData(zz, uz, bz) {
+        return this._sourceMesh.getVerticesData(zz, uz, bz)
+      }
+      copyVerticesData(zz, uz) {
+        this._sourceMesh.copyVerticesData(zz, uz)
+      }
+      getVertexBuffer(zz, uz) {
+        return this._sourceMesh.getVertexBuffer(zz, uz)
+      }
+      setVerticesData(zz, uz, bz, Ez) {
+        return this.wEz && this.wEz.setVerticesData(zz, uz, bz, Ez), this.wEz
+      }
+      updateVerticesData(zz, uz, bz, Ez) {
+        return this.wEz && this.wEz.updateVerticesData(zz, uz, bz, Ez), this.wEz
+      }
+      setIndices(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        return this.wEz && this.wEz.setIndices(zz, uz), this.wEz
+      }
+      isVerticesDataPresent(zz) {
+        return this._sourceMesh.isVerticesDataPresent(zz)
+      }
+      Nbz() {
+        return this._sourceMesh.Nbz()
+      }
+      get _positions() {
+        return this._sourceMesh._positions
+      }
+      refreshBoundingInfo() {
+        let zz, uz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          bz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.hasBoundingInfo && this.lG().isLocked) return this;
+        zz = "object" === typeof uz ? uz : {
+          applySkeleton: uz,
+          applyMorph: bz
+        };
+        const Ez = this._sourceMesh.geometry ? this._sourceMesh.geometry.boundingBias : null;
+        return this._refreshBoundingInfo(this._sourceMesh._getData(zz, null, Hz.j.PositionKind), Ez), this
+      }
+      _preActivate() {
+        return this._currentLOD && this._currentLOD._preActivate(), this
+      }
+      _activate(zz, uz) {
+        if (super._activate(zz, uz), this._sourceMesh.hN || nz.e.Warn("Instances should only be created for meshes with geometry."), this._currentLOD) {
+          if (this._currentLOD._getWorldMatrixDeterminant() >= 0 !== this._getWorldMatrixDeterminant() >= 0) return this._internalAbstractMeshDataInfo._actAsRegularMesh = !0, !0;
+          if (this._internalAbstractMeshDataInfo._actAsRegularMesh = !1, this._currentLOD._registerInstanceForRenderId(this, zz), uz) {
+            if (!this._currentLOD._internalAbstractMeshDataInfo._isActiveIntermediate) return this._currentLOD._internalAbstractMeshDataInfo._onlyForInstancesIntermediate = !0, !0
+          } else if (!this._currentLOD._internalAbstractMeshDataInfo._isActive) return this._currentLOD._internalAbstractMeshDataInfo._onlyForInstances = !0, !0
+        }
+        return !1
+      }
+      _postActivate() {
+        this._sourceMesh.edgesShareWithInstances && this._sourceMesh._edgesRenderer && this._sourceMesh._edgesRenderer.isEnabled && this._sourceMesh._renderingGroup ? (this._sourceMesh._renderingGroup._edgesRenderers.pushNoDuplicate(this._sourceMesh._edgesRenderer), this._sourceMesh._edgesRenderer.customInstances.push(this.getWorldMatrix())) : this._edgesRenderer && this._edgesRenderer.isEnabled && this._sourceMesh._renderingGroup && this._sourceMesh._renderingGroup._edgesRenderers.push(this._edgesRenderer)
+      }
+      getWorldMatrix() {
+        if (this._currentLOD && this._currentLOD !== this._sourceMesh && this._currentLOD.billboardMode !== tz.g.BILLBOARDMODE_NONE && this._currentLOD._masterMesh !== this) {
+          this._billboardWorldMatrix || (this._billboardWorldMatrix = new Ez.d);
+          const zz = this._currentLOD._masterMesh;
+          return this._currentLOD._masterMesh = this, Ez.l.ER[7].euz(this._currentLOD.position), this._currentLOD.position.set(0, 0, 0), this._billboardWorldMatrix.euz(this._currentLOD.computeWorldMatrix(!0)), this._currentLOD.position.euz(Ez.l.ER[7]), this._currentLOD._masterMesh = zz, this._billboardWorldMatrix
+        }
+        return super.getWorldMatrix()
+      }
+      get qT() {
+        return !0
+      }
+      getLOD(zz) {
+        if (!zz) return this;
+        const uz = this.wEz.getLODLevels();
+        if (uz && 0 !== uz.length) {
+          const uz = this.lG();
+          this._currentLOD = this.wEz.getLOD(zz, uz.Ibz)
+        } else this._currentLOD = this.wEz;
+        return this._currentLOD
+      }
+      _preActivateForIntermediateRendering(zz) {
+        return this.wEz._preActivateForIntermediateRendering(zz)
+      }
+      _syncSubMeshes() {
+        if (this.releaseSubMeshes(), this._sourceMesh.hN)
+          for (let zz = 0; zz < this._sourceMesh.hN.length; zz++) this._sourceMesh.hN[zz].clone(this, this._sourceMesh);
+        return this
+      }
+      _generatePointsArray() {
+        return this._sourceMesh._generatePointsArray()
+      }
+      _updateBoundingInfo() {
+        return this.hasBoundingInfo ? this.lG().update(this.worldMatrixFromCache) : this.buildBoundingInfo(this.absolutePosition, this.absolutePosition, this.worldMatrixFromCache), this._updateSubMeshesBoundingInfo(this.worldMatrixFromCache), this
+      }
+      clone(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          bz = arguments.length > 2 ? arguments[2] : void 0;
+        const Ez = ((arguments.length > 3 ? arguments[3] : void 0) || this._sourceMesh).createInstance(zz);
+        if (Mz.b.DeepCopy(this, Ez, ["name", "hN", "uniqueId", "parent", "lightSources", "receiveShadows", "material", "visibility", "skeleton", "wEz", "qT", "facetNb", "isFacetDataEnabled", "isBlocked", "useBones", "KEz", "collider", "edgesRenderer", "forward", "up", "right", "absolutePosition", "absoluteScaling", "absoluteRotationQuaternion", "Elz", "nonUniformScaling", "behaviors", "worldMatrixFromCache", "hasThinInstances", "hasBoundingInfo", "geometry"], []), uz && (Ez.parent = uz), !bz)
+          for (let nz = 0; nz < this.XT().meshes.length; nz++) {
+            const zz = this.XT().meshes[nz];
+            zz.parent === this && zz.clone(zz.name, Ez)
+          }
+        return Ez.computeWorldMatrix(!0), this.onClonedObservable.notifyObservers(Ez), Ez
+      }
+      dispose(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._sourceMesh.l_(this), super.dispose(zz, uz)
+      }
+      _serializeAsParent(zz) {
+        super._serializeAsParent(zz), zz.parentId = this._sourceMesh.uniqueId, zz.parentInstanceIndex = this._indexInSourceMeshInstanceArray
+      }
+      instantiateHierarchy() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          uz = arguments.length > 1 ? arguments[1] : void 0,
+          bz = arguments.length > 2 ? arguments[2] : void 0;
+        const Ez = this.clone("Clone of " + (this.name || this.id), zz || this.parent, !0, uz && uz.newSourcedMesh);
+        Ez && bz && bz(this, Ez);
+        for (const nz of this.getChildTransformNodes(!0)) nz.instantiateHierarchy(Ez, uz, bz);
+        return Ez
+      }
+    }
+    let dz = !1;
+
+    function Fz(zz, uz, bz, Ez, nz) {
+      for (let iz = 0; iz < uz.length; iz++) {
+        const lz = zz[uz[iz]] ?? 0,
+          Mz = nz + bz[iz];
+        lz.toArray ? lz.toArray(Ez, Mz) : lz.copyToArray ? lz.copyToArray(Ez, Mz) : Ez[Mz] = lz
+      }
+    }
+
+    function Zz() {
+      dz || (dz = !0, lz.c._instancedMeshFactory = (zz, uz) => {
+        const bz = new pz(zz, uz);
+        if (uz.RP) {
+          bz.RP = {};
+          for (const zz in uz.RP) bz.RP[zz] = uz.RP[zz]
+        }
+        return bz
+      }, lz.c.prototype.YL = function(zz, uz) {
+        if (!this.RP) {
+          this.RP = {};
+          for (const zz of this.instances) zz.RP = {}
+        }
+        this._userInstancedBuffersStorage || (this._userInstancedBuffersStorage = {
+          data: {},
+          vertexBuffers: {},
+          strides: {},
+          sizes: {},
+          vertexArrayObjects: this.uR().getCaps().vertexArrayObject ? {} : void 0
+        }), this.RP[zz] = null, this._userInstancedBuffersStorage.strides[zz] = uz;
+        const bz = this._userInstancedBuffersStorage;
+        bz.interleavedKinds = [], bz.interleavedOffsets = [], bz.interleavedRowStride = 0;
+        for (const Ez in bz.strides) bz.interleavedKinds.push(Ez), bz.interleavedOffsets.push(bz.interleavedRowStride), bz.interleavedRowStride += bz.strides[Ez];
+        bz.interleavedData = new Float32Array(32 * bz.interleavedRowStride);
+        for (const Ez in bz.interleavedBuffers) bz.interleavedBuffers[Ez].buffer.dispose();
+        bz.interleavedBuffers = {}, bz.vertexBuffers[zz] = null;
+        for (const Ez of this.instances) Ez.RP[zz] = null;
+        this._invalidateInstanceVertexArrayObject(), this._markSubMeshesAsAttributesDirty()
+      }, lz.c.prototype._processInstancedBuffers = function(zz, uz) {
+        const bz = this._userInstancedBuffersStorage,
+          Ez = bz.interleavedRowStride;
+        if (!Ez) return;
+        const nz = zz ? zz.length : 0,
+          iz = (nz + 1) * Ez;
+        let lz = bz.interleavedData;
+        if (lz.length < iz) {
+          let zz = lz.length;
+          for (; zz < iz;) zz *= 2;
+          lz = bz.interleavedData = new Float32Array(zz)
+        }
+        const Mz = bz.interleavedKinds,
+          tz = bz.interleavedOffsets;
+        let Oz = 0;
+        uz && (Fz(this.RP, Mz, tz, lz, Oz), Oz += Ez);
+        for (let Hz = 0; Hz < nz; Hz++) Fz(zz[Hz].RP, Mz, tz, lz, Oz), Oz += Ez;
+        let pz = "shared",
+          dz = bz.vertexBuffers;
+        this._instanceDataStorage.useMonoDataStorageRenderPass || (pz = this._instanceDataStorage.engine.currentRenderPassId, bz.renderPasses || (bz.renderPasses = {}), bz.renderPasses[pz] || (bz.renderPasses[pz] = {}), dz = bz.renderPasses[pz]);
+        const Zz = bz.interleavedBuffers[pz];
+        let Rz = !Zz || Zz.data !== lz;
+        for (let Hz = 0; !Rz && Hz < Mz.length; Hz++) Rz = !dz[Mz[Hz]];
+        if (!Rz) return void Zz.buffer.updateDirectly(lz, 0);
+        Zz?.buffer.dispose();
+        const Kz = new Hz.c(this.uR(), lz, !0, Ez, !1, !0);
+        for (let Hz = 0; Hz < Mz.length; Hz++) {
+          const zz = Mz[Hz],
+            uz = Kz.createVertexBuffer(zz, tz[Hz], bz.strides[zz]);
+          uz.hashCode += uz.byteOffset * 2 ** 24, dz[zz] = uz
+        }
+        bz.interleavedBuffers[pz] = {
+          buffer: Kz,
+          data: lz
+        }, this._invalidateInstanceVertexArrayObject()
+      }, lz.c.prototype._invalidateInstanceVertexArrayObject = function() {
+        if (this._userInstancedBuffersStorage && void 0 !== this._userInstancedBuffersStorage.vertexArrayObjects) {
+          for (const zz in this._userInstancedBuffersStorage.vertexArrayObjects) this.uR().releaseVertexArrayObject(this._userInstancedBuffersStorage.vertexArrayObjects[zz]);
+          this._userInstancedBuffersStorage.vertexArrayObjects = {}
+        }
+      }, lz.c.prototype._disposeInstanceSpecificData = function() {
+        for (const uz in this._instanceDataStorage.renderPasses) this._instanceDataStorage.renderPasses[uz].instancesBuffer?.dispose();
+        for (this._instanceDataStorage.renderPasses = {}, this._instanceDataStorage.dataStorageRenderPass?.instancesBuffer?.dispose(); this.instances.length;) this.instances[0].dispose();
+        for (const uz in this.RP) this._userInstancedBuffersStorage.vertexBuffers[uz] && this._userInstancedBuffersStorage.vertexBuffers[uz].dispose();
+        const zz = this._userInstancedBuffersStorage?.interleavedBuffers;
+        if (zz) {
+          for (const uz in zz) zz[uz].buffer.dispose();
+          this._userInstancedBuffersStorage.interleavedBuffers = {}
+        }
+        this._invalidateInstanceVertexArrayObject(), this.RP = {}
+      }, (0, Oz.c)("BABYLON.InstancedMesh", pz))
+    }
+  },
+  39584: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Cz,
+      g: () => kz,
+      h: () => Dz
+    });
+    var Ez, nz, iz, lz, Mz, tz, Hz, Oz, pz, dz, Fz, Zz, Rz, Kz, wz = bz(36547),
+      Xz = bz(39258),
+      fz = bz(39202),
+      sz = bz(38054),
+      rz = bz(39189),
+      oz = bz(39589),
+      Nz = bz(39376),
+      vz = bz(36519),
+      xz = bz(36715),
+      Jz = bz(39384),
+      Az = bz(39299),
+      Tz = bz(39596),
+      Lz = bz(39605),
+      Pz = bz(39614),
+      Gz = bz(39459),
+      az = bz(39451),
+      Vz = bz(39552),
+      mz = bz(39622),
+      qz = bz(39607),
+      hz = bz(39182),
+      Uz = bz(38060),
+      cz = bz(36564),
+      gz = bz(39061),
+      Sz = bz(39329);
+    class yz {
+      constructor(zz, uz) {
+        this.distanceOrScreenCoverage = zz, this.mesh = uz
+      }
+    }
+    class Dz {}
+    class Qz {
+      constructor() {
+        this.batchCache = new ez(this), this.batchCacheReplacementModeInFrozenMode = new ez(this), this.instancesBufferSize = 2048
+      }
+    }
+    class Wz {
+      constructor() {
+        this.renderPasses = {}
+      }
+    }
+    class ez {
+      constructor(zz) {
+        this.parent = zz, this.mustReturn = !1, this.visibleInstances = new Array, this.renderSelf = [], this.hardwareInstancedRendering = []
+      }
+    }
+    class jz {
+      constructor() {
+        this.instancesCount = 0, this.matrixBuffer = null, this.previousMatrixBuffer = null, this.matrixBufferSize = 512, this.matrixData = null, this.boundingVectors = [], this.worldMatrices = null
+      }
+    }
+    class Iz {
+      constructor() {
+        this._areNormalsFrozen = !1, this._source = null, this.meshMap = null, this._preActivateId = -1, this._LODLevels = new Array, this._useLODScreenCoverage = !1, this._effectiveMaterial = null, this._forcedInstanceCount = 0, this._overrideRenderingFillMode = null
+      }
+    }
+    const Bz = {
+      source: null,
+      parent: null,
+      doNotCloneChildren: !1,
+      clonePhysicsImpostor: !0,
+      cloneThinInstances: !1
+    };
+    class Cz extends Pz.e {
+      static _GetDefaultSideOrientation(zz) {
+        return zz || Cz.FRONTSIDE
+      }
+      get useLODScreenCoverage() {
+        return this._internalMeshDataInfo._useLODScreenCoverage
+      }
+      set useLODScreenCoverage(zz) {
+        this._internalMeshDataInfo._useLODScreenCoverage = zz, this._sortLODLevels()
+      }
+      get computeBonesUsingShaders() {
+        return this._internalAbstractMeshDataInfo._computeBonesUsingShaders
+      }
+      set computeBonesUsingShaders(zz) {
+        this._internalAbstractMeshDataInfo._computeBonesUsingShaders !== zz && (zz && this._internalMeshDataInfo._sourcePositions && (this.setVerticesData(Az.j.PositionKind, this._internalMeshDataInfo._sourcePositions, !0), this._internalMeshDataInfo._sourceNormals && this.setVerticesData(Az.j.NormalKind, this._internalMeshDataInfo._sourceNormals, !0), this._internalMeshDataInfo._sourcePositions = null, this._internalMeshDataInfo._sourceNormals = null), this._internalAbstractMeshDataInfo._computeBonesUsingShaders = zz, this._markSubMeshesAsAttributesDirty())
+      }
+      get onBeforeRenderObservable() {
+        return this._internalMeshDataInfo._onBeforeRenderObservable || (this._internalMeshDataInfo._onBeforeRenderObservable = new wz.b), this._internalMeshDataInfo._onBeforeRenderObservable
+      }
+      get onBeforeBindObservable() {
+        return this._internalMeshDataInfo._onBeforeBindObservable || (this._internalMeshDataInfo._onBeforeBindObservable = new wz.b), this._internalMeshDataInfo._onBeforeBindObservable
+      }
+      get onAfterRenderObservable() {
+        return this._internalMeshDataInfo._onAfterRenderObservable || (this._internalMeshDataInfo._onAfterRenderObservable = new wz.b), this._internalMeshDataInfo._onAfterRenderObservable
+      }
+      get onBetweenPassObservable() {
+        return this._internalMeshDataInfo._onBetweenPassObservable || (this._internalMeshDataInfo._onBetweenPassObservable = new wz.b), this._internalMeshDataInfo._onBetweenPassObservable
+      }
+      get onBeforeDrawObservable() {
+        return this._internalMeshDataInfo._onBeforeDrawObservable || (this._internalMeshDataInfo._onBeforeDrawObservable = new wz.b), this._internalMeshDataInfo._onBeforeDrawObservable
+      }
+      set onBeforeDraw(zz) {
+        this._onBeforeDrawObserver && this.onBeforeDrawObservable.remove(this._onBeforeDrawObserver), this._onBeforeDrawObserver = this.onBeforeDrawObservable.add(zz)
+      }
+      get KEz() {
+        return this.instances.length > 0
+      }
+      get hasThinInstances() {
+        return (this.forcedInstanceCount || this._thinInstanceDataStorage.instancesCount || 0) > 0
+      }
+      get forcedInstanceCount() {
+        return this._internalMeshDataInfo._forcedInstanceCount
+      }
+      set forcedInstanceCount(zz) {
+        this._internalMeshDataInfo._forcedInstanceCount = zz
+      }
+      get sideOrientation() {
+        return this._internalMeshDataInfo._sideOrientation
+      }
+      set sideOrientation(zz) {
+        this._internalMeshDataInfo._sideOrientation = zz, this._internalAbstractMeshDataInfo._sideOrientationHint = this._scene.useRightHandedSystem && 1 === zz || !this._scene.useRightHandedSystem && 0 === zz
+      }
+      get _effectiveSideOrientation() {
+        return this._internalMeshDataInfo._effectiveSideOrientation
+      }
+      get overrideMaterialSideOrientation() {
+        return this.sideOrientation
+      }
+      set overrideMaterialSideOrientation(zz) {
+        this.sideOrientation = zz, this.material && (this.material.sideOrientation = null)
+      }
+      get overrideRenderingFillMode() {
+        return this._internalMeshDataInfo._overrideRenderingFillMode
+      }
+      set overrideRenderingFillMode(zz) {
+        this._internalMeshDataInfo._overrideRenderingFillMode = zz
+      }
+      get material() {
+        return this._internalAbstractMeshDataInfo._material
+      }
+      set material(zz) {
+        zz && (this.material && null === this.material.sideOrientation || this._internalAbstractMeshDataInfo._sideOrientationHint) && (zz.sideOrientation = null), this._setMaterial(zz)
+      }
+      get source() {
+        return this._internalMeshDataInfo._source
+      }
+      get cloneMeshMap() {
+        return this._internalMeshDataInfo.meshMap
+      }
+      get isUnIndexed() {
+        return this._unIndexed
+      }
+      set isUnIndexed(zz) {
+        this._unIndexed !== zz && (this._unIndexed = zz, this._markSubMeshesAsAttributesDirty())
+      }
+      get worldMatrixInstancedBuffer() {
+        const zz = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._instanceDataStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
+        return zz ? zz.instancesData : void 0
+      }
+      get previousWorldMatrixInstancedBuffer() {
+        const zz = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._instanceDataStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
+        return zz ? zz.instancesPreviousData : void 0
+      }
+      get manualUpdateOfWorldMatrixInstancedBuffer() {
+        return this._instanceDataStorage.manualUpdate
+      }
+      set manualUpdateOfWorldMatrixInstancedBuffer(zz) {
+        this._instanceDataStorage.manualUpdate = zz
+      }
+      get manualUpdateOfPreviousWorldMatrixInstancedBuffer() {
+        return this._instanceDataStorage.previousManualUpdate
+      }
+      set manualUpdateOfPreviousWorldMatrixInstancedBuffer(zz) {
+        this._instanceDataStorage.previousManualUpdate = zz
+      }
+      get forceWorldMatrixInstancedBufferUpdate() {
+        return this._instanceDataStorage.forceMatrixUpdates
+      }
+      set forceWorldMatrixInstancedBufferUpdate(zz) {
+        this._instanceDataStorage.forceMatrixUpdates = zz
+      }
+      _copySource(zz, uz) {
+        let bz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+          Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const nz = this.XT();
+        if (zz._geometry && zz._geometry.applyToMesh(this), sz.b.DeepCopy(zz, this, ["name", "material", "skeleton", "instances", "parent", "uniqueId", "source", "metadata", "morphTargetManager", "KEz", "worldMatrixInstancedBuffer", "previousWorldMatrixInstancedBuffer", "hasLODLevels", "geometry", "isBlocked", "areNormalsFrozen", "facetNb", "isFacetDataEnabled", "lightSources", "useBones", "qT", "collider", "edgesRenderer", "forward", "up", "right", "absolutePosition", "absoluteScaling", "absoluteRotationQuaternion", "Elz", "nonUniformScaling", "behaviors", "worldMatrixFromCache", "hasThinInstances", "cloneMeshMap", "hasBoundingInfo", "physicsBody", "physicsImpostor"], ["_poseMatrix"]), this._internalMeshDataInfo._source = zz, nz.useClonedMeshMap && (zz._internalMeshDataInfo.meshMap || (zz._internalMeshDataInfo.meshMap = {}), zz._internalMeshDataInfo.meshMap[this.uniqueId] = this), this._originalBuilderSideOrientation = zz._originalBuilderSideOrientation, this._creationDataStorage = zz._creationDataStorage, zz._ranges) {
+          const uz = zz._ranges;
+          for (const zz in uz) Object.prototype.hasOwnProperty.call(uz, zz) && uz[zz] && this.createAnimationRange(zz, uz[zz].from, uz[zz].to)
+        }
+        if (zz.metadata && zz.metadata.clone ? this.metadata = zz.metadata.clone() : this.metadata = zz.metadata, this._internalMetadata = zz._internalMetadata, this.meshBlendingTag = zz.meshBlendingTag, rz.e && rz.e.HasTags(zz) && rz.e.AddTagsTo(this, rz.e.GetTags(zz, !0)), this.Zx(zz.isEnabled(!1)), this.parent = zz.parent, this.setPivotMatrix(zz.getPivotMatrix(), this._postMultiplyPivotMatrix), this.id = this.name + "." + zz.id, this.material = zz.material, !uz) {
+          const nz = zz.getDescendants(!0);
+          for (let zz = 0; zz < nz.length; zz++) {
+            const iz = nz[zz];
+            iz._isMesh ? (Bz.parent = this, Bz.doNotCloneChildren = uz, Bz.clonePhysicsImpostor = bz, Bz.cloneThinInstances = Ez, iz.clone(this.name + "." + iz.name, Bz)) : iz.clone && iz.clone(this.name + "." + iz.name, this)
+          }
+        }
+        if (zz.morphTargetManager && (this.morphTargetManager = zz.morphTargetManager), (0, gz.c)(nz.getPhysicsEngine)) {
+          const uz = nz.getPhysicsEngine();
+          if (bz && uz)
+            if (1 === uz.getPluginVersion()) {
+              const bz = uz.getImpostorForPhysicsObject(zz);
+              bz && (this.physicsImpostor = bz.clone(this))
+            } else 2 === uz.getPluginVersion() && zz.physicsBody && zz.physicsBody.clone(this)
+        }
+        for (let iz = 0; iz < nz.yN.length; iz++) {
+          const uz = nz.yN[iz];
+          uz.emitter === zz && uz.clone(uz.name, this)
+        }
+        if (this.skeleton = zz.skeleton, Ez && (zz._thinInstanceDataStorage.matrixData ? (this.v_("matrix", new Float32Array(zz._thinInstanceDataStorage.matrixData), 16, !zz._thinInstanceDataStorage.matrixBuffer.isUpdatable()), this._thinInstanceDataStorage.matrixBufferSize = zz._thinInstanceDataStorage.matrixBufferSize, this._thinInstanceDataStorage.instancesCount = zz._thinInstanceDataStorage.instancesCount) : this._thinInstanceDataStorage.matrixBufferSize = zz._thinInstanceDataStorage.matrixBufferSize, zz._userThinInstanceBuffersStorage)) {
+          const uz = zz._userThinInstanceBuffersStorage;
+          for (const zz in uz.data) this.v_(zz, new Float32Array(uz.data[zz]), uz.strides[zz], !uz.vertexBuffers?.[zz]?.isUpdatable()), this._userThinInstanceBuffersStorage.sizes[zz] = uz.sizes[zz]
+        }
+        this.refreshBoundingInfo(!0, !0), this.computeWorldMatrix(!0)
+      }
+      constructor(zz) {
+        let uz, bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          nz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          iz = arguments.length > 4 ? arguments[4] : void 0,
+          lz = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+        super(zz, bz), this._internalMeshDataInfo = new Iz, this.delayLoadState = 0, this.instances = [], this._creationDataStorage = null, this._geometry = null, this._thinInstanceDataStorage = new jz, this._shouldGenerateFlatShading = !1, this._originalBuilderSideOrientation = Cz.DEFAULTSIDE, this.ignoreCameraMaxZ = !1, bz = this.XT(), this._instanceDataStorage = new Wz, this._instanceDataStorage.engine = bz.uR(), this._instanceDataStorage.useMonoDataStorageRenderPass = !this._instanceDataStorage.engine.isWebGPU, this._instanceDataStorage.useMonoDataStorageRenderPass && (this._instanceDataStorage.dataStorageRenderPass = new Qz), this._scene.useRightHandedSystem ? this.sideOrientation = 0 : this.sideOrientation = 1, this._onBeforeDraw = (zz, uz, bz) => {
+          zz && bz && (this._uniformBuffer ? this.transferToEffect(uz) : bz.bindOnlyWorldMatrix(uz))
+        };
+        let Mz = !1;
+        if (Ez && void 0 === Ez._addToSceneRootNodes) {
+          const zz = Ez;
+          uz = zz.parent ?? null, nz = zz.source ?? null, iz = zz.doNotCloneChildren ?? !1, lz = zz.clonePhysicsImpostor ?? !0, Mz = zz.cloneThinInstances ?? !1
+        } else uz = Ez;
+        nz && this._copySource(nz, iz, lz, Mz), null !== uz && (this.parent = uz), this._instanceDataStorage.hardwareInstancedRendering = this.uR().getCaps().instancedArrays, this._internalMeshDataInfo._onMeshReadyObserverAdded = zz => {
+          zz.unregisterOnNextCall = !0, this.isReady(!0) ? this.onMeshReadyObservable.notifyObservers(this) : this._internalMeshDataInfo._checkReadinessObserver || (this._internalMeshDataInfo._checkReadinessObserver = this._scene.onBeforeRenderObservable.add((() => {
+            this.isReady(!0) && (this._scene.onBeforeRenderObservable.remove(this._internalMeshDataInfo._checkReadinessObserver), this._internalMeshDataInfo._checkReadinessObserver = null, this.onMeshReadyObservable.notifyObservers(this))
+          })))
+        }, this.onMeshReadyObservable = new wz.b(this._internalMeshDataInfo._onMeshReadyObserverAdded), nz && nz.onClonedObservable.notifyObservers(this)
+      }
+      instantiateHierarchy() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          uz = arguments.length > 1 ? arguments[1] : void 0,
+          bz = arguments.length > 2 ? arguments[2] : void 0;
+        const Ez = 0 === this.getTotalVertices() || uz && uz.doNotInstantiate && (!0 === uz.doNotInstantiate || uz.doNotInstantiate(this)) ? this.clone("Clone of " + (this.name || this.id), zz || this.parent, !0) : this.createInstance("instance of " + (this.name || this.id));
+        Ez.parent = zz || this.parent, Ez.position = this.position.clone(), Ez.ti = this.ti.clone(), this.rotationQuaternion ? Ez.rotationQuaternion = this.rotationQuaternion.clone() : Ez.rotation = this.rotation.clone(), bz && bz(this, Ez);
+        for (const nz of this.getChildTransformNodes(!0)) "InstancedMesh" === nz.getClassName() && "Mesh" === Ez.getClassName() && nz.wEz === this ? nz.instantiateHierarchy(Ez, {
+          doNotInstantiate: uz && uz.doNotInstantiate || !1,
+          newSourcedMesh: Ez
+        }, bz) : nz.instantiateHierarchy(Ez, uz, bz);
+        return Ez
+      }
+      getClassName() {
+        return "Mesh"
+      }
+      get _isMesh() {
+        return !0
+      }
+      toString(zz) {
+        let uz = super.toString(zz);
+        if (uz += ", n vertices: " + this.getTotalVertices(), uz += ", parent: " + (this._waitingParentId ? this._waitingParentId : this.parent ? this.parent.name : "NONE"), this.animations)
+          for (let bz = 0; bz < this.animations.length; bz++) uz += ", animation[0]: " + this.animations[bz].toString(zz);
+        if (zz)
+          if (this._geometry) {
+            const zz = this.Nbz(),
+              bz = this.getVerticesData(Az.j.PositionKind);
+            bz && zz && (uz += ", flat shading: " + (bz.length / 3 === zz.length ? "YES" : "NO"))
+          } else uz += ", flat shading: UNKNOWN";
+        return uz
+      }
+      _unBindEffect() {
+        super._unBindEffect();
+        for (const zz of this.instances) zz._unBindEffect()
+      }
+      get hasLODLevels() {
+        return this._internalMeshDataInfo._LODLevels.length > 0
+      }
+      getLODLevels() {
+        return this._internalMeshDataInfo._LODLevels
+      }
+      _sortLODLevels() {
+        const zz = this._internalMeshDataInfo._useLODScreenCoverage ? -1 : 1;
+        this._internalMeshDataInfo._LODLevels.sort(((uz, bz) => uz.distanceOrScreenCoverage < bz.distanceOrScreenCoverage ? zz : uz.distanceOrScreenCoverage > bz.distanceOrScreenCoverage ? -zz : 0))
+      }
+      addLODLevel(zz, uz) {
+        if (uz && uz._masterMesh) return Uz.e.Warn("You cannot use a mesh as LOD level twice"), this;
+        const bz = new yz(zz, uz);
+        return this._internalMeshDataInfo._LODLevels.push(bz), uz && (uz._masterMesh = this), this._sortLODLevels(), this
+      }
+      getLODLevelAtDistance(zz) {
+        const uz = this._internalMeshDataInfo;
+        for (let bz = 0; bz < uz._LODLevels.length; bz++) {
+          const Ez = uz._LODLevels[bz];
+          if (Ez.distanceOrScreenCoverage === zz) return Ez.mesh
+        }
+        return null
+      }
+      removeLODLevel(zz) {
+        const uz = this._internalMeshDataInfo;
+        for (let bz = 0; bz < uz._LODLevels.length; bz++) uz._LODLevels[bz].mesh === zz && (uz._LODLevels.splice(bz, 1), zz && (zz._masterMesh = null));
+        return this._sortLODLevels(), this
+      }
+      getLOD(zz, uz) {
+        const bz = this._internalMeshDataInfo;
+        if (!bz._LODLevels || 0 === bz._LODLevels.length) return this;
+        const Ez = uz || this.lG().Ibz,
+          nz = zz.mode === Nz.d.ORTHOGRAPHIC_CAMERA ? zz.minZ : Ez.centerWorld.subtract(zz.globalPosition).length();
+        let iz = nz,
+          lz = 1;
+        if (bz._useLODScreenCoverage) {
+          const uz = zz.screenArea;
+          let bz = Ez.radiusWorld * zz.minZ / nz;
+          bz = bz * bz * Math.PI, iz = bz / uz, lz = -1
+        }
+        if (lz * bz._LODLevels[bz._LODLevels.length - 1].distanceOrScreenCoverage > lz * iz) return this.onLODLevelSelection && this.onLODLevelSelection(iz, this, this), this;
+        for (let Mz = 0; Mz < bz._LODLevels.length; Mz++) {
+          const zz = bz._LODLevels[Mz];
+          if (lz * zz.distanceOrScreenCoverage < lz * iz) {
+            if (zz.mesh) {
+              if (4 === zz.mesh.delayLoadState) return zz.mesh._checkDelayState(), this;
+              if (2 === zz.mesh.delayLoadState) return this;
+              zz.mesh._preActivate(), zz.mesh._updateSubMeshesBoundingInfo(this.worldMatrixFromCache)
+            }
+            return this.onLODLevelSelection && this.onLODLevelSelection(iz, this, zz.mesh), zz.mesh
+          }
+        }
+        return this.onLODLevelSelection && this.onLODLevelSelection(iz, this, this), this
+      }
+      get geometry() {
+        return this._geometry
+      }
+      getTotalVertices() {
+        return null === this._geometry || void 0 === this._geometry ? 0 : this._geometry.getTotalVertices()
+      }
+      getVerticesData(zz, uz, bz, Ez) {
+        if (!this._geometry) return null;
+        let nz = Ez ? void 0 : this._userInstancedBuffersStorage?.vertexBuffers[zz]?.getFloatData(this.instances.length + 1, bz || uz && 1 !== this._geometry.meshes.length);
+        return nz || (nz = this._geometry.getVerticesData(zz, uz, bz)), nz
+      }
+      copyVerticesData(zz, uz) {
+        this._geometry && this._geometry.copyVerticesData(zz, uz)
+      }
+      getVertexBuffer(zz, uz) {
+        return this._geometry ? (uz ? void 0 : this._userInstancedBuffersStorage?.vertexBuffers[zz]) ?? this._geometry.getVertexBuffer(zz) : null
+      }
+      isVerticesDataPresent(zz, uz) {
+        return this._geometry ? !uz && void 0 !== this._userInstancedBuffersStorage?.vertexBuffers[zz] || this._geometry.isVerticesDataPresent(zz) : !!this._delayInfo && -1 !== this._delayInfo.indexOf(zz)
+      }
+      isVertexBufferUpdatable(zz, uz) {
+        if (!this._geometry) return !!this._delayInfo && -1 !== this._delayInfo.indexOf(zz);
+        if (!uz) {
+          const uz = this._userInstancedBuffersStorage?.vertexBuffers[zz];
+          if (uz) return uz.isUpdatable()
+        }
+        return this._geometry.isVertexBufferUpdatable(zz)
+      }
+      getVerticesDataKinds(zz) {
+        if (!this._geometry) {
+          const zz = [];
+          if (this._delayInfo)
+            for (const uz of this._delayInfo) zz.push(uz);
+          return zz
+        }
+        const uz = this._geometry.getVerticesDataKinds();
+        if (!zz && this._userInstancedBuffersStorage)
+          for (const bz in this._userInstancedBuffersStorage.vertexBuffers) - 1 === uz.indexOf(bz) && uz.push(bz);
+        return uz
+      }
+      getTotalIndices() {
+        return this._geometry ? this._geometry.getTotalIndices() : 0
+      }
+      Nbz(zz, uz) {
+        return this._geometry ? this._geometry.Nbz(zz, uz) : []
+      }
+      get isBlocked() {
+        return null !== this._masterMesh && void 0 !== this._masterMesh
+      }
+      isReady() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (2 === this.delayLoadState) return !1;
+        if (!super.isReady(zz)) return !1;
+        if (!this.hN || 0 === this.hN.length) return !0;
+        if (!zz) return !0;
+        const bz = this.uR(),
+          Ez = this.XT(),
+          nz = uz || bz.getCaps().instancedArrays && (this.instances.length > 0 || this.hasThinInstances);
+        this.computeWorldMatrix();
+        const iz = this.material || Ez.defaultMaterial;
+        if (iz)
+          if (iz._storeEffectOnSubMeshes)
+            for (const Mz of this.hN) {
+              const zz = Mz.lR();
+              if (zz)
+                if (zz._storeEffectOnSubMeshes) {
+                  if (!zz.isReadyForSubMesh(this, Mz, nz)) return !1
+                } else if (!zz.isReady(this, nz)) return !1
+            } else if (!iz.isReady(this, nz)) return !1;
+        const lz = bz.currentRenderPassId;
+        for (const Mz of this.lightSources) {
+          const zz = Mz.getShadowGenerators();
+          if (!zz) continue;
+          const uz = zz.values();
+          for (let Ez = uz.next(); !0 !== Ez.done; Ez = uz.next()) {
+            const zz = Ez.value;
+            if (zz && (!zz.getShadowMap()?.renderList || zz.getShadowMap()?.renderList && -1 !== zz.getShadowMap()?.renderList?.indexOf(this))) {
+              const uz = zz.getShadowMap().renderPassIds ?? [bz.currentRenderPassId];
+              for (let Ez = 0; Ez < uz.length; ++Ez) {
+                bz.currentRenderPassId = uz[Ez];
+                for (const uz of this.hN)
+                  if (!zz.isReady(uz, nz, uz.lR()?.needAlphaBlendingForMesh(this) ?? !1)) return bz.currentRenderPassId = lz, !1
+              }
+              bz.currentRenderPassId = lz
+            }
+          }
+        }
+        for (const Mz of this._internalMeshDataInfo._LODLevels)
+          if (Mz.mesh && !Mz.mesh.isReady(nz)) return !1;
+        return !0
+      }
+      get areNormalsFrozen() {
+        return this._internalMeshDataInfo._areNormalsFrozen
+      }
+      MR() {
+        return this._internalMeshDataInfo._areNormalsFrozen = !0, this
+      }
+      unfreezeNormals() {
+        return this._internalMeshDataInfo._areNormalsFrozen = !1, this
+      }
+      set overridenInstanceCount(zz) {
+        this._instanceDataStorage.overridenInstanceCount = zz
+      }
+      _getInstanceDataStorage() {
+        if (this._instanceDataStorage.useMonoDataStorageRenderPass) return this._instanceDataStorage.dataStorageRenderPass;
+        const zz = this._instanceDataStorage.engine.currentRenderPassId;
+        let uz = this._instanceDataStorage.renderPasses[zz];
+        return uz || (uz = new Qz, this._instanceDataStorage.renderPasses[zz] = uz), uz
+      }
+      _preActivate() {
+        const zz = this._internalMeshDataInfo,
+          uz = this.XT().getRenderId();
+        return zz._preActivateId === uz || (zz._preActivateId = uz, this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass.visibleInstances = null : this._getInstanceDataStorage().visibleInstances = null), this
+      }
+      _preActivateForIntermediateRendering(zz) {
+        const uz = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
+        return uz.visibleInstances && (uz.visibleInstances.intermediateDefaultRenderId = zz), this
+      }
+      _registerInstanceForRenderId(zz, uz) {
+        const bz = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
+        return bz.visibleInstances || (bz.visibleInstances = {
+          defaultRenderId: uz,
+          selfDefaultRenderId: this._renderId,
+          intermediateDefaultRenderId: -1
+        }), bz.visibleInstances[uz] || (void 0 === bz.previousRenderId || this._instanceDataStorage.useMonoDataStorageRenderPass && !this._instanceDataStorage.isFrozen || delete bz.visibleInstances[bz.previousRenderId], bz.previousRenderId = uz, bz.visibleInstances[uz] = new Array), bz.visibleInstances[uz].push(zz), this
+      }
+      _afterComputeWorldMatrix() {
+        super._afterComputeWorldMatrix(), this.hasThinInstances && (this.iR || this.thinInstanceRefreshBoundingInfo(!1))
+      }
+      _postActivate() {
+        this.edgesShareWithInstances && this.edgesRenderer && this.edgesRenderer.isEnabled && this._renderingGroup && (this._renderingGroup._edgesRenderers.pushNoDuplicate(this.edgesRenderer), this.edgesRenderer.customInstances.push(this.getWorldMatrix()))
+      }
+      refreshBoundingInfo() {
+        let zz, uz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          bz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.hasBoundingInfo && this.lG().isLocked) return this;
+        zz = "object" === typeof uz ? uz : {
+          applySkeleton: uz,
+          applyMorph: bz
+        };
+        const Ez = this.geometry ? this.geometry.boundingBias : null;
+        return this._refreshBoundingInfo(this._getData(zz, null, Az.j.PositionKind), Ez), this
+      }
+      _createGlobalSubMesh(zz) {
+        const uz = this.getTotalVertices();
+        if (!uz || !this.Nbz()) return null;
+        if (this.hN && this.hN.length > 0) {
+          const bz = this.Nbz();
+          if (!bz) return null;
+          const Ez = bz.length;
+          let nz = !1;
+          if (zz) nz = !0;
+          else
+            for (const zz of this.hN) {
+              if (zz.indexStart + zz.indexCount > Ez) {
+                nz = !0;
+                break
+              }
+              if (zz.verticesStart + zz.verticesCount > uz) {
+                nz = !0;
+                break
+              }
+            }
+          if (!nz) return this.hN[0]
+        }
+        return this.releaseSubMeshes(), new Gz.e(0, 0, uz, 0, this.getTotalIndices() || (this.isUnIndexed ? uz : 0), this)
+      }
+      subdivide(zz) {
+        if (zz < 1) return;
+        const uz = this.getTotalIndices();
+        let bz = uz / zz | 0,
+          Ez = 0;
+        for (; bz % 3 !== 0;) bz++;
+        this.releaseSubMeshes();
+        for (let nz = 0; nz < zz && !(Ez >= uz); nz++) Gz.e.CreateFromIndices(0, Ez, Ez + bz >= uz ? uz - Ez : bz, this, void 0, !1), Ez += bz;
+        this.refreshBoundingInfo(), this.synchronizeInstances()
+      }
+      setVerticesData(zz, uz) {
+        let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Ez = arguments.length > 3 ? arguments[3] : void 0;
+        if (this._geometry) this._geometry.setVerticesData(zz, uz, bz, Ez);
+        else {
+          const Ez = new Tz.b;
+          Ez.set(uz, zz);
+          const nz = this.XT();
+          new Lz.b(Lz.b.RandomId(), nz, Ez, bz, this)
+        }
+        return this
+      }
+      removeVerticesData(zz) {
+        this._geometry && this._geometry.removeVerticesData(zz)
+      }
+      markVerticesDataAsUpdatable(zz) {
+        let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const bz = this.getVertexBuffer(zz);
+        bz && bz.isUpdatable() !== uz && this.setVerticesData(zz, this.getVerticesData(zz), uz)
+      }
+      setVerticesBuffer(zz) {
+        let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        return this._geometry || (this._geometry = Lz.b.CreateGeometryForMesh(this)), this._geometry.setVerticesBuffer(zz, bz, uz), this
+      }
+      updateVerticesData(zz, uz, bz, Ez) {
+        return this._geometry ? (Ez ? (this.makeGeometryUnique(), this.updateVerticesData(zz, uz, bz, !1)) : this._geometry.updateVerticesData(zz, uz, bz), this) : this
+      }
+      updateMeshPositions(zz) {
+        let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const bz = this.getVerticesData(Az.j.PositionKind);
+        if (!bz) return this;
+        if (zz(bz), this.updateVerticesData(Az.j.PositionKind, bz, !1, !1), uz) {
+          const zz = this.Nbz(),
+            uz = this.getVerticesData(Az.j.NormalKind);
+          if (!uz) return this;
+          Tz.b.ComputeNormals(bz, zz, uz), this.updateVerticesData(Az.j.NormalKind, uz, !1, !1)
+        }
+        return this
+      }
+      makeGeometryUnique() {
+        if (!this._geometry) return this;
+        if (1 === this._geometry.meshes.length) return this;
+        const zz = this._geometry,
+          uz = this._geometry.copy(Lz.b.RandomId());
+        return zz.releaseForMesh(this, !0), uz.applyToMesh(this), this
+      }
+      setIndexBuffer(zz, uz, bz) {
+        let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          nz = this._geometry;
+        nz || (nz = new Lz.b(Lz.b.RandomId(), this.XT(), void 0, void 0, this)), nz.setIndexBuffer(zz, uz, bz, Ez)
+      }
+      setIndices(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (this._geometry) this._geometry.setIndices(zz, uz, bz, Ez);
+        else {
+          const Ez = new Tz.b;
+          Ez.indices = zz;
+          const nz = this.XT();
+          new Lz.b(Lz.b.RandomId(), nz, Ez, bz, this, uz)
+        }
+        return this
+      }
+      updateIndices(zz, uz) {
+        let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        return this._geometry ? (this._geometry.updateIndices(zz, uz, bz), this) : this
+      }
+      toLeftHanded() {
+        return this._geometry ? (this._geometry.toLeftHanded(), this) : this
+      }
+      _bind(zz, uz, bz) {
+        let Ez = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        if (!this._geometry) return this;
+        const nz = this.XT().uR();
+        let iz;
+        if (this._unIndexed)
+          if (this._getRenderingFillMode(bz) === az.c.WireFrameFillMode) iz = zz._getLinesIndexBuffer(this.Nbz(), nz);
+          else iz = null;
+        else switch (this._getRenderingFillMode(bz)) {
+          case az.c.PointFillMode:
+            iz = null;
+            break;
+          case az.c.WireFrameFillMode:
+            iz = zz._getLinesIndexBuffer(this.Nbz(), nz);
+            break;
+          default:
+          case az.c.TriangleFillMode:
+            iz = this._geometry.getIndexBuffer()
+        }
+        return this._bindDirect(uz, iz, Ez)
+      }
+      _bindDirect(zz, uz) {
+        let bz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        if (!this._geometry) return this;
+        if (this.morphTargetManager && this.morphTargetManager.isUsingTextureForTargets && this.morphTargetManager._bind(zz), bz && this._userInstancedBuffersStorage && !this.hasThinInstances) {
+          if (!this._instanceDataStorage.useMonoDataStorageRenderPass && this._userInstancedBuffersStorage.renderPasses && this._userInstancedBuffersStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId]) {
+            const zz = this._userInstancedBuffersStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
+            for (const uz in zz) this._userInstancedBuffersStorage.vertexBuffers[uz] = zz[uz]
+          }
+          this._geometry._bind(zz, uz, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects)
+        } else this._geometry._bind(zz, uz);
+        return this
+      }
+      _draw(zz, uz, bz) {
+        if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
+        this._internalMeshDataInfo._onBeforeDrawObservable && this._internalMeshDataInfo._onBeforeDrawObservable.notifyObservers(this);
+        const Ez = this.XT().uR(),
+          nz = Ez._currentMaterialContext,
+          iz = nz && nz.useVertexPulling;
+        return this._unIndexed && uz !== az.c.WireFrameFillMode || uz == az.c.PointFillMode ? Ez.drawArraysType(uz, zz.verticesStart, zz.verticesCount, this.forcedInstanceCount || bz) : uz == az.c.WireFrameFillMode ? Ez.drawElementsType(uz, 0, zz._linesIndexCount, this.forcedInstanceCount || bz) : iz ? Ez.drawArraysType(uz, zz.indexStart, zz.indexCount, this.forcedInstanceCount || bz) : Ez.drawElementsType(uz, zz.indexStart, zz.indexCount, this.forcedInstanceCount || bz), this
+      }
+      registerBeforeRender(zz) {
+        return this.onBeforeRenderObservable.add(zz), this
+      }
+      unregisterBeforeRender(zz) {
+        return this.onBeforeRenderObservable.removeCallback(zz), this
+      }
+      registerAfterRender(zz) {
+        return this.onAfterRenderObservable.add(zz), this
+      }
+      unregisterAfterRender(zz) {
+        return this.onAfterRenderObservable.removeCallback(zz), this
+      }
+      _getInstancesRenderList(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const bz = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
+        if (this._instanceDataStorage.isFrozen) {
+          if (uz) return bz.batchCacheReplacementModeInFrozenMode.hardwareInstancedRendering[zz] = !1, bz.batchCacheReplacementModeInFrozenMode.renderSelf[zz] = !0, bz.batchCacheReplacementModeInFrozenMode;
+          if (bz.previousBatch) return bz.previousBatch
+        }
+        const Ez = this.XT(),
+          nz = Ez._isInIntermediateRendering(),
+          iz = nz ? this._internalAbstractMeshDataInfo._onlyForInstancesIntermediate : this._internalAbstractMeshDataInfo._onlyForInstances,
+          lz = bz.batchCache;
+        if (lz.mustReturn = !1, lz.renderSelf[zz] = uz || !iz && this.isEnabled() && this.isVisible, lz.visibleInstances[zz] = null, bz.visibleInstances && !uz) {
+          const uz = bz.visibleInstances,
+            iz = Ez.getRenderId(),
+            Mz = nz ? uz.intermediateDefaultRenderId : uz.defaultRenderId;
+          lz.visibleInstances[zz] = uz[iz], !lz.visibleInstances[zz] && Mz && (lz.visibleInstances[zz] = uz[Mz])
+        }
+        return lz.hardwareInstancedRendering[zz] = !uz && this._instanceDataStorage.hardwareInstancedRendering && null !== lz.visibleInstances[zz] && void 0 !== lz.visibleInstances[zz], bz.previousBatch = lz, lz
+      }
+      _updateInstancedBuffers(zz, uz, bz, Ez, nz, iz) {
+        const lz = uz.visibleInstances[zz._id],
+          Mz = lz ? lz.length : 0,
+          tz = uz.parent,
+          Hz = this._instanceDataStorage;
+        let Oz = tz.instancesBuffer,
+          pz = tz.instancesPreviousBuffer,
+          dz = 0,
+          Fz = 0;
+        const Zz = uz.renderSelf[zz._id],
+          Rz = this._scene.floatingOriginOffset,
+          Kz = !Oz || bz !== tz.instancesBufferSize || this._scene.needsPreviousWorldMatrices && !tz.instancesPreviousBuffer;
+        if (this._instanceDataStorage.manualUpdate || Hz.isFrozen && !Kz) Fz = (Zz ? 1 : 0) + Mz;
+        else {
+          const uz = this.getWorldMatrix();
+          if (Zz) {
+            this._scene.needsPreviousWorldMatrices && (Hz.masterMeshPreviousWorldMatrix ? (Hz.masterMeshPreviousWorldMatrix.copyToArray(tz.instancesPreviousData, dz), Hz.masterMeshPreviousWorldMatrix.euz(uz)) : (Hz.masterMeshPreviousWorldMatrix = uz.clone(), Hz.masterMeshPreviousWorldMatrix.copyToArray(tz.instancesPreviousData, dz))), uz.copyToArray(tz.instancesData, dz);
+            const zz = uz.obz();
+            tz.instancesData[dz + 12] = zz[12] - Rz.x, tz.instancesData[dz + 13] = zz[13] - Rz.y, tz.instancesData[dz + 14] = zz[14] - Rz.z, dz += 16, Fz++
+          }
+          if (lz) {
+            if (Cz.INSTANCEDMESH_SORT_TRANSPARENT && this._scene.activeCamera && zz.lR()?.needAlphaBlendingForMesh(zz.getRenderingMesh())) {
+              const zz = this._scene.activeCamera.globalPosition;
+              for (let uz = 0; uz < lz.length; uz++) {
+                const bz = lz[uz];
+                bz._distanceToCamera = vz.n.Distance(bz.lG().Ibz.centerWorld, zz)
+              }
+              lz.sort(((zz, uz) => zz._distanceToCamera > uz._distanceToCamera ? -1 : zz._distanceToCamera < uz._distanceToCamera ? 1 : 0))
+            }
+            for (let zz = 0; zz < lz.length; zz++) {
+              const uz = lz[zz],
+                bz = uz.getWorldMatrix();
+              bz.copyToArray(tz.instancesData, dz), this._scene.needsPreviousWorldMatrices && (uz._previousWorldMatrix ? (uz._previousWorldMatrix.copyToArray(tz.instancesPreviousData, dz), uz._previousWorldMatrix.euz(bz)) : (uz._previousWorldMatrix = bz.clone(), uz._previousWorldMatrix.copyToArray(tz.instancesPreviousData, dz)));
+              const Ez = bz.obz();
+              tz.instancesData[dz + 12] = Ez[12] - Rz.x, tz.instancesData[dz + 13] = Ez[13] - Rz.y, tz.instancesData[dz + 14] = Ez[14] - Rz.z, dz += 16, Fz++
+            }
+          }
+        }
+        if (Kz) {
+          let zz;
+          if (Oz && Oz.dispose(), pz && pz.dispose(), Oz = new Az.c(Ez, tz.instancesData, !0, 16, !1, !0), tz.instancesBuffer = Oz, this._userInstancedBuffersStorage || (this._userInstancedBuffersStorage = {
+              data: {},
+              vertexBuffers: {},
+              strides: {},
+              sizes: {},
+              vertexArrayObjects: this.uR().getCaps().vertexArrayObject ? {} : void 0
+            }), this._instanceDataStorage.useMonoDataStorageRenderPass) zz = this._userInstancedBuffersStorage.vertexBuffers;
+          else {
+            this._userInstancedBuffersStorage.renderPasses || (this._userInstancedBuffersStorage.renderPasses = {});
+            const uz = this._instanceDataStorage.engine.currentRenderPassId;
+            zz = this._userInstancedBuffersStorage.renderPasses[uz], zz || (this._userInstancedBuffersStorage.renderPasses[uz] = zz = {})
+          }
+          zz.world0 = Oz.createVertexBuffer("world0", 0, 4), zz.world1 = Oz.createVertexBuffer("world1", 4, 4), zz.world2 = Oz.createVertexBuffer("world2", 8, 4), zz.world3 = Oz.createVertexBuffer("world3", 12, 4), this._scene.needsPreviousWorldMatrices && (pz = new Az.c(Ez, tz.instancesPreviousData, !0, 16, !1, !0), tz.instancesPreviousBuffer = pz, zz.previousWorld0 = pz.createVertexBuffer("previousWorld0", 0, 4), zz.previousWorld1 = pz.createVertexBuffer("previousWorld1", 4, 4), zz.previousWorld2 = pz.createVertexBuffer("previousWorld2", 8, 4), zz.previousWorld3 = pz.createVertexBuffer("previousWorld3", 12, 4)), this._invalidateInstanceVertexArrayObject()
+        } else this._instanceDataStorage.isFrozen && !this._instanceDataStorage.forceMatrixUpdates || (Oz.updateDirectly(tz.instancesData, 0, Fz), !this._scene.needsPreviousWorldMatrices || this._instanceDataStorage.manualUpdate && !this._instanceDataStorage.previousManualUpdate || pz.updateDirectly(tz.instancesPreviousData, 0, Fz));
+        this._processInstancedBuffers(lz, Zz), iz && void 0 !== nz && (this.XT()._activeIndices.addCount(zz.indexCount * Fz, !1), Ez._currentDrawContext && (Ez._currentDrawContext.useInstancing = !0), this._bind(zz, iz, nz), this._draw(zz, nz, Fz)), !this._scene.needsPreviousWorldMatrices || Kz || !this._instanceDataStorage.manualUpdate || this._instanceDataStorage.isFrozen && !this._instanceDataStorage.forceMatrixUpdates || this._instanceDataStorage.previousManualUpdate || pz.updateDirectly(tz.instancesData, 0, Fz)
+      }
+      _renderWithInstances(zz, uz, bz, Ez, nz) {
+        const iz = bz.visibleInstances[zz._id],
+          lz = iz ? iz.length : 0,
+          Mz = bz.parent,
+          tz = Mz.instancesBufferSize,
+          Hz = 16 * (lz + 1) * 4;
+        for (; Mz.instancesBufferSize < Hz;) Mz.instancesBufferSize *= 2;
+        return Mz.instancesData && tz == Mz.instancesBufferSize || (Mz.instancesData = new Float32Array(Mz.instancesBufferSize / 4)), (this._scene.needsPreviousWorldMatrices && !Mz.instancesPreviousData || tz != Mz.instancesBufferSize) && (Mz.instancesPreviousData = new Float32Array(Mz.instancesBufferSize / 4)), this._updateInstancedBuffers(zz, bz, tz, nz, uz, Ez), nz.unbindInstanceAttributes(), this
+      }
+      _renderWithThinInstances(zz, uz, bz, Ez) {
+        const nz = this._thinInstanceDataStorage?.instancesCount ?? 0;
+        this.XT()._activeIndices.addCount(zz.indexCount * nz, !1), Ez._currentDrawContext && (Ez._currentDrawContext.useInstancing = !0), this._bind(zz, bz, uz), this._draw(zz, uz, nz), this._scene.needsPreviousWorldMatrices && !this._thinInstanceDataStorage.previousMatrixData && this._thinInstanceDataStorage.matrixData && (this._thinInstanceDataStorage.previousMatrixBuffer ? this._thinInstanceDataStorage.previousMatrixBuffer.updateDirectly(this._thinInstanceDataStorage.matrixData, 0, nz) : this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", this._thinInstanceDataStorage.matrixData, !1)), Ez.unbindInstanceAttributes()
+      }
+      _processInstancedBuffers(zz, uz) {}
+      _processRendering(zz, uz, bz, Ez, nz, iz, lz, Mz) {
+        const tz = this.XT(),
+          Hz = tz.uR();
+        if (Ez = this._getRenderingFillMode(Ez), iz && uz.getRenderingMesh().hasThinInstances) return this._renderWithThinInstances(uz, Ez, bz, Hz), this;
+        if (iz) this._renderWithInstances(uz, Ez, nz, bz, Hz);
+        else {
+          Hz._currentDrawContext && (Hz._currentDrawContext.useInstancing = !1);
+          let bz = 0;
+          nz.renderSelf[uz._id] && (lz && lz(!1, zz.getWorldMatrix(), Mz), bz++, this._draw(uz, Ez, this._instanceDataStorage.overridenInstanceCount));
+          const iz = nz.visibleInstances[uz._id];
+          if (iz) {
+            const zz = iz.length;
+            bz += zz;
+            for (let bz = 0; bz < zz; bz++) {
+              const zz = iz[bz].getWorldMatrix();
+              lz && lz(!0, zz, Mz), this._draw(uz, Ez)
+            }
+          }
+          tz._activeIndices.addCount(uz.indexCount * bz, !1)
+        }
+        return this
+      }
+      _disposeInstanceDataStorageRenderPass(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        zz?.instancesBuffer && (uz && zz.instancesBuffer.dispose(), zz.instancesBuffer = null), zz?.instancesPreviousBuffer && (uz && zz.instancesPreviousBuffer.dispose(), zz.instancesPreviousBuffer = null)
+      }
+      _rebuild() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const uz in this._instanceDataStorage.renderPasses) {
+          const bz = this._instanceDataStorage.renderPasses[uz];
+          this._disposeInstanceDataStorageRenderPass(bz, zz)
+        }
+        if (this._disposeInstanceDataStorageRenderPass(this._instanceDataStorage.dataStorageRenderPass, zz), this._userInstancedBuffersStorage) {
+          for (const uz in this._userInstancedBuffersStorage.vertexBuffers) {
+            const bz = this._userInstancedBuffersStorage.vertexBuffers[uz];
+            bz && (zz && bz.dispose(), this._userInstancedBuffersStorage.vertexBuffers[uz] = null)
+          }
+          this._userInstancedBuffersStorage.vertexArrayObjects && (this._userInstancedBuffersStorage.vertexArrayObjects = {})
+        }
+        this._internalMeshDataInfo._effectiveMaterial = null, super._rebuild(zz)
+      }
+      _releaseRenderPassId(zz) {
+        const uz = this._instanceDataStorage.renderPasses[zz];
+        if (uz && (this._disposeInstanceDataStorageRenderPass(uz, !0), delete this._instanceDataStorage.renderPasses[zz]), this._userInstancedBuffersStorage?.renderPasses) {
+          const uz = this._userInstancedBuffersStorage.renderPasses[zz];
+          if (uz)
+            for (const zz in uz) uz[zz]?.dispose();
+          delete this._userInstancedBuffersStorage.renderPasses[zz]
+        }
+        const bz = this._userInstancedBuffersStorage?.interleavedBuffers;
+        bz?.[zz] && (bz[zz].buffer.dispose(), delete bz[zz])
+      }
+      _freeze() {
+        if (this.hN) {
+          for (let zz = 0; zz < this.hN.length; zz++) this._getInstancesRenderList(zz);
+          this._internalMeshDataInfo._effectiveMaterial = null, this._instanceDataStorage.isFrozen = !0
+        }
+      }
+      _unFreeze() {
+        this._instanceDataStorage.isFrozen = !1;
+        for (const zz in this._instanceDataStorage.renderPasses) {
+          this._instanceDataStorage.renderPasses[zz].previousBatch = null
+        }
+        this._instanceDataStorage.dataStorageRenderPass && (this._instanceDataStorage.dataStorageRenderPass.previousBatch = null)
+      }
+      renderWithRenderPassId(zz, uz, bz, Ez) {
+        let nz = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const iz = this._scene.uR(),
+          lz = iz.currentRenderPassId;
+        if (void 0 !== zz && (iz.currentRenderPassId = zz), Ez)(!nz || nz && Ez.isInFrustum(this._scene._frustumPlanes)) && this.render(Ez, !!uz, bz);
+        else
+          for (let Mz = 0; Mz < this.hN.length; Mz++) {
+            const zz = this.hN[Mz];
+            (!nz || nz && zz.isInFrustum(this._scene._frustumPlanes)) && this.render(zz, !!uz, bz)
+          }
+        return void 0 !== zz && (iz.currentRenderPassId = lz), this
+      }
+      directRender() {
+        if (!this.hN) return this;
+        for (const zz of this.hN) this.render(zz, !1);
+        return this
+      }
+      render(zz, uz, bz) {
+        const Ez = this.XT(),
+          nz = Ez.uR();
+        this._internalAbstractMeshDataInfo._isActiveIntermediate ? this._internalAbstractMeshDataInfo._isActiveIntermediate = !1 : this._internalAbstractMeshDataInfo._isActive = !1;
+        const iz = Ez.activeCameras?.length ?? 0,
+          lz = iz > 1 && Ez.activeCamera === Ez.activeCameras[0] || iz <= 1,
+          Mz = this._occlusionDataStorage && -1 !== this._occlusionDataStorage.occlusionForRenderPassId && this._occlusionDataStorage.occlusionForRenderPassId !== nz.currentRenderPassId;
+        if (lz && this._checkOcclusionQuery(Mz) && !this._occlusionDataStorage.forceRenderingWhenOccluded) return this;
+        const tz = this._getInstancesRenderList(zz._id, !!bz);
+        if (tz.mustReturn) return this;
+        if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
+        let Hz = 0,
+          Oz = null;
+        this.ignoreCameraMaxZ && Ez.activeCamera && !Ez._isInIntermediateRendering() && (Hz = Ez.activeCamera.maxZ, Oz = Ez.activeCamera, Ez.activeCamera.maxZ = 0, Ez.updateTransformMatrix(!0)), this._internalMeshDataInfo._onBeforeRenderObservable && this._internalMeshDataInfo._onBeforeRenderObservable.notifyObservers(this);
+        const pz = zz.getRenderingMesh(),
+          dz = tz.hardwareInstancedRendering[zz._id] || pz.hasThinInstances || !!this._userInstancedBuffersStorage && !zz.getMesh()._internalAbstractMeshDataInfo._actAsRegularMesh,
+          Fz = this._instanceDataStorage,
+          Zz = zz.lR();
+        if (!Zz) return Oz && (Oz.maxZ = Hz, Ez.updateTransformMatrix(!0)), this;
+        if (Fz.isFrozen && this._internalMeshDataInfo._effectiveMaterial && this._internalMeshDataInfo._effectiveMaterial === Zz) {
+          if (Zz._storeEffectOnSubMeshes && !zz._drawWrapper?._wasPreviouslyReady || !Zz._storeEffectOnSubMeshes && !Zz._getDrawWrapper()._wasPreviouslyReady) return Oz && (Oz.maxZ = Hz, Ez.updateTransformMatrix(!0)), this
+        } else {
+          if (Zz._storeEffectOnSubMeshes) {
+            if (!Zz.isReadyForSubMesh(this, zz, dz)) return Oz && (Oz.maxZ = Hz, Ez.updateTransformMatrix(!0)), this
+          } else if (!Zz.isReady(this, dz)) return Oz && (Oz.maxZ = Hz, Ez.updateTransformMatrix(!0)), this;
+          this._internalMeshDataInfo._effectiveMaterial = Zz
+        }
+        if (uz) {
+          const zz = this._internalMeshDataInfo._effectiveMaterial;
+          if (1 === zz.alphaModes.length) nz.setAlphaMode(zz.alphaMode);
+          else
+            for (let uz = 0; uz < zz.alphaModes.length; uz++) {
+              const bz = zz.alphaModes[uz];
+              nz.setAlphaMode(void 0 !== bz ? bz : 2, !1, uz)
+            }
+        }
+        let Rz;
+        Rz = this._internalMeshDataInfo._effectiveMaterial._storeEffectOnSubMeshes ? zz._drawWrapper : this._internalMeshDataInfo._effectiveMaterial._getDrawWrapper();
+        const Kz = Rz?.effect ?? null;
+        for (let Nz = 0, vz = Ez._beforeRenderingMeshStage; Nz < vz.length; Nz++) {
+          vz[Nz].action(this, zz, tz, Kz)
+        }
+        if (!Rz || !Kz) return Oz && (Oz.maxZ = Hz, Ez.updateTransformMatrix(!0)), this;
+        const wz = bz || this;
+        let Xz;
+        if (!Fz.isFrozen && (this._internalMeshDataInfo._effectiveMaterial.backFaceCulling || null !== this._internalMeshDataInfo._effectiveMaterial.sideOrientation || this._internalMeshDataInfo._effectiveMaterial._twoSidedLighting)) {
+          const zz = wz._getWorldMatrixDeterminant();
+          Xz = this._internalMeshDataInfo._effectiveMaterial._getEffectiveOrientation(this), zz < 0 && (Xz = Xz === az.c.ClockWiseSideOrientation ? az.c.CounterClockWiseSideOrientation : az.c.ClockWiseSideOrientation), this._internalMeshDataInfo._effectiveSideOrientation = Xz
+        }
+        const fz = this._internalMeshDataInfo._effectiveMaterial._preBind(Rz, this._internalMeshDataInfo._effectiveSideOrientation);
+        this._internalMeshDataInfo._effectiveMaterial.forceDepthWrite && nz.setDepthWrite(!0);
+        const sz = this._internalMeshDataInfo._effectiveMaterial,
+          rz = sz.fillMode;
+        this._internalMeshDataInfo._onBeforeBindObservable && this._internalMeshDataInfo._onBeforeBindObservable.notifyObservers(this), dz || this._bind(zz, Kz, rz, !1);
+        const oz = wz.getWorldMatrix();
+        sz._storeEffectOnSubMeshes ? sz.bindForSubMesh(oz, this, zz) : sz.bind(oz, this);
+        try {
+          Vz.d._BindAttachmentsForEffect(nz, Kz) && (!sz.backFaceCulling && sz.separateCullingPass && (nz.setState(!0, sz.zOffset, !1, !fz, sz.cullBackFaces, sz.stencil, sz.zOffsetUnits), this._processRendering(this, zz, Kz, rz, tz, dz, this._onBeforeDraw, this._internalMeshDataInfo._effectiveMaterial), nz.setState(!0, sz.zOffset, !1, fz, sz.cullBackFaces, sz.stencil, sz.zOffsetUnits), this._internalMeshDataInfo._onBetweenPassObservable && this._internalMeshDataInfo._onBetweenPassObservable.notifyObservers(zz)), this._processRendering(this, zz, Kz, rz, tz, dz, this._onBeforeDraw, this._internalMeshDataInfo._effectiveMaterial))
+        } finally {
+          Vz.d._RestoreAttachments(nz)
+        }
+        this._internalMeshDataInfo._effectiveMaterial.unbind();
+        for (let Nz = 0, vz = Ez._afterRenderingMeshStage; Nz < vz.length; Nz++) {
+          vz[Nz].action(this, zz, tz, Kz)
+        }
+        return this._internalMeshDataInfo._onAfterRenderObservable && this._internalMeshDataInfo._onAfterRenderObservable.notifyObservers(this), Oz && (Oz.maxZ = Hz, Ez.updateTransformMatrix(!0)), 2 !== Ez.performancePriority || Fz.isFrozen || this._freeze(), this
+      }
+      _renderRunFollower(zz, uz) {
+        const bz = this._scene,
+          Ez = bz._engine;
+        if (Ez.isWebGPU || zz._mesh !== this || 0 !== this.instances.length || this.render !== Cz.prototype.render) return !1;
+        const nz = zz.lR();
+        if (!nz || nz !== bz._cachedMaterial || void 0 === nz._canBindRunFollower) return !1;
+        const iz = zz._drawWrapper,
+          lz = iz?.effect;
+        if (!lz || lz !== bz._cachedEffect || this.visibility !== bz._cachedVisibility || iz._forceRebindOnNextCall) return !1;
+        const Mz = this.hasThinInstances;
+        if (!Mz && this._userInstancedBuffersStorage) return !1;
+        if (!iz._wasPreviouslyReady || iz._wasPreviouslyUsingInstances !== Mz) return !1;
+        const tz = this._internalMeshDataInfo;
+        if (this.ignoreCameraMaxZ || this.morphTargetManager || this._instanceDataStorage.isFrozen || bz._isInIntermediateRendering() || 0 !== bz._beforeRenderingMeshStage.length || 0 !== bz._afterRenderingMeshStage.length || tz._onBeforeRenderObservable?.hasObservers() || tz._onBeforeBindObservable?.hasObservers() || tz._onAfterRenderObservable?.hasObservers()) return !1;
+        const Hz = this.occlusionType;
+        if (void 0 !== Hz && Hz !== Pz.e.OCCLUSION_TYPE_NONE || !nz._canBindRunFollower(bz, Ez, this, zz, lz)) return !1;
+        const Oz = this._internalAbstractMeshDataInfo,
+          pz = Oz._isActiveIntermediate;
+        pz ? Oz._isActiveIntermediate = !1 : Oz._isActive = !1;
+        const dz = bz.activeCameras?.length ?? 0;
+        (dz > 1 && bz.activeCamera === bz.activeCameras[0] || dz <= 1) && this._checkOcclusionQuery(!1);
+        const Fz = this._getInstancesRenderList(zz._id);
+        if (Fz.mustReturn) return !0;
+        if (!Mz && !Fz.renderSelf[zz._id]) return pz ? Oz._isActiveIntermediate = !0 : Oz._isActive = !0, !1;
+        if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return !0;
+        if (tz._effectiveMaterial = nz, uz)
+          if (1 === nz.alphaModes.length) Ez.setAlphaMode(nz.alphaMode);
+          else
+            for (let Rz = 0; Rz < nz.alphaModes.length; Rz++) {
+              const zz = nz.alphaModes[Rz];
+              Ez.setAlphaMode(void 0 !== zz ? zz : 2, !1, Rz)
+            }
+        if (nz.backFaceCulling || null !== nz.sideOrientation || nz._twoSidedLighting) {
+          const zz = this._getWorldMatrixDeterminant();
+          let uz = nz._getEffectiveOrientation(this);
+          zz < 0 && (uz = uz === az.c.ClockWiseSideOrientation ? az.c.CounterClockWiseSideOrientation : az.c.ClockWiseSideOrientation), tz._effectiveSideOrientation = uz
+        }
+        nz._preBind(iz, tz._effectiveSideOrientation), nz.forceDepthWrite && Ez.setDepthWrite(!0);
+        const Zz = nz.fillMode;
+        return Mz || this._bind(zz, lz, Zz, !1), nz._bindRunFollower(this.getWorldMatrix(), this, zz, lz), this._processRendering(this, zz, lz, Zz, Fz, Mz, this._onBeforeDraw, nz), nz.unbind(), 2 === bz.performancePriority && this._freeze(), !0
+      }
+      cleanMatrixWeights() {
+        this.isVerticesDataPresent(Az.j.MatricesWeightsKind) && (this.isVerticesDataPresent(Az.j.MatricesWeightsExtraKind) ? this._normalizeSkinWeightsAndExtra() : this._normalizeSkinFourWeights())
+      }
+      _normalizeSkinFourWeights() {
+        const zz = this.getVerticesData(Az.j.MatricesWeightsKind),
+          uz = zz.length;
+        for (let bz = 0; bz < uz; bz += 4) {
+          const uz = zz[bz] + zz[bz + 1] + zz[bz + 2] + zz[bz + 3];
+          if (0 === uz) zz[bz] = 1;
+          else {
+            const Ez = 1 / uz;
+            zz[bz] *= Ez, zz[bz + 1] *= Ez, zz[bz + 2] *= Ez, zz[bz + 3] *= Ez
+          }
+        }
+        this.setVerticesData(Az.j.MatricesWeightsKind, zz)
+      }
+      _normalizeSkinWeightsAndExtra() {
+        const zz = this.getVerticesData(Az.j.MatricesWeightsExtraKind),
+          uz = this.getVerticesData(Az.j.MatricesWeightsKind),
+          bz = uz.length;
+        for (let Ez = 0; Ez < bz; Ez += 4) {
+          let bz = uz[Ez] + uz[Ez + 1] + uz[Ez + 2] + uz[Ez + 3];
+          if (bz += zz[Ez] + zz[Ez + 1] + zz[Ez + 2] + zz[Ez + 3], 0 === bz) uz[Ez] = 1;
+          else {
+            const nz = 1 / bz;
+            uz[Ez] *= nz, uz[Ez + 1] *= nz, uz[Ez + 2] *= nz, uz[Ez + 3] *= nz, zz[Ez] *= nz, zz[Ez + 1] *= nz, zz[Ez + 2] *= nz, zz[Ez + 3] *= nz
+          }
+        }
+        this.setVerticesData(Az.j.MatricesWeightsKind, uz), this.setVerticesData(Az.j.MatricesWeightsKind, zz)
+      }
+      validateSkinning() {
+        const zz = this.getVerticesData(Az.j.MatricesWeightsExtraKind),
+          uz = this.getVerticesData(Az.j.MatricesWeightsKind);
+        if (null === uz || null == this.skeleton) return {
+          skinned: !1,
+          valid: !0,
+          xZ: "not skinned"
+        };
+        const bz = uz.length;
+        let Ez = 0,
+          nz = 0,
+          iz = 0,
+          lz = 0;
+        const Mz = null === zz ? 4 : 8,
+          tz = [];
+        for (let Fz = 0; Fz <= Mz; Fz++) tz[Fz] = 0;
+        for (let Fz = 0; Fz < bz; Fz += 4) {
+          let bz = uz[Fz],
+            Hz = bz,
+            Oz = 0 === Hz ? 0 : 1;
+          for (let nz = 1; nz < Mz; nz++) {
+            const iz = nz < 4 ? uz[Fz + nz] : zz[Fz + nz - 4];
+            iz > bz && Ez++, 0 !== iz && Oz++, Hz += iz, bz = iz
+          }
+          if (tz[Oz]++, Oz > iz && (iz = Oz), 0 === Hz) nz++;
+          else {
+            const bz = 1 / Hz;
+            let Ez = 0;
+            for (let nz = 0; nz < Mz; nz++) Ez += nz < 4 ? Math.abs(uz[Fz + nz] - uz[Fz + nz] * bz) : Math.abs(zz[Fz + nz - 4] - zz[Fz + nz - 4] * bz);
+            Ez > .001 && lz++
+          }
+        }
+        const Hz = this.skeleton.bones.length,
+          Oz = this.getVerticesData(Az.j.MatricesIndicesKind),
+          pz = this.getVerticesData(Az.j.MatricesIndicesExtraKind);
+        let dz = 0;
+        for (let Fz = 0; Fz < bz; Fz += 4)
+          for (let zz = 0; zz < Mz; zz++) {
+            const uz = zz < 4 ? Oz[Fz + zz] : pz[Fz + zz - 4];
+            (uz >= Hz || uz < 0) && dz++
+          }
+        return {
+          skinned: !0,
+          valid: 0 === nz && 0 === lz && 0 === dz,
+          xZ: "Number of Weights = " + bz / 4 + "\nMaximum influences = " + iz + "\nMissing Weights = " + nz + "\nNot Sorted = " + Ez + "\nNot Normalized = " + lz + "\nWeightCounts = [" + tz + "]\nNumber of bones = " + Hz + "\nBad Bone Indices = " + dz
+        }
+      }
+      _checkDelayState() {
+        const zz = this.XT();
+        return this._geometry ? this._geometry.load(zz) : 4 === this.delayLoadState && (this.delayLoadState = 2, this._queueLoad(zz)), this
+      }
+      _queueLoad(zz) {
+        zz.addPendingData(this);
+        const uz = -1 !== this.delayLoadingFile.indexOf(".babylonbinarymeshdata");
+        return (async () => {
+          try {
+            const bz = await zz._loadDelayedFileAsync(this.delayLoadingFile, uz, !0);
+            bz instanceof ArrayBuffer ? this._delayLoadingFunction(bz, this) : this._delayLoadingFunction(JSON.parse(bz), this);
+            for (const zz of this.instances) zz.refreshBoundingInfo(), zz._syncSubMeshes();
+            this.delayLoadState = 1, zz.removePendingData(this)
+          } catch (bz) {
+            zz.removePendingData(this), zz.Uuz || Uz.e.Error(`Unable to delay load geometry data for mesh "${this.name}" from "${this.delayLoadingFile}": ${bz}`)
+          }
+        })(), this
+      }
+      isInFrustum(zz) {
+        return 2 !== this.delayLoadState && (!!super.isInFrustum(zz) && (this._checkDelayState(), !0))
+      }
+      setMaterialById(zz) {
+        const uz = this.XT().materials;
+        let bz;
+        for (bz = uz.length - 1; bz > -1; bz--)
+          if (uz[bz].id === zz) return this.material = uz[bz], this;
+        const Ez = this.XT().multiMaterials;
+        for (bz = Ez.length - 1; bz > -1; bz--)
+          if (Ez[bz].id === zz) return this.material = Ez[bz], this;
+        return this
+      }
+      getAnimatables() {
+        const zz = [];
+        return this.material && zz.push(this.material), this.skeleton && zz.push(this.skeleton), zz
+      }
+      bakeTransformIntoVertices(zz) {
+        if (!this.isVerticesDataPresent(Az.j.PositionKind)) return this;
+        const uz = this.hN.splice(0);
+        this._resetPointsArrayCache();
+        let bz = this.getVerticesData(Az.j.PositionKind);
+        const Ez = vz.n.Zero();
+        let nz;
+        for (nz = 0; nz < bz.length; nz += 3) vz.n.TransformCoordinatesFromFloatsToRef(bz[nz], bz[nz + 1], bz[nz + 2], zz, Ez).toArray(bz, nz);
+        if (this.setVerticesData(Az.j.PositionKind, bz, this.getVertexBuffer(Az.j.PositionKind).isUpdatable()), this.isVerticesDataPresent(Az.j.NormalKind)) {
+          for (bz = this.getVerticesData(Az.j.NormalKind), nz = 0; nz < bz.length; nz += 3) vz.n.TransformNormalFromFloatsToRef(bz[nz], bz[nz + 1], bz[nz + 2], zz, Ez).normalize().toArray(bz, nz);
+          this.setVerticesData(Az.j.NormalKind, bz, this.getVertexBuffer(Az.j.NormalKind).isUpdatable())
+        }
+        if (this.isVerticesDataPresent(Az.j.TangentKind)) {
+          for (bz = this.getVerticesData(Az.j.TangentKind), nz = 0; nz < bz.length; nz += 4) vz.n.TransformNormalFromFloatsToRef(bz[nz], bz[nz + 1], bz[nz + 2], zz, Ez).normalize().toArray(bz, nz);
+          this.setVerticesData(Az.j.TangentKind, bz, this.getVertexBuffer(Az.j.TangentKind).isUpdatable())
+        }
+        return zz.determinant() < 0 && this.flipFaces(), this.releaseSubMeshes(), this.hN = uz, this
+      }
+      bakeCurrentTransformIntoVertices() {
+        let zz = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] && this.makeGeometryUnique(), this.bakeTransformIntoVertices(this.computeWorldMatrix(!0)), this.resetLocalMatrix(zz), this
+      }
+      get _positions() {
+        return this._internalAbstractMeshDataInfo._positions || this._geometry && this._geometry._positions || null
+      }
+      _resetPointsArrayCache() {
+        return this._geometry && this._geometry._resetPointsArrayCache(), this
+      }
+      _generatePointsArray() {
+        return !!this._geometry && this._geometry._generatePointsArray()
+      }
+      clone() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+          uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          bz = arguments.length > 2 ? arguments[2] : void 0,
+          Ez = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        if (uz && void 0 === uz._addToSceneRootNodes) {
+          const bz = uz;
+          return Bz.source = this, Bz.doNotCloneChildren = bz.doNotCloneChildren, Bz.clonePhysicsImpostor = bz.clonePhysicsImpostor, Bz.cloneThinInstances = bz.cloneThinInstances, new Cz(zz, this.XT(), Bz)
+        }
+        return new Cz(zz, this.XT(), uz, this, bz, Ez)
+      }
+      dispose(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.morphTargetManager = null, this._geometry && this._geometry.releaseForMesh(this, !0);
+        const bz = this._internalMeshDataInfo;
+        if (bz._onBeforeDrawObservable && bz._onBeforeDrawObservable.clear(), bz._onBeforeBindObservable && bz._onBeforeBindObservable.clear(), bz._onBeforeRenderObservable && bz._onBeforeRenderObservable.clear(), bz._onAfterRenderObservable && bz._onAfterRenderObservable.clear(), bz._onBetweenPassObservable && bz._onBetweenPassObservable.clear(), this._scene.useClonedMeshMap) {
+          if (bz.meshMap)
+            for (const zz in bz.meshMap) {
+              const uz = bz.meshMap[zz];
+              uz && (uz._internalMeshDataInfo._source = null, bz.meshMap[zz] = void 0)
+            }
+          bz._source && bz._source._internalMeshDataInfo.meshMap && (bz._source._internalMeshDataInfo.meshMap[this.uniqueId] = void 0)
+        } else {
+          const zz = this.XT().meshes;
+          for (const uz of zz) {
+            const zz = uz;
+            zz._internalMeshDataInfo && zz._internalMeshDataInfo._source && zz._internalMeshDataInfo._source === this && (zz._internalMeshDataInfo._source = null)
+          }
+        }
+        bz._source = null, this._disposeInstanceSpecificData(), this._disposeThinInstanceSpecificData(), this._internalMeshDataInfo._checkReadinessObserver && this._scene.onBeforeRenderObservable.remove(this._internalMeshDataInfo._checkReadinessObserver), super.dispose(zz, uz)
+      }
+      _disposeInstanceSpecificData() {}
+      _disposeThinInstanceSpecificData() {}
+      _invalidateInstanceVertexArrayObject() {}
+      applyDisplacementMap(zz, uz, bz, Ez, nz, iz) {
+        let lz = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          Mz = arguments.length > 7 ? arguments[7] : void 0;
+        const tz = this.XT();
+        return (0, fz.t)(zz, (zz => {
+          const Mz = zz.width,
+            tz = zz.height,
+            Hz = this.uR().createCanvas(Mz, tz).getContext("2d");
+          Hz.drawImage(zz, 0, 0);
+          const Oz = Hz.getImageData(0, 0, Mz, tz).data;
+          this.applyDisplacementMapFromBuffer(Oz, Mz, tz, uz, bz, nz, iz, lz), Ez && Ez(this)
+        }), Mz || (() => {}), tz.offlineProvider), this
+      }
+      applyDisplacementMapFromBuffer(zz, uz, bz, Ez, nz, iz, lz) {
+        let Mz = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+        if (!this.isVerticesDataPresent(Az.j.PositionKind) || !this.isVerticesDataPresent(Az.j.NormalKind) || !this.isVerticesDataPresent(Az.j.UVKind)) return Uz.e.Warn("Cannot call applyDisplacementMap: Given mesh is not complete. Position, Normal or UV are missing"), this;
+        const tz = this.getVerticesData(Az.j.PositionKind, !0, !0),
+          Hz = this.getVerticesData(Az.j.NormalKind),
+          Oz = this.getVerticesData(Az.j.UVKind);
+        let pz = vz.n.Zero();
+        const dz = vz.n.Zero(),
+          Fz = vz.m.Zero();
+        iz = iz || vz.m.Zero(), lz = lz || new vz.m(1, 1);
+        for (let Zz = 0; Zz < tz.length; Zz += 3) {
+          vz.n.FromArrayToRef(tz, Zz, pz), vz.n.FromArrayToRef(Hz, Zz, dz), vz.m.FromArrayToRef(Oz, Zz / 3 * 2, Fz);
+          const Mz = 4 * ((Math.abs(Fz.x * lz.x + iz.x % 1) * (uz - 1) % uz | 0) + (Math.abs(Fz.y * lz.y + iz.y % 1) * (bz - 1) % bz | 0) * uz),
+            Rz = .3 * (zz[Mz] / 255) + .59 * (zz[Mz + 1] / 255) + .11 * (zz[Mz + 2] / 255);
+          dz.normalize(), dz.scaleInPlace(Ez + (nz - Ez) * Rz), pz = pz.add(dz), pz.toArray(tz, Zz)
+        }
+        return Tz.b.ComputeNormals(tz, this.Nbz(), Hz), Mz ? (this.setVerticesData(Az.j.PositionKind, tz), this.setVerticesData(Az.j.NormalKind, Hz), this.setVerticesData(Az.j.UVKind, Oz)) : (this.updateVerticesData(Az.j.PositionKind, tz), this.updateVerticesData(Az.j.NormalKind, Hz)), this
+      }
+      _getFlattenedNormals(zz, uz) {
+        const bz = new Float32Array(3 * zz.length);
+        let Ez = 0;
+        const nz = this.sideOrientation === (this._scene.useRightHandedSystem ? 1 : 0);
+        for (let iz = 0; iz < zz.length; iz += 3) {
+          const lz = vz.n.FromArray(uz, 3 * zz[iz]),
+            Mz = vz.n.FromArray(uz, 3 * zz[iz + 1]),
+            tz = vz.n.FromArray(uz, 3 * zz[iz + 2]),
+            Hz = lz.subtract(Mz),
+            Oz = tz.subtract(Mz),
+            pz = vz.n.Normalize(vz.n.Cross(Hz, Oz));
+          nz && pz.scaleInPlace(-1);
+          for (let zz = 0; zz < 3; zz++) bz[Ez++] = pz.x, bz[Ez++] = pz.y, bz[Ez++] = pz.z
+        }
+        return bz
+      }
+      _convertToUnIndexedMesh() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const uz = this.getVerticesDataKinds().filter((zz => !this.getVertexBuffer(zz)?.getIsInstanced())),
+          bz = this.Nbz(!1, !0),
+          Ez = {},
+          nz = (zz, uz) => {
+            const Ez = new Float32Array(bz.length * uz);
+            let nz = 0;
+            for (let iz = 0; iz < bz.length; iz++)
+              for (let lz = 0; lz < uz; lz++) Ez[nz++] = zz[bz[iz] * uz + lz];
+            return Ez
+          },
+          iz = this.lG(),
+          lz = this.geometry ? this.hN.slice(0) : [];
+        for (const Mz of uz) Ez[Mz] = this.getVerticesData(Mz);
+        for (const Mz of uz) {
+          const uz = this.getVertexBuffer(Mz),
+            iz = uz.getSize();
+          if (zz && Mz === Az.j.NormalKind) {
+            const zz = this._getFlattenedNormals(bz, Ez[Az.j.PositionKind]);
+            this.setVerticesData(Az.j.NormalKind, zz, uz.isUpdatable(), iz)
+          } else this.setVerticesData(Mz, nz(Ez[Mz], iz), uz.isUpdatable(), iz)
+        }
+        if (this.morphTargetManager) {
+          for (let uz = 0; uz < this.morphTargetManager.numTargets; uz++) {
+            const Ez = this.morphTargetManager.getTarget(uz),
+              iz = Ez.getPositions();
+            Ez.kiz(nz(iz, 3));
+            const lz = Ez.getNormals();
+            lz && Ez.setNormals(zz ? this._getFlattenedNormals(bz, iz) : nz(lz, 3));
+            const Mz = Ez.getTangents();
+            Mz && Ez.setTangents(nz(Mz, 3));
+            const tz = Ez.getUVs();
+            tz && Ez.setUVs(nz(tz, 2));
+            const Hz = Ez.getColors();
+            Hz && Ez.setColors(nz(Hz, 4))
+          }
+          this.morphTargetManager.synchronize()
+        }
+        for (let Mz = 0; Mz < bz.length; Mz++) bz[Mz] = Mz;
+        this.setIndices(bz), this._unIndexed = !0, this.releaseSubMeshes();
+        for (const Mz of lz) {
+          const zz = Mz.lG();
+          Gz.e.AddToMesh(Mz.materialIndex, Mz.indexStart, Mz.indexCount, Mz.indexStart, Mz.indexCount, this).setBoundingInfo(zz)
+        }
+        return this.setBoundingInfo(iz), this.synchronizeInstances(), this
+      }
+      convertToFlatShadedMesh() {
+        return this._convertToUnIndexedMesh(!0)
+      }
+      convertToUnIndexedMesh() {
+        return this._convertToUnIndexedMesh()
+      }
+      flipFaces() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const uz = Tz.b.ExtractFromMesh(this);
+        let bz;
+        if (zz && this.isVerticesDataPresent(Az.j.NormalKind) && uz.normals) {
+          for (bz = 0; bz < uz.normals.length; bz++) uz.normals[bz] *= -1;
+          this.setVerticesData(Az.j.NormalKind, uz.normals, this.isVertexBufferUpdatable(Az.j.NormalKind))
+        }
+        if (uz.indices) {
+          let zz;
+          for (bz = 0; bz < uz.indices.length; bz += 3) zz = uz.indices[bz + 1], uz.indices[bz + 1] = uz.indices[bz + 2], uz.indices[bz + 2] = zz;
+          this.setIndices(uz.indices, null, this.isVertexBufferUpdatable(Az.j.PositionKind), !0)
+        }
+        return this
+      }
+      increaseVertices() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        const uz = Tz.b.ExtractFromMesh(this),
+          bz = uz.indices && !Array.isArray(uz.indices) && Array.from ? Array.from(uz.indices) : uz.indices,
+          Ez = uz.positions && !Array.isArray(uz.positions) && Array.from ? Array.from(uz.positions) : uz.positions,
+          nz = uz.uvs && !Array.isArray(uz.uvs) && Array.from ? Array.from(uz.uvs) : uz.uvs,
+          iz = uz.normals && !Array.isArray(uz.normals) && Array.from ? Array.from(uz.normals) : uz.normals;
+        if (bz && Ez) {
+          uz.indices = bz, uz.positions = Ez, nz && (uz.uvs = nz), iz && (uz.normals = iz);
+          const lz = zz + 1,
+            Mz = [];
+          for (let zz = 0; zz < lz + 1; zz++) Mz[zz] = [];
+          let tz, Hz;
+          const Oz = new vz.n(0, 0, 0),
+            pz = new vz.n(0, 0, 0),
+            dz = new vz.m(0, 0),
+            Fz = [],
+            Zz = [],
+            Rz = [];
+          let Kz, wz, Xz, fz = Ez.length;
+          nz && (wz = nz.length), iz && (Xz = iz.length);
+          for (let zz = 0; zz < bz.length; zz += 3) {
+            Zz[0] = bz[zz], Zz[1] = bz[zz + 1], Zz[2] = bz[zz + 2];
+            for (let zz = 0; zz < 3; zz++)
+              if (tz = Zz[zz], Hz = Zz[(zz + 1) % 3], void 0 === Rz[tz] && void 0 === Rz[Hz] ? (Rz[tz] = [], Rz[Hz] = []) : (void 0 === Rz[tz] && (Rz[tz] = []), void 0 === Rz[Hz] && (Rz[Hz] = [])), void 0 === Rz[tz][Hz] && void 0 === Rz[Hz][tz]) {
+                Rz[tz][Hz] = [], Oz.x = (Ez[3 * Hz] - Ez[3 * tz]) / lz, Oz.y = (Ez[3 * Hz + 1] - Ez[3 * tz + 1]) / lz, Oz.z = (Ez[3 * Hz + 2] - Ez[3 * tz + 2]) / lz, iz && (pz.x = (iz[3 * Hz] - iz[3 * tz]) / lz, pz.y = (iz[3 * Hz + 1] - iz[3 * tz + 1]) / lz, pz.z = (iz[3 * Hz + 2] - iz[3 * tz + 2]) / lz), nz && (dz.x = (nz[2 * Hz] - nz[2 * tz]) / lz, dz.y = (nz[2 * Hz + 1] - nz[2 * tz + 1]) / lz), Rz[tz][Hz].push(tz);
+                for (let zz = 1; zz < lz; zz++) Rz[tz][Hz].push(Ez.length / 3), Ez[fz++] = Ez[3 * tz] + zz * Oz.x, Ez[fz++] = Ez[3 * tz + 1] + zz * Oz.y, Ez[fz++] = Ez[3 * tz + 2] + zz * Oz.z, iz && (iz[Xz++] = iz[3 * tz] + zz * pz.x, iz[Xz++] = iz[3 * tz + 1] + zz * pz.y, iz[Xz++] = iz[3 * tz + 2] + zz * pz.z), nz && (nz[wz++] = nz[2 * tz] + zz * dz.x, nz[wz++] = nz[2 * tz + 1] + zz * dz.y);
+                Rz[tz][Hz].push(Hz), Rz[Hz][tz] = [], Kz = Rz[tz][Hz].length;
+                for (let zz = 0; zz < Kz; zz++) Rz[Hz][tz][zz] = Rz[tz][Hz][Kz - 1 - zz]
+              } Mz[0][0] = bz[zz], Mz[1][0] = Rz[bz[zz]][bz[zz + 1]][1], Mz[1][1] = Rz[bz[zz]][bz[zz + 2]][1];
+            for (let uz = 2; uz < lz; uz++) {
+              Mz[uz][0] = Rz[bz[zz]][bz[zz + 1]][uz], Mz[uz][uz] = Rz[bz[zz]][bz[zz + 2]][uz], Oz.x = (Ez[3 * Mz[uz][uz]] - Ez[3 * Mz[uz][0]]) / uz, Oz.y = (Ez[3 * Mz[uz][uz] + 1] - Ez[3 * Mz[uz][0] + 1]) / uz, Oz.z = (Ez[3 * Mz[uz][uz] + 2] - Ez[3 * Mz[uz][0] + 2]) / uz, iz && (pz.x = (iz[3 * Mz[uz][uz]] - iz[3 * Mz[uz][0]]) / uz, pz.y = (iz[3 * Mz[uz][uz] + 1] - iz[3 * Mz[uz][0] + 1]) / uz, pz.z = (iz[3 * Mz[uz][uz] + 2] - iz[3 * Mz[uz][0] + 2]) / uz), nz && (dz.x = (nz[2 * Mz[uz][uz]] - nz[2 * Mz[uz][0]]) / uz, dz.y = (nz[2 * Mz[uz][uz] + 1] - nz[2 * Mz[uz][0] + 1]) / uz);
+              for (let zz = 1; zz < uz; zz++) Mz[uz][zz] = Ez.length / 3, Ez[fz++] = Ez[3 * Mz[uz][0]] + zz * Oz.x, Ez[fz++] = Ez[3 * Mz[uz][0] + 1] + zz * Oz.y, Ez[fz++] = Ez[3 * Mz[uz][0] + 2] + zz * Oz.z, iz && (iz[Xz++] = iz[3 * Mz[uz][0]] + zz * pz.x, iz[Xz++] = iz[3 * Mz[uz][0] + 1] + zz * pz.y, iz[Xz++] = iz[3 * Mz[uz][0] + 2] + zz * pz.z), nz && (nz[wz++] = nz[2 * Mz[uz][0]] + zz * dz.x, nz[wz++] = nz[2 * Mz[uz][0] + 1] + zz * dz.y)
+            }
+            Mz[lz] = Rz[bz[zz + 1]][bz[zz + 2]], Fz.push(Mz[0][0], Mz[1][0], Mz[1][1]);
+            for (let zz = 1; zz < lz; zz++) {
+              let uz;
+              for (uz = 0; uz < zz; uz++) Fz.push(Mz[zz][uz], Mz[zz + 1][uz], Mz[zz + 1][uz + 1]), Fz.push(Mz[zz][uz], Mz[zz + 1][uz + 1], Mz[zz][uz + 1]);
+              Fz.push(Mz[zz][uz], Mz[zz + 1][uz], Mz[zz + 1][uz + 1])
+            }
+          }
+          uz.indices = Fz, uz.applyToMesh(this, this.isVertexBufferUpdatable(Az.j.PositionKind))
+        } else Uz.e.Warn("Couldn't increase number of vertices : VertexData must contain at least indices and positions")
+      }
+      forceSharedVertices() {
+        const zz = Tz.b.ExtractFromMesh(this),
+          uz = zz.uvs,
+          bz = zz.indices,
+          Ez = zz.positions,
+          nz = zz.colors,
+          iz = zz.matricesIndices,
+          lz = zz.matricesWeights,
+          Mz = zz.matricesIndicesExtra,
+          tz = zz.matricesWeightsExtra;
+        if (void 0 === bz || void 0 === Ez || null === bz || null === Ez) Uz.e.Warn("VertexData contains empty entries");
+        else {
+          const Hz = [],
+            Oz = [],
+            pz = [],
+            dz = [],
+            Fz = [],
+            Zz = [],
+            Rz = [],
+            Kz = [];
+          let wz, Xz = 0;
+          const fz = {};
+          let sz, rz;
+          for (let zz = 0; zz < bz.length; zz += 3) {
+            rz = [bz[zz], bz[zz + 1], bz[zz + 2]], wz = [];
+            for (let zz = 0; zz < 3; zz++) {
+              wz[zz] = "";
+              for (let uz = 0; uz < 3; uz++) Math.abs(Ez[3 * rz[zz] + uz]) < 1e-8 && (Ez[3 * rz[zz] + uz] = 0), wz[zz] += Ez[3 * rz[zz] + uz] + "|"
+            }
+            if (wz[0] != wz[1] && wz[0] != wz[2] && wz[1] != wz[2])
+              for (let zz = 0; zz < 3; zz++) {
+                if (sz = fz[wz[zz]], void 0 === sz) {
+                  fz[wz[zz]] = Xz, sz = Xz++;
+                  for (let uz = 0; uz < 3; uz++) Hz.push(Ez[3 * rz[zz] + uz]);
+                  if (null !== nz && void 0 !== nz)
+                    for (let uz = 0; uz < 4; uz++) dz.push(nz[4 * rz[zz] + uz]);
+                  if (null !== uz && void 0 !== uz)
+                    for (let bz = 0; bz < 2; bz++) pz.push(uz[2 * rz[zz] + bz]);
+                  if (null !== iz && void 0 !== iz)
+                    for (let uz = 0; uz < 4; uz++) Fz.push(iz[4 * rz[zz] + uz]);
+                  if (null !== lz && void 0 !== lz)
+                    for (let uz = 0; uz < 4; uz++) Zz.push(lz[4 * rz[zz] + uz]);
+                  if (null !== Mz && void 0 !== Mz)
+                    for (let uz = 0; uz < 4; uz++) Rz.push(Mz[4 * rz[zz] + uz]);
+                  if (null !== tz && void 0 !== tz)
+                    for (let uz = 0; uz < 4; uz++) Kz.push(tz[4 * rz[zz] + uz])
+                }
+                Oz.push(sz)
+              }
+          }
+          const oz = [];
+          Tz.b.ComputeNormals(Hz, Oz, oz), zz.positions = Hz, zz.indices = Oz, zz.normals = oz, null !== uz && void 0 !== uz && (zz.uvs = pz), null !== nz && void 0 !== nz && (zz.colors = dz), null !== iz && void 0 !== iz && (zz.matricesIndices = Fz), null !== lz && void 0 !== lz && (zz.matricesWeights = Zz), null !== Mz && void 0 !== Mz && (zz.matricesIndicesExtra = Rz), null !== lz && void 0 !== lz && (zz.matricesWeightsExtra = Kz), zz.applyToMesh(this, this.isVertexBufferUpdatable(Az.j.PositionKind))
+        }
+      }
+      static _instancedMeshFactory(zz, uz) {
+        throw (0, gz.l)("InstancedMesh")
+      }
+      static _PhysicsImpostorParser(zz, uz, bz) {
+        throw (0, gz.l)("PhysicsImpostor")
+      }
+      createInstance(zz) {
+        const uz = Cz._instancedMeshFactory(zz, this);
+        return uz.parent = this.parent, uz
+      }
+      synchronizeInstances() {
+        for (let zz = 0; zz < this.instances.length; zz++) {
+          this.instances[zz]._syncSubMeshes()
+        }
+        return this
+      }
+      optimizeIndices(zz) {
+        const uz = this.Nbz(),
+          bz = this.getVerticesData(Az.j.PositionKind);
+        if (!bz || !uz) return this;
+        const Ez = [];
+        for (let iz = 0; iz < bz.length; iz += 3) Ez.push(vz.n.FromArray(bz, iz));
+        const nz = [];
+        return Xz.e.SyncAsyncForLoop(Ez.length, 40, (zz => {
+          const uz = Ez.length - 1 - zz,
+            bz = Ez[uz];
+          for (let iz = 0; iz < uz; ++iz) {
+            const zz = Ez[iz];
+            if (bz.equals(zz)) {
+              nz[uz] = iz;
+              break
+            }
+          }
+        }), (() => {
+          for (let zz = 0; zz < uz.length; ++zz) uz[zz] = nz[uz[zz]] || uz[zz];
+          const bz = this.hN.slice(0);
+          this.setIndices(uz), this.hN = bz, zz && zz(this)
+        })), this
+      }
+      serialize() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        zz.name = this.name, zz.id = this.id, zz.uniqueId = this.uniqueId, zz.type = this.getClassName(), rz.e && rz.e.HasTags(this) && (zz.tags = rz.e.GetTags(this)), zz.position = this.position.obz(), this.rotationQuaternion ? zz.rotationQuaternion = this.rotationQuaternion.obz() : this.rotation && (zz.rotation = this.rotation.obz()), zz.ti = this.ti.obz(), this._postMultiplyPivotMatrix ? zz.pivotMatrix = this.getPivotMatrix().obz() : zz.localMatrix = this.getPivotMatrix().obz(), zz.isEnabled = this.isEnabled(!1), zz.isVisible = this.isVisible, zz.infiniteDistance = this.infiniteDistance, zz.pickable = this.pK, zz.receiveShadows = this.receiveShadows, zz.billboardMode = this.billboardMode, zz.visibility = this.visibility, zz.bR = this.bR, zz.checkCollisions = this.checkCollisions, zz.ellipsoid = this.ellipsoid.obz(), zz.ellipsoidOffset = this.ellipsoidOffset.obz(), zz.iR = this.iR, zz.isBlocker = this.isBlocker, zz.sideOrientation = this.sideOrientation, this._isWorldMatrixFrozen && (zz.jT = !0), this.parent && this.parent._serializeAsParent(zz), zz.isUnIndexed = this.isUnIndexed;
+        const uz = this._geometry;
+        if (uz && this.hN) {
+          zz.geometryUniqueId = uz.uniqueId, zz.geometryId = uz.id, zz.hN = [];
+          for (let uz = 0; uz < this.hN.length; uz++) {
+            const bz = this.hN[uz];
+            zz.hN.push({
+              materialIndex: bz.materialIndex,
+              verticesStart: bz.verticesStart,
+              verticesCount: bz.verticesCount,
+              indexStart: bz.indexStart,
+              indexCount: bz.indexCount
+            })
+          }
+        }
+        if (this.material ? this.material.doNotSerialize || (zz.materialUniqueId = this.material.uniqueId, zz.materialId = this.material.id) : (this.material = null, zz.materialUniqueId = this._scene.defaultMaterial.uniqueId, zz.materialId = this._scene.defaultMaterial.id), this.morphTargetManager && (zz.morphTargetManagerId = this.morphTargetManager.uniqueId), this.skeleton && (zz.skeletonId = this.skeleton.id, zz.skeletonUniqueId = this.skeleton.uniqueId, zz.numBoneInfluencers = this.numBoneInfluencers), this.XT()._getComponent(Sz.c.NAME_PHYSICSENGINE)) {
+          const uz = this.getPhysicsImpostor?.();
+          uz && (zz.physicsMass = uz.getParam("RM"), zz.physicsFriction = uz.getParam("friction"), zz.physicsRestitution = uz.getParam("RM"), zz.physicsImpostor = uz.type)
+        }
+        this.metadata && (zz.metadata = this.metadata), 0 !== this.meshBlendingTag && (zz.meshBlendingTag = this.meshBlendingTag), zz.instances = [];
+        for (let bz = 0; bz < this.instances.length; bz++) {
+          const uz = this.instances[bz];
+          if (uz.doNotSerialize) continue;
+          const Ez = {
+            name: uz.name,
+            id: uz.id,
+            isEnabled: uz.isEnabled(!1),
+            isVisible: uz.isVisible,
+            pK: uz.pK,
+            checkCollisions: uz.checkCollisions,
+            position: uz.position.obz(),
+            ti: uz.ti.obz()
+          };
+          if (uz.parent && uz.parent._serializeAsParent(Ez), uz.rotationQuaternion ? Ez.rotationQuaternion = uz.rotationQuaternion.obz() : uz.rotation && (Ez.rotation = uz.rotation.obz()), this.XT()._getComponent(Sz.c.NAME_PHYSICSENGINE)) {
+            const zz = uz.getPhysicsImpostor?.();
+            zz && (Ez.physicsMass = zz.getParam("RM"), Ez.physicsFriction = zz.getParam("friction"), Ez.physicsRestitution = zz.getParam("RM"), Ez.physicsImpostor = zz.type)
+          }
+          uz.metadata && (Ez.metadata = uz.metadata), uz.actionManager && (Ez.actions = uz.actionManager.serialize(uz.name)), zz.instances.push(Ez), hz.e.AppendSerializedAnimations(uz, Ez), Ez.al = uz.serializeAnimationRanges()
+        }
+        if (this._thinInstanceDataStorage.instancesCount && this._thinInstanceDataStorage.matrixData && (zz.thinInstances = {
+            instancesCount: this._thinInstanceDataStorage.instancesCount,
+            matrixData: Array.from(this._thinInstanceDataStorage.matrixData),
+            matrixBufferSize: this._thinInstanceDataStorage.matrixBufferSize,
+            enablePicking: this.yzz
+          }, this._userThinInstanceBuffersStorage)) {
+          const uz = {
+            data: {},
+            sizes: {},
+            strides: {}
+          };
+          for (const zz in this._userThinInstanceBuffersStorage.data) uz.data[zz] = Array.from(this._userThinInstanceBuffersStorage.data[zz]), uz.sizes[zz] = this._userThinInstanceBuffersStorage.sizes[zz], uz.strides[zz] = this._userThinInstanceBuffersStorage.strides[zz];
+          zz.thinInstances.userThinInstance = uz
+        }
+        return hz.e.AppendSerializedAnimations(this, zz), zz.al = this.serializeAnimationRanges(), zz.layerMask = this.layerMask, zz.alphaIndex = this.alphaIndex, zz.hasVertexAlpha = this.hasVertexAlpha, zz.overlayAlpha = this.overlayAlpha, zz.overlayColor = this.overlayColor.obz(), zz.renderOverlay = this.renderOverlay, zz.applyFog = this.applyFog, this.actionManager && (zz.actions = this.actionManager.serialize(this.name)), zz
+      }
+      _syncGeometryWithMorphTargetManager() {
+        if (!this.geometry) return;
+        this._markSubMeshesAsAttributesDirty();
+        const zz = this._internalAbstractMeshDataInfo._morphTargetManager;
+        if (zz && zz.vertexCount) {
+          if (zz.vertexCount !== this.getTotalVertices()) return Uz.e.Error("Mesh is incompatible with morph targets. Targets and mesh must all have the same vertices count."), void(this.morphTargetManager = null);
+          if (zz.isUsingTextureForTargets) return;
+          for (let uz = 0; uz < zz.numInfluencers; uz++) {
+            const bz = zz.getActiveTarget(uz),
+              Ez = bz.getPositions();
+            if (!Ez) return void Uz.e.Error("Invalid morph target. Target must have positions.");
+            this.geometry.setVerticesData(Az.j.PositionKind + uz, Ez, !1, 3);
+            const nz = bz.getNormals();
+            nz && this.geometry.setVerticesData(Az.j.NormalKind + uz, nz, !1, 3);
+            const iz = bz.getTangents();
+            iz && this.geometry.setVerticesData(Az.j.TangentKind + uz, iz, !1, 3);
+            const lz = bz.getUVs();
+            lz && this.geometry.setVerticesData(Az.j.UVKind + "_" + uz, lz, !1, 2);
+            const Mz = bz.getUV2s();
+            Mz && this.geometry.setVerticesData(Az.j.UV2Kind + "_" + uz, Mz, !1, 2);
+            const tz = bz.getColors();
+            tz && this.geometry.setVerticesData(Az.j.ColorKind + uz, tz, !1, 4)
+          }
+        } else {
+          let zz = 0;
+          for (; this.geometry.isVerticesDataPresent(Az.j.PositionKind + zz);) this.geometry.removeVerticesData(Az.j.PositionKind + zz), this.geometry.isVerticesDataPresent(Az.j.NormalKind + zz) && this.geometry.removeVerticesData(Az.j.NormalKind + zz), this.geometry.isVerticesDataPresent(Az.j.TangentKind + zz) && this.geometry.removeVerticesData(Az.j.TangentKind + zz), this.geometry.isVerticesDataPresent(Az.j.UVKind + "_" + zz) && this.geometry.removeVerticesData(Az.j.UVKind + "_" + zz), this.geometry.isVerticesDataPresent(Az.j.UV2Kind + "_" + zz) && this.geometry.removeVerticesData(Az.j.UV2Kind + "_" + zz), this.geometry.isVerticesDataPresent(Az.j.ColorKind + zz) && this.geometry.removeVerticesData(Az.j.ColorKind + zz), zz++
+        }
+      }
+      static Parse(zz, uz, bz) {
+        let Ez, nz = !1;
+        if (zz.type && "LinesMesh" === zz.type ? Ez = Cz._LinesMeshParser(zz, uz) : zz.type && "GroundMesh" === zz.type ? Ez = Cz._GroundMeshParser(zz, uz) : zz.type && "GoldbergMesh" === zz.type ? Ez = Cz._GoldbergMeshParser(zz, uz) : zz.type && "GreasedLineMesh" === zz.type ? Ez = Cz._GreasedLineMeshParser(zz, uz) : zz.type && "TrailMesh" === zz.type ? Ez = Cz._TrailMeshParser(zz, uz) : zz.type && "GaussianSplattingMesh" === zz.type ? (Ez = zz._isCompound ? Cz._GaussianSplattingCompoundMeshParser(zz, uz) : Cz._GaussianSplattingMeshParser(zz, uz), nz = !0) : zz.type && "GaussianSplattingPartProxyMesh" === zz.type ? (Ez = Cz._GaussianSplattingPartProxyMeshParser(zz, uz), nz = !0) : Ez = new Cz(zz.name, uz), Ez.id = zz.id, Ez._waitingParsedUniqueId = zz.uniqueId, rz.e && rz.e.AddTagsTo(Ez, zz.tags), Ez.position = vz.n.FromArray(zz.position), void 0 !== zz.metadata && (Ez.metadata = zz.metadata), void 0 !== zz.meshBlendingTag && (Ez.meshBlendingTag = zz.meshBlendingTag), zz.rotationQuaternion ? Ez.rotationQuaternion = vz.h.FromArray(zz.rotationQuaternion) : zz.rotation && (Ez.rotation = vz.n.FromArray(zz.rotation)), Ez.ti = vz.n.FromArray(zz.ti), zz.localMatrix ? Ez.setPreTransformMatrix(vz.d.FromArray(zz.localMatrix)) : zz.pivotMatrix && Ez.setPivotMatrix(vz.d.FromArray(zz.pivotMatrix)), Ez.Zx(zz.isEnabled), Ez.isVisible = zz.isVisible, Ez.infiniteDistance = zz.infiniteDistance, Ez.bR = !!zz.bR, Ez.showBoundingBox = zz.showBoundingBox, Ez.showSubMeshesBoundingBox = zz.showSubMeshesBoundingBox, void 0 !== zz.applyFog && (Ez.applyFog = zz.applyFog), void 0 !== zz.pickable && (Ez.pK = zz.pickable), void 0 !== zz.alphaIndex && (Ez.alphaIndex = zz.alphaIndex), Ez.receiveShadows = zz.receiveShadows, void 0 !== zz.billboardMode && (Ez.billboardMode = zz.billboardMode), void 0 !== zz.visibility && (Ez.visibility = zz.visibility), Ez.checkCollisions = zz.checkCollisions, Ez.iR = !!zz.iR, zz.ellipsoid && (Ez.ellipsoid = vz.n.FromArray(zz.ellipsoid)), zz.ellipsoidOffset && (Ez.ellipsoidOffset = vz.n.FromArray(zz.ellipsoidOffset)), null != zz.overrideMaterialSideOrientation && (Ez.sideOrientation = zz.overrideMaterialSideOrientation), void 0 !== zz.sideOrientation && (Ez.sideOrientation = zz.sideOrientation), void 0 !== zz.isBlocker && (Ez.isBlocker = zz.isBlocker), Ez._shouldGenerateFlatShading = zz.useFlatShading, zz.jT && (Ez._waitingData.jT = zz.jT), void 0 !== zz.parentId && (Ez._waitingParentId = zz.parentId), void 0 !== zz.parentInstanceIndex && (Ez._waitingParentInstanceIndex = zz.parentInstanceIndex), void 0 !== zz.actions && (Ez._waitingData.actions = zz.actions), void 0 !== zz.overlayAlpha && (Ez.overlayAlpha = zz.overlayAlpha), void 0 !== zz.overlayColor && (Ez.overlayColor = xz.c.FromArray(zz.overlayColor)), void 0 !== zz.renderOverlay && (Ez.renderOverlay = zz.renderOverlay), Ez.isUnIndexed = !!zz.isUnIndexed, Ez.hasVertexAlpha = zz.hasVertexAlpha, zz.delayLoadingFile ? (Ez.delayLoadState = 4, Ez.delayLoadingFile = bz + zz.delayLoadingFile, Ez.buildBoundingInfo(vz.n.FromArray(zz.boundingBoxMinimum), vz.n.FromArray(zz.boundingBoxMaximum)), zz._binaryInfo && (Ez._binaryInfo = zz._binaryInfo), Ez._delayInfo = [], zz.hasUVs && Ez._delayInfo.push(Az.j.UVKind), zz.hasUVs2 && Ez._delayInfo.push(Az.j.UV2Kind), zz.hasUVs3 && Ez._delayInfo.push(Az.j.UV3Kind), zz.hasUVs4 && Ez._delayInfo.push(Az.j.UV4Kind), zz.hasUVs5 && Ez._delayInfo.push(Az.j.UV5Kind), zz.hasUVs6 && Ez._delayInfo.push(Az.j.UV6Kind), zz.hasColors && Ez._delayInfo.push(Az.j.ColorKind), zz.hasMatricesIndices && Ez._delayInfo.push(Az.j.MatricesIndicesKind), zz.hasMatricesWeights && Ez._delayInfo.push(Az.j.MatricesWeightsKind), Ez._delayLoadingFunction = Lz.b._ImportGeometry, qz.b.ForceFullSceneLoadingForIncremental && Ez._checkDelayState()) : nz || Lz.b._ImportGeometry(zz, Ez), zz.materialUniqueId ? Ez._waitingMaterialId = zz.materialUniqueId : zz.materialId && (Ez._waitingMaterialId = zz.materialId), zz.morphTargetManagerId > -1 && (Ez._waitingMorphTargetManagerId = zz.morphTargetManagerId), void 0 !== zz.skeletonId && null !== zz.skeletonId && (Ez.skeleton = uz.getLastSkeletonById(zz.skeletonId), Ez._waitingSkeletonId = zz.skeletonId, zz.numBoneInfluencers && (Ez.numBoneInfluencers = zz.numBoneInfluencers)), void 0 !== zz.skeletonUniqueId && null !== zz.skeletonUniqueId && (Ez._waitingSkeletonUniqueId = zz.skeletonUniqueId), zz.animations) {
+          for (let uz = 0; uz < zz.animations.length; uz++) {
+            const bz = zz.animations[uz],
+              nz = (0, cz.b)("BABYLON.Animation");
+            nz && Ez.animations.push(nz.Parse(bz))
+          }
+          Jz.c.ParseAnimationRanges(Ez, zz, uz)
+        }
+        if (zz.autoAnimate && uz.beginAnimation(Ez, zz.autoAnimateFrom, zz.autoAnimateTo, zz.autoAnimateLoop, zz.autoAnimateSpeed || 1), zz.layerMask && !isNaN(zz.layerMask) ? Ez.layerMask = Math.abs(parseInt(zz.layerMask)) : Ez.layerMask = 268435455, zz.physicsImpostor && (Ez.physicsImpostor = Cz._PhysicsImpostorParser(uz, Ez, zz)), zz.lodMeshIds && (Ez._waitingData.lods = {
+            ids: zz.lodMeshIds,
+            distances: zz.lodDistances ? zz.lodDistances : null,
+            coverages: zz.lodCoverages ? zz.lodCoverages : null
+          }), zz.instances)
+          for (let iz = 0; iz < zz.instances.length; iz++) {
+            const bz = zz.instances[iz],
+              nz = Ez.createInstance(bz.name);
+            if (bz.id && (nz.id = bz.id), rz.e && (bz.tags ? rz.e.AddTagsTo(nz, bz.tags) : rz.e.AddTagsTo(nz, zz.tags)), nz.position = vz.n.FromArray(bz.position), void 0 !== bz.metadata && (nz.metadata = bz.metadata), void 0 !== bz.parentId && (nz._waitingParentId = bz.parentId), void 0 !== bz.parentInstanceIndex && (nz._waitingParentInstanceIndex = bz.parentInstanceIndex), void 0 !== bz.isEnabled && null !== bz.isEnabled && nz.Zx(bz.isEnabled), void 0 !== bz.isVisible && null !== bz.isVisible && (nz.isVisible = bz.isVisible), void 0 !== bz.pK && null !== bz.pK && (nz.pK = bz.pK), bz.rotationQuaternion ? nz.rotationQuaternion = vz.h.FromArray(bz.rotationQuaternion) : bz.rotation && (nz.rotation = vz.n.FromArray(bz.rotation)), nz.ti = vz.n.FromArray(bz.ti), void 0 != bz.checkCollisions && null != bz.checkCollisions && (nz.checkCollisions = bz.checkCollisions), void 0 != bz.pickable && null != bz.pickable && (nz.pK = bz.pickable), void 0 != bz.showBoundingBox && null != bz.showBoundingBox && (nz.showBoundingBox = bz.showBoundingBox), void 0 != bz.showSubMeshesBoundingBox && null != bz.showSubMeshesBoundingBox && (nz.showSubMeshesBoundingBox = bz.showSubMeshesBoundingBox), void 0 != bz.alphaIndex && null != bz.showSubMeshesBoundingBox && (nz.alphaIndex = bz.alphaIndex), bz.physicsImpostor && (nz.physicsImpostor = Cz._PhysicsImpostorParser(uz, nz, bz)), void 0 !== bz.actions && (nz._waitingData.actions = bz.actions), bz.animations) {
+              for (let zz = 0; zz < bz.animations.length; zz++) {
+                const uz = bz.animations[zz],
+                  Ez = (0, cz.b)("BABYLON.Animation");
+                Ez && nz.animations.push(Ez.Parse(uz))
+              }
+              Jz.c.ParseAnimationRanges(nz, bz, uz), bz.autoAnimate && uz.beginAnimation(nz, bz.autoAnimateFrom, bz.autoAnimateTo, bz.autoAnimateLoop, bz.autoAnimateSpeed || 1)
+            }
+          }
+        if (zz.thinInstances) {
+          const uz = zz.thinInstances;
+          if (Ez.yzz = !!uz.enablePicking, uz.matrixData ? (Ez.v_("matrix", new Float32Array(uz.matrixData), 16, !1), Ez._thinInstanceDataStorage.matrixBufferSize = uz.matrixBufferSize, Ez._thinInstanceDataStorage.instancesCount = uz.instancesCount) : Ez._thinInstanceDataStorage.matrixBufferSize = uz.matrixBufferSize, zz.thinInstances.userThinInstance) {
+            const uz = zz.thinInstances.userThinInstance;
+            for (const zz in uz.data) Ez.v_(zz, new Float32Array(uz.data[zz]), uz.strides[zz], !1), Ez._userThinInstanceBuffersStorage.sizes[zz] = uz.sizes[zz]
+          }
+        }
+        return Ez
+      }
+      setPositionsForCPUSkinning() {
+        const zz = this._internalMeshDataInfo;
+        if (!zz._sourcePositions) {
+          const uz = this.getVerticesData(Az.j.PositionKind);
+          if (!uz) return zz._sourcePositions;
+          zz._sourcePositions = new Float32Array(uz), this.isVertexBufferUpdatable(Az.j.PositionKind) || this.setVerticesData(Az.j.PositionKind, uz, !0)
+        }
+        return zz._sourcePositions
+      }
+      setNormalsForCPUSkinning() {
+        const zz = this._internalMeshDataInfo;
+        if (!zz._sourceNormals) {
+          const uz = this.getVerticesData(Az.j.NormalKind);
+          if (!uz) return zz._sourceNormals;
+          zz._sourceNormals = new Float32Array(uz), this.isVertexBufferUpdatable(Az.j.NormalKind) || this.setVerticesData(Az.j.NormalKind, uz, !0)
+        }
+        return zz._sourceNormals
+      }
+      applySkeleton(zz) {
+        if (!this.geometry) return this;
+        if (this.geometry._softwareSkinningFrameId == this.XT().getFrameId()) return this;
+        if (this.geometry._softwareSkinningFrameId = this.XT().getFrameId(), !this.isVerticesDataPresent(Az.j.PositionKind)) return this;
+        if (!this.isVerticesDataPresent(Az.j.MatricesIndicesKind)) return this;
+        if (!this.isVerticesDataPresent(Az.j.MatricesWeightsKind)) return this;
+        const uz = this.isVerticesDataPresent(Az.j.NormalKind),
+          bz = this._internalMeshDataInfo;
+        if (!bz._sourcePositions) {
+          const zz = this.hN.slice();
+          this.setPositionsForCPUSkinning(), this.hN = zz
+        }
+        uz && !bz._sourceNormals && this.setNormalsForCPUSkinning();
+        let Ez = this.getVerticesData(Az.j.PositionKind);
+        if (!Ez) return this;
+        Ez instanceof Float32Array || (Ez = new Float32Array(Ez));
+        let nz = this.getVerticesData(Az.j.NormalKind);
+        if (uz) {
+          if (!nz) return this;
+          nz instanceof Float32Array || (nz = new Float32Array(nz))
+        }
+        const iz = this.getVerticesData(Az.j.MatricesIndicesKind),
+          lz = this.getVerticesData(Az.j.MatricesWeightsKind);
+        if (!lz || !iz) return this;
+        const Mz = this.numBoneInfluencers > 4,
+          tz = Mz ? this.getVerticesData(Az.j.MatricesIndicesExtraKind) : null,
+          Hz = Mz ? this.getVerticesData(Az.j.MatricesWeightsExtraKind) : null,
+          Oz = zz.getTransformMatrices(this),
+          pz = vz.n.Zero(),
+          dz = new vz.d,
+          Fz = new vz.d;
+        let Zz, Rz = 0;
+        for (let Kz = 0; Kz < Ez.length; Kz += 3, Rz += 4) {
+          let zz;
+          for (Zz = 0; Zz < 4; Zz++) zz = lz[Rz + Zz], zz > 0 && (vz.d.FromFloat32ArrayToRefScaled(Oz, Math.floor(16 * iz[Rz + Zz]), zz, Fz), dz.addToSelf(Fz));
+          if (Mz)
+            for (Zz = 0; Zz < 4; Zz++) zz = Hz[Rz + Zz], zz > 0 && (vz.d.FromFloat32ArrayToRefScaled(Oz, Math.floor(16 * tz[Rz + Zz]), zz, Fz), dz.addToSelf(Fz));
+          vz.n.TransformCoordinatesFromFloatsToRef(bz._sourcePositions[Kz], bz._sourcePositions[Kz + 1], bz._sourcePositions[Kz + 2], dz, pz), pz.toArray(Ez, Kz), uz && (vz.n.TransformNormalFromFloatsToRef(bz._sourceNormals[Kz], bz._sourceNormals[Kz + 1], bz._sourceNormals[Kz + 2], dz, pz), pz.toArray(nz, Kz)), dz.reset()
+        }
+        return this.updateVerticesData(Az.j.PositionKind, Ez), uz && this.updateVerticesData(Az.j.NormalKind, nz), this
+      }
+      static MinMax(zz) {
+        let uz = null,
+          bz = null;
+        for (const Ez of zz) {
+          const zz = Ez.lG().boundingBox;
+          uz && bz ? (uz.minimizeInPlace(zz.minimumWorld), bz.maximizeInPlace(zz.maximumWorld)) : (uz = zz.minimumWorld.clone(), bz = zz.maximumWorld.clone())
+        }
+        return uz && bz ? {
+          min: uz,
+          max: bz
+        } : {
+          min: vz.n.Zero(),
+          max: vz.n.Zero()
+        }
+      }
+      static Center(zz) {
+        const uz = zz instanceof Array ? Cz.MinMax(zz) : zz;
+        return vz.n.Center(uz.min, uz.max)
+      }
+      static MergeMeshes(zz) {
+        let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          bz = arguments.length > 2 ? arguments[2] : void 0,
+          Ez = arguments.length > 3 ? arguments[3] : void 0,
+          nz = arguments.length > 4 ? arguments[4] : void 0,
+          iz = arguments.length > 5 ? arguments[5] : void 0;
+        return (0, oz.q)(Cz._MergeMeshesCoroutine(zz, uz, bz, Ez, nz, iz, !1))
+      }
+      static async MergeMeshesAsync(zz) {
+        let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          bz = arguments.length > 2 ? arguments[2] : void 0,
+          Ez = arguments.length > 3 ? arguments[3] : void 0,
+          nz = arguments.length > 4 ? arguments[4] : void 0,
+          iz = arguments.length > 5 ? arguments[5] : void 0;
+        return await (0, oz.m)(Cz._MergeMeshesCoroutine(zz, uz, bz, Ez, nz, iz, !0), (0, oz.e)())
+      }
+      static * _MergeMeshesCoroutine(zz) {
+        let uz, bz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          Ez = arguments.length > 2 ? arguments[2] : void 0,
+          nz = arguments.length > 3 ? arguments[3] : void 0,
+          iz = arguments.length > 4 ? arguments[4] : void 0,
+          lz = arguments.length > 5 ? arguments[5] : void 0,
+          Mz = arguments.length > 6 ? arguments[6] : void 0;
+        if (0 === (zz = zz.filter(Boolean)).length) return null;
+        if (!Ez) {
+          let bz = 0;
+          for (uz = 0; uz < zz.length; uz++)
+            if (bz += zz[uz].getTotalVertices(), bz >= 65536) return Uz.e.Warn("Cannot merge meshes because resulting mesh will have more than 65536 vertices. Please use allow32BitsIndices = true to use 32 bits indices"), null
+        }
+        const tz = zz[0];
+        lz && (iz = !1, zz.sort(((zz, uz) => (zz.material?.uniqueId ?? -1) - (uz.material?.uniqueId ?? -1))));
+        const Hz = new Array,
+          Oz = new Array,
+          pz = new Array,
+          dz = zz[0].sideOrientation;
+        for (uz = 0; uz < zz.length; uz++) {
+          const bz = zz[uz];
+          if (bz.qT) return Uz.e.Warn("Cannot merge instance meshes."), null;
+          if (dz !== bz.sideOrientation) return Uz.e.Warn("Cannot merge meshes with different sideOrientation values."), null;
+          if (iz || lz) {
+            const zz = pz.reduce(((zz, uz) => Math.max(zz, uz.start + uz.count)), 0);
+            if (lz)
+              if (bz.material) {
+                const uz = bz.material;
+                if (uz instanceof mz.d) {
+                  for (let zz = 0; zz < uz.J_.length; zz++) Hz.indexOf(uz.J_[zz]) < 0 && Hz.push(uz.J_[zz]);
+                  for (let Ez = 0; Ez < bz.hN.length; Ez++) Oz.push(Hz.indexOf(uz.J_[bz.hN[Ez].materialIndex])), pz.push({
+                    start: zz + bz.hN[Ez].indexStart,
+                    count: bz.hN[Ez].indexCount
+                  })
+                } else {
+                  Hz.indexOf(uz) < 0 && Hz.push(uz);
+                  for (let Ez = 0; Ez < bz.hN.length; Ez++) Oz.push(Hz.indexOf(uz)), pz.push({
+                    start: zz + bz.hN[Ez].indexStart,
+                    count: bz.hN[Ez].indexCount
+                  })
+                }
+              } else
+                for (let uz = 0; uz < bz.hN.length; uz++) Oz.push(0), pz.push({
+                  start: zz + bz.hN[uz].indexStart,
+                  count: bz.hN[uz].indexCount
+                });
+            else pz.push({
+              start: zz,
+              count: bz.getTotalIndices()
+            })
+          }
+        }
+        if (lz && pz.length > 1) {
+          let zz = 0;
+          for (let uz = 1; uz < pz.length; uz++) {
+            const bz = pz[zz],
+              Ez = pz[uz];
+            Oz[uz] === Oz[zz] && bz.start + bz.count === Ez.start ? bz.count += Ez.count : (zz++, pz[zz] = Ez, Oz[zz] = Oz[uz])
+          }
+          pz.length = zz + 1, Oz.length = zz + 1
+        }
+        const Fz = zz => {
+            const uz = zz.computeWorldMatrix(!0);
+            return {
+              vertexData: Tz.b.ExtractFromMesh(zz, !1, !1),
+              transform: uz
+            }
+          },
+          {
+            vertexData: Zz,
+            transform: Rz
+          } = Fz(zz[0]);
+        Mz && (yield);
+        const Kz = new Array(zz.length - 1);
+        for (let oz = 1; oz < zz.length; oz++) Kz[oz - 1] = Fz(zz[oz]), Mz && (yield);
+        const wz = Zz._mergeCoroutine(Rz, Kz, Ez, Mz, !bz);
+        let Xz = wz.next();
+        for (; !Xz.done;) Mz && (yield), Xz = wz.next();
+        const fz = Xz.value;
+        nz || (nz = new Cz(tz.name + "_merged", tz.XT()));
+        const sz = fz._applyToCoroutine(nz, void 0, Mz);
+        let rz = sz.next();
+        for (; !rz.done;) Mz && (yield), rz = sz.next();
+        if (nz.checkCollisions = tz.checkCollisions, nz.sideOrientation = tz.sideOrientation, bz)
+          for (uz = 0; uz < zz.length; uz++) zz[uz].dispose();
+        if (iz || lz) {
+          for (nz.releaseSubMeshes(), uz = 0; uz < pz.length;) Gz.e.CreateFromIndices(0, pz[uz].start, pz[uz].count, nz, void 0, !1), uz++;
+          for (const zz of nz.hN) zz.refreshBoundingInfo();
+          nz.computeWorldMatrix(!0)
+        }
+        if (lz) {
+          const zz = new mz.d(tz.name + "_merged", tz.XT());
+          zz.J_ = Hz;
+          for (let uz = 0; uz < nz.hN.length; uz++) nz.hN[uz].materialIndex = Oz[uz];
+          nz.material = zz
+        } else nz.material = tz.material;
+        return nz
+      }
+      n_(zz) {
+        zz._indexInSourceMeshInstanceArray = this.instances.length, this.instances.push(zz)
+      }
+      l_(zz) {
+        const uz = zz._indexInSourceMeshInstanceArray;
+        if (-1 != uz) {
+          if (uz !== this.instances.length - 1) {
+            const zz = this.instances[this.instances.length - 1];
+            this.instances[uz] = zz, zz._indexInSourceMeshInstanceArray = uz
+          }
+          zz._indexInSourceMeshInstanceArray = -1, this.instances.pop()
+        }
+      }
+      _shouldConvertRHS() {
+        return this._scene.useRightHandedSystem && this.sideOrientation === az.c.CounterClockWiseSideOrientation
+      }
+      _getRenderingFillMode(zz) {
+        const uz = this.XT();
+        return uz.forcePointsCloud ? az.c.PointFillMode : uz.forceWireframe ? az.c.WireFrameFillMode : this.overrideRenderingFillMode ?? zz
+      }
+      setMaterialByID(zz) {
+        return this.setMaterialById(zz)
+      }
+      static CreateRibbon(zz, uz, bz, Ez, nz, iz, lz, Mz, tz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateDisc(zz, uz, bz, Ez, nz, iz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateBox(zz, uz, bz, Ez, nz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateSphere(zz, uz, bz, Ez, nz, iz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateHemisphere(zz, uz, bz, Ez) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateCylinder(zz, uz, bz, Ez, nz, iz, lz, Mz, tz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateTorus(zz, uz, bz, Ez, nz, iz, lz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateTorusKnot(zz, uz, bz, Ez, nz, iz, lz, Mz, tz, Hz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateLines(zz, uz, bz, Ez, nz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateDashedLines(zz, uz, bz, Ez, nz, iz, lz, Mz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreatePolygon(zz, uz, bz, Ez, nz, iz, lz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static ExtrudePolygon(zz, uz, bz, Ez, nz, iz, lz, Mz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static ExtrudeShape(zz, uz, bz, Ez, nz, iz, lz, Mz, tz, Hz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static ExtrudeShapeCustom(zz, uz, bz, Ez, nz, iz, lz, Mz, tz, Hz, Oz, pz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateLathe(zz, uz, bz, Ez, nz, iz, lz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreatePlane(zz, uz, bz, Ez, nz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateGround(zz, uz, bz, Ez, nz, iz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateTiledGround(zz, uz, bz, Ez, nz, iz, lz, Mz, tz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateGroundFromHeightMap(zz, uz, bz, Ez, nz, iz, lz, Mz, tz, Hz, Oz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateTube(zz, uz, bz, Ez, nz, iz, lz, Mz, tz, Hz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreatePolyhedron(zz, uz, bz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateIcoSphere(zz, uz, bz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateDecal(zz, uz, bz, Ez, nz, iz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static CreateCapsule(zz, uz, bz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+      static ExtendToGoldberg(zz) {
+        throw new Error("Import MeshBuilder to populate this function")
+      }
+    }
+    Cz.FRONTSIDE = Tz.b.FRONTSIDE, Cz.BACKSIDE = Tz.b.BACKSIDE, Cz.DOUBLESIDE = Tz.b.DOUBLESIDE, Cz.DEFAULTSIDE = Tz.b.DEFAULTSIDE, Cz.NO_CAP = 0, Cz.CAP_START = 1, Cz.CAP_END = 2, Cz.CAP_ALL = 3, Cz.NO_FLIP = 0, Cz.FLIP_TILE = 1, Cz.ROTATE_TILE = 2, Cz.FLIP_ROW = 3, Cz.ROTATE_ROW = 4, Cz.FLIP_N_ROTATE_TILE = 5, Cz.FLIP_N_ROTATE_ROW = 6, Cz.CENTER = 0, Cz.LEFT = 1, Cz.RIGHT = 2, Cz.TOP = 3, Cz.BOTTOM = 4, Cz.INSTANCEDMESH_SORT_TRANSPARENT = !1, Cz._GroundMeshParser = (zz, uz) => {
+      throw (0, gz.l)("GroundMesh")
+    }, Cz._GoldbergMeshParser = (zz, uz) => {
+      throw (0, gz.l)("GoldbergMesh")
+    }, Cz._LinesMeshParser = (zz, uz) => {
+      throw (0, gz.l)("LinesMesh")
+    }, Cz._GreasedLineMeshParser = (zz, uz) => {
+      throw (0, gz.l)("GreasedLineMesh")
+    }, Cz._GreasedLineRibbonMeshParser = (zz, uz) => {
+      throw (0, gz.l)("GreasedLineRibbonMesh")
+    }, Cz._TrailMeshParser = (zz, uz) => {
+      throw (0, gz.l)("TrailMesh")
+    }, Cz._GaussianSplattingMeshParser = (zz, uz) => {
+      throw (0, gz.l)("GaussianSplattingMesh")
+    }, Cz._GaussianSplattingPartProxyMeshParser = (zz, uz) => {
+      throw (0, gz.l)("GaussianSplattingPartProxyMesh")
+    }, Cz._GaussianSplattingCompoundMeshParser = (zz, uz) => {
+      throw (0, gz.l)("GaussianSplattingCompoundMesh")
+    };
+    let Yz = !1;
+
+    function kz() {
+      Yz || (Yz = !0, (0, cz.c)("BABYLON.Mesh", Cz))
+    }(Ez = Cz.prototype).YL ?? (Ez.YL = (0, gz.h)("Mesh", "YL")), (nz = Cz.prototype).simplify ?? (nz.simplify = (0, gz.h)("Mesh", "simplify")), (iz = Cz.prototype).thinInstanceAdd ?? (iz.thinInstanceAdd = (0, gz.h)("Mesh", "thinInstanceAdd")), (lz = Cz.prototype).thinInstanceAddSelf ?? (lz.thinInstanceAddSelf = (0, gz.h)("Mesh", "thinInstanceAddSelf")), (Mz = Cz.prototype).thinInstanceRegisterAttribute ?? (Mz.thinInstanceRegisterAttribute = (0, gz.h)("Mesh", "thinInstanceRegisterAttribute")), (tz = Cz.prototype).thinInstanceSetMatrixAt ?? (tz.thinInstanceSetMatrixAt = (0, gz.h)("Mesh", "thinInstanceSetMatrixAt")), (Hz = Cz.prototype).thinInstanceSetAttributeAt ?? (Hz.thinInstanceSetAttributeAt = (0, gz.h)("Mesh", "thinInstanceSetAttributeAt")), (Oz = Cz.prototype).v_ ?? (Oz.v_ = (0, gz.h)("Mesh", "v_")), (pz = Cz.prototype).thinInstanceGetWorldMatrices ?? (pz.thinInstanceGetWorldMatrices = (0, gz.h)("Mesh", "thinInstanceGetWorldMatrices")), (dz = Cz.prototype).R_ ?? (dz.R_ = (0, gz.h)("Mesh", "R_")), (Fz = Cz.prototype).thinInstancePartialBufferUpdate ?? (Fz.thinInstancePartialBufferUpdate = (0, gz.h)("Mesh", "thinInstancePartialBufferUpdate")), (Zz = Cz.prototype).thinInstanceRefreshBoundingInfo ?? (Zz.thinInstanceRefreshBoundingInfo = (0, gz.h)("Mesh", "thinInstanceRefreshBoundingInfo")), (Rz = Cz.prototype).getEmittedParticleSystems ?? (Rz.getEmittedParticleSystems = (0, gz.h)("Mesh", "getEmittedParticleSystems")), (Kz = Cz.prototype).getHierarchyEmittedParticleSystems ?? (Kz.getHierarchyEmittedParticleSystems = (0, gz.h)("Mesh", "getHierarchyEmittedParticleSystems")), Object.getOwnPropertyDescriptor(Cz.prototype, "edgesShareWithInstances") || Object.defineProperty(Cz.prototype, "edgesShareWithInstances", (0, gz.f)("Mesh", "edgesShareWithInstances")), Object.getOwnPropertyDescriptor(Cz.prototype, "yzz") || Object.defineProperty(Cz.prototype, "yzz", (0, gz.f)("Mesh", "yzz")), Object.getOwnPropertyDescriptor(Cz.prototype, "thinInstanceAllowAutomaticStaticBufferRecreation") || Object.defineProperty(Cz.prototype, "thinInstanceAllowAutomaticStaticBufferRecreation", (0, gz.f)("Mesh", "thinInstanceAllowAutomaticStaticBufferRecreation")), Object.getOwnPropertyDescriptor(Cz.prototype, "W8") || Object.defineProperty(Cz.prototype, "W8", (0, gz.f)("Mesh", "W8"))
+  },
+  39596: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Zz
+    });
+    var Ez = bz(39170),
+      nz = bz(36519),
+      iz = bz(39299),
+      lz = bz(39061),
+      Mz = bz(36715),
+      tz = bz(38060),
+      Hz = bz(39172),
+      Oz = bz(39589),
+      pz = bz(39212),
+      dz = bz(39459);
+    class Fz {}
+    let Zz = (() => {
+      var zz;
+      let uz, bz, Zz, Rz, Kz = [];
+      return zz = class {
+        constructor() {
+          this.uniqueId = 0, this.metadata = {}, this._applyTo = (0, Oz.i)(this._applyToCoroutine.bind(this)), this.uniqueId = zz._UniqueIdGenerator, zz._UniqueIdGenerator++
+        }
+        set(zz, uz) {
+          switch (zz.length || tz.e.Warn(`Setting vertex data kind '${uz}' with an empty array`), uz) {
+            case iz.j.PositionKind:
+              this.positions = zz;
+              break;
+            case iz.j.NormalKind:
+              this.normals = zz;
+              break;
+            case iz.j.TangentKind:
+              this.tangents = zz;
+              break;
+            case iz.j.UVKind:
+              this.uvs = zz;
+              break;
+            case iz.j.UV2Kind:
+              this.uvs2 = zz;
+              break;
+            case iz.j.UV3Kind:
+              this.uvs3 = zz;
+              break;
+            case iz.j.UV4Kind:
+              this.uvs4 = zz;
+              break;
+            case iz.j.UV5Kind:
+              this.uvs5 = zz;
+              break;
+            case iz.j.UV6Kind:
+              this.uvs6 = zz;
+              break;
+            case iz.j.ColorKind:
+              this.colors = zz;
+              break;
+            case iz.j.MatricesIndicesKind:
+              this.matricesIndices = zz;
+              break;
+            case iz.j.MatricesWeightsKind:
+              this.matricesWeights = zz;
+              break;
+            case iz.j.MatricesIndicesExtraKind:
+              this.matricesIndicesExtra = zz;
+              break;
+            case iz.j.MatricesWeightsExtraKind:
+              this.matricesWeightsExtra = zz
+          }
+        }
+        applyToMesh(zz, uz) {
+          return this._applyTo(zz, uz, !1), this
+        }
+        applyToGeometry(zz, uz) {
+          return this._applyTo(zz, uz, !1), this
+        }
+        updateMesh(zz) {
+          return this._update(zz), this
+        }
+        updateGeometry(zz) {
+          return this._update(zz), this
+        }* _applyToCoroutine(zz) {
+          let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            bz = arguments.length > 2 ? arguments[2] : void 0;
+          if (this.positions && (zz.setVerticesData(iz.j.PositionKind, this.positions, uz), bz && (yield)), this.normals && (zz.setVerticesData(iz.j.NormalKind, this.normals, uz), bz && (yield)), this.tangents && (zz.setVerticesData(iz.j.TangentKind, this.tangents, uz), bz && (yield)), this.uvs && (zz.setVerticesData(iz.j.UVKind, this.uvs, uz), bz && (yield)), this.uvs2 && (zz.setVerticesData(iz.j.UV2Kind, this.uvs2, uz), bz && (yield)), this.uvs3 && (zz.setVerticesData(iz.j.UV3Kind, this.uvs3, uz), bz && (yield)), this.uvs4 && (zz.setVerticesData(iz.j.UV4Kind, this.uvs4, uz), bz && (yield)), this.uvs5 && (zz.setVerticesData(iz.j.UV5Kind, this.uvs5, uz), bz && (yield)), this.uvs6 && (zz.setVerticesData(iz.j.UV6Kind, this.uvs6, uz), bz && (yield)), this.colors) {
+            const Ez = this.positions && this.colors.length === this.positions.length ? 3 : 4;
+            zz.setVerticesData(iz.j.ColorKind, this.colors, uz, Ez), this.hasVertexAlpha && void 0 !== zz.hasVertexAlpha && (zz.hasVertexAlpha = !0), bz && (yield)
+          }
+          if (this.matricesIndices && (zz.setVerticesData(iz.j.MatricesIndicesKind, this.matricesIndices, uz), bz && (yield)), this.matricesWeights && (zz.setVerticesData(iz.j.MatricesWeightsKind, this.matricesWeights, uz), bz && (yield)), this.matricesIndicesExtra && (zz.setVerticesData(iz.j.MatricesIndicesExtraKind, this.matricesIndicesExtra, uz), bz && (yield)), this.matricesWeightsExtra && (zz.setVerticesData(iz.j.MatricesWeightsExtraKind, this.matricesWeightsExtra, uz), bz && (yield)), this.indices ? (zz.setIndices(this.indices, null, uz), bz && (yield)) : zz.setIndices([], null), zz.hN && this.materialInfos && this.materialInfos.length > 1) {
+            const uz = zz;
+            uz.hN = [];
+            for (const zz of this.materialInfos) new dz.e(zz.materialIndex, zz.verticesStart, zz.verticesCount, zz.indexStart, zz.indexCount, uz)
+          }
+          return this
+        }
+        _update(zz, uz, bz) {
+          return this.positions && zz.updateVerticesData(iz.j.PositionKind, this.positions, uz, bz), this.normals && zz.updateVerticesData(iz.j.NormalKind, this.normals, uz, bz), this.tangents && zz.updateVerticesData(iz.j.TangentKind, this.tangents, uz, bz), this.uvs && zz.updateVerticesData(iz.j.UVKind, this.uvs, uz, bz), this.uvs2 && zz.updateVerticesData(iz.j.UV2Kind, this.uvs2, uz, bz), this.uvs3 && zz.updateVerticesData(iz.j.UV3Kind, this.uvs3, uz, bz), this.uvs4 && zz.updateVerticesData(iz.j.UV4Kind, this.uvs4, uz, bz), this.uvs5 && zz.updateVerticesData(iz.j.UV5Kind, this.uvs5, uz, bz), this.uvs6 && zz.updateVerticesData(iz.j.UV6Kind, this.uvs6, uz, bz), this.colors && zz.updateVerticesData(iz.j.ColorKind, this.colors, uz, bz), this.matricesIndices && zz.updateVerticesData(iz.j.MatricesIndicesKind, this.matricesIndices, uz, bz), this.matricesWeights && zz.updateVerticesData(iz.j.MatricesWeightsKind, this.matricesWeights, uz, bz), this.matricesIndicesExtra && zz.updateVerticesData(iz.j.MatricesIndicesExtraKind, this.matricesIndicesExtra, uz, bz), this.matricesWeightsExtra && zz.updateVerticesData(iz.j.MatricesWeightsExtraKind, this.matricesWeightsExtra, uz, bz), this.indices && zz.setIndices(this.indices, null), this
+        }
+        static _TransformVector3Coordinates(zz, uz) {
+          let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zz.length;
+          const iz = nz.l.ER[0],
+            lz = nz.l.ER[1];
+          for (let Mz = bz; Mz < bz + Ez; Mz += 3) nz.n.FromArrayToRef(zz, Mz, iz), nz.n.TransformCoordinatesToRef(iz, uz, lz), zz[Mz] = lz.x, zz[Mz + 1] = lz.y, zz[Mz + 2] = lz.z
+        }
+        static _TransformVector3Normals(zz, uz) {
+          let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zz.length;
+          const iz = nz.l.ER[0],
+            lz = nz.l.ER[1];
+          for (let Mz = bz; Mz < bz + Ez; Mz += 3) nz.n.FromArrayToRef(zz, Mz, iz), nz.n.TransformNormalToRef(iz, uz, lz), zz[Mz] = lz.x, zz[Mz + 1] = lz.y, zz[Mz + 2] = lz.z
+        }
+        static _TransformVector4Normals(zz, uz) {
+          let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zz.length;
+          const iz = nz.l.Vector4[0],
+            lz = nz.l.Vector4[1];
+          for (let Mz = bz; Mz < bz + Ez; Mz += 4) nz.r.FromArrayToRef(zz, Mz, iz), nz.r.TransformNormalToRef(iz, uz, lz), zz[Mz] = lz.x, zz[Mz + 1] = lz.y, zz[Mz + 2] = lz.z, zz[Mz + 3] = lz.w
+        }
+        static _FlipFaces(zz) {
+          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zz.length;
+          for (let Ez = uz; Ez < uz + bz; Ez += 3) {
+            const uz = zz[Ez + 1];
+            zz[Ez + 1] = zz[Ez + 2], zz[Ez + 2] = uz
+          }
+        }
+        transform(uz) {
+          const bz = uz.determinant() < 0;
+          return this.positions && zz._TransformVector3Coordinates(this.positions, uz), this.normals && zz._TransformVector3Normals(this.normals, uz), this.tangents && zz._TransformVector4Normals(this.tangents, uz), bz && this.indices && zz._FlipFaces(this.indices), this
+        }
+        splitBasedOnMaterialID() {
+          if (!this.materialInfos || this.materialInfos.length < 2) return [this];
+          const uz = [];
+          for (const bz of this.materialInfos) {
+            const Ez = new zz;
+            if (this.positions && (Ez.positions = this.positions.slice(3 * bz.verticesStart, 3 * (bz.verticesCount + bz.verticesStart))), this.normals && (Ez.normals = this.normals.slice(3 * bz.verticesStart, 3 * (bz.verticesCount + bz.verticesStart))), this.tangents && (Ez.tangents = this.tangents.slice(4 * bz.verticesStart, 4 * (bz.verticesCount + bz.verticesStart))), this.colors && (Ez.colors = this.colors.slice(4 * bz.verticesStart, 4 * (bz.verticesCount + bz.verticesStart))), this.uvs && (Ez.uvs = this.uvs.slice(2 * bz.verticesStart, 2 * (bz.verticesCount + bz.verticesStart))), this.uvs2 && (Ez.uvs2 = this.uvs2.slice(2 * bz.verticesStart, 2 * (bz.verticesCount + bz.verticesStart))), this.uvs3 && (Ez.uvs3 = this.uvs3.slice(2 * bz.verticesStart, 2 * (bz.verticesCount + bz.verticesStart))), this.uvs4 && (Ez.uvs4 = this.uvs4.slice(2 * bz.verticesStart, 2 * (bz.verticesCount + bz.verticesStart))), this.uvs5 && (Ez.uvs5 = this.uvs5.slice(2 * bz.verticesStart, 2 * (bz.verticesCount + bz.verticesStart))), this.uvs6 && (Ez.uvs6 = this.uvs6.slice(2 * bz.verticesStart, 2 * (bz.verticesCount + bz.verticesStart))), this.matricesIndices && (Ez.matricesIndices = this.matricesIndices.slice(4 * bz.verticesStart, 4 * (bz.verticesCount + bz.verticesStart))), this.matricesIndicesExtra && (Ez.matricesIndicesExtra = this.matricesIndicesExtra.slice(4 * bz.verticesStart, 4 * (bz.verticesCount + bz.verticesStart))), this.matricesWeights && (Ez.matricesWeights = this.matricesWeights.slice(4 * bz.verticesStart, 4 * (bz.verticesCount + bz.verticesStart))), this.matricesWeightsExtra && (Ez.matricesWeightsExtra = this.matricesWeightsExtra.slice(4 * bz.verticesStart, 4 * (bz.verticesCount + bz.verticesStart))), this.indices) {
+              Ez.indices = [];
+              for (let zz = bz.indexStart; zz < bz.indexStart + bz.indexCount; zz++) Ez.indices.push(this.indices[zz] - bz.verticesStart)
+            }
+            const nz = new Fz;
+            nz.indexStart = 0, nz.indexCount = Ez.indices ? Ez.indices.length : 0, nz.materialIndex = bz.materialIndex, nz.verticesStart = 0, nz.verticesCount = (Ez.positions ? Ez.positions.length : 0) / 3, Ez.materialInfos = [nz], uz.push(Ez)
+          }
+          return uz
+        }
+        merge(zz) {
+          let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            nz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+          const iz = Array.isArray(zz) ? zz.map((zz => ({
+            vertexData: zz
+          }))) : [{
+            vertexData: zz
+          }];
+          return (0, Oz.q)(this._mergeCoroutine(void 0, iz, uz, !1, bz, Ez, nz))
+        }* _mergeCoroutine(uz, bz) {
+          let Ez = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            nz = arguments.length > 3 ? arguments[3] : void 0,
+            lz = arguments.length > 4 ? arguments[4] : void 0,
+            Mz = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+            tz = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+          this._validate();
+          let Hz = bz.map((zz => zz.vertexData)),
+            Oz = this;
+          if (tz)
+            for (const zz of Hz) zz && (zz._validate(), !this.normals && zz.normals && (this.normals = new Float32Array(this.positions.length)), !this.tangents && zz.tangents && (this.tangents = new Float32Array(this.positions.length / 3 * 4)), !this.uvs && zz.uvs && (this.uvs = new Float32Array(this.positions.length / 3 * 2)), !this.uvs2 && zz.uvs2 && (this.uvs2 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs3 && zz.uvs3 && (this.uvs3 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs4 && zz.uvs4 && (this.uvs4 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs5 && zz.uvs5 && (this.uvs5 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs6 && zz.uvs6 && (this.uvs6 = new Float32Array(this.positions.length / 3 * 2)), !this.colors && zz.colors && (this.colors = new Float32Array(this.positions.length / 3 * 4), this.colors.fill(1)), !this.matricesIndices && zz.matricesIndices && (this.matricesIndices = new Float32Array(this.positions.length / 3 * 4)), !this.matricesWeights && zz.matricesWeights && (this.matricesWeights = new Float32Array(this.positions.length / 3 * 4)), !this.matricesIndicesExtra && zz.matricesIndicesExtra && (this.matricesIndicesExtra = new Float32Array(this.positions.length / 3 * 4)), !this.matricesWeightsExtra && zz.matricesWeightsExtra && (this.matricesWeightsExtra = new Float32Array(this.positions.length / 3 * 4)));
+          for (const zz of Hz)
+            if (zz)
+              if (tz) this.normals && !zz.normals && (zz.normals = new Float32Array(zz.positions.length)), this.tangents && !zz.tangents && (zz.tangents = new Float32Array(zz.positions.length / 3 * 4)), this.uvs && !zz.uvs && (zz.uvs = new Float32Array(zz.positions.length / 3 * 2)), this.uvs2 && !zz.uvs2 && (zz.uvs2 = new Float32Array(zz.positions.length / 3 * 2)), this.uvs3 && !zz.uvs3 && (zz.uvs3 = new Float32Array(zz.positions.length / 3 * 2)), this.uvs4 && !zz.uvs4 && (zz.uvs4 = new Float32Array(zz.positions.length / 3 * 2)), this.uvs5 && !zz.uvs5 && (zz.uvs5 = new Float32Array(zz.positions.length / 3 * 2)), this.uvs6 && !zz.uvs6 && (zz.uvs6 = new Float32Array(zz.positions.length / 3 * 2)), this.colors && !zz.colors && (zz.colors = new Float32Array(zz.positions.length / 3 * 4), zz.colors.fill(1)), this.matricesIndices && !zz.matricesIndices && (zz.matricesIndices = new Float32Array(zz.positions.length / 3 * 4)), this.matricesWeights && !zz.matricesWeights && (zz.matricesWeights = new Float32Array(zz.positions.length / 3 * 4)), this.matricesIndicesExtra && !zz.matricesIndicesExtra && (zz.matricesIndicesExtra = new Float32Array(zz.positions.length / 3 * 4)), this.matricesWeightsExtra && !zz.matricesWeightsExtra && (zz.matricesWeightsExtra = new Float32Array(zz.positions.length / 3 * 4));
+              else if (zz._validate(), !this.normals !== !zz.normals || !this.tangents !== !zz.tangents || !this.uvs !== !zz.uvs || !this.uvs2 !== !zz.uvs2 || !this.uvs3 !== !zz.uvs3 || !this.uvs4 !== !zz.uvs4 || !this.uvs5 !== !zz.uvs5 || !this.uvs6 !== !zz.uvs6 || !this.colors !== !zz.colors || !this.matricesIndices !== !zz.matricesIndices || !this.matricesWeights !== !zz.matricesWeights || !this.matricesIndicesExtra !== !zz.matricesIndicesExtra || !this.matricesWeightsExtra !== !zz.matricesWeightsExtra) throw new Error("Cannot merge vertex data that do not have the same set of attributes");
+          if (Mz) {
+            let zz, Ez = 0,
+              nz = 0;
+            const iz = [];
+            let lz = null;
+            const Mz = [];
+            for (const bz of this.splitBasedOnMaterialID()) Mz.push({
+              vertexData: bz,
+              transform: uz
+            });
+            for (const uz of bz)
+              if (uz.vertexData)
+                for (const zz of uz.vertexData.splitBasedOnMaterialID()) Mz.push({
+                  vertexData: zz,
+                  transform: uz.transform
+                });
+            Mz.sort(((zz, uz) => {
+              const bz = zz.vertexData.materialInfos ? zz.vertexData.materialInfos[0].materialIndex : 0,
+                Ez = uz.vertexData.materialInfos ? uz.vertexData.materialInfos[0].materialIndex : 0;
+              return bz > Ez ? 1 : bz === Ez ? 0 : -1
+            }));
+            for (const uz of Mz) {
+              const bz = uz.vertexData;
+              if (zz = bz.materialInfos ? bz.materialInfos[0].materialIndex : 0, lz && lz.materialIndex === zz) lz.indexCount += bz.indices.length, lz.verticesCount += bz.positions.length / 3;
+              else {
+                const uz = new Fz;
+                uz.materialIndex = zz, uz.indexStart = Ez, uz.indexCount = bz.indices.length, uz.verticesStart = nz, uz.verticesCount = bz.positions.length / 3, iz.push(uz), lz = uz
+              }
+              Ez += bz.indices.length, nz += bz.positions.length / 3
+            }
+            const tz = Mz.splice(0, 1)[0];
+            Oz = tz.vertexData, uz = tz.transform, Hz = Mz.map((zz => zz.vertexData)), bz = Mz, this.materialInfos = iz
+          }
+          const pz = Hz.reduce(((zz, uz) => zz + (uz.indices?.length ?? 0)), Oz.indices?.length ?? 0);
+          let dz = lz || Hz.some((zz => zz.indices === Oz.indices)) ? Oz.indices?.slice() : Oz.indices;
+          if (pz > 0) {
+            let iz = dz?.length ?? 0;
+            if (dz || (dz = new Array(pz)), dz.length !== pz) {
+              if (Array.isArray(dz)) dz.length = pz;
+              else {
+                const zz = Ez || dz instanceof Uint32Array ? new Uint32Array(pz) : new Uint16Array(pz);
+                zz.set(dz), dz = zz
+              }
+              uz && uz.determinant() < 0 && zz._FlipFaces(dz, 0, iz)
+            }
+            let lz = Oz.positions ? Oz.positions.length / 3 : 0;
+            for (const {
+                vertexData: uz,
+                transform: Ez
+              }
+              of bz)
+              if (uz.indices) {
+                for (let zz = 0; zz < uz.indices.length; zz++) dz[iz + zz] = uz.indices[zz] + lz;
+                Ez && Ez.determinant() < 0 && zz._FlipFaces(dz, iz, uz.indices.length), lz += uz.positions.length / 3, iz += uz.indices.length, nz && (yield)
+              }
+          }
+          return this.indices = dz, this.positions = zz._MergeElement(iz.j.PositionKind, Oz.positions, uz, bz.map((zz => [zz.vertexData.positions, zz.transform]))), nz && (yield), Oz.normals && (this.normals = zz._MergeElement(iz.j.NormalKind, Oz.normals, uz, bz.map((zz => [zz.vertexData.normals, zz.transform]))), nz && (yield)), Oz.tangents && (this.tangents = zz._MergeElement(iz.j.TangentKind, Oz.tangents, uz, bz.map((zz => [zz.vertexData.tangents, zz.transform]))), nz && (yield)), Oz.uvs && (this.uvs = zz._MergeElement(iz.j.UVKind, Oz.uvs, uz, bz.map((zz => [zz.vertexData.uvs, zz.transform]))), nz && (yield)), Oz.uvs2 && (this.uvs2 = zz._MergeElement(iz.j.UV2Kind, Oz.uvs2, uz, bz.map((zz => [zz.vertexData.uvs2, zz.transform]))), nz && (yield)), Oz.uvs3 && (this.uvs3 = zz._MergeElement(iz.j.UV3Kind, Oz.uvs3, uz, bz.map((zz => [zz.vertexData.uvs3, zz.transform]))), nz && (yield)), Oz.uvs4 && (this.uvs4 = zz._MergeElement(iz.j.UV4Kind, Oz.uvs4, uz, bz.map((zz => [zz.vertexData.uvs4, zz.transform]))), nz && (yield)), Oz.uvs5 && (this.uvs5 = zz._MergeElement(iz.j.UV5Kind, Oz.uvs5, uz, bz.map((zz => [zz.vertexData.uvs5, zz.transform]))), nz && (yield)), Oz.uvs6 && (this.uvs6 = zz._MergeElement(iz.j.UV6Kind, Oz.uvs6, uz, bz.map((zz => [zz.vertexData.uvs6, zz.transform]))), nz && (yield)), Oz.colors && (this.colors = zz._MergeElement(iz.j.ColorKind, Oz.colors, uz, bz.map((zz => [zz.vertexData.colors, zz.transform]))), (void 0 !== Oz.hasVertexAlpha || bz.some((zz => void 0 !== zz.vertexData.hasVertexAlpha))) && (this.hasVertexAlpha = Oz.hasVertexAlpha || bz.some((zz => zz.vertexData.hasVertexAlpha))), nz && (yield)), Oz.matricesIndices && (this.matricesIndices = zz._MergeElement(iz.j.MatricesIndicesKind, Oz.matricesIndices, uz, bz.map((zz => [zz.vertexData.matricesIndices, zz.transform]))), nz && (yield)), Oz.matricesWeights && (this.matricesWeights = zz._MergeElement(iz.j.MatricesWeightsKind, Oz.matricesWeights, uz, bz.map((zz => [zz.vertexData.matricesWeights, zz.transform]))), nz && (yield)), Oz.matricesIndicesExtra && (this.matricesIndicesExtra = zz._MergeElement(iz.j.MatricesIndicesExtraKind, Oz.matricesIndicesExtra, uz, bz.map((zz => [zz.vertexData.matricesIndicesExtra, zz.transform]))), nz && (yield)), Oz.matricesWeightsExtra && (this.matricesWeightsExtra = zz._MergeElement(iz.j.MatricesWeightsExtraKind, Oz.matricesWeightsExtra, uz, bz.map((zz => [zz.vertexData.matricesWeightsExtra, zz.transform])))), this
+        }
+        static _MergeElement(uz, bz, Ez, nz) {
+          const lz = nz.filter((zz => null !== zz[0] && void 0 !== zz[0]));
+          if (!bz && 0 == lz.length) return bz;
+          if (!bz) return this._MergeElement(uz, lz[0][0], lz[0][1], lz.slice(1));
+          const Mz = lz.reduce(((zz, uz) => zz + uz[0].length), bz.length),
+            tz = uz === iz.j.PositionKind ? zz._TransformVector3Coordinates : uz === iz.j.NormalKind ? zz._TransformVector3Normals : uz === iz.j.TangentKind ? zz._TransformVector4Normals : () => {};
+          if (bz instanceof Float32Array) {
+            const zz = new Float32Array(Mz);
+            zz.set(bz), Ez && tz(zz, Ez, 0, bz.length);
+            let uz = bz.length;
+            for (const [bz, Ez] of lz) zz.set(bz, uz), Ez && tz(zz, Ez, uz, bz.length), uz += bz.length;
+            return zz
+          } {
+            const zz = new Array(Mz);
+            for (let Ez = 0; Ez < bz.length; Ez++) zz[Ez] = bz[Ez];
+            Ez && tz(zz, Ez, 0, bz.length);
+            let uz = bz.length;
+            for (const [bz, Ez] of lz) {
+              for (let Ez = 0; Ez < bz.length; Ez++) zz[uz + Ez] = bz[Ez];
+              Ez && tz(zz, Ez, uz, bz.length), uz += bz.length
+            }
+            return zz
+          }
+        }
+        _validate() {
+          if (!this.positions) throw new pz.j("Positions are required", pz.f.MeshInvalidPositionsError);
+          const zz = (zz, uz) => {
+              const bz = (0, iz.h)(zz);
+              if (uz.length % bz !== 0) throw new Error("The " + zz + "s array count must be a multiple of " + bz);
+              return uz.length / bz
+            },
+            uz = zz(iz.j.PositionKind, this.positions),
+            bz = (bz, Ez) => {
+              const nz = zz(bz, Ez);
+              if (nz !== uz) throw new Error("The " + bz + "s element count (" + nz + ") does not match the positions count (" + uz + ")")
+            };
+          this.normals && bz(iz.j.NormalKind, this.normals), this.tangents && bz(iz.j.TangentKind, this.tangents), this.uvs && bz(iz.j.UVKind, this.uvs), this.uvs2 && bz(iz.j.UV2Kind, this.uvs2), this.uvs3 && bz(iz.j.UV3Kind, this.uvs3), this.uvs4 && bz(iz.j.UV4Kind, this.uvs4), this.uvs5 && bz(iz.j.UV5Kind, this.uvs5), this.uvs6 && bz(iz.j.UV6Kind, this.uvs6), this.colors && bz(iz.j.ColorKind, this.colors), this.matricesIndices && bz(iz.j.MatricesIndicesKind, this.matricesIndices), this.matricesWeights && bz(iz.j.MatricesWeightsKind, this.matricesWeights), this.matricesIndicesExtra && bz(iz.j.MatricesIndicesExtraKind, this.matricesIndicesExtra), this.matricesWeightsExtra && bz(iz.j.MatricesWeightsExtraKind, this.matricesWeightsExtra)
+        }
+        clone() {
+          const uz = this.serialize();
+          return zz.Parse(uz)
+        }
+        serialize() {
+          const zz = {};
+          if (this.positions && (zz.positions = Array.from(this.positions)), this.normals && (zz.normals = Array.from(this.normals)), this.tangents && (zz.tangents = Array.from(this.tangents)), this.uvs && (zz.uvs = Array.from(this.uvs)), this.uvs2 && (zz.uvs2 = Array.from(this.uvs2)), this.uvs3 && (zz.uvs3 = Array.from(this.uvs3)), this.uvs4 && (zz.uvs4 = Array.from(this.uvs4)), this.uvs5 && (zz.uvs5 = Array.from(this.uvs5)), this.uvs6 && (zz.uvs6 = Array.from(this.uvs6)), this.colors && (zz.colors = Array.from(this.colors), zz.hasVertexAlpha = this.hasVertexAlpha), this.matricesIndices && (zz.matricesIndices = Array.from(this.matricesIndices), zz.matricesIndicesExpanded = !0), this.matricesWeights && (zz.matricesWeights = Array.from(this.matricesWeights)), this.matricesIndicesExtra && (zz.matricesIndicesExtra = Array.from(this.matricesIndicesExtra), zz.matricesIndicesExtraExpanded = !0), this.matricesWeightsExtra && (zz.matricesWeightsExtra = Array.from(this.matricesWeightsExtra)), zz.indices = this.indices ? Array.from(this.indices) : [], this.materialInfos) {
+            zz.materialInfos = [];
+            for (const uz of this.materialInfos) {
+              const bz = {
+                indexStart: uz.indexStart,
+                indexCount: uz.indexCount,
+                materialIndex: uz.materialIndex,
+                verticesStart: uz.verticesStart,
+                verticesCount: uz.verticesCount
+              };
+              zz.materialInfos.push(bz)
+            }
+          }
+          return zz
+        }
+        static ExtractFromMesh(uz, bz, Ez) {
+          return zz._ExtractFrom(uz, bz, Ez)
+        }
+        static ExtractFromGeometry(uz, bz, Ez) {
+          return zz._ExtractFrom(uz, bz, Ez)
+        }
+        static _ExtractFrom(uz, bz, Ez) {
+          const nz = new zz;
+          if (uz.isVerticesDataPresent(iz.j.PositionKind) && (nz.positions = uz.getVerticesData(iz.j.PositionKind, bz, Ez)), uz.isVerticesDataPresent(iz.j.NormalKind) && (nz.normals = uz.getVerticesData(iz.j.NormalKind, bz, Ez)), uz.isVerticesDataPresent(iz.j.TangentKind) && (nz.tangents = uz.getVerticesData(iz.j.TangentKind, bz, Ez)), uz.isVerticesDataPresent(iz.j.UVKind) && (nz.uvs = uz.getVerticesData(iz.j.UVKind, bz, Ez)), uz.isVerticesDataPresent(iz.j.UV2Kind) && (nz.uvs2 = uz.getVerticesData(iz.j.UV2Kind, bz, Ez)), uz.isVerticesDataPresent(iz.j.UV3Kind) && (nz.uvs3 = uz.getVerticesData(iz.j.UV3Kind, bz, Ez)), uz.isVerticesDataPresent(iz.j.UV4Kind) && (nz.uvs4 = uz.getVerticesData(iz.j.UV4Kind, bz, Ez)), uz.isVerticesDataPresent(iz.j.UV5Kind) && (nz.uvs5 = uz.getVerticesData(iz.j.UV5Kind, bz, Ez)), uz.isVerticesDataPresent(iz.j.UV6Kind) && (nz.uvs6 = uz.getVerticesData(iz.j.UV6Kind, bz, Ez)), uz.isVerticesDataPresent(iz.j.ColorKind)) {
+            const zz = uz.geometry || uz,
+              lz = zz.getVertexBuffer(iz.j.ColorKind),
+              Mz = zz.getVerticesData(iz.j.ColorKind, bz, Ez);
+            if (3 === lz.getSize()) {
+              const zz = new Float32Array(4 * Mz.length / 3);
+              for (let uz = 0, bz = 0; uz < Mz.length; uz += 3, bz += 4) zz[bz] = Mz[uz], zz[bz + 1] = Mz[uz + 1], zz[bz + 2] = Mz[uz + 2], zz[bz + 3] = 1;
+              nz.colors = zz
+            } else {
+              if (4 !== lz.getSize()) throw new Error(`Unexpected number of color components: ${lz.getSize()}`);
+              nz.colors = Mz
+            }
+          }
+          return uz.isVerticesDataPresent(iz.j.MatricesIndicesKind) && (nz.matricesIndices = uz.getVerticesData(iz.j.MatricesIndicesKind, bz, Ez)), uz.isVerticesDataPresent(iz.j.MatricesWeightsKind) && (nz.matricesWeights = uz.getVerticesData(iz.j.MatricesWeightsKind, bz, Ez)), uz.isVerticesDataPresent(iz.j.MatricesIndicesExtraKind) && (nz.matricesIndicesExtra = uz.getVerticesData(iz.j.MatricesIndicesExtraKind, bz, Ez)), uz.isVerticesDataPresent(iz.j.MatricesWeightsExtraKind) && (nz.matricesWeightsExtra = uz.getVerticesData(iz.j.MatricesWeightsExtraKind, bz, Ez)), nz.indices = uz.Nbz(bz, Ez), nz
+        }
+        static CreateRibbon(zz) {
+          throw (0, lz.l)("ribbonBuilder")
+        }
+        static CreateBox(zz) {
+          throw (0, lz.l)("boxBuilder")
+        }
+        static CreateTiledBox(zz) {
+          throw (0, lz.l)("tiledBoxBuilder")
+        }
+        static CreateTiledPlane(zz) {
+          throw (0, lz.l)("tiledPlaneBuilder")
+        }
+        static CreateSphere(zz) {
+          throw (0, lz.l)("sphereBuilder")
+        }
+        static CreateCylinder(zz) {
+          throw (0, lz.l)("cylinderBuilder")
+        }
+        static CreateTorus(zz) {
+          throw (0, lz.l)("torusBuilder")
+        }
+        static CreateLineSystem(zz) {
+          throw (0, lz.l)("linesBuilder")
+        }
+        static CreateDashedLines(zz) {
+          throw (0, lz.l)("linesBuilder")
+        }
+        static CreateGround(zz) {
+          throw (0, lz.l)("groundBuilder")
+        }
+        static CreateTiledGround(zz) {
+          throw (0, lz.l)("groundBuilder")
+        }
+        static CreateGroundFromHeightMap(zz) {
+          throw (0, lz.l)("groundBuilder")
+        }
+        static CreatePlane(zz) {
+          throw (0, lz.l)("planeBuilder")
+        }
+        static CreateDisc(zz) {
+          throw (0, lz.l)("discBuilder")
+        }
+        static CreatePolygon(zz, uz, bz, Ez, nz, iz, Mz) {
+          throw (0, lz.l)("polygonBuilder")
+        }
+        static CreateIcoSphere(zz) {
+          throw (0, lz.l)("icoSphereBuilder")
+        }
+        static CreatePolyhedron(zz) {
+          throw (0, lz.l)("polyhedronBuilder")
+        }
+        static CreateCapsule() {
+          arguments.length > 0 && void 0 !== arguments[0] || nz.n.Up();
+          throw (0, lz.l)("capsuleBuilder")
+        }
+        static CreateTorusKnot(zz) {
+          throw (0, lz.l)("torusKnotBuilder")
+        }
+        static ComputeNormals(zz, uz, bz, Ez) {
+          let iz, lz, Mz, tz, Hz, Oz, pz, dz, Fz, Zz, Rz, Kz, wz, Xz, fz, sz, rz, oz, Nz, vz, xz = !1,
+            Jz = !1,
+            Az = !1,
+            Tz = !1,
+            Lz = 1,
+            Pz = 0,
+            Gz = null;
+          Ez && (xz = !!Ez.facetNormals, Jz = !!Ez.facetPositions, Az = !!Ez.facetPartitioning, Lz = !0 === Ez.useRightHandedSystem ? -1 : 1, Pz = Ez.ratio || 0, Tz = !!Ez.depthSort, Gz = Ez.distanceTo, Tz && void 0 === Gz && (Gz = nz.n.Zero()));
+          let az = 0,
+            Vz = 0,
+            mz = 0,
+            qz = 0;
+          for (Az && Ez && Ez.bbSize && (az = Ez.subDiv.X * Pz / Ez.bbSize.x, Vz = Ez.subDiv.Y * Pz / Ez.bbSize.y, mz = Ez.subDiv.Z * Pz / Ez.bbSize.z, qz = Ez.subDiv.max * Ez.subDiv.max, Ez.facetPartitioning.length = 0), iz = 0; iz < zz.length; iz++) bz[iz] = 0;
+          const hz = uz.length / 3 | 0;
+          for (iz = 0; iz < hz; iz++) {
+            if (Kz = 3 * uz[3 * iz], wz = Kz + 1, Xz = Kz + 2, fz = 3 * uz[3 * iz + 1], sz = fz + 1, rz = fz + 2, oz = 3 * uz[3 * iz + 2], Nz = oz + 1, vz = oz + 2, lz = zz[Kz] - zz[fz], Mz = zz[wz] - zz[sz], tz = zz[Xz] - zz[rz], Hz = zz[oz] - zz[fz], Oz = zz[Nz] - zz[sz], pz = zz[vz] - zz[rz], dz = Lz * (Mz * pz - tz * Oz), Fz = Lz * (tz * Hz - lz * pz), Zz = Lz * (lz * Oz - Mz * Hz), Rz = Math.sqrt(dz * dz + Fz * Fz + Zz * Zz), Rz = 0 === Rz ? 1 : Rz, dz /= Rz, Fz /= Rz, Zz /= Rz, xz && Ez && (Ez.facetNormals[iz].x = dz, Ez.facetNormals[iz].y = Fz, Ez.facetNormals[iz].z = Zz), Jz && Ez && (Ez.facetPositions[iz].x = (zz[Kz] + zz[fz] + zz[oz]) / 3, Ez.facetPositions[iz].y = (zz[wz] + zz[sz] + zz[Nz]) / 3, Ez.facetPositions[iz].z = (zz[Xz] + zz[rz] + zz[vz]) / 3), Az && Ez) {
+              const uz = Math.floor((Ez.facetPositions[iz].x - Ez.bInfo.minimum.x * Pz) * az),
+                bz = Math.floor((Ez.facetPositions[iz].y - Ez.bInfo.minimum.y * Pz) * Vz),
+                nz = Math.floor((Ez.facetPositions[iz].z - Ez.bInfo.minimum.z * Pz) * mz),
+                lz = Math.floor((zz[Kz] - Ez.bInfo.minimum.x * Pz) * az),
+                Mz = Math.floor((zz[wz] - Ez.bInfo.minimum.y * Pz) * Vz),
+                tz = Math.floor((zz[Xz] - Ez.bInfo.minimum.z * Pz) * mz),
+                Hz = Math.floor((zz[fz] - Ez.bInfo.minimum.x * Pz) * az),
+                Oz = Math.floor((zz[sz] - Ez.bInfo.minimum.y * Pz) * Vz),
+                pz = Math.floor((zz[rz] - Ez.bInfo.minimum.z * Pz) * mz),
+                dz = Math.floor((zz[oz] - Ez.bInfo.minimum.x * Pz) * az),
+                Fz = Math.floor((zz[Nz] - Ez.bInfo.minimum.y * Pz) * Vz),
+                Zz = Math.floor((zz[vz] - Ez.bInfo.minimum.z * Pz) * mz),
+                Rz = lz + Ez.subDiv.max * Mz + qz * tz,
+                xz = Hz + Ez.subDiv.max * Oz + qz * pz,
+                Jz = dz + Ez.subDiv.max * Fz + qz * Zz,
+                Az = uz + Ez.subDiv.max * bz + qz * nz;
+              Ez.facetPartitioning[Az] = Ez.facetPartitioning[Az] ? Ez.facetPartitioning[Az] : [], Ez.facetPartitioning[Rz] = Ez.facetPartitioning[Rz] ? Ez.facetPartitioning[Rz] : [], Ez.facetPartitioning[xz] = Ez.facetPartitioning[xz] ? Ez.facetPartitioning[xz] : [], Ez.facetPartitioning[Jz] = Ez.facetPartitioning[Jz] ? Ez.facetPartitioning[Jz] : [], Ez.facetPartitioning[Rz].push(iz), xz != Rz && Ez.facetPartitioning[xz].push(iz), Jz != xz && Jz != Rz && Ez.facetPartitioning[Jz].push(iz), Az != Rz && Az != xz && Az != Jz && Ez.facetPartitioning[Az].push(iz)
+            }
+            if (Tz && Ez && Ez.facetPositions) {
+              const zz = Ez.depthSortedFacets[iz];
+              zz.ind = 3 * iz, zz.sqDistance = nz.n.DistanceSquared(Ez.facetPositions[iz], Gz)
+            }
+            bz[Kz] += dz, bz[wz] += Fz, bz[Xz] += Zz, bz[fz] += dz, bz[sz] += Fz, bz[rz] += Zz, bz[oz] += dz, bz[Nz] += Fz, bz[vz] += Zz
+          }
+          for (iz = 0; iz < bz.length / 3; iz++) dz = bz[3 * iz], Fz = bz[3 * iz + 1], Zz = bz[3 * iz + 2], Rz = Math.sqrt(dz * dz + Fz * Fz + Zz * Zz), Rz = 0 === Rz ? 1 : Rz, dz /= Rz, Fz /= Rz, Zz /= Rz, bz[3 * iz] = dz, bz[3 * iz + 1] = Fz, bz[3 * iz + 2] = Zz
+        }
+        static _ComputeSides(uz, bz, Ez, iz, lz, Mz, tz) {
+          const Hz = Ez.length,
+            Oz = iz.length;
+          let pz, dz;
+          switch (uz = uz || zz.DEFAULTSIDE) {
+            case zz.FRONTSIDE:
+              break;
+            case zz.BACKSIDE:
+              for (pz = 0; pz < Hz; pz += 3) {
+                const zz = Ez[pz];
+                Ez[pz] = Ez[pz + 2], Ez[pz + 2] = zz
+              }
+              for (dz = 0; dz < Oz; dz++) iz[dz] = -iz[dz];
+              break;
+            case zz.DOUBLESIDE: {
+              const zz = bz.length,
+                uz = zz / 3;
+              for (let Ez = 0; Ez < zz; Ez++) bz[zz + Ez] = bz[Ez];
+              for (pz = 0; pz < Hz; pz += 3) Ez[pz + Hz] = Ez[pz + 2] + uz, Ez[pz + 1 + Hz] = Ez[pz + 1] + uz, Ez[pz + 2 + Hz] = Ez[pz] + uz;
+              for (dz = 0; dz < Oz; dz++) iz[Oz + dz] = -iz[dz];
+              const Fz = lz.length;
+              let Zz;
+              for (Zz = 0; Zz < Fz; Zz++) lz[Zz + Fz] = lz[Zz];
+              for (Mz = Mz || new nz.r(0, 0, 1, 1), tz = tz || new nz.r(0, 0, 1, 1), Zz = 0, pz = 0; pz < Fz / 2; pz++) lz[Zz] = Mz.x + (Mz.z - Mz.x) * lz[Zz], lz[Zz + 1] = Mz.y + (Mz.w - Mz.y) * lz[Zz + 1], lz[Zz + Fz] = tz.x + (tz.z - tz.x) * lz[Zz + Fz], lz[Zz + Fz + 1] = tz.y + (tz.w - tz.y) * lz[Zz + Fz + 1], Zz += 2;
+              break
+            }
+          }
+        }
+        static Parse(uz) {
+          const bz = new zz,
+            Ez = uz.positions;
+          Ez && bz.set(Ez, iz.j.PositionKind);
+          const nz = uz.normals;
+          nz && bz.set(nz, iz.j.NormalKind);
+          const lz = uz.tangents;
+          lz && bz.set(lz, iz.j.TangentKind);
+          const tz = uz.uvs;
+          tz && bz.set(tz, iz.j.UVKind);
+          const Hz = uz.uvs2;
+          Hz && bz.set(Hz, iz.j.UV2Kind);
+          const Oz = uz.uvs3;
+          Oz && bz.set(Oz, iz.j.UV3Kind);
+          const pz = uz.uvs4;
+          pz && bz.set(pz, iz.j.UV4Kind);
+          const dz = uz.uvs5;
+          dz && bz.set(dz, iz.j.UV5Kind);
+          const Zz = uz.uvs6;
+          Zz && bz.set(Zz, iz.j.UV6Kind);
+          const Rz = uz.colors;
+          Rz && (bz.set(Mz.g.CheckColors4(Rz, Ez.length / 3), iz.j.ColorKind), void 0 !== uz.hasVertexAlpha && (bz.hasVertexAlpha = uz.hasVertexAlpha));
+          const Kz = uz.matricesIndices;
+          Kz && bz.set(Kz, iz.j.MatricesIndicesKind);
+          const wz = uz.matricesWeights;
+          wz && bz.set(wz, iz.j.MatricesWeightsKind);
+          const Xz = uz.indices;
+          Xz && (bz.indices = Xz);
+          const fz = uz.materialInfos;
+          if (fz) {
+            bz.materialInfos = [];
+            for (const zz of fz) {
+              const uz = new Fz;
+              uz.indexCount = zz.indexCount, uz.indexStart = zz.indexStart, uz.verticesCount = zz.verticesCount, uz.verticesStart = zz.verticesStart, uz.materialIndex = zz.materialIndex, bz.materialInfos.push(uz)
+            }
+          }
+          return bz
+        }
+        static ImportVertexData(uz, bz) {
+          const Ez = zz.Parse(uz);
+          bz.setAllVerticesData(Ez, uz.updatable)
+        }
+      }, (() => {
+        const nz = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        uz = [Hz.l.filter((function() {
+          return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
+        }))], bz = [Hz.l.filter((function() {
+          return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
+        }))], Zz = [Hz.l.filter((function() {
+          return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
+        }))], Rz = [Hz.l.filter((function() {
+          return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
+        }))], (0, Ez.h)(zz, null, uz, {
+          kind: "method",
+          name: "_TransformVector3Coordinates",
+          static: !0,
+          private: !1,
+          access: {
+            has: zz => "_TransformVector3Coordinates" in zz,
+            get: zz => zz._TransformVector3Coordinates
+          },
+          metadata: nz
+        }, null, Kz), (0, Ez.h)(zz, null, bz, {
+          kind: "method",
+          name: "_TransformVector3Normals",
+          static: !0,
+          private: !1,
+          access: {
+            has: zz => "_TransformVector3Normals" in zz,
+            get: zz => zz._TransformVector3Normals
+          },
+          metadata: nz
+        }, null, Kz), (0, Ez.h)(zz, null, Zz, {
+          kind: "method",
+          name: "_TransformVector4Normals",
+          static: !0,
+          private: !1,
+          access: {
+            has: zz => "_TransformVector4Normals" in zz,
+            get: zz => zz._TransformVector4Normals
+          },
+          metadata: nz
+        }, null, Kz), (0, Ez.h)(zz, null, Rz, {
+          kind: "method",
+          name: "_FlipFaces",
+          static: !0,
+          private: !1,
+          access: {
+            has: zz => "_FlipFaces" in zz,
+            get: zz => zz._FlipFaces
+          },
+          metadata: nz
+        }, null, Kz), nz && Object.defineProperty(zz, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: nz
+        })
+      })(), zz.FRONTSIDE = ((0, Ez.j)(zz, Kz), 0), zz.BACKSIDE = 1, zz.DOUBLESIDE = 2, zz.DEFAULTSIDE = 0, zz._UniqueIdGenerator = 0, zz
+    })()
+  },
+  39642: (zz, uz, bz) => {
+    var Ez = bz(36519),
+      nz = bz(38060),
+      iz = bz(39474),
+      lz = bz(39584),
+      Mz = bz(39299);
+    const tz = "bakedVertexAnimationSettingsInstanced";
+
+    function Hz(zz) {
+      const uz = zz.bakedVertexAnimationManager?.texture?.getInternalTexture()?._bufferView;
+      return uz instanceof Float32Array || uz instanceof Uint16Array
+    }
+
+    function Oz(zz, uz, bz, Ez) {
+      bz.Vk(Number.POSITIVE_INFINITY), Ez.Vk(Number.NEGATIVE_INFINITY);
+      for (let nz = 0; nz < 3 * uz; nz += 3) {
+        const uz = zz[nz],
+          iz = zz[nz + 1],
+          lz = zz[nz + 2];
+        uz < bz.x && (bz.x = uz), iz < bz.y && (bz.y = iz), lz < bz.z && (bz.z = lz), uz > Ez.x && (Ez.x = uz), iz > Ez.y && (Ez.y = iz), lz > Ez.z && (Ez.z = lz)
+      }
+    }
+
+    function pz(zz, uz, bz) {
+      bz && (zz.x -= zz.x * bz.x + bz.y, zz.y -= zz.y * bz.x + bz.y, zz.z -= zz.z * bz.x + bz.y, uz.x += uz.x * bz.x + bz.y, uz.y += uz.y * bz.x + bz.y, uz.z += uz.z * bz.x + bz.y)
+    }
+
+    function dz(zz, uz, bz, nz, iz) {
+      const lz = Ez.l.ER[7],
+        Mz = Ez.l.ER[8];
+      for (let tz = 0; tz < 2; ++tz)
+        for (let Hz = 0; Hz < 2; ++Hz)
+          for (let Oz = 0; Oz < 2; ++Oz) lz.set(tz ? uz.x : zz.x, Hz ? uz.y : zz.y, Oz ? uz.z : zz.z), Ez.n.TransformCoordinatesToRef(lz, bz, Mz), nz.minimizeInPlace(Mz), iz.maximizeInPlace(Mz)
+    }
+
+    function Fz(zz, uz, bz, nz, iz) {
+      const lz = Ez.l.ER[7];
+      for (let Mz = 0; Mz < 3 * uz; Mz += 3) Ez.n.TransformCoordinatesFromFloatsToRef(zz[Mz], zz[Mz + 1], zz[Mz + 2], bz, lz), nz.minimizeInPlace(lz), iz.maximizeInPlace(lz)
+    }
+    let Zz = !1;
+    Zz || (Zz = !0, lz.c.prototype.thinInstanceAdd = function(zz) {
+      let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (!this.XT().uR().getCaps().instancedArrays) return nz.e.Error("Thin Instances are not supported on this device as Instanced Array extension not supported"), -1;
+      this._thinInstanceUpdateBufferSize("matrix", Array.isArray(zz) ? zz.length : 1);
+      const bz = this._thinInstanceDataStorage.instancesCount;
+      if (Array.isArray(zz))
+        for (let Ez = 0; Ez < zz.length; ++Ez) this.thinInstanceSetMatrixAt(this._thinInstanceDataStorage.instancesCount++, zz[Ez], Ez === zz.length - 1 && uz);
+      else this.thinInstanceSetMatrixAt(this._thinInstanceDataStorage.instancesCount++, zz, uz);
+      return bz
+    }, lz.c.prototype.thinInstanceAddSelf = function() {
+      let zz = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return this.thinInstanceAdd(Ez.d.IdentityReadOnly, zz)
+    }, lz.c.prototype.thinInstanceRegisterAttribute = function(zz, uz) {
+      zz === Mz.j.ColorKind && (zz = Mz.j.ColorInstanceKind), this.removeVerticesData(zz), this._thinInstanceInitializeUserStorage(), this._userThinInstanceBuffersStorage.strides[zz] = uz, this._userThinInstanceBuffersStorage.sizes[zz] = uz * Math.max(32, this._thinInstanceDataStorage.instancesCount), this._userThinInstanceBuffersStorage.data[zz] = new Float32Array(this._userThinInstanceBuffersStorage.sizes[zz]), this._userThinInstanceBuffersStorage.vertexBuffers[zz] = new Mz.j(this.uR(), this._userThinInstanceBuffersStorage.data[zz], zz, !0, !1, uz, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[zz])
+    }, lz.c.prototype.thinInstanceSetMatrixAt = function(zz, uz) {
+      let bz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      if (!this._thinInstanceDataStorage.matrixData || zz >= this._thinInstanceDataStorage.instancesCount) return !1;
+      const Ez = this._thinInstanceDataStorage.matrixData;
+      return uz.copyToArray(Ez, 16 * zz), this._thinInstanceDataStorage.worldMatrices && (this._thinInstanceDataStorage.worldMatrices[zz] = uz), bz && (this.R_("matrix"), this.iR || this.thinInstanceRefreshBoundingInfo(!1)), !0
+    }, lz.c.prototype.thinInstanceSetAttributeAt = function(zz, uz, bz) {
+      let Ez = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      return zz === Mz.j.ColorKind && (zz = Mz.j.ColorInstanceKind), !(!this._userThinInstanceBuffersStorage || !this._userThinInstanceBuffersStorage.data[zz] || uz >= this._thinInstanceDataStorage.instancesCount) && (this._thinInstanceUpdateBufferSize(zz, 0), this._userThinInstanceBuffersStorage.data[zz].set(bz, uz * this._userThinInstanceBuffersStorage.strides[zz]), Ez && this.R_(zz), !0)
+    }, Object.defineProperty(lz.c.prototype, "W8", {
+      get: function() {
+        return this._thinInstanceDataStorage.instancesCount
+      },
+      set: function(zz) {
+        const uz = this._thinInstanceDataStorage.matrixData ?? this.source?._thinInstanceDataStorage.matrixData;
+        zz <= (uz ? uz.length / 16 : 0) && (this._thinInstanceDataStorage.instancesCount = zz)
+      },
+      enumerable: !0,
+      configurable: !0
+    }), lz.c.prototype._thinInstanceCreateMatrixBuffer = function(zz, uz) {
+      let bz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      const Ez = new Mz.c(this.uR(), uz, !bz, 16, !1, !0);
+      for (let nz = 0; nz < 4; nz++) this.setVerticesBuffer(Ez.createVertexBuffer(zz + nz, 4 * nz, 4));
+      return Ez
+    }, lz.c.prototype.v_ = function(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Ez = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      if (bz = bz || 16, "matrix" === zz) this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = null, this._thinInstanceDataStorage.matrixBufferSize = uz ? uz.length : 32 * bz, this._thinInstanceDataStorage.matrixData = uz, this._thinInstanceDataStorage.worldMatrices = null, null !== uz ? (this._thinInstanceDataStorage.instancesCount = uz.length / bz, this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", uz, Ez), this.iR || this.thinInstanceRefreshBoundingInfo(!1)) : (this._thinInstanceDataStorage.instancesCount = 0, this.iR || this.refreshBoundingInfo());
+      else if ("previousMatrix" === zz) this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = null, this._thinInstanceDataStorage.previousMatrixData = uz, null !== uz && (this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", uz, Ez));
+      else if ("splatIndex" === zz && uz) {
+        this._thinInstanceInitializeUserStorage(), this._thinInstanceDataStorage.instancesCount = uz.length / bz, this._userThinInstanceBuffersStorage.data[zz] = uz, this._userThinInstanceBuffersStorage.strides[zz] = bz, this._userThinInstanceBuffersStorage.sizes[zz] = uz.length;
+        const Ez = new Mz.c(this.uR(), uz, !0, 16, !1, !0);
+        this._thinInstanceDataStorage.matrixBuffer = Ez;
+        for (let uz = 0; uz < 4; uz++) this.setVerticesBuffer(Ez.createVertexBuffer(zz + uz, 4 * uz, 4))
+      } else zz === Mz.j.ColorKind && (zz = Mz.j.ColorInstanceKind), null === uz ? this._userThinInstanceBuffersStorage?.data[zz] && (this.removeVerticesData(zz), delete this._userThinInstanceBuffersStorage.data[zz], delete this._userThinInstanceBuffersStorage.strides[zz], delete this._userThinInstanceBuffersStorage.sizes[zz], delete this._userThinInstanceBuffersStorage.vertexBuffers[zz]) : (this._thinInstanceInitializeUserStorage(), this._userThinInstanceBuffersStorage.data[zz] = uz, this._userThinInstanceBuffersStorage.strides[zz] = bz, this._userThinInstanceBuffersStorage.sizes[zz] = uz.length, this._userThinInstanceBuffersStorage.vertexBuffers[zz] = new Mz.j(this.uR(), uz, zz, !Ez, !1, bz, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[zz]))
+    }, lz.c.prototype.R_ = function(zz) {
+      "matrix" === zz ? (this.thinInstanceAllowAutomaticStaticBufferRecreation && this._thinInstanceDataStorage.matrixBuffer && !this._thinInstanceDataStorage.matrixBuffer.isUpdatable() && this._thinInstanceRecreateBuffer(zz), this._thinInstanceDataStorage.matrixBuffer?.updateDirectly(this._thinInstanceDataStorage.matrixData, 0, this._thinInstanceDataStorage.instancesCount)) : "previousMatrix" === zz ? (this.thinInstanceAllowAutomaticStaticBufferRecreation && this._thinInstanceDataStorage.previousMatrixBuffer && !this._thinInstanceDataStorage.previousMatrixBuffer.isUpdatable() && this._thinInstanceRecreateBuffer(zz), this._thinInstanceDataStorage.previousMatrixBuffer?.updateDirectly(this._thinInstanceDataStorage.previousMatrixData, 0, this._thinInstanceDataStorage.instancesCount)) : "splatIndex" === zz ? this._thinInstanceDataStorage.matrixBuffer?.updateDirectly(this._userThinInstanceBuffersStorage.data[zz], 0, this._thinInstanceDataStorage.instancesCount) : (zz === Mz.j.ColorKind && (zz = Mz.j.ColorInstanceKind), this._userThinInstanceBuffersStorage?.vertexBuffers[zz] && (this.thinInstanceAllowAutomaticStaticBufferRecreation && !this._userThinInstanceBuffersStorage.vertexBuffers[zz].isUpdatable() && this._thinInstanceRecreateBuffer(zz), this._userThinInstanceBuffersStorage.vertexBuffers[zz].updateDirectly(this._userThinInstanceBuffersStorage.data[zz], 0)))
+    }, lz.c.prototype.thinInstancePartialBufferUpdate = function(zz, uz, bz) {
+      if ("matrix" === zz) this._thinInstanceDataStorage.matrixBuffer && ("number" === typeof uz ? this._thinInstanceDataStorage.matrixBuffer.updateDirectly(new Float32Array(this._thinInstanceDataStorage.matrixData.buffer, this._thinInstanceDataStorage.matrixData.byteOffset + 16 * bz * Float32Array.BYTES_PER_ELEMENT, 16 * uz), 16 * bz) : this._thinInstanceDataStorage.matrixBuffer.updateDirectly(uz, bz));
+      else if (zz === Mz.j.ColorKind && (zz = Mz.j.ColorInstanceKind), this._userThinInstanceBuffersStorage?.vertexBuffers[zz]) {
+        const Ez = this._userThinInstanceBuffersStorage.vertexBuffers[zz];
+        if ("number" === typeof uz) {
+          const Ez = new Float32Array(this._userThinInstanceBuffersStorage.data[zz].buffer, this._userThinInstanceBuffersStorage.data[zz].byteOffset + bz * this._userThinInstanceBuffersStorage.strides[zz] * Float32Array.BYTES_PER_ELEMENT, uz * this._userThinInstanceBuffersStorage.strides[zz]);
+          this._userThinInstanceBuffersStorage.vertexBuffers[zz].updateDirectly(Ez, bz * this._userThinInstanceBuffersStorage.strides[zz])
+        } else Ez.updateDirectly(uz, bz)
+      }
+    }, lz.c.prototype.thinInstanceGetWorldMatrices = function() {
+      if (!this._thinInstanceDataStorage.matrixData || !this._thinInstanceDataStorage.matrixBuffer) return [];
+      const zz = this._thinInstanceDataStorage.matrixData;
+      if (!this._thinInstanceDataStorage.worldMatrices) {
+        this._thinInstanceDataStorage.worldMatrices = [];
+        for (let uz = 0; uz < this._thinInstanceDataStorage.instancesCount; ++uz) this._thinInstanceDataStorage.worldMatrices[uz] = Ez.d.FromArray(zz, 16 * uz)
+      }
+      return this._thinInstanceDataStorage.worldMatrices
+    }, lz.c.prototype.thinInstanceRefreshBoundingInfo = function() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        nz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (!this._thinInstanceDataStorage.matrixData || !this._thinInstanceDataStorage.matrixBuffer) return;
+      const lz = this._thinInstanceDataStorage.boundingVectors;
+      if (zz || !this.rawBoundingInfo) {
+        if (lz.length = 0, nz && function(zz, uz, bz) {
+            const nz = zz._userThinInstanceBuffersStorage,
+              lz = nz?.data[tz],
+              Zz = nz?.strides[tz];
+            if (!lz || !Zz || Zz < 4 || !Hz(zz)) return !1;
+            const Rz = zz._thinInstanceDataStorage.matrixData;
+            if (!Rz) return !1;
+            const Kz = {},
+              wz = Ez.l.Vector4[0],
+              Xz = Ez.l.ER[1],
+              fz = Ez.l.ER[2],
+              sz = Ez.l.ER[3],
+              rz = Ez.l.ER[4],
+              oz = Ez.l.ER[5],
+              Nz = Ez.l.ER[6],
+              vz = Ez.l.Matrix[2],
+              xz = zz.geometry ? zz.geometry.boundingBias : null,
+              Jz = zz.getTotalVertices();
+            Xz.Vk(Number.POSITIVE_INFINITY), fz.Vk(Number.NEGATIVE_INFINITY), sz.Vk(Number.POSITIVE_INFINITY), rz.Vk(Number.NEGATIVE_INFINITY);
+            for (let iz = 0; iz < zz._thinInstanceDataStorage.instancesCount; ++iz) {
+              const uz = iz * Zz;
+              wz.set(lz[uz], lz[uz + 1], lz[uz + 2], lz[uz + 3]);
+              const nz = zz._getData({
+                applyMorph: bz,
+                applyBakedVertexAnimation: !0,
+                bakedVertexAnimationSettings: wz,
+                updatePositionsArray: !1,
+                cache: Kz
+              }, null, Mz.j.PositionKind);
+              if (!nz) return !1;
+              Oz(nz, Jz, oz, Nz), pz(oz, Nz, xz), Xz.minimizeInPlace(oz), fz.maximizeInPlace(Nz), Ez.d.FromArrayToRef(Rz, 16 * iz, vz), xz ? dz(oz, Nz, vz, sz, rz) : Fz(nz, Jz, vz, sz, rz)
+            }
+            return !(!isFinite(Xz.x) || !isFinite(sz.x)) && (zz.lG().reConstruct(sz, rz), zz.rawBoundingInfo = new iz.e(Xz, fz), function(zz, uz) {
+              zz.length = 0;
+              for (let bz = 0; bz < uz.boundingBox.vectors.length; ++bz) zz.push(uz.boundingBox.vectors[bz].clone())
+            }(uz, zz.rawBoundingInfo), zz._updateBoundingInfo(), !0)
+          }(this, lz, bz)) return;
+        nz && this.bakedVertexAnimationManager?.isEnabled && Hz(this) ? this.refreshBoundingInfo({
+          applySkeleton: uz,
+          applyMorph: bz,
+          applyBakedVertexAnimation: !0,
+          updatePositionsArray: !1
+        }) : this.refreshBoundingInfo(uz, bz);
+        const zz = this.lG();
+        this.rawBoundingInfo = new iz.e(zz.minimum, zz.maximum)
+      }
+      const Zz = this.lG(),
+        Rz = this._thinInstanceDataStorage.matrixData;
+      if (0 === lz.length)
+        for (let Ez = 0; Ez < Zz.boundingBox.vectors.length; ++Ez) lz.push(Zz.boundingBox.vectors[Ez].clone());
+      Ez.l.ER[0].Vk(Number.POSITIVE_INFINITY), Ez.l.ER[1].Vk(Number.NEGATIVE_INFINITY);
+      for (let iz = 0; iz < this._thinInstanceDataStorage.instancesCount; ++iz) {
+        Ez.d.FromArrayToRef(Rz, 16 * iz, Ez.l.Matrix[0]);
+        for (let zz = 0; zz < lz.length; ++zz) Ez.n.TransformCoordinatesToRef(lz[zz], Ez.l.Matrix[0], Ez.l.ER[2]), Ez.l.ER[0].minimizeInPlace(Ez.l.ER[2]), Ez.l.ER[1].maximizeInPlace(Ez.l.ER[2])
+      }
+      Zz.reConstruct(Ez.l.ER[0], Ez.l.ER[1]), this._updateBoundingInfo()
+    }, lz.c.prototype._thinInstanceRecreateBuffer = function(zz) {
+      let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      "matrix" === zz ? (this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", this._thinInstanceDataStorage.matrixData, uz)) : "previousMatrix" === zz ? this._scene.needsPreviousWorldMatrices && (this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", this._thinInstanceDataStorage.previousMatrixData ?? this._thinInstanceDataStorage.matrixData, uz)) : (zz === Mz.j.ColorKind && (zz = Mz.j.ColorInstanceKind), this._userThinInstanceBuffersStorage.vertexBuffers[zz]?.dispose(), this._userThinInstanceBuffersStorage.vertexBuffers[zz] = new Mz.j(this.uR(), this._userThinInstanceBuffersStorage.data[zz], zz, !uz, !1, this._userThinInstanceBuffersStorage.strides[zz], !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[zz]))
+    }, lz.c.prototype._thinInstanceUpdateBufferSize = function(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      zz === Mz.j.ColorKind && (zz = Mz.j.ColorInstanceKind);
+      const bz = "matrix" === zz;
+      if (!bz && (!this._userThinInstanceBuffersStorage || !this._userThinInstanceBuffersStorage.strides[zz])) return;
+      const Ez = bz ? 16 : this._userThinInstanceBuffersStorage.strides[zz],
+        nz = bz ? this._thinInstanceDataStorage.matrixBufferSize : this._userThinInstanceBuffersStorage.sizes[zz];
+      let iz = bz ? this._thinInstanceDataStorage.matrixData : this._userThinInstanceBuffersStorage.data[zz];
+      const lz = (this._thinInstanceDataStorage.instancesCount + uz) * Ez;
+      let tz = nz;
+      for (; tz < lz;) tz *= 2;
+      if (!iz || nz != tz) {
+        if (iz) {
+          const zz = new Float32Array(tz);
+          zz.set(iz, 0), iz = zz
+        } else iz = new Float32Array(tz);
+        bz ? (this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", iz, !1), this._thinInstanceDataStorage.matrixData = iz, this._thinInstanceDataStorage.matrixBufferSize = tz, this._scene.needsPreviousWorldMatrices && !this._thinInstanceDataStorage.previousMatrixData && (this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", iz, !1))) : (this._userThinInstanceBuffersStorage.vertexBuffers[zz]?.dispose(), this._userThinInstanceBuffersStorage.data[zz] = iz, this._userThinInstanceBuffersStorage.sizes[zz] = tz, this._userThinInstanceBuffersStorage.vertexBuffers[zz] = new Mz.j(this.uR(), iz, zz, !0, !1, Ez, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[zz]))
+      }
+    }, lz.c.prototype._thinInstanceInitializeUserStorage = function() {
+      this._userThinInstanceBuffersStorage || (this._userThinInstanceBuffersStorage = {
+        data: {},
+        sizes: {},
+        vertexBuffers: {},
+        strides: {}
+      })
+    }, lz.c.prototype._disposeThinInstanceSpecificData = function() {
+      this._thinInstanceDataStorage?.matrixBuffer && (this._thinInstanceDataStorage.matrixBuffer.dispose(), this._thinInstanceDataStorage.matrixBuffer = null), this._thinInstanceDataStorage?.previousMatrixBuffer && (this._thinInstanceDataStorage.previousMatrixBuffer.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = null)
+    })
+  },
+  39618: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Xz,
+      g: () => Rz
+    });
+    var Ez, nz, iz, lz, Mz = bz(39170),
+      tz = bz(39172),
+      Hz = bz(39182),
+      Oz = bz(36547),
+      pz = bz(36519),
+      dz = bz(39384),
+      Fz = bz(36564),
+      Zz = bz(39061);
+    let Rz = (() => {
+      var zz;
+      let uz, bz, Ez, nz, iz, lz, Fz, Zz, Rz, Kz = dz.c,
+        wz = [],
+        Xz = [],
+        fz = [],
+        sz = [],
+        rz = [],
+        oz = [],
+        Nz = [],
+        vz = [],
+        xz = [],
+        Jz = [],
+        Az = [],
+        Tz = [],
+        Lz = [],
+        Pz = [],
+        Gz = [],
+        az = [],
+        Vz = [],
+        mz = [];
+      return zz = class extends Kz {
+        get billboardMode() {
+          return this._billboardMode
+        }
+        set billboardMode(uz) {
+          this._billboardMode !== uz && (this._billboardMode = uz, this._cache.useBillboardPosition = 0 !== (this._billboardMode & zz.BILLBOARDMODE_USE_POSITION))
+        }
+        get infiniteDistance() {
+          return this._infiniteDistance
+        }
+        set infiniteDistance(zz) {
+          this._infiniteDistance !== zz && (this._infiniteDistance = zz)
+        }
+        constructor(uz) {
+          let bz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+          super(uz, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, !1), this._forward = new pz.n(0, 0, 1), this._up = new pz.n(0, 1, 0), this._right = new pz.n(1, 0, 0), this._position = (0, Mz.j)(this, wz, pz.n.Zero()), this._rotation = ((0, Mz.j)(this, Xz), (0, Mz.j)(this, fz, pz.n.Zero())), this._rotationQuaternion = ((0, Mz.j)(this, sz), (0, Mz.j)(this, rz, null)), this._scaling = ((0, Mz.j)(this, oz), (0, Mz.j)(this, Nz, pz.n.One())), this._transformToBoneReferal = ((0, Mz.j)(this, vz), null), this._isAbsoluteSynced = !1, this._billboardMode = (0, Mz.j)(this, xz, zz.BILLBOARDMODE_NONE), this.scalingDeterminant = ((0, Mz.j)(this, Jz), (0, Mz.j)(this, Az, 1)), this._infiniteDistance = ((0, Mz.j)(this, Tz), (0, Mz.j)(this, Lz, !1)), this.ignoreNonUniformScaling = ((0, Mz.j)(this, Pz), (0, Mz.j)(this, Gz, !1)), this.reIntegrateRotationIntoRotationQuaternion = ((0, Mz.j)(this, az), (0, Mz.j)(this, Vz, !1)), this._poseMatrix = ((0, Mz.j)(this, mz), null), this._localMatrix = pz.d.Zero(), this._usePivotMatrix = !1, this._absolutePosition = pz.n.Zero(), this._absoluteScaling = pz.n.Zero(), this._absoluteRotationQuaternion = pz.h.Identity(), this._pivotMatrix = pz.d.Identity(), this._postMultiplyPivotMatrix = !1, this._isWorldMatrixFrozen = !1, this._indexInSceneTransformNodesArray = -1, this.onAfterWorldMatrixUpdateObservable = new Oz.b, this._nonUniformScaling = !1, bz && this.XT().addTransformNode(this)
+        }
+        getClassName() {
+          return "TransformNode"
+        }
+        get position() {
+          return this._position
+        }
+        set position(zz) {
+          this._position = zz, this._markAsDirtyInternal()
+        }
+        isUsingPivotMatrix() {
+          return this._usePivotMatrix
+        }
+        isUsingPostMultiplyPivotMatrix() {
+          return this._postMultiplyPivotMatrix
+        }
+        get rotation() {
+          return this._rotation
+        }
+        set rotation(zz) {
+          this._rotation = zz, this._rotationQuaternion = null, this._markAsDirtyInternal()
+        }
+        get ti() {
+          return this._scaling
+        }
+        set ti(zz) {
+          this._scaling = zz, this._markAsDirtyInternal()
+        }
+        get rotationQuaternion() {
+          return this._rotationQuaternion
+        }
+        set rotationQuaternion(zz) {
+          this._rotationQuaternion = zz, zz && this._rotation.Vk(0), this._markAsDirtyInternal()
+        }
+        _markAsDirtyInternal() {
+          this._isDirty || (this._isDirty = !0, this.customMarkAsDirty && this.customMarkAsDirty())
+        }
+        get forward() {
+          return pz.n.TransformNormalFromFloatsToRef(0, 0, this.XT().useRightHandedSystem ? -1 : 1, this.getWorldMatrix(), this._forward), this._forward.normalize()
+        }
+        get up() {
+          return pz.n.TransformNormalFromFloatsToRef(0, 1, 0, this.getWorldMatrix(), this._up), this._up.normalize()
+        }
+        get right() {
+          return pz.n.TransformNormalFromFloatsToRef(this.XT().useRightHandedSystem ? -1 : 1, 0, 0, this.getWorldMatrix(), this._right), this._right.normalize()
+        }
+        updatePoseMatrix(zz) {
+          return this._poseMatrix ? (this._poseMatrix.euz(zz), this) : (this._poseMatrix = zz.clone(), this)
+        }
+        getPoseMatrix() {
+          return this._poseMatrix || (this._poseMatrix = pz.d.Identity()), this._poseMatrix
+        }
+        _isSynchronized() {
+          const uz = this._cache;
+          return this._billboardMode === uz.billboardMode && this._billboardMode === zz.BILLBOARDMODE_NONE && (!uz.pivotMatrixUpdated && (!this._infiniteDistance && (!this._position._isDirty && (!this._scaling._isDirty && !(this._rotationQuaternion && this._rotationQuaternion._isDirty || this._rotation._isDirty)))))
+        }
+        _initCache() {
+          super._initCache();
+          const zz = this._cache;
+          zz.localMatrixUpdated = !1, zz.billboardMode = -1, zz.infiniteDistance = !1, zz.useBillboardPosition = !1
+        }
+        get absolutePosition() {
+          return this.getAbsolutePosition()
+        }
+        get absoluteScaling() {
+          return this._syncAbsoluteScalingAndRotation(), this._absoluteScaling
+        }
+        get absoluteRotationQuaternion() {
+          return this._syncAbsoluteScalingAndRotation(), this._absoluteRotationQuaternion
+        }
+        setPreTransformMatrix(zz) {
+          return this.setPivotMatrix(zz, !1)
+        }
+        setPivotMatrix(zz) {
+          let uz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          return this._pivotMatrix.euz(zz), this._usePivotMatrix = !this._pivotMatrix.isIdentity(), this._cache.pivotMatrixUpdated = !0, this._postMultiplyPivotMatrix = uz, this._postMultiplyPivotMatrix && (this._pivotMatrixInverse ? this._pivotMatrix.invertToRef(this._pivotMatrixInverse) : this._pivotMatrixInverse = pz.d.Invert(this._pivotMatrix)), this
+        }
+        getPivotMatrix() {
+          return this._pivotMatrix
+        }
+        instantiateHierarchy() {
+          let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+            uz = arguments.length > 1 ? arguments[1] : void 0,
+            bz = arguments.length > 2 ? arguments[2] : void 0;
+          const Ez = this.clone("Clone of " + (this.name || this.id), zz || this.parent, !0);
+          Ez && bz && bz(this, Ez);
+          for (const nz of this.getChildTransformNodes(!0)) nz.instantiateHierarchy(Ez, uz, bz);
+          return Ez
+        }
+        jT() {
+          let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return zz ? arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (this._rotation.Vk(0), this._rotationQuaternion = this._rotationQuaternion || pz.h.Identity(), zz.decompose(this._scaling, this._rotationQuaternion, this._position), this.computeWorldMatrix(!0)) : (this._worldMatrix = zz, this._absolutePosition.P_(this._worldMatrix.m[12], this._worldMatrix.m[13], this._worldMatrix.m[14]), this._afterComputeWorldMatrix()) : (this._isWorldMatrixFrozen = !1, this.computeWorldMatrix(!0)), this._isDirty = !1, this._isWorldMatrixFrozen = !0, this
+        }
+        unfreezeWorldMatrix() {
+          return this._isWorldMatrixFrozen = !1, this.computeWorldMatrix(!0), this
+        }
+        get Elz() {
+          return this._isWorldMatrixFrozen
+        }
+        getAbsolutePosition() {
+          return this.computeWorldMatrix(), this._absolutePosition
+        }
+        setAbsolutePosition(zz) {
+          if (!zz) return this;
+          let uz, bz, Ez;
+          if (void 0 === zz.x) {
+            if (arguments.length < 3) return this;
+            uz = arguments[0], bz = arguments[1], Ez = arguments[2]
+          } else uz = zz.x, bz = zz.y, Ez = zz.z;
+          if (this.parent) {
+            const zz = pz.l.Matrix[0];
+            this.parent.getWorldMatrix().invertToRef(zz), pz.n.TransformCoordinatesFromFloatsToRef(uz, bz, Ez, zz, this.position)
+          } else this.position.x = uz, this.position.y = bz, this.position.z = Ez;
+          return this._absolutePosition.euz(zz), this
+        }
+        setPositionWithLocalVector(zz) {
+          return this.computeWorldMatrix(), this.position = pz.n.TransformNormal(zz, this._localMatrix), this
+        }
+        getPositionExpressedInLocalSpace() {
+          this.computeWorldMatrix();
+          const zz = pz.l.Matrix[0];
+          return this._localMatrix.invertToRef(zz), pz.n.TransformNormal(this.position, zz)
+        }
+        locallyTranslate(zz) {
+          return this.computeWorldMatrix(!0), this.position = pz.n.TransformCoordinates(zz, this._localMatrix), this
+        }
+        lookAt(uz) {
+          let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            nz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+            iz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+          const lz = zz._LookAtVectorCache,
+            Mz = 0 === iz ? this.position : this.getAbsolutePosition();
+          if (uz.subtractToRef(Mz, lz), this.setDirection(lz, bz, Ez, nz), 1 === iz && this.parent)
+            if (this.rotationQuaternion) {
+              const zz = pz.l.Matrix[0];
+              this.rotationQuaternion.toRotationMatrix(zz);
+              const uz = pz.l.Matrix[1];
+              this.parent.getWorldMatrix().getRotationMatrixToRef(uz), uz.invert(), zz.multiplyToRef(uz, zz), this.rotationQuaternion.fromRotationMatrix(zz)
+            } else {
+              const zz = pz.l.Quaternion[0];
+              pz.h.FromEulerVectorToRef(this.rotation, zz);
+              const uz = pz.l.Matrix[0];
+              zz.toRotationMatrix(uz);
+              const bz = pz.l.Matrix[1];
+              this.parent.getWorldMatrix().getRotationMatrixToRef(bz), bz.invert(), uz.multiplyToRef(bz, uz), zz.fromRotationMatrix(uz), zz.toEulerAnglesToRef(this.rotation)
+            } return this
+        }
+        dW(zz) {
+          const uz = pz.n.Zero();
+          return this.getDirectionToRef(zz, uz), uz
+        }
+        getDirectionToRef(zz, uz) {
+          return pz.n.TransformNormalToRef(zz, this.getWorldMatrix(), uz), this
+        }
+        setDirection(zz) {
+          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+          const nz = -Math.atan2(zz.z, zz.x) + Math.PI / 2,
+            iz = Math.sqrt(zz.x * zz.x + zz.z * zz.z),
+            lz = -Math.atan2(zz.y, iz);
+          return this.rotationQuaternion ? pz.h.RotationYawPitchRollToRef(nz + uz, lz + bz, Ez, this.rotationQuaternion) : (this.rotation.x = lz + bz, this.rotation.y = nz + uz, this.rotation.z = Ez), this
+        }
+        setPivotPoint(zz) {
+          let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          0 == this.XT().getRenderId() && this.computeWorldMatrix(!0);
+          const bz = this.getWorldMatrix();
+          if (1 == uz) {
+            const uz = pz.l.Matrix[0];
+            bz.invertToRef(uz), zz = pz.n.TransformCoordinates(zz, uz)
+          }
+          return this.setPivotMatrix(pz.d.Translation(-zz.x, -zz.y, -zz.z), !0)
+        }
+        getPivotPoint() {
+          const zz = pz.n.Zero();
+          return this.getPivotPointToRef(zz), zz
+        }
+        getPivotPointToRef(zz) {
+          return zz.x = -this._pivotMatrix.m[12], zz.y = -this._pivotMatrix.m[13], zz.z = -this._pivotMatrix.m[14], this
+        }
+        getAbsolutePivotPoint() {
+          const zz = pz.n.Zero();
+          return this.getAbsolutePivotPointToRef(zz), zz
+        }
+        getAbsolutePivotPointToRef(zz) {
+          return this.getPivotPointToRef(zz), pz.n.TransformCoordinatesToRef(zz, this.getWorldMatrix(), zz), this
+        }
+        zuz(zz) {
+          if (this._isDirty) return this;
+          if (this._children)
+            for (const uz of this._children) uz.zuz(zz);
+          return super.zuz(zz)
+        }
+        setParent(uz) {
+          let bz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            Ez = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          if (!uz && !this.parent) return this;
+          const nz = pz.l.Quaternion[0],
+            iz = pz.l.ER[0],
+            lz = pz.l.ER[1],
+            Mz = pz.l.Matrix[1];
+          pz.d.IdentityToRef(Mz);
+          const tz = pz.l.Matrix[0];
+          this.computeWorldMatrix(!0);
+          let Hz = this.rotationQuaternion;
+          return Hz || (Hz = zz._TmpRotation, pz.h.RotationYawPitchRollToRef(this._rotation.y, this._rotation.x, this._rotation.z, Hz)), pz.d.ComposeToRef(this.ti, Hz, this.position, tz), this.parent && tz.multiplyToRef(this.parent.computeWorldMatrix(!0), tz), uz && (uz.computeWorldMatrix(!0).invertToRef(Mz), tz.multiplyToRef(Mz, tz)), tz.decompose(lz, nz, iz, bz ? this : void 0), this.rotationQuaternion ? this.rotationQuaternion.euz(nz) : nz.toEulerAnglesToRef(this.rotation), this.ti.euz(lz), this.position.euz(iz), this.parent = uz, Ez && this.setPivotMatrix(pz.d.Identity()), this
+        }
+        addChild(zz) {
+          let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return zz.setParent(this, uz), this
+        }
+        removeChild(zz) {
+          let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return zz.parent !== this || zz.setParent(null, uz), this
+        }
+        get nonUniformScaling() {
+          return this._nonUniformScaling
+        }
+        _updateNonUniformScalingState(zz) {
+          return this._nonUniformScaling !== zz && (this._nonUniformScaling = zz, !0)
+        }
+        attachToBone(zz, uz) {
+          return this._currentParentWhenAttachingToBone = this.parent, this._transformToBoneReferal = uz, this.parent = zz, zz.getSkeleton().prepare(!0), zz.getFinalMatrix().determinant() < 0 && (this.scalingDeterminant *= -1), this
+        }
+        detachFromBone() {
+          let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          return this.parent ? (this.parent.getWorldMatrix().determinant() < 0 && (this.scalingDeterminant *= -1), this._transformToBoneReferal = null, this.parent = zz ? this._currentParentWhenAttachingToBone : null, this) : (zz && (this.parent = this._currentParentWhenAttachingToBone), this)
+        }
+        rotate(uz, bz, Ez) {
+          let nz;
+          if (uz.normalize(), this.rotationQuaternion || (this.rotationQuaternion = this.rotation.toQuaternion(), this.rotation.Vk(0)), Ez && 0 !== Ez) {
+            if (this.parent) {
+              const zz = this.parent.getWorldMatrix(),
+                Ez = pz.l.Matrix[0];
+              zz.invertToRef(Ez), uz = pz.n.TransformNormal(uz, Ez), zz.determinant() < 0 && (bz *= -1)
+            }
+            nz = pz.h.RotationAxisToRef(uz, bz, zz._RotationAxisCache), nz.multiplyToRef(this.rotationQuaternion, this.rotationQuaternion)
+          } else nz = pz.h.RotationAxisToRef(uz, bz, zz._RotationAxisCache), this.rotationQuaternion.multiplyToRef(nz, this.rotationQuaternion);
+          return this
+        }
+        rotateAround(zz, uz, bz) {
+          uz.normalize(), this.rotationQuaternion || (this.rotationQuaternion = pz.h.RotationYawPitchRoll(this.rotation.y, this.rotation.x, this.rotation.z), this.rotation.Vk(0));
+          const Ez = pz.l.ER[0],
+            nz = pz.l.ER[1],
+            iz = pz.l.ER[2],
+            lz = pz.l.Quaternion[0],
+            Mz = pz.l.Matrix[0],
+            tz = pz.l.Matrix[1],
+            Hz = pz.l.Matrix[2],
+            Oz = pz.l.Matrix[3];
+          return zz.subtractToRef(this.position, Ez), pz.d.TranslationToRef(Ez.x, Ez.y, Ez.z, Mz), pz.d.TranslationToRef(-Ez.x, -Ez.y, -Ez.z, tz), pz.d.RotationAxisToRef(uz, bz, Hz), tz.multiplyToRef(Hz, Oz), Oz.multiplyToRef(Mz, Oz), Oz.decompose(nz, lz, iz), this.position.addInPlace(iz), lz.multiplyToRef(this.rotationQuaternion, this.rotationQuaternion), this
+        }
+        translate(zz, uz, bz) {
+          const Ez = zz.scale(uz);
+          if (bz && 0 !== bz) this.setAbsolutePosition(this.getAbsolutePosition().add(Ez));
+          else {
+            const zz = this.getPositionExpressedInLocalSpace().add(Ez);
+            this.setPositionWithLocalVector(zz)
+          }
+          return this
+        }
+        addRotation(zz, uz, bz) {
+          let Ez;
+          this.rotationQuaternion ? Ez = this.rotationQuaternion : (Ez = pz.l.Quaternion[1], pz.h.RotationYawPitchRollToRef(this.rotation.y, this.rotation.x, this.rotation.z, Ez));
+          const nz = pz.l.Quaternion[0];
+          return pz.h.RotationYawPitchRollToRef(uz, zz, bz, nz), Ez.multiplyInPlace(nz), this.rotationQuaternion || Ez.toEulerAnglesToRef(this.rotation), this
+        }
+        _getEffectiveParent() {
+          return this.parent
+        }
+        isWorldMatrixCameraDependent() {
+          return this._infiniteDistance && !this.parent || this._billboardMode !== zz.BILLBOARDMODE_NONE
+        }
+        computeWorldMatrix() {
+          let uz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+            bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          if (this._isWorldMatrixFrozen && !this._isDirty) return this._worldMatrix;
+          const Ez = this.XT().getRenderId();
+          if (!this._isDirty && !uz && (this._currentRenderId === Ez || this.isSynchronized())) return this._currentRenderId = Ez, this._worldMatrix;
+          bz = bz || this.XT().activeCamera, this._updateCache();
+          const nz = this._cache;
+          nz.pivotMatrixUpdated = !1, nz.billboardMode = this.billboardMode, nz.infiniteDistance = this.infiniteDistance, nz.parent = this._parentNode, this._currentRenderId = Ez, this._childUpdateId += 1, this._isDirty = !1, this._position._isDirty = !1, this._rotation._isDirty = !1, this._scaling._isDirty = !1;
+          const iz = this._getEffectiveParent(),
+            lz = zz._TmpScaling;
+          let Mz, tz = this._position;
+          if (this._infiniteDistance && !this.parent && bz) {
+            const uz = bz.getWorldMatrix().m;
+            tz = zz._TmpTranslation, tz.P_(this._position.x + uz[12], this._position.y + uz[13], this._position.z + uz[14])
+          }
+          if (lz.P_(this._scaling.x * this.scalingDeterminant, this._scaling.y * this.scalingDeterminant, this._scaling.z * this.scalingDeterminant), this._rotationQuaternion) {
+            if (this._rotationQuaternion._isDirty = !1, Mz = this._rotationQuaternion, this.reIntegrateRotationIntoRotationQuaternion) {
+              this.rotation.lengthSquared() && (this._rotationQuaternion.multiplyInPlace(pz.h.RotationYawPitchRoll(this._rotation.y, this._rotation.x, this._rotation.z)), this._rotation.P_(0, 0, 0))
+            }
+          } else Mz = zz._TmpRotation, pz.h.RotationYawPitchRollToRef(this._rotation.y, this._rotation.x, this._rotation.z, Mz);
+          if (this._usePivotMatrix) {
+            const zz = pz.l.Matrix[1];
+            pz.d.ScalingToRef(lz.x, lz.y, lz.z, zz);
+            const uz = pz.l.Matrix[0];
+            Mz.toRotationMatrix(uz), this._pivotMatrix.multiplyToRef(zz, pz.l.Matrix[4]), pz.l.Matrix[4].multiplyToRef(uz, this._localMatrix), this._postMultiplyPivotMatrix && this._localMatrix.multiplyToRef(this._pivotMatrixInverse, this._localMatrix), this._localMatrix.addTranslationFromFloats(tz.x, tz.y, tz.z)
+          } else pz.d.ComposeToRef(lz, Mz, tz, this._localMatrix);
+          if (iz && iz.getWorldMatrix) {
+            if (uz && iz.computeWorldMatrix(uz), this.billboardMode) {
+              if (this._transformToBoneReferal) {
+                const zz = this.parent;
+                zz.getSkeleton().prepare(), zz.getFinalMatrix().multiplyToRef(this._transformToBoneReferal.getWorldMatrix(), pz.l.Matrix[7])
+              } else pz.l.Matrix[7].euz(iz.getWorldMatrix());
+              const uz = pz.l.ER[5],
+                bz = pz.l.ER[6],
+                Ez = pz.l.Quaternion[0];
+              pz.l.Matrix[7].decompose(bz, Ez, uz), pz.d.ScalingToRef(bz.x, bz.y, bz.z, pz.l.Matrix[7]), pz.l.Matrix[7].setTranslation(uz), zz.BillboardUseParentOrientation && (this._position.applyRotationQuaternionToRef(Ez, uz), this._localMatrix.setTranslation(uz)), this._localMatrix.multiplyToRef(pz.l.Matrix[7], this._worldMatrix)
+            } else if (this._transformToBoneReferal) {
+              const zz = this.parent;
+              zz.getSkeleton().prepare(), this._localMatrix.multiplyToRef(zz.getFinalMatrix(), pz.l.Matrix[6]), pz.l.Matrix[6].multiplyToRef(this._transformToBoneReferal.getWorldMatrix(), this._worldMatrix)
+            } else this._localMatrix.multiplyToRef(iz.getWorldMatrix(), this._worldMatrix);
+            this._markSyncedWithParent()
+          } else this._worldMatrix.euz(this._localMatrix);
+          if (bz && this.billboardMode)
+            if (nz.useBillboardPosition) {
+              const uz = pz.l.ER[0];
+              this._worldMatrix.getTranslationToRef(uz);
+              const Ez = bz.globalPosition;
+              this._worldMatrix.invertToRef(pz.l.Matrix[1]);
+              const nz = pz.l.ER[1];
+              pz.n.TransformCoordinatesToRef(Ez, pz.l.Matrix[1], nz), nz.normalize();
+              const iz = -Math.atan2(nz.z, nz.x) + Math.PI / 2,
+                lz = Math.sqrt(nz.x * nz.x + nz.z * nz.z),
+                Mz = -Math.atan2(nz.y, lz);
+              if (pz.h.RotationYawPitchRollToRef(iz, Mz, 0, pz.l.Quaternion[0]), (this.billboardMode & zz.BILLBOARDMODE_ALL) !== zz.BILLBOARDMODE_ALL) {
+                const uz = pz.l.ER[1];
+                pz.l.Quaternion[0].toEulerAnglesToRef(uz), (this.billboardMode & zz.BILLBOARDMODE_X) !== zz.BILLBOARDMODE_X && (uz.x = 0), (this.billboardMode & zz.BILLBOARDMODE_Y) !== zz.BILLBOARDMODE_Y && (uz.y = 0), (this.billboardMode & zz.BILLBOARDMODE_Z) !== zz.BILLBOARDMODE_Z && (uz.z = 0), pz.d.RotationYawPitchRollToRef(uz.y, uz.x, uz.z, pz.l.Matrix[0])
+              } else pz.d.FromQuaternionToRef(pz.l.Quaternion[0], pz.l.Matrix[0]);
+              this._worldMatrix.setTranslationFromFloats(0, 0, 0), this._worldMatrix.multiplyToRef(pz.l.Matrix[0], this._worldMatrix), this._worldMatrix.setTranslation(pz.l.ER[0])
+            } else {
+              const uz = pz.l.ER[0];
+              this._worldMatrix.getTranslationToRef(uz), pz.l.Matrix[1].euz(bz.getViewMatrix());
+              const Ez = this.XT().useRightHandedSystem;
+              if (Ez && pz.l.Matrix[1].multiplyToRef(zz._TmpRHRestore, pz.l.Matrix[1]), pz.l.Matrix[1].setTranslationFromFloats(0, 0, 0), pz.l.Matrix[1].invertToRef(pz.l.Matrix[0]), (this.billboardMode & zz.BILLBOARDMODE_ALL) !== zz.BILLBOARDMODE_ALL) {
+                pz.l.Matrix[0].decompose(void 0, pz.l.Quaternion[0], void 0);
+                const uz = pz.l.ER[1];
+                pz.l.Quaternion[0].toEulerAnglesToRef(uz), (this.billboardMode & zz.BILLBOARDMODE_X) !== zz.BILLBOARDMODE_X && (uz.x = 0), (this.billboardMode & zz.BILLBOARDMODE_Y) !== zz.BILLBOARDMODE_Y && (uz.y = 0), (this.billboardMode & zz.BILLBOARDMODE_Z) !== zz.BILLBOARDMODE_Z && (uz.z = 0), Ez && (uz.y += Math.PI), pz.d.RotationYawPitchRollToRef(uz.y, uz.x, uz.z, pz.l.Matrix[0])
+              }
+              this._worldMatrix.setTranslationFromFloats(0, 0, 0), this._worldMatrix.multiplyToRef(pz.l.Matrix[0], this._worldMatrix), this._worldMatrix.setTranslation(pz.l.ER[0])
+            } return this.ignoreNonUniformScaling ? this._updateNonUniformScalingState(!1) : this._scaling.isNonUniformWithinEpsilon(1e-6) ? this._updateNonUniformScalingState(!0) : iz && iz._nonUniformScaling ? this._updateNonUniformScalingState(iz._nonUniformScaling) : this._updateNonUniformScalingState(!1), this._afterComputeWorldMatrix(), this._absolutePosition.P_(this._worldMatrix.m[12], this._worldMatrix.m[13], this._worldMatrix.m[14]), this._isAbsoluteSynced = !1, this.onAfterWorldMatrixUpdateObservable.notifyObservers(this), this._poseMatrix || (this._poseMatrix = pz.d.Invert(this._worldMatrix)), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix
+        }
+        resetLocalMatrix() {
+          let zz = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+          if (this.computeWorldMatrix(), zz) {
+            const zz = this.getChildren();
+            for (let uz = 0; uz < zz.length; ++uz) {
+              const bz = zz[uz];
+              if (bz) {
+                bz.computeWorldMatrix();
+                const zz = pz.l.Matrix[0];
+                bz._localMatrix.multiplyToRef(this._localMatrix, zz);
+                const uz = pz.l.Quaternion[0];
+                zz.decompose(bz.ti, uz, bz.position), bz.rotationQuaternion ? bz.rotationQuaternion.euz(uz) : uz.toEulerAnglesToRef(bz.rotation)
+              }
+            }
+          }
+          this.ti.P_(1, 1, 1), this.position.P_(0, 0, 0), this.rotation.P_(0, 0, 0), this.rotationQuaternion && (this.rotationQuaternion = pz.h.Identity()), this._worldMatrix = pz.d.Identity()
+        }
+        _afterComputeWorldMatrix() {}
+        registerAfterWorldMatrixUpdate(zz) {
+          return this.onAfterWorldMatrixUpdateObservable.add(zz), this
+        }
+        unregisterAfterWorldMatrixUpdate(zz) {
+          return this.onAfterWorldMatrixUpdateObservable.removeCallback(zz), this
+        }
+        getPositionInCameraSpace() {
+          let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return zz || (zz = this.XT().activeCamera), pz.n.TransformCoordinates(this.getAbsolutePosition(), zz.getViewMatrix())
+        }
+        getDistanceToCamera() {
+          let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return zz || (zz = this.XT().activeCamera), this.getAbsolutePosition().subtract(zz.globalPosition).length()
+        }
+        clone(uz, bz, Ez) {
+          const nz = Hz.e.Clone((() => new zz(uz, this.XT())), this);
+          if (nz.name = uz, nz.id = uz, bz && (nz.parent = bz), !Ez) {
+            const zz = this.getDescendants(!0);
+            for (let bz = 0; bz < zz.length; bz++) {
+              const Ez = zz[bz];
+              Ez.clone && Ez.clone(uz + "." + Ez.name, nz)
+            }
+          }
+          return nz
+        }
+        serialize(zz) {
+          const uz = Hz.e.Serialize(this, zz);
+          return uz.type = this.getClassName(), uz.uniqueId = this.uniqueId, this.parent && this.parent._serializeAsParent(uz), uz.localMatrix = this.getPivotMatrix().obz(), uz.isEnabled = this.isEnabled(), this._isWorldMatrixFrozen && (uz.jT = !0), Hz.e.AppendSerializedAnimations(this, uz), uz.al = this.serializeAnimationRanges(), uz
+        }
+        getChildTransformNodes(uz, bz) {
+          const Ez = [];
+          return this._getDescendants(Ez, uz, (uz => (!bz || bz(uz)) && uz instanceof zz)), Ez
+        }
+        dispose(zz) {
+          let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this.XT().stopAnimation(this), this.XT().removeTransformNode(this), this._parentContainer) {
+            const zz = this._parentContainer.transformNodes.indexOf(this);
+            zz > -1 && this._parentContainer.transformNodes.splice(zz, 1), this._parentContainer = null
+          }
+          if (this.onAfterWorldMatrixUpdateObservable.clear(), zz) {
+            const zz = this.getChildTransformNodes(!0);
+            for (const uz of zz) uz.parent = null, uz.computeWorldMatrix(!0)
+          }
+          super.dispose(zz, uz)
+        }
+        normalizeToUnitCube() {
+          let zz = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+            uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            bz = arguments.length > 2 ? arguments[2] : void 0,
+            Ez = null,
+            nz = null;
+          uz && (this.rotationQuaternion ? (nz = this.rotationQuaternion.clone(), this.rotationQuaternion.P_(0, 0, 0, 1)) : this.rotation && (Ez = this.rotation.clone(), this.rotation.P_(0, 0, 0)));
+          const iz = this.getHierarchyBoundingVectors(zz, bz),
+            lz = iz.max.subtract(iz.min),
+            Mz = Math.max(lz.x, lz.y, lz.z);
+          if (0 === Mz) return this;
+          const tz = 1 / Mz;
+          return this.ti.scaleInPlace(tz), uz && (this.rotationQuaternion && nz ? this.rotationQuaternion.euz(nz) : this.rotation && Ez && this.rotation.euz(Ez)), this
+        }
+        _syncAbsoluteScalingAndRotation() {
+          this._isAbsoluteSynced || (this._worldMatrix.decompose(this._absoluteScaling, this._absoluteRotationQuaternion), this._isAbsoluteSynced = !0)
+        }
+      }, (() => {
+        const Hz = "function" === typeof Symbol && Symbol.metadata ? Object.create(Kz[Symbol.metadata] ?? null) : void 0;
+        uz = [(0, tz.D)("position")], bz = [(0, tz.D)("rotation")], Ez = [(0, tz.A)("rotationQuaternion")], nz = [(0, tz.D)("ti")], iz = [(0, tz.G)("billboardMode")], lz = [(0, tz.G)()], Fz = [(0, tz.G)("infiniteDistance")], Zz = [(0, tz.G)()], Rz = [(0, tz.G)()], (0, Mz.h)(null, null, uz, {
+          kind: "field",
+          name: "_position",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "_position" in zz,
+            get: zz => zz._position,
+            set: (zz, uz) => {
+              zz._position = uz
+            }
+          },
+          metadata: Hz
+        }, wz, Xz), (0, Mz.h)(null, null, bz, {
+          kind: "field",
+          name: "_rotation",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "_rotation" in zz,
+            get: zz => zz._rotation,
+            set: (zz, uz) => {
+              zz._rotation = uz
+            }
+          },
+          metadata: Hz
+        }, fz, sz), (0, Mz.h)(null, null, Ez, {
+          kind: "field",
+          name: "_rotationQuaternion",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "_rotationQuaternion" in zz,
+            get: zz => zz._rotationQuaternion,
+            set: (zz, uz) => {
+              zz._rotationQuaternion = uz
+            }
+          },
+          metadata: Hz
+        }, rz, oz), (0, Mz.h)(null, null, nz, {
+          kind: "field",
+          name: "_scaling",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "_scaling" in zz,
+            get: zz => zz._scaling,
+            set: (zz, uz) => {
+              zz._scaling = uz
+            }
+          },
+          metadata: Hz
+        }, Nz, vz), (0, Mz.h)(null, null, iz, {
+          kind: "field",
+          name: "_billboardMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "_billboardMode" in zz,
+            get: zz => zz._billboardMode,
+            set: (zz, uz) => {
+              zz._billboardMode = uz
+            }
+          },
+          metadata: Hz
+        }, xz, Jz), (0, Mz.h)(null, null, lz, {
+          kind: "field",
+          name: "scalingDeterminant",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "scalingDeterminant" in zz,
+            get: zz => zz.scalingDeterminant,
+            set: (zz, uz) => {
+              zz.scalingDeterminant = uz
+            }
+          },
+          metadata: Hz
+        }, Az, Tz), (0, Mz.h)(null, null, Fz, {
+          kind: "field",
+          name: "_infiniteDistance",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "_infiniteDistance" in zz,
+            get: zz => zz._infiniteDistance,
+            set: (zz, uz) => {
+              zz._infiniteDistance = uz
+            }
+          },
+          metadata: Hz
+        }, Lz, Pz), (0, Mz.h)(null, null, Zz, {
+          kind: "field",
+          name: "ignoreNonUniformScaling",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "ignoreNonUniformScaling" in zz,
+            get: zz => zz.ignoreNonUniformScaling,
+            set: (zz, uz) => {
+              zz.ignoreNonUniformScaling = uz
+            }
+          },
+          metadata: Hz
+        }, Gz, az), (0, Mz.h)(null, null, Rz, {
+          kind: "field",
+          name: "reIntegrateRotationIntoRotationQuaternion",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "reIntegrateRotationIntoRotationQuaternion" in zz,
+            get: zz => zz.reIntegrateRotationIntoRotationQuaternion,
+            set: (zz, uz) => {
+              zz.reIntegrateRotationIntoRotationQuaternion = uz
+            }
+          },
+          metadata: Hz
+        }, Vz, mz), Hz && Object.defineProperty(zz, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: Hz
+        })
+      })(), zz.BILLBOARDMODE_NONE = 0, zz.BILLBOARDMODE_X = 1, zz.BILLBOARDMODE_Y = 2, zz.BILLBOARDMODE_Z = 4, zz.BILLBOARDMODE_ALL = 7, zz.BILLBOARDMODE_USE_POSITION = 128, zz.BillboardUseParentOrientation = !1, zz._TmpRotation = pz.h.Zero(), zz._TmpScaling = pz.n.Zero(), zz._TmpTranslation = pz.n.Zero(), zz._TmpRHRestore = pz.d.Scaling(1, 1, -1), zz._LookAtVectorCache = new pz.n(0, 0, 0), zz._RotationAxisCache = new pz.h, zz
+    })();
+
+    function Kz(zz, uz, bz) {
+      const Ez = Hz.e.Parse((() => new Rz(zz.name, uz)), zz, uz, bz);
+      if (zz.localMatrix ? Ez.setPreTransformMatrix(pz.d.FromArray(zz.localMatrix)) : zz.pivotMatrix && Ez.setPivotMatrix(pz.d.FromArray(zz.pivotMatrix)), Ez.Zx(zz.isEnabled), Ez._waitingParsedUniqueId = zz.uniqueId, void 0 !== zz.parentId && (Ez._waitingParentId = zz.parentId), void 0 !== zz.parentInstanceIndex && (Ez._waitingParentInstanceIndex = zz.parentInstanceIndex), zz.jT && (Ez._waitingFreezeWorldMatrix = zz.jT), zz.animations) {
+        for (let uz = 0; uz < zz.animations.length; uz++) {
+          const bz = zz.animations[uz],
+            nz = (0, Fz.b)("BABYLON.Animation");
+          nz && Ez.animations.push(nz.Parse(bz))
+        }
+        dz.c.ParseAnimationRanges(Ez, zz, uz)
+      }
+      return zz.autoAnimate && uz.beginAnimation(Ez, zz.autoAnimateFrom, zz.autoAnimateTo, zz.autoAnimateLoop, zz.autoAnimateSpeed || 1), Ez
+    }
+    let wz = !1;
+
+    function Xz() {
+      wz || (wz = !0, Rz.Parse = Kz)
+    }(Ez = Rz.prototype).Km ?? (Ez.Km = (0, Zz.h)("TransformNode", "Km")), (nz = Rz.prototype).applyImpulse ?? (nz.applyImpulse = (0, Zz.h)("TransformNode", "applyImpulse")), (iz = Rz.prototype).applyAngularImpulse ?? (iz.applyAngularImpulse = (0, Zz.h)("TransformNode", "applyAngularImpulse")), (lz = Rz.prototype).applyTorque ?? (lz.applyTorque = (0, Zz.h)("TransformNode", "applyTorque")), Object.getOwnPropertyDescriptor(Rz.prototype, "physicsBody") || Object.defineProperty(Rz.prototype, "physicsBody", (0, Zz.f)("TransformNode", "physicsBody"))
+  },
+  39589: (zz, uz, bz) => {
+    function Ez(zz, uz, bz) {
+      try {
+        const Ez = zz.next();
+        Ez.done ? uz(Ez) : Ez.value ? Ez.value.then((() => {
+          Ez.value = void 0, uz(Ez)
+        }), bz) : uz(Ez)
+      } catch (Ez) {
+        bz(Ez)
+      }
+    }
+
+    function nz() {
+      let zz, uz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 25;
+      return (bz, nz, iz) => {
+        const lz = performance.now();
+        void 0 === zz || lz - zz > uz ? (zz = lz, setTimeout((() => {
+          Ez(bz, nz, iz)
+        }), 0)) : Ez(bz, nz, iz)
+      }
+    }
+
+    function iz(zz, uz, bz, Ez, nz) {
+      const iz = () => {
+        let lz;
+        const Mz = zz => {
+          zz.done ? bz(zz.value) : void 0 === lz ? lz = !0 : iz()
+        };
+        do {
+          lz = void 0, nz && nz.aborted ? Ez(new Error("Aborted")) : uz(zz, Mz, Ez), void 0 === lz && (lz = !1)
+        } while (lz)
+      };
+      iz()
+    }
+
+    function lz(zz, uz) {
+      let bz;
+      return iz(zz, Ez, (zz => bz = zz), (zz => {
+        throw zz
+      }), uz), bz
+    }
+    async function Mz(zz, uz, bz) {
+      return await new Promise(((Ez, nz) => {
+        iz(zz, uz, Ez, nz, bz)
+      }))
+    }
+
+    function tz(zz, uz) {
+      return function() {
+        return lz(zz(...arguments), uz)
+      }
+    }
+    bz.d(uz, {
+      e: () => nz,
+      i: () => tz,
+      m: () => Mz,
+      q: () => lz
+    })
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

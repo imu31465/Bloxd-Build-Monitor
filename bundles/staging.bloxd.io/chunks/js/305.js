@@ -1,582 +1,582 @@
 export const id = 305;
 export const ids = [305];
 export const modules = {
-  40672: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      ReadExrDataAsync: () => Do,
-      _ExrTextureLoader: () => So
+  41074: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      ReadExrDataAsync: () => pu,
+      _ExrTextureLoader: () => Ou
     });
-    var iT = IT(37660),
-      zT = IT(36156),
-      kT = IT(38853);
-    const WT = 4,
-      XT = 4,
-      BT = 1,
-      FT = 2,
-      ST = 8,
-      DT = 65536,
-      LT = DT >> 3,
-      xT = 14,
-      cT = 65537,
-      KT = 1 << xT,
-      MT = KT - 1,
-      rT = 59,
-      AT = 63,
-      gT = 2 + AT - rT;
-    var hT, wT;
+    var Ez = bz(38060),
+      nz = bz(36553),
+      iz = bz(39231);
+    const lz = 4,
+      Mz = 4,
+      tz = 1,
+      Hz = 2,
+      Oz = 8,
+      pz = 65536,
+      dz = pz >> 3,
+      Fz = 14,
+      Zz = 65537,
+      Rz = 1 << Fz,
+      Kz = Rz - 1,
+      wz = 59,
+      Xz = 63,
+      fz = 2 + Xz - wz;
+    var sz, rz;
 
-    function mT(TT, oT) {
-      const IT = new Uint8Array(TT);
-      let iT = 0;
-      for (; 0 != IT[oT.value + iT];) iT += 1;
-      const zT = (new TextDecoder).decode(IT.slice(oT.value, oT.value + iT));
-      return oT.value = oT.value + iT + 1, zT
+    function oz(zz, uz) {
+      const bz = new Uint8Array(zz);
+      let Ez = 0;
+      for (; 0 != bz[uz.value + Ez];) Ez += 1;
+      const nz = (new TextDecoder).decode(bz.slice(uz.value, uz.value + Ez));
+      return uz.value = uz.value + Ez + 1, nz
     }
 
-    function eT(TT, oT) {
-      const IT = TT.getInt32(oT.value, !0);
-      return oT.value += WT, IT
+    function Nz(zz, uz) {
+      const bz = zz.getInt32(uz.value, !0);
+      return uz.value += lz, bz
     }
 
-    function RT(TT, oT) {
-      const IT = TT.getUint32(oT.value, !0);
-      return oT.value += WT, IT
+    function vz(zz, uz) {
+      const bz = zz.getUint32(uz.value, !0);
+      return uz.value += lz, bz
     }
 
-    function uT(TT, oT) {
-      const IT = TT.getUint8(oT.value);
-      return oT.value += BT, IT
+    function xz(zz, uz) {
+      const bz = zz.getUint8(uz.value);
+      return uz.value += tz, bz
     }
 
-    function vT(TT, oT) {
-      const IT = TT.getUint16(oT.value, !0);
-      return oT.value += FT, IT
+    function Jz(zz, uz) {
+      const bz = zz.getUint16(uz.value, !0);
+      return uz.value += Hz, bz
     }
 
-    function ET(TT, oT) {
-      const IT = TT[oT.value];
-      return oT.value += BT, IT
+    function Az(zz, uz) {
+      const bz = zz[uz.value];
+      return uz.value += tz, bz
     }
 
-    function fT(TT, oT) {
-      let IT;
-      return IT = "getBigInt64" in DataView.prototype ? Number(TT.getBigInt64(oT.value, !0)) : TT.getUint32(oT.value + 4, !0) + Number(TT.getUint32(oT.value, !0) << 32), oT.value += ST, IT
+    function Tz(zz, uz) {
+      let bz;
+      return bz = "getBigInt64" in DataView.prototype ? Number(zz.getBigInt64(uz.value, !0)) : zz.getUint32(uz.value + 4, !0) + Number(zz.getUint32(uz.value, !0) << 32), uz.value += Oz, bz
     }
 
-    function CT(TT, oT) {
-      const IT = TT.getFloat32(oT.value, !0);
-      return oT.value += XT, IT
+    function Lz(zz, uz) {
+      const bz = zz.getFloat32(uz.value, !0);
+      return uz.value += Mz, bz
     }
 
-    function jT(TT, oT) {
-      return (0, kT.b)(vT(TT, oT))
+    function Pz(zz, uz) {
+      return (0, iz.e)(Jz(zz, uz))
     }
 
-    function JT(TT, oT) {
-      return (0, kT.i)((0, zT.Clamp)(CT(TT, oT), -kT.e, kT.e))
+    function Gz(zz, uz) {
+      return (0, iz.i)((0, nz.Clamp)(Lz(zz, uz), -iz.f, iz.f))
     }
 
-    function UT(TT, oT, IT, iT) {
-      switch (IT) {
+    function az(zz, uz, bz, Ez) {
+      switch (bz) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(TT, oT, IT) {
-            const iT = (new TextDecoder).decode(new Uint8Array(TT).slice(oT.value, oT.value + IT));
-            return oT.value = oT.value + IT, iT
-          }(TT.buffer, oT, iT);
+          return function(zz, uz, bz) {
+            const Ez = (new TextDecoder).decode(new Uint8Array(zz).slice(uz.value, uz.value + bz));
+            return uz.value = uz.value + bz, Ez
+          }(zz.buffer, uz, Ez);
         case "chlist":
-          return function(TT, oT, IT) {
-            const iT = oT.value,
-              zT = [];
-            for (; oT.value < iT + IT - 1;) {
-              const IT = mT(TT.buffer, oT),
-                iT = eT(TT, oT),
-                kT = uT(TT, oT);
-              oT.value += 3;
-              const WT = eT(TT, oT),
-                XT = eT(TT, oT);
-              zT.push({
-                name: IT,
-                pixelType: iT,
-                pLinear: kT,
-                xSampling: WT,
-                ySampling: XT
+          return function(zz, uz, bz) {
+            const Ez = uz.value,
+              nz = [];
+            for (; uz.value < Ez + bz - 1;) {
+              const bz = oz(zz.buffer, uz),
+                Ez = Nz(zz, uz),
+                iz = xz(zz, uz);
+              uz.value += 3;
+              const lz = Nz(zz, uz),
+                Mz = Nz(zz, uz);
+              nz.push({
+                name: bz,
+                pixelType: Ez,
+                pLinear: iz,
+                xSampling: lz,
+                ySampling: Mz
               })
             }
-            return oT.value += 1, zT
-          }(TT, oT, iT);
+            return uz.value += 1, nz
+          }(zz, uz, Ez);
         case "chromaticities":
-          return function(TT, oT) {
+          return function(zz, uz) {
             return {
-              redX: CT(TT, oT),
-              redY: CT(TT, oT),
-              greenX: CT(TT, oT),
-              greenY: CT(TT, oT),
-              blueX: CT(TT, oT),
-              blueY: CT(TT, oT),
-              whiteX: CT(TT, oT),
-              whiteY: CT(TT, oT)
+              redX: Lz(zz, uz),
+              redY: Lz(zz, uz),
+              greenX: Lz(zz, uz),
+              greenY: Lz(zz, uz),
+              blueX: Lz(zz, uz),
+              blueY: Lz(zz, uz),
+              whiteX: Lz(zz, uz),
+              whiteY: Lz(zz, uz)
             }
-          }(TT, oT);
+          }(zz, uz);
         case "compression":
-          return function(TT, oT) {
-            return uT(TT, oT)
-          }(TT, oT);
+          return function(zz, uz) {
+            return xz(zz, uz)
+          }(zz, uz);
         case "box2i":
-          return function(TT, oT) {
+          return function(zz, uz) {
             return {
-              xMin: eT(TT, oT),
-              yMin: eT(TT, oT),
-              xMax: eT(TT, oT),
-              yMax: eT(TT, oT)
+              xMin: Nz(zz, uz),
+              yMin: Nz(zz, uz),
+              xMax: Nz(zz, uz),
+              yMax: Nz(zz, uz)
             }
-          }(TT, oT);
+          }(zz, uz);
         case "lineOrder":
-          return function(TT, oT) {
-            const IT = uT(TT, oT);
-            return wT[IT]
-          }(TT, oT);
+          return function(zz, uz) {
+            const bz = xz(zz, uz);
+            return rz[bz]
+          }(zz, uz);
         case "float":
-          return CT(TT, oT);
+          return Lz(zz, uz);
         case "v2f":
-          return function(TT, oT) {
-            return [CT(TT, oT), CT(TT, oT)]
-          }(TT, oT);
+          return function(zz, uz) {
+            return [Lz(zz, uz), Lz(zz, uz)]
+          }(zz, uz);
         case "v3f":
-          return function(TT, oT) {
-            return [CT(TT, oT), CT(TT, oT), CT(TT, oT)]
-          }(TT, oT);
+          return function(zz, uz) {
+            return [Lz(zz, uz), Lz(zz, uz), Lz(zz, uz)]
+          }(zz, uz);
         case "int":
-          return eT(TT, oT);
+          return Nz(zz, uz);
         case "rational":
-          return function(TT, oT) {
-            return [eT(TT, oT), RT(TT, oT)]
-          }(TT, oT);
+          return function(zz, uz) {
+            return [Nz(zz, uz), vz(zz, uz)]
+          }(zz, uz);
         case "timecode":
-          return function(TT, oT) {
-            return [RT(TT, oT), RT(TT, oT)]
-          }(TT, oT);
+          return function(zz, uz) {
+            return [vz(zz, uz), vz(zz, uz)]
+          }(zz, uz);
         case "preview":
-          return oT.value += iT, "skipped";
+          return uz.value += Ez, "skipped";
         default:
-          return void(oT.value += iT)
+          return void(uz.value += Ez)
       }
     }
 
-    function aT(TT) {
-      for (let oT = 1; oT < TT.length; oT++) {
-        const IT = TT[oT - 1] + TT[oT] - 128;
-        TT[oT] = IT
+    function Vz(zz) {
+      for (let uz = 1; uz < zz.length; uz++) {
+        const bz = zz[uz - 1] + zz[uz] - 128;
+        zz[uz] = bz
       }
     }
 
-    function YT(TT, oT) {
-      let IT = 0,
-        iT = Math.floor((TT.length + 1) / 2),
-        zT = 0;
-      const kT = TT.length - 1;
-      for (; !(zT > kT) && (oT[zT++] = TT[IT++], !(zT > kT));) oT[zT++] = TT[iT++]
-    }! function(TT) {
-      TT[TT.NO_COMPRESSION = 0] = "NO_COMPRESSION", TT[TT.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", TT[TT.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", TT[TT.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", TT[TT.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", TT[TT.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(hT || (hT = {})),
-    function(TT) {
-      TT[TT.INCREASING_Y = 0] = "INCREASING_Y", TT[TT.DECREASING_Y = 1] = "DECREASING_Y"
-    }(wT || (wT = {}));
-    const QT = 20000630;
+    function mz(zz, uz) {
+      let bz = 0,
+        Ez = Math.floor((zz.length + 1) / 2),
+        nz = 0;
+      const iz = zz.length - 1;
+      for (; !(nz > iz) && (uz[nz++] = zz[bz++], !(nz > iz));) uz[nz++] = zz[Ez++]
+    }! function(zz) {
+      zz[zz.NO_COMPRESSION = 0] = "NO_COMPRESSION", zz[zz.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", zz[zz.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", zz[zz.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", zz[zz.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", zz[zz.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(sz || (sz = {})),
+    function(zz) {
+      zz[zz.INCREASING_Y = 0] = "INCREASING_Y", zz[zz.DECREASING_Y = 1] = "DECREASING_Y"
+    }(rz || (rz = {}));
+    const qz = 20000630;
 
-    function OT(TT, oT) {
-      if (TT.getUint32(0, !0) != QT) throw new Error("Incorrect OpenEXR format");
-      const IT = TT.getUint8(4),
-        zT = TT.getUint8(5),
-        kT = {
-          singleTile: !!(2 & zT),
-          longName: !!(4 & zT),
-          deepFormat: !!(8 & zT),
-          multiPart: !!(16 & zT)
+    function hz(zz, uz) {
+      if (zz.getUint32(0, !0) != qz) throw new Error("Incorrect OpenEXR format");
+      const bz = zz.getUint8(4),
+        nz = zz.getUint8(5),
+        iz = {
+          singleTile: !!(2 & nz),
+          longName: !!(4 & nz),
+          deepFormat: !!(8 & nz),
+          multiPart: !!(16 & nz)
         };
-      oT.value = 8;
-      const WT = {};
-      let XT = !0;
-      for (; XT;) {
-        const IT = mT(TT.buffer, oT);
-        if (IT) {
-          const zT = mT(TT.buffer, oT),
-            kT = UT(TT, oT, zT, RT(TT, oT));
-          void 0 === kT ? iT.d.Warn(`Unknown header attribute type ${zT}'.`) : WT[IT] = kT
-        } else XT = !1
+      uz.value = 8;
+      const lz = {};
+      let Mz = !0;
+      for (; Mz;) {
+        const bz = oz(zz.buffer, uz);
+        if (bz) {
+          const nz = oz(zz.buffer, uz),
+            iz = az(zz, uz, nz, vz(zz, uz));
+          void 0 === iz ? Ez.e.Warn(`Unknown header attribute type ${nz}'.`) : lz[bz] = iz
+        } else Mz = !1
       }
-      if (0 != (-5 & zT)) throw new Error("Unsupported file format");
+      if (0 != (-5 & nz)) throw new Error("Unsupported file format");
       return {
-        version: IT,
-        spec: kT,
-        ...WT
-      }
-    }
-    const HT = 32768,
-      nT = 65535;
-
-    function qT(TT, oT, IT, iT, zT) {
-      for (; IT < TT;) oT = oT << 8 | ET(iT, zT), IT += 8;
-      return {
-        l: oT >> (IT -= TT) & (1 << TT) - 1,
-        c: oT,
-        lc: IT
+        version: bz,
+        spec: iz,
+        ...lz
       }
     }
+    const Uz = 32768,
+      cz = 65535;
 
-    function ZT(TT, oT, IT, iT) {
+    function gz(zz, uz, bz, Ez, nz) {
+      for (; bz < zz;) uz = uz << 8 | Az(Ez, nz), bz += 8;
       return {
-        c: TT = TT << 8 | ET(IT, iT),
-        lc: oT += 8
+        l: uz >> (bz -= zz) & (1 << zz) - 1,
+        c: uz,
+        lc: bz
       }
     }
 
-    function lT(TT, oT, IT, iT, zT, kT, WT, XT, BT) {
-      if (TT == oT) {
-        if (iT < 8) {
-          const TT = ZT(IT, iT, zT, kT);
-          IT = TT.c, iT = TT.lc
+    function Sz(zz, uz, bz, Ez) {
+      return {
+        c: zz = zz << 8 | Az(bz, Ez),
+        lc: uz += 8
+      }
+    }
+
+    function yz(zz, uz, bz, Ez, nz, iz, lz, Mz, tz) {
+      if (zz == uz) {
+        if (Ez < 8) {
+          const zz = Sz(bz, Ez, nz, iz);
+          bz = zz.c, Ez = zz.lc
         }
-        let TT = IT >> (iT -= 8);
-        if (TT = new Uint8Array([TT])[0], XT.value + TT > BT) return null;
-        const oT = WT[XT.value - 1];
-        for (; TT-- > 0;) WT[XT.value++] = oT
+        let zz = bz >> (Ez -= 8);
+        if (zz = new Uint8Array([zz])[0], Mz.value + zz > tz) return null;
+        const uz = lz[Mz.value - 1];
+        for (; zz-- > 0;) lz[Mz.value++] = uz
       } else {
-        if (!(XT.value < BT)) return null;
-        WT[XT.value++] = TT
+        if (!(Mz.value < tz)) return null;
+        lz[Mz.value++] = zz
       }
       return {
-        c: IT,
-        lc: iT
+        c: bz,
+        lc: Ez
       }
     }
-    const sT = new Array(59);
+    const Dz = new Array(59);
 
-    function tT(TT, oT, IT, iT, zT, kT) {
-      const WT = oT;
-      let XT = 0,
-        BT = 0;
-      for (; iT <= zT; iT++) {
-        if (WT.value - oT.value > IT) return;
-        let FT = qT(6, XT, BT, TT, WT);
-        const ST = FT.l;
-        if (XT = FT.c, BT = FT.lc, kT[iT] = ST, ST == AT) {
-          if (WT.value - oT.value > IT) throw new Error("Error in HufUnpackEncTable");
-          FT = qT(8, XT, BT, TT, WT);
-          let ST = FT.l + gT;
-          if (XT = FT.c, BT = FT.lc, iT + ST > zT + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; ST--;) kT[iT++] = 0;
-          iT--
-        } else if (ST >= rT) {
-          let TT = ST - rT + 2;
-          if (iT + TT > zT + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; TT--;) kT[iT++] = 0;
-          iT--
+    function Qz(zz, uz, bz, Ez, nz, iz) {
+      const lz = uz;
+      let Mz = 0,
+        tz = 0;
+      for (; Ez <= nz; Ez++) {
+        if (lz.value - uz.value > bz) return;
+        let Hz = gz(6, Mz, tz, zz, lz);
+        const Oz = Hz.l;
+        if (Mz = Hz.c, tz = Hz.lc, iz[Ez] = Oz, Oz == Xz) {
+          if (lz.value - uz.value > bz) throw new Error("Error in HufUnpackEncTable");
+          Hz = gz(8, Mz, tz, zz, lz);
+          let Oz = Hz.l + fz;
+          if (Mz = Hz.c, tz = Hz.lc, Ez + Oz > nz + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; Oz--;) iz[Ez++] = 0;
+          Ez--
+        } else if (Oz >= wz) {
+          let zz = Oz - wz + 2;
+          if (Ez + zz > nz + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; zz--;) iz[Ez++] = 0;
+          Ez--
         }
-      }! function(TT) {
-        for (let IT = 0; IT <= 58; ++IT) sT[IT] = 0;
-        for (let IT = 0; IT < cT; ++IT) sT[TT[IT]] += 1;
-        let oT = 0;
-        for (let IT = 58; IT > 0; --IT) {
-          const TT = oT + sT[IT] >> 1;
-          sT[IT] = oT, oT = TT
+      }! function(zz) {
+        for (let bz = 0; bz <= 58; ++bz) Dz[bz] = 0;
+        for (let bz = 0; bz < Zz; ++bz) Dz[zz[bz]] += 1;
+        let uz = 0;
+        for (let bz = 58; bz > 0; --bz) {
+          const zz = uz + Dz[bz] >> 1;
+          Dz[bz] = uz, uz = zz
         }
-        for (let IT = 0; IT < cT; ++IT) {
-          const oT = TT[IT];
-          oT > 0 && (TT[IT] = oT | sT[oT]++ << 6)
+        for (let bz = 0; bz < Zz; ++bz) {
+          const uz = zz[bz];
+          uz > 0 && (zz[bz] = uz | Dz[uz]++ << 6)
         }
-      }(kT)
+      }(iz)
     }
 
-    function GT(TT) {
-      return 63 & TT
+    function Wz(zz) {
+      return 63 & zz
     }
 
-    function pT(TT) {
-      return TT >> 6
+    function ez(zz) {
+      return zz >> 6
     }
 
-    function bT(TT, oT, IT, iT, zT, kT) {
-      const WT = IT.value,
-        XT = RT(oT, IT),
-        BT = RT(oT, IT);
-      IT.value += 4;
-      const FT = RT(oT, IT);
-      if (IT.value += 4, XT < 0 || XT >= cT || BT < 0 || BT >= cT) throw new Error("Wrong HUF_ENCSIZE");
-      const ST = new Array(cT),
-        DT = new Array(KT);
-      ! function(TT) {
-        for (let oT = 0; oT < KT; oT++) TT[oT] = {}, TT[oT].len = 0, TT[oT].lit = 0, TT[oT].p = null
-      }(DT);
-      if (tT(TT, IT, iT - (IT.value - WT), XT, BT, ST), FT > 8 * (iT - (IT.value - WT))) throw new Error("Wrong hufUncompress");
-      ! function(TT, oT, IT, iT) {
-        for (; oT <= IT; oT++) {
-          const IT = pT(TT[oT]),
-            zT = GT(TT[oT]);
-          if (IT >> zT) throw new Error("Invalid table entry");
-          if (zT > xT) {
-            const TT = iT[IT >> zT - xT];
-            if (TT.len) throw new Error("Invalid table entry");
-            if (TT.lit++, TT.p) {
-              const oT = TT.p;
-              TT.p = new Array(TT.lit);
-              for (let IT = 0; IT < TT.lit - 1; ++IT) TT.p[IT] = oT[IT]
-            } else TT.p = new Array(1);
-            TT.p[TT.lit - 1] = oT
-          } else if (zT) {
-            let TT = 0;
-            for (let kT = 1 << xT - zT; kT > 0; kT--) {
-              const kT = iT[(IT << xT - zT) + TT];
-              if (kT.len || kT.p) throw new Error("Invalid table entry");
-              kT.len = zT, kT.lit = oT, TT++
+    function jz(zz, uz, bz, Ez, nz, iz) {
+      const lz = bz.value,
+        Mz = vz(uz, bz),
+        tz = vz(uz, bz);
+      bz.value += 4;
+      const Hz = vz(uz, bz);
+      if (bz.value += 4, Mz < 0 || Mz >= Zz || tz < 0 || tz >= Zz) throw new Error("Wrong HUF_ENCSIZE");
+      const Oz = new Array(Zz),
+        pz = new Array(Rz);
+      ! function(zz) {
+        for (let uz = 0; uz < Rz; uz++) zz[uz] = {}, zz[uz].len = 0, zz[uz].lit = 0, zz[uz].p = null
+      }(pz);
+      if (Qz(zz, bz, Ez - (bz.value - lz), Mz, tz, Oz), Hz > 8 * (Ez - (bz.value - lz))) throw new Error("Wrong hufUncompress");
+      ! function(zz, uz, bz, Ez) {
+        for (; uz <= bz; uz++) {
+          const bz = ez(zz[uz]),
+            nz = Wz(zz[uz]);
+          if (bz >> nz) throw new Error("Invalid table entry");
+          if (nz > Fz) {
+            const zz = Ez[bz >> nz - Fz];
+            if (zz.len) throw new Error("Invalid table entry");
+            if (zz.lit++, zz.p) {
+              const uz = zz.p;
+              zz.p = new Array(zz.lit);
+              for (let bz = 0; bz < zz.lit - 1; ++bz) zz.p[bz] = uz[bz]
+            } else zz.p = new Array(1);
+            zz.p[zz.lit - 1] = uz
+          } else if (nz) {
+            let zz = 0;
+            for (let iz = 1 << Fz - nz; iz > 0; iz--) {
+              const iz = Ez[(bz << Fz - nz) + zz];
+              if (iz.len || iz.p) throw new Error("Invalid table entry");
+              iz.len = nz, iz.lit = uz, zz++
             }
           }
         }
-      }(ST, XT, BT, DT),
-      function(TT, oT, IT, iT, zT, kT, WT, XT, BT) {
-        let FT = 0,
-          ST = 0;
-        const DT = WT,
-          LT = Math.trunc(iT.value + (zT + 7) / 8);
-        for (; iT.value < LT;) {
-          let zT = ZT(FT, ST, IT, iT);
-          for (FT = zT.c, ST = zT.lc; ST >= xT;) {
-            const WT = oT[FT >> ST - xT & MT];
-            if (WT.len) {
-              ST -= WT.len;
-              const TT = lT(WT.lit, kT, FT, ST, IT, iT, XT, BT, DT);
-              TT && (FT = TT.c, ST = TT.lc)
+      }(Oz, Mz, tz, pz),
+      function(zz, uz, bz, Ez, nz, iz, lz, Mz, tz) {
+        let Hz = 0,
+          Oz = 0;
+        const pz = lz,
+          dz = Math.trunc(Ez.value + (nz + 7) / 8);
+        for (; Ez.value < dz;) {
+          let nz = Sz(Hz, Oz, bz, Ez);
+          for (Hz = nz.c, Oz = nz.lc; Oz >= Fz;) {
+            const lz = uz[Hz >> Oz - Fz & Kz];
+            if (lz.len) {
+              Oz -= lz.len;
+              const zz = yz(lz.lit, iz, Hz, Oz, bz, Ez, Mz, tz, pz);
+              zz && (Hz = zz.c, Oz = zz.lc)
             } else {
-              if (!WT.p) throw new Error("hufDecode issues");
-              let oT;
-              for (oT = 0; oT < WT.lit; oT++) {
-                const xT = GT(TT[WT.p[oT]]);
-                for (; ST < xT && iT.value < LT;) zT = ZT(FT, ST, IT, iT), FT = zT.c, ST = zT.lc;
-                if (ST >= xT && pT(TT[WT.p[oT]]) == (FT >> ST - xT & (1 << xT) - 1)) {
-                  ST -= xT;
-                  const TT = lT(WT.p[oT], kT, FT, ST, IT, iT, XT, BT, DT);
-                  TT && (FT = TT.c, ST = TT.lc);
+              if (!lz.p) throw new Error("hufDecode issues");
+              let uz;
+              for (uz = 0; uz < lz.lit; uz++) {
+                const Fz = Wz(zz[lz.p[uz]]);
+                for (; Oz < Fz && Ez.value < dz;) nz = Sz(Hz, Oz, bz, Ez), Hz = nz.c, Oz = nz.lc;
+                if (Oz >= Fz && ez(zz[lz.p[uz]]) == (Hz >> Oz - Fz & (1 << Fz) - 1)) {
+                  Oz -= Fz;
+                  const zz = yz(lz.p[uz], iz, Hz, Oz, bz, Ez, Mz, tz, pz);
+                  zz && (Hz = zz.c, Oz = zz.lc);
                   break
                 }
               }
-              if (oT == WT.lit) throw new Error("HufDecode issues")
+              if (uz == lz.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const cT = 8 - zT & 7;
-        for (FT >>= cT, ST -= cT; ST > 0;) {
-          const TT = oT[FT << xT - ST & MT];
-          if (!TT.len) throw new Error("HufDecode issues");
+        const Zz = 8 - nz & 7;
+        for (Hz >>= Zz, Oz -= Zz; Oz > 0;) {
+          const zz = uz[Hz << Fz - Oz & Kz];
+          if (!zz.len) throw new Error("HufDecode issues");
           {
-            ST -= TT.len;
-            const oT = lT(TT.lit, kT, FT, ST, IT, iT, XT, BT, DT);
-            oT && (FT = oT.c, ST = oT.lc)
+            Oz -= zz.len;
+            const uz = yz(zz.lit, iz, Hz, Oz, bz, Ez, Mz, tz, pz);
+            uz && (Hz = uz.c, Oz = uz.lc)
           }
         }
-      }(ST, DT, TT, IT, FT, BT, kT, zT, {
+      }(Oz, pz, zz, bz, Hz, tz, iz, nz, {
         value: 0
       })
     }
 
-    function yT(TT) {
-      return 65535 & TT
+    function Iz(zz) {
+      return 65535 & zz
     }
 
-    function NT(TT) {
-      const oT = yT(TT);
-      return oT > 32767 ? oT - 65536 : oT
+    function Bz(zz) {
+      const uz = Iz(zz);
+      return uz > 32767 ? uz - 65536 : uz
     }
 
-    function PT(TT, oT) {
-      const IT = NT(TT),
-        iT = NT(oT),
-        zT = IT + (1 & iT) + (iT >> 1);
+    function Cz(zz, uz) {
+      const bz = Bz(zz),
+        Ez = Bz(uz),
+        nz = bz + (1 & Ez) + (Ez >> 1);
       return {
-        a: zT,
-        b: zT - iT
+        a: nz,
+        b: nz - Ez
       }
     }
 
-    function dT(TT, oT) {
-      const IT = yT(TT),
-        iT = yT(oT),
-        zT = IT - (iT >> 1) & nT;
+    function Yz(zz, uz) {
+      const bz = Iz(zz),
+        Ez = Iz(uz),
+        nz = bz - (Ez >> 1) & cz;
       return {
-        a: iT + zT - HT & nT,
-        b: zT
+        a: Ez + nz - Uz & cz,
+        b: nz
       }
     }
 
-    function VT(TT, oT, IT, iT, zT, kT, WT) {
-      const XT = WT < 16384,
-        BT = IT > zT ? zT : IT;
-      let FT, ST, DT = 1;
-      for (; DT <= BT;) DT <<= 1;
-      for (DT >>= 1, FT = DT, DT >>= 1; DT >= 1;) {
-        ST = 0;
-        const WT = ST + kT * (zT - FT),
-          BT = kT * DT,
-          LT = kT * FT,
-          xT = iT * DT,
-          cT = iT * FT;
-        let KT, MT, rT, AT;
-        for (; ST <= WT; ST += LT) {
-          let zT = ST;
-          const kT = ST + iT * (IT - FT);
-          for (; zT <= kT; zT += cT) {
-            const IT = zT + xT,
-              iT = zT + BT,
-              kT = iT + xT;
-            if (XT) {
-              let WT = PT(TT[zT + oT], TT[iT + oT]);
-              KT = WT.a, rT = WT.b, WT = PT(TT[IT + oT], TT[kT + oT]), MT = WT.a, AT = WT.b, WT = PT(KT, MT), TT[zT + oT] = WT.a, TT[IT + oT] = WT.b, WT = PT(rT, AT), TT[iT + oT] = WT.a, TT[kT + oT] = WT.b
+    function kz(zz, uz, bz, Ez, nz, iz, lz) {
+      const Mz = lz < 16384,
+        tz = bz > nz ? nz : bz;
+      let Hz, Oz, pz = 1;
+      for (; pz <= tz;) pz <<= 1;
+      for (pz >>= 1, Hz = pz, pz >>= 1; pz >= 1;) {
+        Oz = 0;
+        const lz = Oz + iz * (nz - Hz),
+          tz = iz * pz,
+          dz = iz * Hz,
+          Fz = Ez * pz,
+          Zz = Ez * Hz;
+        let Rz, Kz, wz, Xz;
+        for (; Oz <= lz; Oz += dz) {
+          let nz = Oz;
+          const iz = Oz + Ez * (bz - Hz);
+          for (; nz <= iz; nz += Zz) {
+            const bz = nz + Fz,
+              Ez = nz + tz,
+              iz = Ez + Fz;
+            if (Mz) {
+              let lz = Cz(zz[nz + uz], zz[Ez + uz]);
+              Rz = lz.a, wz = lz.b, lz = Cz(zz[bz + uz], zz[iz + uz]), Kz = lz.a, Xz = lz.b, lz = Cz(Rz, Kz), zz[nz + uz] = lz.a, zz[bz + uz] = lz.b, lz = Cz(wz, Xz), zz[Ez + uz] = lz.a, zz[iz + uz] = lz.b
             } else {
-              let WT = dT(TT[zT + oT], TT[iT + oT]);
-              KT = WT.a, rT = WT.b, WT = dT(TT[IT + oT], TT[kT + oT]), MT = WT.a, AT = WT.b, WT = dT(KT, MT), TT[zT + oT] = WT.a, TT[IT + oT] = WT.b, WT = dT(rT, AT), TT[iT + oT] = WT.a, TT[kT + oT] = WT.b
+              let lz = Yz(zz[nz + uz], zz[Ez + uz]);
+              Rz = lz.a, wz = lz.b, lz = Yz(zz[bz + uz], zz[iz + uz]), Kz = lz.a, Xz = lz.b, lz = Yz(Rz, Kz), zz[nz + uz] = lz.a, zz[bz + uz] = lz.b, lz = Yz(wz, Xz), zz[Ez + uz] = lz.a, zz[iz + uz] = lz.b
             }
           }
-          if (IT & DT) {
-            const IT = zT + BT;
-            let iT;
-            iT = XT ? PT(TT[zT + oT], TT[IT + oT]) : dT(TT[zT + oT], TT[IT + oT]), KT = iT.a, TT[IT + oT] = iT.b, TT[zT + oT] = KT
+          if (bz & pz) {
+            const bz = nz + tz;
+            let Ez;
+            Ez = Mz ? Cz(zz[nz + uz], zz[bz + uz]) : Yz(zz[nz + uz], zz[bz + uz]), Rz = Ez.a, zz[bz + uz] = Ez.b, zz[nz + uz] = Rz
           }
         }
-        if (zT & DT) {
-          let zT = ST;
-          const kT = ST + iT * (IT - FT);
-          for (; zT <= kT; zT += cT) {
-            const IT = zT + xT;
-            let iT;
-            iT = XT ? PT(TT[zT + oT], TT[IT + oT]) : dT(TT[zT + oT], TT[IT + oT]), KT = iT.a, TT[IT + oT] = iT.b, TT[zT + oT] = KT
+        if (nz & pz) {
+          let nz = Oz;
+          const iz = Oz + Ez * (bz - Hz);
+          for (; nz <= iz; nz += Zz) {
+            const bz = nz + Fz;
+            let Ez;
+            Ez = Mz ? Cz(zz[nz + uz], zz[bz + uz]) : Yz(zz[nz + uz], zz[bz + uz]), Rz = Ez.a, zz[bz + uz] = Ez.b, zz[nz + uz] = Rz
           }
         }
-        FT = DT, DT >>= 1
+        Hz = pz, pz >>= 1
       }
-      return ST
+      return Oz
     }
 
-    function To(TT) {
-      return new DataView(TT.array.buffer, TT.offset.value, TT.size)
+    function zu(zz) {
+      return new DataView(zz.array.buffer, zz.offset.value, zz.size)
     }
 
-    function oo(TT) {
-      const oT = TT.viewer.buffer.slice(TT.offset.value, TT.offset.value + TT.size),
-        IT = new Uint8Array(function(TT) {
-          let oT = TT.byteLength;
-          const IT = [];
-          let iT = 0;
-          const zT = new DataView(TT);
-          for (; oT > 0;) {
-            const TT = zT.getInt8(iT++);
-            if (TT < 0) {
-              const kT = -TT;
-              oT -= kT + 1;
-              for (let TT = 0; TT < kT; TT++) IT.push(zT.getUint8(iT++))
+    function uu(zz) {
+      const uz = zz.viewer.buffer.slice(zz.offset.value, zz.offset.value + zz.size),
+        bz = new Uint8Array(function(zz) {
+          let uz = zz.byteLength;
+          const bz = [];
+          let Ez = 0;
+          const nz = new DataView(zz);
+          for (; uz > 0;) {
+            const zz = nz.getInt8(Ez++);
+            if (zz < 0) {
+              const iz = -zz;
+              uz -= iz + 1;
+              for (let zz = 0; zz < iz; zz++) bz.push(nz.getUint8(Ez++))
             } else {
-              const kT = TT;
-              oT -= 2;
-              const WT = zT.getUint8(iT++);
-              for (let TT = 0; TT < kT + 1; TT++) IT.push(WT)
+              const iz = zz;
+              uz -= 2;
+              const lz = nz.getUint8(Ez++);
+              for (let zz = 0; zz < iz + 1; zz++) bz.push(lz)
             }
           }
-          return IT
-        }(oT)),
-        iT = new Uint8Array(IT.length);
-      return aT(IT), YT(IT, iT), new DataView(iT.buffer)
+          return bz
+        }(uz)),
+        Ez = new Uint8Array(bz.length);
+      return Vz(bz), mz(bz, Ez), new DataView(Ez.buffer)
     }
 
-    function Io(TT) {
-      const oT = TT.array.slice(TT.offset.value, TT.offset.value + TT.size),
-        IT = fflate.unzlibSync(oT),
-        iT = new Uint8Array(IT.length);
-      return aT(IT), YT(IT, iT), new DataView(iT.buffer)
+    function bu(zz) {
+      const uz = zz.array.slice(zz.offset.value, zz.offset.value + zz.size),
+        bz = fflate.unzlibSync(uz),
+        Ez = new Uint8Array(bz.length);
+      return Vz(bz), mz(bz, Ez), new DataView(Ez.buffer)
     }
 
-    function io(TT) {
-      const oT = TT.array.slice(TT.offset.value, TT.offset.value + TT.size),
-        IT = fflate.unzlibSync(oT),
-        iT = TT.lines * TT.channels * TT.width,
-        zT = 1 == TT.type ? new Uint16Array(iT) : new Uint32Array(iT);
-      let kT = 0,
-        WT = 0;
-      const XT = new Array(4);
-      for (let BT = 0; BT < TT.lines; BT++)
-        for (let oT = 0; oT < TT.channels; oT++) {
-          let oT = 0;
-          switch (TT.type) {
+    function Eu(zz) {
+      const uz = zz.array.slice(zz.offset.value, zz.offset.value + zz.size),
+        bz = fflate.unzlibSync(uz),
+        Ez = zz.lines * zz.channels * zz.width,
+        nz = 1 == zz.type ? new Uint16Array(Ez) : new Uint32Array(Ez);
+      let iz = 0,
+        lz = 0;
+      const Mz = new Array(4);
+      for (let tz = 0; tz < zz.lines; tz++)
+        for (let uz = 0; uz < zz.channels; uz++) {
+          let uz = 0;
+          switch (zz.type) {
             case 1:
-              XT[0] = kT, XT[1] = XT[0] + TT.width, kT = XT[1] + TT.width;
-              for (let iT = 0; iT < TT.width; ++iT) {
-                oT += IT[XT[0]++] << 8 | IT[XT[1]++], zT[WT] = oT, WT++
+              Mz[0] = iz, Mz[1] = Mz[0] + zz.width, iz = Mz[1] + zz.width;
+              for (let Ez = 0; Ez < zz.width; ++Ez) {
+                uz += bz[Mz[0]++] << 8 | bz[Mz[1]++], nz[lz] = uz, lz++
               }
               break;
             case 2:
-              XT[0] = kT, XT[1] = XT[0] + TT.width, XT[2] = XT[1] + TT.width, kT = XT[2] + TT.width;
-              for (let iT = 0; iT < TT.width; ++iT) {
-                oT += IT[XT[0]++] << 24 | IT[XT[1]++] << 16 | IT[XT[2]++] << 8, zT[WT] = oT, WT++
+              Mz[0] = iz, Mz[1] = Mz[0] + zz.width, Mz[2] = Mz[1] + zz.width, iz = Mz[2] + zz.width;
+              for (let Ez = 0; Ez < zz.width; ++Ez) {
+                uz += bz[Mz[0]++] << 24 | bz[Mz[1]++] << 16 | bz[Mz[2]++] << 8, nz[lz] = uz, lz++
               }
           }
         }
-      return new DataView(zT.buffer)
+      return new DataView(nz.buffer)
     }
 
-    function zo(TT) {
-      const oT = TT.viewer,
-        IT = {
-          value: TT.offset.value
+    function nu(zz) {
+      const uz = zz.viewer,
+        bz = {
+          value: zz.offset.value
         },
-        iT = new Uint16Array(TT.width * TT.scanlineBlockSize * (TT.channels * TT.type)),
-        zT = new Uint8Array(LT);
-      let kT = 0;
-      const WT = new Array(TT.channels);
-      for (let FT = 0; FT < TT.channels; FT++) WT[FT] = {}, WT[FT].start = kT, WT[FT].end = WT[FT].start, WT[FT].nx = TT.width, WT[FT].ny = TT.lines, WT[FT].size = TT.type, kT += WT[FT].nx * WT[FT].ny * WT[FT].size;
-      const XT = vT(oT, IT),
-        BT = vT(oT, IT);
-      if (BT >= LT) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (XT <= BT)
-        for (let FT = 0; FT < BT - XT + 1; FT++) zT[FT + XT] = uT(oT, IT);
-      const ST = new Uint16Array(DT),
-        xT = function(TT, oT) {
-          let IT = 0;
-          for (let zT = 0; zT < DT; ++zT)(0 == zT || TT[zT >> 3] & 1 << (7 & zT)) && (oT[IT++] = zT);
-          const iT = IT - 1;
-          for (; IT < DT;) oT[IT++] = 0;
-          return iT
-        }(zT, ST),
-        cT = RT(oT, IT);
-      bT(TT.array, oT, IT, cT, iT, kT);
-      for (let FT = 0; FT < TT.channels; ++FT) {
-        const TT = WT[FT];
-        for (let oT = 0; oT < WT[FT].size; ++oT) VT(iT, TT.start + oT, TT.nx, TT.size, TT.ny, TT.nx * TT.size, xT)
-      }! function(TT, oT, IT) {
-        for (let iT = 0; iT < IT; ++iT) oT[iT] = TT[oT[iT]]
-      }(ST, iT, kT);
-      let KT = 0;
-      const MT = new Uint8Array(iT.buffer.byteLength);
-      for (let DT = 0; DT < TT.lines; DT++)
-        for (let oT = 0; oT < TT.channels; oT++) {
-          const TT = WT[oT],
-            IT = TT.nx * TT.size,
-            zT = new Uint8Array(iT.buffer, TT.end * FT, IT * FT);
-          MT.set(zT, KT), KT += IT * FT, TT.end += IT
+        Ez = new Uint16Array(zz.width * zz.scanlineBlockSize * (zz.channels * zz.type)),
+        nz = new Uint8Array(dz);
+      let iz = 0;
+      const lz = new Array(zz.channels);
+      for (let Hz = 0; Hz < zz.channels; Hz++) lz[Hz] = {}, lz[Hz].start = iz, lz[Hz].end = lz[Hz].start, lz[Hz].nx = zz.width, lz[Hz].ny = zz.lines, lz[Hz].size = zz.type, iz += lz[Hz].nx * lz[Hz].ny * lz[Hz].size;
+      const Mz = Jz(uz, bz),
+        tz = Jz(uz, bz);
+      if (tz >= dz) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (Mz <= tz)
+        for (let Hz = 0; Hz < tz - Mz + 1; Hz++) nz[Hz + Mz] = xz(uz, bz);
+      const Oz = new Uint16Array(pz),
+        Fz = function(zz, uz) {
+          let bz = 0;
+          for (let nz = 0; nz < pz; ++nz)(0 == nz || zz[nz >> 3] & 1 << (7 & nz)) && (uz[bz++] = nz);
+          const Ez = bz - 1;
+          for (; bz < pz;) uz[bz++] = 0;
+          return Ez
+        }(nz, Oz),
+        Zz = vz(uz, bz);
+      jz(zz.array, uz, bz, Zz, Ez, iz);
+      for (let Hz = 0; Hz < zz.channels; ++Hz) {
+        const zz = lz[Hz];
+        for (let uz = 0; uz < lz[Hz].size; ++uz) kz(Ez, zz.start + uz, zz.nx, zz.size, zz.ny, zz.nx * zz.size, Fz)
+      }! function(zz, uz, bz) {
+        for (let Ez = 0; Ez < bz; ++Ez) uz[Ez] = zz[uz[Ez]]
+      }(Oz, Ez, iz);
+      let Rz = 0;
+      const Kz = new Uint8Array(Ez.buffer.byteLength);
+      for (let pz = 0; pz < zz.lines; pz++)
+        for (let uz = 0; uz < zz.channels; uz++) {
+          const zz = lz[uz],
+            bz = zz.nx * zz.size,
+            nz = new Uint8Array(Ez.buffer, zz.end * Hz, bz * Hz);
+          Kz.set(nz, Rz), Rz += bz * Hz, zz.end += bz
         }
-      return new DataView(MT.buffer)
+      return new DataView(Kz.buffer)
     }
-    var ko, Wo = IT(38886);
-    ! function(TT) {
-      TT[TT.Float = 0] = "Float", TT[TT.HalfFloat = 1] = "HalfFloat"
-    }(ko || (ko = {}));
-    class Xo {}
-    async function Bo(TT, oT, IT, iT) {
-      const zT = {
+    var iu, lu = bz(39258);
+    ! function(zz) {
+      zz[zz.Float = 0] = "Float", zz[zz.HalfFloat = 1] = "HalfFloat"
+    }(iu || (iu = {}));
+    class Mu {}
+    async function tu(zz, uz, bz, Ez) {
+      const nz = {
         size: 0,
-        viewer: oT,
-        array: new Uint8Array(oT.buffer),
-        offset: IT,
-        width: TT.dataWindow.xMax - TT.dataWindow.xMin + 1,
-        height: TT.dataWindow.yMax - TT.dataWindow.yMin + 1,
-        channels: TT.channels.length,
+        viewer: uz,
+        array: new Uint8Array(uz.buffer),
+        offset: bz,
+        width: zz.dataWindow.xMax - zz.dataWindow.xMin + 1,
+        height: zz.dataWindow.yMax - zz.dataWindow.yMin + 1,
+        channels: zz.channels.length,
         channelLineOffsets: {},
         scanOrder: () => 0,
         bytesPerLine: 0,
@@ -595,174 +595,174 @@ export const modules = {
         linearSpace: !1,
         textureType: 0
       };
-      switch (TT.compression) {
-        case hT.NO_COMPRESSION:
-          zT.lines = 1, zT.uncompress = To;
+      switch (zz.compression) {
+        case sz.NO_COMPRESSION:
+          nz.lines = 1, nz.uncompress = zu;
           break;
-        case hT.RLE_COMPRESSION:
-          zT.lines = 1, zT.uncompress = oo;
+        case sz.RLE_COMPRESSION:
+          nz.lines = 1, nz.uncompress = uu;
           break;
-        case hT.ZIPS_COMPRESSION:
-          zT.lines = 1, zT.uncompress = Io, await Wo.i.LoadScriptAsync(Xo.FFLATEUrl);
+        case sz.ZIPS_COMPRESSION:
+          nz.lines = 1, nz.uncompress = bu, await lu.h.LoadScriptAsync(Mu.FFLATEUrl);
           break;
-        case hT.ZIP_COMPRESSION:
-          zT.lines = 16, zT.uncompress = Io, await Wo.i.LoadScriptAsync(Xo.FFLATEUrl);
+        case sz.ZIP_COMPRESSION:
+          nz.lines = 16, nz.uncompress = bu, await lu.h.LoadScriptAsync(Mu.FFLATEUrl);
           break;
-        case hT.PIZ_COMPRESSION:
-          zT.lines = 32, zT.uncompress = zo;
+        case sz.PIZ_COMPRESSION:
+          nz.lines = 32, nz.uncompress = nu;
           break;
-        case hT.PXR24_COMPRESSION:
-          zT.lines = 16, zT.uncompress = io, await Wo.i.LoadScriptAsync(Xo.FFLATEUrl);
+        case sz.PXR24_COMPRESSION:
+          nz.lines = 16, nz.uncompress = Eu, await lu.h.LoadScriptAsync(Mu.FFLATEUrl);
           break;
         default:
-          throw new Error(hT[TT.compression] + " is unsupported")
+          throw new Error(sz[zz.compression] + " is unsupported")
       }
-      zT.scanlineBlockSize = zT.lines;
-      const kT = {};
-      for (const XT of TT.channels) switch (XT.name) {
+      nz.scanlineBlockSize = nz.lines;
+      const iz = {};
+      for (const Mz of zz.channels) switch (Mz.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          kT[XT.name] = !0, zT.type = XT.pixelType
+          iz[Mz.name] = !0, nz.type = Mz.pixelType
       }
-      let WT = !1;
-      if (kT.R && kT.G && kT.B && kT.A) zT.outputChannels = 4, zT.decodeChannels = {
+      let lz = !1;
+      if (iz.R && iz.G && iz.B && iz.A) nz.outputChannels = 4, nz.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (kT.R && kT.G && kT.B) WT = !0, zT.outputChannels = 4, zT.decodeChannels = {
+      else if (iz.R && iz.G && iz.B) lz = !0, nz.outputChannels = 4, nz.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (kT.R && kT.G) zT.outputChannels = 2, zT.decodeChannels = {
+      else if (iz.R && iz.G) nz.outputChannels = 2, nz.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (kT.R) zT.outputChannels = 1, zT.decodeChannels = {
+      else if (iz.R) nz.outputChannels = 1, nz.decodeChannels = {
         R: 0
       };
       else {
-        if (!kT.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        zT.outputChannels = 1, zT.decodeChannels = {
+        if (!iz.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        nz.outputChannels = 1, nz.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === zT.type) switch (iT) {
-        case ko.Float:
-          zT.getter = jT, zT.inputSize = FT;
+      if (1 === nz.type) switch (Ez) {
+        case iu.Float:
+          nz.getter = Pz, nz.inputSize = Hz;
           break;
-        case ko.HalfFloat:
-          zT.getter = vT, zT.inputSize = FT
+        case iu.HalfFloat:
+          nz.getter = Jz, nz.inputSize = Hz
       } else {
-        if (2 !== zT.type) throw new Error("Unsupported pixelType " + zT.type + " for " + TT.compression);
-        switch (iT) {
-          case ko.Float:
-            zT.getter = CT, zT.inputSize = XT;
+        if (2 !== nz.type) throw new Error("Unsupported pixelType " + nz.type + " for " + zz.compression);
+        switch (Ez) {
+          case iu.Float:
+            nz.getter = Lz, nz.inputSize = Mz;
             break;
-          case ko.HalfFloat:
-            zT.getter = JT, zT.inputSize = XT
+          case iu.HalfFloat:
+            nz.getter = Gz, nz.inputSize = Mz
         }
       }
-      zT.blockCount = zT.height / zT.scanlineBlockSize;
-      for (let XT = 0; XT < zT.blockCount; XT++) fT(oT, IT);
-      const BT = zT.width * zT.height * zT.outputChannels;
-      switch (iT) {
-        case ko.Float:
-          zT.byteArray = new Float32Array(BT), zT.textureType = 1, WT && zT.byteArray.fill(1, 0, BT);
+      nz.blockCount = nz.height / nz.scanlineBlockSize;
+      for (let Mz = 0; Mz < nz.blockCount; Mz++) Tz(uz, bz);
+      const tz = nz.width * nz.height * nz.outputChannels;
+      switch (Ez) {
+        case iu.Float:
+          nz.byteArray = new Float32Array(tz), nz.textureType = 1, lz && nz.byteArray.fill(1, 0, tz);
           break;
-        case ko.HalfFloat:
-          zT.byteArray = new Uint16Array(BT), zT.textureType = 2, WT && zT.byteArray.fill(15360, 0, BT);
+        case iu.HalfFloat:
+          nz.byteArray = new Uint16Array(tz), nz.textureType = 2, lz && nz.byteArray.fill(15360, 0, tz);
           break;
         default:
-          throw new Error("Unsupported type: " + iT)
+          throw new Error("Unsupported type: " + Ez)
       }
-      let ST = 0;
-      for (const XT of TT.channels) void 0 !== zT.decodeChannels[XT.name] && (zT.channelLineOffsets[XT.name] = ST * zT.width), ST += 2 * XT.pixelType;
-      return zT.bytesPerLine = zT.width * ST, zT.outLineWidth = zT.width * zT.outputChannels, "INCREASING_Y" === TT.lineOrder ? zT.scanOrder = TT => TT : zT.scanOrder = TT => zT.height - 1 - TT, 4 == zT.outputChannels ? (zT.format = 5, zT.linearSpace = !0) : (zT.format = 6, zT.linearSpace = !1), zT
+      let Oz = 0;
+      for (const Mz of zz.channels) void 0 !== nz.decodeChannels[Mz.name] && (nz.channelLineOffsets[Mz.name] = Oz * nz.width), Oz += 2 * Mz.pixelType;
+      return nz.bytesPerLine = nz.width * Oz, nz.outLineWidth = nz.width * nz.outputChannels, "INCREASING_Y" === zz.lineOrder ? nz.scanOrder = zz => zz : nz.scanOrder = zz => nz.height - 1 - zz, 4 == nz.outputChannels ? (nz.format = 5, nz.linearSpace = !0) : (nz.format = 6, nz.linearSpace = !1), nz
     }
 
-    function Fo(TT, oT, IT, iT) {
-      const zT = {
+    function Hu(zz, uz, bz, Ez) {
+      const nz = {
         value: 0
       };
-      for (let kT = 0; kT < TT.height / TT.scanlineBlockSize; kT++) {
-        const WT = eT(IT, iT) - oT.dataWindow.yMin;
-        TT.size = RT(IT, iT), TT.lines = WT + TT.scanlineBlockSize > TT.height ? TT.height - WT : TT.scanlineBlockSize;
-        const XT = TT.size < TT.lines * TT.bytesPerLine && TT.uncompress ? TT.uncompress(TT) : To(TT);
-        iT.value += TT.size;
-        for (let IT = 0; IT < TT.scanlineBlockSize; IT++) {
-          const iT = kT * TT.scanlineBlockSize,
-            WT = IT + TT.scanOrder(iT);
-          if (WT >= TT.height) continue;
-          const BT = IT * TT.bytesPerLine,
-            FT = (TT.height - 1 - WT) * TT.outLineWidth;
-          for (let IT = 0; IT < TT.channels; IT++) {
-            const iT = oT.channels[IT].name,
-              kT = TT.channelLineOffsets[iT],
-              WT = TT.decodeChannels[iT];
-            if (void 0 !== WT) {
-              zT.value = BT + kT;
-              for (let oT = 0; oT < TT.width; oT++) {
-                const IT = FT + oT * TT.outputChannels + WT;
-                TT.byteArray && (TT.byteArray[IT] = TT.getter(XT, zT))
+      for (let iz = 0; iz < zz.height / zz.scanlineBlockSize; iz++) {
+        const lz = Nz(bz, Ez) - uz.dataWindow.yMin;
+        zz.size = vz(bz, Ez), zz.lines = lz + zz.scanlineBlockSize > zz.height ? zz.height - lz : zz.scanlineBlockSize;
+        const Mz = zz.size < zz.lines * zz.bytesPerLine && zz.uncompress ? zz.uncompress(zz) : zu(zz);
+        Ez.value += zz.size;
+        for (let bz = 0; bz < zz.scanlineBlockSize; bz++) {
+          const Ez = iz * zz.scanlineBlockSize,
+            lz = bz + zz.scanOrder(Ez);
+          if (lz >= zz.height) continue;
+          const tz = bz * zz.bytesPerLine,
+            Hz = (zz.height - 1 - lz) * zz.outLineWidth;
+          for (let bz = 0; bz < zz.channels; bz++) {
+            const Ez = uz.channels[bz].name,
+              iz = zz.channelLineOffsets[Ez],
+              lz = zz.decodeChannels[Ez];
+            if (void 0 !== lz) {
+              nz.value = tz + iz;
+              for (let uz = 0; uz < zz.width; uz++) {
+                const bz = Hz + uz * zz.outputChannels + lz;
+                zz.byteArray && (zz.byteArray[bz] = zz.getter(Mz, nz))
               }
             }
           }
         }
       }
     }
-    Xo.DefaultOutputType = ko.HalfFloat, Xo.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class So {
+    Mu.DefaultOutputType = iu.HalfFloat, Mu.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class Ou {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(TT, oT, IT, iT, zT) {
+      loadCubeData(zz, uz, bz, Ez, nz) {
         throw ".exr not supported in Cube."
       }
-      loadData(TT, oT, IT) {
-        const zT = new DataView(TT.buffer),
-          kT = {
+      loadData(zz, uz, bz) {
+        const nz = new DataView(zz.buffer),
+          iz = {
             value: 0
           },
-          WT = OT(zT, kT);
-        Bo(WT, zT, kT, Xo.DefaultOutputType).then((TT => {
-          Fo(TT, WT, zT, kT);
-          const iT = WT.dataWindow.xMax - WT.dataWindow.xMin + 1,
-            XT = WT.dataWindow.yMax - WT.dataWindow.yMin + 1;
-          IT(iT, XT, oT.generateMipMaps, !1, (() => {
-            const IT = oT.Zc();
-            oT.format = WT.format, oT.type = TT.textureType, oT.invertY = !1, oT._gammaSpace = !WT.linearSpace, TT.byteArray && IT._uploadDataToTextureDirectly(oT, TT.byteArray, 0, 0, void 0, !0)
+          lz = hz(nz, iz);
+        tu(lz, nz, iz, Mu.DefaultOutputType).then((zz => {
+          Hu(zz, lz, nz, iz);
+          const Ez = lz.dataWindow.xMax - lz.dataWindow.xMin + 1,
+            Mz = lz.dataWindow.yMax - lz.dataWindow.yMin + 1;
+          bz(Ez, Mz, uz.generateMipMaps, !1, (() => {
+            const bz = uz.uR();
+            uz.format = lz.format, uz.type = zz.textureType, uz.invertY = !1, uz._gammaSpace = !lz.linearSpace, zz.byteArray && bz._uploadDataToTextureDirectly(uz, zz.byteArray, 0, 0, void 0, !0)
           }))
-        })).catch((TT => {
-          iT.d.Error("Failed to load EXR texture: ", TT)
+        })).catch((zz => {
+          Ez.e.Error("Failed to load EXR texture: ", zz)
         }))
       }
     }
-    async function Do(TT) {
-      const oT = new DataView(TT),
-        IT = {
+    async function pu(zz) {
+      const uz = new DataView(zz),
+        bz = {
           value: 0
         },
-        zT = OT(oT, IT);
+        nz = hz(uz, bz);
       try {
-        const TT = await Bo(zT, oT, IT, ko.Float);
-        return Fo(TT, zT, oT, IT), TT.byteArray ? {
-          width: zT.dataWindow.xMax - zT.dataWindow.xMin + 1,
-          height: zT.dataWindow.yMax - zT.dataWindow.yMin + 1,
-          data: new Float32Array(TT.byteArray)
-        } : (iT.d.Error("Failed to decode EXR data: No byte array available."), {
+        const zz = await tu(nz, uz, bz, iu.Float);
+        return Hu(zz, nz, uz, bz), zz.byteArray ? {
+          width: nz.dataWindow.xMax - nz.dataWindow.xMin + 1,
+          height: nz.dataWindow.yMax - nz.dataWindow.yMin + 1,
+          data: new Float32Array(zz.byteArray)
+        } : (Ez.e.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (kT) {
-        iT.d.Error("Failed to load EXR data: ", kT)
+      } catch (iz) {
+        Ez.e.Error("Failed to load EXR data: ", iz)
       }
       return {
         width: 0,
@@ -773,4 +773,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

@@ -1,249 +1,273 @@
 export const id = 134;
 export const ids = [134];
 export const modules = {
-  6141: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => hT,
-      g: () => wT,
-      j: () => AT,
-      n: () => rT
+  40955: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      compilePagePack: () => Hz,
+      prefetchCompiler: () => Mz,
+      reconcileHint: () => tz
     });
-    var iT = IT(6143);
-    const zT = 6,
-      kT = 3,
-      WT = 1,
-      XT = 2,
-      BT = 4,
-      FT = 8,
-      ST = 16,
-      DT = 32,
-      LT = 64,
-      xT = 128,
-      cT = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var Ez = bz(6340),
+      nz = bz(6379),
+      iz = bz(6352),
+      lz = bz(6371);
 
-    function KT(TT) {
-      if (!TT) return 0;
-      const oT = cT.indexOf(TT);
-      if (oT <= 0) throw new Error(`"${TT}" is not a shader pack hook function`);
-      return oT
+    function Mz() {
+      (0, Ez.loadPageShaderPackCompiler)()
     }
-
-    function MT(TT) {
-      if (0 === TT) return null;
-      const oT = cT[TT];
-      if (void 0 === oT) throw new Error(`${TT} is not a shader pack hook function id`);
-      return oT
+    async function tz() {
+      const zz = await (0, Ez.loadPageShaderPackCompiler)();
+      await (zz ? (0, nz.reconcileStoredShaderPackHint)(zz) : (0, nz.forgetShaderPackActiveHint)())
     }
-
-    function rT(TT) {
-      const oT = iT.d.length;
-      return {
-        strict: TT >= oT,
-        program: iT.d[TT % oT]
-      }
-    }
-
-    function AT(TT) {
-      return Number(TT.strict) * iT.d.length + iT.d.indexOf(TT.program)
-    }
-
-    function gT(TT) {
-      return "" === TT ? [] : TT.split(" ")
-    }
-
-    function hT(TT) {
-      const oT = {
-        variantFlags: new Uint8Array(zT),
-        hooks: new Uint8Array(zT * kT),
-        moduleCodes: Array(zT).fill(""),
-        reads: Array(2 * zT).fill("")
+    async function Hz(zz) {
+      const uz = await (0, Ez.loadPageShaderPackCompiler)();
+      if (!uz) return {
+        status: "none"
       };
-      for (const IT of TT) {
-        const TT = AT(IT.key),
-          iT = (TT, oT) => null === IT.hooks.surface || IT.reads.fragment.includes(TT) ? 0 : oT;
-        oT.variantFlags[TT] = (IT.sceneDepth ? WT : 0) | (IT.movesVertices ? XT : 0) | (IT.sunShadow ? BT : 0) | (IT.airShadow ? FT : 0) | (IT.discards ? ST : 0) | iT("localPosition", DT) | iT("enchantSpeed", LT) | iT("enchantTier", xT), oT.hooks[TT * kT] = KT(IT.hooks.vertex), oT.hooks[TT * kT + 1] = KT(IT.hooks.surface), oT.hooks[TT * kT + 2] = KT(IT.hooks.light), oT.moduleCodes[TT] = IT.moduleCode, oT.reads[2 * TT] = IT.reads.vertex.join(" "), oT.reads[2 * TT + 1] = IT.reads.fragment.join(" ")
+      const bz = await (0, lz.c)(zz, uz),
+        Mz = (0, nz.storedPackOutcome)(bz, uz);
+      if ("none" === Mz.kind) return {
+        status: "none"
+      };
+      const tz = uz.B_((0, nz.storedShaderPackFiles)(bz), (0, iz.shaderPackTextures)());
+      if ("blocked" === Mz.kind) return {
+        status: "blocked",
+        messageKey: Mz.messageKey,
+        variants: 0 === tz.errors.length ? tz.variants : null
+      };
+      if (tz.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", tz.errors), {
+        status: "none"
+      };
+      const {
+        name: Hz,
+        keepCircleShadows: Oz
+      } = bz.manifest;
+      return {
+        status: "active",
+        pack: {
+          name: Hz,
+          variants: tz.variants,
+          keepCircleShadows: !0 === Oz
+        }
       }
-      return oT
+    }
+  },
+  6379: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      forgetShaderPackActiveHint: () => Tz,
+      isOtherApiVersion: () => vz,
+      isShaderPackActive: () => sz,
+      isShaderPackChangePending: () => Nz,
+      markShaderPackChangePending: () => oz,
+      pageShaderPackValidationVersion: () => xz,
+      reconcileStoredShaderPackHint: () => Az,
+      removeShaderPack: () => fz,
+      replaceShaderPack: () => Kz,
+      saveShaderPack: () => Rz,
+      shaderPackNeedsCheck: () => Jz,
+      storedPackOutcome: () => rz,
+      storedShaderPackFiles: () => dz,
+      toStoredShaderPack: () => pz
+    });
+    var Ez = bz(6307),
+      nz = bz(6331),
+      iz = bz(33),
+      lz = bz(3198),
+      Mz = bz(6382),
+      tz = bz(6352);
+    const Hz = "shaderPackChangePending";
+    let Oz = null;
+
+    function pz(zz, uz, bz) {
+      return {
+        manifest: zz.manifest,
+        files: (0, Ez.s)(zz.files),
+        validation: uz,
+        ...bz && {
+          listing: bz
+        }
+      }
     }
 
-    function wT(TT) {
-      const {
-        hooks: oT,
-        moduleCodes: IT,
-        reads: iT
-      } = TT;
-      return Array.from(TT.variantFlags, ((TT, zT) => {
-        const DT = zT * kT;
-        return {
-          key: rT(zT),
-          hooks: {
-            vertex: MT(oT[DT]),
-            surface: MT(oT[DT + 1]),
-            light: MT(oT[DT + 2])
-          },
-          moduleCode: IT[zT],
-          sceneDepth: 0 !== (TT & WT),
-          sunShadow: 0 !== (TT & BT),
-          airShadow: 0 !== (TT & FT),
-          movesVertices: 0 !== (TT & XT),
-          discards: 0 !== (TT & ST),
-          reads: {
-            vertex: gT(iT[2 * zT]),
-            fragment: gT(iT[2 * zT + 1])
-          }
-        }
+    function dz(zz) {
+      return Object.keys(zz.files).map((uz => ({
+        path: uz,
+        source: zz.files[uz]
+      })))
+    }
+    let Fz = Promise.resolve();
+
+    function Zz(zz) {
+      const uz = Fz.then(zz);
+      return Fz = uz.catch((() => {})), uz
+    }
+
+    function Rz(zz, uz) {
+      return Zz((() => wz(zz, uz)))
+    }
+
+    function Kz(zz, uz, bz) {
+      return Zz((async () => JSON.stringify(await (0, Mz.e)()) === JSON.stringify(zz) && (null === uz ? (await Xz(), !0) : wz(uz, bz))))
+    }
+    async function wz(zz, uz) {
+      const bz = await iz.d.setItem(Mz.d, zz);
+      return bz && Lz(zz, uz), bz
+    }
+    async function Xz() {
+      await iz.d.removeItem(Mz.d), iz.g.removeItem(lz.b)
+    }
+
+    function fz() {
+      return Zz(Xz)
+    }
+
+    function sz(zz, uz) {
+      return "active" === rz(zz, uz).kind
+    }
+
+    function rz(zz, uz) {
+      var bz;
+      return null === zz ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : vz(zz) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (bz = zz.validation) || void 0 === bz ? void 0 : bz.ok) || zz.validation.fromRecheck ? null === uz ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : Jz(zz, uz) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : zz.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
+      }
+    }
+
+    function oz() {
+      iz.h.setItem(Hz, performance.timeOrigin)
+    }
+
+    function Nz() {
+      return iz.h.getItem(Hz) === performance.timeOrigin
+    }
+
+    function vz(zz) {
+      return !(0, nz.g)(zz.manifest.apiVersion)
+    }
+
+    function xz(zz) {
+      return Oz ??= zz.hA((0, tz.shaderPackTextures)()), Oz
+    }
+
+    function Jz(zz, uz) {
+      var bz;
+      return (null === (bz = zz.validation) || void 0 === bz ? void 0 : bz.headerVersion) !== xz(uz)
+    }
+
+    function Az(zz) {
+      return Zz((async () => {
+        Lz(await (0, Mz.e)(!0), zz)
       }))
     }
-  },
-  39679: (TT, oT, IT) => {
-    IT.d(oT, {
-      A: () => xT,
-      B: () => cT,
-      c: () => zT,
-      d: () => iT,
-      e: () => LT,
-      h: () => ST,
-      l: () => MT,
-      n: () => kT,
-      q: () => XT,
-      r: () => BT,
-      v: () => WT,
-      z: () => KT
-    });
-    const iT = 3,
-      zT = 0,
-      kT = 1,
-      WT = 2,
-      XT = {
-        uniform: 3,
-        jL: 4,
-        special: 5,
-        volume: 6,
-        sampler: 7,
-        entities: 8,
-        entityGrids: 9
-      },
-      BT = 10,
-      FT = "BloxdPackInputs",
-      ST = "bloxdPackInputs",
-      DT = [{
-        name: "seconds",
-        type: "f32",
-        offset: 0
-      }, {
-        name: "lit",
-        type: "u32",
-        offset: 4
-      }, {
-        name: "renderOffset",
-        type: "vec3i",
-        offset: 16
-      }, {
-        name: "sunDirection",
-        type: "vec3f",
-        offset: 32
-      }, {
-        name: "eyePosition",
-        type: "vec3f",
-        offset: 48
-      }, {
-        name: "shadowDirection",
-        type: "vec3f",
-        offset: 64
-      }],
-      LT = 80;
 
-    function xT() {
-      const TT = DT.map((TT => {
-        let {
-          name: oT,
-          type: IT
-        } = TT;
-        return `    ${oT}: ${IT},\n`
-      })).join("");
-      return `struct ${FT} {\n${TT}}\n@group(${iT}) @binding(${zT}) var<uniform> ${ST}: ${FT};\n`
+    function Tz() {
+      return Zz((async () => {
+        iz.g.removeItem(lz.b)
+      }))
     }
 
-    function cT(TT, oT) {
-      const IT = new DataView(TT, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, LT),
-        [iT, zT, kT, WT, XT, BT] = DT;
-      IT.setFloat32(iT.offset, oT.seconds, !0), IT.setUint32(zT.offset, oT.lit ? 1 : 0, !0);
-      for (let FT = 0; FT < 3; FT++) IT.setInt32(kT.offset + 4 * FT, oT.renderOffset[FT], !0), IT.setFloat32(WT.offset + 4 * FT, oT.f_[FT], !0), IT.setFloat32(XT.offset + 4 * FT, oT.eyePosition[FT], !0), IT.setFloat32(BT.offset + 4 * FT, oT.shadowDirection[FT], !0)
-    }
-
-    function KT(TT) {
-      const oT = new Uint32Array(Math.max(1, TT.length));
-      return TT.forEach(((TT, IT) => {
-        let {
-          id: iT,
-          rotation: zT
-        } = TT;
-        oT[IT] = 65535 & iT | (3 & zT) << 16
-      })), oT
-    }
-    const MT = {
-      off: 0,
-      strict: 1,
-      allow: 2
+    function Lz(zz, uz) {
+      sz(zz, uz) ? iz.g.setItem(lz.b, !0) : iz.g.removeItem(lz.b)
     }
   },
-  6143: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => iT,
-      g: () => WT,
-      h: () => XT,
-      k: () => zT,
-      l: () => kT
+  6371: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => tz,
+      g: () => Mz
     });
-    const iT = ["terrain", "liquid", "model"];
-
-    function zT() {
-      const TT = [];
-      for (const oT of [!1, !0])
-        for (const IT of iT) TT.push({
-          strict: oT,
-          program: IT
-        });
-      return TT
+    var Ez = bz(6379),
+      nz = bz(6352),
+      iz = bz(115);
+    const lz = 100;
+    async function Mz(zz, uz) {
+      var bz;
+      let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (bz = navigator.gpu) && void 0 !== bz ? bz : null;
+      const lz = zz.B_(uz, (0, nz.shaderPackTextures)());
+      if (lz.errors.length > 0) return Hz(zz, lz.errors, lz.offInStrict);
+      const Mz = await async function(zz) {
+        if (!zz) return null;
+        try {
+          const uz = await (0, iz.w)(zz);
+          return uz ? await uz.requestDevice() : null
+        } catch (uz) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", uz), null
+        }
+      }(Ez);
+      if (!Mz) return null;
+      let tz = !1;
+      Mz.lost.then((() => {
+        tz = !0
+      }));
+      try {
+        const uz = await Promise.all(lz.validationModules.map((uz => async function(zz, uz, bz) {
+          uz.pushErrorScope("validation");
+          const Ez = uz.createShaderModule({
+              code: bz.code
+            }),
+            nz = uz.popErrorScope(),
+            {
+              messages: iz
+            } = await Ez.getCompilationInfo(),
+            lz = iz.filter((zz => "error" === zz.type)).map((uz => zz.mapValidationMessage(bz, uz))),
+            Mz = await nz;
+          Mz && 0 === lz.length && lz.push({
+            file: null,
+            line: 0,
+            message: Mz.message,
+            variants: [bz.key]
+          });
+          return lz
+        }(zz, Mz, uz))));
+        return tz ? null : Hz(zz, zz.tbz(uz.flat()), lz.offInStrict)
+      } catch (Oz) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", Oz), null
+      } finally {
+        Mz.destroy()
+      }
+    }
+    async function tz(zz, uz) {
+      var bz;
+      if (!(0, Ez.shaderPackNeedsCheck)(zz, uz) || (0, Ez.isOtherApiVersion)(zz)) return zz;
+      const nz = await Mz(uz, (0, Ez.storedShaderPackFiles)(zz));
+      if (!nz) return zz;
+      const iz = !1 === (null === (bz = zz.validation) || void 0 === bz ? void 0 : bz.ok) && !zz.validation.fromRecheck,
+        lz = {
+          ...zz,
+          validation: iz ? nz : {
+            ...nz,
+            fromRecheck: !0
+          }
+        };
+      return await (0, Ez.replaceShaderPack)(zz, lz, uz) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), lz
     }
 
-    function kT(TT) {
-      return `${TT.strict?"strict":"allow"}.${TT.program}`
+    function Hz(zz, uz, bz) {
+      return {
+        headerVersion: (0, Ez.pageShaderPackValidationVersion)(zz),
+        ok: 0 === uz.length,
+        errors: uz.slice(0, lz),
+        moreErrors: Math.max(0, uz.length - lz),
+        offInStrict: bz
+      }
     }
-
-    function WT(TT) {
-      return !TT.hooks.vertex && !TT.hooks.surface && !TT.hooks.light
-    }
-
-    function XT(TT, oT) {
-      return "off" !== oT && (null === TT || TT.some((TT => TT.key.strict === ("strict" === oT) && !WT(TT))))
-    }
-  },
-  39959: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      SHADER_PACK_INPUTS_BINDING: () => kT.c,
-      SHADER_PACK_INPUTS_GROUP: () => kT.d,
-      SHADER_PACK_INPUTS_SIZE: () => kT.e,
-      SHADER_PACK_INPUTS_VAR: () => kT.h,
-      SHADER_PACK_MODES: () => kT.l,
-      SHADER_PACK_PROGRAMS: () => iT.d,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => kT.n,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => kT.q,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => kT.r,
-      SHADER_PACK_TEXTURES_BINDING: () => kT.v,
-      encodeTextureLayers: () => kT.z,
-      flattenVariants: () => zT.c,
-      isVariantOff: () => iT.g,
-      packRunsIn: () => iT.h,
-      shaderPackInputsWgsl: () => kT.A,
-      shaderPackVariantKeys: () => iT.k,
-      variantKeyId: () => iT.l,
-      writeShaderPackInputs: () => kT.B
-    });
-    var iT = IT(6143),
-      zT = IT(6141),
-      kT = IT(39679)
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

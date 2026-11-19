@@ -1,37 +1,46 @@
 export const id = 156;
 export const ids = [156];
 export const modules = {
-  8344: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      pageBody: () => iT
+  8586: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const iT = {
-      whatIs: ["What if every sword, block and piece of armour came from a Lucky Block? Lucky Bedwars is the Bedwars mode where they do. Four teams of up to four players each get their own base and a bed to protect. Open Lucky Blocks for random weapons, armour, blocks and wild surprises, then race to break every other team's bed. You never know what you'll get, so expect lots of chaos, and every match is free to jump into from your browser."],
-      howToPlay: ["Before the match, your lobby votes on a map. You start with four Lucky Blocks. The first Basic Building and Basic Weapon blocks you open give you team wool and a weapon, so you're ready to go. Generators at your base and in the centre of the map keep the loot coming. Better armour equips itself automatically, and your compass points to the nearest enemy.", "Opening blocks, getting kills and breaking beds earns Clovers. Spend them at your Lucky Trader on the Lucky Blocks you want, or chip in 50 Clovers at a time towards team upgrades like the Bed Trap. Turn unwanted loot into Clovers in the Recycle tab. Twice a match, a random event shakes things up, and late in the game the arena starts to shrink. You can respawn as long as your bed stands, but once it's gone, dying makes you a spectator. The last team standing wins."],
-      features: ["4 Teams of up to 4 Players", "Building, Weapon, Armour and Food Lucky Blocks in Basic, Rare and Super Rarities", "Evil Lucky Blocks with Nasty Surprises", "Wild Items: Lucky Bombs, Swap Orbs, Fireballs, Iceballs, Toxin Balls and Void Nets", "Random Events: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm and Tiny Titans", "Bed Trap Team Upgrades", "4 Maps: Lucky Islands, Helicarrier, Nuclear and Turtles", "Leaderboards"],
-      tips: ["Open your four starting Lucky Blocks straight away to get wool and a weapon", "Chip in for the Bed Trap early. Evil Lucky Blocks around your bed can seal raiders in obsidian, poison them or send them home", "Save any Obsidian from Super Building blocks for your bed, because explosions can't destroy it", "Recycle loot you don't need. Anything you leave on the ground turns into Clovers after 8 seconds", "Beds can't be broken during an event, so use that time to regroup and stock up", "Stay alive until an event ends to earn bonus Clovers", "Be careful with Lucky and Unlucky Bombs, because they hit you too"],
-      similarGames: ["bedwars", "luckyTowers", "skywars"],
+    const Ez = {
+      whatIs: ["Protect your bed, destroy theirs. That's the whole idea of Bedwars, the team PvP strategy mode that's free to play online. Every team starts on its own floating island with a bed to protect. Collect resources, buy gear and team upgrades, then bridge across to the other islands and destroy their beds. Once a team's bed is gone they can't respawn. The last team standing wins. Want every item to come from a Lucky Block instead of the shop? Try Lucky Bedwars."],
+      howToPlay: ["Play Bedwars Solos, Duos, Trios, 4v4, 4v4v4v4 or 1v1. Generators on your island drop Coal, Iron Bars and Diamond. Spend them at the Item Shop on blocks, weapons, armour and tools, or at the Upgrades shopkeeper on team upgrades like Protection, Damage, Feather Falling, Health Regeneration and an Alarm. The generators in the centre of the map drop Diamond and Moonstone for the most powerful items.", "As the match goes on, bed defences are unfortified, the Diamond and Moonstone generators level up, and eventually every bed is destroyed. Then the arena shrinks until only one team is left."],
+      features: ["Solos, Duos, Trios, 4v4v4v4 and 4v4", "Ranked Bedwars Lobby", "Team Upgrades: Protection, Damage, Feather Falling, Health Regeneration and Alarm", "Match Modifiers like Lucky Chaos, Weapon Roulette, Treasure Guardians and Specialists", "Dozens of Maps", "Leaderboards"],
+      tips: ["Rush other teams' beds before they can upgrade their defences", "Split up attack and defence with your team", "Upgrade your gear in the shop before leaving your island", "Bridging backwards is faster than ez bridging", "Fight for the centre generators, because Diamond and Moonstone buy the best gear", "Buy an Alarm so you know when enemies reach your base"],
+      similarGames: ["luckyBedwars", "skywars", "luckyTowers"],
       faq: [{
-        question: "What is Bloxd Lucky Bedwars?",
-        answer: "It's Bedwars with a twist: all your gear comes from Lucky Blocks. Four teams of up to four players defend their beds and try to be the last team standing."
+        question: "What is Bedwars?",
+        answer: "Bedwars is a team PvP strategy game where you protect your bed and destroy everyone else's. Bloxd's version adds team upgrades, match modifiers and a Ranked lobby."
       }, {
-        question: "How do you play Lucky Bedwars?",
-        answer: "Open Lucky Blocks for weapons, armour and blocks, protect your bed and break the other teams' beds. You respawn while your bed stands. Without it, one death makes you a spectator."
+        question: "How do you win Bedwars?",
+        answer: "Be the last team standing. Destroy the other teams' beds so they can't respawn, then eliminate them before the arena shrinks."
       }, {
-        question: "How is Lucky Bedwars different from normal Bedwars?",
-        answer: "Your loot comes from Lucky Blocks, so every match is random. You earn Clovers to buy more Lucky Blocks and team upgrades, and random events change up each game."
+        question: "What happens after your bed is destroyed?",
+        answer: "You can't respawn. If you die after your bed is gone, you become a spectator."
       }, {
-        question: "What are Clovers in Lucky Bedwars?",
-        answer: "Clovers are the in-game currency. Earn them by opening Lucky Blocks, getting kills, breaking beds, recycling loot and surviving events. Spend them at the Lucky Trader or on team upgrades."
+        question: "What do the Bedwars generators do?",
+        answer: "Your island's generators drop Coal, Iron Bars and Diamond for items and upgrades. The generators in the centre drop Diamond and Moonstone for the most powerful items."
       }, {
-        question: "What's inside Evil Lucky Blocks?",
-        answer: "Bad luck! The Bed Trap upgrade puts Evil Lucky Blocks around your bed. Anyone who opens one could get trapped in obsidian, dropped in lava, webbed, poisoned, blinded, chased by guard dogs or sent home."
+        question: "What modes can I play in Bloxd Bedwars?",
+        answer: "Solos, Duos, Trios, 4v4, 4v4v4v4 and 1v1. There's also a Ranked Bedwars lobby if you want to climb the leaderboards."
       }, {
-        question: "What are the Lucky Bedwars events?",
-        answer: "Twice a match a random event starts: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm or Tiny Titans. You get a 30-second warning, and beds can't be broken while an event runs."
+        question: "What are match modifiers?",
+        answer: "Some matches add a twist. In Supercharged, every generator starts at Level 2. In Boom, explosives are half price. Weapon Roulette gives you a new random weapon every respawn, and in Specialists you pick a role with special perks."
+      }, {
+        question: "Can I attack my teammates?",
+        answer: "No, you can't attack players on your own team."
+      }, {
+        question: "How many Bedwars maps are there?",
+        answer: "Dozens, including Scary Hollow, Wood Factory, Ahoy!, Colosseum and Rooftops."
+      }, {
+        question: "What's the difference between Bedwars and Lucky Bedwars?",
+        answer: "In Bedwars you collect Coal, Iron Bars, Diamond and Moonstone from generators and choose what to buy. Lucky Bedwars hands out gear through Lucky Blocks instead, so no two matches play out the same."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

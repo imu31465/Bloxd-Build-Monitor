@@ -1,29 +1,29 @@
 export const id = 68;
 export const ids = [68];
 export const modules = {
-  35408: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => zT
+  35892: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => nz
     });
-    const iT = {
-      wait: function(TT) {
-        return new Promise((oT => {
-          setTimeout(oT, TT)
+    const Ez = {
+      wait: function(zz) {
+        return new Promise((uz => {
+          setTimeout(uz, zz)
         }))
       },
       stallMs: 2e4
     };
-    class zT {
-      constructor(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : iT;
-        this.url = TT, this.options = oT, this.timing = IT, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = TT
+    class nz {
+      constructor(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ez;
+        this.url = zz, this.options = uz, this.timing = bz, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = zz
       }
       ready() {
         if (null === this.fetched) {
-          const TT = new AbortController;
-          this.fetchAbort = TT, this.fetched = this.fetchWithRetries(TT.signal).finally((() => {
-            this.fetchAbort === TT && (this.fetchAbort = null)
+          const zz = new AbortController;
+          this.fetchAbort = zz, this.fetched = this.fetchWithRetries(zz.signal).finally((() => {
+            this.fetchAbort === zz && (this.fetchAbort = null)
           }))
         }
         return this.fetched
@@ -34,81 +34,81 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(TT) {
-        for (let oT = 0;; oT++) {
-          const IT = new URL(this.url);
-          if (oT > 0 && IT.searchParams.set("cache-bust", `${Date.now()}-${oT}`), await this.fetchWhole(IT, TT)) return void(this.scriptUrl = IT);
-          if (oT >= 3 || TT.aborted) return;
-          if (await this.timing.wait(500 * 2 ** oT), TT.aborted) return
+      async fetchWithRetries(zz) {
+        for (let uz = 0;; uz++) {
+          const bz = new URL(this.url);
+          if (uz > 0 && bz.searchParams.set("cache-bust", `${Date.now()}-${uz}`), await this.fetchWhole(bz, zz)) return void(this.scriptUrl = bz);
+          if (uz >= 3 || zz.aborted) return;
+          if (await this.timing.wait(500 * 2 ** uz), zz.aborted) return
         }
       }
-      async fetchWhole(TT, oT) {
-        const IT = new AbortController;
-        let iT;
-        const zT = () => {
-            clearTimeout(iT), iT = setTimeout((() => {
-              IT.abort()
+      async fetchWhole(zz, uz) {
+        const bz = new AbortController;
+        let Ez;
+        const nz = () => {
+            clearTimeout(Ez), Ez = setTimeout((() => {
+              bz.abort()
             }), this.timing.stallMs)
           },
-          kT = () => {
-            IT.abort()
+          iz = () => {
+            bz.abort()
           };
-        oT.addEventListener("abort", kT, {
+        uz.addEventListener("abort", iz, {
           once: !0
-        }), zT();
+        }), nz();
         try {
-          var WT;
-          const oT = await fetch(TT, {
-            signal: IT.signal
+          var lz;
+          const uz = await fetch(zz, {
+            signal: bz.signal
           });
-          if (!oT.ok) return !1;
-          const iT = null === (WT = oT.body) || void 0 === WT ? void 0 : WT.getReader();
-          if (!iT) return !1;
+          if (!uz.ok) return !1;
+          const Ez = null === (lz = uz.body) || void 0 === lz ? void 0 : lz.getReader();
+          if (!Ez) return !1;
           for (;;) {
             const {
-              done: TT
-            } = await iT.read();
-            if (TT) return !0;
-            zT()
+              done: zz
+            } = await Ez.read();
+            if (zz) return !0;
+            nz()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(iT), oT.removeEventListener("abort", kT)
+          clearTimeout(Ez), uz.removeEventListener("abort", iz)
         }
       }
     }
   },
-  42151: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      createWorldgenWorker: () => FT,
-      prefetchWorldgenWorker: () => XT,
-      stopWorldgenWorkerPrefetch: () => BT,
-      worldgenWorkerReady: () => WT
+  42630: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      createWorldgenWorker: () => Hz,
+      prefetchWorldgenWorker: () => Mz,
+      stopWorldgenWorkerPrefetch: () => tz,
+      worldgenWorkerReady: () => lz
     });
-    const iT = new(IT(35408).e)(new URL(IT.p + IT.u(67), IT.b), {
+    const Ez = new(bz(35892).c)(new URL(bz.p + bz.u(67), bz.b), {
       name: "worldgenWorker",
       type: "module"
     });
-    let zT = !1,
-      kT = !1;
+    let nz = !1,
+      iz = !1;
 
-    function WT() {
-      return zT = !0, iT.ready()
+    function lz() {
+      return nz = !0, Ez.ready()
     }
 
-    function XT() {
-      iT.ready()
+    function Mz() {
+      Ez.ready()
     }
 
-    function BT() {
-      zT || kT || (kT = !0, iT.cancel())
+    function tz() {
+      nz || iz || (iz = !0, Ez.cancel())
     }
 
-    function FT() {
-      return iT.start()
+    function Hz() {
+      return Ez.start()
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

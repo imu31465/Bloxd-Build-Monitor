@@ -1,80 +1,80 @@
 export const id = 91;
 export const ids = [91];
 export const modules = {
-  4341: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      Howl: () => zT.Howl,
-      Howler: () => zT.Howler,
-      iosAudio: () => BT,
-      musicOutput: () => MT,
-      readyAudioContext: () => rT
+  4616: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      Howl: () => nz.Howl,
+      Howler: () => nz.Howler,
+      iosAudio: () => tz,
+      musicOutput: () => Kz,
+      readyAudioContext: () => wz
     });
-    var iT, zT = IT(4349),
-      kT = IT(90);
-    const WT = zT.Howler;
-    let XT;
+    var Ez, nz = bz(4625),
+      iz = bz(96);
+    const lz = nz.Howler;
+    let Mz;
 
-    function BT() {
-      return XT ??= "ios" === (0, kT.getOperatingSystem)(), XT
+    function tz() {
+      return Mz ??= "ios" === (0, iz.getOperatingSystem)(), Mz
     }
 
-    function FT() {
-      var TT, oT;
-      if (WT.ctx || !WT.usingWebAudio || "undefined" === typeof AudioContext || !BT()) return;
-      const IT = navigator.audioSession;
-      let iT;
-      "auto" === (null === IT || void 0 === IT ? void 0 : IT.type) && (IT.type = "ambient");
+    function Hz() {
+      var zz, uz;
+      if (lz.ctx || !lz.usingWebAudio || "undefined" === typeof AudioContext || !tz()) return;
+      const bz = navigator.audioSession;
+      let Ez;
+      "auto" === (null === bz || void 0 === bz ? void 0 : bz.type) && (bz.type = "ambient");
       try {
-        iT = new AudioContext({
+        Ez = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const zT = iT.createGain();
-      zT.gain.setValueAtTime(WT._muted ? 0 : null !== (TT = WT._volume) && void 0 !== TT ? TT : 1, iT.currentTime), zT.connect(iT.destination), WT.ctx = iT, WT.masterGain = zT, null === (oT = WT._setup) || void 0 === oT || oT.call(WT)
+      const nz = Ez.createGain();
+      nz.gain.setValueAtTime(lz._muted ? 0 : null !== (zz = lz._volume) && void 0 !== zz ? zz : 1, Ez.currentTime), nz.connect(Ez.destination), lz.ctx = Ez, lz.masterGain = nz, null === (uz = lz._setup) || void 0 === uz || uz.call(lz)
     }
-    WT._mobileUnloaded = !0;
-    const ST = WT.volume.bind(zT.Howler);
-    WT.volume = function() {
-      return FT(), ST(...arguments)
+    lz._mobileUnloaded = !0;
+    const Oz = lz.volume.bind(nz.Howler);
+    lz.volume = function() {
+      return Hz(), Oz(...arguments)
     };
-    const DT = WT.mute.bind(zT.Howler);
-    WT.mute = TT => (FT(), DT(TT));
-    const LT = zT.Howl.prototype,
-      xT = LT.init;
-    LT.init = function(TT) {
-      return FT(), xT.call(this, TT)
+    const pz = lz.mute.bind(nz.Howler);
+    lz.mute = zz => (Hz(), pz(zz));
+    const dz = nz.Howl.prototype,
+      Fz = dz.init;
+    dz.init = function(zz) {
+      return Hz(), Fz.call(this, zz)
     };
-    let cT = 0;
-    const KT = null === (iT = WT._autoSuspend) || void 0 === iT ? void 0 : iT.bind(zT.Howler);
+    let Zz = 0;
+    const Rz = null === (Ez = lz._autoSuspend) || void 0 === Ez ? void 0 : Ez.bind(nz.Howler);
 
-    function MT() {
-      rT();
+    function Kz() {
+      wz();
       const {
-        ctx: TT,
-        masterGain: oT
-      } = WT;
-      return TT && oT ? {
-        ctx: TT,
-        destination: oT,
-        holdAwake: TT => {
-          var oT, IT;
-          (cT += TT ? 1 : -1, TT) ? null === (oT = WT._autoResume) || void 0 === oT || oT.call(WT): null === (IT = WT._autoSuspend) || void 0 === IT || IT.call(WT)
+        ctx: zz,
+        masterGain: uz
+      } = lz;
+      return zz && uz ? {
+        ctx: zz,
+        destination: uz,
+        holdAwake: zz => {
+          var uz, bz;
+          (Zz += zz ? 1 : -1, zz) ? null === (uz = lz._autoResume) || void 0 === uz || uz.call(lz): null === (bz = lz._autoSuspend) || void 0 === bz || bz.call(lz)
         },
         wake: () => {
-          var oT;
-          "running" !== TT.state && (null === (oT = WT._autoResume) || void 0 === oT || oT.call(WT), TT.resume().catch((() => {})))
+          var uz;
+          "running" !== zz.state && (null === (uz = lz._autoResume) || void 0 === uz || uz.call(lz), zz.resume().catch((() => {})))
         }
       } : null
     }
 
-    function rT() {
-      var TT;
-      (WT.volume(), WT.ctx && WT.autoUnlock) && (null === (TT = WT._unlockAudio) || void 0 === TT || TT.call(WT))
+    function wz() {
+      var zz;
+      (lz.volume(), lz.ctx && lz.autoUnlock) && (null === (zz = lz._unlockAudio) || void 0 === zz || zz.call(lz))
     }
-    KT && (WT._autoSuspend = () => cT > 0 ? zT.Howler : KT())
+    Rz && (lz._autoSuspend = () => Zz > 0 ? nz.Howler : Rz())
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

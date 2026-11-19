@@ -1,62 +1,62 @@
 export const id = 350;
 export const ids = [350];
 export const modules = {
-  60091: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      applyLightFoOffset: () => WT,
-      getFloatingOriginOffset: () => zT,
-      lightFoVersion: () => kT,
-      wrapRenderableForFO: () => XT
+  60400: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      applyLightFoOffset: () => lz,
+      getFloatingOriginOffset: () => nz,
+      lightFoVersion: () => iz,
+      wrapRenderableForFO: () => Mz
     });
-    var iT = IT(40563);
+    var Ez = bz(40946);
 
-    function zT(TT) {
-      const oT = TT.camera;
-      if (!oT) return {
+    function nz(zz) {
+      const uz = zz.camera;
+      if (!uz) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const IT = oT.worldMatrix;
+      const bz = uz.worldMatrix;
       return {
-        x: IT[12],
-        y: IT[13],
-        z: IT[14]
+        x: bz[12],
+        y: bz[13],
+        z: bz[14]
       }
     }
 
-    function kT(TT) {
-      return TT.camera ? TT.camera.worldMatrixVersion : 0
+    function iz(zz) {
+      return zz.camera ? zz.camera.worldMatrixVersion : 0
     }
 
-    function WT(TT, oT) {
-      const IT = oT.camera?.worldMatrix;
-      if (!IT) return;
-      const zT = IT[12],
-        kT = IT[13],
-        WT = IT[14];
-      let XT = 0;
-      for (const BT of oT.lights) {
-        if (XT >= iT.e) break;
-        if (!BT._writeLightUbo) continue;
-        const oT = 4 + 16 * XT,
-          IT = TT[oT + 3];
-        if (0 === IT || 2 === IT) {
-          const IT = BT.worldMatrix;
-          TT[oT] = IT[12] - zT, TT[oT + 1] = IT[13] - kT, TT[oT + 2] = IT[14] - WT
+    function lz(zz, uz) {
+      const bz = uz.camera?.worldMatrix;
+      if (!bz) return;
+      const nz = bz[12],
+        iz = bz[13],
+        lz = bz[14];
+      let Mz = 0;
+      for (const tz of uz.lights) {
+        if (Mz >= Ez.b) break;
+        if (!tz._writeLightUbo) continue;
+        const uz = 4 + 16 * Mz,
+          bz = zz[uz + 3];
+        if (0 === bz || 2 === bz) {
+          const bz = tz.worldMatrix;
+          zz[uz] = bz[12] - nz, zz[uz + 1] = bz[13] - iz, zz[uz + 2] = bz[14] - lz
         }
-        XT++
+        Mz++
       }
     }
 
-    function XT(TT, oT, IT) {
-      let iT = -1;
+    function Mz(zz, uz, bz) {
+      let Ez = -1;
       return () => {
-        const zT = oT.camera ? oT.camera.worldMatrixVersion : -1;
-        zT !== iT && (IT(), iT = zT), TT()
+        const nz = uz.camera ? uz.camera.worldMatrixVersion : -1;
+        nz !== Ez && (bz(), Ez = nz), zz()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

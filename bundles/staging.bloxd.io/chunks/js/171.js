@@ -1,37 +1,37 @@
 export const id = 171;
 export const ids = [171];
 export const modules = {
-  8418: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      pageBody: () => iT
+  8668: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const iT = {
-      whatIs: ["Build a home, earn some gold and take life at your own pace. Bloxd Greenville is a chill social sandbox and life sim set in a laid-back town. You work jobs, play mini-games and hang out with other players, and there's no rush to do any of it."],
-      howToPlay: ["Press B to pick your starting house, then take the portal to the Town Square and start earning gold. Choose a job. You could help customers at the Market, smash blocks and buildings in Demolition, dig for minerals in Mining, or try Woodcutting and Farming. Jobs level up the more you work them, so your earnings grow over time.", "Spend your gold in the shop on new houses like the Castle, Treehouse, Hobbit Hole or Japanese House. Or grab an Empty Plot and build a house of your own. You can also unlock fast travel, buy flower and wool packs, and sell the stuff you collect. Keep your mood up by resting in your bed, because a happy player earns alot more. Once your home's ready, throw a party and invite everyone over."],
-      features: ["Unlock and Switch Between Houses and Plots", "Build Your Own House on an Empty Plot", "5 Jobs to Level Up: Market, Demolition, Mining, Woodcutting and Farming", "PvP Arena and Spleef Mini-Games", "Unlock Fast Travel to Get Around Quickly", "Host Parties and Choose Who Can Visit", "Turn On PvP or Build a Parkour Course at Home"],
-      tips: ["Rest in your bed when your mood drops. Low mood means lower earnings.", "A better bed means bigger earnings, so upgrade it when you can", "Sell the items you collect in the shop for extra gold", "In Mining, head back up to sell when your backpack's full", "Some minerals need a higher Mining level, so keep levelling", "Use the booster in Demolition to multi-jump up tall buildings", "Spleef needs at least 2 players, so bring a mate", "Building a parkour course? Light blue wool is the start, yellow is a checkpoint, orange is the finish and red eliminates players"],
-      similarGames: ["plots", "classic_creative", "fishing", "classic"],
+    const Ez = {
+      whatIs: ["Build machines on your own floating island and watch them work! That's Bloxd Build a Factory 2 in one line. You mine ore, link your machines up with conveyor belts and turn a couple of drills into a massive, fully automated factory. Never played a factory game before? Don't worry, it's easy to pick up. The original Build a Factory is a race to launch a rocket before a shared world resets. This one's about growing your own island."],
+      howToPlay: ["Use your Workbench to make a Machine Bench. Build a Burner Drill, stick it on an ore Deposit and give it fuel, and it starts mining by itself. Belt the ore into a Crusher to turn it into Grit (that's crushed ore), then into a Smelter to make bars. From there you can press bars into plates, spin Copper Bars into wire and make parts like Motors at the Parts Bench. Give your Core the parts it asks for and it moves up a tier, which unlocks better machines.", "For power you've got Generators, Solar Panels and Volt Engines. Drop down into the Wilds below your island to find rare ore, open ruin chests for Salvage and break fallen comets, then head home and build bigger. When you log off, your island pauses and picks up right where it left off when you're back."],
+      features: ["Your Own Floating Factory Island", "Conveyor Belts, Fast Belts, Splitters, Sorting Gates, Belt Lifts and Tunnels", "Drills, Crushers, Smelters, Presses, Wire Mills, Assemblers and More", "Tier Up Your Core to Unlock New Machines, Then Build the Star Spire", "Power from Generators, Solar Panels and Volt Engines", "Explore the Wilds for Rare Ore, Ruin Chests and Comets", "Fill Star Forge Orders for Deposit Seeds and Comet Cores", "Build Several Islands, Play Co-op with Friends or Visit Theirs"],
+      tips: ["Use Deposit Seeds to grow Deposits that never run out", "Crush ore into Grit before you smelt it and you'll get twice the bars", "Teach a Sorting Gate an item and it'll send that item down its own belt", "A Power Coupler makes Crushers, Smelters and Alloy Kilns twice as fast", "Belt spare items into a Storage Silo so your belts don't jam", "Carry an Ore Lens in the Wilds and it'll point you to the nearest rare ore"],
+      similarGames: ["survivalFactory", "skyblock", "oneBlock", "classic_survival"],
       faq: [{
-        question: "What is Bloxd Greenville?",
-        answer: "A town life sim where you build a home, earn gold from jobs and play mini-games with other players."
+        question: "What is Build a Factory 2 on Bloxd?",
+        answer: "An idle factory builder. You build machines on your own floating island, connect them with conveyor belts and let them make everything for you."
       }, {
-        question: "How do I earn gold in Greenville?",
-        answer: "Work jobs like Market, Demolition, Mining, Woodcutting and Farming, eliminate players in the Arena and Spleef, and sell what you collect. Keep your mood up as well, because low mood cuts your earnings."
+        question: "Is Build a Factory 2 an idle factory game?",
+        answer: "Partly. Once it's set up, your factory runs by itself while you explore the Wilds or plan your next build. It pauses while you're offline and carries on where it stopped when you come back."
       }, {
-        question: "Can I build my own house in Greenville?",
-        answer: "Yes! Pick one of the ready-made houses in the shop, or unlock an Empty Plot and build from scratch."
+        question: "How do I unlock new machines in Build a Factory 2?",
+        answer: "Tier up your Core by giving it the parts it asks for, like Motors and, later on, Logic Boards. Every new tier unlocks more machines and items."
       }, {
-        question: "How do I change my house in Bloxd Greenville?",
-        answer: "Unlock new houses in the Houses section of the shop, then switch to whichever one you like."
+        question: "What's the best way to power my factory?",
+        answer: "You've got a few options. Burn Coal or Charcoal in a Generator, build Solar Panels (they keep running at night at half power), or run Volt Engines on Voltite Cells for loads of power. Add Charge Vaults to store more."
       }, {
-        question: "Can my friends visit my house?",
-        answer: "Sure. Turn on Allow Entry, add friends to your whitelist, or host a party to invite everyone over. You also get to choose who's allowed to edit your home."
+        question: "What are the Wilds?",
+        answer: "The land below your island. Drop down to mine rare ore, loot ruin chests for Salvage, explore the Old Works and break fallen comets for Comet Cores."
       }, {
-        question: "Which mini-games are in Greenville?",
-        answer: "Spleef, where you try to make every other player fall, and the Arena, where you battle other players in PvP. Both pay out gold."
+        question: "Can friends help build my factory?",
+        answer: "Definitely. Invite friends to a shared co-op island, or use /visit to have a look around other players' islands."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

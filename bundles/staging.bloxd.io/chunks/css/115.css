@@ -768,7 +768,6 @@
 .GameEventPanel .GameEventPanelCard .GameEventPanelInfo .GameEventPanelStatus .GameEventPanelLive .GameEventPanelLiveDot {
   animation: GameBadgeLivePulse 1.6s ease-in-out infinite;
   background-color: #fff;
-  border-radius: 50%;
   height: .45rem;
   width: .45rem
 }

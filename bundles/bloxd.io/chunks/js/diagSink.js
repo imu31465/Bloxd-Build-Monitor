@@ -1,124 +1,124 @@
 export const id = 30;
 export const ids = [30];
 export const modules = {
-  35429: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      DUMP_GAP_MS: () => BT,
-      DiagSink: () => LT,
-      ITEM_GAP_MS: () => zT,
-      ITEM_METADATA_BYTES: () => XT,
-      MAX_MESSAGE_BYTES: () => kT
+  35909: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      DUMP_GAP_MS: () => tz,
+      DiagSink: () => dz,
+      ITEM_GAP_MS: () => nz,
+      ITEM_METADATA_BYTES: () => Mz,
+      MAX_MESSAGE_BYTES: () => iz
     });
-    const iT = "bloxdDiagSinkDays",
-      zT = 4e4,
-      kT = 2048,
-      WT = 262144,
-      XT = 1500,
-      BT = 6e5,
-      FT = new TextEncoder;
+    const Ez = "bloxdDiagSinkDays",
+      nz = 4e4,
+      iz = 2048,
+      lz = 262144,
+      Mz = 1500,
+      tz = 6e5,
+      Hz = new TextEncoder;
 
-    function ST(TT) {
-      return FT.encode(TT).length
+    function Oz(zz) {
+      return Hz.encode(zz).length
     }
 
-    function DT(TT) {
-      return XT + ST(TT)
+    function pz(zz) {
+      return Mz + Oz(zz)
     }
-    class LT {
-      constructor(TT, oT) {
-        this.claim = TT, this.deps = oT, this.queue = [], this.pageLines = 0, this.pageBytes = 0, this.stopped = !1, this.dropped = !1, this.lastSentMs = Number.NEGATIVE_INFINITY, this.lastDumpMs = void 0, this.sentDumps = new Map, this.lastDumpMs = oT.now()
+    class dz {
+      constructor(zz, uz) {
+        this.claim = zz, this.deps = uz, this.queue = [], this.pageLines = 0, this.pageBytes = 0, this.stopped = !1, this.dropped = !1, this.lastSentMs = Number.NEGATIVE_INFINITY, this.lastDumpMs = void 0, this.sentDumps = new Map, this.lastDumpMs = uz.now()
       }
       start() {
         setInterval((() => {
-          this.dD()
-        }), zT), window.addEventListener("visibilitychange", (() => {
+          this.sd()
+        }), nz), window.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }), !0)
       }
-      add(TT) {
-        this.stopped || (this.pageLines + this.queue.length < 500 ? this.queue.push(function(TT) {
-          return TT.replace(/\n/g, " | ").slice(0, 400)
-        }(TT)) : this.dropped = !0)
+      add(zz) {
+        this.stopped || (this.pageLines + this.queue.length < 500 ? this.queue.push(function(zz) {
+          return zz.replace(/\n/g, " | ").slice(0, 400)
+        }(zz)) : this.dropped = !0)
       }
-      dD() {
-        this.deps.now() - this.lastDumpMs >= BT && (this.lastDumpMs = this.deps.now(), this.queueDumps()), this.flush()
+      sd() {
+        this.deps.now() - this.lastDumpMs >= tz && (this.lastDumpMs = this.deps.now(), this.queueDumps()), this.flush()
       }
       flush() {
-        if (this.stopped || 0 === this.queue.length || this.deps.now() - this.lastSentMs < zT - 1e3) return;
-        const TT = this.readDay(),
-          oT = [];
-        let IT = 0,
-          iT = null;
-        for (const zT of this.queue) {
-          const BT = ST(zT) + (oT.length > 0 ? 1 : 0);
-          if (IT + BT > kT) break;
-          const FT = XT + IT + BT;
-          if (this.pageBytes + FT > WT) {
-            iT = "page";
+        if (this.stopped || 0 === this.queue.length || this.deps.now() - this.lastSentMs < nz - 1e3) return;
+        const zz = this.readDay(),
+          uz = [];
+        let bz = 0,
+          Ez = null;
+        for (const nz of this.queue) {
+          const tz = Oz(nz) + (uz.length > 0 ? 1 : 0);
+          if (bz + tz > iz) break;
+          const Hz = Mz + bz + tz;
+          if (this.pageBytes + Hz > lz) {
+            Ez = "page";
             break
           }
-          if (!this.dayFits(TT, oT.length + 1, FT)) {
-            iT = "day";
+          if (!this.dayFits(zz, uz.length + 1, Hz)) {
+            Ez = "day";
             break
           }
-          oT.push(zT), IT += BT
+          uz.push(nz), bz += tz
         }
-        null === iT && this.dropped && oT.length === this.queue.length && (iT = "page"), this.queue.splice(0, oT.length), oT.length > 0 && !this.sendCharged(TT, oT.join("\n"), oT.length, "lines") || null !== iT && this.stopAt(iT, TT)
+        null === Ez && this.dropped && uz.length === this.queue.length && (Ez = "page"), this.queue.splice(0, uz.length), uz.length > 0 && !this.sendCharged(zz, uz.join("\n"), uz.length, "lines") || null !== Ez && this.stopAt(Ez, zz)
       }
       queueDumps() {
-        for (const [TT, oT] of this.deps.dumps()) {
-          const IT = oT.split("\n").slice(0, 20),
-            iT = IT.join("\n");
-          if (this.sentDumps.get(TT) !== iT) {
-            this.sentDumps.set(TT, iT);
-            for (const oT of IT) this.add(`[dump:${TT}] ${oT}`)
+        for (const [zz, uz] of this.deps.dumps()) {
+          const bz = uz.split("\n").slice(0, 20),
+            Ez = bz.join("\n");
+          if (this.sentDumps.get(zz) !== Ez) {
+            this.sentDumps.set(zz, Ez);
+            for (const uz of bz) this.add(`[dump:${zz}] ${uz}`)
           }
         }
       }
-      stopAt(TT, oT) {
+      stopAt(zz, uz) {
         this.stopped = !0, this.queue.length = 0;
-        const IT = "page" === TT ? "diag_cap: the page's cap (500 lines, 256 KB), so this page sends no more" : `diag_cap: the claim's daily cap (${this.claim.perClientLines} lines, ${this.dayBytes()/1e3} KB), so it sends no more today`;
-        if ("day" === TT) {
-          if (oT.capSent) return;
-          oT.capSent = !0
-        } else if (!this.dayFits(oT, 1, DT(IT))) return;
-        this.sendCharged(oT, IT, 1, "cap")
+        const bz = "page" === zz ? "diag_cap: the page's cap (500 lines, 256 KB), so this page sends no more" : `diag_cap: the claim's daily cap (${this.claim.perClientLines} lines, ${this.dayBytes()/1e3} KB), so it sends no more today`;
+        if ("day" === zz) {
+          if (uz.capSent) return;
+          uz.capSent = !0
+        } else if (!this.dayFits(uz, 1, pz(bz))) return;
+        this.sendCharged(uz, bz, 1, "cap")
       }
       dayBytes() {
         return 400 * this.claim.perClientLines
       }
-      dayFits(TT, oT, IT) {
-        return TT.lines + oT <= this.claim.perClientLines && TT.bytes + IT <= this.dayBytes()
+      dayFits(zz, uz, bz) {
+        return zz.lines + uz <= this.claim.perClientLines && zz.bytes + bz <= this.dayBytes()
       }
       readDays() {
-        var TT;
-        return null !== (TT = this.deps.storage.getItem(iT)) && void 0 !== TT ? TT : {}
+        var zz;
+        return null !== (zz = this.deps.storage.getItem(Ez)) && void 0 !== zz ? zz : {}
       }
       readDay() {
-        const TT = new Date(this.deps.now()).toISOString().slice(0, 10),
-          oT = this.readDays()[this.claim.claimId];
-        return (null === oT || void 0 === oT ? void 0 : oT.day) === TT ? oT : {
-          day: TT,
+        const zz = new Date(this.deps.now()).toISOString().slice(0, 10),
+          uz = this.readDays()[this.claim.claimId];
+        return (null === uz || void 0 === uz ? void 0 : uz.day) === zz ? uz : {
+          day: zz,
           lines: 0,
           bytes: 0,
           capSent: !1
         }
       }
-      writeDay(TT) {
-        const oT = Object.fromEntries(Object.entries(this.readDays()).filter((oT => {
-          let [, IT] = oT;
-          return IT.day === TT.day
+      writeDay(zz) {
+        const uz = Object.fromEntries(Object.entries(this.readDays()).filter((uz => {
+          let [, bz] = uz;
+          return bz.day === zz.day
         })));
-        return oT[this.claim.claimId] = TT, this.deps.storage.setItem(iT, oT)
+        return uz[this.claim.claimId] = zz, this.deps.storage.setItem(Ez, uz)
       }
-      sendCharged(TT, oT, IT, iT) {
-        const zT = DT(oT);
-        return TT.lines += IT, TT.bytes += zT, this.writeDay(TT) ? (this.pageLines += IT, this.pageBytes += zT, this.lastSentMs = this.deps.now(), this.deps.send(oT, {
-          diag_kind: iT
+      sendCharged(zz, uz, bz, Ez) {
+        const nz = pz(uz);
+        return zz.lines += bz, zz.bytes += nz, this.writeDay(zz) ? (this.pageLines += bz, this.pageBytes += nz, this.lastSentMs = this.deps.now(), this.deps.send(uz, {
+          diag_kind: Ez
         }), !0) : (console.warn("The diag sink can't keep its daily count, so it sends nothing"), this.stopped = !0, this.queue.length = 0, !1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

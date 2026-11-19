@@ -1,308 +1,308 @@
 export const id = 86;
 export const ids = [86];
 export const modules = {
-  37747: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => kT,
-      i: () => BT,
-      m: () => FT,
-      p: () => XT,
-      s: () => WT
+  38136: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      d: () => tz,
+      e: () => Hz,
+      g: () => Mz,
+      j: () => lz
     });
-    const iT = "A valid external Instance reference no longer exists.",
-      zT = [
+    const Ez = "A valid external Instance reference no longer exists.",
+      nz = [
         [1e4, "<10s", "lt10s"],
         [6e4, "<1m", "lt1m"],
         [3e5, "<5m", "lt5m"],
         [18e5, "<30m", "lt30m"],
         [1 / 0, "30m+", "ge30m"]
       ];
-    const kT = {
+    const iz = {
       WebGPU: "WebGPU device lost",
       WebGL2: "WebGL2 context lost"
     };
 
-    function WT(TT, oT) {
-      return TT ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(TT) {
-        var oT;
-        const IT = null !== (oT = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(TT)) && void 0 !== oT ? oT : /failed with ([A-Z][A-Z0-9_]+)/.exec(TT);
-        return IT ? IT[1] : TT.includes(iT) ? "gpu_process_lost" : "other"
-      }(oT)
+    function lz(zz, uz) {
+      return zz ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(zz) {
+        var uz;
+        const bz = null !== (uz = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(zz)) && void 0 !== uz ? uz : /failed with ([A-Z][A-Z0-9_]+)/.exec(zz);
+        return bz ? bz[1] : zz.includes(Ez) ? "gpu_process_lost" : "other"
+      }(uz)
     }
 
-    function XT(TT) {
-      return `${(null===TT||void 0===TT?void 0:TT.vendor)||"unknown vendor"} ${(null===TT||void 0===TT?void 0:TT.architecture)||"unknown architecture"}`
+    function Mz(zz) {
+      return `${(null===zz||void 0===zz?void 0:zz.vendor)||"unknown vendor"} ${(null===zz||void 0===zz?void 0:zz.architecture)||"unknown architecture"}`
     }
 
-    function BT(TT) {
-      return ST(TT)[1]
+    function tz(zz) {
+      return Oz(zz)[1]
     }
 
-    function FT(TT) {
-      return ST(TT)[2]
+    function Hz(zz) {
+      return Oz(zz)[2]
     }
 
-    function ST(TT) {
-      var oT;
-      return null !== (oT = zT.find((oT => {
-        let [IT] = oT;
-        return TT < IT
-      }))) && void 0 !== oT ? oT : zT[zT.length - 1]
+    function Oz(zz) {
+      var uz;
+      return null !== (uz = nz.find((uz => {
+        let [bz] = uz;
+        return zz < bz
+      }))) && void 0 !== uz ? uz : nz[nz.length - 1]
     }
   },
-  38038: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => iT,
-      f: () => zT
+  38429: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Ez,
+      d: () => nz
     });
-    const iT = 45e3;
-    class zT extends Error {
+    const Ez = 45e3;
+    class nz extends Error {
       constructor() {
         super("The game server didn't answer in time"), this.name = "SeatRequestTimedOut"
       }
     }
   },
-  35488: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => iT,
-      f: () => zT,
-      h: () => kT
+  35959: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Ez,
+      i: () => nz,
+      j: () => iz
     });
-    const iT = 1024,
-      zT = 1024 * iT;
+    const Ez = 1024,
+      nz = 1024 * Ez;
 
-    function kT(TT) {
-      return (TT / zT).toFixed(1)
+    function iz(zz) {
+      return (zz / nz).toFixed(1)
     }
   },
-  35479: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => kT,
-      f: () => XT,
-      g: () => WT,
-      h: () => BT,
-      i: () => FT
+  35956: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      g: () => Mz,
+      j: () => lz,
+      l: () => tz,
+      p: () => Hz
     });
-    var iT = IT(193);
-    const zT = 32 * IT(35488).f,
-      kT = 6144,
-      WT = 4608,
-      XT = 512;
+    var Ez = bz(195);
+    const nz = 32 * bz(35959).i,
+      iz = 6144,
+      lz = 4608,
+      Mz = 512;
 
-    function BT(TT) {
-      return Math.floor(zT * TT / kT)
+    function tz(zz) {
+      return Math.floor(nz * zz / iz)
     }
 
-    function FT(TT) {
-      const oT = TT - Math.floor(TT / 6);
-      let IT = iT.c.maxChunkHorizAddDistance,
-        zT = iT.c.maxChunkVertAddDistance;
-      if (ST(IT + 1, zT + 1) <= oT) return null;
-      for (; ST(IT + 1, zT + 1) > oT && (IT > 0 || zT > 0);) IT > zT ? IT-- : zT--;
+    function Hz(zz) {
+      const uz = zz - Math.floor(zz / 6);
+      let bz = Ez.e.maxChunkHorizAddDistance,
+        nz = Ez.e.maxChunkVertAddDistance;
+      if (Oz(bz + 1, nz + 1) <= uz) return null;
+      for (; Oz(bz + 1, nz + 1) > uz && (bz > 0 || nz > 0);) bz > nz ? bz-- : nz--;
       return {
-        horizontal: IT,
-        vertical: zT
+        horizontal: bz,
+        vertical: nz
       }
     }
 
-    function ST(TT, oT) {
-      const IT = Math.max(TT, oT);
-      let iT = 0;
-      for (let zT = -IT; zT <= IT; zT++)
-        for (let kT = -IT; kT <= IT; kT++)
-          for (let WT = -IT; WT <= IT; WT++) DT(TT, oT, zT, kT, WT) && iT++;
-      return iT
+    function Oz(zz, uz) {
+      const bz = Math.max(zz, uz);
+      let Ez = 0;
+      for (let nz = -bz; nz <= bz; nz++)
+        for (let iz = -bz; iz <= bz; iz++)
+          for (let lz = -bz; lz <= bz; lz++) pz(zz, uz, nz, iz, lz) && Ez++;
+      return Ez
     }
 
-    function DT(TT, oT, IT, iT, zT) {
-      const kT = IT * IT + zT * zT;
-      return TT === oT ? kT + iT * iT <= TT * TT : TT > oT ? Math.abs(iT) <= oT && kT + iT * iT <= TT * TT : kT <= TT * TT && kT + iT * iT <= oT * oT
+    function pz(zz, uz, bz, Ez, nz) {
+      const iz = bz * bz + nz * nz;
+      return zz === uz ? iz + Ez * Ez <= zz * zz : zz > uz ? Math.abs(Ez) <= uz && iz + Ez * Ez <= zz * zz : iz <= zz * zz && iz + Ez * Ez <= uz * uz
     }
   },
-  39656: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => zT,
-      e: () => kT,
-      h: () => XT,
-      k: () => ST,
-      n: () => BT,
-      q: () => WT
+  40049: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz,
+      h: () => iz,
+      k: () => Mz,
+      m: () => Oz,
+      q: () => tz,
+      r: () => lz
     });
-    var iT = IT(193);
-    const zT = 3e3,
-      kT = 15e3;
+    var Ez = bz(195);
+    const nz = 3e3,
+      iz = 15e3;
 
-    function WT(TT) {
-      const oT = TT.endsWith(iT.k);
+    function lz(zz) {
+      const uz = zz.endsWith(Ez.k);
       return {
-        text: (oT ? TT.slice(0, -iT.k.length) : TT) || null,
-        dropsCache: oT
+        text: (uz ? zz.slice(0, -Ez.k.length) : zz) || null,
+        dropsCache: uz
       }
     }
-    const XT = "Either your internet isn't working or this is a bug.";
+    const Mz = "Either your internet isn't working or this is a bug.";
 
-    function BT(TT, oT) {
-      const IT = ST(TT);
-      return null !== IT.name && "" === iT.b[IT.name].text && null !== oT ? oT : IT.reason
+    function tz(zz, uz) {
+      const bz = Oz(zz);
+      return null !== bz.name && "" === Ez.b[bz.name].text && null !== uz ? uz : bz.reason
     }
-    const FT = "You were removed from the game.";
+    const Hz = "You were removed from the game.";
 
-    function ST(TT) {
-      var oT;
-      let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const zT = null !== (oT = Object.keys(iT.b).find((oT => iT.b[oT].code === TT))) && void 0 !== oT ? oT : null;
-      if (null === zT) return {
-        code: TT,
-        name: zT,
-        reason: null !== IT && void 0 !== IT ? IT : `${XT}\nCode: ${TT}`,
+    function Oz(zz) {
+      var uz;
+      let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const nz = null !== (uz = Object.keys(Ez.b).find((uz => Ez.b[uz].code === zz))) && void 0 !== uz ? uz : null;
+      if (null === nz) return {
+        code: zz,
+        name: nz,
+        reason: null !== bz && void 0 !== bz ? bz : `${Mz}\nCode: ${zz}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: kT,
-        canReconnect: WT = !1
-      } = iT.b[zT], BT = TT === iT.b.outdatedVersion.code || TT === iT.b.loadRecaptchaError.code;
+        text: iz,
+        canReconnect: lz = !1
+      } = Ez.b[nz], tz = zz === Ez.b.outdatedVersion.code || zz === Ez.b.loadRecaptchaError.code;
       return {
-        code: TT,
-        name: zT,
-        reason: "" !== kT ? kT : null !== IT && void 0 !== IT ? IT : TT === iT.b.gameOrPluginKick.code ? FT : `Code: ${TT}`,
-        canReconnect: WT,
-        automaticallyReconnect: TT === iT.b.customGameUpdated.code || TT === iT.b.duplicateLobbyNameError.code,
-        requiresRefresh: BT
+        code: zz,
+        name: nz,
+        reason: "" !== iz ? iz : null !== bz && void 0 !== bz ? bz : zz === Ez.b.gameOrPluginKick.code ? Hz : `Code: ${zz}`,
+        canReconnect: lz,
+        automaticallyReconnect: zz === Ez.b.customGameUpdated.code || zz === Ez.b.duplicateLobbyNameError.code,
+        requiresRefresh: tz
       }
     }
   },
-  4276: (TT, oT, IT) => {
-    IT.d(oT, {
-      $c: () => dT,
-      B: () => WT,
-      Bb: () => VT,
-      Cb: () => oo,
-      Cc: () => iT.hb,
-      D: () => JT,
-      Dc: () => iT.qb,
-      Dd: () => kT,
-      Eb: () => zT.f,
-      F: () => Lo,
-      G: () => PT,
-      Gb: () => RT,
-      Hc: () => xo,
-      Hd: () => MT,
-      I: () => iT.d,
-      J: () => FT,
-      Jb: () => OT,
-      Jd: () => Xo,
-      K: () => iT.f,
-      Kc: () => Fo,
-      M: () => iT.j,
-      Nb: () => CT,
-      Nd: () => nT,
-      Oc: () => io,
-      Od: () => ZT,
-      P: () => yT,
-      Qb: () => ET,
-      Qc: () => iT.ub,
-      R: () => iT.o,
-      Rb: () => iT.N,
-      Rd: () => HT,
-      Sb: () => jT,
-      Uc: () => iT.vb,
-      V: () => iT.r,
-      Vb: () => wT,
-      Vd: () => tT,
-      Xc: () => iT.xb,
-      Z: () => iT.u,
-      Zb: () => ko,
-      ab: () => DT,
-      ae: () => lT,
-      bb: () => AT,
-      bc: () => gT,
-      be: () => pT,
-      ce: () => GT,
-      dd: () => iT.Bb,
-      e: () => To,
-      eb: () => iT.y,
-      ed: () => iT.Fb,
-      ee: () => Wo,
-      fc: () => So,
-      g: () => KT,
-      gb: () => iT.A,
-      gd: () => iT.Gb,
-      h: () => cT,
-      he: () => co,
-      ic: () => zT.m,
-      ie: () => hT,
-      je: () => bT,
-      kb: () => qT,
-      kd: () => iT.Kb,
-      l: () => Bo,
-      lc: () => rT,
-      ld: () => iT.Nb,
-      le: () => YT,
-      m: () => uT,
-      ne: () => aT,
-      ob: () => zo,
-      pc: () => Io,
-      pd: () => iT.Pb,
-      pe: () => UT,
-      q: () => eT,
-      qe: () => BT,
-      rd: () => vT,
-      sb: () => ST,
-      se: () => QT,
-      t: () => iT.c,
-      tc: () => iT._,
-      te: () => Ko,
-      ud: () => iT.Rb,
-      vb: () => iT.C,
-      wb: () => sT,
-      wd: () => iT.Tb,
-      we: () => xT,
-      x: () => Do,
-      xb: () => NT,
-      xc: () => iT.bb,
-      y: () => fT,
-      yc: () => iT.eb,
-      zc: () => iT.gb,
-      zd: () => iT.Yb
+  4560: (zz, uz, bz) => {
+    bz.d(uz, {
+      $c: () => Ez.Gb,
+      Ab: () => uu,
+      B: () => du,
+      Bc: () => Fu,
+      Bd: () => Uz,
+      C: () => Cz,
+      Dd: () => Qz,
+      Eb: () => nz.e,
+      Fb: () => vz,
+      Fc: () => Hu,
+      G: () => Ez.g,
+      H: () => Hz,
+      Ic: () => Eu,
+      Id: () => yz,
+      Jb: () => hz,
+      L: () => Ez.j,
+      Lc: () => Ez.mb,
+      Ld: () => ez,
+      Mc: () => Ez.pb,
+      Nb: () => Lz,
+      Nd: () => Wz,
+      P: () => Ez.m,
+      Pb: () => Az,
+      Pc: () => Ez.qb,
+      Qb: () => Ez.N,
+      Qc: () => Yz,
+      Qd: () => lu,
+      S: () => Iz,
+      Tb: () => Pz,
+      Tc: () => Ez.vb,
+      Td: () => Zu,
+      V: () => Ez.s,
+      Vb: () => rz,
+      Vc: () => Ez.wb,
+      W: () => Ez.u,
+      Wd: () => sz,
+      Y: () => Ez.x,
+      Yb: () => iu,
+      Yc: () => Ez.Ab,
+      Z: () => pz,
+      Zc: () => Ez.Eb,
+      _b: () => fz,
+      _d: () => jz,
+      ab: () => Xz,
+      bc: () => Ou,
+      be: () => mz,
+      c: () => zu,
+      cb: () => Ez.y,
+      ce: () => Vz,
+      db: () => Ez.A,
+      dd: () => Ez.Jb,
+      de: () => az,
+      f: () => Rz,
+      fc: () => nz.i,
+      fd: () => Jz,
+      ge: () => tz,
+      h: () => Zz,
+      hb: () => gz,
+      i: () => tu,
+      ic: () => wz,
+      ie: () => qz,
+      jc: () => bu,
+      jd: () => Ez.Mb,
+      kb: () => nu,
+      l: () => xz,
+      mb: () => Oz,
+      me: () => Ru,
+      n: () => Nz,
+      nc: () => Ez.W,
+      nd: () => Ez.Ob,
+      od: () => Ez.Tb,
+      p: () => Ez.c,
+      pb: () => Ez.E,
+      pe: () => Fz,
+      qc: () => Ez.Z,
+      qd: () => iz,
+      rc: () => Ez.$,
+      s: () => pu,
+      sb: () => Dz,
+      sd: () => Kz,
+      tc: () => Ez.ab,
+      td: () => Mu,
+      u: () => Tz,
+      ub: () => Bz,
+      vd: () => cz,
+      w: () => lz,
+      wc: () => Ez.bb,
+      xd: () => Sz,
+      yb: () => kz,
+      yc: () => Ez.jb,
+      z: () => Gz
     });
-    var iT = IT(4285),
-      zT = IT(2201);
-    const kT = Math.round(1e3 / iT.Yb),
-      WT = 4,
-      XT = 2;
+    var Ez = bz(4564),
+      nz = bz(2289);
+    const iz = Math.round(1e3 / Ez.Tb),
+      lz = 4,
+      Mz = 2;
 
-    function BT() {
-      return crypto.getRandomValues(new Uint32Array(XT))
+    function tz() {
+      return crypto.getRandomValues(new Uint32Array(Mz))
     }
-    const FT = {
+    const Hz = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      ST = 16,
-      DT = {
+      Oz = 16,
+      pz = {
         Draws: 1,
         NetAll: 2
       },
-      LT = {
+      dz = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function xT(TT) {
-      return (TT.nametagsHidden ? mT.NametagsHidden : 0) | (TT.crouchToggle ? mT.CrouchToggle : 0) | (TT.bhopDisabled ? mT.BhopDisabled : 0) | (TT.disableBobbing ? mT.DisableBobbing : 0) | (TT.ezTowering ? mT.EzTowering : 0) | (TT.ezBridging ? mT.EzBridging : 0) | (TT.showChunkBorders ? mT.ShowChunkBorders : 0)
+    function Fz(zz) {
+      return (zz.nametagsHidden ? oz.NametagsHidden : 0) | (zz.crouchToggle ? oz.CrouchToggle : 0) | (zz.bhopDisabled ? oz.BhopDisabled : 0) | (zz.disableBobbing ? oz.DisableBobbing : 0) | (zz.ezTowering ? oz.EzTowering : 0) | (zz.ezBridging ? oz.EzBridging : 0) | (zz.showChunkBorders ? oz.ShowChunkBorders : 0)
     }
-    const cT = {
+    const Zz = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      KT = {
+      Rz = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -310,7 +310,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      MT = {
+      Kz = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -319,7 +319,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      rT = {
+      wz = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -328,20 +328,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      AT = 5,
-      gT = 4294967295;
+      Xz = 5,
+      fz = 4294967295;
 
-    function hT(TT) {
-      return (TT.showFog ? LT.ShowFog : 0) | (TT.lighting ? LT.Lighting : 0) | (TT.chunkFade ? LT.ChunkFade : 0)
+    function sz(zz) {
+      return (zz.showFog ? dz.ShowFog : 0) | (zz.lighting ? dz.Lighting : 0) | (zz.chunkFade ? dz.ChunkFade : 0)
     }
-    const wT = {
+    const rz = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      mT = {
+      oz = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -351,50 +351,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      eT = {
+      Nz = {
         Release: 1,
         KeepTouches: 2
       },
-      RT = {
+      vz = {
         Point: 1,
         Stamped: 2
       },
-      uT = {
+      xz = {
         Add: 1,
         Clear: 2
       },
-      vT = 1,
-      ET = 8,
-      fT = 16777215,
-      CT = 4,
-      jT = {
+      Jz = 1,
+      Az = 8,
+      Tz = 16777215,
+      Lz = 4,
+      Pz = {
         Resume: 1
       },
-      JT = {
+      Gz = {
         Held: 1
       };
 
-    function UT(TT, oT) {
-      return (TT | oT << 8) >>> 0
+    function az(zz, uz) {
+      return (zz | uz << 8) >>> 0
     }
 
-    function aT(TT) {
-      return 255 & TT
+    function Vz(zz) {
+      return 255 & zz
     }
 
-    function YT(TT) {
-      return TT >>> 8
+    function mz(zz) {
+      return zz >>> 8
     }
 
-    function QT(TT) {
-      return TT + 3 & -4
+    function qz(zz) {
+      return zz + 3 & -4
     }
-    const OT = 16777216,
-      HT = 20;
-    const nT = 8,
-      qT = 8,
-      ZT = 16777216,
-      lT = {
+    const hz = 16777216,
+      Uz = 20;
+    const cz = 8,
+      gz = 8,
+      Sz = 16777216,
+      yz = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -402,19 +402,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      sT = {
+      Dz = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      tT = 16,
-      GT = {
+      Qz = 16,
+      Wz = {
         Lost: 0,
         Gone: 1
       },
-      pT = {
+      ez = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -422,18 +422,18 @@ export const modules = {
         Retire: 5
       };
 
-    function bT(TT) {
-      return TT === pT.WorldgenSeed || TT === pT.Generate
+    function jz(zz) {
+      return zz === ez.WorldgenSeed || zz === ez.Generate
     }
-    const yT = 4,
-      NT = 99,
-      PT = {
+    const Iz = 4,
+      Bz = 99,
+      Cz = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      dT = {
+      Yz = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -441,40 +441,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      VT = 12,
-      To = 16,
-      oo = 4,
-      Io = 12,
-      io = {
+      kz = 12,
+      zu = 16,
+      uu = 4,
+      bu = 12,
+      Eu = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      zo = 4,
-      ko = 8,
-      Wo = 8,
-      Xo = {
+      nu = 4,
+      iu = 8,
+      lu = 8,
+      Mu = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      Bo = {
+      tu = {
         Crit: 1,
         HitSelf: 2
       },
-      Fo = {
+      Hu = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      So = {
+      Ou = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      Do = 12,
-      Lo = {
+      pu = 12,
+      du = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -483,80 +483,80 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      xo = 67108864;
+      Fu = 67108864;
 
-    function co(TT) {
-      for (const [oT, IT] of Object.entries(iT.d))
-        if (IT === TT) return oT;
-      return `Unknown${TT}`
+    function Zu(zz) {
+      for (const [uz, bz] of Object.entries(Ez.g))
+        if (bz === zz) return uz;
+      return `Unknown${zz}`
     }
 
-    function Ko(TT) {
+    function Ru(zz) {
       return {
-        status: TT[iT.A.Status],
-        lastError: TT[iT.A.LastError],
-        lastErrorDetail: TT[iT.A.LastErrorDetail],
-        errorCount: TT[iT.A.ErrorCount],
-        frameIndex: TT[iT.A.FrameIndex],
-        tickIndex: TT[iT.A.TickIndex],
-        renderPending: TT[iT.A.RenderPending],
-        firstView: TT[iT.A.FirstView],
-        chunksCancelled: TT[iT.A.ChunksCancelled]
+        status: zz[Ez.A.Status],
+        lastError: zz[Ez.A.LastError],
+        lastErrorDetail: zz[Ez.A.LastErrorDetail],
+        errorCount: zz[Ez.A.ErrorCount],
+        frameIndex: zz[Ez.A.FrameIndex],
+        tickIndex: zz[Ez.A.TickIndex],
+        renderPending: zz[Ez.A.RenderPending],
+        firstView: zz[Ez.A.FirstView],
+        chunksCancelled: zz[Ez.A.ChunksCancelled]
       }
     }
   },
-  39420: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => iT,
-      c: () => DT,
-      f: () => XT,
-      i: () => kT,
-      j: () => zT,
-      m: () => BT,
-      q: () => ST
+  39800: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Ez,
+      f: () => pz,
+      h: () => Mz,
+      j: () => iz,
+      l: () => nz,
+      p: () => tz,
+      q: () => Oz
     });
-    class iT extends Error {
+    class Ez extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function zT(TT) {
-      return TT instanceof RangeError && /call stack/i.test(TT.message) || TT instanceof Error && "InternalError" === TT.name && /recursion/i.test(TT.message)
+    function nz(zz) {
+      return zz instanceof RangeError && /call stack/i.test(zz.message) || zz instanceof Error && "InternalError" === zz.name && /recursion/i.test(zz.message)
     }
 
-    function kT(TT) {
-      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(TT))
+    function iz(zz) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(zz))
     }
-    const WT = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const lz = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function XT(TT) {
-      var oT;
-      return TT instanceof WebAssembly.RuntimeError || TT instanceof iT || zT(TT) && WT.test(null !== (oT = TT.stack) && void 0 !== oT ? oT : "")
-    }
-
-    function BT(TT, oT) {
-      if (XT(TT)) throw TT;
-      console.error(oT, TT)
+    function Mz(zz) {
+      var uz;
+      return zz instanceof WebAssembly.RuntimeError || zz instanceof Ez || nz(zz) && lz.test(null !== (uz = zz.stack) && void 0 !== uz ? uz : "")
     }
 
-    function FT(TT, oT, IT, zT, kT) {
-      if (oT % zT !== 0 || oT + IT > TT.byteLength) throw new iT(`${kT}: ${IT} bytes at ${oT}, ${zT}-aligned, outside ${TT.byteLength} bytes of memory`)
+    function tz(zz, uz) {
+      if (Mz(zz)) throw zz;
+      console.error(uz, zz)
     }
 
-    function ST(TT, oT, IT, iT, zT) {
-      return 0 === IT ? null : (FT(oT, IT, iT * TT.BYTES_PER_ELEMENT, TT.BYTES_PER_ELEMENT, zT), new TT(oT, IT, iT))
+    function Hz(zz, uz, bz, nz, iz) {
+      if (uz % nz !== 0 || uz + bz > zz.byteLength) throw new Ez(`${iz}: ${bz} bytes at ${uz}, ${nz}-aligned, outside ${zz.byteLength} bytes of memory`)
     }
 
-    function DT(TT, oT, IT, iT, zT) {
-      return 0 === oT ? null : (FT(TT, oT, IT, iT, zT), new DataView(TT, oT, IT))
+    function Oz(zz, uz, bz, Ez, nz) {
+      return 0 === bz ? null : (Hz(uz, bz, Ez * zz.BYTES_PER_ELEMENT, zz.BYTES_PER_ELEMENT, nz), new zz(uz, bz, Ez))
+    }
+
+    function pz(zz, uz, bz, Ez, nz) {
+      return 0 === uz ? null : (Hz(zz, uz, bz, Ez, nz), new DataView(zz, uz, bz))
     }
   },
-  39783: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => iT
+  40189: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Ez
     });
-    const iT = {
+    const Ez = {
       destroy_stage_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYlWP8//8/IwMewIRPknQFjIyM/wmaYGdn9w9FE7IjYSagiFHsCwCM7A/Ccc+NjAAAAABJRU5ErkJggg==",
       destroy_stage_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQklEQVQYlYWPMQ4AIAgDOeO7+v9XWScMOGinpjmgYJt4aKQB/ASqKtwASeuGZxrbAEhyRJxe1JJ1debtRIZt6PfmBqYNG36KBWHbAAAAAElFTkSuQmCC",
       destroy_stage_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARUlEQVQYlYWPwQnAMAwDdaVr2ftPVfWVIBJC9DI6LMvYRpIAjzn1rMaq9wQAbwnd/SWUJNkmb1eVkx07zPK5PaLTu37xA3+wH3UI6vmHAAAAAElFTkSuQmCC",
@@ -569,251 +569,251 @@ export const modules = {
       destroy_stage_9: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAUElEQVQYlW2OyQ3AMAgEhyhtQfF2X9m8IKvIvBDMHkgKSQGQmcJGUtBAZsr3hm6Aqnr4zUBOt4vfJh8gIuTPtdZFK1ztXUbtcXvvz/nU3F1eyBpW2eqlL9QAAAAASUVORK5CYII="
     }
   },
-  39747: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => cT,
-      e: () => KT,
-      i: () => LT,
-      m: () => DT
+  40147: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Zz,
+      f: () => Rz,
+      g: () => dz,
+      j: () => pz
     });
-    const iT = 2e3,
-      zT = "unavailable";
-    let kT = () => Promise.resolve().then((() => IT(2791))),
-      WT = null,
-      XT = null,
-      BT = FT();
+    const Ez = 2e3,
+      nz = "unavailable";
+    let iz = () => Promise.resolve().then((() => bz(2990))),
+      lz = null,
+      Mz = null,
+      tz = Hz();
 
-    function FT() {
-      let TT = () => {};
+    function Hz() {
+      let zz = () => {};
       return {
-        promise: new Promise((oT => {
-          TT = () => {
-            oT(null)
+        promise: new Promise((uz => {
+          zz = () => {
+            uz(null)
           }
         })),
-        resolve: TT
+        resolve: zz
       }
     }
 
-    function ST() {
-      if (null === WT) {
-        const TT = kT();
-        WT = TT, TT.then((oT => {
-          WT === TT && (XT = oT)
+    function Oz() {
+      if (null === lz) {
+        const zz = iz();
+        lz = zz, zz.then((uz => {
+          lz === zz && (Mz = uz)
         }), (() => {
-          WT === TT && (WT = null)
+          lz === zz && (lz = null)
         }))
       }
-      return WT
+      return lz
     }
 
-    function DT() {
-      ST().catch((() => {}))
+    function pz() {
+      Oz().catch((() => {}))
     }
 
-    function LT() {
-      BT.resolve()
+    function dz() {
+      tz.resolve()
     }
 
-    function xT(TT, oT, IT, iT) {
-      if (null === TT) return {
-        errorKind: oT,
-        fingerprint: zT,
-        dedupe: `${oT}|${iT}`
+    function Fz(zz, uz, bz, Ez) {
+      if (null === zz) return {
+        errorKind: uz,
+        fingerprint: nz,
+        dedupe: `${uz}|${Ez}`
       };
       const {
-        fingerprint: kT
-      } = TT.clientErrorKey(oT, IT, iT);
+        fingerprint: iz
+      } = zz.clientErrorKey(uz, bz, Ez);
       return {
-        errorKind: oT,
-        fingerprint: kT,
-        dedupe: kT
+        errorKind: uz,
+        fingerprint: iz,
+        dedupe: iz
       }
     }
 
-    function cT(TT, oT, IT, iT) {
-      return null === XT ? iT ? (DT(), xT(null, TT, oT, IT)) : null : xT(XT, TT, oT, IT)
+    function Zz(zz, uz, bz, Ez) {
+      return null === Mz ? Ez ? (pz(), Fz(null, zz, uz, bz)) : null : Fz(Mz, zz, uz, bz)
     }
-    async function KT(TT, oT, IT) {
-      let zT;
-      const kT = new Promise((TT => {
-        zT = setTimeout((() => {
-          TT(null)
-        }), iT)
+    async function Rz(zz, uz, bz) {
+      let nz;
+      const iz = new Promise((zz => {
+        nz = setTimeout((() => {
+          zz(null)
+        }), Ez)
       }));
       try {
-        return xT(await Promise.race([ST(), kT, BT.promise]), TT, oT, IT)
+        return Fz(await Promise.race([Oz(), iz, tz.promise]), zz, uz, bz)
       } catch {
-        return xT(null, TT, oT, IT)
+        return Fz(null, zz, uz, bz)
       } finally {
-        clearTimeout(zT)
+        clearTimeout(nz)
       }
     }
   },
-  39745: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      BUILT_IN_ANIMATIONS_SITE: () => tT,
-      CORE_ERRORS_SITE: () => aT,
-      EVENT_OVERFLOW_SITE: () => sT,
-      FIRST_VIEW_SITE: () => pT,
-      JOIN_SITE: () => QT,
-      LEAVE_SITE: () => OT,
-      MODEL_FEED_SITE: () => HT,
-      MODEL_POOL_SITE: () => nT,
-      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => yT,
-      NON_FATAL_REPORTS_PER_SESSION: () => So,
-      PREVIEW_ANIMATIONS_SITE: () => lT,
-      RENDER_RELOAD_SITE: () => ZT,
-      TEXTURE_NAMES_SITE: () => qT,
-      TEXTURE_PACK_FEED_SITE: () => GT,
-      TurnstilePageError: () => Ho,
-      WASM_LOAD_SITE: () => YT,
-      crashError: () => Ko,
-      crashReportsSettled: () => wo,
-      flushCrashReports: () => go,
-      joinFailureCode: () => no,
-      lokiTransport: () => dT,
-      modelFailureCode: () => bo,
-      readTrap: () => Ro,
-      renderLossDetail: () => xI,
-      renderReloadMessage: () => DI,
-      reportCoreErrors: () => eo,
-      reportCountedLoadFallback: () => Qo,
-      reportCrash: () => Mo,
-      reportDataLoadFailure: () => AI,
-      reportDisconnect: () => Go,
-      reportDracoDecoderFailure: () => Vo,
-      reportEventOverflow: () => II,
-      reportFirstViewNoTerrain: () => XI,
-      reportGpuFallback: () => ao,
-      reportGpuWasmPopulation: () => Yo,
-      reportLightFault: () => zI,
-      reportMemoryShed: () => WI,
-      reportModelFailure: () => yo,
-      reportModelPoolFailure: () => No,
-      reportModelsModuleRetry: () => Po,
-      reportPageJoinFailure: () => Zo,
-      reportReconnectGaveUp: () => po,
-      reportRenderReload: () => KI,
-      reportReplayFault: () => FI,
-      reportStaleBuildReload: () => hI,
-      reportStoppedCore: () => fo,
-      reportTerrainTextureFailure: () => MI,
-      reportTexturePackFeedLoadFailure: () => oI,
-      reportUnstreamedCoreLoad: () => Oo,
-      reportUnsupportedFallback: () => Jo,
-      reportUnusedSeat: () => to,
-      reportWorkerLost: () => iI,
-      reportWorkerStartTimeout: () => BI,
-      reportWorldgenGaveUp: () => kI,
-      reportWorldgenLoadFailure: () => TI,
-      resetCrashReports: () => mo,
-      setCrashBackend: () => ko,
-      setCrashScreen: () => io,
-      setCrashTransport: () => oo,
-      showCrash: () => Eo,
-      showJoinFailure: () => qo,
-      showUnsupported: () => jo
+  40140: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      BUILT_IN_ANIMATIONS_SITE: () => Qz,
+      CORE_ERRORS_SITE: () => Vz,
+      EVENT_OVERFLOW_SITE: () => Dz,
+      FIRST_VIEW_SITE: () => ez,
+      JOIN_SITE: () => qz,
+      LEAVE_SITE: () => hz,
+      MODEL_FEED_SITE: () => Uz,
+      MODEL_POOL_SITE: () => cz,
+      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => Iz,
+      NON_FATAL_REPORTS_PER_SESSION: () => Ou,
+      PREVIEW_ANIMATIONS_SITE: () => yz,
+      RENDER_RELOAD_SITE: () => Sz,
+      TEXTURE_NAMES_SITE: () => gz,
+      TEXTURE_PACK_FEED_SITE: () => Wz,
+      TurnstilePageError: () => Uu,
+      WASM_LOAD_SITE: () => mz,
+      crashError: () => Ru,
+      crashReportsSettled: () => ru,
+      flushCrashReports: () => fu,
+      joinFailureCode: () => cu,
+      lokiTransport: () => Yz,
+      modelFailureCode: () => eu,
+      readTrap: () => vu,
+      renderLossDetail: () => pb,
+      renderReloadMessage: () => Hb,
+      reportCoreErrors: () => Nu,
+      reportCountedLoadFallback: () => qu,
+      reportCrash: () => Ku,
+      reportDataLoadFailure: () => Kb,
+      reportDisconnect: () => Qu,
+      reportDracoDecoderFailure: () => Cu,
+      reportEventOverflow: () => zb,
+      reportFirstViewNoTerrain: () => ib,
+      reportGpuFallback: () => Vu,
+      reportGpuWasmPopulation: () => mu,
+      reportLightFault: () => bb,
+      reportMemoryShed: () => nb,
+      reportModelFailure: () => ju,
+      reportModelPoolFailure: () => Iu,
+      reportModelsModuleRetry: () => Bu,
+      reportPageJoinFailure: () => Su,
+      reportReconnectGaveUp: () => Wu,
+      reportRenderReload: () => Fb,
+      reportReplayFault: () => Mb,
+      reportStaleBuildReload: () => Xb,
+      reportStoppedCore: () => Tu,
+      reportTerrainTextureFailure: () => Zb,
+      reportTexturePackFeedLoadFailure: () => ku,
+      reportUnstreamedCoreLoad: () => hu,
+      reportUnsupportedFallback: () => Gu,
+      reportUnusedSeat: () => Du,
+      reportWorkerLost: () => ub,
+      reportWorkerStartTimeout: () => lb,
+      reportWorldgenGaveUp: () => Eb,
+      reportWorldgenLoadFailure: () => Yu,
+      resetCrashReports: () => ou,
+      setCrashBackend: () => iu,
+      setCrashScreen: () => Eu,
+      setCrashTransport: () => uu,
+      showCrash: () => Au,
+      showJoinFailure: () => gu,
+      showUnsupported: () => Pu
     });
-    var iT = IT(1071),
-      zT = IT(270),
-      kT = IT(2795),
-      WT = IT(39747),
-      XT = IT(4276),
-      BT = IT(39749),
-      FT = IT(3022),
-      ST = IT(37747),
-      DT = IT(139),
-      LT = IT(681),
-      xT = IT(134),
-      cT = IT(3028),
-      KT = IT(38038),
-      MT = IT(1693),
-      rT = IT(39717),
-      AT = IT(39371),
-      gT = IT(39662),
-      hT = IT(39667),
-      wT = IT(39753),
-      mT = IT(3276),
-      eT = IT(3280),
-      RT = IT(39760),
-      uT = IT(39775),
-      vT = IT(39779),
-      ET = IT(39786),
-      fT = IT(2801),
-      CT = IT(39710),
-      jT = IT(39577),
-      JT = IT(39579);
-    const UT = "[bloxd-wasm-client]",
-      aT = "coreErrors",
-      YT = "wasmLoad",
-      QT = "join",
-      OT = "leave",
-      HT = "modelFeed",
-      nT = "modelWorkerPool",
-      qT = "textureNames",
-      ZT = "renderReload",
-      lT = "previewAnimations",
-      sT = "eventOverflow",
-      tT = "builtInAnimations",
-      GT = "texturePackFeed",
-      pT = "firstView",
-      bT = 300,
-      yT = 8;
-    let NT = 0;
-    const PT = new Set,
-      dT = (TT, oT) => {
-        const IT = Wo[TT.kind];
-        if (null === IT) return void VT(TT, oT, zo, null);
-        const iT = (0, WT.d)(IT, TT.message, TT.code, TT.fatal);
-        if (null !== iT) return void VT(TT, oT, zo, iT);
-        const zT = zo;
-        Ao("Loki", (async () => {
-          VT(TT, oT, zT, await (0, WT.e)(IT, TT.message, TT.code))
+    var Ez = bz(1068),
+      nz = bz(284),
+      iz = bz(2995),
+      lz = bz(40147),
+      Mz = bz(4560),
+      tz = bz(40153),
+      Hz = bz(3216),
+      Oz = bz(38136),
+      pz = bz(128),
+      dz = bz(668),
+      Fz = bz(125),
+      Zz = bz(3218),
+      Rz = bz(38429),
+      Kz = bz(1732),
+      wz = bz(40116),
+      Xz = bz(39750),
+      fz = bz(40052),
+      sz = bz(40059),
+      rz = bz(40155),
+      oz = bz(3468),
+      Nz = bz(3475),
+      vz = bz(40163),
+      xz = bz(40177),
+      Jz = bz(40181),
+      Az = bz(36282),
+      Tz = bz(3004),
+      Lz = bz(40111),
+      Pz = bz(39976),
+      Gz = bz(39979);
+    const az = "[bloxd-wasm-client]",
+      Vz = "coreErrors",
+      mz = "wasmLoad",
+      qz = "join",
+      hz = "leave",
+      Uz = "modelFeed",
+      cz = "modelWorkerPool",
+      gz = "textureNames",
+      Sz = "renderReload",
+      yz = "previewAnimations",
+      Dz = "eventOverflow",
+      Qz = "builtInAnimations",
+      Wz = "texturePackFeed",
+      ez = "firstView",
+      jz = 300,
+      Iz = 8;
+    let Bz = 0;
+    const Cz = new Set,
+      Yz = (zz, uz) => {
+        const bz = lu[zz.kind];
+        if (null === bz) return void kz(zz, uz, nu, null);
+        const Ez = (0, lz.c)(bz, zz.message, zz.code, zz.fatal);
+        if (null !== Ez) return void kz(zz, uz, nu, Ez);
+        const nz = nu;
+        Xu("Loki", (async () => {
+          kz(zz, uz, nz, await (0, lz.f)(bz, zz.message, zz.code))
         }))
       };
 
-    function VT(TT, oT, IT, zT) {
+    function kz(zz, uz, bz, nz) {
       const {
-        kind: WT,
-        code: XT,
-        site: BT,
-        fatal: FT,
-        details: ST
-      } = TT;
-      if (!FT)
-        if (null === zT || (0, kT.c)(zT.errorKind) || PT.has(zT.dedupe)) {
-          if (NT >= yT) return;
-          NT++
-        } else PT.add(zT.dedupe);
-      const DT = {
-        ...ST,
-        kind: WT,
-        code: XT,
-        site: BT,
-        fatal: String(FT),
-        backend: IT
+        kind: lz,
+        code: Mz,
+        site: tz,
+        fatal: Hz,
+        details: Oz
+      } = zz;
+      if (!Hz)
+        if (null === nz || (0, iz.c)(nz.errorKind) || Cz.has(nz.dedupe)) {
+          if (Bz >= Iz) return;
+          Bz++
+        } else Cz.add(nz.dedupe);
+      const pz = {
+        ...Oz,
+        kind: lz,
+        code: Mz,
+        site: tz,
+        fatal: String(Hz),
+        backend: bz
       };
-      null !== zT && (DT.errorKind = zT.errorKind, DT.fingerprint = zT.fingerprint), oT instanceof Error && "string" === typeof oT.stack && (DT.causeStack = oT.stack.slice(0, 2e3)), (0, iT.JK)(Ko(TT, oT), DT)
+      null !== nz && (pz.errorKind = nz.errorKind, pz.fingerprint = nz.fingerprint), uz instanceof Error && "string" === typeof uz.stack && (pz.causeStack = uz.stack.slice(0, 2e3)), (0, Ez.WR)(Ru(zz, uz), pz)
     }
-    let To = dT;
+    let zu = Yz;
 
-    function oo(TT) {
-      const oT = To;
-      return To = TT, oT
+    function uu(zz) {
+      const uz = zu;
+      return zu = zz, uz
     }
-    let Io = () => {};
+    let bu = () => {};
 
-    function io(TT) {
-      const oT = Io;
-      return Io = TT, oT
+    function Eu(zz) {
+      const uz = bu;
+      return bu = zz, uz
     }
-    let zo = "unpicked";
+    let nu = "unpicked";
 
-    function ko(TT) {
-      zo = TT
+    function iu(zz) {
+      nu = zz
     }
-    const Wo = {
+    const lu = {
         crash: "wasm_load",
         unsupported: "wasm_load",
         model: "wasm_load",
@@ -836,187 +836,187 @@ export const modules = {
         staleBuild: "wasm_load",
         disconnect: "disconnect"
       },
-      Xo = {
+      Mu = {
         coreError: "wasm_load",
         recovered: "wasm_load",
         unstreamedLoad: "wasm_load",
         noTerrain: "wasm_load",
         gpuFallback: "wasm_load"
       },
-      Bo = new Set(["unstreamedLoad"]);
-    let Fo = !1;
-    const So = 20,
-      Do = new Map;
-    let Lo = 0,
-      xo = 0;
-    const co = new Set;
+      tu = new Set(["unstreamedLoad"]);
+    let Hu = !1;
+    const Ou = 20,
+      pu = new Map;
+    let du = 0,
+      Fu = 0;
+    const Zu = new Set;
 
-    function Ko(TT, oT) {
-      const IT = Object.assign(new Error(`${TT.code}: ${TT.message}`), {
+    function Ru(zz, uz) {
+      const bz = Object.assign(new Error(`${zz.code}: ${zz.message}`), {
         name: "WasmClientCrash",
-        cause: null !== oT && void 0 !== oT ? oT : void 0
+        cause: null !== uz && void 0 !== uz ? uz : void 0
       });
-      return oT instanceof Error && oT.stack && (IT.stack = oT.stack), IT
+      return uz instanceof Error && uz.stack && (bz.stack = uz.stack), bz
     }
 
-    function Mo(TT) {
-      var oT, iT;
+    function Ku(zz) {
+      var uz, Ez;
       const {
-        kind: zT,
-        code: kT,
-        site: WT,
-        fatal: XT,
-        message: BT,
-        error: FT
-      } = TT, ST = !1 !== TT.toTransport && !Bo.has(zT), DT = !XT && ST, LT = {
-        kind: zT,
-        code: kT,
-        site: WT,
-        fatal: XT,
-        message: BT,
-        details: null !== (oT = TT.details) && void 0 !== oT ? oT : {}
-      }, xT = `${kT}@${WT}${void 0===TT.instance?"":`#${TT.instance}`}${XT?"!":""}`, cT = (null !== (iT = Do.get(xT)) && void 0 !== iT ? iT : 0) + 1;
-      if (Do.set(xT, cT), cT > 1 ? 0 === (cT & cT - 1) && ro((() => {
-          console.warn(`${UT} ${kT} at ${WT} reported ${cT} times`)
-        })) : DT && Lo >= So ? ro((() => {
-          console.warn(`${UT} ${zT} ${kT} at ${WT}: ${BT} (not sent: the session's ${So} went)`, LT.details, null !== FT && void 0 !== FT ? FT : "")
-        })) : (DT && Lo++, function(TT, oT, iT) {
-          var zT, kT;
+        kind: nz,
+        code: iz,
+        site: lz,
+        fatal: Mz,
+        message: tz,
+        error: Hz
+      } = zz, Oz = !1 !== zz.toTransport && !tu.has(nz), pz = !Mz && Oz, dz = {
+        kind: nz,
+        code: iz,
+        site: lz,
+        fatal: Mz,
+        message: tz,
+        details: null !== (uz = zz.details) && void 0 !== uz ? uz : {}
+      }, Fz = `${iz}@${lz}${void 0===zz.instance?"":`#${zz.instance}`}${Mz?"!":""}`, Zz = (null !== (Ez = pu.get(Fz)) && void 0 !== Ez ? Ez : 0) + 1;
+      if (pu.set(Fz, Zz), Zz > 1 ? 0 === (Zz & Zz - 1) && wu((() => {
+          console.warn(`${az} ${iz} at ${lz} reported ${Zz} times`)
+        })) : pz && du >= Ou ? wu((() => {
+          console.warn(`${az} ${nz} ${iz} at ${lz}: ${tz} (not sent: the session's ${Ou} went)`, dz.details, null !== Hz && void 0 !== Hz ? Hz : "")
+        })) : (pz && du++, function(zz, uz, Ez) {
+          var nz, iz;
           const {
-            kind: WT,
-            code: XT,
-            site: BT,
-            fatal: FT,
-            message: ST,
-            details: DT
-          } = TT;
-          ro((() => {
-            (FT ? console.error : console.warn)(`${UT} ${WT} ${XT} at ${BT}: ${ST}`, DT, null !== oT && void 0 !== oT ? oT : "")
+            kind: lz,
+            code: Mz,
+            site: tz,
+            fatal: Hz,
+            message: Oz,
+            details: pz
+          } = zz;
+          wu((() => {
+            (Hz ? console.error : console.warn)(`${az} ${lz} ${Mz} at ${tz}: ${Oz}`, pz, null !== uz && void 0 !== uz ? uz : "")
           }));
-          const LT = Xo[WT],
-            xT = null !== (zT = null !== (kT = Wo[WT]) && void 0 !== kT ? kT : LT) && void 0 !== zT ? zT : null;
-          null !== xT && Ao("counts", (async () => {
+          const dz = Mu[lz],
+            Fz = null !== (nz = null !== (iz = lu[lz]) && void 0 !== iz ? iz : dz) && void 0 !== nz ? nz : null;
+          null !== Fz && Xu("counts", (async () => {
             const {
-              peekVisitSessionId: TT
-            } = await Promise.resolve().then((() => IT(648)));
-            if (null !== TT()) {
+              peekVisitSessionId: zz
+            } = await Promise.resolve().then((() => bz(627)));
+            if (null !== zz()) {
               const {
-                reportCappedWasmFailure: TT,
-                reportWasmFailure: oT
-              } = await IT.e(202).then((() => IT(35316)));
-              (void 0 === LT ? oT : TT)(xT, ST, XT), Fo = !0
+                reportCappedWasmFailure: zz,
+                reportWasmFailure: uz
+              } = await bz.e(207).then((() => bz(35777)));
+              (void 0 === dz ? uz : zz)(Fz, Oz, Mz), Hu = !0
             }
           }));
-          iT && ro((() => {
-            To(TT, oT)
+          Ez && wu((() => {
+            zu(zz, uz)
           }))
-        }(LT, FT, ST)), XT) {
-        var KT;
-        const oT = null !== (KT = TT.screen) && void 0 !== KT ? KT : {
-          text: (0, ET.f)(LT, !0),
+        }(dz, Hz, Oz)), Mz) {
+        var Rz;
+        const uz = null !== (Rz = zz.screen) && void 0 !== Rz ? Rz : {
+          text: (0, Az.i)(dz, !0),
           reload: !0
         };
-        ro((() => {
-          Io(oT)
+        wu((() => {
+          bu(uz)
         }))
       }
-      return LT
+      return dz
     }
 
-    function ro(TT) {
+    function wu(zz) {
       try {
-        TT()
-      } catch (oT) {
+        zz()
+      } catch (uz) {
         try {
-          console.warn(`${UT} could not send a report`, oT)
+          console.warn(`${az} could not send a report`, uz)
         } catch {}
       }
     }
 
-    function Ao(TT, oT) {
+    function Xu(zz, uz) {
       try {
-        const IT = oT().catch((oT => {
-          console.warn(`${UT} could not send the report to ${TT}`, oT)
+        const bz = uz().catch((uz => {
+          console.warn(`${az} could not send the report to ${zz}`, uz)
         })).finally((() => {
-          co.delete(IT)
+          Zu.delete(bz)
         }));
-        co.add(IT)
-      } catch (IT) {
-        console.warn(`${UT} could not send the report to ${TT}`, IT)
+        Zu.add(bz)
+      } catch (bz) {
+        console.warn(`${az} could not send the report to ${zz}`, bz)
       }
     }
-    async function go(TT) {
-      let oT;
-      (0, WT.i)();
-      const IT = new Promise((IT => {
-        oT = setTimeout(IT, TT)
+    async function fu(zz) {
+      let uz;
+      (0, lz.g)();
+      const bz = new Promise((bz => {
+        uz = setTimeout(bz, zz)
       }));
-      await Promise.race([ho(), IT]), clearTimeout(oT)
+      await Promise.race([su(), bz]), clearTimeout(uz)
     }
-    async function ho() {
-      if (await Promise.allSettled([...co]), Fo) try {
+    async function su() {
+      if (await Promise.allSettled([...Zu]), Hu) try {
         const {
-          flushClientAnalyticsEvents: TT
-        } = await Promise.resolve().then((() => IT(1444)));
-        await TT()
-      } catch (TT) {
-        console.warn(`${UT} could not send the counts`, TT)
+          flushClientAnalyticsEvents: zz
+        } = await Promise.resolve().then((() => bz(1468)));
+        await zz()
+      } catch (zz) {
+        console.warn(`${az} could not send the counts`, zz)
       }
     }
-    async function wo() {
-      for (; co.size > 0;) await Promise.allSettled([...co])
+    async function ru() {
+      for (; Zu.size > 0;) await Promise.allSettled([...Zu])
     }
 
-    function mo() {
-      Do.clear(), Lo = 0, Fo = !1, NT = 0, PT.clear(), xo = 0, (0, BT.n)()
+    function ou() {
+      pu.clear(), du = 0, Hu = !1, Bz = 0, Cz.clear(), Fu = 0, (0, tz.j)()
     }
 
-    function eo(TT, oT, IT, iT) {
-      xo += oT;
+    function Nu(zz, uz, bz, Ez) {
+      Fu += uz;
       for (const {
-          code: WT,
-          detail: FT
+          code: lz,
+          detail: Hz
         }
-        of TT) {
-        var zT, kT;
-        const TT = (0, XT.he)(WT),
-          oT = (0, BT.c)(WT, FT),
-          ST = null === iT || void 0 === iT ? void 0 : iT(WT, FT),
-          DT = void 0 !== (null === oT || void 0 === oT ? void 0 : oT.gpuDetails),
-          LT = DT ? null === (zT = (0, xT.m)()) || void 0 === zT ? void 0 : zT.renderer : void 0,
-          cT = DT ? ` ${(0,BT.e)()}` : "",
-          KT = Array.from([LT && `gpu ${(0,BT.p)(LT)}`, ST].filter(Boolean).join("; ")).slice(0, bT).join(""),
-          MT = `core error ${TT}${null!==(kT=null===oT||void 0===oT?void 0:oT.words)&&void 0!==kT?kT:""}${cT}${KT?`: ${KT}`:""}`,
-          rT = {
-            errorCode: String(WT),
-            detail: String(FT),
-            droppedBefore: String(xo),
-            wasmBuild: IT.wasm,
-            clientVersion: IT.client,
-            ...null === oT || void 0 === oT ? void 0 : oT.gpuDetails
+        of zz) {
+        var nz, iz;
+        const zz = (0, Mz.Td)(lz),
+          uz = (0, tz.b)(lz, Hz),
+          Oz = null === Ez || void 0 === Ez ? void 0 : Ez(lz, Hz),
+          pz = void 0 !== (null === uz || void 0 === uz ? void 0 : uz.gpuDetails),
+          dz = pz ? null === (nz = (0, Fz.m)()) || void 0 === nz ? void 0 : nz.renderer : void 0,
+          Zz = pz ? ` ${(0,tz.e)()}` : "",
+          Rz = Array.from([dz && `gpu ${(0,tz.m)(dz)}`, Oz].filter(Boolean).join("; ")).slice(0, jz).join(""),
+          Kz = `core error ${zz}${null!==(iz=null===uz||void 0===uz?void 0:uz.words)&&void 0!==iz?iz:""}${Zz}${Rz?`: ${Rz}`:""}`,
+          wz = {
+            errorCode: String(lz),
+            detail: String(Hz),
+            droppedBefore: String(Fu),
+            wasmBuild: bz.wasm,
+            clientVersion: bz.client,
+            ...null === uz || void 0 === uz ? void 0 : uz.gpuDetails
           };
-        null !== oT && (0, BT.l)(oT) ? ro((() => {
-          console.warn(`${UT} coreError CORE-${TT}: ${MT} (not sent: the session's render warnings of its kind went)`, rT)
-        })) : Mo({
-          kind: WT === XT.I.JobsHeapGaveUp ? "meshHeap" : "coreError",
-          code: `CORE-${TT}`,
-          site: aT,
+        null !== uz && (0, tz.g)(uz) ? wu((() => {
+          console.warn(`${az} coreError CORE-${zz}: ${Kz} (not sent: the session's render warnings of its kind went)`, wz)
+        })) : Ku({
+          kind: lz === Mz.G.JobsHeapGaveUp ? "meshHeap" : "coreError",
+          code: `CORE-${zz}`,
+          site: Vz,
           fatal: !1,
-          message: MT,
-          details: rT,
-          instance: null === oT || void 0 === oT ? void 0 : oT.instance
+          message: Kz,
+          details: wz,
+          instance: null === uz || void 0 === uz ? void 0 : uz.instance
         })
       }
     }
 
-    function Ro(TT) {
-      return (0, CT.i)(TT instanceof jT.d ? TT.trap : TT, mT.C, mT.Y)
+    function vu(zz) {
+      return (0, Lz.l)(zz instanceof Pz.e ? zz.trap : zz, oz.I, oz.bb)
     }
-    const uo = "declined=js";
+    const xu = "declined=js";
 
-    function vo(TT) {
-      return TT ? {
-        labels: [uo],
+    function Ju(zz) {
+      return zz ? {
+        labels: [xu],
         details: {
           declined: "js"
         }
@@ -1026,189 +1026,189 @@ export const modules = {
       }
     }
 
-    function Eo(TT, oT, IT) {
-      return Co(TT, oT, IT, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
+    function Au(zz, uz, bz) {
+      return Lu(zz, uz, bz, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
     }
 
-    function fo(TT, oT, IT) {
-      return Co(TT, oT, IT, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
+    function Tu(zz, uz, bz) {
+      return Lu(zz, uz, bz, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
     }
 
-    function Co(TT, oT, IT, iT, zT) {
+    function Lu(zz, uz, bz, Ez, nz) {
       let {
-        memoryDetails: kT = {},
-        declined: WT = !1
-      } = iT;
+        memoryDetails: iz = {},
+        declined: lz = !1
+      } = Ez;
       const {
-        code: XT,
-        details: BT,
-        message: FT
-      } = (0, rT.G)(TT, oT), ST = [];
-      null !== IT && (BT.trapKind = IT.kind, null !== IT.panic && (BT.panic = (0, CT.g)(IT.panic)), IT.refusedBytes > 0 && (BT.refusedAllocation = String(IT.refusedBytes)), ST.push((0, CT.k)(IT.kind, IT.refusedBytes)));
-      const DT = vo(WT);
-      return Mo({
+        code: Mz,
+        details: tz,
+        message: Hz
+      } = (0, wz.J)(zz, uz), Oz = [];
+      null !== bz && (tz.trapKind = bz.kind, null !== bz.panic && (tz.panic = (0, Lz.i)(bz.panic)), bz.refusedBytes > 0 && (tz.refusedAllocation = String(bz.refusedBytes)), Oz.push((0, Lz.o)(bz.kind, bz.refusedBytes)));
+      const pz = Ju(lz);
+      return Ku({
         kind: "crash",
-        code: XT,
-        site: TT.site,
-        fatal: zT,
-        message: [...ST, ...DT.labels, FT].join("; "),
+        code: Mz,
+        site: zz.site,
+        fatal: nz,
+        message: [...Oz, ...pz.labels, Hz].join("; "),
         details: {
-          ...BT,
-          ...DT.details,
-          ...kT
+          ...tz,
+          ...pz.details,
+          ...iz
         },
-        error: TT.error
+        error: zz.error
       })
     }
 
-    function jo(TT, oT, IT) {
-      return Mo({
+    function Pu(zz, uz, bz) {
+      return Ku({
         kind: "unsupported",
-        code: oT,
-        site: YT,
+        code: uz,
+        site: mz,
         fatal: !0,
-        message: IT,
+        message: bz,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: TT,
-          status: oT
+          cause: zz,
+          status: uz
         },
         screen: {
-          text: (0, ET.l)(TT),
-          reload: "download" === TT
+          text: (0, Az.s)(zz),
+          reload: "download" === zz
         }
       })
     }
 
-    function Jo(TT, oT, IT) {
-      return Mo({
+    function Gu(zz, uz, bz) {
+      return Ku({
         kind: "unsupportedFallback",
-        code: "blockedAfterLoss" === oT ? "blocked_after_loss" : "unsupported_js_fallback",
-        site: YT,
+        code: "blockedAfterLoss" === uz ? "blocked_after_loss" : "unsupported_js_fallback",
+        site: mz,
         fatal: !1,
-        message: IT,
+        message: bz,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: TT,
+          cause: zz,
           status: "unsupported",
-          decline: oT,
+          decline: uz,
           fallback: "js"
         }
       })
     }
-    const Uo = "misdrawn_gpu_js_fallback";
+    const au = "misdrawn_gpu_js_fallback";
 
-    function ao(TT, oT) {
-      return Mo({
+    function Vu(zz, uz) {
+      return Ku({
         kind: "gpuFallback",
-        code: Uo,
-        site: YT,
+        code: au,
+        site: mz,
         fatal: !1,
-        message: `the renderer plays ${TT} on ${oT} worse than the JS client`,
+        message: `the renderer plays ${zz} on ${uz} worse than the JS client`,
         details: {
-          gpuFamily: TT,
-          backend: oT,
+          gpuFamily: zz,
+          backend: uz,
           fallback: "js"
         }
       })
     }
 
-    function Yo(TT) {
-      Ao("counts", (async () => {
-        await (0, LT.d)(TT), Fo = !0
+    function mu(zz) {
+      Xu("counts", (async () => {
+        await (0, dz.b)(zz), Hu = !0
       }))
     }
 
-    function Qo(TT, oT, IT, iT) {
-      const zT = vo(iT);
-      return Mo({
+    function qu(zz, uz, bz, Ez) {
+      const nz = Ju(Ez);
+      return Ku({
         kind: "unsupported",
-        code: oT,
-        site: YT,
+        code: uz,
+        site: mz,
         fatal: !1,
-        message: [...zT.labels, IT].join("; "),
+        message: [...nz.labels, bz].join("; "),
         details: {
-          cause: TT,
-          status: oT,
+          cause: zz,
+          status: uz,
           fallback: "js",
-          ...zT.details
+          ...nz.details
         }
       })
     }
 
-    function Oo() {
+    function hu() {
       const {
-        code: TT,
-        message: oT
-      } = fT.e;
-      return Mo({
+        code: zz,
+        message: uz
+      } = Tz.b;
+      return Ku({
         kind: "unstreamedLoad",
-        code: TT,
-        site: YT,
+        code: zz,
+        site: mz,
         fatal: !1,
-        message: oT
+        message: uz
       })
     }
-    class Ho extends Error {
+    class Uu extends Error {
       constructor() {
         super("the shell's page can't run the Turnstile check: join from /play"), this.name = "TurnstilePageError"
       }
     }
 
-    function no(TT) {
-      return TT instanceof gT.r ? 0 === TT.code ? "JOIN-matchmake" : `JOIN-${TT.code}` : TT instanceof gT.e ? 0 === TT.code ? `JOIN-${TT.stage}` : `JOIN-${TT.stage}-${TT.code}` : TT instanceof AT.b ? "JOIN-gameCode" : TT instanceof Ho ? "JOIN-turnstilePage" : TT instanceof gT.B ? "JOIN-trafficCheck" : TT instanceof KT.f ? "JOIN-timeout" : "JOIN-network"
+    function cu(zz) {
+      return zz instanceof fz.p ? 0 === zz.code ? "JOIN-matchmake" : `JOIN-${zz.code}` : zz instanceof fz.d ? 0 === zz.code ? `JOIN-${zz.stage}` : `JOIN-${zz.stage}-${zz.code}` : zz instanceof Xz.b ? "JOIN-gameCode" : zz instanceof Uu ? "JOIN-turnstilePage" : zz instanceof fz.C ? "JOIN-trafficCheck" : zz instanceof Rz.d ? "JOIN-timeout" : "JOIN-network"
     }
 
-    function qo(TT, oT) {
-      const IT = (0, JT.h)(TT),
-        iT = {
-          wasmBuild: oT.wasm,
-          clientVersion: oT.client
+    function gu(zz, uz) {
+      const bz = (0, Gz.e)(zz),
+        Ez = {
+          wasmBuild: uz.wasm,
+          clientVersion: uz.client
         },
-        zT = TT instanceof Ho ? {
-          text: (0, ET.j)(),
+        nz = zz instanceof Uu ? {
+          text: (0, Az.m)(),
           reload: !1
         } : void 0,
-        kT = (0, hT.g)(TT),
-        WT = "expected" !== kT;
-      return Mo({
+        iz = (0, sz.g)(zz),
+        lz = "expected" !== iz;
+      return Ku({
         kind: "join",
-        code: no(TT),
-        site: QT,
+        code: cu(zz),
+        site: qz,
         fatal: !0,
-        message: IT,
-        details: iT,
-        error: TT,
-        screen: zT,
-        toTransport: WT,
-        instance: kT
+        message: bz,
+        details: Ez,
+        error: zz,
+        screen: nz,
+        toTransport: lz,
+        instance: iz
       })
     }
 
-    function Zo(TT, oT, IT) {
-      var iT;
-      const zT = (0, hT.g)(TT),
-        kT = {
-          cause: (TT instanceof gT.e || TT instanceof gT.r) && null !== (iT = TT.serverText) && void 0 !== iT ? iT : "",
-          sinceJoinStart: (0, cT.b)(IT.sinceJoinStartMs),
-          game: IT.game,
-          ...(0, cT.k)(),
-          wasmBuild: oT.wasm,
-          clientVersion: oT.client
+    function Su(zz, uz, bz) {
+      var Ez;
+      const nz = (0, sz.g)(zz),
+        iz = {
+          cause: (zz instanceof fz.d || zz instanceof fz.p) && null !== (Ez = zz.serverText) && void 0 !== Ez ? Ez : "",
+          sinceJoinStart: (0, Zz.b)(bz.sinceJoinStartMs),
+          game: bz.game,
+          ...(0, Zz.k)(),
+          wasmBuild: uz.wasm,
+          clientVersion: uz.client
         };
-      return Mo({
+      return Ku({
         kind: "pageJoin",
-        code: no(TT),
-        site: QT,
+        code: cu(zz),
+        site: qz,
         fatal: !1,
-        message: (0, JT.h)(TT),
-        details: kT,
-        error: TT,
-        toTransport: "unrecognised" === zT,
-        instance: zT
+        message: (0, Gz.e)(zz),
+        details: iz,
+        error: zz,
+        toTransport: "unrecognised" === nz,
+        instance: nz
       })
     }
-    const so = {
+    const yu = {
       renewed: {
         code: "CORE-seatRenewed",
         message: "the early seat outlasted the room's hold, so the join reserved another"
@@ -1227,956 +1227,956 @@ export const modules = {
       }
     };
 
-    function to(TT, oT) {
+    function Du(zz, uz) {
       let {
-        unused: IT,
-        answered: iT,
-        heldMs: zT
-      } = TT;
+        unused: bz,
+        answered: Ez,
+        heldMs: nz
+      } = zz;
       const {
-        code: kT,
-        message: WT
-      } = so[IT], XT = {
-        unused: IT,
-        answered: String(iT),
-        heldMs: String(zT),
-        wasmBuild: oT.wasm,
-        clientVersion: oT.client
+        code: iz,
+        message: lz
+      } = yu[bz], Mz = {
+        unused: bz,
+        answered: String(Ez),
+        heldMs: String(nz),
+        wasmBuild: uz.wasm,
+        clientVersion: uz.client
       };
-      return Mo({
+      return Ku({
         kind: "seat",
-        code: kT,
-        site: QT,
+        code: iz,
+        site: qz,
         fatal: !1,
-        message: WT,
-        details: XT
+        message: lz,
+        details: Mz
       })
     }
 
-    function Go(TT, oT, IT) {
-      var iT;
-      let zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (iT = TT.name) && void 0 !== iT ? iT : String(TT.code);
-      const kT = {
-          closeCode: String(TT.code),
-          recognised: String(null !== TT.name),
-          closeReason: IT.closeReason,
-          sinceJoined: (0, cT.b)(IT.sinceJoinedMs),
-          game: IT.game,
-          ...(0, cT.k)(),
-          wasmBuild: oT.wasm,
-          clientVersion: oT.client
+    function Qu(zz, uz, bz) {
+      var Ez;
+      let nz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (Ez = zz.name) && void 0 !== Ez ? Ez : String(zz.code);
+      const iz = {
+          closeCode: String(zz.code),
+          recognised: String(null !== zz.name),
+          closeReason: bz.closeReason,
+          sinceJoined: (0, Zz.b)(bz.sinceJoinedMs),
+          game: bz.game,
+          ...(0, Zz.k)(),
+          wasmBuild: uz.wasm,
+          clientVersion: uz.client
         },
-        WT = null === TT.name && !(0, cT.e)(TT.code);
-      return Mo({
+        lz = null === zz.name && !(0, Zz.d)(zz.code);
+      return Ku({
         kind: "disconnect",
-        code: zT,
-        site: OT,
+        code: nz,
+        site: hz,
         fatal: !1,
         message: "Left room",
-        details: kT,
-        toTransport: WT
+        details: iz,
+        toTransport: lz
       })
     }
 
-    function po(TT, oT) {
-      const IT = {
-        ...(0, FT.j)(TT),
-        wasmBuild: oT.wasm,
-        clientVersion: oT.client
+    function Wu(zz, uz) {
+      const bz = {
+        ...(0, Hz.k)(zz),
+        wasmBuild: uz.wasm,
+        clientVersion: uz.client
       };
-      return Mo({
+      return Ku({
         kind: "disconnect",
-        code: `reconnect-${TT.reason}`,
-        site: QT,
+        code: `reconnect-${zz.reason}`,
+        site: qz,
         fatal: !1,
         message: "Reconnect failed",
-        details: IT
+        details: bz
       })
     }
 
-    function bo(TT) {
-      return TT.error instanceof eT.g ? `MODEL-${TT.error.status}` : TT.error instanceof RT.i ? "MODEL-ring" : "MODEL-network"
+    function eu(zz) {
+      return zz.error instanceof Nz.e ? `MODEL-${zz.error.status}` : zz.error instanceof vz.p ? "MODEL-ring" : "MODEL-network"
     }
 
-    function yo(TT, oT) {
-      const IT = bo(TT),
-        iT = `model file ${TT.file} ${TT.startup?"(startup) ":""}could not load`,
-        zT = {
-          file: String(TT.file),
-          url: TT.url,
-          wasmBuild: oT.wasm,
-          clientVersion: oT.client
+    function ju(zz, uz) {
+      const bz = eu(zz),
+        Ez = `model file ${zz.file} ${zz.startup?"(startup) ":""}could not load`,
+        nz = {
+          file: String(zz.file),
+          url: zz.url,
+          wasmBuild: uz.wasm,
+          clientVersion: uz.client
         };
-      return Mo({
-        kind: TT.startup ? "model" : "modelLate",
-        code: IT,
-        site: HT,
-        fatal: TT.startup,
-        message: iT,
-        details: zT,
-        error: TT.error
+      return Ku({
+        kind: zz.startup ? "model" : "modelLate",
+        code: bz,
+        site: Uz,
+        fatal: zz.startup,
+        message: Ez,
+        details: nz,
+        error: zz.error
       })
     }
 
-    function No(TT, oT) {
-      const IT = {
-        wasmBuild: oT.wasm,
-        clientVersion: oT.client
+    function Iu(zz, uz) {
+      const bz = {
+        wasmBuild: uz.wasm,
+        clientVersion: uz.client
       };
-      return Mo({
+      return Ku({
         kind: "model",
         code: "CORE-modelWorkerPool",
-        site: nT,
+        site: cz,
         fatal: !1,
         message: "the model workers could not start: no model can build",
-        details: IT,
-        error: TT
+        details: bz,
+        error: zz
       })
     }
 
-    function Po(TT, oT, IT) {
-      const iT = {
-        delayMs: String(oT),
-        wasmBuild: IT.wasm,
-        clientVersion: IT.client
+    function Bu(zz, uz, bz) {
+      const Ez = {
+        delayMs: String(uz),
+        wasmBuild: bz.wasm,
+        clientVersion: bz.client
       };
-      TT instanceof eT.g && (iT.status = String(TT.status));
-      return Mo({
+      zz instanceof Nz.e && (Ez.status = String(zz.status));
+      return Ku({
         kind: "recovered",
         code: "CORE-modelsModuleRetry",
-        site: nT,
+        site: cz,
         fatal: !1,
         message: "the models module didn't download: fetching it again",
-        details: iT,
-        error: TT
+        details: Ez,
+        error: zz
       })
     }
 
-    function Vo(TT, oT) {
-      const IT = {
-        wasmBuild: oT.wasm,
-        clientVersion: oT.client
+    function Cu(zz, uz) {
+      const bz = {
+        wasmBuild: uz.wasm,
+        clientVersion: uz.client
       };
-      return Mo({
+      return Ku({
         kind: "recovered",
         code: "CORE-dracoDecoder",
-        site: nT,
+        site: cz,
         fatal: !1,
         message: "the Draco decoder did not load: the Draco files waiting on it failed",
-        details: IT,
-        error: TT
+        details: bz,
+        error: zz
       })
     }
 
-    function TI(TT, oT) {
-      const IT = {
-        wasmBuild: oT.wasm,
-        clientVersion: oT.client
+    function Yu(zz, uz) {
+      const bz = {
+        wasmBuild: uz.wasm,
+        clientVersion: uz.client
       };
-      return Mo({
+      return Ku({
         kind: "worldgenLoad",
         code: "CORE-worldgenLoad",
-        site: rT.A,
+        site: wz.E,
         fatal: !1,
         message: "world-gen worker code could not load",
-        details: IT,
-        error: TT
+        details: bz,
+        error: zz
       })
     }
 
-    function oI(TT, oT) {
-      const IT = {
-        wasmBuild: oT.wasm,
-        clientVersion: oT.client
+    function ku(zz, uz) {
+      const bz = {
+        wasmBuild: uz.wasm,
+        clientVersion: uz.client
       };
-      return Mo({
+      return Ku({
         kind: "texturePackLoad",
         code: "CORE-texturePackLoad",
-        site: GT,
+        site: Wz,
         fatal: !1,
         message: "texture pack feed code could not load",
-        details: IT,
-        error: TT
+        details: bz,
+        error: zz
       })
     }
 
-    function II(TT, oT) {
+    function zb(zz, uz) {
       const {
-        frames: IT,
-        acks: iT,
-        mask: zT,
-        outcome: kT
-      } = TT, WT = {
-        frames: String(IT),
-        acks: String(iT),
-        mask: String(zT),
-        outcome: null !== kT && void 0 !== kT ? kT : "resynced",
-        wasmBuild: oT.wasm,
-        clientVersion: oT.client
+        frames: bz,
+        acks: Ez,
+        mask: nz,
+        outcome: iz
+      } = zz, lz = {
+        frames: String(bz),
+        acks: String(Ez),
+        mask: String(nz),
+        outcome: null !== iz && void 0 !== iz ? iz : "resynced",
+        wasmBuild: uz.wasm,
+        clientVersion: uz.client
       };
-      return Mo({
+      return Ku({
         kind: "recovered",
-        code: "rejoined" === kT ? "CORE-eventOverflowRejoin" : "failed" === kT ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
-        site: sT,
+        code: "rejoined" === iz ? "CORE-eventOverflowRejoin" : "failed" === iz ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
+        site: Dz,
         fatal: !1,
-        message: `the event buffer refused records in ${IT} frames`,
-        details: WT
+        message: `the event buffer refused records in ${bz} frames`,
+        details: lz
       })
     }
 
-    function iI(TT, oT, IT) {
-      return Mo({
+    function ub(zz, uz, bz) {
+      return Ku({
         kind: "recovered",
         code: "CORE-workerLost",
-        site: TT,
+        site: zz,
         fatal: !1,
-        message: `a ${TT} worker was lost`,
+        message: `a ${zz} worker was lost`,
         details: {
-          reason: oT,
-          wasmBuild: IT.wasm,
-          clientVersion: IT.client
+          reason: uz,
+          wasmBuild: bz.wasm,
+          clientVersion: bz.client
         }
       })
     }
 
-    function zI(TT, oT, IT) {
-      const iT = {
-        wasmBuild: IT.wasm,
-        clientVersion: IT.client
+    function bb(zz, uz, bz) {
+      const Ez = {
+        wasmBuild: bz.wasm,
+        clientVersion: bz.client
       };
-      return Mo({
+      return Ku({
         kind: "recovered",
-        code: TT,
-        site: rT.m,
+        code: zz,
+        site: wz.o,
         fatal: !1,
-        message: oT,
-        details: iT
+        message: uz,
+        details: Ez
       })
     }
 
-    function kI(TT, oT) {
-      const IT = {
-        lastReason: TT,
-        wasmBuild: oT.wasm,
-        clientVersion: oT.client
+    function Eb(zz, uz) {
+      const bz = {
+        lastReason: zz,
+        wasmBuild: uz.wasm,
+        clientVersion: uz.client
       };
-      return Mo({
+      return Ku({
         kind: "recovered",
         code: "CORE-worldgenGaveUp",
-        site: rT.A,
+        site: wz.E,
         fatal: !1,
         message: "no world-gen worker generated: chunks come whole",
-        details: IT
+        details: bz
       })
     }
 
-    function WI(TT, oT, IT) {
-      return Mo({
+    function nb(zz, uz, bz) {
+      return Ku({
         kind: "recovered",
         code: "CORE-memoryShed",
-        site: rT.l,
+        site: wz.n,
         fatal: !1,
-        message: (0, wT.g)(TT) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
+        message: (0, rz.j)(zz) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
         details: {
-          cause: TT,
-          ...oT,
-          wasmBuild: IT.wasm,
-          clientVersion: IT.client
+          cause: zz,
+          ...uz,
+          wasmBuild: bz.wasm,
+          clientVersion: bz.client
         }
       })
     }
 
-    function XI(TT, oT) {
-      const IT = (0, BT.h)(),
-        iT = {
-          game: TT,
-          renderWarned: String(IT),
-          browser: (0, BT.e)(),
-          wasmBuild: oT.wasm,
-          clientVersion: oT.client
+    function ib(zz, uz) {
+      const bz = (0, tz.f)(),
+        Ez = {
+          game: zz,
+          renderWarned: String(bz),
+          browser: (0, tz.e)(),
+          wasmBuild: uz.wasm,
+          clientVersion: uz.client
         },
-        zT = `first view drew no whole terrain in ${uT.f/1e3} s${IT?", render warned":""}`;
-      return Mo({
+        nz = `first view drew no whole terrain in ${xz.h/1e3} s${bz?", render warned":""}`;
+      return Ku({
         kind: "noTerrain",
         code: "CORE-firstViewNoTerrain",
-        site: pT,
+        site: ez,
         fatal: !1,
-        message: zT,
-        details: iT
+        message: nz,
+        details: Ez
       })
     }
 
-    function BI(TT, oT, IT) {
-      return Mo({
+    function lb(zz, uz, bz) {
+      return Ku({
         kind: "recovered",
         code: "CORE-workerStartTimeout",
-        site: TT,
+        site: zz,
         fatal: !1,
-        message: `a ${TT} worker did not start`,
+        message: `a ${zz} worker did not start`,
         details: {
-          waitedMs: String(Math.round(oT)),
-          wasmBuild: IT.wasm,
-          clientVersion: IT.client
+          waitedMs: String(Math.round(uz)),
+          wasmBuild: bz.wasm,
+          clientVersion: bz.client
         }
       })
     }
 
-    function FI(TT, oT, IT) {
-      return Mo({
+    function Mb(zz, uz, bz) {
+      return Ku({
         kind: "recovered",
         code: "CORE-replayFault",
-        site: TT,
+        site: zz,
         fatal: !1,
-        message: `the replay's ${TT} failed`,
+        message: `the replay's ${zz} failed`,
         details: {
-          wasmBuild: IT.wasm,
-          clientVersion: IT.client
+          wasmBuild: bz.wasm,
+          clientVersion: bz.client
         },
-        error: oT
+        error: uz
       })
     }
-    const SI = {
+    const tb = {
       lost: "render device was lost",
       frames_refused: "render device refused a frame",
       start_failed: "renderer couldn't start",
       pipeline_failed: "renderer's pipeline failed"
     };
 
-    function DI(TT, oT, IT) {
-      const iT = "lost" === oT && void 0 !== IT ? ` (${IT})` : "";
-      return `the ${TT} ${SI[oT]}${iT}`
+    function Hb(zz, uz, bz) {
+      const Ez = "lost" === uz && void 0 !== bz ? ` (${bz})` : "";
+      return `the ${zz} ${tb[uz]}${Ez}`
     }
-    const LI = {
+    const Ob = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null
     };
 
-    function xI(TT, oT, IT) {
-      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now();
-      const zT = null === IT.boundAtMs ? "unbound" : `up${(0,ST.i)(iT-IT.boundAtMs)}`,
-        kT = null === IT.adapter ? "no adapter" : (0, ST.p)(IT.adapter),
-        WT = `${(0,MT.g)()?"hidden":"visible"} ${zT} ${kT}${!0===IT.indirectHangs?" ih":""}`;
-      if ("pipeline_failed" === TT) return `${TT} ${WT}`;
-      const XT = null === oT || void 0 === oT ? void 0 : oT.message;
-      return `${oT instanceof MT.e?"timeout":(0,ST.s)("frames_refused"===TT,"string"===typeof XT?XT:"")} ${WT}`
+    function pb(zz, uz, bz) {
+      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now();
+      const nz = null === bz.boundAtMs ? "unbound" : `up${(0,Oz.d)(Ez-bz.boundAtMs)}`,
+        iz = null === bz.adapter ? "no adapter" : (0, Oz.g)(bz.adapter),
+        lz = `${(0,Kz.h)()?"hidden":"visible"} ${nz} ${iz}${!0===bz.indirectHangs?" ih":""}`;
+      if ("pipeline_failed" === zz) return `${zz} ${lz}`;
+      const Mz = null === uz || void 0 === uz ? void 0 : uz.message;
+      return `${uz instanceof Kz.e?"timeout":(0,Oz.j)("frames_refused"===zz,"string"===typeof Mz?Mz:"")} ${lz}`
     }
-    const cI = {
+    const db = {
       samples: null,
       sunShadows: null,
       renderDistance: null
     };
 
-    function KI(TT, oT, iT) {
-      var kT, WT, XT, FT, LT;
+    function Fb(zz, uz, Ez) {
+      var iz, lz, Mz, Hz, dz;
       let {
-        cause: xT = "lost",
-        error: cT,
-        context: KT = LI,
-        session: MT = cI
+        cause: Fz = "lost",
+        error: Zz,
+        context: Rz = Ob,
+        session: Kz = db
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const rT = xI(xT, cT, KT),
-        AT = {
-          losses: String(oT),
-          cause: xT,
-          detail: rT,
-          vendor: null !== (kT = null === (WT = KT.adapter) || void 0 === WT ? void 0 : WT.vendor) && void 0 !== kT ? kT : "",
-          architecture: null !== (XT = null === (FT = KT.adapter) || void 0 === FT ? void 0 : FT.architecture) && void 0 !== XT ? XT : "",
-          indirectHangs: String(KT.indirectHangs),
-          samples: String(MT.samples),
-          sunShadows: String(MT.sunShadows),
-          renderDistance: String(MT.renderDistance),
-          gpuFamily: null !== (LT = (0, zT.c)()) && void 0 !== LT ? LT : "",
-          browser: (0, BT.e)(),
-          siteUsed: DT.p,
-          wasmBuild: iT.wasm,
-          clientVersion: iT.client
+      const wz = pb(Fz, Zz, Rz),
+        Xz = {
+          losses: String(uz),
+          cause: Fz,
+          detail: wz,
+          vendor: null !== (iz = null === (lz = Rz.adapter) || void 0 === lz ? void 0 : lz.vendor) && void 0 !== iz ? iz : "",
+          architecture: null !== (Mz = null === (Hz = Rz.adapter) || void 0 === Hz ? void 0 : Hz.architecture) && void 0 !== Mz ? Mz : "",
+          indirectHangs: String(Rz.indirectHangs),
+          samples: String(Kz.samples),
+          sunShadows: String(Kz.sunShadows),
+          renderDistance: String(Kz.renderDistance),
+          gpuFamily: null !== (dz = (0, nz.c)()) && void 0 !== dz ? dz : "",
+          browser: (0, tz.e)(),
+          siteUsed: pz.x,
+          wasmBuild: Ez.wasm,
+          clientVersion: Ez.client
         },
-        gT = DI(TT, xT),
-        hT = Mo({
+        fz = Hb(zz, Fz),
+        sz = Ku({
           kind: "recovered",
           code: "CORE-renderLost",
-          site: ZT,
+          site: Sz,
           fatal: !1,
-          message: gT,
-          details: AT,
-          error: cT
+          message: fz,
+          details: Xz,
+          error: Zz
         });
-      return Ao("ga", (async () => {
+      return Xu("ga", (async () => {
         const {
-          logError: oT
-        } = await Promise.resolve().then((() => IT(2556))), iT = `${ST.e["webgpu"===TT?"WebGPU":"WebGL2"]}\n Error: ${rT}`;
-        oT("warning", iT), oT("error", iT)
-      })), hT
+          logError: uz
+        } = await Promise.resolve().then((() => bz(2709))), Ez = `${Oz.c["webgpu"===zz?"WebGPU":"WebGL2"]}\n Error: ${wz}`;
+        uz("warning", Ez), uz("error", Ez)
+      })), sz
     }
 
-    function MI(TT, oT) {
-      var IT, iT;
-      const zT = null === TT.name ? "TEXTURE-sources" : null === TT.url ? "TEXTURE-nourl" : TT.error instanceof vT.c ? `TEXTURE-${TT.error.status}` : "TEXTURE-network",
-        kT = null === TT.name ? "terrain textures could not load" : `terrain texture ${TT.name} could not load`,
-        WT = {
-          texture: null !== (IT = TT.name) && void 0 !== IT ? IT : "",
-          url: null !== (iT = TT.url) && void 0 !== iT ? iT : "",
-          wasmBuild: oT.wasm,
-          clientVersion: oT.client
+    function Zb(zz, uz) {
+      var bz, Ez;
+      const nz = null === zz.name ? "TEXTURE-sources" : null === zz.url ? "TEXTURE-nourl" : zz.error instanceof Jz.b ? `TEXTURE-${zz.error.status}` : "TEXTURE-network",
+        iz = null === zz.name ? "terrain textures could not load" : `terrain texture ${zz.name} could not load`,
+        lz = {
+          texture: null !== (bz = zz.name) && void 0 !== bz ? bz : "",
+          url: null !== (Ez = zz.url) && void 0 !== Ez ? Ez : "",
+          wasmBuild: uz.wasm,
+          clientVersion: uz.client
         };
-      return Mo({
+      return Ku({
         kind: "terrainTexture",
-        code: zT,
-        site: rT.x,
+        code: nz,
+        site: wz.C,
         fatal: !1,
-        message: kT,
-        details: WT,
-        error: TT.error
+        message: iz,
+        details: lz,
+        error: zz.error
       })
     }
-    const rI = {
+    const Rb = {
       previewAnimations: {
-        site: lT,
+        site: yz,
         prefix: "ANIMS",
         name: "the previews' animations"
       },
       builtInAnimations: {
-        site: tT,
+        site: Qz,
         prefix: "BUILTIN",
         name: "the built-in animations"
       }
     };
 
-    function AI(TT, oT, IT, iT) {
+    function Kb(zz, uz, bz, Ez) {
       const {
-        site: zT,
-        prefix: kT,
-        name: WT
-      } = rI[TT], {
-        stage: XT,
-        error: BT
-      } = IT;
-      return Mo({
-        kind: TT,
-        code: "decode" === XT ? null === BT ? `${kT}-decode` : `${kT}-trap` : BT instanceof eT.g ? `${kT}-${BT.status}` : `${kT}-network`,
-        site: zT,
+        site: nz,
+        prefix: iz,
+        name: lz
+      } = Rb[zz], {
+        stage: Mz,
+        error: tz
+      } = bz;
+      return Ku({
+        kind: zz,
+        code: "decode" === Mz ? null === tz ? `${iz}-decode` : `${iz}-trap` : tz instanceof Nz.e ? `${iz}-${tz.status}` : `${iz}-network`,
+        site: nz,
         fatal: !1,
-        message: "decode" === XT ? `${WT} did not decode` : `${WT} could not load`,
+        message: "decode" === Mz ? `${lz} did not decode` : `${lz} could not load`,
         details: {
-          url: oT,
-          wasmBuild: iT.wasm,
-          clientVersion: iT.client
+          url: uz,
+          wasmBuild: Ez.wasm,
+          clientVersion: Ez.client
         },
-        error: BT
+        error: tz
       })
     }
-    const gI = "staleBuild";
+    const wb = "staleBuild";
 
-    function hI(TT, oT, IT) {
-      const iT = {
-          failedSite: TT.site,
-          url: TT.url,
-          from: TT.from,
-          sameBuild: String(TT.from === oT),
-          reloadMs: String(Math.max(0, Date.now() - TT.at)),
-          wasmBuild: IT.wasm,
-          clientVersion: IT.client
+    function Xb(zz, uz, bz) {
+      const Ez = {
+          failedSite: zz.site,
+          url: zz.url,
+          from: zz.from,
+          sameBuild: String(zz.from === uz),
+          reloadMs: String(Math.max(0, Date.now() - zz.at)),
+          wasmBuild: bz.wasm,
+          clientVersion: bz.client
         },
-        zT = `reloaded into a newer build after ${TT.site} failed to load: ${TT.error}`;
-      return Mo({
+        nz = `reloaded into a newer build after ${zz.site} failed to load: ${zz.error}`;
+      return Ku({
         kind: "staleBuild",
         code: "CORE-staleBuild",
-        site: gI,
+        site: wb,
         fatal: !1,
-        message: zT,
-        details: iT
+        message: nz,
+        details: Ez
       })
     }
   },
-  39775: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => zT,
-      f: () => iT
+  40177: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz,
+      h: () => Ez
     });
-    const iT = 3e4;
-    class zT {
-      constructor(TT) {
-        this.Bc = TT, this.waitedMs = 0, this.lastMs = null
+    const Ez = 3e4;
+    class nz {
+      constructor(zz) {
+        this.xZ = zz, this.waitedMs = 0, this.lastMs = null
       }
-      frame(TT, oT) {
-        if (oT) return !0;
-        const IT = null === this.lastMs ? 0 : TT - this.lastMs;
-        return this.lastMs = TT, IT <= 900 && (this.waitedMs += IT), !(this.waitedMs < iT) && (this.Bc(), !0)
+      frame(zz, uz) {
+        if (uz) return !0;
+        const bz = null === this.lastMs ? 0 : zz - this.lastMs;
+        return this.lastMs = zz, bz <= 900 && (this.waitedMs += bz), !(this.waitedMs < Ez) && (this.xZ(), !0)
       }
     }
   },
-  4274: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => WT,
-      h: () => kT,
-      j: () => zT
+  4552: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => lz,
+      h: () => iz,
+      l: () => nz
     });
-    var iT = IT(4276);
+    var Ez = bz(4560);
 
-    function zT(TT) {
-      return "none" !== TT
+    function nz(zz) {
+      return "none" !== zz
     }
 
-    function kT(TT, oT) {
-      if (!TT) return "none";
-      switch (oT) {
-        case iT.Z.Drawn:
+    function iz(zz, uz) {
+      if (!zz) return "none";
+      switch (uz) {
+        case Ez.Y.Drawn:
           return "drawn";
-        case iT.Z.Paced:
+        case Ez.Y.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function WT(TT) {
-      return "drawn" === TT
+    function lz(zz) {
+      return "drawn" === zz
     }
   },
-  39371: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => iT,
-      e: () => rT,
-      i: () => KT,
-      k: () => MT,
-      l: () => LT,
-      n: () => xT,
-      p: () => ST,
-      s: () => DT,
-      w: () => cT
+  39750: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Ez,
+      f: () => wz,
+      j: () => Rz,
+      l: () => Kz,
+      m: () => dz,
+      o: () => Fz,
+      q: () => Oz,
+      s: () => pz,
+      v: () => Zz
     });
-    class iT extends Error {
-      constructor(TT) {
-        super(`the join's code did not load: ${TT instanceof Error?TT.message:String(TT)}`, {
-          cause: TT
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === TT || void 0 === TT ? void 0 : TT.request
+    class Ez extends Error {
+      constructor(zz) {
+        super(`the join's code did not load: ${zz instanceof Error?zz.message:String(zz)}`, {
+          cause: zz
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === zz || void 0 === zz ? void 0 : zz.request
       }
     }
-    let zT = null,
-      kT = null,
-      WT = null;
-    const XT = [];
-    let BT = null;
+    let nz = null,
+      iz = null,
+      lz = null;
+    const Mz = [];
+    let tz = null;
 
-    function FT(TT, oT) {
+    function Hz(zz, uz) {
       try {
-        TT(oT)
-      } catch (IT) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", IT)
+        zz(uz)
+      } catch (bz) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", bz)
       }
     }
 
-    function ST() {
-      return BT
+    function Oz() {
+      return tz
     }
 
-    function DT(TT) {
-      XT.push(TT), null !== BT && FT(TT, BT)
+    function pz(zz) {
+      Mz.push(zz), null !== tz && Hz(zz, tz)
     }
 
-    function LT(TT) {
-      return zT ??= Promise.all([IT.e(69), IT.e(95), IT.e(209), IT.e(74), IT.e(186), IT.e(230), IT.e(210), IT.e(258), IT.e(92), IT.e(261), IT.e(237), IT.e(185), IT.e(195), IT.e(137), IT.e(85), IT.e(115), IT.e(235), IT.e(53)]).then((() => IT(41382))).then((oT => {
-        oT.loadAudio(TT), BT = oT;
-        for (const TT of XT) FT(TT, oT);
-        return oT
-      })).catch((TT => {
-        throw zT = null, TT
-      })), zT
+    function dz(zz) {
+      return nz ??= Promise.all([bz.e(69), bz.e(94), bz.e(214), bz.e(74), bz.e(215), bz.e(189), bz.e(93), bz.e(259), bz.e(187), bz.e(262), bz.e(199), bz.e(186), bz.e(200), bz.e(136), bz.e(85), bz.e(114), bz.e(237), bz.e(53)]).then((() => bz(41801))).then((uz => {
+        uz.loadAudio(zz), tz = uz;
+        for (const zz of Mz) Hz(zz, uz);
+        return uz
+      })).catch((zz => {
+        throw nz = null, zz
+      })), nz
     }
-    async function xT(TT, oT) {
+    async function Fz(zz, uz) {
       try {
-        const IT = await LT(TT);
-        await IT.loadClientGame(oT)
-      } catch (IT) {
-        throw new iT(IT)
+        const bz = await dz(zz);
+        await bz.loadClientGame(uz)
+      } catch (bz) {
+        throw new Ez(bz)
       }
     }
 
-    function cT(TT, oT) {
-      kT = {
-        running: TT,
-        shell: oT
+    function Zz(zz, uz) {
+      iz = {
+        running: zz,
+        shell: uz
       }
     }
 
-    function KT() {
-      return WT
+    function Rz() {
+      return lz
     }
-    async function MT(TT) {
-      const oT = kT;
-      if ((null === oT || void 0 === oT ? void 0 : oT.running) !== TT) throw new Error("the core's session has ended");
-      const IT = await LT(oT.shell.audio).catch((TT => {
-        throw new iT(TT)
+    async function Kz(zz) {
+      const uz = iz;
+      if ((null === uz || void 0 === uz ? void 0 : uz.running) !== zz) throw new Error("the core's session has ended");
+      const bz = await dz(uz.shell.audio).catch((zz => {
+        throw new Ez(zz)
       }));
-      if (null !== WT) return WT;
-      if (kT !== oT || TT.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (WT = IT.startGameHost(TT, oT.shell), null === WT) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return WT
+      if (null !== lz) return lz;
+      if (iz !== uz || zz.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (lz = bz.startGameHost(zz, uz.shell), null === lz) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return lz
     }
 
-    function rT() {
-      null !== WT && (null !== BT ? BT.endGameHost(WT) : WT.closeGame()), WT = null, kT = null
+    function wz() {
+      null !== lz && (null !== tz ? tz.endGameHost(lz) : lz.closeGame()), lz = null, iz = null
     }
   },
-  39662: (TT, oT, IT) => {
-    IT.d(oT, {
-      B: () => DT,
-      E: () => XT,
-      e: () => FT,
-      h: () => kT,
-      l: () => WT,
-      o: () => zT,
-      r: () => xT,
-      t: () => ST,
-      u: () => BT,
-      x: () => LT
+  40052: (zz, uz, bz) => {
+    bz.d(uz, {
+      C: () => pz,
+      E: () => Mz,
+      d: () => Hz,
+      h: () => iz,
+      k: () => lz,
+      o: () => nz,
+      p: () => Fz,
+      s: () => Oz,
+      u: () => tz,
+      y: () => dz
     });
-    var iT = IT(1695);
-    const zT = new Uint8Array([12]),
-      kT = 2e3,
-      WT = 257;
+    var Ez = bz(1739);
+    const nz = new Uint8Array([12]),
+      iz = 2e3,
+      lz = 257;
 
-    function XT(TT) {
-      const oT = new Uint8Array(4);
-      return new DataView(oT.buffer).setUint32(0, TT, !0), oT
+    function Mz(zz) {
+      const uz = new Uint8Array(4);
+      return new DataView(uz.buffer).setUint32(0, zz, !0), uz
     }
-    class BT extends Error {
+    class tz extends Error {
       constructor() {
         super("the game was left while it reconnected"), this.name = "AbortError"
       }
     }
-    class FT extends Error {
-      constructor(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        super(TT), this.stage = oT, this.code = IT, this.serverText = iT, this.name = "JoinError"
+    class Hz extends Error {
+      constructor(zz, uz) {
+        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        super(zz), this.stage = uz, this.code = bz, this.serverText = Ez, this.name = "JoinError"
       }
     }
-    class ST extends Error {
-      constructor(TT) {
-        super(TT), this.final = !0, this.name = "ResumeRefusedError"
+    class Oz extends Error {
+      constructor(zz) {
+        super(zz), this.final = !0, this.name = "ResumeRefusedError"
       }
     }
-    class DT extends Error {
-      constructor(TT) {
-        super((0, iT.i)(TT), {
-          cause: TT
+    class pz extends Error {
+      constructor(zz) {
+        super((0, Ez.d)(zz), {
+          cause: zz
         }), this.name = "TrafficCheckError"
       }
     }
-    class LT extends Error {
-      constructor(TT, oT, IT) {
-        super(TT, {
-          cause: IT
-        }), this.networkLost = oT, this.name = "SeatRequestError"
+    class dz extends Error {
+      constructor(zz, uz, bz) {
+        super(zz, {
+          cause: bz
+        }), this.networkLost = uz, this.name = "SeatRequestError"
       }
     }
-    class xT extends Error {
-      constructor(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(TT), this.code = oT, this.serverText = IT, this.name = "MatchmakeError"
+    class Fz extends Error {
+      constructor(zz, uz) {
+        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(zz), this.code = uz, this.serverText = bz, this.name = "MatchmakeError"
       }
     }
   },
-  39667: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => LT,
-      g: () => DT
+  40059: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => dz,
+      g: () => pz
     });
-    var iT = IT(2327),
-      zT = IT(3028),
-      kT = IT(38038),
-      WT = IT(39656),
-      XT = IT(39662),
-      BT = IT(39674);
-    const FT = "seat reservation expired.",
-      ST = "early_leave";
+    var Ez = bz(2471),
+      nz = bz(3218),
+      iz = bz(38429),
+      lz = bz(40049),
+      Mz = bz(40052),
+      tz = bz(40063);
+    const Hz = "seat reservation expired.",
+      Oz = "early_leave";
 
-    function DT(TT) {
-      if (TT instanceof kT.f) return "expected";
-      if (TT instanceof XT.x) return TT.networkLost ? "expected" : "unrecognised";
-      if (TT instanceof XT.e) {
-        if ("closed" === TT.stage && (0 === TT.code || (0, zT.e)(TT.code))) return "expected";
-        if ("roomError" === TT.stage && (TT.serverText === FT || TT.serverText === ST)) return "expected"
+    function pz(zz) {
+      if (zz instanceof iz.d) return "expected";
+      if (zz instanceof Mz.y) return zz.networkLost ? "expected" : "unrecognised";
+      if (zz instanceof Mz.d) {
+        if ("closed" === zz.stage && (0 === zz.code || (0, nz.d)(zz.code))) return "expected";
+        if ("roomError" === zz.stage && (zz.serverText === Hz || zz.serverText === Oz)) return "expected"
       }
-      return TT instanceof XT.e || TT instanceof XT.r ? null === (0, WT.k)(TT.code).name ? "unrecognised" : "known" : (0, iT.g)(TT) ? "expected" : TT instanceof XT.B || TT instanceof BT.e ? "known" : "unrecognised"
+      return zz instanceof Mz.d || zz instanceof Mz.p ? null === (0, lz.m)(zz.code).name ? "unrecognised" : "known" : (0, Ez.g)(zz) ? "expected" : zz instanceof Mz.C || zz instanceof tz.f ? "known" : "unrecognised"
     }
 
-    function LT(TT) {
-      return TT instanceof kT.f ? "timedOut" : "expected" !== DT(TT) || (0, iT.g)(TT) || TT instanceof XT.e && 1001 === TT.code ? void 0 : "failed"
+    function dz(zz) {
+      return zz instanceof iz.d ? "timedOut" : "expected" !== pz(zz) || (0, Ez.g)(zz) || zz instanceof Mz.d && 1001 === zz.code ? void 0 : "failed"
     }
   },
-  39753: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => uT,
-      g: () => DT,
-      j: () => wT,
-      n: () => rT,
-      o: () => eT
+  40155: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => xz,
+      j: () => pz,
+      n: () => rz,
+      q: () => wz,
+      r: () => Nz
     });
-    var iT = IT(35488),
-      zT = IT(35479);
-    const kT = 64 * iT.e,
-      WT = 40 * iT.f,
-      XT = 36 * iT.f,
-      BT = 20 * iT.f,
-      FT = 2 * iT.f,
-      ST = 5 * iT.f;
+    var Ez = bz(35959),
+      nz = bz(35956);
+    const iz = 64 * Ez.e,
+      lz = 40 * Ez.i,
+      Mz = 36 * Ez.i,
+      tz = 20 * Ez.i,
+      Hz = 2 * Ez.i,
+      Oz = 5 * Ez.i;
 
-    function DT(TT) {
-      return "footprint" !== TT
+    function pz(zz) {
+      return "footprint" !== zz
     }
-    const LT = 2 * iT.f,
-      xT = 4 * iT.f,
-      cT = 35 * iT.f + LT + xT,
-      KT = 6.5 * iT.f,
-      MT = 132.5 * iT.e;
+    const dz = 2 * Ez.i,
+      Fz = 4 * Ez.i,
+      Zz = 35 * Ez.i + dz + Fz,
+      Rz = 6.5 * Ez.i,
+      Kz = 132.5 * Ez.e;
 
-    function rT(TT) {
-      const oT = KT + (0, zT.h)(TT) + TT * MT;
-      return Math.ceil((2 * cT + oT) / kT) * kT
+    function wz(zz) {
+      const uz = Rz + (0, nz.l)(zz) + zz * Kz;
+      return Math.ceil((2 * Zz + uz) / iz) * iz
     }
-    const AT = rT(zT.c),
-      gT = (iT.f, iT.f, iT.f, {
-        targetBytes: WT,
-        leastBytes: BT
+    const Xz = wz(nz.c),
+      fz = (Ez.i, Ez.i, Ez.i, {
+        targetBytes: lz,
+        leastBytes: tz
       }),
-      hT = {
-        targetBytes: XT,
-        leastBytes: BT
+      sz = {
+        targetBytes: Mz,
+        leastBytes: tz
       };
 
-    function wT(TT) {
-      return TT >= zT.c ? gT : hT
+    function rz(zz) {
+      return zz >= nz.c ? fz : sz
     }
-    const mT = 2 * kT;
+    const oz = 2 * iz;
 
-    function eT(TT, oT, IT) {
-      return TT + oT + mT > (null !== IT && void 0 !== IT ? IT : AT)
+    function Nz(zz, uz, bz) {
+      return zz + uz + oz > (null !== bz && void 0 !== bz ? bz : Xz)
     }
-    const RT = {
+    const vz = {
       now: () => performance.now(),
-      requestIdle: "function" === typeof requestIdleCallback ? TT => {
-        requestIdleCallback(TT)
+      requestIdle: "function" === typeof requestIdleCallback ? zz => {
+        requestIdleCallback(zz)
       } : null
     };
-    class uT {
-      constructor(TT, oT, IT) {
-        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : RT;
-        this.memory = TT, this.readPeakStoredChunks = oT, this.onError = IT, this.clock = iT, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+    class xz {
+      constructor(zz, uz, bz) {
+        let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vz;
+        this.memory = zz, this.readPeakStoredChunks = uz, this.onError = bz, this.clock = Ez, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
           reserves: 0,
           allocations: 0
         }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null
       }
-      setShed(TT, oT, IT) {
+      setShed(zz, uz, bz) {
         this.shedding = {
-          shed: TT,
-          Bc: oT,
-          readDistanceInUse: IT
+          shed: zz,
+          xZ: uz,
+          readDistanceInUse: bz
         }
       }
       shedDistanceInUse() {
         return this.distanceInUse
       }
-      setFootprint(TT) {
-        this.footprint = TT
+      setFootprint(zz) {
+        this.footprint = zz
       }
-      setCeiling(TT) {
-        this.ceilingBytes = TT, this.call((() => {
-          this.memory.setCeiling(TT)
+      setCeiling(zz) {
+        this.ceilingBytes = zz, this.call((() => {
+          this.memory.setCeiling(zz)
         }), void 0)
       }
-      ceilingMayRefuse(TT) {
-        return eT(this.memory.memoryBytes(), TT, this.ceilingBytes)
+      ceilingMayRefuse(zz) {
+        return Nz(this.memory.memoryBytes(), zz, this.ceilingBytes)
       }
-      reserveAtJoin(TT) {
+      reserveAtJoin(zz) {
         let {
-          targetBytes: oT,
-          leastBytes: IT
-        } = TT;
-        const iT = this.memory.memoryBytes(),
-          zT = iT + IT,
-          kT = Math.max(oT + (this.ballastOn() ? ST : 0), zT),
-          WT = this.call((() => this.memory.reserveUpFront(kT) ? "target" : kT > zT && this.memory.reserveUpFront(zT) ? "least" : "none"), "none");
+          targetBytes: uz,
+          leastBytes: bz
+        } = zz;
+        const Ez = this.memory.memoryBytes(),
+          nz = Ez + bz,
+          iz = Math.max(uz + (this.ballastOn() ? Oz : 0), nz),
+          lz = this.call((() => this.memory.reserveUpFront(iz) ? "target" : iz > nz && this.memory.reserveUpFront(nz) ? "least" : "none"), "none");
         if (this.stopped) return !1;
-        if ("target" !== WT) {
-          const TT = "least" === WT ? `took ${zT} bytes instead` : "frames grow it in steps";
-          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${kT} bytes was refused at ${iT} bytes; ${TT}`)
+        if ("target" !== lz) {
+          const zz = "least" === lz ? `took ${nz} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${iz} bytes was refused at ${Ez} bytes; ${zz}`)
         }
-        return this.joinReserveTaken = WT, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== WT && this.shedFor("joinReserve"), "none" !== WT
+        return this.joinReserveTaken = lz, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== lz && this.shedFor("joinReserve"), "none" !== lz
       }
       afterFrame() {
         if (this.stopped) return;
-        const TT = this.clock.now(),
-          oT = null !== this.stepsHeldUntil && TT >= this.stepsHeldUntil;
-        if (oT && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
-        if (null === this.stepsHeldUntil && TT >= this.ballastCheckAt && (this.takeBallast(TT), this.stopped)) return;
-        const IT = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
-          iT = oT && "now" === IT ? "none" : IT,
+        const zz = this.clock.now(),
+          uz = null !== this.stepsHeldUntil && zz >= this.stepsHeldUntil;
+        if (uz && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && zz >= this.ballastCheckAt && (this.takeBallast(zz), this.stopped)) return;
+        const bz = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          Ez = uz && "now" === bz ? "none" : bz,
           {
-            requestIdle: zT
+            requestIdle: nz
           } = this.clock;
-        "now" === iT || null !== this.pendingSince && TT - this.pendingSince >= 500 ? this.step() : "idle" === iT && null === this.pendingSince && (null === zT ? this.step() : (this.pendingSince = TT, zT((() => {
+        "now" === Ez || null !== this.pendingSince && zz - this.pendingSince >= 500 ? this.step() : "idle" === Ez && null === this.pendingSince && (null === nz ? this.step() : (this.pendingSince = zz, nz((() => {
           null !== this.pendingSince && this.step()
-        })))), TT - this.statsAt >= 1e3 && (this.statsAt = TT, this.refreshStats(), this.checkFootprint())
+        })))), zz - this.statsAt >= 1e3 && (this.statsAt = zz, this.refreshStats(), this.checkFootprint())
       }
       refreshStats() {
         this.call((() => {
-          var TT, oT;
-          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (oT = this.shedding.readDistanceInUse()) && void 0 !== oT ? oT : this.distanceInUse);
-          null === (TT = this.footprint) || void 0 === TT || TT.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+          var zz, uz;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (uz = this.shedding.readDistanceInUse()) && void 0 !== uz ? uz : this.distanceInUse);
+          null === (zz = this.footprint) || void 0 === zz || zz.read(this.memory.memoryBytes() + this.workersMemoryBytes())
         }), void 0)
       }
       stop() {
         this.stopped = !0, this.pendingSince = null
       }
-      noteMeshWorker(TT, oT) {
-        this.noteWorker(`Mesh${TT}`, oT)
+      noteMeshWorker(zz, uz) {
+        this.noteWorker(`Mesh${zz}`, uz)
       }
-      meshWorkerGone(TT) {
-        this.workerGone(`Mesh${TT}`)
+      meshWorkerGone(zz) {
+        this.workerGone(`Mesh${zz}`)
       }
-      noteWorldgen(TT) {
-        this.noteWorker("Worldgen", TT)
+      noteWorldgen(zz) {
+        this.noteWorker("Worldgen", zz)
       }
       worldgenGone() {
         this.workerGone("Worldgen")
       }
-      noteWorker(TT, oT) {
-        const IT = this.workers.get(TT);
-        null !== IT && void 0 !== IT && IT.gone && (this.replacedRefusals.reserves += IT.stats.reservesRefused, this.replacedRefusals.allocations += IT.stats.allocationsRefused), this.workers.set(TT, {
-          stats: oT,
+      noteWorker(zz, uz) {
+        const bz = this.workers.get(zz);
+        null !== bz && void 0 !== bz && bz.gone && (this.replacedRefusals.reserves += bz.stats.reservesRefused, this.replacedRefusals.allocations += bz.stats.allocationsRefused), this.workers.set(zz, {
+          stats: uz,
           gone: !1
         })
       }
-      workerGone(TT) {
-        const oT = this.workers.get(TT);
-        oT && (oT.gone = !0)
+      workerGone(zz) {
+        const uz = this.workers.get(zz);
+        uz && (uz.gone = !0)
       }
       details() {
-        var TT, oT;
-        const IT = {
-          wasmMemoryNow: `${(0,iT.h)(this.memory.memoryBytes())} MiB`
+        var zz, uz;
+        const bz = {
+          wasmMemoryNow: `${(0,Ez.j)(this.memory.memoryBytes())} MiB`
         };
-        null !== this.joinReserveTaken && (IT.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (IT.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
-        const zT = this.main;
-        if (zT) {
-          IT.wasmMemoryMain = vT(zT);
-          const TT = Math.max(0, zT.peakLiveBytes - this.ballastPeakBytes),
-            oT = 0 === this.peakStoredChunks ? "-" : (TT / this.peakStoredChunks / iT.e).toFixed(1);
-          IT.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${oT} KiB`
+        null !== this.joinReserveTaken && (bz.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (bz.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const nz = this.main;
+        if (nz) {
+          bz.wasmMemoryMain = Jz(nz);
+          const zz = Math.max(0, nz.peakLiveBytes - this.ballastPeakBytes),
+            uz = 0 === this.peakStoredChunks ? "-" : (zz / this.peakStoredChunks / Ez.e).toFixed(1);
+          bz.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${uz} KiB`
         }
-        for (const [iT, {
-            stats: WT,
-            gone: XT
-          }] of this.workers) IT[`wasmMemory${iT}`] = vT(WT) + (XT ? " (gone)" : "");
-        const kT = null !== (TT = null === (oT = this.footprint) || void 0 === oT ? void 0 : oT.describe()) && void 0 !== TT ? TT : null;
-        return null !== kT && (IT.wasmMemoryFootprint = kT), IT
+        for (const [Ez, {
+            stats: lz,
+            gone: Mz
+          }] of this.workers) bz[`wasmMemory${Ez}`] = Jz(lz) + (Mz ? " (gone)" : "");
+        const iz = null !== (zz = null === (uz = this.footprint) || void 0 === uz ? void 0 : uz.describe()) && void 0 !== zz ? zz : null;
+        return null !== iz && (bz.wasmMemoryFootprint = iz), bz
       }
       pageKillSnapshot() {
-        var TT, oT, IT, zT, kT;
-        let WT = (null !== (TT = null === (oT = this.main) || void 0 === oT ? void 0 : oT.reservesRefused) && void 0 !== TT ? TT : 0) + this.replacedRefusals.reserves,
-          XT = (null !== (IT = null === (zT = this.main) || void 0 === zT ? void 0 : zT.allocationsRefused) && void 0 !== IT ? IT : 0) + this.replacedRefusals.allocations;
+        var zz, uz, bz, nz, iz;
+        let lz = (null !== (zz = null === (uz = this.main) || void 0 === uz ? void 0 : uz.reservesRefused) && void 0 !== zz ? zz : 0) + this.replacedRefusals.reserves,
+          Mz = (null !== (bz = null === (nz = this.main) || void 0 === nz ? void 0 : nz.allocationsRefused) && void 0 !== bz ? bz : 0) + this.replacedRefusals.allocations;
         for (const {
-            stats: iT
+            stats: Ez
           }
-          of this.workers.values()) WT += iT.reservesRefused, XT += iT.allocationsRefused;
+          of this.workers.values()) lz += Ez.reservesRefused, Mz += Ez.allocationsRefused;
         return {
-          wasmMainMiB: Number((0, iT.h)(this.memory.memoryBytes())),
-          wasmWorkersMiB: Number((0, iT.h)(this.workersMemoryBytes())),
+          wasmMainMiB: Number((0, Ez.j)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, Ez.j)(this.workersMemoryBytes())),
           peakStoredChunks: this.peakStoredChunks,
-          refusedReserves: WT,
-          refusedAllocations: XT,
+          refusedReserves: lz,
+          refusedAllocations: Mz,
           sheds: this.sheds,
-          ...null === (kT = this.footprint) || void 0 === kT ? void 0 : kT.snapshot()
+          ...null === (iz = this.footprint) || void 0 === iz ? void 0 : iz.snapshot()
         }
       }
       workersMemoryBytes() {
-        let TT = 0;
+        let zz = 0;
         for (const {
-            stats: oT,
-            gone: IT
+            stats: uz,
+            gone: bz
           }
-          of this.workers.values()) TT += IT ? 0 : oT.memoryBytes;
-        return TT
+          of this.workers.values()) zz += bz ? 0 : uz.memoryBytes;
+        return zz
       }
       checkFootprint() {
         null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
       }
       step() {
-        this.pendingSince = null, this.call((() => this.memory.reserveAhead(FT)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(Hz)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
       }
       ballastOn() {
         return null !== this.shedding
       }
-      takeBallast(TT) {
+      takeBallast(zz) {
         if (!this.ballastOn() || null === this.joinReserveTaken) return;
-        this.ballastCheckAt = TT + 1e3;
-        const oT = this.call((() => this.memory.takeBallast()), 0);
-        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, oT)
+        this.ballastCheckAt = zz + 1e3;
+        const uz = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, uz)
       }
       takePressure() {
         return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
       }
-      stopSteps(TT) {
-        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${TT}: frames grow on demand from here`)
+      stopSteps(zz) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${zz}: frames grow on demand from here`)
       }
-      shedFor(TT) {
+      shedFor(zz) {
         const {
-          shedding: oT
+          shedding: uz
         } = this;
-        if (null === oT) return;
+        if (null === uz) return;
         this.pendingSince = null;
-        const IT = this.call((() => oT.shed(TT)), null);
-        this.stopped || (null !== IT ? (this.sheds++, this.shedCap = IT, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), oT.Bc(TT, this.sheds, this.details())) : DT(TT) && this.stopSteps("nothing is left to shed"))
+        const bz = this.call((() => uz.shed(zz)), null);
+        this.stopped || (null !== bz ? (this.sheds++, this.shedCap = bz, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), uz.xZ(zz, this.sheds, this.details())) : pz(zz) && this.stopSteps("nothing is left to shed"))
       }
-      call(TT, oT) {
-        if (this.stopped) return oT;
+      call(zz, uz) {
+        if (this.stopped) return uz;
         try {
-          return TT()
-        } catch (IT) {
-          return this.stop(), this.onError(IT), oT
+          return zz()
+        } catch (bz) {
+          return this.stop(), this.onError(bz), uz
         }
       }
     }
 
-    function vT(TT) {
-      const oT = (TT, oT) => `${TT}/${(0,iT.h)(oT)}`;
-      return `memory ${(0,iT.h)(TT.memoryBytes)} live ${(0,iT.h)(TT.liveBytes)} peak ${(0,iT.h)(TT.peakLiveBytes)} unused ${(0,iT.h)(TT.unusedBytes)} ceiling ${(0,iT.h)(TT.ceilingBytes)} MiB; grows upFront ${oT(TT.grows.upFront,TT.grownBytes.upFront)} ahead ${oT(TT.grows.ahead,TT.grownBytes.ahead)} inFrame ${oT(TT.grows.onDemandInFrame,TT.grownBytes.onDemandInFrame)} other ${oT(TT.grows.onDemand,TT.grownBytes.onDemand)}; refused reserves ${TT.reservesRefused} allocations ${TT.allocationsRefused}`
+    function Jz(zz) {
+      const uz = (zz, uz) => `${zz}/${(0,Ez.j)(uz)}`;
+      return `memory ${(0,Ez.j)(zz.memoryBytes)} live ${(0,Ez.j)(zz.liveBytes)} peak ${(0,Ez.j)(zz.peakLiveBytes)} unused ${(0,Ez.j)(zz.unusedBytes)} ceiling ${(0,Ez.j)(zz.ceilingBytes)} MiB; grows upFront ${uz(zz.grows.upFront,zz.grownBytes.upFront)} ahead ${uz(zz.grows.ahead,zz.grownBytes.ahead)} inFrame ${uz(zz.grows.onDemandInFrame,zz.grownBytes.onDemandInFrame)} other ${uz(zz.grows.onDemand,zz.grownBytes.onDemand)}; refused reserves ${zz.reservesRefused} allocations ${zz.allocationsRefused}`
     }
   },
-  39760: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => BT,
-      e: () => FT,
-      g: () => xT,
-      i: () => DT
+  40163: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => tz,
+      i: () => Hz,
+      l: () => Fz,
+      p: () => pz
     });
-    var iT = IT(3280),
-      zT = IT(4276),
-      kT = IT(39762),
-      WT = IT(39768),
-      XT = IT(39579);
-    const BT = 395,
-      FT = 2147483648,
-      ST = new Uint8Array(0);
-    class DT extends Error {
+    var Ez = bz(3475),
+      nz = bz(4560),
+      iz = bz(40165),
+      lz = bz(40169),
+      Mz = bz(39979);
+    const tz = 395,
+      Hz = 2147483648,
+      Oz = new Uint8Array(0);
+    class pz extends Error {
       constructor() {
         super(...arguments), this.name = "ModelRingError"
       }
     }
-    class LT extends Error {
+    class dz extends Error {
       constructor() {
         super(...arguments), this.name = "ModelPackRefusedError"
       }
     }
-    class xT {
-      constructor(TT, oT, IT) {
-        var iT, zT, WT, XT;
-        let BT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.files = TT, this.build = oT, this.onFailure = IT, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.qx = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (iT = BT.fetchFile) && void 0 !== iT ? iT : TT => (0, kT.j)(TT), this.onWritten = null !== (zT = BT.onWritten) && void 0 !== zT ? zT : null, this.onTaken = null !== (WT = BT.onTaken) && void 0 !== WT ? WT : null, this.onPackFileFailed = null !== (XT = BT.onPackFileFailed) && void 0 !== XT ? XT : null, this.startupLeft = new Set(TT.startup);
-        for (const kT of TT.startup) this.request(kT)
+    class Fz {
+      constructor(zz, uz, bz) {
+        var Ez, nz, lz, Mz;
+        let tz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.files = zz, this.build = uz, this.onFailure = bz, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.MZ = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (Ez = tz.fetchFile) && void 0 !== Ez ? Ez : zz => (0, iz.h)(zz), this.onWritten = null !== (nz = tz.onWritten) && void 0 !== nz ? nz : null, this.onTaken = null !== (lz = tz.onTaken) && void 0 !== lz ? lz : null, this.onPackFileFailed = null !== (Mz = tz.onPackFileFailed) && void 0 !== Mz ? Mz : null, this.startupLeft = new Set(zz.startup);
+        for (const iz of zz.startup) this.request(iz)
       }
       get startupDone() {
         return 0 === this.startupLeft.size
@@ -2196,361 +2196,361 @@ export const modules = {
       get keptBytes() {
         return this.keptTotal
       }
-      drawnUrl(TT) {
-        return this.drawn.get(TT)
+      drawnUrl(zz) {
+        return this.drawn.get(zz)
       }
-      request(TT) {
-        const oT = this.pending.get(TT);
-        if (!0 === (null === oT || void 0 === oT ? void 0 : oT.ask)) return;
-        const IT = this.hx(TT, !0);
-        IT.recheck = void 0 !== oT;
-        const iT = this.drawn.get(TT);
-        if (void 0 !== iT) return IT.kS = !0, IT.recheck = !0, void this.fetch(TT, IT, iT);
-        this.fetchWanted(TT, IT)
+      request(zz) {
+        const uz = this.pending.get(zz);
+        if (!0 === (null === uz || void 0 === uz ? void 0 : uz.ask)) return;
+        const bz = this.QF(zz, !0);
+        bz.recheck = void 0 !== uz;
+        const Ez = this.drawn.get(zz);
+        if (void 0 !== Ez) return bz.yM = !0, bz.recheck = !0, void this.fetch(zz, bz, Ez);
+        this.fetchWanted(zz, bz)
       }
       async refresh() {
-        const TT = ++this.refreshes,
-          oT = new Set;
-        for (const WT of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
-          for (const TT of WT) 0 === (TT & kT.h) && oT.add(TT);
-        const IT = [...oT];
-        let iT;
+        const zz = ++this.refreshes,
+          uz = new Set;
+        for (const lz of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
+          for (const zz of lz) 0 === (zz & iz.e) && uz.add(zz);
+        const bz = [...uz];
+        let Ez;
         try {
-          iT = await Promise.all(IT.map((TT => this.wanted(TT))))
+          Ez = await Promise.all(bz.map((zz => this.wanted(zz))))
         } catch {
           return null
         }
-        if (TT !== this.refreshes) return null;
-        const zT = {
+        if (zz !== this.refreshes) return null;
+        const nz = {
           resent: 0,
           refetched: 0,
-          delivered: IT.filter((TT => this.drawn.has(TT))).length
+          delivered: bz.filter((zz => this.drawn.has(zz))).length
         };
-        return IT.forEach(((TT, oT) => {
+        return bz.forEach(((zz, uz) => {
           const {
-            url: IT,
-            inPlaceOf: kT
-          } = iT[oT], WT = this.pending.get(TT);
-          if (void 0 !== WT) {
-            if (WT.kS || void 0 === WT.url) return void(WT.recheck = !0);
-            if (WT.url === IT) return;
-            zT.refetched++;
-            const oT = this.hx(TT, WT.ask);
-            return oT.recheck = WT.recheck, void this.fetch(TT, oT, IT, kT)
+            url: bz,
+            inPlaceOf: iz
+          } = Ez[uz], lz = this.pending.get(zz);
+          if (void 0 !== lz) {
+            if (lz.yM || void 0 === lz.url) return void(lz.recheck = !0);
+            if (lz.url === bz) return;
+            nz.refetched++;
+            const uz = this.QF(zz, lz.ask);
+            return uz.recheck = lz.recheck, void this.fetch(zz, uz, bz, iz)
           }
-          const XT = this.written.get(TT);
-          void 0 === XT ? this.drawn.get(TT) !== (null !== IT && void 0 !== IT ? IT : void 0) && (zT.resent++, this.fetch(TT, this.hx(TT, !1), IT, kT)) : XT.url !== (null !== IT && void 0 !== IT ? IT : "") && (XT.attempt.recheck = !0)
-        })), zT
+          const Mz = this.written.get(zz);
+          void 0 === Mz ? this.drawn.get(zz) !== (null !== bz && void 0 !== bz ? bz : void 0) && (nz.resent++, this.fetch(zz, this.QF(zz, !1), bz, iz)) : Mz.url !== (null !== bz && void 0 !== bz ? bz : "") && (Mz.attempt.recheck = !0)
+        })), nz
       }
-      taken(TT, oT) {
-        const IT = new Set,
-          iT = new Set;
-        for (const zT of Array.from(oT)) 0 === (zT & FT) ? IT.add(zT) : iT.add((zT & ~FT) >>> 0);
-        for (const [zT, kT] of this.written) kT.seq > TT || (this.written.delete(zT), IT.has(kT.seq) ? this.refusedFile(zT, kT) : this.takenFile(zT, kT, !kT.empty && !iT.has(kT.seq)))
+      taken(zz, uz) {
+        const bz = new Set,
+          Ez = new Set;
+        for (const nz of Array.from(uz)) 0 === (nz & Hz) ? bz.add(nz) : Ez.add((nz & ~Hz) >>> 0);
+        for (const [nz, iz] of this.written) iz.seq > zz || (this.written.delete(nz), bz.has(iz.seq) ? this.refusedFile(nz, iz) : this.takenFile(nz, iz, !iz.empty && !Ez.has(iz.seq)))
       }
-      takenFile(TT, oT, IT) {
+      takenFile(zz, uz, bz) {
         const {
-          attempt: iT
-        } = oT;
-        if (IT) {
-          var zT;
-          this.drawn.set(TT, oT.url), this.undrawn.delete(TT), void 0 !== iT.inPlaceOf ? this.refusedPack.set(TT, iT.inPlaceOf) : iT.kS || this.refusedPack.delete(TT), null === (zT = this.onTaken) || void 0 === zT || zT.call(this, TT, !0);
-          const IT = this.pending.get(TT);
-          if (!0 === (null === IT || void 0 === IT ? void 0 : IT.kS) && IT.url !== oT.url) {
-            const IT = this.hx(TT, !0);
-            IT.kS = !0, IT.recheck = !0, this.fetch(TT, IT, oT.url)
+          attempt: Ez
+        } = uz;
+        if (bz) {
+          var nz;
+          this.drawn.set(zz, uz.url), this.undrawn.delete(zz), void 0 !== Ez.inPlaceOf ? this.refusedPack.set(zz, Ez.inPlaceOf) : Ez.yM || this.refusedPack.delete(zz), null === (nz = this.onTaken) || void 0 === nz || nz.call(this, zz, !0);
+          const bz = this.pending.get(zz);
+          if (!0 === (null === bz || void 0 === bz ? void 0 : bz.yM) && bz.url !== uz.url) {
+            const bz = this.QF(zz, !0);
+            bz.yM = !0, bz.recheck = !0, this.fetch(zz, bz, uz.url)
           }
         } else {
-          var kT;
-          this.drawn.has(TT) || this.undrawn.add(TT), null === (kT = this.onTaken) || void 0 === kT || kT.call(this, TT, !1)
+          var iz;
+          this.drawn.has(zz) || this.undrawn.add(zz), null === (iz = this.onTaken) || void 0 === iz || iz.call(this, zz, !1)
         }
-        iT.recheck && this.resendIfChanged(TT)
+        Ez.recheck && this.resendIfChanged(zz)
       }
-      refusedFile(TT, oT) {
-        var IT, iT;
-        if (null === (IT = this.onTaken) || void 0 === IT || IT.call(this, TT, !1), this.refusedPack.set(TT, oT.url), this.pending.has(TT)) return void(null === (iT = this.onPackFileFailed) || void 0 === iT || iT.call(this, TT, cT(oT.url)));
-        const zT = this.hx(TT, oT.attempt.ask);
-        zT.recheck = oT.attempt.recheck, this.afterRefusal(TT, zT, oT.url)
+      refusedFile(zz, uz) {
+        var bz, Ez;
+        if (null === (bz = this.onTaken) || void 0 === bz || bz.call(this, zz, !1), this.refusedPack.set(zz, uz.url), this.pending.has(zz)) return void(null === (Ez = this.onPackFileFailed) || void 0 === Ez || Ez.call(this, zz, Zz(uz.url)));
+        const nz = this.QF(zz, uz.attempt.ask);
+        nz.recheck = uz.attempt.recheck, this.afterRefusal(zz, nz, uz.url)
       }
-      async afterRefusal(TT, oT, IT) {
-        var iT;
-        let zT;
+      async afterRefusal(zz, uz, bz) {
+        var Ez;
+        let nz;
         try {
-          zT = await this.wanted(TT)
-        } catch (kT) {
-          return void(this.pending.get(TT) === oT && this.giveUp(TT, oT, IT, kT))
+          nz = await this.wanted(zz)
+        } catch (iz) {
+          return void(this.pending.get(zz) === uz && this.giveUp(zz, uz, bz, iz))
         }
-        this.pending.get(TT) === oT && (zT.inPlaceOf !== IT ? oT.ask || (null !== (iT = zT.url) && void 0 !== iT ? iT : void 0) !== this.drawn.get(TT) ? this.fetch(TT, oT, zT.url, zT.inPlaceOf) : this.pending.delete(TT) : this.fallBack(TT, oT, IT, cT(IT)))
+        this.pending.get(zz) === uz && (nz.inPlaceOf !== bz ? uz.ask || (null !== (Ez = nz.url) && void 0 !== Ez ? Ez : void 0) !== this.drawn.get(zz) ? this.fetch(zz, uz, nz.url, nz.inPlaceOf) : this.pending.delete(zz) : this.fallBack(zz, uz, bz, Zz(bz)))
       }
-      hx(TT, oT) {
-        const IT = {
+      QF(zz, uz) {
+        const bz = {
           url: void 0,
-          ask: oT,
-          kS: !1,
+          ask: uz,
+          yM: !1,
           recheck: !1,
           inPlaceOf: void 0
         };
-        this.pending.set(TT, IT);
-        for (let iT = this.ready.length - 1; iT >= 0; iT--) this.ready[iT].file === TT && this.ready.splice(iT, 1);
-        return IT
+        this.pending.set(zz, bz);
+        for (let Ez = this.ready.length - 1; Ez >= 0; Ez--) this.ready[Ez].file === zz && this.ready.splice(Ez, 1);
+        return bz
       }
-      async wanted(TT) {
-        const oT = await this.files.url(TT);
-        return null !== oT && this.refusedPack.get(TT) === oT ? {
-          url: await this.files.shippedUrl(TT),
-          inPlaceOf: oT
+      async wanted(zz) {
+        const uz = await this.files.url(zz);
+        return null !== uz && this.refusedPack.get(zz) === uz ? {
+          url: await this.files.shippedUrl(zz),
+          inPlaceOf: uz
         } : {
-          url: oT,
+          url: uz,
           inPlaceOf: void 0
         }
       }
-      fetchWanted(TT, oT) {
-        const IT = this.files.url(TT);
-        IT instanceof Promise ? IT.then((IT => {
-          this.fetchFound(TT, oT, IT)
-        }), (IT => {
-          this.pending.get(TT) === oT && this.giveUp(TT, oT, "", IT)
-        })) : this.fetchFound(TT, oT, IT)
+      fetchWanted(zz, uz) {
+        const bz = this.files.url(zz);
+        bz instanceof Promise ? bz.then((bz => {
+          this.fetchFound(zz, uz, bz)
+        }), (bz => {
+          this.pending.get(zz) === uz && this.giveUp(zz, uz, "", bz)
+        })) : this.fetchFound(zz, uz, bz)
       }
-      fetchFound(TT, oT, IT) {
-        null !== IT && this.refusedPack.get(TT) === IT ? Promise.resolve(this.files.shippedUrl(TT)).then((iT => {
-          this.fetch(TT, oT, iT, IT)
-        }), (iT => {
-          this.pending.get(TT) === oT && this.giveUp(TT, oT, IT, iT)
-        })) : this.fetch(TT, oT, IT)
+      fetchFound(zz, uz, bz) {
+        null !== bz && this.refusedPack.get(zz) === bz ? Promise.resolve(this.files.shippedUrl(zz)).then((Ez => {
+          this.fetch(zz, uz, Ez, bz)
+        }), (Ez => {
+          this.pending.get(zz) === uz && this.giveUp(zz, uz, bz, Ez)
+        })) : this.fetch(zz, uz, bz)
       }
-      fetch(TT, oT, IT, iT) {
-        this.pending.get(TT) === oT && (oT.url = IT, oT.inPlaceOf = iT, null !== IT ? this.load(TT, oT, IT) : this.buildFile(TT, oT, "", ST))
+      fetch(zz, uz, bz, Ez) {
+        this.pending.get(zz) === uz && (uz.url = bz, uz.inPlaceOf = Ez, null !== bz ? this.load(zz, uz, bz) : this.buildFile(zz, uz, "", Oz))
       }
-      load(TT, oT, IT) {
-        const iT = this.qx.get(TT);
-        (null === iT || void 0 === iT ? void 0 : iT.url) !== IT ? this.fetchFile(IT).then((iT => {
-          var zT, kT;
-          this.pending.get(TT) === oT && (this.keptTotal += iT.byteLength - (null !== (zT = null === (kT = this.qx.get(TT)) || void 0 === kT ? void 0 : kT.glb.byteLength) && void 0 !== zT ? zT : 0), this.qx.set(TT, {
-            url: IT,
-            glb: iT
-          }), this.buildFile(TT, oT, IT, iT))
-        }), (iT => {
-          this.pending.get(TT) === oT && this.fallBack(TT, oT, IT, iT)
-        })) : this.buildFile(TT, oT, IT, iT.glb)
+      load(zz, uz, bz) {
+        const Ez = this.MZ.get(zz);
+        (null === Ez || void 0 === Ez ? void 0 : Ez.url) !== bz ? this.fetchFile(bz).then((Ez => {
+          var nz, iz;
+          this.pending.get(zz) === uz && (this.keptTotal += Ez.byteLength - (null !== (nz = null === (iz = this.MZ.get(zz)) || void 0 === iz ? void 0 : iz.glb.byteLength) && void 0 !== nz ? nz : 0), this.MZ.set(zz, {
+            url: bz,
+            glb: Ez
+          }), this.buildFile(zz, uz, bz, Ez))
+        }), (Ez => {
+          this.pending.get(zz) === uz && this.fallBack(zz, uz, bz, Ez)
+        })) : this.buildFile(zz, uz, bz, Ez.glb)
       }
-      buildFile(TT, oT, IT, iT) {
-        let zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const WT = iT.byteLength > 0 && (0, kT.n)(IT) ? (TT | kT.d) >>> 0 : TT;
-        this.queueRecord(TT, oT, IT, iT, this.build(WT, iT), zT)
+      buildFile(zz, uz, bz, Ez) {
+        let nz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const lz = Ez.byteLength > 0 && (0, iz.l)(bz) ? (zz | iz.d) >>> 0 : zz;
+        this.queueRecord(zz, uz, bz, Ez, this.build(lz, Ez), nz)
       }
-      queueRecord(TT, oT, IT, iT, kT, XT) {
-        kT.then((kT => {
-          if (this.pending.get(TT) !== oT) return;
-          if (zT.t + (0, zT.se)(kT.byteLength) > zT.Hc) return void this.ringRefused(TT, oT, IT, new DT(`${KT(IT)}'s record is ${kT.byteLength-WT.e} bytes, past the cmd ring's ${zT.Hc}`), XT);
-          const BT = {
-            file: TT,
-            url: IT,
-            payload: kT,
-            glb: iT,
-            attempt: oT
+      queueRecord(zz, uz, bz, Ez, iz, Mz) {
+        iz.then((iz => {
+          if (this.pending.get(zz) !== uz) return;
+          if (nz.p + (0, nz.ie)(iz.byteLength) > nz.Bc) return void this.ringRefused(zz, uz, bz, new pz(`${Rz(bz)}'s record is ${iz.byteLength-lz.b} bytes, past the cmd ring's ${nz.Bc}`), Mz);
+          const tz = {
+            file: zz,
+            url: bz,
+            payload: iz,
+            glb: Ez,
+            attempt: uz
           };
-          XT ? this.ready.unshift(BT) : this.ready.push(BT)
+          Mz ? this.ready.unshift(tz) : this.ready.push(tz)
         }))
       }
-      async fallBack(TT, oT, IT, iT) {
-        var zT;
-        let kT = null,
-          WT = iT;
+      async fallBack(zz, uz, bz, Ez) {
+        var nz;
+        let iz = null,
+          lz = Ez;
         try {
-          kT = await this.files.shippedUrl(TT)
-        } catch (XT) {
-          WT = XT
+          iz = await this.files.shippedUrl(zz)
+        } catch (Mz) {
+          lz = Mz
         }
-        this.pending.get(TT) === oT && (null !== kT && kT !== IT ? (null === (zT = this.onPackFileFailed) || void 0 === zT || zT.call(this, TT, iT), oT.ask || this.drawn.get(TT) !== kT ? (oT.url = kT, oT.inPlaceOf = IT, this.load(TT, oT, kT)) : this.pending.delete(TT)) : this.giveUp(TT, oT, IT, WT))
+        this.pending.get(zz) === uz && (null !== iz && iz !== bz ? (null === (nz = this.onPackFileFailed) || void 0 === nz || nz.call(this, zz, Ez), uz.ask || this.drawn.get(zz) !== iz ? (uz.url = iz, uz.inPlaceOf = bz, this.load(zz, uz, iz)) : this.pending.delete(zz)) : this.giveUp(zz, uz, bz, lz))
       }
-      ringRefused(TT, oT, IT, iT) {
-        let zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        (0, kT.n)(IT) ? this.fallBack(TT, oT, IT, iT): this.giveUp(TT, oT, IT, iT, zT)
+      ringRefused(zz, uz, bz, Ez) {
+        let nz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        (0, iz.l)(bz) ? this.fallBack(zz, uz, bz, Ez): this.giveUp(zz, uz, bz, Ez, nz)
       }
-      giveUp(TT, oT, IT, zT) {
-        let kT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      giveUp(zz, uz, bz, nz) {
+        let iz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         this.onFailure({
-          file: TT,
-          url: KT(IT),
-          error: zT,
-          startup: this.startupLeft.has(TT)
-        }), oT.ask || !this.drawn.has(TT) ? (0, iT.Y)(zT) ? this.queueRecord(TT, oT, IT, ST, Promise.resolve((0, WT.p)(TT, (0, XT.h)(zT))), kT) : this.buildFile(TT, oT, IT, ST, kT) : this.pending.delete(TT)
+          file: zz,
+          url: Rz(bz),
+          error: nz,
+          startup: this.startupLeft.has(zz)
+        }), uz.ask || !this.drawn.has(zz) ? (0, Ez.J)(nz) ? this.queueRecord(zz, uz, bz, Oz, Promise.resolve((0, lz.k)(zz, (0, Mz.e)(nz))), iz) : this.buildFile(zz, uz, bz, Oz, iz) : this.pending.delete(zz)
       }
-      async resendIfChanged(TT) {
-        var oT;
-        if (0 !== (TT & kT.h)) return;
-        let IT;
+      async resendIfChanged(zz) {
+        var uz;
+        if (0 !== (zz & iz.e)) return;
+        let bz;
         try {
-          IT = await this.wanted(TT)
+          bz = await this.wanted(zz)
         } catch {
           return
-        }(null !== (oT = IT.url) && void 0 !== oT ? oT : void 0) === this.drawn.get(TT) || this.pending.has(TT) || this.written.has(TT) || this.fetch(TT, this.hx(TT, !1), IT.url, IT.inPlaceOf)
+        }(null !== (uz = bz.url) && void 0 !== uz ? uz : void 0) === this.drawn.get(zz) || this.pending.has(zz) || this.written.has(zz) || this.fetch(zz, this.QF(zz, !1), bz.url, bz.inPlaceOf)
       }
-      drain(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null === TT) return;
-        let IT = 0,
-          iT = 0;
-        for (; iT < this.ready.length && IT < 262144;) {
-          const XT = this.ready[iT];
-          if (this.written.has(XT.file)) {
-            iT++;
+      drain(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null === zz) return;
+        let bz = 0,
+          Ez = 0;
+        for (; Ez < this.ready.length && bz < 262144;) {
+          const Mz = this.ready[Ez];
+          if (this.written.has(Mz.file)) {
+            Ez++;
             continue
           }
-          const ST = this.nextSeq;
-          new DataView(XT.payload.buffer, XT.payload.byteOffset, XT.payload.byteLength).setUint32(WT.h, ST, !0);
-          const LT = XT.attempt.kS && XT.glb.byteLength > 0 && this.drawn.get(XT.file) === XT.url;
-          if (TT(BT, LT ? 1 : 0, XT.payload)) {
-            if (this.nextSeq = ST >= FT - 1 ? 1 : ST + 1, this.ready.splice(iT, 1), IT += XT.payload.byteLength, this.pending.delete(XT.file), this.startupLeft.delete(XT.file), this.written.set(XT.file, {
-                seq: ST,
-                url: XT.url,
-                empty: 0 === XT.glb.byteLength,
-                attempt: XT.attempt
-              }), XT.glb.byteLength > 0) try {
-              var zT;
-              null === (zT = this.onWritten) || void 0 === zT || zT.call(this, XT.file, XT.glb)
-            } catch (kT) {
-              console.warn("ModelFeed: reading the file's images failed", kT)
+          const Oz = this.nextSeq;
+          new DataView(Mz.payload.buffer, Mz.payload.byteOffset, Mz.payload.byteLength).setUint32(lz.c, Oz, !0);
+          const dz = Mz.attempt.yM && Mz.glb.byteLength > 0 && this.drawn.get(Mz.file) === Mz.url;
+          if (zz(tz, dz ? 1 : 0, Mz.payload)) {
+            if (this.nextSeq = Oz >= Hz - 1 ? 1 : Oz + 1, this.ready.splice(Ez, 1), bz += Mz.payload.byteLength, this.pending.delete(Mz.file), this.startupLeft.delete(Mz.file), this.written.set(Mz.file, {
+                seq: Oz,
+                url: Mz.url,
+                empty: 0 === Mz.glb.byteLength,
+                attempt: Mz.attempt
+              }), Mz.glb.byteLength > 0) try {
+              var nz;
+              null === (nz = this.onWritten) || void 0 === nz || nz.call(this, Mz.file, Mz.glb)
+            } catch (iz) {
+              console.warn("ModelFeed: reading the file's images failed", iz)
             }
           } else {
-            if (null === oT || 0 === XT.glb.byteLength || oT(XT.payload.byteLength)) return;
-            this.ready.splice(iT, 1);
-            const TT = new DT(`${KT(XT.url)}'s record is ${XT.payload.byteLength-WT.e} bytes, more than the cmd ring can grow to take`);
-            this.ringRefused(XT.file, XT.attempt, XT.url, TT, !0)
+            if (null === uz || 0 === Mz.glb.byteLength || uz(Mz.payload.byteLength)) return;
+            this.ready.splice(Ez, 1);
+            const zz = new pz(`${Rz(Mz.url)}'s record is ${Mz.payload.byteLength-lz.b} bytes, more than the cmd ring can grow to take`);
+            this.ringRefused(Mz.file, Mz.attempt, Mz.url, zz, !0)
           }
         }
       }
     }
 
-    function cT(TT) {
-      return new LT(`presentation refused ${KT(TT)}`)
+    function Zz(zz) {
+      return new dz(`presentation refused ${Rz(zz)}`)
     }
 
-    function KT(TT) {
-      return TT.startsWith("data:") ? `${TT.slice(0,Math.min(Math.max(TT.indexOf(","),5),64))},...` : TT
+    function Rz(zz) {
+      return zz.startsWith("data:") ? `${zz.slice(0,Math.min(Math.max(zz.indexOf(","),5),64))},...` : zz
     }
   },
-  39762: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => WT,
-      h: () => kT,
-      j: () => ST,
-      n: () => XT,
-      p: () => FT,
-      t: () => BT
+  40165: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => lz,
+      e: () => iz,
+      h: () => Oz,
+      l: () => Mz,
+      m: () => Hz,
+      q: () => tz
     });
-    var iT = IT(3280),
-      zT = IT(2765);
-    const kT = 2147483648,
-      WT = 1073741824;
+    var Ez = bz(3475),
+      nz = bz(2966);
+    const iz = 2147483648,
+      lz = 1073741824;
 
-    function XT(TT) {
-      return TT.startsWith("data:")
+    function Mz(zz) {
+      return zz.startsWith("data:")
     }
 
-    function BT(TT) {
+    function tz(zz) {
       let {
-        onTableFailed: oT,
-        packUrl: IT
+        onTableFailed: uz,
+        packUrl: bz
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const iT = FT();
-      iT.catch((TT => {
-        null === oT || void 0 === oT || oT(TT)
+      const Ez = Hz();
+      Ez.catch((zz => {
+        null === uz || void 0 === uz || uz(zz)
       }));
-      const zT = async oT => (await iT).fileUrl((oT & ~kT) >>> 0, TT);
+      const nz = async uz => (await Ez).fileUrl((uz & ~iz) >>> 0, zz);
       return {
         startup: [],
-        url: async TT => {
-          if (IT && 0 === (TT & kT)) {
-            const oT = await iT,
-              zT = oT.filePackName(TT),
-              kT = null === zT || "lifeform" === oT.fileSource(TT) ? null : IT(zT);
-            if (null !== kT) return kT
+        url: async zz => {
+          if (bz && 0 === (zz & iz)) {
+            const uz = await Ez,
+              nz = uz.filePackName(zz),
+              iz = null === nz || "lifeform" === uz.fileSource(zz) ? null : bz(nz);
+            if (null !== iz) return iz
           }
-          return zT(TT)
+          return nz(zz)
         },
-        shippedUrl: zT
+        shippedUrl: nz
       }
     }
 
-    function FT() {
-      return IT.e(41).then((() => IT(42170)))
+    function Hz() {
+      return bz.e(41).then((() => bz(42659)))
     }
-    async function ST(TT) {
-      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-      return TT.startsWith("data:") ? (0, zT.e)(TT.slice(TT.indexOf(",") + 1), oT) : (0, iT.K)(TT, {
-        spare: oT
+    async function Oz(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+      return zz.startsWith("data:") ? (0, nz.d)(zz.slice(zz.indexOf(",") + 1), uz) : (0, Ez.z)(zz, {
+        spare: uz
       })
     }
   },
-  39768: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => FT,
-      h: () => ST,
-      i: () => xT,
-      l: () => MT,
-      p: () => cT,
-      t: () => LT,
-      w: () => KT
+  40169: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Hz,
+      c: () => Oz,
+      g: () => Fz,
+      h: () => Kz,
+      k: () => Zz,
+      l: () => dz,
+      p: () => Rz
     });
-    const iT = 826427981,
-      zT = 1,
-      kT = 2,
-      WT = 44,
-      XT = 46,
-      BT = 58,
-      FT = 8,
-      ST = 4;
+    const Ez = 826427981,
+      nz = 1,
+      iz = 2,
+      lz = 44,
+      Mz = 46,
+      tz = 58,
+      Hz = 8,
+      Oz = 4;
 
-    function DT(TT, oT, IT) {
-      const zT = (new TextEncoder).encode(IT),
-        kT = FT + 4 * (oT.length + 2),
-        WT = new Uint8Array(kT + (zT.byteLength + 3 & -4)),
-        XT = new DataView(WT.buffer);
-      return XT.setUint32(0, TT, !0), XT.setUint32(FT, iT, !0), oT.forEach(((TT, oT) => {
-        XT.setUint32(FT + 4 * (oT + 1), TT, !0)
-      })), XT.setUint32(kT - 4, zT.byteLength, !0), WT.set(zT, kT), WT
+    function pz(zz, uz, bz) {
+      const nz = (new TextEncoder).encode(bz),
+        iz = Hz + 4 * (uz.length + 2),
+        lz = new Uint8Array(iz + (nz.byteLength + 3 & -4)),
+        Mz = new DataView(lz.buffer);
+      return Mz.setUint32(0, zz, !0), Mz.setUint32(Hz, Ez, !0), uz.forEach(((zz, uz) => {
+        Mz.setUint32(Hz + 4 * (uz + 1), zz, !0)
+      })), Mz.setUint32(iz - 4, nz.byteLength, !0), lz.set(nz, iz), lz
     }
 
-    function LT(TT, oT) {
-      return DT(TT, [kT], oT)
+    function dz(zz, uz) {
+      return pz(zz, [iz], uz)
     }
 
-    function xT(TT, oT) {
-      return DT(TT, [zT, XT], oT)
+    function Fz(zz, uz) {
+      return pz(zz, [nz, Mz], uz)
     }
 
-    function cT(TT, oT) {
-      return DT(TT, [zT, BT], oT)
+    function Zz(zz, uz) {
+      return pz(zz, [nz, tz], uz)
     }
 
-    function KT(TT, oT) {
-      return DT(TT, [zT, WT], oT)
+    function Rz(zz, uz) {
+      return pz(zz, [nz, lz], uz)
     }
 
-    function MT(TT) {
-      const oT = FT;
-      if (TT.byteLength < oT + 12) return !1;
-      const IT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
-      return IT.getUint32(oT, !0) === iT && IT.getUint32(oT + 4, !0) === zT && IT.getUint32(oT + 8, !0) === WT
+    function Kz(zz) {
+      const uz = Hz;
+      if (zz.byteLength < uz + 12) return !1;
+      const bz = new DataView(zz.buffer, zz.byteOffset, zz.byteLength);
+      return bz.getUint32(uz, !0) === Ez && bz.getUint32(uz + 4, !0) === nz && bz.getUint32(uz + 8, !0) === lz
     }
   },
-  39749: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => AT,
-      e: () => rT,
-      h: () => mT,
-      l: () => wT,
-      n: () => eT,
-      p: () => KT
+  40153: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Xz,
+      e: () => wz,
+      f: () => oz,
+      g: () => rz,
+      j: () => Nz,
+      m: () => Rz
     });
-    var iT = IT(4285),
-      zT = IT(39615);
-    const kT = 18,
-      WT = 19,
-      XT = 20,
-      BT = {
+    var Ez = bz(4564),
+      nz = bz(40017);
+    const iz = 18,
+      lz = 19,
+      Mz = 20,
+      tz = {
         1: "link",
         2: "draw",
         3: "draw base vertex",
@@ -2564,24 +2564,24 @@ export const modules = {
         13: "draw short constant",
         15: "draw no zero buffer",
         16: "draw feedback loop",
-        [kT]: "retry linked",
-        [WT]: "fallback linked",
-        [XT]: "fallback failed",
+        [iz]: "retry linked",
+        [lz]: "fallback linked",
+        [Mz]: "fallback failed",
         32: "compile validation",
         33: "compile internal",
         34: "compile timeout"
       };
 
-    function FT(TT, oT) {
-      return TT === kT ? "program retry" : TT === WT || TT === XT ? `program fallback ${oT}` : "program"
+    function Hz(zz, uz) {
+      return zz === iz ? "program retry" : zz === lz || zz === Mz ? `program fallback ${uz}` : "program"
     }
-    const ST = {
+    const Oz = {
         1: "renderer",
         2: "sky",
         3: "meshes",
         4: "terrain"
       },
-      DT = {
+      pz = {
         0: "transform",
         1: "object",
         2: "instance batch",
@@ -2594,14 +2594,14 @@ export const modules = {
         10: "text plane",
         11: "object chunk"
       },
-      LT = {
+      dz = {
         1: "mesh undecodable",
         2: "part refused",
         3: "terrain ids full",
         4: "unknown terrain id",
         5: "buffer failed"
       },
-      xT = {
+      Fz = {
         1: "view waited drained",
         2: "view waited capped",
         3: "none after view",
@@ -2610,7 +2610,7 @@ export const modules = {
         6: "no wait parallel links",
         7: "view shown unheld"
       },
-      cT = {
+      Zz = {
         1280: "invalid enum",
         1281: "invalid value",
         1282: "invalid operation",
@@ -2619,78 +2619,78 @@ export const modules = {
         37442: "context lost"
       };
 
-    function KT(TT) {
-      return String(TT).replace(/\d/g, (TT => String.fromCharCode(97 + Number(TT))))
+    function Rz(zz) {
+      return String(zz).replace(/\d/g, (zz => String.fromCharCode(97 + Number(zz))))
     }
 
-    function MT(TT, oT) {
-      var IT;
-      return null !== (IT = TT[oT]) && void 0 !== IT ? IT : KT(oT)
+    function Kz(zz, uz) {
+      var bz;
+      return null !== (bz = zz[uz]) && void 0 !== bz ? bz : Rz(uz)
     }
 
-    function rT() {
-      return KT((0, zT.c)())
+    function wz() {
+      return Rz((0, nz.e)())
     }
 
-    function AT(TT, oT) {
-      switch (TT) {
-        case iT.d.RenderSceneRowNotDrawn:
+    function Xz(zz, uz) {
+      switch (zz) {
+        case Ez.g.RenderSceneRowNotDrawn:
           return {
-            words: ` ${MT(DT,oT)}`, instance: String(oT), group: String(TT)
+            words: ` ${Kz(pz,uz)}`, instance: String(uz), group: String(zz)
           };
-        case iT.d.RenderChunkMeshNotDrawn: {
-          const IT = 0 === (128 & oT) ? "" : " shortage",
-            iT = oT >>> 8;
+        case Ez.g.RenderChunkMeshNotDrawn: {
+          const bz = 0 === (128 & uz) ? "" : " shortage",
+            Ez = uz >>> 8;
           return {
-            words: ` ${MT(LT,127&oT)}${IT}${0===iT?"":` kind ${KT(iT)}`}`,
-            instance: String(oT),
-            group: String(TT)
+            words: ` ${Kz(dz,127&uz)}${bz}${0===Ez?"":` kind ${Rz(Ez)}`}`,
+            instance: String(uz),
+            group: String(zz)
           }
         }
-        case iT.d.RenderInternal: {
-          const IT = MT(ST, 255 & oT),
-            iT = oT >>> 8 & 255;
-          if (0 === iT) return {
-            words: ` ${IT}`,
-            instance: String(oT),
-            group: String(TT)
+        case Ez.g.RenderInternal: {
+          const bz = Kz(Oz, 255 & uz),
+            Ez = uz >>> 8 & 255;
+          if (0 === Ez) return {
+            words: ` ${bz}`,
+            instance: String(uz),
+            group: String(zz)
           };
-          const zT = MT(BT, iT),
-            kT = oT >>> 16;
+          const nz = Kz(tz, Ez),
+            iz = uz >>> 16;
           return {
-            words: ` ${IT} ${zT} program ${KT(kT)}`,
-            instance: `${IT} ${zT}`,
-            group: FT(iT, IT),
+            words: ` ${bz} ${nz} program ${Rz(iz)}`,
+            instance: `${bz} ${nz}`,
+            group: Hz(Ez, bz),
             gpuDetails: {
-              programFailure: zT,
-              program: String(kT)
+              programFailure: nz,
+              program: String(iz)
             }
           }
         }
-        case iT.d.RenderSerialLinks: {
-          const IT = MT(xT, oT);
+        case Ez.g.RenderSerialLinks: {
+          const bz = Kz(Fz, uz);
           return {
-            words: ` ${IT}`,
-            instance: String(oT),
-            group: String(TT),
+            words: ` ${bz}`,
+            instance: String(uz),
+            group: String(zz),
             gpuDetails: {
-              serialLinks: IT
+              serialLinks: bz
             }
           }
         }
-        case iT.d.RenderGlErrorAfterRestore: {
-          const IT = MT(cT, 65535 & oT),
-            iT = oT >>> 16,
-            zT = 65535 !== iT;
+        case Ez.g.RenderGlErrorAfterRestore: {
+          const bz = Kz(Zz, 65535 & uz),
+            Ez = uz >>> 16,
+            nz = 65535 !== Ez;
           return {
-            words: ` ${IT}${zT?` program ${KT(iT)}`:""}`,
-            instance: String(oT),
-            group: String(TT),
-            gpuDetails: zT ? {
-              glError: IT,
-              program: String(iT)
+            words: ` ${bz}${nz?` program ${Rz(Ez)}`:""}`,
+            instance: String(uz),
+            group: String(zz),
+            gpuDetails: nz ? {
+              glError: bz,
+              program: String(Ez)
             } : {
-              glError: IT
+              glError: bz
             }
           }
         }
@@ -2698,521 +2698,533 @@ export const modules = {
           return null
       }
     }
-    const gT = 2,
-      hT = new Map;
+    const fz = 2,
+      sz = new Map;
 
-    function wT(TT) {
+    function rz(zz) {
       let {
-        group: oT,
-        instance: IT
-      } = TT, iT = hT.get(oT);
-      return void 0 === iT && (iT = [], hT.set(oT, iT)), !iT.includes(IT) && (iT.length >= gT || (iT.push(IT), !1))
+        group: uz,
+        instance: bz
+      } = zz, Ez = sz.get(uz);
+      return void 0 === Ez && (Ez = [], sz.set(uz, Ez)), !Ez.includes(bz) && (Ez.length >= fz || (Ez.push(bz), !1))
     }
 
-    function mT() {
-      return hT.size > 0
+    function oz() {
+      return sz.size > 0
     }
 
-    function eT() {
-      hT.clear()
+    function Nz() {
+      sz.clear()
     }
   },
-  39674: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => rT,
-      e: () => AT,
-      f: () => MT,
-      g: () => mT
+  40063: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => wz,
+      f: () => Xz,
+      g: () => Kz,
+      j: () => oz
     });
-    var iT = IT(6143),
-      zT = IT(16),
-      kT = IT(3862),
-      WT = IT(4285),
-      XT = IT(6141),
-      BT = IT(39679);
+    var Ez = bz(6362),
+      nz = bz(22),
+      iz = bz(4097),
+      lz = bz(4564),
+      Mz = bz(6359),
+      tz = bz(40071);
 
-    function FT(TT, oT) {
-      const IT = (0, XT.c)(oT.variants);
-      return TT.setShaderPack(IT.variantFlags, IT.hooks, IT.moduleCodes, (0, BT.z)(oT.layers), BT.l[oT.QF], oT.keepCircleShadows)
+    function Hz(zz, uz) {
+      const bz = (0, Mz.c)(uz.variants);
+      return zz.setShaderPack(bz.variantFlags, bz.hooks, bz.moduleCodes, (0, tz.y)(uz.layers), tz.m[uz.Nl], uz.keepCircleShadows)
     }
-    const ST = 0,
-      DT = 1,
-      LT = 2,
-      xT = "shaderPack:failedToCompile",
-      cT = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
-      KT = new Set(["not_requested", "off_after_loss", "gpu_class_webgl"]);
+    const Oz = 0,
+      pz = 1,
+      dz = 2,
+      Fz = "shaderPack:failedToCompile",
+      Zz = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
+      Rz = new Set(["not_requested", "off_after_loss", "gpu_class_webgl"]);
 
-    function MT(TT, oT) {
-      var IT;
-      const iT = null !== (IT = null === TT || void 0 === TT ? void 0 : TT.reason) && void 0 !== IT ? IT : "none";
-      return cT.has(iT) ? {
-        messageKey: oT ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
+    function Kz(zz, uz) {
+      var bz;
+      const Ez = null !== (bz = null === zz || void 0 === zz ? void 0 : zz.reason) && void 0 !== bz ? bz : "none";
+      return Zz.has(Ez) ? {
+        messageKey: uz ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
         noAdapter: !0
-      } : "not_requested" === iT && "override" === (null === TT || void 0 === TT ? void 0 : TT.source) ? {
+      } : "not_requested" === Ez && "override" === (null === zz || void 0 === zz ? void 0 : zz.source) ? {
         messageKey: "shaderPack:failedRendererOverride",
         noAdapter: !1
       } : {
-        messageKey: KT.has(iT) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
+        messageKey: Rz.has(Ez) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
         noAdapter: !1
       }
     }
-    const rT = {
+    const wz = {
       messageKey: "shaderPack:failedDeviceGraphics",
       noAdapter: !1
     };
-    class AT extends Error {
-      constructor(TT) {
-        super(`the shader pack can't run in this game: ${TT}`), this.messageKey = TT, this.name = "ShaderPackJoinError"
+    class Xz extends Error {
+      constructor(zz) {
+        super(`the shader pack can't run in this game: ${zz}`), this.messageKey = zz, this.name = "ShaderPackJoinError"
       }
     }
-    const gT = "strict";
-    class hT {
-      constructor(TT) {
-        this.deps = TT, this.pagePack = void 0, this.loaded = null, this.QF = gT, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = TT.load().catch((oT => (TT.warn("the shader pack could not load: the game draws without it", oT), {
+    const fz = "strict";
+    class sz {
+      constructor(zz) {
+        this.deps = zz, this.pagePack = void 0, this.loaded = null, this.Nl = fz, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = zz.load().catch((uz => (zz.warn("the shader pack could not load: the game draws without it", uz), {
           status: "none"
-        }))).then((TT => (this.loaded = TT, "active" === TT.status && (this.handOverToPreviews(TT), null !== TT.harnessPolicy && (this.QF = TT.harnessPolicy, this.handOver())), TT)))
+        }))).then((zz => (this.loaded = zz, "active" === zz.status && (this.handOverToPreviews(zz), null !== zz.harnessPolicy && (this.Nl = zz.harnessPolicy, this.handOver())), zz)))
       }
-      async join(TT) {
+      async join(zz) {
         this.leave();
-        const oT = this.game,
-          [IT, zT] = await Promise.all([this.pagePack, this.policyOf(TT)]);
-        if (oT !== this.game || "none" === IT.status) return null;
-        const kT = "active" === IT.status ? IT.pack.variants : IT.variants,
-          WT = (0, iT.h)(kT, zT);
-        if (WT && "active" === IT.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
-        if (WT) {
-          const TT = this.cantRun(IT, zT);
-          if (null !== TT) return TT
-        } else if ("blocked" === IT.status || null === this.deps.core) return null;
-        return this.QF = zT, this.handOver(), WT && this.refused ? xT : (this.joined = !0, this.offInThisGame = !WT, null)
+        const uz = this.game,
+          [bz, nz] = await Promise.all([this.pagePack, this.policyOf(zz)]);
+        if (uz !== this.game || "none" === bz.status) return null;
+        const iz = "active" === bz.status ? bz.pack.variants : bz.variants,
+          lz = (0, Ez.j)(iz, nz);
+        if (lz && "active" === bz.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
+        if (lz) {
+          const zz = this.cantRun(bz, nz);
+          if (null !== zz) return zz
+        } else if ("blocked" === bz.status || null === this.deps.core) return null;
+        return this.Nl = nz, this.handOver(), lz && this.refused ? Fz : (this.joined = !0, this.offInThisGame = !lz, null)
       }
-      async replay(TT) {
-        const oT = await this.join(TT);
-        null === oT ? this.playable() : this.deps.failInGame(oT)
+      async replay(zz) {
+        const uz = await this.join(zz);
+        null === uz ? this.playable() : this.deps.failInGame(uz)
       }
-      cantRun(TT, oT) {
+      cantRun(zz, uz) {
         const {
-          core: IT,
-          noWebGpu: iT
+          core: bz,
+          noWebGpu: Ez
         } = this.deps;
-        if ("blocked" === TT.status) {
-          return "shaderPack:failedUnchecked" === TT.messageKey && null === IT && iT.noAdapter ? iT.messageKey : TT.messageKey
+        if ("blocked" === zz.status) {
+          return "shaderPack:failedUnchecked" === zz.messageKey && null === bz && Ez.noAdapter ? Ez.messageKey : zz.messageKey
         }
-        return this.refused || this.failedPolicies.has(oT) ? xT : null
+        return this.refused || this.failedPolicies.has(uz) ? Fz : null
       }
       runsInJoinedGame() {
         return this.joined && !this.offInThisGame
+      }
+      reachInJoinedGame() {
+        var zz;
+        return this.runsInJoinedGame() && "active" === (null === (zz = this.loaded) || void 0 === zz ? void 0 : zz.status) ? function(zz, uz) {
+          const bz = zz.filter((zz => (0, Ez.j)([zz], uz))),
+            nz = zz => bz.some((uz => uz[zz]));
+          return {
+            sceneDepth: nz("sceneDepth"),
+            sunShadow: nz("sunShadow"),
+            airShadow: nz("airShadow")
+          }
+        }(this.loaded.pack.variants, this.Nl) : null
       }
       couldntRunInJoinedGame() {
         return this.couldntRun
       }
       playable() {
-        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(xT) : (null !== this.couldntRun ? this.notify(kT.e, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.QF) && this.notifyModelFallback()))
+        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(Fz) : (null !== this.couldntRun ? this.notify(iz.b, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.Nl) && this.notifyModelFallback()))
       }
       leave() {
         this.game++, this.joined = !1, this.playing = !1, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1
       }
-      coreErrors(TT) {
+      coreErrors(zz) {
         for (const {
-            code: oT,
-            detail: IT
+            code: uz,
+            detail: bz
           }
-          of TT)
-          if (oT === WT.d.RenderShaderPackNotRun) switch (255 & IT) {
-            case ST:
+          of zz)
+          if (uz === lz.g.RenderShaderPackNotRun) switch (255 & bz) {
+            case Oz:
               this.refused = !0, this.failed();
               break;
-            case DT:
-              this.failedPolicies.add(this.QF), this.failed();
+            case pz:
+              this.failedPolicies.add(this.Nl), this.failed();
               break;
-            case LT:
-              this.failedModelPolicies.add(this.QF), this.playing && this.notifyModelFallback()
+            case dz:
+              this.failedModelPolicies.add(this.Nl), this.playing && this.notifyModelFallback()
           }
       }
       failed() {
-        this.joined && !this.offInThisGame && (this.playing ? this.fail(xT) : this.failedWhileJoining = !0)
+        this.joined && !this.offInThisGame && (this.playing ? this.fail(Fz) : this.failedWhileJoining = !0)
       }
-      fail(TT) {
-        this.leave(), this.deps.failInGame(TT)
+      fail(zz) {
+        this.leave(), this.deps.failInGame(zz)
       }
       notifyModelFallback() {
         this.modelsNotified || (this.modelsNotified = !0, this.notify("shaderPack:modelsWithoutPack"))
       }
-      notify(TT, oT) {
-        const IT = this.game;
-        this.deps.notify(TT, (() => IT === this.game && this.joined), oT)
+      notify(zz, uz) {
+        const bz = this.game;
+        this.deps.notify(zz, (() => bz === this.game && this.joined), uz)
       }
       handOver() {
-        var TT;
+        var zz;
         const {
-          core: oT
+          core: uz
         } = this.deps;
-        null !== oT && "active" === (null === (TT = this.loaded) || void 0 === TT ? void 0 : TT.status) && (FT(oT, {
+        null !== uz && "active" === (null === (zz = this.loaded) || void 0 === zz ? void 0 : zz.status) && (Hz(uz, {
           ...this.loaded.pack,
-          QF: this.QF
+          Nl: this.Nl
         }) || (this.refused = !0, this.deps.warn("the core refused the shader pack: the games it runs in fail", null)))
       }
-      handOverToPreviews(TT) {
+      handOverToPreviews(zz) {
         let {
-          pack: oT,
-          harnessPolicy: IT
-        } = TT;
+          pack: uz,
+          harnessPolicy: bz
+        } = zz;
         const {
-          previews: iT
+          previews: Ez
         } = this.deps;
-        null !== iT && FT(iT, {
-          ...oT,
-          QF: null !== IT && void 0 !== IT ? IT : gT
+        null !== Ez && Hz(Ez, {
+          ...uz,
+          Nl: null !== bz && void 0 !== bz ? bz : fz
         })
       }
-      policyOf(TT) {
-        return this.deps.policyOf(TT).catch((TT => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", TT), gT)))
+      policyOf(zz) {
+        return this.deps.policyOf(zz).catch((zz => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", zz), fz)))
       }
     }
-    const wT = "wasmShaderPackNotice";
+    const rz = "wasmShaderPackNotice";
 
-    function mT(TT, oT, IT, iT) {
-      return zT.h.subscribe(wT, (TT => {
+    function oz(zz, uz, bz, Ez) {
+      return nz.k.subscribe(rz, (zz => {
         let {
-          translationKey: oT,
-          stillCurrent: IT,
-          reasonKey: iT
-        } = TT;
-        IT() && zT.h.XM("chat", (0, kT.j)(oT, iT))
-      })), new hT({
-        load: eT,
-        policyOf: RT,
-        core: TT,
-        previews: oT,
-        noWebGpu: IT,
-        notify: (TT, oT, IT) => {
-          const iT = {
-            translationKey: TT,
-            stillCurrent: oT,
-            reasonKey: IT
+          translationKey: uz,
+          stillCurrent: bz,
+          reasonKey: Ez
+        } = zz;
+        bz() && nz.k.sK("chat", (0, iz.h)(uz, Ez))
+      })), new sz({
+        load: Nz,
+        policyOf: vz,
+        core: zz,
+        previews: uz,
+        noWebGpu: bz,
+        notify: (zz, uz, bz) => {
+          const Ez = {
+            translationKey: zz,
+            stillCurrent: uz,
+            reasonKey: bz
           };
-          zT.h.XM(wT, iT, !0)
+          nz.k.sK(rz, Ez, !0)
         },
-        failInGame: TT => {
-          zT.h.XM(kT.h, TT)
+        failInGame: zz => {
+          nz.k.sK(iz.e, zz)
         },
-        warn: iT
+        warn: Ez
       })
     }
-    async function eT() {
+    async function Nz() {
       const [{
-        shaderPackPage: TT,
-        harnessShaderPackMode: oT
+        shaderPackPage: zz,
+        harnessShaderPackMode: uz
       }, {
-        shaderPackTextures: iT
-      }] = await Promise.all([IT.e(130).then((() => IT(38159))), IT.e(131).then((() => IT(6138)))]), zT = await TT.load();
-      return "active" !== zT.status ? zT : {
+        shaderPackTextures: Ez
+      }] = await Promise.all([bz.e(129).then((() => bz(38566))), bz.e(130).then((() => bz(6352)))]), nz = await zz.load();
+      return "active" !== nz.status ? nz : {
         status: "active",
         pack: {
-          variants: zT.pack.variants,
-          layers: iT().layers,
-          keepCircleShadows: zT.pack.keepCircleShadows
+          variants: nz.pack.variants,
+          layers: Ez().layers,
+          keepCircleShadows: nz.pack.keepCircleShadows
         },
-        harnessPolicy: oT()
+        harnessPolicy: uz()
       }
     }
-    async function RT(TT) {
-      var oT;
+    async function vz(zz) {
+      var uz;
       const [{
-        harnessShaderPackMode: iT
+        harnessShaderPackMode: Ez
       }, {
-        getShaderPackPolicy: zT
-      }] = await Promise.all([IT.e(130).then((() => IT(38159))), IT.e(89).then((() => IT(39953)))]);
-      return null !== (oT = iT()) && void 0 !== oT ? oT : zT(TT)
+        getShaderPackPolicy: nz
+      }] = await Promise.all([bz.e(129).then((() => bz(38566))), bz.e(89).then((() => bz(40479)))]);
+      return null !== (uz = Ez()) && void 0 !== uz ? uz : nz(zz)
     }
   },
-  39779: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => XT,
-      d: () => MT,
-      h: () => BT,
-      l: () => FT,
-      o: () => ST,
-      s: () => LT
+  40181: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Mz,
+      e: () => Kz,
+      g: () => tz,
+      j: () => Hz,
+      n: () => Oz,
+      r: () => dz
     });
-    var iT = IT(39781),
-      zT = IT(39783);
-    const kT = "atlas:",
-      WT = 3e4;
-    class XT extends Error {
-      constructor(TT, oT) {
-        super(`fetching ${TT} answered HTTP ${oT}`), this.url = TT, this.status = oT, this.name = "TerrainTextureFetchError"
+    var Ez = bz(40187),
+      nz = bz(40189);
+    const iz = "atlas:",
+      lz = 3e4;
+    class Mz extends Error {
+      constructor(zz, uz) {
+        super(`fetching ${zz} answered HTTP ${uz}`), this.url = zz, this.status = uz, this.name = "TerrainTextureFetchError"
       }
     }
 
-    function BT(TT) {
-      if (!TT.startsWith(kT)) return null;
-      const oT = Number(TT.slice(kT.length));
-      return Number.isInteger(oT) && oT >= 0 ? oT : null
+    function tz(zz) {
+      if (!zz.startsWith(iz)) return null;
+      const uz = Number(zz.slice(iz.length));
+      return Number.isInteger(uz) && uz >= 0 ? uz : null
     }
-    async function FT() {
-      const TT = await IT.e(196).then((() => IT(33287)));
+    async function Hz() {
+      const zz = await bz.e(201).then((() => bz(33750)));
       return {
-        atlasSheets: TT.blockAtlasUrls,
-        texture: oT => {
-          var IT, iT, kT;
-          return null !== (IT = null !== (iT = null !== (kT = TT.animatedBlockTextures[oT]) && void 0 !== kT ? kT : TT.rotatedBlockTextures[oT]) && void 0 !== iT ? iT : zT.b[oT]) && void 0 !== IT ? IT : null
+        atlasSheets: zz.blockAtlasUrls,
+        texture: uz => {
+          var bz, Ez, iz;
+          return null !== (bz = null !== (Ez = null !== (iz = zz.animatedBlockTextures[uz]) && void 0 !== iz ? iz : zz.rotatedBlockTextures[uz]) && void 0 !== Ez ? Ez : nz.c[uz]) && void 0 !== bz ? bz : null
         }
       }
     }
-    async function ST(TT) {
-      const oT = new AbortController,
-        IT = setTimeout((() => {
-          oT.abort(new DOMException(`${TT} took over ${WT} ms`, "TimeoutError"))
-        }), WT);
-      let iT;
+    async function Oz(zz) {
+      const uz = new AbortController,
+        bz = setTimeout((() => {
+          uz.abort(new DOMException(`${zz} took over ${lz} ms`, "TimeoutError"))
+        }), lz);
+      let Ez;
       try {
-        const IT = await fetch(TT, {
-          signal: oT.signal
+        const bz = await fetch(zz, {
+          signal: uz.signal
         });
-        if (!IT.ok) throw new XT(TT, IT.status);
-        iT = await IT.blob()
+        if (!bz.ok) throw new Mz(zz, bz.status);
+        Ez = await bz.blob()
       } finally {
-        clearTimeout(IT)
+        clearTimeout(bz)
       }
-      const zT = await createImageBitmap(iT, {
+      const nz = await createImageBitmap(Ez, {
         premultiplyAlpha: "none",
         colorSpaceConversion: "none"
       });
       try {
-        return LT(zT)
+        return dz(nz)
       } finally {
-        zT.close()
+        nz.close()
       }
     }
-    const DT = 8192;
+    const pz = 8192;
 
-    function LT(TT) {
+    function dz(zz) {
       const {
-        width: oT,
-        height: IT
-      } = TT, zT = Math.max(1, Math.min(IT, DT)), kT = (0, iT.i)(oT, zT, {
+        width: uz,
+        height: bz
+      } = zz, nz = Math.max(1, Math.min(bz, pz)), iz = (0, Ez.e)(uz, nz, {
         willReadFrequently: !0
       });
-      if (!kT) throw new Error("no 2D context to read the texture back");
-      kT.globalCompositeOperation = "copy";
-      const WT = new Uint8Array(oT * IT * 4);
-      for (let iT = 0; iT < IT; iT += zT) {
-        const XT = Math.min(zT, IT - iT);
-        kT.drawImage(TT, 0, iT, oT, XT, 0, 0, oT, XT), WT.set(kT.getImageData(0, 0, oT, XT).data, iT * oT * 4)
+      if (!iz) throw new Error("no 2D context to read the texture back");
+      iz.globalCompositeOperation = "copy";
+      const lz = new Uint8Array(uz * bz * 4);
+      for (let Ez = 0; Ez < bz; Ez += nz) {
+        const Mz = Math.min(nz, bz - Ez);
+        iz.drawImage(zz, 0, Ez, uz, Mz, 0, 0, uz, Mz), lz.set(iz.getImageData(0, 0, uz, Mz).data, Ez * uz * 4)
       }
       return {
-        width: oT,
-        height: IT,
-        pixels: WT
+        width: uz,
+        height: bz,
+        pixels: lz
       }
     }
-    async function xT(TT, oT) {
-      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ST;
-      const iT = [],
-        zT = await Promise.all(TT.map((async TT => {
-          var zT, WT;
-          const XT = null !== (zT = null === (WT = oT.decoded) || void 0 === WT ? void 0 : WT.call(oT, TT)) && void 0 !== zT ? zT : null,
-            FT = null === XT ? function(TT, oT) {
-              if (TT.startsWith(kT)) {
-                var IT;
-                const iT = BT(TT);
-                return null === iT ? null : null !== (IT = oT.atlasSheets[iT]) && void 0 !== IT ? IT : null
+    async function Fz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Oz;
+      const Ez = [],
+        nz = await Promise.all(zz.map((async zz => {
+          var nz, lz;
+          const Mz = null !== (nz = null === (lz = uz.decoded) || void 0 === lz ? void 0 : lz.call(uz, zz)) && void 0 !== nz ? nz : null,
+            Hz = null === Mz ? function(zz, uz) {
+              if (zz.startsWith(iz)) {
+                var bz;
+                const Ez = tz(zz);
+                return null === Ez ? null : null !== (bz = uz.atlasSheets[Ez]) && void 0 !== bz ? bz : null
               }
-              return oT.texture(TT)
-            }(TT, oT) : null,
-            ST = null !== XT && void 0 !== XT ? XT : null === FT ? null : IT(FT);
-          if (null === ST) return iT.push({
-            name: TT,
-            url: FT,
-            error: new Error(`no URL for terrain texture ${TT}`)
+              return uz.texture(zz)
+            }(zz, uz) : null,
+            Oz = null !== Mz && void 0 !== Mz ? Mz : null === Hz ? null : bz(Hz);
+          if (null === Oz) return Ez.push({
+            name: zz,
+            url: Hz,
+            error: new Error(`no URL for terrain texture ${zz}`)
           }), null;
           try {
-            const oT = await ST;
-            if (oT.pixels.byteLength !== oT.width * oT.height * 4) throw new Error(`decoded ${oT.pixels.byteLength} bytes for ${oT.width}x${oT.height} texels`);
+            const uz = await Oz;
+            if (uz.pixels.byteLength !== uz.width * uz.height * 4) throw new Error(`decoded ${uz.pixels.byteLength} bytes for ${uz.width}x${uz.height} texels`);
             return {
-              name: TT,
-              texture: oT
+              name: zz,
+              texture: uz
             }
-          } catch (DT) {
-            return iT.push({
-              name: TT,
-              url: FT,
-              error: DT
+          } catch (pz) {
+            return Ez.push({
+              name: zz,
+              url: Hz,
+              error: pz
             }), null
           }
         }))),
-        WT = zT.filter((TT => null !== TT)),
-        XT = new Uint32Array(2 * WT.length);
-      WT.forEach(((TT, oT) => {
+        lz = nz.filter((zz => null !== zz)),
+        Mz = new Uint32Array(2 * lz.length);
+      lz.forEach(((zz, uz) => {
         let {
-          texture: IT
-        } = TT;
-        XT[2 * oT] = IT.width, XT[2 * oT + 1] = IT.height
+          texture: bz
+        } = zz;
+        Mz[2 * uz] = bz.width, Mz[2 * uz + 1] = bz.height
       }));
       return {
         handOver: {
-          names: WT.map((TT => {
+          names: lz.map((zz => {
             let {
-              name: oT
-            } = TT;
-            return oT
+              name: uz
+            } = zz;
+            return uz
           })),
-          textures: WT.map((TT => {
+          textures: lz.map((zz => {
             let {
-              texture: oT
-            } = TT;
-            return oT.pixels
+              texture: uz
+            } = zz;
+            return uz.pixels
           })),
-          sizes: XT
+          sizes: Mz
         },
-        failures: iT
+        failures: Ez
       }
     }
-    const cT = [2e3, 1e4, 3e4, 6e4, 12e4];
+    const Zz = [2e3, 1e4, 3e4, 6e4, 12e4];
 
-    function KT() {}
-    class MT {
-      constructor(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : cT,
-          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
-        this.core = TT, this.retryMs = oT, this.keepBelow = IT, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
+    function Rz() {}
+    class Kz {
+      constructor(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Zz,
+          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
+        this.core = zz, this.retryMs = uz, this.keepBelow = bz, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
       }
-      async swap(TT) {
-        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : FT,
-          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const iT = ++this.started,
-          zT = {
-            decode: IT.decode,
-            wholeAtlas: IT.wholeAtlas
+      async swap(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hz,
+          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Ez = ++this.started,
+          nz = {
+            decode: bz.decode,
+            wholeAtlas: bz.wholeAtlas
           };
-        return this.loadAndHandOver(oT, zT, TT, (() => {
-          var TT;
-          return iT < this.landed || !1 === (null === (TT = IT.wanted) || void 0 === TT ? void 0 : TT.call(IT))
+        return this.loadAndHandOver(uz, nz, zz, (() => {
+          var zz;
+          return Ez < this.landed || !1 === (null === (zz = bz.wanted) || void 0 === zz ? void 0 : zz.call(bz))
         }), {
-          onTaken: (TT, IT) => {
-            this.landed = iT, this.current = {
-              mine: iT,
-              sources: oT,
-              load: zT,
-              qx: TT,
-              failed: IT
+          onTaken: (zz, bz) => {
+            this.landed = Ez, this.current = {
+              mine: Ez,
+              sources: uz,
+              load: nz,
+              MZ: zz,
+              failed: bz
             }
           }
         })
       }
-      restore(TT) {
-        var oT;
-        const IT = this.current;
-        if (null === IT) return Promise.resolve(null);
-        if ((null === (oT = this.restoring) || void 0 === oT ? void 0 : oT.mine) === IT.mine) return this.restoring.done;
-        const iT = {
-          mine: IT.mine,
-          done: this.restoreLanded(IT, TT).finally((() => {
-            this.restoring === iT && (this.restoring = null)
+      restore(zz) {
+        var uz;
+        const bz = this.current;
+        if (null === bz) return Promise.resolve(null);
+        if ((null === (uz = this.restoring) || void 0 === uz ? void 0 : uz.mine) === bz.mine) return this.restoring.done;
+        const Ez = {
+          mine: bz.mine,
+          done: this.restoreLanded(bz, zz).finally((() => {
+            this.restoring === Ez && (this.restoring = null)
           }))
         };
-        return this.restoring = iT, iT.done
+        return this.restoring = Ez, Ez.done
       }
-      async restoreLanded(TT, oT) {
-        const IT = () => this.landed !== TT.mine,
+      async restoreLanded(zz, uz) {
+        const bz = () => this.landed !== zz.mine,
           {
-            qx: iT
-          } = TT;
-        if (null !== iT) return this.stopped() ? null : this.core.setTerrainTextures(iT.names, iT.textures, iT.sizes);
-        let zT = oT;
-        for (let kT = 0;; kT++) {
-          const oT = this.retryMs.at(kT),
-            iT = {
-              allOrNothingExcept: void 0 === oT ? void 0 : TT.failed
+            MZ: Ez
+          } = zz;
+        if (null !== Ez) return this.stopped() ? null : this.core.setTerrainTextures(Ez.names, Ez.textures, Ez.sizes);
+        let nz = uz;
+        for (let iz = 0;; iz++) {
+          const uz = this.retryMs.at(iz),
+            Ez = {
+              allOrNothingExcept: void 0 === uz ? void 0 : zz.failed
             },
-            WT = await this.loadAndHandOver(TT.sources, TT.load, zT, IT, iT);
-          if (!1 !== WT || void 0 === oT || this.stopped()) return WT;
-          if (zT = KT, await new Promise((TT => {
-              setTimeout(TT, oT)
-            })), IT()) return null
+            lz = await this.loadAndHandOver(zz.sources, zz.load, nz, bz, Ez);
+          if (!1 !== lz || void 0 === uz || this.stopped()) return lz;
+          if (nz = Rz, await new Promise((zz => {
+              setTimeout(zz, uz)
+            })), bz()) return null
         }
       }
       stopped() {
         return !0 === this.core.isStopped
       }
-      async loadAndHandOver(TT, oT, IT, iT) {
-        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      async loadAndHandOver(zz, uz, bz, Ez) {
+        let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (this.stopped()) return null;
-        const kT = this.core.terrainTextureNames();
-        var WT;
-        if (0 === kT.length) return null === (WT = zT.onTaken) || void 0 === WT || WT.call(zT, null, new Set), !0;
-        let XT, FT;
+        const iz = this.core.terrainTextureNames();
+        var lz;
+        if (0 === iz.length) return null === (lz = nz.onTaken) || void 0 === lz || lz.call(nz, null, new Set), !0;
+        let Mz, Hz;
         try {
-          XT = await TT(), FT = await xT(kT, XT, oT.decode)
-        } catch (MT) {
-          return iT() ? null : (IT({
+          Mz = await zz(), Hz = await Fz(iz, Mz, uz.decode)
+        } catch (Kz) {
+          return Ez() ? null : (bz({
             name: null,
             url: null,
-            error: MT
+            error: Kz
           }), !1)
         }
-        if (iT() || this.stopped()) return null;
-        for (const BT of FT.failures) IT(BT);
-        const ST = zT.allOrNothingExcept;
-        if (void 0 !== ST && FT.failures.some((TT => {
+        if (Ez() || this.stopped()) return null;
+        for (const tz of Hz.failures) bz(tz);
+        const Oz = nz.allOrNothingExcept;
+        if (void 0 !== Oz && Hz.failures.some((zz => {
             let {
-              name: oT
-            } = TT;
-            return null === oT || !ST.has(oT)
-          })) || !0 === oT.wholeAtlas && FT.failures.some((TT => {
+              name: uz
+            } = zz;
+            return null === uz || !Oz.has(uz)
+          })) || !0 === uz.wholeAtlas && Hz.failures.some((zz => {
             let {
-              name: oT
-            } = TT;
-            return null === oT || null !== BT(oT)
+              name: uz
+            } = zz;
+            return null === uz || null !== tz(uz)
           }))) return !1;
         const {
-          handOver: DT
-        } = FT, LT = function(TT) {
-          return TT.textures.reduce(((TT, oT) => TT + oT.byteLength), 0)
-        }(DT) < this.keepBelow, cT = this.core.setTerrainTextures(DT.names, DT.textures, DT.sizes, LT ? void 0 : () => {
-          !async function(TT, oT) {
-            await oT;
+          handOver: pz
+        } = Hz, dz = function(zz) {
+          return zz.textures.reduce(((zz, uz) => zz + uz.byteLength), 0)
+        }(pz) < this.keepBelow, Zz = this.core.setTerrainTextures(pz.names, pz.textures, pz.sizes, dz ? void 0 : () => {
+          !async function(zz, uz) {
+            await uz;
             for (const {
-                buffer: iT
+                buffer: Ez
               }
-              of TT) {
-              const TT = iT;
-              var IT;
-              if (!TT.detached) null === (IT = TT.transfer) || void 0 === IT || IT.call(TT, 0)
+              of zz) {
+              const zz = Ez;
+              var bz;
+              if (!zz.detached) null === (bz = zz.transfer) || void 0 === bz || bz.call(zz, 0)
             }
-          }(DT.textures, XT.heldUntil)
+          }(pz.textures, Mz.heldUntil)
         });
-        if (cT) {
-          var KT;
-          const TT = new Set(FT.failures.flatMap((TT => {
+        if (Zz) {
+          var Rz;
+          const zz = new Set(Hz.failures.flatMap((zz => {
             let {
-              name: oT
-            } = TT;
-            return null === oT ? [] : [oT]
+              name: uz
+            } = zz;
+            return null === uz ? [] : [uz]
           })));
-          null === (KT = zT.onTaken) || void 0 === KT || KT.call(zT, LT ? DT : null, TT)
+          null === (Rz = nz.onTaken) || void 0 === Rz || Rz.call(nz, dz ? pz : null, zz)
         }
-        return cT
+        return Zz
       }
     }
   },
-  39786: (TT, oT, IT) => {
-    function iT(TT) {
-      return "fetch" === TT || "timeout" === TT || "integrity" === TT ? "download" : "browser"
+  36282: (zz, uz, bz) => {
+    function Ez(zz) {
+      return "fetch" === zz || "timeout" === zz || "integrity" === zz ? "download" : "browser"
     }
-    IT.d(oT, {
-      c: () => zT,
-      f: () => WT,
-      g: () => BT,
-      j: () => XT,
-      k: () => iT,
-      l: () => kT
+    bz.d(uz, {
+      e: () => nz,
+      i: () => lz,
+      l: () => tz,
+      m: () => Mz,
+      q: () => Ez,
+      s: () => iz
     });
-    const zT = "https://discord.gg/playbloxd";
+    const nz = "https://discord.gg/playbloxd";
 
-    function kT(TT) {
-      return "download" === TT ? {
+    function iz(zz) {
+      return "download" === zz ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -3231,21 +3243,21 @@ export const modules = {
       }
     }
 
-    function WT(TT, oT) {
+    function lz(zz, uz) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: oT ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: uz ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: TT.code
+          code: zz.code
         },
-        discordLink: oT,
+        discordLink: uz,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function XT() {
+    function Mz() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -3257,146 +3269,146 @@ export const modules = {
       }
     }
 
-    function BT(TT, oT, IT) {
+    function tz(zz, uz, bz) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: IT ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: bz ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: TT.reason
+          reason: zz.reason
         },
-        discordLink: null === TT.name,
-        confirm: oT ? "general:reconnect" : TT.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === zz.name,
+        confirm: uz ? "general:reconnect" : zz.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  6141: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => hT,
-      g: () => wT,
-      j: () => AT,
-      n: () => rT
+  6359: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => sz,
+      e: () => rz,
+      i: () => Xz,
+      m: () => wz
     });
-    var iT = IT(6143);
-    const zT = 6,
-      kT = 3,
-      WT = 1,
-      XT = 2,
-      BT = 4,
-      FT = 8,
-      ST = 16,
-      DT = 32,
-      LT = 64,
-      xT = 128,
-      cT = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var Ez = bz(6362);
+    const nz = 6,
+      iz = 3,
+      lz = 1,
+      Mz = 2,
+      tz = 4,
+      Hz = 8,
+      Oz = 16,
+      pz = 32,
+      dz = 64,
+      Fz = 128,
+      Zz = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function KT(TT) {
-      if (!TT) return 0;
-      const oT = cT.indexOf(TT);
-      if (oT <= 0) throw new Error(`"${TT}" is not a shader pack hook function`);
-      return oT
+    function Rz(zz) {
+      if (!zz) return 0;
+      const uz = Zz.indexOf(zz);
+      if (uz <= 0) throw new Error(`"${zz}" is not a shader pack hook function`);
+      return uz
     }
 
-    function MT(TT) {
-      if (0 === TT) return null;
-      const oT = cT[TT];
-      if (void 0 === oT) throw new Error(`${TT} is not a shader pack hook function id`);
-      return oT
+    function Kz(zz) {
+      if (0 === zz) return null;
+      const uz = Zz[zz];
+      if (void 0 === uz) throw new Error(`${zz} is not a shader pack hook function id`);
+      return uz
     }
 
-    function rT(TT) {
-      const oT = iT.d.length;
+    function wz(zz) {
+      const uz = Ez.e.length;
       return {
-        strict: TT >= oT,
-        program: iT.d[TT % oT]
+        strict: zz >= uz,
+        program: Ez.e[zz % uz]
       }
     }
 
-    function AT(TT) {
-      return Number(TT.strict) * iT.d.length + iT.d.indexOf(TT.program)
+    function Xz(zz) {
+      return Number(zz.strict) * Ez.e.length + Ez.e.indexOf(zz.program)
     }
 
-    function gT(TT) {
-      return "" === TT ? [] : TT.split(" ")
+    function fz(zz) {
+      return "" === zz ? [] : zz.split(" ")
     }
 
-    function hT(TT) {
-      const oT = {
-        variantFlags: new Uint8Array(zT),
-        hooks: new Uint8Array(zT * kT),
-        moduleCodes: Array(zT).fill(""),
-        reads: Array(2 * zT).fill("")
+    function sz(zz) {
+      const uz = {
+        variantFlags: new Uint8Array(nz),
+        hooks: new Uint8Array(nz * iz),
+        moduleCodes: Array(nz).fill(""),
+        reads: Array(2 * nz).fill("")
       };
-      for (const IT of TT) {
-        const TT = AT(IT.key),
-          iT = (TT, oT) => null === IT.hooks.surface || IT.reads.fragment.includes(TT) ? 0 : oT;
-        oT.variantFlags[TT] = (IT.sceneDepth ? WT : 0) | (IT.movesVertices ? XT : 0) | (IT.sunShadow ? BT : 0) | (IT.airShadow ? FT : 0) | (IT.discards ? ST : 0) | iT("localPosition", DT) | iT("enchantSpeed", LT) | iT("enchantTier", xT), oT.hooks[TT * kT] = KT(IT.hooks.vertex), oT.hooks[TT * kT + 1] = KT(IT.hooks.surface), oT.hooks[TT * kT + 2] = KT(IT.hooks.light), oT.moduleCodes[TT] = IT.moduleCode, oT.reads[2 * TT] = IT.reads.vertex.join(" "), oT.reads[2 * TT + 1] = IT.reads.fragment.join(" ")
+      for (const bz of zz) {
+        const zz = Xz(bz.key),
+          Ez = (zz, uz) => null === bz.hooks.surface || bz.reads.fragment.includes(zz) ? 0 : uz;
+        uz.variantFlags[zz] = (bz.sceneDepth ? lz : 0) | (bz.movesVertices ? Mz : 0) | (bz.sunShadow ? tz : 0) | (bz.airShadow ? Hz : 0) | (bz.discards ? Oz : 0) | Ez("localPosition", pz) | Ez("enchantSpeed", dz) | Ez("enchantTier", Fz), uz.hooks[zz * iz] = Rz(bz.hooks.vertex), uz.hooks[zz * iz + 1] = Rz(bz.hooks.surface), uz.hooks[zz * iz + 2] = Rz(bz.hooks.light), uz.moduleCodes[zz] = bz.moduleCode, uz.reads[2 * zz] = bz.reads.vertex.join(" "), uz.reads[2 * zz + 1] = bz.reads.fragment.join(" ")
       }
-      return oT
+      return uz
     }
 
-    function wT(TT) {
+    function rz(zz) {
       const {
-        hooks: oT,
-        moduleCodes: IT,
-        reads: iT
-      } = TT;
-      return Array.from(TT.variantFlags, ((TT, zT) => {
-        const DT = zT * kT;
+        hooks: uz,
+        moduleCodes: bz,
+        reads: Ez
+      } = zz;
+      return Array.from(zz.variantFlags, ((zz, nz) => {
+        const pz = nz * iz;
         return {
-          key: rT(zT),
+          key: wz(nz),
           hooks: {
-            vertex: MT(oT[DT]),
-            surface: MT(oT[DT + 1]),
-            light: MT(oT[DT + 2])
+            vertex: Kz(uz[pz]),
+            surface: Kz(uz[pz + 1]),
+            light: Kz(uz[pz + 2])
           },
-          moduleCode: IT[zT],
-          sceneDepth: 0 !== (TT & WT),
-          sunShadow: 0 !== (TT & BT),
-          airShadow: 0 !== (TT & FT),
-          movesVertices: 0 !== (TT & XT),
-          discards: 0 !== (TT & ST),
+          moduleCode: bz[nz],
+          sceneDepth: 0 !== (zz & lz),
+          sunShadow: 0 !== (zz & tz),
+          airShadow: 0 !== (zz & Hz),
+          movesVertices: 0 !== (zz & Mz),
+          discards: 0 !== (zz & Oz),
           reads: {
-            vertex: gT(iT[2 * zT]),
-            fragment: gT(iT[2 * zT + 1])
+            vertex: fz(Ez[2 * nz]),
+            fragment: fz(Ez[2 * nz + 1])
           }
         }
       }))
     }
   },
-  39679: (TT, oT, IT) => {
-    IT.d(oT, {
-      A: () => xT,
-      B: () => cT,
-      c: () => zT,
-      d: () => iT,
-      e: () => LT,
-      h: () => ST,
-      l: () => MT,
-      n: () => kT,
-      q: () => XT,
-      r: () => BT,
-      v: () => WT,
-      z: () => KT
+  40071: (zz, uz, bz) => {
+    bz.d(uz, {
+      A: () => Fz,
+      B: () => Zz,
+      c: () => nz,
+      g: () => Ez,
+      h: () => dz,
+      j: () => Oz,
+      m: () => Kz,
+      o: () => iz,
+      q: () => Mz,
+      t: () => tz,
+      w: () => lz,
+      y: () => Rz
     });
-    const iT = 3,
-      zT = 0,
-      kT = 1,
-      WT = 2,
-      XT = {
+    const Ez = 3,
+      nz = 0,
+      iz = 1,
+      lz = 2,
+      Mz = {
         uniform: 3,
-        jL: 4,
+        nF: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      BT = 10,
-      FT = "BloxdPackInputs",
-      ST = "bloxdPackInputs",
-      DT = [{
+      tz = 10,
+      Hz = "BloxdPackInputs",
+      Oz = "bloxdPackInputs",
+      pz = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -3421,115 +3433,115 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      LT = 80;
+      dz = 80;
 
-    function xT() {
-      const TT = DT.map((TT => {
+    function Fz() {
+      const zz = pz.map((zz => {
         let {
-          name: oT,
-          type: IT
-        } = TT;
-        return `    ${oT}: ${IT},\n`
+          name: uz,
+          type: bz
+        } = zz;
+        return `    ${uz}: ${bz},\n`
       })).join("");
-      return `struct ${FT} {\n${TT}}\n@group(${iT}) @binding(${zT}) var<uniform> ${ST}: ${FT};\n`
+      return `struct ${Hz} {\n${zz}}\n@group(${Ez}) @binding(${nz}) var<uniform> ${Oz}: ${Hz};\n`
     }
 
-    function cT(TT, oT) {
-      const IT = new DataView(TT, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, LT),
-        [iT, zT, kT, WT, XT, BT] = DT;
-      IT.setFloat32(iT.offset, oT.seconds, !0), IT.setUint32(zT.offset, oT.lit ? 1 : 0, !0);
-      for (let FT = 0; FT < 3; FT++) IT.setInt32(kT.offset + 4 * FT, oT.renderOffset[FT], !0), IT.setFloat32(WT.offset + 4 * FT, oT.f_[FT], !0), IT.setFloat32(XT.offset + 4 * FT, oT.eyePosition[FT], !0), IT.setFloat32(BT.offset + 4 * FT, oT.shadowDirection[FT], !0)
+    function Zz(zz, uz) {
+      const bz = new DataView(zz, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, dz),
+        [Ez, nz, iz, lz, Mz, tz] = pz;
+      bz.setFloat32(Ez.offset, uz.seconds, !0), bz.setUint32(nz.offset, uz.lit ? 1 : 0, !0);
+      for (let Hz = 0; Hz < 3; Hz++) bz.setInt32(iz.offset + 4 * Hz, uz.renderOffset[Hz], !0), bz.setFloat32(lz.offset + 4 * Hz, uz.k_[Hz], !0), bz.setFloat32(Mz.offset + 4 * Hz, uz.eyePosition[Hz], !0), bz.setFloat32(tz.offset + 4 * Hz, uz.shadowDirection[Hz], !0)
     }
 
-    function KT(TT) {
-      const oT = new Uint32Array(Math.max(1, TT.length));
-      return TT.forEach(((TT, IT) => {
+    function Rz(zz) {
+      const uz = new Uint32Array(Math.max(1, zz.length));
+      return zz.forEach(((zz, bz) => {
         let {
-          id: iT,
-          rotation: zT
-        } = TT;
-        oT[IT] = 65535 & iT | (3 & zT) << 16
-      })), oT
+          id: Ez,
+          rotation: nz
+        } = zz;
+        uz[bz] = 65535 & Ez | (3 & nz) << 16
+      })), uz
     }
-    const MT = {
+    const Kz = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6143: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => iT,
-      g: () => WT,
-      h: () => XT,
-      k: () => zT,
-      l: () => kT
+  6362: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Ez,
+      i: () => lz,
+      j: () => Mz,
+      m: () => nz,
+      p: () => iz
     });
-    const iT = ["terrain", "liquid", "model"];
+    const Ez = ["terrain", "liquid", "model"];
 
-    function zT() {
-      const TT = [];
-      for (const oT of [!1, !0])
-        for (const IT of iT) TT.push({
-          strict: oT,
-          program: IT
+    function nz() {
+      const zz = [];
+      for (const uz of [!1, !0])
+        for (const bz of Ez) zz.push({
+          strict: uz,
+          program: bz
         });
-      return TT
+      return zz
     }
 
-    function kT(TT) {
-      return `${TT.strict?"strict":"allow"}.${TT.program}`
+    function iz(zz) {
+      return `${zz.strict?"strict":"allow"}.${zz.program}`
     }
 
-    function WT(TT) {
-      return !TT.hooks.vertex && !TT.hooks.surface && !TT.hooks.light
+    function lz(zz) {
+      return !zz.hooks.vertex && !zz.hooks.surface && !zz.hooks.light
     }
 
-    function XT(TT, oT) {
-      return "off" !== oT && (null === TT || TT.some((TT => TT.key.strict === ("strict" === oT) && !WT(TT))))
+    function Mz(zz, uz) {
+      return "off" !== uz && (null === zz || zz.some((zz => zz.key.strict === ("strict" === uz) && !lz(zz))))
     }
   },
-  39710: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => iT,
-      f: () => kT,
-      g: () => BT,
-      i: () => WT,
-      k: () => zT
+  40111: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Ez,
+      e: () => iz,
+      i: () => tz,
+      l: () => lz,
+      o: () => nz
     });
-    const iT = /^alloc_failed (\d+) bytes$/;
+    const Ez = /^alloc_failed (\d+) bytes$/;
 
-    function zT(TT, oT) {
-      return kT(TT, oT) ? `trap=alloc_failed ${oT} bytes` : `trap=${TT}`
+    function nz(zz, uz) {
+      return iz(zz, uz) ? `trap=alloc_failed ${uz} bytes` : `trap=${zz}`
     }
 
-    function kT(TT, oT) {
-      return "unreachable" === TT && oT > 0
+    function iz(zz, uz) {
+      return "unreachable" === zz && uz > 0
     }
 
-    function WT(TT, oT, IT) {
-      const iT = function(TT) {
-        return TT instanceof WebAssembly.RuntimeError ? /unreachable/i.test(TT.message) ? "unreachable" : /out of bounds/i.test(TT.message) ? "out_of_bounds" : "runtime_error" : (TT instanceof RangeError || TT instanceof Error && "InternalError" === TT.name) && /call stack|recursion/i.test(TT.message) ? "stack_overflow" : "js_error"
-      }(TT);
-      if ("unreachable" !== iT) return {
-        kind: iT,
+    function lz(zz, uz, bz) {
+      const Ez = function(zz) {
+        return zz instanceof WebAssembly.RuntimeError ? /unreachable/i.test(zz.message) ? "unreachable" : /out of bounds/i.test(zz.message) ? "out_of_bounds" : "runtime_error" : (zz instanceof RangeError || zz instanceof Error && "InternalError" === zz.name) && /call stack|recursion/i.test(zz.message) ? "stack_overflow" : "js_error"
+      }(zz);
+      if ("unreachable" !== Ez) return {
+        kind: Ez,
         panic: null,
         refusedBytes: 0
       };
-      const zT = oT(),
-        kT = IT();
+      const nz = uz(),
+        iz = bz();
       return {
-        kind: iT,
-        panic: kT > 0 ? null : zT,
-        refusedBytes: kT
+        kind: Ez,
+        panic: iz > 0 ? null : nz,
+        refusedBytes: iz
       }
     }
-    const XT = 300;
+    const Mz = 300;
 
-    function BT(TT) {
-      return TT.replace(/\s*\n\s*/g, " / ").slice(0, XT)
+    function tz(zz) {
+      return zz.replace(/\s*\n\s*/g, " / ").slice(0, Mz)
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

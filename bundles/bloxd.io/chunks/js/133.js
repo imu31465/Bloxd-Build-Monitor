@@ -1,356 +1,249 @@
 export const id = 133;
 export const ids = [133];
 export const modules = {
-  35343: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => vT,
-      e: () => CT,
-      h: () => uT
+  6359: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => sz,
+      e: () => rz,
+      i: () => Xz,
+      m: () => wz
     });
-    var iT = IT(3276),
-      zT = IT(3286),
-      kT = IT(6123),
-      WT = IT(4191),
-      XT = IT(3280);
-    const BT = ".zst.bin",
-      FT = Reflect.apply,
-      ST = ArrayBuffer,
-      DT = "undefined" === typeof Response ? void 0 : Response,
-      LT = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      xT = function() {
-        let TT;
-        void 0 !== LT && new LT({
-          __proto__: null,
-          start(oT) {
-            const {
-              enqueue: IT,
-              close: iT,
-              error: zT
-            } = Object.getPrototypeOf(oT);
-            TT = {
-              enqueue: IT,
-              close: iT,
-              error: zT
-            }
-          }
-        }, {
-          __proto__: null
-        });
-        return TT
-      }(),
-      cT = function() {
-        try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== xT && (0, WT.k)(DT, "Response", !0) && (0, WT.k)(LT, "ReadableStream", !0) && (0, WT.k)(xT.enqueue, "enqueue") && (0, WT.k)(xT.close, "close") && (0, WT.k)(xT.error, "error") && (0, WT.k)(XT.eb, "body") && (0, WT.k)(XT.Q, "getReader") && (0, WT.k)(XT.cb, "read")
-        } catch {
-          return !1
-        }
-      }();
-    let KT = !1;
+    var Ez = bz(6362);
+    const nz = 6,
+      iz = 3,
+      lz = 1,
+      Mz = 2,
+      tz = 4,
+      Hz = 8,
+      Oz = 16,
+      pz = 32,
+      dz = 64,
+      Fz = 128,
+      Zz = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function MT(TT) {
-      for (const oT of "bloxd_wasm_webgpu:4988802,bloxd_wasm_webgl:5279981,bloxd_wasm_webgl1:4749662,bloxd_wasm_workers:196044,bloxd_wasm_models:311310,bloxd_wasm_client:3658957"?.split(",") ?? []) {
-        const [IT, iT] = oT.split(":");
-        if (IT === TT) {
-          const TT = Number(iT);
-          return Number.isInteger(TT) && TT > 0 ? TT : void 0
-        }
-      }
+    function Rz(zz) {
+      if (!zz) return 0;
+      const uz = Zz.indexOf(zz);
+      if (uz <= 0) throw new Error(`"${zz}" is not a shader pack hook function`);
+      return uz
     }
 
-    function rT(TT, oT) {
-      let iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const kT = function(TT) {
-        const oT = MT(TT.name);
-        if (void 0 !== oT && cT && !KT) return {
-          href: `${TT.url().href}${BT}`,
-          length: oT
-        }
-      }(TT);
-      return void 0 !== kT ? async function(TT, oT, iT, kT) {
-        let {
-          href: WT,
-          length: BT
-        } = oT;
-        try {
-          return await (0, XT.kb)(WT, ((TT, oT, kT) => async function(TT, oT, iT, kT, WT, BT) {
-            const cT = new ST(oT);
-            let MT;
-            gT ??= (0, XT._)(IT.e(64).then((() => IT(39869))));
-            try {
-              MT = await fetch(TT, {
-                signal: iT
-              })
-            } catch (aT) {
-              throw new Error(`Fetching ${TT} failed: ${wT(aT)}`)
-            }
-            const {
-              ok: rT,
-              status: AT,
-              body: mT
-            } = function(TT, oT) {
-              try {
-                const {
-                  ok: TT,
-                  status: IT
-                } = oT;
-                return {
-                  ok: TT,
-                  status: IT,
-                  body: FT(XT.eb, oT, [])
-                }
-              } catch {
-                throw new Error(`${TT} came in a response a page script made`)
-              }
-            }(TT, MT);
-            if (!rT) throw new Error(`Fetching ${TT} failed: HTTP ${AT}`);
-            kT();
-            const {
-              reader: eT,
-              controller: RT,
-              compiled: uT
-            } = function(TT, oT) {
-              let IT;
-              try {
-                let TT;
-                IT = FT(XT.Q, oT, []);
-                const iT = new LT({
-                    __proto__: null,
-                    start(oT) {
-                      TT = oT
-                    }
-                  }, {
-                    __proto__: null
-                  }),
-                  zT = new DT(iT, {
-                    __proto__: null,
-                    headers: {
-                      __proto__: null,
-                      "Content-Type": "application/wasm"
-                    }
-                  });
-                return {
-                  reader: IT,
-                  controller: TT,
-                  compiled: (0, XT._)((0, XT.D)((0, XT.lb)(zT)))
-                }
-              } catch (aT) {
-                throw void 0 !== IT && hT(IT), new Error(`${TT} could not be streamed into a compile: ${wT(aT)}`)
-              }
-            }(TT, mT), {
-              enqueue: vT,
-              close: ET,
-              error: fT
-            } = xT, CT = TT => {
-              try {
-                FT(fT, RT, [TT])
-              } catch {} finally {
-                hT(eT)
-              }
-            };
-            iT.addEventListener("abort", (() => {
-              CT(new Error(`${TT} stalled`))
-            }), {
-              once: !0
-            });
-            let jT = !1;
-            (0, zT.q)(uT, (() => {}), (() => {
-              jT = !0, hT(eT)
-            }));
-            let JT = 0;
-            try {
-              let IT;
-              try {
-                IT = await gT
-              } catch (aT) {
-                throw KT = !0, new Error(`The zstd decoder did not load: ${wT(aT)}`)
-              }
-              const {
-                ZstdFrameDecoder: iT
-              } = IT, zT = new iT(oT);
-              for (; !zT.done && !jT;) {
-                let oT;
-                try {
-                  oT = await FT(XT.cb, eT, [])
-                } catch (aT) {
-                  throw new Error(`Downloading ${TT} failed: ${wT(aT)}`)
-                }
-                if (oT.done || jT) break;
-                kT();
-                try {
-                  zT.push(oT.value)
-                } catch (aT) {
-                  throw new Error(`${TT} did not decode: ${wT(aT)}`)
-                }
-                const {
-                  output: IT,
-                  decoded: iT
-                } = zT;
-                if (null !== IT && iT !== JT) {
-                  FT(XT.ib, new XT.q(cT), [IT.subarray(JT, iT), JT]);
-                  try {
-                    FT(vT, RT, [new XT.q(cT, JT, iT - JT)])
-                  } catch {
-                    jT = !0
-                  }
-                  JT = iT
-                }
-              }
-              if (WT(), jT) throw await uT, new Error(`${TT}'s compile stopped reading before its end`);
-              if (!zT.done) throw new Error(`${TT} ended before its module did`);
-              hT(eT);
-              try {
-                FT(ET, RT, [])
-              } catch {}
-            } catch (aT) {
-              throw CT(aT), aT
-            }
-            const UT = await uT;
-            void 0 !== BT && await (0, XT.C)(TT, new XT.q(cT), {
-              sha256: BT.sha256,
-              onMismatch: () => {}
-            });
-            return UT
-          }(WT, BT, TT, oT, kT, iT)))
-        } catch (MT) {
-          console.warn(`${wT(MT)}: loading ${TT.href} instead`)
-        }
-        const cT = await (0, XT.J)(TT, iT, {
-          ...kT,
-          hideThen: !0
-        });
-        return cT
-      }(TT.url(), kT, oT, iT): AT(TT, oT, iT)
+    function Kz(zz) {
+      if (0 === zz) return null;
+      const uz = Zz[zz];
+      if (void 0 === uz) throw new Error(`${zz} is not a shader pack hook function id`);
+      return uz
     }
 
-    function AT(TT, oT, IT) {
-      return (0, XT.J)(TT.url(), oT, {
-        ...IT,
-        hideThen: void 0 !== MT(TT.name)
-      })
-    }
-    let gT = null;
-
-    function hT(TT) {
-      try {
-        (0, XT._)(TT.cancel())
-      } catch {}
-    }
-
-    function wT(TT) {
-      return TT instanceof Error ? TT.message : String(TT)
-    }
-    let mT = null,
-      eT = !1;
-    const RT = new Map;
-
-    function uT(TT, oT, IT) {
-      return null === mT ? mT = ET(TT, oT) : TT !== mT.build ? console.warn(`Bloxd wasm: ${TT.name} was asked for after ${mT.build.name} started loading, which this thread keeps`) : oT.name !== mT.workers.name && console.warn(`Bloxd wasm: ${oT.name} was asked for workers after ${mT.workers.name}, which this thread keeps`), IT?.reloadFailedDownload && !eT && (0, iT.W)() && (eT = !0, mT = ET(mT.build, mT.workers)), mT.loaded
-    }
-
-    function vT(TT, oT) {
-      if (null !== mT) return (0, zT.f)([]);
-      const IT = TT.filter((TT => !RT.has(TT.name))).map((TT => {
-        const IT = new AbortController,
-          iT = {
-            compiled: AT(TT, (0, kT.c)(TT.name), {
-              priority: oT,
-              Jo: IT.signal,
-              onDownloaded: () => {
-                iT.downloaded = !0
-              },
-              retries: {
-                onRetry: () => {
-                  iT.downloaded = !1, null !== mT && IT.abort()
-                }
-              }
-            }),
-            cancel: IT,
-            downloaded: !1
-          };
-        return RT.set(TT.name, iT), (0, zT.g)((oT => {
-          (0, zT.q)(iT.compiled, (() => {
-            iT.downloaded = !0, oT()
-          }), (iT => {
-            IT.signal.aborted || console.warn(`Bloxd wasm: ${TT.name}'s compile ahead of the load failed: the load compiles it afresh`, iT), oT()
-          }))
-        }))
-      }));
-      return (0, zT.f)(IT)
-    }
-
-    function ET(TT, oT) {
-      const IT = (0, iT.F)((async () => {
-        (0, WT.B)();
-        const IT = fT(TT),
-          iT = oT.name === TT.name ? IT : fT(oT);
-        for (const {
-            cancel: TT
-          }
-          of RT.values()) TT.abort();
-        RT.clear(), await (0, zT.f)([IT, iT]);
-        const kT = await IT,
-          XT = await iT;
-        return (0, WT.B)(), {
-          module: kT,
-          workerModule: XT
-        }
-      }), TT);
+    function wz(zz) {
+      const uz = Ez.e.length;
       return {
-        build: TT,
-        workers: oT,
-        loaded: IT
+        strict: zz >= uz,
+        program: Ez.e[zz % uz]
       }
     }
 
-    function fT(TT) {
-      const oT = RT.get(TT.name);
-      return oT?.downloaded ? (RT.delete(TT.name), (0, zT.g)(((IT, iT) => {
-        (0, zT.q)(oT.compiled, IT, (() => {
-          (0, zT.q)(jT(TT), IT, iT)
-        }))
-      }))) : jT(TT)
-    }
-    async function CT(TT, oT) {
-      return jT(TT, {
-        retries: oT
-      })
+    function Xz(zz) {
+      return Number(zz.strict) * Ez.e.length + Ez.e.indexOf(zz.program)
     }
 
-    function jT(TT) {
-      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return rT(TT, (0, kT.c)(TT.name), oT)
+    function fz(zz) {
+      return "" === zz ? [] : zz.split(" ")
+    }
+
+    function sz(zz) {
+      const uz = {
+        variantFlags: new Uint8Array(nz),
+        hooks: new Uint8Array(nz * iz),
+        moduleCodes: Array(nz).fill(""),
+        reads: Array(2 * nz).fill("")
+      };
+      for (const bz of zz) {
+        const zz = Xz(bz.key),
+          Ez = (zz, uz) => null === bz.hooks.surface || bz.reads.fragment.includes(zz) ? 0 : uz;
+        uz.variantFlags[zz] = (bz.sceneDepth ? lz : 0) | (bz.movesVertices ? Mz : 0) | (bz.sunShadow ? tz : 0) | (bz.airShadow ? Hz : 0) | (bz.discards ? Oz : 0) | Ez("localPosition", pz) | Ez("enchantSpeed", dz) | Ez("enchantTier", Fz), uz.hooks[zz * iz] = Rz(bz.hooks.vertex), uz.hooks[zz * iz + 1] = Rz(bz.hooks.surface), uz.hooks[zz * iz + 2] = Rz(bz.hooks.light), uz.moduleCodes[zz] = bz.moduleCode, uz.reads[2 * zz] = bz.reads.vertex.join(" "), uz.reads[2 * zz + 1] = bz.reads.fragment.join(" ")
+      }
+      return uz
+    }
+
+    function rz(zz) {
+      const {
+        hooks: uz,
+        moduleCodes: bz,
+        reads: Ez
+      } = zz;
+      return Array.from(zz.variantFlags, ((zz, nz) => {
+        const pz = nz * iz;
+        return {
+          key: wz(nz),
+          hooks: {
+            vertex: Kz(uz[pz]),
+            surface: Kz(uz[pz + 1]),
+            light: Kz(uz[pz + 2])
+          },
+          moduleCode: bz[nz],
+          sceneDepth: 0 !== (zz & lz),
+          sunShadow: 0 !== (zz & tz),
+          airShadow: 0 !== (zz & Hz),
+          movesVertices: 0 !== (zz & Mz),
+          discards: 0 !== (zz & Oz),
+          reads: {
+            vertex: fz(Ez[2 * nz]),
+            fragment: fz(Ez[2 * nz + 1])
+          }
+        }
+      }))
     }
   },
-  6123: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => WT
+  40071: (zz, uz, bz) => {
+    bz.d(uz, {
+      A: () => Fz,
+      B: () => Zz,
+      c: () => nz,
+      g: () => Ez,
+      h: () => dz,
+      j: () => Oz,
+      m: () => Kz,
+      o: () => iz,
+      q: () => Mz,
+      t: () => tz,
+      w: () => lz,
+      y: () => Rz
     });
-    var iT = IT(3280);
-    const zT = {
-      bloxd_wasm: () => "891b125e1fa53c747db8046ca1a7828990783e6318b475060b2689b2c62ec64b",
-      bloxd_wasm_client: () => "afe376ddb7e074ef28dc003cae65be2019ba85870176102f5c99327651531a90",
-      bloxd_wasm_workers: () => "bdacf110fdd54ff050ae9c3d3c9c40fa9932196a316574c38050f09f93d5d4d0",
-      bloxd_wasm_models: () => "d431807fb8651e0a5be03886feec149ab2c5d8f7292513bb4f5f6f8198ccd3fa",
-      bloxd_wasm_webgpu: () => "36744cc13e8d59f3d9a2cc30379d81ca4b0e563c1ccd9032a15b3d5d2fd1f9b1",
-      bloxd_wasm_webgl: () => "d7f8f069066a9513edfd41a54bdc46943132c54fd47d41226907a9c5957c5a3e",
-      bloxd_wasm_webgl1: () => "1f274f498c33507fd74ae865400b574dec316d2e2535b8bdd60f2679aec71305",
-      bloxd_wasm_replay: () => "308a6b9500ce1acc37831e57249009d9c05a3a9b3821582ea4fe8330d515270a",
-      bloxd_wasm_recorder: () => "c2dd3c772eaa41d9a4cfcd9261204dae143353c48db7c49556d0089946997bff",
-      bloxd_wasm_anim: () => "92da9dc930879a101e815385ac8673ac818daddd3cc10a9e6f242c32dd68abe8",
-      bloxd_wasm_textures: () => "de7050a0a81f4523efadc506fed6ff11ef5e5819f30494428008fcaceee90545",
-      bloxd_wasm_shader_pack: () => "012d029967fec4420d84f73dad4d7e807ec1901518f66edd03a82520f373fb43"
-    };
-    var kT = IT(4191);
+    const Ez = 3,
+      nz = 0,
+      iz = 1,
+      lz = 2,
+      Mz = {
+        uniform: 3,
+        nF: 4,
+        special: 5,
+        volume: 6,
+        sampler: 7,
+        entities: 8,
+        entityGrids: 9
+      },
+      tz = 10,
+      Hz = "BloxdPackInputs",
+      Oz = "bloxdPackInputs",
+      pz = [{
+        name: "seconds",
+        type: "f32",
+        offset: 0
+      }, {
+        name: "lit",
+        type: "u32",
+        offset: 4
+      }, {
+        name: "renderOffset",
+        type: "vec3i",
+        offset: 16
+      }, {
+        name: "sunDirection",
+        type: "vec3f",
+        offset: 32
+      }, {
+        name: "eyePosition",
+        type: "vec3f",
+        offset: 48
+      }, {
+        name: "shadowDirection",
+        type: "vec3f",
+        offset: 64
+      }],
+      dz = 80;
 
-    function WT(TT) {
-      const oT = Object.prototype.hasOwnProperty.call(zT, TT) ? zT[TT]() : void 0;
-      if (void 0 !== oT) return {
-        sha256: oT,
-        onMismatch: kT.y
-      };
-      throw new iT.k(`${TT} has no release digest, so this build refuses it`)
+    function Fz() {
+      const zz = pz.map((zz => {
+        let {
+          name: uz,
+          type: bz
+        } = zz;
+        return `    ${uz}: ${bz},\n`
+      })).join("");
+      return `struct ${Hz} {\n${zz}}\n@group(${Ez}) @binding(${nz}) var<uniform> ${Oz}: ${Hz};\n`
     }
+
+    function Zz(zz, uz) {
+      const bz = new DataView(zz, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, dz),
+        [Ez, nz, iz, lz, Mz, tz] = pz;
+      bz.setFloat32(Ez.offset, uz.seconds, !0), bz.setUint32(nz.offset, uz.lit ? 1 : 0, !0);
+      for (let Hz = 0; Hz < 3; Hz++) bz.setInt32(iz.offset + 4 * Hz, uz.renderOffset[Hz], !0), bz.setFloat32(lz.offset + 4 * Hz, uz.k_[Hz], !0), bz.setFloat32(Mz.offset + 4 * Hz, uz.eyePosition[Hz], !0), bz.setFloat32(tz.offset + 4 * Hz, uz.shadowDirection[Hz], !0)
+    }
+
+    function Rz(zz) {
+      const uz = new Uint32Array(Math.max(1, zz.length));
+      return zz.forEach(((zz, bz) => {
+        let {
+          id: Ez,
+          rotation: nz
+        } = zz;
+        uz[bz] = 65535 & Ez | (3 & nz) << 16
+      })), uz
+    }
+    const Kz = {
+      off: 0,
+      strict: 1,
+      allow: 2
+    }
+  },
+  6362: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Ez,
+      i: () => lz,
+      j: () => Mz,
+      m: () => nz,
+      p: () => iz
+    });
+    const Ez = ["terrain", "liquid", "model"];
+
+    function nz() {
+      const zz = [];
+      for (const uz of [!1, !0])
+        for (const bz of Ez) zz.push({
+          strict: uz,
+          program: bz
+        });
+      return zz
+    }
+
+    function iz(zz) {
+      return `${zz.strict?"strict":"allow"}.${zz.program}`
+    }
+
+    function lz(zz) {
+      return !zz.hooks.vertex && !zz.hooks.surface && !zz.hooks.light
+    }
+
+    function Mz(zz, uz) {
+      return "off" !== uz && (null === zz || zz.some((zz => zz.key.strict === ("strict" === uz) && !lz(zz))))
+    }
+  },
+  40487: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      SHADER_PACK_INPUTS_BINDING: () => iz.c,
+      SHADER_PACK_INPUTS_GROUP: () => iz.g,
+      SHADER_PACK_INPUTS_SIZE: () => iz.h,
+      SHADER_PACK_INPUTS_VAR: () => iz.j,
+      SHADER_PACK_MODES: () => iz.m,
+      SHADER_PACK_PROGRAMS: () => Ez.e,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => iz.o,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => iz.q,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => iz.t,
+      SHADER_PACK_TEXTURES_BINDING: () => iz.w,
+      encodeTextureLayers: () => iz.y,
+      flattenVariants: () => nz.c,
+      isVariantOff: () => Ez.i,
+      packRunsIn: () => Ez.j,
+      shaderPackInputsWgsl: () => iz.A,
+      shaderPackVariantKeys: () => Ez.m,
+      variantKeyId: () => Ez.p,
+      writeShaderPackInputs: () => iz.B
+    });
+    var Ez = bz(6362),
+      nz = bz(6359),
+      iz = bz(40071)
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

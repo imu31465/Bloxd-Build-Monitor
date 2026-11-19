@@ -1,30 +1,30 @@
 export const id = 47;
 export const ids = [47];
 export const modules = {
-  4186: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => ST
+  4439: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Oz
     });
-    var iT = IT(12),
-      zT = IT(16),
-      kT = IT(1253),
-      WT = IT(2541);
-    const XT = 3e4,
-      BT = 1e3;
+    var Ez = bz(20),
+      nz = bz(22),
+      iz = bz(1269),
+      lz = bz(2689);
+    const Mz = 3e4,
+      tz = 1e3;
 
-    function FT() {
-      return "visible" === document.visibilityState && "inGame" === iT.c.get("gameState") && (0, kT.q)()
+    function Hz() {
+      return "visible" === document.visibilityState && "inGame" === Ez.e.get("gameState") && (0, iz.q)()
     }
 
-    function ST(TT, oT) {
-      (0, WT.s)() || function(TT, oT, IT) {
-        let iT = 0;
-        const zT = setInterval((() => {
-          oT() && (iT += BT, iT >= TT && (clearInterval(zT), IT()))
-        }), BT)
-      }(XT, FT, (() => {
-        oT().then((() => {
-          TT(`saved for the player after ${XT/1e3} s of play`), (0, WT.B)(), zT.h.XM("chat", {
+    function Oz(zz, uz) {
+      (0, lz.q)() || function(zz, uz, bz) {
+        let Ez = 0;
+        const nz = setInterval((() => {
+          uz() && (Ez += tz, Ez >= zz && (clearInterval(nz), bz()))
+        }), tz)
+      }(Mz, Hz, (() => {
+        uz().then((() => {
+          zz(`saved for the player after ${Mz/1e3} s of play`), (0, lz.y)(), nz.k.sK("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,61 +36,61 @@ export const modules = {
       }))
     }
   },
-  4183: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      installRenderDebug: () => xI,
-      renderDebugPlayable: () => KI,
-      startRenderDebug: () => cI,
-      waitForDraw: () => MI
+  4430: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      installRenderDebug: () => pb,
+      renderDebugPlayable: () => Fb,
+      startRenderDebug: () => db,
+      waitForDraw: () => Zb
     });
-    var iT = IT(4161),
-      zT = IT(4186),
-      kT = IT(2541);
-    const WT = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
+    var Ez = bz(1761),
+      nz = bz(4439),
+      iz = bz(2689);
+    const lz = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
 
-    function XT(TT) {
-      return 7 & TT
+    function Mz(zz) {
+      return 7 & zz
     }
 
-    function BT(TT) {
-      return TT >>> 11 & 1
+    function tz(zz) {
+      return zz >>> 11 & 1
     }
 
-    function FT(TT) {
-      return [1 + (TT >>> 18 & 63), 1 + (TT >>> 24 & 63)]
+    function Hz(zz) {
+      return [1 + (zz >>> 18 & 63), 1 + (zz >>> 24 & 63)]
     }
 
-    function ST(TT, oT) {
-      const [IT, , iT] = TT, zT = XT(iT), kT = function(TT, oT, IT) {
-        return oT + (1 === (22 >>> TT & 1) ? 4 - IT : IT) & 3
-      }(zT, BT(iT), oT), WT = zT >>> 1, [ST, DT] = FT(IT), LT = 1 === kT || 2 === kT ? ST : 0, xT = kT >= 2 ? DT : 0, cT = [63 & IT, IT >>> 6 & 63, IT >>> 12 & 63];
-      return cT[2 === WT ? 0 : 2] += LT, cT[1 === WT ? 0 : 1] += xT, cT
+    function Oz(zz, uz) {
+      const [bz, , Ez] = zz, nz = Mz(Ez), iz = function(zz, uz, bz) {
+        return uz + (1 === (22 >>> zz & 1) ? 4 - bz : bz) & 3
+      }(nz, tz(Ez), uz), lz = nz >>> 1, [Oz, pz] = Hz(bz), dz = 1 === iz || 2 === iz ? Oz : 0, Fz = iz >= 2 ? pz : 0, Zz = [63 & bz, bz >>> 6 & 63, bz >>> 12 & 63];
+      return Zz[2 === lz ? 0 : 2] += dz, Zz[1 === lz ? 0 : 1] += Fz, Zz
     }
 
-    function DT(TT) {
-      const oT = Math.max(...FT(TT[0]));
-      return 1 === oT ? "1" : oT <= 4 ? "2-4" : oT <= 16 ? "5-16" : "17-64"
+    function pz(zz) {
+      const uz = Math.max(...Hz(zz[0]));
+      return 1 === uz ? "1" : uz <= 4 ? "2-4" : uz <= 16 ? "5-16" : "17-64"
     }
-    const LT = 16;
+    const dz = 16;
 
-    function xT(TT) {
-      let oT = 2166136261;
-      for (let IT = 0; IT < TT.length; IT++) oT = Math.imul(oT ^ TT[IT], 16777619);
-      return oT >>> 0
+    function Fz(zz) {
+      let uz = 2166136261;
+      for (let bz = 0; bz < zz.length; bz++) uz = Math.imul(uz ^ zz[bz], 16777619);
+      return uz >>> 0
     }
 
-    function cT(TT, oT) {
-      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
-      const iT = Math.max(0, oT - IT),
-        zT = Math.min(TT.length, oT + IT),
-        kT = [];
-      for (let WT = iT; WT < zT; WT++) {
-        const IT = TT[WT].toString(16).padStart(2, "0");
-        kT.push(WT === oT ? `[${IT}]` : IT)
+    function Zz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
+      const Ez = Math.max(0, uz - bz),
+        nz = Math.min(zz.length, uz + bz),
+        iz = [];
+      for (let lz = Ez; lz < nz; lz++) {
+        const bz = zz[lz].toString(16).padStart(2, "0");
+        iz.push(lz === uz ? `[${bz}]` : bz)
       }
-      return kT.join(" ")
+      return iz.join(" ")
     }
-    const KT = {
+    const Rz = {
         NO_ERROR: 0,
         POINTS: 0,
         ARRAY_BUFFER: 34962,
@@ -168,437 +168,437 @@ export const modules = {
         FLOAT_MAT3: 35675,
         FLOAT_MAT4: 35676
       },
-      MT = "_vs2fs_location0",
-      rT = 0,
-      AT = 4,
-      gT = 6,
-      hT = [0, 1, 2, 0, 2, 3],
-      wT = 2048,
-      mT = 4,
-      eT = 256,
-      RT = 64,
-      uT = 268435456,
-      vT = 65536,
-      ET = /^#version [^\n]*\/\/ program (\S+)$/m;
+      Kz = "_vs2fs_location0",
+      wz = 0,
+      Xz = 4,
+      fz = 6,
+      sz = [0, 1, 2, 0, 2, 3],
+      rz = 2048,
+      oz = 4,
+      Nz = 256,
+      vz = 64,
+      xz = 268435456,
+      Jz = 65536,
+      Az = /^#version [^\n]*\/\/ program (\S+)$/m;
 
-    function fT(TT) {
-      return null === TT.name ? `#${TT.id}` : `#${TT.id} ${TT.name}`
+    function Tz(zz) {
+      return null === zz.name ? `#${zz.id}` : `#${zz.id} ${zz.name}`
     }
-    const CT = [],
-      jT = new WeakMap,
-      JT = new WeakMap,
-      UT = {
+    const Lz = [],
+      Pz = new WeakMap,
+      Gz = new WeakMap,
+      az = {
         context: null,
         inProbe: !1,
         pendingCheck: null,
         shadowBytes: 0,
         uncopied: 0
       };
-    let aT = 1;
-    const YT = new WeakMap;
+    let Vz = 1;
+    const mz = new WeakMap;
 
-    function QT(TT) {
-      if (null === TT) return 0;
-      let oT = YT.get(TT);
-      return void 0 === oT && (oT = aT++, YT.set(TT, oT)), oT
+    function qz(zz) {
+      if (null === zz) return 0;
+      let uz = mz.get(zz);
+      return void 0 === uz && (uz = Vz++, mz.set(zz, uz)), uz
     }
-    class OT {
-      constructor(TT, oT) {
-        this.print = TT, this.now = oT, this.shown = 0, this.kS = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.qx = [], this.dropped = 0
+    class hz {
+      constructor(zz, uz) {
+        this.print = zz, this.now = uz, this.shown = 0, this.yM = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.MZ = [], this.dropped = 0
       }
-      line(TT) {
-        const oT = this.now();
-        if (oT - this.second >= 1e3 && (this.second = oT, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.kS++, void this.store(TT);
-        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${TT} (the last line here: the rest go to bloxdDebug.save())` : TT)
+      line(zz) {
+        const uz = this.now();
+        if (uz - this.second >= 1e3 && (this.second = uz, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.yM++, void this.store(zz);
+        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${zz} (the last line here: the rest go to bloxdDebug.save())` : zz)
       }
-      keep(TT) {
-        this.sections++, this.store(TT)
+      keep(zz) {
+        this.sections++, this.store(zz)
       }
-      store(TT) {
-        this.qx.push(`${new Date(Date.now()).toISOString()} ${TT}`), this.qx.length > 2e4 && (this.qx.shift(), this.dropped++)
+      store(zz) {
+        this.MZ.push(`${new Date(Date.now()).toISOString()} ${zz}`), this.MZ.length > 2e4 && (this.MZ.shift(), this.dropped++)
       }
       dump() {
-        return [`${this.shown} lines logged (above); kept here: ${this.kS} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.qx].join("\n")
+        return [`${this.shown} lines logged (above); kept here: ${this.yM} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.MZ].join("\n")
       }
     }
-    let HT = null;
+    let Uz = null;
 
-    function nT() {
-      if (null === HT) {
-        const TT = new OT((TT => {
-          (0, kT.l)("render", TT)
+    function cz() {
+      if (null === Uz) {
+        const zz = new hz((zz => {
+          (0, iz.i)("render", zz)
         }), (() => performance.now()));
-        (0, kT.j)("render", (() => TT.dump())), HT = TT
+        (0, iz.f)("render", (() => zz.dump())), Uz = zz
       }
-      return HT
+      return Uz
     }
 
-    function qT(TT) {
-      nT().line(TT)
+    function gz(zz) {
+      cz().line(zz)
     }
 
-    function ZT(TT) {
-      nT().keep(TT)
+    function Sz(zz) {
+      cz().keep(zz)
     }
 
-    function lT(TT) {
-      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
-      return TT.length <= oT ? TT : `${TT.slice(0,oT)}... (${TT.length-oT} more characters)`
+    function yz(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
+      return zz.length <= uz ? zz : `${zz.slice(0,uz)}... (${zz.length-uz} more characters)`
     }
 
-    function sT(TT, oT, IT, iT, zT, kT) {
-      const WT = UT.pendingCheck;
-      if (null === WT) return;
-      const XT = "undefined" !== typeof WebGL2RenderingContext && TT instanceof WebGL2RenderingContext,
-        BT = {
-          gl: TT,
-          program: IT,
-          call: iT,
-          ec: zT,
-          instances: kT,
+    function Dz(zz, uz, bz, Ez, nz, iz) {
+      const lz = az.pendingCheck;
+      if (null === lz) return;
+      const Mz = "undefined" !== typeof WebGL2RenderingContext && zz instanceof WebGL2RenderingContext,
+        tz = {
+          gl: zz,
+          program: bz,
+          call: Ez,
+          al: nz,
+          instances: iz,
           attributes: [],
           group: -1,
           chunk: "",
           pages: []
         };
-      if (WT.draws.push(BT), XT) try {
-        const iT = function(TT) {
-          const oT = [],
-            IT = new Map,
-            iT = Math.min(16, TT.getParameter(KT.MAX_VERTEX_ATTRIBS));
-          for (let zT = 0; zT < iT; zT++) {
-            if (!TT.getVertexAttrib(zT, KT.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
-            const iT = TT.getVertexAttrib(zT, KT.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
-              kT = TT.getVertexAttribOffset(zT, KT.VERTEX_ATTRIB_ARRAY_POINTER),
-              WT = TT.getVertexAttrib(zT, KT.VERTEX_ATTRIB_ARRAY_STRIDE),
-              XT = TT.getVertexAttrib(zT, KT.VERTEX_ATTRIB_ARRAY_SIZE),
-              BT = TT.getVertexAttrib(zT, KT.VERTEX_ATTRIB_ARRAY_TYPE),
-              FT = "VERTEX_ATTRIB_ARRAY_INTEGER" in TT && TT.getVertexAttrib(zT, KT.VERTEX_ATTRIB_ARRAY_INTEGER),
-              ST = "VERTEX_ATTRIB_ARRAY_DIVISOR" in TT ? TT.getVertexAttrib(zT, KT.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
-            IT.set(zT, {
-              buffer: iT,
-              offset: kT,
-              stride: WT
-            }), oT.push(`@${zT} buf#${QT(iT)} +${kT} stride ${WT} ${XT}x0x${BT.toString(16)}${FT?" int":""} div ${ST}`)
+      if (lz.draws.push(tz), Mz) try {
+        const Ez = function(zz) {
+          const uz = [],
+            bz = new Map,
+            Ez = Math.min(16, zz.getParameter(Rz.MAX_VERTEX_ATTRIBS));
+          for (let nz = 0; nz < Ez; nz++) {
+            if (!zz.getVertexAttrib(nz, Rz.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
+            const Ez = zz.getVertexAttrib(nz, Rz.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
+              iz = zz.getVertexAttribOffset(nz, Rz.VERTEX_ATTRIB_ARRAY_POINTER),
+              lz = zz.getVertexAttrib(nz, Rz.VERTEX_ATTRIB_ARRAY_STRIDE),
+              Mz = zz.getVertexAttrib(nz, Rz.VERTEX_ATTRIB_ARRAY_SIZE),
+              tz = zz.getVertexAttrib(nz, Rz.VERTEX_ATTRIB_ARRAY_TYPE),
+              Hz = "VERTEX_ATTRIB_ARRAY_INTEGER" in zz && zz.getVertexAttrib(nz, Rz.VERTEX_ATTRIB_ARRAY_INTEGER),
+              Oz = "VERTEX_ATTRIB_ARRAY_DIVISOR" in zz ? zz.getVertexAttrib(nz, Rz.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
+            bz.set(nz, {
+              buffer: Ez,
+              offset: iz,
+              stride: lz
+            }), uz.push(`@${nz} buf#${qz(Ez)} +${iz} stride ${lz} ${Mz}x0x${tz.toString(16)}${Hz?" int":""} div ${Oz}`)
           }
           return {
-            lines: oT,
-            byLocation: IT
+            lines: uz,
+            byLocation: bz
           }
-        }(TT);
-        if (BT.attributes = iT.lines, "inst" === IT.terrain) {
+        }(zz);
+        if (tz.attributes = Ez.lines, "inst" === bz.terrain) {
           const {
-            group: zT,
-            chunk: XT
-          } = function(TT, oT, IT) {
-            const iT = oT.get(gT),
-              zT = TT.getVertexAttrib(gT, KT.CURRENT_VERTEX_ATTRIB),
-              kT = iT ? `+${iT.offset}` : zT ? Array.from(zT).slice(0, 3).join(",") : "?";
-            let WT = IT.groups.get(kT);
-            return void 0 === WT && (WT = IT.groups.size, IT.groups.set(kT, WT)), {
-              group: WT,
-              chunk: kT
+            group: nz,
+            chunk: Mz
+          } = function(zz, uz, bz) {
+            const Ez = uz.get(fz),
+              nz = zz.getVertexAttrib(fz, Rz.CURRENT_VERTEX_ATTRIB),
+              iz = Ez ? `+${Ez.offset}` : nz ? Array.from(nz).slice(0, 3).join(",") : "?";
+            let lz = bz.groups.get(iz);
+            return void 0 === lz && (lz = bz.groups.size, bz.groups.set(iz, lz)), {
+              group: lz,
+              chunk: iz
             }
-          }(TT, iT.byLocation, WT);
-          BT.group = zT, BT.chunk = XT;
-          for (const TT of [rT, AT]) {
-            var FT;
-            const oT = null === (FT = iT.byLocation.get(TT)) || void 0 === FT ? void 0 : FT.buffer;
-            oT && BT.pages.push({
+          }(zz, Ez.byLocation, lz);
+          tz.group = nz, tz.chunk = Mz;
+          for (const zz of [wz, Xz]) {
+            var Hz;
+            const uz = null === (Hz = Ez.byLocation.get(zz)) || void 0 === Hz ? void 0 : Hz.buffer;
+            uz && tz.pages.push({
               kind: "buf",
-              buffer: oT
+              buffer: uz
             })
-          }! function(TT, oT, IT, iT, zT, kT, WT) {
-            const XT = iT.get(rT),
-              BT = WT.parts.get(kT);
-            if (void 0 === BT && WT.parts.size >= mT) return;
-            const FT = Math.min(zT, RT, eT - (null !== BT && void 0 !== BT ? BT : 0));
-            if (null === XT || void 0 === XT || !XT.buffer || FT <= 0) return;
-            const ST = tT(TT, oT, IT);
-            if (!ST) return;
-            const DT = XT.stride || 12,
-              LT = NT(TT, XT.buffer, XT.offset, (FT - 1) * DT + 12),
-              xT = new DataView(LT.buffer),
-              cT = function(TT, oT) {
-                const IT = function(TT) {
-                    const oT = VT.get(TT);
-                    if (void 0 !== oT && (null === oT || TT.isProgram(oT))) return oT;
-                    UT.inProbe = !0;
-                    let IT = null;
+          }! function(zz, uz, bz, Ez, nz, iz, lz) {
+            const Mz = Ez.get(wz),
+              tz = lz.parts.get(iz);
+            if (void 0 === tz && lz.parts.size >= oz) return;
+            const Hz = Math.min(nz, vz, Nz - (null !== tz && void 0 !== tz ? tz : 0));
+            if (null === Mz || void 0 === Mz || !Mz.buffer || Hz <= 0) return;
+            const Oz = Qz(zz, uz, bz);
+            if (!Oz) return;
+            const pz = Mz.stride || 12,
+              dz = Bz(zz, Mz.buffer, Mz.offset, (Hz - 1) * pz + 12),
+              Fz = new DataView(dz.buffer),
+              Zz = function(zz, uz) {
+                const bz = function(zz) {
+                    const uz = kz.get(zz);
+                    if (void 0 !== uz && (null === uz || zz.isProgram(uz))) return uz;
+                    az.inProbe = !0;
+                    let bz = null;
                     try {
-                      IT = GT(TT, PT, dT, "fed", "the record feed")
+                      bz = Wz(zz, Cz, Yz, "fed", "the record feed")
                     } finally {
-                      UT.inProbe = !1
+                      az.inProbe = !1
                     }
-                    return VT.set(TT, IT), IT
-                  }(TT),
-                  iT = IT ? yT(TT, IT, oT, (() => {
-                    TT.drawArraysInstanced(KT.POINTS, 0, 1, oT)
+                    return kz.set(zz, bz), bz
+                  }(zz),
+                  Ez = bz ? Iz(zz, bz, uz, (() => {
+                    zz.drawArraysInstanced(Rz.POINTS, 0, 1, uz)
                   }), "decode probe input (the record feed)") : null;
-                return iT ? new Uint32Array(iT.buffer) : null
-              }(TT, FT);
-            cT || WT.fed.failed++;
-            const MT = yT(TT, ST, 4 * FT, (() => {
-              TT.drawArraysInstanced(KT.POINTS, 0, 4, FT)
+                return Ez ? new Uint32Array(Ez.buffer) : null
+              }(zz, Hz);
+            Zz || lz.fed.failed++;
+            const Kz = Iz(zz, Oz, 4 * Hz, (() => {
+              zz.drawArraysInstanced(Rz.POINTS, 0, 4, Hz)
             }));
-            if (!MT) return;
-            WT.parts.set(kT, (null !== BT && void 0 !== BT ? BT : 0) + FT);
-            for (let KT = 0; KT < FT; KT++) {
-              const TT = KT * DT,
-                oT = [xT.getUint32(TT, !0), xT.getUint32(TT + 4, !0), xT.getUint32(TT + 8, !0)],
-                IT = cT ? [cT[3 * KT], cT[3 * KT + 1], cT[3 * KT + 2]] : oT;
-              cT && (WT.fed.records++, IT.some(((TT, IT) => TT !== oT[IT])) && (WT.fed.differing++, WT.fed.first.length < 8 && WT.fed.first.push(`part ${kT} instance ${KT}: fed ${IT.map(zo).join(" ")} buffer ${oT.map(zo).join(" ")}`)));
-              for (let iT = 0; iT < 4; iT++) {
-                const TT = 3 * (4 * KT + iT);
-                WT.vertices.push({
-                  record: IT,
-                  slot: iT,
-                  group: kT,
-                  gpu: [MT[TT], MT[TT + 1], MT[TT + 2]]
+            if (!Kz) return;
+            lz.parts.set(iz, (null !== tz && void 0 !== tz ? tz : 0) + Hz);
+            for (let Rz = 0; Rz < Hz; Rz++) {
+              const zz = Rz * pz,
+                uz = [Fz.getUint32(zz, !0), Fz.getUint32(zz + 4, !0), Fz.getUint32(zz + 8, !0)],
+                bz = Zz ? [Zz[3 * Rz], Zz[3 * Rz + 1], Zz[3 * Rz + 2]] : uz;
+              Zz && (lz.fed.records++, bz.some(((zz, bz) => zz !== uz[bz])) && (lz.fed.differing++, lz.fed.first.length < 8 && lz.fed.first.push(`part ${iz} instance ${Rz}: fed ${bz.map(nu).join(" ")} buffer ${uz.map(nu).join(" ")}`)));
+              for (let Ez = 0; Ez < 4; Ez++) {
+                const zz = 3 * (4 * Rz + Ez);
+                lz.vertices.push({
+                  record: bz,
+                  slot: Ez,
+                  group: iz,
+                  gpu: [Kz[zz], Kz[zz + 1], Kz[zz + 2]]
                 })
               }
             }
-          }(TT, oT, IT, iT.byLocation, kT, zT, WT)
+          }(zz, uz, bz, Ez.byLocation, iz, nz, lz)
         } else {
-          const iT = To(TT, oT, 16),
-            kT = To(TT, oT, 8);
-          for (const TT of [iT, kT]) TT && BT.pages.push({
+          const Ez = zu(zz, uz, 16),
+            iz = zu(zz, uz, 8);
+          for (const zz of [Ez, iz]) zz && tz.pages.push({
             kind: "tex",
-            texture: TT
+            texture: zz
           });
-          iT && function(TT, oT, IT, iT, zT, kT) {
-            if (kT.parts.size >= mT) return;
-            const WT = tT(TT, oT, IT);
-            if (!WT) return;
-            let XT = 6 * eT;
-            const BT = [];
-            for (const [xT, cT] of zT) {
-              const TT = Math.min(cT, XT, Math.max(6, 6 * Math.floor(eT / zT.length)));
-              TT > 0 && (BT.push([xT, TT]), XT -= TT)
+          Ez && function(zz, uz, bz, Ez, nz, iz) {
+            if (iz.parts.size >= oz) return;
+            const lz = Qz(zz, uz, bz);
+            if (!lz) return;
+            let Mz = 6 * Nz;
+            const tz = [];
+            for (const [Fz, Zz] of nz) {
+              const zz = Math.min(Zz, Mz, Math.max(6, 6 * Math.floor(Nz / nz.length)));
+              zz > 0 && (tz.push([Fz, zz]), Mz -= zz)
             }
-            const FT = BT.reduce(((TT, oT) => {
-                let [, IT] = oT;
-                return TT + IT
+            const Hz = tz.reduce(((zz, uz) => {
+                let [, bz] = uz;
+                return zz + bz
               }), 0),
-              ST = yT(TT, WT, FT, (() => {
-                for (const [oT, IT] of BT) TT.drawArrays(KT.POINTS, oT, IT)
+              Oz = Iz(zz, lz, Hz, (() => {
+                for (const [uz, bz] of tz) zz.drawArrays(Rz.POINTS, uz, bz)
               }));
-            if (!ST) return;
-            let DT = 0;
-            for (const [xT, cT] of BT) {
-              const oT = Math.floor(xT / 6),
-                IT = Math.floor((xT + cT - 1) / 6) - oT + 1,
-                zT = oo(TT, iT, wT, oT, IT);
-              for (let TT = xT; TT < xT + cT; TT++, DT++) {
-                var LT;
-                const IT = 4 * (Math.floor(TT / 6) - oT),
-                  iT = [zT[IT], zT[IT + 1], zT[IT + 2]];
-                kT.parts.set(zT[IT + 3], (null !== (LT = kT.parts.get(zT[IT + 3])) && void 0 !== LT ? LT : 0) + (TT % 6 === 0 ? 1 : 0)), kT.vertices.push({
-                  record: iT,
-                  slot: hT[TT % 6],
-                  group: zT[IT + 3],
-                  gpu: [ST[3 * DT], ST[3 * DT + 1], ST[3 * DT + 2]]
+            if (!Oz) return;
+            let pz = 0;
+            for (const [Fz, Zz] of tz) {
+              const uz = Math.floor(Fz / 6),
+                bz = Math.floor((Fz + Zz - 1) / 6) - uz + 1,
+                nz = uu(zz, Ez, rz, uz, bz);
+              for (let zz = Fz; zz < Fz + Zz; zz++, pz++) {
+                var dz;
+                const bz = 4 * (Math.floor(zz / 6) - uz),
+                  Ez = [nz[bz], nz[bz + 1], nz[bz + 2]];
+                iz.parts.set(nz[bz + 3], (null !== (dz = iz.parts.get(nz[bz + 3])) && void 0 !== dz ? dz : 0) + (zz % 6 === 0 ? 1 : 0)), iz.vertices.push({
+                  record: Ez,
+                  slot: sz[zz % 6],
+                  group: nz[bz + 3],
+                  gpu: [Oz[3 * pz], Oz[3 * pz + 1], Oz[3 * pz + 2]]
                 })
               }
             }
-          }(TT, oT, IT, iT, zT, WT)
+          }(zz, uz, bz, Ez, nz, lz)
         }
-      } catch (ST) {
-        qT(`decode probe failed on program ${fT(IT)}: ${String(ST)}`)
+      } catch (Oz) {
+        gz(`decode probe failed on program ${Tz(bz)}: ${String(Oz)}`)
       }
     }
 
-    function tT(TT, oT, IT) {
-      if (void 0 !== IT.probe) return IT.probe && pT(TT, oT, IT.probe), IT.probe;
-      IT.probe = null, UT.inProbe = !0;
+    function Qz(zz, uz, bz) {
+      if (void 0 !== bz.probe) return bz.probe && ez(zz, uz, bz.probe), bz.probe;
+      bz.probe = null, az.inProbe = !0;
       try {
-        IT.probe = function(TT, oT) {
-          return GT(TT, oT.vertex, oT.fragment, MT, `program ${fT(oT)}'s twin`)
-        }(TT, IT)
+        bz.probe = function(zz, uz) {
+          return Wz(zz, uz.vertex, uz.fragment, Kz, `program ${Tz(uz)}'s twin`)
+        }(zz, bz)
       } finally {
-        UT.inProbe = !1
+        az.inProbe = !1
       }
-      return IT.probe && pT(TT, oT, IT.probe), IT.probe
+      return bz.probe && ez(zz, uz, bz.probe), bz.probe
     }
 
-    function GT(TT, oT, IT, iT, zT) {
-      const kT = [TT.createShader(KT.VERTEX_SHADER), TT.createShader(KT.FRAGMENT_SHADER)],
-        WT = TT.createProgram();
-      if (!WT || !kT[0] || !kT[1]) return null;
-      TT.shaderSource(kT[0], oT), TT.shaderSource(kT[1], IT);
-      for (const BT of kT) TT.compileShader(BT), TT.attachShader(WT, BT);
-      TT.transformFeedbackVaryings(WT, [iT], KT.INTERLEAVED_ATTRIBS), TT.linkProgram(WT);
-      for (const BT of kT) TT.deleteShader(BT);
-      var XT;
-      return TT.getProgramParameter(WT, KT.LINK_STATUS) ? WT : (qT(`decode probe: ${zT} failed to link: ${lT(null!==(XT=TT.getProgramInfoLog(WT))&&void 0!==XT?XT:"",300)}`), TT.deleteProgram(WT), null)
+    function Wz(zz, uz, bz, Ez, nz) {
+      const iz = [zz.createShader(Rz.VERTEX_SHADER), zz.createShader(Rz.FRAGMENT_SHADER)],
+        lz = zz.createProgram();
+      if (!lz || !iz[0] || !iz[1]) return null;
+      zz.shaderSource(iz[0], uz), zz.shaderSource(iz[1], bz);
+      for (const tz of iz) zz.compileShader(tz), zz.attachShader(lz, tz);
+      zz.transformFeedbackVaryings(lz, [Ez], Rz.INTERLEAVED_ATTRIBS), zz.linkProgram(lz);
+      for (const tz of iz) zz.deleteShader(tz);
+      var Mz;
+      return zz.getProgramParameter(lz, Rz.LINK_STATUS) ? lz : (gz(`decode probe: ${nz} failed to link: ${yz(null!==(Mz=zz.getProgramInfoLog(lz))&&void 0!==Mz?Mz:"",300)}`), zz.deleteProgram(lz), null)
     }
 
-    function pT(TT, oT, IT) {
-      const iT = TT.getProgramParameter(oT, KT.ACTIVE_UNIFORM_BLOCKS);
-      for (let XT = 0; XT < iT; XT++) {
-        const iT = TT.getActiveUniformBlockName(oT, XT),
-          zT = null === iT ? KT.INVALID_INDEX : TT.getUniformBlockIndex(IT, iT);
-        zT !== KT.INVALID_INDEX && TT.uniformBlockBinding(IT, zT, TT.getActiveUniformBlockParameter(oT, XT, KT.UNIFORM_BLOCK_BINDING))
+    function ez(zz, uz, bz) {
+      const Ez = zz.getProgramParameter(uz, Rz.ACTIVE_UNIFORM_BLOCKS);
+      for (let Mz = 0; Mz < Ez; Mz++) {
+        const Ez = zz.getActiveUniformBlockName(uz, Mz),
+          nz = null === Ez ? Rz.INVALID_INDEX : zz.getUniformBlockIndex(bz, Ez);
+        nz !== Rz.INVALID_INDEX && zz.uniformBlockBinding(bz, nz, zz.getActiveUniformBlockParameter(uz, Mz, Rz.UNIFORM_BLOCK_BINDING))
       }
-      const zT = TT.getParameter(KT.CURRENT_PROGRAM);
-      TT.useProgram(IT);
-      const kT = TT.getProgramParameter(oT, KT.ACTIVE_UNIFORMS),
-        WT = TT.getActiveUniforms(oT, [...Array(kT).keys()], KT.UNIFORM_BLOCK_INDEX);
-      for (let XT = 0; XT < kT; XT++) {
-        const iT = TT.getActiveUniform(oT, XT);
-        if (!iT || -1 !== WT[XT]) continue;
-        const zT = iT.name.replace(/\[0\]$/, "");
-        for (let kT = 0; kT < iT.size; kT++) {
-          const WT = iT.size > 1 ? `${zT}[${kT}]` : iT.name,
-            XT = TT.getUniformLocation(oT, WT),
-            BT = TT.getUniformLocation(IT, WT);
-          XT && BT && bT(TT, BT, iT.type, TT.getUniform(oT, XT))
+      const nz = zz.getParameter(Rz.CURRENT_PROGRAM);
+      zz.useProgram(bz);
+      const iz = zz.getProgramParameter(uz, Rz.ACTIVE_UNIFORMS),
+        lz = zz.getActiveUniforms(uz, [...Array(iz).keys()], Rz.UNIFORM_BLOCK_INDEX);
+      for (let Mz = 0; Mz < iz; Mz++) {
+        const Ez = zz.getActiveUniform(uz, Mz);
+        if (!Ez || -1 !== lz[Mz]) continue;
+        const nz = Ez.name.replace(/\[0\]$/, "");
+        for (let iz = 0; iz < Ez.size; iz++) {
+          const lz = Ez.size > 1 ? `${nz}[${iz}]` : Ez.name,
+            Mz = zz.getUniformLocation(uz, lz),
+            tz = zz.getUniformLocation(bz, lz);
+          Mz && tz && jz(zz, tz, Ez.type, zz.getUniform(uz, Mz))
         }
       }
-      TT.useProgram(zT)
+      zz.useProgram(nz)
     }
 
-    function bT(TT, oT, IT, iT) {
-      const zT = ArrayBuffer.isView(iT) ? Array.from(iT) : [Number(iT)];
-      switch (IT) {
-        case KT.FLOAT:
-          return void TT.uniform1f(oT, zT[0]);
-        case KT.FLOAT_VEC2:
-          return void TT.uniform2fv(oT, zT);
-        case KT.FLOAT_VEC3:
-          return void TT.uniform3fv(oT, zT);
-        case KT.FLOAT_VEC4:
-          return void TT.uniform4fv(oT, zT);
-        case KT.FLOAT_MAT3:
-          return void TT.uniformMatrix3fv(oT, !1, zT);
-        case KT.FLOAT_MAT4:
-          return void TT.uniformMatrix4fv(oT, !1, zT);
-        case KT.UNSIGNED_INT:
-          return void TT.uniform1ui(oT, zT[0]);
-        case KT.UNSIGNED_INT_VEC2:
-          return void TT.uniform2uiv(oT, zT);
-        case KT.UNSIGNED_INT_VEC3:
-          return void TT.uniform3uiv(oT, zT);
-        case KT.UNSIGNED_INT_VEC4:
-          return void TT.uniform4uiv(oT, zT);
-        case KT.INT_VEC2:
-          return void TT.uniform2iv(oT, zT);
-        case KT.INT_VEC3:
-          return void TT.uniform3iv(oT, zT);
-        case KT.INT_VEC4:
-          return void TT.uniform4iv(oT, zT);
+    function jz(zz, uz, bz, Ez) {
+      const nz = ArrayBuffer.isView(Ez) ? Array.from(Ez) : [Number(Ez)];
+      switch (bz) {
+        case Rz.FLOAT:
+          return void zz.uniform1f(uz, nz[0]);
+        case Rz.FLOAT_VEC2:
+          return void zz.uniform2fv(uz, nz);
+        case Rz.FLOAT_VEC3:
+          return void zz.uniform3fv(uz, nz);
+        case Rz.FLOAT_VEC4:
+          return void zz.uniform4fv(uz, nz);
+        case Rz.FLOAT_MAT3:
+          return void zz.uniformMatrix3fv(uz, !1, nz);
+        case Rz.FLOAT_MAT4:
+          return void zz.uniformMatrix4fv(uz, !1, nz);
+        case Rz.UNSIGNED_INT:
+          return void zz.uniform1ui(uz, nz[0]);
+        case Rz.UNSIGNED_INT_VEC2:
+          return void zz.uniform2uiv(uz, nz);
+        case Rz.UNSIGNED_INT_VEC3:
+          return void zz.uniform3uiv(uz, nz);
+        case Rz.UNSIGNED_INT_VEC4:
+          return void zz.uniform4uiv(uz, nz);
+        case Rz.INT_VEC2:
+          return void zz.uniform2iv(uz, nz);
+        case Rz.INT_VEC3:
+          return void zz.uniform3iv(uz, nz);
+        case Rz.INT_VEC4:
+          return void zz.uniform4iv(uz, nz);
         default:
-          TT.uniform1i(oT, zT[0])
+          zz.uniform1i(uz, nz[0])
       }
     }
 
-    function yT(TT, oT, IT, iT) {
-      let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
-      const kT = TT.getParameter(KT.CURRENT_PROGRAM),
-        WT = TT.getParameter(KT.TRANSFORM_FEEDBACK_BINDING),
-        XT = TT.getParameter(KT.TRANSFORM_FEEDBACK_BUFFER_BINDING),
-        BT = TT.getParameter(KT.COPY_READ_BUFFER_BINDING),
-        FT = TT.isEnabled(KT.RASTERIZER_DISCARD),
-        ST = TT.createTransformFeedback(),
-        DT = TT.createBuffer();
-      UT.inProbe = !0;
+    function Iz(zz, uz, bz, Ez) {
+      let nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
+      const iz = zz.getParameter(Rz.CURRENT_PROGRAM),
+        lz = zz.getParameter(Rz.TRANSFORM_FEEDBACK_BINDING),
+        Mz = zz.getParameter(Rz.TRANSFORM_FEEDBACK_BUFFER_BINDING),
+        tz = zz.getParameter(Rz.COPY_READ_BUFFER_BINDING),
+        Hz = zz.isEnabled(Rz.RASTERIZER_DISCARD),
+        Oz = zz.createTransformFeedback(),
+        pz = zz.createBuffer();
+      az.inProbe = !0;
       try {
-        const kT = TT.getError();
-        kT !== KT.NO_ERROR && qT(`GL error 0x${kT.toString(16)} pending before the decode probe (the renderer's)`), TT.useProgram(oT), TT.bindTransformFeedback(KT.TRANSFORM_FEEDBACK, ST), TT.bindBuffer(KT.TRANSFORM_FEEDBACK_BUFFER, DT), TT.bufferData(KT.TRANSFORM_FEEDBACK_BUFFER, 12 * IT, KT.STREAM_READ), TT.bindBufferBase(KT.TRANSFORM_FEEDBACK_BUFFER, 0, DT), TT.enable(KT.RASTERIZER_DISCARD), TT.beginTransformFeedback(KT.POINTS), iT(), TT.endTransformFeedback(), TT.bindBufferBase(KT.TRANSFORM_FEEDBACK_BUFFER, 0, null);
-        const WT = TT.getError();
-        if (WT !== KT.NO_ERROR) return qT(`${zT}: GL error 0x${WT.toString(16)} on the feedback draw`), null;
-        const XT = new Float32Array(3 * IT);
-        return TT.bindBuffer(KT.COPY_READ_BUFFER, DT), TT.getBufferSubData(KT.COPY_READ_BUFFER, 0, XT), XT
+        const iz = zz.getError();
+        iz !== Rz.NO_ERROR && gz(`GL error 0x${iz.toString(16)} pending before the decode probe (the renderer's)`), zz.useProgram(uz), zz.bindTransformFeedback(Rz.TRANSFORM_FEEDBACK, Oz), zz.bindBuffer(Rz.TRANSFORM_FEEDBACK_BUFFER, pz), zz.bufferData(Rz.TRANSFORM_FEEDBACK_BUFFER, 12 * bz, Rz.STREAM_READ), zz.bindBufferBase(Rz.TRANSFORM_FEEDBACK_BUFFER, 0, pz), zz.enable(Rz.RASTERIZER_DISCARD), zz.beginTransformFeedback(Rz.POINTS), Ez(), zz.endTransformFeedback(), zz.bindBufferBase(Rz.TRANSFORM_FEEDBACK_BUFFER, 0, null);
+        const lz = zz.getError();
+        if (lz !== Rz.NO_ERROR) return gz(`${nz}: GL error 0x${lz.toString(16)} on the feedback draw`), null;
+        const Mz = new Float32Array(3 * bz);
+        return zz.bindBuffer(Rz.COPY_READ_BUFFER, pz), zz.getBufferSubData(Rz.COPY_READ_BUFFER, 0, Mz), Mz
       } finally {
-        FT || TT.disable(KT.RASTERIZER_DISCARD), TT.bindTransformFeedback(KT.TRANSFORM_FEEDBACK, WT), TT.bindBuffer(KT.TRANSFORM_FEEDBACK_BUFFER, XT), TT.bindBuffer(KT.COPY_READ_BUFFER, BT), TT.deleteTransformFeedback(ST), TT.deleteBuffer(DT), TT.useProgram(kT), UT.inProbe = !1
+        Hz || zz.disable(Rz.RASTERIZER_DISCARD), zz.bindTransformFeedback(Rz.TRANSFORM_FEEDBACK, lz), zz.bindBuffer(Rz.TRANSFORM_FEEDBACK_BUFFER, Mz), zz.bindBuffer(Rz.COPY_READ_BUFFER, tz), zz.deleteTransformFeedback(Oz), zz.deleteBuffer(pz), zz.useProgram(iz), az.inProbe = !1
       }
     }
 
-    function NT(TT, oT, IT, iT) {
-      const zT = TT.getParameter(KT.COPY_READ_BUFFER_BINDING),
-        kT = new Uint8Array(iT);
-      return TT.bindBuffer(KT.COPY_READ_BUFFER, oT), TT.getBufferSubData(KT.COPY_READ_BUFFER, IT, kT), TT.bindBuffer(KT.COPY_READ_BUFFER, zT), kT
+    function Bz(zz, uz, bz, Ez) {
+      const nz = zz.getParameter(Rz.COPY_READ_BUFFER_BINDING),
+        iz = new Uint8Array(Ez);
+      return zz.bindBuffer(Rz.COPY_READ_BUFFER, uz), zz.getBufferSubData(Rz.COPY_READ_BUFFER, bz, iz), zz.bindBuffer(Rz.COPY_READ_BUFFER, nz), iz
     }
-    const PT = `#version 300 es\nlayout(location = ${rT}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
-      dT = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
-      VT = new WeakMap;
+    const Cz = `#version 300 es\nlayout(location = ${wz}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
+      Yz = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
+      kz = new WeakMap;
 
-    function To(TT, oT, IT) {
-      const iT = TT.getProgramParameter(oT, KT.ACTIVE_UNIFORMS),
-        zT = TT.getParameter(KT.ACTIVE_TEXTURE);
+    function zu(zz, uz, bz) {
+      const Ez = zz.getProgramParameter(uz, Rz.ACTIVE_UNIFORMS),
+        nz = zz.getParameter(Rz.ACTIVE_TEXTURE);
       try {
-        for (let zT = 0; zT < iT; zT++) {
-          const iT = TT.getActiveUniform(oT, zT);
-          if ((null === iT || void 0 === iT ? void 0 : iT.type) !== KT.UNSIGNED_INT_SAMPLER_2D) continue;
-          const kT = TT.getUniformLocation(oT, iT.name),
-            WT = kT ? TT.getUniform(oT, kT) : -1;
-          if (WT < 0) continue;
-          TT.activeTexture(KT.TEXTURE0 + WT);
-          const XT = TT.getParameter(KT.TEXTURE_BINDING_2D);
-          if (XT && JT.get(XT) === IT) return XT
+        for (let nz = 0; nz < Ez; nz++) {
+          const Ez = zz.getActiveUniform(uz, nz);
+          if ((null === Ez || void 0 === Ez ? void 0 : Ez.type) !== Rz.UNSIGNED_INT_SAMPLER_2D) continue;
+          const iz = zz.getUniformLocation(uz, Ez.name),
+            lz = iz ? zz.getUniform(uz, iz) : -1;
+          if (lz < 0) continue;
+          zz.activeTexture(Rz.TEXTURE0 + lz);
+          const Mz = zz.getParameter(Rz.TEXTURE_BINDING_2D);
+          if (Mz && Gz.get(Mz) === bz) return Mz
         }
         return null
       } finally {
-        TT.activeTexture(zT)
+        zz.activeTexture(nz)
       }
     }
 
-    function oo(TT, oT, IT, iT, zT) {
-      const kT = new Uint32Array(4 * zT),
-        WT = TT.getParameter(KT.READ_FRAMEBUFFER_BINDING),
-        XT = TT.createFramebuffer();
-      TT.bindFramebuffer(KT.READ_FRAMEBUFFER, XT), TT.framebufferTexture2D(KT.READ_FRAMEBUFFER, KT.COLOR_ATTACHMENT0, KT.TEXTURE_2D, oT, 0);
+    function uu(zz, uz, bz, Ez, nz) {
+      const iz = new Uint32Array(4 * nz),
+        lz = zz.getParameter(Rz.READ_FRAMEBUFFER_BINDING),
+        Mz = zz.createFramebuffer();
+      zz.bindFramebuffer(Rz.READ_FRAMEBUFFER, Mz), zz.framebufferTexture2D(Rz.READ_FRAMEBUFFER, Rz.COLOR_ATTACHMENT0, Rz.TEXTURE_2D, uz, 0);
       try {
-        let oT = 0;
-        for (; oT < zT;) {
-          const WT = iT + oT,
-            XT = WT % IT,
-            BT = Math.min(zT - oT, IT - XT);
-          TT.readPixels(XT, Math.floor(WT / IT), BT, 1, KT.RGBA_INTEGER, KT.UNSIGNED_INT, kT.subarray(4 * oT, 4 * (oT + BT))), oT += BT
+        let uz = 0;
+        for (; uz < nz;) {
+          const lz = Ez + uz,
+            Mz = lz % bz,
+            tz = Math.min(nz - uz, bz - Mz);
+          zz.readPixels(Mz, Math.floor(lz / bz), tz, 1, Rz.RGBA_INTEGER, Rz.UNSIGNED_INT, iz.subarray(4 * uz, 4 * (uz + tz))), uz += tz
         }
       } finally {
-        TT.bindFramebuffer(KT.READ_FRAMEBUFFER, WT), TT.deleteFramebuffer(XT)
+        zz.bindFramebuffer(Rz.READ_FRAMEBUFFER, lz), zz.deleteFramebuffer(Mz)
       }
-      return kT
+      return iz
     }
 
-    function Io(TT, oT, IT) {
-      let iT = 0,
-        zT = 0;
-      for (let BT = 0; BT < oT.bytes.length; BT += vT) {
-        iT++;
-        const TT = Math.min(BT + vT, oT.bytes.length);
-        xT(oT.bytes.subarray(BT, TT)) !== xT(IT.subarray(BT, TT)) && zT++
+    function bu(zz, uz, bz) {
+      let Ez = 0,
+        nz = 0;
+      for (let tz = 0; tz < uz.bytes.length; tz += Jz) {
+        Ez++;
+        const zz = Math.min(tz + Jz, uz.bytes.length);
+        Fz(uz.bytes.subarray(tz, zz)) !== Fz(bz.subarray(tz, zz)) && nz++
       }
-      const kT = `${TT} ${oT.bytes.length} B cpu ${xT(oT.bytes).toString(16)} gpu ${xT(IT).toString(16)}, ${zT}/${iT} blocks differ${oT.missed?`, ${oT.missed} GPU-side writes uncopied`:""}`;
-      if (0 === zT) return kT;
+      const iz = `${zz} ${uz.bytes.length} B cpu ${Fz(uz.bytes).toString(16)} gpu ${Fz(bz).toString(16)}, ${nz}/${Ez} blocks differ${uz.missed?`, ${uz.missed} GPU-side writes uncopied`:""}`;
+      if (0 === nz) return iz;
       const {
-        count: WT,
-        offsets: XT
-      } = function(TT, oT) {
-        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
-        const iT = Math.min(TT.length, oT.length);
-        let zT = Math.abs(TT.length - oT.length);
-        const kT = [];
-        for (let WT = 0; WT < iT; WT++) TT[WT] !== oT[WT] && (zT++, kT.length < IT && kT.push(WT));
+        count: lz,
+        offsets: Mz
+      } = function(zz, uz) {
+        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
+        const Ez = Math.min(zz.length, uz.length);
+        let nz = Math.abs(zz.length - uz.length);
+        const iz = [];
+        for (let lz = 0; lz < Ez; lz++) zz[lz] !== uz[lz] && (nz++, iz.length < bz && iz.push(lz));
         return {
-          count: zT,
-          offsets: kT
+          count: nz,
+          offsets: iz
         }
-      }(oT.bytes, IT);
-      return ZT([`${kT}: ${WT} bytes differ`, ...XT.map((TT => `  +${TT}: cpu ${cT(oT.bytes,TT)} | gpu ${cT(IT,TT)}`))].join("\n")), `${kT}: ${WT} bytes differ, first at ${XT.join(", ")} (context in the saved file)`
+      }(uz.bytes, bz);
+      return Sz([`${iz}: ${lz} bytes differ`, ...Mz.map((zz => `  +${zz}: cpu ${Zz(uz.bytes,zz)} | gpu ${Zz(bz,zz)}`))].join("\n")), `${iz}: ${lz} bytes differ, first at ${Mz.join(", ")} (context in the saved file)`
     }
 
-    function io(TT) {
-      if (0 === TT.vertices.length) return void qT(`decode probe (${TT.reason}): no terrain draw probed (${TT.draws.length} seen)`);
-      const oT = function(TT) {
-          const oT = new Map;
-          for (const iT of TT) {
-            const TT = oT.get(iT.group);
-            TT ? TT.push(iT) : oT.set(iT.group, [iT])
+    function Eu(zz) {
+      if (0 === zz.vertices.length) return void gz(`decode probe (${zz.reason}): no terrain draw probed (${zz.draws.length} seen)`);
+      const uz = function(zz) {
+          const uz = new Map;
+          for (const Ez of zz) {
+            const zz = uz.get(Ez.group);
+            zz ? zz.push(Ez) : uz.set(Ez.group, [Ez])
           }
-          const IT = {
-            vertices: TT.length,
+          const bz = {
+            vertices: zz.length,
             mismatches: 0,
             byDirection: new Array(8).fill(0),
             byDiagonal: [0, 0],
@@ -606,67 +606,67 @@ export const modules = {
             translations: new Map,
             first: []
           };
-          for (const [iT, zT] of oT) {
-            const TT = new Map,
-              oT = zT.map((oT => {
-                const IT = ST(oT.record, oT.slot),
-                  iT = [oT.gpu[0] - IT[0], oT.gpu[1] - IT[1], oT.gpu[2] - IT[2]],
-                  zT = iT.map((TT => Math.round(64 * TT))).join(","),
-                  kT = TT.get(zT);
-                return kT ? kT.count++ : TT.set(zT, {
+          for (const [Ez, nz] of uz) {
+            const zz = new Map,
+              uz = nz.map((uz => {
+                const bz = Oz(uz.record, uz.slot),
+                  Ez = [uz.gpu[0] - bz[0], uz.gpu[1] - bz[1], uz.gpu[2] - bz[2]],
+                  nz = Ez.map((zz => Math.round(64 * zz))).join(","),
+                  iz = zz.get(nz);
+                return iz ? iz.count++ : zz.set(nz, {
                   count: 1,
-                  offset: iT
-                }), IT
+                  offset: Ez
+                }), bz
               }));
-            let kT = [0, 0, 0],
-              WT = 0;
-            for (const IT of TT.values()) IT.count > WT && (WT = IT.count, kT = IT.offset);
-            IT.translations.set(iT, kT), zT.forEach(((TT, iT) => {
-              var zT;
-              const WT = [oT[iT][0] + kT[0], oT[iT][1] + kT[1], oT[iT][2] + kT[2]];
-              if (WT.every(((oT, IT) => {
-                  return iT = TT.gpu[IT], zT = oT, Math.abs(iT - zT) <= Math.max(.001, 1e-6 * Math.abs(zT));
-                  var iT, zT
+            let iz = [0, 0, 0],
+              lz = 0;
+            for (const bz of zz.values()) bz.count > lz && (lz = bz.count, iz = bz.offset);
+            bz.translations.set(Ez, iz), nz.forEach(((zz, Ez) => {
+              var nz;
+              const lz = [uz[Ez][0] + iz[0], uz[Ez][1] + iz[1], uz[Ez][2] + iz[2]];
+              if (lz.every(((uz, bz) => {
+                  return Ez = zz.gpu[bz], nz = uz, Math.abs(Ez - nz) <= Math.max(.001, 1e-6 * Math.abs(nz));
+                  var Ez, nz
                 }))) return;
-              IT.mismatches++, IT.byDirection[XT(TT.record[2])]++, IT.byDiagonal[BT(TT.record[2])]++;
-              const FT = DT(TT.record);
-              IT.byBand[FT] = (null !== (zT = IT.byBand[FT]) && void 0 !== zT ? zT : 0) + 1, IT.first.length < LT && IT.first.push({
-                ...TT,
-                expected: WT
+              bz.mismatches++, bz.byDirection[Mz(zz.record[2])]++, bz.byDiagonal[tz(zz.record[2])]++;
+              const Hz = pz(zz.record);
+              bz.byBand[Hz] = (null !== (nz = bz.byBand[Hz]) && void 0 !== nz ? nz : 0) + 1, bz.first.length < dz && bz.first.push({
+                ...zz,
+                expected: lz
               })
             }))
           }
-          return IT
-        }(TT.vertices),
-        IT = oT.byDirection.map(((TT, oT) => TT ? `${WT[oT]} ${TT}` : "")).filter(Boolean).join(" "),
-        iT = Object.entries(oT.byBand).map((TT => {
-          let [oT, IT] = TT;
-          return `${oT}: ${IT}`
+          return bz
+        }(zz.vertices),
+        bz = uz.byDirection.map(((zz, uz) => zz ? `${lz[uz]} ${zz}` : "")).filter(Boolean).join(" "),
+        Ez = Object.entries(uz.byBand).map((zz => {
+          let [uz, bz] = zz;
+          return `${uz}: ${bz}`
         })).join(" ");
-      if (qT(`decode probe (${TT.reason}): ${oT.mismatches}/${oT.vertices} vertices differ from the CPU decode over ${TT.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (oT.mismatches ? ` by direction [${IT}] diagonal [0: ${oT.byDiagonal[0]} 1: ${oT.byDiagonal[1]}] extent [${iT}]` : "")), TT.fed.records > 0 || TT.fed.failed > 0) {
-        qT(`decode probe input: ${TT.fed.differing}/${TT.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (TT.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (TT.fed.failed ? `; the feed failed on ${TT.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
-        for (const oT of TT.fed.first) qT(`  ${oT}`)
+      if (gz(`decode probe (${zz.reason}): ${uz.mismatches}/${uz.vertices} vertices differ from the CPU decode over ${zz.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (uz.mismatches ? ` by direction [${bz}] diagonal [0: ${uz.byDiagonal[0]} 1: ${uz.byDiagonal[1]}] extent [${Ez}]` : "")), zz.fed.records > 0 || zz.fed.failed > 0) {
+        gz(`decode probe input: ${zz.fed.differing}/${zz.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (zz.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (zz.fed.failed ? `; the feed failed on ${zz.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
+        for (const uz of zz.fed.first) gz(`  ${uz}`)
       }
-      for (const zT of oT.first) {
-        const [TT, oT, IT] = zT.record;
-        qT(`  mismatch part ${zT.group} r0 ${TT.toString(16)} r1 ${oT.toString(16)} r2 ${IT.toString(16)} slot ${zT.slot} (${WT[XT(IT)]}): expected ${zT.expected.map(ko).join(",")} gpu ${zT.gpu.map(ko).join(",")}`)
+      for (const nz of uz.first) {
+        const [zz, uz, bz] = nz.record;
+        gz(`  mismatch part ${nz.group} r0 ${zz.toString(16)} r1 ${uz.toString(16)} r2 ${bz.toString(16)} slot ${nz.slot} (${lz[Mz(bz)]}): expected ${nz.expected.map(iu).join(",")} gpu ${nz.gpu.map(iu).join(",")}`)
       }
-      ZT(`decode probe translations: ${[...oT.translations].map((TT=>{let[oT,IT]=TT;return`${oT}: ${IT.map(ko).join(",")}`})).join("; ")}`)
+      Sz(`decode probe translations: ${[...uz.translations].map((zz=>{let[uz,bz]=zz;return`${uz}: ${bz.map(iu).join(",")}`})).join("; ")}`)
     }
 
-    function zo(TT) {
-      return TT.toString(16)
+    function nu(zz) {
+      return zz.toString(16)
     }
 
-    function ko(TT) {
-      return Number.isInteger(TT) ? String(TT) : TT.toFixed(3)
+    function iu(zz) {
+      return Number.isInteger(zz) ? String(zz) : zz.toFixed(3)
     }
 
-    function Wo(TT) {
-      return null !== UT.pendingCheck ? Promise.resolve() : new Promise((oT => {
-        let IT = !1;
-        const iT = {
-          reason: TT,
+    function lu(zz) {
+      return null !== az.pendingCheck ? Promise.resolve() : new Promise((uz => {
+        let bz = !1;
+        const Ez = {
+          reason: zz,
           terrainDraws: 0,
           draws: [],
           vertices: [],
@@ -679,85 +679,85 @@ export const modules = {
             failed: 0
           }
         };
-        UT.pendingCheck = iT;
-        const zT = () => {
-            UT.pendingCheck = null;
+        az.pendingCheck = Ez;
+        const nz = () => {
+            az.pendingCheck = null;
             try {
-              ! function(TT) {
-                qT(`draw ranges (${TT.reason}): ${TT.terrainDraws} terrain draws in the frame, the first ${TT.draws.length} here`);
-                for (const oT of TT.draws) {
-                  const TT = oT.ec.slice(0, 8).map((TT => {
-                      let [oT, IT] = TT;
-                      return `${oT}+${IT}`
+              ! function(zz) {
+                gz(`draw ranges (${zz.reason}): ${zz.terrainDraws} terrain draws in the frame, the first ${zz.draws.length} here`);
+                for (const uz of zz.draws) {
+                  const zz = uz.al.slice(0, 8).map((zz => {
+                      let [uz, bz] = zz;
+                      return `${uz}+${bz}`
                     })).join(" "),
-                    IT = oT.ec.length > 8 ? ` (+${oT.ec.length-8} ranges)` : "";
-                  qT(`  ${fT(oT.program)} ${oT.program.terrain} ${oT.call} ${TT}${IT} x${oT.instances}${oT.group>=0?` part ${oT.group} chunk ${oT.chunk}`:""} | ${oT.attributes.join(" | ")}`)
+                    bz = uz.al.length > 8 ? ` (+${uz.al.length-8} ranges)` : "";
+                  gz(`  ${Tz(uz.program)} ${uz.program.terrain} ${uz.call} ${zz}${bz} x${uz.instances}${uz.group>=0?` part ${uz.group} chunk ${uz.chunk}`:""} | ${uz.attributes.join(" | ")}`)
                 }
-              }(iT), io(iT);
-              iT.draws.some((TT => "undefined" !== typeof WebGL2RenderingContext && TT.gl instanceof WebGL2RenderingContext)) || 0 === iT.draws.length ? function(TT) {
-                const oT = [],
-                  IT = new Map;
-                for (const iT of TT)
-                  if ("undefined" !== typeof WebGL2RenderingContext && iT.gl instanceof WebGL2RenderingContext)
-                    for (const TT of iT.pages) IT.set("buf" === TT.kind ? TT.buffer : TT.texture, {
-                      page: TT,
-                      gl: iT.gl
+              }(Ez), Eu(Ez);
+              Ez.draws.some((zz => "undefined" !== typeof WebGL2RenderingContext && zz.gl instanceof WebGL2RenderingContext)) || 0 === Ez.draws.length ? function(zz) {
+                const uz = [],
+                  bz = new Map;
+                for (const Ez of zz)
+                  if ("undefined" !== typeof WebGL2RenderingContext && Ez.gl instanceof WebGL2RenderingContext)
+                    for (const zz of Ez.pages) bz.set("buf" === zz.kind ? zz.buffer : zz.texture, {
+                      page: zz,
+                      gl: Ez.gl
                     });
-                for (const [iT, {
-                    page: zT,
-                    gl: kT
-                  }] of IT) {
-                  const TT = jT.get(iT);
-                  if (!TT) {
-                    oT.push(`${zT.kind}#${QT(iT)}: no CPU copy (${UT.uncopied} pages over the copy budget)`);
+                for (const [Ez, {
+                    page: nz,
+                    gl: iz
+                  }] of bz) {
+                  const zz = Pz.get(Ez);
+                  if (!zz) {
+                    uz.push(`${nz.kind}#${qz(Ez)}: no CPU copy (${az.uncopied} pages over the copy budget)`);
                     continue
                   }
-                  if ("buf" === zT.kind) {
-                    oT.push(Io(`buf#${TT.id}`, TT, NT(kT, zT.buffer, 0, TT.bytes.length)));
+                  if ("buf" === nz.kind) {
+                    uz.push(bu(`buf#${zz.id}`, zz, Bz(iz, nz.buffer, 0, zz.bytes.length)));
                     continue
                   }
-                  const IT = oo(kT, zT.texture, TT.width, 0, TT.width * TT.height),
-                    WT = 16 === TT.texelBytes ? new Uint8Array(IT.buffer) : new Uint8Array(new Uint16Array(IT).buffer);
-                  oT.push(Io(`tex#${TT.id} (${16===TT.texelBytes?"records":"light"})`, TT, WT))
+                  const bz = uu(iz, nz.texture, zz.width, 0, zz.width * zz.height),
+                    lz = 16 === zz.texelBytes ? new Uint8Array(bz.buffer) : new Uint8Array(new Uint16Array(bz).buffer);
+                  uz.push(bu(`tex#${zz.id} (${16===zz.texelBytes?"records":"light"})`, zz, lz))
                 }
-                for (const iT of oT) qT(`page readback ${iT}`)
-              }(iT.draws) : qT("page readback: none on WebGL1 (no buffer readback)")
-            } catch (TT) {
-              qT(`check failed: ${String(TT)}`)
+                for (const Ez of uz) gz(`page readback ${Ez}`)
+              }(Ez.draws) : gz("page readback: none on WebGL1 (no buffer readback)")
+            } catch (zz) {
+              gz(`check failed: ${String(zz)}`)
             }
-            oT()
+            uz()
           },
-          kT = () => {
-            if (iT.draws.length > 0 && !IT) return IT = !0, void setTimeout(zT, 0);
-            IT || requestAnimationFrame(kT)
+          iz = () => {
+            if (Ez.draws.length > 0 && !bz) return bz = !0, void setTimeout(nz, 0);
+            bz || requestAnimationFrame(iz)
           };
-        requestAnimationFrame(kT), setTimeout((() => {
-          IT || (IT = !0, zT())
+        requestAnimationFrame(iz), setTimeout((() => {
+          bz || (bz = !0, nz())
         }), 5e3)
       }))
     }
-    var Xo = IT(4191);
-    const Bo = 20,
-      Fo = 24,
-      So = Reflect.apply;
+    var Mu = bz(4448);
+    const tu = 20,
+      Hu = 24,
+      Ou = Reflect.apply;
 
-    function Do(TT, oT, IT) {
-      if (!TT) return;
-      const iT = TT[oT];
-      if ("function" === typeof iT) {
-        const zT = IT(iT);
-        TT[oT] = zT, (0, Xo.w)(zT, iT)
+    function pu(zz, uz, bz) {
+      if (!zz) return;
+      const Ez = zz[uz];
+      if ("function" === typeof Ez) {
+        const nz = bz(Ez);
+        zz[uz] = nz, (0, Mu.y)(nz, Ez)
       }
     }
-    let Lo = !1;
-    const xo = new WeakMap,
-      co = new WeakMap,
-      Ko = new WeakMap,
-      Mo = {
+    let du = !1;
+    const Fu = new WeakMap,
+      Zu = new WeakMap,
+      Ru = new WeakMap,
+      Ku = {
         gl: 0,
         lost: 0
       };
-    let ro = {
+    let wu = {
         inst: {
           draws: 0,
           faces: 0
@@ -771,307 +771,307 @@ export const modules = {
           faces: 0
         }
       },
-      Ao = {
+      Xu = {
         buffer: 0,
         texture: 0
       },
-      go = 0;
+      fu = 0;
 
-    function ho(TT) {
-      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      if (TT instanceof ArrayBuffer) return new Uint8Array(TT, oT, IT || void 0);
-      if (!ArrayBuffer.isView(TT)) return null;
-      const iT = "BYTES_PER_ELEMENT" in TT ? TT.BYTES_PER_ELEMENT : 1,
-        zT = TT.byteOffset + oT * iT,
-        kT = IT ? IT * iT : TT.byteLength - oT * iT;
-      return new Uint8Array(TT.buffer, zT, Math.max(0, kT))
+    function su(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      if (zz instanceof ArrayBuffer) return new Uint8Array(zz, uz, bz || void 0);
+      if (!ArrayBuffer.isView(zz)) return null;
+      const Ez = "BYTES_PER_ELEMENT" in zz ? zz.BYTES_PER_ELEMENT : 1,
+        nz = zz.byteOffset + uz * Ez,
+        iz = bz ? bz * Ez : zz.byteLength - uz * Ez;
+      return new Uint8Array(zz.buffer, nz, Math.max(0, iz))
     }
 
-    function wo(TT, oT) {
-      const IT = function(TT) {
-        switch (TT) {
-          case KT.ARRAY_BUFFER:
-            return KT.ARRAY_BUFFER_BINDING;
-          case KT.ELEMENT_ARRAY_BUFFER:
-            return KT.ELEMENT_ARRAY_BUFFER_BINDING;
-          case KT.COPY_READ_BUFFER:
-            return KT.COPY_READ_BUFFER_BINDING;
-          case KT.COPY_WRITE_BUFFER:
-            return KT.COPY_WRITE_BUFFER_BINDING;
-          case KT.UNIFORM_BUFFER:
-            return KT.UNIFORM_BUFFER_BINDING;
-          case KT.PIXEL_UNPACK_BUFFER:
-            return KT.PIXEL_UNPACK_BUFFER_BINDING;
-          case KT.TRANSFORM_FEEDBACK_BUFFER:
-            return KT.TRANSFORM_FEEDBACK_BUFFER_BINDING;
+    function ru(zz, uz) {
+      const bz = function(zz) {
+        switch (zz) {
+          case Rz.ARRAY_BUFFER:
+            return Rz.ARRAY_BUFFER_BINDING;
+          case Rz.ELEMENT_ARRAY_BUFFER:
+            return Rz.ELEMENT_ARRAY_BUFFER_BINDING;
+          case Rz.COPY_READ_BUFFER:
+            return Rz.COPY_READ_BUFFER_BINDING;
+          case Rz.COPY_WRITE_BUFFER:
+            return Rz.COPY_WRITE_BUFFER_BINDING;
+          case Rz.UNIFORM_BUFFER:
+            return Rz.UNIFORM_BUFFER_BINDING;
+          case Rz.PIXEL_UNPACK_BUFFER:
+            return Rz.PIXEL_UNPACK_BUFFER_BINDING;
+          case Rz.TRANSFORM_FEEDBACK_BUFFER:
+            return Rz.TRANSFORM_FEEDBACK_BUFFER_BINDING;
           default:
             return 0
         }
-      }(oT);
-      return IT ? TT.getParameter(IT) : null
+      }(uz);
+      return bz ? zz.getParameter(bz) : null
     }
 
-    function mo(TT) {
-      const oT = jT.get(TT);
-      oT && (UT.shadowBytes -= oT.bytes.length, jT.delete(TT))
+    function ou(zz) {
+      const uz = Pz.get(zz);
+      uz && (az.shadowBytes -= uz.bytes.length, Pz.delete(zz))
     }
 
-    function eo(TT, oT) {
-      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-      mo(TT), UT.shadowBytes + oT > uT ? UT.uncopied++ : (UT.shadowBytes += oT, jT.set(TT, {
-        id: QT(TT),
-        bytes: new Uint8Array(oT),
-        width: IT,
-        height: iT,
-        texelBytes: zT,
+    function Nu(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      ou(zz), az.shadowBytes + uz > xz ? az.uncopied++ : (az.shadowBytes += uz, Pz.set(zz, {
+        id: qz(zz),
+        bytes: new Uint8Array(uz),
+        width: bz,
+        height: Ez,
+        texelBytes: nz,
         missed: 0
       }))
     }
 
-    function Ro(TT, oT) {
-      for (const IT of ["deleteBuffer", "deleteTexture"]) Do(TT, IT, (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        return IT[0] && mo(IT[0]), So(TT, this, IT)
+    function vu(zz, uz) {
+      for (const bz of ["deleteBuffer", "deleteTexture"]) pu(zz, bz, (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        return bz[0] && ou(bz[0]), Ou(zz, this, bz)
       }));
-      Do(TT, "shaderSource", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        return IT[0] && "string" === typeof IT[1] && xo.set(IT[0], IT[1]), So(TT, this, IT)
-      })), Do(TT, "attachShader", (TT => function() {
-        for (var oT, IT = arguments.length, iT = new Array(IT), zT = 0; zT < IT; zT++) iT[zT] = arguments[zT];
-        const kT = iT[0],
-          WT = null !== (oT = co.get(kT)) && void 0 !== oT ? oT : [];
-        return WT.push(iT[1]), co.set(kT, WT), So(TT, this, iT)
-      })), Do(TT, "linkProgram", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        const zT = So(TT, this, IT);
-        return UT.inProbe || function(TT, oT) {
-          var IT, iT, zT;
-          "undefined" !== typeof HTMLCanvasElement && TT.canvas instanceof HTMLCanvasElement && function(TT) {
-            if (jo.has(TT)) return;
-            jo.add(TT);
-            for (const oT of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) TT.addEventListener(oT, (TT => {
-              Mo.lost < Bo && (Mo.lost++, qT(`${oT}${"statusMessage"in TT?`: ${String(TT.statusMessage)}`:""}`))
+      pu(zz, "shaderSource", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        return bz[0] && "string" === typeof bz[1] && Fu.set(bz[0], bz[1]), Ou(zz, this, bz)
+      })), pu(zz, "attachShader", (zz => function() {
+        for (var uz, bz = arguments.length, Ez = new Array(bz), nz = 0; nz < bz; nz++) Ez[nz] = arguments[nz];
+        const iz = Ez[0],
+          lz = null !== (uz = Zu.get(iz)) && void 0 !== uz ? uz : [];
+        return lz.push(Ez[1]), Zu.set(iz, lz), Ou(zz, this, Ez)
+      })), pu(zz, "linkProgram", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        const nz = Ou(zz, this, bz);
+        return az.inProbe || function(zz, uz) {
+          var bz, Ez, nz;
+          "undefined" !== typeof HTMLCanvasElement && zz.canvas instanceof HTMLCanvasElement && function(zz) {
+            if (Pu.has(zz)) return;
+            Pu.add(zz);
+            for (const uz of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) zz.addEventListener(uz, (zz => {
+              Ku.lost < tu && (Ku.lost++, gz(`${uz}${"statusMessage"in zz?`: ${String(zz.statusMessage)}`:""}`))
             }))
-          }(TT.canvas);
-          UT.context ??= TT;
-          const kT = null !== (IT = co.get(oT)) && void 0 !== IT ? IT : [];
-          let WT = "",
-            XT = "";
-          for (const ST of kT) {
-            var BT;
-            const TT = null !== (BT = xo.get(ST)) && void 0 !== BT ? BT : "";
-            /\bgl_Position\b/.test(TT) ? WT = TT : XT = TT
+          }(zz.canvas);
+          az.context ??= zz;
+          const iz = null !== (bz = Zu.get(uz)) && void 0 !== bz ? bz : [];
+          let lz = "",
+            Mz = "";
+          for (const Oz of iz) {
+            var tz;
+            const zz = null !== (tz = Fu.get(Oz)) && void 0 !== tz ? tz : "";
+            /\bgl_Position\b/.test(zz) ? lz = zz : Mz = zz
           }
-          const FT = {
-            id: QT(oT),
-            name: null !== (iT = null === (zT = ET.exec(WT)) || void 0 === zT ? void 0 : zT[1]) && void 0 !== iT ? iT : null,
-            gl: TT,
-            vertex: WT,
-            fragment: XT,
-            terrain: vo(WT),
+          const Hz = {
+            id: qz(uz),
+            name: null !== (Ez = null === (nz = Az.exec(lz)) || void 0 === nz ? void 0 : nz[1]) && void 0 !== Ez ? Ez : null,
+            gl: zz,
+            vertex: lz,
+            fragment: Mz,
+            terrain: Ju(lz),
             checked: !1,
             firstDraw: !1
           };
-          if (Ko.set(oT, FT), CT.push([oT, FT]), null !== FT.terrain) {
-            const oT = kT.map((oT => {
-              var IT;
-              return null !== (IT = TT.getShaderInfoLog(oT)) && void 0 !== IT ? IT : ""
-            })).filter((TT => "" !== TT.trim()));
-            oT.length > 0 && ZT(`program ${fT(FT)} (${FT.terrain}) shader logs:\n${lT(oT.join("\n"))}`)
+          if (Ru.set(uz, Hz), Lz.push([uz, Hz]), null !== Hz.terrain) {
+            const uz = iz.map((uz => {
+              var bz;
+              return null !== (bz = zz.getShaderInfoLog(uz)) && void 0 !== bz ? bz : ""
+            })).filter((zz => "" !== zz.trim()));
+            uz.length > 0 && Sz(`program ${Tz(Hz)} (${Hz.terrain}) shader logs:\n${yz(uz.join("\n"))}`)
           }
-        }(this, IT[0]), zT
-      })), Do(TT, "bufferData", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        const zT = So(TT, this, IT);
-        if (!UT.inProbe) {
-          const TT = wo(this, IT[0]);
-          if (TT) {
-            var kT, WT, XT;
-            const oT = "number" === typeof IT[1] ? null : ho(IT[1], null !== (kT = IT[3]) && void 0 !== kT ? kT : 0, null !== (WT = IT[4]) && void 0 !== WT ? WT : 0);
-            var BT;
-            if (eo(TT, "number" === typeof IT[1] ? IT[1] : null !== (XT = null === oT || void 0 === oT ? void 0 : oT.length) && void 0 !== XT ? XT : 0), oT) null === (BT = jT.get(TT)) || void 0 === BT || BT.bytes.set(oT)
-          }
-        }
-        return zT
-      })), Do(TT, "bufferSubData", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        const zT = So(TT, this, IT);
-        if (!UT.inProbe) {
-          var kT, WT;
-          const TT = wo(this, IT[0]),
-            oT = TT ? jT.get(TT) : void 0,
-            iT = ho(IT[2], null !== (kT = IT[3]) && void 0 !== kT ? kT : 0, null !== (WT = IT[4]) && void 0 !== WT ? WT : 0);
-          if (oT && iT) {
-            const TT = IT[1];
-            oT.bytes.set(iT.subarray(0, Math.max(0, oT.bytes.length - TT)), TT), uo("buffer", oT, TT, iT.length)
+        }(this, bz[0]), nz
+      })), pu(zz, "bufferData", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        const nz = Ou(zz, this, bz);
+        if (!az.inProbe) {
+          const zz = ru(this, bz[0]);
+          if (zz) {
+            var iz, lz, Mz;
+            const uz = "number" === typeof bz[1] ? null : su(bz[1], null !== (iz = bz[3]) && void 0 !== iz ? iz : 0, null !== (lz = bz[4]) && void 0 !== lz ? lz : 0);
+            var tz;
+            if (Nu(zz, "number" === typeof bz[1] ? bz[1] : null !== (Mz = null === uz || void 0 === uz ? void 0 : uz.length) && void 0 !== Mz ? Mz : 0), uz) null === (tz = Pz.get(zz)) || void 0 === tz || tz.bytes.set(uz)
           }
         }
-        return zT
-      })), oT && (Do(TT, "copyBufferSubData", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        const zT = So(TT, this, IT);
-        if (!UT.inProbe) {
-          const [TT, oT, iT, zT, kT] = IT, WT = wo(this, TT), XT = wo(this, oT), BT = WT ? jT.get(WT) : void 0, FT = XT ? jT.get(XT) : void 0;
-          FT && (BT ? FT.bytes.set(BT.bytes.slice(iT, iT + kT), zT) : FT.missed++)
-        }
-        return zT
-      })), Do(TT, "texStorage2D", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        const zT = So(TT, this, IT),
-          [, , kT, WT, XT] = IT;
-        if (!UT.inProbe && (kT === KT.RGBA32UI || kT === KT.RGBA16UI)) {
-          const TT = this.getParameter(KT.TEXTURE_BINDING_2D),
-            oT = kT === KT.RGBA32UI ? 16 : 8;
-          TT && (JT.set(TT, oT), eo(TT, WT * XT * oT, WT, XT, oT))
-        }
-        return zT
-      })), Do(TT, "texSubImage2D", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        const zT = So(TT, this, IT);
-        return !UT.inProbe && IT.length >= 9 && IT[0] === KT.TEXTURE_2D && 0 === IT[1] && function(TT, oT) {
-          var IT;
-          const iT = TT.getParameter(KT.TEXTURE_BINDING_2D),
-            zT = iT ? jT.get(iT) : void 0;
-          if (!zT) return;
-          const [, , kT, WT, XT, BT] = oT;
-          let FT = ho(oT[8], null !== (IT = oT[9]) && void 0 !== IT ? IT : 0);
-          if (null === FT && "number" === typeof oT[8]) {
-            const IT = wo(TT, KT.PIXEL_UNPACK_BUFFER),
-              iT = IT ? jT.get(IT) : void 0;
-            FT = iT ? iT.bytes.subarray(oT[8]) : null
+        return nz
+      })), pu(zz, "bufferSubData", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        const nz = Ou(zz, this, bz);
+        if (!az.inProbe) {
+          var iz, lz;
+          const zz = ru(this, bz[0]),
+            uz = zz ? Pz.get(zz) : void 0,
+            Ez = su(bz[2], null !== (iz = bz[3]) && void 0 !== iz ? iz : 0, null !== (lz = bz[4]) && void 0 !== lz ? lz : 0);
+          if (uz && Ez) {
+            const zz = bz[1];
+            uz.bytes.set(Ez.subarray(0, Math.max(0, uz.bytes.length - zz)), zz), xu("buffer", uz, zz, Ez.length)
           }
-          if (null === FT) return void zT.missed++;
-          const ST = TT.getParameter(KT.UNPACK_ROW_LENGTH) || XT,
-            DT = TT.getParameter(KT.UNPACK_SKIP_ROWS),
-            LT = TT.getParameter(KT.UNPACK_SKIP_PIXELS),
-            xT = zT.texelBytes;
-          for (let cT = 0; cT < BT; cT++) {
-            const TT = ((DT + cT) * ST + LT) * xT,
-              oT = ((WT + cT) * zT.width + kT) * xT;
-            zT.bytes.set(FT.subarray(TT, TT + XT * xT), oT)
+        }
+        return nz
+      })), uz && (pu(zz, "copyBufferSubData", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        const nz = Ou(zz, this, bz);
+        if (!az.inProbe) {
+          const [zz, uz, Ez, nz, iz] = bz, lz = ru(this, zz), Mz = ru(this, uz), tz = lz ? Pz.get(lz) : void 0, Hz = Mz ? Pz.get(Mz) : void 0;
+          Hz && (tz ? Hz.bytes.set(tz.bytes.slice(Ez, Ez + iz), nz) : Hz.missed++)
+        }
+        return nz
+      })), pu(zz, "texStorage2D", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        const nz = Ou(zz, this, bz),
+          [, , iz, lz, Mz] = bz;
+        if (!az.inProbe && (iz === Rz.RGBA32UI || iz === Rz.RGBA16UI)) {
+          const zz = this.getParameter(Rz.TEXTURE_BINDING_2D),
+            uz = iz === Rz.RGBA32UI ? 16 : 8;
+          zz && (Gz.set(zz, uz), Nu(zz, lz * Mz * uz, lz, Mz, uz))
+        }
+        return nz
+      })), pu(zz, "texSubImage2D", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        const nz = Ou(zz, this, bz);
+        return !az.inProbe && bz.length >= 9 && bz[0] === Rz.TEXTURE_2D && 0 === bz[1] && function(zz, uz) {
+          var bz;
+          const Ez = zz.getParameter(Rz.TEXTURE_BINDING_2D),
+            nz = Ez ? Pz.get(Ez) : void 0;
+          if (!nz) return;
+          const [, , iz, lz, Mz, tz] = uz;
+          let Hz = su(uz[8], null !== (bz = uz[9]) && void 0 !== bz ? bz : 0);
+          if (null === Hz && "number" === typeof uz[8]) {
+            const bz = ru(zz, Rz.PIXEL_UNPACK_BUFFER),
+              Ez = bz ? Pz.get(bz) : void 0;
+            Hz = Ez ? Ez.bytes.subarray(uz[8]) : null
           }
-          uo("texture", zT, (WT * zT.width + kT) * xT, XT * BT * xT)
-        }(this, IT), zT
-      })), Do(TT, "copyTexSubImage2D", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        const zT = IT[0] === KT.TEXTURE_2D ? this.getParameter(KT.TEXTURE_BINDING_2D) : null,
-          kT = zT ? jT.get(zT) : void 0;
-        return kT && kT.missed++, So(TT, this, IT)
+          if (null === Hz) return void nz.missed++;
+          const Oz = zz.getParameter(Rz.UNPACK_ROW_LENGTH) || Mz,
+            pz = zz.getParameter(Rz.UNPACK_SKIP_ROWS),
+            dz = zz.getParameter(Rz.UNPACK_SKIP_PIXELS),
+            Fz = nz.texelBytes;
+          for (let Zz = 0; Zz < tz; Zz++) {
+            const zz = ((pz + Zz) * Oz + dz) * Fz,
+              uz = ((lz + Zz) * nz.width + iz) * Fz;
+            nz.bytes.set(Hz.subarray(zz, zz + Mz * Fz), uz)
+          }
+          xu("texture", nz, (lz * nz.width + iz) * Fz, Mz * tz * Fz)
+        }(this, bz), nz
+      })), pu(zz, "copyTexSubImage2D", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        const nz = bz[0] === Rz.TEXTURE_2D ? this.getParameter(Rz.TEXTURE_BINDING_2D) : null,
+          iz = nz ? Pz.get(nz) : void 0;
+        return iz && iz.missed++, Ou(zz, this, bz)
       })));
-      for (const IT of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) Do(TT, IT, (TT => function() {
-        for (var oT = arguments.length, iT = new Array(oT), zT = 0; zT < oT; zT++) iT[zT] = arguments[zT];
-        const kT = So(TT, this, iT);
-        return UT.inProbe || fo(this, IT, iT), kT
+      for (const bz of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) pu(zz, bz, (zz => function() {
+        for (var uz = arguments.length, Ez = new Array(uz), nz = 0; nz < uz; nz++) Ez[nz] = arguments[nz];
+        const iz = Ou(zz, this, Ez);
+        return az.inProbe || Tu(this, bz, Ez), iz
       }));
-      Do(TT, "getExtension", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        const zT = So(TT, this, IT);
-        return zT && "object" === typeof zT && function(TT, oT, IT) {
-          const iT = {
+      pu(zz, "getExtension", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        const nz = Ou(zz, this, bz);
+        return nz && "object" === typeof nz && function(zz, uz, bz) {
+          const Ez = {
             WEBGL_multi_draw: ["multiDrawArraysWEBGL", "multiDrawElementsWEBGL", "multiDrawArraysInstancedWEBGL", "multiDrawElementsInstancedWEBGL"],
             ANGLE_instanced_arrays: ["drawArraysInstancedANGLE", "drawElementsInstancedANGLE"]
           };
-          if (!(oT in iT) || IT.bloxdRenderDebug) return;
-          IT.bloxdRenderDebug = !0;
-          for (const zT of iT[oT]) {
-            const oT = IT[zT];
-            "function" === typeof oT && (IT[zT] = function() {
-              for (var iT = arguments.length, kT = new Array(iT), WT = 0; WT < iT; WT++) kT[WT] = arguments[WT];
-              const XT = So(oT, IT, kT);
-              return UT.inProbe || fo(TT, zT, kT), XT
+          if (!(uz in Ez) || bz.bloxdRenderDebug) return;
+          bz.bloxdRenderDebug = !0;
+          for (const nz of Ez[uz]) {
+            const uz = bz[nz];
+            "function" === typeof uz && (bz[nz] = function() {
+              for (var Ez = arguments.length, iz = new Array(Ez), lz = 0; lz < Ez; lz++) iz[lz] = arguments[lz];
+              const Mz = Ou(uz, bz, iz);
+              return az.inProbe || Tu(zz, nz, iz), Mz
             })
           }
-        }(this, IT[0], zT), zT
+        }(this, bz[0], nz), nz
       }))
     }
 
-    function uo(TT, oT, IT, iT) {
-      Ao[TT] += iT, go < 32 && oT.bytes.length >= 1 << 20 && (go++, ZT(`upload ${TT} #${oT.id} +${IT} ${iT} B`))
+    function xu(zz, uz, bz, Ez) {
+      Xu[zz] += Ez, fu < 32 && uz.bytes.length >= 1 << 20 && (fu++, Sz(`upload ${zz} #${uz.id} +${bz} ${Ez} B`))
     }
 
-    function vo(TT) {
-      if (!TT.includes("decodeQuad")) return null;
-      return !/^\s*#version 300 es/.test(TT) || /in uvec3 _p2vs_location0\b/.test(TT) ? "inst" : "tex"
+    function Ju(zz) {
+      if (!zz.includes("decodeQuad")) return null;
+      return !/^\s*#version 300 es/.test(zz) || /in uvec3 _p2vs_location0\b/.test(zz) ? "inst" : "tex"
     }
 
-    function Eo(TT, oT, IT) {
-      var iT;
-      if (IT.checked) return;
-      IT.checked = !0;
-      const zT = TT.getProgramParameter(oT, KT.LINK_STATUS),
-        kT = (null !== (iT = TT.getProgramInfoLog(oT)) && void 0 !== iT ? iT : "").trim();
-      var WT;
-      null === IT.terrain && zT || (qT(`program ${fT(IT)} ${null!==(WT=IT.terrain)&&void 0!==WT?WT:"other"} link ${zT?"ok":"FAILED"}${kT?`: ${lT(kT,300)}`:""}`), kT && ZT(`program ${fT(IT)} link log:\n${lT(kT)}`))
+    function Au(zz, uz, bz) {
+      var Ez;
+      if (bz.checked) return;
+      bz.checked = !0;
+      const nz = zz.getProgramParameter(uz, Rz.LINK_STATUS),
+        iz = (null !== (Ez = zz.getProgramInfoLog(uz)) && void 0 !== Ez ? Ez : "").trim();
+      var lz;
+      null === bz.terrain && nz || (gz(`program ${Tz(bz)} ${null!==(lz=bz.terrain)&&void 0!==lz?lz:"other"} link ${nz?"ok":"FAILED"}${iz?`: ${yz(iz,300)}`:""}`), iz && Sz(`program ${Tz(bz)} link log:\n${yz(iz)}`))
     }
 
-    function fo(TT, oT, IT) {
-      var iT;
-      const zT = TT.getParameter(KT.CURRENT_PROGRAM),
-        kT = zT ? Ko.get(zT) : void 0;
-      if (!zT || !kT) return;
-      const WT = null !== (iT = kT.terrain) && void 0 !== iT ? iT : "other",
+    function Tu(zz, uz, bz) {
+      var Ez;
+      const nz = zz.getParameter(Rz.CURRENT_PROGRAM),
+        iz = nz ? Ru.get(nz) : void 0;
+      if (!nz || !iz) return;
+      const lz = null !== (Ez = iz.terrain) && void 0 !== Ez ? Ez : "other",
         {
-          ec: XT,
-          instances: BT
-        } = function(TT, oT) {
-          switch (TT) {
+          al: Mz,
+          instances: tz
+        } = function(zz, uz) {
+          switch (zz) {
             case "drawArrays":
               return {
-                ec: [
-                  [oT[1], oT[2]]
+                al: [
+                  [uz[1], uz[2]]
                 ], instances: 1
               };
             case "drawArraysInstanced":
             case "drawArraysInstancedANGLE":
               return {
-                ec: [
-                  [oT[1], oT[2]]
-                ], instances: oT[3]
+                al: [
+                  [uz[1], uz[2]]
+                ], instances: uz[3]
               };
             case "drawElements":
               return {
-                ec: [
-                  [0, oT[1]]
+                al: [
+                  [0, uz[1]]
                 ], instances: 1
               };
             case "drawElementsInstanced":
             case "drawElementsInstancedANGLE":
               return {
-                ec: [
-                  [0, oT[1]]
-                ], instances: oT[4]
+                al: [
+                  [0, uz[1]]
+                ], instances: uz[4]
               };
             case "multiDrawArraysWEBGL": {
-              const TT = oT[1],
-                IT = oT[3],
-                iT = oT[2],
-                zT = oT[4],
-                kT = [];
-              for (let WT = 0; WT < oT[5]; WT++) kT.push([TT[iT + WT], IT[zT + WT]]);
+              const zz = uz[1],
+                bz = uz[3],
+                Ez = uz[2],
+                nz = uz[4],
+                iz = [];
+              for (let lz = 0; lz < uz[5]; lz++) iz.push([zz[Ez + lz], bz[nz + lz]]);
               return {
-                ec: kT,
+                al: iz,
                 instances: 1
               }
             }
             default:
               return {
-                ec: [], instances: 0
+                al: [], instances: 0
               }
           }
-        }(oT, IT),
-        FT = "inst" === kT.terrain ? BT : XT.reduce(((TT, oT) => {
-          let [, IT] = oT;
-          return TT + IT
+        }(uz, bz),
+        Hz = "inst" === iz.terrain ? tz : Mz.reduce(((zz, uz) => {
+          let [, bz] = uz;
+          return zz + bz
         }), 0) / 6;
-      if (ro[WT].draws++, ro[WT].faces += FT, null === kT.terrain) return;
-      if (UT.context = TT, !kT.firstDraw) {
-        kT.firstDraw = !0, Eo(TT, zT, kT), Co || (Co = !0, qT(function(TT) {
-          var oT;
-          const IT = TT.getParameter(KT.DEPTH_FUNC),
-            iT = {
+      if (wu[lz].draws++, wu[lz].faces += Hz, null === iz.terrain) return;
+      if (az.context = zz, !iz.firstDraw) {
+        iz.firstDraw = !0, Au(zz, nz, iz), Lu || (Lu = !0, gz(function(zz) {
+          var uz;
+          const bz = zz.getParameter(Rz.DEPTH_FUNC),
+            Ez = {
               513: "less",
               514: "equal",
               515: "lequal",
@@ -1079,321 +1079,321 @@ export const modules = {
               518: "gequal",
               519: "always"
             };
-          let zT = "default framebuffer";
-          if ("DRAW_FRAMEBUFFER" in TT && TT.getParameter(KT.DRAW_FRAMEBUFFER_BINDING)) {
-            const oT = TT;
-            zT = oT.getFramebufferAttachmentParameter(KT.DRAW_FRAMEBUFFER, KT.DEPTH_ATTACHMENT, KT.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(oT.getFramebufferAttachmentParameter(KT.DRAW_FRAMEBUFFER,KT.DEPTH_ATTACHMENT,KT.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(oT.getFramebufferAttachmentParameter(KT.DRAW_FRAMEBUFFER,KT.DEPTH_ATTACHMENT,KT.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
+          let nz = "default framebuffer";
+          if ("DRAW_FRAMEBUFFER" in zz && zz.getParameter(Rz.DRAW_FRAMEBUFFER_BINDING)) {
+            const uz = zz;
+            nz = uz.getFramebufferAttachmentParameter(Rz.DRAW_FRAMEBUFFER, Rz.DEPTH_ATTACHMENT, Rz.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(uz.getFramebufferAttachmentParameter(Rz.DRAW_FRAMEBUFFER,Rz.DEPTH_ATTACHMENT,Rz.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(uz.getFramebufferAttachmentParameter(Rz.DRAW_FRAMEBUFFER,Rz.DEPTH_ATTACHMENT,Rz.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
           }
-          const kT = TT.getParameter(KT.DEPTH_CLEAR_VALUE);
-          return `depth ${null!==(oT=iT[IT])&&void 0!==oT?oT:`0x${IT.toString(16)}`} clear ${kT}${516===IT||518===IT?" (reverse-Z)":""}, samples ${String(TT.getParameter(KT.SAMPLES))}, ${zT}`
-        }(TT)));
-        const IT = TT.getError();
-        IT !== KT.NO_ERROR && Mo.gl < Bo && (Mo.gl++, qT(`GL error 0x${IT.toString(16)} after program ${fT(kT)}'s first terrain draw (${oT})`))
+          const iz = zz.getParameter(Rz.DEPTH_CLEAR_VALUE);
+          return `depth ${null!==(uz=Ez[bz])&&void 0!==uz?uz:`0x${bz.toString(16)}`} clear ${iz}${516===bz||518===bz?" (reverse-Z)":""}, samples ${String(zz.getParameter(Rz.SAMPLES))}, ${nz}`
+        }(zz)));
+        const bz = zz.getError();
+        bz !== Rz.NO_ERROR && Ku.gl < tu && (Ku.gl++, gz(`GL error 0x${bz.toString(16)} after program ${Tz(iz)}'s first terrain draw (${uz})`))
       }
-      const ST = UT.pendingCheck;
-      null !== ST && (ST.terrainDraws++, ST.draws.length < Fo && sT(TT, zT, kT, oT, XT, BT))
+      const Oz = az.pendingCheck;
+      null !== Oz && (Oz.terrainDraws++, Oz.draws.length < Hu && Dz(zz, nz, iz, uz, Mz, tz))
     }
-    let Co = !1;
-    const jo = new WeakSet;
-    var Jo = IT(4030),
-      Uo = IT(4195);
-    const ao = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
-    let Yo = !1;
-    const Qo = new WeakSet,
-      Oo = new WeakMap,
-      Ho = new WeakMap,
-      no = {
+    let Lu = !1;
+    const Pu = new WeakSet;
+    var Gu = bz(4282),
+      au = bz(4454);
+    const Vu = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
+    let mu = !1;
+    const qu = new WeakSet,
+      hu = new WeakMap,
+      Uu = new WeakMap,
+      cu = {
         uncaptured: 0,
         compile: 0,
         rejected: 0
       };
-    let qo = 0,
-      Zo = !1,
-      so = null,
-      to = {
+    let gu = 0,
+      Su = !1,
+      yu = null,
+      Du = {
         draws: 0,
         faces: 0
       };
 
-    function Go(TT) {
-      const oT = globalThis[TT];
-      return null === oT || void 0 === oT ? void 0 : oT.prototype
+    function Qu(zz) {
+      const uz = globalThis[zz];
+      return null === uz || void 0 === uz ? void 0 : uz.prototype
     }
 
-    function po(TT) {
-      return TT && "function" === typeof TT[Symbol.iterator] ? [...TT].sort().join(" ") : ""
+    function Wu(zz) {
+      return zz && "function" === typeof zz[Symbol.iterator] ? [...zz].sort().join(" ") : ""
     }
 
-    function bo(TT, oT) {
-      const IT = null !== TT && void 0 !== TT ? TT : {},
-        iT = null !== oT && void 0 !== oT ? oT : Object.keys(Object.getPrototypeOf(IT)).concat(Object.keys(IT));
-      return [...new Set(iT)].filter((TT => "number" === typeof IT[TT])).map((TT => `${TT} ${String(IT[TT])}`)).join(", ")
+    function eu(zz, uz) {
+      const bz = null !== zz && void 0 !== zz ? zz : {},
+        Ez = null !== uz && void 0 !== uz ? uz : Object.keys(Object.getPrototypeOf(bz)).concat(Object.keys(bz));
+      return [...new Set(Ez)].filter((zz => "number" === typeof bz[zz])).map((zz => `${zz} ${String(bz[zz])}`)).join(", ")
     }
 
-    function yo(TT, oT) {
-      var IT;
-      const iT = null !== (IT = oT.vertex) && void 0 !== IT ? IT : {};
-      if (iT.module && Qo.has(iT.module)) {
-        var zT;
-        const IT = String(null !== (zT = iT.entryPoint) && void 0 !== zT ? zT : "");
-        if (IT.startsWith("vs_packed") && Oo.set(TT, IT), !Zo) {
-          var kT, WT, XT, BT, FT;
-          Zo = !0;
-          const TT = null !== (kT = oT.depthStencil) && void 0 !== kT ? kT : {},
-            iT = null !== (WT = oT.multisample) && void 0 !== WT ? WT : {},
-            zT = String(null !== (XT = TT.depthCompare) && void 0 !== XT ? XT : "");
-          qT(`WebGPU terrain pipeline ${IT}: depth ${String(null!==(BT=TT.format)&&void 0!==BT?BT:"none")} ${zT}${zT.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(FT=iT.count)&&void 0!==FT?FT:1)}`)
+    function ju(zz, uz) {
+      var bz;
+      const Ez = null !== (bz = uz.vertex) && void 0 !== bz ? bz : {};
+      if (Ez.module && qu.has(Ez.module)) {
+        var nz;
+        const bz = String(null !== (nz = Ez.entryPoint) && void 0 !== nz ? nz : "");
+        if (bz.startsWith("vs_packed") && hu.set(zz, bz), !Su) {
+          var iz, lz, Mz, tz, Hz;
+          Su = !0;
+          const zz = null !== (iz = uz.depthStencil) && void 0 !== iz ? iz : {},
+            Ez = null !== (lz = uz.multisample) && void 0 !== lz ? lz : {},
+            nz = String(null !== (Mz = zz.depthCompare) && void 0 !== Mz ? Mz : "");
+          gz(`WebGPU terrain pipeline ${bz}: depth ${String(null!==(tz=zz.format)&&void 0!==tz?tz:"none")} ${nz}${nz.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(Hz=Ez.count)&&void 0!==Hz?Hz:1)}`)
         }
       }
     }
 
-    function No(TT) {
-      Do(TT, "setPipeline", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        return Ho.set(this, IT[0]), So(TT, this, IT)
+    function Iu(zz) {
+      pu(zz, "setPipeline", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        return Uu.set(this, bz[0]), Ou(zz, this, bz)
       }));
-      for (const oT of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) Do(TT, oT, (TT => function() {
-        const IT = Ho.get(this),
-          iT = IT ? Oo.get(IT) : void 0;
-        for (var zT = arguments.length, kT = new Array(zT), WT = 0; WT < zT; WT++) kT[WT] = arguments[WT];
-        return void 0 !== iT && Po(oT, iT, kT), So(TT, this, kT)
+      for (const uz of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) pu(zz, uz, (zz => function() {
+        const bz = Uu.get(this),
+          Ez = bz ? hu.get(bz) : void 0;
+        for (var nz = arguments.length, iz = new Array(nz), lz = 0; lz < nz; lz++) iz[lz] = arguments[lz];
+        return void 0 !== Ez && Bu(uz, Ez, iz), Ou(zz, this, iz)
       }))
     }
 
-    function Po(TT, oT, IT) {
-      var iT;
-      (to.draws++, "draw" === TT || "drawIndexed" === TT) && (to.faces += IT[0] * (null !== (iT = IT[1]) && void 0 !== iT ? iT : 1) / 6);
-      if (null !== so && so.length < Fo) {
-        const iT = ("draw" === TT ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === TT ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((oT, iT) => {
-          const zT = TT.endsWith("Indirect") ? IT[1] : IT[iT];
-          return `${oT} ${String(null!==zT&&void 0!==zT?zT:"instances"===oT?1:0)}`
+    function Bu(zz, uz, bz) {
+      var Ez;
+      (Du.draws++, "draw" === zz || "drawIndexed" === zz) && (Du.faces += bz[0] * (null !== (Ez = bz[1]) && void 0 !== Ez ? Ez : 1) / 6);
+      if (null !== yu && yu.length < Hu) {
+        const Ez = ("draw" === zz ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === zz ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((uz, Ez) => {
+          const nz = zz.endsWith("Indirect") ? bz[1] : bz[Ez];
+          return `${uz} ${String(null!==nz&&void 0!==nz?nz:"instances"===uz?1:0)}`
         }));
-        so.push(`  ${oT} ${TT} ${iT.join(" ")}`)
+        yu.push(`  ${uz} ${zz} ${Ez.join(" ")}`)
       }
     }
 
-    function Vo() {
-      if (Yo || "undefined" === typeof navigator || !("gpu" in navigator)) return;
-      Yo = !0, Do(Go("GPU"), "requestAdapter", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        return So(TT, this, IT).then((TT => {
-          var oT;
-          TT ? function(TT) {
-            var oT;
-            const IT = null !== (oT = TT.info) && void 0 !== oT ? oT : {};
-            qT(`WebGPU adapter ${["vendor","architecture","device","description"].map((TT=>{var oT;return`${TT} "${String(null!==(oT=IT[TT])&&void 0!==oT?oT:"")}"`})).join(" ")}${TT.isFallbackAdapter?" (fallback)":""}`), qT(`WebGPU adapter features ${po(TT.features)}`), qT(`WebGPU adapter limits ${bo(TT.limits,ao)}`), ZT(`WebGPU adapter all limits ${bo(TT.limits,null)}`)
-          }(TT) : qT(`WebGPU requestAdapter(${JSON.stringify(null!==(oT=IT[0])&&void 0!==oT?oT:{})}) gave none`);
-          return TT
+    function Cu() {
+      if (mu || "undefined" === typeof navigator || !("gpu" in navigator)) return;
+      mu = !0, pu(Qu("GPU"), "requestAdapter", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        return Ou(zz, this, bz).then((zz => {
+          var uz;
+          zz ? function(zz) {
+            var uz;
+            const bz = null !== (uz = zz.info) && void 0 !== uz ? uz : {};
+            gz(`WebGPU adapter ${["vendor","architecture","device","description"].map((zz=>{var uz;return`${zz} "${String(null!==(uz=bz[zz])&&void 0!==uz?uz:"")}"`})).join(" ")}${zz.isFallbackAdapter?" (fallback)":""}`), gz(`WebGPU adapter features ${Wu(zz.features)}`), gz(`WebGPU adapter limits ${eu(zz.limits,Vu)}`), Sz(`WebGPU adapter all limits ${eu(zz.limits,null)}`)
+          }(zz) : gz(`WebGPU requestAdapter(${JSON.stringify(null!==(uz=bz[0])&&void 0!==uz?uz:{})}) gave none`);
+          return zz
         }))
-      })), Do(Go("GPUAdapter"), "requestDevice", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        return So(TT, this, IT).then((TT => (function(TT) {
-          qT(`WebGPU device features ${po(TT.features)}`), qT(`WebGPU device limits ${bo(TT.limits,ao)}`), TT.addEventListener("uncapturederror", (TT => {
-            if (no.uncaptured < Bo) {
-              var oT, IT, iT;
-              no.uncaptured++;
-              const zT = TT.error;
-              qT(`WebGPU uncaptured ${null!==(oT=null===zT||void 0===zT||null===(IT=zT.constructor)||void 0===IT?void 0:IT.name)&&void 0!==oT?oT:"error"}: ${lT(String(null!==(iT=null===zT||void 0===zT?void 0:zT.message)&&void 0!==iT?iT:""),600)}`)
+      })), pu(Qu("GPUAdapter"), "requestDevice", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        return Ou(zz, this, bz).then((zz => (function(zz) {
+          gz(`WebGPU device features ${Wu(zz.features)}`), gz(`WebGPU device limits ${eu(zz.limits,Vu)}`), zz.addEventListener("uncapturederror", (zz => {
+            if (cu.uncaptured < tu) {
+              var uz, bz, Ez;
+              cu.uncaptured++;
+              const nz = zz.error;
+              gz(`WebGPU uncaptured ${null!==(uz=null===nz||void 0===nz||null===(bz=nz.constructor)||void 0===bz?void 0:bz.name)&&void 0!==uz?uz:"error"}: ${yz(String(null!==(Ez=null===nz||void 0===nz?void 0:nz.message)&&void 0!==Ez?Ez:""),600)}`)
             }
           }));
-          const oT = TT.lost;
-          null === oT || void 0 === oT || oT.then((TT => {
-            var oT;
-            qT(`WebGPU device lost (${String(TT.reason)}): ${lT(String(null!==(oT=TT.message)&&void 0!==oT?oT:""),600)}`)
+          const uz = zz.lost;
+          null === uz || void 0 === uz || uz.then((zz => {
+            var uz;
+            gz(`WebGPU device lost (${String(zz.reason)}): ${yz(String(null!==(uz=zz.message)&&void 0!==uz?uz:""),600)}`)
           }))
-        }(TT), TT)), (TT => {
-          throw qT(`WebGPU requestDevice failed: ${String(TT)}`), TT
+        }(zz), zz)), (zz => {
+          throw gz(`WebGPU requestDevice failed: ${String(zz)}`), zz
         }))
       }));
-      const TT = Go("GPUDevice");
-      Do(TT, "createShaderModule", (TT => function() {
-        for (var oT, IT, iT = arguments.length, zT = new Array(iT), kT = 0; kT < iT; kT++) zT[kT] = arguments[kT];
-        const WT = So(TT, this, zT);
-        return function(TT, oT) {
-          const IT = oT.includes("decodeQuad");
-          IT && Qo.add(TT);
-          const iT = TT.getCompilationInfo;
-          null === iT || void 0 === iT || iT.call(TT).then((TT => {
-            if (0 === TT.messages.length && !IT) return;
-            const oT = {};
-            for (const IT of TT.messages) {
-              var iT;
-              oT[String(IT.type)] = (null !== (iT = oT[String(IT.type)]) && void 0 !== iT ? iT : 0) + 1
+      const zz = Qu("GPUDevice");
+      pu(zz, "createShaderModule", (zz => function() {
+        for (var uz, bz, Ez = arguments.length, nz = new Array(Ez), iz = 0; iz < Ez; iz++) nz[iz] = arguments[iz];
+        const lz = Ou(zz, this, nz);
+        return function(zz, uz) {
+          const bz = uz.includes("decodeQuad");
+          bz && qu.add(zz);
+          const Ez = zz.getCompilationInfo;
+          null === Ez || void 0 === Ez || Ez.call(zz).then((zz => {
+            if (0 === zz.messages.length && !bz) return;
+            const uz = {};
+            for (const bz of zz.messages) {
+              var Ez;
+              uz[String(bz.type)] = (null !== (Ez = uz[String(bz.type)]) && void 0 !== Ez ? Ez : 0) + 1
             }
-            const zT = TT.messages.map((TT => `${String(TT.type)} ${String(TT.lineNum)}:${String(TT.linePos)} ${String(TT.message)}`)).join("\n");
-            no.compile < Bo && (no.compile++, qT(`WebGPU ${IT?"terrain ":""}shader module compiled: ${JSON.stringify(oT)}${zT?` first: ${lT(zT.split("\n")[0],300)}`:""}`)), zT && ZT(`WebGPU shader module messages:\n${lT(zT)}`)
+            const nz = zz.messages.map((zz => `${String(zz.type)} ${String(zz.lineNum)}:${String(zz.linePos)} ${String(zz.message)}`)).join("\n");
+            cu.compile < tu && (cu.compile++, gz(`WebGPU ${bz?"terrain ":""}shader module compiled: ${JSON.stringify(uz)}${nz?` first: ${yz(nz.split("\n")[0],300)}`:""}`)), nz && Sz(`WebGPU shader module messages:\n${yz(nz)}`)
           }))
-        }(WT, String(null !== (oT = (null !== (IT = zT[0]) && void 0 !== IT ? IT : {}).code) && void 0 !== oT ? oT : "")), WT
-      })), Do(TT, "createRenderPipeline", (TT => function() {
-        for (var oT, IT = arguments.length, iT = new Array(IT), zT = 0; zT < IT; zT++) iT[zT] = arguments[zT];
-        const kT = So(TT, this, iT);
-        return yo(kT, null !== (oT = iT[0]) && void 0 !== oT ? oT : {}), kT
-      })), Do(TT, "createRenderPipelineAsync", (TT => function() {
-        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
-        return So(TT, this, IT).then((TT => {
-          var oT;
-          return yo(TT, null !== (oT = IT[0]) && void 0 !== oT ? oT : {}), TT
-        }), (TT => {
-          var oT;
-          throw function(TT, oT) {
-            var IT, iT, zT;
-            if (no.rejected >= Bo) return;
-            no.rejected++;
+        }(lz, String(null !== (uz = (null !== (bz = nz[0]) && void 0 !== bz ? bz : {}).code) && void 0 !== uz ? uz : "")), lz
+      })), pu(zz, "createRenderPipeline", (zz => function() {
+        for (var uz, bz = arguments.length, Ez = new Array(bz), nz = 0; nz < bz; nz++) Ez[nz] = arguments[nz];
+        const iz = Ou(zz, this, Ez);
+        return ju(iz, null !== (uz = Ez[0]) && void 0 !== uz ? uz : {}), iz
+      })), pu(zz, "createRenderPipelineAsync", (zz => function() {
+        for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+        return Ou(zz, this, bz).then((zz => {
+          var uz;
+          return ju(zz, null !== (uz = bz[0]) && void 0 !== uz ? uz : {}), zz
+        }), (zz => {
+          var uz;
+          throw function(zz, uz) {
+            var bz, Ez, nz;
+            if (cu.rejected >= tu) return;
+            cu.rejected++;
             const {
-              reason: kT,
-              message: WT
-            } = null !== oT && void 0 !== oT ? oT : {}, XT = String(null !== (IT = (null !== (iT = TT.vertex) && void 0 !== iT ? iT : {}).entryPoint) && void 0 !== IT ? IT : "");
-            qT(`WebGPU pipeline "${String(null!==(zT=TT.label)&&void 0!==zT?zT:"")}" ${XT} rejected (${String(null!==kT&&void 0!==kT?kT:"no reason")}): ${lT(String(null!==WT&&void 0!==WT?WT:oT),600)}`)
-          }(null !== (oT = IT[0]) && void 0 !== oT ? oT : {}, TT), TT
+              reason: iz,
+              message: lz
+            } = null !== uz && void 0 !== uz ? uz : {}, Mz = String(null !== (bz = (null !== (Ez = zz.vertex) && void 0 !== Ez ? Ez : {}).entryPoint) && void 0 !== bz ? bz : "");
+            gz(`WebGPU pipeline "${String(null!==(nz=zz.label)&&void 0!==nz?nz:"")}" ${Mz} rejected (${String(null!==iz&&void 0!==iz?iz:"no reason")}): ${yz(String(null!==lz&&void 0!==lz?lz:uz),600)}`)
+          }(null !== (uz = bz[0]) && void 0 !== uz ? uz : {}, zz), zz
         }))
-      })), Do(Go("GPUCanvasContext"), "configure", (TT => function() {
-        for (var oT, IT = arguments.length, iT = new Array(IT), zT = 0; zT < IT; zT++) iT[zT] = arguments[zT];
-        const kT = null !== (oT = iT[0]) && void 0 !== oT ? oT : {};
-        var WT, XT;
-        qo++ < 3 && qT(`WebGPU canvas ${String(kT.format)} ${String(null!==(WT=kT.colorSpace)&&void 0!==WT?WT:"srgb")} alpha ${String(null!==(XT=kT.alphaMode)&&void 0!==XT?XT:"opaque")}`);
-        return So(TT, this, iT)
-      })), No(Go("GPURenderPassEncoder")), No(Go("GPURenderBundleEncoder"))
+      })), pu(Qu("GPUCanvasContext"), "configure", (zz => function() {
+        for (var uz, bz = arguments.length, Ez = new Array(bz), nz = 0; nz < bz; nz++) Ez[nz] = arguments[nz];
+        const iz = null !== (uz = Ez[0]) && void 0 !== uz ? uz : {};
+        var lz, Mz;
+        gu++ < 3 && gz(`WebGPU canvas ${String(iz.format)} ${String(null!==(lz=iz.colorSpace)&&void 0!==lz?lz:"srgb")} alpha ${String(null!==(Mz=iz.alphaMode)&&void 0!==Mz?Mz:"opaque")}`);
+        return Ou(zz, this, Ez)
+      })), Iu(Qu("GPURenderPassEncoder")), Iu(Qu("GPURenderBundleEncoder"))
     }
-    const TI = 1e4,
-      oI = 6e4,
-      II = 5e3,
-      iI = 3e3,
-      zI = 100;
-    let kI = null,
-      WI = !1,
-      XI = {
-        ...Jo.e
+    const Yu = 1e4,
+      ku = 6e4,
+      zb = 5e3,
+      ub = 3e3,
+      bb = 100;
+    let Eb = null,
+      nb = !1,
+      ib = {
+        ...Gu.e
       },
-      BI = !1,
-      FI = null,
-      SI = 0,
-      DI = () => {};
-    const LI = new Promise((TT => {
-      DI = TT
+      lb = !1,
+      Mb = null,
+      tb = 0,
+      Hb = () => {};
+    const Ob = new Promise((zz => {
+      Hb = zz
     }));
 
-    function xI() {
-      var TT;
-      WI || (WI = !0, XI = Object.assign(window.bloxdRenderDebug ??= {
-        ...Jo.e
+    function pb() {
+      var zz;
+      nb || (nb = !0, ib = Object.assign(window.bloxdRenderDebug ??= {
+        ...Gu.e
       }, {
-        faceCull: "0" === (0, kT.n)("faceCull") ? "0" : "1",
-        adrenoProbe: null !== (TT = (0, kT.n)("adrenoProbe")) && void 0 !== TT ? TT : ""
-      }), qT("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), Lo || "undefined" === typeof window || (Lo = !0, "undefined" !== typeof WebGL2RenderingContext && Ro(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && Ro(WebGLRenderingContext.prototype, !1)), Vo(), (0, kT.e)("renderProbe", (() => {
-        gI("console")
-      })), rI(), setInterval(wI, II))
+        faceCull: "0" === (0, iz.m)("faceCull") ? "0" : "1",
+        adrenoProbe: null !== (zz = (0, iz.m)("adrenoProbe")) && void 0 !== zz ? zz : ""
+      }), gz("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), du || "undefined" === typeof window || (du = !0, "undefined" !== typeof WebGL2RenderingContext && vu(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && vu(WebGLRenderingContext.prototype, !1)), Cu(), (0, iz.c)("renderProbe", (() => {
+        wb("console")
+      })), Rb(), setInterval(fb, zb))
     }
 
-    function cI(TT) {
-      var oT, IT;
-      xI(), kI = null !== (oT = null === TT || void 0 === TT ? void 0 : TT.backend) && void 0 !== oT ? oT : null;
-      const iT = `, renderer param ${null!==(IT=(0,kT.n)("renderer"))&&void 0!==IT?IT:"none"}, faceCull ${"0"===XI.faceCull?"off (whole parts)":"on"}, adrenoProbe ${XI.adrenoProbe||"none"}`;
-      qT(`${(0,Uo.c)(TT)}${null===TT?"":iT}`)
+    function db(zz) {
+      var uz, bz;
+      pb(), Eb = null !== (uz = null === zz || void 0 === zz ? void 0 : zz.backend) && void 0 !== uz ? uz : null;
+      const Ez = `, renderer param ${null!==(bz=(0,iz.m)("renderer"))&&void 0!==bz?bz:"none"}, faceCull ${"0"===ib.faceCull?"off (whole parts)":"on"}, adrenoProbe ${ib.adrenoProbe||"none"}`;
+      gz(`${(0,au.d)(zz)}${null===zz?"":Ez}`)
     }
 
-    function KI() {
-      const TT = performance.now(),
-        oT = MI(LI, TI, oI).then((oT => gI(`${Math.round((performance.now()-TT)/1e3)} s after playable${oT?"":", no terrain drawn yet"}`)));
-      (0, zT.c)(qT, (async () => {
-        await oT, await FI
+    function Fb() {
+      const zz = performance.now(),
+        uz = Zb(Ob, Yu, ku).then((uz => wb(`${Math.round((performance.now()-zz)/1e3)} s after playable${uz?"":", no terrain drawn yet"}`)));
+      (0, nz.c)(gz, (async () => {
+        await uz, await Mb
       }))
     }
-    async function MI(TT, oT, IT) {
-      const zT = (0, iT.c)(IT).then((() => !1));
-      return await (0, iT.c)(oT), Promise.race([TT.then((() => !0)), zT])
+    async function Zb(zz, uz, bz) {
+      const nz = (0, Ez.d)(bz).then((() => !1));
+      return await (0, Ez.d)(uz), Promise.race([zz.then((() => !0)), nz])
     }
 
-    function rI() {
+    function Rb() {
       requestAnimationFrame((() => {
-        SI++, rI()
+        tb++, Rb()
       }))
     }
 
-    function AI() {
-      var TT, oT, IT;
-      if (BI) return;
-      (BI = !0, qT(`renderer caps ${null!==(TT=XI.caps)&&void 0!==TT?TT:"(not noted)"}; terrain fetch ${null!==(oT=XI.fetch)&&void 0!==oT?oT:"(not noted)"}`), XI.adrenoProbe) && qT(`adrenoProbe ${XI.adrenoProbe} asked; in force (storage fetch only): ${null!==(IT=XI.probe)&&void 0!==IT?IT:"(not noted)"}`);
-      const iT = UT.context;
-      if (iT) {
-        for (const TT of function(TT) {
-            var oT;
-            const IT = [],
-              iT = TT.getExtension("WEBGL_debug_renderer_info"),
-              zT = iT ? TT.getParameter(iT.UNMASKED_VENDOR_WEBGL) : "(masked)",
-              kT = iT ? TT.getParameter(iT.UNMASKED_RENDERER_WEBGL) : "(masked)";
-            IT.push(`GL ${String(TT.getParameter(TT.VERSION))} | ${String(TT.getParameter(TT.SHADING_LANGUAGE_VERSION))} | ${String(TT.getParameter(TT.VENDOR))} / ${String(TT.getParameter(TT.RENDERER))}`), IT.push(`GL unmasked ${zT} / ${kT}`);
-            const WT = [
-              ["MAX_TEXTURE_SIZE", TT.MAX_TEXTURE_SIZE],
-              ["MAX_VERTEX_ATTRIBS", TT.MAX_VERTEX_ATTRIBS],
-              ["MAX_VERTEX_UNIFORM_VECTORS", TT.MAX_VERTEX_UNIFORM_VECTORS],
-              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", TT.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
-              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", TT.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
-              ["MAX_VARYING_VECTORS", TT.MAX_VARYING_VECTORS],
-              ["MAX_RENDERBUFFER_SIZE", TT.MAX_RENDERBUFFER_SIZE]
+    function Kb() {
+      var zz, uz, bz;
+      if (lb) return;
+      (lb = !0, gz(`renderer caps ${null!==(zz=ib.caps)&&void 0!==zz?zz:"(not noted)"}; terrain fetch ${null!==(uz=ib.fetch)&&void 0!==uz?uz:"(not noted)"}`), ib.adrenoProbe) && gz(`adrenoProbe ${ib.adrenoProbe} asked; in force (storage fetch only): ${null!==(bz=ib.probe)&&void 0!==bz?bz:"(not noted)"}`);
+      const Ez = az.context;
+      if (Ez) {
+        for (const zz of function(zz) {
+            var uz;
+            const bz = [],
+              Ez = zz.getExtension("WEBGL_debug_renderer_info"),
+              nz = Ez ? zz.getParameter(Ez.UNMASKED_VENDOR_WEBGL) : "(masked)",
+              iz = Ez ? zz.getParameter(Ez.UNMASKED_RENDERER_WEBGL) : "(masked)";
+            bz.push(`GL ${String(zz.getParameter(zz.VERSION))} | ${String(zz.getParameter(zz.SHADING_LANGUAGE_VERSION))} | ${String(zz.getParameter(zz.VENDOR))} / ${String(zz.getParameter(zz.RENDERER))}`), bz.push(`GL unmasked ${nz} / ${iz}`);
+            const lz = [
+              ["MAX_TEXTURE_SIZE", zz.MAX_TEXTURE_SIZE],
+              ["MAX_VERTEX_ATTRIBS", zz.MAX_VERTEX_ATTRIBS],
+              ["MAX_VERTEX_UNIFORM_VECTORS", zz.MAX_VERTEX_UNIFORM_VECTORS],
+              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", zz.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
+              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", zz.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
+              ["MAX_VARYING_VECTORS", zz.MAX_VARYING_VECTORS],
+              ["MAX_RENDERBUFFER_SIZE", zz.MAX_RENDERBUFFER_SIZE]
             ];
-            "MAX_UNIFORM_BLOCK_SIZE" in TT && WT.push(["MAX_UNIFORM_BLOCK_SIZE", TT.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", TT.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", TT.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", TT.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), IT.push(`GL limits ${WT.map((oT=>{let[IT,iT]=oT;return`${IT} ${String(TT.getParameter(iT))}`})).join(", ")}`);
-            const XT = (oT, IT) => {
-              const iT = TT.getShaderPrecisionFormat(oT, TT.HIGH_FLOAT),
-                zT = TT.getShaderPrecisionFormat(oT, TT.HIGH_INT);
-              return `${IT} highp float ${iT?`${iT.rangeMin}/${iT.rangeMax}/${iT.precision}`:"?"} int ${zT?`${zT.rangeMin}/${zT.rangeMax}/${zT.precision}`:"?"}`
+            "MAX_UNIFORM_BLOCK_SIZE" in zz && lz.push(["MAX_UNIFORM_BLOCK_SIZE", zz.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", zz.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", zz.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", zz.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), bz.push(`GL limits ${lz.map((uz=>{let[bz,Ez]=uz;return`${bz} ${String(zz.getParameter(Ez))}`})).join(", ")}`);
+            const Mz = (uz, bz) => {
+              const Ez = zz.getShaderPrecisionFormat(uz, zz.HIGH_FLOAT),
+                nz = zz.getShaderPrecisionFormat(uz, zz.HIGH_INT);
+              return `${bz} highp float ${Ez?`${Ez.rangeMin}/${Ez.rangeMax}/${Ez.precision}`:"?"} int ${nz?`${nz.rangeMin}/${nz.rangeMax}/${nz.precision}`:"?"}`
             };
-            IT.push(`GL precision ${XT(TT.VERTEX_SHADER,"VS")}, ${XT(TT.FRAGMENT_SHADER,"FS")}`);
-            const BT = TT.getContextAttributes();
-            return IT.push(`GL context ${JSON.stringify(BT)} drawingBuffer ${TT.drawingBufferWidth}x${TT.drawingBufferHeight}${"drawingBufferFormat"in TT?` format 0x${Number(TT.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in TT?` ${String(TT.drawingBufferColorSpace)}`:""}`), IT.push(`GL extensions ${(null!==(oT=TT.getSupportedExtensions())&&void 0!==oT?oT:[]).join(" ")}`), IT
-          }(iT)) qT(TT);
+            bz.push(`GL precision ${Mz(zz.VERTEX_SHADER,"VS")}, ${Mz(zz.FRAGMENT_SHADER,"FS")}`);
+            const tz = zz.getContextAttributes();
+            return bz.push(`GL context ${JSON.stringify(tz)} drawingBuffer ${zz.drawingBufferWidth}x${zz.drawingBufferHeight}${"drawingBufferFormat"in zz?` format 0x${Number(zz.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in zz?` ${String(zz.drawingBufferColorSpace)}`:""}`), bz.push(`GL extensions ${(null!==(uz=zz.getSupportedExtensions())&&void 0!==uz?uz:[]).join(" ")}`), bz
+          }(Ez)) gz(zz);
         ! function() {
-          if (!UT.context) return;
-          let TT = 0,
-            oT = 0;
-          for (const [IT, iT] of CT) !iT.gl.isContextLost() && iT.gl.isProgram(IT) && (oT++, Eo(iT.gl, IT, iT), null !== iT.terrain && TT++);
-          qT(`programs: ${oT} live of ${CT.length} linked, ${TT} packed terrain; CPU page copies ${Math.round(UT.shadowBytes/1048576)} MiB (${UT.uncopied} over budget)`)
+          if (!az.context) return;
+          let zz = 0,
+            uz = 0;
+          for (const [bz, Ez] of Lz) !Ez.gl.isContextLost() && Ez.gl.isProgram(bz) && (uz++, Au(Ez.gl, bz, Ez), null !== Ez.terrain && zz++);
+          gz(`programs: ${uz} live of ${Lz.length} linked, ${zz} packed terrain; CPU page copies ${Math.round(az.shadowBytes/1048576)} MiB (${az.uncopied} over budget)`)
         }()
       }
     }
 
-    function gI(TT) {
-      return FI ??= async function(TT) {
-        AI(), "webgpu" === kI ? (hI(), "1" === XI.slotCheck && qT("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), XI.slotCheck = "1", await
-          function(TT) {
-            if (null !== so) return Promise.resolve();
-            const oT = [];
-            return so = oT, new Promise((IT => {
+    function wb(zz) {
+      return Mb ??= async function(zz) {
+        Kb(), "webgpu" === Eb ? (Xb(), "1" === ib.slotCheck && gz("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), ib.slotCheck = "1", await
+          function(zz) {
+            if (null !== yu) return Promise.resolve();
+            const uz = [];
+            return yu = uz, new Promise((bz => {
               setTimeout((() => {
-                so = null, qT(`WebGPU draw ranges (${TT}): ${oT.length} terrain draws recorded in a second (first ${Fo}; bundles replay without new ones)`);
-                for (const TT of oT) qT(TT);
-                IT()
+                yu = null, gz(`WebGPU draw ranges (${zz}): ${uz.length} terrain draws recorded in a second (first ${Hu}; bundles replay without new ones)`);
+                for (const zz of uz) gz(zz);
+                bz()
               }), 1e3)
             }))
-          }(TT), await async function() {
-            for (let TT = 0;
-              "1" === XI.slotCheck && TT < iI; TT += zI) await (0, iT.c)(zI);
-            if ("1" === XI.slotCheck) return void qT(`slot check: no answer in ${iI} ms (only the storage fetch has one; a later answer logs on its own)`);
-            hI()
-          }()) : await Wo(TT);
-        qT(`check (${TT}) done: bloxdDebug.save() downloads it all`)
-      }(TT).catch((oT => {
-        qT(`check (${TT}) failed: ${String(oT)}`)
+          }(zz), await async function() {
+            for (let zz = 0;
+              "1" === ib.slotCheck && zz < ub; zz += bb) await (0, Ez.d)(bb);
+            if ("1" === ib.slotCheck) return void gz(`slot check: no answer in ${ub} ms (only the storage fetch has one; a later answer logs on its own)`);
+            Xb()
+          }()) : await lu(zz);
+        gz(`check (${zz}) done: bloxdDebug.save() downloads it all`)
+      }(zz).catch((uz => {
+        gz(`check (${zz}) failed: ${String(uz)}`)
       })).finally((() => {
-        FI = null
-      })), FI
+        Mb = null
+      })), Mb
     }
 
-    function hI() {
-      void 0 !== XI.slotCheck && "1" !== XI.slotCheck && (qT(XI.slotCheck), delete XI.slotCheck)
+    function Xb() {
+      void 0 !== ib.slotCheck && "1" !== ib.slotCheck && (gz(ib.slotCheck), delete ib.slotCheck)
     }
 
-    function wI() {
-      const TT = TT => SI ? (TT / SI).toFixed(1) : "0",
-        oT = function() {
-          const TT = to;
-          return to = {
+    function fb() {
+      const zz = zz => tb ? (zz / tb).toFixed(1) : "0",
+        uz = function() {
+          const zz = Du;
+          return Du = {
             draws: 0,
             faces: 0
-          }, TT
+          }, zz
         }(),
-        IT = function() {
-          const TT = ro;
-          return ro = {
+        bz = function() {
+          const zz = wu;
+          return wu = {
             inst: {
               draws: 0,
               faces: 0
@@ -1406,30 +1406,30 @@ export const modules = {
               draws: 0,
               faces: 0
             }
-          }, TT
+          }, zz
         }(),
-        iT = function() {
-          const TT = Ao;
-          return Ao = {
+        Ez = function() {
+          const zz = Xu;
+          return Xu = {
             buffer: 0,
             texture: 0
-          }, TT
+          }, zz
         }();
-      hI(), ("webgpu" === kI ? oT.draws : IT.inst.draws + IT.tex.draws) > 0 && DI();
-      const zT = "webgpu" === kI ? [`terrain ${TT(oT.draws)} draws ${TT(oT.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((TT => IT[TT].draws > 0)).map((oT => `${oT} ${TT(IT[oT].draws)} draws ${TT(IT[oT].faces)} faces a frame`));
-      qT(`${SI} frames: ${zT.join(", ")||"no draws"}; uploaded ${Math.round(iT.buffer/1024)} KiB to buffers, ${Math.round(iT.texture/1024)} KiB to data textures`), SI = 0
+      Xb(), ("webgpu" === Eb ? uz.draws : bz.inst.draws + bz.tex.draws) > 0 && Hb();
+      const nz = "webgpu" === Eb ? [`terrain ${zz(uz.draws)} draws ${zz(uz.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((zz => bz[zz].draws > 0)).map((uz => `${uz} ${zz(bz[uz].draws)} draws ${zz(bz[uz].faces)} faces a frame`));
+      gz(`${tb} frames: ${nz.join(", ")||"no draws"}; uploaded ${Math.round(Ez.buffer/1024)} KiB to buffers, ${Math.round(Ez.texture/1024)} KiB to data textures`), tb = 0
     }
   },
-  4195: (TT, oT, IT) => {
-    function iT(TT) {
-      if (null === TT) return "backend: none picked (no renderer build)";
-      const oT = TT.adapter ? `${TT.adapter.vendor}/${TT.adapter.architecture}` : "none";
-      return `backend ${TT.backend}: reason ${TT.reason}, source ${TT.source}, adapter ${oT}`
+  4454: (zz, uz, bz) => {
+    function Ez(zz) {
+      if (null === zz) return "backend: none picked (no renderer build)";
+      const uz = zz.adapter ? `${zz.adapter.vendor}/${zz.adapter.architecture}` : "none";
+      return `backend ${zz.backend}: reason ${zz.reason}, source ${zz.source}, adapter ${uz}`
     }
-    IT.d(oT, {
-      c: () => iT
+    bz.d(uz, {
+      d: () => Ez
     })
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  35594: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => xT,
-      e: () => cT,
-      h: () => LT,
-      l: () => DT
+  36066: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Fz,
+      d: () => Zz,
+      g: () => dz,
+      h: () => pz
     });
-    var iT = IT(8743),
-      zT = IT(35599),
-      kT = IT(35601),
-      WT = IT(8139),
-      XT = IT(1403),
-      BT = IT(46),
-      FT = IT(68),
-      ST = IT(1083);
+    var Ez = bz(8982),
+      nz = bz(36071),
+      iz = bz(36080),
+      lz = bz(8378),
+      Mz = bz(1417),
+      tz = bz(56),
+      Hz = bz(79),
+      Oz = bz(1089);
 
-    function DT() {
-      var TT;
-      return (0, XT.i)(zT.c, (0, zT.k)()), (0, ST.jsx)(ST.Fragment, {
-        children: null === (TT = (0, zT.k)()) || void 0 === TT ? void 0 : TT.content
+    function pz() {
+      var zz;
+      return (0, Mz.h)(nz.e, (0, nz.o)()), (0, Oz.jsx)(Oz.Fragment, {
+        children: null === (zz = (0, nz.o)()) || void 0 === zz ? void 0 : zz.content
       })
     }
 
-    function LT(TT) {
-      var oT;
+    function dz(zz) {
+      var uz;
       let {
-        show: IT
-      } = TT;
-      (0, XT.i)(zT.c, (0, zT.k)());
-      const FT = null === (oT = (0, zT.k)()) || void 0 === oT ? void 0 : oT.menu;
-      return (0, BT.useEffect)((() => {
-        var TT;
-        IT || (null === FT || void 0 === FT || null === (TT = FT.onClose) || void 0 === TT || TT.call(FT), (0, kT.r)())
-      }), [IT, FT]), (0, BT.useEffect)((() => IT ? (0, WT.f)(kT.x, kT.g) : void 0), [IT]), (0, ST.jsx)(iT.c, {
-        showing: IT,
+        show: bz
+      } = zz;
+      (0, Mz.h)(nz.e, (0, nz.o)());
+      const Hz = null === (uz = (0, nz.o)()) || void 0 === uz ? void 0 : uz.menu;
+      return (0, tz.useEffect)((() => {
+        var zz;
+        bz || (null === Hz || void 0 === Hz || null === (zz = Hz.onClose) || void 0 === zz || zz.call(Hz), (0, iz.j)())
+      }), [bz, Hz]), (0, tz.useEffect)((() => bz ? (0, lz.e)(iz.u, iz.d) : void 0), [bz]), (0, Oz.jsx)(Ez.d, {
+        showing: bz,
         globallyUniqueKey: "clientGameMenu",
-        children: null === FT || void 0 === FT ? void 0 : FT.content
+        children: null === Hz || void 0 === Hz ? void 0 : Hz.content
       })
     }
 
-    function xT(TT) {
+    function Fz(zz) {
       let {
-        placement: oT = "bottom"
-      } = TT;
-      return (0, ST.jsx)("div", {
-        id: `clientGameHud-${oT}`,
+        placement: uz = "bottom"
+      } = zz;
+      return (0, Oz.jsx)("div", {
+        id: `clientGameHud-${uz}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function cT(TT) {
+    function Zz(zz) {
       let {
-        children: oT,
-        placement: IT = "bottom"
-      } = TT;
-      const [iT, zT] = (0, BT.useState)(null);
-      return (0, BT.useEffect)((() => {
-        zT(document.getElementById(`clientGameHud-${IT}`))
-      }), [IT]), iT ? (0, FT.createPortal)(oT, iT) : null
+        children: uz,
+        placement: bz = "bottom"
+      } = zz;
+      const [Ez, nz] = (0, tz.useState)(null);
+      return (0, tz.useEffect)((() => {
+        nz(document.getElementById(`clientGameHud-${bz}`))
+      }), [bz]), Ez ? (0, Hz.createPortal)(uz, Ez) : null
     }
   },
-  4311: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => MT,
-      g: () => rT
+  4590: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Kz,
+      f: () => wz
     });
-    var iT = IT(1042),
-      zT = IT.n(iT),
-      kT = IT(46),
-      WT = IT(1171),
-      XT = IT(4320),
-      BT = IT(1729),
-      FT = IT(2227),
-      ST = IT(4328),
-      DT = IT(1083);
-    const LT = new WeakMap;
-    let xT = 0;
+    var Ez = bz(1038),
+      nz = bz.n(Ez),
+      iz = bz(56),
+      lz = bz(1181),
+      Mz = bz(4598),
+      tz = bz(1846),
+      Hz = bz(2313),
+      Oz = bz(4601),
+      pz = bz(1089);
+    const dz = new WeakMap;
+    let Fz = 0;
 
-    function cT(TT) {
-      let oT = LT.get(TT);
-      return void 0 === oT && (oT = xT++, LT.set(TT, oT)), oT
+    function Zz(zz) {
+      let uz = dz.get(zz);
+      return void 0 === uz && (uz = Fz++, dz.set(zz, uz)), uz
     }
 
-    function KT(TT) {
+    function Rz(zz) {
       let {
-        piece: oT
-      } = TT;
-      return "space" === oT.kind ? (0, DT.jsx)(DT.Fragment, {
-        children: oT.text
-      }) : (0, DT.jsx)("span", {
+        piece: uz
+      } = zz;
+      return "space" === uz.kind ? (0, pz.jsx)(pz.Fragment, {
+        children: uz.text
+      }) : (0, pz.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${oT.delayMs}ms`
+          "--word-delay": `${uz.delayMs}ms`
         },
-        children: (0, DT.jsx)(XT.c, {
-          text: "icon" === oT.kind ? `[[${oT.icon}]]` : oT.text
+        children: (0, pz.jsx)(Mz.b, {
+          text: "icon" === uz.kind ? `[[${uz.icon}]]` : uz.text
         })
       })
     }
 
-    function MT(TT) {
+    function Kz(zz) {
       let {
-        display: oT
-      } = TT;
+        display: uz
+      } = zz;
       const {
-        selectedLanguage: IT
-      } = (0, WT.t)(), iT = (0, kT.useMemo)((() => (0, ST.d)((0, ST.h)(oT).plan.pieces)), [oT, IT.code]);
-      return (0, DT.jsxs)("div", {
-        className: zT()("Dialogue", {
-          DialogueAnimateIn: !1 !== oT.animateIn
+        selectedLanguage: bz
+      } = (0, lz.F)(), Ez = (0, iz.useMemo)((() => (0, Oz.e)((0, Oz.g)(uz).plan.pieces)), [uz, bz.code]);
+      return (0, pz.jsxs)("div", {
+        className: nz()("Dialogue", {
+          DialogueAnimateIn: !1 !== uz.animateIn
         }),
-        children: [oT.speakerName && (0, DT.jsx)(BT.c, {
-          text: oT.speakerName,
+        children: [uz.speakerName && (0, pz.jsx)(tz.b, {
+          text: uz.speakerName,
           className: "DialogueSpeaker"
-        }), (0, DT.jsx)("p", {
+        }), (0, pz.jsx)("p", {
           className: "DialogueLine",
-          children: iT.map(((TT, oT) => 1 === TT.length && "space" === TT[0].kind ? TT[0].text : (0, DT.jsx)("span", {
+          children: Ez.map(((zz, uz) => 1 === zz.length && "space" === zz[0].kind ? zz[0].text : (0, pz.jsx)("span", {
             className: "DialogueGlue",
-            children: TT.map(((TT, oT) => (0, DT.jsx)(KT, {
-              piece: TT
-            }, oT)))
-          }, oT)))
+            children: zz.map(((zz, uz) => (0, pz.jsx)(Rz, {
+              piece: zz
+            }, uz)))
+          }, uz)))
         })]
       })
     }
-    const rT = (0, kT.memo)((function() {
-      const TT = (0, FT.g)("dialogue");
-      return (0, DT.jsx)("div", {
+    const wz = (0, iz.memo)((function() {
+      const zz = (0, Hz.g)("dialogue");
+      return (0, pz.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: TT && (0, DT.jsx)(MT, {
-          display: TT
-        }, cT(TT))
+        children: zz && (0, pz.jsx)(Kz, {
+          display: zz
+        }, Zz(zz))
       })
     }))
   },
-  4320: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => XT
+  4598: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Mz
     });
-    var iT = IT(46),
-      zT = IT(306),
-      kT = IT(1747),
-      WT = IT(1083);
+    var Ez = bz(56),
+      nz = bz(316),
+      iz = bz(1856),
+      lz = bz(1089);
 
-    function XT(TT) {
+    function Mz(zz) {
       let {
-        text: oT
-      } = TT;
-      const IT = [];
-      let XT = "";
-      return (0, zT.ac)(oT).forEach(((TT, oT) => {
-        if ("string" === typeof TT || !(0, kT.g)(TT.icon)) return void(XT += "string" === typeof TT ? TT : TT.icon);
-        const zT = Math.max(0, XT.trimEnd().search(/\S{1,12}$/));
-        IT.push((0, WT.jsxs)(iT.Fragment, {
-          children: [XT.slice(0, zT), (0, WT.jsxs)("span", {
+        text: uz
+      } = zz;
+      const bz = [];
+      let Mz = "";
+      return (0, nz.uc)(uz).forEach(((zz, uz) => {
+        if ("string" === typeof zz || !(0, iz.d)(zz.icon)) return void(Mz += "string" === typeof zz ? zz : zz.icon);
+        const nz = Math.max(0, Mz.trimEnd().search(/\S{1,12}$/));
+        bz.push((0, lz.jsxs)(Ez.Fragment, {
+          children: [Mz.slice(0, nz), (0, lz.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [XT.slice(zT), (0, WT.jsx)("span", {
+            children: [Mz.slice(nz), (0, lz.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": TT.icon,
-              children: (0, WT.jsx)(kT.c, {
-                itemName: TT.icon,
+              "aria-label": zz.icon,
+              children: (0, lz.jsx)(iz.c, {
+                itemName: zz.icon,
                 amount: 0
               })
             })]
           })]
-        }, oT)), XT = ""
-      })), IT.push(XT), (0, WT.jsx)(WT.Fragment, {
-        children: IT
+        }, uz)), Mz = ""
+      })), bz.push(Mz), (0, lz.jsx)(lz.Fragment, {
+        children: bz
       })
     }
   },
-  8743: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => kT
+  8982: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => iz
     });
-    var iT = IT(4057),
-      zT = IT(4061);
+    var Ez = bz(4298),
+      nz = bz(4300);
 
-    function kT(TT) {
+    function iz(zz) {
       let {
-        children: oT,
-        showing: IT,
-        globallyUniqueKey: kT,
-        alwaysMountChildren: WT = !1,
-        doGameplayStartStopOnShow: XT = !0,
-        keepsMovement: BT = !1
-      } = TT;
-      return (0, zT.d)(!0, IT, kT, BT), (0, iT.e)(XT, IT), IT || WT ? oT : null
+        children: uz,
+        showing: bz,
+        globallyUniqueKey: iz,
+        alwaysMountChildren: lz = !1,
+        doGameplayStartStopOnShow: Mz = !0,
+        keepsMovement: tz = !1
+      } = zz;
+      return (0, nz.e)(!0, bz, iz, tz), (0, Ez.d)(Mz, bz), bz || lz ? uz : null
     }
   },
-  4328: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => aT,
-      h: () => UT
+  4601: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Vz,
+      g: () => az
     });
-    var iT = IT(4336),
-      zT = IT(306);
-    const kT = 120,
-      WT = 260,
-      XT = 1.15,
-      BT = 1.2,
-      FT = 2,
-      ST = 1.08,
-      DT = .8,
-      LT = .95,
-      xT = 8,
-      cT = "[\"')\\]\u300d\u300f\uff09]*",
-      KT = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${cT}$`),
-      MT = new RegExp(`[?\uff1f]${cT}$`),
-      rT = new RegExp(`[!\uff01]${cT}$`),
-      AT = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      gT = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      hT = new RegExp(`[${gT}]`),
-      wT = new RegExp(`[${gT}]|[^${gT}]+`, "g"),
-      mT = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Ez = bz(4605),
+      nz = bz(316);
+    const iz = 120,
+      lz = 260,
+      Mz = 1.15,
+      tz = 1.2,
+      Hz = 2,
+      Oz = 1.08,
+      pz = .8,
+      dz = .95,
+      Fz = 8,
+      Zz = "[\"')\\]\u300d\u300f\uff09]*",
+      Rz = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Zz}$`),
+      Kz = new RegExp(`[?\uff1f]${Zz}$`),
+      wz = new RegExp(`[!\uff01]${Zz}$`),
+      Xz = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      fz = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      sz = new RegExp(`[${fz}]`),
+      rz = new RegExp(`[${fz}]|[^${fz}]+`, "g"),
+      oz = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function eT(TT) {
-      let oT = 2166136261;
-      for (let IT = 0; IT < TT.length; IT++) oT ^= TT.charCodeAt(IT), oT = Math.imul(oT, 16777619);
-      return (oT >>> 0) / 4294967295 * 2 - 1
+    function Nz(zz) {
+      let uz = 2166136261;
+      for (let bz = 0; bz < zz.length; bz++) uz ^= zz.charCodeAt(bz), uz = Math.imul(uz, 16777619);
+      return (uz >>> 0) / 4294967295 * 2 - 1
     }
 
-    function RT(TT) {
-      var oT;
-      if (hT.test(TT)) return 1;
-      const IT = TT.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        iT = IT.replace(/[^0-9]/g, "");
-      if (iT.length > 0 && !/\p{L}/u.test(IT)) return Math.min(iT.length, 4);
-      const zT = null !== (oT = IT.match(mT)) && void 0 !== oT ? oT : [];
-      if (0 === zT.length) {
-        var kT, WT;
-        const TT = null !== (kT = null === (WT = IT.match(/\p{L}/gu)) || void 0 === WT ? void 0 : WT.length) && void 0 !== kT ? kT : 0;
-        return 0 === TT ? 0 : Math.min(Math.max(1, Math.round(TT / 2.5)), xT)
+    function vz(zz) {
+      var uz;
+      if (sz.test(zz)) return 1;
+      const bz = zz.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Ez = bz.replace(/[^0-9]/g, "");
+      if (Ez.length > 0 && !/\p{L}/u.test(bz)) return Math.min(Ez.length, 4);
+      const nz = null !== (uz = bz.match(oz)) && void 0 !== uz ? uz : [];
+      if (0 === nz.length) {
+        var iz, lz;
+        const zz = null !== (iz = null === (lz = bz.match(/\p{L}/gu)) || void 0 === lz ? void 0 : lz.length) && void 0 !== iz ? iz : 0;
+        return 0 === zz ? 0 : Math.min(Math.max(1, Math.round(zz / 2.5)), Fz)
       }
-      const XT = IT.replace(/[^\p{L}]/gu, ""),
-        BT = zT.length > 1 && "e" === zT.at(-1) && XT.endsWith("e") && !XT.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(TT.replace(/[^\p{L}]/gu, ""));
-      return Math.min(zT.length - (BT ? 1 : 0), xT)
+      const Mz = bz.replace(/[^\p{L}]/gu, ""),
+        tz = nz.length > 1 && "e" === nz.at(-1) && Mz.endsWith("e") && !Mz.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(zz.replace(/[^\p{L}]/gu, ""));
+      return Math.min(nz.length - (tz ? 1 : 0), Fz)
     }
 
-    function uT(TT) {
-      return TT.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function xz(zz) {
+      return zz.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function vT(TT) {
-      const oT = TT.replace(/[^\p{L}]/gu, "");
-      return oT.length >= 2 && oT === oT.toUpperCase() && oT !== oT.toLowerCase()
+    function Jz(zz) {
+      const uz = zz.replace(/[^\p{L}]/gu, "");
+      return uz.length >= 2 && uz === uz.toUpperCase() && uz !== uz.toLowerCase()
     }
 
-    function ET(TT, oT) {
-      var IT;
-      const xT = oT && (0, iT.j)(oT),
-        cT = null !== (IT = null === xT || void 0 === xT ? void 0 : xT.syllableMs) && void 0 !== IT ? IT : iT.d,
-        gT = function(TT) {
-          const oT = [];
-          for (const iT of (0, zT.ac)(TT))
-            if ("string" === typeof iT)
-              for (const TT of iT.split(/(\s+)/)) {
-                if ("" === TT) continue;
-                if (/^\s+$/.test(TT)) {
-                  oT.push({
+    function Az(zz, uz) {
+      var bz;
+      const Fz = uz && (0, Ez.k)(uz),
+        Zz = null !== (bz = null === Fz || void 0 === Fz ? void 0 : Fz.syllableMs) && void 0 !== bz ? bz : Ez.e,
+        fz = function(zz) {
+          const uz = [];
+          for (const Ez of (0, nz.uc)(zz))
+            if ("string" === typeof Ez)
+              for (const zz of Ez.split(/(\s+)/)) {
+                if ("" === zz) continue;
+                if (/^\s+$/.test(zz)) {
+                  uz.push({
                     kind: "space",
-                    text: TT
+                    text: zz
                   });
                   continue
                 }
-                if (!hT.test(TT)) {
-                  oT.push({
+                if (!sz.test(zz)) {
+                  uz.push({
                     kind: "word",
-                    text: TT,
+                    text: zz,
                     delayMs: 0
                   });
                   continue
                 }
-                let iT = !0;
-                for (const zT of null !== (IT = TT.match(wT)) && void 0 !== IT ? IT : []) {
-                  var IT;
-                  const TT = oT.at(-1);
-                  iT || "word" !== (null === TT || void 0 === TT ? void 0 : TT.kind) || hT.test(zT) || /[\p{L}\p{N}]/u.test(zT) ? (iT || oT.push({
+                let Ez = !0;
+                for (const nz of null !== (bz = zz.match(rz)) && void 0 !== bz ? bz : []) {
+                  var bz;
+                  const zz = uz.at(-1);
+                  Ez || "word" !== (null === zz || void 0 === zz ? void 0 : zz.kind) || sz.test(nz) || /[\p{L}\p{N}]/u.test(nz) ? (Ez || uz.push({
                     kind: "space",
                     text: "\u200b"
-                  }), oT.push({
+                  }), uz.push({
                     kind: "word",
-                    text: zT,
+                    text: nz,
                     delayMs: 0
-                  }), iT = !1) : TT.text += zT
+                  }), Ez = !1) : zz.text += nz
                 }
-              } else oT.push({
+              } else uz.push({
                 kind: "icon",
-                text: iT.icon,
+                text: Ez.icon,
                 delayMs: 0
               });
-          return oT
-        }(TT),
-        mT = [];
-      let ET = [];
-      for (const iT of gT) "space" !== iT.kind && (ET.push(iT), KT.test(iT.text) && (mT.push(ET), ET = []));
-      mT.push(ET);
-      const fT = [];
-      let CT = 0;
-      for (const iT of mT) {
-        var jT, JT;
-        const TT = null !== (jT = null === (JT = iT.at(-1)) || void 0 === JT ? void 0 : JT.text) && void 0 !== jT ? jT : "",
-          oT = MT.test(TT),
-          IT = rT.test(TT),
-          zT = iT.map((TT => "word" === TT.kind ? RT(TT.text) : 1)),
-          gT = zT.findLastIndex((TT => TT > 0));
-        for (const [MT, rT] of iT.entries()) {
-          const TT = "word" === rT.kind,
-            iT = zT[MT];
-          rT.delayMs = CT;
-          for (let zT = 0; xT && zT < iT; zT++) {
+          return uz
+        }(zz),
+        oz = [];
+      let Az = [];
+      for (const Ez of fz) "space" !== Ez.kind && (Az.push(Ez), Rz.test(Ez.text) && (oz.push(Az), Az = []));
+      oz.push(Az);
+      const Tz = [];
+      let Lz = 0;
+      for (const Ez of oz) {
+        var Pz, Gz;
+        const zz = null !== (Pz = null === (Gz = Ez.at(-1)) || void 0 === Gz ? void 0 : Gz.text) && void 0 !== Pz ? Pz : "",
+          uz = Kz.test(zz),
+          bz = wz.test(zz),
+          nz = Ez.map((zz => "word" === zz.kind ? vz(zz.text) : 1)),
+          fz = nz.findLastIndex((zz => zz > 0));
+        for (const [Kz, wz] of Ez.entries()) {
+          const zz = "word" === wz.kind,
+            Ez = nz[Kz];
+          wz.delayMs = Lz;
+          for (let nz = 0; Fz && nz < Ez; nz++) {
             const {
-              intonation: kT
-            } = xT;
-            let WT = gT > 0 ? -kT.declineSemitones * (MT / gT) : 0;
-            WT += eT(`${uT(rT.text)}|${zT}`) * kT.variationSemitones;
-            const KT = Math.min(1, kT.variationSemitones);
-            let AT = xT.glideSemitones,
-              hT = 1;
-            IT && (WT += kT.exclaimLiftSemitones, hT *= XT), oT && MT === gT && (WT += kT.questionRiseSemitones * (iT > 1 ? .5 + .5 * zT / (iT - 1) : 1), zT === iT - 1 && (AT = Math.abs(AT) + kT.questionRiseSemitones / 2)), TT && vT(rT.text) && (WT += FT * KT, hT *= BT), iT > 1 && 0 === zT && (WT += DT * KT, hT *= ST), fT.push({
-              atMs: CT + zT * cT,
-              semitones: WT,
-              glideSemitones: AT,
-              durationMs: zT < iT - 1 ? Math.min(xT.durationMs, cT * LT) : xT.durationMs,
-              level: hT
+              intonation: iz
+            } = Fz;
+            let lz = fz > 0 ? -iz.declineSemitones * (Kz / fz) : 0;
+            lz += Nz(`${xz(wz.text)}|${nz}`) * iz.variationSemitones;
+            const Rz = Math.min(1, iz.variationSemitones);
+            let Xz = Fz.glideSemitones,
+              sz = 1;
+            bz && (lz += iz.exclaimLiftSemitones, sz *= Mz), uz && Kz === fz && (lz += iz.questionRiseSemitones * (Ez > 1 ? .5 + .5 * nz / (Ez - 1) : 1), nz === Ez - 1 && (Xz = Math.abs(Xz) + iz.questionRiseSemitones / 2)), zz && Jz(wz.text) && (lz += Hz * Rz, sz *= tz), Ez > 1 && 0 === nz && (lz += pz * Rz, sz *= Oz), Tz.push({
+              atMs: Lz + nz * Zz,
+              semitones: lz,
+              glideSemitones: Xz,
+              durationMs: nz < Ez - 1 ? Math.min(Fz.durationMs, Zz * dz) : Fz.durationMs,
+              level: sz
             })
           }
-          CT += iT * cT + (KT.test(rT.text) ? WT : AT.test(rT.text) ? kT : 0)
+          Lz += Ez * Zz + (Rz.test(wz.text) ? lz : Xz.test(wz.text) ? iz : 0)
         }
       }
       return {
-        pieces: gT.map((TT => "space" === TT.kind ? TT : "icon" === TT.kind ? {
+        pieces: fz.map((zz => "space" === zz.kind ? zz : "icon" === zz.kind ? {
           kind: "icon",
-          icon: TT.text,
-          delayMs: TT.delayMs
+          icon: zz.text,
+          delayMs: zz.delayMs
         } : {
           kind: "word",
-          text: TT.text,
-          delayMs: TT.delayMs
+          text: zz.text,
+          delayMs: zz.delayMs
         })),
-        blips: fT
+        blips: Tz
       }
     }
-    var fT = IT(1171),
-      CT = IT(1220),
-      jT = IT(1755);
+    var Tz = bz(1181),
+      Lz = bz(1241),
+      Pz = bz(1873);
 
-    function JT(TT) {
-      if ("string" === typeof TT) return TT;
-      const oT = CT.d.get().getCurrentLanguageCode();
-      return (0, fT.n)(oT, TT.translationKey, (0, fT.m)(TT.params, jT.e.shown))
+    function Gz(zz) {
+      if ("string" === typeof zz) return zz;
+      const uz = Lz.h.get().getCurrentLanguageCode();
+      return (0, Tz.s)(uz, zz.translationKey, (0, Tz.q)(zz.params, Pz.b.shown))
     }
 
-    function UT(TT) {
-      const oT = void 0 === TT.voice ? null : (0, iT.m)(TT.voice),
-        IT = oT && (0, iT.j)(oT);
+    function az(zz) {
+      const uz = void 0 === zz.voice ? null : (0, Ez.n)(zz.voice),
+        bz = uz && (0, Ez.k)(uz);
       return {
-        plan: ET(JT(TT.line), IT),
-        synth: IT
+        plan: Az(Gz(zz.line), bz),
+        synth: bz
       }
     }
 
-    function aT(TT) {
-      const oT = [];
-      let IT = [];
-      for (const [zT, kT] of TT.entries()) {
-        var iT;
-        "space" === kT.kind && (" " !== kT.text || "icon" !== (null === (iT = TT[zT + 1]) || void 0 === iT ? void 0 : iT.kind)) ? (IT.length > 0 && oT.push(IT), oT.push([kT]), IT = []) : IT.push(kT)
+    function Vz(zz) {
+      const uz = [];
+      let bz = [];
+      for (const [nz, iz] of zz.entries()) {
+        var Ez;
+        "space" === iz.kind && (" " !== iz.text || "icon" !== (null === (Ez = zz[nz + 1]) || void 0 === Ez ? void 0 : Ez.kind)) ? (bz.length > 0 && uz.push(bz), uz.push([iz]), bz = []) : bz.push(iz)
       }
-      return IT.length > 0 && oT.push(IT), oT
+      return bz.length > 0 && uz.push(bz), uz
     }
   },
-  8139: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => kT,
-      f: () => zT
+  8378: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => iz,
+      e: () => nz
     });
-    let iT = null;
-    const zT = function(TT) {
-        const oT = {
-          cycle: TT,
+    let Ez = null;
+    const nz = function(zz) {
+        const uz = {
+          cycle: zz,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return iT = oT, () => {
-          iT === oT && (iT = null)
+        return Ez = uz, () => {
+          Ez === uz && (Ez = null)
         }
       },
-      kT = () => {
-        var TT;
-        return null !== (TT = iT) && void 0 !== TT && TT.canCycle() ? iT.cycle : null
+      iz = () => {
+        var zz;
+        return null !== (zz = Ez) && void 0 !== zz && zz.canCycle() ? Ez.cycle : null
       }
   },
-  35601: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => kT,
-      g: () => KT,
-      j: () => MT,
-      m: () => XT,
-      n: () => LT,
-      r: () => rT,
-      s: () => DT,
-      w: () => gT,
-      x: () => cT,
-      y: () => AT
+  36080: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      d: () => Rz,
+      g: () => Kz,
+      h: () => Mz,
+      i: () => dz,
+      j: () => wz,
+      n: () => pz,
+      q: () => fz,
+      u: () => Zz,
+      x: () => Xz
     });
-    var iT = IT(12),
-      zT = IT(16);
-    const kT = "clientGameInventoryButtonsChanged",
-      WT = new Map;
+    var Ez = bz(20),
+      nz = bz(22);
+    const iz = "clientGameInventoryButtonsChanged",
+      lz = new Map;
 
-    function XT() {
-      return [...WT.values()].sort(((TT, oT) => {
-        var IT, iT;
-        return (null !== (IT = TT.order) && void 0 !== IT ? IT : 0) - (null !== (iT = oT.order) && void 0 !== iT ? iT : 0)
+    function Mz() {
+      return [...lz.values()].sort(((zz, uz) => {
+        var bz, Ez;
+        return (null !== (bz = zz.order) && void 0 !== bz ? bz : 0) - (null !== (Ez = uz.order) && void 0 !== Ez ? Ez : 0)
       }))
     }
-    let BT = null;
+    let tz = null;
 
-    function FT(TT) {
-      BT = TT
+    function Hz(zz) {
+      tz = zz
     }
-    let ST = !1;
+    let Oz = !1;
 
-    function DT(TT) {
-      ST = !0;
+    function pz(zz) {
+      Oz = !0;
       try {
-        TT.onClick()
+        zz.onClick()
       } finally {
-        ST = !1
+        Oz = !1
       }
-      TT.panel && "clientGame" === iT.c.get("openInGameMenuName") && FT(TT.id)
+      zz.panel && "clientGame" === Ez.e.get("openInGameMenuName") && Hz(zz.id)
     }
 
-    function LT() {
-      return ST
+    function dz() {
+      return Oz
     }
 
-    function xT() {
-      return XT().filter((TT => TT.panel && !TT.disabled))
+    function Fz() {
+      return Mz().filter((zz => zz.panel && !zz.disabled))
     }
 
-    function cT(TT) {
-      const oT = xT(),
-        IT = oT.findIndex((TT => TT.id === BT));
-      return !(IT < 0 || oT.length < 2) && (DT(oT[(IT + TT + oT.length) % oT.length]), !0)
+    function Zz(zz) {
+      const uz = Fz(),
+        bz = uz.findIndex((zz => zz.id === tz));
+      return !(bz < 0 || uz.length < 2) && (pz(uz[(bz + zz + uz.length) % uz.length]), !0)
     }
 
-    function KT() {
-      return null !== BT && xT().length > 1
+    function Rz() {
+      return null !== tz && Fz().length > 1
     }
 
-    function MT() {
-      FT(null)
+    function Kz() {
+      Hz(null)
     }
 
-    function rT() {
-      "inventory" !== iT.c.get("openInGameMenuName") && FT(null)
+    function wz() {
+      "inventory" !== Ez.e.get("openInGameMenuName") && Hz(null)
     }
 
-    function AT() {
-      const TT = BT;
-      return FT(null), TT
+    function Xz() {
+      const zz = tz;
+      return Hz(null), zz
     }
 
-    function gT(TT) {
-      return WT.set(TT.id, TT), zT.h.XM(kT, XT(), !0), () => {
-        WT.get(TT.id) === TT && (WT.delete(TT.id), zT.h.XM(kT, XT()))
+    function fz(zz) {
+      return lz.set(zz.id, zz), nz.k.sK(iz, Mz(), !0), () => {
+        lz.get(zz.id) === zz && (lz.delete(zz.id), nz.k.sK(iz, Mz()))
       }
     }
   },
-  35599: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => XT,
-      e: () => MT,
-      h: () => rT,
-      i: () => LT,
-      k: () => FT,
-      o: () => KT,
-      s: () => xT,
-      u: () => ST
+  36071: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Mz,
+      i: () => Kz,
+      l: () => wz,
+      n: () => dz,
+      o: () => Hz,
+      p: () => Rz,
+      t: () => Fz,
+      x: () => Oz
     });
-    var iT = IT(12),
-      zT = IT(16),
-      kT = IT(1253),
-      WT = IT(35601);
-    const XT = "clientGameUiChanged";
-    let BT = null;
+    var Ez = bz(20),
+      nz = bz(22),
+      iz = bz(1269),
+      lz = bz(36080);
+    const Mz = "clientGameUiChanged";
+    let tz = null;
 
-    function FT() {
-      return BT
+    function Hz() {
+      return tz
     }
 
-    function ST(TT, oT) {
-      const IT = {
-        content: TT,
-        menu: oT
+    function Oz(zz, uz) {
+      const bz = {
+        content: zz,
+        menu: uz
       };
-      return BT = IT, zT.h.XM(XT, BT, !0), () => {
-        BT === IT && (BT = null, cT = !1, MT(), zT.h.XM(XT, null))
+      return tz = bz, nz.k.sK(Mz, tz, !0), () => {
+        tz === bz && (tz = null, Zz = !1, Kz(), nz.k.sK(Mz, null))
       }
     }
-    let DT = null;
+    let pz = null;
 
-    function LT() {
-      return DT
+    function dz() {
+      return pz
     }
 
-    function xT(TT) {
-      return DT = TT, () => {
-        DT === TT && (DT = null)
+    function Fz(zz) {
+      return pz = zz, () => {
+        pz === zz && (pz = null)
       }
     }
-    let cT = !1;
+    let Zz = !1;
 
-    function KT() {
-      const TT = iT.c.get("openInGameMenuName");
-      "clientGame" !== TT && (cT = "inventory" === TT), (0, WT.n)() || (0, WT.j)(), (0, kT.o)(kT.c), iT.c.set({
+    function Rz() {
+      const zz = Ez.e.get("openInGameMenuName");
+      "clientGame" !== zz && (Zz = "inventory" === zz), (0, lz.i)() || (0, lz.g)(), (0, iz.m)(iz.b), Ez.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function MT() {
-      AT(!1)
+    function Kz() {
+      Xz(!1)
     }
 
-    function rT() {
-      AT(cT)
+    function wz() {
+      Xz(Zz)
     }
 
-    function AT(TT) {
-      "clientGame" === iT.c.get("openInGameMenuName") && iT.c.set({
-        openInGameMenuName: TT ? "inventory" : null
-      }), TT || (0, WT.j)(), cT = !1
+    function Xz(zz) {
+      "clientGame" === Ez.e.get("openInGameMenuName") && Ez.e.set({
+        openInGameMenuName: zz ? "inventory" : null
+      }), zz || (0, lz.g)(), Zz = !1
     }
   },
-  37489: (TT, oT, IT) => {
-    function iT(TT, oT, IT) {
-      const iT = new Set,
-        zT = new ResizeObserver(IT),
-        kT = () => {
-          const oT = new Set(document.querySelectorAll(TT));
-          let kT = !1;
-          for (const TT of iT) oT.has(TT) || (zT.unobserve(TT), iT.delete(TT), kT = !0);
-          for (const TT of oT) iT.has(TT) || (zT.observe(TT), WT.observe(TT, {
+  37896: (zz, uz, bz) => {
+    function Ez(zz, uz, bz) {
+      const Ez = new Set,
+        nz = new ResizeObserver(bz),
+        iz = () => {
+          const uz = new Set(document.querySelectorAll(zz));
+          let iz = !1;
+          for (const zz of Ez) uz.has(zz) || (nz.unobserve(zz), Ez.delete(zz), iz = !0);
+          for (const zz of uz) Ez.has(zz) || (nz.observe(zz), lz.observe(zz, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), iT.add(TT));
-          kT && IT()
+          }), Ez.add(zz));
+          iz && bz()
         },
-        WT = new MutationObserver((oT => {
-          oT.some((TT => "attributes" === TT.type)) && IT(), oT.some((oT => function(TT, oT, IT) {
-            if ("childList" !== TT.type) return !1;
-            for (const iT of TT.addedNodes)
-              if (iT instanceof Element && (iT.matches(oT) || iT.querySelector(oT))) return !0;
-            for (const iT of TT.removedNodes)
-              if (iT instanceof Element)
-                for (const TT of IT)
-                  if (iT.contains(TT)) return !0;
+        lz = new MutationObserver((uz => {
+          uz.some((zz => "attributes" === zz.type)) && bz(), uz.some((uz => function(zz, uz, bz) {
+            if ("childList" !== zz.type) return !1;
+            for (const Ez of zz.addedNodes)
+              if (Ez instanceof Element && (Ez.matches(uz) || Ez.querySelector(uz))) return !0;
+            for (const Ez of zz.removedNodes)
+              if (Ez instanceof Element)
+                for (const zz of bz)
+                  if (Ez.contains(zz)) return !0;
             return !1
-          }(oT, TT, iT))) && kT()
+          }(uz, zz, Ez))) && iz()
         }));
-      WT.observe(document.body, {
+      lz.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const XT of oT) zT.observe(XT);
-      return window.addEventListener("resize", IT), kT(), IT(), () => {
-        zT.disconnect(), WT.disconnect(), window.removeEventListener("resize", IT)
+      for (const Mz of uz) nz.observe(Mz);
+      return window.addEventListener("resize", bz), iz(), bz(), () => {
+        nz.disconnect(), lz.disconnect(), window.removeEventListener("resize", bz)
       }
     }
-    IT.d(oT, {
-      e: () => iT
+    bz.d(uz, {
+      e: () => Ez
     })
   },
-  8307: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => XT,
-      g: () => BT
+  8554: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Mz,
+      e: () => tz
     });
-    var iT = IT(12),
-      zT = IT(1293),
-      kT = IT(90);
-    const WT = {
+    var Ez = bz(20),
+      nz = bz(1296),
+      iz = bz(96);
+    const lz = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,350 @@ export const modules = {
       }
     };
 
-    function XT() {
-      return (0, kT.isMobile)() && "function" === typeof navigator.vibrate
+    function Mz() {
+      return (0, iz.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const BT = new class {
-      constructor(TT) {
-        this.deps = TT, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const tz = new class {
+      constructor(zz) {
+        this.deps = zz, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(TT, oT) {
-        var IT;
+      play(zz, uz) {
+        var bz;
         if (!this.deps.enabled()) return;
-        const iT = WT[TT],
-          zT = null !== oT && void 0 !== oT ? oT : iT.pattern;
-        if (null === zT) return void console.warn("No vibration pattern for", TT);
-        const kT = this.deps.now();
-        kT - this.lastAnyAt < 40 && iT.priority < this.playingPriority || kT - (null !== (IT = this.lastAt.get(TT)) && void 0 !== IT ? IT : -1 / 0) < iT.minGapMs || kT < this.playingUntil && iT.priority < this.playingPriority || (this.lastAt.set(TT, kT), this.lastAnyAt = kT, this.playingUntil = kT + zT.reduce(((TT, oT) => TT + oT), 0), this.playingPriority = iT.priority, this.deps.vibrate(zT))
+        const Ez = lz[zz],
+          nz = null !== uz && void 0 !== uz ? uz : Ez.pattern;
+        if (null === nz) return void console.warn("No vibration pattern for", zz);
+        const iz = this.deps.now();
+        iz - this.lastAnyAt < 40 && Ez.priority < this.playingPriority || iz - (null !== (bz = this.lastAt.get(zz)) && void 0 !== bz ? bz : -1 / 0) < Ez.minGapMs || iz < this.playingUntil && Ez.priority < this.playingPriority || (this.lastAt.set(zz, iz), this.lastAnyAt = iz, this.playingUntil = iz + nz.reduce(((zz, uz) => zz + uz), 0), this.playingPriority = Ez.priority, this.deps.vibrate(nz))
       }
     }({
-      vibrate: TT => {
-        navigator.vibrate([...TT])
+      vibrate: zz => {
+        navigator.vibrate([...zz])
       },
       now: () => performance.now(),
-      enabled: () => XT() && iT.c.get("isTouchScreen") && iT.c.get("clientEscMenuOptions").vibration && !(0, zT.h)()
+      enabled: () => Mz() && Ez.e.get("isTouchScreen") && Ez.e.get("clientEscMenuOptions").vibration && !(0, nz.d)()
     })
   },
-  36510: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => XT,
-      e: () => WT
+  36588: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Mz,
+      f: () => lz
     });
-    var iT = IT(36501),
-      zT = IT(314),
-      kT = IT(1724);
+    var Ez = bz(36577),
+      nz = bz(328),
+      iz = bz(1840);
 
-    function WT(TT) {
-      if ("xz" in TT) return mT.createAnimationScript(TT);
-      return new FT(TT).createAnimationScript()
+    function lz(zz) {
+      if ("Ui" in zz) return oz.createAnimationScript(zz);
+      return new Hz(zz).createAnimationScript()
     }
 
-    function XT(TT, oT, IT, zT) {
-      const kT = TT.xz <= 0 ? 1 : oT + IT * Math.max(0, zT) / TT.xz;
-      return TT.Kz === iT.i.LoopOnLastFrame ? kT % 1 : TT.Kz === iT.i.NoLoop && kT >= 1 ? null : Math.min(1, kT)
+    function Mz(zz, uz, bz, nz) {
+      const iz = zz.Ui <= 0 ? 1 : uz + bz * Math.max(0, nz) / zz.Ui;
+      return zz.gi === Ez.m.LoopOnLastFrame ? iz % 1 : zz.gi === Ez.m.NoLoop && iz >= 1 ? null : Math.min(1, iz)
     }
-    class BT {
-      createAnimationScript(TT) {
+    class tz {
+      createAnimationScript(zz) {
         const {
-          xz: oT,
-          loop: IT,
-          Mz: iT
-        } = TT;
+          Ui: uz,
+          loop: bz,
+          Si: Ez
+        } = zz;
         return {
-          xz: Math.round(oT),
-          Kz: this.createLoopMode(null !== IT && void 0 !== IT && IT),
-          Mz: this.createNodeSkeletonAnimationScript(null !== iT && void 0 !== iT ? iT : null)
+          Ui: Math.round(uz),
+          gi: this.createLoopMode(null !== bz && void 0 !== bz && bz),
+          Si: this.createNodeSkeletonAnimationScript(null !== Ez && void 0 !== Ez ? Ez : null)
         }
       }
-      createLoopMode(TT) {
-        switch (TT) {
+      createLoopMode(zz) {
+        switch (zz) {
           case !1:
-            return iT.i.NoLoop;
+            return Ez.m.NoLoop;
           case !0:
-            return iT.i.LoopOnLastFrame;
+            return Ez.m.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return iT.i.HoldOnLastFrame
+            return Ez.m.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${TT}`)
+        throw new Error(`Invalid loop mode schema: ${zz}`)
       }
-      createNodeSkeletonAnimationScript(TT) {
-        if (null === TT) return null;
-        const oT = {};
-        for (const IT in TT) {
-          const iT = TT[IT];
-          oT[IT] = this.createNodeAnimationScript(iT)
+      createNodeSkeletonAnimationScript(zz) {
+        if (null === zz) return null;
+        const uz = {};
+        for (const bz in zz) {
+          const Ez = zz[bz];
+          uz[bz] = this.createNodeAnimationScript(Ez)
         }
-        return oT
+        return uz
       }
-      createNodeAnimationScript(TT) {
+      createNodeAnimationScript(zz) {
         const {
-          timeline: oT
-        } = TT, IT = oT.filter((TT => Number.isFinite(TT.timeFraction)));
-        return IT.sort(((TT, oT) => TT.timeFraction - oT.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(IT, "rotation", LT),
-          position: this.createTimelineFromKeyframes(IT, "position", cT)
+          timeline: uz
+        } = zz, bz = uz.filter((zz => Number.isFinite(zz.timeFraction)));
+        return bz.sort(((zz, uz) => zz.timeFraction - uz.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(bz, "rotation", dz),
+          position: this.createTimelineFromKeyframes(bz, "position", Zz)
         }
       }
-      createTimelineFromKeyframes(TT, oT, IT) {
-        const iT = [];
-        for (const BT of TT) {
-          const TT = BT[oT];
-          if (TT) {
-            const oT = this.createAnimationFrameWithoutPrecomputes(BT.timeFraction, TT);
-            ST(oT) && iT.push(oT)
+      createTimelineFromKeyframes(zz, uz, bz) {
+        const Ez = [];
+        for (const tz of zz) {
+          const zz = tz[uz];
+          if (zz) {
+            const uz = this.createAnimationFrameWithoutPrecomputes(tz.timeFraction, zz);
+            Oz(uz) && Ez.push(uz)
           }
         }
-        const zT = [];
-        for (let BT = 0; BT < iT.length; BT++) {
-          var kT, WT, XT;
-          const TT = iT[BT],
-            oT = null !== (kT = iT[BT - 1]) && void 0 !== kT ? kT : TT,
-            FT = null !== (WT = iT[BT + 1]) && void 0 !== WT ? WT : TT,
-            ST = null !== (XT = iT[BT + 2]) && void 0 !== XT ? XT : FT;
-          zT.push({
-            ...TT,
-            ...IT(oT.post, oT.timeFraction, TT.post, TT.timeFraction, FT.pre, FT.timeFraction, ST.pre, ST.timeFraction)
+        const nz = [];
+        for (let tz = 0; tz < Ez.length; tz++) {
+          var iz, lz, Mz;
+          const zz = Ez[tz],
+            uz = null !== (iz = Ez[tz - 1]) && void 0 !== iz ? iz : zz,
+            Hz = null !== (lz = Ez[tz + 1]) && void 0 !== lz ? lz : zz,
+            Oz = null !== (Mz = Ez[tz + 2]) && void 0 !== Mz ? Mz : Hz;
+          nz.push({
+            ...zz,
+            ...bz(uz.post, uz.timeFraction, zz.post, zz.timeFraction, Hz.pre, Hz.timeFraction, Oz.pre, Oz.timeFraction)
           })
         }
-        return zT
+        return nz
       }
-      createAnimationFrameWithoutPrecomputes(TT, oT) {
-        let IT, iT, zT = null;
-        var kT;
-        if ("object" === typeof oT && "point" in oT) zT = null !== (kT = oT.gz) && void 0 !== kT ? kT : null, IT = oT.point, iT = oT.point;
-        else if ("object" === typeof oT && "pre" in oT) {
-          var WT;
-          zT = null !== (WT = oT.gz) && void 0 !== WT ? WT : null, IT = oT.pre, iT = oT.post
-        } else IT = oT, iT = oT;
+      createAnimationFrameWithoutPrecomputes(zz, uz) {
+        let bz, Ez, nz = null;
+        var iz;
+        if ("object" === typeof uz && "point" in uz) nz = null !== (iz = uz.Qi) && void 0 !== iz ? iz : null, bz = uz.point, Ez = uz.point;
+        else if ("object" === typeof uz && "pre" in uz) {
+          var lz;
+          nz = null !== (lz = uz.Qi) && void 0 !== lz ? lz : null, bz = uz.pre, Ez = uz.post
+        } else bz = uz, Ez = uz;
         return {
-          timeFraction: TT,
-          gz: this.createLerpMode(zT),
-          pre: IT,
-          post: iT
+          timeFraction: zz,
+          Qi: this.createLerpMode(nz),
+          pre: bz,
+          post: Ez
         }
       }
-      createLerpMode(TT) {
-        return null === TT ? iT.h.Linear : BT.LERP_MODE_SCHEMA_MAPPING[TT]
+      createLerpMode(zz) {
+        return null === zz ? Ez.j.Linear : tz.LERP_MODE_SCHEMA_MAPPING[zz]
       }
     }
-    BT.LERP_MODE_SCHEMA_MAPPING = {
-      linear: iT.h.Linear,
-      "catmull-rom-spline": iT.h.CatmullRomSpline
+    tz.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Ez.j.Linear,
+      "catmull-rom-spline": Ez.j.CatmullRomSpline
     };
-    class FT {
-      constructor(TT) {
-        this.animationSchema = TT
+    class Hz {
+      constructor(zz) {
+        this.animationSchema = zz
       }
       createAnimationScript() {
         const {
-          animation_length: TT,
-          loop: oT,
-          bones: IT
+          animation_length: zz,
+          loop: uz,
+          bones: bz
         } = this.animationSchema;
         return {
-          xz: Math.round(1e3 * TT),
-          Kz: this.createLoopMode(null !== oT && void 0 !== oT && oT),
-          Mz: this.createNodeSkeletonAnimationScript(null !== IT && void 0 !== IT ? IT : null)
+          Ui: Math.round(1e3 * zz),
+          gi: this.createLoopMode(null !== uz && void 0 !== uz && uz),
+          Si: this.createNodeSkeletonAnimationScript(null !== bz && void 0 !== bz ? bz : null)
         }
       }
-      createLoopMode(TT) {
-        switch (TT) {
+      createLoopMode(zz) {
+        switch (zz) {
           case !1:
-            return iT.i.NoLoop;
+            return Ez.m.NoLoop;
           case !0:
-            return iT.i.LoopOnLastFrame;
+            return Ez.m.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return iT.i.HoldOnLastFrame
+            return Ez.m.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${TT}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${zz}`)
       }
-      createNodeSkeletonAnimationScript(TT) {
-        if (null === TT) return null;
-        const oT = {};
-        for (const IT in TT) {
-          const iT = TT[IT];
-          oT[IT] = this.createNodeAnimationScript(iT)
+      createNodeSkeletonAnimationScript(zz) {
+        if (null === zz) return null;
+        const uz = {};
+        for (const bz in zz) {
+          const Ez = zz[bz];
+          uz[bz] = this.createNodeAnimationScript(Ez)
         }
-        return oT
+        return uz
       }
-      createNodeAnimationScript(TT) {
+      createNodeAnimationScript(zz) {
         const {
-          rotation: oT,
-          position: IT
-        } = TT;
+          rotation: uz,
+          position: bz
+        } = zz;
         return {
-          rotation: this.createAnimationTimeline(null !== oT && void 0 !== oT ? oT : null, MT, LT, !0),
-          position: this.createAnimationTimeline(null !== IT && void 0 !== IT ? IT : null, AT, cT, !1)
+          rotation: this.createAnimationTimeline(null !== uz && void 0 !== uz ? uz : null, Kz, dz, !0),
+          position: this.createAnimationTimeline(null !== bz && void 0 !== bz ? bz : null, Xz, Zz, !1)
         }
       }
-      createAnimationTimeline(TT, oT, IT, iT) {
-        if (null === TT) return [];
-        if (Array.isArray(TT)) {
-          TT = {
-            "0.0": TT
+      createAnimationTimeline(zz, uz, bz, Ez) {
+        if (null === zz) return [];
+        if (Array.isArray(zz)) {
+          zz = {
+            "0.0": zz
           }
         }
-        const zT = Object.entries(TT).map((TT => {
-          let [IT, iT] = TT;
-          const zT = Number(IT) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(zT, iT, oT)
-        })).filter(ST);
-        zT.sort(((TT, oT) => TT.timeFraction - oT.timeFraction)), iT && function(TT) {
-          for (let oT = 1; oT < TT.length; oT++) {
-            const IT = TT[oT - 1].post,
-              iT = TT[oT],
-              zT = gT(iT.pre),
-              kT = gT(iT.post),
-              WT = wT(IT, iT.pre);
-            wT(IT, zT) < WT && (TT[oT] = {
-              ...iT,
-              pre: zT,
-              post: kT
+        const nz = Object.entries(zz).map((zz => {
+          let [bz, Ez] = zz;
+          const nz = Number(bz) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(nz, Ez, uz)
+        })).filter(Oz);
+        nz.sort(((zz, uz) => zz.timeFraction - uz.timeFraction)), Ez && function(zz) {
+          for (let uz = 1; uz < zz.length; uz++) {
+            const bz = zz[uz - 1].post,
+              Ez = zz[uz],
+              nz = fz(Ez.pre),
+              iz = fz(Ez.post),
+              lz = rz(bz, Ez.pre);
+            rz(bz, nz) < lz && (zz[uz] = {
+              ...Ez,
+              pre: nz,
+              post: iz
             })
           }
-        }(zT);
-        const kT = [];
-        for (let FT = 0; FT < zT.length; FT++) {
-          var WT, XT, BT;
-          const TT = zT[FT],
-            oT = null !== (WT = zT[FT - 1]) && void 0 !== WT ? WT : TT,
-            iT = null !== (XT = zT[FT + 1]) && void 0 !== XT ? XT : TT,
-            ST = null !== (BT = zT[FT + 2]) && void 0 !== BT ? BT : iT;
-          kT.push({
-            ...TT,
-            ...IT(oT.post, oT.timeFraction, TT.post, TT.timeFraction, iT.pre, iT.timeFraction, ST.pre, ST.timeFraction)
+        }(nz);
+        const iz = [];
+        for (let Hz = 0; Hz < nz.length; Hz++) {
+          var lz, Mz, tz;
+          const zz = nz[Hz],
+            uz = null !== (lz = nz[Hz - 1]) && void 0 !== lz ? lz : zz,
+            Ez = null !== (Mz = nz[Hz + 1]) && void 0 !== Mz ? Mz : zz,
+            Oz = null !== (tz = nz[Hz + 2]) && void 0 !== tz ? tz : Ez;
+          iz.push({
+            ...zz,
+            ...bz(uz.post, uz.timeFraction, zz.post, zz.timeFraction, Ez.pre, Ez.timeFraction, Oz.pre, Oz.timeFraction)
           })
         }
-        return kT
+        return iz
       }
-      createAnimationFrameWithoutPrecomputes(TT, oT, IT) {
-        let iT, zT, kT = null;
-        if ("object" === typeof oT && "post" in oT) {
-          var WT;
-          kT = null !== (WT = oT.lerp_mode) && void 0 !== WT ? WT : null, zT = KT(oT.post, IT), iT = oT.pre ? KT(oT.pre, IT) : zT
+      createAnimationFrameWithoutPrecomputes(zz, uz, bz) {
+        let Ez, nz, iz = null;
+        if ("object" === typeof uz && "post" in uz) {
+          var lz;
+          iz = null !== (lz = uz.lerp_mode) && void 0 !== lz ? lz : null, nz = Rz(uz.post, bz), Ez = uz.pre ? Rz(uz.pre, bz) : nz
         } else {
-          const TT = KT(oT, IT);
-          zT = TT, iT = TT
+          const zz = Rz(uz, bz);
+          nz = zz, Ez = zz
         }
         return {
-          timeFraction: TT,
-          gz: this.createLerpMode(kT),
-          pre: iT,
-          post: zT
+          timeFraction: zz,
+          Qi: this.createLerpMode(iz),
+          pre: Ez,
+          post: nz
         }
       }
-      createLerpMode(TT) {
-        return null === TT ? iT.h.Linear : FT.LERP_MODE_SCHEMA_MAPPING[TT]
+      createLerpMode(zz) {
+        return null === zz ? Ez.j.Linear : Hz.LERP_MODE_SCHEMA_MAPPING[zz]
       }
     }
 
-    function ST(TT) {
-      return Number.isFinite(TT.timeFraction) && DT(TT.pre) && DT(TT.post)
+    function Oz(zz) {
+      return Number.isFinite(zz.timeFraction) && pz(zz.pre) && pz(zz.post)
     }
 
-    function DT(TT) {
-      return Number.isFinite(TT[0]) && Number.isFinite(TT[1]) && Number.isFinite(TT[2])
+    function pz(zz) {
+      return Number.isFinite(zz[0]) && Number.isFinite(zz[1]) && Number.isFinite(zz[2])
     }
 
-    function LT(TT, oT, IT, iT, zT, kT, WT, XT) {
-      const BT = kT - oT,
-        FT = kT - iT,
-        ST = XT - iT,
-        DT = [null, null, null];
-      for (let LT = 0; LT < DT.length; LT++) DT[LT] = xT(TT[LT], IT[LT], zT[LT], WT[LT], BT, ST);
+    function dz(zz, uz, bz, Ez, nz, iz, lz, Mz) {
+      const tz = iz - uz,
+        Hz = iz - Ez,
+        Oz = Mz - Ez,
+        pz = [null, null, null];
+      for (let dz = 0; dz < pz.length; dz++) pz[dz] = Fz(zz[dz], bz[dz], nz[dz], lz[dz], tz, Oz);
       return {
-        hz: FT,
-        wz: DT
+        Wi: Hz,
+        ji: pz
       }
     }
 
-    function xT(TT, oT, IT, iT, kT, WT) {
+    function Fz(zz, uz, bz, Ez, iz, lz) {
       return {
-        ez: zT.e.computeShortestRotation(TT, IT) / kT,
-        Rz: zT.e.computeShortestRotation(oT, iT) / WT,
-        delta: zT.e.computeShortestRotation(oT, IT)
+        Bi: nz.d.computeShortestRotation(zz, bz) / iz,
+        Ci: nz.d.computeShortestRotation(uz, Ez) / lz,
+        delta: nz.d.computeShortestRotation(uz, bz)
       }
     }
 
-    function cT(TT, oT, IT, iT, zT, kT, WT, XT) {
-      const BT = kT - oT,
-        FT = kT - iT,
-        ST = XT - iT,
-        DT = [null, null, null];
-      for (let LT = 0; LT < DT.length; LT++) DT[LT] = {
-        ez: (zT[LT] - TT[LT]) / BT,
-        Rz: (WT[LT] - IT[LT]) / ST,
-        delta: zT[LT] - IT[LT]
+    function Zz(zz, uz, bz, Ez, nz, iz, lz, Mz) {
+      const tz = iz - uz,
+        Hz = iz - Ez,
+        Oz = Mz - Ez,
+        pz = [null, null, null];
+      for (let dz = 0; dz < pz.length; dz++) pz[dz] = {
+        Bi: (nz[dz] - zz[dz]) / tz,
+        Ci: (lz[dz] - bz[dz]) / Oz,
+        delta: nz[dz] - bz[dz]
       };
       return {
-        hz: FT,
-        wz: DT
+        Wi: Hz,
+        ji: pz
       }
     }
 
-    function KT(TT, oT) {
-      return null === oT ? TT : oT(TT)
+    function Rz(zz, uz) {
+      return null === uz ? zz : uz(zz)
     }
 
-    function MT(TT) {
-      const [oT, IT, iT] = TT, WT = -(0, kT.m)(oT), XT = -(0, kT.m)(IT), BT = (0, kT.m)(iT), FT = zT.e.quaternionFromEulerZYX(WT, XT, BT);
-      return zT.e.eulerYXZFromQuaternion(FT)
+    function Kz(zz) {
+      const [uz, bz, Ez] = zz, lz = -(0, iz.j)(uz), Mz = -(0, iz.j)(bz), tz = (0, iz.j)(Ez), Hz = nz.d.quaternionFromEulerZYX(lz, Mz, tz);
+      return nz.d.eulerYXZFromQuaternion(Hz)
     }
-    FT.LERP_MODE_SCHEMA_MAPPING = {
-      linear: iT.h.Linear,
-      catmullrom: iT.h.CatmullRomSpline
+    Hz.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Ez.j.Linear,
+      catmullrom: Ez.j.CatmullRomSpline
     };
-    const rT = 1 / 16;
+    const wz = 1 / 16;
 
-    function AT(TT) {
-      return [-TT[0] * rT, TT[1] * rT, TT[2] * rT]
+    function Xz(zz) {
+      return [-zz[0] * wz, zz[1] * wz, zz[2] * wz]
     }
 
-    function gT(TT) {
-      const [oT, IT, iT] = TT;
-      return [oT >= 0 ? Math.PI - oT : -Math.PI - oT, hT(IT + Math.PI), hT(iT + Math.PI)]
+    function fz(zz) {
+      const [uz, bz, Ez] = zz;
+      return [uz >= 0 ? Math.PI - uz : -Math.PI - uz, sz(bz + Math.PI), sz(Ez + Math.PI)]
     }
 
-    function hT(TT) {
-      return zT.e.mod(TT + Math.PI, 2 * Math.PI) - Math.PI
+    function sz(zz) {
+      return nz.d.mod(zz + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function wT(TT, oT) {
-      return Math.abs(zT.e.computeShortestRotation(TT[0], oT[0])) + Math.abs(zT.e.computeShortestRotation(TT[1], oT[1])) + Math.abs(zT.e.computeShortestRotation(TT[2], oT[2]))
+    function rz(zz, uz) {
+      return Math.abs(nz.d.computeShortestRotation(zz[0], uz[0])) + Math.abs(nz.d.computeShortestRotation(zz[1], uz[1])) + Math.abs(nz.d.computeShortestRotation(zz[2], uz[2]))
     }
-    const mT = new BT
+    const oz = new tz
   },
-  36501: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => WT,
-      e: () => kT,
-      h: () => iT,
-      i: () => zT
+  36577: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz,
+      g: () => iz,
+      j: () => Ez,
+      m: () => nz
     });
-    let iT = function(TT) {
-        return TT[TT.Linear = 0] = "Linear", TT[TT.CatmullRomSpline = 1] = "CatmullRomSpline", TT
+    let Ez = function(zz) {
+        return zz[zz.Linear = 0] = "Linear", zz[zz.CatmullRomSpline = 1] = "CatmullRomSpline", zz
       }({}),
-      zT = function(TT) {
-        return TT[TT.NoLoop = 0] = "NoLoop", TT[TT.LoopOnLastFrame = 1] = "LoopOnLastFrame", TT[TT.HoldOnLastFrame = 2] = "HoldOnLastFrame", TT
+      nz = function(zz) {
+        return zz[zz.NoLoop = 0] = "NoLoop", zz[zz.LoopOnLastFrame = 1] = "LoopOnLastFrame", zz[zz.HoldOnLastFrame = 2] = "HoldOnLastFrame", zz
       }({}),
-      kT = function(TT) {
-        return TT[TT.Movement = 0] = "Movement", TT[TT.Action = 1] = "Action", TT[TT.Emote = 2] = "Emote", TT[TT.Custom = 3] = "Custom", TT
+      iz = function(zz) {
+        return zz[zz.Movement = 0] = "Movement", zz[zz.Action = 1] = "Action", zz[zz.Emote = 2] = "Emote", zz[zz.Custom = 3] = "Custom", zz
       }({}),
-      WT = function(TT) {
-        return TT[TT.Start = 0] = "Start", TT[TT.Stop = 1] = "Stop", TT
+      lz = function(zz) {
+        return zz[zz.Start = 0] = "Start", zz[zz.Stop = 1] = "Stop", zz
       }({})
   },
-  4336: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => zT,
-      f: () => iT,
-      g: () => kT,
-      j: () => BT,
-      m: () => WT
+  4605: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => nz,
+      h: () => Ez,
+      i: () => iz,
+      k: () => tz,
+      n: () => lz
     });
-    const iT = ["sine", "triangle", "square", "sawtooth"],
-      zT = 55,
-      kT = {
+    const Ez = ["sine", "triangle", "square", "sawtooth"],
+      nz = 55,
+      iz = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,39 +1116,39 @@ export const modules = {
         }
       };
 
-    function WT(TT) {
-      return "string" !== typeof TT ? TT : Object.hasOwn(kT, TT) ? kT[TT] : null
+    function lz(zz) {
+      return "string" !== typeof zz ? zz : Object.hasOwn(iz, zz) ? iz[zz] : null
     }
 
-    function XT(TT, oT, IT) {
-      return Math.min(IT, Math.max(oT, TT))
+    function Mz(zz, uz, bz) {
+      return Math.min(bz, Math.max(uz, zz))
     }
 
-    function BT(TT) {
-      const oT = XT(TT.durationMs, 10, 500),
-        IT = XT(TT.attackMs, 0, oT),
+    function tz(zz) {
+      const uz = Mz(zz.durationMs, 10, 500),
+        bz = Mz(zz.attackMs, 0, uz),
         {
-          intonation: zT
-        } = TT;
+          intonation: nz
+        } = zz;
       return {
-        waveform: iT.includes(TT.waveform) ? TT.waveform : "sine",
-        pitchHz: XT(TT.pitchHz, 20, 4e3),
-        glideSemitones: XT(TT.glideSemitones, -24, 24),
-        durationMs: oT,
-        attackMs: IT,
-        releaseMs: XT(TT.releaseMs, 0, oT - IT),
-        lowpassHz: null === TT.lowpassHz ? null : XT(TT.lowpassHz, 20, 2e4),
-        volume: XT(TT.volume, 0, 2),
+        waveform: Ez.includes(zz.waveform) ? zz.waveform : "sine",
+        pitchHz: Mz(zz.pitchHz, 20, 4e3),
+        glideSemitones: Mz(zz.glideSemitones, -24, 24),
+        durationMs: uz,
+        attackMs: bz,
+        releaseMs: Mz(zz.releaseMs, 0, uz - bz),
+        lowpassHz: null === zz.lowpassHz ? null : Mz(zz.lowpassHz, 20, 2e4),
+        volume: Mz(zz.volume, 0, 2),
         intonation: {
-          variationSemitones: XT(zT.variationSemitones, 0, 6),
-          declineSemitones: XT(zT.declineSemitones, 0, 12),
-          questionRiseSemitones: XT(zT.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: XT(zT.exclaimLiftSemitones, 0, 12)
+          variationSemitones: Mz(nz.variationSemitones, 0, 6),
+          declineSemitones: Mz(nz.declineSemitones, 0, 12),
+          questionRiseSemitones: Mz(nz.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: Mz(nz.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: XT(TT.syllableMs, 25, 200)
+        syllableMs: Mz(zz.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

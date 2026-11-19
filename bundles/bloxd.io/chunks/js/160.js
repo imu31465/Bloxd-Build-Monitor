@@ -1,43 +1,40 @@
 export const id = 160;
 export const ids = [160];
 export const modules = {
-  8360: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      pageBody: () => iT
+  8606: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const iT = {
-      whatIs: ["Mine, craft and survive in a huge block world that keeps running even when you log off. Bloxd Survival is an online multiplayer SMP. You explore, dig for ores, craft tools and armour, and build a base alongside everyone else on the server. It's free and runs straight in your browser. Fight monsters, loot other players and protect your land, or set up your own private server. This is the full-danger version. If you'd rather build in peace, Peaceful is the calmer option."],
-      howToPlay: ["Gather some resources and craft your first tools. Then dig deeper for iron, gold, diamonds and moonstone to make better gear. Keep an eye out for mobs. Draugr Zombies, Skeletons and Knights, Frost Zombies and Skeletons, Cave Golems and Frost Golems all roam the world. You'll also run into wolves, bears, deer, gorillas, horses and camels.", "Other players can fight you, raid your chests and break your builds, so you'll want to protect your base. Craft a Protector from diamonds and other players can't change blocks or open chests in that chunk. In a tribe? A Tribe Protector shares that protection with your friends. And build well away from spawn, because the blocks near it reset every few hours."],
-      features: ["Persistent SMP Worlds That Save Your Progress", "Mining, Crafting and Base Building", "PvP, Looting and Raiding", "Land Protection with Protectors and Tribe Protectors", "Draugr, Golems, Frost Mobs and Wild Animals to Battle", "Free Private Servers with Owner Commands"],
-      tips: ["Build more than 200 blocks from spawn, or your base will get reset", "Get a Protector crafted from diamonds as soon as you can, to keep griefers out", "Don't log out mid-fight. If you're under 80 health and a player hit you in the last 8 seconds, you'll lose your items", "Log in to an account so your progress is saved for good", "Check in on your base at least once a month, because Protectors vanish after 30 days away", "Only let players you trust into your base", "Type /help in chat to see a list of useful commands"],
-      similarGames: ["classic_smp2", "classic_survivalDayNight", "classic_survivalGuns", "survivalFactory", "skyblock", "classic"],
+    const Ez = {
+      whatIs: ["Smash Lucky Blocks for random loot, funny surprises and some genuinely wild outcomes, then take on everyone else in a chaotic multiplayer PvP arena. In Bloxd Lucky Blocks Battlegrounds, whoever has the most kills when the arena resets wins the round. Lucky Bedwars is all about beds and Lucky Towers is about surviving on a pillar. This one's just a big arena where the Lucky Blocks never stop coming."],
+      howToPlay: ["You start in your own safe base, and nobody else can get in. Step out into the arena and a free Lucky Block lands with you every 15 seconds. Crack them open for weapons, armour, pets and surprises, then go and fight.", "Lucky Blocks, Weapon Lucky Blocks and Pet Lucky Blocks spawn on pads around the arena and come back every minute. Every 90 seconds an Ultra Lucky Block appears in the centre, and whoever grabs it first keeps it. You also get your own Ultra Lucky Block in your base every 5 minutes, and only you can see it. The arena resets every 15 minutes, and the player with the most kills wins the round. You keep your items through a reset, so you're ready to go straight away."],
+      features: ["Multiplayer Lucky Block PvP Arena", "A Free Lucky Block Every 15 Seconds", "Weapon and Pet Lucky Blocks on Pads Around the Map", "Ultra Lucky Block in the Centre Every 90 Seconds", "Your Own Ultra Lucky Block Every 5 Minutes", "Safe Personal Base Nobody Else Can Enter", "Kills Leaderboard and a New Round Every 15 Minutes"],
+      tips: ["Stay out in the arena. You don't get free Lucky Blocks while you're in your base", "The second the Ultra Lucky Block appears, head for the centre", "Open Pet Lucky Blocks for a pet that'll defend you from anyone who attacks you", "Need a breather? Go back to your base, because nobody can follow you in", "Inventory getting messy? Press F to clear it. You'll keep your armour, hotbar, arrows and firecrackers", "Pop home every 5 minutes to grab your own Ultra Lucky Block", "Watch the leaderboard on the right so you know who you need to beat"],
+      similarGames: ["luckyBedwars", "luckyTowers", "skywars", "bedwars"],
       faq: [{
-        question: "What is Bloxd Survival?",
-        answer: "A multiplayer survival game on Bloxd.io. You mine, craft, build and fight to survive in a shared block world that carries on while you're away."
+        question: "What is Lucky Blocks Battlegrounds?",
+        answer: "A multiplayer lucky block PvP arena. You open Lucky Blocks for random loot, fight other players and try to end each 15-minute round with the most kills."
       }, {
-        question: "How do I protect my base in Bloxd Survival?",
-        answer: "Craft a Protector from diamonds and place it in your base. Other players then can't change blocks or open chests in that chunk. Tribes can use Tribe Protectors instead. Protectors disappear if you're away for more than 30 days."
+        question: "How do you win Lucky Blocks Battlegrounds?",
+        answer: "Get the most kills before the arena resets. That happens every 15 minutes, and the top player wins the round."
       }, {
-        question: "Why did my build disappear?",
-        answer: "Blocks within about 200 blocks of spawn reset every few hours, so build further out if you want your base to last. Private lobbies don't have this reset."
+        question: "How do I get Lucky Blocks?",
+        answer: "You get a free one every 15 seconds while you're out in the arena. More spawn on pads around the map, and there's an Ultra Lucky Block in the centre every 90 seconds."
       }, {
-        question: "Is stealing and griefing allowed in Bloxd Survival?",
-        answer: "It is. Raiding, stealing and griefing are all part of the game, so protect your chests and only share your base with people you trust."
+        question: "What is the Ultra Lucky Block?",
+        answer: "An extra-special Lucky Block. One shows up in the middle of the arena every 90 seconds for everyone to race for, and you get your own in your base every 5 minutes as well."
       }, {
-        question: "Can I make a private server in Bloxd Survival?",
-        answer: "Yes. You can make a private server for free, invite your friends and use owner commands to run it however you like."
+        question: "What's inside Bloxd lucky blocks?",
+        answer: "Pretty much anything, from weapons and armour to pets and funny surprises. Weapon Lucky Blocks and Pet Lucky Blocks give you a better chance of a weapon or a pet."
       }, {
-        question: "What happens if I log out during a fight?",
-        answer: "Log out with less than 80 health within 8 seconds of being hit by a player and you'll lose your items. Get somewhere safe and heal up before you leave."
+        question: "Can other players attack me in my base?",
+        answer: "Nope. Other players can't get into your base, break its blocks or open its chests."
       }, {
-        question: "Will my world still be there tomorrow?",
-        answer: "Yes. Survival worlds are persistent and keep running while you're gone. Signing in to an account keeps your progress safe even if your browser data gets cleared."
-      }, {
-        question: "Which Bloxd survival mode should I play?",
-        answer: "Survival is the classic one, with mobs, PvP and raiding. Peaceful is much calmer: no hostile mobs, no PvP and no health bar. Day & Night Survival is all about the day-night cycle and a Days Survived leaderboard. Survival with Guns adds craftable guns and armed mobs."
+        question: "Do I lose my items when the Lucky Block Battlegrounds arena resets?",
+        answer: "No, your inventory stays with you. Everyone's kills go back to zero for the new round, though."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

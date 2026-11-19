@@ -1,11 +1,11 @@
 export const id = 287;
 export const ids = [287];
 export const modules = {
-  40194: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => iT
+  40607: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Ez
     });
-    const iT = String.raw`interface Map<K, V> {
+    const Ez = String.raw`interface Map<K, V> {
     clear(): void;
     /**
      * @returns true if an element in the Map existed and has been removed, or false if the element does not exist.
@@ -6409,11 +6409,11 @@ interface Math {
     f16round(x: number): number;
 }`
   },
-  40191: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => iT
+  40603: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Ez
     });
-    const iT = String.raw`import type {
+    const Ez = String.raw`import type {
 	GameApi,
 	Console,
 	EntityId,
@@ -6740,6 +6740,7 @@ declare global {
 
 	/**
 	 * Called when a player sends a command
+	 * Return true when the command was handled. Return nothing for any other: any value, false too, stops the game's own commands (e.g. /spawn) running.
 	 * A message world code sends while handling the command that ends with the player's name and then the command, its arguments or what follows its first argument, e.g. "[Whisper] Bob: hi" for "msg Alice hi", counts as their chat, as for onPlayerChat. So does one holding their name and, anywhere, what follows the first argument when that is two or more words and 8+ characters, e.g. "hi there - Bob".
 	 * @param playerId - The id of the player that sent the command
 	 * @param command - The command that the player sent
@@ -7359,4 +7360,4 @@ export {}
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

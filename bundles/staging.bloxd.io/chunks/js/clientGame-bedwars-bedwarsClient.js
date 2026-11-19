@@ -1,76 +1,76 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  38205: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      default: () => zT
+  38611: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      default: () => nz
     });
-    var iT = IT(36984);
-    const zT = function(TT, oT, IT) {
-      let zT;
+    var Ez = bz(37452);
+    const nz = function(zz, uz, bz) {
+      let nz;
       return {
         plugins: {
-          placeAgainstBeds: (0, iT.c)()
+          placeAgainstBeds: (0, Ez.c)()
         },
-        onCreate: TT => {
-          zT = TT
+        onCreate: zz => {
+          nz = zz
         },
-        onPlayerAltAction: (TT, oT, IT, iT, kT, WT) => {
-          ((TT, oT) => {
-            if (!oT || "Mesh" !== zT.getEntityType(oT)) return;
-            const IT = zT.getEntityName(oT);
-            "Upgrades" === IT ? zT.openShop(TT, !1, "Upgrades") : "Items" === IT && zT.openShop(TT, !1, "Recommended")
-          })(TT, WT)
+        onPlayerAltAction: (zz, uz, bz, Ez, iz, lz) => {
+          ((zz, uz) => {
+            if (!uz || "Mesh" !== nz.getEntityType(uz)) return;
+            const bz = nz.getEntityName(uz);
+            "Upgrades" === bz ? nz.openShop(zz, !1, "Upgrades") : "Items" === bz && nz.openShop(zz, !1, "Recommended")
+          })(zz, lz)
         }
       }
     }
   },
-  36984: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => XT
+  37452: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Mz
     });
-    var iT = IT(314),
-      zT = IT(35882),
-      kT = IT(3996);
-    const WT = ["Leaf Bed", "_Leaf Bed Head", ...iT.vc.flatMap((TT => [`${TT} Bed`, `_${TT} Bed Head`, `${TT} Strongbed`, `_${TT} Strongbed Head`]))];
+    var Ez = bz(328),
+      nz = bz(36365),
+      iz = bz(4251);
+    const lz = ["Leaf Bed", "_Leaf Bed Head", ...Ez.Jc.flatMap((zz => [`${zz} Bed`, `_${zz} Bed Head`, `${zz} Strongbed`, `_${zz} Strongbed Head`]))];
 
-    function XT() {
-      let TT;
+    function Mz() {
+      let zz;
       return {
-        onCreate(oT) {
-          TT = oT
+        onCreate(uz) {
+          zz = uz
         },
-        altVetoBlocks: WT,
-        onPlayerAttemptAltAction(oT, IT, iT, WT, XT, BT) {
-          var FT;
-          if ((0, zT.d)(TT.getMetaInfo(XT).rootName) && !TT.isEntityInteractable(BT) && (0, kT.g)(null === (FT = TT.eoT(oT)) || void 0 === FT ? void 0 : FT.typeObj.type)) return "preventAction"
+        altVetoBlocks: lz,
+        onPlayerAttemptAltAction(uz, bz, Ez, lz, Mz, tz) {
+          var Hz;
+          if ((0, nz.e)(zz.getMetaInfo(Mz).rootName) && !zz.isEntityInteractable(tz) && (0, iz.c)(null === (Hz = zz.luz(uz)) || void 0 === Hz ? void 0 : Hz.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  35882: (TT, oT, IT) => {
-    function iT(TT) {
-      return TT.includes("Leaf Bed")
+  36365: (zz, uz, bz) => {
+    function Ez(zz) {
+      return zz.includes("Leaf Bed")
     }
 
-    function zT(TT) {
-      return / Bed(?: Head)?(?:\||$)/.test(TT) && !iT(TT)
+    function nz(zz) {
+      return / Bed(?: Head)?(?:\||$)/.test(zz) && !Ez(zz)
     }
 
-    function kT(TT) {
-      return TT.includes(" Strongbed")
+    function iz(zz) {
+      return zz.includes(" Strongbed")
     }
 
-    function WT(TT) {
-      return iT(TT) || zT(TT) || kT(TT)
+    function lz(zz) {
+      return Ez(zz) || nz(zz) || iz(zz)
     }
-    IT.d(oT, {
-      d: () => WT,
-      f: () => iT,
-      g: () => kT,
-      i: () => zT
+    bz.d(uz, {
+      e: () => lz,
+      g: () => Ez,
+      j: () => iz,
+      k: () => nz
     })
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

@@ -1,368 +1,313 @@
 export const id = 129;
-export const ids = [128, 129, 131];
+export const ids = [129, 130];
 export const modules = {
-  6103: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => iT.g,
-      g: () => zT,
-      h: () => iT.q
+  6331: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Ez.i,
+      f: () => nz,
+      g: () => Ez.q
     });
-    var iT = IT(6092);
-    const zT = [!1, !0].flatMap((TT => ["terrain", "liquid", "model"].map((oT => ({
-      strict: TT,
-      program: oT
+    var Ez = bz(6307);
+    const nz = [!1, !0].flatMap((zz => ["terrain", "liquid", "model"].map((uz => ({
+      strict: zz,
+      program: uz
     })))))
   },
-  6154: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      forgetShaderPackActiveHint: () => fT,
-      isOtherApiVersion: () => RT,
-      isShaderPackActive: () => hT,
-      isShaderPackChangePending: () => eT,
-      markShaderPackChangePending: () => mT,
-      pageShaderPackValidationVersion: () => uT,
-      reconcileStoredShaderPackHint: () => ET,
-      removeShaderPack: () => gT,
-      replaceShaderPack: () => MT,
-      saveShaderPack: () => KT,
-      shaderPackNeedsCheck: () => vT,
-      storedPackOutcome: () => wT,
-      storedShaderPackFiles: () => LT,
-      toStoredShaderPack: () => DT
+  38566: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      ShaderPackPage: () => tz,
+      harnessShaderPackMode: () => dz,
+      setHarnessUrlShaderPack: () => pz,
+      shaderPackPage: () => Oz
     });
-    var iT = IT(6092),
-      zT = IT(6103),
-      kT = IT(26),
-      WT = IT(3012),
-      XT = IT(6158),
-      BT = IT(6138);
-    const FT = "shaderPackChangePending";
-    let ST = null;
-
-    function DT(TT, oT, IT) {
-      return {
-        manifest: TT.manifest,
-        files: (0, iT.t)(TT.files),
-        validation: oT,
-        ...IT && {
-          listing: IT
+    var Ez = bz(96),
+      nz = bz(33),
+      iz = (bz(3204), bz(6331), bz(3198)),
+      lz = bz(6382);
+    bz(6352);
+    const Mz = {
+      status: "none"
+    };
+    class tz {
+      constructor() {
+        this.stored = null, this.compiling = null, this.pagePack = null, this.resolved = null
+      }
+      preload() {
+        if (null === this.stored) {
+          if ((0, iz.e)(Ez.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), Hz().then((zz => {
+            zz && nz.g.removeItem(iz.b)
+          })), this.stored;
+          this.prefetchHint() && this.compiler().catch((() => {})), this.stored = this.readStored()
         }
+        return this.stored
+      }
+      prefetchHint() {
+        return (0, iz.c)(Ez.featureFlags.settings.canUseShaderPacks)
+      }
+      async loadActive() {
+        const zz = await this.load();
+        return "active" === zz.status ? zz.pack : null
+      }
+      load() {
+        return this.pagePack ??= this.read().catch((zz => (console.error("Failed to load the shader pack", zz), Mz))).then((zz => (this.resolved ??= zz, zz))), this.pagePack
+      }
+      hasNone() {
+        var zz;
+        return "none" === (null === (zz = this.resolved) || void 0 === zz ? void 0 : zz.status)
+      }
+      block(zz) {
+        this.resolved = {
+          status: "blocked",
+          messageKey: zz,
+          variants: null
+        }, this.pagePack = Promise.resolve(this.resolved)
+      }
+      compiler() {
+        return this.compiling ??= Promise.all([bz.e(74), bz.e(131), bz.e(134)]).then((() => bz(40955))).then((zz => (zz.prefetchCompiler(), zz))), this.compiling
+      }
+      async readStored() {
+        const zz = await Hz();
+        return zz && this.compiler().then((zz => zz.reconcileHint())).catch((zz => {
+          console.error("Failed to correct the shader pack hint", zz)
+        })), zz
+      }
+      async read() {
+        const zz = await this.preload();
+        return zz ? (await this.compiler()).compilePagePack(zz) : Mz
       }
     }
-
-    function LT(TT) {
-      return Object.keys(TT.files).map((oT => ({
-        path: oT,
-        source: TT.files[oT]
-      })))
-    }
-    let xT = Promise.resolve();
-
-    function cT(TT) {
-      const oT = xT.then(TT);
-      return xT = oT.catch((() => {})), oT
-    }
-
-    function KT(TT, oT) {
-      return cT((() => rT(TT, oT)))
-    }
-
-    function MT(TT, oT, IT) {
-      return cT((async () => JSON.stringify(await (0, XT.e)()) === JSON.stringify(TT) && (null === oT ? (await AT(), !0) : rT(oT, IT))))
-    }
-    async function rT(TT, oT) {
-      const IT = await kT.c.setItem(XT.d, TT);
-      return IT && CT(TT, oT), IT
-    }
-    async function AT() {
-      await kT.c.removeItem(XT.d), kT.e.removeItem(WT.e)
-    }
-
-    function gT() {
-      return cT(AT)
-    }
-
-    function hT(TT, oT) {
-      return "active" === wT(TT, oT).kind
-    }
-
-    function wT(TT, oT) {
-      var IT;
-      return null === TT ? {
-        kind: "none",
-        reason: "nothingStored"
-      } : RT(TT) ? {
-        kind: "none",
-        reason: "otherApiVersion"
-      } : !1 !== (null === (IT = TT.validation) || void 0 === IT ? void 0 : IT.ok) || TT.validation.fromRecheck ? null === oT ? {
-        kind: "none",
-        reason: "noCompiler"
-      } : vT(TT, oT) ? {
-        kind: "blocked",
-        messageKey: "shaderPack:failedUnchecked"
-      } : TT.validation.ok ? {
-        kind: "active"
-      } : {
-        kind: "blocked",
-        messageKey: "shaderPack:failedValidation"
-      } : {
-        kind: "none",
-        reason: "failedWhenLoaded"
+    async function Hz() {
+      if (!(0, iz.h)(Ez.featureFlags.settings.canUseShaderPacks)) return null;
+      try {
+        const zz = await (0, lz.e)(!0);
+        return zz || nz.g.setItem(iz.b, !1), zz
+      } catch (zz) {
+        return console.error("Failed to read the stored shader pack", zz), nz.g.removeItem(iz.b), null
       }
     }
+    const Oz = new tz;
 
-    function mT() {
-      kT.h.setItem(FT, performance.timeOrigin)
-    }
+    function pz(zz, uz) {}
 
-    function eT() {
-      return kT.h.getItem(FT) === performance.timeOrigin
-    }
-
-    function RT(TT) {
-      return !(0, zT.h)(TT.manifest.apiVersion)
-    }
-
-    function uT(TT) {
-      return ST ??= TT.ZC((0, BT.shaderPackTextures)()), ST
-    }
-
-    function vT(TT, oT) {
-      var IT;
-      return (null === (IT = TT.validation) || void 0 === IT ? void 0 : IT.headerVersion) !== uT(oT)
-    }
-
-    function ET(TT) {
-      return cT((async () => {
-        CT(await (0, XT.e)(!0), TT)
-      }))
-    }
-
-    function fT() {
-      return cT((async () => {
-        kT.e.removeItem(WT.e)
-      }))
-    }
-
-    function CT(TT, oT) {
-      hT(TT, oT) ? kT.e.setItem(WT.e, !0) : kT.e.removeItem(WT.e)
+    function dz() {
+      return null
     }
   },
-  6158: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => zT,
-      e: () => kT
+  6382: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz,
+      e: () => iz
     });
-    var iT = IT(26);
-    const zT = "shaderPack";
-    async function kT() {
-      var TT;
-      let oT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (TT = await iT.c.getItem(zT, oT)) && void 0 !== TT ? TT : null
+    var Ez = bz(33);
+    const nz = "shaderPack";
+    async function iz() {
+      var zz;
+      let uz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (zz = await Ez.d.getItem(nz, uz)) && void 0 !== zz ? zz : null
     }
   },
-  6138: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      loadShaderPackTextures: () => WT,
-      shaderPackTextures: () => XT
+  6352: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      loadShaderPackTextures: () => lz,
+      shaderPackTextures: () => Mz
     });
-    var iT = IT(6092);
-    let zT = null,
-      kT = null;
+    var Ez = bz(6307);
+    let nz = null,
+      iz = null;
 
-    function WT() {
-      return kT ??= Promise.all([IT.e(69), IT.e(193)]).then((() => IT(39278))).then((TT => {
+    function lz() {
+      return iz ??= Promise.all([bz.e(69), bz.e(198)]).then((() => bz(39645))).then((zz => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: oT,
-          textureNameToIndex: IT,
-          textureAnimationData: kT
-        } = TT;
-        return zT ??= (0, iT.k)(IT, kT, oT), zT
-      })), kT
+          FORMER_BLOCK_IMAGE_NAMES: uz,
+          textureNameToIndex: bz,
+          textureAnimationData: iz
+        } = zz;
+        return nz ??= (0, Ez.m)(bz, iz, uz), nz
+      })), iz
     }
 
-    function XT() {
-      if (null === zT) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return zT
+    function Mz() {
+      if (null === nz) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return nz
     }
   },
-  6092: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => WT,
-      f: () => kT,
-      g: () => iT,
-      k: () => cT,
-      m: () => ST,
-      q: () => zT,
-      r: () => BT,
-      t: () => FT,
-      u: () => DT
+  6307: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz,
+      e: () => iz,
+      i: () => Ez,
+      m: () => Zz,
+      n: () => Oz,
+      q: () => nz,
+      r: () => tz,
+      s: () => Hz,
+      u: () => pz
     });
-    const iT = 5;
+    const Ez = 5;
 
-    function zT(TT) {
-      return TT === iT
+    function nz(zz) {
+      return zz === Ez
     }
-    const kT = 262144,
-      WT = 256,
-      XT = 256;
+    const iz = 262144,
+      lz = 256,
+      Mz = 256;
 
-    function BT(TT) {
-      if ("object" !== typeof TT || null === TT || Array.isArray(TT)) return "The pack has no files.";
-      const oT = [];
-      for (const [IT, iT] of Object.entries(TT)) {
-        if ("string" !== typeof iT) return `${IT} isn't text.`;
-        oT.push({
-          path: IT,
-          source: iT
+    function tz(zz) {
+      if ("object" !== typeof zz || null === zz || Array.isArray(zz)) return "The pack has no files.";
+      const uz = [];
+      for (const [bz, Ez] of Object.entries(zz)) {
+        if ("string" !== typeof Ez) return `${bz} isn't text.`;
+        uz.push({
+          path: bz,
+          source: Ez
         })
       }
-      return oT.sort(((TT, oT) => ST(TT.path, oT.path))),
-        function(TT) {
-          if (0 === TT.length) return "The pack has no .wgsl files.";
-          if (TT.length > WT) return `The pack has more than ${WT} .wgsl files.`;
-          const oT = new Set;
+      return uz.sort(((zz, uz) => Oz(zz.path, uz.path))),
+        function(zz) {
+          if (0 === zz.length) return "The pack has no .wgsl files.";
+          if (zz.length > lz) return `The pack has more than ${lz} .wgsl files.`;
+          const uz = new Set;
           for (const {
-              path: IT
+              path: bz
             }
-            of TT) {
-            const TT = LT(IT);
-            if (null !== TT) return TT;
-            if (oT.has(IT)) return `The pack has two files at ${IT}.`;
-            oT.add(IT)
+            of zz) {
+            const zz = dz(bz);
+            if (null !== zz) return zz;
+            if (uz.has(bz)) return `The pack has two files at ${bz}.`;
+            uz.add(bz)
           }
-          return DT(TT) > kT ? `The pack's .wgsl files are over ${kT/1024} KB in total.` : null
-        }(oT) ?? oT
+          return pz(zz) > iz ? `The pack's .wgsl files are over ${iz/1024} KB in total.` : null
+        }(uz) ?? uz
     }
 
-    function FT(TT) {
-      const oT = {};
-      for (const IT of TT) oT[IT.path] = IT.source;
-      return oT
+    function Hz(zz) {
+      const uz = {};
+      for (const bz of zz) uz[bz.path] = bz.source;
+      return uz
     }
 
-    function ST(TT, oT) {
-      return TT < oT ? -1 : TT > oT ? 1 : 0
+    function Oz(zz, uz) {
+      return zz < uz ? -1 : zz > uz ? 1 : 0
     }
 
-    function DT(TT) {
-      const oT = new TextEncoder;
-      let IT = 0;
+    function pz(zz) {
+      const uz = new TextEncoder;
+      let bz = 0;
       for (const {
-          source: iT
+          source: Ez
         }
-        of TT) IT += oT.encode(iT).byteLength;
-      return IT
+        of zz) bz += uz.encode(Ez).byteLength;
+      return bz
     }
 
-    function LT(TT) {
-      if (!TT.toLowerCase().endsWith(".wgsl")) return `${TT} isn't a .wgsl file.`;
-      if (TT.length > XT) return `A file path is over ${XT} characters.`;
-      if (TT.includes("\\") || /[\u0000-\u001f]/.test(TT)) return `${TT} isn't a valid file path.`;
-      return TT.split("/").some((TT => "" === TT || "." === TT || ".." === TT)) ? `${TT} isn't a valid file path.` : null
+    function dz(zz) {
+      if (!zz.toLowerCase().endsWith(".wgsl")) return `${zz} isn't a .wgsl file.`;
+      if (zz.length > Mz) return `A file path is over ${Mz} characters.`;
+      if (zz.includes("\\") || /[\u0000-\u001f]/.test(zz)) return `${zz} isn't a valid file path.`;
+      return zz.split("/").some((zz => "" === zz || "." === zz || ".." === zz)) ? `${zz} isn't a valid file path.` : null
     }
-    const xT = /^(.*)\[rot\[([1-4])$/;
+    const Fz = /^(.*)\[rot\[([1-4])$/;
 
-    function cT(TT, oT) {
-      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const iT = new Map;
-      oT.forEach(((TT, oT) => {
+    function Zz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const Ez = new Map;
+      uz.forEach(((zz, uz) => {
         let {
-          numAnimStates: IT,
-          animStartIdx: zT
-        } = TT;
-        for (let kT = 1; kT < IT; kT++) iT.set(zT + kT - 1, oT)
+          numAnimStates: bz,
+          animStartIdx: nz
+        } = zz;
+        for (let iz = 1; iz < bz; iz++) Ez.set(nz + iz - 1, uz)
       }));
-      const zT = Object.entries(TT),
-        kT = new Map;
-      for (const [KT, MT] of zT) {
-        const TT = xT.exec(KT);
-        "1" === TT?.[2] && kT.set(TT[1], MT + 1)
+      const nz = Object.entries(zz),
+        iz = new Map;
+      for (const [Rz, Kz] of nz) {
+        const zz = Fz.exec(Rz);
+        "1" === zz?.[2] && iz.set(zz[1], Kz + 1)
       }
-      const WT = TT => {
-          const oT = xT.exec(TT);
-          return oT && kT.has(oT[1]) ? {
-            root: oT[1],
-            rotation: Number(oT[2]) - 1
+      const lz = zz => {
+          const uz = Fz.exec(zz);
+          return uz && iz.has(uz[1]) ? {
+            root: uz[1],
+            rotation: Number(uz[2]) - 1
           } : null
         },
-        XT = new Set(zT.map((TT => {
-          let [oT] = TT;
-          return WT(oT)?.root ?? oT
+        Mz = new Set(nz.map((zz => {
+          let [uz] = zz;
+          return lz(uz)?.root ?? uz
         }))),
-        BT = (TT, IT) => {
-          const iT = TT.replace(/_?0$/, "");
-          return (oT[IT]?.numAnimStates ?? 0) > 1 && !XT.has(iT) ? iT : TT
+        tz = (zz, bz) => {
+          const Ez = zz.replace(/_?0$/, "");
+          return (uz[bz]?.numAnimStates ?? 0) > 1 && !Mz.has(Ez) ? Ez : zz
         },
-        FT = new Map;
-      for (const [xT, KT] of zT) FT.set(KT, BT(WT(xT)?.root ?? xT, KT));
-      const ST = zT.reduce(((TT, oT) => {
-          let [, IT] = oT;
-          return Math.max(TT, IT + 1)
+        Hz = new Map;
+      for (const [Fz, Rz] of nz) Hz.set(Rz, tz(lz(Fz)?.root ?? Fz, Rz));
+      const Oz = nz.reduce(((zz, uz) => {
+          let [, bz] = uz;
+          return Math.max(zz, bz + 1)
         }), 0),
-        DT = Array.from({
-          length: ST
-        }, ((TT, oT) => ({
-          id: oT + 1,
+        pz = Array.from({
+          length: Oz
+        }, ((zz, uz) => ({
+          id: uz + 1,
           rotation: 0
         }))),
-        LT = new Map,
-        cT = new Map;
-      for (const [xT, KT] of zT) {
-        const TT = WT(xT),
-          oT = iT.get(KT);
-        if (void 0 !== oT) {
-          const IT = FT.get(oT);
-          cT.set(xT, {
-            name: xT,
-            texture: IT,
+        dz = new Map,
+        Zz = new Map;
+      for (const [Fz, Rz] of nz) {
+        const zz = lz(Fz),
+          uz = Ez.get(Rz);
+        if (void 0 !== uz) {
+          const bz = Hz.get(uz);
+          Zz.set(Fz, {
+            name: Fz,
+            texture: bz,
             kind: "frame"
-          }), TT && !cT.has(TT.root) && cT.set(TT.root, {
-            name: TT.root,
-            texture: IT,
+          }), zz && !Zz.has(zz.root) && Zz.set(zz.root, {
+            name: zz.root,
+            texture: bz,
             kind: "frame"
           });
           continue
         }
-        const IT = FT.get(KT),
-          zT = TT?.root ?? xT;
-        if (IT !== zT && cT.set(zT, {
-            name: zT,
-            texture: IT,
+        const bz = Hz.get(Rz),
+          nz = zz?.root ?? Fz;
+        if (bz !== nz && Zz.set(nz, {
+            name: nz,
+            texture: bz,
             kind: "frame"
-          }), TT) {
-          const oT = kT.get(TT.root);
-          DT[KT] = {
-            id: oT,
-            rotation: TT.rotation
-          }, LT.set(IT, oT), cT.set(xT, {
-            name: xT,
-            texture: IT,
+          }), zz) {
+          const uz = iz.get(zz.root);
+          pz[Rz] = {
+            id: uz,
+            rotation: zz.rotation
+          }, dz.set(bz, uz), Zz.set(Fz, {
+            name: Fz,
+            texture: bz,
             kind: "rotation"
           })
-        } else LT.set(IT, KT + 1)
+        } else dz.set(bz, Rz + 1)
       }
-      for (const xT of LT.keys()) cT.delete(xT);
-      for (const [xT, KT] of IT) {
-        const TT = LT.get(KT);
-        void 0 === TT || LT.has(xT) || (LT.set(xT, TT), cT.delete(xT))
+      for (const Fz of dz.keys()) Zz.delete(Fz);
+      for (const [Fz, Rz] of bz) {
+        const zz = dz.get(Rz);
+        void 0 === zz || dz.has(Fz) || (dz.set(Fz, zz), Zz.delete(Fz))
       }
       return {
-        named: [...LT].sort(((TT, oT) => {
-          let [IT] = TT, [iT] = oT;
-          return IT < iT ? -1 : IT > iT ? 1 : 0
-        })).map((TT => {
-          let [oT, IT] = TT;
+        named: [...dz].sort(((zz, uz) => {
+          let [bz] = zz, [Ez] = uz;
+          return bz < Ez ? -1 : bz > Ez ? 1 : 0
+        })).map((zz => {
+          let [uz, bz] = zz;
           return {
-            name: oT,
-            id: IT
+            name: uz,
+            id: bz
           }
         })),
-        aliases: [...cT.values()],
-        layers: DT
+        aliases: [...Zz.values()],
+        layers: pz
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

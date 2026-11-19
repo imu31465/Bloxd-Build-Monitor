@@ -1,37 +1,37 @@
 export const id = 172;
 export const ids = [172];
 export const modules = {
-  8422: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      pageBody: () => iT
+  8673: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const iT = {
-      whatIs: ["A string of unique islands, a mysterious land and 114 fish just waiting to be caught. Bloxd Fishing is a relaxing fishing simulator where you explore, catch fish and slowly uncover the secrets of the islands. Take it at your own pace. It's free, there's nothing to install, and you can be fishing in seconds."],
-      howToPlay: ["Cast your line and wait for a bite. When something bites, a catch minigame kicks in. Some fish need a well-timed click, while others use a progress bar or a gravity bar. Win the minigame and the fish is yours. Every fish has its own weight and rarity, going from Common all the way up to Mythic. Sell your catches for coins and spend them on better rods, boats and potions.", "There are 5 islands to explore: Sunhaven, Gloomtide, Eldermire, Embertide and Frostfell. Each one has its own fishing spots, like the Moonpool, Draugr Bay, The Abyss and Embertide Volcano. Unlock new islands with your coins and use the shop to hop between them. Every fish you catch goes in your Bestiary, and you can show off your favourite on your nametag. Keep an eye out for luck events too. They boost your chances of a rare catch for a while."],
-      features: ["5 Islands and Lots of Fishing Spots to Explore", "114 Fish Species to Catch", "7 Rarities, from Common to Mythic", "3 Different Catch Minigames", "16 Fishing Rods, from the Rusty Rod to the Mythic Rod", "Boats, plus Luck Potions in Four Strengths", "A Bestiary to Complete", "Show Off Your Best Fish on Your Nametag", "Random Luck Events"],
-      tips: ["Sell your early catches and save up for a better rod", "Check the rod shops on each island for new rods", "Some spots don't allow every rod, so check before you cast", "Drink a Luck Potion before you fish if you're after rare catches", "Wait untill a luck event to give yourself the best shot at a Mythic", "Your Bestiary shows you which fish you're still missing", "Get a boat if you want to head out on the water"],
-      similarGames: ["greenville", "skyblock", "oneBlock", "classic"],
+    const Ez = {
+      whatIs: ["Build a home, earn some gold and take life at your own pace. Bloxd Greenville is a chill social sandbox and life sim set in a laid-back town. You work jobs, play mini-games and hang out with other players, and there's no rush to do any of it."],
+      howToPlay: ["Press B to pick your starting house, then take the portal to the Town Square and start earning gold. Choose a job. You could help customers at the Market, smash blocks and buildings in Demolition, dig for minerals in Mining, or try Woodcutting and Farming. Jobs level up the more you work them, so your earnings grow over time.", "Spend your gold in the shop on new houses like the Castle, Treehouse, Hobbit Hole or Japanese House. Or grab an Empty Plot and build a house of your own. You can also unlock fast travel, buy flower and wool packs, and sell the stuff you collect. Keep your mood up by resting in your bed, because a happy player earns alot more. Once your home's ready, throw a party and invite everyone over."],
+      features: ["Unlock and Switch Between Houses and Plots", "Build Your Own House on an Empty Plot", "5 Jobs to Level Up: Market, Demolition, Mining, Woodcutting and Farming", "PvP Arena and Spleef Mini-Games", "Unlock Fast Travel to Get Around Quickly", "Host Parties and Choose Who Can Visit", "Turn On PvP or Build a Parkour Course at Home"],
+      tips: ["Rest in your bed when your mood drops. Low mood means lower earnings.", "A better bed means bigger earnings, so upgrade it when you can", "Sell the items you collect in the shop for extra gold", "In Mining, head back up to sell when your backpack's full", "Some minerals need a higher Mining level, so keep levelling", "Use the booster in Demolition to multi-jump up tall buildings", "Spleef needs at least 2 players, so bring a mate", "Building a parkour course? Light blue wool is the start, yellow is a checkpoint, orange is the finish and red eliminates players"],
+      similarGames: ["plots", "classic_creative", "fishing", "classic"],
       faq: [{
-        question: "What is Bloxd Fishing?",
-        answer: "A relaxing fishing game. You explore 5 islands, win catch minigames to reel in fish and fill your Bestiary with rare species."
+        question: "What is Bloxd Greenville?",
+        answer: "A town life sim where you build a home, earn gold from jobs and play mini-games with other players."
       }, {
-        question: "How many fish are in Bloxd Fishing?",
-        answer: "114 fish species, spread across 5 islands, in 7 rarities from Common to Mythic."
+        question: "How do I earn gold in Greenville?",
+        answer: "Work jobs like Market, Demolition, Mining, Woodcutting and Farming, eliminate players in the Arena and Spleef, and sell what you collect. Keep your mood up as well, because low mood cuts your earnings."
       }, {
-        question: "How do I catch Mythic fish in Bloxd Fishing?",
-        answer: "Use a better rod, drink a Luck Potion and fish during luck events. Then cross your fingers!"
+        question: "Can I build my own house in Greenville?",
+        answer: "Yes! Pick one of the ready-made houses in the shop, or unlock an Empty Plot and build from scratch."
       }, {
-        question: "Where can I get better rods?",
-        answer: "Sell your fish for coins, then buy new rods from the rod shops on the islands."
+        question: "How do I change my house in Bloxd Greenville?",
+        answer: "Unlock new houses in the Houses section of the shop, then switch to whichever one you like."
       }, {
-        question: "How do I travel between islands?",
-        answer: "You start on Sunhaven. Spend coins to unlock Gloomtide, Eldermire, Embertide and Frostfell, and once an island's unlocked, use the shop to travel there."
+        question: "Can my friends visit my house?",
+        answer: "Sure. Turn on Allow Entry, add friends to your whitelist, or host a party to invite everyone over. You also get to choose who's allowed to edit your home."
       }, {
-        question: "What are the catch minigames?",
-        answer: "There are three: a timed click, a progress bar and a gravity bar. Each fish uses one of them."
+        question: "Which mini-games are in Greenville?",
+        answer: "Spleef, where you try to make every other player fall, and the Arena, where you battle other players in PvP. Both pay out gold."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

@@ -1587,6 +1587,7 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
 .PromptGenericPopup .PromptGenericPopupBody {
   align-content: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center
 }
 
@@ -3327,6 +3328,16 @@ a {
   color: #838383
 }
 
+.LoginButtonContainer .LoginButton .LoginButtonIcon .fa-google-play {
+  color: #1dd06d;
+  font-size: 1.1em
+}
+
+.LoginButtonContainer .LoginButton .LoginButtonIcon .fa-gamepad-modern {
+  color: #838383;
+  font-size: 1.2em
+}
+
 .LoginButtonContainer .LoginButtonAction {
   align-items: center;
   box-shadow: none;
@@ -3394,17 +3405,18 @@ a {
 }
 
 .TopRightIconsContainer .TopRightIcons.TouchInGame {
+  --row-icon-box: max(28px, max(36px, 3rem) * var(--hud-menu-scale, 1));
   align-items: center;
-  font-size: calc(max(28px, max(36px, 3rem) * var(--hud-menu-scale, 1))*.66);
+  font-size: calc(var(--row-icon-box)*.66);
   gap: 4px
 }
 
 .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightIcon>.UiItemIcon {
   align-items: center;
   display: flex;
-  height: max(28px, max(36px, 3rem)*var(--hud-menu-scale, 1));
+  height: var(--row-icon-box);
   justify-content: center;
-  width: max(28px, max(36px, 3rem)*var(--hud-menu-scale, 1))
+  width: var(--row-icon-box)
 }
 
 @media(pointer:coarse) {
@@ -3426,6 +3438,14 @@ a {
 
 .TopRightIconsContainer .TopRightIcons .TopRightTrayToggle.Open>.UiItemIcon {
   color: #ffb914
+}
+
+.TopRightIconsContainer .TopRightIcons .TopRightTrayToggle.Empty {
+  visibility: hidden
+}
+
+.TopRightIconsContainer .TopRightIcons .TopRightTrayToggle.Gone {
+  display: none
 }
 
 .TopRightIconsContainer .TopRightIcons .TopRightTrayToggle .TopRightTray {
@@ -3459,14 +3479,100 @@ a {
   top: calc(var(--hud-menu-dy, 0)*var(--hud-viewport-height))
 }
 
-.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
-  --camera-icon-box: max(28px, calc(max(36px, 3rem)*var(--hud-menu-scale, 1)));
-  font-size: calc(var(--camera-icon-box)*.66)
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-emotes-scale)/var(--hud-menu-scale, 1))
 }
 
-.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
-  height: var(--camera-icon-box);
-  width: var(--camera-icon-box)
+.HudHide-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon {
+  display: none
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-emotes-scale, 1));
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-emotes-scale, 1))
+  }
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon {
+  translate: calc(var(--hud-emotes-dx, 0)*100vw) calc(var(--hud-emotes-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon {
+  border-radius: 50%
 }
 
 .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon>.ScaleOnHover {
@@ -3474,12 +3580,12 @@ a {
 }
 
 .HudHide-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
-  visibility: hidden
+  display: none
 }
 
 .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
-  height: var(--camera-icon-box);
-  width: var(--camera-icon-box)
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
 }
 
 @media(pointer:coarse) {
@@ -3491,13 +3597,21 @@ a {
 }
 
 .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
-  --camera-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-perspective-scale, 1))
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-perspective-scale, 1))
 }
 
 @media(orientation:portrait)and (max-width:600px) {
   .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
-    --camera-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-perspective-scale, 1))
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-perspective-scale, 1))
   }
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
 }
 
 .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
@@ -3523,15 +3637,15 @@ a {
 }
 
 .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
-  font-size: calc(var(--camera-key)*.5);
-  height: var(--camera-key);
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
   min-height: 0;
   min-width: 0;
   opacity: var(--hud-key-opacity, 1);
   position: fixed;
   right: var(--hud-inset-right);
   top: var(--hud-inset-top);
-  width: var(--camera-key)
+  width: var(--row-icon-key)
 }
 
 @media(pointer:coarse) {
@@ -3565,6 +3679,486 @@ a {
 }
 
 .TouchKeysRound.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-scoreboard-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon {
+  display: none
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-scoreboard-scale, 1));
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-scoreboard-scale, 1))
+  }
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon {
+  translate: calc(var(--hud-scoreboard-dx, 0)*100vw) calc(var(--hud-scoreboard-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-tasks-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon {
+  display: none
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-tasks-scale, 1));
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-tasks-scale, 1))
+  }
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon {
+  translate: calc(var(--hud-tasks-dx, 0)*100vw) calc(var(--hud-tasks-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-cosmetics-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon {
+  display: none
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-cosmetics-scale, 1));
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-cosmetics-scale, 1))
+  }
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon {
+  translate: calc(var(--hud-cosmetics-dx, 0)*100vw) calc(var(--hud-cosmetics-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-invite-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon {
+  display: none
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-invite-scale, 1));
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-invite-scale, 1))
+  }
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon {
+  translate: calc(var(--hud-invite-dx, 0)*100vw) calc(var(--hud-invite-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-settings-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon {
+  display: none
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-settings-scale, 1));
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-settings-scale, 1))
+  }
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon {
+  translate: calc(var(--hud-settings-dx, 0)*100vw) calc(var(--hud-settings-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon {
   border-radius: 50%
 }
 
@@ -3640,7 +4234,6 @@ a {
 .Dot {
   background-color: #dd0202;
   border: 1px solid #0f0f0f;
-  border-radius: 50%;
   border-radius: 0;
   box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
   display: inline-block;
@@ -3978,7 +4571,6 @@ a {
 
 .NotificationTray .NotificationTrayRows .NotificationRow .NotificationRowUnreadDot {
   background-color: #e34f4f;
-  border-radius: 50%;
   height: .85rem;
   left: .6rem;
   pointer-events: none;
@@ -5572,9 +6164,6 @@ a {
 }
 
 .LinksPopup .LinksPopupLinks {
-  display: flex;
-  flex-direction: column;
-  gap: .6rem;
   padding: 1.25rem 1.5rem 1.5rem
 }
 
@@ -5669,6 +6258,12 @@ a {
   flex-shrink: 0;
   font-size: 1.2rem;
   font-weight: 700
+}
+
+.LinkRowList {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem
 }
 
 .YoutubeIcon {
@@ -5779,7 +6374,6 @@ a {
 .TitleContainer .TitleContainerBottom .HomeTitleCcu .HomeTitleCcuDot {
   animation: HomeTitleCcuPulse 1.6s ease-in-out infinite;
   background-color: #1dd06d;
-  border-radius: 50%;
   flex-shrink: 0;
   height: .45rem;
   width: .45rem
@@ -6434,6 +7028,20 @@ a {
   white-space: nowrap
 }
 
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarShopButton {
+  position: relative
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarShopButton .SocialBarShopDot {
+  background-color: #e34f4f;
+  height: .6rem;
+  pointer-events: none;
+  position: absolute;
+  right: .3rem;
+  top: .3rem;
+  width: .6rem
+}
+
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .HomeLinkButtons {
   padding: 0 .5rem
 }
@@ -6715,7 +7323,6 @@ a {
 
 .ProfilePreview .ProfilePreviewLeft .ProfilePreviewStatusDot {
   border: .2em solid #394980;
-  border-radius: 50%;
   bottom: 0;
   height: .6em;
   position: absolute;
@@ -8187,33 +8794,33 @@ a {
   transition: transform .2s
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEnhanced {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEpic {
   border-color: rgba(110, 170, 90, .6);
   box-shadow: 0 0 19px rgba(110, 170, 90, .3), inset 0 0 8px rgba(110, 170, 90, .1);
   transition: transform .15s, border-color .15s, box-shadow .3s
 }
 
 @media(hover:hover) {
-  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEnhanced:hover {
+  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEpic:hover {
     border-color: #6eaa5a;
     box-shadow: 0 0 32px rgba(110, 170, 90, .5), inset 0 0 8px rgba(110, 170, 90, .15)
   }
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEnhanced.pad-focused {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEpic.pad-focused {
   border-color: #6eaa5a;
   box-shadow: 0 0 32px rgba(110, 170, 90, .5), inset 0 0 8px rgba(110, 170, 90, .15)
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEnhanced .CosmeticPackAdOverlay {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEpic .CosmeticPackAdOverlay {
   z-index: 2
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEnhanced .CosmeticPackAdOverlay .CosmeticPackAdTitle {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEpic .CosmeticPackAdOverlay .CosmeticPackAdTitle {
   color: #8cdc78
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdPremium {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary {
   animation: cosmeticPackAdPremiumBorderCycle 4s linear infinite;
   border-style: solid;
   border-width: 4px;
@@ -8223,16 +8830,16 @@ a {
 }
 
 @media(hover:hover) {
-  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdPremium:hover {
+  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary:hover {
     box-shadow: 0 0 24px rgba(95, 65, 120, .7), 0 0 56px rgba(50, 90, 95, .5), inset 0 0 16px rgba(95, 65, 120, .2)
   }
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdPremium.pad-focused {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary.pad-focused {
   box-shadow: 0 0 24px rgba(95, 65, 120, .7), 0 0 56px rgba(50, 90, 95, .5), inset 0 0 16px rgba(95, 65, 120, .2)
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdPremium:after {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary:after {
   animation: cosmeticPackAdStarTwinkle 3s ease-in-out infinite alternate;
   background-image: radial-gradient(1px 1px at 20% 30%, hsla(0, 0%, 100%, .8) 0, transparent 100%), radial-gradient(1px 1px at 40% 70%, hsla(0, 0%, 100%, .6) 0, transparent 100%), radial-gradient(1px 1px at 60% 15%, hsla(0, 0%, 100%, .7) 0, transparent 100%), radial-gradient(1px 1px at 80% 50%, hsla(0, 0%, 100%, .5) 0, transparent 100%), radial-gradient(1px 1px at 10% 85%, hsla(0, 0%, 100%, .6) 0, transparent 100%), radial-gradient(1px 1px at 90% 80%, hsla(0, 0%, 100%, .7) 0, transparent 100%);
   content: "";
@@ -8242,11 +8849,11 @@ a {
   z-index: 1
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdPremium .CosmeticPackAdOverlay {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdOverlay {
   z-index: 2
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdPremium .CosmeticPackAdOverlay .CosmeticPackAdTitle {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdOverlay .CosmeticPackAdTitle {
   -webkit-text-fill-color: transparent;
   animation: cosmeticPackAdPremiumNameShimmer 3s linear infinite;
   background: linear-gradient(90deg, #b388ff, #64ffda, #ffb914, #b388ff);
@@ -8597,6 +9204,11 @@ a {
   font-size: 3rem;
   font-weight: 800;
   text-align: center
+}
+
+.CosmeticShopDetail .CosmeticShopDetailHeader .CosmeticShopDetailTitleArea .CosmeticShopDetailTier {
+  font-size: 1.5rem;
+  margin-top: .3rem
 }
 
 .CosmeticShopDetail .CosmeticShopDetailHeader .CosmeticShopDetailTitleArea .CosmeticPackItemCount {
@@ -8969,23 +9581,19 @@ a {
   color: #e34f4f
 }
 
-.CosmeticShopDetail .CosmeticShopDetailFooter .CosmeticShopDetailLoginPrompt {
-  align-items: center;
-  display: flex;
-  font-size: 1.5rem;
-  gap: 1rem;
-  justify-content: center
-}
-
 .CosmeticShopDetail .CosmeticShopDetailFooter .CosmeticShopGiftRow {
   align-items: center;
-  display: flex
+  box-sizing: border-box;
+  display: flex;
+  max-width: 100%;
+  padding: 0 1rem
 }
 
 .CosmeticShopDetail .CosmeticShopDetailFooter .CosmeticShopGiftRow .CosmeticShopGiftRecipientInput {
   box-sizing: border-box;
   flex-grow: 1;
   font-size: inherit;
+  min-width: 0;
   padding: .4rem 0
 }
 
@@ -9054,7 +9662,7 @@ a {
 }
 
 .CosmeticShopDetail .CosmeticShopDetailCtaHighlight .RainbowButton {
-  animation: packCtaHighlight .8s ease-in-out 3
+  animation: loginResumeHighlight .8s ease-in-out 3
 }
 
 .CosmeticShopDetail .CosmeticShopDetailCtaHighlight .RainbowButton:before {
@@ -9066,6 +9674,45 @@ a {
   display: flex;
   gap: .5rem;
   justify-content: center
+}
+
+.CosmeticShopDetail .CosmeticShopPurchaseLabel .CosmeticShopPurchaseLabelPending {
+  background-color: rgba(26, 31, 46, .3);
+  display: inline-block;
+  height: .8em;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  width: 2em
+}
+
+.CosmeticShopDetail .CosmeticShopPurchaseLabel .CosmeticShopPurchaseLabelPending:after {
+  animation: loadingShimmer 1.8s ease-in-out infinite;
+  background-image: linear-gradient(100deg, transparent 35%, hsla(0, 0%, 100%, .07) 50%, transparent 65%);
+  content: "";
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 300%
+}
+
+.CosmeticShopDetail .CosmeticShopPurchaseLabel .CosmeticShopPurchaseLabelPending[data-off-screen]:after,
+html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchaseLabel .CosmeticShopPurchaseLabelPending:after {
+  animation-play-state: paused
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .CosmeticShopDetail .CosmeticShopPurchaseLabel .CosmeticShopPurchaseLabelPending {
+    background-image: linear-gradient(100deg, transparent 35%, hsla(0, 0%, 100%, .07) 50%, transparent 65%);
+    background-repeat: no-repeat;
+    background-size: 300% 100%
+  }
+
+  .CosmeticShopDetail .CosmeticShopPurchaseLabel .CosmeticShopPurchaseLabelPending:after {
+    display: none
+  }
 }
 
 .CosmeticShopDetail .CosmeticShopDetailHeaderCta {
@@ -9082,13 +9729,6 @@ a {
 
 .CosmeticShopDetail .CosmeticShopDetailHeaderCta>.RainbowButton .ButtonBody {
   padding: .4rem 1.2rem
-}
-
-.CosmeticShopDetail .CosmeticShopDetailHeaderCta .CosmeticShopDetailLoginPrompt {
-  align-items: center;
-  display: flex;
-  font-size: 1.5rem;
-  gap: .6rem
 }
 
 .CosmeticShopDetail .CosmeticShopDetailHeaderCta .CosmeticShopGiftToggle {
@@ -9186,20 +9826,6 @@ a {
 
   .CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailPreviewArea .CosmeticShopDetailPreview3dCue {
     inset-block: min(100% + 1rem, 100cqb - 1rem - 44px) auto
-  }
-}
-
-@keyframes packCtaHighlight {
-
-  0%,
-  to {
-    filter: none;
-    transform: scale(1)
-  }
-
-  50% {
-    filter: drop-shadow(0 0 .8rem rgba(255, 214, 102, .9));
-    transform: scale(1.08)
   }
 }
 
@@ -9359,6 +9985,20 @@ a {
   align-items: center;
   display: flex;
   gap: .6rem
+}
+
+@keyframes loginResumeHighlight {
+
+  0%,
+  to {
+    filter: none;
+    transform: scale(1)
+  }
+
+  50% {
+    filter: drop-shadow(0 0 .8rem rgba(252, 211, 115, .9));
+    transform: scale(1.08)
+  }
 }
 
 .PremiumCurrencyBundles {
@@ -9546,6 +10186,10 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   }
 }
 
+.PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleHighlight {
+  animation: loginResumeHighlight .8s ease-in-out 3
+}
+
 .PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleTier3,
 .PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleTier4 {
   --pileGlow: rgba(243, 138, 182, .28);
@@ -9570,26 +10214,6 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   }
 }
 
-.LinkAccountToBuy {
-  align-items: stretch;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: .75rem;
-  width: 100%
-}
-
-.LinkAccountToBuy .LinkAccountToBuyTitle {
-  font-size: 1.3rem;
-  text-align: center
-}
-
-.LinkAccountToBuy .LoginOptionListButtons {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center
-}
-
 .CheckoutNotice {
   color: #ff8a80;
   text-align: center
@@ -9604,6 +10228,42 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   display: flex;
   flex-direction: column;
   gap: 1rem
+}
+
+.StoreTierLabel {
+  color: #cfcfcf;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+  line-height: 1;
+  text-shadow: -1px -1px 0 #22283b, -1px 0 0 #22283b, -1px 1px 0 #22283b, 0 -1px 0 #22283b, 0 0 0 #22283b, 0 1px 0 #22283b, 1px -1px 0 #22283b, 1px 0 0 #22283b, 1px 1px 0 #22283b;
+  text-transform: uppercase;
+  white-space: nowrap
+}
+
+.StoreTierLabel .svg-inline--fa path:only-of-type,
+.StoreTierLabel.svg-inline--fa path:only-of-type {
+  stroke: #22283b;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.StoreTierLabel.StoreTierLabelRare {
+  color: #85baff
+}
+
+.StoreTierLabel.StoreTierLabelEpic {
+  color: #d49cf9
+}
+
+.StoreTierLabel.StoreTierLabelLegendary {
+  color: #fcd373
+}
+
+.StoreTierLabel.StoreTierLabelMythic {
+  color: #f38ab6
 }
 
 .SuperRankPerksTable {
@@ -11074,7 +11734,6 @@ html[data-app-covered] .WholeAppWrapper .GameThumbnailPlaceholderContainer .Game
 .GameBadgeLiveDot {
   animation: GameBadgeLivePulse 1.6s ease-in-out infinite;
   background-color: #fff;
-  border-radius: 50%;
   flex-shrink: 0;
   height: .45em;
   margin-right: .35em;
@@ -11430,7 +12089,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .ProfileCardHost .ProfileCard .ProfileCardInfo .ProfileCardHead .ProfileCardStatusRow .ProfileCardStatus .ProfileCardStatusDot {
   background-color: #838383;
   border: .15rem solid rgba(0, 0, 0, .4);
-  border-radius: 50%;
   flex-shrink: 0;
   height: .65rem;
   width: .65rem
@@ -11732,62 +12390,108 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   }
 }
 
-.GameBackgroundScreen.MakeDiscordReportBackgroundScreen,
-.GameBackgroundScreen.MakeReportBackgroundScreen {
+.GameBackgroundScreen.ReportBackgroundScreen {
+  background-color: rgba(26, 31, 46, .6);
   z-index: 17
 }
 
-.ReportKeyBox {
-  background-color: #22283b;
+.GameBackgroundScreen.ReportBackgroundScreen .ReportPanel {
+  background-color: #303a59;
   border: 1px solid #0f0f0f;
   border-radius: 0;
   box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.25rem;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%)
-}
-
-.ReportKeyBoxHeader {
-  background-color: #394980;
-  font-size: 2rem;
-  margin-bottom: 2.5rem;
+  max-width: 80vw;
   padding: 1.5rem;
   text-align: center
 }
 
-.ReportKeyBoxDescription {
+.PromptGenericPopup.ReportCard {
+  display: flex;
+  flex-direction: column;
   font-size: 1.25rem;
-  line-height: 1.5em;
-  padding: 0 2rem 1rem;
-  text-align: center
+  max-height: calc(100vh - 5rem);
+  max-height: calc(100dvh - 5rem);
+  max-width: none;
+  width: min(50rem, 80vw)
 }
 
-.ReportKeyBoxSubheader {
-  font-size: 1.75rem;
-  margin-bottom: .75rem;
-  padding-top: 1.3rem
+.PromptGenericPopup.ReportCard>* {
+  flex-shrink: 0
 }
 
-.ReportKeyInnerWrapper {
+.PromptGenericPopup.ReportCard .PromptGenericPopupSubtitle {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  padding-bottom: 0
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons {
+  grid-gap: .75rem 1.5rem;
+  align-items: start;
+  display: grid;
+  flex-shrink: 1;
+  gap: .75rem 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  min-height: 0;
+  overflow-y: auto;
+  text-align: left
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReason {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  gap: .75rem
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReason input {
+  accent-color: #ffb914;
+  flex-shrink: 0;
+  height: 1.1em;
+  margin: .15em 0 0;
+  width: 1.1em
+}
+
+.PromptGenericPopup.ReportCard .ReportCardDetails {
+  box-sizing: border-box;
+  font-size: inherit;
+  height: calc(4.5em + 1rem + 2px);
+  line-height: 1.5;
+  margin-top: 1rem;
+  padding: .5rem;
+  resize: none;
+  text-align: left;
+  width: 100%
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  .PromptGenericPopup.ReportCard .ReportCardDetails {
+    height: calc(3em + 1rem + 2px)
+  }
+}
+
+.PromptGenericPopup.ReportCard .ReportCardNote {
+  color: #fcd373;
+  padding-top: 1rem
+}
+
+.PromptGenericPopup.ReportKeyBox .ReportKeyRow {
   align-items: center;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0 1.3rem 1rem
+  font-size: 1.25rem;
+  gap: 1.5rem;
+  justify-content: center
 }
 
-.ReportKeyInner {
-  background-color: #394980;
-  border-color: #1a2139 #6578ba #6578ba #1a2139;
-  border-style: solid;
-  border-width: .2rem;
-  font-size: 1rem;
-  margin-right: 1.5rem;
+.PromptGenericPopup.ReportKeyBox .ReportKeyRow .ReportKeyInner {
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
   overflow-x: auto;
   padding: .5rem;
   -webkit-user-select: all;
@@ -11795,150 +12499,8 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   white-space: nowrap
 }
 
-.ReportKeyCopyButton {
-  width: 4rem
-}
-
-.ReportKeyCopyButton .ButtonBody {
+.PromptGenericPopup.ReportKeyBox .ReportKeyRow .ReportKeyCopyButton .ButtonBody {
   padding: .75rem 1.5rem
-}
-
-.ReportMenu {
-  background-color: #22283b;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  color: #fff;
-  display: flex;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%)
-}
-
-.MakeReportArea {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.25rem;
-  height: auto;
-  max-height: 40rem;
-  max-width: 50rem;
-  overflow-y: auto;
-  width: 50vw
-}
-
-.ReportSubTitle {
-  font-size: 1.5rem;
-  text-align: center
-}
-
-.MakeReportOptions {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  padding: 0 3rem 1rem
-}
-
-.MakeReportOptions>* {
-  flex-shrink: 0
-}
-
-.MakeReportOptions .ReportPolicyCheckList {
-  flex-shrink: 1;
-  min-height: 0;
-  overflow-y: auto
-}
-
-.ReportTitle {
-  background-color: #394980;
-  font-size: 2rem;
-  line-height: 3rem;
-  padding: .5rem 0
-}
-
-.ReportMessage,
-.ReportTitle {
-  flex-shrink: 0;
-  height: 3rem;
-  text-align: center;
-  width: 100%
-}
-
-.ReportMessage {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  overflow: hidden;
-  padding: 1rem 0 0;
-  text-overflow: ellipsis;
-  white-space: nowrap
-}
-
-.ReportLink {
-  color: #85baff
-}
-
-.ReportLink:hover {
-  color: #f2f2f2
-}
-
-.ReportExtraInfoTextArea {
-  background-color: #303a59;
-  border: 1px solid transparent;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  color: #fff;
-  font-family: var(--root-font-family);
-  font-size: 1rem;
-  line-height: 1.5rem;
-  outline: none;
-  resize: none;
-  text-align: left;
-  white-space: pre-wrap;
-  width: 100%
-}
-
-.ReportExtraInfoTextArea:focus {
-  border-color: #ffb914
-}
-
-.ReportExtraInfoWrapper {
-  align-items: center;
-  color: #fcd373;
-  padding: .5rem;
-  text-align: center
-}
-
-.ReportExtraInfoWrapper a {
-  color: #85baff;
-  font-weight: 600
-}
-
-.ReportKeyBox a {
-  color: #fcd373;
-  font-weight: 600
-}
-
-.ReportPolicyCheckList {
-  grid-gap: .5rem;
-  align-items: start;
-  display: grid;
-  gap: .5rem;
-  grid-template-columns: 1fr 1fr
-}
-
-.ReportMenuButtonList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center
-}
-
-.ReportMenuButton {
-  margin: .5rem;
-  width: 30%
-}
-
-.ReportMenuButton .ButtonBody {
-  padding: 1.1rem 2rem
 }
 
 .DebugOverlay {

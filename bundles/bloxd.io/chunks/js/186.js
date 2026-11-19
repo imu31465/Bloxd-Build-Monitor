@@ -1,230 +1,498 @@
 export const id = 186;
 export const ids = [186];
 export const modules = {
-  8763: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      MAX_BLOCK_ID: () => iT,
-      armourReductionOf: () => ZT,
-      clipSizeOf: () => qT,
-      creativeAltNames: () => Wo,
-      creativeCategoryOf: () => dT,
-      creativeItemCategories: () => XT,
-      creativeItemCategoryIcons: () => BT,
-      creativeItemIds: () => PT,
-      descriptionOf: () => OT,
-      displayNameOf: () => QT,
-      dropsNothing: () => tT,
-      enchantmentPerksOf: () => yT,
-      gunTypeOf: () => sT,
-      harvestsNullLevelOf: () => GT,
-      isDevOnlyItem: () => Io,
-      itemIsDisabled: () => zo,
-      itemTypeNameOf: () => nT,
-      itemTypeOf: () => HT,
-      rootMetaDescOf: () => bT,
-      scopeTypeOf: () => lT,
-      showInCreativeInvenOf: () => io,
-      showOnlyInCreativeCategory: () => oo,
-      showOnlyInCreativeSearch: () => To,
-      showsAimingUi: () => pT
+  8911: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => yz,
+      e: () => Xu,
+      i: () => fu,
+      j: () => wu,
+      m: () => ru,
+      n: () => nu,
+      q: () => lu,
+      r: () => tu,
+      v: () => su,
+      y: () => Mu
     });
-    const iT = 8548,
-      zT = "''WL&M3GT%cM)MK$YE1aM2'I+F+O_*c^*=%'%%%%%%%K>F>%%)K=H=%%[*W5_5['[R$ZW$S%[X&NH&L5C$W$5,KS&%]]&I%^Z&NM&b7TK$Y6G,Y>%M%M7P6$WD%Vc$LZ$OY$%+Q[&;S$/G$N&W%F$W%F$S$N&G'.F$c%`'1+%)41(1(+49$(2=b$/`N,RN,K/c_&Q0EC$O(''P`&O$%-%%^R2-*)&%;NV/ZT%IT%3XM$%%%%%_U$%b73.%%`-T-%%%%%%L9$M8X7/$K`3/R`3T+%%%%SAQ<U6W<^7V]&&)*'OAO<Y6W<^7X]&+&)*'CG%%`)W<^7VW&C[&Tc%Wc%Tc%P;'O;Uc%PH%SH%]T$`T$J;^7S&ZX%S]%VX$ZF$U5W^/TF$aU/C$C$C$C$C$O7E7K<^7RX%33333`4E7K<^7_`$++++++O1K<^7_B$aR%%D'%b_$CH$%%%G3'Y*R?SH&]I&I>RO&KM&DC%L$/Q+C.Q0QH$''_b$TS$J-%%%%%%%%%)I%)$','G6b=E7K<^7NQ&%%%%%%%%%%%%%%%CW&S$S$S$S$S$S$S$S$S$S$S$S$S$S$S$G:+++++++++++++++S+%%%%Va$*$(50)2+,7:%)5>Q?^1S$]T$XG&333333333333333U[$333333333333333CN%)@G$))))X$`$))))P%W%]H(<3$3('<)%+.3$2+YJ2HH2*$&52)6%+/2%7&6MD%S$/G$N&W%F$W%F$S$N&G'.F$c%`'O['C%3S$R'S&R$S&R$C%R'S(2R$c&S)Xc&'+%)41(1(+49$(2=Q$S$/G$N&W%F$W%F$S$N&G'.F$c%`'C]&C%3S$R'S&R$S&R$C%R'S(2R$c&S)TI'+%)41(1(+49$(2=Q)S$/G$N&W%F$W%F$S$N&G'.F$c%`'C_&C%3S$R'S&R$S&R$C%R'S(2R$c&S)JW*34$*'9(-0,+.9('CZ$34$*'9(-0,+.9('M%%%%%%%%%%%%%%%%MM'cJ)%%%%%%%%%%%%%%%G-+++++++++++++++UZ(X-%%M.DE(//////G2E7K<^7_S%/Wa$M3MT%_b'//////QY$DY$///////////////////////`Y'3333333333MD*C&C&C&C&C&C&C&C&C&C&M.C$C$C$C$C$C$C$C$C$C$FW+333333333333333333333333333333Y_,'NF2%OF2%%%%%%%%%'E8N7%%%''''''-+%)41(1(+49$(2=E$)$'%%/_%E+'%)%%)&)&)%'%%%%%%NI2)%S_12^,T,%%%[-%%%%%%%%%%%cC1+CD1(%%)$b<T%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%LD2%%E>WO%b`+%%%ab.EC&HC&U6UA%%%%LU$'5[5H<%%'%%3`;%QH$M&%UD$W$/%%%^L*cR-[J1%_M2+S$IL2%M$@%.%5%+%O$)%H$%5%.%M$%+%+%+%+)))%+N%L$%5%.%3+%)%T%%.%5%-$S%%.%5%+%)))+%)c&D$-7S%,R%Q$,=F$O$4F$W%-)))-)]0'%'%+['$W.+%)41(1(+49$(2=M<%'+%)41(1(+49$(2=%%'+%)41(1(+49$(2=V_$%%%%%%%%%%%%'%%%%%%%%%%%%%%%TK1%%%%%GY1+++++++++5UU$%%%%'%%%%3%%%%'%%%%'%%%%N$%%%%RV$EY$3JJ%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Y6)&[$&3Z$&[$>.'/'>3?.Z1'%*W2%'F3%%M0W%_I/--L+W+-D,%K*^3-VT(C[$G<G'+J'%%%%%%%%%%%%%%%U&%%%%%%%5%%6+1%%%%%%E'++++YH2%%%%%%LG2IU$C$C$C$SO$RN$C$C$WY0%%%H$'-.c)55&Y$*V%%%'%%%%%%%'%%%%%''%%%%%%%%%%%%%%%%%%%'%%'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%M$%%%%%%%%%%%%%K(Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$a'Y$Y$Y$F(Y$Y$Y$V'Y$Y$Y$]'Y$Y$Y$Z'Y$Y$Y$c'Y$Y$Y$a'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$J(Y$Y$Y$D)Y$Y$Y$c'Y$Y$Y$_'Y$Y$Y$H(Y$Y$Y$c'Y$Y$Y$E$%%%%%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%%%cH6QX(%%%%%%%%%%%%%%%%",
-      kT = "S-$SW$$R&$`F2$)$'$)$4$)$X*$I6$-$%$%$NC1$CD1$%%%$]5$b7$_G4$%$%$%$%$%$%$%$%$%$)$N+$EG&$ZT%$IT%$3$XM$$%$%$%$%$%$Z1$Y[$$[_0$'$'$'$-&+&%&)&4&1&(&1*(*+&4&9&$&(&2&=&E$&'&%&%&%&1%_%$aU3$%$D.$$$Uc&$S$$S$$S$$S$$S$$S$$S$&S$&S$$S$$S$$S$$S$$S$$S$$S$$^1$S$$]I($%$M/$+$N-$%$Z$$%$I6$3$Uc$$3$WR%$X$$T`%$F$$CC($R$$P_&$($I$$($W'$F$$WC'$R$$cZ&$F$$WE'$R$$Ob,$($[<$%$'$+$%$)$4$1$($1&(&+$4$9$$$($2$=$%$%$'$+$%$)$4$1$($1&(&+$4$9$$$($2$=$ZX$$%$%$%$%$%$%$%$%$%$Nb0$YJ2'T%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$LD2$%$%$E>$WO%$b`+$%$%$%$ab.$EC&$HC&$U6$UA$%$%$%$%$LU$$'$5$[5$H<$%$%$'$%$%$3$`;$%$QH$$M&$%$UD$$W$$/$%$%$%$^L*$FP0$QX($%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$L]%$[O1%%%S@&%'%'%'%'%%FU0$C$$C$$C$$SO$$RN$$C$$C$$[Y0%/%",
-      WT = "Crafting Table|Cauldron|Sign|Iron Nugget|Gold Nugget|Diamond Nugget|Moonstone Nugget|Iron Ingot|Gold Ingot|Draugr Knight Sword|Cooked Potato|Cooked Beef|Raw Lamb|Cooked Lamb|Gold Watermelon Stag Antlers|Bear Fur|Cave Golem Eye|Frost Golem Eye|Draugr Knight Heart|Fur Boots|Milk Bottle|Yellow Flower|Red Flower|Red Flower|Pink Flower|White Flower|Orange Flower|White Yellow Flower|Blue Flower|Blue Flower|Purple Flower|Black Flower|Cobblestone|Carved Cobblestone|Mossy Cobblestone|Snowy Cobblestone|Compressed Snow|Compressed Cobblestone|Extra Compressed Cobblestone|Super Compressed Cobblestone|Hyper Compressed Cobblestone|Ultra Compressed Cobblestone|Mega Compressed Cobblestone|Cobblestone Slab|Snowy Cobblestone Slab|Wood Hand Glider|Iron Hand Glider|Gold Hand Glider|Diamond Hand Glider|White Go Kart|White Cart|White Go Cart|Orange Go Kart|Orange Cart|Orange Go Cart|Magenta Go Kart|Magenta Cart|Magenta Go Cart|Light Blue Go Kart|Light Blue Cart|Light Blue Go Cart|Yellow Go Kart|Yellow Cart|Yellow Go Cart|Lime Go Kart|Lime Cart|Lime Go Cart|Pink Go Kart|Pink Cart|Pink Go Cart|Gray Go Kart|Gray Cart|Gray Go Cart|Grey Kart|Grey Go Kart|Grey Cart|Grey Go Cart|Light Gray Go Kart|Light Gray Cart|Light Gray Go Cart|Light Grey Kart|Light Grey Go Kart|Light Grey Cart|Light Grey Go Cart|Cyan Go Kart|Cyan Cart|Cyan Go Cart|Purple Go Kart|Purple Cart|Purple Go Cart|Blue Go Kart|Blue Cart|Blue Go Cart|Brown Go Kart|Brown Cart|Brown Go Cart|Green Go Kart|Green Cart|Green Go Cart|Red Go Kart|Red Cart|Red Go Cart|Black Go Kart|Black Cart|Black Go Cart|Off Road Jeep|Off Road Truck|Off Road Car|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Light Blue Car|Light Blue Sedan|Hoverboat|Grey Planks|Light Grey Planks|Light Grey Wool|Grey Wool|White Flag|Orange Flag|Magenta Flag|Light Blue Flag|Yellow Flag|Lime Flag|Pink Flag|Gray Flag|Grey Banner|Grey Flag|Light Gray Flag|Light Grey Banner|Light Grey Flag|Cyan Flag|Purple Flag|Blue Flag|Brown Flag|Green Flag|Red Flag|Black Flag|Draugr Flag|Skull Flag|Rainbow Flag|Grey Baked Clay|Light Grey Baked Clay|Grey Ceramic|Light Grey Ceramic|Grey Glass|Light Grey Glass|Grey Concrete|Light Grey Concrete|Grey Bed|Light Grey Bed|Grey Strongbed|Light Grey Strongbed|Small Grey Pod|Small Light Grey Pod|Grey Concrete Slab|Light Grey Concrete Slab|Grey Concrete Stairs|Light Grey Concrete Stairs|Grey Chalk|Light Grey Chalk|Grey Chalk Bricks|Light Grey Chalk Bricks|Grey Chalk Slab|Light Grey Chalk Slab|Grey Chalk Stairs|Light Grey Chalk Stairs|Grey Chalk Bricks Slab|Light Grey Chalk Bricks Slab|Grey Chalk Bricks Stairs|Light Grey Chalk Bricks Stairs|Grey Balloon|Light Grey Balloon|Firework|Rainbow Firework|White Firework|Orange Firework|Magenta Firework|Light Blue Firework|Yellow Firework|Lime Firework|Pink Firework|Gray Firework|Grey Firework|Grey Firecracker|Light Gray Firework|Light Grey Firework|Light Grey Firecracker|Cyan Firework|Purple Firework|Blue Firework|Brown Firework|Green Firework|Red Firework|Black Firework|Firework Pebble|Rainbow Firework Pebble|White Firework Pebble|Orange Firework Pebble|Magenta Firework Pebble|Light Blue Firework Pebble|Yellow Firework Pebble|Lime Firework Pebble|Pink Firework Pebble|Gray Firework Pebble|Grey Firework Pebble|Grey Firecracker Pebble|Light Gray Firework Pebble|Light Grey Firework Pebble|Light Grey Firecracker Pebble|Cyan Firework Pebble|Purple Firework Pebble|Blue Firework Pebble|Brown Firework Pebble|Green Firework Pebble|Red Firework Pebble|Black Firework Pebble|Grey Wood Helmet|Grey Wood Chestplate|Grey Wood Leggings|Grey Wood Boots|Grey Wood Gauntlets|Light Grey Wood Helmet|Light Grey Wood Chestplate|Light Grey Wood Leggings|Light Grey Wood Boots|Light Grey Wood Gauntlets|Command Block|Mob Net|Catcher Net|Pet Net|Pet Catcher|Mob Pig Spawn Egg|Mob Cow Spawn Egg|Mob Sheep Spawn Egg|Mob Horse Spawn Egg|Mob Camel Spawn Egg|Mob Iron Goofy Golem Spawn Egg|Mob Gold Goofy Golem Spawn Egg|Mob Diamond Goofy Golem Spawn Egg|Mob Moonstone Goofy Golem Spawn Egg|Mob Deer Spawn Egg|Mob Slime Spawn Egg|Mob Wolf Spawn Egg|Mob Wildcat Spawn Egg|Mob Spirit Golem Spawn Egg|Mob Spirit Wolf Spawn Egg|Mob Spirit Bear Spawn Egg|Mob Spirit Stag Spawn Egg|Mob Spirit Gorilla Spawn Egg|Mob Bear Spawn Egg|Mob Stag Spawn Egg|Mob Gold Watermelon Stag Spawn Egg|Mob Gorilla Spawn Egg|Mob Cave Golem Spawn Egg|Mob Draugr Zombie Spawn Egg|Mob Draugr Skeleton Spawn Egg|Mob Frost Golem Spawn Egg|Mob Frost Zombie Spawn Egg|Mob Frost Skeleton Spawn Egg|Mob Draugr Knight Spawn Egg|Mob Draugr Huntress Spawn Egg|Mob Magma Golem Spawn Egg|Mob Draugr Warper Spawn Egg|Mob Frost Wraith Spawn Egg|Mob Draugr Reaver Spawn Egg|Mob Stalker Spawn Egg|Mob Crone Spawn Egg|Mob Iron Guardian Spawn Egg|Mob Gold Guardian Spawn Egg|Mob Diamond Guardian Spawn Egg|Mob Moonstone Guardian Spawn Egg|Mob Tiki Terror Spawn Egg|Pig Mob Spawner Block|Cow Mob Spawner Block|Sheep Mob Spawner Block|Horse Mob Spawner Block|Camel Mob Spawner Block|Iron Goofy Golem Mob Spawner Block|Gold Goofy Golem Mob Spawner Block|Diamond Goofy Golem Mob Spawner Block|Moonstone Goofy Golem Mob Spawner Block|Deer Mob Spawner Block|Slime Mob Spawner Block|Wolf Mob Spawner Block|Wildcat Mob Spawner Block|Spirit Golem Mob Spawner Block|Spirit Wolf Mob Spawner Block|Spirit Bear Mob Spawner Block|Spirit Stag Mob Spawner Block|Spirit Gorilla Mob Spawner Block|Bear Mob Spawner Block|Stag Mob Spawner Block|Gold Watermelon Stag Mob Spawner Block|Gorilla Mob Spawner Block|Cave Golem Mob Spawner Block|Draugr Zombie Mob Spawner Block|Draugr Skeleton Mob Spawner Block|Frost Golem Mob Spawner Block|Frost Zombie Mob Spawner Block|Frost Skeleton Mob Spawner Block|Draugr Knight Mob Spawner Block|Draugr Huntress Mob Spawner Block|Magma Golem Mob Spawner Block|Draugr Warper Mob Spawner Block|Frost Wraith Mob Spawner Block|Draugr Reaver Mob Spawner Block|Stalker Mob Spawner Block|Crone Mob Spawner Block|Iron Guardian Mob Spawner Block|Gold Guardian Mob Spawner Block|Diamond Guardian Mob Spawner Block|Moonstone Guardian Mob Spawner Block|Tiki Terror Mob Spawner Block|Barrier|Yellow Light Block|White Light Block|Red Light Block|Purple Light Block|Pink Light Block|Orange Light Block|Magenta Light Block|Lime Light Block|Light Gray Light Block|Light Blue Light Block|Green Light Block|Gray Light Block|Cyan Light Block|Brown Light Block|Blue Light Block|Black Light Block|Sky Light Block|Empty Mob Spawner Block|XRay Vision Potion|X Ray Vision Potion|Splash XRay Vision Potion|Splash X Ray Vision Potion|Experience Orb|EXP Orb|Enchanting Orb|Experience Potion|Enchanting Potion|Bottle of Enchanting|EXP Potion|Experience Potion II|Enchanting Potion II|Bottle of Enchanting II|EXP Potion II|Splash Experience Potion|Splash Enchanting Potion|Splash Bottle of Enchanting|Splash EXP Potion|Splash Experience Potion II|Splash Enchanting Potion II|Splash Bottle of Enchanting II|Splash EXP Potion II|Enchanting Arrow|EXP Arrow|Sheep Painting|Cow Painting|Pig Painting|Horse Painting|Camel Painting|Wolf Painting|Deer Painting|Wildcat Painting|Cow Milk|Cows Milk|Sheep Milk|Sheeps Milk",
-      XT = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"],
-      BT = {
-        building: "Stone Bricks",
-        colours: "Magenta Wool",
-        nature: "Grass Block",
-        decoration: "Lantern",
-        utility: "Workbench",
-        tools: "Iron Pickaxe",
-        combat: "Iron Sword",
-        food: "Apple",
-        mobs: "Pig Spawn Orb",
-        materials: "Iron Bar",
-        worldTools: "Code Block"
-      };
-    var FT = IT(2844),
-      ST = IT(2848);
-    const DT = Object.freeze([]);
-
-    function LT(TT) {
-      let oT = null;
-      return IT => {
-        var iT;
-        return oT ??= (0, ST.w)(TT, 10081), null !== (iT = oT[IT]) && void 0 !== iT ? iT : 0
+    var Ez = bz(20),
+      nz = bz(96),
+      iz = bz(1595),
+      lz = bz(4193),
+      Mz = bz(2646),
+      tz = bz(2663),
+      Hz = bz(33);
+    const {
+      windows: Oz,
+      target: pz,
+      stepDown: dz,
+      stepUp: Fz,
+      noGain: Zz
+    } = tz.e, Rz = 1e3 / 60 * 1.08, Kz = 1e3 / 55, wz = 1e3 / 45, Xz = 1e3 / 30 * .92, fz = 1e3 / 30 * 1.08;
+    class sz {
+      constructor() {
+        this.lastMs = -1, this.runBand = -1, this.runLength = 0, this.votes60 = 0, this.votesMid = 0, this.sumMidMs = 0, this.votes30 = 0
+      }
+      frame(zz) {
+        const uz = zz - this.lastMs;
+        this.lastMs = zz;
+        const bz = function(zz) {
+          if (zz <= 0 || zz > 100) return -1;
+          if (zz <= Rz) return 0;
+          if (zz >= Kz && zz <= wz) return 1;
+          return zz >= Xz && zz <= fz ? 2 : -1
+        }(uz);
+        bz !== this.runBand && (this.runBand = bz, this.runLength = 0), bz < 0 || ++this.runLength < 3 || (0 === bz ? this.votes60++ : 1 === bz ? (this.votesMid++, this.sumMidMs += uz) : this.votes30++)
+      }
+      hz() {
+        return this.votes60 >= 60 ? 60 : this.votesMid >= 60 ? 1e3 * this.votesMid / this.sumMidMs : this.votes30 >= 60 ? 30 : 60
       }
     }
-
-    function xT(TT, oT, IT) {
-      const iT = LT(TT);
-      let zT = null,
-        kT = [];
-      return TT => {
-        const WT = iT(TT);
-        if (0 !== WT) return null === zT && (zT = oT.split(ST.s), kT = new Array(zT.length)), kT[WT - 1] ??= IT(zT[WT - 1])
+    const rz = Oz.windowMs,
+      oz = Oz.settleMs,
+      Nz = Oz.graceMs,
+      vz = Oz.minIntervals,
+      xz = 1e3 * vz / rz,
+      Jz = Zz.backoffMs,
+      Az = Zz.maxMs;
+    class Tz {
+      constructor(zz, uz) {
+        let {
+          lowest: bz,
+          startStep: Ez = 0,
+          noGain: nz = null,
+          upWait: iz = null
+        } = uz;
+        this.hooks = zz, this.step = void 0, this.lowest = void 0, this.phase = {
+          kind: "watch"
+        }, this.noGain = void 0, this.downUntilMs = void 0, this.downBackoffMs = void 0, this.upFailures = void 0, this.upUntilMs = void 0, this.climbing = void 0, this.climbed = null, this.cleanRun = 0, this.dropRun = 0, this.dropRunMasked = !1, this.dropRunFpsSum = 0, this.refresh = new sz, this.wasMeasuring = !1, this.lastFrameMs = -1, this.resizedMs = Number.NEGATIVE_INFINITY, this.quietUntilMs = 0, this.graceUntilMs = 0, this.windowStartMs = -1, this.lastDrawnMs = 0, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = !1, this.slowStartMs = -1, this.slowIntervals = 0, this.log = [], this.lastTargetFps = pz.maxFps, this.lowest = bz, this.step = Math.min(Ez, bz), this.noGain = nz, this.climbing = this.step > 0;
+        const lz = bz + 1;
+        this.downUntilMs = new Array(lz).fill(0), this.downBackoffMs = new Array(lz).fill(0), this.upFailures = new Array(lz).fill(0), this.upUntilMs = new Array(lz).fill(0), null !== iz && iz.step >= 0 && iz.step < lz && (this.upUntilMs[iz.step] = iz.untilMs)
       }
-    }
-
-    function cT(TT) {
-      return TT
-    }
-
-    function KT(TT) {
-      return TT === ST.f ? null : (0, ST.y)(TT)
-    }
-    const MT = xT("T$$#&#$T'#$F$#$$%$B#$>#$##=$$1$.)$*#$(&$)#)$N$#$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$+##$&#$$%$*/$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$T$&$($$$*$(#$$1$$1$$1$$1$$1$$1$$)$$)$$)$$)$$)$*)$N2#$.($$1$$)$T$$$,#$4#$)##$V'#$)#[$$+#$#$($$'#%$&$$N)*$4#$$1$$)$:$$##1$##.$#*####*C%$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$,($$($&)$################################2R$$################1$##########-$####################/$##+$(#$$1$$)$T%$$########1$##+$################################################################-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#)$2&$(#$(#$$1$$)$<$$.#$####/$####/$####3$##)#'#'#'#)#'#'#'#'#'#'#'##$B#$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#1$###########$$R&$##)$**$**$0*$%##$%##$%#$#####$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%#)$9#9$9#1$$.$*)$*#$*#$*#$*#$*3#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)#,F'$$5$$&$(2$##U$$&2$*5$X$#$H%.$##-$(2$####$&#######'$@#$##$2#######################################b?$1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#IW&$b$I*b$J*b$K*b$L*b$M*b$N*b$O*b$P*b$Q*b$R*b$S*b$T*b$U*b$V*b$W*b$X*b$Y*b$Z*b$[*b$]*b$^*b$_*b$`*b$a*b$b*b$c*b$C+b$D+b$E+b$F+b$G+b$H+Z'&$##b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b&$b&#;$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#########)$J&6$)#;$%#b$$)E,U&$##U&$$#$c&($I$#Y$$1#O%$####-$)I,Q'$b&#)$b&#b($##[+$'#5$$#$$#$$#$$#$$#$$#$$#$B#$$2$,#$$'$$#$##%$##3$##'$########`%$7###S%$##################+$###$##%$###$##%$###$##%$###$##+$###$##%$###$##%$###$##+$###$##'$##%$###$##%$###$##%$###$##%$###$##/$#######$###$##/$$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##S$$c&2$################################################################################################################################U)$2P'$###$##K%$##5$##O&$##C'$##+$##^&$##########A$##########################################)#)#######################################)#)#######################################)#)#######################################)#)###############Y)$##G$$############W'$##W$$", '*|forget-Me-Not|ladder|wheat|jackO\'Lantern|bookshelf|rice|cotton|rocket|cornSeeds|corn|chest|ice|yellowSpawnBlock|whiteSpawnBlock|redSpawnBlock|purpleSpawnBlock|pinkSpawnBlock|orangeSpawnBlock|magentaSpawnBlock|limeSpawnBlock|lightGraySpawnBlock|lightBlueSpawnBlock|greenSpawnBlock|graySpawnBlock|cyanSpawnBlock|brownSpawnBlock|blueSpawnBlock|blackSpawnBlock|redGeneratorSpawnBlock|blueGeneratorSpawnBlock|limeGeneratorSpawnBlock|yellowGeneratorSpawnBlock|cyanGeneratorSpawnBlock|whiteGeneratorSpawnBlock|pinkGeneratorSpawnBlock|grayGeneratorSpawnBlock|diamondGeneratorSpawnBlock|moonstoneGeneratorSpawnBlock|oreGeneratorSpawnBlock|redGoalBlock|blueGoalBlock|pigMobSpawnerBlock|cowMobSpawnerBlock|sheepMobSpawnerBlock|caveGolemMobSpawnerBlock|draugrZombieMobSpawnerBlock|draugrSkeletonMobSpawnerBlock|emptyMobSpawnerBlock|frostGolemMobSpawnerBlock|frostZombieMobSpawnerBlock|frostSkeletonMobSpawnerBlock|draugrKnightMobSpawnerBlock|wolfMobSpawnerBlock|bearMobSpawnerBlock|deerMobSpawnerBlock|stagMobSpawnerBlock|goldWatermelonStagMobSpawnerBlock|colouredChalk^colour=$t(colour:yellow)|colouredChalk^colour=$t(colour:white)|colouredChalk^colour=$t(colour:red)|colouredChalk^colour=$t(colour:purple)|colouredChalk^colour=$t(colour:pink)|colouredChalk^colour=$t(colour:orange)|colouredChalk^colour=$t(colour:magenta)|colouredChalk^colour=$t(colour:lime)|colouredChalk^colour=$t(colour:light_gray)|colouredChalk^colour=$t(colour:light_blue)|colouredChalk^colour=$t(colour:green)|colouredChalk^colour=$t(colour:gray)|colouredChalk^colour=$t(colour:cyan)|colouredChalk^colour=$t(colour:brown)|colouredChalk^colour=$t(colour:blue)|colouredChalk^colour=$t(colour:black)|colouredChalkBricks^colour=$t(colour:yellow)|colouredChalkBricks^colour=$t(colour:white)|colouredChalkBricks^colour=$t(colour:red)|colouredChalkBricks^colour=$t(colour:purple)|colouredChalkBricks^colour=$t(colour:pink)|colouredChalkBricks^colour=$t(colour:orange)|colouredChalkBricks^colour=$t(colour:magenta)|colouredChalkBricks^colour=$t(colour:lime)|colouredChalkBricks^colour=$t(colour:light_gray)|colouredChalkBricks^colour=$t(colour:light_blue)|colouredChalkBricks^colour=$t(colour:green)|colouredChalkBricks^colour=$t(colour:gray)|colouredChalkBricks^colour=$t(colour:cyan)|colouredChalkBricks^colour=$t(colour:brown)|colouredChalkBricks^colour=$t(colour:blue)|colouredChalkBricks^colour=$t(colour:black)|colouredChalkSlab^colour=$t(colour:yellow)|colouredChalkSlab^colour=$t(colour:white)|colouredChalkSlab^colour=$t(colour:red)|colouredChalkSlab^colour=$t(colour:purple)|colouredChalkSlab^colour=$t(colour:pink)|colouredChalkSlab^colour=$t(colour:orange)|colouredChalkSlab^colour=$t(colour:magenta)|colouredChalkSlab^colour=$t(colour:lime)|colouredChalkSlab^colour=$t(colour:light_gray)|colouredChalkSlab^colour=$t(colour:light_blue)|colouredChalkSlab^colour=$t(colour:green)|colouredChalkSlab^colour=$t(colour:gray)|colouredChalkSlab^colour=$t(colour:cyan)|colouredChalkSlab^colour=$t(colour:brown)|colouredChalkSlab^colour=$t(colour:blue)|colouredChalkSlab^colour=$t(colour:black)|colouredChalkBricksSlab^colour=$t(colour:yellow)|colouredChalkBricksSlab^colour=$t(colour:white)|colouredChalkBricksSlab^colour=$t(colour:red)|colouredChalkBricksSlab^colour=$t(colour:purple)|colouredChalkBricksSlab^colour=$t(colour:pink)|colouredChalkBricksSlab^colour=$t(colour:orange)|colouredChalkBricksSlab^colour=$t(colour:magenta)|colouredChalkBricksSlab^colour=$t(colour:lime)|colouredChalkBricksSlab^colour=$t(colour:light_gray)|colouredChalkBricksSlab^colour=$t(colour:light_blue)|colouredChalkBricksSlab^colour=$t(colour:green)|colouredChalkBricksSlab^colour=$t(colour:gray)|colouredChalkBricksSlab^colour=$t(colour:cyan)|colouredChalkBricksSlab^colour=$t(colour:brown)|colouredChalkBricksSlab^colour=$t(colour:blue)|colouredChalkBricksSlab^colour=$t(colour:black)|gorillaMobSpawnerBlock|wildcatMobSpawnerBlock|draugrHuntressMobSpawnerBlock|magmaGolemMobSpawnerBlock|lightbluePortal|lightgrayPortal|horseMobSpawnerBlock|tomato|carrotSeeds|potatoSeeds|strawberries|sugarCane|lettuce|coffeeBean|cauliflower|parsnip|blueberries|redCabbage|beetrootSeeds|whiteBanner|orangeBanner|magentaBanner|lightBlueBanner|yellowBanner|limeBanner|pinkBanner|grayBanner|lightGrayBanner|cyanBanner|purpleBanner|blueBanner|brownBanner|greenBanner|redBanner|blackBanner|draugrBanner|spiritGolemMobSpawnerBlock|spiritWolfMobSpawnerBlock|spiritBearMobSpawnerBlock|spiritStagMobSpawnerBlock|spiritGorillaMobSpawnerBlock|draugrWarperMobSpawnerBlock|smallMagentaPod|smallLightGrayPod|smallRedPod|frostWraithMobSpawnerBlock|draugrReaverMobSpawnerBlock|smallWhitePod|smallOrangePod|smallLightBluePod|smallYellowPod|smallLimePod|smallPinkPod|smallGrayPod|smallCyanPod|smallPurplePod|smallBluePod|smallBrownPod|smallGreenPod|smallBlackPod|skullBanner|rainbowBanner|directionalArrow^colour=$t(colour:white)|directionalArrow^colour=$t(colour:orange)|directionalArrow^colour=$t(colour:magenta)|directionalArrow^colour=$t(colour:light_blue)|directionalArrow^colour=$t(colour:yellow)|directionalArrow^colour=$t(colour:lime)|directionalArrow^colour=$t(colour:pink)|directionalArrow^colour=$t(colour:gray)|directionalArrow^colour=$t(colour:light_gray)|directionalArrow^colour=$t(colour:cyan)|directionalArrow^colour=$t(colour:purple)|directionalArrow^colour=$t(colour:blue)|directionalArrow^colour=$t(colour:brown)|directionalArrow^colour=$t(colour:green)|directionalArrow^colour=$t(colour:red)|directionalArrow^colour=$t(colour:black)|=Smoke Block|stalkerMobSpawnerBlock|croneMobSpawnerBlock|slimeMobSpawnerBlock|ironGuardianMobSpawnerBlock|goldGuardianMobSpawnerBlock|diamondGuardianMobSpawnerBlock|moonstoneGuardianMobSpawnerBlock|camelMobSpawnerBlock|=Rare Lucky Block|=Super Lucky Block|=Rare Weapon Lucky Block|=Super Weapon Lucky Block|=Building Lucky Block|=Rare Building Lucky Block|=Super Building Lucky Block|=Armour Lucky Block|=Rare Armour Lucky Block|=Super Armour Lucky Block|=Tools Lucky Block|=Rare Tools Lucky Block|=Super Tools Lucky Block|=Food Lucky Block|=Rare Food Lucky Block|=Super Food Lucky Block|=Potion Lucky Block|=Rare Potion Lucky Block|=Super Potion Lucky Block|=Block Destroyer TNT|colouredChalkStairs^colour=$t(colour:yellow)|colouredChalkStairs^colour=$t(colour:white)|colouredChalkStairs^colour=$t(colour:red)|colouredChalkStairs^colour=$t(colour:purple)|colouredChalkStairs^colour=$t(colour:pink)|colouredChalkStairs^colour=$t(colour:orange)|colouredChalkStairs^colour=$t(colour:magenta)|colouredChalkStairs^colour=$t(colour:lime)|colouredChalkStairs^colour=$t(colour:light_gray)|colouredChalkStairs^colour=$t(colour:light_blue)|colouredChalkStairs^colour=$t(colour:green)|colouredChalkStairs^colour=$t(colour:gray)|colouredChalkStairs^colour=$t(colour:cyan)|colouredChalkStairs^colour=$t(colour:brown)|colouredChalkStairs^colour=$t(colour:blue)|colouredChalkStairs^colour=$t(colour:black)|colouredChalkBricksStairs^colour=$t(colour:yellow)|colouredChalkBricksStairs^colour=$t(colour:white)|colouredChalkBricksStairs^colour=$t(colour:red)|colouredChalkBricksStairs^colour=$t(colour:purple)|colouredChalkBricksStairs^colour=$t(colour:pink)|colouredChalkBricksStairs^colour=$t(colour:orange)|colouredChalkBricksStairs^colour=$t(colour:magenta)|colouredChalkBricksStairs^colour=$t(colour:lime)|colouredChalkBricksStairs^colour=$t(colour:light_gray)|colouredChalkBricksStairs^colour=$t(colour:light_blue)|colouredChalkBricksStairs^colour=$t(colour:green)|colouredChalkBricksStairs^colour=$t(colour:gray)|colouredChalkBricksStairs^colour=$t(colour:cyan)|colouredChalkBricksStairs^colour=$t(colour:brown)|colouredChalkBricksStairs^colour=$t(colour:blue)|colouredChalkBricksStairs^colour=$t(colour:black)|tikiTerrorMobSpawnerBlock|mapleFence|pineFence|plumFence|cedarFence|aspenFence|jungleFence|palmFence|pearFence|cherryFence|spectralFence|mangoFence|noticeboard|mapleFenceGate|pineFenceGate|plumFenceGate|cedarFenceGate|aspenFenceGate|jungleFenceGate|palmFenceGate|pearFenceGate|cherryFenceGate|spectralFenceGate|mangoFenceGate|ironGoofyGolemMobSpawnerBlock|goldGoofyGolemMobSpawnerBlock|diamondGoofyGolemMobSpawnerBlock|moonstoneGoofyGolemMobSpawnerBlock|autoBench|homesteadCore|starframe|reactorFrame|collider|jetChestplate|atomicSpire|fluidPipe|waterPipe|=Artisan Axe|bowlOfCranberries|=Snowball Launcher|=Bullet|rpg|=67 Base Projectile|=67 Boosted Projectile|=Capitano Grenade|=Scatter Pellet|=Compass|=Chunk Map|=Teleport Heart|=Frost Shard|=Molten Cog|=Choir Bell|=Siege Core|=Flywheel|=Radiant Spark|=Brood Sac|=Bandolier|slownessPotionII|splashSlownessPotionII|poisonPotionII|splashPoisonPotionII|weaknessPotionII|splashWeaknessPotionII|instantDamagePotionII|splashInstantDamagePotionII|speedPotionII|splashSpeedPotionII|defensePotionII|splashDefensePotionII|strengthPotionII|splashStrengthPotionII|jumpPotionII|splashJumpPotionII|splashKnockbackPotionII|regenerationPotionII|splashRegenerationPotionII|instantHealingPotionII|splashInstantHealingPotionII|hastePotionII|splashHastePotionII|shieldPotionII|splashShieldPotionII|xRayVisionPotion|splashXRayVisionPotion|arrowOfXRayVision|miningYieldPotionII|splashMiningYieldPotionII|=AK-47|=M16|=MP40|=TAR-21|=M1911|=One Shot Pistol|=Double Barrel|=AWP|=Deagle|=Striker-12|=VSR|=DMR|=Minigun|=FMR|=SKAR|=Block-19|=Mini Izu|=GPMG|yellowPaintballExplosive|whitePaintballExplosive|redPaintballExplosive|purplePaintballExplosive|pinkPaintballExplosive|orangePaintballExplosive|magentaPaintballExplosive|limePaintballExplosive|lightGrayPaintballExplosive|lightBluePaintballExplosive|greenPaintballExplosive|grayPaintballExplosive|cyanPaintballExplosive|brownPaintballExplosive|bluePaintballExplosive|blackPaintballExplosive|yellowStickyPaintballExplosive|whiteStickyPaintballExplosive|redStickyPaintballExplosive|purpleStickyPaintballExplosive|pinkStickyPaintballExplosive|orangeStickyPaintballExplosive|magentaStickyPaintballExplosive|limeStickyPaintballExplosive|lightGrayStickyPaintballExplosive|lightBlueStickyPaintballExplosive|greenStickyPaintballExplosive|grayStickyPaintballExplosive|cyanStickyPaintballExplosive|brownStickyPaintballExplosive|blueStickyPaintballExplosive|blackStickyPaintballExplosive|yellowSeekingPaintballExplosive|whiteSeekingPaintballExplosive|redSeekingPaintballExplosive|purpleSeekingPaintballExplosive|pinkSeekingPaintballExplosive|orangeSeekingPaintballExplosive|magentaSeekingPaintballExplosive|limeSeekingPaintballExplosive|lightGraySeekingPaintballExplosive|lightBlueSeekingPaintballExplosive|greenSeekingPaintballExplosive|graySeekingPaintballExplosive|cyanSeekingPaintballExplosive|brownSeekingPaintballExplosive|blueSeekingPaintballExplosive|blackSeekingPaintballExplosive|yellowQuickPaintballExplosive|whiteQuickPaintballExplosive|redQuickPaintballExplosive|purpleQuickPaintballExplosive|pinkQuickPaintballExplosive|orangeQuickPaintballExplosive|magentaQuickPaintballExplosive|limeQuickPaintballExplosive|lightGrayQuickPaintballExplosive|lightBlueQuickPaintballExplosive|greenQuickPaintballExplosive|grayQuickPaintballExplosive|cyanQuickPaintballExplosive|brownQuickPaintballExplosive|blueQuickPaintballExplosive|blackQuickPaintballExplosive|auraXpPotionII|splashAuraXpPotionII|worldBuilderWand|barnacleJaw|triPointedNeedlefish|cowsMilk|sheepsMilk|[{"str":"Common Lottery Ticket","style":{"color":"#4d4d4d"}}]|[{"str":"Uncommon Lottery Ticket","style":{"color":"#A9FF21"}}]|[{"str":"Rare Lottery Ticket","style":{"color":"#84E0FF"}}]|[{"str":"Epic Lottery Ticket","style":{"color":"#800080"}}]|[{"str":"Legendary Lottery Ticket","style":{"color":"#ffa500"}}]|=Sword Upgrade|=Armour Upgrade|=Tools Upgrade|=Clovers|=Void Wings|=Lucky Bomb|=Unlucky Bomb|=Swap Orb|=Golden Clover|=Amethite|=Amethite Fragment|=Amethite Pickaxe|=Amethite Axe|=Amethite Spade|=Amethite Sword|=Amethite Hoe|=Amethite Helmet|=Amethite Chestplate|=Amethite Leggings|=Amethite Boots|=Amethite Gauntlets|=Amethite Bow|=Amethite Crossbow|=Amethite Crossbow Charged|=Amethite Spear|=Amethite Dagger|=Amethite Boomerang|=Amethite Club|=Amethite Mace|=Amethite Whip|=Magmasteel|=Magmasteel Fragment|=Magmasteel Pickaxe|=Magmasteel Axe|=Magmasteel Spade|=Magmasteel Sword|=Magmasteel Hoe|=Magmasteel Helmet|=Magmasteel Chestplate|=Magmasteel Leggings|=Magmasteel Boots|=Magmasteel Gauntlets|=Magmasteel Bow|=Magmasteel Crossbow|=Magmasteel Crossbow Charged|=Magmasteel Spear|=Magmasteel Dagger|=Magmasteel Boomerang|=Magmasteel Club|=Magmasteel Mace|=Magmasteel Whip|=Rubellite|=Rubellite Fragment|=Rubellite Pickaxe|=Rubellite Axe|=Rubellite Spade|=Rubellite Sword|=Rubellite Hoe|=Rubellite Helmet|=Rubellite Chestplate|=Rubellite Leggings|=Rubellite Boots|=Rubellite Gauntlets|=Rubellite Bow|=Rubellite Crossbow|=Rubellite Crossbow Charged|=Rubellite Spear|=Rubellite Dagger|=Rubellite Boomerang|=Rubellite Club|=Rubellite Mace|=Rubellite Whip|=Serpentite|=Serpentite Fragment|=Serpentite Pickaxe|=Serpentite Axe|=Serpentite Spade|=Serpentite Sword|=Serpentite Hoe|=Serpentite Helmet|=Serpentite Chestplate|=Serpentite Leggings|=Serpentite Boots|=Serpentite Gauntlets|=Serpentite Bow|=Serpentite Crossbow|=Serpentite Crossbow Charged|=Serpentite Spear|=Serpentite Dagger|=Serpentite Boomerang|=Serpentite Club|=Serpentite Mace|=Serpentite Whip|=Cracked Rubellite Pickaxe|depositSeedCopper|depositSeedGold|depositSeedVoltite|depositSeedCoal|depositSeedIron|depositSeedStone|depositSeedUranium', KT),
-      rT = xT("$J$#$&$$F&$23$$J$$$A$$c$$,^'$&H2$$'$$'$$0$*9$$R$#49$$($$&$$%$$$#,C(##$$#$&U)#$#$$($B+#2R$$1#7$%#+$6#$$)$J$O$#*-$1#M1$$a$$&'#%$&)$$4$.&$(;$*%$$$$$#$$#$,Z/$$T&$&V$$$Z-$###$%/V$O$$&2$*5#X$#$V%.$&2$&#$*&$$5$$E$#c2R1$&$$cc$c]$$$R%$*G=$]/=$2:$J5-$b*#G$$+#%$+##$#4+#+##$+#%$$*$$*$$^%$$#$&#$$#$$#$&#$*#$&#$$#$$'$$^$###%8<#$########[%#$#$7###'#/$###$##/$##%$#D$#A#D$#A#D$#A#D$#A%$$#$*$$##################+$###$##$#$###$##$#$###$##$#$###$##$#$##$#$###$##$#$###$##$#$###$##&#$$#$###$##&#$##$#$###$##$#$###$##$#$###$##$#$###$##&#$&#$&#$$#$###$##&#$&#$2H$$A#B2#A#A#AL%A#A#A#A#b&####################################################################################$2P'$###$##$#$C$##$C$##$$%$$*$$($$#$$6$$%$(E%$$&$F$*$.##-#-#-#-#-#A$+#A###################$###3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$###3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$#Q'#3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$#Q'#3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$1R'#63>#a&#b&#C'#D'#E'#C'$'Q'#63>#a&#b&#C'#D'#E'#C'$'Q'#63>#a&#b&#C'#D'#E'#C'$'R'#63>#a&#b&#C'#D'#E'#C'$,#W&$#######T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#6b$$+#)$", "*|emptyBookshelfDescription|=Prevents other factions from changing blocks and\nopening chests in the placed chunk|spikesDescription|fatMushroomDescription|spawnBlockDescription|teamGeneratorSpawnBlockDescription|goalBlockDescription|enchantingTableDescription|antlersDescription|ceilingClimbableDescription|jumpPadDescription|rocketShipDescription|=Place it to start a 30 second fuse. When it goes off, every placed block on the map is removed. Lucky blocks survive.|fluidPipeDescription|pickaxeDescription|axeDescription|spadeDescription|swordDescription|hoeDescription|throwableItemDescription|=Rapidly fires snowballs!|=The base projectile for the 67 character in Heroes v Brainrots|=The boosted projectile for the 67 character in Heroes v Brainrots|=A small explosive grenade thrown by Capitano Explovissimo in Heroes v Brainrots|=Primary spread shot from Scatter in Heroes v Brainrots|bowDescription|compassDescription|=Drop into any locked chunk to instantly unlock it.|foodDescription|watermelonSliceDescription|melonSliceDescription|rawFoodDescription|=The still-beating core of a Blink. Salvaged from a Warp Stalker.|=A splinter of cryogenic shell that never melts. Salvaged from a Frost Revenant.|=A gear from an overload mechanism, seized mid-cycle. Salvaged from a Magma Warden.|=The toll that calls the dead. Salvaged from a Hollow Choir.|=The firing heart of a barrage. Salvaged from a Siege Engine.|=The wheel a room-mill spins around. Salvaged from a Carousel.|=A mote of the failure state itself. Salvaged from Breach Zero.|=A sac filled with an acidic bile. Still full. Salvaged from a Broodfather.|=Her charge belt. Three still on it, and nobody has volunteered to count again. Salvaged from a Deadlock.|slownessPotionDescription|splashSlownessPotionDescription|poisonPotionDescription|splashPoisonPotionDescription|weaknessPotionDescription|splashWeaknessPotionDescription|instantDamagePotionDescription|splashInstantDamagePotionDescription|milkPotionDescription|speedPotionDescription|splashSpeedPotionDescription|defensePotionDescription|splashDefensePotionDescription|strengthPotionDescription|splashStrengthPotionDescription|jumpPotionDescription|splashJumpPotionDescription|splashKnockbackPotionDescription|regenerationPotionDescription|splashRegenerationPotionDescription|instantHealingPotionDescription|splashInstantHealingPotionDescription|hastePotionDescription|splashHastePotionDescription|shieldPotionDescription|splashShieldPotionDescription|miningYieldPotionDescription|splashMiningYieldPotionDescription|balloonDescription|popupTowerDescription|paintballGunDescription|paintballDescription|paintballExplosiveDescription|stickyPaintballExplosiveDescription|seekingPaintballExplosiveDescription|quickPaintballExplosiveDescription|paintBowDescription|pigSpawnOrbDescription^mob=Pig|cowSpawnOrbDescription^mob=Cow|sheepSpawnOrbDescription^mob=Sheep|horseSpawnOrbDescription^mob=Horse|camelSpawnOrbDescription^mob=Camel|ironGoofyGolemSpawnOrbDescription^mob=Iron Goofy Golem|goldGoofyGolemSpawnOrbDescription^mob=Gold Goofy Golem|diamondGoofyGolemSpawnOrbDescription^mob=Diamond Goofy Golem|moonstoneGoofyGolemSpawnOrbDescription^mob=Moonstone Goofy Golem|deerSpawnOrbDescription^mob=Deer|slimeSpawnOrbDescription^mob=Slime|wolfSpawnOrbDescription^mob=Wolf|wildcatSpawnOrbDescription^mob=Wildcat|spiritGolemSpawnOrbDescription^mob=Spirit Golem|spiritWolfSpawnOrbDescription^mob=Spirit Wolf|spiritBearSpawnOrbDescription^mob=Spirit Bear|spiritStagSpawnOrbDescription^mob=Spirit Stag|spiritGorillaSpawnOrbDescription^mob=Spirit Gorilla|bearSpawnOrbDescription^mob=Bear|stagSpawnOrbDescription^mob=Stag|goldWatermelonStagSpawnOrbDescription^mob=Gold Watermelon Stag|gorillaSpawnOrbDescription^mob=Gorilla|caveGolemSpawnOrbDescription^mob=Cave Golem|draugrZombieSpawnOrbDescription^mob=Draugr Zombie|draugrSkeletonSpawnOrbDescription^mob=Draugr Skeleton|frostGolemSpawnOrbDescription^mob=Frost Golem|frostZombieSpawnOrbDescription^mob=Frost Zombie|frostSkeletonSpawnOrbDescription^mob=Frost Skeleton|draugrKnightSpawnOrbDescription^mob=Draugr Knight|draugrHuntressSpawnOrbDescription^mob=Draugr Huntress|magmaGolemSpawnOrbDescription^mob=Magma Golem|draugrWarperSpawnOrbDescription^mob=Draugr Warper|frostWraithSpawnOrbDescription^mob=Frost Wraith|draugrReaverSpawnOrbDescription^mob=Draugr Reaver|stalkerSpawnOrbDescription^mob=Stalker|croneSpawnOrbDescription^mob=Crone|ironGuardianSpawnOrbDescription^mob=Iron Guardian|goldGuardianSpawnOrbDescription^mob=Gold Guardian|diamondGuardianSpawnOrbDescription^mob=Diamond Guardian|moonstoneGuardianSpawnOrbDescription^mob=Moonstone Guardian|tikiTerrorSpawnOrbDescription^mob=Tiki Terror|auraXpPotionDescription|splashAuraXpPotionDescription|firecrackerDescription|firecrackerPebbleDescription|spearDescription|daggerDescription|boomerangDescription|clubDescription|maceDescription|whipDescription|=Take it to the Lottery stall in the spawn hub to redeem it for a reward.|clockDescription|=Use to permanently advance your Sword tier for this match. Share spare upgrades with your team.|=Use to permanently advance your Armour tier for this match. Share spare upgrades with your team.|=Use to permanently advance your Pickaxe and Axe tier for this match. Share spare upgrades with your team.|=Earned from lucky blocks, kills and beds. Spend them at your base's Lucky Trader and Lucky Upgrades.|=Keep one in your inventory. Falling into the void uses it up and puts you back on solid ground.|=A random lucky effect for everyone it splashes, you included. Usually good!|=A random unlucky effect for everyone it splashes, you included. Usually bad!|=Throw near an enemy or mob to swap places with them.|=A shiny golden four-leaf clover.|elementalShardDescription|forgeFragmentDescription|=Ruby calls it cracked, not beaten. A sturdy pickaxe ready for the stubborn stone in her mine.|swordBladeDescription|swordGuardDescription|swordHandleDescription|cagedMobDescription", KT),
-      AT = new Map,
-      gT = new Map;
-    let hT = -1;
-
-    function wT(TT, oT, IT) {
-      hT !== (0, FT.h)() && (hT = (0, FT.h)(), AT.clear(), gT.clear());
-      let iT = TT.get(oT);
-      return void 0 === iT && (iT = IT(), void 0 !== iT && TT.set(oT, iT)), iT
-    }
-    const mT = xT("_$GN+###Y$#b'#%$=%/#I'%##7%))+%[%(#%9##%)(#%9(#%?(I$%'('%%('%%('%%('%#(%%%('%%('%%('%#(%%%('%#('%%('%%('%%('%%('%#(%%#(%%#(%%%('%#(%%%(#%I%##%%)M&%A)A%A)b&%b&(Q.%)(#%)(W%%#(1%#(-%#(#%#(Q$%#(G(%/(#%1('%I%$b%%+$+&3(-$%%+$+&3(-$%%+$+&3(-$%%+$+&3(-$?&#%#$3(-$+&#%#$3(-$+&#%#$3(-$+&#%#$3(-$+&+%#$;%#$I$%#$1%#$5%+&W$%#$O$%/&#$-%#$'%", "Tool|Item|Armour|GrayscaleArmour|Chargeable|FullAuto|Directional|Gun", cT),
-      eT = xT("J,##O$##$#%/$#%/$#%/$-%9$1%#$)%A$#%b&$1%-$[+%S%$%%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%9$M2#+%-$#%/$#%/$#%/$#%%$-&/$-%+$9%3$-%E$$b%%I%$A%#$%%=$b(&-$-&#%/$#%/$#%/$#%%$-&)%'$-%#$7%M'$E+%#$%%#$?%K)$5%#$-&#%%$#%+$#%/$#%/$#%/$#%%$-&Q$%#$-&'%#$C$%C%$b.&1%#$-&'%+$#%/$#%/$#%/$#%%$-&)%%$5%/$%%E$$O%%%$#%-$#%#$#%#$^<%#$b)%#$+%)$1%)$1%)$)%%$G*%#$I1%A$+%O$$#%#$A%)$U%%#$b%%A$E%%#$#%%$I$%'$5%%$#%#$-&U$%I$$bO$#)$bV('CQ$%+$Y/%G%$1&;$1&I($)&=$A&U%$#%#$-%1$7%^)$Y$&=$b&%1$b&%)$b*%5$)%+$^$###Y$#b'#%(=)/#I')##7))-+)[%,#)9##)),#)9,#)?,I$)',')%,')%,')%,')#,%)%,')%,')%,')#,%)%,')#,')%,')%,')%,')%,')#,%)#,%)#,%)%,')#,%)%,#)I%##)%-M&)A-A)A-b&)b&,Q.)),#)),W%)#,1)#,-)#,#)#,Q$)#,G()/,#)1,')I%(b%)+(+*3,-(%)+(+*3,-(%)+(+*3,-(%)+(+*3,-(?*#)#(3,-(+*#)#(3,-(+*#)#(3,-(+*#)#(3,-(+*+)#(;)#(I$)#(1)#(5)+*W$)#(O$)/*#(-)#(')", "CubeBlock|TwoDBlock|SlabBlock|StairsBlock|TwoDTool|TwoDItem|TwoDArmour|GrayscaleTwoDArmour|Chargeable|FullAuto|Directional|Gun", cT),
-      RT = xT(".M]+#%#%#%#%#%#%#%#%%%#%#%#%%%#%#%#", "30|20|16|1|2|5|7|12|8|100|21|24|22|75", Number),
-      uT = xT("&FO+#####%####################$#%#,#%#####,%&#)#,#.#%#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1$bC$'#*#/#,#&$8'#*#/#,#&$8'#*#/#,#&$8'#*#/#,#&$1'#*#&#/#,#'#*#&#/#,#'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$_$-#######&$U$######7#'#)#4", "0.07|0.09|0.11|0.13|0.18|0.21|0.24|0.22|0.1|0.14|0.16|0.19|0.05|0.06|0.08|0.25|0.12|0.2|0|0.27|0.15", Number),
-      vT = xT(">M]+#%#)$)%9$", "none|sniper", cT),
-      ET = xT("*M]+#%#%#%#%$%#)&%(%%%$%%)$)'%&", "semi_automatic|submachine|rifle|pistol|shotgun", cT),
-      fT = LT("]%cU+#c&M.$4_1$44$44$44$49$4/$4/$4/$"),
-      CT = LT("$a&#$9$Z$K?$&;$$[($(c($6Y&$$)$$$$&G%$*$$$*$(V*$Z$V$$$#$$#$&+$$#$$%$$$$$$$$$$&$$$#$$($,E0$$T&$&V$$D$`-$(%$6*$$%$T$M$$$L%$6;$$$$$2$$W:$*D^%$$N%$BB$BB$BB$BB$BB$BB$BB$BB$BB$BB$BB$2O'$2*$2*$2*$2*$2*$2*$2*$2*$2*$:*$0=$&^$$$N$$(Q$$$]$$.#$&6$$K%$:.$*I$$*&$*S+$"),
-      jT = xT("$ZN+#######%#$ZD$$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%($U$(.1($'(.1($'(.1($'(.1($2(.+($((.+($((.+($((.+($C&($@$", "1|2|3|4|5", (TT => "" === TT ? null : Number(TT))),
-      JT = xT("$F(#$%$$&#$)%$)%$0$$,$$%$$&$$6$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$@$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$'$$I$%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$.#$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$2%$)%$)%$,&$.$$.$$'$$&$$%$$'$$7$$%$$%$$%$$%$$%$$%$$%$$5#$%#$9#$J$&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$-&$'%$)%$)%$,&$'$$:$$G%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$B<$$R$$$%$$-$$%$$;&$0%$)%$)%$,&$'$$%$$%$$%$$%$$%$$&&$/$$%$$&$$F$&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'$$%$$&&$/%$)%$)%$,&$'$$)$$N%$$,&$%#$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$;$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$'$$%$$%$$%$$%$$%$$%$$%$$%$$'$$X$&$%*$5&$%*$I$$$&$$&$$&$$&$$6$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$&$$%$$*&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$U$&$'&$'$$)#$7$$%$$%$$%$$%$$?+$8$$%$$%$$%$$%+$7#$'#$+$$%$$%$$%$$%$$6&$'&$&$$&$$%$$%$$%$$9&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$Q^%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$V3$$b$$$F%%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$-$$%$$%$$%$$%$$%$$0$$%$$%$$%$$%$$%$$%$$%$$&$$%$$%$$%$$%$$P$$$*$$)$$)$$)$$)$$&$$>$$+$$)$$A$$8$$)$$)$$)$$)$$*$$B$$,$$%$$%$$%$$%$$&$$-$$?+$b$$$)+$O)$0E(#$[%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$+#*..:#.@#.,6.*#.&#.&%.$%.($.&$.&%.$%.&$.$%.&%.&%.&%.&%.$%.$$.$$.&$.$%.&$.$P).$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$^(.*&.$M$.$*.$(.$#.$:.0U%.2#.$C&.$%.$8.$%.$8.$%.$8.$%.$=.$%.$3.$%.$3.$%.$3.$%.", "meta,rot1|meta,rot1,closed|meta,rot1,bot|meta,rot1,books6|meta,rot1,books0|meta,rot1,empty|meta,rot1,top|meta,conn,none|meta,input,none|meta,output,none|meta,charging1|meta,dir1", (TT => TT.split(ST.k).join(ST.s))),
-      UT = xT(",GN+####$/#+#+###+#4####1+##S(+$$#2A#$H%#$%0$%0$%0$%0$%0$%0$%0$%0$%0$U.0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0:C/(:.($R$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$(?+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$'$,X$+$=(09+", "Break Speed,Momentum,Mining Yield,Mining Aura|Break Speed,Momentum|Break Speed,Momentum,Lumber Aura|Break Speed,Momentum,Digging Aura|Damage,Attack Speed,Critical Damage|Damage,Attack Speed,Critical Damage,Horizontal Knockback|Break Speed,Momentum,Farming Yield,Farming Aura|Protection,Health,Health Regen|Protection,Health,Health Regen,Knockback Resist|Protection,Health,Health Regen,Stomp Damage|Horizontal Knockback,Vertical Knockback,Damage|Firecracker Cooldown,Firecracker Boost,Gliding Speed|Arrow Speed,Arrow Damage,Quick Charge", (TT => Object.freeze(TT.split(",")))),
-      aT = xT(",$#0#$-#-$&#%2#%(#$$$$'%B$##%b$&)$$#$#%A&$&#)%,$%#$#%$&%###%:#$$$$##$%)$%%#)$1).)$$#)$))%$#)$%$$&)B%&#)#&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%$$'$&#$$%%$/)$))$))$))$))$))$))$))$))$))$))$))$))$))$))$))&)$#)$%%#$,#%2%%($$$*$$#%#$#)$1)$1)$1)$1)$1)$1)$))$))$))$))$))$)$#%%$$#$$'%$'%$'%$'%$'%$'%$'%$'$$'$$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%(-$#%#$#)$1)$)$$$%$'$-%##*%$$%$$'$$'$#%$%%$%$$'$B#&#)$%)$%)$%)$%)$%)$%)$%)B%*#)$%)$9)$)$$($($$$%)#$&$$$-&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&&($$#%%$$')$1)$)$$$%$')$%$.$)%$$R%)$))$))$))$))$))$))$))$))$))$))$))$))$))$))$))*,$$0'B#'$R$)$%'4%'$%'6%'#%5#%%$'+#$#%'$$#%#$#)$1)$)$$$%$')$%)$%)$%)$%)$%)&%$*'$)+#*$%*$%+#)$%%C%&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$')&)$$'$(#$$#%#$#)$1)$)$$$%$')(%$$'*#$%+/$%+-)6#)#%#+$H$$$#$#).&$#*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*,9+$+*$1*$1*$1*$1*$1*$1*$*+&F$)#*$%*$$*$$*&%+#*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$9*$E$)$)*$&*$&*$&*$&*$6*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$3*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*B'&+)C$'$$)$&)#$$'$$'*(%$$Q'+$:%%+*&+'$$#$$'*$&$$%+$**$=%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$+$$K_%*$I$+#*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$F'*$1*$1*$1*$1*$1*$1*$1*$1*$1*$1**1+&:%#$.Q)%$+%<R1#,#,-(-,Y)(#,8##&#-*%##-*#,$#,$#,$#,$#,$#,$#,$#,B#,$2,,#,$',$#(&#(4#((#($&($%($%($%($%($%($%($%($%($%($*(#,@..D$#.'-%+'-$++%-+.#().#().#().#(%.#().#().#().#(%.#().#('.#().#().#().#().#(%.#(%.#(%.#().#(%.#(#.&#($#($#($#($#($%($#($#($#($#($#($#($#($#($#($#($#($#-%(#,#(B&,V%R)+.U'.K%((#-#.1-#.--#.#-#.Q$-#.G'-',$&,0*.#(1.#(#-,#(,#(,#(,#(,#(,#($8,$),&2-',#(#,-($%(.&(%-',#(#,-($%(.&(%-',#(#,-($%(.&(%-',#(#,-($%(L$&(#-%($%(8&(#-%($%(8&(#-%($%(8&(#-%($%(8&(+-", "nature|building|colours|worldTools|combat|utility|decoration|mobs|tools|materials|food", cT),
-      YT = xT("$b&#$R)#$)%$)%$)%$)%$1%$)%$)%$)%$)%$)%$)%$)%$)%$)%$_7%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$a$#$T%%$)%$)%$)%$)%$1%$)%$)%$)%$)%$)%$)%$)%$)%$)%$>#B#'$V$&4%'$%'6%'$)#$b%#$%)$G$%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$`'%$9%$9%$9%$9%$Q$%$9%$9%$9%$9%$9%$9%$9%$9%$9%$9%&U(&$&%$$%$$%$'%$$%$$%$$%$'%$$%$$%$$%$$%$$%$$%$$%$$%$9%$E$&D$[*$$$&$&&$P5%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%*CZ&)c'G;%&N$%<#%(G$&$%&&#&&Q)&$#&$#&$#&$#&$%&$#&$#&$#&$#&$#&$#&$#&$#&$#&$#&$#&&,%<#%*W))$-)BS(%B$%", "6|2|8|10|17|9", Number);
-
-    function QT(TT) {
-      const oT = MT(TT);
-      return null !== oT ? oT : wT(AT, TT, (() => {
-        const oT = (0, FT.g)(TT);
-        return void 0 === oT ? void 0 : (0, ST.C)(oT)
-      }))
-    }
-
-    function OT(TT) {
-      const oT = rT(TT);
-      return null !== oT ? oT : wT(gT, TT, (() => {
-        var oT;
-        return null !== (oT = (0, ST.B)(QT(TT))) && void 0 !== oT ? oT : void 0
-      }))
-    }
-
-    function HT(TT) {
-      return mT(TT)
-    }
-
-    function nT(TT) {
-      return eT(TT)
-    }
-
-    function qT(TT) {
-      return RT(TT)
-    }
-
-    function ZT(TT) {
-      return uT(TT)
-    }
-
-    function lT(TT) {
-      return vT(TT)
-    }
-
-    function sT(TT) {
-      return ET(TT)
-    }
-
-    function tT(TT) {
-      return 0 !== CT(TT)
-    }
-
-    function GT(TT) {
-      return jT(TT)
-    }
-
-    function pT(TT) {
-      return 0 !== fT(TT)
-    }
-
-    function bT(TT) {
-      const oT = JT(TT);
-      if (void 0 === oT || oT.startsWith(ST.o)) return null === oT || void 0 === oT ? void 0 : oT.slice(ST.o.length);
-      const IT = (0, FT.g)(TT);
-      return void 0 === IT ? void 0 : `${IT}${ST.s}${oT}`
-    }
-
-    function yT(TT) {
-      var oT;
-      return null !== (oT = UT(TT)) && void 0 !== oT ? oT : DT
-    }
-    let NT = null;
-
-    function PT() {
-      if (null === NT) {
-        const TT = [],
-          oT = new ST.t(zT);
-        let IT = 0;
-        for (; !oT.done;) IT += (0, ST.F)(oT.next()), TT.push(IT);
-        NT = Object.freeze(TT)
+      currentStep() {
+        return this.step
       }
-      return NT
-    }
-
-    function dT(TT) {
-      return aT(TT)
-    }
-
-    function VT(TT, oT) {
-      var IT;
-      return 0 !== ((null !== (IT = YT(TT)) && void 0 !== IT ? IT : 0) & oT)
-    }
-
-    function To(TT) {
-      return VT(TT, ST.b.OnlyInSearch)
-    }
-
-    function oo(TT) {
-      return VT(TT, ST.b.OnlyInCategory)
-    }
-
-    function Io(TT) {
-      return VT(TT, ST.b.DevOnly)
-    }
-
-    function io(TT) {
-      return !VT(TT, ST.b.HiddenByDefault) && void 0
-    }
-
-    function zo(TT, oT, IT, iT) {
-      var zT;
-      const kT = null !== (zT = YT(TT)) && void 0 !== zT ? zT : 0;
-      return 0 !== (kT & ST.b.DisabledInPublicLobbies) && oT || 0 !== (kT & ST.b.DisabledInProduction) && !0 || !IT || !iT && 0 !== (kT & ST.b.DevOnly)
-    }
-    let ko = null;
-
-    function Wo() {
-      if (null === ko) {
-        const TT = WT.split(ST.s),
-          oT = new Map,
-          IT = new ST.t(kT);
-        let iT = 0,
-          zT = 0;
-        for (; !IT.done;) {
-          iT += (0, ST.F)(IT.next());
-          const kT = IT.next();
-          oT.set(iT, Object.freeze(TT.slice(zT, zT + kT))), zT += kT
+      frame(zz, uz, bz) {
+        let Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (this.refresh.frame(zz), !bz) return void this.leave(zz);
+        const nz = zz - this.lastFrameMs,
+          iz = this.resizeStall(zz);
+        if (nz > 2e3 && !iz && this.leave(this.lastFrameMs), !this.wasMeasuring) return this.wasMeasuring = !0, this.lastFrameMs = zz, this.quietUntilMs = Math.max(this.quietUntilMs, zz + Nz), this.graceUntilMs = zz + Nz, this.windowStartMs = -1, void(this.slowStartMs = -1);
+        nz > 500 && (this.hitch(zz), iz && (this.slowStartMs = -1)), this.lastFrameMs = zz, zz >= this.quietUntilMs && this.countWindow(zz, uz, Ez) || uz && zz >= this.graceUntilMs && this.countSlow(zz)
+      }
+      countWindow(zz, uz, bz) {
+        if (this.windowStartMs < 0) return !!uz && (this.windowStartMs = zz, this.lastDrawnMs = zz, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = bz, !1);
+        if (this.windowMasked ||= bz, !uz) return this.windowHeld++, !1;
+        this.windowIntervals++, this.windowMaxIntervalMs = Math.max(this.windowMaxIntervalMs, zz - this.lastDrawnMs), this.lastDrawnMs = zz;
+        const Ez = zz - this.windowStartMs;
+        if (Ez < rz) return !1;
+        const nz = this.windowIntervals,
+          iz = 1e3 * nz / Ez,
+          lz = this.windowHeld,
+          Mz = this.windowMaxIntervalMs,
+          tz = this.windowMasked;
+        if (this.windowStartMs = -1, nz < vz) return !1;
+        this.slowStartMs = -1;
+        const Hz = this.targetFps(),
+          Oz = iz >= Hz * pz.cleanShare && Mz <= pz.cleanMaxIntervalMs && (0 === lz || iz >= Hz);
+        return this.decide(iz, Oz, iz < Hz * pz.dropShare, tz, zz), !0
+      }
+      targetFps() {
+        return this.lastTargetFps = Math.min(pz.maxFps, this.refresh.hz()), this.lastTargetFps
+      }
+      countSlow(zz) {
+        if (this.slowStartMs < 0) return this.slowStartMs = zz, void(this.slowIntervals = 0);
+        this.slowIntervals++;
+        const uz = zz - this.slowStartMs;
+        if (uz < 1e4) return;
+        const bz = 1e3 * this.slowIntervals / uz;
+        this.slowStartMs = -1, this.countSlow(zz), bz < xz && (this.windowStartMs = -1, this.decide(bz, !1, !0, !1, zz))
+      }
+      resizeStall(zz) {
+        return this.lastFrameMs - this.resizedMs <= oz && zz - this.lastFrameMs <= 15e3
+      }
+      paused(zz) {
+        this.refresh.frame(zz), zz - this.lastFrameMs > 2e3 && (this.quietUntilMs = Math.max(this.quietUntilMs, zz + Nz), this.graceUntilMs = zz + Nz), this.lastFrameMs = zz, this.slowStartMs = -1, this.hitch(zz)
+      }
+      resized(zz) {
+        this.resizedMs = zz, this.hitch(zz)
+      }
+      hidden() {
+        this.leave(this.lastFrameMs)
+      }
+      leave(zz) {
+        this.wasMeasuring && (this.wasMeasuring = !1, this.left(zz))
+      }
+      hitch(zz) {
+        this.windowStartMs = -1, this.quietUntilMs = Math.max(this.quietUntilMs, zz + oz)
+      }
+      left(zz) {
+        this.windowStartMs = -1, this.slowStartMs = -1, this.cleanRun = 0, this.resetDropRun();
+        const uz = this.phase;
+        "watch" !== uz.kind && (this.phase = {
+          kind: "watch"
+        }, "down" === uz.kind && (this.downUntilMs[uz.from] = Math.max(this.downUntilMs[uz.from], zz + Jz)), this.setStep(uz.from, 0, zz, "left"), "up" === uz.kind && (this.climbed = uz.fromClimbed))
+      }
+      decide(zz, uz, bz, Ez, nz) {
+        const iz = this.phase;
+        switch (iz.kind) {
+          case "watch":
+            return void this.watch(zz, uz, bz, Ez, nz);
+          case "down":
+            if (iz.judged++, iz.fpsSum += zz, iz.dropped ||= bz, iz.judged < dz.judgeWindows) return;
+            return void(!iz.dropped || iz.fpsSum / iz.judged >= iz.fromFps * dz.keepGain ? this.keepDown(iz.from, iz.fpsSum / iz.judged, nz) : this.noGainFrom(iz.from, iz.fromFps, nz));
+          case "up":
+            return uz ? void(++iz.judged >= Fz.trialWindows && (this.watchAt(this.step), this.climbed = {
+              from: iz.from,
+              heldWindows: 0,
+              below: iz.fromClimbed
+            }, this.record(nz, zz, "up_kept"))) : (Ez ? (this.watchAt(iz.from), this.setStep(iz.from, zz, nz, "spoiled")) : this.failUp(this.step, iz.from, zz, nz), void(this.climbed = iz.fromClimbed))
         }
-        ko = oT
       }
-      return ko
+      watch(zz, uz, bz, Ez, nz) {
+        const iz = this.climbed;
+        if (null !== iz && !bz && !Ez && ++iz.heldWindows >= Fz.heldWindows && (this.climbed = null, this.record(nz, zz, "yM"), this.hooks.yM(this.step)), bz ? (this.dropRun++, this.dropRunFpsSum += zz, this.dropRunMasked ||= Ez) : this.resetDropRun(), Ez && uz || (this.cleanRun = uz ? this.cleanRun + 1 : 0), this.dropRun >= (this.dropRunMasked ? dz.maskedWindows : dz.dropWindows)) {
+          const uz = this.dropRunFpsSum / this.dropRun;
+          this.resetDropRun();
+          const bz = this.climbed;
+          return void(null !== bz ? (this.failUp(this.step, bz.from, zz, nz), this.climbed = bz.below) : this.step < this.lowest && this.downAllowed(nz) && (this.climbing = !1, this.phase = {
+            kind: "down",
+            from: this.step,
+            fromFps: uz,
+            judged: 0,
+            fpsSum: 0,
+            dropped: !1
+          }, this.setStep(this.step + 1, zz, nz, "down")))
+        }
+        const lz = this.step - 1;
+        lz >= 0 && this.cleanRun >= (this.climbing ? Fz.climbWindows : Fz.cleanWindows) && this.upAllowed(lz, nz) && (this.phase = {
+          kind: "up",
+          from: this.step,
+          judged: 0,
+          fromClimbed: this.climbed
+        }, this.setStep(lz, zz, nz, "up"))
+      }
+      downAllowed(zz) {
+        return !(0 === this.step && null !== this.noGain && zz < this.noGain.untilMs) && zz >= this.downUntilMs[this.step]
+      }
+      upAllowed(zz, uz) {
+        return this.upFailures[zz] <= Fz.failWaitsMs.length && uz >= this.upUntilMs[zz]
+      }
+      keepDown(zz, uz, bz) {
+        this.watchAt(this.step), this.downBackoffMs[zz] = 0, this.record(bz, uz, "down_kept"), 0 === zz && null !== this.noGain && (this.noGain = null, this.hooks.noGain(null)), this.hooks.MZ(this.step)
+      }
+      noGainFrom(zz, uz, bz) {
+        var Ez, nz;
+        const iz = 0 === zz ? null !== (Ez = null === (nz = this.noGain) || void 0 === nz ? void 0 : nz.backoffMs) && void 0 !== Ez ? Ez : 0 : this.downBackoffMs[zz],
+          lz = 0 === iz ? Jz : Math.min(2 * iz, Az);
+        this.downBackoffMs[zz] = lz, this.downUntilMs[zz] = bz + lz, 0 === zz && (this.noGain = {
+          untilMs: bz + lz,
+          backoffMs: lz
+        }, this.hooks.noGain(this.noGain)), this.watchAt(zz), this.setStep(zz, uz, bz, "no_gain")
+      }
+      failUp(zz, uz, bz, Ez) {
+        this.climbing = !1;
+        const nz = ++this.upFailures[zz];
+        this.upUntilMs[zz] = nz <= Fz.failWaitsMs.length ? Ez + Fz.failWaitsMs[nz - 1] : Number.POSITIVE_INFINITY, this.watchAt(uz), this.setStep(uz, bz, Ez, "up_failed"), this.hooks.upFailed(zz)
+      }
+      watchAt(zz) {
+        this.phase = {
+          kind: "watch"
+        }, this.climbed = zz === this.step ? this.climbed : null, this.cleanRun = 0, this.resetDropRun()
+      }
+      resetDropRun() {
+        this.dropRun = 0, this.dropRunFpsSum = 0, this.dropRunMasked = !1
+      }
+      setStep(zz, uz, bz, Ez) {
+        const nz = zz !== this.step;
+        nz && (this.climbed = null), this.step = zz, this.record(bz, uz, Ez), nz && (this.slowStartMs = -1, this.resized(bz), this.hooks.changed(zz))
+      }
+      record(zz, uz, bz) {
+        64 === this.log.length && this.log.shift(), this.log.push({
+          atMs: zz,
+          step: this.step,
+          fps: Math.round(10 * uz) / 10,
+          targetFps: Math.round(10 * this.lastTargetFps) / 10,
+          why: bz
+        })
+      }
+    }
+    var Lz = bz(8913),
+      Pz = bz(2866),
+      Gz = bz(8915);
+    const az = "autoGraphics",
+      Vz = 6048e5,
+      mz = "startScale";
+
+    function qz() {
+      return (0, Mz.F)(Ez.e.get("clientEscMenuOptions").pixelScale) * (0, Mz.C)()
+    }
+
+    function hz() {
+      return (0, Mz.n)(qz())
+    }
+
+    function Uz() {
+      const zz = Hz.g.getItem(az);
+      return "object" !== typeof zz || null === zz || "string" !== typeof zz.gpu ? null : zz
+    }
+
+    function cz(zz) {
+      return {
+        untilEpochMs: Date.now() + (zz.untilMs - performance.now()),
+        backoffMs: zz.backoffMs
+      }
+    }
+
+    function gz(zz) {
+      return zz ? {
+        untilMs: performance.now() + (zz.untilEpochMs - Date.now()),
+        backoffMs: zz.backoffMs
+      } : null
+    }
+    let Sz = null;
+
+    function yz() {
+      if (null === Sz) {
+        const zz = new URLSearchParams(window.location.search).get("msaa");
+        Sz = Ez.e.get("clientEscMenuOptions").antiAliasing && ("0" === zz || "1" !== zz && !(0, lz.e)("antiAliasing") && (0, Pz.c)())
+      }
+      return Sz
+    }
+
+    function Dz(zz) {
+      const uz = "number" === typeof zz ? Date.now() - zz : -1;
+      return uz >= 0 && uz < Vz
+    }
+    let Qz = null;
+
+    function Wz() {
+      return Qz ??= (0, nz.getDeviceDefaultPixelScale)(), ez(Qz)
+    }
+
+    function ez(zz) {
+      const uz = Ez.e.get("clientEscMenuOptions");
+      return uz.pixelSmoothing && !(0, lz.e)("pixelScale") && uz.pixelScale === zz
+    }
+    let jz = null,
+      Iz = 0;
+
+    function Bz() {
+      if (null === jz || Iz !== qz()) {
+        var zz;
+        Iz = qz();
+        const uz = Number(null !== (zz = new URLSearchParams(window.location.search).get(mz)) && void 0 !== zz ? zz : ""),
+          bz = hz();
+        if (uz > 0 && uz <= 1) jz = (0, Mz.y)(bz, bz[0] / uz);
+        else {
+          const zz = Uz(),
+            uz = (0, Mz.y)(bz, (0, Mz.A)(qz())),
+            Ez = !(0, Pz.g)() && Dz(null === zz || void 0 === zz ? void 0 : zz.heldAt) && (null === zz || void 0 === zz ? void 0 : zz.heldTarget) === qz() ? null === zz || void 0 === zz ? void 0 : zz.heldN : void 0;
+          jz = "number" === typeof Ez ? Math.min(uz, (0, Mz.y)(bz, Ez)) : uz
+        }
+      }
+      return jz
+    }
+
+    function Cz(zz, uz) {
+      var bz;
+      const Ez = uz.indexOf(null !== (bz = zz.failedUpN) && void 0 !== bz ? bz : -1);
+      return Ez >= 0 && Dz(zz.failedUpAt) ? {
+        step: Ez,
+        untilMs: performance.now() + tz.e.stepUp.failWaitsMs[0]
+      } : null
+    }
+    let Yz = null,
+      kz = !1,
+      zu = "";
+    const uu = new Set;
+
+    function bu() {
+      for (const zz of uu) zz()
+    }
+
+    function Eu() {
+      return kz ? null : (pu(), null === Yz ? (null !== Qz || null !== (0, nz.peekGpuVendor)() ? Wz() : ez(1)) ? Bz() : null : Wz() ? Yz.currentStep() : null)
+    }
+
+    function nu() {
+      const zz = Eu();
+      if (null === zz) return null;
+      const uz = hz(),
+        bz = uz[Math.min(zz, uz.length - 1)];
+      return bz === iu() ? null : bz
+    }
+
+    function iu() {
+      return (0, Mz.s)(Ez.e.get("clientEscMenuOptions").pixelScale, (0, Mz.C)())
+    }
+
+    function lu() {
+      return null !== Yz && null !== nu()
+    }
+
+    function Mu(zz) {
+      return uu.add(zz), () => {
+        uu.delete(zz)
+      }
+    }
+
+    function tu(zz, uz, bz) {
+      var Ez;
+      if (null !== Yz || kz || (0, Pz.g)()) return;
+      const nz = (0, Lz.d)(zz, uz, bz);
+      null !== nz && (0, Pz.h)(nz.vendor), zu = `${zz}:${(null===nz||void 0===nz?void 0:nz.renderer)||(null===nz||void 0===nz?void 0:nz.vendor)||""}`, (null === (Ez = Uz()) || void 0 === Ez ? void 0 : Ez.gpu) !== zu && (Hz.g.setItem(az, {
+        gpu: zu
+      }), jz = null), Ou(), document.addEventListener("visibilitychange", (() => {
+        if (document.hidden) try {
+          var zz;
+          null === (zz = Yz) || void 0 === zz || zz.hidden()
+        } catch (uz) {
+          su(), console.error("The quality steps stopped", uz)
+        }
+      }))
+    }
+    let Hu = 0;
+
+    function Ou() {
+      var zz;
+      const uz = null !== (zz = Uz()) && void 0 !== zz ? zz : {
+          gpu: zu
+        },
+        bz = hz();
+      Hu = qz(), Yz = new Tz({
+          changed: bu,
+          MZ: () => {
+            du({
+              heldN: void 0
+            })
+          },
+          yM: zz => {
+            var uz;
+            const bz = hz()[zz],
+              Ez = {
+                heldN: bz,
+                heldAt: Date.now(),
+                heldTarget: qz()
+              };
+            (null === (uz = Uz()) || void 0 === uz ? void 0 : uz.failedUpN) === bz && (Ez.failedUpN = void 0), du(Ez)
+          },
+          upFailed: zz => {
+            du({
+              failedUpN: hz()[zz],
+              failedUpAt: Date.now()
+            })
+          },
+          noGain: zz => {
+            du({
+              noGain: null === zz ? void 0 : cz(zz)
+            })
+          }
+        }, {
+          lowest: bz.length - 1,
+          startStep: Bz(),
+          noGain: gz(uz.noGain),
+          upWait: Cz(uz, bz)
+        }),
+        function(zz) {
+          const uz = {
+            get step() {
+              return zz.currentStep()
+            },
+            get n() {
+              var zz;
+              return null !== (zz = nu()) && void 0 !== zz ? zz : iu()
+            },
+            get scale() {
+              var zz;
+              return hz()[0] / (null !== (zz = nu()) && void 0 !== zz ? zz : iu())
+            },
+            get msaaOff() {
+              return yz()
+            },
+            log: zz.log
+          };
+          Object.defineProperty(window, "__qualitySteps", {
+            value: uz,
+            configurable: !0
+          })
+        }(Yz), bu()
+    }
+
+    function pu() {
+      null !== Yz && qz() !== Hu && (jz = null, Ou())
+    }
+
+    function du(zz) {
+      Hz.g.setItem(az, {
+        ...Uz(),
+        ...zz,
+        gpu: zu
+      })
+    }
+    let Fu = 0,
+      Zu = 0,
+      Ru = 0,
+      Ku = !1;
+
+    function wu() {
+      Fu++
+    }
+
+    function Xu() {
+      return Fu
+    }
+
+    function fu(zz, uz, bz) {
+      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      pu(), null !== Yz && (zz - Ru >= 1e3 && (Ku = Fu - Zu > tz.e.sceneChange.meshesPerSecond, Zu = Fu, Ru = zz), Gz.d.isHeld() ? Yz.paused(zz) : Yz.frame(zz, uz, bz && !document.hidden && Wz(), Ku || Ez > 0 || (0, iz.l)()))
+    }
+
+    function su() {
+      if (!kz) {
+        kz = !0, null !== Yz && (Yz = null, du({
+          noGain: void 0
+        }));
+        try {
+          bu()
+        } catch (zz) {
+          console.error("The quality steps' resize to the player's n failed", zz)
+        }
+      }
+    }
+
+    function ru() {
+      var zz;
+      null === (zz = Yz) || void 0 === zz || zz.resized(performance.now())
+    }
+  },
+  8913: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => iz
+    });
+    var Ez = bz(96),
+      nz = bz(125);
+
+    function iz(zz, uz, bz) {
+      if ("webgpu" === zz) return bz ? ((0, Ez.seedGpuVendor)(bz), {
+        vendor: bz,
+        renderer: ""
+      }) : null;
+      try {
+        const bz = "webgl" === zz ? uz.getContext("webgl2") : uz.getContext("webgl"),
+          iz = null === bz || void 0 === bz ? void 0 : bz.getExtension("WEBGL_debug_renderer_info");
+        if (bz && iz) {
+          const zz = String(bz.getParameter(iz.UNMASKED_VENDOR_WEBGL)),
+            uz = String(bz.getParameter(iz.UNMASKED_RENDERER_WEBGL));
+          return (0, Ez.seedGpuVendor)(zz), (0, nz.t)(zz, uz), {
+            vendor: zz,
+            renderer: uz
+          }
+        }
+        bz && (0, nz.t)(String(bz.getParameter(bz.VENDOR)), String(bz.getParameter(bz.RENDERER)))
+      } catch {}
+      return null
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

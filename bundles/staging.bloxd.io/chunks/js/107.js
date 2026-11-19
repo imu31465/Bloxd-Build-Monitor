@@ -1,803 +1,691 @@
 export const id = 107;
-export const ids = [107];
+export const ids = [107, 124];
 export const modules = {
-  4491: (TT, oT, IT) => {
-    function iT(TT) {
-      return iT = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(TT) {
-        return typeof TT
-      } : function(TT) {
-        return TT && "function" == typeof Symbol && TT.constructor === Symbol && TT !== Symbol.prototype ? "symbol" : typeof TT
-      }, iT(TT)
-    }
-    Object.defineProperty(oT, "__esModule", {
-      value: !0
-    }), oT.default = void 0;
-    var zT = DT(IT(1042)),
-      kT = function(TT, oT) {
-        if (!oT && TT && TT.__esModule) return TT;
-        if (null === TT || "object" !== iT(TT) && "function" !== typeof TT) return {
-          default: TT
-        };
-        var IT = ST(oT);
-        if (IT && IT.has(TT)) return IT.get(TT);
-        var zT = {},
-          kT = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var WT in TT)
-          if ("default" !== WT && Object.prototype.hasOwnProperty.call(TT, WT)) {
-            var XT = kT ? Object.getOwnPropertyDescriptor(TT, WT) : null;
-            XT && (XT.get || XT.set) ? Object.defineProperty(zT, WT, XT) : zT[WT] = TT[WT]
-          } zT.default = TT, IT && IT.set(TT, zT);
-        return zT
-      }(IT(46)),
-      WT = DT(IT(4442)),
-      XT = DT(IT(4497)),
-      BT = IT(4505),
-      FT = IT(1083);
+  4722: (zz, uz, bz) => {
+    var Ez = bz(4726);
 
-    function ST(TT) {
-      if ("function" !== typeof WeakMap) return null;
-      var oT = new WeakMap,
-        IT = new WeakMap;
-      return (ST = function(TT) {
-        return TT ? IT : oT
-      })(TT)
-    }
+    function nz() {}
 
-    function DT(TT) {
-      return TT && TT.__esModule ? TT : {
-        default: TT
+    function iz() {}
+    iz.resetWarningCache = nz, zz.exports = function() {
+      function zz(zz, uz, bz, nz, iz, lz) {
+        if (lz !== Ez) {
+          var Mz = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw Mz.name = "Invariant Violation", Mz
+        }
       }
-    }
 
-    function LT(TT, oT) {
-      var IT = "undefined" !== typeof Symbol && TT[Symbol.iterator] || TT["@@iterator"];
-      if (!IT) {
-        if (Array.isArray(TT) || (IT = function(TT, oT) {
-            if (!TT) return;
-            if ("string" === typeof TT) return xT(TT, oT);
-            var IT = Object.prototype.toString.call(TT).slice(8, -1);
-            "Object" === IT && TT.constructor && (IT = TT.constructor.name);
-            if ("Map" === IT || "Set" === IT) return Array.from(TT);
-            if ("Arguments" === IT || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(IT)) return xT(TT, oT)
-          }(TT)) || oT && TT && "number" === typeof TT.length) {
-          IT && (TT = IT);
-          var iT = 0,
-            zT = function() {};
-          return {
-            s: zT,
-            n: function() {
-              return iT >= TT.length ? {
-                done: !0
-              } : {
-                done: !1,
-                value: TT[iT++]
-              }
-            },
-            e: function(TT) {
-              throw TT
-            },
-            f: zT
+      function uz() {
+        return zz
+      }
+      zz.isRequired = zz;
+      var bz = {
+        array: zz,
+        bigint: zz,
+        bool: zz,
+        func: zz,
+        number: zz,
+        object: zz,
+        string: zz,
+        symbol: zz,
+        any: zz,
+        arrayOf: uz,
+        element: zz,
+        elementType: zz,
+        instanceOf: uz,
+        node: zz,
+        objectOf: uz,
+        oneOf: uz,
+        oneOfType: uz,
+        shape: uz,
+        exact: uz,
+        checkPropTypes: iz,
+        resetWarningCache: nz
+      };
+      return bz.PropTypes = bz, bz
+    }
+  },
+  4714: (zz, uz, bz) => {
+    zz.exports = bz(4722)()
+  },
+  4726: zz => {
+    zz.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  },
+  6301: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      ShaderPackPublishForm: () => fz
+    });
+    var Ez = bz(56),
+      nz = bz(6283),
+      iz = bz(199),
+      lz = bz(6307),
+      Mz = bz(1047),
+      tz = bz(1419),
+      Hz = bz(1628),
+      Oz = bz(1114),
+      pz = bz(6316),
+      dz = bz(6337),
+      Fz = bz(1473),
+      Zz = bz(1181),
+      Rz = bz(6340),
+      Kz = bz(6371),
+      wz = bz(6274),
+      Xz = bz(1089);
+
+    function fz(zz) {
+      var uz, bz, pz;
+      let {
+        existing: fz,
+        onPublished: rz
+      } = zz;
+      const {
+        t: Nz
+      } = (0, Zz.F)(), {
+        userContext: vz,
+        isUserContextUpdating: xz
+      } = (0, Oz.c)(), [Jz, Az] = (0, Ez.useState)(null), [Tz, Lz] = (0, Ez.useState)(0), [Pz, Gz] = (0, Ez.useState)(null !== (uz = null === fz || void 0 === fz ? void 0 : fz.name) && void 0 !== uz ? uz : ""), az = (0, Ez.useRef)(Pz), Vz = (0, Ez.useRef)(""), mz = zz => {
+        az.current = zz, Gz(zz)
+      }, [qz, hz] = (0, Ez.useState)(null !== (bz = null === fz || void 0 === fz ? void 0 : fz.description) && void 0 !== bz ? bz : ""), Uz = (0, Ez.useRef)(qz), cz = (0, Ez.useRef)(""), gz = zz => {
+        Uz.current = zz, hz(zz)
+      }, [Sz, yz] = (0, Ez.useState)(!1), {
+        loading: Dz,
+        error: Qz,
+        setError: Wz,
+        onFiles: ez
+      } = (0, dz.e)((async zz => {
+        const uz = await (0, Rz.loadPageShaderPackCompiler)();
+        if (!uz) return void Wz(Nz("shaderPack:compilerUnavailable"));
+        const bz = await (0, Kz.g)(uz, zz.files);
+        if (Az({
+            pack: zz,
+            validation: bz,
+            sourceBytes: (0, lz.u)(zz.files)
+          }), !fz) {
+          var Ez;
+          if ("" !== az.current.trim() && az.current !== Vz.current || (Vz.current = (0, nz.O)(zz.manifest.name.trim(), nz.y), mz(Vz.current)), "" === Uz.current.trim() || Uz.current === cz.current) cz.current = (0, nz.O)((null !== (Ez = zz.manifest.description) && void 0 !== Ez ? Ez : "").trim(), nz.l), gz(cz.current);
+          Lz((zz => zz + 1))
+        }
+      })), jz = !xz && !vz.isLoggedIn() && !iz.e.offlineMode, Iz = Pz.trim(), Bz = Iz.length < nz.z, Cz = null !== Jz && !1 !== (null === (pz = Jz.validation) || void 0 === pz ? void 0 : pz.ok) && !Dz && !Bz && !jz && !xz;
+      return (0, Xz.jsxs)("div", {
+        className: "ShaderPackPublishForm",
+        children: [(0, Xz.jsx)("p", {
+          className: "ShaderPackPublishIntro",
+          children: fz ? Nz("shaderPackListing:uploadIntro", {
+            minutes: String(nz.D / 6e4)
+          }) : Nz("shaderPackListing:publishIntro")
+        }), (0, Xz.jsx)(oz, {}), jz && (0, Xz.jsx)("div", {
+          className: "ShaderPackPublishNote Warning",
+          children: Nz("shaderPackListing:publishNeedsLogin")
+        }), (0, Xz.jsx)(dz.c, {
+          busy: Dz,
+          disabled: Dz || Sz,
+          onFiles: zz => {
+            Az(null), ez(zz)
           }
-        }
-        throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
-      }
-      var kT, WT = !0,
-        XT = !1;
-      return {
-        s: function() {
-          IT = IT.call(TT)
-        },
-        n: function() {
-          var TT = IT.next();
-          return WT = TT.done, TT
-        },
-        e: function(TT) {
-          XT = !0, kT = TT
-        },
-        f: function() {
-          try {
-            WT || null == IT.return || IT.return()
-          } finally {
-            if (XT) throw kT
-          }
-        }
-      }
-    }
-
-    function xT(TT, oT) {
-      (null == oT || oT > TT.length) && (oT = TT.length);
-      for (var IT = 0, iT = new Array(oT); IT < oT; IT++) iT[IT] = TT[IT];
-      return iT
-    }
-
-    function cT(TT, oT) {
-      for (var IT = 0; IT < oT.length; IT++) {
-        var iT = oT[IT];
-        iT.enumerable = iT.enumerable || !1, iT.configurable = !0, "value" in iT && (iT.writable = !0), Object.defineProperty(TT, iT.key, iT)
-      }
-    }
-
-    function KT(TT, oT) {
-      return KT = Object.setPrototypeOf || function(TT, oT) {
-        return TT.__proto__ = oT, TT
-      }, KT(TT, oT)
-    }
-
-    function MT(TT) {
-      var oT = function() {
-        if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
-        if (Reflect.construct.sham) return !1;
-        if ("function" === typeof Proxy) return !0;
-        try {
-          return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
-        } catch (TT) {
-          return !1
-        }
-      }();
-      return function() {
-        var IT, zT = AT(TT);
-        if (oT) {
-          var kT = AT(this).constructor;
-          IT = Reflect.construct(zT, arguments, kT)
-        } else IT = zT.apply(this, arguments);
-        return function(TT, oT) {
-          if (oT && ("object" === iT(oT) || "function" === typeof oT)) return oT;
-          if (void 0 !== oT) throw new TypeError("Derived constructors may only return object or undefined");
-          return rT(TT)
-        }(this, IT)
-      }
-    }
-
-    function rT(TT) {
-      if (void 0 === TT) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      return TT
-    }
-
-    function AT(TT) {
-      return AT = Object.setPrototypeOf ? Object.getPrototypeOf : function(TT) {
-        return TT.__proto__ || Object.getPrototypeOf(TT)
-      }, AT(TT)
-    }
-
-    function gT(TT, oT, IT) {
-      return oT in TT ? Object.defineProperty(TT, oT, {
-        value: IT,
-        enumerable: !0,
-        configurable: !0,
-        writable: !0
-      }) : TT[oT] = IT, TT
-    }
-    var hT = {
-        orientation: {
-          horizontal: {
-            dimension: "width",
-            direction: "left",
-            reverseDirection: "right",
-            coordinate: "x"
-          },
-          vertical: {
-            dimension: "height",
-            direction: "top",
-            reverseDirection: "bottom",
-            coordinate: "y"
-          }
-        }
-      },
-      wT = function(TT) {
-        ! function(TT, oT) {
-          if ("function" !== typeof oT && null !== oT) throw new TypeError("Super expression must either be null or a function");
-          Object.defineProperty(TT, "prototype", {
-            value: Object.create(oT && oT.prototype, {
-              constructor: {
-                value: TT,
-                writable: !0,
-                configurable: !0
-              }
-            }),
-            writable: !1
-          }), oT && KT(TT, oT)
-        }(WT, TT);
-        var oT, IT, iT, kT = MT(WT);
-
-        function WT(TT, oT) {
-          var IT;
-          return function(TT, oT) {
-            if (!(TT instanceof oT)) throw new TypeError("Cannot call a class as a function")
-          }(this, WT), gT(rT(IT = kT.call(this, TT, oT)), "handleFormat", (function(TT) {
-            var oT = IT.props.format;
-            return oT ? oT(TT) : TT
-          })), gT(rT(IT), "handleUpdate", (function() {
-            if (IT.slider) {
-              var TT = IT.props.orientation,
-                oT = (0, BT.capitalize)(hT.orientation[TT].dimension),
-                iT = IT.slider["offset".concat(oT)],
-                zT = IT.handle["offset".concat(oT)];
-              IT.setState({
-                limit: iT - zT,
-                grab: zT / 2
+        }), Jz && (0, Xz.jsxs)("div", {
+          className: "ShaderPackPublishSummary",
+          children: [(0, Xz.jsx)("div", {
+            className: "ShaderPackPublishPackName",
+            children: Jz.pack.manifest.name
+          }), (0, Xz.jsxs)("div", {
+            className: "ShaderPackPublishPackSize",
+            children: [Nz("shaderPackListing:sizeValue", {
+              kilobytes: String((0, wz.N)(Jz.sourceBytes))
+            }), " \xb7", " ", Nz("shaderPackListing:filesValue", {
+              files: String(Jz.pack.files.length)
+            })]
+          }), (0, Xz.jsx)(sz, {
+            picked: Jz
+          })]
+        }), !fz && (0, Xz.jsxs)(Xz.Fragment, {
+          children: [(0, Xz.jsxs)("label", {
+            className: "ShaderPackPublishField",
+            children: [(0, Xz.jsx)("span", {
+              children: Nz("general:name")
+            }), (0, Xz.jsx)(Hz.d, {
+              className: "ShaderPackPublishInput",
+              defaultValue: Pz,
+              maxLength: nz.y,
+              onValueChange: mz
+            }, Tz), Jz && Bz && (0, Xz.jsx)("span", {
+              className: "ShaderPackPublishHint",
+              children: Nz("shaderPackListing:nameTooShort", {
+                min: String(nz.z)
               })
-            }
-          })), gT(rT(IT), "handleStart", (function(TT) {
-            var oT = IT.props.onChangeStart;
-            document.addEventListener("mousemove", IT.handleDrag), document.addEventListener("mouseup", IT.handleEnd), IT.setState({
-              active: !0
-            }, (function() {
-              oT && oT(TT)
-            }))
-          })), gT(rT(IT), "handleDrag", (function(TT) {
-            TT.stopPropagation();
-            var oT = IT.props.onChange,
-              iT = TT.target,
-              zT = iT.className,
-              kT = iT.classList,
-              WT = iT.dataset;
-            if (oT && "rangeslider__labels" !== zT) {
-              var XT = IT.position(TT);
-              kT && kT.contains("rangeslider__label-item") && WT.value && (XT = parseFloat(WT.value)), oT && oT(XT, TT)
-            }
-          })), gT(rT(IT), "handleEnd", (function(TT) {
-            var oT = IT.props.onChangeComplete;
-            IT.setState({
-              active: !1
-            }, (function() {
-              oT && oT(TT)
-            })), document.removeEventListener("mousemove", IT.handleDrag), document.removeEventListener("mouseup", IT.handleEnd)
-          })), gT(rT(IT), "handleKeyDown", (function(TT) {
-            TT.preventDefault();
-            var oT, iT = TT.keyCode,
-              zT = IT.props,
-              kT = zT.value,
-              WT = zT.min,
-              XT = zT.max,
-              BT = zT.step,
-              FT = zT.onChange;
-            switch (iT) {
-              case 38:
-              case 39:
-                oT = kT + BT > XT ? XT : kT + BT, FT && FT(oT, TT);
-                break;
-              case 37:
-              case 40:
-                oT = kT - BT < WT ? WT : kT - BT, FT && FT(oT, TT)
-            }
-          })), gT(rT(IT), "getPositionFromValue", (function(TT) {
-            var oT = IT.state.limit,
-              iT = IT.props,
-              zT = iT.min,
-              kT = (TT - zT) / (iT.max - zT);
-            return Math.round(kT * oT)
-          })), gT(rT(IT), "getValueFromPosition", (function(TT) {
-            var oT = IT.state.limit,
-              iT = IT.props,
-              zT = iT.orientation,
-              kT = iT.min,
-              WT = iT.max,
-              XT = iT.step,
-              FT = (0, BT.clamp)(TT, 0, oT) / (oT || 1),
-              ST = XT * Math.round(FT * (WT - kT) / XT),
-              DT = "horizontal" === zT ? ST + kT : WT - ST;
-            return (0, BT.clamp)(DT, kT, WT)
-          })), gT(rT(IT), "position", (function(TT) {
-            var oT = IT.state.grab,
-              iT = IT.props,
-              zT = iT.orientation,
-              kT = iT.reverse,
-              WT = IT.slider,
-              XT = hT.orientation[zT].coordinate,
-              FT = kT ? hT.orientation[zT].reverseDirection : hT.orientation[zT].direction,
-              ST = "client".concat((0, BT.capitalize)(XT)),
-              DT = TT.touches ? TT.touches[0][ST] : TT[ST],
-              LT = WT.getBoundingClientRect()[FT],
-              xT = kT ? LT - DT - oT : DT - LT - oT;
-            return IT.getValueFromPosition(xT)
-          })), gT(rT(IT), "coordinates", (function(TT) {
-            var oT = IT.state,
-              iT = oT.limit,
-              zT = oT.grab,
-              kT = IT.props.orientation,
-              WT = IT.getValueFromPosition(TT),
-              XT = IT.getPositionFromValue(WT),
-              BT = "horizontal" === kT ? XT + zT : XT;
-            return {
-              fill: "horizontal" === kT ? BT : iT - BT,
-              handle: BT,
-              label: BT
-            }
-          })), gT(rT(IT), "renderLabels", (function(TT) {
-            return (0, FT.jsx)("ul", {
-              ref: function(TT) {
-                IT.labels = TT
-              },
-              className: (0, zT.default)("rangeslider__labels"),
-              children: TT
-            })
-          })), IT.state = {
-            active: !1,
-            limit: 0,
-            grab: 0
-          }, IT
-        }
-        return oT = WT, (IT = [{
-          key: "componentDidMount",
-          value: function() {
-            this.handleUpdate(), new XT.default(this.handleUpdate).observe(this.slider)
-          }
-        }, {
-          key: "render",
-          value: function() {
-            var TT = this,
-              oT = this.props,
-              IT = oT.value,
-              iT = oT.orientation,
-              kT = oT.className,
-              WT = oT.tooltip,
-              XT = oT.reverse,
-              BT = oT.labels,
-              ST = oT.min,
-              DT = oT.max,
-              xT = oT.handleLabel,
-              cT = this.state.active,
-              KT = hT.orientation[iT].dimension,
-              MT = XT ? hT.orientation[iT].reverseDirection : hT.orientation[iT].direction,
-              rT = this.getPositionFromValue(IT),
-              AT = this.coordinates(rT),
-              wT = gT({}, KT, "".concat(AT.fill, "px")),
-              mT = gT({}, MT, "".concat(AT.handle, "px")),
-              eT = WT && cT,
-              RT = [],
-              uT = Object.keys(BT);
-            if (uT.length > 0) {
-              var vT, ET = LT(uT = uT.sort((function(TT, oT) {
-                return XT ? TT - oT : oT - TT
-              })));
-              try {
-                for (ET.s(); !(vT = ET.n()).done;) {
-                  var fT = vT.value,
-                    CT = this.getPositionFromValue(fT),
-                    jT = this.coordinates(CT),
-                    JT = gT({}, MT, "".concat(jT.label, "px"));
-                  RT.push((0, FT.jsx)("li", {
-                    className: (0, zT.default)("rangeslider__label-item"),
-                    "data-value": fT,
-                    onMouseDown: this.handleDrag,
-                    onTouchStart: this.handleStart,
-                    onTouchEnd: this.handleEnd,
-                    style: JT,
-                    children: this.props.labels[fT]
-                  }, fT))
-                }
-              } catch (UT) {
-                ET.e(UT)
-              } finally {
-                ET.f()
-              }
-            }
-            return (0, FT.jsxs)("div", {
-              ref: function(oT) {
-                TT.slider = oT
-              },
-              className: (0, zT.default)("rangeslider", "rangeslider-".concat(iT), {
-                "rangeslider-reverse": XT
-              }, kT),
-              onMouseDown: this.handleDrag,
-              onMouseUp: this.handleEnd,
-              onTouchStart: this.handleStart,
-              onTouchEnd: this.handleEnd,
-              "aria-valuemin": ST,
-              "aria-valuemax": DT,
-              "aria-valuenow": IT,
-              "aria-orientation": iT,
-              children: [(0, FT.jsx)("div", {
-                className: "rangeslider__fill",
-                style: wT
-              }), (0, FT.jsxs)("div", {
-                ref: function(oT) {
-                  TT.handle = oT
-                },
-                className: "rangeslider__handle",
-                onMouseDown: this.handleStart,
-                onTouchMove: this.handleDrag,
-                onTouchEnd: this.handleEnd,
-                onKeyDown: this.handleKeyDown,
-                style: mT,
-                tabIndex: 0,
-                children: [eT && (0, FT.jsx)("div", {
-                  ref: function(oT) {
-                    TT.tooltip = oT
-                  },
-                  className: "rangeslider__handle-tooltip",
-                  children: (0, FT.jsx)("span", {
-                    children: this.handleFormat(IT)
-                  })
-                }), (0, FT.jsx)("div", {
-                  className: "rangeslider__handle-label",
-                  children: xT
-                })]
-              }), BT && this.renderLabels(RT)]
-            })
-          }
-        }]) && cT(oT.prototype, IT), iT && cT(oT, iT), Object.defineProperty(oT, "prototype", {
-          writable: !1
-        }), WT
-      }(kT.Component);
-    gT(wT, "propTypes", {
-      min: WT.default.number,
-      max: WT.default.number,
-      step: WT.default.number,
-      value: WT.default.number,
-      orientation: WT.default.string,
-      tooltip: WT.default.bool,
-      reverse: WT.default.bool,
-      labels: WT.default.object,
-      handleLabel: WT.default.string,
-      format: WT.default.func,
-      onChangeStart: WT.default.func,
-      onChange: WT.default.func,
-      onChangeComplete: WT.default.func
-    }), gT(wT, "defaultProps", {
-      min: 0,
-      max: 100,
-      step: 1,
-      value: 0,
-      orientation: "horizontal",
-      tooltip: !0,
-      reverse: !1,
-      labels: {},
-      handleLabel: ""
-    });
-    var mT = wT;
-    oT.default = mT
-  },
-  4483: (TT, oT, IT) => {
-    var iT;
-    oT.d = void 0;
-    var zT = ((iT = IT(4491)) && iT.__esModule ? iT : {
-      default: iT
-    }).default;
-    oT.d = zT
-  },
-  4505: (TT, oT) => {
-    Object.defineProperty(oT, "__esModule", {
-      value: !0
-    }), oT.capitalize = function(TT) {
-      return TT.charAt(0).toUpperCase() + TT.substr(1)
-    }, oT.clamp = function(TT, oT, IT) {
-      return Math.min(Math.max(TT, oT), IT)
-    }
-  },
-  4444: (TT, oT, IT) => {
-    var iT = IT(4451);
-
-    function zT() {}
-
-    function kT() {}
-    kT.resetWarningCache = zT, TT.exports = function() {
-      function TT(TT, oT, IT, zT, kT, WT) {
-        if (WT !== iT) {
-          var XT = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw XT.name = "Invariant Violation", XT
-        }
-      }
-
-      function oT() {
-        return TT
-      }
-      TT.isRequired = TT;
-      var IT = {
-        array: TT,
-        bigint: TT,
-        bool: TT,
-        func: TT,
-        number: TT,
-        object: TT,
-        string: TT,
-        symbol: TT,
-        any: TT,
-        arrayOf: oT,
-        element: TT,
-        elementType: TT,
-        instanceOf: oT,
-        node: TT,
-        objectOf: oT,
-        oneOf: oT,
-        oneOfType: oT,
-        shape: oT,
-        exact: oT,
-        checkPropTypes: kT,
-        resetWarningCache: zT
-      };
-      return IT.PropTypes = IT, IT
-    }
-  },
-  4442: (TT, oT, IT) => {
-    TT.exports = IT(4444)()
-  },
-  4451: TT => {
-    TT.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
-  },
-  4497: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      default: () => RT
-    });
-    var iT = function() {
-        if ("undefined" !== typeof Map) return Map;
-
-        function TT(TT, oT) {
-          var IT = -1;
-          return TT.some((function(TT, iT) {
-            return TT[0] === oT && (IT = iT, !0)
-          })), IT
-        }
-        return function() {
-          function oT() {
-            this.__entries__ = []
-          }
-          return Object.defineProperty(oT.prototype, "size", {
-            get: function() {
-              return this.__entries__.length
-            },
-            enumerable: !0,
-            configurable: !0
-          }), oT.prototype.get = function(oT) {
-            var IT = TT(this.__entries__, oT),
-              iT = this.__entries__[IT];
-            return iT && iT[1]
-          }, oT.prototype.set = function(oT, IT) {
-            var iT = TT(this.__entries__, oT);
-            ~iT ? this.__entries__[iT][1] = IT : this.__entries__.push([oT, IT])
-          }, oT.prototype.delete = function(oT) {
-            var IT = this.__entries__,
-              iT = TT(IT, oT);
-            ~iT && IT.splice(iT, 1)
-          }, oT.prototype.has = function(oT) {
-            return !!~TT(this.__entries__, oT)
-          }, oT.prototype.clear = function() {
-            this.__entries__.splice(0)
-          }, oT.prototype.forEach = function(TT, oT) {
-            void 0 === oT && (oT = null);
-            for (var IT = 0, iT = this.__entries__; IT < iT.length; IT++) {
-              var zT = iT[IT];
-              TT.call(oT, zT[1], zT[0])
-            }
-          }, oT
-        }()
-      }(),
-      zT = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
-      kT = "undefined" !== typeof IT.g && IT.g.Math === Math ? IT.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
-      WT = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(kT) : function(TT) {
-        return setTimeout((function() {
-          return TT(Date.now())
-        }), 1e3 / 60)
-      };
-    var XT = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
-      BT = "undefined" !== typeof MutationObserver,
-      FT = function() {
-        function TT() {
-          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(TT, oT) {
-            var IT = !1,
-              iT = !1,
-              zT = 0;
-
-            function kT() {
-              IT && (IT = !1, TT()), iT && BT()
-            }
-
-            function XT() {
-              WT(kT)
-            }
-
-            function BT() {
-              var TT = Date.now();
-              if (IT) {
-                if (TT - zT < 2) return;
-                iT = !0
-              } else IT = !0, iT = !1, setTimeout(XT, oT);
-              zT = TT
-            }
-            return BT
-          }(this.refresh.bind(this), 20)
-        }
-        return TT.prototype.addObserver = function(TT) {
-          ~this.observers_.indexOf(TT) || this.observers_.push(TT), this.connected_ || this.connect_()
-        }, TT.prototype.removeObserver = function(TT) {
-          var oT = this.observers_,
-            IT = oT.indexOf(TT);
-          ~IT && oT.splice(IT, 1), !oT.length && this.connected_ && this.disconnect_()
-        }, TT.prototype.refresh = function() {
-          this.updateObservers_() && this.refresh()
-        }, TT.prototype.updateObservers_ = function() {
-          var TT = this.observers_.filter((function(TT) {
-            return TT.gatherActive(), TT.hasActive()
-          }));
-          return TT.forEach((function(TT) {
-            return TT.broadcastActive()
-          })), TT.length > 0
-        }, TT.prototype.connect_ = function() {
-          zT && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), BT ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
-            attributes: !0,
-            childList: !0,
-            characterData: !0,
-            subtree: !0
-          })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
-        }, TT.prototype.disconnect_ = function() {
-          zT && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
-        }, TT.prototype.onTransitionEnd_ = function(TT) {
-          var oT = TT.propertyName,
-            IT = void 0 === oT ? "" : oT;
-          XT.some((function(TT) {
-            return !!~IT.indexOf(TT)
-          })) && this.refresh()
-        }, TT.getInstance = function() {
-          return this.instance_ || (this.instance_ = new TT), this.instance_
-        }, TT.instance_ = null, TT
-      }(),
-      ST = function(TT, oT) {
-        for (var IT = 0, iT = Object.keys(oT); IT < iT.length; IT++) {
-          var zT = iT[IT];
-          Object.defineProperty(TT, zT, {
-            value: oT[zT],
-            enumerable: !1,
-            writable: !1,
-            configurable: !0
-          })
-        }
-        return TT
-      },
-      DT = function(TT) {
-        return TT && TT.ownerDocument && TT.ownerDocument.defaultView || kT
-      },
-      LT = AT(0, 0, 0, 0);
-
-    function xT(TT) {
-      return parseFloat(TT) || 0
-    }
-
-    function cT(TT) {
-      for (var oT = [], IT = 1; IT < arguments.length; IT++) oT[IT - 1] = arguments[IT];
-      return oT.reduce((function(oT, IT) {
-        return oT + xT(TT["border-" + IT + "-width"])
-      }), 0)
-    }
-
-    function KT(TT) {
-      var oT = TT.clientWidth,
-        IT = TT.clientHeight;
-      if (!oT && !IT) return LT;
-      var iT = DT(TT).getComputedStyle(TT),
-        zT = function(TT) {
-          for (var oT = {}, IT = 0, iT = ["top", "right", "bottom", "left"]; IT < iT.length; IT++) {
-            var zT = iT[IT],
-              kT = TT["padding-" + zT];
-            oT[zT] = xT(kT)
-          }
-          return oT
-        }(iT),
-        kT = zT.left + zT.right,
-        WT = zT.top + zT.bottom,
-        XT = xT(iT.width),
-        BT = xT(iT.height);
-      if ("border-box" === iT.boxSizing && (Math.round(XT + kT) !== oT && (XT -= cT(iT, "left", "right") + kT), Math.round(BT + WT) !== IT && (BT -= cT(iT, "top", "bottom") + WT)), ! function(TT) {
-          return TT === DT(TT).document.documentElement
-        }(TT)) {
-        var FT = Math.round(XT + kT) - oT,
-          ST = Math.round(BT + WT) - IT;
-        1 !== Math.abs(FT) && (XT -= FT), 1 !== Math.abs(ST) && (BT -= ST)
-      }
-      return AT(zT.left, zT.top, XT, BT)
-    }
-    var MT = "undefined" !== typeof SVGGraphicsElement ? function(TT) {
-      return TT instanceof DT(TT).SVGGraphicsElement
-    } : function(TT) {
-      return TT instanceof DT(TT).SVGElement && "function" === typeof TT.getBBox
-    };
-
-    function rT(TT) {
-      return zT ? MT(TT) ? function(TT) {
-        var oT = TT.getBBox();
-        return AT(0, 0, oT.width, oT.height)
-      }(TT) : KT(TT) : LT
-    }
-
-    function AT(TT, oT, IT, iT) {
-      return {
-        x: TT,
-        y: oT,
-        width: IT,
-        height: iT
-      }
-    }
-    var gT = function() {
-        function TT(TT) {
-          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = AT(0, 0, 0, 0), this.target = TT
-        }
-        return TT.prototype.isActive = function() {
-          var TT = rT(this.target);
-          return this.contentRect_ = TT, TT.width !== this.broadcastWidth || TT.height !== this.broadcastHeight
-        }, TT.prototype.broadcastRect = function() {
-          var TT = this.contentRect_;
-          return this.broadcastWidth = TT.width, this.broadcastHeight = TT.height, TT
-        }, TT
-      }(),
-      hT = function(TT, oT) {
-        var IT = function(TT) {
-          var oT = TT.x,
-            IT = TT.y,
-            iT = TT.width,
-            zT = TT.height,
-            kT = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
-            WT = Object.create(kT.prototype);
-          return ST(WT, {
-            x: oT,
-            y: IT,
-            width: iT,
-            height: zT,
-            top: IT,
-            right: oT + iT,
-            bottom: zT + IT,
-            left: oT
-          }), WT
-        }(oT);
-        ST(this, {
-          target: TT,
-          contentRect: IT
-        })
-      },
-      wT = function() {
-        function TT(TT, oT, IT) {
-          if (this.activeObservations_ = [], this.observations_ = new iT, "function" !== typeof TT) throw new TypeError("The callback provided as parameter 1 is not a function.");
-          this.callback_ = TT, this.controller_ = oT, this.callbackCtx_ = IT
-        }
-        return TT.prototype.observe = function(TT) {
-          if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-          if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(TT instanceof DT(TT).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var oT = this.observations_;
-            oT.has(TT) || (oT.set(TT, new gT(TT)), this.controller_.addObserver(this), this.controller_.refresh())
-          }
-        }, TT.prototype.unobserve = function(TT) {
-          if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-          if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(TT instanceof DT(TT).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var oT = this.observations_;
-            oT.has(TT) && (oT.delete(TT), oT.size || this.controller_.removeObserver(this))
-          }
-        }, TT.prototype.disconnect = function() {
-          this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
-        }, TT.prototype.gatherActive = function() {
-          var TT = this;
-          this.clearActive(), this.observations_.forEach((function(oT) {
-            oT.isActive() && TT.activeObservations_.push(oT)
-          }))
-        }, TT.prototype.broadcastActive = function() {
-          if (this.hasActive()) {
-            var TT = this.callbackCtx_,
-              oT = this.activeObservations_.map((function(TT) {
-                return new hT(TT.target, TT.broadcastRect())
+            })]
+          }), (0, Xz.jsxs)("label", {
+            className: "ShaderPackPublishField",
+            children: [(0, Xz.jsx)("span", {
+              children: Nz("general:description")
+            }), (0, Xz.jsx)(Hz.d, {
+              className: "ShaderPackPublishInput ShaderPackPublishDescription",
+              defaultValue: qz,
+              maxLength: nz.l,
+              onValueChange: gz,
+              useTextarea: !0
+            }, Tz)]
+          })]
+        }), Qz && (0, Xz.jsx)("div", {
+          className: "ShaderPackPublishNote Error",
+          children: Qz
+        }), (0, Xz.jsxs)(tz.q, {
+          className: "ShaderPackPublishButton",
+          disabled: !Cz,
+          loading: Sz,
+          onClick: () => {
+            !async function() {
+              var zz;
+              if (!Jz) return;
+              const {
+                name: uz,
+                description: bz
+              } = null !== fz && void 0 !== fz ? fz : {
+                name: Iz,
+                description: qz.trim()
+              }, Ez = {
+                packId: null !== (zz = null === fz || void 0 === fz ? void 0 : fz.packId) && void 0 !== zz ? zz : null,
+                name: uz,
+                description: bz,
+                apiVersion: Jz.pack.manifest.apiVersion,
+                files: (0, lz.s)(Jz.pack.files),
+                keepCircleShadows: !0 === Jz.pack.manifest.keepCircleShadows
+              };
+              if ((new TextEncoder).encode(JSON.stringify(Ez)).byteLength > 1024 * nz.M) Wz(Nz("shaderPackListing:publishTooBig", {
+                kilobytes: String(nz.M)
               }));
-            this.callback_.call(TT, oT, TT), this.clearActive()
+              else {
+                yz(!0), Wz(null);
+                try {
+                  rz(await Fz.c.publishShaderPack(vz, Ez))
+                } catch (iz) {
+                  console.error("Failed to publish the shader pack", iz), Wz((0, wz.v)(iz, Nz, "shaderPackListing:publishFailed"))
+                } finally {
+                  yz(!1)
+                }
+              }
+            }()
+          },
+          children: [(0, Xz.jsx)(Mz.c, {
+            name: "upload"
+          }), " ", Nz(fz ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+        })]
+      })
+    }
+
+    function sz(zz) {
+      let {
+        picked: uz
+      } = zz;
+      const {
+        t: bz
+      } = (0, Zz.F)(), {
+        validation: Ez
+      } = uz;
+      return null === Ez ? (0, Xz.jsx)("div", {
+        className: "ShaderPackPublishNote",
+        children: bz("shaderPackListing:publishUnchecked")
+      }) : Ez.ok ? (0, Xz.jsxs)(Xz.Fragment, {
+        children: [(0, Xz.jsxs)("div", {
+          className: "ShaderPackPublishNote Ready",
+          children: [(0, Xz.jsx)(Mz.c, {
+            name: "circle-check"
+          }), " ", bz("shaderPackListing:publishReady")]
+        }), Ez.offInStrict.length > 0 && (0, Xz.jsxs)(Xz.Fragment, {
+          children: [(0, Xz.jsxs)("div", {
+            className: "ShaderPackPublishNote Warning",
+            children: [(0, Xz.jsx)(Mz.c, {
+              name: "triangle-exclamation"
+            }), " ", bz("shaderPack:offInStrict")]
+          }), (0, Xz.jsx)(pz.b, {
+            diagnostics: Ez.offInStrict,
+            t: bz
+          })]
+        })]
+      }) : (0, Xz.jsxs)(Xz.Fragment, {
+        children: [(0, Xz.jsxs)("div", {
+          className: "ShaderPackPublishNote Error",
+          children: [(0, Xz.jsx)(Mz.c, {
+            name: "triangle-exclamation"
+          }), " ", bz("shaderPackListing:publishHasErrors")]
+        }), (0, Xz.jsx)(pz.b, {
+          diagnostics: Ez.errors,
+          more: Ez.moreErrors,
+          t: bz
+        })]
+      })
+    }
+    const rz = "\0";
+
+    function oz() {
+      const {
+        t: zz
+      } = (0, Zz.F)(), [uz, bz] = zz("shaderPackListing:bloxdhubHelp", {
+        site: rz
+      }).split(rz);
+      return (0, Xz.jsxs)("p", {
+        className: "ShaderPackPublishIntro",
+        children: [uz, (0, Xz.jsx)("a", {
+          className: "ShaderPackPublishLink",
+          href: nz.f,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          children: nz.b
+        }), bz]
+      })
+    }
+  },
+  6299: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      default: () => Oz
+    });
+    var Ez = bz(1482),
+      nz = bz(1419),
+      iz = bz(1181),
+      lz = bz(6301),
+      Mz = bz(6289),
+      tz = bz(6274),
+      Hz = bz(1089);
+
+    function Oz() {
+      const {
+        t: zz
+      } = (0, iz.F)(), uz = (0, Ez.useNavigatePreserveSearch)();
+      return (0, Mz.e)(), (0, Hz.jsxs)("div", {
+        className: "ShaderPackPublishPage AnimFadeIn",
+        children: [(0, Hz.jsx)("div", {
+          className: "ShaderPackPublishBack",
+          children: (0, Hz.jsx)(nz.d, {
+            onClick: () => {
+              uz(tz.P)
+            },
+            children: zz("shaderPackListing:backToPacks")
+          })
+        }), (0, Hz.jsx)("h1", {
+          className: "ShaderPackPublishTitle",
+          children: zz("shaderPackListing:publishTitle")
+        }), (0, Hz.jsx)(lz.ShaderPackPublishForm, {
+          existing: null,
+          onPublished: zz => {
+            uz((0, tz.W)(zz.packId), {
+              replace: !0
+            })
           }
-        }, TT.prototype.clearActive = function() {
-          this.activeObservations_.splice(0)
-        }, TT.prototype.hasActive = function() {
-          return this.activeObservations_.length > 0
-        }, TT
-      }(),
-      mT = "undefined" !== typeof WeakMap ? new WeakMap : new iT,
-      eT = function TT(oT) {
-        if (!(this instanceof TT)) throw new TypeError("Cannot call a class as a function.");
-        if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-        var IT = FT.getInstance(),
-          iT = new wT(oT, IT, this);
-        mT.set(this, iT)
-      };
-    ["observe", "unobserve", "disconnect"].forEach((function(TT) {
-      eT.prototype[TT] = function() {
-        var oT;
-        return (oT = mT.get(this))[TT].apply(oT, arguments)
+        })]
+      })
+    }
+  },
+  6289: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => dz,
+      g: () => Fz,
+      k: () => pz,
+      m: () => Zz
+    });
+    var Ez = bz(56),
+      nz = bz(6283),
+      iz = bz(1473),
+      lz = bz(6274),
+      Mz = bz(6291),
+      tz = bz(1114);
+    const Hz = "shaderPackListingView",
+      Oz = "shaderPackListingFilterOpen";
+
+    function pz() {
+      var zz;
+      const [uz, bz] = (0, Mz.d)(Hz, nz.B[0]);
+      return [null !== (zz = nz.B.find((zz => zz === uz))) && void 0 !== zz ? zz : nz.B[0], bz]
+    }
+
+    function dz() {
+      (0, Ez.useEffect)((() => () => {
+        window.location.pathname.startsWith(lz.P) || (0, lz.j)()
+      }), [])
+    }
+
+    function Fz() {
+      return (0, Mz.d)(Oz, !1)
+    }
+
+    function Zz() {
+      const {
+        userContext: zz,
+        isUserContextUpdating: uz
+      } = (0, tz.c)(), [bz, nz] = (0, Ez.useState)(null), lz = (0, Ez.useRef)(new Set);
+
+      function Mz(zz, uz) {
+        nz((bz => {
+          const Ez = new Set(bz);
+          return uz ? Ez.add(zz) : Ez.delete(zz), Ez
+        }))
       }
-    }));
-    const RT = "undefined" !== typeof kT.ResizeObserver ? kT.ResizeObserver : eT
+      return (0, Ez.useEffect)((() => {
+        if (uz) return;
+        let bz = !1;
+        return iz.c.getFavouriteShaderPacks(zz).then((zz => {
+          bz || nz(new Set(zz))
+        })).catch((zz => {
+          console.error("Failed to get favourite shader packs", zz), bz || nz(new Set)
+        })), () => {
+          bz = !0
+        }
+      }), [zz, uz]), {
+        isFavourite: zz => null === bz ? null : bz.has(zz),
+        toggle: function(uz) {
+          if (null === bz || lz.current.has(uz)) return;
+          lz.current.add(uz);
+          const Ez = !bz.has(uz);
+          Mz(uz, Ez), (Ez ? iz.c.favouriteShaderPack(zz, uz) : iz.c.unfavouriteShaderPack(zz, uz)).catch((zz => {
+            console.error("Failed to change a favourite shader pack", zz), Mz(uz, !Ez)
+          })).finally((() => {
+            lz.current.delete(uz)
+          }))
+        }
+      }
+    }
+  },
+  6274: (zz, uz, bz) => {
+    bz.d(uz, {
+      D: () => wz,
+      F: () => Az,
+      G: () => Oz,
+      J: () => Lz,
+      M: () => Rz,
+      N: () => Uz,
+      O: () => qz,
+      P: () => lz,
+      T: () => hz,
+      W: () => tz,
+      _: () => Mz,
+      bb: () => Vz,
+      db: () => mz,
+      e: () => Xz,
+      eb: () => fz,
+      f: () => xz,
+      gb: () => Tz,
+      h: () => Kz,
+      j: () => dz,
+      m: () => pz,
+      p: () => Pz,
+      q: () => Fz,
+      u: () => Gz,
+      v: () => cz,
+      z: () => Zz
+    });
+    var Ez = bz(6283),
+      nz = bz(158),
+      iz = bz(4313);
+    const lz = "/shader-packs",
+      Mz = `${lz}/publish`;
+
+    function tz(zz) {
+      return `${lz}/${encodeURIComponent(zz)}`
+    }
+    let Hz = null;
+
+    function Oz(zz) {
+      Hz = zz
+    }
+
+    function pz() {
+      return Hz
+    }
+
+    function dz() {
+      Hz = null
+    }
+
+    function Fz(zz) {
+      return zz.playerHasRank("developer") || zz.playerHasRank("admin")
+    }
+    const Zz = ["terrain", "water", "models", "sunShadows", "strict"],
+      Rz = {
+        terrain: "shaderPackListing:filterTerrain",
+        water: "shaderPackListing:filterWater",
+        models: "shaderPackListing:filterModels",
+        sunShadows: "shaderPackListing:filterShadows",
+        strict: "shaderPackListing:filterAllGames"
+      };
+
+    function Kz(zz, uz) {
+      return zz.withFeatures.includes(uz) ? "with" : zz.withoutFeatures.includes(uz) ? "without" : null
+    }
+
+    function wz(zz) {
+      return null === zz ? "with" : "with" === zz ? "without" : null
+    }
+
+    function Xz(zz) {
+      return "with" === zz ? "only" : null === zz ? "include" : void 0
+    }
+
+    function fz(zz, uz) {
+      const bz = Kz(zz, uz),
+        Ez = zz => zz.filter((zz => zz !== uz));
+      return {
+        withFeatures: null === bz ? [...zz.withFeatures, uz] : Ez(zz.withFeatures),
+        withoutFeatures: "with" === bz ? [...zz.withoutFeatures, uz] : Ez(zz.withoutFeatures)
+      }
+    }
+    const sz = "section",
+      rz = "sort",
+      oz = "filters",
+      Nz = "q",
+      vz = "banned",
+      xz = "popular",
+      Jz = "strict";
+
+    function Az(zz) {
+      var uz, bz, nz;
+      const lz = zz.get(sz),
+        Mz = (null !== (uz = zz.get(oz)) && void 0 !== uz ? uz : Jz).split(","),
+        tz = zz.get(vz);
+      return {
+        section: "favourites" === lz || "mine" === lz ? lz : "explore",
+        sort: null !== (bz = Ez.u.find((uz => uz === zz.get(rz)))) && void 0 !== bz ? bz : xz,
+        withFeatures: Zz.filter((zz => Mz.includes(zz) && !Mz.includes(`-${zz}`))),
+        withoutFeatures: Zz.filter((zz => Mz.includes(`-${zz}`))),
+        searchQuery: (null === (nz = zz.get(Nz)) || void 0 === nz ? void 0 : nz.slice(0, Ez.G)) || null,
+        pageNumber: (0, iz.h)(zz.get(iz.e)),
+        banned: "only" === tz ? "with" : "include" === tz ? null : "without"
+      }
+    }
+
+    function Tz(zz, uz) {
+      var bz;
+      const Ez = az(uz);
+      (0, iz.k)(zz, sz, "explore" === uz.section ? null : uz.section), (0, iz.k)(zz, rz, uz.sort === xz ? null : uz.sort), (0, iz.k)(zz, oz, Ez === Jz ? null : Ez), (0, iz.k)(zz, Nz, uz.searchQuery), (0, iz.k)(zz, vz, null !== (bz = Xz(uz.banned)) && void 0 !== bz ? bz : null), (0, iz.m)(zz, uz.pageNumber)
+    }
+
+    function Lz(zz) {
+      const uz = new URLSearchParams;
+      return Tz(uz, {
+        section: "explore",
+        sort: xz,
+        withFeatures: "strict" === zz ? [zz] : [zz, "strict"],
+        withoutFeatures: [],
+        searchQuery: null,
+        pageNumber: 1,
+        banned: "without"
+      }), `${lz}?${uz.toString()}`
+    }
+
+    function Pz(zz) {
+      return az(zz) === Jz
+    }
+
+    function Gz(zz) {
+      return null !== zz.searchQuery || "with" === zz.banned || az(zz) !== Jz
+    }
+
+    function az(zz) {
+      return Zz.flatMap((uz => {
+        const bz = Kz(zz, uz);
+        return "with" === bz ? [uz] : "without" === bz ? [`-${uz}`] : []
+      })).join(",")
+    }
+    const Vz = {
+        popular: "shaderPackListing:sortPopular",
+        updated: "shaderPackListing:sortUpdated",
+        newest: "shaderPackListing:sortNewest"
+      },
+      mz = {
+        forest: "shaderPackListing:viewForest",
+        desert: "shaderPackListing:viewDesert",
+        water: "shaderPackListing:viewWater",
+        night: "shaderPackListing:viewNight",
+        cave: "shaderPackListing:viewCave"
+      };
+
+    function qz(zz) {
+      return Math.round(100 * Math.max(0, 1 - 1 / zz))
+    }
+
+    function hz(zz, uz, bz, nz) {
+      const iz = [];
+      zz.isBanned && iz.push({
+        tone: "warning",
+        text: nz("shaderPackListing:ownerBanned"),
+        detail: null
+      });
+      const {
+        pending: lz
+      } = zz;
+      if (null === zz.brokenError || lz && !lz.error || iz.push({
+          tone: "warning",
+          text: nz("shaderPackListing:ownerBroken"),
+          detail: zz.brokenError
+        }), null !== lz && void 0 !== lz && lz.error) iz.push({
+        tone: "warning",
+        text: nz(uz ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, Ez.g)(lz.error) ? null : lz.error
+      });
+      else if (lz) {
+        const zz = null === lz.renderNotBefore ? 0 : lz.renderNotBefore - bz,
+          Ez = String(Math.ceil(zz / 6e4)),
+          Mz = nz(uz ? zz > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : zz > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: Ez
+          });
+        iz.push({
+          tone: "info",
+          text: Mz,
+          detail: null
+        })
+      }
+      return zz.listed || iz.push({
+        tone: "info",
+        text: nz("shaderPackListing:ownerUnlisted"),
+        detail: null
+      }), iz
+    }
+
+    function Uz(zz) {
+      return Math.max(1, Math.round(zz / 1024))
+    }
+
+    function cz(zz, uz, bz) {
+      return zz instanceof nz.c && zz.errorMessageForUser ? zz.errorMessageForUser : uz(bz)
+    }
+  },
+  6291: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => iz
+    });
+    var Ez = bz(56),
+      nz = bz(33);
+
+    function iz(zz, uz) {
+      var bz;
+      const [iz, lz] = (0, Ez.useState)(null !== (bz = nz.g.getItem(zz)) && void 0 !== bz ? bz : uz);
+      return [iz, uz => {
+        nz.g.setItem(zz, uz), lz(uz)
+      }]
+    }
+  },
+  6382: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz,
+      e: () => iz
+    });
+    var Ez = bz(33);
+    const nz = "shaderPack";
+    async function iz() {
+      var zz;
+      let uz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (zz = await Ez.d.getItem(nz, uz)) && void 0 !== zz ? zz : null
+    }
+  },
+  6283: (zz, uz, bz) => {
+    bz.d(uz, {
+      B: () => Ez,
+      D: () => dz,
+      G: () => Oz,
+      K: () => fz,
+      M: () => pz,
+      O: () => Hz,
+      b: () => Fz,
+      e: () => Rz,
+      f: () => Zz,
+      g: () => Xz,
+      i: () => rz,
+      l: () => tz,
+      m: () => nz,
+      q: () => sz,
+      u: () => iz,
+      y: () => Mz,
+      z: () => lz
+    });
+    const Ez = ["forest", "desert", "water", "night", "cave"];
+    const nz = {
+        full: {
+          width: 3840,
+          height: 2160
+        },
+        large: {
+          width: 1920,
+          height: 1080
+        },
+        thumb: {
+          width: 640,
+          height: 360
+        }
+      },
+      iz = ["popular", "updated", "newest"],
+      lz = 3,
+      Mz = 32,
+      tz = 300;
+
+    function Hz(zz, uz) {
+      return zz.slice(0, uz).replace(/[\uD800-\uDBFF]$/, "")
+    }
+    const Oz = 64,
+      pz = 512,
+      dz = 18e5;
+    const Fz = "Bloxdhub",
+      Zz = "https://bloxdhub.com/shaders";
+
+    function Rz(zz) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(zz)}`
+    }
+    const Kz = "Screenshot generation failed.",
+      wz = "Its screenshots couldn't be generated:";
+
+    function Xz(zz) {
+      var uz;
+      return zz === Kz || null !== (uz = null === zz || void 0 === zz ? void 0 : zz.startsWith(wz)) && void 0 !== uz && uz
+    }
+
+    function fz(zz, uz) {
+      return `shaderPacks/${zz}/${uz}.json`
+    }
+
+    function sz(zz, uz, bz, Ez) {
+      return null === uz.renderId ? rz(zz, uz.baselineVersion, bz, Ez) : `${zz}/${function(zz,uz,bz,Ez){return`shaderPacks/${zz}/${uz}/${bz}-${Ez}.webp`}(uz.packId,uz.renderId,bz,Ez)}`
+    }
+
+    function rz(zz, uz, bz, Ez) {
+      return `${zz}/${function(zz,uz,bz){return`shaderPacks/baseline/${zz}/${uz}-${bz}.webp`}(uz,bz,Ez)}`
+    }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

@@ -1645,6 +1645,10 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   border: 1px solid #ffb914
 }
 
+.SettingsMenu .SettingsMenuRight .SettingsMenuRightInner .SettingBox.SettingBoxFeatured {
+  border-color: #ffb914
+}
+
 .SettingsMenu .SettingsMenuRight .SettingsMenuRightInner .SettingBox.SettingBoxDisabled {
   opacity: .5;
   pointer-events: none
@@ -3604,7 +3608,6 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 
 .Craftables .CraftablesBody .CraftablesLeftSide .CraftableItems .CraftableItemMarked .CraftableItemMarkBadge {
   background: #f2c94c;
-  border-radius: 50%;
   box-shadow: 0 0 0 .12rem rgba(0, 0, 0, .6);
   color: #2b2b2b;
   font-size: max(1.05rem, 10px);
@@ -5005,7 +5008,6 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 .TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockBadge {
   align-items: center;
   background: #ffb914;
-  border-radius: 50%;
   color: #1a1f2e;
   display: none;
   font-size: .45em;
@@ -7196,23 +7198,17 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   align-items: center;
   background-color: #181825;
   border-bottom: 1px solid #313244;
+  box-sizing: border-box;
   display: flex;
   gap: .6rem;
-  padding: .6rem .8rem
+  min-height: var(--panelHeaderHeight);
+  padding: .6rem .8rem;
+  padding-right: calc(.8rem + var(--panelCloseGap) + var(--panelCloseWidth))
 }
 
 .CodeEditorChatPanel .CodeEditorChatHeader .CodeEditorChatTitle {
   font-size: 1.1rem;
   font-weight: 700
-}
-
-.CodeEditorChatPanel .CodeEditorChatHeader .CodeEditorChatHide {
-  -webkit-text-stroke: 1px #fff;
-  font-size: 1rem
-}
-
-.CodeEditorChatPanel .CodeEditorChatHeader {
-  justify-content: space-between
 }
 
 .CodeEditorChatPanel .CodeEditorChatMessages {
@@ -7286,6 +7282,10 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 
 .ResizableSidePanel {
   --handleWidth: 0.7rem;
+  --panelCloseSize: 1rem;
+  --panelCloseWidth: calc(var(--panelCloseSize)*2.2);
+  --panelCloseGap: 0.9rem;
+  --panelHeaderHeight: 3rem;
   box-sizing: border-box;
   display: flex;
   flex-shrink: 1;
@@ -7297,6 +7297,14 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 @media(pointer:coarse) {
   .ResizableSidePanel {
     --handleWidth: 1.2rem
+  }
+}
+
+@media(max-height:520px) {
+  .ResizableSidePanel {
+    --panelCloseSize: 14px;
+    --panelCloseGap: 12px;
+    --panelHeaderHeight: 36px
   }
 }
 
@@ -7421,6 +7429,18 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   .ResizableSidePanel.CoversWhenNarrow .ResizableSidePanelHandle {
     display: none
   }
+}
+
+.ResizableSidePanel>.ResizableSidePanelClose {
+  -webkit-text-stroke: 1px #fff;
+  align-items: center;
+  display: flex;
+  font-size: var(--panelCloseSize);
+  height: var(--panelHeaderHeight);
+  position: absolute;
+  right: .8rem;
+  top: 0;
+  z-index: 1
 }
 
 .ResizableSidePanel .ResizableSidePanelHandle {
@@ -7617,7 +7637,8 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 }
 
 .CodeEditorRightColumn>:not(.ResizableSidePanel-top) {
-  flex: 1 1
+  flex: 1 1;
+  min-width: 0
 }
 
 .CodeEditorRightColumn>.ResizableSidePanel-top {
@@ -7743,9 +7764,12 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   align-items: center;
   background-color: #181825;
   border-bottom: 1px solid #313244;
+  box-sizing: border-box;
   display: flex;
   gap: .6rem;
-  padding: .6rem .8rem
+  min-height: var(--panelHeaderHeight);
+  padding: .6rem .8rem;
+  padding-right: calc(.8rem + var(--panelCloseGap) + var(--panelCloseWidth))
 }
 
 .WorldPanel .WorldPanelHeader .WorldPanelTitle {
@@ -7753,9 +7777,8 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   font-weight: 700
 }
 
-.WorldPanel .WorldPanelHeader .WorldPanelHide {
-  -webkit-text-stroke: 1px #fff;
-  font-size: 1rem
+.WorldPanel .WorldPanelHeader {
+  flex-wrap: wrap
 }
 
 .WorldPanel .WorldPanelHeader .WorldPanelTitle {
@@ -7890,10 +7913,6 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   .CodeEditorMainArea:has(>.CoversWhenNarrow .WorldPanel)>:not(.CoversWhenNarrow) {
     visibility: hidden
   }
-
-  .CodeEditorMainArea:has(>.CoversWhenNarrow .WorldPanel) .WorldPanelHide {
-    display: none
-  }
 }
 
 .CodeEditorBg:has(.WorldPanelSlot.TouchControl),
@@ -7906,6 +7925,7 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 
 .CodeEditorBg:has(.WorldPanelSlot.TouchControl) .CodeEditorMainArea>:not(:has(.WorldPanel), .CodeEditorMessage),
 .CodeEditorBg:has(.WorldPanelSlot.TouchControl) .CodeEditorRightColumn>:not(:has(>.WorldPanel)),
+.CodeEditorBg:has(.WorldPanelSlot.TouchControl) .ResizableSidePanelClose,
 .CodeEditorBg:has(.WorldPanelSlot.TouchControl) .ResizableSidePanelHandle,
 .CodeEditorBg:has(.WorldPanelSlot.TouchControl) .WorldPanelCoordinates,
 .CodeEditorBg:has(.WorldPanelSlot.TouchControl) .WorldPanelHeader,
@@ -10556,7 +10576,6 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 .RecordingIndicator .RecordingIndicatorDot {
   animation: RecordingIndicatorPulse 1.5s ease-in-out infinite;
   background: #fff;
-  border-radius: 50%;
   height: .6rem;
   width: .6rem
 }

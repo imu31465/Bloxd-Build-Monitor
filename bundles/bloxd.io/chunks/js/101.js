@@ -1,489 +1,669 @@
 export const id = 101;
 export const ids = [101];
 export const modules = {
-  4398: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => LT
+  4670: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => dz
     });
-    var iT = IT(1042),
-      zT = IT.n(iT),
-      kT = IT(1055),
-      WT = IT(1310),
-      XT = IT(3061),
-      BT = IT(139),
-      FT = IT(3105),
-      ST = IT(3091),
-      DT = IT(1083);
+    var Ez = bz(1038),
+      nz = bz.n(Ez),
+      iz = bz(1047),
+      lz = bz(1305),
+      Mz = bz(3248),
+      tz = bz(128),
+      Hz = bz(3298),
+      Oz = bz(3286),
+      pz = bz(1089);
 
-    function LT(TT) {
+    function dz(zz) {
       let {
-        game: oT
-      } = TT;
-      const IT = (0, BT.j)() ? "large" : "small",
-        iT = (0, FT.g)(oT, IT),
-        LT = (0, XT.g)(iT),
-        xT = void 0 !== LT.blurhash;
-      return (0, DT.jsxs)("div", {
+        game: uz
+      } = zz;
+      const bz = (0, tz.o)() ? "large" : "small",
+        Ez = (0, Hz.e)(uz, bz),
+        dz = (0, Mz.f)(Ez),
+        Fz = void 0 !== dz.blurhash;
+      return (0, pz.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [LT.isLoading && !xT && (0, DT.jsx)(WT.d, {
+        children: [dz.isLoading && !Fz && (0, pz.jsx)(lz.c, {
           loaderType: "Secondary"
-        }), !LT.failed && (null !== LT.src || xT) && (0, DT.jsx)("div", {
-          className: zT()("SchematicImage", ST.g, {
-            SchematicImageFadeIn: LT.fadeIn && !xT
+        }), !dz.failed && (null !== dz.src || Fz) && (0, pz.jsx)("div", {
+          className: nz()("SchematicImage", Oz.i, {
+            SchematicImageFadeIn: dz.fadeIn && !Fz
           }),
-          style: (0, ST.e)(LT),
-          children: (0, DT.jsx)(ST.d, {
-            image: LT
+          style: (0, Oz.f)(dz),
+          children: (0, pz.jsx)(Oz.d, {
+            image: dz
           })
-        }), LT.failed && (0, DT.jsx)("div", {
+        }), dz.failed && (0, pz.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, DT.jsx)(kT.e, {
+          children: (0, pz.jsx)(iz.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  6008: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      default: () => HT
+  4780: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Fz
     });
-    IT(4390);
-    var iT = IT(46),
-      zT = IT(1042),
-      kT = IT.n(zT),
-      WT = IT(306),
-      XT = IT(1023),
-      BT = IT(1193),
-      FT = IT(998),
-      ST = IT(1171),
-      DT = IT(1451),
-      LT = IT(3116),
-      xT = IT(1110),
-      cT = IT(4398),
-      KT = IT(2303),
-      MT = IT(1408),
-      rT = IT(4079),
-      AT = IT(4400),
-      gT = IT(1310),
-      hT = IT(1468),
-      wT = IT(4074),
-      mT = IT(2261),
-      eT = IT(4404),
-      RT = IT(5900),
-      uT = IT(1499),
-      vT = IT(1083);
-    const ET = [{
-        scope: "customGames",
-        title: "studio:leaderboardCustomGames"
-      }, {
-        scope: "allGames",
-        title: "studio:leaderboardAllGames"
-      }, {
-        scope: "dormantGames",
-        title: "studio:leaderboardDormantGames"
-      }],
-      fT = 25,
-      CT = "scope",
-      jT = "category",
-      JT = "customGames";
-    const UT = 7,
-      aT = {
-        playsPerDay: null,
-        avgPlaytimeMinutes: null,
-        retention: null
-      };
+    var Ez = bz(56),
+      nz = bz(1038),
+      iz = bz.n(nz),
+      lz = bz(4706),
+      Mz = bz(1305),
+      tz = bz(1181),
+      Hz = bz(2907),
+      Oz = bz(3059),
+      pz = bz(1047),
+      dz = bz(1089);
 
-    function YT(TT) {
+    function Fz(zz) {
       let {
-        position: oT
-      } = TT;
-      const IT = RT.e[oT];
-      return (0, vT.jsxs)("td", {
-        className: kT()("StudioLeaderboardPosition", {
-          StudioLeaderboardTopPosition: void 0 !== IT,
-          [`StudioLeaderboardTopPosition${oT}`]: void 0 !== IT
-        }),
-        children: [void 0 !== IT && (0, vT.jsx)("img", {
-          className: "StudioLeaderboardPositionItem",
-          src: IT,
-          alt: ""
-        }), oT]
-      })
-    }
-
-    function QT(TT) {
-      let {
-        discoverability: oT
-      } = TT;
+        folderName: uz,
+        onTexturePackUpdated: nz,
+        disabled: Fz = !1,
+        maxFileSizeMb: Zz,
+        packOwner: Rz
+      } = zz;
       const {
-        playsPerDay: IT,
-        avgPlaytimeMinutes: zT,
-        retention: kT
-      } = null === oT ? aT : (0, LT.i)(oT);
-      return (0, vT.jsxs)(iT.Fragment, {
-        children: [(0, vT.jsx)("td", {
-          children: null !== IT ? (0, LT.c)(IT) : "-"
-        }), (0, vT.jsx)("td", {
-          children: null !== zT ? (0, LT.d)(zT) : "-"
-        }), (0, vT.jsx)("td", {
-          children: null !== kT ? (0, LT.e)(kT) : "-"
-        })]
-      })
-    }
-
-    function OT(TT) {
-      let {
-        discoverability: oT
-      } = TT;
-      return (0, vT.jsx)("td", {
-        className: "StudioLeaderboardEngagementScore",
-        children: void 0 !== (null === oT || void 0 === oT ? void 0 : oT.engagementScore) ? (0, BT.S)(Math.round(oT.engagementScore)) : "-"
-      })
-    }
-
-    function HT() {
-      var TT, oT;
+        t: Kz
+      } = (0, tz.F)(), [wz, Xz] = (0, Ez.useState)(!1), [fz, sz] = (0, Ez.useState)(null), [rz, oz] = (0, Ez.useState)(null), Nz = (0, Ez.useRef)(null);
       const {
-        t: IT
-      } = (0, ST.t)(), zT = (0, hT.useNavigatePreserveSearch)(), {
-        userContext: kT,
-        isUserContextUpdating: RT
-      } = (0, xT.b)(), aT = (0, mT.q)(), [HT, nT] = (0, wT.o)(), qT = (ZT = HT.get(CT), ET.some((TT => TT.scope === ZT)) ? ZT : JT);
-      var ZT;
-      const lT = function(TT) {
-          return WT.S.includes(TT) ? TT : null
-        }(HT.get(jT)),
-        sT = (0, wT.i)(HT.get(wT.e)),
-        [tT, GT] = (0, iT.useState)(null),
-        [pT, bT] = (0, iT.useState)(!1);
-
-      function yT(TT) {
-        nT((oT => {
-          (0, wT.l)(oT, CT, TT.scope === JT ? null : TT.scope), (0, wT.l)(oT, jT, TT.category), (0, wT.n)(oT, TT.page)
-        }))
-      }
-      const NT = !RT && kT.playerHasRank("developer"),
-        PT = NT && "allGames" === qT,
-        dT = NT && "dormantGames" === qT;
-      (0, iT.useEffect)((() => {
-        if (RT) return;
-        let TT = !1;
-        return GT(null), bT(!1), DT.e.getPublishedGamePreviews(kT, {
-          searchQuery: null,
-          pageNumber: sT,
-          pageSize: fT,
-          onlyFavouriteGames: !1,
-          onlyOwnedGames: !1,
-          onlyApprovedGames: !1,
-          schematicIdsToExclude: [],
-          gameCategories: null !== lT ? [lT] : [],
-          upAndComing: !1,
-          dormantGames: dT,
-          sortByEngagementScore: !0,
-          firstPartyGameNames: PT ? FT.b : void 0,
-          includeOwners: !0
-        }).then((oT => {
-          TT || GT(oT)
-        })).catch((oT => {
-          console.error("Failed to load the studio leaderboard", oT), TT || bT(!0)
-        })), () => {
-          TT = !0
-        }
-      }), [RT, PT, dT, lT, sT, kT]);
-      const VT = null !== (TT = null === tT || void 0 === tT ? void 0 : tT.results) && void 0 !== TT ? TT : null,
-        To = function(TT, oT, IT) {
-          const [zT, kT] = (0, iT.useState)({}), WT = IT ? (null !== TT && void 0 !== TT ? TT : []).flatMap((TT => "firstPartyGame" === TT.type ? [(0, XT.g)(TT.gameNameWithVariation, !0)] : [])).join(",") : "", BT = (0, iT.useMemo)((() => "" === WT ? [] : WT.split(",")), [WT]);
-          return (0, iT.useEffect)((() => {
-            if (0 === BT.length) return void kT({});
-            let TT = !1;
-            return DT.e.getGamesByAnalyticsIds(oT, BT).then((oT => {
-              TT || kT(oT)
-            })).catch((TT => {
-              console.error("Failed to load first party discoverability for the studio leaderboard", TT)
-            })), () => {
-              TT = !0
+        getRootProps: vz,
+        getInputProps: xz,
+        isDragActive: Jz
+      } = (0, lz.b)({
+        onDrop: async function(zz) {
+          Xz(!0);
+          try {
+            const uz = await (0, Hz.u)(zz);
+            if ("customGame" === Rz && (0, Oz.p)(uz)) return void sz(Kz(Oz.e));
+            if (void 0 !== Zz) {
+              const zz = JSON.stringify(uz).length / 1048576;
+              if (zz > Zz) return void sz(`File size is too large. Max size is ${Zz}MB. Current size is ${zz}MB.`)
             }
-          }), [BT, oT]), zT
-        }(VT, kT, NT),
-        oo = null !== VT ? function(TT, oT, IT, iT, zT) {
-          return TT.map(((TT, kT) => {
-            var WT;
-            const BT = iT + kT + 1;
-            if ("customGame" === TT.type) {
-              const oT = TT.preview;
-              return {
-                key: oT.schematicId,
-                position: BT,
-                thumbnail: (0, vT.jsx)(cT.e, {
-                  game: oT
-                }),
-                name: oT.name,
-                owner: TT.owner,
-                category: oT.gameCategory,
-                ccu: oT.ccu,
-                favourites: oT.favourites,
-                discoverability: (0, LT.k)(oT) ? oT : null,
-                url: (0, uT.k)((0, XT.c)(oT.schematicId))
-              }
-            }
-            const FT = TT.gameNameWithVariation,
-              ST = (0, XT.g)(FT, !0);
-            return {
-              key: FT,
-              position: BT,
-              thumbnail: (0, vT.jsx)(eT.e, {
-                game: FT
-              }),
-              name: (0, uT.i)(FT, zT),
-              owner: null,
-              category: (0, uT.b)(FT),
-              ccu: (0, mT.d)(FT, oT),
-              favourites: null,
-              discoverability: null !== (WT = IT[ST]) && void 0 !== WT ? WT : null,
-              url: (0, uT.k)(ST)
-            }
-          }))
-        }(VT, aT, To, (sT - 1) * fT, IT) : [],
-        Io = !pT && null === tT,
-        io = !Io && !pT && 0 === oo.length,
-        zo = null !== (oT = null === tT || void 0 === tT ? void 0 : tT.totalPages) && void 0 !== oT ? oT : 1;
-      return (0, vT.jsxs)("div", {
-        className: "StudioPage StudioLeaderboard",
-        children: [(0, vT.jsx)("div", {
-          className: "StudioPageHeader",
-          children: (0, vT.jsx)("h1", {
-            className: "StudioPageTitle",
-            children: IT("studio:leaderboard")
-          })
-        }), (0, vT.jsxs)("div", {
-          className: "StudioLeaderboardBanner",
-          children: [!dT && (0, vT.jsx)("div", {
-            children: IT("studio:leaderboardBanner")
-          }), dT && (0, vT.jsx)("div", {
-            children: IT("studio:leaderboardDormantBanner")
-          }), (0, vT.jsx)("div", {
-            children: IT("studio:leaderboardMetricsBanner", {
-              days: UT
-            })
-          })]
-        }), NT && (0, vT.jsx)("div", {
-          className: "StudioLeaderboardScopes",
-          children: ET.map((TT => (0, vT.jsx)(MT.J, {
-            active: qT === TT.scope,
-            onClick: () => {
-              yT({
-                scope: TT.scope,
-                category: lT,
-                page: 1
-              })
-            },
-            children: IT(TT.title)
-          }, TT.scope)))
-        }), (0, vT.jsxs)("div", {
-          className: "StudioLeaderboardCategories",
-          children: [(0, vT.jsx)(MT.J, {
-            active: null === lT,
-            onClick: () => {
-              yT({
-                scope: qT,
-                category: null,
-                page: 1
-              })
-            },
-            children: IT("studio:leaderboardAllCategories")
-          }), WT.S.map((TT => (0, vT.jsx)(MT.J, {
-            active: lT === TT,
-            onClick: () => {
-              yT({
-                scope: qT,
-                category: TT,
-                page: 1
-              })
-            },
-            children: (0, WT.eb)(TT)
-          }, TT)))]
-        }), Io && (0, vT.jsx)("div", {
-          className: "StudioPageLoader AnimFadeIn",
-          children: (0, vT.jsx)(gT.d, {})
-        }), pT && (0, vT.jsx)("div", {
-          className: "StudioPageMessage AnimFadeIn",
-          children: IT("studio:failedToLoadLeaderboard")
-        }), io && (0, vT.jsx)("div", {
-          className: "StudioPageMessage AnimFadeIn",
-          children: IT("studio:leaderboardEmpty")
-        }), !Io && !pT && !io && (0, vT.jsx)("div", {
-          className: "StudioLeaderboardTableScroll AnimFadeIn",
-          children: (0, vT.jsx)(AT.b, {
-            className: "StudioTable",
-            columns: [{
-              key: "position",
-              header: "#"
-            }, {
-              key: "game",
-              header: IT("general:game")
-            }, {
-              key: "owner",
-              header: IT("general:owner")
-            }, ...null === lT ? [{
-              key: "category",
-              header: IT("general:category")
-            }] : [], ...NT ? [{
-              key: "engagementScore",
-              header: "engagementScore"
-            }] : [], {
-              key: "playsPerDay",
-              header: IT("studio:leaderboardPlaysPerDay")
-            }, {
-              key: "sessionLength",
-              header: IT("studio:leaderboardSessionLength")
-            }, {
-              key: "retention",
-              header: IT("studio:leaderboardSessionsPerPlayer")
-            }, ...dT ? [] : [{
-              key: "ccu",
-              header: IT("studio:metricCcu")
-            }], {
-              key: "favourites",
-              header: IT("general:favourites")
-            }],
-            rows: oo,
-            getRowKey: TT => TT.key,
-            renderRow: TT => (0, vT.jsxs)("tr", {
-              onClick: () => {
-                zT(TT.url)
-              },
-              children: [(0, vT.jsx)(YT, {
-                position: TT.position
-              }), (0, vT.jsx)("td", {
-                children: (0, vT.jsx)(eT.h, {
-                  thumbnail: TT.thumbnail,
-                  name: TT.name
-                })
-              }), (0, vT.jsxs)("td", {
-                className: "StudioLeaderboardOwner",
-                children: [null === TT.owner && "-", null !== TT.owner && (0, vT.jsx)(KT.g, {
-                  playerSocialPreview: TT.owner,
-                  showLocation: !1,
-                  opensProfileCard: !1
-                })]
-              }), null === lT && (0, vT.jsx)("td", {
-                children: (0, WT.eb)(TT.category)
-              }), NT && (0, vT.jsx)(OT, {
-                discoverability: TT.discoverability
-              }), (0, vT.jsx)(QT, {
-                discoverability: TT.discoverability
-              }), !dT && (0, vT.jsx)("td", {
-                children: null !== TT.ccu ? (0, BT.S)(TT.ccu) : "-"
-              }), (0, vT.jsx)("td", {
-                children: null !== TT.favourites ? (0, BT.S)(TT.favourites) : "-"
-              })]
-            })
-          })
-        }), !pT && (0, vT.jsx)(rT.c, {
-          className: "AnimFadeIn",
-          page: sT,
-          totalPages: zo,
-          onSetPage: TT => {
-            yT({
-              scope: qT,
-              category: lT,
-              page: TT
-            })
+            sz(null), oz(null), nz(uz), Nz.current = uz,
+              function(zz, uz) {
+                const Ez = zz.modelOverrides;
+                Ez && Promise.all([bz.e(195), bz.e(194)]).then((() => bz(9052))).then((bz => {
+                  let {
+                    packDisplayName: nz,
+                    refusedPackModels: iz,
+                    packModelSummary: lz
+                  } = bz;
+                  const Mz = nz(zz.metaData);
+                  uz(lz(Mz, iz(Mz, Ez, !1)))
+                })).catch((zz => {
+                  console.error("Checking the texture pack's models failed:", zz)
+                }))
+              }(uz, (zz => {
+                Nz.current === uz && oz(zz)
+              }))
+          } catch {
+            sz("Invalid Texture Pack Folder")
+          } finally {
+            Xz(!1)
           }
+        },
+        useFsAccessApi: !1,
+        disabled: Fz
+      });
+      return (0, dz.jsxs)("div", {
+        className: "CustomTexturePackContainer",
+        children: [(0, dz.jsxs)("div", {
+          className: "CustomTextureWarning",
+          children: [Kz("settingsMenu:customTextureWarning"), ".", (0, dz.jsx)("br", {}), Kz("settingsMenu:viewDocumentation"), ":", " ", (0, dz.jsx)("a", {
+            href: "https://github.com/Bloxdy/texturePacks",
+            target: "_blank",
+            rel: "noreferrer",
+            children: "github.com/Bloxdy/texturePacks"
+          })]
+        }), fz && (0, dz.jsxs)("div", {
+          className: "CustomTextureError",
+          children: [Kz("general:error"), ": ", fz]
+        }), rz && (0, dz.jsx)("div", {
+          className: "CustomTextureError",
+          children: rz
+        }), (0, dz.jsxs)("div", {
+          ...vz({
+            className: iz()("CustomTextureFolderUpload", {
+              ActiveDrag: Jz,
+              Disabled: Fz
+            })
+          }),
+          children: [(0, dz.jsx)("input", {
+            ...xz({
+              webkitdirectory: "true"
+            })
+          }), wz && (0, dz.jsx)("div", {
+            className: "CustomTextureFolderUploadLoading",
+            children: (0, dz.jsx)(Mz.c, {})
+          }), !wz && !Jz && uz && (0, dz.jsxs)(dz.Fragment, {
+            children: [(0, dz.jsx)("div", {
+              className: "CustomTextureFolderUploadIcon Active",
+              children: (0, dz.jsx)(pz.c, {
+                name: "folder-image"
+              })
+            }), (0, dz.jsx)("div", {
+              className: "CustomTextureFolderUploadInstructions Active",
+              children: uz
+            })]
+          }), !wz && (Jz || !uz) && (0, dz.jsxs)(dz.Fragment, {
+            children: [(0, dz.jsx)("div", {
+              className: "CustomTextureFolderUploadIcon",
+              children: (0, dz.jsx)(pz.c, {
+                name: "up-from-bracket"
+              })
+            }), (0, dz.jsx)("div", {
+              className: "CustomTextureFolderUploadInstructions",
+              children: "Drag and drop a Texture Pack folder here"
+            })]
+          })]
         })]
       })
     }
   },
-  4404: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => WT,
-      h: () => kT
+  4746: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Zz,
+      e: () => fz,
+      f: () => Rz,
+      j: () => Xz
     });
-    var iT = IT(1499),
-      zT = IT(1083);
+    var Ez = bz(56),
+      nz = bz(4753),
+      iz = bz(4144),
+      lz = bz(1332),
+      Mz = bz(4770),
+      tz = bz(1038),
+      Hz = bz.n(tz),
+      Oz = bz(1322),
+      pz = bz(1673),
+      dz = bz(4776),
+      Fz = bz(1089);
 
-    function kT(TT) {
+    function Zz(zz) {
       let {
-        thumbnail: oT,
-        name: IT
-      } = TT;
-      return (0, zT.jsxs)("div", {
-        className: "StudioTableGameCell",
-        children: [(0, zT.jsx)("div", {
-          className: "StudioTableThumbnail",
-          children: oT
-        }), (0, zT.jsx)("span", {
-          className: "StudioTableGameName",
-          children: IT
+        label: uz,
+        onClick: bz,
+        checked: Ez,
+        circleInfoText: nz,
+        className: Mz,
+        disabled: tz,
+        note: Oz
+      } = zz;
+      return (0, Fz.jsxs)("div", {
+        "aria-disabled": tz || void 0,
+        "data-pad-focusable": !0,
+        className: Hz()("SettingBox CheckboxContainer", {
+          [Mz]: Mz,
+          SettingBoxDisabled: tz
+        }),
+        onClick: () => {
+          tz || bz(!Ez)
+        },
+        children: [(0, Fz.jsxs)("div", {
+          className: "CheckboxInputAndText",
+          children: [(0, Fz.jsx)("label", {
+            className: "CheckboxClickableLabel",
+            children: (0, Fz.jsx)(iz.b, {
+              className: "SettingsCheckbox",
+              checked: Ez,
+              disabled: tz,
+              onChange: () => {}
+            })
+          }), (0, Fz.jsxs)("div", {
+            className: "CheckboxText",
+            children: [uz, nz && (0, Fz.jsx)("span", {
+              onClick: zz => zz.stopPropagation(),
+              children: (0, Fz.jsx)(lz.b, {
+                className: "SettingsTextInputCircleInfo",
+                hoverInfo: nz
+              })
+            })]
+          })]
+        }), Oz && (0, Fz.jsx)("div", {
+          className: "SettingNote",
+          children: Oz
         })]
       })
     }
 
-    function WT(TT) {
+    function Rz(zz) {
       let {
-        game: oT
-      } = TT;
-      return (0, zT.jsx)("img", {
-        className: "StudioTableThumbnailImage",
-        src: (0, iT.f)(oT),
-        alt: ""
-      })
-    }
-  },
-  5900: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => iT
-    });
-    const iT = {
-      1: IT(5903),
-      2: IT(5911),
-      3: IT(5920)
-    }
-  },
-  4400: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => XT
-    });
-    var iT = IT(46),
-      zT = IT(1042),
-      kT = IT.n(zT),
-      WT = IT(1083);
-
-    function XT(TT) {
-      let {
-        columns: oT,
-        rows: IT,
-        getRowKey: zT,
-        renderRow: XT,
-        className: BT
-      } = TT;
-      return (0, WT.jsxs)("table", {
-        className: kT()("Table", BT),
-        children: [(0, WT.jsx)("thead", {
-          children: (0, WT.jsx)("tr", {
-            children: oT.map((TT => (0, WT.jsx)("th", {
-              children: TT.header
-            }, TT.key)))
+        name: uz,
+        onChange: bz,
+        min: nz,
+        max: iz,
+        step: Mz,
+        initValue: tz,
+        circleInfoText: Oz,
+        format: pz,
+        className: dz,
+        padStep: Zz,
+        disabled: Rz = !1,
+        selectableMax: Kz,
+        cappedNote: Xz,
+        onChangeComplete: fz
+      } = zz;
+      const [sz, rz] = (0, Ez.useState)(tz), oz = (0, Ez.useRef)(tz);
+      (0, Ez.useEffect)((() => {
+        oz.current = tz, rz(tz)
+      }), [tz]);
+      const Nz = void 0 !== Kz && Kz < iz,
+        vz = Nz ? {
+          "--slider-selectable": (Kz - nz) / (iz - nz)
+        } : void 0;
+      return (0, Fz.jsxs)("div", {
+        className: Hz()("SettingBox SettingsSliderDiv", {
+          [dz]: dz,
+          SettingBoxDisabled: Rz,
+          SliderCapped: Nz
+        }),
+        style: vz,
+        children: [(0, Fz.jsxs)("div", {
+          className: "SliderText",
+          children: [`${uz}: ${pz?pz(sz):sz}`, Oz && (0, Fz.jsx)(lz.b, {
+            className: "SettingsTextInputCircleInfo",
+            hoverInfo: Oz
+          })]
+        }), (0, Fz.jsx)("div", {
+          className: "SliderDiv",
+          children: (0, Fz.jsx)(wz, {
+            value: sz,
+            min: nz,
+            max: iz,
+            step: Mz,
+            onChange: zz => {
+              if (Nz && zz >= Kz && sz === Kz) return;
+              const uz = Nz ? Math.min(zz, Kz) : zz;
+              oz.current = uz, rz(uz), bz(uz)
+            },
+            onChangeComplete: fz && (() => {
+              fz(oz.current)
+            }),
+            format: pz,
+            padStep: Zz,
+            disabled: Rz
           })
-        }), (0, WT.jsx)("tbody", {
-          children: IT.map((TT => (0, WT.jsx)(iT.Fragment, {
-            children: XT(TT)
-          }, zT(TT))))
+        }), Nz && Xz && (0, Fz.jsx)("div", {
+          className: "SettingNote",
+          children: Xz
+        })]
+      })
+    }
+    const Kz = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+
+    function wz(zz) {
+      var uz;
+      let {
+        value: bz,
+        min: iz,
+        max: lz,
+        step: Mz,
+        onChange: tz,
+        orientation: Hz,
+        reverse: Oz,
+        setIsChanging: pz,
+        tooltip: Zz,
+        labels: Rz,
+        handleLabel: wz,
+        format: Xz,
+        onChangeStart: fz,
+        onChangeComplete: sz,
+        padStep: rz,
+        disabled: oz = !1
+      } = zz;
+      const Nz = (0, Ez.useRef)(null),
+        vz = (0, Ez.useRef)(null);
+      (0, Ez.useLayoutEffect)((() => {
+        var zz, uz, bz;
+        const Ez = null !== (zz = null === (uz = Nz.current) || void 0 === uz ? void 0 : uz.querySelector(".rangeslider")) && void 0 !== zz ? zz : null;
+        null === Ez || void 0 === Ez || Ez.setAttribute("data-pad-slider", ""), null === Ez || void 0 === Ez || Ez.setAttribute("data-pad-focusable", ""), null === Ez || void 0 === Ez || null === (bz = Ez.querySelector(".rangeslider__handle")) || void 0 === bz || bz.setAttribute("data-pad-slider-handle", ""), vz.current = Ez
+      }), []), (0, Ez.useLayoutEffect)((() => {
+        var zz, uz;
+        oz ? null === (zz = vz.current) || void 0 === zz || zz.setAttribute("aria-disabled", "true") : null === (uz = vz.current) || void 0 === uz || uz.removeAttribute("aria-disabled")
+      }), [oz]);
+      const xz = (null !== (uz = String(Mz).split(".")[1]) && void 0 !== uz ? uz : "").length,
+        Jz = zz => {
+          const uz = Number((Math.round((zz - iz) / Mz) * Mz + iz).toFixed(xz));
+          return Math.min(lz, Math.max(iz, uz))
+        },
+        Az = (0, Ez.useRef)(sz);
+      Az.current = sz, (0, Ez.useEffect)((() => {
+        const zz = Nz.current;
+        if (!zz) return;
+        const uz = zz => {
+          var uz;
+          Kz.has(zz.key) && (null === (uz = Az.current) || void 0 === uz || uz.call(Az))
+        };
+        return zz.addEventListener("keyup", uz), () => {
+          zz.removeEventListener("keyup", uz)
+        }
+      }), []);
+      const Tz = (0, Ez.useRef)(!1);
+      return (0, dz.f)(vz, {
+        adjust: zz => {
+          if (oz) return;
+          const uz = null !== rz && void 0 !== rz ? rz : Math.max(Mz, Math.round((lz - iz) / 20 / Mz) * Mz),
+            Ez = Jz(bz + zz * uz * (Oz ? -1 : 1));
+          Ez !== bz && (null === fz || void 0 === fz || fz(), tz(Ez), null === sz || void 0 === sz || sz())
+        },
+        setFraction: zz => {
+          if (oz) return;
+          const uz = Jz(iz + (Oz ? 1 - zz : zz) * (lz - iz));
+          uz !== bz && (Tz.current || (Tz.current = !0, null === fz || void 0 === fz || fz()), tz(uz))
+        },
+        endDrag: () => {
+          Tz.current && (Tz.current = !1, null === sz || void 0 === sz || sz())
+        }
+      }), (0, Fz.jsx)("div", {
+        ref: Nz,
+        style: {
+          display: "contents"
+        },
+        children: (0, Fz.jsx)(nz.c, {
+          value: bz,
+          min: iz,
+          max: lz,
+          step: Mz,
+          onChange: tz,
+          orientation: Hz,
+          reverse: Oz,
+          tooltip: Zz,
+          labels: Rz,
+          handleLabel: wz,
+          format: Xz,
+          onChangeStart: () => {
+            null === fz || void 0 === fz || fz(), null === pz || void 0 === pz || pz(!0)
+          },
+          onChangeComplete: () => {
+            null === pz || void 0 === pz || pz(!1), null === sz || void 0 === sz || sz()
+          }
+        })
+      })
+    }
+    async function Xz() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const uz = Oz.NotificationProvider.showPromptPopup({
+        title: "settingsMenu:reloadPagePopupTitle",
+        subtitle: "settingsMenu:reloadPagePopupSubtitle",
+        confirmText: "settingsMenu:reloadPagePopupConfirm",
+        confirmTooltip: "",
+        cancelText: "general:cancel",
+        cancelTooltip: "",
+        unlockPointerKey: zz
+      });
+      !0 === await uz.getResult() && (0, pz.reloadBloxd)()
+    }
+
+    function fz(zz) {
+      let {
+        label: uz,
+        options: bz,
+        value: Ez,
+        onChange: nz,
+        circleInfoText: iz
+      } = zz;
+      return (0, Fz.jsxs)("div", {
+        className: "SettingBox SegmentedSettingRow",
+        children: [(0, Fz.jsxs)("div", {
+          className: "SliderText",
+          children: [uz, iz && (0, Fz.jsx)(lz.b, {
+            className: "SettingsTextInputCircleInfo",
+            hoverInfo: iz
+          })]
+        }), (0, Fz.jsx)(Mz.d, {
+          ariaLabel: uz,
+          options: bz,
+          value: Ez,
+          onChange: nz
         })]
       })
     }
   },
-  4390: () => {},
-  5903: TT => {
-    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
+  4744: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => wz,
+      e: () => Xz
+    });
+    var Ez = bz(2907),
+      nz = bz(2916),
+      iz = bz(56),
+      lz = bz(1038),
+      Mz = bz.n(lz),
+      tz = bz(1305),
+      Hz = bz(2899),
+      Oz = bz(1322),
+      pz = bz(4746),
+      dz = bz(4780),
+      Fz = bz(606),
+      Zz = bz(4783),
+      Rz = bz(1089);
+
+    function Kz() {
+      (0, pz.j)("texturePackPickReload")
+    }
+
+    function wz(zz) {
+      var uz;
+      let {
+        setApplySettingsCallback: bz
+      } = zz;
+      const [, lz] = (0, iz.useReducer)((zz => zz + 1), 0), Mz = (0, iz.useRef)(!1), tz = (0, iz.useRef)(null);
+
+      function wz(zz, uz) {
+        Hz.e.setFromJson(zz, "player");
+        const Ez = Hz.e.saveTexturePack();
+        if (Fz.x) {
+          const zz = Hz.e.toJson();
+          Ez.then((uz => {
+            uz && (0, Zz.i)(zz, Kz)
+          }))
+        } else Mz.current ||= uz, tz.current !== Hz.e.getId() || Hz.e.getId() === nz.r.CUSTOM && Mz.current ? bz((() => pz.j)) : bz(null);
+        lz()
+      }
+      async function fz(zz) {
+        if (Hz.e.getId() !== zz.metaData.id) {
+          if (Hz.e.getId() === nz.r.CUSTOM && Hz.e.getFromFolderName()) {
+            const zz = Oz.NotificationProvider.showPromptPopup({
+              title: "settingsMenu:loseChangesTitle",
+              subtitle: "settingsMenu:loseChangesSubtitle",
+              confirmText: "general:continue",
+              destructive: !0,
+              confirmTooltip: "",
+              cancelText: "general:cancel",
+              cancelTooltip: ""
+            });
+            if (!0 !== await zz.getResult()) return
+          }
+          wz(zz, !1)
+        }
+      }(0, iz.useEffect)((() => {
+        tz.current = Hz.e.getId()
+      }), []);
+      const sz = Ez.e,
+        rz = [sz, ...Object.values(nz.r).filter((zz => zz !== sz))];
+      return (0, Rz.jsx)(Rz.Fragment, {
+        children: (0, Rz.jsxs)("div", {
+          className: "TexturePackCategory SettingsMenuRightInner",
+          children: [(0, Rz.jsx)("div", {
+            className: "TexturePackList",
+            children: rz.map((zz => (0, Rz.jsx)(Xz, {
+              id: zz,
+              isSelected: zz === Hz.e.getId(),
+              setSelected: fz
+            }, zz)))
+          }), Hz.e.getId() === nz.r.CUSTOM && (0, Rz.jsx)(dz.c, {
+            folderName: null !== (uz = Hz.e.getFromFolderName()) && void 0 !== uz ? uz : null,
+            onTexturePackUpdated: function(zz) {
+              wz(zz, !0)
+            },
+            packOwner: "player"
+          })]
+        })
+      })
+    }
+
+    function Xz(zz) {
+      let {
+        id: uz,
+        isSelected: bz,
+        setSelected: lz,
+        disabled: Hz = !1
+      } = zz;
+      const [Oz, pz] = (0, iz.useState)(!0), [dz, Fz] = (0, iz.useState)(""), [Zz, Kz] = (0, iz.useState)(""), [wz, Xz] = (0, iz.useState)(""), fz = (0, iz.useRef)({});
+      return (0, iz.useEffect)((() => {
+        (0, Ez.s)(uz).then((zz => {
+          var uz;
+          zz && (fz.current = zz, pz(!1), Fz(fz.current.metaData.name), Kz(fz.current.metaData.author), Xz(null !== (uz = fz.current.metaData.previewImage) && void 0 !== uz ? uz : ""))
+        })).catch((zz => {
+          console.warn(`Failed to fetch texture pack ${uz}`, zz)
+        }))
+      }), [uz]), (0, Rz.jsxs)("div", {
+        "data-pad-focusable": !0,
+        "aria-disabled": Hz || void 0,
+        className: Mz()("TexturePack", {
+          Selected: bz,
+          Custom: uz === nz.r.CUSTOM,
+          Disabled: Hz
+        }),
+        onClick: () => {
+          Oz || Hz || lz(fz.current)
+        },
+        children: [(0, Rz.jsx)("div", {
+          className: "TexturePackBg",
+          style: {
+            backgroundImage: wz ? `url(${wz})` : void 0
+          }
+        }), Oz && (0, Rz.jsx)("div", {
+          className: "TexturePackName",
+          children: (0, Rz.jsx)(tz.c, {})
+        }), !Oz && dz && (0, Rz.jsx)("div", {
+          className: "TexturePackName",
+          children: dz
+        }), !Oz && Zz && (0, Rz.jsx)("div", {
+          className: "TexturePackAuthor",
+          children: Zz
+        })]
+      })
+    }
   },
-  5911: TT => {
-    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
+  4770: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => lz
+    });
+    var Ez = bz(1038),
+      nz = bz.n(Ez),
+      iz = bz(1089);
+
+    function lz(zz) {
+      let {
+        options: uz,
+        value: bz,
+        onChange: Ez,
+        ariaLabel: lz,
+        className: Mz,
+        reselectable: tz = !1,
+        keepsFocus: Hz = !1
+      } = zz;
+      return (0, iz.jsx)("div", {
+        className: nz()("SegmentedToggle", Mz),
+        role: "group",
+        "aria-label": lz,
+        children: uz.map((zz => {
+          const uz = zz.value === bz;
+          return (0, iz.jsx)("button", {
+            type: "button",
+            "aria-pressed": uz,
+            "aria-label": zz.ariaLabel,
+            title: zz.ariaLabel,
+            className: nz()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: uz
+            }),
+            onMouseDown: Hz ? zz => {
+              zz.preventDefault()
+            } : void 0,
+            onClick: () => {
+              uz && !tz || Ez(zz.value)
+            },
+            children: zz.label
+          }, zz.value)
+        }))
+      })
+    }
   },
-  5920: TT => {
-    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
+  4776: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => iz,
+      f: () => lz
+    });
+    var Ez = bz(56);
+    const nz = new WeakMap,
+      iz = zz => {
+        var uz;
+        const bz = zz.closest("[data-pad-slider]");
+        return bz && null !== (uz = nz.get(bz)) && void 0 !== uz ? uz : null
+      },
+      lz = (zz, uz) => {
+        const bz = (0, Ez.useRef)(uz);
+        bz.current = uz, (0, Ez.useEffect)((() => {
+          if (zz.current) return ((zz, uz) => (nz.set(zz, uz), () => {
+            nz.get(zz) === uz && nz.delete(zz)
+          }))(zz.current, {
+            adjust: zz => {
+              bz.current.adjust(zz)
+            },
+            setFraction: zz => {
+              bz.current.setFraction(zz)
+            },
+            endDrag: () => {
+              bz.current.endDrag()
+            }
+          })
+        }), [zz])
+      }
+  },
+  4783: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Mz,
+      i: () => lz
+    });
+    var Ez = bz(2916),
+      nz = bz(4789);
+    let iz = null;
+
+    function lz(zz, uz) {
+      iz = {
+        pack: zz.metaData.id === Ez.c ? null : zz,
+        prompt: uz
+      }
+    }
+
+    function Mz(zz, uz) {
+      const bz = iz;
+      null !== bz && (0, nz.c)(bz.pack, zz) && (iz = null, uz && bz.prompt())
+    }
+  },
+  4789: (zz, uz, bz) => {
+    function Ez(zz, uz) {
+      return nz(zz, uz)
+    }
+
+    function nz(zz, uz) {
+      if (zz === uz) return !0;
+      if ("object" !== typeof zz || "object" !== typeof uz || null === zz || null === uz || Array.isArray(zz) !== Array.isArray(uz)) return !1;
+      const bz = zz,
+        Ez = uz,
+        iz = Object.keys(bz);
+      return iz.length === Object.keys(Ez).length && iz.every((zz => Object.prototype.hasOwnProperty.call(Ez, zz) && nz(bz[zz], Ez[zz])))
+    }
+    bz.d(uz, {
+      c: () => Ez
+    })
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

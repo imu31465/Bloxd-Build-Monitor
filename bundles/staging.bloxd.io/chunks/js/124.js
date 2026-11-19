@@ -1,684 +1,229 @@
 export const id = 124;
-export const ids = [124, 127, 128, 131];
+export const ids = [124];
 export const modules = {
-  6103: (TT, oT, IT) => {
-    IT.d(oT, {
-      e: () => iT.g,
-      g: () => zT,
-      h: () => iT.q
+  6301: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      ShaderPackPublishForm: () => fz
     });
-    var iT = IT(6092);
-    const zT = [!1, !0].flatMap((TT => ["terrain", "liquid", "model"].map((oT => ({
-      strict: TT,
-      program: oT
-    })))))
-  },
-  39280: (TT, oT, IT) => {
-    IT.d(oT, {
-      d: () => DT,
-      installListedShaderPack: () => ST
-    });
-    var iT = IT(6045),
-      zT = IT(6092),
-      kT = IT(1183),
-      WT = IT(6114),
-      XT = IT(6103),
-      BT = IT(6154),
-      FT = IT(6146);
-    async function ST(TT) {
-      const oT = await (0, WT.loadPageShaderPackCompiler)();
-      if (null === oT) return {
-        kind: "failed",
-        reason: "compiler"
-      };
-      const IT = await DT(TT, oT);
-      return "failed" === IT.kind ? IT : await (0, BT.saveShaderPack)(IT.stored, oT) ? ((0, BT.markShaderPackChangePending)(), IT) : {
-        kind: "failed",
-        reason: "save"
-      }
-    }
-    async function DT(TT, oT) {
-      const IT = await async function(TT) {
-        let {
-          packId: oT,
-          sourceHash: IT
-        } = TT;
-        try {
-          const TT = await fetch(`${kT.clientSideServerUrls.s3Url}/${(0,iT.T)(oT,IT)}`, {
-            headers: {
-              Accept: "application/json"
-            }
-          });
-          if (!TT.ok) return console.error(`Failed to download shader pack ${oT} (${TT.status})`), null;
-          const zT = await TT.json();
-          return "object" !== typeof zT || null === zT ? (console.error(`Shader pack ${oT}'s source isn't an object`), null) : zT
-        } catch (zT) {
-          return console.error(`Failed to download shader pack ${oT}`, zT), null
+    var Ez = bz(56),
+      nz = bz(6283),
+      iz = bz(199),
+      lz = bz(6307),
+      Mz = bz(1047),
+      tz = bz(1419),
+      Hz = bz(1628),
+      Oz = bz(1114),
+      pz = bz(6316),
+      dz = bz(6337),
+      Fz = bz(1473),
+      Zz = bz(1181),
+      Rz = bz(6340),
+      Kz = bz(6371),
+      wz = bz(6274),
+      Xz = bz(1089);
+
+    function fz(zz) {
+      var uz, bz, pz;
+      let {
+        existing: fz,
+        onPublished: rz
+      } = zz;
+      const {
+        t: Nz
+      } = (0, Zz.F)(), {
+        userContext: vz,
+        isUserContextUpdating: xz
+      } = (0, Oz.c)(), [Jz, Az] = (0, Ez.useState)(null), [Tz, Lz] = (0, Ez.useState)(0), [Pz, Gz] = (0, Ez.useState)(null !== (uz = null === fz || void 0 === fz ? void 0 : fz.name) && void 0 !== uz ? uz : ""), az = (0, Ez.useRef)(Pz), Vz = (0, Ez.useRef)(""), mz = zz => {
+        az.current = zz, Gz(zz)
+      }, [qz, hz] = (0, Ez.useState)(null !== (bz = null === fz || void 0 === fz ? void 0 : fz.description) && void 0 !== bz ? bz : ""), Uz = (0, Ez.useRef)(qz), cz = (0, Ez.useRef)(""), gz = zz => {
+        Uz.current = zz, hz(zz)
+      }, [Sz, yz] = (0, Ez.useState)(!1), {
+        loading: Dz,
+        error: Qz,
+        setError: Wz,
+        onFiles: ez
+      } = (0, dz.e)((async zz => {
+        const uz = await (0, Rz.loadPageShaderPackCompiler)();
+        if (!uz) return void Wz(Nz("shaderPack:compilerUnavailable"));
+        const bz = await (0, Kz.g)(uz, zz.files);
+        if (Az({
+            pack: zz,
+            validation: bz,
+            sourceBytes: (0, lz.u)(zz.files)
+          }), !fz) {
+          var Ez;
+          if ("" !== az.current.trim() && az.current !== Vz.current || (Vz.current = (0, nz.O)(zz.manifest.name.trim(), nz.y), mz(Vz.current)), "" === Uz.current.trim() || Uz.current === cz.current) cz.current = (0, nz.O)((null !== (Ez = zz.manifest.description) && void 0 !== Ez ? Ez : "").trim(), nz.l), gz(cz.current);
+          Lz((zz => zz + 1))
         }
-      }(TT);
-      if (null === IT) return {
-        kind: "failed",
-        reason: "download"
-      };
-      if (!(0, XT.h)(IT.apiVersion)) return {
-        kind: "failed",
-        reason: "apiVersion"
-      };
-      const WT = (0, zT.r)(IT.files);
-      if ("string" === typeof WT) return console.error(`A listed shader pack breaks the pack rules: ${WT}`), {
-        kind: "failed",
-        reason: "invalid"
-      };
-      const ST = await (0, FT.c)(oT, WT);
-      if (!1 === (null === ST || void 0 === ST ? void 0 : ST.ok)) return {
-        kind: "failed",
-        reason: "errors"
-      };
-      const DT = {
-        manifest: {
-          apiVersion: IT.apiVersion,
-          name: TT.name,
-          author: TT.ownerName,
-          description: TT.description || null,
-          keepCircleShadows: !0 === IT.keepCircleShadows
-        },
-        files: WT
-      };
-      return {
-        kind: "loaded",
-        stored: (0, BT.toStoredShaderPack)(DT, ST, {
-          packId: TT.packId,
-          sourceHash: TT.sourceHash
-        })
-      }
-    }
-  },
-  39984: (TT, oT, IT) => {
-    IT.d(oT, {
-      followListingUpdates: () => LT
-    });
-    var iT = IT(199),
-      zT = IT(12),
-      kT = IT(1451),
-      WT = IT(1117),
-      XT = IT(6114),
-      BT = IT(6103),
-      FT = IT(39280),
-      ST = IT(6154);
-    const DT = ["apiVersion", "invalid", "errors"];
-    async function LT(TT, oT) {
-      const IT = await WT.userContextManager.getCurrentUserContext(),
-        LT = await kT.e.getShaderPackVersions(IT, [oT.packId]),
-        xT = function(TT, oT, IT) {
-          var iT;
-          if (void 0 === IT || "unlisted" === IT.status) return {
-            kind: "none"
-          };
-          if ("banned" === IT.status) return {
-            kind: "remove"
-          };
-          if (!(0, BT.h)(IT.apiVersion)) return {
-            kind: "none"
-          };
-          const {
-            sourceHash: zT,
-            name: kT,
-            ownerName: WT,
-            description: XT
-          } = IT;
-          return zT !== oT.sourceHash && zT !== oT.rejectedSourceHash ? {
-            kind: "update",
-            sourceHash: zT,
-            name: kT,
-            ownerName: WT,
-            description: XT
-          } : kT !== TT.manifest.name || WT !== TT.manifest.author || (XT || null) !== (null !== (iT = TT.manifest.description) && void 0 !== iT ? iT : null) ? {
-            kind: "rename",
-            name: kT,
-            ownerName: WT,
-            description: XT
-          } : {
-            kind: "none"
+      })), jz = !xz && !vz.isLoggedIn() && !iz.e.offlineMode, Iz = Pz.trim(), Bz = Iz.length < nz.z, Cz = null !== Jz && !1 !== (null === (pz = Jz.validation) || void 0 === pz ? void 0 : pz.ok) && !Dz && !Bz && !jz && !xz;
+      return (0, Xz.jsxs)("div", {
+        className: "ShaderPackPublishForm",
+        children: [(0, Xz.jsx)("p", {
+          className: "ShaderPackPublishIntro",
+          children: fz ? Nz("shaderPackListing:uploadIntro", {
+            minutes: String(nz.D / 6e4)
+          }) : Nz("shaderPackListing:publishIntro")
+        }), (0, Xz.jsx)(oz, {}), jz && (0, Xz.jsx)("div", {
+          className: "ShaderPackPublishNote Warning",
+          children: Nz("shaderPackListing:publishNeedsLogin")
+        }), (0, Xz.jsx)(dz.c, {
+          busy: Dz,
+          disabled: Dz || Sz,
+          onFiles: zz => {
+            Az(null), ez(zz)
           }
-        }(TT, oT, (0, iT.b)(LT, oT.packId));
-      if ("update" === xT.kind && "landingPage" !== zT.c.get("gameState")) return !1;
-      const cT = "update" === xT.kind || "rename" === xT.kind,
-        KT = cT ? await (0, XT.loadPageShaderPackCompiler)() : null;
-      if (cT && null === KT) return console.warn(`Didn't follow shader pack ${oT.packId}'s listing: the shader pack compiler couldn't load`), !0;
-      const MT = await async function(TT, oT, IT, iT) {
-        switch (IT.kind) {
-          case "none":
-            return;
-          case "remove":
-            return null;
-          case "rename":
-            return {
-              ...TT, manifest: {
-                ...TT.manifest,
-                name: IT.name,
-                author: IT.ownerName,
-                description: IT.description || null
+        }), Jz && (0, Xz.jsxs)("div", {
+          className: "ShaderPackPublishSummary",
+          children: [(0, Xz.jsx)("div", {
+            className: "ShaderPackPublishPackName",
+            children: Jz.pack.manifest.name
+          }), (0, Xz.jsxs)("div", {
+            className: "ShaderPackPublishPackSize",
+            children: [Nz("shaderPackListing:sizeValue", {
+              kilobytes: String((0, wz.N)(Jz.sourceBytes))
+            }), " \xb7", " ", Nz("shaderPackListing:filesValue", {
+              files: String(Jz.pack.files.length)
+            })]
+          }), (0, Xz.jsx)(sz, {
+            picked: Jz
+          })]
+        }), !fz && (0, Xz.jsxs)(Xz.Fragment, {
+          children: [(0, Xz.jsxs)("label", {
+            className: "ShaderPackPublishField",
+            children: [(0, Xz.jsx)("span", {
+              children: Nz("general:name")
+            }), (0, Xz.jsx)(Hz.d, {
+              className: "ShaderPackPublishInput",
+              defaultValue: Pz,
+              maxLength: nz.y,
+              onValueChange: mz
+            }, Tz), Jz && Bz && (0, Xz.jsx)("span", {
+              className: "ShaderPackPublishHint",
+              children: Nz("shaderPackListing:nameTooShort", {
+                min: String(nz.z)
+              })
+            })]
+          }), (0, Xz.jsxs)("label", {
+            className: "ShaderPackPublishField",
+            children: [(0, Xz.jsx)("span", {
+              children: Nz("general:description")
+            }), (0, Xz.jsx)(Hz.d, {
+              className: "ShaderPackPublishInput ShaderPackPublishDescription",
+              defaultValue: qz,
+              maxLength: nz.l,
+              onValueChange: gz,
+              useTextarea: !0
+            }, Tz)]
+          })]
+        }), Qz && (0, Xz.jsx)("div", {
+          className: "ShaderPackPublishNote Error",
+          children: Qz
+        }), (0, Xz.jsxs)(tz.q, {
+          className: "ShaderPackPublishButton",
+          disabled: !Cz,
+          loading: Sz,
+          onClick: () => {
+            !async function() {
+              var zz;
+              if (!Jz) return;
+              const {
+                name: uz,
+                description: bz
+              } = null !== fz && void 0 !== fz ? fz : {
+                name: Iz,
+                description: qz.trim()
+              }, Ez = {
+                packId: null !== (zz = null === fz || void 0 === fz ? void 0 : fz.packId) && void 0 !== zz ? zz : null,
+                name: uz,
+                description: bz,
+                apiVersion: Jz.pack.manifest.apiVersion,
+                files: (0, lz.s)(Jz.pack.files),
+                keepCircleShadows: !0 === Jz.pack.manifest.keepCircleShadows
+              };
+              if ((new TextEncoder).encode(JSON.stringify(Ez)).byteLength > 1024 * nz.M) Wz(Nz("shaderPackListing:publishTooBig", {
+                kilobytes: String(nz.M)
+              }));
+              else {
+                yz(!0), Wz(null);
+                try {
+                  rz(await Fz.c.publishShaderPack(vz, Ez))
+                } catch (iz) {
+                  console.error("Failed to publish the shader pack", iz), Wz((0, wz.v)(iz, Nz, "shaderPackListing:publishFailed"))
+                } finally {
+                  yz(!1)
+                }
               }
-            };
-          case "update": {
-            if (null === iT) return;
-            const {
-              sourceHash: zT,
-              name: kT,
-              ownerName: WT,
-              description: XT
-            } = IT, BT = await (0, FT.d)({
-              packId: oT.packId,
-              sourceHash: zT,
-              name: kT,
-              ownerName: WT,
-              description: XT
-            }, iT);
-            if ("loaded" === BT.kind && null !== BT.stored.validation) return BT.stored;
-            const ST = "failed" === BT.kind ? BT.reason : "no WebGPU device could check it";
-            return console.warn(`Didn't update shader pack ${oT.packId}: ${ST}`), "failed" === BT.kind && DT.includes(BT.reason) ? {
-              ...TT,
-              listing: {
-                ...oT,
-                rejectedSourceHash: zT
-              }
-            } : void 0
-          }
-        }
-      }(TT, oT, xT, KT);
-      return void 0 === MT || (await (0, ST.replaceShaderPack)(TT, MT, KT) ? (null !== MT && MT.files === TT.files || (0, ST.markShaderPackChangePending)(), !0) : (console.warn("Didn't apply the shader pack listing's update: the stored pack changed or couldn't be written"), !0))
-    }
-  },
-  6154: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      forgetShaderPackActiveHint: () => fT,
-      isOtherApiVersion: () => RT,
-      isShaderPackActive: () => hT,
-      isShaderPackChangePending: () => eT,
-      markShaderPackChangePending: () => mT,
-      pageShaderPackValidationVersion: () => uT,
-      reconcileStoredShaderPackHint: () => ET,
-      removeShaderPack: () => gT,
-      replaceShaderPack: () => MT,
-      saveShaderPack: () => KT,
-      shaderPackNeedsCheck: () => vT,
-      storedPackOutcome: () => wT,
-      storedShaderPackFiles: () => LT,
-      toStoredShaderPack: () => DT
-    });
-    var iT = IT(6092),
-      zT = IT(6103),
-      kT = IT(26),
-      WT = IT(3012),
-      XT = IT(6158),
-      BT = IT(6138);
-    const FT = "shaderPackChangePending";
-    let ST = null;
-
-    function DT(TT, oT, IT) {
-      return {
-        manifest: TT.manifest,
-        files: (0, iT.t)(TT.files),
-        validation: oT,
-        ...IT && {
-          listing: IT
-        }
-      }
+            }()
+          },
+          children: [(0, Xz.jsx)(Mz.c, {
+            name: "upload"
+          }), " ", Nz(fz ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+        })]
+      })
     }
 
-    function LT(TT) {
-      return Object.keys(TT.files).map((oT => ({
-        path: oT,
-        source: TT.files[oT]
-      })))
+    function sz(zz) {
+      let {
+        picked: uz
+      } = zz;
+      const {
+        t: bz
+      } = (0, Zz.F)(), {
+        validation: Ez
+      } = uz;
+      return null === Ez ? (0, Xz.jsx)("div", {
+        className: "ShaderPackPublishNote",
+        children: bz("shaderPackListing:publishUnchecked")
+      }) : Ez.ok ? (0, Xz.jsxs)(Xz.Fragment, {
+        children: [(0, Xz.jsxs)("div", {
+          className: "ShaderPackPublishNote Ready",
+          children: [(0, Xz.jsx)(Mz.c, {
+            name: "circle-check"
+          }), " ", bz("shaderPackListing:publishReady")]
+        }), Ez.offInStrict.length > 0 && (0, Xz.jsxs)(Xz.Fragment, {
+          children: [(0, Xz.jsxs)("div", {
+            className: "ShaderPackPublishNote Warning",
+            children: [(0, Xz.jsx)(Mz.c, {
+              name: "triangle-exclamation"
+            }), " ", bz("shaderPack:offInStrict")]
+          }), (0, Xz.jsx)(pz.b, {
+            diagnostics: Ez.offInStrict,
+            t: bz
+          })]
+        })]
+      }) : (0, Xz.jsxs)(Xz.Fragment, {
+        children: [(0, Xz.jsxs)("div", {
+          className: "ShaderPackPublishNote Error",
+          children: [(0, Xz.jsx)(Mz.c, {
+            name: "triangle-exclamation"
+          }), " ", bz("shaderPackListing:publishHasErrors")]
+        }), (0, Xz.jsx)(pz.b, {
+          diagnostics: Ez.errors,
+          more: Ez.moreErrors,
+          t: bz
+        })]
+      })
     }
-    let xT = Promise.resolve();
+    const rz = "\0";
 
-    function cT(TT) {
-      const oT = xT.then(TT);
-      return xT = oT.catch((() => {})), oT
-    }
-
-    function KT(TT, oT) {
-      return cT((() => rT(TT, oT)))
-    }
-
-    function MT(TT, oT, IT) {
-      return cT((async () => JSON.stringify(await (0, XT.e)()) === JSON.stringify(TT) && (null === oT ? (await AT(), !0) : rT(oT, IT))))
-    }
-    async function rT(TT, oT) {
-      const IT = await kT.c.setItem(XT.d, TT);
-      return IT && CT(TT, oT), IT
-    }
-    async function AT() {
-      await kT.c.removeItem(XT.d), kT.e.removeItem(WT.e)
-    }
-
-    function gT() {
-      return cT(AT)
-    }
-
-    function hT(TT, oT) {
-      return "active" === wT(TT, oT).kind
-    }
-
-    function wT(TT, oT) {
-      var IT;
-      return null === TT ? {
-        kind: "none",
-        reason: "nothingStored"
-      } : RT(TT) ? {
-        kind: "none",
-        reason: "otherApiVersion"
-      } : !1 !== (null === (IT = TT.validation) || void 0 === IT ? void 0 : IT.ok) || TT.validation.fromRecheck ? null === oT ? {
-        kind: "none",
-        reason: "noCompiler"
-      } : vT(TT, oT) ? {
-        kind: "blocked",
-        messageKey: "shaderPack:failedUnchecked"
-      } : TT.validation.ok ? {
-        kind: "active"
-      } : {
-        kind: "blocked",
-        messageKey: "shaderPack:failedValidation"
-      } : {
-        kind: "none",
-        reason: "failedWhenLoaded"
-      }
-    }
-
-    function mT() {
-      kT.h.setItem(FT, performance.timeOrigin)
-    }
-
-    function eT() {
-      return kT.h.getItem(FT) === performance.timeOrigin
-    }
-
-    function RT(TT) {
-      return !(0, zT.h)(TT.manifest.apiVersion)
-    }
-
-    function uT(TT) {
-      return ST ??= TT.ZC((0, BT.shaderPackTextures)()), ST
-    }
-
-    function vT(TT, oT) {
-      var IT;
-      return (null === (IT = TT.validation) || void 0 === IT ? void 0 : IT.headerVersion) !== uT(oT)
-    }
-
-    function ET(TT) {
-      return cT((async () => {
-        CT(await (0, XT.e)(!0), TT)
-      }))
-    }
-
-    function fT() {
-      return cT((async () => {
-        kT.e.removeItem(WT.e)
-      }))
-    }
-
-    function CT(TT, oT) {
-      hT(TT, oT) ? kT.e.setItem(WT.e, !0) : kT.e.removeItem(WT.e)
-    }
-  },
-  6138: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      loadShaderPackTextures: () => WT,
-      shaderPackTextures: () => XT
-    });
-    var iT = IT(6092);
-    let zT = null,
-      kT = null;
-
-    function WT() {
-      return kT ??= Promise.all([IT.e(69), IT.e(193)]).then((() => IT(39278))).then((TT => {
-        let {
-          FORMER_BLOCK_IMAGE_NAMES: oT,
-          textureNameToIndex: IT,
-          textureAnimationData: kT
-        } = TT;
-        return zT ??= (0, iT.k)(IT, kT, oT), zT
-      })), kT
-    }
-
-    function XT() {
-      if (null === zT) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return zT
-    }
-  },
-  6146: (TT, oT, IT) => {
-    IT.d(oT, {
-      b: () => BT,
-      c: () => XT
-    });
-    var iT = IT(6154),
-      zT = IT(6138),
-      kT = IT(120);
-    const WT = 100;
-    async function XT(TT, oT) {
-      var IT;
-      let iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (IT = navigator.gpu) && void 0 !== IT ? IT : null;
-      const WT = TT.v_(oT, (0, zT.shaderPackTextures)());
-      if (WT.errors.length > 0) return FT(TT, WT.errors, WT.offInStrict);
-      const XT = await async function(TT) {
-        if (!TT) return null;
-        try {
-          const oT = await (0, kT.u)(TT);
-          return oT ? await oT.requestDevice() : null
-        } catch (oT) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", oT), null
-        }
-      }(iT);
-      if (!XT) return null;
-      let BT = !1;
-      XT.lost.then((() => {
-        BT = !0
-      }));
-      try {
-        const oT = await Promise.all(WT.validationModules.map((oT => async function(TT, oT, IT) {
-          oT.pushErrorScope("validation");
-          const iT = oT.createShaderModule({
-              code: IT.code
-            }),
-            zT = oT.popErrorScope(),
-            {
-              messages: kT
-            } = await iT.getCompilationInfo(),
-            WT = kT.filter((TT => "error" === TT.type)).map((oT => TT.mapValidationMessage(IT, oT))),
-            XT = await zT;
-          XT && 0 === WT.length && WT.push({
-            file: null,
-            line: 0,
-            message: XT.message,
-            variants: [IT.key]
-          });
-          return WT
-        }(TT, XT, oT))));
-        return BT ? null : FT(TT, TT.EIT(oT.flat()), WT.offInStrict)
-      } catch (ST) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", ST), null
-      } finally {
-        XT.destroy()
-      }
-    }
-    async function BT(TT, oT) {
-      var IT;
-      if (!(0, iT.shaderPackNeedsCheck)(TT, oT) || (0, iT.isOtherApiVersion)(TT)) return TT;
-      const zT = await XT(oT, (0, iT.storedShaderPackFiles)(TT));
-      if (!zT) return TT;
-      const kT = !1 === (null === (IT = TT.validation) || void 0 === IT ? void 0 : IT.ok) && !TT.validation.fromRecheck,
-        WT = {
-          ...TT,
-          validation: kT ? zT : {
-            ...zT,
-            fromRecheck: !0
-          }
-        };
-      return await (0, iT.replaceShaderPack)(TT, WT, oT) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), WT
-    }
-
-    function FT(TT, oT, IT) {
-      return {
-        headerVersion: (0, iT.pageShaderPackValidationVersion)(TT),
-        ok: 0 === oT.length,
-        errors: oT.slice(0, WT),
-        moreErrors: Math.max(0, oT.length - WT),
-        offInStrict: IT
-      }
-    }
-  },
-  6045: (TT, oT, IT) => {
-    IT.d(oT, {
-      A: () => kT,
-      E: () => XT,
-      I: () => WT,
-      J: () => iT,
-      N: () => LT,
-      Q: () => ST,
-      T: () => gT,
-      U: () => DT,
-      Y: () => FT,
-      c: () => xT,
-      g: () => KT,
-      i: () => cT,
-      l: () => AT,
-      o: () => wT,
-      s: () => BT,
-      v: () => zT,
-      y: () => hT
-    });
-    const iT = ["forest", "desert", "water", "night", "cave"];
-    const zT = {
-        full: {
-          width: 3840,
-          height: 2160
-        },
-        large: {
-          width: 1920,
-          height: 1080
-        },
-        thumb: {
-          width: 640,
-          height: 360
-        }
-      },
-      kT = ["popular", "updated", "newest"],
-      WT = 3,
-      XT = 32,
-      BT = 300;
-
-    function FT(TT, oT) {
-      return TT.slice(0, oT).replace(/[\uD800-\uDBFF]$/, "")
-    }
-    const ST = 64,
-      DT = 512,
-      LT = 18e5;
-    const xT = "Bloxdhub",
-      cT = "https://bloxdhub.com/shaders";
-
-    function KT(TT) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(TT)}`
-    }
-    const MT = "Screenshot generation failed.",
-      rT = "Its screenshots couldn't be generated:";
-
-    function AT(TT) {
-      var oT;
-      return TT === MT || null !== (oT = null === TT || void 0 === TT ? void 0 : TT.startsWith(rT)) && void 0 !== oT && oT
-    }
-
-    function gT(TT, oT) {
-      return `shaderPacks/${TT}/${oT}.json`
-    }
-
-    function hT(TT, oT, IT, iT) {
-      return null === oT.renderId ? wT(TT, oT.baselineVersion, IT, iT) : `${TT}/${function(TT,oT,IT,iT){return`shaderPacks/${TT}/${oT}/${IT}-${iT}.webp`}(oT.packId,oT.renderId,IT,iT)}`
-    }
-
-    function wT(TT, oT, IT, iT) {
-      return `${TT}/${function(TT,oT,IT){return`shaderPacks/baseline/${TT}/${oT}-${IT}.webp`}(oT,IT,iT)}`
-    }
-  },
-  6092: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => WT,
-      f: () => kT,
-      g: () => iT,
-      k: () => cT,
-      m: () => ST,
-      q: () => zT,
-      r: () => BT,
-      t: () => FT,
-      u: () => DT
-    });
-    const iT = 5;
-
-    function zT(TT) {
-      return TT === iT
-    }
-    const kT = 262144,
-      WT = 256,
-      XT = 256;
-
-    function BT(TT) {
-      if ("object" !== typeof TT || null === TT || Array.isArray(TT)) return "The pack has no files.";
-      const oT = [];
-      for (const [IT, iT] of Object.entries(TT)) {
-        if ("string" !== typeof iT) return `${IT} isn't text.`;
-        oT.push({
-          path: IT,
-          source: iT
-        })
-      }
-      return oT.sort(((TT, oT) => ST(TT.path, oT.path))),
-        function(TT) {
-          if (0 === TT.length) return "The pack has no .wgsl files.";
-          if (TT.length > WT) return `The pack has more than ${WT} .wgsl files.`;
-          const oT = new Set;
-          for (const {
-              path: IT
-            }
-            of TT) {
-            const TT = LT(IT);
-            if (null !== TT) return TT;
-            if (oT.has(IT)) return `The pack has two files at ${IT}.`;
-            oT.add(IT)
-          }
-          return DT(TT) > kT ? `The pack's .wgsl files are over ${kT/1024} KB in total.` : null
-        }(oT) ?? oT
-    }
-
-    function FT(TT) {
-      const oT = {};
-      for (const IT of TT) oT[IT.path] = IT.source;
-      return oT
-    }
-
-    function ST(TT, oT) {
-      return TT < oT ? -1 : TT > oT ? 1 : 0
-    }
-
-    function DT(TT) {
-      const oT = new TextEncoder;
-      let IT = 0;
-      for (const {
-          source: iT
-        }
-        of TT) IT += oT.encode(iT).byteLength;
-      return IT
-    }
-
-    function LT(TT) {
-      if (!TT.toLowerCase().endsWith(".wgsl")) return `${TT} isn't a .wgsl file.`;
-      if (TT.length > XT) return `A file path is over ${XT} characters.`;
-      if (TT.includes("\\") || /[\u0000-\u001f]/.test(TT)) return `${TT} isn't a valid file path.`;
-      return TT.split("/").some((TT => "" === TT || "." === TT || ".." === TT)) ? `${TT} isn't a valid file path.` : null
-    }
-    const xT = /^(.*)\[rot\[([1-4])$/;
-
-    function cT(TT, oT) {
-      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const iT = new Map;
-      oT.forEach(((TT, oT) => {
-        let {
-          numAnimStates: IT,
-          animStartIdx: zT
-        } = TT;
-        for (let kT = 1; kT < IT; kT++) iT.set(zT + kT - 1, oT)
-      }));
-      const zT = Object.entries(TT),
-        kT = new Map;
-      for (const [KT, MT] of zT) {
-        const TT = xT.exec(KT);
-        "1" === TT?.[2] && kT.set(TT[1], MT + 1)
-      }
-      const WT = TT => {
-          const oT = xT.exec(TT);
-          return oT && kT.has(oT[1]) ? {
-            root: oT[1],
-            rotation: Number(oT[2]) - 1
-          } : null
-        },
-        XT = new Set(zT.map((TT => {
-          let [oT] = TT;
-          return WT(oT)?.root ?? oT
-        }))),
-        BT = (TT, IT) => {
-          const iT = TT.replace(/_?0$/, "");
-          return (oT[IT]?.numAnimStates ?? 0) > 1 && !XT.has(iT) ? iT : TT
-        },
-        FT = new Map;
-      for (const [xT, KT] of zT) FT.set(KT, BT(WT(xT)?.root ?? xT, KT));
-      const ST = zT.reduce(((TT, oT) => {
-          let [, IT] = oT;
-          return Math.max(TT, IT + 1)
-        }), 0),
-        DT = Array.from({
-          length: ST
-        }, ((TT, oT) => ({
-          id: oT + 1,
-          rotation: 0
-        }))),
-        LT = new Map,
-        cT = new Map;
-      for (const [xT, KT] of zT) {
-        const TT = WT(xT),
-          oT = iT.get(KT);
-        if (void 0 !== oT) {
-          const IT = FT.get(oT);
-          cT.set(xT, {
-            name: xT,
-            texture: IT,
-            kind: "frame"
-          }), TT && !cT.has(TT.root) && cT.set(TT.root, {
-            name: TT.root,
-            texture: IT,
-            kind: "frame"
-          });
-          continue
-        }
-        const IT = FT.get(KT),
-          zT = TT?.root ?? xT;
-        if (IT !== zT && cT.set(zT, {
-            name: zT,
-            texture: IT,
-            kind: "frame"
-          }), TT) {
-          const oT = kT.get(TT.root);
-          DT[KT] = {
-            id: oT,
-            rotation: TT.rotation
-          }, LT.set(IT, oT), cT.set(xT, {
-            name: xT,
-            texture: IT,
-            kind: "rotation"
-          })
-        } else LT.set(IT, KT + 1)
-      }
-      for (const xT of LT.keys()) cT.delete(xT);
-      for (const [xT, KT] of IT) {
-        const TT = LT.get(KT);
-        void 0 === TT || LT.has(xT) || (LT.set(xT, TT), cT.delete(xT))
-      }
-      return {
-        named: [...LT].sort(((TT, oT) => {
-          let [IT] = TT, [iT] = oT;
-          return IT < iT ? -1 : IT > iT ? 1 : 0
-        })).map((TT => {
-          let [oT, IT] = TT;
-          return {
-            name: oT,
-            id: IT
-          }
-        })),
-        aliases: [...cT.values()],
-        layers: DT
-      }
+    function oz() {
+      const {
+        t: zz
+      } = (0, Zz.F)(), [uz, bz] = zz("shaderPackListing:bloxdhubHelp", {
+        site: rz
+      }).split(rz);
+      return (0, Xz.jsxs)("p", {
+        className: "ShaderPackPublishIntro",
+        children: [uz, (0, Xz.jsx)("a", {
+          className: "ShaderPackPublishLink",
+          href: nz.f,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          children: nz.b
+        }), bz]
+      })
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

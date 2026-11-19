@@ -1,509 +1,509 @@
 export const id = 74;
 export const ids = [74];
 export const modules = {
-  4191: (TT, oT, IT) => {
-    IT.d(oT, {
-      c: () => Zo,
-      f: () => xI,
-      g: () => Vo,
-      k: () => iI,
-      l: () => yo,
-      p: () => TI,
-      s: () => Oo,
-      v: () => Go,
-      w: () => fo,
-      y: () => LI,
-      B: () => DI,
-      D: () => po,
-      G: () => Qo
+  4448: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Su,
+      f: () => pb,
+      h: () => Cu,
+      l: () => ub,
+      p: () => ju,
+      s: () => Yu,
+      t: () => hu,
+      u: () => Qu,
+      y: () => Tu,
+      C: () => Ob,
+      D: () => Hb,
+      E: () => Wu,
+      G: () => qu
     });
-    var iT = IT(3276);
-    const zT = Function.prototype.toString,
-      kT = RegExp.prototype.exec,
-      WT = Reflect.apply,
-      XT = Function.prototype.call,
-      BT = Function.prototype.apply,
-      FT = Function.prototype.bind,
-      ST = Object.defineProperty,
-      DT = Uint8Array;
-    let LT, xT;
+    var Ez = bz(3468);
+    const nz = Function.prototype.toString,
+      iz = RegExp.prototype.exec,
+      lz = Reflect.apply,
+      Mz = Function.prototype.call,
+      tz = Function.prototype.apply,
+      Hz = Function.prototype.bind,
+      Oz = Object.defineProperty,
+      pz = Uint8Array;
+    let dz, Fz;
     try {
-      LT = globalThis.crypto, xT = void 0 === LT || null === LT ? void 0 : LT.getRandomValues
+      dz = globalThis.crypto, Fz = void 0 === dz || null === dz ? void 0 : dz.getRandomValues
     } catch {}
-    const cT = "bloxdBindApply";
-    let KT;
+    const Zz = "bloxdBindApply";
+    let Rz;
     try {
-      const TT = XT;
-      ST(TT, cT, {
+      const zz = Mz;
+      Oz(zz, Zz, {
         __proto__: null,
-        value: FT,
+        value: Hz,
         configurable: !0
       });
       try {
-        KT = TT[cT](BT)
+        Rz = zz[Zz](tz)
       } finally {
-        delete TT[cT]
+        delete zz[Zz]
       }
     } catch {}
-    const MT = 16,
-      rT = 256,
-      AT = 0,
-      gT = 1,
-      hT = 2,
-      wT = 3;
-    let mT, eT = AT,
-      RT = WT,
-      uT = 0;
+    const Kz = 16,
+      wz = 256,
+      Xz = 0,
+      fz = 1,
+      sz = 2,
+      rz = 3;
+    let oz, Nz = Xz,
+      vz = lz,
+      xz = 0;
 
-    function vT(TT, oT) {
-      return TT === `function ${oT}() { [native code] }` || TT === `function ${oT}() {\n    [native code]\n}`
+    function Jz(zz, uz) {
+      return zz === `function ${uz}() { [native code] }` || zz === `function ${uz}() {\n    [native code]\n}`
     }
-    const ET = 0,
-      fT = 1,
-      CT = 2;
-    let jT = ET;
+    const Az = 0,
+      Tz = 1,
+      Lz = 2;
+    let Pz = Az;
 
-    function JT(TT, oT, IT) {
-      if (jT === CT && eT === gT && ! function() {
-          const TT = mT;
-          return uT >= rT && (RT(xT, LT, [TT]), uT = 0), TT[uT++] < 256 / MT
-        }()) return function(TT, oT, IT) {
-        return RT(TT, oT, IT ?? 0)
+    function Gz(zz, uz, bz) {
+      if (Pz === Lz && Nz === fz && ! function() {
+          const zz = oz;
+          return xz >= wz && (vz(Fz, dz, [zz]), xz = 0), zz[xz++] < 256 / Kz
+        }()) return function(zz, uz, bz) {
+        return vz(zz, uz, bz ?? 0)
       }(...arguments);
-      if (jT === ET || eT === hT) return WT(TT, oT, IT);
-      let iT;
-      jT = ET;
+      if (Pz === Az || Nz === sz) return lz(zz, uz, bz);
+      let Ez;
+      Pz = Az;
       try {
-        eT === AT && (eT = wT, eT = function() {
-          const TT = WT(zT, WT, []);
-          if (vT(TT, "apply")) return hT;
-          if (null === WT(kT, /\(\.\.\.arguments\)/, [TT]) && null === WT(kT, /^function\s*\(\.\.\.[\w$]+\)/, [TT])) return hT;
-          if ("function" !== typeof KT || "function" !== typeof XT || "function" !== typeof BT || "function" !== typeof FT || "function" !== typeof ST || "function" !== typeof xT || "function" !== typeof DT || !vT(WT(zT, XT, []), "call") || !vT(WT(zT, BT, []), "apply") || !vT(WT(zT, FT, []), "bind") || !vT(WT(zT, ST, []), "defineProperty") || !vT(WT(zT, xT, []), "getRandomValues") || !vT(WT(zT, DT, []), "Uint8Array")) return hT;
-          const oT = KT,
-            IT = {},
-            iT = function(TT) {
-              return this === IT && TT === IT
+        Nz === Xz && (Nz = rz, Nz = function() {
+          const zz = lz(nz, lz, []);
+          if (Jz(zz, "apply")) return sz;
+          if (null === lz(iz, /\(\.\.\.arguments\)/, [zz]) && null === lz(iz, /^function\s*\(\.\.\.[\w$]+\)/, [zz])) return sz;
+          if ("function" !== typeof Rz || "function" !== typeof Mz || "function" !== typeof tz || "function" !== typeof Hz || "function" !== typeof Oz || "function" !== typeof Fz || "function" !== typeof pz || !Jz(lz(nz, Mz, []), "call") || !Jz(lz(nz, tz, []), "apply") || !Jz(lz(nz, Hz, []), "bind") || !Jz(lz(nz, Oz, []), "defineProperty") || !Jz(lz(nz, Fz, []), "getRandomValues") || !Jz(lz(nz, pz, []), "Uint8Array")) return sz;
+          const uz = Rz,
+            bz = {},
+            Ez = function(zz) {
+              return this === bz && zz === bz
             };
           try {
-            if (!0 !== oT(iT, IT, [IT])) return hT;
-            const TT = new DT(rT);
-            oT(xT, LT, [TT]), mT = TT
+            if (!0 !== uz(Ez, bz, [bz])) return sz;
+            const zz = new pz(wz);
+            uz(Fz, dz, [zz]), oz = zz
           } catch {
-            return hT
+            return sz
           }
-          return RT = oT, gT
-        }()), iT = WT(TT, oT, IT)
-      } catch (cT) {
-        throw eT = hT, cT
+          return vz = uz, fz
+        }()), Ez = lz(zz, uz, bz)
+      } catch (Zz) {
+        throw Nz = sz, Zz
       }
-      return jT = CT, iT
+      return Pz = Lz, Ez
     }
-    let UT = WT;
+    let az = lz;
 
-    function aT() {
-      return (UT === WT ? 0 : 3) + jT
-    }
-
-    function YT() {
-      const TT = aT();
-      return UT = WT, TT
+    function Vz() {
+      return (az === lz ? 0 : 3) + Pz
     }
 
-    function QT(TT) {
-      UT = TT >= 3 ? JT : WT, jT = TT % 3
-    }
-    const OT = Function.prototype.toString,
-      HT = Object.getOwnPropertyDescriptor,
-      nT = Object.prototype.hasOwnProperty,
-      qT = RegExp.prototype.exec,
-      ZT = TextEncoder.prototype.encodeInto,
-      lT = String.prototype.startsWith,
-      sT = Number.prototype.toString,
-      tT = WeakMap.prototype.get,
-      GT = WeakMap.prototype.set,
-      pT = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      bT = new TextEncoder,
-      yT = new Uint8Array(1024),
-      NT = 9999999,
-      PT = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      dT = new WeakMap;
-
-    function VT(TT) {
-      if ("function" !== typeof TT) return "#a0.0";
-      const oT = UT(tT, dT, [TT]);
-      if (void 0 !== oT) return oT;
-      const IT = UT(OT, TT, []),
-        iT = IT.length > NT ? NT : IT.length,
-        zT = `#${function(TT,oT){const IT=UT(qT,pT,[oT]);if(null===IT)return"s";const iT=IT[1];if("ProxyObject"===iT)return"p";if(""!==iT)return UT(lT,iT,["bound "])?"b":"n";try{const oT=HT(TT,"name"),IT=void 0!==oT&&UT(nT,oT,["value"])?oT.value:void 0;return"string"===typeof IT&&UT(lT,IT,["bound "])?"b":"p"}catch{return"p"}}(TT,IT)}${iT}.${function(TT){const{written:oT}=UT(ZT,bT,[TT,yT]);let IT=2166136261;for(let iT=0;iT<oT;iT++)IT=(IT^yT[iT])>>>0,IT=IT+(IT<<1)+(IT<<4)+(IT<<7)+(IT<<8)+(IT<<24)>>>0;return UT(sT,IT,[36])}(IT)}`;
-      return UT(GT, dT, [TT, zT]), zT
+    function mz() {
+      const zz = Vz();
+      return az = lz, zz
     }
 
-    function To(TT) {
-      const oT = UT(qT, PT, [TT]);
-      return null === oT ? TT : oT[1]
+    function qz(zz) {
+      az = zz >= 3 ? Gz : lz, Pz = zz % 3
     }
-    var oo = IT(3286);
-    const Io = Function.prototype.toString,
-      io = Object.getOwnPropertyDescriptor,
-      zo = RegExp.prototype.exec,
-      ko = Object.prototype.hasOwnProperty,
-      Wo = Set.prototype.has,
-      Xo = WeakMap.prototype.get,
-      Bo = WeakMap.prototype.set,
-      Fo = Reflect.get,
-      So = Object.getPrototypeOf,
-      Do = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+    const hz = Function.prototype.toString,
+      Uz = Object.getOwnPropertyDescriptor,
+      cz = Object.prototype.hasOwnProperty,
+      gz = RegExp.prototype.exec,
+      Sz = TextEncoder.prototype.encodeInto,
+      yz = String.prototype.startsWith,
+      Dz = Number.prototype.toString,
+      Qz = WeakMap.prototype.get,
+      Wz = WeakMap.prototype.set,
+      ez = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
+      jz = new TextEncoder,
+      Iz = new Uint8Array(1024),
+      Bz = 9999999,
+      Cz = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
+      Yz = new WeakMap;
 
-    function Lo(TT, oT, IT) {
+    function kz(zz) {
+      if ("function" !== typeof zz) return "#a0.0";
+      const uz = az(Qz, Yz, [zz]);
+      if (void 0 !== uz) return uz;
+      const bz = az(hz, zz, []),
+        Ez = bz.length > Bz ? Bz : bz.length,
+        nz = `#${function(zz,uz){const bz=az(gz,ez,[uz]);if(null===bz)return"s";const Ez=bz[1];if("ProxyObject"===Ez)return"p";if(""!==Ez)return az(yz,Ez,["bound "])?"b":"n";try{const uz=Uz(zz,"name"),bz=void 0!==uz&&az(cz,uz,["value"])?uz.value:void 0;return"string"===typeof bz&&az(yz,bz,["bound "])?"b":"p"}catch{return"p"}}(zz,bz)}${Ez}.${function(zz){const{written:uz}=az(Sz,jz,[zz,Iz]);let bz=2166136261;for(let Ez=0;Ez<uz;Ez++)bz=(bz^Iz[Ez])>>>0,bz=bz+(bz<<1)+(bz<<4)+(bz<<7)+(bz<<8)+(bz<<24)>>>0;return az(Dz,bz,[36])}(bz)}`;
+      return az(Wz, Yz, [zz, nz]), nz
+    }
+
+    function zu(zz) {
+      const uz = az(gz, Cz, [zz]);
+      return null === uz ? zz : uz[1]
+    }
+    var uu = bz(3477);
+    const bu = Function.prototype.toString,
+      Eu = Object.getOwnPropertyDescriptor,
+      nu = RegExp.prototype.exec,
+      iu = Object.prototype.hasOwnProperty,
+      lu = Set.prototype.has,
+      Mu = WeakMap.prototype.get,
+      tu = WeakMap.prototype.set,
+      Hu = Reflect.get,
+      Ou = Object.getPrototypeOf,
+      pu = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+
+    function du(zz, uz, bz) {
       return {
-        code: TT,
-        holder: oT,
-        key: IT,
+        code: zz,
+        holder: uz,
+        key: bz,
         ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${IT}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
+        native: new RegExp(`^function (get )?${bz}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
       }
     }
 
-    function xo() {
-      return Do
+    function Fu() {
+      return pu
     }
-    const co = Do?.Instance.prototype,
-      Ko = Do?.Memory.prototype;
+    const Zu = pu?.Instance.prototype,
+      Ru = pu?.Memory.prototype;
 
-    function Mo() {
-      return Ko
+    function Ku() {
+      return Ru
     }
-    let ro, Ao;
+    let wu, Xu;
     try {
-      const TT = globalThis.crypto,
-        oT = TT?.subtle;
-      ro = TT ? So(TT) : void 0, Ao = oT ? So(oT) : void 0
+      const zz = globalThis.crypto,
+        uz = zz?.subtle;
+      wu = zz ? Ou(zz) : void 0, Xu = uz ? Ou(uz) : void 0
     } catch {}
 
-    function go(TT, oT) {
-      for (let IT = TT; void 0 !== IT && null !== IT; IT = So(IT)) {
-        const TT = io(IT, oT);
-        if (TT) return TT
+    function fu(zz, uz) {
+      for (let bz = zz; void 0 !== bz && null !== bz; bz = Ou(bz)) {
+        const zz = Eu(bz, uz);
+        if (zz) return zz
       }
     }
-    const ho = [Lo("in", xo, "instantiate", {
+    const su = [du("in", Fu, "instantiate", {
       tier: "weighted",
       onNamespace: !0
-    }), Lo("is", xo, "instantiateStreaming", {
+    }), du("is", Fu, "instantiateStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), Lo("co", xo, "compile", {
+    }), du("co", Fu, "compile", {
       tier: "weighted",
       onNamespace: !0
-    }), Lo("cs", xo, "compileStreaming", {
+    }), du("cs", Fu, "compileStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), Lo("mo", xo, "Module", {
+    }), du("mo", Fu, "Module", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), Lo("it", xo, "Instance", {
+    }), du("it", Fu, "Instance", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), Lo("me", xo, "Memory", {
+    }), du("me", Fu, "Memory", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), Lo("ex", (function() {
-      return co
+    }), du("ex", (function() {
+      return Zu
     }), "exports", {
       isGetter: !0,
       tier: "punished"
-    }), Lo("bu", Mo, "buffer", {
+    }), du("bu", Ku, "buffer", {
       isGetter: !0,
       tier: "punished"
-    }), Lo("gr", Mo, "grow", {
+    }), du("gr", Ku, "grow", {
       tier: "punished"
-    }), Lo("rc", (function() {
+    }), du("rc", (function() {
       return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), Lo("cr", (function() {
+    }), "clone"), du("cr", (function() {
       return globalThis
     }), "crypto", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), Lo("su", (function() {
-      return ro
+    }), du("su", (function() {
+      return wu
     }), "subtle", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), Lo("dg", (function() {
-      return Ao
+    }), du("dg", (function() {
+      return Xu
     }), "digest", {
       tier: "punished",
       inSecureContext: !0
     })];
 
-    function wo(TT) {
-      let oT;
+    function ru(zz) {
+      let uz;
       try {
-        const IT = Fo(globalThis, TT);
-        oT = "function" === typeof IT ? IT.prototype : void 0
+        const bz = Hu(globalThis, zz);
+        uz = "function" === typeof bz ? bz.prototype : void 0
       } catch {}
-      return () => oT
+      return () => uz
     }
 
-    function mo(TT, oT, IT) {
-      return IT.map((IT => Lo(TT, oT, IT)))
+    function ou(zz, uz, bz) {
+      return bz.map((bz => du(zz, uz, bz)))
     }
-    const eo = Lo("rx", wo("HTMLCanvasElement"), "getContext"),
-      Ro = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      uo = {
-        webgpu: [...mo("gd", wo("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...mo("gq", wo("GPUQueue"), ["submit", "writeBuffer"]), ...mo("ge", wo("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...mo("gp", wo("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), eo],
-        webgl: [...mo("g2", wo("WebGL2RenderingContext"), [...Ro, "drawArraysInstanced", "drawElementsInstanced"]), eo],
-        webgl1: [...mo("g1", wo("WebGLRenderingContext"), Ro), eo]
+    const Nu = du("rx", ru("HTMLCanvasElement"), "getContext"),
+      vu = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
+      xu = {
+        webgpu: [...ou("gd", ru("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...ou("gq", ru("GPUQueue"), ["submit", "writeBuffer"]), ...ou("ge", ru("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...ou("gp", ru("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), Nu],
+        webgl: [...ou("g2", ru("WebGL2RenderingContext"), [...vu, "drawArraysInstanced", "drawElementsInstanced"]), Nu],
+        webgl1: [...ou("g1", ru("WebGLRenderingContext"), vu), Nu]
       };
-    let vo = [];
-    const Eo = new WeakMap;
+    let Ju = [];
+    const Au = new WeakMap;
 
-    function fo(TT, oT) {
-      const IT = YT();
+    function Tu(zz, uz) {
+      const bz = mz();
       try {
-        UT(Bo, Eo, [TT, oT])
+        az(tu, Au, [zz, uz])
       } finally {
-        QT(IT)
+        qz(bz)
       }
     }
 
-    function Co(TT) {
+    function Lu(zz) {
       try {
-        const oT = FI(TT),
-          IT = UT(Xo, Eo, [oT]);
-        return II(IT, TT) ? jo(TT, !0) : `${jo(TT,!1)}${VT(IT??oT)}`
+        const uz = Mb(zz),
+          bz = az(Mu, Au, [uz]);
+        return zb(bz, zz) ? Pu(zz, !0) : `${Pu(zz,!1)}${kz(bz??uz)}`
       } catch {
-        return `${jo(TT,!1)}${VT(void 0)}`
+        return `${Pu(zz,!1)}${kz(void 0)}`
       }
     }
 
-    function jo(TT, oT) {
+    function Pu(zz, uz) {
       let {
-        code: IT,
-        key: iT
-      } = TT;
-      return `wh:${IT}${oT?"-dbg":""}:${iT}`
+        code: bz,
+        key: Ez
+      } = zz;
+      return `wh:${bz}${uz?"-dbg":""}:${Ez}`
     }
 
-    function Jo(TT) {
-      return Object.values(uo).flatMap((oT => oT.map((oT => jo(oT, TT)))))
+    function Gu(zz) {
+      return Object.values(xu).flatMap((uz => uz.map((uz => Pu(uz, zz)))))
     }
-    const Uo = new Set(Jo(!0)),
-      ao = new Set([...Jo(!1), ...Uo]),
-      Yo = jo(eo, !1);
+    const au = new Set(Gu(!0)),
+      Vu = new Set([...Gu(!1), ...au]),
+      mu = Pu(Nu, !1);
 
-    function Qo(TT) {
-      vo = uo[TT]
+    function qu(zz) {
+      Ju = xu[zz]
     }
 
-    function Oo(TT) {
-      const oT = YT();
+    function hu(zz) {
+      const uz = mz();
       try {
-        return Ho(TT) || Ho(To(TT))
+        return Uu(zz) || Uu(zu(zz))
       } finally {
-        QT(oT)
+        qz(uz)
       }
     }
 
-    function Ho(TT) {
-      return UT(Wo, ao, [TT])
+    function Uu(zz) {
+      return az(lu, Vu, [zz])
     }
 
-    function no(TT) {
-      return new Set(ho.filter((oT => oT.tier === TT)).map((TT => `wh:${TT.code}`)))
+    function cu(zz) {
+      return new Set(su.filter((uz => uz.tier === zz)).map((zz => `wh:${zz.code}`)))
     }
-    const qo = no("punished"),
-      Zo = !1,
-      so = new Set(oo.c),
-      to = no("weighted");
+    const gu = cu("punished"),
+      Su = !1,
+      yu = new Set(uu.b),
+      Du = cu("weighted");
 
-    function Go(TT) {
-      const oT = YT();
+    function Qu(zz) {
+      const uz = mz();
       try {
-        return bo(To(TT))
+        return eu(zu(zz))
       } finally {
-        QT(oT)
+        qz(uz)
       }
     }
 
-    function po(TT) {
-      const oT = YT();
+    function Wu(zz) {
+      const uz = mz();
       try {
-        return To(TT)
+        return zu(zz)
       } finally {
-        QT(oT)
+        qz(uz)
       }
     }
 
-    function bo(TT) {
-      return UT(Wo, to, [TT])
+    function eu(zz) {
+      return az(lu, Du, [zz])
     }
 
-    function yo(TT) {
-      const oT = YT();
+    function ju(zz) {
+      const uz = mz();
       try {
-        return No(TT)
+        return Iu(zz)
       } finally {
-        QT(oT)
+        qz(uz)
       }
     }
 
-    function No(TT) {
-      return UT(Wo, so, [TT])
+    function Iu(zz) {
+      return az(lu, yu, [zz])
     }
 
-    function Po(TT) {
-      return "wb" === TT || UT(Wo, qo, [TT])
+    function Bu(zz) {
+      return "wb" === zz || az(lu, gu, [zz])
     }
 
-    function Vo(TT) {
-      const oT = YT();
+    function Cu(zz) {
+      const uz = mz();
       try {
-        return Po(TT) || No(TT)
+        return Bu(zz) || Iu(zz)
       } finally {
-        QT(oT)
+        qz(uz)
       }
     }
 
-    function TI(TT) {
-      const oT = YT();
+    function Yu(zz) {
+      const uz = mz();
       try {
-        return "wb" === TT || Zo && Po(TT)
+        return "wb" === zz || Su && Bu(zz)
       } finally {
-        QT(oT)
+        qz(uz)
       }
     }
 
-    function oI(TT, oT) {
+    function ku(zz, uz) {
       let {
-        isGetter: IT
-      } = oT;
-      const iT = io(TT, IT ? "get" : "value");
-      return void 0 === iT ? void 0 : iT.value
+        isGetter: bz
+      } = uz;
+      const Ez = Eu(zz, bz ? "get" : "value");
+      return void 0 === Ez ? void 0 : Ez.value
     }
 
-    function II(TT, oT) {
+    function zb(zz, uz) {
       let {
-        isConstructor: IT,
-        native: iT
-      } = oT;
-      return "function" === typeof TT && (!(!IT && UT(ko, TT, ["prototype"])) && null !== UT(zo, iT, [UT(Io, TT, [])]))
+        isConstructor: bz,
+        native: Ez
+      } = uz;
+      return "function" === typeof zz && (!(!bz && az(iu, zz, ["prototype"])) && null !== az(nu, Ez, [az(bu, zz, [])]))
     }
 
-    function iI(TT, oT) {
-      return II(TT, Lo("", (() => {}), oT, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
+    function ub(zz, uz) {
+      return zb(zz, du("", (() => {}), uz, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
         isConstructor: !0
       } : {}))
     }
-    let zI = null,
-      kI = !1;
+    let bb = null,
+      Eb = !1;
 
-    function WI() {
+    function nb() {
       try {
-        return globalThis.WebAssembly === Do
+        return globalThis.WebAssembly === pu
       } catch {
         return !1
       }
     }
 
-    function XI(TT) {
+    function ib(zz) {
       try {
-        return function(TT) {
+        return function(zz) {
           const {
-            holder: oT,
-            key: IT,
-            onNamespace: iT,
-            inSecureContext: zT
-          } = TT, kT = oT(), WT = go(kT, IT);
-          if (!WT) return !(zT && !0 === globalThis.isSecureContext);
-          const XT = oI(WT, TT);
-          if (!II(XT, TT)) return !1;
-          if (iT) {
-            const oT = globalThis.WebAssembly;
-            if (oT !== kT && null !== oT && ("object" === typeof oT || "function" === typeof oT)) {
-              const iT = Fo(oT, IT);
-              return iT === XT || void 0 === iT || II(iT, TT)
+            holder: uz,
+            key: bz,
+            onNamespace: Ez,
+            inSecureContext: nz
+          } = zz, iz = uz(), lz = fu(iz, bz);
+          if (!lz) return !(nz && !0 === globalThis.isSecureContext);
+          const Mz = ku(lz, zz);
+          if (!zb(Mz, zz)) return !1;
+          if (Ez) {
+            const uz = globalThis.WebAssembly;
+            if (uz !== iz && null !== uz && ("object" === typeof uz || "function" === typeof uz)) {
+              const Ez = Hu(uz, bz);
+              return Ez === Mz || void 0 === Ez || zb(Ez, zz)
             }
           }
           return !0
-        }(TT)
+        }(zz)
       } catch {
         return !1
       }
     }
 
-    function BI(TT) {
-      const oT = `wh:${TT.code}`;
-      if ("punished" === TT.tier) return oT;
+    function lb(zz) {
+      const uz = `wh:${zz.code}`;
+      if ("punished" === zz.tier) return uz;
       try {
-        return `${oT}${VT(FI(TT))}`
+        return `${uz}${kz(Mb(zz))}`
       } catch {
-        return `${oT}${VT(void 0)}`
+        return `${uz}${kz(void 0)}`
       }
     }
 
-    function FI(TT) {
-      const oT = go(TT.holder(), TT.key),
-        IT = void 0 === oT ? void 0 : oI(oT, TT);
-      return TT.onNamespace && !WI() && II(IT, TT) ? Fo(globalThis.WebAssembly, TT.key) : IT
+    function Mb(zz) {
+      const uz = fu(zz.holder(), zz.key),
+        bz = void 0 === uz ? void 0 : ku(uz, zz);
+      return zz.onNamespace && !nb() && zb(bz, zz) ? Hu(globalThis.WebAssembly, zz.key) : bz
     }
 
-    function SI(TT) {
-      if (Po(TT)) return 5;
-      const oT = To(TT);
-      return bo(oT) ? 4 : No(TT) ? 3 : Ho(oT) ? function(TT) {
-        return UT(Wo, Uo, [TT])
-      }(oT) ? -1 : oT === Yo ? 0 : 1 : 2
+    function tb(zz) {
+      if (Bu(zz)) return 5;
+      const uz = zu(zz);
+      return eu(uz) ? 4 : Iu(zz) ? 3 : Uu(uz) ? function(zz) {
+        return az(lu, au, [zz])
+      }(uz) ? -1 : uz === mu ? 0 : 1 : 2
     }
 
-    function DI() {
-      const TT = function() {
-        const TT = aT();
-        return eT === AT || eT === gT ? (UT = JT, jT = fT) : UT = WT, TT
+    function Hb() {
+      const zz = function() {
+        const zz = Vz();
+        return Nz === Xz || Nz === fz ? (az = Gz, Pz = Tz) : az = lz, zz
       }();
       try {
-        if (null === zI || !Po(zI)) {
-          const TT = function() {
-            if (void 0 === Do) return null;
-            let TT = WI() ? null : "wh:wa";
-            const oT = oT => {
-              null !== oT && (null === TT || SI(oT) > SI(TT)) && (TT = oT)
+        if (null === bb || !Bu(bb)) {
+          const zz = function() {
+            if (void 0 === pu) return null;
+            let zz = nb() ? null : "wh:wa";
+            const uz = uz => {
+              null !== uz && (null === zz || tb(uz) > tb(zz)) && (zz = uz)
             };
-            for (let IT = 0; IT < ho.length; IT++) {
-              const TT = ho[IT];
-              void 0 === TT || XI(TT) || oT(BI(TT))
+            for (let bz = 0; bz < su.length; bz++) {
+              const zz = su[bz];
+              void 0 === zz || ib(zz) || uz(lb(zz))
             }
-            oT((0, oo.l)());
-            for (let IT = 0; IT < vo.length; IT++) {
-              const TT = vo[IT];
-              void 0 === TT || XI(TT) || oT(Co(TT))
+            uz((0, uu.l)());
+            for (let bz = 0; bz < Ju.length; bz++) {
+              const zz = Ju[bz];
+              void 0 === zz || ib(zz) || uz(Lu(zz))
             }
-            return TT
+            return zz
           }();
-          (null === zI || null !== TT && SI(TT) > SI(zI)) && (zI = TT)
+          (null === bb || null !== zz && tb(zz) > tb(bb)) && (bb = zz)
         }
       } finally {
-        QT(TT)
+        qz(zz)
       }
     }
 
-    function LI() {
-      kI = !0
+    function Ob() {
+      Eb = !0
     }
 
-    function xI() {
-      if (kI) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && DI(), null !== zI) return zI;
-      if (void 0 === Do) return "wn:unsupported";
-      const TT = (0, iT.n)();
-      return null === TT ? null : `wn:${TT}`
+    function pb() {
+      if (Eb) return "wb";
+      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && Hb(), null !== bb) return bb;
+      if (void 0 === pu) return "wn:unsupported";
+      const zz = (0, Ez.s)();
+      return null === zz ? null : `wn:${zz}`
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

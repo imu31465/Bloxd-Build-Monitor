@@ -1,72 +1,72 @@
 export const id = 65;
 export const ids = [65];
 export const modules = {
-  35424: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      noteJsEngine: () => HT,
-      noteJsJoin: () => ZT,
-      noteWasmJoin: () => lT,
-      noteWasmPick: () => nT,
-      noteWebGpuLoss: () => sT,
-      startWebGpuLossDebug: () => OT
+  35903: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      noteJsEngine: () => Uz,
+      noteJsJoin: () => Sz,
+      noteWasmJoin: () => yz,
+      noteWasmPick: () => cz,
+      noteWebGpuLoss: () => Dz,
+      startWebGpuLossDebug: () => hz
     });
-    var iT = IT(306),
-      zT = IT(12),
-      kT = IT(2482),
-      WT = IT(3012),
-      XT = IT(637),
-      BT = IT(289),
-      FT = IT(90),
-      ST = IT(104),
-      DT = IT(2486),
-      LT = IT(26),
-      xT = IT(120),
-      cT = IT(282),
-      KT = IT(2541),
-      MT = IT(314),
-      rT = IT(8664);
-    const AT = 40,
-      gT = 160;
+    var Ez = bz(316),
+      nz = bz(20),
+      iz = bz(2639),
+      lz = bz(3198),
+      Mz = bz(606),
+      tz = bz(301),
+      Hz = bz(96),
+      Oz = bz(104),
+      pz = bz(2644),
+      dz = bz(33),
+      Fz = bz(115),
+      Zz = bz(298),
+      Rz = bz(2689),
+      Kz = bz(328),
+      wz = bz(8902);
+    const Xz = 40,
+      fz = 160;
 
-    function hT(TT, oT) {
-      return `"${(TT.length>oT?`${TT.slice(0,oT)}...`:TT).replace(/[^ -~]|["\\]/g,"?")}"`
+    function sz(zz, uz) {
+      return `"${(zz.length>uz?`${zz.slice(0,uz)}...`:zz).replace(/[^ -~]|["\\]/g,"?")}"`
     }
 
-    function wT(TT) {
-      return TT ? "yes" : "no"
+    function rz(zz) {
+      return zz ? "yes" : "no"
     }
 
-    function mT(TT) {
-      var oT;
-      const IT = TT.storedRenderer;
-      return [`loss holds ${wT(TT.lossHolds)}`, `stops packs ${wT(TT.lossStopsPack)}`, `any loss ${wT(TT.anyLoss)}`, `old intel ${wT(TT.oldIntelDriver)}`, `default off for packs ${wT(TT.defaultOffForPacks)}`, `default off reason ${null!==(oT=TT.defaultOffReason)&&void 0!==oT?oT:"none"}`, `setting ${TT.setting?"on":"off"} (stored ${null===TT.settingStored?"unset":TT.settingStored?"on":"off"})`, `renderer url ${null===TT.urlRenderer?"none":hT(TT.urlRenderer,12)}, stored ${null===IT||void 0===IT?"none":hT(String(IT),12)}`, `hidden-loss arm ${TT.hiddenLossArm}`].join(", ")
+    function oz(zz) {
+      var uz;
+      const bz = zz.storedRenderer;
+      return [`loss holds ${rz(zz.lossHolds)}`, `stops packs ${rz(zz.lossStopsPack)}`, `any loss ${rz(zz.anyLoss)}`, `old intel ${rz(zz.oldIntelDriver)}`, `default off for packs ${rz(zz.defaultOffForPacks)}`, `default off reason ${null!==(uz=zz.defaultOffReason)&&void 0!==uz?uz:"none"}`, `setting ${zz.setting?"on":"off"} (stored ${null===zz.settingStored?"unset":zz.settingStored?"on":"off"})`, `renderer url ${null===zz.urlRenderer?"none":sz(zz.urlRenderer,12)}, stored ${null===bz||void 0===bz?"none":sz(String(bz),12)}`, `hidden-loss arm ${zz.hiddenLossArm}`].join(", ")
     }
 
-    function eT(TT) {
-      if (null === TT) return "no renderer settled";
+    function Nz(zz) {
+      if (null === zz) return "no renderer settled";
       const {
-        requested: oT,
-        choice: IT,
-        source: iT,
-        fallbackReason: zT
-      } = TT;
-      return `renderer requested ${oT}, runs ${IT}, from ${iT}${null===zT?"":`, fell back: ${hT(zT,80)}`}`
+        requested: uz,
+        choice: bz,
+        source: Ez,
+        fallbackReason: nz
+      } = zz;
+      return `renderer requested ${uz}, runs ${bz}, from ${Ez}${null===nz?"":`, fell back: ${sz(nz,80)}`}`
     }
 
-    function RT(TT, oT) {
-      return TT ? `stopping packs: iOS, ${null!==oT&&void 0!==oT?oT:1} losses in a row within a day` : "stopping packs"
+    function vz(zz, uz) {
+      return zz ? `stopping packs: iOS, ${null!==uz&&void 0!==uz?uz:1} losses in a row within a day` : "stopping packs"
     }
 
-    function uT(TT) {
-      var oT, IT, iT;
-      return `pick (wasm): backend ${null!==(oT=TT.backend)&&void 0!==oT?oT:"none"}, webgpu fallback ${null!==(IT=TT.reason)&&void 0!==IT?IT:"none"}, from ${null!==(iT=TT.source)&&void 0!==iT?iT:"none"}, storage pull breaks ${wT(TT.storagePullBreaks)}; packs run ${wT("webgpu"===TT.backend&&!TT.storagePullBreaks)}, else ${TT.noWebGpu}`
+    function xz(zz) {
+      var uz, bz, Ez;
+      return `pick (wasm): backend ${null!==(uz=zz.backend)&&void 0!==uz?uz:"none"}, webgpu fallback ${null!==(bz=zz.reason)&&void 0!==bz?bz:"none"}, from ${null!==(Ez=zz.source)&&void 0!==Ez?Ez:"none"}, storage pull breaks ${rz(zz.storagePullBreaks)}; packs run ${rz("webgpu"===zz.backend&&!zz.storagePullBreaks)}, else ${zz.noWebGpu}`
     }
 
-    function vT(TT, oT, IT) {
-      return `pack ${null===TT?"(name not read)":hT(TT,AT)} ${oT}${null===IT?"":`, ${IT} variants`}`
+    function Jz(zz, uz, bz) {
+      return `pack ${null===zz?"(name not read)":sz(zz,Xz)} ${uz}${null===bz?"":`, ${bz} variants`}`
     }
-    const ET = "shaderPack:failedWebGpuOff",
-      fT = new class {
+    const Az = "shaderPack:failedWebGpuOff",
+      Tz = new class {
         constructor() {
           this.joins = 0, this.losses = 0, this.noPackSaid = !1
         }
@@ -74,162 +74,162 @@ export const modules = {
           return this.joins++, this.joins <= 5 ? "detail" : this.joins <= 30 ? "outcome" : 31 === this.joins ? "cap" : "none"
         }
         noPack() {
-          const TT = !this.noPackSaid;
-          return this.noPackSaid = !0, TT
+          const zz = !this.noPackSaid;
+          return this.noPackSaid = !0, zz
         }
         loss() {
           return this.losses++, this.losses <= 10 ? "line" : 11 === this.losses ? "cap" : "none"
         }
       };
-    let CT = null,
-      jT = null,
-      JT = 0;
+    let Lz = null,
+      Pz = null,
+      Gz = 0;
 
-    function UT(TT) {
-      (0, KT.l)("webgpuloss", TT)
+    function az(zz) {
+      (0, Rz.i)("webgpuloss", zz)
     }
 
-    function aT() {
+    function Vz() {
       return {
-        lossHolds: (0, cT.u)(),
-        lossStopsPack: (0, cT.C)(),
-        anyLoss: (0, cT.h)(),
-        oldIntelDriver: !0 === LT.e.getItem(xT.F),
-        defaultOffForPacks: zT.c.isWebGpuDefaultOff(),
-        defaultOffReason: zT.c.webGpuDefaultOffReason(),
-        settingStored: LT.e.getItem(iT.hc),
-        setting: zT.c.get("clientEscMenuOptions").useWebGpu,
-        urlRenderer: ST.currentUrl.getSearchParam(DT.d),
-        storedRenderer: LT.e.getItem(DT.h),
-        hiddenLossArm: BT.c.webgpu_hidden_loss_v1
+        lossHolds: (0, Zz.q)(),
+        lossStopsPack: (0, Zz.w)(),
+        anyLoss: (0, Zz.g)(),
+        oldIntelDriver: !0 === dz.g.getItem(Fz.F),
+        defaultOffForPacks: nz.e.isWebGpuDefaultOff(),
+        defaultOffReason: nz.e.webGpuDefaultOffReason(),
+        settingStored: dz.g.getItem(Ez.zc),
+        setting: nz.e.get("clientEscMenuOptions").useWebGpu,
+        urlRenderer: Oz.currentUrl.getSearchParam(pz.c),
+        storedRenderer: dz.g.getItem(pz.e),
+        hiddenLossArm: tz.d.webgpu_hidden_loss_v1
       }
     }
 
-    function YT(TT) {
-      return function(TT, oT, IT) {
-        if (null === TT || void 0 === TT) return "none";
-        if ("object" !== typeof TT) return `unreadable (${typeof TT})`;
-        const iT = TT,
-          zT = "number" === typeof iT.at ? iT.at : null;
-        return ["browser " + (oT ? "this one" : "another"), null === zT ? "no time" : `set ${((IT-zT)/MT.k).toFixed(1)} h ago`, `losses ${"number"===typeof iT.losses?iT.losses:"unset (1)"}${null!==zT&&IT-zT<MT.j?", the last within a day":""}`, `hidden-only ${"number"===typeof iT.hiddenLosses?iT.hiddenLosses:"no"}`, `first page ${"hidden"===iT.firstPage||"visible"===iT.firstPage?iT.firstPage:"unset (visible)"}`].join(", ")
-      }(TT, function(TT) {
+    function mz(zz) {
+      return function(zz, uz, bz) {
+        if (null === zz || void 0 === zz) return "none";
+        if ("object" !== typeof zz) return `unreadable (${typeof zz})`;
+        const Ez = zz,
+          nz = "number" === typeof Ez.at ? Ez.at : null;
+        return ["browser " + (uz ? "this one" : "another"), null === nz ? "no time" : `set ${((bz-nz)/Kz.k).toFixed(1)} h ago`, `losses ${"number"===typeof Ez.losses?Ez.losses:"unset (1)"}${null!==nz&&bz-nz<Kz.j?", the last within a day":""}`, `hidden-only ${"number"===typeof Ez.hiddenLosses?Ez.hiddenLosses:"no"}`, `first page ${"hidden"===Ez.firstPage||"visible"===Ez.firstPage?Ez.firstPage:"unset (visible)"}`].join(", ")
+      }(zz, function(zz) {
         try {
-          return "object" === typeof TT && null !== TT && TT.browser === (0, cT.d)()
+          return "object" === typeof zz && null !== zz && zz.browser === (0, Zz.d)()
         } catch {
           return !1
         }
-      }(TT), Date.now())
+      }(zz), Date.now())
     }
 
-    function QT() {
-      const TT = (0, cT.m)().now;
-      return "number" === typeof(null === TT || void 0 === TT ? void 0 : TT.losses) ? TT.losses : null
+    function qz() {
+      const zz = (0, Zz.j)().now;
+      return "number" === typeof(null === zz || void 0 === zz ? void 0 : zz.losses) ? zz.losses : null
     }
 
-    function OT() {
+    function hz() {
       const {
-        atLoad: TT,
-        now: oT,
-        unreported: IT
-      } = (0, cT.m)(), iT = JSON.stringify(TT) === JSON.stringify(oT) ? "qx" : `now ${YT(oT)}`;
-      UT(`load (${XT.u?"wasm":"js"}, os ${(0,FT.getOperatingSystem)()}): stored loss ${YT(TT)}; ${iT}; unreported ${function(TT){if(null===TT||void 0===TT||"object"!==typeof TT)return"none";const{hidden:oT,visible:IT}=TT;return`
+        atLoad: zz,
+        now: uz,
+        unreported: bz
+      } = (0, Zz.j)(), Ez = JSON.stringify(zz) === JSON.stringify(uz) ? "MZ" : `now ${mz(uz)}`;
+      az(`load (${Mz.x?"wasm":"js"}, os ${(0,Hz.getOperatingSystem)()}): stored loss ${mz(zz)}; ${Ez}; unreported ${function(zz){if(null===zz||void 0===zz||"object"!==typeof zz)return"none";const{hidden:uz,visible:bz}=zz;return`
         hidden $ {
-          "number" === typeof oT ? oT : 0
+          "number" === typeof uz ? uz : 0
         }, visible $ {
-          "number" === typeof IT ? IT : 0
+          "number" === typeof bz ? bz : 0
         }
-        `}(IT)}; webgpu_loss_page ${cT.y}`), UT(`load: ${mT(aT())}; pack expected ${(0,WT.i)(FT.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
+        `}(bz)}; webgpu_loss_page ${Zz.t}`), az(`load: ${oz(Vz())}; pack expected ${(0,lz.c)(Hz.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
     }
 
-    function HT(TT) {
-      CT = TT, UT(function(TT, oT, IT) {
-        const iT = TT.setting ? "the setting is on" : (0, rT.d)(TT.packActive, TT.defaultOffForPacks) ? "the pack forces it" : TT.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
-        return `engine (js): useWebGpu ${wT(TT.useWebGpu)} (${iT}); ${eT(oT)}; webgpu fallback ${null!==IT&&void 0!==IT?IT:"unset"}`
-      }(TT, (0, kT.h)(), (0, FT.getWebGpuFallbackReason)()))
+    function Uz(zz) {
+      Lz = zz, az(function(zz, uz, bz) {
+        const Ez = zz.setting ? "the setting is on" : (0, wz.b)(zz.packActive, zz.defaultOffForPacks) ? "the pack forces it" : zz.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
+        return `engine (js): useWebGpu ${rz(zz.useWebGpu)} (${Ez}); ${Nz(uz)}; webgpu fallback ${null!==bz&&void 0!==bz?bz:"unset"}`
+      }(zz, (0, iz.k)(), (0, Hz.getWebGpuFallbackReason)()))
     }
 
-    function nT(TT) {
-      jT = TT, UT(uT(TT))
+    function cz(zz) {
+      Pz = zz, az(xz(zz))
     }
-    async function qT(TT, oT, iT, zT) {
-      const kT = ++JT,
-        WT = await async function(TT) {
-          var oT, iT;
+    async function gz(zz, uz, Ez, nz) {
+      const iz = ++Gz,
+        lz = await async function(zz) {
+          var uz, Ez;
           const [{
-            shaderPackPage: zT,
-            harnessShaderPackMode: kT
+            shaderPackPage: nz,
+            harnessShaderPackMode: iz
           }, {
-            getShaderPackPolicy: WT
+            getShaderPackPolicy: lz
           }, {
-            packRunsIn: XT
-          }] = await Promise.all([IT.e(130).then((() => IT(38159))), IT.e(89).then((() => IT(39953))), IT.e(134).then((() => IT(39959)))]), BT = await zT.load();
-          if ("none" === BT.status) return null;
-          const FT = null !== (oT = kT()) && void 0 !== oT ? oT : WT(TT),
-            ST = "active" === BT.status ? BT.pack.variants : BT.variants,
-            DT = XT(ST, FT);
+            packRunsIn: Mz
+          }] = await Promise.all([bz.e(129).then((() => bz(38566))), bz.e(89).then((() => bz(40479))), bz.e(133).then((() => bz(40487)))]), tz = await nz.load();
+          if ("none" === tz.status) return null;
+          const Hz = null !== (uz = iz()) && void 0 !== uz ? uz : lz(zz),
+            Oz = "active" === tz.status ? tz.pack.variants : tz.variants,
+            pz = Mz(Oz, Hz);
           return {
-            text: `${"active"===BT.status?vT(BT.pack.name,"active",ST.length):vT(null,`blocked (${BT.messageKey})`,null!==(iT=null===ST||void 0===ST?void 0:ST.length)&&void 0!==iT?iT:null)}; game policy ${FT}, runs in it ${DT?"yes":"no"}`,
-            runs: DT
+            text: `${"active"===tz.status?Jz(tz.pack.name,"active",Oz.length):Jz(null,`blocked (${tz.messageKey})`,null!==(Ez=null===Oz||void 0===Oz?void 0:Oz.length)&&void 0!==Ez?Ez:null)}; game policy ${Hz}, runs in it ${pz?"yes":"no"}`,
+            runs: pz
           }
-        }(TT);
-      if (null === WT) return void(fT.noPack() && UT(`join ${kT}: no shader pack on this page (further joins without one not logged)`));
-      const XT = fT.join();
-      if ("none" === XT) return;
-      if ("cap" === XT) return void UT(`join ${kT}: further joins not logged`);
-      const BT = function(TT) {
-          switch (TT.status) {
+        }(zz);
+      if (null === lz) return void(Tz.noPack() && az(`join ${iz}: no shader pack on this page (further joins without one not logged)`));
+      const Mz = Tz.join();
+      if ("none" === Mz) return;
+      if ("cap" === Mz) return void az(`join ${iz}: further joins not logged`);
+      const tz = function(zz) {
+          switch (zz.status) {
             case "ok":
-              return void 0 === TT.couldntRun ? "joined" : `joined without the pack: ${TT.couldntRun}`;
-            case "Jo":
-              return "Jo";
+              return void 0 === zz.couldntRun ? "joined" : `joined without the pack: ${zz.couldntRun}`;
+            case "ob":
+              return "ob";
             case "failed":
-              return `failed: ${TT.messageKey}`
+              return `failed: ${zz.messageKey}`
           }
-        }(oT),
-        FT = ("ok" === oT.status ? oT.couldntRun : "failed" === oT.status ? oT.messageKey : void 0) === ET ? `; cause: ${zT()}` : "";
-      "outcome" !== XT ? (UT(`join ${kT}: ${WT.text}`), WT.runs && (UT(`join ${kT}: needs WebGPU; ${iT()}`), UT(`join ${kT}: ${mT(aT())}`)), UT(`join ${kT}: ${BT}${FT}`)) : UT(`join ${kT}: ${BT}${FT}`)
+        }(uz),
+        Hz = ("ok" === uz.status ? uz.couldntRun : "failed" === uz.status ? uz.messageKey : void 0) === Az ? `; cause: ${nz()}` : "";
+      "outcome" !== Mz ? (az(`join ${iz}: ${lz.text}`), lz.runs && (az(`join ${iz}: needs WebGPU; ${Ez()}`), az(`join ${iz}: ${oz(Vz())}`)), az(`join ${iz}: ${tz}${Hz}`)) : az(`join ${iz}: ${tz}${Hz}`)
     }
 
-    function ZT(TT, oT, IT) {
-      var iT;
-      const zT = null !== (iT = null === oT || void 0 === oT ? void 0 : oT.isRunning()) && void 0 !== iT && iT;
-      return qT(TT, IT, (() => `Lite runtime ${null===oT?"no":"yes, running "+(zT?"yes":"no")}; ${eT((0,kT.h)())}`), (() => {
-        return TT = CT, oT = aT(), IT = "ios" === (0, FT.getOperatingSystem)(), iT = QT(), null === TT ? "engine choice not seen" : TT.packActive ? (0, rT.d)(TT.packActive, TT.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : oT.lossStopsPack ? `a loss ${RT(IT,iT)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (oT.lossStopsPack ? "" : " (one that doesn't stop packs)");
-        var TT, oT, IT, iT
+    function Sz(zz, uz, bz) {
+      var Ez;
+      const nz = null !== (Ez = null === uz || void 0 === uz ? void 0 : uz.isRunning()) && void 0 !== Ez && Ez;
+      return gz(zz, bz, (() => `Lite runtime ${null===uz?"no":"yes, running "+(nz?"yes":"no")}; ${Nz((0,iz.k)())}`), (() => {
+        return zz = Lz, uz = Vz(), bz = "ios" === (0, Hz.getOperatingSystem)(), Ez = qz(), null === zz ? "engine choice not seen" : zz.packActive ? (0, wz.b)(zz.packActive, zz.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : uz.lossStopsPack ? `a loss ${vz(bz,Ez)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (uz.lossStopsPack ? "" : " (one that doesn't stop packs)");
+        var zz, uz, bz, Ez
       }))
     }
 
-    function lT(TT, oT, IT) {
-      return qT(TT, null !== oT ? {
+    function yz(zz, uz, bz) {
+      return gz(zz, null !== uz ? {
         status: "failed",
-        messageKey: oT
+        messageKey: uz
       } : {
         status: "ok",
-        couldntRun: null !== IT && void 0 !== IT ? IT : void 0
-      }, (() => null === jT ? "pick not seen" : uT(jT)), (() => function(TT, oT, IT, iT) {
-        var zT, kT, WT, XT;
-        return null === TT ? "pick not seen" : "off_after_loss" === TT.reason ? `off after a loss, ${"pack"===TT.source?RT(IT,iT):`from ${null!==(XT=TT.source)&&void 0!==XT?XT:"none"}`}` : "not_requested" === TT.reason ? `not requested, from ${null!==(WT=TT.source)&&void 0!==WT?WT:"none"} (setting ${oT.setting?"on":"off"})` : `${null!==(zT=TT.reason)&&void 0!==zT?zT:"none"}, from ${null!==(kT=TT.source)&&void 0!==kT?kT:"none"}`
-      }(jT, aT(), "ios" === (0, FT.getOperatingSystem)(), QT())))
+        couldntRun: null !== bz && void 0 !== bz ? bz : void 0
+      }, (() => null === Pz ? "pick not seen" : xz(Pz)), (() => function(zz, uz, bz, Ez) {
+        var nz, iz, lz, Mz;
+        return null === zz ? "pick not seen" : "off_after_loss" === zz.reason ? `off after a loss, ${"pack"===zz.source?vz(bz,Ez):`from ${null!==(Mz=zz.source)&&void 0!==Mz?Mz:"none"}`}` : "not_requested" === zz.reason ? `not requested, from ${null!==(lz=zz.source)&&void 0!==lz?lz:"none"} (setting ${uz.setting?"on":"off"})` : `${null!==(nz=zz.reason)&&void 0!==nz?nz:"none"}, from ${null!==(iz=zz.source)&&void 0!==iz?iz:"none"}`
+      }(Pz, Vz(), "ios" === (0, Hz.getOperatingSystem)(), qz())))
     }
 
-    function sT(TT, oT, IT) {
-      const iT = fT.loss();
-      if ("none" === iT) return;
-      if ("cap" === iT) return void UT("further losses not logged");
-      const zT = aT();
-      UT(function(TT, oT, IT, iT) {
-        return `loss (${TT}): ${oT}${null===IT?"":` ${hT(IT,gT)}`}; ${iT}`
-      }(TT, oT, IT, `stored ${YT((0,cT.m)().now)}; holds ${zT.lossHolds?"yes":"no"}, stops packs ${zT.lossStopsPack?"yes":"no"}`))
+    function Dz(zz, uz, bz) {
+      const Ez = Tz.loss();
+      if ("none" === Ez) return;
+      if ("cap" === Ez) return void az("further losses not logged");
+      const nz = Vz();
+      az(function(zz, uz, bz, Ez) {
+        return `loss (${zz}): ${uz}${null===bz?"":` ${sz(bz,fz)}`}; ${Ez}`
+      }(zz, uz, bz, `stored ${mz((0,Zz.j)().now)}; holds ${nz.lossHolds?"yes":"no"}, stops packs ${nz.lossStopsPack?"yes":"no"}`))
     }
   },
-  8664: (TT, oT, IT) => {
-    function iT(TT, oT) {
-      return TT && !oT
+  8902: (zz, uz, bz) => {
+    function Ez(zz, uz) {
+      return zz && !uz
     }
-    IT.d(oT, {
-      d: () => iT
+    bz.d(uz, {
+      b: () => Ez
     })
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

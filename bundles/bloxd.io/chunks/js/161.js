@@ -1,46 +1,43 @@
 export const id = 161;
 export const ids = [161];
 export const modules = {
-  8369: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      pageBody: () => iT
+  8608: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const iT = {
-      whatIs: ["All the fun of survival with none of the stress. Bloxd Peaceful Survival is a calm sandbox where you explore a shared block world with other players. You mine, gather, craft and build, and there are no hostile mobs, no PvP and no health bar. Basically it's Survival with the danger turned off."],
-      howToPlay: ["Spawn into the shared world and start collecting resources. Chop some trees, mine for ores, craft better tools and get building on your dream base. Only passive animals spawn, and they've got so little health you can beat them with your fist. Health is switched off for everyone, so nothing can hurt you. Not even other players.", "Build well away from spawn, because the blocks near it reset every few hours. Craft Protectors from diamonds so other players can't break your builds or open your chests. New to Bloxd? Peaceful's a great place to learn mining, crafting and building before you try Survival."],
-      features: ["No Hostile Mobs, No PvP and No Health Bar", "Shared Multiplayer World to Explore with Friends", "Mining, Crafting and Base Building", "Protect Your Land and Chests with Protectors", "Relaxing and Great for New Players and Builders"],
-      tips: ["Pick a spot to build 200+ blocks out, where blocks don't reset every few hours", "Craft a Protector from diamonds to keep your builds and chests safe", "Don't bother with a sword. Passive animals are weak enough to beat with your fist", "Just starting out? Practise mining, crafting and building here before you try Survival", "Fancy some danger and a health bar? Give Survival a go"],
-      similarGames: ["classic_survival", "classic_survivalDayNight", "classic_creative", "skyblock", "oneBlock"],
+    const Ez = {
+      whatIs: ["Mine, craft and survive in a huge block world that keeps running even when you log off. Bloxd Survival is an online multiplayer SMP. You explore, dig for ores, craft tools and armour, and build a base alongside everyone else on the server. It's free and runs straight in your browser. Fight monsters, loot other players and protect your land, or set up your own private server. This is the full-danger version. If you'd rather build in peace, Peaceful is the calmer option."],
+      howToPlay: ["Gather some resources and craft your first tools. Then dig deeper for iron, gold, diamonds and moonstone to make better gear. Keep an eye out for mobs. Draugr Zombies, Skeletons and Knights, Frost Zombies and Skeletons, Cave Golems and Frost Golems all roam the world. You'll also run into wolves, bears, deer, gorillas, horses and camels.", "Other players can fight you, raid your chests and break your builds, so you'll want to protect your base. Craft a Protector from diamonds and other players can't change blocks or open chests in that chunk. In a tribe? A Tribe Protector shares that protection with your friends. And build well away from spawn, because the blocks near it reset every few hours."],
+      features: ["Persistent SMP Worlds That Save Your Progress", "Mining, Crafting and Base Building", "PvP, Looting and Raiding", "Land Protection with Protectors and Tribe Protectors", "Draugr, Golems, Frost Mobs and Wild Animals to Battle", "Free Private Servers with Owner Commands"],
+      tips: ["Build more than 200 blocks from spawn, or your base will get reset", "Get a Protector crafted from diamonds as soon as you can, to keep griefers out", "Don't log out mid-fight. If you're under 80 health and a player hit you in the last 8 seconds, you'll lose your items", "Log in to an account so your progress is saved for good", "Check in on your base at least once a month, because Protectors vanish after 30 days away", "Only let players you trust into your base", "Type /help in chat to see a list of useful commands"],
+      similarGames: ["classic_smp2", "classic_survivalDayNight", "classic_survivalGuns", "survivalFactory", "skyblock", "classic"],
       faq: [{
-        question: "What is Bloxd Peaceful?",
-        answer: "It's Bloxd's no-danger survival mode. You explore, build and gather in a shared block world, with no hostile mobs and no health bar."
+        question: "What is Bloxd Survival?",
+        answer: "A multiplayer survival game on Bloxd.io. You mine, craft, build and fight to survive in a shared block world that carries on while you're away."
       }, {
-        question: "Can you die in Bloxd Peaceful?",
-        answer: "No. There's no health bar, so mobs and other players can't hurt you."
+        question: "How do I protect my base in Bloxd Survival?",
+        answer: "Craft a Protector from diamonds and place it in your base. Other players then can't change blocks or open chests in that chunk. Tribes can use Tribe Protectors instead. Protectors disappear if you're away for more than 30 days."
       }, {
-        question: "Is there PvP in Bloxd Peaceful?",
-        answer: "There isn't. Players can't attack each other in Peaceful."
+        question: "Why did my build disappear?",
+        answer: "Blocks within about 200 blocks of spawn reset every few hours, so build further out if you want your base to last. Private lobbies don't have this reset."
       }, {
-        question: "Are there mobs in Bloxd Peaceful?",
-        answer: "Only passive animals. None of them can attack you, and you can beat them with your fist."
+        question: "Is stealing and griefing allowed in Bloxd Survival?",
+        answer: "It is. Raiding, stealing and griefing are all part of the game, so protect your chests and only share your base with people you trust."
       }, {
-        question: "What's the difference between Peaceful and Survival in Bloxd?",
-        answer: "The world works the same way, with the same mining, crafting and building. Survival has hostile mobs, PvP and a health bar. Peaceful takes all of that away so you can explore and build without worrying."
+        question: "Can I make a private server in Bloxd Survival?",
+        answer: "Yes. You can make a private server for free, invite your friends and use owner commands to run it however you like."
       }, {
-        question: "Is Bloxd Peaceful good for beginners?",
-        answer: "Definitely. It's a safe place to learn the basics. If you die early on in Survival, the game will even offer to move you over to Peaceful."
+        question: "What happens if I log out during a fight?",
+        answer: "Log out with less than 80 health within 8 seconds of being hit by a player and you'll lose your items. Get somewhere safe and heal up before you leave."
       }, {
-        question: "Can I play Bloxd Peaceful with friends?",
-        answer: "Yes. Everyone's in the same shared world, so you can meet up and build together."
+        question: "Will my world still be there tomorrow?",
+        answer: "Yes. Survival worlds are persistent and keep running while you're gone. Signing in to an account keeps your progress safe even if your browser data gets cleared."
       }, {
-        question: "How do I keep my builds safe in Peaceful?",
-        answer: "Blocks near spawn reset every few hours, so build at least 200 blocks away. Then put down a Protector and other players won't be able to break your builds or open your chests."
-      }, {
-        question: "How do I save my progress in Bloxd Peaceful?",
-        answer: "Sign in to an account. If you don't, your progress can be lost when your browser's cookies get cleared."
+        question: "Which Bloxd survival mode should I play?",
+        answer: "Survival is the classic one, with mobs, PvP and raiding. Peaceful is much calmer: no hostile mobs, no PvP and no health bar. Day & Night Survival is all about the day-night cycle and a Days Survived leaderboard. Survival with Guns adds craftable guns and armed mobs."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

@@ -1,272 +1,272 @@
 export const id = 75;
 export const ids = [75, 91];
 export const modules = {
-    4311: (TT, oT, IT) => {
-      IT.d(oT, {
-        d: () => MT,
-        g: () => rT
+    4590: (zz, uz, bz) => {
+      bz.d(uz, {
+        b: () => Kz,
+        f: () => wz
       });
-      var iT = IT(1042),
-        zT = IT.n(iT),
-        kT = IT(46),
-        WT = IT(1171),
-        XT = IT(4320),
-        BT = IT(1729),
-        FT = IT(2227),
-        ST = IT(4328),
-        DT = IT(1083);
-      const LT = new WeakMap;
-      let xT = 0;
+      var Ez = bz(1038),
+        nz = bz.n(Ez),
+        iz = bz(56),
+        lz = bz(1181),
+        Mz = bz(4598),
+        tz = bz(1846),
+        Hz = bz(2313),
+        Oz = bz(4601),
+        pz = bz(1089);
+      const dz = new WeakMap;
+      let Fz = 0;
 
-      function cT(TT) {
-        let oT = LT.get(TT);
-        return void 0 === oT && (oT = xT++, LT.set(TT, oT)), oT
+      function Zz(zz) {
+        let uz = dz.get(zz);
+        return void 0 === uz && (uz = Fz++, dz.set(zz, uz)), uz
       }
 
-      function KT(TT) {
+      function Rz(zz) {
         let {
-          piece: oT
-        } = TT;
-        return "space" === oT.kind ? (0, DT.jsx)(DT.Fragment, {
-          children: oT.text
-        }) : (0, DT.jsx)("span", {
+          piece: uz
+        } = zz;
+        return "space" === uz.kind ? (0, pz.jsx)(pz.Fragment, {
+          children: uz.text
+        }) : (0, pz.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${oT.delayMs}ms`
+            "--word-delay": `${uz.delayMs}ms`
           },
-          children: (0, DT.jsx)(XT.c, {
-            text: "icon" === oT.kind ? `[[${oT.icon}]]` : oT.text
+          children: (0, pz.jsx)(Mz.b, {
+            text: "icon" === uz.kind ? `[[${uz.icon}]]` : uz.text
           })
         })
       }
 
-      function MT(TT) {
+      function Kz(zz) {
         let {
-          display: oT
-        } = TT;
+          display: uz
+        } = zz;
         const {
-          selectedLanguage: IT
-        } = (0, WT.t)(), iT = (0, kT.useMemo)((() => (0, ST.d)((0, ST.h)(oT).plan.pieces)), [oT, IT.code]);
-        return (0, DT.jsxs)("div", {
-          className: zT()("Dialogue", {
-            DialogueAnimateIn: !1 !== oT.animateIn
+          selectedLanguage: bz
+        } = (0, lz.F)(), Ez = (0, iz.useMemo)((() => (0, Oz.e)((0, Oz.g)(uz).plan.pieces)), [uz, bz.code]);
+        return (0, pz.jsxs)("div", {
+          className: nz()("Dialogue", {
+            DialogueAnimateIn: !1 !== uz.animateIn
           }),
-          children: [oT.speakerName && (0, DT.jsx)(BT.c, {
-            text: oT.speakerName,
+          children: [uz.speakerName && (0, pz.jsx)(tz.b, {
+            text: uz.speakerName,
             className: "DialogueSpeaker"
-          }), (0, DT.jsx)("p", {
+          }), (0, pz.jsx)("p", {
             className: "DialogueLine",
-            children: iT.map(((TT, oT) => 1 === TT.length && "space" === TT[0].kind ? TT[0].text : (0, DT.jsx)("span", {
+            children: Ez.map(((zz, uz) => 1 === zz.length && "space" === zz[0].kind ? zz[0].text : (0, pz.jsx)("span", {
               className: "DialogueGlue",
-              children: TT.map(((TT, oT) => (0, DT.jsx)(KT, {
-                piece: TT
-              }, oT)))
-            }, oT)))
+              children: zz.map(((zz, uz) => (0, pz.jsx)(Rz, {
+                piece: zz
+              }, uz)))
+            }, uz)))
           })]
         })
       }
-      const rT = (0, kT.memo)((function() {
-        const TT = (0, FT.g)("dialogue");
-        return (0, DT.jsx)("div", {
+      const wz = (0, iz.memo)((function() {
+        const zz = (0, Hz.g)("dialogue");
+        return (0, pz.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: TT && (0, DT.jsx)(MT, {
-            display: TT
-          }, cT(TT))
+          children: zz && (0, pz.jsx)(Kz, {
+            display: zz
+          }, Zz(zz))
         })
       }))
     },
-    4203: (TT, oT, IT) => {
-        IT.r(oT), IT.d(oT, {
-          default: () => iW
+    4463: (zz, uz, bz) => {
+        bz.r(uz), bz.d(uz, {
+          default: () => El
         });
-        var iT = IT(46),
-          zT = IT(1042),
-          kT = IT.n(zT),
-          WT = IT(1476),
-          XT = IT(1484),
-          BT = IT(12),
-          FT = IT(68),
-          ST = IT(4209),
-          DT = IT(4224),
-          LT = IT(4226),
-          xT = IT(3895),
-          cT = IT(1083);
-        const KT = "/textures/docs/icons";
+        var Ez = bz(56),
+          nz = bz(1038),
+          iz = bz.n(nz),
+          lz = bz(1485),
+          Mz = bz(1490),
+          tz = bz(20),
+          Hz = bz(79),
+          Oz = bz(4465),
+          pz = bz(4480),
+          dz = bz(4483),
+          Fz = bz(4139),
+          Zz = bz(1089);
+        const Rz = "/textures/docs/icons";
 
-        function MT(TT) {
+        function Kz(zz) {
           let {
-            name: oT,
-            isTinted: IT,
-            className: iT,
-            style: zT
-          } = TT;
-          const WT = `${KT}/${oT}.png`;
-          return IT ? (0, cT.jsxs)("span", {
-            className: kT()("DocsPixelIcon", "Tinted", iT),
+            name: uz,
+            isTinted: bz,
+            className: Ez,
+            style: nz
+          } = zz;
+          const lz = `${Rz}/${uz}.png`;
+          return bz ? (0, Zz.jsxs)("span", {
+            className: iz()("DocsPixelIcon", "Tinted", Ez),
             "aria-hidden": "true",
-            style: zT,
-            children: [(0, cT.jsx)("span", {
+            style: nz,
+            children: [(0, Zz.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${WT}")`,
-                WebkitMaskImage: `url("${WT}")`
+                maskImage: `url("${lz}")`,
+                WebkitMaskImage: `url("${lz}")`
               }
-            }), (0, cT.jsx)("img", {
-              src: WT,
+            }), (0, Zz.jsx)("img", {
+              src: lz,
               alt: ""
             })]
-          }) : (0, cT.jsx)("img", {
-            className: kT()("DocsPixelIcon", iT),
-            src: WT,
+          }) : (0, Zz.jsx)("img", {
+            className: iz()("DocsPixelIcon", Ez),
+            src: lz,
             alt: "",
             "aria-hidden": "true",
-            style: zT
+            style: nz
           })
         }
-        const rT = 1500;
+        const wz = 1500;
 
-        function AT() {
-          const [TT, oT] = (0, iT.useState)(null);
-          (0, iT.useEffect)((() => {
-            if (null === TT) return;
-            const IT = setTimeout((() => {
-              oT(null)
-            }), rT);
+        function Xz() {
+          const [zz, uz] = (0, Ez.useState)(null);
+          (0, Ez.useEffect)((() => {
+            if (null === zz) return;
+            const bz = setTimeout((() => {
+              uz(null)
+            }), wz);
             return () => {
-              clearTimeout(IT)
+              clearTimeout(bz)
             }
-          }), [TT]);
-          return [TT, TT => {
-            (0, xT.d)(TT).then((() => {
-              oT({
-                text: TT,
+          }), [zz]);
+          return [zz, zz => {
+            (0, Fz.b)(zz).then((() => {
+              uz({
+                text: zz,
                 failed: !1
               })
-            }), (IT => {
-              console.error("Could not copy to the clipboard", IT), oT({
-                text: TT,
+            }), (bz => {
+              console.error("Could not copy to the clipboard", bz), uz({
+                text: zz,
                 failed: !0
               })
             }))
           }]
         }
 
-        function gT(TT) {
+        function fz(zz) {
           let {
-            text: oT,
-            label: IT,
-            className: iT
-          } = TT;
-          const [zT, WT] = AT(), XT = !1 === (null === zT || void 0 === zT ? void 0 : zT.failed);
-          return (0, cT.jsxs)("button", {
+            text: uz,
+            label: bz,
+            className: Ez
+          } = zz;
+          const [nz, lz] = Xz(), Mz = !1 === (null === nz || void 0 === nz ? void 0 : nz.failed);
+          return (0, Zz.jsxs)("button", {
             type: "button",
-            className: kT()("DocsCopyButton", iT, {
-              Copied: XT
+            className: iz()("DocsCopyButton", Ez, {
+              Copied: Mz
             }),
-            title: `Copy ${oT.length>40?"to clipboard":oT}`,
-            "aria-label": IT ? void 0 : `Copy ${oT}`,
-            onClick: TT => {
-              TT.stopPropagation(), WT(oT)
+            title: `Copy ${uz.length>40?"to clipboard":uz}`,
+            "aria-label": bz ? void 0 : `Copy ${uz}`,
+            onClick: zz => {
+              zz.stopPropagation(), lz(uz)
             },
-            children: [(0, cT.jsx)(MT, {
-              name: XT ? "check" : "copy"
-            }), IT && (0, cT.jsx)("span", {
-              children: XT ? "Copied" : null !== zT && void 0 !== zT && zT.failed ? "Copy failed" : IT
+            children: [(0, Zz.jsx)(Kz, {
+              name: Mz ? "check" : "copy"
+            }), bz && (0, Zz.jsx)("span", {
+              children: Mz ? "Copied" : null !== nz && void 0 !== nz && nz.failed ? "Copy failed" : bz
             })]
           })
         }
-        ST.b.registerLanguage("javascript", DT.b), ST.b.registerLanguage("typescript", LT.c);
-        const hT = {
+        Oz.e.registerLanguage("javascript", pz.d), Oz.e.registerLanguage("typescript", dz.e);
+        const sz = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          wT = {
+          rz = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          mT = 24;
+          oz = 24;
 
-        function eT(TT) {
+        function Nz(zz) {
           let {
-            code: oT,
-            lang: IT,
-            compact: zT = !1
-          } = TT;
-          const WT = (0, iT.useMemo)((() => function(TT, oT) {
-              const IT = hT[oT];
-              return IT ? ST.b.highlight(TT, {
-                language: IT
-              }).value : TT.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(oT, IT)), [oT, IT]),
-            XT = oT.split("\n").length,
-            BT = !zT && XT > mT + 6,
-            [FT, DT] = (0, iT.useState)(!1),
-            LT = hT[IT];
-          return (0, cT.jsxs)("div", {
-            className: kT()("DocsCodeBlock", {
-              Compact: zT,
-              Collapsed: BT && !FT
+            code: uz,
+            lang: bz,
+            compact: nz = !1
+          } = zz;
+          const lz = (0, Ez.useMemo)((() => function(zz, uz) {
+              const bz = sz[uz];
+              return bz ? Oz.e.highlight(zz, {
+                language: bz
+              }).value : zz.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(uz, bz)), [uz, bz]),
+            Mz = uz.split("\n").length,
+            tz = !nz && Mz > oz + 6,
+            [Hz, pz] = (0, Ez.useState)(!1),
+            dz = sz[bz];
+          return (0, Zz.jsxs)("div", {
+            className: iz()("DocsCodeBlock", {
+              Compact: nz,
+              Collapsed: tz && !Hz
             }),
-            children: [!zT && (0, cT.jsxs)("div", {
+            children: [!nz && (0, Zz.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, cT.jsx)("span", {
+              children: [(0, Zz.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: LT ? wT[LT] : "Text"
-              }), (0, cT.jsx)(gT, {
-                text: oT,
+                children: dz ? rz[dz] : "Text"
+              }), (0, Zz.jsx)(fz, {
+                text: uz,
                 label: "Copy"
               })]
-            }), (0, cT.jsx)("pre", {
-              children: (0, cT.jsx)("code", {
+            }), (0, Zz.jsx)("pre", {
+              children: (0, Zz.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: WT
+                  __html: lz
                 }
               })
-            }), BT && (0, cT.jsxs)("button", {
+            }), tz && (0, Zz.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": FT,
+              "aria-expanded": Hz,
               onClick: () => {
-                DT(!FT)
+                pz(!Hz)
               },
-              children: [(0, cT.jsx)(MT, {
-                name: FT ? "chevron-up" : "chevron-down"
-              }), FT ? "Show less" : `Show all ${XT} lines`]
+              children: [(0, Zz.jsx)(Kz, {
+                name: Hz ? "chevron-up" : "chevron-down"
+              }), Hz ? "Show less" : `Show all ${Mz} lines`]
             })]
           })
         }
-        var RT = IT(4229);
-        var uT = IT(4231);
-        const vT = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var vz = bz(4489);
+        var xz = bz(4497);
+        const Jz = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function ET(TT) {
-          const oT = new Map;
-          let IT, iT = [],
-            zT = !1;
-          const kT = () => {
-            IT && oT.set(IT.name, IT.lines.join("\n").trimEnd())
+        function Az(zz) {
+          const uz = new Map;
+          let bz, Ez = [],
+            nz = !1;
+          const iz = () => {
+            bz && uz.set(bz.name, bz.lines.join("\n").trimEnd())
           };
-          for (const WT of TT.split("\n")) {
-            const TT = WT.match(vT);
-            zT || WT.startsWith("/*") ? (zT || (kT(), IT = void 0), iT.push(WT), zT = !WT.includes("*/")) : TT ? (kT(), IT = {
-              name: TT[1],
-              lines: [...iT, WT]
-            }, iT = []) : IT && (WT.startsWith(" ") || WT.startsWith("\t") || /^[}\])|]/.test(WT)) ? IT.lines.push(WT) : IT && "" !== WT.trim() && (kT(), IT = void 0)
+          for (const lz of zz.split("\n")) {
+            const zz = lz.match(Jz);
+            nz || lz.startsWith("/*") ? (nz || (iz(), bz = void 0), Ez.push(lz), nz = !lz.includes("*/")) : zz ? (iz(), bz = {
+              name: zz[1],
+              lines: [...Ez, lz]
+            }, Ez = []) : bz && (lz.startsWith(" ") || lz.startsWith("\t") || /^[}\])|]/.test(lz)) ? bz.lines.push(lz) : bz && "" !== lz.trim() && (iz(), bz = void 0)
           }
-          return kT(), oT
+          return iz(), uz
         }
 
-        function fT(TT) {
-          return "methods" === TT || "callbacks" === TT || "settings" === TT
+        function Tz(zz) {
+          return "methods" === zz || "callbacks" === zz || "settings" === zz
         }
-        const CT = {
+        const Lz = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (TT, oT) => `api.setClientOption(playerId, "${TT}", ${oT})`
+              setterSnippet: (zz, uz) => `api.setClientOption(playerId, "${zz}", ${uz})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (TT, oT) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${TT}", ${oT})`
+              setterSnippet: (zz, uz) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${zz}", ${uz})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (TT, oT) => `api.setMobSetting(mobId, "${TT}", ${oT})`
+              setterSnippet: (zz, uz) => `api.setMobSetting(mobId, "${zz}", ${uz})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (TT, oT) => `api.setVehicleSetting(vehicleId, "${TT}", ${oT})`
+              setterSnippet: (zz, uz) => `api.setVehicleSetting(vehicleId, "${zz}", ${uz})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          jT = {
+          Pz = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function JT(TT) {
-          return TT.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function Gz(zz) {
+          return zz.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function UT(TT) {
-          let oT = !1;
-          return TT.split("\n").map((TT => (TT.startsWith("```") && (oT = !oT), !oT && /^#{3,} /.test(TT) ? TT.slice(1) : TT))).join("\n")
+        function az(zz) {
+          let uz = !1;
+          return zz.split("\n").map((zz => (zz.startsWith("```") && (uz = !uz), !uz && /^#{3,} /.test(zz) ? zz.slice(1) : zz))).join("\n")
         }
 
-        function aT(TT) {
-          return "readme" === TT ? "getting-started" : JT(TT)
+        function Vz(zz) {
+          return "readme" === zz ? "getting-started" : Gz(zz)
         }
-        const YT = "## Glossary of Referenced Types";
-        const QT = [{
+        const mz = "## Glossary of Referenced Types";
+        const qz = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...uT.d.flatMap((TT => {
-            const oT = {
-              id: TT.id,
-              slug: aT(TT.id),
-              title: TT.title,
-              markdown: TT.content,
-              ...CT[TT.id]
+          }, ...xz.d.flatMap((zz => {
+            const uz = {
+              id: zz.id,
+              slug: Vz(zz.id),
+              title: zz.title,
+              markdown: zz.content,
+              ...Lz[zz.id]
             };
-            if ("readme" === TT.id) return function(TT) {
-              const oT = TT.markdown.indexOf(YT),
-                IT = TT.markdown.indexOf("\n```", oT),
-                iT = TT.markdown.indexOf("\n```", IT + 1);
-              if (-1 === oT || -1 === IT || -1 === iT) throw new Error(`Getting started has no "${YT}" section with a code block`);
-              const zT = TT.markdown.slice(oT + 31, IT).trim(),
-                kT = [...ET(TT.markdown.slice(TT.markdown.indexOf("\n", IT + 1) + 1, iT))].map((TT => {
-                  let [oT, IT] = TT;
-                  return `## ${oT}\n\n\`\`\`ts\n${IT}\n\`\`\`\n`
+            if ("readme" === zz.id) return function(zz) {
+              const uz = zz.markdown.indexOf(mz),
+                bz = zz.markdown.indexOf("\n```", uz),
+                Ez = zz.markdown.indexOf("\n```", bz + 1);
+              if (-1 === uz || -1 === bz || -1 === Ez) throw new Error(`Getting started has no "${mz}" section with a code block`);
+              const nz = zz.markdown.slice(uz + 31, bz).trim(),
+                iz = [...Az(zz.markdown.slice(zz.markdown.indexOf("\n", bz + 1) + 1, Ez))].map((zz => {
+                  let [uz, bz] = zz;
+                  return `## ${uz}\n\n\`\`\`ts\n${bz}\n\`\`\`\n`
                 })),
-                WT = TT.markdown.slice(TT.markdown.indexOf("\n", iT + 1) + 1);
+                lz = zz.markdown.slice(zz.markdown.indexOf("\n", Ez + 1) + 1);
               return [{
-                ...TT,
-                markdown: `${TT.markdown.slice(0,oT)}${WT}`
+                ...zz,
+                markdown: `${zz.markdown.slice(0,uz)}${lz}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${zT}\n\n${kT.join("\n")}`
+                markdown: `# Types\n\n${nz}\n\n${iz.join("\n")}`
               }]
-            }(oT);
-            if ("howTo" === TT.id) {
+            }(uz);
+            if ("howTo" === zz.id) {
               const {
-                parent: TT,
-                guides: IT
-              } = function(TT) {
-                const [oT, ...IT] = TT.markdown.split(/^(?=## )/m), iT = [oT], zT = [];
-                for (const WT of IT) {
-                  var kT;
-                  const oT = WT.indexOf("\n"),
-                    IT = WT.slice(3, oT).trim(),
-                    XT = WT.slice(oT + 1);
-                  if (!XT.includes("```")) {
-                    iT.push(WT);
+                parent: zz,
+                guides: bz
+              } = function(zz) {
+                const [uz, ...bz] = zz.markdown.split(/^(?=## )/m), Ez = [uz], nz = [];
+                for (const lz of bz) {
+                  var iz;
+                  const uz = lz.indexOf("\n"),
+                    bz = lz.slice(3, uz).trim(),
+                    Mz = lz.slice(uz + 1);
+                  if (!Mz.includes("```")) {
+                    Ez.push(lz);
                     continue
                   }
-                  const BT = null !== (kT = jT[IT]) && void 0 !== kT ? kT : {
+                  const tz = null !== (iz = Pz[bz]) && void 0 !== iz ? iz : {
                     icon: "lightbulb",
-                    summary: `How to use ${IT.toLowerCase()} in World Code.`
+                    summary: `How to use ${bz.toLowerCase()} in World Code.`
                   };
-                  zT.push({
-                    id: `${TT.id}${IT.split(/[^A-Za-z0-9]+/).map((TT=>TT.charAt(0).toUpperCase()+TT.slice(1))).join("")}`,
-                    slug: `${TT.slug}-${JT(IT)}`,
-                    title: IT,
+                  nz.push({
+                    id: `${zz.id}${bz.split(/[^A-Za-z0-9]+/).map((zz=>zz.charAt(0).toUpperCase()+zz.slice(1))).join("")}`,
+                    slug: `${zz.slug}-${Gz(bz)}`,
+                    title: bz,
                     layout: "article",
-                    sourceAnchor: (0, RT.r)(IT),
-                    markdown: `# ${IT}\n\n${UT(XT)}`,
-                    ...BT
+                    sourceAnchor: (0, vz.k)(bz),
+                    markdown: `# ${bz}\n\n${az(Mz)}`,
+                    ...tz
                   })
                 }
                 return {
                   parent: {
-                    ...TT,
-                    markdown: iT.join(""),
-                    childPageIds: zT.map((TT => TT.id))
+                    ...zz,
+                    markdown: Ez.join(""),
+                    childPageIds: nz.map((zz => zz.id))
                   },
-                  guides: zT
+                  guides: nz
                 }
-              }(oT);
-              return [TT, ...IT]
+              }(uz);
+              return [zz, ...bz]
             }
-            return [oT]
+            return [uz]
           }))],
-          OT = [{
+          hz = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...QT.filter((TT => void 0 !== TT.sourceAnchor)).map((TT => TT.id))]
+            pageIds: ["howTo", ...qz.filter((zz => void 0 !== zz.sourceAnchor)).map((zz => zz.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function HT(TT) {
-          return QT.find((oT => oT.id === TT))
+        function Uz(zz) {
+          return qz.find((uz => uz.id === zz))
         }
-        const nT = new Map;
+        const cz = new Map;
 
-        function qT(TT) {
-          let oT = nT.get(TT.id);
-          return oT || (oT = (0, RT.v)(TT.markdown, "changelog" === TT.layout ? 3 : 2), nT.set(TT.id, oT)), oT
-        }
-
-        function ZT(TT, oT) {
-          return qT(TT).sections.some((TT => TT.heading.anchor === oT || TT.blocks.some((TT => "heading" === TT.kind && TT.anchor === oT))))
+        function gz(zz) {
+          let uz = cz.get(zz.id);
+          return uz || (uz = (0, vz.q)(zz.markdown, "changelog" === zz.layout ? 3 : 2), cz.set(zz.id, uz)), uz
         }
 
-        function lT(TT) {
-          const [oT, ...IT] = TT.replace(/^#/, "").split("-"), iT = QT.find((TT => TT.id === oT));
-          if (!iT) return null;
-          const zT = IT.length > 0 ? (0, RT.r)(IT.join("-")) : "";
-          for (const WT of null !== (kT = iT.childPageIds) && void 0 !== kT ? kT : []) {
-            var kT;
-            const TT = HT(WT);
-            if (TT.sourceAnchor === zT) return {
-              page: TT,
+        function Sz(zz, uz) {
+          return gz(zz).sections.some((zz => zz.heading.anchor === uz || zz.blocks.some((zz => "heading" === zz.kind && zz.anchor === uz))))
+        }
+
+        function yz(zz) {
+          const [uz, ...bz] = zz.replace(/^#/, "").split("-"), Ez = qz.find((zz => zz.id === uz));
+          if (!Ez) return null;
+          const nz = bz.length > 0 ? (0, vz.k)(bz.join("-")) : "";
+          for (const lz of null !== (iz = Ez.childPageIds) && void 0 !== iz ? iz : []) {
+            var iz;
+            const zz = Uz(lz);
+            if (zz.sourceAnchor === nz) return {
+              page: zz,
               anchor: ""
             };
-            if (ZT(TT, zT)) return {
-              page: TT,
-              anchor: zT
+            if (Sz(zz, nz)) return {
+              page: zz,
+              anchor: nz
             }
           }
           return {
-            page: iT,
-            anchor: zT
+            page: Ez,
+            anchor: nz
           }
         }
-        const sT = {
+        const Dz = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function tT(TT, oT) {
-          let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const iT = oT.slug ? `${TT}/${oT.slug}` : TT;
-          return IT ? `${iT}#${IT}` : iT
+        function Qz(zz, uz) {
+          let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const Ez = uz.slug ? `${zz}/${uz.slug}` : zz;
+          return bz ? `${Ez}#${bz}` : Ez
         }
-        var GT = IT(4243);
-        const pT = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          bT = new Set(["GameApi", "Console", "_TypeOf"]),
-          yT = 4;
+        var Wz = bz(4517);
+        const ez = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          jz = new Set(["GameApi", "Console", "_TypeOf"]),
+          Iz = 4;
 
-        function NT(TT) {
-          let oT = TT.length;
-          for (; oT > 0 && "" === TT[oT - 1].trim();) oT--;
-          return TT.slice(0, oT)
+        function Bz(zz) {
+          let uz = zz.length;
+          for (; uz > 0 && "" === zz[uz - 1].trim();) uz--;
+          return zz.slice(0, uz)
         }
 
-        function PT(TT) {
-          var oT;
-          const IT = NT(TT);
-          if (null === (oT = IT.at(-1)) || void 0 === oT || !oT.trimEnd().endsWith("*/")) return {
-            lines: IT,
+        function Cz(zz) {
+          var uz;
+          const bz = Bz(zz);
+          if (null === (uz = bz.at(-1)) || void 0 === uz || !uz.trimEnd().endsWith("*/")) return {
+            lines: bz,
             doc: ""
           };
-          const iT = IT.findLastIndex((TT => TT.startsWith("/**")));
-          return -1 === iT ? {
-            lines: IT,
+          const Ez = bz.findLastIndex((zz => zz.startsWith("/**")));
+          return -1 === Ez ? {
+            lines: bz,
             doc: ""
           } : {
-            lines: NT(IT.slice(0, iT)),
-            doc: IT.slice(iT).join("\n")
+            lines: Bz(bz.slice(0, Ez)),
+            doc: bz.slice(Ez).join("\n")
           }
         }
 
-        function dT(TT) {
-          var oT;
-          const IT = TT.split("\n"),
-            iT = IT.flatMap(((TT, oT) => pT.test(TT) ? [oT] : []));
-          let zT = PT(IT.slice(0, null !== (oT = iT[0]) && void 0 !== oT ? oT : IT.length)).doc;
-          return iT.map(((TT, oT) => {
-            var kT;
-            const WT = PT(IT.slice(TT, null !== (kT = iT[oT + 1]) && void 0 !== kT ? kT : IT.length)),
-              XT = {
-                name: IT[TT].match(pT)[1],
-                doc: zT,
-                lines: WT.lines
+        function Yz(zz) {
+          var uz;
+          const bz = zz.split("\n"),
+            Ez = bz.flatMap(((zz, uz) => ez.test(zz) ? [uz] : []));
+          let nz = Cz(bz.slice(0, null !== (uz = Ez[0]) && void 0 !== uz ? uz : bz.length)).doc;
+          return Ez.map(((zz, uz) => {
+            var iz;
+            const lz = Cz(bz.slice(zz, null !== (iz = Ez[uz + 1]) && void 0 !== iz ? iz : bz.length)),
+              Mz = {
+                name: bz[zz].match(ez)[1],
+                doc: nz,
+                lines: lz.lines
               };
-            return zT = WT.doc, XT
+            return nz = lz.doc, Mz
           }))
         }
 
-        function VT(TT) {
-          var oT;
-          const IT = TT.match(/^readonly \[([\s\S]*)\]$/);
-          return IT ? null !== (oT = IT[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== oT ? oT : [] : null
+        function kz(zz) {
+          var uz;
+          const bz = zz.match(/^readonly \[([\s\S]*)\]$/);
+          return bz ? null !== (uz = bz[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== uz ? uz : [] : null
         }
 
-        function To(TT) {
-          if (!TT.startsWith("{") || !TT.endsWith("}")) return null;
-          const oT = {
+        function zu(zz) {
+          if (!zz.startsWith("{") || !zz.endsWith("}")) return null;
+          const uz = {
               keys: [],
               values: []
             },
-            IT = TT => {
-              const IT = TT.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              IT && (oT.keys.push(IT[1].startsWith('"') ? IT[1] : `"${IT[1]}"`), oT.values.push(IT[2].trim()))
+            bz = zz => {
+              const bz = zz.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              bz && (uz.keys.push(bz[1].startsWith('"') ? bz[1] : `"${bz[1]}"`), uz.values.push(bz[2].trim()))
             };
-          let iT = 0,
-            zT = "";
-          for (const kT of TT.slice(1, -1)) "{[(".includes(kT) ? iT++ : "}])".includes(kT) && iT--, ";" === kT && 0 === iT ? (IT(zT), zT = "") : zT += kT;
-          return IT(zT), oT
+          let Ez = 0,
+            nz = "";
+          for (const iz of zz.slice(1, -1)) "{[(".includes(iz) ? Ez++ : "}])".includes(iz) && Ez--, ";" === iz && 0 === Ez ? (bz(nz), nz = "") : nz += iz;
+          return bz(nz), uz
         }
 
-        function oo(TT) {
-          return TT.length > yT ? `\n\t| ${TT.join("\n\t| ")}` : TT.join(" | ")
+        function uu(zz) {
+          return zz.length > Iz ? `\n\t| ${zz.join("\n\t| ")}` : zz.join(" | ")
         }
 
-        function Io(TT, oT) {
-          const IT = function(TT, oT) {
-            return TT.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((TT, IT) => {
-              var iT;
-              const zT = null === (iT = oT.get(IT)) || void 0 === iT ? void 0 : iT.object;
-              return zT ? oo(zT.values) : TT
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((TT, IT) => {
-              var iT, zT;
-              const kT = null === (iT = oT.get(IT)) || void 0 === iT || null === (zT = iT.object) || void 0 === zT ? void 0 : zT.values.map(VT);
-              return null !== kT && void 0 !== kT && kT.every((TT => null !== TT)) ? oo([...new Set(kT.flat())]) : TT
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((TT, IT) => {
-              var iT;
-              const zT = null === (iT = oT.get(IT)) || void 0 === iT ? void 0 : iT.members;
-              return zT ? oo(zT) : TT
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((TT, IT) => {
-              var iT;
-              const zT = null === (iT = oT.get(IT)) || void 0 === iT ? void 0 : iT.object;
-              return zT ? oo(zT.keys) : TT
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((TT, IT) => {
-              var iT, zT;
-              return null !== (iT = null === (zT = oT.get(IT)) || void 0 === zT ? void 0 : zT.text) && void 0 !== iT ? iT : TT
+        function bu(zz, uz) {
+          const bz = function(zz, uz) {
+            return zz.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((zz, bz) => {
+              var Ez;
+              const nz = null === (Ez = uz.get(bz)) || void 0 === Ez ? void 0 : Ez.object;
+              return nz ? uu(nz.values) : zz
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((zz, bz) => {
+              var Ez, nz;
+              const iz = null === (Ez = uz.get(bz)) || void 0 === Ez || null === (nz = Ez.object) || void 0 === nz ? void 0 : nz.values.map(kz);
+              return null !== iz && void 0 !== iz && iz.every((zz => null !== zz)) ? uu([...new Set(iz.flat())]) : zz
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((zz, bz) => {
+              var Ez;
+              const nz = null === (Ez = uz.get(bz)) || void 0 === Ez ? void 0 : Ez.members;
+              return nz ? uu(nz) : zz
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((zz, bz) => {
+              var Ez;
+              const nz = null === (Ez = uz.get(bz)) || void 0 === Ez ? void 0 : Ez.object;
+              return nz ? uu(nz.keys) : zz
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((zz, bz) => {
+              var Ez, nz;
+              return null !== (Ez = null === (nz = uz.get(bz)) || void 0 === nz ? void 0 : nz.text) && void 0 !== Ez ? Ez : zz
             }))
-          }(TT.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), oT);
-          return [TT.doc, IT].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(zz.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), uz);
+          return [zz.doc, bz].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function io(TT) {
-          const oT = dT(TT),
-            IT = function(TT) {
-              const oT = new Map,
-                IT = TT.find((TT => "_TypeOf" === TT.name));
-              let iT = null;
-              const zT = () => {
-                if (iT) {
-                  const TT = iT.lines.join("\n");
-                  oT.set(iT.name, {
-                    text: TT,
-                    members: VT(TT),
-                    object: To(TT)
+        function Eu(zz) {
+          const uz = Yz(zz),
+            bz = function(zz) {
+              const uz = new Map,
+                bz = zz.find((zz => "_TypeOf" === zz.name));
+              let Ez = null;
+              const nz = () => {
+                if (Ez) {
+                  const zz = Ez.lines.join("\n");
+                  uz.set(Ez.name, {
+                    text: zz,
+                    members: kz(zz),
+                    object: zu(zz)
                   })
                 }
               };
-              for (const kT of IT.lines.slice(1, -1)) {
-                const TT = kT.match(/^\t([\w$]+): (.+)$/);
-                TT ? (zT(), iT = {
-                  name: TT[1],
-                  lines: [TT[2]]
-                }) : iT && iT.lines.push(kT.replace(/^\t/, ""))
+              for (const iz of bz.lines.slice(1, -1)) {
+                const zz = iz.match(/^\t([\w$]+): (.+)$/);
+                zz ? (nz(), Ez = {
+                  name: zz[1],
+                  lines: [zz[2]]
+                }) : Ez && Ez.lines.push(iz.replace(/^\t/, ""))
               }
-              return zT(), oT
-            }(oT),
-            iT = new Map;
-          for (const zT of oT) bT.has(zT.name) || iT.has(zT.name) || iT.set(zT.name, Io(zT, IT));
-          return iT
+              return nz(), uz
+            }(uz),
+            Ez = new Map;
+          for (const nz of uz) jz.has(nz.name) || Ez.has(nz.name) || Ez.set(nz.name, bu(nz, bz));
+          return Ez
         }
-        let zo, ko, Wo;
+        let nu, iu, lu;
 
-        function Xo() {
-          return ko ??= function(TT) {
-            const oT = dT(TT).find((TT => "GameApi" === TT.name)),
-              IT = new Map,
-              iT = oT.lines;
-            for (let kT = 0; kT < iT.length; kT++) {
-              var zT;
-              if (!iT[kT].trimStart().startsWith("/**")) continue;
-              const TT = kT;
-              for (; kT < iT.length && !iT[kT].includes("*/");) kT++;
-              const oT = null === (zT = iT[kT + 1]) || void 0 === zT ? void 0 : zT.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!oT) continue;
-              let WT = null;
-              const XT = [];
-              let BT = "description",
-                FT = !1;
-              for (const IT of iT.slice(TT, kT + 1).join("\n").split("\n").map((TT => TT.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const TT = IT.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                TT ? (WT = TT[1].trim(), BT = "deprecation") : IT.startsWith("@") ? (BT = "otherTag", FT = !0) : "" === IT.trim() ? FT || (BT = "description", XT.push(IT)) : "deprecation" !== BT || /^[A-Z]/.test(IT.trim()) ? "otherTag" !== BT && (BT = "description", XT.push(IT)) : WT = `${WT} ${IT.trim()}`.trim()
+        function Mu() {
+          return iu ??= function(zz) {
+            const uz = Yz(zz).find((zz => "GameApi" === zz.name)),
+              bz = new Map,
+              Ez = uz.lines;
+            for (let iz = 0; iz < Ez.length; iz++) {
+              var nz;
+              if (!Ez[iz].trimStart().startsWith("/**")) continue;
+              const zz = iz;
+              for (; iz < Ez.length && !Ez[iz].includes("*/");) iz++;
+              const uz = null === (nz = Ez[iz + 1]) || void 0 === nz ? void 0 : nz.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!uz) continue;
+              let lz = null;
+              const Mz = [];
+              let tz = "description",
+                Hz = !1;
+              for (const bz of Ez.slice(zz, iz + 1).join("\n").split("\n").map((zz => zz.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const zz = bz.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                zz ? (lz = zz[1].trim(), tz = "deprecation") : bz.startsWith("@") ? (tz = "otherTag", Hz = !0) : "" === bz.trim() ? Hz || (tz = "description", Mz.push(bz)) : "deprecation" !== tz || /^[A-Z]/.test(bz.trim()) ? "otherTag" !== tz && (tz = "description", Mz.push(bz)) : lz = `${lz} ${bz.trim()}`.trim()
               }
-              IT.set(oT[1], {
-                deprecation: WT,
-                description: XT.join("\n").trim()
+              bz.set(uz[1], {
+                deprecation: lz,
+                description: Mz.join("\n").trim()
               })
             }
-            return IT
-          }(GT.default), ko
+            return bz
+          }(Wz.default), iu
         }
 
-        function Bo() {
-          if (!Wo) {
-            Wo = new Map;
-            for (const TT of QT) {
-              const oT = (0, RT.s)(qT(TT)).flatMap((TT => TT.blocks));
-              for (const TT of (0, RT.j)(oT))
-                if ("ts" === TT.lang || "typescript" === TT.lang)
-                  for (const [oT, IT] of ET(TT.code)) Wo.set(oT, IT)
+        function tu() {
+          if (!lu) {
+            lu = new Map;
+            for (const zz of qz) {
+              const uz = (0, vz.n)(gz(zz)).flatMap((zz => zz.blocks));
+              for (const zz of (0, vz.f)(uz))
+                if ("ts" === zz.lang || "typescript" === zz.lang)
+                  for (const [uz, bz] of Az(zz.code)) lu.set(uz, bz)
             }
-            for (const [TT, oT] of(zo ??= io(GT.default), zo)) Wo.has(TT) || Wo.set(TT, oT)
+            for (const [zz, uz] of(nu ??= Eu(Wz.default), nu)) lu.has(zz) || lu.set(zz, uz)
           }
-          return Wo
+          return lu
         }
-        const Fo = {
+        const Hu = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let So;
+        let Ou;
 
-        function Do() {
-          if (!So) {
-            So = new Map;
-            for (const TT of QT)
-              if (fT(TT.layout))
-                for (const oT of qT(TT).sections) So.has(oT.heading.text) || So.set(oT.heading.text, {
-                  pageId: TT.id,
-                  anchor: oT.heading.anchor
+        function pu() {
+          if (!Ou) {
+            Ou = new Map;
+            for (const zz of qz)
+              if (Tz(zz.layout))
+                for (const uz of gz(zz).sections) Ou.has(uz.heading.text) || Ou.set(uz.heading.text, {
+                  pageId: zz.id,
+                  anchor: uz.heading.anchor
                 })
           }
-          return So
+          return Ou
         }
 
-        function Lo(TT) {
-          const oT = TT.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return oT ? Do().get(oT[1]) : void 0
+        function du(zz) {
+          const uz = zz.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return uz ? pu().get(uz[1]) : void 0
         }
-        const xo = (0, iT.createContext)("/docs"),
-          co = (0, iT.createContext)(null),
-          Ko = (0, iT.createContext)(!1),
-          Mo = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const Fu = (0, Ez.createContext)("/docs"),
+          Zu = (0, Ez.createContext)(null),
+          Ru = (0, Ez.createContext)(!1),
+          Ku = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function ro(TT) {
-          const oT = TT.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return oT ? oT[1] : null
+        function wu(zz) {
+          const uz = zz.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return uz ? uz[1] : null
         }
 
-        function Ao(TT) {
+        function Xu(zz) {
           let {
-            colour: oT
-          } = TT;
-          return (0, cT.jsx)("span", {
+            colour: uz
+          } = zz;
+          return (0, Zz.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: oT
+              background: uz
             },
             "aria-hidden": "true"
           })
         }
 
-        function go(TT) {
-          const oT = [];
-          let IT = 0;
-          for (const iT of TT.matchAll(Mo)) oT.push(TT.slice(IT, iT.index), (0, cT.jsx)(Ao, {
-            colour: iT[0]
-          }), iT[0]), IT = iT.index + iT[0].length;
-          return oT.push(TT.slice(IT)), oT
+        function fu(zz) {
+          const uz = [];
+          let bz = 0;
+          for (const Ez of zz.matchAll(Ku)) uz.push(zz.slice(bz, Ez.index), (0, Zz.jsx)(Xu, {
+            colour: Ez[0]
+          }), Ez[0]), bz = Ez.index + Ez[0].length;
+          return uz.push(zz.slice(bz)), uz
         }
 
-        function ho(TT) {
+        function su(zz) {
           let {
-            href: oT,
-            children: IT
-          } = TT;
-          const zT = (0, iT.useContext)(xo);
-          if (oT.startsWith("#")) {
-            const TT = lT(oT);
-            if (TT) return (0, cT.jsx)(WT.b, {
-              to: tT(zT, TT.page, TT.anchor),
-              children: (0, cT.jsx)(Ko.Provider, {
+            href: uz,
+            children: bz
+          } = zz;
+          const nz = (0, Ez.useContext)(Fu);
+          if (uz.startsWith("#")) {
+            const zz = yz(uz);
+            if (zz) return (0, Zz.jsx)(lz.e, {
+              to: Qz(nz, zz.page, zz.anchor),
+              children: (0, Zz.jsx)(Ru.Provider, {
                 value: !0,
-                children: IT
+                children: bz
               })
             })
           }
-          return (0, cT.jsx)("a", {
-            href: oT,
+          return (0, Zz.jsx)("a", {
+            href: uz,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, cT.jsx)(Ko.Provider, {
+            children: (0, Zz.jsx)(Ru.Provider, {
               value: !0,
-              children: IT
+              children: bz
             })
           })
         }
 
-        function wo(TT) {
+        function ru(zz) {
           let {
-            code: oT
-          } = TT;
-          const IT = (0, iT.useContext)(xo);
-          if ((0, iT.useContext)(Ko)) return (0, cT.jsx)("code", {
+            code: uz
+          } = zz;
+          const bz = (0, Ez.useContext)(Fu);
+          if ((0, Ez.useContext)(Ru)) return (0, Zz.jsx)("code", {
             className: "DocsInlineCode",
-            children: oT
+            children: uz
           });
-          if (Bo().has(oT)) return (0, cT.jsx)(uo, {
-            type: oT
+          if (tu().has(uz)) return (0, Zz.jsx)(xu, {
+            type: uz
           });
-          const zT = Lo(oT);
-          if (zT) return (0, cT.jsx)(WT.b, {
+          const nz = du(uz);
+          if (nz) return (0, Zz.jsx)(lz.e, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: tT(IT, HT(zT.pageId), zT.anchor),
-            children: oT
+            to: Qz(bz, Uz(nz.pageId), nz.anchor),
+            children: uz
           });
-          const kT = ro(oT);
-          return (0, cT.jsxs)("code", {
+          const iz = wu(uz);
+          return (0, Zz.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [kT && (0, cT.jsx)(Ao, {
-              colour: kT
-            }), oT]
+            children: [iz && (0, Zz.jsx)(Xu, {
+              colour: iz
+            }), uz]
           })
         }
 
-        function mo(TT) {
+        function ou(zz) {
           let {
-            text: oT
-          } = TT;
-          const IT = [];
-          let zT = 0;
-          for (const iT of oT.matchAll(RT.e)) {
-            iT.index > zT && IT.push(...go(oT.slice(zT, iT.index)));
-            const [, TT, kT, WT, XT, BT] = iT;
-            TT ? IT.push((0, cT.jsx)(wo, {
-              code: (0, RT.l)(TT, kT)
-            })) : WT ? IT.push((0, cT.jsx)("strong", {
-              children: (0, cT.jsx)(mo, {
-                text: WT
+            text: uz
+          } = zz;
+          const bz = [];
+          let nz = 0;
+          for (const Ez of uz.matchAll(vz.c)) {
+            Ez.index > nz && bz.push(...fu(uz.slice(nz, Ez.index)));
+            const [, zz, iz, lz, Mz, tz] = Ez;
+            zz ? bz.push((0, Zz.jsx)(ru, {
+              code: (0, vz.g)(zz, iz)
+            })) : lz ? bz.push((0, Zz.jsx)("strong", {
+              children: (0, Zz.jsx)(ou, {
+                text: lz
               })
-            })) : IT.push((0, cT.jsx)(ho, {
-              href: BT,
-              children: (0, cT.jsx)(mo, {
-                text: XT
+            })) : bz.push((0, Zz.jsx)(su, {
+              href: tz,
+              children: (0, Zz.jsx)(ou, {
+                text: Mz
               })
-            })), zT = iT.index + iT[0].length
+            })), nz = Ez.index + Ez[0].length
           }
-          return zT < oT.length && IT.push(...go(oT.slice(zT))), (0, cT.jsx)(cT.Fragment, {
-            children: IT.map(((TT, oT) => (0, cT.jsx)(iT.Fragment, {
-              children: TT
-            }, oT)))
+          return nz < uz.length && bz.push(...fu(uz.slice(nz))), (0, Zz.jsx)(Zz.Fragment, {
+            children: bz.map(((zz, uz) => (0, Zz.jsx)(Ez.Fragment, {
+              children: zz
+            }, uz)))
           })
         }
-        const eo = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          Ro = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const Nu = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          vu = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function uo(TT) {
+        function xu(zz) {
           let {
-            type: oT
-          } = TT;
-          const IT = Bo(),
-            zT = [];
-          for (const iT of oT.trim().matchAll(eo)) {
-            const [TT, oT, kT, WT, XT] = iT;
-            oT ? zT.push((0, cT.jsx)("span", {
+            type: uz
+          } = zz;
+          const bz = tu(),
+            nz = [];
+          for (const Ez of uz.trim().matchAll(Nu)) {
+            const [zz, uz, iz, lz, Mz] = Ez;
+            uz ? nz.push((0, Zz.jsx)("span", {
               className: "DocsTypeString",
-              children: TT
-            })) : kT && IT.has(kT) ? zT.push((0, cT.jsx)(jo, {
-              name: kT,
-              definition: IT.get(kT)
-            })) : kT ? zT.push((0, cT.jsx)("span", {
-              className: Ro.has(kT) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: TT
-            })) : WT ? zT.push((0, cT.jsx)("span", {
+              children: zz
+            })) : iz && bz.has(iz) ? nz.push((0, Zz.jsx)(Pu, {
+              name: iz,
+              definition: bz.get(iz)
+            })) : iz ? nz.push((0, Zz.jsx)("span", {
+              className: vu.has(iz) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: zz
+            })) : lz ? nz.push((0, Zz.jsx)("span", {
               className: "DocsTypeNumber",
-              children: TT
-            })) : XT ? zT.push(" ") : zT.push((0, cT.jsx)("span", {
+              children: zz
+            })) : Mz ? nz.push(" ") : nz.push((0, Zz.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: TT
+              children: zz
             }))
           }
-          return (0, cT.jsx)("code", {
+          return (0, Zz.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: zT.map(((TT, oT) => (0, cT.jsx)(iT.Fragment, {
-              children: TT
-            }, oT)))
+            children: nz.map(((zz, uz) => (0, Zz.jsx)(Ez.Fragment, {
+              children: zz
+            }, uz)))
           })
         }
-        const vo = 480,
-          Eo = 6,
-          fo = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let Co = 0;
+        const Ju = 480,
+          Au = 6,
+          Tu = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let Lu = 0;
 
-        function jo(TT) {
+        function Pu(zz) {
           let {
-            name: oT,
-            definition: IT
-          } = TT;
-          const zT = (0, iT.useContext)(xo),
-            kT = Fo[oT],
-            XT = (0, iT.useRef)(null),
-            BT = (0, iT.useRef)(null),
-            ST = (0, iT.useRef)(null),
-            [DT, LT] = (0, iT.useState)(!1),
-            [xT, KT] = (0, iT.useState)(null),
-            rT = (0, iT.useRef)(),
-            AT = (0, iT.useContext)(co),
-            [gT] = (0, iT.useState)((() => "DocsTypePopover-" + Co++)),
-            hT = () => {
-              clearTimeout(rT.current), LT(!0)
+            name: uz,
+            definition: bz
+          } = zz;
+          const nz = (0, Ez.useContext)(Fu),
+            iz = Hu[uz],
+            Mz = (0, Ez.useRef)(null),
+            tz = (0, Ez.useRef)(null),
+            Oz = (0, Ez.useRef)(null),
+            [pz, dz] = (0, Ez.useState)(!1),
+            [Fz, Rz] = (0, Ez.useState)(null),
+            wz = (0, Ez.useRef)(),
+            Xz = (0, Ez.useContext)(Zu),
+            [fz] = (0, Ez.useState)((() => "DocsTypePopover-" + Lu++)),
+            sz = () => {
+              clearTimeout(wz.current), dz(!0)
             },
-            wT = () => {
-              clearTimeout(rT.current), rT.current = setTimeout((() => {
-                LT(!1)
+            rz = () => {
+              clearTimeout(wz.current), wz.current = setTimeout((() => {
+                dz(!1)
               }), 120)
             };
-          return (0, iT.useEffect)((() => {
-            if (!DT) return;
-            const TT = TT => {
-              if ("Escape" === TT.key) {
-                var oT, IT;
-                if (null !== (oT = BT.current) && void 0 !== oT && oT.contains(document.activeElement)) null === (IT = XT.current) || void 0 === IT || IT.focus();
-                LT(!1)
+          return (0, Ez.useEffect)((() => {
+            if (!pz) return;
+            const zz = zz => {
+              if ("Escape" === zz.key) {
+                var uz, bz;
+                if (null !== (uz = tz.current) && void 0 !== uz && uz.contains(document.activeElement)) null === (bz = Mz.current) || void 0 === bz || bz.focus();
+                dz(!1)
               }
             };
-            return document.addEventListener("keydown", TT), () => {
-              document.removeEventListener("keydown", TT)
+            return document.addEventListener("keydown", zz), () => {
+              document.removeEventListener("keydown", zz)
             }
-          }), [DT]), (0, iT.useEffect)((() => () => {
-            clearTimeout(rT.current)
-          }), []), (0, iT.useLayoutEffect)((() => {
-            if (!DT || !XT.current || !BT.current) return void KT(null);
-            const TT = XT.current.getBoundingClientRect(),
-              oT = BT.current.offsetHeight,
-              IT = Math.min(vo, window.innerWidth - 32),
-              iT = Math.min(Math.max(16, TT.left), window.innerWidth - IT - 16),
-              zT = TT.bottom + Eo + oT < window.innerHeight;
-            KT({
-              left: iT,
-              top: zT ? TT.bottom + Eo : Math.max(16, TT.top - Eo - oT)
+          }), [pz]), (0, Ez.useEffect)((() => () => {
+            clearTimeout(wz.current)
+          }), []), (0, Ez.useLayoutEffect)((() => {
+            if (!pz || !Mz.current || !tz.current) return void Rz(null);
+            const zz = Mz.current.getBoundingClientRect(),
+              uz = tz.current.offsetHeight,
+              bz = Math.min(Ju, window.innerWidth - 32),
+              Ez = Math.min(Math.max(16, zz.left), window.innerWidth - bz - 16),
+              nz = zz.bottom + Au + uz < window.innerHeight;
+            Rz({
+              left: Ez,
+              top: nz ? zz.bottom + Au : Math.max(16, zz.top - Au - uz)
             })
-          }), [DT]), (0, cT.jsxs)(cT.Fragment, {
-            children: [(0, cT.jsx)("button", {
+          }), [pz]), (0, Zz.jsxs)(Zz.Fragment, {
+            children: [(0, Zz.jsx)("button", {
               type: "button",
-              ref: XT,
+              ref: Mz,
               className: "DocsTypeLink",
-              "aria-expanded": DT,
-              "aria-describedby": DT ? gT : void 0,
-              onMouseEnter: hT,
-              onMouseLeave: wT,
-              onFocus: hT,
-              onBlur: wT,
-              onKeyDown: TT => {
-                "Tab" === TT.key && !TT.shiftKey && ST.current && (TT.preventDefault(), ST.current.focus())
+              "aria-expanded": pz,
+              "aria-describedby": pz ? fz : void 0,
+              onMouseEnter: sz,
+              onMouseLeave: rz,
+              onFocus: sz,
+              onBlur: rz,
+              onKeyDown: zz => {
+                "Tab" === zz.key && !zz.shiftKey && Oz.current && (zz.preventDefault(), Oz.current.focus())
               },
-              onClick: hT,
-              children: oT
-            }), DT && (0, FT.createPortal)((0, cT.jsxs)("span", {
-              ref: BT,
-              id: gT,
+              onClick: sz,
+              children: uz
+            }), pz && (0, Hz.createPortal)((0, Zz.jsxs)("span", {
+              ref: tz,
+              id: fz,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: xT ? {
-                left: xT.left,
-                top: xT.top,
-                maxWidth: vo
+              style: Fz ? {
+                left: Fz.left,
+                top: Fz.top,
+                maxWidth: Ju
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: hT,
-              onMouseLeave: wT,
-              onFocus: hT,
-              onBlur: wT,
-              children: [(0, cT.jsxs)("span", {
+              onMouseEnter: sz,
+              onMouseLeave: rz,
+              onFocus: sz,
+              onBlur: rz,
+              children: [(0, Zz.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, cT.jsx)("span", {
+                children: [(0, Zz.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: oT
-                }), kT && (0, cT.jsxs)(WT.b, {
-                  ref: ST,
+                  children: uz
+                }), iz && (0, Zz.jsxs)(lz.e, {
+                  ref: Oz,
                   className: "DocsTypePopoverLink",
-                  to: tT(zT, HT(kT)),
+                  to: Qz(nz, Uz(iz)),
                   onClick: () => {
-                    LT(!1)
+                    dz(!1)
                   },
-                  onKeyDown: TT => {
-                    if ("Tab" === TT.key) {
-                      var oT;
-                      if (TT.preventDefault(), TT.shiftKey || !XT.current || ! function(TT, oT) {
-                          const IT = [...document.querySelectorAll(fo)],
-                            iT = IT.slice(IT.indexOf(TT) + 1).find((TT => TT.getClientRects().length > 0 && !(null !== oT && void 0 !== oT && oT.contains(TT))));
-                          return null === iT || void 0 === iT || iT.focus(), void 0 !== iT
-                        }(XT.current, BT.current)) null === (oT = XT.current) || void 0 === oT || oT.focus();
-                      TT.shiftKey || LT(!1)
+                  onKeyDown: zz => {
+                    if ("Tab" === zz.key) {
+                      var uz;
+                      if (zz.preventDefault(), zz.shiftKey || !Mz.current || ! function(zz, uz) {
+                          const bz = [...document.querySelectorAll(Tu)],
+                            Ez = bz.slice(bz.indexOf(zz) + 1).find((zz => zz.getClientRects().length > 0 && !(null !== uz && void 0 !== uz && uz.contains(zz))));
+                          return null === Ez || void 0 === Ez || Ez.focus(), void 0 !== Ez
+                        }(Mz.current, tz.current)) null === (uz = Mz.current) || void 0 === uz || uz.focus();
+                      zz.shiftKey || dz(!1)
                     }
                   },
-                  children: [HT(kT).title, (0, cT.jsx)(MT, {
+                  children: [Uz(iz).title, (0, Zz.jsx)(Kz, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, cT.jsx)(eT, {
+              }), (0, Zz.jsx)(Nz, {
                 lang: "ts",
-                code: IT,
+                code: bz,
                 compact: !0
               })]
-            }), null !== AT && void 0 !== AT ? AT : document.body)]
+            }), null !== Xz && void 0 !== Xz ? Xz : document.body)]
           })
         }
-        var Jo = IT(193),
-          Uo = IT(4251),
-          ao = IT(4260),
-          Yo = IT(4266);
-        const Qo = {
+        var Gu = bz(195),
+          au = bz(4524),
+          Vu = bz(4531),
+          mu = bz(4540);
+        const qu = {
           progressBar: {
-            tI: 30,
-            GI: .075,
-            pI: 5,
-            bI: !1,
+            Vz: 30,
+            mz: .075,
+            qz: 5,
+            hz: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            yI: "fa-solid fa-computer-mouse",
+            Sz: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            dI: 3e3,
+            Dz: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            VI: !0,
+            Qz: !0,
             scale: 3,
             rotation: 15,
-            Ti: !1
+            Wz: !1
           },
           gravityBar: {
-            tI: 30,
-            Ii: .25,
-            ii: 3,
-            zi: .8,
+            Vz: 30,
+            jz: .25,
+            Iz: 3,
+            Bz: .8,
             gravity: 1,
-            ki: 1.5,
-            Wi: 8,
-            Xi: 4,
-            bI: !1,
+            Cz: 1.5,
+            Yz: 8,
+            kz: 4,
+            hz: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            Fi: .15,
+            uu: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            Di: 5,
-            Li: 1200,
-            xi: .15,
-            Ki: 3,
+            nu: 5,
+            iu: 1200,
+            lu: .15,
+            Mu: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var Oo = IT(306),
-          Ho = IT(1803);
+        var hu = bz(316),
+          Uu = bz(1934);
 
-        function no(TT) {
-          return TT.startsWith("fa-")
+        function cu(zz) {
+          return zz.startsWith("fa-")
         }
-        const qo = {
+        const gu = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          Zo = {
+          Su = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function so(TT) {
-          return "string" === typeof TT ? "text" : "entityName" in TT || "translationKey" in TT ? "other" : (0, Oo.xb)(TT) ? "progressBar" : (0, Oo.wb)(TT) ? "keyBinding" : "icon" in TT ? "icon" : "str" in TT && "string" === typeof TT.str ? "text" : "other"
+        function yu(zz) {
+          return "string" === typeof zz ? "text" : "entityName" in zz || "translationKey" in zz ? "other" : (0, hu.Kb)(zz) ? "progressBar" : (0, hu.Gb)(zz) ? "keyBinding" : "icon" in zz ? "icon" : "str" in zz && "string" === typeof zz.str ? "text" : "other"
         }
-        const to = [{
+        const Du = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          Go = {
+          Qu = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...to],
+            }, ...Du],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: Ho.h
+                options: Uu.m
               },
               isRequired: !0
-            }, ...to],
+            }, ...Du],
             other: []
           };
 
-        function po(TT) {
-          return "string" === typeof TT ? {
-            str: TT
-          } : TT
+        function Wu(zz) {
+          return "string" === typeof zz ? {
+            str: zz
+          } : zz
         }
 
-        function bo(TT, oT) {
-          let IT = po(TT);
-          for (const iT of oT) IT = IT && "object" === typeof IT ? IT[iT] : void 0;
-          return IT
+        function eu(zz, uz) {
+          let bz = Wu(zz);
+          for (const Ez of uz) bz = bz && "object" === typeof bz ? bz[Ez] : void 0;
+          return bz
         }
 
-        function yo(TT, oT, IT) {
-          const iT = (TT, zT) => {
-            var kT;
-            const WT = oT[zT],
-              XT = {
-                ...TT
+        function ju(zz, uz, bz) {
+          const Ez = (zz, nz) => {
+            var iz;
+            const lz = uz[nz],
+              Mz = {
+                ...zz
               };
-            if (zT === oT.length - 1) return void 0 === IT ? delete XT[WT] : XT[WT] = IT, XT;
-            const BT = iT(null !== (kT = TT[WT]) && void 0 !== kT ? kT : {}, zT + 1);
-            return 0 === Object.keys(BT).length ? delete XT[WT] : XT[WT] = BT, XT
+            if (nz === uz.length - 1) return void 0 === bz ? delete Mz[lz] : Mz[lz] = bz, Mz;
+            const tz = Ez(null !== (iz = zz[lz]) && void 0 !== iz ? iz : {}, nz + 1);
+            return 0 === Object.keys(tz).length ? delete Mz[lz] : Mz[lz] = tz, Mz
           };
-          return function(TT) {
-            const oT = Object.keys(TT);
-            return "string" === typeof TT.str && 1 === oT.length ? TT.str : TT
-          }(iT(po(TT), 0))
+          return function(zz) {
+            const uz = Object.keys(zz);
+            return "string" === typeof zz.str && 1 === uz.length ? zz.str : zz
+          }(Ez(Wu(zz), 0))
         }
 
-        function No(TT, oT) {
-          const IT = so(TT),
-            iT = Go[IT].find((TT => TT.path.join(".") === oT.join("."))),
-            zT = null !== iT && void 0 !== iT && iT.isRequired && "other" !== IT ? bo(Zo[IT], oT) : void 0;
-          return yo(TT, oT, zT)
+        function Iu(zz, uz) {
+          const bz = yu(zz),
+            Ez = Qu[bz].find((zz => zz.path.join(".") === uz.join("."))),
+            nz = null !== Ez && void 0 !== Ez && Ez.isRequired && "other" !== bz ? eu(Su[bz], uz) : void 0;
+          return ju(zz, uz, nz)
         }
 
-        function Po(TT) {
-          switch (so(TT)) {
+        function Bu(zz) {
+          switch (yu(zz)) {
             case "text":
-              return String(bo(TT, ["str"]));
+              return String(eu(zz, ["str"]));
             case "icon":
-              return String(bo(TT, ["icon"]));
+              return String(eu(zz, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(bo(TT,["progress"])))}%`;
+              return `${Math.round(100*Number(eu(zz,["progress"])))}%`;
             case "keyBinding":
-              return String(bo(TT, ["action"]));
+              return String(eu(zz, ["action"]));
             case "other":
-              return JSON.stringify(TT)
+              return JSON.stringify(zz)
           }
         }
-        const Vo = /^[A-Za-z_$][\w$]*$/;
+        const Cu = /^[A-Za-z_$][\w$]*$/;
 
-        function TI(TT) {
-          if (Array.isArray(TT)) return `[${TT.map(TI).join(", ")}]`;
-          if (TT && "object" === typeof TT) {
-            const oT = Object.entries(TT).map((TT => {
-              let [oT, IT] = TT;
-              return `${Vo.test(oT)?oT:JSON.stringify(oT)}: ${TI(IT)}`
+        function Yu(zz) {
+          if (Array.isArray(zz)) return `[${zz.map(Yu).join(", ")}]`;
+          if (zz && "object" === typeof zz) {
+            const uz = Object.entries(zz).map((zz => {
+              let [uz, bz] = zz;
+              return `${Cu.test(uz)?uz:JSON.stringify(uz)}: ${Yu(bz)}`
             }));
-            return 0 === oT.length ? "{}" : `{ ${oT.join(", ")} }`
+            return 0 === uz.length ? "{}" : `{ ${uz.join(", ")} }`
           }
-          return JSON.stringify(TT)
+          return JSON.stringify(zz)
         }
 
-        function oI(TT) {
-          const oT = TT.map(TI),
-            IT = `[${oT.join(", ")}]`;
-          return IT.length <= 60 ? IT : `[\n${oT.map((TT=>`    ${TT},`)).join("\n")}\n]`
+        function ku(zz) {
+          const uz = zz.map(Yu),
+            bz = `[${uz.join(", ")}]`;
+          return bz.length <= 60 ? bz : `[\n${uz.map((zz=>`    ${zz},`)).join("\n")}\n]`
         }
-        const II = {
+        const zb = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function iI(TT) {
-          let oT = "";
-          for (let zT = 0; zT < TT.length; zT++) {
-            const kT = TT[zT];
-            if ("\\" === kT) {
-              var IT;
-              const iT = null !== (IT = TT[zT + 1]) && void 0 !== IT ? IT : "";
-              oT += "'" === iT ? "'" : kT + iT, zT++
-            } else if ('"' === kT) oT += '\\"';
+        function ub(zz) {
+          let uz = "";
+          for (let nz = 0; nz < zz.length; nz++) {
+            const iz = zz[nz];
+            if ("\\" === iz) {
+              var bz;
+              const Ez = null !== (bz = zz[nz + 1]) && void 0 !== bz ? bz : "";
+              uz += "'" === Ez ? "'" : iz + Ez, nz++
+            } else if ('"' === iz) uz += '\\"';
             else {
-              var iT;
-              oT += null !== (iT = II[kT]) && void 0 !== iT ? iT : kT
+              var Ez;
+              uz += null !== (Ez = zb[iz]) && void 0 !== Ez ? Ez : iz
             }
           }
-          return `"${oT}"`
+          return `"${uz}"`
         }
 
-        function zI(TT) {
-          if ("string" === typeof TT) return !0;
-          if (!TT || "object" !== typeof TT || Array.isArray(TT)) return !1;
-          const oT = TT;
-          return "ProgressBar" === oT.type ? "number" === typeof oT.progress : "StyledKeyBinding" === oT.type ? Ho.h.includes(oT.action) : "string" === typeof oT.icon || "string" === typeof oT.str || "string" === typeof oT.entityName || "string" === typeof oT.translationKey
+        function bb(zz) {
+          if ("string" === typeof zz) return !0;
+          if (!zz || "object" !== typeof zz || Array.isArray(zz)) return !1;
+          const uz = zz;
+          return "ProgressBar" === uz.type ? "number" === typeof uz.progress : "StyledKeyBinding" === uz.type ? Uu.m.includes(uz.action) : "string" === typeof uz.icon || "string" === typeof uz.str || "string" === typeof uz.entityName || "string" === typeof uz.translationKey
         }
 
-        function kI(TT) {
-          let oT;
+        function Eb(zz) {
+          let uz;
           try {
-            oT = function(TT) {
-              let oT = "",
-                IT = "",
-                iT = 0;
-              const zT = () => {
-                oT += IT.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), IT = ""
+            uz = function(zz) {
+              let uz = "",
+                bz = "",
+                Ez = 0;
+              const nz = () => {
+                uz += bz.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), bz = ""
               };
-              for (; iT < TT.length;) {
-                const kT = TT.slice(iT).search(/["'`]|\/\//);
-                if (-1 === kT) {
-                  IT += TT.slice(iT);
+              for (; Ez < zz.length;) {
+                const iz = zz.slice(Ez).search(/["'`]|\/\//);
+                if (-1 === iz) {
+                  bz += zz.slice(Ez);
                   break
                 }
-                IT += TT.slice(iT, iT + kT);
-                const WT = iT + kT,
-                  XT = TT[WT];
-                if ("/" === XT) {
-                  const oT = TT.indexOf("\n", WT);
-                  iT = -1 === oT ? TT.length : oT;
+                bz += zz.slice(Ez, Ez + iz);
+                const lz = Ez + iz,
+                  Mz = zz[lz];
+                if ("/" === Mz) {
+                  const uz = zz.indexOf("\n", lz);
+                  Ez = -1 === uz ? zz.length : uz;
                   continue
                 }
-                if (zT(), "`" === XT) throw new Error("Use quotes rather than template strings.");
-                let BT = WT + 1;
-                for (; BT < TT.length && TT[BT] !== XT;) BT += "\\" === TT[BT] ? 2 : 1;
-                if (BT >= TT.length) throw new Error("A string is missing its closing quote.");
-                const FT = TT.slice(WT + 1, BT);
-                oT += iI(FT), iT = BT + 1
+                if (nz(), "`" === Mz) throw new Error("Use quotes rather than template strings.");
+                let tz = lz + 1;
+                for (; tz < zz.length && zz[tz] !== Mz;) tz += "\\" === zz[tz] ? 2 : 1;
+                if (tz >= zz.length) throw new Error("A string is missing its closing quote.");
+                const Hz = zz.slice(lz + 1, tz);
+                uz += ub(Hz), Ez = tz + 1
               }
-              return zT(), JSON.parse(oT)
-            }(TT.trim())
-          } catch (iT) {
+              return nz(), JSON.parse(uz)
+            }(zz.trim())
+          } catch (Ez) {
             return {
               parts: null,
-              error: iT instanceof SyntaxError ? "This isn't a valid array yet." : iT.message
+              error: Ez instanceof SyntaxError ? "This isn't a valid array yet." : Ez.message
             }
           }
-          if (!Array.isArray(oT)) return {
+          if (!Array.isArray(uz)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const IT = oT.findIndex((TT => !zI(TT)));
-          return -1 !== IT ? {
+          const bz = uz.findIndex((zz => !bb(zz)));
+          return -1 !== bz ? {
             parts: null,
-            error: `Part ${IT+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${bz+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: oT,
+            parts: uz,
             error: null
           }
         }
-        const WI = 1 / Jo.c.clientTicksPerSecond,
-          XI = 700,
-          BI = {
+        const nb = 1 / Gu.e.clientTicksPerSecond,
+          ib = 700,
+          lb = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          FI = {
-            progressBar: Qo.progressBar.yI,
-            timedClick: Qo.timedClick.icon,
-            gravityBar: Qo.gravityBar.icon,
-            precisionBar: Qo.precisionBar.icon,
-            rhythmClick: Qo.rhythmClick.icon
+          Mb = {
+            progressBar: qu.progressBar.Sz,
+            timedClick: qu.timedClick.icon,
+            gravityBar: qu.gravityBar.icon,
+            precisionBar: qu.precisionBar.icon,
+            rhythmClick: qu.rhythmClick.icon
           };
 
-        function SI(TT) {
+        function tb(zz) {
           let {
-            type: oT
-          } = TT;
-          const [IT, zT] = (0, iT.useState)("ready"), [WT, XT] = (0, iT.useState)(1), [BT, FT] = (0, iT.useState)(!0), ST = (0, iT.useRef)(null), DT = (0, iT.useRef)(null), LT = (0, iT.useRef)(null), xT = (0, iT.useRef)(new Set), KT = (0, iT.useRef)(!1), rT = FI[oT], AT = (0, iT.useMemo)((() => ({
+            type: uz
+          } = zz;
+          const [bz, nz] = (0, Ez.useState)("ready"), [lz, Mz] = (0, Ez.useState)(1), [tz, Hz] = (0, Ez.useState)(!0), Oz = (0, Ez.useRef)(null), pz = (0, Ez.useRef)(null), dz = (0, Ez.useRef)(null), Fz = (0, Ez.useRef)(new Set), Rz = (0, Ez.useRef)(!1), wz = Mb[uz], Xz = (0, Ez.useMemo)((() => ({
             getState: () => {
-              var TT, oT;
-              return null !== (TT = null === (oT = LT.current) || void 0 === oT ? void 0 : oT.getState()) && void 0 !== TT ? TT : BI
+              var zz, uz;
+              return null !== (zz = null === (uz = dz.current) || void 0 === uz ? void 0 : uz.getState()) && void 0 !== zz ? zz : lb
             },
-            onFrame: TT => (xT.current.add(TT), () => {
-              xT.current.delete(TT)
+            onFrame: zz => (Fz.current.add(zz), () => {
+              Fz.current.delete(zz)
             })
           })), []);
-          (0, iT.useEffect)((() => {
-            const TT = ST.current,
-              oT = DT.current;
-            if (!TT || !oT) return;
-            const IT = new ResizeObserver((() => {
-              XT(TT.clientWidth / Math.max(1, oT.offsetWidth))
+          (0, Ez.useEffect)((() => {
+            const zz = Oz.current,
+              uz = pz.current;
+            if (!zz || !uz) return;
+            const bz = new ResizeObserver((() => {
+              Mz(zz.clientWidth / Math.max(1, uz.offsetWidth))
             }));
-            return IT.observe(TT), () => {
-              IT.disconnect()
+            return bz.observe(zz), () => {
+              bz.disconnect()
             }
-          }), []), (0, iT.useEffect)((() => {
-            var TT;
-            if ("playing" !== IT) return;
-            let iT = !1;
-            const kT = new Yo.f[oT](Qo[oT], (TT => {
-              iT = !0, FT(!1), zT(TT ? "succeeded" : "failed")
+          }), []), (0, Ez.useEffect)((() => {
+            var zz;
+            if ("playing" !== bz) return;
+            let Ez = !1;
+            const iz = new mu.f[uz](qu[uz], (zz => {
+              Ez = !0, Hz(!1), nz(zz ? "succeeded" : "failed")
             }), (() => {}));
-            LT.current = kT;
-            let WT = 0,
-              XT = performance.now(),
-              BT = requestAnimationFrame((function TT(oT) {
-                for (WT += Math.min(.25, (oT - XT) / 1e3), XT = oT; WT >= WI && !iT;) WT -= WI, kT.handleTick(WI);
-                for (const IT of xT.current) IT();
-                iT || (BT = requestAnimationFrame(TT))
+            dz.current = iz;
+            let lz = 0,
+              Mz = performance.now(),
+              tz = requestAnimationFrame((function zz(uz) {
+                for (lz += Math.min(.25, (uz - Mz) / 1e3), Mz = uz; lz >= nb && !Ez;) lz -= nb, iz.handleTick(nb);
+                for (const bz of Fz.current) bz();
+                Ez || (tz = requestAnimationFrame(zz))
               }));
-            return null === (TT = ST.current) || void 0 === TT || TT.focus({
+            return null === (zz = Oz.current) || void 0 === zz || zz.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(BT), kT.tearDown(), LT.current = null, KT.current = !1
+              cancelAnimationFrame(tz), iz.tearDown(), dz.current = null, Rz.current = !1
             }
-          }), [IT, oT]), (0, iT.useEffect)((() => {
-            if (BT) return;
-            const TT = setTimeout((() => {
-              FT(!0)
-            }), XI);
+          }), [bz, uz]), (0, Ez.useEffect)((() => {
+            if (tz) return;
+            const zz = setTimeout((() => {
+              Hz(!0)
+            }), ib);
             return () => {
-              clearTimeout(TT)
+              clearTimeout(zz)
             }
-          }), [BT]);
-          const gT = TT => {
-            var oT;
-            "playing" === IT && KT.current !== TT && (KT.current = TT, null === (oT = LT.current) || void 0 === oT || oT.handleMouseInput(TT))
+          }), [tz]);
+          const fz = zz => {
+            var uz;
+            "playing" === bz && Rz.current !== zz && (Rz.current = zz, null === (uz = dz.current) || void 0 === uz || uz.handleMouseInput(zz))
           };
-          return (0, cT.jsxs)("div", {
+          return (0, Zz.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, cT.jsxs)("div", {
-              ref: ST,
-              className: kT()("DocsQteStage", {
-                Playing: "playing" === IT
+            children: [(0, Zz.jsxs)("div", {
+              ref: Oz,
+              className: iz()("DocsQteStage", {
+                Playing: "playing" === bz
               }),
-              tabIndex: "playing" === IT ? 0 : -1,
-              role: "playing" === IT ? "button" : void 0,
-              "aria-label": "playing" === IT ? `${oT} quick time event: click or press Space` : void 0,
-              onPointerDown: TT => {
-                0 === TT.button && gT(!0)
+              tabIndex: "playing" === bz ? 0 : -1,
+              role: "playing" === bz ? "button" : void 0,
+              "aria-label": "playing" === bz ? `${uz} quick time event: click or press Space` : void 0,
+              onPointerDown: zz => {
+                0 === zz.button && fz(!0)
               },
               onPointerUp: () => {
-                gT(!1)
+                fz(!1)
               },
               onPointerLeave: () => {
-                gT(!1)
+                fz(!1)
               },
               onPointerCancel: () => {
-                gT(!1)
+                fz(!1)
               },
-              onKeyDown: TT => {
-                "playing" !== IT || " " !== TT.key && "Enter" !== TT.key || (TT.preventDefault(), gT(!0))
+              onKeyDown: zz => {
+                "playing" !== bz || " " !== zz.key && "Enter" !== zz.key || (zz.preventDefault(), fz(!0))
               },
-              onKeyUp: TT => {
-                "playing" !== IT || " " !== TT.key && "Enter" !== TT.key || gT(!1)
+              onKeyUp: zz => {
+                "playing" !== bz || " " !== zz.key && "Enter" !== zz.key || fz(!1)
               },
-              children: [(0, cT.jsx)("div", {
-                ref: DT,
+              children: [(0, Zz.jsx)("div", {
+                ref: pz,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${WT})`
+                  transform: `scale(${lz})`
                 },
-                children: "playing" === IT && (0, cT.jsx)(ao.e.Provider, {
-                  value: AT,
-                  children: (0, cT.jsx)(Uo.d, {
+                children: "playing" === bz && (0, Zz.jsx)(Vu.e.Provider, {
+                  value: Xz,
+                  children: (0, Zz.jsx)(au.b, {
                     qte: {
-                      type: oT,
-                      parameters: Qo[oT]
+                      type: uz,
+                      parameters: qu[uz]
                     }
                   })
                 })
-              }), "playing" !== IT && (0, cT.jsxs)("div", {
+              }), "playing" !== bz && (0, Zz.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== IT && (0, cT.jsxs)("div", {
-                  className: kT()("DocsQteResult", "succeeded" === IT ? "Succeeded" : "Failed"),
-                  children: [(0, cT.jsx)(MT, {
-                    name: "succeeded" === IT ? "check" : "cross",
+                children: ["ready" !== bz && (0, Zz.jsxs)("div", {
+                  className: iz()("DocsQteResult", "succeeded" === bz ? "Succeeded" : "Failed"),
+                  children: [(0, Zz.jsx)(Kz, {
+                    name: "succeeded" === bz ? "check" : "cross",
                     isTinted: !0
-                  }), (0, cT.jsx)("span", {
-                    children: "succeeded" === IT ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, Zz.jsx)("span", {
+                    children: "succeeded" === bz ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, cT.jsxs)("button", {
+                }), (0, Zz.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !BT,
+                  disabled: !tz,
                   onClick: () => {
-                    zT("playing")
+                    nz("playing")
                   },
-                  children: [(0, cT.jsx)(MT, {
-                    name: "ready" === IT ? "play" : "replay"
-                  }), (0, cT.jsx)("span", {
-                    children: "ready" === IT ? `Try ${oT}` : "Play again"
+                  children: [(0, Zz.jsx)(Kz, {
+                    name: "ready" === bz ? "play" : "replay"
+                  }), (0, Zz.jsx)("span", {
+                    children: "ready" === bz ? `Try ${uz}` : "Play again"
                   })]
                 })]
               })]
-            }), rT && !no(rT) && (0, cT.jsxs)("p", {
+            }), wz && !cu(wz) && (0, Zz.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, cT.jsx)("code", {
-                children: rT
+              children: ["The ", (0, Zz.jsx)("code", {
+                children: wz
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function DI(TT) {
+        function Hb(zz) {
           let {
-            level: oT,
-            text: IT,
-            anchor: iT,
-            className: zT
-          } = TT;
-          const WT = `h${Math.min(oT,6)}`;
-          return (0, cT.jsxs)(WT, {
-                id: iT,
-                className: kT()("DocsHeading", zT),
-                children: [(0, cT.jsx)(mo, {
-                      text: IT
-                    }), (0, cT.jsx)("a", {
+            level: uz,
+            text: bz,
+            anchor: Ez,
+            className: nz
+          } = zz;
+          const lz = `h${Math.min(uz,6)}`;
+          return (0, Zz.jsxs)(lz, {
+                id: Ez,
+                className: iz()("DocsHeading", nz),
+                children: [(0, Zz.jsx)(ou, {
+                      text: bz
+                    }), (0, Zz.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${iT}`,
-                        "aria-label": `Link to ${IT.replace(/`/g,"")}`,children:"#"})]})}function LI(TT){let{items:oT,ordered:IT}=TT;const iT=IT?"ol":"ul";return(0,cT.jsx)(iT,{className:"DocsList",children:oT.map(((TT,oT)=>(0,cT.jsxs)("li",{children:[(0,cT.jsx)(mo,{text:TT.text}),TT.children.length>0&&(0,cT.jsx)(LI,{items:TT.children,ordered:IT})]},oT)))})}function xI(TT){const oT=TT[0],IT="paragraph"===(null===oT||void 0===oT?void 0:oT.kind)?oT.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(IT)?"warning":/^\*\*(tip|prefer)/.test(IT)?"tip":"note"}function cI(TT){let{block:oT}=TT;switch(oT.kind){case"heading":return(0,cT.jsx)(DI,{level:oT.level,text:oT.text,anchor:oT.anchor});case"paragraph":return(0,cT.jsx)("p",{children:(0,cT.jsx)(mo,{text:oT.text})});case"code":{const TT="ts"===oT.lang?function(TT){const oT=TT.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return oT&&Object.hasOwn(Qo,oT[1])?oT[1]:null}(oT.code):null;return(0,cT.jsxs)(cT.Fragment,{children:[(0,cT.jsx)(eT,{code:oT.code,lang:oT.lang}),TT&&(0,cT.jsx)(SI,{type:TT})]})}case"table":return(0,cT.jsx)("div",{className:"DocsTableScroll",children:(0,cT.jsxs)("table",{className:"DocsTable",children:[(0,cT.jsx)("thead",{children:(0,cT.jsx)("tr",{children:oT.header.map(((TT,oT)=>(0,cT.jsx)("th",{children:(0,cT.jsx)(mo,{text:TT})},oT)))})}),(0,cT.jsx)("tbody",{children:oT.rows.map(((TT,oT)=>(0,cT.jsx)("tr",{children:TT.map(((TT,oT)=>(0,cT.jsx)("td",{children:(0,cT.jsx)(mo,{text:TT})},oT)))},oT)))})]})});case"list":return(0,cT.jsx)(LI,{items:oT.items,ordered:oT.ordered});case"quote":return(0,cT.jsx)("aside",{className:kT()("DocsCallout",xI(oT.blocks)),children:(0,cT.jsx)(KI,{blocks:oT.blocks})});case"rule":return(0,cT.jsx)("hr",{className:"DocsRule"})}}function KI(TT){let{blocks:oT}=TT;return(0,cT.jsx)(cT.Fragment,{children:oT.map(((TT,oT)=>(0,cT.jsx)(cI,{block:TT},oT)))})}var MI=IT(4235),rI=IT(4238);function AI(TT){return"blocks"===TT||"items"===TT}const gI=new Map;function hI(TT){let oT=gI.get(TT);return oT||(oT=function(TT){const oT={entries:[],legend:[],notes:[],examples:[]};let IT=!1;for(const kT of TT.split(/\r?\n/).slice(1)){if(kT.startsWith("#")){const TT=kT.replace(/^# ?/,""),iT=TT.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);iT?oT.legend.push({code:iT[1],meaning:iT[2],usage:iT[3].trim()}):/^Examples:/.test(TT.trim())?IT=!0:IT&&TT.trim()?oT.examples.push(TT.trim()):TT.trim()&&!/^\s/.test(TT)&&oT.notes.push(TT.trim());continue}const TT=kT.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var iT,zT;TT&&oT.entries.push({name:TT[1],variants:null!==(iT=null===(zT=TT[2])||void 0===zT?void 0:zT.split(","))&&void 0!==iT?iT:[]})}return oT}("blocks"===TT?MI:rI),gI.set(TT,oT)),oT}function wI(TT){let{className:oT,value:IT,placeholder:iT,label:zT,onChange:kT,count:WT,children:XT}=TT;return(0,cT.jsxs)("div",{className:oT,children:[(0,cT.jsx)(MT,{name:"magnifying-glass"}),(0,cT.jsx)("input",{type:"search",value:IT,placeholder:iT,"aria-label":zT,onChange:TT=>{kT(TT.target.value)}}),XT,WT&&(0,cT.jsxs)("span",{className:"DocsFilterCount",children:[WT.visible," of ",WT.total]})]})}var mI=IT(1055);function eI(TT){const oT=TT.trim().match(/^(` {
+                        href: `#${Ez}`,
+                        "aria-label": `Link to ${bz.replace(/`/g,"")}`,children:"#"})]})}function Ob(zz){let{items:uz,ordered:bz}=zz;const Ez=bz?"ol":"ul";return(0,Zz.jsx)(Ez,{className:"DocsList",children:uz.map(((zz,uz)=>(0,Zz.jsxs)("li",{children:[(0,Zz.jsx)(ou,{text:zz.text}),zz.children.length>0&&(0,Zz.jsx)(Ob,{items:zz.children,ordered:bz})]},uz)))})}function pb(zz){const uz=zz[0],bz="paragraph"===(null===uz||void 0===uz?void 0:uz.kind)?uz.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(bz)?"warning":/^\*\*(tip|prefer)/.test(bz)?"tip":"note"}function db(zz){let{block:uz}=zz;switch(uz.kind){case"heading":return(0,Zz.jsx)(Hb,{level:uz.level,text:uz.text,anchor:uz.anchor});case"paragraph":return(0,Zz.jsx)("p",{children:(0,Zz.jsx)(ou,{text:uz.text})});case"code":{const zz="ts"===uz.lang?function(zz){const uz=zz.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return uz&&Object.hasOwn(qu,uz[1])?uz[1]:null}(uz.code):null;return(0,Zz.jsxs)(Zz.Fragment,{children:[(0,Zz.jsx)(Nz,{code:uz.code,lang:uz.lang}),zz&&(0,Zz.jsx)(tb,{type:zz})]})}case"table":return(0,Zz.jsx)("div",{className:"DocsTableScroll",children:(0,Zz.jsxs)("table",{className:"DocsTable",children:[(0,Zz.jsx)("thead",{children:(0,Zz.jsx)("tr",{children:uz.header.map(((zz,uz)=>(0,Zz.jsx)("th",{children:(0,Zz.jsx)(ou,{text:zz})},uz)))})}),(0,Zz.jsx)("tbody",{children:uz.rows.map(((zz,uz)=>(0,Zz.jsx)("tr",{children:zz.map(((zz,uz)=>(0,Zz.jsx)("td",{children:(0,Zz.jsx)(ou,{text:zz})},uz)))},uz)))})]})});case"list":return(0,Zz.jsx)(Ob,{items:uz.items,ordered:uz.ordered});case"quote":return(0,Zz.jsx)("aside",{className:iz()("DocsCallout",pb(uz.blocks)),children:(0,Zz.jsx)(Fb,{blocks:uz.blocks})});case"rule":return(0,Zz.jsx)("hr",{className:"DocsRule"})}}function Fb(zz){let{blocks:uz}=zz;return(0,Zz.jsx)(Zz.Fragment,{children:uz.map(((zz,uz)=>(0,Zz.jsx)(db,{block:zz},uz)))})}var Zb=bz(4503),Rb=bz(4509);function Kb(zz){return"blocks"===zz||"items"===zz}const wb=new Map;function Xb(zz){let uz=wb.get(zz);return uz||(uz=function(zz){const uz={entries:[],legend:[],notes:[],examples:[]};let bz=!1;for(const iz of zz.split(/\r?\n/).slice(1)){if(iz.startsWith("#")){const zz=iz.replace(/^# ?/,""),Ez=zz.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Ez?uz.legend.push({code:Ez[1],meaning:Ez[2],usage:Ez[3].trim()}):/^Examples:/.test(zz.trim())?bz=!0:bz&&zz.trim()?uz.examples.push(zz.trim()):zz.trim()&&!/^\s/.test(zz)&&uz.notes.push(zz.trim());continue}const zz=iz.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Ez,nz;zz&&uz.entries.push({name:zz[1],variants:null!==(Ez=null===(nz=zz[2])||void 0===nz?void 0:nz.split(","))&&void 0!==Ez?Ez:[]})}return uz}("blocks"===zz?Zb:Rb),wb.set(zz,uz)),uz}function fb(zz){let{className:uz,value:bz,placeholder:Ez,label:nz,onChange:iz,count:lz,children:Mz}=zz;return(0,Zz.jsxs)("div",{className:uz,children:[(0,Zz.jsx)(Kz,{name:"magnifying-glass"}),(0,Zz.jsx)("input",{type:"search",value:bz,placeholder:Ez,"aria-label":nz,onChange:zz=>{iz(zz.target.value)}}),Mz,lz&&(0,Zz.jsxs)("span",{className:"DocsFilterCount",children:[lz.visible," of ",lz.total]})]})}var sb=bz(1047);function rb(zz){const uz=zz.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return oT?oT[2]:null}function RI(TT){return"paragraph"===TT.kind&&""===TT.text.trim()}function uI(TT){const oT={name:TT.heading.text,description:[],params:[],returns:null};let IT="description";for(const zT of TT.blocks)if(!RI(zT))if("heading"===zT.kind&&/^Parameters:?$/.test(zT.text))IT="params";else if("heading"===zT.kind&&/^Returns:?$/.test(zT.text))IT="returns",oT.returns={type:"",description:[]};else if("params"!==IT||"table"!==zT.kind){if("returns"===IT&&"paragraph"===zT.kind&&""===oT.returns.type){const TT=eI(zT.text);if(null!==TT){oT.returns.type=TT.replaceAll("\\|","|");continue}}"returns"===IT?oT.returns.description.push(zT):oT.description.push(zT)}else for(const[TT,IT,kT]of zT.rows){var iT;oT.params.push({name:TT,type:null!==(iT=eI(IT))&&void 0!==iT?iT:IT,description:null!==kT&&void 0!==kT?kT:""})}return oT}const vI=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function EI(TT){return TT.filter((TT=>!RI(TT)))}const fI=/^[\w][\w .'&!:()-]*$/,CI=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function jI(TT){var oT;if("code"===TT.kind&&"text"===TT.lang){const oT=TT.code.split("\n").map((TT=>TT.trim())).filter(Boolean);return oT.length>0&&oT.every((TT=>fI.test(TT)))?oT.map((TT=>({name:TT}))):null}return"paragraph"===TT.kind&&CI.test(TT.text.trim())?[...TT.text.matchAll(/`([ ^ `]+)` / g)].flatMap((TT => TT[1].split(/,\s*/).map((TT => ({
-                              name: TT.trim()
-                            }))))): "table" === TT.kind && null !== (oT = TT.header[0]) && void 0 !== oT && oT.startsWith("Song") ? TT.rows.map((TT => {
-                              let [oT, IT] = TT;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return uz?uz[2]:null}function ob(zz){return"paragraph"===zz.kind&&""===zz.text.trim()}function Nb(zz){const uz={name:zz.heading.text,description:[],params:[],returns:null};let bz="description";for(const nz of zz.blocks)if(!ob(nz))if("heading"===nz.kind&&/^Parameters:?$/.test(nz.text))bz="params";else if("heading"===nz.kind&&/^Returns:?$/.test(nz.text))bz="returns",uz.returns={type:"",description:[]};else if("params"!==bz||"table"!==nz.kind){if("returns"===bz&&"paragraph"===nz.kind&&""===uz.returns.type){const zz=rb(nz.text);if(null!==zz){uz.returns.type=zz.replaceAll("\\|","|");continue}}"returns"===bz?uz.returns.description.push(nz):uz.description.push(nz)}else for(const[zz,bz,iz]of nz.rows){var Ez;uz.params.push({name:zz,type:null!==(Ez=rb(bz))&&void 0!==Ez?Ez:bz,description:null!==iz&&void 0!==iz?iz:""})}return uz}const vb=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function xb(zz){return zz.filter((zz=>!ob(zz)))}const Jb=/^[\w][\w .'&!:()-]*$/,Ab=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Tb(zz){var uz;if("code"===zz.kind&&"text"===zz.lang){const uz=zz.code.split("\n").map((zz=>zz.trim())).filter(Boolean);return uz.length>0&&uz.every((zz=>Jb.test(zz)))?uz.map((zz=>({name:zz}))):null}return"paragraph"===zz.kind&&Ab.test(zz.text.trim())?[...zz.text.matchAll(/`([ ^ `]+)` / g)].flatMap((zz => zz[1].split(/,\s*/).map((zz => ({
+                              name: zz.trim()
+                            }))))): "table" === zz.kind && null !== (uz = zz.header[0]) && void 0 !== uz && uz.startsWith("Song") ? zz.rows.map((zz => {
+                              let [uz, bz] = zz;
                               return {
-                                name: oT.replace(/`/g, ""),
-                                caption: IT
+                                name: uz.replace(/`/g, ""),
+                                caption: bz
                               }
                             })) : null
                           }
 
-                          function JI(TT) {
-                            const oT = [];
-                            for (const IT of TT) {
-                              const TT = jI(IT),
-                                iT = oT.at(-1),
-                                zT = "table" === IT.kind;
-                              TT ? "names" === (null === iT || void 0 === iT ? void 0 : iT.kind) && iT.isSongs === zT ? iT.names.push(...TT) : oT.push({
+                          function Lb(zz) {
+                            const uz = [];
+                            for (const bz of zz) {
+                              const zz = Tb(bz),
+                                Ez = uz.at(-1),
+                                nz = "table" === bz.kind;
+                              zz ? "names" === (null === Ez || void 0 === Ez ? void 0 : Ez.kind) && Ez.isSongs === nz ? Ez.names.push(...zz) : uz.push({
                                 kind: "names",
-                                names: TT,
-                                isSongs: zT
-                              }) : oT.push({
+                                names: zz,
+                                isSongs: nz
+                              }) : uz.push({
                                 kind: "block",
-                                block: IT
+                                block: bz
                               })
                             }
-                            return oT
+                            return uz
                           }
-                          const UI = {
+                          const Pb = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function aI(TT, oT) {
-                            return `${UI[TT]}-${(0,RT.r)(oT)}`
+                          function Gb(zz, uz) {
+                            return `${Pb[zz]}-${(0,vz.k)(uz)}`
                           }
-                          const YI = new WeakMap;
+                          const ab = new WeakMap;
 
-                          function QI(TT, oT, IT) {
-                            let iT = YI.get(oT);
-                            if (!iT) {
-                              iT = new Map;
-                              const IT = new Set;
-                              for (const zT of (0, RT.s)(oT)) {
-                                const oT = JI(EI(zT.blocks)).map((oT => {
-                                  if ("block" === oT.kind) return oT;
+                          function Vb(zz, uz, bz) {
+                            let Ez = ab.get(uz);
+                            if (!Ez) {
+                              Ez = new Map;
+                              const bz = new Set;
+                              for (const nz of (0, vz.n)(uz)) {
+                                const uz = Lb(xb(nz.blocks)).map((uz => {
+                                  if ("block" === uz.kind) return uz;
                                   return {
                                     kind: "names",
-                                    names: oT.names.map((oT => {
-                                      var iT, kT;
-                                      const WT = aI(TT, oT.name);
-                                      let XT = WT;
-                                      for (let TT = 2; IT.has(XT); TT++) XT = `${WT}-${TT}`;
-                                      return IT.add(XT), {
-                                        ...oT,
-                                        anchor: XT,
-                                        heading: null !== (iT = null === (kT = zT.heading) || void 0 === kT ? void 0 : kT.text) && void 0 !== iT ? iT : ""
+                                    names: uz.names.map((uz => {
+                                      var Ez, iz;
+                                      const lz = Gb(zz, uz.name);
+                                      let Mz = lz;
+                                      for (let zz = 2; bz.has(Mz); zz++) Mz = `${lz}-${zz}`;
+                                      return bz.add(Mz), {
+                                        ...uz,
+                                        anchor: Mz,
+                                        heading: null !== (Ez = null === (iz = nz.heading) || void 0 === iz ? void 0 : iz.text) && void 0 !== Ez ? Ez : ""
                                       }
                                     })),
-                                    isSongs: oT.isSongs
+                                    isSongs: uz.isSongs
                                   }
                                 }));
-                                iT.set(zT.blocks, oT)
+                                Ez.set(nz.blocks, uz)
                               }
-                              YI.set(oT, iT)
+                              ab.set(uz, Ez)
                             }
-                            const zT = iT.get(IT);
-                            if (!zT) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return zT
+                            const nz = Ez.get(bz);
+                            if (!nz) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return nz
                           }
-                          const OI = "/textures/docs/skinPreviews",
-                            HI = [{
+                          const mb = "/textures/docs/skinPreviews",
+                            qb = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var nI = IT(3795),
-                            qI = IT(3811);
+                          var hb = bz(4018),
+                            Ub = bz(4035);
 
-                          function ZI(TT) {
-                            return Object.hasOwn(nI.i, TT) ? nI.i[TT] : null
+                          function cb(zz) {
+                            return Object.hasOwn(hb.e, zz) ? hb.e[zz] : null
                           }
-                          const lI = {
+                          const gb = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: qI.h.Standard
+                            blendMode: Ub.d.Standard
                           };
 
-                          function sI(TT, oT, IT) {
-                            return oT + (IT - oT) * TT()
+                          function Sb(zz, uz, bz) {
+                            return uz + (bz - uz) * zz()
                           }
 
-                          function tI(TT, oT, IT) {
-                            return TT + (oT - TT) * IT
+                          function yb(zz, uz, bz) {
+                            return zz + (uz - zz) * bz
                           }
 
-                          function GI(TT) {
-                            return TT.length > 0 && "timeFraction" in TT[0]
+                          function Db(zz) {
+                            return zz.length > 0 && "timeFraction" in zz[0]
                           }
 
-                          function pI(TT, oT) {
-                            if (0 === TT.colorGradients.length) return [{
+                          function Qb(zz, uz) {
+                            if (0 === zz.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!GI(TT.colorGradients)) {
-                              const IT = TT.colorGradients,
+                            if (!Db(zz.colorGradients)) {
+                              const bz = zz.colorGradients,
                                 {
-                                  color: iT
-                                } = IT[Math.floor(oT() * IT.length) % IT.length];
+                                  color: Ez
+                                } = bz[Math.floor(uz() * bz.length) % bz.length];
                               return [{
                                 at: 0,
-                                colour: [iT[0] / 255, iT[1] / 255, iT[2] / 255, 1]
+                                colour: [Ez[0] / 255, Ez[1] / 255, Ez[2] / 255, 1]
                               }]
                             }
-                            return [...TT.colorGradients].sort(((TT, oT) => TT.timeFraction - oT.timeFraction)).map((TT => {
-                              var IT, iT, zT;
-                              const kT = TT.minColor,
-                                WT = null !== (IT = TT.maxColor) && void 0 !== IT ? IT : kT,
-                                XT = oT(),
-                                BT = [tI(kT[0], WT[0], XT) / 255, tI(kT[1], WT[1], XT) / 255, tI(kT[2], WT[2], XT) / 255, tI(null !== (iT = kT[3]) && void 0 !== iT ? iT : 1, null !== (zT = WT[3]) && void 0 !== zT ? zT : 1, XT)];
+                            return [...zz.colorGradients].sort(((zz, uz) => zz.timeFraction - uz.timeFraction)).map((zz => {
+                              var bz, Ez, nz;
+                              const iz = zz.minColor,
+                                lz = null !== (bz = zz.maxColor) && void 0 !== bz ? bz : iz,
+                                Mz = uz(),
+                                tz = [yb(iz[0], lz[0], Mz) / 255, yb(iz[1], lz[1], Mz) / 255, yb(iz[2], lz[2], Mz) / 255, yb(null !== (Ez = iz[3]) && void 0 !== Ez ? Ez : 1, null !== (nz = lz[3]) && void 0 !== nz ? nz : 1, Mz)];
                               return {
-                                at: TT.timeFraction,
-                                colour: BT
+                                at: zz.timeFraction,
+                                colour: tz
                               }
                             }))
                           }
 
-                          function bI(TT, oT, IT, iT) {
-                            const zT = sI(iT, TT.minEmitPower, TT.maxEmitPower),
-                              kT = oT => sI(iT, Math.min(TT.dir1[oT], TT.dir2[oT]), Math.max(TT.dir1[oT], TT.dir2[oT])) * zT,
-                              WT = [...TT.velocityGradients].sort(((TT, oT) => TT.timeFraction - oT.timeFraction)).map((TT => ({
-                                at: TT.timeFraction,
-                                factor: sI(iT, TT.factor, TT.factor2)
+                          function Wb(zz, uz, bz, Ez) {
+                            const nz = Sb(Ez, zz.minEmitPower, zz.maxEmitPower),
+                              iz = uz => Sb(Ez, Math.min(zz.dir1[uz], zz.dir2[uz]), Math.max(zz.dir1[uz], zz.dir2[uz])) * nz,
+                              lz = [...zz.velocityGradients].sort(((zz, uz) => zz.timeFraction - uz.timeFraction)).map((zz => ({
+                                at: zz.timeFraction,
+                                factor: Sb(Ez, zz.factor, zz.factor2)
                               })));
                             return {
-                              pos: [sI(iT, oT[0], IT[0]), sI(iT, oT[1], IT[1]), sI(iT, oT[2], IT[2])],
-                              dir: [kT(0), kT(1), kT(2)],
+                              pos: [Sb(Ez, uz[0], bz[0]), Sb(Ez, uz[1], bz[1]), Sb(Ez, uz[2], bz[2])],
+                              dir: [iz(0), iz(1), iz(2)],
                               age: 0,
-                              life: sI(iT, TT.minLifeTime, TT.maxLifeTime),
-                              size: sI(iT, TT.minSize, TT.maxSize),
-                              colours: pI(TT, iT),
-                              velocityFactors: WT
+                              life: Sb(Ez, zz.minLifeTime, zz.maxLifeTime),
+                              size: Sb(Ez, zz.minSize, zz.maxSize),
+                              colours: Qb(zz, Ez),
+                              velocityFactors: lz
                             }
                           }
 
-                          function yI(TT, oT, IT, iT) {
-                            if (oT < TT[0].at) return IT(Math.min(1, TT.length - 1));
-                            for (let zT = 0; zT < TT.length - 1; zT++)
-                              if (oT <= TT[zT + 1].at) {
-                                const kT = TT[zT + 1].at - TT[zT].at;
-                                return iT(IT(zT), IT(zT + 1), kT > 0 ? (oT - TT[zT].at) / kT : 1)
-                              } return IT(TT.length - 1)
+                          function eb(zz, uz, bz, Ez) {
+                            if (uz < zz[0].at) return bz(Math.min(1, zz.length - 1));
+                            for (let nz = 0; nz < zz.length - 1; nz++)
+                              if (uz <= zz[nz + 1].at) {
+                                const iz = zz[nz + 1].at - zz[nz].at;
+                                return Ez(bz(nz), bz(nz + 1), iz > 0 ? (uz - zz[nz].at) / iz : 1)
+                              } return bz(zz.length - 1)
                           }
 
-                          function NI(TT) {
-                            return yI(TT.colours, TT.age / TT.life, (oT => TT.colours[oT].colour), ((TT, oT, IT) => [tI(TT[0], oT[0], IT), tI(TT[1], oT[1], IT), tI(TT[2], oT[2], IT), tI(TT[3], oT[3], IT)]))
+                          function jb(zz) {
+                            return eb(zz.colours, zz.age / zz.life, (uz => zz.colours[uz].colour), ((zz, uz, bz) => [yb(zz[0], uz[0], bz), yb(zz[1], uz[1], bz), yb(zz[2], uz[2], bz), yb(zz[3], uz[3], bz)]))
                           }
 
-                          function PI(TT, oT, IT) {
-                            if (TT.age += IT, TT.age >= TT.life) return !1;
-                            const iT = function(TT) {
-                              return 0 === TT.velocityFactors.length ? 1 : yI(TT.velocityFactors, TT.age / TT.life, (oT => TT.velocityFactors[oT].factor), tI)
-                            }(TT) * IT;
-                            for (let kT = 0; kT < 3; kT++) {
-                              var zT;
-                              TT.pos[kT] += TT.dir[kT] * iT, TT.dir[kT] += (null !== (zT = oT[kT]) && void 0 !== zT ? zT : 0) * IT
+                          function Ib(zz, uz, bz) {
+                            if (zz.age += bz, zz.age >= zz.life) return !1;
+                            const Ez = function(zz) {
+                              return 0 === zz.velocityFactors.length ? 1 : eb(zz.velocityFactors, zz.age / zz.life, (uz => zz.velocityFactors[uz].factor), yb)
+                            }(zz) * bz;
+                            for (let iz = 0; iz < 3; iz++) {
+                              var nz;
+                              zz.pos[iz] += zz.dir[iz] * Ez, zz.dir[iz] += (null !== (nz = uz[iz]) && void 0 !== nz ? nz : 0) * bz
                             }
                             return !0
                           }
 
-                          function dI(TT) {
-                            return String(Math.round(1e6 * TT) / 1e6)
+                          function Bb(zz) {
+                            return String(Math.round(1e6 * zz) / 1e6)
                           }
 
-                          function VI(TT) {
-                            return `[${TT.map(dI).join(", ")}]`
+                          function Cb(zz) {
+                            return `[${zz.map(Bb).join(", ")}]`
                           }
 
-                          function Ti(TT, oT) {
-                            const IT = `${oT}    `;
-                            return `[\n${(GI(TT)?TT.map((TT=>{const oT=[`${IT}    timeFraction: ${dI(TT.timeFraction)},`,`${IT}    minColor: ${VI(TT.minColor)},`];return TT.maxColor&&oT.push(`${IT}    maxColor: ${VI(TT.maxColor)},`),`${IT}{\n${oT.join("\n")}\n${IT}},`})):TT.map((TT=>`
+                          function Yb(zz, uz) {
+                            const bz = `${uz}    `;
+                            return `[\n${(Db(zz)?zz.map((zz=>{const uz=[`${bz}    timeFraction: ${Bb(zz.timeFraction)},`,`${bz}    minColor: ${Cb(zz.minColor)},`];return zz.maxColor&&uz.push(`${bz}    maxColor: ${Cb(zz.maxColor)},`),`${bz}{\n${uz.join("\n")}\n${bz}},`})):zz.map((zz=>`
                             $ {
-                              IT
+                              bz
                             } {
                               color: $ {
-                                VI(TT.color)
+                                Cb(zz.color)
                               }
-                            }, `))).join("\n")}\n${oT}]`
+                            }, `))).join("\n")}\n${uz}]`
                           }
-                          const oi = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            Ii = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const ii = .6;
+                          const kb = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            zE = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const uE = .6;
 
-                          function zi(TT, oT) {
-                            return `${oT?"song":"sound"}:${TT}`
+                          function bE(zz, uz) {
+                            return `${uz?"song":"sound"}:${zz}`
                           }
-                          let ki = {
+                          let EE = {
                               track: null,
-                              volume: ii
+                              volume: uE
                             },
-                            Wi = null,
-                            Xi = 0,
-                            Bi = 0;
-                          const Fi = new Set;
+                            nE = null,
+                            iE = 0,
+                            lE = 0;
+                          const ME = new Set;
 
-                          function Si(TT) {
-                            ki = {
-                              ...ki,
-                              ...TT
-                            }, Fi.forEach((TT => {
-                              TT()
+                          function tE(zz) {
+                            EE = {
+                              ...EE,
+                              ...zz
+                            }, ME.forEach((zz => {
+                              zz()
                             }))
                           }
 
-                          function Di(TT) {
-                            ki.track && Si({
+                          function HE(zz) {
+                            EE.track && tE({
                               track: {
-                                ...ki.track,
-                                ...TT
+                                ...EE.track,
+                                ...zz
                               }
                             })
                           }
 
-                          function Li(TT) {
-                            const [oT, IT] = (0, iT.useState)((() => TT(ki))), zT = (0, iT.useRef)(TT);
-                            return zT.current = TT, (0, iT.useEffect)((() => {
-                              const TT = () => {
-                                IT((() => zT.current(ki)))
+                          function OE(zz) {
+                            const [uz, bz] = (0, Ez.useState)((() => zz(EE))), nz = (0, Ez.useRef)(zz);
+                            return nz.current = zz, (0, Ez.useEffect)((() => {
+                              const zz = () => {
+                                bz((() => nz.current(EE)))
                               };
-                              return Fi.add(TT), TT(), () => {
-                                Fi.delete(TT)
+                              return ME.add(zz), zz(), () => {
+                                ME.delete(zz)
                               }
-                            }), []), oT
+                            }), []), uz
                           }
 
-                          function xi() {
-                            Xi++;
-                            const TT = Wi;
-                            Wi = null, null === TT || void 0 === TT || TT.stop()
+                          function pE() {
+                            iE++;
+                            const zz = nE;
+                            nE = null, null === zz || void 0 === zz || zz.stop()
                           }
 
-                          function ci(TT, oT) {
-                            let iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            xi();
-                            const zT = Xi,
+                          function dE(zz, uz) {
+                            let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            pE();
+                            const nz = iE,
                               {
-                                track: kT
-                              } = ki,
-                              WT = kT && kT.name === TT && kT.isSong === oT ? kT.duration : 0;
-                            Bi = iT, Si({
+                                track: iz
+                              } = EE,
+                              lz = iz && iz.name === zz && iz.isSong === uz ? iz.duration : 0;
+                            lE = Ez, tE({
                               track: {
-                                name: TT,
-                                isSong: oT,
+                                name: zz,
+                                isSong: uz,
                                 status: "loading",
-                                duration: WT
+                                duration: lz
                               }
-                            }), Promise.all([IT.e(210), IT.e(238)]).then((() => IT(38577))).then((IT => {
+                            }), Promise.all([bz.e(215), bz.e(239)]).then((() => bz(38987))).then((bz => {
                               let {
-                                playDocsSound: kT
-                              } = IT;
-                              zT === Xi && (Wi = kT(TT, oT, ki.volume, iT, {
-                                onPlay: TT => {
-                                  zT === Xi && Di({
+                                playDocsSound: iz
+                              } = bz;
+                              nz === iE && (nE = iz(zz, uz, EE.volume, Ez, {
+                                onPlay: zz => {
+                                  nz === iE && HE({
                                     status: "playing",
-                                    duration: TT
+                                    duration: zz
                                   })
                                 },
-                                onEnd: TT => {
-                                  var oT, IT;
-                                  zT === Xi && (Wi = null, TT ? Si({
+                                onEnd: zz => {
+                                  var uz, bz;
+                                  nz === iE && (nE = null, zz ? tE({
                                     track: null
-                                  }) : (Bi = null !== (oT = null === (IT = ki.track) || void 0 === IT ? void 0 : IT.duration) && void 0 !== oT ? oT : 0, Di({
+                                  }) : (lE = null !== (uz = null === (bz = EE.track) || void 0 === bz ? void 0 : bz.duration) && void 0 !== uz ? uz : 0, HE({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((oT => {
-                              console.error(`Could not play docs sound ${TT}`, oT), zT === Xi && Si({
+                            })).catch((uz => {
+                              console.error(`Could not play docs sound ${zz}`, uz), nz === iE && tE({
                                 track: null
                               })
                             }))
                           }
 
-                          function Ki() {
+                          function FE() {
                             const {
-                              track: TT
-                            } = ki;
-                            if (!TT) return;
-                            if ("playing" === TT.status && Wi) return Bi = Wi.Wm(), Wi.pause(), void Di({
+                              track: zz
+                            } = EE;
+                            if (!zz) return;
+                            if ("playing" === zz.status && nE) return lE = nE.Gs(), nE.pause(), void HE({
                               status: "paused"
                             });
-                            if ("loading" === TT.status) return xi(), void Di({
+                            if ("loading" === zz.status) return pE(), void HE({
                               status: "paused"
                             });
-                            if (Wi) return void Wi.resume();
-                            const oT = TT.duration > 0 && Bi >= TT.duration - .05;
-                            ci(TT.name, TT.isSong, oT ? 0 : Bi)
+                            if (nE) return void nE.resume();
+                            const uz = zz.duration > 0 && lE >= zz.duration - .05;
+                            dE(zz.name, zz.isSong, uz ? 0 : lE)
                           }
 
-                          function Mi() {
-                            var TT;
-                            return Wi && "playing" === (null === (TT = ki.track) || void 0 === TT ? void 0 : TT.status) ? Wi.Wm() : Bi
+                          function ZE() {
+                            var zz;
+                            return nE && "playing" === (null === (zz = EE.track) || void 0 === zz ? void 0 : zz.status) ? nE.Gs() : lE
                           }
 
-                          function ri(TT) {
-                            var oT;
-                            null === (oT = Wi) || void 0 === oT || oT.setVolume(TT), Si({
-                              volume: TT
+                          function RE(zz) {
+                            var uz;
+                            null === (uz = nE) || void 0 === uz || uz.setVolume(zz), tE({
+                              volume: zz
                             })
                           }
 
-                          function Ai() {
-                            xi(), Bi = 0, Si({
+                          function KE() {
+                            pE(), lE = 0, tE({
                               track: null
                             })
                           }
-                          const gi = (0, iT.createContext)(null);
-                          let wi = null;
+                          const wE = (0, Ez.createContext)(null);
+                          let XE = null;
 
-                          function mi() {
-                            const [TT, oT] = (0, iT.useState)(null);
-                            return (0, iT.useEffect)((() => {
-                              let TT = !1;
-                              return wi ??= Promise.all([IT.e(69), IT.e(72), IT.e(71), IT.e(70), IT.e(194), IT.e(97), IT.e(216)]).then((() => IT(38572))), wi.then((IT => {
-                                TT || oT(IT)
-                              }), (TT => {
-                                console.error("Could not load the docs gallery's textures", TT), wi = null
+                          function fE() {
+                            const [zz, uz] = (0, Ez.useState)(null);
+                            return (0, Ez.useEffect)((() => {
+                              let zz = !1;
+                              return XE ??= Promise.all([bz.e(69), bz.e(72), bz.e(71), bz.e(70), bz.e(196), bz.e(96), bz.e(220)]).then((() => bz(38983))), XE.then((bz => {
+                                zz || uz(bz)
+                              }), (zz => {
+                                console.error("Could not load the docs gallery's textures", zz), XE = null
                               })), () => {
-                                TT = !0
+                                zz = !0
                               }
-                            }), []), TT
+                            }), []), zz
                           }
-                          const ei = 24,
-                            Ri = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const sE = 24,
+                            rE = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function ui(TT, oT) {
-                            const IT = "skins" === TT ? function(TT, oT) {
-                              const IT = HI.find((oT => TT.startsWith(oT.heading)));
-                              return IT ? function(TT, oT) {
-                                return `${TT}-${oT}`
-                              }(IT.prefix, oT) : null
-                            }(oT.heading, oT.name) : null;
-                            return null === IT ? null : `${OI}/${IT}.webp`
+                          function oE(zz, uz) {
+                            const bz = "skins" === zz ? function(zz, uz) {
+                              const bz = qb.find((uz => zz.startsWith(uz.heading)));
+                              return bz ? function(zz, uz) {
+                                return `${zz}-${uz}`
+                              }(bz.prefix, uz) : null
+                            }(uz.heading, uz.name) : null;
+                            return null === bz ? null : `${mb}/${bz}.webp`
                           }
 
-                          function vi(TT) {
+                          function NE(zz) {
                             let {
-                              kind: oT,
-                              entry: IT,
-                              assets: zT,
-                              renderedUrl: WT
-                            } = TT;
+                              kind: uz,
+                              entry: bz,
+                              assets: nz,
+                              renderedUrl: lz
+                            } = zz;
                             const {
-                              name: XT
-                            } = IT, [BT, FT] = (0, iT.useState)(!1);
-                            if ("icons" === oT && no(XT)) return (0, cT.jsx)(mI.e, {
+                              name: Mz
+                            } = bz, [tz, Hz] = (0, Ez.useState)(!1);
+                            if ("icons" === uz && cu(Mz)) return (0, Zz.jsx)(sb.c, {
                               className: "DocsTileIcon",
-                              name: XT
+                              name: Mz
                             });
-                            let ST = null;
-                            var DT;
-                            if ("icons" === oT) ST = null !== (DT = null === zT || void 0 === zT ? void 0 : zT.getIngameIconUrl(XT)) && void 0 !== DT ? DT : null;
-                            else if ("particles" === oT) {
-                              var LT, xT, KT;
-                              ST = null !== (LT = null === zT || void 0 === zT ? void 0 : zT.getParticleTextureUrl(null !== (xT = null === (KT = ZI(XT)) || void 0 === KT ? void 0 : KT.texture) && void 0 !== xT ? xT : XT)) && void 0 !== LT ? LT : null
-                            } else "skins" === oT && (ST = null !== WT && void 0 !== WT ? WT : Ri.test(XT) ? `/textures/charSkins/previews/${XT}_preview.png` : null);
-                            return !ST || BT ? (0, cT.jsx)(MT, {
+                            let Oz = null;
+                            var pz;
+                            if ("icons" === uz) Oz = null !== (pz = null === nz || void 0 === nz ? void 0 : nz.getIngameIconUrl(Mz)) && void 0 !== pz ? pz : null;
+                            else if ("particles" === uz) {
+                              var dz, Fz, Rz;
+                              Oz = null !== (dz = null === nz || void 0 === nz ? void 0 : nz.getParticleTextureUrl(null !== (Fz = null === (Rz = cb(Mz)) || void 0 === Rz ? void 0 : Rz.texture) && void 0 !== Fz ? Fz : Mz)) && void 0 !== dz ? dz : null
+                            } else "skins" === uz && (Oz = null !== lz && void 0 !== lz ? lz : rE.test(Mz) ? `/textures/charSkins/previews/${Mz}_preview.png` : null);
+                            return !Oz || tz ? (0, Zz.jsx)(Kz, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === oT ? "person" : "image"
-                            }) : (0, cT.jsx)("img", {
-                              className: kT()("DocsTileImage", {
-                                Pixelated: "skins" !== oT
+                              name: "skins" === uz ? "person" : "image"
+                            }) : (0, Zz.jsx)("img", {
+                              className: iz()("DocsTileImage", {
+                                Pixelated: "skins" !== uz
                               }),
-                              src: ST,
-                              srcSet: ST === WT ? `${ST} 2x` : void 0,
+                              src: Oz,
+                              srcSet: Oz === lz ? `${Oz} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${ST}`), FT(!0)
+                                console.warn(`Docs gallery: could not load ${Oz}`), Hz(!0)
                               }
                             })
                           }
 
-                          function Ei(TT) {
+                          function vE(zz) {
                             let {
-                              entry: oT,
-                              isSong: IT
-                            } = TT;
-                            const iT = Li((TT => {
+                              entry: uz,
+                              isSong: bz
+                            } = zz;
+                            const Ez = OE((zz => {
                                 let {
-                                  track: iT
-                                } = TT;
-                                return (null === iT || void 0 === iT ? void 0 : iT.name) === oT.name && iT.isSong === IT ? iT.status : null
+                                  track: Ez
+                                } = zz;
+                                return (null === Ez || void 0 === Ez ? void 0 : Ez.name) === uz.name && Ez.isSong === bz ? Ez.status : null
                               })),
-                              zT = null !== iT && "paused" !== iT;
-                            return (0, cT.jsxs)("button", {
+                              nz = null !== Ez && "paused" !== Ez;
+                            return (0, Zz.jsxs)("button", {
                               type: "button",
-                              id: oT.anchor,
-                              className: kT()("DocsSoundTile", {
-                                Playing: zT
+                              id: uz.anchor,
+                              className: iz()("DocsSoundTile", {
+                                Playing: nz
                               }),
-                              "data-docs-track": zi(oT.name, IT),
-                              "aria-label": zT ? `Pause ${oT.name}` : `Play ${oT.name}`,
+                              "data-docs-track": bE(uz.name, bz),
+                              "aria-label": nz ? `Pause ${uz.name}` : `Play ${uz.name}`,
                               onClick: () => {
-                                null !== iT ? Ki() : ci(oT.name, IT)
+                                null !== Ez ? FE() : dE(uz.name, bz)
                               },
-                              children: [(0, cT.jsx)("span", {
+                              children: [(0, Zz.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, cT.jsx)(MT, {
-                                  name: zT ? "pause" : "play"
+                                children: (0, Zz.jsx)(Kz, {
+                                  name: nz ? "pause" : "play"
                                 })
-                              }), (0, cT.jsx)("code", {
+                              }), (0, Zz.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: oT.name
-                              }), oT.caption && (0, cT.jsx)("span", {
+                                children: uz.name
+                              }), uz.caption && (0, Zz.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: oT.caption
+                                children: uz.caption
                               })]
                             })
                           }
 
-                          function fi(TT) {
+                          function xE(zz) {
                             let {
-                              kind: oT,
-                              names: IT,
-                              isSongs: zT
-                            } = TT;
-                            const WT = mi(),
-                              [XT, BT] = AT(),
-                              FT = !1 === (null === XT || void 0 === XT ? void 0 : XT.failed) ? XT.text : null,
-                              ST = (0, iT.useContext)(gi),
-                              [DT, LT] = (0, iT.useState)(""),
-                              xT = DT.trim().toLowerCase(),
-                              KT = xT ? IT.filter((TT => TT.name.toLowerCase().includes(xT))) : IT;
-                            return (0, cT.jsxs)("div", {
+                              kind: uz,
+                              names: bz,
+                              isSongs: nz
+                            } = zz;
+                            const lz = fE(),
+                              [Mz, tz] = Xz(),
+                              Hz = !1 === (null === Mz || void 0 === Mz ? void 0 : Mz.failed) ? Mz.text : null,
+                              Oz = (0, Ez.useContext)(wE),
+                              [pz, dz] = (0, Ez.useState)(""),
+                              Fz = pz.trim().toLowerCase(),
+                              Rz = Fz ? bz.filter((zz => zz.name.toLowerCase().includes(Fz))) : bz;
+                            return (0, Zz.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [IT.length > ei && (0, cT.jsx)(wI, {
+                              children: [bz.length > sE && (0, Zz.jsx)(fb, {
                                 className: "DocsGalleryFilter",
-                                value: DT,
-                                placeholder: `Filter ${IT.length} names\u2026`,
+                                value: pz,
+                                placeholder: `Filter ${bz.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: LT,
-                                count: xT ? {
-                                  visible: KT.length,
-                                  total: IT.length
+                                onChange: dz,
+                                count: Fz ? {
+                                  visible: Rz.length,
+                                  total: bz.length
                                 } : null
-                              }), (0, cT.jsx)("div", {
-                                className: kT()("DocsGalleryGrid", `Kind-${oT}`, {
-                                  Songs: zT
+                              }), (0, Zz.jsx)("div", {
+                                className: iz()("DocsGalleryGrid", `Kind-${uz}`, {
+                                  Songs: nz
                                 }),
-                                children: KT.map((TT => {
-                                  if ("sounds" === oT) return (0, cT.jsx)(Ei, {
-                                    entry: TT,
-                                    isSong: zT
-                                  }, TT.anchor);
-                                  if (ST && "particles" === oT && ZI(TT.name)) return (0, cT.jsxs)("button", {
+                                children: Rz.map((zz => {
+                                  if ("sounds" === uz) return (0, Zz.jsx)(vE, {
+                                    entry: zz,
+                                    isSong: nz
+                                  }, zz.anchor);
+                                  if (Oz && "particles" === uz && cb(zz.name)) return (0, Zz.jsxs)("button", {
                                     type: "button",
-                                    id: TT.anchor,
-                                    className: kT()("DocsTile Previewable", {
-                                      Copied: FT === TT.name
+                                    id: zz.anchor,
+                                    className: iz()("DocsTile Previewable", {
+                                      Copied: Hz === zz.name
                                     }),
-                                    title: `Play "${TT.name}" in the playground and copy its name`,
+                                    title: `Play "${zz.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      ST(TT.name), BT(TT.name)
+                                      Oz(zz.name), tz(zz.name)
                                     },
-                                    children: [(0, cT.jsxs)("span", {
+                                    children: [(0, Zz.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, cT.jsx)(vi, {
-                                        kind: oT,
-                                        entry: TT,
-                                        assets: WT,
+                                      children: [(0, Zz.jsx)(NE, {
+                                        kind: uz,
+                                        entry: zz,
+                                        assets: lz,
                                         renderedUrl: null
-                                      }), (0, cT.jsx)("span", {
+                                      }), (0, Zz.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, cT.jsx)(MT, {
+                                        children: (0, Zz.jsx)(Kz, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, cT.jsx)("span", {
+                                    }), (0, Zz.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: FT === TT.name ? "Copied!" : TT.name
+                                      children: Hz === zz.name ? "Copied!" : zz.name
                                     })]
-                                  }, TT.anchor);
-                                  const IT = ui(oT, TT);
-                                  return (0, cT.jsxs)("button", {
+                                  }, zz.anchor);
+                                  const bz = oE(uz, zz);
+                                  return (0, Zz.jsxs)("button", {
                                     type: "button",
-                                    id: TT.anchor,
-                                    className: kT()("DocsTile", {
-                                      Copied: FT === TT.name
+                                    id: zz.anchor,
+                                    className: iz()("DocsTile", {
+                                      Copied: Hz === zz.name
                                     }),
-                                    title: `Copy "${TT.name}"`,
+                                    title: `Copy "${zz.name}"`,
                                     onClick: () => {
-                                      BT(TT.name)
+                                      tz(zz.name)
                                     },
-                                    children: [(0, cT.jsx)("span", {
-                                      className: kT()("DocsTilePreview", {
-                                        Rendered: null !== IT
+                                    children: [(0, Zz.jsx)("span", {
+                                      className: iz()("DocsTilePreview", {
+                                        Rendered: null !== bz
                                       }),
-                                      children: (0, cT.jsx)(vi, {
-                                        kind: oT,
-                                        entry: TT,
-                                        assets: WT,
-                                        renderedUrl: IT
+                                      children: (0, Zz.jsx)(NE, {
+                                        kind: uz,
+                                        entry: zz,
+                                        assets: lz,
+                                        renderedUrl: bz
                                       })
-                                    }), (0, cT.jsx)("span", {
+                                    }), (0, Zz.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: FT === TT.name ? "Copied!" : TT.name
+                                      children: Hz === zz.name ? "Copied!" : zz.name
                                     })]
-                                  }, TT.anchor)
+                                  }, zz.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function Ci(TT) {
+                          function JE(zz) {
                             let {
-                              kind: oT,
-                              content: IT,
-                              blocks: iT
-                            } = TT;
-                            return (0, cT.jsx)(cT.Fragment, {
-                              children: QI(oT, IT, iT).map(((TT, IT) => "block" === TT.kind ? (0, cT.jsx)(cI, {
-                                block: TT.block
-                              }, IT) : (0, cT.jsx)(fi, {
-                                kind: oT,
-                                names: TT.names,
-                                isSongs: TT.isSongs
-                              }, IT)))
+                              kind: uz,
+                              content: bz,
+                              blocks: Ez
+                            } = zz;
+                            return (0, Zz.jsx)(Zz.Fragment, {
+                              children: Vb(uz, bz, Ez).map(((zz, bz) => "block" === zz.kind ? (0, Zz.jsx)(db, {
+                                block: zz.block
+                              }, bz) : (0, Zz.jsx)(xE, {
+                                kind: uz,
+                                names: zz.names,
+                                isSongs: zz.isSongs
+                              }, bz)))
                             })
                           }
-                          const ji = [{
+                          const AE = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,420 +2161,420 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function Ji(TT) {
+                          function TE(zz) {
                             let {
-                              cards: oT = ji,
-                              label: IT = "Start here"
-                            } = TT;
-                            const zT = (0, iT.useContext)(xo);
-                            return (0, cT.jsx)("nav", {
+                              cards: uz = AE,
+                              label: bz = "Start here"
+                            } = zz;
+                            const nz = (0, Ez.useContext)(Fu);
+                            return (0, Zz.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": IT,
-                              children: oT.map((TT => {
+                              "aria-label": bz,
+                              children: uz.map((zz => {
                                 let {
-                                  pageId: oT,
-                                  countNoun: IT
-                                } = TT;
-                                const iT = HT(oT);
-                                return (0, cT.jsxs)(WT.b, {
-                                  to: tT(zT, iT),
+                                  pageId: uz,
+                                  countNoun: bz
+                                } = zz;
+                                const Ez = Uz(uz);
+                                return (0, Zz.jsxs)(lz.e, {
+                                  to: Qz(nz, Ez),
                                   className: "DocsLandingCard",
-                                  children: [(0, cT.jsx)("span", {
+                                  children: [(0, Zz.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, cT.jsx)(MT, {
-                                      name: iT.icon
+                                    children: (0, Zz.jsx)(Kz, {
+                                      name: Ez.icon
                                     })
-                                  }), (0, cT.jsx)("span", {
+                                  }), (0, Zz.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: iT.title
-                                  }), (0, cT.jsx)("span", {
+                                    children: Ez.title
+                                  }), (0, Zz.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: iT.summary
-                                  }), IT && (0, cT.jsxs)("span", {
+                                    children: Ez.summary
+                                  }), bz && (0, Zz.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [qT(iT).sections.length, " ", IT]
+                                    children: [gz(Ez).sections.length, " ", bz]
                                   })]
-                                }, oT)
+                                }, uz)
                               }))
                             })
                           }
-                          const Ui = 240;
+                          const LE = 240;
 
-                          function ai(TT) {
+                          function PE(zz) {
                             let {
-                              faces: oT
-                            } = TT;
-                            return (0, cT.jsxs)("span", {
+                              faces: uz
+                            } = zz;
+                            return (0, Zz.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, cT.jsx)("span", {
+                              children: [(0, Zz.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${oT.top}")`
+                                  backgroundImage: `url("${uz.top}")`
                                 }
-                              }), (0, cT.jsx)("span", {
+                              }), (0, Zz.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${oT.left}")`
+                                  backgroundImage: `url("${uz.left}")`
                                 }
-                              }), (0, cT.jsx)("span", {
+                              }), (0, Zz.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${oT.right}")`
+                                  backgroundImage: `url("${uz.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function Yi(TT) {
+                          function GE(zz) {
                             let {
-                              src: oT
-                            } = TT;
-                            const [IT, zT] = (0, iT.useState)(!1);
-                            return IT ? null : (0, cT.jsx)("img", {
-                              src: oT,
+                              src: uz
+                            } = zz;
+                            const [bz, nz] = (0, Ez.useState)(!1);
+                            return bz ? null : (0, Zz.jsx)("img", {
+                              src: uz,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${oT}`), zT(!0)
+                                console.warn(`Docs catalogue: could not load ${uz}`), nz(!0)
                               }
                             })
                           }
 
-                          function Qi(TT) {
+                          function aE(zz) {
                             let {
-                              kind: oT
-                            } = TT;
-                            const IT = hI(oT),
-                              zT = mi(),
-                              WT = (0, XT.t)(),
-                              [BT, FT] = (0, iT.useState)(""),
-                              [ST, DT] = (0, iT.useState)(null),
-                              [LT, xT] = (0, iT.useState)(Ui),
-                              [KT, rT] = (0, iT.useState)(null),
-                              AT = (0, iT.useRef)(null),
-                              hT = BT.trim().toLowerCase();
-                            (0, iT.useEffect)((() => {
-                              const TT = (0, RT.p)(WT.hash),
-                                iT = IT.entries.find((IT => aI(oT, IT.name) === TT));
-                              if (iT) AT.current = iT.name, FT(iT.name), DT(null), rT(iT.name);
-                              else if (null !== AT.current) {
-                                const TT = AT.current;
-                                AT.current = null, FT((oT => oT === TT ? "" : oT)), rT(null)
+                              kind: uz
+                            } = zz;
+                            const bz = Xb(uz),
+                              nz = fE(),
+                              lz = (0, Mz.v)(),
+                              [tz, Hz] = (0, Ez.useState)(""),
+                              [Oz, pz] = (0, Ez.useState)(null),
+                              [dz, Fz] = (0, Ez.useState)(LE),
+                              [Rz, wz] = (0, Ez.useState)(null),
+                              Xz = (0, Ez.useRef)(null),
+                              sz = tz.trim().toLowerCase();
+                            (0, Ez.useEffect)((() => {
+                              const zz = (0, vz.h)(lz.hash),
+                                Ez = bz.entries.find((bz => Gb(uz, bz.name) === zz));
+                              if (Ez) Xz.current = Ez.name, Hz(Ez.name), pz(null), wz(Ez.name);
+                              else if (null !== Xz.current) {
+                                const zz = Xz.current;
+                                Xz.current = null, Hz((uz => uz === zz ? "" : uz)), wz(null)
                               }
-                            }), [IT, oT, WT.hash, WT.key]), (0, iT.useEffect)((() => {
-                              var TT;
-                              null !== KT && (null === (TT = document.getElementById(aI(oT, KT))) || void 0 === TT || TT.scrollIntoView({
+                            }), [bz, uz, lz.hash, lz.key]), (0, Ez.useEffect)((() => {
+                              var zz;
+                              null !== Rz && (null === (zz = document.getElementById(Gb(uz, Rz))) || void 0 === zz || zz.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [oT, KT]);
-                            const wT = IT.entries.filter((TT => (!hT || TT.name.toLowerCase().includes(hT)) && (!ST || TT.variants.includes(ST))));
-                            return (0, cT.jsxs)("div", {
+                            }), [uz, Rz]);
+                            const rz = bz.entries.filter((zz => (!sz || zz.name.toLowerCase().includes(sz)) && (!Oz || zz.variants.includes(Oz))));
+                            return (0, Zz.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [IT.notes.length > 0 && (0, cT.jsx)("div", {
+                              children: [bz.notes.length > 0 && (0, Zz.jsx)("div", {
                                 className: "DocsProse",
-                                children: IT.notes.map((TT => (0, cT.jsx)("p", {
-                                  children: TT
-                                }, TT)))
-                              }), IT.legend.length > 0 && (0, cT.jsx)("div", {
+                                children: bz.notes.map((zz => (0, Zz.jsx)("p", {
+                                  children: zz
+                                }, zz)))
+                              }), bz.legend.length > 0 && (0, Zz.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, cT.jsxs)("table", {
+                                children: (0, Zz.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, cT.jsx)("thead", {
-                                    children: (0, cT.jsxs)("tr", {
-                                      children: [(0, cT.jsx)("th", {
+                                  children: [(0, Zz.jsx)("thead", {
+                                    children: (0, Zz.jsxs)("tr", {
+                                      children: [(0, Zz.jsx)("th", {
                                         children: "Code"
-                                      }), (0, cT.jsx)("th", {
+                                      }), (0, Zz.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, cT.jsx)("th", {
+                                      }), (0, Zz.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, cT.jsx)("tbody", {
-                                    children: IT.legend.map((TT => (0, cT.jsxs)("tr", {
-                                      children: [(0, cT.jsx)("td", {
-                                        children: (0, cT.jsx)("button", {
+                                  }), (0, Zz.jsx)("tbody", {
+                                    children: bz.legend.map((zz => (0, Zz.jsxs)("tr", {
+                                      children: [(0, Zz.jsx)("td", {
+                                        children: (0, Zz.jsx)("button", {
                                           type: "button",
-                                          className: kT()("DocsVariantChip", {
-                                            Active: ST === TT.code
+                                          className: iz()("DocsVariantChip", {
+                                            Active: Oz === zz.code
                                           }),
-                                          "aria-pressed": ST === TT.code,
-                                          title: `Show only ${oT} with ${TT.meaning} variants`,
+                                          "aria-pressed": Oz === zz.code,
+                                          title: `Show only ${uz} with ${zz.meaning} variants`,
                                           onClick: () => {
-                                            DT(ST === TT.code ? null : TT.code)
+                                            pz(Oz === zz.code ? null : zz.code)
                                           },
-                                          children: TT.code
+                                          children: zz.code
                                         })
-                                      }), (0, cT.jsx)("td", {
-                                        children: TT.meaning
-                                      }), (0, cT.jsx)("td", {
-                                        children: (0, cT.jsx)("code", {
+                                      }), (0, Zz.jsx)("td", {
+                                        children: zz.meaning
+                                      }), (0, Zz.jsx)("td", {
+                                        children: (0, Zz.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: TT.usage
+                                          children: zz.usage
                                         })
                                       })]
-                                    }, TT.code)))
+                                    }, zz.code)))
                                   })]
                                 })
-                              }), IT.examples.length > 0 && (0, cT.jsx)(eT, {
+                              }), bz.examples.length > 0 && (0, Zz.jsx)(Nz, {
                                 lang: "text",
-                                code: IT.examples.join("\n")
-                              }), (0, cT.jsx)(wI, {
+                                code: bz.examples.join("\n")
+                              }), (0, Zz.jsx)(fb, {
                                 className: "DocsFilterBar",
-                                value: BT,
-                                placeholder: `Search ${IT.entries.length} ${oT}\u2026`,
-                                label: `Search ${oT}`,
-                                onChange: TT => {
-                                  FT(TT), xT(Ui)
+                                value: tz,
+                                placeholder: `Search ${bz.entries.length} ${uz}\u2026`,
+                                label: `Search ${uz}`,
+                                onChange: zz => {
+                                  Hz(zz), Fz(LE)
                                 },
-                                count: hT || ST ? {
-                                  visible: wT.length,
-                                  total: IT.entries.length
+                                count: sz || Oz ? {
+                                  visible: rz.length,
+                                  total: bz.entries.length
                                 } : null,
-                                children: ST && (0, cT.jsxs)("button", {
+                                children: Oz && (0, Zz.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    DT(null)
+                                    pz(null)
                                   },
-                                  children: [ST, " ", (0, cT.jsx)(MT, {
+                                  children: [Oz, " ", (0, Zz.jsx)(Kz, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, cT.jsx)("div", {
+                              }), (0, Zz.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: wT.slice(0, LT).map((TT => {
-                                  const IT = "blocks" === oT ? null === zT || void 0 === zT ? void 0 : zT.getBlockFaces(TT.name) : null,
-                                    iT = zT && !IT ? zT.getItemTextureUrl(TT.name) : null;
-                                  return (0, cT.jsxs)("div", {
-                                    id: aI(oT, TT.name),
-                                    className: kT()("DocsCatalogueTile", {
-                                      Linked: TT.name === KT
+                                children: rz.slice(0, dz).map((zz => {
+                                  const bz = "blocks" === uz ? null === nz || void 0 === nz ? void 0 : nz.getBlockFaces(zz.name) : null,
+                                    Ez = nz && !bz ? nz.getItemTextureUrl(zz.name) : null;
+                                  return (0, Zz.jsxs)("div", {
+                                    id: Gb(uz, zz.name),
+                                    className: iz()("DocsCatalogueTile", {
+                                      Linked: zz.name === Rz
                                     }),
-                                    children: [(0, cT.jsxs)("span", {
+                                    children: [(0, Zz.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [IT && (0, cT.jsx)(ai, {
-                                        faces: IT
-                                      }), iT && (0, cT.jsx)(Yi, {
-                                        src: iT
+                                      children: [bz && (0, Zz.jsx)(PE, {
+                                        faces: bz
+                                      }), Ez && (0, Zz.jsx)(GE, {
+                                        src: Ez
                                       })]
-                                    }), (0, cT.jsx)("span", {
+                                    }), (0, Zz.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: TT.name
-                                    }), TT.variants.length > 0 && (0, cT.jsx)("span", {
+                                      children: zz.name
+                                    }), zz.variants.length > 0 && (0, Zz.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: TT.variants.map((TT => (0, cT.jsx)("span", {
-                                        children: TT
-                                      }, TT)))
-                                    }), (0, cT.jsx)(gT, {
-                                      text: TT.name,
+                                      children: zz.variants.map((zz => (0, Zz.jsx)("span", {
+                                        children: zz
+                                      }, zz)))
+                                    }), (0, Zz.jsx)(fz, {
+                                      text: zz.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, TT.name)
+                                  }, zz.name)
                                 }))
-                              }), wT.length > LT && (0, cT.jsxs)("button", {
+                              }), rz.length > dz && (0, Zz.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  xT(wT.length)
+                                  Fz(rz.length)
                                 },
-                                children: ["Show all ", wT.length]
-                              }), 0 === wT.length && (0, cT.jsxs)("p", {
+                                children: ["Show all ", rz.length]
+                              }), 0 === rz.length && (0, Zz.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", oT, " match."]
+                                children: ["No ", uz, " match."]
                               })]
                             })
                           }
-                          var Oi = IT(4304),
-                            Hi = IT(1531);
-                          const ni = .95 * Oi.c;
+                          var VE = bz(4581),
+                            mE = bz(1547);
+                          const qE = .95 * VE.e;
 
-                          function qi(TT) {
-                            return /^\s*```/.test(TT)
+                          function hE(zz) {
+                            return /^\s*```/.test(zz)
                           }
 
-                          function Zi(TT, oT) {
-                            const IT = [
+                          function UE(zz, uz) {
+                            const bz = [
                               []
                             ];
-                            let iT = !1;
-                            for (const zT of TT.split("\n")) !iT && oT(zT) && IT.at(-1).length > 0 && IT.push([]), qi(zT) && (iT = !iT), IT.at(-1).push(zT);
-                            return IT.map((TT => TT.join("\n").trim())).filter(Boolean)
+                            let Ez = !1;
+                            for (const nz of zz.split("\n")) !Ez && uz(nz) && bz.at(-1).length > 0 && bz.push([]), hE(nz) && (Ez = !Ez), bz.at(-1).push(nz);
+                            return bz.map((zz => zz.join("\n").trim())).filter(Boolean)
                           }
 
-                          function li(TT, oT) {
-                            const IT = `${"#".repeat(oT)} `,
-                              iT = [];
-                            let zT = !1;
-                            for (const kT of TT.split("\n")) qi(kT) ? zT = !zT : !zT && kT.startsWith(IT) && iT.push(kT.slice(IT.length).trim());
-                            return iT
+                          function cE(zz, uz) {
+                            const bz = `${"#".repeat(uz)} `,
+                              Ez = [];
+                            let nz = !1;
+                            for (const iz of zz.split("\n")) hE(iz) ? nz = !nz : !nz && iz.startsWith(bz) && Ez.push(iz.slice(bz.length).trim());
+                            return Ez
                           }
 
-                          function si(TT) {
-                            return TT.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function gE(zz) {
+                            return zz.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class ti {
-                            constructor(TT, oT) {
-                              this.origin = oT, this.pages = void 0, this.partPaths = new Map;
-                              const IT = TT.map((TT => {
-                                const oT = oT => this.resolveLinks(TT, oT).length,
-                                  IT = function(TT, oT) {
-                                    const IT = TT.map((TT => oT(TT.markdown) + 2)),
-                                      iT = IT.reduce(((TT, oT) => TT + oT), 0),
-                                      zT = iT / Math.ceil(iT / ni),
-                                      kT = [];
-                                    let WT = 0;
-                                    return TT.forEach(((TT, oT) => {
-                                      const iT = IT[oT];
-                                      (0 === kT.length || WT + iT > ni || WT + iT / 2 > zT) && (kT.push([]), WT = 0), kT.at(-1).push(TT), WT += iT
-                                    })), kT
-                                  }(function(TT, oT) {
-                                    return Zi(TT, (TT => TT.startsWith("## "))).flatMap((TT => {
-                                      var IT;
-                                      const iT = null !== (IT = li(TT, 2)[0]) && void 0 !== IT ? IT : "";
-                                      if (oT(TT) <= ni) return [{
-                                        markdown: TT,
-                                        section: iT
+                          class SE {
+                            constructor(zz, uz) {
+                              this.origin = uz, this.pages = void 0, this.partPaths = new Map;
+                              const bz = zz.map((zz => {
+                                const uz = uz => this.resolveLinks(zz, uz).length,
+                                  bz = function(zz, uz) {
+                                    const bz = zz.map((zz => uz(zz.markdown) + 2)),
+                                      Ez = bz.reduce(((zz, uz) => zz + uz), 0),
+                                      nz = Ez / Math.ceil(Ez / qE),
+                                      iz = [];
+                                    let lz = 0;
+                                    return zz.forEach(((zz, uz) => {
+                                      const Ez = bz[uz];
+                                      (0 === iz.length || lz + Ez > qE || lz + Ez / 2 > nz) && (iz.push([]), lz = 0), iz.at(-1).push(zz), lz += Ez
+                                    })), iz
+                                  }(function(zz, uz) {
+                                    return UE(zz, (zz => zz.startsWith("## "))).flatMap((zz => {
+                                      var bz;
+                                      const Ez = null !== (bz = cE(zz, 2)[0]) && void 0 !== bz ? bz : "";
+                                      if (uz(zz) <= qE) return [{
+                                        markdown: zz,
+                                        section: Ez
                                       }];
-                                      let zT = !1,
-                                        kT = "";
-                                      return Zi(TT, (TT => {
-                                        const oT = zT && "" !== TT.trim();
-                                        return zT = "" === TT.trim(), oT
-                                      })).map((TT => {
-                                        var oT;
-                                        const IT = li(TT, 3),
-                                          zT = TT.startsWith("### ") ? IT[0] : kT;
-                                        return kT = null !== (oT = IT.at(-1)) && void 0 !== oT ? oT : kT, {
-                                          markdown: TT,
-                                          section: iT || zT
+                                      let nz = !1,
+                                        iz = "";
+                                      return UE(zz, (zz => {
+                                        const uz = nz && "" !== zz.trim();
+                                        return nz = "" === zz.trim(), uz
+                                      })).map((zz => {
+                                        var uz;
+                                        const bz = cE(zz, 3),
+                                          nz = zz.startsWith("### ") ? bz[0] : iz;
+                                        return iz = null !== (uz = bz.at(-1)) && void 0 !== uz ? uz : iz, {
+                                          markdown: zz,
+                                          section: Ez || nz
                                         }
                                       }))
                                     }))
-                                  }(si(TT), oT), oT);
+                                  }(gE(zz), uz), uz);
                                 return {
-                                  page: TT,
-                                  groups: IT.length > 1 ? IT : []
+                                  page: zz,
+                                  groups: bz.length > 1 ? bz : []
                                 }
                               }));
                               for (const {
-                                  page: iT,
-                                  groups: zT
+                                  page: Ez,
+                                  groups: nz
                                 }
-                                of IT) zT.forEach(((TT, oT) => {
-                                const IT = (0, Oi.w)(iT.slug, oT);
-                                for (const zT of TT.flatMap((TT => [...li(TT.markdown, 2), ...li(TT.markdown, 3)]))) {
-                                  const TT = `${iT.id}#${(0,RT.r)(zT)}`;
-                                  this.partPaths.has(TT) || this.partPaths.set(TT, IT)
+                                of bz) nz.forEach(((zz, uz) => {
+                                const bz = (0, VE.s)(Ez.slug, uz);
+                                for (const nz of zz.flatMap((zz => [...cE(zz.markdown, 2), ...cE(zz.markdown, 3)]))) {
+                                  const zz = `${Ez.id}#${(0,vz.k)(nz)}`;
+                                  this.partPaths.has(zz) || this.partPaths.set(zz, bz)
                                 }
                               }));
-                              this.pages = IT.map((TT => {
+                              this.pages = bz.map((zz => {
                                 let {
-                                  page: oT,
-                                  groups: IT
-                                } = TT;
+                                  page: uz,
+                                  groups: bz
+                                } = zz;
                                 return {
-                                  page: oT,
-                                  path: (0, Oi.t)(oT.slug),
-                                  markdown: `# ${oT.title}\n\n${this.resolveLinks(oT,si(oT))}\n`,
-                                  parts: IT.map(((TT, iT) => this.renderPart(oT, TT, iT, IT.length)))
+                                  page: uz,
+                                  path: (0, VE.r)(uz.slug),
+                                  markdown: `# ${uz.title}\n\n${this.resolveLinks(uz,gE(uz))}\n`,
+                                  parts: bz.map(((zz, Ez) => this.renderPart(uz, zz, Ez, bz.length)))
                                 }
                               }))
                             }
-                            url(TT) {
-                              return `${this.origin}${TT}`
+                            url(zz) {
+                              return `${this.origin}${zz}`
                             }
-                            getPage(TT) {
-                              return this.pages.find((oT => oT.page.id === TT))
+                            getPage(zz) {
+                              return this.pages.find((uz => uz.page.id === zz))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((TT => (TT.parts.length > 0 ? TT.parts : [{
-                                path: TT.path,
+                              return this.pages.flatMap((zz => (zz.parts.length > 0 ? zz.parts : [{
+                                path: zz.path,
                                 label: "",
-                                markdown: TT.markdown
-                              }]).filter((TT => TT.markdown.length > Oi.c))))
+                                markdown: zz.markdown
+                              }]).filter((zz => zz.markdown.length > VE.e))))
                             }
-                            markdownUrl(TT, oT) {
-                              const IT = oT && this.partPaths.get(`${TT.id}#${oT}`) || (0, Oi.t)(TT.slug);
-                              return this.url(oT ? `${IT}#${oT}` : IT)
+                            markdownUrl(zz, uz) {
+                              const bz = uz && this.partPaths.get(`${zz.id}#${uz}`) || (0, VE.r)(zz.slug);
+                              return this.url(uz ? `${bz}#${uz}` : bz)
                             }
-                            resolveLinks(TT, oT) {
-                              return oT.replace(/\]\((#[^)]+)\)/g, ((oT, IT) => {
-                                var iT;
-                                const zT = null !== (iT = lT(IT)) && void 0 !== iT ? iT : this.samePageTarget(TT, IT);
-                                return zT ? `](${this.markdownUrl(zT.page,zT.anchor)})` : oT
+                            resolveLinks(zz, uz) {
+                              return uz.replace(/\]\((#[^)]+)\)/g, ((uz, bz) => {
+                                var Ez;
+                                const nz = null !== (Ez = yz(bz)) && void 0 !== Ez ? Ez : this.samePageTarget(zz, bz);
+                                return nz ? `](${this.markdownUrl(nz.page,nz.anchor)})` : uz
                               }))
                             }
-                            samePageTarget(TT, oT) {
-                              const IT = (0, RT.r)(oT.slice(1));
-                              return ZT(TT, IT) ? {
-                                page: TT,
-                                anchor: IT
+                            samePageTarget(zz, uz) {
+                              const bz = (0, vz.k)(uz.slice(1));
+                              return Sz(zz, bz) ? {
+                                page: zz,
+                                anchor: bz
                               } : null
                             }
-                            renderPart(TT, oT, IT, iT) {
-                              const zT = function(TT) {
-                                  const oT = TT.map((TT => TT.section)).filter(Boolean);
-                                  if (0 === oT.length) return "";
-                                  const IT = oT[0],
-                                    iT = oT.at(-1);
-                                  return IT === iT ? IT : `${IT} to ${iT}`
-                                }(oT),
-                                kT = oT.map((TT => TT.markdown)).join("\n\n"),
-                                WT = zT ? `It covers ${zT}. ` : "",
-                                XT = `Part ${IT+1} of ${iT} of [${TT.title}](${this.url((0,Oi.t)(TT.slug))}). ${WT}[llms.txt](${this.url(Oi.j)}) lists every part.`;
+                            renderPart(zz, uz, bz, Ez) {
+                              const nz = function(zz) {
+                                  const uz = zz.map((zz => zz.section)).filter(Boolean);
+                                  if (0 === uz.length) return "";
+                                  const bz = uz[0],
+                                    Ez = uz.at(-1);
+                                  return bz === Ez ? bz : `${bz} to ${Ez}`
+                                }(uz),
+                                iz = uz.map((zz => zz.markdown)).join("\n\n"),
+                                lz = nz ? `It covers ${nz}. ` : "",
+                                Mz = `Part ${bz+1} of ${Ez} of [${zz.title}](${this.url((0,VE.r)(zz.slug))}). ${lz}[llms.txt](${this.url(VE.i)}) lists every part.`;
                               return {
-                                path: (0, Oi.w)(TT.slug, IT),
-                                label: zT,
-                                markdown: `# ${TT.title}, part ${IT+1} of ${iT}\n\n${XT}\n\n${this.resolveLinks(TT,kT)}\n`
+                                path: (0, VE.s)(zz.slug, bz),
+                                label: nz,
+                                markdown: `# ${zz.title}, part ${bz+1} of ${Ez}\n\n${Mz}\n\n${this.resolveLinks(zz,iz)}\n`
                               }
                             }
-                            llmsTxt(TT) {
-                              const oT = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${Gi(Oi.c)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const IT of OT) {
-                                oT.push("", `## ${IT.title}`, "");
-                                for (const TT of IT.pageIds) {
-                                  const IT = this.getPage(TT),
+                            llmsTxt(zz) {
+                              const uz = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${yE(VE.e)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const bz of hz) {
+                                uz.push("", `## ${bz.title}`, "");
+                                for (const zz of bz.pageIds) {
+                                  const bz = this.getPage(zz),
                                     {
-                                      page: iT,
-                                      parts: zT
-                                    } = IT,
-                                    kT = `About ${Gi(IT.markdown.length)} tokens${zT.length>0?`, in ${zT.length} parts:`:"."}`;
-                                  oT.push(`- [${iT.title}](${this.url(IT.path)}): ${iT.summary} ${kT}`), zT.forEach(((TT, IT) => {
-                                    oT.push(`  - [Part ${IT+1}${TT.label?`: ${TT.label}`:""}](${this.url(TT.path)})`)
+                                      page: Ez,
+                                      parts: nz
+                                    } = bz,
+                                    iz = `About ${yE(bz.markdown.length)} tokens${nz.length>0?`, in ${nz.length} parts:`:"."}`;
+                                  uz.push(`- [${Ez.title}](${this.url(bz.path)}): ${Ez.summary} ${iz}`), nz.forEach(((zz, bz) => {
+                                    uz.push(`  - [Part ${bz+1}${zz.label?`: ${zz.label}`:""}](${this.url(zz.path)})`)
                                   }))
                                 }
                               }
-                              return oT.push("", "## Optional", "", `- [Every page in one file](${this.url(Oi.f)}): About ${Gi(TT.length)} tokens, for a model with a large context window.`, ""), oT.join("\n")
+                              return uz.push("", "## Optional", "", `- [Every page in one file](${this.url(VE.g)}): About ${yE(zz.length)} tokens, for a model with a large context window.`, ""), uz.join("\n")
                             }
                             llmsFullTxt() {
-                              return OT.flatMap((TT => TT.pageIds.map((TT => this.getPage(TT).markdown)))).join("\n---\n\n")
+                              return hz.flatMap((zz => zz.pageIds.map((zz => this.getPage(zz).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const TT = this.llmsFullTxt(),
-                                oT = this.llmsTxt(TT),
-                                IT = new Map([
-                                  [Oi.o, oT],
-                                  [Oi.j, oT],
-                                  [Oi.f, TT]
+                              const zz = this.llmsFullTxt(),
+                                uz = this.llmsTxt(zz),
+                                bz = new Map([
+                                  [VE.n, uz],
+                                  [VE.i, uz],
+                                  [VE.g, zz]
                                 ]);
-                              for (const iT of this.pages) {
-                                IT.set(iT.path, iT.markdown);
-                                for (const TT of iT.parts) IT.set(TT.path, TT.markdown)
+                              for (const Ez of this.pages) {
+                                bz.set(Ez.path, Ez.markdown);
+                                for (const zz of Ez.parts) bz.set(zz.path, zz.markdown)
                               }
-                              return IT
+                              return bz
                             }
                           }
 
-                          function Gi(TT) {
-                            return `${Math.max(1,Math.round(TT/4e3))}K`
+                          function yE(zz) {
+                            return `${Math.max(1,Math.round(zz/4e3))}K`
                           }
-                          let bi = null;
+                          let DE = null;
 
-                          function yi() {
-                            return bi ??= new ti(QT, Hi.d), bi
+                          function QE() {
+                            return DE ??= new SE(qz, mE.e), DE
                           }
-                          const Ni = [{
+                          const WE = [{
                             name: "ChatGPT",
                             url: "https://chatgpt.com/?hints=search&q="
                           }, {
@@ -2582,373 +2582,373 @@ export const modules = {
                             url: "https://claude.ai/new?q="
                           }];
 
-                          function Pi(TT) {
-                            return yi().getPage(TT.id).parts.length > 0 ? `Read ${Oi.n}, then the parts of the Bloxd Code API's ${TT.title} page it lists, so I can ask questions about it.` : `Read ${Hi.d}${(0,Oi.t)(TT.slug)} so I can ask questions about it. ${Oi.n} lists every page of the Bloxd Code API docs.`
+                          function eE(zz) {
+                            return QE().getPage(zz.id).parts.length > 0 ? `Read ${VE.k}, then the parts of the Bloxd Code API's ${zz.title} page it lists, so I can ask questions about it.` : `Read ${mE.e}${(0,VE.r)(zz.slug)} so I can ask questions about it. ${VE.k} lists every page of the Bloxd Code API docs.`
                           }
 
-                          function di(TT) {
+                          function jE(zz) {
                             let {
-                              page: oT
-                            } = TT;
-                            const [IT, iT] = AT();
-                            return (0, cT.jsxs)("div", {
+                              page: uz
+                            } = zz;
+                            const [bz, Ez] = Xz();
+                            return (0, Zz.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, cT.jsxs)("button", {
+                              children: [(0, Zz.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  iT(yi().getPage(oT.id).markdown)
+                                  Ez(QE().getPage(uz.id).markdown)
                                 },
-                                children: [(0, cT.jsx)(MT, {
-                                  name: !1 === (null === IT || void 0 === IT ? void 0 : IT.failed) ? "check" : "copy"
-                                }), (0, cT.jsx)("span", {
-                                  children: IT ? IT.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, Zz.jsx)(Kz, {
+                                  name: !1 === (null === bz || void 0 === bz ? void 0 : bz.failed) ? "check" : "copy"
+                                }), (0, Zz.jsx)("span", {
+                                  children: bz ? bz.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), Ni.map((TT => (0, cT.jsxs)("a", {
+                              }), WE.map((zz => (0, Zz.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: `${TT.url}${encodeURIComponent(Pi(oT))}`,
+                                href: `${zz.url}${encodeURIComponent(eE(uz))}`,
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, cT.jsx)(MT, {
+                                children: [(0, Zz.jsx)(Kz, {
                                   name: "external-link"
-                                }), (0, cT.jsxs)("span", {
-                                  children: ["Open in ", TT.name]
+                                }), (0, Zz.jsxs)("span", {
+                                  children: ["Open in ", zz.name]
                                 })]
-                              }, TT.name)))]
+                              }, zz.name)))]
                             })
                           }
 
-                          function Vi(TT) {
-                            return `#${[0,1,2].map((oT=>Math.round(Math.min(255,Math.max(0,TT[oT]))).toString(16).padStart(2,"0"))).join("")}`
+                          function IE(zz) {
+                            return `#${[0,1,2].map((uz=>Math.round(Math.min(255,Math.max(0,zz[uz]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function Tz(TT) {
-                            return [parseInt(TT.slice(1, 3), 16), parseInt(TT.slice(3, 5), 16), parseInt(TT.slice(5, 7), 16)]
+                          function BE(zz) {
+                            return [parseInt(zz.slice(1, 3), 16), parseInt(zz.slice(3, 5), 16), parseInt(zz.slice(5, 7), 16)]
                           }
 
-                          function oz(TT) {
+                          function CE(zz) {
                             let {
-                              label: oT,
-                              min: IT,
-                              max: iT,
-                              step: zT,
-                              low: kT,
-                              high: WT,
-                              onChange: XT
-                            } = TT;
-                            return (0, cT.jsxs)("div", {
+                              label: uz,
+                              min: bz,
+                              max: Ez,
+                              step: nz,
+                              low: iz,
+                              high: lz,
+                              onChange: Mz
+                            } = zz;
+                            return (0, Zz.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, cT.jsxs)("div", {
+                              children: [(0, Zz.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, cT.jsx)("span", {
-                                  children: oT
-                                }), (0, cT.jsx)("span", {
+                                children: [(0, Zz.jsx)("span", {
+                                  children: uz
+                                }), (0, Zz.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: kT === WT ? kT : `${kT}\u2013${WT}`
+                                  children: iz === lz ? iz : `${iz}\u2013${lz}`
                                 })]
-                              }), (0, cT.jsxs)("div", {
+                              }), (0, Zz.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, cT.jsx)("input", {
+                                children: [(0, Zz.jsx)("input", {
                                   type: "range",
-                                  min: IT,
-                                  max: iT,
-                                  step: zT,
-                                  value: Math.min(iT, kT),
-                                  "aria-label": `Minimum ${oT.toLowerCase()}`,
-                                  onChange: TT => {
-                                    const oT = Number(TT.target.value);
-                                    XT(oT, Math.max(oT, WT))
+                                  min: bz,
+                                  max: Ez,
+                                  step: nz,
+                                  value: Math.min(Ez, iz),
+                                  "aria-label": `Minimum ${uz.toLowerCase()}`,
+                                  onChange: zz => {
+                                    const uz = Number(zz.target.value);
+                                    Mz(uz, Math.max(uz, lz))
                                   }
-                                }), (0, cT.jsx)("input", {
+                                }), (0, Zz.jsx)("input", {
                                   type: "range",
-                                  min: IT,
-                                  max: iT,
-                                  step: zT,
-                                  value: Math.min(iT, WT),
-                                  "aria-label": `Maximum ${oT.toLowerCase()}`,
-                                  onChange: TT => {
-                                    const oT = Number(TT.target.value);
-                                    XT(Math.min(oT, kT), oT)
+                                  min: bz,
+                                  max: Ez,
+                                  step: nz,
+                                  value: Math.min(Ez, lz),
+                                  "aria-label": `Maximum ${uz.toLowerCase()}`,
+                                  onChange: zz => {
+                                    const uz = Number(zz.target.value);
+                                    Mz(Math.min(uz, iz), uz)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function Iz(TT) {
+                          function YE(zz) {
                             let {
-                              label: oT,
-                              min: IT,
-                              max: iT,
-                              step: zT,
-                              value: kT,
-                              onChange: WT,
-                              format: XT = String
-                            } = TT;
-                            return (0, cT.jsxs)("div", {
+                              label: uz,
+                              min: bz,
+                              max: Ez,
+                              step: nz,
+                              value: iz,
+                              onChange: lz,
+                              format: Mz = String
+                            } = zz;
+                            return (0, Zz.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, cT.jsxs)("div", {
+                              children: [(0, Zz.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, cT.jsx)("span", {
-                                  children: oT
-                                }), (0, cT.jsx)("span", {
+                                children: [(0, Zz.jsx)("span", {
+                                  children: uz
+                                }), (0, Zz.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: XT(kT)
+                                  children: Mz(iz)
                                 })]
-                              }), (0, cT.jsx)("input", {
+                              }), (0, Zz.jsx)("input", {
                                 type: "range",
-                                min: IT,
-                                max: iT,
-                                step: zT,
-                                value: Math.min(iT, Math.max(IT, kT)),
-                                "aria-label": oT,
-                                onChange: TT => {
-                                  WT(Number(TT.target.value))
+                                min: bz,
+                                max: Ez,
+                                step: nz,
+                                value: Math.min(Ez, Math.max(bz, iz)),
+                                "aria-label": uz,
+                                onChange: zz => {
+                                  lz(Number(zz.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function iz(TT) {
+                          function kE(zz) {
                             let {
-                              opts: oT,
-                              onChange: IT
-                            } = TT;
-                            const iT = oT.colorGradients;
-                            if (!GI(iT)) return (0, cT.jsxs)("div", {
+                              opts: uz,
+                              onChange: bz
+                            } = zz;
+                            const Ez = uz.colorGradients;
+                            if (!Db(Ez)) return (0, Zz.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, cT.jsx)("div", {
+                              children: [(0, Zz.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, cT.jsx)("span", {
+                                children: (0, Zz.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, cT.jsx)("div", {
+                              }), (0, Zz.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: iT.map(((TT, oT) => (0, cT.jsx)("input", {
+                                children: Ez.map(((zz, uz) => (0, Zz.jsx)("input", {
                                   type: "color",
-                                  value: Vi(TT.color),
-                                  "aria-label": `Colour ${oT+1}`,
-                                  onChange: TT => {
-                                    const zT = [...iT];
-                                    zT[oT] = {
-                                      color: Tz(TT.target.value)
-                                    }, IT(zT)
+                                  value: IE(zz.color),
+                                  "aria-label": `Colour ${uz+1}`,
+                                  onChange: zz => {
+                                    const nz = [...Ez];
+                                    nz[uz] = {
+                                      color: BE(zz.target.value)
+                                    }, bz(nz)
                                   }
-                                }, oT)))
+                                }, uz)))
                               })]
                             });
-                            const zT = (TT, oT) => {
-                              const zT = [...iT];
-                              zT[TT] = oT, IT(zT)
+                            const nz = (zz, uz) => {
+                              const nz = [...Ez];
+                              nz[zz] = uz, bz(nz)
                             };
-                            return (0, cT.jsxs)("div", {
+                            return (0, Zz.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, cT.jsxs)("div", {
+                              children: [(0, Zz.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, cT.jsx)("span", {
+                                children: [(0, Zz.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, cT.jsx)("span", {
+                                }), (0, Zz.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), iT.map(((TT, oT) => {
-                                var IT;
-                                const iT = null !== (IT = TT.maxColor) && void 0 !== IT ? IT : TT.minColor;
-                                return (0, cT.jsxs)("div", {
+                              }), Ez.map(((zz, uz) => {
+                                var bz;
+                                const Ez = null !== (bz = zz.maxColor) && void 0 !== bz ? bz : zz.minColor;
+                                return (0, Zz.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, cT.jsxs)("span", {
+                                  children: [(0, Zz.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * TT.timeFraction), "%"]
-                                  }), (0, cT.jsx)("span", {
+                                    children: [Math.round(100 * zz.timeFraction), "%"]
+                                  }), (0, Zz.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${Vi(TT.minColor)}, ${Vi(iT)})`
+                                      background: `linear-gradient(90deg, ${IE(zz.minColor)}, ${IE(Ez)})`
                                     }
-                                  }), (0, cT.jsx)("input", {
+                                  }), (0, Zz.jsx)("input", {
                                     type: "color",
-                                    value: Vi(TT.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*TT.timeFraction)}%`,
-                                    onChange: IT => {
-                                      zT(oT, {
-                                        ...TT,
-                                        minColor: [...Tz(IT.target.value), TT.minColor[3]]
+                                    value: IE(zz.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*zz.timeFraction)}%`,
+                                    onChange: bz => {
+                                      nz(uz, {
+                                        ...zz,
+                                        minColor: [...BE(bz.target.value), zz.minColor[3]]
                                       })
                                     }
-                                  }), (0, cT.jsx)("input", {
+                                  }), (0, Zz.jsx)("input", {
                                     type: "color",
-                                    value: Vi(iT),
-                                    "aria-label": `Maximum colour at ${Math.round(100*TT.timeFraction)}%`,
-                                    onChange: IT => {
-                                      zT(oT, {
-                                        ...TT,
-                                        maxColor: [...Tz(IT.target.value), iT[3]]
+                                    value: IE(Ez),
+                                    "aria-label": `Maximum colour at ${Math.round(100*zz.timeFraction)}%`,
+                                    onChange: bz => {
+                                      nz(uz, {
+                                        ...zz,
+                                        maxColor: [...BE(bz.target.value), Ez[3]]
                                       })
                                     }
                                   })]
-                                }, oT)
+                                }, uz)
                               }))]
                             })
                           }
-                          const zz = [-.5, -.5, -.5],
-                            kz = [.5, .5, .5],
-                            Wz = [0, 1, 2, 3, 4, 5, 6, 7].map((TT => [1 & TT ? kz[0] : zz[0], 2 & TT ? kz[1] : zz[1], 4 & TT ? kz[2] : zz[2]]));class Xz {
+                          const zn = [-.5, -.5, -.5],
+                            un = [.5, .5, .5],
+                            bn = [0, 1, 2, 3, 4, 5, 6, 7].map((zz => [1 & zz ? un[0] : zn[0], 2 & zz ? un[1] : zn[1], 4 & zz ? un[2] : zn[2]]));class En {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(TT, oT, IT, iT) {
-                              const zT = Math.round(31 * oT),
-                                kT = Math.round(31 * IT),
-                                WT = Math.round(31 * iT),
-                                XT = `${zT}|${kT}|${WT}`;
-                              let BT = this.tints.get(TT);
-                              (!BT || BT.size > 2e3) && (BT = new Map, this.tints.set(TT, BT));
-                              let FT = BT.get(XT);
-                              if (FT) return FT;
-                              FT = document.createElement("canvas"), FT.width = TT.naturalWidth || 16, FT.height = TT.naturalHeight || 16;
-                              const ST = FT.getContext("2d");
-                              return ST ? (ST.imageSmoothingEnabled = !1, ST.drawImage(TT, 0, 0, FT.width, FT.height), ST.globalCompositeOperation = "multiply", ST.fillStyle = `rgb(${zT/31*255}, ${kT/31*255}, ${WT/31*255})`, ST.fillRect(0, 0, FT.width, FT.height), ST.globalCompositeOperation = "destination-in", ST.drawImage(TT, 0, 0, FT.width, FT.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), BT.set(XT, FT), FT
+                            get(zz, uz, bz, Ez) {
+                              const nz = Math.round(31 * uz),
+                                iz = Math.round(31 * bz),
+                                lz = Math.round(31 * Ez),
+                                Mz = `${nz}|${iz}|${lz}`;
+                              let tz = this.tints.get(zz);
+                              (!tz || tz.size > 2e3) && (tz = new Map, this.tints.set(zz, tz));
+                              let Hz = tz.get(Mz);
+                              if (Hz) return Hz;
+                              Hz = document.createElement("canvas"), Hz.width = zz.naturalWidth || 16, Hz.height = zz.naturalHeight || 16;
+                              const Oz = Hz.getContext("2d");
+                              return Oz ? (Oz.imageSmoothingEnabled = !1, Oz.drawImage(zz, 0, 0, Hz.width, Hz.height), Oz.globalCompositeOperation = "multiply", Oz.fillStyle = `rgb(${nz/31*255}, ${iz/31*255}, ${lz/31*255})`, Oz.fillRect(0, 0, Hz.width, Hz.height), Oz.globalCompositeOperation = "destination-in", Oz.drawImage(zz, 0, 0, Hz.width, Hz.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), tz.set(Mz, Hz), Hz
                             }
                           }
 
-                          function Bz(TT) {
+                          function nn(zz) {
                             let {
-                              opts: oT,
-                              textureUrl: IT,
-                              burst: zT,
-                              paused: kT
-                            } = TT;
-                            const WT = (0, iT.useRef)(null),
-                              XT = (0, iT.useRef)(oT);
-                            XT.current = oT;
-                            const BT = (0, iT.useRef)(kT);
-                            BT.current = kT;
-                            const FT = (0, iT.useRef)(null),
-                              ST = (0, iT.useRef)(null),
-                              DT = (0, iT.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(TT) {
-                                let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const IT = [-.5, -.5, -.5],
-                                  iT = [.5, .5, .5];
-                                let zT = .5;
-                                for (let kT = 0; kT < 40; kT++) {
-                                  const kT = bI(TT, IT, iT, oT),
-                                    WT = Math.max(kT.life / 30, .001);
-                                  for (; PI(kT, TT.gravity, WT);) zT = Math.max(zT, Math.hypot(kT.pos[0], kT.pos[1], kT.pos[2]) + kT.size / 2)
+                              opts: uz,
+                              textureUrl: bz,
+                              burst: nz,
+                              paused: iz
+                            } = zz;
+                            const lz = (0, Ez.useRef)(null),
+                              Mz = (0, Ez.useRef)(uz);
+                            Mz.current = uz;
+                            const tz = (0, Ez.useRef)(iz);
+                            tz.current = iz;
+                            const Hz = (0, Ez.useRef)(null),
+                              Oz = (0, Ez.useRef)(null),
+                              pz = (0, Ez.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(zz) {
+                                let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const bz = [-.5, -.5, -.5],
+                                  Ez = [.5, .5, .5];
+                                let nz = .5;
+                                for (let iz = 0; iz < 40; iz++) {
+                                  const iz = Wb(zz, bz, Ez, uz),
+                                    lz = Math.max(iz.life / 30, .001);
+                                  for (; Ib(iz, zz.gravity, lz);) nz = Math.max(nz, Math.hypot(iz.pos[0], iz.pos[1], iz.pos[2]) + iz.size / 2)
                                 }
-                                return zT
-                              }(oT)))), [oT]),
-                              LT = (0, iT.useRef)(DT);
-                            return LT.current = DT, (0, iT.useEffect)((() => {
-                              if (FT.current = null, !IT) return;
-                              const TT = new Image;
-                              let oT = !1;
-                              return TT.onload = () => {
-                                oT || (FT.current = TT)
-                              }, TT.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${IT}`)
-                              }, TT.src = IT, () => {
-                                oT = !0
+                                return nz
+                              }(uz)))), [uz]),
+                              dz = (0, Ez.useRef)(pz);
+                            return dz.current = pz, (0, Ez.useEffect)((() => {
+                              if (Hz.current = null, !bz) return;
+                              const zz = new Image;
+                              let uz = !1;
+                              return zz.onload = () => {
+                                uz || (Hz.current = zz)
+                              }, zz.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${bz}`)
+                              }, zz.src = bz, () => {
+                                uz = !0
                               }
-                            }), [IT]), (0, iT.useEffect)((() => {
-                              var TT;
-                              null === (TT = ST.current) || void 0 === TT || TT.call(ST)
-                            }), [oT, zT]), (0, iT.useEffect)((() => {
-                              const TT = WT.current,
-                                oT = null === TT || void 0 === TT ? void 0 : TT.getContext("2d");
-                              if (!TT || !oT) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const IT = new Xz;
-                              let iT = [],
-                                zT = 0,
-                                kT = -.7,
-                                DT = LT.current,
-                                xT = performance.now(),
-                                cT = 0,
-                                KT = !0,
-                                MT = null;
-                              const rT = () => {
-                                const TT = XT.current,
-                                  oT = Math.min(400, Math.max(0, Math.ceil(TT.manualEmitCount)));
-                                iT = [];
-                                for (let IT = 0; IT < oT; IT++) iT.push(bI(TT, zz, kz, Math.random));
-                                zT = 0
+                            }), [bz]), (0, Ez.useEffect)((() => {
+                              var zz;
+                              null === (zz = Oz.current) || void 0 === zz || zz.call(Oz)
+                            }), [uz, nz]), (0, Ez.useEffect)((() => {
+                              const zz = lz.current,
+                                uz = null === zz || void 0 === zz ? void 0 : zz.getContext("2d");
+                              if (!zz || !uz) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const bz = new En;
+                              let Ez = [],
+                                nz = 0,
+                                iz = -.7,
+                                pz = dz.current,
+                                Fz = performance.now(),
+                                Zz = 0,
+                                Rz = !0,
+                                Kz = null;
+                              const wz = () => {
+                                const zz = Mz.current,
+                                  uz = Math.min(400, Math.max(0, Math.ceil(zz.manualEmitCount)));
+                                Ez = [];
+                                for (let bz = 0; bz < uz; bz++) Ez.push(Wb(zz, zn, un, Math.random));
+                                nz = 0
                               };
-                              ST.current = rT, rT();
-                              const AT = WT => {
-                                cT = requestAnimationFrame(AT);
-                                const ST = Math.min(.05, (WT - xT) / 1e3);
-                                if (xT = WT, !KT) return;
-                                const gT = window.devicePixelRatio || 1,
-                                  hT = Math.round(TT.clientWidth * gT),
-                                  wT = Math.round(TT.clientHeight * gT);
-                                if (0 === hT || 0 === wT) return;
-                                TT.width === hT && TT.height === wT || (TT.width = hT, TT.height = wT);
-                                const mT = XT.current;
-                                null === MT && (kT += .18 * ST), DT += (LT.current - DT) * Math.min(1, 4 * ST);
-                                const eT = .6 * ST;
-                                iT = iT.filter((TT => PI(TT, mT.gravity, eT))), 0 !== iT.length || BT.current || (zT += ST, zT > .6 && rT());
-                                const RT = function(TT, oT, IT, iT) {
-                                  const zT = 3.2 * iT,
-                                    kT = .44 * Math.min(TT, oT) * zT / iT,
-                                    WT = Math.cos(IT),
-                                    XT = Math.sin(IT),
-                                    BT = Math.cos(.42),
-                                    FT = Math.sin(.42);
-                                  return (IT, iT, ST) => {
-                                    const DT = IT * XT + ST * WT,
-                                      LT = zT - (iT * FT + DT * BT);
-                                    if (LT < .05) return null;
-                                    const xT = kT / LT;
+                              Oz.current = wz, wz();
+                              const Xz = lz => {
+                                Zz = requestAnimationFrame(Xz);
+                                const Oz = Math.min(.05, (lz - Fz) / 1e3);
+                                if (Fz = lz, !Rz) return;
+                                const fz = window.devicePixelRatio || 1,
+                                  sz = Math.round(zz.clientWidth * fz),
+                                  rz = Math.round(zz.clientHeight * fz);
+                                if (0 === sz || 0 === rz) return;
+                                zz.width === sz && zz.height === rz || (zz.width = sz, zz.height = rz);
+                                const oz = Mz.current;
+                                null === Kz && (iz += .18 * Oz), pz += (dz.current - pz) * Math.min(1, 4 * Oz);
+                                const Nz = .6 * Oz;
+                                Ez = Ez.filter((zz => Ib(zz, oz.gravity, Nz))), 0 !== Ez.length || tz.current || (nz += Oz, nz > .6 && wz());
+                                const vz = function(zz, uz, bz, Ez) {
+                                  const nz = 3.2 * Ez,
+                                    iz = .44 * Math.min(zz, uz) * nz / Ez,
+                                    lz = Math.cos(bz),
+                                    Mz = Math.sin(bz),
+                                    tz = Math.cos(.42),
+                                    Hz = Math.sin(.42);
+                                  return (bz, Ez, Oz) => {
+                                    const pz = bz * Mz + Oz * lz,
+                                      dz = nz - (Ez * Hz + pz * tz);
+                                    if (dz < .05) return null;
+                                    const Fz = iz / dz;
                                     return {
-                                      x: TT / 2 + (IT * WT - ST * XT) * xT,
-                                      y: oT / 2 - (iT * BT - DT * FT) * xT,
-                                      scale: xT,
-                                      depth: LT
+                                      x: zz / 2 + (bz * lz - Oz * Mz) * Fz,
+                                      y: uz / 2 - (Ez * tz - pz * Hz) * Fz,
+                                      scale: Fz,
+                                      depth: dz
                                     }
                                   }
-                                }(hT, wT, kT, DT);
-                                ! function(TT, oT, IT, iT, zT) {
-                                  const kT = TT.createLinearGradient(0, 0, 0, IT);
-                                  kT.addColorStop(0, "#23262d"), kT.addColorStop(1, "#16181c"), TT.globalCompositeOperation = "source-over", TT.globalAlpha = 1, TT.fillStyle = kT, TT.fillRect(0, 0, oT, IT);
-                                  const WT = (oT, IT) => {
-                                      const zT = iT(oT[0], oT[1], oT[2]),
-                                        kT = iT(IT[0], IT[1], IT[2]);
-                                      zT && kT && (TT.beginPath(), TT.moveTo(zT.x, zT.y), TT.lineTo(kT.x, kT.y), TT.stroke())
+                                }(sz, rz, iz, pz);
+                                ! function(zz, uz, bz, Ez, nz) {
+                                  const iz = zz.createLinearGradient(0, 0, 0, bz);
+                                  iz.addColorStop(0, "#23262d"), iz.addColorStop(1, "#16181c"), zz.globalCompositeOperation = "source-over", zz.globalAlpha = 1, zz.fillStyle = iz, zz.fillRect(0, 0, uz, bz);
+                                  const lz = (uz, bz) => {
+                                      const nz = Ez(uz[0], uz[1], uz[2]),
+                                        iz = Ez(bz[0], bz[1], bz[2]);
+                                      nz && iz && (zz.beginPath(), zz.moveTo(nz.x, nz.y), zz.lineTo(iz.x, iz.y), zz.stroke())
                                     },
-                                    XT = Math.ceil(zT) + 1,
-                                    BT = zz[1];
-                                  TT.lineWidth = 1, TT.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let FT = -XT; FT <= XT; FT++) WT([FT + .5, BT, .5 - XT], [FT + .5, BT, XT + .5]), WT([.5 - XT, BT, FT + .5], [XT + .5, BT, FT + .5]);
-                                  TT.strokeStyle = "rgba(255, 255, 255, 0.28)", TT.setLineDash([4, 4]);
-                                  for (const FT of Wz)
-                                    for (const TT of Wz) {
-                                      const oT = [0, 1, 2].filter((oT => FT[oT] !== TT[oT]));
-                                      1 === oT.length && FT[oT[0]] < TT[oT[0]] && WT(FT, TT)
+                                    Mz = Math.ceil(nz) + 1,
+                                    tz = zn[1];
+                                  zz.lineWidth = 1, zz.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let Hz = -Mz; Hz <= Mz; Hz++) lz([Hz + .5, tz, .5 - Mz], [Hz + .5, tz, Mz + .5]), lz([.5 - Mz, tz, Hz + .5], [Mz + .5, tz, Hz + .5]);
+                                  zz.strokeStyle = "rgba(255, 255, 255, 0.28)", zz.setLineDash([4, 4]);
+                                  for (const Hz of bn)
+                                    for (const zz of bn) {
+                                      const uz = [0, 1, 2].filter((uz => Hz[uz] !== zz[uz]));
+                                      1 === uz.length && Hz[uz[0]] < zz[uz[0]] && lz(Hz, zz)
                                     }
-                                  TT.setLineDash([])
-                                }(oT, hT, wT, RT, DT);
-                                const uT = FT.current,
-                                  vT = iT.map((TT => ({
-                                    particle: TT,
-                                    at: RT(TT.pos[0], TT.pos[1], TT.pos[2])
-                                  }))).filter((TT => null !== TT.at)).sort(((TT, oT) => oT.at.depth - TT.at.depth));
-                                oT.imageSmoothingEnabled = !1;
-                                for (const TT of function(TT) {
-                                    switch (TT) {
-                                      case qI.h.OneOne:
+                                  zz.setLineDash([])
+                                }(uz, sz, rz, vz, pz);
+                                const xz = Hz.current,
+                                  Jz = Ez.map((zz => ({
+                                    particle: zz,
+                                    at: vz(zz.pos[0], zz.pos[1], zz.pos[2])
+                                  }))).filter((zz => null !== zz.at)).sort(((zz, uz) => uz.at.depth - zz.at.depth));
+                                uz.imageSmoothingEnabled = !1;
+                                for (const zz of function(zz) {
+                                    switch (zz) {
+                                      case Ub.d.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case qI.h.Add:
+                                      case Ub.d.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case qI.h.Multiply:
+                                      case Ub.d.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case qI.h.MultiplyAdd:
+                                      case Ub.d.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2962,665 +2962,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(mT.blendMode)) {
-                                  oT.globalCompositeOperation = TT.operation;
+                                  }(oz.blendMode)) {
+                                  uz.globalCompositeOperation = zz.operation;
                                   for (const {
-                                      particle: iT,
-                                      at: zT
+                                      particle: Ez,
+                                      at: nz
                                     }
-                                    of vT) {
-                                    const [kT, WT, XT, BT] = NI(iT), FT = Math.max(1, iT.size * zT.scale);
-                                    oT.globalAlpha = TT.usesAlpha ? Math.min(1, Math.max(0, BT)) : 1, uT ? oT.drawImage(IT.get(uT, kT, WT, XT), zT.x - FT / 2, zT.y - FT / 2, FT, FT) : (oT.fillStyle = `rgb(${255*kT}, ${255*WT}, ${255*XT})`, oT.fillRect(zT.x - FT / 2, zT.y - FT / 2, FT, FT))
+                                    of Jz) {
+                                    const [iz, lz, Mz, tz] = jb(Ez), Hz = Math.max(1, Ez.size * nz.scale);
+                                    uz.globalAlpha = zz.usesAlpha ? Math.min(1, Math.max(0, tz)) : 1, xz ? uz.drawImage(bz.get(xz, iz, lz, Mz), nz.x - Hz / 2, nz.y - Hz / 2, Hz, Hz) : (uz.fillStyle = `rgb(${255*iz}, ${255*lz}, ${255*Mz})`, uz.fillRect(nz.x - Hz / 2, nz.y - Hz / 2, Hz, Hz))
                                   }
                                 }
-                                oT.globalCompositeOperation = "source-over", oT.globalAlpha = 1
+                                uz.globalCompositeOperation = "source-over", uz.globalAlpha = 1
                               };
-                              cT = requestAnimationFrame(AT);
-                              const gT = new IntersectionObserver((TT => {
-                                let [oT] = TT;
-                                KT = oT.isIntersecting
+                              Zz = requestAnimationFrame(Xz);
+                              const fz = new IntersectionObserver((zz => {
+                                let [uz] = zz;
+                                Rz = uz.isIntersecting
                               }));
-                              gT.observe(TT);
-                              const hT = oT => {
-                                  MT = oT.clientX, TT.setPointerCapture(oT.pointerId)
+                              fz.observe(zz);
+                              const sz = uz => {
+                                  Kz = uz.clientX, zz.setPointerCapture(uz.pointerId)
                                 },
-                                wT = TT => {
-                                  null !== MT && (kT += .01 * (TT.clientX - MT), MT = TT.clientX)
+                                rz = zz => {
+                                  null !== Kz && (iz += .01 * (zz.clientX - Kz), Kz = zz.clientX)
                                 },
-                                mT = () => {
-                                  MT = null
+                                oz = () => {
+                                  Kz = null
                                 };
-                              return TT.addEventListener("pointerdown", hT), TT.addEventListener("pointermove", wT), TT.addEventListener("pointerup", mT), TT.addEventListener("pointercancel", mT), () => {
-                                cancelAnimationFrame(cT), gT.disconnect(), ST.current = null, TT.removeEventListener("pointerdown", hT), TT.removeEventListener("pointermove", wT), TT.removeEventListener("pointerup", mT), TT.removeEventListener("pointercancel", mT)
+                              return zz.addEventListener("pointerdown", sz), zz.addEventListener("pointermove", rz), zz.addEventListener("pointerup", oz), zz.addEventListener("pointercancel", oz), () => {
+                                cancelAnimationFrame(Zz), fz.disconnect(), Oz.current = null, zz.removeEventListener("pointerdown", sz), zz.removeEventListener("pointermove", rz), zz.removeEventListener("pointerup", oz), zz.removeEventListener("pointercancel", oz)
                               }
-                            }), []), (0, cT.jsx)("canvas", {
-                              ref: WT,
+                            }), []), (0, Zz.jsx)("canvas", {
+                              ref: lz,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${oT.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${uz.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const Fz = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            Sz = [{
-                              mode: qI.h.OneOne,
+                          const Mn = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            tn = [{
+                              mode: Ub.d.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: qI.h.Standard,
+                              mode: Ub.d.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: qI.h.Add,
+                              mode: Ub.d.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: qI.h.Multiply,
+                              mode: Ub.d.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: qI.h.MultiplyAdd,
+                              mode: Ub.d.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            Dz = (0, iT.forwardRef)((function(TT, oT) {
-                              var IT, zT;
+                            Hn = (0, Ez.forwardRef)((function(zz, uz) {
+                              var bz, nz;
                               let {
-                                textures: WT
-                              } = TT;
-                              const XT = mi(),
-                                BT = (0, iT.useRef)(null),
-                                [FT, ST] = (0, iT.useState)(lI),
-                                [DT, LT] = (0, iT.useState)("example"),
-                                [xT, KT] = (0, iT.useState)(0),
-                                [rT, AT] = (0, iT.useState)(!1),
-                                hT = TT => {
-                                  const oT = "example" === TT ? lI : ZI(TT);
-                                  oT && (ST(oT), LT(TT))
+                                textures: lz
+                              } = zz;
+                              const Mz = fE(),
+                                tz = (0, Ez.useRef)(null),
+                                [Hz, Oz] = (0, Ez.useState)(gb),
+                                [pz, dz] = (0, Ez.useState)("example"),
+                                [Fz, Rz] = (0, Ez.useState)(0),
+                                [wz, Xz] = (0, Ez.useState)(!1),
+                                sz = zz => {
+                                  const uz = "example" === zz ? gb : cb(zz);
+                                  uz && (Oz(uz), dz(zz))
                                 };
-                              (0, iT.useImperativeHandle)(oT, (() => ({
-                                preview: TT => {
-                                  var oT;
-                                  hT(TT), null === (oT = BT.current) || void 0 === oT || oT.scrollIntoView({
+                              (0, Ez.useImperativeHandle)(uz, (() => ({
+                                preview: zz => {
+                                  var uz;
+                                  sz(zz), null === (uz = tz.current) || void 0 === uz || uz.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const wT = TT => {
-                                  ST({
-                                    ...FT,
-                                    ...TT
-                                  }), LT(null)
+                              const rz = zz => {
+                                  Oz({
+                                    ...Hz,
+                                    ...zz
+                                  }), dz(null)
                                 },
-                                mT = function(TT, oT) {
-                                  if (null !== oT) return `${oi}    presetId: "${oT}",\n${Ii}\n})`;
-                                  const IT = TT.velocityGradients.map((TT => `        {\n            timeFraction: ${dI(TT.timeFraction)},\n            factor: ${dI(TT.factor)},\n            factor2: ${dI(TT.factor2)},\n        },`)),
-                                    iT = [`    dir1: ${VI(TT.dir1)},`, `    dir2: ${VI(TT.dir2)},`, Ii, `    texture: "${TT.texture}",`, `    minLifeTime: ${dI(TT.minLifeTime)},`, `    maxLifeTime: ${dI(TT.maxLifeTime)},`, `    minEmitPower: ${dI(TT.minEmitPower)},`, `    maxEmitPower: ${dI(TT.maxEmitPower)},`, `    minSize: ${dI(TT.minSize)},`, `    maxSize: ${dI(TT.maxSize)},`, `    manualEmitCount: ${dI(TT.manualEmitCount)},`, `    gravity: ${VI(TT.gravity)},`, `    colorGradients: ${Ti(TT.colorGradients,"    ")},`, `    velocityGradients: ${IT.length>0?`[\n${IT.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${dI(TT.blendMode)},`];
-                                  return void 0 !== TT.hideDist && iT.push(`    hideDist: ${dI(TT.hideDist)},`), `${oi}${iT.join("\n")}\n})`
-                                }(FT, null === DT || "example" === DT ? null : DT),
-                                RT = WT.includes(FT.texture) ? WT : [...WT, FT.texture];
-                              return (0, cT.jsxs)("section", {
-                                ref: BT,
+                                oz = function(zz, uz) {
+                                  if (null !== uz) return `${kb}    presetId: "${uz}",\n${zE}\n})`;
+                                  const bz = zz.velocityGradients.map((zz => `        {\n            timeFraction: ${Bb(zz.timeFraction)},\n            factor: ${Bb(zz.factor)},\n            factor2: ${Bb(zz.factor2)},\n        },`)),
+                                    Ez = [`    dir1: ${Cb(zz.dir1)},`, `    dir2: ${Cb(zz.dir2)},`, zE, `    texture: "${zz.texture}",`, `    minLifeTime: ${Bb(zz.minLifeTime)},`, `    maxLifeTime: ${Bb(zz.maxLifeTime)},`, `    minEmitPower: ${Bb(zz.minEmitPower)},`, `    maxEmitPower: ${Bb(zz.maxEmitPower)},`, `    minSize: ${Bb(zz.minSize)},`, `    maxSize: ${Bb(zz.maxSize)},`, `    manualEmitCount: ${Bb(zz.manualEmitCount)},`, `    gravity: ${Cb(zz.gravity)},`, `    colorGradients: ${Yb(zz.colorGradients,"    ")},`, `    velocityGradients: ${bz.length>0?`[\n${bz.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Bb(zz.blendMode)},`];
+                                  return void 0 !== zz.hideDist && Ez.push(`    hideDist: ${Bb(zz.hideDist)},`), `${kb}${Ez.join("\n")}\n})`
+                                }(Hz, null === pz || "example" === pz ? null : pz),
+                                vz = lz.includes(Hz.texture) ? lz : [...lz, Hz.texture];
+                              return (0, Zz.jsxs)("section", {
+                                ref: tz,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, cT.jsxs)("header", {
+                                children: [(0, Zz.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, cT.jsxs)("div", {
-                                    children: [(0, cT.jsx)("div", {
+                                  children: [(0, Zz.jsxs)("div", {
+                                    children: [(0, Zz.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, cT.jsx)("div", {
+                                    }), (0, Zz.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, cT.jsx)(gT, {
-                                    text: mT,
+                                  }), (0, Zz.jsx)(fz, {
+                                    text: oz,
                                     label: "Copy code"
                                   })]
-                                }), (0, cT.jsxs)("div", {
+                                }), (0, Zz.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, cT.jsx)("button", {
+                                  children: [(0, Zz.jsx)("button", {
                                     type: "button",
-                                    className: kT()("DocsVariantChip", {
-                                      Active: "example" === DT
+                                    className: iz()("DocsVariantChip", {
+                                      Active: "example" === pz
                                     }),
                                     onClick: () => {
-                                      hT("example")
+                                      sz("example")
                                     },
                                     children: "Example"
-                                  }), Fz.filter((TT => null !== ZI(TT))).map((TT => (0, cT.jsx)("button", {
+                                  }), Mn.filter((zz => null !== cb(zz))).map((zz => (0, Zz.jsx)("button", {
                                     type: "button",
-                                    className: kT()("DocsVariantChip", {
-                                      Active: DT === TT
+                                    className: iz()("DocsVariantChip", {
+                                      Active: pz === zz
                                     }),
                                     onClick: () => {
-                                      hT(TT)
+                                      sz(zz)
                                     },
-                                    children: TT
-                                  }, TT))), (0, cT.jsxs)("select", {
+                                    children: zz
+                                  }, zz))), (0, Zz.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== DT && void 0 !== DT ? DT : "custom",
+                                    value: null !== pz && void 0 !== pz ? pz : "custom",
                                     "aria-label": "Preset",
-                                    onChange: TT => {
-                                      hT(TT.target.value)
+                                    onChange: zz => {
+                                      sz(zz.target.value)
                                     },
-                                    children: [(0, cT.jsx)("option", {
+                                    children: [(0, Zz.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === DT && (0, cT.jsx)("option", {
+                                    }), null === pz && (0, Zz.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), nI.e.map((TT => (0, cT.jsx)("option", {
-                                      value: TT,
-                                      children: TT
-                                    }, TT)))]
+                                    }), hb.d.map((zz => (0, Zz.jsx)("option", {
+                                      value: zz,
+                                      children: zz
+                                    }, zz)))]
                                   })]
-                                }), (0, cT.jsxs)("div", {
+                                }), (0, Zz.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, cT.jsxs)("div", {
+                                  children: [(0, Zz.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, cT.jsx)(Bz, {
-                                      opts: FT,
-                                      textureUrl: null !== (IT = null === XT || void 0 === XT ? void 0 : XT.getParticleTextureUrl(FT.texture)) && void 0 !== IT ? IT : null,
-                                      burst: xT,
-                                      paused: rT
-                                    }), (0, cT.jsxs)("div", {
+                                    children: [(0, Zz.jsx)(nn, {
+                                      opts: Hz,
+                                      textureUrl: null !== (bz = null === Mz || void 0 === Mz ? void 0 : Mz.getParticleTextureUrl(Hz.texture)) && void 0 !== bz ? bz : null,
+                                      burst: Fz,
+                                      paused: wz
+                                    }), (0, Zz.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, cT.jsxs)("button", {
+                                      children: [(0, Zz.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          KT(xT + 1)
+                                          Rz(Fz + 1)
                                         },
-                                        children: [(0, cT.jsx)(MT, {
+                                        children: [(0, Zz.jsx)(Kz, {
                                           name: "replay"
-                                        }), (0, cT.jsx)("span", {
+                                        }), (0, Zz.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, cT.jsxs)("button", {
+                                      }), (0, Zz.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": rT,
+                                        "aria-pressed": wz,
                                         onClick: () => {
-                                          AT(!rT)
+                                          Xz(!wz)
                                         },
-                                        children: [(0, cT.jsx)(MT, {
-                                          name: rT ? "play" : "pause"
-                                        }), (0, cT.jsx)("span", {
-                                          children: rT ? "Loop" : "Stop looping"
+                                        children: [(0, Zz.jsx)(Kz, {
+                                          name: wz ? "play" : "pause"
+                                        }), (0, Zz.jsx)("span", {
+                                          children: wz ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, cT.jsxs)("div", {
+                                  }), (0, Zz.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, cT.jsxs)("div", {
+                                    children: [(0, Zz.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, cT.jsxs)("div", {
+                                      children: [(0, Zz.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, cT.jsx)("span", {
+                                        children: [(0, Zz.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, cT.jsx)("code", {
+                                        }), (0, Zz.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: FT.texture
+                                          children: Hz.texture
                                         })]
-                                      }), (0, cT.jsx)("div", {
+                                      }), (0, Zz.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: RT.map((TT => {
-                                          var oT;
-                                          const IT = null !== (oT = null === XT || void 0 === XT ? void 0 : XT.getParticleTextureUrl(TT)) && void 0 !== oT ? oT : null;
-                                          return (0, cT.jsx)("button", {
+                                        children: vz.map((zz => {
+                                          var uz;
+                                          const bz = null !== (uz = null === Mz || void 0 === Mz ? void 0 : Mz.getParticleTextureUrl(zz)) && void 0 !== uz ? uz : null;
+                                          return (0, Zz.jsx)("button", {
                                             type: "button",
-                                            className: kT()("DocsParticleTexture", {
-                                              Active: FT.texture === TT
+                                            className: iz()("DocsParticleTexture", {
+                                              Active: Hz.texture === zz
                                             }),
-                                            title: TT,
-                                            "aria-label": TT,
-                                            "aria-pressed": FT.texture === TT,
+                                            title: zz,
+                                            "aria-label": zz,
+                                            "aria-pressed": Hz.texture === zz,
                                             onClick: () => {
-                                              wT({
-                                                texture: TT
+                                              rz({
+                                                texture: zz
                                               })
                                             },
-                                            children: IT ? (0, cT.jsx)("img", {
-                                              src: IT,
+                                            children: bz ? (0, Zz.jsx)("img", {
+                                              src: bz,
                                               alt: ""
-                                            }) : (0, cT.jsx)(MT, {
+                                            }) : (0, Zz.jsx)(Kz, {
                                               name: "image"
                                             })
-                                          }, TT)
+                                          }, zz)
                                         }))
                                       })]
-                                    }), (0, cT.jsx)(Iz, {
+                                    }), (0, Zz.jsx)(YE, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: FT.manualEmitCount,
-                                      onChange: TT => {
-                                        wT({
-                                          manualEmitCount: TT
+                                      value: Hz.manualEmitCount,
+                                      onChange: zz => {
+                                        rz({
+                                          manualEmitCount: zz
                                         })
                                       }
-                                    }), (0, cT.jsx)(oz, {
+                                    }), (0, Zz.jsx)(CE, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: FT.minLifeTime,
-                                      high: FT.maxLifeTime,
-                                      onChange: (TT, oT) => {
-                                        wT({
-                                          minLifeTime: TT,
-                                          maxLifeTime: oT
+                                      low: Hz.minLifeTime,
+                                      high: Hz.maxLifeTime,
+                                      onChange: (zz, uz) => {
+                                        rz({
+                                          minLifeTime: zz,
+                                          maxLifeTime: uz
                                         })
                                       }
-                                    }), (0, cT.jsx)(oz, {
+                                    }), (0, Zz.jsx)(CE, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: FT.minEmitPower,
-                                      high: FT.maxEmitPower,
-                                      onChange: (TT, oT) => {
-                                        wT({
-                                          minEmitPower: TT,
-                                          maxEmitPower: oT
+                                      low: Hz.minEmitPower,
+                                      high: Hz.maxEmitPower,
+                                      onChange: (zz, uz) => {
+                                        rz({
+                                          minEmitPower: zz,
+                                          maxEmitPower: uz
                                         })
                                       }
-                                    }), (0, cT.jsx)(oz, {
+                                    }), (0, Zz.jsx)(CE, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: FT.minSize,
-                                      high: FT.maxSize,
-                                      onChange: (TT, oT) => {
-                                        wT({
-                                          minSize: TT,
-                                          maxSize: oT
+                                      low: Hz.minSize,
+                                      high: Hz.maxSize,
+                                      onChange: (zz, uz) => {
+                                        rz({
+                                          minSize: zz,
+                                          maxSize: uz
                                         })
                                       }
-                                    }), (0, cT.jsx)(Iz, {
+                                    }), (0, Zz.jsx)(YE, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (zT = FT.gravity[1]) && void 0 !== zT ? zT : 0,
-                                      onChange: TT => {
-                                        var oT, IT;
-                                        wT({
-                                          gravity: [null !== (oT = FT.gravity[0]) && void 0 !== oT ? oT : 0, TT, null !== (IT = FT.gravity[2]) && void 0 !== IT ? IT : 0]
+                                      value: null !== (nz = Hz.gravity[1]) && void 0 !== nz ? nz : 0,
+                                      onChange: zz => {
+                                        var uz, bz;
+                                        rz({
+                                          gravity: [null !== (uz = Hz.gravity[0]) && void 0 !== uz ? uz : 0, zz, null !== (bz = Hz.gravity[2]) && void 0 !== bz ? bz : 0]
                                         })
                                       }
-                                    }), (0, cT.jsxs)("div", {
+                                    }), (0, Zz.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, cT.jsx)("div", {
+                                      children: [(0, Zz.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, cT.jsx)("span", {
+                                        children: (0, Zz.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, cT.jsx)("select", {
+                                      }), (0, Zz.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: FT.blendMode,
+                                        value: Hz.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: TT => {
-                                          wT({
-                                            blendMode: Number(TT.target.value)
+                                        onChange: zz => {
+                                          rz({
+                                            blendMode: Number(zz.target.value)
                                           })
                                         },
-                                        children: Sz.map((TT => {
+                                        children: tn.map((zz => {
                                           let {
-                                            mode: oT,
-                                            label: IT
-                                          } = TT;
-                                          return (0, cT.jsx)("option", {
-                                            value: oT,
-                                            children: IT
-                                          }, oT)
+                                            mode: uz,
+                                            label: bz
+                                          } = zz;
+                                          return (0, Zz.jsx)("option", {
+                                            value: uz,
+                                            children: bz
+                                          }, uz)
                                         }))
                                       })]
-                                    }), (0, cT.jsx)(iz, {
-                                      opts: FT,
-                                      onChange: TT => {
-                                        wT({
-                                          colorGradients: TT
+                                    }), (0, Zz.jsx)(kE, {
+                                      opts: Hz,
+                                      onChange: zz => {
+                                        rz({
+                                          colorGradients: zz
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, cT.jsx)(eT, {
-                                  code: mT,
+                                }), (0, Zz.jsx)(Nz, {
+                                  code: oz,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var Lz = IT(3992),
-                            xz = IT(1729);
+                          var On = bz(4249),
+                            pn = bz(1846);
 
-                          function cz(TT, oT) {
-                            return TT ? Lz.d.includes(oT) ? TT.getIngameIconUrl(oT) : TT.getItemIconUrl(oT) : null
+                          function dn(zz, uz) {
+                            return zz ? On.d.includes(uz) ? zz.getIngameIconUrl(uz) : zz.getItemIconUrl(uz) : null
                           }
 
-                          function Kz(TT) {
-                            var oT, IT, iT;
+                          function Fn(zz) {
+                            var uz, bz, Ez;
                             let {
-                              part: zT,
-                              assets: WT
-                            } = TT;
-                            const XT = cz(WT, zT.icon),
-                              BT = null !== (oT = null === (IT = zT.style) || void 0 === IT ? void 0 : IT.fontSize) && void 0 !== oT ? oT : "1.8em",
-                              FT = (0, Oo.Sb)(zT.style);
-                            return (0, cT.jsxs)("span", {
-                              className: kT()("DocsBloxdTextIcon", {
-                                Missing: !XT
+                              part: nz,
+                              assets: lz
+                            } = zz;
+                            const Mz = dn(lz, nz.icon),
+                              tz = null !== (uz = null === (bz = nz.style) || void 0 === bz ? void 0 : bz.fontSize) && void 0 !== uz ? uz : "1.8em",
+                              Hz = (0, hu.jc)(nz.style);
+                            return (0, Zz.jsxs)("span", {
+                              className: iz()("DocsBloxdTextIcon", {
+                                Missing: !Mz
                               }),
                               style: {
-                                width: BT,
-                                height: BT,
-                                opacity: null === (iT = zT.style) || void 0 === iT ? void 0 : iT.opacity
+                                width: tz,
+                                height: tz,
+                                opacity: null === (Ez = nz.style) || void 0 === Ez ? void 0 : Ez.opacity
                               },
-                              title: XT ? void 0 : `No Bloxd icon, item or block is called "${zT.icon}"`,
-                              children: [XT && FT && (0, cT.jsx)("span", {
+                              title: Mz ? void 0 : `No Bloxd icon, item or block is called "${nz.icon}"`,
+                              children: [Mz && Hz && (0, Zz.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: FT,
-                                  maskImage: `url("${XT}")`,
-                                  WebkitMaskImage: `url("${XT}")`
+                                  background: Hz,
+                                  maskImage: `url("${Mz}")`,
+                                  WebkitMaskImage: `url("${Mz}")`
                                 }
-                              }), XT ? (0, cT.jsx)("img", {
-                                src: XT,
+                              }), Mz ? (0, Zz.jsx)("img", {
+                                src: Mz,
                                 alt: "",
-                                className: kT()({
-                                  Tinted: FT
+                                className: iz()({
+                                  Tinted: Hz
                                 })
-                              }) : (0, cT.jsx)(MT, {
+                              }) : (0, Zz.jsx)(Kz, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function Mz(TT) {
+                          function Zn(zz) {
                             let {
-                              parts: oT,
-                              className: IT
-                            } = TT;
-                            const iT = mi(),
-                              zT = [];
-                            let WT = [];
-                            const XT = TT => {
-                              WT.length > 0 && (zT.push((0, cT.jsx)(xz.c, {
-                                text: WT
-                              }, `run-${TT}`)), WT = [])
+                              parts: uz,
+                              className: bz
+                            } = zz;
+                            const Ez = fE(),
+                              nz = [];
+                            let lz = [];
+                            const Mz = zz => {
+                              lz.length > 0 && (nz.push((0, Zz.jsx)(pn.b, {
+                                text: lz
+                              }, `run-${zz}`)), lz = [])
                             };
-                            return oT.forEach(((TT, oT) => {
-                              "icon" !== so(TT) || no(TT.icon) ? WT.push(TT) : (XT(oT), zT.push((0, cT.jsx)(Kz, {
-                                part: TT,
-                                assets: iT
-                              }, `icon-${oT}`)))
-                            })), XT(oT.length), (0, cT.jsx)("div", {
-                              className: kT()("DocsStyledTextPreview", IT),
-                              children: zT
+                            return uz.forEach(((zz, uz) => {
+                              "icon" !== yu(zz) || cu(zz.icon) ? lz.push(zz) : (Mz(uz), nz.push((0, Zz.jsx)(Fn, {
+                                part: zz,
+                                assets: Ez
+                              }, `icon-${uz}`)))
+                            })), Mz(uz.length), (0, Zz.jsx)("div", {
+                              className: iz()("DocsStyledTextPreview", bz),
+                              children: nz
                             })
                           }
-                          const rz = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let Az = null;
+                          const Rn = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let Kn = null;
 
-                          function gz(TT) {
-                            if (Az ??= document.createElement("canvas").getContext("2d"), !Az) return "#000000";
-                            Az.fillStyle = "#000000", Az.fillStyle = TT;
-                            const oT = Az.fillStyle;
-                            return oT.startsWith("#") ? oT : "#000000"
+                          function wn(zz) {
+                            if (Kn ??= document.createElement("canvas").getContext("2d"), !Kn) return "#000000";
+                            Kn.fillStyle = "#000000", Kn.fillStyle = zz;
+                            const uz = Kn.fillStyle;
+                            return uz.startsWith("#") ? uz : "#000000"
                           }
 
-                          function hz(TT) {
+                          function Xn(zz) {
                             let {
-                              value: oT,
-                              label: IT,
-                              onChange: iT
-                            } = TT;
-                            return (0, cT.jsxs)("span", {
+                              value: uz,
+                              label: bz,
+                              onChange: Ez
+                            } = zz;
+                            return (0, Zz.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, cT.jsx)("input", {
+                              children: [(0, Zz.jsx)("input", {
                                 type: "color",
-                                value: gz(oT),
-                                "aria-label": `${IT} picker`,
-                                onChange: TT => {
-                                  iT(TT.target.value)
+                                value: wn(uz),
+                                "aria-label": `${bz} picker`,
+                                onChange: zz => {
+                                  Ez(zz.target.value)
                                 }
-                              }), (0, cT.jsx)("input", {
+                              }), (0, Zz.jsx)("input", {
                                 type: "text",
-                                value: oT,
+                                value: uz,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": IT,
+                                "aria-label": bz,
                                 spellCheck: !1,
-                                onChange: TT => {
-                                  iT(TT.target.value)
+                                onChange: zz => {
+                                  Ez(zz.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function wz(TT) {
+                          function fn(zz) {
                             let {
-                              value: oT,
-                              fontAwesomeIcons: IT,
-                              onChange: zT
-                            } = TT;
-                            const WT = mi(),
-                              [XT, BT] = (0, iT.useState)(no(oT) ? "fontAwesome" : "bloxd"),
-                              [FT, ST] = (0, iT.useState)(""),
-                              DT = FT.trim().toLowerCase(),
-                              LT = "bloxd" === XT ? Lz.d : IT,
-                              xT = DT ? LT.filter((TT => TT.toLowerCase().includes(DT))) : LT;
-                            return (0, cT.jsxs)("div", {
+                              value: uz,
+                              fontAwesomeIcons: bz,
+                              onChange: nz
+                            } = zz;
+                            const lz = fE(),
+                              [Mz, tz] = (0, Ez.useState)(cu(uz) ? "fontAwesome" : "bloxd"),
+                              [Hz, Oz] = (0, Ez.useState)(""),
+                              pz = Hz.trim().toLowerCase(),
+                              dz = "bloxd" === Mz ? On.d : bz,
+                              Fz = pz ? dz.filter((zz => zz.toLowerCase().includes(pz))) : dz;
+                            return (0, Zz.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, cT.jsx)("input", {
+                              children: [(0, Zz.jsx)("input", {
                                 type: "text",
-                                value: oT,
+                                value: uz,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: TT => {
-                                  zT(TT.target.value)
+                                onChange: zz => {
+                                  nz(zz.target.value)
                                 }
-                              }), (0, cT.jsx)("p", {
+                              }), (0, Zz.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, cT.jsxs)("div", {
+                              }), (0, Zz.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((TT => (0, cT.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((zz => (0, Zz.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": XT === TT,
-                                    className: kT()("DocsVariantChip", {
-                                      Active: XT === TT
+                                    "aria-selected": Mz === zz,
+                                    className: iz()("DocsVariantChip", {
+                                      Active: Mz === zz
                                     }),
                                     onClick: () => {
-                                      BT(TT)
+                                      tz(zz)
                                     },
-                                    children: "bloxd" === TT ? `Bloxd icons (${Lz.d.length})` : `Font Awesome (${IT.length})`
-                                  }, TT))), (0, cT.jsx)("input", {
+                                    children: "bloxd" === zz ? `Bloxd icons (${On.d.length})` : `Font Awesome (${bz.length})`
+                                  }, zz))), (0, Zz.jsx)("input", {
                                     type: "search",
-                                    value: FT,
+                                    value: Hz,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: TT => {
-                                      ST(TT.target.value)
+                                    onChange: zz => {
+                                      Oz(zz.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, cT.jsxs)("div", {
+                              }), (0, Zz.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [xT.map((TT => {
-                                  const IT = "bloxd" === XT ? cz(WT, TT) : null;
-                                  return (0, cT.jsx)("button", {
+                                children: [Fz.map((zz => {
+                                  const bz = "bloxd" === Mz ? dn(lz, zz) : null;
+                                  return (0, Zz.jsx)("button", {
                                     type: "button",
-                                    title: TT,
-                                    "aria-label": TT,
-                                    "aria-pressed": TT === oT,
-                                    className: kT()("DocsIconPickerOption", {
-                                      Active: TT === oT
+                                    title: zz,
+                                    "aria-label": zz,
+                                    "aria-pressed": zz === uz,
+                                    className: iz()("DocsIconPickerOption", {
+                                      Active: zz === uz
                                     }),
                                     onClick: () => {
-                                      zT(TT)
+                                      nz(zz)
                                     },
-                                    children: "fontAwesome" === XT ? (0, cT.jsx)(mI.e, {
-                                      name: TT
-                                    }) : IT ? (0, cT.jsx)("img", {
-                                      src: IT,
+                                    children: "fontAwesome" === Mz ? (0, Zz.jsx)(sb.c, {
+                                      name: zz
+                                    }) : bz ? (0, Zz.jsx)("img", {
+                                      src: bz,
                                       alt: ""
-                                    }) : (0, cT.jsx)(MT, {
+                                    }) : (0, Zz.jsx)(Kz, {
                                       name: "image"
                                     })
-                                  }, TT)
-                                })), 0 === xT.length && (0, cT.jsxs)("p", {
+                                  }, zz)
+                                })), 0 === Fz.length && (0, Zz.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", FT, "\u201d."]
+                                  children: ["No icons match \u201c", Hz, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function mz(TT) {
+                          function sn(zz) {
                             let {
-                              property: oT,
-                              value: IT,
-                              fontAwesomeIcons: iT,
-                              onChange: zT
-                            } = TT;
+                              property: uz,
+                              value: bz,
+                              fontAwesomeIcons: Ez,
+                              onChange: nz
+                            } = zz;
                             const {
-                              field: kT,
-                              label: WT
-                            } = oT, XT = TT => "" !== TT || oT.isRequired ? TT : void 0;
-                            switch (kT.kind) {
+                              field: iz,
+                              label: lz
+                            } = uz, Mz = zz => "" !== zz || uz.isRequired ? zz : void 0;
+                            switch (iz.kind) {
                               case "text":
-                                return kT.multiline ? (0, cT.jsx)("textarea", {
-                                  value: String(null !== IT && void 0 !== IT ? IT : ""),
+                                return iz.multiline ? (0, Zz.jsx)("textarea", {
+                                  value: String(null !== bz && void 0 !== bz ? bz : ""),
                                   rows: 2,
-                                  "aria-label": WT,
-                                  onChange: TT => {
-                                    zT(TT.target.value)
+                                  "aria-label": lz,
+                                  onChange: zz => {
+                                    nz(zz.target.value)
                                   }
-                                }) : (0, cT.jsx)("input", {
+                                }) : (0, Zz.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== IT && void 0 !== IT ? IT : ""),
-                                  "aria-label": WT,
-                                  onChange: TT => {
-                                    zT(XT(TT.target.value))
+                                  value: String(null !== bz && void 0 !== bz ? bz : ""),
+                                  "aria-label": lz,
+                                  onChange: zz => {
+                                    nz(Mz(zz.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, cT.jsx)("input", {
+                                return (0, Zz.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== IT && void 0 !== IT ? IT : ""),
-                                  placeholder: oT.defaultText,
+                                  value: String(null !== bz && void 0 !== bz ? bz : ""),
+                                  placeholder: uz.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": WT,
+                                  "aria-label": lz,
                                   spellCheck: !1,
-                                  onChange: TT => {
-                                    zT(XT(TT.target.value.trim()))
+                                  onChange: zz => {
+                                    nz(Mz(zz.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, cT.jsx)(hz, {
-                                  value: String(null !== IT && void 0 !== IT ? IT : ""),
-                                  label: WT,
-                                  onChange: TT => {
-                                    zT(XT(TT))
+                                return (0, Zz.jsx)(Xn, {
+                                  value: String(null !== bz && void 0 !== bz ? bz : ""),
+                                  label: lz,
+                                  onChange: zz => {
+                                    nz(Mz(zz))
                                   }
                                 });
                               case "colours": {
-                                const TT = Array.isArray(IT) ? IT : [],
-                                  oT = TT => {
-                                    zT(TT.length > 0 ? TT : void 0)
+                                const zz = Array.isArray(bz) ? bz : [],
+                                  uz = zz => {
+                                    nz(zz.length > 0 ? zz : void 0)
                                   };
-                                return (0, cT.jsxs)("div", {
+                                return (0, Zz.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [TT.map(((IT, iT) => (0, cT.jsxs)("span", {
+                                  children: [zz.map(((bz, Ez) => (0, Zz.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, cT.jsx)(hz, {
-                                      value: IT,
-                                      label: `${WT} ${iT+1}`,
-                                      onChange: IT => {
-                                        oT(TT.map(((TT, oT) => oT === iT ? IT : TT)))
+                                    children: [(0, Zz.jsx)(Xn, {
+                                      value: bz,
+                                      label: `${lz} ${Ez+1}`,
+                                      onChange: bz => {
+                                        uz(zz.map(((zz, uz) => uz === Ez ? bz : zz)))
                                       }
-                                    }), (0, cT.jsx)("button", {
+                                    }), (0, Zz.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${iT+1}`,
+                                      "aria-label": `Remove colour ${Ez+1}`,
                                       onClick: () => {
-                                        oT(TT.filter(((TT, oT) => oT !== iT)))
+                                        uz(zz.filter(((zz, uz) => uz !== Ez)))
                                       },
-                                      children: (0, cT.jsx)(MT, {
+                                      children: (0, Zz.jsx)(Kz, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, iT))), (0, cT.jsxs)("button", {
+                                  }, Ez))), (0, Zz.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var IT;
-                                      oT([...TT, null !== (IT = TT.at(-1)) && void 0 !== IT ? IT : "#ffffff"])
+                                      var bz;
+                                      uz([...zz, null !== (bz = zz.at(-1)) && void 0 !== bz ? bz : "#ffffff"])
                                     },
-                                    children: [(0, cT.jsx)(MT, {
+                                    children: [(0, Zz.jsx)(Kz, {
                                       name: "plus"
-                                    }), 0 === TT.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === zz.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var BT;
-                                const TT = "number" === typeof IT ? IT : Number(null !== (BT = oT.defaultText) && void 0 !== BT ? BT : 0);
-                                return (0, cT.jsxs)("span", {
+                                var tz;
+                                const zz = "number" === typeof bz ? bz : Number(null !== (tz = uz.defaultText) && void 0 !== tz ? tz : 0);
+                                return (0, Zz.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, cT.jsx)("input", {
+                                  children: [(0, Zz.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: TT,
-                                    "aria-label": WT,
-                                    onChange: TT => {
-                                      zT(Number(TT.target.value))
+                                    value: zz,
+                                    "aria-label": lz,
+                                    onChange: zz => {
+                                      nz(Number(zz.target.value))
                                     }
-                                  }), (0, cT.jsx)("output", {
-                                    children: TT.toFixed(2)
+                                  }), (0, Zz.jsx)("output", {
+                                    children: zz.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, cT.jsxs)("select", {
-                                  value: String(null !== IT && void 0 !== IT ? IT : ""),
-                                  "aria-label": WT,
-                                  onChange: TT => {
-                                    zT(XT(TT.target.value))
+                                return (0, Zz.jsxs)("select", {
+                                  value: String(null !== bz && void 0 !== bz ? bz : ""),
+                                  "aria-label": lz,
+                                  onChange: zz => {
+                                    nz(Mz(zz.target.value))
                                   },
-                                  children: [!oT.isRequired && (0, cT.jsxs)("option", {
+                                  children: [!uz.isRequired && (0, Zz.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", oT.defaultText, ")"]
-                                  }), kT.options.map((TT => (0, cT.jsx)("option", {
-                                    value: TT,
-                                    children: TT
-                                  }, TT)))]
+                                    children: ["Default (", uz.defaultText, ")"]
+                                  }), iz.options.map((zz => (0, Zz.jsx)("option", {
+                                    value: zz,
+                                    children: zz
+                                  }, zz)))]
                                 });
                               case "icon":
-                                return (0, cT.jsx)(wz, {
-                                  value: String(null !== IT && void 0 !== IT ? IT : ""),
-                                  fontAwesomeIcons: iT,
-                                  onChange: zT
+                                return (0, Zz.jsx)(fn, {
+                                  value: String(null !== bz && void 0 !== bz ? bz : ""),
+                                  fontAwesomeIcons: Ez,
+                                  onChange: nz
                                 })
                             }
                           }
 
-                          function ez(TT) {
-                            let oT;
+                          function rn(zz) {
+                            let uz;
                             try {
-                              oT = JSON.parse(TT)
-                            } catch (IT) {
+                              uz = JSON.parse(zz)
+                            } catch (bz) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${IT.message}`
+                                error: `Not valid JSON yet: ${bz.message}`
                               }
                             }
-                            return zI(oT) ? {
-                              part: oT,
+                            return bb(uz) ? {
+                              part: uz,
                               error: null
                             } : {
                               part: null,
@@ -3628,150 +3628,150 @@ export const modules = {
                             }
                           }
 
-                          function Rz(TT) {
+                          function Nn(zz) {
                             let {
-                              parts: oT,
-                              index: IT,
-                              fontAwesomeIcons: zT,
-                              onChange: kT,
-                              zC: WT,
-                              onClose: XT
-                            } = TT;
-                            const BT = (0, iT.useContext)(co),
-                              ST = (0, iT.useRef)(null),
-                              DT = oT[IT],
-                              LT = so(DT),
-                              [xT, KT] = (0, iT.useState)((() => JSON.stringify(DT, null, 2))),
-                              rT = (0, iT.useMemo)((() => "other" === LT ? ez(xT).error : null), [LT, xT]);
-                            (0, iT.useEffect)((() => {
-                              var TT;
-                              null === (TT = ST.current) || void 0 === TT || TT.focus()
+                              parts: uz,
+                              index: bz,
+                              fontAwesomeIcons: nz,
+                              onChange: iz,
+                              aJ: lz,
+                              onClose: Mz
+                            } = zz;
+                            const tz = (0, Ez.useContext)(Zu),
+                              Oz = (0, Ez.useRef)(null),
+                              pz = uz[bz],
+                              dz = yu(pz),
+                              [Fz, Rz] = (0, Ez.useState)((() => JSON.stringify(pz, null, 2))),
+                              wz = (0, Ez.useMemo)((() => "other" === dz ? rn(Fz).error : null), [dz, Fz]);
+                            (0, Ez.useEffect)((() => {
+                              var zz;
+                              null === (zz = Oz.current) || void 0 === zz || zz.focus()
                             }), []);
-                            const AT = (0, cT.jsx)("div", {
+                            const Xz = (0, Zz.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: TT => {
-                                TT.target === TT.currentTarget && XT()
+                              onMouseDown: zz => {
+                                zz.target === zz.currentTarget && Mz()
                               },
-                              children: (0, cT.jsxs)("div", {
-                                ref: ST,
+                              children: (0, Zz.jsxs)("div", {
+                                ref: Oz,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${IT+1}: ${qo[LT]}`,
+                                "aria-label": `Edit part ${bz+1}: ${gu[dz]}`,
                                 tabIndex: -1,
-                                onKeyDown: TT => {
-                                  "Escape" === TT.key ? (TT.stopPropagation(), XT()) : "Tab" === TT.key && ST.current && function(TT, oT) {
-                                    const IT = Array.from(TT.querySelectorAll(fo)),
-                                      iT = IT[0],
-                                      zT = IT.at(-1);
-                                    if (!iT || !zT) return;
-                                    const kT = document.activeElement;
-                                    !oT.shiftKey || kT !== iT && kT !== TT ? oT.shiftKey || kT !== zT || (oT.preventDefault(), iT.focus()) : (oT.preventDefault(), zT.focus())
-                                  }(ST.current, TT)
+                                onKeyDown: zz => {
+                                  "Escape" === zz.key ? (zz.stopPropagation(), Mz()) : "Tab" === zz.key && Oz.current && function(zz, uz) {
+                                    const bz = Array.from(zz.querySelectorAll(Tu)),
+                                      Ez = bz[0],
+                                      nz = bz.at(-1);
+                                    if (!Ez || !nz) return;
+                                    const iz = document.activeElement;
+                                    !uz.shiftKey || iz !== Ez && iz !== zz ? uz.shiftKey || iz !== nz || (uz.preventDefault(), Ez.focus()) : (uz.preventDefault(), nz.focus())
+                                  }(Oz.current, zz)
                                 },
-                                children: [(0, cT.jsxs)("header", {
+                                children: [(0, Zz.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, cT.jsxs)("div", {
-                                    children: [(0, cT.jsxs)("div", {
+                                  children: [(0, Zz.jsxs)("div", {
+                                    children: [(0, Zz.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", IT + 1]
-                                    }), (0, cT.jsx)("div", {
+                                      children: ["Part ", bz + 1]
+                                    }), (0, Zz.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: qo[LT]
+                                      children: gu[dz]
                                     })]
-                                  }), (0, cT.jsx)("button", {
+                                  }), (0, Zz.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: XT,
-                                    children: (0, cT.jsx)(MT, {
+                                    onClick: Mz,
+                                    children: (0, Zz.jsx)(Kz, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, cT.jsx)(Mz, {
-                                  parts: oT,
+                                }), (0, Zz.jsx)(Zn, {
+                                  parts: uz,
                                   className: "DocsTextDialogPreview"
-                                }), (0, cT.jsx)("div", {
+                                }), (0, Zz.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === LT ? (0, cT.jsxs)("label", {
+                                  children: "other" === dz ? (0, Zz.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, cT.jsx)("span", {
+                                    children: [(0, Zz.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, cT.jsx)("textarea", {
+                                    }), (0, Zz.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: xT,
+                                      value: Fz,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: TT => {
-                                        KT(TT.target.value);
-                                        const oT = ez(TT.target.value);
-                                        null !== oT.part && kT(oT.part)
+                                      onChange: zz => {
+                                        Rz(zz.target.value);
+                                        const uz = rn(zz.target.value);
+                                        null !== uz.part && iz(uz.part)
                                       }
-                                    }), rT && (0, cT.jsx)("span", {
+                                    }), wz && (0, Zz.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: rT
+                                      children: wz
                                     })]
-                                  }) : Go[LT].map((TT => {
-                                    const oT = bo(DT, TT.path),
-                                      IT = TT.isRequired ? JSON.stringify(No(DT, TT.path)) === JSON.stringify(DT) : void 0 === oT;
-                                    return (0, cT.jsxs)("div", {
+                                  }) : Qu[dz].map((zz => {
+                                    const uz = eu(pz, zz.path),
+                                      bz = zz.isRequired ? JSON.stringify(Iu(pz, zz.path)) === JSON.stringify(pz) : void 0 === uz;
+                                    return (0, Zz.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, cT.jsxs)("div", {
+                                      children: [(0, Zz.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, cT.jsx)("span", {
-                                          children: TT.label
-                                        }), (0, cT.jsxs)("button", {
+                                        children: [(0, Zz.jsx)("span", {
+                                          children: zz.label
+                                        }), (0, Zz.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: IT,
-                                          "aria-label": `Reset ${TT.label.toLowerCase()} to default`,
+                                          disabled: bz,
+                                          "aria-label": `Reset ${zz.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            kT(No(DT, TT.path))
+                                            iz(Iu(pz, zz.path))
                                           },
-                                          children: [(0, cT.jsx)(MT, {
+                                          children: [(0, Zz.jsx)(Kz, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, cT.jsx)(mz, {
-                                        property: TT,
-                                        value: oT,
-                                        fontAwesomeIcons: zT,
-                                        onChange: oT => {
-                                          kT(yo(DT, TT.path, oT))
+                                      }), (0, Zz.jsx)(sn, {
+                                        property: zz,
+                                        value: uz,
+                                        fontAwesomeIcons: nz,
+                                        onChange: uz => {
+                                          iz(ju(pz, zz.path, uz))
                                         }
-                                      }), !TT.isRequired && (0, cT.jsxs)("span", {
+                                      }), !zz.isRequired && (0, Zz.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", TT.defaultText]
+                                        children: ["Default: ", zz.defaultText]
                                       })]
-                                    }, TT.path.join("."))
+                                    }, zz.path.join("."))
                                   }))
-                                }), (0, cT.jsxs)("footer", {
+                                }), (0, Zz.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, cT.jsxs)("button", {
+                                  children: [(0, Zz.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: WT,
-                                    children: [(0, cT.jsx)(MT, {
+                                    onClick: lz,
+                                    children: [(0, Zz.jsx)(Kz, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, cT.jsx)("button", {
+                                  }), (0, Zz.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: XT,
+                                    onClick: Mz,
                                     children: "Done"
                                   })]
-                                }), (0, cT.jsx)("datalist", {
+                                }), (0, Zz.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: rz.map((TT => (0, cT.jsx)("option", {
-                                    value: TT
-                                  }, TT)))
+                                  children: Rn.map((zz => (0, Zz.jsx)("option", {
+                                    value: zz
+                                  }, zz)))
                                 })]
                               })
                             });
-                            return BT ? (0, FT.createPortal)(AT, BT) : AT
+                            return tz ? (0, Hz.createPortal)(Xz, tz) : Xz
                           }
-                          const uz = [{
+                          const vn = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3815,265 +3815,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            vz = Object.keys(Zo);
+                            xn = Object.keys(Su);
 
-                          function Ez(TT) {
+                          function Jn(zz) {
                             let {
-                              fontAwesomeIcons: oT
-                            } = TT;
-                            const [IT, zT] = (0, iT.useState)(uz[0].parts), [WT, XT] = (0, iT.useState)((() => oI(uz[0].parts))), [BT, FT] = (0, iT.useState)(null), [ST, DT] = (0, iT.useState)(!1), [LT, xT] = (0, iT.useState)(null), [KT, rT] = (0, iT.useState)(!1), [AT, gT] = (0, iT.useState)(null), hT = (0, iT.useRef)(null), wT = oI(IT);
-                            (0, iT.useLayoutEffect)((() => {
-                              var TT;
-                              if (!AT) return;
-                              const oT = TT => {
-                                  var oT;
-                                  return null === (oT = hT.current) || void 0 === oT ? void 0 : oT.querySelector(`[data-focus-key="${TT}"]`)
+                              fontAwesomeIcons: uz
+                            } = zz;
+                            const [bz, nz] = (0, Ez.useState)(vn[0].parts), [lz, Mz] = (0, Ez.useState)((() => ku(vn[0].parts))), [tz, Hz] = (0, Ez.useState)(null), [Oz, pz] = (0, Ez.useState)(!1), [dz, Fz] = (0, Ez.useState)(null), [Rz, wz] = (0, Ez.useState)(!1), [Xz, fz] = (0, Ez.useState)(null), sz = (0, Ez.useRef)(null), rz = ku(bz);
+                            (0, Ez.useLayoutEffect)((() => {
+                              var zz;
+                              if (!Xz) return;
+                              const uz = zz => {
+                                  var uz;
+                                  return null === (uz = sz.current) || void 0 === uz ? void 0 : uz.querySelector(`[data-focus-key="${zz}"]`)
                                 },
-                                IT = oT(AT.key);
-                              null === (TT = IT && !IT.disabled ? IT : oT(AT.fallback)) || void 0 === TT || TT.focus(), gT(null)
-                            }), [AT]);
-                            const mT = TT => {
-                                zT(TT), XT(oI(TT)), FT(null)
+                                bz = uz(Xz.key);
+                              null === (zz = bz && !bz.disabled ? bz : uz(Xz.fallback)) || void 0 === zz || zz.focus(), fz(null)
+                            }), [Xz]);
+                            const oz = zz => {
+                                nz(zz), Mz(ku(zz)), Hz(null)
                               },
-                              RT = TT => {
-                                mT(IT.filter(((oT, IT) => IT !== TT))), gT({
-                                  key: `edit-${Math.min(TT,IT.length-2)}`,
+                              vz = zz => {
+                                oz(bz.filter(((uz, bz) => bz !== zz))), fz({
+                                  key: `edit-${Math.min(zz,bz.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              uT = (TT, oT) => {
-                                const iT = [...IT],
-                                  [zT] = iT.splice(TT, 1);
-                                iT.splice(TT + oT, 0, zT), mT(iT);
-                                gT({
-                                  key: `${oT<0?"up":"down"}-${TT+oT}`,
-                                  fallback: `edit-${TT+oT}`
+                              xz = (zz, uz) => {
+                                const Ez = [...bz],
+                                  [nz] = Ez.splice(zz, 1);
+                                Ez.splice(zz + uz, 0, nz), oz(Ez);
+                                fz({
+                                  key: `${uz<0?"up":"down"}-${zz+uz}`,
+                                  fallback: `edit-${zz+uz}`
                                 })
                               };
-                            return (0, cT.jsxs)("section", {
-                              ref: hT,
+                            return (0, Zz.jsxs)("section", {
+                              ref: sz,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, cT.jsx)("header", {
+                              children: [(0, Zz.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, cT.jsxs)("div", {
-                                  children: [(0, cT.jsx)("div", {
+                                children: (0, Zz.jsxs)("div", {
+                                  children: [(0, Zz.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, cT.jsx)("div", {
+                                  }), (0, Zz.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, cT.jsx)("div", {
+                              }), (0, Zz.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: uz.map((TT => (0, cT.jsx)("button", {
+                                children: vn.map((zz => (0, Zz.jsx)("button", {
                                   type: "button",
-                                  className: kT()("DocsVariantChip", {
-                                    Active: wT === oI(TT.parts)
+                                  className: iz()("DocsVariantChip", {
+                                    Active: rz === ku(zz.parts)
                                   }),
                                   onClick: () => {
-                                    mT(TT.parts)
+                                    oz(zz.parts)
                                   },
-                                  children: TT.label
-                                }, TT.label)))
-                              }), (0, cT.jsx)(Mz, {
-                                parts: IT,
+                                  children: zz.label
+                                }, zz.label)))
+                              }), (0, Zz.jsx)(Zn, {
+                                parts: bz,
                                 className: "DocsTextEditorPreview"
-                              }), (0, cT.jsxs)("div", {
+                              }), (0, Zz.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, cT.jsxs)("div", {
+                                children: [(0, Zz.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, cT.jsx)("div", {
+                                  children: [(0, Zz.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, cT.jsxs)("ol", {
+                                  }), (0, Zz.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [IT.map(((TT, oT) => {
-                                      const iT = so(TT);
-                                      return (0, cT.jsxs)("li", {
+                                    children: [bz.map(((zz, uz) => {
+                                      const Ez = yu(zz);
+                                      return (0, Zz.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, cT.jsxs)("button", {
+                                        children: [(0, Zz.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${oT}`,
-                                          "aria-label": `Edit part ${oT+1}, ${qo[iT]}`,
+                                          "data-focus-key": `edit-${uz}`,
+                                          "aria-label": `Edit part ${uz+1}, ${gu[Ez]}`,
                                           onClick: () => {
-                                            xT(oT)
+                                            Fz(uz)
                                           },
-                                          children: [(0, cT.jsx)("span", {
+                                          children: [(0, Zz.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: qo[iT]
-                                          }), (0, cT.jsx)(Mz, {
-                                            parts: [TT],
+                                            children: gu[Ez]
+                                          }), (0, Zz.jsx)(Zn, {
+                                            parts: [zz],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== iT && (0, cT.jsx)("code", {
+                                          }), "text" !== Ez && (0, Zz.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: Po(TT)
+                                            children: Bu(zz)
                                           })]
-                                        }), (0, cT.jsxs)("span", {
+                                        }), (0, Zz.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, cT.jsx)("button", {
+                                          children: [(0, Zz.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${oT+1} up`,
-                                            "data-focus-key": `up-${oT}`,
-                                            disabled: 0 === oT,
+                                            "aria-label": `Move part ${uz+1} up`,
+                                            "data-focus-key": `up-${uz}`,
+                                            disabled: 0 === uz,
                                             onClick: () => {
-                                              uT(oT, -1)
+                                              xz(uz, -1)
                                             },
-                                            children: (0, cT.jsx)(MT, {
+                                            children: (0, Zz.jsx)(Kz, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, cT.jsx)("button", {
+                                          }), (0, Zz.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${oT+1} down`,
-                                            "data-focus-key": `down-${oT}`,
-                                            disabled: oT === IT.length - 1,
+                                            "aria-label": `Move part ${uz+1} down`,
+                                            "data-focus-key": `down-${uz}`,
+                                            disabled: uz === bz.length - 1,
                                             onClick: () => {
-                                              uT(oT, 1)
+                                              xz(uz, 1)
                                             },
-                                            children: (0, cT.jsx)(MT, {
+                                            children: (0, Zz.jsx)(Kz, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, cT.jsx)("button", {
+                                          }), (0, Zz.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${oT+1}`,
+                                            "aria-label": `Remove part ${uz+1}`,
                                             onClick: () => {
-                                              RT(oT)
+                                              vz(uz)
                                             },
-                                            children: (0, cT.jsx)(MT, {
+                                            children: (0, Zz.jsx)(Kz, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, oT)
-                                    })), 0 === IT.length && (0, cT.jsx)("li", {
+                                      }, uz)
+                                    })), 0 === bz.length && (0, Zz.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, cT.jsxs)("div", {
+                                  }), (0, Zz.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: TT => {
-                                      "Escape" === TT.key && KT && (TT.stopPropagation(), rT(!1), gT({
+                                    onKeyDown: zz => {
+                                      "Escape" === zz.key && Rz && (zz.stopPropagation(), wz(!1), fz({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, cT.jsxs)("button", {
+                                    children: [(0, Zz.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": KT,
+                                      "aria-expanded": Rz,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        rT(!KT)
+                                        wz(!Rz)
                                       },
-                                      children: [(0, cT.jsx)(MT, {
+                                      children: [(0, Zz.jsx)(Kz, {
                                         name: "plus"
-                                      }), "Add a part", (0, cT.jsx)(MT, {
-                                        name: KT ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, Zz.jsx)(Kz, {
+                                        name: Rz ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), KT && (0, cT.jsx)("ul", {
+                                    }), Rz && (0, Zz.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: vz.map((TT => (0, cT.jsx)("li", {
-                                        children: (0, cT.jsx)("button", {
+                                      children: xn.map((zz => (0, Zz.jsx)("li", {
+                                        children: (0, Zz.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (TT => {
-                                              mT([...IT, Zo[TT]]), rT(!1), xT(IT.length)
-                                            })(TT)
+                                            (zz => {
+                                              oz([...bz, Su[zz]]), wz(!1), Fz(bz.length)
+                                            })(zz)
                                           },
-                                          children: qo[TT]
+                                          children: gu[zz]
                                         })
-                                      }, TT)))
+                                      }, zz)))
                                     })]
                                   })]
-                                }), (0, cT.jsxs)("div", {
+                                }), (0, Zz.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, cT.jsxs)("div", {
+                                  children: [(0, Zz.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, cT.jsxs)("button", {
+                                    children: ["Code", (0, Zz.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": ST,
+                                      "aria-pressed": Oz,
                                       onClick: () => {
-                                        DT(!ST)
+                                        pz(!Oz)
                                       },
-                                      children: [(0, cT.jsx)(MT, {
-                                        name: ST ? "check" : "pencil"
-                                      }), ST ? "Done" : "Edit"]
+                                      children: [(0, Zz.jsx)(Kz, {
+                                        name: Oz ? "check" : "pencil"
+                                      }), Oz ? "Done" : "Edit"]
                                     })]
-                                  }), ST ? (0, cT.jsxs)(cT.Fragment, {
-                                    children: [(0, cT.jsx)("textarea", {
+                                  }), Oz ? (0, Zz.jsxs)(Zz.Fragment, {
+                                    children: [(0, Zz.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: WT,
+                                      value: lz,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: TT => {
-                                        XT(TT.target.value);
-                                        const oT = kI(TT.target.value);
-                                        FT(oT.error), oT.parts && zT(oT.parts)
+                                      onChange: zz => {
+                                        Mz(zz.target.value);
+                                        const uz = Eb(zz.target.value);
+                                        Hz(uz.error), uz.parts && nz(uz.parts)
                                       }
-                                    }), BT && (0, cT.jsx)("p", {
+                                    }), tz && (0, Zz.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: BT
+                                      children: tz
                                     })]
-                                  }) : (0, cT.jsx)(eT, {
+                                  }) : (0, Zz.jsx)(Nz, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${wT})`
+                                    code: `api.sendMessage(playerId, ${rz})`
                                   })]
                                 })]
-                              }), null !== LT && LT < IT.length && (0, cT.jsx)(Rz, {
-                                parts: IT,
-                                index: LT,
-                                fontAwesomeIcons: oT,
-                                onChange: TT => {
-                                  ((TT, oT) => {
-                                    mT(IT.map(((IT, iT) => iT === TT ? oT : IT)))
-                                  })(LT, TT)
+                              }), null !== dz && dz < bz.length && (0, Zz.jsx)(Nn, {
+                                parts: bz,
+                                index: dz,
+                                fontAwesomeIcons: uz,
+                                onChange: zz => {
+                                  ((zz, uz) => {
+                                    oz(bz.map(((bz, Ez) => Ez === zz ? uz : bz)))
+                                  })(dz, zz)
                                 },
-                                zC: () => {
-                                  RT(LT), xT(null)
+                                aJ: () => {
+                                  vz(dz), Fz(null)
                                 },
                                 onClose: () => {
-                                  xT(null), gT({
-                                    key: `edit-${LT}`,
+                                  Fz(null), fz({
+                                    key: `edit-${dz}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var fz = IT(4336),
-                            Cz = IT(4311),
-                            jz = IT(4328),
-                            Jz = IT(4339);
-                          const Uz = 40,
-                            az = 800,
-                            Yz = 150,
-                            Qz = 8e3,
-                            Oz = 2e3;
+                          var An = bz(4605),
+                            Tn = bz(4590),
+                            Ln = bz(4601),
+                            Pn = bz(4609);
+                          const Gn = 40,
+                            an = 800,
+                            Vn = 150,
+                            mn = 8e3,
+                            qn = 2e3;
 
-                          function Hz(TT, oT) {
-                            return 12 * Math.log2(oT / TT)
+                          function hn(zz, uz) {
+                            return 12 * Math.log2(uz / zz)
                           }
 
-                          function nz(TT, oT) {
-                            return Math.round(TT * 2 ** (oT / 12) * 10) / 10
+                          function Un(zz, uz) {
+                            return Math.round(zz * 2 ** (uz / 12) * 10) / 10
                           }
 
-                          function qz(TT) {
-                            return `${TT} ms`
+                          function cn(zz) {
+                            return `${zz} ms`
                           }
 
-                          function Zz(TT) {
-                            return `${TT} st`
+                          function gn(zz) {
+                            return `${zz} st`
                           }
-                          const lz = [{
+                          const Sn = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4091,769 +4091,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function sz(TT) {
+                          function yn(zz) {
                             let {
-                              synth: oT,
-                              onChange: IT
-                            } = TT;
-                            const iT = (0, fz.j)(oT);
-                            return (0, cT.jsxs)("div", {
+                              synth: uz,
+                              onChange: bz
+                            } = zz;
+                            const Ez = (0, An.k)(uz);
+                            return (0, Zz.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, cT.jsxs)("div", {
+                              children: [(0, Zz.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, cT.jsx)("div", {
+                                children: [(0, Zz.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, cT.jsxs)("div", {
+                                }), (0, Zz.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, cT.jsx)("div", {
+                                  children: [(0, Zz.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, cT.jsx)("span", {
+                                    children: (0, Zz.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, cT.jsx)("div", {
+                                  }), (0, Zz.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: fz.f.map((TT => (0, cT.jsx)("button", {
+                                    children: An.h.map((zz => (0, Zz.jsx)("button", {
                                       type: "button",
-                                      className: kT()("DocsVariantChip", {
-                                        Active: oT.waveform === TT
+                                      className: iz()("DocsVariantChip", {
+                                        Active: uz.waveform === zz
                                       }),
-                                      "aria-pressed": oT.waveform === TT,
+                                      "aria-pressed": uz.waveform === zz,
                                       onClick: () => {
-                                        IT({
-                                          waveform: TT
+                                        bz({
+                                          waveform: zz
                                         })
                                       },
-                                      children: TT
-                                    }, TT)))
+                                      children: zz
+                                    }, zz)))
                                   })]
-                                }), (0, cT.jsx)(Iz, {
+                                }), (0, Zz.jsx)(YE, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: Hz(Uz, az),
+                                  max: hn(Gn, an),
                                   step: .1,
-                                  value: Hz(Uz, oT.pitchHz),
-                                  format: () => `${oT.pitchHz} Hz`,
-                                  onChange: TT => {
-                                    IT({
-                                      pitchHz: nz(Uz, TT)
+                                  value: hn(Gn, uz.pitchHz),
+                                  format: () => `${uz.pitchHz} Hz`,
+                                  onChange: zz => {
+                                    bz({
+                                      pitchHz: Un(Gn, zz)
                                     })
                                   }
-                                }), (0, cT.jsx)(Iz, {
+                                }), (0, Zz.jsx)(YE, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: oT.syllableMs,
-                                  format: qz,
-                                  onChange: TT => {
-                                    IT({
-                                      syllableMs: TT
+                                  value: uz.syllableMs,
+                                  format: cn,
+                                  onChange: zz => {
+                                    bz({
+                                      syllableMs: zz
                                     })
                                   }
-                                }), (0, cT.jsx)(Iz, {
+                                }), (0, Zz.jsx)(YE, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: oT.volume,
-                                  onChange: TT => {
-                                    IT({
-                                      volume: TT
+                                  value: uz.volume,
+                                  onChange: zz => {
+                                    bz({
+                                      volume: zz
                                     })
                                   }
                                 })]
-                              }), (0, cT.jsxs)("div", {
+                              }), (0, Zz.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, cT.jsx)("div", {
+                                children: [(0, Zz.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, cT.jsx)(Iz, {
+                                }), (0, Zz.jsx)(YE, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: oT.durationMs,
-                                  format: qz,
-                                  onChange: TT => {
-                                    IT({
-                                      durationMs: TT
+                                  value: uz.durationMs,
+                                  format: cn,
+                                  onChange: zz => {
+                                    bz({
+                                      durationMs: zz
                                     })
                                   }
-                                }), (0, cT.jsx)(Iz, {
+                                }), (0, Zz.jsx)(YE, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: iT.durationMs,
+                                  max: Ez.durationMs,
                                   step: 1,
-                                  value: iT.attackMs,
-                                  format: qz,
-                                  onChange: TT => {
-                                    IT({
-                                      attackMs: TT
+                                  value: Ez.attackMs,
+                                  format: cn,
+                                  onChange: zz => {
+                                    bz({
+                                      attackMs: zz
                                     })
                                   }
-                                }), (0, cT.jsx)(Iz, {
+                                }), (0, Zz.jsx)(YE, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: iT.durationMs - iT.attackMs,
+                                  max: Ez.durationMs - Ez.attackMs,
                                   step: 1,
-                                  value: iT.releaseMs,
-                                  format: qz,
-                                  onChange: TT => {
-                                    IT({
-                                      releaseMs: TT
+                                  value: Ez.releaseMs,
+                                  format: cn,
+                                  onChange: zz => {
+                                    bz({
+                                      releaseMs: zz
                                     })
                                   }
-                                }), (0, cT.jsx)(Iz, {
+                                }), (0, Zz.jsx)(YE, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: oT.glideSemitones,
-                                  format: Zz,
-                                  onChange: TT => {
-                                    IT({
-                                      glideSemitones: TT
+                                  value: uz.glideSemitones,
+                                  format: gn,
+                                  onChange: zz => {
+                                    bz({
+                                      glideSemitones: zz
                                     })
                                   }
-                                }), (0, cT.jsxs)("label", {
+                                }), (0, Zz.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, cT.jsx)("input", {
+                                  children: [(0, Zz.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== oT.lowpassHz,
-                                    onChange: TT => {
-                                      IT({
-                                        lowpassHz: TT.target.checked ? Oz : null
+                                    checked: null !== uz.lowpassHz,
+                                    onChange: zz => {
+                                      bz({
+                                        lowpassHz: zz.target.checked ? qn : null
                                       })
                                     }
-                                  }), (0, cT.jsx)("span", {
+                                  }), (0, Zz.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== oT.lowpassHz && (0, cT.jsx)(Iz, {
+                                }), null !== uz.lowpassHz && (0, Zz.jsx)(YE, {
                                   label: "Filter",
                                   min: 0,
-                                  max: Hz(Yz, Qz),
+                                  max: hn(Vn, mn),
                                   step: .1,
-                                  value: Hz(Yz, oT.lowpassHz),
-                                  format: () => `${oT.lowpassHz} Hz`,
-                                  onChange: TT => {
-                                    IT({
-                                      lowpassHz: nz(Yz, TT)
+                                  value: hn(Vn, uz.lowpassHz),
+                                  format: () => `${uz.lowpassHz} Hz`,
+                                  onChange: zz => {
+                                    bz({
+                                      lowpassHz: Un(Vn, zz)
                                     })
                                   }
                                 })]
-                              }), (0, cT.jsxs)("div", {
+                              }), (0, Zz.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, cT.jsx)("div", {
+                                children: [(0, Zz.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), lz.map((TT => {
+                                }), Sn.map((zz => {
                                   let {
-                                    key: iT,
-                                    label: zT,
-                                    max: kT
-                                  } = TT;
-                                  return (0, cT.jsx)(Iz, {
-                                    label: zT,
+                                    key: Ez,
+                                    label: nz,
+                                    max: iz
+                                  } = zz;
+                                  return (0, Zz.jsx)(YE, {
+                                    label: nz,
                                     min: 0,
-                                    max: kT,
+                                    max: iz,
                                     step: .1,
-                                    value: oT.intonation[iT],
-                                    format: Zz,
-                                    onChange: TT => {
-                                      IT({
+                                    value: uz.intonation[Ez],
+                                    format: gn,
+                                    onChange: zz => {
+                                      bz({
                                         intonation: {
-                                          ...oT.intonation,
-                                          [iT]: TT
+                                          ...uz.intonation,
+                                          [Ez]: zz
                                         }
                                       })
                                     }
-                                  }, iT)
+                                  }, Ez)
                                 }))]
                               })]
                             })
                           }
-                          const tz = Object.keys(fz.g),
-                            Gz = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const Dn = Object.keys(An.i),
+                            Qn = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function pz(TT) {
-                            var oT;
-                            const IT = JSON.stringify((0, fz.j)(TT));
-                            return null !== (oT = tz.find((TT => JSON.stringify((0, fz.j)(fz.g[TT])) === IT))) && void 0 !== oT ? oT : null
+                          function Wn(zz) {
+                            var uz;
+                            const bz = JSON.stringify((0, An.k)(zz));
+                            return null !== (uz = Dn.find((zz => JSON.stringify((0, An.k)(An.i[zz])) === bz))) && void 0 !== uz ? uz : null
                           }
 
-                          function bz(TT) {
-                            let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof TT || null === TT) return JSON.stringify(TT);
-                            return `{\n${Object.entries(TT).map((TT=>{let[IT,iT]=TT;return`${oT}    ${IT}: ${bz(iT,`${oT}    `)},`})).join("\n")}\n${oT}}`
+                          function en(zz) {
+                            let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof zz || null === zz) return JSON.stringify(zz);
+                            return `{\n${Object.entries(zz).map((zz=>{let[bz,Ez]=zz;return`${uz}    ${bz}: ${en(Ez,`${uz}    `)},`})).join("\n")}\n${uz}}`
                           }
 
-                          function yz(TT, oT, IT) {
-                            const iT = pz(TT),
-                              zT = [`    line: ${JSON.stringify(oT)},`];
-                            return IT && zT.push(`    speakerName: ${JSON.stringify(IT)},`), zT.push("    voice,"), `const voice = ${iT?JSON.stringify(iT):bz((0,fz.j)(TT))}\n\napi.setClientOption(playerId, "dialogue", {\n${zT.join("\n")}\n})`
+                          function jn(zz, uz, bz) {
+                            const Ez = Wn(zz),
+                              nz = [`    line: ${JSON.stringify(uz)},`];
+                            return bz && nz.push(`    speakerName: ${JSON.stringify(bz)},`), nz.push("    voice,"), `const voice = ${Ez?JSON.stringify(Ez):en((0,An.k)(zz))}\n\napi.setClientOption(playerId, "dialogue", {\n${nz.join("\n")}\n})`
                           }
-                          const Nz = 400,
-                            Pz = 90;
-                          let dz = null;
+                          const In = 400,
+                            Bn = 90;
+                          let Cn = null;
 
-                          function Vz(TT, oT, IT) {
-                            return dz ??= new AudioContext, dz.resume(), (0, Jz.c)(dz, dz.destination, TT, oT, IT, (() => {}))
+                          function Yn(zz, uz, bz) {
+                            return Cn ??= new AudioContext, Cn.resume(), (0, Pn.c)(Cn, Cn.destination, zz, uz, bz, (() => {}))
                           }
 
-                          function Tk() {
-                            const [TT, oT] = (0, iT.useState)(fz.g.regular), [IT, zT] = (0, iT.useState)(Gz[0]), [WT, XT] = (0, iT.useState)("Innkeeper"), [BT, FT] = (0, iT.useState)(0), ST = Li((TT => TT.volume)), DT = (0, iT.useRef)(null), LT = (0, iT.useRef)(0), xT = (0, iT.useRef)(0), KT = () => {
-                              var TT;
-                              null === (TT = DT.current) || void 0 === TT || TT.call(DT), DT.current = null
+                          function kn() {
+                            const [zz, uz] = (0, Ez.useState)(An.i.regular), [bz, nz] = (0, Ez.useState)(Qn[0]), [lz, Mz] = (0, Ez.useState)("Innkeeper"), [tz, Hz] = (0, Ez.useState)(0), Oz = OE((zz => zz.volume)), pz = (0, Ez.useRef)(null), dz = (0, Ez.useRef)(0), Fz = (0, Ez.useRef)(0), Rz = () => {
+                              var zz;
+                              null === (zz = pz.current) || void 0 === zz || zz.call(pz), pz.current = null
                             };
-                            (0, iT.useEffect)((() => () => {
-                              var TT;
-                              null === (TT = DT.current) || void 0 === TT || TT.call(DT), window.clearTimeout(LT.current)
+                            (0, Ez.useEffect)((() => () => {
+                              var zz;
+                              null === (zz = pz.current) || void 0 === zz || zz.call(pz), window.clearTimeout(dz.current)
                             }), []);
-                            const rT = (0, iT.useMemo)((() => ({
-                                line: IT,
-                                speakerName: WT || void 0,
-                                voice: TT
-                              })), [IT, WT, TT]),
-                              AT = (0, iT.useRef)(rT);
-                            AT.current = rT;
-                            const hT = pz(TT),
-                              wT = TT => {
-                                window.clearTimeout(LT.current), KT();
+                            const wz = (0, Ez.useMemo)((() => ({
+                                line: bz,
+                                speakerName: lz || void 0,
+                                voice: zz
+                              })), [bz, lz, zz]),
+                              Xz = (0, Ez.useRef)(wz);
+                            Xz.current = wz;
+                            const sz = Wn(zz),
+                              rz = zz => {
+                                window.clearTimeout(dz.current), Rz();
                                 const {
-                                  plan: oT,
-                                  synth: IT
-                                } = (0, jz.h)(TT);
-                                IT && (DT.current = Vz(IT, oT.blips, ST)), FT((TT => TT + 1))
+                                  plan: uz,
+                                  synth: bz
+                                } = (0, Ln.g)(zz);
+                                bz && (pz.current = Yn(bz, uz.blips, Oz)), Hz((zz => zz + 1))
                               },
-                              mT = yz(TT, IT, WT);
-                            return (0, cT.jsxs)("section", {
+                              oz = jn(zz, bz, lz);
+                            return (0, Zz.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, cT.jsxs)("header", {
+                              children: [(0, Zz.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, cT.jsxs)("div", {
-                                  children: [(0, cT.jsx)("div", {
+                                children: [(0, Zz.jsxs)("div", {
+                                  children: [(0, Zz.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, cT.jsx)("div", {
+                                  }), (0, Zz.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, cT.jsx)(gT, {
-                                  text: mT,
+                                }), (0, Zz.jsx)(fz, {
+                                  text: oz,
                                   label: "Copy code"
                                 })]
-                              }), (0, cT.jsxs)("div", {
+                              }), (0, Zz.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [tz.map((TT => (0, cT.jsx)("button", {
+                                children: [Dn.map((zz => (0, Zz.jsx)("button", {
                                   type: "button",
-                                  className: kT()("DocsVariantChip", {
-                                    Active: hT === TT
+                                  className: iz()("DocsVariantChip", {
+                                    Active: sz === zz
                                   }),
-                                  "aria-pressed": hT === TT,
+                                  "aria-pressed": sz === zz,
                                   onClick: () => {
-                                    (TT => {
-                                      const IT = fz.g[TT];
-                                      oT(IT), wT({
-                                        ...rT,
-                                        voice: IT
+                                    (zz => {
+                                      const bz = An.i[zz];
+                                      uz(bz), rz({
+                                        ...wz,
+                                        voice: bz
                                       })
-                                    })(TT)
+                                    })(zz)
                                   },
-                                  children: TT
-                                }, TT))), !hT && (0, cT.jsx)("span", {
+                                  children: zz
+                                }, zz))), !sz && (0, Zz.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, cT.jsxs)("div", {
+                              }), (0, Zz.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, cT.jsxs)("div", {
+                                children: [(0, Zz.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, cT.jsx)("div", {
+                                  children: [(0, Zz.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, cT.jsx)(Cz.d, {
-                                      display: rT
-                                    }, BT)
-                                  }), (0, cT.jsxs)("form", {
+                                    children: (0, Zz.jsx)(Tn.b, {
+                                      display: wz
+                                    }, tz)
+                                  }), (0, Zz.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: TT => {
-                                      TT.preventDefault(), wT(rT)
+                                    onSubmit: zz => {
+                                      zz.preventDefault(), rz(wz)
                                     },
-                                    children: [(0, cT.jsx)("input", {
-                                      value: IT,
+                                    children: [(0, Zz.jsx)("input", {
+                                      value: bz,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: TT => {
-                                        zT(TT.target.value)
+                                      onChange: zz => {
+                                        nz(zz.target.value)
                                       }
-                                    }), (0, cT.jsxs)("button", {
+                                    }), (0, Zz.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, cT.jsx)(MT, {
+                                      children: [(0, Zz.jsx)(Kz, {
                                         name: "play"
-                                      }), (0, cT.jsx)("span", {
+                                      }), (0, Zz.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, cT.jsx)("div", {
+                                  }), (0, Zz.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: Gz.map((TT => (0, cT.jsx)("button", {
+                                    children: Qn.map((zz => (0, Zz.jsx)("button", {
                                       type: "button",
-                                      className: kT()("DocsVariantChip", {
-                                        Active: IT === TT
+                                      className: iz()("DocsVariantChip", {
+                                        Active: bz === zz
                                       }),
                                       onClick: () => {
-                                        var oT;
-                                        zT(oT = TT), wT({
-                                          ...rT,
-                                          line: oT
+                                        var uz;
+                                        nz(uz = zz), rz({
+                                          ...wz,
+                                          line: uz
                                         })
                                       },
-                                      children: TT
-                                    }, TT)))
-                                  }), (0, cT.jsxs)("label", {
+                                      children: zz
+                                    }, zz)))
+                                  }), (0, Zz.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, cT.jsx)("span", {
+                                    children: [(0, Zz.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, cT.jsx)("input", {
-                                      value: WT,
+                                    }), (0, Zz.jsx)("input", {
+                                      value: lz,
                                       placeholder: "No name",
-                                      onChange: TT => {
-                                        XT(TT.target.value)
+                                      onChange: zz => {
+                                        Mz(zz.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, cT.jsx)(sz, {
-                                  synth: TT,
-                                  onChange: IT => {
-                                    const iT = {
-                                      ...TT,
-                                      ...IT
+                                }), (0, Zz.jsx)(yn, {
+                                  synth: zz,
+                                  onChange: bz => {
+                                    const Ez = {
+                                      ...zz,
+                                      ...bz
                                     };
-                                    oT(iT);
-                                    const zT = {
-                                        ...rT,
-                                        voice: iT
+                                    uz(Ez);
+                                    const nz = {
+                                        ...wz,
+                                        voice: Ez
                                       },
-                                      kT = performance.now();
-                                    if (kT - xT.current >= Pz) {
-                                      xT.current = kT, KT();
-                                      const TT = (0, jz.h)(zT).plan.blips[0];
-                                      TT && (DT.current = Vz((0, fz.j)(iT), [{
-                                        ...TT,
+                                      iz = performance.now();
+                                    if (iz - Fz.current >= Bn) {
+                                      Fz.current = iz, Rz();
+                                      const zz = (0, Ln.g)(nz).plan.blips[0];
+                                      zz && (pz.current = Yn((0, An.k)(Ez), [{
+                                        ...zz,
                                         atMs: 0
-                                      }], ST))
+                                      }], Oz))
                                     }
-                                    window.clearTimeout(LT.current), LT.current = window.setTimeout((() => {
-                                      wT(AT.current)
-                                    }), Nz)
+                                    window.clearTimeout(dz.current), dz.current = window.setTimeout((() => {
+                                      rz(Xz.current)
+                                    }), In)
                                   }
                                 })]
-                              }), (0, cT.jsx)(eT, {
-                                code: mT,
+                              }), (0, Zz.jsx)(Nz, {
+                                code: oz,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var Ik = IT(4355);
-                          const ik = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            zk = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            kk = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${zk}`, "g"), Ik.k],
+                          var zi = bz(4629);
+                          const ui = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            bi = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            Ei = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${bi}`, "g"), zi.l],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, Ik.k]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, zi.l]
                             ];
 
-                          function Wk(TT) {
-                            return `${TT.pageId}#${TT.anchor}`
+                          function ni(zz) {
+                            return `${zz.pageId}#${zz.anchor}`
                           }
-                          let Xk, Bk, Fk;
+                          let ii, li, Mi;
 
-                          function Sk(TT) {
-                            const oT = (0, RT.f)(TT),
-                              IT = new Set;
-                            for (const [, , iT] of oT.matchAll(RT.c)) {
-                              const TT = iT.startsWith("#") ? lT(iT) : null,
-                                oT = TT ? Wk({
-                                  pageId: TT.page.id,
-                                  anchor: TT.anchor
+                          function ti(zz) {
+                            const uz = (0, vz.e)(zz),
+                              bz = new Set;
+                            for (const [, , Ez] of uz.matchAll(vz.b)) {
+                              const zz = Ez.startsWith("#") ? yz(Ez) : null,
+                                uz = zz ? ni({
+                                  pageId: zz.page.id,
+                                  anchor: zz.anchor
                                 }) : null;
-                              null !== oT && (Xk || (Xk = new Set(QT.flatMap((TT => fT(TT.layout) ? qT(TT).sections.map((oT => Wk({
-                                pageId: TT.id,
-                                anchor: oT.heading.anchor
-                              }))) : [])))), Xk).has(oT) && IT.add(oT)
+                              null !== uz && (ii || (ii = new Set(qz.flatMap((zz => Tz(zz.layout) ? gz(zz).sections.map((uz => ni({
+                                pageId: zz.id,
+                                anchor: uz.heading.anchor
+                              }))) : [])))), ii).has(uz) && bz.add(uz)
                             }
-                            for (const [, , iT] of oT.matchAll(ik)) {
-                              const TT = Lo(iT);
-                              TT && IT.add(Wk(TT))
+                            for (const [, , Ez] of uz.matchAll(ui)) {
+                              const zz = du(Ez);
+                              zz && bz.add(ni(zz))
                             }
-                            return IT
+                            return bz
                           }
 
-                          function Dk(TT, oT) {
-                            const IT = new Set,
-                              iT = function(TT) {
-                                return TT.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(TT);
-                            for (const [, zT] of iT.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) IT.add(zT);
-                            for (const [zT, kT] of kk)
-                              for (const [, TT] of(0, Ik.f)(iT, zT, kT)) oT.has(TT) && IT.add(TT);
-                            return IT
+                          function Hi(zz, uz) {
+                            const bz = new Set,
+                              Ez = function(zz) {
+                                return zz.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(zz);
+                            for (const [, nz] of Ez.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) bz.add(nz);
+                            for (const [nz, iz] of Ei)
+                              for (const [, zz] of(0, zi.e)(Ez, nz, iz)) uz.has(zz) && bz.add(zz);
+                            return bz
                           }
 
-                          function Lk(TT, oT, IT, iT) {
-                            const zT = TT.get(oT);
-                            zT ? !iT && zT.some((TT => TT.pageId === IT.pageId)) || zT.push(IT) : TT.set(oT, [IT])
+                          function Oi(zz, uz, bz, Ez) {
+                            const nz = zz.get(uz);
+                            nz ? !Ez && nz.some((zz => zz.pageId === bz.pageId)) || nz.push(bz) : zz.set(uz, [bz])
                           }
-                          const xk = /^[A-Za-z_$][\w$]*$/;
+                          const di = /^[A-Za-z_$][\w$]*$/;
 
-                          function ck(TT) {
-                            return xk.test(TT.name) ? TT.name : "options"
-                          }
-
-                          function Kk(TT, oT) {
-                            const IT = TT.params.map(ck).join(", ");
-                            return oT ? `${TT.name} = (${IT}) => {\n\t\n}` : `api.${TT.name}(${IT})`
+                          function Fi(zz) {
+                            return di.test(zz.name) ? zz.name : "options"
                           }
 
-                          function Mk(TT) {
+                          function Zi(zz, uz) {
+                            const bz = zz.params.map(Fi).join(", ");
+                            return uz ? `${zz.name} = (${bz}) => {\n\t\n}` : `api.${zz.name}(${bz})`
+                          }
+
+                          function Ri(zz) {
                             let {
-                              method: oT,
-                              isCallback: IT
-                            } = TT;
-                            return (0, cT.jsxs)("div", {
+                              method: uz,
+                              isCallback: bz
+                            } = zz;
+                            return (0, Zz.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, cT.jsxs)("span", {
+                              children: [(0, Zz.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [IT ? (0, cT.jsxs)(cT.Fragment, {
-                                  children: [(0, cT.jsx)("span", {
+                                children: [bz ? (0, Zz.jsxs)(Zz.Fragment, {
+                                  children: [(0, Zz.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: oT.name
-                                  }), (0, cT.jsx)("span", {
+                                    children: uz.name
+                                  }), (0, Zz.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, cT.jsxs)(cT.Fragment, {
-                                  children: [(0, cT.jsx)("span", {
+                                }) : (0, Zz.jsxs)(Zz.Fragment, {
+                                  children: [(0, Zz.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, cT.jsx)("span", {
+                                  }), (0, Zz.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: oT.name
-                                  }), (0, cT.jsx)("span", {
+                                    children: uz.name
+                                  }), (0, Zz.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), oT.params.map(((TT, IT) => (0, cT.jsxs)(iT.Fragment, {
-                                  children: [IT > 0 && (0, cT.jsx)("span", {
+                                }), uz.params.map(((zz, bz) => (0, Zz.jsxs)(Ez.Fragment, {
+                                  children: [bz > 0 && (0, Zz.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, cT.jsx)("a", {
+                                  }), (0, Zz.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${oT.name}-${ck(TT)}`,
-                                    children: TT.name
+                                    href: `#${uz.name}-${Fi(zz)}`,
+                                    children: zz.name
                                   })]
-                                }, TT.name))), (0, cT.jsx)("span", {
+                                }, zz.name))), (0, Zz.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: IT ? ") => " : ")"
-                                }), IT && !oT.returns && (0, cT.jsx)("span", {
+                                  children: bz ? ") => " : ")"
+                                }), bz && !uz.returns && (0, Zz.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), oT.returns && oT.returns.type && (0, cT.jsxs)("span", {
+                              }), uz.returns && uz.returns.type && (0, Zz.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!IT && (0, cT.jsx)("span", {
+                                children: [!bz && (0, Zz.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, cT.jsx)(uo, {
-                                  type: oT.returns.type
+                                }), (0, Zz.jsx)(xu, {
+                                  type: uz.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function rk(TT) {
+                          function Ki(zz) {
                             let {
-                              title: oT,
-                              references: IT
-                            } = TT;
-                            const zT = (0, iT.useContext)(xo);
-                            return (0, cT.jsxs)("div", {
+                              title: uz,
+                              references: bz
+                            } = zz;
+                            const nz = (0, Ez.useContext)(Fu);
+                            return (0, Zz.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, cT.jsx)("span", {
+                              children: [(0, Zz.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: oT
-                              }), IT.map((TT => (0, cT.jsx)(WT.b, {
-                                to: tT(zT, HT(TT.pageId), TT.anchor),
-                                children: TT.label
-                              }, `${TT.pageId}#${TT.anchor}`)))]
+                                children: uz
+                              }), bz.map((zz => (0, Zz.jsx)(lz.e, {
+                                to: Qz(nz, Uz(zz.pageId), zz.anchor),
+                                children: zz.label
+                              }, `${zz.pageId}#${zz.anchor}`)))]
                             })
                           }
 
-                          function Ak(TT) {
-                            var oT, IT;
+                          function wi(zz) {
+                            var uz, bz;
                             let {
-                              pageId: iT,
-                              anchor: zT
-                            } = TT;
-                            const kT = Wk({
-                                pageId: iT,
-                                anchor: zT
+                              pageId: Ez,
+                              anchor: nz
+                            } = zz;
+                            const iz = ni({
+                                pageId: Ez,
+                                anchor: nz
                               }),
-                              WT = null !== (oT = function() {
-                                if (!Fk) {
-                                  Fk = new Map;
-                                  const iT = new Set(QT.filter((TT => "callbacks" === TT.layout)).flatMap((TT => qT(TT).sections.map((TT => TT.heading.text)))));
-                                  for (const zT of QT)
-                                    if ("article" === zT.layout || "snippets" === zT.layout)
-                                      for (const kT of (0, RT.s)(qT(zT)))
+                              lz = null !== (uz = function() {
+                                if (!Mi) {
+                                  Mi = new Map;
+                                  const Ez = new Set(qz.filter((zz => "callbacks" === zz.layout)).flatMap((zz => gz(zz).sections.map((zz => zz.heading.text)))));
+                                  for (const nz of qz)
+                                    if ("article" === nz.layout || "snippets" === nz.layout)
+                                      for (const iz of (0, vz.n)(gz(nz)))
                                         for (const {
-                                            code: WT
+                                            code: lz
                                           }
-                                          of(0, RT.j)(kT.blocks))
-                                          for (const XT of Dk(WT, iT)) {
-                                            const iT = Do().get(XT);
-                                            if (iT) {
-                                              var TT, oT, IT;
-                                              const WT = {
-                                                pageId: zT.id,
-                                                anchor: null !== (TT = null === (oT = kT.heading) || void 0 === oT ? void 0 : oT.anchor) && void 0 !== TT ? TT : "",
-                                                label: null !== (IT = zT.navTitle) && void 0 !== IT ? IT : zT.title
+                                          of(0, vz.f)(iz.blocks))
+                                          for (const Mz of Hi(lz, Ez)) {
+                                            const Ez = pu().get(Mz);
+                                            if (Ez) {
+                                              var zz, uz, bz;
+                                              const lz = {
+                                                pageId: nz.id,
+                                                anchor: null !== (zz = null === (uz = iz.heading) || void 0 === uz ? void 0 : uz.anchor) && void 0 !== zz ? zz : "",
+                                                label: null !== (bz = nz.navTitle) && void 0 !== bz ? bz : nz.title
                                               };
-                                              Lk(Fk, Wk(iT), WT, !1)
+                                              Oi(Mi, ni(Ez), lz, !1)
                                             }
                                           }
                                 }
-                                return Fk
-                              }().get(kT)) && void 0 !== oT ? oT : [],
-                              XT = null !== (IT = function() {
-                                if (!Bk) {
-                                  Bk = new Map;
-                                  const TT = HT("changelog");
-                                  for (const oT of qT(TT).sections) {
-                                    const IT = new Set(oT.blocks.flatMap((TT => [...Sk(TT)])));
-                                    for (const iT of IT) {
-                                      const IT = {
-                                        pageId: TT.id,
-                                        anchor: oT.heading.anchor,
-                                        label: oT.heading.text
+                                return Mi
+                              }().get(iz)) && void 0 !== uz ? uz : [],
+                              Mz = null !== (bz = function() {
+                                if (!li) {
+                                  li = new Map;
+                                  const zz = Uz("changelog");
+                                  for (const uz of gz(zz).sections) {
+                                    const bz = new Set(uz.blocks.flatMap((zz => [...ti(zz)])));
+                                    for (const Ez of bz) {
+                                      const bz = {
+                                        pageId: zz.id,
+                                        anchor: uz.heading.anchor,
+                                        label: uz.heading.text
                                       };
-                                      Lk(Bk, iT, IT, !0)
+                                      Oi(li, Ez, bz, !0)
                                     }
                                   }
                                 }
-                                return Bk
-                              }().get(kT)) && void 0 !== IT ? IT : [];
-                            return 0 === WT.length && 0 === XT.length ? null : (0, cT.jsxs)("footer", {
+                                return li
+                              }().get(iz)) && void 0 !== bz ? bz : [];
+                            return 0 === lz.length && 0 === Mz.length ? null : (0, Zz.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [WT.length > 0 && (0, cT.jsx)(rk, {
+                              children: [lz.length > 0 && (0, Zz.jsx)(Ki, {
                                 title: "Used in",
-                                references: WT
-                              }), XT.length > 0 && (0, cT.jsx)(rk, {
+                                references: lz
+                              }), Mz.length > 0 && (0, Zz.jsx)(Ki, {
                                 title: "Changelog",
-                                references: XT
+                                references: Mz
                               })]
                             })
                           }
 
-                          function gk(TT) {
+                          function Xi(zz) {
                             let {
-                              method: oT,
-                              pageId: IT,
-                              anchor: iT,
-                              isCallback: zT
-                            } = TT;
-                            const kT = zT ? void 0 : Xo().get(oT.name),
-                              WT = oT.description.length > 0 || null === kT || void 0 === kT || !kT.description ? oT.description : (0, RT.y)(kT.description);
-                            return (0, cT.jsxs)("article", {
+                              method: uz,
+                              pageId: bz,
+                              anchor: Ez,
+                              isCallback: nz
+                            } = zz;
+                            const iz = nz ? void 0 : Mu().get(uz.name),
+                              lz = uz.description.length > 0 || null === iz || void 0 === iz || !iz.description ? uz.description : (0, vz.t)(iz.description);
+                            return (0, Zz.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, cT.jsxs)("header", {
+                              children: [(0, Zz.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, cT.jsx)(DI, {
+                                children: [(0, Zz.jsx)(Hb, {
                                   level: 2,
-                                  text: oT.name,
-                                  anchor: iT,
+                                  text: uz.name,
+                                  anchor: Ez,
                                   className: "DocsCardTitle"
-                                }), (0, cT.jsx)(gT, {
-                                  text: Kk(oT, zT),
-                                  label: zT ? "Copy handler" : "Copy call",
+                                }), (0, Zz.jsx)(fz, {
+                                  text: Zi(uz, nz),
+                                  label: nz ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, cT.jsx)(Mk, {
-                                method: oT,
-                                isCallback: zT
-                              }), kT && null !== kT.deprecation && (0, cT.jsxs)("aside", {
+                              }), (0, Zz.jsx)(Ri, {
+                                method: uz,
+                                isCallback: nz
+                              }), iz && null !== iz.deprecation && (0, Zz.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, cT.jsx)("strong", {
+                                children: [(0, Zz.jsx)("strong", {
                                   children: "Deprecated"
-                                }), kT.deprecation && (0, cT.jsxs)(cT.Fragment, {
-                                  children: [": ", (0, cT.jsx)(mo, {
-                                    text: (XT = kT.deprecation, (0, Ik.r)(XT, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, Ik.i)("`\\w"), (TT => {
-                                      let [oT] = TT;
-                                      return Do().has(oT) ? `\`${oT}\`` : oT
+                                }), iz.deprecation && (0, Zz.jsxs)(Zz.Fragment, {
+                                  children: [": ", (0, Zz.jsx)(ou, {
+                                    text: (Mz = iz.deprecation, (0, zi.t)(Mz, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, zi.j)("`\\w"), (zz => {
+                                      let [uz] = zz;
+                                      return pu().has(uz) ? `\`${uz}\`` : uz
                                     })))
                                   })]
                                 })]
-                              }), WT.length > 0 && (0, cT.jsx)("div", {
+                              }), lz.length > 0 && (0, Zz.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, cT.jsx)(KI, {
-                                  blocks: WT
+                                children: (0, Zz.jsx)(Fb, {
+                                  blocks: lz
                                 })
-                              }), oT.params.length > 0 && (0, cT.jsxs)("section", {
+                              }), uz.params.length > 0 && (0, Zz.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, cT.jsx)("h3", {
+                                children: [(0, Zz.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, cT.jsx)("dl", {
+                                }), (0, Zz.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: oT.params.map((TT => (0, cT.jsxs)("div", {
-                                    id: `${oT.name}-${ck(TT)}`,
+                                  children: uz.params.map((zz => (0, Zz.jsxs)("div", {
+                                    id: `${uz.name}-${Fi(zz)}`,
                                     className: "DocsParam",
-                                    children: [(0, cT.jsxs)("dt", {
-                                      children: [(0, cT.jsx)("code", {
+                                    children: [(0, Zz.jsxs)("dt", {
+                                      children: [(0, Zz.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: TT.name
-                                      }), (0, cT.jsx)(uo, {
-                                        type: TT.type
+                                        children: zz.name
+                                      }), (0, Zz.jsx)(xu, {
+                                        type: zz.type
                                       })]
-                                    }), TT.description && (0, cT.jsx)("dd", {
-                                      children: (0, cT.jsx)(mo, {
-                                        text: TT.description
+                                    }), zz.description && (0, Zz.jsx)("dd", {
+                                      children: (0, Zz.jsx)(ou, {
+                                        text: zz.description
                                       })
                                     })]
-                                  }, TT.name)))
+                                  }, zz.name)))
                                 })]
-                              }), oT.returns && (oT.returns.type || oT.returns.description.length > 0) && (0, cT.jsxs)("section", {
+                              }), uz.returns && (uz.returns.type || uz.returns.description.length > 0) && (0, Zz.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, cT.jsx)("h3", {
+                                children: [(0, Zz.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, cT.jsxs)("div", {
+                                }), (0, Zz.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [oT.returns.type && (0, cT.jsx)(uo, {
-                                    type: oT.returns.type
-                                  }), oT.returns.description.length > 0 && (0, cT.jsx)("div", {
+                                  children: [uz.returns.type && (0, Zz.jsx)(xu, {
+                                    type: uz.returns.type
+                                  }), uz.returns.description.length > 0 && (0, Zz.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, cT.jsx)(KI, {
-                                      blocks: oT.returns.description
+                                    children: (0, Zz.jsx)(Fb, {
+                                      blocks: uz.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, cT.jsx)(Ak, {
-                                pageId: IT,
-                                anchor: iT
+                              }), (0, Zz.jsx)(wi, {
+                                pageId: bz,
+                                anchor: Ez
                               })]
                             });
-                            var XT
+                            var Mz
                           }
 
-                          function hk(TT) {
-                            var oT;
-                            return null !== TT.defaultValue && "undefined" !== TT.defaultValue ? TT.defaultValue : null !== (oT = TT.example) && void 0 !== oT ? oT : "value"
+                          function fi(zz) {
+                            var uz;
+                            return null !== zz.defaultValue && "undefined" !== zz.defaultValue ? zz.defaultValue : null !== (uz = zz.example) && void 0 !== uz ? uz : "value"
                           }
 
-                          function wk(TT) {
+                          function si(zz) {
                             let {
-                              setting: oT,
-                              pageId: IT,
-                              anchor: iT,
-                              setterSnippet: zT
-                            } = TT;
-                            const kT = null === oT.defaultValue ? null : ro(oT.defaultValue);
-                            return (0, cT.jsxs)("article", {
+                              setting: uz,
+                              pageId: bz,
+                              anchor: Ez,
+                              setterSnippet: nz
+                            } = zz;
+                            const iz = null === uz.defaultValue ? null : wu(uz.defaultValue);
+                            return (0, Zz.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, cT.jsxs)("header", {
+                              children: [(0, Zz.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, cT.jsx)(DI, {
+                                children: [(0, Zz.jsx)(Hb, {
                                   level: 2,
-                                  text: oT.name,
-                                  anchor: iT,
+                                  text: uz.name,
+                                  anchor: Ez,
                                   className: "DocsCardTitle"
-                                }), (0, cT.jsx)(gT, {
-                                  text: zT(oT.name, hk(oT)),
+                                }), (0, Zz.jsx)(fz, {
+                                  text: nz(uz.name, fi(uz)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, cT.jsxs)("dl", {
+                              }), (0, Zz.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, cT.jsxs)("div", {
-                                  children: [(0, cT.jsx)("dt", {
+                                children: [(0, Zz.jsxs)("div", {
+                                  children: [(0, Zz.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, cT.jsx)("dd", {
-                                    children: (0, cT.jsx)(uo, {
-                                      type: oT.type
+                                  }), (0, Zz.jsx)("dd", {
+                                    children: (0, Zz.jsx)(xu, {
+                                      type: uz.type
                                     })
                                   })]
-                                }), null !== oT.defaultValue && (0, cT.jsxs)("div", {
-                                  children: [(0, cT.jsx)("dt", {
+                                }), null !== uz.defaultValue && (0, Zz.jsxs)("div", {
+                                  children: [(0, Zz.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, cT.jsx)("dd", {
-                                    children: (0, cT.jsxs)("code", {
+                                  }), (0, Zz.jsx)("dd", {
+                                    children: (0, Zz.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [kT && (0, cT.jsx)(Ao, {
-                                        colour: kT
-                                      }), oT.defaultValue]
+                                      children: [iz && (0, Zz.jsx)(Xu, {
+                                        colour: iz
+                                      }), uz.defaultValue]
                                     })
                                   })]
-                                }), null !== oT.example && (0, cT.jsxs)("div", {
-                                  children: [(0, cT.jsx)("dt", {
+                                }), null !== uz.example && (0, Zz.jsxs)("div", {
+                                  children: [(0, Zz.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, cT.jsx)("dd", {
-                                    children: (0, cT.jsx)("code", {
+                                  }), (0, Zz.jsx)("dd", {
+                                    children: (0, Zz.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: oT.example
+                                      children: uz.example
                                     })
                                   })]
                                 })]
-                              }), oT.description.length > 0 && (0, cT.jsx)("div", {
+                              }), uz.description.length > 0 && (0, Zz.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, cT.jsx)(KI, {
-                                  blocks: oT.description
+                                children: (0, Zz.jsx)(Fb, {
+                                  blocks: uz.description
                                 })
-                              }), (0, cT.jsx)(Ak, {
-                                pageId: IT,
-                                anchor: iT
+                              }), (0, Zz.jsx)(wi, {
+                                pageId: bz,
+                                anchor: Ez
                               })]
                             })
                           }
 
-                          function mk(TT) {
+                          function ri(zz) {
                             let {
-                              section: oT
-                            } = TT;
-                            return (0, cT.jsxs)("article", {
+                              section: uz
+                            } = zz;
+                            return (0, Zz.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, cT.jsx)(DI, {
+                              children: [(0, Zz.jsx)(Hb, {
                                 level: 2,
-                                text: oT.heading.text,
-                                anchor: oT.heading.anchor,
+                                text: uz.heading.text,
+                                anchor: uz.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, cT.jsx)("div", {
+                              }), (0, Zz.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, cT.jsx)(KI, {
-                                  blocks: oT.blocks
+                                children: (0, Zz.jsx)(Fb, {
+                                  blocks: uz.blocks
                                 })
                               })]
                             })
                           }
 
-                          function ek(TT) {
+                          function oi(zz) {
                             let {
-                              section: oT
-                            } = TT;
-                            return (0, cT.jsxs)("section", {
+                              section: uz
+                            } = zz;
+                            return (0, Zz.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, cT.jsx)(DI, {
-                                level: oT.heading.level,
-                                text: oT.heading.text,
-                                anchor: oT.heading.anchor
-                              }), (0, cT.jsx)(KI, {
-                                blocks: oT.blocks
+                              children: [(0, Zz.jsx)(Hb, {
+                                level: uz.heading.level,
+                                text: uz.heading.text,
+                                anchor: uz.heading.anchor
+                              }), (0, Zz.jsx)(Fb, {
+                                blocks: uz.blocks
                               })]
                             })
                           }
-                          const Rk = {
+                          const Ni = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4862,337 +4862,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function uk(TT) {
+                          function vi(zz) {
                             let {
-                              page: oT,
-                              section: IT
-                            } = TT;
-                            if ("methods" === oT.layout || "callbacks" === oT.layout) return (0, cT.jsx)(gk, {
-                              method: uI(IT),
-                              pageId: oT.id,
-                              anchor: IT.heading.anchor,
-                              isCallback: "callbacks" === oT.layout
+                              page: uz,
+                              section: bz
+                            } = zz;
+                            if ("methods" === uz.layout || "callbacks" === uz.layout) return (0, Zz.jsx)(Xi, {
+                              method: Nb(bz),
+                              pageId: uz.id,
+                              anchor: bz.heading.anchor,
+                              isCallback: "callbacks" === uz.layout
                             });
-                            if ("settings" === oT.layout) {
-                              const TT = function(TT) {
-                                const oT = {
-                                  name: TT.heading.text,
+                            if ("settings" === uz.layout) {
+                              const zz = function(zz) {
+                                const uz = {
+                                  name: zz.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const iT of TT.blocks) {
-                                  var IT;
-                                  if (RI(iT)) continue;
-                                  const TT = "paragraph" === iT.kind ? iT.text.match(vI) : null;
-                                  if (!TT) {
-                                    oT.description.push(iT);
+                                for (const Ez of zz.blocks) {
+                                  var bz;
+                                  if (ob(Ez)) continue;
+                                  const zz = "paragraph" === Ez.kind ? Ez.text.match(vb) : null;
+                                  if (!zz) {
+                                    uz.description.push(Ez);
                                     continue
                                   }
-                                  const zT = null !== (IT = eI(TT[2])) && void 0 !== IT ? IT : TT[2];
-                                  "Type" === TT[1] ? oT.type = zT : "Default" === TT[1] ? oT.defaultValue = zT : "" !== zT && (oT.example = zT)
+                                  const nz = null !== (bz = rb(zz[2])) && void 0 !== bz ? bz : zz[2];
+                                  "Type" === zz[1] ? uz.type = nz : "Default" === zz[1] ? uz.defaultValue = nz : "" !== nz && (uz.example = nz)
                                 }
-                                return oT.type ? oT : null
-                              }(IT);
-                              if (TT) return (0, cT.jsx)(wk, {
-                                setting: TT,
-                                pageId: oT.id,
-                                anchor: IT.heading.anchor,
-                                setterSnippet: oT.setterSnippet
+                                return uz.type ? uz : null
+                              }(bz);
+                              if (zz) return (0, Zz.jsx)(si, {
+                                setting: zz,
+                                pageId: uz.id,
+                                anchor: bz.heading.anchor,
+                                setterSnippet: uz.setterSnippet
                               })
                             }
-                            return "snippets" === oT.layout ? (0, cT.jsx)(mk, {
-                              section: IT
-                            }) : "changelog" === oT.layout ? (0, cT.jsxs)("section", {
+                            return "snippets" === uz.layout ? (0, Zz.jsx)(ri, {
+                              section: bz
+                            }) : "changelog" === uz.layout ? (0, Zz.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, cT.jsx)("div", {
+                              children: [(0, Zz.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, cT.jsx)(DI, {
+                                children: (0, Zz.jsx)(Hb, {
                                   level: 2,
-                                  text: IT.heading.text,
-                                  anchor: IT.heading.anchor
+                                  text: bz.heading.text,
+                                  anchor: bz.heading.anchor
                                 })
-                              }), (0, cT.jsx)("div", {
+                              }), (0, Zz.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, cT.jsx)(KI, {
-                                  blocks: EI(IT.blocks)
+                                children: (0, Zz.jsx)(Fb, {
+                                  blocks: xb(bz.blocks)
                                 })
                               })]
-                            }) : oT.gallery ? (0, cT.jsxs)("section", {
+                            }) : uz.gallery ? (0, Zz.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, cT.jsx)(DI, {
-                                level: IT.heading.level,
-                                text: IT.heading.text,
-                                anchor: IT.heading.anchor
-                              }), (0, cT.jsx)(Ci, {
-                                kind: oT.gallery,
-                                content: qT(oT),
-                                blocks: IT.blocks
+                              children: [(0, Zz.jsx)(Hb, {
+                                level: bz.heading.level,
+                                text: bz.heading.text,
+                                anchor: bz.heading.anchor
+                              }), (0, Zz.jsx)(JE, {
+                                kind: uz.gallery,
+                                content: gz(uz),
+                                blocks: bz.blocks
                               })]
-                            }) : (0, cT.jsx)(ek, {
-                              section: IT
+                            }) : (0, Zz.jsx)(oi, {
+                              section: bz
                             })
                           }
 
-                          function vk(TT) {
+                          function xi(zz) {
                             let {
-                              page: oT,
-                              onTocChange: IT
-                            } = TT;
-                            const zT = qT(oT),
-                              [kT, WT] = (0, iT.useState)(""),
-                              XT = "article" !== oT.layout,
-                              BT = AI(oT.gallery) ? oT.gallery : null,
-                              FT = null !== BT,
-                              ST = kT.trim().toLowerCase(),
-                              DT = (0, iT.useRef)(null),
-                              LT = (0, iT.useCallback)((TT => {
-                                var oT;
-                                null === (oT = DT.current) || void 0 === oT || oT.preview(TT)
+                              page: uz,
+                              onTocChange: bz
+                            } = zz;
+                            const nz = gz(uz),
+                              [iz, lz] = (0, Ez.useState)(""),
+                              Mz = "article" !== uz.layout,
+                              tz = Kb(uz.gallery) ? uz.gallery : null,
+                              Hz = null !== tz,
+                              Oz = iz.trim().toLowerCase(),
+                              pz = (0, Ez.useRef)(null),
+                              dz = (0, Ez.useCallback)((zz => {
+                                var uz;
+                                null === (uz = pz.current) || void 0 === uz || uz.preview(zz)
                               }), []),
-                              xT = (0, iT.useMemo)((() => {
-                                if (!oT.hasParticlePlayground) return [];
-                                const TT = JI(zT.intro).find((TT => "names" === TT.kind && !TT.names.some((TT => null !== ZI(TT.name)))));
-                                return "names" === (null === TT || void 0 === TT ? void 0 : TT.kind) ? TT.names.map((TT => TT.name)) : []
-                              }), [oT, zT]),
-                              KT = (0, iT.useMemo)((() => {
-                                if (!oT.hasTextPlayground) return [];
-                                const TT = zT.sections.flatMap((TT => TT.blocks.flatMap((TT => {
-                                  var oT;
-                                  return (null !== (oT = jI(TT)) && void 0 !== oT ? oT : []).flatMap((TT => no(TT.name) ? [TT.name] : []))
+                              Fz = (0, Ez.useMemo)((() => {
+                                if (!uz.hasParticlePlayground) return [];
+                                const zz = Lb(nz.intro).find((zz => "names" === zz.kind && !zz.names.some((zz => null !== cb(zz.name)))));
+                                return "names" === (null === zz || void 0 === zz ? void 0 : zz.kind) ? zz.names.map((zz => zz.name)) : []
+                              }), [uz, nz]),
+                              Rz = (0, Ez.useMemo)((() => {
+                                if (!uz.hasTextPlayground) return [];
+                                const zz = nz.sections.flatMap((zz => zz.blocks.flatMap((zz => {
+                                  var uz;
+                                  return (null !== (uz = Tb(zz)) && void 0 !== uz ? uz : []).flatMap((zz => cu(zz.name) ? [zz.name] : []))
                                 }))));
-                                return [...new Set(TT)]
-                              }), [oT, zT]),
-                              MT = (0, iT.useMemo)((() => ST ? zT.sections.filter((TT => function(TT, oT) {
-                                return !!TT.heading.text.toLowerCase().includes(oT) || TT.blocks.some((TT => (0, RT.f)(TT).toLowerCase().includes(oT)))
-                              }(TT, ST))) : zT.sections), [zT, ST]),
-                              rT = (0, iT.useMemo)((() => function(TT, oT) {
-                                return "article" !== TT.layout ? oT.map((TT => ({
-                                  anchor: TT.heading.anchor,
-                                  text: TT.heading.text,
+                                return [...new Set(zz)]
+                              }), [uz, nz]),
+                              Kz = (0, Ez.useMemo)((() => Oz ? nz.sections.filter((zz => function(zz, uz) {
+                                return !!zz.heading.text.toLowerCase().includes(uz) || zz.blocks.some((zz => (0, vz.e)(zz).toLowerCase().includes(uz)))
+                              }(zz, Oz))) : nz.sections), [nz, Oz]),
+                              wz = (0, Ez.useMemo)((() => function(zz, uz) {
+                                return "article" !== zz.layout ? uz.map((zz => ({
+                                  anchor: zz.heading.anchor,
+                                  text: zz.heading.text,
                                   level: 2
-                                }))) : oT.flatMap((TT => {
-                                  const oT = TT.blocks.flatMap((TT => "heading" === TT.kind && 3 === TT.level ? [{
-                                    anchor: TT.anchor,
-                                    text: TT.text,
+                                }))) : uz.flatMap((zz => {
+                                  const uz = zz.blocks.flatMap((zz => "heading" === zz.kind && 3 === zz.level ? [{
+                                    anchor: zz.anchor,
+                                    text: zz.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: TT.heading.anchor,
-                                    text: TT.heading.text,
+                                    anchor: zz.heading.anchor,
+                                    text: zz.heading.text,
                                     level: 2
-                                  }, ...oT]
+                                  }, ...uz]
                                 }))
-                              }(oT, MT)), [oT, MT]);
-                            return (0, iT.useEffect)((() => {
-                              IT(rT)
-                            }), [rT, IT]), (0, cT.jsxs)("article", {
+                              }(uz, Kz)), [uz, Kz]);
+                            return (0, Ez.useEffect)((() => {
+                              bz(wz)
+                            }), [wz, bz]), (0, Zz.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, cT.jsxs)("header", {
+                              children: [(0, Zz.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, cT.jsx)("h1", {
+                                children: [(0, Zz.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: zT.title || oT.title
-                                }), (0, cT.jsx)("p", {
+                                  children: nz.title || uz.title
+                                }), (0, Zz.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: oT.summary
-                                }), (0, cT.jsx)(di, {
-                                  page: oT
-                                }), XT && (0, cT.jsx)("div", {
+                                  children: uz.summary
+                                }), (0, Zz.jsx)(jE, {
+                                  page: uz
+                                }), Mz && (0, Zz.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, cT.jsxs)("span", {
-                                    children: [(0, cT.jsx)("strong", {
-                                      children: zT.sections.length
-                                    }), " ", Rk[oT.layout]]
+                                  children: (0, Zz.jsxs)("span", {
+                                    children: [(0, Zz.jsx)("strong", {
+                                      children: nz.sections.length
+                                    }), " ", Ni[uz.layout]]
                                   })
                                 })]
-                              }), "" === oT.slug && (0, cT.jsx)(Ji, {}), BT && (0, cT.jsx)(Qi, {
-                                kind: BT
-                              }, BT), oT.hasParticlePlayground && (0, cT.jsx)(Dz, {
-                                ref: DT,
-                                textures: xT
-                              }), !FT && zT.intro.length > 0 && (0, cT.jsx)("div", {
+                              }), "" === uz.slug && (0, Zz.jsx)(TE, {}), tz && (0, Zz.jsx)(aE, {
+                                kind: tz
+                              }, tz), uz.hasParticlePlayground && (0, Zz.jsx)(Hn, {
+                                ref: pz,
+                                textures: Fz
+                              }), !Hz && nz.intro.length > 0 && (0, Zz.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: oT.gallery ? (0, cT.jsx)(gi.Provider, {
-                                  value: oT.hasParticlePlayground ? LT : null,
-                                  children: (0, cT.jsx)(Ci, {
-                                    kind: oT.gallery,
-                                    content: zT,
-                                    blocks: zT.intro
+                                children: uz.gallery ? (0, Zz.jsx)(wE.Provider, {
+                                  value: uz.hasParticlePlayground ? dz : null,
+                                  children: (0, Zz.jsx)(JE, {
+                                    kind: uz.gallery,
+                                    content: nz,
+                                    blocks: nz.intro
                                   })
-                                }) : (0, cT.jsx)(KI, {
-                                  blocks: EI(zT.intro)
+                                }) : (0, Zz.jsx)(Fb, {
+                                  blocks: xb(nz.intro)
                                 })
-                              }), oT.hasTextPlayground && (0, cT.jsx)(Ez, {
-                                fontAwesomeIcons: KT
-                              }), oT.hasVoicePlayground && (0, cT.jsx)(Tk, {}), oT.childPageIds && (0, cT.jsx)(Ji, {
-                                cards: oT.childPageIds.map((TT => ({
-                                  pageId: TT
+                              }), uz.hasTextPlayground && (0, Zz.jsx)(Jn, {
+                                fontAwesomeIcons: Rz
+                              }), uz.hasVoicePlayground && (0, Zz.jsx)(kn, {}), uz.childPageIds && (0, Zz.jsx)(TE, {
+                                cards: uz.childPageIds.map((zz => ({
+                                  pageId: zz
                                 }))),
-                                label: oT.title
-                              }), XT && (0, cT.jsx)(wI, {
+                                label: uz.title
+                              }), Mz && (0, Zz.jsx)(fb, {
                                 className: "DocsFilterBar",
-                                value: kT,
-                                placeholder: `Filter ${zT.sections.length} ${Rk[oT.layout]}\u2026`,
-                                label: `Filter ${Rk[oT.layout]}`,
-                                onChange: WT,
-                                count: ST ? {
-                                  visible: MT.length,
-                                  total: zT.sections.length
+                                value: iz,
+                                placeholder: `Filter ${nz.sections.length} ${Ni[uz.layout]}\u2026`,
+                                label: `Filter ${Ni[uz.layout]}`,
+                                onChange: lz,
+                                count: Oz ? {
+                                  visible: Kz.length,
+                                  total: nz.sections.length
                                 } : null
-                              }), !FT && (0, cT.jsxs)("div", {
-                                className: `DocsSections Layout-${oT.layout}`,
-                                children: [MT.map((TT => (0, cT.jsx)(uk, {
-                                  page: oT,
-                                  section: TT
-                                }, TT.heading.anchor))), 0 === MT.length && (0, cT.jsxs)("p", {
+                              }), !Hz && (0, Zz.jsxs)("div", {
+                                className: `DocsSections Layout-${uz.layout}`,
+                                children: [Kz.map((zz => (0, Zz.jsx)(vi, {
+                                  page: uz,
+                                  section: zz
+                                }, zz.heading.anchor))), 0 === Kz.length && (0, Zz.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", Rk[oT.layout], " match \u201c", kT, "\u201d."]
+                                  children: ["No ", Ni[uz.layout], " match \u201c", iz, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const Ek = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const Ji = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function fk(TT) {
+                          function Ai(zz) {
                             let {
-                              entry: oT,
-                              isActive: IT,
-                              onNavigate: iT,
-                              label: zT,
-                              children: WT
-                            } = TT;
-                            return (0, cT.jsx)("a", {
-                              href: `#${oT.anchor}`,
-                              "aria-label": zT,
-                              className: kT()(`Level${oT.level}`, {
-                                Active: IT
+                              entry: uz,
+                              isActive: bz,
+                              onNavigate: Ez,
+                              label: nz,
+                              children: lz
+                            } = zz;
+                            return (0, Zz.jsx)("a", {
+                              href: `#${uz.anchor}`,
+                              "aria-label": nz,
+                              className: iz()(`Level${uz.level}`, {
+                                Active: bz
                               }),
-                              "aria-current": IT ? "location" : void 0,
-                              onClick: TT => {
-                                TT.preventDefault(), iT(oT.anchor)
+                              "aria-current": bz ? "location" : void 0,
+                              onClick: zz => {
+                                zz.preventDefault(), Ez(uz.anchor)
                               },
-                              children: WT
+                              children: lz
                             })
                           }
 
-                          function Ck(TT) {
+                          function Ti(zz) {
                             let {
-                              toc: oT,
-                              activeAnchor: IT,
-                              onNavigate: zT
-                            } = TT;
-                            const WT = Math.max(0, oT.findIndex((TT => TT.anchor === IT))),
-                              XT = (0, iT.useRef)(null),
-                              BT = (0, iT.useRef)(!1);
-                            (0, iT.useEffect)((() => {
-                              var TT, IT;
-                              const iT = null === (TT = XT.current) || void 0 === TT ? void 0 : TT.closest(".DocsToc"),
-                                zT = null === (IT = XT.current) || void 0 === IT ? void 0 : IT.querySelector(".DocsTimelineNotch.Active");
-                              if (!iT || !zT) return;
-                              let kT = 0;
-                              if (WT === oT.length - 1) kT = iT.scrollHeight;
-                              else if (WT > 0) {
-                                const TT = iT.getBoundingClientRect(),
-                                  oT = zT.getBoundingClientRect();
-                                kT = iT.scrollTop + oT.top + oT.height / 2 - (TT.top + iT.clientHeight / 2)
+                              toc: uz,
+                              activeAnchor: bz,
+                              onNavigate: nz
+                            } = zz;
+                            const lz = Math.max(0, uz.findIndex((zz => zz.anchor === bz))),
+                              Mz = (0, Ez.useRef)(null),
+                              tz = (0, Ez.useRef)(!1);
+                            (0, Ez.useEffect)((() => {
+                              var zz, bz;
+                              const Ez = null === (zz = Mz.current) || void 0 === zz ? void 0 : zz.closest(".DocsToc"),
+                                nz = null === (bz = Mz.current) || void 0 === bz ? void 0 : bz.querySelector(".DocsTimelineNotch.Active");
+                              if (!Ez || !nz) return;
+                              let iz = 0;
+                              if (lz === uz.length - 1) iz = Ez.scrollHeight;
+                              else if (lz > 0) {
+                                const zz = Ez.getBoundingClientRect(),
+                                  uz = nz.getBoundingClientRect();
+                                iz = Ez.scrollTop + uz.top + uz.height / 2 - (zz.top + Ez.clientHeight / 2)
                               }
-                              iT.scrollTo({
-                                top: kT,
-                                behavior: BT.current ? "smooth" : "auto"
-                              }), BT.current = !0
-                            }), [WT, oT.length]);
-                            const FT = [];
-                            return oT.forEach(((TT, oT) => {
-                              var IT, iT, zT;
-                              const kT = function(TT) {
-                                  const oT = TT.trim().match(Ek);
-                                  return oT ? {
-                                    day: oT[1],
-                                    month: `${oT[2]} ${oT[3]}`
+                              Ez.scrollTo({
+                                top: iz,
+                                behavior: tz.current ? "smooth" : "auto"
+                              }), tz.current = !0
+                            }), [lz, uz.length]);
+                            const Hz = [];
+                            return uz.forEach(((zz, uz) => {
+                              var bz, Ez, nz;
+                              const iz = function(zz) {
+                                  const uz = zz.trim().match(Ji);
+                                  return uz ? {
+                                    day: uz[1],
+                                    month: `${uz[2]} ${uz[3]}`
                                   } : null
-                                }(TT.text),
-                                WT = null !== (IT = null === kT || void 0 === kT ? void 0 : kT.month) && void 0 !== IT ? IT : null;
-                              null !== WT && (null === (iT = FT.at(-1)) || void 0 === iT ? void 0 : iT.month) === WT || FT.push({
-                                month: WT,
+                                }(zz.text),
+                                lz = null !== (bz = null === iz || void 0 === iz ? void 0 : iz.month) && void 0 !== bz ? bz : null;
+                              null !== lz && (null === (Ez = Hz.at(-1)) || void 0 === Ez ? void 0 : Ez.month) === lz || Hz.push({
+                                month: lz,
                                 entries: []
-                              }), FT.at(-1).entries.push({
-                                entry: TT,
-                                day: null !== (zT = null === kT || void 0 === kT ? void 0 : kT.day) && void 0 !== zT ? zT : null,
-                                index: oT
+                              }), Hz.at(-1).entries.push({
+                                entry: zz,
+                                day: null !== (nz = null === iz || void 0 === iz ? void 0 : iz.day) && void 0 !== nz ? nz : null,
+                                index: uz
                               })
-                            })), (0, cT.jsx)("ol", {
-                              ref: XT,
+                            })), (0, Zz.jsx)("ol", {
+                              ref: Mz,
                               className: "DocsTimeline",
-                              children: FT.map((TT => {
+                              children: Hz.map((zz => {
                                 let {
-                                  month: oT,
-                                  entries: IT
-                                } = TT;
-                                return (0, cT.jsxs)("li", {
+                                  month: uz,
+                                  entries: bz
+                                } = zz;
+                                return (0, Zz.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [oT && (0, cT.jsx)("span", {
+                                  children: [uz && (0, Zz.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: oT
-                                  }), (0, cT.jsx)("ol", {
-                                    children: IT.map((TT => {
+                                    children: uz
+                                  }), (0, Zz.jsx)("ol", {
+                                    children: bz.map((zz => {
                                       let {
-                                        entry: oT,
-                                        day: IT,
-                                        index: iT
-                                      } = TT;
-                                      return (0, cT.jsx)("li", {
-                                        className: kT()("DocsTimelineNotch", {
-                                          Passed: iT < WT,
-                                          Active: iT === WT
+                                        entry: uz,
+                                        day: bz,
+                                        index: Ez
+                                      } = zz;
+                                      return (0, Zz.jsx)("li", {
+                                        className: iz()("DocsTimelineNotch", {
+                                          Passed: Ez < lz,
+                                          Active: Ez === lz
                                         }),
-                                        children: (0, cT.jsx)(fk, {
-                                          entry: oT,
-                                          isActive: iT === WT,
-                                          onNavigate: zT,
-                                          label: oT.text,
-                                          children: (0, cT.jsx)("span", {
+                                        children: (0, Zz.jsx)(Ai, {
+                                          entry: uz,
+                                          isActive: Ez === lz,
+                                          onNavigate: nz,
+                                          label: uz.text,
+                                          children: (0, Zz.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== IT && void 0 !== IT ? IT : oT.text
+                                            children: null !== bz && void 0 !== bz ? bz : uz.text
                                           })
                                         })
-                                      }, oT.anchor)
+                                      }, uz.anchor)
                                     }))
                                   })]
-                                }, IT[0].entry.anchor)
+                                }, bz[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function jk(TT) {
+                          function Li(zz) {
                             let {
-                              isChangelog: oT,
-                              toc: IT,
-                              activeAnchor: iT,
-                              onNavigate: zT
-                            } = TT;
-                            return 0 === IT.length ? null : (0, cT.jsxs)(cT.Fragment, {
-                              children: [(0, cT.jsx)("div", {
+                              isChangelog: uz,
+                              toc: bz,
+                              activeAnchor: Ez,
+                              onNavigate: nz
+                            } = zz;
+                            return 0 === bz.length ? null : (0, Zz.jsxs)(Zz.Fragment, {
+                              children: [(0, Zz.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: oT ? "Updates" : "On this page"
-                              }), oT ? (0, cT.jsx)(Ck, {
-                                toc: IT,
-                                activeAnchor: iT,
-                                onNavigate: zT
-                              }) : (0, cT.jsx)("ul", {
-                                children: IT.map((TT => (0, cT.jsx)("li", {
-                                  children: (0, cT.jsx)(fk, {
-                                    entry: TT,
-                                    isActive: TT.anchor === iT,
-                                    onNavigate: zT,
-                                    children: TT.text.replace(/`/g, "")
+                                children: uz ? "Updates" : "On this page"
+                              }), uz ? (0, Zz.jsx)(Ti, {
+                                toc: bz,
+                                activeAnchor: Ez,
+                                onNavigate: nz
+                              }) : (0, Zz.jsx)("ul", {
+                                children: bz.map((zz => (0, Zz.jsx)("li", {
+                                  children: (0, Zz.jsx)(Ai, {
+                                    entry: zz,
+                                    isActive: zz.anchor === Ez,
+                                    onNavigate: nz,
+                                    children: zz.text.replace(/`/g, "")
                                   })
-                                }, TT.anchor)))
+                                }, zz.anchor)))
                               })]
                             })
                           }
-                          const Jk = {
+                          const Pi = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5200,7 +5200,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            Uk = {
+                            Gi = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5208,1086 +5208,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            ak = 20,
-                            Yk = 10,
-                            Qk = 40,
-                            Ok = 120;
-                          let Hk;
+                            ai = 20,
+                            Vi = 10,
+                            mi = 40,
+                            qi = 120;
+                          let Ui;
 
-                          function nk(TT) {
-                            const oT = TT.gallery;
-                            if (!oT) return [];
-                            if (AI(oT)) return function(TT) {
-                              return hI(TT).entries.map((TT => TT.name))
-                            }(oT).map((IT => ({
-                              page: TT,
-                              anchor: aI(oT, IT),
-                              title: IT,
-                              kind: Uk[oT],
+                          function ci(zz) {
+                            const uz = zz.gallery;
+                            if (!uz) return [];
+                            if (Kb(uz)) return function(zz) {
+                              return Xb(zz).entries.map((zz => zz.name))
+                            }(uz).map((bz => ({
+                              page: zz,
+                              anchor: Gb(uz, bz),
+                              title: bz,
+                              kind: Gi[uz],
                               text: "",
-                              listedUnder: TT.title
+                              listedUnder: zz.title
                             })));
-                            const IT = qT(TT);
-                            return (0, RT.s)(IT).flatMap((iT => {
-                              const zT = iT.heading ? `${TT.title} \u203a ${iT.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : TT.title;
-                              return QI(oT, IT, iT.blocks).flatMap((IT => "names" !== IT.kind ? [] : IT.names.map((iT => {
-                                const kT = IT.isSongs ? "Song" : Uk[oT];
+                            const bz = gz(zz);
+                            return (0, vz.n)(bz).flatMap((Ez => {
+                              const nz = Ez.heading ? `${zz.title} \u203a ${Ez.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : zz.title;
+                              return Vb(uz, bz, Ez.blocks).flatMap((bz => "names" !== bz.kind ? [] : bz.names.map((Ez => {
+                                const iz = bz.isSongs ? "Song" : Gi[uz];
                                 return {
-                                  page: TT,
-                                  anchor: iT.anchor,
-                                  title: iT.name,
-                                  kind: kT,
+                                  page: zz,
+                                  anchor: Ez.anchor,
+                                  title: Ez.name,
+                                  kind: iz,
                                   text: "",
-                                  listedUnder: zT
+                                  listedUnder: nz
                                 }
                               }))))
                             }))
                           }
 
-                          function qk(TT, oT, IT) {
-                            const iT = TT.title.toLowerCase();
-                            let zT = 0;
-                            if (iT === oT) zT = 100;
-                            else if (iT.startsWith(oT)) zT = 80;
-                            else if (iT.includes(oT)) zT = 60;
-                            else if (IT.every((TT => iT.includes(TT)))) zT = 45;
+                          function gi(zz, uz, bz) {
+                            const Ez = zz.title.toLowerCase();
+                            let nz = 0;
+                            if (Ez === uz) nz = 100;
+                            else if (Ez.startsWith(uz)) nz = 80;
+                            else if (Ez.includes(uz)) nz = 60;
+                            else if (bz.every((zz => Ez.includes(zz)))) nz = 45;
                             else {
-                              if (!TT.text.toLowerCase().includes(oT)) return 0;
-                              zT = 20
+                              if (!zz.text.toLowerCase().includes(uz)) return 0;
+                              nz = 20
                             }
-                            return zT - Math.min(iT.length / 10, 9) + ("Page" === TT.kind ? 8 : "Method" === TT.kind ? 3 : 0) - (TT.listedUnder ? ak : 0)
+                            return nz - Math.min(Ez.length / 10, 9) + ("Page" === zz.kind ? 8 : "Method" === zz.kind ? 3 : 0) - (zz.listedUnder ? ai : 0)
                           }
 
-                          function Zk(TT, oT) {
-                            const IT = TT.toLowerCase().indexOf(oT),
-                              iT = Math.max(0, IT - Ok / 3);
-                            return `${iT>0?"\u2026":""}${TT.slice(iT,iT+Ok)}${iT+Ok<TT.length?"\u2026":""}`
+                          function Si(zz, uz) {
+                            const bz = zz.toLowerCase().indexOf(uz),
+                              Ez = Math.max(0, bz - qi / 3);
+                            return `${Ez>0?"\u2026":""}${zz.slice(Ez,Ez+qi)}${Ez+qi<zz.length?"\u2026":""}`
                           }
 
-                          function lk(TT) {
+                          function yi(zz) {
                             let {
-                              text: oT,
-                              query: IT
-                            } = TT;
-                            const iT = IT ? oT.toLowerCase().indexOf(IT) : -1;
-                            return -1 === iT ? (0, cT.jsx)(cT.Fragment, {
-                              children: oT
-                            }) : (0, cT.jsxs)(cT.Fragment, {
-                              children: [oT.slice(0, iT), (0, cT.jsx)("mark", {
-                                children: oT.slice(iT, iT + IT.length)
-                              }), oT.slice(iT + IT.length)]
+                              text: uz,
+                              query: bz
+                            } = zz;
+                            const Ez = bz ? uz.toLowerCase().indexOf(bz) : -1;
+                            return -1 === Ez ? (0, Zz.jsx)(Zz.Fragment, {
+                              children: uz
+                            }) : (0, Zz.jsxs)(Zz.Fragment, {
+                              children: [uz.slice(0, Ez), (0, Zz.jsx)("mark", {
+                                children: uz.slice(Ez, Ez + bz.length)
+                              }), uz.slice(Ez + bz.length)]
                             })
                           }
 
-                          function sk(TT) {
+                          function Di(zz) {
                             let {
-                              basePath: oT,
-                              onClose: IT
-                            } = TT;
-                            const zT = (0, XT.w)(),
-                              [WT, BT] = (0, iT.useState)(""),
-                              [FT, ST] = (0, iT.useState)(0),
-                              DT = (0, iT.useRef)(null),
-                              LT = (0, iT.useRef)(null),
-                              xT = WT.trim().toLowerCase(),
-                              KT = (0, iT.useMemo)((() => {
-                                const TT = (Hk || (Hk = QT.flatMap((TT => {
-                                  const oT = qT(TT);
+                              basePath: uz,
+                              onClose: bz
+                            } = zz;
+                            const nz = (0, Mz.z)(),
+                              [lz, tz] = (0, Ez.useState)(""),
+                              [Hz, Oz] = (0, Ez.useState)(0),
+                              pz = (0, Ez.useRef)(null),
+                              dz = (0, Ez.useRef)(null),
+                              Fz = lz.trim().toLowerCase(),
+                              Rz = (0, Ez.useMemo)((() => {
+                                const zz = (Ui || (Ui = qz.flatMap((zz => {
+                                  const uz = gz(zz);
                                   return [{
-                                    page: TT,
+                                    page: zz,
                                     anchor: "",
-                                    title: TT.title,
+                                    title: zz.title,
                                     kind: "Page",
-                                    text: TT.summary
-                                  }, ...oT.sections.flatMap((oT => {
-                                    const IT = oT.blocks.filter((TT => "paragraph" === TT.kind)).map(RT.f).join(" ").replace(/[`*]/g, ""),
-                                      iT = {
-                                        page: TT,
-                                        anchor: oT.heading.anchor,
-                                        title: oT.heading.text.replace(/`/g, ""),
-                                        kind: Jk[TT.layout],
-                                        text: IT
+                                    text: zz.summary
+                                  }, ...uz.sections.flatMap((uz => {
+                                    const bz = uz.blocks.filter((zz => "paragraph" === zz.kind)).map(vz.e).join(" ").replace(/[`*]/g, ""),
+                                      Ez = {
+                                        page: zz,
+                                        anchor: uz.heading.anchor,
+                                        title: uz.heading.text.replace(/`/g, ""),
+                                        kind: Pi[zz.layout],
+                                        text: bz
                                       },
-                                      zT = oT.blocks.flatMap((oT => "article" === TT.layout && "heading" === oT.kind && 3 === oT.level ? [{
-                                        page: TT,
-                                        anchor: oT.anchor,
-                                        title: oT.text.replace(/`/g, ""),
+                                      nz = uz.blocks.flatMap((uz => "article" === zz.layout && "heading" === uz.kind && 3 === uz.level ? [{
+                                        page: zz,
+                                        anchor: uz.anchor,
+                                        title: uz.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: iT.title
+                                        text: Ez.title
                                       }] : []));
-                                    return [iT, ...zT]
-                                  })), ...nk(TT)]
-                                }))), Hk);
-                                if (!xT) return TT.filter((TT => "Page" === TT.kind));
-                                const oT = xT.split(/\s+/);
-                                let IT = 0;
-                                return TT.map((TT => ({
-                                  entry: TT,
-                                  score: qk(TT, xT, oT)
-                                }))).filter((TT => TT.score > 0)).sort(((TT, oT) => oT.score - TT.score)).filter((TT => !TT.entry.listedUnder || (IT++, IT <= Yk))).slice(0, Qk).map((TT => TT.entry))
-                              }), [xT]);
-                            (0, iT.useEffect)((() => {
-                              ST(0)
-                            }), [xT]), (0, iT.useEffect)((() => {
-                              const TT = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [Ez, ...nz]
+                                  })), ...ci(zz)]
+                                }))), Ui);
+                                if (!Fz) return zz.filter((zz => "Page" === zz.kind));
+                                const uz = Fz.split(/\s+/);
+                                let bz = 0;
+                                return zz.map((zz => ({
+                                  entry: zz,
+                                  score: gi(zz, Fz, uz)
+                                }))).filter((zz => zz.score > 0)).sort(((zz, uz) => uz.score - zz.score)).filter((zz => !zz.entry.listedUnder || (bz++, bz <= Vi))).slice(0, mi).map((zz => zz.entry))
+                              }), [Fz]);
+                            (0, Ez.useEffect)((() => {
+                              Oz(0)
+                            }), [Fz]), (0, Ez.useEffect)((() => {
+                              const zz = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === TT || void 0 === TT || TT.focus()
+                                null === zz || void 0 === zz || zz.focus()
                               }
-                            }), []), (0, iT.useEffect)((() => {
-                              var TT, oT;
-                              null === (TT = DT.current) || void 0 === TT || null === (oT = TT.querySelector(".Active")) || void 0 === oT || oT.scrollIntoView({
+                            }), []), (0, Ez.useEffect)((() => {
+                              var zz, uz;
+                              null === (zz = pz.current) || void 0 === zz || null === (uz = zz.querySelector(".Active")) || void 0 === uz || uz.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [FT]);
-                            const rT = TT => {
-                              zT(tT(oT, TT.page, TT.anchor)), IT()
+                            }), [Hz]);
+                            const wz = zz => {
+                              nz(Qz(uz, zz.page, zz.anchor)), bz()
                             };
-                            return (0, cT.jsx)("div", {
+                            return (0, Zz.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: TT => {
-                                TT.target === TT.currentTarget && IT()
+                              onMouseDown: zz => {
+                                zz.target === zz.currentTarget && bz()
                               },
-                              children: (0, cT.jsxs)("div", {
+                              children: (0, Zz.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: TT => {
-                                  TT.target !== LT.current && TT.preventDefault()
+                                onMouseDown: zz => {
+                                  zz.target !== dz.current && zz.preventDefault()
                                 },
-                                onKeyDown: TT => {
-                                  if ("Escape" === TT.key) IT();
-                                  else if ("Tab" === TT.key) {
-                                    var oT;
-                                    TT.preventDefault(), null === (oT = LT.current) || void 0 === oT || oT.focus()
+                                onKeyDown: zz => {
+                                  if ("Escape" === zz.key) bz();
+                                  else if ("Tab" === zz.key) {
+                                    var uz;
+                                    zz.preventDefault(), null === (uz = dz.current) || void 0 === uz || uz.focus()
                                   }
                                 },
-                                children: [(0, cT.jsxs)("div", {
+                                children: [(0, Zz.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, cT.jsx)(MT, {
+                                  children: [(0, Zz.jsx)(Kz, {
                                     name: "magnifying-glass"
-                                  }), (0, cT.jsx)("input", {
-                                    ref: LT,
+                                  }), (0, Zz.jsx)("input", {
+                                    ref: dz,
                                     autoFocus: !0,
-                                    value: WT,
+                                    value: lz,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": KT.length > 0 ? `DocsSearchResult-${FT}` : void 0,
-                                    onChange: TT => {
-                                      BT(TT.target.value)
+                                    "aria-activedescendant": Rz.length > 0 ? `DocsSearchResult-${Hz}` : void 0,
+                                    onChange: zz => {
+                                      tz(zz.target.value)
                                     },
-                                    onKeyDown: TT => {
-                                      if ("ArrowDown" === TT.key || "ArrowUp" === TT.key) {
-                                        TT.preventDefault();
-                                        const oT = "ArrowDown" === TT.key ? 1 : -1;
-                                        ST((FT + oT + KT.length) % Math.max(KT.length, 1))
-                                      } else "Enter" === TT.key && KT[FT] && rT(KT[FT])
+                                    onKeyDown: zz => {
+                                      if ("ArrowDown" === zz.key || "ArrowUp" === zz.key) {
+                                        zz.preventDefault();
+                                        const uz = "ArrowDown" === zz.key ? 1 : -1;
+                                        Oz((Hz + uz + Rz.length) % Math.max(Rz.length, 1))
+                                      } else "Enter" === zz.key && Rz[Hz] && wz(Rz[Hz])
                                     }
-                                  }), (0, cT.jsx)("kbd", {
+                                  }), (0, Zz.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, cT.jsxs)("ul", {
+                                }), (0, Zz.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: DT,
+                                  ref: pz,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!xT && (0, cT.jsx)("li", {
+                                  children: [!Fz && (0, Zz.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), KT.map(((TT, oT) => {
-                                    var IT;
-                                    return (0, cT.jsxs)("li", {
-                                      id: `DocsSearchResult-${oT}`,
+                                  }), Rz.map(((zz, uz) => {
+                                    var bz;
+                                    return (0, Zz.jsxs)("li", {
+                                      id: `DocsSearchResult-${uz}`,
                                       role: "option",
-                                      "aria-selected": oT === FT,
-                                      className: kT()("DocsSearchResult", {
-                                        Active: oT === FT
+                                      "aria-selected": uz === Hz,
+                                      className: iz()("DocsSearchResult", {
+                                        Active: uz === Hz
                                       }),
                                       onMouseMove: () => {
-                                        ST(oT)
+                                        Oz(uz)
                                       },
                                       onClick: () => {
-                                        rT(TT)
+                                        wz(zz)
                                       },
-                                      children: [(0, cT.jsx)(MT, {
-                                        name: TT.page.icon
-                                      }), (0, cT.jsxs)("div", {
+                                      children: [(0, Zz.jsx)(Kz, {
+                                        name: zz.page.icon
+                                      }), (0, Zz.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, cT.jsx)("div", {
+                                        children: [(0, Zz.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, cT.jsx)(lk, {
-                                            text: TT.title,
-                                            query: xT
+                                          children: (0, Zz.jsx)(yi, {
+                                            text: zz.title,
+                                            query: Fz
                                           })
-                                        }), TT.text && (0, cT.jsx)("div", {
+                                        }), zz.text && (0, Zz.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, cT.jsx)(lk, {
-                                            text: Zk(TT.text, xT),
-                                            query: xT
+                                          children: (0, Zz.jsx)(yi, {
+                                            text: Si(zz.text, Fz),
+                                            query: Fz
                                           })
                                         })]
-                                      }), (0, cT.jsx)("span", {
+                                      }), (0, Zz.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === TT.kind ? "Page" : null !== (IT = TT.listedUnder) && void 0 !== IT ? IT : `${TT.kind} \xb7 ${TT.page.title}`
+                                        children: "Page" === zz.kind ? "Page" : null !== (bz = zz.listedUnder) && void 0 !== bz ? bz : `${zz.kind} \xb7 ${zz.page.title}`
                                       })]
-                                    }, `${TT.page.id}#${TT.anchor}`)
-                                  })), xT && 0 === KT.length && (0, cT.jsxs)("li", {
+                                    }, `${zz.page.id}#${zz.anchor}`)
+                                  })), Fz && 0 === Rz.length && (0, Zz.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", WT, "\u201d."]
+                                    children: ["Nothing matches \u201c", lz, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function tk(TT, oT) {
-                            if (oT < 10) return `${TT.toFixed(1)}s`;
-                            const IT = Math.floor(TT);
-                            return `${Math.floor(IT/60)}:${String(IT%60).padStart(2,"0")}`
+                          function Qi(zz, uz) {
+                            if (uz < 10) return `${zz.toFixed(1)}s`;
+                            const bz = Math.floor(zz);
+                            return `${Math.floor(bz/60)}:${String(bz%60).padStart(2,"0")}`
                           }
 
-                          function Gk() {
-                            const TT = Li((TT => TT.track)),
-                              oT = Li((TT => TT.volume)),
-                              [IT, zT] = (0, iT.useState)(0),
-                              WT = (0, iT.useRef)(ii);
-                            if ((0, iT.useEffect)((() => {
-                                if (!TT) return;
-                                if (zT(Mi()), "playing" !== TT.status) return;
-                                let oT = 0;
-                                const IT = () => {
-                                  zT(Mi()), oT = requestAnimationFrame(IT)
+                          function Wi() {
+                            const zz = OE((zz => zz.track)),
+                              uz = OE((zz => zz.volume)),
+                              [bz, nz] = (0, Ez.useState)(0),
+                              lz = (0, Ez.useRef)(uE);
+                            if ((0, Ez.useEffect)((() => {
+                                if (!zz) return;
+                                if (nz(ZE()), "playing" !== zz.status) return;
+                                let uz = 0;
+                                const bz = () => {
+                                  nz(ZE()), uz = requestAnimationFrame(bz)
                                 };
-                                return oT = requestAnimationFrame(IT), () => {
-                                  cancelAnimationFrame(oT)
+                                return uz = requestAnimationFrame(bz), () => {
+                                  cancelAnimationFrame(uz)
                                 }
-                              }), [TT]), !TT) return null;
-                            const XT = "paused" !== TT.status,
-                              BT = Math.min(IT, TT.duration);
-                            return (0, cT.jsx)("div", {
+                              }), [zz]), !zz) return null;
+                            const Mz = "paused" !== zz.status,
+                              tz = Math.min(bz, zz.duration);
+                            return (0, Zz.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, cT.jsxs)("section", {
+                              children: (0, Zz.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, cT.jsx)("button", {
+                                children: [(0, Zz.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": XT ? `Pause ${TT.name}` : `Play ${TT.name}`,
-                                  onClick: Ki,
-                                  children: (0, cT.jsx)(MT, {
-                                    name: XT ? "pause" : "play"
+                                  "aria-label": Mz ? `Pause ${zz.name}` : `Play ${zz.name}`,
+                                  onClick: FE,
+                                  children: (0, Zz.jsx)(Kz, {
+                                    name: Mz ? "pause" : "play"
                                   })
-                                }), (0, cT.jsxs)("div", {
+                                }), (0, Zz.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, cT.jsxs)("div", {
+                                  children: [(0, Zz.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, cT.jsx)("code", {
-                                      children: TT.name
-                                    }), (0, cT.jsx)("span", {
-                                      children: TT.isSong ? "Song" : "Sound"
+                                    children: [(0, Zz.jsx)("code", {
+                                      children: zz.name
+                                    }), (0, Zz.jsx)("span", {
+                                      children: zz.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, cT.jsxs)("div", {
+                                  }), (0, Zz.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, cT.jsx)("span", {
-                                      children: tk(BT, TT.duration)
-                                    }), (0, cT.jsx)("input", {
+                                    children: [(0, Zz.jsx)("span", {
+                                      children: Qi(tz, zz.duration)
+                                    }), (0, Zz.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: TT.duration || 1,
+                                      max: zz.duration || 1,
                                       step: .01,
-                                      value: BT,
-                                      disabled: 0 === TT.duration,
+                                      value: tz,
+                                      disabled: 0 === zz.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${tk(BT,TT.duration)} of ${tk(TT.duration,TT.duration)}`,
-                                      onChange: TT => {
-                                        const oT = Number(TT.target.value);
-                                        ! function(TT) {
-                                          var oT;
-                                          Bi = TT, null === (oT = Wi) || void 0 === oT || oT.seek(TT)
-                                        }(oT), zT(oT)
+                                      "aria-valuetext": `${Qi(tz,zz.duration)} of ${Qi(zz.duration,zz.duration)}`,
+                                      onChange: zz => {
+                                        const uz = Number(zz.target.value);
+                                        ! function(zz) {
+                                          var uz;
+                                          lE = zz, null === (uz = nE) || void 0 === uz || uz.seek(zz)
+                                        }(uz), nz(uz)
                                       }
-                                    }), (0, cT.jsx)("span", {
-                                      children: TT.duration > 0 ? tk(TT.duration, TT.duration) : "\u2013"
+                                    }), (0, Zz.jsx)("span", {
+                                      children: zz.duration > 0 ? Qi(zz.duration, zz.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, cT.jsxs)("div", {
+                                }), (0, Zz.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, cT.jsx)("button", {
+                                  children: [(0, Zz.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === oT ? "Unmute" : "Mute",
+                                    "aria-label": 0 === uz ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === oT ? ri(WT.current) : (WT.current = oT, ri(0))
+                                      0 === uz ? RE(lz.current) : (lz.current = uz, RE(0))
                                     },
-                                    children: (0, cT.jsx)(MT, {
+                                    children: (0, Zz.jsx)(Kz, {
                                       name: "volume",
-                                      className: kT()({
-                                        Muted: 0 === oT
+                                      className: iz()({
+                                        Muted: 0 === uz
                                       })
                                     })
-                                  }), (0, cT.jsx)("input", {
+                                  }), (0, Zz.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: oT,
+                                    value: uz,
                                     "aria-label": "Volume",
-                                    onChange: TT => {
-                                      ri(Number(TT.target.value))
+                                    onChange: zz => {
+                                      RE(Number(zz.target.value))
                                     }
                                   })]
-                                }), (0, cT.jsx)("button", {
+                                }), (0, Zz.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var oT;
-                                    null === (oT = document.querySelector(`[data-docs-track="${CSS.escape(zi(TT.name,TT.isSong))}"]`)) || void 0 === oT || oT.focus(), Ai()
+                                    var uz;
+                                    null === (uz = document.querySelector(`[data-docs-track="${CSS.escape(bE(zz.name,zz.isSong))}"]`)) || void 0 === uz || uz.focus(), KE()
                                   },
-                                  children: (0, cT.jsx)(MT, {
+                                  children: (0, Zz.jsx)(Kz, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var pk = IT(26);
-                          const bk = "docsTheme",
-                            yk = window.matchMedia("(prefers-color-scheme: light)");
+                          var ei = bz(33);
+                          const ji = "docsTheme",
+                            Ii = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function Nk(TT) {
+                          function Bi(zz) {
                             let {
-                              theme: oT,
-                              onChange: IT
-                            } = TT;
-                            const iT = "dark" === oT ? "light" : "dark";
-                            return (0, cT.jsx)("button", {
+                              theme: uz,
+                              onChange: bz
+                            } = zz;
+                            const Ez = "dark" === uz ? "light" : "dark";
+                            return (0, Zz.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${iT} theme`,
-                              title: `Switch to ${iT} theme`,
+                              "aria-label": `Switch to ${Ez} theme`,
+                              title: `Switch to ${Ez} theme`,
                               onClick: () => {
-                                IT(iT)
+                                bz(Ez)
                               },
-                              children: (0, cT.jsx)(MT, {
-                                name: "dark" === oT ? "moon" : "sun"
+                              children: (0, Zz.jsx)(Kz, {
+                                name: "dark" === uz ? "moon" : "sun"
                               })
                             })
                           }
-                          const Pk = "https://github.com/Bloxdy/code-api",
-                            dk = "https://discord.gg/playbloxd",
-                            Vk = 180,
-                            TW = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const Ci = "https://github.com/Bloxdy/code-api",
+                            Yi = "https://discord.gg/playbloxd",
+                            ki = 180,
+                            zl = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function oW(TT) {
+                          function ul(zz) {
                             let {
-                              basePath: oT,
-                              activePageId: IT,
-                              onNavigate: iT
-                            } = TT;
-                            return (0, cT.jsx)("nav", {
+                              basePath: uz,
+                              activePageId: bz,
+                              onNavigate: Ez
+                            } = zz;
+                            return (0, Zz.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: OT.map((TT => (0, cT.jsxs)("div", {
+                              children: hz.map((zz => (0, Zz.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, cT.jsx)("div", {
+                                children: [(0, Zz.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: TT.title
-                                }), TT.pageIds.map((TT => {
-                                  var zT;
-                                  const XT = HT(TT);
-                                  return (0, cT.jsxs)(WT.b, {
-                                    to: tT(oT, XT),
-                                    className: kT()("DocsNavLink", {
-                                      Active: XT.id === IT
+                                  children: zz.title
+                                }), zz.pageIds.map((zz => {
+                                  var nz;
+                                  const Mz = Uz(zz);
+                                  return (0, Zz.jsxs)(lz.e, {
+                                    to: Qz(uz, Mz),
+                                    className: iz()("DocsNavLink", {
+                                      Active: Mz.id === bz
                                     }),
-                                    "aria-current": XT.id === IT ? "page" : void 0,
-                                    onClick: iT,
-                                    children: [(0, cT.jsx)(MT, {
-                                      name: XT.icon
-                                    }), (0, cT.jsx)("span", {
-                                      children: null !== (zT = XT.navTitle) && void 0 !== zT ? zT : XT.title
+                                    "aria-current": Mz.id === bz ? "page" : void 0,
+                                    onClick: Ez,
+                                    children: [(0, Zz.jsx)(Kz, {
+                                      name: Mz.icon
+                                    }), (0, Zz.jsx)("span", {
+                                      children: null !== (nz = Mz.navTitle) && void 0 !== nz ? nz : Mz.title
                                     })]
-                                  }, XT.id)
+                                  }, Mz.id)
                                 }))]
-                              }, TT.title)))
+                              }, zz.title)))
                             })
                           }
 
-                          function IW(TT) {
+                          function bl(zz) {
                             let {
-                              basePath: oT,
-                              pageId: IT
-                            } = TT;
-                            const iT = OT.flatMap((TT => TT.pageIds)),
-                              zT = iT.indexOf(IT),
-                              kT = zT > 0 ? HT(iT[zT - 1]) : null,
-                              XT = zT < iT.length - 1 ? HT(iT[zT + 1]) : null;
-                            return (0, cT.jsxs)("nav", {
+                              basePath: uz,
+                              pageId: bz
+                            } = zz;
+                            const Ez = hz.flatMap((zz => zz.pageIds)),
+                              nz = Ez.indexOf(bz),
+                              iz = nz > 0 ? Uz(Ez[nz - 1]) : null,
+                              Mz = nz < Ez.length - 1 ? Uz(Ez[nz + 1]) : null;
+                            return (0, Zz.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [kT ? (0, cT.jsxs)(WT.b, {
+                              children: [iz ? (0, Zz.jsxs)(lz.e, {
                                 className: "DocsPagerLink Previous",
-                                to: tT(oT, kT),
-                                children: [(0, cT.jsx)("span", {
+                                to: Qz(uz, iz),
+                                children: [(0, Zz.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, cT.jsx)("span", {
+                                }), (0, Zz.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: kT.title
+                                  children: iz.title
                                 })]
-                              }) : (0, cT.jsx)("span", {}), XT && (0, cT.jsxs)(WT.b, {
+                              }) : (0, Zz.jsx)("span", {}), Mz && (0, Zz.jsxs)(lz.e, {
                                 className: "DocsPagerLink Next",
-                                to: tT(oT, XT),
-                                children: [(0, cT.jsx)("span", {
+                                to: Qz(uz, Mz),
+                                children: [(0, Zz.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, cT.jsx)("span", {
+                                }), (0, Zz.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: XT.title
+                                  children: Mz.title
                                 })]
                               })]
                             })
                           }
 
-                          function iW(TT) {
+                          function El(zz) {
                             let {
-                              basePath: oT,
-                              embedded: IT = !1
-                            } = TT;
+                              basePath: uz,
+                              embedded: bz = !1
+                            } = zz;
                             const {
-                              pageSlug: zT = ""
-                            } = (0, XT.C)(), FT = (0, XT.t)(), ST = (0, XT.w)(), DT = (LT = zT, QT.find((TT => TT.slug === LT)));
-                            var LT;
-                            const [xT, KT] = function() {
-                              const [TT, oT] = (0, iT.useState)((() => {
-                                const TT = pk.e.getItem(bk);
-                                return "dark" === TT || "light" === TT ? TT : null
-                              })), [IT, zT] = (0, iT.useState)(yk.matches ? "light" : "dark");
-                              return (0, iT.useEffect)((() => {
-                                const TT = () => {
-                                  zT(yk.matches ? "light" : "dark")
+                              pageSlug: nz = ""
+                            } = (0, Mz.D)(), Hz = (0, Mz.v)(), Oz = (0, Mz.z)(), pz = (dz = nz, qz.find((zz => zz.slug === dz)));
+                            var dz;
+                            const [Fz, Rz] = function() {
+                              const [zz, uz] = (0, Ez.useState)((() => {
+                                const zz = ei.g.getItem(ji);
+                                return "dark" === zz || "light" === zz ? zz : null
+                              })), [bz, nz] = (0, Ez.useState)(Ii.matches ? "light" : "dark");
+                              return (0, Ez.useEffect)((() => {
+                                const zz = () => {
+                                  nz(Ii.matches ? "light" : "dark")
                                 };
-                                return yk.addEventListener("change", TT), () => {
-                                  yk.removeEventListener("change", TT)
+                                return Ii.addEventListener("change", zz), () => {
+                                  Ii.removeEventListener("change", zz)
                                 }
-                              }), []), [null !== TT && void 0 !== TT ? TT : IT, TT => {
-                                pk.e.setItem(bk, TT), oT(TT)
+                              }), []), [null !== zz && void 0 !== zz ? zz : bz, zz => {
+                                ei.g.setItem(ji, zz), uz(zz)
                               }]
-                            }(), [rT, AT] = (0, iT.useState)(null), [gT, hT] = (0, iT.useState)(!1), [wT, mT] = (0, iT.useState)(!1), [eT, uT] = (0, iT.useState)([]), vT = function(TT, oT) {
-                              const [IT, zT] = (0, iT.useState)("");
-                              return (0, iT.useEffect)((() => {
-                                if (!oT) return;
-                                let IT = 0;
-                                const iT = () => {
-                                    var iT, kT;
-                                    IT = 0;
-                                    const WT = oT.getBoundingClientRect().top + Vk;
-                                    let XT = null !== (iT = null === (kT = TT[0]) || void 0 === kT ? void 0 : kT.anchor) && void 0 !== iT ? iT : "";
-                                    for (const oT of TT) {
-                                      const TT = document.getElementById(oT.anchor);
-                                      TT && TT.getBoundingClientRect().top <= WT && (XT = oT.anchor)
+                            }(), [wz, Xz] = (0, Ez.useState)(null), [fz, sz] = (0, Ez.useState)(!1), [rz, oz] = (0, Ez.useState)(!1), [Nz, xz] = (0, Ez.useState)([]), Jz = function(zz, uz) {
+                              const [bz, nz] = (0, Ez.useState)("");
+                              return (0, Ez.useEffect)((() => {
+                                if (!uz) return;
+                                let bz = 0;
+                                const Ez = () => {
+                                    var Ez, iz;
+                                    bz = 0;
+                                    const lz = uz.getBoundingClientRect().top + ki;
+                                    let Mz = null !== (Ez = null === (iz = zz[0]) || void 0 === iz ? void 0 : iz.anchor) && void 0 !== Ez ? Ez : "";
+                                    for (const uz of zz) {
+                                      const zz = document.getElementById(uz.anchor);
+                                      zz && zz.getBoundingClientRect().top <= lz && (Mz = uz.anchor)
                                     }
-                                    oT.scrollTop + oT.clientHeight >= oT.scrollHeight - 2 && oT.scrollTop > 0 && TT.length > 0 && (XT = TT[TT.length - 1].anchor), zT(XT)
+                                    uz.scrollTop + uz.clientHeight >= uz.scrollHeight - 2 && uz.scrollTop > 0 && zz.length > 0 && (Mz = zz[zz.length - 1].anchor), nz(Mz)
                                   },
-                                  kT = () => {
-                                    IT || (IT = requestAnimationFrame(iT))
+                                  iz = () => {
+                                    bz || (bz = requestAnimationFrame(Ez))
                                   };
-                                return iT(), oT.addEventListener("scroll", kT, {
+                                return Ez(), uz.addEventListener("scroll", iz, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(IT), oT.removeEventListener("scroll", kT)
+                                  cancelAnimationFrame(bz), uz.removeEventListener("scroll", iz)
                                 }
-                              }), [TT, oT]), IT
-                            }(eT, rT), ET = "" === zT && FT.hash ? function(TT) {
-                              const oT = (0, RT.p)(TT);
-                              if (ZT(HT("welcome"), oT)) return null;
-                              const IT = Object.hasOwn(sT, oT) ? sT[oT] : null;
-                              if (IT) return {
-                                page: HT(IT.pageId),
-                                anchor: IT.anchor
+                              }), [zz, uz]), bz
+                            }(Nz, wz), Az = "" === nz && Hz.hash ? function(zz) {
+                              const uz = (0, vz.h)(zz);
+                              if (Sz(Uz("welcome"), uz)) return null;
+                              const bz = Object.hasOwn(Dz, uz) ? Dz[uz] : null;
+                              if (bz) return {
+                                page: Uz(bz.pageId),
+                                anchor: bz.anchor
                               };
-                              const iT = HT("readme");
-                              return ZT(iT, oT) ? {
-                                page: iT,
-                                anchor: oT
-                              } : lT(`#${oT}`)
-                            }(FT.hash) : null;
-                            (0, iT.useEffect)((() => (BT.c.set({
+                              const Ez = Uz("readme");
+                              return Sz(Ez, uz) ? {
+                                page: Ez,
+                                anchor: uz
+                              } : yz(`#${uz}`)
+                            }(Hz.hash) : null;
+                            (0, Ez.useEffect)((() => (tz.e.set({
                               musicOnFromPage: !1
                             }), () => {
-                              BT.c.set({
+                              tz.e.set({
                                 musicOnFromPage: !0
-                              }), Ai()
-                            })), []), (0, iT.useEffect)((() => {
-                              const TT = TT => {
-                                const oT = TT.target;
-                                if (oT.closest(".DocsTextDialog")) return;
-                                const IT = oT.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(oT.tagName);
-                                "k" === TT.key && (TT.metaKey || TT.ctrlKey) || "/" === TT.key && !IT ? (TT.preventDefault(), mT(!0)) : "Escape" === TT.key && hT(!1)
+                              }), KE()
+                            })), []), (0, Ez.useEffect)((() => {
+                              const zz = zz => {
+                                const uz = zz.target;
+                                if (uz.closest(".DocsTextDialog")) return;
+                                const bz = uz.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(uz.tagName);
+                                "k" === zz.key && (zz.metaKey || zz.ctrlKey) || "/" === zz.key && !bz ? (zz.preventDefault(), oz(!0)) : "Escape" === zz.key && sz(!1)
                               };
-                              return window.addEventListener("keydown", TT), () => {
-                                window.removeEventListener("keydown", TT)
+                              return window.addEventListener("keydown", zz), () => {
+                                window.removeEventListener("keydown", zz)
                               }
                             }), []);
-                            const fT = (0, iT.useRef)(null);
-                            (0, iT.useLayoutEffect)((() => {
-                              var TT, oT;
-                              if (!rT) return;
-                              const IT = fT.current === FT.pathname;
-                              fT.current = FT.pathname;
-                              const iT = (0, RT.p)(FT.hash),
-                                zT = iT ? document.getElementById(iT) : null;
-                              if (null === (TT = rT.querySelector(".DocsTargeted")) || void 0 === TT || TT.classList.remove("DocsTargeted"), null === zT || void 0 === zT || null === (oT = zT.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === oT || oT.classList.add("DocsTargeted"), zT) {
-                                var kT;
-                                const TT = zT.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (kT = zT.closest(".DocsChangelogEntry")) && void 0 !== kT ? kT : zT).scrollIntoView({
-                                  block: TT ? "center" : "start",
-                                  behavior: IT ? "smooth" : "auto"
+                            const Tz = (0, Ez.useRef)(null);
+                            (0, Ez.useLayoutEffect)((() => {
+                              var zz, uz;
+                              if (!wz) return;
+                              const bz = Tz.current === Hz.pathname;
+                              Tz.current = Hz.pathname;
+                              const Ez = (0, vz.h)(Hz.hash),
+                                nz = Ez ? document.getElementById(Ez) : null;
+                              if (null === (zz = wz.querySelector(".DocsTargeted")) || void 0 === zz || zz.classList.remove("DocsTargeted"), null === nz || void 0 === nz || null === (uz = nz.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === uz || uz.classList.add("DocsTargeted"), nz) {
+                                var iz;
+                                const zz = nz.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (iz = nz.closest(".DocsChangelogEntry")) && void 0 !== iz ? iz : nz).scrollIntoView({
+                                  block: zz ? "center" : "start",
+                                  behavior: bz ? "smooth" : "auto"
                                 })
-                              } else IT || rT.scrollTo({
+                              } else bz || wz.scrollTo({
                                 top: 0
                               })
-                            }), [rT, FT.pathname, FT.hash, FT.key]);
-                            const CT = (0, iT.useCallback)((() => {
-                                hT(!1)
+                            }), [wz, Hz.pathname, Hz.hash, Hz.key]);
+                            const Lz = (0, Ez.useCallback)((() => {
+                                sz(!1)
                               }), []),
-                              jT = (0, iT.useCallback)((TT => {
-                                ST({
-                                  hash: TT
+                              Pz = (0, Ez.useCallback)((zz => {
+                                Oz({
+                                  hash: zz
                                 })
-                              }), [ST]);
-                            if (ET) return (0, cT.jsx)(XT.c, {
+                              }), [Oz]);
+                            if (Az) return (0, Zz.jsx)(Mz.c, {
                               replace: !0,
-                              to: tT(oT, ET.page, ET.anchor)
+                              to: Qz(uz, Az.page, Az.anchor)
                             });
-                            if (!DT) return (0, cT.jsx)(XT.c, {
+                            if (!pz) return (0, Zz.jsx)(Mz.c, {
                               replace: !0,
-                              to: oT
+                              to: uz
                             });
-                            const JT = IT ? "div" : "main";
-                            return (0, cT.jsx)(xo.Provider, {
-                              value: oT,
-                              children: (0, cT.jsx)(co.Provider, {
-                                value: rT,
-                                children: (0, cT.jsxs)("div", {
-                                  ref: AT,
-                                  className: kT()("DocsSite", {
-                                    Embedded: IT,
-                                    NavOpen: gT
+                            const Gz = bz ? "div" : "main";
+                            return (0, Zz.jsx)(Fu.Provider, {
+                              value: uz,
+                              children: (0, Zz.jsx)(Zu.Provider, {
+                                value: wz,
+                                children: (0, Zz.jsxs)("div", {
+                                  ref: Xz,
+                                  className: iz()("DocsSite", {
+                                    Embedded: bz,
+                                    NavOpen: fz
                                   }),
-                                  "data-theme": xT,
-                                  children: [(0, cT.jsxs)("header", {
+                                  "data-theme": Fz,
+                                  children: [(0, Zz.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, cT.jsx)("button", {
+                                    children: [(0, Zz.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": gT ? "Close menu" : "Open menu",
-                                      "aria-expanded": gT,
+                                      "aria-label": fz ? "Close menu" : "Open menu",
+                                      "aria-expanded": fz,
                                       onClick: () => {
-                                        hT(!gT)
+                                        sz(!fz)
                                       },
-                                      children: (0, cT.jsx)(MT, {
-                                        name: gT ? "cross" : "menu"
+                                      children: (0, Zz.jsx)(Kz, {
+                                        name: fz ? "cross" : "menu"
                                       })
-                                    }), (0, cT.jsxs)(WT.b, {
-                                      to: oT,
+                                    }), (0, Zz.jsxs)(lz.e, {
+                                      to: uz,
                                       className: "DocsBrand",
-                                      children: [(0, cT.jsx)("img", {
+                                      children: [(0, Zz.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, cT.jsx)("span", {
+                                      }), (0, Zz.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, cT.jsx)("span", {
+                                      }), (0, Zz.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, cT.jsxs)("button", {
+                                    }), (0, Zz.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        mT(!0)
+                                        oz(!0)
                                       },
-                                      children: [(0, cT.jsx)(MT, {
+                                      children: [(0, Zz.jsx)(Kz, {
                                         name: "magnifying-glass"
-                                      }), (0, cT.jsx)("span", {
+                                      }), (0, Zz.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, cT.jsxs)("kbd", {
-                                        children: [TW ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, Zz.jsxs)("kbd", {
+                                        children: [zl ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, cT.jsxs)("div", {
+                                    }), (0, Zz.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, cT.jsxs)("a", {
-                                        href: dk,
+                                      children: [(0, Zz.jsxs)("a", {
+                                        href: Yi,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, cT.jsx)(MT, {
+                                        children: [(0, Zz.jsx)(Kz, {
                                           name: "discord"
-                                        }), (0, cT.jsx)("span", {
+                                        }), (0, Zz.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, cT.jsxs)("a", {
-                                        href: Pk,
+                                      }), (0, Zz.jsxs)("a", {
+                                        href: Ci,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, cT.jsx)(MT, {
+                                        children: [(0, Zz.jsx)(Kz, {
                                           name: "external-link"
-                                        }), (0, cT.jsx)("span", {
+                                        }), (0, Zz.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !IT && (0, cT.jsxs)(WT.b, {
+                                      }), !bz && (0, Zz.jsxs)(lz.e, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, cT.jsx)(MT, {
+                                        children: [(0, Zz.jsx)(Kz, {
                                           name: "play"
-                                        }), (0, cT.jsx)("span", {
+                                        }), (0, Zz.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, cT.jsx)(Nk, {
-                                        theme: xT,
-                                        onChange: KT
+                                      }), (0, Zz.jsx)(Bi, {
+                                        theme: Fz,
+                                        onChange: Rz
                                       })]
                                     })]
-                                  }), (0, cT.jsxs)("div", {
+                                  }), (0, Zz.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, cT.jsx)("aside", {
+                                    children: [(0, Zz.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, cT.jsx)(oW, {
-                                        basePath: oT,
-                                        activePageId: DT.id,
-                                        onNavigate: CT
+                                      children: (0, Zz.jsx)(ul, {
+                                        basePath: uz,
+                                        activePageId: pz.id,
+                                        onNavigate: Lz
                                       })
-                                    }), (0, cT.jsx)("div", {
+                                    }), (0, Zz.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: CT
-                                    }), (0, cT.jsxs)(JT, {
+                                      onClick: Lz
+                                    }), (0, Zz.jsxs)(Gz, {
                                       className: "DocsMain",
-                                      children: [(0, cT.jsx)(vk, {
-                                        page: DT,
-                                        onTocChange: uT
-                                      }, DT.id), (0, cT.jsx)(IW, {
-                                        basePath: oT,
-                                        pageId: DT.id
+                                      children: [(0, Zz.jsx)(xi, {
+                                        page: pz,
+                                        onTocChange: xz
+                                      }, pz.id), (0, Zz.jsx)(bl, {
+                                        basePath: uz,
+                                        pageId: pz.id
                                       })]
-                                    }), (0, cT.jsx)("aside", {
-                                      className: kT()("DocsToc", {
-                                        Timeline: "changelog" === DT.layout
+                                    }), (0, Zz.jsx)("aside", {
+                                      className: iz()("DocsToc", {
+                                        Timeline: "changelog" === pz.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, cT.jsx)(jk, {
-                                        isChangelog: "changelog" === DT.layout,
-                                        toc: eT,
-                                        activeAnchor: vT,
-                                        onNavigate: jT
+                                      children: (0, Zz.jsx)(Li, {
+                                        isChangelog: "changelog" === pz.layout,
+                                        toc: Nz,
+                                        activeAnchor: Jz,
+                                        onNavigate: Pz
                                       })
                                     })]
-                                  }), (0, cT.jsx)(Gk, {}), wT && (0, cT.jsx)(sk, {
-                                    basePath: oT,
+                                  }), (0, Zz.jsx)(Wi, {}), rz && (0, Zz.jsx)(Di, {
+                                    basePath: uz,
                                     onClose: () => {
-                                      mT(!1)
+                                      oz(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4229: (TT, oT, IT) => {
-                          IT.d(oT, {
-                            c: () => iT,
-                            e: () => WT,
-                            f: () => MT,
-                            j: () => KT,
-                            l: () => XT,
-                            p: () => zT,
-                            r: () => kT,
-                            s: () => cT,
-                            v: () => xT,
-                            y: () => LT
+                        }, 4489: (zz, uz, bz) => {
+                          bz.d(uz, {
+                            b: () => Ez,
+                            c: () => lz,
+                            e: () => Kz,
+                            f: () => Rz,
+                            g: () => Mz,
+                            h: () => nz,
+                            k: () => iz,
+                            n: () => Zz,
+                            q: () => Fz,
+                            t: () => dz
                           });
-                          const iT = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const Ez = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function zT(TT) {
+                          function nz(zz) {
                             try {
-                              return decodeURIComponent(TT.slice(1))
+                              return decodeURIComponent(zz.slice(1))
                             } catch {
-                              return TT.slice(1)
+                              return zz.slice(1)
                             }
                           }
 
-                          function kT(TT) {
-                            return TT.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function iz(zz) {
+                            return zz.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const WT = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${iT.source}`, "g");
+                          const lz = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Ez.source}`, "g");
 
-                          function XT(TT, oT) {
-                            return 2 === TT.length ? oT.replace(/^ (.*) $/, "$1") : oT
-                          }
-
-                          function BT(TT) {
-                            return "" === TT.trim()
+                          function Mz(zz, uz) {
+                            return 2 === zz.length ? uz.replace(/^ (.*) $/, "$1") : uz
                           }
 
-                          function FT(TT) {
-                            const oT = [];
-                            for (const IT of TT.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) oT.length > 0 && oT[oT.length - 1].endsWith("\\") ? oT[oT.length - 1] += `|${IT}` : oT.push(IT);
-                            return oT.map((TT => TT.trim().replaceAll("\\|", "|")))
+                          function tz(zz) {
+                            return "" === zz.trim()
                           }
-                          const ST = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function DT(TT) {
-                            const oT = [],
-                              IT = [{
+                          function Hz(zz) {
+                            const uz = [];
+                            for (const bz of zz.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) uz.length > 0 && uz[uz.length - 1].endsWith("\\") ? uz[uz.length - 1] += `|${bz}` : uz.push(bz);
+                            return uz.map((zz => zz.trim().replaceAll("\\|", "|")))
+                          }
+                          const Oz = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function pz(zz) {
+                            const uz = [],
+                              bz = [{
                                 indent: -1,
-                                items: oT
+                                items: uz
                               }];
-                            let iT = null;
-                            for (const zT of TT) {
-                              const TT = zT.match(ST);
-                              if (!TT) {
-                                iT && (iT.text += ` ${zT.trim()}`);
+                            let Ez = null;
+                            for (const nz of zz) {
+                              const zz = nz.match(Oz);
+                              if (!zz) {
+                                Ez && (Ez.text += ` ${nz.trim()}`);
                                 continue
                               }
-                              const oT = TT[1].replace(/\t/g, "  ").length;
-                              for (; oT <= IT[IT.length - 1].indent;) IT.pop();
-                              iT = {
-                                text: TT[3].trim(),
+                              const uz = zz[1].replace(/\t/g, "  ").length;
+                              for (; uz <= bz[bz.length - 1].indent;) bz.pop();
+                              Ez = {
+                                text: zz[3].trim(),
                                 children: []
-                              }, IT[IT.length - 1].items.push(iT), IT.push({
-                                indent: oT,
-                                items: iT.children
+                              }, bz[bz.length - 1].items.push(Ez), bz.push({
+                                indent: uz,
+                                items: Ez.children
                               })
                             }
-                            return oT
+                            return uz
                           }
 
-                          function LT(TT) {
-                            const oT = TT.replace(/\r\n/g, "\n").split("\n"),
-                              IT = [];
-                            let iT = 0;
-                            for (; iT < oT.length;) {
-                              const TT = oT[iT];
-                              if (BT(TT)) {
-                                iT++;
+                          function dz(zz) {
+                            const uz = zz.replace(/\r\n/g, "\n").split("\n"),
+                              bz = [];
+                            let Ez = 0;
+                            for (; Ez < uz.length;) {
+                              const zz = uz[Ez];
+                              if (tz(zz)) {
+                                Ez++;
                                 continue
                               }
-                              const zT = TT.match(/^\s*```\s*(\w*)\s*$/);
-                              if (zT) {
-                                const TT = [];
-                                for (iT++; iT < oT.length && !/^\s*```\s*$/.test(oT[iT]);) TT.push(oT[iT]), iT++;
-                                iT++, IT.push({
+                              const nz = zz.match(/^\s*```\s*(\w*)\s*$/);
+                              if (nz) {
+                                const zz = [];
+                                for (Ez++; Ez < uz.length && !/^\s*```\s*$/.test(uz[Ez]);) zz.push(uz[Ez]), Ez++;
+                                Ez++, bz.push({
                                   kind: "code",
-                                  lang: zT[1] || "text",
-                                  code: TT.join("\n").replace(/\s+$/, "")
+                                  lang: nz[1] || "text",
+                                  code: zz.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const WT = TT.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (WT) {
-                                const TT = WT[2].trim();
-                                IT.push({
+                              const lz = zz.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (lz) {
+                                const zz = lz[2].trim();
+                                bz.push({
                                   kind: "heading",
-                                  level: WT[1].length,
-                                  text: TT,
-                                  anchor: kT(TT)
-                                }), iT++;
+                                  level: lz[1].length,
+                                  text: zz,
+                                  anchor: iz(zz)
+                                }), Ez++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(TT)) {
-                                IT.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(zz)) {
+                                bz.push({
                                   kind: "rule"
-                                }), iT++;
+                                }), Ez++;
                                 continue
                               }
-                              if (TT.trim().startsWith("|") && iT + 1 < oT.length && /^\s*\|[\s:|-]+\|\s*$/.test(oT[iT + 1])) {
-                                const zT = FT(TT),
-                                  kT = [];
-                                for (iT += 2; iT < oT.length && oT[iT].trim().startsWith("|");) kT.push(FT(oT[iT])), iT++;
-                                IT.push({
+                              if (zz.trim().startsWith("|") && Ez + 1 < uz.length && /^\s*\|[\s:|-]+\|\s*$/.test(uz[Ez + 1])) {
+                                const nz = Hz(zz),
+                                  iz = [];
+                                for (Ez += 2; Ez < uz.length && uz[Ez].trim().startsWith("|");) iz.push(Hz(uz[Ez])), Ez++;
+                                bz.push({
                                   kind: "table",
-                                  header: zT,
-                                  rows: kT
+                                  header: nz,
+                                  rows: iz
                                 });
                                 continue
                               }
-                              if (TT.startsWith(">")) {
-                                const TT = [];
-                                for (; iT < oT.length && oT[iT].startsWith(">");) TT.push(oT[iT].replace(/^>\s?/, "")), iT++;
-                                IT.push({
+                              if (zz.startsWith(">")) {
+                                const zz = [];
+                                for (; Ez < uz.length && uz[Ez].startsWith(">");) zz.push(uz[Ez].replace(/^>\s?/, "")), Ez++;
+                                bz.push({
                                   kind: "quote",
-                                  blocks: LT(TT.join("\n"))
+                                  blocks: dz(zz.join("\n"))
                                 });
                                 continue
                               }
-                              if (ST.test(TT)) {
-                                const zT = [],
-                                  kT = /^\s*\d+\./.test(TT);
-                                for (; iT < oT.length && !BT(oT[iT]) && (ST.test(oT[iT]) || /^\s+\S/.test(oT[iT]));) zT.push(oT[iT]), iT++;
-                                IT.push({
+                              if (Oz.test(zz)) {
+                                const nz = [],
+                                  iz = /^\s*\d+\./.test(zz);
+                                for (; Ez < uz.length && !tz(uz[Ez]) && (Oz.test(uz[Ez]) || /^\s+\S/.test(uz[Ez]));) nz.push(uz[Ez]), Ez++;
+                                bz.push({
                                   kind: "list",
-                                  ordered: kT,
-                                  items: DT(zT)
+                                  ordered: iz,
+                                  items: pz(nz)
                                 });
                                 continue
                               }
-                              const XT = [];
-                              for (; iT < oT.length && !BT(oT[iT]) && !/^\s*```/.test(oT[iT]) && !/^#{1,6}\s/.test(oT[iT]) && !oT[iT].startsWith(">") && !ST.test(oT[iT]) && (!oT[iT].trim().startsWith("|") || 0 !== XT.length);) XT.push(oT[iT].trim()), iT++;
-                              0 === XT.length && (XT.push(oT[iT].trim()), iT++), IT.push({
+                              const Mz = [];
+                              for (; Ez < uz.length && !tz(uz[Ez]) && !/^\s*```/.test(uz[Ez]) && !/^#{1,6}\s/.test(uz[Ez]) && !uz[Ez].startsWith(">") && !Oz.test(uz[Ez]) && (!uz[Ez].trim().startsWith("|") || 0 !== Mz.length);) Mz.push(uz[Ez].trim()), Ez++;
+                              0 === Mz.length && (Mz.push(uz[Ez].trim()), Ez++), bz.push({
                                 kind: "paragraph",
-                                text: XT.join(" ")
+                                text: Mz.join(" ")
                               })
                             }
-                            return IT
+                            return bz
                           }
 
-                          function xT(TT) {
-                            let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const IT = LT(TT);
-                            let iT = "";
-                            const zT = [],
-                              kT = [],
-                              WT = new Map;
-                            for (const FT of IT) {
-                              if ("heading" === FT.kind) {
-                                var XT;
-                                const TT = (null !== (XT = WT.get(FT.anchor)) && void 0 !== XT ? XT : 0) + 1;
-                                WT.set(FT.anchor, TT), TT > 1 && (FT.anchor = `${FT.anchor}-${TT}`)
+                          function Fz(zz) {
+                            let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const bz = dz(zz);
+                            let Ez = "";
+                            const nz = [],
+                              iz = [],
+                              lz = new Map;
+                            for (const Hz of bz) {
+                              if ("heading" === Hz.kind) {
+                                var Mz;
+                                const zz = (null !== (Mz = lz.get(Hz.anchor)) && void 0 !== Mz ? Mz : 0) + 1;
+                                lz.set(Hz.anchor, zz), zz > 1 && (Hz.anchor = `${Hz.anchor}-${zz}`)
                               }
-                              if ("heading" === FT.kind && 1 === FT.level && !iT) {
-                                iT = FT.text;
+                              if ("heading" === Hz.kind && 1 === Hz.level && !Ez) {
+                                Ez = Hz.text;
                                 continue
                               }
-                              if ("heading" === FT.kind && FT.level <= oT) {
-                                kT.push({
-                                  heading: FT,
+                              if ("heading" === Hz.kind && Hz.level <= uz) {
+                                iz.push({
+                                  heading: Hz,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const TT = kT.at(-1);
-                              TT ? TT.blocks.push(FT) : zT.push(FT)
+                              const zz = iz.at(-1);
+                              zz ? zz.blocks.push(Hz) : nz.push(Hz)
                             }
-                            const BT = TT => {
+                            const tz = zz => {
                               for (;
-                                "rule" === (null === (oT = TT.at(-1)) || void 0 === oT ? void 0 : oT.kind);) {
-                                var oT;
-                                TT.pop()
+                                "rule" === (null === (uz = zz.at(-1)) || void 0 === uz ? void 0 : uz.kind);) {
+                                var uz;
+                                zz.pop()
                               }
                             };
-                            BT(zT);
-                            for (const FT of kT) BT(FT.blocks);
+                            tz(nz);
+                            for (const Hz of iz) tz(Hz.blocks);
                             return {
-                              title: iT,
-                              intro: zT,
-                              sections: kT
+                              title: Ez,
+                              intro: nz,
+                              sections: iz
                             }
                           }
 
-                          function cT(TT) {
+                          function Zz(zz) {
                             return [{
                               heading: null,
-                              blocks: TT.intro
-                            }, ...TT.sections.map((TT => ({
-                              heading: TT.heading,
-                              blocks: TT.blocks
+                              blocks: zz.intro
+                            }, ...zz.sections.map((zz => ({
+                              heading: zz.heading,
+                              blocks: zz.blocks
                             })))]
                           }
 
-                          function KT(TT) {
-                            return TT.flatMap((TT => "code" === TT.kind ? [TT] : "quote" === TT.kind ? KT(TT.blocks) : []))
+                          function Rz(zz) {
+                            return zz.flatMap((zz => "code" === zz.kind ? [zz] : "quote" === zz.kind ? Rz(zz.blocks) : []))
                           }
 
-                          function MT(TT) {
-                            switch (TT.kind) {
+                          function Kz(zz) {
+                            switch (zz.kind) {
                               case "heading":
                               case "paragraph":
-                                return TT.text;
+                                return zz.text;
                               case "code":
-                                return TT.code;
+                                return zz.code;
                               case "table":
-                                return [TT.header, ...TT.rows].map((TT => TT.join(" "))).join(" ");
+                                return [zz.header, ...zz.rows].map((zz => zz.join(" "))).join(" ");
                               case "list": {
-                                const oT = TT => TT.map((TT => `${TT.text} ${oT(TT.children)}`)).join(" ");
-                                return oT(TT.items)
+                                const uz = zz => zz.map((zz => `${zz.text} ${uz(zz.children)}`)).join(" ");
+                                return uz(zz.items)
                               }
                               case "quote":
-                                return TT.blocks.map(MT).join(" ");
+                                return zz.blocks.map(Kz).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4320: (TT, oT, IT) => {
-                          IT.d(oT, {
-                            c: () => XT
+                        }, 4598: (zz, uz, bz) => {
+                          bz.d(uz, {
+                            b: () => Mz
                           });
-                          var iT = IT(46),
-                            zT = IT(306),
-                            kT = IT(1747),
-                            WT = IT(1083);
+                          var Ez = bz(56),
+                            nz = bz(316),
+                            iz = bz(1856),
+                            lz = bz(1089);
 
-                          function XT(TT) {
+                          function Mz(zz) {
                             let {
-                              text: oT
-                            } = TT;
-                            const IT = [];
-                            let XT = "";
-                            return (0, zT.ac)(oT).forEach(((TT, oT) => {
-                              if ("string" === typeof TT || !(0, kT.g)(TT.icon)) return void(XT += "string" === typeof TT ? TT : TT.icon);
-                              const zT = Math.max(0, XT.trimEnd().search(/\S{1,12}$/));
-                              IT.push((0, WT.jsxs)(iT.Fragment, {
-                                children: [XT.slice(0, zT), (0, WT.jsxs)("span", {
+                              text: uz
+                            } = zz;
+                            const bz = [];
+                            let Mz = "";
+                            return (0, nz.uc)(uz).forEach(((zz, uz) => {
+                              if ("string" === typeof zz || !(0, iz.d)(zz.icon)) return void(Mz += "string" === typeof zz ? zz : zz.icon);
+                              const nz = Math.max(0, Mz.trimEnd().search(/\S{1,12}$/));
+                              bz.push((0, lz.jsxs)(Ez.Fragment, {
+                                children: [Mz.slice(0, nz), (0, lz.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [XT.slice(zT), (0, WT.jsx)("span", {
+                                  children: [Mz.slice(nz), (0, lz.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": TT.icon,
-                                    children: (0, WT.jsx)(kT.c, {
-                                      itemName: TT.icon,
+                                    "aria-label": zz.icon,
+                                    children: (0, lz.jsx)(iz.c, {
+                                      itemName: zz.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, oT)), XT = ""
-                            })), IT.push(XT), (0, WT.jsx)(WT.Fragment, {
-                              children: IT
+                              }, uz)), Mz = ""
+                            })), bz.push(Mz), (0, lz.jsx)(lz.Fragment, {
+                              children: bz
                             })
                           }
-                        }, 4251: (TT, oT, IT) => {
-                          IT.d(oT, {
-                            f: () => AT,
-                            d: () => rT
+                        }, 4524: (zz, uz, bz) => {
+                          bz.d(uz, {
+                            c: () => Xz,
+                            b: () => wz
                           });
-                          var iT = IT(46),
-                            zT = IT(1403),
-                            kT = IT(1729),
-                            WT = IT(4260),
-                            XT = IT(1083);
-                          const BT = (0, iT.memo)((function(TT) {
+                          var Ez = bz(56),
+                            nz = bz(1417),
+                            iz = bz(1846),
+                            lz = bz(4531),
+                            Mz = bz(1089);
+                          const tz = (0, Ez.memo)((function(zz) {
                             let {
-                              initialParameters: oT
-                            } = TT;
-                            const IT = (0, iT.useRef)(null),
-                              zT = (0, iT.useRef)(null),
-                              BT = (0, iT.useRef)(0),
-                              FT = (0, iT.useRef)(null),
-                              ST = oT.description,
-                              DT = oT.yI,
+                              initialParameters: uz
+                            } = zz;
+                            const bz = (0, Ez.useRef)(null),
+                              nz = (0, Ez.useRef)(null),
+                              tz = (0, Ez.useRef)(0),
+                              Hz = (0, Ez.useRef)(null),
+                              Oz = uz.description,
+                              pz = uz.Sz,
                               {
-                                scale: LT,
-                                rotation: xT
-                              } = null !== oT && void 0 !== oT ? oT : {},
-                              cT = (0, WT.g)();
-                            return (0, iT.useEffect)((() => {
-                              const TT = cT.onFrame((() => {
-                                const TT = cT.getState();
-                                if (!TT.isActive || !IT.current || !zT.current) return;
-                                const oT = TT.state;
-                                if (IT.current.value = oT.progress, oT.clickCount > BT.current) {
-                                  BT.current = oT.clickCount;
-                                  const TT = zT.current;
-                                  TT.classList.add("pulse"), FT.current = setTimeout((() => {
-                                    TT.classList.remove("pulse")
+                                scale: dz,
+                                rotation: Fz
+                              } = null !== uz && void 0 !== uz ? uz : {},
+                              Zz = (0, lz.f)();
+                            return (0, Ez.useEffect)((() => {
+                              const zz = Zz.onFrame((() => {
+                                const zz = Zz.getState();
+                                if (!zz.isActive || !bz.current || !nz.current) return;
+                                const uz = zz.state;
+                                if (bz.current.value = uz.progress, uz.clickCount > tz.current) {
+                                  tz.current = uz.clickCount;
+                                  const zz = nz.current;
+                                  zz.classList.add("pulse"), Hz.current = setTimeout((() => {
+                                    zz.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(FT.current), TT()
+                                clearTimeout(Hz.current), zz()
                               }
-                            }), [cT]), (0, XT.jsx)(XT.Fragment, {
-                              children: (0, XT.jsxs)("div", {
+                            }), [Zz]), (0, Mz.jsx)(Mz.Fragment, {
+                              children: (0, Mz.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== LT && {
-                                    "--scale": LT
+                                  ...null !== dz && {
+                                    "--scale": dz
                                   },
-                                  ...null !== xT && {
-                                    "--rotation": `${xT}deg`
+                                  ...null !== Fz && {
+                                    "--rotation": `${Fz}deg`
                                   }
                                 },
-                                children: [(0, XT.jsx)("progress", {
+                                children: [(0, Mz.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: IT
-                                }), (0, XT.jsx)("span", {
+                                  ref: bz
+                                }), (0, Mz.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: zT,
-                                  children: (0, XT.jsx)(kT.c, {
+                                  ref: nz,
+                                  children: (0, Mz.jsx)(iz.b, {
                                     text: [{
-                                      icon: DT
+                                      icon: pz
                                     }]
                                   })
-                                }), (0, XT.jsx)("div", {
+                                }), (0, Mz.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, XT.jsx)(kT.c, {
-                                    text: ST
+                                  children: (0, Mz.jsx)(iz.b, {
+                                    text: Oz
                                   })
                                 })]
                               })
                             })
                           }));
-                          var FT = IT(1042),
-                            ST = IT.n(FT);
-                          const DT = 2 * Math.PI * 90,
-                            LT = (0, iT.memo)((function(TT) {
+                          var Hz = bz(1038),
+                            Oz = bz.n(Hz);
+                          const pz = 2 * Math.PI * 90,
+                            dz = (0, Ez.memo)((function(zz) {
                               let {
-                                initialParameters: oT
-                              } = TT;
-                              const IT = (0, iT.useRef)(null),
-                                zT = (0, iT.useRef)(null),
-                                BT = (0, iT.useRef)(null),
-                                FT = oT.label,
-                                LT = oT.icon,
-                                xT = oT.VI,
+                                initialParameters: uz
+                              } = zz;
+                              const bz = (0, Ez.useRef)(null),
+                                nz = (0, Ez.useRef)(null),
+                                tz = (0, Ez.useRef)(null),
+                                Hz = uz.label,
+                                dz = uz.icon,
+                                Fz = uz.Qz,
                                 {
-                                  scale: cT,
-                                  rotation: KT,
-                                  Ti: MT
-                                } = null !== oT && void 0 !== oT ? oT : {},
-                                rT = (0, WT.g)();
-                              return (0, iT.useEffect)((() => {
-                                const TT = rT.onFrame((() => {
-                                  var TT, oT;
-                                  const iT = rT.getState();
-                                  if (!iT.isActive || !zT.current) return;
-                                  const kT = iT.state,
-                                    WT = null !== (TT = kT.timeRemaining) && void 0 !== TT ? TT : 0,
-                                    XT = null !== (oT = kT.dI) && void 0 !== oT ? oT : 1,
-                                    FT = DT * (1 - WT / XT);
-                                  zT.current.style.strokeDashoffset = `${FT}`, IT.current && (IT.current.style.opacity = WT > 0 ? "1" : "0"), BT.current && xT && (BT.current.textContent = `${(WT/1e3).toFixed(1)}s`)
+                                  scale: Zz,
+                                  rotation: Rz,
+                                  Wz: Kz
+                                } = null !== uz && void 0 !== uz ? uz : {},
+                                wz = (0, lz.f)();
+                              return (0, Ez.useEffect)((() => {
+                                const zz = wz.onFrame((() => {
+                                  var zz, uz;
+                                  const Ez = wz.getState();
+                                  if (!Ez.isActive || !nz.current) return;
+                                  const iz = Ez.state,
+                                    lz = null !== (zz = iz.timeRemaining) && void 0 !== zz ? zz : 0,
+                                    Mz = null !== (uz = iz.Dz) && void 0 !== uz ? uz : 1,
+                                    Hz = pz * (1 - lz / Mz);
+                                  nz.current.style.strokeDashoffset = `${Hz}`, bz.current && (bz.current.style.opacity = lz > 0 ? "1" : "0"), tz.current && Fz && (tz.current.textContent = `${(lz/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  TT()
+                                  zz()
                                 }
-                              }), [rT, xT]), (0, XT.jsxs)("div", {
+                              }), [wz, Fz]), (0, Mz.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: IT,
+                                ref: bz,
                                 style: {
-                                  ...null !== cT && {
-                                    "--scale": cT
+                                  ...null !== Zz && {
+                                    "--scale": Zz
                                   },
-                                  ...null !== KT && {
-                                    "--rotation": `${KT}deg`
+                                  ...null !== Rz && {
+                                    "--rotation": `${Rz}deg`
                                   }
                                 },
-                                children: [(0, XT.jsxs)("div", {
+                                children: [(0, Mz.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, XT.jsxs)("svg", {
+                                  children: [(0, Mz.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, XT.jsx)("circle", {
+                                    children: [(0, Mz.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, XT.jsx)("circle", {
+                                    }), (0, Mz.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6295,80 +6295,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: DT,
-                                      ref: zT
+                                      strokeDasharray: pz,
+                                      ref: nz
                                     })]
-                                  }), (0, XT.jsx)("div", {
+                                  }), (0, Mz.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, XT.jsx)(kT.c, {
+                                    children: (0, Mz.jsx)(iz.b, {
                                       text: [{
-                                        icon: LT
+                                        icon: dz
                                       }],
-                                      className: ST()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: MT
+                                      className: Oz()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: Kz
                                       })
                                     })
                                   })]
-                                }), (0, XT.jsxs)("div", {
+                                }), (0, Mz.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, XT.jsx)(kT.c, {
-                                    text: FT,
+                                  children: [(0, Mz.jsx)(iz.b, {
+                                    text: Hz,
                                     className: "QTETimedClickLabelText"
-                                  }), xT && (0, XT.jsx)("span", {
+                                  }), Fz && (0, Mz.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: BT
+                                    ref: tz
                                   })]
                                 })]
                               })
                             })),
-                            xT = (0, iT.memo)((function(TT) {
+                            Fz = (0, Ez.memo)((function(zz) {
                               let {
-                                initialParameters: oT
-                              } = TT;
-                              const IT = (0, iT.useRef)(null),
-                                zT = (0, iT.useRef)(null),
-                                BT = (0, iT.useRef)(null),
-                                FT = (0, iT.useRef)(!1),
-                                ST = oT.description,
-                                DT = null === oT || void 0 === oT ? void 0 : oT.icon,
-                                LT = (0, WT.g)();
-                              return (0, iT.useEffect)((() => {
-                                const TT = LT.onFrame((() => {
-                                  const TT = LT.getState();
-                                  if (!TT.isActive) return;
-                                  const oT = TT.state;
-                                  if (IT.current) {
-                                    const TT = 100 * (oT.catchZonePosition - oT.Ii / 2);
-                                    IT.current.style.left = `${TT}%`, IT.current.style.width = 100 * oT.Ii + "%", oT.isCatching !== FT.current && (FT.current = oT.isCatching, oT.isCatching ? IT.current.classList.add("catching") : IT.current.classList.remove("catching"))
+                                initialParameters: uz
+                              } = zz;
+                              const bz = (0, Ez.useRef)(null),
+                                nz = (0, Ez.useRef)(null),
+                                tz = (0, Ez.useRef)(null),
+                                Hz = (0, Ez.useRef)(!1),
+                                Oz = uz.description,
+                                pz = null === uz || void 0 === uz ? void 0 : uz.icon,
+                                dz = (0, lz.f)();
+                              return (0, Ez.useEffect)((() => {
+                                const zz = dz.onFrame((() => {
+                                  const zz = dz.getState();
+                                  if (!zz.isActive) return;
+                                  const uz = zz.state;
+                                  if (bz.current) {
+                                    const zz = 100 * (uz.catchZonePosition - uz.jz / 2);
+                                    bz.current.style.left = `${zz}%`, bz.current.style.width = 100 * uz.jz + "%", uz.isCatching !== Hz.current && (Hz.current = uz.isCatching, uz.isCatching ? bz.current.classList.add("catching") : bz.current.classList.remove("catching"))
                                   }
-                                  zT.current && (zT.current.style.left = 100 * oT.moverPosition + "%"), BT.current && (BT.current.value = oT.progress)
+                                  nz.current && (nz.current.style.left = 100 * uz.moverPosition + "%"), tz.current && (tz.current.value = uz.progress)
                                 }));
                                 return () => {
-                                  TT()
+                                  zz()
                                 }
-                              }), [LT]), (0, XT.jsxs)("div", {
+                              }), [dz]), (0, Mz.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, XT.jsx)("div", {
+                                children: [(0, Mz.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, XT.jsx)(kT.c, {
-                                    text: ST
+                                  children: (0, Mz.jsx)(iz.b, {
+                                    text: Oz
                                   })
-                                }), (0, XT.jsx)("progress", {
+                                }), (0, Mz.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: BT
-                                }), (0, XT.jsxs)("div", {
+                                  ref: tz
+                                }), (0, Mz.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, XT.jsx)("div", {
+                                  children: [(0, Mz.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: IT
-                                  }), (0, XT.jsx)("div", {
+                                    ref: bz
+                                  }), (0, Mz.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: zT,
-                                    children: (0, XT.jsx)("span", {
-                                      children: DT && (0, XT.jsx)(kT.c, {
+                                    ref: nz,
+                                    children: (0, Mz.jsx)("span", {
+                                      children: pz && (0, Mz.jsx)(iz.b, {
                                         text: [{
-                                          icon: DT,
+                                          icon: pz,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6379,703 +6379,703 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var cT = IT(618);
-                          const KT = (0, iT.memo)((function(TT) {
+                          var Zz = bz(588);
+                          const Rz = (0, Ez.memo)((function(zz) {
                               let {
-                                initialParameters: oT
-                              } = TT;
-                              const IT = (0, iT.useRef)(null),
-                                zT = oT.label,
-                                BT = oT.Fi,
+                                initialParameters: uz
+                              } = zz;
+                              const bz = (0, Ez.useRef)(null),
+                                nz = uz.label,
+                                tz = uz.uu,
                                 {
-                                  icon: FT,
-                                  scale: ST,
-                                  rotation: DT
-                                } = null !== oT && void 0 !== oT ? oT : {},
-                                LT = 100 * (.5 - BT / 2),
-                                xT = 100 * BT,
-                                KT = (0, WT.g)();
-                              return (0, iT.useEffect)((() => {
-                                const TT = KT.onFrame((() => {
-                                  const TT = KT.getState();
-                                  if (!TT.isActive || !IT.current) return;
-                                  const oT = TT.state;
-                                  IT.current.style.left = 100 * oT.markerPosition + "%"
+                                  icon: Hz,
+                                  scale: Oz,
+                                  rotation: pz
+                                } = null !== uz && void 0 !== uz ? uz : {},
+                                dz = 100 * (.5 - tz / 2),
+                                Fz = 100 * tz,
+                                Rz = (0, lz.f)();
+                              return (0, Ez.useEffect)((() => {
+                                const zz = Rz.onFrame((() => {
+                                  const zz = Rz.getState();
+                                  if (!zz.isActive || !bz.current) return;
+                                  const uz = zz.state;
+                                  bz.current.style.left = 100 * uz.markerPosition + "%"
                                 }));
                                 return () => {
-                                  TT()
+                                  zz()
                                 }
-                              }), [KT]), (0, XT.jsxs)("div", {
+                              }), [Rz]), (0, Mz.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, cT.K)(ST) && {
-                                    "--scale": ST
+                                  ...!(0, Zz.F)(Oz) && {
+                                    "--scale": Oz
                                   },
-                                  ...!(0, cT.K)(DT) && {
-                                    "--rotation": `${DT}deg`
+                                  ...!(0, Zz.F)(pz) && {
+                                    "--rotation": `${pz}deg`
                                   }
                                 },
-                                children: [FT && (0, XT.jsx)(kT.c, {
+                                children: [Hz && (0, Mz.jsx)(iz.b, {
                                   text: [{
-                                    icon: FT
+                                    icon: Hz
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, XT.jsxs)("div", {
+                                }), (0, Mz.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, XT.jsx)("div", {
+                                  children: [(0, Mz.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${LT}%`,
-                                      width: `${xT}%`
+                                      left: `${dz}%`,
+                                      width: `${Fz}%`
                                     }
-                                  }), (0, XT.jsx)("div", {
+                                  }), (0, Mz.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: IT
+                                    ref: bz
                                   })]
-                                }), (0, XT.jsx)("div", {
+                                }), (0, Mz.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, XT.jsx)(kT.c, {
-                                    text: zT
+                                  children: (0, Mz.jsx)(iz.b, {
+                                    text: nz
                                   })
                                 })]
                               })
                             })),
-                            MT = (0, iT.memo)((function(TT) {
+                            Kz = (0, Ez.memo)((function(zz) {
                               let {
-                                initialParameters: oT
-                              } = TT;
-                              const IT = (0, iT.useRef)(null),
-                                [zT, BT] = (0, iT.useState)((() => new Array(oT.Di).fill("pending"))),
-                                [FT, ST] = (0, iT.useState)((() => {
-                                  const TT = oT.Ki;
-                                  return (0, cT.K)(TT) || TT <= 0 ? [] : new Array(TT).fill("pending")
+                                initialParameters: uz
+                              } = zz;
+                              const bz = (0, Ez.useRef)(null),
+                                [nz, tz] = (0, Ez.useState)((() => new Array(uz.nu).fill("pending"))),
+                                [Hz, Oz] = (0, Ez.useState)((() => {
+                                  const zz = uz.Mu;
+                                  return (0, Zz.F)(zz) || zz <= 0 ? [] : new Array(zz).fill("pending")
                                 })),
-                                DT = oT.label,
+                                pz = uz.label,
                                 {
-                                  icon: LT
-                                } = oT,
-                                xT = (0, iT.useRef)(0),
-                                KT = (0, iT.useRef)(0),
-                                MT = (0, iT.useRef)([]),
-                                rT = (0, WT.g)();
-                              return (0, iT.useEffect)((() => {
-                                const TT = rT.onFrame((() => {
-                                  const TT = rT.getState();
-                                  if (!TT.isActive || !IT.current) return;
-                                  const oT = TT.state,
-                                    iT = 30 + 60 * oT.outerCircleProgress;
-                                  if (IT.current.setAttribute("r", String(iT)), !0 === oT.lastClickResult && oT.successes > xT.current) {
-                                    IT.current.classList.remove("QTERhythmClickOuterCircle--miss"), IT.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const TT = setTimeout((() => {
-                                      var TT;
-                                      null === (TT = IT.current) || void 0 === TT || TT.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: dz
+                                } = uz,
+                                Fz = (0, Ez.useRef)(0),
+                                Rz = (0, Ez.useRef)(0),
+                                Kz = (0, Ez.useRef)([]),
+                                wz = (0, lz.f)();
+                              return (0, Ez.useEffect)((() => {
+                                const zz = wz.onFrame((() => {
+                                  const zz = wz.getState();
+                                  if (!zz.isActive || !bz.current) return;
+                                  const uz = zz.state,
+                                    Ez = 30 + 60 * uz.outerCircleProgress;
+                                  if (bz.current.setAttribute("r", String(Ez)), !0 === uz.lastClickResult && uz.successes > Fz.current) {
+                                    bz.current.classList.remove("QTERhythmClickOuterCircle--miss"), bz.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const zz = setTimeout((() => {
+                                      var zz;
+                                      null === (zz = bz.current) || void 0 === zz || zz.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    MT.current.push(TT)
-                                  } else if (!1 === oT.lastClickResult && oT.misses > KT.current) {
-                                    IT.current.classList.remove("QTERhythmClickOuterCircle--hit"), IT.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const TT = setTimeout((() => {
-                                      var TT;
-                                      null === (TT = IT.current) || void 0 === TT || TT.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    Kz.current.push(zz)
+                                  } else if (!1 === uz.lastClickResult && uz.misses > Rz.current) {
+                                    bz.current.classList.remove("QTERhythmClickOuterCircle--hit"), bz.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const zz = setTimeout((() => {
+                                      var zz;
+                                      null === (zz = bz.current) || void 0 === zz || zz.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    MT.current.push(TT)
+                                    Kz.current.push(zz)
                                   }
-                                  oT.successes === xT.current && oT.misses === KT.current || (xT.current = oT.successes, KT.current = oT.misses, BT((TT => {
-                                    const IT = [...TT];
-                                    for (let iT = 0; iT < oT.Di; iT++) IT[iT] = iT < oT.successes ? "success" : "pending";
-                                    return IT
-                                  })), ST((TT => {
-                                    if (0 === TT.length) return TT;
-                                    const IT = [...TT];
-                                    for (let iT = 0; iT < IT.length; iT++) IT[iT] = iT < oT.misses ? "miss" : "pending";
-                                    return IT
+                                  uz.successes === Fz.current && uz.misses === Rz.current || (Fz.current = uz.successes, Rz.current = uz.misses, tz((zz => {
+                                    const bz = [...zz];
+                                    for (let Ez = 0; Ez < uz.nu; Ez++) bz[Ez] = Ez < uz.successes ? "success" : "pending";
+                                    return bz
+                                  })), Oz((zz => {
+                                    if (0 === zz.length) return zz;
+                                    const bz = [...zz];
+                                    for (let Ez = 0; Ez < bz.length; Ez++) bz[Ez] = Ez < uz.misses ? "miss" : "pending";
+                                    return bz
                                   })))
                                 }));
                                 return () => {
-                                  TT();
-                                  for (const TT of MT.current) clearTimeout(TT);
-                                  MT.current = []
+                                  zz();
+                                  for (const zz of Kz.current) clearTimeout(zz);
+                                  Kz.current = []
                                 }
-                              }), [rT]), (0, XT.jsxs)("div", {
+                              }), [wz]), (0, Mz.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, XT.jsx)("div", {
+                                children: [(0, Mz.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: zT.map(((TT, oT) => (0, XT.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === TT ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, oT)))
-                                }), (0, XT.jsxs)("div", {
+                                  children: nz.map(((zz, uz) => (0, Mz.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === zz ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, uz)))
+                                }), (0, Mz.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, XT.jsxs)("svg", {
+                                  children: [(0, Mz.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, XT.jsx)("circle", {
+                                    children: [(0, Mz.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, XT.jsx)("circle", {
+                                    }), (0, Mz.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: IT
+                                      ref: bz
                                     })]
-                                  }), LT && (0, XT.jsx)("div", {
+                                  }), dz && (0, Mz.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, XT.jsx)(kT.c, {
+                                    children: (0, Mz.jsx)(iz.b, {
                                       text: [{
-                                        icon: LT
+                                        icon: dz
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), FT.length > 0 && (0, XT.jsx)("div", {
+                                }), Hz.length > 0 && (0, Mz.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: FT.map(((TT, oT) => (0, XT.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === TT ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, oT)))
-                                }), (0, XT.jsx)("div", {
+                                  children: Hz.map(((zz, uz) => (0, Mz.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === zz ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, uz)))
+                                }), (0, Mz.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, XT.jsx)(kT.c, {
-                                    text: DT
+                                  children: (0, Mz.jsx)(iz.b, {
+                                    text: pz
                                   })
                                 })]
                               })
                             }));
 
-                          function rT(TT) {
+                          function wz(zz) {
                             let {
-                              qte: oT
-                            } = TT;
-                            switch (oT.type) {
+                              qte: uz
+                            } = zz;
+                            switch (uz.type) {
                               case "progressBar":
-                                return (0, XT.jsx)(BT, {
-                                  initialParameters: oT.parameters
+                                return (0, Mz.jsx)(tz, {
+                                  initialParameters: uz.parameters
                                 });
                               case "timedClick":
-                                return (0, XT.jsx)(LT, {
-                                  initialParameters: oT.parameters
+                                return (0, Mz.jsx)(dz, {
+                                  initialParameters: uz.parameters
                                 });
                               case "gravityBar":
-                                return (0, XT.jsx)(xT, {
-                                  initialParameters: oT.parameters
+                                return (0, Mz.jsx)(Fz, {
+                                  initialParameters: uz.parameters
                                 });
                               case "precisionBar":
-                                return (0, XT.jsx)(KT, {
-                                  initialParameters: oT.parameters
+                                return (0, Mz.jsx)(Rz, {
+                                  initialParameters: uz.parameters
                                 });
                               case "rhythmClick":
-                                return (0, XT.jsx)(MT, {
-                                  initialParameters: oT.parameters
+                                return (0, Mz.jsx)(Kz, {
+                                  initialParameters: uz.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const AT = (0, iT.memo)((function() {
-                            const [TT, oT] = (0, iT.useState)({
+                          const Xz = (0, Ez.memo)((function() {
+                            const [zz, uz] = (0, Ez.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, zT.g)("qteStateUpdated", (TT => {
-                              oT(TT)
-                            })), TT.isActive && TT.type ? (0, XT.jsx)("div", {
+                            return (0, nz.g)("qteStateUpdated", (zz => {
+                              uz(zz)
+                            })), zz.isActive && zz.type ? (0, Mz.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, XT.jsx)(rT, {
-                                qte: TT
+                              children: (0, Mz.jsx)(wz, {
+                                qte: zz
                               })
                             }) : null
                           }))
-                        }, 4260: (TT, oT, IT) => {
-                          IT.d(oT, {
-                            e: () => XT,
-                            g: () => BT
+                        }, 4531: (zz, uz, bz) => {
+                          bz.d(uz, {
+                            e: () => Mz,
+                            f: () => tz
                           });
-                          var iT = IT(46),
-                            zT = IT(1266),
-                            kT = IT(4266);
-                          const WT = {
-                              getState: () => kT.e.getCurrentState(),
-                              onFrame: zT.n
+                          var Ez = bz(56),
+                            nz = bz(1273),
+                            iz = bz(4540);
+                          const lz = {
+                              getState: () => iz.d.getCurrentState(),
+                              onFrame: nz.m
                             },
-                            XT = (0, iT.createContext)(WT);
+                            Mz = (0, Ez.createContext)(lz);
 
-                          function BT() {
-                            return (0, iT.useContext)(XT)
+                          function tz() {
+                            return (0, Ez.useContext)(Mz)
                           }
-                        }, 4328: (TT, oT, IT) => {
-                          IT.d(oT, {
-                            d: () => aT,
-                            h: () => UT
+                        }, 4601: (zz, uz, bz) => {
+                          bz.d(uz, {
+                            e: () => Vz,
+                            g: () => az
                           });
-                          var iT = IT(4336),
-                            zT = IT(306);
-                          const kT = 120,
-                            WT = 260,
-                            XT = 1.15,
-                            BT = 1.2,
-                            FT = 2,
-                            ST = 1.08,
-                            DT = .8,
-                            LT = .95,
-                            xT = 8,
-                            cT = "[\"')\\]\u300d\u300f\uff09]*",
-                            KT = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${cT}$`),
-                            MT = new RegExp(`[?\uff1f]${cT}$`),
-                            rT = new RegExp(`[!\uff01]${cT}$`),
-                            AT = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            gT = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            hT = new RegExp(`[${gT}]`),
-                            wT = new RegExp(`[${gT}]|[^${gT}]+`, "g"),
-                            mT = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var Ez = bz(4605),
+                            nz = bz(316);
+                          const iz = 120,
+                            lz = 260,
+                            Mz = 1.15,
+                            tz = 1.2,
+                            Hz = 2,
+                            Oz = 1.08,
+                            pz = .8,
+                            dz = .95,
+                            Fz = 8,
+                            Zz = "[\"')\\]\u300d\u300f\uff09]*",
+                            Rz = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Zz}$`),
+                            Kz = new RegExp(`[?\uff1f]${Zz}$`),
+                            wz = new RegExp(`[!\uff01]${Zz}$`),
+                            Xz = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            fz = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            sz = new RegExp(`[${fz}]`),
+                            rz = new RegExp(`[${fz}]|[^${fz}]+`, "g"),
+                            oz = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function eT(TT) {
-                            let oT = 2166136261;
-                            for (let IT = 0; IT < TT.length; IT++) oT ^= TT.charCodeAt(IT), oT = Math.imul(oT, 16777619);
-                            return (oT >>> 0) / 4294967295 * 2 - 1
+                          function Nz(zz) {
+                            let uz = 2166136261;
+                            for (let bz = 0; bz < zz.length; bz++) uz ^= zz.charCodeAt(bz), uz = Math.imul(uz, 16777619);
+                            return (uz >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function RT(TT) {
-                            var oT;
-                            if (hT.test(TT)) return 1;
-                            const IT = TT.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              iT = IT.replace(/[^0-9]/g, "");
-                            if (iT.length > 0 && !/\p{L}/u.test(IT)) return Math.min(iT.length, 4);
-                            const zT = null !== (oT = IT.match(mT)) && void 0 !== oT ? oT : [];
-                            if (0 === zT.length) {
-                              var kT, WT;
-                              const TT = null !== (kT = null === (WT = IT.match(/\p{L}/gu)) || void 0 === WT ? void 0 : WT.length) && void 0 !== kT ? kT : 0;
-                              return 0 === TT ? 0 : Math.min(Math.max(1, Math.round(TT / 2.5)), xT)
+                          function vz(zz) {
+                            var uz;
+                            if (sz.test(zz)) return 1;
+                            const bz = zz.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              Ez = bz.replace(/[^0-9]/g, "");
+                            if (Ez.length > 0 && !/\p{L}/u.test(bz)) return Math.min(Ez.length, 4);
+                            const nz = null !== (uz = bz.match(oz)) && void 0 !== uz ? uz : [];
+                            if (0 === nz.length) {
+                              var iz, lz;
+                              const zz = null !== (iz = null === (lz = bz.match(/\p{L}/gu)) || void 0 === lz ? void 0 : lz.length) && void 0 !== iz ? iz : 0;
+                              return 0 === zz ? 0 : Math.min(Math.max(1, Math.round(zz / 2.5)), Fz)
                             }
-                            const XT = IT.replace(/[^\p{L}]/gu, ""),
-                              BT = zT.length > 1 && "e" === zT.at(-1) && XT.endsWith("e") && !XT.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(TT.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(zT.length - (BT ? 1 : 0), xT)
+                            const Mz = bz.replace(/[^\p{L}]/gu, ""),
+                              tz = nz.length > 1 && "e" === nz.at(-1) && Mz.endsWith("e") && !Mz.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(zz.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(nz.length - (tz ? 1 : 0), Fz)
                           }
 
-                          function uT(TT) {
-                            return TT.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function xz(zz) {
+                            return zz.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function vT(TT) {
-                            const oT = TT.replace(/[^\p{L}]/gu, "");
-                            return oT.length >= 2 && oT === oT.toUpperCase() && oT !== oT.toLowerCase()
+                          function Jz(zz) {
+                            const uz = zz.replace(/[^\p{L}]/gu, "");
+                            return uz.length >= 2 && uz === uz.toUpperCase() && uz !== uz.toLowerCase()
                           }
 
-                          function ET(TT, oT) {
-                            var IT;
-                            const xT = oT && (0, iT.j)(oT),
-                              cT = null !== (IT = null === xT || void 0 === xT ? void 0 : xT.syllableMs) && void 0 !== IT ? IT : iT.d,
-                              gT = function(TT) {
-                                const oT = [];
-                                for (const iT of (0, zT.ac)(TT))
-                                  if ("string" === typeof iT)
-                                    for (const TT of iT.split(/(\s+)/)) {
-                                      if ("" === TT) continue;
-                                      if (/^\s+$/.test(TT)) {
-                                        oT.push({
+                          function Az(zz, uz) {
+                            var bz;
+                            const Fz = uz && (0, Ez.k)(uz),
+                              Zz = null !== (bz = null === Fz || void 0 === Fz ? void 0 : Fz.syllableMs) && void 0 !== bz ? bz : Ez.e,
+                              fz = function(zz) {
+                                const uz = [];
+                                for (const Ez of (0, nz.uc)(zz))
+                                  if ("string" === typeof Ez)
+                                    for (const zz of Ez.split(/(\s+)/)) {
+                                      if ("" === zz) continue;
+                                      if (/^\s+$/.test(zz)) {
+                                        uz.push({
                                           kind: "space",
-                                          text: TT
+                                          text: zz
                                         });
                                         continue
                                       }
-                                      if (!hT.test(TT)) {
-                                        oT.push({
+                                      if (!sz.test(zz)) {
+                                        uz.push({
                                           kind: "word",
-                                          text: TT,
+                                          text: zz,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let iT = !0;
-                                      for (const zT of null !== (IT = TT.match(wT)) && void 0 !== IT ? IT : []) {
-                                        var IT;
-                                        const TT = oT.at(-1);
-                                        iT || "word" !== (null === TT || void 0 === TT ? void 0 : TT.kind) || hT.test(zT) || /[\p{L}\p{N}]/u.test(zT) ? (iT || oT.push({
+                                      let Ez = !0;
+                                      for (const nz of null !== (bz = zz.match(rz)) && void 0 !== bz ? bz : []) {
+                                        var bz;
+                                        const zz = uz.at(-1);
+                                        Ez || "word" !== (null === zz || void 0 === zz ? void 0 : zz.kind) || sz.test(nz) || /[\p{L}\p{N}]/u.test(nz) ? (Ez || uz.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), oT.push({
+                                        }), uz.push({
                                           kind: "word",
-                                          text: zT,
+                                          text: nz,
                                           delayMs: 0
-                                        }), iT = !1) : TT.text += zT
+                                        }), Ez = !1) : zz.text += nz
                                       }
-                                    } else oT.push({
+                                    } else uz.push({
                                       kind: "icon",
-                                      text: iT.icon,
+                                      text: Ez.icon,
                                       delayMs: 0
                                     });
-                                return oT
-                              }(TT),
-                              mT = [];
-                            let ET = [];
-                            for (const iT of gT) "space" !== iT.kind && (ET.push(iT), KT.test(iT.text) && (mT.push(ET), ET = []));
-                            mT.push(ET);
-                            const fT = [];
-                            let CT = 0;
-                            for (const iT of mT) {
-                              var jT, JT;
-                              const TT = null !== (jT = null === (JT = iT.at(-1)) || void 0 === JT ? void 0 : JT.text) && void 0 !== jT ? jT : "",
-                                oT = MT.test(TT),
-                                IT = rT.test(TT),
-                                zT = iT.map((TT => "word" === TT.kind ? RT(TT.text) : 1)),
-                                gT = zT.findLastIndex((TT => TT > 0));
-                              for (const [MT, rT] of iT.entries()) {
-                                const TT = "word" === rT.kind,
-                                  iT = zT[MT];
-                                rT.delayMs = CT;
-                                for (let zT = 0; xT && zT < iT; zT++) {
+                                return uz
+                              }(zz),
+                              oz = [];
+                            let Az = [];
+                            for (const Ez of fz) "space" !== Ez.kind && (Az.push(Ez), Rz.test(Ez.text) && (oz.push(Az), Az = []));
+                            oz.push(Az);
+                            const Tz = [];
+                            let Lz = 0;
+                            for (const Ez of oz) {
+                              var Pz, Gz;
+                              const zz = null !== (Pz = null === (Gz = Ez.at(-1)) || void 0 === Gz ? void 0 : Gz.text) && void 0 !== Pz ? Pz : "",
+                                uz = Kz.test(zz),
+                                bz = wz.test(zz),
+                                nz = Ez.map((zz => "word" === zz.kind ? vz(zz.text) : 1)),
+                                fz = nz.findLastIndex((zz => zz > 0));
+                              for (const [Kz, wz] of Ez.entries()) {
+                                const zz = "word" === wz.kind,
+                                  Ez = nz[Kz];
+                                wz.delayMs = Lz;
+                                for (let nz = 0; Fz && nz < Ez; nz++) {
                                   const {
-                                    intonation: kT
-                                  } = xT;
-                                  let WT = gT > 0 ? -kT.declineSemitones * (MT / gT) : 0;
-                                  WT += eT(`${uT(rT.text)}|${zT}`) * kT.variationSemitones;
-                                  const KT = Math.min(1, kT.variationSemitones);
-                                  let AT = xT.glideSemitones,
-                                    hT = 1;
-                                  IT && (WT += kT.exclaimLiftSemitones, hT *= XT), oT && MT === gT && (WT += kT.questionRiseSemitones * (iT > 1 ? .5 + .5 * zT / (iT - 1) : 1), zT === iT - 1 && (AT = Math.abs(AT) + kT.questionRiseSemitones / 2)), TT && vT(rT.text) && (WT += FT * KT, hT *= BT), iT > 1 && 0 === zT && (WT += DT * KT, hT *= ST), fT.push({
-                                    atMs: CT + zT * cT,
-                                    semitones: WT,
-                                    glideSemitones: AT,
-                                    durationMs: zT < iT - 1 ? Math.min(xT.durationMs, cT * LT) : xT.durationMs,
-                                    level: hT
+                                    intonation: iz
+                                  } = Fz;
+                                  let lz = fz > 0 ? -iz.declineSemitones * (Kz / fz) : 0;
+                                  lz += Nz(`${xz(wz.text)}|${nz}`) * iz.variationSemitones;
+                                  const Rz = Math.min(1, iz.variationSemitones);
+                                  let Xz = Fz.glideSemitones,
+                                    sz = 1;
+                                  bz && (lz += iz.exclaimLiftSemitones, sz *= Mz), uz && Kz === fz && (lz += iz.questionRiseSemitones * (Ez > 1 ? .5 + .5 * nz / (Ez - 1) : 1), nz === Ez - 1 && (Xz = Math.abs(Xz) + iz.questionRiseSemitones / 2)), zz && Jz(wz.text) && (lz += Hz * Rz, sz *= tz), Ez > 1 && 0 === nz && (lz += pz * Rz, sz *= Oz), Tz.push({
+                                    atMs: Lz + nz * Zz,
+                                    semitones: lz,
+                                    glideSemitones: Xz,
+                                    durationMs: nz < Ez - 1 ? Math.min(Fz.durationMs, Zz * dz) : Fz.durationMs,
+                                    level: sz
                                   })
                                 }
-                                CT += iT * cT + (KT.test(rT.text) ? WT : AT.test(rT.text) ? kT : 0)
+                                Lz += Ez * Zz + (Rz.test(wz.text) ? lz : Xz.test(wz.text) ? iz : 0)
                               }
                             }
                             return {
-                              pieces: gT.map((TT => "space" === TT.kind ? TT : "icon" === TT.kind ? {
+                              pieces: fz.map((zz => "space" === zz.kind ? zz : "icon" === zz.kind ? {
                                 kind: "icon",
-                                icon: TT.text,
-                                delayMs: TT.delayMs
+                                icon: zz.text,
+                                delayMs: zz.delayMs
                               } : {
                                 kind: "word",
-                                text: TT.text,
-                                delayMs: TT.delayMs
+                                text: zz.text,
+                                delayMs: zz.delayMs
                               })),
-                              blips: fT
+                              blips: Tz
                             }
                           }
-                          var fT = IT(1171),
-                            CT = IT(1220),
-                            jT = IT(1755);
+                          var Tz = bz(1181),
+                            Lz = bz(1241),
+                            Pz = bz(1873);
 
-                          function JT(TT) {
-                            if ("string" === typeof TT) return TT;
-                            const oT = CT.d.get().getCurrentLanguageCode();
-                            return (0, fT.n)(oT, TT.translationKey, (0, fT.m)(TT.params, jT.e.shown))
+                          function Gz(zz) {
+                            if ("string" === typeof zz) return zz;
+                            const uz = Lz.h.get().getCurrentLanguageCode();
+                            return (0, Tz.s)(uz, zz.translationKey, (0, Tz.q)(zz.params, Pz.b.shown))
                           }
 
-                          function UT(TT) {
-                            const oT = void 0 === TT.voice ? null : (0, iT.m)(TT.voice),
-                              IT = oT && (0, iT.j)(oT);
+                          function az(zz) {
+                            const uz = void 0 === zz.voice ? null : (0, Ez.n)(zz.voice),
+                              bz = uz && (0, Ez.k)(uz);
                             return {
-                              plan: ET(JT(TT.line), IT),
-                              synth: IT
+                              plan: Az(Gz(zz.line), bz),
+                              synth: bz
                             }
                           }
 
-                          function aT(TT) {
-                            const oT = [];
-                            let IT = [];
-                            for (const [zT, kT] of TT.entries()) {
-                              var iT;
-                              "space" === kT.kind && (" " !== kT.text || "icon" !== (null === (iT = TT[zT + 1]) || void 0 === iT ? void 0 : iT.kind)) ? (IT.length > 0 && oT.push(IT), oT.push([kT]), IT = []) : IT.push(kT)
+                          function Vz(zz) {
+                            const uz = [];
+                            let bz = [];
+                            for (const [nz, iz] of zz.entries()) {
+                              var Ez;
+                              "space" === iz.kind && (" " !== iz.text || "icon" !== (null === (Ez = zz[nz + 1]) || void 0 === Ez ? void 0 : Ez.kind)) ? (bz.length > 0 && uz.push(bz), uz.push([iz]), bz = []) : bz.push(iz)
                             }
-                            return IT.length > 0 && oT.push(IT), oT
+                            return bz.length > 0 && uz.push(bz), uz
                           }
-                        }, 4339: (TT, oT, IT) => {
-                          IT.d(oT, {
-                            c: () => ST,
-                            e: () => DT
+                        }, 4609: (zz, uz, bz) => {
+                          bz.d(uz, {
+                            c: () => Oz,
+                            d: () => pz
                           });
-                          var iT = IT(4341),
-                            zT = IT(12);
-                          const kT = .25,
-                            WT = .85,
-                            XT = .02,
-                            BT = .01;
+                          var Ez = bz(4616),
+                            nz = bz(20);
+                          const iz = .25,
+                            lz = .85,
+                            Mz = .02,
+                            tz = .01;
 
-                          function FT(TT, oT, IT, iT, zT, kT, XT) {
+                          function Hz(zz, uz, bz, Ez, nz, iz, Mz) {
                             const {
-                              waveform: BT,
-                              pitchHz: FT,
-                              attackMs: ST,
-                              releaseMs: DT,
-                              lowpassHz: LT
-                            } = IT, xT = zT + iT.durationMs / 1e3, cT = FT * 2 ** (iT.semitones / 12), KT = TT.createOscillator();
-                            KT.type = BT, KT.frequency.setValueAtTime(cT, zT), KT.frequency.exponentialRampToValueAtTime(cT * 2 ** (iT.glideSemitones / 12), xT);
-                            const MT = zT + Math.min(ST, iT.durationMs) / 1e3,
-                              rT = TT.createGain();
-                            rT.gain.setValueAtTime(0, zT), rT.gain.linearRampToValueAtTime(kT, MT), rT.gain.linearRampToValueAtTime(kT * WT, Math.max(MT, xT - DT / 1e3)), rT.gain.linearRampToValueAtTime(0, xT);
-                            const AT = [KT];
-                            if (null !== LT) {
-                              const oT = TT.createBiquadFilter();
-                              oT.type = "lowpass", oT.frequency.value = LT, AT.push(oT)
+                              waveform: tz,
+                              pitchHz: Hz,
+                              attackMs: Oz,
+                              releaseMs: pz,
+                              lowpassHz: dz
+                            } = bz, Fz = nz + Ez.durationMs / 1e3, Zz = Hz * 2 ** (Ez.semitones / 12), Rz = zz.createOscillator();
+                            Rz.type = tz, Rz.frequency.setValueAtTime(Zz, nz), Rz.frequency.exponentialRampToValueAtTime(Zz * 2 ** (Ez.glideSemitones / 12), Fz);
+                            const Kz = nz + Math.min(Oz, Ez.durationMs) / 1e3,
+                              wz = zz.createGain();
+                            wz.gain.setValueAtTime(0, nz), wz.gain.linearRampToValueAtTime(iz, Kz), wz.gain.linearRampToValueAtTime(iz * lz, Math.max(Kz, Fz - pz / 1e3)), wz.gain.linearRampToValueAtTime(0, Fz);
+                            const Xz = [Rz];
+                            if (null !== dz) {
+                              const uz = zz.createBiquadFilter();
+                              uz.type = "lowpass", uz.frequency.value = dz, Xz.push(uz)
                             }
-                            AT.push(rT, oT);
-                            for (let WT = 1; WT < AT.length; WT++) AT[WT - 1].connect(AT[WT]);
-                            return KT.onended = () => {
-                              for (const TT of AT.slice(0, -1)) TT.disconnect();
-                              XT()
-                            }, KT.start(zT), KT.stop(xT), KT
+                            Xz.push(wz, uz);
+                            for (let lz = 1; lz < Xz.length; lz++) Xz[lz - 1].connect(Xz[lz]);
+                            return Rz.onended = () => {
+                              for (const zz of Xz.slice(0, -1)) zz.disconnect();
+                              Mz()
+                            }, Rz.start(nz), Rz.stop(Fz), Rz
                           }
 
-                          function ST(TT, oT, IT, iT, zT, WT) {
-                            if (0 === iT.length) return WT(), () => {};
-                            const ST = kT * IT.volume * zT,
-                              DT = TT.createGain();
-                            DT.connect(oT);
-                            const LT = TT.currentTime + XT,
-                              xT = new Set;
-                            for (const kT of iT) {
-                              const oT = FT(TT, DT, IT, kT, LT + kT.atMs / 1e3, ST * kT.level, (() => {
-                                xT.delete(oT), 0 === xT.size && (DT.disconnect(), WT())
+                          function Oz(zz, uz, bz, Ez, nz, lz) {
+                            if (0 === Ez.length) return lz(), () => {};
+                            const Oz = iz * bz.volume * nz,
+                              pz = zz.createGain();
+                            pz.connect(uz);
+                            const dz = zz.currentTime + Mz,
+                              Fz = new Set;
+                            for (const iz of Ez) {
+                              const uz = Hz(zz, pz, bz, iz, dz + iz.atMs / 1e3, Oz * iz.level, (() => {
+                                Fz.delete(uz), 0 === Fz.size && (pz.disconnect(), lz())
                               }));
-                              xT.add(oT)
+                              Fz.add(uz)
                             }
                             return () => {
-                              const oT = TT.currentTime;
-                              DT.gain.setTargetAtTime(0, oT, BT);
-                              for (const TT of xT) try {
-                                TT.stop(oT + 5 * BT)
+                              const uz = zz.currentTime;
+                              pz.gain.setTargetAtTime(0, uz, tz);
+                              for (const zz of Fz) try {
+                                zz.stop(uz + 5 * tz)
                               } catch {}
                             }
                           }
 
-                          function DT(TT, oT) {
-                            var IT;
-                            const kT = iT.Howler.ctx,
-                              WT = iT.Howler.masterGain;
-                            if (!kT || !WT || !zT.c.get("soundOnFromAd")) return () => {};
-                            const XT = iT.Howler;
-                            return null === (IT = XT._autoResume) || void 0 === IT || IT.call(XT), ST(kT, WT, TT, oT, zT.c.get("soundVolume"), (() => {
-                              var TT;
-                              null === (TT = XT._autoSuspend) || void 0 === TT || TT.call(XT)
+                          function pz(zz, uz) {
+                            var bz;
+                            const iz = Ez.Howler.ctx,
+                              lz = Ez.Howler.masterGain;
+                            if (!iz || !lz || !nz.e.get("soundOnFromAd")) return () => {};
+                            const Mz = Ez.Howler;
+                            return null === (bz = Mz._autoResume) || void 0 === bz || bz.call(Mz), Oz(iz, lz, zz, uz, nz.e.get("soundVolume"), (() => {
+                              var zz;
+                              null === (zz = Mz._autoSuspend) || void 0 === zz || zz.call(Mz)
                             }))
                           }
-                        }, 4341: (TT, oT, IT) => {
-                          IT.r(oT), IT.d(oT, {
-                            Howl: () => zT.Howl,
-                            Howler: () => zT.Howler,
-                            iosAudio: () => BT,
-                            musicOutput: () => MT,
-                            readyAudioContext: () => rT
+                        }, 4616: (zz, uz, bz) => {
+                          bz.r(uz), bz.d(uz, {
+                            Howl: () => nz.Howl,
+                            Howler: () => nz.Howler,
+                            iosAudio: () => tz,
+                            musicOutput: () => Kz,
+                            readyAudioContext: () => wz
                           });
-                          var iT, zT = IT(4349),
-                            kT = IT(90);
-                          const WT = zT.Howler;
-                          let XT;
+                          var Ez, nz = bz(4625),
+                            iz = bz(96);
+                          const lz = nz.Howler;
+                          let Mz;
 
-                          function BT() {
-                            return XT ??= "ios" === (0, kT.getOperatingSystem)(), XT
+                          function tz() {
+                            return Mz ??= "ios" === (0, iz.getOperatingSystem)(), Mz
                           }
 
-                          function FT() {
-                            var TT, oT;
-                            if (WT.ctx || !WT.usingWebAudio || "undefined" === typeof AudioContext || !BT()) return;
-                            const IT = navigator.audioSession;
-                            let iT;
-                            "auto" === (null === IT || void 0 === IT ? void 0 : IT.type) && (IT.type = "ambient");
+                          function Hz() {
+                            var zz, uz;
+                            if (lz.ctx || !lz.usingWebAudio || "undefined" === typeof AudioContext || !tz()) return;
+                            const bz = navigator.audioSession;
+                            let Ez;
+                            "auto" === (null === bz || void 0 === bz ? void 0 : bz.type) && (bz.type = "ambient");
                             try {
-                              iT = new AudioContext({
+                              Ez = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const zT = iT.createGain();
-                            zT.gain.setValueAtTime(WT._muted ? 0 : null !== (TT = WT._volume) && void 0 !== TT ? TT : 1, iT.currentTime), zT.connect(iT.destination), WT.ctx = iT, WT.masterGain = zT, null === (oT = WT._setup) || void 0 === oT || oT.call(WT)
+                            const nz = Ez.createGain();
+                            nz.gain.setValueAtTime(lz._muted ? 0 : null !== (zz = lz._volume) && void 0 !== zz ? zz : 1, Ez.currentTime), nz.connect(Ez.destination), lz.ctx = Ez, lz.masterGain = nz, null === (uz = lz._setup) || void 0 === uz || uz.call(lz)
                           }
-                          WT._mobileUnloaded = !0;
-                          const ST = WT.volume.bind(zT.Howler);
-                          WT.volume = function() {
-                            return FT(), ST(...arguments)
+                          lz._mobileUnloaded = !0;
+                          const Oz = lz.volume.bind(nz.Howler);
+                          lz.volume = function() {
+                            return Hz(), Oz(...arguments)
                           };
-                          const DT = WT.mute.bind(zT.Howler);
-                          WT.mute = TT => (FT(), DT(TT));
-                          const LT = zT.Howl.prototype,
-                            xT = LT.init;
-                          LT.init = function(TT) {
-                            return FT(), xT.call(this, TT)
+                          const pz = lz.mute.bind(nz.Howler);
+                          lz.mute = zz => (Hz(), pz(zz));
+                          const dz = nz.Howl.prototype,
+                            Fz = dz.init;
+                          dz.init = function(zz) {
+                            return Hz(), Fz.call(this, zz)
                           };
-                          let cT = 0;
-                          const KT = null === (iT = WT._autoSuspend) || void 0 === iT ? void 0 : iT.bind(zT.Howler);
+                          let Zz = 0;
+                          const Rz = null === (Ez = lz._autoSuspend) || void 0 === Ez ? void 0 : Ez.bind(nz.Howler);
 
-                          function MT() {
-                            rT();
+                          function Kz() {
+                            wz();
                             const {
-                              ctx: TT,
-                              masterGain: oT
-                            } = WT;
-                            return TT && oT ? {
-                              ctx: TT,
-                              destination: oT,
-                              holdAwake: TT => {
-                                var oT, IT;
-                                (cT += TT ? 1 : -1, TT) ? null === (oT = WT._autoResume) || void 0 === oT || oT.call(WT): null === (IT = WT._autoSuspend) || void 0 === IT || IT.call(WT)
+                              ctx: zz,
+                              masterGain: uz
+                            } = lz;
+                            return zz && uz ? {
+                              ctx: zz,
+                              destination: uz,
+                              holdAwake: zz => {
+                                var uz, bz;
+                                (Zz += zz ? 1 : -1, zz) ? null === (uz = lz._autoResume) || void 0 === uz || uz.call(lz): null === (bz = lz._autoSuspend) || void 0 === bz || bz.call(lz)
                               },
                               wake: () => {
-                                var oT;
-                                "running" !== TT.state && (null === (oT = WT._autoResume) || void 0 === oT || oT.call(WT), TT.resume().catch((() => {})))
+                                var uz;
+                                "running" !== zz.state && (null === (uz = lz._autoResume) || void 0 === uz || uz.call(lz), zz.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function rT() {
-                            var TT;
-                            (WT.volume(), WT.ctx && WT.autoUnlock) && (null === (TT = WT._unlockAudio) || void 0 === TT || TT.call(WT))
+                          function wz() {
+                            var zz;
+                            (lz.volume(), lz.ctx && lz.autoUnlock) && (null === (zz = lz._unlockAudio) || void 0 === zz || zz.call(lz))
                           }
-                          KT && (WT._autoSuspend = () => cT > 0 ? zT.Howler : KT())
-                        }, 4355: (TT, oT, IT) => {
-                          function iT(TT) {
+                          Rz && (lz._autoSuspend = () => Zz > 0 ? nz.Howler : Rz())
+                        }, 4629: (zz, uz, bz) => {
+                          function Ez(zz) {
                             return {
-                              notAfter: TT
+                              notAfter: zz
                             }
                           }
-                          IT.d(oT, {
-                            d: () => BT,
-                            f: () => FT,
-                            g: () => XT,
-                            i: () => iT,
-                            k: () => zT,
-                            m: () => kT,
-                            p: () => WT,
-                            r: () => ST,
-                            u: () => DT
+                          bz.d(uz, {
+                            c: () => tz,
+                            e: () => Hz,
+                            i: () => Mz,
+                            j: () => Ez,
+                            l: () => nz,
+                            m: () => iz,
+                            q: () => lz,
+                            t: () => Oz,
+                            u: () => pz
                           });
-                          const zT = iT("\\w$."),
-                            kT = iT("\\w.,");
+                          const nz = Ez("\\w$."),
+                            iz = Ez("\\w.,");
 
-                          function WT(TT) {
-                            return oT => BT(oT, TT)
+                          function lz(zz) {
+                            return uz => tz(uz, zz)
                           }
 
-                          function XT(TT) {
-                            return oT => !TT.test(oT.input.slice(0, oT.index))
+                          function Mz(zz) {
+                            return uz => !zz.test(uz.input.slice(0, uz.index))
                           }
 
-                          function BT(TT, oT) {
-                            return TT.index > 0 && new RegExp(`[${oT}]`).test(TT.input[TT.index - 1])
+                          function tz(zz, uz) {
+                            return zz.index > 0 && new RegExp(`[${uz}]`).test(zz.input[zz.index - 1])
                           }
 
-                          function FT(TT, oT, IT) {
-                            return function(TT) {
-                              return void 0 !== TT && "function" !== typeof TT
-                            }(IT) ? function(TT, oT, IT) {
-                              const iT = oT.flags.replace(/[gy]/g, ""),
-                                zT = new RegExp(`[^${IT}](?:${oT.source})`, `${iT}g`),
-                                kT = [],
-                                WT = IT => {
-                                  const iT = IT.index + IT[0].length;
-                                  return ("" === IT[0] ? LT(TT, oT, iT) : iT) - 1
+                          function Hz(zz, uz, bz) {
+                            return function(zz) {
+                              return void 0 !== zz && "function" !== typeof zz
+                            }(bz) ? function(zz, uz, bz) {
+                              const Ez = uz.flags.replace(/[gy]/g, ""),
+                                nz = new RegExp(`[^${bz}](?:${uz.source})`, `${Ez}g`),
+                                iz = [],
+                                lz = bz => {
+                                  const Ez = bz.index + bz[0].length;
+                                  return ("" === bz[0] ? dz(zz, uz, Ez) : Ez) - 1
                                 },
-                                XT = new RegExp(`(?:${oT.source})`, `${iT}y`).exec(TT);
-                              if (XT) {
-                                if (kT.push(XT), !oT.global) return kT;
-                                zT.lastIndex = WT(XT)
+                                Mz = new RegExp(`(?:${uz.source})`, `${Ez}y`).exec(zz);
+                              if (Mz) {
+                                if (iz.push(Mz), !uz.global) return iz;
+                                nz.lastIndex = lz(Mz)
                               }
-                              for (let BT = zT.exec(TT); BT; BT = zT.exec(TT)) {
-                                const IT = LT(TT, oT, BT.index) - BT.index;
-                                if (BT[0] = BT[0].slice(IT), BT.index += IT, kT.push(BT), !oT.global) break;
-                                zT.lastIndex = WT(BT)
+                              for (let tz = nz.exec(zz); tz; tz = nz.exec(zz)) {
+                                const bz = dz(zz, uz, tz.index) - tz.index;
+                                if (tz[0] = tz[0].slice(bz), tz.index += bz, iz.push(tz), !uz.global) break;
+                                nz.lastIndex = lz(tz)
                               }
-                              return kT
-                            }(TT, oT, IT.notAfter) : function(TT, oT, IT) {
-                              const iT = new RegExp(oT.source, `${oT.flags.replace(/[gy]/g,"")}g`),
-                                zT = [];
-                              for (let kT = iT.exec(TT); kT; kT = iT.exec(TT))
-                                if (!IT || IT(kT)) {
-                                  if (zT.push(kT), !oT.global) break;
-                                  "" === kT[0] && (iT.lastIndex = LT(TT, oT, iT.lastIndex))
-                                } else iT.lastIndex = LT(TT, oT, kT.index);
-                              return zT
-                            }(TT, oT, IT)
+                              return iz
+                            }(zz, uz, bz.notAfter) : function(zz, uz, bz) {
+                              const Ez = new RegExp(uz.source, `${uz.flags.replace(/[gy]/g,"")}g`),
+                                nz = [];
+                              for (let iz = Ez.exec(zz); iz; iz = Ez.exec(zz))
+                                if (!bz || bz(iz)) {
+                                  if (nz.push(iz), !uz.global) break;
+                                  "" === iz[0] && (Ez.lastIndex = dz(zz, uz, Ez.lastIndex))
+                                } else Ez.lastIndex = dz(zz, uz, iz.index);
+                              return nz
+                            }(zz, uz, bz)
                           }
 
-                          function ST(TT, oT, IT, iT) {
-                            let zT = "",
-                              kT = 0;
-                            for (const WT of FT(TT, oT, IT)) zT += TT.slice(kT, WT.index) + iT(WT), kT = WT.index + WT[0].length;
-                            return zT + TT.slice(kT)
+                          function Oz(zz, uz, bz, Ez) {
+                            let nz = "",
+                              iz = 0;
+                            for (const lz of Hz(zz, uz, bz)) nz += zz.slice(iz, lz.index) + Ez(lz), iz = lz.index + lz[0].length;
+                            return nz + zz.slice(iz)
                           }
 
-                          function DT(TT, oT, IT) {
-                            const iT = [];
-                            let zT = 0;
-                            for (const kT of FT(TT, oT, IT)) iT.push(TT.slice(zT, kT.index)), zT = kT.index + kT[0].length;
-                            return [...iT, TT.slice(zT)]
+                          function pz(zz, uz, bz) {
+                            const Ez = [];
+                            let nz = 0;
+                            for (const iz of Hz(zz, uz, bz)) Ez.push(zz.slice(nz, iz.index)), nz = iz.index + iz[0].length;
+                            return [...Ez, zz.slice(nz)]
                           }
 
-                          function LT(TT, oT, IT) {
-                            var iT;
-                            return IT + (oT.unicode && (null !== (iT = TT.codePointAt(IT)) && void 0 !== iT ? iT : 0) > 65535 ? 2 : 1)
+                          function dz(zz, uz, bz) {
+                            var Ez;
+                            return bz + (uz.unicode && (null !== (Ez = zz.codePointAt(bz)) && void 0 !== Ez ? Ez : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4304: (TT, oT, IT) => {
-                          IT.d(oT, {
-                            c: () => zT,
-                            f: () => BT,
-                            j: () => kT,
-                            n: () => WT,
-                            o: () => XT,
-                            s: () => MT,
-                            t: () => ST,
-                            w: () => DT,
-                            x: () => KT,
-                            y: () => xT
+                        }, 4581: (zz, uz, bz) => {
+                          bz.d(uz, {
+                            A: () => Fz,
+                            e: () => nz,
+                            g: () => tz,
+                            i: () => iz,
+                            k: () => lz,
+                            n: () => Mz,
+                            p: () => Kz,
+                            r: () => Oz,
+                            s: () => pz,
+                            w: () => Rz
                           });
-                          var iT = IT(1531);
-                          const zT = 24e3,
-                            kT = "/docs/llms.txt",
-                            WT = `${iT.d}${kT}`,
-                            XT = "/llms.txt",
-                            BT = "/docs/llms-full.txt";
+                          var Ez = bz(1547);
+                          const nz = 24e3,
+                            iz = "/docs/llms.txt",
+                            lz = `${Ez.e}${iz}`,
+                            Mz = "/llms.txt",
+                            tz = "/docs/llms-full.txt";
 
-                          function FT(TT) {
-                            return TT || "index"
+                          function Hz(zz) {
+                            return zz || "index"
                           }
 
-                          function ST(TT) {
-                            return `/docs/${FT(TT)}.md`
+                          function Oz(zz) {
+                            return `/docs/${Hz(zz)}.md`
                           }
 
-                          function DT(TT, oT) {
-                            return `/docs/${FT(TT)}/${oT+1}.md`
+                          function pz(zz, uz) {
+                            return `/docs/${Hz(zz)}/${uz+1}.md`
                           }
-                          const LT = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const dz = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function xT(TT) {
-                            const oT = LT.exec(TT);
-                            return null === oT ? null : {
-                              name: oT[1],
-                              part: void 0 === oT[2] ? null : Number(oT[2])
+                          function Fz(zz) {
+                            const uz = dz.exec(zz);
+                            return null === uz ? null : {
+                              name: uz[1],
+                              part: void 0 === uz[2] ? null : Number(uz[2])
                             }
                           }
-                          const cT = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const Zz = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function KT(TT) {
-                            const oT = cT.exec(TT);
-                            if (null === oT) return null;
-                            const [, IT = "", iT] = oT;
-                            return void 0 === iT ? ST(IT) : DT(IT, Number(iT) - 1)
+                          function Rz(zz) {
+                            const uz = Zz.exec(zz);
+                            if (null === uz) return null;
+                            const [, bz = "", Ez] = uz;
+                            return void 0 === Ez ? Oz(bz) : pz(bz, Number(Ez) - 1)
                           }
 
-                          function MT(TT) {
-                            return `/docsHtml/${FT(TT)}.html`
+                          function Kz(zz) {
+                            return `/docsHtml/${Hz(zz)}.html`
                           }
-                        }, 4336: (TT, oT, IT) => {
-                          IT.d(oT, {
-                            d: () => zT,
-                            f: () => iT,
-                            g: () => kT,
-                            j: () => BT,
-                            m: () => WT
+                        }, 4605: (zz, uz, bz) => {
+                          bz.d(uz, {
+                            e: () => nz,
+                            h: () => Ez,
+                            i: () => iz,
+                            k: () => tz,
+                            n: () => lz
                           });
-                          const iT = ["sine", "triangle", "square", "sawtooth"],
-                            zT = 55,
-                            kT = {
+                          const Ez = ["sine", "triangle", "square", "sawtooth"],
+                            nz = 55,
+                            iz = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7214,38 +7214,38 @@ export const modules = {
                               }
                             };
 
-                          function WT(TT) {
-                            return "string" !== typeof TT ? TT : Object.hasOwn(kT, TT) ? kT[TT] : null
+                          function lz(zz) {
+                            return "string" !== typeof zz ? zz : Object.hasOwn(iz, zz) ? iz[zz] : null
                           }
 
-                          function XT(TT, oT, IT) {
-                            return Math.min(IT, Math.max(oT, TT))
+                          function Mz(zz, uz, bz) {
+                            return Math.min(bz, Math.max(uz, zz))
                           }
 
-                          function BT(TT) {
-                            const oT = XT(TT.durationMs, 10, 500),
-                              IT = XT(TT.attackMs, 0, oT),
+                          function tz(zz) {
+                            const uz = Mz(zz.durationMs, 10, 500),
+                              bz = Mz(zz.attackMs, 0, uz),
                               {
-                                intonation: zT
-                              } = TT;
+                                intonation: nz
+                              } = zz;
                             return {
-                              waveform: iT.includes(TT.waveform) ? TT.waveform : "sine",
-                              pitchHz: XT(TT.pitchHz, 20, 4e3),
-                              glideSemitones: XT(TT.glideSemitones, -24, 24),
-                              durationMs: oT,
-                              attackMs: IT,
-                              releaseMs: XT(TT.releaseMs, 0, oT - IT),
-                              lowpassHz: null === TT.lowpassHz ? null : XT(TT.lowpassHz, 20, 2e4),
-                              volume: XT(TT.volume, 0, 2),
+                              waveform: Ez.includes(zz.waveform) ? zz.waveform : "sine",
+                              pitchHz: Mz(zz.pitchHz, 20, 4e3),
+                              glideSemitones: Mz(zz.glideSemitones, -24, 24),
+                              durationMs: uz,
+                              attackMs: bz,
+                              releaseMs: Mz(zz.releaseMs, 0, uz - bz),
+                              lowpassHz: null === zz.lowpassHz ? null : Mz(zz.lowpassHz, 20, 2e4),
+                              volume: Mz(zz.volume, 0, 2),
                               intonation: {
-                                variationSemitones: XT(zT.variationSemitones, 0, 6),
-                                declineSemitones: XT(zT.declineSemitones, 0, 12),
-                                questionRiseSemitones: XT(zT.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: XT(zT.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: Mz(nz.variationSemitones, 0, 6),
+                                declineSemitones: Mz(nz.declineSemitones, 0, 12),
+                                questionRiseSemitones: Mz(nz.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: Mz(nz.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: XT(TT.syllableMs, 25, 200)
+                              syllableMs: Mz(zz.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const TT in modules) Object.freeze(modules[TT]);
+                      for (const zz in modules) Object.freeze(modules[zz]);

@@ -1,18 +1,18 @@
 export const id = 72;
 export const ids = [72];
 export const modules = {
-  36014: (TT, oT, IT) => {
-    if (IT.d(oT, {
-        b: () => BT,
-        e: () => zT,
-        f: () => WT,
-        g: () => kT,
-        j: () => wT,
-        m: () => rT
-      }), 39 == IT.j) var iT = IT(36017);
-    const zT = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
-      kT = ["Blade", "Guard", "Handle"],
-      WT = {
+  36486: (zz, uz, bz) => {
+    if (bz.d(uz, {
+        d: () => tz,
+        g: () => nz,
+        h: () => lz,
+        i: () => iz,
+        k: () => rz,
+        m: () => wz
+      }), 39 == bz.j) var Ez = bz(36491);
+    const nz = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      iz = ["Blade", "Guard", "Handle"],
+      lz = {
         Wood: {
           material: "Wood",
           baseSword: "Wood Sword",
@@ -131,59 +131,59 @@ export const modules = {
           handleReach: .5
         }
       },
-      XT = 4,
-      BT = "Coal",
-      FT = {
+      Mz = 4,
+      tz = "Coal",
+      Hz = {
         Blade: 1,
         Guard: .6,
         Handle: .4
       },
-      ST = 1.15,
-      DT = 1.35,
-      LT = .06,
-      xT = {
+      Oz = 1.15,
+      pz = 1.35,
+      dz = .06,
+      Fz = {
         defence: {
           name: "Bulwark",
           amount: .06,
-          describe: TT => `${RT(.06*TT)} less damage taken`
+          describe: zz => `${vz(.06*zz)} less damage taken`
         },
         coins: {
           name: "Midas",
           amount: 4,
-          describe: TT => `Mobs you slay drop ${Math.round(4*TT)}+ extra coins`
+          describe: zz => `Mobs you slay drop ${Math.round(4*zz)}+ extra coins`
         },
         crit: {
           name: "Keen Edge",
           chance: .12,
           amount: .6,
-          describe: TT => `${RT(.12*TT)} chance to strike for +60% damage`
+          describe: zz => `${vz(.12*zz)} chance to strike for +60% damage`
         },
         bossBane: {
           name: "Bossbane",
           amount: .2,
-          describe: TT => `+${RT(.2*TT)} damage to bosses`
+          describe: zz => `+${vz(.2*zz)} damage to bosses`
         },
         firePool: {
           name: "Magma Pool",
           chance: .15,
           amount: .12,
           cooldownMs: 3e3,
-          describe: TT => `${RT(.15*TT)} chance to leave a fire pool under the mob that burns for 3s`
+          describe: zz => `${vz(.15*zz)} chance to leave a fire pool under the mob that burns for 3s`
         },
         lifesteal: {
           name: "Bloodthirst",
           amount: .06,
-          describe: TT => `Heal ${RT(.06*TT)} of the damage you deal`
+          describe: zz => `Heal ${vz(.06*zz)} of the damage you deal`
         },
         starfall: {
           name: "Starfall",
           chance: .1,
           amount: .6,
           cooldownMs: 4e3,
-          describe: TT => `${RT(.1*TT)} chance to call a falling star that hits nearby mobs and slows them`
+          describe: zz => `${vz(.1*zz)} chance to call a falling star that hits nearby mobs and slows them`
         }
       },
-      cT = {
+      Zz = {
         eclipseField: {
           name: "Eclipse Field",
           description: "Right-click: slow every mob within 6 blocks for 3s",
@@ -225,120 +225,120 @@ export const modules = {
           cooldownMs: 25e3
         }
       },
-      KT = 39 == IT.j ? iT.b : null,
-      MT = "skyblock:forged:";
+      Rz = 39 == bz.j ? Ez.b : null,
+      Kz = "skyblock:forged:";
 
-    function rT(TT, oT) {
-      return `${TT} ${oT}`
+    function wz(zz, uz) {
+      return `${zz} ${uz}`
     }
-    zT.flatMap((TT => kT.map((oT => rT(TT, oT)))));
+    nz.flatMap((zz => iz.map((uz => wz(zz, uz)))));
 
-    function AT(TT) {
+    function Xz(zz) {
       let {
-        blade: oT,
-        guard: IT,
-        handle: iT
-      } = TT;
-      return `${MT}${oT.toLowerCase()}-${IT.toLowerCase()}-${iT.toLowerCase()}`
+        blade: uz,
+        guard: bz,
+        handle: Ez
+      } = zz;
+      return `${Kz}${uz.toLowerCase()}-${bz.toLowerCase()}-${Ez.toLowerCase()}`
     }
 
-    function gT(TT) {
-      if (! function(TT) {
-          return "string" === typeof TT && TT.startsWith(MT)
-        }(TT)) return null;
-      const oT = TT.slice(MT.length).split("-").map((TT => zT.find((oT => oT.toLowerCase() === TT))));
-      return 3 !== oT.length || oT.includes(void 0) ? null : {
-        blade: oT[0],
-        guard: oT[1],
-        handle: oT[2]
+    function fz(zz) {
+      if (! function(zz) {
+          return "string" === typeof zz && zz.startsWith(Kz)
+        }(zz)) return null;
+      const uz = zz.slice(Kz.length).split("-").map((zz => nz.find((uz => uz.toLowerCase() === zz))));
+      return 3 !== uz.length || uz.includes(void 0) ? null : {
+        blade: uz[0],
+        guard: uz[1],
+        handle: uz[2]
       }
     }
-    const hT = new Map;
+    const sz = new Map;
 
-    function wT(TT) {
-      var oT;
-      let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : KT;
-      const iT = "string" === typeof TT ? gT(TT) : TT;
-      if (null === iT) return null;
-      const zT = AT(iT),
-        BT = IT === KT ? hT.get(zT) : void 0;
-      if (void 0 !== BT) return BT;
-      const MT = function(TT, oT) {
-        var IT, iT, zT, BT, KT, MT, rT, gT, hT;
+    function rz(zz) {
+      var uz;
+      let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Rz;
+      const Ez = "string" === typeof zz ? fz(zz) : zz;
+      if (null === Ez) return null;
+      const nz = Xz(Ez),
+        tz = bz === Rz ? sz.get(nz) : void 0;
+      if (void 0 !== tz) return tz;
+      const Kz = function(zz, uz) {
+        var bz, Ez, nz, tz, Rz, Kz, wz, fz, sz;
         const {
-          blade: wT,
-          guard: vT,
-          handle: ET
-        } = TT, fT = WT, CT = wT === vT && vT === ET, jT = eT((1 + fT[wT].bladeDamage) * (CT ? 1 + LT : 1)), JT = null !== (IT = oT.damageMultiplier) && void 0 !== IT ? IT : jT, UT = null !== (iT = oT.cooldownMultiplier) && void 0 !== iT ? iT : fT[ET].handleCooldown, aT = null !== (zT = oT.knockbackMultiplier) && void 0 !== zT ? zT : eT(1 + fT[ET].handleKnockback), YT = null !== (BT = oT.reachBonus) && void 0 !== BT ? BT : fT[ET].handleReach, QT = null !== (KT = oT.damageReduction) && void 0 !== KT ? KT : fT[vT].guardReduction, OT = null !== (MT = oT.traits) && void 0 !== MT ? MT : function(TT) {
-          const oT = {},
-            IT = {};
-          for (const XT of kT) {
-            var iT, zT;
-            const kT = WT[mT(TT, XT)].trait;
-            null !== kT && (oT[kT] = (null !== (iT = oT[kT]) && void 0 !== iT ? iT : 0) + FT[XT], IT[kT] = (null !== (zT = IT[kT]) && void 0 !== zT ? zT : 0) + 1)
+          blade: rz,
+          guard: Jz,
+          handle: Az
+        } = zz, Tz = lz, Lz = rz === Jz && Jz === Az, Pz = Nz((1 + Tz[rz].bladeDamage) * (Lz ? 1 + dz : 1)), Gz = null !== (bz = uz.damageMultiplier) && void 0 !== bz ? bz : Pz, az = null !== (Ez = uz.cooldownMultiplier) && void 0 !== Ez ? Ez : Tz[Az].handleCooldown, Vz = null !== (nz = uz.knockbackMultiplier) && void 0 !== nz ? nz : Nz(1 + Tz[Az].handleKnockback), mz = null !== (tz = uz.reachBonus) && void 0 !== tz ? tz : Tz[Az].handleReach, qz = null !== (Rz = uz.damageReduction) && void 0 !== Rz ? Rz : Tz[Jz].guardReduction, hz = null !== (Kz = uz.traits) && void 0 !== Kz ? Kz : function(zz) {
+          const uz = {},
+            bz = {};
+          for (const Mz of iz) {
+            var Ez, nz;
+            const iz = lz[oz(zz, Mz)].trait;
+            null !== iz && (uz[iz] = (null !== (Ez = uz[iz]) && void 0 !== Ez ? Ez : 0) + Hz[Mz], bz[iz] = (null !== (nz = bz[iz]) && void 0 !== nz ? nz : 0) + 1)
           }
-          for (const kT of Object.keys(oT)) {
-            const TT = 3 === IT[kT] ? DT : 2 === IT[kT] ? ST : 1;
-            oT[kT] = eT(oT[kT] * TT)
+          for (const iz of Object.keys(uz)) {
+            const zz = 3 === bz[iz] ? pz : 2 === bz[iz] ? Oz : 1;
+            uz[iz] = Nz(uz[iz] * zz)
           }
-          return oT
-        }(TT), HT = null !== (rT = oT.ability) && void 0 !== rT ? rT : null, nT = void 0 !== oT.name, qT = null !== (gT = oT.name) && void 0 !== gT ? gT : CT ? `Pure ${wT} Sword` : `${fT[vT].epithet} ${wT} Sword`, ZT = null !== (hT = oT.lore) && void 0 !== hT ? hT : `Forged by the Forge Mother from a ${wT.toLowerCase()} blade, ${vT.toLowerCase()} guard and ${ET.toLowerCase()} handle.`, lT = function(TT) {
+          return uz
+        }(zz), Uz = null !== (wz = uz.ability) && void 0 !== wz ? wz : null, cz = void 0 !== uz.name, gz = null !== (fz = uz.name) && void 0 !== fz ? fz : Lz ? `Pure ${rz} Sword` : `${Tz[Jz].epithet} ${rz} Sword`, Sz = null !== (sz = uz.lore) && void 0 !== sz ? sz : `Forged by the Forge Mother from a ${rz.toLowerCase()} blade, ${Jz.toLowerCase()} guard and ${Az.toLowerCase()} handle.`, yz = function(zz) {
           let {
-            blade: oT,
-            guard: IT,
-            handle: iT
-          } = TT;
-          const zT = WT;
-          return XT * (zT[oT].value + zT[IT].value + zT[iT].value)
-        }(TT), sT = fT[wT].value + fT[vT].value + fT[ET].value, tT = nT ? "Tier 5" : sT <= 4 ? "Tier 1" : sT <= 8 ? "Tier 2" : sT <= 14 ? "Tier 3" : sT <= 22 ? "Tier 4" : "Tier 5", GT = [];
-        1 !== JT && GT.push(`${uT(JT-1)} damage`);
-        1 !== UT && GT.push(`${RT(1/UT-1)} faster strikes`);
-        1 !== aT && GT.push(`${uT(aT-1)} knockback`);
-        YT > 0 && GT.push(`+${YT} reach`);
-        QT > 0 && GT.push(`${RT(QT)} less damage taken while held`);
-        const pT = [];
-        for (const kT of Object.keys(OT)) pT.push(`${xT[kT].name}: ${xT[kT].describe(OT[kT])}`);
-        null !== HT && pT.push(`${cT[HT].name}: ${cT[HT].description}`);
-        return GT.push(...pT), {
-          id: AT(TT),
-          parts: TT,
-          baseSword: fT[wT].baseSword,
-          displayName: qT,
-          lore: ZT,
-          properties: GT,
-          effects: pT,
-          named: nT,
-          damageMultiplier: JT,
-          cooldownMultiplier: UT,
-          knockbackMultiplier: aT,
-          reachBonus: YT,
-          damageReduction: QT,
-          traits: OT,
-          ability: HT,
-          coalCost: lT,
-          enchantmentTier: tT,
-          powerMultiplier: eT(JT / UT)
+            blade: uz,
+            guard: bz,
+            handle: Ez
+          } = zz;
+          const nz = lz;
+          return Mz * (nz[uz].value + nz[bz].value + nz[Ez].value)
+        }(zz), Dz = Tz[rz].value + Tz[Jz].value + Tz[Az].value, Qz = cz ? "Tier 5" : Dz <= 4 ? "Tier 1" : Dz <= 8 ? "Tier 2" : Dz <= 14 ? "Tier 3" : Dz <= 22 ? "Tier 4" : "Tier 5", Wz = [];
+        1 !== Gz && Wz.push(`${xz(Gz-1)} damage`);
+        1 !== az && Wz.push(`${vz(1/az-1)} faster strikes`);
+        1 !== Vz && Wz.push(`${xz(Vz-1)} knockback`);
+        mz > 0 && Wz.push(`+${mz} reach`);
+        qz > 0 && Wz.push(`${vz(qz)} less damage taken while held`);
+        const ez = [];
+        for (const iz of Object.keys(hz)) ez.push(`${Fz[iz].name}: ${Fz[iz].describe(hz[iz])}`);
+        null !== Uz && ez.push(`${Zz[Uz].name}: ${Zz[Uz].description}`);
+        return Wz.push(...ez), {
+          id: Xz(zz),
+          parts: zz,
+          baseSword: Tz[rz].baseSword,
+          displayName: gz,
+          lore: Sz,
+          properties: Wz,
+          effects: ez,
+          named: cz,
+          damageMultiplier: Gz,
+          cooldownMultiplier: az,
+          knockbackMultiplier: Vz,
+          reachBonus: mz,
+          damageReduction: qz,
+          traits: hz,
+          ability: Uz,
+          coalCost: yz,
+          enchantmentTier: Qz,
+          powerMultiplier: Nz(Gz / az)
         }
-      }(iT, null !== (oT = IT[zT]) && void 0 !== oT ? oT : {});
-      return IT === KT && hT.set(zT, MT), MT
+      }(Ez, null !== (uz = bz[nz]) && void 0 !== uz ? uz : {});
+      return bz === Rz && sz.set(nz, Kz), Kz
     }
 
-    function mT(TT, oT) {
-      return "Blade" === oT ? TT.blade : "Guard" === oT ? TT.guard : TT.handle
+    function oz(zz, uz) {
+      return "Blade" === uz ? zz.blade : "Guard" === uz ? zz.guard : zz.handle
     }
 
-    function eT(TT) {
-      return Math.round(100 * TT) / 100
+    function Nz(zz) {
+      return Math.round(100 * zz) / 100
     }
 
-    function RT(TT) {
-      return `${Math.round(100*TT)}%`
+    function vz(zz) {
+      return `${Math.round(100*zz)}%`
     }
 
-    function uT(TT) {
-      return `${TT>=0?"+":""}${RT(TT)}`
+    function xz(zz) {
+      return `${zz>=0?"+":""}${vz(zz)}`
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);

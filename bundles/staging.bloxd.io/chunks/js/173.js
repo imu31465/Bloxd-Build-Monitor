@@ -1,49 +1,37 @@
 export const id = 173;
 export const ids = [173];
 export const modules = {
-  8426: (TT, oT, IT) => {
-    IT.r(oT), IT.d(oT, {
-      pageBody: () => iT
+  8681: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const iT = {
-      whatIs: ["Sharp aim and quick feet are what separate top frag from instant respawn. Bloxd Cube Warfare is a fast, free block FPS where the firefights don't stop. You can play Free-For-All, Team Deathmatch or Gun Game, and you'll unlock over 15 guns along the way. If you'd rather have objectives, kits and vehicles in big 12v12 battles, have a look at Frontline."],
-      howToPlay: ["Join a match and vote on the map. In Free-For-All it's every player for themselves. Team Deathmatch puts you on a side, and your team has to outscore the other one. Rounds last 10 minutes. Get taken down and you'll respawn with 8 seconds of invincibility, though your killstreak resets.", "Keep taking down opponents without going down yourself and you'll build killstreaks. They reward you across 3 tiers with things like extra health, more damage, faster movement or free blocks. New guns unlock in the shop. There are pistols, SMGs, shotguns, sniper rifles and LMGs, and you can take any of them into Teams or FFA. Gun Game has its own queue. Every elimination swaps your weapon for the next one, and to win you need a final takedown with the sword.", "Some matches throw in a twist. In Collect Diamonds you gather diamonds to win. Explosives keeps handing you explosives, and each takedown gets you more."],
-      features: ["Free-For-All, Team Deathmatch and Gun Game", "Over 15 Guns, Including the AK-47, AWP, Deagle, Striker-12 and GPMG", "Killstreak Rewards Across 3 Tiers", "Place Blocks for Cover with Killstreak Rewards", "Match Modifiers: Collect Diamonds and Explosives", "Maps Including Snowbase, Sienna, Cabins and More, with Map Voting", "Leaderboards and Player Stats"],
-      tips: ["Keep moving. Standing still makes you an easy target", "Go for headshots, especially once you've got the Goodaimer killstreak", "Use those 8 seconds of respawn invincibility to get back into position", "Stay alive to keep your killstreak going, because it resets when you're taken down", "Place blocks for cover, but remember every map has a build height limit", "In Collect Diamonds, shoot the diamonds around the map so they drop, then grab them", "Try every gun in Gun Game before you unlock your favourite in the shop"],
-      similarGames: ["frontline", "classic_survivalGuns", "infection", "skywars"],
+    const Ez = {
+      whatIs: ["A string of unique islands, a mysterious land and 114 fish just waiting to be caught. Bloxd Fishing is a relaxing fishing simulator where you explore, catch fish and slowly uncover the secrets of the islands. Take it at your own pace. It's free, there's nothing to install, and you can be fishing in seconds."],
+      howToPlay: ["Cast your line and wait for a bite. When something bites, a catch minigame kicks in. Some fish need a well-timed click, while others use a progress bar or a gravity bar. Win the minigame and the fish is yours. Every fish has its own weight and rarity, going from Common all the way up to Mythic. Sell your catches for coins and spend them on better rods, boats and potions.", "There are 5 islands to explore: Sunhaven, Gloomtide, Eldermire, Embertide and Frostfell. Each one has its own fishing spots, like the Moonpool, Draugr Bay, The Abyss and Embertide Volcano. Unlock new islands with your coins and use the shop to hop between them. Every fish you catch goes in your Bestiary, and you can show off your favourite on your nametag. Keep an eye out for luck events too. They boost your chances of a rare catch for a while."],
+      features: ["5 Islands and Lots of Fishing Spots to Explore", "114 Fish Species to Catch", "7 Rarities, from Common to Mythic", "3 Different Catch Minigames", "16 Fishing Rods, from the Rusty Rod to the Mythic Rod", "Boats, plus Luck Potions in Four Strengths", "A Bestiary to Complete", "Show Off Your Best Fish on Your Nametag", "Random Luck Events"],
+      tips: ["Sell your early catches and save up for a better rod", "Check the rod shops on each island for new rods", "Some spots don't allow every rod, so check before you cast", "Drink a Luck Potion before you fish if you're after rare catches", "Wait untill a luck event to give yourself the best shot at a Mythic", "Your Bestiary shows you which fish you're still missing", "Get a boat if you want to head out on the water"],
+      similarGames: ["greenville", "skyblock", "oneBlock", "classic"],
       faq: [{
-        question: "What is Cube Warfare?",
-        answer: "A fast block shooter with 10-minute rounds, killstreak rewards and over 15 guns to unlock."
+        question: "What is Bloxd Fishing?",
+        answer: "A relaxing fishing game. You explore 5 islands, win catch minigames to reel in fish and fill your Bestiary with rare species."
       }, {
-        question: "What modes are in Cube Warfare?",
-        answer: "Free-For-All, Team Deathmatch and Gun Game. You'll be in Free-For-All by default."
+        question: "How many fish are in Bloxd Fishing?",
+        answer: "114 fish species, spread across 5 islands, in 7 rarities from Common to Mythic."
       }, {
-        question: "How does team deathmatch work in Cube Warfare?",
-        answer: "Pick Team Deathmatch and work with your team to outscore the other side before the 10-minute round is up."
+        question: "How do I catch Mythic fish in Bloxd Fishing?",
+        answer: "Use a better rod, drink a Luck Potion and fish during luck events. Then cross your fingers!"
       }, {
-        question: "What is Gun Game in Bloxd Cube Warfare?",
-        answer: "It's a mode with its own queue. Each elimination upgrades your weapon, and a final takedown with the sword wins it."
+        question: "Where can I get better rods?",
+        answer: "Sell your fish for coins, then buy new rods from the rod shops on the islands."
       }, {
-        question: "How do I unlock new guns in Cube Warfare?",
-        answer: "Through the shop. Once they're unlocked you can take them into Free-For-All or Team Deathmatch, and Gun Game lets you try the lot."
+        question: "How do I travel between islands?",
+        answer: "You start on Sunhaven. Spend coins to unlock Gloomtide, Eldermire, Embertide and Frostfell, and once an island's unlocked, use the shop to travel there."
       }, {
-        question: "How many guns are in Cube Warfare?",
-        answer: "Over 15. That includes the AK-47, AWP, M16, MP40, SKAR, Deagle and Striker-12."
-      }, {
-        question: "What are killstreaks in Cube Warfare?",
-        answer: "Rewards for taking down opponents without being eliminated, like Healthup, Hitem, Speedy and Autoblocks. There are 3 tiers, and your streak resets when you go down."
-      }, {
-        question: "What is Collect Diamonds?",
-        answer: "A match modifier for Free-For-All and Team Deathmatch. You need 30 diamonds to win in FFA, or 100 as a team. When someone's taken down they drop all their diamonds, so you can steal theirs. Shoot the diamonds placed around the map and they'll drop too. Those respawn every 15 seconds."
-      }, {
-        question: "What is the Explosives modifier?",
-        answer: "You keep getting explosives all match, and every takedown gives you more."
-      }, {
-        question: "What maps are in Cube Warfare?",
-        answer: "Snowbase, Sienna and Cabins, among others. You get to vote for the next one."
+        question: "What are the catch minigames?",
+        answer: "There are three: a timed click, a progress bar and a gravity bar. Each fish uses one of them."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const zz in modules) Object.freeze(modules[zz]);
