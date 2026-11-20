@@ -1,62 +1,62 @@
 export const id = 351;
 export const ids = [351];
 export const modules = {
-  61207: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      applyLightFoOffset: () => mq,
-      getFloatingOriginOffset: () => lq,
-      lightFoVersion: () => Oq,
-      wrapRenderableForFO: () => xq
+  60674: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      applyLightFoOffset: () => Ub,
+      getFloatingOriginOffset: () => Ob,
+      lightFoVersion: () => Gb,
+      wrapRenderableForFO: () => Lb
     });
-    var Yq = gq(41492);
+    var Bb = hb(41194);
 
-    function lq(qq) {
-      const Eq = qq.camera;
-      if (!Eq) return {
+    function Ob(bb) {
+      const ub = bb.camera;
+      if (!ub) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const gq = Eq.worldMatrix;
+      const hb = ub.worldMatrix;
       return {
-        x: gq[12],
-        y: gq[13],
-        z: gq[14]
+        x: hb[12],
+        y: hb[13],
+        z: hb[14]
       }
     }
 
-    function Oq(qq) {
-      return qq.camera ? qq.camera.worldMatrixVersion : 0
+    function Gb(bb) {
+      return bb.camera ? bb.camera.worldMatrixVersion : 0
     }
 
-    function mq(qq, Eq) {
-      const gq = Eq.camera?.worldMatrix;
-      if (!gq) return;
-      const lq = gq[12],
-        Oq = gq[13],
-        mq = gq[14];
-      let xq = 0;
-      for (const Aq of Eq.lights) {
-        if (xq >= Yq.e) break;
-        if (!Aq._writeLightUbo) continue;
-        const Eq = 4 + 16 * xq,
-          gq = qq[Eq + 3];
-        if (0 === gq || 2 === gq) {
-          const gq = Aq.worldMatrix;
-          qq[Eq] = gq[12] - lq, qq[Eq + 1] = gq[13] - Oq, qq[Eq + 2] = gq[14] - mq
+    function Ub(bb, ub) {
+      const hb = ub.camera?.worldMatrix;
+      if (!hb) return;
+      const Ob = hb[12],
+        Gb = hb[13],
+        Ub = hb[14];
+      let Lb = 0;
+      for (const Yb of ub.lights) {
+        if (Lb >= Bb.e) break;
+        if (!Yb._writeLightUbo) continue;
+        const ub = 4 + 16 * Lb,
+          hb = bb[ub + 3];
+        if (0 === hb || 2 === hb) {
+          const hb = Yb.worldMatrix;
+          bb[ub] = hb[12] - Ob, bb[ub + 1] = hb[13] - Gb, bb[ub + 2] = hb[14] - Ub
         }
-        xq++
+        Lb++
       }
     }
 
-    function xq(qq, Eq, gq) {
-      let Yq = -1;
+    function Lb(bb, ub, hb) {
+      let Bb = -1;
       return () => {
-        const lq = Eq.camera ? Eq.camera.worldMatrixVersion : -1;
-        lq !== Yq && (gq(), Yq = lq), qq()
+        const Ob = ub.camera ? ub.camera.worldMatrixVersion : -1;
+        Ob !== Bb && (hb(), Bb = Ob), bb()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

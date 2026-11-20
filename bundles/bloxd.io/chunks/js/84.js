@@ -1,53 +1,53 @@
 export const id = 84;
 export const ids = [84];
 export const modules = {
-  4606: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Pq,
-      d: () => jq
+  4542: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Wb,
+      f: () => Ab
     });
-    var Yq = gq(1292),
-      lq = gq(31);
-    var Oq = gq(307);
-    var mq = gq(598);
-    var xq = gq(2357),
-      Aq = gq(4608),
-      cq = gq(4627),
-      uq = gq(4637);
-    class Bq {
-      constructor(qq, Eq, gq, Yq, lq, Oq) {
-        this.id = qq, this.type = Eq, this.parameters = gq, this.tearDownNotification = Yq, this.onDonePromise = lq, this.resolveRequest = Oq
+    var Bb = hb(1200),
+      Ob = hb(16);
+    var Gb = hb(314);
+    var Ub = hb(588);
+    var Lb = hb(2273),
+      Yb = hb(4545),
+      Sb = hb(4570),
+      ab = hb(4584);
+    class Hb {
+      constructor(bb, ub, hb, Bb, Ob, Gb) {
+        this.id = bb, this.type = ub, this.parameters = hb, this.tearDownNotification = Bb, this.onDonePromise = Ob, this.resolveRequest = Gb
       }
     }
-    const Wq = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
-    class Nq {
-      constructor(qq, Eq, gq, Yq, lq, Oq) {
-        this.id = qq, this.type = Eq, this.parameters = gq, this.resolveRequest = Yq, this.onDonePromise = lq, this.tearDownNotification = Oq, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
-        const mq = jq[Eq];
-        if (!mq) throw console.error(`No QTE implementation registered for type: ${Eq}`), new Error(`No QTE implementation registered for type: ${Eq}`);
-        this.implementation = new mq(gq, (qq => {
-          this.isCompleted = !0, this.resolveRequest(qq)
+    const wb = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class Zb {
+      constructor(bb, ub, hb, Bb, Ob, Gb) {
+        this.id = bb, this.type = ub, this.parameters = hb, this.resolveRequest = Bb, this.onDonePromise = Ob, this.tearDownNotification = Gb, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const Ub = Ab[ub];
+        if (!Ub) throw console.error(`No QTE implementation registered for type: ${ub}`), new Error(`No QTE implementation registered for type: ${ub}`);
+        this.implementation = new Ub(hb, (bb => {
+          this.isCompleted = !0, this.resolveRequest(bb)
         }), this.tearDownNotification), this.setupInputHandlers()
       }
       setupInputHandlers() {
-        this.mouseSub = lq.i.subscribe("QTEMouseState", (qq => {
+        this.mouseSub = Ob.i.subscribe("QTEMouseState", (bb => {
           let {
-            isDown: Eq
-          } = qq;
-          this.isCompleted || this.implementation.handleMouseInput(Eq)
-        })), this.stopInputActions = (0, cq.h)((qq => {
-          this.isCompleted || !Wq.has(qq.action) && !(0, cq.d)(qq) || this.implementation.handleMouseInput(qq.down)
-        })), this.tickSub = lq.i.subscribe("noaTick", (qq => {
+            isDown: ub
+          } = bb;
+          this.isCompleted || this.implementation.handleMouseInput(ub)
+        })), this.stopInputActions = (0, Sb.e)((bb => {
+          this.isCompleted || !wb.has(bb.action) && !(0, Sb.c)(bb) || this.implementation.handleMouseInput(bb.down)
+        })), this.tickSub = Ob.i.subscribe("noaTick", (bb => {
           if (this.isCompleted) return;
-          const Eq = qq / 1e3;
-          this.implementation.handleTick(Eq)
-        })), this.stopShellTicks = (0, Aq.x)((() => {
-          this.isCompleted || this.implementation.handleTick(xq.x / 1e3)
+          const ub = bb / 1e3;
+          this.implementation.handleTick(ub)
+        })), this.stopShellTicks = (0, Yb.x)((() => {
+          this.isCompleted || this.implementation.handleTick(Lb.r / 1e3)
         }))
       }
       cleanup() {
-        var qq, Eq;
-        this.mouseSub && (lq.i.unsubscribe(this.mouseSub), this.mouseSub = null), null === (qq = this.stopInputActions) || void 0 === qq || qq.call(this), this.stopInputActions = null, null === (Eq = this.stopShellTicks) || void 0 === Eq || Eq.call(this), this.stopShellTicks = null, this.tickSub && (lq.i.unsubscribe(this.tickSub), this.tickSub = null)
+        var bb, ub;
+        this.mouseSub && (Ob.i.unsubscribe(this.mouseSub), this.mouseSub = null), null === (bb = this.stopInputActions) || void 0 === bb || bb.call(this), this.stopInputActions = null, null === (ub = this.stopShellTicks) || void 0 === ub || ub.call(this), this.stopShellTicks = null, this.tickSub && (Ob.i.unsubscribe(this.tickSub), this.tickSub = null)
       }
       async waitUntilDone() {
         await this.onDonePromise
@@ -59,28 +59,28 @@ export const modules = {
         this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
-    const aq = new Yq.c,
-      Vq = new Map;
-    let dq = null;
-    const jq = {
+    const Xb = new Bb.d,
+      pb = new Map;
+    let ob = null;
+    const Ab = {
       progressBar: class {
-        constructor(qq, Eq, gq) {
-          var Yq, lq, Oq, mq;
-          this.resolveRequest = Eq, this.tearDownNotification = gq, this.progress = 0, this.fY = void 0, this.MY = void 0, this.TY = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
-          const xq = qq;
-          this.fY = null !== (Yq = xq.fY) && void 0 !== Yq ? Yq : .075, this.MY = null !== (lq = xq.MY) && void 0 !== lq ? lq : 1, this.progress = null !== (Oq = xq.ZY) && void 0 !== Oq ? Oq : 30, this.TY = null !== (mq = xq.TY) && void 0 !== mq && mq, this.parameters = xq
+        constructor(bb, ub, hb) {
+          var Bb, Ob, Gb, Ub;
+          this.resolveRequest = ub, this.tearDownNotification = hb, this.progress = 0, this.PB = void 0, this.qB = void 0, this.EB = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const Lb = bb;
+          this.PB = null !== (Bb = Lb.PB) && void 0 !== Bb ? Bb : .075, this.qB = null !== (Ob = Lb.qB) && void 0 !== Ob ? Ob : 1, this.progress = null !== (Gb = Lb.IB) && void 0 !== Gb ? Gb : 30, this.EB = null !== (Ub = Lb.EB) && void 0 !== Ub && Ub, this.parameters = Lb
         }
-        handleMouseInput(qq) {
-          qq && !this.isCompleted && (this.clickCount++, this.progress += this.MY, this.progress >= 100 && this.complete(!0))
+        handleMouseInput(bb) {
+          bb && !this.isCompleted && (this.clickCount++, this.progress += this.qB, this.progress >= 100 && this.complete(!0))
         }
         handleTick() {
           if (!this.isCompleted)
-            if (this.progress -= this.fY, this.TY && this.progress <= 0) this.complete(!1);
+            if (this.progress -= this.PB, this.EB && this.progress <= 0) this.complete(!1);
             else if (this.progress <= 0) this.progress = 0;
           else if (this.progress >= 100) return void this.complete(!0)
         }
-        complete(qq) {
-          this.isCompleted = !0, this.resolveRequest(qq)
+        complete(bb) {
+          this.isCompleted = !0, this.resolveRequest(bb)
         }
         getState() {
           return {
@@ -98,30 +98,30 @@ export const modules = {
         }
       },
       timedClick: class {
-        constructor(qq, Eq, gq) {
-          var Yq;
-          this.resolveRequest = Eq, this.tearDownNotification = gq, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = qq, this.timeWindowMs = null !== (Yq = this.parameters.pY) && void 0 !== Yq ? Yq : 3e3, this.startTime = Date.now()
+        constructor(bb, ub, hb) {
+          var Bb;
+          this.resolveRequest = ub, this.tearDownNotification = hb, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = bb, this.timeWindowMs = null !== (Bb = this.parameters.FB) && void 0 !== Bb ? Bb : 3e3, this.startTime = Date.now()
         }
-        handleMouseInput(qq) {
-          if (!qq || this.isCompleted) return;
+        handleMouseInput(bb) {
+          if (!bb || this.isCompleted) return;
           Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
         }
         handleTick() {
           if (this.isCompleted) return;
           Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
         }
-        complete(qq) {
-          this.isCompleted = !0, this.resolveRequest(qq)
+        complete(bb) {
+          this.isCompleted = !0, this.resolveRequest(bb)
         }
         getState() {
-          const qq = Date.now() - this.startTime,
-            Eq = Math.max(0, this.timeWindowMs - qq);
+          const bb = Date.now() - this.startTime,
+            ub = Math.max(0, this.timeWindowMs - bb);
           return {
             type: this.type,
             parameters: this.parameters,
             state: {
-              timeRemaining: Eq,
-              pY: this.timeWindowMs
+              timeRemaining: ub,
+              FB: this.timeWindowMs
             },
             isActive: !0
           }
@@ -131,49 +131,49 @@ export const modules = {
         }
       },
       gravityBar: class {
-        constructor(qq, Eq, gq) {
-          var Yq;
-          this.resolveRequest = Eq, this.tearDownNotification = gq, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
-          const lq = qq;
+        constructor(bb, ub, hb) {
+          var Bb;
+          this.resolveRequest = ub, this.tearDownNotification = hb, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const Ob = bb;
           this.parameters = {
-            ...lq,
-            kY: Oq.c.clamp(lq.kY, .05, 1)
-          }, this.progress = null !== (Yq = lq.ZY) && void 0 !== Yq ? Yq : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+            ...Ob,
+            cB: Gb.d.clamp(Ob.cB, .05, 1)
+          }, this.progress = null !== (Bb = Ob.IB) && void 0 !== Bb ? Bb : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
-        handleMouseInput(qq) {
-          this.isMouseDown = qq
+        handleMouseInput(bb) {
+          this.isMouseDown = bb
         }
-        handleTick(qq) {
-          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(qq))
+        handleTick(bb) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(bb))
         }
         updateMover() {
           this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
-          const qq = Math.sign(this.moverTarget - this.moverPosition);
-          this.moverPosition += qq * this.parameters.RY * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+          const bb = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += bb * this.parameters.QB * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
         }
         pickNewMoverTarget() {
           this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
         randomNumTicksUntilDirectionChange() {
-          const qq = Oq.c.clamp(1 - .7 * this.parameters.UY, 0, 1.4);
-          return Math.floor(60 * qq + 40 * Math.random())
+          const bb = Gb.d.clamp(1 - .7 * this.parameters.RB, 0, 1.4);
+          return Math.floor(60 * bb + 40 * Math.random())
         }
         updateCatchZone() {
-          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.FY : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = Oq.c.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
-          const qq = this.parameters.kY / 2,
-            Eq = qq,
-            gq = 1 - qq;
-          this.catchZonePosition <= Eq ? (this.catchZonePosition = Eq, this.catchZoneVelocity = 0) : this.catchZonePosition >= gq && (this.catchZonePosition = gq, this.catchZoneVelocity = 0)
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.bO : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = Gb.d.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const bb = this.parameters.cB / 2,
+            ub = bb,
+            hb = 1 - bb;
+          this.catchZonePosition <= ub ? (this.catchZonePosition = ub, this.catchZoneVelocity = 0) : this.catchZonePosition >= hb && (this.catchZonePosition = hb, this.catchZoneVelocity = 0)
         }
         isMoverInCatchZone() {
-          const qq = this.parameters.kY / 2;
-          return this.moverPosition >= this.catchZonePosition - qq && this.moverPosition <= this.catchZonePosition + qq
+          const bb = this.parameters.cB / 2;
+          return this.moverPosition >= this.catchZonePosition - bb && this.moverPosition <= this.catchZonePosition + bb
         }
-        updateProgress(qq) {
-          this.isMoverInCatchZone() ? this.progress += this.parameters.sY * qq : this.progress -= this.parameters.XY * qq, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.TY && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        updateProgress(bb) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.uO * bb : this.progress -= this.parameters.hO * bb, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.EB && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
         }
-        complete(qq) {
-          this.isCompleted = !0, this.resolveRequest(qq)
+        complete(bb) {
+          this.isCompleted = !0, this.resolveRequest(bb)
         }
         getState() {
           return {
@@ -181,7 +181,7 @@ export const modules = {
             parameters: this.parameters,
             state: {
               catchZonePosition: this.catchZonePosition,
-              kY: this.parameters.kY,
+              cB: this.parameters.cB,
               moverPosition: this.moverPosition,
               progress: this.progress,
               isCatching: this.isMoverInCatchZone()
@@ -194,38 +194,38 @@ export const modules = {
         }
       },
       precisionBar: class {
-        constructor(qq, Eq, gq) {
-          var Yq, lq, mq, xq, Aq;
-          this.resolveRequest = Eq, this.tearDownNotification = gq, this.startTime = void 0, this.speed = void 0, this.KY = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
-          const cq = qq;
+        constructor(bb, ub, hb) {
+          var Bb, Ob, Ub, Lb, Yb;
+          this.resolveRequest = ub, this.tearDownNotification = hb, this.startTime = void 0, this.speed = void 0, this.OO = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const Sb = bb;
           this.parameters = {
-            ...cq,
-            speed: null !== (Yq = cq.speed) && void 0 !== Yq ? Yq : .5,
-            KY: Oq.c.clamp(cq.KY, .05, 1),
-            label: null !== (lq = cq.label) && void 0 !== lq ? lq : [{
+            ...Sb,
+            speed: null !== (Bb = Sb.speed) && void 0 !== Bb ? Bb : .5,
+            OO: Gb.d.clamp(Sb.OO, .05, 1),
+            label: null !== (Ob = Sb.label) && void 0 !== Ob ? Ob : [{
               str: "Click when the marker is within the green zone."
             }],
-            icon: null !== (mq = cq.icon) && void 0 !== mq ? mq : null,
-            scale: null !== (xq = cq.scale) && void 0 !== xq ? xq : 1,
-            rotation: null !== (Aq = cq.rotation) && void 0 !== Aq ? Aq : 0
-          }, this.speed = this.parameters.speed, this.KY = this.parameters.KY, this.startTime = Date.now()
+            icon: null !== (Ub = Sb.icon) && void 0 !== Ub ? Ub : null,
+            scale: null !== (Lb = Sb.scale) && void 0 !== Lb ? Lb : 1,
+            rotation: null !== (Yb = Sb.rotation) && void 0 !== Yb ? Yb : 0
+          }, this.speed = this.parameters.speed, this.OO = this.parameters.OO, this.startTime = Date.now()
         }
-        handleMouseInput(qq) {
-          if (qq) {
+        handleMouseInput(bb) {
+          if (bb) {
             this.updateMarkerPosition();
-            const qq = Math.abs(this.markerPosition - .5) <= this.KY / 2;
-            this.complete(qq)
+            const bb = Math.abs(this.markerPosition - .5) <= this.OO / 2;
+            this.complete(bb)
           }
         }
         handleTick() {
           this.isCompleted || this.updateMarkerPosition()
         }
         updateMarkerPosition() {
-          const qq = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
-          this.markerPosition = qq <= .5 ? 2 * qq : 2 - 2 * qq
+          const bb = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = bb <= .5 ? 2 * bb : 2 - 2 * bb
         }
-        complete(qq) {
-          this.isCompleted = !0, this.resolveRequest(qq)
+        complete(bb) {
+          this.isCompleted = !0, this.resolveRequest(bb)
         }
         getState() {
           return this.updateMarkerPosition(), {
@@ -242,29 +242,29 @@ export const modules = {
         }
       },
       rhythmClick: class {
-        constructor(qq, Eq, gq) {
-          this.resolveRequest = Eq, this.tearDownNotification = gq, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = qq, this.shrinkStartTime = Date.now()
+        constructor(bb, ub, hb) {
+          this.resolveRequest = ub, this.tearDownNotification = hb, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = bb, this.shrinkStartTime = Date.now()
         }
-        handleMouseInput(qq) {
-          if (!qq || this.isCompleted) return;
-          const Eq = this.getOuterCircleProgress();
-          if (Eq <= this.parameters.DY && Eq >= -this.parameters.DY) {
-            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.IY) return void this.complete(!0)
+        handleMouseInput(bb) {
+          if (!bb || this.isCompleted) return;
+          const ub = this.getOuterCircleProgress();
+          if (ub <= this.parameters.YO && ub >= -this.parameters.YO) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.UO) return void this.complete(!0)
           } else this.handleMiss();
           this.shrinkStartTime = Date.now()
         }
         handleMiss() {
-          this.misses++, this.lastClickResult = !1, !(0, mq.H)(this.parameters.ql) && this.misses > this.parameters.ql ? this.complete(!1) : this.shrinkStartTime = Date.now()
+          this.misses++, this.lastClickResult = !1, !(0, Ub.J)(this.parameters.SO) && this.misses > this.parameters.SO ? this.complete(!1) : this.shrinkStartTime = Date.now()
         }
         handleTick() {
           if (this.isCompleted) return;
-          this.getOuterCircleProgress() < -this.parameters.DY && this.handleMiss()
+          this.getOuterCircleProgress() < -this.parameters.YO && this.handleMiss()
         }
         getOuterCircleProgress() {
-          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.eY
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.LO
         }
-        complete(qq) {
-          this.isCompleted = !0, this.resolveRequest(qq)
+        complete(bb) {
+          this.isCompleted = !0, this.resolveRequest(bb)
         }
         getState() {
           return {
@@ -273,7 +273,7 @@ export const modules = {
             state: {
               outerCircleProgress: this.getOuterCircleProgress(),
               successes: this.successes,
-              IY: this.parameters.IY,
+              UO: this.parameters.UO,
               misses: this.misses,
               lastClickResult: this.lastClickResult
             },
@@ -286,61 +286,61 @@ export const modules = {
       }
     };
 
-    function Hq() {
-      (0, uq.k)(xq.C.Qte, dq ? xq.C.Qte : 0), dq ? lq.i.TV("qteStateUpdated", dq.getState()) : lq.i.TV("qteStateUpdated", {
+    function lb() {
+      (0, ab.j)(Lb.t.Qte, ob ? Lb.t.Qte : 0), ob ? Ob.i.vp("qteStateUpdated", ob.getState()) : Ob.i.vp("qteStateUpdated", {
         type: null,
         typeSpecificParameters: null,
         isActive: !1
       })
     }
-    class oq {
-      constructor(qq, Eq) {
-        this.resultPromise = qq, this.tearDownQTE = Eq
+    class Kb {
+      constructor(bb, ub) {
+        this.resultPromise = bb, this.tearDownQTE = ub
       }
-      static create(qq, Eq, gq) {
-        const Yq = Promise.race([qq, Eq]);
-        return new oq(Yq, gq)
+      static create(bb, ub, hb) {
+        const Bb = Promise.race([bb, ub]);
+        return new Kb(Bb, hb)
       }
       async getResult() {
         return await this.resultPromise
       }
     }
-    class Pq {
-      static queueQTE(qq, Eq, gq) {
-        let Yq, lq;
-        const Oq = new Promise((qq => {
-            Yq = qq
+    class Wb {
+      static queueQTE(bb, ub, hb) {
+        let Bb, Ob;
+        const Gb = new Promise((bb => {
+            Bb = bb
           })),
-          mq = new Promise((qq => {
-            lq = () => {
-              qq("qteTornDown")
+          Ub = new Promise((bb => {
+            Ob = () => {
+              bb("qteTornDown")
             }
           })),
-          xq = Promise.race([Oq, mq]).then((() => {})),
-          Aq = new Bq(qq, Eq, gq, lq, xq, Yq);
-        return Vq.set(qq, Aq), aq.enqueue(Aq), dq || this.processNextQTE(), oq.create(Oq, mq, lq)
+          Lb = Promise.race([Gb, Ub]).then((() => {})),
+          Yb = new Hb(bb, ub, hb, Ob, Lb, Bb);
+        return pb.set(bb, Yb), Xb.enqueue(Yb), ob || this.processNextQTE(), Kb.create(Gb, Ub, Ob)
       }
       static async processNextQTE() {
-        if (dq || aq.UN()) return void(aq.UN() && dq && (dq = null, Hq()));
-        const qq = await aq.dequeue();
-        if (!Vq.has(qq.id)) return void await this.processNextQTE();
-        Vq.delete(qq.id);
-        const Eq = new Nq(qq.id, qq.type, qq.parameters, qq.resolveRequest, qq.onDonePromise, qq.tearDownNotification);
-        dq = Eq, Hq();
+        if (ob || Xb.MZ()) return void(Xb.MZ() && ob && (ob = null, lb()));
+        const bb = await Xb.dequeue();
+        if (!pb.has(bb.id)) return void await this.processNextQTE();
+        pb.delete(bb.id);
+        const ub = new Zb(bb.id, bb.type, bb.parameters, bb.resolveRequest, bb.onDonePromise, bb.tearDownNotification);
+        ob = ub, lb();
         try {
-          await Eq.waitUntilDone()
-        } catch (gq) {
-          console.error("Error while waiting for QTE to resolve:", gq.stack)
+          await ub.waitUntilDone()
+        } catch (hb) {
+          console.error("Error while waiting for QTE to resolve:", hb.stack)
         }
-        dq === Eq && (dq.cleanup(), dq = null, Hq()), await this.processNextQTE()
+        ob === ub && (ob.cleanup(), ob = null, lb()), await this.processNextQTE()
       }
-      static cancelQTE(qq) {
-        if (dq && dq.id === qq) return dq.tearDown(), dq = null, Hq(), void this.processNextQTE();
-        const Eq = Vq.get(qq);
-        Eq && (Vq.delete(qq), Eq.tearDownNotification())
+      static cancelQTE(bb) {
+        if (ob && ob.id === bb) return ob.tearDown(), ob = null, lb(), void this.processNextQTE();
+        const ub = pb.get(bb);
+        ub && (pb.delete(bb), ub.tearDownNotification())
       }
       static getCurrentState() {
-        return dq ? dq.getState() : {
+        return ob ? ob.getState() : {
           type: null,
           parameters: null,
           state: null,
@@ -348,62 +348,62 @@ export const modules = {
         }
       }
       static reset() {
-        dq && (dq.tearDown(), dq = null), Vq.forEach(((qq, Eq) => {
-          this.cancelQTE(Eq)
-        })), aq.emptyQueue(), Vq.clear(), Hq()
+        ob && (ob.tearDown(), ob = null), pb.forEach(((bb, ub) => {
+          this.cancelQTE(ub)
+        })), Xb.emptyQueue(), pb.clear(), lb()
       }
     }
   },
-  4625: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      A: () => xq,
-      Ab: () => rq,
-      B: () => Yq,
-      C: () => Oq,
-      E: () => dq,
-      Eb: () => tq,
-      G: () => wq,
-      H: () => uq,
-      Hb: () => Mq,
-      L: () => Bq,
-      Lb: () => Jq,
-      Nb: () => zq,
-      O: () => cq,
-      Q: () => jq,
-      Qb: () => pq,
-      T: () => Aq,
-      Tb: () => Gq,
-      V: () => aq,
-      Vb: () => Qq,
-      Wb: () => yq,
-      X: () => Nq,
-      Z: () => vq,
-      _: () => nq,
-      _b: () => Rq,
-      bb: () => bq,
-      bc: () => lq,
-      e: () => sq,
-      ec: () => Xq,
-      f: () => Fq,
-      fb: () => hq,
-      i: () => Wq,
-      ib: () => iq,
-      kb: () => kq,
-      m: () => Pq,
-      mb: () => Lq,
-      pb: () => Sq,
-      q: () => Uq,
-      sb: () => Zq,
-      t: () => oq,
-      u: () => Hq,
-      ub: () => Tq,
-      wb: () => fq,
-      y: () => mq,
-      zb: () => Vq
+  4564: (bb, ub, hb) => {
+    hb.d(ub, {
+      Ab: () => vb,
+      B: () => Gb,
+      C: () => ob,
+      D: () => fb,
+      Db: () => pb,
+      Eb: () => jb,
+      Gb: () => rb,
+      H: () => ab,
+      Kb: () => tb,
+      L: () => Hb,
+      Lb: () => Ib,
+      Mb: () => eb,
+      N: () => Sb,
+      Q: () => Ab,
+      Qb: () => sb,
+      R: () => Yb,
+      Tb: () => Mb,
+      U: () => Xb,
+      Vb: () => Cb,
+      Wb: () => db,
+      Y: () => Zb,
+      _b: () => qb,
+      ab: () => nb,
+      b: () => Vb,
+      cc: () => Ob,
+      eb: () => xb,
+      f: () => yb,
+      fb: () => zb,
+      fc: () => Fb,
+      hb: () => Db,
+      i: () => wb,
+      ib: () => gb,
+      l: () => Wb,
+      m: () => Eb,
+      mb: () => Pb,
+      ob: () => mb,
+      p: () => Kb,
+      r: () => lb,
+      s: () => Ub,
+      sb: () => Nb,
+      v: () => Lb,
+      vb: () => ib,
+      x: () => Bb,
+      xb: () => Jb
     });
-    const Yq = 32,
-      lq = 33.333333333333336,
-      Oq = {
+    const Bb = 32,
+      Ob = 33.333333333333336,
+      Gb = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -437,18 +437,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      mq = {
+      Ub = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      xq = {
+      Lb = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      Aq = {
+      Yb = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -456,15 +456,15 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      cq = {
+      Sb = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      uq = 7,
-      Bq = {
+      ab = 7,
+      Hb = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -473,13 +473,13 @@ export const modules = {
         WorkersLive: 5,
         WorkersRetired: 6
       },
-      Wq = {
+      wb = {
         Look: 0,
         Remesh: 1
       },
-      Nq = 8,
-      aq = 1,
-      Vq = {
+      Zb = 8,
+      Xb = 1,
+      pb = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -488,7 +488,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      dq = {
+      ob = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -516,12 +516,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      jq = {
+      Ab = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      Hq = {
+      lb = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -573,7 +573,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      oq = {
+      Kb = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -583,10 +583,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      Pq = 4,
-      Qq = 4,
-      yq = 65535,
-      tq = {
+      Wb = 4,
+      Cb = 4,
+      db = 65535,
+      rb = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -599,7 +599,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      rq = {
+      jb = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -607,12 +607,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      vq = 88,
-      hq = 0,
-      nq = 24,
-      bq = 48,
-      iq = 80,
-      Zq = {
+      nb = 88,
+      Db = 0,
+      xb = 24,
+      zb = 48,
+      gb = 80,
+      ib = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -623,18 +623,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      fq = {
+      vb = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      Mq = {
+      tb = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Tq = {
+      Jb = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -652,34 +652,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      zq = {
+      eb = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      Sq = 65535,
-      pq = {
+      Nb = 65535,
+      sb = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      Gq = {
+      Mb = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      Lq = 2,
-      Jq = {
+      mb = 2,
+      Ib = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      kq = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      Rq = {
+      Pb = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      qb = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -691,7 +691,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      Uq = {
+      Eb = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -718,7 +718,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      Fq = {
+      yb = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -876,8 +876,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      sq = 8,
-      Xq = {
+      Vb = 8,
+      Fb = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -902,292 +902,292 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      wq = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      fb = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  4608: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      B: () => bq,
-      F: () => Hq,
-      J: () => mq,
-      M: () => xq,
-      N: () => vq,
-      e: () => rq,
-      f: () => Pq,
-      h: () => Zq,
-      l: () => iq,
-      m: () => jq,
-      p: () => yq,
-      s: () => oq,
-      w: () => Qq,
-      x: () => hq,
-      y: () => nq
+  4545: (bb, ub, hb) => {
+    hb.d(ub, {
+      A: () => xb,
+      D: () => zb,
+      F: () => lb,
+      I: () => Ub,
+      K: () => Lb,
+      N: () => nb,
+      e: () => jb,
+      g: () => Wb,
+      h: () => ib,
+      k: () => gb,
+      o: () => Ab,
+      p: () => db,
+      q: () => Kb,
+      u: () => Cb,
+      x: () => Db
     });
-    var Yq = gq(4616);
-    const lq = {
+    var Bb = hb(4547);
+    const Ob = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let Oq = lq;
+    let Gb = Ob;
 
-    function mq(qq) {
-      Oq = null !== qq && void 0 !== qq ? qq : lq
+    function Ub(bb) {
+      Gb = null !== bb && void 0 !== bb ? bb : Ob
     }
 
-    function xq() {
-      return Oq
+    function Lb() {
+      return Gb
     }
-    const Aq = new Set,
-      cq = new Set;
-    let uq = -1;
-    const Bq = new Set,
-      Wq = new Set;
-    let Nq = 0,
-      aq = 0;
-    const Vq = new Set,
-      dq = new Set;
+    const Yb = new Set,
+      Sb = new Set;
+    let ab = -1;
+    const Hb = new Set,
+      wb = new Set;
+    let Zb = 0,
+      Xb = 0;
+    const pb = new Set,
+      ob = new Set;
 
-    function jq(qq) {
-      return Aq.add(qq), () => {
-        Aq.delete(qq)
+    function Ab(bb) {
+      return Yb.add(bb), () => {
+        Yb.delete(bb)
       }
     }
 
-    function Hq(qq, Eq) {
-      for (const Yq of Aq) try {
-        Yq(qq)
-      } catch (gq) {
-        Eq(gq)
+    function lb(bb, ub) {
+      for (const Bb of Yb) try {
+        Bb(bb)
+      } catch (hb) {
+        ub(hb)
       }
     }
 
-    function oq(qq) {
-      return cq.add(qq), () => {
-        cq.delete(qq)
+    function Kb(bb) {
+      return Sb.add(bb), () => {
+        Sb.delete(bb)
       }
     }
 
-    function Pq(qq, Eq) {
-      const gq = uq < 0 ? 0 : qq - uq;
-      uq = qq;
-      for (const lq of cq) try {
-        lq(gq)
-      } catch (Yq) {
-        Eq(Yq)
+    function Wb(bb, ub) {
+      const hb = ab < 0 ? 0 : bb - ab;
+      ab = bb;
+      for (const Ob of Sb) try {
+        Ob(hb)
+      } catch (Bb) {
+        ub(Bb)
       }
     }
 
-    function Qq(qq) {
-      return Bq.add(qq), () => {
-        Bq.delete(qq)
+    function Cb(bb) {
+      return Hb.add(bb), () => {
+        Hb.delete(bb)
       }
     }
 
-    function yq(qq) {
-      return Wq.add(qq), () => {
-        Wq.delete(qq)
+    function db(bb) {
+      return wb.add(bb), () => {
+        wb.delete(bb)
       }
     }
-    let tq = 0;
+    let rb = 0;
 
-    function rq(qq) {
-      tq += qq
+    function jb(bb) {
+      rb += bb
     }
 
-    function vq() {
-      const qq = tq;
-      return tq = 0, qq
+    function nb() {
+      const bb = rb;
+      return rb = 0, bb
     }
 
-    function hq(qq) {
-      return Vq.add(qq), () => {
-        Vq.delete(qq)
-      }
-    }
-
-    function nq(qq) {
-      return dq.add(qq), () => {
-        dq.delete(qq)
+    function Db(bb) {
+      return pb.add(bb), () => {
+        pb.delete(bb)
       }
     }
 
-    function bq() {
-      Nq = 0, aq = 0, uq = -1
+    function xb(bb) {
+      return ob.add(bb), () => {
+        ob.delete(bb)
+      }
     }
 
-    function iq(qq, Eq) {
-      if ("paced" === qq) return aq += Eq, null;
-      if ("drawn" !== qq && "skipped" !== qq) return null;
-      const gq = Eq + aq;
-      return aq = 0, gq
+    function zb() {
+      Zb = 0, Xb = 0, ab = -1
     }
 
-    function Zq(qq, Eq, gq, lq) {
-      const Oq = (0, Yq.g)(Eq),
-        mq = qq > 0 ? performance.now() : 0;
-      for (let Yq = 0; Yq < qq; Yq++)
-        for (const qq of Vq) try {
-          qq()
-        } catch (xq) {
-          lq(xq)
+    function gb(bb, ub) {
+      if ("paced" === bb) return Xb += ub, null;
+      if ("drawn" !== bb && "skipped" !== bb) return null;
+      const hb = ub + Xb;
+      return Xb = 0, hb
+    }
+
+    function ib(bb, ub, hb, Ob) {
+      const Gb = (0, Bb.k)(ub),
+        Ub = bb > 0 ? performance.now() : 0;
+      for (let Bb = 0; Bb < bb; Bb++)
+        for (const bb of pb) try {
+          bb()
+        } catch (Lb) {
+          Ob(Lb)
         }
-      if (qq > 0 && rq(performance.now() - mq), null !== gq) {
-        for (const qq of Bq) try {
-          qq(gq)
-        } catch (xq) {
-          lq(xq)
+      if (bb > 0 && jb(performance.now() - Ub), null !== hb) {
+        for (const bb of Hb) try {
+          bb(hb)
+        } catch (Lb) {
+          Ob(Lb)
         }
-        Nq += gq
+        Zb += hb
       }
-      if ("drawn" === Eq) {
-        const qq = Nq;
-        Nq = 0;
-        for (const Eq of Wq) try {
-          Eq(qq)
-        } catch (xq) {
-          lq(xq)
+      if ("drawn" === ub) {
+        const bb = Zb;
+        Zb = 0;
+        for (const ub of wb) try {
+          ub(bb)
+        } catch (Lb) {
+          Ob(Lb)
         }
       }
-      for (const Yq of dq) try {
-        Yq(qq, Oq)
-      } catch (xq) {
-        lq(xq)
+      for (const Bb of ob) try {
+        Bb(bb, Gb)
+      } catch (Lb) {
+        Ob(Lb)
       }
     }
   },
-  4622: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      $c: () => eq,
-      Ab: () => qE,
-      Ac: () => Yq.bb,
-      Bd: () => Yq.bc,
-      Be: () => Aq,
-      Ce: () => Sq,
-      D: () => cq,
-      Eb: () => gE,
-      Ec: () => Yq.fb,
-      Fd: () => Oq,
-      Fe: () => dE,
-      Gb: () => Yq.L,
-      H: () => Yq.i,
-      Hb: () => lq.h,
-      Hd: () => dq,
-      He: () => Nq,
-      I: () => Dq,
-      Ic: () => Yq.ib,
-      Kc: () => Yq.pb,
-      Kd: () => AE,
-      Lb: () => rq,
-      Lc: () => aE,
-      M: () => Yq.m,
-      Md: () => Lq,
-      Nd: () => kq,
-      P: () => Kq,
-      Pb: () => pq,
-      Pc: () => uE,
-      Rc: () => lE,
-      Rd: () => Gq,
-      S: () => Yq.u,
-      Sb: () => iq,
-      Tb: () => nq,
-      Ub: () => Yq.Q,
-      Uc: () => Yq.sb,
-      Vd: () => Fq,
-      W: () => Yq.y,
-      Wb: () => Zq,
-      Xc: () => Yq.ub,
-      Y: () => Yq.A,
-      _: () => Bq,
-      _b: () => Qq,
-      _c: () => Yq.wb,
-      ae: () => Rq,
-      bb: () => Hq,
-      bc: () => mE,
-      c: () => EE,
-      ce: () => Xq,
-      d: () => Vq,
-      db: () => Yq.B,
-      dd: () => Yq.Ab,
-      f: () => aq,
-      fc: () => oq,
-      g: () => cE,
-      gd: () => Yq.Eb,
-      ge: () => sq,
-      hb: () => Yq.C,
-      hc: () => BE,
-      i: () => vq,
-      ic: () => lq.l,
-      id: () => Yq.Hb,
-      je: () => xE,
-      kb: () => Jq,
-      l: () => tq,
-      ld: () => Yq.Nb,
-      m: () => Yq.e,
-      mc: () => jq,
-      ne: () => VE,
-      o: () => WE,
-      ob: () => OE,
-      p: () => bq,
-      pd: () => Yq.Qb,
-      q: () => mq,
-      qc: () => YE,
-      r: () => fq,
-      rb: () => uq,
-      rd: () => Yq.Tb,
-      re: () => Pq,
-      sb: () => Yq.E,
-      se: () => wq,
-      u: () => NE,
-      uc: () => Yq.Z,
-      ue: () => zq,
-      vd: () => hq,
-      ve: () => Tq,
-      w: () => Iq,
-      wb: () => Uq,
-      xb: () => Cq,
-      xc: () => Yq._,
-      yd: () => Yq.Vb,
-      z: () => Yq.f,
-      zb: () => Yq.H,
-      zd: () => Yq.Wb,
-      ze: () => Mq
+  4555: (bb, ub, hb) => {
+    hb.d(ub, {
+      $c: () => Bb.Vb,
+      A: () => Ub,
+      Ab: () => Bb.L,
+      Bb: () => Ob.e,
+      Cb: () => jb,
+      Cc: () => Bb.vb,
+      Cd: () => qb,
+      D: () => vb,
+      Db: () => sb,
+      E: () => Zu,
+      Fb: () => gb,
+      Fc: () => Bb.xb,
+      Gd: () => Fb,
+      H: () => cb,
+      Hc: () => Bb.Ab,
+      I: () => Bb.f,
+      Ib: () => xb,
+      Jc: () => Qb,
+      Jd: () => Vb,
+      Kc: () => Bb.Eb,
+      Ld: () => Lu,
+      M: () => Sb,
+      Mb: () => Bb.Q,
+      Mc: () => Bb.Gb,
+      Md: () => pu,
+      N: () => Bb.i,
+      Nd: () => Wb,
+      Oc: () => Bb.Kb,
+      Od: () => fb,
+      Pb: () => ib,
+      Pc: () => Bb.Mb,
+      Q: () => Rb,
+      Qb: () => Cb,
+      Rd: () => eb,
+      S: () => Bb.l,
+      Tc: () => Bb.Qb,
+      Td: () => Jb,
+      U: () => kb,
+      Ub: () => Uu,
+      Ud: () => tb,
+      V: () => Bb.r,
+      Vb: () => Kb,
+      Vd: () => Yb,
+      W: () => Bb.s,
+      Xc: () => Bb.Tb,
+      Xd: () => Nb,
+      Y: () => Bb.v,
+      Yc: () => Db,
+      Zb: () => Hu,
+      _: () => Hb,
+      _d: () => ou,
+      ab: () => lb,
+      bb: () => Bb.x,
+      bc: () => Ob.j,
+      c: () => uu,
+      ce: () => Zb,
+      d: () => pb,
+      dd: () => Bb.Wb,
+      eb: () => Bb.B,
+      ec: () => Ab,
+      ed: () => Bb.cc,
+      fb: () => Ib,
+      h: () => Xb,
+      hc: () => Bu,
+      hd: () => Gb,
+      jb: () => Gu,
+      k: () => Su,
+      kb: () => ab,
+      lc: () => Bb.ab,
+      ld: () => ob,
+      mb: () => Bb.C,
+      n: () => nb,
+      nc: () => Bb.eb,
+      o: () => rb,
+      oc: () => Bb.fb,
+      od: () => Yu,
+      q: () => Bb.b,
+      qb: () => Eb,
+      qc: () => Bb.hb,
+      qd: () => mb,
+      s: () => wu,
+      tb: () => Tb,
+      tc: () => Bb.ib,
+      td: () => Pb,
+      uc: () => Bb.sb,
+      vc: () => Xu,
+      vd: () => Mb,
+      w: () => zb,
+      wb: () => Bb.H,
+      wc: () => au,
+      xd: () => yb,
+      yb: () => bu,
+      zb: () => hu,
+      zc: () => Ou
     });
-    var Yq = gq(4625),
-      lq = gq(2357);
-    const Oq = Math.round(1e3 / Yq.bc),
-      mq = 4,
-      xq = 2;
+    var Bb = hb(4564),
+      Ob = hb(2273);
+    const Gb = Math.round(1e3 / Bb.cc),
+      Ub = 4,
+      Lb = 2;
 
-    function Aq() {
-      return crypto.getRandomValues(new Uint32Array(xq))
+    function Yb() {
+      return crypto.getRandomValues(new Uint32Array(Lb))
     }
-    const cq = {
+    const Sb = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      uq = 16,
-      Bq = {
+      ab = 16,
+      Hb = {
         Draws: 1,
         NetAll: 2
       },
-      Wq = {
+      wb = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function Nq(qq) {
-      return (qq.nametagsHidden ? yq.NametagsHidden : 0) | (qq.crouchToggle ? yq.CrouchToggle : 0) | (qq.bhopDisabled ? yq.BhopDisabled : 0) | (qq.disableBobbing ? yq.DisableBobbing : 0) | (qq.ezTowering ? yq.EzTowering : 0) | (qq.ezBridging ? yq.EzBridging : 0) | (qq.showChunkBorders ? yq.ShowChunkBorders : 0)
+    function Zb(bb) {
+      return (bb.nametagsHidden ? db.NametagsHidden : 0) | (bb.crouchToggle ? db.CrouchToggle : 0) | (bb.bhopDisabled ? db.BhopDisabled : 0) | (bb.disableBobbing ? db.DisableBobbing : 0) | (bb.ezTowering ? db.EzTowering : 0) | (bb.ezBridging ? db.EzBridging : 0) | (bb.showChunkBorders ? db.ShowChunkBorders : 0)
     }
-    const aq = {
+    const Xb = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      Vq = {
+      pb = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -1195,7 +1195,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      dq = {
+      ob = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -1204,7 +1204,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      jq = {
+      Ab = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -1213,20 +1213,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      Hq = 5,
-      oq = 4294967295;
+      lb = 5,
+      Kb = 4294967295;
 
-    function Pq(qq) {
-      return (qq.showFog ? Wq.ShowFog : 0) | (qq.lighting ? Wq.Lighting : 0) | (qq.chunkFade ? Wq.ChunkFade : 0)
+    function Wb(bb) {
+      return (bb.showFog ? wb.ShowFog : 0) | (bb.lighting ? wb.Lighting : 0) | (bb.chunkFade ? wb.ChunkFade : 0)
     }
-    const Qq = {
+    const Cb = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      yq = {
+      db = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -1236,50 +1236,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      tq = {
+      rb = {
         Release: 1,
         KeepTouches: 2
       },
-      rq = {
+      jb = {
         Point: 1,
         Stamped: 2
       },
-      vq = {
+      nb = {
         Add: 1,
         Clear: 2
       },
-      hq = 1,
-      nq = 8,
-      bq = 16777215,
-      iq = 4,
-      Zq = {
+      Db = 1,
+      xb = 8,
+      zb = 16777215,
+      gb = 4,
+      ib = {
         Resume: 1
       },
-      fq = {
+      vb = {
         Held: 1
       };
 
-    function Mq(qq, Eq) {
-      return (qq | Eq << 8) >>> 0
+    function tb(bb, ub) {
+      return (bb | ub << 8) >>> 0
     }
 
-    function Tq(qq) {
-      return 255 & qq
+    function Jb(bb) {
+      return 255 & bb
     }
 
-    function zq(qq) {
-      return qq >>> 8
+    function eb(bb) {
+      return bb >>> 8
     }
 
-    function Sq(qq) {
-      return qq + 3 & -4
+    function Nb(bb) {
+      return bb + 3 & -4
     }
-    const pq = 16777216,
-      Gq = 20;
-    const Lq = 8,
-      Jq = 8,
-      kq = 16777216,
-      Rq = {
+    const sb = 16777216,
+      Mb = 20;
+    const mb = 8,
+      Ib = 8,
+      Pb = 16777216,
+      qb = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -1287,19 +1287,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      Uq = {
+      Eb = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      Fq = 16,
-      sq = {
+      yb = 16,
+      Vb = {
         Lost: 0,
         Gone: 1
       },
-      Xq = {
+      Fb = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -1307,18 +1307,18 @@ export const modules = {
         Retire: 5
       };
 
-    function wq(qq) {
-      return qq === Xq.WorldgenSeed || qq === Xq.Generate
+    function fb(bb) {
+      return bb === Fb.WorldgenSeed || bb === Fb.Generate
     }
-    const Kq = 4,
-      Cq = 99,
-      Iq = {
+    const kb = 4,
+      Tb = 99,
+      cb = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      eq = {
+      Qb = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -1326,45 +1326,45 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      Dq = {
+      Rb = {
         FRAMES: 65535,
         RESTORE_UNHELD: 65536,
         LINKS_RUNNING: 1 << 17
       },
-      qE = 12,
-      EE = 16,
-      gE = 4,
-      YE = 12,
-      lE = {
+      bu = 12,
+      uu = 16,
+      hu = 4,
+      Bu = 12,
+      Ou = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      OE = 4,
-      mE = 8,
-      xE = 8,
-      AE = {
+      Gu = 4,
+      Uu = 8,
+      Lu = 8,
+      Yu = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      cE = {
+      Su = {
         Crit: 1,
         HitSelf: 2
       },
-      uE = {
+      au = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      BE = {
+      Hu = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      WE = 12,
-      NE = {
+      wu = 12,
+      Zu = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -1373,102 +1373,102 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      aE = 67108864;
+      Xu = 67108864;
 
-    function VE(qq) {
-      for (const [Eq, gq] of Object.entries(Yq.f))
-        if (gq === qq) return Eq;
-      return `Unknown${qq}`
+    function pu(bb) {
+      for (const [ub, hb] of Object.entries(Bb.f))
+        if (hb === bb) return ub;
+      return `Unknown${bb}`
     }
 
-    function dE(qq) {
+    function ou(bb) {
       return {
-        status: qq[Yq.C.Status],
-        lastError: qq[Yq.C.LastError],
-        lastErrorDetail: qq[Yq.C.LastErrorDetail],
-        errorCount: qq[Yq.C.ErrorCount],
-        frameIndex: qq[Yq.C.FrameIndex],
-        tickIndex: qq[Yq.C.TickIndex],
-        renderPending: qq[Yq.C.RenderPending],
-        firstView: qq[Yq.C.FirstView],
-        chunksCancelled: qq[Yq.C.ChunksCancelled]
+        status: bb[Bb.B.Status],
+        lastError: bb[Bb.B.LastError],
+        lastErrorDetail: bb[Bb.B.LastErrorDetail],
+        errorCount: bb[Bb.B.ErrorCount],
+        frameIndex: bb[Bb.B.FrameIndex],
+        tickIndex: bb[Bb.B.TickIndex],
+        renderPending: bb[Bb.B.RenderPending],
+        firstView: bb[Bb.B.FirstView],
+        chunksCancelled: bb[Bb.B.ChunksCancelled]
       }
     }
   },
-  4616: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => mq,
-      e: () => Oq,
-      g: () => lq
+  4547: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Ub,
+      h: () => Gb,
+      k: () => Ob
     });
-    var Yq = gq(4622);
+    var Bb = hb(4555);
 
-    function lq(qq) {
-      return "none" !== qq
+    function Ob(bb) {
+      return "none" !== bb
     }
 
-    function Oq(qq, Eq) {
-      if (!qq) return "none";
-      switch (Eq) {
-        case Yq.Y.Drawn:
+    function Gb(bb, ub) {
+      if (!bb) return "none";
+      switch (ub) {
+        case Bb.Y.Drawn:
           return "drawn";
-        case Yq.Y.Paced:
+        case Bb.Y.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function mq(qq) {
-      return "drawn" === qq
+    function Ub(bb) {
+      return "drawn" === bb
     }
   },
-  4627: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Aq,
-      d: () => Oq,
-      h: () => xq
+  4570: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Yb,
+      c: () => Gb,
+      e: () => Lb
     });
-    var Yq = gq(2357),
-      lq = gq(4629);
+    var Bb = hb(2273),
+      Ob = hb(4575);
 
-    function Oq(qq) {
+    function Gb(bb) {
       let {
-        action: Eq,
-        flags: gq
-      } = qq;
-      return "mid-fire" === Eq && 0 !== (gq & Yq.e.AltLeftClick)
+        action: ub,
+        flags: hb
+      } = bb;
+      return "mid-fire" === ub && 0 !== (hb & Bb.b.AltLeftClick)
     }
-    const mq = new Set;
+    const Ub = new Set;
 
-    function xq(qq) {
-      return mq.add(qq), () => {
-        mq.delete(qq)
+    function Lb(bb) {
+      return Ub.add(bb), () => {
+        Ub.delete(bb)
       }
     }
 
-    function Aq(qq) {
-      const Eq = lq.b[255 & qq];
-      if (void 0 === Eq) return;
-      const gq = qq >>> 8 & 255,
-        Oq = {
-          action: Eq,
-          down: 0 !== (gq & Yq.e.Down),
-          flags: gq,
-          press: qq >>> 16
+    function Yb(bb) {
+      const ub = Ob.b[255 & bb];
+      if (void 0 === ub) return;
+      const hb = bb >>> 8 & 255,
+        Gb = {
+          action: ub,
+          down: 0 !== (hb & Bb.b.Down),
+          flags: hb,
+          press: bb >>> 16
         };
-      for (const Yq of mq) Yq(Oq)
+      for (const Bb of Ub) Bb(Gb)
     }
   },
-  4629: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq,
-      f: () => Oq,
-      i: () => mq,
-      l: () => Yq,
-      m: () => xq
+  4575: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Ob,
+      c: () => Gb,
+      g: () => Ub,
+      k: () => Bb,
+      n: () => Lb
     });
-    const Yq = {
+    const Bb = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -1665,8 +1665,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      lq = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      Oq = {
+      Ob = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      Gb = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -1729,63 +1729,63 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      mq = {
+      Ub = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      xq = [16]
+      Lb = [16]
   },
-  4637: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => xq,
-      h: () => mq,
-      k: () => cq
+  4584: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Lb,
+      f: () => Ub,
+      j: () => Sb
     });
-    var Yq = gq(2357),
-      lq = gq(2364);
-    const Oq = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var Bb = hb(2273),
+      Ob = hb(2276);
+    const Gb = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function mq(qq) {
-      return qq instanceof HTMLElement && (!!(qq.isContentEditable || qq instanceof HTMLTextAreaElement || qq instanceof HTMLSelectElement) || qq instanceof HTMLInputElement && !Oq.has(qq.type))
+    function Ub(bb) {
+      return bb instanceof HTMLElement && (!!(bb.isContentEditable || bb instanceof HTMLTextAreaElement || bb instanceof HTMLSelectElement) || bb instanceof HTMLInputElement && !Gb.has(bb.type))
     }
 
-    function xq(qq) {
-      let Eq = null;
-      const gq = gq => {
-          const lq = mq(gq);
-          lq !== Eq && (Eq = lq, qq(Yq.i.UiCapture, Yq.C.Keyboard, 0, 0, lq ? Yq.C.Keyboard : 0))
+    function Lb(bb) {
+      let ub = null;
+      const hb = hb => {
+          const Ob = Ub(hb);
+          Ob !== ub && (ub = Ob, bb(Bb.i.UiCapture, Bb.t.Keyboard, 0, 0, Ob ? Bb.t.Keyboard : 0))
         },
-        lq = qq => {
-          gq(qq.target)
+        Ob = bb => {
+          hb(bb.target)
         },
-        Oq = qq => {
-          gq(qq.relatedTarget)
+        Gb = bb => {
+          hb(bb.relatedTarget)
         },
-        xq = () => {
-          gq(document.activeElement)
+        Lb = () => {
+          hb(document.activeElement)
         },
-        Aq = {
+        Yb = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", lq, Aq), document.addEventListener("focusout", Oq, Aq), document.addEventListener("keydown", xq, Aq), gq(document.activeElement), () => {
-        document.removeEventListener("focusin", lq, Aq), document.removeEventListener("focusout", Oq, Aq), document.removeEventListener("keydown", xq, Aq)
+      return document.addEventListener("focusin", Ob, Yb), document.addEventListener("focusout", Gb, Yb), document.addEventListener("keydown", Lb, Yb), hb(document.activeElement), () => {
+        document.removeEventListener("focusin", Ob, Yb), document.removeEventListener("focusout", Gb, Yb), document.removeEventListener("keydown", Lb, Yb)
       }
     }
-    const Aq = new Map;
+    const Yb = new Map;
 
-    function cq(qq, Eq) {
-      var gq;
-      let Yq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      Aq.set(Yq, (null !== (gq = Aq.get(Yq)) && void 0 !== gq ? gq : 0) & ~qq | Eq & qq);
-      let Oq = 0;
-      for (const lq of Aq.values()) Oq |= lq;
-      return (0, lq.B)(qq, Oq & qq)
+    function Sb(bb, ub) {
+      var hb;
+      let Bb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      Yb.set(Bb, (null !== (hb = Yb.get(Bb)) && void 0 !== hb ? hb : 0) & ~bb | ub & bb);
+      let Gb = 0;
+      for (const Ob of Yb.values()) Gb |= Ob;
+      return (0, Ob.C)(bb, Gb & bb)
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

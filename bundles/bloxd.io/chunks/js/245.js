@@ -1,36 +1,36 @@
 export const id = 245;
 export const ids = [245, 346];
 export const modules = {
-  39617: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Yq
+  39308: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Bb
     });
-    class Yq {
+    class Bb {
       static GetShadersRepository() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Yq.ShadersRepository : Yq.ShadersRepositoryWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Bb.ShadersRepository : Bb.ShadersRepositoryWGSL
       }
       static GetShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Yq.ShadersStore : Yq.ShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Bb.ShadersStore : Bb.ShadersStoreWGSL
       }
       static GetIncludesShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Yq.IncludesShadersStore : Yq.IncludesShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Bb.IncludesShadersStore : Bb.IncludesShadersStoreWGSL
       }
     }
-    Yq.ShadersRepository = "src/Shaders/", Yq.ShadersStore = {}, Yq.IncludesShadersStore = {}, Yq.ShadersRepositoryWGSL = "src/ShadersWGSL/", Yq.ShadersStoreWGSL = {}, Yq.IncludesShadersStoreWGSL = {}
+    Bb.ShadersRepository = "src/Shaders/", Bb.ShadersStore = {}, Bb.IncludesShadersStore = {}, Bb.ShadersRepositoryWGSL = "src/ShadersWGSL/", Bb.ShadersStoreWGSL = {}, Bb.IncludesShadersStoreWGSL = {}
   },
-  61138: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      postprocessVertexShader: () => mq
+  60605: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      postprocessVertexShader: () => Ub
     });
-    var Yq = gq(39617);
-    const lq = "postprocessVertexShader",
-      Oq = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    Yq.d.ShadersStore[lq] || (Yq.d.ShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
+    var Bb = hb(39308);
+    const Ob = "postprocessVertexShader",
+      Gb = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    Bb.e.ShadersStore[Ob] || (Bb.e.ShadersStore[Ob] = Gb);
+    const Ub = {
+      name: Ob,
+      shader: Gb
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

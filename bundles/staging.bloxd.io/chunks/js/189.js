@@ -1,170 +1,170 @@
 export const id = 189;
 export const ids = [189];
 export const modules = {
-  39064: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => xq,
-      g: () => Oq
+  38735: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Lb,
+      f: () => Gb
     });
-    var Yq = gq(3933);
-    let lq = null;
+    var Bb = hb(3877);
+    let Ob = null;
 
-    function Oq(qq) {
-      return null !== lq && qq === lq
+    function Gb(bb) {
+      return null !== Ob && bb === Ob
     }
 
-    function mq() {
-      this.IK = !1, this.stopPropagation = !1, this.gC = !1, this.disabled = !1
+    function Ub() {
+      this.vy = !1, this.stopPropagation = !1, this.Iy = !1, this.disabled = !1
     }
-    class xq {
-      constructor(qq, Eq) {
+    class Lb {
+      constructor(bb, ub) {
         this.version = "0.7.0";
-        var gq = Object.assign({}, new mq, Eq || {});
-        this.element = qq || document, this.IK = !!gq.IK, this.stopPropagation = !!gq.stopPropagation, this.gC = !!gq.gC, this.disabled = !!gq.disabled, this.filterEvents = (qq, Eq) => !0, this.ignoreEvent = qq => !1, this.down = new Yq.EventEmitter, this.up = new Yq.EventEmitter, this.state = {}, this.lC = {
+        var hb = Object.assign({}, new Ub, ub || {});
+        this.element = bb || document, this.vy = !!hb.vy, this.stopPropagation = !!hb.stopPropagation, this.Iy = !!hb.Iy, this.disabled = !!hb.disabled, this.filterEvents = (bb, ub) => !0, this.ignoreEvent = bb => !1, this.down = new Bb.EventEmitter, this.up = new Bb.EventEmitter, this.state = {}, this.Fy = {
           dx: 0,
           dy: 0,
-          hEq: 0,
-          nEq: 0,
-          bEq: 0
+          Uub: 0,
+          Lub: 0,
+          Yub: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? cq(this) : document.addEventListener("DOMContentLoaded", (qq => {
-          cq(this)
+        }, "loading" !== document.readyState ? Sb(this) : document.addEventListener("DOMContentLoaded", (bb => {
+          Sb(this)
         }), {
           once: !0
         })
       }
-      bind(qq) {
-        for (var Eq = arguments.length, gq = new Array(Eq > 1 ? Eq - 1 : 0), Yq = 1; Yq < Eq; Yq++) gq[Yq - 1] = arguments[Yq];
-        gq.forEach((Eq => {
-          var gq = this._keyBindmap[Eq] || [];
-          gq.includes(qq) || (gq.push(qq), this._keyBindmap[Eq] = gq)
-        })), this.state[qq] = !!this.state[qq], this.pressCount[qq] = this.pressCount[qq] || 0, this.releaseCount[qq] = this.releaseCount[qq] || 0
+      bind(bb) {
+        for (var ub = arguments.length, hb = new Array(ub > 1 ? ub - 1 : 0), Bb = 1; Bb < ub; Bb++) hb[Bb - 1] = arguments[Bb];
+        hb.forEach((ub => {
+          var hb = this._keyBindmap[ub] || [];
+          hb.includes(bb) || (hb.push(bb), this._keyBindmap[ub] = hb)
+        })), this.state[bb] = !!this.state[bb], this.pressCount[bb] = this.pressCount[bb] || 0, this.releaseCount[bb] = this.releaseCount[bb] || 0
       }
-      unbind(qq) {
-        for (var Eq in this._keyBindmap) {
-          var gq = this._keyBindmap[Eq],
-            Yq = gq.indexOf(qq);
-          Yq > -1 && gq.splice(Yq, 1)
+      unbind(bb) {
+        for (var ub in this._keyBindmap) {
+          var hb = this._keyBindmap[ub],
+            Bb = hb.indexOf(bb);
+          Bb > -1 && hb.splice(Bb, 1)
         }
       }
       getBindings() {
-        var qq = {};
-        for (var Eq in this._keyBindmap) {
-          this._keyBindmap[Eq].forEach((gq => {
-            qq[gq] = qq[gq] || [], qq[gq].push(Eq)
+        var bb = {};
+        for (var ub in this._keyBindmap) {
+          this._keyBindmap[ub].forEach((hb => {
+            bb[hb] = bb[hb] || [], bb[hb].push(ub)
           }))
         }
-        return qq
+        return bb
       }
-      SB() {
-        Aq(this.lC), Aq(this.pressCount), Aq(this.releaseCount)
+      gH() {
+        Yb(this.Fy), Yb(this.pressCount), Yb(this.releaseCount)
       }
     }
 
-    function Aq(qq) {
-      for (var Eq in qq) qq[Eq] = 0
+    function Yb(bb) {
+      for (var ub in bb) bb[ub] = 0
     }
 
-    function cq(qq) {
-      window.addEventListener("keydown", dq.bind(null, qq, !0), !1), window.addEventListener("keyup", dq.bind(null, qq, !1), !1);
-      var Eq = {
+    function Sb(bb) {
+      window.addEventListener("keydown", ob.bind(null, bb, !0), !1), window.addEventListener("keyup", ob.bind(null, bb, !1), !1);
+      var ub = {
         passive: !0
       };
-      qq.element.addEventListener("touchstart", Nq.bind(void 0, qq), {
+      bb.element.addEventListener("touchstart", Zb.bind(void 0, bb), {
         passive: !1
-      }), qq.element.addEventListener("touchend", Vq.bind(void 0, qq), Eq), qq.element.addEventListener("mousedown", jq.bind(null, qq, !0), Eq), window.document.addEventListener("mouseup", jq.bind(null, qq, !1), Eq), qq.element.addEventListener("touchmove", Hq.bind(null, qq), Eq), qq.element.addEventListener("mousemove", Hq.bind(null, qq), Eq), window.PointerEvent, qq.element.addEventListener("wheel", oq.bind(null, qq), Eq), qq.element.addEventListener("contextmenu", Pq.bind(null, qq), !1), window.addEventListener("blur", tq.bind(null, qq), !1)
+      }), bb.element.addEventListener("touchend", pb.bind(void 0, bb), ub), bb.element.addEventListener("mousedown", Ab.bind(null, bb, !0), ub), window.document.addEventListener("mouseup", Ab.bind(null, bb, !1), ub), bb.element.addEventListener("touchmove", lb.bind(null, bb), ub), bb.element.addEventListener("mousemove", lb.bind(null, bb), ub), window.PointerEvent, bb.element.addEventListener("wheel", Kb.bind(null, bb), ub), bb.element.addEventListener("contextmenu", Wb.bind(null, bb), !1), window.addEventListener("blur", rb.bind(null, bb), !1)
     }
-    var uq = 0,
-      Bq = 0,
-      Wq = null;
+    var ab = 0,
+      Hb = 0,
+      wb = null;
 
-    function Nq(qq, Eq) {
-      Eq.preventDefault(), aq(Eq)
+    function Zb(bb, ub) {
+      ub.preventDefault(), Xb(ub)
     }
 
-    function aq(qq) {
-      let Eq = !1;
-      for (let gq = 0; gq < qq.touches.length; ++gq)
-        if (qq.touches[gq].identifier === Wq) {
-          Eq = !0;
+    function Xb(bb) {
+      let ub = !1;
+      for (let hb = 0; hb < bb.touches.length; ++hb)
+        if (bb.touches[hb].identifier === wb) {
+          ub = !0;
           break
-        } if (!Eq) {
-        const Eq = qq.changedTouches[0];
-        uq = Eq.clientX, Bq = Eq.clientY, Wq = Eq.identifier
+        } if (!ub) {
+        const ub = bb.changedTouches[0];
+        ab = ub.clientX, Hb = ub.clientY, wb = ub.identifier
       }
     }
 
-    function Vq(qq, Eq) {
-      for (var gq = Eq.changedTouches, Yq = 0; Yq < gq.length; ++Yq) gq[Yq].identifier === Wq && (Wq = null)
+    function pb(bb, ub) {
+      for (var hb = ub.changedTouches, Bb = 0; Bb < hb.length; ++Bb) hb[Bb].identifier === wb && (wb = null)
     }
 
-    function dq(qq, Eq, gq) {
-      if (!qq.ignoreEvent(gq)) try {
-        rq(qq, gq), Eq && gq.isTrusted && !gq.repeat && qq._keyStates[gq.code] && vq(qq, gq.code)
+    function ob(bb, ub, hb) {
+      if (!bb.ignoreEvent(hb)) try {
+        jb(bb, hb), ub && hb.isTrusted && !hb.repeat && bb._keyStates[hb.code] && nb(bb, hb.code)
       } finally {
-        hq(gq.code, Eq, qq, gq)
+        Db(hb.code, ub, bb, hb)
       }
     }
 
-    function jq(qq, Eq, gq) {
-      if (!qq.ignoreEvent(gq)) try {
-        rq(qq, gq)
+    function Ab(bb, ub, hb) {
+      if (!bb.ignoreEvent(hb)) try {
+        jb(bb, hb)
       } finally {
-        ! function(qq, Eq, gq) {
-          if ("pointerId" in gq)
-            if (Eq) {
-              if (null !== qq._touches.currID) return;
-              qq._touches.currID = gq.pointerId
+        ! function(bb, ub, hb) {
+          if ("pointerId" in hb)
+            if (ub) {
+              if (null !== bb._touches.currID) return;
+              bb._touches.currID = hb.pointerId
             } else {
-              if (qq._touches.currID !== gq.pointerId) return;
-              qq._touches.currID = null
-            } var Yq = "button" in gq ? gq.button + 1 : 1;
-          hq("Mouse" + Yq, Eq, qq, gq)
-        }(qq, Eq, gq)
+              if (bb._touches.currID !== hb.pointerId) return;
+              bb._touches.currID = null
+            } var Bb = "button" in hb ? hb.button + 1 : 1;
+          Db("Mouse" + Bb, ub, bb, hb)
+        }(bb, ub, hb)
       }
     }
 
-    function Hq(qq, Eq) {
-      var gq = Eq.movementX || Eq.mozMovementX || 0,
-        Yq = Eq.movementY || Eq.mozMovementY || 0;
-      if (Eq.touches && 0 === (gq | Yq)) {
-        var lq = function(qq) {
-          aq(qq);
-          for (let Eq = 0; Eq < qq.changedTouches.length; ++Eq)
-            if (qq.changedTouches[Eq].identifier == Wq) {
-              const gq = qq.changedTouches[Eq],
-                Yq = [gq.clientX - uq, gq.clientY - Bq];
-              return uq = gq.clientX, Bq = gq.clientY, Yq
-            } return console.error(`Did not find touch id ${Wq}`), [0, 0]
-        }(Eq);
-        gq = lq[0], Yq = lq[1]
+    function lb(bb, ub) {
+      var hb = ub.movementX || ub.mozMovementX || 0,
+        Bb = ub.movementY || ub.mozMovementY || 0;
+      if (ub.touches && 0 === (hb | Bb)) {
+        var Ob = function(bb) {
+          Xb(bb);
+          for (let ub = 0; ub < bb.changedTouches.length; ++ub)
+            if (bb.changedTouches[ub].identifier == wb) {
+              const hb = bb.changedTouches[ub],
+                Bb = [hb.clientX - ab, hb.clientY - Hb];
+              return ab = hb.clientX, Hb = hb.clientY, Bb
+            } return console.error(`Did not find touch id ${wb}`), [0, 0]
+        }(ub);
+        hb = Ob[0], Bb = Ob[1]
       }
-      qq.lC.dx += gq, qq.lC.dy += Yq
+      bb.Fy.dx += hb, bb.Fy.dy += Bb
     }
 
-    function oq(qq, Eq) {
-      rq(qq, Eq);
-      var gq = 1;
-      switch (Eq.deltaMode) {
+    function Kb(bb, ub) {
+      jb(bb, ub);
+      var hb = 1;
+      switch (ub.deltaMode) {
         case 0:
-          gq = 1;
+          hb = 1;
           break;
         case 1:
-          gq = 12;
+          hb = 12;
           break;
         case 2:
-          gq = qq.element.clientHeight || window.innerHeight
+          hb = bb.element.clientHeight || window.innerHeight
       }
-      qq.lC.hEq += (Eq.deltaX || 0) * gq, qq.lC.nEq += (Eq.deltaY || 0) * gq, qq.lC.bEq += (Eq.deltaZ || 0) * gq
+      bb.Fy.Uub += (ub.deltaX || 0) * hb, bb.Fy.Lub += (ub.deltaY || 0) * hb, bb.Fy.Yub += (ub.deltaZ || 0) * hb
     }
 
-    function Pq(qq, Eq) {
-      if (!qq.gC) return Eq.preventDefault(), !1
+    function Wb(bb, ub) {
+      if (!bb.Iy) return ub.preventDefault(), !1
     }
-    var Qq = {
+    var Cb = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -175,260 +175,260 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function yq(qq, Eq) {
-      return !!qq[Qq[Eq]] || ("AltRight" === Eq || "ControlLeft" === Eq) && "function" === typeof qq.getModifierState && !0 === qq.getModifierState("AltGraph")
+    function db(bb, ub) {
+      return !!bb[Cb[ub]] || ("AltRight" === ub || "ControlLeft" === ub) && "function" === typeof bb.getModifierState && !0 === bb.getModifierState("AltGraph")
     }
 
-    function tq(qq, Eq) {
-      for (var gq in qq._modifiersHeldThroughBlur = {}, Qq) qq._keyStates[gq] && (qq._modifiersHeldThroughBlur[gq] = !0);
-      Eq && Eq.isTrusted && function() {
+    function rb(bb, ub) {
+      for (var hb in bb._modifiersHeldThroughBlur = {}, Cb) bb._keyStates[hb] && (bb._modifiersHeldThroughBlur[hb] = !0);
+      ub && ub.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (qq) {
+        } catch (bb) {
           return !0
         }
-      }() && (clearTimeout(qq._blurRelease), qq._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(bb._blurRelease), bb._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var Eq in qq._modifiersHeldThroughBlur = {}, qq._keyStates) qq._keyStates[Eq] && !/^Mouse\d/.test(Eq) && vq(qq, Eq)
+          for (var ub in bb._modifiersHeldThroughBlur = {}, bb._keyStates) bb._keyStates[ub] && !/^Mouse\d/.test(ub) && nb(bb, ub)
       }), 0))
     }
 
-    function rq(qq, Eq) {
-      var gq = qq._modifiersHeldThroughBlur;
-      if (gq && Eq.isTrusted && document.hasFocus())
-        for (var Yq in gq) delete gq[Yq], qq._keyStates[Yq] && Yq !== Eq.code && (yq(Eq, Yq) || vq(qq, Yq))
+    function jb(bb, ub) {
+      var hb = bb._modifiersHeldThroughBlur;
+      if (hb && ub.isTrusted && document.hasFocus())
+        for (var Bb in hb) delete hb[Bb], bb._keyStates[Bb] && Bb !== ub.code && (db(ub, Bb) || nb(bb, Bb))
     }
 
-    function vq(qq, Eq) {
-      const gq = {
-          code: Eq,
+    function nb(bb, ub) {
+      const hb = {
+          code: ub,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        Yq = lq;
-      lq = gq;
+        Bb = Ob;
+      Ob = hb;
       try {
-        hq(Eq, !1, qq, gq)
+        Db(ub, !1, bb, hb)
       } finally {
-        lq = Yq
+        Ob = Bb
       }
     }
 
-    function hq(qq, Eq, gq, Yq) {
-      var lq = gq._keyBindmap[qq];
-      lq && (nq(gq._keyStates[qq], Eq) && (gq._keyStates[qq] = Eq, lq.forEach((qq => {
-        (!gq.filterEvents || gq.filterEvents(Yq, qq)) && function(qq, Eq, gq, Yq) {
-          var lq = Eq ? gq.pressCount : gq.releaseCount;
-          lq[qq] = (lq[qq] || 0) + 1;
-          var Oq = gq._bindPressCount[qq] || 0;
-          (Oq += Eq ? 1 : -1) < 0 && (Oq = 0);
-          gq._bindPressCount[qq] = Oq;
-          var mq = gq.state[qq];
-          if (nq(mq, Oq)) {
-            gq.state[qq] = Oq > 0;
-            var xq = Eq ? gq.down : gq.up;
-            gq.disabled || xq.emit(qq, Yq)
+    function Db(bb, ub, hb, Bb) {
+      var Ob = hb._keyBindmap[bb];
+      Ob && (xb(hb._keyStates[bb], ub) && (hb._keyStates[bb] = ub, Ob.forEach((bb => {
+        (!hb.filterEvents || hb.filterEvents(Bb, bb)) && function(bb, ub, hb, Bb) {
+          var Ob = ub ? hb.pressCount : hb.releaseCount;
+          Ob[bb] = (Ob[bb] || 0) + 1;
+          var Gb = hb._bindPressCount[bb] || 0;
+          (Gb += ub ? 1 : -1) < 0 && (Gb = 0);
+          hb._bindPressCount[bb] = Gb;
+          var Ub = hb.state[bb];
+          if (xb(Ub, Gb)) {
+            hb.state[bb] = Gb > 0;
+            var Lb = ub ? hb.down : hb.up;
+            hb.disabled || Lb.emit(bb, Bb)
           }
-        }(qq, Eq, gq, Yq)
-      }))), "button" in Yq || (gq.IK && !Yq.defaultPrevented && Yq.preventDefault(), gq.stopPropagation && Yq.stopPropagation()))
+        }(bb, ub, hb, Bb)
+      }))), "button" in Bb || (hb.vy && !Bb.defaultPrevented && Bb.preventDefault(), hb.stopPropagation && Bb.stopPropagation()))
     }
 
-    function nq(qq, Eq) {
-      return qq ? !Eq : Eq
+    function xb(bb, ub) {
+      return bb ? !ub : ub
     }
   },
-  36734: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Vq,
-      e: () => dq
+  36296: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => pb,
+      f: () => ob
     });
-    var Yq = gq(57),
-      lq = gq(1416),
-      Oq = gq(1942),
-      mq = gq(36681),
-      xq = gq(598),
-      Aq = gq(1018),
-      cq = gq.n(Aq),
-      uq = gq(1070);
-    const Bq = [Wq()];
+    var Bb = hb(49),
+      Ob = hb(1348),
+      Gb = hb(1857),
+      Ub = hb(36234),
+      Lb = hb(588),
+      Yb = hb(958),
+      Sb = hb.n(Yb),
+      ab = hb(1007);
+    const Hb = [wb()];
 
-    function Wq() {
+    function wb() {
       return {
         source: null,
         direction: null,
-        mF: null,
+        JI: null,
         timeout: void 0,
         writtenAngle: null
       }
     }
 
-    function Nq(qq) {
-      return Bq.find((Eq => null !== Eq.source && Eq.source === qq))
+    function Zb(bb) {
+      return Hb.find((ub => null !== ub.source && ub.source === bb))
     }
 
-    function aq(qq) {
-      clearTimeout(qq.timeout), qq.source = null, qq.direction = null, qq.writtenAngle = null, qq.mF && (qq.mF.style.rotate = "")
+    function Xb(bb) {
+      clearTimeout(bb.timeout), bb.source = null, bb.direction = null, bb.writtenAngle = null, bb.JI && (bb.JI.style.rotate = "")
     }
-    const Vq = (0, Yq.memo)((function() {
-      const [, qq] = (0, Yq.useReducer)((qq => qq + 1), 0);
-      return (0, lq.f)("damagedByOtherPlayer", (Eq => {
+    const pb = (0, Bb.memo)((function() {
+      const [, bb] = (0, Bb.useReducer)((bb => bb + 1), 0);
+      return (0, Ob.h)("damagedByOtherPlayer", (ub => {
         let {
-          jY: gq,
-          direction: Yq
-        } = Eq;
-        const lq = gq || "nonDirectional",
-          Oq = function(qq) {
-            var Eq;
-            const gq = null !== (Eq = Nq(qq)) && void 0 !== Eq ? Eq : Bq.find((qq => null === qq.source));
-            if (gq) return gq;
-            const Yq = {
+          DB: hb,
+          direction: Bb
+        } = ub;
+        const Ob = hb || "nonDirectional",
+          Gb = function(bb) {
+            var ub;
+            const hb = null !== (ub = Zb(bb)) && void 0 !== ub ? ub : Hb.find((bb => null === bb.source));
+            if (hb) return hb;
+            const Bb = {
               source: null,
               direction: null,
-              mF: null,
+              JI: null,
               timeout: void 0,
               writtenAngle: null
             };
-            return Bq.push(Yq), Yq
-          }(lq);
-        clearTimeout(Oq.timeout), Oq.source = lq, Oq.direction = Yq, Oq.timeout = setTimeout((() => {
-          aq(Oq), qq()
-        }), 800), qq()
-      })), (0, Oq.d)("kill", (Eq => {
+            return Hb.push(Bb), Bb
+          }(Ob);
+        clearTimeout(Gb.timeout), Gb.source = Ob, Gb.direction = Bb, Gb.timeout = setTimeout((() => {
+          Xb(Gb), bb()
+        }), 800), bb()
+      })), (0, Gb.d)("kill", (ub => {
         let {
-          killer: gq,
-          victim: Yq
-        } = Eq;
-        const lq = gq.local && Nq(Yq.id);
-        lq && (aq(lq), qq())
-      })), (0, Yq.useEffect)((() => {
-        const qq = (0, mq.h)("turnDamageIndicators", dq);
+          killer: hb,
+          victim: Bb
+        } = ub;
+        const Ob = hb.local && Zb(Bb.id);
+        Ob && (Xb(Ob), bb())
+      })), (0, Bb.useEffect)((() => {
+        const bb = (0, Ub.d)("turnDamageIndicators", ob);
         return () => {
-          qq(), Bq.forEach(aq)
+          bb(), Hb.forEach(Xb)
         }
-      }), []), (0, uq.jsx)("div", {
+      }), []), (0, ab.jsx)("div", {
         className: "DirectionalDamage",
-        children: Bq.map(((qq, Eq) => (0, uq.jsx)("div", {
-          ref: Eq => {
-            qq.mF = Eq
+        children: Hb.map(((bb, ub) => (0, ab.jsx)("div", {
+          ref: ub => {
+            bb.JI = ub
           },
-          className: cq()("DamageIndicator", {
-            DamageIndicatorFullCircle: (0, xq.H)(qq.direction),
-            DamageIndicatorIdle: null === qq.source
+          className: Sb()("DamageIndicator", {
+            DamageIndicatorFullCircle: (0, Lb.J)(bb.direction),
+            DamageIndicatorIdle: null === bb.source
           })
-        }, Eq)))
+        }, ub)))
       })
     }));
 
-    function dq(qq) {
-      for (const Eq of Bq) {
-        if (null === Eq.source || (0, xq.H)(Eq.direction)) continue;
-        const gq = Eq.direction - qq;
-        gq !== Eq.writtenAngle && (Eq.writtenAngle = gq, Eq.mF.style.rotate = `${gq}rad`)
+    function ob(bb) {
+      for (const ub of Hb) {
+        if (null === ub.source || (0, Lb.J)(ub.direction)) continue;
+        const hb = ub.direction - bb;
+        hb !== ub.writtenAngle && (ub.writtenAngle = hb, ub.JI.style.rotate = `${hb}rad`)
       }
     }
   },
-  36543: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => lq,
-      h: () => Oq
+  36113: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Ob,
+      e: () => Gb
     });
-    let Yq = !1;
+    let Bb = !1;
 
-    function lq() {
-      return Yq
+    function Ob() {
+      return Bb
     }
 
-    function Oq(qq) {
-      return Yq !== qq && (Yq = qq, !0)
+    function Gb(bb) {
+      return Bb !== bb && (Bb = bb, !0)
     }
   },
-  9207: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq,
-      d: () => lq
+  9023: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb,
+      g: () => Ob
     });
-    var Yq = gq(24);
+    var Bb = hb(13);
 
-    function lq(qq, Eq) {
-      return qq && !Eq
+    function Ob(bb, ub) {
+      return bb && !ub
     }
 
-    function Oq() {
-      return lq(Yq.b.get("isTouchScreen"), Yq.b.get("clientEscMenuOptions").touchActionButtons)
+    function Gb() {
+      return Ob(Bb.d.get("isTouchScreen"), Bb.d.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  40400: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      startPadGameplay: () => Qq
+  40123: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      startPadGameplay: () => Cb
     });
-    gq(40293);
-    var Yq = gq(40295),
-      lq = gq(3595),
-      Oq = gq(24),
-      mq = gq(39021),
-      xq = gq(3545),
-      Aq = gq(39040),
-      cq = gq(31),
-      uq = gq(2668),
-      Bq = gq(38420),
-      Wq = gq(8826),
-      Nq = gq(40301);
-    const aq = {
+    hb(40006);
+    var Bb = hb(40014),
+      Ob = hb(3516),
+      Gb = hb(13),
+      Ub = hb(38706),
+      Lb = hb(3463),
+      Yb = hb(38719),
+      Sb = hb(16),
+      ab = hb(2560),
+      Hb = hb(38064),
+      wb = hb(8589),
+      Zb = hb(40017);
+    const Xb = {
       yawRadPerSec: 0,
       pitchRadPerSec: 0
     };
-    var Vq = gq(40314),
-      dq = gq(8803),
-      jq = gq(39056);
-    const Hq = qq => qq.padSneakToggled || !!Oq.b.get("clientEscMenuOptions").crouchIsToggle && qq.crouchToggled,
-      oq = () => {
-        const qq = (() => {
-          const qq = (0, Wq.b)();
-          let Eq = aq;
-          const gq = new Nq.d;
-          let Yq = !1,
-            lq = 0;
-          const Oq = () => {
-            const gq = performance.now(),
-              Oq = 0 === lq ? 0 : gq - lq;
-            if (lq = gq, !Yq) return qq.discardPending(), null;
-            const mq = (0, Nq.m)(Eq, Oq),
-              xq = qq.drainLookDelta(),
-              Aq = (0, Bq.i)();
+    var pb = hb(40033),
+      ob = hb(8558),
+      Ab = hb(38727);
+    const lb = bb => bb.padSneakToggled || !!Gb.d.get("clientEscMenuOptions").crouchIsToggle && bb.crouchToggled,
+      Kb = () => {
+        const bb = (() => {
+          const bb = (0, wb.d)();
+          let ub = Xb;
+          const hb = new Zb.b;
+          let Bb = !1,
+            Ob = 0;
+          const Gb = () => {
+            const hb = performance.now(),
+              Gb = 0 === Ob ? 0 : hb - Ob;
+            if (Ob = hb, !Bb) return bb.discardPending(), null;
+            const Ub = (0, Zb.n)(ub, Gb),
+              Lb = bb.drainLookDelta(),
+              Yb = (0, Hb.j)();
             return {
-              VJ: (mq.VJ + xq.VJ) * Aq,
-              dJ: (mq.dJ + xq.dJ) * Aq
+              MJ: (Ub.MJ + Lb.MJ) * Yb,
+              mJ: (Ub.mJ + Lb.mJ) * Yb
             }
           };
           return {
-            update: (qq, lq, mq, xq) => {
-              qq.camera.uD !== Oq && (qq.camera.uD = Oq), Yq = !0, Eq = (0, Nq.o)(gq, lq, mq, xq, performance.now())
+            update: (bb, Ob, Ub, Lb) => {
+              bb.camera.lF !== Gb && (bb.camera.lF = Gb), Bb = !0, ub = (0, Zb.q)(hb, Ob, Ub, Lb, performance.now())
             },
             release: () => {
-              Yq = !1, Eq = aq, gq.reset()
+              Bb = !1, ub = Xb, hb.reset()
             },
-            uninstall: qq => {
-              qq.camera.uD === Oq && (qq.camera.uD = null)
+            uninstall: bb => {
+              bb.camera.lF === Gb && (bb.camera.lF = null)
             }
           }
         })();
         return {
-          update: (Eq, gq, Yq) => {
-            qq.update((0, uq.e)(), Eq, gq, Yq)
+          update: (ub, hb, Bb) => {
+            bb.update((0, ab.g)(), ub, hb, Bb)
           },
-          release: qq.release,
+          release: bb.release,
           uninstall: () => {
-            const Eq = (0, uq.e)();
-            Eq && qq.uninstall(Eq)
+            const ub = (0, ab.g)();
+            ub && bb.uninstall(ub)
           }
         }
       };
-    var Pq = gq(40309);
-    gq(37686), gq(8686);
-    gq(8704).b;
-    const Qq = () => {
-      const qq = (0, Pq.d)((() => {
-          const qq = {
+    var Wb = hb(40026);
+    hb(37317), hb(8452);
+    hb(8467).e;
+    const Cb = () => {
+      const bb = (0, Wb.c)((() => {
+          const bb = {
             x: 0,
             y: 0,
             magnitude: 0,
@@ -440,25 +440,25 @@ export const modules = {
             sprintHeld: !1
           };
           return {
-            bodies: () => (0, mq.c)(),
-            look: oq(),
-            move: (Eq, gq) => {
-              const Yq = (0, uq.e)(),
-                lq = Yq.Iy.Hgq();
-              if (qq.x = Eq.x, qq.y = Eq.y, qq.magnitude = Eq.magnitude, qq.headingOffset = Eq.headingOffset, qq.jumpHeld = Eq.jumpHeld, Eq.jumpPressed && (qq.jumpPressedSinceTick = !0), qq.running = Eq.running, qq.sprintHeld = Eq.sprintHeld, gq) {
-                const Eq = (0, Vq.c)({
-                  ...gq,
-                  descending: Yq.Iy.yEq(Yq.oR).shouldIgnoreCrouchingSpeedReduction(),
-                  canCrouch: !!Yq.Uy.canCrouch,
-                  toggled: Hq(lq)
+            bodies: () => (0, Ub.c)(),
+            look: Kb(),
+            move: (ub, hb) => {
+              const Bb = (0, ab.g)(),
+                Ob = Bb.pW.Bhb();
+              if (bb.x = ub.x, bb.y = ub.y, bb.magnitude = ub.magnitude, bb.headingOffset = ub.headingOffset, bb.jumpHeld = ub.jumpHeld, ub.jumpPressed && (bb.jumpPressedSinceTick = !0), bb.running = ub.running, bb.sprintHeld = ub.sprintHeld, hb) {
+                const ub = (0, pb.e)({
+                  ...hb,
+                  descending: Bb.pW.uub(Bb.bM).shouldIgnoreCrouchingSpeedReduction(),
+                  canCrouch: !!Bb.OW.canCrouch,
+                  toggled: lb(Ob)
                 });
-                qq.crouchHeld = Eq.crouchHeld, lq.padSneakToggled = Eq.toggled, lq.crouchToggled = !1, (0, dq.f)(Eq.toggled)
+                bb.crouchHeld = ub.crouchHeld, Ob.padSneakToggled = ub.toggled, Ob.crouchToggled = !1, (0, ob.g)(ub.toggled)
               }
-              lq.gamepad = qq
+              Ob.gamepad = bb
             },
             stopMoving: () => {
-              var Eq;
-              Object.assign(qq, {
+              var ub;
+              Object.assign(bb, {
                 x: 0,
                 y: 0,
                 magnitude: 0,
@@ -469,622 +469,622 @@ export const modules = {
                 running: !1,
                 sprintHeld: !1
               });
-              const gq = null === (Eq = (0, uq.e)()) || void 0 === Eq ? void 0 : Eq.Iy.Hgq();
-              (null === gq || void 0 === gq ? void 0 : gq.gamepad) === qq && (gq.gamepad = null)
+              const hb = null === (ub = (0, ab.g)()) || void 0 === ub ? void 0 : ub.pW.Bhb();
+              (null === hb || void 0 === hb ? void 0 : hb.gamepad) === bb && (hb.gamepad = null)
             },
             uninstall: () => {},
-            deviceChanged: qq => {
-              const Eq = (0, uq.e)(),
-                gq = null === Eq || void 0 === Eq ? void 0 : Eq.Iy.Hgq();
-              "touch" === qq ? ((0, dq.f)(!1), null !== gq && void 0 !== gq && gq.padSneakToggled && (gq.padSneakToggled = !1, gq.isTouchscreen && !gq.gamepad && Eq.Iy.REq(Eq.oR).setCrouching(!!Eq.Uy.canCrouch && gq.touchCrouch))) : "gamepad" === qq && gq && (0, dq.f)(Hq(gq))
+            deviceChanged: bb => {
+              const ub = (0, ab.g)(),
+                hb = null === ub || void 0 === ub ? void 0 : ub.pW.Bhb();
+              "touch" === bb ? ((0, ob.g)(!1), null !== hb && void 0 !== hb && hb.padSneakToggled && (hb.padSneakToggled = !1, hb.isTouchscreen && !hb.gamepad && ub.pW.nub(ub.bM).setCrouching(!!ub.OW.canCrouch && hb.touchCrouch))) : "gamepad" === bb && hb && (0, ob.g)(lb(hb))
             },
             hasPlayer: () => {
-              var qq;
-              return !(null === (qq = (0, uq.e)()) || void 0 === qq || !qq.oR)
+              var bb;
+              return !(null === (bb = (0, ab.g)()) || void 0 === bb || !bb.bM)
             },
             isPlayerDead: () => {
-              var qq;
-              const Eq = (0, uq.e)();
-              return !1 === (null === (qq = Eq.Iy.Bgq(Eq.oR)) || void 0 === qq ? void 0 : qq.isAlive)
+              var bb;
+              const ub = (0, ab.g)();
+              return !1 === (null === (bb = ub.pW.kub(ub.bM)) || void 0 === bb ? void 0 : bb.isAlive)
             },
             isReplayMode: () => {
-              var qq, Eq;
-              return !(null === (qq = (0, uq.b)()) || void 0 === qq || null === (Eq = qq.client) || void 0 === Eq || !Eq.isReplayMode())
+              var bb, ub;
+              return !(null === (bb = (0, ab.e)()) || void 0 === bb || null === (ub = bb.client) || void 0 === ub || !ub.isReplayMode())
             },
             isFreeCameraOn: () => {
-              var qq, Eq, gq;
-              return !(null === (qq = (0, uq.b)()) || void 0 === qq || null === (Eq = qq.client) || void 0 === Eq || null === (gq = Eq.freeCameraController) || void 0 === gq || !gq.isEnabled())
+              var bb, ub, hb;
+              return !(null === (bb = (0, ab.e)()) || void 0 === bb || null === (ub = bb.client) || void 0 === ub || null === (hb = ub.freeCameraController) || void 0 === hb || !hb.isEnabled())
             },
-            targetsBlock: () => !!(0, uq.e)().Kqq,
+            targetsBlock: () => !!(0, ab.g)().rbb,
             selectedSlotEmpty: () => {
-              var qq;
-              const Eq = (0, uq.e)();
-              return !(null !== (qq = Eq.Iy.sEq(Eq.oR)) && void 0 !== qq && qq.getItemAtSelectedSlot())
+              var bb;
+              const ub = (0, ab.g)();
+              return !(null !== (bb = ub.pW.xub(ub.bM)) && void 0 !== bb && bb.getItemAtSelectedSlot())
             },
             pickBlockAllowed: () => {
-              const qq = (0, uq.e)().Uy;
-              return !!qq.creative && !!qq.canPickBlocks
+              const bb = (0, ab.g)().OW;
+              return !!bb.creative && !!bb.canPickBlocks
             },
-            scrollHotbar: qq => {
-              cq.i.TV("ScrollInventorySlot", qq)
+            scrollHotbar: bb => {
+              Sb.i.vp("ScrollInventorySlot", bb)
             },
-            hasFullInventory: () => (0, Aq.c)((0, uq.e)()),
-            hasLobbyTab: () => (0, jq.d)((0, uq.e)().Uy),
+            hasFullInventory: () => (0, Yb.d)((0, ab.g)()),
+            hasLobbyTab: () => (0, Ab.c)((0, ab.g)().OW),
             contextActionInputs: () => {
-              var qq, Eq, gq, Yq;
-              const lq = (0, uq.e)();
+              var bb, ub, hb, Bb;
+              const Ob = (0, ab.g)();
               return {
-                holdingGun: !(null === (qq = lq.Iy.Wgq(lq.oR)) || void 0 === qq || null === (Eq = qq.aZ) || void 0 === Eq || !Eq.isGun()),
-                customButtons: null !== (gq = lq.Uy.customButtons) && void 0 !== gq ? gq : null,
-                touchscreenActionButton: null !== (Yq = lq.Uy.touchscreenActionButton) && void 0 !== Yq ? Yq : null
+                holdingGun: !(null === (bb = Ob.pW.Tub(Ob.bM)) || void 0 === bb || null === (ub = bb.bC) || void 0 === ub || !ub.isGun()),
+                customButtons: null !== (hb = Ob.OW.customButtons) && void 0 !== hb ? hb : null,
+                touchscreenActionButton: null !== (Bb = Ob.OW.touchscreenActionButton) && void 0 !== Bb ? Bb : null
               }
             },
-            pressTouchButton: qq => {
-              (0, xq.sendColyMessage)(lq.fk, qq)
+            pressTouchButton: bb => {
+              (0, Lb.sendColyMessage)(Ob.lj, bb)
             }
           }
         })()),
-        Eq = (0, Yq.e)(),
-        gq = null,
-        Oq = null;
+        ub = (0, Bb.c)(),
+        hb = null,
+        Gb = null;
       return () => {
-        qq(), Eq(), null === gq || void 0 === gq || gq(), null === Oq || void 0 === Oq || Oq()
+        bb(), ub(), null === hb || void 0 === hb || hb(), null === Gb || void 0 === Gb || Gb()
       }
     }
   },
-  36662: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Oq,
-      d: () => Vq,
-      g: () => dq,
-      h: () => xq,
-      l: () => Wq,
-      m: () => jq,
-      o: () => Bq,
-      p: () => oq,
-      r: () => aq,
-      v: () => Hq
+  36217: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Gb,
+      e: () => pb,
+      i: () => ob,
+      k: () => Lb,
+      m: () => wb,
+      o: () => Ab,
+      q: () => Hb,
+      r: () => Kb,
+      u: () => Xb,
+      v: () => lb
     });
-    var Yq = gq(24),
-      lq = gq(31);
-    const Oq = "clientGameInventoryButtonsChanged",
-      mq = new Map;
+    var Bb = hb(13),
+      Ob = hb(16);
+    const Gb = "clientGameInventoryButtonsChanged",
+      Ub = new Map;
 
-    function xq() {
-      return [...mq.values()].sort(((qq, Eq) => {
-        var gq, Yq;
-        return (null !== (gq = qq.order) && void 0 !== gq ? gq : 0) - (null !== (Yq = Eq.order) && void 0 !== Yq ? Yq : 0)
+    function Lb() {
+      return [...Ub.values()].sort(((bb, ub) => {
+        var hb, Bb;
+        return (null !== (hb = bb.order) && void 0 !== hb ? hb : 0) - (null !== (Bb = ub.order) && void 0 !== Bb ? Bb : 0)
       }))
     }
-    let Aq = null;
+    let Yb = null;
 
-    function cq(qq) {
-      Aq = qq
+    function Sb(bb) {
+      Yb = bb
     }
-    let uq = !1;
+    let ab = !1;
 
-    function Bq(qq) {
-      uq = !0;
+    function Hb(bb) {
+      ab = !0;
       try {
-        qq.onClick()
+        bb.onClick()
       } finally {
-        uq = !1
+        ab = !1
       }
-      qq.panel && "clientGame" === Yq.b.get("openInGameMenuName") && cq(qq.id)
+      bb.panel && "clientGame" === Bb.d.get("openInGameMenuName") && Sb(bb.id)
     }
 
-    function Wq() {
-      return uq
+    function wb() {
+      return ab
     }
 
-    function Nq() {
-      return xq().filter((qq => qq.panel && !qq.disabled))
+    function Zb() {
+      return Lb().filter((bb => bb.panel && !bb.disabled))
     }
 
-    function aq(qq) {
-      const Eq = Nq(),
-        gq = Eq.findIndex((qq => qq.id === Aq));
-      return !(gq < 0 || Eq.length < 2) && (Bq(Eq[(gq + qq + Eq.length) % Eq.length]), !0)
+    function Xb(bb) {
+      const ub = Zb(),
+        hb = ub.findIndex((bb => bb.id === Yb));
+      return !(hb < 0 || ub.length < 2) && (Hb(ub[(hb + bb + ub.length) % ub.length]), !0)
     }
 
-    function Vq() {
-      return null !== Aq && Nq().length > 1
+    function pb() {
+      return null !== Yb && Zb().length > 1
     }
 
-    function dq() {
-      cq(null)
+    function ob() {
+      Sb(null)
     }
 
-    function jq() {
-      "inventory" !== Yq.b.get("openInGameMenuName") && cq(null)
+    function Ab() {
+      "inventory" !== Bb.d.get("openInGameMenuName") && Sb(null)
     }
 
-    function Hq() {
-      const qq = Aq;
-      return cq(null), qq
+    function lb() {
+      const bb = Yb;
+      return Sb(null), bb
     }
 
-    function oq(qq) {
-      return mq.set(qq.id, qq), lq.i.TV(Oq, xq(), !0), () => {
-        mq.get(qq.id) === qq && (mq.delete(qq.id), lq.i.TV(Oq, xq()))
+    function Kb(bb) {
+      return Ub.set(bb.id, bb), Ob.i.vp(Gb, Lb(), !0), () => {
+        Ub.get(bb.id) === bb && (Ub.delete(bb.id), Ob.i.vp(Gb, Lb()))
       }
     }
   },
-  36657: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => xq,
-      e: () => dq,
-      h: () => jq,
-      j: () => Wq,
-      l: () => cq,
-      m: () => Vq,
-      n: () => Nq,
-      r: () => uq
+  36214: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Lb,
+      g: () => ob,
+      j: () => Ab,
+      l: () => wb,
+      m: () => Sb,
+      p: () => pb,
+      q: () => Zb,
+      t: () => ab
     });
-    var Yq = gq(24),
-      lq = gq(31),
-      Oq = gq(1274),
-      mq = gq(36662);
-    const xq = "clientGameUiChanged";
-    let Aq = null;
+    var Bb = hb(13),
+      Ob = hb(16),
+      Gb = hb(1184),
+      Ub = hb(36217);
+    const Lb = "clientGameUiChanged";
+    let Yb = null;
 
-    function cq() {
-      return Aq
+    function Sb() {
+      return Yb
     }
 
-    function uq(qq, Eq) {
-      const gq = {
-        content: qq,
-        menu: Eq
+    function ab(bb, ub) {
+      const hb = {
+        content: bb,
+        menu: ub
       };
-      return Aq = gq, lq.i.TV(xq, Aq, !0), () => {
-        Aq === gq && (Aq = null, aq = !1, dq(), lq.i.TV(xq, null))
+      return Yb = hb, Ob.i.vp(Lb, Yb, !0), () => {
+        Yb === hb && (Yb = null, Xb = !1, ob(), Ob.i.vp(Lb, null))
       }
     }
-    let Bq = null;
+    let Hb = null;
 
-    function Wq() {
-      return Bq
+    function wb() {
+      return Hb
     }
 
-    function Nq(qq) {
-      return Bq = qq, () => {
-        Bq === qq && (Bq = null)
+    function Zb(bb) {
+      return Hb = bb, () => {
+        Hb === bb && (Hb = null)
       }
     }
-    let aq = !1;
+    let Xb = !1;
 
-    function Vq() {
-      const qq = Yq.b.get("openInGameMenuName");
-      "clientGame" !== qq && (aq = "inventory" === qq), (0, mq.l)() || (0, mq.g)(), (0, Oq.m)(Oq.d), Yq.b.set({
+    function pb() {
+      const bb = Bb.d.get("openInGameMenuName");
+      "clientGame" !== bb && (Xb = "inventory" === bb), (0, Ub.m)() || (0, Ub.i)(), (0, Gb.l)(Gb.b), Bb.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function dq() {
-      Hq(!1)
+    function ob() {
+      lb(!1)
     }
 
-    function jq() {
-      Hq(aq)
+    function Ab() {
+      lb(Xb)
     }
 
-    function Hq(qq) {
-      "clientGame" === Yq.b.get("openInGameMenuName") && Yq.b.set({
-        openInGameMenuName: qq ? "inventory" : null
-      }), qq || (0, mq.g)(), aq = !1
+    function lb(bb) {
+      "clientGame" === Bb.d.get("openInGameMenuName") && Bb.d.set({
+        openInGameMenuName: bb ? "inventory" : null
+      }), bb || (0, Ub.i)(), Xb = !1
     }
   },
-  36534: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Aq
+  36104: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Yb
     });
-    var Yq = gq(296),
-      lq = gq(24),
-      Oq = gq(36543),
-      mq = gq(1622),
-      xq = gq(1952);
+    var Bb = hb(298),
+      Ob = hb(13),
+      Gb = hb(36113),
+      Ub = hb(1537),
+      Lb = hb(1874);
 
-    function Aq(qq, Eq) {
-      var gq, Aq, cq;
-      if (!lq.b.get("isKeydownEnabled") || qq.repeat) return;
-      const uq = qq.code;
-      "Escape" === qq.key ? (0, mq.h)(qq) : null !== (gq = xq.u.OpenSettings) && void 0 !== gq && gq.includes(uq) ? (0, mq.u)(qq, Yq.p.SETTINGS) : null !== (Aq = xq.u.OpenCharacterCustomization) && void 0 !== Aq && Aq.includes(uq) ? (0, Oq.e)() || (0, mq.u)(qq, Yq.p.CUSTOMISATION, Eq()) : null !== (cq = xq.u.ShowDebugOverlay) && void 0 !== cq && cq.includes(uq) && lq.b.set({
-        showDebugOverlay: !lq.b.get("showDebugOverlay")
+    function Yb(bb, ub) {
+      var hb, Yb, Sb;
+      if (!Ob.d.get("isKeydownEnabled") || bb.repeat) return;
+      const ab = bb.code;
+      "Escape" === bb.key ? (0, Ub.k)(bb) : null !== (hb = Lb.r.OpenSettings) && void 0 !== hb && hb.includes(ab) ? (0, Ub.B)(bb, Bb.u.SETTINGS) : null !== (Yb = Lb.r.OpenCharacterCustomization) && void 0 !== Yb && Yb.includes(ab) ? (0, Gb.c)() || (0, Ub.B)(bb, Bb.u.CUSTOMISATION, ub()) : null !== (Sb = Lb.r.ShowDebugOverlay) && void 0 !== Sb && Sb.includes(ab) && Ob.d.set({
+        showDebugOverlay: !Ob.d.get("showDebugOverlay")
       })
     }
   },
-  36519: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Wq,
-      f: () => uq,
-      g: () => Nq,
-      i: () => Bq
+  36083: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => wb,
+      d: () => ab,
+      h: () => Zb,
+      k: () => Hb
     });
-    var Yq = gq(307),
-      lq = gq(616),
-      Oq = gq(632),
-      mq = gq(38);
-    const xq = {
+    var Bb = hb(314),
+      Ob = hb(609),
+      Gb = hb(620),
+      Ub = hb(29);
+    const Lb = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      Aq = "playSessionGameNameWithVariation",
-      cq = "wasMatchmakePlayer";
+      Yb = "playSessionGameNameWithVariation",
+      Sb = "wasMatchmakePlayer";
 
-    function uq() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mq.k;
-      (0, Oq.f)(qq, xq)
+    function ab() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ub.m;
+      (0, Gb.i)(bb, Lb)
     }
 
-    function Bq() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mq.k).setItem(cq, !0)
+    function Hb() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ub.m).setItem(Sb, !0)
     }
 
-    function Wq() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mq.k;
-      return (0, Oq.c)(qq, xq)
+    function wb() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ub.m;
+      return (0, Gb.e)(bb, Lb)
     }
 
-    function Nq(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mq.k;
-      const gq = (0, Oq.c)(Eq, xq),
-        uq = function(qq) {
-          const Eq = qq.getItem(Aq);
-          return "string" !== typeof Eq ? null : Eq
-        }(Eq),
-        Bq = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mq.k).getItem(cq)
-        }(Eq);
-      let Wq;
-      return Wq = null !== gq && null !== uq && (0, Oq.d)(Eq, xq) && function(qq, Eq, gq) {
-          const lq = (0, Yq.Yb)(qq),
-            Oq = (0, Yq.Yb)(Eq),
-            mq = (0, Yq.Tb)(qq),
-            xq = (0, Yq.Tb)(Eq);
-          return !(lq !== Oq || !gq) || lq === Oq && mq === xq
-        }(uq, qq, Bq) ? gq : (0, lq.d)(), (0, Oq.h)(Eq, xq, Wq), Eq.setItem(Aq, qq),
+    function Zb(bb) {
+      let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ub.m;
+      const hb = (0, Gb.e)(ub, Lb),
+        ab = function(bb) {
+          const ub = bb.getItem(Yb);
+          return "string" !== typeof ub ? null : ub
+        }(ub),
+        Hb = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ub.m).getItem(Sb)
+        }(ub);
+      let wb;
+      return wb = null !== hb && null !== ab && (0, Gb.g)(ub, Lb) && function(bb, ub, hb) {
+          const Ob = (0, Bb.Xb)(bb),
+            Gb = (0, Bb.Xb)(ub),
+            Ub = (0, Bb.Tb)(bb),
+            Lb = (0, Bb.Tb)(ub);
+          return !(Ob !== Gb || !hb) || Ob === Gb && Ub === Lb
+        }(ab, bb, Hb) ? hb : (0, Ob.e)(), (0, Gb.k)(ub, Lb, wb), ub.setItem(Yb, bb),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mq.k).removeItem(cq)
-        }(Eq), Wq
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ub.m).removeItem(Sb)
+        }(ub), wb
     }
   },
-  36515: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Hq,
-      c: () => oq
+  36074: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => lb,
+      d: () => Kb
     });
-    var Yq = gq(987),
-      lq = gq(600),
-      Oq = gq(307),
-      mq = gq(989),
-      xq = gq(611),
-      Aq = gq(642),
-      cq = gq(4346),
-      uq = gq(96),
-      Bq = gq(136),
-      Wq = gq(1710),
-      Nq = gq(114),
-      aq = gq(36519),
-      Vq = gq(38),
-      dq = gq(623),
-      jq = gq(36523);
+    var Bb = hb(934),
+      Ob = hb(595),
+      Gb = hb(314),
+      Ub = hb(937),
+      Lb = hb(599),
+      Yb = hb(625),
+      Sb = hb(4281),
+      ab = hb(86),
+      Hb = hb(115),
+      wb = hb(1622),
+      Zb = hb(101),
+      Xb = hb(36083),
+      pb = hb(29),
+      ob = hb(612),
+      Ab = hb(36091);
 
-    function Hq() {
-      var qq, Eq;
-      return [...null !== (qq = navigator.languages) && void 0 !== qq ? qq : [null !== (Eq = navigator.language) && void 0 !== Eq ? Eq : "none"], "EN-gb"]
+    function lb() {
+      var bb, ub;
+      return [...null !== (bb = navigator.languages) && void 0 !== bb ? bb : [null !== (ub = navigator.language) && void 0 !== ub ? ub : "none"], "EN-gb"]
     }
 
-    function oq(qq, Eq, gq, oq, Pq) {
-      const Qq = (0, Yq.j)(Eq) ? (0, Yq.o)(Eq) : null,
-        yq = {
-          cookies: (0, Wq.getAllCookiesForGameNameWithVariation)(Eq),
-          isMobile: (0, uq.isMobile)(),
-          isUsingCustomGameTexturePack: null !== Qq && Pq(Qq),
+    function Kb(bb, ub, hb, Kb, Wb) {
+      const Cb = (0, Bb.i)(ub) ? (0, Bb.p)(ub) : null,
+        db = {
+          cookies: (0, wb.getAllCookiesForGameNameWithVariation)(ub),
+          isMobile: (0, ab.isMobile)(),
+          isUsingCustomGameTexturePack: null !== Cb && Wb(Cb),
           generalCookies: {
-            joinDiscord: !!Vq.i.getItem("DiscordPressed"),
-            newGo: cq.b,
-            ...qq.getMetricsCookies(),
-            trafficCode: oq,
-            compliance: uq.compliance
+            joinDiscord: !!pb.j.getItem("DiscordPressed"),
+            newGo: Sb.e,
+            ...bb.getMetricsCookies(),
+            trafficCode: Kb,
+            compliance: ab.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, uq.getBrowserName)(),
-            version: (0, uq.getBrowserVersion)(),
+            name: (0, ab.getBrowserName)(),
+            version: (0, ab.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, uq.getPlatformType)(),
-            deviceType: (0, Nq.d)()
+            platformType: (0, ab.getPlatformType)(),
+            deviceType: (0, Zb.b)()
           },
-          isLoggedIn: qq.isLoggedIn(),
-          lobbyName: gq,
-          languages: Hq(),
-          version: lq.e,
-          siteUsed: Bq.n,
-          subsiteUsed: Bq.q,
-          playSessionId: (0, aq.g)(Eq),
-          visitSessionId: (0, dq.e)(),
-          clientReason: xq.k.reason,
-          budgetBasis: (0, jq.c)(),
-          ...null !== Aq.r && {
-            diagClaim: Aq.r.claimId
+          isLoggedIn: bb.isLoggedIn(),
+          lobbyName: hb,
+          languages: lb(),
+          version: Ob.b,
+          siteUsed: Hb.s,
+          subsiteUsed: Hb.A,
+          playSessionId: (0, Xb.h)(ub),
+          visitSessionId: (0, ob.b)(),
+          clientReason: Lb.f.reason,
+          budgetBasis: (0, Ab.g)(),
+          ...null !== Yb.m && {
+            diagClaim: Yb.m.claimId
           }
         };
-      return null !== Qq && (0, Oq.Pc)(Qq) ? (yq.lobbyName = (0, Yq.f)(Qq, (0, Yq.k)(Eq), gq), {
-        roomName: `classic_${mq.i}`,
-        joinOptions: yq
+      return null !== Cb && (0, Gb.Ic)(Cb) ? (db.lobbyName = (0, Bb.h)(Cb, (0, Bb.l)(ub), hb), {
+        roomName: `classic_${Ub.c}`,
+        joinOptions: db
       }) : {
-        roomName: Eq,
-        joinOptions: yq
+        roomName: ub,
+        joinOptions: db
       }
     }
   },
-  36350: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Yq,
-      g: () => lq,
-      j: () => Oq,
-      k: () => mq
+  35920: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Bb,
+      f: () => Ob,
+      g: () => Gb,
+      i: () => Ub
     });
-    const Yq = 1024,
-      lq = 1024 * Yq;
+    const Bb = 1024,
+      Ob = 1024 * Bb;
 
-    function Oq(qq) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, qq / lq)))
+    function Gb(bb) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, bb / Ob)))
     }
 
-    function mq(qq) {
-      return (qq / lq).toFixed(1)
+    function Ub(bb) {
+      return (bb / Ob).toFixed(1)
     }
   },
-  36528: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Oq,
-      f: () => xq,
-      g: () => mq,
-      i: () => Aq,
-      j: () => cq,
-      k: () => uq
+  36095: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Gb,
+      g: () => Lb,
+      k: () => Ub,
+      l: () => Yb,
+      m: () => Sb,
+      q: () => ab
     });
-    var Yq = gq(190);
-    const lq = 32 * gq(36350).g,
-      Oq = 6144,
-      mq = 4608,
-      xq = 512;
+    var Bb = hb(191);
+    const Ob = 32 * hb(35920).f,
+      Gb = 6144,
+      Ub = 4608,
+      Lb = 512;
 
-    function Aq(qq) {
-      return Math.floor(lq * qq / Oq)
+    function Yb(bb) {
+      return Math.floor(Ob * bb / Gb)
     }
 
-    function cq(qq) {
-      const Eq = qq - Math.floor(qq / 6);
-      let gq = Yq.c.maxChunkHorizAddDistance,
-        lq = Yq.c.maxChunkVertAddDistance;
-      if (uq(gq + 1, lq + 1) <= Eq) return null;
-      for (; uq(gq + 1, lq + 1) > Eq && (gq > 0 || lq > 0);) gq > lq ? gq-- : lq--;
+    function Sb(bb) {
+      const ub = bb - Math.floor(bb / 6);
+      let hb = Bb.e.maxChunkHorizAddDistance,
+        Ob = Bb.e.maxChunkVertAddDistance;
+      if (ab(hb + 1, Ob + 1) <= ub) return null;
+      for (; ab(hb + 1, Ob + 1) > ub && (hb > 0 || Ob > 0);) hb > Ob ? hb-- : Ob--;
       return {
-        horizontal: gq,
-        vertical: lq
+        horizontal: hb,
+        vertical: Ob
       }
     }
 
-    function uq(qq, Eq) {
-      const gq = Math.max(qq, Eq);
-      let Yq = 0;
-      for (let lq = -gq; lq <= gq; lq++)
-        for (let Oq = -gq; Oq <= gq; Oq++)
-          for (let mq = -gq; mq <= gq; mq++) Bq(qq, Eq, lq, Oq, mq) && Yq++;
-      return Yq
+    function ab(bb, ub) {
+      const hb = Math.max(bb, ub);
+      let Bb = 0;
+      for (let Ob = -hb; Ob <= hb; Ob++)
+        for (let Gb = -hb; Gb <= hb; Gb++)
+          for (let Ub = -hb; Ub <= hb; Ub++) Hb(bb, ub, Ob, Gb, Ub) && Bb++;
+      return Bb
     }
 
-    function Bq(qq, Eq, gq, Yq, lq) {
-      const Oq = gq * gq + lq * lq;
-      return qq === Eq ? Oq + Yq * Yq <= qq * qq : qq > Eq ? Math.abs(Yq) <= Eq && Oq + Yq * Yq <= qq * qq : Oq <= qq * qq && Oq + Yq * Yq <= Eq * Eq
+    function Hb(bb, ub, hb, Bb, Ob) {
+      const Gb = hb * hb + Ob * Ob;
+      return bb === ub ? Gb + Bb * Bb <= bb * bb : bb > ub ? Math.abs(Bb) <= ub && Gb + Bb * Bb <= bb * bb : Gb <= bb * bb && Gb + Bb * Bb <= ub * ub
     }
   },
-  36523: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => yq,
-      c: () => Qq,
-      e: () => Pq
+  36091: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => db,
+      g: () => Cb,
+      i: () => Wb
     });
-    var Yq = gq(190),
-      lq = gq(96),
-      Oq = gq(2825),
-      mq = gq(4231),
-      xq = gq(614),
-      Aq = gq(36528);
-    const cq = 1048576,
-      uq = 1024 * cq,
-      Bq = 400 * cq,
-      Wq = 147456,
-      Nq = .5,
-      aq = 1.5 * uq,
-      Vq = 768 * cq;
+    var Bb = hb(191),
+      Ob = hb(86),
+      Gb = hb(2710),
+      Ub = hb(4156),
+      Lb = hb(604),
+      Yb = hb(36095);
+    const Sb = 1048576,
+      ab = 1024 * Sb,
+      Hb = 400 * Sb,
+      wb = 147456,
+      Zb = .5,
+      Xb = 1.5 * ab,
+      pb = 768 * Sb;
 
-    function dq(qq) {
-      return Bq + qq * Wq
+    function ob(bb) {
+      return Hb + bb * wb
     }
 
-    function jq(qq, Eq, gq) {
-      var lq, mq;
+    function Ab(bb, ub, hb) {
+      var Ob, Ub;
       let {
-        footprintBytes: xq,
-        basis: cq,
-        namesLimit: jq
-      } = function(qq) {
+        footprintBytes: Lb,
+        basis: Sb,
+        namesLimit: Ab
+      } = function(bb) {
         const {
-          os: Eq,
-          deviceMemory: gq
-        } = qq;
-        if ("ios" === Eq) switch ((0, Oq.h)(qq)) {
+          os: ub,
+          deviceMemory: hb
+        } = bb;
+        if ("ios" === ub) switch ((0, Gb.f)(bb)) {
           case "ipad_m":
             return {
-              footprintBytes: dq(Aq.c), basis: "ipad-m", namesLimit: !1
+              footprintBytes: ob(Yb.e), basis: "ipad-m", namesLimit: !1
             };
           case "ipad":
             return {
-              footprintBytes: Vq, basis: "ipad", namesLimit: !0
+              footprintBytes: pb, basis: "ipad", namesLimit: !0
             };
           case "iphone_6gb":
             return {
-              footprintBytes: aq, basis: "iphone-6gb", namesLimit: !0
+              footprintBytes: Xb, basis: "iphone-6gb", namesLimit: !0
             };
           case "iphone":
             return {
-              footprintBytes: Vq, basis: "iphone", namesLimit: !0
+              footprintBytes: pb, basis: "iphone", namesLimit: !0
             }
         }
-        return "number" === typeof gq && Number.isFinite(gq) && gq > 0 ? {
-          footprintBytes: gq * uq * Nq,
-          basis: `memory-${gq}`,
+        return "number" === typeof hb && Number.isFinite(hb) && hb > 0 ? {
+          footprintBytes: hb * ab * Zb,
+          basis: `memory-${hb}`,
           namesLimit: !0
-        } : "android" === Eq ? {
-          footprintBytes: Vq,
+        } : "android" === ub ? {
+          footprintBytes: pb,
           basis: "android",
           namesLimit: !0
         } : {
-          footprintBytes: dq(Aq.g),
+          footprintBytes: ob(Yb.k),
           basis: "unreported",
           namesLimit: !1
         }
-      }(qq);
-      if (gq) {
-        const qq = Math.min(xq, dq(Aq.c));
-        xq = Bq + Math.max(0, qq - Bq) / 2, cq += "+killed", jq = !0
+      }(bb);
+      if (hb) {
+        const bb = Math.min(Lb, ob(Yb.e));
+        Lb = Hb + Math.max(0, bb - Hb) / 2, Sb += "+killed", Ab = !0
       }
-      null !== Eq && dq(Eq) < xq && (xq = dq(Eq), cq += "+learned", jq = !0);
-      const Hq = function(qq) {
-          const Eq = Math.floor((qq - Bq) / Wq);
-          return Math.min(Aq.c, Math.max(Aq.f, Eq))
-        }(xq),
-        oq = (0, Aq.j)(Hq);
+      null !== ub && ob(ub) < Lb && (Lb = ob(ub), Sb += "+learned", Ab = !0);
+      const lb = function(bb) {
+          const ub = Math.floor((bb - Hb) / wb);
+          return Math.min(Yb.e, Math.max(Yb.g, ub))
+        }(Lb),
+        Kb = (0, Yb.m)(lb);
       return {
-        footprintBytes: xq,
-        shedFootprintBytes: jq ? Math.max(xq, dq(Hq)) : null,
-        chunkCap: Hq,
-        maxHorizDistance: null !== (lq = null === oq || void 0 === oq ? void 0 : oq.horizontal) && void 0 !== lq ? lq : Yq.c.maxChunkHorizAddDistance,
-        maxVertDistance: null !== (mq = null === oq || void 0 === oq ? void 0 : oq.vertical) && void 0 !== mq ? mq : Yq.c.maxChunkVertAddDistance,
-        basis: cq
+        footprintBytes: Lb,
+        shedFootprintBytes: Ab ? Math.max(Lb, ob(lb)) : null,
+        chunkCap: lb,
+        maxHorizDistance: null !== (Ob = null === Kb || void 0 === Kb ? void 0 : Kb.horizontal) && void 0 !== Ob ? Ob : Bb.e.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (Ub = null === Kb || void 0 === Kb ? void 0 : Kb.vertical) && void 0 !== Ub ? Ub : Bb.e.maxChunkVertAddDistance,
+        basis: Sb
       }
     }
-    let Hq = null;
+    let lb = null;
 
-    function oq() {
-      return jq({
-        os: (0, lq.getOperatingSystem)(),
+    function Kb() {
+      return Ab({
+        os: (0, Ob.getOperatingSystem)(),
         deviceMemory: navigator.deviceMemory,
-        ...(0, Oq.k)()
-      }, (0, mq.g)(), (0, xq.D)("wasm").length > 0)
+        ...(0, Gb.h)()
+      }, (0, Ub.e)(), (0, Lb.E)("wasm").length > 0)
     }
 
-    function Pq() {
-      return Hq ??= oq(), Hq
+    function Wb() {
+      return lb ??= Kb(), lb
     }
 
-    function Qq() {
-      var qq;
-      return (null !== (qq = Hq) && void 0 !== qq ? qq : oq()).basis
+    function Cb() {
+      var bb;
+      return (null !== (bb = lb) && void 0 !== bb ? bb : Kb()).basis
     }
 
-    function yq(qq, Eq) {
-      return qq.setChunkCap(Eq.chunkCap)
+    function db(bb, ub) {
+      return bb.setChunkCap(ub.chunkCap)
     }
   },
-  36912: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => lq,
-      f: () => Oq,
-      h: () => Wq,
-      j: () => xq,
-      l: () => Aq,
-      n: () => cq,
-      o: () => Bq,
-      q: () => uq,
-      t: () => mq
+  36504: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Ob,
+      d: () => Gb,
+      f: () => wb,
+      i: () => Lb,
+      j: () => Yb,
+      l: () => Sb,
+      n: () => Hb,
+      q: () => ab,
+      s: () => Ub
     });
-    var Yq = gq(1226);
-    let lq = function(qq) {
-        return qq[qq.Join = 0] = "Join", qq[qq.Leave = 1] = "Leave", qq[qq.Push = 2] = "Push", qq[qq.Cursor = 3] = "Cursor", qq[qq.Submit = 4] = "Submit", qq[qq.ReloadAsVariation = 5] = "ReloadAsVariation", qq[qq.CreateFile = 6] = "CreateFile", qq[qq.RenameFile = 7] = "RenameFile", qq[qq.DeleteFile = 8] = "DeleteFile", qq[qq.SetEngine = 9] = "SetEngine", qq[qq.RenameFolder = 10] = "RenameFolder", qq
+    var Bb = hb(1133);
+    let Ob = function(bb) {
+        return bb[bb.Join = 0] = "Join", bb[bb.Leave = 1] = "Leave", bb[bb.Push = 2] = "Push", bb[bb.Cursor = 3] = "Cursor", bb[bb.Submit = 4] = "Submit", bb[bb.ReloadAsVariation = 5] = "ReloadAsVariation", bb[bb.CreateFile = 6] = "CreateFile", bb[bb.RenameFile = 7] = "RenameFile", bb[bb.DeleteFile = 8] = "DeleteFile", bb[bb.SetEngine = 9] = "SetEngine", bb[bb.RenameFolder = 10] = "RenameFolder", bb
       }({}),
-      Oq = function(qq) {
-        return qq[qq.Joined = 0] = "Joined", qq[qq.Updates = 1] = "Updates", qq[qq.Presence = 2] = "Presence", qq[qq.RemoteCursor = 3] = "RemoteCursor", qq[qq.ForceClose = 4] = "ForceClose", qq[qq.LobbyFilesChanged = 5] = "LobbyFilesChanged", qq[qq.EngineSettings = 6] = "EngineSettings", qq
+      Gb = function(bb) {
+        return bb[bb.Joined = 0] = "Joined", bb[bb.Updates = 1] = "Updates", bb[bb.Presence = 2] = "Presence", bb[bb.RemoteCursor = 3] = "RemoteCursor", bb[bb.ForceClose = 4] = "ForceClose", bb[bb.LobbyFilesChanged = 5] = "LobbyFilesChanged", bb[bb.EngineSettings = 6] = "EngineSettings", bb
       }({});
 
-    function mq(qq) {
-      return "lobby" === qq.kind ? `lobby:${qq.path}` : `codeBlock:${qq.pos[0]},${qq.pos[1]},${qq.pos[2]}`
+    function Ub(bb) {
+      return "lobby" === bb.kind ? `lobby:${bb.path}` : `codeBlock:${bb.pos[0]},${bb.pos[1]},${bb.pos[2]}`
     }
 
-    function xq(qq) {
-      if ("lobby" === qq) return {
+    function Lb(bb) {
+      if ("lobby" === bb) return {
         kind: "lobby",
-        path: Yq.j
+        path: Bb.m
       };
-      if (qq.startsWith("lobby:")) {
-        const Eq = qq.slice(6);
-        return Bq(Eq) ? {
+      if (bb.startsWith("lobby:")) {
+        const ub = bb.slice(6);
+        return Hb(ub) ? {
           kind: "lobby",
-          path: Eq
+          path: ub
         } : null
       }
-      const Eq = qq.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
-      return Eq ? {
+      const ub = bb.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
+      return ub ? {
         kind: "codeBlock",
-        pos: [parseInt(Eq[1]), parseInt(Eq[2]), parseInt(Eq[3])]
+        pos: [parseInt(ub[1]), parseInt(ub[2]), parseInt(ub[3])]
       } : null
     }
 
-    function Aq(qq) {
-      return qq.endsWith(".d.ts")
+    function Yb(bb) {
+      return bb.endsWith(".d.ts")
     }
 
-    function cq(qq) {
-      return qq.endsWith(".ts") && !Aq(qq)
+    function Sb(bb) {
+      return bb.endsWith(".ts") && !Yb(bb)
     }
-    const uq = 64;
+    const ab = 64;
 
-    function Bq(qq) {
-      if (!qq || qq !== qq.trim()) return !1;
-      if (qq.length > uq) return !1;
-      if (qq.startsWith("/") || qq.includes("\\") || qq.includes("\0")) return !1;
-      if (!Aq(qq) && !cq(qq) && ! function(qq) {
-          return qq.endsWith(".js") && !qq.endsWith(".min.js") && !qq.endsWith(".bundle.js")
-        }(qq)) return !1;
-      const Eq = qq.split("/");
-      for (const gq of Eq)
-        if ("" === gq || "." === gq || ".." === gq) return !1;
+    function Hb(bb) {
+      if (!bb || bb !== bb.trim()) return !1;
+      if (bb.length > ab) return !1;
+      if (bb.startsWith("/") || bb.includes("\\") || bb.includes("\0")) return !1;
+      if (!Yb(bb) && !Sb(bb) && ! function(bb) {
+          return bb.endsWith(".js") && !bb.endsWith(".min.js") && !bb.endsWith(".bundle.js")
+        }(bb)) return !1;
+      const ub = bb.split("/");
+      for (const hb of ub)
+        if ("" === hb || "." === hb || ".." === hb) return !1;
       return !0
     }
-    const Wq = 14e3
+    const wb = 14e3
   },
-  38974: (qq, Eq, gq) => {
-    function Yq(qq, Eq, gq, Yq, lq) {
-      var Oq = {};
-      return Object.keys(Yq).forEach((function(qq) {
-        Oq[qq] = Yq[qq]
-      })), Oq.enumerable = !!Oq.enumerable, Oq.configurable = !!Oq.configurable, ("value" in Oq || Oq.initializer) && (Oq.writable = !0), Oq = gq.slice().reverse().reduce((function(gq, Yq) {
-        return Yq(qq, Eq, gq) || gq
-      }), Oq), lq && void 0 !== Oq.initializer && (Oq.value = Oq.initializer ? Oq.initializer.call(lq) : void 0, Oq.initializer = void 0), void 0 === Oq.initializer && (Object.defineProperty(qq, Eq, Oq), Oq = null), Oq
+  38657: (bb, ub, hb) => {
+    function Bb(bb, ub, hb, Bb, Ob) {
+      var Gb = {};
+      return Object.keys(Bb).forEach((function(bb) {
+        Gb[bb] = Bb[bb]
+      })), Gb.enumerable = !!Gb.enumerable, Gb.configurable = !!Gb.configurable, ("value" in Gb || Gb.initializer) && (Gb.writable = !0), Gb = hb.slice().reverse().reduce((function(hb, Bb) {
+        return Bb(bb, ub, hb) || hb
+      }), Gb), Ob && void 0 !== Gb.initializer && (Gb.value = Gb.initializer ? Gb.initializer.call(Ob) : void 0, Gb.initializer = void 0), void 0 === Gb.initializer && (Object.defineProperty(bb, ub, Gb), Gb = null), Gb
     }
-    gq.d(Eq, {
-      c: () => Yq
+    hb.d(ub, {
+      b: () => Bb
     })
   },
-  38968: (qq, Eq, gq) => {
-    function Yq(qq, Eq, gq, Yq) {
-      gq && Object.defineProperty(qq, Eq, {
-        enumerable: gq.enumerable,
-        configurable: gq.configurable,
-        writable: gq.writable,
-        value: gq.initializer ? gq.initializer.call(Yq) : void 0
+  38654: (bb, ub, hb) => {
+    function Bb(bb, ub, hb, Bb) {
+      hb && Object.defineProperty(bb, ub, {
+        enumerable: hb.enumerable,
+        configurable: hb.configurable,
+        writable: hb.writable,
+        value: hb.initializer ? hb.initializer.call(Bb) : void 0
       })
     }
-    gq.d(Eq, {
-      d: () => Yq
+    hb.d(ub, {
+      c: () => Bb
     })
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

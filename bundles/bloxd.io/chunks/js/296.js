@@ -1,261 +1,261 @@
 export const id = 296;
 export const ids = [296];
 export const modules = {
-  41459: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Wq,
-      f: () => jq,
-      i: () => Nq,
-      l: () => aq,
-      o: () => oq,
-      r: () => Hq
+  41164: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => wb,
+      e: () => Ab,
+      f: () => Zb,
+      g: () => Xb,
+      h: () => Kb,
+      k: () => lb
     });
-    var Yq = gq(41402);
-    var lq = "Babylon Lite v1.32.0",
-      Oq = gq(41467);
+    var Bb = hb(41121);
+    var Ob = "Babylon Lite v1.32.0",
+      Gb = hb(41173);
 
-    function mq(qq) {
-      return "clientWidth" in qq
+    function Ub(bb) {
+      return "clientWidth" in bb
     }
-    var xq = 1;
+    var Lb = 1;
 
-    function Aq(qq, Eq, gq) {
-      const Aq = Eq.getContext("webgpu");
-      Aq || (0, Yq.d)(54), mq(Eq) && Eq.setAttribute("data-engine", lq);
-      const cq = gq?.format ?? navigator.gpu.getPreferredCanvasFormat(),
-        uq = gq?.srgb ? (Bq = cq).endsWith("-srgb") ? Bq : `${Bq}-srgb` : cq;
-      var Bq;
-      const Wq = gq?.alphaMode ?? "opaque";
-      Aq.configure({
-        device: qq._device,
-        format: cq,
-        alphaMode: Wq,
-        viewFormats: [uq]
+    function Yb(bb, ub, hb) {
+      const Yb = ub.getContext("webgpu");
+      Yb || (0, Bb.e)(54), Ub(ub) && ub.setAttribute("data-engine", Ob);
+      const Sb = hb?.format ?? navigator.gpu.getPreferredCanvasFormat(),
+        ab = hb?.srgb ? (Hb = Sb).endsWith("-srgb") ? Hb : `${Hb}-srgb` : Sb;
+      var Hb;
+      const wb = hb?.alphaMode ?? "opaque";
+      Yb.configure({
+        device: bb._device,
+        format: Sb,
+        alphaMode: wb,
+        viewFormats: [ab]
       });
-      const Nq = 1 === gq?.msaaSamples ? 1 : 4,
-        aq = (0, Oq.d)({
+      const Zb = 1 === hb?.msaaSamples ? 1 : 4,
+        Xb = (0, Gb.e)({
           lbl: "swapchain",
-          format: uq,
+          format: ab,
           samples: 1,
           size: {
             width: 0,
             height: 0
           }
         });
-      return aq._eager = !0, {
-        engine: qq,
-        canvas: Eq,
-        format: uq,
-        msaaSamples: Nq,
-        scRT: aq,
-        maxDevicePixelRatio: gq?.maxDevicePixelRatio ?? 1 / 0,
-        _uniqueId: xq++,
-        _context: Aq,
-        _configureFormat: cq,
-        _alphaMode: Wq,
+      return Xb._eager = !0, {
+        engine: bb,
+        canvas: ub,
+        format: ab,
+        msaaSamples: Zb,
+        scRT: Xb,
+        maxDevicePixelRatio: hb?.maxDevicePixelRatio ?? 1 / 0,
+        _uniqueId: Lb++,
+        _context: Yb,
+        _configureFormat: Sb,
+        _alphaMode: wb,
         _renderingContexts: []
       }
     }
 
-    function cq(qq) {
-      const Eq = qq._context.getCurrentTexture(),
-        gq = qq.scRT;
-      gq._colorTexture = Eq, gq._colorView = Eq.createView({
-        format: qq.format
-      }), gq._width = Eq.width, gq._height = Eq.height
+    function Sb(bb) {
+      const ub = bb._context.getCurrentTexture(),
+        hb = bb.scRT;
+      hb._colorTexture = ub, hb._colorView = ub.createView({
+        format: bb.format
+      }), hb._width = ub.width, hb._height = ub.height
     }
 
-    function uq(qq) {
-      const Eq = qq.canvas;
-      if (!mq(Eq)) return;
-      const gq = qq._w ?? Eq.clientWidth,
-        Yq = qq._h ?? Eq.clientHeight;
-      if (!(gq > 0 && Yq > 0)) return;
-      const lq = Math.min(globalThis.devicePixelRatio || 1, qq.maxDevicePixelRatio);
-      Bq(qq, gq * lq | 0, Yq * lq | 0)
+    function ab(bb) {
+      const ub = bb.canvas;
+      if (!Ub(ub)) return;
+      const hb = bb._w ?? ub.clientWidth,
+        Bb = bb._h ?? ub.clientHeight;
+      if (!(hb > 0 && Bb > 0)) return;
+      const Ob = Math.min(globalThis.devicePixelRatio || 1, bb.maxDevicePixelRatio);
+      Hb(bb, hb * Ob | 0, Bb * Ob | 0)
     }
 
-    function Bq(qq, Eq, gq) {
-      const Yq = qq.canvas,
-        lq = 0 | Eq,
-        Oq = 0 | gq;
-      if (lq > 0 && Oq > 0 && (lq !== Yq.width || Oq !== Yq.height)) {
-        Yq.width = lq, Yq.height = Oq, qq.scRT._width = lq, qq.scRT._height = Oq;
-        for (const Eq of qq._renderingContexts) Eq._resize?.()
+    function Hb(bb, ub, hb) {
+      const Bb = bb.canvas,
+        Ob = 0 | ub,
+        Gb = 0 | hb;
+      if (Ob > 0 && Gb > 0 && (Ob !== Bb.width || Gb !== Bb.height)) {
+        Bb.width = Ob, Bb.height = Gb, bb.scRT._width = Ob, bb.scRT._height = Gb;
+        for (const ub of bb._renderingContexts) ub._resize?.()
       }
     }
-    var Wq = 0;
+    var wb = 0;
 
-    function Nq(qq, Eq) {
-      return -1 !== qq._renderingContexts.indexOf(Eq)
+    function Zb(bb, ub) {
+      return -1 !== bb._renderingContexts.indexOf(ub)
     }
 
-    function aq(qq, Eq) {
-      return -1 === qq._renderingContexts.indexOf(Eq) && (qq._renderingContexts.push(Eq), !0)
+    function Xb(bb, ub) {
+      return -1 === bb._renderingContexts.indexOf(ub) && (bb._renderingContexts.push(ub), !0)
     }
-    var Vq = null;
-    var dq = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
-    async function jq(qq, Eq) {
-      const Oq = await navigator.gpu.requestAdapter({
+    var pb = null;
+    var ob = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
+    async function Ab(bb, ub) {
+      const Gb = await navigator.gpu.requestAdapter({
         powerPreference: "high-performance",
-        ...Vq ? Vq() : {}
+        ...pb ? pb() : {}
       });
-      Oq || (0, Yq.d)(47);
-      const mq = Vq?.deviceFeatures?.(Oq, Eq) ?? function(qq) {
-          return dq.filter((Eq => qq.features.has(Eq)))
-        }(Oq),
-        xq = await Oq.requestDevice({
-          requiredFeatures: mq,
-          requiredLimits: Eq?.requiredLimits
+      Gb || (0, Bb.e)(47);
+      const Ub = pb?.deviceFeatures?.(Gb, ub) ?? function(bb) {
+          return ob.filter((ub => bb.features.has(ub)))
+        }(Gb),
+        Lb = await Gb.requestDevice({
+          requiredFeatures: Ub,
+          requiredLimits: ub?.requiredLimits
         });
-      console.log(`${lq} - WebGPU engine`);
-      const Bq = !!Eq?.useHighPrecisionMatrix,
-        Wq = !!Eq?.useFloatingOrigin;
-      if (Wq && !Bq && (0, Yq.d)(48), Bq) {
+      console.log(`${Ob} - WebGPU engine`);
+      const Hb = !!ub?.useHighPrecisionMatrix,
+        wb = !!ub?.useFloatingOrigin;
+      if (wb && !Hb && (0, Bb.e)(48), Hb) {
         const {
-          allocateF64Mat4: qq
-        } = await gq.e(350).then((() => gq(61205)));
+          allocateF64Mat4: bb
+        } = await hb.e(350).then((() => hb(60665)));
         0
       }
-      let Nq, aq, jq, Hq;
-      if (Wq) {
+      let Zb, Xb, Ab, lb;
+      if (wb) {
         const [{
-          wrapRenderableForFO: qq,
-          lightFoVersion: Eq,
-          applyLightFoOffset: Yq
+          wrapRenderableForFO: bb,
+          lightFoVersion: ub,
+          applyLightFoOffset: Bb
         }, {
-          makePackMeshWorld: lq
-        }] = await Promise.all([gq.e(351).then((() => gq(61207))), gq.e(352).then((() => gq(61212)))]);
-        Nq = qq, aq = lq, jq = Eq, Hq = Yq
+          makePackMeshWorld: Ob
+        }] = await Promise.all([hb.e(351).then((() => hb(60674))), hb.e(352).then((() => hb(60683)))]);
+        Zb = bb, Xb = Ob, Ab = ub, lb = Bb
       }
-      const oq = {
-          _device: xq
+      const Kb = {
+          _device: Lb
         },
-        Pq = [oq];
-      return Object.assign(oq, {
-        engine: oq,
-        surfaces: Pq,
-        _surfaces: Pq,
-        _device: xq,
-        _options: Eq,
+        Wb = [Kb];
+      return Object.assign(Kb, {
+        engine: Kb,
+        surfaces: Wb,
+        _surfaces: Wb,
+        _device: Lb,
+        _options: ub,
         drawCallCount: 0,
         gpuFrameTimeMs: 0,
-        useHighPrecisionMatrix: Bq,
-        useFloatingOrigin: Wq,
+        useHighPrecisionMatrix: Hb,
+        useFloatingOrigin: wb,
         _animFrameId: 0,
         _renderFn: null,
         _currentEncoder: void 0,
         _currentDelta: 0,
         _cbs: [],
-        _wrapRenderableForFO: Nq,
-        _makePackMeshWorld: aq,
-        _lightFoVersion: jq,
-        _applyLightFoOffset: Hq
-      }, Aq(oq, qq, Eq)), uq(oq), cq(oq), oq
+        _wrapRenderableForFO: Zb,
+        _makePackMeshWorld: Xb,
+        _lightFoVersion: Ab,
+        _applyLightFoOffset: lb
+      }, Yb(Kb, bb, ub)), ab(Kb), Sb(Kb), Kb
     }
 
-    function Hq(qq, Eq, gq) {
-      Bq(qq, Eq, gq)
+    function lb(bb, ub, hb) {
+      Hb(bb, ub, hb)
     }
 
-    function oq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qq.surfaces;
-      if (gq !== qq.surfaces)
-        for (let lq = gq.length; lq--;) gq[lq].engine !== qq && (0, Yq.d)(49);
-      Pq(qq, Eq, gq)
+    function Kb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bb.surfaces;
+      if (hb !== bb.surfaces)
+        for (let Ob = hb.length; Ob--;) hb[Ob].engine !== bb && (0, Bb.e)(49);
+      Wb(bb, ub, hb)
     }
 
-    function Pq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qq._surfaces,
-        Yq = 0;
-      for (let Oq = gq.length; Oq--;) Yq += gq[Oq]._renderingContexts.length;
-      if (!Yq) return qq.drawCallCount = 0, qq._flushGpuRetirements?.(qq);
-      const lq = qq._device.createCommandEncoder({
+    function Wb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bb._surfaces,
+        Bb = 0;
+      for (let Gb = hb.length; Gb--;) Bb += hb[Gb]._renderingContexts.length;
+      if (!Bb) return bb.drawCallCount = 0, bb._flushGpuRetirements?.(bb);
+      const Ob = bb._device.createCommandEncoder({
         label: "frame"
       });
-      qq._currentEncoder = lq, qq._currentDelta = Eq;
+      bb._currentEncoder = Ob, bb._currentDelta = ub;
       try {
-        qq._gpuTimerBegin?.(lq), Yq = 0;
-        for (let qq = 0; qq < gq.length; qq++) {
-          const Eq = gq[qq];
-          Eq._capturePreFrame?.(Eq), cq(Eq);
-          const lq = Eq._renderingContexts;
-          for (let qq = 0; qq < lq.length; qq++) {
-            const Eq = lq[qq];
-            Eq._update(), Yq += Eq._drawCallsPre + Eq._record()
+        bb._gpuTimerBegin?.(Ob), Bb = 0;
+        for (let bb = 0; bb < hb.length; bb++) {
+          const ub = hb[bb];
+          ub._capturePreFrame?.(ub), Sb(ub);
+          const Ob = ub._renderingContexts;
+          for (let bb = 0; bb < Ob.length; bb++) {
+            const ub = Ob[bb];
+            ub._update(), Bb += ub._drawCallsPre + ub._record()
           }
         }
-        const Eq = qq._currentEncoder;
-        for (let qq = 0; qq < gq.length; qq++) {
-          const Yq = gq[qq];
-          Yq._captureService?.(Yq, Eq)
+        const ub = bb._currentEncoder;
+        for (let bb = 0; bb < hb.length; bb++) {
+          const Bb = hb[bb];
+          Bb._captureService?.(Bb, ub)
         }
-        qq._gpuTimerEnd?.(Eq), qq._cbs[0] = Eq.finish(), qq._device.queue.submit(qq._cbs), qq._flushGpuRetirements?.(qq), qq.drawCallCount = Yq, qq._gpuTimerResolve?.()
+        bb._gpuTimerEnd?.(ub), bb._cbs[0] = ub.finish(), bb._device.queue.submit(bb._cbs), bb._flushGpuRetirements?.(bb), bb.drawCallCount = Bb, bb._gpuTimerResolve?.()
       } finally {
-        qq._currentEncoder = void 0
+        bb._currentEncoder = void 0
       }
     }
   },
-  41406: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq,
-      c: () => Oq,
-      f: () => Yq
+  41128: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Ob,
+      i: () => Gb,
+      m: () => Bb
     });
-    var Yq = globalThis.GPUTextureUsage,
-      lq = globalThis.GPUBufferUsage,
-      Oq = globalThis.GPUShaderStage;
+    var Bb = globalThis.GPUTextureUsage,
+      Ob = globalThis.GPUBufferUsage,
+      Gb = globalThis.GPUShaderStage;
     globalThis.GPUColorWrite
   },
-  41489: (qq, Eq, gq) => {
-    function Yq(qq) {
-      lq(qq.splice(0))
+  41188: (bb, ub, hb) => {
+    function Bb(bb) {
+      Ob(bb.splice(0))
     }
 
-    function lq(qq) {
-      for (const gq of qq) try {
-        gq()
-      } catch (Eq) {
-        console.error("GPU resource retirement failed.", Eq)
+    function Ob(bb) {
+      for (const hb of bb) try {
+        hb()
+      } catch (ub) {
+        console.error("GPU resource retirement failed.", ub)
       }
     }
 
-    function Oq(qq, Eq) {
-      qq._flushGpuRetirements ??= mq, (qq._retirements ??= []).push(Eq)
+    function Gb(bb, ub) {
+      bb._flushGpuRetirements ??= Ub, (bb._retirements ??= []).push(ub)
     }
 
-    function mq(qq) {
-      const Eq = qq._retirements;
-      if (!Eq) return;
-      qq._retirements = null;
-      const gq = qq._retiring ??= new Set;
-      gq.add(Eq), queueMicrotask((() => {
-        qq._device.queue.onSubmittedWorkDone().then((() => {
-          gq.delete(Eq), Yq(Eq)
+    function Ub(bb) {
+      const ub = bb._retirements;
+      if (!ub) return;
+      bb._retirements = null;
+      const hb = bb._retiring ??= new Set;
+      hb.add(ub), queueMicrotask((() => {
+        bb._device.queue.onSubmittedWorkDone().then((() => {
+          hb.delete(ub), Bb(ub)
         })).catch((() => {}))
       }))
     }
-    gq.d(Eq, {
-      c: () => Oq
+    hb.d(ub, {
+      d: () => Gb
     })
   },
-  41467: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Oq,
-      h: () => mq,
-      l: () => xq
+  41173: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Gb,
+      h: () => Ub,
+      l: () => Lb
     });
-    var Yq = gq(41406);
+    var Bb = hb(41128);
 
-    function lq(qq) {
-      const Eq = qq.size;
-      return "canvas" in Eq ? Eq.canvas : Eq
+    function Ob(bb) {
+      const ub = bb.size;
+      return "canvas" in ub ? ub.canvas : ub
     }
 
-    function Oq(qq) {
+    function Gb(bb) {
       return {
-        _descriptor: qq,
-        _resolveSize: lq,
+        _descriptor: bb,
+        _resolveSize: Ob,
         _colorTexture: null,
         _colorView: null,
         _depthTexture: null,
@@ -265,609 +265,609 @@ export const modules = {
       }
     }
 
-    function mq(qq, Eq) {
-      if (qq._eager) return void qq._syncEager?.(Eq);
-      xq(qq);
-      const gq = qq._descriptor,
+    function Ub(bb, ub) {
+      if (bb._eager) return void bb._syncEager?.(ub);
+      Lb(bb);
+      const hb = bb._descriptor,
         {
-          width: Oq,
-          height: mq
-        } = (qq._resolveSize ?? lq)(gq);
-      qq._width = Oq, qq._height = mq;
-      const Aq = Eq._device;
-      gq.format && (qq._colorTexture = Aq.createTexture({
-        label: gq.lbl,
+          width: Gb,
+          height: Ub
+        } = (bb._resolveSize ?? Ob)(hb);
+      bb._width = Gb, bb._height = Ub;
+      const Yb = ub._device;
+      hb.format && (bb._colorTexture = Yb.createTexture({
+        label: hb.lbl,
         size: {
-          width: Oq,
-          height: mq
+          width: Gb,
+          height: Ub
         },
-        format: gq.format,
-        sampleCount: gq.samples,
-        usage: Yq.f.RENDER_ATTACHMENT | Yq.f.TEXTURE_BINDING | Yq.f.COPY_SRC | Yq.f.COPY_DST
-      }), qq._colorView = qq._colorTexture.createView()), gq.dFormat && (qq._depthTexture = Aq.createTexture({
-        label: gq.lbl,
+        format: hb.format,
+        sampleCount: hb.samples,
+        usage: Bb.m.RENDER_ATTACHMENT | Bb.m.TEXTURE_BINDING | Bb.m.COPY_SRC | Bb.m.COPY_DST
+      }), bb._colorView = bb._colorTexture.createView()), hb.dFormat && (bb._depthTexture = Yb.createTexture({
+        label: hb.lbl,
         size: {
-          width: Oq,
-          height: mq
+          width: Gb,
+          height: Ub
         },
-        format: gq.dFormat,
-        sampleCount: gq.samples,
-        usage: Yq.f.RENDER_ATTACHMENT | Yq.f.TEXTURE_BINDING
-      }), qq._depthView = qq._depthTexture.createView())
+        format: hb.dFormat,
+        sampleCount: hb.samples,
+        usage: Bb.m.RENDER_ATTACHMENT | Bb.m.TEXTURE_BINDING
+      }), bb._depthView = bb._depthTexture.createView())
     }
 
-    function xq(qq) {
-      if (!qq || qq._eager && !qq._disposeAttachments) return;
-      const Eq = qq._colorTexture,
-        gq = qq._depthTexture;
-      if (qq._colorTexture = qq._depthTexture = null, qq._colorView = qq._depthView = null, qq._width = qq._height = 0, qq._disposeAttachments) qq._disposeAttachments(Eq, gq);
+    function Lb(bb) {
+      if (!bb || bb._eager && !bb._disposeAttachments) return;
+      const ub = bb._colorTexture,
+        hb = bb._depthTexture;
+      if (bb._colorTexture = bb._depthTexture = null, bb._colorView = bb._depthView = null, bb._width = bb._height = 0, bb._disposeAttachments) bb._disposeAttachments(ub, hb);
       else try {
-        Eq?.destroy()
+        ub?.destroy()
       } finally {
-        !1 !== qq._ownsDepthTexture && gq?.destroy()
+        !1 !== bb._ownsDepthTexture && hb?.destroy()
       }
     }
   },
-  41483: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Yq,
-      e: () => lq,
-      h: () => Oq
+  41184: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Bb,
+      f: () => Ob,
+      g: () => Gb
     });
-    var Yq = Float32Array,
-      lq = Float64Array,
-      Oq = Uint32Array
+    var Bb = Float32Array,
+      Ob = Float64Array,
+      Gb = Uint32Array
   },
-  41492: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Yq
+  41194: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Bb
     });
-    var Yq = 16
+    var Bb = 16
   },
-  41402: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => lq
+  41121: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Ob
     });
-    var Yq = null;
+    var Bb = null;
 
-    function lq(qq) {
-      for (var Eq = arguments.length, gq = new Array(Eq > 1 ? Eq - 1 : 0), lq = 1; lq < Eq; lq++) gq[lq - 1] = arguments[lq];
-      const Oq = new Error(Yq?.(qq, gq) ?? `#${qq}`);
-      throw Oq.lite = gq, Oq
+    function Ob(bb) {
+      for (var ub = arguments.length, hb = new Array(ub > 1 ? ub - 1 : 0), Ob = 1; Ob < ub; Ob++) hb[Ob - 1] = arguments[Ob];
+      const Gb = new Error(Bb?.(bb, hb) ?? `#${bb}`);
+      throw Gb.lite = hb, Gb
     }
   },
-  41436: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => lq
+  41148: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Ob
     });
-    var Yq = gq(41422);
+    var Bb = hb(41132);
 
-    function lq(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const gq = Eq.compare,
-        lq = Eq.lodMinClamp ?? 0,
-        Oq = Eq.lodMaxClamp ?? 32,
-        mq = void 0 !== gq || 0 !== lq || 32 !== Oq ? `${gq??""}:${lq}:${Oq}` : "";
-      return (0, Yq.c)(qq, Eq, mq)
+    function Ob(bb) {
+      let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const hb = ub.compare,
+        Ob = ub.lodMinClamp ?? 0,
+        Gb = ub.lodMaxClamp ?? 32,
+        Ub = void 0 !== hb || 0 !== Ob || 32 !== Gb ? `${hb??""}:${Ob}:${Gb}` : "";
+      return (0, Bb.c)(bb, ub, Ub)
     }
   },
-  41413: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq
+  41130: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb
     });
-    var Yq = null;
+    var Bb = null;
 
-    function lq(qq) {
-      const Eq = Yq ??= new WeakMap;
-      Eq.set(qq, (Eq.get(qq) ?? 0) + 1)
+    function Ob(bb) {
+      const ub = Bb ??= new WeakMap;
+      ub.set(bb, (ub.get(bb) ?? 0) + 1)
     }
 
-    function Oq(qq) {
-      lq(qq.texture)
+    function Gb(bb) {
+      Ob(bb.texture)
     }
   },
-  41422: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => xq
+  41132: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Lb
     });
-    var Yq = null,
-      lq = "nearest",
-      Oq = "clamp-to-edge",
-      mq = {
-        minFilter: lq,
-        magFilter: lq,
-        mipmapFilter: lq,
-        addressModeU: Oq,
-        addressModeV: Oq,
-        addressModeW: Oq,
+    var Bb = null,
+      Ob = "nearest",
+      Gb = "clamp-to-edge",
+      Ub = {
+        minFilter: Ob,
+        magFilter: Ob,
+        mipmapFilter: Ob,
+        addressModeU: Gb,
+        addressModeV: Gb,
+        addressModeW: Gb,
         maxAnisotropy: 1
       };
 
-    function xq(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const lq = qq._device,
-        Oq = Yq ??= new WeakMap;
-      let xq = Oq.get(lq);
-      xq || Oq.set(lq, xq = new Map);
-      let Aq = gq;
-      for (const Yq in mq) {
-        const qq = Yq;
-        Aq += `:${Eq[qq]??mq[qq]}`
+    function Lb(bb) {
+      let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const Ob = bb._device,
+        Gb = Bb ??= new WeakMap;
+      let Lb = Gb.get(Ob);
+      Lb || Gb.set(Ob, Lb = new Map);
+      let Yb = hb;
+      for (const Bb in Ub) {
+        const bb = Bb;
+        Yb += `:${ub[bb]??Ub[bb]}`
       }
-      let cq = xq.get(Aq);
-      return cq || xq.set(Aq, cq = lq.createSampler(Eq)), cq
+      let Sb = Lb.get(Yb);
+      return Sb || Lb.set(Yb, Sb = Ob.createSampler(ub)), Sb
     }
   },
-  41475: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => pq,
-      g: () => Jq
+  41181: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => sb,
+      d: () => Ib
     });
-    var Yq = gq(41467),
-      lq = gq(41459);
+    var Bb = hb(41173),
+      Ob = hb(41164);
 
-    function Oq(qq, Eq) {
-      Eq._passes.length = 0, qq._currentProcessedTask = Eq;
+    function Gb(bb, ub) {
+      ub._passes.length = 0, bb._currentProcessedTask = ub;
       try {
-        Eq.record()
+        ub.record()
       } finally {
-        qq._currentProcessedTask = null
+        bb._currentProcessedTask = null
       }
     }
-    var mq = gq(41483);
+    var Ub = hb(41184);
 
-    function xq(qq) {
-      const Eq = qq.worldMatrixVersion;
-      if (qq._viewVer === Eq) return qq._viewCache;
-      const gq = qq._viewCache,
-        Yq = qq.worldMatrix,
-        lq = qq._useFloatingOrigin,
-        Oq = lq ? 0 : Yq[12],
-        mq = lq ? 0 : Yq[13],
-        xq = lq ? 0 : Yq[14];
-      return gq[0] = Yq[0], gq[1] = Yq[4], gq[2] = Yq[8], gq[3] = 0, gq[4] = Yq[1], gq[5] = Yq[5], gq[6] = Yq[9], gq[7] = 0, gq[8] = Yq[2], gq[9] = Yq[6], gq[10] = Yq[10], gq[11] = 0, gq[12] = -(Yq[0] * Oq + Yq[1] * mq + Yq[2] * xq), gq[13] = -(Yq[4] * Oq + Yq[5] * mq + Yq[6] * xq), gq[14] = -(Yq[8] * Oq + Yq[9] * mq + Yq[10] * xq), gq[15] = 1, qq._viewVer = Eq, gq
+    function Lb(bb) {
+      const ub = bb.worldMatrixVersion;
+      if (bb._viewVer === ub) return bb._viewCache;
+      const hb = bb._viewCache,
+        Bb = bb.worldMatrix,
+        Ob = bb._useFloatingOrigin,
+        Gb = Ob ? 0 : Bb[12],
+        Ub = Ob ? 0 : Bb[13],
+        Lb = Ob ? 0 : Bb[14];
+      return hb[0] = Bb[0], hb[1] = Bb[4], hb[2] = Bb[8], hb[3] = 0, hb[4] = Bb[1], hb[5] = Bb[5], hb[6] = Bb[9], hb[7] = 0, hb[8] = Bb[2], hb[9] = Bb[6], hb[10] = Bb[10], hb[11] = 0, hb[12] = -(Bb[0] * Gb + Bb[1] * Ub + Bb[2] * Lb), hb[13] = -(Bb[4] * Gb + Bb[5] * Ub + Bb[6] * Lb), hb[14] = -(Bb[8] * Gb + Bb[9] * Ub + Bb[10] * Lb), hb[15] = 1, bb._viewVer = ub, hb
     }
-    var Aq = null;
+    var Yb = null;
 
-    function cq(qq) {
-      return qq._projFov === qq.fov && qq._projNear === qq.nearPlane && qq._projFar === qq.farPlane || (qq._projFov = qq.fov, qq._projNear = qq.nearPlane, qq._projFar = qq.farPlane, qq._projRev = (qq._projRev ?? 0) + 1), qq.worldMatrixVersion + (qq._projRev ?? 0)
+    function Sb(bb) {
+      return bb._projFov === bb.fov && bb._projNear === bb.nearPlane && bb._projFar === bb.farPlane || (bb._projFov = bb.fov, bb._projNear = bb.nearPlane, bb._projFar = bb.farPlane, bb._projRev = (bb._projRev ?? 0) + 1), bb.worldMatrixVersion + (bb._projRev ?? 0)
     }
 
-    function uq(qq, Eq) {
-      const gq = cq(qq);
-      if (qq._projVer === gq && qq._projAspect === Eq) return qq._projCache;
-      const Yq = qq._projCache;
-      return null !== Aq && qq.ortho ? Aq(qq, Eq, Yq) : function(qq, Eq, gq, Yq, lq) {
-        const Oq = 1 / Math.tan(.5 * Eq),
-          mq = lq - Yq;
-        qq[0] = Oq / gq, qq[5] = Oq, qq[10] = -Yq / mq, qq[11] = 1, qq[14] = lq * Yq / mq
-      }(Yq, qq.fov, Eq, qq.nearPlane, qq.farPlane), qq._projVer = gq, qq._projAspect = Eq, Yq
+    function ab(bb, ub) {
+      const hb = Sb(bb);
+      if (bb._projVer === hb && bb._projAspect === ub) return bb._projCache;
+      const Bb = bb._projCache;
+      return null !== Yb && bb.ortho ? Yb(bb, ub, Bb) : function(bb, ub, hb, Bb, Ob) {
+        const Gb = 1 / Math.tan(.5 * ub),
+          Ub = Ob - Bb;
+        bb[0] = Gb / hb, bb[5] = Gb, bb[10] = -Bb / Ub, bb[11] = 1, bb[14] = Ob * Bb / Ub
+      }(Bb, bb.fov, ub, bb.nearPlane, bb.farPlane), bb._projVer = hb, bb._projAspect = ub, Bb
     }
-    var Bq = gq(41406);
+    var Hb = hb(41128);
 
-    function Wq(qq, Eq, gq) {
-      return qq._device.createBuffer({
-        label: gq,
-        size: (Yq = Eq, lq = 16, Math.ceil(Yq / lq) * lq),
-        usage: Bq.b.UNIFORM | Bq.b.COPY_DST
+    function wb(bb, ub, hb) {
+      return bb._device.createBuffer({
+        label: hb,
+        size: (Bb = ub, Ob = 16, Math.ceil(Bb / Ob) * Ob),
+        usage: Hb.e.UNIFORM | Hb.e.COPY_DST
       });
-      var Yq, lq
+      var Bb, Ob
     }
-    var Nq = gq(41489),
-      aq = null;
+    var Zb = hb(41188),
+      Xb = null;
 
-    function Vq(qq) {
-      const Eq = qq._device,
-        gq = aq ??= new WeakMap;
-      let Yq = gq.get(Eq);
-      return Yq || (Yq = Eq.createBindGroupLayout({
-        label: "PV",
+    function pb(bb) {
+      const ub = bb._device,
+        hb = Xb ??= new WeakMap;
+      let Bb = hb.get(ub);
+      return Bb || (Bb = ub.createBindGroupLayout({
+        label: "Xp",
         entries: [{
           binding: 0,
-          visibility: Bq.c.VERTEX | Bq.c.FRAGMENT,
+          visibility: Hb.i.VERTEX | Hb.i.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }, {
           binding: 1,
-          visibility: Bq.c.FRAGMENT,
+          visibility: Hb.i.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }]
-      }), gq.set(Eq, Yq)), Yq
+      }), hb.set(ub, Bb)), Bb
     }
 
-    function dq(qq, Eq, gq) {
-      const Yq = qq._device,
-        lq = Wq(qq, Eq.byteLength, gq);
+    function ob(bb, ub, hb) {
+      const Bb = bb._device,
+        Ob = wb(bb, ub.byteLength, hb);
       try {
-        Yq.queue.writeBuffer(lq, 0, Eq.buffer, Eq.byteOffset, Eq.byteLength)
-      } catch (Oq) {
-        throw lq.destroy(), Oq
+        Bb.queue.writeBuffer(Ob, 0, ub.buffer, ub.byteOffset, ub.byteLength)
+      } catch (Gb) {
+        throw Ob.destroy(), Gb
       }
-      return lq
+      return Ob
     }
-    var jq = gq(41492),
-      Hq = new mq.h(1),
-      oq = new mq.c(Hq.buffer);
+    var Ab = hb(41194),
+      lb = new Ub.g(1),
+      Kb = new Ub.c(lb.buffer);
 
-    function Pq(qq) {
-      let Eq = 0;
-      for (const gq of qq) Eq += gq._lightVersion ?? 0;
-      return Eq
+    function Wb(bb) {
+      let ub = 0;
+      for (const hb of bb) ub += hb._lightVersion ?? 0;
+      return ub
     }
 
-    function Qq(qq, Eq) {
-      qq.fill(0);
-      let gq = 0;
-      for (const Yq of Eq) {
-        if (gq >= jq.e) break;
-        Yq._writeLightUbo && (Yq._writeLightUbo(qq, 4 + 16 * gq), gq++)
+    function Cb(bb, ub) {
+      bb.fill(0);
+      let hb = 0;
+      for (const Bb of ub) {
+        if (hb >= Ab.e) break;
+        Bb._writeLightUbo && (Bb._writeLightUbo(bb, 4 + 16 * hb), hb++)
       }
-      Hq[0] = gq, qq[0] = oq[0]
+      lb[0] = hb, bb[0] = Kb[0]
     }
 
-    function yq(qq, Eq) {
-      let gq = Eq._lightGpuState;
-      const Yq = 16 + 16 * jq.e * 4;
-      if (gq && gq._byteSize === Yq) return gq;
-      const lq = !gq;
-      gq?._buffer.destroy();
-      const Oq = new mq.c(Yq / 4);
-      return Qq(Oq, Eq.lights), qq._applyLightFoOffset?.(Oq, Eq), gq = {
-        _buffer: dq(qq, Oq),
-        _scratch: Oq,
-        Gs: Pq(Eq.lights) + (qq._lightFoVersion?.(Eq) ?? 0),
-        _listVersion: Eq._lightListVersion ?? 0,
-        _lightCount: Eq.lights.length,
-        _byteSize: Yq
-      }, Eq._lightGpuState = gq, lq && Eq._disposables.push((() => {
-        Eq._lightGpuState?._buffer.destroy(), Eq._lightGpuState = void 0
-      })), gq
+    function db(bb, ub) {
+      let hb = ub._lightGpuState;
+      const Bb = 16 + 16 * Ab.e * 4;
+      if (hb && hb._byteSize === Bb) return hb;
+      const Ob = !hb;
+      hb?._buffer.destroy();
+      const Gb = new Ub.c(Bb / 4);
+      return Cb(Gb, ub.lights), bb._applyLightFoOffset?.(Gb, ub), hb = {
+        _buffer: ob(bb, Gb),
+        _scratch: Gb,
+        zq: Wb(ub.lights) + (bb._lightFoVersion?.(ub) ?? 0),
+        _listVersion: ub._lightListVersion ?? 0,
+        _lightCount: ub.lights.length,
+        _byteSize: Bb
+      }, ub._lightGpuState = hb, Ob && ub._disposables.push((() => {
+        ub._lightGpuState?._buffer.destroy(), ub._lightGpuState = void 0
+      })), hb
     }
 
-    function tq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      const lq = Eq;
-      if (0 === Yq && 16 === lq.length) return void qq.set(lq, gq);
-      const Oq = Yq,
-        mq = gq;
-      qq[mq + 0] = lq[Oq + 0], qq[mq + 1] = lq[Oq + 1], qq[mq + 2] = lq[Oq + 2], qq[mq + 3] = lq[Oq + 3], qq[mq + 4] = lq[Oq + 4], qq[mq + 5] = lq[Oq + 5], qq[mq + 6] = lq[Oq + 6], qq[mq + 7] = lq[Oq + 7], qq[mq + 8] = lq[Oq + 8], qq[mq + 9] = lq[Oq + 9], qq[mq + 10] = lq[Oq + 10], qq[mq + 11] = lq[Oq + 11], qq[mq + 12] = lq[Oq + 12], qq[mq + 13] = lq[Oq + 13], qq[mq + 14] = lq[Oq + 14], qq[mq + 15] = lq[Oq + 15]
+    function rb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      const Ob = ub;
+      if (0 === Bb && 16 === Ob.length) return void bb.set(Ob, hb);
+      const Gb = Bb,
+        Ub = hb;
+      bb[Ub + 0] = Ob[Gb + 0], bb[Ub + 1] = Ob[Gb + 1], bb[Ub + 2] = Ob[Gb + 2], bb[Ub + 3] = Ob[Gb + 3], bb[Ub + 4] = Ob[Gb + 4], bb[Ub + 5] = Ob[Gb + 5], bb[Ub + 6] = Ob[Gb + 6], bb[Ub + 7] = Ob[Gb + 7], bb[Ub + 8] = Ob[Gb + 8], bb[Ub + 9] = Ob[Gb + 9], bb[Ub + 10] = Ob[Gb + 10], bb[Ub + 11] = Ob[Gb + 11], bb[Ub + 12] = Ob[Gb + 12], bb[Ub + 13] = Ob[Gb + 13], bb[Ub + 14] = Ob[Gb + 14], bb[Ub + 15] = Ob[Gb + 15]
     }
 
-    function rq(qq, Eq, gq, Yq, lq) {
-      qq.fill(0);
-      const Oq = function(qq, Eq) {
-          const gq = cq(qq);
-          if (qq._vpVer === gq && qq._vpAspect === Eq) return qq._vpCache;
-          const Yq = qq._vpCache;
-          return function(qq, Eq, gq, Yq, lq, Oq) {
-            const mq = gq[Yq],
-              xq = gq[Yq + 1],
-              Aq = gq[Yq + 2],
-              cq = gq[Yq + 3],
-              uq = gq[Yq + 4],
-              Bq = gq[Yq + 5],
-              Wq = gq[Yq + 6],
-              Nq = gq[Yq + 7],
-              aq = gq[Yq + 8],
-              Vq = gq[Yq + 9],
-              dq = gq[Yq + 10],
-              jq = gq[Yq + 11],
-              Hq = gq[Yq + 12],
-              oq = gq[Yq + 13],
-              Pq = gq[Yq + 14],
-              Qq = gq[Yq + 15];
-            let yq = lq[Oq],
-              tq = lq[Oq + 1],
-              rq = lq[Oq + 2],
-              vq = lq[Oq + 3];
-            qq[Eq] = mq * yq + uq * tq + aq * rq + Hq * vq, qq[Eq + 1] = xq * yq + Bq * tq + Vq * rq + oq * vq, qq[Eq + 2] = Aq * yq + Wq * tq + dq * rq + Pq * vq, qq[Eq + 3] = cq * yq + Nq * tq + jq * rq + Qq * vq, yq = lq[Oq + 4], tq = lq[Oq + 5], rq = lq[Oq + 6], vq = lq[Oq + 7], qq[Eq + 4] = mq * yq + uq * tq + aq * rq + Hq * vq, qq[Eq + 5] = xq * yq + Bq * tq + Vq * rq + oq * vq, qq[Eq + 6] = Aq * yq + Wq * tq + dq * rq + Pq * vq, qq[Eq + 7] = cq * yq + Nq * tq + jq * rq + Qq * vq, yq = lq[Oq + 8], tq = lq[Oq + 9], rq = lq[Oq + 10], vq = lq[Oq + 11], qq[Eq + 8] = mq * yq + uq * tq + aq * rq + Hq * vq, qq[Eq + 9] = xq * yq + Bq * tq + Vq * rq + oq * vq, qq[Eq + 10] = Aq * yq + Wq * tq + dq * rq + Pq * vq, qq[Eq + 11] = cq * yq + Nq * tq + jq * rq + Qq * vq, yq = lq[Oq + 12], tq = lq[Oq + 13], rq = lq[Oq + 14], vq = lq[Oq + 15], qq[Eq + 12] = mq * yq + uq * tq + aq * rq + Hq * vq, qq[Eq + 13] = xq * yq + Bq * tq + Vq * rq + oq * vq, qq[Eq + 14] = Aq * yq + Wq * tq + dq * rq + Pq * vq, qq[Eq + 15] = cq * yq + Nq * tq + jq * rq + Qq * vq
-          }(Yq, 0, uq(qq, Eq), 0, xq(qq), 0), qq._vpVer = gq, qq._vpAspect = Eq, Yq
-        }(Yq, lq),
-        mq = xq(Yq),
-        Aq = Yq.worldMatrix;
-      tq(qq, Oq, 0), tq(qq, mq, 16), Eq.useFloatingOrigin ? (qq[32] = 0, qq[33] = 0, qq[34] = 0) : (qq[32] = Aq[12], qq[33] = Aq[13], qq[34] = Aq[14]), qq[87] = Eq.canvas.width;
-      const Bq = gq.imageProcessing;
-      qq[76] = Bq.exposure, qq[77] = Bq.contrast, qq[78] = gq._envTextures?.lodGenerationScale ?? .8, qq[79] = +Bq.toneMappingEnabled, qq[37] = Eq.canvas.height
+    function jb(bb, ub, hb, Bb, Ob) {
+      bb.fill(0);
+      const Gb = function(bb, ub) {
+          const hb = Sb(bb);
+          if (bb._vpVer === hb && bb._vpAspect === ub) return bb._vpCache;
+          const Bb = bb._vpCache;
+          return function(bb, ub, hb, Bb, Ob, Gb) {
+            const Ub = hb[Bb],
+              Lb = hb[Bb + 1],
+              Yb = hb[Bb + 2],
+              Sb = hb[Bb + 3],
+              ab = hb[Bb + 4],
+              Hb = hb[Bb + 5],
+              wb = hb[Bb + 6],
+              Zb = hb[Bb + 7],
+              Xb = hb[Bb + 8],
+              pb = hb[Bb + 9],
+              ob = hb[Bb + 10],
+              Ab = hb[Bb + 11],
+              lb = hb[Bb + 12],
+              Kb = hb[Bb + 13],
+              Wb = hb[Bb + 14],
+              Cb = hb[Bb + 15];
+            let db = Ob[Gb],
+              rb = Ob[Gb + 1],
+              jb = Ob[Gb + 2],
+              nb = Ob[Gb + 3];
+            bb[ub] = Ub * db + ab * rb + Xb * jb + lb * nb, bb[ub + 1] = Lb * db + Hb * rb + pb * jb + Kb * nb, bb[ub + 2] = Yb * db + wb * rb + ob * jb + Wb * nb, bb[ub + 3] = Sb * db + Zb * rb + Ab * jb + Cb * nb, db = Ob[Gb + 4], rb = Ob[Gb + 5], jb = Ob[Gb + 6], nb = Ob[Gb + 7], bb[ub + 4] = Ub * db + ab * rb + Xb * jb + lb * nb, bb[ub + 5] = Lb * db + Hb * rb + pb * jb + Kb * nb, bb[ub + 6] = Yb * db + wb * rb + ob * jb + Wb * nb, bb[ub + 7] = Sb * db + Zb * rb + Ab * jb + Cb * nb, db = Ob[Gb + 8], rb = Ob[Gb + 9], jb = Ob[Gb + 10], nb = Ob[Gb + 11], bb[ub + 8] = Ub * db + ab * rb + Xb * jb + lb * nb, bb[ub + 9] = Lb * db + Hb * rb + pb * jb + Kb * nb, bb[ub + 10] = Yb * db + wb * rb + ob * jb + Wb * nb, bb[ub + 11] = Sb * db + Zb * rb + Ab * jb + Cb * nb, db = Ob[Gb + 12], rb = Ob[Gb + 13], jb = Ob[Gb + 14], nb = Ob[Gb + 15], bb[ub + 12] = Ub * db + ab * rb + Xb * jb + lb * nb, bb[ub + 13] = Lb * db + Hb * rb + pb * jb + Kb * nb, bb[ub + 14] = Yb * db + wb * rb + ob * jb + Wb * nb, bb[ub + 15] = Sb * db + Zb * rb + Ab * jb + Cb * nb
+          }(Bb, 0, ab(bb, ub), 0, Lb(bb), 0), bb._vpVer = hb, bb._vpAspect = ub, Bb
+        }(Bb, Ob),
+        Ub = Lb(Bb),
+        Yb = Bb.worldMatrix;
+      rb(bb, Gb, 0), rb(bb, Ub, 16), ub.useFloatingOrigin ? (bb[32] = 0, bb[33] = 0, bb[34] = 0) : (bb[32] = Yb[12], bb[33] = Yb[13], bb[34] = Yb[14]), bb[87] = ub.canvas.width;
+      const Hb = hb.imageProcessing;
+      bb[76] = Hb.exposure, bb[77] = Hb.contrast, bb[78] = hb._envTextures?.lodGenerationScale ?? .8, bb[79] = +Hb.toneMappingEnabled, bb[37] = ub.canvas.height
     }
 
-    function vq(qq, Eq) {
+    function nb(bb, ub) {
       return {
-        _renderables: qq,
+        _renderables: bb,
         _opaqueBindings: [],
         _directBindings: [],
         _transparentBindings: [],
         _ob: [],
-        _lastVersion: Eq
+        _lastVersion: ub
       }
     }
 
-    function hq(qq, Eq, gq) {
-      qq.clr ??= !0;
-      const lq = qq.rt._descriptor,
-        Oq = qq.depth?._descriptor,
-        Aq = {
-          _colorFormat: lq.format,
-          _depthStencilFormat: Oq?.dFormat ?? lq.dFormat,
-          _depthCompare: lq.depthCompare ?? Oq?.depthCompare,
-          _sampleCount: lq.samples
+    function Db(bb, ub, hb) {
+      bb.clr ??= !0;
+      const Ob = bb.rt._descriptor,
+        Gb = bb.depth?._descriptor,
+        Yb = {
+          _colorFormat: Ob.format,
+          _depthStencilFormat: Gb?.dFormat ?? Ob.dFormat,
+          _depthCompare: Ob.depthCompare ?? Gb?.depthCompare,
+          _sampleCount: Ob.samples
         },
-        uq = {
+        ab = {
           loadOp: "clear",
           storeOp: "store"
         },
-        Bq = {
-          ...vq([], -1),
-          name: qq.name,
-          _config: qq,
-          _ownsTargets: !qq.sharedRt,
-          engine: Eq,
-          PV: gq,
+        Hb = {
+          ...nb([], -1),
+          name: bb.name,
+          _config: bb,
+          _ownsTargets: !bb.sharedRt,
+          engine: ub,
+          Xp: hb,
           _passes: [],
           _renderPassDescriptor: {
-            colorAttachments: [uq]
+            colorAttachments: [ab]
           },
-          _colorAttachment: uq,
-          _sceneUBO: Wq(Eq, 368),
-          _suData: new mq.c(92),
+          _colorAttachment: ab,
+          _sceneUBO: wb(ub, 368),
+          _suData: new Ub.c(92),
           _sceneUboCacheKey: [],
-          _targetSignature: Aq,
+          _targetSignature: Yb,
           _updateContext: {
             targetWidth: 0,
             targetHeight: 0
           },
           record() {
-            if (Bq._disposed) throw new Error("RenderTask has been disposed.");
-            Bq._recordExplicit ? Bq._recordExplicit(Bq, !0) : iq(Bq, !1 !== qq.autoMirror ? gq._renderables.slice() : Bq._renderables, !0)
+            if (Hb._disposed) throw new Error("RenderTask has been disposed.");
+            Hb._recordExplicit ? Hb._recordExplicit(Hb, !0) : gb(Hb, !1 !== bb.autoMirror ? hb._renderables.slice() : Hb._renderables, !0)
           },
-          execute: () => function(qq, Eq, gq) {
-            if (!1 === qq.enabled) return 0;
-            const Yq = qq.PV;
-            ! function(qq, Eq, gq) {
-              const Yq = qq.PV;
-              !1 !== qq._config.autoMirror && qq._lastVersion !== Yq._renderableVersion && iq(qq, Yq._renderables.slice());
-              fq(qq, Eq);
-              const lq = qq._updateContext,
-                Oq = qq._config.cam ?? Yq.camera;
-              gq._colorFormat && (qq._config._skipClusteredLights || Yq._clusteredLightUpdater?.(Oq, lq.targetWidth, lq.targetHeight), function(qq, Eq) {
-                const gq = yq(qq, Eq),
-                  Yq = Pq(Eq.lights) + (qq._lightFoVersion?.(Eq) ?? 0),
-                  lq = Eq._lightListVersion ?? 0;
-                Yq === gq.Gs && lq === gq._listVersion && Eq.lights.length === gq._lightCount || (gq.Gs = Yq, gq._listVersion = lq, gq._lightCount = Eq.lights.length, Qq(gq._scratch, Eq.lights), qq._applyLightFoOffset?.(gq._scratch, Eq), qq._device.queue.writeBuffer(gq._buffer, 0, gq._scratch)), gq._buffer
-              }(Eq, Yq));
-              (function(qq, Eq, gq, Yq) {
-                if (!Yq) return;
-                const lq = Yq.viewport,
-                  Oq = qq._config.rt,
-                  mq = (qq._config.cs ? Eq.canvas.width / Eq.canvas.height : Oq._width / Oq._height) * (lq ? lq.width / lq.height : 1),
-                  xq = gq.fog,
-                  Aq = gq.imageProcessing,
-                  uq = cq(Yq),
-                  Bq = gq._envTextures,
-                  Wq = qq._sceneUboCacheKey;
-                if (Wq[0] === Yq && Wq[1] === xq && Wq[2] === uq && Wq[3] === mq && Wq[4] === Aq.exposure && Wq[5] === Aq.contrast && Wq[6] === Bq) return;
-                Wq[0] = Yq, Wq[1] = xq, Wq[2] = uq, Wq[3] = mq, Wq[4] = Aq.exposure, Wq[5] = Aq.contrast, Wq[6] = Bq;
-                const Nq = qq._suData;
-                rq(Nq, Eq, gq, Yq, mq);
-                const aq = gq._sceneUboContributors;
-                if (aq)
-                  for (const cq of aq) cq(Nq, gq);
-                Eq._device.queue.writeBuffer(qq._sceneUBO, 0, Nq)
-              })(qq, Eq, Yq, Oq), lq.X3 = Oq, qq._batchState?._reset(), Mq(qq._opaqueBindings, lq), Mq(qq._directBindings, lq), Mq(qq._transparentBindings, lq), qq._batchState?._flush(Eq),
-                function(qq, Eq) {
-                  const gq = qq._transparentBindings;
-                  if (gq.length <= 1 || !Eq) return;
-                  const Yq = xq(Eq);
-                  for (const lq of gq) {
-                    const qq = lq.renderable._worldCenter;
-                    lq._sortDistance = qq ? qq[0] * Yq[2] + qq[1] * Yq[6] + qq[2] * Yq[10] + Yq[14] : 0
+          execute: () => function(bb, ub, hb) {
+            if (!1 === bb.enabled) return 0;
+            const Bb = bb.Xp;
+            ! function(bb, ub, hb) {
+              const Bb = bb.Xp;
+              !1 !== bb._config.autoMirror && bb._lastVersion !== Bb._renderableVersion && gb(bb, Bb._renderables.slice());
+              vb(bb, ub);
+              const Ob = bb._updateContext,
+                Gb = bb._config.cam ?? Bb.camera;
+              hb._colorFormat && (bb._config._skipClusteredLights || Bb._clusteredLightUpdater?.(Gb, Ob.targetWidth, Ob.targetHeight), function(bb, ub) {
+                const hb = db(bb, ub),
+                  Bb = Wb(ub.lights) + (bb._lightFoVersion?.(ub) ?? 0),
+                  Ob = ub._lightListVersion ?? 0;
+                Bb === hb.zq && Ob === hb._listVersion && ub.lights.length === hb._lightCount || (hb.zq = Bb, hb._listVersion = Ob, hb._lightCount = ub.lights.length, Cb(hb._scratch, ub.lights), bb._applyLightFoOffset?.(hb._scratch, ub), bb._device.queue.writeBuffer(hb._buffer, 0, hb._scratch)), hb._buffer
+              }(ub, Bb));
+              (function(bb, ub, hb, Bb) {
+                if (!Bb) return;
+                const Ob = Bb.viewport,
+                  Gb = bb._config.rt,
+                  Ub = (bb._config.cs ? ub.canvas.width / ub.canvas.height : Gb._width / Gb._height) * (Ob ? Ob.width / Ob.height : 1),
+                  Lb = hb.fog,
+                  Yb = hb.imageProcessing,
+                  ab = Sb(Bb),
+                  Hb = hb._envTextures,
+                  wb = bb._sceneUboCacheKey;
+                if (wb[0] === Bb && wb[1] === Lb && wb[2] === ab && wb[3] === Ub && wb[4] === Yb.exposure && wb[5] === Yb.contrast && wb[6] === Hb) return;
+                wb[0] = Bb, wb[1] = Lb, wb[2] = ab, wb[3] = Ub, wb[4] = Yb.exposure, wb[5] = Yb.contrast, wb[6] = Hb;
+                const Zb = bb._suData;
+                jb(Zb, ub, hb, Bb, Ub);
+                const Xb = hb._sceneUboContributors;
+                if (Xb)
+                  for (const Sb of Xb) Sb(Zb, hb);
+                ub._device.queue.writeBuffer(bb._sceneUBO, 0, Zb)
+              })(bb, ub, Bb, Gb), Ob.lT = Gb, bb._batchState?._reset(), tb(bb._opaqueBindings, Ob), tb(bb._directBindings, Ob), tb(bb._transparentBindings, Ob), bb._batchState?._flush(ub),
+                function(bb, ub) {
+                  const hb = bb._transparentBindings;
+                  if (hb.length <= 1 || !ub) return;
+                  const Bb = Lb(ub);
+                  for (const Ob of hb) {
+                    const bb = Ob.renderable._worldCenter;
+                    Ob._sortDistance = bb ? bb[0] * Bb[2] + bb[1] * Bb[6] + bb[2] * Bb[10] + Bb[14] : 0
                   }
-                  gq.sort(nq)
-                }(qq, Oq)
-            }(qq, Eq, gq);
-            const lq = qq._colorAttachment,
-              Oq = qq._config;
-            Oq.rt._colorView && (Oq.rt === Yq.surface.scRT && (lq.view = Oq.rt._colorView), lq.resolveTarget = Oq.rst?._colorView ?? void 0, lq.clearValue = Oq.clrColor ?? Yq.clearColor, lq.loadOp = Oq.clr ? "clear" : "load");
-            if (qq._executeWithTransmission) return qq._executeWithTransmission(gq._sampleCount);
-            const mq = Eq._currentEncoder.beginRenderPass(qq._renderPassDescriptor),
-              Aq = Zq(qq, mq);
-            return mq.end(), Aq
-          }(Bq, Eq, Aq),
+                  hb.sort(xb)
+                }(bb, Gb)
+            }(bb, ub, hb);
+            const Ob = bb._colorAttachment,
+              Gb = bb._config;
+            Gb.rt._colorView && (Gb.rt === Bb.surface.scRT && (Ob.view = Gb.rt._colorView), Ob.resolveTarget = Gb.rst?._colorView ?? void 0, Ob.clearValue = Gb.clrColor ?? Bb.clearColor, Ob.loadOp = Gb.clr ? "clear" : "load");
+            if (bb._executeWithTransmission) return bb._executeWithTransmission(hb._sampleCount);
+            const Ub = ub._currentEncoder.beginRenderPass(bb._renderPassDescriptor),
+              Yb = ib(bb, Ub);
+            return Ub.end(), Yb
+          }(Hb, ub, Yb),
           dispose() {
-            if (Bq._disposed) return;
-            Bq._disposed = !0;
-            const Eq = Bq._pendingMeshes;
-            Eq && (Eq.length = 0);
-            for (const qq of Bq._renderables) Bq._retireRenderable?.(Bq.engine, qq);
-            Bq._passes.length = Bq._opaqueBindings.length = Bq._directBindings.length = 0, Bq._transparentBindings.length = Bq._renderables.length = Bq._ob.length = 0, Bq._ownsTargets && ((0, Yq.l)(qq.rt), (0, Yq.l)(qq.rst)), qq.depth?._eager || (0, Yq.l)(qq.depth);
-            const gq = Bq._sceneUBO;
-            (0, Nq.c)(Bq.engine, (() => gq.destroy())), Bq._batchState?._release(Bq.engine), Bq._batchState = void 0
+            if (Hb._disposed) return;
+            Hb._disposed = !0;
+            const ub = Hb._pendingMeshes;
+            ub && (ub.length = 0);
+            for (const bb of Hb._renderables) Hb._retireRenderable?.(Hb.engine, bb);
+            Hb._passes.length = Hb._opaqueBindings.length = Hb._directBindings.length = 0, Hb._transparentBindings.length = Hb._renderables.length = Hb._ob.length = 0, Hb._ownsTargets && ((0, Bb.l)(bb.rt), (0, Bb.l)(bb.rst)), bb.depth?._eager || (0, Bb.l)(bb.depth);
+            const hb = Hb._sceneUBO;
+            (0, Zb.d)(Hb.engine, (() => hb.destroy())), Hb._batchState?._release(Hb.engine), Hb._batchState = void 0
           }
         };
-      return Bq
+      return Hb
     }
 
-    function nq(qq, Eq) {
-      return Eq._sortDistance - qq._sortDistance || qq.renderable.order - Eq.renderable.order
+    function xb(bb, ub) {
+      return ub._sortDistance - bb._sortDistance || bb.renderable.order - ub.renderable.order
     }
 
-    function bq(qq, Eq) {
-      return qq.renderable.order - Eq.renderable.order
+    function zb(bb, ub) {
+      return bb.renderable.order - ub.renderable.order
     }
 
-    function iq(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qq._renderables,
-        gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        lq = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-        Oq = arguments.length > 4 ? arguments[4] : void 0;
-      const mq = qq._config,
-        xq = mq.rt,
-        Aq = qq._batchState,
-        cq = vq(Eq, qq.PV._renderableVersion);
-      if (gq) {
-        const Eq = (Eq, gq) => {
-          Eq && (gq || qq._ownsTargets || Eq._eager) && (0, Yq.h)(Eq, qq.engine)
+    function gb(bb) {
+      let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb._renderables,
+        hb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        Ob = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+        Gb = arguments.length > 4 ? arguments[4] : void 0;
+      const Ub = bb._config,
+        Lb = Ub.rt,
+        Yb = bb._batchState,
+        Sb = nb(ub, bb.Xp._renderableVersion);
+      if (hb) {
+        const ub = (ub, hb) => {
+          ub && (hb || bb._ownsTargets || ub._eager) && (0, Bb.h)(ub, bb.engine)
         };
-        Eq(xq), xq._descriptor.samples > 1 && Eq(mq.rst), Eq(mq.depth, !0)
+        ub(Lb), Lb._descriptor.samples > 1 && ub(Ub.rst), ub(Ub.depth, !0)
       }
       const {
-        _opaqueBindings: uq,
-        _directBindings: Bq,
-        _transparentBindings: Wq
-      } = cq;
+        _opaqueBindings: ab,
+        _directBindings: Hb,
+        _transparentBindings: wb
+      } = Sb;
       try {
-        for (const gq of Eq) {
-          const Eq = gq.bind(qq.engine, qq._targetSignature);
-          cq._batchState = qq._targetSignature._collectBatches?.(cq._batchState, Eq), gq.isTransparent || gq._transmissive ? Wq.push(Eq) : gq._direct ? Bq.push(Eq) : uq.push(Eq)
+        for (const hb of ub) {
+          const ub = hb.bind(bb.engine, bb._targetSignature);
+          Sb._batchState = bb._targetSignature._collectBatches?.(Sb._batchState, ub), hb.isTransparent || hb._transmissive ? wb.push(ub) : hb._direct ? Hb.push(ub) : ab.push(ub)
         }
-        uq.sort(bq), Bq.sort(bq), gq && fq(qq, qq.engine, !1)
-      } catch (Nq) {
-        throw cq._batchState?._release(void 0, Oq ?? [Aq]), Nq
+        ab.sort(zb), Hb.sort(zb), hb && vb(bb, bb.engine, !1)
+      } catch (Zb) {
+        throw Sb._batchState?._release(void 0, Gb ?? [Yb]), Zb
       }
-      return gq && (! function(qq, Eq) {
-        const gq = qq._config,
-          Yq = qq._colorAttachment;
-        Yq.view = Eq._colorView, qq._renderPassDescriptor.colorAttachments = Eq._colorView ? [Yq] : [];
-        const lq = gq.depth ?? Eq,
-          Oq = lq._depthView;
-        let mq;
-        if (Oq) {
-          const qq = lq._descriptor,
-            Eq = (gq.depth ? lq._eager : !1 === gq.depthClear) ? "load" : "clear";
-          mq = {
-            view: Oq,
-            depthClearValue: qq.depthClearValue ?? 0,
-            depthLoadOp: Eq,
+      return hb && (! function(bb, ub) {
+        const hb = bb._config,
+          Bb = bb._colorAttachment;
+        Bb.view = ub._colorView, bb._renderPassDescriptor.colorAttachments = ub._colorView ? [Bb] : [];
+        const Ob = hb.depth ?? ub,
+          Gb = Ob._depthView;
+        let Ub;
+        if (Gb) {
+          const bb = Ob._descriptor,
+            ub = (hb.depth ? Ob._eager : !1 === hb.depthClear) ? "load" : "clear";
+          Ub = {
+            view: Gb,
+            depthClearValue: bb.depthClearValue ?? 0,
+            depthLoadOp: ub,
             depthStoreOp: "store"
-          }, qq.dFormat?.includes("stencil") && (mq.stencilClearValue = 0, mq.stencilLoadOp = Eq, mq.stencilStoreOp = "store")
+          }, bb.dFormat?.includes("stencil") && (Ub.stencilClearValue = 0, Ub.stencilLoadOp = ub, Ub.stencilStoreOp = "store")
         }
-        qq._renderPassDescriptor.depthStencilAttachment = mq
-      }(qq, xq), qq._updateContext.targetWidth = xq._width, qq._updateContext.targetHeight = xq._height), lq && (Object.assign(qq, cq), Aq?._release(qq.engine, [cq._batchState])), cq
+        bb._renderPassDescriptor.depthStencilAttachment = Ub
+      }(bb, Lb), bb._updateContext.targetWidth = Lb._width, bb._updateContext.targetHeight = Lb._height), Ob && (Object.assign(bb, Sb), Yb?._release(bb.engine, [Sb._batchState])), Sb
     }
 
-    function Zq(qq, Eq) {
-      const gq = qq.engine,
-        Yq = qq._config,
-        Oq = Yq.rt,
-        mq = qq.PV,
-        xq = qq._opaqueBindings,
-        Aq = qq._ob,
-        cq = qq._sceneBG;
-      if (function(qq, Eq, gq, Yq) {
-          const lq = Eq?.viewport;
-          if (!lq) return;
-          const Oq = Math.floor(lq.x * gq),
-            mq = Math.floor((1 - lq.y - lq.height) * Yq),
-            xq = Math.ceil((lq.x + lq.width) * gq) - Oq,
-            Aq = Math.ceil((1 - lq.y) * Yq) - mq;
-          qq.setViewport(Oq, mq, xq, Aq, 0, 1), qq.setScissorRect(Oq, mq, xq, Aq)
-        }(Eq, Yq.cam ?? mq.camera, Oq._width, Oq._height), Eq.setBindGroup(0, cq), qq._lastVis !== lq.e || !Aq.length) {
-        const Eq = Oq._descriptor,
-          Yq = gq._device.createRenderBundleEncoder({
-            colorFormats: Eq.format ? [Eq.format] : [],
-            depthStencilFormat: qq._targetSignature._depthStencilFormat,
-            sampleCount: Eq.samples
+    function ib(bb, ub) {
+      const hb = bb.engine,
+        Bb = bb._config,
+        Gb = Bb.rt,
+        Ub = bb.Xp,
+        Lb = bb._opaqueBindings,
+        Yb = bb._ob,
+        Sb = bb._sceneBG;
+      if (function(bb, ub, hb, Bb) {
+          const Ob = ub?.viewport;
+          if (!Ob) return;
+          const Gb = Math.floor(Ob.x * hb),
+            Ub = Math.floor((1 - Ob.y - Ob.height) * Bb),
+            Lb = Math.ceil((Ob.x + Ob.width) * hb) - Gb,
+            Yb = Math.ceil((1 - Ob.y) * Bb) - Ub;
+          bb.setViewport(Gb, Ub, Lb, Yb, 0, 1), bb.setScissorRect(Gb, Ub, Lb, Yb)
+        }(ub, Bb.cam ?? Ub.camera, Gb._width, Gb._height), ub.setBindGroup(0, Sb), bb._lastVis !== Ob.c || !Yb.length) {
+        const ub = Gb._descriptor,
+          Bb = hb._device.createRenderBundleEncoder({
+            colorFormats: ub.format ? [ub.format] : [],
+            depthStencilFormat: bb._targetSignature._depthStencilFormat,
+            sampleCount: ub.samples
           });
-        Yq.setBindGroup(0, cq), Tq(Yq, xq, gq), Aq[0] = Yq.finish(), qq._lastVis = lq.e
+        Bb.setBindGroup(0, Sb), Jb(Bb, Lb, hb), Yb[0] = Bb.finish(), bb._lastVis = Ob.c
       }
-      let uq = xq.length;
-      return Eq.executeBundles(Aq), Eq.setBindGroup(0, cq), uq += Tq(Eq, qq._directBindings, gq), uq += Tq(Eq, qq._transparentBindings, gq), uq
+      let ab = Lb.length;
+      return ub.executeBundles(Yb), ub.setBindGroup(0, Sb), ab += Jb(ub, bb._directBindings, hb), ab += Jb(ub, bb._transparentBindings, hb), ab
     }
 
-    function fq(qq, Eq) {
-      let gq = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      const Yq = yq(Eq, qq.PV)._buffer;
-      if (Yq === qq._lightsUBO) return;
-      const lq = Eq._device.createBindGroup({
-        layout: Vq(Eq),
+    function vb(bb, ub) {
+      let hb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      const Bb = db(ub, bb.Xp)._buffer;
+      if (Bb === bb._lightsUBO) return;
+      const Ob = ub._device.createBindGroup({
+        layout: pb(ub),
         entries: [{
           binding: 0,
           resource: {
-            buffer: qq._sceneUBO
+            buffer: bb._sceneUBO
           }
         }, {
           binding: 1,
           resource: {
-            buffer: Yq
+            buffer: Bb
           }
         }]
       });
-      qq._lightsUBO = Yq, qq._sceneBG = lq, gq && (qq._ob = [])
+      bb._lightsUBO = Bb, bb._sceneBG = Ob, hb && (bb._ob = [])
     }
 
-    function Mq(qq, Eq) {
-      for (const gq of qq) gq.update?.(Eq)
+    function tb(bb, ub) {
+      for (const hb of bb) hb.update?.(ub)
     }
 
-    function Tq(qq, Eq, gq) {
-      let Yq = null,
-        lq = 0;
-      for (const Oq of Eq) {
-        const Eq = Oq.renderable.mesh;
-        Eq && !1 === Eq.visible || (Oq.pipeline !== Yq && (qq.setPipeline(Oq.pipeline), Yq = Oq.pipeline), lq += Oq.draw(qq, gq))
+    function Jb(bb, ub, hb) {
+      let Bb = null,
+        Ob = 0;
+      for (const Gb of ub) {
+        const ub = Gb.renderable.mesh;
+        ub && !1 === ub.visible || (Gb.pipeline !== Bb && (bb.setPipeline(Gb.pipeline), Bb = Gb.pipeline), Ob += Gb.draw(bb, hb))
       }
-      return lq
+      return Ob
     }
 
-    function zq(qq) {
-      const Eq = qq._materialSwapQueue;
-      if (!Eq[0] || qq._runtimeBuilds?.w) return;
-      let Yq, lq, Oq;
-      const mq = qq._renderables;
-      for (const gq of Eq) {
-        const Eq = gq.material;
-        if (!Eq) continue;
-        const xq = gq._runtimeThinBuild;
-        if (xq) {
-          lq = xq(qq, gq, lq);
+    function eb(bb) {
+      const ub = bb._materialSwapQueue;
+      if (!ub[0] || bb._runtimeBuilds?.w) return;
+      let Bb, Ob, Gb;
+      const Ub = bb._renderables;
+      for (const hb of ub) {
+        const ub = hb.material;
+        if (!ub) continue;
+        const Lb = hb._runtimeThinBuild;
+        if (Lb) {
+          Ob = Lb(bb, hb, Ob);
           continue
         }
-        const Aq = qq._groups.get(Eq._buildGroup),
-          cq = Aq?.r;
-        if (!cq) {
-          (Oq ??= []).push(gq);
+        const Yb = bb._groups.get(ub._buildGroup),
+          Sb = Yb?.r;
+        if (!Sb) {
+          (Gb ??= []).push(hb);
           continue
         }
-        if (Aq._w?.(gq)) {
-          (Oq ??= []).push([gq, Eq]);
+        if (Yb._w?.(hb)) {
+          (Gb ??= []).push([hb, ub]);
           continue
         }
-        const uq = qq._meshDisposables.get(gq);
-        uq && (qq._meshDisposables.delete(gq), (0, Nq.c)(qq.surface.engine, (() => uq.forEach((qq => qq())))));
-        const Bq = Aq.o;
-        let Wq;
-        for (let qq = mq.length; qq--;) mq[qq].mesh === gq && (Wq = mq.splice(qq, 1)[0]);
-        Eq._csmGen = -~Eq._csmGen;
-        const aq = cq(qq, gq);
-        if (Bq) {
-          const qq = Bq.indexOf(Wq);
-          qq < 0 ? Bq.push(aq) : Bq[qq] = aq
+        const ab = bb._meshDisposables.get(hb);
+        ab && (bb._meshDisposables.delete(hb), (0, Zb.d)(bb.surface.engine, (() => ab.forEach((bb => bb())))));
+        const Hb = Yb.o;
+        let wb;
+        for (let bb = Ub.length; bb--;) Ub[bb].mesh === hb && (wb = Ub.splice(bb, 1)[0]);
+        ub._csmGen = -~ub._csmGen;
+        const Xb = Sb(bb, hb);
+        if (Hb) {
+          const bb = Hb.indexOf(wb);
+          bb < 0 ? Hb.push(Xb) : Hb[bb] = Xb
         }
-        Yq = mq.push(aq)
+        Bb = Ub.push(Xb)
       }
-      if (Yq && (mq.sort(((qq, Eq) => qq.order - Eq.order)), qq._renderableVersion++, qq._materialEpoch++), Eq.length = 0, !Oq) return lq;
-      const xq = Oq;
-      return gq.e(356).then((() => gq(61241))).then((Eq => {
+      if (Bb && (Ub.sort(((bb, ub) => bb.order - ub.order)), bb._renderableVersion++, bb._materialEpoch++), ub.length = 0, !Gb) return Ob;
+      const Lb = Gb;
+      return hb.e(356).then((() => hb(60704))).then((ub => {
         let {
-          C: gq
-        } = Eq;
-        return gq(qq, xq, lq)
-      }), (Eq => {
-        const gq = qq._runtimeBuilds;
-        gq ? gq._x(Eq) : console.error(Eq)
+          C: hb
+        } = ub;
+        return hb(bb, Lb, Ob)
+      }), (ub => {
+        const hb = bb._runtimeBuilds;
+        hb ? hb._x(ub) : console.error(ub)
       }))
     }
-    var Sq = null;
+    var Nb = null;
 
-    function pq(qq, Eq) {
-      const gq = qq.engine,
-        lq = {
-          _kind: "PV",
-          surface: qq,
+    function sb(bb, ub) {
+      const hb = bb.engine,
+        Ob = {
+          _kind: "Xp",
+          surface: bb,
           clearColor: {
             r: .2,
             g: .2,
@@ -902,365 +902,365 @@ export const modules = {
           _built: !1,
           _drawCallsPre: 0,
           _update() {
-            gq.useFloatingOrigin && lq.camera && !lq.camera._useFloatingOrigin && (lq.camera._useFloatingOrigin = !0, lq.camera._viewVer = -1, lq.camera._vpVer = -1);
-            const qq = lq.fixedDeltaMs > 0 ? lq.fixedDeltaMs : gq._currentDelta,
-              Eq = gq._currentEncoder;
-            let Yq = 0;
-            for (const gq of lq._beforeRender) gq(qq);
-            lq._materialSwapQueue.length && zq(lq);
-            for (const Oq of lq._prePasses) Yq += Oq.execute(Eq, gq);
-            for (const Oq of lq._uniformUpdaters) Oq.update(gq);
-            lq._drawCallsPre = Yq
+            hb.useFloatingOrigin && Ob.camera && !Ob.camera._useFloatingOrigin && (Ob.camera._useFloatingOrigin = !0, Ob.camera._viewVer = -1, Ob.camera._vpVer = -1);
+            const bb = Ob.fixedDeltaMs > 0 ? Ob.fixedDeltaMs : hb._currentDelta,
+              ub = hb._currentEncoder;
+            let Bb = 0;
+            for (const hb of Ob._beforeRender) hb(bb);
+            Ob._materialSwapQueue.length && eb(Ob);
+            for (const Gb of Ob._prePasses) Bb += Gb.execute(ub, hb);
+            for (const Gb of Ob._uniformUpdaters) Gb.update(hb);
+            Ob._drawCallsPre = Bb
           },
-          _record: () => lq._frameGraph.execute(),
+          _record: () => Ob._frameGraph.execute(),
           _resize() {
-            lq._frameGraph.build()
+            Ob._frameGraph.build()
           }
         },
-        mq = function() {
-          const qq = {
+        Ub = function() {
+          const bb = {
             _tasks: [],
             _currentProcessedTask: null,
             build() {
-              for (let Eq = 0; Eq < qq._tasks.length; Eq++) Oq(qq, qq._tasks[Eq]);
-              for (const Eq of qq._tasks)
-                for (const qq of Eq._passes) qq._initialize()
+              for (let ub = 0; ub < bb._tasks.length; ub++) Gb(bb, bb._tasks[ub]);
+              for (const ub of bb._tasks)
+                for (const bb of ub._passes) bb._initialize()
             },
             execute() {
-              let Eq = 0;
-              for (const gq of qq._tasks)
-                if (!1 !== gq.executionEnabled)
-                  if (gq.execute) Eq += gq.execute();
+              let ub = 0;
+              for (const hb of bb._tasks)
+                if (!1 !== hb.executionEnabled)
+                  if (hb.execute) ub += hb.execute();
                   else
-                    for (const qq of gq._passes) Eq += qq._execute();
-              return Eq
+                    for (const bb of hb._passes) ub += bb._execute();
+              return ub
             },
             dispose() {
-              for (const Eq of qq._tasks) Eq.dispose();
-              qq._tasks.length = 0, qq._currentProcessedTask = null
+              for (const ub of bb._tasks) ub.dispose();
+              bb._tasks.length = 0, bb._currentProcessedTask = null
             }
           };
-          return qq
+          return bb
         }();
-      if (lq._frameGraph = mq, !1 !== Eq?.defaultRenderTask) {
-        const Eq = qq.msaaSamples > 1,
-          Oq = Eq ? (0, Yq.d)({
+      if (Ob._frameGraph = Ub, !1 !== ub?.defaultRenderTask) {
+        const ub = bb.msaaSamples > 1,
+          Gb = ub ? (0, Bb.e)({
             lbl: "scene-color",
-            format: qq.format,
+            format: bb.format,
             dFormat: "depth24plus-stencil8",
-            samples: qq.msaaSamples,
-            size: qq
-          }) : qq.scRT,
-          xq = Eq ? void 0 : (0, Yq.d)({
+            samples: bb.msaaSamples,
+            size: bb
+          }) : bb.scRT,
+          Lb = ub ? void 0 : (0, Bb.e)({
             lbl: "scene-depth",
             dFormat: "depth24plus-stencil8",
             samples: 1,
-            size: qq
+            size: bb
           });
-        ! function(qq, Eq) {
-          qq._tasks.push(Eq)
-        }(mq, hq({
-          name: "PV",
-          rt: Oq,
-          rst: Eq ? qq.scRT : void 0,
-          depth: xq
-        }, gq, lq))
+        ! function(bb, ub) {
+          bb._tasks.push(ub)
+        }(Ub, Db({
+          name: "Xp",
+          rt: Gb,
+          rst: ub ? bb.scRT : void 0,
+          depth: Lb
+        }, hb, Ob))
       }
-      return lq._disposables.push((() => mq.dispose())), lq
+      return Ob._disposables.push((() => Ub.dispose())), Ob
     }
-    async function Gq(qq) {
-      const Eq = qq;
-      for (Eq._built || (Eq._materialSwapQueue.length = 0); Eq._deferredBuilders.length;) {
-        const qq = Eq._deferredBuilders.splice(0);
-        await Promise.all(qq.map((qq => qq())))
+    async function Mb(bb) {
+      const ub = bb;
+      for (ub._built || (ub._materialSwapQueue.length = 0); ub._deferredBuilders.length;) {
+        const bb = ub._deferredBuilders.splice(0);
+        await Promise.all(bb.map((bb => bb())))
       }
-      await zq(Eq), Sq?.get(Eq)?.() || (Eq._runtimeBuilds?._e(), Eq._renderableVersion++, Eq._built = !0), await (Eq._rebuildHook?.(Eq))
+      await eb(ub), Nb?.get(ub)?.() || (ub._runtimeBuilds?._e(), ub._renderableVersion++, ub._built = !0), await (ub._rebuildHook?.(ub))
     }
-    var Lq = null;
-    async function Jq(qq) {
-      const Eq = qq,
-        Yq = Eq.surface;
-      (0, lq.i)(Yq, Eq) || (await Gq(qq), Eq._renderables.sort(kq), await Promise.all(Eq._frameGraph._tasks.map((qq => qq._preload?.()))), Lq && await Lq(Eq), Eq._frameGraph.build(), Yq._renderingContexts[0] && (await gq.e(354).then((() => gq(61225)))).configureSwapchainOverlayScene(Yq, Eq), Sq?.get(Eq)?.() || (0, lq.l)(Yq, Eq))
+    var mb = null;
+    async function Ib(bb) {
+      const ub = bb,
+        Bb = ub.surface;
+      (0, Ob.f)(Bb, ub) || (await Mb(bb), ub._renderables.sort(Pb), await Promise.all(ub._frameGraph._tasks.map((bb => bb._preload?.()))), mb && await mb(ub), ub._frameGraph.build(), Bb._renderingContexts[0] && (await hb.e(354).then((() => hb(60700)))).configureSwapchainOverlayScene(Bb, ub), Nb?.get(ub)?.() || (0, Ob.g)(Bb, ub))
     }
-    var kq = (qq, Eq) => qq.order - Eq.order
+    var Pb = (bb, ub) => bb.order - ub.order
   },
-  41450: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => cq,
-      d: () => uq
+  41161: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Sb,
+      e: () => ab
     });
-    var Yq = gq(41402),
-      lq = gq(41406),
-      Oq = gq(41413),
-      mq = gq(41422),
-      xq = gq(41427),
-      Aq = gq(41429);
+    var Bb = hb(41121),
+      Ob = hb(41128),
+      Gb = hb(41130),
+      Ub = hb(41132),
+      Lb = hb(41137),
+      Yb = hb(41144);
 
-    function cq(qq, Eq, gq) {
-      let xq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      (Eq < 1 || gq < 1) && (0, Yq.d)(676, Eq, gq);
-      const cq = qq._device,
-        uq = xq.mipMaps ?? !1,
-        Bq = xq.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        Wq = uq ? (0, Aq.d)(Eq, gq) : 1,
-        Nq = cq.createTexture({
+    function Sb(bb, ub, hb) {
+      let Lb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      (ub < 1 || hb < 1) && (0, Bb.e)(676, ub, hb);
+      const Sb = bb._device,
+        ab = Lb.mipMaps ?? !1,
+        Hb = Lb.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        wb = ab ? (0, Yb.b)(ub, hb) : 1,
+        Zb = Sb.createTexture({
           size: {
-            width: Eq,
-            height: gq
+            width: ub,
+            height: hb
           },
-          format: Bq,
-          mipLevelCount: Wq,
-          usage: lq.f.TEXTURE_BINDING | lq.f.COPY_DST | lq.f.RENDER_ATTACHMENT
+          format: Hb,
+          mipLevelCount: wb,
+          usage: Ob.m.TEXTURE_BINDING | Ob.m.COPY_DST | Ob.m.RENDER_ATTACHMENT
         }),
-        aq = {
-          addressModeU: xq.addressModeU ?? "clamp-to-edge",
-          addressModeV: xq.addressModeV ?? "clamp-to-edge",
-          minFilter: xq.minFilter ?? "linear",
-          magFilter: xq.magFilter ?? "linear",
-          mipmapFilter: uq ? "linear" : "nearest"
+        Xb = {
+          addressModeU: Lb.addressModeU ?? "clamp-to-edge",
+          addressModeV: Lb.addressModeV ?? "clamp-to-edge",
+          minFilter: Lb.minFilter ?? "linear",
+          magFilter: Lb.magFilter ?? "linear",
+          mipmapFilter: ab ? "linear" : "nearest"
         },
-        Vq = (0, mq.c)(qq, aq),
-        dq = {
-          texture: Nq,
-          view: Nq.createView(),
-          sampler: Vq,
-          width: Eq,
-          height: gq
+        pb = (0, Ub.c)(bb, Xb),
+        ob = {
+          texture: Zb,
+          view: Zb.createView(),
+          sampler: pb,
+          width: ub,
+          height: hb
         };
-      return (0, Oq.b)(dq), qq._dlr && qq._dlr.t(dq, {
+      return (0, Gb.d)(ob), bb._dlr && bb._dlr.t(ob, {
         kind: "dynamic",
-        width: Eq,
-        height: gq,
-        format: Bq,
-        levels: Wq,
-        samplerDesc: aq,
+        width: ub,
+        height: hb,
+        format: Hb,
+        levels: wb,
+        samplerDesc: Xb,
         source: null,
         flipY: !0,
         premultipliedAlpha: !1
-      }), dq
+      }), ob
     }
 
-    function uq(qq, Eq, gq) {
-      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const lq = Yq.invertY ?? !0,
-        Oq = Yq.premultiplyAlpha ?? !1;
-      qq._device.queue.copyExternalImageToTexture({
-        source: gq,
-        flipY: lq
+    function ab(bb, ub, hb) {
+      let Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const Ob = Bb.invertY ?? !0,
+        Gb = Bb.premultiplyAlpha ?? !1;
+      bb._device.queue.copyExternalImageToTexture({
+        source: hb,
+        flipY: Ob
       }, {
-        texture: Eq.texture,
-        premultipliedAlpha: Oq
-      }, [Eq.width, Eq.height]);
-      const mq = Eq._recoverySource;
-      mq && "dynamic" === mq.kind && (mq.source = gq, mq.flipY = lq, mq.premultipliedAlpha = Oq), Eq.texture.mipLevelCount > 1 && (0, xq.generateMipmaps)(qq, Eq.texture)
+        texture: ub.texture,
+        premultipliedAlpha: Gb
+      }, [ub.width, ub.height]);
+      const Ub = ub._recoverySource;
+      Ub && "dynamic" === Ub.kind && (Ub.source = hb, Ub.flipY = Ob, Ub.premultipliedAlpha = Gb), ub.texture.mipLevelCount > 1 && (0, Lb.generateMipmaps)(bb, ub.texture)
     }
   },
-  41443: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Aq
+  41153: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Yb
     });
-    var Yq = gq(41402),
-      lq = gq(41406),
-      Oq = gq(41413),
-      mq = gq(41422),
-      xq = gq(41429);
-    async function Aq(qq, Eq) {
-      let Aq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const [cq, uq] = function(qq) {
-        const Eq = qq,
-          gq = [
-            [Eq.displayWidth, Eq.displayHeight],
-            [Eq.videoWidth, Eq.videoHeight],
-            [Eq.naturalWidth, Eq.naturalHeight],
-            [Eq.width, Eq.height]
+    var Bb = hb(41121),
+      Ob = hb(41128),
+      Gb = hb(41130),
+      Ub = hb(41132),
+      Lb = hb(41144);
+    async function Yb(bb, ub) {
+      let Yb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const [Sb, ab] = function(bb) {
+        const ub = bb,
+          hb = [
+            [ub.displayWidth, ub.displayHeight],
+            [ub.videoWidth, ub.videoHeight],
+            [ub.naturalWidth, ub.naturalHeight],
+            [ub.width, ub.height]
           ];
-        for (const [Yq, lq] of gq)
-          if (void 0 !== Yq && void 0 !== lq && Number.isInteger(Yq) && Number.isInteger(lq) && Yq > 0 && lq > 0) return [Yq, lq];
+        for (const [Bb, Ob] of hb)
+          if (void 0 !== Bb && void 0 !== Ob && Number.isInteger(Bb) && Number.isInteger(Ob) && Bb > 0 && Ob > 0) return [Bb, Ob];
         throw new TypeError("createTexture2DFromExternalImage: source has no supported positive intrinsic dimensions")
-      }(Eq), [Bq, Wq] = function(qq, Eq, gq) {
-        if (void 0 === gq) return [qq, Eq];
-        if (!Number.isInteger(gq) || gq < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${gq})`);
-        if (Math.max(qq, Eq) <= gq) return [qq, Eq];
-        const Yq = gq / Math.max(qq, Eq);
-        return qq >= Eq ? [gq, Math.max(1, Math.round(Eq * Yq))] : [Math.max(1, Math.round(qq * Yq)), gq]
-      }(cq, uq, Aq.maxDimension), Nq = Aq.mipMaps ?? !0, aq = Aq.premultiplyAlpha ?? !1;
-      let Vq = Eq,
-        dq = null;
-      const jq = {
+      }(ub), [Hb, wb] = function(bb, ub, hb) {
+        if (void 0 === hb) return [bb, ub];
+        if (!Number.isInteger(hb) || hb < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${hb})`);
+        if (Math.max(bb, ub) <= hb) return [bb, ub];
+        const Bb = hb / Math.max(bb, ub);
+        return bb >= ub ? [hb, Math.max(1, Math.round(ub * Bb))] : [Math.max(1, Math.round(bb * Bb)), hb]
+      }(Sb, ab, Yb.maxDimension), Zb = Yb.mipMaps ?? !0, Xb = Yb.premultiplyAlpha ?? !1;
+      let pb = ub,
+        ob = null;
+      const Ab = {
         texture: null
       };
       try {
-        Bq === cq && Wq === uq || (dq = await createImageBitmap(Eq, {
-          resizeWidth: Bq,
-          resizeHeight: Wq,
+        Hb === Sb && wb === ab || (ob = await createImageBitmap(ub, {
+          resizeWidth: Hb,
+          resizeHeight: wb,
           resizeQuality: "high",
-          premultiplyAlpha: aq ? "premultiply" : "none",
+          premultiplyAlpha: Xb ? "premultiply" : "none",
           colorSpaceConversion: "none"
-        }), Vq = dq);
-        const Hq = qq._device,
-          oq = Aq.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-          Pq = Nq ? (0, xq.d)(Bq, Wq) : 1,
-          Qq = Pq > 1 ? (await Promise.resolve().then((() => gq(41427)))).generateMipmaps : null,
-          yq = {
-            addressModeU: Aq.addressModeU ?? "repeat",
-            addressModeV: Aq.addressModeV ?? "repeat",
-            minFilter: Aq.minFilter ?? "linear",
-            magFilter: Aq.magFilter ?? "linear",
-            mipmapFilter: Nq ? "linear" : "nearest"
+        }), pb = ob);
+        const lb = bb._device,
+          Kb = Yb.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+          Wb = Zb ? (0, Lb.b)(Hb, wb) : 1,
+          Cb = Wb > 1 ? (await Promise.resolve().then((() => hb(41137)))).generateMipmaps : null,
+          db = {
+            addressModeU: Yb.addressModeU ?? "repeat",
+            addressModeV: Yb.addressModeV ?? "repeat",
+            minFilter: Yb.minFilter ?? "linear",
+            magFilter: Yb.magFilter ?? "linear",
+            mipmapFilter: Zb ? "linear" : "nearest"
           };
-        yq.maxAnisotropy = "linear" === yq.minFilter && "linear" === yq.magFilter && "linear" === yq.mipmapFilter ? 4 : 1;
-        const tq = Aq.invertY ?? !0,
-          rq = async Eq => {
-            let gq;
-            Hq.pushErrorScope("validation"), Hq.pushErrorScope("out-of-memory");
-            let Oq = null;
+        db.maxAnisotropy = "linear" === db.minFilter && "linear" === db.magFilter && "linear" === db.mipmapFilter ? 4 : 1;
+        const rb = Yb.invertY ?? !0,
+          jb = async ub => {
+            let hb;
+            lb.pushErrorScope("validation"), lb.pushErrorScope("out-of-memory");
+            let Gb = null;
             try {
-              const gq = jq.texture = Hq.createTexture({
+              const hb = Ab.texture = lb.createTexture({
                 size: {
-                  width: Bq,
-                  height: Wq
+                  width: Hb,
+                  height: wb
                 },
-                format: oq,
-                mipLevelCount: Pq,
-                usage: lq.f.TEXTURE_BINDING | lq.f.COPY_DST | lq.f.RENDER_ATTACHMENT
+                format: Kb,
+                mipLevelCount: Wb,
+                usage: Ob.m.TEXTURE_BINDING | Ob.m.COPY_DST | Ob.m.RENDER_ATTACHMENT
               });
-              Hq.queue.copyExternalImageToTexture({
-                source: Eq,
-                flipY: tq
+              lb.queue.copyExternalImageToTexture({
+                source: ub,
+                flipY: rb
               }, {
-                texture: gq,
-                premultipliedAlpha: aq
+                texture: hb,
+                premultipliedAlpha: Xb
               }, {
-                width: Bq,
-                height: Wq
-              }), Qq && Qq(qq, gq), Oq = (0, mq.c)(qq, yq)
-            } catch (Nq) {
-              gq = Nq
+                width: Hb,
+                height: wb
+              }), Cb && Cb(bb, hb), Gb = (0, Ub.c)(bb, db)
+            } catch (Zb) {
+              hb = Zb
             }
-            const [xq, Aq] = await Promise.all([Hq.popErrorScope(), Hq.popErrorScope()]);
-            if (gq) throw gq;
-            const cq = Aq ?? xq;
-            if (cq) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${cq.message}`, {
-              cause: cq
+            const [Lb, Yb] = await Promise.all([lb.popErrorScope(), lb.popErrorScope()]);
+            if (hb) throw hb;
+            const Sb = Yb ?? Lb;
+            if (Sb) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${Sb.message}`, {
+              cause: Sb
             });
-            const uq = jq.texture;
-            return uq && Oq || (0, Yq.d)(677), {
-              texture: uq,
-              view: uq.createView(),
-              sampler: Oq,
-              width: Bq,
-              height: Wq
+            const ab = Ab.texture;
+            return ab && Gb || (0, Bb.e)(677), {
+              texture: ab,
+              view: ab.createView(),
+              sampler: Gb,
+              width: Hb,
+              height: wb
             }
-          }, vq = await (qq._dlr?.x(Vq, Bq, Wq, oq, Pq, yq, tq, aq, rq)) ?? await rq(Vq);
-        return (0, Oq.b)(vq), vq
-      } catch (Hq) {
-        throw jq.texture?.destroy(), Hq
+          }, nb = await (bb._dlr?.x(pb, Hb, wb, Kb, Wb, db, rb, Xb, jb)) ?? await jb(pb);
+        return (0, Gb.d)(nb), nb
+      } catch (lb) {
+        throw Ab.texture?.destroy(), lb
       } finally {
-        dq?.close()
+        ob?.close()
       }
     }
   },
-  41427: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      generateMipmaps: () => Nq,
-      recordMipmaps: () => aq
+  41137: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      generateMipmaps: () => Zb,
+      recordMipmaps: () => Xb
     });
-    var Yq = gq(41406),
-      lq = gq(41422),
-      Oq = {
+    var Bb = hb(41128),
+      Ob = hb(41132),
+      Gb = {
         magFilter: "linear",
         minFilter: "linear"
       };
-    var mq = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
-      xq = null,
-      Aq = null,
-      cq = null,
-      uq = null,
-      Bq = null;
+    var Ub = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
+      Lb = null,
+      Yb = null,
+      Sb = null,
+      ab = null,
+      Hb = null;
 
-    function Wq(qq) {
-      const Eq = qq._device;
-      Eq !== Bq && (xq?.clear(), xq = null, Aq = null, cq = null, uq = null, Bq = null, Bq = Eq), Aq ??= Eq.createShaderModule({
-        code: mq
-      }), cq ??= function(qq) {
-        return (0, lq.c)(qq, Oq)
-      }(qq), uq ??= Eq.createBindGroupLayout({
+    function wb(bb) {
+      const ub = bb._device;
+      ub !== Hb && (Lb?.clear(), Lb = null, Yb = null, Sb = null, ab = null, Hb = null, Hb = ub), Yb ??= ub.createShaderModule({
+        code: Ub
+      }), Sb ??= function(bb) {
+        return (0, Ob.c)(bb, Gb)
+      }(bb), ab ??= ub.createBindGroupLayout({
         entries: [{
           binding: 0,
-          visibility: Yq.c.FRAGMENT,
+          visibility: Bb.i.FRAGMENT,
           texture: {
             sampleType: "float"
           }
         }, {
           binding: 1,
-          visibility: Yq.c.FRAGMENT,
+          visibility: Bb.i.FRAGMENT,
           sampler: {}
         }]
       })
     }
 
-    function Nq(qq, Eq, gq) {
-      const Yq = qq._device,
-        lq = Yq.createCommandEncoder();
-      aq(qq, Eq, lq, gq), Yq.queue.submit([lq.finish()])
+    function Zb(bb, ub, hb) {
+      const Bb = bb._device,
+        Ob = Bb.createCommandEncoder();
+      Xb(bb, ub, Ob, hb), Bb.queue.submit([Ob.finish()])
     }
 
-    function aq(qq, Eq, gq, Yq) {
-      if (Eq.mipLevelCount <= 1) return;
-      const lq = qq._device,
-        Oq = function(qq, Eq) {
-          const gq = qq._device;
-          Wq(qq), xq ??= new Map;
-          let Yq = xq.get(Eq);
-          return Yq || (Yq = gq.createRenderPipeline({
-            layout: gq.createPipelineLayout({
-              bindGroupLayouts: [uq]
+    function Xb(bb, ub, hb, Bb) {
+      if (ub.mipLevelCount <= 1) return;
+      const Ob = bb._device,
+        Gb = function(bb, ub) {
+          const hb = bb._device;
+          wb(bb), Lb ??= new Map;
+          let Bb = Lb.get(ub);
+          return Bb || (Bb = hb.createRenderPipeline({
+            layout: hb.createPipelineLayout({
+              bindGroupLayouts: [ab]
             }),
             vertex: {
-              module: Aq,
+              module: Yb,
               entryPoint: "vs"
             },
             fragment: {
-              module: Aq,
+              module: Yb,
               entryPoint: "fs",
               targets: [{
-                format: Eq
+                format: ub
               }]
             },
             primitive: {
               topology: "triangle-list"
             }
-          }), xq.set(Eq, Yq)), Yq
-        }(qq, Eq.format),
-        mq = null != Yq ? {
+          }), Lb.set(ub, Bb)), Bb
+        }(bb, ub.format),
+        Ub = null != Bb ? {
           dimension: "2d",
-          baseArrayLayer: Yq,
+          baseArrayLayer: Bb,
           arrayLayerCount: 1
         } : {};
-      for (let xq = 1; xq < Eq.mipLevelCount; xq++) {
-        const qq = Eq.createView({
-            baseMipLevel: xq - 1,
+      for (let Lb = 1; Lb < ub.mipLevelCount; Lb++) {
+        const bb = ub.createView({
+            baseMipLevel: Lb - 1,
             mipLevelCount: 1,
-            ...mq
+            ...Ub
           }),
-          Yq = Eq.createView({
-            baseMipLevel: xq,
+          Bb = ub.createView({
+            baseMipLevel: Lb,
             mipLevelCount: 1,
-            ...mq
+            ...Ub
           }),
-          Aq = lq.createBindGroup({
-            layout: uq,
+          Yb = Ob.createBindGroup({
+            layout: ab,
             entries: [{
               binding: 0,
-              resource: qq
+              resource: bb
             }, {
               binding: 1,
-              resource: cq
+              resource: Sb
             }]
           }),
-          Bq = gq.beginRenderPass({
+          Hb = hb.beginRenderPass({
             colorAttachments: [{
-              view: Yq,
+              view: Bb,
               loadOp: "clear",
               storeOp: "store",
               clearValue: {
@@ -1271,82 +1271,82 @@ export const modules = {
               }
             }]
           });
-        Bq.setPipeline(Oq), Bq.setBindGroup(0, Aq), Bq.draw(3), Bq.end()
+        Hb.setPipeline(Gb), Hb.setBindGroup(0, Yb), Hb.draw(3), Hb.end()
       }
     }
   },
-  41429: (qq, Eq, gq) => {
-    function Yq(qq, Eq) {
-      return Math.floor(Math.log2(Math.max(qq, Eq))) + 1
+  41144: (bb, ub, hb) => {
+    function Bb(bb, ub) {
+      return Math.floor(Math.log2(Math.max(bb, ub))) + 1
     }
-    gq.d(Eq, {
-      d: () => Yq
+    hb.d(ub, {
+      b: () => Bb
     })
   },
-  41394: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => cq,
-      f: () => uq
+  41113: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Sb,
+      h: () => ab
     });
-    var Yq = gq(41402),
-      lq = gq(41406),
-      Oq = gq(41413),
-      mq = gq(41422),
-      xq = gq(41427),
-      Aq = gq(41429);
+    var Bb = hb(41121),
+      Ob = hb(41128),
+      Gb = hb(41130),
+      Ub = hb(41132),
+      Lb = hb(41137),
+      Yb = hb(41144);
 
-    function cq(qq, Eq, gq, xq) {
-      let cq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (Eq < 1 || gq < 1 || xq < 1) && (0, Yq.d)(722, Eq, gq, xq);
-      const uq = qq._device,
-        Bq = cq.mipMaps ?? !0,
-        Wq = cq.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        Nq = uq.createTexture({
+    function Sb(bb, ub, hb, Lb) {
+      let Sb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (ub < 1 || hb < 1 || Lb < 1) && (0, Bb.e)(722, ub, hb, Lb);
+      const ab = bb._device,
+        Hb = Sb.mipMaps ?? !0,
+        wb = Sb.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        Zb = ab.createTexture({
           size: {
-            width: Eq,
-            height: gq,
-            depthOrArrayLayers: xq
+            width: ub,
+            height: hb,
+            depthOrArrayLayers: Lb
           },
           dimension: "2d",
-          format: Wq,
-          mipLevelCount: Bq ? (0, Aq.d)(Eq, gq) : 1,
-          usage: lq.f.TEXTURE_BINDING | lq.f.COPY_DST | lq.f.RENDER_ATTACHMENT
+          format: wb,
+          mipLevelCount: Hb ? (0, Yb.b)(ub, hb) : 1,
+          usage: Ob.m.TEXTURE_BINDING | Ob.m.COPY_DST | Ob.m.RENDER_ATTACHMENT
         }),
-        aq = (0, mq.c)(qq, {
-          addressModeU: cq.addressModeU ?? "repeat",
-          addressModeV: cq.addressModeV ?? "repeat",
-          minFilter: cq.minFilter ?? "linear",
-          magFilter: cq.magFilter ?? "linear",
-          mipmapFilter: Bq ? "linear" : "nearest"
+        Xb = (0, Ub.c)(bb, {
+          addressModeU: Sb.addressModeU ?? "repeat",
+          addressModeV: Sb.addressModeV ?? "repeat",
+          minFilter: Sb.minFilter ?? "linear",
+          magFilter: Sb.magFilter ?? "linear",
+          mipmapFilter: Hb ? "linear" : "nearest"
         }),
-        Vq = {
-          texture: Nq,
-          view: Nq.createView({
+        pb = {
+          texture: Zb,
+          view: Zb.createView({
             dimension: "2d-array"
           }),
-          sampler: aq,
-          width: Eq,
-          height: gq,
-          layers: xq
+          sampler: Xb,
+          width: ub,
+          height: hb,
+          layers: Lb
         };
-      return (0, Oq.b)(Vq), Vq
+      return (0, Gb.d)(pb), pb
     }
 
-    function uq(qq, Eq, gq, lq) {
-      let Oq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (gq < 0 || gq >= Eq.layers || (0 | gq) !== gq) && (0, Yq.d)(723, Eq.layers, gq);
-      const mq = Oq.invertY ?? !0,
-        Aq = Oq.premultiplyAlpha ?? !1;
-      qq._device.queue.copyExternalImageToTexture({
-        source: lq,
-        flipY: mq
+    function ab(bb, ub, hb, Ob) {
+      let Gb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (hb < 0 || hb >= ub.layers || (0 | hb) !== hb) && (0, Bb.e)(723, ub.layers, hb);
+      const Ub = Gb.invertY ?? !0,
+        Yb = Gb.premultiplyAlpha ?? !1;
+      bb._device.queue.copyExternalImageToTexture({
+        source: Ob,
+        flipY: Ub
       }, {
-        texture: Eq.texture,
-        origin: [0, 0, gq],
-        premultipliedAlpha: Aq
-      }, [Eq.width, Eq.height, 1]), Eq.texture.mipLevelCount > 1 && (0, xq.generateMipmaps)(qq, Eq.texture, gq)
+        texture: ub.texture,
+        origin: [0, 0, hb],
+        premultipliedAlpha: Yb
+      }, [ub.width, ub.height, 1]), ub.texture.mipLevelCount > 1 && (0, Lb.generateMipmaps)(bb, ub.texture, hb)
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

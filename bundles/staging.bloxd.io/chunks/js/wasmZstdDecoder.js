@@ -1,473 +1,473 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var qq = __webpack_require__.u,
-        Eq = __webpack_require__.e,
-        gq = {},
-        Yq = {};
-      __webpack_require__.u = function(Eq) {
-        return qq(Eq) + (gq.hasOwnProperty(Eq) ? "?" + gq[Eq] : "")
-      }, __webpack_require__.e = function(lq) {
-        return Eq(lq).catch((function(Eq) {
-          var Oq = Yq.hasOwnProperty(lq) ? Yq[lq] : 4;
-          if (Oq < 1) {
-            var mq = qq(lq);
-            throw Eq.message = "Loading chunk " + lq + " failed after 4 retries.\n(" + mq + ")", Eq.request = mq, gq[lq] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete Yq[lq]
-            }), 0), Eq
+      var bb = __webpack_require__.u,
+        ub = __webpack_require__.e,
+        hb = {},
+        Bb = {};
+      __webpack_require__.u = function(ub) {
+        return bb(ub) + (hb.hasOwnProperty(ub) ? "?" + hb[ub] : "")
+      }, __webpack_require__.e = function(Ob) {
+        return ub(Ob).catch((function(ub) {
+          var Gb = Bb.hasOwnProperty(Ob) ? Bb[Ob] : 4;
+          if (Gb < 1) {
+            var Ub = bb(Ob);
+            throw ub.message = "Loading chunk " + Ob + " failed after 4 retries.\n(" + Ub + ")", ub.request = Ub, hb[Ob] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete Bb[Ob]
+            }), 0), ub
           }
-          return new Promise((function(qq) {
-            var Eq = 4 - Oq + 1;
+          return new Promise((function(bb) {
+            var ub = 4 - Gb + 1;
             setTimeout((function() {
-              var Eq = "cache-bust=" + Date.now();
-              gq[lq] = Eq, Yq[lq] = Oq - 1, qq(__webpack_require__.e(lq))
-            }), function(qq) {
-              return 500 * Math.pow(2, qq)
-            }(Eq))
+              var ub = "cache-bust=" + Date.now();
+              hb[Ob] = ub, Bb[Ob] = Gb - 1, bb(__webpack_require__.e(Ob))
+            }), function(bb) {
+              return 500 * Math.pow(2, bb)
+            }(ub))
           }))
         }))
       }
     }
   })();
 
-  function qq(qq) {
-    return qq instanceof Error ? qq.message : String(qq)
+  function bb(bb) {
+    return bb instanceof Error ? bb.message : String(bb)
   }
-  const Eq = ArrayBuffer,
-    gq = Uint8Array,
-    Yq = Uint16Array,
-    lq = Int16Array,
-    Oq = Int32Array,
-    mq = (qq, Eq, Yq) => {
-      if (gq.prototype.slice) return gq.prototype.slice.call(qq, Eq, Yq);
-      (null == Eq || Eq < 0) && (Eq = 0), (null == Yq || Yq > qq.length) && (Yq = qq.length);
-      const lq = new gq(Yq - Eq);
-      return lq.set(qq.subarray(Eq, Yq)), lq
+  const ub = ArrayBuffer,
+    hb = Uint8Array,
+    Bb = Uint16Array,
+    Ob = Int16Array,
+    Gb = Int32Array,
+    Ub = (bb, ub, Bb) => {
+      if (hb.prototype.slice) return hb.prototype.slice.call(bb, ub, Bb);
+      (null == ub || ub < 0) && (ub = 0), (null == Bb || Bb > bb.length) && (Bb = bb.length);
+      const Ob = new hb(Bb - ub);
+      return Ob.set(bb.subarray(ub, Bb)), Ob
     },
-    xq = (qq, Eq, Yq, lq) => {
-      if (gq.prototype.fill) return gq.prototype.fill.call(qq, Eq, Yq, lq);
-      for ((null == Yq || Yq < 0) && (Yq = 0), (null == lq || lq > qq.length) && (lq = qq.length); Yq < lq; ++Yq) qq[Yq] = Eq;
-      return qq
+    Lb = (bb, ub, Bb, Ob) => {
+      if (hb.prototype.fill) return hb.prototype.fill.call(bb, ub, Bb, Ob);
+      for ((null == Bb || Bb < 0) && (Bb = 0), (null == Ob || Ob > bb.length) && (Ob = bb.length); Bb < Ob; ++Bb) bb[Bb] = ub;
+      return bb
     },
-    Aq = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    cq = (qq, Eq, gq) => {
-      const Yq = new Error(Eq || Aq[qq]);
-      if (Yq.code = qq, Error.captureStackTrace && Error.captureStackTrace(Yq, cq), !gq) throw Yq;
-      return Yq
+    Yb = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    Sb = (bb, ub, hb) => {
+      const Bb = new Error(ub || Yb[bb]);
+      if (Bb.code = bb, Error.captureStackTrace && Error.captureStackTrace(Bb, Sb), !hb) throw Bb;
+      return Bb
     },
-    uq = (qq, Eq, gq) => {
-      let Yq = 0,
-        lq = 0;
-      for (; Yq < gq; ++Yq) lq |= qq[Eq++] << (Yq << 3);
-      return lq
+    ab = (bb, ub, hb) => {
+      let Bb = 0,
+        Ob = 0;
+      for (; Bb < hb; ++Bb) Ob |= bb[ub++] << (Bb << 3);
+      return Ob
     },
-    Bq = (qq, Eq) => {
-      const Yq = qq[0] | qq[1] << 8 | qq[2] << 16;
-      if (3126568 == Yq && 253 == qq[3]) {
-        const Yq = qq[4],
-          lq = Yq >> 5 & 1,
-          mq = Yq >> 2 & 1,
-          xq = 3 & Yq,
-          Aq = Yq >> 6;
-        8 & Yq && cq(0);
-        let Bq = 6 - lq;
-        const Wq = 3 == xq ? 4 : xq,
-          Nq = uq(qq, Bq, Wq);
-        Bq += Wq;
-        const aq = Aq ? 1 << Aq : lq,
-          Vq = uq(qq, Bq, aq) + (1 == Aq && 256);
-        let dq = Vq;
-        if (!lq) {
-          const Eq = 1 << 10 + (qq[5] >> 3);
-          dq = Eq + (Eq >> 3) * (7 & qq[5])
+    Hb = (bb, ub) => {
+      const Bb = bb[0] | bb[1] << 8 | bb[2] << 16;
+      if (3126568 == Bb && 253 == bb[3]) {
+        const Bb = bb[4],
+          Ob = Bb >> 5 & 1,
+          Ub = Bb >> 2 & 1,
+          Lb = 3 & Bb,
+          Yb = Bb >> 6;
+        8 & Bb && Sb(0);
+        let Hb = 6 - Ob;
+        const wb = 3 == Lb ? 4 : Lb,
+          Zb = ab(bb, Hb, wb);
+        Hb += wb;
+        const Xb = Yb ? 1 << Yb : Ob,
+          pb = ab(bb, Hb, Xb) + (1 == Yb && 256);
+        let ob = pb;
+        if (!Ob) {
+          const ub = 1 << 10 + (bb[5] >> 3);
+          ob = ub + (ub >> 3) * (7 & bb[5])
         }
-        dq > 2145386496 && cq(1);
-        const jq = new gq((1 == Eq ? Vq || dq : Eq ? 0 : dq) + 12);
-        return jq[0] = 1, jq[4] = 4, jq[8] = 8, {
-          b: Bq + aq,
+        ob > 2145386496 && Sb(1);
+        const Ab = new hb((1 == ub ? pb || ob : ub ? 0 : ob) + 12);
+        return Ab[0] = 1, Ab[4] = 4, Ab[8] = 8, {
+          b: Hb + Xb,
           y: 0,
           l: 0,
-          d: Nq,
-          w: Eq && 1 != Eq ? Eq : jq.subarray(12),
-          e: dq,
-          o: new Oq(jq.buffer, 0, 3),
-          u: Vq,
-          c: mq,
-          m: Math.min(131072, dq)
+          d: Zb,
+          w: ub && 1 != ub ? ub : Ab.subarray(12),
+          e: ob,
+          o: new Gb(Ab.buffer, 0, 3),
+          u: pb,
+          c: Ub,
+          m: Math.min(131072, ob)
         }
       }
-      if (25481893 == (Yq >> 4 | qq[3] << 20)) return 8 + (((lq = qq)[mq = 4] | lq[mq + 1] << 8 | lq[mq + 2] << 16 | lq[mq + 3] << 24) >>> 0);
-      var lq, mq;
-      cq(0)
+      if (25481893 == (Bb >> 4 | bb[3] << 20)) return 8 + (((Ob = bb)[Ub = 4] | Ob[Ub + 1] << 8 | Ob[Ub + 2] << 16 | Ob[Ub + 3] << 24) >>> 0);
+      var Ob, Ub;
+      Sb(0)
     },
-    Wq = qq => {
-      let Eq = 0;
-      for (; 1 << Eq <= qq; ++Eq);
-      return Eq - 1
+    wb = bb => {
+      let ub = 0;
+      for (; 1 << ub <= bb; ++ub);
+      return ub - 1
     },
-    Nq = (qq, Oq, mq) => {
-      let xq = 4 + (Oq << 3);
-      const Aq = 5 + (15 & qq[Oq]);
-      Aq > mq && cq(3);
-      const uq = 1 << Aq;
-      let Bq = uq,
-        Nq = -1,
-        aq = -1,
-        Vq = -1,
-        dq = uq;
-      const jq = new Eq(512 + (uq << 2)),
-        Hq = new lq(jq, 0, 256),
-        oq = new Yq(jq, 0, 256),
-        Pq = new Yq(jq, 512, uq),
-        Qq = 512 + (uq << 1),
-        yq = new gq(jq, Qq, uq),
-        tq = new gq(jq, Qq + uq);
-      for (; Nq < 255 && Bq > 0;) {
-        const Eq = Wq(Bq + 1),
-          gq = xq >> 3,
-          Yq = (1 << Eq + 1) - 1;
-        let lq = (qq[gq] | qq[gq + 1] << 8 | qq[gq + 2] << 16) >> (7 & xq) & Yq;
-        const Oq = (1 << Eq) - 1,
-          mq = Yq - Bq - 1,
-          Aq = lq & Oq;
-        if (Aq < mq ? (xq += Eq, lq = Aq) : (xq += Eq + 1, lq > Oq && (lq -= mq)), Hq[++Nq] = --lq, -1 == lq ? (Bq += lq, yq[--dq] = Nq) : Bq -= lq, !lq)
+    Zb = (bb, Gb, Ub) => {
+      let Lb = 4 + (Gb << 3);
+      const Yb = 5 + (15 & bb[Gb]);
+      Yb > Ub && Sb(3);
+      const ab = 1 << Yb;
+      let Hb = ab,
+        Zb = -1,
+        Xb = -1,
+        pb = -1,
+        ob = ab;
+      const Ab = new ub(512 + (ab << 2)),
+        lb = new Ob(Ab, 0, 256),
+        Kb = new Bb(Ab, 0, 256),
+        Wb = new Bb(Ab, 512, ab),
+        Cb = 512 + (ab << 1),
+        db = new hb(Ab, Cb, ab),
+        rb = new hb(Ab, Cb + ab);
+      for (; Zb < 255 && Hb > 0;) {
+        const ub = wb(Hb + 1),
+          hb = Lb >> 3,
+          Bb = (1 << ub + 1) - 1;
+        let Ob = (bb[hb] | bb[hb + 1] << 8 | bb[hb + 2] << 16) >> (7 & Lb) & Bb;
+        const Gb = (1 << ub) - 1,
+          Ub = Bb - Hb - 1,
+          Yb = Ob & Gb;
+        if (Yb < Ub ? (Lb += ub, Ob = Yb) : (Lb += ub + 1, Ob > Gb && (Ob -= Ub)), lb[++Zb] = --Ob, -1 == Ob ? (Hb += Ob, db[--ob] = Zb) : Hb -= Ob, !Ob)
           do {
-            const Eq = xq >> 3;
-            aq = (qq[Eq] | qq[Eq + 1] << 8) >> (7 & xq) & 3, xq += 2, Nq += aq
-          } while (3 == aq)
-      }(Nq > 255 || Bq) && cq(0);
-      let rq = 0;
-      const vq = (uq >> 1) + (uq >> 3) + 3,
-        hq = uq - 1;
-      for (let Eq = 0; Eq <= Nq; ++Eq) {
-        const qq = Hq[Eq];
-        if (qq < 1) oq[Eq] = -qq;
+            const ub = Lb >> 3;
+            Xb = (bb[ub] | bb[ub + 1] << 8) >> (7 & Lb) & 3, Lb += 2, Zb += Xb
+          } while (3 == Xb)
+      }(Zb > 255 || Hb) && Sb(0);
+      let jb = 0;
+      const nb = (ab >> 1) + (ab >> 3) + 3,
+        Db = ab - 1;
+      for (let ub = 0; ub <= Zb; ++ub) {
+        const bb = lb[ub];
+        if (bb < 1) Kb[ub] = -bb;
         else
-          for (Vq = 0; Vq < qq; ++Vq) {
-            yq[rq] = Eq;
+          for (pb = 0; pb < bb; ++pb) {
+            db[jb] = ub;
             do {
-              rq = rq + vq & hq
-            } while (rq >= dq)
+              jb = jb + nb & Db
+            } while (jb >= ob)
           }
       }
-      for (rq && cq(0), Vq = 0; Vq < uq; ++Vq) {
-        const qq = oq[yq[Vq]]++,
-          Eq = tq[Vq] = Aq - Wq(qq);
-        Pq[Vq] = (qq << Eq) - uq
+      for (jb && Sb(0), pb = 0; pb < ab; ++pb) {
+        const bb = Kb[db[pb]]++,
+          ub = rb[pb] = Yb - wb(bb);
+        Wb[pb] = (bb << ub) - ab
       }
-      return [xq + 7 >> 3, {
-        b: Aq,
-        s: yq,
-        n: tq,
-        t: Pq
+      return [Lb + 7 >> 3, {
+        b: Yb,
+        s: db,
+        n: rb,
+        t: Wb
       }]
     },
-    aq = Nq(new gq([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    Vq = Nq(new gq([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    dq = Nq(new gq([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    jq = (qq, Eq) => {
-      const gq = qq.length,
-        Yq = new Oq(gq);
-      for (let lq = 0; lq < gq; ++lq) Yq[lq] = Eq, Eq += 1 << qq[lq];
-      return Yq
+    Xb = Zb(new hb([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    pb = Zb(new hb([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    ob = Zb(new hb([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    Ab = (bb, ub) => {
+      const hb = bb.length,
+        Bb = new Gb(hb);
+      for (let Ob = 0; Ob < hb; ++Ob) Bb[Ob] = ub, ub += 1 << bb[Ob];
+      return Bb
     },
-    Hq = new gq(new Oq([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    oq = jq(Hq, 0),
-    Pq = new gq(new Oq([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    Qq = jq(Pq, 3),
-    yq = (qq, Eq, gq) => {
-      const Yq = qq.length,
-        lq = Eq.length,
-        Oq = qq[Yq - 1],
-        mq = (1 << gq.b) - 1,
-        xq = -gq.b;
-      Oq || cq(0);
-      let Aq = 0,
-        uq = gq.b,
-        Bq = (Yq << 3) - 8 + Wq(Oq) - uq,
-        Nq = -1;
-      for (; Bq > xq && Nq < lq;) {
-        const Yq = Bq >> 3;
-        Aq = (Aq << uq | (qq[Yq] | qq[Yq + 1] << 8 | qq[Yq + 2] << 16) >> (7 & Bq)) & mq, Eq[++Nq] = gq.s[Aq], Bq -= uq = gq.n[Aq]
+    lb = new hb(new Gb([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    Kb = Ab(lb, 0),
+    Wb = new hb(new Gb([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    Cb = Ab(Wb, 3),
+    db = (bb, ub, hb) => {
+      const Bb = bb.length,
+        Ob = ub.length,
+        Gb = bb[Bb - 1],
+        Ub = (1 << hb.b) - 1,
+        Lb = -hb.b;
+      Gb || Sb(0);
+      let Yb = 0,
+        ab = hb.b,
+        Hb = (Bb << 3) - 8 + wb(Gb) - ab,
+        Zb = -1;
+      for (; Hb > Lb && Zb < Ob;) {
+        const Bb = Hb >> 3;
+        Yb = (Yb << ab | (bb[Bb] | bb[Bb + 1] << 8 | bb[Bb + 2] << 16) >> (7 & Hb)) & Ub, ub[++Zb] = hb.s[Yb], Hb -= ab = hb.n[Yb]
       }
-      Bq == xq && Nq + 1 == lq || cq(0)
+      Hb == Lb && Zb + 1 == Ob || Sb(0)
     },
-    tq = (qq, Eq, gq) => {
-      let Yq = 6;
-      const lq = Eq.length + 3 >> 2,
-        Oq = lq << 1,
-        mq = lq + Oq;
-      yq(qq.subarray(Yq, Yq += qq[0] | qq[1] << 8), Eq.subarray(0, lq), gq), yq(qq.subarray(Yq, Yq += qq[2] | qq[3] << 8), Eq.subarray(lq, Oq), gq), yq(qq.subarray(Yq, Yq += qq[4] | qq[5] << 8), Eq.subarray(Oq, mq), gq), yq(qq.subarray(Yq), Eq.subarray(mq), gq)
+    rb = (bb, ub, hb) => {
+      let Bb = 6;
+      const Ob = ub.length + 3 >> 2,
+        Gb = Ob << 1,
+        Ub = Ob + Gb;
+      db(bb.subarray(Bb, Bb += bb[0] | bb[1] << 8), ub.subarray(0, Ob), hb), db(bb.subarray(Bb, Bb += bb[2] | bb[3] << 8), ub.subarray(Ob, Gb), hb), db(bb.subarray(Bb, Bb += bb[4] | bb[5] << 8), ub.subarray(Gb, Ub), hb), db(bb.subarray(Bb), ub.subarray(Ub), hb)
     },
-    rq = (qq, Eq, lq) => {
-      let Oq = Eq.b;
-      const Aq = qq[Oq],
-        uq = Aq >> 1 & 3;
-      Eq.l = 1 & Aq;
-      const Bq = Aq >> 3 | qq[Oq + 1] << 5 | qq[Oq + 2] << 13,
-        jq = (Oq += 3) + Bq;
-      if (1 == uq) {
-        if (Oq >= qq.length) return;
-        return Eq.b = Oq + 1, lq ? (xq(lq, qq[Oq], Eq.y, Eq.y += Bq), lq) : xq(new gq(Bq), qq[Oq])
+    jb = (bb, ub, Ob) => {
+      let Gb = ub.b;
+      const Yb = bb[Gb],
+        ab = Yb >> 1 & 3;
+      ub.l = 1 & Yb;
+      const Hb = Yb >> 3 | bb[Gb + 1] << 5 | bb[Gb + 2] << 13,
+        Ab = (Gb += 3) + Hb;
+      if (1 == ab) {
+        if (Gb >= bb.length) return;
+        return ub.b = Gb + 1, Ob ? (Lb(Ob, bb[Gb], ub.y, ub.y += Hb), Ob) : Lb(new hb(Hb), bb[Gb])
       }
-      if (!(jq > qq.length)) {
-        if (0 == uq) return Eq.b = jq, lq ? (lq.set(qq.subarray(Oq, jq), Eq.y), Eq.y += Bq, lq) : mq(qq, Oq, jq);
-        if (2 == uq) {
-          const Aq = qq[Oq],
-            uq = 3 & Aq,
-            Bq = Aq >> 2 & 3;
-          let rq = Aq >> 4,
-            vq = 0,
-            hq = 0;
-          uq < 2 ? 1 & Bq ? rq |= qq[++Oq] << 4 | (2 & Bq && qq[++Oq] << 12) : rq = Aq >> 3 : (hq = Bq, Bq < 2 ? (rq |= (63 & qq[++Oq]) << 4, vq = qq[Oq] >> 6 | qq[++Oq] << 2) : 2 == Bq ? (rq |= qq[++Oq] << 4 | (3 & qq[++Oq]) << 12, vq = qq[Oq] >> 2 | qq[++Oq] << 6) : (rq |= qq[++Oq] << 4 | (63 & qq[++Oq]) << 12, vq = qq[Oq] >> 6 | qq[++Oq] << 2 | qq[++Oq] << 10)), ++Oq;
-          let nq = lq ? lq.subarray(Eq.y, Eq.y + Eq.m) : new gq(Eq.m),
-            bq = nq.length - rq;
-          if (bq < 0 && cq(0), 0 == uq) nq.set(qq.subarray(Oq, Oq += rq), bq);
-          else if (1 == uq) xq(nq, qq[Oq++], bq);
+      if (!(Ab > bb.length)) {
+        if (0 == ab) return ub.b = Ab, Ob ? (Ob.set(bb.subarray(Gb, Ab), ub.y), ub.y += Hb, Ob) : Ub(bb, Gb, Ab);
+        if (2 == ab) {
+          const Yb = bb[Gb],
+            ab = 3 & Yb,
+            Hb = Yb >> 2 & 3;
+          let jb = Yb >> 4,
+            nb = 0,
+            Db = 0;
+          ab < 2 ? 1 & Hb ? jb |= bb[++Gb] << 4 | (2 & Hb && bb[++Gb] << 12) : jb = Yb >> 3 : (Db = Hb, Hb < 2 ? (jb |= (63 & bb[++Gb]) << 4, nb = bb[Gb] >> 6 | bb[++Gb] << 2) : 2 == Hb ? (jb |= bb[++Gb] << 4 | (3 & bb[++Gb]) << 12, nb = bb[Gb] >> 2 | bb[++Gb] << 6) : (jb |= bb[++Gb] << 4 | (63 & bb[++Gb]) << 12, nb = bb[Gb] >> 6 | bb[++Gb] << 2 | bb[++Gb] << 10)), ++Gb;
+          let xb = Ob ? Ob.subarray(ub.y, ub.y + ub.m) : new hb(ub.m),
+            zb = xb.length - jb;
+          if (zb < 0 && Sb(0), 0 == ab) xb.set(bb.subarray(Gb, Gb += jb), zb);
+          else if (1 == ab) Lb(xb, bb[Gb++], zb);
           else {
-            let lq = Eq.h;
-            if (2 == uq) {
-              const mq = ((qq, Eq) => {
-                let lq = 0,
-                  Oq = -1;
-                const mq = new gq(292),
-                  Aq = qq[Eq],
-                  uq = mq.subarray(0, 256),
-                  Bq = mq.subarray(256, 268),
-                  aq = new Yq(mq.buffer, 268);
-                if (Aq < 128) {
-                  const [gq, Yq] = Nq(qq, Eq + 1, 6), lq = gq << 3, mq = qq[Eq += Aq];
-                  mq || cq(0);
-                  let xq = 0,
-                    Bq = 0,
-                    aq = Yq.b,
-                    Vq = aq,
-                    dq = (++Eq << 3) - 8 + Wq(mq);
-                  for (; Oq > 254 && cq(0), dq -= aq, !(dq < lq);) {
-                    let Eq = dq >> 3;
-                    if (xq += (qq[Eq] | qq[Eq + 1] << 8) >> (7 & dq) & (1 << aq) - 1, uq[++Oq] = Yq.s[xq], dq -= Vq, dq < lq) break;
-                    Eq = dq >> 3, Bq += (qq[Eq] | qq[Eq + 1] << 8) >> (7 & dq) & (1 << Vq) - 1, uq[++Oq] = Yq.s[Bq], aq = Yq.n[xq], xq = Yq.t[xq], Vq = Yq.n[Bq], Bq = Yq.t[Bq]
-                  }++Oq > 255 && cq(0)
+            let Ob = ub.h;
+            if (2 == ab) {
+              const Ub = ((bb, ub) => {
+                let Ob = 0,
+                  Gb = -1;
+                const Ub = new hb(292),
+                  Yb = bb[ub],
+                  ab = Ub.subarray(0, 256),
+                  Hb = Ub.subarray(256, 268),
+                  Xb = new Bb(Ub.buffer, 268);
+                if (Yb < 128) {
+                  const [hb, Bb] = Zb(bb, ub + 1, 6), Ob = hb << 3, Ub = bb[ub += Yb];
+                  Ub || Sb(0);
+                  let Lb = 0,
+                    Hb = 0,
+                    Xb = Bb.b,
+                    pb = Xb,
+                    ob = (++ub << 3) - 8 + wb(Ub);
+                  for (; Gb > 254 && Sb(0), ob -= Xb, !(ob < Ob);) {
+                    let ub = ob >> 3;
+                    if (Lb += (bb[ub] | bb[ub + 1] << 8) >> (7 & ob) & (1 << Xb) - 1, ab[++Gb] = Bb.s[Lb], ob -= pb, ob < Ob) break;
+                    ub = ob >> 3, Hb += (bb[ub] | bb[ub + 1] << 8) >> (7 & ob) & (1 << pb) - 1, ab[++Gb] = Bb.s[Hb], Xb = Bb.n[Lb], Lb = Bb.t[Lb], pb = Bb.n[Hb], Hb = Bb.t[Hb]
+                  }++Gb > 255 && Sb(0)
                 } else {
-                  for (Oq = Aq - 127; lq < Oq; lq += 2) {
-                    const gq = qq[++Eq];
-                    uq[lq] = gq >> 4, uq[lq + 1] = 15 & gq
-                  }++Eq
+                  for (Gb = Yb - 127; Ob < Gb; Ob += 2) {
+                    const hb = bb[++ub];
+                    ab[Ob] = hb >> 4, ab[Ob + 1] = 15 & hb
+                  }++ub
                 }
-                let Vq = 0;
-                for (lq = 0; lq < Oq; ++lq) {
-                  const qq = uq[lq];
-                  qq > 11 && cq(0), Vq += qq && 1 << qq - 1
+                let pb = 0;
+                for (Ob = 0; Ob < Gb; ++Ob) {
+                  const bb = ab[Ob];
+                  bb > 11 && Sb(0), pb += bb && 1 << bb - 1
                 }
-                const dq = Wq(Vq) + 1,
-                  jq = 1 << dq,
-                  Hq = jq - Vq;
-                for (Hq & Hq - 1 && cq(0), uq[Oq++] = Wq(Hq) + 1, lq = 0; lq < Oq; ++lq) {
-                  const qq = uq[lq];
-                  ++Bq[uq[lq] = qq && dq + 1 - qq]
+                const ob = wb(pb) + 1,
+                  Ab = 1 << ob,
+                  lb = Ab - pb;
+                for (lb & lb - 1 && Sb(0), ab[Gb++] = wb(lb) + 1, Ob = 0; Ob < Gb; ++Ob) {
+                  const bb = ab[Ob];
+                  ++Hb[ab[Ob] = bb && ob + 1 - bb]
                 }
-                const oq = new gq(jq << 1),
-                  Pq = oq.subarray(0, jq),
-                  Qq = oq.subarray(jq);
-                for (aq[dq] = 0, lq = dq; lq > 0; --lq) {
-                  const qq = aq[lq];
-                  xq(Qq, lq, qq, aq[lq - 1] = qq + Bq[lq] * (1 << dq - lq))
+                const Kb = new hb(Ab << 1),
+                  Wb = Kb.subarray(0, Ab),
+                  Cb = Kb.subarray(Ab);
+                for (Xb[ob] = 0, Ob = ob; Ob > 0; --Ob) {
+                  const bb = Xb[Ob];
+                  Lb(Cb, Ob, bb, Xb[Ob - 1] = bb + Hb[Ob] * (1 << ob - Ob))
                 }
-                for (aq[0] != jq && cq(0), lq = 0; lq < Oq; ++lq) {
-                  const qq = uq[lq];
-                  if (qq) {
-                    const Eq = aq[qq];
-                    xq(Pq, lq, Eq, aq[qq] = Eq + (1 << dq - qq))
+                for (Xb[0] != Ab && Sb(0), Ob = 0; Ob < Gb; ++Ob) {
+                  const bb = ab[Ob];
+                  if (bb) {
+                    const ub = Xb[bb];
+                    Lb(Wb, Ob, ub, Xb[bb] = ub + (1 << ob - bb))
                   }
                 }
-                return [Eq, {
-                  n: Qq,
-                  b: dq,
-                  s: Pq
+                return [ub, {
+                  n: Cb,
+                  b: ob,
+                  s: Wb
                 }]
-              })(qq, Oq);
-              vq += Oq - (Oq = mq[0]), Eq.h = lq = mq[1]
-            } else lq || cq(0);
-            (hq ? tq : yq)(qq.subarray(Oq, Oq += vq), nq.subarray(bq), lq)
+              })(bb, Gb);
+              nb += Gb - (Gb = Ub[0]), ub.h = Ob = Ub[1]
+            } else Ob || Sb(0);
+            (Db ? rb : db)(bb.subarray(Gb, Gb += nb), xb.subarray(zb), Ob)
           }
-          let iq = qq[Oq++];
-          if (iq) {
-            255 == iq ? iq = 32512 + (qq[Oq++] | qq[Oq++] << 8) : iq > 127 && (iq = iq - 128 << 8 | qq[Oq++]);
-            const xq = qq[Oq++];
-            3 & xq && cq(0);
-            const Aq = [Vq, dq, aq];
-            for (let lq = 2; lq > -1; --lq) {
-              const mq = xq >> 2 + (lq << 1) & 3;
-              if (1 == mq) {
-                const Eq = new gq([0, 0, qq[Oq++]]);
-                Aq[lq] = {
-                  s: Eq.subarray(2, 3),
-                  n: Eq.subarray(0, 1),
-                  t: new Yq(Eq.buffer, 0, 1),
+          let gb = bb[Gb++];
+          if (gb) {
+            255 == gb ? gb = 32512 + (bb[Gb++] | bb[Gb++] << 8) : gb > 127 && (gb = gb - 128 << 8 | bb[Gb++]);
+            const Lb = bb[Gb++];
+            3 & Lb && Sb(0);
+            const Yb = [pb, ob, Xb];
+            for (let Ob = 2; Ob > -1; --Ob) {
+              const Ub = Lb >> 2 + (Ob << 1) & 3;
+              if (1 == Ub) {
+                const ub = new hb([0, 0, bb[Gb++]]);
+                Yb[Ob] = {
+                  s: ub.subarray(2, 3),
+                  n: ub.subarray(0, 1),
+                  t: new Bb(ub.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == mq ? [Oq, Aq[lq]] = Nq(qq, Oq, 9 - (1 & lq)) : 3 == mq && (Eq.t || cq(0), Aq[lq] = Eq.t[lq])
+              } else 2 == Ub ? [Gb, Yb[Ob]] = Zb(bb, Gb, 9 - (1 & Ob)) : 3 == Ub && (ub.t || Sb(0), Yb[Ob] = ub.t[Ob])
             }
-            const [uq, Bq, yq] = Eq.t = Aq, tq = qq[jq - 1];
-            tq || cq(0);
-            let rq = (jq << 3) - 8 + Wq(tq) - yq.b,
-              vq = rq >> 3,
-              hq = 0,
-              Zq = (qq[vq] | qq[vq + 1] << 8) >> (7 & rq) & (1 << yq.b) - 1;
-            vq = (rq -= Bq.b) >> 3;
-            let fq = (qq[vq] | qq[vq + 1] << 8) >> (7 & rq) & (1 << Bq.b) - 1;
-            vq = (rq -= uq.b) >> 3;
-            let Mq = (qq[vq] | qq[vq + 1] << 8) >> (7 & rq) & (1 << uq.b) - 1;
-            for (++iq; --iq;) {
-              const gq = yq.s[Zq],
-                Yq = yq.n[Zq],
-                lq = uq.s[Mq],
-                Oq = uq.n[Mq],
-                mq = Bq.s[fq],
-                xq = Bq.n[fq];
-              vq = (rq -= mq) >> 3;
-              const Aq = 1 << mq;
-              let Wq = Aq + ((qq[vq] | qq[vq + 1] << 8 | qq[vq + 2] << 16 | qq[vq + 3] << 24) >>> (7 & rq) & Aq - 1);
-              vq = (rq -= Pq[lq]) >> 3;
-              let Nq = Qq[lq] + ((qq[vq] | qq[vq + 1] << 8 | qq[vq + 2] << 16) >> (7 & rq) & (1 << Pq[lq]) - 1);
-              vq = (rq -= Hq[gq]) >> 3;
-              const aq = oq[gq] + ((qq[vq] | qq[vq + 1] << 8 | qq[vq + 2] << 16) >> (7 & rq) & (1 << Hq[gq]) - 1);
-              if ((rq < 0 || bq + aq > nq.length || hq + aq + Nq > nq.length) && cq(0), vq = (rq -= Yq) >> 3, Zq = yq.t[Zq] + ((qq[vq] | qq[vq + 1] << 8) >> (7 & rq) & (1 << Yq) - 1), vq = (rq -= Oq) >> 3, Mq = uq.t[Mq] + ((qq[vq] | qq[vq + 1] << 8) >> (7 & rq) & (1 << Oq) - 1), vq = (rq -= xq) >> 3, fq = Bq.t[fq] + ((qq[vq] | qq[vq + 1] << 8) >> (7 & rq) & (1 << xq) - 1), Wq > 3) Eq.o[2] = Eq.o[1], Eq.o[1] = Eq.o[0], Eq.o[0] = Wq -= 3;
+            const [ab, Hb, db] = ub.t = Yb, rb = bb[Ab - 1];
+            rb || Sb(0);
+            let jb = (Ab << 3) - 8 + wb(rb) - db.b,
+              nb = jb >> 3,
+              Db = 0,
+              ib = (bb[nb] | bb[nb + 1] << 8) >> (7 & jb) & (1 << db.b) - 1;
+            nb = (jb -= Hb.b) >> 3;
+            let vb = (bb[nb] | bb[nb + 1] << 8) >> (7 & jb) & (1 << Hb.b) - 1;
+            nb = (jb -= ab.b) >> 3;
+            let tb = (bb[nb] | bb[nb + 1] << 8) >> (7 & jb) & (1 << ab.b) - 1;
+            for (++gb; --gb;) {
+              const hb = db.s[ib],
+                Bb = db.n[ib],
+                Ob = ab.s[tb],
+                Gb = ab.n[tb],
+                Ub = Hb.s[vb],
+                Lb = Hb.n[vb];
+              nb = (jb -= Ub) >> 3;
+              const Yb = 1 << Ub;
+              let wb = Yb + ((bb[nb] | bb[nb + 1] << 8 | bb[nb + 2] << 16 | bb[nb + 3] << 24) >>> (7 & jb) & Yb - 1);
+              nb = (jb -= Wb[Ob]) >> 3;
+              let Zb = Cb[Ob] + ((bb[nb] | bb[nb + 1] << 8 | bb[nb + 2] << 16) >> (7 & jb) & (1 << Wb[Ob]) - 1);
+              nb = (jb -= lb[hb]) >> 3;
+              const Xb = Kb[hb] + ((bb[nb] | bb[nb + 1] << 8 | bb[nb + 2] << 16) >> (7 & jb) & (1 << lb[hb]) - 1);
+              if ((jb < 0 || zb + Xb > xb.length || Db + Xb + Zb > xb.length) && Sb(0), nb = (jb -= Bb) >> 3, ib = db.t[ib] + ((bb[nb] | bb[nb + 1] << 8) >> (7 & jb) & (1 << Bb) - 1), nb = (jb -= Gb) >> 3, tb = ab.t[tb] + ((bb[nb] | bb[nb + 1] << 8) >> (7 & jb) & (1 << Gb) - 1), nb = (jb -= Lb) >> 3, vb = Hb.t[vb] + ((bb[nb] | bb[nb + 1] << 8) >> (7 & jb) & (1 << Lb) - 1), wb > 3) ub.o[2] = ub.o[1], ub.o[1] = ub.o[0], ub.o[0] = wb -= 3;
               else {
-                const qq = Wq - (0 != aq);
-                qq ? (Wq = 3 == qq ? Eq.o[0] - 1 : Eq.o[qq], qq > 1 && (Eq.o[2] = Eq.o[1]), Eq.o[1] = Eq.o[0], Eq.o[0] = Wq) : Wq = Eq.o[0]
+                const bb = wb - (0 != Xb);
+                bb ? (wb = 3 == bb ? ub.o[0] - 1 : ub.o[bb], bb > 1 && (ub.o[2] = ub.o[1]), ub.o[1] = ub.o[0], ub.o[0] = wb) : wb = ub.o[0]
               }
-              for (let qq = 0; qq < aq; ++qq) nq[hq + qq] = nq[bq + qq];
-              hq += aq, bq += aq;
-              let Vq = hq - Wq;
-              if (Vq < 0) {
-                let qq = -Vq;
-                const gq = Eq.e + Vq;
-                gq < 0 && cq(4), qq > Nq && (qq = Nq);
-                for (let Yq = 0; Yq < qq; ++Yq) nq[hq + Yq] = Eq.w[gq + Yq];
-                hq += qq, Nq -= qq, Vq = 0
+              for (let bb = 0; bb < Xb; ++bb) xb[Db + bb] = xb[zb + bb];
+              Db += Xb, zb += Xb;
+              let pb = Db - wb;
+              if (pb < 0) {
+                let bb = -pb;
+                const hb = ub.e + pb;
+                hb < 0 && Sb(4), bb > Zb && (bb = Zb);
+                for (let Bb = 0; Bb < bb; ++Bb) xb[Db + Bb] = ub.w[hb + Bb];
+                Db += bb, Zb -= bb, pb = 0
               }
-              for (let qq = 0; qq < Nq; ++qq) nq[hq + qq] = nq[Vq + qq];
-              hq += Nq
+              for (let bb = 0; bb < Zb; ++bb) xb[Db + bb] = xb[pb + bb];
+              Db += Zb
             }
-            if (hq != bq)
-              for (; bq < nq.length;) nq[hq++] = nq[bq++];
-            else hq = nq.length;
-            lq ? Eq.y += hq : nq = mq(nq, 0, hq)
-          } else if (lq) {
-            if (Eq.y += rq, bq)
-              for (let qq = 0; qq < rq; ++qq) nq[qq] = nq[bq + qq]
-          } else bq && (nq = mq(nq, bq));
-          return Eq.b = jq, nq
+            if (Db != zb)
+              for (; zb < xb.length;) xb[Db++] = xb[zb++];
+            else Db = xb.length;
+            Ob ? ub.y += Db : xb = Ub(xb, 0, Db)
+          } else if (Ob) {
+            if (ub.y += jb, zb)
+              for (let bb = 0; bb < jb; ++bb) xb[bb] = xb[zb + bb]
+          } else zb && (xb = Ub(xb, zb));
+          return ub.b = Ab, xb
         }
-        cq(2)
+        Sb(2)
       }
     };
-  class vq {
+  class nb {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    Fc = 0;
+    MS = 0;
     needed = 18;
     size;
-    constructor(qq) {
-      this.size = qq
+    constructor(bb) {
+      this.size = bb
     }
-    push(qq) {
+    push(bb) {
       if (this.done) return;
-      if (this.parts.push(qq), this.Fc += qq.length, this.Fc < this.needed) return;
-      const Eq = ((qq, Eq) => {
-        if (1 == qq.length) return qq[0];
-        const Yq = new gq(Eq);
-        for (let gq = 0, lq = 0; gq < qq.length; ++gq) {
-          const Eq = qq[gq];
-          Yq.set(Eq, lq), lq += Eq.length
+      if (this.parts.push(bb), this.MS += bb.length, this.MS < this.needed) return;
+      const ub = ((bb, ub) => {
+        if (1 == bb.length) return bb[0];
+        const Bb = new hb(ub);
+        for (let hb = 0, Ob = 0; hb < bb.length; ++hb) {
+          const ub = bb[hb];
+          Bb.set(ub, Ob), Ob += ub.length
         }
-        return Yq
-      })(this.parts, this.Fc);
-      let Yq = this.st;
-      if (!Yq) {
-        const qq = Bq(Eq, new gq(0));
-        "number" != typeof qq && qq.u === this.size || cq(0, `not a zstd frame of ${this.size} bytes`), Yq = this.st = Bq(Eq, 1), Yq.e = 0, this.output = Yq.w
+        return Bb
+      })(this.parts, this.MS);
+      let Bb = this.st;
+      if (!Bb) {
+        const bb = Hb(ub, new hb(0));
+        "number" != typeof bb && bb.u === this.size || Sb(0, `not a zstd frame of ${this.size} bytes`), Bb = this.st = Hb(ub, 1), Bb.e = 0, this.output = Bb.w
       }
       for (;;) {
-        const qq = Eq.length - Yq.b;
-        if (qq < 3) {
+        const bb = ub.length - Bb.b;
+        if (bb < 3) {
           this.needed = 3;
           break
         }
-        const gq = Eq[Yq.b],
-          lq = gq >> 1 & 3;
-        3 == lq && cq(2);
-        const Oq = gq >> 3 | Eq[Yq.b + 1] << 5 | Eq[Yq.b + 2] << 13;
-        Oq > Yq.m && cq(0), 0 == lq && Yq.y + Oq > Yq.u && cq(0);
-        const mq = 1 == lq ? 4 : 3 + Oq;
-        if (qq < mq) {
-          this.needed = mq;
+        const hb = ub[Bb.b],
+          Ob = hb >> 1 & 3;
+        3 == Ob && Sb(2);
+        const Gb = hb >> 3 | ub[Bb.b + 1] << 5 | ub[Bb.b + 2] << 13;
+        Gb > Bb.m && Sb(0), 0 == Ob && Bb.y + Gb > Bb.u && Sb(0);
+        const Ub = 1 == Ob ? 4 : 3 + Gb;
+        if (bb < Ub) {
+          this.needed = Ub;
           break
         }
-        if (rq(Eq, Yq, Yq.w) || cq(5), Yq.e = Yq.y, (Yq.y > Yq.u || Yq.l && Yq.y != Yq.u) && cq(0), Yq.l) {
+        if (jb(ub, Bb, Bb.w) || Sb(5), Bb.e = Bb.y, (Bb.y > Bb.u || Bb.l && Bb.y != Bb.u) && Sb(0), Bb.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = Yq.y;
-      const lq = Eq.subarray(Yq.b);
-      this.parts = lq.length ? [lq] : [], this.Fc = lq.length, Yq.b = 0
+      this.decoded = Bb.y;
+      const Ob = ub.subarray(Bb.b);
+      this.parts = Ob.length ? [Ob] : [], this.MS = Ob.length, Bb.b = 0
     }
   }
-  class hq {
+  class Db {
     post;
     href = "";
-    JN = null;
+    eZ = null;
     given = 0;
     stopped = !1;
-    constructor(qq) {
-      this.post = qq
+    constructor(bb) {
+      this.post = bb
     }
-    take(Eq) {
+    take(ub) {
       if (!this.stopped) try {
-        this.answer(Eq)
-      } catch (gq) {
-        this.stop(gq instanceof RangeError ? `out of memory decoding ${this.href}: ${qq(gq)}` : `${this.href} did not decode: ${qq(gq)}`)
+        this.answer(ub)
+      } catch (hb) {
+        this.stop(hb instanceof RangeError ? `out of memory decoding ${this.href}: ${bb(hb)}` : `${this.href} did not decode: ${bb(hb)}`)
       }
     }
-    answer(qq) {
-      if (null === this.JN) {
-        const [Eq, gq] = qq;
-        return this.href = Eq, void(this.JN = new vq(gq))
+    answer(bb) {
+      if (null === this.eZ) {
+        const [ub, hb] = bb;
+        return this.href = ub, void(this.eZ = new nb(hb))
       }
-      if (null === qq) return void this.stop(`${this.href} ended before its module did`);
-      const Eq = this.JN;
-      Eq.push(qq);
+      if (null === bb) return void this.stop(`${this.href} ended before its module did`);
+      const ub = this.eZ;
+      ub.push(bb);
       const {
-        output: gq,
-        decoded: Yq
-      } = Eq;
-      if (null !== gq && Yq > this.given) {
-        const qq = gq.slice(this.given, Yq).buffer;
-        this.given = Yq, this.post(qq, [qq])
+        output: hb,
+        decoded: Bb
+      } = ub;
+      if (null !== hb && Bb > this.given) {
+        const bb = hb.slice(this.given, Bb).buffer;
+        this.given = Bb, this.post(bb, [bb])
       }
-      Eq.done && this.stop(!0)
+      ub.done && this.stop(!0)
     }
-    stop(qq) {
-      this.stopped = !0, this.post(qq)
+    stop(bb) {
+      this.stopped = !0, this.post(bb)
     }
   }
-  const nq = globalThis.WorkerGlobalScope;
-  if (void 0 !== nq && globalThis instanceof nq) {
-    const qq = globalThis,
-      Eq = new hq((function(Eq) {
-        let gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        qq.postMessage(Eq, gq)
+  const xb = globalThis.WorkerGlobalScope;
+  if (void 0 !== xb && globalThis instanceof xb) {
+    const bb = globalThis,
+      ub = new Db((function(ub) {
+        let hb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        bb.postMessage(ub, hb)
       }));
-    qq.addEventListener("message", (qq => {
+    bb.addEventListener("message", (bb => {
       let {
-        data: gq
-      } = qq;
-      Eq.take(gq)
+        data: hb
+      } = bb;
+      ub.take(hb)
     }))
   }
 })();

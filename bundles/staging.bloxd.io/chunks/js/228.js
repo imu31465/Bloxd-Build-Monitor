@@ -1,12 +1,12 @@
 export const id = 228;
 export const ids = [228];
 export const modules = {
-  37153: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq
+  36748: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Ob
     });
-    var Yq = gq(37156);
-    class lq {
+    var Bb = hb(36753);
+    class Ob {
       static get LastCreatedEngine() {
         return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
@@ -14,120 +14,120 @@ export const modules = {
         return this._LastCreatedScene
       }
     }
-    lq.Instances = [], lq.OnEnginesDisposedObservable = new Yq.d, lq._LastCreatedScene = null, lq.UseFallbackTexture = !0, lq.FallbackTexture = ""
+    Ob.Instances = [], Ob.OnEnginesDisposedObservable = new Bb.e, Ob._LastCreatedScene = null, Ob.UseFallbackTexture = !0, Ob.FallbackTexture = ""
   },
-  38649: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq
+  38296: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Gb
     });
-    var Yq = gq(38653);
-    const lq = (qq, Eq, gq) => qq ? qq.getClassName && "Mesh" === qq.getClassName() ? null : !qq.getClassName || "SubMesh" !== qq.getClassName() && "PhysicsBody" !== qq.getClassName() ? qq.clone ? qq.clone() : Array.isArray(qq) ? qq.slice() : gq && "object" === typeof qq ? {
-      ...qq
-    } : null : qq.clone(Eq) : null;
-    class Oq {
-      static DeepCopy(qq, Eq, gq, Oq) {
-        let mq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const xq = function(qq) {
-          const Eq = [];
+    var Bb = hb(38302);
+    const Ob = (bb, ub, hb) => bb ? bb.getClassName && "Mesh" === bb.getClassName() ? null : !bb.getClassName || "SubMesh" !== bb.getClassName() && "PhysicsBody" !== bb.getClassName() ? bb.clone ? bb.clone() : Array.isArray(bb) ? bb.slice() : hb && "object" === typeof bb ? {
+      ...bb
+    } : null : bb.clone(ub) : null;
+    class Gb {
+      static DeepCopy(bb, ub, hb, Gb) {
+        let Ub = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const Lb = function(bb) {
+          const ub = [];
           do {
-            const gq = Object.getOwnPropertyNames(qq);
-            for (const qq of gq) - 1 === Eq.indexOf(qq) && Eq.push(qq)
-          } while (qq = Object.getPrototypeOf(qq));
-          return Eq
-        }(qq);
-        for (const cq of xq) {
-          if ("_" === cq[0] && (!Oq || -1 === Oq.indexOf(cq))) continue;
-          if (cq.endsWith("Observable")) continue;
-          if (gq && -1 !== gq.indexOf(cq)) continue;
-          const xq = qq[cq],
-            uq = typeof xq;
-          if ("function" !== uq) try {
-            if ("object" === uq)
-              if (xq instanceof Uint8Array) Eq[cq] = Uint8Array.from(xq);
-              else if (xq instanceof Array) {
-              if (Eq[cq] = [], xq.length > 0)
-                if ("object" == typeof xq[0])
-                  for (let qq = 0; qq < xq.length; qq++) {
-                    const gq = lq(xq[qq], Eq, mq); - 1 === Eq[cq].indexOf(gq) && Eq[cq].push(gq)
-                  } else Eq[cq] = xq.slice(0)
-            } else Eq[cq] = lq(xq, Eq, mq);
-            else Eq[cq] = xq
-          } catch (Aq) {
-            Yq.b.Warn(Aq.message)
+            const hb = Object.getOwnPropertyNames(bb);
+            for (const bb of hb) - 1 === ub.indexOf(bb) && ub.push(bb)
+          } while (bb = Object.getPrototypeOf(bb));
+          return ub
+        }(bb);
+        for (const Sb of Lb) {
+          if ("_" === Sb[0] && (!Gb || -1 === Gb.indexOf(Sb))) continue;
+          if (Sb.endsWith("Observable")) continue;
+          if (hb && -1 !== hb.indexOf(Sb)) continue;
+          const Lb = bb[Sb],
+            ab = typeof Lb;
+          if ("function" !== ab) try {
+            if ("object" === ab)
+              if (Lb instanceof Uint8Array) ub[Sb] = Uint8Array.from(Lb);
+              else if (Lb instanceof Array) {
+              if (ub[Sb] = [], Lb.length > 0)
+                if ("object" == typeof Lb[0])
+                  for (let bb = 0; bb < Lb.length; bb++) {
+                    const hb = Ob(Lb[bb], ub, Ub); - 1 === ub[Sb].indexOf(hb) && ub[Sb].push(hb)
+                  } else ub[Sb] = Lb.slice(0)
+            } else ub[Sb] = Ob(Lb, ub, Ub);
+            else ub[Sb] = Lb
+          } catch (Yb) {
+            Bb.b.Warn(Yb.message)
           }
         }
       }
     }
   },
-  37872: (qq, Eq, gq) => {
-    function Yq() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (qq => {
-        const Eq = 16 * Math.random() | 0;
-        return ("x" === qq ? Eq : 3 & Eq | 8).toString(16)
+  37507: (bb, ub, hb) => {
+    function Bb() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (bb => {
+        const ub = 16 * Math.random() | 0;
+        return ("x" === bb ? ub : 3 & ub | 8).toString(16)
       }))
     }
-    gq.d(Eq, {
-      d: () => Yq
+    hb.d(ub, {
+      d: () => Bb
     })
   },
-  38653: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Yq
+  38302: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Bb
     });
-    class Yq {
-      static _CheckLimit(qq, Eq) {
-        let gq = Yq._LogLimitOutputs[qq];
-        return gq ? gq.current++ : (gq = {
-          limit: Eq,
+    class Bb {
+      static _CheckLimit(bb, ub) {
+        let hb = Bb._LogLimitOutputs[bb];
+        return hb ? hb.current++ : (hb = {
+          limit: ub,
           current: 1
-        }, Yq._LogLimitOutputs[qq] = gq), gq.current <= gq.limit
+        }, Bb._LogLimitOutputs[bb] = hb), hb.current <= hb.limit
       }
-      static _GenerateLimitMessage(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const gq = Yq._LogLimitOutputs[qq];
-        if (!gq || !Yq.MessageLimitReached) return;
-        const lq = this._Levels[Eq];
-        gq.current === gq.limit && Yq[lq.name](Yq.MessageLimitReached.replace(/%LIMIT%/g, "" + gq.limit).replace(/%TYPE%/g, lq.name ?? ""))
+      static _GenerateLimitMessage(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const hb = Bb._LogLimitOutputs[bb];
+        if (!hb || !Bb.MessageLimitReached) return;
+        const Ob = this._Levels[ub];
+        hb.current === hb.limit && Bb[Ob.name](Bb.MessageLimitReached.replace(/%LIMIT%/g, "" + hb.limit).replace(/%TYPE%/g, Ob.name ?? ""))
       }
-      static _AddLogEntry(qq) {
-        Yq._LogCache = qq + Yq._LogCache, Yq.OnNewCacheEntry && Yq.OnNewCacheEntry(qq)
+      static _AddLogEntry(bb) {
+        Bb._LogCache = bb + Bb._LogCache, Bb.OnNewCacheEntry && Bb.OnNewCacheEntry(bb)
       }
-      static _FormatMessage(qq) {
-        const Eq = qq => qq < 10 ? "0" + qq : "" + qq,
-          gq = new Date;
-        return "[" + Eq(gq.getHours()) + ":" + Eq(gq.getMinutes()) + ":" + Eq(gq.getSeconds()) + "]: " + qq
+      static _FormatMessage(bb) {
+        const ub = bb => bb < 10 ? "0" + bb : "" + bb,
+          hb = new Date;
+        return "[" + ub(hb.getHours()) + ":" + ub(hb.getMinutes()) + ":" + ub(hb.getSeconds()) + "]: " + bb
       }
-      static _LogDisabled(qq, Eq) {}
+      static _LogDisabled(bb, ub) {}
       static _LogEnabled() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Eq = arguments.length > 1 ? arguments[1] : void 0,
-          gq = arguments.length > 2 ? arguments[2] : void 0;
-        const lq = Array.isArray(Eq) ? Eq[0] : Eq;
-        if (void 0 !== gq && !Yq._CheckLimit(lq, gq)) return;
-        const Oq = Yq._FormatMessage(lq),
-          mq = this._Levels[qq],
-          xq = Array.isArray(Eq) ? Eq.slice(1) : [];
-        mq.logFunc && mq.logFunc("BJS - " + Oq, ...xq);
-        const Aq = `<div style='color:${mq.color}'>${Oq}</div><br>`;
-        Yq._AddLogEntry(Aq), Yq._GenerateLimitMessage(lq, qq)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          ub = arguments.length > 1 ? arguments[1] : void 0,
+          hb = arguments.length > 2 ? arguments[2] : void 0;
+        const Ob = Array.isArray(ub) ? ub[0] : ub;
+        if (void 0 !== hb && !Bb._CheckLimit(Ob, hb)) return;
+        const Gb = Bb._FormatMessage(Ob),
+          Ub = this._Levels[bb],
+          Lb = Array.isArray(ub) ? ub.slice(1) : [];
+        Ub.logFunc && Ub.logFunc("BJS - " + Gb, ...Lb);
+        const Yb = `<div style='color:${Ub.color}'>${Gb}</div><br>`;
+        Bb._AddLogEntry(Yb), Bb._GenerateLimitMessage(Ob, bb)
       }
       static get LogCache() {
-        return Yq._LogCache
+        return Bb._LogCache
       }
       static ClearLogCache() {
-        Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq.errorsCount = 0
+        Bb._LogCache = "", Bb._LogLimitOutputs = {}, Bb.errorsCount = 0
       }
-      static set LogLevels(qq) {
-        Yq.Log = Yq._LogDisabled, Yq.Warn = Yq._LogDisabled, Yq.Error = Yq._LogDisabled;
-        const Eq = [Yq.MessageLogLevel, Yq.WarningLogLevel, Yq.ErrorLogLevel];
-        for (const gq of Eq)
-          if ((qq & gq) === gq) {
-            const qq = this._Levels[gq];
-            Yq[qq.name] = Yq._LogEnabled.bind(Yq, gq)
+      static set LogLevels(bb) {
+        Bb.Log = Bb._LogDisabled, Bb.Warn = Bb._LogDisabled, Bb.Error = Bb._LogDisabled;
+        const ub = [Bb.MessageLogLevel, Bb.WarningLogLevel, Bb.ErrorLogLevel];
+        for (const hb of ub)
+          if ((bb & hb) === hb) {
+            const bb = this._Levels[hb];
+            Bb[bb.name] = Bb._LogEnabled.bind(Bb, hb)
           }
       }
     }
-    Yq.NoneLogLevel = 0, Yq.MessageLogLevel = 1, Yq.WarningLogLevel = 2, Yq.ErrorLogLevel = 4, Yq.AllLogLevel = 7, Yq.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq._Levels = [{}, {
+    Bb.NoneLogLevel = 0, Bb.MessageLogLevel = 1, Bb.WarningLogLevel = 2, Bb.ErrorLogLevel = 4, Bb.AllLogLevel = 7, Bb.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Bb._LogCache = "", Bb._LogLimitOutputs = {}, Bb._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -139,126 +139,126 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Yq.errorsCount = 0, Yq.Log = Yq._LogEnabled.bind(Yq, Yq.MessageLogLevel), Yq.Warn = Yq._LogEnabled.bind(Yq, Yq.WarningLogLevel), Yq.Error = Yq._LogEnabled.bind(Yq, Yq.ErrorLogLevel)
+    }], Bb.errorsCount = 0, Bb.Log = Bb._LogEnabled.bind(Bb, Bb.MessageLogLevel), Bb.Warn = Bb._LogEnabled.bind(Bb, Bb.WarningLogLevel), Bb.Error = Bb._LogEnabled.bind(Bb, Bb.ErrorLogLevel)
   },
-  37156: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq
+  36753: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Ub
     });
-    const Yq = "undefined" !== typeof WeakRef;
-    class lq {
-      constructor(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          gq = arguments.length > 2 ? arguments[2] : void 0,
-          Yq = arguments.length > 3 ? arguments[3] : void 0;
-        this.initialize(qq, Eq, gq, Yq)
+    const Bb = "undefined" !== typeof WeakRef;
+    class Ob {
+      constructor(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          hb = arguments.length > 2 ? arguments[2] : void 0,
+          Bb = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(bb, ub, hb, Bb)
       }
-      initialize(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          gq = arguments.length > 2 ? arguments[2] : void 0,
-          Yq = arguments.length > 3 ? arguments[3] : void 0;
-        return this.mask = qq, this.skipNextObservers = Eq, this.target = gq, this.currentTarget = Yq, this
+      initialize(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          hb = arguments.length > 2 ? arguments[2] : void 0,
+          Bb = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = bb, this.skipNextObservers = ub, this.target = hb, this.currentTarget = Bb, this
       }
     }
-    class Oq {
-      constructor(qq, Eq) {
-        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.callback = qq, this.mask = Eq, this.scope = gq, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+    class Gb {
+      constructor(bb, ub) {
+        let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = bb, this.mask = ub, this.scope = hb, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
       }
       remove() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._remove && this._remove(qq)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(bb)
       }
     }
-    class mq {
-      static FromPromise(qq, Eq) {
-        const gq = new mq;
-        return qq.then((qq => {
-          gq.notifyObservers(qq)
-        })).catch((qq => {
-          if (!Eq) throw qq;
-          Eq.notifyObservers(qq)
-        })), gq
+    class Ub {
+      static FromPromise(bb, ub) {
+        const hb = new Ub;
+        return bb.then((bb => {
+          hb.notifyObservers(bb)
+        })).catch((bb => {
+          if (!ub) throw bb;
+          ub.notifyObservers(bb)
+        })), hb
       }
       get observers() {
         return this._observers
       }
-      constructor(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.notifyIfTriggered = Eq, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new lq(0), qq && (this._onObserverAdded = qq)
+      constructor(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = ub, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new Ob(0), bb && (this._onObserverAdded = bb)
       }
-      add(qq) {
-        let Eq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          gq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (!qq) return null;
-        const lq = new Oq(qq, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
-        lq.unregisterOnNextCall = gq, Eq ? this._observers.unshift(lq) : this._observers.push(lq), this._onObserverAdded && this._onObserverAdded(lq), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(lq, this._lastNotifiedValue);
-        const mq = Yq ? new WeakRef(this) : {
+      add(bb) {
+        let ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          hb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!bb) return null;
+        const Ob = new Gb(bb, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        Ob.unregisterOnNextCall = hb, ub ? this._observers.unshift(Ob) : this._observers.push(Ob), this._onObserverAdded && this._onObserverAdded(Ob), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(Ob, this._lastNotifiedValue);
+        const Ub = Bb ? new WeakRef(this) : {
           deref: () => this
         };
-        return lq._remove = function() {
-          let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const Eq = mq.deref();
-          Eq && (qq ? Eq.remove(lq) : Eq._remove(lq))
-        }, lq
+        return Ob._remove = function() {
+          let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const ub = Ub.deref();
+          ub && (bb ? ub.remove(Ob) : ub._remove(Ob))
+        }, Ob
       }
-      addOnce(qq) {
-        return this.add(qq, void 0, void 0, void 0, !0)
+      addOnce(bb) {
+        return this.add(bb, void 0, void 0, void 0, !0)
       }
-      remove(qq) {
-        if (!qq) return !1;
-        qq._remove = null;
-        return -1 !== this._observers.indexOf(qq) && (this._deferUnregister(qq), !0)
+      remove(bb) {
+        if (!bb) return !1;
+        bb._remove = null;
+        return -1 !== this._observers.indexOf(bb) && (this._deferUnregister(bb), !0)
       }
-      removeCallback(qq, Eq) {
-        for (let gq = 0; gq < this._observers.length; gq++) {
-          const Yq = this._observers[gq];
-          if (!Yq._willBeUnregistered && (Yq.callback === qq && (!Eq || Eq === Yq.scope))) return this._deferUnregister(Yq), !0
+      removeCallback(bb, ub) {
+        for (let hb = 0; hb < this._observers.length; hb++) {
+          const Bb = this._observers[hb];
+          if (!Bb._willBeUnregistered && (Bb.callback === bb && (!ub || ub === Bb.scope))) return this._deferUnregister(Bb), !0
         }
         return !1
       }
-      _deferUnregister(qq) {
-        qq._willBeUnregistered || (this._numObserversMarkedAsDeleted++, qq.unregisterOnNextCall = !1, qq._willBeUnregistered = !0, setTimeout((() => {
-          this._remove(qq)
+      _deferUnregister(bb) {
+        bb._willBeUnregistered || (this._numObserversMarkedAsDeleted++, bb.unregisterOnNextCall = !1, bb._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(bb)
         }), 0))
       }
-      _remove(qq) {
-        let Eq = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!qq) return !1;
-        const gq = this._observers.indexOf(qq);
-        return -1 !== gq && (Eq && this._numObserversMarkedAsDeleted--, this._observers.splice(gq, 1), !0)
+      _remove(bb) {
+        let ub = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!bb) return !1;
+        const hb = this._observers.indexOf(bb);
+        return -1 !== hb && (ub && this._numObserversMarkedAsDeleted--, this._observers.splice(hb, 1), !0)
       }
-      makeObserverTopPriority(qq) {
-        this._remove(qq, !1), this._observers.unshift(qq)
+      makeObserverTopPriority(bb) {
+        this._remove(bb, !1), this._observers.unshift(bb)
       }
-      makeObserverBottomPriority(qq) {
-        this._remove(qq, !1), this._observers.push(qq)
+      makeObserverBottomPriority(bb) {
+        this._remove(bb, !1), this._observers.push(bb)
       }
-      notifyObservers(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          gq = arguments.length > 2 ? arguments[2] : void 0,
-          Yq = arguments.length > 3 ? arguments[3] : void 0,
-          lq = arguments.length > 4 ? arguments[4] : void 0;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = qq), !this._observers.length) return !0;
-        const Oq = this._eventState;
-        Oq.mask = Eq, Oq.target = gq, Oq.currentTarget = Yq, Oq.skipNextObservers = !1, Oq.lastReturnValue = qq, Oq.userInfo = lq;
-        for (const mq of this._observers)
-          if (!mq._willBeUnregistered && (mq.mask & Eq && (mq.unregisterOnNextCall && this._deferUnregister(mq), mq.scope ? Oq.lastReturnValue = mq.callback.apply(mq.scope, [qq, Oq]) : Oq.lastReturnValue = mq.callback(qq, Oq)), Oq.skipNextObservers)) return !1;
+      notifyObservers(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          hb = arguments.length > 2 ? arguments[2] : void 0,
+          Bb = arguments.length > 3 ? arguments[3] : void 0,
+          Ob = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = bb), !this._observers.length) return !0;
+        const Gb = this._eventState;
+        Gb.mask = ub, Gb.target = hb, Gb.currentTarget = Bb, Gb.skipNextObservers = !1, Gb.lastReturnValue = bb, Gb.userInfo = Ob;
+        for (const Ub of this._observers)
+          if (!Ub._willBeUnregistered && (Ub.mask & ub && (Ub.unregisterOnNextCall && this._deferUnregister(Ub), Ub.scope ? Gb.lastReturnValue = Ub.callback.apply(Ub.scope, [bb, Gb]) : Gb.lastReturnValue = Ub.callback(bb, Gb)), Gb.skipNextObservers)) return !1;
         return !0
       }
-      notifyObserver(qq, Eq) {
-        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = Eq), qq._willBeUnregistered) return;
-        const Yq = this._eventState;
-        Yq.mask = gq, Yq.skipNextObservers = !1, qq.unregisterOnNextCall && this._deferUnregister(qq), qq.callback(Eq, Yq)
+      notifyObserver(bb, ub) {
+        let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = ub), bb._willBeUnregistered) return;
+        const Bb = this._eventState;
+        Bb.mask = hb, Bb.skipNextObservers = !1, bb.unregisterOnNextCall && this._deferUnregister(bb), bb.callback(ub, Bb)
       }
       hasObservers() {
         return this._observers.length - this._numObserversMarkedAsDeleted > 0
       }
       clear() {
         for (; this._observers.length;) {
-          const qq = this._observers.pop();
-          qq && (qq._remove = null)
+          const bb = this._observers.pop();
+          bb && (bb._remove = null)
         }
         this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
       }
@@ -266,42 +266,42 @@ export const modules = {
         this._hasNotified = !1, this._lastNotifiedValue = void 0
       }
       clone() {
-        const qq = new mq;
-        return qq._observers = this._observers.slice(0), qq
+        const bb = new Ub;
+        return bb._observers = this._observers.slice(0), bb
       }
       hasSpecificMask() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
-        for (const Eq of this._observers)
-          if (Eq.mask & qq || Eq.mask === qq) return !0;
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const ub of this._observers)
+          if (ub.mask & bb || ub.mask === bb) return !0;
         return !1
       }
     }
   },
-  61112: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      AsyncLoop: () => Yq.b,
-      RegisterTools: () => Yq.e,
-      Tools: () => Yq.f,
-      className: () => Yq.h
+  60578: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      AsyncLoop: () => Bb.d,
+      RegisterTools: () => Bb.h,
+      Tools: () => Bb.k,
+      className: () => Bb.o
     });
-    var Yq = gq(39845);
-    (0, Yq.e)()
+    var Bb = hb(39559);
+    (0, Bb.h)()
   },
-  37171: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Oq,
-      g: () => lq
+  36762: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb,
+      f: () => Ob
     });
-    const Yq = {};
+    const Bb = {};
 
-    function lq(qq, Eq) {
-      Yq[qq] = Eq
+    function Ob(bb, ub) {
+      Bb[bb] = ub
     }
 
-    function Oq(qq) {
-      return Yq[qq]
+    function Gb(bb) {
+      return Bb[bb]
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

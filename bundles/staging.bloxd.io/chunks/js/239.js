@@ -1,500 +1,500 @@
 export const id = 239;
 export const ids = [239];
 export const modules = {
-  40466: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Oq,
-      f: () => mq
+  40173: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Gb,
+      i: () => Ub
     });
-    var Yq = gq(1914);
-    let lq = !1;
+    var Bb = hb(1824);
+    let Ob = !1;
 
-    function Oq() {
-      lq = !0
+    function Gb() {
+      Ob = !0
     }
 
-    function mq() {
-      lq && (lq = !1, (0, Yq.d)())
+    function Ub() {
+      Ob && (Ob = !1, (0, Bb.e)())
     }
   },
-  40462: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => mq,
-      f: () => Oq,
-      h: () => xq
+  40171: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Ub,
+      d: () => Gb,
+      f: () => Lb
     });
-    var Yq = gq(40318),
-      lq = gq(40325);
+    var Bb = hb(40035),
+      Ob = hb(40049);
 
-    function Oq(qq) {
-      if (qq.queries.drawCensus() < Yq.zb.BYTES) return null;
-      const Eq = qq.memoryData(qq.scratch(), Yq.zb.BYTES, 4, "the draw census");
-      return null === Eq ? null : {
-        terrainOpaque: Yq.zb.terrainOpaque(Eq, 0),
-        terrainTransparent: Yq.zb.terrainTransparent(Eq, 0),
-        terrainPack: Yq.zb.terrainPack(Eq, 0),
-        earthSky: Yq.zb.earthSky(Eq, 0),
-        skyMeshes: Yq.zb.skyMeshes(Eq, 0),
-        regular: Yq.zb.regular(Eq, 0),
-        thin: Yq.zb.thin(Eq, 0),
-        line: Yq.zb.line(Eq, 0),
-        text: Yq.zb.text(Eq, 0),
-        particles: Yq.zb.particles(Eq, 0),
-        terrainParts: Yq.zb.terrainParts(Eq, 0),
-        terrainCompiling: Yq.zb.terrainCompiling(Eq, 0)
+    function Gb(bb) {
+      if (bb.queries.drawCensus() < Bb.vb.BYTES) return null;
+      const ub = bb.memoryData(bb.scratch(), Bb.vb.BYTES, 4, "the draw census");
+      return null === ub ? null : {
+        terrainOpaque: Bb.vb.terrainOpaque(ub, 0),
+        terrainTransparent: Bb.vb.terrainTransparent(ub, 0),
+        terrainPack: Bb.vb.terrainPack(ub, 0),
+        earthSky: Bb.vb.earthSky(ub, 0),
+        skyMeshes: Bb.vb.skyMeshes(ub, 0),
+        regular: Bb.vb.regular(ub, 0),
+        thin: Bb.vb.thin(ub, 0),
+        line: Bb.vb.line(ub, 0),
+        text: Bb.vb.text(ub, 0),
+        particles: Bb.vb.particles(ub, 0),
+        terrainParts: Bb.vb.terrainParts(ub, 0),
+        terrainCompiling: Bb.vb.terrainCompiling(ub, 0)
       }
     }
 
-    function mq(qq) {
+    function Ub(bb) {
       const {
-        terrainOpaque: Eq,
-        terrainTransparent: gq,
-        earthSky: Yq,
-        skyMeshes: lq,
-        regular: Oq,
-        thin: mq,
-        line: xq,
-        text: Aq,
-        particles: cq
-      } = qq;
-      return Eq + gq + Yq + lq + Oq + mq + xq + Aq + cq
+        terrainOpaque: ub,
+        terrainTransparent: hb,
+        earthSky: Bb,
+        skyMeshes: Ob,
+        regular: Gb,
+        thin: Ub,
+        line: Lb,
+        text: Yb,
+        particles: Sb
+      } = bb;
+      return ub + hb + Bb + Ob + Gb + Ub + Lb + Yb + Sb
     }
 
-    function xq() {
-      const qq = (0, lq.e)();
-      return !0 === (null === qq || void 0 === qq ? void 0 : qq.isCoreRunning) ? function(qq) {
-        const Eq = Oq(qq);
-        if (null === Eq) return [];
+    function Lb() {
+      const bb = (0, Ob.l)();
+      return !0 === (null === bb || void 0 === bb ? void 0 : bb.isCoreRunning) ? function(bb) {
+        const ub = Gb(bb);
+        if (null === ub) return [];
         const {
-          terrainOpaque: gq,
-          terrainTransparent: Yq,
-          terrainPack: lq,
-          earthSky: xq,
-          skyMeshes: Aq,
-          regular: cq,
-          thin: uq,
-          line: Bq,
-          text: Wq,
-          particles: Nq
-        } = Eq;
+          terrainOpaque: hb,
+          terrainTransparent: Bb,
+          terrainPack: Ob,
+          earthSky: Lb,
+          skyMeshes: Yb,
+          regular: Sb,
+          thin: ab,
+          line: Hb,
+          text: wb,
+          particles: Zb
+        } = ub;
         return [{
           label: "Drawn",
-          value: `${mq(Eq)}`
+          value: `${Ub(ub)}`
         }, {
           label: "Terrain",
-          value: `${gq} opaque / ${Yq} transparent (${lq} shader pack)`
+          value: `${hb} opaque / ${Bb} transparent (${Ob} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${cq} / ${uq}`
+          value: `${Sb} / ${ab}`
         }, {
           label: "Text / Lines",
-          value: `${Wq} / ${Bq}`
+          value: `${wb} / ${Hb}`
         }, {
           label: "Sky / Particles",
-          value: `${xq+Aq} / ${Nq}`
+          value: `${Lb+Yb} / ${Zb}`
         }]
-      }(qq.api) : []
+      }(bb.api) : []
     }
   },
-  40428: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => aq,
-      e: () => Wq,
-      h: () => Nq
+  40143: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Xb,
+      d: () => wb,
+      f: () => Zb
     });
-    var Yq = gq(1921),
-      lq = gq(1276),
-      Oq = gq(40325),
-      mq = gq(40343),
-      xq = gq(40350),
-      Aq = gq(40366);
-    const cq = new lq.b;
-    let uq = !1;
+    var Bb = hb(1829),
+      Ob = hb(1187),
+      Gb = hb(40049),
+      Ub = hb(40063),
+      Lb = hb(40066),
+      Yb = hb(40087);
+    const Sb = new Ob.e;
+    let ab = !1;
 
-    function Bq(qq) {
-      const Eq = (0, Oq.e)();
-      return null !== Eq && +qq === Eq.api.localId
+    function Hb(bb) {
+      const ub = (0, Gb.l)();
+      return null !== ub && +bb === ub.api.localId
     }
 
-    function Wq() {
-      uq || (uq = !0, (0, Aq.l)(mq.m, (qq => {
-        var Eq, gq;
-        const Yq = (0, xq.d)(mq.m, qq);
-        if (!(0, xq.b)(Yq)) return;
-        const lq = Yq;
-        Bq(lq.RE) && Nq(lq.UE, {
-          icon: lq.sE,
-          level: lq.wE,
-          displayName: null !== (Eq = lq.FE) && void 0 !== Eq ? Eq : null,
-          durationMs: null !== (gq = lq.XE) && void 0 !== gq ? gq : null
+    function wb() {
+      ab || (ab = !0, (0, Yb.n)(Ub.j, (bb => {
+        var ub, hb;
+        const Bb = (0, Lb.g)(Ub.j, bb);
+        if (!(0, Lb.d)(Bb)) return;
+        const Ob = Bb;
+        Hb(Ob.fu) && Zb(Ob.ku, {
+          icon: Ob.cu,
+          level: Ob.Ru,
+          displayName: null !== (ub = Ob.Tu) && void 0 !== ub ? ub : null,
+          durationMs: null !== (hb = Ob.Qu) && void 0 !== hb ? hb : null
         })
-      })), (0, Aq.l)(mq.H, (qq => {
-        const Eq = (0, xq.d)(mq.H, qq);
-        if (!(0, xq.b)(Eq)) return;
-        const gq = Eq;
-        Bq(gq.RE) && Yq.b.remove(gq.UE)
-      })), (0, Aq.d)((() => {
-        Yq.b.clear()
+      })), (0, Yb.n)(Ub.O, (bb => {
+        const ub = (0, Lb.g)(Ub.O, bb);
+        if (!(0, Lb.d)(ub)) return;
+        const hb = ub;
+        Hb(hb.fu) && Bb.c.remove(hb.ku)
+      })), (0, Yb.i)((() => {
+        Bb.c.clear()
       })))
     }
 
-    function Nq(qq, Eq) {
-      Yq.b.update(qq, Eq), cq.forEach((Eq => {
-        Eq(qq)
+    function Zb(bb, ub) {
+      Bb.c.update(bb, ub), Sb.forEach((ub => {
+        ub(bb)
       }))
     }
-    const aq = {
+    const Xb = {
       localEffectUpdated: {
-        watch: qq => cq.add(qq)
+        watch: bb => Sb.add(bb)
       }
     }
   },
-  40432: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => uq
+  40152: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => ab
     });
-    var Yq = gq(4625),
-      lq = gq(4622),
-      Oq = gq(40353),
-      mq = gq(40366);
-    const xq = new Set(Yq.G),
-      Aq = Yq.G.map((qq => (new TextEncoder).encode(qq))),
-      cq = new Map;
+    var Bb = hb(4564),
+      Ob = hb(4555),
+      Gb = hb(40071),
+      Ub = hb(40087);
+    const Lb = new Set(Bb.D),
+      Yb = Bb.D.map((bb => (new TextEncoder).encode(bb))),
+      Sb = new Map;
 
-    function uq(qq, Eq) {
-      var gq;
-      return null === (gq = cq.get(qq)) || void 0 === gq ? void 0 : gq[Eq]
-    }(0, mq.l)(Yq.ec.NewOtherEntitySettings, (qq => {
-      qq.payloadKind === lq.hc.Msgpack && Aq.some((Eq => function(qq, Eq) {
-        const gq = Eq[0];
-        for (let Yq = qq.indexOf(gq); - 1 !== Yq && Yq + Eq.length <= qq.length; Yq = qq.indexOf(gq, Yq + 1)) {
-          let gq = 1;
-          for (; gq < Eq.length && qq[Yq + gq] === Eq[gq];) gq++;
-          if (gq === Eq.length) return !0
+    function ab(bb, ub) {
+      var hb;
+      return null === (hb = Sb.get(bb)) || void 0 === hb ? void 0 : hb[ub]
+    }(0, Ub.n)(Bb.fc.NewOtherEntitySettings, (bb => {
+      bb.payloadKind === Ob.Zb.Msgpack && Yb.some((ub => function(bb, ub) {
+        const hb = ub[0];
+        for (let Bb = bb.indexOf(hb); - 1 !== Bb && Bb + ub.length <= bb.length; Bb = bb.indexOf(hb, Bb + 1)) {
+          let hb = 1;
+          for (; hb < ub.length && bb[Bb + hb] === ub[hb];) hb++;
+          if (hb === ub.length) return !0
         }
         return !1
-      }(qq.payload, Eq))) && function(qq) {
-        if (null === qq || "object" !== typeof qq || null === qq.settings || "object" !== typeof qq.settings) return;
-        const Eq = String(qq.eId),
-          gq = qq.settings;
-        let Yq = cq.get(Eq);
-        for (const lq in gq) {
-          if (!xq.has(lq)) continue;
-          const qq = gq[lq];
-          null === qq || void 0 === qq ? Yq && delete Yq[lq] : (Yq ??= {}, Yq[lq] = qq)
+      }(bb.payload, ub))) && function(bb) {
+        if (null === bb || "object" !== typeof bb || null === bb.settings || "object" !== typeof bb.settings) return;
+        const ub = String(bb.eId),
+          hb = bb.settings;
+        let Bb = Sb.get(ub);
+        for (const Ob in hb) {
+          if (!Lb.has(Ob)) continue;
+          const bb = hb[Ob];
+          null === bb || void 0 === bb ? Bb && delete Bb[Ob] : (Bb ??= {}, Bb[Ob] = bb)
         }
-        Yq && cq.set(Eq, Yq)
-      }((0, Oq.e)(qq.payload))
-    })), (0, mq.d)((() => {
-      cq.clear()
+        Bb && Sb.set(ub, Bb)
+      }((0, Gb.e)(bb.payload))
+    })), (0, Ub.i)((() => {
+      Sb.clear()
     }))
   },
-  40421: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Nq,
-      e: () => cq,
-      h: () => Bq
+  40138: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Zb,
+      c: () => Sb,
+      g: () => Hb
     });
-    var Yq = gq(38954),
-      lq = gq(1906),
-      Oq = gq(1276),
-      mq = gq(40343),
-      xq = gq(40350),
-      Aq = gq(40366);
-    const cq = new Yq.d;
-    let uq = {};
+    var Bb = hb(38632),
+      Ob = hb(1819),
+      Gb = hb(1187),
+      Ub = hb(40063),
+      Lb = hb(40066),
+      Yb = hb(40087);
+    const Sb = new Bb.d;
+    let ab = {};
 
-    function Bq(qq) {
-      return uq[qq]
+    function Hb(bb) {
+      return ab[bb]
     }
-    const Wq = new Oq.b;
+    const wb = new Gb.e;
 
-    function Nq(qq) {
-      return Wq.add(qq)
+    function Zb(bb) {
+      return wb.add(bb)
     }
 
-    function aq(qq) {
-      Wq.callEach(qq, "a roster listener")
-    }(0, Aq.l)(mq.T, (qq => {
-      const Eq = (0, xq.d)(mq.T, qq);
-      if (void 0 === Eq) return;
-      const gq = Eq.xg.some((qq => {
+    function Xb(bb) {
+      wb.callEach(bb, "a roster listener")
+    }(0, Yb.n)(Ub.W, (bb => {
+      const ub = (0, Lb.g)(Ub.W, bb);
+      if (void 0 === ub) return;
+      const hb = ub.Zh.some((bb => {
           let {
-            Ag: Eq,
-            cg: gq
-          } = qq;
-          return null !== gq && cq.has(Eq) && cq.getName(Eq) !== gq
+            Xh: ub,
+            ph: hb
+          } = bb;
+          return null !== hb && Sb.has(ub) && Sb.getName(ub) !== hb
         })),
         {
-          added: Yq,
-          removed: Oq,
-          settingChanges: Aq
-        } = cq.apply(Eq),
-        uq = new Set;
-      for (const lq of Aq)
-        for (const qq in lq.settings) uq.add(qq);
-      const Bq = gq || Yq.length > 0 || Oq.length > 0;
-      (Bq || uq.has("hideNameSeed")) && function() {
-        const qq = new Map;
-        for (const Eq of cq.ids()) {
-          const gq = cq.getName(Eq),
-            Yq = cq.getSetting(Eq, "hideNameSeed");
-          void 0 !== gq && void 0 !== Yq && null !== Yq && qq.set(gq, Yq)
+          added: Bb,
+          removed: Gb,
+          settingChanges: Yb
+        } = Sb.apply(ub),
+        ab = new Set;
+      for (const Ob of Yb)
+        for (const bb in Ob.settings) ab.add(bb);
+      const Hb = hb || Bb.length > 0 || Gb.length > 0;
+      (Hb || ab.has("hideNameSeed")) && function() {
+        const bb = new Map;
+        for (const ub of Sb.ids()) {
+          const hb = Sb.getName(ub),
+            Bb = Sb.getSetting(ub, "hideNameSeed");
+          void 0 !== hb && void 0 !== Bb && null !== Bb && bb.set(hb, Bb)
         }
-        lq.d.replaceAll(qq)
-      }(), aq({
+        Ob.d.replaceAll(bb)
+      }(), Xb({
         kind: "roster",
-        members: Bq,
-        settings: uq
+        members: Hb,
+        settings: ab
       })
-    })), (0, Aq.l)(mq.F, (qq => {
-      const Eq = (0, xq.d)(mq.F, qq);
-      if (void 0 !== Eq) {
+    })), (0, Yb.n)(Ub.L, (bb => {
+      const ub = (0, Lb.g)(Ub.L, bb);
+      if (void 0 !== ub) {
         for (const {
-            yY: qq,
-            tY: gq,
-            rY: Yq
+            vB: bb,
+            tB: hb,
+            JB: Bb
           }
-          of Eq) uq[qq] = {
-          ...uq[qq],
-          [gq]: Yq
+          of ub) ab[bb] = {
+          ...ab[bb],
+          [hb]: Bb
         };
-        aq({
+        Xb({
           kind: "cosmetics",
-          updates: Eq
+          updates: ub
         })
       }
-    })), (0, Aq.d)((() => {
-      cq.clear(), uq = {}, lq.d.clear(), aq({
+    })), (0, Yb.i)((() => {
+      Sb.clear(), ab = {}, Ob.d.clear(), Xb({
         kind: "reset"
       })
-    })), (0, Aq.h)((() => {
-      cq.clear(), aq({
+    })), (0, Yb.j)((() => {
+      Sb.clear(), Xb({
         kind: "reset"
       })
     }))
   },
-  40448: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => nq,
-      g: () => dq,
-      i: () => fq,
-      m: () => Mq
+  40159: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => xb,
+      f: () => ob,
+      i: () => vb,
+      m: () => tb
     });
-    var Yq = gq(1261),
-      lq = gq(583),
-      Oq = gq(96),
-      mq = gq(4625),
-      xq = gq(40318),
-      Aq = gq(40334),
-      cq = gq(40325),
-      uq = gq(40432),
-      Bq = gq(40421),
-      Wq = gq(40350),
-      Nq = gq(40366);
+    var Bb = hb(1166),
+      Ob = hb(571),
+      Gb = hb(86),
+      Ub = hb(4564),
+      Lb = hb(40035),
+      Yb = hb(40061),
+      Sb = hb(40049),
+      ab = hb(40152),
+      Hb = hb(40138),
+      wb = hb(40066),
+      Zb = hb(40087);
 
-    function aq(qq) {
+    function Xb(bb) {
       let {
-        deadEId: Eq,
-        killerEId: gq,
-        killerLifeformType: Yq,
-        withItem: lq,
-        killstreak: Oq
-      } = qq;
+        deadEId: ub,
+        killerEId: hb,
+        killerLifeformType: Bb,
+        withItem: Ob,
+        killstreak: Gb
+      } = bb;
       return {
-        killer: Pq({
-          eId: gq,
-          lifeformType: Yq
+        killer: Wb({
+          eId: hb,
+          lifeformType: Bb
         }),
-        victim: Pq({
-          eId: Eq
+        victim: Wb({
+          eId: ub
         }),
-        withItem: lq,
-        killstreak: Oq
+        withItem: Ob,
+        killstreak: Gb
       }
     }
 
-    function Vq(qq) {
+    function pb(bb) {
       let {
-        killer: Eq,
-        victim: gq,
-        withItem: Yq
-      } = qq;
+        killer: ub,
+        victim: hb,
+        withItem: Bb
+      } = bb;
       return {
-        killer: Pq(Eq),
-        victim: Pq(gq),
-        withItem: Yq,
+        killer: Wb(ub),
+        victim: Wb(hb),
+        withItem: Bb,
         killstreak: 0
       }
     }
 
-    function dq(qq) {
-      rq && hq((() => "killed" === qq.kind ? aq(qq.body) : Vq(qq.body)))
+    function ob(bb) {
+      jb && Db((() => "killed" === bb.kind ? Xb(bb.body) : pb(bb.body)))
     }
-    const jq = "#2727f1",
-      Hq = "#912c2c";
+    const Ab = "#2727f1",
+      lb = "#912c2c";
 
-    function oq(qq, Eq) {
-      var gq;
-      return Bq.e.has(qq) ? null === (gq = Bq.e.getSettings(qq)) || void 0 === gq ? void 0 : gq[Eq] : (0, uq.d)(qq, Eq)
+    function Kb(bb, ub) {
+      var hb;
+      return Hb.c.has(bb) ? null === (hb = Hb.c.getSettings(bb)) || void 0 === hb ? void 0 : hb[ub] : (0, ab.b)(bb, ub)
     }
 
-    function Pq(qq) {
-      var Eq, gq, mq, xq, uq;
+    function Wb(bb) {
+      var ub, hb, Ub, Lb, ab;
       let {
-        eId: Wq,
-        name: Nq,
-        colour: aq,
-        lifeformType: Vq
-      } = qq;
-      if (void 0 === Wq || null === Wq || "" === Wq) {
-        const qq = Nq || null;
+        eId: wb,
+        name: Zb,
+        colour: Xb,
+        lifeformType: pb
+      } = bb;
+      if (void 0 === wb || null === wb || "" === wb) {
+        const bb = Zb || null;
         return {
           id: null,
-          shownName: qq,
-          lifeformType: null === qq && null !== Vq && void 0 !== Vq ? Vq : null,
-          colour: aq || null,
+          shownName: bb,
+          lifeformType: null === bb && null !== pb && void 0 !== pb ? pb : null,
+          colour: Xb || null,
           local: !1,
           realName: null
         }
       }
-      const dq = String(Wq),
-        Pq = null === (Eq = (0, cq.e)()) || void 0 === Eq ? void 0 : Eq.api,
-        Qq = void 0 !== Pq && String(Pq.localId) === dq,
-        yq = null !== (gq = Bq.e.getName(dq)) && void 0 !== gq ? gq : null,
-        tq = null !== (mq = oq(dq, "hideNameSeed")) && void 0 !== mq ? mq : null;
-      let rq = null === yq ? null : (0, Yq.e)(yq, !Oq.featureFlags.canSeeRealPlayerNames, tq) || null,
-        vq = null;
-      if (null === rq && void 0 !== Pq) {
-        const qq = Pq.getEntityType(dq);
-        "Player" !== qq && (rq = (0, Aq.f)(Pq, +dq) || null), vq = lq.m.includes(qq) ? qq : null
+      const ob = String(wb),
+        Wb = null === (ub = (0, Sb.l)()) || void 0 === ub ? void 0 : ub.api,
+        Cb = void 0 !== Wb && String(Wb.localId) === ob,
+        db = null !== (hb = Hb.c.getName(ob)) && void 0 !== hb ? hb : null,
+        rb = null !== (Ub = Kb(ob, "hideNameSeed")) && void 0 !== Ub ? Ub : null;
+      let jb = null === db ? null : (0, Bb.e)(db, !Gb.featureFlags.canSeeRealPlayerNames, rb) || null,
+        nb = null;
+      if (null === jb && void 0 !== Wb) {
+        const bb = Wb.getEntityType(ob);
+        "Player" !== bb && (jb = (0, Yb.i)(Wb, +ob) || null), nb = Ob.i.includes(bb) ? bb : null
       }
       return {
-        id: dq,
-        shownName: rq,
-        lifeformType: null === rq && null !== (xq = null !== (uq = vq) && void 0 !== uq ? uq : Vq) && void 0 !== xq ? xq : null,
-        colour: aq || oq(dq, "killfeedColour") || (Qq ? jq : Hq),
-        local: Qq,
-        realName: yq
+        id: ob,
+        shownName: jb,
+        lifeformType: null === jb && null !== (Lb = null !== (ab = nb) && void 0 !== ab ? ab : pb) && void 0 !== Lb ? Lb : null,
+        colour: Xb || Kb(ob, "killfeedColour") || (Cb ? Ab : lb),
+        local: Cb,
+        realName: db
       }
     }
-    const Qq = 32;
-    let yq = [],
-      tq = null,
-      rq = !1,
-      vq = !1;
+    const Cb = 32;
+    let db = [],
+      rb = null,
+      jb = !1,
+      nb = !1;
 
-    function hq(qq) {
-      null === tq ? (yq.length === Qq && yq.shift(), yq.push(qq)) : tq(qq())
+    function Db(bb) {
+      null === rb ? (db.length === Cb && db.shift(), db.push(bb)) : rb(bb())
     }
 
-    function nq() {
-      vq || (vq = !0, (0, Nq.l)(mq.ec.PlayerKilled, (qq => {
-        const Eq = (0, Wq.e)(qq);
-        (0, Wq.b)(Eq) && hq((() => aq(Eq)))
-      })), (0, Nq.l)(mq.ec.CustomKillfeed, (qq => {
-        const Eq = (0, Wq.e)(qq);
-        (0, Wq.b)(Eq) && (0, Wq.b)(Eq.killer) && (0, Wq.b)(Eq.victim) && hq((() => Vq(Eq)))
-      })), (0, Nq.d)((() => {
-        yq = []
+    function xb() {
+      nb || (nb = !0, (0, Zb.n)(Ub.fc.PlayerKilled, (bb => {
+        const ub = (0, wb.i)(bb);
+        (0, wb.d)(ub) && Db((() => Xb(ub)))
+      })), (0, Zb.n)(Ub.fc.CustomKillfeed, (bb => {
+        const ub = (0, wb.i)(bb);
+        (0, wb.d)(ub) && (0, wb.d)(ub.killer) && (0, wb.d)(ub.victim) && Db((() => pb(ub)))
+      })), (0, Zb.i)((() => {
+        db = []
       })))
     }
-    const bq = Object.freeze([0, 0, 0]),
-      iq = [0, 0, 0],
-      Zq = [0, 0, 0],
-      fq = {
+    const zb = Object.freeze([0, 0, 0]),
+      gb = [0, 0, 0],
+      ib = [0, 0, 0],
+      vb = {
         kill: {
-          watch(qq) {
-            if (rq = !0, 0 === yq.length) return tq = qq, () => {
-              rq = !1, tq = null
+          watch(bb) {
+            if (jb = !0, 0 === db.length) return rb = bb, () => {
+              jb = !1, rb = null
             };
-            const Eq = setTimeout((() => {
-              const Eq = yq;
-              yq = [], tq = qq;
-              for (const Yq of Eq) try {
-                qq(Yq())
-              } catch (gq) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", gq)
+            const ub = setTimeout((() => {
+              const ub = db;
+              db = [], rb = bb;
+              for (const Bb of ub) try {
+                bb(Bb())
+              } catch (hb) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", hb)
               }
             }), 0);
             return () => {
-              clearTimeout(Eq), rq = !1, tq = null
+              clearTimeout(ub), jb = !1, rb = null
             }
           }
         }
       },
-      Mq = {
+      tb = {
         localPos() {
-          const qq = (0, cq.e)();
-          if (null === qq) return bq;
-          const Eq = qq.api.apiView;
-          for (let gq = 0; gq < 3; gq++) iq[gq] = xq.t.localPos(Eq, 0, gq);
-          return iq
+          const bb = (0, Sb.l)();
+          if (null === bb) return zb;
+          const ub = bb.api.apiView;
+          for (let hb = 0; hb < 3; hb++) gb[hb] = Lb.o.localPos(ub, 0, hb);
+          return gb
         },
         targetedBlockPos() {
-          const qq = (0, cq.e)();
-          if (null === qq || xq.t.targetBlockId(qq.api.apiView, 0) === xq.id) return null;
-          for (let Eq = 0; Eq < 3; Eq++) Zq[Eq] = xq.t.targetBlock(qq.api.apiView, 0, Eq);
-          return Zq
+          const bb = (0, Sb.l)();
+          if (null === bb || Lb.o.targetBlockId(bb.api.apiView, 0) === Lb.dd) return null;
+          for (let ub = 0; ub < 3; ub++) ib[ub] = Lb.o.targetBlock(bb.api.apiView, 0, ub);
+          return ib
         }
       }
   },
-  38954: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Yq
+  38632: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Bb
     });
-    class Yq {
+    class Bb {
       constructor() {
         this.members = new Map
       }
-      apply(qq) {
-        const Eq = {
+      apply(bb) {
+        const ub = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const Yq of qq.xg) {
-          let qq = this.members.get(Yq.Ag);
-          if (qq || (qq = {
+        for (const Bb of bb.Zh) {
+          let bb = this.members.get(Bb.Xh);
+          if (bb || (bb = {
               name: null,
               settings: {}
-            }, this.members.set(Yq.Ag, qq), Eq.added.push(Yq.Ag)), null !== Yq.cg && (qq.name = Yq.cg), null !== Yq.ug || Yq.Bg.length > 0) {
-            const gq = null === Yq.ug ? {} : JSON.parse(Yq.ug);
-            Object.assign(qq.settings, gq);
-            for (const Eq of Yq.Bg) delete qq.settings[Eq], gq[Eq] = void 0;
-            Eq.settingChanges.push({
-              playerId: Yq.Ag,
-              settings: gq
+            }, this.members.set(Bb.Xh, bb), ub.added.push(Bb.Xh)), null !== Bb.ph && (bb.name = Bb.ph), null !== Bb.oh || Bb.Ah.length > 0) {
+            const hb = null === Bb.oh ? {} : JSON.parse(Bb.oh);
+            Object.assign(bb.settings, hb);
+            for (const ub of Bb.Ah) delete bb.settings[ub], hb[ub] = void 0;
+            ub.settingChanges.push({
+              playerId: Bb.Xh,
+              settings: hb
             })
           }
         }
-        for (const Yq of qq.Wg) {
-          const qq = this.members.get(Yq);
-          var gq;
-          if (qq) this.members.delete(Yq), Eq.removed.push({
-            playerId: Yq,
-            name: null !== (gq = qq.name) && void 0 !== gq ? gq : void 0
+        for (const Bb of bb.Kh) {
+          const bb = this.members.get(Bb);
+          var hb;
+          if (bb) this.members.delete(Bb), ub.removed.push({
+            playerId: Bb,
+            name: null !== (hb = bb.name) && void 0 !== hb ? hb : void 0
           })
         }
-        return Eq
+        return ub
       }
-      has(qq) {
-        return this.members.has(qq)
+      has(bb) {
+        return this.members.has(bb)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(qq) {
-        var Eq, gq;
-        return null !== (Eq = null === (gq = this.members.get(qq)) || void 0 === gq ? void 0 : gq.name) && void 0 !== Eq ? Eq : void 0
+      getName(bb) {
+        var ub, hb;
+        return null !== (ub = null === (hb = this.members.get(bb)) || void 0 === hb ? void 0 : hb.name) && void 0 !== ub ? ub : void 0
       }
-      getSettings(qq) {
-        var Eq;
-        return null === (Eq = this.members.get(qq)) || void 0 === Eq ? void 0 : Eq.settings
+      getSettings(bb) {
+        var ub;
+        return null === (ub = this.members.get(bb)) || void 0 === ub ? void 0 : ub.settings
       }
-      getSetting(qq, Eq) {
-        var gq;
-        return null === (gq = this.members.get(qq)) || void 0 === gq ? void 0 : gq.settings[Eq]
+      getSetting(bb, ub) {
+        var hb;
+        return null === (hb = this.members.get(bb)) || void 0 === hb ? void 0 : hb.settings[ub]
       }
       clear() {
         this.members.clear()
@@ -503,4 +503,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

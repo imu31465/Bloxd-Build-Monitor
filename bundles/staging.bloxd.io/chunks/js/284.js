@@ -1,66 +1,66 @@
 export const id = 284;
 export const ids = [284];
 export const modules = {
-  41028: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      default: () => sE
+  40753: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      default: () => Vu
     });
-    var Yq = gq(41037),
-      lq = gq(41082),
-      Oq = gq(41091),
-      mq = gq(57),
-      xq = gq(71),
-      Aq = gq(41108),
-      cq = gq(41113),
-      uq = gq(4583),
-      Bq = gq(41120),
-      Wq = gq(1876),
-      Nq = gq(41125),
-      aq = gq(41144),
-      Vq = gq.n(aq),
-      dq = gq(41100),
-      jq = gq(41106),
-      Hq = gq(1326),
-      oq = gq(36902),
-      Pq = gq(1226),
-      Qq = gq(36912),
-      yq = gq(36781),
-      tq = gq(1416),
-      rq = gq(598),
-      vq = gq(1234),
-      hq = gq(41201),
-      nq = gq(41044),
-      bq = gq(41053),
-      iq = gq(1904),
-      Zq = gq(3595),
-      fq = gq(31),
-      Mq = gq(1109);
-    const Tq = 1e4,
-      zq = 250,
-      Sq = 250;
-    var pq = gq(41070);
-    const Gq = 50,
-      Lq = 100;
-    const Jq = 2e3,
-      kq = nq.J.define(),
-      Rq = nq.J.define(),
-      Uq = nq.J.define();
-    class Fq extends bq.m {
-      constructor(qq, Eq, gq) {
-        super(), this.colour = qq, this.playerName = Eq, this.showName = gq
+    var Bb = hb(40760),
+      Ob = hb(40807),
+      Gb = hb(40815),
+      Ub = hb(49),
+      Lb = hb(65),
+      Yb = hb(40830),
+      Sb = hb(40835),
+      ab = hb(4528),
+      Hb = hb(40837),
+      wb = hb(1789),
+      Zb = hb(40842),
+      Xb = hb(40858),
+      pb = hb.n(Xb),
+      ob = hb(40821),
+      Ab = hb(40828),
+      lb = hb(1242),
+      Kb = hb(36498),
+      Wb = hb(1133),
+      Cb = hb(36504),
+      db = hb(36377),
+      rb = hb(1348),
+      jb = hb(588),
+      nb = hb(1141),
+      Db = hb(40903),
+      xb = hb(40769),
+      zb = hb(40773),
+      gb = hb(1811),
+      ib = hb(3516),
+      vb = hb(16),
+      tb = hb(1038);
+    const Jb = 1e4,
+      eb = 250,
+      Nb = 250;
+    var sb = hb(40788);
+    const Mb = 50,
+      mb = 100;
+    const Ib = 2e3,
+      Pb = xb.D.define(),
+      qb = xb.D.define(),
+      Eb = xb.D.define();
+    class yb extends zb.u {
+      constructor(bb, ub, hb) {
+        super(), this.colour = bb, this.playerName = ub, this.showName = hb
       }
       toDOM() {
-        const qq = document.createElement("span");
-        qq.className = "cm-remote-cursor-wrapper", qq.style.borderLeftColor = this.colour;
-        const Eq = document.createElement("span");
-        if (Eq.className = "cm-remote-cursor", Eq.style.borderLeftColor = this.colour, qq.appendChild(Eq), this.showName) {
-          const Eq = document.createElement("span");
-          Eq.className = "cm-remote-cursor-name", Eq.style.backgroundColor = this.colour, Eq.textContent = this.playerName, qq.appendChild(Eq)
+        const bb = document.createElement("span");
+        bb.className = "cm-remote-cursor-wrapper", bb.style.borderLeftColor = this.colour;
+        const ub = document.createElement("span");
+        if (ub.className = "cm-remote-cursor", ub.style.borderLeftColor = this.colour, bb.appendChild(ub), this.showName) {
+          const ub = document.createElement("span");
+          ub.className = "cm-remote-cursor-name", ub.style.backgroundColor = this.colour, ub.textContent = this.playerName, bb.appendChild(ub)
         }
-        return qq
+        return bb
       }
-      eq(qq) {
-        return this.colour === qq.colour && this.playerName === qq.playerName && this.showName === qq.showName
+      eq(bb) {
+        return this.colour === bb.colour && this.playerName === bb.playerName && this.showName === bb.showName
       }
       get estimatedHeight() {
         return -1
@@ -70,270 +70,270 @@ export const modules = {
       }
     }
 
-    function sq(qq, Eq) {
-      const gq = [],
-        Yq = [];
-      for (const [, mq] of qq) {
-        const qq = Eq - mq.lastMoved < Jq;
-        if (gq.push({
-            pos: mq.head,
-            decoration: bq.c.widget({
-              widget: new Fq(mq.colour, mq.playerName, qq),
+    function Vb(bb, ub) {
+      const hb = [],
+        Bb = [];
+      for (const [, Ub] of bb) {
+        const bb = ub - Ub.lastMoved < Ib;
+        if (hb.push({
+            pos: Ub.head,
+            decoration: zb.e.widget({
+              widget: new yb(Ub.colour, Ub.playerName, bb),
               side: 1
             })
-          }), mq.anchor !== mq.head) {
-          const qq = Math.min(mq.anchor, mq.head),
-            Eq = Math.max(mq.anchor, mq.head);
-          Yq.push({
-            from: qq,
-            to: Eq,
-            decoration: bq.c.mark({
+          }), Ub.anchor !== Ub.head) {
+          const bb = Math.min(Ub.anchor, Ub.head),
+            ub = Math.max(Ub.anchor, Ub.head);
+          Bb.push({
+            from: bb,
+            to: ub,
+            decoration: zb.e.mark({
               class: "cm-remote-selection",
               attributes: {
-                style: `background-color: ${mq.colour}33`
+                style: `background-color: ${Ub.colour}33`
               }
             })
           })
         }
       }
-      const lq = new nq.E,
-        Oq = [];
-      for (const mq of gq) Oq.push({
+      const Ob = new xb.w,
+        Gb = [];
+      for (const Ub of hb) Gb.push({
         bias: 1,
-        deco: mq.decoration,
-        from: mq.pos,
-        to: mq.pos
+        deco: Ub.decoration,
+        from: Ub.pos,
+        to: Ub.pos
       });
-      for (const mq of Yq) Oq.push({
+      for (const Ub of Bb) Gb.push({
         bias: 0,
-        deco: mq.decoration,
-        from: mq.from,
-        to: mq.to
+        deco: Ub.decoration,
+        from: Ub.from,
+        to: Ub.to
       });
-      Oq.sort(((qq, Eq) => qq.from - Eq.from || qq.deco.startSide - Eq.deco.startSide || qq.bias - Eq.bias));
-      for (const mq of Oq) lq.add(mq.from, mq.to, mq.deco);
-      return lq.finish()
+      Gb.sort(((bb, ub) => bb.from - ub.from || bb.deco.startSide - ub.deco.startSide || bb.bias - ub.bias));
+      for (const Ub of Gb) Ob.add(Ub.from, Ub.to, Ub.deco);
+      return Ob.finish()
     }
-    const Xq = nq.L.define({
+    const Fb = xb.G.define({
       create: () => ({
         cursors: new Map,
-        YO: bq.c.none
+        ZG: zb.e.none
       }),
-      update(qq, Eq) {
-        let gq = qq.cursors,
-          Yq = !1;
-        if (Eq.docChanged) {
-          const qq = new Map;
-          for (const [Yq, lq] of gq) qq.set(Yq, {
-            ...lq,
-            anchor: Eq.changes.mapPos(lq.anchor, 1),
-            head: Eq.changes.mapPos(lq.head, 1)
+      update(bb, ub) {
+        let hb = bb.cursors,
+          Bb = !1;
+        if (ub.docChanged) {
+          const bb = new Map;
+          for (const [Bb, Ob] of hb) bb.set(Bb, {
+            ...Ob,
+            anchor: ub.changes.mapPos(Ob.anchor, 1),
+            head: ub.changes.mapPos(Ob.head, 1)
           });
-          gq = qq, Yq = !0
+          hb = bb, Bb = !0
         }
-        for (const lq of Eq.effects)
-          if (lq.is(kq)) {
-            if (!Number.isInteger(lq.value.anchor) || !Number.isInteger(lq.value.head)) {
-              console.warn(`Code Editor: ignored player ${lq.value.playerId}'s cursor at ${lq.value.anchor}-${lq.value.head}`);
+        for (const Ob of ub.effects)
+          if (Ob.is(Pb)) {
+            if (!Number.isInteger(Ob.value.anchor) || !Number.isInteger(Ob.value.head)) {
+              console.warn(`Code Editor: ignored player ${Ob.value.playerId}'s cursor at ${Ob.value.anchor}-${Ob.value.head}`);
               continue
             }
-            const Oq = Eq.state.doc.length,
-              mq = {
-                ...lq.value,
-                anchor: Math.min(lq.value.anchor, Oq),
-                head: Math.min(lq.value.head, Oq)
+            const Gb = ub.state.doc.length,
+              Ub = {
+                ...Ob.value,
+                anchor: Math.min(Ob.value.anchor, Gb),
+                head: Math.min(Ob.value.head, Gb)
               };
-            gq === qq.cursors && (gq = new Map(gq)), gq.set(mq.playerId, mq), Yq = !0
-          } else lq.is(Rq) ? gq.has(lq.value) && (gq === qq.cursors && (gq = new Map(gq)), gq.delete(lq.value), Yq = !0) : lq.is(Uq) && (Yq = !0);
-        return Yq ? {
-          cursors: gq,
-          YO: sq(gq, Date.now())
-        } : qq
+            hb === bb.cursors && (hb = new Map(hb)), hb.set(Ub.playerId, Ub), Bb = !0
+          } else Ob.is(qb) ? hb.has(Ob.value) && (hb === bb.cursors && (hb = new Map(hb)), hb.delete(Ob.value), Bb = !0) : Ob.is(Eb) && (Bb = !0);
+        return Bb ? {
+          cursors: hb,
+          ZG: Vb(hb, Date.now())
+        } : bb
       },
-      provide: qq => bq.g.YO.from(qq, (qq => qq.YO))
+      provide: bb => zb.m.ZG.from(bb, (bb => bb.ZG))
     });
-    const wq = nq.J.define(),
-      Kq = bq.c.mark({
+    const fb = xb.D.define(),
+      kb = zb.e.mark({
         class: "CodeInsertFlash"
       }),
-      Cq = nq.L.define({
-        create: () => bq.c.none,
-        update(qq, Eq) {
-          let gq = qq.map(Eq.changes);
-          for (const Yq of Eq.effects) Yq.is(wq) && (gq = Yq.value ? bq.c.set(Kq.range(Yq.value.from, Yq.value.to)) : bq.c.none);
-          return gq
+      Tb = xb.G.define({
+        create: () => zb.e.none,
+        update(bb, ub) {
+          let hb = bb.map(ub.changes);
+          for (const Bb of ub.effects) Bb.is(fb) && (hb = Bb.value ? zb.e.set(kb.range(Bb.value.from, Bb.value.to)) : zb.e.none);
+          return hb
         },
-        provide: qq => bq.g.YO.from(qq)
+        provide: bb => zb.m.ZG.from(bb)
       }),
-      Iq = nq.L.define({
+      cb = xb.G.define({
         create: () => !1,
-        update: (qq, Eq) => qq || void 0 !== Eq.annotation(nq.Q.userEvent) && !Eq.annotation(nq.Q.remote)
+        update: (bb, ub) => bb || void 0 !== ub.annotation(xb.O.userEvent) && !ub.annotation(xb.O.remote)
       }),
-      eq = [Cq, Iq];
+      Qb = [Tb, cb];
 
-    function Dq(qq) {
-      return qq.field(Iq)
+    function Rb(bb) {
+      return bb.field(cb)
     }
-    const qE = 3e4;
+    const bu = 3e4;
 
-    function EE(qq, Eq) {
-      const gq = (0, mq.useRef)(null);
-      (0, mq.useEffect)((() => {
-        var qq;
-        (null === (qq = gq.current) || void 0 === qq ? void 0 : qq.path) !== Eq && (gq.current = null)
-      }), [Eq]);
-      const Yq = qq => {
-        var Yq;
-        const lq = gq.current;
-        if (null === qq || void 0 === qq || !qq.dom.isConnected || !lq || lq.path !== Eq) return;
-        gq.current = null;
+    function uu(bb, ub) {
+      const hb = (0, Ub.useRef)(null);
+      (0, Ub.useEffect)((() => {
+        var bb;
+        (null === (bb = hb.current) || void 0 === bb ? void 0 : bb.path) !== ub && (hb.current = null)
+      }), [ub]);
+      const Bb = bb => {
+        var Bb;
+        const Ob = hb.current;
+        if (null === bb || void 0 === bb || !bb.dom.isConnected || !Ob || Ob.path !== ub) return;
+        hb.current = null;
         const {
-          jN: mq
-        } = lq;
-        if (mq && null !== mq.text && performance.now() - mq.at < qE) {
-          const Eq = function(qq, Eq) {
-            if (qq === Eq) return null;
-            const gq = Math.min(qq.length, Eq.length);
-            let Yq = 0;
-            for (; Yq < gq && qq[Yq] === Eq[Yq];) Yq++;
-            let lq = 0;
-            for (; lq < gq - Yq && qq[qq.length - 1 - lq] === Eq[Eq.length - 1 - lq];) lq++;
+          HZ: Ub
+        } = Ob;
+        if (Ub && null !== Ub.text && performance.now() - Ub.at < bu) {
+          const ub = function(bb, ub) {
+            if (bb === ub) return null;
+            const hb = Math.min(bb.length, ub.length);
+            let Bb = 0;
+            for (; Bb < hb && bb[Bb] === ub[Bb];) Bb++;
+            let Ob = 0;
+            for (; Ob < hb - Bb && bb[bb.length - 1 - Ob] === ub[ub.length - 1 - Ob];) Ob++;
             return {
-              from: Yq,
-              to: qq.length - lq,
-              insert: Eq.slice(Yq, Eq.length - lq)
+              from: Bb,
+              to: bb.length - Ob,
+              insert: ub.slice(Bb, ub.length - Ob)
             }
-          }(qq.state.doc.toString(), mq.text);
-          null !== Eq && qq.dispatch({
-            changes: Eq,
-            userEvent: mq.placed ? "input" : void 0
+          }(bb.state.doc.toString(), Ub.text);
+          null !== ub && bb.dispatch({
+            changes: ub,
+            userEvent: Ub.placed ? "input" : void 0
           })
         }
         const {
-          doc: xq
-        } = qq.state, Aq = xq.line(Math.min(Math.max(lq.line, 1), xq.lines)), cq = Aq.from + Math.min(null !== (Yq = lq.column) && void 0 !== Yq ? Yq : 0, Aq.length);
-        qq.dispatch({
+          doc: Lb
+        } = bb.state, Yb = Lb.line(Math.min(Math.max(Ob.line, 1), Lb.lines)), Sb = Yb.from + Math.min(null !== (Bb = Ob.column) && void 0 !== Bb ? Bb : 0, Yb.length);
+        bb.dispatch({
           selection: {
-            anchor: cq
+            anchor: Sb
           },
-          effects: Oq.d.scrollIntoView(cq, {
+          effects: Gb.c.scrollIntoView(Sb, {
             y: "center"
           }),
-          userEvent: null !== mq && void 0 !== mq && mq.placed ? "select" : void 0
-        }), !1 !== (null === mq || void 0 === mq ? void 0 : mq.focused) && qq.focus()
+          userEvent: null !== Ub && void 0 !== Ub && Ub.placed ? "select" : void 0
+        }), !1 !== (null === Ub || void 0 === Ub ? void 0 : Ub.focused) && bb.focus()
       };
-      return (0, tq.f)("CodeEditorGoToLine", (Eq => {
-        gq.current = Eq, Yq(qq.current)
-      })), (0, tq.f)("CodeEditorKeepEdits", (() => {
-        const Yq = qq.current;
-        if (null === Yq || !Yq.dom.isConnected || null === Eq) return;
+      return (0, rb.h)("CodeEditorGoToLine", (ub => {
+        hb.current = ub, Bb(bb.current)
+      })), (0, rb.h)("CodeEditorKeepEdits", (() => {
+        const Bb = bb.current;
+        if (null === Bb || !Bb.dom.isConnected || null === ub) return;
         const {
-          doc: lq,
-          selection: Oq
-        } = Yq.state, {
-          head: mq
-        } = Oq.main, xq = lq.lineAt(mq), Aq = {
-          text: (0, hq.l)(Yq.state).length > 0 ? lq.toString() : null,
+          doc: Ob,
+          selection: Gb
+        } = Bb.state, {
+          head: Ub
+        } = Gb.main, Lb = Ob.lineAt(Ub), Yb = {
+          text: (0, Db.h)(Bb.state).length > 0 ? Ob.toString() : null,
           at: performance.now(),
-          focused: Yq.hasFocus,
-          placed: Dq(Yq.state)
+          focused: Bb.hasFocus,
+          placed: Rb(Bb.state)
         };
-        gq.current = {
-          path: Eq,
-          line: xq.number,
-          column: mq - xq.from,
-          jN: Aq
+        hb.current = {
+          path: ub,
+          line: Lb.number,
+          column: Ub - Lb.from,
+          HZ: Yb
         }
-      })), qq => {
-        var lq;
-        const Oq = gq.current;
-        !1 === (null === Oq || void 0 === Oq || null === (lq = Oq.jN) || void 0 === lq ? void 0 : lq.focused) && Oq.path === Eq || qq.focus(), Yq(qq)
+      })), bb => {
+        var Ob;
+        const Gb = hb.current;
+        !1 === (null === Gb || void 0 === Gb || null === (Ob = Gb.HZ) || void 0 === Ob ? void 0 : Ob.focused) && Gb.path === ub || bb.focus(), Bb(bb)
       }
     }
-    var gE = gq(4191),
-      YE = gq(1183);
+    var hu = hb(4118),
+      Bu = hb(1095);
 
-    function lE(qq, Eq) {
+    function Ou(bb, ub) {
       const {
-        t: gq
-      } = (0, YE.v)();
-      (0, tq.f)("CodeEditorInsertText", (Yq => {
+        t: hb
+      } = (0, Bu.K)();
+      (0, rb.h)("CodeEditorInsertText", (Bb => {
         let {
-          text: lq,
-          focus: Oq
-        } = Yq;
-        const mq = qq.current,
-          xq = null !== mq && void 0 !== mq && mq.dom.isConnected ? function(qq, Eq) {
-            if (!Dq(qq)) return null;
+          text: Ob,
+          focus: Gb
+        } = Bb;
+        const Ub = bb.current,
+          Lb = null !== Ub && void 0 !== Ub && Ub.dom.isConnected ? function(bb, ub) {
+            if (!Rb(bb)) return null;
             const {
-              from: gq,
-              to: Yq
-            } = qq.selection.main, lq = gq + Eq.length;
+              from: hb,
+              to: Bb
+            } = bb.selection.main, Ob = hb + ub.length;
             return {
               changes: {
-                from: gq,
-                to: Yq,
-                insert: Eq
+                from: hb,
+                to: Bb,
+                insert: ub
               },
               selection: {
-                anchor: lq
+                anchor: Ob
               },
-              effects: [bq.g.scrollIntoView(lq, {
+              effects: [zb.m.scrollIntoView(Ob, {
                 y: "center"
-              }), wq.of({
-                from: gq,
-                to: lq
+              }), fb.of({
+                from: hb,
+                to: Ob
               })],
               userEvent: "input"
             }
-          }(mq.state, lq) : null;
-        null !== mq && null !== xq ? (mq.dispatch(xq), Oq && mq.focus(), setTimeout((() => {
-          mq.dom.isConnected && mq.dispatch({
-            effects: wq.of(null)
+          }(Ub.state, Ob) : null;
+        null !== Ub && null !== Lb ? (Ub.dispatch(Lb), Gb && Ub.focus(), setTimeout((() => {
+          Ub.dom.isConnected && Ub.dispatch({
+            effects: fb.of(null)
           })
-        }), 1500)) : (0, gE.d)(lq).then((() => {
-          Eq({
-            message: gq("codeEditorWorld:pickCopied", {
-              coords: lq
+        }), 1500)) : (0, hu.b)(Ob).then((() => {
+          ub({
+            message: hb("codeEditorWorld:pickCopied", {
+              coords: Ob
             }),
             type: "success"
           })
-        }), (qq => {
-          console.error("Pick could not copy the coordinates", qq), Eq({
-            message: gq("codeEditorWorld:pickPlaceCursor", {
-              coords: lq
+        }), (bb => {
+          console.error("Pick could not copy the coordinates", bb), ub({
+            message: hb("codeEditorWorld:pickPlaceCursor", {
+              coords: Ob
             }),
             type: "warning"
           })
         }))
       }))
     }
-    var OE = gq(41075);
-    const mE = "#e45649",
-      xE = "#383a42",
-      AE = "#696c77",
-      cE = "#986801",
-      uE = "#e5e5e6",
-      BE = "#fafafa",
-      WE = "#eaeaeb",
-      NE = "#526fff",
-      aE = bq.g.theme({
+    var Gu = hb(40803);
+    const Uu = "#e45649",
+      Lu = "#383a42",
+      Yu = "#696c77",
+      Su = "#986801",
+      au = "#e5e5e6",
+      Hu = "#fafafa",
+      wu = "#eaeaeb",
+      Zu = "#526fff",
+      Xu = zb.m.theme({
         "&": {
-          color: xE,
-          backgroundColor: BE
+          color: Lu,
+          backgroundColor: Hu
         },
         ".cm-content": {
-          caretColor: NE
+          caretColor: Zu
         },
         ".cm-cursor, .cm-dropCursor": {
-          borderLeftColor: NE
+          borderLeftColor: Zu
         },
         "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection": {
           backgroundColor: "#d7d8de"
         },
         ".cm-panels": {
           backgroundColor: "#f0f0f1",
-          color: xE
+          color: Lu
         },
         ".cm-panels.cm-panels-top": {
           borderBottom: "2px solid #d4d4d6"
@@ -358,12 +358,12 @@ export const modules = {
           backgroundColor: "#4078f233"
         },
         ".cm-gutters": {
-          backgroundColor: BE,
-          color: AE,
+          backgroundColor: Hu,
+          color: Yu,
           border: "none"
         },
         ".cm-activeLineGutter": {
-          backgroundColor: uE
+          backgroundColor: au
         },
         ".cm-foldPlaceholder": {
           backgroundColor: "transparent",
@@ -372,88 +372,88 @@ export const modules = {
         },
         ".cm-tooltip": {
           border: "none",
-          backgroundColor: WE
+          backgroundColor: wu
         },
         ".cm-tooltip .cm-tooltip-arrow:before": {
           borderTopColor: "transparent",
           borderBottomColor: "transparent"
         },
         ".cm-tooltip .cm-tooltip-arrow:after": {
-          borderTopColor: WE,
-          borderBottomColor: WE
+          borderTopColor: wu,
+          borderBottomColor: wu
         },
         ".cm-tooltip-autocomplete": {
           "& > ul > li[aria-selected]": {
-            backgroundColor: uE,
-            color: xE
+            backgroundColor: au,
+            color: Lu
           }
         }
       }, {
         dark: !1
       }),
-      VE = pq.c.define([{
-        tag: OE.i.keyword,
+      pu = sb.c.define([{
+        tag: Gu.k.keyword,
         color: "#a626a4"
       }, {
-        tag: [OE.i.name, OE.i.deleted, OE.i.character, OE.i.propertyName, OE.i.macroName],
-        color: mE
+        tag: [Gu.k.name, Gu.k.deleted, Gu.k.character, Gu.k.propertyName, Gu.k.macroName],
+        color: Uu
       }, {
-        tag: [OE.i.function(OE.i.variableName), OE.i.labelName],
+        tag: [Gu.k.function(Gu.k.variableName), Gu.k.labelName],
         color: "#4078f2"
       }, {
-        tag: [OE.i.color, OE.i.constant(OE.i.name), OE.i.standard(OE.i.name)],
-        color: cE
+        tag: [Gu.k.color, Gu.k.constant(Gu.k.name), Gu.k.standard(Gu.k.name)],
+        color: Su
       }, {
-        tag: [OE.i.definition(OE.i.name), OE.i.separator],
-        color: xE
+        tag: [Gu.k.definition(Gu.k.name), Gu.k.separator],
+        color: Lu
       }, {
-        tag: [OE.i.typeName, OE.i.className, OE.i.number, OE.i.changed, OE.i.annotation, OE.i.modifier, OE.i.self, OE.i.namespace],
+        tag: [Gu.k.typeName, Gu.k.className, Gu.k.number, Gu.k.changed, Gu.k.annotation, Gu.k.modifier, Gu.k.self, Gu.k.namespace],
         color: "#c18401"
       }, {
-        tag: [OE.i.operator, OE.i.operatorKeyword, OE.i.url, OE.i.escape, OE.i.regexp, OE.i.link, OE.i.special(OE.i.string)],
+        tag: [Gu.k.operator, Gu.k.operatorKeyword, Gu.k.url, Gu.k.escape, Gu.k.regexp, Gu.k.link, Gu.k.special(Gu.k.string)],
         color: "#0184bc"
       }, {
-        tag: [OE.i.meta, OE.i.comment],
-        color: AE
+        tag: [Gu.k.meta, Gu.k.comment],
+        color: Yu
       }, {
-        tag: OE.i.strong,
+        tag: Gu.k.strong,
         fontWeight: "bold"
       }, {
-        tag: OE.i.emphasis,
+        tag: Gu.k.emphasis,
         fontStyle: "italic"
       }, {
-        tag: OE.i.strikethrough,
+        tag: Gu.k.strikethrough,
         textDecoration: "line-through"
       }, {
-        tag: OE.i.link,
-        color: AE,
+        tag: Gu.k.link,
+        color: Yu,
         textDecoration: "underline"
       }, {
-        tag: OE.i.heading,
+        tag: Gu.k.heading,
         fontWeight: "bold",
-        color: mE
+        color: Uu
       }, {
-        tag: [OE.i.atom, OE.i.bool, OE.i.special(OE.i.variableName)],
-        color: cE
+        tag: [Gu.k.atom, Gu.k.bool, Gu.k.special(Gu.k.variableName)],
+        color: Su
       }, {
-        tag: [OE.i.processingInstruction, OE.i.string, OE.i.inserted],
+        tag: [Gu.k.processingInstruction, Gu.k.string, Gu.k.inserted],
         color: "#50a14f"
       }, {
-        tag: OE.i.invalid,
+        tag: Gu.k.invalid,
         color: "#000000"
       }]),
-      dE = [aE, (0, pq.cb)(VE)];
-    var jE = gq(36962),
-      HE = gq(41208);
-    const oE = Oq.j.define(),
-      PE = Oq.k.define({
+      ou = [Xu, (0, sb.db)(pu)];
+    var Au = hb(36559),
+      lu = hb(40906);
+    const Ku = Gb.g.define(),
+      Wu = Gb.k.define({
         create: () => !1,
-        update(qq, Eq) {
-          for (const gq of Eq.effects) gq.is(oE) && (qq = gq.value);
-          return qq
+        update(bb, ub) {
+          for (const hb of ub.effects) hb.is(Ku) && (bb = hb.value);
+          return bb
         }
       }),
-      QE = [{
+      Cu = [{
         action: "explain",
         label: "Explain this"
       }, {
@@ -464,68 +464,68 @@ export const modules = {
         label: "Change this\u2026"
       }];
 
-    function yE(qq, Eq) {
-      return [PE, Oq.l.fromClass(class {
-        constructor(qq) {
-          this.view = qq, this.onDown = qq => {
-            const Eq = qq.target instanceof Element && null !== qq.target.closest(".cm-tooltip");
-            0 !== qq.button || Eq || this.view.state.field(PE) || this.view.dispatch({
-              effects: oE.of(!0)
+    function du(bb, ub) {
+      return [Wu, Gb.m.fromClass(class {
+        constructor(bb) {
+          this.view = bb, this.onDown = bb => {
+            const ub = bb.target instanceof Element && null !== bb.target.closest(".cm-tooltip");
+            0 !== bb.button || ub || this.view.state.field(Wu) || this.view.dispatch({
+              effects: Ku.of(!0)
             })
           }, this.onUp = () => {
-            this.view.state.field(PE) && this.view.dispatch({
-              effects: oE.of(!1)
+            this.view.state.field(Wu) && this.view.dispatch({
+              effects: Ku.of(!1)
             })
-          }, qq.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
+          }, bb.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
         }
         destroy() {
           this.view.dom.removeEventListener("mousedown", this.onDown), document.removeEventListener("mouseup", this.onUp), window.removeEventListener("blur", this.onUp)
         }
-      }), Oq.s.compute(["selection", PE], (gq => function(qq, Eq, gq) {
-        const Yq = qq.selection.main;
-        return Yq.empty || qq.field(PE) || qq.sliceDoc(Yq.from, Yq.to).trim().length < 2 ? null : {
-          pos: Yq.from,
+      }), Gb.s.compute(["selection", Wu], (hb => function(bb, ub, hb) {
+        const Bb = bb.selection.main;
+        return Bb.empty || bb.field(Wu) || bb.sliceDoc(Bb.from, Bb.to).trim().length < 2 ? null : {
+          pos: Bb.from,
           above: !0,
-          create: qq => {
-            const Yq = document.createElement("div");
-            Yq.className = "CodeSelectionActions", Yq.setAttribute("role", "toolbar"), Yq.setAttribute("aria-label", "AI Helper: picked code");
+          create: bb => {
+            const Bb = document.createElement("div");
+            Bb.className = "CodeSelectionActions", Bb.setAttribute("role", "toolbar"), Bb.setAttribute("aria-label", "AI Helper: picked code");
             for (const {
-                action: lq,
-                label: Oq
+                action: Ob,
+                label: Gb
               }
-              of QE) {
-              if (!gq && "explain" !== lq) continue;
-              const mq = document.createElement("button");
-              mq.type = "button", mq.textContent = Oq, "change" !== lq && (mq.title = HE.e, mq.dataset.asksAi = "true"), mq.addEventListener("mousedown", (qq => {
-                qq.preventDefault()
-              })), mq.addEventListener("click", (() => {
-                const gq = qq.state.selection.main;
-                if (gq.empty) return;
-                const Yq = {
-                  action: lq,
-                  path: Eq,
-                  fromLine: qq.state.doc.lineAt(gq.from).number,
-                  toLine: qq.state.doc.lineAt(gq.to > gq.from && qq.state.doc.lineAt(gq.to).from === gq.to ? gq.to - 1 : gq.to).number,
-                  text: qq.state.sliceDoc(gq.from, gq.to)
+              of Cu) {
+              if (!hb && "explain" !== Ob) continue;
+              const Ub = document.createElement("button");
+              Ub.type = "button", Ub.textContent = Gb, "change" !== Ob && (Ub.title = lu.d, Ub.dataset.asksAi = "true"), Ub.addEventListener("mousedown", (bb => {
+                bb.preventDefault()
+              })), Ub.addEventListener("click", (() => {
+                const hb = bb.state.selection.main;
+                if (hb.empty) return;
+                const Bb = {
+                  action: Ob,
+                  path: ub,
+                  fromLine: bb.state.doc.lineAt(hb.from).number,
+                  toLine: bb.state.doc.lineAt(hb.to > hb.from && bb.state.doc.lineAt(hb.to).from === hb.to ? hb.to - 1 : hb.to).number,
+                  text: bb.state.sliceDoc(hb.from, hb.to)
                 };
-                fq.i.TV("WorldCodeAiSelection", Yq), qq.dispatch({
+                vb.i.vp("WorldCodeAiSelection", Bb), bb.dispatch({
                   selection: {
-                    anchor: gq.to
+                    anchor: hb.to
                   }
                 })
-              })), Yq.appendChild(mq)
+              })), Bb.appendChild(Ub)
             }
             return {
-              dom: Yq
+              dom: Bb
             }
           }
         }
-      }(gq, qq, Eq)))]
+      }(hb, bb, ub)))]
     }
-    var tE = gq(1070);
-    const rE = new Set(["(", "{", "[", "<"]),
-      vE = new Set([")", "}", "]", ">"]),
-      hE = {
+    var ru = hb(1007);
+    const ju = new Set(["(", "{", "[", "<"]),
+      nu = new Set([")", "}", "]", ">"]),
+      Du = {
         text: "var(--codeTooltipText, white)",
         parameterName: "var(--codeTooltipParameterName, orange)",
         parameter: "var(--codeTooltipParameter, cyan)",
@@ -533,100 +533,100 @@ export const modules = {
         docs: "var(--codeTooltipDocs, gray)"
       };
 
-    function nE(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    function xu(bb) {
+      let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
 
-      function gq(qq, Eq) {
-        let gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Yq = [];
-        for (const lq of qq) {
-          let qq;
-          qq = "punctuation" === lq.kind ? hE.text : "parameterName" === lq.kind ? hE.parameterName : Eq, Yq.push({
-            str: lq.text,
+      function hb(bb, ub) {
+        let hb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Bb = [];
+        for (const Ob of bb) {
+          let bb;
+          bb = "punctuation" === Ob.kind ? Du.text : "parameterName" === Ob.kind ? Du.parameterName : ub, Bb.push({
+            str: Ob.text,
             style: {
-              color: qq,
-              opacity: gq ? .5 : void 0
+              color: bb,
+              opacity: hb ? .5 : void 0
             }
           })
         }
-        return Yq
+        return Bb
       }
-      const Yq = [];
-      if (Yq.push(...gq(qq.prefixDisplayParts, hE.text)), qq.parameters.length > 0) {
-        Yq.push("\n");
-        for (let lq = 0; lq < qq.parameters.length; lq++) {
-          const Oq = qq.parameters[lq];
-          Yq.push("\t"), Yq.push(...gq(Oq.displayParts, hE.parameter, null !== Eq && lq !== Eq)), Yq.push("\n")
+      const Bb = [];
+      if (Bb.push(...hb(bb.prefixDisplayParts, Du.text)), bb.parameters.length > 0) {
+        Bb.push("\n");
+        for (let Ob = 0; Ob < bb.parameters.length; Ob++) {
+          const Gb = bb.parameters[Ob];
+          Bb.push("\t"), Bb.push(...hb(Gb.displayParts, Du.parameter, null !== ub && Ob !== ub)), Bb.push("\n")
         }
       }
-      return Yq.push(...gq(qq.suffixDisplayParts, hE.suffix)), qq.documentation && (Yq.push("\n\n"), Yq.push(...gq(qq.documentation, hE.docs))), Yq
+      return Bb.push(...hb(bb.suffixDisplayParts, Du.suffix)), bb.documentation && (Bb.push("\n\n"), Bb.push(...hb(bb.documentation, Du.docs))), Bb
     }
-    var bE = function(qq) {
-      return qq[qq.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", qq[qq.DuplicateIdentifier = 2300] = "DuplicateIdentifier", qq
-    }(bE || {});
-    const iE = new Set([bE.DuplicateIdentifier]),
-      ZE = new Set([bE.VariableDefinedElsewhere]),
-      fE = new Set([]),
-      ME = "/index.js";
+    var zu = function(bb) {
+      return bb[bb.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", bb[bb.DuplicateIdentifier = 2300] = "DuplicateIdentifier", bb
+    }(zu || {});
+    const gu = new Set([zu.DuplicateIdentifier]),
+      iu = new Set([zu.VariableDefinedElsewhere]),
+      vu = new Set([]),
+      tu = "/index.js";
 
-    function TE(qq) {
-      return "/" + qq
-    }
-
-    function zE(qq, Eq, gq) {
-      qq.getSourceFile(Eq) && qq.deleteFile(Eq), qq.createFile(Eq, gq)
+    function Ju(bb) {
+      return "/" + bb
     }
 
-    function SE(qq) {
-      return !!qq && ((0, Qq.n)(qq) || (0, Qq.l)(qq))
+    function eu(bb, ub, hb) {
+      bb.getSourceFile(ub) && bb.deleteFile(ub), bb.createFile(ub, hb)
     }
 
-    function pE(qq, Eq, gq) {
+    function Nu(bb) {
+      return !!bb && ((0, Cb.l)(bb) || (0, Cb.j)(bb))
+    }
+
+    function su(bb, ub, hb) {
       return () => {
-        let Yq = [...Eq.languageService.getSemanticDiagnostics(gq), ...Eq.languageService.getSyntacticDiagnostics(gq)];
-        return Yq = Yq.filter((qq => !(0, rq.H)(qq.start) && !(0, rq.H)(qq.length) && !iE.has(qq.code))), qq || (Yq = Yq.filter((qq => !ZE.has(qq.code)))), Yq.map((qq => ({
-          from: qq.start,
-          to: qq.start + qq.length,
-          message: "string" === typeof qq.messageText ? qq.messageText : qq.messageText.messageText,
-          severity: fE.has(qq.code) ? "warning" : "error"
+        let Bb = [...ub.languageService.getSemanticDiagnostics(hb), ...ub.languageService.getSyntacticDiagnostics(hb)];
+        return Bb = Bb.filter((bb => !(0, jb.J)(bb.start) && !(0, jb.J)(bb.length) && !gu.has(bb.code))), bb || (Bb = Bb.filter((bb => !iu.has(bb.code)))), Bb.map((bb => ({
+          from: bb.start,
+          to: bb.start + bb.length,
+          message: "string" === typeof bb.messageText ? bb.messageText : bb.messageText.messageText,
+          severity: vu.has(bb.code) ? "warning" : "error"
         })))
       }
     }
 
-    function GE(qq, Eq) {
-      return gq => {
-        var Yq, lq;
-        const Oq = qq.languageService.getCompletionsAtPosition(Eq, gq.pos, {});
-        if (!Oq) return {
-          from: gq.pos,
+    function Mu(bb, ub) {
+      return hb => {
+        var Bb, Ob;
+        const Gb = bb.languageService.getCompletionsAtPosition(ub, hb.pos, {});
+        if (!Gb) return {
+          from: hb.pos,
           options: []
         };
-        let mq = null !== (Yq = null === (lq = Oq.optionalReplacementSpan) || void 0 === lq ? void 0 : lq.start) && void 0 !== Yq ? Yq : gq.pos;
-        if (!Oq.optionalReplacementSpan) {
-          const qq = gq.state.doc.sliceString(0, gq.pos);
-          for (; mq > 0 && /[\w$]/.test(qq[mq - 1]);) mq--
+        let Ub = null !== (Bb = null === (Ob = Gb.optionalReplacementSpan) || void 0 === Ob ? void 0 : Ob.start) && void 0 !== Bb ? Bb : hb.pos;
+        if (!Gb.optionalReplacementSpan) {
+          const bb = hb.state.doc.sliceString(0, hb.pos);
+          for (; Ub > 0 && /[\w$]/.test(bb[Ub - 1]);) Ub--
         }
-        return Oq.entries = Oq.entries.filter((qq => qq.kind !== Vq().ScriptElementKind.warning)), {
-          from: mq,
-          options: Oq.entries.map((Yq => {
-            var lq, Oq, xq, Aq;
-            const cq = qq.languageService.getCompletionEntryDetails(Eq, gq.pos, Yq.name, {}, Yq.source, {}, Yq.data),
-              uq = null !== (lq = null === (Oq = Yq.replacementSpan) || void 0 === Oq ? void 0 : Oq.start) && void 0 !== lq ? lq : mq,
-              Bq = Yq.replacementSpan ? Yq.replacementSpan.start + Yq.replacementSpan.length : gq.pos,
-              Wq = null !== (xq = Yq.insertText) && void 0 !== xq ? xq : Yq.name;
+        return Gb.entries = Gb.entries.filter((bb => bb.kind !== pb().ScriptElementKind.warning)), {
+          from: Ub,
+          options: Gb.entries.map((Bb => {
+            var Ob, Gb, Lb, Yb;
+            const Sb = bb.languageService.getCompletionEntryDetails(ub, hb.pos, Bb.name, {}, Bb.source, {}, Bb.data),
+              ab = null !== (Ob = null === (Gb = Bb.replacementSpan) || void 0 === Gb ? void 0 : Gb.start) && void 0 !== Ob ? Ob : Ub,
+              Hb = Bb.replacementSpan ? Bb.replacementSpan.start + Bb.replacementSpan.length : hb.pos,
+              wb = null !== (Lb = Bb.insertText) && void 0 !== Lb ? Lb : Bb.name;
             return {
-              label: Yq.name,
-              detail: null === cq || void 0 === cq ? void 0 : cq.displayParts.map((qq => qq.text)).join(""),
-              info: null === cq || void 0 === cq || null === (Aq = cq.documentation) || void 0 === Aq ? void 0 : Aq.map((qq => qq.text)).join(""),
-              apply: qq => {
-                qq.dispatch({
+              label: Bb.name,
+              detail: null === Sb || void 0 === Sb ? void 0 : Sb.displayParts.map((bb => bb.text)).join(""),
+              info: null === Sb || void 0 === Sb || null === (Yb = Sb.documentation) || void 0 === Yb ? void 0 : Yb.map((bb => bb.text)).join(""),
+              apply: bb => {
+                bb.dispatch({
                   changes: {
-                    from: uq,
-                    to: Bq,
-                    insert: Wq
+                    from: ab,
+                    to: Hb,
+                    insert: wb
                   },
                   selection: {
-                    anchor: uq + Wq.length
+                    anchor: ab + wb.length
                   }
                 })
               }
@@ -636,114 +636,114 @@ export const modules = {
       }
     }
 
-    function LE(qq) {
-      return Eq => {
-        const gq = document.createElement("div");
-        gq.className = "CodeEditorTooltip";
-        let Yq = !1;
+    function mu(bb) {
+      return ub => {
+        const hb = document.createElement("div");
+        hb.className = "CodeEditorTooltip";
+        let Bb = !1;
         return queueMicrotask((() => {
-          Yq || (xq.render((0, tE.jsx)(Wq.c, {
-            text: qq
-          }), gq), Eq.requestMeasure())
+          Bb || (Lb.render((0, ru.jsx)(wb.c, {
+            text: bb
+          }), hb), ub.requestMeasure())
         })), {
-          dom: gq,
+          dom: hb,
           destroy() {
-            Yq = !0, queueMicrotask((() => {
-              xq.unmountComponentAtNode(gq)
+            Bb = !0, queueMicrotask((() => {
+              Lb.unmountComponentAtNode(hb)
             }))
           }
         }
       }
     }
 
-    function JE(qq, Eq, gq) {
-      return Yq => {
-        var lq;
-        if (!Eq) return [];
-        const Oq = null === (lq = Yq.selection.zV[0]) || void 0 === lq ? void 0 : lq.head;
-        if (void 0 === Oq) return [];
-        const mq = qq.languageService.getSignatureHelpItems(gq, Oq, {});
-        if (!mq || !mq.items.length) return [];
-        const xq = mq.applicableSpan.start - mq.items[0].prefixDisplayParts.map((qq => qq.text)).join("").length,
-          Aq = mq.applicableSpan.start,
-          cq = Yq.doc.lineAt(Oq),
-          uq = cq.from,
-          Bq = Math.min(cq.to, Oq);
-        let Wq, Nq;
-        return xq < uq ? (Wq = uq, Nq = Bq) : (Wq = xq, Nq = Aq), [{
-          pos: Wq,
-          end: Nq,
+    function Iu(bb, ub, hb) {
+      return Bb => {
+        var Ob;
+        if (!ub) return [];
+        const Gb = null === (Ob = Bb.selection.tp[0]) || void 0 === Ob ? void 0 : Ob.head;
+        if (void 0 === Gb) return [];
+        const Ub = bb.languageService.getSignatureHelpItems(hb, Gb, {});
+        if (!Ub || !Ub.items.length) return [];
+        const Lb = Ub.applicableSpan.start - Ub.items[0].prefixDisplayParts.map((bb => bb.text)).join("").length,
+          Yb = Ub.applicableSpan.start,
+          Sb = Bb.doc.lineAt(Gb),
+          ab = Sb.from,
+          Hb = Math.min(Sb.to, Gb);
+        let wb, Zb;
+        return Lb < ab ? (wb = ab, Zb = Hb) : (wb = Lb, Zb = Yb), [{
+          pos: wb,
+          end: Zb,
           above: !1,
-          create: LE(nE(mq.items[0], mq.argumentIndex))
+          create: mu(xu(Ub.items[0], Ub.argumentIndex))
         }]
       }
     }
 
-    function kE(qq, Eq) {
-      return (gq, Yq, lq) => {
-        const Oq = qq.languageService.getQuickInfoAtPosition(Eq, Yq);
-        if (!Oq) return [];
-        const mq = Oq.textSpan.start,
-          xq = Oq.textSpan.start + Oq.textSpan.length;
-        if (Yq < mq || Yq >= xq) return [];
-        if (Oq.kind === Vq().ScriptElementKind.memberFunctionElement || Oq.kind === Vq().ScriptElementKind.variableElement && "declare" === Oq.kindModifiers) {
-          const qq = Oq.displayParts.findIndex((qq => "space" === qq.kind)); - 1 !== qq && (Oq.displayParts = Oq.displayParts.slice(qq));
-          const Eq = {
+    function Pu(bb, ub) {
+      return (hb, Bb, Ob) => {
+        const Gb = bb.languageService.getQuickInfoAtPosition(ub, Bb);
+        if (!Gb) return [];
+        const Ub = Gb.textSpan.start,
+          Lb = Gb.textSpan.start + Gb.textSpan.length;
+        if (Bb < Ub || Bb >= Lb) return [];
+        if (Gb.kind === pb().ScriptElementKind.memberFunctionElement || Gb.kind === pb().ScriptElementKind.variableElement && "declare" === Gb.kindModifiers) {
+          const bb = Gb.displayParts.findIndex((bb => "space" === bb.kind)); - 1 !== bb && (Gb.displayParts = Gb.displayParts.slice(bb));
+          const ub = {
               prefixDisplayParts: [],
               parameters: [],
               suffixDisplayParts: [],
               documentation: []
             },
-            gq = Oq.displayParts.findIndex((qq => "punctuation" === qq.kind && "(" === qq.text)); - 1 !== gq && (Eq.prefixDisplayParts = Oq.displayParts.slice(0, gq + 1), Oq.displayParts = Oq.displayParts.slice(gq + 1));
-          const Yq = Oq.displayParts.findLastIndex((qq => "punctuation" === qq.kind && ")" === qq.text)); - 1 !== Yq && (Eq.suffixDisplayParts = Oq.displayParts.slice(Yq), Oq.displayParts = Oq.displayParts.slice(0, Yq));
-          let lq = 0,
-            Aq = [];
-          for (const mq of Oq.displayParts)
-            if (rE.has(mq.text) ? lq++ : vE.has(mq.text) && lq--, "lineBreak" !== mq.kind) {
-              if ("space" === mq.kind) {
-                if (0 === Aq.length) continue;
-                Aq.push({
+            hb = Gb.displayParts.findIndex((bb => "punctuation" === bb.kind && "(" === bb.text)); - 1 !== hb && (ub.prefixDisplayParts = Gb.displayParts.slice(0, hb + 1), Gb.displayParts = Gb.displayParts.slice(hb + 1));
+          const Bb = Gb.displayParts.findLastIndex((bb => "punctuation" === bb.kind && ")" === bb.text)); - 1 !== Bb && (ub.suffixDisplayParts = Gb.displayParts.slice(Bb), Gb.displayParts = Gb.displayParts.slice(0, Bb));
+          let Ob = 0,
+            Yb = [];
+          for (const Ub of Gb.displayParts)
+            if (ju.has(Ub.text) ? Ob++ : nu.has(Ub.text) && Ob--, "lineBreak" !== Ub.kind) {
+              if ("space" === Ub.kind) {
+                if (0 === Yb.length) continue;
+                Yb.push({
                   kind: "space",
                   text: " "
                 })
-              } else Aq.push(mq);
-              0 === lq && "," === mq.text && (Eq.parameters.push({
-                displayParts: Aq
-              }), Aq = [])
-            } return Aq.length > 0 && Eq.parameters.push({
-            displayParts: Aq
-          }), Eq.documentation = Oq.documentation, [{
-            pos: mq,
-            end: xq,
+              } else Yb.push(Ub);
+              0 === Ob && "," === Ub.text && (ub.parameters.push({
+                displayParts: Yb
+              }), Yb = [])
+            } return Yb.length > 0 && ub.parameters.push({
+            displayParts: Yb
+          }), ub.documentation = Gb.documentation, [{
+            pos: Ub,
+            end: Lb,
             above: !0,
-            create: LE(nE(Eq))
+            create: mu(xu(ub))
           }]
         }
-        const Aq = [];
-        for (const qq of Oq.displayParts) Aq.push({
-          str: qq.text,
+        const Yb = [];
+        for (const bb of Gb.displayParts) Yb.push({
+          str: bb.text,
           style: {
-            color: hE.text
+            color: Du.text
           }
         });
-        if (Oq.documentation) {
-          Aq.push("\n\n");
-          for (const qq of Oq.documentation) Aq.push({
-            str: qq.text,
+        if (Gb.documentation) {
+          Yb.push("\n\n");
+          for (const bb of Gb.documentation) Yb.push({
+            str: bb.text,
             style: {
-              color: hE.docs
+              color: Du.docs
             }
           })
         }
         return [{
-          pos: mq,
-          end: xq,
+          pos: Ub,
+          end: Lb,
           above: !0,
-          create: LE(Aq)
+          create: mu(Yb)
         }]
       }
     }
-    const RE = {
+    const qu = {
       indentSize: 4,
       tabSize: 4,
       newLineCharacter: "\n",
@@ -762,209 +762,209 @@ export const modules = {
       insertSpaceAfterTypeAssertion: !1,
       placeOpenBraceOnNewLineForFunctions: !1,
       placeOpenBraceOnNewLineForControlBlocks: !1,
-      semicolons: Vq().SemicolonPreference.Insert
+      semicolons: pb().SemicolonPreference.Insert
     };
-    const UE = Oq.j.define(),
-      FE = {
+    const Eu = Gb.g.define(),
+      yu = {
         lineNumbers: !0,
         tabSize: 4
       };
 
-    function sE(qq) {
+    function Vu(bb) {
       let {
-        isLobbyCode: Eq,
-        code: gq,
-        onChange: xq,
-        canEditCode: Wq,
-        setTemporaryMessage: aq,
-        close: rq,
-        showTooltips: Fq,
-        lightMode: sq,
-        collabState: wq,
-        onRemoteDocChange: Kq,
-        files: Cq,
-        activePath: Iq,
-        pluginName: Dq,
-        pluginFile: qE,
-        pluginSource: gE,
-        setActiveDocReplacer: YE,
-        showAiHints: OE,
-        canAiChangeCode: mE = Wq
-      } = qq;
-      const [xE, AE] = (0, mq.useState)(null), cE = null === wq || void 0 === wq ? void 0 : wq.version, uE = null === wq || void 0 === wq ? void 0 : wq.clientID, BE = (0, mq.useRef)({
-        isLobbyCode: Eq,
-        files: Cq,
-        code: gq,
-        activePath: Iq
-      }), WE = (0, mq.useRef)(Kq);
-      WE.current = Kq;
-      const NE = (0, mq.useRef)(null),
-        aE = (0, mq.useRef)(wq);
-      aE.current = wq;
-      const VE = (0, mq.useRef)(null),
-        HE = (0, mq.useRef)(null),
-        oE = (0, mq.useRef)(null),
-        PE = (0, mq.useRef)(rq);
-      PE.current = rq;
-      const QE = (0, mq.useRef)(gq);
-      QE.current = gq;
-      const rE = (0, mq.useRef)(gE);
-      rE.current = gE;
-      const vE = function(qq, Eq, gq, Yq) {
-        return gq ? `/plugin-preview/${gq}/${null!==Yq&&void 0!==Yq?Yq:"index.ts"}` : qq ? TE(null !== Eq && void 0 !== Eq ? Eq : Pq.j) : ME
-      }(Eq, Iq, Dq, qE);
-      (0, mq.useEffect)((() => {
+        isLobbyCode: ub,
+        code: hb,
+        onChange: Lb,
+        canEditCode: wb,
+        setTemporaryMessage: Xb,
+        close: jb,
+        showTooltips: yb,
+        lightMode: Vb,
+        collabState: fb,
+        onRemoteDocChange: kb,
+        files: Tb,
+        activePath: cb,
+        pluginName: Rb,
+        pluginFile: bu,
+        pluginSource: hu,
+        setActiveDocReplacer: Bu,
+        showAiHints: Gu,
+        canAiChangeCode: Uu = wb
+      } = bb;
+      const [Lu, Yu] = (0, Ub.useState)(null), Su = null === fb || void 0 === fb ? void 0 : fb.version, au = null === fb || void 0 === fb ? void 0 : fb.clientID, Hu = (0, Ub.useRef)({
+        isLobbyCode: ub,
+        files: Tb,
+        code: hb,
+        activePath: cb
+      }), wu = (0, Ub.useRef)(kb);
+      wu.current = kb;
+      const Zu = (0, Ub.useRef)(null),
+        Xu = (0, Ub.useRef)(fb);
+      Xu.current = fb;
+      const pu = (0, Ub.useRef)(null),
+        lu = (0, Ub.useRef)(null),
+        Ku = (0, Ub.useRef)(null),
+        Wu = (0, Ub.useRef)(jb);
+      Wu.current = jb;
+      const Cu = (0, Ub.useRef)(hb);
+      Cu.current = hb;
+      const ju = (0, Ub.useRef)(hu);
+      ju.current = hu;
+      const nu = function(bb, ub, hb, Bb) {
+        return hb ? `/plugin-preview/${hb}/${null!==Bb&&void 0!==Bb?Bb:"index.ts"}` : bb ? Ju(null !== ub && void 0 !== ub ? ub : Wb.m) : tu
+      }(ub, cb, Rb, bu);
+      (0, Ub.useEffect)((() => {
         !async function() {
           const {
-            isLobbyCode: qq,
-            files: Eq,
-            code: gq,
-            activePath: Yq
-          } = BE.current, lq = {
+            isLobbyCode: bb,
+            files: ub,
+            code: hb,
+            activePath: Bb
+          } = Hu.current, Ob = {
             allowJs: !0,
             checkJs: !1,
             noLib: !0,
             strict: !1,
-            module: Vq().ModuleKind.ESNext,
-            moduleResolution: Vq().ModuleResolutionKind.Bundler,
-            target: Vq().ScriptTarget.ES2015,
+            module: pb().ModuleKind.ESNext,
+            moduleResolution: pb().ModuleResolutionKind.Bundler,
+            target: pb().ScriptTarget.ES2015,
             paths: {
               "@bloxd": ["/node_modules/@bloxd/index.d.ts"],
-              ...Object.fromEntries(Object.values(oq.i).map((qq => [qq.specifier, [qq.typesVfsPath]])))
+              ...Object.fromEntries(Object.values(Kb.f).map((bb => [bb.specifier, [bb.typesVfsPath]])))
             }
-          }, Oq = new Map, mq = [];
-          if (qq) {
-            const qq = null !== Eq && void 0 !== Eq ? Eq : {
-              [Pq.j]: gq || "\n"
+          }, Gb = new Map, Ub = [];
+          if (bb) {
+            const bb = null !== ub && void 0 !== ub ? ub : {
+              [Wb.m]: hb || "\n"
             };
-            for (const [Eq, gq] of Object.entries(qq)) {
-              const qq = TE(Eq);
-              Oq.set(qq, gq || "\n"), mq.push(qq)
+            for (const [ub, hb] of Object.entries(bb)) {
+              const bb = Ju(ub);
+              Gb.set(bb, hb || "\n"), Ub.push(bb)
             }
-            const lq = TE(null !== Yq && void 0 !== Yq ? Yq : Pq.j);
-            Oq.has(lq) ? Oq.set(lq, gq || "\n") : (Oq.set(lq, gq || "\n"), mq.push(lq)), Oq.set("/node_modules/@bloxd/index.d.ts", uq.default), mq.push("/node_modules/@bloxd/index.d.ts");
-            for (const Eq of Object.values(oq.i)) {
-              Oq.set(Eq.typesVfsPath, Eq.types), mq.push(Eq.typesVfsPath);
-              for (const [qq, gq] of Object.entries(Eq.files)) {
-                const Yq = `/plugin-preview/${Eq.name}/${qq}`;
-                Oq.set(Yq, gq || "\n"), mq.push(Yq)
+            const Ob = Ju(null !== Bb && void 0 !== Bb ? Bb : Wb.m);
+            Gb.has(Ob) ? Gb.set(Ob, hb || "\n") : (Gb.set(Ob, hb || "\n"), Ub.push(Ob)), Gb.set("/node_modules/@bloxd/index.d.ts", ab.default), Ub.push("/node_modules/@bloxd/index.d.ts");
+            for (const ub of Object.values(Kb.f)) {
+              Gb.set(ub.typesVfsPath, ub.types), Ub.push(ub.typesVfsPath);
+              for (const [bb, hb] of Object.entries(ub.files)) {
+                const Bb = `/plugin-preview/${ub.name}/${bb}`;
+                Gb.set(Bb, hb || "\n"), Ub.push(Bb)
               }
             }
-          } else Oq.set(ME, gq || "\n"), mq.push(ME);
-          Oq.set("/globals.d.ts", qq ? cq.d : Aq.e), Oq.set("/lib.d.ts", Bq.c), mq.push("/globals.d.ts", "/lib.d.ts");
-          const xq = Nq.c(Oq),
-            Wq = Nq.d(xq, mq, Vq(), lq);
-          AE({
-            SV: Wq,
-            fsMap: Oq
+          } else Gb.set(tu, hb || "\n"), Ub.push(tu);
+          Gb.set("/globals.d.ts", bb ? Sb.d : Yb.e), Gb.set("/lib.d.ts", Hb.c), Ub.push("/globals.d.ts", "/lib.d.ts");
+          const Lb = Zb.b(Gb),
+            wb = Zb.d(Lb, Ub, pb(), Ob);
+          Yu({
+            Jp: wb,
+            fsMap: Gb
           })
         }()
-      }), []), (0, mq.useEffect)((() => {
-        var qq, Yq;
-        if (!xE || !Eq) return;
+      }), []), (0, Ub.useEffect)((() => {
+        var bb, Bb;
+        if (!Lu || !ub) return;
         const {
-          SV: lq,
-          fsMap: Oq
-        } = xE;
-        if (function(qq, Eq, gq) {
-            const Yq = new Set;
-            for (const [lq, Oq] of Object.entries(gq)) {
-              const gq = TE(lq);
-              Yq.add(gq);
-              const mq = Oq || "\n";
-              Eq.get(gq) !== mq && (Eq.set(gq, mq), zE(qq, gq, mq))
+          Jp: Ob,
+          fsMap: Gb
+        } = Lu;
+        if (function(bb, ub, hb) {
+            const Bb = new Set;
+            for (const [Ob, Gb] of Object.entries(hb)) {
+              const hb = Ju(Ob);
+              Bb.add(hb);
+              const Ub = Gb || "\n";
+              ub.get(hb) !== Ub && (ub.set(hb, Ub), eu(bb, hb, Ub))
             }
-            for (const lq of [...Eq.keys()]) "/globals.d.ts" === lq || "/lib.d.ts" === lq || lq.startsWith("/node_modules/") || lq.startsWith("/plugin-preview/") || Yq.has(lq) || (Eq.delete(lq), qq.getSourceFile(lq) && qq.deleteFile(lq))
-          }(lq, Oq, null !== Cq && void 0 !== Cq ? Cq : {
-            [Pq.j]: gq || "\n"
-          }), Dq) return void zE(lq, vE, gE || "\n");
-        const mq = null !== (qq = null === (Yq = NE.current) || void 0 === Yq ? void 0 : Yq.state.doc.toString()) && void 0 !== qq ? qq : gq;
-        zE(lq, vE, mq || "\n")
-      }), [Cq, Iq, xE, Dq, gE, vE, gq, Eq]), (0, mq.useEffect)((() => {
-        if (!xE) return;
+            for (const Ob of [...ub.keys()]) "/globals.d.ts" === Ob || "/lib.d.ts" === Ob || Ob.startsWith("/node_modules/") || Ob.startsWith("/plugin-preview/") || Bb.has(Ob) || (ub.delete(Ob), bb.getSourceFile(Ob) && bb.deleteFile(Ob))
+          }(Ob, Gb, null !== Tb && void 0 !== Tb ? Tb : {
+            [Wb.m]: hb || "\n"
+          }), Rb) return void eu(Ob, nu, hu || "\n");
+        const Ub = null !== (bb = null === (Bb = Zu.current) || void 0 === Bb ? void 0 : Bb.state.doc.toString()) && void 0 !== bb ? bb : hb;
+        eu(Ob, nu, Ub || "\n")
+      }), [Tb, cb, Lu, Rb, hu, nu, hb, ub]), (0, Ub.useEffect)((() => {
+        if (!Lu) return;
         const {
-          SV: qq
-        } = xE;
-        zE(qq, vE, (Dq ? gE : gq) || "\n")
-      }), [gq, Dq, gE, vE, xE]), (0, mq.useEffect)((() => () => {
-        HE.current && (HE.current(), HE.current = null)
-      }), []), (0, mq.useEffect)((() => (YE(((qq, Eq) => {
-        if (Dq) return !1;
-        const gq = NE.current,
-          Yq = aE.current,
-          lq = Yq ? (0, Qq.t)(Yq.docKey) : null;
-        if (!gq || !Yq || VE.current !== Yq.clientID || qq !== lq) return !1;
-        const Oq = gq.state.doc.toString();
-        return Oq !== Eq && gq.dispatch({
+          Jp: bb
+        } = Lu;
+        eu(bb, nu, (Rb ? hu : hb) || "\n")
+      }), [hb, Rb, hu, nu, Lu]), (0, Ub.useEffect)((() => () => {
+        lu.current && (lu.current(), lu.current = null)
+      }), []), (0, Ub.useEffect)((() => (Bu(((bb, ub) => {
+        if (Rb) return !1;
+        const hb = Zu.current,
+          Bb = Xu.current,
+          Ob = Bb ? (0, Cb.s)(Bb.docKey) : null;
+        if (!hb || !Bb || pu.current !== Bb.clientID || bb !== Ob) return !1;
+        const Gb = hb.state.doc.toString();
+        return Gb !== ub && hb.dispatch({
           changes: {
             from: 0,
-            to: Oq.length,
-            insert: Eq
+            to: Gb.length,
+            insert: ub
           }
         }), !0
       })), () => {
-        NE.current = null, VE.current = null, YE(null)
-      })), [YE, Dq]);
-      const hE = Eq ? Dq ? null : null !== Iq && void 0 !== Iq ? Iq : Pq.j : jE.c,
-        nE = EE(NE, hE);
-      lE(NE, aq), (0, tq.f)("FormatCode", (() => {
-        if (!xE || !NE.current || Dq) return;
+        Zu.current = null, pu.current = null, Bu(null)
+      })), [Bu, Rb]);
+      const Du = ub ? Rb ? null : null !== cb && void 0 !== cb ? cb : Wb.m : Au.b,
+        xu = uu(Zu, Du);
+      Ou(Zu, Xb), (0, rb.h)("FormatCode", (() => {
+        if (!Lu || !Zu.current || Rb) return;
         const {
-          SV: qq,
-          fsMap: gq
-        } = xE, Yq = qq.getSourceFile(vE).getFullText();
-        let lq = 0;
-        if (Eq && Cq)
-          for (const [Eq, xq] of Object.entries(Cq)) Eq !== (null !== Iq && void 0 !== Iq ? Iq : Pq.j) && (lq += xq.length);
-        const Oq = function(qq, Eq, gq, Yq, lq) {
-          const Oq = qq.languageService.getFormattingEditsForDocument(Yq, RE);
-          if (!Oq.length) return vq.b.error("Code is already formatted.");
-          Oq.sort(((qq, Eq) => Eq.span.start - qq.span.start));
-          let mq = qq.getSourceFile(Yq).getFullText();
-          for (const xq of Oq) mq = mq.slice(0, xq.span.start) + xq.cu + mq.slice(xq.span.start + xq.span.length);
-          return mq !== (gq ? (0, yq.k)(mq, lq) : (0, yq.g)(mq)) ? vq.b.error("Formatting the code will go beyond the character limit.") : vq.b.value(mq)
-        }(qq, 0, Eq, vE, lq);
-        if (Oq.isError()) return void aq({
-          message: Oq.asError().message,
+          Jp: bb,
+          fsMap: hb
+        } = Lu, Bb = bb.getSourceFile(nu).getFullText();
+        let Ob = 0;
+        if (ub && Tb)
+          for (const [ub, Lb] of Object.entries(Tb)) ub !== (null !== cb && void 0 !== cb ? cb : Wb.m) && (Ob += Lb.length);
+        const Gb = function(bb, ub, hb, Bb, Ob) {
+          const Gb = bb.languageService.getFormattingEditsForDocument(Bb, qu);
+          if (!Gb.length) return nb.b.error("Code is already formatted.");
+          Gb.sort(((bb, ub) => ub.span.start - bb.span.start));
+          let Ub = bb.getSourceFile(Bb).getFullText();
+          for (const Lb of Gb) Ub = Ub.slice(0, Lb.span.start) + Lb.Oa + Ub.slice(Lb.span.start + Lb.span.length);
+          return Ub !== (hb ? (0, db.j)(Ub, Ob) : (0, db.i)(Ub)) ? nb.b.error("Formatting the code will go beyond the character limit.") : nb.b.value(Ub)
+        }(bb, 0, ub, nu, Ob);
+        if (Gb.isError()) return void Xb({
+          message: Gb.asError().message,
           type: "warning"
         });
-        const mq = Oq.getValue();
-        mq && (NE.current.dispatch({
+        const Ub = Gb.getValue();
+        Ub && (Zu.current.dispatch({
           changes: {
             from: 0,
-            to: Yq.length,
-            insert: mq
+            to: Bb.length,
+            insert: Ub
           },
           selection: {
-            anchor: mq.length
+            anchor: Ub.length
           }
-        }), zE(qq, vE, mq), xq(mq))
+        }), eu(bb, nu, Ub), Lb(Ub))
       }));
-      const bE = (0, mq.useMemo)((() => {
-        if (!xE) return [];
+      const zu = (0, Ub.useMemo)((() => {
+        if (!Lu) return [];
         const {
-          SV: qq,
-          fsMap: gq
-        } = xE;
-        ! function(qq, Eq, gq, Yq) {
-          if (qq.getSourceFile(gq)) return;
-          const lq = Yq || "\n";
-          Eq.set(gq, lq), qq.createFile(gq, lq)
-        }(qq, gq, vE, (Dq ? rE.current : QE.current) || "\n");
-        const mq = Eq && SE(Dq ? null !== qE && void 0 !== qE ? qE : "index.ts" : Iq),
-          xq = [(0, lq.c)({
+          Jp: bb,
+          fsMap: hb
+        } = Lu;
+        ! function(bb, ub, hb, Bb) {
+          if (bb.getSourceFile(hb)) return;
+          const Ob = Bb || "\n";
+          ub.set(hb, Ob), bb.createFile(hb, Ob)
+        }(bb, hb, nu, (Rb ? ju.current : Cu.current) || "\n");
+        const Ub = ub && Nu(Rb ? null !== bu && void 0 !== bu ? bu : "index.ts" : cb),
+          Lb = [(0, Ob.e)({
             jsx: !1,
-            typescript: mq
-          }), Oq.f.highest(Oq.d.domEventHandlers({
-            keydown: qq => "Escape" === qq.key ? (PE.current(), qq.stopPropagation(), !0) : (qq.stopPropagation(), !1)
-          })), (0, Yq.d)({
-            override: [GE(qq, vE)]
-          }), bq.l.fromClass(class {
-            constructor(qq) {
-              this.view = qq, this.timeout = null, this.scheduleParse()
+            typescript: Ub
+          }), Gb.f.highest(Gb.c.domEventHandlers({
+            keydown: bb => "Escape" === bb.key ? (Wu.current(), bb.stopPropagation(), !0) : (bb.stopPropagation(), !1)
+          })), (0, Bb.b)({
+            override: [Mu(bb, nu)]
+          }), zb.q.fromClass(class {
+            constructor(bb) {
+              this.view = bb, this.timeout = null, this.scheduleParse()
             }
-            update(qq) {
-              (qq.docChanged || qq.viewportChanged) && this.scheduleParse()
+            update(bb) {
+              (bb.docChanged || bb.viewportChanged) && this.scheduleParse()
             }
             destroy() {
               null !== this.timeout && (clearTimeout(this.timeout), this.timeout = null)
@@ -972,215 +972,215 @@ export const modules = {
             scheduleParse() {
               null === this.timeout && (this.timeout = setTimeout((() => {
                 this.timeout = null;
-                const qq = this.view.viewport.to;
-                (0, pq.db)(this.view.state, qq) || (0, pq.G)(this.view, qq, Gq) || this.scheduleParse()
-              }), Lq))
+                const bb = this.view.viewport.to;
+                (0, sb.eb)(this.view.state, bb) || (0, sb.F)(this.view, bb, Mb) || this.scheduleParse()
+              }), mb))
             }
-          }), ...eq, Oq.d.lineWrapping, Oq.k.define({
-            create: JE(qq, Fq, vE),
-            update(Eq, gq) {
-              const Yq = gq.effects.some((qq => qq.is(UE)));
-              return gq.docChanged || gq.selection || Yq ? (zE(qq, vE, gq.state.doc.toString() || " "), JE(qq, Fq, vE)(gq.state)) : Eq
+          }), ...Qb, Gb.c.lineWrapping, Gb.k.define({
+            create: Iu(bb, yb, nu),
+            update(ub, hb) {
+              const Bb = hb.effects.some((bb => bb.is(Eu)));
+              return hb.docChanged || hb.selection || Bb ? (eu(bb, nu, hb.state.doc.toString() || " "), Iu(bb, yb, nu)(hb.state)) : ub
             },
-            provide: qq => Oq.s.computeN([qq], (Eq => Eq.field(qq)))
-          }), (0, Oq.p)(kE(qq, vE)), (0, jq.e)(pE(Eq, qq, vE)), Oq.l.fromClass(class {
-            constructor(qq) {
-              this.view = qq, this.searchPanel = null
+            provide: bb => Gb.s.computeN([bb], (ub => ub.field(bb)))
+          }), (0, Gb.q)(Pu(bb, nu)), (0, Ab.h)(su(ub, bb, nu)), Gb.m.fromClass(class {
+            constructor(bb) {
+              this.view = bb, this.searchPanel = null
             }
-            update(qq) {
-              const Eq = qq.view.dom.querySelector(".cm-search");
-              if (Eq !== this.searchPanel) {
-                if (this.searchPanel = Eq, !this.searchPanel) return;
-                this.searchPanel.addEventListener("keydown", (qq => {
-                  "Escape" === qq.key && (0, dq.d)(this.view), qq.stopPropagation()
+            update(bb) {
+              const ub = bb.view.dom.querySelector(".cm-search");
+              if (ub !== this.searchPanel) {
+                if (this.searchPanel = ub, !this.searchPanel) return;
+                this.searchPanel.addEventListener("keydown", (bb => {
+                  "Escape" === bb.key && (0, ob.d)(this.view), bb.stopPropagation()
                 }))
               }
             }
           })];
-        OE && !Dq && xq.push(yE(Eq ? null !== Iq && void 0 !== Iq ? Iq : Pq.j : jE.c, mE));
-        const Aq = aE.current;
-        if (Aq && !Dq) {
-          xq.push(... function(qq, Eq, gq, Yq, lq) {
-            let Oq = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-            const mq = (0, Qq.t)(gq),
-              xq = bq.l.fromClass(class {
-                constructor(qq) {
-                  this.view = qq, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = fq.i.subscribe("codeCollab", (qq => {
-                    qq.docKey === mq && qq.type === Qq.f.Updates && (qq.updates ? this.applyUpdates(qq.updates) : this.pull())
+        Gu && !Rb && Lb.push(du(ub ? null !== cb && void 0 !== cb ? cb : Wb.m : Au.b, Uu));
+        const Yb = Xu.current;
+        if (Yb && !Rb) {
+          Lb.push(... function(bb, ub, hb, Bb, Ob) {
+            let Gb = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const Ub = (0, Cb.s)(hb),
+              Lb = zb.q.fromClass(class {
+                constructor(bb) {
+                  this.view = bb, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = vb.i.subscribe("codeCollab", (bb => {
+                    bb.docKey === Ub && bb.type === Cb.d.Updates && (bb.updates ? this.applyUpdates(bb.updates) : this.pull())
                   })), this.pull()
                 }
-                applyUpdates(qq) {
-                  const Eq = JSON.parse(qq).map((qq => ({
-                    clientID: qq.clientID,
-                    changes: nq.ChangeSet.fromJSON(qq.changes)
+                applyUpdates(bb) {
+                  const ub = JSON.parse(bb).map((bb => ({
+                    clientID: bb.clientID,
+                    changes: xb.ChangeSet.fromJSON(bb.changes)
                   })));
-                  Eq.length > 0 && (this.view.dispatch((0, hq.i)(this.view.state, Eq)), lq && lq(this.view.state.doc.toString())), this.clearPushState(), this.push()
+                  ub.length > 0 && (this.view.dispatch((0, Db.f)(this.view.state, ub)), Ob && Ob(this.view.state.doc.toString())), this.clearPushState(), this.push()
                 }
                 clearPushState() {
                   this.pushing = !1, this.pushTimeout && (clearTimeout(this.pushTimeout), this.pushTimeout = null), this.pushDelayTimeout && (clearTimeout(this.pushDelayTimeout), this.pushDelayTimeout = null)
                 }
-                update(qq) {
-                  Oq && (qq.docChanged && this.push(), this.sendCursor())
+                update(bb) {
+                  Gb && (bb.docChanged && this.push(), this.sendCursor())
                 }
                 push() {
-                  const qq = (0, hq.l)(this.view.state);
-                  if (this.pushing || !qq.length) return;
-                  const Eq = Date.now() - this.lastPushTime;
-                  if (Eq < Sq) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
+                  const bb = (0, Db.h)(this.view.state);
+                  if (this.pushing || !bb.length) return;
+                  const ub = Date.now() - this.lastPushTime;
+                  if (ub < Nb) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
                     this.pushDelayTimeout = null, this.push()
-                  }), Sq - Eq)));
+                  }), Nb - ub)));
                   this.pushing = !0, this.lastPushTime = Date.now(), this.pushTimeout = setTimeout((() => {
                     this.clearPushState(), this.push()
-                  }), Tq);
-                  const gq = (0, hq.f)(this.view.state),
-                    lq = qq.map((qq => ({
-                      clientID: qq.clientID,
-                      changes: qq.changes.toJSON()
+                  }), Jb);
+                  const hb = (0, Db.e)(this.view.state),
+                    Ob = bb.map((bb => ({
+                      clientID: bb.clientID,
+                      changes: bb.changes.toJSON()
                     }))),
-                    Oq = JSON.stringify(lq);
-                  Oq.length <= Qq.h ? iq.gameBridge.send("sendCodeCollab", {
-                    nE: Qq.c.Push,
-                    bE: mq,
-                    iE: gq,
-                    ME: Oq
-                  }) : (0, Mq.postJsonWithMetricsCookiesAndJsonResponse)(`${Yq.gsUrl}/code/collab-push`, Zq.q["collab-push"].toBuffer({
-                    gameNameWithVariation: Yq.gameNameWithVariation,
-                    lobbyName: Yq.lobbyName,
-                    docKey: mq,
-                    version: gq,
-                    updates: Oq
+                    Gb = JSON.stringify(Ob);
+                  Gb.length <= Cb.f ? gb.gameBridge.send("sendCodeCollab", {
+                    vu: Cb.b.Push,
+                    tu: Ub,
+                    Ju: hb,
+                    Mu: Gb
+                  }) : (0, tb.postJsonWithMetricsCookiesAndJsonResponse)(`${Bb.gsUrl}/code/collab-push`, ib.t["collab-push"].toBuffer({
+                    gameNameWithVariation: Bb.gameNameWithVariation,
+                    lobbyName: Bb.lobbyName,
+                    docKey: Ub,
+                    version: hb,
+                    updates: Gb
                   }), {
                     retries: 0
-                  }).catch((qq => {
-                    console.error("[CodeCollab] HTTP push failed", qq)
+                  }).catch((bb => {
+                    console.error("[CodeCollab] HTTP push failed", bb)
                   }))
                 }
                 pull() {
                   if (this.destroyed) return;
                   if (this.pulling) return void(this.pullPending = !0);
                   this.pulling = !0, this.pullPending = !1;
-                  const qq = (0, hq.f)(this.view.state);
-                  (0, Mq.postJsonWithMetricsCookiesAndJsonResponse)(`${Yq.gsUrl}/code/collab-pull`, Zq.q["collab-pull"].toBuffer({
-                    gameNameWithVariation: Yq.gameNameWithVariation,
-                    lobbyName: Yq.lobbyName,
-                    docKey: mq,
-                    fromVersion: qq
+                  const bb = (0, Db.e)(this.view.state);
+                  (0, tb.postJsonWithMetricsCookiesAndJsonResponse)(`${Bb.gsUrl}/code/collab-pull`, ib.t["collab-pull"].toBuffer({
+                    gameNameWithVariation: Bb.gameNameWithVariation,
+                    lobbyName: Bb.lobbyName,
+                    docKey: Ub,
+                    fromVersion: bb
                   }), {
                     retries: 1
-                  }).then((qq => {
-                    this.destroyed || (qq.fullDoc ? fq.i.TV("codeCollabRejoin", {
-                      docKey: mq,
-                      doc: qq.fullDoc,
-                      version: qq.version
-                    }) : this.applyUpdates(qq.updates))
-                  })).catch((qq => {
-                    console.error("[CodeCollab] Pull failed", qq)
+                  }).then((bb => {
+                    this.destroyed || (bb.fullDoc ? vb.i.vp("codeCollabRejoin", {
+                      docKey: Ub,
+                      doc: bb.fullDoc,
+                      version: bb.version
+                    }) : this.applyUpdates(bb.updates))
+                  })).catch((bb => {
+                    console.error("[CodeCollab] Pull failed", bb)
                   })).finally((() => {
                     this.pulling = !1, this.pullPending && this.pull()
                   }))
                 }
                 sendCursor() {
-                  const qq = Date.now();
-                  if (qq - this.lastCursorSent < zq) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
+                  const bb = Date.now();
+                  if (bb - this.lastCursorSent < eb) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
                     this.cursorTimeout = null, this.sendCursor()
-                  }), zq)));
-                  this.lastCursorSent = qq;
-                  const Eq = this.view.state.selection.main;
-                  iq.gameBridge.send("sendCodeCollab", {
-                    nE: Qq.c.Cursor,
-                    bE: mq,
-                    pE: Eq.anchor,
-                    GE: Eq.head
+                  }), eb)));
+                  this.lastCursorSent = bb;
+                  const ub = this.view.state.selection.main;
+                  gb.gameBridge.send("sendCodeCollab", {
+                    vu: Cb.b.Cursor,
+                    tu: Ub,
+                    qu: ub.anchor,
+                    Eu: ub.head
                   })
                 }
                 destroy() {
-                  this.destroyed = !0, fq.i.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
+                  this.destroyed = !0, vb.i.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
                 }
               });
-            return [(0, hq.d)({
-              startVersion: qq,
-              clientID: Eq
-            }), xq]
-          }(cE, uE, Aq.docKey, Aq.httpConfig, (qq => {
-            var Eq;
-            null === (Eq = WE.current) || void 0 === Eq || Eq.call(WE, qq)
-          }), Wq));
-          const qq = function(qq, Eq) {
-            const gq = (0, Qq.t)(qq);
+            return [(0, Db.c)({
+              startVersion: bb,
+              clientID: ub
+            }), Lb]
+          }(Su, au, Yb.docKey, Yb.httpConfig, (bb => {
+            var ub;
+            null === (ub = wu.current) || void 0 === ub || ub.call(wu, bb)
+          }), wb));
+          const bb = function(bb, ub) {
+            const hb = (0, Cb.s)(bb);
             return {
-              extensions: [Xq],
-              connect(qq) {
-                if (Eq) {
-                  const gq = Eq.map((qq => kq.of({
-                    playerId: qq.playerId,
-                    playerName: qq.playerName,
-                    colour: qq.colour,
-                    anchor: qq.anchor,
-                    head: qq.head,
+              extensions: [Fb],
+              connect(bb) {
+                if (ub) {
+                  const hb = ub.map((bb => Pb.of({
+                    playerId: bb.playerId,
+                    playerName: bb.playerName,
+                    colour: bb.colour,
+                    anchor: bb.anchor,
+                    head: bb.head,
                     lastMoved: Date.now()
                   })));
-                  gq.length > 0 && qq.dispatch({
-                    effects: gq
+                  hb.length > 0 && bb.dispatch({
+                    effects: hb
                   })
                 }
-                const Yq = fq.i.subscribe("codeCollab", (Eq => {
-                    if (Eq.docKey === gq)
-                      if (Eq.type === Qq.f.RemoteCursor) qq.dispatch({
-                        effects: kq.of({
-                          playerId: Eq.playerId,
-                          playerName: Eq.playerName,
-                          colour: Eq.colour,
-                          anchor: Eq.anchor,
-                          head: Eq.head,
+                const Bb = vb.i.subscribe("codeCollab", (ub => {
+                    if (ub.docKey === hb)
+                      if (ub.type === Cb.d.RemoteCursor) bb.dispatch({
+                        effects: Pb.of({
+                          playerId: ub.playerId,
+                          playerName: ub.playerName,
+                          colour: ub.colour,
+                          anchor: ub.anchor,
+                          head: ub.head,
                           lastMoved: Date.now()
                         })
                       });
-                      else if (Eq.type === Qq.f.Presence) {
-                      const gq = JSON.parse(Eq.peers),
-                        Yq = new Set(gq.map((qq => qq.playerId))),
-                        lq = qq.state.field(Xq),
-                        Oq = [];
-                      for (const [qq] of lq.cursors) Yq.has(qq) || Oq.push(Rq.of(qq));
-                      Oq.length > 0 && qq.dispatch({
-                        effects: Oq
+                      else if (ub.type === Cb.d.Presence) {
+                      const hb = JSON.parse(ub.peers),
+                        Bb = new Set(hb.map((bb => bb.playerId))),
+                        Ob = bb.state.field(Fb),
+                        Gb = [];
+                      for (const [bb] of Ob.cursors) Bb.has(bb) || Gb.push(qb.of(bb));
+                      Gb.length > 0 && bb.dispatch({
+                        effects: Gb
                       })
                     }
                   })),
-                  lq = setInterval((() => {
-                    qq.dom.isConnected ? qq.dispatch({
-                      effects: Uq.of(Date.now())
-                    }) : clearInterval(lq)
-                  }), Jq);
+                  Ob = setInterval((() => {
+                    bb.dom.isConnected ? bb.dispatch({
+                      effects: Eb.of(Date.now())
+                    }) : clearInterval(Ob)
+                  }), Ib);
                 return () => {
-                  fq.i.unsubscribe(Yq), clearInterval(lq)
+                  vb.i.unsubscribe(Bb), clearInterval(Ob)
                 }
               }
             }
-          }(Aq.docKey, Aq.existingCursors);
-          xq.push(...qq.extensions), oE.current = qq.connect
-        } else oE.current = null;
-        return xq
-      }), [Eq, xE, Fq, cE, uE, vE, Iq, Dq, qE, Wq, OE, mE]);
-      if (!xE || !wq && !Dq) return (0, tE.jsx)("div", {
+          }(Yb.docKey, Yb.existingCursors);
+          Lb.push(...bb.extensions), Ku.current = bb.connect
+        } else Ku.current = null;
+        return Lb
+      }), [ub, Lu, yb, Su, au, nu, cb, Rb, bu, wb, Gu, Uu]);
+      if (!Lu || !fb && !Rb) return (0, ru.jsx)("div", {
         className: "CodeEditorContent",
-        children: (0, tE.jsx)(Hq.e, {})
+        children: (0, ru.jsx)(lb.c, {})
       });
-      const iE = Dq ? `plugin-${Dq}-${null!==qE&&void 0!==qE?qE:"index.ts"}` : wq ? `collab-${wq.clientID}` : `local-${Eq}`;
-      return (0, tE.jsx)(Oq.o, {
-        value: Dq ? null !== gE && void 0 !== gE ? gE : "" : gq,
-        onChange: xq,
-        extensions: bE,
+      const gu = Rb ? `plugin-${Rb}-${null!==bu&&void 0!==bu?bu:"index.ts"}` : fb ? `collab-${fb.clientID}` : `local-${ub}`;
+      return (0, ru.jsx)(Gb.p, {
+        value: Rb ? null !== hu && void 0 !== hu ? hu : "" : hb,
+        onChange: Lb,
+        extensions: zu,
         className: "CodeEditorContent",
-        theme: sq ? dE : "dark",
-        editable: Wq && !Dq,
-        basicSetup: FE,
-        onCreateEditor: qq => {
-          var Eq;
-          NE.current = qq, VE.current = null !== (Eq = null === wq || void 0 === wq ? void 0 : wq.clientID) && void 0 !== Eq ? Eq : null, nE(qq), HE.current && HE.current(), oE.current && (HE.current = oE.current(qq))
+        theme: Vb ? ou : "dark",
+        editable: wb && !Rb,
+        basicSetup: yu,
+        onCreateEditor: bb => {
+          var ub;
+          Zu.current = bb, pu.current = null !== (ub = null === fb || void 0 === fb ? void 0 : fb.clientID) && void 0 !== ub ? ub : null, xu(bb), lu.current && lu.current(), Ku.current && (lu.current = Ku.current(bb))
         }
-      }, iE)
+      }, gu)
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

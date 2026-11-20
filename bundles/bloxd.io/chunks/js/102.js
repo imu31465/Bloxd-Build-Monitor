@@ -1,162 +1,162 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  4739: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Wq
+  4672: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => wb
     });
-    var Yq = gq(1018),
-      lq = gq.n(Yq),
-      Oq = gq(1025),
-      mq = gq(1326),
-      xq = gq(3383),
-      Aq = gq(136),
-      cq = gq(3428),
-      uq = gq(3416),
-      Bq = gq(1070);
+    var Bb = hb(958),
+      Ob = hb.n(Bb),
+      Gb = hb(966),
+      Ub = hb(1242),
+      Lb = hb(3291),
+      Yb = hb(115),
+      Sb = hb(3330),
+      ab = hb(3323),
+      Hb = hb(1007);
 
-    function Wq(qq) {
+    function wb(bb) {
       let {
-        game: Eq
-      } = qq;
-      const gq = (0, Aq.i)() ? "large" : "small",
-        Yq = (0, cq.e)(Eq, gq),
-        Wq = (0, xq.e)(Yq),
-        Nq = void 0 !== Wq.blurhash;
-      return (0, Bq.jsxs)("div", {
+        game: ub
+      } = bb;
+      const hb = (0, Yb.j)() ? "large" : "small",
+        Bb = (0, Sb.i)(ub, hb),
+        wb = (0, Lb.h)(Bb),
+        Zb = void 0 !== wb.blurhash;
+      return (0, Hb.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [Wq.isLoading && !Nq && (0, Bq.jsx)(mq.e, {
+        children: [wb.isLoading && !Zb && (0, Hb.jsx)(Ub.c, {
           loaderType: "Secondary"
-        }), !Wq.failed && (null !== Wq.src || Nq) && (0, Bq.jsx)("div", {
-          className: lq()("SchematicImage", uq.i, {
-            SchematicImageFadeIn: Wq.fadeIn && !Nq
+        }), !wb.failed && (null !== wb.src || Zb) && (0, Hb.jsx)("div", {
+          className: Ob()("SchematicImage", ab.g, {
+            SchematicImageFadeIn: wb.fadeIn && !Zb
           }),
-          style: (0, uq.e)(Wq),
-          children: (0, Bq.jsx)(uq.d, {
-            image: Wq
+          style: (0, ab.f)(wb),
+          children: (0, Hb.jsx)(ab.d, {
+            image: wb
           })
-        }), Wq.failed && (0, Bq.jsx)("div", {
+        }), wb.failed && (0, Hb.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Bq.jsx)(Oq.d, {
+          children: (0, Hb.jsx)(Gb.e, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4875: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Nq
+  4807: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Zb
     });
-    var Yq = gq(57),
-      lq = gq(1018),
-      Oq = gq.n(lq),
-      mq = gq(4792),
-      xq = gq(1326),
-      Aq = gq(1183),
-      cq = gq(3059),
-      uq = gq(3174),
-      Bq = gq(1025),
-      Wq = gq(1070);
+    var Bb = hb(49),
+      Ob = hb(958),
+      Gb = hb.n(Ob),
+      Ub = hb(4723),
+      Lb = hb(1242),
+      Yb = hb(1095),
+      Sb = hb(2944),
+      ab = hb(3076),
+      Hb = hb(966),
+      wb = hb(1007);
 
-    function Nq(qq) {
+    function Zb(bb) {
       let {
-        folderName: Eq,
-        onTexturePackUpdated: lq,
-        disabled: Nq = !1,
-        maxFileSizeMb: aq,
-        packOwner: Vq
-      } = qq;
+        folderName: ub,
+        onTexturePackUpdated: Ob,
+        disabled: Zb = !1,
+        maxFileSizeMb: Xb,
+        packOwner: pb
+      } = bb;
       const {
-        t: dq
-      } = (0, Aq.v)(), [jq, Hq] = (0, Yq.useState)(!1), [oq, Pq] = (0, Yq.useState)(null), [Qq, yq] = (0, Yq.useState)(null), tq = (0, Yq.useRef)(null);
+        t: ob
+      } = (0, Yb.K)(), [Ab, lb] = (0, Bb.useState)(!1), [Kb, Wb] = (0, Bb.useState)(null), [Cb, db] = (0, Bb.useState)(null), rb = (0, Bb.useRef)(null);
       const {
-        getRootProps: rq,
-        getInputProps: vq,
-        isDragActive: hq
-      } = (0, mq.e)({
-        onDrop: async function(qq) {
-          Hq(!0);
+        getRootProps: jb,
+        getInputProps: nb,
+        isDragActive: Db
+      } = (0, Ub.e)({
+        onDrop: async function(bb) {
+          lb(!0);
           try {
-            const Eq = await (0, cq.o)(qq);
-            if ("customGame" === Vq && (0, uq.k)(Eq)) return void Pq(dq(uq.b));
-            if (void 0 !== aq) {
-              const qq = JSON.stringify(Eq).length / 1048576;
-              if (qq > aq) return void Pq(`File size is too large. Max size is ${aq}MB. Current size is ${qq}MB.`)
+            const ub = await (0, Sb.p)(bb);
+            if ("customGame" === pb && (0, ab.f)(ub)) return void Wb(ob(ab.b));
+            if (void 0 !== Xb) {
+              const bb = JSON.stringify(ub).length / 1048576;
+              if (bb > Xb) return void Wb(`File size is too large. Max size is ${Xb}MB. Current size is ${bb}MB.`)
             }
-            Pq(null), yq(null), lq(Eq), tq.current = Eq,
-              function(qq, Eq) {
-                const Yq = qq.modelOverrides;
-                Yq && Promise.all([gq.e(196), gq.e(195)]).then((() => gq(9348))).then((gq => {
+            Wb(null), db(null), Ob(ub), rb.current = ub,
+              function(bb, ub) {
+                const Bb = bb.modelOverrides;
+                Bb && Promise.all([hb.e(196), hb.e(195)]).then((() => hb(9156))).then((hb => {
                   let {
-                    packDisplayName: lq,
-                    refusedPackModels: Oq,
-                    packModelSummary: mq
-                  } = gq;
-                  const xq = lq(qq.metaData);
-                  Eq(mq(xq, Oq(xq, Yq, !1)))
-                })).catch((qq => {
-                  console.error("Checking the texture pack's models failed:", qq)
+                    packDisplayName: Ob,
+                    refusedPackModels: Gb,
+                    packModelSummary: Ub
+                  } = hb;
+                  const Lb = Ob(bb.metaData);
+                  ub(Ub(Lb, Gb(Lb, Bb, !1)))
+                })).catch((bb => {
+                  console.error("Checking the texture pack's models failed:", bb)
                 }))
-              }(Eq, (qq => {
-                tq.current === Eq && yq(qq)
+              }(ub, (bb => {
+                rb.current === ub && db(bb)
               }))
           } catch {
-            Pq("Invalid Texture Pack Folder")
+            Wb("Invalid Texture Pack Folder")
           } finally {
-            Hq(!1)
+            lb(!1)
           }
         },
         useFsAccessApi: !1,
-        disabled: Nq
+        disabled: Zb
       });
-      return (0, Wq.jsxs)("div", {
+      return (0, wb.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, Wq.jsxs)("div", {
+        children: [(0, wb.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [dq("settingsMenu:customTextureWarning"), ".", (0, Wq.jsx)("br", {}), dq("settingsMenu:viewDocumentation"), ":", " ", (0, Wq.jsx)("a", {
+          children: [ob("settingsMenu:customTextureWarning"), ".", (0, wb.jsx)("br", {}), ob("settingsMenu:viewDocumentation"), ":", " ", (0, wb.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), oq && (0, Wq.jsxs)("div", {
+        }), Kb && (0, wb.jsxs)("div", {
           className: "CustomTextureError",
-          children: [dq("general:error"), ": ", oq]
-        }), Qq && (0, Wq.jsx)("div", {
+          children: [ob("general:error"), ": ", Kb]
+        }), Cb && (0, wb.jsx)("div", {
           className: "CustomTextureError",
-          children: Qq
-        }), (0, Wq.jsxs)("div", {
-          ...rq({
-            className: Oq()("CustomTextureFolderUpload", {
-              ActiveDrag: hq,
-              Disabled: Nq
+          children: Cb
+        }), (0, wb.jsxs)("div", {
+          ...jb({
+            className: Gb()("CustomTextureFolderUpload", {
+              ActiveDrag: Db,
+              Disabled: Zb
             })
           }),
-          children: [(0, Wq.jsx)("input", {
-            ...vq({
+          children: [(0, wb.jsx)("input", {
+            ...nb({
               webkitdirectory: "true"
             })
-          }), jq && (0, Wq.jsx)("div", {
+          }), Ab && (0, wb.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, Wq.jsx)(xq.e, {})
-          }), !jq && !hq && Eq && (0, Wq.jsxs)(Wq.Fragment, {
-            children: [(0, Wq.jsx)("div", {
+            children: (0, wb.jsx)(Lb.c, {})
+          }), !Ab && !Db && ub && (0, wb.jsxs)(wb.Fragment, {
+            children: [(0, wb.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, Wq.jsx)(Bq.d, {
+              children: (0, wb.jsx)(Hb.e, {
                 name: "folder-image"
               })
-            }), (0, Wq.jsx)("div", {
+            }), (0, wb.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: Eq
+              children: ub
             })]
-          }), !jq && (hq || !Eq) && (0, Wq.jsxs)(Wq.Fragment, {
-            children: [(0, Wq.jsx)("div", {
+          }), !Ab && (Db || !ub) && (0, wb.jsxs)(wb.Fragment, {
+            children: [(0, wb.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, Wq.jsx)(Bq.d, {
+              children: (0, wb.jsx)(Hb.e, {
                 name: "up-from-bracket"
               })
-            }), (0, Wq.jsx)("div", {
+            }), (0, wb.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
               children: "Drag and drop a Texture Pack folder here"
             })]
@@ -165,310 +165,310 @@ export const modules = {
       })
     }
   },
-  4828: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => aq,
-      f: () => oq,
-      h: () => Vq,
-      l: () => Hq
+  4765: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Xb,
+      g: () => Kb,
+      h: () => pb,
+      k: () => lb
     });
-    var Yq = gq(57),
-      lq = gq(4837),
-      Oq = gq(4195),
-      mq = gq(1341),
-      xq = gq(4858),
-      Aq = gq(1018),
-      cq = gq.n(Aq),
-      uq = gq(1336),
-      Bq = gq(1710),
-      Wq = gq(4866),
-      Nq = gq(1070);
+    var Bb = hb(49),
+      Ob = hb(4770),
+      Gb = hb(4123),
+      Ub = hb(1260),
+      Lb = hb(4791),
+      Yb = hb(958),
+      Sb = hb.n(Yb),
+      ab = hb(1249),
+      Hb = hb(1622),
+      wb = hb(4800),
+      Zb = hb(1007);
 
-    function aq(qq) {
+    function Xb(bb) {
       let {
-        label: Eq,
-        onClick: gq,
-        checked: Yq,
-        circleInfoText: lq,
-        className: xq,
-        disabled: Aq,
-        note: uq
-      } = qq;
-      return (0, Nq.jsxs)("div", {
-        "aria-disabled": Aq || void 0,
+        label: ub,
+        onClick: hb,
+        checked: Bb,
+        circleInfoText: Ob,
+        className: Lb,
+        disabled: Yb,
+        note: ab
+      } = bb;
+      return (0, Zb.jsxs)("div", {
+        "aria-disabled": Yb || void 0,
         "data-pad-focusable": !0,
-        className: cq()("SettingBox CheckboxContainer", {
-          [xq]: xq,
-          SettingBoxDisabled: Aq
+        className: Sb()("SettingBox CheckboxContainer", {
+          [Lb]: Lb,
+          SettingBoxDisabled: Yb
         }),
         onClick: () => {
-          Aq || gq(!Yq)
+          Yb || hb(!Bb)
         },
-        children: [(0, Nq.jsxs)("div", {
+        children: [(0, Zb.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, Nq.jsx)("label", {
+          children: [(0, Zb.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, Nq.jsx)(Oq.b, {
+            children: (0, Zb.jsx)(Gb.d, {
               className: "SettingsCheckbox",
-              checked: Yq,
-              disabled: Aq,
+              checked: Bb,
+              disabled: Yb,
               onChange: () => {}
             })
-          }), (0, Nq.jsxs)("div", {
+          }), (0, Zb.jsxs)("div", {
             className: "CheckboxText",
-            children: [Eq, lq && (0, Nq.jsx)("span", {
-              onClick: qq => qq.stopPropagation(),
-              children: (0, Nq.jsx)(mq.c, {
+            children: [ub, Ob && (0, Zb.jsx)("span", {
+              onClick: bb => bb.stopPropagation(),
+              children: (0, Zb.jsx)(Ub.b, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: lq
+                hoverInfo: Ob
               })
             })]
           })]
-        }), uq && (0, Nq.jsx)("div", {
+        }), ab && (0, Zb.jsx)("div", {
           className: "SettingNote",
-          children: uq
+          children: ab
         })]
       })
     }
 
-    function Vq(qq) {
+    function pb(bb) {
       let {
-        name: Eq,
-        onChange: gq,
-        min: lq,
-        max: Oq,
-        step: xq,
-        initValue: Aq,
-        circleInfoText: uq,
-        format: Bq,
-        className: Wq,
-        padStep: aq,
-        disabled: Vq = !1,
-        selectableMax: dq,
-        cappedNote: Hq,
-        onChangeComplete: oq
-      } = qq;
-      const [Pq, Qq] = (0, Yq.useState)(Aq), yq = (0, Yq.useRef)(Aq);
-      (0, Yq.useEffect)((() => {
-        yq.current = Aq, Qq(Aq)
-      }), [Aq]);
-      const tq = void 0 !== dq && dq < Oq,
-        rq = tq ? {
-          "--slider-selectable": (dq - lq) / (Oq - lq)
+        name: ub,
+        onChange: hb,
+        min: Ob,
+        max: Gb,
+        step: Lb,
+        initValue: Yb,
+        circleInfoText: ab,
+        format: Hb,
+        className: wb,
+        padStep: Xb,
+        disabled: pb = !1,
+        selectableMax: ob,
+        cappedNote: lb,
+        onChangeComplete: Kb
+      } = bb;
+      const [Wb, Cb] = (0, Bb.useState)(Yb), db = (0, Bb.useRef)(Yb);
+      (0, Bb.useEffect)((() => {
+        db.current = Yb, Cb(Yb)
+      }), [Yb]);
+      const rb = void 0 !== ob && ob < Gb,
+        jb = rb ? {
+          "--slider-selectable": (ob - Ob) / (Gb - Ob)
         } : void 0;
-      return (0, Nq.jsxs)("div", {
-        className: cq()("SettingBox SettingsSliderDiv", {
-          [Wq]: Wq,
-          SettingBoxDisabled: Vq,
-          SliderCapped: tq
+      return (0, Zb.jsxs)("div", {
+        className: Sb()("SettingBox SettingsSliderDiv", {
+          [wb]: wb,
+          SettingBoxDisabled: pb,
+          SliderCapped: rb
         }),
-        style: rq,
-        children: [(0, Nq.jsxs)("div", {
+        style: jb,
+        children: [(0, Zb.jsxs)("div", {
           className: "SliderText",
-          children: [`${Eq}: ${Bq?Bq(Pq):Pq}`, uq && (0, Nq.jsx)(mq.c, {
+          children: [`${ub}: ${Hb?Hb(Wb):Wb}`, ab && (0, Zb.jsx)(Ub.b, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: uq
+            hoverInfo: ab
           })]
-        }), (0, Nq.jsx)("div", {
+        }), (0, Zb.jsx)("div", {
           className: "SliderDiv",
-          children: (0, Nq.jsx)(jq, {
-            value: Pq,
-            min: lq,
-            max: Oq,
-            step: xq,
-            onChange: qq => {
-              if (tq && qq >= dq && Pq === dq) return;
-              const Eq = tq ? Math.min(qq, dq) : qq;
-              yq.current = Eq, Qq(Eq), gq(Eq)
+          children: (0, Zb.jsx)(Ab, {
+            value: Wb,
+            min: Ob,
+            max: Gb,
+            step: Lb,
+            onChange: bb => {
+              if (rb && bb >= ob && Wb === ob) return;
+              const ub = rb ? Math.min(bb, ob) : bb;
+              db.current = ub, Cb(ub), hb(ub)
             },
-            onChangeComplete: oq && (() => {
-              oq(yq.current)
+            onChangeComplete: Kb && (() => {
+              Kb(db.current)
             }),
-            format: Bq,
-            padStep: aq,
-            disabled: Vq
+            format: Hb,
+            padStep: Xb,
+            disabled: pb
           })
-        }), tq && Hq && (0, Nq.jsx)("div", {
+        }), rb && lb && (0, Zb.jsx)("div", {
           className: "SettingNote",
-          children: Hq
+          children: lb
         })]
       })
     }
-    const dq = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const ob = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function jq(qq) {
-      var Eq;
+    function Ab(bb) {
+      var ub;
       let {
-        value: gq,
-        min: Oq,
-        max: mq,
-        step: xq,
-        onChange: Aq,
-        orientation: cq,
-        reverse: uq,
-        setIsChanging: Bq,
-        tooltip: aq,
-        labels: Vq,
-        handleLabel: jq,
-        format: Hq,
-        onChangeStart: oq,
-        onChangeComplete: Pq,
-        padStep: Qq,
-        disabled: yq = !1
-      } = qq;
-      const tq = (0, Yq.useRef)(null),
-        rq = (0, Yq.useRef)(null);
-      (0, Yq.useLayoutEffect)((() => {
-        var qq, Eq, gq;
-        const Yq = null !== (qq = null === (Eq = tq.current) || void 0 === Eq ? void 0 : Eq.querySelector(".rangeslider")) && void 0 !== qq ? qq : null;
-        null === Yq || void 0 === Yq || Yq.setAttribute("data-pad-slider", ""), null === Yq || void 0 === Yq || Yq.setAttribute("data-pad-focusable", ""), null === Yq || void 0 === Yq || null === (gq = Yq.querySelector(".rangeslider__handle")) || void 0 === gq || gq.setAttribute("data-pad-slider-handle", ""), rq.current = Yq
-      }), []), (0, Yq.useLayoutEffect)((() => {
-        var qq, Eq;
-        yq ? null === (qq = rq.current) || void 0 === qq || qq.setAttribute("aria-disabled", "true") : null === (Eq = rq.current) || void 0 === Eq || Eq.removeAttribute("aria-disabled")
-      }), [yq]);
-      const vq = (null !== (Eq = String(xq).split(".")[1]) && void 0 !== Eq ? Eq : "").length,
-        hq = qq => {
-          const Eq = Number((Math.round((qq - Oq) / xq) * xq + Oq).toFixed(vq));
-          return Math.min(mq, Math.max(Oq, Eq))
+        value: hb,
+        min: Gb,
+        max: Ub,
+        step: Lb,
+        onChange: Yb,
+        orientation: Sb,
+        reverse: ab,
+        setIsChanging: Hb,
+        tooltip: Xb,
+        labels: pb,
+        handleLabel: Ab,
+        format: lb,
+        onChangeStart: Kb,
+        onChangeComplete: Wb,
+        padStep: Cb,
+        disabled: db = !1
+      } = bb;
+      const rb = (0, Bb.useRef)(null),
+        jb = (0, Bb.useRef)(null);
+      (0, Bb.useLayoutEffect)((() => {
+        var bb, ub, hb;
+        const Bb = null !== (bb = null === (ub = rb.current) || void 0 === ub ? void 0 : ub.querySelector(".rangeslider")) && void 0 !== bb ? bb : null;
+        null === Bb || void 0 === Bb || Bb.setAttribute("data-pad-slider", ""), null === Bb || void 0 === Bb || Bb.setAttribute("data-pad-focusable", ""), null === Bb || void 0 === Bb || null === (hb = Bb.querySelector(".rangeslider__handle")) || void 0 === hb || hb.setAttribute("data-pad-slider-handle", ""), jb.current = Bb
+      }), []), (0, Bb.useLayoutEffect)((() => {
+        var bb, ub;
+        db ? null === (bb = jb.current) || void 0 === bb || bb.setAttribute("aria-disabled", "true") : null === (ub = jb.current) || void 0 === ub || ub.removeAttribute("aria-disabled")
+      }), [db]);
+      const nb = (null !== (ub = String(Lb).split(".")[1]) && void 0 !== ub ? ub : "").length,
+        Db = bb => {
+          const ub = Number((Math.round((bb - Gb) / Lb) * Lb + Gb).toFixed(nb));
+          return Math.min(Ub, Math.max(Gb, ub))
         },
-        nq = (0, Yq.useRef)(Pq);
-      nq.current = Pq, (0, Yq.useEffect)((() => {
-        const qq = tq.current;
-        if (!qq) return;
-        const Eq = qq => {
-          var Eq;
-          dq.has(qq.key) && (null === (Eq = nq.current) || void 0 === Eq || Eq.call(nq))
+        xb = (0, Bb.useRef)(Wb);
+      xb.current = Wb, (0, Bb.useEffect)((() => {
+        const bb = rb.current;
+        if (!bb) return;
+        const ub = bb => {
+          var ub;
+          ob.has(bb.key) && (null === (ub = xb.current) || void 0 === ub || ub.call(xb))
         };
-        return qq.addEventListener("keyup", Eq), () => {
-          qq.removeEventListener("keyup", Eq)
+        return bb.addEventListener("keyup", ub), () => {
+          bb.removeEventListener("keyup", ub)
         }
       }), []);
-      const bq = (0, Yq.useRef)(!1);
-      return (0, Wq.i)(rq, {
-        adjust: qq => {
-          if (yq) return;
-          const Eq = null !== Qq && void 0 !== Qq ? Qq : Math.max(xq, Math.round((mq - Oq) / 20 / xq) * xq),
-            Yq = hq(gq + qq * Eq * (uq ? -1 : 1));
-          Yq !== gq && (null === oq || void 0 === oq || oq(), Aq(Yq), null === Pq || void 0 === Pq || Pq())
+      const zb = (0, Bb.useRef)(!1);
+      return (0, wb.h)(jb, {
+        adjust: bb => {
+          if (db) return;
+          const ub = null !== Cb && void 0 !== Cb ? Cb : Math.max(Lb, Math.round((Ub - Gb) / 20 / Lb) * Lb),
+            Bb = Db(hb + bb * ub * (ab ? -1 : 1));
+          Bb !== hb && (null === Kb || void 0 === Kb || Kb(), Yb(Bb), null === Wb || void 0 === Wb || Wb())
         },
-        setFraction: qq => {
-          if (yq) return;
-          const Eq = hq(Oq + (uq ? 1 - qq : qq) * (mq - Oq));
-          Eq !== gq && (bq.current || (bq.current = !0, null === oq || void 0 === oq || oq()), Aq(Eq))
+        setFraction: bb => {
+          if (db) return;
+          const ub = Db(Gb + (ab ? 1 - bb : bb) * (Ub - Gb));
+          ub !== hb && (zb.current || (zb.current = !0, null === Kb || void 0 === Kb || Kb()), Yb(ub))
         },
         endDrag: () => {
-          bq.current && (bq.current = !1, null === Pq || void 0 === Pq || Pq())
+          zb.current && (zb.current = !1, null === Wb || void 0 === Wb || Wb())
         }
-      }), (0, Nq.jsx)("div", {
-        ref: tq,
+      }), (0, Zb.jsx)("div", {
+        ref: rb,
         style: {
           display: "contents"
         },
-        children: (0, Nq.jsx)(lq.d, {
-          value: gq,
-          min: Oq,
-          max: mq,
-          step: xq,
-          onChange: Aq,
-          orientation: cq,
-          reverse: uq,
-          tooltip: aq,
-          labels: Vq,
-          handleLabel: jq,
-          format: Hq,
+        children: (0, Zb.jsx)(Ob.b, {
+          value: hb,
+          min: Gb,
+          max: Ub,
+          step: Lb,
+          onChange: Yb,
+          orientation: Sb,
+          reverse: ab,
+          tooltip: Xb,
+          labels: pb,
+          handleLabel: Ab,
+          format: lb,
           onChangeStart: () => {
-            null === oq || void 0 === oq || oq(), null === Bq || void 0 === Bq || Bq(!0)
+            null === Kb || void 0 === Kb || Kb(), null === Hb || void 0 === Hb || Hb(!0)
           },
           onChangeComplete: () => {
-            null === Bq || void 0 === Bq || Bq(!1), null === Pq || void 0 === Pq || Pq()
+            null === Hb || void 0 === Hb || Hb(!1), null === Wb || void 0 === Wb || Wb()
           }
         })
       })
     }
-    async function Hq() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const Eq = uq.NotificationProvider.showPromptPopup({
+    async function lb() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const ub = ab.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: qq
+        unlockPointerKey: bb
       });
-      !0 === await Eq.getResult() && (0, Bq.reloadBloxd)()
+      !0 === await ub.getResult() && (0, Hb.reloadBloxd)()
     }
 
-    function oq(qq) {
+    function Kb(bb) {
       let {
-        label: Eq,
-        options: gq,
-        value: Yq,
-        onChange: lq,
-        circleInfoText: Oq
-      } = qq;
-      return (0, Nq.jsxs)("div", {
+        label: ub,
+        options: hb,
+        value: Bb,
+        onChange: Ob,
+        circleInfoText: Gb
+      } = bb;
+      return (0, Zb.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, Nq.jsxs)("div", {
+        children: [(0, Zb.jsxs)("div", {
           className: "SliderText",
-          children: [Eq, Oq && (0, Nq.jsx)(mq.c, {
+          children: [ub, Gb && (0, Zb.jsx)(Ub.b, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Oq
+            hoverInfo: Gb
           })]
-        }), (0, Nq.jsx)(xq.c, {
-          ariaLabel: Eq,
-          options: gq,
-          value: Yq,
-          onChange: lq
+        }), (0, Zb.jsx)(Lb.c, {
+          ariaLabel: ub,
+          options: hb,
+          value: Bb,
+          onChange: Ob
         })]
       })
     }
   },
-  4826: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => jq,
-      d: () => Hq
+  4760: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Ab,
+      d: () => lb
     });
-    var Yq = gq(3059),
-      lq = gq(3067),
-      Oq = gq(57),
-      mq = gq(1018),
-      xq = gq.n(mq),
-      Aq = gq(1326),
-      cq = gq(3056),
-      uq = gq(1336),
-      Bq = gq(4828),
-      Wq = gq(4875),
-      Nq = gq(611),
-      aq = gq(4883),
-      Vq = gq(1070);
+    var Bb = hb(2944),
+      Ob = hb(2951),
+      Gb = hb(49),
+      Ub = hb(958),
+      Lb = hb.n(Ub),
+      Yb = hb(1242),
+      Sb = hb(2941),
+      ab = hb(1249),
+      Hb = hb(4765),
+      wb = hb(4807),
+      Zb = hb(599),
+      Xb = hb(4815),
+      pb = hb(1007);
 
-    function dq() {
-      (0, Bq.l)("texturePackPickReload")
+    function ob() {
+      (0, Hb.k)("texturePackPickReload")
     }
 
-    function jq(qq) {
-      var Eq;
+    function Ab(bb) {
+      var ub;
       let {
-        setApplySettingsCallback: gq
-      } = qq;
-      const [, mq] = (0, Oq.useReducer)((qq => qq + 1), 0), xq = (0, Oq.useRef)(!1), Aq = (0, Oq.useRef)(null);
+        setApplySettingsCallback: hb
+      } = bb;
+      const [, Ub] = (0, Gb.useReducer)((bb => bb + 1), 0), Lb = (0, Gb.useRef)(!1), Yb = (0, Gb.useRef)(null);
 
-      function jq(qq, Eq) {
-        cq.c.setFromJson(qq, "player");
-        const Yq = cq.c.saveTexturePack();
-        if (Nq.v) {
-          const qq = cq.c.toJson();
-          Yq.then((Eq => {
-            Eq && (0, aq.f)(qq, dq)
+      function Ab(bb, ub) {
+        Sb.b.setFromJson(bb, "player");
+        const Bb = Sb.b.saveTexturePack();
+        if (Zb.o) {
+          const bb = Sb.b.toJson();
+          Bb.then((ub => {
+            ub && (0, Xb.g)(bb, ob)
           }))
-        } else xq.current ||= Eq, Aq.current !== cq.c.getId() || cq.c.getId() === lq.n.CUSTOM && xq.current ? gq((() => Bq.l)) : gq(null);
-        mq()
+        } else Lb.current ||= ub, Yb.current !== Sb.b.getId() || Sb.b.getId() === Ob.m.CUSTOM && Lb.current ? hb((() => Hb.k)) : hb(null);
+        Ub()
       }
-      async function oq(qq) {
-        if (cq.c.getId() !== qq.metaData.id) {
-          if (cq.c.getId() === lq.n.CUSTOM && cq.c.getFromFolderName()) {
-            const qq = uq.NotificationProvider.showPromptPopup({
+      async function Kb(bb) {
+        if (Sb.b.getId() !== bb.metaData.id) {
+          if (Sb.b.getId() === Ob.m.CUSTOM && Sb.b.getFromFolderName()) {
+            const bb = ab.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -477,29 +477,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await qq.getResult()) return
+            if (!0 !== await bb.getResult()) return
           }
-          jq(qq, !1)
+          Ab(bb, !1)
         }
-      }(0, Oq.useEffect)((() => {
-        Aq.current = cq.c.getId()
+      }(0, Gb.useEffect)((() => {
+        Yb.current = Sb.b.getId()
       }), []);
-      const Pq = Yq.c,
-        Qq = [Pq, ...Object.values(lq.n).filter((qq => qq !== Pq))];
-      return (0, Vq.jsx)(Vq.Fragment, {
-        children: (0, Vq.jsxs)("div", {
+      const Wb = Bb.c,
+        Cb = [Wb, ...Object.values(Ob.m).filter((bb => bb !== Wb))];
+      return (0, pb.jsx)(pb.Fragment, {
+        children: (0, pb.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, Vq.jsx)("div", {
+          children: [(0, pb.jsx)("div", {
             className: "TexturePackList",
-            children: Qq.map((qq => (0, Vq.jsx)(Hq, {
-              id: qq,
-              isSelected: qq === cq.c.getId(),
-              setSelected: oq
-            }, qq)))
-          }), cq.c.getId() === lq.n.CUSTOM && (0, Vq.jsx)(Wq.e, {
-            folderName: null !== (Eq = cq.c.getFromFolderName()) && void 0 !== Eq ? Eq : null,
-            onTexturePackUpdated: function(qq) {
-              jq(qq, !0)
+            children: Cb.map((bb => (0, pb.jsx)(lb, {
+              id: bb,
+              isSelected: bb === Sb.b.getId(),
+              setSelected: Kb
+            }, bb)))
+          }), Sb.b.getId() === Ob.m.CUSTOM && (0, pb.jsx)(wb.b, {
+            folderName: null !== (ub = Sb.b.getFromFolderName()) && void 0 !== ub ? ub : null,
+            onTexturePackUpdated: function(bb) {
+              Ab(bb, !0)
             },
             packOwner: "player"
           })]
@@ -507,169 +507,169 @@ export const modules = {
       })
     }
 
-    function Hq(qq) {
+    function lb(bb) {
       let {
-        id: Eq,
-        isSelected: gq,
-        setSelected: mq,
-        disabled: cq = !1
-      } = qq;
-      const [uq, Bq] = (0, Oq.useState)(!0), [Wq, Nq] = (0, Oq.useState)(""), [aq, dq] = (0, Oq.useState)(""), [jq, Hq] = (0, Oq.useState)(""), oq = (0, Oq.useRef)({});
-      return (0, Oq.useEffect)((() => {
-        (0, Yq.m)(Eq).then((qq => {
-          var Eq;
-          qq && (oq.current = qq, Bq(!1), Nq(oq.current.metaData.name), dq(oq.current.metaData.author), Hq(null !== (Eq = oq.current.metaData.previewImage) && void 0 !== Eq ? Eq : ""))
-        })).catch((qq => {
-          console.warn(`Failed to fetch texture pack ${Eq}`, qq)
+        id: ub,
+        isSelected: hb,
+        setSelected: Ub,
+        disabled: Sb = !1
+      } = bb;
+      const [ab, Hb] = (0, Gb.useState)(!0), [wb, Zb] = (0, Gb.useState)(""), [Xb, ob] = (0, Gb.useState)(""), [Ab, lb] = (0, Gb.useState)(""), Kb = (0, Gb.useRef)({});
+      return (0, Gb.useEffect)((() => {
+        (0, Bb.l)(ub).then((bb => {
+          var ub;
+          bb && (Kb.current = bb, Hb(!1), Zb(Kb.current.metaData.name), ob(Kb.current.metaData.author), lb(null !== (ub = Kb.current.metaData.previewImage) && void 0 !== ub ? ub : ""))
+        })).catch((bb => {
+          console.warn(`Failed to fetch texture pack ${ub}`, bb)
         }))
-      }), [Eq]), (0, Vq.jsxs)("div", {
+      }), [ub]), (0, pb.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": cq || void 0,
-        className: xq()("TexturePack", {
-          Selected: gq,
-          Custom: Eq === lq.n.CUSTOM,
-          Disabled: cq
+        "aria-disabled": Sb || void 0,
+        className: Lb()("TexturePack", {
+          Selected: hb,
+          Custom: ub === Ob.m.CUSTOM,
+          Disabled: Sb
         }),
         onClick: () => {
-          uq || cq || mq(oq.current)
+          ab || Sb || Ub(Kb.current)
         },
-        children: [(0, Vq.jsx)("div", {
+        children: [(0, pb.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: jq ? `url(${jq})` : void 0
+            backgroundImage: Ab ? `url(${Ab})` : void 0
           }
-        }), uq && (0, Vq.jsx)("div", {
+        }), ab && (0, pb.jsx)("div", {
           className: "TexturePackName",
-          children: (0, Vq.jsx)(Aq.e, {})
-        }), !uq && Wq && (0, Vq.jsx)("div", {
+          children: (0, pb.jsx)(Yb.c, {})
+        }), !ab && wb && (0, pb.jsx)("div", {
           className: "TexturePackName",
-          children: Wq
-        }), !uq && aq && (0, Vq.jsx)("div", {
+          children: wb
+        }), !ab && Xb && (0, pb.jsx)("div", {
           className: "TexturePackAuthor",
-          children: aq
+          children: Xb
         })]
       })
     }
   },
-  4858: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => mq
+  4791: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Ub
     });
-    var Yq = gq(1018),
-      lq = gq.n(Yq),
-      Oq = gq(1070);
+    var Bb = hb(958),
+      Ob = hb.n(Bb),
+      Gb = hb(1007);
 
-    function mq(qq) {
+    function Ub(bb) {
       let {
-        options: Eq,
-        value: gq,
-        onChange: Yq,
-        ariaLabel: mq,
-        className: xq,
-        reselectable: Aq = !1,
-        keepsFocus: cq = !1,
-        padTabs: uq
-      } = qq;
-      const Bq = void 0 !== uq;
-      return (0, Oq.jsx)("div", {
-        className: lq()("SegmentedToggle", xq),
+        options: ub,
+        value: hb,
+        onChange: Bb,
+        ariaLabel: Ub,
+        className: Lb,
+        reselectable: Yb = !1,
+        keepsFocus: Sb = !1,
+        padTabs: ab
+      } = bb;
+      const Hb = void 0 !== ab;
+      return (0, Gb.jsx)("div", {
+        className: Ob()("SegmentedToggle", Lb),
         role: "group",
-        "aria-label": mq,
-        "data-pad-tabs": uq,
-        children: Eq.map((qq => {
-          const Eq = qq.value === gq;
-          return (0, Oq.jsx)("button", {
+        "aria-label": Ub,
+        "data-pad-tabs": ab,
+        children: ub.map((bb => {
+          const ub = bb.value === hb;
+          return (0, Gb.jsx)("button", {
             type: "button",
-            "aria-pressed": Eq,
-            "data-pad-tab": Bq || void 0,
-            "data-pad-selected": Bq && Eq ? "true" : void 0,
-            "data-pad-default-focus": Bq && Eq || void 0,
-            "aria-label": qq.ariaLabel,
-            title: qq.ariaLabel,
-            className: lq()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: Eq
+            "aria-pressed": ub,
+            "data-pad-tab": Hb || void 0,
+            "data-pad-selected": Hb && ub ? "true" : void 0,
+            "data-pad-default-focus": Hb && ub || void 0,
+            "aria-label": bb.ariaLabel,
+            title: bb.ariaLabel,
+            className: Ob()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: ub
             }),
-            onMouseDown: cq ? qq => {
-              qq.preventDefault()
+            onMouseDown: Sb ? bb => {
+              bb.preventDefault()
             } : void 0,
             onClick: () => {
-              Eq && !Aq || Yq(qq.value)
+              ub && !Yb || Bb(bb.value)
             },
-            children: qq.label
-          }, qq.value)
+            children: bb.label
+          }, bb.value)
         }))
       })
     }
   },
-  4866: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Oq,
-      i: () => mq
+  4800: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Gb,
+      h: () => Ub
     });
-    var Yq = gq(57);
-    const lq = new WeakMap,
-      Oq = qq => {
-        var Eq;
-        const gq = qq.closest("[data-pad-slider]");
-        return gq && null !== (Eq = lq.get(gq)) && void 0 !== Eq ? Eq : null
+    var Bb = hb(49);
+    const Ob = new WeakMap,
+      Gb = bb => {
+        var ub;
+        const hb = bb.closest("[data-pad-slider]");
+        return hb && null !== (ub = Ob.get(hb)) && void 0 !== ub ? ub : null
       },
-      mq = (qq, Eq) => {
-        const gq = (0, Yq.useRef)(Eq);
-        gq.current = Eq, (0, Yq.useEffect)((() => {
-          if (qq.current) return ((qq, Eq) => (lq.set(qq, Eq), () => {
-            lq.get(qq) === Eq && lq.delete(qq)
-          }))(qq.current, {
-            adjust: qq => {
-              gq.current.adjust(qq)
+      Ub = (bb, ub) => {
+        const hb = (0, Bb.useRef)(ub);
+        hb.current = ub, (0, Bb.useEffect)((() => {
+          if (bb.current) return ((bb, ub) => (Ob.set(bb, ub), () => {
+            Ob.get(bb) === ub && Ob.delete(bb)
+          }))(bb.current, {
+            adjust: bb => {
+              hb.current.adjust(bb)
             },
-            setFraction: qq => {
-              gq.current.setFraction(qq)
+            setFraction: bb => {
+              hb.current.setFraction(bb)
             },
             endDrag: () => {
-              gq.current.endDrag()
+              hb.current.endDrag()
             }
           })
-        }), [qq])
+        }), [bb])
       }
   },
-  4883: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => xq,
-      f: () => mq
+  4815: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Lb,
+      g: () => Ub
     });
-    var Yq = gq(3067),
-      lq = gq(4890);
-    let Oq = null;
+    var Bb = hb(2951),
+      Ob = hb(4819);
+    let Gb = null;
 
-    function mq(qq, Eq) {
-      Oq = {
-        pack: qq.metaData.id === Yq.c ? null : qq,
-        prompt: Eq
+    function Ub(bb, ub) {
+      Gb = {
+        pack: bb.metaData.id === Bb.c ? null : bb,
+        prompt: ub
       }
     }
 
-    function xq(qq, Eq) {
-      const gq = Oq;
-      null !== gq && (0, lq.c)(gq.pack, qq) && (Oq = null, Eq && gq.prompt())
+    function Lb(bb, ub) {
+      const hb = Gb;
+      null !== hb && (0, Ob.c)(hb.pack, bb) && (Gb = null, ub && hb.prompt())
     }
   },
-  4890: (qq, Eq, gq) => {
-    function Yq(qq, Eq) {
-      return lq(qq, Eq)
+  4819: (bb, ub, hb) => {
+    function Bb(bb, ub) {
+      return Ob(bb, ub)
     }
 
-    function lq(qq, Eq) {
-      if (qq === Eq) return !0;
-      if ("object" !== typeof qq || "object" !== typeof Eq || null === qq || null === Eq || Array.isArray(qq) !== Array.isArray(Eq)) return !1;
-      const gq = qq,
-        Yq = Eq,
-        Oq = Object.keys(gq);
-      return Oq.length === Object.keys(Yq).length && Oq.every((qq => Object.prototype.hasOwnProperty.call(Yq, qq) && lq(gq[qq], Yq[qq])))
+    function Ob(bb, ub) {
+      if (bb === ub) return !0;
+      if ("object" !== typeof bb || "object" !== typeof ub || null === bb || null === ub || Array.isArray(bb) !== Array.isArray(ub)) return !1;
+      const hb = bb,
+        Bb = ub,
+        Gb = Object.keys(hb);
+      return Gb.length === Object.keys(Bb).length && Gb.every((bb => Object.prototype.hasOwnProperty.call(Bb, bb) && Ob(hb[bb], Bb[bb])))
     }
-    gq.d(Eq, {
-      c: () => Yq
+    hb.d(ub, {
+      c: () => Bb
     })
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

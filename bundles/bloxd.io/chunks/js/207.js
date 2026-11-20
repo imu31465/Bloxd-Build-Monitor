@@ -1,196 +1,196 @@
 export const id = 207;
 export const ids = [207, 208];
 export const modules = {
-  36339: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => lq,
-      reportCappedWasmFailure: () => xq,
-      reportUncappedWasmFailure: () => mq,
-      reportWasmFailure: () => Oq
+  35906: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Ob,
+      reportCappedWasmFailure: () => Lb,
+      reportUncappedWasmFailure: () => Ub,
+      reportWasmFailure: () => Gb
     });
-    var Yq = gq(2853);
-    const lq = Yq.b - 4;
+    var Bb = hb(2736);
+    const Ob = Bb.e - 4;
 
-    function Oq(qq, Eq, gq) {
-      (0, Yq.d)(qq, Eq, gq, !1)
+    function Gb(bb, ub, hb) {
+      (0, Bb.i)(bb, ub, hb, !1)
     }
 
-    function mq(qq, Eq, gq) {
-      (0, Yq.d)(qq, Eq, gq, !1, 1 / 0)
+    function Ub(bb, ub, hb) {
+      (0, Bb.i)(bb, ub, hb, !1, 1 / 0)
     }
 
-    function xq(qq, Eq, gq) {
-      (0, Yq.d)(qq, Eq, gq, !1, lq)
+    function Lb(bb, ub, hb) {
+      (0, Bb.i)(bb, ub, hb, !1, Ob)
     }
   },
-  36331: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Qq,
-      f: () => rq,
-      h: () => vq,
-      i: () => yq
+  35902: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Cb,
+      e: () => jb,
+      g: () => nb,
+      h: () => db
     });
-    var Yq = gq(36359),
-      lq = gq(2797),
-      Oq = gq(36372),
-      mq = gq(2805),
-      xq = gq(36339),
-      Aq = gq(2841),
-      cq = gq(3122),
-      uq = gq(3120),
-      Bq = gq(36345),
-      Wq = gq(2853),
-      Nq = gq(36350),
-      aq = gq(36356),
-      Vq = gq(3563);
-    let dq = !1;
-    const jq = 40;
-    var Hq = gq(663);
-    const oq = "bloxdWasmFailureReported";
+    var Bb = hb(35927),
+      Ob = hb(2683),
+      Gb = hb(35942),
+      Ub = hb(2688),
+      Lb = hb(35906),
+      Yb = hb(2725),
+      Sb = hb(3028),
+      ab = hb(3020),
+      Hb = hb(35912),
+      wb = hb(2736),
+      Zb = hb(35920),
+      Xb = hb(35925),
+      pb = hb(3480);
+    let ob = !1;
+    const Ab = 40;
+    var lb = hb(651);
+    const Kb = "bloxdWasmFailureReported";
 
-    function Pq() {
+    function Wb() {
       return "undefined" === typeof WebAssembly
     }
 
-    function Qq() {
-      return (0, Yq.g)()
+    function Cb() {
+      return (0, Bb.h)()
     }
 
-    function yq() {
-      if (Pq()) return "this browser has no WebAssembly";
-      const qq = (0, lq.s)();
-      return "compile" === qq || "instantiate" === qq ? `the core wasm didn't load here (${(0,lq.m)()})` : null
+    function db() {
+      if (Wb()) return "this browser has no WebAssembly";
+      const bb = (0, Ob.n)();
+      return "compile" === bb || "instantiate" === bb ? `the core wasm didn't load here (${(0,Ob.h)()})` : null
     }
-    async function tq(qq) {
-      return await (0, Oq.f)(Oq.c, void 0, qq)
+    async function rb(bb) {
+      return await (0, Gb.h)(Gb.d, void 0, bb)
     }
 
-    function rq() {
-      Pq() || (0, Hq.c)((() => {
-        tq()
+    function jb() {
+      Wb() || (0, lb.b)((() => {
+        rb()
       }))
     }
 
-    function vq() {
-      if (Pq()) return async () => ((0, Aq.l)("unsupported", 0), hq("unsupported", "This browser has no WebAssembly"), !1);
-      const qq = {
+    function nb() {
+      if (Wb()) return async () => ((0, Yb.k)("unsupported", 0), Db("unsupported", "This browser has no WebAssembly"), !1);
+      const bb = {
         reloadFailedDownload: !0
       };
-      return tq(qq), async () => {
-        var Eq;
-        const gq = performance.now();
-        await tq(qq);
-        const Yq = (performance.now() - gq) / 1e3;
-        if ((0, lq.P)()) return (0, Aq.l)("ready", Yq), dq || (dq = !0, (0, lq.R)((() => {
-          if ("call" !== (0, lq.s)()) return;
-          const qq = (0, lq.p)(),
-            Eq = (0, Bq.k)(qq, lq.G, lq._),
-            gq = (0, lq.v)().buffer.byteLength,
-            Yq = (0, Bq.g)(Eq.kind, Eq.refusedBytes),
-            Oq = Yq ? "alloc_failed" : Eq.kind,
-            mq = (0, Nq.j)(gq),
-            xq = Yq ? `_r${Math.floor(Math.log2(Eq.refusedBytes))}` : "",
-            Aq = (0, Vq.b)();
-          null === Aq && console.warn("A JS client wasm call turned wasm off without naming its site: call markWasmFailedAt, not markBloxdWasmFailed");
-          const cq = new Error((0, aq.b)(qq, gq, Eq));
-          if (qq instanceof Error && void 0 !== qq.stack) {
-            const Eq = qq.stack.split("\n"),
-              gq = Eq.length > jq ? [...Eq.slice(0, jq / 2), ...Eq.slice(-jq / 2)] : Eq;
-            cq.stack = gq.join("\n")
-          }(0, Wq.d)("wasm_load", cq, `wasm_call_${Oq}_${null!==Aq&&void 0!==Aq?Aq:"unnamed"}_m${mq}${xq}`)
-        }))), (0, mq.V)(Oq.c.url()) && (0, xq.reportCappedWasmFailure)("wasm_load", cq.d.message, cq.d.code), !0;
-        const Hq = uq.c[null !== (Eq = (0, lq.s)()) && void 0 !== Eq ? Eq : "call"];
-        return (0, Aq.l)(Hq, Yq), hq(Hq, (0, lq.m)()), !1
+      return rb(bb), async () => {
+        var ub;
+        const hb = performance.now();
+        await rb(bb);
+        const Bb = (performance.now() - hb) / 1e3;
+        if ((0, Ob.M)()) return (0, Yb.k)("ready", Bb), ob || (ob = !0, (0, Ob.O)((() => {
+          if ("call" !== (0, Ob.n)()) return;
+          const bb = (0, Ob.l)(),
+            ub = (0, Hb.j)(bb, Ob.D, Ob.T),
+            hb = (0, Ob.t)().buffer.byteLength,
+            Bb = (0, Hb.d)(ub.kind, ub.refusedBytes),
+            Gb = Bb ? "alloc_failed" : ub.kind,
+            Ub = (0, Zb.g)(hb),
+            Lb = Bb ? `_r${Math.floor(Math.log2(ub.refusedBytes))}` : "",
+            Yb = (0, pb.c)();
+          null === Yb && console.warn("A JS client wasm call turned wasm off without naming its site: call markWasmFailedAt, not markBloxdWasmFailed");
+          const Sb = new Error((0, Xb.b)(bb, hb, ub));
+          if (bb instanceof Error && void 0 !== bb.stack) {
+            const ub = bb.stack.split("\n"),
+              hb = ub.length > Ab ? [...ub.slice(0, Ab / 2), ...ub.slice(-Ab / 2)] : ub;
+            Sb.stack = hb.join("\n")
+          }(0, wb.i)("wasm_load", Sb, `wasm_call_${Gb}_${null!==Yb&&void 0!==Yb?Yb:"unnamed"}_m${Ub}${Lb}`)
+        }))), (0, Ub.Q)(Gb.d.url()) && (0, Lb.reportCappedWasmFailure)("wasm_load", Sb.d.message, Sb.d.code), !0;
+        const lb = ab.d[null !== (ub = (0, Ob.n)()) && void 0 !== ub ? ub : "call"];
+        return (0, Yb.k)(lb, Bb), Db(lb, (0, Ob.h)()), !1
       }
     }
 
-    function hq(qq, Eq) {
-      (0, uq.e)(oq, `Bloxd wasm ${qq}, so the game can't start: ${Eq}`, Eq, qq)
+    function Db(bb, ub) {
+      (0, ab.l)(Kb, `Bloxd wasm ${bb}, so the game can't start: ${ub}`, ub, bb)
     }
   },
-  36384: (qq, Eq, gq) => {
-    qq.exports = gq.p + "static/media/bloxd_wasm_bg.567100f455f46cbfa6a7.wasm"
+  35954: (bb, ub, hb) => {
+    bb.exports = hb.p + "static/media/bloxd_wasm_bg.1086bcfafc6573f96b81.wasm"
   },
-  36370: (qq, Eq, gq) => {
-    qq.exports = gq.p + "static/media/bloxd_wasm_textures_bg.6d9847a3dd7a203a52fe.wasm"
+  35933: (bb, ub, hb) => {
+    bb.exports = hb.p + "static/media/bloxd_wasm_textures_bg.5829ef2d5fb70538e689.wasm"
   },
-  36372: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => nE,
-      f: () => bE,
-      j: () => iE
+  35942: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => xu,
+      h: () => zu,
+      i: () => gu
     });
-    var Yq = {};
-    gq.r(Yq), gq.d(Yq, {
-      Su: () => lq,
-      EnvelopeKind: () => Oq,
-      pu: () => mq,
-      PhysicsEngine: () => xq,
-      Gu: () => Aq,
-      Lu: () => cq,
-      Ju: () => uq,
-      ku: () => Bq,
-      Ru: () => Wq,
-      Uu: () => Nq,
-      Fu: () => aq,
-      Xu: () => Vq,
-      wu: () => dq,
-      Ku: () => jq,
-      default: () => rE,
-      initSync: () => tE,
-      Cu: () => Hq,
-      Iu: () => oq,
-      eu: () => Pq,
-      Du: () => Qq,
-      qB: () => yq,
-      EB: () => tq,
-      gB: () => rq,
-      YB: () => vq,
-      lB: () => hq,
-      OB: () => nq,
-      mB: () => bq,
-      xB: () => iq,
-      AB: () => Zq,
-      cB: () => fq,
-      uB: () => Mq
+    var Bb = {};
+    hb.r(Bb), hb.d(Bb, {
+      ia: () => Ob,
+      EnvelopeKind: () => Gb,
+      va: () => Ub,
+      PhysicsEngine: () => Lb,
+      Ja: () => Yb,
+      ea: () => Sb,
+      Na: () => ab,
+      sa: () => Hb,
+      Ma: () => wb,
+      ma: () => Zb,
+      Ia: () => Xb,
+      Pa: () => pb,
+      qa: () => ob,
+      Ea: () => Ab,
+      default: () => ju,
+      initSync: () => ru,
+      ya: () => lb,
+      Va: () => Kb,
+      Fa: () => Wb,
+      fa: () => Cb,
+      ka: () => db,
+      Ta: () => rb,
+      ca: () => jb,
+      Qa: () => nb,
+      Ra: () => Db,
+      bH: () => xb,
+      uH: () => zb,
+      hH: () => gb,
+      BH: () => ib,
+      OH: () => vb,
+      GH: () => tb
     });
-    class lq {
+    class Ob {
       __destroy_into_raw() {
-        const qq = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, zq.unregister(this), qq
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, eb.unregister(this), bb
       }
       free() {
-        const qq = this.__destroy_into_raw();
-        PE.sHTK(qq, 0)
+        const bb = this.__destroy_into_raw();
+        Wu.Fr1x(bb, 0)
       }
-      BB() {
-        const qq = PE.ymqN(this.__wbg_ptr);
-        if (qq[2]) throw NE(qq[1]);
-        return qq[0] >>> 0
+      UH() {
+        const bb = Wu.Ills(this.__wbg_ptr);
+        if (bb[2]) throw Zu(bb[1]);
+        return bb[0] >>> 0
       }
-      WB() {
-        return PE.TjPW(this.__wbg_ptr) >>> 0
+      LH() {
+        return Wu.U4d9(this.__wbg_ptr) >>> 0
       }
       constructor() {
-        const qq = PE.xCaK();
-        return this.__wbg_ptr = qq, zq.register(this, this.__wbg_ptr, this), this
+        const bb = Wu.RAiw();
+        return this.__wbg_ptr = bb, eb.register(this, this.__wbg_ptr, this), this
       }
-      NB() {
-        return PE.QFYd(this.__wbg_ptr) >>> 0
+      YH() {
+        return Wu.j755(this.__wbg_ptr) >>> 0
       }
-      aB(qq) {
-        const Eq = PE.JeyK(this.__wbg_ptr, qq);
-        if (Eq[2]) throw NE(Eq[1]);
-        return Eq[0] >>> 0
+      SH(bb) {
+        const ub = Wu.CFeK(this.__wbg_ptr, bb);
+        if (ub[2]) throw Zu(ub[1]);
+        return ub[0] >>> 0
       }
-      VB(qq) {
-        const Eq = PE.IVVg(this.__wbg_ptr, qq);
-        if (Eq[2]) throw NE(Eq[1]);
-        return Eq[0] >>> 0
+      aH(bb) {
+        const ub = Wu.eP9h(this.__wbg_ptr, bb);
+        if (ub[2]) throw Zu(ub[1]);
+        return ub[0] >>> 0
       }
     }
-    Symbol.dispose && (lq.prototype[Symbol.dispose] = lq.prototype.free);
-    const Oq = Object.freeze({
+    Symbol.dispose && (Ob.prototype[Symbol.dispose] = Ob.prototype.free);
+    const Gb = Object.freeze({
       Js: 0,
       0: "Js",
       Error: 1,
@@ -212,1021 +212,1021 @@ export const modules = {
       StringType: 16,
       16: "StringType"
     });
-    class mq {
+    class Ub {
       __destroy_into_raw() {
-        const qq = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Sq.unregister(this), qq
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, Nb.unregister(this), bb
       }
       free() {
-        const qq = this.__destroy_into_raw();
-        PE.zTm2(qq, 0)
+        const bb = this.__destroy_into_raw();
+        Wu.E3yR(bb, 0)
       }
-      HB(qq, Eq) {
-        const gq = PE.NH6p(this.__wbg_ptr, qq, Eq);
-        if (gq[2]) throw NE(gq[1]);
-        return gq[0] >>> 0
+      ZH(bb, ub) {
+        const hb = Wu.elra(this.__wbg_ptr, bb, ub);
+        if (hb[2]) throw Zu(hb[1]);
+        return hb[0] >>> 0
       }
-      oB(qq) {
-        const Eq = PE.Lwk7(this.__wbg_ptr, qq);
-        if (Eq[2]) throw NE(Eq[1]);
-        return Eq[0] >>> 0
+      XH(bb) {
+        const ub = Wu.xP7k(this.__wbg_ptr, bb);
+        if (ub[2]) throw Zu(ub[1]);
+        return ub[0] >>> 0
       }
-      PB() {
-        PE.IXOv(this.__wbg_ptr)
+      pH() {
+        Wu.RUeO(this.__wbg_ptr)
       }
-      static QB() {
-        return PE.RDtE() >>> 0
+      static oH() {
+        return Wu.COVj() >>> 0
       }
-      yB() {
-        return PE.XhnH(this.__wbg_ptr) >>> 0
+      AH() {
+        return Wu.PtpA(this.__wbg_ptr) >>> 0
       }
-      tB() {
-        const qq = PE.LBVc(this.__wbg_ptr);
-        return 0 === qq[0] ? void 0 : qq[1]
+      lH() {
+        const bb = Wu.EouB(this.__wbg_ptr);
+        return 0 === bb[0] ? void 0 : bb[1]
       }
-      rB() {
-        return PE.A3or(this.__wbg_ptr) >>> 0
+      KH() {
+        return Wu.Bwau(this.__wbg_ptr) >>> 0
       }
-      vB() {
-        return PE.LKeE(this.__wbg_ptr) >>> 0
+      WH() {
+        return Wu.gdSD(this.__wbg_ptr) >>> 0
       }
-      static jB() {
-        return PE.nwpF() >>> 0
+      static wH() {
+        return Wu.Jsoo() >>> 0
       }
       constructor() {
-        const qq = PE.Chvp();
-        return this.__wbg_ptr = qq, Sq.register(this, this.__wbg_ptr, this), this
+        const bb = Wu.ShJ2();
+        return this.__wbg_ptr = bb, Nb.register(this, this.__wbg_ptr, this), this
       }
-      hB() {
-        return PE.myDF(this.__wbg_ptr) >>> 0
+      CH() {
+        return Wu.gD0U(this.__wbg_ptr) >>> 0
       }
-      nB() {
-        return PE.mFAi(this.__wbg_ptr) >>> 0
+      dH() {
+        return Wu.WDIr(this.__wbg_ptr) >>> 0
       }
-      bB() {
-        return PE.CNPL(this.__wbg_ptr) >>> 0
+      rH() {
+        return Wu.fIDX(this.__wbg_ptr) >>> 0
       }
-      dB(qq) {
-        return PE.KL6M(this.__wbg_ptr, qq) >>> 0
+      HH(bb) {
+        return Wu.HXDZ(this.__wbg_ptr, bb) >>> 0
       }
-      reserve(qq, Eq) {
-        const gq = PE.ruNu(this.__wbg_ptr, qq, Eq);
-        if (gq[1]) throw NE(gq[0])
+      reserve(bb, ub) {
+        const hb = Wu.CeLv(this.__wbg_ptr, bb, ub);
+        if (hb[1]) throw Zu(hb[0])
       }
-      fB(qq, Eq) {
-        const gq = cE(qq, PE.dZkX),
-          Yq = QE;
-        PE.v1Xk(this.__wbg_ptr, gq, Yq, Eq)
+      DH(bb, ub) {
+        const hb = Su(bb, Wu.kw55),
+          Bb = Cu;
+        Wu.Dhe6(this.__wbg_ptr, hb, Bb, ub)
       }
       text() {
-        let qq, Eq;
+        let bb, ub;
         try {
-          const gq = PE.ggDQ(this.__wbg_ptr);
-          return qq = gq[0], Eq = gq[1], eq(gq[0], gq[1])
+          const hb = Wu.A7g9(this.__wbg_ptr);
+          return bb = hb[0], ub = hb[1], Qb(hb[0], hb[1])
         } finally {
-          PE.XRNG(qq, Eq, 1)
+          Wu.OOfm(bb, ub, 1)
         }
       }
     }
-    Symbol.dispose && (mq.prototype[Symbol.dispose] = mq.prototype.free);
-    class xq {
+    Symbol.dispose && (Ub.prototype[Symbol.dispose] = Ub.prototype.free);
+    class Lb {
       __destroy_into_raw() {
-        const qq = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, pq.unregister(this), qq
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, sb.unregister(this), bb
       }
       free() {
-        const qq = this.__destroy_into_raw();
-        PE.oYSC(qq, 0)
+        const bb = this.__destroy_into_raw();
+        Wu.BNR0(bb, 0)
       }
-      zB(qq, Eq) {
-        Fq(Eq, lq);
-        const gq = PE.rWyp(this.__wbg_ptr, qq, Eq.__wbg_ptr);
-        if (gq[2]) throw NE(gq[1]);
-        return gq[0] >>> 0
+      zH(bb, ub) {
+        yb(ub, Ob);
+        const hb = Wu.Yh45(this.__wbg_ptr, bb, ub.__wbg_ptr);
+        if (hb[2]) throw Zu(hb[1]);
+        return hb[0] >>> 0
       }
-      pB() {
-        const qq = PE.ErOg(this.__wbg_ptr);
-        if (qq[1]) throw NE(qq[0])
+      iH() {
+        const bb = Wu.lwm9(this.__wbg_ptr);
+        if (bb[1]) throw Zu(bb[0])
       }
-      RB(qq, Eq, gq, Yq, lq, Oq, mq, xq, cq, uq, Bq) {
-        Fq(qq, Aq);
-        const Wq = PE.o4s3(this.__wbg_ptr, qq.__wbg_ptr, Eq, gq, Yq, lq, Oq, mq, xq, cq, uq, Bq);
-        if (Wq[2]) throw NE(Wq[1]);
-        return Wq[0]
+      NH(bb, ub, hb, Bb, Ob, Gb, Ub, Lb, Sb, ab, Hb) {
+        yb(bb, Yb);
+        const wb = Wu.dtsu(this.__wbg_ptr, bb.__wbg_ptr, ub, hb, Bb, Ob, Gb, Ub, Lb, Sb, ab, Hb);
+        if (wb[2]) throw Zu(wb[1]);
+        return wb[0]
       }
-      UB() {
-        const qq = PE.rX9W(this.__wbg_ptr);
-        var Eq = sq(qq[0], qq[1]).slice();
-        return PE.XRNG(qq[0], 8 * qq[1], 8), Eq
+      sH() {
+        const bb = Wu.IknR(this.__wbg_ptr);
+        var ub = Vb(bb[0], bb[1]).slice();
+        return Wu.OOfm(bb[0], 8 * bb[1], 8), ub
       }
-      FB() {
-        return PE.Yuhw(this.__wbg_ptr) >>> 0
+      MH() {
+        return Wu.aPXJ(this.__wbg_ptr) >>> 0
       }
-      sB() {
-        return PE.qNhz(this.__wbg_ptr) >>> 0
+      mH() {
+        return Wu.SabK(this.__wbg_ptr) >>> 0
       }
-      XB() {
-        return PE.PaKf(this.__wbg_ptr) >>> 0
+      IH() {
+        return Wu.Ff2k(this.__wbg_ptr) >>> 0
       }
-      constructor(qq, Eq, gq, Yq, lq, Oq, mq, xq) {
-        const Aq = PE.qdRW(qq, Eq, gq, Yq, lq, Oq, mq, xq);
-        if (Aq[2]) throw NE(Aq[1]);
-        return this.__wbg_ptr = Aq[0], pq.register(this, this.__wbg_ptr, this), this
+      constructor(bb, ub, hb, Bb, Ob, Gb, Ub, Lb) {
+        const Yb = Wu.nQpU(bb, ub, hb, Bb, Ob, Gb, Ub, Lb);
+        if (Yb[2]) throw Zu(Yb[1]);
+        return this.__wbg_ptr = Yb[0], sb.register(this, this.__wbg_ptr, this), this
       }
-      IB(qq) {
-        Fq(qq, lq);
-        const Eq = PE.y8Zm(this.__wbg_ptr, qq.__wbg_ptr);
-        if (Eq[2]) throw NE(Eq[1]);
-        return Eq[0] >>> 0
+      EH(bb) {
+        yb(bb, Ob);
+        const ub = Wu.pQHZ(this.__wbg_ptr, bb.__wbg_ptr);
+        if (ub[2]) throw Zu(ub[1]);
+        return ub[0] >>> 0
       }
-      eB(qq) {
-        const Eq = PE.NpWm(this.__wbg_ptr, qq);
-        if (Eq[1]) throw NE(Eq[0])
+      yH(bb) {
+        const ub = Wu.eBcV(this.__wbg_ptr, bb);
+        if (ub[1]) throw Zu(ub[0])
       }
-      DB() {
-        return PE.l8m2(this.__wbg_ptr) >>> 0
+      VH() {
+        return Wu.g5R9(this.__wbg_ptr) >>> 0
       }
-      resume(qq, Eq) {
-        Fq(qq, Aq), Fq(Eq, lq);
-        const gq = PE.yq2L(this.__wbg_ptr, qq.__wbg_ptr, Eq.__wbg_ptr);
-        if (gq[2]) throw NE(gq[1]);
-        return gq[0] >>> 0
+      resume(bb, ub) {
+        yb(bb, Yb), yb(ub, Ob);
+        const hb = Wu.imjV(this.__wbg_ptr, bb.__wbg_ptr, ub.__wbg_ptr);
+        if (hb[2]) throw Zu(hb[1]);
+        return hb[0] >>> 0
       }
-      lW(qq) {
-        const Eq = PE.m1Hh(this.__wbg_ptr, qq);
-        if (Eq[1]) throw NE(Eq[0])
+      cH(bb) {
+        const ub = Wu.zaOT(this.__wbg_ptr, bb);
+        if (ub[1]) throw Zu(ub[0])
       }
-      xW(qq, Eq) {
-        Fq(Eq, lq);
-        const gq = PE.UoQq(this.__wbg_ptr, qq, Eq.__wbg_ptr);
-        if (gq[1]) throw NE(gq[0])
+      bw(bb, ub) {
+        yb(ub, Ob);
+        const hb = Wu.FaON(this.__wbg_ptr, bb, ub.__wbg_ptr);
+        if (hb[1]) throw Zu(hb[0])
       }
-      uW(qq) {
-        const Eq = BE(qq, PE.dZkX),
-          gq = QE,
-          Yq = PE.AGzu(this.__wbg_ptr, Eq, gq);
-        if (Yq[1]) throw NE(Yq[0])
+      Bw(bb) {
+        const ub = Hu(bb, Wu.kw55),
+          hb = Cu,
+          Bb = Wu.mqdV(this.__wbg_ptr, ub, hb);
+        if (Bb[1]) throw Zu(Bb[0])
       }
-      LB(qq, Eq, gq, Yq, lq, Oq) {
-        const mq = PE.bdDX(this.__wbg_ptr, qq, Eq, gq, Yq, lq, Oq);
-        if (mq[1]) throw NE(mq[0])
+      tH(bb, ub, hb, Bb, Ob, Gb) {
+        const Ub = Wu.bsyF(this.__wbg_ptr, bb, ub, hb, Bb, Ob, Gb);
+        if (Ub[1]) throw Zu(Ub[0])
       }
-      JB(qq, Eq, gq, Yq) {
-        const lq = cE(qq, PE.dZkX),
-          Oq = QE,
-          mq = BE(Eq, PE.dZkX),
-          xq = QE,
-          Aq = BE(gq, PE.dZkX),
-          cq = QE,
-          uq = BE(Yq, PE.dZkX),
-          Bq = QE,
-          Wq = PE.DZmc(this.__wbg_ptr, lq, Oq, mq, xq, Aq, cq, uq, Bq);
-        if (Wq[1]) throw NE(Wq[0])
+      JH(bb, ub, hb, Bb) {
+        const Ob = Su(bb, Wu.kw55),
+          Gb = Cu,
+          Ub = Hu(ub, Wu.kw55),
+          Lb = Cu,
+          Yb = Hu(hb, Wu.kw55),
+          Sb = Cu,
+          ab = Hu(Bb, Wu.kw55),
+          Hb = Cu,
+          wb = Wu.KLyv(this.__wbg_ptr, Ob, Gb, Ub, Lb, Yb, Sb, ab, Hb);
+        if (wb[1]) throw Zu(wb[0])
       }
-      WW(qq, Eq) {
-        Fq(Eq, lq);
-        const gq = PE.MtB9(this.__wbg_ptr, qq, Eq.__wbg_ptr);
-        if (gq[1]) throw NE(gq[0])
+      Gw(bb, ub) {
+        yb(ub, Ob);
+        const hb = Wu.RZj8(this.__wbg_ptr, bb, ub.__wbg_ptr);
+        if (hb[1]) throw Zu(hb[0])
       }
-      CB(qq, Eq, gq) {
-        const Yq = PE.OHSz(this.__wbg_ptr, qq, Eq, gq);
-        if (Yq[1]) throw NE(Yq[0])
+      qH(bb, ub, hb) {
+        const Bb = Wu.q6ZV(this.__wbg_ptr, bb, ub, hb);
+        if (Bb[1]) throw Zu(Bb[0])
       }
-      aW(qq, Eq, gq, Yq, lq, Oq, mq, xq, cq, uq) {
-        Fq(qq, Aq);
-        return PE.rrkx(this.__wbg_ptr, qq.__wbg_ptr, Eq, gq, Yq, lq, Oq, mq, xq, cq, uq)
+      Lw(bb, ub, hb, Bb, Ob, Gb, Ub, Lb, Sb, ab) {
+        yb(bb, Yb);
+        return Wu.dUIB(this.__wbg_ptr, bb.__wbg_ptr, ub, hb, Bb, Ob, Gb, Ub, Lb, Sb, ab)
       }
     }
-    Symbol.dispose && (xq.prototype[Symbol.dispose] = xq.prototype.free);
-    class Aq {
-      static __wrap(qq) {
-        const Eq = Object.create(Aq.prototype);
-        return Eq.__wbg_ptr = qq, Gq.register(Eq, Eq.__wbg_ptr, Eq), Eq
+    Symbol.dispose && (Lb.prototype[Symbol.dispose] = Lb.prototype.free);
+    class Yb {
+      static __wrap(bb) {
+        const ub = Object.create(Yb.prototype);
+        return ub.__wbg_ptr = bb, Mb.register(ub, ub.__wbg_ptr, ub), ub
       }
       __destroy_into_raw() {
-        const qq = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Gq.unregister(this), qq
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, Mb.unregister(this), bb
       }
       free() {
-        const qq = this.__destroy_into_raw();
-        PE.sO7F(qq, 0)
+        const bb = this.__destroy_into_raw();
+        Wu.UxmA(bb, 0)
       }
-      jW(qq) {
-        const Eq = PE.toCr(this.__wbg_ptr, qq);
-        if (Eq[2]) throw NE(Eq[1]);
-        return Eq[0] >>> 0
+      aw(bb) {
+        const ub = Wu.CWRp(this.__wbg_ptr, bb);
+        if (ub[2]) throw Zu(ub[1]);
+        return ub[0] >>> 0
       }
-      HW(qq, Eq, gq) {
-        return PE.tfCk(this.__wbg_ptr, qq, Eq, gq)
+      Hw(bb, ub, hb) {
+        return Wu.anxn(this.__wbg_ptr, bb, ub, hb)
       }
-      oW(qq, Eq, gq) {
-        return PE.VqIK(this.__wbg_ptr, qq, Eq, gq) >>> 0
+      ww(bb, ub, hb) {
+        return Wu.oE8l(this.__wbg_ptr, bb, ub, hb) >>> 0
       }
-      PW(qq, Eq, gq, Yq) {
-        return 0 !== PE.nFKp(this.__wbg_ptr, qq, Eq, gq, Yq)
+      Zw(bb, ub, hb, Bb) {
+        return 0 !== Wu.mD85(this.__wbg_ptr, bb, ub, hb, Bb)
       }
-      QW() {
-        PE.ZDE7(this.__wbg_ptr)
+      Xw() {
+        Wu.TGvK(this.__wbg_ptr)
       }
-      tW(qq) {
-        const Eq = PE.ZbOv(this.__wbg_ptr, qq);
-        if (Eq[3]) throw NE(Eq[2]);
-        var gq = wq(Eq[0], Eq[1]).slice();
-        return PE.XRNG(Eq[0], 1 * Eq[1], 1), gq
+      ow(bb) {
+        const ub = Wu.Iq23(this.__wbg_ptr, bb);
+        if (ub[3]) throw Zu(ub[2]);
+        var hb = fb(ub[0], ub[1]).slice();
+        return Wu.OOfm(ub[0], 1 * ub[1], 1), hb
       }
-      evict(qq, Eq) {
-        return PE.pXoa(this.__wbg_ptr, qq, Eq) >>> 0
+      evict(bb, ub) {
+        return Wu.N37Q(this.__wbg_ptr, bb, ub) >>> 0
       }
-      rW() {
-        PE.R6S9(this.__wbg_ptr)
+      Aw() {
+        Wu.tqzy(this.__wbg_ptr)
       }
-      vW(qq, Eq, gq) {
-        PE.peUK(this.__wbg_ptr, qq, Eq, gq)
+      lw(bb, ub, hb) {
+        Wu.IMfA(this.__wbg_ptr, bb, ub, hb)
       }
-      hW(qq) {
-        const Eq = PE.yOOM(this.__wbg_ptr, qq);
-        if (Eq[1]) throw NE(Eq[0])
+      Kw(bb) {
+        const ub = Wu.GR0U(this.__wbg_ptr, bb);
+        if (ub[1]) throw Zu(ub[0])
       }
-      nW() {
-        return PE.u6nQ(this.__wbg_ptr) >>> 0
+      Ww() {
+        return Wu.RXp9(this.__wbg_ptr) >>> 0
       }
-      bW() {
-        return PE.h46L(this.__wbg_ptr) >>> 0
+      Cw() {
+        return Wu.xHQc(this.__wbg_ptr) >>> 0
       }
-      iW(qq, Eq, gq) {
-        PE.tvy0(this.__wbg_ptr, qq, Eq, gq)
+      dw(bb, ub, hb) {
+        Wu.co3F(this.__wbg_ptr, bb, ub, hb)
       }
-      ZW(qq, Eq, gq) {
-        PE.Rd3g(this.__wbg_ptr, qq, Eq, gq)
+      rw(bb, ub, hb) {
+        Wu.LufO(this.__wbg_ptr, bb, ub, hb)
       }
-      fW() {
-        return PE.oK9V(this.__wbg_ptr) >>> 0
+      jw() {
+        return Wu.aKQX(this.__wbg_ptr) >>> 0
       }
-      MW() {
-        return PE.yNoB(this.__wbg_ptr) >>> 0
+      nw() {
+        return Wu.gJNY(this.__wbg_ptr) >>> 0
       }
       constructor() {
-        const qq = PE.AkyM();
-        return this.__wbg_ptr = qq, Gq.register(this, this.__wbg_ptr, this), this
+        const bb = Wu.hcN7();
+        return this.__wbg_ptr = bb, Mb.register(this, this.__wbg_ptr, this), this
       }
-      static TW() {
-        const qq = PE.rOyJ();
-        return Aq.__wrap(qq)
+      static Dw() {
+        const bb = Wu.oUQy();
+        return Yb.__wrap(bb)
       }
-      zW() {
-        return PE.VOgv(this.__wbg_ptr) >>> 0
+      xw() {
+        return Wu.kkIX(this.__wbg_ptr) >>> 0
       }
-      SW() {
-        return PE.zFge(this.__wbg_ptr) >>> 0
+      zw() {
+        return Wu.cH6t(this.__wbg_ptr) >>> 0
       }
-      pW(qq, Eq, gq, Yq) {
-        const lq = PE.lEJe(this.__wbg_ptr, qq, Eq, gq, Yq);
-        if (lq[1]) throw NE(lq[0])
+      gw(bb, ub, hb, Bb) {
+        const Ob = Wu.xpZ3(this.__wbg_ptr, bb, ub, hb, Bb);
+        if (Ob[1]) throw Zu(Ob[0])
       }
-      GW() {
-        return PE.Zfgb(this.__wbg_ptr) >>> 0
+      iw() {
+        return Wu.TR38(this.__wbg_ptr) >>> 0
       }
-      LW() {
-        return PE.puUn(this.__wbg_ptr) >>> 0
+      tw() {
+        return Wu.t28d(this.__wbg_ptr) >>> 0
       }
-      JW(qq, Eq, gq, Yq) {
-        PE.Wb4j(this.__wbg_ptr, qq, Eq, gq, Yq)
+      Jw(bb, ub, hb, Bb) {
+        Wu.G7UA(this.__wbg_ptr, bb, ub, hb, Bb)
       }
-      kW(qq) {
-        PE.YJOR(this.__wbg_ptr, qq)
+      ew(bb) {
+        Wu.Q6RR(this.__wbg_ptr, bb)
       }
-      UW(qq, Eq, gq, Yq, lq) {
-        const Oq = uE(Eq, PE.dZkX),
-          mq = QE,
-          xq = cE(gq, PE.dZkX),
-          Aq = QE,
-          cq = BE(Yq, PE.dZkX),
-          uq = QE,
-          Bq = PE.du4p(this.__wbg_ptr, qq, Oq, mq, xq, Aq, cq, uq, lq);
-        if (Bq[1]) throw NE(Bq[0])
+      sw(bb, ub, hb, Bb, Ob) {
+        const Gb = au(ub, Wu.kw55),
+          Ub = Cu,
+          Lb = Su(hb, Wu.kw55),
+          Yb = Cu,
+          Sb = Hu(Bb, Wu.kw55),
+          ab = Cu,
+          Hb = Wu.m9ZT(this.__wbg_ptr, bb, Gb, Ub, Lb, Yb, Sb, ab, Ob);
+        if (Hb[1]) throw Zu(Hb[0])
       }
-      RW(qq, Eq, gq, Yq) {
-        const lq = uE(qq, PE.dZkX),
-          Oq = QE,
-          mq = cE(Eq, PE.dZkX),
-          xq = QE,
-          Aq = BE(gq, PE.dZkX),
-          cq = QE,
-          uq = uE(Yq, PE.dZkX),
-          Bq = QE,
-          Wq = PE.UTVC(this.__wbg_ptr, lq, Oq, mq, xq, Aq, cq, uq, Bq);
-        if (Wq[1]) throw NE(Wq[0])
+      Nw(bb, ub, hb, Bb) {
+        const Ob = au(bb, Wu.kw55),
+          Gb = Cu,
+          Ub = Su(ub, Wu.kw55),
+          Lb = Cu,
+          Yb = Hu(hb, Wu.kw55),
+          Sb = Cu,
+          ab = au(Bb, Wu.kw55),
+          Hb = Cu,
+          wb = Wu.KJLj(this.__wbg_ptr, Ob, Gb, Ub, Lb, Yb, Sb, ab, Hb);
+        if (wb[1]) throw Zu(wb[0])
       }
-      IW(qq) {
-        const Eq = uE(qq, PE.dZkX),
-          gq = QE,
-          Yq = PE.mjpB(this.__wbg_ptr, Eq, gq);
-        if (Yq[1]) throw NE(Yq[0])
+      Ew(bb) {
+        const ub = au(bb, Wu.kw55),
+          hb = Cu,
+          Bb = Wu.P3TN(this.__wbg_ptr, ub, hb);
+        if (Bb[1]) throw Zu(Bb[0])
       }
-      eW() {
-        return PE.NYPb(this.__wbg_ptr) >>> 0
+      yw() {
+        return Wu.DpgK(this.__wbg_ptr) >>> 0
       }
-      DW(qq) {
-        const Eq = PE.u860(this.__wbg_ptr, qq);
-        if (Eq[2]) throw NE(Eq[1]);
-        return Eq[0] >>> 0
+      Vw(bb) {
+        const ub = Wu.gPPX(this.__wbg_ptr, bb);
+        if (ub[2]) throw Zu(ub[1]);
+        return ub[0] >>> 0
       }
       steer() {
-        return PE.Xfyy(this.__wbg_ptr) >>> 0
+        return Wu.SgIS(this.__wbg_ptr) >>> 0
       }
-      qN() {
-        const qq = PE.b3tQ(this.__wbg_ptr);
-        var Eq = sq(qq[0], qq[1]).slice();
-        return PE.XRNG(qq[0], 8 * qq[1], 8), Eq
+      Fw() {
+        const bb = Wu.LGqE(this.__wbg_ptr);
+        var ub = Vb(bb[0], bb[1]).slice();
+        return Wu.OOfm(bb[0], 8 * bb[1], 8), ub
       }
-      EN() {
-        return PE.vv78(this.__wbg_ptr) >>> 0
+      fw() {
+        return Wu.KvdA(this.__wbg_ptr) >>> 0
       }
-      EW() {
-        const qq = PE.ebnG(this.__wbg_ptr);
-        var Eq, gq, Yq = (Eq = qq[0], gq = qq[1], Eq >>>= 0, (null !== Iq && 0 !== Iq.byteLength || (Iq = new Int32Array(PE.memory.buffer)), Iq).subarray(Eq / 4, Eq / 4 + gq)).slice();
-        return PE.XRNG(qq[0], 4 * qq[1], 4), Yq
+      fH() {
+        const bb = Wu.ddDB(this.__wbg_ptr);
+        var ub, hb, Bb = (ub = bb[0], hb = bb[1], ub >>>= 0, (null !== cb && 0 !== cb.byteLength || (cb = new Int32Array(Wu.memory.buffer)), cb).subarray(ub / 4, ub / 4 + hb)).slice();
+        return Wu.OOfm(bb[0], 4 * bb[1], 4), Bb
       }
     }
-    Symbol.dispose && (Aq.prototype[Symbol.dispose] = Aq.prototype.free);
-    class cq {
+    Symbol.dispose && (Yb.prototype[Symbol.dispose] = Yb.prototype.free);
+    class Sb {
       __destroy_into_raw() {
-        const qq = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Lq.unregister(this), qq
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, mb.unregister(this), bb
       }
       free() {
-        const qq = this.__destroy_into_raw();
-        PE.q1L0(qq, 0)
+        const bb = this.__destroy_into_raw();
+        Wu.O5Dx(bb, 0)
       }
-      gN(qq) {
-        const Eq = cE(qq, PE.dZkX),
-          gq = QE,
-          Yq = PE.njz5(this.__wbg_ptr, Eq, gq);
-        if (Yq[1]) throw NE(Yq[0])
+      kw(bb) {
+        const ub = Su(bb, Wu.kw55),
+          hb = Cu,
+          Bb = Wu.cqqQ(this.__wbg_ptr, ub, hb);
+        if (Bb[1]) throw Zu(Bb[0])
       }
-      YN() {
-        return PE.omS0(this.__wbg_ptr) >>> 0
+      Tw() {
+        return Wu.ihsF(this.__wbg_ptr) >>> 0
       }
-      lN() {
-        return PE.hAfn(this.__wbg_ptr) >>> 0
+      Qw() {
+        return Wu.Fujg(this.__wbg_ptr) >>> 0
       }
       constructor() {
-        const qq = PE.zFdd();
-        return this.__wbg_ptr = qq, Lq.register(this, this.__wbg_ptr, this), this
+        const bb = Wu.ey0R();
+        return this.__wbg_ptr = bb, mb.register(this, this.__wbg_ptr, this), this
       }
-      run(qq, Eq) {
-        Fq(qq, Aq);
-        const gq = PE.hP36(this.__wbg_ptr, qq.__wbg_ptr, Eq);
-        if (gq[2]) throw NE(gq[1]);
-        return gq[0] >>> 0
+      run(bb, ub) {
+        yb(bb, Yb);
+        const hb = Wu.tQ8L(this.__wbg_ptr, bb.__wbg_ptr, ub);
+        if (hb[2]) throw Zu(hb[1]);
+        return hb[0] >>> 0
       }
-      ON(qq) {
-        const Eq = cE(qq, PE.dZkX),
-          gq = QE;
-        PE.GPOD(this.__wbg_ptr, Eq, gq)
+      Rw(bb) {
+        const ub = Su(bb, Wu.kw55),
+          hb = Cu;
+        Wu.bT7f(this.__wbg_ptr, ub, hb)
       }
-      mN(qq) {
-        const Eq = cE(qq, PE.dZkX),
-          gq = QE;
-        PE.EvIH(this.__wbg_ptr, Eq, gq)
+      bZ(bb) {
+        const ub = Su(bb, Wu.kw55),
+          hb = Cu;
+        Wu.YwOq(this.__wbg_ptr, ub, hb)
       }
     }
-    Symbol.dispose && (cq.prototype[Symbol.dispose] = cq.prototype.free);
-    class uq {
+    Symbol.dispose && (Sb.prototype[Symbol.dispose] = Sb.prototype.free);
+    class ab {
       __destroy_into_raw() {
-        const qq = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Jq.unregister(this), qq
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, Ib.unregister(this), bb
       }
       free() {
-        const qq = this.__destroy_into_raw();
-        PE.G1pz(qq, 0)
+        const bb = this.__destroy_into_raw();
+        Wu.TpfU(bb, 0)
       }
-      AN(qq, Eq) {
-        const gq = uE(qq, PE.dZkX),
-          Yq = QE;
-        return PE.V7DX(this.__wbg_ptr, gq, Yq, Eq) >>> 0
+      hZ(bb, ub) {
+        const hb = au(bb, Wu.kw55),
+          Bb = Cu;
+        return Wu.q2Wg(this.__wbg_ptr, hb, Bb, ub) >>> 0
       }
-      cN(qq, Eq, gq) {
-        Fq(qq, Aq);
-        const Yq = uE(gq, PE.dZkX),
-          lq = QE,
-          Oq = PE.vD0W(this.__wbg_ptr, qq.__wbg_ptr, Eq, Yq, lq);
-        if (Oq[2]) throw NE(Oq[1]);
-        return Oq[0] >>> 0
+      BZ(bb, ub, hb) {
+        yb(bb, Yb);
+        const Bb = au(hb, Wu.kw55),
+          Ob = Cu,
+          Gb = Wu.IQkI(this.__wbg_ptr, bb.__wbg_ptr, ub, Bb, Ob);
+        if (Gb[2]) throw Zu(Gb[1]);
+        return Gb[0] >>> 0
       }
-      xN(qq) {
-        return PE.Xijx(this.__wbg_ptr, qq) >>> 0
+      uZ(bb) {
+        return Wu.gKSK(this.__wbg_ptr, bb) >>> 0
       }
       constructor() {
-        const qq = PE.sdaW();
-        return this.__wbg_ptr = qq, Jq.register(this, this.__wbg_ptr, this), this
+        const bb = Wu.Wy1f();
+        return this.__wbg_ptr = bb, Ib.register(this, this.__wbg_ptr, this), this
       }
-      scan(qq, Eq) {
-        Fq(qq, Aq);
-        const gq = PE.Z7He(this.__wbg_ptr, qq.__wbg_ptr, Eq);
-        if (gq[2]) throw NE(gq[1]);
-        return gq[0] >>> 0
+      scan(bb, ub) {
+        yb(bb, Yb);
+        const hb = Wu.kGOg(this.__wbg_ptr, bb.__wbg_ptr, ub);
+        if (hb[2]) throw Zu(hb[1]);
+        return hb[0] >>> 0
       }
-      WN(qq) {
-        const Eq = uE(qq, PE.dZkX),
-          gq = QE;
-        PE.xxVg(this.__wbg_ptr, Eq, gq)
+      UZ(bb) {
+        const ub = au(bb, Wu.kw55),
+          hb = Cu;
+        Wu.BV4O(this.__wbg_ptr, ub, hb)
       }
-      BN() {
-        return PE.j3GP(this.__wbg_ptr) >>> 0
+      GZ() {
+        return Wu.LDsc(this.__wbg_ptr) >>> 0
       }
-      uN() {
-        return PE.eIEb(this.__wbg_ptr) >>> 0
+      OZ() {
+        return Wu.MeuA(this.__wbg_ptr) >>> 0
       }
     }
-    Symbol.dispose && (uq.prototype[Symbol.dispose] = uq.prototype.free);
-    class Bq {
+    Symbol.dispose && (ab.prototype[Symbol.dispose] = ab.prototype.free);
+    class Hb {
       __destroy_into_raw() {
-        const qq = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, kq.unregister(this), qq
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, Pb.unregister(this), bb
       }
       free() {
-        const qq = this.__destroy_into_raw();
-        PE.WOXo(qq, 0)
+        const bb = this.__destroy_into_raw();
+        Wu.kjBL(bb, 0)
       }
-      aN(qq) {
-        const Eq = PE.r91p(this.__wbg_ptr, qq);
-        if (Eq[2]) throw NE(Eq[1]);
-        return Eq[0] >>> 0
+      YZ(bb) {
+        const ub = Wu.Swgy(this.__wbg_ptr, bb);
+        if (ub[2]) throw Zu(ub[1]);
+        return ub[0] >>> 0
       }
-      compute(qq, Eq, gq, Yq) {
-        var lq = xE(Yq) ? 0 : WE(Yq, PE.dZkX, PE.R5cm),
-          Oq = QE;
-        const mq = PE.SgIB(this.__wbg_ptr, qq, xE(Eq) ? Number.MAX_SAFE_INTEGER : Eq | 0, gq, lq, Oq);
-        if (mq[2]) throw NE(mq[1]);
-        return mq[0] >>> 0
+      compute(bb, ub, hb, Bb) {
+        var Ob = Lu(Bb) ? 0 : wu(Bb, Wu.kw55, Wu.Zm7I),
+          Gb = Cu;
+        const Ub = Wu.UVka(this.__wbg_ptr, bb, Lu(ub) ? Number.MAX_SAFE_INTEGER : ub | 0, hb, Ob, Gb);
+        if (Ub[2]) throw Zu(Ub[1]);
+        return Ub[0] >>> 0
       }
-      dN(qq) {
-        const Eq = WE(qq, PE.dZkX, PE.R5cm),
-          gq = QE;
-        PE.nCn8(this.__wbg_ptr, Eq, gq)
+      aZ(bb) {
+        const ub = wu(bb, Wu.kw55, Wu.Zm7I),
+          hb = Cu;
+        Wu.eN4c(this.__wbg_ptr, ub, hb)
       }
-      HN() {
-        return PE.Dzhh(this.__wbg_ptr)
+      wZ() {
+        return Wu.thwj(this.__wbg_ptr)
       }
-      oN(qq) {
-        return PE.RxBI(this.__wbg_ptr, qq) >>> 0
+      ZZ(bb) {
+        return Wu.g7Tu(this.__wbg_ptr, bb) >>> 0
       }
-      PN() {
-        return PE.Vf4L(this.__wbg_ptr) >>> 0
+      XZ() {
+        return Wu.jyyF(this.__wbg_ptr) >>> 0
       }
-      QN() {
-        return PE.kc4j(this.__wbg_ptr) >>> 0
+      pZ() {
+        return Wu.LX6E(this.__wbg_ptr) >>> 0
       }
-      yN(qq, Eq) {
-        const gq = PE.cWS3(this.__wbg_ptr, qq, Eq);
-        if (gq[1]) throw NE(gq[0])
+      oZ(bb, ub) {
+        const hb = Wu.xNZI(this.__wbg_ptr, bb, ub);
+        if (hb[1]) throw Zu(hb[0])
       }
-      tN() {
-        return PE.OA4O(this.__wbg_ptr) >>> 0
+      AZ() {
+        return Wu.W6Rp(this.__wbg_ptr) >>> 0
       }
-      rN() {
-        return PE.Js0x(this.__wbg_ptr) >>> 0
+      lZ() {
+        return Wu.sRvm(this.__wbg_ptr) >>> 0
       }
-      vN() {
-        return PE.CXDI(this.__wbg_ptr) >>> 0
+      KZ() {
+        return Wu.k0Gh(this.__wbg_ptr) >>> 0
       }
-      VN(qq, Eq, gq) {
-        const Yq = cE(qq, PE.dZkX),
-          lq = QE,
-          Oq = cE(Eq, PE.dZkX),
-          mq = QE,
-          xq = PE.Whlp(this.__wbg_ptr, Yq, lq, Oq, mq, gq);
-        if (xq[1]) throw NE(xq[0])
+      SZ(bb, ub, hb) {
+        const Bb = Su(bb, Wu.kw55),
+          Ob = Cu,
+          Gb = Su(ub, Wu.kw55),
+          Ub = Cu,
+          Lb = Wu.SPMA(this.__wbg_ptr, Bb, Ob, Gb, Ub, hb);
+        if (Lb[1]) throw Zu(Lb[0])
       }
-      nN() {
-        return PE.z36U(this.__wbg_ptr) >>> 0
+      CZ() {
+        return Wu.sYDn(this.__wbg_ptr) >>> 0
       }
-      mesh(qq, Eq, gq, Yq, lq) {
-        const Oq = PE.PVOU(this.__wbg_ptr, qq, Eq, gq, Yq, lq);
-        if (Oq[2]) throw NE(Oq[1]);
-        return Oq[0] >>> 0
+      mesh(bb, ub, hb, Bb, Ob) {
+        const Gb = Wu.h5lt(this.__wbg_ptr, bb, ub, hb, Bb, Ob);
+        if (Gb[2]) throw Zu(Gb[1]);
+        return Gb[0] >>> 0
       }
-      constructor(qq, Eq, gq, Yq, lq, Oq, mq, xq, Aq, cq, uq, Bq, Wq, Nq, aq, Vq, dq, jq, Hq, oq) {
-        const Pq = AE(qq, PE.dZkX),
-          Qq = QE,
-          yq = BE(Eq, PE.dZkX),
-          tq = QE,
-          rq = cE(gq, PE.dZkX),
-          vq = QE,
-          hq = uE(Yq, PE.dZkX),
-          nq = QE,
-          bq = uE(lq, PE.dZkX),
-          iq = QE,
-          Zq = cE(Oq, PE.dZkX),
-          fq = QE,
-          Mq = cE(mq, PE.dZkX),
-          Tq = QE,
-          zq = BE(xq, PE.dZkX),
-          Sq = QE,
-          pq = BE(Aq, PE.dZkX),
-          Gq = QE,
-          Lq = uE(cq, PE.dZkX),
-          Jq = QE;
-        var Rq = xE(uq) ? 0 : AE(uq, PE.dZkX),
-          Uq = QE;
-        const Fq = cE(Bq, PE.dZkX),
-          sq = QE,
-          Xq = uE(Wq, PE.dZkX),
-          wq = QE;
-        var Kq = xE(Nq) ? 0 : uE(Nq, PE.dZkX),
-          Cq = QE;
-        const Iq = BE(aq, PE.dZkX),
-          eq = QE,
-          Dq = PE.hv5D(Pq, Qq, yq, tq, rq, vq, hq, nq, bq, iq, Zq, fq, Mq, Tq, zq, Sq, pq, Gq, Lq, Jq, Rq, Uq, Fq, sq, Xq, wq, Kq, Cq, Iq, eq, Vq, dq, jq, Hq, oq);
-        if (Dq[2]) throw NE(Dq[1]);
-        return this.__wbg_ptr = Dq[0], kq.register(this, this.__wbg_ptr, this), this
+      constructor(bb, ub, hb, Bb, Ob, Gb, Ub, Lb, Yb, Sb, ab, Hb, wb, Zb, Xb, pb, ob, Ab, lb, Kb) {
+        const Wb = Yu(bb, Wu.kw55),
+          Cb = Cu,
+          db = Hu(ub, Wu.kw55),
+          rb = Cu,
+          jb = Su(hb, Wu.kw55),
+          nb = Cu,
+          Db = au(Bb, Wu.kw55),
+          xb = Cu,
+          zb = au(Ob, Wu.kw55),
+          gb = Cu,
+          ib = Su(Gb, Wu.kw55),
+          vb = Cu,
+          tb = Su(Ub, Wu.kw55),
+          Jb = Cu,
+          eb = Hu(Lb, Wu.kw55),
+          Nb = Cu,
+          sb = Hu(Yb, Wu.kw55),
+          Mb = Cu,
+          mb = au(Sb, Wu.kw55),
+          Ib = Cu;
+        var qb = Lu(ab) ? 0 : Yu(ab, Wu.kw55),
+          Eb = Cu;
+        const yb = Su(Hb, Wu.kw55),
+          Vb = Cu,
+          Fb = au(wb, Wu.kw55),
+          fb = Cu;
+        var kb = Lu(Zb) ? 0 : au(Zb, Wu.kw55),
+          Tb = Cu;
+        const cb = Hu(Xb, Wu.kw55),
+          Qb = Cu,
+          Rb = Wu.gU7i(Wb, Cb, db, rb, jb, nb, Db, xb, zb, gb, ib, vb, tb, Jb, eb, Nb, sb, Mb, mb, Ib, qb, Eb, yb, Vb, Fb, fb, kb, Tb, cb, Qb, pb, ob, Ab, lb, Kb);
+        if (Rb[2]) throw Zu(Rb[1]);
+        return this.__wbg_ptr = Rb[0], Pb.register(this, this.__wbg_ptr, this), this
       }
-      hN(qq, Eq) {
-        const gq = cE(qq, PE.dZkX),
-          Yq = QE,
-          lq = PE.C0Nj(this.__wbg_ptr, gq, Yq, Eq);
-        if (lq[3]) throw NE(lq[2]);
-        var Oq = wq(lq[0], lq[1]).slice();
-        return PE.XRNG(lq[0], 1 * lq[1], 1), Oq
+      WZ(bb, ub) {
+        const hb = Su(bb, Wu.kw55),
+          Bb = Cu,
+          Ob = Wu.xiJ0(this.__wbg_ptr, hb, Bb, ub);
+        if (Ob[3]) throw Zu(Ob[2]);
+        var Gb = fb(Ob[0], Ob[1]).slice();
+        return Wu.OOfm(Ob[0], 1 * Ob[1], 1), Gb
       }
-      bN(qq) {
-        PE.Bo5V(this.__wbg_ptr, xE(qq) ? 16777215 : qq)
+      dZ(bb) {
+        Wu.SCyb(this.__wbg_ptr, Lu(bb) ? 16777215 : bb)
       }
-      iN(qq) {
-        return PE.Nepd(this.__wbg_ptr, qq) >>> 0
+      rZ(bb) {
+        return Wu.wXh7(this.__wbg_ptr, bb) >>> 0
       }
-      fN() {
-        return PE.gu9X(this.__wbg_ptr) >>> 0
+      DZ() {
+        return Wu.axuX(this.__wbg_ptr) >>> 0
       }
-      ZN() {
-        const qq = PE.XlLV(this.__wbg_ptr);
-        if (qq[2]) throw NE(qq[1]);
-        return 0 !== qq[0]
+      jZ() {
+        const bb = Wu.Hsy6(this.__wbg_ptr);
+        if (bb[2]) throw Zu(bb[1]);
+        return 0 !== bb[0]
       }
-      MN() {
-        return PE.h0IG(this.__wbg_ptr) >>> 0
+      xZ() {
+        return Wu.rmPH(this.__wbg_ptr) >>> 0
       }
-      TN() {
-        return PE.n53G(this.__wbg_ptr) >>> 0
+      zZ() {
+        return Wu.i7Yu(this.__wbg_ptr) >>> 0
       }
     }
-    Symbol.dispose && (Bq.prototype[Symbol.dispose] = Bq.prototype.free);
-    class Wq {
+    Symbol.dispose && (Hb.prototype[Symbol.dispose] = Hb.prototype.free);
+    class wb {
       __destroy_into_raw() {
-        const qq = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Rq.unregister(this), qq
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, qb.unregister(this), bb
       }
       free() {
-        const qq = this.__destroy_into_raw();
-        PE.D4Fc(qq, 0)
+        const bb = this.__destroy_into_raw();
+        Wu.BWF6(bb, 0)
       }
-      compute(qq, Eq, gq, Yq) {
-        var lq = xE(Yq) ? 0 : WE(Yq, PE.dZkX, PE.R5cm),
-          Oq = QE;
-        const mq = PE.dmLh(this.__wbg_ptr, qq, xE(Eq) ? Number.MAX_SAFE_INTEGER : Eq | 0, gq, lq, Oq);
-        if (mq[2]) throw NE(mq[1]);
-        return mq[0] >>> 0
+      compute(bb, ub, hb, Bb) {
+        var Ob = Lu(Bb) ? 0 : wu(Bb, Wu.kw55, Wu.Zm7I),
+          Gb = Cu;
+        const Ub = Wu.HW1X(this.__wbg_ptr, bb, Lu(ub) ? Number.MAX_SAFE_INTEGER : ub | 0, hb, Ob, Gb);
+        if (Ub[2]) throw Zu(Ub[1]);
+        return Ub[0] >>> 0
       }
-      dN(qq) {
-        const Eq = WE(qq, PE.dZkX, PE.R5cm),
-          gq = QE;
-        PE.PAsS(this.__wbg_ptr, Eq, gq)
+      aZ(bb) {
+        const ub = wu(bb, Wu.kw55, Wu.Zm7I),
+          hb = Cu;
+        Wu.oXQ1(this.__wbg_ptr, ub, hb)
       }
-      rN() {
-        return PE.nXji(this.__wbg_ptr) >>> 0
+      lZ() {
+        return Wu.MvHj(this.__wbg_ptr) >>> 0
       }
-      vN() {
-        return PE.kkg1(this.__wbg_ptr) >>> 0
+      KZ() {
+        return Wu.smnB(this.__wbg_ptr) >>> 0
       }
-      zN(qq) {
-        const Eq = PE.v887(this.__wbg_ptr, qq);
-        if (Eq[2]) throw NE(Eq[1]);
-        return Eq[0] >>> 0
+      gZ(bb) {
+        const ub = Wu.itoM(this.__wbg_ptr, bb);
+        if (ub[2]) throw Zu(ub[1]);
+        return ub[0] >>> 0
       }
-      constructor(qq, Eq, gq, Yq, lq, Oq) {
-        const mq = AE(qq, PE.dZkX),
-          xq = QE,
-          Aq = BE(Eq, PE.dZkX),
-          cq = QE,
-          uq = cE(gq, PE.dZkX),
-          Bq = QE,
-          Wq = uE(Yq, PE.dZkX),
-          Nq = QE,
-          aq = PE.W4e3(mq, xq, Aq, cq, uq, Bq, Wq, Nq, lq, Oq);
-        if (aq[2]) throw NE(aq[1]);
-        return this.__wbg_ptr = aq[0], Rq.register(this, this.__wbg_ptr, this), this
+      constructor(bb, ub, hb, Bb, Ob, Gb) {
+        const Ub = Yu(bb, Wu.kw55),
+          Lb = Cu,
+          Yb = Hu(ub, Wu.kw55),
+          Sb = Cu,
+          ab = Su(hb, Wu.kw55),
+          Hb = Cu,
+          wb = au(Bb, Wu.kw55),
+          Zb = Cu,
+          Xb = Wu.Yp1d(Ub, Lb, Yb, Sb, ab, Hb, wb, Zb, Ob, Gb);
+        if (Xb[2]) throw Zu(Xb[1]);
+        return this.__wbg_ptr = Xb[0], qb.register(this, this.__wbg_ptr, this), this
       }
-      fN() {
-        return PE.AVNU(this.__wbg_ptr) >>> 0
+      DZ() {
+        return Wu.yzEA(this.__wbg_ptr) >>> 0
       }
-      ZN() {
-        const qq = PE.T6bx(this.__wbg_ptr);
-        if (qq[2]) throw NE(qq[1]);
-        return 0 !== qq[0]
+      jZ() {
+        const bb = Wu.AH0M(this.__wbg_ptr);
+        if (bb[2]) throw Zu(bb[1]);
+        return 0 !== bb[0]
       }
-      MN() {
-        return PE.H0bP(this.__wbg_ptr) >>> 0
+      xZ() {
+        return Wu.inc8(this.__wbg_ptr) >>> 0
       }
     }
 
-    function Nq() {
-      const qq = PE.sQcU();
-      var Eq = Xq(qq[0], qq[1]).slice();
-      return PE.XRNG(qq[0], 4 * qq[1], 4), Eq
+    function Zb() {
+      const bb = Wu.XN5h();
+      var ub = Fb(bb[0], bb[1]).slice();
+      return Wu.OOfm(bb[0], 4 * bb[1], 4), ub
     }
 
-    function aq(qq, Eq) {
-      let gq, Yq;
+    function Xb(bb, ub) {
+      let hb, Bb;
       try {
-        const lq = AE(qq, PE.dZkX),
-          Oq = QE,
-          mq = WE(Eq, PE.dZkX, PE.R5cm),
-          xq = QE,
-          Aq = PE.RccR(lq, Oq, mq, xq);
-        return gq = Aq[0], Yq = Aq[1], eq(Aq[0], Aq[1])
+        const Ob = Yu(bb, Wu.kw55),
+          Gb = Cu,
+          Ub = wu(ub, Wu.kw55, Wu.Zm7I),
+          Lb = Cu,
+          Yb = Wu.vESg(Ob, Gb, Ub, Lb);
+        return hb = Yb[0], Bb = Yb[1], Qb(Yb[0], Yb[1])
       } finally {
-        PE.XRNG(gq, Yq, 1)
+        Wu.OOfm(hb, Bb, 1)
       }
     }
 
-    function Vq() {
-      const qq = PE.HW90();
-      var Eq = Xq(qq[0], qq[1]).slice();
-      return PE.XRNG(qq[0], 4 * qq[1], 4), Eq
+    function pb() {
+      const bb = Wu.ADib();
+      var ub = Fb(bb[0], bb[1]).slice();
+      return Wu.OOfm(bb[0], 4 * bb[1], 4), ub
     }
 
-    function dq(qq) {
-      return 0 !== PE.zChA(qq)
+    function ob(bb) {
+      return 0 !== Wu.kSOE(bb)
     }
 
-    function jq(qq, Eq) {
-      const gq = WE(qq, PE.dZkX, PE.R5cm),
-        Yq = QE,
-        lq = PE.lL8E(gq, Yq, Eq);
-      if (lq[1]) throw NE(lq[0])
+    function Ab(bb, ub) {
+      const hb = wu(bb, Wu.kw55, Wu.Zm7I),
+        Bb = Cu,
+        Ob = Wu.VyTM(hb, Bb, ub);
+      if (Ob[1]) throw Zu(Ob[0])
     }
 
-    function Hq() {
-      PE.RtY0()
+    function lb() {
+      Wu.NpwS()
     }
 
-    function oq() {
-      return PE.hRe0() >>> 0
+    function Kb() {
+      return Wu.XT2N() >>> 0
     }
 
-    function Pq(qq) {
-      return 0 !== PE.E6NY(qq)
+    function Wb(bb) {
+      return 0 !== Wu.qrvh(bb)
     }
 
-    function Qq(qq) {
-      return 0 !== PE.dPky(qq)
+    function Cb(bb) {
+      return 0 !== Wu.SMrm(bb)
     }
 
-    function yq(qq) {
-      PE.cn47(qq)
+    function db(bb) {
+      Wu.ycMq(bb)
     }
 
-    function tq() {
-      return PE.gowu() >>> 0
+    function rb() {
+      return Wu.xlV7() >>> 0
     }
 
-    function rq() {
-      return PE.IEZY() >>> 0
+    function jb() {
+      return Wu.JQx7() >>> 0
     }
 
-    function vq() {
-      return 0 !== PE.N6tp()
+    function nb() {
+      return 0 !== Wu.Z4uJ()
     }
 
-    function hq() {
-      const qq = PE.iXdG();
-      var Eq = Xq(qq[0], qq[1]).slice();
-      return PE.XRNG(qq[0], 4 * qq[1], 4), Eq
+    function Db() {
+      const bb = Wu.IY0u();
+      var ub = Fb(bb[0], bb[1]).slice();
+      return Wu.OOfm(bb[0], 4 * bb[1], 4), ub
     }
 
-    function nq() {
-      const qq = PE.dHuU();
-      var Eq = Xq(qq[0], qq[1]).slice();
-      return PE.XRNG(qq[0], 4 * qq[1], 4), Eq
+    function xb() {
+      const bb = Wu.YS4r();
+      var ub = Fb(bb[0], bb[1]).slice();
+      return Wu.OOfm(bb[0], 4 * bb[1], 4), ub
     }
 
-    function bq() {
-      const qq = PE.QzSh();
-      var Eq = Xq(qq[0], qq[1]).slice();
-      return PE.XRNG(qq[0], 4 * qq[1], 4), Eq
+    function zb() {
+      const bb = Wu.V6tX();
+      var ub = Fb(bb[0], bb[1]).slice();
+      return Wu.OOfm(bb[0], 4 * bb[1], 4), ub
     }
 
-    function iq() {
-      return PE.ZZoe() >>> 0
+    function gb() {
+      return Wu.UtFZ() >>> 0
     }
 
-    function Zq() {
-      PE.fssZ()
+    function ib() {
+      Wu.df4J()
     }
 
-    function fq() {
-      let qq, Eq;
+    function vb() {
+      let bb, ub;
       try {
-        const gq = PE.mefQ();
-        return qq = gq[0], Eq = gq[1], eq(gq[0], gq[1])
+        const hb = Wu.Sl1O();
+        return bb = hb[0], ub = hb[1], Qb(hb[0], hb[1])
       } finally {
-        PE.XRNG(qq, Eq, 1)
+        Wu.OOfm(bb, ub, 1)
       }
     }
 
-    function Mq(qq) {
-      PE.dtog(Uq(qq))
+    function tb(bb) {
+      Wu.eoJj(Eb(bb))
     }
 
-    function Tq() {
+    function Jb() {
       return {
         __proto__: null,
-        Wwb1: {
+        Ehmd: {
           __proto__: null,
-          QK6w: function(qq, Eq) {
-            return Uq(Error(eq(qq, Eq)))
+          DzFR: function(bb, ub) {
+            return Eb(Error(Qb(bb, ub)))
           },
-          HHVb: function(qq, Eq) {
-            throw new Error(eq(qq, Eq))
+          wJC6: function(bb, ub) {
+            throw new Error(Qb(bb, ub))
           },
-          ZW0J: function(qq) {
-            lE(qq).call()
+          F2tp: function(bb) {
+            Ou(bb).call()
           },
-          xCvH: function(qq, Eq) {
-            console.error(eq(qq, Eq))
+          cenW: function(bb, ub) {
+            console.error(Qb(bb, ub))
           },
-          npmm: function() {
+          zvAz: function() {
             return performance.now()
           },
-          awpl: function(qq) {
-            NE(qq)
+          rlfw: function(bb) {
+            Zu(bb)
           }
         }
       }
     }
-    Symbol.dispose && (Wq.prototype[Symbol.dispose] = Wq.prototype.free);
-    const zq = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (wb.prototype[Symbol.dispose] = wb.prototype.free);
+    const eb = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((qq => PE.sHTK(qq, 1))),
-      Sq = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((bb => Wu.Fr1x(bb, 1))),
+      Nb = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((qq => PE.zTm2(qq, 1))),
-      pq = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((bb => Wu.E3yR(bb, 1))),
+      sb = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((qq => PE.oYSC(qq, 1))),
-      Gq = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((bb => Wu.BNR0(bb, 1))),
+      Mb = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((qq => PE.sO7F(qq, 1))),
-      Lq = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((bb => Wu.UxmA(bb, 1))),
+      mb = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((qq => PE.q1L0(qq, 1))),
-      Jq = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((bb => Wu.O5Dx(bb, 1))),
+      Ib = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((qq => PE.G1pz(qq, 1))),
-      kq = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((bb => Wu.TpfU(bb, 1))),
+      Pb = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((qq => PE.WOXo(qq, 1))),
-      Rq = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((bb => Wu.kjBL(bb, 1))),
+      qb = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((qq => PE.D4Fc(qq, 1)));
+      } : new FinalizationRegistry((bb => Wu.BWF6(bb, 1)));
 
-    function Uq(qq) {
-      mE === OE.length && OE.push(OE.length + 1);
-      const Eq = mE;
-      return mE = OE[Eq], OE[Eq] = qq, Eq
+    function Eb(bb) {
+      Uu === Gu.length && Gu.push(Gu.length + 1);
+      const ub = Uu;
+      return Uu = Gu[ub], Gu[ub] = bb, ub
     }
 
-    function Fq(qq, Eq) {
-      if (!(qq instanceof Eq)) throw new Error(`expected instance of ${Eq.name}`)
+    function yb(bb, ub) {
+      if (!(bb instanceof ub)) throw new Error(`expected instance of ${ub.name}`)
     }
 
-    function sq(qq, Eq) {
-      return qq >>>= 0, Cq().subarray(qq / 8, qq / 8 + Eq)
+    function Vb(bb, ub) {
+      return bb >>>= 0, Tb().subarray(bb / 8, bb / 8 + ub)
     }
 
-    function Xq(qq, Eq) {
-      return qq >>>= 0, EE().subarray(qq / 4, qq / 4 + Eq)
+    function Fb(bb, ub) {
+      return bb >>>= 0, uu().subarray(bb / 4, bb / 4 + ub)
     }
 
-    function wq(qq, Eq) {
-      return qq >>>= 0, YE().subarray(qq / 1, qq / 1 + Eq)
+    function fb(bb, ub) {
+      return bb >>>= 0, Bu().subarray(bb / 1, bb / 1 + ub)
     }
-    let Kq = null;
+    let kb = null;
 
-    function Cq() {
-      return null !== Kq && 0 !== Kq.byteLength || (Kq = new Float64Array(PE.memory.buffer)), Kq
+    function Tb() {
+      return null !== kb && 0 !== kb.byteLength || (kb = new Float64Array(Wu.memory.buffer)), kb
     }
-    let Iq = null;
+    let cb = null;
 
-    function eq(qq, Eq) {
-      return function(qq, Eq) {
-        dE += Eq, dE >= VE && (aE = new TextDecoder("utf-8", {
+    function Qb(bb, ub) {
+      return function(bb, ub) {
+        ou += ub, ou >= pu && (Xu = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), aE.decode(), dE = Eq);
-        return aE.decode(YE().subarray(qq, qq + Eq))
-      }(qq >>> 0, Eq)
+        }), Xu.decode(), ou = ub);
+        return Xu.decode(Bu().subarray(bb, bb + ub))
+      }(bb >>> 0, ub)
     }
-    let Dq = null;
-    let qE = null;
+    let Rb = null;
+    let bu = null;
 
-    function EE() {
-      return null !== qE && 0 !== qE.byteLength || (qE = new Uint32Array(PE.memory.buffer)), qE
+    function uu() {
+      return null !== bu && 0 !== bu.byteLength || (bu = new Uint32Array(Wu.memory.buffer)), bu
     }
-    let gE = null;
+    let hu = null;
 
-    function YE() {
-      return null !== gE && 0 !== gE.byteLength || (gE = new Uint8Array(PE.memory.buffer)), gE
-    }
-
-    function lE(qq) {
-      return OE[qq]
-    }
-    let OE = new Array(1024).fill(void 0);
-    OE.push(void 0, null, !0, !1);
-    let mE = OE.length;
-
-    function xE(qq) {
-      return void 0 === qq || null === qq
+    function Bu() {
+      return null !== hu && 0 !== hu.byteLength || (hu = new Uint8Array(Wu.memory.buffer)), hu
     }
 
-    function AE(qq, Eq) {
-      const gq = Eq(2 * qq.length, 2) >>> 0;
-      return (null !== Dq && 0 !== Dq.byteLength || (Dq = new Uint16Array(PE.memory.buffer)), Dq).set(qq, gq / 2), QE = qq.length, gq
+    function Ou(bb) {
+      return Gu[bb]
+    }
+    let Gu = new Array(1024).fill(void 0);
+    Gu.push(void 0, null, !0, !1);
+    let Uu = Gu.length;
+
+    function Lu(bb) {
+      return void 0 === bb || null === bb
     }
 
-    function cE(qq, Eq) {
-      const gq = Eq(4 * qq.length, 4) >>> 0;
-      return EE().set(qq, gq / 4), QE = qq.length, gq
+    function Yu(bb, ub) {
+      const hb = ub(2 * bb.length, 2) >>> 0;
+      return (null !== Rb && 0 !== Rb.byteLength || (Rb = new Uint16Array(Wu.memory.buffer)), Rb).set(bb, hb / 2), Cu = bb.length, hb
     }
 
-    function uE(qq, Eq) {
-      const gq = Eq(1 * qq.length, 1) >>> 0;
-      return YE().set(qq, gq / 1), QE = qq.length, gq
+    function Su(bb, ub) {
+      const hb = ub(4 * bb.length, 4) >>> 0;
+      return uu().set(bb, hb / 4), Cu = bb.length, hb
     }
 
-    function BE(qq, Eq) {
-      const gq = Eq(8 * qq.length, 8) >>> 0;
-      return Cq().set(qq, gq / 8), QE = qq.length, gq
+    function au(bb, ub) {
+      const hb = ub(1 * bb.length, 1) >>> 0;
+      return Bu().set(bb, hb / 1), Cu = bb.length, hb
     }
 
-    function WE(qq, Eq, gq) {
-      if (void 0 === gq) {
-        const gq = jE.encode(qq),
-          Yq = Eq(gq.length, 1) >>> 0;
-        return YE().subarray(Yq, Yq + gq.length).set(gq), QE = gq.length, Yq
+    function Hu(bb, ub) {
+      const hb = ub(8 * bb.length, 8) >>> 0;
+      return Tb().set(bb, hb / 8), Cu = bb.length, hb
+    }
+
+    function wu(bb, ub, hb) {
+      if (void 0 === hb) {
+        const hb = Au.encode(bb),
+          Bb = ub(hb.length, 1) >>> 0;
+        return Bu().subarray(Bb, Bb + hb.length).set(hb), Cu = hb.length, Bb
       }
-      let Yq = qq.length,
-        lq = Eq(Yq, 1) >>> 0;
-      const Oq = YE();
-      let mq = 0;
-      for (; mq < Yq; mq++) {
-        const Eq = qq.charCodeAt(mq);
-        if (Eq > 127) break;
-        Oq[lq + mq] = Eq
+      let Bb = bb.length,
+        Ob = ub(Bb, 1) >>> 0;
+      const Gb = Bu();
+      let Ub = 0;
+      for (; Ub < Bb; Ub++) {
+        const ub = bb.charCodeAt(Ub);
+        if (ub > 127) break;
+        Gb[Ob + Ub] = ub
       }
-      if (mq !== Yq) {
-        0 !== mq && (qq = qq.slice(mq)), lq = gq(lq, Yq, Yq = mq + 3 * qq.length, 1) >>> 0;
-        const Eq = YE().subarray(lq + mq, lq + Yq);
-        mq += jE.encodeInto(qq, Eq).written, lq = gq(lq, Yq, mq, 1) >>> 0
+      if (Ub !== Bb) {
+        0 !== Ub && (bb = bb.slice(Ub)), Ob = hb(Ob, Bb, Bb = Ub + 3 * bb.length, 1) >>> 0;
+        const ub = Bu().subarray(Ob + Ub, Ob + Bb);
+        Ub += Au.encodeInto(bb, ub).written, Ob = hb(Ob, Bb, Ub, 1) >>> 0
       }
-      return QE = mq, lq
+      return Cu = Ub, Ob
     }
 
-    function NE(qq) {
-      const Eq = lE(qq);
-      return function(qq) {
-        qq < 1028 || (OE[qq] = mE, mE = qq)
-      }(qq), Eq
+    function Zu(bb) {
+      const ub = Ou(bb);
+      return function(bb) {
+        bb < 1028 || (Gu[bb] = Uu, Uu = bb)
+      }(bb), ub
     }
-    let aE = new TextDecoder("utf-8", {
+    let Xu = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    aE.decode();
-    const VE = 2146435072;
-    let dE = 0;
-    const jE = new TextEncoder;
-    "encodeInto" in jE || (jE.encodeInto = function(qq, Eq) {
-      const gq = jE.encode(qq);
-      return Eq.set(gq), {
-        read: qq.length,
-        written: gq.length
+    Xu.decode();
+    const pu = 2146435072;
+    let ou = 0;
+    const Au = new TextEncoder;
+    "encodeInto" in Au || (Au.encodeInto = function(bb, ub) {
+      const hb = Au.encode(bb);
+      return ub.set(hb), {
+        read: bb.length,
+        written: hb.length
       }
     });
-    let HE, oE, PE, QE = 0;
+    let lu, Ku, Wu, Cu = 0;
 
-    function yE(qq, Eq) {
-      return oE = qq, PE = qq.exports, HE = Eq, Kq = null, Iq = null, Dq = null, qE = null, gE = null, PE.pFa9(), PE
+    function du(bb, ub) {
+      return Ku = bb, Wu = bb.exports, lu = ub, kb = null, cb = null, Rb = null, bu = null, hu = null, Wu.qfAs(), Wu
     }
 
-    function tE(qq) {
-      if (void 0 !== PE) return PE;
-      void 0 !== qq && (Object.getPrototypeOf(qq) === Object.prototype ? ({
-        module: qq
-      } = qq) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const Eq = Tq();
-      qq instanceof WebAssembly.Module || (qq = new WebAssembly.Module(qq));
-      return yE(new WebAssembly.Instance(qq, Eq), qq)
+    function ru(bb) {
+      if (void 0 !== Wu) return Wu;
+      void 0 !== bb && (Object.getPrototypeOf(bb) === Object.prototype ? ({
+        module: bb
+      } = bb) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const ub = Jb();
+      bb instanceof WebAssembly.Module || (bb = new WebAssembly.Module(bb));
+      return du(new WebAssembly.Instance(bb, ub), bb)
     }
-    async function rE(qq) {
-      if (void 0 !== PE) return PE;
-      void 0 !== qq && (Object.getPrototypeOf(qq) === Object.prototype ? ({
-        module_or_path: qq
-      } = qq) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const Eq = Tq();
-      ("string" === typeof qq || "function" === typeof Request && qq instanceof Request || "function" === typeof URL && qq instanceof URL) && (qq = fetch(qq));
+    async function ju(bb) {
+      if (void 0 !== Wu) return Wu;
+      void 0 !== bb && (Object.getPrototypeOf(bb) === Object.prototype ? ({
+        module_or_path: bb
+      } = bb) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const ub = Jb();
+      ("string" === typeof bb || "function" === typeof Request && bb instanceof Request || "function" === typeof URL && bb instanceof URL) && (bb = fetch(bb));
       const {
-        instance: gq,
-        module: Yq
-      } = await async function(qq, Eq) {
-        if ("function" === typeof Response && qq instanceof Response) {
-          if (!qq.ok) throw new Error(`failed to fetch Wasm: ${qq.status} ${qq.statusText} fetching '${qq.url}'`);
+        instance: hb,
+        module: Bb
+      } = await async function(bb, ub) {
+        if ("function" === typeof Response && bb instanceof Response) {
+          if (!bb.ok) throw new Error(`failed to fetch Wasm: ${bb.status} ${bb.statusText} fetching '${bb.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(qq, Eq)
-          } catch (gq) {
-            if (! function(qq) {
-                switch (qq) {
+            return await WebAssembly.instantiateStreaming(bb, ub)
+          } catch (hb) {
+            if (! function(bb) {
+                switch (bb) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(qq.type) || "application/wasm" === qq.headers.get("Content-Type")) throw gq;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", gq)
+              }(bb.type) || "application/wasm" === bb.headers.get("Content-Type")) throw hb;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", hb)
           }
-          const Yq = await qq.arrayBuffer();
-          return await WebAssembly.instantiate(Yq, Eq)
+          const Bb = await bb.arrayBuffer();
+          return await WebAssembly.instantiate(Bb, ub)
         } {
-          const gq = await WebAssembly.instantiate(qq, Eq);
-          return gq instanceof WebAssembly.Instance ? {
-            instance: gq,
-            module: qq
-          } : gq
+          const hb = await WebAssembly.instantiate(bb, ub);
+          return hb instanceof WebAssembly.Instance ? {
+            instance: hb,
+            module: bb
+          } : hb
         }
-      }(await qq, Eq);
-      return yE(gq, Yq)
+      }(await bb, ub);
+      return du(hb, Bb)
     }
-    var vE = gq(2797),
-      hE = gq(36380);
-    const nE = {
-      name: vE.e,
-      url: () => new gq.U(gq(36384)),
-      init: rE,
-      bindings: Yq
+    var nu = hb(2683),
+      Du = hb(35948);
+    const xu = {
+      name: nu.c,
+      url: () => new hb.U(hb(35954)),
+      init: ju,
+      bindings: Bb
     };
 
-    function bE() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : nE,
-        Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nE,
-        gq = arguments.length > 2 ? arguments[2] : void 0;
-      return (0, hE.n)(qq, Eq, gq)
+    function zu() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : xu,
+        ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xu,
+        hb = arguments.length > 2 ? arguments[2] : void 0;
+      return (0, Du.k)(bb, ub, hb)
     }
 
-    function iE(qq) {
-      return (0, vE.J)((() => qq), Yq, nE)
+    function gu(bb) {
+      return (0, nu.G)((() => bb), Bb, xu)
     }
   },
-  36361: (qq, Eq, gq) => {
-    function Yq(qq, Eq) {
-      return new Error(`${qq}: ${Eq instanceof Error?`${Eq.name}: ${Eq.message}`:String(Eq)}`, {
-        cause: Eq
+  35931: (bb, ub, hb) => {
+    function Bb(bb, ub) {
+      return new Error(`${bb}: ${ub instanceof Error?`${ub.name}: ${ub.message}`:String(ub)}`, {
+        cause: ub
       })
     }
-    gq.d(Eq, {
-      e: () => Yq
+    hb.d(ub, {
+      c: () => Bb
     })
   },
-  36359: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => mq,
-      g: () => Aq
+  35927: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Ub,
+      h: () => Yb
     });
-    var Yq = gq(2805),
-      lq = gq(6500),
-      Oq = gq(36361);
+    var Bb = hb(2688),
+      Ob = hb(6358),
+      Gb = hb(35931);
 
-    function mq() {
-      return new URL(new gq.U(gq(36370)).href, globalThis.location?.href).href
+    function Ub() {
+      return new URL(new hb.U(hb(35933)).href, globalThis.location?.href).href
     }
-    let xq = null;
+    let Lb = null;
 
-    function Aq() {
-      return xq ??= (async () => (0, Yq.N)(new URL(mq()), (0, lq.d)("bloxd_wasm_textures")))().catch((qq => {
-        throw (0, Oq.e)((0, Yq.R)(qq), qq)
-      })), xq
+    function Yb() {
+      return Lb ??= (async () => (0, Bb.C)(new URL(Ub()), (0, Ob.d)("bloxd_wasm_textures")))().catch((bb => {
+        throw (0, Gb.c)((0, Bb.K)(bb), bb)
+      })), Lb
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

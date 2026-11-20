@@ -1,30 +1,30 @@
 export const id = 74;
 export const ids = [74];
 export const modules = {
-  4516: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => uq
+  4459: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => ab
     });
-    var Yq = gq(24),
-      lq = gq(31),
-      Oq = gq(1274),
-      mq = gq(2733);
-    const xq = 3e4,
-      Aq = 1e3;
+    var Bb = hb(13),
+      Ob = hb(16),
+      Gb = hb(1184),
+      Ub = hb(2633);
+    const Lb = 3e4,
+      Yb = 1e3;
 
-    function cq() {
-      return "visible" === document.visibilityState && "inGame" === Yq.b.get("gameState") && (0, Oq.p)()
+    function Sb() {
+      return "visible" === document.visibilityState && "inGame" === Bb.d.get("gameState") && (0, Gb.m)()
     }
 
-    function uq(qq, Eq) {
-      (0, mq.v)() || function(qq, Eq, gq) {
-        let Yq = 0;
-        const lq = setInterval((() => {
-          Eq() && (Yq += Aq, Yq >= qq && (clearInterval(lq), gq()))
-        }), Aq)
-      }(xq, cq, (() => {
-        Eq().then((() => {
-          qq(`saved for the player after ${xq/1e3} s of play`), (0, mq.C)(), lq.i.TV("chat", {
+    function ab(bb, ub) {
+      (0, Ub.s)() || function(bb, ub, hb) {
+        let Bb = 0;
+        const Ob = setInterval((() => {
+          ub() && (Bb += Yb, Bb >= bb && (clearInterval(Ob), hb()))
+        }), Yb)
+      }(Lb, Sb, (() => {
+        ub().then((() => {
+          bb(`saved for the player after ${Lb/1e3} s of play`), (0, Ub.B)(), Ob.i.vp("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,330 +36,330 @@ export const modules = {
       }))
     }
   },
-  9145: (qq, Eq, gq) => {
-    function Yq(qq, Eq) {
-      return 0 === qq.length ? 0 : qq[Math.min(qq.length - 1, Math.floor(Eq * qq.length))]
+  8951: (bb, ub, hb) => {
+    function Bb(bb, ub) {
+      return 0 === bb.length ? 0 : bb[Math.min(bb.length - 1, Math.floor(ub * bb.length))]
     }
 
-    function lq(qq) {
-      return qq.toFixed(1)
+    function Ob(bb) {
+      return bb.toFixed(1)
     }
-    gq.d(Eq, {
-      b: () => lq,
-      e: () => Yq
+    hb.d(ub, {
+      c: () => Ob,
+      g: () => Bb
     })
   },
-  37910: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => cq,
-      f: () => uq,
-      h: () => Pq,
-      i: () => oq,
-      m: () => Hq
+  37539: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Sb,
+      d: () => ab,
+      g: () => Wb,
+      j: () => Kb,
+      k: () => lb
     });
-    var Yq = gq(4516),
-      lq = gq(9145),
-      Oq = gq(2733);
-    const mq = 20,
-      xq = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "WB", "jobMs"];
+    var Bb = hb(4459),
+      Ob = hb(8951),
+      Gb = hb(2633);
+    const Ub = 20,
+      Lb = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "LH", "jobMs"];
 
-    function Aq(qq) {
-      return [...qq].sort(((qq, Eq) => qq - Eq))
+    function Yb(bb) {
+      return [...bb].sort(((bb, ub) => bb - ub))
     }
-    const cq = [];
+    const Sb = [];
 
-    function uq(qq, Eq, gq) {
-      return `${qq},${Eq},${gq}`
+    function ab(bb, ub, hb) {
+      return `${bb},${ub},${hb}`
     }
-    class Bq {
+    class Hb {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(qq, Eq) {
-        var gq;
-        const Yq = null !== (gq = this.pending.get(qq)) && void 0 !== gq ? gq : [];
-        Yq.push({
-          editAt: Eq,
+      edit(bb, ub) {
+        var hb;
+        const Bb = null !== (hb = this.pending.get(bb)) && void 0 !== hb ? hb : [];
+        Bb.push({
+          editAt: ub,
           meshJobId: 0
-        }), this.pending.set(qq, Yq)
+        }), this.pending.set(bb, Bb)
       }
-      frame(qq) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, qq - this.lastFrameAt)), this.lastFrameAt = qq, this.frames++, qq - this.windowStart >= 1e3 && this.summarise(qq)
+      frame(bb) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, bb - this.lastFrameAt)), this.lastFrameAt = bb, this.frames++, bb - this.windowStart >= 1e3 && this.summarise(bb)
       }
-      sent(qq, Eq, gq, Yq, lq, Oq, mq) {
-        this.jobs.set(Eq, {
-          sentAt: mq,
+      sent(bb, ub, hb, Bb, Ob, Gb, Ub) {
+        this.jobs.set(ub, {
+          sentAt: Ub,
           receivedAt: 0,
-          ahead: gq,
-          inFlight: Yq,
-          WB: lq,
+          ahead: hb,
+          inFlight: Bb,
+          LH: Ob,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, gq), this.maxCapacity = Math.max(this.maxCapacity, lq);
-        for (const Aq of null !== (xq = this.pending.get(qq)) && void 0 !== xq ? xq : []) {
-          var xq;
-          Oq.includes(Aq.meshJobId) || (Aq.meshJobId = Eq)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, hb), this.maxCapacity = Math.max(this.maxCapacity, Ob);
+        for (const Yb of null !== (Lb = this.pending.get(bb)) && void 0 !== Lb ? Lb : []) {
+          var Lb;
+          Gb.includes(Yb.meshJobId) || (Yb.meshJobId = ub)
         }
       }
-      received(qq, Eq, gq) {
-        const Yq = this.jobs.get(qq);
-        void 0 !== Yq && (this.roundTrips.push(gq - Yq.sentAt), Yq.receivedAt = gq, Yq.jobMs = Eq)
+      received(bb, ub, hb) {
+        const Bb = this.jobs.get(bb);
+        void 0 !== Bb && (this.roundTrips.push(hb - Bb.sentAt), Bb.receivedAt = hb, Bb.jobMs = ub)
       }
-      failed(qq) {
-        this.jobs.delete(qq)
+      failed(bb) {
+        this.jobs.delete(bb)
       }
-      reassign(qq, Eq, gq) {
-        this.jobs.delete(Eq);
-        for (const lq of null !== (Yq = this.pending.get(qq)) && void 0 !== Yq ? Yq : []) {
-          var Yq;
-          lq.meshJobId === Eq && (lq.meshJobId = gq)
+      reassign(bb, ub, hb) {
+        this.jobs.delete(ub);
+        for (const Ob of null !== (Bb = this.pending.get(bb)) && void 0 !== Bb ? Bb : []) {
+          var Bb;
+          Ob.meshJobId === ub && (Ob.meshJobId = hb)
         }
       }
-      applied(qq, Eq, gq) {
-        const Yq = this.jobs.get(Eq);
-        this.jobs.delete(Eq), void 0 !== Yq && this.show(qq, Yq, gq, (qq => qq.meshJobId === Eq))
+      applied(bb, ub, hb) {
+        const Bb = this.jobs.get(ub);
+        this.jobs.delete(ub), void 0 !== Bb && this.show(bb, Bb, hb, (bb => bb.meshJobId === ub))
       }
-      emptied(qq, Eq) {
-        const gq = {
-          sentAt: Eq,
-          receivedAt: Eq,
+      emptied(bb, ub) {
+        const hb = {
+          sentAt: ub,
+          receivedAt: ub,
           ahead: 0,
           inFlight: 0,
-          WB: 0,
+          LH: 0,
           jobMs: 0
         };
-        this.show(qq, gq, Eq, (() => !0))
+        this.show(bb, hb, ub, (() => !0))
       }
-      show(qq, Eq, gq, Yq) {
-        const lq = this.pending.get(qq);
-        if (!lq) return;
-        const Oq = lq.filter((lq => !Yq(lq) || (this.record(qq, lq.editAt, Eq, gq), !1)));
-        Oq.length > 0 ? this.pending.set(qq, Oq) : this.pending.delete(qq)
+      show(bb, ub, hb, Bb) {
+        const Ob = this.pending.get(bb);
+        if (!Ob) return;
+        const Gb = Ob.filter((Ob => !Bb(Ob) || (this.record(bb, Ob.editAt, ub, hb), !1)));
+        Gb.length > 0 ? this.pending.set(bb, Gb) : this.pending.delete(bb)
       }
-      SN(qq) {
-        this.reported += qq, this === Nq && this.reported >= mq && null !== aq && (aq(), aq = null)
+      iZ(bb) {
+        this.reported += bb, this === Zb && this.reported >= Ub && null !== Xb && (Xb(), Xb = null)
       }
-      record(qq, Eq, gq, Yq) {
-        const lq = {
-          totalMs: Yq - Eq,
-          slotMs: gq.sentAt - Eq,
-          workerMs: gq.receivedAt - gq.sentAt,
-          applyMs: Yq - gq.receivedAt,
-          ahead: gq.ahead,
-          inFlight: gq.inFlight,
-          WB: gq.WB,
-          jobMs: gq.jobMs
+      record(bb, ub, hb, Bb) {
+        const Ob = {
+          totalMs: Bb - ub,
+          slotMs: hb.sentAt - ub,
+          workerMs: hb.receivedAt - hb.sentAt,
+          applyMs: Bb - hb.receivedAt,
+          ahead: hb.ahead,
+          inFlight: hb.inFlight,
+          LH: hb.LH,
+          jobMs: hb.jobMs
         };
-        if (this.edits[this.nextEdit] = lq, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(lq.totalMs), this.SN(1), lq.totalMs < 100 || ++this.outliers > 5) return;
-        const mq = qq => Math.round(qq);
-        (0, Oq.m)("remesh", `slow edit (${qq}) shown in ${mq(lq.totalMs)} ms: slot ${mq(lq.slotMs)}, worker ${mq(lq.workerMs)} (${lq.ahead} ahead, ${lq.inFlight}/${lq.WB} in flight; job ${mq(lq.jobMs)}), apply ${mq(lq.applyMs)}`)
+        if (this.edits[this.nextEdit] = Ob, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(Ob.totalMs), this.iZ(1), Ob.totalMs < 100 || ++this.outliers > 5) return;
+        const Ub = bb => Math.round(bb);
+        (0, Gb.l)("remesh", `slow edit (${bb}) shown in ${Ub(Ob.totalMs)} ms: slot ${Ub(Ob.slotMs)}, worker ${Ub(Ob.workerMs)} (${Ob.ahead} ahead, ${Ob.inFlight}/${Ob.LH} in flight; job ${Ub(Ob.jobMs)}), apply ${Ub(Ob.applyMs)}`)
       }
-      summarise(qq) {
-        const Eq = (qq - this.windowStart) / 1e3;
-        for (const [gq, Yq] of this.pending) {
-          const Eq = Yq.filter((Eq => qq - Eq.editAt <= 1e4));
-          this.gaveUp += Yq.length - Eq.length, this.SN(Yq.length - Eq.length), Eq.length > 0 ? this.pending.set(gq, Eq) : this.pending.delete(gq)
+      summarise(bb) {
+        const ub = (bb - this.windowStart) / 1e3;
+        for (const [hb, Bb] of this.pending) {
+          const ub = Bb.filter((ub => bb - ub.editAt <= 1e4));
+          this.gaveUp += Bb.length - ub.length, this.iZ(Bb.length - ub.length), ub.length > 0 ? this.pending.set(hb, ub) : this.pending.delete(hb)
         }
-        for (const [gq, Yq] of this.jobs) qq - Yq.sentAt > (Yq.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(gq);
+        for (const [hb, Bb] of this.jobs) bb - Bb.sentAt > (Bb.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(hb);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const qq = Aq(this.roundTrips),
-            gq = Aq(this.windowEdits),
-            Yq = Math.max(0, this.outliers - 5);
-          (0, Oq.m)("remesh", `${Math.round(this.frames/Eq)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,lq.e)(qq,.5))} max ${Math.round((0,lq.e)(qq,1))} ms | ${gq.length} edits shown, p50 ${Math.round((0,lq.e)(gq,.5))} max ${Math.round((0,lq.e)(gq,1))} ms${Yq>0?`, ${Yq} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const bb = Yb(this.roundTrips),
+            hb = Yb(this.windowEdits),
+            Bb = Math.max(0, this.outliers - 5);
+          (0, Gb.l)("remesh", `${Math.round(this.frames/ub)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,Ob.g)(bb,.5))} max ${Math.round((0,Ob.g)(bb,1))} ms | ${hb.length} edits shown, p50 ${Math.round((0,Ob.g)(hb,.5))} max ${Math.round((0,Ob.g)(hb,1))} ms${Bb>0?`, ${Bb} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
-        this.windowStart = qq, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+        this.windowStart = bb, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const qq = xq.map((qq => {
-          const Eq = Aq(this.edits.map((Eq => Eq[qq])));
-          return `${qq}: p50 ${Math.round((0,lq.e)(Eq,.5))} p90 ${Math.round((0,lq.e)(Eq,.9))} max ${Math.round((0,lq.e)(Eq,1))}`
+        const bb = Lb.map((bb => {
+          const ub = Yb(this.edits.map((ub => ub[bb])));
+          return `${bb}: p50 ${Math.round((0,Ob.g)(ub,.5))} p90 ${Math.round((0,Ob.g)(ub,.9))} max ${Math.round((0,Ob.g)(ub,1))}`
         }));
-        return [`${this.edits.length} edits`, ...qq].join("\n")
+        return [`${this.edits.length} edits`, ...bb].join("\n")
       }
       dump() {
-        const qq = this.edits.map((qq => xq.map((Eq => Math.round(10 * qq[Eq]) / 10)).join(",")));
-        return [this.stats(), xq.join(","), ...qq].join("\n")
+        const bb = this.edits.map((bb => Lb.map((ub => Math.round(10 * bb[ub]) / 10)).join(",")));
+        return [this.stats(), Lb.join(","), ...bb].join("\n")
       }
     }
-    class Wq {
-      constructor(qq, Eq) {
-        this.log = qq, this.wB = Eq
+    class wb {
+      constructor(bb, ub) {
+        this.log = bb, this.PH = ub
       }
-      edit(qq, Eq, gq) {
-        const [Yq, lq, Oq] = this.wB.kB.ylq(qq, Eq, gq), mq = this.wB.kB.qV.EV(Yq, lq, Oq);
-        mq && mq.ea && this.log.edit(uq(Yq, lq, Oq), performance.now())
+      edit(bb, ub, hb) {
+        const [Bb, Ob, Gb] = this.PH.eH.SOb(bb, ub, hb), Ub = this.PH.eH.FX.fX(Bb, Ob, Gb);
+        Ub && Ub.yX && this.log.edit(ab(Bb, Ob, Gb), performance.now())
       }
-      sent(qq, Eq, gq, Yq, lq) {
-        this.log.sent(uq(qq.i, qq.j, qq.k), Eq, gq, Yq, lq, cq, performance.now())
+      sent(bb, ub, hb, Bb, Ob) {
+        this.log.sent(ab(bb.i, bb.j, bb.k), ub, hb, Bb, Ob, Sb, performance.now())
       }
-      received(qq) {
-        this.log.received(qq.meshJobId, qq.jobMs, performance.now())
+      received(bb) {
+        this.log.received(bb.meshJobId, bb.jobMs, performance.now())
       }
-      failed(qq) {
-        this.log.failed(qq)
+      failed(bb) {
+        this.log.failed(bb)
       }
-      applied(qq, Eq) {
-        this.log.applied(uq(qq.i, qq.j, qq.k), Eq, performance.now())
+      applied(bb, ub) {
+        this.log.applied(ab(bb.i, bb.j, bb.k), ub, performance.now())
       }
     }
-    let Nq = null,
-      aq = null,
-      Vq = !1,
-      dq = null;
+    let Zb = null,
+      Xb = null,
+      pb = !1,
+      ob = null;
 
-    function jq() {
-      return new Promise((qq => {
-        null !== Nq && Nq.reported >= mq ? qq() : aq = qq
+    function Ab() {
+      return new Promise((bb => {
+        null !== Zb && Zb.reported >= Ub ? bb() : Xb = bb
       }))
     }
 
-    function Hq() {
-      const qq = new Bq;
-      return Nq = qq, (0, Oq.j)("remesh", (() => qq.dump())), (0, Oq.c)("remeshStats", (() => {
-        console.log(qq.stats())
-      })), Vq || (Vq = !0, (0, Yq.d)((qq => {
-        (0, Oq.m)("remesh", qq)
-      }), jq)), qq
+    function lb() {
+      const bb = new Hb;
+      return Zb = bb, (0, Gb.i)("remesh", (() => bb.dump())), (0, Gb.b)("remeshStats", (() => {
+        console.log(bb.stats())
+      })), pb || (pb = !0, (0, Bb.d)((bb => {
+        (0, Gb.l)("remesh", bb)
+      }), Ab)), bb
     }
 
-    function oq(qq) {
-      const Eq = Hq();
-      dq = new Wq(Eq, qq), qq.Qv.meshProbe = dq, qq.on("beforeRender", (() => {
-        Eq.frame(performance.now())
+    function Kb(bb) {
+      const ub = lb();
+      ob = new wb(ub, bb), bb.zW.meshProbe = ob, bb.on("beforeRender", (() => {
+        ub.frame(performance.now())
       }))
     }
 
-    function Pq(qq, Eq, gq) {
-      var Yq;
-      null === (Yq = dq) || void 0 === Yq || Yq.edit(qq, Eq, gq)
+    function Wb(bb, ub, hb) {
+      var Bb;
+      null === (Bb = ob) || void 0 === Bb || Bb.edit(bb, ub, hb)
     }
   },
-  37742: (qq, Eq, gq) => {
-    function Yq(qq) {
-      return "string" !== typeof qq || 2 !== qq.length && ":" !== qq[2] ? null : qq[0] + qq[1]
+  37371: (bb, ub, hb) => {
+    function Bb(bb) {
+      return "string" !== typeof bb || 2 !== bb.length && ":" !== bb[2] ? null : bb[0] + bb[1]
     }
-    gq.d(Eq, {
-      b: () => dq,
-      f: () => Pq,
-      j: () => Qq,
-      k: () => xq,
-      l: () => mq,
-      p: () => Oq,
-      r: () => Aq,
-      t: () => jq,
-      x: () => Vq
+    hb.d(ub, {
+      b: () => ob,
+      d: () => Wb,
+      h: () => Cb,
+      j: () => Lb,
+      k: () => Ub,
+      l: () => Gb,
+      n: () => Yb,
+      p: () => Ab,
+      t: () => pb
     });
-    const lq = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+    const Ob = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
-    function Oq(qq) {
-      if (function(qq) {
-          for (let Eq = 0; Eq < lq.length; Eq++)
-            if (qq === lq[Eq]) return !0;
+    function Gb(bb) {
+      if (function(bb) {
+          for (let ub = 0; ub < Ob.length; ub++)
+            if (bb === Ob[ub]) return !0;
           return !1
-        }(qq)) return !1;
-      const Eq = Yq(qq);
-      return "op" === Eq || "ep" === Eq || "wi" === Eq || "pp" === Eq || "fp:call" === qq || "fp:t" === qq
+        }(bb)) return !1;
+      const ub = Bb(bb);
+      return "op" === ub || "ep" === ub || "wi" === ub || "pp" === ub || "fp:call" === bb || "fp:t" === bb
     }
 
-    function mq(qq) {
-      return "fp" === Yq(qq) && !Oq(qq)
+    function Ub(bb) {
+      return "fp" === Bb(bb) && !Gb(bb)
     }
 
-    function xq(qq) {
-      if ("string" !== typeof qq) return !1;
-      return "o" === qq[0] && "p" === qq[1] && (2 === qq.length || ":" === qq[2]) || "fp:call" === qq || "2" === qq || "t" === qq || "a" === qq
+    function Lb(bb) {
+      if ("string" !== typeof bb) return !1;
+      return "o" === bb[0] && "p" === bb[1] && (2 === bb.length || ":" === bb[2]) || "fp:call" === bb || "2" === bb || "t" === bb || "a" === bb
     }
 
-    function Aq(qq, Eq) {
-      return `~${function(qq){return qq.length<2?qq:":"===qq[1]?qq[0]:qq[0]+qq[1]}(Eq)}~${qq}`
+    function Yb(bb, ub) {
+      return `~${function(bb){return bb.length<2?bb:":"===bb[1]?bb[0]:bb[0]+bb[1]}(ub)}~${bb}`
     }
-    const cq = 200;
+    const Sb = 200;
 
-    function uq(qq) {
-      let Eq = qq.length - 1;
-      for (let gq = 0; gq < 2; gq++) {
-        const gq = Eq;
-        for (; Eq >= 0 && qq[Eq] >= "0" && qq[Eq] <= "9";) Eq--;
-        if (Eq < 0 || Eq === gq || ":" !== qq[Eq]) return -1;
-        Eq--
+    function ab(bb) {
+      let ub = bb.length - 1;
+      for (let hb = 0; hb < 2; hb++) {
+        const hb = ub;
+        for (; ub >= 0 && bb[ub] >= "0" && bb[ub] <= "9";) ub--;
+        if (ub < 0 || ub === hb || ":" !== bb[ub]) return -1;
+        ub--
       }
-      return Eq + 1
+      return ub + 1
     }
 
-    function Bq(qq) {
-      return "unknown" === qq || uq(qq) >= 0
+    function Hb(bb) {
+      return "unknown" === bb || ab(bb) >= 0
     }
 
-    function Wq(qq, Eq) {
-      return qq[Eq] >= "\ud800" && qq[Eq] <= "\udbff" && Eq + 1 < qq.length && qq[Eq + 1] >= "\udc00" && qq[Eq + 1] <= "\udfff" ? 2 : 1
+    function wb(bb, ub) {
+      return bb[ub] >= "\ud800" && bb[ub] <= "\udbff" && ub + 1 < bb.length && bb[ub + 1] >= "\udc00" && bb[ub + 1] <= "\udfff" ? 2 : 1
     }
 
-    function Nq(qq, Eq, gq) {
-      return 2 === gq ? 4 : qq[Eq] <= "\x7f" ? 1 : qq[Eq] <= "\u07ff" ? 2 : 3
+    function Zb(bb, ub, hb) {
+      return 2 === hb ? 4 : bb[ub] <= "\x7f" ? 1 : bb[ub] <= "\u07ff" ? 2 : 3
     }
 
-    function aq(qq, Eq, gq) {
-      let Yq = 0;
-      for (; Yq < Eq;) {
-        const Eq = Wq(qq, Yq),
-          lq = Nq(qq, Yq, Eq);
-        if (lq > gq) break;
-        gq -= lq, Yq += Eq
+    function Xb(bb, ub, hb) {
+      let Bb = 0;
+      for (; Bb < ub;) {
+        const ub = wb(bb, Bb),
+          Ob = Zb(bb, Bb, ub);
+        if (Ob > hb) break;
+        hb -= Ob, Bb += ub
       }
-      return Yq
+      return Bb
     }
 
-    function Vq(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof qq || qq.length > cq || !Bq(qq)) return "t";
-      let gq = 2;
-      for (let xq = 0; xq < qq.length;) {
-        const Eq = Wq(qq, xq);
-        gq += Nq(qq, xq, Eq), xq += Eq
+    function pb(bb) {
+      let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof bb || bb.length > Sb || !Hb(bb)) return "t";
+      let hb = 2;
+      for (let Lb = 0; Lb < bb.length;) {
+        const ub = wb(bb, Lb);
+        hb += Zb(bb, Lb, ub), Lb += ub
       }
-      if (gq <= Eq) return `t ${qq}`;
-      const Yq = uq(qq),
-        lq = Eq - 2 - (qq.length - Yq);
-      if (lq < 0) return "t";
-      const Oq = aq(qq, Yq, lq);
-      let mq = "t ";
-      for (let xq = 0; xq < Oq; xq++) mq += qq[xq];
-      for (let xq = Yq; xq < qq.length; xq++) mq += qq[xq];
-      return mq
+      if (hb <= ub) return `t ${bb}`;
+      const Bb = ab(bb),
+        Ob = ub - 2 - (bb.length - Bb);
+      if (Ob < 0) return "t";
+      const Gb = Xb(bb, Bb, Ob);
+      let Ub = "t ";
+      for (let Lb = 0; Lb < Gb; Lb++) Ub += bb[Lb];
+      for (let Lb = Bb; Lb < bb.length; Lb++) Ub += bb[Lb];
+      return Ub
     }
-    const dq = 62;
+    const ob = 62;
 
-    function jq(qq) {
-      let Eq = "so:";
-      const gq = aq(qq, qq.length, dq - Eq.length);
-      for (let Yq = 0; Yq < gq; Yq++) Eq += qq[Yq];
-      return Eq
+    function Ab(bb) {
+      let ub = "so:";
+      const hb = Xb(bb, bb.length, ob - ub.length);
+      for (let Bb = 0; Bb < hb; Bb++) ub += bb[Bb];
+      return ub
     }
-    const Hq = "BABYLON ",
-      oq = "DECODE ";
+    const lb = "BABYLON ",
+      Kb = "DECODE ";
 
-    function Pq(qq) {
-      return jq(Hq + qq)
+    function Wb(bb) {
+      return Ab(lb + bb)
     }
 
-    function Qq(qq) {
-      return jq(oq + qq)
+    function Cb(bb) {
+      return Ab(Kb + bb)
     }
   },
-  37942: qq => {
-    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
+  37571: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
   },
-  37927: qq => {
-    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
+  37557: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
   },
-  37950: qq => {
-    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  37578: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  37925: qq => {
-    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
+  37553: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
   },
-  37934: qq => {
-    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  37563: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

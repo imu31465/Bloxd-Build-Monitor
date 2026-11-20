@@ -1,26 +1,26 @@
 export const id = 348;
 export const ids = [348];
 export const modules = {
-  61156: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      WorldCodeAiDeepSeekNotice: () => mq,
-      deepSeekPrivacyPolicyUrl: () => Oq
+  60617: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      WorldCodeAiDeepSeekNotice: () => Ub,
+      deepSeekPrivacyPolicyUrl: () => Gb
     });
-    var Yq = gq(1183),
-      lq = gq(1070);
-    const Oq = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html";
+    var Bb = hb(1095),
+      Ob = hb(1007);
+    const Gb = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html";
 
-    function mq() {
+    function Ub() {
       const {
-        t: qq
-      } = (0, Yq.v)();
-      return (0, lq.jsxs)(lq.Fragment, {
-        children: [qq("superBotXd:deepSeekNotice"), " ", (0, lq.jsxs)("a", {
+        t: bb
+      } = (0, Bb.K)();
+      return (0, Ob.jsxs)(Ob.Fragment, {
+        children: [bb("superBotXd:deepSeekNotice"), " ", (0, Ob.jsxs)("a", {
           className: "WorldCodeAiDeepSeekPolicyLink",
-          href: Oq,
+          href: Gb,
           target: "_blank",
           rel: "noreferrer noopener",
-          children: [qq("superBotXd:deepSeekPrivacyPolicy"), " ", (0, lq.jsx)("span", {
+          children: [bb("superBotXd:deepSeekPrivacyPolicy"), " ", (0, Ob.jsx)("span", {
             "aria-hidden": "true",
             children: "\u2197"
           })]
@@ -30,4 +30,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

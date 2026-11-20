@@ -1,156 +1,156 @@
 export const id = 283;
 export const ids = [283];
 export const modules = {
-  41011: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      CharacterPreview: () => Bq
+  40739: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      CharacterPreview: () => Hb
     });
-    var Yq = gq(57),
-      lq = gq(2660),
-      Oq = gq(1226),
-      mq = gq(8794),
-      xq = gq(9313),
-      Aq = gq(3501),
-      cq = gq(1070);
-    const uq = .6 * Math.PI,
-      Bq = (0, Yq.memo)((0, Yq.forwardRef)((function(qq, Eq) {
+    var Bb = hb(49),
+      Ob = hb(2548),
+      Gb = hb(1133),
+      Ub = hb(8549),
+      Lb = hb(9122),
+      Yb = hb(3417),
+      Sb = hb(1007);
+    const ab = .6 * Math.PI,
+      Hb = (0, Bb.memo)((0, Bb.forwardRef)((function(bb, ub) {
         let {
-          onReady: gq,
-          onDrawn: Bq,
-          owner: Wq = "other",
-          framing: Nq = "player",
-          forcedCosmetics: aq,
-          Dc: Vq,
-          emotePlaySeq: dq,
-          turntableFromYaw: jq = null
-        } = qq;
-        const Hq = (0, Yq.useRef)(null),
+          onReady: hb,
+          onDrawn: Hb,
+          owner: wb = "other",
+          framing: Zb = "player",
+          forcedCosmetics: Xb,
+          FS: pb,
+          emotePlaySeq: ob,
+          turntableFromYaw: Ab = null
+        } = bb;
+        const lb = (0, Bb.useRef)(null),
           {
-            width: oq,
-            height: Pq
-          } = (0, lq.e)(Hq),
-          Qq = (0, Yq.useRef)(null),
-          yq = (0, Yq.useRef)({}),
-          tq = (0, Yq.useRef)({}),
-          [rq, vq] = (0, Yq.useState)(!1),
-          hq = (0, Yq.useRef)(gq);
-        hq.current = gq;
-        const nq = (0, Yq.useRef)(Bq);
-        nq.current = Bq;
-        const bq = (0, Yq.useRef)(null),
-          iq = (0, Yq.useRef)(!1),
-          Zq = (0, Yq.useRef)(!1),
-          fq = (0, Yq.useCallback)((() => {
-            const qq = Qq.current;
-            if (!qq || !nq.current || iq.current || !Zq.current) return;
-            const Eq = {};
-            bq.current = Eq, queueMicrotask((() => {
-              if (bq.current !== Eq) return;
-              const gq = Promise.all(Oq.w.map((Eq => qq.untilDrawn(Eq)))).catch((qq => {
-                  console.error("Failed to draw the character preview", qq)
+            width: Kb,
+            height: Wb
+          } = (0, Ob.b)(lb),
+          Cb = (0, Bb.useRef)(null),
+          db = (0, Bb.useRef)({}),
+          rb = (0, Bb.useRef)({}),
+          [jb, nb] = (0, Bb.useState)(!1),
+          Db = (0, Bb.useRef)(hb);
+        Db.current = hb;
+        const xb = (0, Bb.useRef)(Hb);
+        xb.current = Hb;
+        const zb = (0, Bb.useRef)(null),
+          gb = (0, Bb.useRef)(!1),
+          ib = (0, Bb.useRef)(!1),
+          vb = (0, Bb.useCallback)((() => {
+            const bb = Cb.current;
+            if (!bb || !xb.current || gb.current || !ib.current) return;
+            const ub = {};
+            zb.current = ub, queueMicrotask((() => {
+              if (zb.current !== ub) return;
+              const hb = Promise.all(Gb.y.map((ub => bb.untilDrawn(ub)))).catch((bb => {
+                  console.error("Failed to draw the character preview", bb)
                 })),
-                Yq = new Promise((qq => {
-                  setTimeout(qq, 1e4)
+                Bb = new Promise((bb => {
+                  setTimeout(bb, 1e4)
                 }));
-              Promise.race([gq, Yq]).then((() => {
-                var gq;
-                Qq.current !== qq || bq.current !== Eq || iq.current || (iq.current = !0, null === (gq = nq.current) || void 0 === gq || gq.call(nq))
+              Promise.race([hb, Bb]).then((() => {
+                var hb;
+                Cb.current !== bb || zb.current !== ub || gb.current || (gb.current = !0, null === (hb = xb.current) || void 0 === hb || hb.call(xb))
               }))
             }))
           }), []);
-        return (0, Yq.useImperativeHandle)(Eq, (() => {
-          const qq = (qq, Eq) => {
-            var gq;
-            (yq.current[qq] = Eq, null !== aq && void 0 !== aq && aq[qq]) || (null === (gq = Qq.current) || void 0 === gq || gq.setCosmetic(qq, Eq), fq())
+        return (0, Bb.useImperativeHandle)(ub, (() => {
+          const bb = (bb, ub) => {
+            var hb;
+            (db.current[bb] = ub, null !== Xb && void 0 !== Xb && Xb[bb]) || (null === (hb = Cb.current) || void 0 === hb || hb.setCosmetic(bb, ub), vb())
           };
           return {
-            updateCosmetic: qq,
-            setAllCosmetics(Eq) {
-              for (const Yq of Oq.w) {
-                var gq;
-                qq(Yq, null !== (gq = Eq[Yq]) && void 0 !== gq ? gq : (0, mq.e)(Yq))
+            updateCosmetic: bb,
+            setAllCosmetics(ub) {
+              for (const Bb of Gb.y) {
+                var hb;
+                bb(Bb, null !== (hb = ub[Bb]) && void 0 !== hb ? hb : (0, Ub.c)(Bb))
               }
             },
             isReady() {
-              var qq, Eq;
-              return null !== (qq = null === (Eq = Qq.current) || void 0 === Eq ? void 0 : Eq.isReady()) && void 0 !== qq && qq
+              var bb, ub;
+              return null !== (bb = null === (ub = Cb.current) || void 0 === ub ? void 0 : ub.isReady()) && void 0 !== bb && bb
             },
             resetCamera() {
-              var qq;
-              null === (qq = Qq.current) || void 0 === qq || qq.resetCamera()
+              var bb;
+              null === (bb = Cb.current) || void 0 === bb || bb.resetCamera()
             },
-            setOrbit(qq) {
-              var Eq;
-              null === (Eq = Qq.current) || void 0 === Eq || Eq.setOrbit(qq)
+            setOrbit(bb) {
+              var ub;
+              null === (ub = Cb.current) || void 0 === ub || ub.setOrbit(bb)
             },
-            async ensureReadyForCapture(qq) {
-              var Eq;
-              await (null === (Eq = Qq.current) || void 0 === Eq ? void 0 : Eq.untilDrawn(qq))
+            async ensureReadyForCapture(bb) {
+              var ub;
+              await (null === (ub = Cb.current) || void 0 === ub ? void 0 : ub.untilDrawn(bb))
             },
             getDevTools() {
-              var qq;
-              return null !== (qq = Qq.current) && void 0 !== qq && qq.isReady() ? Qq.current.dev : null
+              var bb;
+              return null !== (bb = Cb.current) && void 0 !== bb && bb.isReady() ? Cb.current.dev : null
             }
           }
-        }), [aq, fq]), (0, Yq.useEffect)((() => {
-          const qq = Aq.d.register(Wq),
-            Eq = xq.i.openCharacter(Hq.current, Nq);
-          Qq.current = Eq;
-          let gq = !0;
-          return Eq.ready.then((() => {
-            gq && (vq(!0), hq.current())
-          })).catch((qq => {
-            console.error("Failed to set up the character preview", qq)
+        }), [Xb, vb]), (0, Bb.useEffect)((() => {
+          const bb = Yb.c.register(wb),
+            ub = Lb.j.openCharacter(lb.current, Zb);
+          Cb.current = ub;
+          let hb = !0;
+          return ub.ready.then((() => {
+            hb && (nb(!0), Db.current())
+          })).catch((bb => {
+            console.error("Failed to set up the character preview", bb)
           })), () => {
-            gq = !1, qq(), Eq.resetCamera(), Eq.close(), Qq.current = null
+            hb = !1, bb(), ub.resetCamera(), ub.close(), Cb.current = null
           }
-        }), []), (0, Yq.useEffect)((() => {
-          oq <= 0 || Pq <= 0 || Qq.current.resize(oq, Pq)
-        }), [oq, Pq]), (0, Yq.useEffect)((() => {
-          if (!rq) return;
-          const qq = tq.current;
-          for (const Eq of Oq.w) {
-            const gq = null === aq || void 0 === aq ? void 0 : aq[Eq],
-              Yq = qq[Eq];
-            gq && gq !== Yq ? Qq.current.setCosmetic(Eq, gq) : !gq && Yq && yq.current[Eq] && Qq.current.setCosmetic(Eq, yq.current[Eq])
+        }), []), (0, Bb.useEffect)((() => {
+          Kb <= 0 || Wb <= 0 || Cb.current.resize(Kb, Wb)
+        }), [Kb, Wb]), (0, Bb.useEffect)((() => {
+          if (!jb) return;
+          const bb = rb.current;
+          for (const ub of Gb.y) {
+            const hb = null === Xb || void 0 === Xb ? void 0 : Xb[ub],
+              Bb = bb[ub];
+            hb && hb !== Bb ? Cb.current.setCosmetic(ub, hb) : !hb && Bb && db.current[ub] && Cb.current.setCosmetic(ub, db.current[ub])
           }
-          tq.current = {
-            ...aq
-          }, Zq.current = !0, fq()
-        }), [aq, rq, fq]), (0, Yq.useEffect)((() => {
-          rq && Qq.current.playEmote(null !== Vq && void 0 !== Vq ? Vq : null)
-        }), [Vq, dq, rq]), (0, Yq.useEffect)((() => {
-          if (!rq || null === jq) return;
-          const qq = Qq.current,
+          rb.current = {
+            ...Xb
+          }, ib.current = !0, vb()
+        }), [Xb, jb, vb]), (0, Bb.useEffect)((() => {
+          jb && Cb.current.playEmote(null !== pb && void 0 !== pb ? pb : null)
+        }), [pb, ob, jb]), (0, Bb.useEffect)((() => {
+          if (!jb || null === Ab) return;
+          const bb = Cb.current,
             {
-              pitch: Eq,
-              radius: gq
-            } = xq.c[Nq];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return qq.setOrbit({
-            yaw: jq + uq,
-            pitch: Eq,
-            radius: gq
+              pitch: ub,
+              radius: hb
+            } = Lb.e[Zb];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return bb.setOrbit({
+            yaw: Ab + ab,
+            pitch: ub,
+            radius: hb
           }), () => {
-            qq.resetCamera()
+            bb.resetCamera()
           };
-          const Yq = performance.now();
-          let lq = 0;
-          const Oq = mq => {
-            qq.setOrbit({
-              yaw: jq + (mq - Yq) / 6e3 * 2 * Math.PI,
-              pitch: Eq,
-              radius: gq
-            }), lq = requestAnimationFrame(Oq)
+          const Bb = performance.now();
+          let Ob = 0;
+          const Gb = Ub => {
+            bb.setOrbit({
+              yaw: Ab + (Ub - Bb) / 6e3 * 2 * Math.PI,
+              pitch: ub,
+              radius: hb
+            }), Ob = requestAnimationFrame(Gb)
           };
-          return lq = requestAnimationFrame(Oq), () => {
-            cancelAnimationFrame(lq), qq.resetCamera()
+          return Ob = requestAnimationFrame(Gb), () => {
+            cancelAnimationFrame(Ob), bb.resetCamera()
           }
-        }), [rq, jq]), (0, cq.jsx)("div", {
+        }), [jb, Ab]), (0, Sb.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: Hq
+          ref: lb
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

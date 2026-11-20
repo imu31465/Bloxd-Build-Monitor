@@ -1,233 +1,233 @@
 export const id = 254;
 export const ids = [254];
 export const modules = {
-  40049: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Yq
+  39744: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Bb
     });
-    class Yq {
-      constructor(qq, Eq, gq) {
-        this.bu = qq, this.bv = Eq, this.distance = gq, this.faceId = 0, this.subMeshId = 0, this._internalSubMeshId = 0
+    class Bb {
+      constructor(bb, ub, hb) {
+        this.bu = bb, this.bv = ub, this.distance = hb, this.faceId = 0, this.subMeshId = 0, this._internalSubMeshId = 0
       }
     }
   },
-  40060: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq
+  39758: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Ub
     });
-    var Yq = gq(37149),
-      lq = gq(37139),
-      Oq = gq(37145);
-    class mq {
-      constructor(qq, Eq, gq) {
-        this.vectors = (0, Yq.e)(8, lq.q.Zero), this.center = lq.q.Zero(), this.centerWorld = lq.q.Zero(), this.extendSize = lq.q.Zero(), this.extendSizeWorld = lq.q.Zero(), this.directions = (0, Yq.e)(3, lq.q.Zero), this.vectorsWorld = (0, Yq.e)(8, lq.q.Zero), this.minimumWorld = lq.q.Zero(), this.maximumWorld = lq.q.Zero(), this.minimum = lq.q.Zero(), this.maximum = lq.q.Zero(), this._drawWrapperFront = null, this._drawWrapperBack = null, this.reConstruct(qq, Eq, gq)
+    var Bb = hb(36736),
+      Ob = hb(36727),
+      Gb = hb(36734);
+    class Ub {
+      constructor(bb, ub, hb) {
+        this.vectors = (0, Bb.e)(8, Ob.q.Zero), this.center = Ob.q.Zero(), this.centerWorld = Ob.q.Zero(), this.extendSize = Ob.q.Zero(), this.extendSizeWorld = Ob.q.Zero(), this.directions = (0, Bb.e)(3, Ob.q.Zero), this.vectorsWorld = (0, Bb.e)(8, Ob.q.Zero), this.minimumWorld = Ob.q.Zero(), this.maximumWorld = Ob.q.Zero(), this.minimum = Ob.q.Zero(), this.maximum = Ob.q.Zero(), this._drawWrapperFront = null, this._drawWrapperBack = null, this.reConstruct(bb, ub, hb)
       }
-      reConstruct(qq, Eq, gq) {
-        const Yq = qq.x,
-          Oq = qq.y,
-          mq = qq.z,
-          xq = Eq.x,
-          Aq = Eq.y,
-          cq = Eq.z,
-          uq = this.vectors;
-        this.minimum.Vqq(Yq, Oq, mq), this.maximum.Vqq(xq, Aq, cq), uq[0].Vqq(Yq, Oq, mq), uq[1].Vqq(xq, Aq, cq), uq[2].Vqq(xq, Oq, mq), uq[3].Vqq(Yq, Aq, mq), uq[4].Vqq(Yq, Oq, cq), uq[5].Vqq(xq, Aq, mq), uq[6].Vqq(Yq, Aq, cq), uq[7].Vqq(xq, Oq, cq), Eq.addToRef(qq, this.center).scaleInPlace(.5), Eq.subtractToRef(qq, this.extendSize).scaleInPlace(.5), this._worldMatrix = gq || lq.e.IdentityReadOnly, this._update(this._worldMatrix)
+      reConstruct(bb, ub, hb) {
+        const Bb = bb.x,
+          Gb = bb.y,
+          Ub = bb.z,
+          Lb = ub.x,
+          Yb = ub.y,
+          Sb = ub.z,
+          ab = this.vectors;
+        this.minimum.M_(Bb, Gb, Ub), this.maximum.M_(Lb, Yb, Sb), ab[0].M_(Bb, Gb, Ub), ab[1].M_(Lb, Yb, Sb), ab[2].M_(Lb, Gb, Ub), ab[3].M_(Bb, Yb, Ub), ab[4].M_(Bb, Gb, Sb), ab[5].M_(Lb, Yb, Ub), ab[6].M_(Bb, Yb, Sb), ab[7].M_(Lb, Gb, Sb), ub.addToRef(bb, this.center).scaleInPlace(.5), ub.subtractToRef(bb, this.extendSize).scaleInPlace(.5), this._worldMatrix = hb || Ob.d.IdentityReadOnly, this._update(this._worldMatrix)
       }
-      scale(qq) {
-        const Eq = mq._TmpVector3,
-          gq = this.maximum.subtractToRef(this.minimum, Eq[0]),
-          Yq = gq.length();
-        gq.normalizeFromLength(Yq);
-        const lq = Yq * qq,
-          Oq = gq.scaleInPlace(.5 * lq),
-          xq = this.center.subtractToRef(Oq, Eq[1]),
-          Aq = this.center.addToRef(Oq, Eq[2]);
-        return this.reConstruct(xq, Aq, this._worldMatrix), this
+      scale(bb) {
+        const ub = Ub._TmpVector3,
+          hb = this.maximum.subtractToRef(this.minimum, ub[0]),
+          Bb = hb.length();
+        hb.normalizeFromLength(Bb);
+        const Ob = Bb * bb,
+          Gb = hb.scaleInPlace(.5 * Ob),
+          Lb = this.center.subtractToRef(Gb, ub[1]),
+          Yb = this.center.addToRef(Gb, ub[2]);
+        return this.reConstruct(Lb, Yb, this._worldMatrix), this
       }
       getWorldMatrix() {
         return this._worldMatrix
       }
-      _update(qq) {
-        const Eq = this.minimumWorld,
-          gq = this.maximumWorld,
-          Yq = this.directions,
-          Oq = this.vectorsWorld,
-          mq = this.vectors;
-        if (qq.isIdentity()) {
-          Eq.WG(this.minimum), gq.WG(this.maximum);
-          for (let qq = 0; qq < 8; ++qq) Oq[qq].WG(mq[qq]);
-          this.extendSizeWorld.WG(this.extendSize), this.centerWorld.WG(this.center)
+      _update(bb) {
+        const ub = this.minimumWorld,
+          hb = this.maximumWorld,
+          Bb = this.directions,
+          Gb = this.vectorsWorld,
+          Ub = this.vectors;
+        if (bb.isIdentity()) {
+          ub.mD(this.minimum), hb.mD(this.maximum);
+          for (let bb = 0; bb < 8; ++bb) Gb[bb].mD(Ub[bb]);
+          this.extendSizeWorld.mD(this.extendSize), this.centerWorld.mD(this.center)
         } else {
-          Eq.A4(Number.MAX_VALUE), gq.A4(-Number.MAX_VALUE);
-          for (let Yq = 0; Yq < 8; ++Yq) {
-            const xq = Oq[Yq];
-            lq.q.TransformCoordinatesToRef(mq[Yq], qq, xq), Eq.minimizeInPlace(xq), gq.maximizeInPlace(xq)
+          ub.N9(Number.MAX_VALUE), hb.N9(-Number.MAX_VALUE);
+          for (let Bb = 0; Bb < 8; ++Bb) {
+            const Lb = Gb[Bb];
+            Ob.q.TransformCoordinatesToRef(Ub[Bb], bb, Lb), ub.minimizeInPlace(Lb), hb.maximizeInPlace(Lb)
           }
-          gq.subtractToRef(Eq, this.extendSizeWorld).scaleInPlace(.5), gq.addToRef(Eq, this.centerWorld).scaleInPlace(.5)
+          hb.subtractToRef(ub, this.extendSizeWorld).scaleInPlace(.5), hb.addToRef(ub, this.centerWorld).scaleInPlace(.5)
         }
-        lq.q.FromArrayToRef(qq.m, 0, Yq[0]), lq.q.FromArrayToRef(qq.m, 4, Yq[1]), lq.q.FromArrayToRef(qq.m, 8, Yq[2]), this._worldMatrix = qq
+        Ob.q.FromArrayToRef(bb.m, 0, Bb[0]), Ob.q.FromArrayToRef(bb.m, 4, Bb[1]), Ob.q.FromArrayToRef(bb.m, 8, Bb[2]), this._worldMatrix = bb
       }
-      isInFrustum(qq) {
-        return mq.IsInFrustum(this.vectorsWorld, qq)
+      isInFrustum(bb) {
+        return Ub.IsInFrustum(this.vectorsWorld, bb)
       }
-      isCompletelyInFrustum(qq) {
-        return mq.IsCompletelyInFrustum(this.vectorsWorld, qq)
+      isCompletelyInFrustum(bb) {
+        return Ub.IsCompletelyInFrustum(this.vectorsWorld, bb)
       }
-      intersectsPoint(qq) {
-        const Eq = this.minimumWorld,
-          gq = this.maximumWorld,
-          Yq = Eq.x,
-          lq = Eq.y,
-          mq = Eq.z,
-          xq = gq.x,
-          Aq = gq.y,
-          cq = gq.z,
-          uq = qq.x,
-          Bq = qq.y,
-          Wq = qq.z,
-          Nq = -Oq.c;
-        return !(xq - uq < Nq || Nq > uq - Yq) && (!(Aq - Bq < Nq || Nq > Bq - lq) && !(cq - Wq < Nq || Nq > Wq - mq))
+      intersectsPoint(bb) {
+        const ub = this.minimumWorld,
+          hb = this.maximumWorld,
+          Bb = ub.x,
+          Ob = ub.y,
+          Ub = ub.z,
+          Lb = hb.x,
+          Yb = hb.y,
+          Sb = hb.z,
+          ab = bb.x,
+          Hb = bb.y,
+          wb = bb.z,
+          Zb = -Gb.b;
+        return !(Lb - ab < Zb || Zb > ab - Bb) && (!(Yb - Hb < Zb || Zb > Hb - Ob) && !(Sb - wb < Zb || Zb > wb - Ub))
       }
-      intersectsSphere(qq) {
-        return mq.IntersectsSphere(this.minimumWorld, this.maximumWorld, qq.centerWorld, qq.radiusWorld)
+      intersectsSphere(bb) {
+        return Ub.IntersectsSphere(this.minimumWorld, this.maximumWorld, bb.centerWorld, bb.radiusWorld)
       }
-      intersectsMinMax(qq, Eq) {
-        const gq = this.minimumWorld,
-          Yq = this.maximumWorld,
-          lq = gq.x,
-          Oq = gq.y,
-          mq = gq.z,
-          xq = Yq.x,
-          Aq = Yq.y,
-          cq = Yq.z,
-          uq = qq.x,
-          Bq = qq.y,
-          Wq = qq.z,
-          Nq = Eq.x,
-          aq = Eq.y,
-          Vq = Eq.z;
-        return !(xq < uq || lq > Nq) && (!(Aq < Bq || Oq > aq) && !(cq < Wq || mq > Vq))
+      intersectsMinMax(bb, ub) {
+        const hb = this.minimumWorld,
+          Bb = this.maximumWorld,
+          Ob = hb.x,
+          Gb = hb.y,
+          Ub = hb.z,
+          Lb = Bb.x,
+          Yb = Bb.y,
+          Sb = Bb.z,
+          ab = bb.x,
+          Hb = bb.y,
+          wb = bb.z,
+          Zb = ub.x,
+          Xb = ub.y,
+          pb = ub.z;
+        return !(Lb < ab || Ob > Zb) && (!(Yb < Hb || Gb > Xb) && !(Sb < wb || Ub > pb))
       }
       dispose() {
         this._drawWrapperFront?.dispose(), this._drawWrapperBack?.dispose()
       }
-      static Intersects(qq, Eq) {
-        return qq.intersectsMinMax(Eq.minimumWorld, Eq.maximumWorld)
+      static Intersects(bb, ub) {
+        return bb.intersectsMinMax(ub.minimumWorld, ub.maximumWorld)
       }
-      static IntersectsSphere(qq, Eq, gq, Yq) {
-        const Oq = mq._TmpVector3[0];
-        lq.q.ClampToRef(gq, qq, Eq, Oq);
-        return lq.q.DistanceSquared(gq, Oq) <= Yq * Yq
+      static IntersectsSphere(bb, ub, hb, Bb) {
+        const Gb = Ub._TmpVector3[0];
+        Ob.q.ClampToRef(hb, bb, ub, Gb);
+        return Ob.q.DistanceSquared(hb, Gb) <= Bb * Bb
       }
-      static IsCompletelyInFrustum(qq, Eq) {
-        for (let gq = 0; gq < 6; ++gq) {
-          const Yq = Eq[gq];
-          for (let Eq = 0; Eq < 8; ++Eq)
-            if (Yq.dotCoordinate(qq[Eq]) < 0) return !1
+      static IsCompletelyInFrustum(bb, ub) {
+        for (let hb = 0; hb < 6; ++hb) {
+          const Bb = ub[hb];
+          for (let ub = 0; ub < 8; ++ub)
+            if (Bb.dotCoordinate(bb[ub]) < 0) return !1
         }
         return !0
       }
-      static IsInFrustum(qq, Eq) {
-        for (let gq = 0; gq < 6; ++gq) {
-          let Yq = !0;
-          const lq = Eq[gq];
-          for (let Eq = 0; Eq < 8; ++Eq)
-            if (lq.dotCoordinate(qq[Eq]) >= 0) {
-              Yq = !1;
+      static IsInFrustum(bb, ub) {
+        for (let hb = 0; hb < 6; ++hb) {
+          let Bb = !0;
+          const Ob = ub[hb];
+          for (let ub = 0; ub < 8; ++ub)
+            if (Ob.dotCoordinate(bb[ub]) >= 0) {
+              Bb = !1;
               break
-            } if (Yq) return !1
+            } if (Bb) return !1
         }
         return !0
       }
     }
-    mq._TmpVector3 = (0, Yq.e)(3, lq.q.Zero)
+    Ub._TmpVector3 = (0, Bb.e)(3, Ob.q.Zero)
   },
-  40055: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Bq
+  39752: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Hb
     });
-    var Yq = gq(37149),
-      lq = gq(37139),
-      Oq = gq(40060);
-    class mq {
-      constructor(qq, Eq, gq) {
-        this.center = lq.q.Zero(), this.centerWorld = lq.q.Zero(), this.minimum = lq.q.Zero(), this.maximum = lq.q.Zero(), this.reConstruct(qq, Eq, gq)
+    var Bb = hb(36736),
+      Ob = hb(36727),
+      Gb = hb(39758);
+    class Ub {
+      constructor(bb, ub, hb) {
+        this.center = Ob.q.Zero(), this.centerWorld = Ob.q.Zero(), this.minimum = Ob.q.Zero(), this.maximum = Ob.q.Zero(), this.reConstruct(bb, ub, hb)
       }
-      reConstruct(qq, Eq, gq) {
-        this.minimum.WG(qq), this.maximum.WG(Eq);
-        const Yq = lq.q.Distance(qq, Eq);
-        Eq.addToRef(qq, this.center).scaleInPlace(.5), this.radius = .5 * Yq, this._update(gq || lq.e.IdentityReadOnly)
+      reConstruct(bb, ub, hb) {
+        this.minimum.mD(bb), this.maximum.mD(ub);
+        const Bb = Ob.q.Distance(bb, ub);
+        ub.addToRef(bb, this.center).scaleInPlace(.5), this.radius = .5 * Bb, this._update(hb || Ob.d.IdentityReadOnly)
       }
-      scale(qq) {
-        const Eq = mq._TmpVector3,
-          gq = this.maximum.subtractToRef(this.minimum, Eq[0]),
-          Yq = gq.length();
-        gq.normalizeFromLength(Yq);
-        const lq = Yq * qq,
-          Oq = gq.scaleInPlace(.5 * lq),
-          xq = this.center.subtractToRef(Oq, Eq[1]),
-          Aq = this.center.addToRef(Oq, Eq[2]);
-        return this.reConstruct(xq, Aq, this._worldMatrix), this
+      scale(bb) {
+        const ub = Ub._TmpVector3,
+          hb = this.maximum.subtractToRef(this.minimum, ub[0]),
+          Bb = hb.length();
+        hb.normalizeFromLength(Bb);
+        const Ob = Bb * bb,
+          Gb = hb.scaleInPlace(.5 * Ob),
+          Lb = this.center.subtractToRef(Gb, ub[1]),
+          Yb = this.center.addToRef(Gb, ub[2]);
+        return this.reConstruct(Lb, Yb, this._worldMatrix), this
       }
       getWorldMatrix() {
         return this._worldMatrix
       }
-      _update(qq) {
-        if (qq.isIdentity()) this.centerWorld.WG(this.center), this.radiusWorld = this.radius;
+      _update(bb) {
+        if (bb.isIdentity()) this.centerWorld.mD(this.center), this.radiusWorld = this.radius;
         else {
-          lq.q.TransformCoordinatesToRef(this.center, qq, this.centerWorld);
-          const Eq = mq._TmpVector3[0];
-          lq.q.TransformNormalFromFloatsToRef(1, 1, 1, qq, Eq), this.radiusWorld = Math.max(Math.abs(Eq.x), Math.abs(Eq.y), Math.abs(Eq.z)) * this.radius
+          Ob.q.TransformCoordinatesToRef(this.center, bb, this.centerWorld);
+          const ub = Ub._TmpVector3[0];
+          Ob.q.TransformNormalFromFloatsToRef(1, 1, 1, bb, ub), this.radiusWorld = Math.max(Math.abs(ub.x), Math.abs(ub.y), Math.abs(ub.z)) * this.radius
         }
       }
-      isInFrustum(qq) {
-        const Eq = this.centerWorld,
-          gq = this.radiusWorld;
-        for (let Yq = 0; Yq < 6; Yq++)
-          if (qq[Yq].dotCoordinate(Eq) <= -gq) return !1;
+      isInFrustum(bb) {
+        const ub = this.centerWorld,
+          hb = this.radiusWorld;
+        for (let Bb = 0; Bb < 6; Bb++)
+          if (bb[Bb].dotCoordinate(ub) <= -hb) return !1;
         return !0
       }
-      isCenterInFrustum(qq) {
-        const Eq = this.centerWorld;
-        for (let gq = 0; gq < 6; gq++)
-          if (qq[gq].dotCoordinate(Eq) < 0) return !1;
+      isCenterInFrustum(bb) {
+        const ub = this.centerWorld;
+        for (let hb = 0; hb < 6; hb++)
+          if (bb[hb].dotCoordinate(ub) < 0) return !1;
         return !0
       }
-      intersectsPoint(qq) {
-        const Eq = lq.q.DistanceSquared(this.centerWorld, qq);
-        return !(this.radiusWorld * this.radiusWorld < Eq)
+      intersectsPoint(bb) {
+        const ub = Ob.q.DistanceSquared(this.centerWorld, bb);
+        return !(this.radiusWorld * this.radiusWorld < ub)
       }
-      static Intersects(qq, Eq) {
-        const gq = lq.q.DistanceSquared(qq.centerWorld, Eq.centerWorld),
-          Yq = qq.radiusWorld + Eq.radiusWorld;
-        return !(Yq * Yq < gq)
+      static Intersects(bb, ub) {
+        const hb = Ob.q.DistanceSquared(bb.centerWorld, ub.centerWorld),
+          Bb = bb.radiusWorld + ub.radiusWorld;
+        return !(Bb * Bb < hb)
       }
-      static CreateFromCenterAndRadius(qq, Eq, gq) {
-        this._TmpVector3[0].WG(qq), this._TmpVector3[1].Vqq(0, 0, Eq), this._TmpVector3[2].WG(qq), this._TmpVector3[0].addInPlace(this._TmpVector3[1]), this._TmpVector3[2].KYq(this._TmpVector3[1]);
-        const Yq = new mq(this._TmpVector3[0], this._TmpVector3[2]);
-        return Yq._worldMatrix = gq || lq.e.Identity(), Yq
+      static CreateFromCenterAndRadius(bb, ub, hb) {
+        this._TmpVector3[0].mD(bb), this._TmpVector3[1].M_(0, 0, ub), this._TmpVector3[2].mD(bb), this._TmpVector3[0].addInPlace(this._TmpVector3[1]), this._TmpVector3[2].tBb(this._TmpVector3[1]);
+        const Bb = new Ub(this._TmpVector3[0], this._TmpVector3[2]);
+        return Bb._worldMatrix = hb || Ob.d.Identity(), Bb
       }
     }
-    mq._TmpVector3 = (0, Yq.e)(3, lq.q.Zero);
-    const xq = {
+    Ub._TmpVector3 = (0, Bb.e)(3, Ob.q.Zero);
+    const Lb = {
         min: 0,
         max: 0
       },
-      Aq = {
+      Yb = {
         min: 0,
         max: 0
       },
-      cq = (qq, Eq, gq) => {
-        const Yq = lq.q.Dot(Eq.centerWorld, qq),
-          Oq = Math.abs(lq.q.Dot(Eq.directions[0], qq)) * Eq.extendSize.x + Math.abs(lq.q.Dot(Eq.directions[1], qq)) * Eq.extendSize.y + Math.abs(lq.q.Dot(Eq.directions[2], qq)) * Eq.extendSize.z;
-        gq.min = Yq - Oq, gq.max = Yq + Oq
+      Sb = (bb, ub, hb) => {
+        const Bb = Ob.q.Dot(ub.centerWorld, bb),
+          Gb = Math.abs(Ob.q.Dot(ub.directions[0], bb)) * ub.extendSize.x + Math.abs(Ob.q.Dot(ub.directions[1], bb)) * ub.extendSize.y + Math.abs(Ob.q.Dot(ub.directions[2], bb)) * ub.extendSize.z;
+        hb.min = Bb - Gb, hb.max = Bb + Gb
       },
-      uq = (qq, Eq, gq) => (cq(qq, Eq, xq), cq(qq, gq, Aq), !(xq.min > Aq.max || Aq.min > xq.max));
-    class Bq {
-      constructor(qq, Eq, gq) {
-        this._isLocked = !1, this.boundingBox = new Oq.d(qq, Eq, gq), this.DYq = new mq(qq, Eq, gq)
+      ab = (bb, ub, hb) => (Sb(bb, ub, Lb), Sb(bb, hb, Yb), !(Lb.min > Yb.max || Yb.min > Lb.max));
+    class Hb {
+      constructor(bb, ub, hb) {
+        this._isLocked = !1, this.boundingBox = new Gb.e(bb, ub, hb), this.sBb = new Ub(bb, ub, hb)
       }
-      reConstruct(qq, Eq, gq) {
-        this.boundingBox.reConstruct(qq, Eq, gq), this.DYq.reConstruct(qq, Eq, gq)
+      reConstruct(bb, ub, hb) {
+        this.boundingBox.reConstruct(bb, ub, hb), this.sBb.reConstruct(bb, ub, hb)
       }
       get minimum() {
         return this.boundingBox.minimum
@@ -238,177 +238,177 @@ export const modules = {
       get isLocked() {
         return this._isLocked
       }
-      set isLocked(qq) {
-        this._isLocked = qq
+      set isLocked(bb) {
+        this._isLocked = bb
       }
-      update(qq) {
-        this._isLocked || (this.boundingBox._update(qq), this.DYq._update(qq))
+      update(bb) {
+        this._isLocked || (this.boundingBox._update(bb), this.sBb._update(bb))
       }
-      centerOn(qq, Eq) {
-        const gq = Bq._TmpVector3[0].WG(qq).KYq(Eq),
-          Yq = Bq._TmpVector3[1].WG(qq).addInPlace(Eq);
-        return this.boundingBox.reConstruct(gq, Yq, this.boundingBox.getWorldMatrix()), this.DYq.reConstruct(gq, Yq, this.boundingBox.getWorldMatrix()), this
+      centerOn(bb, ub) {
+        const hb = Hb._TmpVector3[0].mD(bb).tBb(ub),
+          Bb = Hb._TmpVector3[1].mD(bb).addInPlace(ub);
+        return this.boundingBox.reConstruct(hb, Bb, this.boundingBox.getWorldMatrix()), this.sBb.reConstruct(hb, Bb, this.boundingBox.getWorldMatrix()), this
       }
-      encapsulate(qq) {
-        const Eq = lq.q.Minimize(this.minimum, qq),
-          gq = lq.q.Maximize(this.maximum, qq);
-        return this.reConstruct(Eq, gq, this.boundingBox.getWorldMatrix()), this
+      encapsulate(bb) {
+        const ub = Ob.q.Minimize(this.minimum, bb),
+          hb = Ob.q.Maximize(this.maximum, bb);
+        return this.reConstruct(ub, hb, this.boundingBox.getWorldMatrix()), this
       }
-      encapsulateBoundingInfo(qq) {
-        const Eq = lq.o.Matrix[0];
-        this.boundingBox.getWorldMatrix().invertToRef(Eq);
-        const gq = lq.o.Na[0];
-        return lq.q.TransformCoordinatesToRef(qq.boundingBox.minimumWorld, Eq, gq), this.encapsulate(gq), lq.q.TransformCoordinatesToRef(qq.boundingBox.maximumWorld, Eq, gq), this.encapsulate(gq), this
+      encapsulateBoundingInfo(bb) {
+        const ub = Ob.i.Matrix[0];
+        this.boundingBox.getWorldMatrix().invertToRef(ub);
+        const hb = Ob.i.YX[0];
+        return Ob.q.TransformCoordinatesToRef(bb.boundingBox.minimumWorld, ub, hb), this.encapsulate(hb), Ob.q.TransformCoordinatesToRef(bb.boundingBox.maximumWorld, ub, hb), this.encapsulate(hb), this
       }
-      scale(qq) {
-        return this.boundingBox.scale(qq), this.DYq.scale(qq), this
+      scale(bb) {
+        return this.boundingBox.scale(bb), this.sBb.scale(bb), this
       }
-      isInFrustum(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if ((2 === Eq || 3 === Eq) && this.DYq.isCenterInFrustum(qq)) return !0;
-        if (!this.DYq.isInFrustum(qq)) return !1;
-        return !(1 !== Eq && 3 !== Eq) || this.boundingBox.isInFrustum(qq)
+      isInFrustum(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if ((2 === ub || 3 === ub) && this.sBb.isCenterInFrustum(bb)) return !0;
+        if (!this.sBb.isInFrustum(bb)) return !1;
+        return !(1 !== ub && 3 !== ub) || this.boundingBox.isInFrustum(bb)
       }
       get diagonalLength() {
-        const qq = this.boundingBox;
-        return qq.maximumWorld.subtractToRef(qq.minimumWorld, Bq._TmpVector3[0]).length()
+        const bb = this.boundingBox;
+        return bb.maximumWorld.subtractToRef(bb.minimumWorld, Hb._TmpVector3[0]).length()
       }
-      isCompletelyInFrustum(qq) {
-        return this.boundingBox.isCompletelyInFrustum(qq)
+      isCompletelyInFrustum(bb) {
+        return this.boundingBox.isCompletelyInFrustum(bb)
       }
-      _checkCollision(qq) {
-        return qq._canDoCollision(this.DYq.centerWorld, this.DYq.radiusWorld, this.boundingBox.minimumWorld, this.boundingBox.maximumWorld)
+      _checkCollision(bb) {
+        return bb._canDoCollision(this.sBb.centerWorld, this.sBb.radiusWorld, this.boundingBox.minimumWorld, this.boundingBox.maximumWorld)
       }
-      intersectsPoint(qq) {
-        return !!this.DYq.centerWorld && (!!this.DYq.intersectsPoint(qq) && !!this.boundingBox.intersectsPoint(qq))
+      intersectsPoint(bb) {
+        return !!this.sBb.centerWorld && (!!this.sBb.intersectsPoint(bb) && !!this.boundingBox.intersectsPoint(bb))
       }
-      intersects(qq, Eq) {
-        if (!mq.Intersects(this.DYq, qq.DYq)) return !1;
-        if (!Oq.d.Intersects(this.boundingBox, qq.boundingBox)) return !1;
-        if (!Eq) return !0;
-        const gq = this.boundingBox,
-          Yq = qq.boundingBox;
-        return !!uq(gq.directions[0], gq, Yq) && (!!uq(gq.directions[1], gq, Yq) && (!!uq(gq.directions[2], gq, Yq) && (!!uq(Yq.directions[0], gq, Yq) && (!!uq(Yq.directions[1], gq, Yq) && (!!uq(Yq.directions[2], gq, Yq) && (!!uq(lq.q.Cross(gq.directions[0], Yq.directions[0]), gq, Yq) && (!!uq(lq.q.Cross(gq.directions[0], Yq.directions[1]), gq, Yq) && (!!uq(lq.q.Cross(gq.directions[0], Yq.directions[2]), gq, Yq) && (!!uq(lq.q.Cross(gq.directions[1], Yq.directions[0]), gq, Yq) && (!!uq(lq.q.Cross(gq.directions[1], Yq.directions[1]), gq, Yq) && (!!uq(lq.q.Cross(gq.directions[1], Yq.directions[2]), gq, Yq) && (!!uq(lq.q.Cross(gq.directions[2], Yq.directions[0]), gq, Yq) && (!!uq(lq.q.Cross(gq.directions[2], Yq.directions[1]), gq, Yq) && !!uq(lq.q.Cross(gq.directions[2], Yq.directions[2]), gq, Yq))))))))))))))
+      intersects(bb, ub) {
+        if (!Ub.Intersects(this.sBb, bb.sBb)) return !1;
+        if (!Gb.e.Intersects(this.boundingBox, bb.boundingBox)) return !1;
+        if (!ub) return !0;
+        const hb = this.boundingBox,
+          Bb = bb.boundingBox;
+        return !!ab(hb.directions[0], hb, Bb) && (!!ab(hb.directions[1], hb, Bb) && (!!ab(hb.directions[2], hb, Bb) && (!!ab(Bb.directions[0], hb, Bb) && (!!ab(Bb.directions[1], hb, Bb) && (!!ab(Bb.directions[2], hb, Bb) && (!!ab(Ob.q.Cross(hb.directions[0], Bb.directions[0]), hb, Bb) && (!!ab(Ob.q.Cross(hb.directions[0], Bb.directions[1]), hb, Bb) && (!!ab(Ob.q.Cross(hb.directions[0], Bb.directions[2]), hb, Bb) && (!!ab(Ob.q.Cross(hb.directions[1], Bb.directions[0]), hb, Bb) && (!!ab(Ob.q.Cross(hb.directions[1], Bb.directions[1]), hb, Bb) && (!!ab(Ob.q.Cross(hb.directions[1], Bb.directions[2]), hb, Bb) && (!!ab(Ob.q.Cross(hb.directions[2], Bb.directions[0]), hb, Bb) && (!!ab(Ob.q.Cross(hb.directions[2], Bb.directions[1]), hb, Bb) && !!ab(Ob.q.Cross(hb.directions[2], Bb.directions[2]), hb, Bb))))))))))))))
       }
     }
-    Bq._TmpVector3 = (0, Yq.e)(2, lq.q.Zero)
+    Hb._TmpVector3 = (0, Bb.e)(2, Ob.q.Zero)
   },
-  40083: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Oq,
-      i: () => Aq,
-      l: () => xq,
-      m: () => mq
+  39782: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb,
+      g: () => Yb,
+      i: () => Lb,
+      k: () => Ub
     });
-    var Yq = gq(39891),
-      lq = gq(37139);
+    var Bb = hb(39621),
+      Ob = hb(36727);
 
-    function Oq(qq) {
-      -1 === qq.indexOf("vClipPlane") && qq.push("vClipPlane"), -1 === qq.indexOf("vClipPlane2") && qq.push("vClipPlane2"), -1 === qq.indexOf("vClipPlane3") && qq.push("vClipPlane3"), -1 === qq.indexOf("vClipPlane4") && qq.push("vClipPlane4"), -1 === qq.indexOf("vClipPlane5") && qq.push("vClipPlane5"), -1 === qq.indexOf("vClipPlane6") && qq.push("vClipPlane6")
+    function Gb(bb) {
+      -1 === bb.indexOf("vClipPlane") && bb.push("vClipPlane"), -1 === bb.indexOf("vClipPlane2") && bb.push("vClipPlane2"), -1 === bb.indexOf("vClipPlane3") && bb.push("vClipPlane3"), -1 === bb.indexOf("vClipPlane4") && bb.push("vClipPlane4"), -1 === bb.indexOf("vClipPlane5") && bb.push("vClipPlane5"), -1 === bb.indexOf("vClipPlane6") && bb.push("vClipPlane6")
     }
 
-    function mq(qq, Eq, gq) {
-      const Yq = !!(qq.clipPlane ?? Eq.clipPlane),
-        lq = !!(qq.clipPlane2 ?? Eq.clipPlane2),
-        Oq = !!(qq.clipPlane3 ?? Eq.clipPlane3),
-        mq = !!(qq.clipPlane4 ?? Eq.clipPlane4),
-        xq = !!(qq.clipPlane5 ?? Eq.clipPlane5),
-        Aq = !!(qq.clipPlane6 ?? Eq.clipPlane6);
-      Yq && gq.push("#define CLIPPLANE"), lq && gq.push("#define CLIPPLANE2"), Oq && gq.push("#define CLIPPLANE3"), mq && gq.push("#define CLIPPLANE4"), xq && gq.push("#define CLIPPLANE5"), Aq && gq.push("#define CLIPPLANE6")
+    function Ub(bb, ub, hb) {
+      const Bb = !!(bb.clipPlane ?? ub.clipPlane),
+        Ob = !!(bb.clipPlane2 ?? ub.clipPlane2),
+        Gb = !!(bb.clipPlane3 ?? ub.clipPlane3),
+        Ub = !!(bb.clipPlane4 ?? ub.clipPlane4),
+        Lb = !!(bb.clipPlane5 ?? ub.clipPlane5),
+        Yb = !!(bb.clipPlane6 ?? ub.clipPlane6);
+      Bb && hb.push("#define CLIPPLANE"), Ob && hb.push("#define CLIPPLANE2"), Gb && hb.push("#define CLIPPLANE3"), Ub && hb.push("#define CLIPPLANE4"), Lb && hb.push("#define CLIPPLANE5"), Yb && hb.push("#define CLIPPLANE6")
     }
 
-    function xq(qq, Eq, gq) {
-      let Yq = !1;
-      const lq = !!(qq.clipPlane ?? Eq.clipPlane),
-        Oq = !!(qq.clipPlane2 ?? Eq.clipPlane2),
-        mq = !!(qq.clipPlane3 ?? Eq.clipPlane3),
-        xq = !!(qq.clipPlane4 ?? Eq.clipPlane4),
-        Aq = !!(qq.clipPlane5 ?? Eq.clipPlane5),
-        cq = !!(qq.clipPlane6 ?? Eq.clipPlane6);
-      return gq.CLIPPLANE !== lq && (gq.CLIPPLANE = lq, Yq = !0), gq.CLIPPLANE2 !== Oq && (gq.CLIPPLANE2 = Oq, Yq = !0), gq.CLIPPLANE3 !== mq && (gq.CLIPPLANE3 = mq, Yq = !0), gq.CLIPPLANE4 !== xq && (gq.CLIPPLANE4 = xq, Yq = !0), gq.CLIPPLANE5 !== Aq && (gq.CLIPPLANE5 = Aq, Yq = !0), gq.CLIPPLANE6 !== cq && (gq.CLIPPLANE6 = cq, Yq = !0), Yq
+    function Lb(bb, ub, hb) {
+      let Bb = !1;
+      const Ob = !!(bb.clipPlane ?? ub.clipPlane),
+        Gb = !!(bb.clipPlane2 ?? ub.clipPlane2),
+        Ub = !!(bb.clipPlane3 ?? ub.clipPlane3),
+        Lb = !!(bb.clipPlane4 ?? ub.clipPlane4),
+        Yb = !!(bb.clipPlane5 ?? ub.clipPlane5),
+        Sb = !!(bb.clipPlane6 ?? ub.clipPlane6);
+      return hb.CLIPPLANE !== Ob && (hb.CLIPPLANE = Ob, Bb = !0), hb.CLIPPLANE2 !== Gb && (hb.CLIPPLANE2 = Gb, Bb = !0), hb.CLIPPLANE3 !== Ub && (hb.CLIPPLANE3 = Ub, Bb = !0), hb.CLIPPLANE4 !== Lb && (hb.CLIPPLANE4 = Lb, Bb = !0), hb.CLIPPLANE5 !== Yb && (hb.CLIPPLANE5 = Yb, Bb = !0), hb.CLIPPLANE6 !== Sb && (hb.CLIPPLANE6 = Sb, Bb = !0), Bb
     }
 
-    function Aq(qq, Eq, gq) {
-      let Yq = Eq.clipPlane ?? gq.clipPlane;
-      cq(qq, "vClipPlane", Yq), Yq = Eq.clipPlane2 ?? gq.clipPlane2, cq(qq, "vClipPlane2", Yq), Yq = Eq.clipPlane3 ?? gq.clipPlane3, cq(qq, "vClipPlane3", Yq), Yq = Eq.clipPlane4 ?? gq.clipPlane4, cq(qq, "vClipPlane4", Yq), Yq = Eq.clipPlane5 ?? gq.clipPlane5, cq(qq, "vClipPlane5", Yq), Yq = Eq.clipPlane6 ?? gq.clipPlane6, cq(qq, "vClipPlane6", Yq)
+    function Yb(bb, ub, hb) {
+      let Bb = ub.clipPlane ?? hb.clipPlane;
+      Sb(bb, "vClipPlane", Bb), Bb = ub.clipPlane2 ?? hb.clipPlane2, Sb(bb, "vClipPlane2", Bb), Bb = ub.clipPlane3 ?? hb.clipPlane3, Sb(bb, "vClipPlane3", Bb), Bb = ub.clipPlane4 ?? hb.clipPlane4, Sb(bb, "vClipPlane4", Bb), Bb = ub.clipPlane5 ?? hb.clipPlane5, Sb(bb, "vClipPlane5", Bb), Bb = ub.clipPlane6 ?? hb.clipPlane6, Sb(bb, "vClipPlane6", Bb)
     }
 
-    function cq(qq, Eq, gq) {
-      if (gq) {
-        const Oq = Yq.e.ZJ()?.floatingOriginOffset || lq.q.ZeroReadOnly;
-        qq.setFloat4(Eq, gq.normal.x, gq.normal.y, gq.normal.z, gq.d + lq.q.Dot(gq.normal, Oq))
+    function Sb(bb, ub, hb) {
+      if (hb) {
+        const Gb = Bb.c.ZN()?.floatingOriginOffset || Ob.q.ZeroReadOnly;
+        bb.setFloat4(ub, hb.normal.x, hb.normal.y, hb.normal.z, hb.d + Ob.q.Dot(hb.normal, Gb))
       }
     }
   },
-  40104: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Yq
+  39797: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Bb
     });
-    class Yq {
+    class Bb {
       constructor() {
         this._defines = {}, this._currentRank = 32, this._maxRank = -1, this._mesh = null
       }
       unBindMesh() {
         this._mesh = null
       }
-      addFallback(qq, Eq) {
-        this._defines[qq] || (qq < this._currentRank && (this._currentRank = qq), qq > this._maxRank && (this._maxRank = qq), this._defines[qq] = new Array), this._defines[qq].push(Eq)
+      addFallback(bb, ub) {
+        this._defines[bb] || (bb < this._currentRank && (this._currentRank = bb), bb > this._maxRank && (this._maxRank = bb), this._defines[bb] = new Array), this._defines[bb].push(ub)
       }
-      addCPUSkinningFallback(qq, Eq) {
-        this._mesh = Eq, qq < this._currentRank && (this._currentRank = qq), qq > this._maxRank && (this._maxRank = qq)
+      addCPUSkinningFallback(bb, ub) {
+        this._mesh = ub, bb < this._currentRank && (this._currentRank = bb), bb > this._maxRank && (this._maxRank = bb)
       }
       get hasMoreFallbacks() {
         return this._currentRank <= this._maxRank
       }
-      reduce(qq, Eq) {
+      reduce(bb, ub) {
         if (this._mesh && this._mesh.computeBonesUsingShaders && this._mesh.numBoneInfluencers > 0) {
-          this._mesh.computeBonesUsingShaders = !1, qq = qq.replace("#define NUM_BONE_INFLUENCERS " + this._mesh.numBoneInfluencers, "#define NUM_BONE_INFLUENCERS 0"), Eq._bonesComputationForcedToCPU = !0;
-          const gq = this._mesh.ZJ();
-          for (let qq = 0; qq < gq.meshes.length; qq++) {
-            const Yq = gq.meshes[qq];
-            if (Yq.material) {
-              if (Yq.computeBonesUsingShaders && 0 !== Yq.numBoneInfluencers)
-                if (Yq.material.getEffect() === Eq) Yq.computeBonesUsingShaders = !1;
-                else if (Yq.fn)
-                for (const qq of Yq.fn) {
-                  if (qq.effect === Eq) {
-                    Yq.computeBonesUsingShaders = !1;
+          this._mesh.computeBonesUsingShaders = !1, bb = bb.replace("#define NUM_BONE_INFLUENCERS " + this._mesh.numBoneInfluencers, "#define NUM_BONE_INFLUENCERS 0"), ub._bonesComputationForcedToCPU = !0;
+          const hb = this._mesh.ZN();
+          for (let bb = 0; bb < hb.meshes.length; bb++) {
+            const Bb = hb.meshes[bb];
+            if (Bb.material) {
+              if (Bb.computeBonesUsingShaders && 0 !== Bb.numBoneInfluencers)
+                if (Bb.material.getEffect() === ub) Bb.computeBonesUsingShaders = !1;
+                else if (Bb.FW)
+                for (const bb of Bb.FW) {
+                  if (bb.effect === ub) {
+                    Bb.computeBonesUsingShaders = !1;
                     break
                   }
                 }
-            } else !this._mesh.material && Yq.computeBonesUsingShaders && Yq.numBoneInfluencers > 0 && (Yq.computeBonesUsingShaders = !1)
+            } else !this._mesh.material && Bb.computeBonesUsingShaders && Bb.numBoneInfluencers > 0 && (Bb.computeBonesUsingShaders = !1)
           }
         } else {
-          const Eq = this._defines[this._currentRank];
-          if (Eq)
-            for (let gq = 0; gq < Eq.length; gq++) qq = qq.replace("#define " + Eq[gq], "");
+          const ub = this._defines[this._currentRank];
+          if (ub)
+            for (let hb = 0; hb < ub.length; hb++) bb = bb.replace("#define " + ub[hb], "");
           this._currentRank++
         }
-        return qq
+        return bb
       }
     }
   },
-  40037: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Hq
+  39728: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => lb
     });
-    var Yq = gq(39757),
-      lq = gq(39759),
-      Oq = gq(39845),
-      mq = gq(37156),
-      xq = gq(37153),
-      Aq = gq(40040),
-      cq = gq(39870),
-      uq = gq(38653),
-      Bq = gq(37767),
-      Wq = gq(40074),
-      Nq = gq(39779);
-    let aq = (() => {
-      var qq;
-      let Eq, gq, Oq, mq, xq, Aq, cq, uq, Bq, Wq, aq, Vq, dq = [];
-      return qq = class {
+    var Bb = hb(39463),
+      Ob = hb(39467),
+      Gb = hb(39559),
+      Ub = hb(36753),
+      Lb = hb(36748),
+      Yb = hb(39736),
+      Sb = hb(39598),
+      ab = hb(38302),
+      Hb = hb(37399),
+      wb = hb(39765),
+      Zb = hb(39488);
+    let Xb = (() => {
+      var bb;
+      let ub, hb, Gb, Ub, Lb, Yb, Sb, ab, Hb, wb, Xb, pb, ob = [];
+      return bb = class {
         constructor() {
-          this._func = (0, Yq.i)(this, dq), this.reset()
+          this._func = (0, Bb.k)(this, ob), this.reset()
         }
         reset() {
           this.enabled = !1, this.mask = 255, this.funcRef = 1, this.funcMask = 255, this.func = 519, this.opStencilFail = 7680, this.opDepthFail = 7680, this.opStencilDepthPass = 7681, this.backFunc = 519, this.backOpStencilFail = 7680, this.backOpDepthFail = 7680, this.backOpStencilDepthPass = 7681
@@ -416,313 +416,313 @@ export const modules = {
         get func() {
           return this._func
         }
-        set func(qq) {
-          this._func = qq
+        set func(bb) {
+          this._func = bb
         }
         get backFunc() {
           return this._backFunc
         }
-        set backFunc(qq) {
-          this._backFunc = qq
+        set backFunc(bb) {
+          this._backFunc = bb
         }
         get funcRef() {
           return this._funcRef
         }
-        set funcRef(qq) {
-          this._funcRef = qq
+        set funcRef(bb) {
+          this._funcRef = bb
         }
         get funcMask() {
           return this._funcMask
         }
-        set funcMask(qq) {
-          this._funcMask = qq
+        set funcMask(bb) {
+          this._funcMask = bb
         }
         get opStencilFail() {
           return this._opStencilFail
         }
-        set opStencilFail(qq) {
-          this._opStencilFail = qq
+        set opStencilFail(bb) {
+          this._opStencilFail = bb
         }
         get opDepthFail() {
           return this._opDepthFail
         }
-        set opDepthFail(qq) {
-          this._opDepthFail = qq
+        set opDepthFail(bb) {
+          this._opDepthFail = bb
         }
         get opStencilDepthPass() {
           return this._opStencilDepthPass
         }
-        set opStencilDepthPass(qq) {
-          this._opStencilDepthPass = qq
+        set opStencilDepthPass(bb) {
+          this._opStencilDepthPass = bb
         }
         get backOpStencilFail() {
           return this._backOpStencilFail
         }
-        set backOpStencilFail(qq) {
-          this._backOpStencilFail = qq
+        set backOpStencilFail(bb) {
+          this._backOpStencilFail = bb
         }
         get backOpDepthFail() {
           return this._backOpDepthFail
         }
-        set backOpDepthFail(qq) {
-          this._backOpDepthFail = qq
+        set backOpDepthFail(bb) {
+          this._backOpDepthFail = bb
         }
         get backOpStencilDepthPass() {
           return this._backOpStencilDepthPass
         }
-        set backOpStencilDepthPass(qq) {
-          this._backOpStencilDepthPass = qq
+        set backOpStencilDepthPass(bb) {
+          this._backOpStencilDepthPass = bb
         }
         get mask() {
           return this._mask
         }
-        set mask(qq) {
-          this._mask = qq
+        set mask(bb) {
+          this._mask = bb
         }
         get enabled() {
           return this._enabled
         }
-        set enabled(qq) {
-          this._enabled = qq
+        set enabled(bb) {
+          this._enabled = bb
         }
         getClassName() {
           return "MaterialStencilState"
         }
-        copyTo(qq) {
-          Nq.d.Clone((() => qq), this)
+        copyTo(bb) {
+          Zb.c.Clone((() => bb), this)
         }
         serialize() {
-          return Nq.d.Serialize(this)
+          return Zb.c.Serialize(this)
         }
-        parse(qq, Eq, gq) {
-          Nq.d.Parse((() => this), qq, Eq, gq)
+        parse(bb, ub, hb) {
+          Zb.c.Parse((() => this), bb, ub, hb)
         }
       }, (() => {
-        const Nq = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Eq = [(0, lq.M)()], gq = [(0, lq.M)()], Oq = [(0, lq.M)()], mq = [(0, lq.M)()], xq = [(0, lq.M)()], Aq = [(0, lq.M)()], cq = [(0, lq.M)()], uq = [(0, lq.M)()], Bq = [(0, lq.M)()], Wq = [(0, lq.M)()], aq = [(0, lq.M)()], Vq = [(0, lq.M)()], (0, Yq.f)(qq, null, Eq, {
+        const Zb = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        ub = [(0, Ob.K)()], hb = [(0, Ob.K)()], Gb = [(0, Ob.K)()], Ub = [(0, Ob.K)()], Lb = [(0, Ob.K)()], Yb = [(0, Ob.K)()], Sb = [(0, Ob.K)()], ab = [(0, Ob.K)()], Hb = [(0, Ob.K)()], wb = [(0, Ob.K)()], Xb = [(0, Ob.K)()], pb = [(0, Ob.K)()], (0, Bb.h)(bb, null, ub, {
           kind: "getter",
           name: "func",
           static: !1,
           private: !1,
           access: {
-            has: qq => "func" in qq,
-            get: qq => qq.func
+            has: bb => "func" in bb,
+            get: bb => bb.func
           },
-          metadata: Nq
-        }, null, dq), (0, Yq.f)(qq, null, gq, {
+          metadata: Zb
+        }, null, ob), (0, Bb.h)(bb, null, hb, {
           kind: "getter",
           name: "backFunc",
           static: !1,
           private: !1,
           access: {
-            has: qq => "backFunc" in qq,
-            get: qq => qq.backFunc
+            has: bb => "backFunc" in bb,
+            get: bb => bb.backFunc
           },
-          metadata: Nq
-        }, null, dq), (0, Yq.f)(qq, null, Oq, {
+          metadata: Zb
+        }, null, ob), (0, Bb.h)(bb, null, Gb, {
           kind: "getter",
           name: "funcRef",
           static: !1,
           private: !1,
           access: {
-            has: qq => "funcRef" in qq,
-            get: qq => qq.funcRef
+            has: bb => "funcRef" in bb,
+            get: bb => bb.funcRef
           },
-          metadata: Nq
-        }, null, dq), (0, Yq.f)(qq, null, mq, {
+          metadata: Zb
+        }, null, ob), (0, Bb.h)(bb, null, Ub, {
           kind: "getter",
           name: "funcMask",
           static: !1,
           private: !1,
           access: {
-            has: qq => "funcMask" in qq,
-            get: qq => qq.funcMask
+            has: bb => "funcMask" in bb,
+            get: bb => bb.funcMask
           },
-          metadata: Nq
-        }, null, dq), (0, Yq.f)(qq, null, xq, {
+          metadata: Zb
+        }, null, ob), (0, Bb.h)(bb, null, Lb, {
           kind: "getter",
           name: "opStencilFail",
           static: !1,
           private: !1,
           access: {
-            has: qq => "opStencilFail" in qq,
-            get: qq => qq.opStencilFail
+            has: bb => "opStencilFail" in bb,
+            get: bb => bb.opStencilFail
           },
-          metadata: Nq
-        }, null, dq), (0, Yq.f)(qq, null, Aq, {
+          metadata: Zb
+        }, null, ob), (0, Bb.h)(bb, null, Yb, {
           kind: "getter",
           name: "opDepthFail",
           static: !1,
           private: !1,
           access: {
-            has: qq => "opDepthFail" in qq,
-            get: qq => qq.opDepthFail
+            has: bb => "opDepthFail" in bb,
+            get: bb => bb.opDepthFail
           },
-          metadata: Nq
-        }, null, dq), (0, Yq.f)(qq, null, cq, {
+          metadata: Zb
+        }, null, ob), (0, Bb.h)(bb, null, Sb, {
           kind: "getter",
           name: "opStencilDepthPass",
           static: !1,
           private: !1,
           access: {
-            has: qq => "opStencilDepthPass" in qq,
-            get: qq => qq.opStencilDepthPass
+            has: bb => "opStencilDepthPass" in bb,
+            get: bb => bb.opStencilDepthPass
           },
-          metadata: Nq
-        }, null, dq), (0, Yq.f)(qq, null, uq, {
+          metadata: Zb
+        }, null, ob), (0, Bb.h)(bb, null, ab, {
           kind: "getter",
           name: "backOpStencilFail",
           static: !1,
           private: !1,
           access: {
-            has: qq => "backOpStencilFail" in qq,
-            get: qq => qq.backOpStencilFail
+            has: bb => "backOpStencilFail" in bb,
+            get: bb => bb.backOpStencilFail
           },
-          metadata: Nq
-        }, null, dq), (0, Yq.f)(qq, null, Bq, {
+          metadata: Zb
+        }, null, ob), (0, Bb.h)(bb, null, Hb, {
           kind: "getter",
           name: "backOpDepthFail",
           static: !1,
           private: !1,
           access: {
-            has: qq => "backOpDepthFail" in qq,
-            get: qq => qq.backOpDepthFail
+            has: bb => "backOpDepthFail" in bb,
+            get: bb => bb.backOpDepthFail
           },
-          metadata: Nq
-        }, null, dq), (0, Yq.f)(qq, null, Wq, {
+          metadata: Zb
+        }, null, ob), (0, Bb.h)(bb, null, wb, {
           kind: "getter",
           name: "backOpStencilDepthPass",
           static: !1,
           private: !1,
           access: {
-            has: qq => "backOpStencilDepthPass" in qq,
-            get: qq => qq.backOpStencilDepthPass
+            has: bb => "backOpStencilDepthPass" in bb,
+            get: bb => bb.backOpStencilDepthPass
           },
-          metadata: Nq
-        }, null, dq), (0, Yq.f)(qq, null, aq, {
+          metadata: Zb
+        }, null, ob), (0, Bb.h)(bb, null, Xb, {
           kind: "getter",
           name: "mask",
           static: !1,
           private: !1,
           access: {
-            has: qq => "mask" in qq,
-            get: qq => qq.mask
+            has: bb => "mask" in bb,
+            get: bb => bb.mask
           },
-          metadata: Nq
-        }, null, dq), (0, Yq.f)(qq, null, Vq, {
+          metadata: Zb
+        }, null, ob), (0, Bb.h)(bb, null, pb, {
           kind: "getter",
           name: "enabled",
           static: !1,
           private: !1,
           access: {
-            has: qq => "enabled" in qq,
-            get: qq => qq.enabled
+            has: bb => "enabled" in bb,
+            get: bb => bb.enabled
           },
-          metadata: Nq
-        }, null, dq), Nq && Object.defineProperty(qq, Symbol.metadata, {
+          metadata: Zb
+        }, null, ob), Zb && Object.defineProperty(bb, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Nq
+          value: Zb
         })
-      })(), qq
+      })(), bb
     })();
-    var Vq = gq(40079),
-      dq = gq(39676),
-      jq = gq(39636);
-    let Hq = (() => {
-      var qq;
-      let Eq, gq, jq, Hq, oq, Pq, Qq, yq, tq, rq, vq, hq, nq, bq, iq, Zq, fq, Mq, Tq, zq, Sq, pq, Gq, Lq, Jq, kq, Rq, Uq, Fq, sq = [],
-        Xq = [],
-        wq = [],
-        Kq = [],
-        Cq = [],
-        Iq = [],
-        eq = [],
-        Dq = [],
-        qE = [],
-        EE = [],
-        gE = [],
-        YE = [],
-        lE = [],
-        OE = [],
-        mE = [],
-        xE = [],
-        AE = [],
-        cE = [],
-        uE = [],
-        BE = [],
-        WE = [],
-        NE = [],
-        aE = [],
-        VE = [],
-        dE = [],
-        jE = [],
-        HE = [],
-        oE = [],
-        PE = [],
-        QE = [],
-        yE = [],
-        tE = [],
-        rE = [],
-        vE = [],
-        hE = [],
-        nE = [],
-        bE = [],
-        iE = [],
-        ZE = [],
-        fE = [],
-        ME = [],
-        TE = [],
-        zE = [],
-        SE = [],
-        pE = [],
-        GE = [],
-        LE = [],
-        JE = [],
-        kE = [],
-        RE = [],
-        UE = [];
-      return qq = class {
+    var pb = hb(39773),
+      ob = hb(39366),
+      Ab = hb(39333);
+    let lb = (() => {
+      var bb;
+      let ub, hb, Ab, lb, Kb, Wb, Cb, db, rb, jb, nb, Db, xb, zb, gb, ib, vb, tb, Jb, eb, Nb, sb, Mb, mb, Ib, Pb, qb, Eb, yb, Vb = [],
+        Fb = [],
+        fb = [],
+        kb = [],
+        Tb = [],
+        cb = [],
+        Qb = [],
+        Rb = [],
+        bu = [],
+        uu = [],
+        hu = [],
+        Bu = [],
+        Ou = [],
+        Gu = [],
+        Uu = [],
+        Lu = [],
+        Yu = [],
+        Su = [],
+        au = [],
+        Hu = [],
+        wu = [],
+        Zu = [],
+        Xu = [],
+        pu = [],
+        ou = [],
+        Au = [],
+        lu = [],
+        Ku = [],
+        Wu = [],
+        Cu = [],
+        du = [],
+        ru = [],
+        ju = [],
+        nu = [],
+        Du = [],
+        xu = [],
+        zu = [],
+        gu = [],
+        iu = [],
+        vu = [],
+        tu = [],
+        Ju = [],
+        eu = [],
+        Nu = [],
+        su = [],
+        Mu = [],
+        mu = [],
+        Iu = [],
+        Pu = [],
+        qu = [],
+        Eu = [];
+      return bb = class {
         get useVertexPulling() {
           return this._useVertexPulling
         }
-        set useVertexPulling(Eq) {
-          this._useVertexPulling !== Eq && (this._useVertexPulling = Eq, this.xgq(qq.MiscDirtyFlag))
+        set useVertexPulling(ub) {
+          this._useVertexPulling !== ub && (this._useVertexPulling = ub, this.yub(bb.MiscDirtyFlag))
         }
         get _supportGlowLayer() {
           return !1
         }
-        set _glowModeEnabled(qq) {}
+        set _glowModeEnabled(bb) {}
         get shaderLanguage() {
           return this._shaderLanguage
         }
         get canRenderToMRT() {
           return !1
         }
-        set alpha(Eq) {
-          if (this._alpha === Eq) return;
-          const gq = this._alpha;
-          this._alpha = Eq, 1 !== gq && 1 !== Eq || this.xgq(qq.MiscDirtyFlag + qq.PrePassDirtyFlag)
+        set alpha(ub) {
+          if (this._alpha === ub) return;
+          const hb = this._alpha;
+          this._alpha = ub, 1 !== hb && 1 !== ub || this.yub(bb.MiscDirtyFlag + bb.PrePassDirtyFlag)
         }
         get alpha() {
           return this._alpha
         }
-        set backFaceCulling(Eq) {
-          this._backFaceCulling !== Eq && (this._backFaceCulling = Eq, this.xgq(qq.TextureDirtyFlag))
+        set backFaceCulling(ub) {
+          this._backFaceCulling !== ub && (this._backFaceCulling = ub, this.yub(bb.TextureDirtyFlag))
         }
         get backFaceCulling() {
           return this._backFaceCulling
         }
-        set textureRepetitionMode(Eq) {
-          const gq = Math.max(0, Math.min(0 | Eq, 4));
-          this._textureRepetitionMode !== gq && (this._textureRepetitionMode = gq, this.xgq(qq.TextureDirtyFlag))
+        set textureRepetitionMode(ub) {
+          const hb = Math.max(0, Math.min(0 | ub, 4));
+          this._textureRepetitionMode !== hb && (this._textureRepetitionMode = hb, this.yub(bb.TextureDirtyFlag))
         }
         get textureRepetitionMode() {
           return this._textureRepetitionMode
         }
-        set cullBackFaces(Eq) {
-          this._cullBackFaces !== Eq && (this._cullBackFaces = Eq, this.xgq(qq.TextureDirtyFlag))
+        set cullBackFaces(ub) {
+          this._cullBackFaces !== ub && (this._cullBackFaces = ub, this.yub(bb.TextureDirtyFlag))
         }
         get cullBackFaces() {
           return this._cullBackFaces
@@ -730,13 +730,13 @@ export const modules = {
         get blockDirtyMechanism() {
           return this._blockDirtyMechanism
         }
-        set blockDirtyMechanism(qq) {
-          this._blockDirtyMechanism !== qq && (this._blockDirtyMechanism = qq, qq || this.markDirty())
+        set blockDirtyMechanism(bb) {
+          this._blockDirtyMechanism !== bb && (this._blockDirtyMechanism = bb, bb || this.markDirty())
         }
-        atomicMaterialsUpdate(qq) {
+        atomicMaterialsUpdate(bb) {
           this.blockDirtyMechanism = !0;
           try {
-            qq(this)
+            bb(this)
           } finally {
             this.blockDirtyMechanism = !1
           }
@@ -744,23 +744,23 @@ export const modules = {
         get hasRenderTargetTextures() {
           return this._eventInfo.hasRenderTargetTextures = !1, this._callbackPluginEventHasRenderTargetTextures(this._eventInfo), this._eventInfo.hasRenderTargetTextures
         }
-        set onDispose(qq) {
-          this._onDisposeObserver && this.MJ.remove(this._onDisposeObserver), this._onDisposeObserver = this.MJ.add(qq)
+        set onDispose(bb) {
+          this._onDisposeObserver && this.XN.remove(this._onDisposeObserver), this._onDisposeObserver = this.XN.add(bb)
         }
         get onBindObservable() {
-          return this._onBindObservable || (this._onBindObservable = new mq.d), this._onBindObservable
+          return this._onBindObservable || (this._onBindObservable = new Ub.e), this._onBindObservable
         }
-        set onBind(qq) {
-          this._onBindObserver && this.onBindObservable.remove(this._onBindObserver), this._onBindObserver = this.onBindObservable.add(qq)
+        set onBind(bb) {
+          this._onBindObserver && this.onBindObservable.remove(this._onBindObserver), this._onBindObserver = this.onBindObservable.add(bb)
         }
         get onUnBindObservable() {
-          return this._onUnBindObservable || (this._onUnBindObservable = new mq.d), this._onUnBindObservable
+          return this._onUnBindObservable || (this._onUnBindObservable = new Ub.e), this._onUnBindObservable
         }
         get onEffectCreatedObservable() {
-          return this._onEffectCreatedObservable || (this._onEffectCreatedObservable = new mq.d), this._onEffectCreatedObservable
+          return this._onEffectCreatedObservable || (this._onEffectCreatedObservable = new Ub.e), this._onEffectCreatedObservable
         }
-        set alphaMode(qq) {
-          this._alphaMode[0] = qq
+        set alphaMode(bb) {
+          this._alphaMode[0] = bb
         }
         get alphaMode() {
           return this._alphaMode[0]
@@ -768,12 +768,12 @@ export const modules = {
         get alphaModes() {
           return this._alphaMode
         }
-        setAlphaMode(Eq) {
-          let gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          this._alphaMode[gq] !== Eq && (this._alphaMode[gq] = Eq, this.xgq(qq.TextureDirtyFlag))
+        setAlphaMode(ub) {
+          let hb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          this._alphaMode[hb] !== ub && (this._alphaMode[hb] = ub, this.yub(bb.TextureDirtyFlag))
         }
-        set needDepthPrePass(qq) {
-          this._needDepthPrePass !== qq && (this._needDepthPrePass = qq, this._needDepthPrePass && (this.checkReadyOnEveryCall = !0))
+        set needDepthPrePass(bb) {
+          this._needDepthPrePass !== bb && (this._needDepthPrePass = bb, this._needDepthPrePass && (this.checkReadyOnEveryCall = !0))
         }
         get needDepthPrePass() {
           return this._needDepthPrePass
@@ -781,72 +781,72 @@ export const modules = {
         get isPrePassCapable() {
           return !1
         }
-        set fogEnabled(Eq) {
-          this._fogEnabled !== Eq && (this._fogEnabled = Eq, this.xgq(qq.MiscDirtyFlag))
+        set fogEnabled(ub) {
+          this._fogEnabled !== ub && (this._fogEnabled = ub, this.yub(bb.MiscDirtyFlag))
         }
         get fogEnabled() {
           return this._fogEnabled
         }
         get wireframe() {
           switch (this._fillMode) {
-            case qq.WireFrameFillMode:
-            case qq.LineListDrawMode:
-            case qq.LineLoopDrawMode:
-            case qq.LineStripDrawMode:
+            case bb.WireFrameFillMode:
+            case bb.LineListDrawMode:
+            case bb.LineLoopDrawMode:
+            case bb.LineStripDrawMode:
               return !0
           }
           return this._scene.forceWireframe
         }
-        set wireframe(Eq) {
-          this.fillMode = Eq ? qq.WireFrameFillMode : qq.TriangleFillMode
+        set wireframe(ub) {
+          this.fillMode = ub ? bb.WireFrameFillMode : bb.TriangleFillMode
         }
         get pointsCloud() {
           switch (this._fillMode) {
-            case qq.PointFillMode:
-            case qq.PointListDrawMode:
+            case bb.PointFillMode:
+            case bb.PointListDrawMode:
               return !0
           }
           return this._scene.forcePointsCloud
         }
-        set pointsCloud(Eq) {
-          this.fillMode = Eq ? qq.PointFillMode : qq.TriangleFillMode
+        set pointsCloud(ub) {
+          this.fillMode = ub ? bb.PointFillMode : bb.TriangleFillMode
         }
         get fillMode() {
           return this._fillMode
         }
-        set fillMode(Eq) {
-          this._fillMode !== Eq && (this._fillMode = Eq, this.xgq(qq.MiscDirtyFlag))
+        set fillMode(ub) {
+          this._fillMode !== ub && (this._fillMode = ub, this.yub(bb.MiscDirtyFlag))
         }
         get useLogarithmicDepth() {
           return this._useLogarithmicDepth
         }
-        set useLogarithmicDepth(qq) {
-          const Eq = this.ZJ().Ba().getCaps().fragmentDepthSupported;
-          qq && !Eq && uq.b.Warn("Logarithmic depth has been requested for a material on a device that doesn't support it."), this._useLogarithmicDepth = qq && Eq, this._markAllSubMeshesAsMiscDirty()
+        set useLogarithmicDepth(bb) {
+          const ub = this.ZN().UX().getCaps().fragmentDepthSupported;
+          bb && !ub && ab.b.Warn("Logarithmic depth has been requested for a material on a device that doesn't support it."), this._useLogarithmicDepth = bb && ub, this._markAllSubMeshesAsMiscDirty()
         }
         get isVertexOutputInvariant() {
           return this._isVertexOutputInvariant
         }
-        set isVertexOutputInvariant(qq) {
-          this._isVertexOutputInvariant !== qq && (this._isVertexOutputInvariant = qq, this._markAllSubMeshesAsMiscDirty())
+        set isVertexOutputInvariant(bb) {
+          this._isVertexOutputInvariant !== bb && (this._isVertexOutputInvariant = bb, this._markAllSubMeshesAsMiscDirty())
         }
         _getDrawWrapper() {
           return this._drawWrapper
         }
-        _setDrawWrapper(qq) {
-          this._drawWrapper = qq
+        _setDrawWrapper(bb) {
+          this._drawWrapper = bb
         }
-        constructor(Eq, gq, lq) {
-          let Aq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-          this.customShaderNameResolve = (0, Yq.i)(this, sq), this.shadowDepthWrapper = null, this.allowShaderHotSwapping = !0, this._shaderLanguage = 0, this._forceGLSL = !1, this._useVertexPulling = !1, this.id = (0, Yq.i)(this, Xq, void 0), this.uniqueId = ((0, Yq.i)(this, wq), (0, Yq.i)(this, Kq, void 0)), this._loadedUniqueId = (0, Yq.i)(this, Cq), this.name = (0, Yq.i)(this, Iq, void 0), this.metadata = ((0, Yq.i)(this, eq), (0, Yq.i)(this, Dq, null)), this._internalMetadata = (0, Yq.i)(this, qE), this.reservedDataStore = null, this.checkReadyOnEveryCall = (0, Yq.i)(this, EE, !1), this.checkReadyOnlyOnce = ((0, Yq.i)(this, gE), (0, Yq.i)(this, YE, !1)), this.state = ((0, Yq.i)(this, lE), (0, Yq.i)(this, OE, "")), this._alpha = ((0, Yq.i)(this, mE), (0, Yq.i)(this, xE, 1)), this.inspectableCustomProperties = (0, Yq.i)(this, AE), this._backFaceCulling = (0, Yq.i)(this, cE, !0), this._textureRepetitionMode = ((0, Yq.i)(this, uE), (0, Yq.i)(this, BE, 0)), this.textureRepetitionHexTilingParams = ((0, Yq.i)(this, WE), (0, Yq.i)(this, NE, [1, .6, 7, .5])), this._cullBackFaces = ((0, Yq.i)(this, aE), (0, Yq.i)(this, VE, !0)), this._blockDirtyMechanism = ((0, Yq.i)(this, dE), !1), this.sideOrientation = (0, Yq.i)(this, jE, null), this.onCompiled = ((0, Yq.i)(this, HE), null), this.onError = null, this.getRenderTargetTextures = null, this.doNotSerialize = !1, this._storeEffectOnSubMeshes = !1, this.animations = null, this.MJ = new mq.d, this._onDisposeObserver = null, this._onUnBindObservable = null, this._onBindObserver = null, this._alphaMode = (0, Yq.i)(this, oE, [2]), this._needDepthPrePass = ((0, Yq.i)(this, PE), (0, Yq.i)(this, QE, !1)), this.disableDepthWrite = ((0, Yq.i)(this, yE), (0, Yq.i)(this, tE, !1)), this.disableColorWrite = ((0, Yq.i)(this, rE), (0, Yq.i)(this, vE, !1)), this.forceDepthWrite = ((0, Yq.i)(this, hE), (0, Yq.i)(this, nE, !1)), this.depthFunction = ((0, Yq.i)(this, bE), (0, Yq.i)(this, iE, 0)), this.separateCullingPass = ((0, Yq.i)(this, ZE), (0, Yq.i)(this, fE, !1)), this._fogEnabled = ((0, Yq.i)(this, ME), (0, Yq.i)(this, TE, !0)), this.pointSize = ((0, Yq.i)(this, zE), (0, Yq.i)(this, SE, 1)), this.zOffset = ((0, Yq.i)(this, pE), (0, Yq.i)(this, GE, 0)), this.zOffsetUnits = ((0, Yq.i)(this, LE), (0, Yq.i)(this, JE, 0)), this.clipPlane = (0, Yq.i)(this, kE), this.stencil = new aq, this._isVertexOutputInvariant = (0, Yq.i)(this, RE, qq.ForceVertexOutputInvariant), this._materialContext = (0, Yq.i)(this, UE), this._useUBO = !1, this._fillMode = qq.TriangleFillMode, this._cachedDepthWriteState = !1, this._cachedColorWriteState = !1, this._cachedDepthFunctionState = 0, this._indexInSceneMaterialArray = -1, this.meshMap = null, this._parentContainer = null, this._uniformBufferLayoutBuilt = !1, this._eventInfo = {}, this._callbackPluginEventGeneric = () => {}, this._callbackPluginEventIsReadyForSubMesh = () => {}, this._callbackPluginEventPrepareDefines = () => {}, this._callbackPluginEventPrepareDefinesBeforeAttributes = () => {}, this._callbackPluginEventHardBindForSubMesh = () => {}, this._callbackPluginEventBindForSubMesh = () => {}, this._callbackPluginEventHasRenderTargetTextures = () => {}, this._callbackPluginEventFillRenderTargetTextures = () => {}, this._transparencyMode = null, this.name = Eq;
-          const uq = gq || xq.b.LastCreatedScene;
-          uq && (this._scene = uq, this._dirtyCallbacks = {}, this._forceGLSL = Aq, this._dirtyCallbacks[1] = this._markAllSubMeshesAsTexturesDirty.bind(this), this._dirtyCallbacks[2] = this._markAllSubMeshesAsLightsDirty.bind(this), this._dirtyCallbacks[4] = this._markAllSubMeshesAsFresnelDirty.bind(this), this._dirtyCallbacks[8] = this._markAllSubMeshesAsAttributesDirty.bind(this), this._dirtyCallbacks[16] = this._markAllSubMeshesAsMiscDirty.bind(this), this._dirtyCallbacks[32] = this._markAllSubMeshesAsPrePassDirty.bind(this), this._dirtyCallbacks[127] = this._markAllSubMeshesAsAllDirty.bind(this), this.id = Eq || Oq.f.RandomId(), this.uniqueId = this._scene.getUniqueId(), this._materialContext = this._scene.Ba().createMaterialContext(), this._drawWrapper = new Wq.b(this._scene.Ba(), !1), this._drawWrapper.materialContext = this._materialContext, this._uniformBuffer = new cq.b(this._scene.Ba(), void 0, void 0, Eq), this._useUBO = this.ZJ().Ba().supportsUniformBuffers, this._createUniformBuffer(), lq || this._scene.addMaterial(this), this._scene.useMaterialMeshMap && (this.meshMap = {}), qq.OnEventObservable.notifyObservers(this, 1))
+        constructor(ub, hb, Ob) {
+          let Yb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+          this.customShaderNameResolve = (0, Bb.k)(this, Vb), this.shadowDepthWrapper = null, this.allowShaderHotSwapping = !0, this._shaderLanguage = 0, this._forceGLSL = !1, this._useVertexPulling = !1, this.id = (0, Bb.k)(this, Fb, void 0), this.uniqueId = ((0, Bb.k)(this, fb), (0, Bb.k)(this, kb, void 0)), this._loadedUniqueId = (0, Bb.k)(this, Tb), this.name = (0, Bb.k)(this, cb, void 0), this.metadata = ((0, Bb.k)(this, Qb), (0, Bb.k)(this, Rb, null)), this._internalMetadata = (0, Bb.k)(this, bu), this.reservedDataStore = null, this.checkReadyOnEveryCall = (0, Bb.k)(this, uu, !1), this.checkReadyOnlyOnce = ((0, Bb.k)(this, hu), (0, Bb.k)(this, Bu, !1)), this.state = ((0, Bb.k)(this, Ou), (0, Bb.k)(this, Gu, "")), this._alpha = ((0, Bb.k)(this, Uu), (0, Bb.k)(this, Lu, 1)), this.inspectableCustomProperties = (0, Bb.k)(this, Yu), this._backFaceCulling = (0, Bb.k)(this, Su, !0), this._textureRepetitionMode = ((0, Bb.k)(this, au), (0, Bb.k)(this, Hu, 0)), this.textureRepetitionHexTilingParams = ((0, Bb.k)(this, wu), (0, Bb.k)(this, Zu, [1, .6, 7, .5])), this._cullBackFaces = ((0, Bb.k)(this, Xu), (0, Bb.k)(this, pu, !0)), this._blockDirtyMechanism = ((0, Bb.k)(this, ou), !1), this.sideOrientation = (0, Bb.k)(this, Au, null), this.onCompiled = ((0, Bb.k)(this, lu), null), this.onError = null, this.getRenderTargetTextures = null, this.doNotSerialize = !1, this._storeEffectOnSubMeshes = !1, this.animations = null, this.XN = new Ub.e, this._onDisposeObserver = null, this._onUnBindObservable = null, this._onBindObserver = null, this._alphaMode = (0, Bb.k)(this, Ku, [2]), this._needDepthPrePass = ((0, Bb.k)(this, Wu), (0, Bb.k)(this, Cu, !1)), this.disableDepthWrite = ((0, Bb.k)(this, du), (0, Bb.k)(this, ru, !1)), this.disableColorWrite = ((0, Bb.k)(this, ju), (0, Bb.k)(this, nu, !1)), this.forceDepthWrite = ((0, Bb.k)(this, Du), (0, Bb.k)(this, xu, !1)), this.depthFunction = ((0, Bb.k)(this, zu), (0, Bb.k)(this, gu, 0)), this.separateCullingPass = ((0, Bb.k)(this, iu), (0, Bb.k)(this, vu, !1)), this._fogEnabled = ((0, Bb.k)(this, tu), (0, Bb.k)(this, Ju, !0)), this.pointSize = ((0, Bb.k)(this, eu), (0, Bb.k)(this, Nu, 1)), this.zOffset = ((0, Bb.k)(this, su), (0, Bb.k)(this, Mu, 0)), this.zOffsetUnits = ((0, Bb.k)(this, mu), (0, Bb.k)(this, Iu, 0)), this.clipPlane = (0, Bb.k)(this, Pu), this.stencil = new Xb, this._isVertexOutputInvariant = (0, Bb.k)(this, qu, bb.ForceVertexOutputInvariant), this._materialContext = (0, Bb.k)(this, Eu), this._useUBO = !1, this._fillMode = bb.TriangleFillMode, this._cachedDepthWriteState = !1, this._cachedColorWriteState = !1, this._cachedDepthFunctionState = 0, this._indexInSceneMaterialArray = -1, this.meshMap = null, this._parentContainer = null, this._uniformBufferLayoutBuilt = !1, this._eventInfo = {}, this._callbackPluginEventGeneric = () => {}, this._callbackPluginEventIsReadyForSubMesh = () => {}, this._callbackPluginEventPrepareDefines = () => {}, this._callbackPluginEventPrepareDefinesBeforeAttributes = () => {}, this._callbackPluginEventHardBindForSubMesh = () => {}, this._callbackPluginEventBindForSubMesh = () => {}, this._callbackPluginEventHasRenderTargetTextures = () => {}, this._callbackPluginEventFillRenderTargetTextures = () => {}, this._transparencyMode = null, this.name = ub;
+          const ab = hb || Lb.b.LastCreatedScene;
+          ab && (this._scene = ab, this._dirtyCallbacks = {}, this._forceGLSL = Yb, this._dirtyCallbacks[1] = this._markAllSubMeshesAsTexturesDirty.bind(this), this._dirtyCallbacks[2] = this._markAllSubMeshesAsLightsDirty.bind(this), this._dirtyCallbacks[4] = this._markAllSubMeshesAsFresnelDirty.bind(this), this._dirtyCallbacks[8] = this._markAllSubMeshesAsAttributesDirty.bind(this), this._dirtyCallbacks[16] = this._markAllSubMeshesAsMiscDirty.bind(this), this._dirtyCallbacks[32] = this._markAllSubMeshesAsPrePassDirty.bind(this), this._dirtyCallbacks[127] = this._markAllSubMeshesAsAllDirty.bind(this), this.id = ub || Gb.k.RandomId(), this.uniqueId = this._scene.getUniqueId(), this._materialContext = this._scene.UX().createMaterialContext(), this._drawWrapper = new wb.d(this._scene.UX(), !1), this._drawWrapper.materialContext = this._materialContext, this._uniformBuffer = new Sb.c(this._scene.UX(), void 0, void 0, ub), this._useUBO = this.ZN().UX().supportsUniformBuffers, this._createUniformBuffer(), Ob || this._scene.addMaterial(this), this._scene.useMaterialMeshMap && (this.meshMap = {}), bb.OnEventObservable.notifyObservers(this, 1))
         }
         _createUniformBuffer() {
-          const qq = this.ZJ().Ba();
-          this._uniformBuffer?.dispose(), qq.isWebGPU && !this._forceGLSL ? (this._uniformBuffer = new cq.b(qq, void 0, void 0, this.name, !0), this._shaderLanguage = 1) : this._uniformBuffer = new cq.b(this._scene.Ba(), void 0, void 0, this.name), this._uniformBufferLayoutBuilt = !1
+          const bb = this.ZN().UX();
+          this._uniformBuffer?.dispose(), bb.isWebGPU && !this._forceGLSL ? (this._uniformBuffer = new Sb.c(bb, void 0, void 0, this.name, !0), this._shaderLanguage = 1) : this._uniformBuffer = new Sb.c(this._scene.UX(), void 0, void 0, this.name), this._uniformBufferLayoutBuilt = !1
         }
-        toString(qq) {
+        toString(bb) {
           return "Name: " + this.name
         }
         getClassName() {
@@ -864,115 +864,115 @@ export const modules = {
         unfreeze() {
           this.markDirty(), this.checkReadyOnlyOnce = !1
         }
-        isReady(qq, Eq) {
+        isReady(bb, ub) {
           return !0
         }
-        isReadyForSubMesh(qq, Eq, gq) {
-          const Yq = Eq.materialDefines;
-          return !!Yq && (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = Yq, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), this._eventInfo.isReadyForSubMesh)
+        isReadyForSubMesh(bb, ub, hb) {
+          const Bb = ub.materialDefines;
+          return !!Bb && (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = Bb, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), this._eventInfo.isReadyForSubMesh)
         }
         getEffect() {
           return this._drawWrapper.effect
         }
-        ZJ() {
+        ZN() {
           return this._scene
         }
-        _getEffectiveOrientation(qq) {
-          return null !== this.sideOrientation ? this.sideOrientation : qq.sideOrientation
+        _getEffectiveOrientation(bb) {
+          return null !== this.sideOrientation ? this.sideOrientation : bb.sideOrientation
         }
         get transparencyMode() {
           return this._transparencyMode
         }
-        set transparencyMode(qq) {
-          this._transparencyMode = qq
+        set transparencyMode(bb) {
+          this._transparencyMode = bb
         }
         get _hasTransparencyMode() {
           return null != this._transparencyMode
         }
         get _transparencyModeIsBlend() {
-          return this._transparencyMode === qq.MATERIAL_ALPHABLEND || this._transparencyMode === qq.MATERIAL_ALPHATESTANDBLEND
+          return this._transparencyMode === bb.MATERIAL_ALPHABLEND || this._transparencyMode === bb.MATERIAL_ALPHATESTANDBLEND
         }
         get _transparencyModeIsTest() {
-          return this._transparencyMode === qq.MATERIAL_ALPHATEST || this._transparencyMode === qq.MATERIAL_ALPHATESTANDBLEND
+          return this._transparencyMode === bb.MATERIAL_ALPHATEST || this._transparencyMode === bb.MATERIAL_ALPHATESTANDBLEND
         }
         get _disableAlphaBlending() {
-          return this._transparencyMode === qq.MATERIAL_OPAQUE || this._transparencyMode === qq.MATERIAL_ALPHATEST
+          return this._transparencyMode === bb.MATERIAL_OPAQUE || this._transparencyMode === bb.MATERIAL_ALPHATEST
         }
         needAlphaBlending() {
           return this._hasTransparencyMode ? this._transparencyModeIsBlend : !this._disableAlphaBlending && this.alpha < 1
         }
-        needAlphaBlendingForMesh(qq) {
-          return this._hasTransparencyMode ? this._transparencyModeIsBlend : qq.visibility < 1 || !this._disableAlphaBlending && (qq.hasVertexAlpha || this.needAlphaBlending())
+        needAlphaBlendingForMesh(bb) {
+          return this._hasTransparencyMode ? this._transparencyModeIsBlend : bb.visibility < 1 || !this._disableAlphaBlending && (bb.hasVertexAlpha || this.needAlphaBlending())
         }
         needAlphaTesting() {
           return !!this._hasTransparencyMode && this._transparencyModeIsTest
         }
-        needAlphaTestingForMesh(qq) {
-          return this._hasTransparencyMode ? this._transparencyModeIsTest : !this.needAlphaBlendingForMesh(qq) && this.needAlphaTesting()
+        needAlphaTestingForMesh(bb) {
+          return this._hasTransparencyMode ? this._transparencyModeIsTest : !this.needAlphaBlendingForMesh(bb) && this.needAlphaTesting()
         }
         getAlphaTestTexture() {
           return null
         }
         markDirty() {
-          let Eq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const gq = this.ZJ().meshes;
-          for (const qq of gq)
-            if (qq.fn)
-              for (const gq of qq.fn)
-                if (gq.da() === this)
-                  for (const qq of gq._drawWrappers) qq && this._materialContext === qq.materialContext && (qq._wasPreviouslyReady = !1, qq._wasPreviouslyUsingInstances = null, qq._forceRebindOnNextCall = Eq);
-          Eq && this.xgq(qq.AllDirtyFlag)
+          let ub = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const hb = this.ZN().meshes;
+          for (const bb of hb)
+            if (bb.FW)
+              for (const hb of bb.FW)
+                if (hb.HX() === this)
+                  for (const bb of hb._drawWrappers) bb && this._materialContext === bb.materialContext && (bb._wasPreviouslyReady = !1, bb._wasPreviouslyUsingInstances = null, bb._forceRebindOnNextCall = ub);
+          ub && this.yub(bb.AllDirtyFlag)
         }
-        _preBind(Eq) {
-          let gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          const Yq = this._scene.Ba(),
-            lq = (null == gq ? this.sideOrientation : gq) === qq.ClockWiseSideOrientation,
-            Oq = Eq || this._getDrawWrapper();
-          return (0, dq.c)(Oq) && Oq.materialContext && (Oq.materialContext.useVertexPulling = this.useVertexPulling), Yq.enableEffect(Oq), Yq.setState(this.backFaceCulling, this.zOffset, !1, lq, this._scene._mirroredCameraPosition ? !this.cullBackFaces : this.cullBackFaces, this.stencil, this.zOffsetUnits), lq
+        _preBind(ub) {
+          let hb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const Bb = this._scene.UX(),
+            Ob = (null == hb ? this.sideOrientation : hb) === bb.ClockWiseSideOrientation,
+            Gb = ub || this._getDrawWrapper();
+          return (0, ob.b)(Gb) && Gb.materialContext && (Gb.materialContext.useVertexPulling = this.useVertexPulling), Bb.enableEffect(Gb), Bb.setState(this.backFaceCulling, this.zOffset, !1, Ob, this._scene._mirroredCameraPosition ? !this.cullBackFaces : this.cullBackFaces, this.stencil, this.zOffsetUnits), Ob
         }
-        bind(qq, Eq) {}
+        bind(bb, ub) {}
         buildUniformLayout() {
-          const qq = this._uniformBuffer;
-          this._eventInfo.ubo = qq, this._callbackPluginEventGeneric(8, this._eventInfo), qq.create(), this._uniformBufferLayoutBuilt = !0
+          const bb = this._uniformBuffer;
+          this._eventInfo.ubo = bb, this._callbackPluginEventGeneric(8, this._eventInfo), bb.create(), this._uniformBufferLayoutBuilt = !0
         }
-        bindForSubMesh(qq, Eq, gq) {
-          const Yq = gq._drawWrapper;
-          this._eventInfo.subMesh = gq, this._callbackPluginEventBindForSubMesh(this._eventInfo), Yq._forceRebindOnNextCall = !1
+        bindForSubMesh(bb, ub, hb) {
+          const Bb = hb._drawWrapper;
+          this._eventInfo.subMesh = hb, this._callbackPluginEventBindForSubMesh(this._eventInfo), Bb._forceRebindOnNextCall = !1
         }
-        bindOnlyWorldMatrix(qq) {}
-        bindView(qq) {
-          this._useUBO ? this._needToBindSceneUbo = !0 : qq.setMatrix("view", this.ZJ().getViewMatrix())
+        bindOnlyWorldMatrix(bb) {}
+        bindView(bb) {
+          this._useUBO ? this._needToBindSceneUbo = !0 : bb.setMatrix("view", this.ZN().getViewMatrix())
         }
-        bindViewProjection(qq) {
-          this._useUBO ? this._needToBindSceneUbo = !0 : (qq.setMatrix("viewProjection", this.ZJ().getTransformMatrix()), qq.setMatrix("projection", this.ZJ().getProjectionMatrix()), qq.setMatrix("inverseProjection", this.ZJ().getInverseProjectionMatrix()))
+        bindViewProjection(bb) {
+          this._useUBO ? this._needToBindSceneUbo = !0 : (bb.setMatrix("viewProjection", this.ZN().getTransformMatrix()), bb.setMatrix("projection", this.ZN().getProjectionMatrix()), bb.setMatrix("inverseProjection", this.ZN().getInverseProjectionMatrix()))
         }
-        bindEyePosition(qq, Eq) {
-          this._useUBO ? this._needToBindSceneUbo = !0 : this._scene.bindEyePosition(qq, Eq)
+        bindEyePosition(bb, ub) {
+          this._useUBO ? this._needToBindSceneUbo = !0 : this._scene.bindEyePosition(bb, ub)
         }
-        _afterBind(qq) {
-          let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          if (this._scene._cachedMaterial = this, this._needToBindSceneUbo && Eq && (this._needToBindSceneUbo = !1, (0, Vq.s)(Eq, this.ZJ().getSceneUniformBuffer()), this._scene.finalizeSceneUbo()), this._scene._cachedVisibility = qq ? qq.visibility : 1, this._onBindObservable && qq && this._onBindObservable.notifyObservers(qq), this.disableDepthWrite) {
-            const qq = this._scene.Ba();
-            this._cachedDepthWriteState = qq.getDepthWrite(), qq.setDepthWrite(!1)
+        _afterBind(bb) {
+          let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          if (this._scene._cachedMaterial = this, this._needToBindSceneUbo && ub && (this._needToBindSceneUbo = !1, (0, pb.s)(ub, this.ZN().getSceneUniformBuffer()), this._scene.finalizeSceneUbo()), this._scene._cachedVisibility = bb ? bb.visibility : 1, this._onBindObservable && bb && this._onBindObservable.notifyObservers(bb), this.disableDepthWrite) {
+            const bb = this._scene.UX();
+            this._cachedDepthWriteState = bb.getDepthWrite(), bb.setDepthWrite(!1)
           }
           if (this.disableColorWrite) {
-            const qq = this._scene.Ba();
-            this._cachedColorWriteState = qq.getColorWrite(), qq.setColorWrite(!1)
+            const bb = this._scene.UX();
+            this._cachedColorWriteState = bb.getColorWrite(), bb.setColorWrite(!1)
           }
           if (0 !== this.depthFunction) {
-            const qq = this._scene.Ba();
-            this._cachedDepthFunctionState = qq.getDepthFunction() || 0, qq.setDepthFunction(this.depthFunction)
+            const bb = this._scene.UX();
+            this._cachedDepthFunctionState = bb.getDepthFunction() || 0, bb.setDepthFunction(this.depthFunction)
           }
         }
         unbind() {
           if (this._scene.getSceneUniformBuffer().unbindEffect(), this._onUnBindObservable && this._onUnBindObservable.notifyObservers(this), 0 !== this.depthFunction) {
-            this._scene.Ba().setDepthFunction(this._cachedDepthFunctionState)
+            this._scene.UX().setDepthFunction(this._cachedDepthFunctionState)
           }
           if (this.disableDepthWrite) {
-            this._scene.Ba().setDepthWrite(this._cachedDepthWriteState)
+            this._scene.UX().setDepthWrite(this._cachedDepthWriteState)
           }
           if (this.disableColorWrite) {
-            this._scene.Ba().setColorWrite(this._cachedColorWriteState)
+            this._scene.UX().setColorWrite(this._cachedColorWriteState)
           }
         }
         getAnimatables() {
@@ -981,790 +981,790 @@ export const modules = {
         getActiveTextures() {
           return this._eventInfo.activeTextures = [], this._callbackPluginEventGeneric(512, this._eventInfo), this._eventInfo.activeTextures
         }
-        hasTexture(qq) {
-          return this._eventInfo.hasTexture = !1, this._eventInfo.texture = qq, this._callbackPluginEventGeneric(1024, this._eventInfo), this._eventInfo.hasTexture
+        hasTexture(bb) {
+          return this._eventInfo.hasTexture = !1, this._eventInfo.texture = bb, this._callbackPluginEventGeneric(1024, this._eventInfo), this._eventInfo.hasTexture
         }
-        clone(qq) {
+        clone(bb) {
           return null
         }
-        _clonePlugins(Eq, gq) {
-          const Yq = {};
-          if (this._serializePlugins(Yq), qq._ParsePlugins(Yq, Eq, this._scene, gq), this.pluginManager)
-            for (const qq of this.pluginManager._plugins) {
-              const gq = Eq.pluginManager.getPlugin(qq.name);
-              gq && qq.copyTo(gq)
+        _clonePlugins(ub, hb) {
+          const Bb = {};
+          if (this._serializePlugins(Bb), bb._ParsePlugins(Bb, ub, this._scene, hb), this.pluginManager)
+            for (const bb of this.pluginManager._plugins) {
+              const hb = ub.pluginManager.getPlugin(bb.name);
+              hb && bb.copyTo(hb)
             }
         }
         getBindedMeshes() {
           if (this.meshMap) {
-            const qq = [];
-            for (const Eq in this.meshMap) {
-              const gq = this.meshMap[Eq];
-              gq && qq.push(gq)
+            const bb = [];
+            for (const ub in this.meshMap) {
+              const hb = this.meshMap[ub];
+              hb && bb.push(hb)
             }
-            return qq
+            return bb
           }
-          return this._scene.meshes.filter((qq => qq.material === this))
+          return this._scene.meshes.filter((bb => bb.material === this))
         }
-        forceCompilation(qq, Eq, gq, Yq) {
-          const lq = {
+        forceCompilation(bb, ub, hb, Bb) {
+          const Ob = {
               clipPlane: !1,
               useInstances: !1,
-              ...gq
+              ...hb
             },
-            Oq = this.ZJ(),
-            mq = this.allowShaderHotSwapping;
+            Gb = this.ZN(),
+            Ub = this.allowShaderHotSwapping;
           this.allowShaderHotSwapping = !1;
-          const xq = () => {
-            if (!this._scene || !this._scene.Ba()) return;
-            const gq = Oq.clipPlane;
-            if (lq.clipPlane && (Oq.clipPlane = new Bq.d(0, 0, 0, 1)), this._storeEffectOnSubMeshes) {
-              let gq = !0,
-                Oq = null;
-              if (qq.fn) {
-                const Eq = new Aq.c(0, 0, 0, 0, 0, qq, void 0, !1, !1);
-                Eq.materialDefines && (Eq.materialDefines._renderId = -1), this.isReadyForSubMesh(qq, Eq, lq.useInstances) || (Eq.effect && Eq.effect.getCompilationError() && Eq.effect.allFallbacksProcessed() ? Oq = Eq.effect.getCompilationError() : (gq = !1, setTimeout(xq, 16)))
+          const Lb = () => {
+            if (!this._scene || !this._scene.UX()) return;
+            const hb = Gb.clipPlane;
+            if (Ob.clipPlane && (Gb.clipPlane = new Hb.d(0, 0, 0, 1)), this._storeEffectOnSubMeshes) {
+              let hb = !0,
+                Gb = null;
+              if (bb.FW) {
+                const ub = new Yb.c(0, 0, 0, 0, 0, bb, void 0, !1, !1);
+                ub.materialDefines && (ub.materialDefines._renderId = -1), this.isReadyForSubMesh(bb, ub, Ob.useInstances) || (ub.effect && ub.effect.getCompilationError() && ub.effect.allFallbacksProcessed() ? Gb = ub.effect.getCompilationError() : (hb = !1, setTimeout(Lb, 16)))
               }
-              gq && (this.allowShaderHotSwapping = mq, Oq && Yq && Yq(Oq), Eq && Eq(this))
-            } else this.isReady() ? (this.allowShaderHotSwapping = mq, Eq && Eq(this)) : setTimeout(xq, 16);
-            lq.clipPlane && (Oq.clipPlane = gq)
+              hb && (this.allowShaderHotSwapping = Ub, Gb && Bb && Bb(Gb), ub && ub(this))
+            } else this.isReady() ? (this.allowShaderHotSwapping = Ub, ub && ub(this)) : setTimeout(Lb, 16);
+            Ob.clipPlane && (Gb.clipPlane = hb)
           };
-          xq()
+          Lb()
         }
-        async forceCompilationAsync(qq, Eq) {
-          return await new Promise(((gq, Yq) => {
-            this.forceCompilation(qq, (() => {
-              gq()
-            }), Eq, (qq => {
-              Yq(qq)
+        async forceCompilationAsync(bb, ub) {
+          return await new Promise(((hb, Bb) => {
+            this.forceCompilation(bb, (() => {
+              hb()
+            }), ub, (bb => {
+              Bb(bb)
             }))
           }))
         }
-        xgq(Eq) {
-          this.ZJ().blockMaterialDirtyMechanism || this._blockDirtyMechanism || (qq._DirtyCallbackArray.length = 0, Eq & qq.ImageProcessingDirtyFlag && qq._DirtyCallbackArray.push(qq._ImageProcessingDirtyCallBack), Eq & qq.TextureDirtyFlag && qq._DirtyCallbackArray.push(qq._TextureDirtyCallBack), Eq & qq.LightDirtyFlag && qq._DirtyCallbackArray.push(qq._LightsDirtyCallBack), Eq & qq.FresnelDirtyFlag && qq._DirtyCallbackArray.push(qq._FresnelDirtyCallBack), Eq & qq.AttributesDirtyFlag && qq._DirtyCallbackArray.push(qq._AttributeDirtyCallBack), Eq & qq.MiscDirtyFlag && qq._DirtyCallbackArray.push(qq._MiscDirtyCallBack), Eq & qq.PrePassDirtyFlag && qq._DirtyCallbackArray.push(qq._PrePassDirtyCallBack), qq._DirtyCallbackArray.length && this._markAllSubMeshesAsDirty(qq._RunDirtyCallBacks), this.ZJ().resetCachedMaterial())
+        yub(ub) {
+          this.ZN().blockMaterialDirtyMechanism || this._blockDirtyMechanism || (bb._DirtyCallbackArray.length = 0, ub & bb.ImageProcessingDirtyFlag && bb._DirtyCallbackArray.push(bb._ImageProcessingDirtyCallBack), ub & bb.TextureDirtyFlag && bb._DirtyCallbackArray.push(bb._TextureDirtyCallBack), ub & bb.LightDirtyFlag && bb._DirtyCallbackArray.push(bb._LightsDirtyCallBack), ub & bb.FresnelDirtyFlag && bb._DirtyCallbackArray.push(bb._FresnelDirtyCallBack), ub & bb.AttributesDirtyFlag && bb._DirtyCallbackArray.push(bb._AttributeDirtyCallBack), ub & bb.MiscDirtyFlag && bb._DirtyCallbackArray.push(bb._MiscDirtyCallBack), ub & bb.PrePassDirtyFlag && bb._DirtyCallbackArray.push(bb._PrePassDirtyCallBack), bb._DirtyCallbackArray.length && this._markAllSubMeshesAsDirty(bb._RunDirtyCallBacks), this.ZN().resetCachedMaterial())
         }
         resetDrawCache() {
-          const qq = this.ZJ().meshes;
-          for (const Eq of qq)
-            if (Eq.fn)
-              for (const qq of Eq.fn) qq.da() === this && qq.resetDrawCache()
+          const bb = this.ZN().meshes;
+          for (const ub of bb)
+            if (ub.FW)
+              for (const bb of ub.FW) bb.HX() === this && bb.resetDrawCache()
         }
-        _markAllSubMeshesAsDirty(qq) {
-          const Eq = this.ZJ();
-          if (Eq.blockMaterialDirtyMechanism || this._blockDirtyMechanism) return;
-          const gq = Eq.meshes;
-          for (const Yq of gq)
-            if (Yq.fn)
-              for (const gq of Yq.fn) {
-                if ((gq.da() || (Eq._hasDefaultMaterial ? Eq.defaultMaterial : null)) === this)
-                  for (const Eq of gq._drawWrappers) Eq && Eq.defines && Eq.defines.markAllAsDirty && this._materialContext === Eq.materialContext && qq(Eq.defines)
+        _markAllSubMeshesAsDirty(bb) {
+          const ub = this.ZN();
+          if (ub.blockMaterialDirtyMechanism || this._blockDirtyMechanism) return;
+          const hb = ub.meshes;
+          for (const Bb of hb)
+            if (Bb.FW)
+              for (const hb of Bb.FW) {
+                if ((hb.HX() || (ub._hasDefaultMaterial ? ub.defaultMaterial : null)) === this)
+                  for (const ub of hb._drawWrappers) ub && ub.defines && ub.defines.markAllAsDirty && this._materialContext === ub.materialContext && bb(ub.defines)
               }
         }
         _markScenePrePassDirty() {
-          if (this.ZJ().blockMaterialDirtyMechanism || this._blockDirtyMechanism) return;
-          const qq = this.ZJ().enablePrePassRenderer();
-          qq && qq.xgq()
+          if (this.ZN().blockMaterialDirtyMechanism || this._blockDirtyMechanism) return;
+          const bb = this.ZN().enablePrePassRenderer();
+          bb && bb.yub()
         }
         _markAllSubMeshesAsAllDirty() {
-          this._markAllSubMeshesAsDirty(qq._AllDirtyCallBack)
+          this._markAllSubMeshesAsDirty(bb._AllDirtyCallBack)
         }
         _markAllSubMeshesAsImageProcessingDirty() {
-          this._markAllSubMeshesAsDirty(qq._ImageProcessingDirtyCallBack)
+          this._markAllSubMeshesAsDirty(bb._ImageProcessingDirtyCallBack)
         }
         _markAllSubMeshesAsTexturesDirty() {
-          this._markAllSubMeshesAsDirty(qq._TextureDirtyCallBack)
+          this._markAllSubMeshesAsDirty(bb._TextureDirtyCallBack)
         }
         _markAllSubMeshesAsFresnelDirty() {
-          this._markAllSubMeshesAsDirty(qq._FresnelDirtyCallBack)
+          this._markAllSubMeshesAsDirty(bb._FresnelDirtyCallBack)
         }
         _markAllSubMeshesAsFresnelAndMiscDirty() {
-          this._markAllSubMeshesAsDirty(qq._FresnelAndMiscDirtyCallBack)
+          this._markAllSubMeshesAsDirty(bb._FresnelAndMiscDirtyCallBack)
         }
         _markAllSubMeshesAsLightsDirty() {
-          this._markAllSubMeshesAsDirty(qq._LightsDirtyCallBack)
+          this._markAllSubMeshesAsDirty(bb._LightsDirtyCallBack)
         }
         _markAllSubMeshesAsAttributesDirty() {
-          this._markAllSubMeshesAsDirty(qq._AttributeDirtyCallBack)
+          this._markAllSubMeshesAsDirty(bb._AttributeDirtyCallBack)
         }
         _markAllSubMeshesAsMiscDirty() {
-          this._markAllSubMeshesAsDirty(qq._MiscDirtyCallBack)
+          this._markAllSubMeshesAsDirty(bb._MiscDirtyCallBack)
         }
         _markAllSubMeshesAsPrePassDirty() {
-          this._markAllSubMeshesAsDirty(qq._PrePassDirtyCallBack)
+          this._markAllSubMeshesAsDirty(bb._PrePassDirtyCallBack)
         }
         _markAllSubMeshesAsTexturesAndMiscDirty() {
-          this._markAllSubMeshesAsDirty(qq._TextureAndMiscDirtyCallBack)
+          this._markAllSubMeshesAsDirty(bb._TextureAndMiscDirtyCallBack)
         }
         _checkScenePerformancePriority() {
           if (0 !== this._scene.performancePriority) {
             this.checkReadyOnlyOnce = !0;
-            const qq = this._scene.onScenePerformancePriorityChangedObservable.addOnce((() => {
+            const bb = this._scene.onScenePerformancePriorityChangedObservable.addOnce((() => {
               this.checkReadyOnlyOnce = !1
             }));
-            this.MJ.add((() => {
-              this._scene.onScenePerformancePriorityChangedObservable.remove(qq)
+            this.XN.add((() => {
+              this._scene.onScenePerformancePriorityChangedObservable.remove(bb)
             }))
           }
         }
-        setPrePassRenderer(qq) {
+        setPrePassRenderer(bb) {
           return !1
         }
-        dispose(qq, Eq, gq) {
-          const Yq = this.ZJ();
-          if (Yq.stopAnimation(this), Yq.freeProcessedMaterials(), Yq.removeMaterial(this), this._eventInfo.forceDisposeTextures = Eq, this._callbackPluginEventGeneric(2, this._eventInfo), this._parentContainer) {
-            const qq = this._parentContainer.materials.indexOf(this);
-            qq > -1 && this._parentContainer.materials.splice(qq, 1), this._parentContainer = null
+        dispose(bb, ub, hb) {
+          const Bb = this.ZN();
+          if (Bb.stopAnimation(this), Bb.freeProcessedMaterials(), Bb.removeMaterial(this), this._eventInfo.forceDisposeTextures = ub, this._callbackPluginEventGeneric(2, this._eventInfo), this._parentContainer) {
+            const bb = this._parentContainer.materials.indexOf(this);
+            bb > -1 && this._parentContainer.materials.splice(bb, 1), this._parentContainer = null
           }
-          if (!0 !== gq)
+          if (!0 !== hb)
             if (this.meshMap)
-              for (const lq in this.meshMap) {
-                const qq = this.meshMap[lq];
-                this._disposeMeshResources(qq)
+              for (const Ob in this.meshMap) {
+                const bb = this.meshMap[Ob];
+                this._disposeMeshResources(bb)
               } else {
-                const qq = Yq.meshes;
-                for (const Eq of qq) this._disposeMeshResources(Eq)
+                const bb = Bb.meshes;
+                for (const ub of bb) this._disposeMeshResources(ub)
               }
-          this._uniformBuffer.dispose(), this._drawWrapper.effect && (this._storeEffectOnSubMeshes || this._drawWrapper.effect.dispose(), this._drawWrapper.effect = null), this.metadata = null, this.MJ.notifyObservers(this), this.MJ.clear(), this._onBindObservable && this._onBindObservable.clear(), this._onUnBindObservable && this._onUnBindObservable.clear(), this._onEffectCreatedObservable && this._onEffectCreatedObservable.clear(), this._eventInfo && (this._eventInfo = {})
+          this._uniformBuffer.dispose(), this._drawWrapper.effect && (this._storeEffectOnSubMeshes || this._drawWrapper.effect.dispose(), this._drawWrapper.effect = null), this.metadata = null, this.XN.notifyObservers(this), this.XN.clear(), this._onBindObservable && this._onBindObservable.clear(), this._onUnBindObservable && this._onUnBindObservable.clear(), this._onEffectCreatedObservable && this._onEffectCreatedObservable.clear(), this._eventInfo && (this._eventInfo = {})
         }
-        _disposeMeshResources(qq) {
-          if (!qq) return;
-          const Eq = qq.geometry,
-            gq = qq._internalAbstractMeshDataInfo._materialForRenderPass;
+        _disposeMeshResources(bb) {
+          if (!bb) return;
+          const ub = bb.geometry,
+            hb = bb._internalAbstractMeshDataInfo._materialForRenderPass;
           if (this._storeEffectOnSubMeshes) {
-            if (qq.fn && gq)
-              for (const Yq of qq.fn) {
-                const qq = Yq._drawWrappers;
-                for (let lq = 0; lq < qq.length; lq++) {
-                  const Oq = qq[lq]?.effect;
-                  if (!Oq) continue;
-                  gq[lq] === this && (Eq?._releaseVertexArrayObject(Oq), Yq._removeDrawWrapper(lq, !0, !0))
+            if (bb.FW && hb)
+              for (const Bb of bb.FW) {
+                const bb = Bb._drawWrappers;
+                for (let Ob = 0; Ob < bb.length; Ob++) {
+                  const Gb = bb[Ob]?.effect;
+                  if (!Gb) continue;
+                  hb[Ob] === this && (ub?._releaseVertexArrayObject(Gb), Bb._removeDrawWrapper(Ob, !0, !0))
                 }
               }
-          } else Eq?._releaseVertexArrayObject(this._drawWrapper.effect);
-          qq.material !== this || qq.Plq || (qq.material = null)
+          } else ub?._releaseVertexArrayObject(this._drawWrapper.effect);
+          bb.material !== this || bb.LOb || (bb.material = null)
         }
         serialize() {
-          const qq = Nq.d.Serialize(this);
-          return qq.stencil = this.stencil.serialize(), qq.uniqueId = this.uniqueId, this._serializePlugins(qq), qq
+          const bb = Zb.c.Serialize(this);
+          return bb.stencil = this.stencil.serialize(), bb.uniqueId = this.uniqueId, this._serializePlugins(bb), bb
         }
-        _serializePlugins(qq) {
-          if (qq.plugins = {}, this.pluginManager)
-            for (const Eq of this.pluginManager._plugins) Eq.doNotSerialize || (qq.plugins[Eq.getClassName()] = Eq.serialize())
+        _serializePlugins(bb) {
+          if (bb.plugins = {}, this.pluginManager)
+            for (const ub of this.pluginManager._plugins) ub.doNotSerialize || (bb.plugins[ub.getClassName()] = ub.serialize())
         }
-        static ParseAlphaMode(qq, Eq) {
-          void 0 !== qq._alphaMode ? Eq._alphaMode = Array.isArray(qq._alphaMode) ? [...qq._alphaMode] : [qq._alphaMode] : void 0 !== qq.alphaMode ? Eq._alphaMode = Array.isArray(qq.alphaMode) ? [...qq.alphaMode] : [qq.alphaMode] : Eq._alphaMode = [2]
+        static ParseAlphaMode(bb, ub) {
+          void 0 !== bb._alphaMode ? ub._alphaMode = Array.isArray(bb._alphaMode) ? [...bb._alphaMode] : [bb._alphaMode] : void 0 !== bb.alphaMode ? ub._alphaMode = Array.isArray(bb.alphaMode) ? [...bb.alphaMode] : [bb.alphaMode] : ub._alphaMode = [2]
         }
-        static Parse(Eq, gq, Yq) {
-          if (Eq.customType) {
-            if ("BABYLON.PBRMaterial" === Eq.customType && Eq.overloadedAlbedo && (Eq.customType = "BABYLON.LegacyPBRMaterial", !BABYLON.LegacyPBRMaterial)) return uq.b.Error("Your scene is trying to load a legacy version of the PBRMaterial, please, include it from the materials library."), null
-          } else Eq.customType = "BABYLON.StandardMaterial";
-          const lq = Oq.f.Instantiate(Eq.customType).Parse(Eq, gq, Yq);
-          return lq._loadedUniqueId = Eq.uniqueId, qq.ParseAlphaMode(Eq, lq), lq
+        static Parse(ub, hb, Bb) {
+          if (ub.customType) {
+            if ("BABYLON.PBRMaterial" === ub.customType && ub.overloadedAlbedo && (ub.customType = "BABYLON.LegacyPBRMaterial", !BABYLON.LegacyPBRMaterial)) return ab.b.Error("Your scene is trying to load a legacy version of the PBRMaterial, please, include it from the materials library."), null
+          } else ub.customType = "BABYLON.StandardMaterial";
+          const Ob = Gb.k.Instantiate(ub.customType).Parse(ub, hb, Bb);
+          return Ob._loadedUniqueId = ub.uniqueId, bb.ParseAlphaMode(ub, Ob), Ob
         }
-        static _ParsePlugins(qq, Eq, gq, Yq) {
-          if (qq.plugins)
-            for (const lq in qq.plugins) {
-              const mq = qq.plugins[lq];
-              let xq = Eq.pluginManager?.getPlugin(mq.name);
-              if (!xq) {
-                const qq = Oq.f.Instantiate("BABYLON." + lq);
-                qq && (xq = new qq(Eq))
+        static _ParsePlugins(bb, ub, hb, Bb) {
+          if (bb.plugins)
+            for (const Ob in bb.plugins) {
+              const Ub = bb.plugins[Ob];
+              let Lb = ub.pluginManager?.getPlugin(Ub.name);
+              if (!Lb) {
+                const bb = Gb.k.Instantiate("BABYLON." + Ob);
+                bb && (Lb = new bb(ub))
               }
-              xq?.parse(mq, gq, Yq)
+              Lb?.parse(Ub, hb, Bb)
             }
         }
       }, (() => {
-        const Oq = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Eq = [(0, lq.M)()], gq = [(0, lq.M)()], jq = [(0, lq.M)()], Hq = [(0, lq.M)()], oq = [(0, lq.M)()], Pq = [(0, lq.M)()], Qq = [(0, lq.M)()], yq = [(0, lq.M)("alpha")], tq = [(0, lq.M)("backFaceCulling")], rq = [(0, lq.M)("textureRepetitionMode")], vq = [(0, lq.M)("textureRepetitionHexTilingParams")], hq = [(0, lq.M)("cullBackFaces")], nq = [(0, lq.M)()], bq = [(0, lq.M)()], iq = [(0, lq.M)()], Zq = [(0, lq.M)()], fq = [(0, lq.M)()], Mq = [(0, lq.M)()], Tq = [(0, lq.M)()], zq = [(0, lq.M)()], Sq = [(0, lq.M)("fogEnabled")], pq = [(0, lq.M)()], Gq = [(0, lq.M)()], Lq = [(0, lq.M)()], Jq = [(0, lq.M)()], kq = [(0, lq.M)()], Rq = [(0, lq.M)()], Uq = [(0, lq.M)()], Fq = [(0, lq.M)()], (0, Yq.f)(qq, null, Jq, {
+        const Gb = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        ub = [(0, Ob.K)()], hb = [(0, Ob.K)()], Ab = [(0, Ob.K)()], lb = [(0, Ob.K)()], Kb = [(0, Ob.K)()], Wb = [(0, Ob.K)()], Cb = [(0, Ob.K)()], db = [(0, Ob.K)("alpha")], rb = [(0, Ob.K)("backFaceCulling")], jb = [(0, Ob.K)("textureRepetitionMode")], nb = [(0, Ob.K)("textureRepetitionHexTilingParams")], Db = [(0, Ob.K)("cullBackFaces")], xb = [(0, Ob.K)()], zb = [(0, Ob.K)()], gb = [(0, Ob.K)()], ib = [(0, Ob.K)()], vb = [(0, Ob.K)()], tb = [(0, Ob.K)()], Jb = [(0, Ob.K)()], eb = [(0, Ob.K)()], Nb = [(0, Ob.K)("fogEnabled")], sb = [(0, Ob.K)()], Mb = [(0, Ob.K)()], mb = [(0, Ob.K)()], Ib = [(0, Ob.K)()], Pb = [(0, Ob.K)()], qb = [(0, Ob.K)()], Eb = [(0, Ob.K)()], yb = [(0, Ob.K)()], (0, Bb.h)(bb, null, Ib, {
           kind: "getter",
           name: "pointsCloud",
           static: !1,
           private: !1,
           access: {
-            has: qq => "pointsCloud" in qq,
-            get: qq => qq.pointsCloud
+            has: bb => "pointsCloud" in bb,
+            get: bb => bb.pointsCloud
           },
-          metadata: Oq
-        }, null, sq), (0, Yq.f)(qq, null, kq, {
+          metadata: Gb
+        }, null, Vb), (0, Bb.h)(bb, null, Pb, {
           kind: "getter",
           name: "fillMode",
           static: !1,
           private: !1,
           access: {
-            has: qq => "fillMode" in qq,
-            get: qq => qq.fillMode
+            has: bb => "fillMode" in bb,
+            get: bb => bb.fillMode
           },
-          metadata: Oq
-        }, null, sq), (0, Yq.f)(qq, null, Rq, {
+          metadata: Gb
+        }, null, Vb), (0, Bb.h)(bb, null, qb, {
           kind: "getter",
           name: "useLogarithmicDepth",
           static: !1,
           private: !1,
           access: {
-            has: qq => "useLogarithmicDepth" in qq,
-            get: qq => qq.useLogarithmicDepth
+            has: bb => "useLogarithmicDepth" in bb,
+            get: bb => bb.useLogarithmicDepth
           },
-          metadata: Oq
-        }, null, sq), (0, Yq.f)(qq, null, Fq, {
+          metadata: Gb
+        }, null, Vb), (0, Bb.h)(bb, null, yb, {
           kind: "getter",
           name: "transparencyMode",
           static: !1,
           private: !1,
           access: {
-            has: qq => "transparencyMode" in qq,
-            get: qq => qq.transparencyMode
+            has: bb => "transparencyMode" in bb,
+            get: bb => bb.transparencyMode
           },
-          metadata: Oq
-        }, null, sq), (0, Yq.f)(null, null, Eq, {
+          metadata: Gb
+        }, null, Vb), (0, Bb.h)(null, null, ub, {
           kind: "field",
           name: "id",
           static: !1,
           private: !1,
           access: {
-            has: qq => "id" in qq,
-            get: qq => qq.id,
-            set: (qq, Eq) => {
-              qq.id = Eq
+            has: bb => "id" in bb,
+            get: bb => bb.id,
+            set: (bb, ub) => {
+              bb.id = ub
             }
           },
-          metadata: Oq
-        }, Xq, wq), (0, Yq.f)(null, null, gq, {
+          metadata: Gb
+        }, Fb, fb), (0, Bb.h)(null, null, hb, {
           kind: "field",
           name: "uniqueId",
           static: !1,
           private: !1,
           access: {
-            has: qq => "uniqueId" in qq,
-            get: qq => qq.uniqueId,
-            set: (qq, Eq) => {
-              qq.uniqueId = Eq
+            has: bb => "uniqueId" in bb,
+            get: bb => bb.uniqueId,
+            set: (bb, ub) => {
+              bb.uniqueId = ub
             }
           },
-          metadata: Oq
-        }, Kq, Cq), (0, Yq.f)(null, null, jq, {
+          metadata: Gb
+        }, kb, Tb), (0, Bb.h)(null, null, Ab, {
           kind: "field",
           name: "name",
           static: !1,
           private: !1,
           access: {
-            has: qq => "name" in qq,
-            get: qq => qq.name,
-            set: (qq, Eq) => {
-              qq.name = Eq
+            has: bb => "name" in bb,
+            get: bb => bb.name,
+            set: (bb, ub) => {
+              bb.name = ub
             }
           },
-          metadata: Oq
-        }, Iq, eq), (0, Yq.f)(null, null, Hq, {
+          metadata: Gb
+        }, cb, Qb), (0, Bb.h)(null, null, lb, {
           kind: "field",
           name: "metadata",
           static: !1,
           private: !1,
           access: {
-            has: qq => "metadata" in qq,
-            get: qq => qq.metadata,
-            set: (qq, Eq) => {
-              qq.metadata = Eq
+            has: bb => "metadata" in bb,
+            get: bb => bb.metadata,
+            set: (bb, ub) => {
+              bb.metadata = ub
             }
           },
-          metadata: Oq
-        }, Dq, qE), (0, Yq.f)(null, null, oq, {
+          metadata: Gb
+        }, Rb, bu), (0, Bb.h)(null, null, Kb, {
           kind: "field",
           name: "checkReadyOnEveryCall",
           static: !1,
           private: !1,
           access: {
-            has: qq => "checkReadyOnEveryCall" in qq,
-            get: qq => qq.checkReadyOnEveryCall,
-            set: (qq, Eq) => {
-              qq.checkReadyOnEveryCall = Eq
+            has: bb => "checkReadyOnEveryCall" in bb,
+            get: bb => bb.checkReadyOnEveryCall,
+            set: (bb, ub) => {
+              bb.checkReadyOnEveryCall = ub
             }
           },
-          metadata: Oq
-        }, EE, gE), (0, Yq.f)(null, null, Pq, {
+          metadata: Gb
+        }, uu, hu), (0, Bb.h)(null, null, Wb, {
           kind: "field",
           name: "checkReadyOnlyOnce",
           static: !1,
           private: !1,
           access: {
-            has: qq => "checkReadyOnlyOnce" in qq,
-            get: qq => qq.checkReadyOnlyOnce,
-            set: (qq, Eq) => {
-              qq.checkReadyOnlyOnce = Eq
+            has: bb => "checkReadyOnlyOnce" in bb,
+            get: bb => bb.checkReadyOnlyOnce,
+            set: (bb, ub) => {
+              bb.checkReadyOnlyOnce = ub
             }
           },
-          metadata: Oq
-        }, YE, lE), (0, Yq.f)(null, null, Qq, {
+          metadata: Gb
+        }, Bu, Ou), (0, Bb.h)(null, null, Cb, {
           kind: "field",
           name: "state",
           static: !1,
           private: !1,
           access: {
-            has: qq => "state" in qq,
-            get: qq => qq.state,
-            set: (qq, Eq) => {
-              qq.state = Eq
+            has: bb => "state" in bb,
+            get: bb => bb.state,
+            set: (bb, ub) => {
+              bb.state = ub
             }
           },
-          metadata: Oq
-        }, OE, mE), (0, Yq.f)(null, null, yq, {
+          metadata: Gb
+        }, Gu, Uu), (0, Bb.h)(null, null, db, {
           kind: "field",
           name: "_alpha",
           static: !1,
           private: !1,
           access: {
-            has: qq => "_alpha" in qq,
-            get: qq => qq._alpha,
-            set: (qq, Eq) => {
-              qq._alpha = Eq
+            has: bb => "_alpha" in bb,
+            get: bb => bb._alpha,
+            set: (bb, ub) => {
+              bb._alpha = ub
             }
           },
-          metadata: Oq
-        }, xE, AE), (0, Yq.f)(null, null, tq, {
+          metadata: Gb
+        }, Lu, Yu), (0, Bb.h)(null, null, rb, {
           kind: "field",
           name: "_backFaceCulling",
           static: !1,
           private: !1,
           access: {
-            has: qq => "_backFaceCulling" in qq,
-            get: qq => qq._backFaceCulling,
-            set: (qq, Eq) => {
-              qq._backFaceCulling = Eq
+            has: bb => "_backFaceCulling" in bb,
+            get: bb => bb._backFaceCulling,
+            set: (bb, ub) => {
+              bb._backFaceCulling = ub
             }
           },
-          metadata: Oq
-        }, cE, uE), (0, Yq.f)(null, null, rq, {
+          metadata: Gb
+        }, Su, au), (0, Bb.h)(null, null, jb, {
           kind: "field",
           name: "_textureRepetitionMode",
           static: !1,
           private: !1,
           access: {
-            has: qq => "_textureRepetitionMode" in qq,
-            get: qq => qq._textureRepetitionMode,
-            set: (qq, Eq) => {
-              qq._textureRepetitionMode = Eq
+            has: bb => "_textureRepetitionMode" in bb,
+            get: bb => bb._textureRepetitionMode,
+            set: (bb, ub) => {
+              bb._textureRepetitionMode = ub
             }
           },
-          metadata: Oq
-        }, BE, WE), (0, Yq.f)(null, null, vq, {
+          metadata: Gb
+        }, Hu, wu), (0, Bb.h)(null, null, nb, {
           kind: "field",
           name: "textureRepetitionHexTilingParams",
           static: !1,
           private: !1,
           access: {
-            has: qq => "textureRepetitionHexTilingParams" in qq,
-            get: qq => qq.textureRepetitionHexTilingParams,
-            set: (qq, Eq) => {
-              qq.textureRepetitionHexTilingParams = Eq
+            has: bb => "textureRepetitionHexTilingParams" in bb,
+            get: bb => bb.textureRepetitionHexTilingParams,
+            set: (bb, ub) => {
+              bb.textureRepetitionHexTilingParams = ub
             }
           },
-          metadata: Oq
-        }, NE, aE), (0, Yq.f)(null, null, hq, {
+          metadata: Gb
+        }, Zu, Xu), (0, Bb.h)(null, null, Db, {
           kind: "field",
           name: "_cullBackFaces",
           static: !1,
           private: !1,
           access: {
-            has: qq => "_cullBackFaces" in qq,
-            get: qq => qq._cullBackFaces,
-            set: (qq, Eq) => {
-              qq._cullBackFaces = Eq
+            has: bb => "_cullBackFaces" in bb,
+            get: bb => bb._cullBackFaces,
+            set: (bb, ub) => {
+              bb._cullBackFaces = ub
             }
           },
-          metadata: Oq
-        }, VE, dE), (0, Yq.f)(null, null, nq, {
+          metadata: Gb
+        }, pu, ou), (0, Bb.h)(null, null, xb, {
           kind: "field",
           name: "sideOrientation",
           static: !1,
           private: !1,
           access: {
-            has: qq => "sideOrientation" in qq,
-            get: qq => qq.sideOrientation,
-            set: (qq, Eq) => {
-              qq.sideOrientation = Eq
+            has: bb => "sideOrientation" in bb,
+            get: bb => bb.sideOrientation,
+            set: (bb, ub) => {
+              bb.sideOrientation = ub
             }
           },
-          metadata: Oq
-        }, jE, HE), (0, Yq.f)(null, null, bq, {
+          metadata: Gb
+        }, Au, lu), (0, Bb.h)(null, null, zb, {
           kind: "field",
           name: "_alphaMode",
           static: !1,
           private: !1,
           access: {
-            has: qq => "_alphaMode" in qq,
-            get: qq => qq._alphaMode,
-            set: (qq, Eq) => {
-              qq._alphaMode = Eq
+            has: bb => "_alphaMode" in bb,
+            get: bb => bb._alphaMode,
+            set: (bb, ub) => {
+              bb._alphaMode = ub
             }
           },
-          metadata: Oq
-        }, oE, PE), (0, Yq.f)(null, null, iq, {
+          metadata: Gb
+        }, Ku, Wu), (0, Bb.h)(null, null, gb, {
           kind: "field",
           name: "_needDepthPrePass",
           static: !1,
           private: !1,
           access: {
-            has: qq => "_needDepthPrePass" in qq,
-            get: qq => qq._needDepthPrePass,
-            set: (qq, Eq) => {
-              qq._needDepthPrePass = Eq
+            has: bb => "_needDepthPrePass" in bb,
+            get: bb => bb._needDepthPrePass,
+            set: (bb, ub) => {
+              bb._needDepthPrePass = ub
             }
           },
-          metadata: Oq
-        }, QE, yE), (0, Yq.f)(null, null, Zq, {
+          metadata: Gb
+        }, Cu, du), (0, Bb.h)(null, null, ib, {
           kind: "field",
           name: "disableDepthWrite",
           static: !1,
           private: !1,
           access: {
-            has: qq => "disableDepthWrite" in qq,
-            get: qq => qq.disableDepthWrite,
-            set: (qq, Eq) => {
-              qq.disableDepthWrite = Eq
+            has: bb => "disableDepthWrite" in bb,
+            get: bb => bb.disableDepthWrite,
+            set: (bb, ub) => {
+              bb.disableDepthWrite = ub
             }
           },
-          metadata: Oq
-        }, tE, rE), (0, Yq.f)(null, null, fq, {
+          metadata: Gb
+        }, ru, ju), (0, Bb.h)(null, null, vb, {
           kind: "field",
           name: "disableColorWrite",
           static: !1,
           private: !1,
           access: {
-            has: qq => "disableColorWrite" in qq,
-            get: qq => qq.disableColorWrite,
-            set: (qq, Eq) => {
-              qq.disableColorWrite = Eq
+            has: bb => "disableColorWrite" in bb,
+            get: bb => bb.disableColorWrite,
+            set: (bb, ub) => {
+              bb.disableColorWrite = ub
             }
           },
-          metadata: Oq
-        }, vE, hE), (0, Yq.f)(null, null, Mq, {
+          metadata: Gb
+        }, nu, Du), (0, Bb.h)(null, null, tb, {
           kind: "field",
           name: "forceDepthWrite",
           static: !1,
           private: !1,
           access: {
-            has: qq => "forceDepthWrite" in qq,
-            get: qq => qq.forceDepthWrite,
-            set: (qq, Eq) => {
-              qq.forceDepthWrite = Eq
+            has: bb => "forceDepthWrite" in bb,
+            get: bb => bb.forceDepthWrite,
+            set: (bb, ub) => {
+              bb.forceDepthWrite = ub
             }
           },
-          metadata: Oq
-        }, nE, bE), (0, Yq.f)(null, null, Tq, {
+          metadata: Gb
+        }, xu, zu), (0, Bb.h)(null, null, Jb, {
           kind: "field",
           name: "depthFunction",
           static: !1,
           private: !1,
           access: {
-            has: qq => "depthFunction" in qq,
-            get: qq => qq.depthFunction,
-            set: (qq, Eq) => {
-              qq.depthFunction = Eq
+            has: bb => "depthFunction" in bb,
+            get: bb => bb.depthFunction,
+            set: (bb, ub) => {
+              bb.depthFunction = ub
             }
           },
-          metadata: Oq
-        }, iE, ZE), (0, Yq.f)(null, null, zq, {
+          metadata: Gb
+        }, gu, iu), (0, Bb.h)(null, null, eb, {
           kind: "field",
           name: "separateCullingPass",
           static: !1,
           private: !1,
           access: {
-            has: qq => "separateCullingPass" in qq,
-            get: qq => qq.separateCullingPass,
-            set: (qq, Eq) => {
-              qq.separateCullingPass = Eq
+            has: bb => "separateCullingPass" in bb,
+            get: bb => bb.separateCullingPass,
+            set: (bb, ub) => {
+              bb.separateCullingPass = ub
             }
           },
-          metadata: Oq
-        }, fE, ME), (0, Yq.f)(null, null, Sq, {
+          metadata: Gb
+        }, vu, tu), (0, Bb.h)(null, null, Nb, {
           kind: "field",
           name: "_fogEnabled",
           static: !1,
           private: !1,
           access: {
-            has: qq => "_fogEnabled" in qq,
-            get: qq => qq._fogEnabled,
-            set: (qq, Eq) => {
-              qq._fogEnabled = Eq
+            has: bb => "_fogEnabled" in bb,
+            get: bb => bb._fogEnabled,
+            set: (bb, ub) => {
+              bb._fogEnabled = ub
             }
           },
-          metadata: Oq
-        }, TE, zE), (0, Yq.f)(null, null, pq, {
+          metadata: Gb
+        }, Ju, eu), (0, Bb.h)(null, null, sb, {
           kind: "field",
           name: "pointSize",
           static: !1,
           private: !1,
           access: {
-            has: qq => "pointSize" in qq,
-            get: qq => qq.pointSize,
-            set: (qq, Eq) => {
-              qq.pointSize = Eq
+            has: bb => "pointSize" in bb,
+            get: bb => bb.pointSize,
+            set: (bb, ub) => {
+              bb.pointSize = ub
             }
           },
-          metadata: Oq
-        }, SE, pE), (0, Yq.f)(null, null, Gq, {
+          metadata: Gb
+        }, Nu, su), (0, Bb.h)(null, null, Mb, {
           kind: "field",
           name: "zOffset",
           static: !1,
           private: !1,
           access: {
-            has: qq => "zOffset" in qq,
-            get: qq => qq.zOffset,
-            set: (qq, Eq) => {
-              qq.zOffset = Eq
+            has: bb => "zOffset" in bb,
+            get: bb => bb.zOffset,
+            set: (bb, ub) => {
+              bb.zOffset = ub
             }
           },
-          metadata: Oq
-        }, GE, LE), (0, Yq.f)(null, null, Lq, {
+          metadata: Gb
+        }, Mu, mu), (0, Bb.h)(null, null, mb, {
           kind: "field",
           name: "zOffsetUnits",
           static: !1,
           private: !1,
           access: {
-            has: qq => "zOffsetUnits" in qq,
-            get: qq => qq.zOffsetUnits,
-            set: (qq, Eq) => {
-              qq.zOffsetUnits = Eq
+            has: bb => "zOffsetUnits" in bb,
+            get: bb => bb.zOffsetUnits,
+            set: (bb, ub) => {
+              bb.zOffsetUnits = ub
             }
           },
-          metadata: Oq
-        }, JE, kE), (0, Yq.f)(null, null, Uq, {
+          metadata: Gb
+        }, Iu, Pu), (0, Bb.h)(null, null, Eb, {
           kind: "field",
           name: "_isVertexOutputInvariant",
           static: !1,
           private: !1,
           access: {
-            has: qq => "_isVertexOutputInvariant" in qq,
-            get: qq => qq._isVertexOutputInvariant,
-            set: (qq, Eq) => {
-              qq._isVertexOutputInvariant = Eq
+            has: bb => "_isVertexOutputInvariant" in bb,
+            get: bb => bb._isVertexOutputInvariant,
+            set: (bb, ub) => {
+              bb._isVertexOutputInvariant = ub
             }
           },
-          metadata: Oq
-        }, RE, UE), Oq && Object.defineProperty(qq, Symbol.metadata, {
+          metadata: Gb
+        }, qu, Eu), Gb && Object.defineProperty(bb, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Oq
+          value: Gb
         })
-      })(), qq.TriangleFillMode = 0, qq.WireFrameFillMode = 1, qq.PointFillMode = 2, qq.PointListDrawMode = 3, qq.LineListDrawMode = 4, qq.LineLoopDrawMode = 5, qq.LineStripDrawMode = 6, qq.TriangleStripDrawMode = 7, qq.TriangleFanDrawMode = 8, qq.ClockWiseSideOrientation = 0, qq.CounterClockWiseSideOrientation = 1, qq.ImageProcessingDirtyFlag = 64, qq.TextureDirtyFlag = 1, qq.LightDirtyFlag = 2, qq.FresnelDirtyFlag = 4, qq.AttributesDirtyFlag = 8, qq.MiscDirtyFlag = 16, qq.PrePassDirtyFlag = 32, qq.AllDirtyFlag = 127, qq.MATERIAL_OPAQUE = 0, qq.MATERIAL_ALPHATEST = 1, qq.MATERIAL_ALPHABLEND = 2, qq.MATERIAL_ALPHATESTANDBLEND = 3, qq.MATERIAL_NORMALBLENDMETHOD_WHITEOUT = 0, qq.MATERIAL_NORMALBLENDMETHOD_RNM = 1, qq.LIGHTFALLOFF_PHYSICAL = 0, qq.LIGHTFALLOFF_GLTF = 1, qq.LIGHTFALLOFF_STANDARD = 2, qq.OnEventObservable = new mq.d, qq.ForceVertexOutputInvariant = !1, qq._AllDirtyCallBack = qq => qq.markAllAsDirty(), qq._ImageProcessingDirtyCallBack = qq => qq.markAsImageProcessingDirty(), qq._TextureDirtyCallBack = qq => qq.markAsTexturesDirty(), qq._FresnelDirtyCallBack = qq => qq.markAsFresnelDirty(), qq._MiscDirtyCallBack = qq => qq.markAsMiscDirty(), qq._PrePassDirtyCallBack = qq => qq.markAsPrePassDirty(), qq._LightsDirtyCallBack = qq => qq.markAsLightDirty(), qq._AttributeDirtyCallBack = qq => qq.markAsAttributesDirty(), qq._FresnelAndMiscDirtyCallBack = Eq => {
-        qq._FresnelDirtyCallBack(Eq), qq._MiscDirtyCallBack(Eq)
-      }, qq._TextureAndMiscDirtyCallBack = Eq => {
-        qq._TextureDirtyCallBack(Eq), qq._MiscDirtyCallBack(Eq)
-      }, qq._DirtyCallbackArray = [], qq._RunDirtyCallBacks = Eq => {
-        for (const gq of qq._DirtyCallbackArray) gq(Eq)
-      }, qq
+      })(), bb.TriangleFillMode = 0, bb.WireFrameFillMode = 1, bb.PointFillMode = 2, bb.PointListDrawMode = 3, bb.LineListDrawMode = 4, bb.LineLoopDrawMode = 5, bb.LineStripDrawMode = 6, bb.TriangleStripDrawMode = 7, bb.TriangleFanDrawMode = 8, bb.ClockWiseSideOrientation = 0, bb.CounterClockWiseSideOrientation = 1, bb.ImageProcessingDirtyFlag = 64, bb.TextureDirtyFlag = 1, bb.LightDirtyFlag = 2, bb.FresnelDirtyFlag = 4, bb.AttributesDirtyFlag = 8, bb.MiscDirtyFlag = 16, bb.PrePassDirtyFlag = 32, bb.AllDirtyFlag = 127, bb.MATERIAL_OPAQUE = 0, bb.MATERIAL_ALPHATEST = 1, bb.MATERIAL_ALPHABLEND = 2, bb.MATERIAL_ALPHATESTANDBLEND = 3, bb.MATERIAL_NORMALBLENDMETHOD_WHITEOUT = 0, bb.MATERIAL_NORMALBLENDMETHOD_RNM = 1, bb.LIGHTFALLOFF_PHYSICAL = 0, bb.LIGHTFALLOFF_GLTF = 1, bb.LIGHTFALLOFF_STANDARD = 2, bb.OnEventObservable = new Ub.e, bb.ForceVertexOutputInvariant = !1, bb._AllDirtyCallBack = bb => bb.markAllAsDirty(), bb._ImageProcessingDirtyCallBack = bb => bb.markAsImageProcessingDirty(), bb._TextureDirtyCallBack = bb => bb.markAsTexturesDirty(), bb._FresnelDirtyCallBack = bb => bb.markAsFresnelDirty(), bb._MiscDirtyCallBack = bb => bb.markAsMiscDirty(), bb._PrePassDirtyCallBack = bb => bb.markAsPrePassDirty(), bb._LightsDirtyCallBack = bb => bb.markAsLightDirty(), bb._AttributeDirtyCallBack = bb => bb.markAsAttributesDirty(), bb._FresnelAndMiscDirtyCallBack = ub => {
+        bb._FresnelDirtyCallBack(ub), bb._MiscDirtyCallBack(ub)
+      }, bb._TextureAndMiscDirtyCallBack = ub => {
+        bb._TextureDirtyCallBack(ub), bb._MiscDirtyCallBack(ub)
+      }, bb._DirtyCallbackArray = [], bb._RunDirtyCallBacks = ub => {
+        for (const hb of bb._DirtyCallbackArray) hb(ub)
+      }, bb
     })();
-    Object.getOwnPropertyDescriptor(Hq.prototype, "pluginManager") || Object.defineProperty(Hq.prototype, "pluginManager", (0, jq.e)("Material", "pluginManager"))
+    Object.getOwnPropertyDescriptor(lb.prototype, "pluginManager") || Object.defineProperty(lb.prototype, "pluginManager", (0, Ab.f)("Material", "pluginManager"))
   },
-  40092: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => lq
+  39788: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Ob
     });
-    var Yq = gq(39653);
-    class lq {
+    var Bb = hb(39350);
+    class Ob {
       static get DiffuseTextureEnabled() {
         return this._DiffuseTextureEnabled
       }
-      static set DiffuseTextureEnabled(qq) {
-        this._DiffuseTextureEnabled !== qq && (this._DiffuseTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set DiffuseTextureEnabled(bb) {
+        this._DiffuseTextureEnabled !== bb && (this._DiffuseTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get BaseWeightTextureEnabled() {
         return this._BaseWeightTextureEnabled
       }
-      static set BaseWeightTextureEnabled(qq) {
-        this._BaseWeightTextureEnabled !== qq && (this._BaseWeightTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set BaseWeightTextureEnabled(bb) {
+        this._BaseWeightTextureEnabled !== bb && (this._BaseWeightTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get BaseDiffuseRoughnessTextureEnabled() {
         return this._BaseDiffuseRoughnessTextureEnabled
       }
-      static set BaseDiffuseRoughnessTextureEnabled(qq) {
-        this._BaseDiffuseRoughnessTextureEnabled !== qq && (this._BaseDiffuseRoughnessTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set BaseDiffuseRoughnessTextureEnabled(bb) {
+        this._BaseDiffuseRoughnessTextureEnabled !== bb && (this._BaseDiffuseRoughnessTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get DetailTextureEnabled() {
         return this._DetailTextureEnabled
       }
-      static set DetailTextureEnabled(qq) {
-        this._DetailTextureEnabled !== qq && (this._DetailTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set DetailTextureEnabled(bb) {
+        this._DetailTextureEnabled !== bb && (this._DetailTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get DecalMapEnabled() {
         return this._DecalMapEnabled
       }
-      static set DecalMapEnabled(qq) {
-        this._DecalMapEnabled !== qq && (this._DecalMapEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set DecalMapEnabled(bb) {
+        this._DecalMapEnabled !== bb && (this._DecalMapEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get AmbientTextureEnabled() {
         return this._AmbientTextureEnabled
       }
-      static set AmbientTextureEnabled(qq) {
-        this._AmbientTextureEnabled !== qq && (this._AmbientTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set AmbientTextureEnabled(bb) {
+        this._AmbientTextureEnabled !== bb && (this._AmbientTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get OpacityTextureEnabled() {
         return this._OpacityTextureEnabled
       }
-      static set OpacityTextureEnabled(qq) {
-        this._OpacityTextureEnabled !== qq && (this._OpacityTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set OpacityTextureEnabled(bb) {
+        this._OpacityTextureEnabled !== bb && (this._OpacityTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get ReflectionTextureEnabled() {
         return this._ReflectionTextureEnabled
       }
-      static set ReflectionTextureEnabled(qq) {
-        this._ReflectionTextureEnabled !== qq && (this._ReflectionTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set ReflectionTextureEnabled(bb) {
+        this._ReflectionTextureEnabled !== bb && (this._ReflectionTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get EmissiveTextureEnabled() {
         return this._EmissiveTextureEnabled
       }
-      static set EmissiveTextureEnabled(qq) {
-        this._EmissiveTextureEnabled !== qq && (this._EmissiveTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set EmissiveTextureEnabled(bb) {
+        this._EmissiveTextureEnabled !== bb && (this._EmissiveTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get SpecularTextureEnabled() {
         return this._SpecularTextureEnabled
       }
-      static set SpecularTextureEnabled(qq) {
-        this._SpecularTextureEnabled !== qq && (this._SpecularTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set SpecularTextureEnabled(bb) {
+        this._SpecularTextureEnabled !== bb && (this._SpecularTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get BumpTextureEnabled() {
         return this._BumpTextureEnabled
       }
-      static set BumpTextureEnabled(qq) {
-        this._BumpTextureEnabled !== qq && (this._BumpTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set BumpTextureEnabled(bb) {
+        this._BumpTextureEnabled !== bb && (this._BumpTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get LightmapTextureEnabled() {
         return this._LightmapTextureEnabled
       }
-      static set LightmapTextureEnabled(qq) {
-        this._LightmapTextureEnabled !== qq && (this._LightmapTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set LightmapTextureEnabled(bb) {
+        this._LightmapTextureEnabled !== bb && (this._LightmapTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get RefractionTextureEnabled() {
         return this._RefractionTextureEnabled
       }
-      static set RefractionTextureEnabled(qq) {
-        this._RefractionTextureEnabled !== qq && (this._RefractionTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set RefractionTextureEnabled(bb) {
+        this._RefractionTextureEnabled !== bb && (this._RefractionTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get ColorGradingTextureEnabled() {
         return this._ColorGradingTextureEnabled
       }
-      static set ColorGradingTextureEnabled(qq) {
-        this._ColorGradingTextureEnabled !== qq && (this._ColorGradingTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set ColorGradingTextureEnabled(bb) {
+        this._ColorGradingTextureEnabled !== bb && (this._ColorGradingTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get FresnelEnabled() {
         return this._FresnelEnabled
       }
-      static set FresnelEnabled(qq) {
-        this._FresnelEnabled !== qq && (this._FresnelEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(4))
+      static set FresnelEnabled(bb) {
+        this._FresnelEnabled !== bb && (this._FresnelEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(4))
       }
       static get ClearCoatTextureEnabled() {
         return this._ClearCoatTextureEnabled
       }
-      static set ClearCoatTextureEnabled(qq) {
-        this._ClearCoatTextureEnabled !== qq && (this._ClearCoatTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set ClearCoatTextureEnabled(bb) {
+        this._ClearCoatTextureEnabled !== bb && (this._ClearCoatTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get ClearCoatBumpTextureEnabled() {
         return this._ClearCoatBumpTextureEnabled
       }
-      static set ClearCoatBumpTextureEnabled(qq) {
-        this._ClearCoatBumpTextureEnabled !== qq && (this._ClearCoatBumpTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set ClearCoatBumpTextureEnabled(bb) {
+        this._ClearCoatBumpTextureEnabled !== bb && (this._ClearCoatBumpTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get ClearCoatTintTextureEnabled() {
         return this._ClearCoatTintTextureEnabled
       }
-      static set ClearCoatTintTextureEnabled(qq) {
-        this._ClearCoatTintTextureEnabled !== qq && (this._ClearCoatTintTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set ClearCoatTintTextureEnabled(bb) {
+        this._ClearCoatTintTextureEnabled !== bb && (this._ClearCoatTintTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get SheenTextureEnabled() {
         return this._SheenTextureEnabled
       }
-      static set SheenTextureEnabled(qq) {
-        this._SheenTextureEnabled !== qq && (this._SheenTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set SheenTextureEnabled(bb) {
+        this._SheenTextureEnabled !== bb && (this._SheenTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get AnisotropicTextureEnabled() {
         return this._AnisotropicTextureEnabled
       }
-      static set AnisotropicTextureEnabled(qq) {
-        this._AnisotropicTextureEnabled !== qq && (this._AnisotropicTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set AnisotropicTextureEnabled(bb) {
+        this._AnisotropicTextureEnabled !== bb && (this._AnisotropicTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get ThicknessTextureEnabled() {
         return this._ThicknessTextureEnabled
       }
-      static set ThicknessTextureEnabled(qq) {
-        this._ThicknessTextureEnabled !== qq && (this._ThicknessTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set ThicknessTextureEnabled(bb) {
+        this._ThicknessTextureEnabled !== bb && (this._ThicknessTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get RefractionIntensityTextureEnabled() {
         return this._ThicknessTextureEnabled
       }
-      static set RefractionIntensityTextureEnabled(qq) {
-        this._RefractionIntensityTextureEnabled !== qq && (this._RefractionIntensityTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set RefractionIntensityTextureEnabled(bb) {
+        this._RefractionIntensityTextureEnabled !== bb && (this._RefractionIntensityTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get TranslucencyIntensityTextureEnabled() {
         return this._TranslucencyIntensityTextureEnabled
       }
-      static set TranslucencyIntensityTextureEnabled(qq) {
-        this._TranslucencyIntensityTextureEnabled !== qq && (this._TranslucencyIntensityTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set TranslucencyIntensityTextureEnabled(bb) {
+        this._TranslucencyIntensityTextureEnabled !== bb && (this._TranslucencyIntensityTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get TranslucencyColorTextureEnabled() {
         return this._TranslucencyColorTextureEnabled
       }
-      static set TranslucencyColorTextureEnabled(qq) {
-        this._TranslucencyColorTextureEnabled !== qq && (this._TranslucencyColorTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set TranslucencyColorTextureEnabled(bb) {
+        this._TranslucencyColorTextureEnabled !== bb && (this._TranslucencyColorTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
       static get IridescenceTextureEnabled() {
         return this._IridescenceTextureEnabled
       }
-      static set IridescenceTextureEnabled(qq) {
-        this._IridescenceTextureEnabled !== qq && (this._IridescenceTextureEnabled = qq, Yq.b.MarkAllMaterialsAsDirty(1))
+      static set IridescenceTextureEnabled(bb) {
+        this._IridescenceTextureEnabled !== bb && (this._IridescenceTextureEnabled = bb, Bb.d.MarkAllMaterialsAsDirty(1))
       }
     }
-    lq._DiffuseTextureEnabled = !0, lq._BaseWeightTextureEnabled = !0, lq._BaseDiffuseRoughnessTextureEnabled = !0, lq._DetailTextureEnabled = !0, lq._DecalMapEnabled = !0, lq._AmbientTextureEnabled = !0, lq._OpacityTextureEnabled = !0, lq._ReflectionTextureEnabled = !0, lq._EmissiveTextureEnabled = !0, lq._SpecularTextureEnabled = !0, lq._BumpTextureEnabled = !0, lq._LightmapTextureEnabled = !0, lq._RefractionTextureEnabled = !0, lq._ColorGradingTextureEnabled = !0, lq._FresnelEnabled = !0, lq._ClearCoatTextureEnabled = !0, lq._ClearCoatBumpTextureEnabled = !0, lq._ClearCoatTintTextureEnabled = !0, lq._SheenTextureEnabled = !0, lq._AnisotropicTextureEnabled = !0, lq._ThicknessTextureEnabled = !0, lq._RefractionIntensityTextureEnabled = !0, lq._TranslucencyIntensityTextureEnabled = !0, lq._TranslucencyColorTextureEnabled = !0, lq._IridescenceTextureEnabled = !0
+    Ob._DiffuseTextureEnabled = !0, Ob._BaseWeightTextureEnabled = !0, Ob._BaseDiffuseRoughnessTextureEnabled = !0, Ob._DetailTextureEnabled = !0, Ob._DecalMapEnabled = !0, Ob._AmbientTextureEnabled = !0, Ob._OpacityTextureEnabled = !0, Ob._ReflectionTextureEnabled = !0, Ob._EmissiveTextureEnabled = !0, Ob._SpecularTextureEnabled = !0, Ob._BumpTextureEnabled = !0, Ob._LightmapTextureEnabled = !0, Ob._RefractionTextureEnabled = !0, Ob._ColorGradingTextureEnabled = !0, Ob._FresnelEnabled = !0, Ob._ClearCoatTextureEnabled = !0, Ob._ClearCoatBumpTextureEnabled = !0, Ob._ClearCoatTintTextureEnabled = !0, Ob._SheenTextureEnabled = !0, Ob._AnisotropicTextureEnabled = !0, Ob._ThicknessTextureEnabled = !0, Ob._RefractionIntensityTextureEnabled = !0, Ob._TranslucencyIntensityTextureEnabled = !0, Ob._TranslucencyColorTextureEnabled = !0, Ob._IridescenceTextureEnabled = !0
   },
-  40079: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      D: () => Qq,
-      G: () => nq,
-      J: () => bq,
-      M: () => Nq,
-      Q: () => Wq,
-      R: () => kq,
-      V: () => Sq,
-      W: () => Tq,
-      _: () => Mq,
-      b: () => fq,
-      bb: () => oq,
-      c: () => yq,
-      f: () => Bq,
-      fb: () => Zq,
-      hb: () => Rq,
-      i: () => jq,
-      jb: () => Uq,
-      l: () => Hq,
-      n: () => hq,
-      nb: () => Fq,
-      o: () => Aq,
-      p: () => Vq,
-      pb: () => Kq,
-      rb: () => Xq,
-      s: () => dq,
-      vb: () => wq,
-      w: () => Pq,
-      xb: () => aq,
-      z: () => iq
+  39773: (bb, ub, hb) => {
+    hb.d(ub, {
+      A: () => xb,
+      E: () => zb,
+      F: () => Zb,
+      H: () => wb,
+      I: () => Pb,
+      K: () => Nb,
+      O: () => Jb,
+      Q: () => tb,
+      R: () => Kb,
+      S: () => ib,
+      U: () => qb,
+      W: () => Eb,
+      X: () => yb,
+      Y: () => kb,
+      Z: () => Fb,
+      bb: () => fb,
+      d: () => vb,
+      e: () => db,
+      f: () => Hb,
+      fb: () => Xb,
+      h: () => Ab,
+      i: () => lb,
+      j: () => Db,
+      l: () => Yb,
+      p: () => pb,
+      s: () => ob,
+      u: () => Wb,
+      x: () => gb,
+      y: () => Cb
     });
-    var Yq = gq(38653),
-      lq = gq(37153),
-      Oq = gq(39938),
-      mq = gq(40083),
-      xq = gq(40092);
+    var Bb = hb(38302),
+      Ob = hb(36748),
+      Gb = hb(39659),
+      Ub = hb(39782),
+      Lb = hb(39788);
 
-    function Aq(qq, Eq, gq) {
-      if (!qq || qq.LOGARITHMICDEPTH || qq.indexOf && qq.indexOf("LOGARITHMICDEPTH") >= 0) {
-        const qq = gq.activeCamera;
-        1 === qq.mode && Yq.b.Error("Logarithmic depth is not compatible with orthographic cameras!", 20), Eq.setFloat("logarithmicDepthConstant", 2 / (Math.log(qq.maxZ + 1) / Math.LN2))
+    function Yb(bb, ub, hb) {
+      if (!bb || bb.LOGARITHMICDEPTH || bb.indexOf && bb.indexOf("LOGARITHMICDEPTH") >= 0) {
+        const bb = hb.activeCamera;
+        1 === bb.mode && Bb.b.Error("Logarithmic depth is not compatible with orthographic cameras!", 20), ub.setFloat("logarithmicDepthConstant", 2 / (Math.log(bb.maxZ + 1) / Math.LN2))
       }
     }
-    const cq = {
+    const Sb = {
         r: 0,
         g: 0,
         b: 0
       },
-      uq = {
+      ab = {
         NUM_MORPH_INFLUENCERS: 0,
         NORMAL: !1,
         TANGENT: !1,
@@ -1773,353 +1773,353 @@ export const modules = {
         COLOR: !1
       };
 
-    function Bq(qq, Eq, gq) {
-      let Yq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      gq && qq.fogEnabled && (!Eq || Eq.applyFog) && 0 !== qq.fogMode && (gq.setFloat4("vFogInfos", qq.fogMode, qq.fogStart, qq.fogEnd, qq.fogDensity), Yq ? (qq.fogColor.toLinearSpaceToRef(cq, qq.Ba().useExactSrgbConversions), gq.setColor3("vFogColor", cq)) : gq.setColor3("vFogColor", qq.fogColor))
+    function Hb(bb, ub, hb) {
+      let Bb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      hb && bb.fogEnabled && (!ub || ub.applyFog) && 0 !== bb.fogMode && (hb.setFloat4("vFogInfos", bb.fogMode, bb.fogStart, bb.fogEnd, bb.fogDensity), Bb ? (bb.fogColor.toLinearSpaceToRef(Sb, bb.UX().useExactSrgbConversions), hb.setColor3("vFogColor", Sb)) : hb.setColor3("vFogColor", bb.fogColor))
     }
 
-    function Wq(qq, Eq, gq, Yq, lq, Oq, mq, xq, Aq, cq) {
-      const Bq = qq.numMaxInfluencers || qq.numInfluencers;
-      return Bq <= 0 ? 0 : (Eq.push("#define MORPHTARGETS"), qq.hasPositions && Eq.push("#define MORPHTARGETTEXTURE_HASPOSITIONS"), qq.hasNormals && Eq.push("#define MORPHTARGETTEXTURE_HASNORMALS"), qq.hasTangents && Eq.push("#define MORPHTARGETTEXTURE_HASTANGENTS"), qq.hasUVs && Eq.push("#define MORPHTARGETTEXTURE_HASUVS"), qq.hasUV2s && Eq.push("#define MORPHTARGETTEXTURE_HASUV2S"), qq.hasColors && Eq.push("#define MORPHTARGETTEXTURE_HASCOLORS"), qq.supportsPositions && lq && Eq.push("#define MORPHTARGETS_POSITION"), qq.supportsNormals && Oq && Eq.push("#define MORPHTARGETS_NORMAL"), qq.supportsTangents && mq && Eq.push("#define MORPHTARGETS_TANGENT"), qq.supportsUVs && xq && Eq.push("#define MORPHTARGETS_UV"), qq.supportsUV2s && Aq && Eq.push("#define MORPHTARGETS_UV2"), qq.supportsColors && cq && Eq.push("#define MORPHTARGETS_COLOR"), Eq.push("#define NUM_MORPH_INFLUENCERS " + Bq), qq.isUsingTextureForTargets && Eq.push("#define MORPHTARGETS_TEXTURE"), uq.NUM_MORPH_INFLUENCERS = Bq, uq.NORMAL = Oq, uq.TANGENT = mq, uq.UV = xq, uq.UV2 = Aq, uq.COLOR = cq, Nq(gq, Yq, uq, lq), Bq)
+    function wb(bb, ub, hb, Bb, Ob, Gb, Ub, Lb, Yb, Sb) {
+      const Hb = bb.numMaxInfluencers || bb.numInfluencers;
+      return Hb <= 0 ? 0 : (ub.push("#define MORPHTARGETS"), bb.hasPositions && ub.push("#define MORPHTARGETTEXTURE_HASPOSITIONS"), bb.hasNormals && ub.push("#define MORPHTARGETTEXTURE_HASNORMALS"), bb.hasTangents && ub.push("#define MORPHTARGETTEXTURE_HASTANGENTS"), bb.hasUVs && ub.push("#define MORPHTARGETTEXTURE_HASUVS"), bb.hasUV2s && ub.push("#define MORPHTARGETTEXTURE_HASUV2S"), bb.hasColors && ub.push("#define MORPHTARGETTEXTURE_HASCOLORS"), bb.supportsPositions && Ob && ub.push("#define MORPHTARGETS_POSITION"), bb.supportsNormals && Gb && ub.push("#define MORPHTARGETS_NORMAL"), bb.supportsTangents && Ub && ub.push("#define MORPHTARGETS_TANGENT"), bb.supportsUVs && Lb && ub.push("#define MORPHTARGETS_UV"), bb.supportsUV2s && Yb && ub.push("#define MORPHTARGETS_UV2"), bb.supportsColors && Sb && ub.push("#define MORPHTARGETS_COLOR"), ub.push("#define NUM_MORPH_INFLUENCERS " + Hb), bb.isUsingTextureForTargets && ub.push("#define MORPHTARGETS_TEXTURE"), ab.NUM_MORPH_INFLUENCERS = Hb, ab.NORMAL = Gb, ab.TANGENT = Ub, ab.UV = Lb, ab.UV2 = Yb, ab.COLOR = Sb, Zb(hb, Bb, ab, Ob), Hb)
     }
 
-    function Nq(qq, Eq, gq) {
-      let Oq = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const mq = gq.NUM_MORPH_INFLUENCERS;
-      if (mq > 0 && lq.b.LastCreatedEngine) {
-        const xq = lq.b.LastCreatedEngine.getCaps().maxVertexAttribs,
-          Aq = Eq.morphTargetManager;
-        if (Aq?.isUsingTextureForTargets) return;
-        const cq = Aq && Aq.supportsPositions && Oq,
-          uq = Aq && Aq.supportsNormals && gq.NORMAL,
-          Bq = Aq && Aq.supportsTangents && gq.TANGENT,
-          Wq = Aq && Aq.supportsUVs && gq.UV1,
-          Nq = Aq && Aq.supportsUV2s && gq.UV2,
-          aq = Aq && Aq.supportsColors && gq.VERTEXCOLOR;
-        for (let gq = 0; gq < mq; gq++) cq && qq.push("position" + gq), uq && qq.push("normal" + gq), Bq && qq.push("tangent" + gq), Wq && qq.push("uv_" + gq), Nq && qq.push("uv2_" + gq), aq && qq.push("color" + gq), qq.length > xq && Yq.b.Error("Cannot add more vertex attributes for mesh " + Eq.name)
+    function Zb(bb, ub, hb) {
+      let Gb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const Ub = hb.NUM_MORPH_INFLUENCERS;
+      if (Ub > 0 && Ob.b.LastCreatedEngine) {
+        const Lb = Ob.b.LastCreatedEngine.getCaps().maxVertexAttribs,
+          Yb = ub.morphTargetManager;
+        if (Yb?.isUsingTextureForTargets) return;
+        const Sb = Yb && Yb.supportsPositions && Gb,
+          ab = Yb && Yb.supportsNormals && hb.NORMAL,
+          Hb = Yb && Yb.supportsTangents && hb.TANGENT,
+          wb = Yb && Yb.supportsUVs && hb.UV1,
+          Zb = Yb && Yb.supportsUV2s && hb.UV2,
+          Xb = Yb && Yb.supportsColors && hb.VERTEXCOLOR;
+        for (let hb = 0; hb < Ub; hb++) Sb && bb.push("position" + hb), ab && bb.push("normal" + hb), Hb && bb.push("tangent" + hb), wb && bb.push("uv_" + hb), Zb && bb.push("uv2_" + hb), Xb && bb.push("color" + hb), bb.length > Lb && Bb.b.Error("Cannot add more vertex attributes for mesh " + ub.name)
       }
     }
 
-    function aq(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      qq.push("world0"), qq.push("world1"), qq.push("world2"), qq.push("world3"), Eq && (qq.push("previousWorld0"), qq.push("previousWorld1"), qq.push("previousWorld2"), qq.push("previousWorld3"))
+    function Xb(bb) {
+      let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      bb.push("world0"), bb.push("world1"), bb.push("world2"), bb.push("world3"), ub && (bb.push("previousWorld0"), bb.push("previousWorld1"), bb.push("previousWorld2"), bb.push("previousWorld3"))
     }
 
-    function Vq(qq, Eq) {
-      const gq = qq.morphTargetManager;
-      qq && gq && Eq.setFloatArray("morphTargetInfluences", gq.influences)
+    function pb(bb, ub) {
+      const hb = bb.morphTargetManager;
+      bb && hb && ub.setFloatArray("morphTargetInfluences", hb.influences)
     }
 
-    function dq(qq, Eq) {
-      Eq.bindToEffect(qq, "Scene")
+    function ob(bb, ub) {
+      ub.bindToEffect(bb, "Scene")
     }
 
-    function jq(qq, Eq, gq, Yq) {
-      let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-        Oq = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        mq = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        Aq = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        cq = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        uq = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-        Bq = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
-        Wq = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 0;
-      if (qq.texturesEnabled && lq && xq.c.ReflectionTextureEnabled) {
-        if (gq.Eqq("reflectionMatrix", lq.getReflectionTextureMatrix()), gq.updateFloat2("vReflectionInfos", lq.level * qq.iblIntensity, Wq), Aq && lq.boundingBoxSize) {
-          const qq = lq;
-          gq.updateVector3("vReflectionPosition", qq.boundingBoxPosition), gq.updateVector3("vReflectionSize", qq.boundingBoxSize)
+    function Ab(bb, ub, hb, Bb) {
+      let Ob = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+        Gb = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        Ub = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        Yb = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        Sb = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        ab = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+        Hb = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
+        wb = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 0;
+      if (bb.texturesEnabled && Ob && Lb.e.ReflectionTextureEnabled) {
+        if (hb.S_("reflectionMatrix", Ob.getReflectionTextureMatrix()), hb.updateFloat2("vReflectionInfos", Ob.level * bb.iblIntensity, wb), Yb && Ob.boundingBoxSize) {
+          const bb = Ob;
+          hb.updateVector3("vReflectionPosition", bb.boundingBoxPosition), hb.updateVector3("vReflectionSize", bb.boundingBoxSize)
         }
-        if (Oq) {
-          const qq = lq.getSize().width;
-          gq.updateFloat2("vReflectionFilteringInfo", qq, Math.log2(qq))
+        if (Gb) {
+          const bb = Ob.getSize().width;
+          hb.updateFloat2("vReflectionFilteringInfo", bb, Math.log2(bb))
         }
-        if (uq && !Eq.USEIRRADIANCEMAP) {
-          const qq = lq.sphericalPolynomial;
-          if (Eq.USESPHERICALFROMREFLECTIONMAP && qq)
-            if (Eq.SPHERICAL_HARMONICS) {
-              const Eq = qq.preScaledHarmonics;
-              gq.updateVector3("vSphericalL00", Eq.l00), gq.updateVector3("vSphericalL1_1", Eq.l1_1), gq.updateVector3("vSphericalL10", Eq.l10), gq.updateVector3("vSphericalL11", Eq.l11), gq.updateVector3("vSphericalL2_2", Eq.l2_2), gq.updateVector3("vSphericalL2_1", Eq.l2_1), gq.updateVector3("vSphericalL20", Eq.l20), gq.updateVector3("vSphericalL21", Eq.l21), gq.updateVector3("vSphericalL22", Eq.l22)
-            } else gq.updateFloat3("vSphericalX", qq.x.x, qq.x.y, qq.x.z), gq.updateFloat3("vSphericalY", qq.y.x, qq.y.y, qq.y.z), gq.updateFloat3("vSphericalZ", qq.z.x, qq.z.y, qq.z.z), gq.updateFloat3("vSphericalXX_ZZ", qq.xx.x - qq.zz.x, qq.xx.y - qq.zz.y, qq.xx.z - qq.zz.z), gq.updateFloat3("vSphericalYY_ZZ", qq.yy.x - qq.zz.x, qq.yy.y - qq.zz.y, qq.yy.z - qq.zz.z), gq.updateFloat3("vSphericalZZ", qq.zz.x, qq.zz.y, qq.zz.z), gq.updateFloat3("vSphericalXY", qq.xy.x, qq.xy.y, qq.xy.z), gq.updateFloat3("vSphericalYZ", qq.yz.x, qq.yz.y, qq.yz.z), gq.updateFloat3("vSphericalZX", qq.zx.x, qq.zx.y, qq.zx.z)
-        } else cq && Eq.USEIRRADIANCEMAP && Eq.USE_IRRADIANCE_DOMINANT_DIRECTION && lq.irradianceTexture && gq.updateVector3("vReflectionDominantDirection", lq.irradianceTexture._dominantDirection);
-        mq && gq.updateFloat3("vReflectionMicrosurfaceInfos", lq.getSize().width, lq.lodGenerationScale, lq.lodGenerationOffset)
+        if (ab && !ub.USEIRRADIANCEMAP) {
+          const bb = Ob.sphericalPolynomial;
+          if (ub.USESPHERICALFROMREFLECTIONMAP && bb)
+            if (ub.SPHERICAL_HARMONICS) {
+              const ub = bb.preScaledHarmonics;
+              hb.updateVector3("vSphericalL00", ub.l00), hb.updateVector3("vSphericalL1_1", ub.l1_1), hb.updateVector3("vSphericalL10", ub.l10), hb.updateVector3("vSphericalL11", ub.l11), hb.updateVector3("vSphericalL2_2", ub.l2_2), hb.updateVector3("vSphericalL2_1", ub.l2_1), hb.updateVector3("vSphericalL20", ub.l20), hb.updateVector3("vSphericalL21", ub.l21), hb.updateVector3("vSphericalL22", ub.l22)
+            } else hb.updateFloat3("vSphericalX", bb.x.x, bb.x.y, bb.x.z), hb.updateFloat3("vSphericalY", bb.y.x, bb.y.y, bb.y.z), hb.updateFloat3("vSphericalZ", bb.z.x, bb.z.y, bb.z.z), hb.updateFloat3("vSphericalXX_ZZ", bb.xx.x - bb.zz.x, bb.xx.y - bb.zz.y, bb.xx.z - bb.zz.z), hb.updateFloat3("vSphericalYY_ZZ", bb.yy.x - bb.zz.x, bb.yy.y - bb.zz.y, bb.yy.z - bb.zz.z), hb.updateFloat3("vSphericalZZ", bb.zz.x, bb.zz.y, bb.zz.z), hb.updateFloat3("vSphericalXY", bb.xy.x, bb.xy.y, bb.xy.z), hb.updateFloat3("vSphericalYZ", bb.yz.x, bb.yz.y, bb.yz.z), hb.updateFloat3("vSphericalZX", bb.zx.x, bb.zx.y, bb.zx.z)
+        } else Sb && ub.USEIRRADIANCEMAP && ub.USE_IRRADIANCE_DOMINANT_DIRECTION && Ob.irradianceTexture && hb.updateVector3("vReflectionDominantDirection", Ob.irradianceTexture._dominantDirection);
+        Ub && hb.updateFloat3("vReflectionMicrosurfaceInfos", Ob.getSize().width, Ob.lodGenerationScale, Ob.lodGenerationOffset)
       }
-      Bq && gq.updateColor3("vReflectionColor", Yq)
+      Hb && hb.updateColor3("vReflectionColor", Bb)
     }
 
-    function Hq(qq, Eq, gq) {
-      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-        lq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      if (Yq && xq.c.ReflectionTextureEnabled) {
-        Eq.LODBASEDMICROSFURACE ? gq.setTexture("reflectionSampler", Yq) : (gq.setTexture("reflectionSampler", Yq._lodTextureMid || Yq), gq.setTexture("reflectionSamplerLow", Yq._lodTextureLow || Yq), gq.setTexture("reflectionSamplerHigh", Yq._lodTextureHigh || Yq)), Eq.USEIRRADIANCEMAP && gq.setTexture("irradianceSampler", Yq.irradianceTexture);
-        const Oq = qq.iblCdfGenerator;
-        lq && Oq && gq.setTexture("icdfSampler", Oq.getIcdfTexture())
+    function lb(bb, ub, hb) {
+      let Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+        Ob = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      if (Bb && Lb.e.ReflectionTextureEnabled) {
+        ub.LODBASEDMICROSFURACE ? hb.setTexture("reflectionSampler", Bb) : (hb.setTexture("reflectionSampler", Bb._lodTextureMid || Bb), hb.setTexture("reflectionSamplerLow", Bb._lodTextureLow || Bb), hb.setTexture("reflectionSamplerHigh", Bb._lodTextureHigh || Bb)), ub.USEIRRADIANCEMAP && hb.setTexture("irradianceSampler", Bb.irradianceTexture);
+        const Gb = bb.iblCdfGenerator;
+        Ob && Gb && hb.setTexture("icdfSampler", Gb.getIcdfTexture())
       }
     }
 
-    function oq(qq, Eq, gq) {
-      Eq._needUVs = !0, Eq[gq] = !0, qq.optimizeUVAllocation && qq.getTextureMatrix().isIdentityAs3x2() ? (Eq[gq + "DIRECTUV"] = qq.coordinatesIndex + 1, Eq["MAINUV" + (qq.coordinatesIndex + 1)] = !0) : Eq[gq + "DIRECTUV"] = 0
+    function Kb(bb, ub, hb) {
+      ub._needUVs = !0, ub[hb] = !0, bb.optimizeUVAllocation && bb.getTextureMatrix().isIdentityAs3x2() ? (ub[hb + "DIRECTUV"] = bb.coordinatesIndex + 1, ub["MAINUV" + (bb.coordinatesIndex + 1)] = !0) : ub[hb + "DIRECTUV"] = 0
     }
 
-    function Pq(qq, Eq, gq) {
-      const Yq = qq.getTextureMatrix();
-      Eq.Eqq(gq + "Matrix", Yq)
+    function Wb(bb, ub, hb) {
+      const Bb = bb.getTextureMatrix();
+      ub.S_(hb + "Matrix", Bb)
     }
 
-    function Qq(qq, Eq, gq) {
-      gq.BAKED_VERTEX_ANIMATION_TEXTURE && gq.INSTANCES && qq.push("bakedVertexAnimationSettingsInstanced")
+    function Cb(bb, ub, hb) {
+      hb.BAKED_VERTEX_ANIMATION_TEXTURE && hb.INSTANCES && bb.push("bakedVertexAnimationSettingsInstanced")
     }
 
-    function yq(qq, Eq, gq) {
-      var Yq;
-      if (Eq && qq && (qq.computeBonesUsingShaders && Eq._bonesComputationForcedToCPU && (qq.computeBonesUsingShaders = !1), qq.useBones && qq.computeBonesUsingShaders && qq.skeleton)) {
-        const lq = qq.skeleton;
-        if (lq.isUsingTextureForMatrices && Eq.getUniformIndex("boneTextureInfo") > -1) {
-          const gq = lq.getTransformMatrixTexture(qq);
-          Eq.setTexture("boneSampler", gq), Eq.setFloat2("boneTextureInfo", lq._textureWidth, lq._textureHeight)
+    function db(bb, ub, hb) {
+      var Bb;
+      if (ub && bb && (bb.computeBonesUsingShaders && ub._bonesComputationForcedToCPU && (bb.computeBonesUsingShaders = !1), bb.useBones && bb.computeBonesUsingShaders && bb.skeleton)) {
+        const Ob = bb.skeleton;
+        if (Ob.isUsingTextureForMatrices && ub.getUniformIndex("boneTextureInfo") > -1) {
+          const hb = Ob.getTransformMatrixTexture(bb);
+          ub.setTexture("boneSampler", hb), ub.setFloat2("boneTextureInfo", Ob._textureWidth, Ob._textureHeight)
         } else {
-          const Oq = lq.getTransformMatrices(qq);
-          Oq && (Eq.setMatrices("mBones", Oq), gq && qq.ZJ().prePassRenderer && qq.ZJ().prePassRenderer.getIndex(2) && (gq.previousBones[qq.uniqueId] || (gq.previousBones[qq.uniqueId] = Oq.slice()), Eq.setMatrices("mPreviousBones", gq.previousBones[qq.uniqueId]), Yq = Oq, gq.previousBones[qq.uniqueId].set(Yq)))
+          const Gb = Ob.getTransformMatrices(bb);
+          Gb && (ub.setMatrices("mBones", Gb), hb && bb.ZN().prePassRenderer && bb.ZN().prePassRenderer.getIndex(2) && (hb.previousBones[bb.uniqueId] || (hb.previousBones[bb.uniqueId] = Gb.slice()), ub.setMatrices("mPreviousBones", hb.previousBones[bb.uniqueId]), Bb = Gb, hb.previousBones[bb.uniqueId].set(Bb)))
         }
       }
     }
 
-    function tq(qq, Eq, gq, Yq, lq) {
-      let Oq = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-      qq._bindLight(Eq, gq, Yq, lq, Oq)
+    function rb(bb, ub, hb, Bb, Ob) {
+      let Gb = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+      bb._bindLight(ub, hb, Bb, Ob, Gb)
     }
-    const rq = 4,
-      vq = new WeakMap;
+    const jb = 4,
+      nb = new WeakMap;
 
-    function hq(qq, Eq, gq, Yq) {
-      let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 4;
-      const Oq = Math.min(Eq.lightSources.length, lq);
-      for (let mq = 0; mq < Oq; mq++) {
-        tq(Eq.lightSources[mq], mq, qq, gq, "boolean" === typeof Yq ? Yq : Yq.SPECULARTERM, Eq.receiveShadows)
+    function Db(bb, ub, hb, Bb) {
+      let Ob = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 4;
+      const Gb = Math.min(ub.lightSources.length, Ob);
+      for (let Ub = 0; Ub < Gb; Ub++) {
+        rb(ub.lightSources[Ub], Ub, bb, hb, "boolean" === typeof Bb ? Bb : Bb.SPECULARTERM, ub.receiveShadows)
       }
     }
 
-    function nq(qq, Eq, gq, Yq) {
-      gq.NUM_BONE_INFLUENCERS > 0 && (Yq.addCPUSkinningFallback(0, Eq), qq.push("matricesIndices"), qq.push("matricesWeights"), gq.NUM_BONE_INFLUENCERS > 4 && (qq.push("matricesIndicesExtra"), qq.push("matricesWeightsExtra")))
+    function xb(bb, ub, hb, Bb) {
+      hb.NUM_BONE_INFLUENCERS > 0 && (Bb.addCPUSkinningFallback(0, ub), bb.push("matricesIndices"), bb.push("matricesWeights"), hb.NUM_BONE_INFLUENCERS > 4 && (bb.push("matricesIndicesExtra"), bb.push("matricesWeightsExtra")))
     }
 
-    function bq(qq, Eq) {
-      (Eq.INSTANCES || Eq.THIN_INSTANCES) && aq(qq, !!Eq.PREPASS_VELOCITY), Eq.INSTANCESCOLOR && qq.push("instanceColor")
+    function zb(bb, ub) {
+      (ub.INSTANCES || ub.THIN_INSTANCES) && Xb(bb, !!ub.PREPASS_VELOCITY), ub.INSTANCESCOLOR && bb.push("instanceColor")
     }
 
-    function iq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
-        Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        lq = 0;
-      for (let Oq = 0; Oq < gq && qq["LIGHT" + Oq]; Oq++) Oq > 0 && (lq = Yq + Oq, Eq.addFallback(lq, "LIGHT" + Oq)), qq.SHADOWS || (qq["SHADOW" + Oq] && Eq.addFallback(Yq, "SHADOW" + Oq), qq["SHADOWPCF" + Oq] && Eq.addFallback(Yq, "SHADOWPCF" + Oq), qq["SHADOWPCSS" + Oq] && Eq.addFallback(Yq, "SHADOWPCSS" + Oq), qq["SHADOWPOISSON" + Oq] && Eq.addFallback(Yq, "SHADOWPOISSON" + Oq), qq["SHADOWESM" + Oq] && Eq.addFallback(Yq, "SHADOWESM" + Oq), qq["SHADOWCLOSEESM" + Oq] && Eq.addFallback(Yq, "SHADOWCLOSEESM" + Oq));
-      return lq
+    function gb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
+        Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        Ob = 0;
+      for (let Gb = 0; Gb < hb && bb["LIGHT" + Gb]; Gb++) Gb > 0 && (Ob = Bb + Gb, ub.addFallback(Ob, "LIGHT" + Gb)), bb.SHADOWS || (bb["SHADOW" + Gb] && ub.addFallback(Bb, "SHADOW" + Gb), bb["SHADOWPCF" + Gb] && ub.addFallback(Bb, "SHADOWPCF" + Gb), bb["SHADOWPCSS" + Gb] && ub.addFallback(Bb, "SHADOWPCSS" + Gb), bb["SHADOWPOISSON" + Gb] && ub.addFallback(Bb, "SHADOWPOISSON" + Gb), bb["SHADOWESM" + Gb] && ub.addFallback(Bb, "SHADOWESM" + Gb), bb["SHADOWCLOSEESM" + Gb] && ub.addFallback(Bb, "SHADOWCLOSEESM" + Gb));
+      return Ob
     }
 
-    function Zq(qq, Eq, gq, Yq, lq, Oq, mq) {
-      let xq = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        Aq = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        cq = arguments.length > 9 ? arguments[9] : void 0,
-        uq = arguments.length > 10 ? arguments[10] : void 0;
-      if (mq._areMiscDirty) {
-        mq.LOGARITHMICDEPTH = gq, mq.POINTSIZE = Yq, mq.FOG = lq && function(qq, Eq) {
-          return Eq.fogEnabled && qq.applyFog && 0 !== Eq.fogMode
-        }(qq, Eq), mq.NONUNIFORMSCALING = qq.nonUniformScaling, mq.ALPHATEST = Oq, mq.DECAL_AFTER_DETAIL = xq, mq.USE_VERTEX_PULLING = Aq, mq.RIGHT_HANDED = Eq.useRightHandedSystem;
-        const Bq = Aq ? cq?.geometry?.getIndexBuffer() : null,
-          Wq = !!cq && cq.isUnIndexed;
-        mq.VERTEX_PULLING_USE_INDEX_BUFFER = !!Bq && !Wq, mq.VERTEX_PULLING_INDEX_BUFFER_32BITS = !(!Bq || Wq) && Bq.is32Bits, mq.VERTEXOUTPUT_INVARIANT = !!uq
+    function ib(bb, ub, hb, Bb, Ob, Gb, Ub) {
+      let Lb = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        Yb = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        Sb = arguments.length > 9 ? arguments[9] : void 0,
+        ab = arguments.length > 10 ? arguments[10] : void 0;
+      if (Ub._areMiscDirty) {
+        Ub.LOGARITHMICDEPTH = hb, Ub.POINTSIZE = Bb, Ub.FOG = Ob && function(bb, ub) {
+          return ub.fogEnabled && bb.applyFog && 0 !== ub.fogMode
+        }(bb, ub), Ub.NONUNIFORMSCALING = bb.nonUniformScaling, Ub.ALPHATEST = Gb, Ub.DECAL_AFTER_DETAIL = Lb, Ub.USE_VERTEX_PULLING = Yb, Ub.RIGHT_HANDED = ub.useRightHandedSystem;
+        const Hb = Yb ? Sb?.geometry?.getIndexBuffer() : null,
+          wb = !!Sb && Sb.isUnIndexed;
+        Ub.VERTEX_PULLING_USE_INDEX_BUFFER = !!Hb && !wb, Ub.VERTEX_PULLING_INDEX_BUFFER_32BITS = !(!Hb || wb) && Hb.is32Bits, Ub.VERTEXOUTPUT_INVARIANT = !!ab
       }
     }
 
-    function fq(qq, Eq, gq) {
-      let Yq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (!qq.lightsEnabled || Yq) return !0;
-      const lq = Eq.lightSources,
-        Oq = Math.min(lq.length, gq);
-      for (let mq = 0; mq < Oq; mq++)
-        if (!lq[mq].areLightTexturesReady()) return !1;
+    function vb(bb, ub, hb) {
+      let Bb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (!bb.lightsEnabled || Bb) return !0;
+      const Ob = ub.lightSources,
+        Gb = Math.min(Ob.length, hb);
+      for (let Ub = 0; Ub < Gb; Ub++)
+        if (!Ob[Ub].areLightTexturesReady()) return !1;
       return !0
     }
 
-    function Mq(qq, Eq, gq, lq) {
-      let Oq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 4,
-        mq = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      if (!gq._areLightsDirty) return gq._needNormals;
-      const xq = Oq;
-      Oq = function(qq, Eq) {
-        const gq = qq.Ba().getCaps().maxUniformBuffersPerShaderStage;
-        if (null == gq) return Eq;
-        const Yq = Math.max(gq - rq, 1);
-        return Math.min(Eq, Yq)
-      }(qq, Oq);
-      let Aq = 0;
-      const cq = {
-        needNormals: gq._needNormals,
+    function tb(bb, ub, hb, Ob) {
+      let Gb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 4,
+        Ub = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      if (!hb._areLightsDirty) return hb._needNormals;
+      const Lb = Gb;
+      Gb = function(bb, ub) {
+        const hb = bb.UX().getCaps().maxUniformBuffersPerShaderStage;
+        if (null == hb) return ub;
+        const Bb = Math.max(hb - jb, 1);
+        return Math.min(ub, Bb)
+      }(bb, Gb);
+      let Yb = 0;
+      const Sb = {
+        needNormals: hb._needNormals,
         needRebuild: !1,
         lightmapMode: !1,
         shadowEnabled: !1,
         specularEnabled: !1
       };
-      if (qq.lightsEnabled && !mq) {
-        Eq.lightSources.length > Oq && Oq < xq && function(qq, Eq, gq, lq) {
-          let Oq = vq.get(qq);
-          Oq || (Oq = new Set, vq.set(qq, Oq)), Oq.has(lq) || (Oq.add(lq), Yq.b.Warn(`maxSimultaneousLights is ${Eq} but this engine supports at most ${gq} simultaneous lights. Each light declares its own uniform buffer in the vertex shader, so the ${lq} lights affecting this mesh plus the scene, mesh, material and leftover buffers would need ${lq+rq} uniform buffers, over the device limit of ${qq.getCaps().maxUniformBuffersPerShaderStage} per shader stage. The light count has been clamped to ${gq}, so the extra lights will not contribute to the render. Set maxSimultaneousLights to ${gq} or less to silence this warning.`))
-        }(qq.Ba(), xq, Oq, Math.min(Eq.lightSources.length, xq));
-        for (const Yq of Eq.lightSources)
-          if (zq(qq, Eq, Yq, Aq, gq, lq, cq), Aq++, Aq === Oq) break
+      if (bb.lightsEnabled && !Ub) {
+        ub.lightSources.length > Gb && Gb < Lb && function(bb, ub, hb, Ob) {
+          let Gb = nb.get(bb);
+          Gb || (Gb = new Set, nb.set(bb, Gb)), Gb.has(Ob) || (Gb.add(Ob), Bb.b.Warn(`maxSimultaneousLights is ${ub} but this engine supports at most ${hb} simultaneous lights. Each light declares its own uniform buffer in the vertex shader, so the ${Ob} lights affecting this mesh plus the scene, mesh, material and leftover buffers would need ${Ob+jb} uniform buffers, over the device limit of ${bb.getCaps().maxUniformBuffersPerShaderStage} per shader stage. The light count has been clamped to ${hb}, so the extra lights will not contribute to the render. Set maxSimultaneousLights to ${hb} or less to silence this warning.`))
+        }(bb.UX(), Lb, Gb, Math.min(ub.lightSources.length, Lb));
+        for (const Bb of ub.lightSources)
+          if (eb(bb, ub, Bb, Yb, hb, Ob, Sb), Yb++, Yb === Gb) break
       }
-      gq.SPECULARTERM = cq.specularEnabled, gq.SHADOWS = cq.shadowEnabled;
-      const uq = Math.max(Oq, gq.MAXLIGHTCOUNT || 0);
-      for (let Yq = Aq; Yq < uq; Yq++) void 0 !== gq["LIGHT" + Yq] && (gq["LIGHT" + Yq] = !1, gq["HEMILIGHT" + Yq] = !1, gq["POINTLIGHT" + Yq] = !1, gq["DIRLIGHT" + Yq] = !1, gq["SPOTLIGHT" + Yq] = !1, gq["AREALIGHT" + Yq] = !1, gq["CLUSTLIGHT" + Yq] = !1, gq["SHADOW" + Yq] = !1, gq["SHADOWCSM" + Yq] = !1, gq["SHADOWCSMDEBUG" + Yq] = !1, gq["SHADOWCSMNUM_CASCADES" + Yq] = !1, gq["SHADOWCSMUSESHADOWMAXZ" + Yq] = !1, gq["SHADOWCSMNOBLEND" + Yq] = !1, gq["SHADOWCSM_RIGHTHANDED" + Yq] = !1, gq["SHADOWPCF" + Yq] = !1, gq["SHADOWPCSS" + Yq] = !1, gq["SHADOWPOISSON" + Yq] = !1, gq["SHADOWESM" + Yq] = !1, gq["SHADOWCLOSEESM" + Yq] = !1, gq["SHADOWCUBE" + Yq] = !1, gq["SHADOWLOWQUALITY" + Yq] = !1, gq["SHADOWMEDIUMQUALITY" + Yq] = !1);
-      gq.LIGHTCOUNT = Aq, gq.MAXLIGHTCOUNT = Oq;
-      const Bq = qq.Ba().getCaps();
-      return void 0 === gq.SHADOWFLOAT && (cq.needRebuild = !0), gq.SHADOWFLOAT = cq.shadowEnabled && (Bq.textureFloatRender && Bq.textureFloatLinearFiltering || Bq.textureHalfFloatRender && Bq.textureHalfFloatLinearFiltering), gq.LIGHTMAPEXCLUDED = cq.lightmapMode, cq.needRebuild && gq.rebuild(), cq.needNormals
+      hb.SPECULARTERM = Sb.specularEnabled, hb.SHADOWS = Sb.shadowEnabled;
+      const ab = Math.max(Gb, hb.MAXLIGHTCOUNT || 0);
+      for (let Bb = Yb; Bb < ab; Bb++) void 0 !== hb["LIGHT" + Bb] && (hb["LIGHT" + Bb] = !1, hb["HEMILIGHT" + Bb] = !1, hb["POINTLIGHT" + Bb] = !1, hb["DIRLIGHT" + Bb] = !1, hb["SPOTLIGHT" + Bb] = !1, hb["AREALIGHT" + Bb] = !1, hb["CLUSTLIGHT" + Bb] = !1, hb["SHADOW" + Bb] = !1, hb["SHADOWCSM" + Bb] = !1, hb["SHADOWCSMDEBUG" + Bb] = !1, hb["SHADOWCSMNUM_CASCADES" + Bb] = !1, hb["SHADOWCSMUSESHADOWMAXZ" + Bb] = !1, hb["SHADOWCSMNOBLEND" + Bb] = !1, hb["SHADOWCSM_RIGHTHANDED" + Bb] = !1, hb["SHADOWPCF" + Bb] = !1, hb["SHADOWPCSS" + Bb] = !1, hb["SHADOWPOISSON" + Bb] = !1, hb["SHADOWESM" + Bb] = !1, hb["SHADOWCLOSEESM" + Bb] = !1, hb["SHADOWCUBE" + Bb] = !1, hb["SHADOWLOWQUALITY" + Bb] = !1, hb["SHADOWMEDIUMQUALITY" + Bb] = !1);
+      hb.LIGHTCOUNT = Yb, hb.MAXLIGHTCOUNT = Gb;
+      const Hb = bb.UX().getCaps();
+      return void 0 === hb.SHADOWFLOAT && (Sb.needRebuild = !0), hb.SHADOWFLOAT = Sb.shadowEnabled && (Hb.textureFloatRender && Hb.textureFloatLinearFiltering || Hb.textureHalfFloatRender && Hb.textureHalfFloatLinearFiltering), hb.LIGHTMAPEXCLUDED = Sb.lightmapMode, Sb.needRebuild && hb.rebuild(), Sb.needNormals
     }
 
-    function Tq(qq, Eq, gq) {
-      let Yq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 8,
-        Oq = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      if (Eq && xq.c.ReflectionTextureEnabled) {
-        if (!Eq.isReadyOrNotBlocking()) return !1;
-        gq._needNormals = !0, gq.REFLECTION = !0, gq.GAMMAREFLECTION = Eq.gammaSpace, gq.RGBDREFLECTION = Eq.isRGBD, gq.LODINREFLECTIONALPHA = Eq.lodLevelInAlpha, gq.LINEARSPECULARREFLECTION = Eq.linearSpecularLOD, gq.USEIRRADIANCEMAP = !1, gq.LODBASEDMICROSFURACE = qq.Ba().getCaps().textureLOD;
-        const mq = qq.Ba();
-        switch (Yq && lq > 0 ? (gq.NUM_SAMPLES = "" + lq, mq._features.needTypeSuffixInShaderConstants && (gq.NUM_SAMPLES = gq.NUM_SAMPLES + "u"), gq.REALTIME_FILTERING = !0, qq.iblCdfGenerator && (gq.IBL_CDF_FILTERING = !0)) : gq.REALTIME_FILTERING = !1, gq.INVERTCUBICMAP = 6 === Eq.coordinatesMode, gq.REFLECTIONMAP_3D = Eq.isCube, gq.REFLECTIONMAP_OPPOSITEZ = gq.REFLECTIONMAP_3D && qq.useRightHandedSystem ? !Eq.invertZ : Eq.invertZ, gq.REFLECTIONMAP_CUBIC = !1, gq.REFLECTIONMAP_EXPLICIT = !1, gq.REFLECTIONMAP_PLANAR = !1, gq.REFLECTIONMAP_PROJECTION = !1, gq.REFLECTIONMAP_SKYBOX = !1, gq.REFLECTIONMAP_SPHERICAL = !1, gq.REFLECTIONMAP_EQUIRECTANGULAR = !1, gq.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, gq.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, Eq.coordinatesMode) {
+    function Jb(bb, ub, hb) {
+      let Bb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        Ob = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 8,
+        Gb = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      if (ub && Lb.e.ReflectionTextureEnabled) {
+        if (!ub.isReadyOrNotBlocking()) return !1;
+        hb._needNormals = !0, hb.REFLECTION = !0, hb.GAMMAREFLECTION = ub.gammaSpace, hb.RGBDREFLECTION = ub.isRGBD, hb.LODINREFLECTIONALPHA = ub.lodLevelInAlpha, hb.LINEARSPECULARREFLECTION = ub.linearSpecularLOD, hb.USEIRRADIANCEMAP = !1, hb.LODBASEDMICROSFURACE = bb.UX().getCaps().textureLOD;
+        const Ub = bb.UX();
+        switch (Bb && Ob > 0 ? (hb.NUM_SAMPLES = "" + Ob, Ub._features.needTypeSuffixInShaderConstants && (hb.NUM_SAMPLES = hb.NUM_SAMPLES + "u"), hb.REALTIME_FILTERING = !0, bb.iblCdfGenerator && (hb.IBL_CDF_FILTERING = !0)) : hb.REALTIME_FILTERING = !1, hb.INVERTCUBICMAP = 6 === ub.coordinatesMode, hb.REFLECTIONMAP_3D = ub.isCube, hb.REFLECTIONMAP_OPPOSITEZ = hb.REFLECTIONMAP_3D && bb.useRightHandedSystem ? !ub.invertZ : ub.invertZ, hb.REFLECTIONMAP_CUBIC = !1, hb.REFLECTIONMAP_EXPLICIT = !1, hb.REFLECTIONMAP_PLANAR = !1, hb.REFLECTIONMAP_PROJECTION = !1, hb.REFLECTIONMAP_SKYBOX = !1, hb.REFLECTIONMAP_SPHERICAL = !1, hb.REFLECTIONMAP_EQUIRECTANGULAR = !1, hb.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, hb.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, ub.coordinatesMode) {
           case 0:
-            gq.REFLECTIONMAP_EXPLICIT = !0;
+            hb.REFLECTIONMAP_EXPLICIT = !0;
             break;
           case 2:
-            gq.REFLECTIONMAP_PLANAR = !0;
+            hb.REFLECTIONMAP_PLANAR = !0;
             break;
           case 4:
-            gq.REFLECTIONMAP_PROJECTION = !0;
+            hb.REFLECTIONMAP_PROJECTION = !0;
             break;
           case 5:
-            gq.REFLECTIONMAP_SKYBOX = !0;
+            hb.REFLECTIONMAP_SKYBOX = !0;
             break;
           case 1:
-            gq.REFLECTIONMAP_SPHERICAL = !0;
+            hb.REFLECTIONMAP_SPHERICAL = !0;
             break;
           case 7:
-            gq.REFLECTIONMAP_EQUIRECTANGULAR = !0;
+            hb.REFLECTIONMAP_EQUIRECTANGULAR = !0;
             break;
           case 8:
-            gq.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !0;
+            hb.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !0;
             break;
           case 9:
-            gq.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !0;
+            hb.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !0;
             break;
           default:
-            gq.REFLECTIONMAP_CUBIC = !0, gq.USE_LOCAL_REFLECTIONMAP_CUBIC = !!Eq.boundingBoxSize
+            hb.REFLECTIONMAP_CUBIC = !0, hb.USE_LOCAL_REFLECTIONMAP_CUBIC = !!ub.boundingBoxSize
         }
-        5 !== Eq.coordinatesMode && (Eq.irradianceTexture ? (gq.USEIRRADIANCEMAP = !0, gq.USESPHERICALFROMREFLECTIONMAP = !1, gq.USESPHERICALINVERTEX = !1, Eq.irradianceTexture._dominantDirection ? gq.USE_IRRADIANCE_DOMINANT_DIRECTION = !0 : gq.USE_IRRADIANCE_DOMINANT_DIRECTION = !1) : Eq.isCube && (gq.USESPHERICALFROMREFLECTIONMAP = !0, gq.USEIRRADIANCEMAP = !1, gq.USE_IRRADIANCE_DOMINANT_DIRECTION = !1, gq.USESPHERICALINVERTEX = Oq))
-      } else gq.REFLECTION = !1, gq.REFLECTIONMAP_3D = !1, gq.REFLECTIONMAP_SPHERICAL = !1, gq.REFLECTIONMAP_PLANAR = !1, gq.REFLECTIONMAP_CUBIC = !1, gq.USE_LOCAL_REFLECTIONMAP_CUBIC = !1, gq.REFLECTIONMAP_PROJECTION = !1, gq.REFLECTIONMAP_SKYBOX = !1, gq.REFLECTIONMAP_EXPLICIT = !1, gq.REFLECTIONMAP_EQUIRECTANGULAR = !1, gq.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, gq.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, gq.INVERTCUBICMAP = !1, gq.USESPHERICALFROMREFLECTIONMAP = !1, gq.USEIRRADIANCEMAP = !1, gq.USE_IRRADIANCE_DOMINANT_DIRECTION = !1, gq.USESPHERICALINVERTEX = !1, gq.REFLECTIONMAP_OPPOSITEZ = !1, gq.LODINREFLECTIONALPHA = !1, gq.GAMMAREFLECTION = !1, gq.RGBDREFLECTION = !1, gq.LINEARSPECULARREFLECTION = !1;
+        5 !== ub.coordinatesMode && (ub.irradianceTexture ? (hb.USEIRRADIANCEMAP = !0, hb.USESPHERICALFROMREFLECTIONMAP = !1, hb.USESPHERICALINVERTEX = !1, ub.irradianceTexture._dominantDirection ? hb.USE_IRRADIANCE_DOMINANT_DIRECTION = !0 : hb.USE_IRRADIANCE_DOMINANT_DIRECTION = !1) : ub.isCube && (hb.USESPHERICALFROMREFLECTIONMAP = !0, hb.USEIRRADIANCEMAP = !1, hb.USE_IRRADIANCE_DOMINANT_DIRECTION = !1, hb.USESPHERICALINVERTEX = Gb))
+      } else hb.REFLECTION = !1, hb.REFLECTIONMAP_3D = !1, hb.REFLECTIONMAP_SPHERICAL = !1, hb.REFLECTIONMAP_PLANAR = !1, hb.REFLECTIONMAP_CUBIC = !1, hb.USE_LOCAL_REFLECTIONMAP_CUBIC = !1, hb.REFLECTIONMAP_PROJECTION = !1, hb.REFLECTIONMAP_SKYBOX = !1, hb.REFLECTIONMAP_EXPLICIT = !1, hb.REFLECTIONMAP_EQUIRECTANGULAR = !1, hb.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, hb.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, hb.INVERTCUBICMAP = !1, hb.USESPHERICALFROMREFLECTIONMAP = !1, hb.USEIRRADIANCEMAP = !1, hb.USE_IRRADIANCE_DOMINANT_DIRECTION = !1, hb.USESPHERICALINVERTEX = !1, hb.REFLECTIONMAP_OPPOSITEZ = !1, hb.LODINREFLECTIONALPHA = !1, hb.GAMMAREFLECTION = !1, hb.RGBDREFLECTION = !1, hb.LINEARSPECULARREFLECTION = !1;
       return !0
     }
 
-    function zq(qq, Eq, gq, Yq, lq, mq, xq) {
-      switch (xq.needNormals = !0, void 0 === lq["LIGHT" + Yq] && (xq.needRebuild = !0), lq["LIGHT" + Yq] = !0, lq["SPOTLIGHT" + Yq] = !1, lq["HEMILIGHT" + Yq] = !1, lq["POINTLIGHT" + Yq] = !1, lq["DIRLIGHT" + Yq] = !1, lq["AREALIGHT" + Yq] = !1, lq["CLUSTLIGHT" + Yq] = !1, gq.prepareLightSpecificDefines(lq, Yq), lq["LIGHT_FALLOFF_PHYSICAL" + Yq] = !1, lq["LIGHT_FALLOFF_GLTF" + Yq] = !1, lq["LIGHT_FALLOFF_STANDARD" + Yq] = !1, gq.falloffType) {
-        case Oq.c.FALLOFF_GLTF:
-          lq["LIGHT_FALLOFF_GLTF" + Yq] = !0;
+    function eb(bb, ub, hb, Bb, Ob, Ub, Lb) {
+      switch (Lb.needNormals = !0, void 0 === Ob["LIGHT" + Bb] && (Lb.needRebuild = !0), Ob["LIGHT" + Bb] = !0, Ob["SPOTLIGHT" + Bb] = !1, Ob["HEMILIGHT" + Bb] = !1, Ob["POINTLIGHT" + Bb] = !1, Ob["DIRLIGHT" + Bb] = !1, Ob["AREALIGHT" + Bb] = !1, Ob["CLUSTLIGHT" + Bb] = !1, hb.prepareLightSpecificDefines(Ob, Bb), Ob["LIGHT_FALLOFF_PHYSICAL" + Bb] = !1, Ob["LIGHT_FALLOFF_GLTF" + Bb] = !1, Ob["LIGHT_FALLOFF_STANDARD" + Bb] = !1, hb.falloffType) {
+        case Gb.d.FALLOFF_GLTF:
+          Ob["LIGHT_FALLOFF_GLTF" + Bb] = !0;
           break;
-        case Oq.c.FALLOFF_PHYSICAL:
-          lq["LIGHT_FALLOFF_PHYSICAL" + Yq] = !0;
+        case Gb.d.FALLOFF_PHYSICAL:
+          Ob["LIGHT_FALLOFF_PHYSICAL" + Bb] = !0;
           break;
-        case Oq.c.FALLOFF_STANDARD:
-          lq["LIGHT_FALLOFF_STANDARD" + Yq] = !0
+        case Gb.d.FALLOFF_STANDARD:
+          Ob["LIGHT_FALLOFF_STANDARD" + Bb] = !0
       }
-      if (mq && !gq.specular.equalsFloats(0, 0, 0) && (xq.specularEnabled = !0), lq["SHADOW" + Yq] = !1, lq["SHADOWCSM" + Yq] = !1, lq["SHADOWCSMDEBUG" + Yq] = !1, lq["SHADOWCSMNUM_CASCADES" + Yq] = !1, lq["SHADOWCSMUSESHADOWMAXZ" + Yq] = !1, lq["SHADOWCSMNOBLEND" + Yq] = !1, lq["SHADOWCSM_RIGHTHANDED" + Yq] = !1, lq["SHADOWPCF" + Yq] = !1, lq["SHADOWPCSS" + Yq] = !1, lq["SHADOWPOISSON" + Yq] = !1, lq["SHADOWESM" + Yq] = !1, lq["SHADOWCLOSEESM" + Yq] = !1, lq["SHADOWCUBE" + Yq] = !1, lq["SHADOWLOWQUALITY" + Yq] = !1, lq["SHADOWMEDIUMQUALITY" + Yq] = !1, Eq && Eq.receiveShadows && qq.shadowsEnabled && gq.shadowEnabled) {
-        const Eq = gq.getShadowGenerator(qq.activeCamera) ?? gq.getShadowGenerator();
-        if (Eq) {
-          const qq = Eq.getShadowMap();
-          qq && qq.renderList && qq.renderList.length > 0 && (xq.shadowEnabled = !0, Eq.prepareDefines(lq, Yq))
+      if (Ub && !hb.specular.equalsFloats(0, 0, 0) && (Lb.specularEnabled = !0), Ob["SHADOW" + Bb] = !1, Ob["SHADOWCSM" + Bb] = !1, Ob["SHADOWCSMDEBUG" + Bb] = !1, Ob["SHADOWCSMNUM_CASCADES" + Bb] = !1, Ob["SHADOWCSMUSESHADOWMAXZ" + Bb] = !1, Ob["SHADOWCSMNOBLEND" + Bb] = !1, Ob["SHADOWCSM_RIGHTHANDED" + Bb] = !1, Ob["SHADOWPCF" + Bb] = !1, Ob["SHADOWPCSS" + Bb] = !1, Ob["SHADOWPOISSON" + Bb] = !1, Ob["SHADOWESM" + Bb] = !1, Ob["SHADOWCLOSEESM" + Bb] = !1, Ob["SHADOWCUBE" + Bb] = !1, Ob["SHADOWLOWQUALITY" + Bb] = !1, Ob["SHADOWMEDIUMQUALITY" + Bb] = !1, ub && ub.receiveShadows && bb.shadowsEnabled && hb.shadowEnabled) {
+        const ub = hb.getShadowGenerator(bb.activeCamera) ?? hb.getShadowGenerator();
+        if (ub) {
+          const bb = ub.getShadowMap();
+          bb && bb.renderList && bb.renderList.length > 0 && (Lb.shadowEnabled = !0, ub.prepareDefines(Ob, Bb))
         }
       }
-      gq.lightmapMode != Oq.c.LIGHTMAP_DEFAULT ? (xq.lightmapMode = !0, lq["LIGHTMAPEXCLUDED" + Yq] = !0, lq["LIGHTMAPNOSPECULAR" + Yq] = gq.lightmapMode == Oq.c.LIGHTMAP_SHADOWSONLY) : (lq["LIGHTMAPEXCLUDED" + Yq] = !1, lq["LIGHTMAPNOSPECULAR" + Yq] = !1)
+      hb.lightmapMode != Gb.d.LIGHTMAP_DEFAULT ? (Lb.lightmapMode = !0, Ob["LIGHTMAPEXCLUDED" + Bb] = !0, Ob["LIGHTMAPNOSPECULAR" + Bb] = hb.lightmapMode == Gb.d.LIGHTMAP_SHADOWSONLY) : (Ob["LIGHTMAPEXCLUDED" + Bb] = !1, Ob["LIGHTMAPNOSPECULAR" + Bb] = !1)
     }
 
-    function Sq(qq, Eq, gq, Yq, lq) {
-      let Oq = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-        xq = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        Aq = function(qq, Eq) {
-          let gq = !1;
-          if (qq.activeCamera) {
-            const Yq = Eq.CAMERA_ORTHOGRAPHIC ? 1 : 0,
-              lq = Eq.CAMERA_PERSPECTIVE ? 1 : 0,
-              Oq = 1 === qq.activeCamera.mode ? 1 : 0,
-              mq = 0 === qq.activeCamera.mode ? 1 : 0;
-            (Yq ^ Oq || lq ^ mq) && (Eq.CAMERA_ORTHOGRAPHIC = 1 === Oq, Eq.CAMERA_PERSPECTIVE = 1 === mq, gq = !0)
+    function Nb(bb, ub, hb, Bb, Ob) {
+      let Gb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        Lb = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        Yb = function(bb, ub) {
+          let hb = !1;
+          if (bb.activeCamera) {
+            const Bb = ub.CAMERA_ORTHOGRAPHIC ? 1 : 0,
+              Ob = ub.CAMERA_PERSPECTIVE ? 1 : 0,
+              Gb = 1 === bb.activeCamera.mode ? 1 : 0,
+              Ub = 0 === bb.activeCamera.mode ? 1 : 0;
+            (Bb ^ Gb || Ob ^ Ub) && (ub.CAMERA_ORTHOGRAPHIC = 1 === Gb, ub.CAMERA_PERSPECTIVE = 1 === Ub, hb = !0)
           }
-          return gq
-        }(qq, Yq);
-      !1 !== Oq && (Aq = (0, mq.l)(gq, qq, Yq)), Yq.DEPTHPREPASS !== !Eq.getColorWrite() && (Yq.DEPTHPREPASS = !Yq.DEPTHPREPASS, Aq = !0), Yq.INSTANCES !== lq && (Yq.INSTANCES = lq, Aq = !0), Yq.THIN_INSTANCES !== xq && (Yq.THIN_INSTANCES = xq, Aq = !0), Aq && Yq.markAsUnprocessed()
+          return hb
+        }(bb, Bb);
+      !1 !== Gb && (Yb = (0, Ub.i)(hb, bb, Bb)), Bb.DEPTHPREPASS !== !ub.getColorWrite() && (Bb.DEPTHPREPASS = !Bb.DEPTHPREPASS, Yb = !0), Bb.INSTANCES !== Ob && (Bb.INSTANCES = Ob, Yb = !0), Bb.THIN_INSTANCES !== Lb && (Bb.THIN_INSTANCES = Lb, Yb = !0), Yb && Bb.markAsUnprocessed()
     }
-    const pq = 40,
-      Gq = 64,
-      Lq = new WeakMap,
-      Jq = new WeakSet;
+    const sb = 40,
+      Mb = 64,
+      mb = new WeakMap,
+      Ib = new WeakSet;
 
-    function kq(qq, Eq, gq, lq) {
-      let Oq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        mq = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-        xq = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-      if (!Eq._areAttributesDirty && Eq._needNormals === Eq._normals && Eq._needUVs === Eq._uvs) return !1;
-      Eq._normals = Eq._needNormals, Eq._uvs = Eq._needUVs, Eq.NORMAL = Eq._needNormals && qq.isVerticesDataPresent("normal"), Eq._needNormals && qq.isVerticesDataPresent("tangent") && (Eq.TANGENT = !0);
-      for (let Yq = 1; Yq <= 6; ++Yq) Eq["UV" + Yq] = !!Eq._needUVs && qq.isVerticesDataPresent(`uv${1===Yq?"":Yq}`);
-      if (gq) {
-        const gq = qq.useVertexColors && qq.isVerticesDataPresent("color");
-        Eq.VERTEXCOLOR = gq, Eq.VERTEXALPHA = qq.hasVertexAlpha && gq && mq
+    function Pb(bb, ub, hb, Ob) {
+      let Gb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        Ub = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+        Lb = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      if (!ub._areAttributesDirty && ub._needNormals === ub._normals && ub._needUVs === ub._uvs) return !1;
+      ub._normals = ub._needNormals, ub._uvs = ub._needUVs, ub.NORMAL = ub._needNormals && bb.isVerticesDataPresent("normal"), ub._needNormals && bb.isVerticesDataPresent("tangent") && (ub.TANGENT = !0);
+      for (let Bb = 1; Bb <= 6; ++Bb) ub["UV" + Bb] = !!ub._needUVs && bb.isVerticesDataPresent(`uv${1===Bb?"":Bb}`);
+      if (hb) {
+        const hb = bb.useVertexColors && bb.isVerticesDataPresent("color");
+        ub.VERTEXCOLOR = hb, ub.VERTEXALPHA = bb.hasVertexAlpha && hb && Ub
       }
-      return qq.isVerticesDataPresent("instanceColor") && (qq.olq || qq.hasThinInstances) && (Eq.INSTANCESCOLOR = !0), lq && function(qq, Eq) {
-        if (qq.useBones && qq.computeBonesUsingShaders && qq.skeleton) {
-          Eq.NUM_BONE_INFLUENCERS = qq.numBoneInfluencers;
-          const gq = void 0 !== Eq.BONETEXTURE;
-          if (qq.skeleton.isUsingTextureForMatrices && gq) Eq.BONETEXTURE = !0;
+      return bb.isVerticesDataPresent("instanceColor") && (bb.UOb || bb.hasThinInstances) && (ub.INSTANCESCOLOR = !0), Ob && function(bb, ub) {
+        if (bb.useBones && bb.computeBonesUsingShaders && bb.skeleton) {
+          ub.NUM_BONE_INFLUENCERS = bb.numBoneInfluencers;
+          const hb = void 0 !== ub.BONETEXTURE;
+          if (bb.skeleton.isUsingTextureForMatrices && hb) ub.BONETEXTURE = !0;
           else {
-            Eq.BonesPerMesh = qq.skeleton.bones.length + 1, Eq.BONETEXTURE = !gq && void 0;
-            const lq = qq.ZJ(),
-              Oq = lq.prePassRenderer;
-            if (Oq && Oq.enabled) {
-              const gq = -1 === Oq.excludedSkinnedMesh.indexOf(qq);
-              Eq.BONES_VELOCITY_ENABLED = gq
+            ub.BonesPerMesh = bb.skeleton.bones.length + 1, ub.BONETEXTURE = !hb && void 0;
+            const Ob = bb.ZN(),
+              Gb = Ob.prePassRenderer;
+            if (Gb && Gb.enabled) {
+              const hb = -1 === Gb.excludedSkinnedMesh.indexOf(bb);
+              ub.BONES_VELOCITY_ENABLED = hb
             }
-            const mq = !0 === Eq.MULTIVIEW,
-              xq = 2 * Eq.BonesPerMesh + (mq ? 1 : 0);
-            if (Lq.get(qq.skeleton) !== xq) {
-              Lq.set(qq.skeleton, xq);
-              const gq = lq.Ba().getCaps().maxVertexUniformVectors;
-              if (gq && !Jq.has(qq.skeleton)) {
-                const lq = 4 * Eq.BonesPerMesh,
-                  Oq = mq ? Gq : pq,
-                  xq = Math.max(gq - Oq, 0);
-                (lq > xq || mq && 3 * lq > gq) && (Jq.add(qq.skeleton), Yq.b.Warn(`Skeleton "${qq.skeleton.name}": ${qq.skeleton.bones.length} bones stored as vertex uniforms use ${lq} of ~${xq} usable uniform vectors${mq?" (multiview)":""} on a device reporting ${gq}. This can exceed the GPU vertex-uniform limit and make the mesh silently fail to render. Set skeleton.useTextureToStoreBoneMatrices = true to store bone matrices in a texture.`))
+            const Ub = !0 === ub.MULTIVIEW,
+              Lb = 2 * ub.BonesPerMesh + (Ub ? 1 : 0);
+            if (mb.get(bb.skeleton) !== Lb) {
+              mb.set(bb.skeleton, Lb);
+              const hb = Ob.UX().getCaps().maxVertexUniformVectors;
+              if (hb && !Ib.has(bb.skeleton)) {
+                const Ob = 4 * ub.BonesPerMesh,
+                  Gb = Ub ? Mb : sb,
+                  Lb = Math.max(hb - Gb, 0);
+                (Ob > Lb || Ub && 3 * Ob > hb) && (Ib.add(bb.skeleton), Bb.b.Warn(`Skeleton "${bb.skeleton.name}": ${bb.skeleton.bones.length} bones stored as vertex uniforms use ${Ob} of ~${Lb} usable uniform vectors${Ub?" (multiview)":""} on a device reporting ${hb}. This can exceed the GPU vertex-uniform limit and make the mesh silently fail to render. Set skeleton.useTextureToStoreBoneMatrices = true to store bone matrices in a texture.`))
               }
             }
           }
-        } else Eq.NUM_BONE_INFLUENCERS = 0, Eq.BonesPerMesh = 0, void 0 !== Eq.BONETEXTURE && (Eq.BONETEXTURE = !1)
-      }(qq, Eq), Oq && function(qq, Eq) {
-        const gq = qq.morphTargetManager;
-        gq ? (Eq.MORPHTARGETS_UV = gq.supportsUVs && Eq.UV1, Eq.MORPHTARGETS_UV2 = gq.supportsUV2s && Eq.UV2, Eq.MORPHTARGETS_TANGENT = gq.supportsTangents && Eq.TANGENT, Eq.MORPHTARGETS_NORMAL = gq.supportsNormals && Eq.NORMAL, Eq.MORPHTARGETS_POSITION = gq.supportsPositions, Eq.MORPHTARGETS_COLOR = gq.supportsColors, Eq.MORPHTARGETTEXTURE_HASUVS = gq.hasUVs, Eq.MORPHTARGETTEXTURE_HASUV2S = gq.hasUV2s, Eq.MORPHTARGETTEXTURE_HASTANGENTS = gq.hasTangents, Eq.MORPHTARGETTEXTURE_HASNORMALS = gq.hasNormals, Eq.MORPHTARGETTEXTURE_HASPOSITIONS = gq.hasPositions, Eq.MORPHTARGETTEXTURE_HASCOLORS = gq.hasColors, Eq.NUM_MORPH_INFLUENCERS = gq.numMaxInfluencers || gq.numInfluencers, Eq.MORPHTARGETS = Eq.NUM_MORPH_INFLUENCERS > 0, Eq.MORPHTARGETS_TEXTURE = gq.isUsingTextureForTargets) : (Eq.MORPHTARGETS_UV = !1, Eq.MORPHTARGETS_UV2 = !1, Eq.MORPHTARGETS_TANGENT = !1, Eq.MORPHTARGETS_NORMAL = !1, Eq.MORPHTARGETS_POSITION = !1, Eq.MORPHTARGETS_COLOR = !1, Eq.MORPHTARGETTEXTURE_HASUVS = !1, Eq.MORPHTARGETTEXTURE_HASUV2S = !1, Eq.MORPHTARGETTEXTURE_HASTANGENTS = !1, Eq.MORPHTARGETTEXTURE_HASNORMALS = !1, Eq.MORPHTARGETTEXTURE_HASPOSITIONS = !1, Eq.MORPHTARGETTEXTURE_HAS_COLORS = !1, Eq.MORPHTARGETS = !1, Eq.NUM_MORPH_INFLUENCERS = 0)
-      }(qq, Eq), xq && function(qq, Eq) {
-        const gq = qq.bakedVertexAnimationManager;
-        Eq.BAKED_VERTEX_ANIMATION_TEXTURE = !(!gq || !gq.isEnabled)
-      }(qq, Eq), !0
+        } else ub.NUM_BONE_INFLUENCERS = 0, ub.BonesPerMesh = 0, void 0 !== ub.BONETEXTURE && (ub.BONETEXTURE = !1)
+      }(bb, ub), Gb && function(bb, ub) {
+        const hb = bb.morphTargetManager;
+        hb ? (ub.MORPHTARGETS_UV = hb.supportsUVs && ub.UV1, ub.MORPHTARGETS_UV2 = hb.supportsUV2s && ub.UV2, ub.MORPHTARGETS_TANGENT = hb.supportsTangents && ub.TANGENT, ub.MORPHTARGETS_NORMAL = hb.supportsNormals && ub.NORMAL, ub.MORPHTARGETS_POSITION = hb.supportsPositions, ub.MORPHTARGETS_COLOR = hb.supportsColors, ub.MORPHTARGETTEXTURE_HASUVS = hb.hasUVs, ub.MORPHTARGETTEXTURE_HASUV2S = hb.hasUV2s, ub.MORPHTARGETTEXTURE_HASTANGENTS = hb.hasTangents, ub.MORPHTARGETTEXTURE_HASNORMALS = hb.hasNormals, ub.MORPHTARGETTEXTURE_HASPOSITIONS = hb.hasPositions, ub.MORPHTARGETTEXTURE_HASCOLORS = hb.hasColors, ub.NUM_MORPH_INFLUENCERS = hb.numMaxInfluencers || hb.numInfluencers, ub.MORPHTARGETS = ub.NUM_MORPH_INFLUENCERS > 0, ub.MORPHTARGETS_TEXTURE = hb.isUsingTextureForTargets) : (ub.MORPHTARGETS_UV = !1, ub.MORPHTARGETS_UV2 = !1, ub.MORPHTARGETS_TANGENT = !1, ub.MORPHTARGETS_NORMAL = !1, ub.MORPHTARGETS_POSITION = !1, ub.MORPHTARGETS_COLOR = !1, ub.MORPHTARGETTEXTURE_HASUVS = !1, ub.MORPHTARGETTEXTURE_HASUV2S = !1, ub.MORPHTARGETTEXTURE_HASTANGENTS = !1, ub.MORPHTARGETTEXTURE_HASNORMALS = !1, ub.MORPHTARGETTEXTURE_HASPOSITIONS = !1, ub.MORPHTARGETTEXTURE_HAS_COLORS = !1, ub.MORPHTARGETS = !1, ub.NUM_MORPH_INFLUENCERS = 0)
+      }(bb, ub), Lb && function(bb, ub) {
+        const hb = bb.bakedVertexAnimationManager;
+        ub.BAKED_VERTEX_ANIMATION_TEXTURE = !(!hb || !hb.isEnabled)
+      }(bb, ub), !0
     }
 
-    function Rq(qq, Eq) {
-      if (qq.activeCamera) {
-        const gq = Eq.MULTIVIEW;
-        Eq.MULTIVIEW = null !== qq.activeCamera.outputRenderTarget && qq.activeCamera.outputRenderTarget.getViewCount() > 1, Eq.MULTIVIEW != gq && Eq.markAsUnprocessed()
+    function qb(bb, ub) {
+      if (bb.activeCamera) {
+        const hb = ub.MULTIVIEW;
+        ub.MULTIVIEW = null !== bb.activeCamera.outputRenderTarget && bb.activeCamera.outputRenderTarget.getViewCount() > 1, ub.MULTIVIEW != hb && ub.markAsUnprocessed()
       }
     }
 
-    function Uq(qq, Eq, gq) {
-      const Yq = Eq.ORDER_INDEPENDENT_TRANSPARENCY,
-        lq = Eq.ORDER_INDEPENDENT_TRANSPARENCY_16BITS;
-      Eq.ORDER_INDEPENDENT_TRANSPARENCY = qq.useOrderIndependentTransparency && gq, Eq.ORDER_INDEPENDENT_TRANSPARENCY_16BITS = !qq.Ba().getCaps().textureFloatLinearFiltering, Yq === Eq.ORDER_INDEPENDENT_TRANSPARENCY && lq === Eq.ORDER_INDEPENDENT_TRANSPARENCY_16BITS || Eq.markAsUnprocessed()
+    function Eb(bb, ub, hb) {
+      const Bb = ub.ORDER_INDEPENDENT_TRANSPARENCY,
+        Ob = ub.ORDER_INDEPENDENT_TRANSPARENCY_16BITS;
+      ub.ORDER_INDEPENDENT_TRANSPARENCY = bb.useOrderIndependentTransparency && hb, ub.ORDER_INDEPENDENT_TRANSPARENCY_16BITS = !bb.UX().getCaps().textureFloatLinearFiltering, Bb === ub.ORDER_INDEPENDENT_TRANSPARENCY && Ob === ub.ORDER_INDEPENDENT_TRANSPARENCY_16BITS || ub.markAsUnprocessed()
     }
 
-    function Fq(qq, Eq, gq) {
-      const Yq = Eq.PREPASS;
-      if (!Eq._arePrePassDirty) return;
-      const lq = [{
+    function yb(bb, ub, hb) {
+      const Bb = ub.PREPASS;
+      if (!ub._arePrePassDirty) return;
+      const Ob = [{
         type: 1,
         define: "PREPASS_POSITION",
         index: "PREPASS_POSITION_INDEX"
@@ -2168,254 +2168,254 @@ export const modules = {
         define: "PREPASS_IRRADIANCE",
         index: "PREPASS_IRRADIANCE_INDEX"
       }];
-      if (qq.prePassRenderer && qq.prePassRenderer.enabled && gq) {
-        Eq.PREPASS = !0, Eq.SCENE_MRT_COUNT = qq.prePassRenderer.mrtCount, Eq.PREPASS_NORMAL_WORLDSPACE = qq.prePassRenderer.generateNormalsInWorldSpace, Eq.PREPASS_COLOR = !0, Eq.PREPASS_COLOR_INDEX = 0;
-        for (let gq = 0; gq < lq.length; gq++) {
-          const Yq = qq.prePassRenderer.getIndex(lq[gq].type); - 1 !== Yq ? (Eq[lq[gq].define] = !0, Eq[lq[gq].index] = Yq) : Eq[lq[gq].define] = !1
+      if (bb.prePassRenderer && bb.prePassRenderer.enabled && hb) {
+        ub.PREPASS = !0, ub.SCENE_MRT_COUNT = bb.prePassRenderer.mrtCount, ub.PREPASS_NORMAL_WORLDSPACE = bb.prePassRenderer.generateNormalsInWorldSpace, ub.PREPASS_COLOR = !0, ub.PREPASS_COLOR_INDEX = 0;
+        for (let hb = 0; hb < Ob.length; hb++) {
+          const Bb = bb.prePassRenderer.getIndex(Ob[hb].type); - 1 !== Bb ? (ub[Ob[hb].define] = !0, ub[Ob[hb].index] = Bb) : ub[Ob[hb].define] = !1
         }
       } else {
-        Eq.PREPASS = !1;
-        for (let qq = 0; qq < lq.length; qq++) Eq[lq[qq].define] = !1
+        ub.PREPASS = !1;
+        for (let bb = 0; bb < Ob.length; bb++) ub[Ob[bb].define] = !1
       }
-      Eq.PREPASS != Yq && (Eq.markAsUnprocessed(), Eq.markAsImageProcessingDirty())
+      ub.PREPASS != Bb && (ub.markAsUnprocessed(), ub.markAsImageProcessingDirty())
     }
 
-    function sq(qq, Eq, gq, Yq) {
-      let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-        Oq = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        mq = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        xq = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        Aq = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        cq = arguments.length > 9 && void 0 !== arguments[9] && arguments[9];
-      lq && lq.push("Light" + qq), Oq || (Eq.push("vLightData" + qq, "vLightDiffuse" + qq, "vLightSpecular" + qq, "vLightDirection" + qq, "vLightWidth" + qq, "vLightHeight" + qq, "vLightFalloff" + qq, "vLightGround" + qq, "vSliceData" + qq, "vSliceRanges" + qq, "lightMatrix" + qq, "shadowsInfo" + qq, "depthValues" + qq), gq.push("shadowTexture" + qq), gq.push("depthTexture" + qq), Eq.push("viewFrustumZ" + qq, "cascadeBlendFactor" + qq, "lightSizeUVCorrection" + qq, "depthCorrection" + qq, "penumbraDarkness" + qq, "frustumLengths" + qq), Yq && (gq.push("projectionLightTexture" + qq), Eq.push("textureProjectionMatrix" + qq)), mq && gq.push("iesLightTexture" + qq), Aq && gq.push("rectAreaLightEmissionTexture" + qq), xq && (gq.push("lightDataTexture" + qq), cq || gq.push("tileMaskTexture" + qq)))
+    function Vb(bb, ub, hb, Bb) {
+      let Ob = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+        Gb = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        Ub = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        Lb = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        Yb = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        Sb = arguments.length > 9 && void 0 !== arguments[9] && arguments[9];
+      Ob && Ob.push("Light" + bb), Gb || (ub.push("vLightData" + bb, "vLightDiffuse" + bb, "vLightSpecular" + bb, "vLightDirection" + bb, "vLightWidth" + bb, "vLightHeight" + bb, "vLightFalloff" + bb, "vLightGround" + bb, "vSliceData" + bb, "vSliceRanges" + bb, "lightMatrix" + bb, "shadowsInfo" + bb, "depthValues" + bb), hb.push("shadowTexture" + bb), hb.push("depthTexture" + bb), ub.push("viewFrustumZ" + bb, "cascadeBlendFactor" + bb, "lightSizeUVCorrection" + bb, "depthCorrection" + bb, "penumbraDarkness" + bb, "frustumLengths" + bb), Bb && (hb.push("projectionLightTexture" + bb), ub.push("textureProjectionMatrix" + bb)), Ub && hb.push("iesLightTexture" + bb), Yb && hb.push("rectAreaLightEmissionTexture" + bb), Lb && (hb.push("lightDataTexture" + bb), Sb || hb.push("tileMaskTexture" + bb)))
     }
 
-    function Xq(qq, Eq, gq) {
-      const Yq = ["vReflectionMicrosurfaceInfos", "vReflectionDominantDirection", "reflectionMatrix", "vReflectionInfos", "vReflectionPosition", "vReflectionSize", "vReflectionColor", "vReflectionFilteringInfo"];
-      gq && Yq.push("vSphericalX", "vSphericalY", "vSphericalZ", "vSphericalXX_ZZ", "vSphericalYY_ZZ", "vSphericalZZ", "vSphericalXY", "vSphericalYZ", "vSphericalZX", "vSphericalL00", "vSphericalL1_1", "vSphericalL10", "vSphericalL11", "vSphericalL2_2", "vSphericalL2_1", "vSphericalL20", "vSphericalL21", "vSphericalL22"), qq.push(...Yq);
-      Eq.push("reflectionSampler", "reflectionSamplerLow", "reflectionSamplerHigh", "irradianceSampler", "icdfSampler")
+    function Fb(bb, ub, hb) {
+      const Bb = ["vReflectionMicrosurfaceInfos", "vReflectionDominantDirection", "reflectionMatrix", "vReflectionInfos", "vReflectionPosition", "vReflectionSize", "vReflectionColor", "vReflectionFilteringInfo"];
+      hb && Bb.push("vSphericalX", "vSphericalY", "vSphericalZ", "vSphericalXX_ZZ", "vSphericalYY_ZZ", "vSphericalZZ", "vSphericalXY", "vSphericalYZ", "vSphericalZX", "vSphericalL00", "vSphericalL1_1", "vSphericalL10", "vSphericalL11", "vSphericalL2_2", "vSphericalL2_1", "vSphericalL20", "vSphericalL21", "vSphericalL22"), bb.push(...Bb);
+      ub.push("reflectionSampler", "reflectionSamplerLow", "reflectionSamplerHigh", "irradianceSampler", "icdfSampler")
     }
 
-    function wq(qq, Eq, gq) {
-      let Yq, lq, Oq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 4,
-        mq = null;
-      if (qq.uniformsNames) {
-        const xq = qq;
-        Yq = xq.uniformsNames, lq = xq.uniformBuffersNames, Eq = xq.samplers, gq = xq.defines, Oq = xq.maxSimultaneousLights || 0, mq = xq.shaderLanguage ?? null
-      } else Yq = qq, Eq || (Eq = []);
-      for (let xq = 0; xq < Oq && gq["LIGHT" + xq]; xq++) sq(xq, Yq, Eq, gq["PROJECTEDLIGHTTEXTURE" + xq], lq, !1, gq["IESLIGHTTEXTURE" + xq], gq["CLUSTLIGHT" + xq], gq["RECTAREALIGHTEMISSIONTEXTURE" + xq], 1 === mq);
-      gq.NUM_MORPH_INFLUENCERS && (Yq.push("morphTargetInfluences"), Yq.push("morphTargetCount")), gq.BAKED_VERTEX_ANIMATION_TEXTURE && (Yq.push("bakedVertexAnimationSettings"), Yq.push("bakedVertexAnimationTextureSizeInverted"), Yq.push("bakedVertexAnimationTime"), Eq.push("bakedVertexAnimationTexture"))
+    function fb(bb, ub, hb) {
+      let Bb, Ob, Gb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 4,
+        Ub = null;
+      if (bb.uniformsNames) {
+        const Lb = bb;
+        Bb = Lb.uniformsNames, Ob = Lb.uniformBuffersNames, ub = Lb.samplers, hb = Lb.defines, Gb = Lb.maxSimultaneousLights || 0, Ub = Lb.shaderLanguage ?? null
+      } else Bb = bb, ub || (ub = []);
+      for (let Lb = 0; Lb < Gb && hb["LIGHT" + Lb]; Lb++) Vb(Lb, Bb, ub, hb["PROJECTEDLIGHTTEXTURE" + Lb], Ob, !1, hb["IESLIGHTTEXTURE" + Lb], hb["CLUSTLIGHT" + Lb], hb["RECTAREALIGHTEMISSIONTEXTURE" + Lb], 1 === Ub);
+      hb.NUM_MORPH_INFLUENCERS && (Bb.push("morphTargetInfluences"), Bb.push("morphTargetCount")), hb.BAKED_VERTEX_ANIMATION_TEXTURE && (Bb.push("bakedVertexAnimationSettings"), Bb.push("bakedVertexAnimationTextureSizeInverted"), Bb.push("bakedVertexAnimationTime"), ub.push("bakedVertexAnimationTexture"))
     }
 
-    function Kq(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Yq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        lq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        Oq = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      qq.addUniform("vReflectionInfos", 2), qq.addUniform("reflectionMatrix", 16), Eq && qq.addUniform("vReflectionMicrosurfaceInfos", 3), gq && (qq.addUniform("vReflectionPosition", 3), qq.addUniform("vReflectionSize", 3)), Yq && (qq.addUniform("vReflectionFilteringInfo", 2), qq.addUniform("vReflectionDominantDirection", 3)), Oq && qq.addUniform("vReflectionColor", 3), lq && (qq.addUniform("vSphericalL00", 3), qq.addUniform("vSphericalL1_1", 3), qq.addUniform("vSphericalL10", 3), qq.addUniform("vSphericalL11", 3), qq.addUniform("vSphericalL2_2", 3), qq.addUniform("vSphericalL2_1", 3), qq.addUniform("vSphericalL20", 3), qq.addUniform("vSphericalL21", 3), qq.addUniform("vSphericalL22", 3), qq.addUniform("vSphericalX", 3), qq.addUniform("vSphericalY", 3), qq.addUniform("vSphericalZ", 3), qq.addUniform("vSphericalXX_ZZ", 3), qq.addUniform("vSphericalYY_ZZ", 3), qq.addUniform("vSphericalZZ", 3), qq.addUniform("vSphericalXY", 3), qq.addUniform("vSphericalYZ", 3), qq.addUniform("vSphericalZX", 3))
+    function kb(bb) {
+      let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        hb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        Bb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        Ob = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        Gb = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      bb.addUniform("vReflectionInfos", 2), bb.addUniform("reflectionMatrix", 16), ub && bb.addUniform("vReflectionMicrosurfaceInfos", 3), hb && (bb.addUniform("vReflectionPosition", 3), bb.addUniform("vReflectionSize", 3)), Bb && (bb.addUniform("vReflectionFilteringInfo", 2), bb.addUniform("vReflectionDominantDirection", 3)), Gb && bb.addUniform("vReflectionColor", 3), Ob && (bb.addUniform("vSphericalL00", 3), bb.addUniform("vSphericalL1_1", 3), bb.addUniform("vSphericalL10", 3), bb.addUniform("vSphericalL11", 3), bb.addUniform("vSphericalL2_2", 3), bb.addUniform("vSphericalL2_1", 3), bb.addUniform("vSphericalL20", 3), bb.addUniform("vSphericalL21", 3), bb.addUniform("vSphericalL22", 3), bb.addUniform("vSphericalX", 3), bb.addUniform("vSphericalY", 3), bb.addUniform("vSphericalZ", 3), bb.addUniform("vSphericalXX_ZZ", 3), bb.addUniform("vSphericalYY_ZZ", 3), bb.addUniform("vSphericalZZ", 3), bb.addUniform("vSphericalXY", 3), bb.addUniform("vSphericalYZ", 3), bb.addUniform("vSphericalZX", 3))
     }
   },
-  40096: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq
+  39795: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Gb
     });
-    var Yq = gq(37139),
-      lq = gq(40037);
-    class Oq extends lq.e {
-      constructor(qq, Eq) {
-        let gq = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        super(qq, Eq, void 0, arguments.length > 3 && void 0 !== arguments[3] && arguments[3]), this._normalMatrix = new Yq.e, this._storeEffectOnSubMeshes = gq
+    var Bb = hb(36727),
+      Ob = hb(39728);
+    class Gb extends Ob.e {
+      constructor(bb, ub) {
+        let hb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        super(bb, ub, void 0, arguments.length > 3 && void 0 !== arguments[3] && arguments[3]), this._normalMatrix = new Bb.d, this._storeEffectOnSubMeshes = hb
       }
       getEffect() {
         return this._storeEffectOnSubMeshes ? this._activeEffect : super.getEffect()
       }
-      isReady(qq, Eq) {
-        return !!qq && (!this._storeEffectOnSubMeshes || (!qq.fn || 0 === qq.fn.length || this.isReadyForSubMesh(qq, qq.fn[0], Eq)))
+      isReady(bb, ub) {
+        return !!bb && (!this._storeEffectOnSubMeshes || (!bb.FW || 0 === bb.FW.length || this.isReadyForSubMesh(bb, bb.FW[0], ub)))
       }
-      _isReadyForSubMesh(qq) {
-        const Eq = qq.materialDefines;
-        return !(this.checkReadyOnEveryCall || !qq.effect || !Eq || Eq._renderId !== this.ZJ().getRenderId())
+      _isReadyForSubMesh(bb) {
+        const ub = bb.materialDefines;
+        return !(this.checkReadyOnEveryCall || !bb.effect || !ub || ub._renderId !== this.ZN().getRenderId())
       }
-      bindOnlyWorldMatrix(qq) {
-        this._activeEffect.setMatrix("world", qq)
+      bindOnlyWorldMatrix(bb) {
+        this._activeEffect.setMatrix("world", bb)
       }
-      bindOnlyNormalMatrix(qq) {
-        this._activeEffect.setMatrix("normalMatrix", qq)
+      bindOnlyNormalMatrix(bb) {
+        this._activeEffect.setMatrix("normalMatrix", bb)
       }
-      bind(qq, Eq) {
-        Eq && this.bindForSubMesh(qq, Eq, Eq.fn[0])
+      bind(bb, ub) {
+        ub && this.bindForSubMesh(bb, ub, ub.FW[0])
       }
-      _afterBind(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          gq = arguments.length > 2 ? arguments[2] : void 0;
-        super._afterBind(qq, Eq, gq), this.ZJ()._cachedEffect = Eq, gq ? gq._drawWrapper._forceRebindOnNextCall = !1 : this._drawWrapper._forceRebindOnNextCall = !1
+      _afterBind(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          hb = arguments.length > 2 ? arguments[2] : void 0;
+        super._afterBind(bb, ub, hb), this.ZN()._cachedEffect = ub, hb ? hb._drawWrapper._forceRebindOnNextCall = !1 : this._drawWrapper._forceRebindOnNextCall = !1
       }
-      _mustRebind(qq, Eq, gq) {
-        let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        return gq._drawWrapper._forceRebindOnNextCall || qq.isCachedMaterialInvalid(this, Eq, Yq)
+      _mustRebind(bb, ub, hb) {
+        let Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        return hb._drawWrapper._forceRebindOnNextCall || bb.isCachedMaterialInvalid(this, ub, Bb)
       }
-      dispose(qq, Eq, gq) {
-        this._activeEffect = void 0, super.dispose(qq, Eq, gq)
+      dispose(bb, ub, hb) {
+        this._activeEffect = void 0, super.dispose(bb, ub, hb)
       }
     }
   },
-  40115: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Oq,
-      f: () => lq
+  39809: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb,
+      h: () => Ob
     });
-    const Yq = new WeakMap;
+    const Bb = new WeakMap;
 
-    function lq(qq) {
-      const Eq = qq.getVertexBuffers();
-      if (!Eq) return null;
-      let gq = Yq.get(qq);
-      if (gq) {
-        let qq = !1;
-        for (const Yq in Eq)
-          if (!gq.has(Yq)) {
-            qq = !0;
+    function Ob(bb) {
+      const ub = bb.getVertexBuffers();
+      if (!ub) return null;
+      let hb = Bb.get(bb);
+      if (hb) {
+        let bb = !1;
+        for (const Bb in ub)
+          if (!hb.has(Bb)) {
+            bb = !0;
             break
-          } if (!qq) return gq
-      } else gq = new Map, Yq.set(qq, gq);
-      for (const Yq in Eq) {
-        const qq = Eq[Yq];
-        if (qq) {
-          const Eq = qq.byteOffset,
-            lq = qq.byteStride,
-            Oq = qq.type,
-            mq = qq.normalized;
-          gq.set(Yq, {
-            offset: Eq,
-            stride: lq,
-            type: Oq,
-            normalized: mq
+          } if (!bb) return hb
+      } else hb = new Map, Bb.set(bb, hb);
+      for (const Bb in ub) {
+        const bb = ub[Bb];
+        if (bb) {
+          const ub = bb.byteOffset,
+            Ob = bb.byteStride,
+            Gb = bb.type,
+            Ub = bb.normalized;
+          hb.set(Bb, {
+            offset: ub,
+            stride: Ob,
+            type: Gb,
+            normalized: Ub
           })
         }
       }
-      return gq
+      return hb
     }
 
-    function Oq(qq, Eq) {
-      Eq.forEach(((Eq, gq) => {
-        const Yq = `vp_${gq}_info`;
-        qq.setFloat4(Yq, Eq.offset, Eq.stride, Eq.type, Eq.normalized ? 1 : 0)
+    function Gb(bb, ub) {
+      ub.forEach(((ub, hb) => {
+        const Bb = `vp_${hb}_info`;
+        bb.setFloat4(Bb, ub.offset, ub.stride, ub.type, ub.normalized ? 1 : 0)
       }))
     }
   },
-  40067: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => xq,
-      c: () => Aq
+  39763: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Lb,
+      h: () => Yb
     });
-    var Yq = gq(39757),
-      lq = gq(37139),
-      Oq = gq(39759);
-    let mq = (() => {
-      var qq;
-      let Eq, gq, lq = [];
-      return qq = class {
-        static extractMinAndMaxIndexed(qq, Eq, gq, Yq, lq, Oq) {
-          for (let mq = gq; mq < gq + Yq; mq++) {
-            const gq = 3 * Eq[mq],
-              Yq = qq[gq],
-              xq = qq[gq + 1],
-              Aq = qq[gq + 2];
-            lq.minimizeInPlaceFromFloats(Yq, xq, Aq), Oq.maximizeInPlaceFromFloats(Yq, xq, Aq)
+    var Bb = hb(39463),
+      Ob = hb(36727),
+      Gb = hb(39467);
+    let Ub = (() => {
+      var bb;
+      let ub, hb, Ob = [];
+      return bb = class {
+        static extractMinAndMaxIndexed(bb, ub, hb, Bb, Ob, Gb) {
+          for (let Ub = hb; Ub < hb + Bb; Ub++) {
+            const hb = 3 * ub[Ub],
+              Bb = bb[hb],
+              Lb = bb[hb + 1],
+              Yb = bb[hb + 2];
+            Ob.minimizeInPlaceFromFloats(Bb, Lb, Yb), Gb.maximizeInPlaceFromFloats(Bb, Lb, Yb)
           }
         }
-        static extractMinAndMax(qq, Eq, gq, Yq, lq, Oq) {
-          for (let mq = Eq, xq = Eq * Yq; mq < Eq + gq; mq++, xq += Yq) {
-            const Eq = qq[xq],
-              gq = qq[xq + 1],
-              Yq = qq[xq + 2];
-            lq.minimizeInPlaceFromFloats(Eq, gq, Yq), Oq.maximizeInPlaceFromFloats(Eq, gq, Yq)
+        static extractMinAndMax(bb, ub, hb, Bb, Ob, Gb) {
+          for (let Ub = ub, Lb = ub * Bb; Ub < ub + hb; Ub++, Lb += Bb) {
+            const ub = bb[Lb],
+              hb = bb[Lb + 1],
+              Bb = bb[Lb + 2];
+            Ob.minimizeInPlaceFromFloats(ub, hb, Bb), Gb.maximizeInPlaceFromFloats(ub, hb, Bb)
           }
         }
       }, (() => {
-        const mq = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Eq = [Oq.j.filter((function() {
+        const Ub = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        ub = [Gb.k.filter((function() {
           return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0]) && !Array.isArray(arguments.length <= 1 ? void 0 : arguments[1])
-        }))], gq = [Oq.j.filter((function() {
+        }))], hb = [Gb.k.filter((function() {
           return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
-        }))], (0, Yq.f)(qq, null, Eq, {
+        }))], (0, Bb.h)(bb, null, ub, {
           kind: "method",
           name: "extractMinAndMaxIndexed",
           static: !0,
           private: !1,
           access: {
-            has: qq => "extractMinAndMaxIndexed" in qq,
-            get: qq => qq.extractMinAndMaxIndexed
+            has: bb => "extractMinAndMaxIndexed" in bb,
+            get: bb => bb.extractMinAndMaxIndexed
           },
-          metadata: mq
-        }, null, lq), (0, Yq.f)(qq, null, gq, {
+          metadata: Ub
+        }, null, Ob), (0, Bb.h)(bb, null, hb, {
           kind: "method",
           name: "extractMinAndMax",
           static: !0,
           private: !1,
           access: {
-            has: qq => "extractMinAndMax" in qq,
-            get: qq => qq.extractMinAndMax
+            has: bb => "extractMinAndMax" in bb,
+            get: bb => bb.extractMinAndMax
           },
-          metadata: mq
-        }, null, lq), mq && Object.defineProperty(qq, Symbol.metadata, {
+          metadata: Ub
+        }, null, Ob), Ub && Object.defineProperty(bb, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: mq
-        }), (0, Yq.i)(qq, lq)
-      })(), qq
+          value: Ub
+        }), (0, Bb.k)(bb, Ob)
+      })(), bb
     })();
 
-    function xq(qq, Eq, gq, Yq) {
-      let Oq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      const xq = new lq.q(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-        Aq = new lq.q(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-      return mq.extractMinAndMaxIndexed(qq, Eq, gq, Yq, xq, Aq), Oq && (xq.x -= xq.x * Oq.x + Oq.y, xq.y -= xq.y * Oq.x + Oq.y, xq.z -= xq.z * Oq.x + Oq.y, Aq.x += Aq.x * Oq.x + Oq.y, Aq.y += Aq.y * Oq.x + Oq.y, Aq.z += Aq.z * Oq.x + Oq.y), {
-        minimum: xq,
-        maximum: Aq
+    function Lb(bb, ub, hb, Bb) {
+      let Gb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      const Lb = new Ob.q(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
+        Yb = new Ob.q(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+      return Ub.extractMinAndMaxIndexed(bb, ub, hb, Bb, Lb, Yb), Gb && (Lb.x -= Lb.x * Gb.x + Gb.y, Lb.y -= Lb.y * Gb.x + Gb.y, Lb.z -= Lb.z * Gb.x + Gb.y, Yb.x += Yb.x * Gb.x + Gb.y, Yb.y += Yb.y * Gb.x + Gb.y, Yb.z += Yb.z * Gb.x + Gb.y), {
+        minimum: Lb,
+        maximum: Yb
       }
     }
 
-    function Aq(qq, Eq, gq) {
-      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-        Oq = arguments.length > 4 ? arguments[4] : void 0;
-      const xq = new lq.q(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-        Aq = new lq.q(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-      return Oq || (Oq = 3), mq.extractMinAndMax(qq, Eq, gq, Oq, xq, Aq), Yq && (xq.x -= xq.x * Yq.x + Yq.y, xq.y -= xq.y * Yq.x + Yq.y, xq.z -= xq.z * Yq.x + Yq.y, Aq.x += Aq.x * Yq.x + Yq.y, Aq.y += Aq.y * Yq.x + Yq.y, Aq.z += Aq.z * Yq.x + Yq.y), {
-        minimum: xq,
-        maximum: Aq
+    function Yb(bb, ub, hb) {
+      let Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+        Gb = arguments.length > 4 ? arguments[4] : void 0;
+      const Lb = new Ob.q(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
+        Yb = new Ob.q(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+      return Gb || (Gb = 3), Ub.extractMinAndMax(bb, ub, hb, Gb, Lb, Yb), Bb && (Lb.x -= Lb.x * Bb.x + Bb.y, Lb.y -= Lb.y * Bb.x + Bb.y, Lb.z -= Lb.z * Bb.x + Bb.y, Yb.x += Yb.x * Bb.x + Bb.y, Yb.y += Yb.y * Bb.x + Bb.y, Yb.z += Yb.z * Bb.x + Bb.y), {
+        minimum: Lb,
+        maximum: Yb
       }
     }
   },
-  40040: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => uq
+  39736: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => ab
     });
-    var Yq, lq = gq(39879),
-      Oq = gq(40049),
-      mq = gq(40055),
-      xq = gq(40067),
-      Aq = gq(40074),
-      cq = gq(39636);
-    class uq {
+    var Bb, Ob = hb(39609),
+      Gb = hb(39744),
+      Ub = hb(39752),
+      Lb = hb(39763),
+      Yb = hb(39765),
+      Sb = hb(39333);
+    class ab {
       get materialDefines() {
-        const qq = this._mainDrawWrapperOverride ? this._mainDrawWrapperOverride.defines : this._getDrawWrapper()?.defines;
-        return "string" === typeof qq ? null : qq
+        const bb = this._mainDrawWrapperOverride ? this._mainDrawWrapperOverride.defines : this._getDrawWrapper()?.defines;
+        return "string" === typeof bb ? null : bb
       }
-      set materialDefines(qq) {
-        (this._mainDrawWrapperOverride ?? this._getDrawWrapper(void 0, !0)).defines = qq
+      set materialDefines(bb) {
+        (this._mainDrawWrapperOverride ?? this._getDrawWrapper(void 0, !0)).defines = bb
       }
-      _getDrawWrapper(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        qq = qq ?? this._engine.currentRenderPassId;
-        let gq = this._drawWrappers[qq];
-        return !gq && Eq && (this._drawWrappers[qq] = gq = new Aq.b(this._mesh.ZJ().Ba())), gq
+      _getDrawWrapper(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        bb = bb ?? this._engine.currentRenderPassId;
+        let hb = this._drawWrappers[bb];
+        return !hb && ub && (this._drawWrappers[bb] = hb = new Yb.d(this._mesh.ZN().UX())), hb
       }
-      _removeDrawWrapper(qq) {
-        let Eq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && this._drawWrappers[qq]?.dispose(Eq), this._drawWrappers[qq] = void 0
+      _removeDrawWrapper(bb) {
+        let ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && this._drawWrappers[bb]?.dispose(ub), this._drawWrappers[bb] = void 0
       }
       get effect() {
         return this._mainDrawWrapperOverride ? this._mainDrawWrapperOverride.effect : this._getDrawWrapper()?.effect ?? null
@@ -2426,40 +2426,40 @@ export const modules = {
       get _drawWrapperOverride() {
         return this._mainDrawWrapperOverride
       }
-      _setMainDrawWrapperOverride(qq) {
-        this._mainDrawWrapperOverride = qq
+      _setMainDrawWrapperOverride(bb) {
+        this._mainDrawWrapperOverride = bb
       }
-      setEffect(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          gq = arguments.length > 2 ? arguments[2] : void 0,
-          Yq = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const lq = this._drawWrapper;
-        lq.setEffect(qq, Eq, Yq), void 0 !== gq && (lq.materialContext = gq), qq || (lq.defines = null, lq.materialContext = void 0)
+      setEffect(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          hb = arguments.length > 2 ? arguments[2] : void 0,
+          Bb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const Ob = this._drawWrapper;
+        Ob.setEffect(bb, ub, Bb), void 0 !== hb && (Ob.materialContext = hb), bb || (Ob.defines = null, Ob.materialContext = void 0)
       }
-      resetDrawCache(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      resetDrawCache(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (this._drawWrappers) {
-          if (void 0 !== qq) return void this._removeDrawWrapper(qq, !0, Eq);
-          for (const qq of this._drawWrappers) qq?.dispose(Eq)
+          if (void 0 !== bb) return void this._removeDrawWrapper(bb, !0, ub);
+          for (const bb of this._drawWrappers) bb?.dispose(ub)
         }
         this._drawWrappers = []
       }
-      static AddToMesh(qq, Eq, gq, Yq, lq, Oq, mq) {
-        return new uq(qq, Eq, gq, Yq, lq, Oq, mq, !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7])
+      static AddToMesh(bb, ub, hb, Bb, Ob, Gb, Ub) {
+        return new ab(bb, ub, hb, Bb, Ob, Gb, Ub, !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7])
       }
-      constructor(qq, Eq, gq, Yq, lq, Oq, mq) {
-        let xq = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          Aq = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8];
-        this.materialIndex = qq, this.verticesStart = Eq, this.verticesCount = gq, this.indexStart = Yq, this.indexCount = lq, this._mainDrawWrapperOverride = null, this._linesIndexCount = 0, this._linesIndexBuffer = null, this._lastColliderWorldVertices = null, this._lastColliderTransformMatrix = null, this._wasDispatched = !1, this._renderId = 0, this._alphaIndex = 0, this._distanceToCamera = 0, this._currentMaterial = null, this._mesh = Oq, this._renderingMesh = mq || Oq, Aq && Oq.fn.push(this), this._engine = this._mesh.ZJ().Ba(), this.resetDrawCache(), this._trianglePlanes = [], this._id = Oq.fn.length - 1, xq && (this.refreshBoundingInfo(), Oq.computeWorldMatrix(!0))
+      constructor(bb, ub, hb, Bb, Ob, Gb, Ub) {
+        let Lb = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          Yb = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8];
+        this.materialIndex = bb, this.verticesStart = ub, this.verticesCount = hb, this.indexStart = Bb, this.indexCount = Ob, this._mainDrawWrapperOverride = null, this._linesIndexCount = 0, this._linesIndexBuffer = null, this._lastColliderWorldVertices = null, this._lastColliderTransformMatrix = null, this._wasDispatched = !1, this._renderId = 0, this._alphaIndex = 0, this._distanceToCamera = 0, this._currentMaterial = null, this._mesh = Gb, this._renderingMesh = Ub || Gb, Yb && Gb.FW.push(this), this._engine = this._mesh.ZN().UX(), this.resetDrawCache(), this._trianglePlanes = [], this._id = Gb.FW.length - 1, Lb && (this.refreshBoundingInfo(), Gb.computeWorldMatrix(!0))
       }
       get IsGlobal() {
         return 0 === this.verticesStart && this.verticesCount === this._mesh.getTotalVertices() && 0 === this.indexStart && this.indexCount === this._mesh.getTotalIndices()
       }
-      yR() {
-        return this.IsGlobal || this._mesh.hasThinInstances ? this._mesh.yR() : this._boundingInfo
+      XM() {
+        return this.IsGlobal || this._mesh.hasThinInstances ? this._mesh.XM() : this._boundingInfo
       }
-      setBoundingInfo(qq) {
-        return this._boundingInfo = qq, this
+      setBoundingInfo(bb) {
+        return this._boundingInfo = bb, this
       }
       getMesh() {
         return this._mesh
@@ -2471,182 +2471,182 @@ export const modules = {
         return this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : null
       }
       getEffectiveMesh() {
-        const qq = this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : null;
-        return qq || this._renderingMesh
+        const bb = this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : null;
+        return bb || this._renderingMesh
       }
-      da() {
-        let qq = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        const Eq = this._renderingMesh.getMaterialForRenderPass(this._engine.currentRenderPassId) ?? this._renderingMesh.material;
-        if (!Eq) return qq && this._mesh.ZJ()._hasDefaultMaterial ? this._mesh.ZJ().defaultMaterial : null;
-        if (this._isMultiMaterial(Eq)) {
-          const qq = Eq.getSubMaterial(this.materialIndex);
-          return this._currentMaterial !== qq && (this._currentMaterial = qq, this.resetDrawCache()), qq
+      HX() {
+        let bb = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        const ub = this._renderingMesh.getMaterialForRenderPass(this._engine.currentRenderPassId) ?? this._renderingMesh.material;
+        if (!ub) return bb && this._mesh.ZN()._hasDefaultMaterial ? this._mesh.ZN().defaultMaterial : null;
+        if (this._isMultiMaterial(ub)) {
+          const bb = ub.getSubMaterial(this.materialIndex);
+          return this._currentMaterial !== bb && (this._currentMaterial = bb, this.resetDrawCache()), bb
         }
-        return Eq
+        return ub
       }
-      _isMultiMaterial(qq) {
-        return void 0 !== qq.getSubMaterial
+      _isMultiMaterial(bb) {
+        return void 0 !== bb.getSubMaterial
       }
       refreshBoundingInfo() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         if (this._lastColliderWorldVertices = null, this.IsGlobal || !this._renderingMesh || !this._renderingMesh.geometry) return this;
-        if (qq || (qq = this._renderingMesh.getVerticesData(lq.g.PositionKind)), !qq) return this._boundingInfo = this._mesh.yR(), this;
-        const Eq = this._renderingMesh.iYq();
-        let gq;
-        if (0 === this.indexStart && this.indexCount === Eq.length) {
-          const qq = this._renderingMesh.yR();
-          gq = {
-            minimum: qq.minimum.clone(),
-            maximum: qq.maximum.clone()
+        if (bb || (bb = this._renderingMesh.getVerticesData(Ob.i.PositionKind)), !bb) return this._boundingInfo = this._mesh.XM(), this;
+        const ub = this._renderingMesh.XBb();
+        let hb;
+        if (0 === this.indexStart && this.indexCount === ub.length) {
+          const bb = this._renderingMesh.XM();
+          hb = {
+            minimum: bb.minimum.clone(),
+            maximum: bb.maximum.clone()
           }
-        } else gq = (0, xq.b)(qq, Eq, this.indexStart, this.indexCount, this._renderingMesh.geometry.boundingBias);
-        return this._boundingInfo ? this._boundingInfo.reConstruct(gq.minimum, gq.maximum) : this._boundingInfo = new mq.d(gq.minimum, gq.maximum), this
+        } else hb = (0, Lb.e)(bb, ub, this.indexStart, this.indexCount, this._renderingMesh.geometry.boundingBias);
+        return this._boundingInfo ? this._boundingInfo.reConstruct(hb.minimum, hb.maximum) : this._boundingInfo = new Ub.e(hb.minimum, hb.maximum), this
       }
-      _checkCollision(qq) {
-        return this.yR()._checkCollision(qq)
+      _checkCollision(bb) {
+        return this.XM()._checkCollision(bb)
       }
-      updateBoundingInfo(qq) {
-        let Eq = this.yR();
-        return Eq || (this.refreshBoundingInfo(), Eq = this.yR()), Eq && Eq.update(qq), this
+      updateBoundingInfo(bb) {
+        let ub = this.XM();
+        return ub || (this.refreshBoundingInfo(), ub = this.XM()), ub && ub.update(bb), this
       }
-      isInFrustum(qq) {
-        const Eq = this.yR();
-        return !!Eq && Eq.isInFrustum(qq, this._mesh.cullingStrategy)
+      isInFrustum(bb) {
+        const ub = this.XM();
+        return !!ub && ub.isInFrustum(bb, this._mesh.cullingStrategy)
       }
-      isCompletelyInFrustum(qq) {
-        const Eq = this.yR();
-        return !!Eq && Eq.isCompletelyInFrustum(qq)
+      isCompletelyInFrustum(bb) {
+        const ub = this.XM();
+        return !!ub && ub.isCompletelyInFrustum(bb)
       }
-      render(qq) {
-        return this._renderingMesh.render(this, qq, this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : void 0), this
+      render(bb) {
+        return this._renderingMesh.render(this, bb, this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : void 0), this
       }
-      _getLinesIndexBuffer(qq, Eq) {
+      _getLinesIndexBuffer(bb, ub) {
         if (!this._linesIndexBuffer) {
-          const gq = 6 * Math.floor(this.indexCount / 3),
-            Yq = this.verticesStart + this.verticesCount > 65535 ? new Uint32Array(gq) : new Uint16Array(gq);
-          let lq = 0;
-          if (0 === qq.length)
-            for (let qq = this.indexStart; qq < this.indexStart + this.indexCount; qq += 3) Yq[lq++] = qq, Yq[lq++] = qq + 1, Yq[lq++] = qq + 1, Yq[lq++] = qq + 2, Yq[lq++] = qq + 2, Yq[lq++] = qq;
+          const hb = 6 * Math.floor(this.indexCount / 3),
+            Bb = this.verticesStart + this.verticesCount > 65535 ? new Uint32Array(hb) : new Uint16Array(hb);
+          let Ob = 0;
+          if (0 === bb.length)
+            for (let bb = this.indexStart; bb < this.indexStart + this.indexCount; bb += 3) Bb[Ob++] = bb, Bb[Ob++] = bb + 1, Bb[Ob++] = bb + 1, Bb[Ob++] = bb + 2, Bb[Ob++] = bb + 2, Bb[Ob++] = bb;
           else
-            for (let Eq = this.indexStart; Eq < this.indexStart + this.indexCount; Eq += 3) Yq[lq++] = qq[Eq], Yq[lq++] = qq[Eq + 1], Yq[lq++] = qq[Eq + 1], Yq[lq++] = qq[Eq + 2], Yq[lq++] = qq[Eq + 2], Yq[lq++] = qq[Eq];
-          this._linesIndexBuffer = Eq.createIndexBuffer(Yq), this._linesIndexCount = Yq.length
+            for (let ub = this.indexStart; ub < this.indexStart + this.indexCount; ub += 3) Bb[Ob++] = bb[ub], Bb[Ob++] = bb[ub + 1], Bb[Ob++] = bb[ub + 1], Bb[Ob++] = bb[ub + 2], Bb[Ob++] = bb[ub + 2], Bb[Ob++] = bb[ub];
+          this._linesIndexBuffer = ub.createIndexBuffer(Bb), this._linesIndexCount = Bb.length
         }
         return this._linesIndexBuffer
       }
-      canIntersects(qq) {
-        const Eq = this.yR();
-        return !!Eq && qq.intersectsBox(Eq.boundingBox)
+      canIntersects(bb) {
+        const ub = this.XM();
+        return !!ub && bb.intersectsBox(ub.boundingBox)
       }
-      intersects(qq, Eq, gq, Yq, lq) {
-        const Oq = this.da();
-        if (!Oq) return null;
-        let mq = 3,
-          xq = !1;
-        switch (Oq.fillMode) {
+      intersects(bb, ub, hb, Bb, Ob) {
+        const Gb = this.HX();
+        if (!Gb) return null;
+        let Ub = 3,
+          Lb = !1;
+        switch (Gb.fillMode) {
           case 3:
           case 5:
           case 6:
           case 8:
             return null;
           case 7:
-            mq = 1, xq = !0
+            Ub = 1, Lb = !0
         }
-        return 4 === Oq.fillMode ? gq.length ? this._intersectLines(qq, Eq, gq, this._mesh.intersectionThreshold, Yq) : this._intersectUnIndexedLines(qq, Eq, gq, this._mesh.intersectionThreshold, Yq) : !gq.length && this._mesh._unIndexed ? this._intersectUnIndexedTriangles(qq, Eq, gq, Yq, lq) : this._intersectTriangles(qq, Eq, gq, mq, xq, Yq, lq)
+        return 4 === Gb.fillMode ? hb.length ? this._intersectLines(bb, ub, hb, this._mesh.intersectionThreshold, Bb) : this._intersectUnIndexedLines(bb, ub, hb, this._mesh.intersectionThreshold, Bb) : !hb.length && this._mesh._unIndexed ? this._intersectUnIndexedTriangles(bb, ub, hb, Bb, Ob) : this._intersectTriangles(bb, ub, hb, Ub, Lb, Bb, Ob)
       }
-      _intersectLines(qq, Eq, gq, Yq, lq) {
-        let mq = null;
-        for (let xq = this.indexStart; xq < this.indexStart + this.indexCount; xq += 2) {
-          const Aq = Eq[gq[xq]],
-            cq = Eq[gq[xq + 1]],
-            uq = qq.intersectionSegment(Aq, cq, Yq);
-          if (!(uq < 0) && ((lq || !mq || uq < mq.distance) && (mq = new Oq.c(null, null, uq), mq.faceId = xq / 2, lq))) break
+      _intersectLines(bb, ub, hb, Bb, Ob) {
+        let Ub = null;
+        for (let Lb = this.indexStart; Lb < this.indexStart + this.indexCount; Lb += 2) {
+          const Yb = ub[hb[Lb]],
+            Sb = ub[hb[Lb + 1]],
+            ab = bb.intersectionSegment(Yb, Sb, Bb);
+          if (!(ab < 0) && ((Ob || !Ub || ab < Ub.distance) && (Ub = new Gb.d(null, null, ab), Ub.faceId = Lb / 2, Ob))) break
         }
-        return mq
+        return Ub
       }
-      _intersectUnIndexedLines(qq, Eq, gq, Yq, lq) {
-        let mq = null;
-        for (let xq = this.verticesStart; xq < this.verticesStart + this.verticesCount; xq += 2) {
-          const gq = Eq[xq],
-            Aq = Eq[xq + 1],
-            cq = qq.intersectionSegment(gq, Aq, Yq);
-          if (!(cq < 0) && ((lq || !mq || cq < mq.distance) && (mq = new Oq.c(null, null, cq), mq.faceId = xq / 2, lq))) break
+      _intersectUnIndexedLines(bb, ub, hb, Bb, Ob) {
+        let Ub = null;
+        for (let Lb = this.verticesStart; Lb < this.verticesStart + this.verticesCount; Lb += 2) {
+          const hb = ub[Lb],
+            Yb = ub[Lb + 1],
+            Sb = bb.intersectionSegment(hb, Yb, Bb);
+          if (!(Sb < 0) && ((Ob || !Ub || Sb < Ub.distance) && (Ub = new Gb.d(null, null, Sb), Ub.faceId = Lb / 2, Ob))) break
         }
-        return mq
+        return Ub
       }
-      _intersectTriangles(qq, Eq, gq, Yq, lq, Oq, mq) {
-        let xq = null,
-          Aq = -1;
-        for (let cq = this.indexStart; cq < this.indexStart + this.indexCount - (3 - Yq); cq += Yq) {
-          Aq++;
-          const Yq = gq[cq],
-            uq = gq[cq + 1],
-            Bq = gq[cq + 2];
-          if (lq && 4294967295 === Bq) {
-            cq += 2;
+      _intersectTriangles(bb, ub, hb, Bb, Ob, Gb, Ub) {
+        let Lb = null,
+          Yb = -1;
+        for (let Sb = this.indexStart; Sb < this.indexStart + this.indexCount - (3 - Bb); Sb += Bb) {
+          Yb++;
+          const Bb = hb[Sb],
+            ab = hb[Sb + 1],
+            Hb = hb[Sb + 2];
+          if (Ob && 4294967295 === Hb) {
+            Sb += 2;
             continue
           }
-          const Wq = Eq[Yq],
-            Nq = Eq[uq],
-            aq = Eq[Bq];
-          if (!Wq || !Nq || !aq) continue;
-          if (mq && !mq(Wq, Nq, aq, qq, Yq, uq, Bq)) continue;
-          const Vq = qq.intersectsTriangle(Wq, Nq, aq);
-          if (Vq) {
-            if (Vq.distance < 0) continue;
-            if ((Oq || !xq || Vq.distance < xq.distance) && (xq = Vq, xq.faceId = Aq, Oq)) break
+          const wb = ub[Bb],
+            Zb = ub[ab],
+            Xb = ub[Hb];
+          if (!wb || !Zb || !Xb) continue;
+          if (Ub && !Ub(wb, Zb, Xb, bb, Bb, ab, Hb)) continue;
+          const pb = bb.intersectsTriangle(wb, Zb, Xb);
+          if (pb) {
+            if (pb.distance < 0) continue;
+            if ((Gb || !Lb || pb.distance < Lb.distance) && (Lb = pb, Lb.faceId = Yb, Gb)) break
           }
         }
-        return xq
+        return Lb
       }
-      _intersectUnIndexedTriangles(qq, Eq, gq, Yq, lq) {
-        let Oq = null;
-        for (let mq = this.verticesStart; mq < this.verticesStart + this.verticesCount; mq += 3) {
-          const gq = Eq[mq],
-            xq = Eq[mq + 1],
-            Aq = Eq[mq + 2];
-          if (lq && !lq(gq, xq, Aq, qq, -1, -1, -1)) continue;
-          const cq = qq.intersectsTriangle(gq, xq, Aq);
-          if (cq) {
-            if (cq.distance < 0) continue;
-            if ((Yq || !Oq || cq.distance < Oq.distance) && (Oq = cq, Oq.faceId = mq / 3, Yq)) break
+      _intersectUnIndexedTriangles(bb, ub, hb, Bb, Ob) {
+        let Gb = null;
+        for (let Ub = this.verticesStart; Ub < this.verticesStart + this.verticesCount; Ub += 3) {
+          const hb = ub[Ub],
+            Lb = ub[Ub + 1],
+            Yb = ub[Ub + 2];
+          if (Ob && !Ob(hb, Lb, Yb, bb, -1, -1, -1)) continue;
+          const Sb = bb.intersectsTriangle(hb, Lb, Yb);
+          if (Sb) {
+            if (Sb.distance < 0) continue;
+            if ((Bb || !Gb || Sb.distance < Gb.distance) && (Gb = Sb, Gb.faceId = Ub / 3, Bb)) break
           }
         }
-        return Oq
+        return Gb
       }
       _rebuild() {
         this._linesIndexBuffer && (this._linesIndexBuffer = null)
       }
-      clone(qq, Eq) {
-        const gq = new uq(this.materialIndex, this.verticesStart, this.verticesCount, this.indexStart, this.indexCount, qq, Eq, !1);
+      clone(bb, ub) {
+        const hb = new ab(this.materialIndex, this.verticesStart, this.verticesCount, this.indexStart, this.indexCount, bb, ub, !1);
         if (!this.IsGlobal) {
-          const qq = this.yR();
-          if (!qq) return gq;
-          gq._boundingInfo = new mq.d(qq.minimum, qq.maximum)
+          const bb = this.XM();
+          if (!bb) return hb;
+          hb._boundingInfo = new Ub.e(bb.minimum, bb.maximum)
         }
-        return gq
+        return hb
       }
       dispose() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._linesIndexBuffer && (this._mesh.ZJ().Ba()._releaseBuffer(this._linesIndexBuffer), this._linesIndexBuffer = null);
-        const Eq = this._mesh.fn.indexOf(this);
-        this._mesh.fn.splice(Eq, 1), this.resetDrawCache(void 0, qq)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._linesIndexBuffer && (this._mesh.ZN().UX()._releaseBuffer(this._linesIndexBuffer), this._linesIndexBuffer = null);
+        const ub = this._mesh.FW.indexOf(this);
+        this._mesh.FW.splice(ub, 1), this.resetDrawCache(void 0, bb)
       }
       getClassName() {
         return "SubMesh"
       }
-      static CreateFromIndices(qq, Eq, gq, Yq, lq) {
-        let Oq = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          mq = Number.MAX_VALUE,
-          xq = -Number.MAX_VALUE;
-        const Aq = (lq || Yq).iYq();
-        for (let cq = Eq; cq < Eq + gq; cq++) {
-          const qq = Aq[cq];
-          qq < mq && (mq = qq), qq > xq && (xq = qq)
+      static CreateFromIndices(bb, ub, hb, Bb, Ob) {
+        let Gb = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          Ub = Number.MAX_VALUE,
+          Lb = -Number.MAX_VALUE;
+        const Yb = (Ob || Bb).XBb();
+        for (let Sb = ub; Sb < ub + hb; Sb++) {
+          const bb = Yb[Sb];
+          bb < Ub && (Ub = bb), bb > Lb && (Lb = bb)
         }
-        return new uq(qq, mq, xq - mq + 1, Eq, gq, Yq, lq, Oq)
+        return new ab(bb, Ub, Lb - Ub + 1, ub, hb, Bb, Ob, Gb)
       }
-    }(Yq = uq.prototype).projectToRef ?? (Yq.projectToRef = (0, cq.i)("SubMesh", "projectToRef"))
+    }(Bb = ab.prototype).projectToRef ?? (Bb.projectToRef = (0, Sb.j)("SubMesh", "projectToRef"))
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

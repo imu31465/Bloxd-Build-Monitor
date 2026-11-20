@@ -1,80 +1,80 @@
 export const id = 241;
 export const ids = [241];
 export const modules = {
-  39569: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      playDocsSound: () => xq
+  39254: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      playDocsSound: () => Lb
     });
-    var Yq = gq(4684),
-      lq = gq(36796),
-      Oq = gq(1195);
-    const mq = new Map;
+    var Bb = hb(4626),
+      Ob = hb(36393),
+      Gb = hb(1103);
+    const Ub = new Map;
 
-    function xq(qq, Eq, gq, xq, Aq) {
-      let cq, uq = null,
-        Bq = 0,
-        Wq = 0;
-      if (Eq) cq = new Yq.Howl({
-        src: [`${Oq.clientSideServerUrls.staticUrl}/sounds/music/${qq}.mp3`],
+    function Lb(bb, ub, hb, Lb, Yb) {
+      let Sb, ab = null,
+        Hb = 0,
+        wb = 0;
+      if (ub) Sb = new Bb.Howl({
+        src: [`${Gb.clientSideServerUrls.staticUrl}/sounds/music/${bb}.mp3`],
         html5: !0,
-        volume: gq
+        volume: hb
       });
       else {
-        var Nq;
-        uq = (0, lq.k)(qq);
-        const Eq = (0, lq.g)(uq),
-          gq = null !== (Nq = Eq.sprite[qq]) && void 0 !== Nq ? Nq : null;
-        if (!gq) throw new Error(`Docs sound ${qq} is not in sprite sheet ${uq}`);
-        Bq = gq[0] / 1e3, Wq = gq[1] / 1e3, cq = mq.get(uq), cq || (cq = new Yq.Howl({
-          ...Eq,
+        var Zb;
+        ab = (0, Ob.m)(bb);
+        const ub = (0, Ob.k)(ab),
+          hb = null !== (Zb = ub.sprite[bb]) && void 0 !== Zb ? Zb : null;
+        if (!hb) throw new Error(`Docs sound ${bb} is not in sprite sheet ${ab}`);
+        Hb = hb[0] / 1e3, wb = hb[1] / 1e3, Sb = Ub.get(ab), Sb || (Sb = new Bb.Howl({
+          ...ub,
           volume: 1
-        }), mq.set(uq, cq))
+        }), Ub.set(ab, Sb))
       }
-      const aq = Eq ? cq.play() : cq.play(qq);
-      cq.volume(gq, aq), xq > 0 && cq.seek(Bq + xq, aq);
-      const Vq = () => Eq ? cq.duration() : Wq;
-      let dq = !1;
-      const jq = qq => {
-          dq || (dq = !0, cq.off("play", Hq, aq), cq.off("end", oq, aq), cq.off("loaderror", Qq), cq.off("playerror", Pq, aq), Eq && cq.unload(), Aq.onEnd(qq))
+      const Xb = ub ? Sb.play() : Sb.play(bb);
+      Sb.volume(hb, Xb), Lb > 0 && Sb.seek(Hb + Lb, Xb);
+      const pb = () => ub ? Sb.duration() : wb;
+      let ob = !1;
+      const Ab = bb => {
+          ob || (ob = !0, Sb.off("play", lb, Xb), Sb.off("end", Kb, Xb), Sb.off("loaderror", Cb), Sb.off("playerror", Wb, Xb), ub && Sb.unload(), Yb.onEnd(bb))
         },
-        Hq = () => {
-          Aq.onPlay(Vq())
+        lb = () => {
+          Yb.onPlay(pb())
         },
-        oq = () => {
-          jq(!1)
+        Kb = () => {
+          Ab(!1)
         },
-        Pq = (Eq, gq) => {
-          console.error(`Could not play docs sound ${qq}`, gq), jq(!0)
+        Wb = (ub, hb) => {
+          console.error(`Could not play docs sound ${bb}`, hb), Ab(!0)
         },
-        Qq = (qq, Eq) => {
-          null !== uq && mq.get(uq) === cq && (mq.delete(uq), cq.unload()), Pq(qq, Eq)
+        Cb = (bb, ub) => {
+          null !== ab && Ub.get(ab) === Sb && (Ub.delete(ab), Sb.unload()), Wb(bb, ub)
         };
-      return cq.on("play", Hq, aq), cq.once("end", oq, aq), cq.once("loaderror", Qq), cq.once("playerror", Pq, aq), {
+      return Sb.on("play", lb, Xb), Sb.once("end", Kb, Xb), Sb.once("loaderror", Cb), Sb.once("playerror", Wb, Xb), {
         pause: () => {
-          cq.pause(aq)
+          Sb.pause(Xb)
         },
         resume: () => {
-          cq.play(aq)
+          Sb.play(Xb)
         },
-        seek: qq => {
-          const Eq = Vq(),
-            gq = Math.max(qq, 0);
-          cq.seek(Bq + (Eq > 0 ? Math.min(gq, Eq) : gq), aq)
+        seek: bb => {
+          const ub = pb(),
+            hb = Math.max(bb, 0);
+          Sb.seek(Hb + (ub > 0 ? Math.min(hb, ub) : hb), Xb)
         },
-        Py: () => {
-          const qq = cq.seek(aq);
-          return "number" === typeof qq ? Math.max(0, qq - Bq) : 0
+        iK: () => {
+          const bb = Sb.seek(Xb);
+          return "number" === typeof bb ? Math.max(0, bb - Hb) : 0
         },
-        getDuration: Vq,
-        setVolume: qq => {
-          cq.volume(qq, aq)
+        getDuration: pb,
+        setVolume: bb => {
+          Sb.volume(bb, Xb)
         },
         stop: () => {
-          dq || (cq.stop(aq), jq(!1))
+          ob || (Sb.stop(Xb), Ab(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,83 +1,83 @@
 export const id = 246;
 export const ids = [246];
 export const modules = {
-  39817: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Wq,
-      d: () => Bq,
-      h: () => Aq,
-      l: () => Nq,
-      o: () => cq,
-      q: () => xq,
-      r: () => uq
+  39533: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => wb,
+      f: () => Hb,
+      j: () => Yb,
+      l: () => Zb,
+      o: () => Sb,
+      r: () => Lb,
+      s: () => ab
     });
-    var Yq = gq(38653),
-      lq = gq(39819);
+    var Bb = hb(38302),
+      Ob = hb(39536);
 
-    function Oq(qq, Eq, gq, Yq) {
-      switch (Eq) {
+    function Gb(bb, ub, hb, Bb) {
+      switch (ub) {
         case 5120: {
-          let Eq = qq.getInt8(gq);
-          return Yq && (Eq = Math.max(Eq / 127, -1)), Eq
+          let ub = bb.getInt8(hb);
+          return Bb && (ub = Math.max(ub / 127, -1)), ub
         }
         case 5121: {
-          let Eq = qq.getUint8(gq);
-          return Yq && (Eq /= 255), Eq
+          let ub = bb.getUint8(hb);
+          return Bb && (ub /= 255), ub
         }
         case 5122: {
-          let Eq = qq.getInt16(gq, !0);
-          return Yq && (Eq = Math.max(Eq / 32767, -1)), Eq
+          let ub = bb.getInt16(hb, !0);
+          return Bb && (ub = Math.max(ub / 32767, -1)), ub
         }
         case 5123: {
-          let Eq = qq.getUint16(gq, !0);
-          return Yq && (Eq /= 65535), Eq
+          let ub = bb.getUint16(hb, !0);
+          return Bb && (ub /= 65535), ub
         }
         case 5131:
-          return (0, lq.e)(qq.getUint16(gq, !0));
+          return (0, Ob.b)(bb.getUint16(hb, !0));
         case 5124:
-          return qq.getInt32(gq, !0);
+          return bb.getInt32(hb, !0);
         case 5125:
-          return qq.getUint32(gq, !0);
+          return bb.getUint32(hb, !0);
         case 5126:
-          return qq.getFloat32(gq, !0);
+          return bb.getFloat32(hb, !0);
         default:
-          throw new Error(`Invalid component type ${Eq}`)
+          throw new Error(`Invalid component type ${ub}`)
       }
     }
 
-    function mq(qq, Eq, gq, Yq, Oq) {
-      switch (Eq) {
+    function Ub(bb, ub, hb, Bb, Gb) {
+      switch (ub) {
         case 5120:
-          Yq && (Oq = Math.round(127 * Oq)), qq.setInt8(gq, Oq);
+          Bb && (Gb = Math.round(127 * Gb)), bb.setInt8(hb, Gb);
           break;
         case 5121:
-          Yq && (Oq = Math.round(255 * Oq)), qq.setUint8(gq, Oq);
+          Bb && (Gb = Math.round(255 * Gb)), bb.setUint8(hb, Gb);
           break;
         case 5122:
-          Yq && (Oq = Math.round(32767 * Oq)), qq.setInt16(gq, Oq, !0);
+          Bb && (Gb = Math.round(32767 * Gb)), bb.setInt16(hb, Gb, !0);
           break;
         case 5123:
-          Yq && (Oq = Math.round(65535 * Oq)), qq.setUint16(gq, Oq, !0);
+          Bb && (Gb = Math.round(65535 * Gb)), bb.setUint16(hb, Gb, !0);
           break;
         case 5131:
-          qq.setUint16(gq, (0, lq.j)(Oq), !0);
+          bb.setUint16(hb, (0, Ob.i)(Gb), !0);
           break;
         case 5124:
-          qq.setInt32(gq, Oq, !0);
+          bb.setInt32(hb, Gb, !0);
           break;
         case 5125:
-          qq.setUint32(gq, Oq, !0);
+          bb.setUint32(hb, Gb, !0);
           break;
         case 5126:
-          qq.setFloat32(gq, Oq, !0);
+          bb.setFloat32(hb, Gb, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${Eq}`)
+          throw new Error(`Invalid component type ${ub}`)
       }
     }
 
-    function xq(qq) {
-      switch (qq) {
+    function Lb(bb) {
+      switch (bb) {
         case 5120:
         case 5121:
           return 1;
@@ -90,61 +90,61 @@ export const modules = {
         case 5126:
           return 4;
         default:
-          throw new Error(`Invalid type '${qq}'`)
+          throw new Error(`Invalid type '${bb}'`)
       }
     }
 
-    function Aq(qq, Eq, gq, Yq, lq, Aq, cq, uq) {
-      const Bq = new Array(Yq),
-        Wq = new Array(Yq);
-      if (qq instanceof Array) {
-        let lq = Eq / 4;
-        const Oq = gq / 4;
-        for (let Eq = 0; Eq < Aq; Eq += Yq) {
-          for (let Eq = 0; Eq < Yq; Eq++) Bq[Eq] = Wq[Eq] = qq[lq + Eq];
-          uq(Wq, Eq);
-          for (let Eq = 0; Eq < Yq; Eq++) Bq[Eq] !== Wq[Eq] && (qq[lq + Eq] = Wq[Eq]);
-          lq += Oq
+    function Yb(bb, ub, hb, Bb, Ob, Yb, Sb, ab) {
+      const Hb = new Array(Bb),
+        wb = new Array(Bb);
+      if (bb instanceof Array) {
+        let Ob = ub / 4;
+        const Gb = hb / 4;
+        for (let ub = 0; ub < Yb; ub += Bb) {
+          for (let ub = 0; ub < Bb; ub++) Hb[ub] = wb[ub] = bb[Ob + ub];
+          ab(wb, ub);
+          for (let ub = 0; ub < Bb; ub++) Hb[ub] !== wb[ub] && (bb[Ob + ub] = wb[ub]);
+          Ob += Gb
         }
       } else {
-        const Nq = ArrayBuffer.isView(qq) ? new DataView(qq.buffer, qq.byteOffset, qq.byteLength) : new DataView(qq),
-          aq = xq(lq);
-        for (let qq = 0; qq < Aq; qq += Yq) {
-          for (let qq = 0, gq = Eq; qq < Yq; qq++, gq += aq) Bq[qq] = Wq[qq] = Oq(Nq, lq, gq, cq);
-          uq(Wq, qq);
-          for (let qq = 0, gq = Eq; qq < Yq; qq++, gq += aq) Bq[qq] !== Wq[qq] && mq(Nq, lq, gq, cq, Wq[qq]);
-          Eq += gq
+        const Zb = ArrayBuffer.isView(bb) ? new DataView(bb.buffer, bb.byteOffset, bb.byteLength) : new DataView(bb),
+          Xb = Lb(Ob);
+        for (let bb = 0; bb < Yb; bb += Bb) {
+          for (let bb = 0, hb = ub; bb < Bb; bb++, hb += Xb) Hb[bb] = wb[bb] = Gb(Zb, Ob, hb, Sb);
+          ab(wb, bb);
+          for (let bb = 0, hb = ub; bb < Bb; bb++, hb += Xb) Hb[bb] !== wb[bb] && Ub(Zb, Ob, hb, Sb, wb[bb]);
+          ub += hb
         }
       }
     }
 
-    function cq(qq, Eq, gq, lq, Oq, mq, cq, uq) {
-      const Bq = Eq * xq(gq),
-        Wq = cq * Eq;
-      if (5126 !== gq || Oq !== Bq) {
-        const Yq = new Float32Array(Wq);
-        return Aq(qq, lq, Oq, Eq, gq, Wq, mq, ((qq, gq) => {
-          for (let lq = 0; lq < Eq; lq++) Yq[gq + lq] = qq[lq]
-        })), Yq
+    function Sb(bb, ub, hb, Ob, Gb, Ub, Sb, ab) {
+      const Hb = ub * Lb(hb),
+        wb = Sb * ub;
+      if (5126 !== hb || Gb !== Hb) {
+        const Bb = new Float32Array(wb);
+        return Yb(bb, Ob, Gb, ub, hb, wb, Ub, ((bb, hb) => {
+          for (let Ob = 0; Ob < ub; Ob++) Bb[hb + Ob] = bb[Ob]
+        })), Bb
       }
-      if (!(qq instanceof Array || qq instanceof Float32Array) || 0 !== lq || qq.length !== Wq) {
-        if (qq instanceof Array) {
-          const Eq = lq / 4;
-          return qq.slice(Eq, Eq + Wq)
+      if (!(bb instanceof Array || bb instanceof Float32Array) || 0 !== Ob || bb.length !== wb) {
+        if (bb instanceof Array) {
+          const ub = Ob / 4;
+          return bb.slice(ub, ub + wb)
         }
-        if (ArrayBuffer.isView(qq)) {
-          const Eq = qq.byteOffset + lq;
-          return 0 !== (3 & Eq) && (Yq.b.Warn("Float array must be aligned to 4-bytes border"), uq = !0), uq ? new Float32Array(qq.buffer.slice(Eq, Eq + Wq * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(qq.buffer, Eq, Wq)
+        if (ArrayBuffer.isView(bb)) {
+          const ub = bb.byteOffset + Ob;
+          return 0 !== (3 & ub) && (Bb.b.Warn("Float array must be aligned to 4-bytes border"), ab = !0), ab ? new Float32Array(bb.buffer.slice(ub, ub + wb * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(bb.buffer, ub, wb)
         }
-        return new Float32Array(qq, lq, Wq)
+        return new Float32Array(bb, Ob, wb)
       }
-      return uq ? qq.slice() : qq
+      return ab ? bb.slice() : bb
     }
 
-    function uq(qq, Eq, gq, lq, Oq, mq, cq) {
-      const uq = xq(gq),
-        Bq = function(qq) {
-          switch (qq) {
+    function ab(bb, ub, hb, Ob, Gb, Ub, Sb) {
+      const ab = Lb(hb),
+        Hb = function(bb) {
+          switch (bb) {
             case 5120:
               return Int8Array;
             case 5121:
@@ -161,120 +161,120 @@ export const modules = {
             case 5126:
               return Float32Array;
             default:
-              throw new Error(`Invalid component type '${qq}'`)
+              throw new Error(`Invalid component type '${bb}'`)
           }
-        }(gq),
-        Wq = mq * Eq;
-      if (Array.isArray(qq)) {
-        if (0 !== (3 & lq) || 0 !== (3 & Oq)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const Yq = lq / 4,
-          xq = Oq / 4;
-        if (Yq + (mq - 1) * xq + Eq > qq.length) throw new Error("Last accessed index is out of bounds.");
-        if (xq < Eq) throw new Error("Data stride cannot be smaller than the component size.");
-        if (xq !== Eq) {
-          const Yq = new Bq(Wq);
-          return Aq(qq, lq, Oq, Eq, gq, Wq, !1, ((qq, gq) => {
-            for (let lq = 0; lq < Eq; lq++) Yq[gq + lq] = qq[lq]
-          })), Yq
+        }(hb),
+        wb = Ub * ub;
+      if (Array.isArray(bb)) {
+        if (0 !== (3 & Ob) || 0 !== (3 & Gb)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const Bb = Ob / 4,
+          Lb = Gb / 4;
+        if (Bb + (Ub - 1) * Lb + ub > bb.length) throw new Error("Last accessed index is out of bounds.");
+        if (Lb < ub) throw new Error("Data stride cannot be smaller than the component size.");
+        if (Lb !== ub) {
+          const Bb = new Hb(wb);
+          return Yb(bb, Ob, Gb, ub, hb, wb, !1, ((bb, hb) => {
+            for (let Ob = 0; Ob < ub; Ob++) Bb[hb + Ob] = bb[Ob]
+          })), Bb
         }
-        return new Bq(qq.slice(Yq, Yq + Wq))
+        return new Hb(bb.slice(Bb, Bb + wb))
       }
-      let Nq, aq = lq;
-      ArrayBuffer.isView(qq) ? (Nq = qq.buffer, aq += qq.byteOffset) : Nq = qq;
-      if (aq + (mq - 1) * Oq + Eq * uq > Nq.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const Vq = Eq * uq;
-      if (Oq < Vq) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (Oq !== Vq) {
-        const qq = new Bq(Wq),
-          gq = new Uint8Array(Nq, aq),
-          Yq = new Uint8Array(qq.buffer),
-          lq = Eq * uq;
-        for (let Eq = 0, xq = 0, Aq = 0; Eq < mq; Eq++, xq += Oq, Aq += lq) Yq.set(gq.subarray(xq, xq + lq), Aq);
-        return qq
+      let Zb, Xb = Ob;
+      ArrayBuffer.isView(bb) ? (Zb = bb.buffer, Xb += bb.byteOffset) : Zb = bb;
+      if (Xb + (Ub - 1) * Gb + ub * ab > Zb.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const pb = ub * ab;
+      if (Gb < pb) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (Gb !== pb) {
+        const bb = new Hb(wb),
+          hb = new Uint8Array(Zb, Xb),
+          Bb = new Uint8Array(bb.buffer),
+          Ob = ub * ab;
+        for (let ub = 0, Lb = 0, Yb = 0; ub < Ub; ub++, Lb += Gb, Yb += Ob) Bb.set(hb.subarray(Lb, Lb + Ob), Yb);
+        return bb
       }
-      return 1 !== uq && 0 !== (aq & uq - 1) && (Yq.b.Warn("Array must be aligned to border of element size. Data will be copied."), cq = !0), cq ? new Bq(Nq.slice(aq, aq + Wq * uq)) : new Bq(Nq, aq, Wq)
+      return 1 !== ab && 0 !== (Xb & ab - 1) && (Bb.b.Warn("Array must be aligned to border of element size. Data will be copied."), Sb = !0), Sb ? new Hb(Zb.slice(Xb, Xb + wb * ab)) : new Hb(Zb, Xb, wb)
     }
 
-    function Bq(qq, Eq, gq, lq, Oq, mq, cq, uq) {
-      const Bq = Eq * xq(gq),
-        Wq = cq * Eq;
-      if (uq.length !== Wq) throw new Error("Output length is not valid");
-      if (5126 === gq && Oq === Bq)
-        if (qq instanceof Array) {
-          const Eq = lq / 4;
-          uq.set(qq, Eq)
-        } else if (ArrayBuffer.isView(qq)) {
-        const Eq = qq.byteOffset + lq;
-        if (0 !== (3 & Eq)) return Yq.b.Warn("Float array must be aligned to 4-bytes border"), void uq.set(new Float32Array(qq.buffer.slice(Eq, Eq + Wq * Float32Array.BYTES_PER_ELEMENT)));
-        const gq = new Float32Array(qq.buffer, Eq, Wq);
-        uq.set(gq)
+    function Hb(bb, ub, hb, Ob, Gb, Ub, Sb, ab) {
+      const Hb = ub * Lb(hb),
+        wb = Sb * ub;
+      if (ab.length !== wb) throw new Error("Output length is not valid");
+      if (5126 === hb && Gb === Hb)
+        if (bb instanceof Array) {
+          const ub = Ob / 4;
+          ab.set(bb, ub)
+        } else if (ArrayBuffer.isView(bb)) {
+        const ub = bb.byteOffset + Ob;
+        if (0 !== (3 & ub)) return Bb.b.Warn("Float array must be aligned to 4-bytes border"), void ab.set(new Float32Array(bb.buffer.slice(ub, ub + wb * Float32Array.BYTES_PER_ELEMENT)));
+        const hb = new Float32Array(bb.buffer, ub, wb);
+        ab.set(hb)
       } else {
-        const Eq = new Float32Array(qq, lq, Wq);
-        uq.set(Eq)
-      } else Aq(qq, lq, Oq, Eq, gq, Wq, mq, ((qq, gq) => {
-        for (let Yq = 0; Yq < Eq; Yq++) uq[gq + Yq] = qq[Yq]
+        const ub = new Float32Array(bb, Ob, wb);
+        ab.set(ub)
+      } else Yb(bb, Ob, Gb, ub, hb, wb, Ub, ((bb, hb) => {
+        for (let Bb = 0; Bb < ub; Bb++) ab[hb + Bb] = bb[Bb]
       }))
     }
 
-    function Wq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(qq)) {
-        for (let lq = 0; lq < Eq; lq++)
-          if (qq[gq + lq] - Yq > 65535) return !0;
+    function wb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(bb)) {
+        for (let Ob = 0; Ob < ub; Ob++)
+          if (bb[hb + Ob] - Bb > 65535) return !0;
         return !1
       }
-      return 4 === qq.BYTES_PER_ELEMENT
+      return 4 === bb.BYTES_PER_ELEMENT
     }
 
-    function Nq(qq) {
-      const Eq = qq.buffer;
-      if (Eq instanceof ArrayBuffer) return qq;
-      const gq = new ArrayBuffer(qq.byteLength);
-      return new Uint8Array(gq).set(new Uint8Array(Eq, qq.byteOffset, qq.byteLength)), gq
+    function Zb(bb) {
+      const ub = bb.buffer;
+      if (ub instanceof ArrayBuffer) return bb;
+      const hb = new ArrayBuffer(bb.byteLength);
+      return new Uint8Array(hb).set(new Uint8Array(ub, bb.byteOffset, bb.byteLength)), hb
     }
   },
-  39640: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => rq,
-      f: () => yq,
-      k: () => tq,
-      g: () => fq,
-      n: () => Mq
+  39339: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => jb,
+      h: () => db,
+      p: () => rb,
+      l: () => vb,
+      q: () => tb
     });
-    class Yq {
+    class Bb {
       constructor() {
         this.children = []
       }
-      isValid(qq) {
+      isValid(bb) {
         return !0
       }
-      process(qq, Eq, gq) {
-        let Yq = "";
+      process(bb, ub, hb) {
+        let Bb = "";
         if (this.line) {
-          let gq = this.line;
-          const lq = Eq.processor;
-          if (lq) {
-            lq.lineProcessor && (gq = lq.lineProcessor(gq, Eq.isFragment, Eq.processingContext));
-            const Yq = Eq.processor?.attributeKeywordName ?? "attribute",
-              Oq = Eq.isFragment && Eq.processor?.varyingFragmentKeywordName ? Eq.processor?.varyingFragmentKeywordName : !Eq.isFragment && Eq.processor?.varyingVertexKeywordName ? Eq.processor?.varyingVertexKeywordName : "varying";
-            if (!Eq.isFragment && lq.attributeProcessor && this.line.startsWith(Yq)) gq = lq.attributeProcessor(this.line, qq, Eq.processingContext);
-            else if (lq.varyingProcessor && (lq.varyingCheck?.(this.line, Eq.isFragment) || !lq.varyingCheck && this.line.startsWith(Oq))) gq = lq.varyingProcessor(this.line, Eq.isFragment, qq, Eq.processingContext);
-            else if (lq.uniformProcessor && lq.uniformRegexp && lq.uniformRegexp.test(this.line)) Eq.lookForClosingBracketForUniformBuffer || (gq = lq.uniformProcessor(this.line, Eq.isFragment, qq, Eq.processingContext));
-            else if (lq.uniformBufferProcessor && lq.uniformBufferRegexp && lq.uniformBufferRegexp.test(this.line)) Eq.lookForClosingBracketForUniformBuffer || (gq = lq.uniformBufferProcessor(this.line, Eq.isFragment, Eq.processingContext), Eq.lookForClosingBracketForUniformBuffer = !0);
-            else if (lq.textureProcessor && lq.textureRegexp && lq.textureRegexp.test(this.line)) gq = lq.textureProcessor(this.line, Eq.isFragment, qq, Eq.processingContext);
-            else if ((lq.uniformProcessor || lq.uniformBufferProcessor) && this.line.startsWith("uniform") && !Eq.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? lq.uniformProcessor && (gq = lq.uniformProcessor(this.line, Eq.isFragment, qq, Eq.processingContext)) : lq.uniformBufferProcessor && (gq = lq.uniformBufferProcessor(this.line, Eq.isFragment, Eq.processingContext), Eq.lookForClosingBracketForUniformBuffer = !0)
+          let hb = this.line;
+          const Ob = ub.processor;
+          if (Ob) {
+            Ob.lineProcessor && (hb = Ob.lineProcessor(hb, ub.isFragment, ub.processingContext));
+            const Bb = ub.processor?.attributeKeywordName ?? "attribute",
+              Gb = ub.isFragment && ub.processor?.varyingFragmentKeywordName ? ub.processor?.varyingFragmentKeywordName : !ub.isFragment && ub.processor?.varyingVertexKeywordName ? ub.processor?.varyingVertexKeywordName : "varying";
+            if (!ub.isFragment && Ob.attributeProcessor && this.line.startsWith(Bb)) hb = Ob.attributeProcessor(this.line, bb, ub.processingContext);
+            else if (Ob.varyingProcessor && (Ob.varyingCheck?.(this.line, ub.isFragment) || !Ob.varyingCheck && this.line.startsWith(Gb))) hb = Ob.varyingProcessor(this.line, ub.isFragment, bb, ub.processingContext);
+            else if (Ob.uniformProcessor && Ob.uniformRegexp && Ob.uniformRegexp.test(this.line)) ub.lookForClosingBracketForUniformBuffer || (hb = Ob.uniformProcessor(this.line, ub.isFragment, bb, ub.processingContext));
+            else if (Ob.uniformBufferProcessor && Ob.uniformBufferRegexp && Ob.uniformBufferRegexp.test(this.line)) ub.lookForClosingBracketForUniformBuffer || (hb = Ob.uniformBufferProcessor(this.line, ub.isFragment, ub.processingContext), ub.lookForClosingBracketForUniformBuffer = !0);
+            else if (Ob.textureProcessor && Ob.textureRegexp && Ob.textureRegexp.test(this.line)) hb = Ob.textureProcessor(this.line, ub.isFragment, bb, ub.processingContext);
+            else if ((Ob.uniformProcessor || Ob.uniformBufferProcessor) && this.line.startsWith("uniform") && !ub.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? Ob.uniformProcessor && (hb = Ob.uniformProcessor(this.line, ub.isFragment, bb, ub.processingContext)) : Ob.uniformBufferProcessor && (hb = Ob.uniformBufferProcessor(this.line, ub.isFragment, ub.processingContext), ub.lookForClosingBracketForUniformBuffer = !0)
             }
-            Eq.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (Eq.lookForClosingBracketForUniformBuffer = !1, lq.endOfUniformBufferProcessor && (gq = lq.endOfUniformBufferProcessor(this.line, Eq.isFragment, Eq.processingContext)))
+            ub.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (ub.lookForClosingBracketForUniformBuffer = !1, Ob.endOfUniformBufferProcessor && (hb = Ob.endOfUniformBufferProcessor(this.line, ub.isFragment, ub.processingContext)))
           }
-          Yq += gq + "\n"
+          Bb += hb + "\n"
         }
-        for (const lq of this.children) Yq += lq.process(qq, Eq, gq);
-        return this.additionalDefineKey && (qq[this.additionalDefineKey] = this.additionalDefineValue || "true", gq[this.additionalDefineKey] = qq[this.additionalDefineKey]), Yq
+        for (const Ob of this.children) Bb += Ob.process(bb, ub, hb);
+        return this.additionalDefineKey && (bb[this.additionalDefineKey] = this.additionalDefineValue || "true", hb[this.additionalDefineKey] = bb[this.additionalDefineKey]), Bb
       }
     }
-    class lq {
+    class Ob {
       constructor() {
         this._lines = []
       }
@@ -284,273 +284,273 @@ export const modules = {
       get canRead() {
         return this.lineIndex < this._lines.length - 1
       }
-      set lines(qq) {
+      set lines(bb) {
         this._lines.length = 0;
-        for (const Eq of qq) {
-          if (!Eq || "\r" === Eq) continue;
-          if ("#" === Eq[0]) {
-            this._lines.push(Eq);
+        for (const ub of bb) {
+          if (!ub || "\r" === ub) continue;
+          if ("#" === ub[0]) {
+            this._lines.push(ub);
             continue
           }
-          const qq = Eq.trim();
-          if (!qq) continue;
-          if (qq.startsWith("//")) {
-            this._lines.push(Eq);
+          const bb = ub.trim();
+          if (!bb) continue;
+          if (bb.startsWith("//")) {
+            this._lines.push(ub);
             continue
           }
-          const gq = qq.indexOf(";");
-          if (-1 === gq) this._lines.push(qq);
-          else if (gq === qq.length - 1) qq.length > 1 && this._lines.push(qq);
+          const hb = bb.indexOf(";");
+          if (-1 === hb) this._lines.push(bb);
+          else if (hb === bb.length - 1) bb.length > 1 && this._lines.push(bb);
           else {
-            const qq = Eq.split(";");
-            for (let Eq = 0; Eq < qq.length; Eq++) {
-              let gq = qq[Eq];
-              gq && (gq = gq.trim(), gq && this._lines.push(gq + (Eq !== qq.length - 1 ? ";" : "")))
+            const bb = ub.split(";");
+            for (let ub = 0; ub < bb.length; ub++) {
+              let hb = bb[ub];
+              hb && (hb = hb.trim(), hb && this._lines.push(hb + (ub !== bb.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class Oq extends Yq {
-      process(qq, Eq, gq) {
-        for (let Yq = 0; Yq < this.children.length; Yq++) {
-          const lq = this.children[Yq];
-          if (lq.isValid(qq)) return lq.process(qq, Eq, gq)
+    class Gb extends Bb {
+      process(bb, ub, hb) {
+        for (let Bb = 0; Bb < this.children.length; Bb++) {
+          const Ob = this.children[Bb];
+          if (Ob.isValid(bb)) return Ob.process(bb, ub, hb)
         }
         return ""
       }
     }
-    class mq extends Yq {
-      isValid(qq) {
-        return this.testExpression.isTrue(qq)
+    class Ub extends Bb {
+      isValid(bb) {
+        return this.testExpression.isTrue(bb)
       }
     }
-    class xq {
-      isTrue(qq) {
+    class Lb {
+      isTrue(bb) {
         return !0
       }
-      static postfixToInfix(qq) {
-        const Eq = [];
-        for (const gq of qq)
-          if (void 0 === xq._OperatorPriority[gq]) Eq.push(gq);
+      static postfixToInfix(bb) {
+        const ub = [];
+        for (const hb of bb)
+          if (void 0 === Lb._OperatorPriority[hb]) ub.push(hb);
           else {
-            const qq = Eq[Eq.length - 1],
-              Yq = Eq[Eq.length - 2];
-            Eq.length -= 2, Eq.push(`(${Yq}${gq}${qq})`)
-          } return Eq[Eq.length - 1]
+            const bb = ub[ub.length - 1],
+              Bb = ub[ub.length - 2];
+            ub.length -= 2, ub.push(`(${Bb}${hb}${bb})`)
+          } return ub[ub.length - 1]
       }
-      static infixToPostfix(qq) {
-        const Eq = xq._InfixToPostfixCache.get(qq);
-        if (Eq) return Eq.accessTime = Date.now(), Eq.result;
-        if (!qq.includes("&&") && !qq.includes("||") && !qq.includes(")") && !qq.includes("(")) return [qq];
-        const gq = [];
-        let Yq = -1;
-        const lq = () => {
-            uq = uq.trim(), "" !== uq && (gq.push(uq), uq = "")
+      static infixToPostfix(bb) {
+        const ub = Lb._InfixToPostfixCache.get(bb);
+        if (ub) return ub.accessTime = Date.now(), ub.result;
+        if (!bb.includes("&&") && !bb.includes("||") && !bb.includes(")") && !bb.includes("(")) return [bb];
+        const hb = [];
+        let Bb = -1;
+        const Ob = () => {
+            ab = ab.trim(), "" !== ab && (hb.push(ab), ab = "")
           },
-          Oq = qq => {
-            Yq < xq._Stack.length - 1 && (xq._Stack[++Yq] = qq)
+          Gb = bb => {
+            Bb < Lb._Stack.length - 1 && (Lb._Stack[++Bb] = bb)
           },
-          mq = () => xq._Stack[Yq],
-          Aq = () => -1 === Yq ? "!!INVALID EXPRESSION!!" : xq._Stack[Yq--];
-        let cq = 0,
-          uq = "";
-        for (; cq < qq.length;) {
-          const Eq = qq.charAt(cq),
-            Bq = cq < qq.length - 1 ? qq.substring(cq, 2 + cq) : "";
-          if ("(" === Eq) uq = "", Oq(Eq);
-          else if (")" === Eq) {
-            for (lq(); - 1 !== Yq && "(" !== mq();) gq.push(Aq());
-            Aq()
-          } else if (xq._OperatorPriority[Bq] > 1) {
-            for (lq(); - 1 !== Yq && xq._OperatorPriority[mq()] >= xq._OperatorPriority[Bq];) gq.push(Aq());
-            Oq(Bq), cq++
-          } else uq += Eq;
-          cq++
+          Ub = () => Lb._Stack[Bb],
+          Yb = () => -1 === Bb ? "!!INVALID EXPRESSION!!" : Lb._Stack[Bb--];
+        let Sb = 0,
+          ab = "";
+        for (; Sb < bb.length;) {
+          const ub = bb.charAt(Sb),
+            Hb = Sb < bb.length - 1 ? bb.substring(Sb, 2 + Sb) : "";
+          if ("(" === ub) ab = "", Gb(ub);
+          else if (")" === ub) {
+            for (Ob(); - 1 !== Bb && "(" !== Ub();) hb.push(Yb());
+            Yb()
+          } else if (Lb._OperatorPriority[Hb] > 1) {
+            for (Ob(); - 1 !== Bb && Lb._OperatorPriority[Ub()] >= Lb._OperatorPriority[Hb];) hb.push(Yb());
+            Gb(Hb), Sb++
+          } else ab += ub;
+          Sb++
         }
-        for (lq(); - 1 !== Yq;) "(" === mq() ? Aq() : gq.push(Aq());
-        return xq._InfixToPostfixCache.size >= xq.InfixToPostfixCacheLimitSize && xq.ClearCache(), xq._InfixToPostfixCache.set(qq, {
-          result: gq,
+        for (Ob(); - 1 !== Bb;) "(" === Ub() ? Yb() : hb.push(Yb());
+        return Lb._InfixToPostfixCache.size >= Lb.InfixToPostfixCacheLimitSize && Lb.ClearCache(), Lb._InfixToPostfixCache.set(bb, {
+          result: hb,
           accessTime: Date.now()
-        }), gq
+        }), hb
       }
       static ClearCache() {
-        const qq = Array.from(xq._InfixToPostfixCache.entries()).sort(((qq, Eq) => qq[1].accessTime - Eq[1].accessTime));
-        for (let Eq = 0; Eq < xq.InfixToPostfixCacheCleanupSize; Eq++) xq._InfixToPostfixCache.delete(qq[Eq][0])
+        const bb = Array.from(Lb._InfixToPostfixCache.entries()).sort(((bb, ub) => bb[1].accessTime - ub[1].accessTime));
+        for (let ub = 0; ub < Lb.InfixToPostfixCacheCleanupSize; ub++) Lb._InfixToPostfixCache.delete(bb[ub][0])
       }
     }
-    xq.InfixToPostfixCacheLimitSize = 5e4, xq.InfixToPostfixCacheCleanupSize = 25e3, xq._InfixToPostfixCache = new Map, xq._OperatorPriority = {
+    Lb.InfixToPostfixCacheLimitSize = 5e4, Lb.InfixToPostfixCacheCleanupSize = 25e3, Lb._InfixToPostfixCache = new Map, Lb._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, xq._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class Aq extends xq {
-      constructor(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = qq, this.not = Eq
+    }, Lb._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class Yb extends Lb {
+      constructor(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = bb, this.not = ub
       }
-      isTrue(qq) {
-        let Eq = void 0 !== qq[this.define];
-        return this.not && (Eq = !Eq), Eq
-      }
-    }
-    class cq extends xq {
-      isTrue(qq) {
-        return this.leftOperand.isTrue(qq) || this.rightOperand.isTrue(qq)
+      isTrue(bb) {
+        let ub = void 0 !== bb[this.define];
+        return this.not && (ub = !ub), ub
       }
     }
-    class uq extends xq {
-      isTrue(qq) {
-        return this.leftOperand.isTrue(qq) && this.rightOperand.isTrue(qq)
+    class Sb extends Lb {
+      isTrue(bb) {
+        return this.leftOperand.isTrue(bb) || this.rightOperand.isTrue(bb)
       }
     }
-    class Bq extends xq {
-      constructor(qq, Eq, gq) {
-        super(), this.define = qq, this.operand = Eq, this.testValue = gq
+    class ab extends Lb {
+      isTrue(bb) {
+        return this.leftOperand.isTrue(bb) && this.rightOperand.isTrue(bb)
+      }
+    }
+    class Hb extends Lb {
+      constructor(bb, ub, hb) {
+        super(), this.define = bb, this.operand = ub, this.testValue = hb
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
-      isTrue(qq) {
-        let Eq = !1;
-        const gq = parseInt(void 0 != qq[this.define] ? qq[this.define] : this.define),
-          Yq = parseInt(void 0 != qq[this.testValue] ? qq[this.testValue] : this.testValue);
-        if (isNaN(gq) || isNaN(Yq)) return !1;
+      isTrue(bb) {
+        let ub = !1;
+        const hb = parseInt(void 0 != bb[this.define] ? bb[this.define] : this.define),
+          Bb = parseInt(void 0 != bb[this.testValue] ? bb[this.testValue] : this.testValue);
+        if (isNaN(hb) || isNaN(Bb)) return !1;
         switch (this.operand) {
           case ">":
-            Eq = gq > Yq;
+            ub = hb > Bb;
             break;
           case "<":
-            Eq = gq < Yq;
+            ub = hb < Bb;
             break;
           case "<=":
-            Eq = gq <= Yq;
+            ub = hb <= Bb;
             break;
           case ">=":
-            Eq = gq >= Yq;
+            ub = hb >= Bb;
             break;
           case "==":
-            Eq = gq === Yq;
+            ub = hb === Bb;
             break;
           case "!=":
-            Eq = gq !== Yq
+            ub = hb !== Bb
         }
-        return Eq
+        return ub
       }
     }
-    var Wq = gq(39636),
-      Nq = gq(39630);
-    const aq = /defined\s*?\((.+?)\)/g,
-      Vq = /defined\s*?\[(.+?)\]/g,
-      dq = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      jq = /__decl__/,
-      Hq = /light\{X\}.(\w*)/g,
-      oq = /\{X\}/g,
-      Pq = [],
-      Qq = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var wb = hb(39333),
+      Zb = hb(39331);
+    const Xb = /defined\s*?\((.+?)\)/g,
+      pb = /defined\s*?\[(.+?)\]/g,
+      ob = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      Ab = /__decl__/,
+      lb = /light\{X\}.(\w*)/g,
+      Kb = /\{X\}/g,
+      Wb = [],
+      Cb = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function yq(qq) {
-      qq.processor && qq.processor.initializeShaders && qq.processor.initializeShaders(qq.processingContext)
+    function db(bb) {
+      bb.processor && bb.processor.initializeShaders && bb.processor.initializeShaders(bb.processingContext)
     }
 
-    function tq(qq, Eq, gq, Yq) {
-      Eq.processor?.preProcessShaderCode && (qq = Eq.processor.preProcessShaderCode(qq, Eq.isFragment)), fq(qq, Eq, (qq => {
-        Eq.processCodeAfterIncludes && (qq = Eq.processCodeAfterIncludes(Eq.isFragment ? "fragment" : "vertex", qq, Eq.defines));
-        const lq = function(qq, Eq, gq) {
-          let Yq = function(qq, Eq) {
-            if (Eq.processor?.noPrecision) return qq;
-            const gq = Eq.shouldUseHighPrecisionShader; - 1 === qq.indexOf("precision highp float") ? qq = gq ? "precision highp float;\n" + qq : "precision mediump float;\n" + qq : gq || (qq = qq.replace("precision highp float", "precision mediump float"));
-            return qq
-          }(qq, Eq);
-          if (!Eq.processor) return Yq;
-          if (0 === Eq.processor.shaderLanguage && -1 !== Yq.indexOf("#version 3") && (Yq = Yq.replace("#version 300 es", ""), !Eq.processor.parseGLES3)) return Yq;
-          const lq = Eq.defines,
-            Oq = Zq(Eq, gq);
-          Eq.processor.preProcessor && (Yq = Eq.processor.preProcessor(Yq, lq, Oq, Eq.isFragment, Eq.processingContext));
-          const mq = {};
-          Yq = iq(Yq, Oq, Eq, mq), Eq.processor.postProcessor && (Yq = Eq.processor.postProcessor(Yq, lq, Eq.isFragment, Eq.processingContext, gq ? {
-            drawBuffersExtensionDisabled: !gq.getCaps().drawBuffersExtension
-          } : {}, Oq, mq));
-          gq?._features.needShaderCodeInlining && (Yq = gq.inlineShaderCode(Yq));
-          return Yq
-        }(qq, Eq, Yq);
-        gq(lq, qq)
+    function rb(bb, ub, hb, Bb) {
+      ub.processor?.preProcessShaderCode && (bb = ub.processor.preProcessShaderCode(bb, ub.isFragment)), vb(bb, ub, (bb => {
+        ub.processCodeAfterIncludes && (bb = ub.processCodeAfterIncludes(ub.isFragment ? "fragment" : "vertex", bb, ub.defines));
+        const Ob = function(bb, ub, hb) {
+          let Bb = function(bb, ub) {
+            if (ub.processor?.noPrecision) return bb;
+            const hb = ub.shouldUseHighPrecisionShader; - 1 === bb.indexOf("precision highp float") ? bb = hb ? "precision highp float;\n" + bb : "precision mediump float;\n" + bb : hb || (bb = bb.replace("precision highp float", "precision mediump float"));
+            return bb
+          }(bb, ub);
+          if (!ub.processor) return Bb;
+          if (0 === ub.processor.shaderLanguage && -1 !== Bb.indexOf("#version 3") && (Bb = Bb.replace("#version 300 es", ""), !ub.processor.parseGLES3)) return Bb;
+          const Ob = ub.defines,
+            Gb = ib(ub, hb);
+          ub.processor.preProcessor && (Bb = ub.processor.preProcessor(Bb, Ob, Gb, ub.isFragment, ub.processingContext));
+          const Ub = {};
+          Bb = gb(Bb, Gb, ub, Ub), ub.processor.postProcessor && (Bb = ub.processor.postProcessor(Bb, Ob, ub.isFragment, ub.processingContext, hb ? {
+            drawBuffersExtensionDisabled: !hb.getCaps().drawBuffersExtension
+          } : {}, Gb, Ub));
+          hb?._features.needShaderCodeInlining && (Bb = hb.inlineShaderCode(Bb));
+          return Bb
+        }(bb, ub, Bb);
+        hb(Ob, bb)
       }))
     }
 
-    function rq(qq, Eq, gq) {
-      return gq.processor && gq.processor.finalizeShaders ? gq.processor.finalizeShaders(qq, Eq, gq.processingContext) : {
-        vertexCode: qq,
-        fragmentCode: Eq
+    function jb(bb, ub, hb) {
+      return hb.processor && hb.processor.finalizeShaders ? hb.processor.finalizeShaders(bb, ub, hb.processingContext) : {
+        vertexCode: bb,
+        fragmentCode: ub
       }
     }
 
-    function vq(qq) {
-      const Eq = /defined\((.+)\)/.exec(qq);
-      if (Eq && Eq.length) return new Aq(Eq[1].trim(), "!" === qq[0]);
-      const gq = ["==", "!=", ">=", "<=", "<", ">"];
-      let Yq = "",
-        lq = 0;
-      for (Yq of gq)
-        if (lq = qq.indexOf(Yq), lq > -1) break;
-      if (-1 === lq) return new Aq(qq);
-      const Oq = qq.substring(0, lq).trim(),
-        mq = qq.substring(lq + Yq.length).trim();
-      return new Bq(Oq, Yq, mq)
+    function nb(bb) {
+      const ub = /defined\((.+)\)/.exec(bb);
+      if (ub && ub.length) return new Yb(ub[1].trim(), "!" === bb[0]);
+      const hb = ["==", "!=", ">=", "<=", "<", ">"];
+      let Bb = "",
+        Ob = 0;
+      for (Bb of hb)
+        if (Ob = bb.indexOf(Bb), Ob > -1) break;
+      if (-1 === Ob) return new Yb(bb);
+      const Gb = bb.substring(0, Ob).trim(),
+        Ub = bb.substring(Ob + Bb.length).trim();
+      return new Hb(Gb, Bb, Ub)
     }
 
-    function hq(qq, Eq) {
-      const gq = new mq,
-        Yq = qq.substring(0, Eq);
-      let lq = qq.substring(Eq);
-      return lq = lq.substring(0, (lq.indexOf("//") + 1 || lq.length + 1) - 1).trim(), gq.testExpression = "#ifdef" === Yq ? new Aq(lq) : "#ifndef" === Yq ? new Aq(lq, !0) : function(qq) {
-        qq = qq.replace(aq, "defined[$1]");
-        const Eq = xq.infixToPostfix(qq),
-          gq = [];
-        for (const lq of Eq)
-          if ("||" !== lq && "&&" !== lq) gq.push(lq);
-          else if (gq.length >= 2) {
-          let qq = gq[gq.length - 1],
-            Eq = gq[gq.length - 2];
-          gq.length -= 2;
-          const Yq = "&&" == lq ? new uq : new cq;
-          "string" === typeof qq && (qq = qq.replace(Vq, "defined($1)")), "string" === typeof Eq && (Eq = Eq.replace(Vq, "defined($1)")), Yq.leftOperand = "string" === typeof Eq ? vq(Eq) : Eq, Yq.rightOperand = "string" === typeof qq ? vq(qq) : qq, gq.push(Yq)
+    function Db(bb, ub) {
+      const hb = new Ub,
+        Bb = bb.substring(0, ub);
+      let Ob = bb.substring(ub);
+      return Ob = Ob.substring(0, (Ob.indexOf("//") + 1 || Ob.length + 1) - 1).trim(), hb.testExpression = "#ifdef" === Bb ? new Yb(Ob) : "#ifndef" === Bb ? new Yb(Ob, !0) : function(bb) {
+        bb = bb.replace(Xb, "defined[$1]");
+        const ub = Lb.infixToPostfix(bb),
+          hb = [];
+        for (const Ob of ub)
+          if ("||" !== Ob && "&&" !== Ob) hb.push(Ob);
+          else if (hb.length >= 2) {
+          let bb = hb[hb.length - 1],
+            ub = hb[hb.length - 2];
+          hb.length -= 2;
+          const Bb = "&&" == Ob ? new ab : new Sb;
+          "string" === typeof bb && (bb = bb.replace(pb, "defined($1)")), "string" === typeof ub && (ub = ub.replace(pb, "defined($1)")), Bb.leftOperand = "string" === typeof ub ? nb(ub) : ub, Bb.rightOperand = "string" === typeof bb ? nb(bb) : bb, hb.push(Bb)
         }
-        let Yq = gq[gq.length - 1];
-        return "string" === typeof Yq && (Yq = Yq.replace(Vq, "defined($1)")), "string" === typeof Yq ? vq(Yq) : Yq
-      }(lq), gq
+        let Bb = hb[hb.length - 1];
+        return "string" === typeof Bb && (Bb = Bb.replace(pb, "defined($1)")), "string" === typeof Bb ? nb(Bb) : Bb
+      }(Ob), hb
     }
 
-    function nq(qq, Eq, gq, lq) {
-      let Oq;
-      for (; bq(qq, gq, lq);) {
-        Oq = qq.currentLine;
-        const mq = Oq.substring(0, 5).toLowerCase();
-        if ("#else" === mq) {
-          const gq = new Yq;
-          return Eq.children.push(gq), void bq(qq, gq, lq)
+    function xb(bb, ub, hb, Ob) {
+      let Gb;
+      for (; zb(bb, hb, Ob);) {
+        Gb = bb.currentLine;
+        const Ub = Gb.substring(0, 5).toLowerCase();
+        if ("#else" === Ub) {
+          const hb = new Bb;
+          return ub.children.push(hb), void zb(bb, hb, Ob)
         }
-        if ("#elif" === mq) {
-          const qq = hq(Oq, 5);
-          Eq.children.push(qq), gq = qq
+        if ("#elif" === Ub) {
+          const bb = Db(Gb, 5);
+          ub.children.push(bb), hb = bb
         }
       }
     }
 
-    function bq(qq, Eq, gq) {
-      for (; qq.canRead;) {
-        qq.lineIndex++;
-        const lq = qq.currentLine;
-        if (lq.indexOf("#") >= 0) {
-          const Yq = Qq.exec(lq);
-          if (Yq && Yq.length) {
-            switch (Yq[0]) {
+    function zb(bb, ub, hb) {
+      for (; bb.canRead;) {
+        bb.lineIndex++;
+        const Ob = bb.currentLine;
+        if (Ob.indexOf("#") >= 0) {
+          const Bb = Cb.exec(Ob);
+          if (Bb && Bb.length) {
+            switch (Bb[0]) {
               case "#ifdef": {
-                const Yq = new Oq;
-                Eq.children.push(Yq);
-                const mq = hq(lq, 6);
-                Yq.children.push(mq), nq(qq, Yq, mq, gq);
+                const Bb = new Gb;
+                ub.children.push(Bb);
+                const Ub = Db(Ob, 6);
+                Bb.children.push(Ub), xb(bb, Bb, Ub, hb);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const Yq = new Oq;
-                Eq.children.push(Yq);
-                const mq = hq(lq, 7);
-                Yq.children.push(mq), nq(qq, Yq, mq, gq);
+                const Bb = new Gb;
+                ub.children.push(Bb);
+                const Ub = Db(Ob, 7);
+                Bb.children.push(Ub), xb(bb, Bb, Ub, hb);
                 break
               }
               case "#if": {
-                const Yq = new Oq,
-                  mq = hq(lq, 3);
-                Eq.children.push(Yq), Yq.children.push(mq), nq(qq, Yq, mq, gq);
+                const Bb = new Gb,
+                  Ub = Db(Ob, 3);
+                ub.children.push(Bb), Bb.children.push(Ub), xb(bb, Bb, Ub, hb);
                 break
               }
             }
             continue
           }
         }
-        const mq = new Yq;
-        if (mq.line = lq, Eq.children.push(mq), "#" === lq[0] && "d" === lq[1]) {
-          const qq = lq.replace(";", "").split(" ");
-          mq.additionalDefineKey = qq[1], 3 === qq.length && (mq.additionalDefineValue = qq[2])
+        const Ub = new Bb;
+        if (Ub.line = Ob, ub.children.push(Ub), "#" === Ob[0] && "d" === Ob[1]) {
+          const bb = Ob.replace(";", "").split(" ");
+          Ub.additionalDefineKey = bb[1], 3 === bb.length && (Ub.additionalDefineValue = bb[2])
         }
       }
       return !1
     }
 
-    function iq(qq, Eq, gq, Oq) {
-      const mq = new Yq,
-        xq = new lq;
-      return xq.lineIndex = -1, xq.lines = qq.split("\n"), bq(xq, mq, Oq), mq.process(Eq, gq, Oq)
+    function gb(bb, ub, hb, Gb) {
+      const Ub = new Bb,
+        Lb = new Ob;
+      return Lb.lineIndex = -1, Lb.lines = bb.split("\n"), zb(Lb, Ub, Gb), Ub.process(ub, hb, Gb)
     }
 
-    function Zq(qq, Eq) {
-      const gq = qq.defines,
-        Yq = {};
-      for (const lq of gq) {
-        const qq = lq.replace("#define", "").replace(";", "").trim().split(" ");
-        Yq[qq[0]] = qq.length > 1 ? qq[1] : ""
+    function ib(bb, ub) {
+      const hb = bb.defines,
+        Bb = {};
+      for (const Ob of hb) {
+        const bb = Ob.replace("#define", "").replace(";", "").trim().split(" ");
+        Bb[bb[0]] = bb.length > 1 ? bb[1] : ""
       }
-      return 0 === qq.processor?.shaderLanguage && (Yq.GL_ES = "true"), Yq.__VERSION__ = qq.version, Yq[qq.platformName] = "true", (0, Nq.i)(Yq, Eq?.isNDCHalfZRange, Eq?.vYq, Eq?.useExactSrgbConversions), Yq
+      return 0 === bb.processor?.shaderLanguage && (Bb.GL_ES = "true"), Bb.__VERSION__ = bb.version, Bb[bb.platformName] = "true", (0, Zb.e)(Bb, ub?.isNDCHalfZRange, ub?.aBb, ub?.useExactSrgbConversions), Bb
     }
 
-    function fq(qq, Eq, gq) {
-      let Yq;
-      for (Pq.length = 0; null !== (Yq = dq.exec(qq));) Pq.push(Yq);
-      let lq = [qq],
-        Oq = !1;
-      for (const xq of Pq) {
-        let qq = xq[1];
-        if (-1 !== qq.indexOf("__decl__") && (qq = qq.replace(jq, ""), Eq.supportsUniformBuffers && (qq = qq.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), qq += "Declaration"), !Eq.includesShadersStore[qq]) {
-          const Yq = Eq.shadersRepository + "ShadersInclude/" + qq + ".fx";
-          return void Mq.loadFile(Yq, (Yq => {
-            Eq.includesShadersStore[qq] = Yq, fq(lq.join(""), Eq, gq)
+    function vb(bb, ub, hb) {
+      let Bb;
+      for (Wb.length = 0; null !== (Bb = ob.exec(bb));) Wb.push(Bb);
+      let Ob = [bb],
+        Gb = !1;
+      for (const Lb of Wb) {
+        let bb = Lb[1];
+        if (-1 !== bb.indexOf("__decl__") && (bb = bb.replace(Ab, ""), ub.supportsUniformBuffers && (bb = bb.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), bb += "Declaration"), !ub.includesShadersStore[bb]) {
+          const Bb = ub.shadersRepository + "ShadersInclude/" + bb + ".fx";
+          return void tb.loadFile(Bb, (Bb => {
+            ub.includesShadersStore[bb] = Bb, vb(Ob.join(""), ub, hb)
           }))
         } {
-          let gq = Eq.includesShadersStore[qq];
-          if (xq[2]) {
-            const qq = xq[3].split(",");
-            for (let Eq = 0; Eq < qq.length; Eq += 2) {
-              const Yq = new RegExp(qq[Eq], "g"),
-                lq = qq[Eq + 1];
-              gq = gq.replace(Yq, lq)
+          let hb = ub.includesShadersStore[bb];
+          if (Lb[2]) {
+            const bb = Lb[3].split(",");
+            for (let ub = 0; ub < bb.length; ub += 2) {
+              const Bb = new RegExp(bb[ub], "g"),
+                Ob = bb[ub + 1];
+              hb = hb.replace(Bb, Ob)
             }
           }
-          if (xq[4]) {
-            const qq = xq[5];
-            if (-1 !== qq.indexOf("..")) {
-              const Yq = qq.split(".."),
-                lq = parseInt(Yq[0]);
-              let Oq = parseInt(Yq[1]),
-                mq = gq.slice(0);
-              gq = "", isNaN(Oq) && (Oq = Eq.indexParameters[Yq[1]]);
-              for (let qq = lq; qq < Oq; qq++) Eq.supportsUniformBuffers || (mq = mq.replace(Hq, ((qq, Eq) => Eq + "{X}"))), gq += mq.replace(oq, qq.toString()) + "\n"
-            } else Eq.supportsUniformBuffers || (gq = gq.replace(Hq, ((qq, Eq) => Eq + "{X}"))), gq = gq.replace(oq, qq)
+          if (Lb[4]) {
+            const bb = Lb[5];
+            if (-1 !== bb.indexOf("..")) {
+              const Bb = bb.split(".."),
+                Ob = parseInt(Bb[0]);
+              let Gb = parseInt(Bb[1]),
+                Ub = hb.slice(0);
+              hb = "", isNaN(Gb) && (Gb = ub.indexParameters[Bb[1]]);
+              for (let bb = Ob; bb < Gb; bb++) ub.supportsUniformBuffers || (Ub = Ub.replace(lb, ((bb, ub) => ub + "{X}"))), hb += Ub.replace(Kb, bb.toString()) + "\n"
+            } else ub.supportsUniformBuffers || (hb = hb.replace(lb, ((bb, ub) => ub + "{X}"))), hb = hb.replace(Kb, bb)
           }
-          const Yq = [];
-          for (const qq of lq) {
-            const Eq = qq.split(xq[0]);
-            for (let qq = 0; qq < Eq.length - 1; qq++) Yq.push(Eq[qq]), Yq.push(gq);
-            Yq.push(Eq[Eq.length - 1])
+          const Bb = [];
+          for (const bb of Ob) {
+            const ub = bb.split(Lb[0]);
+            for (let bb = 0; bb < ub.length - 1; bb++) Bb.push(ub[bb]), Bb.push(hb);
+            Bb.push(ub[ub.length - 1])
           }
-          lq = Yq, Oq = Oq || gq.indexOf("#include<") >= 0 || gq.indexOf("#include <") >= 0
+          Ob = Bb, Gb = Gb || hb.indexOf("#include<") >= 0 || hb.indexOf("#include <") >= 0
         }
       }
-      Pq.length = 0;
-      const mq = lq.join("");
-      Oq ? fq(mq.toString(), Eq, gq) : gq(mq)
+      Wb.length = 0;
+      const Ub = Ob.join("");
+      Gb ? vb(Ub.toString(), ub, hb) : hb(Ub)
     }
-    const Mq = {
-      loadFile: (qq, Eq, gq, Yq, lq, Oq) => {
-        throw (0, Wq.m)("FileTools")
+    const tb = {
+      loadFile: (bb, ub, hb, Bb, Ob, Gb) => {
+        throw (0, wb.m)("FileTools")
       }
     }
   },
-  39630: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => lq,
-      h: () => Oq,
-      i: () => xq,
-      m: () => mq,
-      p: () => Aq
+  39331: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Ob,
+      d: () => Gb,
+      e: () => Lb,
+      f: () => Ub,
+      g: () => Yb
     });
-    var Yq = gq(39636);
-    const lq = {};
+    var Bb = hb(39333);
+    const Ob = {};
 
-    function Oq(qq, Eq) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (Eq ? Eq + "\n" : "") + qq
+    function Gb(bb, ub) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (ub ? ub + "\n" : "") + bb
     }
 
-    function mq(qq, Eq, gq, Oq, mq, xq, Aq) {
-      const cq = Aq || lq.loadFile;
-      if (!cq) throw (0, Yq.m)("FileTools");
-      return cq(qq, Eq, gq, Oq, mq, xq)
+    function Ub(bb, ub, hb, Gb, Ub, Lb, Yb) {
+      const Sb = Yb || Ob.loadFile;
+      if (!Sb) throw (0, Bb.m)("FileTools");
+      return Sb(bb, ub, hb, Gb, Ub, Lb)
     }
 
-    function xq(qq, Eq, gq, Yq) {
-      if (qq) return Eq ? qq.IS_NDC_HALF_ZRANGE = "" : delete qq.IS_NDC_HALF_ZRANGE, gq ? qq.USE_REVERSE_DEPTHBUFFER = "" : delete qq.USE_REVERSE_DEPTHBUFFER, void(Yq ? qq.USE_EXACT_SRGB_CONVERSIONS = "" : delete qq.USE_EXACT_SRGB_CONVERSIONS);
+    function Lb(bb, ub, hb, Bb) {
+      if (bb) return ub ? bb.IS_NDC_HALF_ZRANGE = "" : delete bb.IS_NDC_HALF_ZRANGE, hb ? bb.USE_REVERSE_DEPTHBUFFER = "" : delete bb.USE_REVERSE_DEPTHBUFFER, void(Bb ? bb.USE_EXACT_SRGB_CONVERSIONS = "" : delete bb.USE_EXACT_SRGB_CONVERSIONS);
       {
-        let qq = "";
-        return Eq && (qq += "#define IS_NDC_HALF_ZRANGE"), gq && (qq && (qq += "\n"), qq += "#define USE_REVERSE_DEPTHBUFFER"), Yq && (qq && (qq += "\n"), qq += "#define USE_EXACT_SRGB_CONVERSIONS"), qq
+        let bb = "";
+        return ub && (bb += "#define IS_NDC_HALF_ZRANGE"), hb && (bb && (bb += "\n"), bb += "#define USE_REVERSE_DEPTHBUFFER"), Bb && (bb && (bb += "\n"), bb += "#define USE_EXACT_SRGB_CONVERSIONS"), bb
       }
     }
 
-    function Aq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Yq = arguments.length > 3 ? arguments[3] : void 0;
-      switch (qq) {
+    function Yb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        Bb = arguments.length > 3 ? arguments[3] : void 0;
+      switch (bb) {
         case 3: {
-          const qq = new Int8Array(Eq);
-          return Yq && qq.set(new Int8Array(Yq)), qq
+          const bb = new Int8Array(ub);
+          return Bb && bb.set(new Int8Array(Bb)), bb
         }
         case 0: {
-          const qq = new Uint8Array(Eq);
-          return Yq && qq.set(new Uint8Array(Yq)), qq
+          const bb = new Uint8Array(ub);
+          return Bb && bb.set(new Uint8Array(Bb)), bb
         }
         case 4: {
-          const qq = "number" !== typeof Eq ? new Int16Array(Eq) : new Int16Array(gq ? Eq / 2 : Eq);
-          return Yq && qq.set(new Int16Array(Yq)), qq
+          const bb = "number" !== typeof ub ? new Int16Array(ub) : new Int16Array(hb ? ub / 2 : ub);
+          return Bb && bb.set(new Int16Array(Bb)), bb
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const qq = "number" !== typeof Eq ? new Uint16Array(Eq) : new Uint16Array(gq ? Eq / 2 : Eq);
-          return Yq && qq.set(new Uint16Array(Yq)), qq
+          const bb = "number" !== typeof ub ? new Uint16Array(ub) : new Uint16Array(hb ? ub / 2 : ub);
+          return Bb && bb.set(new Uint16Array(Bb)), bb
         }
         case 6: {
-          const qq = "number" !== typeof Eq ? new Int32Array(Eq) : new Int32Array(gq ? Eq / 4 : Eq);
-          return Yq && qq.set(new Int32Array(Yq)), qq
+          const bb = "number" !== typeof ub ? new Int32Array(ub) : new Int32Array(hb ? ub / 4 : ub);
+          return Bb && bb.set(new Int32Array(Bb)), bb
         }
         case 7:
         case 11:
@@ -715,55 +715,55 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const qq = "number" !== typeof Eq ? new Uint32Array(Eq) : new Uint32Array(gq ? Eq / 4 : Eq);
-          return Yq && qq.set(new Uint32Array(Yq)), qq
+          const bb = "number" !== typeof ub ? new Uint32Array(ub) : new Uint32Array(hb ? ub / 4 : ub);
+          return Bb && bb.set(new Uint32Array(Bb)), bb
         }
         case 1: {
-          const qq = "number" !== typeof Eq ? new Float32Array(Eq) : new Float32Array(gq ? Eq / 4 : Eq);
-          return Yq && qq.set(new Float32Array(Yq)), qq
+          const bb = "number" !== typeof ub ? new Float32Array(ub) : new Float32Array(hb ? ub / 4 : ub);
+          return Bb && bb.set(new Float32Array(Bb)), bb
         }
       }
-      const lq = new Uint8Array(Eq);
-      return Yq && lq.set(new Uint8Array(Yq)), lq
+      const Ob = new Uint8Array(ub);
+      return Bb && Ob.set(new Uint8Array(Bb)), Ob
     }
   },
-  39636: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => cq,
-      e: () => uq,
-      i: () => Aq,
-      m: () => lq
+  39333: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Sb,
+      f: () => ab,
+      j: () => Yb,
+      m: () => Ob
     });
-    const Yq = {};
+    const Bb = {};
 
-    function lq(qq) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !Yq[qq]) return Yq[qq] = !0, `${qq} needs to be imported before as it contains a side-effect required by your code.`
+    function Ob(bb) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !Bb[bb]) return Bb[bb] = !0, `${bb} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const Oq = {};
-    let mq = !1,
-      xq = 0;
+    const Gb = {};
+    let Ub = !1,
+      Lb = 0;
 
-    function Aq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Yq = function() {
-        if ((gq || mq) && 0 === xq) {
-          const gq = `${qq}.${Eq}`;
-          Oq[gq] || (Oq[gq] = !0, console.warn(`[Babylon.js] ${gq}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function Yb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Bb = function() {
+        if ((hb || Ub) && 0 === Lb) {
+          const hb = `${bb}.${ub}`;
+          Gb[hb] || (Gb[hb] = !0, console.warn(`[Babylon.js] ${hb}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return Yq.__isSideEffectStub = !0, Yq
+      return Bb.__isSideEffectStub = !0, Bb
     }
 
-    function cq(qq) {
-      return !!qq && !qq.__isSideEffectStub
+    function Sb(bb) {
+      return !!bb && !bb.__isSideEffectStub
     }
 
-    function uq(qq, Eq) {
+    function ab(bb, ub) {
       return {
         get() {},
-        set(qq) {
-          Object.defineProperty(this, Eq, {
-            value: qq,
+        set(bb) {
+          Object.defineProperty(this, ub, {
+            value: bb,
             writable: !0,
             configurable: !0,
             enumerable: !0
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  39626: (qq, Eq, gq) => {
-    function Yq() {
+  39316: (bb, ub, hb) => {
+    function Bb() {
       return "undefined" !== typeof window
     }
 
-    function lq() {
+    function Ob() {
       return "undefined" !== typeof navigator
     }
 
-    function Oq() {
+    function Gb() {
       return "undefined" !== typeof document
     }
 
-    function mq(qq) {
-      let Eq = "",
-        gq = qq.firstChild;
-      for (; gq;) 3 === gq.nodeType && (Eq += gq.textContent), gq = gq.nextSibling;
-      return Eq
+    function Ub(bb) {
+      let ub = "",
+        hb = bb.firstChild;
+      for (; hb;) 3 === hb.nodeType && (ub += hb.textContent), hb = hb.nextSibling;
+      return ub
     }
-    gq.d(Eq, {
-      b: () => mq,
-      f: () => Oq,
-      j: () => lq,
-      n: () => Yq
+    hb.d(ub, {
+      d: () => Ub,
+      e: () => Gb,
+      h: () => Ob,
+      k: () => Bb
     })
   },
-  39805: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Yq,
-      f: () => lq,
-      h: () => Oq
+  39525: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Bb,
+      e: () => Ob,
+      h: () => Gb
     });
-    class Yq extends Error {}
-    Yq._setPrototypeOf = Object.setPrototypeOf || ((qq, Eq) => (qq.__proto__ = Eq, qq));
-    const lq = {
+    class Bb extends Error {}
+    Bb._setPrototypeOf = Object.setPrototypeOf || ((bb, ub) => (bb.__proto__ = ub, bb));
+    const Ob = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,339 +817,339 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class Oq extends Yq {
-      constructor(qq, Eq, gq) {
-        super(qq), this.errorCode = Eq, this.innerError = gq, this.name = "RuntimeError", Yq._setPrototypeOf(this, Oq.prototype)
+    class Gb extends Bb {
+      constructor(bb, ub, hb) {
+        super(bb), this.errorCode = ub, this.innerError = hb, this.name = "RuntimeError", Bb._setPrototypeOf(this, Gb.prototype)
       }
     }
   },
-  39799: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Zq,
-      i: () => oq,
-      m: () => hq,
-      q: () => bq,
-      u: () => rq,
-      x: () => yq,
-      z: () => tq,
-      D: () => Sq,
-      F: () => vq,
-      J: () => Pq
+  39511: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => ib,
+      f: () => Kb,
+      h: () => Db,
+      i: () => zb,
+      k: () => jb,
+      o: () => db,
+      r: () => rb,
+      s: () => Nb,
+      t: () => nb,
+      w: () => Wb
     });
-    var Yq = gq(39801),
-      lq = gq(39626),
-      Oq = gq(37156);
-    class mq {}
-    mq.FilesToLoad = {};
-    var xq = gq(39805),
-      Aq = gq(39810),
-      cq = gq(37153),
-      uq = gq(39630),
-      Bq = gq(39640),
-      Wq = gq(38653),
-      Nq = gq(39644),
-      aq = gq(39817);
-    const Vq = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class dq extends xq.h {
-      constructor(qq, Eq) {
-        super(qq, xq.f.LoadFileError), this.name = "LoadFileError", xq.e._setPrototypeOf(this, dq.prototype), Eq instanceof Yq.e ? this.request = Eq : this.file = Eq
+    var Bb = hb(39520),
+      Ob = hb(39316),
+      Gb = hb(36753);
+    class Ub {}
+    Ub.FilesToLoad = {};
+    var Lb = hb(39525),
+      Yb = hb(39530),
+      Sb = hb(36748),
+      ab = hb(39331),
+      Hb = hb(39339),
+      wb = hb(38302),
+      Zb = hb(39343),
+      Xb = hb(39533);
+    const pb = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class ob extends Lb.h {
+      constructor(bb, ub) {
+        super(bb, Lb.e.LoadFileError), this.name = "LoadFileError", Lb.c._setPrototypeOf(this, ob.prototype), ub instanceof Bb.b ? this.request = ub : this.file = ub
       }
     }
-    class jq extends xq.h {
-      constructor(qq, Eq) {
-        super(qq, xq.f.RequestFileError), this.request = Eq, this.name = "RequestFileError", xq.e._setPrototypeOf(this, jq.prototype)
+    class Ab extends Lb.h {
+      constructor(bb, ub) {
+        super(bb, Lb.e.RequestFileError), this.request = ub, this.name = "RequestFileError", Lb.c._setPrototypeOf(this, Ab.prototype)
       }
     }
-    class Hq extends xq.h {
-      constructor(qq, Eq) {
-        super(qq, xq.f.ReadFileError), this.file = Eq, this.name = "ReadFileError", xq.e._setPrototypeOf(this, Hq.prototype)
+    class lb extends Lb.h {
+      constructor(bb, ub) {
+        super(bb, Lb.e.ReadFileError), this.file = ub, this.name = "ReadFileError", Lb.c._setPrototypeOf(this, lb.prototype)
       }
     }
-    const oq = {
+    const Kb = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
-            let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (gq, Yq, lq) => 0 !== Yq.status || lq >= qq || -1 !== gq.indexOf("file:") ? -1 : Math.pow(2, lq) * Eq
+            let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (hb, Bb, Ob) => 0 !== Bb.status || Ob >= bb || -1 !== hb.indexOf("file:") ? -1 : Math.pow(2, Ob) * ub
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
         CorsBehavior: "anonymous",
-        PreprocessUrl: qq => qq,
+        PreprocessUrl: bb => bb,
         ScriptBaseUrl: "",
-        ScriptPreprocessUrl: qq => qq,
-        CleanUrl: qq => qq = qq.replace(/#/gm, "%23")
+        ScriptPreprocessUrl: bb => bb,
+        CleanUrl: bb => bb = bb.replace(/#/gm, "%23")
       },
-      Pq = (qq, Eq) => {
-        if ((!qq || 0 !== qq.indexOf("data:")) && oq.CorsBehavior)
-          if ("string" === typeof oq.CorsBehavior || oq.CorsBehavior instanceof String) Eq.crossOrigin = oq.CorsBehavior;
+      Wb = (bb, ub) => {
+        if ((!bb || 0 !== bb.indexOf("data:")) && Kb.CorsBehavior)
+          if ("string" === typeof Kb.CorsBehavior || Kb.CorsBehavior instanceof String) ub.crossOrigin = Kb.CorsBehavior;
           else {
-            const gq = oq.CorsBehavior(qq);
-            gq && (Eq.crossOrigin = gq)
+            const hb = Kb.CorsBehavior(bb);
+            hb && (ub.crossOrigin = hb)
           }
       },
-      Qq = {
+      Cb = {
         getRequiredSize: null
       },
-      yq = function(qq, Eq, gq, lq) {
-        let Oq, xq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          uq = arguments.length > 5 ? arguments[5] : void 0,
-          Bq = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : cq.b.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !Bq?._features.forceBitmapOverHTMLImageElement) return gq("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (Bq?._features.forceBitmapOverHTMLImageElement && "string" !== typeof qq && "undefined" !== typeof Blob) {
-          let Yq;
-          if (qq instanceof Blob) Yq = qq;
+      db = function(bb, ub, hb, Ob) {
+        let Gb, Lb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          ab = arguments.length > 5 ? arguments[5] : void 0,
+          Hb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Sb.b.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !Hb?._features.forceBitmapOverHTMLImageElement) return hb("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (Hb?._features.forceBitmapOverHTMLImageElement && "string" !== typeof bb && "undefined" !== typeof Blob) {
+          let Bb;
+          if (bb instanceof Blob) Bb = bb;
           else {
-            const Eq = qq instanceof ArrayBuffer ? qq : (0, aq.l)(qq);
-            Yq = new Blob([Eq], {
-              type: xq
+            const ub = bb instanceof ArrayBuffer ? bb : (0, Xb.l)(bb);
+            Bb = new Blob([ub], {
+              type: Lb
             })
           }
-          return Bq.createImageBitmap(Yq, {
+          return Hb.createImageBitmap(Bb, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...uq
-          }).then(Eq).catch((Eq => {
-            gq && gq("Error while trying to load image: " + qq, Eq)
+            ...ab
+          }).then(ub).catch((ub => {
+            hb && hb("Error while trying to load image: " + bb, ub)
           })), null
         }
-        let Wq = !1;
-        if (qq instanceof ArrayBuffer || ArrayBuffer.isView(qq))
+        let wb = !1;
+        if (bb instanceof ArrayBuffer || ArrayBuffer.isView(bb))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let Eq;
-            Eq = qq instanceof ArrayBuffer ? qq : (0, aq.l)(qq), Oq = URL.createObjectURL(new Blob([Eq], {
-              type: xq
-            })), Wq = !0
-          } else Oq = `data:${xq};base64,` + (0, Aq.f)(qq);
-        else qq instanceof Blob ? (Oq = URL.createObjectURL(qq), Wq = !0) : (Oq = oq.CleanUrl(qq), Oq = oq.PreprocessUrl(Oq));
-        const Nq = Eq => {
-          if (gq) {
-            const Yq = Oq || qq.toString();
-            gq(`Error while trying to load image: ${0===Yq.indexOf("http")||Yq.length<=128?Yq:Yq.slice(0,128)+"..."}`, Eq)
+            let ub;
+            ub = bb instanceof ArrayBuffer ? bb : (0, Xb.l)(bb), Gb = URL.createObjectURL(new Blob([ub], {
+              type: Lb
+            })), wb = !0
+          } else Gb = `data:${Lb};base64,` + (0, Yb.i)(bb);
+        else bb instanceof Blob ? (Gb = URL.createObjectURL(bb), wb = !0) : (Gb = Kb.CleanUrl(bb), Gb = Kb.PreprocessUrl(Gb));
+        const Zb = ub => {
+          if (hb) {
+            const Bb = Gb || bb.toString();
+            hb(`Error while trying to load image: ${0===Bb.indexOf("http")||Bb.length<=128?Bb:Bb.slice(0,128)+"..."}`, ub)
           }
         };
-        if (Bq?._features.forceBitmapOverHTMLImageElement) return rq(Oq, (Yq => {
-          Bq.createImageBitmap(new Blob([Yq], {
-            type: xq
+        if (Hb?._features.forceBitmapOverHTMLImageElement) return jb(Gb, (Bb => {
+          Hb.createImageBitmap(new Blob([Bb], {
+            type: Lb
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...uq
-          }).then((qq => {
-            Eq(qq), Wq && URL.revokeObjectURL(Oq)
-          })).catch((Eq => {
-            gq && gq("Error while trying to load image: " + qq, Eq)
+            ...ab
+          }).then((bb => {
+            ub(bb), wb && URL.revokeObjectURL(Gb)
+          })).catch((ub => {
+            hb && hb("Error while trying to load image: " + bb, ub)
           }))
-        }), void 0, lq || void 0, !0, ((qq, Eq) => {
-          Nq(Eq)
+        }), void 0, Ob || void 0, !0, ((bb, ub) => {
+          Zb(ub)
         })), null;
-        const Vq = new Image;
-        if (Qq.getRequiredSize) {
-          const Eq = Qq.getRequiredSize(qq);
-          Eq.width && (Vq.width = Eq.width), Eq.height && (Vq.height = Eq.height)
+        const pb = new Image;
+        if (Cb.getRequiredSize) {
+          const ub = Cb.getRequiredSize(bb);
+          ub.width && (pb.width = ub.width), ub.height && (pb.height = ub.height)
         }
-        Pq(Oq, Vq);
-        const dq = [],
-          jq = () => {
-            for (const qq of dq) qq.target.removeEventListener(qq.name, qq.handler);
-            dq.length = 0
+        Wb(Gb, pb);
+        const ob = [],
+          Ab = () => {
+            for (const bb of ob) bb.target.removeEventListener(bb.name, bb.handler);
+            ob.length = 0
           };
-        dq.push({
-          target: Vq,
+        ob.push({
+          target: pb,
           name: "load",
           handler: () => {
-            jq(), Eq(Vq), Wq && Vq.src && URL.revokeObjectURL(Vq.src)
+            Ab(), ub(pb), wb && pb.src && URL.revokeObjectURL(pb.src)
           }
-        }), dq.push({
-          target: Vq,
+        }), ob.push({
+          target: pb,
           name: "error",
-          handler: qq => {
-            jq(), Nq(qq), Wq && Vq.src && URL.revokeObjectURL(Vq.src)
+          handler: bb => {
+            Ab(), Zb(bb), wb && pb.src && URL.revokeObjectURL(pb.src)
           }
-        }), dq.push({
+        }), ob.push({
           target: document,
           name: "securitypolicyviolation",
-          handler: qq => {
-            if (qq.blockedURI !== Vq.src || "SN" === qq.disposition) return;
-            jq();
-            const Eq = new Error(`CSP violation of policy ${qq.effectiveDirective} ${qq.blockedURI}. Current policy is ${qq.originalPolicy}`);
-            cq.b.UseFallbackTexture = !1, Nq(Eq), Wq && Vq.src && URL.revokeObjectURL(Vq.src), Vq.src = ""
+          handler: bb => {
+            if (bb.blockedURI !== pb.src || "iZ" === bb.disposition) return;
+            Ab();
+            const ub = new Error(`CSP violation of policy ${bb.effectiveDirective} ${bb.blockedURI}. Current policy is ${bb.originalPolicy}`);
+            Sb.b.UseFallbackTexture = !1, Zb(ub), wb && pb.src && URL.revokeObjectURL(pb.src), pb.src = ""
           }
         }), (() => {
-          for (const qq of dq) qq.target.addEventListener(qq.name, qq.handler)
+          for (const bb of ob) bb.target.addEventListener(bb.name, bb.handler)
         })();
-        const Hq = "blob:" === Oq.substring(0, 5),
-          yq = "data:" === Oq.substring(0, 5),
-          tq = () => {
-            Hq || yq || !Yq.e.IsCustomRequestAvailable ? Vq.src = Oq : rq(Oq, ((qq, Eq, gq) => {
-              const Yq = new Blob([qq], {
-                  type: !xq && gq ? gq : xq
+        const lb = "blob:" === Gb.substring(0, 5),
+          db = "data:" === Gb.substring(0, 5),
+          rb = () => {
+            lb || db || !Bb.b.IsCustomRequestAvailable ? pb.src = Gb : jb(Gb, ((bb, ub, hb) => {
+              const Bb = new Blob([bb], {
+                  type: !Lb && hb ? hb : Lb
                 }),
-                lq = URL.createObjectURL(Yq);
-              Wq = !0, Vq.src = lq
-            }), void 0, lq || void 0, !0, ((qq, Eq) => {
-              Nq(Eq)
+                Ob = URL.createObjectURL(Bb);
+              wb = !0, pb.src = Ob
+            }), void 0, Ob || void 0, !0, ((bb, ub) => {
+              Zb(ub)
             }))
           },
-          vq = () => {
-            lq && lq.loadImage(Oq, Vq)
+          nb = () => {
+            Ob && Ob.loadImage(Gb, pb)
           };
-        if (!Hq && !yq && lq && lq.enableTexturesOffline) lq.open(vq, tq);
+        if (!lb && !db && Ob && Ob.enableTexturesOffline) Ob.open(nb, rb);
         else {
-          if (-1 !== Oq.indexOf("file:")) {
-            const qq = decodeURIComponent(Oq.substring(5).toLowerCase());
-            if (mq.FilesToLoad[qq] && "undefined" !== typeof URL) {
+          if (-1 !== Gb.indexOf("file:")) {
+            const bb = decodeURIComponent(Gb.substring(5).toLowerCase());
+            if (Ub.FilesToLoad[bb] && "undefined" !== typeof URL) {
               try {
-                let Eq;
+                let ub;
                 try {
-                  Eq = URL.createObjectURL(mq.FilesToLoad[qq])
-                } catch (hq) {
-                  Eq = URL.createObjectURL(mq.FilesToLoad[qq])
+                  ub = URL.createObjectURL(Ub.FilesToLoad[bb])
+                } catch (Db) {
+                  ub = URL.createObjectURL(Ub.FilesToLoad[bb])
                 }
-                Vq.src = Eq, Wq = !0
-              } catch (nq) {
-                Vq.src = ""
+                pb.src = ub, wb = !0
+              } catch (xb) {
+                pb.src = ""
               }
-              return Vq
+              return pb
             }
           }
-          tq()
+          rb()
         }
-        return Vq
+        return pb
       },
-      tq = (qq, Eq, gq, Yq, lq) => {
-        const mq = new FileReader,
-          xq = {
-            onCompleteObservable: new Oq.d,
-            abort: () => mq.abort()
+      rb = (bb, ub, hb, Bb, Ob) => {
+        const Ub = new FileReader,
+          Lb = {
+            onCompleteObservable: new Gb.e,
+            abort: () => Ub.abort()
           };
-        return mq.onloadend = () => xq.onCompleteObservable.notifyObservers(xq), lq && (mq.onerror = () => {
-          lq(new Hq(`Unable to read ${qq.name}`, qq))
-        }), mq.onload = qq => {
-          Eq(qq.target.result)
-        }, gq && (mq.onprogress = gq), Yq ? mq.readAsArrayBuffer(qq) : mq.readAsText(qq), xq
+        return Ub.onloadend = () => Lb.onCompleteObservable.notifyObservers(Lb), Ob && (Ub.onerror = () => {
+          Ob(new lb(`Unable to read ${bb.name}`, bb))
+        }), Ub.onload = bb => {
+          ub(bb.target.result)
+        }, hb && (Ub.onprogress = hb), Bb ? Ub.readAsArrayBuffer(bb) : Ub.readAsText(bb), Lb
       },
-      rq = (qq, Eq, gq, Yq, lq, Aq, cq) => {
-        if (qq.name) return tq(qq, Eq, gq, lq, Aq ? qq => {
-          Aq(void 0, qq)
+      jb = (bb, ub, hb, Bb, Ob, Yb, Sb) => {
+        if (bb.name) return rb(bb, ub, hb, Ob, Yb ? bb => {
+          Yb(void 0, bb)
         } : void 0);
-        const uq = qq;
-        if (-1 !== uq.indexOf("file:")) {
-          let qq = decodeURIComponent(uq.substring(5).toLowerCase());
-          0 === qq.indexOf("./") && (qq = qq.substring(2));
-          const Yq = mq.FilesToLoad[qq];
-          if (Yq) return tq(Yq, Eq, gq, lq, Aq ? qq => Aq(void 0, new dq(qq.message, qq.file)) : void 0)
+        const ab = bb;
+        if (-1 !== ab.indexOf("file:")) {
+          let bb = decodeURIComponent(ab.substring(5).toLowerCase());
+          0 === bb.indexOf("./") && (bb = bb.substring(2));
+          const Bb = Ub.FilesToLoad[bb];
+          if (Bb) return rb(Bb, ub, hb, Ob, Yb ? bb => Yb(void 0, new ob(bb.message, bb.file)) : void 0)
         }
         const {
-          match: Bq,
-          type: aq
-        } = iq(uq);
-        if (Bq) {
-          const qq = {
-            onCompleteObservable: new Oq.d,
+          match: Hb,
+          type: Xb
+        } = gb(ab);
+        if (Hb) {
+          const bb = {
+            onCompleteObservable: new Gb.e,
             abort: () => () => {}
           };
           try {
-            const qq = lq ? Zq(uq) : fq(uq);
-            Eq(qq, void 0, aq)
-          } catch (xq) {
-            Aq ? Aq(void 0, xq) : Wq.b.Error(xq.message || "Failed to parse the Data URL")
+            const bb = Ob ? ib(ab) : vb(ab);
+            ub(bb, void 0, Xb)
+          } catch (Lb) {
+            Yb ? Yb(void 0, Lb) : wb.b.Error(Lb.message || "Failed to parse the Data URL")
           }
-          return Nq.c.SetImmediate((() => {
-            qq.onCompleteObservable.notifyObservers(qq)
-          })), qq
+          return Zb.c.SetImmediate((() => {
+            bb.onCompleteObservable.notifyObservers(bb)
+          })), bb
         }
-        return vq(uq, ((qq, gq) => {
-          Eq(qq, gq?.responseURL, gq?.getResponseHeader("content-type"))
-        }), gq, Yq, lq, Aq ? qq => {
-          Aq(qq.request, new dq(qq.message, qq.request))
-        } : void 0, cq)
+        return nb(ab, ((bb, hb) => {
+          ub(bb, hb?.responseURL, hb?.getResponseHeader("content-type"))
+        }), hb, Bb, Ob, Yb ? bb => {
+          Yb(bb.request, new ob(bb.message, bb.request))
+        } : void 0, Sb)
       },
-      vq = (qq, Eq, gq, mq, xq, Aq, uq) => {
-        null !== mq && (mq ?? (mq = cq.b.LastCreatedScene?.offlineProvider)), qq = oq.CleanUrl(qq), qq = oq.PreprocessUrl(qq);
-        const Bq = oq.BaseUrl + qq;
-        let Nq = !1;
-        const aq = {
-            onCompleteObservable: new Oq.d,
-            abort: () => Nq = !0
+      nb = (bb, ub, hb, Ub, Lb, Yb, ab) => {
+        null !== Ub && (Ub ?? (Ub = Sb.b.LastCreatedScene?.offlineProvider)), bb = Kb.CleanUrl(bb), bb = Kb.PreprocessUrl(bb);
+        const Hb = Kb.BaseUrl + bb;
+        let Zb = !1;
+        const Xb = {
+            onCompleteObservable: new Gb.e,
+            abort: () => Zb = !0
           },
-          Vq = () => {
-            let qq, Oq = new Yq.e,
-              mq = null;
-            const cq = () => {
-              Oq && (gq && Oq.removeEventListener("progress", gq), qq && Oq.removeEventListener("readystatechange", qq), Oq.removeEventListener("loadend", Vq))
+          pb = () => {
+            let bb, Gb = new Bb.b,
+              Ub = null;
+            const Sb = () => {
+              Gb && (hb && Gb.removeEventListener("progress", hb), bb && Gb.removeEventListener("readystatechange", bb), Gb.removeEventListener("loadend", pb))
             };
-            let Vq = () => {
-              cq(), aq.onCompleteObservable.notifyObservers(aq), aq.onCompleteObservable.clear(), gq = void 0, qq = null, Vq = null, Aq = void 0, uq = void 0, Eq = void 0
+            let pb = () => {
+              Sb(), Xb.onCompleteObservable.notifyObservers(Xb), Xb.onCompleteObservable.clear(), hb = void 0, bb = null, pb = null, Yb = void 0, ab = void 0, ub = void 0
             };
-            aq.abort = () => {
-              Nq = !0, Vq && Vq(), Oq && Oq.readyState !== (XMLHttpRequest.DONE || 4) && Oq.abort(), null !== mq && (clearTimeout(mq), mq = null), Oq = null
+            Xb.abort = () => {
+              Zb = !0, pb && pb(), Gb && Gb.readyState !== (XMLHttpRequest.DONE || 4) && Gb.abort(), null !== Ub && (clearTimeout(Ub), Ub = null), Gb = null
             };
-            const dq = qq => {
-                const Eq = qq.message || "Unknown error";
-                Aq && Oq ? Aq(new jq(Eq, Oq)) : Wq.b.Error(Eq)
+            const ob = bb => {
+                const ub = bb.message || "Unknown error";
+                Yb && Gb ? Yb(new Ab(ub, Gb)) : wb.b.Error(ub)
               },
-              Hq = Wq => {
-                if (Oq) {
-                  if (Oq.open("GET", Bq), uq) try {
-                    uq(Oq)
-                  } catch (aq) {
-                    return void dq(aq)
+              lb = wb => {
+                if (Gb) {
+                  if (Gb.open("GET", Hb), ab) try {
+                    ab(Gb)
+                  } catch (Xb) {
+                    return void ob(Xb)
                   }
-                  xq && (Oq.responseType = "arraybuffer"), gq && Oq.addEventListener("progress", gq), Vq && Oq.addEventListener("loadend", Vq), qq = () => {
-                    if (!Nq && Oq && Oq.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (qq && Oq.removeEventListener("readystatechange", qq), Oq.status >= 200 && Oq.status < 300 || 0 === Oq.status && (!(0, lq.n)() || nq())) {
-                        const qq = xq ? Oq.response : Oq.responseText;
-                        if (null !== qq) {
+                  Lb && (Gb.responseType = "arraybuffer"), hb && Gb.addEventListener("progress", hb), pb && Gb.addEventListener("loadend", pb), bb = () => {
+                    if (!Zb && Gb && Gb.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (bb && Gb.removeEventListener("readystatechange", bb), Gb.status >= 200 && Gb.status < 300 || 0 === Gb.status && (!(0, Ob.k)() || xb())) {
+                        const bb = Lb ? Gb.response : Gb.responseText;
+                        if (null !== bb) {
                           try {
-                            Eq && Eq(qq, Oq)
-                          } catch (aq) {
-                            dq(aq)
+                            ub && ub(bb, Gb)
+                          } catch (Xb) {
+                            ob(Xb)
                           }
                           return
                         }
                       }
-                      const gq = oq.DefaultRetryStrategy;
-                      if (gq) {
-                        const qq = gq(Bq, Oq, Wq);
-                        if (-1 !== qq) return cq(), Oq = new Yq.e, void(mq = setTimeout((() => Hq(Wq + 1)), qq))
+                      const hb = Kb.DefaultRetryStrategy;
+                      if (hb) {
+                        const bb = hb(Hb, Gb, wb);
+                        if (-1 !== bb) return Sb(), Gb = new Bb.b, void(Ub = setTimeout((() => lb(wb + 1)), bb))
                       }
-                      const uq = new jq("Error status: " + Oq.status + " " + Oq.statusText + " - Unable to load " + Bq, Oq);
-                      Aq && Aq(uq)
+                      const ab = new Ab("Error status: " + Gb.status + " " + Gb.statusText + " - Unable to load " + Hb, Gb);
+                      Yb && Yb(ab)
                     }
-                  }, Oq.addEventListener("readystatechange", qq), Oq.send()
+                  }, Gb.addEventListener("readystatechange", bb), Gb.send()
                 }
               };
-            Hq(0)
+            lb(0)
           };
-        if (mq && mq.enableSceneOffline && !qq.startsWith("blob:")) {
-          const Yq = qq => {
-              qq && qq.status > 400 ? Aq && Aq(qq) : Vq()
+        if (Ub && Ub.enableSceneOffline && !bb.startsWith("blob:")) {
+          const Bb = bb => {
+              bb && bb.status > 400 ? Yb && Yb(bb) : pb()
             },
-            lq = () => {
-              mq && mq.loadFile(oq.BaseUrl + qq, (qq => {
-                !Nq && Eq && Eq(qq), aq.onCompleteObservable.notifyObservers(aq)
-              }), gq ? qq => {
-                !Nq && gq && gq(qq)
-              } : void 0, Yq, xq)
+            Ob = () => {
+              Ub && Ub.loadFile(Kb.BaseUrl + bb, (bb => {
+                !Zb && ub && ub(bb), Xb.onCompleteObservable.notifyObservers(Xb)
+              }), hb ? bb => {
+                !Zb && hb && hb(bb)
+              } : void 0, Bb, Lb)
             };
-          mq.open(lq, Yq)
-        } else Vq();
-        return aq
+          Ub.open(Ob, Bb)
+        } else pb();
+        return Xb
       },
-      hq = qq => {
+      Db = bb => {
         const {
-          match: Eq,
-          type: gq
-        } = iq(qq);
-        if (Eq) return gq || void 0;
-        const Yq = qq.lastIndexOf(".");
-        switch (qq.substring(Yq + 1).toLowerCase()) {
+          match: ub,
+          type: hb
+        } = gb(bb);
+        if (ub) return hb || void 0;
+        const Bb = bb.lastIndexOf(".");
+        switch (bb.substring(Bb + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "QJ":
+          case "yJ":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      nq = () => "undefined" !== typeof location && "file:" === location.protocol,
-      bq = qq => Vq.test(qq),
-      iq = qq => {
-        const Eq = Vq.exec(qq);
-        if (null === Eq || 0 === Eq.length) return {
+      xb = () => "undefined" !== typeof location && "file:" === location.protocol,
+      zb = bb => pb.test(bb),
+      gb = bb => {
+        const ub = pb.exec(bb);
+        if (null === ub || 0 === ub.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: Eq[0].replace("data:", "").replace(";base64,", "")
+          type: ub[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function Zq(qq) {
-      return (0, Aq.b)(qq.split(",")[1])
+    function ib(bb) {
+      return (0, Yb.d)(bb.split(",")[1])
     }
-    const fq = qq => (0, Aq.d)(qq.split(",")[1]);
-    let Mq;
-    const Tq = (qq, Eq, gq, Yq, lq, Oq, mq, xq, Aq, cq) => {
-      Mq = {
-        DecodeBase64UrlToBinary: qq,
-        DecodeBase64UrlToString: Eq,
-        DefaultRetryStrategy: gq.DefaultRetryStrategy,
-        BaseUrl: gq.BaseUrl,
-        CorsBehavior: gq.CorsBehavior,
-        PreprocessUrl: gq.PreprocessUrl,
-        IsBase64DataUrl: Yq,
-        IsFileURL: lq,
-        LoadFile: Oq,
-        LoadImage: mq,
-        ReadFile: xq,
-        RequestFile: Aq,
-        SetCorsBehavior: cq
-      }, Object.defineProperty(Mq, "DefaultRetryStrategy", {
+    const vb = bb => (0, Yb.h)(bb.split(",")[1]);
+    let tb;
+    const Jb = (bb, ub, hb, Bb, Ob, Gb, Ub, Lb, Yb, Sb) => {
+      tb = {
+        DecodeBase64UrlToBinary: bb,
+        DecodeBase64UrlToString: ub,
+        DefaultRetryStrategy: hb.DefaultRetryStrategy,
+        BaseUrl: hb.BaseUrl,
+        CorsBehavior: hb.CorsBehavior,
+        PreprocessUrl: hb.PreprocessUrl,
+        IsBase64DataUrl: Bb,
+        IsFileURL: Ob,
+        LoadFile: Gb,
+        LoadImage: Ub,
+        ReadFile: Lb,
+        RequestFile: Yb,
+        SetCorsBehavior: Sb
+      }, Object.defineProperty(tb, "DefaultRetryStrategy", {
         get: function() {
-          return gq.DefaultRetryStrategy
+          return hb.DefaultRetryStrategy
         },
-        set: function(qq) {
-          gq.DefaultRetryStrategy = qq
+        set: function(bb) {
+          hb.DefaultRetryStrategy = bb
         }
-      }), Object.defineProperty(Mq, "BaseUrl", {
+      }), Object.defineProperty(tb, "BaseUrl", {
         get: function() {
-          return gq.BaseUrl
+          return hb.BaseUrl
         },
-        set: function(qq) {
-          gq.BaseUrl = qq
+        set: function(bb) {
+          hb.BaseUrl = bb
         }
-      }), Object.defineProperty(Mq, "PreprocessUrl", {
+      }), Object.defineProperty(tb, "PreprocessUrl", {
         get: function() {
-          return gq.PreprocessUrl
+          return hb.PreprocessUrl
         },
-        set: function(qq) {
-          gq.PreprocessUrl = qq
+        set: function(bb) {
+          hb.PreprocessUrl = bb
         }
-      }), Object.defineProperty(Mq, "CorsBehavior", {
+      }), Object.defineProperty(tb, "CorsBehavior", {
         get: function() {
-          return gq.CorsBehavior
+          return hb.CorsBehavior
         },
-        set: function(qq) {
-          gq.CorsBehavior = qq
+        set: function(bb) {
+          hb.CorsBehavior = bb
         }
       })
     };
-    let zq = !1;
+    let eb = !1;
 
-    function Sq() {
-      zq || (zq = !0, Tq(Zq, fq, oq, bq, nq, rq, yq, tq, vq, Pq), uq.e.loadFile = rq, uq.e.loadImage = yq, Bq.n.loadFile = rq)
+    function Nb() {
+      eb || (eb = !0, Jb(ib, vb, Kb, zb, xb, jb, db, rb, nb, Wb), ab.c.loadFile = jb, ab.c.loadImage = db, Hb.q.loadFile = jb)
     }
   },
-  39819: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => xq,
-      f: () => Oq,
-      j: () => mq
+  39536: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Lb,
+      e: () => Gb,
+      i: () => Ub
     });
-    let Yq = null;
+    let Bb = null;
 
-    function lq() {
-      if (Yq) return Yq;
-      const qq = new ArrayBuffer(4),
-        Eq = new Float32Array(qq),
-        gq = new Uint32Array(qq),
-        lq = new Uint32Array(512),
-        Oq = new Uint32Array(512);
-      for (let Yq = 0; Yq < 256; ++Yq) {
-        const qq = Yq - 127;
-        qq < -24 ? (lq[Yq] = 0, lq[256 | Yq] = 32768, Oq[Yq] = 24, Oq[256 | Yq] = 24) : qq < -14 ? (lq[Yq] = 1024 >> -qq - 14, lq[256 | Yq] = 1024 >> -qq - 14 | 32768, Oq[Yq] = -qq - 1, Oq[256 | Yq] = -qq - 1) : qq <= 15 ? (lq[Yq] = qq + 15 << 10, lq[256 | Yq] = qq + 15 << 10 | 32768, Oq[Yq] = 13, Oq[256 | Yq] = 13) : qq < 128 ? (lq[Yq] = 31744, lq[256 | Yq] = 64512, Oq[Yq] = 24, Oq[256 | Yq] = 24) : (lq[Yq] = 31744, lq[256 | Yq] = 64512, Oq[Yq] = 13, Oq[256 | Yq] = 13)
+    function Ob() {
+      if (Bb) return Bb;
+      const bb = new ArrayBuffer(4),
+        ub = new Float32Array(bb),
+        hb = new Uint32Array(bb),
+        Ob = new Uint32Array(512),
+        Gb = new Uint32Array(512);
+      for (let Bb = 0; Bb < 256; ++Bb) {
+        const bb = Bb - 127;
+        bb < -24 ? (Ob[Bb] = 0, Ob[256 | Bb] = 32768, Gb[Bb] = 24, Gb[256 | Bb] = 24) : bb < -14 ? (Ob[Bb] = 1024 >> -bb - 14, Ob[256 | Bb] = 1024 >> -bb - 14 | 32768, Gb[Bb] = -bb - 1, Gb[256 | Bb] = -bb - 1) : bb <= 15 ? (Ob[Bb] = bb + 15 << 10, Ob[256 | Bb] = bb + 15 << 10 | 32768, Gb[Bb] = 13, Gb[256 | Bb] = 13) : bb < 128 ? (Ob[Bb] = 31744, Ob[256 | Bb] = 64512, Gb[Bb] = 24, Gb[256 | Bb] = 24) : (Ob[Bb] = 31744, Ob[256 | Bb] = 64512, Gb[Bb] = 13, Gb[256 | Bb] = 13)
       }
-      const mq = new Uint32Array(2048),
-        xq = new Uint32Array(64),
-        Aq = new Uint32Array(64);
-      for (let Yq = 1; Yq < 1024; ++Yq) {
-        let qq = Yq << 13,
-          Eq = 0;
-        for (; 0 === (8388608 & qq);) qq <<= 1, Eq -= 8388608;
-        qq &= -8388609, Eq += 947912704, mq[Yq] = qq | Eq
+      const Ub = new Uint32Array(2048),
+        Lb = new Uint32Array(64),
+        Yb = new Uint32Array(64);
+      for (let Bb = 1; Bb < 1024; ++Bb) {
+        let bb = Bb << 13,
+          ub = 0;
+        for (; 0 === (8388608 & bb);) bb <<= 1, ub -= 8388608;
+        bb &= -8388609, ub += 947912704, Ub[Bb] = bb | ub
       }
-      for (let Yq = 1024; Yq < 2048; ++Yq) mq[Yq] = 939524096 + (Yq - 1024 << 13);
-      for (let Yq = 1; Yq < 31; ++Yq) xq[Yq] = Yq << 23;
-      xq[31] = 1199570944, xq[32] = 2147483648;
-      for (let Yq = 33; Yq < 63; ++Yq) xq[Yq] = 2147483648 + (Yq - 32 << 23);
-      xq[63] = 3347054592;
-      for (let Yq = 1; Yq < 64; ++Yq) 32 !== Yq && (Aq[Yq] = 1024);
-      return Yq = {
-        floatView: Eq,
-        uint32View: gq,
-        baseTable: lq,
-        shiftTable: Oq,
-        mantissaTable: mq,
-        exponentTable: xq,
-        offsetTable: Aq
-      }, Yq
+      for (let Bb = 1024; Bb < 2048; ++Bb) Ub[Bb] = 939524096 + (Bb - 1024 << 13);
+      for (let Bb = 1; Bb < 31; ++Bb) Lb[Bb] = Bb << 23;
+      Lb[31] = 1199570944, Lb[32] = 2147483648;
+      for (let Bb = 33; Bb < 63; ++Bb) Lb[Bb] = 2147483648 + (Bb - 32 << 23);
+      Lb[63] = 3347054592;
+      for (let Bb = 1; Bb < 64; ++Bb) 32 !== Bb && (Yb[Bb] = 1024);
+      return Bb = {
+        floatView: ub,
+        uint32View: hb,
+        baseTable: Ob,
+        shiftTable: Gb,
+        mantissaTable: Ub,
+        exponentTable: Lb,
+        offsetTable: Yb
+      }, Bb
     }
-    const Oq = 65504;
+    const Gb = 65504;
 
-    function mq(qq) {
-      const Eq = lq();
-      Eq.floatView[0] = qq;
-      const gq = Eq.uint32View[0],
-        Yq = gq >> 23 & 511;
-      return Eq.baseTable[Yq] + ((8388607 & gq) >> Eq.shiftTable[Yq])
+    function Ub(bb) {
+      const ub = Ob();
+      ub.floatView[0] = bb;
+      const hb = ub.uint32View[0],
+        Bb = hb >> 23 & 511;
+      return ub.baseTable[Bb] + ((8388607 & hb) >> ub.shiftTable[Bb])
     }
 
-    function xq(qq) {
-      const Eq = lq();
-      return Eq.uint32View[0] = Eq.mantissaTable[Eq.offsetTable[qq >> 10] + (1023 & qq)] + Eq.exponentTable[qq >> 10], Eq.floatView[0]
+    function Lb(bb) {
+      const ub = Ob();
+      return ub.uint32View[0] = ub.mantissaTable[ub.offsetTable[bb >> 10] + (1023 & bb)] + ub.exponentTable[bb >> 10], ub.floatView[0]
     }
   },
-  39810: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq,
-      d: () => lq,
-      f: () => Yq
+  39530: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb,
+      h: () => Ob,
+      i: () => Bb
     });
-    const Yq = qq => {
-        const Eq = ArrayBuffer.isView(qq) ? new Uint8Array(qq.buffer, qq.byteOffset, qq.byteLength) : new Uint8Array(qq);
-        return "function" === typeof Eq.toBase64 ? Eq.toBase64() : function(qq) {
-          const Eq = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let gq, Yq, lq, Oq, mq, xq, Aq, cq = "",
-            uq = 0;
-          for (; uq < qq.length;) gq = qq[uq++], Yq = uq < qq.length ? qq[uq++] : Number.NaN, lq = uq < qq.length ? qq[uq++] : Number.NaN, Oq = gq >> 2, mq = (3 & gq) << 4 | Yq >> 4, xq = (15 & Yq) << 2 | lq >> 6, Aq = 63 & lq, isNaN(Yq) ? xq = Aq = 64 : isNaN(lq) && (Aq = 64), cq += Eq.charAt(Oq) + Eq.charAt(mq) + Eq.charAt(xq) + Eq.charAt(Aq);
-          return cq
-        }(Eq)
+    const Bb = bb => {
+        const ub = ArrayBuffer.isView(bb) ? new Uint8Array(bb.buffer, bb.byteOffset, bb.byteLength) : new Uint8Array(bb);
+        return "function" === typeof ub.toBase64 ? ub.toBase64() : function(bb) {
+          const ub = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let hb, Bb, Ob, Gb, Ub, Lb, Yb, Sb = "",
+            ab = 0;
+          for (; ab < bb.length;) hb = bb[ab++], Bb = ab < bb.length ? bb[ab++] : Number.NaN, Ob = ab < bb.length ? bb[ab++] : Number.NaN, Gb = hb >> 2, Ub = (3 & hb) << 4 | Bb >> 4, Lb = (15 & Bb) << 2 | Ob >> 6, Yb = 63 & Ob, isNaN(Bb) ? Lb = Yb = 64 : isNaN(Ob) && (Yb = 64), Sb += ub.charAt(Gb) + ub.charAt(Ub) + ub.charAt(Lb) + ub.charAt(Yb);
+          return Sb
+        }(ub)
       },
-      lq = qq => atob(qq),
-      Oq = qq => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(qq).buffer : function(qq) {
-        const Eq = lq(qq),
-          gq = Eq.length,
-          Yq = new Uint8Array(new ArrayBuffer(gq));
-        for (let lq = 0; lq < gq; lq++) Yq[lq] = Eq.charCodeAt(lq);
-        return Yq.buffer
-      }(qq)
+      Ob = bb => atob(bb),
+      Gb = bb => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(bb).buffer : function(bb) {
+        const ub = Ob(bb),
+          hb = ub.length,
+          Bb = new Uint8Array(new ArrayBuffer(hb));
+        for (let Ob = 0; Ob < hb; Ob++) Bb[Ob] = ub.charCodeAt(Ob);
+        return Bb.buffer
+      }(bb)
   },
-  39644: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => lq,
-      e: () => mq
+  39343: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Ob,
+      g: () => Ub
     });
-    let Yq = [];
-    class lq {
-      static SetImmediate(qq) {
-        0 === Yq.length && setTimeout((() => {
-          const qq = Yq;
-          Yq = [];
-          for (const Eq of qq) Eq()
-        }), 1), Yq.push(qq)
+    let Bb = [];
+    class Ob {
+      static SetImmediate(bb) {
+        0 === Bb.length && setTimeout((() => {
+          const bb = Bb;
+          Bb = [];
+          for (const ub of bb) ub()
+        }), 1), Bb.push(bb)
       }
     }
 
-    function Oq(qq, Eq, gq) {
+    function Gb(bb, ub, hb) {
       try {
-        if (qq()) return Eq(), !0
-      } catch (Yq) {
-        return gq?.(Yq), !0
+        if (bb()) return ub(), !0
+      } catch (Bb) {
+        return hb?.(Bb), !0
       }
       return !1
     }
-    const mq = function(qq, Eq, gq) {
-      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        mq = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && Oq(qq, Eq, gq)) return null;
-      const xq = setInterval((() => {
-        Oq(qq, Eq, gq) ? clearInterval(xq) : (lq -= Yq, lq < 0 && (clearInterval(xq), gq?.(new Error("Operation timed out after maximum retries. " + (mq || "")), !0)))
-      }), Yq);
-      return () => clearInterval(xq)
+    const Ub = function(bb, ub, hb) {
+      let Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        Ob = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        Ub = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && Gb(bb, ub, hb)) return null;
+      const Lb = setInterval((() => {
+        Gb(bb, ub, hb) ? clearInterval(Lb) : (Ob -= Bb, Ob < 0 && (clearInterval(Lb), hb?.(new Error("Operation timed out after maximum retries. " + (Ub || "")), !0)))
+      }), Bb);
+      return () => clearInterval(Lb)
     }
   },
-  39801: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Yq
+  39520: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Bb
     });
-    class Yq {
+    class Bb {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(Yq.CustomRequestHeaders).length > 0 || Yq.CustomRequestModifiers.length > 0
+        return Object.keys(Bb.CustomRequestHeaders).length > 0 || Bb.CustomRequestModifiers.length > 0
       }
-      static _CleanUrl(qq) {
-        return qq = (qq = qq.replace("file:http:", "http:")).replace("file:https:", "https:")
+      static _CleanUrl(bb) {
+        return bb = (bb = bb.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
-      static _ShouldSkipRequestModifications(qq) {
-        return Yq.SkipRequestModificationForBabylonCDN && (qq.includes("preview.babylonjs.com") || qq.includes("cdn.babylonjs.com"))
+      static _ShouldSkipRequestModifications(bb) {
+        return Bb.SkipRequestModificationForBabylonCDN && (bb.includes("preview.babylonjs.com") || bb.includes("cdn.babylonjs.com"))
       }
-      static _CollectCustomizations(qq) {
-        const Eq = {
+      static _CollectCustomizations(bb) {
+        const ub = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (Yq._ShouldSkipRequestModifications(qq)) return {
-          url: qq,
-          headers: Eq
+        if (Bb._ShouldSkipRequestModifications(bb)) return {
+          url: bb,
+          headers: ub
         };
-        for (const lq in Yq.CustomRequestHeaders) {
-          const qq = Yq.CustomRequestHeaders[lq];
-          qq && (Eq[lq] = qq)
+        for (const Ob in Bb.CustomRequestHeaders) {
+          const bb = Bb.CustomRequestHeaders[Ob];
+          bb && (ub[Ob] = bb)
         }
-        const gq = {
-          setRequestHeader: (qq, gq) => {
-            Eq[qq] = gq
+        const hb = {
+          setRequestHeader: (bb, hb) => {
+            ub[bb] = hb
           }
         };
-        for (const lq of Yq.CustomRequestModifiers) {
-          if (Yq._ShouldSkipRequestModifications(qq)) break;
-          const Eq = lq(gq, qq);
-          "string" === typeof Eq && (qq = Eq)
+        for (const Ob of Bb.CustomRequestModifiers) {
+          if (Bb._ShouldSkipRequestModifications(bb)) break;
+          const ub = Ob(hb, bb);
+          "string" === typeof ub && (bb = ub)
         }
         return {
-          url: qq,
-          headers: Eq
+          url: bb,
+          headers: ub
         }
       }
-      static async FetchAsync(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const gq = Eq.method ?? "GET";
+      static async FetchAsync(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const hb = ub.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: lq,
-            headers: Oq
-          } = Yq._CollectCustomizations(Yq._CleanUrl(qq), Eq.headers ?? {});
-          return await fetch(lq, {
-            method: gq,
-            headers: Oq,
-            body: Eq.body ?? void 0
+            url: Ob,
+            headers: Gb
+          } = Bb._CollectCustomizations(Bb._CleanUrl(bb), ub.headers ?? {});
+          return await fetch(Ob, {
+            method: hb,
+            headers: Gb,
+            body: ub.body ?? void 0
           })
         }
-        return await new Promise(((lq, Oq) => {
-          const mq = new Yq;
-          mq.responseType = "arraybuffer", mq.addEventListener("readystatechange", (() => {
-            if (4 === mq.readyState)
-              if (mq.status >= 200 && mq.status < 300) {
-                const qq = "undefined" !== typeof Headers ? new Headers : void 0,
-                  Eq = mq.getResponseHeader("Content-Type");
-                Eq && qq && qq.set("Content-Type", Eq), "undefined" !== typeof Response ? lq(new Response(mq.response, {
-                  status: mq.status,
-                  statusText: mq.statusText,
-                  headers: qq
-                })) : lq({
+        return await new Promise(((Ob, Gb) => {
+          const Ub = new Bb;
+          Ub.responseType = "arraybuffer", Ub.addEventListener("readystatechange", (() => {
+            if (4 === Ub.readyState)
+              if (Ub.status >= 200 && Ub.status < 300) {
+                const bb = "undefined" !== typeof Headers ? new Headers : void 0,
+                  ub = Ub.getResponseHeader("Content-Type");
+                ub && bb && bb.set("Content-Type", ub), "undefined" !== typeof Response ? Ob(new Response(Ub.response, {
+                  status: Ub.status,
+                  statusText: Ub.statusText,
+                  headers: bb
+                })) : Ob({
                   ok: !0,
-                  status: mq.status,
-                  statusText: mq.statusText,
+                  status: Ub.status,
+                  statusText: Ub.statusText,
                   headers: {
-                    get: qq => mq.getResponseHeader(qq)
+                    get: bb => Ub.getResponseHeader(bb)
                   },
-                  arrayBuffer: async () => await Promise.resolve(mq.response)
+                  arrayBuffer: async () => await Promise.resolve(Ub.response)
                 })
-              } else Oq(new Error(`HTTP ${mq.status} loading '${mq.requestURL}': ${mq.statusText}`))
-          })), mq.open(gq, qq, Eq.headers), mq.send(Eq.body ?? null)
+              } else Gb(new Error(`HTTP ${Ub.status} loading '${Ub.requestURL}': ${Ub.statusText}`))
+          })), Ub.open(hb, bb, ub.headers), Ub.send(ub.body ?? null)
         }))
       }
       get requestURL() {
@@ -1445,8 +1445,8 @@ export const modules = {
       get onprogress() {
         return this._xhr.onprogress
       }
-      set onprogress(qq) {
-        this._xhr.onprogress = qq
+      set onprogress(bb) {
+        this._xhr.onprogress = bb
       }
       get readyState() {
         return this._xhr.readyState
@@ -1469,44 +1469,44 @@ export const modules = {
       get responseType() {
         return this._xhr.responseType
       }
-      set responseType(qq) {
-        this._xhr.responseType = qq
+      set responseType(bb) {
+        this._xhr.responseType = bb
       }
       get timeout() {
         return this._xhr.timeout
       }
-      set timeout(qq) {
-        this._xhr.timeout = qq
+      set timeout(bb) {
+        this._xhr.timeout = bb
       }
-      addEventListener(qq, Eq, gq) {
-        this._xhr.addEventListener(qq, Eq, gq)
+      addEventListener(bb, ub, hb) {
+        this._xhr.addEventListener(bb, ub, hb)
       }
-      removeEventListener(qq, Eq, gq) {
-        this._xhr.removeEventListener(qq, Eq, gq)
+      removeEventListener(bb, ub, hb) {
+        this._xhr.removeEventListener(bb, ub, hb)
       }
       abort() {
         this._xhr.abort()
       }
-      send(qq) {
-        this._xhr.send(qq)
+      send(bb) {
+        this._xhr.send(bb)
       }
-      open(qq, Eq, gq) {
+      open(bb, ub, hb) {
         const {
-          url: lq,
-          headers: Oq
-        } = Yq._CollectCustomizations(Eq, gq);
-        this._requestURL = Yq._CleanUrl(lq), this._xhr.open(qq, this._requestURL, !0);
-        for (const Yq in Oq) this._xhr.setRequestHeader(Yq, Oq[Yq])
+          url: Ob,
+          headers: Gb
+        } = Bb._CollectCustomizations(ub, hb);
+        this._requestURL = Bb._CleanUrl(Ob), this._xhr.open(bb, this._requestURL, !0);
+        for (const Bb in Gb) this._xhr.setRequestHeader(Bb, Gb[Bb])
       }
-      setRequestHeader(qq, Eq) {
-        this._xhr.setRequestHeader(qq, Eq)
+      setRequestHeader(bb, ub) {
+        this._xhr.setRequestHeader(bb, ub)
       }
-      getResponseHeader(qq) {
-        return this._xhr.getResponseHeader(qq)
+      getResponseHeader(bb) {
+        return this._xhr.getResponseHeader(bb)
       }
     }
-    Yq.CustomRequestHeaders = {}, Yq.CustomRequestModifiers = new Array, Yq.SkipRequestModificationForBabylonCDN = !0
+    Bb.CustomRequestHeaders = {}, Bb.CustomRequestModifiers = new Array, Bb.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

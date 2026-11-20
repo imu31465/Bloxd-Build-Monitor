@@ -1,26 +1,26 @@
 export const id = 99;
 export const ids = [99];
 export const modules = {
-  4724: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      default: () => Pq
+  4659: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      default: () => Wb
     });
-    var Yq = gq(1512),
-      lq = gq(57),
-      Oq = gq(1183),
-      mq = gq(1101),
-      xq = gq(1086),
-      Aq = gq(2068),
-      cq = gq(1498),
-      uq = gq(1326),
-      Bq = gq(1077),
-      Wq = gq(24),
-      Nq = gq(1422),
-      aq = gq(1025),
-      Vq = gq(2493),
-      dq = gq(1529),
-      jq = gq(1070);
-    const Hq = [{
+    var Bb = hb(1431),
+      Ob = hb(49),
+      Gb = hb(1095),
+      Ub = hb(1029),
+      Lb = hb(1023),
+      Yb = hb(1957),
+      Sb = hb(1415),
+      ab = hb(1242),
+      Hb = hb(1016),
+      wb = hb(13),
+      Zb = hb(1357),
+      Xb = hb(966),
+      pb = hb(2403),
+      ob = hb(1442),
+      Ab = hb(1007);
+    const lb = [{
         id: "myGames",
         icon: "joystick",
         title: "studio:myGames"
@@ -33,79 +33,79 @@ export const modules = {
         icon: "file-lines",
         title: "general:docs"
       }],
-      oq = {
+      Kb = {
         myGames: "/studio",
         leaderboard: "/studio/leaderboard",
         docs: "/studio/docs"
       };
 
-    function Pq() {
+    function Wb() {
       const {
-        t: qq
-      } = (0, Oq.v)(), Eq = (0, cq.useNavigatePreserveSearch)(), gq = (0, Yq.q)(), {
-        isUserContextUpdating: Pq
-      } = (0, mq.c)(), Qq = (0, Aq.e)(), yq = (0, xq.l)(), tq = (rq = gq.pathname).startsWith(dq.o) ? null : rq.startsWith(oq.docs) ? "docs" : rq.startsWith(oq.leaderboard) ? "leaderboard" : "myGames";
-      var rq;
-      const vq = function(qq) {
-        if (!qq.startsWith(dq.o)) return {
+        t: bb
+      } = (0, Gb.K)(), ub = (0, Sb.useNavigatePreserveSearch)(), hb = (0, Bb.x)(), {
+        isUserContextUpdating: Wb
+      } = (0, Ub.d)(), Cb = (0, Yb.e)(), db = (0, Lb.k)(), rb = (jb = hb.pathname).startsWith(ob.o) ? null : jb.startsWith(Kb.docs) ? "docs" : jb.startsWith(Kb.leaderboard) ? "leaderboard" : "myGames";
+      var jb;
+      const nb = function(bb) {
+        if (!bb.startsWith(ob.o)) return {
           title: "studio:leaveStudio",
           icon: "left-from-bracket",
           to: "/"
         };
-        const Eq = (0, cq.getPreviousLocation)();
+        const ub = (0, Sb.getPreviousLocation)();
         return {
           title: "general:back",
           icon: "arrow-left",
-          to: null !== Eq && Eq.startsWith(oq.myGames) ? -1 : oq.myGames
+          to: null !== ub && ub.startsWith(Kb.myGames) ? -1 : Kb.myGames
         }
-      }(gq.pathname);
-      return (0, lq.useEffect)((() => {
-        Wq.b.set({
+      }(hb.pathname);
+      return (0, Ob.useEffect)((() => {
+        wb.d.set({
           gameState: "studio",
           openEverythingMenuName: null
         })
-      }), []), (0, jq.jsxs)("div", {
+      }), []), (0, Ab.jsxs)("div", {
         className: "StudioLayout AnimFadeIn",
-        children: [Qq && (0, jq.jsx)("aside", {
+        children: [Cb && (0, Ab.jsx)("aside", {
           className: "StudioLayoutLeft",
-          children: (0, jq.jsx)(Vq.d, {})
-        }), (0, jq.jsxs)("div", {
+          children: (0, Ab.jsx)(pb.b, {})
+        }), (0, Ab.jsxs)("div", {
           className: "StudioLayoutRight",
-          children: [(0, jq.jsxs)("div", {
+          children: [(0, Ab.jsxs)("div", {
             className: "StudioTop",
-            children: [(0, jq.jsx)(Bq.b, {
+            children: [(0, Ab.jsx)(Hb.e, {
               show: !0,
-              socialBarIsDocked: Qq
-            }), (0, jq.jsxs)("nav", {
+              socialBarIsDocked: Cb
+            }), (0, Ab.jsxs)("nav", {
               className: "StudioNav",
-              children: [(0, jq.jsx)(Nq.d, {
-                icon: vq.icon,
+              children: [(0, Ab.jsx)(Zb.d, {
+                icon: nb.icon,
                 onClick: () => {
-                  Eq(vq.to)
+                  ub(nb.to)
                 },
-                children: qq(vq.title)
-              }), (0, jq.jsx)("div", {
+                children: bb(nb.title)
+              }), (0, Ab.jsx)("div", {
                 className: "StudioNavTabs",
-                children: Hq.map((gq => (0, jq.jsxs)(Nq.Q, {
-                  active: tq === gq.id,
-                  href: oq[gq.id],
+                children: lb.map((hb => (0, Ab.jsxs)(Zb.O, {
+                  active: rb === hb.id,
+                  href: Kb[hb.id],
                   onClick: () => {
-                    Eq(oq[gq.id])
+                    ub(Kb[hb.id])
                   },
-                  children: [(0, jq.jsx)(aq.d, {
-                    name: gq.icon
-                  }), !yq && qq(gq.title)]
-                }, gq.id)))
+                  children: [(0, Ab.jsx)(Xb.e, {
+                    name: hb.icon
+                  }), !db && bb(hb.title)]
+                }, hb.id)))
               })]
             })]
-          }), (0, jq.jsxs)("main", {
+          }), (0, Ab.jsxs)("main", {
             className: "StudioBottom",
-            children: [Pq && (0, jq.jsx)("div", {
+            children: [Wb && (0, Ab.jsx)("div", {
               className: "StudioCentredMessage",
-              children: (0, jq.jsx)(uq.e, {})
-            }), !Pq && (0, jq.jsx)("div", {
+              children: (0, Ab.jsx)(ab.c, {})
+            }), !Wb && (0, Ab.jsx)("div", {
               className: "StudioContent",
-              children: (0, jq.jsx)(Yq.f, {})
+              children: (0, Ab.jsx)(Bb.i, {})
             })]
           })]
         })]
@@ -114,4 +114,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

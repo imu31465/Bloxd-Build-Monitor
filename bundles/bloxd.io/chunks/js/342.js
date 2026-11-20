@@ -1,68 +1,68 @@
 export const id = 342;
 export const ids = [342];
 export const modules = {
-  42308: (qq, Eq, gq) => {
-    function Yq(qq) {
-      return Math.floor(qq / 8)
+  41970: (bb, ub, hb) => {
+    function Bb(bb) {
+      return Math.floor(bb / 8)
     }
 
-    function lq(qq) {
-      return 1 << qq % 8
+    function Ob(bb) {
+      return 1 << bb % 8
     }
-    gq.d(Eq, {
-      OptimizeIndices: () => mq
+    hb.d(ub, {
+      OptimizeIndices: () => Ub
     });
-    class Oq {
-      constructor(qq) {
-        this.size = qq, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class Gb {
+      constructor(bb) {
+        this.size = bb, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(qq) {
-        if (qq >= this.size) throw new RangeError("Bit index out of range");
-        const Eq = Yq(qq),
-          gq = lq(qq);
-        return 0 !== (this._byteArray[Eq] & gq)
+      get(bb) {
+        if (bb >= this.size) throw new RangeError("Bit index out of range");
+        const ub = Bb(bb),
+          hb = Ob(bb);
+        return 0 !== (this._byteArray[ub] & hb)
       }
-      set(qq, Eq) {
-        if (qq >= this.size) throw new RangeError("Bit index out of range");
-        const gq = Yq(qq),
-          Oq = lq(qq);
-        Eq ? this._byteArray[gq] |= Oq : this._byteArray[gq] &= ~Oq
+      set(bb, ub) {
+        if (bb >= this.size) throw new RangeError("Bit index out of range");
+        const hb = Bb(bb),
+          Gb = Ob(bb);
+        ub ? this._byteArray[hb] |= Gb : this._byteArray[hb] &= ~Gb
       }
     }
 
-    function mq(qq) {
-      const Eq = [],
-        gq = qq.length / 3;
-      for (let Oq = 0; Oq < gq; Oq++) Eq.push([qq[3 * Oq], qq[3 * Oq + 1], qq[3 * Oq + 2]]);
-      const Yq = new Map;
-      for (let Oq = 0; Oq < Eq.length; Oq++) {
-        const qq = Eq[Oq];
-        for (const Eq of qq) {
-          let qq = Yq.get(Eq);
-          qq || Yq.set(Eq, qq = []), qq.push(Oq)
+    function Ub(bb) {
+      const ub = [],
+        hb = bb.length / 3;
+      for (let Gb = 0; Gb < hb; Gb++) ub.push([bb[3 * Gb], bb[3 * Gb + 1], bb[3 * Gb + 2]]);
+      const Bb = new Map;
+      for (let Gb = 0; Gb < ub.length; Gb++) {
+        const bb = ub[Gb];
+        for (const ub of bb) {
+          let bb = Bb.get(ub);
+          bb || Bb.set(ub, bb = []), bb.push(Gb)
         }
       }
-      const lq = new Oq(gq),
-        mq = [],
-        xq = qq => {
-          const gq = [qq];
-          for (; gq.length > 0;) {
-            const qq = gq.pop();
-            if (!lq.get(qq)) {
-              lq.set(qq, !0), mq.push(Eq[qq]);
-              for (const Oq of Eq[qq]) {
-                const qq = Yq.get(Oq);
-                if (!qq) return;
-                for (const Eq of qq) lq.get(Eq) || gq.push(Eq)
+      const Ob = new Gb(hb),
+        Ub = [],
+        Lb = bb => {
+          const hb = [bb];
+          for (; hb.length > 0;) {
+            const bb = hb.pop();
+            if (!Ob.get(bb)) {
+              Ob.set(bb, !0), Ub.push(ub[bb]);
+              for (const Gb of ub[bb]) {
+                const bb = Bb.get(Gb);
+                if (!bb) return;
+                for (const ub of bb) Ob.get(ub) || hb.push(ub)
               }
             }
           }
         };
-      for (let Oq = 0; Oq < gq; Oq++) lq.get(Oq) || xq(Oq);
-      let Aq = 0;
-      for (const Oq of mq) qq[Aq++] = Oq[0], qq[Aq++] = Oq[1], qq[Aq++] = Oq[2]
+      for (let Gb = 0; Gb < hb; Gb++) Ob.get(Gb) || Lb(Gb);
+      let Yb = 0;
+      for (const Gb of Ub) bb[Yb++] = Gb[0], bb[Yb++] = Gb[1], bb[Yb++] = Gb[2]
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

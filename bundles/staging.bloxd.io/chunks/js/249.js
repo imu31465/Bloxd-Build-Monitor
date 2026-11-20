@@ -1,148 +1,148 @@
 export const id = 249;
 export const ids = [249];
 export const modules = {
-  39980: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq,
-      f: () => xq
+  39686: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Ub,
+      f: () => Lb
     });
-    var Yq = gq(38653),
-      lq = gq(39779),
-      Oq = gq(39951),
-      mq = {};
-    class xq {
-      constructor(qq) {
-        this.attachedToElement = !1, this.attached = {}, this.camera = qq, this.checkInputs = () => {}
+    var Bb = hb(38302),
+      Ob = hb(39488),
+      Gb = hb(39666),
+      Ub = {};
+    class Lb {
+      constructor(bb) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = bb, this.checkInputs = () => {}
       }
-      add(qq) {
-        const Eq = qq.getSimpleName();
-        this.attached[Eq] ? Yq.b.Warn("camera input of type " + Eq + " already exists on camera") : (this.attached[Eq] = qq, qq.camera = this.camera, qq.checkInputs && (this.checkInputs = this._addCheckInputs(qq.checkInputs.bind(qq))), this.attachedToElement && qq.attachControl(this.noPreventDefault))
+      add(bb) {
+        const ub = bb.getSimpleName();
+        this.attached[ub] ? Bb.b.Warn("camera input of type " + ub + " already exists on camera") : (this.attached[ub] = bb, bb.camera = this.camera, bb.checkInputs && (this.checkInputs = this._addCheckInputs(bb.checkInputs.bind(bb))), this.attachedToElement && bb.attachControl(this.noPreventDefault))
       }
-      remove(qq) {
-        for (const Eq in this.attached) {
-          const gq = this.attached[Eq];
-          if (gq === qq) return gq.detachControl(), gq.camera = null, delete this.attached[Eq], void this.rebuildInputCheck()
+      remove(bb) {
+        for (const ub in this.attached) {
+          const hb = this.attached[ub];
+          if (hb === bb) return hb.detachControl(), hb.camera = null, delete this.attached[ub], void this.rebuildInputCheck()
         }
       }
-      removeByType(qq) {
-        for (const Eq in this.attached) {
-          const gq = this.attached[Eq];
-          gq.getClassName() === qq && (gq.detachControl(), gq.camera = null, delete this.attached[Eq], this.rebuildInputCheck())
+      removeByType(bb) {
+        for (const ub in this.attached) {
+          const hb = this.attached[ub];
+          hb.getClassName() === bb && (hb.detachControl(), hb.camera = null, delete this.attached[ub], this.rebuildInputCheck())
         }
       }
-      _addCheckInputs(qq) {
-        const Eq = this.checkInputs;
+      _addCheckInputs(bb) {
+        const ub = this.checkInputs;
         return () => {
-          Eq(), qq()
+          ub(), bb()
         }
       }
-      attachInput(qq) {
-        this.attachedToElement && qq.attachControl(this.noPreventDefault)
+      attachInput(bb) {
+        this.attachedToElement && bb.attachControl(this.noPreventDefault)
       }
       attachElement() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (!this.attachedToElement) {
-          qq = !Oq.e.ForceAttachControlToAlwaysPreventDefault && qq, this.attachedToElement = !0, this.noPreventDefault = qq;
-          for (const Eq in this.attached) this.attached[Eq].attachControl(qq)
+          bb = !Gb.d.ForceAttachControlToAlwaysPreventDefault && bb, this.attachedToElement = !0, this.noPreventDefault = bb;
+          for (const ub in this.attached) this.attached[ub].attachControl(bb)
         }
       }
       detachElement() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const Eq in this.attached) this.attached[Eq].detachControl(), qq && (this.attached[Eq].camera = null);
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const ub in this.attached) this.attached[ub].detachControl(), bb && (this.attached[ub].camera = null);
         this.attachedToElement = !1
       }
       rebuildInputCheck() {
         this.checkInputs = () => {};
-        for (const qq in this.attached) {
-          const Eq = this.attached[qq];
-          Eq.checkInputs && (this.checkInputs = this._addCheckInputs(Eq.checkInputs.bind(Eq)))
+        for (const bb in this.attached) {
+          const ub = this.attached[bb];
+          ub.checkInputs && (this.checkInputs = this._addCheckInputs(ub.checkInputs.bind(ub)))
         }
       }
       clear() {
         this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
       }
-      serialize(qq) {
-        const Eq = {};
-        for (const gq in this.attached) {
-          const qq = this.attached[gq],
-            Yq = lq.d.Serialize(qq);
-          Eq[qq.getClassName()] = Yq
+      serialize(bb) {
+        const ub = {};
+        for (const hb in this.attached) {
+          const bb = this.attached[hb],
+            Bb = Ob.c.Serialize(bb);
+          ub[bb.getClassName()] = Bb
         }
-        qq.inputsmgr = Eq
+        bb.inputsmgr = ub
       }
-      parse(qq) {
-        const Eq = qq.inputsmgr;
-        if (Eq) {
+      parse(bb) {
+        const ub = bb.inputsmgr;
+        if (ub) {
           this.clear();
-          for (const qq in Eq) {
-            const gq = mq[qq];
-            if (gq) {
-              const Yq = Eq[qq],
-                Oq = lq.d.Parse((() => new gq), Yq, null);
-              this.add(Oq)
+          for (const bb in ub) {
+            const hb = Ub[bb];
+            if (hb) {
+              const Bb = ub[bb],
+                Gb = Ob.c.Parse((() => new hb), Bb, null);
+              this.add(Gb)
             }
           }
         } else
-          for (const gq in this.attached) {
-            const Eq = mq[this.attached[gq].getClassName()];
-            if (Eq) {
-              const Yq = lq.d.Parse((() => new Eq), qq, null);
-              this.remove(this.attached[gq]), this.add(Yq)
+          for (const hb in this.attached) {
+            const ub = Ub[this.attached[hb].getClassName()];
+            if (ub) {
+              const Bb = Ob.c.Parse((() => new ub), bb, null);
+              this.remove(this.attached[hb]), this.add(Bb)
             }
           }
       }
     }
   },
-  40878: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => oq
+  40580: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Kb
     });
-    var Yq = gq(39757),
-      lq = gq(39759),
-      Oq = gq(39644),
-      mq = gq(37139),
-      xq = gq(39748),
-      Aq = gq(40233),
-      cq = gq(37171),
-      uq = gq(37156),
-      Bq = gq(39779),
-      Wq = gq(39593),
-      Nq = gq(38653),
-      aq = gq(39799),
-      Vq = gq(37872),
-      dq = gq(39830);
-    var jq = gq(39653);
-    let Hq = !1;
-    let oq = (() => {
-        var qq;
-        let Eq, gq, cq, oq, Pq, Qq, yq, tq, rq, vq = xq.d,
-          hq = [],
-          nq = [],
-          bq = [],
-          iq = [],
-          Zq = [],
-          fq = [],
-          Mq = [],
-          Tq = [],
-          zq = [],
-          Sq = [],
-          pq = [],
-          Gq = [],
-          Lq = [],
-          Jq = [],
-          kq = [];
-        return qq = class extends vq {
-          set boundingBoxSize(qq) {
-            if (this._boundingBoxSize && this._boundingBoxSize.equals(qq)) return;
-            this._boundingBoxSize = qq;
-            const Eq = this.ZJ();
-            Eq && Eq.markAllMaterialsAsDirty(1)
+    var Bb = hb(39463),
+      Ob = hb(39467),
+      Gb = hb(39343),
+      Ub = hb(36727),
+      Lb = hb(39459),
+      Yb = hb(39932),
+      Sb = hb(36762),
+      ab = hb(36753),
+      Hb = hb(39488),
+      wb = hb(39287),
+      Zb = hb(38302),
+      Xb = hb(39511),
+      pb = hb(37507),
+      ob = hb(39540);
+    var Ab = hb(39350);
+    let lb = !1;
+    let Kb = (() => {
+        var bb;
+        let ub, hb, Sb, Kb, Wb, Cb, db, rb, jb, nb = Lb.d,
+          Db = [],
+          xb = [],
+          zb = [],
+          gb = [],
+          ib = [],
+          vb = [],
+          tb = [],
+          Jb = [],
+          eb = [],
+          Nb = [],
+          sb = [],
+          Mb = [],
+          mb = [],
+          Ib = [],
+          Pb = [];
+        return bb = class extends nb {
+          set boundingBoxSize(bb) {
+            if (this._boundingBoxSize && this._boundingBoxSize.equals(bb)) return;
+            this._boundingBoxSize = bb;
+            const ub = this.ZN();
+            ub && ub.markAllMaterialsAsDirty(1)
           }
           get boundingBoxSize() {
             return this._boundingBoxSize
           }
-          set rotationY(qq) {
-            this._rotationY = qq, this.setReflectionTextureMatrix(mq.e.RotationY(this._rotationY))
+          set rotationY(bb) {
+            this._rotationY = bb, this.setReflectionTextureMatrix(Ub.d.RotationY(this._rotationY))
           }
           get rotationY() {
             return this._rotationY
@@ -153,362 +153,362 @@ export const modules = {
           get forcedExtension() {
             return this._forcedExtension
           }
-          constructor(qq, Eq) {
-            let gq, lq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              Oq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              xq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-              cq = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              Bq = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-              oq = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 5,
-              Pq = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-              Qq = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-              yq = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
-              tq = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : .8,
-              rq = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 0,
-              vq = arguments.length > 13 ? arguments[13] : void 0,
-              Rq = arguments.length > 14 ? arguments[14] : void 0;
-            super(Eq), this._delayedOnLoad = (0, Yq.i)(this, hq), this.onLoadObservable = new uq.d, this.url = (0, Yq.i)(this, nq, void 0), this.boundingBoxPosition = ((0, Yq.i)(this, bq), (0, Yq.i)(this, iq, mq.q.Zero())), this._boundingBoxSize = (0, Yq.i)(this, Zq), this._rotationY = 0, this._files = (0, Yq.i)(this, fq, null), this._forcedExtension = ((0, Yq.i)(this, Mq), (0, Yq.i)(this, Tq, null)), this._extensions = ((0, Yq.i)(this, zq), (0, Yq.i)(this, Sq, null)), this._textureMatrix = ((0, Yq.i)(this, pq), (0, Yq.i)(this, Gq, void 0)), this._textureMatrixRefraction = ((0, Yq.i)(this, Lq), (0, Yq.i)(this, Jq, new mq.e)), this._format = (0, Yq.i)(this, kq), this._buffer = null, Hq || (Hq = !0, jq.b.prototype._partialLoadFile = function(qq, Eq, gq, Yq) {
-              let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-              this._loadFile(qq, (qq => {
-                gq[Eq] = qq, gq._internalCount++, 6 === gq._internalCount && Yq(gq)
-              }), void 0, void 0, !0, ((qq, Eq) => {
-                lq && qq && lq(qq.status + " " + qq.statusText, Eq)
+          constructor(bb, ub) {
+            let hb, Ob = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              Gb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              Lb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+              Sb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              Hb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              Kb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 5,
+              Wb = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              Cb = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+              db = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
+              rb = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : .8,
+              jb = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 0,
+              nb = arguments.length > 13 ? arguments[13] : void 0,
+              qb = arguments.length > 14 ? arguments[14] : void 0;
+            super(ub), this._delayedOnLoad = (0, Bb.k)(this, Db), this.onLoadObservable = new ab.e, this.url = (0, Bb.k)(this, xb, void 0), this.boundingBoxPosition = ((0, Bb.k)(this, zb), (0, Bb.k)(this, gb, Ub.q.Zero())), this._boundingBoxSize = (0, Bb.k)(this, ib), this._rotationY = 0, this._files = (0, Bb.k)(this, vb, null), this._forcedExtension = ((0, Bb.k)(this, tb), (0, Bb.k)(this, Jb, null)), this._extensions = ((0, Bb.k)(this, eb), (0, Bb.k)(this, Nb, null)), this._textureMatrix = ((0, Bb.k)(this, sb), (0, Bb.k)(this, Mb, void 0)), this._textureMatrixRefraction = ((0, Bb.k)(this, mb), (0, Bb.k)(this, Ib, new Ub.d)), this._format = (0, Bb.k)(this, Pb), this._buffer = null, lb || (lb = !0, Ab.d.prototype._partialLoadFile = function(bb, ub, hb, Bb) {
+              let Ob = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+              this._loadFile(bb, (bb => {
+                hb[ub] = bb, hb._internalCount++, 6 === hb._internalCount && Bb(hb)
+              }), void 0, void 0, !0, ((bb, ub) => {
+                Ob && bb && Ob(bb.status + " " + bb.statusText, ub)
               }))
-            }, jq.b.prototype._cascadeLoadFiles = function(qq, Eq, gq) {
-              let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-              const lq = [];
-              lq._internalCount = 0;
-              for (let Oq = 0; Oq < 6; Oq++) this._partialLoadFile(gq[Oq], Oq, lq, Eq, Yq)
-            }, jq.b.prototype._cascadeLoadImgs = function(qq, Eq, gq, Yq) {
-              let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-                Oq = arguments.length > 5 ? arguments[5] : void 0;
-              const mq = [];
-              mq._internalCount = 0;
-              for (let xq = 0; xq < 6; xq++) this._partialLoadImg(Yq[xq], xq, mq, qq, Eq, gq, lq, Oq)
-            }, jq.b.prototype._partialLoadImg = function(qq, Eq, gq, Yq, lq, Oq) {
-              let mq = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-                xq = arguments.length > 7 ? arguments[7] : void 0;
-              const Aq = (0, Vq.d)();
-              (0, aq.x)(qq, (qq => {
-                gq[Eq] = qq, gq._internalCount++, Yq && Yq.removePendingData(Aq), 6 === gq._internalCount && Oq && Oq(lq, gq)
-              }), ((qq, Eq) => {
-                Yq && Yq.removePendingData(Aq), mq && mq(qq, Eq)
-              }), Yq ? Yq.offlineProvider : null, xq), Yq && Yq.addPendingData(Aq)
-            }, jq.b.prototype.createCubeTextureBase = function(qq, Eq, gq, Yq) {
-              let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-                Oq = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-                mq = arguments.length > 6 ? arguments[6] : void 0,
-                xq = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-                Aq = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-                cq = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-                uq = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
-                Bq = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
-                aq = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
-                Vq = arguments.length > 13 && void 0 !== arguments[13] ? arguments[13] : null,
-                jq = arguments.length > 14 && void 0 !== arguments[14] && arguments[14],
-                Hq = arguments.length > 15 && void 0 !== arguments[15] ? arguments[15] : null;
-              const oq = Bq || new Wq.c(this, 7);
-              oq.isCube = !0, oq.url = qq, oq.generateMipMaps = !Yq, oq._lodGenerationScale = cq, oq._lodGenerationOffset = uq, oq._useSRGBBuffer = !!jq && this._caps.supportSRGBBuffers && (this.version > 1 || this.isWebGPU || !!Yq), oq !== Bq && (oq.label = qq.substring(0, 60)), this._doNotHandleContextLost || (oq._extension = xq, oq._files = gq, oq._buffer = Hq);
-              const Pq = qq;
-              this._transformTextureUrl && !Bq && (qq = this._transformTextureUrl(qq));
-              const Qq = xq ?? function(qq) {
-                  const Eq = qq.split("?")[0],
-                    gq = Eq.lastIndexOf(".");
-                  return gq > -1 ? Eq.substring(gq).toLowerCase() : ""
-                }(qq),
-                yq = (0, dq.b)(Qq),
-                tq = (qq, Eq) => {
-                  oq.dispose(), Oq ? Oq(qq, Eq) : qq && Nq.b.Warn(qq)
+            }, Ab.d.prototype._cascadeLoadFiles = function(bb, ub, hb) {
+              let Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+              const Ob = [];
+              Ob._internalCount = 0;
+              for (let Gb = 0; Gb < 6; Gb++) this._partialLoadFile(hb[Gb], Gb, Ob, ub, Bb)
+            }, Ab.d.prototype._cascadeLoadImgs = function(bb, ub, hb, Bb) {
+              let Ob = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+                Gb = arguments.length > 5 ? arguments[5] : void 0;
+              const Ub = [];
+              Ub._internalCount = 0;
+              for (let Lb = 0; Lb < 6; Lb++) this._partialLoadImg(Bb[Lb], Lb, Ub, bb, ub, hb, Ob, Gb)
+            }, Ab.d.prototype._partialLoadImg = function(bb, ub, hb, Bb, Ob, Gb) {
+              let Ub = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+                Lb = arguments.length > 7 ? arguments[7] : void 0;
+              const Yb = (0, pb.d)();
+              (0, Xb.o)(bb, (bb => {
+                hb[ub] = bb, hb._internalCount++, Bb && Bb.removePendingData(Yb), 6 === hb._internalCount && Gb && Gb(Ob, hb)
+              }), ((bb, ub) => {
+                Bb && Bb.removePendingData(Yb), Ub && Ub(bb, ub)
+              }), Bb ? Bb.offlineProvider : null, Lb), Bb && Bb.addPendingData(Yb)
+            }, Ab.d.prototype.createCubeTextureBase = function(bb, ub, hb, Bb) {
+              let Ob = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+                Gb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+                Ub = arguments.length > 6 ? arguments[6] : void 0,
+                Lb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+                Yb = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+                Sb = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+                ab = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
+                Hb = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
+                Xb = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
+                pb = arguments.length > 13 && void 0 !== arguments[13] ? arguments[13] : null,
+                Ab = arguments.length > 14 && void 0 !== arguments[14] && arguments[14],
+                lb = arguments.length > 15 && void 0 !== arguments[15] ? arguments[15] : null;
+              const Kb = Hb || new wb.b(this, 7);
+              Kb.isCube = !0, Kb.url = bb, Kb.generateMipMaps = !Bb, Kb._lodGenerationScale = Sb, Kb._lodGenerationOffset = ab, Kb._useSRGBBuffer = !!Ab && this._caps.supportSRGBBuffers && (this.version > 1 || this.isWebGPU || !!Bb), Kb !== Hb && (Kb.label = bb.substring(0, 60)), this._doNotHandleContextLost || (Kb._extension = Lb, Kb._files = hb, Kb._buffer = lb);
+              const Wb = bb;
+              this._transformTextureUrl && !Hb && (bb = this._transformTextureUrl(bb));
+              const Cb = Lb ?? function(bb) {
+                  const ub = bb.split("?")[0],
+                    hb = ub.lastIndexOf(".");
+                  return hb > -1 ? ub.substring(hb).toLowerCase() : ""
+                }(bb),
+                db = (0, ob.d)(Cb),
+                rb = (bb, ub) => {
+                  Kb.dispose(), Gb ? Gb(bb, ub) : bb && Zb.b.Warn(bb)
                 },
-                rq = (Oq, Bq) => {
-                  qq === Pq ? Oq && tq(Oq.status + " " + Oq.statusText, Bq) : (Nq.b.Warn(`Failed to load ${qq}, falling back to the ${Pq}`), this.createCubeTextureBase(Pq, Eq, gq, !!Yq, lq, tq, mq, xq, Aq, cq, uq, oq, aq, Vq, jq, Hq))
+                jb = (Gb, Hb) => {
+                  bb === Wb ? Gb && rb(Gb.status + " " + Gb.statusText, Hb) : (Zb.b.Warn(`Failed to load ${bb}, falling back to the ${Wb}`), this.createCubeTextureBase(Wb, ub, hb, !!Bb, Ob, rb, Ub, Lb, Yb, Sb, ab, Kb, Xb, pb, Ab, lb))
                 };
-              if (yq) yq.then((Yq => {
-                const Oq = qq => {
-                  aq && aq(oq, qq), Yq.loadCubeData(qq, oq, Aq, lq, ((qq, Eq) => {
-                    tq(qq, Eq)
+              if (db) db.then((Bb => {
+                const Gb = bb => {
+                  Xb && Xb(Kb, bb), Bb.loadCubeData(bb, Kb, Yb, Ob, ((bb, ub) => {
+                    rb(bb, ub)
                   }))
                 };
-                Hq ? Oq(Hq) : gq && 6 === gq.length ? Yq.supportCascades ? this._cascadeLoadFiles(Eq, (qq => Oq(qq.map((qq => new Uint8Array(qq))))), gq, tq) : tq("Textures type does not support cascades.") : this._loadFile(qq, (qq => Oq(new Uint8Array(qq))), void 0, Eq ? Eq.offlineProvider || null : void 0, !0, rq)
+                lb ? Gb(lb) : hb && 6 === hb.length ? Bb.supportCascades ? this._cascadeLoadFiles(ub, (bb => Gb(bb.map((bb => new Uint8Array(bb))))), hb, rb) : rb("Textures type does not support cascades.") : this._loadFile(bb, (bb => Gb(new Uint8Array(bb))), void 0, ub ? ub.offlineProvider || null : void 0, !0, jb)
               }));
               else {
-                if (!gq || 0 === gq.length) throw new Error("Cannot load cubemap because files were not defined, or the correct loader was not found.");
-                this._cascadeLoadImgs(Eq, oq, ((qq, Eq) => {
-                  Vq && Vq(qq, Eq)
-                }), gq, tq)
+                if (!hb || 0 === hb.length) throw new Error("Cannot load cubemap because files were not defined, or the correct loader was not found.");
+                this._cascadeLoadImgs(ub, Kb, ((bb, ub) => {
+                  pb && pb(bb, ub)
+                }), hb, rb)
               }
-              return this._internalTexturesCache.push(oq), oq
-            }), this.name = qq, this.url = qq, this._noMipmap = Oq, this.hasAlpha = !1, this.isCube = !0, this._textureMatrix = mq.e.Identity(), this.coordinatesMode = Aq.d.CUBIC_MODE;
-            let Uq = null;
-            null === lq || Array.isArray(lq) ? (this._noMipmap = Oq, this._format = oq, this._createPolynomials = yq, gq = lq, this._loaderOptions = vq, this._useSRGBBuffer = Rq, this._lodScale = tq, this._lodOffset = rq) : (gq = lq.extensions ?? null, this._noMipmap = lq.noMipmap ?? !1, xq = lq.files ?? null, Uq = lq.buffer ?? null, this._format = lq.format ?? 5, Pq = lq.prefiltered ?? !1, Qq = lq.forcedExtension ?? null, this._createPolynomials = lq.createPolynomials ?? !1, this._lodScale = lq.lodScale ?? .8, this._lodOffset = lq.lodOffset ?? 0, this._loaderOptions = lq.loaderOptions, this._useSRGBBuffer = lq.useSRGBBuffer, this._sphericalPolynomialTargetSize = lq.sphericalPolynomialTargetSize ?? 0, cq = lq.onLoad ?? null, Bq = lq.onError ?? null), (qq || xq) && this.updateURL(qq, Qq, cq, Pq, Bq, gq, this.ZJ()?.useDelayedTextureLoading, xq, Uq)
+              return this._internalTexturesCache.push(Kb), Kb
+            }), this.name = bb, this.url = bb, this._noMipmap = Gb, this.hasAlpha = !1, this.isCube = !0, this._textureMatrix = Ub.d.Identity(), this.coordinatesMode = Yb.f.CUBIC_MODE;
+            let Eb = null;
+            null === Ob || Array.isArray(Ob) ? (this._noMipmap = Gb, this._format = Kb, this._createPolynomials = db, hb = Ob, this._loaderOptions = nb, this._useSRGBBuffer = qb, this._lodScale = rb, this._lodOffset = jb) : (hb = Ob.extensions ?? null, this._noMipmap = Ob.noMipmap ?? !1, Lb = Ob.files ?? null, Eb = Ob.buffer ?? null, this._format = Ob.format ?? 5, Wb = Ob.prefiltered ?? !1, Cb = Ob.forcedExtension ?? null, this._createPolynomials = Ob.createPolynomials ?? !1, this._lodScale = Ob.lodScale ?? .8, this._lodOffset = Ob.lodOffset ?? 0, this._loaderOptions = Ob.loaderOptions, this._useSRGBBuffer = Ob.useSRGBBuffer, this._sphericalPolynomialTargetSize = Ob.sphericalPolynomialTargetSize ?? 0, Sb = Ob.onLoad ?? null, Hb = Ob.onError ?? null), (bb || Lb) && this.updateURL(bb, Cb, Sb, Wb, Hb, hb, this.ZN()?.useDelayedTextureLoading, Lb, Eb)
           }
           getClassName() {
             return "CubeTexture"
           }
-          updateURL(qq) {
-            let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              Yq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-              Oq = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              mq = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-              xq = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              Aq = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null;
-            this.name && !this.name.startsWith("data:") || (this.name = qq), this.url = qq, Eq && (this._forcedExtension = Eq);
-            const cq = qq.lastIndexOf("."),
-              uq = Eq || (cq > -1 ? qq.substring(cq).toLowerCase() : ""),
-              Bq = 0 === uq.indexOf(".dds"),
-              Wq = 0 === uq.indexOf(".env"),
-              Nq = 0 === uq.indexOf(".basis");
-            if (Wq ? (this.gammaSpace = !1, this._prefiltered = !1, this.anisotropicFilteringLevel = 1) : (this._prefiltered = Yq, Yq && (this.gammaSpace = !1, this.anisotropicFilteringLevel = 1)), xq) this._files = xq;
-            else if (Nq || Wq || Bq || Oq || (Oq = ["_px.jpg", "_py.jpg", "_pz.jpg", "_nx.jpg", "_ny.jpg", "_nz.jpg"]), this._files = this._files || [], this._files.length = 0, Oq) {
-              for (let Eq = 0; Eq < Oq.length; Eq++) this._files.push(qq + Oq[Eq]);
-              this._extensions = Oq
+          updateURL(bb) {
+            let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              Bb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              Ob = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+              Gb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              Ub = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+              Lb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              Yb = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null;
+            this.name && !this.name.startsWith("data:") || (this.name = bb), this.url = bb, ub && (this._forcedExtension = ub);
+            const Sb = bb.lastIndexOf("."),
+              ab = ub || (Sb > -1 ? bb.substring(Sb).toLowerCase() : ""),
+              Hb = 0 === ab.indexOf(".dds"),
+              wb = 0 === ab.indexOf(".env"),
+              Zb = 0 === ab.indexOf(".basis");
+            if (wb ? (this.gammaSpace = !1, this._prefiltered = !1, this.anisotropicFilteringLevel = 1) : (this._prefiltered = Bb, Bb && (this.gammaSpace = !1, this.anisotropicFilteringLevel = 1)), Lb) this._files = Lb;
+            else if (Zb || wb || Hb || Gb || (Gb = ["_px.jpg", "_py.jpg", "_pz.jpg", "_nx.jpg", "_ny.jpg", "_nz.jpg"]), this._files = this._files || [], this._files.length = 0, Gb) {
+              for (let ub = 0; ub < Gb.length; ub++) this._files.push(bb + Gb[ub]);
+              this._extensions = Gb
             }
-            this._buffer = Aq, mq ? (this.delayLoadState = 4, this._delayedOnLoad = gq, this._delayedOnError = lq) : this._loadTexture(gq, lq)
+            this._buffer = Yb, Ub ? (this.delayLoadState = 4, this._delayedOnLoad = hb, this._delayedOnError = Ob) : this._loadTexture(hb, Ob)
           }
-          delayLoad(qq) {
-            4 === this.delayLoadState && (qq && (this._forcedExtension = qq), this.delayLoadState = 1, this._loadTexture(this._delayedOnLoad, this._delayedOnError))
+          delayLoad(bb) {
+            4 === this.delayLoadState && (bb && (this._forcedExtension = bb), this.delayLoadState = 1, this._loadTexture(this._delayedOnLoad, this._delayedOnError))
           }
           getReflectionTextureMatrix() {
             return this._textureMatrix
           }
-          setReflectionTextureMatrix(qq) {
-            if (qq.updateFlag === this._textureMatrix.updateFlag) return;
-            if (qq.isIdentity() !== this._textureMatrix.isIdentity() && this.ZJ()?.markAllMaterialsAsDirty(1, (qq => -1 !== qq.getActiveTextures().indexOf(this))), this._textureMatrix = qq, !this.ZJ()?.useRightHandedSystem) return;
-            const Eq = mq.o.Na[0],
-              gq = mq.o.Quaternion[0],
-              Yq = mq.o.Na[1];
-            this._textureMatrix.decompose(Eq, gq, Yq), gq.z *= -1, gq.w *= -1, mq.e.ComposeToRef(Eq, gq, Yq, this._textureMatrixRefraction)
+          setReflectionTextureMatrix(bb) {
+            if (bb.updateFlag === this._textureMatrix.updateFlag) return;
+            if (bb.isIdentity() !== this._textureMatrix.isIdentity() && this.ZN()?.markAllMaterialsAsDirty(1, (bb => -1 !== bb.getActiveTextures().indexOf(this))), this._textureMatrix = bb, !this.ZN()?.useRightHandedSystem) return;
+            const ub = Ub.i.YX[0],
+              hb = Ub.i.Quaternion[0],
+              Bb = Ub.i.YX[1];
+            this._textureMatrix.decompose(ub, hb, Bb), hb.z *= -1, hb.w *= -1, Ub.d.ComposeToRef(ub, hb, Bb, this._textureMatrixRefraction)
           }
           getRefractionTextureMatrix() {
-            return this.ZJ()?.useRightHandedSystem ? this._textureMatrixRefraction : this._textureMatrix
+            return this.ZN()?.useRightHandedSystem ? this._textureMatrixRefraction : this._textureMatrix
           }
           _loadTexture() {
-            let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-              Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            const gq = this.ZJ(),
-              Yq = this._texture;
+            let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+              ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            const hb = this.ZN(),
+              Bb = this._texture;
             this._texture = this._getFromCache(this.url, this._noMipmap, void 0, void 0, this._useSRGBBuffer, this.isCube);
-            const lq = () => {
-                this.onLoadObservable.notifyObservers(this), Yq && (Yq.dispose(), this.ZJ()?.markAllMaterialsAsDirty(1)), qq && qq()
+            const Ob = () => {
+                this.onLoadObservable.notifyObservers(this), Bb && (Bb.dispose(), this.ZN()?.markAllMaterialsAsDirty(1)), bb && bb()
               },
-              mq = (qq, gq) => {
+              Ub = (bb, hb) => {
                 this._loadingError = !0, this._errorObject = {
-                  message: qq,
-                  exception: gq
-                }, Eq && Eq(qq, gq), Aq.d.OnTextureLoadErrorObservable.notifyObservers(this)
+                  message: bb,
+                  exception: hb
+                }, ub && ub(bb, hb), Yb.f.OnTextureLoadErrorObservable.notifyObservers(this)
               };
-            this._texture ? this._texture.isReady ? Oq.c.SetImmediate((() => lq())) : this._texture.onLoadedObservable.add((() => lq())) : (this._prefiltered ? this._texture = this._getEngine().createPrefilteredCubeTexture(this.url, gq, this._lodScale, this._lodOffset, qq, mq, this._format, this._forcedExtension, this._createPolynomials, this._buffer) : this._texture = this._getEngine().createCubeTexture(this.url, gq, this._files, this._noMipmap, qq, mq, this._format, this._forcedExtension, !1, this._lodScale, this._lodOffset, null, this._loaderOptions, !!this._useSRGBBuffer, this._buffer), this._texture?.onLoadedObservable.add((() => this.onLoadObservable.notifyObservers(this))))
+            this._texture ? this._texture.isReady ? Gb.c.SetImmediate((() => Ob())) : this._texture.onLoadedObservable.add((() => Ob())) : (this._prefiltered ? this._texture = this._getEngine().createPrefilteredCubeTexture(this.url, hb, this._lodScale, this._lodOffset, bb, Ub, this._format, this._forcedExtension, this._createPolynomials, this._buffer) : this._texture = this._getEngine().createCubeTexture(this.url, hb, this._files, this._noMipmap, bb, Ub, this._format, this._forcedExtension, !1, this._lodScale, this._lodOffset, null, this._loaderOptions, !!this._useSRGBBuffer, this._buffer), this._texture?.onLoadedObservable.add((() => this.onLoadObservable.notifyObservers(this))))
           }
           clone() {
-            let Eq = 0;
-            const gq = this.irradianceTexture,
-              Yq = Bq.d.Clone((() => {
-                const gq = new qq(this.url, this.ZJ() || this._getEngine(), this._extensions, this._noMipmap, this._files);
-                return Eq = gq.uniqueId, gq
+            let ub = 0;
+            const hb = this.irradianceTexture,
+              Bb = Hb.c.Clone((() => {
+                const hb = new bb(this.url, this.ZN() || this._getEngine(), this._extensions, this._noMipmap, this._files);
+                return ub = hb.uniqueId, hb
               }), this);
-            return Yq.uniqueId = Eq, gq && !this.irradianceTexture && (this.irradianceTexture = gq), Yq
+            return Bb.uniqueId = ub, hb && !this.irradianceTexture && (this.irradianceTexture = hb), Bb
           }
         }, (() => {
-          const Oq = "function" === typeof Symbol && Symbol.metadata ? Object.create(vq[Symbol.metadata] ?? null) : void 0;
-          Eq = [(0, lq.M)()], gq = [(0, lq.I)()], cq = [(0, lq.I)()], oq = [(0, lq.M)("rotationY")], Pq = [(0, lq.M)("files")], Qq = [(0, lq.M)("forcedExtension")], yq = [(0, lq.M)("extensions")], tq = [(0, lq.y)("textureMatrix")], rq = [(0, lq.y)("textureMatrixRefraction")], (0, Yq.f)(qq, null, cq, {
+          const Gb = "function" === typeof Symbol && Symbol.metadata ? Object.create(nb[Symbol.metadata] ?? null) : void 0;
+          ub = [(0, Ob.K)()], hb = [(0, Ob.H)()], Sb = [(0, Ob.H)()], Kb = [(0, Ob.K)("rotationY")], Wb = [(0, Ob.K)("files")], Cb = [(0, Ob.K)("forcedExtension")], db = [(0, Ob.K)("extensions")], rb = [(0, Ob.x)("textureMatrix")], jb = [(0, Ob.x)("textureMatrixRefraction")], (0, Bb.h)(bb, null, Sb, {
             kind: "getter",
             name: "boundingBoxSize",
             static: !1,
             private: !1,
             access: {
-              has: qq => "boundingBoxSize" in qq,
-              get: qq => qq.boundingBoxSize
+              has: bb => "boundingBoxSize" in bb,
+              get: bb => bb.boundingBoxSize
             },
-            metadata: Oq
-          }, null, hq), (0, Yq.f)(qq, null, oq, {
+            metadata: Gb
+          }, null, Db), (0, Bb.h)(bb, null, Kb, {
             kind: "setter",
             name: "rotationY",
             static: !1,
             private: !1,
             access: {
-              has: qq => "rotationY" in qq,
-              set: (qq, Eq) => {
-                qq.rotationY = Eq
+              has: bb => "rotationY" in bb,
+              set: (bb, ub) => {
+                bb.rotationY = ub
               }
             },
-            metadata: Oq
-          }, null, hq), (0, Yq.f)(null, null, Eq, {
+            metadata: Gb
+          }, null, Db), (0, Bb.h)(null, null, ub, {
             kind: "field",
             name: "url",
             static: !1,
             private: !1,
             access: {
-              has: qq => "url" in qq,
-              get: qq => qq.url,
-              set: (qq, Eq) => {
-                qq.url = Eq
+              has: bb => "url" in bb,
+              get: bb => bb.url,
+              set: (bb, ub) => {
+                bb.url = ub
               }
             },
-            metadata: Oq
-          }, nq, bq), (0, Yq.f)(null, null, gq, {
+            metadata: Gb
+          }, xb, zb), (0, Bb.h)(null, null, hb, {
             kind: "field",
             name: "boundingBoxPosition",
             static: !1,
             private: !1,
             access: {
-              has: qq => "boundingBoxPosition" in qq,
-              get: qq => qq.boundingBoxPosition,
-              set: (qq, Eq) => {
-                qq.boundingBoxPosition = Eq
+              has: bb => "boundingBoxPosition" in bb,
+              get: bb => bb.boundingBoxPosition,
+              set: (bb, ub) => {
+                bb.boundingBoxPosition = ub
               }
             },
-            metadata: Oq
-          }, iq, Zq), (0, Yq.f)(null, null, Pq, {
+            metadata: Gb
+          }, gb, ib), (0, Bb.h)(null, null, Wb, {
             kind: "field",
             name: "_files",
             static: !1,
             private: !1,
             access: {
-              has: qq => "_files" in qq,
-              get: qq => qq._files,
-              set: (qq, Eq) => {
-                qq._files = Eq
+              has: bb => "_files" in bb,
+              get: bb => bb._files,
+              set: (bb, ub) => {
+                bb._files = ub
               }
             },
-            metadata: Oq
-          }, fq, Mq), (0, Yq.f)(null, null, Qq, {
+            metadata: Gb
+          }, vb, tb), (0, Bb.h)(null, null, Cb, {
             kind: "field",
             name: "_forcedExtension",
             static: !1,
             private: !1,
             access: {
-              has: qq => "_forcedExtension" in qq,
-              get: qq => qq._forcedExtension,
-              set: (qq, Eq) => {
-                qq._forcedExtension = Eq
+              has: bb => "_forcedExtension" in bb,
+              get: bb => bb._forcedExtension,
+              set: (bb, ub) => {
+                bb._forcedExtension = ub
               }
             },
-            metadata: Oq
-          }, Tq, zq), (0, Yq.f)(null, null, yq, {
+            metadata: Gb
+          }, Jb, eb), (0, Bb.h)(null, null, db, {
             kind: "field",
             name: "_extensions",
             static: !1,
             private: !1,
             access: {
-              has: qq => "_extensions" in qq,
-              get: qq => qq._extensions,
-              set: (qq, Eq) => {
-                qq._extensions = Eq
+              has: bb => "_extensions" in bb,
+              get: bb => bb._extensions,
+              set: (bb, ub) => {
+                bb._extensions = ub
               }
             },
-            metadata: Oq
-          }, Sq, pq), (0, Yq.f)(null, null, tq, {
+            metadata: Gb
+          }, Nb, sb), (0, Bb.h)(null, null, rb, {
             kind: "field",
             name: "_textureMatrix",
             static: !1,
             private: !1,
             access: {
-              has: qq => "_textureMatrix" in qq,
-              get: qq => qq._textureMatrix,
-              set: (qq, Eq) => {
-                qq._textureMatrix = Eq
+              has: bb => "_textureMatrix" in bb,
+              get: bb => bb._textureMatrix,
+              set: (bb, ub) => {
+                bb._textureMatrix = ub
               }
             },
-            metadata: Oq
-          }, Gq, Lq), (0, Yq.f)(null, null, rq, {
+            metadata: Gb
+          }, Mb, mb), (0, Bb.h)(null, null, jb, {
             kind: "field",
             name: "_textureMatrixRefraction",
             static: !1,
             private: !1,
             access: {
-              has: qq => "_textureMatrixRefraction" in qq,
-              get: qq => qq._textureMatrixRefraction,
-              set: (qq, Eq) => {
-                qq._textureMatrixRefraction = Eq
+              has: bb => "_textureMatrixRefraction" in bb,
+              get: bb => bb._textureMatrixRefraction,
+              set: (bb, ub) => {
+                bb._textureMatrixRefraction = ub
               }
             },
-            metadata: Oq
-          }, Jq, kq), Oq && Object.defineProperty(qq, Symbol.metadata, {
+            metadata: Gb
+          }, Ib, Pb), Gb && Object.defineProperty(bb, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Oq
+            value: Gb
           })
-        })(), qq
+        })(), bb
       })(),
-      Pq = !1;
+      Wb = !1;
 
-    function Qq(qq, Eq, gq) {
-      let Yq = "";
-      for (const lq of qq) Yq += lq;
-      return new oq(Yq, Eq, null, gq, qq)
+    function Cb(bb, ub, hb) {
+      let Bb = "";
+      for (const Ob of bb) Bb += Ob;
+      return new Kb(Bb, ub, null, hb, bb)
     }
 
-    function yq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        Yq = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const lq = Eq.useDelayedTextureLoading;
-      Eq.useDelayedTextureLoading = !1;
-      const Oq = new oq(qq, Eq, null, !1, null, null, null, void 0, !0, gq, Yq);
-      return Eq.useDelayedTextureLoading = lq, Oq
+    function db(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        Bb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const Ob = ub.useDelayedTextureLoading;
+      ub.useDelayedTextureLoading = !1;
+      const Gb = new Kb(bb, ub, null, !1, null, null, null, void 0, !0, hb, Bb);
+      return ub.useDelayedTextureLoading = Ob, Gb
     }
 
-    function tq(qq, Eq, gq) {
-      const Yq = Bq.d.Parse((() => {
-        let Yq = !1;
-        return qq.prefiltered && (Yq = qq.prefiltered), new oq(gq + (qq.url ?? qq.name), Eq, qq.extensions, !1, qq.files || null, null, null, void 0, Yq, qq.forcedExtension)
-      }), qq, Eq);
-      if (qq.boundingBoxPosition && (Yq.boundingBoxPosition = mq.q.FromArray(qq.boundingBoxPosition)), qq.boundingBoxSize && (Yq.boundingBoxSize = mq.q.FromArray(qq.boundingBoxSize)), qq.animations)
-        for (let lq = 0; lq < qq.animations.length; lq++) {
-          const Eq = qq.animations[lq],
-            gq = (0, cq.e)("BABYLON.Animation");
-          gq && Yq.animations.push(gq.Parse(Eq))
+    function rb(bb, ub, hb) {
+      const Bb = Hb.c.Parse((() => {
+        let Bb = !1;
+        return bb.prefiltered && (Bb = bb.prefiltered), new Kb(hb + (bb.url ?? bb.name), ub, bb.extensions, !1, bb.files || null, null, null, void 0, Bb, bb.forcedExtension)
+      }), bb, ub);
+      if (bb.boundingBoxPosition && (Bb.boundingBoxPosition = Ub.q.FromArray(bb.boundingBoxPosition)), bb.boundingBoxSize && (Bb.boundingBoxSize = Ub.q.FromArray(bb.boundingBoxSize)), bb.animations)
+        for (let Ob = 0; Ob < bb.animations.length; Ob++) {
+          const ub = bb.animations[Ob],
+            hb = (0, Sb.d)("BABYLON.Animation");
+          hb && Bb.animations.push(hb.Parse(ub))
         }
-      return Yq
+      return Bb
     }
-    Pq || (Pq = !0, oq.CreateFromImages = Qq, oq.CreateFromPrefilteredData = yq, oq.Parse = tq, Aq.d._CubeTextureParser = tq, (0, cq.g)("BABYLON.CubeTexture", oq))
+    Wb || (Wb = !0, Kb.CreateFromImages = Cb, Kb.CreateFromPrefilteredData = db, Kb.Parse = rb, Yb.f._CubeTextureParser = rb, (0, Sb.f)("BABYLON.CubeTexture", Kb))
   },
-  40910: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => cq
+  40610: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Sb
     });
-    var Yq = gq(38653),
-      lq = gq(40233),
-      Oq = gq(39696),
-      mq = gq(39608),
-      xq = gq(39593);
-    let Aq = !1;
-    class cq extends lq.d {
-      constructor(qq, Eq, gq) {
-        let Yq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          cq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
-          uq = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5,
-          Bq = arguments.length > 6 ? arguments[6] : void 0;
-        const Wq = !gq || gq._isScene;
-        super(null, Wq ? gq : gq?.PV, Wq ? !Yq : gq, Bq, cq, void 0, void 0, void 0, void 0, uq), Aq || (Aq = !0, mq.ThinEngine.prototype.createDynamicTexture = function(qq, Eq, gq, Yq) {
-          const lq = new xq.c(this, 4);
-          return lq.baseWidth = qq, lq.baseHeight = Eq, gq && (qq = this.needPOTTextures ? (0, Oq.g)(qq, this._caps.maxTextureSize) : qq, Eq = this.needPOTTextures ? (0, Oq.g)(Eq, this._caps.maxTextureSize) : Eq), lq.width = qq, lq.height = Eq, lq.isReady = !1, lq.generateMipMaps = gq, lq.samplingMode = Yq, this.updateTextureSamplingMode(Yq, lq), this._internalTexturesCache.push(lq), lq
-        }, mq.ThinEngine.prototype.updateDynamicTexture = function(qq, Eq, gq) {
-          let Yq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            lq = arguments.length > 4 ? arguments[4] : void 0,
-            Oq = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-          if (!qq) return;
-          const mq = this._gl,
-            xq = mq.TEXTURE_2D,
-            Aq = this._bindTextureDirectly(xq, qq, !0, Oq);
-          this._unpackFlipY(void 0 === gq ? qq.invertY : gq), Yq && mq.pixelStorei(mq.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 1);
-          const cq = this._getWebGLTextureType(qq.type),
-            uq = this._getInternalFormat(lq || qq.format),
-            Bq = this._getRGBABufferInternalSizedFormat(qq.type, uq);
-          mq.texImage2D(xq, 0, Bq, uq, cq, Eq), qq.generateMipMaps && mq.generateMipmap(xq), Aq || this._bindTextureDirectly(xq, null), Yq && mq.pixelStorei(mq.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), lq && (qq.format = lq), qq._dynamicTextureSource = Eq, qq._premulAlpha = Yq, qq.invertY = gq || !1, qq.isReady = !0
-        }), this.name = qq, this.wrapU = lq.d.CLAMP_ADDRESSMODE, this.wrapV = lq.d.CLAMP_ADDRESSMODE, this._generateMipMaps = Yq;
-        const Nq = this._getEngine();
-        if (!Nq) return;
-        if (Eq.getContext) this._canvas = Eq, this._ownCanvas = !1, this._texture = Nq.createDynamicTexture(this._canvas.width, this._canvas.height, Yq, cq);
+    var Bb = hb(38302),
+      Ob = hb(39932),
+      Gb = hb(39387),
+      Ub = hb(39296),
+      Lb = hb(39287);
+    let Yb = !1;
+    class Sb extends Ob.f {
+      constructor(bb, ub, hb) {
+        let Bb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          Sb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
+          ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5,
+          Hb = arguments.length > 6 ? arguments[6] : void 0;
+        const wb = !hb || hb._isScene;
+        super(null, wb ? hb : hb?.Xp, wb ? !Bb : hb, Hb, Sb, void 0, void 0, void 0, void 0, ab), Yb || (Yb = !0, Ub.ThinEngine.prototype.createDynamicTexture = function(bb, ub, hb, Bb) {
+          const Ob = new Lb.b(this, 4);
+          return Ob.baseWidth = bb, Ob.baseHeight = ub, hb && (bb = this.needPOTTextures ? (0, Gb.i)(bb, this._caps.maxTextureSize) : bb, ub = this.needPOTTextures ? (0, Gb.i)(ub, this._caps.maxTextureSize) : ub), Ob.width = bb, Ob.height = ub, Ob.isReady = !1, Ob.generateMipMaps = hb, Ob.samplingMode = Bb, this.updateTextureSamplingMode(Bb, Ob), this._internalTexturesCache.push(Ob), Ob
+        }, Ub.ThinEngine.prototype.updateDynamicTexture = function(bb, ub, hb) {
+          let Bb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            Ob = arguments.length > 4 ? arguments[4] : void 0,
+            Gb = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+          if (!bb) return;
+          const Ub = this._gl,
+            Lb = Ub.TEXTURE_2D,
+            Yb = this._bindTextureDirectly(Lb, bb, !0, Gb);
+          this._unpackFlipY(void 0 === hb ? bb.invertY : hb), Bb && Ub.pixelStorei(Ub.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 1);
+          const Sb = this._getWebGLTextureType(bb.type),
+            ab = this._getInternalFormat(Ob || bb.format),
+            Hb = this._getRGBABufferInternalSizedFormat(bb.type, ab);
+          Ub.texImage2D(Lb, 0, Hb, ab, Sb, ub), bb.generateMipMaps && Ub.generateMipmap(Lb), Yb || this._bindTextureDirectly(Lb, null), Bb && Ub.pixelStorei(Ub.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), Ob && (bb.format = Ob), bb._dynamicTextureSource = ub, bb._premulAlpha = Bb, bb.invertY = hb || !1, bb.isReady = !0
+        }), this.name = bb, this.wrapU = Ob.f.CLAMP_ADDRESSMODE, this.wrapV = Ob.f.CLAMP_ADDRESSMODE, this._generateMipMaps = Bb;
+        const Zb = this._getEngine();
+        if (!Zb) return;
+        if (ub.getContext) this._canvas = ub, this._ownCanvas = !1, this._texture = Zb.createDynamicTexture(this._canvas.width, this._canvas.height, Bb, Sb);
         else {
-          this._canvas = Nq.createCanvas(1, 1), this._ownCanvas = !0;
-          const qq = Eq;
-          qq.width || 0 === qq.width ? this._texture = Nq.createDynamicTexture(qq.width, qq.height, Yq, cq) : this._texture = Nq.createDynamicTexture(Eq, Eq, Yq, cq)
+          this._canvas = Zb.createCanvas(1, 1), this._ownCanvas = !0;
+          const bb = ub;
+          bb.width || 0 === bb.width ? this._texture = Zb.createDynamicTexture(bb.width, bb.height, Bb, Sb) : this._texture = Zb.createDynamicTexture(ub, ub, Bb, Sb)
         }
-        const aq = this.getSize();
-        this._canvas.width !== aq.width && (this._canvas.width = aq.width), this._canvas.height !== aq.height && (this._canvas.height = aq.height), this._context = this._canvas.getContext("2d")
+        const Xb = this.getSize();
+        this._canvas.width !== Xb.width && (this._canvas.width = Xb.width), this._canvas.height !== Xb.height && (this._canvas.height = Xb.height), this._context = this._canvas.getContext("2d")
       }
       getClassName() {
         return "DynamicTexture"
@@ -516,109 +516,109 @@ export const modules = {
       get canRescale() {
         return !0
       }
-      _recreate(qq) {
-        this._canvas.width = qq.width, this._canvas.height = qq.height, this.releaseInternalTexture(), this._texture = this._getEngine().createDynamicTexture(qq.width, qq.height, this._generateMipMaps, this.samplingMode)
+      _recreate(bb) {
+        this._canvas.width = bb.width, this._canvas.height = bb.height, this.releaseInternalTexture(), this._texture = this._getEngine().createDynamicTexture(bb.width, bb.height, this._generateMipMaps, this.samplingMode)
       }
-      scale(qq) {
-        const Eq = this.getSize();
-        Eq.width *= qq, Eq.height *= qq, this._recreate(Eq)
+      scale(bb) {
+        const ub = this.getSize();
+        ub.width *= bb, ub.height *= bb, this._recreate(ub)
       }
-      scaleTo(qq, Eq) {
-        const gq = this.getSize();
-        gq.width = qq, gq.height = Eq, this._recreate(gq)
+      scaleTo(bb, ub) {
+        const hb = this.getSize();
+        hb.width = bb, hb.height = ub, this._recreate(hb)
       }
       getContext() {
         return this._context
       }
-      clear(qq) {
-        const Eq = this.getSize();
-        qq && (this._context.fillStyle = qq), this._context.clearRect(0, 0, Eq.width, Eq.height)
+      clear(bb) {
+        const ub = this.getSize();
+        bb && (this._context.fillStyle = bb), this._context.clearRect(0, 0, ub.width, ub.height)
       }
-      update(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this._texture && this._getEngine().updateDynamicTexture(this._texture, this._canvas, void 0 === qq || qq, Eq, this._format || void 0, void 0, gq)
+      update(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          hb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this._texture && this._getEngine().updateDynamicTexture(this._texture, this._canvas, void 0 === bb || bb, ub, this._format || void 0, void 0, hb)
       }
-      drawText(qq, Eq, gq, Yq, lq, Oq, mq) {
-        let xq = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
-        const Aq = this.getSize();
-        if (Oq && (this._context.fillStyle = Oq, this._context.fillRect(0, 0, Aq.width, Aq.height)), this._context.font = Yq, null === Eq || void 0 === Eq) {
-          const gq = this._context.measureText(qq);
-          Eq = (Aq.width - gq.width) / 2
+      drawText(bb, ub, hb, Bb, Ob, Gb, Ub) {
+        let Lb = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
+        const Yb = this.getSize();
+        if (Gb && (this._context.fillStyle = Gb, this._context.fillRect(0, 0, Yb.width, Yb.height)), this._context.font = Bb, null === ub || void 0 === ub) {
+          const hb = this._context.measureText(bb);
+          ub = (Yb.width - hb.width) / 2
         }
-        if (null === gq || void 0 === gq) {
-          const qq = parseInt(Yq.replace(/\D/g, ""));
-          gq = Aq.height / 2 + qq / 3.65
+        if (null === hb || void 0 === hb) {
+          const bb = parseInt(Bb.replace(/\D/g, ""));
+          hb = Yb.height / 2 + bb / 3.65
         }
-        this._context.fillStyle = lq || "", this._context.fillText(qq, Eq, gq), xq && this.update(mq)
+        this._context.fillStyle = Ob || "", this._context.fillText(bb, ub, hb), Lb && this.update(Ub)
       }
       dispose() {
         super.dispose(), this._ownCanvas && this._canvas?.remove?.(), this._canvas = null, this._context = null
       }
       clone() {
-        const qq = this.ZJ();
-        if (!qq) return this;
-        const Eq = this.getSize(),
-          gq = new cq(this.name, Eq, qq, this._generateMipMaps);
-        return gq.hasAlpha = this.hasAlpha, gq.level = this.level, gq.wrapU = this.wrapU, gq.wrapV = this.wrapV, gq
+        const bb = this.ZN();
+        if (!bb) return this;
+        const ub = this.getSize(),
+          hb = new Sb(this.name, ub, bb, this._generateMipMaps);
+        return hb.hasAlpha = this.hasAlpha, hb.level = this.level, hb.wrapU = this.wrapU, hb.wrapV = this.wrapV, hb
       }
       serialize() {
-        const qq = this.ZJ();
-        qq && !qq.isReady() && Yq.b.Warn("The scene must be ready before serializing the dynamic texture");
-        const Eq = super.serialize();
-        return cq._IsCanvasElement(this._canvas) && (Eq.base64String = this._canvas.toDataURL()), Eq.invertY = this._invertY, Eq.samplingMode = this.samplingMode, Eq
+        const bb = this.ZN();
+        bb && !bb.isReady() && Bb.b.Warn("The scene must be ready before serializing the dynamic texture");
+        const ub = super.serialize();
+        return Sb._IsCanvasElement(this._canvas) && (ub.base64String = this._canvas.toDataURL()), ub.invertY = this._invertY, ub.samplingMode = this.samplingMode, ub
       }
-      static _IsCanvasElement(qq) {
-        return void 0 !== qq.toDataURL
+      static _IsCanvasElement(bb) {
+        return void 0 !== bb.toDataURL
       }
       _rebuild() {
         this.update()
       }
     }
   },
-  40898: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => lq
+  40592: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Ob
     });
-    var Yq = gq(40233);
-    class lq extends Yq.d {
+    var Bb = hb(39932);
+    class Ob extends Bb.f {
       get depth() {
         return this._depth
       }
-      constructor(qq, Eq, gq, lq, Oq, mq) {
-        let xq = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          Aq = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-          cq = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Yq.d.TRILINEAR_SAMPLINGMODE,
-          uq = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-          Bq = arguments.length > 10 ? arguments[10] : void 0,
-          Wq = arguments.length > 11 ? arguments[11] : void 0;
-        super(null, mq, !xq, Aq), this.format = Oq, this._texture = mq.Ba().createRawTexture2DArray(qq, Eq, gq, lq, Oq, xq, Aq, cq, null, uq, Bq ?? 0, Wq), this._depth = lq, this.is2DArray = !0
+      constructor(bb, ub, hb, Ob, Gb, Ub) {
+        let Lb = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          Yb = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+          Sb = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Bb.f.TRILINEAR_SAMPLINGMODE,
+          ab = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+          Hb = arguments.length > 10 ? arguments[10] : void 0,
+          wb = arguments.length > 11 ? arguments[11] : void 0;
+        super(null, Ub, !Lb, Yb), this.format = Gb, this._texture = Ub.UX().createRawTexture2DArray(bb, ub, hb, Ob, Gb, Lb, Yb, Sb, null, ab, Hb ?? 0, wb), this._depth = Ob, this.is2DArray = !0
       }
-      update(qq) {
-        this.updateMipLevel(qq, 0)
+      update(bb) {
+        this.updateMipLevel(bb, 0)
       }
-      updateMipLevel(qq, Eq) {
-        this._texture && this._getEngine().updateRawTexture2DArray(this._texture, qq, this._texture.format, this._texture.invertY, null, this._texture.type, Eq)
+      updateMipLevel(bb, ub) {
+        this._texture && this._getEngine().updateRawTexture2DArray(this._texture, bb, this._texture.format, this._texture.invertY, null, this._texture.type, ub)
       }
-      static CreateRGBATexture(qq, Eq, gq, Yq, Oq) {
-        return new lq(qq, Eq, gq, Yq, 5, Oq, !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5], arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0)
+      static CreateRGBATexture(bb, ub, hb, Bb, Gb) {
+        return new Ob(bb, ub, hb, Bb, 5, Gb, !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5], arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0)
       }
     }
   },
-  40889: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Yq.c
+  40588: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Bb.c
     });
-    var Yq = gq(40113);
-    (0, Yq.d)()
+    var Bb = hb(39805);
+    (0, Bb.g)()
   },
-  39833: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Yq.i
+  39544: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Bb.f
     });
-    var Yq = gq(39838);
-    (0, Yq.e)()
+    var Bb = hb(39551);
+    (0, Bb.d)()
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

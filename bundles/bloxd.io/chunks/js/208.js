@@ -1,28 +1,28 @@
 export const id = 208;
 export const ids = [208];
 export const modules = {
-  36339: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => lq,
-      reportCappedWasmFailure: () => xq,
-      reportUncappedWasmFailure: () => mq,
-      reportWasmFailure: () => Oq
+  35906: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Ob,
+      reportCappedWasmFailure: () => Lb,
+      reportUncappedWasmFailure: () => Ub,
+      reportWasmFailure: () => Gb
     });
-    var Yq = gq(2853);
-    const lq = Yq.b - 4;
+    var Bb = hb(2736);
+    const Ob = Bb.e - 4;
 
-    function Oq(qq, Eq, gq) {
-      (0, Yq.d)(qq, Eq, gq, !1)
+    function Gb(bb, ub, hb) {
+      (0, Bb.i)(bb, ub, hb, !1)
     }
 
-    function mq(qq, Eq, gq) {
-      (0, Yq.d)(qq, Eq, gq, !1, 1 / 0)
+    function Ub(bb, ub, hb) {
+      (0, Bb.i)(bb, ub, hb, !1, 1 / 0)
     }
 
-    function xq(qq, Eq, gq) {
-      (0, Yq.d)(qq, Eq, gq, !1, lq)
+    function Lb(bb, ub, hb) {
+      (0, Bb.i)(bb, ub, hb, !1, Ob)
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

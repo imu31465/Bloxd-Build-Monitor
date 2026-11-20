@@ -1,30 +1,30 @@
 export const id = 141;
 export const ids = [141];
 export const modules = {
-  7998: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      BloxdDiscordActivitySdk: () => Hq
+  7772: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      BloxdDiscordActivitySdk: () => lb
     });
-    var Yq = gq(8004),
-      lq = gq(1216),
-      Oq = gq(1183),
-      mq = gq(598),
-      xq = gq(1241),
-      Aq = gq(1710),
-      cq = gq(1308),
-      uq = gq(729),
-      Bq = gq(24),
-      Wq = gq(1201),
-      Nq = function(qq) {
-        return qq.APPLICATION_COMMANDS = "applications.commands", qq.IDENTIFY = "identify", qq.EMAIL = "email", qq.GUILDS = "guilds", qq.READ_DM_CHANNELS = "dm_channels.read", qq.WRITE_ACTIVITIES = "rpc.activities.write", qq
-      }(Nq || {}),
-      aq = function(qq) {
-        return qq[qq.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", qq[qq.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", qq[qq.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", qq[qq.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", qq[qq.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", qq[qq.RATELIMITED = 4002] = "RATELIMITED", qq[qq.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", qq[qq.INVALID_VERSION = 4004] = "INVALID_VERSION", qq[qq.INVALID_ENCODING = 4005] = "INVALID_ENCODING", qq
-      }(aq || {}),
-      Vq = function(qq) {
-        return qq[qq.PLAYING = 0] = "PLAYING", qq[qq.STREAMING = 1] = "STREAMING", qq[qq.LISTENING = 2] = "LISTENING", qq[qq.WATCHING = 3] = "WATCHING", qq[qq.CUSTOM = 4] = "CUSTOM", qq[qq.COMPETING = 5] = "COMPETING", qq
-      }(Vq || {});
-    const dq = {
+    var Bb = hb(7776),
+      Ob = hb(1127),
+      Gb = hb(1095),
+      Ub = hb(588),
+      Lb = hb(1144),
+      Yb = hb(1622),
+      Sb = hb(1218),
+      ab = hb(701),
+      Hb = hb(13),
+      wb = hb(1108),
+      Zb = function(bb) {
+        return bb.APPLICATION_COMMANDS = "applications.commands", bb.IDENTIFY = "identify", bb.EMAIL = "email", bb.GUILDS = "guilds", bb.READ_DM_CHANNELS = "dm_channels.read", bb.WRITE_ACTIVITIES = "rpc.activities.write", bb
+      }(Zb || {}),
+      Xb = function(bb) {
+        return bb[bb.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", bb[bb.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", bb[bb.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", bb[bb.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", bb[bb.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", bb[bb.RATELIMITED = 4002] = "RATELIMITED", bb[bb.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", bb[bb.INVALID_VERSION = 4004] = "INVALID_VERSION", bb[bb.INVALID_ENCODING = 4005] = "INVALID_ENCODING", bb
+      }(Xb || {}),
+      pb = function(bb) {
+        return bb[bb.PLAYING = 0] = "PLAYING", bb[bb.STREAMING = 1] = "STREAMING", bb[bb.LISTENING = 2] = "LISTENING", bb[bb.WATCHING = 3] = "WATCHING", bb[bb.CUSTOM = 4] = "CUSTOM", bb[bb.COMPETING = 5] = "COMPETING", bb
+      }(pb || {});
+    const ob = {
         Minigames: "Playing",
         Puzzle: "Solving",
         Escape: "Escaping",
@@ -55,195 +55,195 @@ export const modules = {
         Adventure: "Adventuring",
         Other: "Being mischievous"
       },
-      jq = {
+      Ab = {
         goalRush: "Playing",
         heroesvbrainrots: "Battling",
         hideseek: "Playing",
         bingo: "Playing"
       };
-    class Hq {
-      constructor(qq) {
-        this.discordSdk = qq, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null
+    class lb {
+      constructor(bb) {
+        this.discordSdk = bb, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null
       }
       static async setup() {
-        console.log("Setting up Discord SDK with client id", Wq.d.discordClientID);
-        const qq = new Yq.d(Wq.d.discordClientID);
-        let Eq = !1;
+        console.log("Setting up Discord SDK with client id", wb.b.discordClientID);
+        const bb = new Bb.b(wb.b.discordClientID);
+        let ub = !1;
         setTimeout((() => {
-          Eq || (console.warn("Discord SDK took too long to initialize"), (0, Aq.reloadBloxd)())
-        }), 15e3), await qq.ready(), Eq = !0;
+          ub || (console.warn("Discord SDK took too long to initialize"), (0, Yb.reloadBloxd)())
+        }), 15e3), await bb.ready(), ub = !0;
         try {
           const {
-            enabled: Eq
-          } = await qq.commands.encourageHardwareAcceleration();
-          Eq || console.warn("Hardware acceleration not enabled in the Discord client")
-        } catch (lq) {
-          console.error("Failed to encourage hardware acceleration in the Discord client", lq)
+            enabled: ub
+          } = await bb.commands.encourageHardwareAcceleration();
+          ub || console.warn("Hardware acceleration not enabled in the Discord client")
+        } catch (Ob) {
+          console.error("Failed to encourage hardware acceleration in the Discord client", Ob)
         }
-        const gq = new Hq(qq);
-        return gq.isMobilePlatform() && (gq.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
-          gq.applyDiscordSafeAreaNotch()
-        }))), gq
+        const hb = new lb(bb);
+        return hb.isMobilePlatform() && (hb.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
+          hb.applyDiscordSafeAreaNotch()
+        }))), hb
       }
-      async updateActivityDescription(qq) {
-        let Eq, gq;
-        switch (qq) {
+      async updateActivityDescription(bb) {
+        let ub, hb;
+        switch (bb) {
           case "homePage":
-            Eq = "Chilling in the Main Menu";
+            ub = "Chilling in the Main Menu";
             break;
           case "inGame": {
-            const qq = await this.getInGameDescriptions();
-            Eq = qq.primary, gq = qq.secondary;
+            const bb = await this.getInGameDescriptions();
+            ub = bb.primary, hb = bb.secondary;
             break
           }
         }
         await this.discordSdk.commands.setActivity({
           activity: {
-            type: Vq.PLAYING,
-            details: Eq,
-            state: gq,
+            type: pb.PLAYING,
+            details: ub,
+            state: hb,
             assets: {
               large_image: "icon",
-              large_text: Eq
+              large_text: ub
             },
             timestamps: {
               start: this.startTime
             }
           }
-        }).catch((qq => {
-          console.error(`Failed to update Discord activity rich presence with description="${Eq}":`, qq)
+        }).catch((bb => {
+          console.error(`Failed to update Discord activity rich presence with description="${ub}":`, bb)
         }))
       }
       async getInGameDescriptions() {
-        var qq;
+        var bb;
         const {
-          requestedGameNameWithVariation: Eq
-        } = (0, cq.e)(), gq = (0, uq.m)(Eq), Yq = null !== (qq = jq[Eq]) && void 0 !== qq ? qq : dq[gq.type], lq = await (0, Oq.u)(xq.d.ENGLISH, gq.title), Aq = (0, cq.e)();
-        if ((0, cq.k)(Aq)) return {
-          primary: `${Yq} in a Discord World`
+          requestedGameNameWithVariation: ub
+        } = (0, Sb.b)(), hb = (0, ab.q)(ub), Bb = null !== (bb = Ab[ub]) && void 0 !== bb ? bb : ob[hb.type], Ob = await (0, Gb.H)(Lb.d.ENGLISH, hb.title), Yb = (0, Sb.b)();
+        if ((0, Sb.g)(Yb)) return {
+          primary: `${Bb} in a Discord World`
         };
-        const Bq = `${Yq} in ${lq}`;
-        return (0, mq.H)(Aq.lobbyName) ? {
-          primary: Bq
+        const Hb = `${Bb} in ${Ob}`;
+        return (0, Ub.J)(Yb.lobbyName) ? {
+          primary: Hb
         } : {
-          primary: Bq,
-          secondary: `Lobby ${Aq.lobbyName}`
+          primary: Hb,
+          secondary: `Lobby ${Yb.lobbyName}`
         }
       }
       getCurrentChannelType() {
         const {
-          channelId: qq,
-          guildId: Eq
+          channelId: bb,
+          guildId: ub
         } = this.getCurrentChannelAndGuild();
-        return null !== Eq ? lq.c.GUILD : null !== qq ? lq.c.DM : null
+        return null !== ub ? Ob.c.GUILD : null !== bb ? Ob.c.DM : null
       }
       getRequiredScopeForCurrentChannel() {
-        const qq = this.getCurrentChannelType(),
-          Eq = [Nq.APPLICATION_COMMANDS, Nq.IDENTIFY, Nq.EMAIL, Nq.GUILDS, Nq.WRITE_ACTIVITIES];
-        switch (qq) {
-          case lq.c.DM:
-          case lq.c.GUILD:
-            return [...Eq];
+        const bb = this.getCurrentChannelType(),
+          ub = [Zb.APPLICATION_COMMANDS, Zb.IDENTIFY, Zb.EMAIL, Zb.GUILDS, Zb.WRITE_ACTIVITIES];
+        switch (bb) {
+          case Ob.c.DM:
+          case Ob.c.GUILD:
+            return [...ub];
           default:
-            throw new Error(`Unknown Discord channel type: ${qq}`)
+            throw new Error(`Unknown Discord channel type: ${bb}`)
         }
       }
       getCurrentChannelAndGuild() {
         const {
-          channelId: qq,
-          guildId: Eq
+          channelId: bb,
+          guildId: ub
         } = this.discordSdk;
         return {
-          channelId: null !== qq && void 0 !== qq ? qq : null,
-          guildId: null !== Eq && void 0 !== Eq ? Eq : null
+          channelId: null !== bb && void 0 !== bb ? bb : null,
+          guildId: null !== ub && void 0 !== ub ? ub : null
         }
       }
       getInstanceId() {
         return this.discordSdk.instanceId
       }
       async askDiscordUserForAuthorization() {
-        const qq = this.getRequiredScopeForCurrentChannel(),
+        const bb = this.getRequiredScopeForCurrentChannel(),
           {
-            code: Eq
+            code: ub
           } = await this.discordSdk.commands.authorize({
-            client_id: Wq.d.discordClientID,
+            client_id: wb.b.discordClientID,
             response_type: "code",
             state: "",
             prompt: "none",
-            scope: qq
+            scope: bb
           });
-        return Eq
+        return ub
       }
       getCachedAccessToken() {
         return this.cachedAccessToken
       }
-      setCachedAccessToken(qq) {
-        this.cachedAccessToken = qq
+      setCachedAccessToken(bb) {
+        this.cachedAccessToken = bb
       }
-      registerGuild(qq, Eq) {
-        this.guildNameCache[qq] = Eq
+      registerGuild(bb, ub) {
+        this.guildNameCache[bb] = ub
       }
-      async authenticate(qq) {
+      async authenticate(bb) {
         return this.discordSdk.commands.authenticate({
-          access_token: qq
-        }).then((qq => null !== qq))
+          access_token: bb
+        }).then((bb => null !== bb))
       }
       async getUserLocale() {
         try {
           const {
-            locale: qq
+            locale: bb
           } = await this.discordSdk.commands.userSettingsGetLocale();
-          return qq
-        } catch (qq) {
-          return console.error("Failed to get user locale from Discord:", qq.stack), null
+          return bb
+        } catch (bb) {
+          return console.error("Failed to get user locale from Discord:", bb.stack), null
         }
       }
-      async getChannelName(qq) {
+      async getChannelName(bb) {
         return this.discordSdk.commands.getChannel({
-          channel_id: qq
-        }).then((qq => qq.name)).catch((qq => "Your Current Discord Chat"))
+          channel_id: bb
+        }).then((bb => bb.name)).catch((bb => "Your Current Discord Chat"))
       }
-      async getDiscordContextFromChannelId(qq) {
-        const Eq = await this.getChannelName(qq);
-        return lq.h.from({
-          type: lq.c.DM,
-          channelId: qq,
-          channelName: Eq
+      async getDiscordContextFromChannelId(bb) {
+        const ub = await this.getChannelName(bb);
+        return Ob.h.from({
+          type: Ob.c.DM,
+          channelId: bb,
+          channelName: ub
         })
       }
-      getDiscordContextFromGuildId(qq) {
-        const Eq = this.guildNameCache[qq];
-        return (0, mq.H)(Eq) ? null : lq.f.from({
-          type: lq.c.GUILD,
-          guildId: qq,
-          guildName: Eq
+      getDiscordContextFromGuildId(bb) {
+        const ub = this.guildNameCache[bb];
+        return (0, Ub.J)(ub) ? null : Ob.f.from({
+          type: Ob.c.GUILD,
+          guildId: bb,
+          guildName: ub
         })
       }
       async getCurrentDiscordContext() {
         const {
-          channelId: qq,
-          guildId: Eq
+          channelId: bb,
+          guildId: ub
         } = this.getCurrentChannelAndGuild();
-        return null !== Eq ? this.getDiscordContextFromGuildId(Eq) : null !== qq ? this.getDiscordContextFromChannelId(qq) : null
+        return null !== ub ? this.getDiscordContextFromGuildId(ub) : null !== bb ? this.getDiscordContextFromChannelId(bb) : null
       }
-      exit(qq) {
-        console.log("Exiting Discord Activity:", qq), this.discordSdk.close(aq.CLOSE_NORMAL, qq)
+      exit(bb) {
+        console.log("Exiting Discord Activity:", bb), this.discordSdk.close(Xb.CLOSE_NORMAL, bb)
       }
       isMobilePlatform() {
-        return this.discordSdk.platform === Yq.h.MOBILE
+        return this.discordSdk.platform === Bb.c.MOBILE
       }
       applyDiscordSafeAreaNotch() {
-        const qq = getComputedStyle(document.documentElement),
-          Eq = (Eq, gq) => {
-            const Yq = parseFloat(qq.getPropertyValue(`--discord-safe-area-inset-${Eq}`));
-            return isNaN(Yq) || 0 === gq ? 0 : Yq / gq * 100
+        const bb = getComputedStyle(document.documentElement),
+          ub = (ub, hb) => {
+            const Bb = parseFloat(bb.getPropertyValue(`--discord-safe-area-inset-${ub}`));
+            return isNaN(Bb) || 0 === hb ? 0 : Bb / hb * 100
           };
-        Bq.b.set({
+        Hb.d.set({
           notchSize: {
-            top: Eq("top", window.innerHeight),
-            right: Math.max(Eq("right", window.innerWidth), 7),
+            top: ub("top", window.innerHeight),
+            right: Math.max(ub("right", window.innerWidth), 7),
             bottom: 0,
-            left: Eq("left", window.innerWidth)
+            left: ub("left", window.innerWidth)
           }
         })
       }
@@ -251,4 +251,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

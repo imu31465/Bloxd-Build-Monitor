@@ -1,377 +1,377 @@
 export const id = 78;
 export const ids = [78];
 export const modules = {
-  4565: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      A: () => Wq,
-      d: () => Yq,
-      g: () => mq,
-      j: () => dq,
-      n: () => Vq,
-      p: () => xq,
-      s: () => lq,
-      t: () => Oq,
-      u: () => aq,
-      w: () => Nq
+  4507: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Bb,
+      f: () => Ub,
+      i: () => ob,
+      j: () => pb,
+      n: () => Lb,
+      r: () => Ob,
+      s: () => Gb,
+      v: () => Xb,
+      x: () => Zb,
+      y: () => wb
     });
-    const Yq = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const Bb = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function lq(qq) {
+    function Ob(bb) {
       try {
-        return decodeURIComponent(qq.slice(1))
+        return decodeURIComponent(bb.slice(1))
       } catch {
-        return qq.slice(1)
+        return bb.slice(1)
       }
     }
 
-    function Oq(qq) {
-      return qq.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function Gb(bb) {
+      return bb.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const mq = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Yq.source}`, "g");
+    const Ub = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Bb.source}`, "g");
 
-    function xq(qq, Eq) {
-      return 2 === qq.length ? Eq.replace(/^ (.*) $/, "$1") : Eq
-    }
-
-    function Aq(qq) {
-      return "" === qq.trim()
+    function Lb(bb, ub) {
+      return 2 === bb.length ? ub.replace(/^ (.*) $/, "$1") : ub
     }
 
-    function cq(qq) {
-      const Eq = [];
-      for (const gq of qq.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Eq.length > 0 && Eq[Eq.length - 1].endsWith("\\") ? Eq[Eq.length - 1] += `|${gq}` : Eq.push(gq);
-      return Eq.map((qq => qq.trim().replaceAll("\\|", "|")))
+    function Yb(bb) {
+      return "" === bb.trim()
     }
-    const uq = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function Bq(qq) {
-      const Eq = [],
-        gq = [{
+    function Sb(bb) {
+      const ub = [];
+      for (const hb of bb.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) ub.length > 0 && ub[ub.length - 1].endsWith("\\") ? ub[ub.length - 1] += `|${hb}` : ub.push(hb);
+      return ub.map((bb => bb.trim().replaceAll("\\|", "|")))
+    }
+    const ab = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function Hb(bb) {
+      const ub = [],
+        hb = [{
           indent: -1,
-          items: Eq
+          items: ub
         }];
-      let Yq = null;
-      for (const lq of qq) {
-        const qq = lq.match(uq);
-        if (!qq) {
-          Yq && (Yq.text += ` ${lq.trim()}`);
+      let Bb = null;
+      for (const Ob of bb) {
+        const bb = Ob.match(ab);
+        if (!bb) {
+          Bb && (Bb.text += ` ${Ob.trim()}`);
           continue
         }
-        const Eq = qq[1].replace(/\t/g, "  ").length;
-        for (; Eq <= gq[gq.length - 1].indent;) gq.pop();
-        Yq = {
-          text: qq[3].trim(),
+        const ub = bb[1].replace(/\t/g, "  ").length;
+        for (; ub <= hb[hb.length - 1].indent;) hb.pop();
+        Bb = {
+          text: bb[3].trim(),
           children: []
-        }, gq[gq.length - 1].items.push(Yq), gq.push({
-          indent: Eq,
-          items: Yq.children
+        }, hb[hb.length - 1].items.push(Bb), hb.push({
+          indent: ub,
+          items: Bb.children
         })
       }
-      return Eq
+      return ub
     }
 
-    function Wq(qq) {
-      const Eq = qq.replace(/\r\n/g, "\n").split("\n"),
-        gq = [];
-      let Yq = 0;
-      for (; Yq < Eq.length;) {
-        const qq = Eq[Yq];
-        if (Aq(qq)) {
-          Yq++;
+    function wb(bb) {
+      const ub = bb.replace(/\r\n/g, "\n").split("\n"),
+        hb = [];
+      let Bb = 0;
+      for (; Bb < ub.length;) {
+        const bb = ub[Bb];
+        if (Yb(bb)) {
+          Bb++;
           continue
         }
-        const lq = qq.match(/^\s*```\s*(\w*)\s*$/);
-        if (lq) {
-          const qq = [];
-          for (Yq++; Yq < Eq.length && !/^\s*```\s*$/.test(Eq[Yq]);) qq.push(Eq[Yq]), Yq++;
-          Yq++, gq.push({
+        const Ob = bb.match(/^\s*```\s*(\w*)\s*$/);
+        if (Ob) {
+          const bb = [];
+          for (Bb++; Bb < ub.length && !/^\s*```\s*$/.test(ub[Bb]);) bb.push(ub[Bb]), Bb++;
+          Bb++, hb.push({
             kind: "code",
-            lang: lq[1] || "text",
-            code: qq.join("\n").replace(/\s+$/, "")
+            lang: Ob[1] || "text",
+            code: bb.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const mq = qq.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (mq) {
-          const qq = mq[2].trim();
-          gq.push({
+        const Ub = bb.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (Ub) {
+          const bb = Ub[2].trim();
+          hb.push({
             kind: "heading",
-            level: mq[1].length,
-            text: qq,
-            anchor: Oq(qq)
-          }), Yq++;
+            level: Ub[1].length,
+            text: bb,
+            anchor: Gb(bb)
+          }), Bb++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(qq)) {
-          gq.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(bb)) {
+          hb.push({
             kind: "rule"
-          }), Yq++;
+          }), Bb++;
           continue
         }
-        if (qq.trim().startsWith("|") && Yq + 1 < Eq.length && /^\s*\|[\s:|-]+\|\s*$/.test(Eq[Yq + 1])) {
-          const lq = cq(qq),
-            Oq = [];
-          for (Yq += 2; Yq < Eq.length && Eq[Yq].trim().startsWith("|");) Oq.push(cq(Eq[Yq])), Yq++;
-          gq.push({
+        if (bb.trim().startsWith("|") && Bb + 1 < ub.length && /^\s*\|[\s:|-]+\|\s*$/.test(ub[Bb + 1])) {
+          const Ob = Sb(bb),
+            Gb = [];
+          for (Bb += 2; Bb < ub.length && ub[Bb].trim().startsWith("|");) Gb.push(Sb(ub[Bb])), Bb++;
+          hb.push({
             kind: "table",
-            header: lq,
-            rows: Oq
+            header: Ob,
+            rows: Gb
           });
           continue
         }
-        if (qq.startsWith(">")) {
-          const qq = [];
-          for (; Yq < Eq.length && Eq[Yq].startsWith(">");) qq.push(Eq[Yq].replace(/^>\s?/, "")), Yq++;
-          gq.push({
+        if (bb.startsWith(">")) {
+          const bb = [];
+          for (; Bb < ub.length && ub[Bb].startsWith(">");) bb.push(ub[Bb].replace(/^>\s?/, "")), Bb++;
+          hb.push({
             kind: "quote",
-            blocks: Wq(qq.join("\n"))
+            blocks: wb(bb.join("\n"))
           });
           continue
         }
-        if (uq.test(qq)) {
-          const lq = [],
-            Oq = /^\s*\d+\./.test(qq);
-          for (; Yq < Eq.length && !Aq(Eq[Yq]) && (uq.test(Eq[Yq]) || /^\s+\S/.test(Eq[Yq]));) lq.push(Eq[Yq]), Yq++;
-          gq.push({
+        if (ab.test(bb)) {
+          const Ob = [],
+            Gb = /^\s*\d+\./.test(bb);
+          for (; Bb < ub.length && !Yb(ub[Bb]) && (ab.test(ub[Bb]) || /^\s+\S/.test(ub[Bb]));) Ob.push(ub[Bb]), Bb++;
+          hb.push({
             kind: "list",
-            ordered: Oq,
-            items: Bq(lq)
+            ordered: Gb,
+            items: Hb(Ob)
           });
           continue
         }
-        const xq = [];
-        for (; Yq < Eq.length && !Aq(Eq[Yq]) && !/^\s*```/.test(Eq[Yq]) && !/^#{1,6}\s/.test(Eq[Yq]) && !Eq[Yq].startsWith(">") && !uq.test(Eq[Yq]) && (!Eq[Yq].trim().startsWith("|") || 0 !== xq.length);) xq.push(Eq[Yq].trim()), Yq++;
-        0 === xq.length && (xq.push(Eq[Yq].trim()), Yq++), gq.push({
+        const Lb = [];
+        for (; Bb < ub.length && !Yb(ub[Bb]) && !/^\s*```/.test(ub[Bb]) && !/^#{1,6}\s/.test(ub[Bb]) && !ub[Bb].startsWith(">") && !ab.test(ub[Bb]) && (!ub[Bb].trim().startsWith("|") || 0 !== Lb.length);) Lb.push(ub[Bb].trim()), Bb++;
+        0 === Lb.length && (Lb.push(ub[Bb].trim()), Bb++), hb.push({
           kind: "paragraph",
-          text: xq.join(" ")
+          text: Lb.join(" ")
         })
       }
-      return gq
+      return hb
     }
 
-    function Nq(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const gq = Wq(qq);
-      let Yq = "";
-      const lq = [],
-        Oq = [],
-        mq = new Map;
-      for (const cq of gq) {
-        if ("heading" === cq.kind) {
-          var xq;
-          const qq = (null !== (xq = mq.get(cq.anchor)) && void 0 !== xq ? xq : 0) + 1;
-          mq.set(cq.anchor, qq), qq > 1 && (cq.anchor = `${cq.anchor}-${qq}`)
+    function Zb(bb) {
+      let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const hb = wb(bb);
+      let Bb = "";
+      const Ob = [],
+        Gb = [],
+        Ub = new Map;
+      for (const Sb of hb) {
+        if ("heading" === Sb.kind) {
+          var Lb;
+          const bb = (null !== (Lb = Ub.get(Sb.anchor)) && void 0 !== Lb ? Lb : 0) + 1;
+          Ub.set(Sb.anchor, bb), bb > 1 && (Sb.anchor = `${Sb.anchor}-${bb}`)
         }
-        if ("heading" === cq.kind && 1 === cq.level && !Yq) {
-          Yq = cq.text;
+        if ("heading" === Sb.kind && 1 === Sb.level && !Bb) {
+          Bb = Sb.text;
           continue
         }
-        if ("heading" === cq.kind && cq.level <= Eq) {
-          Oq.push({
-            heading: cq,
+        if ("heading" === Sb.kind && Sb.level <= ub) {
+          Gb.push({
+            heading: Sb,
             blocks: []
           });
           continue
         }
-        const qq = Oq.at(-1);
-        qq ? qq.blocks.push(cq) : lq.push(cq)
+        const bb = Gb.at(-1);
+        bb ? bb.blocks.push(Sb) : Ob.push(Sb)
       }
-      const Aq = qq => {
+      const Yb = bb => {
         for (;
-          "rule" === (null === (Eq = qq.at(-1)) || void 0 === Eq ? void 0 : Eq.kind);) {
-          var Eq;
-          qq.pop()
+          "rule" === (null === (ub = bb.at(-1)) || void 0 === ub ? void 0 : ub.kind);) {
+          var ub;
+          bb.pop()
         }
       };
-      Aq(lq);
-      for (const cq of Oq) Aq(cq.blocks);
+      Yb(Ob);
+      for (const Sb of Gb) Yb(Sb.blocks);
       return {
-        title: Yq,
-        intro: lq,
-        sections: Oq
+        title: Bb,
+        intro: Ob,
+        sections: Gb
       }
     }
 
-    function aq(qq) {
+    function Xb(bb) {
       return [{
         heading: null,
-        blocks: qq.intro
-      }, ...qq.sections.map((qq => ({
-        heading: qq.heading,
-        blocks: qq.blocks
+        blocks: bb.intro
+      }, ...bb.sections.map((bb => ({
+        heading: bb.heading,
+        blocks: bb.blocks
       })))]
     }
 
-    function Vq(qq) {
-      return qq.flatMap((qq => "code" === qq.kind ? [qq] : "quote" === qq.kind ? Vq(qq.blocks) : []))
+    function pb(bb) {
+      return bb.flatMap((bb => "code" === bb.kind ? [bb] : "quote" === bb.kind ? pb(bb.blocks) : []))
     }
 
-    function dq(qq) {
-      switch (qq.kind) {
+    function ob(bb) {
+      switch (bb.kind) {
         case "heading":
         case "paragraph":
-          return qq.text;
+          return bb.text;
         case "code":
-          return qq.code;
+          return bb.code;
         case "table":
-          return [qq.header, ...qq.rows].map((qq => qq.join(" "))).join(" ");
+          return [bb.header, ...bb.rows].map((bb => bb.join(" "))).join(" ");
         case "list": {
-          const Eq = qq => qq.map((qq => `${qq.text} ${Eq(qq.children)}`)).join(" ");
-          return Eq(qq.items)
+          const ub = bb => bb.map((bb => `${bb.text} ${ub(bb.children)}`)).join(" ");
+          return ub(bb.items)
         }
         case "quote":
-          return qq.blocks.map(dq).join(" ");
+          return bb.blocks.map(ob).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  6370: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Bq,
-      h: () => mq,
-      j: () => xq
+  6229: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Hb,
+      d: () => Ub,
+      f: () => Lb
     });
-    gq(6366);
-    var Yq = gq(57),
-      lq = gq(4565),
-      Oq = gq(1070);
-    const mq = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    hb(6227);
+    var Bb = hb(49),
+      Ob = hb(4507),
+      Gb = hb(1007);
+    const Ub = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function xq(qq, Eq) {
-      return qq === Eq ? qq : `${qq} (${Eq})`
+    function Lb(bb, ub) {
+      return bb === ub ? bb : `${bb} (${ub})`
     }
 
-    function Aq(qq) {
-      const Eq = [];
-      let gq = 0;
-      for (const Yq of qq.matchAll(mq)) {
-        Yq.index > gq && Eq.push(qq.slice(gq, Yq.index));
-        const [, lq, mq, Aq, cq, uq, Bq] = Yq;
-        void 0 !== lq ? Eq.push(xq(lq, mq)) : void 0 !== Aq || void 0 !== cq ? Eq.push((0, Oq.jsx)("strong", {
-          children: null !== Aq && void 0 !== Aq ? Aq : cq
-        }, Yq.index)) : void 0 !== uq ? Eq.push((0, Oq.jsx)("em", {
-          children: uq
-        }, Yq.index)) : Eq.push((0, Oq.jsx)("code", {
-          children: Bq
-        }, Yq.index)), gq = Yq.index + Yq[0].length
+    function Yb(bb) {
+      const ub = [];
+      let hb = 0;
+      for (const Bb of bb.matchAll(Ub)) {
+        Bb.index > hb && ub.push(bb.slice(hb, Bb.index));
+        const [, Ob, Ub, Yb, Sb, ab, Hb] = Bb;
+        void 0 !== Ob ? ub.push(Lb(Ob, Ub)) : void 0 !== Yb || void 0 !== Sb ? ub.push((0, Gb.jsx)("strong", {
+          children: null !== Yb && void 0 !== Yb ? Yb : Sb
+        }, Bb.index)) : void 0 !== ab ? ub.push((0, Gb.jsx)("em", {
+          children: ab
+        }, Bb.index)) : ub.push((0, Gb.jsx)("code", {
+          children: Hb
+        }, Bb.index)), hb = Bb.index + Bb[0].length
       }
-      return gq < qq.length && Eq.push(qq.slice(gq)), Eq
+      return hb < bb.length && ub.push(bb.slice(hb)), ub
     }
 
-    function cq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const Yq = qq.map(((qq, Eq) => (0, Oq.jsxs)("li", {
-        children: [Aq(qq.text), qq.children.length > 0 && cq(qq.children, !1)]
-      }, Eq)));
-      return Eq ? (0, Oq.jsx)("ol", {
-        start: gq,
-        children: Yq
-      }) : (0, Oq.jsx)("ul", {
-        children: Yq
+    function Sb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const Bb = bb.map(((bb, ub) => (0, Gb.jsxs)("li", {
+        children: [Yb(bb.text), bb.children.length > 0 && Sb(bb.children, !1)]
+      }, ub)));
+      return ub ? (0, Gb.jsx)("ol", {
+        start: hb,
+        children: Bb
+      }) : (0, Gb.jsx)("ul", {
+        children: Bb
       })
     }
 
-    function uq(qq, Eq) {
-      switch (qq.kind) {
+    function ab(bb, ub) {
+      switch (bb.kind) {
         case "heading":
-          return qq.level <= 2 ? (0, Oq.jsx)("h3", {
-            children: Aq(qq.text)
-          }, Eq) : (0, Oq.jsx)("h4", {
-            children: Aq(qq.text)
-          }, Eq);
+          return bb.level <= 2 ? (0, Gb.jsx)("h3", {
+            children: Yb(bb.text)
+          }, ub) : (0, Gb.jsx)("h4", {
+            children: Yb(bb.text)
+          }, ub);
         case "paragraph":
-          return (0, Oq.jsx)("p", {
-            children: Aq(qq.text)
-          }, Eq);
+          return (0, Gb.jsx)("p", {
+            children: Yb(bb.text)
+          }, ub);
         case "list":
-          return (0, Oq.jsx)(Yq.Fragment, {
-            children: cq(qq.items, qq.ordered)
-          }, Eq);
+          return (0, Gb.jsx)(Bb.Fragment, {
+            children: Sb(bb.items, bb.ordered)
+          }, ub);
         case "quote":
-          return (0, Oq.jsx)("blockquote", {
-            children: qq.blocks.map(((qq, Eq) => uq(qq, Eq)))
-          }, Eq);
+          return (0, Gb.jsx)("blockquote", {
+            children: bb.blocks.map(((bb, ub) => ab(bb, ub)))
+          }, ub);
         case "code":
-          return (0, Oq.jsx)("pre", {
-            children: (0, Oq.jsx)("code", {
-              children: qq.code
+          return (0, Gb.jsx)("pre", {
+            children: (0, Gb.jsx)("code", {
+              children: bb.code
             })
-          }, Eq);
+          }, ub);
         case "table":
-          return (0, Oq.jsxs)("table", {
-            children: [(0, Oq.jsx)("thead", {
-              children: (0, Oq.jsx)("tr", {
-                children: qq.header.map(((qq, Eq) => (0, Oq.jsx)("th", {
-                  children: Aq(qq)
-                }, Eq)))
+          return (0, Gb.jsxs)("table", {
+            children: [(0, Gb.jsx)("thead", {
+              children: (0, Gb.jsx)("tr", {
+                children: bb.header.map(((bb, ub) => (0, Gb.jsx)("th", {
+                  children: Yb(bb)
+                }, ub)))
               })
-            }), (0, Oq.jsx)("tbody", {
-              children: qq.rows.map(((qq, Eq) => (0, Oq.jsx)("tr", {
-                children: qq.map(((qq, Eq) => (0, Oq.jsx)("td", {
-                  children: Aq(qq)
-                }, Eq)))
-              }, Eq)))
+            }), (0, Gb.jsx)("tbody", {
+              children: bb.rows.map(((bb, ub) => (0, Gb.jsx)("tr", {
+                children: bb.map(((bb, ub) => (0, Gb.jsx)("td", {
+                  children: Yb(bb)
+                }, ub)))
+              }, ub)))
             })]
-          }, Eq);
+          }, ub);
         case "rule":
-          return (0, Oq.jsx)("hr", {}, Eq)
+          return (0, Gb.jsx)("hr", {}, ub)
       }
     }
 
-    function Bq(qq) {
+    function Hb(bb) {
       let {
-        markdown: Eq
-      } = qq, gq = 0;
-      return (0, Oq.jsx)("div", {
+        markdown: ub
+      } = bb, hb = 0;
+      return (0, Gb.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, lq.A)(Eq).map(((qq, Eq) => {
-          if ("list" !== qq.kind || !qq.ordered) return gq = 0, uq(qq, Eq);
-          const lq = gq + 1;
-          return gq += qq.items.length, (0, Oq.jsx)(Yq.Fragment, {
-            children: cq(qq.items, !0, lq)
-          }, Eq)
+        children: (0, Ob.y)(ub).map(((bb, ub) => {
+          if ("list" !== bb.kind || !bb.ordered) return hb = 0, ab(bb, ub);
+          const Ob = hb + 1;
+          return hb += bb.items.length, (0, Gb.jsx)(Bb.Fragment, {
+            children: Sb(bb.items, !0, Ob)
+          }, ub)
         }))
       })
     }
   },
-  6357: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Hq,
-      i: () => oq,
-      g: () => Qq,
-      k: () => aq
+  6218: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => lb,
+      j: () => Kb,
+      g: () => Cb,
+      k: () => Xb
     });
-    var Yq = gq(1792),
-      lq = gq(6317),
-      Oq = gq(4701);
-    const mq = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var Bb = hb(1713),
+      Ob = hb(6183),
+      Gb = hb(4637);
+    const Ub = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function xq(qq) {
-      return (0, Oq.d)(qq, mq, (Eq => !/^my/i.test(Eq[0]) || !/follow $/i.test(qq.slice(0, Eq.index)))).length > 0
+    function Lb(bb) {
+      return (0, Gb.f)(bb, Ub, (ub => !/^my/i.test(ub[0]) || !/follow $/i.test(bb.slice(0, ub.index)))).length > 0
     }
-    const Aq = /\byou(?:r|'re|'ll)?\b/i,
-      cq = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      uq = 2;
+    const Yb = /\byou(?:r|'re|'ll)?\b/i,
+      Sb = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      ab = 2;
 
-    function Bq(qq) {
-      return function(qq) {
-        const Eq = [];
-        let gq = !1;
-        for (const Yq of qq.split("\n")) {
-          if (/^\s*(```|~~~)/.test(Yq)) {
-            gq = !gq;
+    function Hb(bb) {
+      return function(bb) {
+        const ub = [];
+        let hb = !1;
+        for (const Bb of bb.split("\n")) {
+          if (/^\s*(```|~~~)/.test(Bb)) {
+            hb = !hb;
             continue
           }
-          if (gq || /^\s*>/.test(Yq)) continue;
-          const qq = Yq.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          Eq.push(...(0, lq.v)(qq))
+          if (hb || /^\s*>/.test(Bb)) continue;
+          const bb = Bb.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          ub.push(...(0, Ob.o)(bb))
         }
-        return Eq
-      }(qq).filter((qq => xq(qq) || cq.test(qq) && !Aq.test(qq)))
+        return ub
+      }(bb).filter((bb => Lb(bb) || Sb.test(bb) && !Yb.test(bb)))
     }
-    const Wq = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      Nq = [{
+    const wb = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      Zb = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function aq(qq) {
-      const Eq = Nq.findIndex((Eq => Eq.name === qq));
-      return -1 === Eq ? Nq.length : Eq
+    function Xb(bb) {
+      const ub = Zb.findIndex((ub => ub.name === bb));
+      return -1 === ub ? Zb.length : ub
     }
-    const Vq = 2500,
-      dq = 12e4;
-    class jq extends Error {
-      constructor(qq) {
-        super(`Studio AI chat ${qq}`), this.reason = qq
+    const pb = 2500,
+      ob = 12e4;
+    class Ab extends Error {
+      constructor(bb) {
+        super(`Studio AI chat ${bb}`), this.reason = bb
       }
     }
 
-    function Hq(qq, Eq) {
-      const gq = new AbortController,
-        Yq = () => {
-          gq.abort()
+    function lb(bb, ub) {
+      const hb = new AbortController,
+        Bb = () => {
+          hb.abort()
         },
-        lq = setTimeout(Yq, qq);
-      return null !== Eq && void 0 !== Eq && Eq.aborted && Yq(), null === Eq || void 0 === Eq || Eq.addEventListener("abort", Yq, {
+        Ob = setTimeout(Bb, bb);
+      return null !== ub && void 0 !== ub && ub.aborted && Bb(), null === ub || void 0 === ub || ub.addEventListener("abort", Bb, {
         once: !0
       }), {
-        signal: gq.signal,
+        signal: hb.signal,
         clear: () => {
-          clearTimeout(lq), null === Eq || void 0 === Eq || Eq.removeEventListener("abort", Yq)
+          clearTimeout(Ob), null === ub || void 0 === ub || ub.removeEventListener("abort", Bb)
         }
       }
     }
 
-    function oq(qq, Eq, gq) {
-      return new Promise(((lq, Oq) => {
-        const mq = new AbortController,
-          xq = () => {
-            mq.abort(), Oq((0, Yq.e)(gq))
+    function Kb(bb, ub, hb) {
+      return new Promise(((Ob, Gb) => {
+        const Ub = new AbortController,
+          Lb = () => {
+            Ub.abort(), Gb((0, Bb.f)(hb))
           };
-        if (null !== gq && void 0 !== gq && gq.aborted) return void xq();
-        null === gq || void 0 === gq || gq.addEventListener("abort", xq, {
+        if (null !== hb && void 0 !== hb && hb.aborted) return void Lb();
+        null === hb || void 0 === hb || hb.addEventListener("abort", Lb, {
           once: !0
         });
-        const Aq = Nq.map((() => !1));
-        let cq = null;
-        const uq = Nq.map((() => !1)),
-          Bq = Nq.map((() => !1));
-        Nq.forEach(((Yq, Wq) => {
-          const aq = Hq(dq, mq.signal);
-          yq(Yq, [{
+        const Yb = Zb.map((() => !1));
+        let Sb = null;
+        const ab = Zb.map((() => !1)),
+          Hb = Zb.map((() => !1));
+        Zb.forEach(((Bb, wb) => {
+          const Xb = lb(ob, Ub.signal);
+          db(Bb, [{
             role: "user",
-            content: qq
-          }], aq.signal).then((qq => {
-            mq.signal.aborted || ("busy" === qq || "failed" === qq ? (uq[Wq] = "busy" === qq, Bq[Wq] = !0) : null !== qq && (null === cq || Wq < cq.rank) && (cq = {
-              rank: Wq,
+            content: bb
+          }], Xb.signal).then((bb => {
+            Ub.signal.aborted || ("busy" === bb || "failed" === bb ? (ab[wb] = "busy" === bb, Hb[wb] = !0) : null !== bb && (null === Sb || wb < Sb.rank) && (Sb = {
+              rank: wb,
               answer: {
-                text: qq.text,
-                model: Yq.name
+                text: bb.text,
+                model: Bb.name
               }
-            }, Eq(cq.answer)))
-          }), (qq => {
-            mq.signal.aborted || (Bq[Wq] = !0, console.warn(`Studio AI: ${Yq.name} couldn't be reached`, qq))
+            }, ub(Sb.answer)))
+          }), (bb => {
+            Ub.signal.aborted || (Hb[wb] = !0, console.warn(`Studio AI: ${Bb.name} couldn't be reached`, bb))
           })).finally((() => {
-            aq.clear(), Aq[Wq] = !0, mq.signal.aborted || (() => {
-              var qq, Eq;
-              const Yq = null !== (qq = null === (Eq = cq) || void 0 === Eq ? void 0 : Eq.rank) && void 0 !== qq ? qq : Nq.length;
-              Aq.slice(0, Yq).includes(!1) || (null === gq || void 0 === gq || gq.removeEventListener("abort", xq), mq.abort(), null !== cq ? lq({
-                ...cq.answer,
-                isFinal: !Bq.slice(0, cq.rank).includes(!0)
-              }) : Oq(new jq(uq.includes(!0) ? "busy" : "failed")))
+            Xb.clear(), Yb[wb] = !0, Ub.signal.aborted || (() => {
+              var bb, ub;
+              const Bb = null !== (bb = null === (ub = Sb) || void 0 === ub ? void 0 : ub.rank) && void 0 !== bb ? bb : Zb.length;
+              Yb.slice(0, Bb).includes(!1) || (null === hb || void 0 === hb || hb.removeEventListener("abort", Lb), Ub.abort(), null !== Sb ? Ob({
+                ...Sb.answer,
+                isFinal: !Hb.slice(0, Sb.rank).includes(!0)
+              }) : Gb(new Ab(ab.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((qq => {
-            console.error("Studio AI: showing an answer failed", qq)
+          })).catch((bb => {
+            console.error("Studio AI: showing an answer failed", bb)
           }))
         }))
       }))
     }
 
-    function Pq(qq) {
-      var Eq, gq;
-      return "length" === (null === qq || void 0 === qq || null === (Eq = qq.choices) || void 0 === Eq || null === (gq = Eq[0]) || void 0 === gq ? void 0 : gq.finish_reason)
+    function Wb(bb) {
+      var ub, hb;
+      return "length" === (null === bb || void 0 === bb || null === (ub = bb.choices) || void 0 === ub || null === (hb = ub[0]) || void 0 === hb ? void 0 : hb.finish_reason)
     }
-    async function Qq(qq, Eq, gq) {
-      const Yq = Nq.find((Eq => Eq.name === qq));
-      if (void 0 === Yq) return "failed";
-      const lq = Hq(dq, gq);
+    async function Cb(bb, ub, hb) {
+      const Bb = Zb.find((ub => ub.name === bb));
+      if (void 0 === Bb) return "failed";
+      const Ob = lb(ob, hb);
       try {
-        const qq = await yq(Yq, Eq, lq.signal);
-        return null !== qq && "object" === typeof qq ? qq.isCutOff ? (console.warn(`Studio AI: ${Yq.name}'s answer was cut off at the token limit`), null) : {
-          text: qq.text
-        } : qq
+        const bb = await db(Bb, ub, Ob.signal);
+        return null !== bb && "object" === typeof bb ? bb.isCutOff ? (console.warn(`Studio AI: ${Bb.name}'s answer was cut off at the token limit`), null) : {
+          text: bb.text
+        } : bb
       } finally {
-        lq.clear()
+        Ob.clear()
       }
     }
-    async function yq(qq, Eq, gq) {
-      const Yq = await fetch(Wq, {
+    async function db(bb, ub, hb) {
+      const Bb = await fetch(wb, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: qq.name,
-          messages: Eq,
-          max_tokens: Vq,
-          temperature: qq.temperature,
-          reasoning_effort: qq.reasoningEffort
+          model: bb.name,
+          messages: ub,
+          max_tokens: pb,
+          temperature: bb.temperature,
+          reasoning_effort: bb.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: gq
+        signal: hb
       });
-      if (429 === Yq.status) return "busy";
-      if (!Yq.ok) return console.warn(`Studio AI: ${qq.name} answered ${Yq.status}`), "failed";
-      const lq = await Yq.json().catch((() => null)),
-        Oq = function(qq) {
-          var Eq, gq, Yq;
-          const lq = null === qq || void 0 === qq || null === (Eq = qq.choices) || void 0 === Eq || null === (gq = Eq[0]) || void 0 === gq || null === (Yq = gq.message) || void 0 === Yq ? void 0 : Yq.content;
-          if ("string" !== typeof lq) return null;
-          const Oq = lq.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === Oq ? null : Oq
-        }(lq);
-      return null !== Oq && function(qq) {
-        const Eq = Bq(qq);
-        return Eq.length >= uq || Eq.some((qq => xq(qq)))
-      }(Oq) ? (console.warn(`Studio AI: ${qq.name} thought out loud instead of answering`), "failed") : null === Oq ? null : {
-        text: Oq,
-        isCutOff: Pq(lq)
+      if (429 === Bb.status) return "busy";
+      if (!Bb.ok) return console.warn(`Studio AI: ${bb.name} answered ${Bb.status}`), "failed";
+      const Ob = await Bb.json().catch((() => null)),
+        Gb = function(bb) {
+          var ub, hb, Bb;
+          const Ob = null === bb || void 0 === bb || null === (ub = bb.choices) || void 0 === ub || null === (hb = ub[0]) || void 0 === hb || null === (Bb = hb.message) || void 0 === Bb ? void 0 : Bb.content;
+          if ("string" !== typeof Ob) return null;
+          const Gb = Ob.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === Gb ? null : Gb
+        }(Ob);
+      return null !== Gb && function(bb) {
+        const ub = Hb(bb);
+        return ub.length >= ab || ub.some((bb => Lb(bb)))
+      }(Gb) ? (console.warn(`Studio AI: ${bb.name} thought out loud instead of answering`), "failed") : null === Gb ? null : {
+        text: Gb,
+        isCutOff: Wb(Ob)
       }
     }
   },
-  6317: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      C: () => Pq,
-      D: () => yq,
-      H: () => dq,
-      J: () => oq,
-      N: () => Qq,
-      O: () => Hq,
-      P: () => Bq,
-      Q: () => cq,
-      T: () => Nq,
-      e: () => aq,
-      h: () => xq,
-      l: () => mq,
-      p: () => Vq,
-      t: () => Wq,
-      v: () => uq,
-      w: () => Oq,
-      y: () => lq
+  6183: (bb, ub, hb) => {
+    hb.d(ub, {
+      B: () => db,
+      E: () => ob,
+      H: () => Kb,
+      I: () => Cb,
+      J: () => lb,
+      N: () => Hb,
+      R: () => Sb,
+      V: () => Zb,
+      b: () => Xb,
+      f: () => Lb,
+      i: () => Ub,
+      l: () => pb,
+      m: () => wb,
+      o: () => ab,
+      r: () => Gb,
+      v: () => Ob,
+      z: () => Wb
     });
-    var Yq = gq(4701);
-    const lq = 2e3,
-      Oq = 2e4;
+    var Bb = hb(4637);
+    const Ob = 2e3,
+      Gb = 2e4;
 
-    function mq(qq) {
-      return qq.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function Ub(bb) {
+      return bb.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function xq(qq) {
-      return qq.replace(/\$/g, "\\$")
+    function Lb(bb) {
+      return bb.replace(/\$/g, "\\$")
     }
-    const Aq = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const Yb = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function cq(qq, Eq) {
-      Aq.lastIndex = Eq;
-      const gq = Aq.exec(qq);
-      return gq.index + gq[0].length
-    }
-
-    function uq(qq) {
-      return (0, Yq.x)(qq, /\s+/g, (0, Yq.s)(".!?")).flatMap((qq => qq.split("\n")))
+    function Sb(bb, ub) {
+      Yb.lastIndex = ub;
+      const hb = Yb.exec(bb);
+      return hb.index + hb[0].length
     }
 
-    function Bq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Eq;
-      const Yq = [...qq.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((qq => qq.index)),
-        lq = Yq.filter((qq => qq < Eq)),
-        Oq = Yq.find((qq => qq >= gq));
-      return [0 === lq.length ? 0 : lq.at(-1) + 1, void 0 === Oq ? qq.length : Oq + 1]
+    function ab(bb) {
+      return (0, Bb.z)(bb, /\s+/g, (0, Bb.r)(".!?")).flatMap((bb => bb.split("\n")))
     }
 
-    function Wq(qq, Eq) {
-      const gq = qq.charCodeAt(Eq - 1);
-      return qq.slice(0, Eq > 0 && Eq < qq.length && gq >= 55296 && gq <= 56319 ? Eq - 1 : Eq)
+    function Hb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ub;
+      const Bb = [...bb.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((bb => bb.index)),
+        Ob = Bb.filter((bb => bb < ub)),
+        Gb = Bb.find((bb => bb >= hb));
+      return [0 === Ob.length ? 0 : Ob.at(-1) + 1, void 0 === Gb ? bb.length : Gb + 1]
     }
 
-    function Nq(qq, Eq) {
-      return `${Eq}${qq.replace(/\\/g,"\\\\").split(Eq).join(`\\${Eq}`)}${Eq}`
+    function wb(bb, ub) {
+      const hb = bb.charCodeAt(ub - 1);
+      return bb.slice(0, ub > 0 && ub < bb.length && hb >= 55296 && hb <= 56319 ? ub - 1 : ub)
     }
 
-    function aq(qq) {
-      return qq.charAt(0).toUpperCase() + qq.slice(1)
+    function Zb(bb, ub) {
+      return `${ub}${bb.replace(/\\/g,"\\\\").split(ub).join(`\\${ub}`)}${ub}`
     }
 
-    function Vq(qq) {
-      return Math.round(qq).toLocaleString("en-US")
+    function Xb(bb) {
+      return bb.charAt(0).toUpperCase() + bb.slice(1)
     }
 
-    function dq(qq) {
-      return qq.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((qq => "" !== qq))
-    }
-    const jq = 3;
-
-    function Hq(qq, Eq) {
-      return dq(qq).filter((qq => qq.length >= jq && !/\d/.test(qq))).map((qq => `${qq} ${Eq}`))
+    function pb(bb) {
+      return Math.round(bb).toLocaleString("en-US")
     }
 
-    function oq(qq) {
-      return qq.split(/[\s:_]+/).filter((qq => "" !== qq)).map(mq).join("[`:_\\s]+")
+    function ob(bb) {
+      return bb.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((bb => "" !== bb))
+    }
+    const Ab = 3;
+
+    function lb(bb, ub) {
+      return ob(bb).filter((bb => bb.length >= Ab && !/\d/.test(bb))).map((bb => `${bb} ${ub}`))
     }
 
-    function Pq(qq) {
-      return dq(qq.split(".").pop())
+    function Kb(bb) {
+      return bb.split(/[\s:_]+/).filter((bb => "" !== bb)).map(Ub).join("[`:_\\s]+")
     }
 
-    function Qq(qq) {
-      return qq.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function Wb(bb) {
+      return ob(bb.split(".").pop())
     }
 
-    function yq(qq) {
-      let Eq = null;
+    function Cb(bb) {
+      return bb.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function db(bb) {
+      let ub = null;
       return () => {
-        const gq = Eq ??= qq();
-        return gq.catch((() => {
-          Eq === gq && (Eq = null)
-        })), gq
+        const hb = ub ??= bb();
+        return hb.catch((() => {
+          ub === hb && (ub = null)
+        })), hb
       }
     }
   },
-  4701: (qq, Eq, gq) => {
-    function Yq(qq) {
+  4637: (bb, ub, hb) => {
+    function Bb(bb) {
       return {
-        notAfter: qq
+        notAfter: bb
       }
     }
-    gq.d(Eq, {
-      b: () => Aq,
-      d: () => cq,
-      f: () => xq,
-      i: () => Yq,
-      l: () => lq,
-      p: () => Oq,
-      s: () => mq,
-      t: () => uq,
-      x: () => Bq
+    hb.d(ub, {
+      b: () => Yb,
+      f: () => Sb,
+      i: () => Lb,
+      j: () => Bb,
+      m: () => Ob,
+      p: () => Gb,
+      r: () => Ub,
+      v: () => ab,
+      z: () => Hb
     });
-    const lq = Yq("\\w$."),
-      Oq = Yq("\\w.,");
+    const Ob = Bb("\\w$."),
+      Gb = Bb("\\w.,");
 
-    function mq(qq) {
-      return Eq => Aq(Eq, qq)
+    function Ub(bb) {
+      return ub => Yb(ub, bb)
     }
 
-    function xq(qq) {
-      return Eq => !qq.test(Eq.input.slice(0, Eq.index))
+    function Lb(bb) {
+      return ub => !bb.test(ub.input.slice(0, ub.index))
     }
 
-    function Aq(qq, Eq) {
-      return qq.index > 0 && new RegExp(`[${Eq}]`).test(qq.input[qq.index - 1])
+    function Yb(bb, ub) {
+      return bb.index > 0 && new RegExp(`[${ub}]`).test(bb.input[bb.index - 1])
     }
 
-    function cq(qq, Eq, gq) {
-      return function(qq) {
-        return void 0 !== qq && "function" !== typeof qq
-      }(gq) ? function(qq, Eq, gq) {
-        const Yq = Eq.flags.replace(/[gy]/g, ""),
-          lq = new RegExp(`[^${gq}](?:${Eq.source})`, `${Yq}g`),
-          Oq = [],
-          mq = gq => {
-            const Yq = gq.index + gq[0].length;
-            return ("" === gq[0] ? Wq(qq, Eq, Yq) : Yq) - 1
+    function Sb(bb, ub, hb) {
+      return function(bb) {
+        return void 0 !== bb && "function" !== typeof bb
+      }(hb) ? function(bb, ub, hb) {
+        const Bb = ub.flags.replace(/[gy]/g, ""),
+          Ob = new RegExp(`[^${hb}](?:${ub.source})`, `${Bb}g`),
+          Gb = [],
+          Ub = hb => {
+            const Bb = hb.index + hb[0].length;
+            return ("" === hb[0] ? wb(bb, ub, Bb) : Bb) - 1
           },
-          xq = new RegExp(`(?:${Eq.source})`, `${Yq}y`).exec(qq);
-        if (xq) {
-          if (Oq.push(xq), !Eq.global) return Oq;
-          lq.lastIndex = mq(xq)
+          Lb = new RegExp(`(?:${ub.source})`, `${Bb}y`).exec(bb);
+        if (Lb) {
+          if (Gb.push(Lb), !ub.global) return Gb;
+          Ob.lastIndex = Ub(Lb)
         }
-        for (let Aq = lq.exec(qq); Aq; Aq = lq.exec(qq)) {
-          const gq = Wq(qq, Eq, Aq.index) - Aq.index;
-          if (Aq[0] = Aq[0].slice(gq), Aq.index += gq, Oq.push(Aq), !Eq.global) break;
-          lq.lastIndex = mq(Aq)
+        for (let Yb = Ob.exec(bb); Yb; Yb = Ob.exec(bb)) {
+          const hb = wb(bb, ub, Yb.index) - Yb.index;
+          if (Yb[0] = Yb[0].slice(hb), Yb.index += hb, Gb.push(Yb), !ub.global) break;
+          Ob.lastIndex = Ub(Yb)
         }
-        return Oq
-      }(qq, Eq, gq.notAfter) : function(qq, Eq, gq) {
-        const Yq = new RegExp(Eq.source, `${Eq.flags.replace(/[gy]/g,"")}g`),
-          lq = [];
-        for (let Oq = Yq.exec(qq); Oq; Oq = Yq.exec(qq))
-          if (!gq || gq(Oq)) {
-            if (lq.push(Oq), !Eq.global) break;
-            "" === Oq[0] && (Yq.lastIndex = Wq(qq, Eq, Yq.lastIndex))
-          } else Yq.lastIndex = Wq(qq, Eq, Oq.index);
-        return lq
-      }(qq, Eq, gq)
+        return Gb
+      }(bb, ub, hb.notAfter) : function(bb, ub, hb) {
+        const Bb = new RegExp(ub.source, `${ub.flags.replace(/[gy]/g,"")}g`),
+          Ob = [];
+        for (let Gb = Bb.exec(bb); Gb; Gb = Bb.exec(bb))
+          if (!hb || hb(Gb)) {
+            if (Ob.push(Gb), !ub.global) break;
+            "" === Gb[0] && (Bb.lastIndex = wb(bb, ub, Bb.lastIndex))
+          } else Bb.lastIndex = wb(bb, ub, Gb.index);
+        return Ob
+      }(bb, ub, hb)
     }
 
-    function uq(qq, Eq, gq, Yq) {
-      let lq = "",
-        Oq = 0;
-      for (const mq of cq(qq, Eq, gq)) lq += qq.slice(Oq, mq.index) + Yq(mq), Oq = mq.index + mq[0].length;
-      return lq + qq.slice(Oq)
+    function ab(bb, ub, hb, Bb) {
+      let Ob = "",
+        Gb = 0;
+      for (const Ub of Sb(bb, ub, hb)) Ob += bb.slice(Gb, Ub.index) + Bb(Ub), Gb = Ub.index + Ub[0].length;
+      return Ob + bb.slice(Gb)
     }
 
-    function Bq(qq, Eq, gq) {
-      const Yq = [];
-      let lq = 0;
-      for (const Oq of cq(qq, Eq, gq)) Yq.push(qq.slice(lq, Oq.index)), lq = Oq.index + Oq[0].length;
-      return [...Yq, qq.slice(lq)]
+    function Hb(bb, ub, hb) {
+      const Bb = [];
+      let Ob = 0;
+      for (const Gb of Sb(bb, ub, hb)) Bb.push(bb.slice(Ob, Gb.index)), Ob = Gb.index + Gb[0].length;
+      return [...Bb, bb.slice(Ob)]
     }
 
-    function Wq(qq, Eq, gq) {
-      var Yq;
-      return gq + (Eq.unicode && (null !== (Yq = qq.codePointAt(gq)) && void 0 !== Yq ? Yq : 0) > 65535 ? 2 : 1)
+    function wb(bb, ub, hb) {
+      var Bb;
+      return hb + (ub.unicode && (null !== (Bb = bb.codePointAt(hb)) && void 0 !== Bb ? Bb : 0) > 65535 ? 2 : 1)
     }
   },
-  6366: () => {}
+  6227: () => {}
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

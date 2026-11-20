@@ -1,757 +1,757 @@
 export const id = 132;
 export const ids = [132];
 export const modules = {
-  6496: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      loadPageShaderPackCompiler: () => WE
+  6350: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      loadPageShaderPackCompiler: () => wu
     });
-    var Yq = {};
-    gq.r(Yq), gq.d(Yq, {
-      rlq: () => lq,
-      tqq: () => Oq,
-      default: () => Fq,
-      vlq: () => mq,
-      hlq: () => xq,
-      initSync: () => Uq,
-      Cu: () => Aq,
-      aYq: () => cq,
-      nlq: () => uq,
-      blq: () => Bq,
-      vJ: () => Wq,
-      ilq: () => Nq,
-      yJ: () => aq,
-      Zlq: () => Vq
+    var Bb = {};
+    hb.r(Bb), hb.d(Bb, {
+      HOb: () => Ob,
+      k_: () => Gb,
+      default: () => yb,
+      wOb: () => Ub,
+      ZOb: () => Lb,
+      initSync: () => Eb,
+      ya: () => Yb,
+      Rhb: () => Sb,
+      XOb: () => ab,
+      pOb: () => Hb,
+      QJ: () => wb,
+      oOb: () => Zb,
+      VJ: () => Xb,
+      AOb: () => pb
     });
-    class lq {
-      static __wrap(qq) {
-        const Eq = Object.create(lq.prototype);
-        return Eq.__wbg_ptr = qq, jq.register(Eq, Eq.__wbg_ptr, Eq), Eq
+    class Ob {
+      static __wrap(bb) {
+        const ub = Object.create(Ob.prototype);
+        return ub.__wbg_ptr = bb, Ab.register(ub, ub.__wbg_ptr, ub), ub
       }
       __destroy_into_raw() {
-        const qq = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, jq.unregister(this), qq
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, Ab.unregister(this), bb
       }
       free() {
-        const qq = this.__destroy_into_raw();
-        Jq.mpnV(qq, 0)
+        const bb = this.__destroy_into_raw();
+        Ib.r8eJ(bb, 0)
       }
       get errorsJson() {
-        let qq, Eq;
+        let bb, ub;
         try {
-          const gq = Jq.Un78(this.__wbg_ptr);
-          return qq = gq[0], Eq = gq[1], tq(gq[0], gq[1])
+          const hb = Ib.Moqq(this.__wbg_ptr);
+          return bb = hb[0], ub = hb[1], rb(hb[0], hb[1])
         } finally {
-          Jq.HLoe(qq, Eq, 1)
+          Ib.MFNl(bb, ub, 1)
         }
       }
       get features() {
-        const qq = Jq.lkVE(this.__wbg_ptr);
-        var Eq = oq(qq[0], qq[1]);
-        return Jq.HLoe(qq[0], 4 * qq[1], 4), Eq
+        const bb = Ib.Et5J(this.__wbg_ptr);
+        var ub = Kb(bb[0], bb[1]);
+        return Ib.MFNl(bb[0], 4 * bb[1], 4), ub
       }
       get hooks() {
-        const qq = Jq.Zjru(this.__wbg_ptr);
-        var Eq = Pq(qq[0], qq[1]).slice();
-        return Jq.HLoe(qq[0], 1 * qq[1], 1), Eq
+        const bb = Ib.gxts(this.__wbg_ptr);
+        var ub = Wb(bb[0], bb[1]).slice();
+        return Ib.MFNl(bb[0], 1 * bb[1], 1), ub
       }
-      mapValidationMessage(qq, Eq, gq, Yq, lq) {
-        let Oq, mq;
+      mapValidationMessage(bb, ub, hb, Bb, Ob) {
+        let Gb, Ub;
         try {
-          const cq = Jq.CJsj(this.__wbg_ptr, qq, Eq, gq, Hq(Yq), Hq(lq));
-          var xq = cq[0],
-            Aq = cq[1];
-          if (cq[3]) throw xq = 0, Aq = 0, Mq(cq[2]);
-          return Oq = xq, mq = Aq, tq(xq, Aq)
+          const Sb = Ib.dP1A(this.__wbg_ptr, bb, ub, hb, lb(Bb), lb(Ob));
+          var Lb = Sb[0],
+            Yb = Sb[1];
+          if (Sb[3]) throw Lb = 0, Yb = 0, tb(Sb[2]);
+          return Gb = Lb, Ub = Yb, rb(Lb, Yb)
         } finally {
-          Jq.HLoe(Oq, mq, 1)
+          Ib.MFNl(Gb, Ub, 1)
         }
       }
       get moduleCodes() {
-        const qq = Jq.bI5u(this.__wbg_ptr);
-        var Eq = oq(qq[0], qq[1]);
-        return Jq.HLoe(qq[0], 4 * qq[1], 4), Eq
+        const bb = Ib.DnFv(this.__wbg_ptr);
+        var ub = Kb(bb[0], bb[1]);
+        return Ib.MFNl(bb[0], 4 * bb[1], 4), ub
       }
       get offInStrictJson() {
-        let qq, Eq;
+        let bb, ub;
         try {
-          const gq = Jq.AP2v(this.__wbg_ptr);
-          return qq = gq[0], Eq = gq[1], tq(gq[0], gq[1])
+          const hb = Ib.Hgwj(this.__wbg_ptr);
+          return bb = hb[0], ub = hb[1], rb(hb[0], hb[1])
         } finally {
-          Jq.HLoe(qq, Eq, 1)
+          Ib.MFNl(bb, ub, 1)
         }
       }
       get reads() {
-        const qq = Jq.KG2d(this.__wbg_ptr);
-        var Eq = oq(qq[0], qq[1]);
-        return Jq.HLoe(qq[0], 4 * qq[1], 4), Eq
+        const bb = Ib.i4Ah(this.__wbg_ptr);
+        var ub = Kb(bb[0], bb[1]);
+        return Ib.MFNl(bb[0], 4 * bb[1], 4), ub
       }
       get validationModuleCodes() {
-        const qq = Jq.mSlF(this.__wbg_ptr);
-        var Eq = oq(qq[0], qq[1]);
-        return Jq.HLoe(qq[0], 4 * qq[1], 4), Eq
+        const bb = Ib.tgAn(this.__wbg_ptr);
+        var ub = Kb(bb[0], bb[1]);
+        return Ib.MFNl(bb[0], 4 * bb[1], 4), ub
       }
       get validationModuleKeys() {
-        const qq = Jq.EfPO(this.__wbg_ptr);
-        var Eq = Pq(qq[0], qq[1]).slice();
-        return Jq.HLoe(qq[0], 1 * qq[1], 1), Eq
+        const bb = Ib.cHQw(this.__wbg_ptr);
+        var ub = Wb(bb[0], bb[1]).slice();
+        return Ib.MFNl(bb[0], 1 * bb[1], 1), ub
       }
       get variantFlags() {
-        const qq = Jq.ySwX(this.__wbg_ptr);
-        var Eq = Pq(qq[0], qq[1]).slice();
-        return Jq.HLoe(qq[0], 1 * qq[1], 1), Eq
+        const bb = Ib.Wlli(this.__wbg_ptr);
+        var ub = Wb(bb[0], bb[1]).slice();
+        return Ib.MFNl(bb[0], 1 * bb[1], 1), ub
       }
     }
 
-    function Oq(qq, Eq, gq, Yq, Oq, mq, xq) {
-      const Aq = fq(qq, Jq.QPs9),
-        cq = kq,
-        uq = fq(Eq, Jq.QPs9),
-        Bq = kq,
-        Wq = fq(gq, Jq.QPs9),
-        Nq = kq,
-        aq = Zq(Yq, Jq.QPs9),
-        Vq = kq,
-        dq = fq(Oq, Jq.QPs9),
-        jq = kq,
-        Hq = fq(mq, Jq.QPs9),
-        oq = kq,
-        Pq = fq(xq, Jq.QPs9),
-        Qq = kq,
-        yq = Jq.t5es(Aq, cq, uq, Bq, Wq, Nq, aq, Vq, dq, jq, Hq, oq, Pq, Qq);
-      if (yq[2]) throw Mq(yq[1]);
-      return lq.__wrap(yq[0])
+    function Gb(bb, ub, hb, Bb, Gb, Ub, Lb) {
+      const Yb = vb(bb, Ib.Tzo2),
+        Sb = Pb,
+        ab = vb(ub, Ib.Tzo2),
+        Hb = Pb,
+        wb = vb(hb, Ib.Tzo2),
+        Zb = Pb,
+        Xb = ib(Bb, Ib.Tzo2),
+        pb = Pb,
+        ob = vb(Gb, Ib.Tzo2),
+        Ab = Pb,
+        lb = vb(Ub, Ib.Tzo2),
+        Kb = Pb,
+        Wb = vb(Lb, Ib.Tzo2),
+        Cb = Pb,
+        db = Ib.Jxov(Yb, Sb, ab, Hb, wb, Zb, Xb, pb, ob, Ab, lb, Kb, Wb, Cb);
+      if (db[2]) throw tb(db[1]);
+      return Ob.__wrap(db[0])
     }
 
-    function mq() {
-      const qq = Jq.xyN8();
-      var Eq = oq(qq[0], qq[1]);
-      return Jq.HLoe(qq[0], 4 * qq[1], 4), Eq
+    function Ub() {
+      const bb = Ib.Oj3k();
+      var ub = Kb(bb[0], bb[1]);
+      return Ib.MFNl(bb[0], 4 * bb[1], 4), ub
     }
 
-    function xq() {
-      const qq = Jq.FQZs();
-      var Eq = oq(qq[0], qq[1]);
-      return Jq.HLoe(qq[0], 4 * qq[1], 4), Eq
+    function Lb() {
+      const bb = Ib.ggfP();
+      var ub = Kb(bb[0], bb[1]);
+      return Ib.MFNl(bb[0], 4 * bb[1], 4), ub
     }
 
-    function Aq() {
-      Jq.GItG()
+    function Yb() {
+      Ib.my6Y()
     }
 
-    function cq(qq, Eq, gq, Yq, lq) {
-      let Oq, mq;
+    function Sb(bb, ub, hb, Bb, Ob) {
+      let Gb, Ub;
       try {
-        const cq = fq(qq, Jq.QPs9),
-          uq = kq,
-          Bq = Zq(Eq, Jq.QPs9),
-          Wq = kq,
-          Nq = fq(gq, Jq.QPs9),
-          aq = kq,
-          Vq = Zq(Yq, Jq.QPs9),
-          dq = kq,
-          jq = function(qq, Eq) {
-            const gq = Eq(1 * qq.length, 1) >>> 0;
-            return hq().set(qq, gq / 1), kq = qq.length, gq
-          }(lq, Jq.QPs9),
-          Hq = kq,
-          oq = Jq.mIvI(cq, uq, Bq, Wq, Nq, aq, Vq, dq, jq, Hq);
-        var xq = oq[0],
-          Aq = oq[1];
-        if (oq[3]) throw xq = 0, Aq = 0, Mq(oq[2]);
-        return Oq = xq, mq = Aq, tq(xq, Aq)
+        const Sb = vb(bb, Ib.Tzo2),
+          ab = Pb,
+          Hb = ib(ub, Ib.Tzo2),
+          wb = Pb,
+          Zb = vb(hb, Ib.Tzo2),
+          Xb = Pb,
+          pb = ib(Bb, Ib.Tzo2),
+          ob = Pb,
+          Ab = function(bb, ub) {
+            const hb = ub(1 * bb.length, 1) >>> 0;
+            return Db().set(bb, hb / 1), Pb = bb.length, hb
+          }(Ob, Ib.Tzo2),
+          lb = Pb,
+          Kb = Ib.nCv3(Sb, ab, Hb, wb, Zb, Xb, pb, ob, Ab, lb);
+        var Lb = Kb[0],
+          Yb = Kb[1];
+        if (Kb[3]) throw Lb = 0, Yb = 0, tb(Kb[2]);
+        return Gb = Lb, Ub = Yb, rb(Lb, Yb)
       } finally {
-        Jq.HLoe(Oq, mq, 1)
+        Ib.MFNl(Gb, Ub, 1)
       }
     }
 
-    function uq() {
-      let qq, Eq;
+    function ab() {
+      let bb, ub;
       try {
-        const gq = Jq.N1CF();
-        return qq = gq[0], Eq = gq[1], tq(gq[0], gq[1])
+        const hb = Ib.qF0Z();
+        return bb = hb[0], ub = hb[1], rb(hb[0], hb[1])
       } finally {
-        Jq.HLoe(qq, Eq, 1)
+        Ib.MFNl(bb, ub, 1)
       }
     }
 
-    function Bq(qq) {
-      let Eq, gq;
+    function Hb(bb) {
+      let ub, hb;
       try {
-        const Oq = Jq.RnxY(qq);
-        var Yq = Oq[0],
-          lq = Oq[1];
-        if (Oq[3]) throw Yq = 0, lq = 0, Mq(Oq[2]);
-        return Eq = Yq, gq = lq, tq(Yq, lq)
+        const Gb = Ib.fxtu(bb);
+        var Bb = Gb[0],
+          Ob = Gb[1];
+        if (Gb[3]) throw Bb = 0, Ob = 0, tb(Gb[2]);
+        return ub = Bb, hb = Ob, rb(Bb, Ob)
       } finally {
-        Jq.HLoe(Eq, gq, 1)
+        Ib.MFNl(ub, hb, 1)
       }
     }
 
-    function Wq() {
-      return Jq.yE0z() >>> 0
+    function wb() {
+      return Ib.zhoQ() >>> 0
     }
 
-    function Nq() {
-      let qq, Eq;
+    function Zb() {
+      let bb, ub;
       try {
-        const gq = Jq.AUTO();
-        return qq = gq[0], Eq = gq[1], tq(gq[0], gq[1])
+        const hb = Ib.P6xR();
+        return bb = hb[0], ub = hb[1], rb(hb[0], hb[1])
       } finally {
-        Jq.HLoe(qq, Eq, 1)
+        Ib.MFNl(bb, ub, 1)
       }
     }
 
-    function aq(qq, Eq) {
-      let gq, Yq;
+    function Xb(bb, ub) {
+      let hb, Bb;
       try {
-        const mq = fq(qq, Jq.QPs9),
-          xq = kq,
-          Aq = Zq(Eq, Jq.QPs9),
-          cq = kq,
-          uq = Jq.YIMe(mq, xq, Aq, cq);
-        var lq = uq[0],
-          Oq = uq[1];
-        if (uq[3]) throw lq = 0, Oq = 0, Mq(uq[2]);
-        return gq = lq, Yq = Oq, tq(lq, Oq)
+        const Ub = vb(bb, Ib.Tzo2),
+          Lb = Pb,
+          Yb = ib(ub, Ib.Tzo2),
+          Sb = Pb,
+          ab = Ib.WFEJ(Ub, Lb, Yb, Sb);
+        var Ob = ab[0],
+          Gb = ab[1];
+        if (ab[3]) throw Ob = 0, Gb = 0, tb(ab[2]);
+        return hb = Ob, Bb = Gb, rb(Ob, Gb)
       } finally {
-        Jq.HLoe(gq, Yq, 1)
+        Ib.MFNl(hb, Bb, 1)
       }
     }
 
-    function Vq(qq) {
-      let Eq, gq;
+    function pb(bb) {
+      let ub, hb;
       try {
-        const Oq = Jq.LPWj(Hq(qq));
-        var Yq = Oq[0],
-          lq = Oq[1];
-        if (Oq[3]) throw Yq = 0, lq = 0, Mq(Oq[2]);
-        return Eq = Yq, gq = lq, tq(Yq, lq)
+        const Gb = Ib.lwOy(lb(bb));
+        var Bb = Gb[0],
+          Ob = Gb[1];
+        if (Gb[3]) throw Bb = 0, Ob = 0, tb(Gb[2]);
+        return ub = Bb, hb = Ob, rb(Bb, Ob)
       } finally {
-        Jq.HLoe(Eq, gq, 1)
+        Ib.MFNl(ub, hb, 1)
       }
     }
 
-    function dq() {
+    function ob() {
       return {
         __proto__: null,
-        kCZL: {
+        Dhd5: {
           __proto__: null,
-          dFih: function(qq, Eq) {
-            return Hq(Error(tq(qq, Eq)))
+          Ru0G: function(bb, ub) {
+            return lb(Error(rb(bb, ub)))
           },
-          YKNr: function(qq) {
-            return null === nq(qq)
+          Qjq2: function(bb) {
+            return null === xb(bb)
           },
-          zU3V: function(qq) {
-            return "string" === typeof nq(qq)
+          jQQR: function(bb) {
+            return "string" === typeof xb(bb)
           },
-          voR9: function(qq, Eq) {
-            const gq = nq(Eq),
-              Yq = "string" === typeof gq ? gq : void 0;
-            var lq, Oq = void 0 === (lq = Yq) || null === lq ? 0 : function(qq, Eq, gq) {
-                if (void 0 === gq) {
-                  const gq = pq.encode(qq),
-                    Yq = Eq(gq.length, 1) >>> 0;
-                  return hq().subarray(Yq, Yq + gq.length).set(gq), kq = gq.length, Yq
+          iuoe: function(bb, ub) {
+            const hb = xb(ub),
+              Bb = "string" === typeof hb ? hb : void 0;
+            var Ob, Gb = void 0 === (Ob = Bb) || null === Ob ? 0 : function(bb, ub, hb) {
+                if (void 0 === hb) {
+                  const hb = sb.encode(bb),
+                    Bb = ub(hb.length, 1) >>> 0;
+                  return Db().subarray(Bb, Bb + hb.length).set(hb), Pb = hb.length, Bb
                 }
-                let Yq = qq.length,
-                  lq = Eq(Yq, 1) >>> 0;
-                const Oq = hq();
-                let mq = 0;
-                for (; mq < Yq; mq++) {
-                  const Eq = qq.charCodeAt(mq);
-                  if (Eq > 127) break;
-                  Oq[lq + mq] = Eq
+                let Bb = bb.length,
+                  Ob = ub(Bb, 1) >>> 0;
+                const Gb = Db();
+                let Ub = 0;
+                for (; Ub < Bb; Ub++) {
+                  const ub = bb.charCodeAt(Ub);
+                  if (ub > 127) break;
+                  Gb[Ob + Ub] = ub
                 }
-                if (mq !== Yq) {
-                  0 !== mq && (qq = qq.slice(mq)), lq = gq(lq, Yq, Yq = mq + 3 * qq.length, 1) >>> 0;
-                  const Eq = hq().subarray(lq + mq, lq + Yq);
-                  mq += pq.encodeInto(qq, Eq).written, lq = gq(lq, Yq, mq, 1) >>> 0
+                if (Ub !== Bb) {
+                  0 !== Ub && (bb = bb.slice(Ub)), Ob = hb(Ob, Bb, Bb = Ub + 3 * bb.length, 1) >>> 0;
+                  const ub = Db().subarray(Ob + Ub, Ob + Bb);
+                  Ub += sb.encodeInto(bb, ub).written, Ob = hb(Ob, Bb, Ub, 1) >>> 0
                 }
-                return kq = mq, lq
-              }(Yq, Jq.QPs9, Jq.CIkR),
-              mq = kq;
-            yq().setInt32(qq + 4, mq, !0), yq().setInt32(qq + 0, Oq, !0)
+                return Pb = Ub, Ob
+              }(Bb, Ib.Tzo2, Ib.rwCv),
+              Ub = Pb;
+            db().setInt32(bb + 4, Ub, !0), db().setInt32(bb + 0, Gb, !0)
           },
-          EBho: function(qq, Eq) {
-            throw new Error(tq(qq, Eq))
+          HETD: function(bb, ub) {
+            throw new Error(rb(bb, ub))
           },
-          iYbJ: function(qq, Eq) {
-            return nq(qq).charCodeAt(Eq >>> 0)
+          IR8G: function(bb, ub) {
+            return xb(bb).charCodeAt(ub >>> 0)
           },
-          RHb0: function(qq, Eq) {
-            console.error(tq(qq, Eq))
+          zX6N: function(bb, ub) {
+            console.error(rb(bb, ub))
           },
-          ArrS: function(qq) {
-            return nq(qq).length
+          mwaK: function(bb) {
+            return xb(bb).length
           },
-          EteA: function(qq, Eq) {
-            return Hq(tq(qq, Eq))
+          gO8m: function(bb, ub) {
+            return lb(rb(bb, ub))
           },
-          FD1m: function(qq) {
-            Mq(qq)
+          oVe8: function(bb) {
+            tb(bb)
           }
         }
       }
     }
-    Symbol.dispose && (lq.prototype[Symbol.dispose] = lq.prototype.free);
-    const jq = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (Ob.prototype[Symbol.dispose] = Ob.prototype.free);
+    const Ab = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((qq => Jq.mpnV(qq, 1)));
+    } : new FinalizationRegistry((bb => Ib.r8eJ(bb, 1)));
 
-    function Hq(qq) {
-      iq === bq.length && bq.push(bq.length + 1);
-      const Eq = iq;
-      return iq = bq[Eq], bq[Eq] = qq, Eq
+    function lb(bb) {
+      gb === zb.length && zb.push(zb.length + 1);
+      const ub = gb;
+      return gb = zb[ub], zb[ub] = bb, ub
     }
 
-    function oq(qq, Eq) {
-      qq >>>= 0;
-      const gq = yq(),
-        Yq = [];
-      for (let lq = qq; lq < qq + 4 * Eq; lq += 4) Yq.push(Mq(gq.getUint32(lq, !0)));
-      return Yq
+    function Kb(bb, ub) {
+      bb >>>= 0;
+      const hb = db(),
+        Bb = [];
+      for (let Ob = bb; Ob < bb + 4 * ub; Ob += 4) Bb.push(tb(hb.getUint32(Ob, !0)));
+      return Bb
     }
 
-    function Pq(qq, Eq) {
-      return qq >>>= 0, hq().subarray(qq / 1, qq / 1 + Eq)
+    function Wb(bb, ub) {
+      return bb >>>= 0, Db().subarray(bb / 1, bb / 1 + ub)
     }
-    let Qq = null;
+    let Cb = null;
 
-    function yq() {
-      return (null === Qq || !0 === Qq.buffer.detached || void 0 === Qq.buffer.detached && Qq.buffer !== Jq.memory.buffer) && (Qq = new DataView(Jq.memory.buffer)), Qq
+    function db() {
+      return (null === Cb || !0 === Cb.buffer.detached || void 0 === Cb.buffer.detached && Cb.buffer !== Ib.memory.buffer) && (Cb = new DataView(Ib.memory.buffer)), Cb
     }
 
-    function tq(qq, Eq) {
-      return function(qq, Eq) {
-        Sq += Eq, Sq >= zq && (Tq = new TextDecoder("utf-8", {
+    function rb(bb, ub) {
+      return function(bb, ub) {
+        Nb += ub, Nb >= eb && (Jb = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), Tq.decode(), Sq = Eq);
-        return Tq.decode(hq().subarray(qq, qq + Eq))
-      }(qq >>> 0, Eq)
+        }), Jb.decode(), Nb = ub);
+        return Jb.decode(Db().subarray(bb, bb + ub))
+      }(bb >>> 0, ub)
     }
-    let rq = null;
-    let vq = null;
+    let jb = null;
+    let nb = null;
 
-    function hq() {
-      return null !== vq && 0 !== vq.byteLength || (vq = new Uint8Array(Jq.memory.buffer)), vq
-    }
-
-    function nq(qq) {
-      return bq[qq]
-    }
-    let bq = new Array(1024).fill(void 0);
-    bq.push(void 0, null, !0, !1);
-    let iq = bq.length;
-
-    function Zq(qq, Eq) {
-      const gq = Eq(4 * qq.length, 4) >>> 0;
-      return (null !== rq && 0 !== rq.byteLength || (rq = new Uint32Array(Jq.memory.buffer)), rq).set(qq, gq / 4), kq = qq.length, gq
+    function Db() {
+      return null !== nb && 0 !== nb.byteLength || (nb = new Uint8Array(Ib.memory.buffer)), nb
     }
 
-    function fq(qq, Eq) {
-      const gq = Eq(4 * qq.length, 4) >>> 0,
-        Yq = yq();
-      for (let lq = 0; lq < qq.length; lq++) Yq.setUint32(gq + 4 * lq, Hq(qq[lq]), !0);
-      return kq = qq.length, gq
+    function xb(bb) {
+      return zb[bb]
+    }
+    let zb = new Array(1024).fill(void 0);
+    zb.push(void 0, null, !0, !1);
+    let gb = zb.length;
+
+    function ib(bb, ub) {
+      const hb = ub(4 * bb.length, 4) >>> 0;
+      return (null !== jb && 0 !== jb.byteLength || (jb = new Uint32Array(Ib.memory.buffer)), jb).set(bb, hb / 4), Pb = bb.length, hb
     }
 
-    function Mq(qq) {
-      const Eq = nq(qq);
-      return function(qq) {
-        qq < 1028 || (bq[qq] = iq, iq = qq)
-      }(qq), Eq
+    function vb(bb, ub) {
+      const hb = ub(4 * bb.length, 4) >>> 0,
+        Bb = db();
+      for (let Ob = 0; Ob < bb.length; Ob++) Bb.setUint32(hb + 4 * Ob, lb(bb[Ob]), !0);
+      return Pb = bb.length, hb
     }
-    let Tq = new TextDecoder("utf-8", {
+
+    function tb(bb) {
+      const ub = xb(bb);
+      return function(bb) {
+        bb < 1028 || (zb[bb] = gb, gb = bb)
+      }(bb), ub
+    }
+    let Jb = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    Tq.decode();
-    const zq = 2146435072;
-    let Sq = 0;
-    const pq = new TextEncoder;
-    "encodeInto" in pq || (pq.encodeInto = function(qq, Eq) {
-      const gq = pq.encode(qq);
-      return Eq.set(gq), {
-        read: qq.length,
-        written: gq.length
+    Jb.decode();
+    const eb = 2146435072;
+    let Nb = 0;
+    const sb = new TextEncoder;
+    "encodeInto" in sb || (sb.encodeInto = function(bb, ub) {
+      const hb = sb.encode(bb);
+      return ub.set(hb), {
+        read: bb.length,
+        written: hb.length
       }
     });
-    let Gq, Lq, Jq, kq = 0;
+    let Mb, mb, Ib, Pb = 0;
 
-    function Rq(qq, Eq) {
-      return Lq = qq, Jq = qq.exports, Gq = Eq, Qq = null, rq = null, vq = null, Jq.u0o2(), Jq
+    function qb(bb, ub) {
+      return mb = bb, Ib = bb.exports, Mb = ub, Cb = null, jb = null, nb = null, Ib.ZcZg(), Ib
     }
 
-    function Uq(qq) {
-      if (void 0 !== Jq) return Jq;
-      void 0 !== qq && (Object.getPrototypeOf(qq) === Object.prototype ? ({
-        module: qq
-      } = qq) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const Eq = dq();
-      qq instanceof WebAssembly.Module || (qq = new WebAssembly.Module(qq));
-      return Rq(new WebAssembly.Instance(qq, Eq), qq)
+    function Eb(bb) {
+      if (void 0 !== Ib) return Ib;
+      void 0 !== bb && (Object.getPrototypeOf(bb) === Object.prototype ? ({
+        module: bb
+      } = bb) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const ub = ob();
+      bb instanceof WebAssembly.Module || (bb = new WebAssembly.Module(bb));
+      return qb(new WebAssembly.Instance(bb, ub), bb)
     }
-    async function Fq(qq) {
-      if (void 0 !== Jq) return Jq;
-      void 0 !== qq && (Object.getPrototypeOf(qq) === Object.prototype ? ({
-        module_or_path: qq
-      } = qq) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const Eq = dq();
-      ("string" === typeof qq || "function" === typeof Request && qq instanceof Request || "function" === typeof URL && qq instanceof URL) && (qq = fetch(qq));
+    async function yb(bb) {
+      if (void 0 !== Ib) return Ib;
+      void 0 !== bb && (Object.getPrototypeOf(bb) === Object.prototype ? ({
+        module_or_path: bb
+      } = bb) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const ub = ob();
+      ("string" === typeof bb || "function" === typeof Request && bb instanceof Request || "function" === typeof URL && bb instanceof URL) && (bb = fetch(bb));
       const {
-        instance: gq,
-        module: Yq
-      } = await async function(qq, Eq) {
-        if ("function" === typeof Response && qq instanceof Response) {
-          if (!qq.ok) throw new Error(`failed to fetch Wasm: ${qq.status} ${qq.statusText} fetching '${qq.url}'`);
+        instance: hb,
+        module: Bb
+      } = await async function(bb, ub) {
+        if ("function" === typeof Response && bb instanceof Response) {
+          if (!bb.ok) throw new Error(`failed to fetch Wasm: ${bb.status} ${bb.statusText} fetching '${bb.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(qq, Eq)
-          } catch (gq) {
-            if (! function(qq) {
-                switch (qq) {
+            return await WebAssembly.instantiateStreaming(bb, ub)
+          } catch (hb) {
+            if (! function(bb) {
+                switch (bb) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(qq.type) || "application/wasm" === qq.headers.get("Content-Type")) throw gq;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", gq)
+              }(bb.type) || "application/wasm" === bb.headers.get("Content-Type")) throw hb;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", hb)
           }
-          const Yq = await qq.arrayBuffer();
-          return await WebAssembly.instantiate(Yq, Eq)
+          const Bb = await bb.arrayBuffer();
+          return await WebAssembly.instantiate(Bb, ub)
         } {
-          const gq = await WebAssembly.instantiate(qq, Eq);
-          return gq instanceof WebAssembly.Instance ? {
-            instance: gq,
-            module: qq
-          } : gq
+          const hb = await WebAssembly.instantiate(bb, ub);
+          return hb instanceof WebAssembly.Instance ? {
+            instance: hb,
+            module: bb
+          } : hb
         }
-      }(await qq, Eq);
-      return Rq(gq, Yq)
+      }(await bb, ub);
+      return qb(hb, Bb)
     }
-    var sq = gq(2805),
-      Xq = gq(6500);
-    class wq extends Error {
+    var Vb = hb(2688),
+      Fb = hb(6358);
+    class fb extends Error {
       stage;
-      constructor(qq, Eq) {
-        super((0, sq.M)(qq, Eq), {
-          cause: Eq
-        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = qq
+      constructor(bb, ub) {
+        super((0, Vb.A)(bb, ub), {
+          cause: ub
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = bb
       }
     }
-    let Kq = null,
-      Cq = null;
+    let kb = null,
+      Tb = null;
 
-    function Iq() {
-      return Kq ? Promise.resolve(Kq) : (Cq || (Cq = async function() {
-        let qq;
+    function cb() {
+      return kb ? Promise.resolve(kb) : (Tb || (Tb = async function() {
+        let bb;
         try {
-          qq = await (0, sq.N)(new gq.U(gq(6508)), (0, Xq.d)("bloxd_wasm_shader_pack"))
-        } catch (Eq) {
-          throw new wq((0, sq.R)(Eq), Eq)
+          bb = await (0, Vb.C)(new hb.U(hb(6363)), (0, Fb.d)("bloxd_wasm_shader_pack"))
+        } catch (ub) {
+          throw new fb((0, Vb.K)(ub), ub)
         }
         try {
-          await Fq({
-            module_or_path: qq
+          await yb({
+            module_or_path: bb
           })
-        } catch (Eq) {
-          throw new wq("instantiate", Eq)
+        } catch (ub) {
+          throw new fb("instantiate", ub)
         }
-        return Kq = Yq, Kq
-      }(), Cq.then(void 0, (() => {
-        Cq = null
-      }))), Cq)
+        return kb = Bb, kb
+      }(), Tb.then(void 0, (() => {
+        Tb = null
+      }))), Tb)
     }
-    var eq = gq(6517);
+    var Qb = hb(6367);
 
-    function Dq(qq) {
-      let [Eq, gq, Yq, lq] = qq;
-      const Oq = {
-        file: Eq,
-        line: gq,
-        message: Yq
+    function Rb(bb) {
+      let [ub, hb, Bb, Ob] = bb;
+      const Gb = {
+        file: ub,
+        line: hb,
+        message: Bb
       };
-      return lq && (Oq.variants = lq.map(eq.l)), Oq
+      return Ob && (Gb.variants = Ob.map(Qb.m)), Gb
     }
 
-    function qE(qq) {
-      return JSON.parse(qq).map(Dq)
+    function bu(bb) {
+      return JSON.parse(bb).map(Rb)
     }
 
-    function EE(qq, Eq) {
-      if (!Number.isInteger(qq) || qq < 0 || qq > 4294967295) throw new Error(`${Eq} ${qq} is not a whole number from 0 to 4294967295`);
-      return qq
+    function uu(bb, ub) {
+      if (!Number.isInteger(bb) || bb < 0 || bb > 4294967295) throw new Error(`${ub} ${bb} is not a whole number from 0 to 4294967295`);
+      return bb
     }
 
-    function gE(qq) {
-      return [qq.named.map((qq => qq.name)), Uint32Array.from(qq.named, (qq => EE(qq.id, "Texture ID")))]
+    function hu(bb) {
+      return [bb.named.map((bb => bb.name)), Uint32Array.from(bb.named, (bb => uu(bb.id, "Texture ID")))]
     }
-    const YE = new WeakMap;
-    const lE = new WeakMap,
-      OE = new WeakSet;
+    const Bu = new WeakMap;
+    const Ou = new WeakMap,
+      Gu = new WeakSet;
 
-    function mE(qq, Eq) {
-      if (OE.has(qq)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+    function Uu(bb, ub) {
+      if (Gu.has(bb)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
       try {
-        return Eq()
-      } catch (gq) {
-        throw gq instanceof WebAssembly.RuntimeError && OE.add(qq), gq
+        return ub()
+      } catch (hb) {
+        throw hb instanceof WebAssembly.RuntimeError && Gu.add(bb), hb
       }
     }
 
-    function xE(qq) {
-      let Eq = lE.get(qq);
-      if (!Eq) {
-        let gq, Yq;
-        Eq = {
-          tqq: (Eq, gq) => mE(qq, (() => function(qq, Eq, gq) {
-            const Yq = qq.tqq(Eq.map((qq => qq.path)), Eq.map((qq => qq.source)), ...gE(gq), gq.aliases.map((qq => qq.name)), gq.aliases.map((qq => qq.texture)), gq.aliases.map((qq => qq.kind)));
-            let lq = !1;
+    function Lu(bb) {
+      let ub = Ou.get(bb);
+      if (!ub) {
+        let hb, Bb;
+        ub = {
+          k_: (ub, hb) => Uu(bb, (() => function(bb, ub, hb) {
+            const Bb = bb.k_(ub.map((bb => bb.path)), ub.map((bb => bb.source)), ...hu(hb), hb.aliases.map((bb => bb.name)), hb.aliases.map((bb => bb.texture)), hb.aliases.map((bb => bb.kind)));
+            let Ob = !1;
             try {
-              const qq = Yq.validationModuleCodes,
-                Eq = Array.from(Yq.validationModuleKeys, ((Eq, gq) => ({
-                  key: (0, eq.l)(Eq),
-                  code: qq[gq]
+              const bb = Bb.validationModuleCodes,
+                ub = Array.from(Bb.validationModuleKeys, ((ub, hb) => ({
+                  key: (0, Qb.m)(ub),
+                  code: bb[hb]
                 }))),
-                gq = {
-                  errors: qE(Yq.errorsJson),
-                  offInStrict: qE(Yq.offInStrictJson),
-                  variants: (0, eq.f)(Yq),
-                  validationModules: Eq,
-                  features: Yq.features
+                hb = {
+                  errors: bu(Bb.errorsJson),
+                  offInStrict: bu(Bb.offInStrictJson),
+                  variants: (0, Qb.h)(Bb),
+                  validationModules: ub,
+                  features: Bb.features
                 };
-              return Eq.forEach(((qq, Eq) => {
-                YE.set(qq, {
-                  pack: Yq,
-                  index: Eq
+              return ub.forEach(((bb, ub) => {
+                Bu.set(bb, {
+                  pack: Bb,
+                  index: ub
                 })
-              })), lq = Eq.length > 0, gq
+              })), Ob = ub.length > 0, hb
             } finally {
-              lq || Yq.free()
+              Ob || Bb.free()
             }
-          }(qq, Eq, gq))),
-          mapValidationMessage: (Eq, gq) => {
-            const Yq = YE.get(Eq);
-            if (!Yq) throw new Error("mapValidationMessage takes a validation module this compiler made");
-            return Dq(JSON.parse(mE(qq, (() => Yq.pack.mapValidationMessage(Yq.index, gq.lineNum, gq.linePos, gq.message, gq.type)))))
+          }(bb, ub, hb))),
+          mapValidationMessage: (ub, hb) => {
+            const Bb = Bu.get(ub);
+            if (!Bb) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return Rb(JSON.parse(Uu(bb, (() => Bb.pack.mapValidationMessage(Bb.index, hb.lineNum, hb.linePos, hb.message, hb.type)))))
           },
-          aYq: Eq => mE(qq, (() => function(qq, Eq) {
-            const gq = new Int32Array(Eq.length),
-              Yq = [];
-            return Eq.forEach(((qq, Eq) => {
-              gq[Eq] = qq.variants ? qq.variants.length : -1;
-              for (const gq of qq.variants ?? []) Yq.push((0, eq.j)(gq))
-            })), qE(qq.aYq(Eq.map((qq => qq.file)), Uint32Array.from(Eq, (qq => EE(qq.line, "Diagnostic line"))), Eq.map((qq => qq.message)), gq, Uint8Array.from(Yq)))
-          }(qq, Eq))),
-          yJ: Eq => mE(qq, (() => qq.yJ(...gE(Eq)))),
+          Rhb: ub => Uu(bb, (() => function(bb, ub) {
+            const hb = new Int32Array(ub.length),
+              Bb = [];
+            return ub.forEach(((bb, ub) => {
+              hb[ub] = bb.variants ? bb.variants.length : -1;
+              for (const hb of bb.variants ?? []) Bb.push((0, Qb.l)(hb))
+            })), bu(bb.Rhb(ub.map((bb => bb.file)), Uint32Array.from(ub, (bb => uu(bb.line, "Diagnostic line"))), ub.map((bb => bb.message)), hb, Uint8Array.from(Bb)))
+          }(bb, ub))),
+          VJ: ub => Uu(bb, (() => bb.VJ(...hu(ub)))),
           get SHADER_PACK_HEADER_VERSION() {
-            return gq ??= mE(qq, (() => qq.ilq())), gq
+            return hb ??= Uu(bb, (() => bb.oOb())), hb
           },
           get DEFAULT_SHADER_PACK_FILES() {
-            return Yq ??= mE(qq, (() => {
-              const Eq = qq.hlq();
-              return qq.vlq().map(((qq, gq) => ({
-                path: qq,
-                source: Eq[gq]
+            return Bb ??= Uu(bb, (() => {
+              const ub = bb.ZOb();
+              return bb.wOb().map(((bb, hb) => ({
+                path: bb,
+                source: ub[hb]
               })))
-            })), Yq
+            })), Bb
           },
-          Zlq: Eq => mE(qq, (() => qq.Zlq(Eq))),
-          resolveHeader: Eq => mE(qq, (() => qq.blq((0, eq.j)(Eq)))),
-          nlq: () => mE(qq, (() => qq.nlq()))
-        }, lE.set(qq, Eq)
+          AOb: ub => Uu(bb, (() => bb.AOb(ub))),
+          resolveHeader: ub => Uu(bb, (() => bb.pOb((0, Qb.l)(ub)))),
+          XOb: () => Uu(bb, (() => bb.XOb()))
+        }, Ou.set(bb, ub)
       }
-      return Eq
+      return ub
     }
-    var AE = gq(3120),
-      cE = gq(6514);
-    const uE = "bloxdShaderPackWasmFailureReported";
-    let BE = null;
+    var Yu = hb(3020),
+      Su = hb(6365);
+    const au = "bloxdShaderPackWasmFailureReported";
+    let Hu = null;
 
-    function WE() {
-      return BE ??= async function() {
-        if ("undefined" === typeof WebAssembly) return NE("unsupported", "This browser has no WebAssembly"), null;
-        const qq = (0, cE.loadShaderPackTextures)().then((() => !0), (qq => (console.error("Could not load the shader pack textures, so shader packs can't run", qq), !1)));
+    function wu() {
+      return Hu ??= async function() {
+        if ("undefined" === typeof WebAssembly) return Zu("unsupported", "This browser has no WebAssembly"), null;
+        const bb = (0, Su.loadShaderPackTextures)().then((() => !0), (bb => (console.error("Could not load the shader pack textures, so shader packs can't run", bb), !1)));
         try {
-          const Eq = await async function() {
-            let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Iq;
-            return xE(await qq())
+          const ub = await async function() {
+            let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : cb;
+            return Lu(await bb())
           }();
-          return await qq ? Eq : null
-        } catch (Eq) {
-          const qq = Eq instanceof Error ? Eq.message : String(Eq);
-          return NE(AE.c[Eq instanceof wq ? Eq.stage : "instantiate"], qq), null
+          return await bb ? ub : null
+        } catch (ub) {
+          const bb = ub instanceof Error ? ub.message : String(ub);
+          return Zu(Yu.d[ub instanceof fb ? ub.stage : "instantiate"], bb), null
         }
-      }(), BE
+      }(), Hu
     }
 
-    function NE(qq, Eq) {
-      (0, AE.e)(uE, `Shader pack wasm ${qq}, so shader packs can't run: ${Eq}`, Eq, `shader_pack_${qq}`)
+    function Zu(bb, ub) {
+      (0, Yu.l)(au, `Shader pack wasm ${bb}, so shader packs can't run: ${ub}`, ub, `shader_pack_${bb}`)
     }
   },
-  6508: (qq, Eq, gq) => {
-    qq.exports = gq.p + "static/media/bloxd_wasm_shader_pack_bg.85a99b3f49b7ce9ed7dc.wasm"
+  6363: (bb, ub, hb) => {
+    bb.exports = hb.p + "static/media/bloxd_wasm_shader_pack_bg.2cc09f413df7fcaba0cc.wasm"
   },
-  6500: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq
+  6358: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Ub
     });
-    var Yq = gq(2805);
-    const lq = {
-      bloxd_wasm: () => "6d78896f037d6c3dd2ec91f53e012efc14d4c7478e36fc57749ae14be1df3096",
-      bloxd_wasm_client: () => "132c78fe4d5d985a39aef9cb5338e6d40926f1581f341ef925ca4f1b873982cf",
-      bloxd_wasm_workers: () => "9fa00e1e679c4b317e391d15a0e20bcce764b10ac53881c003b3245b86db6cf5",
-      bloxd_wasm_models: () => "9dd9f9fb8ff600ad7045604d8a17da38690a8b012f1e8b7f578a1a671baf7185",
-      bloxd_wasm_webgpu: () => "72b5e9034b38cfcfd84eb4e4b1607ea3fedbb7078518766dd27ac431c9922848",
-      bloxd_wasm_webgl: () => "a5cefc5390d0e4cf10eab192e6d4403fc337fb14cfe0e3164c3430a7c721595d",
-      bloxd_wasm_webgl1: () => "3cb76bb92c5501eb795864d943ed2c567c8b5ff7777cd5f2c08b0940197979c9",
-      bloxd_wasm_replay: () => "f8132694ecb3c07d332a67ad7dab19d035d58dc2cea1ddbf2ca6dc7ec556cd0c",
-      bloxd_wasm_recorder: () => "166b4da1bfa19d1d90b1f2d66b23de17c858096a88eb92fe87a8c9e58f77c3bb",
-      bloxd_wasm_anim: () => "11dd5bcc2c7323ae0a5b9e4cd8b8c81d457a9ea85d6e339c6454ed1bb80a27c4",
-      bloxd_wasm_textures: () => "2ba4917ae218104948db870865715dacd8571878aedd4fece740312291892fac",
-      bloxd_wasm_shader_pack: () => "dfb97693642c8a1ee7219f62c2557fcfb1c20ef622361f5b18389c544478cae6"
+    var Bb = hb(2688);
+    const Ob = {
+      bloxd_wasm: () => "3b91fa895928d8c20ebf400bda89ab044ad7bc6b888817ddf1222f7c57feeb9c",
+      bloxd_wasm_client: () => "f8fce5947f2faa12e1ab09590f42ab320ab7503a3faa2b92511d0c8b5961045e",
+      bloxd_wasm_workers: () => "97913e9056cda526c2dc8ccbbbd9e745eb1ac954c2c44cba6c7873fc1747a23c",
+      bloxd_wasm_models: () => "c8d7121eb692beab251440772c33579d323be2e080195d116336055405d68c6b",
+      bloxd_wasm_webgpu: () => "19061547ec948fcba5a47bac197b276e7d2b5e59be20d2aaff03a98029648a35",
+      bloxd_wasm_webgl: () => "368a1de884ceea9044ed27e803110479e191485e8237c1d5316b43218c30116d",
+      bloxd_wasm_webgl1: () => "5a9131e0f012a1be4913bc2fcccdbb8d2fa9e6060e384fce80f6463266a8c00a",
+      bloxd_wasm_replay: () => "2682ec56a7ca06252a5e84c7b45e4853cfe028e5944d11f804b256bb15d9e0af",
+      bloxd_wasm_recorder: () => "4b50bdb382eedb09ed05f5762ed2c0dc0736e9ab3343761cacc34ca07ef84644",
+      bloxd_wasm_anim: () => "e9760697ea51a31a4ccfa90e459f7ee2ef0e9d3e3212f5f9bdc92eccc7a75ce1",
+      bloxd_wasm_textures: () => "435e32982ee604bfb0a866d92a90abb139a38b2cd93d29123f4edbda32e26fc0",
+      bloxd_wasm_shader_pack: () => "752c76e3c73a60bbf217aaaf2e581c1eeace9b5713c141db27df430f66cfe32d"
     };
-    var Oq = gq(4524);
+    var Gb = hb(4466);
 
-    function mq(qq) {
-      const Eq = Object.prototype.hasOwnProperty.call(lq, qq) ? lq[qq]() : void 0;
-      if (void 0 !== Eq) return {
-        sha256: Eq,
-        onMismatch: Oq.C
+    function Ub(bb) {
+      const ub = Object.prototype.hasOwnProperty.call(Ob, bb) ? Ob[bb]() : void 0;
+      if (void 0 !== ub) return {
+        sha256: ub,
+        onMismatch: Gb.v
       };
-      throw new Yq.j(`${qq} has no release digest, so this build refuses it`)
+      throw new Bb.i(`${bb} has no release digest, so this build refuses it`)
     }
   },
-  6517: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Pq,
-      f: () => Qq,
-      j: () => Hq,
-      l: () => jq
+  6367: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Wb,
+      h: () => Cb,
+      l: () => lb,
+      m: () => Ab
     });
-    var Yq = gq(6521);
-    const lq = 6,
-      Oq = 3,
-      mq = 1,
-      xq = 2,
-      Aq = 4,
-      cq = 8,
-      uq = 16,
-      Bq = 32,
-      Wq = 64,
-      Nq = 128,
-      aq = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var Bb = hb(6375);
+    const Ob = 6,
+      Gb = 3,
+      Ub = 1,
+      Lb = 2,
+      Yb = 4,
+      Sb = 8,
+      ab = 16,
+      Hb = 32,
+      wb = 64,
+      Zb = 128,
+      Xb = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function Vq(qq) {
-      if (!qq) return 0;
-      const Eq = aq.indexOf(qq);
-      if (Eq <= 0) throw new Error(`"${qq}" is not a shader pack hook function`);
-      return Eq
+    function pb(bb) {
+      if (!bb) return 0;
+      const ub = Xb.indexOf(bb);
+      if (ub <= 0) throw new Error(`"${bb}" is not a shader pack hook function`);
+      return ub
     }
 
-    function dq(qq) {
-      if (0 === qq) return null;
-      const Eq = aq[qq];
-      if (void 0 === Eq) throw new Error(`${qq} is not a shader pack hook function id`);
-      return Eq
+    function ob(bb) {
+      if (0 === bb) return null;
+      const ub = Xb[bb];
+      if (void 0 === ub) throw new Error(`${bb} is not a shader pack hook function id`);
+      return ub
     }
 
-    function jq(qq) {
-      const Eq = Yq.b.length;
+    function Ab(bb) {
+      const ub = Bb.b.length;
       return {
-        strict: qq >= Eq,
-        program: Yq.b[qq % Eq]
+        strict: bb >= ub,
+        program: Bb.b[bb % ub]
       }
     }
 
-    function Hq(qq) {
-      return Number(qq.strict) * Yq.b.length + Yq.b.indexOf(qq.program)
+    function lb(bb) {
+      return Number(bb.strict) * Bb.b.length + Bb.b.indexOf(bb.program)
     }
 
-    function oq(qq) {
-      return "" === qq ? [] : qq.split(" ")
+    function Kb(bb) {
+      return "" === bb ? [] : bb.split(" ")
     }
 
-    function Pq(qq) {
-      const Eq = {
-        variantFlags: new Uint8Array(lq),
-        hooks: new Uint8Array(lq * Oq),
-        moduleCodes: Array(lq).fill(""),
-        reads: Array(2 * lq).fill("")
+    function Wb(bb) {
+      const ub = {
+        variantFlags: new Uint8Array(Ob),
+        hooks: new Uint8Array(Ob * Gb),
+        moduleCodes: Array(Ob).fill(""),
+        reads: Array(2 * Ob).fill("")
       };
-      for (const gq of qq) {
-        const qq = Hq(gq.key),
-          Yq = (qq, Eq) => null === gq.hooks.surface || gq.reads.fragment.includes(qq) ? 0 : Eq;
-        Eq.variantFlags[qq] = (gq.sceneDepth ? mq : 0) | (gq.movesVertices ? xq : 0) | (gq.sunShadow ? Aq : 0) | (gq.airShadow ? cq : 0) | (gq.discards ? uq : 0) | Yq("localPosition", Bq) | Yq("enchantSpeed", Wq) | Yq("enchantTier", Nq), Eq.hooks[qq * Oq] = Vq(gq.hooks.vertex), Eq.hooks[qq * Oq + 1] = Vq(gq.hooks.surface), Eq.hooks[qq * Oq + 2] = Vq(gq.hooks.light), Eq.moduleCodes[qq] = gq.moduleCode, Eq.reads[2 * qq] = gq.reads.vertex.join(" "), Eq.reads[2 * qq + 1] = gq.reads.fragment.join(" ")
+      for (const hb of bb) {
+        const bb = lb(hb.key),
+          Bb = (bb, ub) => null === hb.hooks.surface || hb.reads.fragment.includes(bb) ? 0 : ub;
+        ub.variantFlags[bb] = (hb.sceneDepth ? Ub : 0) | (hb.movesVertices ? Lb : 0) | (hb.sunShadow ? Yb : 0) | (hb.airShadow ? Sb : 0) | (hb.discards ? ab : 0) | Bb("localPosition", Hb) | Bb("enchantSpeed", wb) | Bb("enchantTier", Zb), ub.hooks[bb * Gb] = pb(hb.hooks.vertex), ub.hooks[bb * Gb + 1] = pb(hb.hooks.surface), ub.hooks[bb * Gb + 2] = pb(hb.hooks.light), ub.moduleCodes[bb] = hb.moduleCode, ub.reads[2 * bb] = hb.reads.vertex.join(" "), ub.reads[2 * bb + 1] = hb.reads.fragment.join(" ")
       }
-      return Eq
+      return ub
     }
 
-    function Qq(qq) {
+    function Cb(bb) {
       const {
-        hooks: Eq,
-        moduleCodes: gq,
-        reads: Yq
-      } = qq;
-      return Array.from(qq.variantFlags, ((qq, lq) => {
-        const Bq = lq * Oq;
+        hooks: ub,
+        moduleCodes: hb,
+        reads: Bb
+      } = bb;
+      return Array.from(bb.variantFlags, ((bb, Ob) => {
+        const Hb = Ob * Gb;
         return {
-          key: jq(lq),
+          key: Ab(Ob),
           hooks: {
-            vertex: dq(Eq[Bq]),
-            surface: dq(Eq[Bq + 1]),
-            light: dq(Eq[Bq + 2])
+            vertex: ob(ub[Hb]),
+            surface: ob(ub[Hb + 1]),
+            light: ob(ub[Hb + 2])
           },
-          moduleCode: gq[lq],
-          sceneDepth: 0 !== (qq & mq),
-          sunShadow: 0 !== (qq & Aq),
-          airShadow: 0 !== (qq & cq),
-          movesVertices: 0 !== (qq & xq),
-          discards: 0 !== (qq & uq),
+          moduleCode: hb[Ob],
+          sceneDepth: 0 !== (bb & Ub),
+          sunShadow: 0 !== (bb & Yb),
+          airShadow: 0 !== (bb & Sb),
+          movesVertices: 0 !== (bb & Lb),
+          discards: 0 !== (bb & ab),
           reads: {
-            vertex: oq(Yq[2 * lq]),
-            fragment: oq(Yq[2 * lq + 1])
+            vertex: Kb(Bb[2 * Ob]),
+            fragment: Kb(Bb[2 * Ob + 1])
           }
         }
       }))
     }
   },
-  6521: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Yq,
-      d: () => mq,
-      g: () => xq,
-      j: () => lq,
-      m: () => Oq
+  6375: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Bb,
+      f: () => Ub,
+      i: () => Lb,
+      k: () => Ob,
+      o: () => Gb
     });
-    const Yq = ["terrain", "liquid", "model"];
+    const Bb = ["terrain", "liquid", "model"];
 
-    function lq() {
-      const qq = [];
-      for (const Eq of [!1, !0])
-        for (const gq of Yq) qq.push({
-          strict: Eq,
-          program: gq
+    function Ob() {
+      const bb = [];
+      for (const ub of [!1, !0])
+        for (const hb of Bb) bb.push({
+          strict: ub,
+          program: hb
         });
-      return qq
+      return bb
     }
 
-    function Oq(qq) {
-      return `${qq.strict?"strict":"allow"}.${qq.program}`
+    function Gb(bb) {
+      return `${bb.strict?"strict":"allow"}.${bb.program}`
     }
 
-    function mq(qq) {
-      return !qq.hooks.vertex && !qq.hooks.surface && !qq.hooks.light
+    function Ub(bb) {
+      return !bb.hooks.vertex && !bb.hooks.surface && !bb.hooks.light
     }
 
-    function xq(qq, Eq) {
-      return "off" !== Eq && (null === qq || qq.some((qq => qq.key.strict === ("strict" === Eq) && !mq(qq))))
+    function Lb(bb, ub) {
+      return "off" !== ub && (null === bb || bb.some((bb => bb.key.strict === ("strict" === ub) && !Ub(bb))))
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

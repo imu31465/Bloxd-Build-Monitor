@@ -1,18 +1,18 @@
 export const id = 73;
 export const ids = [73];
 export const modules = {
-  37109: (qq, Eq, gq) => {
-    if (gq.d(Eq, {
-        b: () => Aq,
-        e: () => lq,
-        g: () => mq,
-        j: () => Oq,
-        m: () => Qq,
-        q: () => jq
-      }), 39 == gq.j) var Yq = gq(37111);
-    const lq = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
-      Oq = ["Blade", "Guard", "Handle"],
-      mq = {
+  36695: (bb, ub, hb) => {
+    if (hb.d(ub, {
+        e: () => Yb,
+        f: () => Ob,
+        h: () => Ub,
+        k: () => Gb,
+        o: () => Cb,
+        q: () => Ab
+      }), 39 == hb.j) var Bb = hb(36704);
+    const Ob = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      Gb = ["Blade", "Guard", "Handle"],
+      Ub = {
         Wood: {
           material: "Wood",
           baseSword: "Wood Sword",
@@ -131,59 +131,59 @@ export const modules = {
           handleReach: .5
         }
       },
-      xq = 4,
-      Aq = "Coal",
-      cq = {
+      Lb = 4,
+      Yb = "Coal",
+      Sb = {
         Blade: 1,
         Guard: .6,
         Handle: .4
       },
-      uq = 1.15,
-      Bq = 1.35,
-      Wq = .06,
-      Nq = {
+      ab = 1.15,
+      Hb = 1.35,
+      wb = .06,
+      Zb = {
         defence: {
           name: "Bulwark",
           amount: .06,
-          describe: qq => `${rq(.06*qq)} less damage taken`
+          describe: bb => `${jb(.06*bb)} less damage taken`
         },
         coins: {
           name: "Midas",
           amount: 4,
-          describe: qq => `Mobs you slay drop ${Math.round(4*qq)}+ extra coins`
+          describe: bb => `Mobs you slay drop ${Math.round(4*bb)}+ extra coins`
         },
         crit: {
           name: "Keen Edge",
           chance: .12,
           amount: .6,
-          describe: qq => `${rq(.12*qq)} chance to strike for +60% damage`
+          describe: bb => `${jb(.12*bb)} chance to strike for +60% damage`
         },
         bossBane: {
           name: "Bossbane",
           amount: .2,
-          describe: qq => `+${rq(.2*qq)} damage to bosses`
+          describe: bb => `+${jb(.2*bb)} damage to bosses`
         },
         firePool: {
           name: "Magma Pool",
           chance: .15,
           amount: .12,
           cooldownMs: 3e3,
-          describe: qq => `${rq(.15*qq)} chance to leave a fire pool under the mob that burns for 3s`
+          describe: bb => `${jb(.15*bb)} chance to leave a fire pool under the mob that burns for 3s`
         },
         lifesteal: {
           name: "Bloodthirst",
           amount: .06,
-          describe: qq => `Heal ${rq(.06*qq)} of the damage you deal`
+          describe: bb => `Heal ${jb(.06*bb)} of the damage you deal`
         },
         starfall: {
           name: "Starfall",
           chance: .1,
           amount: .6,
           cooldownMs: 4e3,
-          describe: qq => `${rq(.1*qq)} chance to call a falling star that hits nearby mobs and slows them`
+          describe: bb => `${jb(.1*bb)} chance to call a falling star that hits nearby mobs and slows them`
         }
       },
-      aq = {
+      Xb = {
         eclipseField: {
           name: "Eclipse Field",
           description: "Right-click: slow every mob within 6 blocks for 3s",
@@ -225,120 +225,120 @@ export const modules = {
           cooldownMs: 25e3
         }
       },
-      Vq = 39 == gq.j ? Yq.d : null,
-      dq = "skyblock:forged:";
+      pb = 39 == hb.j ? Bb.e : null,
+      ob = "skyblock:forged:";
 
-    function jq(qq, Eq) {
-      return `${qq} ${Eq}`
+    function Ab(bb, ub) {
+      return `${bb} ${ub}`
     }
-    lq.flatMap((qq => Oq.map((Eq => jq(qq, Eq)))));
+    Ob.flatMap((bb => Gb.map((ub => Ab(bb, ub)))));
 
-    function Hq(qq) {
+    function lb(bb) {
       let {
-        blade: Eq,
-        guard: gq,
-        handle: Yq
-      } = qq;
-      return `${dq}${Eq.toLowerCase()}-${gq.toLowerCase()}-${Yq.toLowerCase()}`
+        blade: ub,
+        guard: hb,
+        handle: Bb
+      } = bb;
+      return `${ob}${ub.toLowerCase()}-${hb.toLowerCase()}-${Bb.toLowerCase()}`
     }
 
-    function oq(qq) {
-      if (! function(qq) {
-          return "string" === typeof qq && qq.startsWith(dq)
-        }(qq)) return null;
-      const Eq = qq.slice(dq.length).split("-").map((qq => lq.find((Eq => Eq.toLowerCase() === qq))));
-      return 3 !== Eq.length || Eq.includes(void 0) ? null : {
-        blade: Eq[0],
-        guard: Eq[1],
-        handle: Eq[2]
+    function Kb(bb) {
+      if (! function(bb) {
+          return "string" === typeof bb && bb.startsWith(ob)
+        }(bb)) return null;
+      const ub = bb.slice(ob.length).split("-").map((bb => Ob.find((ub => ub.toLowerCase() === bb))));
+      return 3 !== ub.length || ub.includes(void 0) ? null : {
+        blade: ub[0],
+        guard: ub[1],
+        handle: ub[2]
       }
     }
-    const Pq = new Map;
+    const Wb = new Map;
 
-    function Qq(qq) {
-      var Eq;
-      let gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Vq;
-      const Yq = "string" === typeof qq ? oq(qq) : qq;
-      if (null === Yq) return null;
-      const lq = Hq(Yq),
-        Aq = gq === Vq ? Pq.get(lq) : void 0;
-      if (void 0 !== Aq) return Aq;
-      const dq = function(qq, Eq) {
-        var gq, Yq, lq, Aq, Vq, dq, jq, oq, Pq;
+    function Cb(bb) {
+      var ub;
+      let hb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pb;
+      const Bb = "string" === typeof bb ? Kb(bb) : bb;
+      if (null === Bb) return null;
+      const Ob = lb(Bb),
+        Yb = hb === pb ? Wb.get(Ob) : void 0;
+      if (void 0 !== Yb) return Yb;
+      const ob = function(bb, ub) {
+        var hb, Bb, Ob, Yb, pb, ob, Ab, Kb, Wb;
         const {
-          blade: Qq,
-          guard: hq,
-          handle: nq
-        } = qq, bq = mq, iq = Qq === hq && hq === nq, Zq = tq((1 + bq[Qq].bladeDamage) * (iq ? 1 + Wq : 1)), fq = null !== (gq = Eq.damageMultiplier) && void 0 !== gq ? gq : Zq, Mq = null !== (Yq = Eq.cooldownMultiplier) && void 0 !== Yq ? Yq : bq[nq].handleCooldown, Tq = null !== (lq = Eq.knockbackMultiplier) && void 0 !== lq ? lq : tq(1 + bq[nq].handleKnockback), zq = null !== (Aq = Eq.reachBonus) && void 0 !== Aq ? Aq : bq[nq].handleReach, Sq = null !== (Vq = Eq.damageReduction) && void 0 !== Vq ? Vq : bq[hq].guardReduction, pq = null !== (dq = Eq.traits) && void 0 !== dq ? dq : function(qq) {
-          const Eq = {},
-            gq = {};
-          for (const xq of Oq) {
-            var Yq, lq;
-            const Oq = mq[yq(qq, xq)].trait;
-            null !== Oq && (Eq[Oq] = (null !== (Yq = Eq[Oq]) && void 0 !== Yq ? Yq : 0) + cq[xq], gq[Oq] = (null !== (lq = gq[Oq]) && void 0 !== lq ? lq : 0) + 1)
+          blade: Cb,
+          guard: Db,
+          handle: xb
+        } = bb, zb = Ub, gb = Cb === Db && Db === xb, ib = rb((1 + zb[Cb].bladeDamage) * (gb ? 1 + wb : 1)), vb = null !== (hb = ub.damageMultiplier) && void 0 !== hb ? hb : ib, tb = null !== (Bb = ub.cooldownMultiplier) && void 0 !== Bb ? Bb : zb[xb].handleCooldown, Jb = null !== (Ob = ub.knockbackMultiplier) && void 0 !== Ob ? Ob : rb(1 + zb[xb].handleKnockback), eb = null !== (Yb = ub.reachBonus) && void 0 !== Yb ? Yb : zb[xb].handleReach, Nb = null !== (pb = ub.damageReduction) && void 0 !== pb ? pb : zb[Db].guardReduction, sb = null !== (ob = ub.traits) && void 0 !== ob ? ob : function(bb) {
+          const ub = {},
+            hb = {};
+          for (const Lb of Gb) {
+            var Bb, Ob;
+            const Gb = Ub[db(bb, Lb)].trait;
+            null !== Gb && (ub[Gb] = (null !== (Bb = ub[Gb]) && void 0 !== Bb ? Bb : 0) + Sb[Lb], hb[Gb] = (null !== (Ob = hb[Gb]) && void 0 !== Ob ? Ob : 0) + 1)
           }
-          for (const Oq of Object.keys(Eq)) {
-            const qq = 3 === gq[Oq] ? Bq : 2 === gq[Oq] ? uq : 1;
-            Eq[Oq] = tq(Eq[Oq] * qq)
+          for (const Gb of Object.keys(ub)) {
+            const bb = 3 === hb[Gb] ? Hb : 2 === hb[Gb] ? ab : 1;
+            ub[Gb] = rb(ub[Gb] * bb)
           }
-          return Eq
-        }(qq), Gq = null !== (jq = Eq.ability) && void 0 !== jq ? jq : null, Lq = void 0 !== Eq.name, Jq = null !== (oq = Eq.name) && void 0 !== oq ? oq : iq ? `Pure ${Qq} Sword` : `${bq[hq].epithet} ${Qq} Sword`, kq = null !== (Pq = Eq.lore) && void 0 !== Pq ? Pq : `Forged by the Forge Mother from a ${Qq.toLowerCase()} blade, ${hq.toLowerCase()} guard and ${nq.toLowerCase()} handle.`, Rq = function(qq) {
+          return ub
+        }(bb), Mb = null !== (Ab = ub.ability) && void 0 !== Ab ? Ab : null, mb = void 0 !== ub.name, Ib = null !== (Kb = ub.name) && void 0 !== Kb ? Kb : gb ? `Pure ${Cb} Sword` : `${zb[Db].epithet} ${Cb} Sword`, Pb = null !== (Wb = ub.lore) && void 0 !== Wb ? Wb : `Forged by the Forge Mother from a ${Cb.toLowerCase()} blade, ${Db.toLowerCase()} guard and ${xb.toLowerCase()} handle.`, qb = function(bb) {
           let {
-            blade: Eq,
-            guard: gq,
-            handle: Yq
-          } = qq;
-          const lq = mq;
-          return xq * (lq[Eq].value + lq[gq].value + lq[Yq].value)
-        }(qq), Uq = bq[Qq].value + bq[hq].value + bq[nq].value, Fq = Lq ? "Tier 5" : Uq <= 4 ? "Tier 1" : Uq <= 8 ? "Tier 2" : Uq <= 14 ? "Tier 3" : Uq <= 22 ? "Tier 4" : "Tier 5", sq = [];
-        1 !== fq && sq.push(`${vq(fq-1)} damage`);
-        1 !== Mq && sq.push(`${rq(1/Mq-1)} faster strikes`);
-        1 !== Tq && sq.push(`${vq(Tq-1)} knockback`);
-        zq > 0 && sq.push(`+${zq} reach`);
-        Sq > 0 && sq.push(`${rq(Sq)} less damage taken while held`);
-        const Xq = [];
-        for (const Oq of Object.keys(pq)) Xq.push(`${Nq[Oq].name}: ${Nq[Oq].describe(pq[Oq])}`);
-        null !== Gq && Xq.push(`${aq[Gq].name}: ${aq[Gq].description}`);
-        return sq.push(...Xq), {
-          id: Hq(qq),
-          parts: qq,
-          baseSword: bq[Qq].baseSword,
-          displayName: Jq,
-          lore: kq,
-          properties: sq,
-          effects: Xq,
-          named: Lq,
-          damageMultiplier: fq,
-          cooldownMultiplier: Mq,
-          knockbackMultiplier: Tq,
-          reachBonus: zq,
-          damageReduction: Sq,
-          traits: pq,
-          ability: Gq,
-          coalCost: Rq,
-          enchantmentTier: Fq,
-          powerMultiplier: tq(fq / Mq)
+            blade: ub,
+            guard: hb,
+            handle: Bb
+          } = bb;
+          const Ob = Ub;
+          return Lb * (Ob[ub].value + Ob[hb].value + Ob[Bb].value)
+        }(bb), Eb = zb[Cb].value + zb[Db].value + zb[xb].value, yb = mb ? "Tier 5" : Eb <= 4 ? "Tier 1" : Eb <= 8 ? "Tier 2" : Eb <= 14 ? "Tier 3" : Eb <= 22 ? "Tier 4" : "Tier 5", Vb = [];
+        1 !== vb && Vb.push(`${nb(vb-1)} damage`);
+        1 !== tb && Vb.push(`${jb(1/tb-1)} faster strikes`);
+        1 !== Jb && Vb.push(`${nb(Jb-1)} knockback`);
+        eb > 0 && Vb.push(`+${eb} reach`);
+        Nb > 0 && Vb.push(`${jb(Nb)} less damage taken while held`);
+        const Fb = [];
+        for (const Gb of Object.keys(sb)) Fb.push(`${Zb[Gb].name}: ${Zb[Gb].describe(sb[Gb])}`);
+        null !== Mb && Fb.push(`${Xb[Mb].name}: ${Xb[Mb].description}`);
+        return Vb.push(...Fb), {
+          id: lb(bb),
+          parts: bb,
+          baseSword: zb[Cb].baseSword,
+          displayName: Ib,
+          lore: Pb,
+          properties: Vb,
+          effects: Fb,
+          named: mb,
+          damageMultiplier: vb,
+          cooldownMultiplier: tb,
+          knockbackMultiplier: Jb,
+          reachBonus: eb,
+          damageReduction: Nb,
+          traits: sb,
+          ability: Mb,
+          coalCost: qb,
+          enchantmentTier: yb,
+          powerMultiplier: rb(vb / tb)
         }
-      }(Yq, null !== (Eq = gq[lq]) && void 0 !== Eq ? Eq : {});
-      return gq === Vq && Pq.set(lq, dq), dq
+      }(Bb, null !== (ub = hb[Ob]) && void 0 !== ub ? ub : {});
+      return hb === pb && Wb.set(Ob, ob), ob
     }
 
-    function yq(qq, Eq) {
-      return "Blade" === Eq ? qq.blade : "Guard" === Eq ? qq.guard : qq.handle
+    function db(bb, ub) {
+      return "Blade" === ub ? bb.blade : "Guard" === ub ? bb.guard : bb.handle
     }
 
-    function tq(qq) {
-      return Math.round(100 * qq) / 100
+    function rb(bb) {
+      return Math.round(100 * bb) / 100
     }
 
-    function rq(qq) {
-      return `${Math.round(100*qq)}%`
+    function jb(bb) {
+      return `${Math.round(100*bb)}%`
     }
 
-    function vq(qq) {
-      return `${qq>=0?"+":""}${rq(qq)}`
+    function nb(bb) {
+      return `${bb>=0?"+":""}${jb(bb)}`
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

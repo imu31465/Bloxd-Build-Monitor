@@ -1,15 +1,15 @@
 export const id = 235;
 export const ids = [235];
 export const modules = {
-  37796: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Bq,
-      f: () => mq
+  37420: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Hb,
+      g: () => Ub
     });
-    var Yq = gq(9406),
-      lq = gq(9379),
-      Oq = gq(307);
-    const mq = {
+    var Bb = hb(9204),
+      Ob = hb(9181),
+      Gb = hb(314);
+    const Ub = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -2948,52 +2948,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...xq("White"),
-      ...xq("Orange"),
-      ...xq("Magenta"),
-      ...xq("Light Blue"),
-      ...xq("Yellow"),
-      ...xq("Lime"),
-      ...xq("Pink"),
-      ...xq("Gray"),
-      ...xq("Light Gray"),
-      ...xq("Cyan"),
-      ...xq("Purple"),
-      ...xq("Blue"),
-      ...xq("Brown"),
-      ...xq("Green"),
-      ...xq("Red"),
-      ...xq("Black"),
-      ...xq("Draugr"),
-      ...xq("Skull"),
-      ...xq("Rainbow"),
-      ...Aq("Sheep"),
-      ...Aq("Cow"),
-      ...Aq("Pig"),
-      ...Aq("Horse"),
-      ...Aq("Camel"),
-      ...Aq("Wolf"),
-      ...Aq("Deer"),
-      ...Aq("Wildcat"),
-      ...cq("Radar"),
-      ...cq("Inactive Radar"),
-      ...cq("Active Radar"),
-      ...uq("Magenta"),
-      ...uq("Light Gray"),
-      ...uq("Red"),
-      ...uq("White"),
-      ...uq("Orange"),
-      ...uq("Light Blue"),
-      ...uq("Yellow"),
-      ...uq("Lime"),
-      ...uq("Pink"),
-      ...uq("Gray"),
-      ...uq("Cyan"),
-      ...uq("Purple"),
-      ...uq("Blue"),
-      ...uq("Brown"),
-      ...uq("Green"),
-      ...uq("Black"),
+      ...Lb("White"),
+      ...Lb("Orange"),
+      ...Lb("Magenta"),
+      ...Lb("Light Blue"),
+      ...Lb("Yellow"),
+      ...Lb("Lime"),
+      ...Lb("Pink"),
+      ...Lb("Gray"),
+      ...Lb("Light Gray"),
+      ...Lb("Cyan"),
+      ...Lb("Purple"),
+      ...Lb("Blue"),
+      ...Lb("Brown"),
+      ...Lb("Green"),
+      ...Lb("Red"),
+      ...Lb("Black"),
+      ...Lb("Draugr"),
+      ...Lb("Skull"),
+      ...Lb("Rainbow"),
+      ...Yb("Sheep"),
+      ...Yb("Cow"),
+      ...Yb("Pig"),
+      ...Yb("Horse"),
+      ...Yb("Camel"),
+      ...Yb("Wolf"),
+      ...Yb("Deer"),
+      ...Yb("Wildcat"),
+      ...Sb("Radar"),
+      ...Sb("Inactive Radar"),
+      ...Sb("Active Radar"),
+      ...ab("Magenta"),
+      ...ab("Light Gray"),
+      ...ab("Red"),
+      ...ab("White"),
+      ...ab("Orange"),
+      ...ab("Light Blue"),
+      ...ab("Yellow"),
+      ...ab("Lime"),
+      ...ab("Pink"),
+      ...ab("Gray"),
+      ...ab("Cyan"),
+      ...ab("Purple"),
+      ...ab("Blue"),
+      ...ab("Brown"),
+      ...ab("Green"),
+      ...ab("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3107,11 +3107,11 @@ export const modules = {
         }]
       },
       ... function() {
-        const qq = "Lunite Auto Miner";
+        const bb = "Lunite Auto Miner";
         return {
-          [qq]: {
+          [bb]: {
             positions: [{
-              block: qq,
+              block: bb,
               x: 0,
               y: 0,
               z: 0
@@ -3137,9 +3137,9 @@ export const modules = {
               z: -2
             }]
           },
-          [`${qq}|meta|rot2`]: {
+          [`${bb}|meta|rot2`]: {
             positions: [{
-              block: `${qq}|meta|rot2`,
+              block: `${bb}|meta|rot2`,
               x: 0,
               y: 0,
               z: 0
@@ -3165,9 +3165,9 @@ export const modules = {
               z: 0
             }]
           },
-          [`${qq}|meta|rot3`]: {
+          [`${bb}|meta|rot3`]: {
             positions: [{
-              block: `${qq}|meta|rot3`,
+              block: `${bb}|meta|rot3`,
               x: 0,
               y: 0,
               z: 0
@@ -3193,9 +3193,9 @@ export const modules = {
               z: 2
             }]
           },
-          [`${qq}|meta|rot4`]: {
+          [`${bb}|meta|rot4`]: {
             positions: [{
-              block: `${qq}|meta|rot4`,
+              block: `${bb}|meta|rot4`,
               x: 0,
               y: 0,
               z: 0
@@ -3224,74 +3224,74 @@ export const modules = {
         }
       }(),
       ... function() {
-        const qq = {
-            1: qq => ({
+        const bb = {
+            1: bb => ({
               x: 0,
-              z: qq
+              z: bb
             }),
-            2: qq => ({
-              x: qq,
+            2: bb => ({
+              x: bb,
               z: 0
             }),
-            3: qq => ({
+            3: bb => ({
               x: 0,
-              z: -qq
+              z: -bb
             }),
-            4: qq => ({
-              x: -qq,
+            4: bb => ({
+              x: -bb,
               z: 0
             })
           },
-          Eq = {};
-        for (let gq = 1; gq <= 4; gq++) {
-          const lq = 1 === gq ? "" : `|meta|rot${gq}`;
-          Eq[`${Yq.e[0].block}${lq}`] = {
-            positions: Yq.e.map((Eq => {
+          ub = {};
+        for (let hb = 1; hb <= 4; hb++) {
+          const Ob = 1 === hb ? "" : `|meta|rot${hb}`;
+          ub[`${Bb.d[0].block}${Ob}`] = {
+            positions: Bb.d.map((ub => {
               let {
-                block: Yq,
-                y: Oq,
-                z: mq
-              } = Eq;
+                block: Bb,
+                y: Gb,
+                z: Ub
+              } = ub;
               return {
-                block: `${Yq}${lq}`,
-                y: Oq,
-                ...qq[gq](mq)
+                block: `${Bb}${Ob}`,
+                y: Gb,
+                ...bb[hb](Ub)
               }
             }))
           }
         }
-        return Eq
+        return ub
       }(),
       ... function() {
-        const qq = {};
-        for (let Eq = 1; Eq <= Yq.s; Eq++) {
-          const gq = (0, Yq.gc)(Eq),
-            lq = Yq.w[Eq - 1],
-            Oq = [{
-              block: gq,
+        const bb = {};
+        for (let ub = 1; ub <= Bb.n; ub++) {
+          const hb = (0, Bb.oc)(ub),
+            Ob = Bb.q[ub - 1],
+            Gb = [{
+              block: hb,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const qq of Yq.m)
-            for (let Eq = 1; Eq <= lq; Eq++) {
-              if ("southwest" === qq && 1 === Eq) continue;
+          for (const bb of Bb.i)
+            for (let ub = 1; ub <= Ob; ub++) {
+              if ("southwest" === bb && 1 === ub) continue;
               const {
-                x: gq,
-                z: lq
-              } = Yq.p[qq];
-              Oq.push({
-                block: (0, Yq.fc)(qq, Eq),
-                x: gq,
-                y: Eq - 1,
-                z: lq
+                x: hb,
+                z: Ob
+              } = Bb.k[bb];
+              Gb.push({
+                block: (0, Bb.nc)(bb, ub),
+                x: hb,
+                y: ub - 1,
+                z: Ob
               })
             }
-          qq[gq] = {
-            positions: Oq
+          bb[hb] = {
+            positions: Gb
           }
         }
-        return qq
+        return bb
       }(),
       "Solar Panel": {
         positions: [{
@@ -3405,159 +3405,159 @@ export const modules = {
       }
     };
 
-    function xq(qq) {
+    function Lb(bb) {
       return {
-        [`${qq} Banner`]: {
+        [`${bb} Banner`]: {
           positions: [{
-            block: `${qq} Banner`,
+            block: `${bb} Banner`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${qq} Banner Flag|meta|rot1|bot`,
+            block: `_${bb} Banner Flag|meta|rot1|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${qq} Banner|meta|rot2|bot`]: {
+        [`${bb} Banner|meta|rot2|bot`]: {
           positions: [{
-            block: `${qq} Banner|meta|rot2|bot`,
+            block: `${bb} Banner|meta|rot2|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${qq} Banner Flag|meta|rot2|bot`,
+            block: `_${bb} Banner Flag|meta|rot2|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${qq} Banner|meta|rot3|bot`]: {
+        [`${bb} Banner|meta|rot3|bot`]: {
           positions: [{
-            block: `${qq} Banner|meta|rot3|bot`,
+            block: `${bb} Banner|meta|rot3|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${qq} Banner Flag|meta|rot3|bot`,
+            block: `_${bb} Banner Flag|meta|rot3|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${qq} Banner|meta|rot4|bot`]: {
+        [`${bb} Banner|meta|rot4|bot`]: {
           positions: [{
-            block: `${qq} Banner|meta|rot4|bot`,
+            block: `${bb} Banner|meta|rot4|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${qq} Banner Flag|meta|rot4|bot`,
+            block: `_${bb} Banner Flag|meta|rot4|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${qq} Banner|meta|rot1|side`]: {
+        [`${bb} Banner|meta|rot1|side`]: {
           positions: [{
-            block: `${qq} Banner|meta|rot1|side`,
+            block: `${bb} Banner|meta|rot1|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${qq} Banner Flag|meta|rot1|side`,
+            block: `_${bb} Banner Flag|meta|rot1|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${qq} Banner|meta|rot2|side`]: {
+        [`${bb} Banner|meta|rot2|side`]: {
           positions: [{
-            block: `${qq} Banner|meta|rot2|side`,
+            block: `${bb} Banner|meta|rot2|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${qq} Banner Flag|meta|rot2|side`,
+            block: `_${bb} Banner Flag|meta|rot2|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${qq} Banner|meta|rot3|side`]: {
+        [`${bb} Banner|meta|rot3|side`]: {
           positions: [{
-            block: `${qq} Banner|meta|rot3|side`,
+            block: `${bb} Banner|meta|rot3|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${qq} Banner Flag|meta|rot3|side`,
+            block: `_${bb} Banner Flag|meta|rot3|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${qq} Banner|meta|rot4|side`]: {
+        [`${bb} Banner|meta|rot4|side`]: {
           positions: [{
-            block: `${qq} Banner|meta|rot4|side`,
+            block: `${bb} Banner|meta|rot4|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${qq} Banner Flag|meta|rot4|side`,
+            block: `_${bb} Banner Flag|meta|rot4|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${qq} Banner|meta|rot1|top`]: {
+        [`${bb} Banner|meta|rot1|top`]: {
           positions: [{
-            block: `${qq} Banner|meta|rot1|top`,
+            block: `${bb} Banner|meta|rot1|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${qq} Banner Flag`,
+            block: `_${bb} Banner Flag`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${qq} Banner|meta|rot2|top`]: {
+        [`${bb} Banner|meta|rot2|top`]: {
           positions: [{
-            block: `${qq} Banner|meta|rot2|top`,
+            block: `${bb} Banner|meta|rot2|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${qq} Banner Flag|meta|rot2|top`,
+            block: `_${bb} Banner Flag|meta|rot2|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${qq} Banner|meta|rot3|top`]: {
+        [`${bb} Banner|meta|rot3|top`]: {
           positions: [{
-            block: `${qq} Banner|meta|rot3|top`,
+            block: `${bb} Banner|meta|rot3|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${qq} Banner Flag|meta|rot3|top`,
+            block: `_${bb} Banner Flag|meta|rot3|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${qq} Banner|meta|rot4|top`]: {
+        [`${bb} Banner|meta|rot4|top`]: {
           positions: [{
-            block: `${qq} Banner|meta|rot4|top`,
+            block: `${bb} Banner|meta|rot4|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${qq} Banner Flag|meta|rot4|top`,
+            block: `_${bb} Banner Flag|meta|rot4|top`,
             x: 0,
             y: -1,
             z: 0
@@ -3566,96 +3566,96 @@ export const modules = {
       }
     }
 
-    function Aq(qq) {
-      const Eq = (0, Oq.Zb)(qq);
+    function Yb(bb) {
+      const ub = (0, Gb.Yb)(bb);
       return {
-        [Eq]: {
+        [ub]: {
           positions: [{
-            block: Eq,
+            block: ub,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Eq} Top Left`,
+            block: `_${ub} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Eq} Top Right`,
+            block: `_${ub} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${Eq} Bottom Right`,
+            block: `_${ub} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${Eq}|meta|rot2`]: {
+        [`${ub}|meta|rot2`]: {
           positions: [{
-            block: `${Eq}|meta|rot2`,
+            block: `${ub}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Eq} Top Left|meta|rot2`,
+            block: `_${ub} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Eq} Top Right|meta|rot2`,
+            block: `_${ub} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${Eq} Bottom Right|meta|rot2`,
+            block: `_${ub} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${Eq}|meta|rot3`]: {
+        [`${ub}|meta|rot3`]: {
           positions: [{
-            block: `${Eq}|meta|rot3`,
+            block: `${ub}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Eq} Top Left|meta|rot3`,
+            block: `_${ub} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Eq} Top Right|meta|rot3`,
+            block: `_${ub} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${Eq} Bottom Right|meta|rot3`,
+            block: `_${ub} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${Eq}|meta|rot4`]: {
+        [`${ub}|meta|rot4`]: {
           positions: [{
-            block: `${Eq}|meta|rot4`,
+            block: `${ub}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Eq} Top Left|meta|rot4`,
+            block: `_${ub} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Eq} Top Right|meta|rot4`,
+            block: `_${ub} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${Eq} Bottom Right|meta|rot4`,
+            block: `_${ub} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3664,77 +3664,77 @@ export const modules = {
       }
     }
 
-    function cq(qq) {
-      const Eq = `_${qq} Back`,
-        gq = `_${qq} Dish`;
+    function Sb(bb) {
+      const ub = `_${bb} Back`,
+        hb = `_${bb} Dish`;
       return {
-        [qq]: {
+        [bb]: {
           positions: [{
-            block: qq,
+            block: bb,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: Eq,
+            block: ub,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: gq,
+            block: hb,
             x: 0,
             y: 1,
             z: -1
           }]
         },
-        [`${qq}|meta|rot2`]: {
+        [`${bb}|meta|rot2`]: {
           positions: [{
-            block: `${qq}|meta|rot2`,
+            block: `${bb}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Eq}|meta|rot2`,
+            block: `${ub}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${gq}|meta|rot2`,
+            block: `${hb}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
           }]
         },
-        [`${qq}|meta|rot3`]: {
+        [`${bb}|meta|rot3`]: {
           positions: [{
-            block: `${qq}|meta|rot3`,
+            block: `${bb}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Eq}|meta|rot3`,
+            block: `${ub}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${gq}|meta|rot3`,
+            block: `${hb}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
           }]
         },
-        [`${qq}|meta|rot4`]: {
+        [`${bb}|meta|rot4`]: {
           positions: [{
-            block: `${qq}|meta|rot4`,
+            block: `${bb}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Eq}|meta|rot4`,
+            block: `${ub}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${gq}|meta|rot4`,
+            block: `${hb}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -3743,22 +3743,22 @@ export const modules = {
       }
     }
 
-    function uq(qq) {
-      const Eq = `Small ${qq} Pod`;
+    function ab(bb) {
+      const ub = `Small ${bb} Pod`;
       return {
-        [Eq]: {
+        [ub]: {
           positions: [{
-            block: Eq,
+            block: ub,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_Small ${qq} Pod Mid`,
+            block: `_Small ${bb} Pod Mid`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_Small ${qq} Pod Top`,
+            block: `_Small ${bb} Pod Top`,
             x: 0,
             y: 2,
             z: 0
@@ -3766,280 +3766,280 @@ export const modules = {
         }
       }
     }
-    for (const Wq in mq) {
-      for (const qq of mq[Wq].positions)
-        if (qq.id = lq.i[qq.block].id, Wq === qq.block && (0 !== qq.x || 0 !== qq.y || 0 !== qq.z)) throw new Error(`Multiblock "${Wq}" has main block "${qq.block}" at non-origin position (${qq.x}, ${qq.y}, ${qq.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      mq[lq.i[Wq].id] = mq[Wq]
+    for (const wb in Ub) {
+      for (const bb of Ub[wb].positions)
+        if (bb.id = Ob.i[bb.block].id, wb === bb.block && (0 !== bb.x || 0 !== bb.y || 0 !== bb.z)) throw new Error(`Multiblock "${wb}" has main block "${bb.block}" at non-origin position (${bb.x}, ${bb.y}, ${bb.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      Ub[Ob.i[wb].id] = Ub[wb]
     }
-    const Bq = {};
-    for (const Wq in mq)
+    const Hb = {};
+    for (const wb in Ub)
       for (const {
-          block: qq,
-          x: Eq,
-          y: gq,
-          z: Yq
+          block: bb,
+          x: ub,
+          y: hb,
+          z: Bb
         }
-        of mq[Wq].positions) {
-        const Oq = {
-          mainMultiblock: Wq,
-          compX: Eq,
-          compY: gq,
-          compZ: Yq
+        of Ub[wb].positions) {
+        const Gb = {
+          mainMultiblock: wb,
+          compX: ub,
+          compY: hb,
+          compZ: Bb
         };
-        Bq[qq] = Oq, Bq[lq.i[qq].id] = Oq
+        Hb[bb] = Gb, Hb[Ob.i[bb].id] = Gb
       }
   },
-  38207: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Aq,
-      f: () => xq
+  37832: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Yb,
+      f: () => Lb
     });
-    var Yq = gq(9379),
-      lq = gq(9438),
-      Oq = gq(9440);
-    const mq = lq.s.map((qq => {
+    var Bb = hb(9181),
+      Ob = hb(9240),
+      Gb = hb(9244);
+    const Ub = Ob.u.map((bb => {
       let {
-        dx: Eq,
-        dz: gq
-      } = qq;
-      return [Eq, 0, gq]
+        dx: ub,
+        dz: hb
+      } = bb;
+      return [ub, 0, hb]
     }));
 
-    function xq(qq) {
-      const Eq = Yq.i[qq];
-      return !!Eq && qq !== Yq.e && !Eq.model && !Eq.wW && !1 !== Eq.solid && !Eq.pV
+    function Lb(bb) {
+      const ub = Bb.i[bb];
+      return !!ub && bb !== Bb.d && !ub.model && !ub.Pw && !1 !== ub.solid && !ub.ep
     }
-    class Aq {
-      constructor(qq) {
-        this.model = qq, this.reshapeOffsets = [...mq, [0, -1, 0]]
+    class Yb {
+      constructor(bb) {
+        this.model = bb, this.reshapeOffsets = [...Ub, [0, -1, 0]]
       }
-      handles(qq) {
-        const Eq = Yq.i[qq];
-        return (null === Eq || void 0 === Eq ? void 0 : Eq.model) === this.model && void 0 !== Eq.attachedTop
+      handles(bb) {
+        const ub = Bb.i[bb];
+        return (null === ub || void 0 === ub ? void 0 : ub.model) === this.model && void 0 !== ub.attachedTop
       }
-      affects(qq) {
-        return this.handles(qq) || xq(qq) || (0, Oq.w)(Yq.i[qq])
+      affects(bb) {
+        return this.handles(bb) || Lb(bb) || (0, Gb.w)(Bb.i[bb])
       }
-      shape(qq, Eq, gq, mq, Aq) {
-        let cq = this.handles(qq(Eq, gq + 1, mq)) ? lq.f : 0;
-        return lq.s.forEach(((Aq, uq) => {
+      shape(bb, ub, hb, Ub, Yb) {
+        let Sb = this.handles(bb(ub, hb + 1, Ub)) ? Ob.j : 0;
+        return Ob.u.forEach(((Yb, ab) => {
           let {
-            dx: Bq,
-            dz: Wq
-          } = Aq;
-          const Nq = qq(Eq + Bq, gq, mq + Wq);
-          (this.handles(Nq) || xq(Nq) || function(qq, Eq) {
-            const gq = Yq.i[qq];
-            return (0, Oq.w)(gq) && (0, Oq.r)(gq.meta.rot) === (0 !== lq.s[Eq].dx)
-          }(Nq, uq)) && (cq |= 1 << uq)
-        })), (0, Yq.k)((0, lq.j)(Yq.i[Aq].meta.rootName, cq))
+            dx: Hb,
+            dz: wb
+          } = Yb;
+          const Zb = bb(ub + Hb, hb, Ub + wb);
+          (this.handles(Zb) || Lb(Zb) || function(bb, ub) {
+            const hb = Bb.i[bb];
+            return (0, Gb.w)(hb) && (0, Gb.q)(hb.meta.rot) === (0 !== Ob.u[ub].dx)
+          }(Zb, ab)) && (Sb |= 1 << ab)
+        })), (0, Bb.k)((0, Ob.n)(Bb.i[Yb].meta.rootName, Sb))
       }
     }
   },
-  37972: (qq, Eq, gq) => {
-    function Yq(qq, Eq) {
-      var gq;
-      Eq || (Eq = {});
-      const Yq = null !== (gq = Eq.customAttributes) && void 0 !== gq ? gq : {};
-      var lq, Oq, mq;
-      "Gun" === (null === qq || void 0 === qq ? void 0 : qq.type) && (Yq.shotsLeft = null !== (lq = null !== (Oq = Yq.shotsLeft) && void 0 !== Oq ? Oq : null === (mq = Yq.gunStats) || void 0 === mq ? void 0 : mq.clipSize) && void 0 !== lq ? lq : qq.clipSize);
-      if (Yq.enchantmentTier && (Yq.enchantmentTier = Yq.enchantmentTier.toString()), Yq.enchantments)
-        for (const Bq in Yq.enchantments) {
-          const qq = Yq.enchantments[Bq];
-          if ("number" !== typeof qq) {
-            const Eq = parseInt(qq);
-            isNaN(Eq) || Eq < 0 ? Yq.enchantments[Bq] = void 0 : Yq.enchantments[Bq] = Eq > 1e9 ? 1e9 : Eq
+  37598: (bb, ub, hb) => {
+    function Bb(bb, ub) {
+      var hb;
+      ub || (ub = {});
+      const Bb = null !== (hb = ub.customAttributes) && void 0 !== hb ? hb : {};
+      var Ob, Gb, Ub;
+      "Gun" === (null === bb || void 0 === bb ? void 0 : bb.type) && (Bb.shotsLeft = null !== (Ob = null !== (Gb = Bb.shotsLeft) && void 0 !== Gb ? Gb : null === (Ub = Bb.gunStats) || void 0 === Ub ? void 0 : Ub.clipSize) && void 0 !== Ob ? Ob : bb.clipSize);
+      if (Bb.enchantmentTier && (Bb.enchantmentTier = Bb.enchantmentTier.toString()), Bb.enchantments)
+        for (const Hb in Bb.enchantments) {
+          const bb = Bb.enchantments[Hb];
+          if ("number" !== typeof bb) {
+            const ub = parseInt(bb);
+            isNaN(ub) || ub < 0 ? Bb.enchantments[Hb] = void 0 : Bb.enchantments[Hb] = ub > 1e9 ? 1e9 : ub
           }
         }
-      if (Yq.enchantmentData)
-        for (const Bq in Yq.enchantmentData) {
-          const qq = Yq.enchantmentData[Bq];
-          if (!qq) continue;
-          if ("object" !== typeof qq) {
-            Yq.enchantmentData[Bq] = void 0;
+      if (Bb.enchantmentData)
+        for (const Hb in Bb.enchantmentData) {
+          const bb = Bb.enchantmentData[Hb];
+          if (!bb) continue;
+          if ("object" !== typeof bb) {
+            Bb.enchantmentData[Hb] = void 0;
             continue
           }
-          const Eq = qq.icon,
-            gq = qq.description;
-          var xq, Aq, cq, uq;
-          if ("string" !== typeof Eq) Yq.enchantmentData[Bq].icon = null !== (xq = null === Eq || void 0 === Eq || null === (Aq = Eq.toString) || void 0 === Aq ? void 0 : Aq.call(Eq)) && void 0 !== xq ? xq : void 0;
-          if ("string" !== typeof gq) Yq.enchantmentData[Bq].description = null !== (cq = null === gq || void 0 === gq || null === (uq = gq.toString) || void 0 === uq ? void 0 : uq.call(gq)) && void 0 !== cq ? cq : void 0
+          const ub = bb.icon,
+            hb = bb.description;
+          var Lb, Yb, Sb, ab;
+          if ("string" !== typeof ub) Bb.enchantmentData[Hb].icon = null !== (Lb = null === ub || void 0 === ub || null === (Yb = ub.toString) || void 0 === Yb ? void 0 : Yb.call(ub)) && void 0 !== Lb ? Lb : void 0;
+          if ("string" !== typeof hb) Bb.enchantmentData[Hb].description = null !== (Sb = null === hb || void 0 === hb || null === (ab = hb.toString) || void 0 === ab ? void 0 : ab.call(hb)) && void 0 !== Sb ? Sb : void 0
         }
-      return Eq.customAttributes = Yq, Eq
+      return ub.customAttributes = Bb, ub
     }
-    gq.d(Eq, {
-      c: () => Yq
+    hb.d(ub, {
+      d: () => Bb
     })
   },
-  38202: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => tq,
-      f: () => jq,
-      g: () => Aq,
-      h: () => Bq,
-      j: () => rq
+  37824: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => rb,
+      i: () => Ab,
+      l: () => Yb,
+      m: () => Hb,
+      q: () => jb
     });
-    var Yq = gq(9379),
-      lq = gq(9419),
-      Oq = gq(38207);
-    const mq = (0, Yq.k)("Noticeboard"),
-      xq = (0, Yq.k)("Standing Noticeboard|meta|rot4|lrud");
+    var Bb = hb(9181),
+      Ob = hb(9221),
+      Gb = hb(37832);
+    const Ub = (0, Bb.k)("Noticeboard"),
+      Lb = (0, Bb.k)("Standing Noticeboard|meta|rot4|lrud");
 
-    function Aq(qq) {
-      return mq <= qq && qq <= xq
+    function Yb(bb) {
+      return Ub <= bb && bb <= Lb
     }
-    const cq = new Uint8Array(xq - mq + 1);
-    for (let vq = mq; vq <= xq; vq++) cq[vq - mq] = (0, lq.q)(Yq.i[vq].meta.metaStr);
-    const uq = 64,
-      Bq = uq * uq,
-      [Wq, Nq, aq, Vq] = [0, 1, 2, 3];
+    const Sb = new Uint8Array(Lb - Ub + 1);
+    for (let nb = Ub; nb <= Lb; nb++) Sb[nb - Ub] = (0, Ob.o)(Bb.i[nb].meta.metaStr);
+    const ab = 64,
+      Hb = ab * ab,
+      [wb, Zb, Xb, pb] = [0, 1, 2, 3];
 
-    function dq(qq) {
-      var Eq, gq;
-      return "string" === typeof(null === qq || void 0 === qq || null === (Eq = qq.persisted) || void 0 === Eq || null === (gq = Eq.shared) || void 0 === gq ? void 0 : gq.text)
-    }
-
-    function jq(qq) {
-      return dq(qq) && "" !== qq.persisted.shared.text.trim()
+    function ob(bb) {
+      var ub, hb;
+      return "string" === typeof(null === bb || void 0 === bb || null === (ub = bb.persisted) || void 0 === ub || null === (hb = ub.shared) || void 0 === hb ? void 0 : hb.text)
     }
 
-    function Hq(qq, Eq) {
-      let [gq, , Yq] = Eq;
-      const [Oq, , mq] = lq.u[qq][Nq];
-      return gq * Oq + Yq * mq
+    function Ab(bb) {
+      return ob(bb) && "" !== bb.persisted.shared.text.trim()
     }
 
-    function oq(qq, Eq, gq) {
-      return gq[1] - Eq[1] || Hq(qq, Eq) - Hq(qq, gq)
+    function lb(bb, ub) {
+      let [hb, , Bb] = ub;
+      const [Gb, , Ub] = Ob.t[bb][Zb];
+      return hb * Gb + Bb * Ub
     }
 
-    function Pq(qq, Eq, gq, Oq, xq) {
-      var Aq;
-      let uq = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : qq(Eq[0], Eq[1], Eq[2]);
-      if (!(cq[uq - mq] & 1 << gq)) return null;
-      const [Bq, Wq, Nq] = lq.u[xq][gq], aq = [Eq[0] + Bq, Eq[1] + Wq, Eq[2] + Nq], Vq = qq(aq[0], aq[1], aq[2]), dq = null === (Aq = Yq.i[Vq]) || void 0 === Aq ? void 0 : Aq.meta;
-      return (null === dq || void 0 === dq ? void 0 : dq.rootId) === Oq && dq.rot === xq && cq[Vq - mq] & 1 << (1 ^ gq) ? aq : null
+    function Kb(bb, ub, hb) {
+      return hb[1] - ub[1] || lb(bb, ub) - lb(bb, hb)
     }
 
-    function Qq(qq, Eq, gq, Oq) {
-      const mq = qq(Eq, gq, Oq);
-      if (!Aq(mq)) return null;
+    function Wb(bb, ub, hb, Gb, Lb) {
+      var Yb;
+      let ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bb(ub[0], ub[1], ub[2]);
+      if (!(Sb[ab - Ub] & 1 << hb)) return null;
+      const [Hb, wb, Zb] = Ob.t[Lb][hb], Xb = [ub[0] + Hb, ub[1] + wb, ub[2] + Zb], pb = bb(Xb[0], Xb[1], Xb[2]), ob = null === (Yb = Bb.i[pb]) || void 0 === Yb ? void 0 : Yb.meta;
+      return (null === ob || void 0 === ob ? void 0 : ob.rootId) === Gb && ob.rot === Lb && Sb[pb - Ub] & 1 << (1 ^ hb) ? Xb : null
+    }
+
+    function Cb(bb, ub, hb, Gb) {
+      const Ub = bb(ub, hb, Gb);
+      if (!Yb(Ub)) return null;
       const {
-        rootId: xq,
-        rot: cq
-      } = Yq.i[mq].meta, Bq = (Eq, gq) => {
-        let Yq = Eq,
-          lq = 1;
-        for (let Oq = Pq(qq, Yq, gq, xq, cq); Oq && lq < uq; Oq = Pq(qq, Yq, gq, xq, cq)) Yq = Oq, lq++;
+        rootId: Lb,
+        rot: Sb
+      } = Bb.i[Ub].meta, Hb = (ub, hb) => {
+        let Bb = ub,
+          Ob = 1;
+        for (let Gb = Wb(bb, Bb, hb, Lb, Sb); Gb && Ob < ab; Gb = Wb(bb, Bb, hb, Lb, Sb)) Bb = Gb, Ob++;
         return {
-          end: Yq,
-          cells: lq
+          end: Bb,
+          cells: Ob
         }
-      }, dq = Bq(Bq([Eq, gq, Oq], Wq).end, aq).end, jq = Bq(dq, Nq).cells, [Hq, , oq] = lq.u[cq][Nq];
-      let Qq = 1;
-      qq: for (; Qq < uq; Qq++)
-        for (let Eq = 0; Eq < jq; Eq++)
-          if (!Pq(qq, [dq[0] + Hq * Eq, dq[1] - Qq + 1, dq[2] + oq * Eq], Vq, xq, cq)) break qq;
+      }, ob = Hb(Hb([ub, hb, Gb], wb).end, Xb).end, Ab = Hb(ob, Zb).cells, [lb, , Kb] = Ob.t[Sb][Zb];
+      let Cb = 1;
+      bb: for (; Cb < ab; Cb++)
+        for (let ub = 0; ub < Ab; ub++)
+          if (!Wb(bb, [ob[0] + lb * ub, ob[1] - Cb + 1, ob[2] + Kb * ub], pb, Lb, Sb)) break bb;
       return {
-        anchor: dq,
-        rootId: xq,
-        rot: cq,
-        width: jq,
-        height: Qq
+        anchor: ob,
+        rootId: Lb,
+        rot: Sb,
+        width: Ab,
+        height: Cb
       }
     }
 
-    function yq(qq, Eq) {
-      for (const gq of function(qq) {
+    function db(bb, ub) {
+      for (const hb of function(bb) {
           let {
-            anchor: Eq,
-            rot: gq,
-            width: Yq,
-            height: Oq
-          } = qq;
-          const [mq, , xq] = lq.u[gq][Nq], Aq = [];
-          for (let lq = 0; lq < Oq; lq++)
-            for (let qq = 0; qq < Yq; qq++) Aq.push([Eq[0] + mq * qq, Eq[1] - lq, Eq[2] + xq * qq]);
-          return Aq
-        }(qq))
-        if (dq(Eq(gq[0], gq[1], gq[2]))) return gq;
+            anchor: ub,
+            rot: hb,
+            width: Bb,
+            height: Gb
+          } = bb;
+          const [Ub, , Lb] = Ob.t[hb][Zb], Yb = [];
+          for (let Ob = 0; Ob < Gb; Ob++)
+            for (let bb = 0; bb < Bb; bb++) Yb.push([ub[0] + Ub * bb, ub[1] - Ob, ub[2] + Lb * bb]);
+          return Yb
+        }(bb))
+        if (ob(ub(hb[0], hb[1], hb[2]))) return hb;
       return null
     }
 
-    function tq(qq, Eq, gq, lq, Oq) {
-      const mq = qq(gq, lq, Oq);
-      if (!Aq(mq)) return null;
+    function rb(bb, ub, hb, Ob, Gb) {
+      const Ub = bb(hb, Ob, Gb);
+      if (!Yb(Ub)) return null;
       const {
-        rootId: xq,
-        rot: cq
-      } = Yq.i[mq].meta, uq = [
-        [gq, lq, Oq]
-      ], Wq = new Set([uq[0].join()]);
-      let Nq = uq[0],
-        aq = null;
-      for (let Yq = 0; Yq < uq.length; Yq++) {
-        const gq = uq[Yq];
-        if (oq(cq, gq, Nq) < 0 && (Nq = gq), dq(Eq(gq[0], gq[1], gq[2]))) {
-          const Eq = Qq(qq, gq[0], gq[1], gq[2]);
-          (!aq || oq(cq, Eq.anchor, aq.anchor) < 0) && (aq = Eq)
+        rootId: Lb,
+        rot: Sb
+      } = Bb.i[Ub].meta, ab = [
+        [hb, Ob, Gb]
+      ], wb = new Set([ab[0].join()]);
+      let Zb = ab[0],
+        Xb = null;
+      for (let Bb = 0; Bb < ab.length; Bb++) {
+        const hb = ab[Bb];
+        if (Kb(Sb, hb, Zb) < 0 && (Zb = hb), ob(ub(hb[0], hb[1], hb[2]))) {
+          const ub = Cb(bb, hb[0], hb[1], hb[2]);
+          (!Xb || Kb(Sb, ub.anchor, Xb.anchor) < 0) && (Xb = ub)
         }
-        for (let Eq = 0; Eq < 4 && uq.length < Bq; Eq++) {
-          const Yq = Pq(qq, gq, Eq, xq, cq);
-          Yq && !Wq.has(Yq.join()) && (Wq.add(Yq.join()), uq.push(Yq))
+        for (let ub = 0; ub < 4 && ab.length < Hb; ub++) {
+          const Bb = Wb(bb, hb, ub, Lb, Sb);
+          Bb && !wb.has(Bb.join()) && (wb.add(Bb.join()), ab.push(Bb))
         }
       }
-      return aq ??= Qq(qq, Nq[0], Nq[1], Nq[2]), {
-        cells: uq,
-        topLeft: Nq,
-        rect: aq,
-        textCell: yq(aq, Eq)
+      return Xb ??= Cb(bb, Zb[0], Zb[1], Zb[2]), {
+        cells: ab,
+        topLeft: Zb,
+        rect: Xb,
+        textCell: db(Xb, ub)
       }
     }
 
-    function rq(qq, Eq, gq, mq, xq) {
-      if (null !== gq && Aq(gq)) {
+    function jb(bb, ub, hb, Ub, Lb) {
+      if (null !== hb && Yb(hb)) {
         const {
-          rootName: qq,
-          rot: Eq
-        } = Yq.i[gq].meta;
-        if (lq.u[Eq].some((qq => {
-            let [Eq, gq, Yq] = qq;
-            return Eq === mq[0] && gq === mq[1] && Yq === mq[2]
+          rootName: bb,
+          rot: ub
+        } = Bb.i[hb].meta;
+        if (Ob.t[ub].some((bb => {
+            let [ub, hb, Bb] = bb;
+            return ub === Ub[0] && hb === Ub[1] && Bb === Ub[2]
           }))) return {
-          root: qq,
-          rot: Eq
+          root: bb,
+          rot: ub
         }
       }
-      const [cq, uq] = lq.n[xq], Bq = qq(Eq[0] - cq, Eq[1], Eq[2] - uq);
+      const [Sb, ab] = Ob.j[Lb], Hb = bb(ub[0] - Sb, ub[1], ub[2] - ab);
       return {
-        root: (0, Oq.f)(Bq) ? lq.w : lq.v,
-        rot: xq
+        root: (0, Gb.f)(Hb) ? Ob.A : Ob.x,
+        rot: Lb
       }
     }
   },
-  38216: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq,
-      d: () => mq,
-      e: () => lq,
-      i: () => xq
+  37840: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Gb,
+      i: () => Ub,
+      j: () => Ob,
+      l: () => Lb
     });
-    var Yq = gq(315);
-    const lq = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...gq(590).o.map((qq => `${qq} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...Yq.m, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      Oq = ["Obby RPG"];
+    var Bb = hb(320);
+    const Ob = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...hb(580).q.map((bb => `${bb} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...Bb.g, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      Gb = ["Obby RPG"];
 
-    function mq(qq) {
-      const Eq = qq.indexOf("|");
-      return -1 === Eq ? {
-        item: qq,
+    function Ub(bb) {
+      const ub = bb.indexOf("|");
+      return -1 === ub ? {
+        item: bb,
         clientPredictedThrower: null
       } : {
-        item: qq.slice(0, Eq),
-        clientPredictedThrower: qq.slice(Eq + 1)
+        item: bb.slice(0, ub),
+        clientPredictedThrower: bb.slice(ub + 1)
       }
     }
-    const xq = [...lq, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const Lb = [...Ob, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

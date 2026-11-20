@@ -1,30 +1,30 @@
-/*! For license information please see bbb6l5.wasmMatchmaking.848266e5.chunk.js.LICENSE.txt */
+/*! For license information please see halsg.wasmMatchmaking.7d7fbcce.chunk.js.LICENSE.txt */
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  36586: (qq, Eq) => {
-    function gq(qq) {
-      if (qq && "object" === typeof qq) {
-        var Eq = qq.which || qq.keyCode || qq.charCode;
-        Eq && (qq = Eq)
+  36155: (bb, ub) => {
+    function hb(bb) {
+      if (bb && "object" === typeof bb) {
+        var ub = bb.which || bb.keyCode || bb.charCode;
+        ub && (bb = ub)
       }
-      if ("number" === typeof qq) return mq[qq];
-      var gq, Oq = String(qq);
-      return (gq = Yq[Oq.toLowerCase()]) ? gq : (gq = lq[Oq.toLowerCase()]) || (1 === Oq.length ? Oq.charCodeAt(0) : void 0)
+      if ("number" === typeof bb) return Ub[bb];
+      var hb, Gb = String(bb);
+      return (hb = Bb[Gb.toLowerCase()]) ? hb : (hb = Ob[Gb.toLowerCase()]) || (1 === Gb.length ? Gb.charCodeAt(0) : void 0)
     }
-    gq.isEventKey = function(qq, Eq) {
-      if (qq && "object" === typeof qq) {
-        var gq = qq.which || qq.keyCode || qq.charCode;
-        if (null === gq || void 0 === gq) return !1;
-        if ("string" === typeof Eq) {
-          var Oq;
-          if (Oq = Yq[Eq.toLowerCase()]) return Oq === gq;
-          if (Oq = lq[Eq.toLowerCase()]) return Oq === gq
-        } else if ("number" === typeof Eq) return Eq === gq;
+    hb.isEventKey = function(bb, ub) {
+      if (bb && "object" === typeof bb) {
+        var hb = bb.which || bb.keyCode || bb.charCode;
+        if (null === hb || void 0 === hb) return !1;
+        if ("string" === typeof ub) {
+          var Gb;
+          if (Gb = Bb[ub.toLowerCase()]) return Gb === hb;
+          if (Gb = Ob[ub.toLowerCase()]) return Gb === hb
+        } else if ("number" === typeof ub) return ub === hb;
         return !1
       }
     };
-    var Yq = (Eq = qq.exports = gq).code = Eq.codes = {
+    var Bb = (ub = bb.exports = hb).code = ub.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      lq = Eq.aliases = {
+      Ob = ub.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (Oq = 97; Oq < 123; Oq++) Yq[String.fromCharCode(Oq)] = Oq - 32;
-    for (var Oq = 48; Oq < 58; Oq++) Yq[Oq - 48] = Oq;
-    for (Oq = 1; Oq < 13; Oq++) Yq["f" + Oq] = Oq + 111;
-    for (Oq = 0; Oq < 10; Oq++) Yq["numpad " + Oq] = Oq + 96;
-    var mq = Eq.names = Eq.title = {};
-    for (Oq in Yq) mq[Yq[Oq]] = Oq;
-    for (var xq in lq) Yq[xq] = lq[xq]
+    for (Gb = 97; Gb < 123; Gb++) Bb[String.fromCharCode(Gb)] = Gb - 32;
+    for (var Gb = 48; Gb < 58; Gb++) Bb[Gb - 48] = Gb;
+    for (Gb = 1; Gb < 13; Gb++) Bb["f" + Gb] = Gb + 111;
+    for (Gb = 0; Gb < 10; Gb++) Bb["numpad " + Gb] = Gb + 96;
+    var Ub = ub.names = ub.title = {};
+    for (Gb in Bb) Ub[Bb[Gb]] = Gb;
+    for (var Lb in Ob) Bb[Lb] = Ob[Lb]
   },
-  36744: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => mq
+  36322: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Ub
     });
-    var Yq = gq(57);
-    const lq = Yq.useLayoutEffect;
-    const Oq = function(qq) {
-      var Eq = (0, Yq.useRef)(qq);
-      return lq((function() {
-        Eq.current = qq
-      })), Eq
+    var Bb = hb(49);
+    const Ob = Bb.useLayoutEffect;
+    const Gb = function(bb) {
+      var ub = (0, Bb.useRef)(bb);
+      return Ob((function() {
+        ub.current = bb
+      })), ub
     };
-    var mq = function(qq) {
-      var Eq = Oq(qq);
-      (0, Yq.useEffect)((function() {
-        var qq = function(qq) {
-          var gq;
-          if (null != Eq.current && (gq = Eq.current(qq)), qq.defaultPrevented && (qq.returnValue = ""), "string" === typeof gq) return qq.returnValue = gq, gq
+    var Ub = function(bb) {
+      var ub = Gb(bb);
+      (0, Bb.useEffect)((function() {
+        var bb = function(bb) {
+          var hb;
+          if (null != ub.current && (hb = ub.current(bb)), bb.defaultPrevented && (bb.returnValue = ""), "string" === typeof hb) return bb.returnValue = hb, hb
         };
-        return window.addEventListener("beforeunload", qq),
+        return window.addEventListener("beforeunload", bb),
           function() {
-            window.removeEventListener("beforeunload", qq)
+            window.removeEventListener("beforeunload", bb)
           }
       }), [])
     }
   },
-  36640: qq => {
-    var Eq, gq = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      Yq = /OS X/.test(gq),
-      lq = /Opera/.test(gq),
-      Oq = !/like Gecko/.test(gq) && !lq,
-      mq = qq.exports = {
-        0: Yq ? "<menu>" : "<UNK>",
+  36198: bb => {
+    var ub, hb = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Bb = /OS X/.test(hb),
+      Ob = /Opera/.test(hb),
+      Gb = !/like Gecko/.test(hb) && !Ob,
+      Ub = bb.exports = {
+        0: Bb ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: Yq ? "<meta>" : "<menu>",
+        93: Bb ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: Yq && Oq ? "-" : "<volume-mute>",
+        173: Bb && Gb ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: lq ? "`" : "<unicode>",
+        231: Ob ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,180 +234,180 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (Eq = 58; Eq < 65; ++Eq) mq[Eq] = String.fromCharCode(Eq);
-    for (Eq = 48; Eq < 58; ++Eq) mq[Eq] = Eq - 48 + "";
-    for (Eq = 65; Eq < 91; ++Eq) mq[Eq] = String.fromCharCode(Eq);
-    for (Eq = 96; Eq < 106; ++Eq) mq[Eq] = "<num-" + (Eq - 96) + ">";
-    for (Eq = 112; Eq < 136; ++Eq) mq[Eq] = "F" + (Eq - 111)
+    for (ub = 58; ub < 65; ++ub) Ub[ub] = String.fromCharCode(ub);
+    for (ub = 48; ub < 58; ++ub) Ub[ub] = ub - 48 + "";
+    for (ub = 65; ub < 91; ++ub) Ub[ub] = String.fromCharCode(ub);
+    for (ub = 96; ub < 106; ++ub) Ub[ub] = "<num-" + (ub - 96) + ">";
+    for (ub = 112; ub < 136; ++ub) Ub[ub] = "F" + (ub - 111)
   },
-  6535: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq,
-      d: () => Oq
+  6394: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Ob,
+      g: () => Gb
     });
-    var Yq = gq(38);
-    const lq = "shaderPack";
-    async function Oq() {
-      var qq;
-      let Eq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (qq = await Yq.f.getItem(lq, Eq)) && void 0 !== qq ? qq : null
-    }
-  },
-  8867: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Oq,
-      h: () => lq
-    });
-    let Yq = !1;
-
-    function lq() {
-      Yq = !0
-    }
-
-    function Oq() {
-      return Yq
+    var Bb = hb(29);
+    const Ob = "shaderPack";
+    async function Gb() {
+      var bb;
+      let ub = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (bb = await Bb.f.getItem(Ob, ub)) && void 0 !== bb ? bb : null
     }
   },
-  36502: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      InGameUi: () => oq.b,
-      LobbyLeaderboard: () => Pq.c,
-      loadCharacterCustomisationUI: () => Qq,
-      loadCharacterPreview: () => yq,
-      matchmakeAndPlay: () => hq,
-      setUpGame: () => tq
+  8633: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Gb,
+      g: () => Ob
     });
-    var Yq = gq(1234),
-      lq = gq(163),
-      Oq = gq(24),
-      mq = gq(36504),
-      xq = gq(36508),
-      Aq = gq(1926),
-      cq = gq(36534);
+    let Bb = !1;
 
-    function uq() {
-      return !1 !== Aq.c.get("canCustomiseChar")
-    }
-    let Bq = !1;
-    var Wq = gq(1308),
-      Nq = gq(1241),
-      aq = gq(663),
-      Vq = gq(8867);
-    var dq = gq(8860),
-      jq = gq(3455),
-      Hq = gq(1774);
-    var oq = gq(36545),
-      Pq = gq(37060);
-
-    function Qq() {
-      return Promise.all([gq.e(282), gq.e(388)]).then((() => gq(41007)))
+    function Ob() {
+      Bb = !0
     }
 
-    function yq() {
-      return gq.e(283).then((() => gq(41011)))
+    function Gb() {
+      return Bb
+    }
+  },
+  36057: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      InGameUi: () => Kb.d,
+      LobbyLeaderboard: () => Wb.e,
+      loadCharacterCustomisationUI: () => Cb,
+      loadCharacterPreview: () => db,
+      matchmakeAndPlay: () => Db,
+      setUpGame: () => rb
+    });
+    var Bb = hb(1141),
+      Ob = hb(148),
+      Gb = hb(13),
+      Ub = hb(36063),
+      Lb = hb(36069),
+      Yb = hb(1836),
+      Sb = hb(36104);
+
+    function ab() {
+      return !1 !== Yb.b.get("canCustomiseChar")
+    }
+    let Hb = !1;
+    var wb = hb(1218),
+      Zb = hb(1144),
+      Xb = hb(651),
+      pb = hb(8633);
+    var ob = hb(8631),
+      Ab = hb(3364),
+      lb = hb(1694);
+    var Kb = hb(36116),
+      Wb = hb(36664);
+
+    function Cb() {
+      return Promise.all([hb.e(282), hb.e(388)]).then((() => hb(40734)))
     }
 
-    function tq() {
-      return (0, dq.g)()
+    function db() {
+      return hb.e(283).then((() => hb(40739)))
     }
-    Bq || (Bq = !0, document.addEventListener("keydown", (qq => {
-        (0, cq.c)(qq, uq)
+
+    function rb() {
+      return (0, ob.g)()
+    }
+    Hb || (Hb = !0, document.addEventListener("keydown", (bb => {
+        (0, Sb.c)(bb, ab)
       }))),
-      function(qq) {
-        var Eq;
-        return !0 !== (null === qq || void 0 === qq ? void 0 : qq.saveData) && !/2g$/.test(null !== (Eq = null === qq || void 0 === qq ? void 0 : qq.effectiveType) && void 0 !== Eq ? Eq : "")
-      }(navigator.connection) && (0, aq.c)((() => {
-        (0, Vq.e)() || Promise.all([gq.e(75), gq.e(133), gq.e(88), gq.e(56)]).then((() => gq(40483))).then((qq => {
-          (0, Vq.e)() || qq.startLoadAheadOfJoin({
-            joinStarted: Vq.e,
-            language: Nq.h.get().getCurrentLanguageCode()
+      function(bb) {
+        var ub;
+        return !0 !== (null === bb || void 0 === bb ? void 0 : bb.saveData) && !/2g$/.test(null !== (ub = null === bb || void 0 === bb ? void 0 : bb.effectiveType) && void 0 !== ub ? ub : "")
+      }(navigator.connection) && (0, Xb.b)((() => {
+        (0, pb.c)() || Promise.all([hb.e(75), hb.e(133), hb.e(88), hb.e(56)]).then((() => hb(40192))).then((bb => {
+          (0, pb.c)() || bb.startLoadAheadOfJoin({
+            joinStarted: pb.c,
+            language: Zb.h.get().getCurrentLanguageCode()
           })
-        }), (qq => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", qq)
+        }), (bb => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", bb)
         }))
       }));
-    const rq = Oq.b.get("router");
-    null === rq ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function qq(Eq) {
-      if ((0, Hq.b)(Eq.state.location.pathname)) return void(0, dq.d)().catch((() => {}));
-      const gq = Eq.subscribe((Yq => {
-        (0, Hq.b)(Yq.location.pathname) && (gq(), (0, jq.b)().then((() => {
-          qq(Eq)
+    const jb = Gb.d.get("router");
+    null === jb ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function bb(ub) {
+      if ((0, lb.e)(ub.state.location.pathname)) return void(0, ob.c)().catch((() => {}));
+      const hb = ub.subscribe((Bb => {
+        (0, lb.e)(Bb.location.pathname) && (hb(), (0, Ab.e)().then((() => {
+          bb(ub)
         })))
       }))
-    }(rq), (0, mq.b)();
-    const vq = (0, xq.c)((async function(qq, Eq) {
+    }(jb), (0, Ub.b)();
+    const nb = (0, Lb.e)((async function(bb, ub) {
       let {
-        place: gq,
-        userContext: Oq,
-        direct: mq,
-        rematch: xq
-      } = qq;
-      const Aq = mq ? 1 / 0 : performance.now();
-      let cq;
+        place: hb,
+        userContext: Gb,
+        direct: Ub,
+        rematch: Lb
+      } = bb;
+      const Yb = Ub ? 1 / 0 : performance.now();
+      let Sb;
       try {
-        cq = await (0, dq.d)()
-      } catch (uq) {
-        return console.error("The wasm client did not load:", uq), (0, Wq.w)({
+        Sb = await (0, ob.c)()
+      } catch (ab) {
+        return console.error("The wasm client did not load:", ab), (0, wb.l)({
           websocketUrl: null
-        }), Yq.b.errorWithCode(String(uq), lq.h.CONNECT_TO_GAME_SERVER, {
-          error: uq,
-          severity: Eq.aborted ? "low" : "medium",
-          lE: Eq.aborted
+        }), Bb.b.errorWithCode(String(ab), Ob.k.CONNECT_TO_GAME_SERVER, {
+          error: ab,
+          severity: ub.aborted ? "low" : "medium",
+          Lu: ub.aborted
         })
       }
-      return cq.playWasmGame({
-        userContext: Oq,
-        place: gq,
-        matchedAt: Aq,
-        rematch: xq
-      }, Eq)
+      return Sb.playWasmGame({
+        userContext: Gb,
+        place: hb,
+        matchedAt: Yb,
+        rematch: Lb
+      }, ub)
     }));
 
-    function hq() {
-      return (0, dq.d)().catch((() => {})), vq(...arguments)
+    function Db() {
+      return (0, ob.c)().catch((() => {})), nb(...arguments)
     }
   },
-  8860: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => uq,
-      g: () => Bq
+  8631: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => ab,
+      g: () => Hb
     });
-    var Yq = gq(3056),
-      lq = gq(2254),
-      Oq = gq(3090),
-      mq = gq(4472),
-      xq = gq(3383),
-      Aq = gq(8867);
-    let cq = null;
+    var Bb = hb(2941),
+      Ob = hb(2161),
+      Gb = hb(2987),
+      Ub = hb(4413),
+      Lb = hb(3291),
+      Yb = hb(8633);
+    let Sb = null;
 
-    function uq() {
-      return mq.b.cancelDownloadForJoin(), (0, xq.b)(), (0, lq.g)(), (0, Aq.h)(), (0, Oq.d)(), Promise.all([gq.e(70), gq.e(73), gq.e(72), gq.e(71), gq.e(84), gq.e(261), gq.e(200), gq.e(218), gq.e(239), gq.e(213), gq.e(46)]).then((() => gq(40404))).catch((() => {})), Promise.all([gq.e(75), gq.e(133), gq.e(88), gq.e(56)]).then((() => gq(40483))).then((qq => {
+    function ab() {
+      return Ub.c.cancelDownloadForJoin(), (0, Lb.e)(), (0, Ob.h)(), (0, Yb.g)(), (0, Gb.i)(), Promise.all([hb.e(70), hb.e(73), hb.e(72), hb.e(71), hb.e(84), hb.e(261), hb.e(200), hb.e(218), hb.e(239), hb.e(213), hb.e(46)]).then((() => hb(40127))).catch((() => {})), Promise.all([hb.e(75), hb.e(133), hb.e(88), hb.e(56)]).then((() => hb(40192))).then((bb => {
         let {
-          startJoinLoad: Eq
-        } = qq;
-        Eq()
-      }), (() => {})), cq ??= Promise.all([gq.e(72), gq.e(75), gq.e(130), gq.e(74), gq.e(133), gq.e(263), gq.e(187), gq.e(88), gq.e(87), gq.e(86), gq.e(213), gq.e(61)]).then((() => gq(40581))).then((qq => (qq.startWasmPlay(), qq.followPageUiPack((qq => {
-        Yq.c.showGamePack(qq)
-      })), qq)), (qq => {
-        throw cq = null, qq
-      })), cq
+          startJoinLoad: ub
+        } = bb;
+        ub()
+      }), (() => {})), Sb ??= Promise.all([hb.e(72), hb.e(75), hb.e(130), hb.e(74), hb.e(133), hb.e(263), hb.e(187), hb.e(88), hb.e(87), hb.e(86), hb.e(213), hb.e(61)]).then((() => hb(40288))).then((bb => (bb.startWasmPlay(), bb.followPageUiPack((bb => {
+        Bb.b.showGamePack(bb)
+      })), bb)), (bb => {
+        throw Sb = null, bb
+      })), Sb
     }
 
-    function Bq() {
-      return Promise.all([gq.e(72), gq.e(75), gq.e(130), gq.e(74), gq.e(133), gq.e(263), gq.e(187), gq.e(88), gq.e(87), gq.e(86), gq.e(213), gq.e(61)]).then((() => gq(40581))).then((qq => {
-        qq.startWasmPreviews(), qq.prefetchWasmPreviews()
+    function Hb() {
+      return Promise.all([hb.e(72), hb.e(75), hb.e(130), hb.e(74), hb.e(133), hb.e(263), hb.e(187), hb.e(88), hb.e(87), hb.e(86), hb.e(213), hb.e(61)]).then((() => hb(40288))).then((bb => {
+        bb.startWasmPreviews(), bb.prefetchWasmPreviews()
       }))
     }
   },
-  9464: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq,
-      d: () => Oq
+  9280: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Ob,
+      g: () => Gb
     });
-    var Yq = gq(9433);
-    const lq = "Air",
-      Oq = Object.freeze(new Yq.e(lq, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var Bb = hb(9235);
+    const Ob = "Air",
+      Gb = Object.freeze(new Bb.d(Ob, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

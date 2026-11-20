@@ -1,181 +1,181 @@
 export const id = 286;
 export const ids = [286];
 export const modules = {
-  41044: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => HE,
-      i: () => fq,
-      ChangeSet: () => Mq,
-      m: () => iE,
-      q: () => kq,
-      u: () => TE,
-      x: () => Fq,
-      B: () => Zq,
-      C: () => lE,
-      G: () => kE,
-      E: () => RE,
-      I: () => SE,
-      J: () => QE,
-      L: () => eq,
-      O: () => Vq,
-      Q: () => yE,
-      U: () => hq,
-      V: () => bq,
-      Y: () => zE,
-      Z: () => qg,
-      $: () => vq,
-      bb: () => Eg,
-      cb: () => nq
+  40769: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => lu,
+      f: () => vb,
+      ChangeSet: () => tb,
+      i: () => gu,
+      j: () => Pb,
+      k: () => Ju,
+      n: () => yb,
+      p: () => ib,
+      t: () => Ou,
+      x: () => Pu,
+      w: () => qu,
+      B: () => Nu,
+      D: () => Cu,
+      G: () => Qb,
+      K: () => pb,
+      O: () => du,
+      Q: () => Db,
+      T: () => zb,
+      V: () => eu,
+      X: () => bh,
+      _: () => nb,
+      $: () => uh,
+      bb: () => xb
     });
-    let Yq = [],
-      lq = [];
+    let Bb = [],
+      Ob = [];
 
-    function Oq(qq) {
-      if (qq < 768) return !1;
-      for (let Eq = 0, gq = Yq.length;;) {
-        let Oq = Eq + gq >> 1;
-        if (qq < Yq[Oq]) gq = Oq;
+    function Gb(bb) {
+      if (bb < 768) return !1;
+      for (let ub = 0, hb = Bb.length;;) {
+        let Gb = ub + hb >> 1;
+        if (bb < Bb[Gb]) hb = Gb;
         else {
-          if (!(qq >= lq[Oq])) return !0;
-          Eq = Oq + 1
+          if (!(bb >= Ob[Gb])) return !0;
+          ub = Gb + 1
         }
-        if (Eq == gq) return !1
+        if (ub == hb) return !1
       }
     }
 
-    function mq(qq) {
-      return qq >= 127462 && qq <= 127487
+    function Ub(bb) {
+      return bb >= 127462 && bb <= 127487
     }(() => {
-      let qq = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((qq => qq ? parseInt(qq, 36) : 1));
-      for (let Eq = 0, gq = 0; Eq < qq.length; Eq++)(Eq % 2 ? lq : Yq).push(gq += qq[Eq])
+      let bb = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((bb => bb ? parseInt(bb, 36) : 1));
+      for (let ub = 0, hb = 0; ub < bb.length; ub++)(ub % 2 ? Ob : Bb).push(hb += bb[ub])
     })();
-    const xq = 8205;
+    const Lb = 8205;
 
-    function Aq(qq, Eq) {
-      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? cq : uq)(qq, Eq, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function Yb(bb, ub) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? Sb : ab)(bb, ub, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function cq(qq, Eq, gq) {
-      if (Eq == qq.length) return Eq;
-      Eq && Wq(qq.charCodeAt(Eq)) && Nq(qq.charCodeAt(Eq - 1)) && Eq--;
-      let Yq = Bq(qq, Eq);
-      for (Eq += aq(Yq); Eq < qq.length;) {
-        let lq = Bq(qq, Eq);
-        if (Yq == xq || lq == xq || gq && Oq(lq)) Eq += aq(lq), Yq = lq;
+    function Sb(bb, ub, hb) {
+      if (ub == bb.length) return ub;
+      ub && wb(bb.charCodeAt(ub)) && Zb(bb.charCodeAt(ub - 1)) && ub--;
+      let Bb = Hb(bb, ub);
+      for (ub += Xb(Bb); ub < bb.length;) {
+        let Ob = Hb(bb, ub);
+        if (Bb == Lb || Ob == Lb || hb && Gb(Ob)) ub += Xb(Ob), Bb = Ob;
         else {
-          if (!mq(lq)) break;
+          if (!Ub(Ob)) break;
           {
-            let gq = 0,
-              Yq = Eq - 2;
-            for (; Yq >= 0 && mq(Bq(qq, Yq));) gq++, Yq -= 2;
-            if (gq % 2 == 0) break;
-            Eq += 2
+            let hb = 0,
+              Bb = ub - 2;
+            for (; Bb >= 0 && Ub(Hb(bb, Bb));) hb++, Bb -= 2;
+            if (hb % 2 == 0) break;
+            ub += 2
           }
         }
       }
-      return Eq
+      return ub
     }
 
-    function uq(qq, Eq, gq) {
-      for (; Eq > 0;) {
-        let Yq = cq(qq, Eq - 2, gq);
-        if (Yq < Eq) return Yq;
-        Eq--
+    function ab(bb, ub, hb) {
+      for (; ub > 0;) {
+        let Bb = Sb(bb, ub - 2, hb);
+        if (Bb < ub) return Bb;
+        ub--
       }
       return 0
     }
 
-    function Bq(qq, Eq) {
-      let gq = qq.charCodeAt(Eq);
-      if (!Nq(gq) || Eq + 1 == qq.length) return gq;
-      let Yq = qq.charCodeAt(Eq + 1);
-      return Wq(Yq) ? Yq - 56320 + (gq - 55296 << 10) + 65536 : gq
+    function Hb(bb, ub) {
+      let hb = bb.charCodeAt(ub);
+      if (!Zb(hb) || ub + 1 == bb.length) return hb;
+      let Bb = bb.charCodeAt(ub + 1);
+      return wb(Bb) ? Bb - 56320 + (hb - 55296 << 10) + 65536 : hb
     }
 
-    function Wq(qq) {
-      return qq >= 56320 && qq < 57344
+    function wb(bb) {
+      return bb >= 56320 && bb < 57344
     }
 
-    function Nq(qq) {
-      return qq >= 55296 && qq < 56320
+    function Zb(bb) {
+      return bb >= 55296 && bb < 56320
     }
 
-    function aq(qq) {
-      return qq < 65536 ? 1 : 2
+    function Xb(bb) {
+      return bb < 65536 ? 1 : 2
     }
-    class Vq {
-      lineAt(qq) {
-        if (qq < 0 || qq > this.length) throw new RangeError(`Invalid position ${qq} in document of length ${this.length}`);
-        return this.lineInner(qq, !1, 1, 0)
+    class pb {
+      lineAt(bb) {
+        if (bb < 0 || bb > this.length) throw new RangeError(`Invalid position ${bb} in document of length ${this.length}`);
+        return this.lineInner(bb, !1, 1, 0)
       }
-      line(qq) {
-        if (qq < 1 || qq > this.lines) throw new RangeError(`Invalid line number ${qq} in ${this.lines}-line document`);
-        return this.lineInner(qq, !0, 1, 0)
+      line(bb) {
+        if (bb < 1 || bb > this.lines) throw new RangeError(`Invalid line number ${bb} in ${this.lines}-line document`);
+        return this.lineInner(bb, !0, 1, 0)
       }
-      replace(qq, Eq, gq) {
-        [qq, Eq] = rq(this, qq, Eq);
-        let Yq = [];
-        return this.decompose(0, qq, Yq, 2), gq.length && gq.decompose(0, gq.length, Yq, 3), this.decompose(Eq, this.length, Yq, 1), jq.from(Yq, this.length - (Eq - qq) + gq.length)
+      replace(bb, ub, hb) {
+        [bb, ub] = jb(this, bb, ub);
+        let Bb = [];
+        return this.decompose(0, bb, Bb, 2), hb.length && hb.decompose(0, hb.length, Bb, 3), this.decompose(ub, this.length, Bb, 1), Ab.from(Bb, this.length - (ub - bb) + hb.length)
       }
-      append(qq) {
-        return this.replace(this.length, this.length, qq)
+      append(bb) {
+        return this.replace(this.length, this.length, bb)
       }
-      slice(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        [qq, Eq] = rq(this, qq, Eq);
-        let gq = [];
-        return this.decompose(qq, Eq, gq, 0), jq.from(gq, Eq - qq)
+      slice(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [bb, ub] = jb(this, bb, ub);
+        let hb = [];
+        return this.decompose(bb, ub, hb, 0), Ab.from(hb, ub - bb)
       }
-      eq(qq) {
-        if (qq == this) return !0;
-        if (qq.length != this.length || qq.lines != this.lines) return !1;
-        let Eq = this.scanIdentical(qq, 1),
-          gq = this.length - this.scanIdentical(qq, -1),
-          Yq = new Pq(this),
-          lq = new Pq(qq);
-        for (let Oq = Eq, mq = Eq;;) {
-          if (Yq.next(Oq), lq.next(Oq), Oq = 0, Yq.lineBreak != lq.lineBreak || Yq.done != lq.done || Yq.value != lq.value) return !1;
-          if (mq += Yq.value.length, Yq.done || mq >= gq) return !0
+      eq(bb) {
+        if (bb == this) return !0;
+        if (bb.length != this.length || bb.lines != this.lines) return !1;
+        let ub = this.scanIdentical(bb, 1),
+          hb = this.length - this.scanIdentical(bb, -1),
+          Bb = new Wb(this),
+          Ob = new Wb(bb);
+        for (let Gb = ub, Ub = ub;;) {
+          if (Bb.next(Gb), Ob.next(Gb), Gb = 0, Bb.lineBreak != Ob.lineBreak || Bb.done != Ob.done || Bb.value != Ob.value) return !1;
+          if (Ub += Bb.value.length, Bb.done || Ub >= hb) return !0
         }
       }
       iter() {
-        return new Pq(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+        return new Wb(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
       }
-      iterRange(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        return new Qq(this, qq, Eq)
+      iterRange(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new Cb(this, bb, ub)
       }
-      iterLines(qq, Eq) {
-        let gq;
-        if (null == qq) gq = this.iter();
+      iterLines(bb, ub) {
+        let hb;
+        if (null == bb) hb = this.iter();
         else {
-          null == Eq && (Eq = this.lines + 1);
-          let Yq = this.line(qq).from;
-          gq = this.iterRange(Yq, Math.max(Yq, Eq == this.lines + 1 ? this.length : Eq <= 1 ? 0 : this.line(Eq - 1).to))
+          null == ub && (ub = this.lines + 1);
+          let Bb = this.line(bb).from;
+          hb = this.iterRange(Bb, Math.max(Bb, ub == this.lines + 1 ? this.length : ub <= 1 ? 0 : this.line(ub - 1).to))
         }
-        return new yq(gq)
+        return new db(hb)
       }
       toString() {
         return this.sliceString(0)
       }
       toJSON() {
-        let qq = [];
-        return this.flatten(qq), qq
+        let bb = [];
+        return this.flatten(bb), bb
       }
       constructor() {}
-      static of (qq) {
-        if (0 == qq.length) throw new RangeError("A document must have at least one line");
-        return 1 != qq.length || qq[0] ? qq.length <= 32 ? new dq(qq) : jq.from(dq.split(qq, [])) : Vq.empty
+      static of (bb) {
+        if (0 == bb.length) throw new RangeError("A document must have at least one line");
+        return 1 != bb.length || bb[0] ? bb.length <= 32 ? new ob(bb) : Ab.from(ob.split(bb, [])) : pb.empty
       }
     }
-    class dq extends Vq {
-      constructor(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(qq) {
-          let Eq = -1;
-          for (let gq of qq) Eq += gq.length + 1;
-          return Eq
-        }(qq);
-        super(), this.text = qq, this.length = Eq
+    class ob extends pb {
+      constructor(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(bb) {
+          let ub = -1;
+          for (let hb of bb) ub += hb.length + 1;
+          return ub
+        }(bb);
+        super(), this.text = bb, this.length = ub
       }
       get lines() {
         return this.text.length
@@ -183,629 +183,629 @@ export const modules = {
       get children() {
         return null
       }
-      lineInner(qq, Eq, gq, Yq) {
-        for (let lq = 0;; lq++) {
-          let Oq = this.text[lq],
-            mq = Yq + Oq.length;
-          if ((Eq ? gq : mq) >= qq) return new tq(Yq, mq, gq, Oq);
-          Yq = mq + 1, gq++
+      lineInner(bb, ub, hb, Bb) {
+        for (let Ob = 0;; Ob++) {
+          let Gb = this.text[Ob],
+            Ub = Bb + Gb.length;
+          if ((ub ? hb : Ub) >= bb) return new rb(Bb, Ub, hb, Gb);
+          Bb = Ub + 1, hb++
         }
       }
-      decompose(qq, Eq, gq, Yq) {
-        let lq = qq <= 0 && Eq >= this.length ? this : new dq(oq(this.text, qq, Eq), Math.min(Eq, this.length) - Math.max(0, qq));
-        if (1 & Yq) {
-          let qq = gq.pop(),
-            Eq = Hq(lq.text, qq.text.slice(), 0, lq.length);
-          if (Eq.length <= 32) gq.push(new dq(Eq, qq.length + lq.length));
+      decompose(bb, ub, hb, Bb) {
+        let Ob = bb <= 0 && ub >= this.length ? this : new ob(Kb(this.text, bb, ub), Math.min(ub, this.length) - Math.max(0, bb));
+        if (1 & Bb) {
+          let bb = hb.pop(),
+            ub = lb(Ob.text, bb.text.slice(), 0, Ob.length);
+          if (ub.length <= 32) hb.push(new ob(ub, bb.length + Ob.length));
           else {
-            let qq = Eq.length >> 1;
-            gq.push(new dq(Eq.slice(0, qq)), new dq(Eq.slice(qq)))
+            let bb = ub.length >> 1;
+            hb.push(new ob(ub.slice(0, bb)), new ob(ub.slice(bb)))
           }
-        } else gq.push(lq)
+        } else hb.push(Ob)
       }
-      replace(qq, Eq, gq) {
-        if (!(gq instanceof dq)) return super.replace(qq, Eq, gq);
-        [qq, Eq] = rq(this, qq, Eq);
-        let Yq = Hq(this.text, Hq(gq.text, oq(this.text, 0, qq)), Eq),
-          lq = this.length + gq.length - (Eq - qq);
-        return Yq.length <= 32 ? new dq(Yq, lq) : jq.from(dq.split(Yq, []), lq)
+      replace(bb, ub, hb) {
+        if (!(hb instanceof ob)) return super.replace(bb, ub, hb);
+        [bb, ub] = jb(this, bb, ub);
+        let Bb = lb(this.text, lb(hb.text, Kb(this.text, 0, bb)), ub),
+          Ob = this.length + hb.length - (ub - bb);
+        return Bb.length <= 32 ? new ob(Bb, Ob) : Ab.from(ob.split(Bb, []), Ob)
       }
-      sliceString(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [qq, Eq] = rq(this, qq, Eq);
-        let Yq = "";
-        for (let lq = 0, Oq = 0; lq <= Eq && Oq < this.text.length; Oq++) {
-          let mq = this.text[Oq],
-            xq = lq + mq.length;
-          lq > qq && Oq && (Yq += gq), qq < xq && Eq > lq && (Yq += mq.slice(Math.max(0, qq - lq), Eq - lq)), lq = xq + 1
+      sliceString(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [bb, ub] = jb(this, bb, ub);
+        let Bb = "";
+        for (let Ob = 0, Gb = 0; Ob <= ub && Gb < this.text.length; Gb++) {
+          let Ub = this.text[Gb],
+            Lb = Ob + Ub.length;
+          Ob > bb && Gb && (Bb += hb), bb < Lb && ub > Ob && (Bb += Ub.slice(Math.max(0, bb - Ob), ub - Ob)), Ob = Lb + 1
         }
-        return Yq
+        return Bb
       }
-      flatten(qq) {
-        for (let Eq of this.text) qq.push(Eq)
+      flatten(bb) {
+        for (let ub of this.text) bb.push(ub)
       }
       scanIdentical() {
         return 0
       }
-      static split(qq, Eq) {
-        let gq = [],
-          Yq = -1;
-        for (let lq of qq) gq.push(lq), Yq += lq.length + 1, 32 == gq.length && (Eq.push(new dq(gq, Yq)), gq = [], Yq = -1);
-        return Yq > -1 && Eq.push(new dq(gq, Yq)), Eq
+      static split(bb, ub) {
+        let hb = [],
+          Bb = -1;
+        for (let Ob of bb) hb.push(Ob), Bb += Ob.length + 1, 32 == hb.length && (ub.push(new ob(hb, Bb)), hb = [], Bb = -1);
+        return Bb > -1 && ub.push(new ob(hb, Bb)), ub
       }
     }
-    class jq extends Vq {
-      constructor(qq, Eq) {
-        super(), this.children = qq, this.length = Eq, this.lines = 0;
-        for (let gq of qq) this.lines += gq.lines
+    class Ab extends pb {
+      constructor(bb, ub) {
+        super(), this.children = bb, this.length = ub, this.lines = 0;
+        for (let hb of bb) this.lines += hb.lines
       }
-      lineInner(qq, Eq, gq, Yq) {
-        for (let lq = 0;; lq++) {
-          let Oq = this.children[lq],
-            mq = Yq + Oq.length,
-            xq = gq + Oq.lines - 1;
-          if ((Eq ? xq : mq) >= qq) return Oq.lineInner(qq, Eq, gq, Yq);
-          Yq = mq + 1, gq = xq + 1
+      lineInner(bb, ub, hb, Bb) {
+        for (let Ob = 0;; Ob++) {
+          let Gb = this.children[Ob],
+            Ub = Bb + Gb.length,
+            Lb = hb + Gb.lines - 1;
+          if ((ub ? Lb : Ub) >= bb) return Gb.lineInner(bb, ub, hb, Bb);
+          Bb = Ub + 1, hb = Lb + 1
         }
       }
-      decompose(qq, Eq, gq, Yq) {
-        for (let lq = 0, Oq = 0; Oq <= Eq && lq < this.children.length; lq++) {
-          let mq = this.children[lq],
-            xq = Oq + mq.length;
-          if (qq <= xq && Eq >= Oq) {
-            let lq = Yq & ((Oq <= qq ? 1 : 0) | (xq >= Eq ? 2 : 0));
-            Oq >= qq && xq <= Eq && !lq ? gq.push(mq) : mq.decompose(qq - Oq, Eq - Oq, gq, lq)
+      decompose(bb, ub, hb, Bb) {
+        for (let Ob = 0, Gb = 0; Gb <= ub && Ob < this.children.length; Ob++) {
+          let Ub = this.children[Ob],
+            Lb = Gb + Ub.length;
+          if (bb <= Lb && ub >= Gb) {
+            let Ob = Bb & ((Gb <= bb ? 1 : 0) | (Lb >= ub ? 2 : 0));
+            Gb >= bb && Lb <= ub && !Ob ? hb.push(Ub) : Ub.decompose(bb - Gb, ub - Gb, hb, Ob)
           }
-          Oq = xq + 1
+          Gb = Lb + 1
         }
       }
-      replace(qq, Eq, gq) {
-        if ([qq, Eq] = rq(this, qq, Eq), gq.lines < this.lines)
-          for (let Yq = 0, lq = 0; Yq < this.children.length; Yq++) {
-            let Oq = this.children[Yq],
-              mq = lq + Oq.length;
-            if (qq >= lq && Eq <= mq) {
-              let xq = Oq.replace(qq - lq, Eq - lq, gq),
-                Aq = this.lines - Oq.lines + xq.lines;
-              if (xq.lines < Aq >> 4 && xq.lines > Aq >> 6) {
-                let lq = this.children.slice();
-                return lq[Yq] = xq, new jq(lq, this.length - (Eq - qq) + gq.length)
+      replace(bb, ub, hb) {
+        if ([bb, ub] = jb(this, bb, ub), hb.lines < this.lines)
+          for (let Bb = 0, Ob = 0; Bb < this.children.length; Bb++) {
+            let Gb = this.children[Bb],
+              Ub = Ob + Gb.length;
+            if (bb >= Ob && ub <= Ub) {
+              let Lb = Gb.replace(bb - Ob, ub - Ob, hb),
+                Yb = this.lines - Gb.lines + Lb.lines;
+              if (Lb.lines < Yb >> 4 && Lb.lines > Yb >> 6) {
+                let Ob = this.children.slice();
+                return Ob[Bb] = Lb, new Ab(Ob, this.length - (ub - bb) + hb.length)
               }
-              return super.replace(lq, mq, xq)
+              return super.replace(Ob, Ub, Lb)
             }
-            lq = mq + 1
+            Ob = Ub + 1
           }
-        return super.replace(qq, Eq, gq)
+        return super.replace(bb, ub, hb)
       }
-      sliceString(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [qq, Eq] = rq(this, qq, Eq);
-        let Yq = "";
-        for (let lq = 0, Oq = 0; lq < this.children.length && Oq <= Eq; lq++) {
-          let mq = this.children[lq],
-            xq = Oq + mq.length;
-          Oq > qq && lq && (Yq += gq), qq < xq && Eq > Oq && (Yq += mq.sliceString(qq - Oq, Eq - Oq, gq)), Oq = xq + 1
+      sliceString(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [bb, ub] = jb(this, bb, ub);
+        let Bb = "";
+        for (let Ob = 0, Gb = 0; Ob < this.children.length && Gb <= ub; Ob++) {
+          let Ub = this.children[Ob],
+            Lb = Gb + Ub.length;
+          Gb > bb && Ob && (Bb += hb), bb < Lb && ub > Gb && (Bb += Ub.sliceString(bb - Gb, ub - Gb, hb)), Gb = Lb + 1
         }
-        return Yq
+        return Bb
       }
-      flatten(qq) {
-        for (let Eq of this.children) Eq.flatten(qq)
+      flatten(bb) {
+        for (let ub of this.children) ub.flatten(bb)
       }
-      scanIdentical(qq, Eq) {
-        if (!(qq instanceof jq)) return 0;
-        let gq = 0,
-          [Yq, lq, Oq, mq] = Eq > 0 ? [0, 0, this.children.length, qq.children.length] : [this.children.length - 1, qq.children.length - 1, -1, -1];
-        for (;; Yq += Eq, lq += Eq) {
-          if (Yq == Oq || lq == mq) return gq;
-          let xq = this.children[Yq],
-            Aq = qq.children[lq];
-          if (xq != Aq) return gq + xq.scanIdentical(Aq, Eq);
-          gq += xq.length + 1
+      scanIdentical(bb, ub) {
+        if (!(bb instanceof Ab)) return 0;
+        let hb = 0,
+          [Bb, Ob, Gb, Ub] = ub > 0 ? [0, 0, this.children.length, bb.children.length] : [this.children.length - 1, bb.children.length - 1, -1, -1];
+        for (;; Bb += ub, Ob += ub) {
+          if (Bb == Gb || Ob == Ub) return hb;
+          let Lb = this.children[Bb],
+            Yb = bb.children[Ob];
+          if (Lb != Yb) return hb + Lb.scanIdentical(Yb, ub);
+          hb += Lb.length + 1
         }
       }
-      static from(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qq.reduce(((qq, Eq) => qq + Eq.length + 1), -1),
-          gq = 0;
-        for (let Wq of qq) gq += Wq.lines;
-        if (gq < 32) {
-          let gq = [];
-          for (let Eq of qq) Eq.flatten(gq);
-          return new dq(gq, Eq)
+      static from(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb.reduce(((bb, ub) => bb + ub.length + 1), -1),
+          hb = 0;
+        for (let wb of bb) hb += wb.lines;
+        if (hb < 32) {
+          let hb = [];
+          for (let ub of bb) ub.flatten(hb);
+          return new ob(hb, ub)
         }
-        let Yq = Math.max(32, gq >> 5),
-          lq = Yq << 1,
-          Oq = Yq >> 1,
-          mq = [],
-          xq = 0,
-          Aq = -1,
-          cq = [];
+        let Bb = Math.max(32, hb >> 5),
+          Ob = Bb << 1,
+          Gb = Bb >> 1,
+          Ub = [],
+          Lb = 0,
+          Yb = -1,
+          Sb = [];
 
-        function uq(qq) {
-          let Eq;
-          if (qq.lines > lq && qq instanceof jq)
-            for (let gq of qq.children) uq(gq);
-          else qq.lines > Oq && (xq > Oq || !xq) ? (Bq(), mq.push(qq)) : qq instanceof dq && xq && (Eq = cq[cq.length - 1]) instanceof dq && qq.lines + Eq.lines <= 32 ? (xq += qq.lines, Aq += qq.length + 1, cq[cq.length - 1] = new dq(Eq.text.concat(qq.text), Eq.length + 1 + qq.length)) : (xq + qq.lines > Yq && Bq(), xq += qq.lines, Aq += qq.length + 1, cq.push(qq))
+        function ab(bb) {
+          let ub;
+          if (bb.lines > Ob && bb instanceof Ab)
+            for (let hb of bb.children) ab(hb);
+          else bb.lines > Gb && (Lb > Gb || !Lb) ? (Hb(), Ub.push(bb)) : bb instanceof ob && Lb && (ub = Sb[Sb.length - 1]) instanceof ob && bb.lines + ub.lines <= 32 ? (Lb += bb.lines, Yb += bb.length + 1, Sb[Sb.length - 1] = new ob(ub.text.concat(bb.text), ub.length + 1 + bb.length)) : (Lb + bb.lines > Bb && Hb(), Lb += bb.lines, Yb += bb.length + 1, Sb.push(bb))
         }
 
-        function Bq() {
-          0 != xq && (mq.push(1 == cq.length ? cq[0] : jq.from(cq, Aq)), Aq = -1, xq = cq.length = 0)
+        function Hb() {
+          0 != Lb && (Ub.push(1 == Sb.length ? Sb[0] : Ab.from(Sb, Yb)), Yb = -1, Lb = Sb.length = 0)
         }
-        for (let Wq of qq) uq(Wq);
-        return Bq(), 1 == mq.length ? mq[0] : new jq(mq, Eq)
+        for (let wb of bb) ab(wb);
+        return Hb(), 1 == Ub.length ? Ub[0] : new Ab(Ub, ub)
       }
     }
 
-    function Hq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
-      for (let lq = 0, Oq = 0, mq = !0; Oq < qq.length && lq <= Yq; Oq++) {
-        let xq = qq[Oq],
-          Aq = lq + xq.length;
-        Aq >= gq && (Aq > Yq && (xq = xq.slice(0, Yq - lq)), lq < gq && (xq = xq.slice(gq - lq)), mq ? (Eq[Eq.length - 1] += xq, mq = !1) : Eq.push(xq)), lq = Aq + 1
+    function lb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let Ob = 0, Gb = 0, Ub = !0; Gb < bb.length && Ob <= Bb; Gb++) {
+        let Lb = bb[Gb],
+          Yb = Ob + Lb.length;
+        Yb >= hb && (Yb > Bb && (Lb = Lb.slice(0, Bb - Ob)), Ob < hb && (Lb = Lb.slice(hb - Ob)), Ub ? (ub[ub.length - 1] += Lb, Ub = !1) : ub.push(Lb)), Ob = Yb + 1
       }
-      return Eq
+      return ub
     }
 
-    function oq(qq, Eq, gq) {
-      return Hq(qq, [""], Eq, gq)
+    function Kb(bb, ub, hb) {
+      return lb(bb, [""], ub, hb)
     }
-    Vq.empty = new dq([""], 0);
-    class Pq {
-      constructor(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.dir = Eq, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [qq], this.offsets = [Eq > 0 ? 1 : (qq instanceof dq ? qq.text.length : qq.children.length) << 1]
+    pb.empty = new ob([""], 0);
+    class Wb {
+      constructor(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = ub, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [bb], this.offsets = [ub > 0 ? 1 : (bb instanceof ob ? bb.text.length : bb.children.length) << 1]
       }
-      nextInner(qq, Eq) {
+      nextInner(bb, ub) {
         for (this.done = this.lineBreak = !1;;) {
-          let gq = this.nodes.length - 1,
-            Yq = this.nodes[gq],
-            lq = this.offsets[gq],
-            Oq = lq >> 1,
-            mq = Yq instanceof dq ? Yq.text.length : Yq.children.length;
-          if (Oq == (Eq > 0 ? mq : 0)) {
-            if (0 == gq) return this.done = !0, this.value = "", this;
-            Eq > 0 && this.offsets[gq - 1]++, this.nodes.pop(), this.offsets.pop()
-          } else if ((1 & lq) == (Eq > 0 ? 0 : 1)) {
-            if (this.offsets[gq] += Eq, 0 == qq) return this.lineBreak = !0, this.value = "\n", this;
-            qq--
-          } else if (Yq instanceof dq) {
-            let lq = Yq.text[Oq + (Eq < 0 ? -1 : 0)];
-            if (this.offsets[gq] += Eq, lq.length > Math.max(0, qq)) return this.value = 0 == qq ? lq : Eq > 0 ? lq.slice(qq) : lq.slice(0, lq.length - qq), this;
-            qq -= lq.length
+          let hb = this.nodes.length - 1,
+            Bb = this.nodes[hb],
+            Ob = this.offsets[hb],
+            Gb = Ob >> 1,
+            Ub = Bb instanceof ob ? Bb.text.length : Bb.children.length;
+          if (Gb == (ub > 0 ? Ub : 0)) {
+            if (0 == hb) return this.done = !0, this.value = "", this;
+            ub > 0 && this.offsets[hb - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & Ob) == (ub > 0 ? 0 : 1)) {
+            if (this.offsets[hb] += ub, 0 == bb) return this.lineBreak = !0, this.value = "\n", this;
+            bb--
+          } else if (Bb instanceof ob) {
+            let Ob = Bb.text[Gb + (ub < 0 ? -1 : 0)];
+            if (this.offsets[hb] += ub, Ob.length > Math.max(0, bb)) return this.value = 0 == bb ? Ob : ub > 0 ? Ob.slice(bb) : Ob.slice(0, Ob.length - bb), this;
+            bb -= Ob.length
           } else {
-            let lq = Yq.children[Oq + (Eq < 0 ? -1 : 0)];
-            qq > lq.length ? (qq -= lq.length, this.offsets[gq] += Eq) : (Eq < 0 && this.offsets[gq]--, this.nodes.push(lq), this.offsets.push(Eq > 0 ? 1 : (lq instanceof dq ? lq.text.length : lq.children.length) << 1))
+            let Ob = Bb.children[Gb + (ub < 0 ? -1 : 0)];
+            bb > Ob.length ? (bb -= Ob.length, this.offsets[hb] += ub) : (ub < 0 && this.offsets[hb]--, this.nodes.push(Ob), this.offsets.push(ub > 0 ? 1 : (Ob instanceof ob ? Ob.text.length : Ob.children.length) << 1))
           }
         }
       }
       next() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return qq < 0 && (this.nextInner(-qq, -this.dir), qq = this.value.length), this.nextInner(qq, this.dir)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return bb < 0 && (this.nextInner(-bb, -this.dir), bb = this.value.length), this.nextInner(bb, this.dir)
       }
     }
-    class Qq {
-      constructor(qq, Eq, gq) {
-        this.value = "", this.done = !1, this.cursor = new Pq(qq, Eq > gq ? -1 : 1), this.pos = Eq > gq ? qq.length : 0, this.from = Math.min(Eq, gq), this.to = Math.max(Eq, gq)
+    class Cb {
+      constructor(bb, ub, hb) {
+        this.value = "", this.done = !1, this.cursor = new Wb(bb, ub > hb ? -1 : 1), this.pos = ub > hb ? bb.length : 0, this.from = Math.min(ub, hb), this.to = Math.max(ub, hb)
       }
-      nextInner(qq, Eq) {
-        if (Eq < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
-        qq += Math.max(0, Eq < 0 ? this.pos - this.to : this.from - this.pos);
-        let gq = Eq < 0 ? this.pos - this.from : this.to - this.pos;
-        qq > gq && (qq = gq), gq -= qq;
+      nextInner(bb, ub) {
+        if (ub < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        bb += Math.max(0, ub < 0 ? this.pos - this.to : this.from - this.pos);
+        let hb = ub < 0 ? this.pos - this.from : this.to - this.pos;
+        bb > hb && (bb = hb), hb -= bb;
         let {
-          value: Yq
-        } = this.cursor.next(qq);
-        return this.pos += (Yq.length + qq) * Eq, this.value = Yq.length <= gq ? Yq : Eq < 0 ? Yq.slice(Yq.length - gq) : Yq.slice(0, gq), this.done = !this.value, this
+          value: Bb
+        } = this.cursor.next(bb);
+        return this.pos += (Bb.length + bb) * ub, this.value = Bb.length <= hb ? Bb : ub < 0 ? Bb.slice(Bb.length - hb) : Bb.slice(0, hb), this.done = !this.value, this
       }
       next() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return qq < 0 ? qq = Math.max(qq, this.from - this.pos) : qq > 0 && (qq = Math.min(qq, this.to - this.pos)), this.nextInner(qq, this.cursor.dir)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return bb < 0 ? bb = Math.max(bb, this.from - this.pos) : bb > 0 && (bb = Math.min(bb, this.to - this.pos)), this.nextInner(bb, this.cursor.dir)
       }
       get lineBreak() {
         return this.cursor.lineBreak && "" != this.value
       }
     }
-    class yq {
-      constructor(qq) {
-        this.inner = qq, this.afterBreak = !0, this.value = "", this.done = !1
+    class db {
+      constructor(bb) {
+        this.inner = bb, this.afterBreak = !0, this.value = "", this.done = !1
       }
       next() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           {
-            done: Eq,
-            lineBreak: gq,
-            value: Yq
-          } = this.inner.next(qq);
-        return Eq && this.afterBreak ? (this.value = "", this.afterBreak = !1) : Eq ? (this.done = !0, this.value = "") : gq ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = Yq, this.afterBreak = !1), this
+            done: ub,
+            lineBreak: hb,
+            value: Bb
+          } = this.inner.next(bb);
+        return ub && this.afterBreak ? (this.value = "", this.afterBreak = !1) : ub ? (this.done = !0, this.value = "") : hb ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = Bb, this.afterBreak = !1), this
       }
       get lineBreak() {
         return !1
       }
     }
-    "undefined" != typeof Symbol && (Vq.prototype[Symbol.iterator] = function() {
+    "undefined" != typeof Symbol && (pb.prototype[Symbol.iterator] = function() {
       return this.iter()
-    }, Pq.prototype[Symbol.iterator] = Qq.prototype[Symbol.iterator] = yq.prototype[Symbol.iterator] = function() {
+    }, Wb.prototype[Symbol.iterator] = Cb.prototype[Symbol.iterator] = db.prototype[Symbol.iterator] = function() {
       return this
     });
-    class tq {
-      constructor(qq, Eq, gq, Yq) {
-        this.from = qq, this.to = Eq, this.number = gq, this.text = Yq
+    class rb {
+      constructor(bb, ub, hb, Bb) {
+        this.from = bb, this.to = ub, this.number = hb, this.text = Bb
       }
       get length() {
         return this.to - this.from
       }
     }
 
-    function rq(qq, Eq, gq) {
-      return [Eq = Math.max(0, Math.min(qq.length, Eq)), Math.max(Eq, Math.min(qq.length, gq))]
+    function jb(bb, ub, hb) {
+      return [ub = Math.max(0, Math.min(bb.length, ub)), Math.max(ub, Math.min(bb.length, hb))]
     }
 
-    function vq(qq, Eq) {
-      return Aq(qq, Eq, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function nb(bb, ub) {
+      return Yb(bb, ub, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function hq(qq, Eq) {
-      let gq = qq.charCodeAt(Eq);
-      if (!((Yq = gq) >= 55296 && Yq < 56320) || Eq + 1 == qq.length) return gq;
-      var Yq;
-      let lq = qq.charCodeAt(Eq + 1);
-      return function(qq) {
-        return qq >= 56320 && qq < 57344
-      }(lq) ? lq - 56320 + (gq - 55296 << 10) + 65536 : gq
+    function Db(bb, ub) {
+      let hb = bb.charCodeAt(ub);
+      if (!((Bb = hb) >= 55296 && Bb < 56320) || ub + 1 == bb.length) return hb;
+      var Bb;
+      let Ob = bb.charCodeAt(ub + 1);
+      return function(bb) {
+        return bb >= 56320 && bb < 57344
+      }(Ob) ? Ob - 56320 + (hb - 55296 << 10) + 65536 : hb
     }
 
-    function nq(qq) {
-      return qq <= 65535 ? String.fromCharCode(qq) : (qq -= 65536, String.fromCharCode(55296 + (qq >> 10), 56320 + (1023 & qq)))
+    function xb(bb) {
+      return bb <= 65535 ? String.fromCharCode(bb) : (bb -= 65536, String.fromCharCode(55296 + (bb >> 10), 56320 + (1023 & bb)))
     }
 
-    function bq(qq) {
-      return qq < 65536 ? 1 : 2
+    function zb(bb) {
+      return bb < 65536 ? 1 : 2
     }
-    const iq = /\r\n?|\n/;
-    var Zq = function(qq) {
-      return qq[qq.Simple = 0] = "Simple", qq[qq.TrackDel = 1] = "TrackDel", qq[qq.TrackBefore = 2] = "TrackBefore", qq[qq.TrackAfter = 3] = "TrackAfter", qq
-    }(Zq || (Zq = {}));
-    class fq {
-      constructor(qq) {
-        this.sections = qq
+    const gb = /\r\n?|\n/;
+    var ib = function(bb) {
+      return bb[bb.Simple = 0] = "Simple", bb[bb.TrackDel = 1] = "TrackDel", bb[bb.TrackBefore = 2] = "TrackBefore", bb[bb.TrackAfter = 3] = "TrackAfter", bb
+    }(ib || (ib = {}));
+    class vb {
+      constructor(bb) {
+        this.sections = bb
       }
       get length() {
-        let qq = 0;
-        for (let Eq = 0; Eq < this.sections.length; Eq += 2) qq += this.sections[Eq];
-        return qq
+        let bb = 0;
+        for (let ub = 0; ub < this.sections.length; ub += 2) bb += this.sections[ub];
+        return bb
       }
       get newLength() {
-        let qq = 0;
-        for (let Eq = 0; Eq < this.sections.length; Eq += 2) {
-          let gq = this.sections[Eq + 1];
-          qq += gq < 0 ? this.sections[Eq] : gq
+        let bb = 0;
+        for (let ub = 0; ub < this.sections.length; ub += 2) {
+          let hb = this.sections[ub + 1];
+          bb += hb < 0 ? this.sections[ub] : hb
         }
-        return qq
+        return bb
       }
       get empty() {
         return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
       }
-      iterGaps(qq) {
-        for (let Eq = 0, gq = 0, Yq = 0; Eq < this.sections.length;) {
-          let lq = this.sections[Eq++],
-            Oq = this.sections[Eq++];
-          Oq < 0 ? (qq(gq, Yq, lq), Yq += lq) : Yq += Oq, gq += lq
+      iterGaps(bb) {
+        for (let ub = 0, hb = 0, Bb = 0; ub < this.sections.length;) {
+          let Ob = this.sections[ub++],
+            Gb = this.sections[ub++];
+          Gb < 0 ? (bb(hb, Bb, Ob), Bb += Ob) : Bb += Gb, hb += Ob
         }
       }
-      iterChangedRanges(qq) {
-        Sq(this, qq, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChangedRanges(bb) {
+        Nb(this, bb, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get invertedDesc() {
-        let qq = [];
-        for (let Eq = 0; Eq < this.sections.length;) {
-          let gq = this.sections[Eq++],
-            Yq = this.sections[Eq++];
-          Yq < 0 ? qq.push(gq, Yq) : qq.push(Yq, gq)
+        let bb = [];
+        for (let ub = 0; ub < this.sections.length;) {
+          let hb = this.sections[ub++],
+            Bb = this.sections[ub++];
+          Bb < 0 ? bb.push(hb, Bb) : bb.push(Bb, hb)
         }
-        return new fq(qq)
+        return new vb(bb)
       }
-      composeDesc(qq) {
-        return this.empty ? qq : qq.empty ? this : Gq(this, qq)
+      composeDesc(bb) {
+        return this.empty ? bb : bb.empty ? this : Mb(this, bb)
       }
-      mapDesc(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return qq.empty ? this : pq(this, qq, Eq)
+      mapDesc(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return bb.empty ? this : sb(this, bb, ub)
       }
-      mapPos(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Zq.Simple,
-          Yq = 0,
-          lq = 0;
-        for (let Oq = 0; Oq < this.sections.length;) {
-          let mq = this.sections[Oq++],
-            xq = this.sections[Oq++],
-            Aq = Yq + mq;
-          if (xq < 0) {
-            if (Aq > qq) return lq + (qq - Yq);
-            lq += mq
+      mapPos(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ib.Simple,
+          Bb = 0,
+          Ob = 0;
+        for (let Gb = 0; Gb < this.sections.length;) {
+          let Ub = this.sections[Gb++],
+            Lb = this.sections[Gb++],
+            Yb = Bb + Ub;
+          if (Lb < 0) {
+            if (Yb > bb) return Ob + (bb - Bb);
+            Ob += Ub
           } else {
-            if (gq != Zq.Simple && Aq >= qq && (gq == Zq.TrackDel && Yq < qq && Aq > qq || gq == Zq.TrackBefore && Yq < qq || gq == Zq.TrackAfter && Aq > qq)) return null;
-            if (Aq > qq || Aq == qq && Eq < 0 && !mq) return qq == Yq || Eq < 0 ? lq : lq + xq;
-            lq += xq
+            if (hb != ib.Simple && Yb >= bb && (hb == ib.TrackDel && Bb < bb && Yb > bb || hb == ib.TrackBefore && Bb < bb || hb == ib.TrackAfter && Yb > bb)) return null;
+            if (Yb > bb || Yb == bb && ub < 0 && !Ub) return bb == Bb || ub < 0 ? Ob : Ob + Lb;
+            Ob += Lb
           }
-          Yq = Aq
+          Bb = Yb
         }
-        if (qq > Yq) throw new RangeError(`Position ${qq} is out of range for changeset of length ${Yq}`);
-        return lq
+        if (bb > Bb) throw new RangeError(`Position ${bb} is out of range for changeset of length ${Bb}`);
+        return Ob
       }
-      touchesRange(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qq;
-        for (let gq = 0, Yq = 0; gq < this.sections.length && Yq <= Eq;) {
-          let lq = Yq + this.sections[gq++];
-          if (this.sections[gq++] >= 0 && Yq <= Eq && lq >= qq) return !(Yq < qq && lq > Eq) || "cover";
-          Yq = lq
+      touchesRange(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb;
+        for (let hb = 0, Bb = 0; hb < this.sections.length && Bb <= ub;) {
+          let Ob = Bb + this.sections[hb++];
+          if (this.sections[hb++] >= 0 && Bb <= ub && Ob >= bb) return !(Bb < bb && Ob > ub) || "cover";
+          Bb = Ob
         }
         return !1
       }
       toString() {
-        let qq = "";
-        for (let Eq = 0; Eq < this.sections.length;) {
-          let gq = this.sections[Eq++],
-            Yq = this.sections[Eq++];
-          qq += (qq ? " " : "") + gq + (Yq >= 0 ? ":" + Yq : "")
+        let bb = "";
+        for (let ub = 0; ub < this.sections.length;) {
+          let hb = this.sections[ub++],
+            Bb = this.sections[ub++];
+          bb += (bb ? " " : "") + hb + (Bb >= 0 ? ":" + Bb : "")
         }
-        return qq
+        return bb
       }
       toJSON() {
         return this.sections
       }
-      static fromJSON(qq) {
-        if (!Array.isArray(qq) || qq.length % 2 || qq.some((qq => "number" != typeof qq))) throw new RangeError("Invalid JSON representation of ChangeDesc");
-        return new fq(qq)
+      static fromJSON(bb) {
+        if (!Array.isArray(bb) || bb.length % 2 || bb.some((bb => "number" != typeof bb))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new vb(bb)
       }
-      static create(qq) {
-        return new fq(qq)
+      static create(bb) {
+        return new vb(bb)
       }
     }
-    class Mq extends fq {
-      constructor(qq, Eq) {
-        super(qq), this.inserted = Eq
+    class tb extends vb {
+      constructor(bb, ub) {
+        super(bb), this.inserted = ub
       }
-      apply(qq) {
-        if (this.length != qq.length) throw new RangeError("Applying change set to a document with the wrong length");
-        return Sq(this, ((Eq, gq, Yq, lq, Oq) => qq = qq.replace(Yq, Yq + (gq - Eq), Oq)), !1), qq
+      apply(bb) {
+        if (this.length != bb.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return Nb(this, ((ub, hb, Bb, Ob, Gb) => bb = bb.replace(Bb, Bb + (hb - ub), Gb)), !1), bb
       }
-      mapDesc(qq) {
-        return pq(this, qq, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      mapDesc(bb) {
+        return sb(this, bb, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
       }
-      invert(qq) {
-        let Eq = this.sections.slice(),
-          gq = [];
-        for (let Yq = 0, lq = 0; Yq < Eq.length; Yq += 2) {
-          let Oq = Eq[Yq],
-            mq = Eq[Yq + 1];
-          if (mq >= 0) {
-            Eq[Yq] = mq, Eq[Yq + 1] = Oq;
-            let xq = Yq >> 1;
-            for (; gq.length < xq;) gq.push(Vq.empty);
-            gq.push(Oq ? qq.slice(lq, lq + Oq) : Vq.empty)
+      invert(bb) {
+        let ub = this.sections.slice(),
+          hb = [];
+        for (let Bb = 0, Ob = 0; Bb < ub.length; Bb += 2) {
+          let Gb = ub[Bb],
+            Ub = ub[Bb + 1];
+          if (Ub >= 0) {
+            ub[Bb] = Ub, ub[Bb + 1] = Gb;
+            let Lb = Bb >> 1;
+            for (; hb.length < Lb;) hb.push(pb.empty);
+            hb.push(Gb ? bb.slice(Ob, Ob + Gb) : pb.empty)
           }
-          lq += Oq
+          Ob += Gb
         }
-        return new Mq(Eq, gq)
+        return new tb(ub, hb)
       }
-      compose(qq) {
-        return this.empty ? qq : qq.empty ? this : Gq(this, qq, !0)
+      compose(bb) {
+        return this.empty ? bb : bb.empty ? this : Mb(this, bb, !0)
       }
-      map(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return qq.empty ? this : pq(this, qq, Eq, !0)
+      map(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return bb.empty ? this : sb(this, bb, ub, !0)
       }
-      iterChanges(qq) {
-        Sq(this, qq, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChanges(bb) {
+        Nb(this, bb, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get desc() {
-        return fq.create(this.sections)
+        return vb.create(this.sections)
       }
-      filter(qq) {
-        let Eq = [],
-          gq = [],
-          Yq = [],
-          lq = new Lq(this);
-        qq: for (let Oq = 0, mq = 0;;) {
-          let xq = Oq == qq.length ? 1e9 : qq[Oq++];
-          for (; mq < xq || mq == xq && 0 == lq.len;) {
-            if (lq.done) break qq;
-            let qq = Math.min(lq.len, xq - mq);
-            Tq(Yq, qq, -1);
-            let Oq = -1 == lq.ins ? -1 : 0 == lq.off ? lq.ins : 0;
-            Tq(Eq, qq, Oq), Oq > 0 && zq(gq, Eq, lq.text), lq.forward(qq), mq += qq
+      filter(bb) {
+        let ub = [],
+          hb = [],
+          Bb = [],
+          Ob = new mb(this);
+        bb: for (let Gb = 0, Ub = 0;;) {
+          let Lb = Gb == bb.length ? 1e9 : bb[Gb++];
+          for (; Ub < Lb || Ub == Lb && 0 == Ob.len;) {
+            if (Ob.done) break bb;
+            let bb = Math.min(Ob.len, Lb - Ub);
+            Jb(Bb, bb, -1);
+            let Gb = -1 == Ob.ins ? -1 : 0 == Ob.off ? Ob.ins : 0;
+            Jb(ub, bb, Gb), Gb > 0 && eb(hb, ub, Ob.text), Ob.forward(bb), Ub += bb
           }
-          let Aq = qq[Oq++];
-          for (; mq < Aq;) {
-            if (lq.done) break qq;
-            let qq = Math.min(lq.len, Aq - mq);
-            Tq(Eq, qq, -1), Tq(Yq, qq, -1 == lq.ins ? -1 : 0 == lq.off ? lq.ins : 0), lq.forward(qq), mq += qq
+          let Yb = bb[Gb++];
+          for (; Ub < Yb;) {
+            if (Ob.done) break bb;
+            let bb = Math.min(Ob.len, Yb - Ub);
+            Jb(ub, bb, -1), Jb(Bb, bb, -1 == Ob.ins ? -1 : 0 == Ob.off ? Ob.ins : 0), Ob.forward(bb), Ub += bb
           }
         }
         return {
-          changes: new Mq(Eq, gq),
-          filtered: fq.create(Yq)
+          changes: new tb(ub, hb),
+          filtered: vb.create(Bb)
         }
       }
       toJSON() {
-        let qq = [];
-        for (let Eq = 0; Eq < this.sections.length; Eq += 2) {
-          let gq = this.sections[Eq],
-            Yq = this.sections[Eq + 1];
-          Yq < 0 ? qq.push(gq) : 0 == Yq ? qq.push([gq]) : qq.push([gq].concat(this.inserted[Eq >> 1].toJSON()))
+        let bb = [];
+        for (let ub = 0; ub < this.sections.length; ub += 2) {
+          let hb = this.sections[ub],
+            Bb = this.sections[ub + 1];
+          Bb < 0 ? bb.push(hb) : 0 == Bb ? bb.push([hb]) : bb.push([hb].concat(this.inserted[ub >> 1].toJSON()))
         }
-        return qq
+        return bb
       }
-      static of (qq, Eq, gq) {
-        let Yq = [],
-          lq = [],
-          Oq = 0,
-          mq = null;
+      static of (bb, ub, hb) {
+        let Bb = [],
+          Ob = [],
+          Gb = 0,
+          Ub = null;
 
-        function xq() {
-          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !Yq.length) return;
-          Oq < Eq && Tq(Yq, Eq - Oq, -1);
-          let qq = new Mq(Yq, lq);
-          mq = mq ? mq.compose(qq.map(mq)) : qq, Yq = [], lq = [], Oq = 0
+        function Lb() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !Bb.length) return;
+          Gb < ub && Jb(Bb, ub - Gb, -1);
+          let bb = new tb(Bb, Ob);
+          Ub = Ub ? Ub.compose(bb.map(Ub)) : bb, Bb = [], Ob = [], Gb = 0
         }
-        return function qq(Aq) {
-          if (Array.isArray(Aq))
-            for (let Eq of Aq) qq(Eq);
-          else if (Aq instanceof Mq) {
-            if (Aq.length != Eq) throw new RangeError(`Mismatched change set length (got ${Aq.length}, expected ${Eq})`);
-            xq(), mq = mq ? mq.compose(Aq.map(mq)) : Aq
+        return function bb(Yb) {
+          if (Array.isArray(Yb))
+            for (let ub of Yb) bb(ub);
+          else if (Yb instanceof tb) {
+            if (Yb.length != ub) throw new RangeError(`Mismatched change set length (got ${Yb.length}, expected ${ub})`);
+            Lb(), Ub = Ub ? Ub.compose(Yb.map(Ub)) : Yb
           } else {
             let {
-              from: qq,
-              to: mq = qq,
-              insert: cq
-            } = Aq;
-            if (qq > mq || qq < 0 || mq > Eq) throw new RangeError(`Invalid change range ${qq} to ${mq} (in doc of length ${Eq})`);
-            let uq = cq ? "string" == typeof cq ? Vq.of(cq.split(gq || iq)) : cq : Vq.empty,
-              Bq = uq.length;
-            if (qq == mq && 0 == Bq) return;
-            qq < Oq && xq(), qq > Oq && Tq(Yq, qq - Oq, -1), Tq(Yq, mq - qq, Bq), zq(lq, Yq, uq), Oq = mq
+              from: bb,
+              to: Ub = bb,
+              insert: Sb
+            } = Yb;
+            if (bb > Ub || bb < 0 || Ub > ub) throw new RangeError(`Invalid change range ${bb} to ${Ub} (in doc of length ${ub})`);
+            let ab = Sb ? "string" == typeof Sb ? pb.of(Sb.split(hb || gb)) : Sb : pb.empty,
+              Hb = ab.length;
+            if (bb == Ub && 0 == Hb) return;
+            bb < Gb && Lb(), bb > Gb && Jb(Bb, bb - Gb, -1), Jb(Bb, Ub - bb, Hb), eb(Ob, Bb, ab), Gb = Ub
           }
-        }(qq), xq(!mq), mq
+        }(bb), Lb(!Ub), Ub
       }
-      static empty(qq) {
-        return new Mq(qq ? [qq, -1] : [], [])
+      static empty(bb) {
+        return new tb(bb ? [bb, -1] : [], [])
       }
-      static fromJSON(qq) {
-        if (!Array.isArray(qq)) throw new RangeError("Invalid JSON representation of ChangeSet");
-        let Eq = [],
-          gq = [];
-        for (let Yq = 0; Yq < qq.length; Yq++) {
-          let lq = qq[Yq];
-          if ("number" == typeof lq) Eq.push(lq, -1);
+      static fromJSON(bb) {
+        if (!Array.isArray(bb)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let ub = [],
+          hb = [];
+        for (let Bb = 0; Bb < bb.length; Bb++) {
+          let Ob = bb[Bb];
+          if ("number" == typeof Ob) ub.push(Ob, -1);
           else {
-            if (!Array.isArray(lq) || "number" != typeof lq[0] || lq.some(((qq, Eq) => Eq && "string" != typeof qq))) throw new RangeError("Invalid JSON representation of ChangeSet");
-            if (1 == lq.length) Eq.push(lq[0], 0);
+            if (!Array.isArray(Ob) || "number" != typeof Ob[0] || Ob.some(((bb, ub) => ub && "string" != typeof bb))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == Ob.length) ub.push(Ob[0], 0);
             else {
-              for (; gq.length < Yq;) gq.push(Vq.empty);
-              gq[Yq] = Vq.of(lq.slice(1)), Eq.push(lq[0], gq[Yq].length)
+              for (; hb.length < Bb;) hb.push(pb.empty);
+              hb[Bb] = pb.of(Ob.slice(1)), ub.push(Ob[0], hb[Bb].length)
             }
           }
         }
-        return new Mq(Eq, gq)
+        return new tb(ub, hb)
       }
-      static createSet(qq, Eq) {
-        return new Mq(qq, Eq)
+      static createSet(bb, ub) {
+        return new tb(bb, ub)
       }
     }
 
-    function Tq(qq, Eq, gq) {
-      let Yq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (0 == Eq && gq <= 0) return;
-      let lq = qq.length - 2;
-      lq >= 0 && gq <= 0 && gq == qq[lq + 1] ? qq[lq] += Eq : lq >= 0 && 0 == Eq && 0 == qq[lq] ? qq[lq + 1] += gq : Yq ? (qq[lq] += Eq, qq[lq + 1] += gq) : qq.push(Eq, gq)
+    function Jb(bb, ub, hb) {
+      let Bb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == ub && hb <= 0) return;
+      let Ob = bb.length - 2;
+      Ob >= 0 && hb <= 0 && hb == bb[Ob + 1] ? bb[Ob] += ub : Ob >= 0 && 0 == ub && 0 == bb[Ob] ? bb[Ob + 1] += hb : Bb ? (bb[Ob] += ub, bb[Ob + 1] += hb) : bb.push(ub, hb)
     }
 
-    function zq(qq, Eq, gq) {
-      if (0 == gq.length) return;
-      let Yq = Eq.length - 2 >> 1;
-      if (Yq < qq.length) qq[qq.length - 1] = qq[qq.length - 1].append(gq);
+    function eb(bb, ub, hb) {
+      if (0 == hb.length) return;
+      let Bb = ub.length - 2 >> 1;
+      if (Bb < bb.length) bb[bb.length - 1] = bb[bb.length - 1].append(hb);
       else {
-        for (; qq.length < Yq;) qq.push(Vq.empty);
-        qq.push(gq)
+        for (; bb.length < Bb;) bb.push(pb.empty);
+        bb.push(hb)
       }
     }
 
-    function Sq(qq, Eq, gq) {
-      let Yq = qq.inserted;
-      for (let lq = 0, Oq = 0, mq = 0; mq < qq.sections.length;) {
-        let xq = qq.sections[mq++],
-          Aq = qq.sections[mq++];
-        if (Aq < 0) lq += xq, Oq += xq;
+    function Nb(bb, ub, hb) {
+      let Bb = bb.inserted;
+      for (let Ob = 0, Gb = 0, Ub = 0; Ub < bb.sections.length;) {
+        let Lb = bb.sections[Ub++],
+          Yb = bb.sections[Ub++];
+        if (Yb < 0) Ob += Lb, Gb += Lb;
         else {
-          let cq = lq,
-            uq = Oq,
-            Bq = Vq.empty;
-          for (; cq += xq, uq += Aq, Aq && Yq && (Bq = Bq.append(Yq[mq - 2 >> 1])), !(gq || mq == qq.sections.length || qq.sections[mq + 1] < 0);) xq = qq.sections[mq++], Aq = qq.sections[mq++];
-          Eq(lq, cq, Oq, uq, Bq), lq = cq, Oq = uq
+          let Sb = Ob,
+            ab = Gb,
+            Hb = pb.empty;
+          for (; Sb += Lb, ab += Yb, Yb && Bb && (Hb = Hb.append(Bb[Ub - 2 >> 1])), !(hb || Ub == bb.sections.length || bb.sections[Ub + 1] < 0);) Lb = bb.sections[Ub++], Yb = bb.sections[Ub++];
+          ub(Ob, Sb, Gb, ab, Hb), Ob = Sb, Gb = ab
         }
       }
     }
 
-    function pq(qq, Eq, gq) {
-      let Yq = [],
-        lq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
-        Oq = new Lq(qq),
-        mq = new Lq(Eq),
-        xq = 0;
-      for (let Aq = -1;;) {
-        if (++xq > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
-        if (Oq.done && mq.len || mq.done && Oq.len) throw new Error("Mismatched change set lengths");
-        if (-1 == Oq.ins && -1 == mq.ins) {
-          let qq = Math.min(Oq.len, mq.len);
-          Tq(Yq, qq, -1), Oq.forward(qq), mq.forward(qq)
-        } else if (mq.ins >= 0 && (Oq.ins < 0 || Aq == Oq.i || 0 == Oq.off && (mq.len < Oq.len || mq.len == Oq.len && !gq))) {
-          let qq = mq.len;
-          for (Tq(Yq, mq.ins, -1); qq;) {
-            if (++xq > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
-            let Eq = Math.min(Oq.len, qq);
-            Oq.ins >= 0 && Aq < Oq.i && Oq.len <= Eq && (Tq(Yq, 0, Oq.ins), lq && zq(lq, Yq, Oq.text), Aq = Oq.i), Oq.forward(Eq), qq -= Eq
+    function sb(bb, ub, hb) {
+      let Bb = [],
+        Ob = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        Gb = new mb(bb),
+        Ub = new mb(ub),
+        Lb = 0;
+      for (let Yb = -1;;) {
+        if (++Lb > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (Gb.done && Ub.len || Ub.done && Gb.len) throw new Error("Mismatched change set lengths");
+        if (-1 == Gb.ins && -1 == Ub.ins) {
+          let bb = Math.min(Gb.len, Ub.len);
+          Jb(Bb, bb, -1), Gb.forward(bb), Ub.forward(bb)
+        } else if (Ub.ins >= 0 && (Gb.ins < 0 || Yb == Gb.i || 0 == Gb.off && (Ub.len < Gb.len || Ub.len == Gb.len && !hb))) {
+          let bb = Ub.len;
+          for (Jb(Bb, Ub.ins, -1); bb;) {
+            if (++Lb > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let ub = Math.min(Gb.len, bb);
+            Gb.ins >= 0 && Yb < Gb.i && Gb.len <= ub && (Jb(Bb, 0, Gb.ins), Ob && eb(Ob, Bb, Gb.text), Yb = Gb.i), Gb.forward(ub), bb -= ub
           }
-          mq.next()
+          Ub.next()
         } else {
-          if (!(Oq.ins >= 0)) {
-            if (Oq.done && mq.done) return lq ? Mq.createSet(Yq, lq) : fq.create(Yq);
+          if (!(Gb.ins >= 0)) {
+            if (Gb.done && Ub.done) return Ob ? tb.createSet(Bb, Ob) : vb.create(Bb);
             throw new Error("Mismatched change set lengths")
           } {
-            let qq = 0,
-              Eq = Oq.len;
-            for (; Eq;) {
-              if (++xq > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
-              if (-1 == mq.ins) {
-                let gq = Math.min(Eq, mq.len);
-                qq += gq, Eq -= gq, mq.forward(gq)
+            let bb = 0,
+              ub = Gb.len;
+            for (; ub;) {
+              if (++Lb > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == Ub.ins) {
+                let hb = Math.min(ub, Ub.len);
+                bb += hb, ub -= hb, Ub.forward(hb)
               } else {
-                if (!(0 == mq.ins && mq.len < Eq)) break;
-                Eq -= mq.len, mq.next()
+                if (!(0 == Ub.ins && Ub.len < ub)) break;
+                ub -= Ub.len, Ub.next()
               }
             }
-            Tq(Yq, qq, Aq < Oq.i ? Oq.ins : 0), lq && Aq < Oq.i && zq(lq, Yq, Oq.text), Aq = Oq.i, Oq.forward(Oq.len - Eq)
+            Jb(Bb, bb, Yb < Gb.i ? Gb.ins : 0), Ob && Yb < Gb.i && eb(Ob, Bb, Gb.text), Yb = Gb.i, Gb.forward(Gb.len - ub)
           }
         }
       }
     }
 
-    function Gq(qq, Eq) {
-      let gq = [],
-        Yq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
-        lq = new Lq(qq),
-        Oq = new Lq(Eq),
-        mq = 0;
-      for (let xq = !1;;) {
-        if (++mq > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
-        if (lq.done && Oq.done) return Yq ? Mq.createSet(gq, Yq) : fq.create(gq);
-        if (0 == lq.ins) Tq(gq, lq.len, 0, xq), lq.next();
-        else if (0 != Oq.len || Oq.done) {
-          if (lq.done || Oq.done) throw new Error("Mismatched change set lengths");
+    function Mb(bb, ub) {
+      let hb = [],
+        Bb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        Ob = new mb(bb),
+        Gb = new mb(ub),
+        Ub = 0;
+      for (let Lb = !1;;) {
+        if (++Ub > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (Ob.done && Gb.done) return Bb ? tb.createSet(hb, Bb) : vb.create(hb);
+        if (0 == Ob.ins) Jb(hb, Ob.len, 0, Lb), Ob.next();
+        else if (0 != Gb.len || Gb.done) {
+          if (Ob.done || Gb.done) throw new Error("Mismatched change set lengths");
           {
-            let qq = Math.min(lq.len2, Oq.len),
-              Eq = gq.length;
-            if (-1 == lq.ins) {
-              let Eq = -1 == Oq.ins ? -1 : Oq.off ? 0 : Oq.ins;
-              Tq(gq, qq, Eq, xq), Yq && Eq && zq(Yq, gq, Oq.text)
-            } else - 1 == Oq.ins ? (Tq(gq, lq.off ? 0 : lq.len, qq, xq), Yq && zq(Yq, gq, lq.textBit(qq))) : (Tq(gq, lq.off ? 0 : lq.len, Oq.off ? 0 : Oq.ins, xq), Yq && !Oq.off && zq(Yq, gq, Oq.text));
-            xq = (lq.ins > qq || Oq.ins >= 0 && Oq.len > qq) && (xq || gq.length > Eq), lq.forward2(qq), Oq.forward(qq)
+            let bb = Math.min(Ob.len2, Gb.len),
+              ub = hb.length;
+            if (-1 == Ob.ins) {
+              let ub = -1 == Gb.ins ? -1 : Gb.off ? 0 : Gb.ins;
+              Jb(hb, bb, ub, Lb), Bb && ub && eb(Bb, hb, Gb.text)
+            } else - 1 == Gb.ins ? (Jb(hb, Ob.off ? 0 : Ob.len, bb, Lb), Bb && eb(Bb, hb, Ob.textBit(bb))) : (Jb(hb, Ob.off ? 0 : Ob.len, Gb.off ? 0 : Gb.ins, Lb), Bb && !Gb.off && eb(Bb, hb, Gb.text));
+            Lb = (Ob.ins > bb || Gb.ins >= 0 && Gb.len > bb) && (Lb || hb.length > ub), Ob.forward2(bb), Gb.forward(bb)
           }
-        } else Tq(gq, 0, Oq.ins, xq), Yq && zq(Yq, gq, Oq.text), Oq.next()
+        } else Jb(hb, 0, Gb.ins, Lb), Bb && eb(Bb, hb, Gb.text), Gb.next()
       }
     }
-    class Lq {
-      constructor(qq) {
-        this.set = qq, this.i = 0, this.next()
+    class mb {
+      constructor(bb) {
+        this.set = bb, this.i = 0, this.next()
       }
       next() {
         let {
-          sections: qq
+          sections: bb
         } = this.set;
-        this.i < qq.length ? (this.len = qq[this.i++], this.ins = qq[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+        this.i < bb.length ? (this.len = bb[this.i++], this.ins = bb[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
       }
       get done() {
         return -2 == this.ins
@@ -815,26 +815,26 @@ export const modules = {
       }
       get text() {
         let {
-          inserted: qq
-        } = this.set, Eq = this.i - 2 >> 1;
-        return Eq >= qq.length ? Vq.empty : qq[Eq]
+          inserted: bb
+        } = this.set, ub = this.i - 2 >> 1;
+        return ub >= bb.length ? pb.empty : bb[ub]
       }
-      textBit(qq) {
+      textBit(bb) {
         let {
-          inserted: Eq
-        } = this.set, gq = this.i - 2 >> 1;
-        return gq >= Eq.length && !qq ? Vq.empty : Eq[gq].slice(this.off, null == qq ? void 0 : this.off + qq)
+          inserted: ub
+        } = this.set, hb = this.i - 2 >> 1;
+        return hb >= ub.length && !bb ? pb.empty : ub[hb].slice(this.off, null == bb ? void 0 : this.off + bb)
       }
-      forward(qq) {
-        qq == this.len ? this.next() : (this.len -= qq, this.off += qq)
+      forward(bb) {
+        bb == this.len ? this.next() : (this.len -= bb, this.off += bb)
       }
-      forward2(qq) {
-        -1 == this.ins ? this.forward(qq) : qq == this.ins ? this.next() : (this.ins -= qq, this.off += qq)
+      forward2(bb) {
+        -1 == this.ins ? this.forward(bb) : bb == this.ins ? this.next() : (this.ins -= bb, this.off += bb)
       }
     }
-    class Jq {
-      constructor(qq, Eq, gq) {
-        this.from = qq, this.to = Eq, this.flags = gq
+    class Ib {
+      constructor(bb, ub, hb) {
+        this.from = bb, this.to = ub, this.flags = hb
       }
       get anchor() {
         return 32 & this.flags ? this.to : this.from
@@ -849,27 +849,27 @@ export const modules = {
         return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
       }
       get bidiLevel() {
-        let qq = 7 & this.flags;
-        return 7 == qq ? null : qq
+        let bb = 7 & this.flags;
+        return 7 == bb ? null : bb
       }
       get goalColumn() {
-        let qq = this.flags >> 6;
-        return 16777215 == qq ? void 0 : qq
+        let bb = this.flags >> 6;
+        return 16777215 == bb ? void 0 : bb
       }
-      map(qq) {
-        let Eq, gq, Yq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return this.empty ? Eq = gq = qq.mapPos(this.from, Yq) : (Eq = qq.mapPos(this.from, 1), gq = qq.mapPos(this.to, -1)), Eq == this.from && gq == this.to ? this : new Jq(Eq, gq, this.flags)
+      map(bb) {
+        let ub, hb, Bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? ub = hb = bb.mapPos(this.from, Bb) : (ub = bb.mapPos(this.from, 1), hb = bb.mapPos(this.to, -1)), ub == this.from && hb == this.to ? this : new Ib(ub, hb, this.flags)
       }
-      extend(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qq,
-          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (qq <= this.anchor && Eq >= this.anchor) return kq.range(qq, Eq, void 0, void 0, gq);
-        let Yq = Math.abs(qq - this.anchor) > Math.abs(Eq - this.anchor) ? qq : Eq;
-        return kq.range(this.anchor, Yq, void 0, void 0, gq)
+      extend(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb,
+          hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (bb <= this.anchor && ub >= this.anchor) return Pb.range(bb, ub, void 0, void 0, hb);
+        let Bb = Math.abs(bb - this.anchor) > Math.abs(ub - this.anchor) ? bb : ub;
+        return Pb.range(this.anchor, Bb, void 0, void 0, hb)
       }
-      eq(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.anchor == qq.anchor && this.head == qq.head && this.goalColumn == qq.goalColumn && (!Eq || !this.empty || this.assoc == qq.assoc)
+      eq(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == bb.anchor && this.head == bb.head && this.goalColumn == bb.goalColumn && (!ub || !this.empty || this.assoc == bb.assoc)
       }
       toJSON() {
         return {
@@ -877,447 +877,447 @@ export const modules = {
           head: this.head
         }
       }
-      static fromJSON(qq) {
-        if (!qq || "number" != typeof qq.anchor || "number" != typeof qq.head) throw new RangeError("Invalid JSON representation for SelectionRange");
-        return kq.range(qq.anchor, qq.head)
+      static fromJSON(bb) {
+        if (!bb || "number" != typeof bb.anchor || "number" != typeof bb.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return Pb.range(bb.anchor, bb.head)
       }
-      static create(qq, Eq, gq) {
-        return new Jq(qq, Eq, gq)
+      static create(bb, ub, hb) {
+        return new Ib(bb, ub, hb)
       }
     }
-    class kq {
-      constructor(qq, Eq) {
-        this.zV = qq, this.mainIndex = Eq
+    class Pb {
+      constructor(bb, ub) {
+        this.tp = bb, this.mainIndex = ub
       }
-      map(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return qq.empty ? this : kq.create(this.zV.map((gq => gq.map(qq, Eq))), this.mainIndex)
+      map(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return bb.empty ? this : Pb.create(this.tp.map((hb => hb.map(bb, ub))), this.mainIndex)
       }
-      eq(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.zV.length != qq.zV.length || this.mainIndex != qq.mainIndex) return !1;
-        for (let gq = 0; gq < this.zV.length; gq++)
-          if (!this.zV[gq].eq(qq.zV[gq], Eq)) return !1;
+      eq(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.tp.length != bb.tp.length || this.mainIndex != bb.mainIndex) return !1;
+        for (let hb = 0; hb < this.tp.length; hb++)
+          if (!this.tp[hb].eq(bb.tp[hb], ub)) return !1;
         return !0
       }
       get main() {
-        return this.zV[this.mainIndex]
+        return this.tp[this.mainIndex]
       }
       asSingle() {
-        return 1 == this.zV.length ? this : new kq([this.main], 0)
+        return 1 == this.tp.length ? this : new Pb([this.main], 0)
       }
-      addRange(qq) {
-        let Eq = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return kq.create([qq].concat(this.zV), Eq ? 0 : this.mainIndex + 1)
+      addRange(bb) {
+        let ub = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return Pb.create([bb].concat(this.tp), ub ? 0 : this.mainIndex + 1)
       }
-      replaceRange(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
-          gq = this.zV.slice();
-        return gq[Eq] = qq, kq.create(gq, this.mainIndex)
+      replaceRange(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          hb = this.tp.slice();
+        return hb[ub] = bb, Pb.create(hb, this.mainIndex)
       }
       toJSON() {
         return {
-          zV: this.zV.map((qq => qq.toJSON())),
+          tp: this.tp.map((bb => bb.toJSON())),
           main: this.mainIndex
         }
       }
-      static fromJSON(qq) {
-        if (!qq || !Array.isArray(qq.zV) || "number" != typeof qq.main || qq.main >= qq.zV.length) throw new RangeError("Invalid JSON representation for EditorSelection");
-        return new kq(qq.zV.map((qq => Jq.fromJSON(qq))), qq.main)
+      static fromJSON(bb) {
+        if (!bb || !Array.isArray(bb.tp) || "number" != typeof bb.main || bb.main >= bb.tp.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new Pb(bb.tp.map((bb => Ib.fromJSON(bb))), bb.main)
       }
-      static single(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qq;
-        return new kq([kq.range(qq, Eq)], 0)
+      static single(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb;
+        return new Pb([Pb.range(bb, ub)], 0)
       }
-      static create(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (0 == qq.length) throw new RangeError("A selection needs at least one range");
-        for (let gq = 0, Yq = 0; Yq < qq.length; Yq++) {
-          let lq = qq[Yq];
-          if (lq.empty ? lq.from <= gq : lq.from < gq) return kq.normalized(qq.slice(), Eq);
-          gq = lq.to
+      static create(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == bb.length) throw new RangeError("A selection needs at least one range");
+        for (let hb = 0, Bb = 0; Bb < bb.length; Bb++) {
+          let Ob = bb[Bb];
+          if (Ob.empty ? Ob.from <= hb : Ob.from < hb) return Pb.normalized(bb.slice(), ub);
+          hb = Ob.to
         }
-        return new kq(qq, Eq)
+        return new Pb(bb, ub)
       }
-      static cursor(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gq = arguments.length > 2 ? arguments[2] : void 0,
-          Yq = arguments.length > 3 ? arguments[3] : void 0;
-        return Jq.create(qq, qq, (0 == Eq ? 0 : Eq < 0 ? 8 : 16) | (null == gq ? 7 : Math.min(6, gq)) | (null !== Yq && void 0 !== Yq ? Yq : 16777215) << 6)
+      static cursor(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          hb = arguments.length > 2 ? arguments[2] : void 0,
+          Bb = arguments.length > 3 ? arguments[3] : void 0;
+        return Ib.create(bb, bb, (0 == ub ? 0 : ub < 0 ? 8 : 16) | (null == hb ? 7 : Math.min(6, hb)) | (null !== Bb && void 0 !== Bb ? Bb : 16777215) << 6)
       }
-      static range(qq, Eq, gq, Yq, lq) {
-        let Oq = (null !== gq && void 0 !== gq ? gq : 16777215) << 6 | (null == Yq ? 7 : Math.min(6, Yq));
-        return lq || qq == Eq || (lq = Eq < qq ? 1 : -1), Eq < qq ? Jq.create(Eq, qq, 48 | Oq) : Jq.create(qq, Eq, (lq ? lq < 0 ? 8 : 16 : 0) | Oq)
+      static range(bb, ub, hb, Bb, Ob) {
+        let Gb = (null !== hb && void 0 !== hb ? hb : 16777215) << 6 | (null == Bb ? 7 : Math.min(6, Bb));
+        return Ob || bb == ub || (Ob = ub < bb ? 1 : -1), ub < bb ? Ib.create(ub, bb, 48 | Gb) : Ib.create(bb, ub, (Ob ? Ob < 0 ? 8 : 16 : 0) | Gb)
       }
-      static normalized(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gq = qq[Eq];
-        qq.sort(((qq, Eq) => qq.from - Eq.from)), Eq = qq.indexOf(gq);
-        for (let Yq = 1; Yq < qq.length; Yq++) {
-          let gq = qq[Yq],
-            lq = qq[Yq - 1];
-          if (gq.empty ? gq.from <= lq.to : gq.from < lq.to) {
-            let Oq = lq.from,
-              mq = Math.max(gq.to, lq.to);
-            Yq <= Eq && Eq--, qq.splice(--Yq, 2, gq.anchor > gq.head ? kq.range(mq, Oq) : kq.range(Oq, mq))
+      static normalized(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          hb = bb[ub];
+        bb.sort(((bb, ub) => bb.from - ub.from)), ub = bb.indexOf(hb);
+        for (let Bb = 1; Bb < bb.length; Bb++) {
+          let hb = bb[Bb],
+            Ob = bb[Bb - 1];
+          if (hb.empty ? hb.from <= Ob.to : hb.from < Ob.to) {
+            let Gb = Ob.from,
+              Ub = Math.max(hb.to, Ob.to);
+            Bb <= ub && ub--, bb.splice(--Bb, 2, hb.anchor > hb.head ? Pb.range(Ub, Gb) : Pb.range(Gb, Ub))
           }
         }
-        return new kq(qq, Eq)
+        return new Pb(bb, ub)
       }
     }
 
-    function Rq(qq, Eq) {
-      for (let gq of qq.zV)
-        if (gq.to > Eq) throw new RangeError("Selection points outside of document")
+    function qb(bb, ub) {
+      for (let hb of bb.tp)
+        if (hb.to > ub) throw new RangeError("Selection points outside of document")
     }
-    let Uq = 0;
-    class Fq {
-      constructor(qq, Eq, gq, Yq, lq) {
-        this.combine = qq, this.compareInput = Eq, this.compare = gq, this.isStatic = Yq, this.id = Uq++, this.default = qq([]), this.extensions = "function" == typeof lq ? lq(this) : lq
+    let Eb = 0;
+    class yb {
+      constructor(bb, ub, hb, Bb, Ob) {
+        this.combine = bb, this.compareInput = ub, this.compare = hb, this.isStatic = Bb, this.id = Eb++, this.default = bb([]), this.extensions = "function" == typeof Ob ? Ob(this) : Ob
       }
       get reader() {
         return this
       }
       static define() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return new Fq(qq.combine || (qq => qq), qq.compareInput || ((qq, Eq) => qq === Eq), qq.compare || (qq.combine ? (qq, Eq) => qq === Eq : sq), !!qq.static, qq.enables)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new yb(bb.combine || (bb => bb), bb.compareInput || ((bb, ub) => bb === ub), bb.compare || (bb.combine ? (bb, ub) => bb === ub : Vb), !!bb.static, bb.enables)
       }
-      of(qq) {
-        return new Xq([], this, 0, qq)
+      of(bb) {
+        return new Fb([], this, 0, bb)
       }
-      compute(qq, Eq) {
+      compute(bb, ub) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new Xq(qq, this, 1, Eq)
+        return new Fb(bb, this, 1, ub)
       }
-      computeN(qq, Eq) {
+      computeN(bb, ub) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new Xq(qq, this, 2, Eq)
+        return new Fb(bb, this, 2, ub)
       }
-      from(qq, Eq) {
-        return Eq || (Eq = qq => qq), this.compute([qq], (gq => Eq(gq.field(qq))))
+      from(bb, ub) {
+        return ub || (ub = bb => bb), this.compute([bb], (hb => ub(hb.field(bb))))
       }
     }
 
-    function sq(qq, Eq) {
-      return qq == Eq || qq.length == Eq.length && qq.every(((qq, gq) => qq === Eq[gq]))
+    function Vb(bb, ub) {
+      return bb == ub || bb.length == ub.length && bb.every(((bb, hb) => bb === ub[hb]))
     }
-    class Xq {
-      constructor(qq, Eq, gq, Yq) {
-        this.dependencies = qq, this.facet = Eq, this.type = gq, this.value = Yq, this.id = Uq++
+    class Fb {
+      constructor(bb, ub, hb, Bb) {
+        this.dependencies = bb, this.facet = ub, this.type = hb, this.value = Bb, this.id = Eb++
       }
-      dynamicSlot(qq) {
-        var Eq;
-        let gq = this.value,
-          Yq = this.facet.compareInput,
-          lq = this.id,
-          Oq = qq[lq] >> 1,
-          mq = 2 == this.type,
-          xq = !1,
-          Aq = !1,
-          cq = [];
-        for (let uq of this.dependencies) "doc" == uq ? xq = !0 : "selection" == uq ? Aq = !0 : 0 == (1 & (null !== (Eq = qq[uq.id]) && void 0 !== Eq ? Eq : 1)) && cq.push(qq[uq.id]);
+      dynamicSlot(bb) {
+        var ub;
+        let hb = this.value,
+          Bb = this.facet.compareInput,
+          Ob = this.id,
+          Gb = bb[Ob] >> 1,
+          Ub = 2 == this.type,
+          Lb = !1,
+          Yb = !1,
+          Sb = [];
+        for (let ab of this.dependencies) "doc" == ab ? Lb = !0 : "selection" == ab ? Yb = !0 : 0 == (1 & (null !== (ub = bb[ab.id]) && void 0 !== ub ? ub : 1)) && Sb.push(bb[ab.id]);
         return {
-          create: qq => (qq.values[Oq] = gq(qq), 1),
-          update(qq, Eq) {
-            if (xq && Eq.docChanged || Aq && (Eq.docChanged || Eq.selection) || Kq(qq, cq)) {
-              let Eq = gq(qq);
-              if (mq ? !wq(Eq, qq.values[Oq], Yq) : !Yq(Eq, qq.values[Oq])) return qq.values[Oq] = Eq, 1
+          create: bb => (bb.values[Gb] = hb(bb), 1),
+          update(bb, ub) {
+            if (Lb && ub.docChanged || Yb && (ub.docChanged || ub.selection) || kb(bb, Sb)) {
+              let ub = hb(bb);
+              if (Ub ? !fb(ub, bb.values[Gb], Bb) : !Bb(ub, bb.values[Gb])) return bb.values[Gb] = ub, 1
             }
             return 0
           },
-          reconfigure: (qq, Eq) => {
-            let xq, Aq = Eq.config.address[lq];
-            if (null != Aq) {
-              let lq = uE(Eq, Aq);
-              if (this.dependencies.every((gq => gq instanceof Fq ? Eq.facet(gq) === qq.facet(gq) : !(gq instanceof eq) || Eq.field(gq, !1) == qq.field(gq, !1))) || (mq ? wq(xq = gq(qq), lq, Yq) : Yq(xq = gq(qq), lq))) return qq.values[Oq] = lq, 0
-            } else xq = gq(qq);
-            return qq.values[Oq] = xq, 1
+          reconfigure: (bb, ub) => {
+            let Lb, Yb = ub.config.address[Ob];
+            if (null != Yb) {
+              let Ob = au(ub, Yb);
+              if (this.dependencies.every((hb => hb instanceof yb ? ub.facet(hb) === bb.facet(hb) : !(hb instanceof Qb) || ub.field(hb, !1) == bb.field(hb, !1))) || (Ub ? fb(Lb = hb(bb), Ob, Bb) : Bb(Lb = hb(bb), Ob))) return bb.values[Gb] = Ob, 0
+            } else Lb = hb(bb);
+            return bb.values[Gb] = Lb, 1
           }
         }
       }
     }
 
-    function wq(qq, Eq, gq) {
-      if (qq.length != Eq.length) return !1;
-      for (let Yq = 0; Yq < qq.length; Yq++)
-        if (!gq(qq[Yq], Eq[Yq])) return !1;
+    function fb(bb, ub, hb) {
+      if (bb.length != ub.length) return !1;
+      for (let Bb = 0; Bb < bb.length; Bb++)
+        if (!hb(bb[Bb], ub[Bb])) return !1;
       return !0
     }
 
-    function Kq(qq, Eq) {
-      let gq = !1;
-      for (let Yq of Eq) 1 & cE(qq, Yq) && (gq = !0);
-      return gq
+    function kb(bb, ub) {
+      let hb = !1;
+      for (let Bb of ub) 1 & Su(bb, Bb) && (hb = !0);
+      return hb
     }
 
-    function Cq(qq, Eq, gq) {
-      let Yq = gq.map((Eq => qq[Eq.id])),
-        lq = gq.map((qq => qq.type)),
-        Oq = Yq.filter((qq => !(1 & qq))),
-        mq = qq[Eq.id] >> 1;
+    function Tb(bb, ub, hb) {
+      let Bb = hb.map((ub => bb[ub.id])),
+        Ob = hb.map((bb => bb.type)),
+        Gb = Bb.filter((bb => !(1 & bb))),
+        Ub = bb[ub.id] >> 1;
 
-      function xq(qq) {
-        let gq = [];
-        for (let Eq = 0; Eq < Yq.length; Eq++) {
-          let Oq = uE(qq, Yq[Eq]);
-          if (2 == lq[Eq])
-            for (let qq of Oq) gq.push(qq);
-          else gq.push(Oq)
+      function Lb(bb) {
+        let hb = [];
+        for (let ub = 0; ub < Bb.length; ub++) {
+          let Gb = au(bb, Bb[ub]);
+          if (2 == Ob[ub])
+            for (let bb of Gb) hb.push(bb);
+          else hb.push(Gb)
         }
-        return Eq.combine(gq)
+        return ub.combine(hb)
       }
       return {
-        create(qq) {
-          for (let Eq of Yq) cE(qq, Eq);
-          return qq.values[mq] = xq(qq), 1
+        create(bb) {
+          for (let ub of Bb) Su(bb, ub);
+          return bb.values[Ub] = Lb(bb), 1
         },
-        update(qq, gq) {
-          if (!Kq(qq, Oq)) return 0;
-          let Yq = xq(qq);
-          return Eq.compare(Yq, qq.values[mq]) ? 0 : (qq.values[mq] = Yq, 1)
+        update(bb, hb) {
+          if (!kb(bb, Gb)) return 0;
+          let Bb = Lb(bb);
+          return ub.compare(Bb, bb.values[Ub]) ? 0 : (bb.values[Ub] = Bb, 1)
         },
-        reconfigure(qq, lq) {
-          let Oq = Kq(qq, Yq),
-            Aq = lq.config.facets[Eq.id],
-            cq = lq.facet(Eq);
-          if (Aq && !Oq && sq(gq, Aq)) return qq.values[mq] = cq, 0;
-          let uq = xq(qq);
-          return Eq.compare(uq, cq) ? (qq.values[mq] = cq, 0) : (qq.values[mq] = uq, 1)
+        reconfigure(bb, Ob) {
+          let Gb = kb(bb, Bb),
+            Yb = Ob.config.facets[ub.id],
+            Sb = Ob.facet(ub);
+          if (Yb && !Gb && Vb(hb, Yb)) return bb.values[Ub] = Sb, 0;
+          let ab = Lb(bb);
+          return ub.compare(ab, Sb) ? (bb.values[Ub] = Sb, 0) : (bb.values[Ub] = ab, 1)
         }
       }
     }
-    const Iq = Fq.define({
+    const cb = yb.define({
       static: !0
     });
-    class eq {
-      constructor(qq, Eq, gq, Yq, lq) {
-        this.id = qq, this.createF = Eq, this.updateF = gq, this.compareF = Yq, this.spec = lq, this.provides = void 0
+    class Qb {
+      constructor(bb, ub, hb, Bb, Ob) {
+        this.id = bb, this.createF = ub, this.updateF = hb, this.compareF = Bb, this.spec = Ob, this.provides = void 0
       }
-      static define(qq) {
-        let Eq = new eq(Uq++, qq.create, qq.update, qq.compare || ((qq, Eq) => qq === Eq), qq);
-        return qq.provide && (Eq.provides = qq.provide(Eq)), Eq
+      static define(bb) {
+        let ub = new Qb(Eb++, bb.create, bb.update, bb.compare || ((bb, ub) => bb === ub), bb);
+        return bb.provide && (ub.provides = bb.provide(ub)), ub
       }
-      create(qq) {
-        let Eq = qq.facet(Iq).find((qq => qq.field == this));
-        return ((null === Eq || void 0 === Eq ? void 0 : Eq.create) || this.createF)(qq)
+      create(bb) {
+        let ub = bb.facet(cb).find((bb => bb.field == this));
+        return ((null === ub || void 0 === ub ? void 0 : ub.create) || this.createF)(bb)
       }
-      slot(qq) {
-        let Eq = qq[this.id] >> 1;
+      slot(bb) {
+        let ub = bb[this.id] >> 1;
         return {
-          create: qq => (qq.values[Eq] = this.create(qq), 1),
-          update: (qq, gq) => {
-            let Yq = qq.values[Eq],
-              lq = this.updateF(Yq, gq);
-            return this.compareF(Yq, lq) ? 0 : (qq.values[Eq] = lq, 1)
+          create: bb => (bb.values[ub] = this.create(bb), 1),
+          update: (bb, hb) => {
+            let Bb = bb.values[ub],
+              Ob = this.updateF(Bb, hb);
+            return this.compareF(Bb, Ob) ? 0 : (bb.values[ub] = Ob, 1)
           },
-          reconfigure: (qq, gq) => {
-            let Yq, lq = qq.facet(Iq),
-              Oq = gq.facet(Iq);
-            return (Yq = lq.find((qq => qq.field == this))) && Yq != Oq.find((qq => qq.field == this)) ? (qq.values[Eq] = Yq.create(qq), 1) : null != gq.config.address[this.id] ? (qq.values[Eq] = gq.field(this), 0) : (qq.values[Eq] = this.create(qq), 1)
+          reconfigure: (bb, hb) => {
+            let Bb, Ob = bb.facet(cb),
+              Gb = hb.facet(cb);
+            return (Bb = Ob.find((bb => bb.field == this))) && Bb != Gb.find((bb => bb.field == this)) ? (bb.values[ub] = Bb.create(bb), 1) : null != hb.config.address[this.id] ? (bb.values[ub] = hb.field(this), 0) : (bb.values[ub] = this.create(bb), 1)
           }
         }
       }
-      init(qq) {
-        return [this, Iq.of({
+      init(bb) {
+        return [this, cb.of({
           field: this,
-          create: qq
+          create: bb
         })]
       }
       get extension() {
         return this
       }
     }
-    const Dq = 4,
-      qE = 3,
-      EE = 2,
-      gE = 1;
+    const Rb = 4,
+      bu = 3,
+      uu = 2,
+      hu = 1;
 
-    function YE(qq) {
-      return Eq => new OE(Eq, qq)
+    function Bu(bb) {
+      return ub => new Gu(ub, bb)
     }
-    const lE = {
-      highest: YE(0),
-      high: YE(gE),
-      default: YE(EE),
-      low: YE(qE),
-      lowest: YE(Dq)
+    const Ou = {
+      highest: Bu(0),
+      high: Bu(hu),
+      default: Bu(uu),
+      low: Bu(bu),
+      lowest: Bu(Rb)
     };
-    class OE {
-      constructor(qq, Eq) {
-        this.inner = qq, this.prec = Eq
+    class Gu {
+      constructor(bb, ub) {
+        this.inner = bb, this.prec = ub
       }
     }
-    class mE {
-      of(qq) {
-        return new xE(this, qq)
+    class Uu {
+      of(bb) {
+        return new Lu(this, bb)
       }
-      reconfigure(qq) {
-        return mE.reconfigure.of({
+      reconfigure(bb) {
+        return Uu.reconfigure.of({
           compartment: this,
-          extension: qq
+          extension: bb
         })
       }
-      get(qq) {
-        return qq.config.compartments.get(this)
+      get(bb) {
+        return bb.config.compartments.get(this)
       }
     }
-    class xE {
-      constructor(qq, Eq) {
-        this.compartment = qq, this.inner = Eq
+    class Lu {
+      constructor(bb, ub) {
+        this.compartment = bb, this.inner = ub
       }
     }
-    class AE {
-      constructor(qq, Eq, gq, Yq, lq, Oq) {
-        for (this.base = qq, this.compartments = Eq, this.dynamicSlots = gq, this.address = Yq, this.staticValues = lq, this.facets = Oq, this.statusTemplate = []; this.statusTemplate.length < gq.length;) this.statusTemplate.push(0)
+    class Yu {
+      constructor(bb, ub, hb, Bb, Ob, Gb) {
+        for (this.base = bb, this.compartments = ub, this.dynamicSlots = hb, this.address = Bb, this.staticValues = Ob, this.facets = Gb, this.statusTemplate = []; this.statusTemplate.length < hb.length;) this.statusTemplate.push(0)
       }
-      staticFacet(qq) {
-        let Eq = this.address[qq.id];
-        return null == Eq ? qq.default : this.staticValues[Eq >> 1]
+      staticFacet(bb) {
+        let ub = this.address[bb.id];
+        return null == ub ? bb.default : this.staticValues[ub >> 1]
       }
-      static resolve(qq, Eq, gq) {
-        let Yq = [],
-          lq = Object.create(null),
-          Oq = new Map;
-        for (let Bq of function(qq, Eq, gq) {
-            let Yq = [
+      static resolve(bb, ub, hb) {
+        let Bb = [],
+          Ob = Object.create(null),
+          Gb = new Map;
+        for (let Hb of function(bb, ub, hb) {
+            let Bb = [
                 [],
                 [],
                 [],
                 [],
                 []
               ],
-              lq = new Map;
+              Ob = new Map;
 
-            function Oq(qq, mq) {
-              let xq = lq.get(qq);
-              if (null != xq) {
-                if (xq <= mq) return;
-                let Eq = Yq[xq].indexOf(qq);
-                Eq > -1 && Yq[xq].splice(Eq, 1), qq instanceof xE && gq.delete(qq.compartment)
+            function Gb(bb, Ub) {
+              let Lb = Ob.get(bb);
+              if (null != Lb) {
+                if (Lb <= Ub) return;
+                let ub = Bb[Lb].indexOf(bb);
+                ub > -1 && Bb[Lb].splice(ub, 1), bb instanceof Lu && hb.delete(bb.compartment)
               }
-              if (lq.set(qq, mq), Array.isArray(qq))
-                for (let Eq of qq) Oq(Eq, mq);
-              else if (qq instanceof xE) {
-                if (gq.has(qq.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
-                let Yq = Eq.get(qq.compartment) || qq.inner;
-                gq.set(qq.compartment, Yq), Oq(Yq, mq)
-              } else if (qq instanceof OE) Oq(qq.inner, qq.prec);
-              else if (qq instanceof eq) Yq[mq].push(qq), qq.provides && Oq(qq.provides, mq);
-              else if (qq instanceof Xq) Yq[mq].push(qq), qq.facet.extensions && Oq(qq.facet.extensions, EE);
+              if (Ob.set(bb, Ub), Array.isArray(bb))
+                for (let ub of bb) Gb(ub, Ub);
+              else if (bb instanceof Lu) {
+                if (hb.has(bb.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let Bb = ub.get(bb.compartment) || bb.inner;
+                hb.set(bb.compartment, Bb), Gb(Bb, Ub)
+              } else if (bb instanceof Gu) Gb(bb.inner, bb.prec);
+              else if (bb instanceof Qb) Bb[Ub].push(bb), bb.provides && Gb(bb.provides, Ub);
+              else if (bb instanceof Fb) Bb[Ub].push(bb), bb.facet.extensions && Gb(bb.facet.extensions, uu);
               else {
-                let Eq = qq.extension;
-                if (!Eq) throw new Error(`Unrecognized extension value in extension set (${qq}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
-                Oq(Eq, mq)
+                let ub = bb.extension;
+                if (!ub) throw new Error(`Unrecognized extension value in extension set (${bb}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                Gb(ub, Ub)
               }
             }
-            return Oq(qq, EE), Yq.reduce(((qq, Eq) => qq.concat(Eq)))
-          }(qq, Eq, Oq)) Bq instanceof eq ? Yq.push(Bq) : (lq[Bq.facet.id] || (lq[Bq.facet.id] = [])).push(Bq);
-        let mq = Object.create(null),
-          xq = [],
-          Aq = [];
-        for (let Bq of Yq) mq[Bq.id] = Aq.length << 1, Aq.push((qq => Bq.slot(qq)));
-        let cq = null === gq || void 0 === gq ? void 0 : gq.config.facets;
-        for (let Bq in lq) {
-          let qq = lq[Bq],
-            Eq = qq[0].facet,
-            Yq = cq && cq[Bq] || [];
-          if (qq.every((qq => 0 == qq.type)))
-            if (mq[Eq.id] = xq.length << 1 | 1, sq(Yq, qq)) xq.push(gq.facet(Eq));
+            return Gb(bb, uu), Bb.reduce(((bb, ub) => bb.concat(ub)))
+          }(bb, ub, Gb)) Hb instanceof Qb ? Bb.push(Hb) : (Ob[Hb.facet.id] || (Ob[Hb.facet.id] = [])).push(Hb);
+        let Ub = Object.create(null),
+          Lb = [],
+          Yb = [];
+        for (let Hb of Bb) Ub[Hb.id] = Yb.length << 1, Yb.push((bb => Hb.slot(bb)));
+        let Sb = null === hb || void 0 === hb ? void 0 : hb.config.facets;
+        for (let Hb in Ob) {
+          let bb = Ob[Hb],
+            ub = bb[0].facet,
+            Bb = Sb && Sb[Hb] || [];
+          if (bb.every((bb => 0 == bb.type)))
+            if (Ub[ub.id] = Lb.length << 1 | 1, Vb(Bb, bb)) Lb.push(hb.facet(ub));
             else {
-              let Yq = Eq.combine(qq.map((qq => qq.value)));
-              xq.push(gq && Eq.compare(Yq, gq.facet(Eq)) ? gq.facet(Eq) : Yq)
+              let Bb = ub.combine(bb.map((bb => bb.value)));
+              Lb.push(hb && ub.compare(Bb, hb.facet(ub)) ? hb.facet(ub) : Bb)
             }
           else {
-            for (let Eq of qq) 0 == Eq.type ? (mq[Eq.id] = xq.length << 1 | 1, xq.push(Eq.value)) : (mq[Eq.id] = Aq.length << 1, Aq.push((qq => Eq.dynamicSlot(qq))));
-            mq[Eq.id] = Aq.length << 1, Aq.push((gq => Cq(gq, Eq, qq)))
+            for (let ub of bb) 0 == ub.type ? (Ub[ub.id] = Lb.length << 1 | 1, Lb.push(ub.value)) : (Ub[ub.id] = Yb.length << 1, Yb.push((bb => ub.dynamicSlot(bb))));
+            Ub[ub.id] = Yb.length << 1, Yb.push((hb => Tb(hb, ub, bb)))
           }
         }
-        let uq = Aq.map((qq => qq(mq)));
-        return new AE(qq, Oq, uq, mq, xq, lq)
+        let ab = Yb.map((bb => bb(Ub)));
+        return new Yu(bb, Gb, ab, Ub, Lb, Ob)
       }
     }
 
-    function cE(qq, Eq) {
-      if (1 & Eq) return 2;
-      let gq = Eq >> 1,
-        Yq = qq.status[gq];
-      if (4 == Yq) throw new Error("Cyclic dependency between fields and/or facets");
-      if (2 & Yq) return Yq;
-      qq.status[gq] = 4;
-      let lq = qq.computeSlot(qq, qq.config.dynamicSlots[gq]);
-      return qq.status[gq] = 2 | lq
+    function Su(bb, ub) {
+      if (1 & ub) return 2;
+      let hb = ub >> 1,
+        Bb = bb.status[hb];
+      if (4 == Bb) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & Bb) return Bb;
+      bb.status[hb] = 4;
+      let Ob = bb.computeSlot(bb, bb.config.dynamicSlots[hb]);
+      return bb.status[hb] = 2 | Ob
     }
 
-    function uE(qq, Eq) {
-      return 1 & Eq ? qq.config.staticValues[Eq >> 1] : qq.values[Eq >> 1]
+    function au(bb, ub) {
+      return 1 & ub ? bb.config.staticValues[ub >> 1] : bb.values[ub >> 1]
     }
-    const BE = Fq.define(),
-      WE = Fq.define({
-        combine: qq => qq.some((qq => qq)),
+    const Hu = yb.define(),
+      wu = yb.define({
+        combine: bb => bb.some((bb => bb)),
         static: !0
       }),
-      NE = Fq.define({
-        combine: qq => qq.length ? qq[0] : void 0,
+      Zu = yb.define({
+        combine: bb => bb.length ? bb[0] : void 0,
         static: !0
       }),
-      aE = Fq.define(),
-      VE = Fq.define(),
-      dE = Fq.define(),
-      jE = Fq.define({
-        combine: qq => !!qq.length && qq[0]
+      Xu = yb.define(),
+      pu = yb.define(),
+      ou = yb.define(),
+      Au = yb.define({
+        combine: bb => !!bb.length && bb[0]
       });
-    class HE {
-      constructor(qq, Eq) {
-        this.type = qq, this.value = Eq
+    class lu {
+      constructor(bb, ub) {
+        this.type = bb, this.value = ub
       }
       static define() {
-        return new oE
+        return new Ku
       }
     }
-    class oE {
-      of(qq) {
-        return new HE(this, qq)
+    class Ku {
+      of(bb) {
+        return new lu(this, bb)
       }
     }
-    class PE {
-      constructor(qq) {
-        this.map = qq
+    class Wu {
+      constructor(bb) {
+        this.map = bb
       }
-      of(qq) {
-        return new QE(this, qq)
+      of(bb) {
+        return new Cu(this, bb)
       }
     }
-    class QE {
-      constructor(qq, Eq) {
-        this.type = qq, this.value = Eq
+    class Cu {
+      constructor(bb, ub) {
+        this.type = bb, this.value = ub
       }
-      map(qq) {
-        let Eq = this.type.map(this.value, qq);
-        return void 0 === Eq ? void 0 : Eq == this.value ? this : new QE(this.type, Eq)
+      map(bb) {
+        let ub = this.type.map(this.value, bb);
+        return void 0 === ub ? void 0 : ub == this.value ? this : new Cu(this.type, ub)
       }
-      is(qq) {
-        return this.type == qq
+      is(bb) {
+        return this.type == bb
       }
       static define() {
-        return new PE((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (qq => qq))
+        return new Wu((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (bb => bb))
       }
-      static mapEffects(qq, Eq) {
-        if (!qq.length) return qq;
-        let gq = [];
-        for (let Yq of qq) {
-          let qq = Yq.map(Eq);
-          qq && gq.push(qq)
+      static mapEffects(bb, ub) {
+        if (!bb.length) return bb;
+        let hb = [];
+        for (let Bb of bb) {
+          let bb = Bb.map(ub);
+          bb && hb.push(bb)
         }
-        return gq
+        return hb
       }
     }
-    QE.reconfigure = QE.define(), QE.appendConfig = QE.define();
-    class yE {
-      constructor(qq, Eq, gq, Yq, lq, Oq) {
-        this.startState = qq, this.changes = Eq, this.selection = gq, this.effects = Yq, this.annotations = lq, this.scrollIntoView = Oq, this._doc = null, this._state = null, gq && Rq(gq, Eq.newLength), lq.some((qq => qq.type == yE.time)) || (this.annotations = lq.concat(yE.time.of(Date.now())))
+    Cu.reconfigure = Cu.define(), Cu.appendConfig = Cu.define();
+    class du {
+      constructor(bb, ub, hb, Bb, Ob, Gb) {
+        this.startState = bb, this.changes = ub, this.selection = hb, this.effects = Bb, this.annotations = Ob, this.scrollIntoView = Gb, this._doc = null, this._state = null, hb && qb(hb, ub.newLength), Ob.some((bb => bb.type == du.time)) || (this.annotations = Ob.concat(du.time.of(Date.now())))
       }
-      static create(qq, Eq, gq, Yq, lq, Oq) {
-        return new yE(qq, Eq, gq, Yq, lq, Oq)
+      static create(bb, ub, hb, Bb, Ob, Gb) {
+        return new du(bb, ub, hb, Bb, Ob, Gb)
       }
       get newDoc() {
         return this._doc || (this._doc = this.changes.apply(this.startState.doc))
@@ -1328,9 +1328,9 @@ export const modules = {
       get state() {
         return this._state || this.startState.applyTransaction(this), this._state
       }
-      annotation(qq) {
-        for (let Eq of this.annotations)
-          if (Eq.type == qq) return Eq.value
+      annotation(bb) {
+        for (let ub of this.annotations)
+          if (ub.type == bb) return ub.value
       }
       get docChanged() {
         return !this.changes.empty
@@ -1338,584 +1338,584 @@ export const modules = {
       get reconfigured() {
         return this.startState.config != this.state.config
       }
-      isUserEvent(qq) {
-        let Eq = this.annotation(yE.userEvent);
-        return !(!Eq || !(Eq == qq || Eq.length > qq.length && Eq.slice(0, qq.length) == qq && "." == Eq[qq.length]))
+      isUserEvent(bb) {
+        let ub = this.annotation(du.userEvent);
+        return !(!ub || !(ub == bb || ub.length > bb.length && ub.slice(0, bb.length) == bb && "." == ub[bb.length]))
       }
     }
 
-    function tE(qq, Eq) {
-      let gq = [];
-      for (let Yq = 0, lq = 0;;) {
-        let Oq, mq;
-        if (Yq < qq.length && (lq == Eq.length || Eq[lq] >= qq[Yq])) Oq = qq[Yq++], mq = qq[Yq++];
+    function ru(bb, ub) {
+      let hb = [];
+      for (let Bb = 0, Ob = 0;;) {
+        let Gb, Ub;
+        if (Bb < bb.length && (Ob == ub.length || ub[Ob] >= bb[Bb])) Gb = bb[Bb++], Ub = bb[Bb++];
         else {
-          if (!(lq < Eq.length)) return gq;
-          Oq = Eq[lq++], mq = Eq[lq++]
-        }!gq.length || gq[gq.length - 1] < Oq ? gq.push(Oq, mq) : gq[gq.length - 1] < mq && (gq[gq.length - 1] = mq)
+          if (!(Ob < ub.length)) return hb;
+          Gb = ub[Ob++], Ub = ub[Ob++]
+        }!hb.length || hb[hb.length - 1] < Gb ? hb.push(Gb, Ub) : hb[hb.length - 1] < Ub && (hb[hb.length - 1] = Ub)
       }
     }
 
-    function rE(qq, Eq, gq) {
-      var Yq;
-      let lq, Oq, mq;
-      return gq ? (lq = Eq.changes, Oq = Mq.empty(Eq.changes.length), mq = qq.changes.compose(Eq.changes)) : (lq = Eq.changes.map(qq.changes), Oq = qq.changes.mapDesc(Eq.changes, !0), mq = qq.changes.compose(lq)), {
-        changes: mq,
-        selection: Eq.selection ? Eq.selection.map(Oq) : null === (Yq = qq.selection) || void 0 === Yq ? void 0 : Yq.map(lq),
-        effects: QE.mapEffects(qq.effects, lq).concat(QE.mapEffects(Eq.effects, Oq)),
-        annotations: qq.annotations.length ? qq.annotations.concat(Eq.annotations) : Eq.annotations,
-        scrollIntoView: qq.scrollIntoView || Eq.scrollIntoView
+    function ju(bb, ub, hb) {
+      var Bb;
+      let Ob, Gb, Ub;
+      return hb ? (Ob = ub.changes, Gb = tb.empty(ub.changes.length), Ub = bb.changes.compose(ub.changes)) : (Ob = ub.changes.map(bb.changes), Gb = bb.changes.mapDesc(ub.changes, !0), Ub = bb.changes.compose(Ob)), {
+        changes: Ub,
+        selection: ub.selection ? ub.selection.map(Gb) : null === (Bb = bb.selection) || void 0 === Bb ? void 0 : Bb.map(Ob),
+        effects: Cu.mapEffects(bb.effects, Ob).concat(Cu.mapEffects(ub.effects, Gb)),
+        annotations: bb.annotations.length ? bb.annotations.concat(ub.annotations) : ub.annotations,
+        scrollIntoView: bb.scrollIntoView || ub.scrollIntoView
       }
     }
 
-    function vE(qq, Eq, gq) {
-      let Yq = Eq.selection,
-        lq = bE(Eq.annotations);
-      return Eq.userEvent && (lq = lq.concat(yE.userEvent.of(Eq.userEvent))), {
-        changes: Eq.changes instanceof Mq ? Eq.changes : Mq.of(Eq.changes || [], gq, qq.facet(NE)),
-        selection: Yq && (Yq instanceof kq ? Yq : kq.single(Yq.anchor, Yq.head)),
-        effects: bE(Eq.effects),
-        annotations: lq,
-        scrollIntoView: !!Eq.scrollIntoView
+    function nu(bb, ub, hb) {
+      let Bb = ub.selection,
+        Ob = zu(ub.annotations);
+      return ub.userEvent && (Ob = Ob.concat(du.userEvent.of(ub.userEvent))), {
+        changes: ub.changes instanceof tb ? ub.changes : tb.of(ub.changes || [], hb, bb.facet(Zu)),
+        selection: Bb && (Bb instanceof Pb ? Bb : Pb.single(Bb.anchor, Bb.head)),
+        effects: zu(ub.effects),
+        annotations: Ob,
+        scrollIntoView: !!ub.scrollIntoView
       }
     }
 
-    function hE(qq, Eq, gq) {
-      let Yq = vE(qq, Eq.length ? Eq[0] : {}, qq.doc.length);
-      Eq.length && !1 === Eq[0].filter && (gq = !1);
-      for (let Oq = 1; Oq < Eq.length; Oq++) {
-        !1 === Eq[Oq].filter && (gq = !1);
-        let lq = !!Eq[Oq].sequential;
-        Yq = rE(Yq, vE(qq, Eq[Oq], lq ? Yq.changes.newLength : qq.doc.length), lq)
+    function Du(bb, ub, hb) {
+      let Bb = nu(bb, ub.length ? ub[0] : {}, bb.doc.length);
+      ub.length && !1 === ub[0].filter && (hb = !1);
+      for (let Gb = 1; Gb < ub.length; Gb++) {
+        !1 === ub[Gb].filter && (hb = !1);
+        let Ob = !!ub[Gb].sequential;
+        Bb = ju(Bb, nu(bb, ub[Gb], Ob ? Bb.changes.newLength : bb.doc.length), Ob)
       }
-      let lq = yE.create(qq, Yq.changes, Yq.selection, Yq.effects, Yq.annotations, Yq.scrollIntoView);
-      return function(qq) {
-        let Eq = qq.startState,
-          gq = Eq.facet(dE),
-          Yq = qq;
-        for (let lq = gq.length - 1; lq >= 0; lq--) {
-          let Oq = gq[lq](qq);
-          Oq && Object.keys(Oq).length && (Yq = rE(Yq, vE(Eq, Oq, qq.changes.newLength), !0))
+      let Ob = du.create(bb, Bb.changes, Bb.selection, Bb.effects, Bb.annotations, Bb.scrollIntoView);
+      return function(bb) {
+        let ub = bb.startState,
+          hb = ub.facet(ou),
+          Bb = bb;
+        for (let Ob = hb.length - 1; Ob >= 0; Ob--) {
+          let Gb = hb[Ob](bb);
+          Gb && Object.keys(Gb).length && (Bb = ju(Bb, nu(ub, Gb, bb.changes.newLength), !0))
         }
-        return Yq == qq ? qq : yE.create(Eq, qq.changes, qq.selection, Yq.effects, Yq.annotations, Yq.scrollIntoView)
-      }(gq ? function(qq) {
-        let Eq = qq.startState,
-          gq = !0;
-        for (let lq of Eq.facet(aE)) {
-          let Eq = lq(qq);
-          if (!1 === Eq) {
-            gq = !1;
+        return Bb == bb ? bb : du.create(ub, bb.changes, bb.selection, Bb.effects, Bb.annotations, Bb.scrollIntoView)
+      }(hb ? function(bb) {
+        let ub = bb.startState,
+          hb = !0;
+        for (let Ob of ub.facet(Xu)) {
+          let ub = Ob(bb);
+          if (!1 === ub) {
+            hb = !1;
             break
           }
-          Array.isArray(Eq) && (gq = !0 === gq ? Eq : tE(gq, Eq))
+          Array.isArray(ub) && (hb = !0 === hb ? ub : ru(hb, ub))
         }
-        if (!0 !== gq) {
-          let Yq, lq;
-          if (!1 === gq) lq = qq.changes.invertedDesc, Yq = Mq.empty(Eq.doc.length);
+        if (!0 !== hb) {
+          let Bb, Ob;
+          if (!1 === hb) Ob = bb.changes.invertedDesc, Bb = tb.empty(ub.doc.length);
           else {
-            let Eq = qq.changes.filter(gq);
-            Yq = Eq.changes, lq = Eq.filtered.mapDesc(Eq.changes).invertedDesc
+            let ub = bb.changes.filter(hb);
+            Bb = ub.changes, Ob = ub.filtered.mapDesc(ub.changes).invertedDesc
           }
-          qq = yE.create(Eq, Yq, qq.selection && qq.selection.map(lq), QE.mapEffects(qq.effects, lq), qq.annotations, qq.scrollIntoView)
+          bb = du.create(ub, Bb, bb.selection && bb.selection.map(Ob), Cu.mapEffects(bb.effects, Ob), bb.annotations, bb.scrollIntoView)
         }
-        let Yq = Eq.facet(VE);
-        for (let lq = Yq.length - 1; lq >= 0; lq--) {
-          let gq = Yq[lq](qq);
-          qq = gq instanceof yE ? gq : Array.isArray(gq) && 1 == gq.length && gq[0] instanceof yE ? gq[0] : hE(Eq, bE(gq), !1)
+        let Bb = ub.facet(pu);
+        for (let Ob = Bb.length - 1; Ob >= 0; Ob--) {
+          let hb = Bb[Ob](bb);
+          bb = hb instanceof du ? hb : Array.isArray(hb) && 1 == hb.length && hb[0] instanceof du ? hb[0] : Du(ub, zu(hb), !1)
         }
-        return qq
-      }(lq) : lq)
+        return bb
+      }(Ob) : Ob)
     }
-    yE.time = HE.define(), yE.userEvent = HE.define(), yE.addToHistory = HE.define(), yE.remote = HE.define();
-    const nE = [];
+    du.time = lu.define(), du.userEvent = lu.define(), du.addToHistory = lu.define(), du.remote = lu.define();
+    const xu = [];
 
-    function bE(qq) {
-      return null == qq ? nE : Array.isArray(qq) ? qq : [qq]
+    function zu(bb) {
+      return null == bb ? xu : Array.isArray(bb) ? bb : [bb]
     }
-    var iE = function(qq) {
-      return qq[qq.Word = 0] = "Word", qq[qq.Space = 1] = "Space", qq[qq.Other = 2] = "Other", qq
-    }(iE || (iE = {}));
-    const ZE = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
-    let fE;
+    var gu = function(bb) {
+      return bb[bb.Word = 0] = "Word", bb[bb.Space = 1] = "Space", bb[bb.Other = 2] = "Other", bb
+    }(gu || (gu = {}));
+    const iu = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let vu;
     try {
-      fE = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
-    } catch (gg) {}
+      vu = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (hh) {}
 
-    function ME(qq) {
-      return Eq => {
-        if (!/\S/.test(Eq)) return iE.Space;
-        if (function(qq) {
-            if (fE) return fE.test(qq);
-            for (let Eq = 0; Eq < qq.length; Eq++) {
-              let gq = qq[Eq];
-              if (/\w/.test(gq) || gq > "\x80" && (gq.toUpperCase() != gq.toLowerCase() || ZE.test(gq))) return !0
+    function tu(bb) {
+      return ub => {
+        if (!/\S/.test(ub)) return gu.Space;
+        if (function(bb) {
+            if (vu) return vu.test(bb);
+            for (let ub = 0; ub < bb.length; ub++) {
+              let hb = bb[ub];
+              if (/\w/.test(hb) || hb > "\x80" && (hb.toUpperCase() != hb.toLowerCase() || iu.test(hb))) return !0
             }
             return !1
-          }(Eq)) return iE.Word;
-        for (let gq = 0; gq < qq.length; gq++)
-          if (Eq.indexOf(qq[gq]) > -1) return iE.Word;
-        return iE.Other
+          }(ub)) return gu.Word;
+        for (let hb = 0; hb < bb.length; hb++)
+          if (ub.indexOf(bb[hb]) > -1) return gu.Word;
+        return gu.Other
       }
     }
-    class TE {
-      constructor(qq, Eq, gq, Yq, lq, Oq) {
-        this.config = qq, this.doc = Eq, this.selection = gq, this.values = Yq, this.status = qq.statusTemplate.slice(), this.computeSlot = lq, Oq && (Oq._state = this);
-        for (let mq = 0; mq < this.config.dynamicSlots.length; mq++) cE(this, mq << 1);
+    class Ju {
+      constructor(bb, ub, hb, Bb, Ob, Gb) {
+        this.config = bb, this.doc = ub, this.selection = hb, this.values = Bb, this.status = bb.statusTemplate.slice(), this.computeSlot = Ob, Gb && (Gb._state = this);
+        for (let Ub = 0; Ub < this.config.dynamicSlots.length; Ub++) Su(this, Ub << 1);
         this.computeSlot = null
       }
-      field(qq) {
-        let Eq = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          gq = this.config.address[qq.id];
-        if (null != gq) return cE(this, gq), uE(this, gq);
-        if (Eq) throw new RangeError("Field is not present in this state")
+      field(bb) {
+        let ub = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          hb = this.config.address[bb.id];
+        if (null != hb) return Su(this, hb), au(this, hb);
+        if (ub) throw new RangeError("Field is not present in this state")
       }
       update() {
-        for (var qq = arguments.length, Eq = new Array(qq), gq = 0; gq < qq; gq++) Eq[gq] = arguments[gq];
-        return hE(this, Eq, !0)
+        for (var bb = arguments.length, ub = new Array(bb), hb = 0; hb < bb; hb++) ub[hb] = arguments[hb];
+        return Du(this, ub, !0)
       }
-      applyTransaction(qq) {
-        let Eq, gq = this.config,
+      applyTransaction(bb) {
+        let ub, hb = this.config,
           {
-            base: Yq,
-            compartments: lq
-          } = gq;
-        for (let mq of qq.effects) mq.is(mE.reconfigure) ? (gq && (lq = new Map, gq.compartments.forEach(((qq, Eq) => lq.set(Eq, qq))), gq = null), lq.set(mq.value.compartment, mq.value.extension)) : mq.is(QE.reconfigure) ? (gq = null, Yq = mq.value) : mq.is(QE.appendConfig) && (gq = null, Yq = bE(Yq).concat(mq.value));
-        if (gq) Eq = qq.startState.values.slice();
+            base: Bb,
+            compartments: Ob
+          } = hb;
+        for (let Ub of bb.effects) Ub.is(Uu.reconfigure) ? (hb && (Ob = new Map, hb.compartments.forEach(((bb, ub) => Ob.set(ub, bb))), hb = null), Ob.set(Ub.value.compartment, Ub.value.extension)) : Ub.is(Cu.reconfigure) ? (hb = null, Bb = Ub.value) : Ub.is(Cu.appendConfig) && (hb = null, Bb = zu(Bb).concat(Ub.value));
+        if (hb) ub = bb.startState.values.slice();
         else {
-          gq = AE.resolve(Yq, lq, this), Eq = new TE(gq, this.doc, this.selection, gq.dynamicSlots.map((() => null)), ((qq, Eq) => Eq.reconfigure(qq, this)), null).values
+          hb = Yu.resolve(Bb, Ob, this), ub = new Ju(hb, this.doc, this.selection, hb.dynamicSlots.map((() => null)), ((bb, ub) => ub.reconfigure(bb, this)), null).values
         }
-        let Oq = qq.startState.facet(WE) ? qq.newSelection : qq.newSelection.asSingle();
-        new TE(gq, qq.newDoc, Oq, Eq, ((Eq, gq) => gq.update(Eq, qq)), qq)
+        let Gb = bb.startState.facet(wu) ? bb.newSelection : bb.newSelection.asSingle();
+        new Ju(hb, bb.newDoc, Gb, ub, ((ub, hb) => hb.update(ub, bb)), bb)
       }
-      replaceSelection(qq) {
-        return "string" == typeof qq && (qq = this.toText(qq)), this.changeByRange((Eq => ({
+      replaceSelection(bb) {
+        return "string" == typeof bb && (bb = this.toText(bb)), this.changeByRange((ub => ({
           changes: {
-            from: Eq.from,
-            to: Eq.to,
-            insert: qq
+            from: ub.from,
+            to: ub.to,
+            insert: bb
           },
-          range: kq.cursor(Eq.from + qq.length)
+          range: Pb.cursor(ub.from + bb.length)
         })))
       }
-      changeByRange(qq) {
-        let Eq = this.selection,
-          gq = qq(Eq.zV[0]),
-          Yq = this.changes(gq.changes),
-          lq = [gq.range],
-          Oq = bE(gq.effects);
-        for (let mq = 1; mq < Eq.zV.length; mq++) {
-          let gq = qq(Eq.zV[mq]),
-            xq = this.changes(gq.changes),
-            Aq = xq.map(Yq);
-          for (let qq = 0; qq < mq; qq++) lq[qq] = lq[qq].map(Aq);
-          let cq = Yq.mapDesc(xq, !0);
-          lq.push(gq.range.map(cq)), Yq = Yq.compose(Aq), Oq = QE.mapEffects(Oq, Aq).concat(QE.mapEffects(bE(gq.effects), cq))
+      changeByRange(bb) {
+        let ub = this.selection,
+          hb = bb(ub.tp[0]),
+          Bb = this.changes(hb.changes),
+          Ob = [hb.range],
+          Gb = zu(hb.effects);
+        for (let Ub = 1; Ub < ub.tp.length; Ub++) {
+          let hb = bb(ub.tp[Ub]),
+            Lb = this.changes(hb.changes),
+            Yb = Lb.map(Bb);
+          for (let bb = 0; bb < Ub; bb++) Ob[bb] = Ob[bb].map(Yb);
+          let Sb = Bb.mapDesc(Lb, !0);
+          Ob.push(hb.range.map(Sb)), Bb = Bb.compose(Yb), Gb = Cu.mapEffects(Gb, Yb).concat(Cu.mapEffects(zu(hb.effects), Sb))
         }
         return {
-          changes: Yq,
-          selection: kq.create(lq, Eq.mainIndex),
-          effects: Oq
+          changes: Bb,
+          selection: Pb.create(Ob, ub.mainIndex),
+          effects: Gb
         }
       }
       changes() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return qq instanceof Mq ? qq : Mq.of(qq, this.doc.length, this.facet(TE.lineSeparator))
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return bb instanceof tb ? bb : tb.of(bb, this.doc.length, this.facet(Ju.lineSeparator))
       }
-      toText(qq) {
-        return Vq.of(qq.split(this.facet(TE.lineSeparator) || iq))
+      toText(bb) {
+        return pb.of(bb.split(this.facet(Ju.lineSeparator) || gb))
       }
       sliceDoc() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
-        return this.doc.sliceString(qq, Eq, this.lineBreak)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(bb, ub, this.lineBreak)
       }
-      facet(qq) {
-        let Eq = this.config.address[qq.id];
-        return null == Eq ? qq.default : (cE(this, Eq), uE(this, Eq))
+      facet(bb) {
+        let ub = this.config.address[bb.id];
+        return null == ub ? bb.default : (Su(this, ub), au(this, ub))
       }
-      toJSON(qq) {
-        let Eq = {
+      toJSON(bb) {
+        let ub = {
           doc: this.sliceDoc(),
           selection: this.selection.toJSON()
         };
-        if (qq)
-          for (let gq in qq) {
-            let Yq = qq[gq];
-            Yq instanceof eq && null != this.config.address[Yq.id] && (Eq[gq] = Yq.spec.toJSON(this.field(qq[gq]), this))
+        if (bb)
+          for (let hb in bb) {
+            let Bb = bb[hb];
+            Bb instanceof Qb && null != this.config.address[Bb.id] && (ub[hb] = Bb.spec.toJSON(this.field(bb[hb]), this))
           }
-        return Eq
+        return ub
       }
-      static fromJSON(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          gq = arguments.length > 2 ? arguments[2] : void 0;
-        if (!qq || "string" != typeof qq.doc) throw new RangeError("Invalid JSON representation for EditorState");
-        let Yq = [];
-        if (gq)
-          for (let lq in gq)
-            if (Object.prototype.hasOwnProperty.call(qq, lq)) {
-              let Eq = gq[lq],
-                Oq = qq[lq];
-              Yq.push(Eq.init((qq => Eq.spec.fromJSON(Oq, qq))))
-            } return TE.create({
-          doc: qq.doc,
-          selection: kq.fromJSON(qq.selection),
-          extensions: Eq.extensions ? Yq.concat([Eq.extensions]) : Yq
+      static fromJSON(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          hb = arguments.length > 2 ? arguments[2] : void 0;
+        if (!bb || "string" != typeof bb.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let Bb = [];
+        if (hb)
+          for (let Ob in hb)
+            if (Object.prototype.hasOwnProperty.call(bb, Ob)) {
+              let ub = hb[Ob],
+                Gb = bb[Ob];
+              Bb.push(ub.init((bb => ub.spec.fromJSON(Gb, bb))))
+            } return Ju.create({
+          doc: bb.doc,
+          selection: Pb.fromJSON(bb.selection),
+          extensions: ub.extensions ? Bb.concat([ub.extensions]) : Bb
         })
       }
       static create() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          Eq = AE.resolve(qq.extensions || [], new Map),
-          gq = qq.doc instanceof Vq ? qq.doc : Vq.of((qq.doc || "").split(Eq.staticFacet(TE.lineSeparator) || iq)),
-          Yq = qq.selection ? qq.selection instanceof kq ? qq.selection : kq.single(qq.selection.anchor, qq.selection.head) : kq.single(0);
-        return Rq(Yq, gq.length), Eq.staticFacet(WE) || (Yq = Yq.asSingle()), new TE(Eq, gq, Yq, Eq.dynamicSlots.map((() => null)), ((qq, Eq) => Eq.create(qq)), null)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          ub = Yu.resolve(bb.extensions || [], new Map),
+          hb = bb.doc instanceof pb ? bb.doc : pb.of((bb.doc || "").split(ub.staticFacet(Ju.lineSeparator) || gb)),
+          Bb = bb.selection ? bb.selection instanceof Pb ? bb.selection : Pb.single(bb.selection.anchor, bb.selection.head) : Pb.single(0);
+        return qb(Bb, hb.length), ub.staticFacet(wu) || (Bb = Bb.asSingle()), new Ju(ub, hb, Bb, ub.dynamicSlots.map((() => null)), ((bb, ub) => ub.create(bb)), null)
       }
       get tabSize() {
-        return this.facet(TE.tabSize)
+        return this.facet(Ju.tabSize)
       }
       get lineBreak() {
-        return this.facet(TE.lineSeparator) || "\n"
+        return this.facet(Ju.lineSeparator) || "\n"
       }
       get readOnly() {
-        return this.facet(jE)
+        return this.facet(Au)
       }
-      phrase(qq) {
-        for (var Eq = arguments.length, gq = new Array(Eq > 1 ? Eq - 1 : 0), Yq = 1; Yq < Eq; Yq++) gq[Yq - 1] = arguments[Yq];
-        for (let lq of this.facet(TE.phrases))
-          if (Object.prototype.hasOwnProperty.call(lq, qq)) {
-            qq = lq[qq];
+      phrase(bb) {
+        for (var ub = arguments.length, hb = new Array(ub > 1 ? ub - 1 : 0), Bb = 1; Bb < ub; Bb++) hb[Bb - 1] = arguments[Bb];
+        for (let Ob of this.facet(Ju.phrases))
+          if (Object.prototype.hasOwnProperty.call(Ob, bb)) {
+            bb = Ob[bb];
             break
-          } return gq.length && (qq = qq.replace(/\$(\$|\d*)/g, ((qq, Eq) => {
-          if ("$" == Eq) return "$";
-          let Yq = +(Eq || 1);
-          return !Yq || Yq > gq.length ? qq : gq[Yq - 1]
-        }))), qq
+          } return hb.length && (bb = bb.replace(/\$(\$|\d*)/g, ((bb, ub) => {
+          if ("$" == ub) return "$";
+          let Bb = +(ub || 1);
+          return !Bb || Bb > hb.length ? bb : hb[Bb - 1]
+        }))), bb
       }
-      languageDataAt(qq, Eq) {
-        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          Yq = [];
-        for (let lq of this.facet(BE))
-          for (let Oq of lq(this, Eq, gq)) Object.prototype.hasOwnProperty.call(Oq, qq) && Yq.push(Oq[qq]);
-        return Yq
+      languageDataAt(bb, ub) {
+        let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          Bb = [];
+        for (let Ob of this.facet(Hu))
+          for (let Gb of Ob(this, ub, hb)) Object.prototype.hasOwnProperty.call(Gb, bb) && Bb.push(Gb[bb]);
+        return Bb
       }
-      charCategorizer(qq) {
-        let Eq = this.languageDataAt("wordChars", qq);
-        return ME(Eq.length ? Eq[0] : "")
+      charCategorizer(bb) {
+        let ub = this.languageDataAt("wordChars", bb);
+        return tu(ub.length ? ub[0] : "")
       }
-      wordAt(qq) {
+      wordAt(bb) {
         let {
-          text: Eq,
-          from: gq,
-          length: Yq
-        } = this.doc.lineAt(qq), lq = this.charCategorizer(qq), Oq = qq - gq, mq = qq - gq;
-        for (; Oq > 0;) {
-          let qq = vq(Eq, Oq, !1);
-          if (lq(Eq.slice(qq, Oq)) != iE.Word) break;
-          Oq = qq
+          text: ub,
+          from: hb,
+          length: Bb
+        } = this.doc.lineAt(bb), Ob = this.charCategorizer(bb), Gb = bb - hb, Ub = bb - hb;
+        for (; Gb > 0;) {
+          let bb = nb(ub, Gb, !1);
+          if (Ob(ub.slice(bb, Gb)) != gu.Word) break;
+          Gb = bb
         }
-        for (; mq < Yq;) {
-          let qq = vq(Eq, mq);
-          if (lq(Eq.slice(mq, qq)) != iE.Word) break;
-          mq = qq
+        for (; Ub < Bb;) {
+          let bb = nb(ub, Ub);
+          if (Ob(ub.slice(Ub, bb)) != gu.Word) break;
+          Ub = bb
         }
-        return Oq == mq ? null : kq.range(Oq + gq, mq + gq)
+        return Gb == Ub ? null : Pb.range(Gb + hb, Ub + hb)
       }
     }
 
-    function zE(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        Yq = {};
-      for (let lq of qq)
-        for (let qq of Object.keys(lq)) {
-          let Eq = lq[qq],
-            Oq = Yq[qq];
-          if (void 0 === Oq) Yq[qq] = Eq;
-          else if (Oq === Eq || void 0 === Eq);
+    function eu(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        Bb = {};
+      for (let Ob of bb)
+        for (let bb of Object.keys(Ob)) {
+          let ub = Ob[bb],
+            Gb = Bb[bb];
+          if (void 0 === Gb) Bb[bb] = ub;
+          else if (Gb === ub || void 0 === ub);
           else {
-            if (!Object.hasOwnProperty.call(gq, qq)) throw new Error("Config merge conflict for field " + qq);
-            Yq[qq] = gq[qq](Oq, Eq)
+            if (!Object.hasOwnProperty.call(hb, bb)) throw new Error("Config merge conflict for field " + bb);
+            Bb[bb] = hb[bb](Gb, ub)
           }
         }
-      for (let lq in Eq) void 0 === Yq[lq] && (Yq[lq] = Eq[lq]);
-      return Yq
+      for (let Ob in ub) void 0 === Bb[Ob] && (Bb[Ob] = ub[Ob]);
+      return Bb
     }
-    TE.allowMultipleSelections = WE, TE.tabSize = Fq.define({
-      combine: qq => qq.length ? qq[0] : 4
-    }), TE.lineSeparator = NE, TE.readOnly = jE, TE.phrases = Fq.define({
-      compare(qq, Eq) {
-        let gq = Object.keys(qq),
-          Yq = Object.keys(Eq);
-        return gq.length == Yq.length && gq.every((gq => qq[gq] == Eq[gq]))
+    Ju.allowMultipleSelections = wu, Ju.tabSize = yb.define({
+      combine: bb => bb.length ? bb[0] : 4
+    }), Ju.lineSeparator = Zu, Ju.readOnly = Au, Ju.phrases = yb.define({
+      compare(bb, ub) {
+        let hb = Object.keys(bb),
+          Bb = Object.keys(ub);
+        return hb.length == Bb.length && hb.every((hb => bb[hb] == ub[hb]))
       }
-    }), TE.languageData = BE, TE.changeFilter = aE, TE.transactionFilter = VE, TE.transactionExtender = dE, mE.reconfigure = QE.define();
-    class SE {
-      eq(qq) {
-        return this == qq
+    }), Ju.languageData = Hu, Ju.changeFilter = Xu, Ju.transactionFilter = pu, Ju.transactionExtender = ou, Uu.reconfigure = Cu.define();
+    class Nu {
+      eq(bb) {
+        return this == bb
       }
-      range(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qq;
-        return GE.create(qq, Eq, this)
-      }
-    }
-
-    function pE(qq, Eq) {
-      return qq == Eq || qq.constructor == Eq.constructor && qq.eq(Eq)
-    }
-    SE.prototype.startSide = SE.prototype.endSide = 0, SE.prototype.point = !1, SE.prototype.mapMode = Zq.TrackDel;
-    class GE {
-      constructor(qq, Eq, gq) {
-        this.from = qq, this.to = Eq, this.value = gq
-      }
-      static create(qq, Eq, gq) {
-        return new GE(qq, Eq, gq)
+      range(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb;
+        return Mu.create(bb, ub, this)
       }
     }
 
-    function LE(qq, Eq) {
-      return qq.from - Eq.from || qq.value.startSide - Eq.value.startSide
+    function su(bb, ub) {
+      return bb == ub || bb.constructor == ub.constructor && bb.eq(ub)
     }
-    class JE {
-      constructor(qq, Eq, gq, Yq) {
-        this.from = qq, this.to = Eq, this.value = gq, this.zYq = Yq
+    Nu.prototype.startSide = Nu.prototype.endSide = 0, Nu.prototype.point = !1, Nu.prototype.mapMode = ib.TrackDel;
+    class Mu {
+      constructor(bb, ub, hb) {
+        this.from = bb, this.to = ub, this.value = hb
+      }
+      static create(bb, ub, hb) {
+        return new Mu(bb, ub, hb)
+      }
+    }
+
+    function mu(bb, ub) {
+      return bb.from - ub.from || bb.value.startSide - ub.value.startSide
+    }
+    class Iu {
+      constructor(bb, ub, hb, Bb) {
+        this.from = bb, this.to = ub, this.value = hb, this.KBb = Bb
       }
       get length() {
         return this.to[this.to.length - 1]
       }
-      findIndex(qq, Eq, gq) {
-        let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          lq = gq ? this.to : this.from;
-        for (let Oq = Yq, mq = lq.length;;) {
-          if (Oq == mq) return Oq;
-          let Yq = Oq + mq >> 1,
-            xq = lq[Yq] - qq || (gq ? this.value[Yq].endSide : this.value[Yq].startSide) - Eq;
-          if (Yq == Oq) return xq >= 0 ? Oq : mq;
-          xq >= 0 ? mq = Yq : Oq = Yq + 1
+      findIndex(bb, ub, hb) {
+        let Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          Ob = hb ? this.to : this.from;
+        for (let Gb = Bb, Ub = Ob.length;;) {
+          if (Gb == Ub) return Gb;
+          let Bb = Gb + Ub >> 1,
+            Lb = Ob[Bb] - bb || (hb ? this.value[Bb].endSide : this.value[Bb].startSide) - ub;
+          if (Bb == Gb) return Lb >= 0 ? Gb : Ub;
+          Lb >= 0 ? Ub = Bb : Gb = Bb + 1
         }
       }
-      between(qq, Eq, gq, Yq) {
-        for (let lq = this.findIndex(Eq, -1e9, !0), Oq = this.findIndex(gq, 1e9, !1, lq); lq < Oq; lq++)
-          if (!1 === Yq(this.from[lq] + qq, this.to[lq] + qq, this.value[lq])) return !1
+      between(bb, ub, hb, Bb) {
+        for (let Ob = this.findIndex(ub, -1e9, !0), Gb = this.findIndex(hb, 1e9, !1, Ob); Ob < Gb; Ob++)
+          if (!1 === Bb(this.from[Ob] + bb, this.to[Ob] + bb, this.value[Ob])) return !1
       }
-      map(qq, Eq) {
-        let gq = [],
-          Yq = [],
-          lq = [],
-          Oq = -1,
-          mq = -1;
-        for (let xq = 0; xq < this.value.length; xq++) {
-          let Aq, cq, uq = this.value[xq],
-            Bq = this.from[xq] + qq,
-            Wq = this.to[xq] + qq;
-          if (Bq == Wq) {
-            let qq = Eq.mapPos(Bq, uq.startSide, uq.mapMode);
-            if (null == qq) continue;
-            if (Aq = cq = qq, uq.startSide != uq.endSide && (cq = Eq.mapPos(Bq, uq.endSide), cq < Aq)) continue
-          } else if (Aq = Eq.mapPos(Bq, uq.startSide), cq = Eq.mapPos(Wq, uq.endSide), Aq > cq || Aq == cq && uq.startSide > 0 && uq.endSide <= 0) continue;
-          (cq - Aq || uq.endSide - uq.startSide) < 0 || (Oq < 0 && (Oq = Aq), uq.point && (mq = Math.max(mq, cq - Aq)), gq.push(uq), Yq.push(Aq - Oq), lq.push(cq - Oq))
+      map(bb, ub) {
+        let hb = [],
+          Bb = [],
+          Ob = [],
+          Gb = -1,
+          Ub = -1;
+        for (let Lb = 0; Lb < this.value.length; Lb++) {
+          let Yb, Sb, ab = this.value[Lb],
+            Hb = this.from[Lb] + bb,
+            wb = this.to[Lb] + bb;
+          if (Hb == wb) {
+            let bb = ub.mapPos(Hb, ab.startSide, ab.mapMode);
+            if (null == bb) continue;
+            if (Yb = Sb = bb, ab.startSide != ab.endSide && (Sb = ub.mapPos(Hb, ab.endSide), Sb < Yb)) continue
+          } else if (Yb = ub.mapPos(Hb, ab.startSide), Sb = ub.mapPos(wb, ab.endSide), Yb > Sb || Yb == Sb && ab.startSide > 0 && ab.endSide <= 0) continue;
+          (Sb - Yb || ab.endSide - ab.startSide) < 0 || (Gb < 0 && (Gb = Yb), ab.point && (Ub = Math.max(Ub, Sb - Yb)), hb.push(ab), Bb.push(Yb - Gb), Ob.push(Sb - Gb))
         }
         return {
-          mapped: gq.length ? new JE(Yq, lq, gq, mq) : null,
-          pos: Oq
+          mapped: hb.length ? new Iu(Bb, Ob, hb, Ub) : null,
+          pos: Gb
         }
       }
     }
-    class kE {
-      constructor(qq, Eq, gq, Yq) {
-        this.chunkPos = qq, this.chunk = Eq, this.nextLayer = gq, this.zYq = Yq
+    class Pu {
+      constructor(bb, ub, hb, Bb) {
+        this.chunkPos = bb, this.chunk = ub, this.nextLayer = hb, this.KBb = Bb
       }
-      static create(qq, Eq, gq, Yq) {
-        return new kE(qq, Eq, gq, Yq)
+      static create(bb, ub, hb, Bb) {
+        return new Pu(bb, ub, hb, Bb)
       }
       get length() {
-        let qq = this.chunk.length - 1;
-        return qq < 0 ? 0 : Math.max(this.chunkEnd(qq), this.nextLayer.length)
+        let bb = this.chunk.length - 1;
+        return bb < 0 ? 0 : Math.max(this.chunkEnd(bb), this.nextLayer.length)
       }
       get size() {
-        if (this.UN) return 0;
-        let qq = this.nextLayer.size;
-        for (let Eq of this.chunk) qq += Eq.value.length;
-        return qq
+        if (this.MZ) return 0;
+        let bb = this.nextLayer.size;
+        for (let ub of this.chunk) bb += ub.value.length;
+        return bb
       }
-      chunkEnd(qq) {
-        return this.chunkPos[qq] + this.chunk[qq].length
+      chunkEnd(bb) {
+        return this.chunkPos[bb] + this.chunk[bb].length
       }
-      update(qq) {
+      update(bb) {
         let {
-          add: Eq = [],
-          sort: gq = !1,
-          filterFrom: Yq = 0,
-          filterTo: lq = this.length
-        } = qq, Oq = qq.filter;
-        if (0 == Eq.length && !Oq) return this;
-        if (gq && (Eq = Eq.slice().sort(LE)), this.UN) return Eq.length ? kE.of(Eq) : this;
-        let mq = new FE(this, null, -1).goto(0),
-          xq = 0,
-          Aq = [],
-          cq = new RE;
-        for (; mq.value || xq < Eq.length;)
-          if (xq < Eq.length && (mq.from - Eq[xq].from || mq.startSide - Eq[xq].value.startSide) >= 0) {
-            let qq = Eq[xq++];
-            cq.addInner(qq.from, qq.to, qq.value) || Aq.push(qq)
-          } else 1 == mq.rangeIndex && mq.chunkIndex < this.chunk.length && (xq == Eq.length || this.chunkEnd(mq.chunkIndex) < Eq[xq].from) && (!Oq || Yq > this.chunkEnd(mq.chunkIndex) || lq < this.chunkPos[mq.chunkIndex]) && cq.addChunk(this.chunkPos[mq.chunkIndex], this.chunk[mq.chunkIndex]) ? mq.nextChunk() : ((!Oq || Yq > mq.to || lq < mq.from || Oq(mq.from, mq.to, mq.value)) && (cq.addInner(mq.from, mq.to, mq.value) || Aq.push(GE.create(mq.from, mq.to, mq.value))), mq.next());
-        return cq.finishInner(this.nextLayer.UN && !Aq.length ? kE.empty : this.nextLayer.update({
-          add: Aq,
-          filter: Oq,
-          filterFrom: Yq,
-          filterTo: lq
+          add: ub = [],
+          sort: hb = !1,
+          filterFrom: Bb = 0,
+          filterTo: Ob = this.length
+        } = bb, Gb = bb.filter;
+        if (0 == ub.length && !Gb) return this;
+        if (hb && (ub = ub.slice().sort(mu)), this.MZ) return ub.length ? Pu.of(ub) : this;
+        let Ub = new yu(this, null, -1).goto(0),
+          Lb = 0,
+          Yb = [],
+          Sb = new qu;
+        for (; Ub.value || Lb < ub.length;)
+          if (Lb < ub.length && (Ub.from - ub[Lb].from || Ub.startSide - ub[Lb].value.startSide) >= 0) {
+            let bb = ub[Lb++];
+            Sb.addInner(bb.from, bb.to, bb.value) || Yb.push(bb)
+          } else 1 == Ub.rangeIndex && Ub.chunkIndex < this.chunk.length && (Lb == ub.length || this.chunkEnd(Ub.chunkIndex) < ub[Lb].from) && (!Gb || Bb > this.chunkEnd(Ub.chunkIndex) || Ob < this.chunkPos[Ub.chunkIndex]) && Sb.addChunk(this.chunkPos[Ub.chunkIndex], this.chunk[Ub.chunkIndex]) ? Ub.nextChunk() : ((!Gb || Bb > Ub.to || Ob < Ub.from || Gb(Ub.from, Ub.to, Ub.value)) && (Sb.addInner(Ub.from, Ub.to, Ub.value) || Yb.push(Mu.create(Ub.from, Ub.to, Ub.value))), Ub.next());
+        return Sb.finishInner(this.nextLayer.MZ && !Yb.length ? Pu.empty : this.nextLayer.update({
+          add: Yb,
+          filter: Gb,
+          filterFrom: Bb,
+          filterTo: Ob
         }))
       }
-      map(qq) {
-        if (qq.empty || this.UN) return this;
-        let Eq = [],
-          gq = [],
-          Yq = -1;
-        for (let Oq = 0; Oq < this.chunk.length; Oq++) {
-          let lq = this.chunkPos[Oq],
-            mq = this.chunk[Oq],
-            xq = qq.touchesRange(lq, lq + mq.length);
-          if (!1 === xq) Yq = Math.max(Yq, mq.zYq), Eq.push(mq), gq.push(qq.mapPos(lq));
-          else if (!0 === xq) {
+      map(bb) {
+        if (bb.empty || this.MZ) return this;
+        let ub = [],
+          hb = [],
+          Bb = -1;
+        for (let Gb = 0; Gb < this.chunk.length; Gb++) {
+          let Ob = this.chunkPos[Gb],
+            Ub = this.chunk[Gb],
+            Lb = bb.touchesRange(Ob, Ob + Ub.length);
+          if (!1 === Lb) Bb = Math.max(Bb, Ub.KBb), ub.push(Ub), hb.push(bb.mapPos(Ob));
+          else if (!0 === Lb) {
             let {
-              mapped: Oq,
-              pos: xq
-            } = mq.map(lq, qq);
-            Oq && (Yq = Math.max(Yq, Oq.zYq), Eq.push(Oq), gq.push(xq))
+              mapped: Gb,
+              pos: Lb
+            } = Ub.map(Ob, bb);
+            Gb && (Bb = Math.max(Bb, Gb.KBb), ub.push(Gb), hb.push(Lb))
           }
         }
-        let lq = this.nextLayer.map(qq);
-        return 0 == Eq.length ? lq : new kE(gq, Eq, lq || kE.empty, Yq)
+        let Ob = this.nextLayer.map(bb);
+        return 0 == ub.length ? Ob : new Pu(hb, ub, Ob || Pu.empty, Bb)
       }
-      between(qq, Eq, gq) {
-        if (!this.UN) {
-          for (let Yq = 0; Yq < this.chunk.length; Yq++) {
-            let lq = this.chunkPos[Yq],
-              Oq = this.chunk[Yq];
-            if (Eq >= lq && qq <= lq + Oq.length && !1 === Oq.between(lq, qq - lq, Eq - lq, gq)) return
+      between(bb, ub, hb) {
+        if (!this.MZ) {
+          for (let Bb = 0; Bb < this.chunk.length; Bb++) {
+            let Ob = this.chunkPos[Bb],
+              Gb = this.chunk[Bb];
+            if (ub >= Ob && bb <= Ob + Gb.length && !1 === Gb.between(Ob, bb - Ob, ub - Ob, hb)) return
           }
-          this.nextLayer.between(qq, Eq, gq)
+          this.nextLayer.between(bb, ub, hb)
         }
       }
       iter() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return sE.from([this]).goto(qq)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return Vu.from([this]).goto(bb)
       }
-      get UN() {
+      get MZ() {
         return this.nextLayer == this
       }
-      static iter(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return sE.from(qq).goto(Eq)
+      static iter(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return Vu.from(bb).goto(ub)
       }
-      static compare(qq, Eq, gq, Yq) {
-        let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          Oq = qq.filter((qq => qq.zYq > 0 || !qq.UN && qq.zYq >= lq)),
-          mq = Eq.filter((qq => qq.zYq > 0 || !qq.UN && qq.zYq >= lq)),
-          xq = UE(Oq, mq, gq),
-          Aq = new wE(Oq, xq, lq),
-          cq = new wE(mq, xq, lq);
-        gq.iterGaps(((qq, Eq, gq) => KE(Aq, qq, cq, Eq, gq, Yq))), gq.empty && 0 == gq.length && KE(Aq, 0, cq, 0, 0, Yq)
+      static compare(bb, ub, hb, Bb) {
+        let Ob = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          Gb = bb.filter((bb => bb.KBb > 0 || !bb.MZ && bb.KBb >= Ob)),
+          Ub = ub.filter((bb => bb.KBb > 0 || !bb.MZ && bb.KBb >= Ob)),
+          Lb = Eu(Gb, Ub, hb),
+          Yb = new fu(Gb, Lb, Ob),
+          Sb = new fu(Ub, Lb, Ob);
+        hb.iterGaps(((bb, ub, hb) => ku(Yb, bb, Sb, ub, hb, Bb))), hb.empty && 0 == hb.length && ku(Yb, 0, Sb, 0, 0, Bb)
       }
-      static eq(qq, Eq) {
-        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Yq = arguments.length > 3 ? arguments[3] : void 0;
-        null == Yq && (Yq = 999999999);
-        let lq = qq.filter((qq => !qq.UN && Eq.indexOf(qq) < 0)),
-          Oq = Eq.filter((Eq => !Eq.UN && qq.indexOf(Eq) < 0));
-        if (lq.length != Oq.length) return !1;
-        if (!lq.length) return !0;
-        let mq = UE(lq, Oq),
-          xq = new wE(lq, mq, 0).goto(gq),
-          Aq = new wE(Oq, mq, 0).goto(gq);
+      static eq(bb, ub) {
+        let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Bb = arguments.length > 3 ? arguments[3] : void 0;
+        null == Bb && (Bb = 999999999);
+        let Ob = bb.filter((bb => !bb.MZ && ub.indexOf(bb) < 0)),
+          Gb = ub.filter((ub => !ub.MZ && bb.indexOf(ub) < 0));
+        if (Ob.length != Gb.length) return !1;
+        if (!Ob.length) return !0;
+        let Ub = Eu(Ob, Gb),
+          Lb = new fu(Ob, Ub, 0).goto(hb),
+          Yb = new fu(Gb, Ub, 0).goto(hb);
         for (;;) {
-          if (xq.to != Aq.to || !CE(xq.active, Aq.active) || xq.point && (!Aq.point || !pE(xq.point, Aq.point))) return !1;
-          if (xq.to > Yq) return !0;
-          xq.next(), Aq.next()
+          if (Lb.to != Yb.to || !Tu(Lb.active, Yb.active) || Lb.point && (!Yb.point || !su(Lb.point, Yb.point))) return !1;
+          if (Lb.to > Bb) return !0;
+          Lb.next(), Yb.next()
         }
       }
-      static spans(qq, Eq, gq, Yq) {
-        let lq = new wE(qq, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(Eq),
-          Oq = Eq,
-          mq = lq.openStart;
+      static spans(bb, ub, hb, Bb) {
+        let Ob = new fu(bb, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(ub),
+          Gb = ub,
+          Ub = Ob.openStart;
         for (;;) {
-          let qq = Math.min(lq.to, gq);
-          if (lq.point) {
-            let gq = lq.activeForPoint(lq.to),
-              xq = lq.pointFrom < Eq ? gq.length + 1 : lq.point.startSide < 0 ? gq.length : Math.min(gq.length, mq);
-            Yq.point(Oq, qq, lq.point, gq, xq, lq.pointRank), mq = Math.min(lq.openEnd(qq), gq.length)
-          } else qq > Oq && (Yq.span(Oq, qq, lq.active, mq), mq = lq.openEnd(qq));
-          if (lq.to > gq) return mq + (lq.point && lq.to > gq ? 1 : 0);
-          Oq = lq.to, lq.next()
+          let bb = Math.min(Ob.to, hb);
+          if (Ob.point) {
+            let hb = Ob.activeForPoint(Ob.to),
+              Lb = Ob.pointFrom < ub ? hb.length + 1 : Ob.point.startSide < 0 ? hb.length : Math.min(hb.length, Ub);
+            Bb.point(Gb, bb, Ob.point, hb, Lb, Ob.pointRank), Ub = Math.min(Ob.openEnd(bb), hb.length)
+          } else bb > Gb && (Bb.span(Gb, bb, Ob.active, Ub), Ub = Ob.openEnd(bb));
+          if (Ob.to > hb) return Ub + (Ob.point && Ob.to > hb ? 1 : 0);
+          Gb = Ob.to, Ob.next()
         }
       }
-      static of (qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          gq = new RE;
-        for (let Yq of qq instanceof GE ? [qq] : Eq ? function(qq) {
-            if (qq.length > 1)
-              for (let Eq = qq[0], gq = 1; gq < qq.length; gq++) {
-                let Yq = qq[gq];
-                if (LE(Eq, Yq) > 0) return qq.slice().sort(LE);
-                Eq = Yq
+      static of (bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          hb = new qu;
+        for (let Bb of bb instanceof Mu ? [bb] : ub ? function(bb) {
+            if (bb.length > 1)
+              for (let ub = bb[0], hb = 1; hb < bb.length; hb++) {
+                let Bb = bb[hb];
+                if (mu(ub, Bb) > 0) return bb.slice().sort(mu);
+                ub = Bb
               }
-            return qq
-          }(qq) : qq) gq.add(Yq.from, Yq.to, Yq.value);
-        return gq.finish()
+            return bb
+          }(bb) : bb) hb.add(Bb.from, Bb.to, Bb.value);
+        return hb.finish()
       }
-      static join(qq) {
-        if (!qq.length) return kE.empty;
-        let Eq = qq[qq.length - 1];
-        for (let gq = qq.length - 2; gq >= 0; gq--)
-          for (let Yq = qq[gq]; Yq != kE.empty; Yq = Yq.nextLayer) Eq = new kE(Yq.chunkPos, Yq.chunk, Eq, Math.max(Yq.zYq, Eq.zYq));
-        return Eq
+      static join(bb) {
+        if (!bb.length) return Pu.empty;
+        let ub = bb[bb.length - 1];
+        for (let hb = bb.length - 2; hb >= 0; hb--)
+          for (let Bb = bb[hb]; Bb != Pu.empty; Bb = Bb.nextLayer) ub = new Pu(Bb.chunkPos, Bb.chunk, ub, Math.max(Bb.KBb, ub.KBb));
+        return ub
       }
     }
-    kE.empty = new kE([], [], null, -1), kE.empty.nextLayer = kE.empty;
-    class RE {
-      finishChunk(qq) {
-        this.chunks.push(new JE(this.from, this.to, this.value, this.zYq)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.zYq), this.zYq = -1, qq && (this.from = [], this.to = [], this.value = [])
+    Pu.empty = new Pu([], [], null, -1), Pu.empty.nextLayer = Pu.empty;
+    class qu {
+      finishChunk(bb) {
+        this.chunks.push(new Iu(this.from, this.to, this.value, this.KBb)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.KBb), this.KBb = -1, bb && (this.from = [], this.to = [], this.value = [])
       }
       constructor() {
-        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.zYq = -1, this.setMaxPoint = -1, this.nextLayer = null
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.KBb = -1, this.setMaxPoint = -1, this.nextLayer = null
       }
-      add(qq, Eq, gq) {
-        this.addInner(qq, Eq, gq) || (this.nextLayer || (this.nextLayer = new RE)).add(qq, Eq, gq)
+      add(bb, ub, hb) {
+        this.addInner(bb, ub, hb) || (this.nextLayer || (this.nextLayer = new qu)).add(bb, ub, hb)
       }
-      addInner(qq, Eq, gq) {
-        let Yq = qq - this.lastTo || gq.startSide - this.last.endSide;
-        if (Yq <= 0 && (qq - this.lastFrom || gq.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
-        return !(Yq < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = qq), this.from.push(qq - this.chunkStart), this.to.push(Eq - this.chunkStart), this.last = gq, this.lastFrom = qq, this.lastTo = Eq, this.value.push(gq), gq.point && (this.zYq = Math.max(this.zYq, Eq - qq)), !0)
+      addInner(bb, ub, hb) {
+        let Bb = bb - this.lastTo || hb.startSide - this.last.endSide;
+        if (Bb <= 0 && (bb - this.lastFrom || hb.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(Bb < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = bb), this.from.push(bb - this.chunkStart), this.to.push(ub - this.chunkStart), this.last = hb, this.lastFrom = bb, this.lastTo = ub, this.value.push(hb), hb.point && (this.KBb = Math.max(this.KBb, ub - bb)), !0)
       }
-      addChunk(qq, Eq) {
-        if ((qq - this.lastTo || Eq.value[0].startSide - this.last.endSide) < 0) return !1;
-        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, Eq.zYq), this.chunks.push(Eq), this.chunkPos.push(qq);
-        let gq = Eq.value.length - 1;
-        return this.last = Eq.value[gq], this.lastFrom = Eq.from[gq] + qq, this.lastTo = Eq.to[gq] + qq, !0
+      addChunk(bb, ub) {
+        if ((bb - this.lastTo || ub.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, ub.KBb), this.chunks.push(ub), this.chunkPos.push(bb);
+        let hb = ub.value.length - 1;
+        return this.last = ub.value[hb], this.lastFrom = ub.from[hb] + bb, this.lastTo = ub.to[hb] + bb, !0
       }
       finish() {
-        return this.finishInner(kE.empty)
+        return this.finishInner(Pu.empty)
       }
-      finishInner(qq) {
-        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return qq;
-        let Eq = kE.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(qq) : qq, this.setMaxPoint);
-        return this.from = null, Eq
+      finishInner(bb) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return bb;
+        let ub = Pu.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(bb) : bb, this.setMaxPoint);
+        return this.from = null, ub
       }
     }
 
-    function UE(qq, Eq, gq) {
-      let Yq = new Map;
-      for (let Oq of qq)
-        for (let qq = 0; qq < Oq.chunk.length; qq++) Oq.chunk[qq].zYq <= 0 && Yq.set(Oq.chunk[qq], Oq.chunkPos[qq]);
-      let lq = new Set;
-      for (let Oq of Eq)
-        for (let qq = 0; qq < Oq.chunk.length; qq++) {
-          let Eq = Yq.get(Oq.chunk[qq]);
-          null == Eq || (gq ? gq.mapPos(Eq) : Eq) != Oq.chunkPos[qq] || (null === gq || void 0 === gq ? void 0 : gq.touchesRange(Eq, Eq + Oq.chunk[qq].length)) || lq.add(Oq.chunk[qq])
+    function Eu(bb, ub, hb) {
+      let Bb = new Map;
+      for (let Gb of bb)
+        for (let bb = 0; bb < Gb.chunk.length; bb++) Gb.chunk[bb].KBb <= 0 && Bb.set(Gb.chunk[bb], Gb.chunkPos[bb]);
+      let Ob = new Set;
+      for (let Gb of ub)
+        for (let bb = 0; bb < Gb.chunk.length; bb++) {
+          let ub = Bb.get(Gb.chunk[bb]);
+          null == ub || (hb ? hb.mapPos(ub) : ub) != Gb.chunkPos[bb] || (null === hb || void 0 === hb ? void 0 : hb.touchesRange(ub, ub + Gb.chunk[bb].length)) || Ob.add(Gb.chunk[bb])
         }
-      return lq
+      return Ob
     }
-    class FE {
-      constructor(qq, Eq, gq) {
-        let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.layer = qq, this.skip = Eq, this.SYq = gq, this.rank = Yq
+    class yu {
+      constructor(bb, ub, hb) {
+        let Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = bb, this.skip = ub, this.WBb = hb, this.rank = Bb
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
@@ -1923,24 +1923,24 @@ export const modules = {
       get endSide() {
         return this.value ? this.value.endSide : 0
       }
-      goto(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(qq, Eq, !1), this
+      goto(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(bb, ub, !1), this
       }
-      gotoInner(qq, Eq, gq) {
+      gotoInner(bb, ub, hb) {
         for (; this.chunkIndex < this.layer.chunk.length;) {
-          let Eq = this.layer.chunk[this.chunkIndex];
-          if (!(this.skip && this.skip.has(Eq) || this.layer.chunkEnd(this.chunkIndex) < qq || Eq.zYq < this.SYq)) break;
-          this.chunkIndex++, gq = !1
+          let ub = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(ub) || this.layer.chunkEnd(this.chunkIndex) < bb || ub.KBb < this.WBb)) break;
+          this.chunkIndex++, hb = !1
         }
         if (this.chunkIndex < this.layer.chunk.length) {
-          let Yq = this.layer.chunk[this.chunkIndex].findIndex(qq - this.layer.chunkPos[this.chunkIndex], Eq, !0);
-          (!gq || this.rangeIndex < Yq) && this.setRangeIndex(Yq)
+          let Bb = this.layer.chunk[this.chunkIndex].findIndex(bb - this.layer.chunkPos[this.chunkIndex], ub, !0);
+          (!hb || this.rangeIndex < Bb) && this.setRangeIndex(Bb)
         }
         this.next()
       }
-      forward(qq, Eq) {
-        (this.to - qq || this.endSide - Eq) < 0 && this.gotoInner(qq, Eq, !0)
+      forward(bb, ub) {
+        (this.to - bb || this.endSide - ub) < 0 && this.gotoInner(bb, ub, !0)
       }
       next() {
         for (;;) {
@@ -1948,203 +1948,203 @@ export const modules = {
             this.from = this.to = 1e9, this.value = null;
             break
           } {
-            let qq = this.layer.chunkPos[this.chunkIndex],
-              Eq = this.layer.chunk[this.chunkIndex],
-              gq = qq + Eq.from[this.rangeIndex];
-            if (this.from = gq, this.to = qq + Eq.to[this.rangeIndex], this.value = Eq.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.SYq < 0 || this.value.point && this.to - this.from >= this.SYq) break
+            let bb = this.layer.chunkPos[this.chunkIndex],
+              ub = this.layer.chunk[this.chunkIndex],
+              hb = bb + ub.from[this.rangeIndex];
+            if (this.from = hb, this.to = bb + ub.to[this.rangeIndex], this.value = ub.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.WBb < 0 || this.value.point && this.to - this.from >= this.WBb) break
           }
         }
       }
-      setRangeIndex(qq) {
-        if (qq == this.layer.chunk[this.chunkIndex].value.length) {
+      setRangeIndex(bb) {
+        if (bb == this.layer.chunk[this.chunkIndex].value.length) {
           if (this.chunkIndex++, this.skip)
             for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
           this.rangeIndex = 0
-        } else this.rangeIndex = qq
+        } else this.rangeIndex = bb
       }
       nextChunk() {
         this.chunkIndex++, this.rangeIndex = 0, this.next()
       }
-      compare(qq) {
-        return this.from - qq.from || this.startSide - qq.startSide || this.rank - qq.rank || this.to - qq.to || this.endSide - qq.endSide
+      compare(bb) {
+        return this.from - bb.from || this.startSide - bb.startSide || this.rank - bb.rank || this.to - bb.to || this.endSide - bb.endSide
       }
     }
-    class sE {
-      constructor(qq) {
-        this.heap = qq
+    class Vu {
+      constructor(bb) {
+        this.heap = bb
       }
-      static from(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          Yq = [];
-        for (let lq = 0; lq < qq.length; lq++)
-          for (let Oq = qq[lq]; !Oq.UN; Oq = Oq.nextLayer) Oq.zYq >= gq && Yq.push(new FE(Oq, Eq, gq, lq));
-        return 1 == Yq.length ? Yq[0] : new sE(Yq)
+      static from(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          Bb = [];
+        for (let Ob = 0; Ob < bb.length; Ob++)
+          for (let Gb = bb[Ob]; !Gb.MZ; Gb = Gb.nextLayer) Gb.KBb >= hb && Bb.push(new yu(Gb, ub, hb, Ob));
+        return 1 == Bb.length ? Bb[0] : new Vu(Bb)
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
       }
-      goto(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        for (let gq of this.heap) gq.goto(qq, Eq);
-        for (let gq = this.heap.length >> 1; gq >= 0; gq--) XE(this.heap, gq);
+      goto(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let hb of this.heap) hb.goto(bb, ub);
+        for (let hb = this.heap.length >> 1; hb >= 0; hb--) Fu(this.heap, hb);
         return this.next(), this
       }
-      forward(qq, Eq) {
-        for (let gq of this.heap) gq.forward(qq, Eq);
-        for (let gq = this.heap.length >> 1; gq >= 0; gq--) XE(this.heap, gq);
-        (this.to - qq || this.value.endSide - Eq) < 0 && this.next()
+      forward(bb, ub) {
+        for (let hb of this.heap) hb.forward(bb, ub);
+        for (let hb = this.heap.length >> 1; hb >= 0; hb--) Fu(this.heap, hb);
+        (this.to - bb || this.value.endSide - ub) < 0 && this.next()
       }
       next() {
         if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
         else {
-          let qq = this.heap[0];
-          this.from = qq.from, this.to = qq.to, this.value = qq.value, this.rank = qq.rank, qq.value && qq.next(), XE(this.heap, 0)
+          let bb = this.heap[0];
+          this.from = bb.from, this.to = bb.to, this.value = bb.value, this.rank = bb.rank, bb.value && bb.next(), Fu(this.heap, 0)
         }
       }
     }
 
-    function XE(qq, Eq) {
-      for (let gq = qq[Eq];;) {
-        let Yq = 1 + (Eq << 1);
-        if (Yq >= qq.length) break;
-        let lq = qq[Yq];
-        if (Yq + 1 < qq.length && lq.compare(qq[Yq + 1]) >= 0 && (lq = qq[Yq + 1], Yq++), gq.compare(lq) < 0) break;
-        qq[Yq] = gq, qq[Eq] = lq, Eq = Yq
+    function Fu(bb, ub) {
+      for (let hb = bb[ub];;) {
+        let Bb = 1 + (ub << 1);
+        if (Bb >= bb.length) break;
+        let Ob = bb[Bb];
+        if (Bb + 1 < bb.length && Ob.compare(bb[Bb + 1]) >= 0 && (Ob = bb[Bb + 1], Bb++), hb.compare(Ob) < 0) break;
+        bb[Bb] = hb, bb[ub] = Ob, ub = Bb
       }
     }
-    class wE {
-      constructor(qq, Eq, gq) {
-        this.SYq = gq, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = sE.from(qq, Eq, gq)
+    class fu {
+      constructor(bb, ub, hb) {
+        this.WBb = hb, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = Vu.from(bb, ub, hb)
       }
-      goto(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.cursor.goto(qq, Eq), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = qq, this.endSide = Eq, this.openStart = -1, this.next(), this
+      goto(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(bb, ub), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = bb, this.endSide = ub, this.openStart = -1, this.next(), this
       }
-      forward(qq, Eq) {
-        for (; this.minActive > -1 && (this.activeTo[this.minActive] - qq || this.active[this.minActive].endSide - Eq) < 0;) this.removeActive(this.minActive);
-        this.cursor.forward(qq, Eq)
+      forward(bb, ub) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - bb || this.active[this.minActive].endSide - ub) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(bb, ub)
       }
-      removeActive(qq) {
-        IE(this.active, qq), IE(this.activeTo, qq), IE(this.activeRank, qq), this.minActive = DE(this.active, this.activeTo)
+      removeActive(bb) {
+        cu(this.active, bb), cu(this.activeTo, bb), cu(this.activeRank, bb), this.minActive = Ru(this.active, this.activeTo)
       }
-      addActive(qq) {
-        let Eq = 0,
+      addActive(bb) {
+        let ub = 0,
           {
-            value: gq,
-            to: Yq,
-            rank: lq
+            value: hb,
+            to: Bb,
+            rank: Ob
           } = this.cursor;
-        for (; Eq < this.activeRank.length && (lq - this.activeRank[Eq] || Yq - this.activeTo[Eq]) > 0;) Eq++;
-        eE(this.active, Eq, gq), eE(this.activeTo, Eq, Yq), eE(this.activeRank, Eq, lq), qq && eE(qq, Eq, this.cursor.from), this.minActive = DE(this.active, this.activeTo)
+        for (; ub < this.activeRank.length && (Ob - this.activeRank[ub] || Bb - this.activeTo[ub]) > 0;) ub++;
+        Qu(this.active, ub, hb), Qu(this.activeTo, ub, Bb), Qu(this.activeRank, ub, Ob), bb && Qu(bb, ub, this.cursor.from), this.minActive = Ru(this.active, this.activeTo)
       }
       next() {
-        let qq = this.to,
-          Eq = this.point;
+        let bb = this.to,
+          ub = this.point;
         this.point = null;
-        let gq = this.openStart < 0 ? [] : null;
+        let hb = this.openStart < 0 ? [] : null;
         for (;;) {
-          let Yq = this.minActive;
-          if (Yq > -1 && (this.activeTo[Yq] - this.cursor.from || this.active[Yq].endSide - this.cursor.startSide) < 0) {
-            if (this.activeTo[Yq] > qq) {
-              this.to = this.activeTo[Yq], this.endSide = this.active[Yq].endSide;
+          let Bb = this.minActive;
+          if (Bb > -1 && (this.activeTo[Bb] - this.cursor.from || this.active[Bb].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[Bb] > bb) {
+              this.to = this.activeTo[Bb], this.endSide = this.active[Bb].endSide;
               break
             }
-            this.removeActive(Yq), gq && IE(gq, Yq)
+            this.removeActive(Bb), hb && cu(hb, Bb)
           } else {
             if (!this.cursor.value) {
               this.to = this.endSide = 1e9;
               break
             }
-            if (this.cursor.from > qq) {
+            if (this.cursor.from > bb) {
               this.to = this.cursor.from, this.endSide = this.cursor.startSide;
               break
             } {
-              let qq = this.cursor.value;
-              if (qq.point) {
-                if (!(Eq && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
-                  this.point = qq, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = qq.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+              let bb = this.cursor.value;
+              if (bb.point) {
+                if (!(ub && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = bb, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = bb.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
                   break
                 }
                 this.cursor.next()
-              } else this.addActive(gq), this.cursor.next()
+              } else this.addActive(hb), this.cursor.next()
             }
           }
         }
-        if (gq) {
+        if (hb) {
           this.openStart = 0;
-          for (let Eq = gq.length - 1; Eq >= 0 && gq[Eq] < qq; Eq--) this.openStart++
+          for (let ub = hb.length - 1; ub >= 0 && hb[ub] < bb; ub--) this.openStart++
         }
       }
-      activeForPoint(qq) {
+      activeForPoint(bb) {
         if (!this.active.length) return this.active;
-        let Eq = [];
-        for (let gq = this.active.length - 1; gq >= 0 && !(this.activeRank[gq] < this.pointRank); gq--)(this.activeTo[gq] > qq || this.activeTo[gq] == qq && this.active[gq].endSide >= this.point.endSide) && Eq.push(this.active[gq]);
-        return Eq.reverse()
+        let ub = [];
+        for (let hb = this.active.length - 1; hb >= 0 && !(this.activeRank[hb] < this.pointRank); hb--)(this.activeTo[hb] > bb || this.activeTo[hb] == bb && this.active[hb].endSide >= this.point.endSide) && ub.push(this.active[hb]);
+        return ub.reverse()
       }
-      openEnd(qq) {
-        let Eq = 0;
-        for (let gq = this.activeTo.length - 1; gq >= 0 && this.activeTo[gq] > qq; gq--) Eq++;
-        return Eq
-      }
-    }
-
-    function KE(qq, Eq, gq, Yq, lq, Oq) {
-      qq.goto(Eq), gq.goto(Yq);
-      let mq = Yq + lq,
-        xq = Yq,
-        Aq = Yq - Eq,
-        cq = !!Oq.boundChange;
-      for (let uq = !1;;) {
-        let Eq = qq.to + Aq - gq.to,
-          Yq = Eq || qq.endSide - gq.endSide,
-          lq = Yq < 0 ? qq.to + Aq : gq.to,
-          Bq = Math.min(lq, mq);
-        if (qq.point || gq.point ? (qq.point && gq.point && pE(qq.point, gq.point) && CE(qq.activeForPoint(qq.to), gq.activeForPoint(gq.to)) || Oq.comparePoint(xq, Bq, qq.point, gq.point), uq = !1) : (uq && Oq.boundChange(xq), Bq > xq && !CE(qq.active, gq.active) && Oq.compareRange(xq, Bq, qq.active, gq.active), cq && Bq < mq && (Eq || qq.openEnd(lq) != gq.openEnd(lq)) && (uq = !0)), lq > mq) break;
-        xq = lq, Yq <= 0 && qq.next(), Yq >= 0 && gq.next()
+      openEnd(bb) {
+        let ub = 0;
+        for (let hb = this.activeTo.length - 1; hb >= 0 && this.activeTo[hb] > bb; hb--) ub++;
+        return ub
       }
     }
 
-    function CE(qq, Eq) {
-      if (qq.length != Eq.length) return !1;
-      for (let gq = 0; gq < qq.length; gq++)
-        if (qq[gq] != Eq[gq] && !pE(qq[gq], Eq[gq])) return !1;
+    function ku(bb, ub, hb, Bb, Ob, Gb) {
+      bb.goto(ub), hb.goto(Bb);
+      let Ub = Bb + Ob,
+        Lb = Bb,
+        Yb = Bb - ub,
+        Sb = !!Gb.boundChange;
+      for (let ab = !1;;) {
+        let ub = bb.to + Yb - hb.to,
+          Bb = ub || bb.endSide - hb.endSide,
+          Ob = Bb < 0 ? bb.to + Yb : hb.to,
+          Hb = Math.min(Ob, Ub);
+        if (bb.point || hb.point ? (bb.point && hb.point && su(bb.point, hb.point) && Tu(bb.activeForPoint(bb.to), hb.activeForPoint(hb.to)) || Gb.comparePoint(Lb, Hb, bb.point, hb.point), ab = !1) : (ab && Gb.boundChange(Lb), Hb > Lb && !Tu(bb.active, hb.active) && Gb.compareRange(Lb, Hb, bb.active, hb.active), Sb && Hb < Ub && (ub || bb.openEnd(Ob) != hb.openEnd(Ob)) && (ab = !0)), Ob > Ub) break;
+        Lb = Ob, Bb <= 0 && bb.next(), Bb >= 0 && hb.next()
+      }
+    }
+
+    function Tu(bb, ub) {
+      if (bb.length != ub.length) return !1;
+      for (let hb = 0; hb < bb.length; hb++)
+        if (bb[hb] != ub[hb] && !su(bb[hb], ub[hb])) return !1;
       return !0
     }
 
-    function IE(qq, Eq) {
-      for (let gq = Eq, Yq = qq.length - 1; gq < Yq; gq++) qq[gq] = qq[gq + 1];
-      qq.pop()
+    function cu(bb, ub) {
+      for (let hb = ub, Bb = bb.length - 1; hb < Bb; hb++) bb[hb] = bb[hb + 1];
+      bb.pop()
     }
 
-    function eE(qq, Eq, gq) {
-      for (let Yq = qq.length - 1; Yq >= Eq; Yq--) qq[Yq + 1] = qq[Yq];
-      qq[Eq] = gq
+    function Qu(bb, ub, hb) {
+      for (let Bb = bb.length - 1; Bb >= ub; Bb--) bb[Bb + 1] = bb[Bb];
+      bb[ub] = hb
     }
 
-    function DE(qq, Eq) {
-      let gq = -1,
-        Yq = 1e9;
-      for (let lq = 0; lq < Eq.length; lq++)(Eq[lq] - Yq || qq[lq].endSide - qq[gq].endSide) < 0 && (gq = lq, Yq = Eq[lq]);
-      return gq
+    function Ru(bb, ub) {
+      let hb = -1,
+        Bb = 1e9;
+      for (let Ob = 0; Ob < ub.length; Ob++)(ub[Ob] - Bb || bb[Ob].endSide - bb[hb].endSide) < 0 && (hb = Ob, Bb = ub[Ob]);
+      return hb
     }
 
-    function qg(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qq.length,
-        Yq = 0;
-      for (let lq = 0; lq < gq && lq < qq.length;) 9 == qq.charCodeAt(lq) ? (Yq += Eq - Yq % Eq, lq++) : (Yq++, lq = vq(qq, lq));
-      return Yq
+    function bh(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bb.length,
+        Bb = 0;
+      for (let Ob = 0; Ob < hb && Ob < bb.length;) 9 == bb.charCodeAt(Ob) ? (Bb += ub - Bb % ub, Ob++) : (Bb++, Ob = nb(bb, Ob));
+      return Bb
     }
 
-    function Eg(qq, Eq, gq, Yq) {
-      for (let lq = 0, Oq = 0;;) {
-        if (Oq >= Eq) return lq;
-        if (lq == qq.length) break;
-        Oq += 9 == qq.charCodeAt(lq) ? gq - Oq % gq : 1, lq = vq(qq, lq)
+    function uh(bb, ub, hb, Bb) {
+      for (let Ob = 0, Gb = 0;;) {
+        if (Gb >= ub) return Ob;
+        if (Ob == bb.length) break;
+        Gb += 9 == bb.charCodeAt(Ob) ? hb - Gb % hb : 1, Ob = nb(bb, Ob)
       }
-      return !0 === Yq ? -1 : qq.length
+      return !0 === Bb ? -1 : bb.length
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

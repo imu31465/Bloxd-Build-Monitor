@@ -10895,6 +10895,10 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   z-index: 1
 }
 
+html[data-app-covered=skipped] .WholeAppWrapper {
+  content-visibility: hidden
+}
+
 .WholeAppWrapper .WholeAppWrapperInner {
   pointer-events: auto
 }

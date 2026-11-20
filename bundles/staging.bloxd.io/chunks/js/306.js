@@ -1,582 +1,582 @@
 export const id = 306;
 export const ids = [306];
 export const modules = {
-  41623: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      ReadExrDataAsync: () => BE,
-      _ExrTextureLoader: () => uE
+  41299: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      ReadExrDataAsync: () => Hu,
+      _ExrTextureLoader: () => au
     });
-    var Yq = gq(38653),
-      lq = gq(37158),
-      Oq = gq(39819);
-    const mq = 4,
-      xq = 4,
-      Aq = 1,
-      cq = 2,
-      uq = 8,
-      Bq = 65536,
-      Wq = Bq >> 3,
-      Nq = 14,
-      aq = 65537,
-      Vq = 1 << Nq,
-      dq = Vq - 1,
-      jq = 59,
-      Hq = 63,
-      oq = 2 + Hq - jq;
-    var Pq, Qq;
+    var Bb = hb(38302),
+      Ob = hb(36757),
+      Gb = hb(39536);
+    const Ub = 4,
+      Lb = 4,
+      Yb = 1,
+      Sb = 2,
+      ab = 8,
+      Hb = 65536,
+      wb = Hb >> 3,
+      Zb = 14,
+      Xb = 65537,
+      pb = 1 << Zb,
+      ob = pb - 1,
+      Ab = 59,
+      lb = 63,
+      Kb = 2 + lb - Ab;
+    var Wb, Cb;
 
-    function yq(qq, Eq) {
-      const gq = new Uint8Array(qq);
-      let Yq = 0;
-      for (; 0 != gq[Eq.value + Yq];) Yq += 1;
-      const lq = (new TextDecoder).decode(gq.slice(Eq.value, Eq.value + Yq));
-      return Eq.value = Eq.value + Yq + 1, lq
+    function db(bb, ub) {
+      const hb = new Uint8Array(bb);
+      let Bb = 0;
+      for (; 0 != hb[ub.value + Bb];) Bb += 1;
+      const Ob = (new TextDecoder).decode(hb.slice(ub.value, ub.value + Bb));
+      return ub.value = ub.value + Bb + 1, Ob
     }
 
-    function tq(qq, Eq) {
-      const gq = qq.getInt32(Eq.value, !0);
-      return Eq.value += mq, gq
+    function rb(bb, ub) {
+      const hb = bb.getInt32(ub.value, !0);
+      return ub.value += Ub, hb
     }
 
-    function rq(qq, Eq) {
-      const gq = qq.getUint32(Eq.value, !0);
-      return Eq.value += mq, gq
+    function jb(bb, ub) {
+      const hb = bb.getUint32(ub.value, !0);
+      return ub.value += Ub, hb
     }
 
-    function vq(qq, Eq) {
-      const gq = qq.getUint8(Eq.value);
-      return Eq.value += Aq, gq
+    function nb(bb, ub) {
+      const hb = bb.getUint8(ub.value);
+      return ub.value += Yb, hb
     }
 
-    function hq(qq, Eq) {
-      const gq = qq.getUint16(Eq.value, !0);
-      return Eq.value += cq, gq
+    function Db(bb, ub) {
+      const hb = bb.getUint16(ub.value, !0);
+      return ub.value += Sb, hb
     }
 
-    function nq(qq, Eq) {
-      const gq = qq[Eq.value];
-      return Eq.value += Aq, gq
+    function xb(bb, ub) {
+      const hb = bb[ub.value];
+      return ub.value += Yb, hb
     }
 
-    function bq(qq, Eq) {
-      let gq;
-      return gq = "getBigInt64" in DataView.prototype ? Number(qq.getBigInt64(Eq.value, !0)) : qq.getUint32(Eq.value + 4, !0) + Number(qq.getUint32(Eq.value, !0) << 32), Eq.value += uq, gq
+    function zb(bb, ub) {
+      let hb;
+      return hb = "getBigInt64" in DataView.prototype ? Number(bb.getBigInt64(ub.value, !0)) : bb.getUint32(ub.value + 4, !0) + Number(bb.getUint32(ub.value, !0) << 32), ub.value += ab, hb
     }
 
-    function iq(qq, Eq) {
-      const gq = qq.getFloat32(Eq.value, !0);
-      return Eq.value += xq, gq
+    function gb(bb, ub) {
+      const hb = bb.getFloat32(ub.value, !0);
+      return ub.value += Lb, hb
     }
 
-    function Zq(qq, Eq) {
-      return (0, Oq.e)(hq(qq, Eq))
+    function ib(bb, ub) {
+      return (0, Gb.b)(Db(bb, ub))
     }
 
-    function fq(qq, Eq) {
-      return (0, Oq.j)((0, lq.Clamp)(iq(qq, Eq), -Oq.f, Oq.f))
+    function vb(bb, ub) {
+      return (0, Gb.i)((0, Ob.Clamp)(gb(bb, ub), -Gb.e, Gb.e))
     }
 
-    function Mq(qq, Eq, gq, Yq) {
-      switch (gq) {
+    function tb(bb, ub, hb, Bb) {
+      switch (hb) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(qq, Eq, gq) {
-            const Yq = (new TextDecoder).decode(new Uint8Array(qq).slice(Eq.value, Eq.value + gq));
-            return Eq.value = Eq.value + gq, Yq
-          }(qq.buffer, Eq, Yq);
+          return function(bb, ub, hb) {
+            const Bb = (new TextDecoder).decode(new Uint8Array(bb).slice(ub.value, ub.value + hb));
+            return ub.value = ub.value + hb, Bb
+          }(bb.buffer, ub, Bb);
         case "chlist":
-          return function(qq, Eq, gq) {
-            const Yq = Eq.value,
-              lq = [];
-            for (; Eq.value < Yq + gq - 1;) {
-              const gq = yq(qq.buffer, Eq),
-                Yq = tq(qq, Eq),
-                Oq = vq(qq, Eq);
-              Eq.value += 3;
-              const mq = tq(qq, Eq),
-                xq = tq(qq, Eq);
-              lq.push({
-                name: gq,
-                pixelType: Yq,
-                pLinear: Oq,
-                xSampling: mq,
-                ySampling: xq
+          return function(bb, ub, hb) {
+            const Bb = ub.value,
+              Ob = [];
+            for (; ub.value < Bb + hb - 1;) {
+              const hb = db(bb.buffer, ub),
+                Bb = rb(bb, ub),
+                Gb = nb(bb, ub);
+              ub.value += 3;
+              const Ub = rb(bb, ub),
+                Lb = rb(bb, ub);
+              Ob.push({
+                name: hb,
+                pixelType: Bb,
+                pLinear: Gb,
+                xSampling: Ub,
+                ySampling: Lb
               })
             }
-            return Eq.value += 1, lq
-          }(qq, Eq, Yq);
+            return ub.value += 1, Ob
+          }(bb, ub, Bb);
         case "chromaticities":
-          return function(qq, Eq) {
+          return function(bb, ub) {
             return {
-              redX: iq(qq, Eq),
-              redY: iq(qq, Eq),
-              greenX: iq(qq, Eq),
-              greenY: iq(qq, Eq),
-              blueX: iq(qq, Eq),
-              blueY: iq(qq, Eq),
-              whiteX: iq(qq, Eq),
-              whiteY: iq(qq, Eq)
+              redX: gb(bb, ub),
+              redY: gb(bb, ub),
+              greenX: gb(bb, ub),
+              greenY: gb(bb, ub),
+              blueX: gb(bb, ub),
+              blueY: gb(bb, ub),
+              whiteX: gb(bb, ub),
+              whiteY: gb(bb, ub)
             }
-          }(qq, Eq);
+          }(bb, ub);
         case "compression":
-          return function(qq, Eq) {
-            return vq(qq, Eq)
-          }(qq, Eq);
+          return function(bb, ub) {
+            return nb(bb, ub)
+          }(bb, ub);
         case "box2i":
-          return function(qq, Eq) {
+          return function(bb, ub) {
             return {
-              xMin: tq(qq, Eq),
-              yMin: tq(qq, Eq),
-              xMax: tq(qq, Eq),
-              yMax: tq(qq, Eq)
+              xMin: rb(bb, ub),
+              yMin: rb(bb, ub),
+              xMax: rb(bb, ub),
+              yMax: rb(bb, ub)
             }
-          }(qq, Eq);
+          }(bb, ub);
         case "lineOrder":
-          return function(qq, Eq) {
-            const gq = vq(qq, Eq);
-            return Qq[gq]
-          }(qq, Eq);
+          return function(bb, ub) {
+            const hb = nb(bb, ub);
+            return Cb[hb]
+          }(bb, ub);
         case "float":
-          return iq(qq, Eq);
+          return gb(bb, ub);
         case "v2f":
-          return function(qq, Eq) {
-            return [iq(qq, Eq), iq(qq, Eq)]
-          }(qq, Eq);
+          return function(bb, ub) {
+            return [gb(bb, ub), gb(bb, ub)]
+          }(bb, ub);
         case "v3f":
-          return function(qq, Eq) {
-            return [iq(qq, Eq), iq(qq, Eq), iq(qq, Eq)]
-          }(qq, Eq);
+          return function(bb, ub) {
+            return [gb(bb, ub), gb(bb, ub), gb(bb, ub)]
+          }(bb, ub);
         case "int":
-          return tq(qq, Eq);
+          return rb(bb, ub);
         case "rational":
-          return function(qq, Eq) {
-            return [tq(qq, Eq), rq(qq, Eq)]
-          }(qq, Eq);
+          return function(bb, ub) {
+            return [rb(bb, ub), jb(bb, ub)]
+          }(bb, ub);
         case "timecode":
-          return function(qq, Eq) {
-            return [rq(qq, Eq), rq(qq, Eq)]
-          }(qq, Eq);
+          return function(bb, ub) {
+            return [jb(bb, ub), jb(bb, ub)]
+          }(bb, ub);
         case "preview":
-          return Eq.value += Yq, "skipped";
+          return ub.value += Bb, "skipped";
         default:
-          return void(Eq.value += Yq)
+          return void(ub.value += Bb)
       }
     }
 
-    function Tq(qq) {
-      for (let Eq = 1; Eq < qq.length; Eq++) {
-        const gq = qq[Eq - 1] + qq[Eq] - 128;
-        qq[Eq] = gq
+    function Jb(bb) {
+      for (let ub = 1; ub < bb.length; ub++) {
+        const hb = bb[ub - 1] + bb[ub] - 128;
+        bb[ub] = hb
       }
     }
 
-    function zq(qq, Eq) {
-      let gq = 0,
-        Yq = Math.floor((qq.length + 1) / 2),
-        lq = 0;
-      const Oq = qq.length - 1;
-      for (; !(lq > Oq) && (Eq[lq++] = qq[gq++], !(lq > Oq));) Eq[lq++] = qq[Yq++]
-    }! function(qq) {
-      qq[qq.NO_COMPRESSION = 0] = "NO_COMPRESSION", qq[qq.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", qq[qq.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", qq[qq.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", qq[qq.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", qq[qq.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(Pq || (Pq = {})),
-    function(qq) {
-      qq[qq.INCREASING_Y = 0] = "INCREASING_Y", qq[qq.DECREASING_Y = 1] = "DECREASING_Y"
-    }(Qq || (Qq = {}));
-    const Sq = 20000630;
+    function eb(bb, ub) {
+      let hb = 0,
+        Bb = Math.floor((bb.length + 1) / 2),
+        Ob = 0;
+      const Gb = bb.length - 1;
+      for (; !(Ob > Gb) && (ub[Ob++] = bb[hb++], !(Ob > Gb));) ub[Ob++] = bb[Bb++]
+    }! function(bb) {
+      bb[bb.NO_COMPRESSION = 0] = "NO_COMPRESSION", bb[bb.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", bb[bb.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", bb[bb.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", bb[bb.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", bb[bb.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(Wb || (Wb = {})),
+    function(bb) {
+      bb[bb.INCREASING_Y = 0] = "INCREASING_Y", bb[bb.DECREASING_Y = 1] = "DECREASING_Y"
+    }(Cb || (Cb = {}));
+    const Nb = 20000630;
 
-    function pq(qq, Eq) {
-      if (qq.getUint32(0, !0) != Sq) throw new Error("Incorrect OpenEXR format");
-      const gq = qq.getUint8(4),
-        lq = qq.getUint8(5),
-        Oq = {
-          singleTile: !!(2 & lq),
-          longName: !!(4 & lq),
-          deepFormat: !!(8 & lq),
-          multiPart: !!(16 & lq)
+    function sb(bb, ub) {
+      if (bb.getUint32(0, !0) != Nb) throw new Error("Incorrect OpenEXR format");
+      const hb = bb.getUint8(4),
+        Ob = bb.getUint8(5),
+        Gb = {
+          singleTile: !!(2 & Ob),
+          longName: !!(4 & Ob),
+          deepFormat: !!(8 & Ob),
+          multiPart: !!(16 & Ob)
         };
-      Eq.value = 8;
-      const mq = {};
-      let xq = !0;
-      for (; xq;) {
-        const gq = yq(qq.buffer, Eq);
-        if (gq) {
-          const lq = yq(qq.buffer, Eq),
-            Oq = Mq(qq, Eq, lq, rq(qq, Eq));
-          void 0 === Oq ? Yq.b.Warn(`Unknown header attribute type ${lq}'.`) : mq[gq] = Oq
-        } else xq = !1
+      ub.value = 8;
+      const Ub = {};
+      let Lb = !0;
+      for (; Lb;) {
+        const hb = db(bb.buffer, ub);
+        if (hb) {
+          const Ob = db(bb.buffer, ub),
+            Gb = tb(bb, ub, Ob, jb(bb, ub));
+          void 0 === Gb ? Bb.b.Warn(`Unknown header attribute type ${Ob}'.`) : Ub[hb] = Gb
+        } else Lb = !1
       }
-      if (0 != (-5 & lq)) throw new Error("Unsupported file format");
+      if (0 != (-5 & Ob)) throw new Error("Unsupported file format");
       return {
-        version: gq,
-        spec: Oq,
-        ...mq
-      }
-    }
-    const Gq = 32768,
-      Lq = 65535;
-
-    function Jq(qq, Eq, gq, Yq, lq) {
-      for (; gq < qq;) Eq = Eq << 8 | nq(Yq, lq), gq += 8;
-      return {
-        l: Eq >> (gq -= qq) & (1 << qq) - 1,
-        c: Eq,
-        lc: gq
+        version: hb,
+        spec: Gb,
+        ...Ub
       }
     }
+    const Mb = 32768,
+      mb = 65535;
 
-    function kq(qq, Eq, gq, Yq) {
+    function Ib(bb, ub, hb, Bb, Ob) {
+      for (; hb < bb;) ub = ub << 8 | xb(Bb, Ob), hb += 8;
       return {
-        c: qq = qq << 8 | nq(gq, Yq),
-        lc: Eq += 8
+        l: ub >> (hb -= bb) & (1 << bb) - 1,
+        c: ub,
+        lc: hb
       }
     }
 
-    function Rq(qq, Eq, gq, Yq, lq, Oq, mq, xq, Aq) {
-      if (qq == Eq) {
-        if (Yq < 8) {
-          const qq = kq(gq, Yq, lq, Oq);
-          gq = qq.c, Yq = qq.lc
+    function Pb(bb, ub, hb, Bb) {
+      return {
+        c: bb = bb << 8 | xb(hb, Bb),
+        lc: ub += 8
+      }
+    }
+
+    function qb(bb, ub, hb, Bb, Ob, Gb, Ub, Lb, Yb) {
+      if (bb == ub) {
+        if (Bb < 8) {
+          const bb = Pb(hb, Bb, Ob, Gb);
+          hb = bb.c, Bb = bb.lc
         }
-        let qq = gq >> (Yq -= 8);
-        if (qq = new Uint8Array([qq])[0], xq.value + qq > Aq) return null;
-        const Eq = mq[xq.value - 1];
-        for (; qq-- > 0;) mq[xq.value++] = Eq
+        let bb = hb >> (Bb -= 8);
+        if (bb = new Uint8Array([bb])[0], Lb.value + bb > Yb) return null;
+        const ub = Ub[Lb.value - 1];
+        for (; bb-- > 0;) Ub[Lb.value++] = ub
       } else {
-        if (!(xq.value < Aq)) return null;
-        mq[xq.value++] = qq
+        if (!(Lb.value < Yb)) return null;
+        Ub[Lb.value++] = bb
       }
       return {
-        c: gq,
-        lc: Yq
+        c: hb,
+        lc: Bb
       }
     }
-    const Uq = new Array(59);
+    const Eb = new Array(59);
 
-    function Fq(qq, Eq, gq, Yq, lq, Oq) {
-      const mq = Eq;
-      let xq = 0,
-        Aq = 0;
-      for (; Yq <= lq; Yq++) {
-        if (mq.value - Eq.value > gq) return;
-        let cq = Jq(6, xq, Aq, qq, mq);
-        const uq = cq.l;
-        if (xq = cq.c, Aq = cq.lc, Oq[Yq] = uq, uq == Hq) {
-          if (mq.value - Eq.value > gq) throw new Error("Error in HufUnpackEncTable");
-          cq = Jq(8, xq, Aq, qq, mq);
-          let uq = cq.l + oq;
-          if (xq = cq.c, Aq = cq.lc, Yq + uq > lq + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; uq--;) Oq[Yq++] = 0;
-          Yq--
-        } else if (uq >= jq) {
-          let qq = uq - jq + 2;
-          if (Yq + qq > lq + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; qq--;) Oq[Yq++] = 0;
-          Yq--
+    function yb(bb, ub, hb, Bb, Ob, Gb) {
+      const Ub = ub;
+      let Lb = 0,
+        Yb = 0;
+      for (; Bb <= Ob; Bb++) {
+        if (Ub.value - ub.value > hb) return;
+        let Sb = Ib(6, Lb, Yb, bb, Ub);
+        const ab = Sb.l;
+        if (Lb = Sb.c, Yb = Sb.lc, Gb[Bb] = ab, ab == lb) {
+          if (Ub.value - ub.value > hb) throw new Error("Error in HufUnpackEncTable");
+          Sb = Ib(8, Lb, Yb, bb, Ub);
+          let ab = Sb.l + Kb;
+          if (Lb = Sb.c, Yb = Sb.lc, Bb + ab > Ob + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; ab--;) Gb[Bb++] = 0;
+          Bb--
+        } else if (ab >= Ab) {
+          let bb = ab - Ab + 2;
+          if (Bb + bb > Ob + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; bb--;) Gb[Bb++] = 0;
+          Bb--
         }
-      }! function(qq) {
-        for (let gq = 0; gq <= 58; ++gq) Uq[gq] = 0;
-        for (let gq = 0; gq < aq; ++gq) Uq[qq[gq]] += 1;
-        let Eq = 0;
-        for (let gq = 58; gq > 0; --gq) {
-          const qq = Eq + Uq[gq] >> 1;
-          Uq[gq] = Eq, Eq = qq
+      }! function(bb) {
+        for (let hb = 0; hb <= 58; ++hb) Eb[hb] = 0;
+        for (let hb = 0; hb < Xb; ++hb) Eb[bb[hb]] += 1;
+        let ub = 0;
+        for (let hb = 58; hb > 0; --hb) {
+          const bb = ub + Eb[hb] >> 1;
+          Eb[hb] = ub, ub = bb
         }
-        for (let gq = 0; gq < aq; ++gq) {
-          const Eq = qq[gq];
-          Eq > 0 && (qq[gq] = Eq | Uq[Eq]++ << 6)
+        for (let hb = 0; hb < Xb; ++hb) {
+          const ub = bb[hb];
+          ub > 0 && (bb[hb] = ub | Eb[ub]++ << 6)
         }
-      }(Oq)
+      }(Gb)
     }
 
-    function sq(qq) {
-      return 63 & qq
+    function Vb(bb) {
+      return 63 & bb
     }
 
-    function Xq(qq) {
-      return qq >> 6
+    function Fb(bb) {
+      return bb >> 6
     }
 
-    function wq(qq, Eq, gq, Yq, lq, Oq) {
-      const mq = gq.value,
-        xq = rq(Eq, gq),
-        Aq = rq(Eq, gq);
-      gq.value += 4;
-      const cq = rq(Eq, gq);
-      if (gq.value += 4, xq < 0 || xq >= aq || Aq < 0 || Aq >= aq) throw new Error("Wrong HUF_ENCSIZE");
-      const uq = new Array(aq),
-        Bq = new Array(Vq);
-      ! function(qq) {
-        for (let Eq = 0; Eq < Vq; Eq++) qq[Eq] = {}, qq[Eq].len = 0, qq[Eq].lit = 0, qq[Eq].p = null
-      }(Bq);
-      if (Fq(qq, gq, Yq - (gq.value - mq), xq, Aq, uq), cq > 8 * (Yq - (gq.value - mq))) throw new Error("Wrong hufUncompress");
-      ! function(qq, Eq, gq, Yq) {
-        for (; Eq <= gq; Eq++) {
-          const gq = Xq(qq[Eq]),
-            lq = sq(qq[Eq]);
-          if (gq >> lq) throw new Error("Invalid table entry");
-          if (lq > Nq) {
-            const qq = Yq[gq >> lq - Nq];
-            if (qq.len) throw new Error("Invalid table entry");
-            if (qq.lit++, qq.p) {
-              const Eq = qq.p;
-              qq.p = new Array(qq.lit);
-              for (let gq = 0; gq < qq.lit - 1; ++gq) qq.p[gq] = Eq[gq]
-            } else qq.p = new Array(1);
-            qq.p[qq.lit - 1] = Eq
-          } else if (lq) {
-            let qq = 0;
-            for (let Oq = 1 << Nq - lq; Oq > 0; Oq--) {
-              const Oq = Yq[(gq << Nq - lq) + qq];
-              if (Oq.len || Oq.p) throw new Error("Invalid table entry");
-              Oq.len = lq, Oq.lit = Eq, qq++
+    function fb(bb, ub, hb, Bb, Ob, Gb) {
+      const Ub = hb.value,
+        Lb = jb(ub, hb),
+        Yb = jb(ub, hb);
+      hb.value += 4;
+      const Sb = jb(ub, hb);
+      if (hb.value += 4, Lb < 0 || Lb >= Xb || Yb < 0 || Yb >= Xb) throw new Error("Wrong HUF_ENCSIZE");
+      const ab = new Array(Xb),
+        Hb = new Array(pb);
+      ! function(bb) {
+        for (let ub = 0; ub < pb; ub++) bb[ub] = {}, bb[ub].len = 0, bb[ub].lit = 0, bb[ub].p = null
+      }(Hb);
+      if (yb(bb, hb, Bb - (hb.value - Ub), Lb, Yb, ab), Sb > 8 * (Bb - (hb.value - Ub))) throw new Error("Wrong hufUncompress");
+      ! function(bb, ub, hb, Bb) {
+        for (; ub <= hb; ub++) {
+          const hb = Fb(bb[ub]),
+            Ob = Vb(bb[ub]);
+          if (hb >> Ob) throw new Error("Invalid table entry");
+          if (Ob > Zb) {
+            const bb = Bb[hb >> Ob - Zb];
+            if (bb.len) throw new Error("Invalid table entry");
+            if (bb.lit++, bb.p) {
+              const ub = bb.p;
+              bb.p = new Array(bb.lit);
+              for (let hb = 0; hb < bb.lit - 1; ++hb) bb.p[hb] = ub[hb]
+            } else bb.p = new Array(1);
+            bb.p[bb.lit - 1] = ub
+          } else if (Ob) {
+            let bb = 0;
+            for (let Gb = 1 << Zb - Ob; Gb > 0; Gb--) {
+              const Gb = Bb[(hb << Zb - Ob) + bb];
+              if (Gb.len || Gb.p) throw new Error("Invalid table entry");
+              Gb.len = Ob, Gb.lit = ub, bb++
             }
           }
         }
-      }(uq, xq, Aq, Bq),
-      function(qq, Eq, gq, Yq, lq, Oq, mq, xq, Aq) {
-        let cq = 0,
-          uq = 0;
-        const Bq = mq,
-          Wq = Math.trunc(Yq.value + (lq + 7) / 8);
-        for (; Yq.value < Wq;) {
-          let lq = kq(cq, uq, gq, Yq);
-          for (cq = lq.c, uq = lq.lc; uq >= Nq;) {
-            const mq = Eq[cq >> uq - Nq & dq];
-            if (mq.len) {
-              uq -= mq.len;
-              const qq = Rq(mq.lit, Oq, cq, uq, gq, Yq, xq, Aq, Bq);
-              qq && (cq = qq.c, uq = qq.lc)
+      }(ab, Lb, Yb, Hb),
+      function(bb, ub, hb, Bb, Ob, Gb, Ub, Lb, Yb) {
+        let Sb = 0,
+          ab = 0;
+        const Hb = Ub,
+          wb = Math.trunc(Bb.value + (Ob + 7) / 8);
+        for (; Bb.value < wb;) {
+          let Ob = Pb(Sb, ab, hb, Bb);
+          for (Sb = Ob.c, ab = Ob.lc; ab >= Zb;) {
+            const Ub = ub[Sb >> ab - Zb & ob];
+            if (Ub.len) {
+              ab -= Ub.len;
+              const bb = qb(Ub.lit, Gb, Sb, ab, hb, Bb, Lb, Yb, Hb);
+              bb && (Sb = bb.c, ab = bb.lc)
             } else {
-              if (!mq.p) throw new Error("hufDecode issues");
-              let Eq;
-              for (Eq = 0; Eq < mq.lit; Eq++) {
-                const Nq = sq(qq[mq.p[Eq]]);
-                for (; uq < Nq && Yq.value < Wq;) lq = kq(cq, uq, gq, Yq), cq = lq.c, uq = lq.lc;
-                if (uq >= Nq && Xq(qq[mq.p[Eq]]) == (cq >> uq - Nq & (1 << Nq) - 1)) {
-                  uq -= Nq;
-                  const qq = Rq(mq.p[Eq], Oq, cq, uq, gq, Yq, xq, Aq, Bq);
-                  qq && (cq = qq.c, uq = qq.lc);
+              if (!Ub.p) throw new Error("hufDecode issues");
+              let ub;
+              for (ub = 0; ub < Ub.lit; ub++) {
+                const Zb = Vb(bb[Ub.p[ub]]);
+                for (; ab < Zb && Bb.value < wb;) Ob = Pb(Sb, ab, hb, Bb), Sb = Ob.c, ab = Ob.lc;
+                if (ab >= Zb && Fb(bb[Ub.p[ub]]) == (Sb >> ab - Zb & (1 << Zb) - 1)) {
+                  ab -= Zb;
+                  const bb = qb(Ub.p[ub], Gb, Sb, ab, hb, Bb, Lb, Yb, Hb);
+                  bb && (Sb = bb.c, ab = bb.lc);
                   break
                 }
               }
-              if (Eq == mq.lit) throw new Error("HufDecode issues")
+              if (ub == Ub.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const aq = 8 - lq & 7;
-        for (cq >>= aq, uq -= aq; uq > 0;) {
-          const qq = Eq[cq << Nq - uq & dq];
-          if (!qq.len) throw new Error("HufDecode issues");
+        const Xb = 8 - Ob & 7;
+        for (Sb >>= Xb, ab -= Xb; ab > 0;) {
+          const bb = ub[Sb << Zb - ab & ob];
+          if (!bb.len) throw new Error("HufDecode issues");
           {
-            uq -= qq.len;
-            const Eq = Rq(qq.lit, Oq, cq, uq, gq, Yq, xq, Aq, Bq);
-            Eq && (cq = Eq.c, uq = Eq.lc)
+            ab -= bb.len;
+            const ub = qb(bb.lit, Gb, Sb, ab, hb, Bb, Lb, Yb, Hb);
+            ub && (Sb = ub.c, ab = ub.lc)
           }
         }
-      }(uq, Bq, qq, gq, cq, Aq, Oq, lq, {
+      }(ab, Hb, bb, hb, Sb, Yb, Gb, Ob, {
         value: 0
       })
     }
 
-    function Kq(qq) {
-      return 65535 & qq
+    function kb(bb) {
+      return 65535 & bb
     }
 
-    function Cq(qq) {
-      const Eq = Kq(qq);
-      return Eq > 32767 ? Eq - 65536 : Eq
+    function Tb(bb) {
+      const ub = kb(bb);
+      return ub > 32767 ? ub - 65536 : ub
     }
 
-    function Iq(qq, Eq) {
-      const gq = Cq(qq),
-        Yq = Cq(Eq),
-        lq = gq + (1 & Yq) + (Yq >> 1);
+    function cb(bb, ub) {
+      const hb = Tb(bb),
+        Bb = Tb(ub),
+        Ob = hb + (1 & Bb) + (Bb >> 1);
       return {
-        a: lq,
-        b: lq - Yq
+        a: Ob,
+        b: Ob - Bb
       }
     }
 
-    function eq(qq, Eq) {
-      const gq = Kq(qq),
-        Yq = Kq(Eq),
-        lq = gq - (Yq >> 1) & Lq;
+    function Qb(bb, ub) {
+      const hb = kb(bb),
+        Bb = kb(ub),
+        Ob = hb - (Bb >> 1) & mb;
       return {
-        a: Yq + lq - Gq & Lq,
-        b: lq
+        a: Bb + Ob - Mb & mb,
+        b: Ob
       }
     }
 
-    function Dq(qq, Eq, gq, Yq, lq, Oq, mq) {
-      const xq = mq < 16384,
-        Aq = gq > lq ? lq : gq;
-      let cq, uq, Bq = 1;
-      for (; Bq <= Aq;) Bq <<= 1;
-      for (Bq >>= 1, cq = Bq, Bq >>= 1; Bq >= 1;) {
-        uq = 0;
-        const mq = uq + Oq * (lq - cq),
-          Aq = Oq * Bq,
-          Wq = Oq * cq,
-          Nq = Yq * Bq,
-          aq = Yq * cq;
-        let Vq, dq, jq, Hq;
-        for (; uq <= mq; uq += Wq) {
-          let lq = uq;
-          const Oq = uq + Yq * (gq - cq);
-          for (; lq <= Oq; lq += aq) {
-            const gq = lq + Nq,
-              Yq = lq + Aq,
-              Oq = Yq + Nq;
-            if (xq) {
-              let mq = Iq(qq[lq + Eq], qq[Yq + Eq]);
-              Vq = mq.a, jq = mq.b, mq = Iq(qq[gq + Eq], qq[Oq + Eq]), dq = mq.a, Hq = mq.b, mq = Iq(Vq, dq), qq[lq + Eq] = mq.a, qq[gq + Eq] = mq.b, mq = Iq(jq, Hq), qq[Yq + Eq] = mq.a, qq[Oq + Eq] = mq.b
+    function Rb(bb, ub, hb, Bb, Ob, Gb, Ub) {
+      const Lb = Ub < 16384,
+        Yb = hb > Ob ? Ob : hb;
+      let Sb, ab, Hb = 1;
+      for (; Hb <= Yb;) Hb <<= 1;
+      for (Hb >>= 1, Sb = Hb, Hb >>= 1; Hb >= 1;) {
+        ab = 0;
+        const Ub = ab + Gb * (Ob - Sb),
+          Yb = Gb * Hb,
+          wb = Gb * Sb,
+          Zb = Bb * Hb,
+          Xb = Bb * Sb;
+        let pb, ob, Ab, lb;
+        for (; ab <= Ub; ab += wb) {
+          let Ob = ab;
+          const Gb = ab + Bb * (hb - Sb);
+          for (; Ob <= Gb; Ob += Xb) {
+            const hb = Ob + Zb,
+              Bb = Ob + Yb,
+              Gb = Bb + Zb;
+            if (Lb) {
+              let Ub = cb(bb[Ob + ub], bb[Bb + ub]);
+              pb = Ub.a, Ab = Ub.b, Ub = cb(bb[hb + ub], bb[Gb + ub]), ob = Ub.a, lb = Ub.b, Ub = cb(pb, ob), bb[Ob + ub] = Ub.a, bb[hb + ub] = Ub.b, Ub = cb(Ab, lb), bb[Bb + ub] = Ub.a, bb[Gb + ub] = Ub.b
             } else {
-              let mq = eq(qq[lq + Eq], qq[Yq + Eq]);
-              Vq = mq.a, jq = mq.b, mq = eq(qq[gq + Eq], qq[Oq + Eq]), dq = mq.a, Hq = mq.b, mq = eq(Vq, dq), qq[lq + Eq] = mq.a, qq[gq + Eq] = mq.b, mq = eq(jq, Hq), qq[Yq + Eq] = mq.a, qq[Oq + Eq] = mq.b
+              let Ub = Qb(bb[Ob + ub], bb[Bb + ub]);
+              pb = Ub.a, Ab = Ub.b, Ub = Qb(bb[hb + ub], bb[Gb + ub]), ob = Ub.a, lb = Ub.b, Ub = Qb(pb, ob), bb[Ob + ub] = Ub.a, bb[hb + ub] = Ub.b, Ub = Qb(Ab, lb), bb[Bb + ub] = Ub.a, bb[Gb + ub] = Ub.b
             }
           }
-          if (gq & Bq) {
-            const gq = lq + Aq;
-            let Yq;
-            Yq = xq ? Iq(qq[lq + Eq], qq[gq + Eq]) : eq(qq[lq + Eq], qq[gq + Eq]), Vq = Yq.a, qq[gq + Eq] = Yq.b, qq[lq + Eq] = Vq
+          if (hb & Hb) {
+            const hb = Ob + Yb;
+            let Bb;
+            Bb = Lb ? cb(bb[Ob + ub], bb[hb + ub]) : Qb(bb[Ob + ub], bb[hb + ub]), pb = Bb.a, bb[hb + ub] = Bb.b, bb[Ob + ub] = pb
           }
         }
-        if (lq & Bq) {
-          let lq = uq;
-          const Oq = uq + Yq * (gq - cq);
-          for (; lq <= Oq; lq += aq) {
-            const gq = lq + Nq;
-            let Yq;
-            Yq = xq ? Iq(qq[lq + Eq], qq[gq + Eq]) : eq(qq[lq + Eq], qq[gq + Eq]), Vq = Yq.a, qq[gq + Eq] = Yq.b, qq[lq + Eq] = Vq
+        if (Ob & Hb) {
+          let Ob = ab;
+          const Gb = ab + Bb * (hb - Sb);
+          for (; Ob <= Gb; Ob += Xb) {
+            const hb = Ob + Zb;
+            let Bb;
+            Bb = Lb ? cb(bb[Ob + ub], bb[hb + ub]) : Qb(bb[Ob + ub], bb[hb + ub]), pb = Bb.a, bb[hb + ub] = Bb.b, bb[Ob + ub] = pb
           }
         }
-        cq = Bq, Bq >>= 1
+        Sb = Hb, Hb >>= 1
       }
-      return uq
+      return ab
     }
 
-    function qE(qq) {
-      return new DataView(qq.array.buffer, qq.offset.value, qq.size)
+    function bu(bb) {
+      return new DataView(bb.array.buffer, bb.offset.value, bb.size)
     }
 
-    function EE(qq) {
-      const Eq = qq.viewer.buffer.slice(qq.offset.value, qq.offset.value + qq.size),
-        gq = new Uint8Array(function(qq) {
-          let Eq = qq.byteLength;
-          const gq = [];
-          let Yq = 0;
-          const lq = new DataView(qq);
-          for (; Eq > 0;) {
-            const qq = lq.getInt8(Yq++);
-            if (qq < 0) {
-              const Oq = -qq;
-              Eq -= Oq + 1;
-              for (let qq = 0; qq < Oq; qq++) gq.push(lq.getUint8(Yq++))
+    function uu(bb) {
+      const ub = bb.viewer.buffer.slice(bb.offset.value, bb.offset.value + bb.size),
+        hb = new Uint8Array(function(bb) {
+          let ub = bb.byteLength;
+          const hb = [];
+          let Bb = 0;
+          const Ob = new DataView(bb);
+          for (; ub > 0;) {
+            const bb = Ob.getInt8(Bb++);
+            if (bb < 0) {
+              const Gb = -bb;
+              ub -= Gb + 1;
+              for (let bb = 0; bb < Gb; bb++) hb.push(Ob.getUint8(Bb++))
             } else {
-              const Oq = qq;
-              Eq -= 2;
-              const mq = lq.getUint8(Yq++);
-              for (let qq = 0; qq < Oq + 1; qq++) gq.push(mq)
+              const Gb = bb;
+              ub -= 2;
+              const Ub = Ob.getUint8(Bb++);
+              for (let bb = 0; bb < Gb + 1; bb++) hb.push(Ub)
             }
           }
-          return gq
-        }(Eq)),
-        Yq = new Uint8Array(gq.length);
-      return Tq(gq), zq(gq, Yq), new DataView(Yq.buffer)
+          return hb
+        }(ub)),
+        Bb = new Uint8Array(hb.length);
+      return Jb(hb), eb(hb, Bb), new DataView(Bb.buffer)
     }
 
-    function gE(qq) {
-      const Eq = qq.array.slice(qq.offset.value, qq.offset.value + qq.size),
-        gq = fflate.unzlibSync(Eq),
-        Yq = new Uint8Array(gq.length);
-      return Tq(gq), zq(gq, Yq), new DataView(Yq.buffer)
+    function hu(bb) {
+      const ub = bb.array.slice(bb.offset.value, bb.offset.value + bb.size),
+        hb = fflate.unzlibSync(ub),
+        Bb = new Uint8Array(hb.length);
+      return Jb(hb), eb(hb, Bb), new DataView(Bb.buffer)
     }
 
-    function YE(qq) {
-      const Eq = qq.array.slice(qq.offset.value, qq.offset.value + qq.size),
-        gq = fflate.unzlibSync(Eq),
-        Yq = qq.lines * qq.channels * qq.width,
-        lq = 1 == qq.type ? new Uint16Array(Yq) : new Uint32Array(Yq);
-      let Oq = 0,
-        mq = 0;
-      const xq = new Array(4);
-      for (let Aq = 0; Aq < qq.lines; Aq++)
-        for (let Eq = 0; Eq < qq.channels; Eq++) {
-          let Eq = 0;
-          switch (qq.type) {
+    function Bu(bb) {
+      const ub = bb.array.slice(bb.offset.value, bb.offset.value + bb.size),
+        hb = fflate.unzlibSync(ub),
+        Bb = bb.lines * bb.channels * bb.width,
+        Ob = 1 == bb.type ? new Uint16Array(Bb) : new Uint32Array(Bb);
+      let Gb = 0,
+        Ub = 0;
+      const Lb = new Array(4);
+      for (let Yb = 0; Yb < bb.lines; Yb++)
+        for (let ub = 0; ub < bb.channels; ub++) {
+          let ub = 0;
+          switch (bb.type) {
             case 1:
-              xq[0] = Oq, xq[1] = xq[0] + qq.width, Oq = xq[1] + qq.width;
-              for (let Yq = 0; Yq < qq.width; ++Yq) {
-                Eq += gq[xq[0]++] << 8 | gq[xq[1]++], lq[mq] = Eq, mq++
+              Lb[0] = Gb, Lb[1] = Lb[0] + bb.width, Gb = Lb[1] + bb.width;
+              for (let Bb = 0; Bb < bb.width; ++Bb) {
+                ub += hb[Lb[0]++] << 8 | hb[Lb[1]++], Ob[Ub] = ub, Ub++
               }
               break;
             case 2:
-              xq[0] = Oq, xq[1] = xq[0] + qq.width, xq[2] = xq[1] + qq.width, Oq = xq[2] + qq.width;
-              for (let Yq = 0; Yq < qq.width; ++Yq) {
-                Eq += gq[xq[0]++] << 24 | gq[xq[1]++] << 16 | gq[xq[2]++] << 8, lq[mq] = Eq, mq++
+              Lb[0] = Gb, Lb[1] = Lb[0] + bb.width, Lb[2] = Lb[1] + bb.width, Gb = Lb[2] + bb.width;
+              for (let Bb = 0; Bb < bb.width; ++Bb) {
+                ub += hb[Lb[0]++] << 24 | hb[Lb[1]++] << 16 | hb[Lb[2]++] << 8, Ob[Ub] = ub, Ub++
               }
           }
         }
-      return new DataView(lq.buffer)
+      return new DataView(Ob.buffer)
     }
 
-    function lE(qq) {
-      const Eq = qq.viewer,
-        gq = {
-          value: qq.offset.value
+    function Ou(bb) {
+      const ub = bb.viewer,
+        hb = {
+          value: bb.offset.value
         },
-        Yq = new Uint16Array(qq.width * qq.scanlineBlockSize * (qq.channels * qq.type)),
-        lq = new Uint8Array(Wq);
-      let Oq = 0;
-      const mq = new Array(qq.channels);
-      for (let cq = 0; cq < qq.channels; cq++) mq[cq] = {}, mq[cq].start = Oq, mq[cq].end = mq[cq].start, mq[cq].nx = qq.width, mq[cq].ny = qq.lines, mq[cq].size = qq.type, Oq += mq[cq].nx * mq[cq].ny * mq[cq].size;
-      const xq = hq(Eq, gq),
-        Aq = hq(Eq, gq);
-      if (Aq >= Wq) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (xq <= Aq)
-        for (let cq = 0; cq < Aq - xq + 1; cq++) lq[cq + xq] = vq(Eq, gq);
-      const uq = new Uint16Array(Bq),
-        Nq = function(qq, Eq) {
-          let gq = 0;
-          for (let lq = 0; lq < Bq; ++lq)(0 == lq || qq[lq >> 3] & 1 << (7 & lq)) && (Eq[gq++] = lq);
-          const Yq = gq - 1;
-          for (; gq < Bq;) Eq[gq++] = 0;
-          return Yq
-        }(lq, uq),
-        aq = rq(Eq, gq);
-      wq(qq.array, Eq, gq, aq, Yq, Oq);
-      for (let cq = 0; cq < qq.channels; ++cq) {
-        const qq = mq[cq];
-        for (let Eq = 0; Eq < mq[cq].size; ++Eq) Dq(Yq, qq.start + Eq, qq.nx, qq.size, qq.ny, qq.nx * qq.size, Nq)
-      }! function(qq, Eq, gq) {
-        for (let Yq = 0; Yq < gq; ++Yq) Eq[Yq] = qq[Eq[Yq]]
-      }(uq, Yq, Oq);
-      let Vq = 0;
-      const dq = new Uint8Array(Yq.buffer.byteLength);
-      for (let Bq = 0; Bq < qq.lines; Bq++)
-        for (let Eq = 0; Eq < qq.channels; Eq++) {
-          const qq = mq[Eq],
-            gq = qq.nx * qq.size,
-            lq = new Uint8Array(Yq.buffer, qq.end * cq, gq * cq);
-          dq.set(lq, Vq), Vq += gq * cq, qq.end += gq
+        Bb = new Uint16Array(bb.width * bb.scanlineBlockSize * (bb.channels * bb.type)),
+        Ob = new Uint8Array(wb);
+      let Gb = 0;
+      const Ub = new Array(bb.channels);
+      for (let Sb = 0; Sb < bb.channels; Sb++) Ub[Sb] = {}, Ub[Sb].start = Gb, Ub[Sb].end = Ub[Sb].start, Ub[Sb].nx = bb.width, Ub[Sb].ny = bb.lines, Ub[Sb].size = bb.type, Gb += Ub[Sb].nx * Ub[Sb].ny * Ub[Sb].size;
+      const Lb = Db(ub, hb),
+        Yb = Db(ub, hb);
+      if (Yb >= wb) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (Lb <= Yb)
+        for (let Sb = 0; Sb < Yb - Lb + 1; Sb++) Ob[Sb + Lb] = nb(ub, hb);
+      const ab = new Uint16Array(Hb),
+        Zb = function(bb, ub) {
+          let hb = 0;
+          for (let Ob = 0; Ob < Hb; ++Ob)(0 == Ob || bb[Ob >> 3] & 1 << (7 & Ob)) && (ub[hb++] = Ob);
+          const Bb = hb - 1;
+          for (; hb < Hb;) ub[hb++] = 0;
+          return Bb
+        }(Ob, ab),
+        Xb = jb(ub, hb);
+      fb(bb.array, ub, hb, Xb, Bb, Gb);
+      for (let Sb = 0; Sb < bb.channels; ++Sb) {
+        const bb = Ub[Sb];
+        for (let ub = 0; ub < Ub[Sb].size; ++ub) Rb(Bb, bb.start + ub, bb.nx, bb.size, bb.ny, bb.nx * bb.size, Zb)
+      }! function(bb, ub, hb) {
+        for (let Bb = 0; Bb < hb; ++Bb) ub[Bb] = bb[ub[Bb]]
+      }(ab, Bb, Gb);
+      let pb = 0;
+      const ob = new Uint8Array(Bb.buffer.byteLength);
+      for (let Hb = 0; Hb < bb.lines; Hb++)
+        for (let ub = 0; ub < bb.channels; ub++) {
+          const bb = Ub[ub],
+            hb = bb.nx * bb.size,
+            Ob = new Uint8Array(Bb.buffer, bb.end * Sb, hb * Sb);
+          ob.set(Ob, pb), pb += hb * Sb, bb.end += hb
         }
-      return new DataView(dq.buffer)
+      return new DataView(ob.buffer)
     }
-    var OE, mE = gq(39845);
-    ! function(qq) {
-      qq[qq.Float = 0] = "Float", qq[qq.HalfFloat = 1] = "HalfFloat"
-    }(OE || (OE = {}));
-    class xE {}
-    async function AE(qq, Eq, gq, Yq) {
-      const lq = {
+    var Gu, Uu = hb(39559);
+    ! function(bb) {
+      bb[bb.Float = 0] = "Float", bb[bb.HalfFloat = 1] = "HalfFloat"
+    }(Gu || (Gu = {}));
+    class Lu {}
+    async function Yu(bb, ub, hb, Bb) {
+      const Ob = {
         size: 0,
-        viewer: Eq,
-        array: new Uint8Array(Eq.buffer),
-        offset: gq,
-        width: qq.dataWindow.xMax - qq.dataWindow.xMin + 1,
-        height: qq.dataWindow.yMax - qq.dataWindow.yMin + 1,
-        channels: qq.channels.length,
+        viewer: ub,
+        array: new Uint8Array(ub.buffer),
+        offset: hb,
+        width: bb.dataWindow.xMax - bb.dataWindow.xMin + 1,
+        height: bb.dataWindow.yMax - bb.dataWindow.yMin + 1,
+        channels: bb.channels.length,
         channelLineOffsets: {},
         scanOrder: () => 0,
         bytesPerLine: 0,
@@ -595,174 +595,174 @@ export const modules = {
         linearSpace: !1,
         textureType: 0
       };
-      switch (qq.compression) {
-        case Pq.NO_COMPRESSION:
-          lq.lines = 1, lq.uncompress = qE;
+      switch (bb.compression) {
+        case Wb.NO_COMPRESSION:
+          Ob.lines = 1, Ob.uncompress = bu;
           break;
-        case Pq.RLE_COMPRESSION:
-          lq.lines = 1, lq.uncompress = EE;
+        case Wb.RLE_COMPRESSION:
+          Ob.lines = 1, Ob.uncompress = uu;
           break;
-        case Pq.ZIPS_COMPRESSION:
-          lq.lines = 1, lq.uncompress = gE, await mE.f.LoadScriptAsync(xE.FFLATEUrl);
+        case Wb.ZIPS_COMPRESSION:
+          Ob.lines = 1, Ob.uncompress = hu, await Uu.k.LoadScriptAsync(Lu.FFLATEUrl);
           break;
-        case Pq.ZIP_COMPRESSION:
-          lq.lines = 16, lq.uncompress = gE, await mE.f.LoadScriptAsync(xE.FFLATEUrl);
+        case Wb.ZIP_COMPRESSION:
+          Ob.lines = 16, Ob.uncompress = hu, await Uu.k.LoadScriptAsync(Lu.FFLATEUrl);
           break;
-        case Pq.PIZ_COMPRESSION:
-          lq.lines = 32, lq.uncompress = lE;
+        case Wb.PIZ_COMPRESSION:
+          Ob.lines = 32, Ob.uncompress = Ou;
           break;
-        case Pq.PXR24_COMPRESSION:
-          lq.lines = 16, lq.uncompress = YE, await mE.f.LoadScriptAsync(xE.FFLATEUrl);
+        case Wb.PXR24_COMPRESSION:
+          Ob.lines = 16, Ob.uncompress = Bu, await Uu.k.LoadScriptAsync(Lu.FFLATEUrl);
           break;
         default:
-          throw new Error(Pq[qq.compression] + " is unsupported")
+          throw new Error(Wb[bb.compression] + " is unsupported")
       }
-      lq.scanlineBlockSize = lq.lines;
-      const Oq = {};
-      for (const xq of qq.channels) switch (xq.name) {
+      Ob.scanlineBlockSize = Ob.lines;
+      const Gb = {};
+      for (const Lb of bb.channels) switch (Lb.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          Oq[xq.name] = !0, lq.type = xq.pixelType
+          Gb[Lb.name] = !0, Ob.type = Lb.pixelType
       }
-      let mq = !1;
-      if (Oq.R && Oq.G && Oq.B && Oq.A) lq.outputChannels = 4, lq.decodeChannels = {
+      let Ub = !1;
+      if (Gb.R && Gb.G && Gb.B && Gb.A) Ob.outputChannels = 4, Ob.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (Oq.R && Oq.G && Oq.B) mq = !0, lq.outputChannels = 4, lq.decodeChannels = {
+      else if (Gb.R && Gb.G && Gb.B) Ub = !0, Ob.outputChannels = 4, Ob.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (Oq.R && Oq.G) lq.outputChannels = 2, lq.decodeChannels = {
+      else if (Gb.R && Gb.G) Ob.outputChannels = 2, Ob.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (Oq.R) lq.outputChannels = 1, lq.decodeChannels = {
+      else if (Gb.R) Ob.outputChannels = 1, Ob.decodeChannels = {
         R: 0
       };
       else {
-        if (!Oq.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        lq.outputChannels = 1, lq.decodeChannels = {
+        if (!Gb.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        Ob.outputChannels = 1, Ob.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === lq.type) switch (Yq) {
-        case OE.Float:
-          lq.getter = Zq, lq.inputSize = cq;
+      if (1 === Ob.type) switch (Bb) {
+        case Gu.Float:
+          Ob.getter = ib, Ob.inputSize = Sb;
           break;
-        case OE.HalfFloat:
-          lq.getter = hq, lq.inputSize = cq
+        case Gu.HalfFloat:
+          Ob.getter = Db, Ob.inputSize = Sb
       } else {
-        if (2 !== lq.type) throw new Error("Unsupported pixelType " + lq.type + " for " + qq.compression);
-        switch (Yq) {
-          case OE.Float:
-            lq.getter = iq, lq.inputSize = xq;
+        if (2 !== Ob.type) throw new Error("Unsupported pixelType " + Ob.type + " for " + bb.compression);
+        switch (Bb) {
+          case Gu.Float:
+            Ob.getter = gb, Ob.inputSize = Lb;
             break;
-          case OE.HalfFloat:
-            lq.getter = fq, lq.inputSize = xq
+          case Gu.HalfFloat:
+            Ob.getter = vb, Ob.inputSize = Lb
         }
       }
-      lq.blockCount = lq.height / lq.scanlineBlockSize;
-      for (let xq = 0; xq < lq.blockCount; xq++) bq(Eq, gq);
-      const Aq = lq.width * lq.height * lq.outputChannels;
-      switch (Yq) {
-        case OE.Float:
-          lq.byteArray = new Float32Array(Aq), lq.textureType = 1, mq && lq.byteArray.fill(1, 0, Aq);
+      Ob.blockCount = Ob.height / Ob.scanlineBlockSize;
+      for (let Lb = 0; Lb < Ob.blockCount; Lb++) zb(ub, hb);
+      const Yb = Ob.width * Ob.height * Ob.outputChannels;
+      switch (Bb) {
+        case Gu.Float:
+          Ob.byteArray = new Float32Array(Yb), Ob.textureType = 1, Ub && Ob.byteArray.fill(1, 0, Yb);
           break;
-        case OE.HalfFloat:
-          lq.byteArray = new Uint16Array(Aq), lq.textureType = 2, mq && lq.byteArray.fill(15360, 0, Aq);
+        case Gu.HalfFloat:
+          Ob.byteArray = new Uint16Array(Yb), Ob.textureType = 2, Ub && Ob.byteArray.fill(15360, 0, Yb);
           break;
         default:
-          throw new Error("Unsupported type: " + Yq)
+          throw new Error("Unsupported type: " + Bb)
       }
-      let uq = 0;
-      for (const xq of qq.channels) void 0 !== lq.decodeChannels[xq.name] && (lq.channelLineOffsets[xq.name] = uq * lq.width), uq += 2 * xq.pixelType;
-      return lq.bytesPerLine = lq.width * uq, lq.outLineWidth = lq.width * lq.outputChannels, "INCREASING_Y" === qq.lineOrder ? lq.scanOrder = qq => qq : lq.scanOrder = qq => lq.height - 1 - qq, 4 == lq.outputChannels ? (lq.format = 5, lq.linearSpace = !0) : (lq.format = 6, lq.linearSpace = !1), lq
+      let ab = 0;
+      for (const Lb of bb.channels) void 0 !== Ob.decodeChannels[Lb.name] && (Ob.channelLineOffsets[Lb.name] = ab * Ob.width), ab += 2 * Lb.pixelType;
+      return Ob.bytesPerLine = Ob.width * ab, Ob.outLineWidth = Ob.width * Ob.outputChannels, "INCREASING_Y" === bb.lineOrder ? Ob.scanOrder = bb => bb : Ob.scanOrder = bb => Ob.height - 1 - bb, 4 == Ob.outputChannels ? (Ob.format = 5, Ob.linearSpace = !0) : (Ob.format = 6, Ob.linearSpace = !1), Ob
     }
 
-    function cE(qq, Eq, gq, Yq) {
-      const lq = {
+    function Su(bb, ub, hb, Bb) {
+      const Ob = {
         value: 0
       };
-      for (let Oq = 0; Oq < qq.height / qq.scanlineBlockSize; Oq++) {
-        const mq = tq(gq, Yq) - Eq.dataWindow.yMin;
-        qq.size = rq(gq, Yq), qq.lines = mq + qq.scanlineBlockSize > qq.height ? qq.height - mq : qq.scanlineBlockSize;
-        const xq = qq.size < qq.lines * qq.bytesPerLine && qq.uncompress ? qq.uncompress(qq) : qE(qq);
-        Yq.value += qq.size;
-        for (let gq = 0; gq < qq.scanlineBlockSize; gq++) {
-          const Yq = Oq * qq.scanlineBlockSize,
-            mq = gq + qq.scanOrder(Yq);
-          if (mq >= qq.height) continue;
-          const Aq = gq * qq.bytesPerLine,
-            cq = (qq.height - 1 - mq) * qq.outLineWidth;
-          for (let gq = 0; gq < qq.channels; gq++) {
-            const Yq = Eq.channels[gq].name,
-              Oq = qq.channelLineOffsets[Yq],
-              mq = qq.decodeChannels[Yq];
-            if (void 0 !== mq) {
-              lq.value = Aq + Oq;
-              for (let Eq = 0; Eq < qq.width; Eq++) {
-                const gq = cq + Eq * qq.outputChannels + mq;
-                qq.byteArray && (qq.byteArray[gq] = qq.getter(xq, lq))
+      for (let Gb = 0; Gb < bb.height / bb.scanlineBlockSize; Gb++) {
+        const Ub = rb(hb, Bb) - ub.dataWindow.yMin;
+        bb.size = jb(hb, Bb), bb.lines = Ub + bb.scanlineBlockSize > bb.height ? bb.height - Ub : bb.scanlineBlockSize;
+        const Lb = bb.size < bb.lines * bb.bytesPerLine && bb.uncompress ? bb.uncompress(bb) : bu(bb);
+        Bb.value += bb.size;
+        for (let hb = 0; hb < bb.scanlineBlockSize; hb++) {
+          const Bb = Gb * bb.scanlineBlockSize,
+            Ub = hb + bb.scanOrder(Bb);
+          if (Ub >= bb.height) continue;
+          const Yb = hb * bb.bytesPerLine,
+            Sb = (bb.height - 1 - Ub) * bb.outLineWidth;
+          for (let hb = 0; hb < bb.channels; hb++) {
+            const Bb = ub.channels[hb].name,
+              Gb = bb.channelLineOffsets[Bb],
+              Ub = bb.decodeChannels[Bb];
+            if (void 0 !== Ub) {
+              Ob.value = Yb + Gb;
+              for (let ub = 0; ub < bb.width; ub++) {
+                const hb = Sb + ub * bb.outputChannels + Ub;
+                bb.byteArray && (bb.byteArray[hb] = bb.getter(Lb, Ob))
               }
             }
           }
         }
       }
     }
-    xE.DefaultOutputType = OE.HalfFloat, xE.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class uE {
+    Lu.DefaultOutputType = Gu.HalfFloat, Lu.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class au {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(qq, Eq, gq, Yq, lq) {
+      loadCubeData(bb, ub, hb, Bb, Ob) {
         throw ".exr not supported in Cube."
       }
-      loadData(qq, Eq, gq) {
-        const lq = new DataView(qq.buffer),
-          Oq = {
+      loadData(bb, ub, hb) {
+        const Ob = new DataView(bb.buffer),
+          Gb = {
             value: 0
           },
-          mq = pq(lq, Oq);
-        AE(mq, lq, Oq, xE.DefaultOutputType).then((qq => {
-          cE(qq, mq, lq, Oq);
-          const Yq = mq.dataWindow.xMax - mq.dataWindow.xMin + 1,
-            xq = mq.dataWindow.yMax - mq.dataWindow.yMin + 1;
-          gq(Yq, xq, Eq.generateMipMaps, !1, (() => {
-            const gq = Eq.Ba();
-            Eq.format = mq.format, Eq.type = qq.textureType, Eq.invertY = !1, Eq._gammaSpace = !mq.linearSpace, qq.byteArray && gq._uploadDataToTextureDirectly(Eq, qq.byteArray, 0, 0, void 0, !0)
+          Ub = sb(Ob, Gb);
+        Yu(Ub, Ob, Gb, Lu.DefaultOutputType).then((bb => {
+          Su(bb, Ub, Ob, Gb);
+          const Bb = Ub.dataWindow.xMax - Ub.dataWindow.xMin + 1,
+            Lb = Ub.dataWindow.yMax - Ub.dataWindow.yMin + 1;
+          hb(Bb, Lb, ub.generateMipMaps, !1, (() => {
+            const hb = ub.UX();
+            ub.format = Ub.format, ub.type = bb.textureType, ub.invertY = !1, ub._gammaSpace = !Ub.linearSpace, bb.byteArray && hb._uploadDataToTextureDirectly(ub, bb.byteArray, 0, 0, void 0, !0)
           }))
-        })).catch((qq => {
-          Yq.b.Error("Failed to load EXR texture: ", qq)
+        })).catch((bb => {
+          Bb.b.Error("Failed to load EXR texture: ", bb)
         }))
       }
     }
-    async function BE(qq) {
-      const Eq = new DataView(qq),
-        gq = {
+    async function Hu(bb) {
+      const ub = new DataView(bb),
+        hb = {
           value: 0
         },
-        lq = pq(Eq, gq);
+        Ob = sb(ub, hb);
       try {
-        const qq = await AE(lq, Eq, gq, OE.Float);
-        return cE(qq, lq, Eq, gq), qq.byteArray ? {
-          width: lq.dataWindow.xMax - lq.dataWindow.xMin + 1,
-          height: lq.dataWindow.yMax - lq.dataWindow.yMin + 1,
-          data: new Float32Array(qq.byteArray)
-        } : (Yq.b.Error("Failed to decode EXR data: No byte array available."), {
+        const bb = await Yu(Ob, ub, hb, Gu.Float);
+        return Su(bb, Ob, ub, hb), bb.byteArray ? {
+          width: Ob.dataWindow.xMax - Ob.dataWindow.xMin + 1,
+          height: Ob.dataWindow.yMax - Ob.dataWindow.yMin + 1,
+          data: new Float32Array(bb.byteArray)
+        } : (Bb.b.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (Oq) {
-        Yq.b.Error("Failed to load EXR data: ", Oq)
+      } catch (Gb) {
+        Bb.b.Error("Failed to load EXR data: ", Gb)
       }
       return {
         width: 0,
@@ -773,4 +773,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

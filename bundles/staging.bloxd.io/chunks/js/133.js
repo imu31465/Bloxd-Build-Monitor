@@ -1,115 +1,115 @@
 export const id = 133;
 export const ids = [133];
 export const modules = {
-  36356: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => xq,
-      e: () => cq,
-      i: () => mq,
-      j: () => Bq
+  35925: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Lb,
+      f: () => Sb,
+      i: () => Ub,
+      l: () => Hb
     });
-    var Yq = gq(36345),
-      lq = gq(15);
-    const Oq = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
+    var Bb = hb(35912),
+      Ob = hb(6);
+    const Gb = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
 
-    function mq(qq) {
-      if (qq instanceof WebAssembly.RuntimeError) return !0;
-      const Eq = qq instanceof Error ? qq.stack : void 0;
-      return "string" === typeof Eq && Oq.test(Eq)
+    function Ub(bb) {
+      if (bb instanceof WebAssembly.RuntimeError) return !0;
+      const ub = bb instanceof Error ? bb.stack : void 0;
+      return "string" === typeof ub && Gb.test(ub)
     }
 
-    function xq(qq, Eq, gq) {
-      var lq;
-      const mq = qq instanceof Error ? qq.name : "thrown",
-        xq = (qq instanceof Error && null !== (lq = qq.stack) && void 0 !== lq ? lq : "").split("\n").filter((qq => Oq.test(qq))).slice(0, 8).map((qq => qq.trim())),
-        Aq = null === Eq ? "wasm memory unknown" : `wasm memory ${Math.round(Eq/2**20)} MB`,
-        cq = null === gq.panic ? "" : `, panic: ${(0,Yq.j)(gq.panic)}`,
-        uq = `${mq}: ${qq instanceof Error?qq.message:String(qq)}`;
-      return `${(0,Yq.l)(gq.kind,gq.refusedBytes)} ${uq} (${Aq})${cq}${xq.length>0?` | ${xq.join(" < ")}`:""}`
+    function Lb(bb, ub, hb) {
+      var Ob;
+      const Ub = bb instanceof Error ? bb.name : "thrown",
+        Lb = (bb instanceof Error && null !== (Ob = bb.stack) && void 0 !== Ob ? Ob : "").split("\n").filter((bb => Gb.test(bb))).slice(0, 8).map((bb => bb.trim())),
+        Yb = null === ub ? "wasm memory unknown" : `wasm memory ${Math.round(ub/2**20)} MB`,
+        Sb = null === hb.panic ? "" : `, panic: ${(0,Bb.f)(hb.panic)}`,
+        ab = `${Ub}: ${bb instanceof Error?bb.message:String(bb)}`;
+      return `${(0,Bb.l)(hb.kind,hb.refusedBytes)} ${ab} (${Yb})${Sb}${Lb.length>0?` | ${Lb.join(" < ")}`:""}`
     }
-    const Aq = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
+    const Yb = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
 
-    function cq(qq) {
-      var Eq;
-      let gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
-      if (!(qq instanceof Error) || !Aq.test(qq.message)) return {};
-      if (!("detached" in gq)) return {
+    function Sb(bb) {
+      var ub;
+      let hb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
+      if (!(bb instanceof Error) || !Yb.test(bb.message)) return {};
+      if (!("detached" in hb)) return {
         arrayBufferDetached: "absent"
       };
       return {
-        arrayBufferDetached: (0, lq.V)(null === (Eq = (0, lq.P)(gq, "detached")) || void 0 === Eq ? void 0 : Eq.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
+        arrayBufferDetached: (0, Ob.Q)(null === (ub = (0, Ob.K)(hb, "detached")) || void 0 === ub ? void 0 : ub.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
       }
     }
-    const uq = 500;
+    const ab = 500;
 
-    function Bq(qq) {
-      let Eq = "[object Object]";
+    function Hb(bb) {
+      let ub = "[object Object]";
       try {
-        Eq = String(qq)
+        ub = String(bb)
       } catch {}
-      if ("[object Object]" !== Eq) return Eq;
+      if ("[object Object]" !== ub) return ub;
       try {
-        var gq, Yq;
-        return null !== (gq = null === (Yq = JSON.stringify(qq)) || void 0 === Yq ? void 0 : Yq.slice(0, uq)) && void 0 !== gq ? gq : Eq
+        var hb, Bb;
+        return null !== (hb = null === (Bb = JSON.stringify(bb)) || void 0 === Bb ? void 0 : Bb.slice(0, ab)) && void 0 !== hb ? hb : ub
       } catch {
-        return Eq
+        return ub
       }
     }
   },
-  36380: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Kq,
-      f: () => Dq,
-      j: () => Iq,
-      n: () => wq
+  35948: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => kb,
+      g: () => Rb,
+      h: () => cb,
+      k: () => fb
     });
-    var Yq = gq(2797),
-      lq = gq(2815),
-      Oq = gq(6500),
-      mq = gq(4524),
-      xq = gq(2812),
-      Aq = gq(2805);
-    const cq = "bloxd-wasmDownloaded",
-      uq = 12;
+    var Bb = hb(2683),
+      Ob = hb(2693),
+      Gb = hb(6358),
+      Ub = hb(4466),
+      Lb = hb(2690),
+      Yb = hb(2688);
+    const Sb = "bloxd-wasmDownloaded",
+      ab = 12;
 
-    function Bq(qq) {
-      return qq.pathname.slice(qq.pathname.lastIndexOf("/") + 1)
+    function Hb(bb) {
+      return bb.pathname.slice(bb.pathname.lastIndexOf("/") + 1)
     }
 
-    function Wq() {
+    function wb() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const qq = JSON.parse(localStorage.getItem(cq) ?? "[]");
-        return Array.isArray(qq) ? qq.filter((qq => "string" === typeof qq)) : []
-      } catch (qq) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", qq), null
+        const bb = JSON.parse(localStorage.getItem(Sb) ?? "[]");
+        return Array.isArray(bb) ? bb.filter((bb => "string" === typeof bb)) : []
+      } catch (bb) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", bb), null
       }
     }
-    const Nq = Reflect.apply,
-      aq = "undefined" === typeof Worker ? void 0 : Worker,
-      Vq = aq?.prototype.postMessage,
-      dq = aq?.prototype.terminate,
-      jq = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      Hq = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      oq = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      Pq = function() {
+    const Zb = Reflect.apply,
+      Xb = "undefined" === typeof Worker ? void 0 : Worker,
+      pb = Xb?.prototype.postMessage,
+      ob = Xb?.prototype.terminate,
+      Ab = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      lb = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      Kb = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      Wb = function() {
         try {
-          return (0, mq.n)(aq, "Worker", !0) && (0, mq.n)(Vq, "postMessage") && (0, mq.n)(dq, "terminate") && (0, mq.n)(oq, "buffer") && void 0 !== jq && void 0 !== Hq
+          return (0, Ub.k)(Xb, "Worker", !0) && (0, Ub.k)(pb, "postMessage") && (0, Ub.k)(ob, "terminate") && (0, Ub.k)(Kb, "buffer") && void 0 !== Ab && void 0 !== lb
         } catch {
           return !1
         }
       }();
-    let Qq = !1;
+    let Cb = !1;
 
-    function yq() {
-      return Pq && !Qq
+    function db() {
+      return Wb && !Cb
     }
-    class tq {
+    class rb {
       worker = null;
       failed = !1;
       constructor() {
-        if (yq()) try {
-          this.worker = vq(), Nq(jq, this.worker, ["error", () => {
+        if (db()) try {
+          this.worker = nb(), Zb(Ab, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -117,125 +117,125 @@ export const modules = {
         }
       }
       take() {
-        const qq = this.worker;
-        if (this.worker = null, null !== qq && this.failed) throw Nq(dq, qq, []), new Error("it did not run");
-        return qq
+        const bb = this.worker;
+        if (this.worker = null, null !== bb && this.failed) throw Zb(ob, bb, []), new Error("it did not run");
+        return bb
       }
       stop() {
-        const qq = this.worker;
-        this.worker = null, null !== qq && Nq(dq, qq, [])
+        const bb = this.worker;
+        this.worker = null, null !== bb && Zb(ob, bb, [])
       }
     }
-    class rq {
+    class jb {
       decoded;
       worker;
       reject;
-      constructor(qq, Eq, gq, Yq, Oq) {
+      constructor(bb, ub, hb, Bb, Gb) {
         try {
-          this.worker = Oq?.take() ?? vq()
-        } catch (cq) {
-          throw Qq = !0, new Error(`The zstd decoder's worker did not start: ${(0,xq.i)(cq)}`)
+          this.worker = Gb?.take() ?? nb()
+        } catch (Sb) {
+          throw Cb = !0, new Error(`The zstd decoder's worker did not start: ${(0,Lb.e)(Sb)}`)
         }
-        const mq = this.worker;
-        this.decoded = (0, lq.f)(((Eq, lq) => {
-          this.reject = lq;
-          const Oq = (qq, Eq) => {
-            Nq(jq, mq, [qq, Eq])
+        const Ub = this.worker;
+        this.decoded = (0, Ob.k)(((ub, Ob) => {
+          this.reject = Ob;
+          const Gb = (bb, ub) => {
+            Zb(Ab, Ub, [bb, ub])
           };
-          Oq("message", (qq => {
-            Yq();
+          Gb("message", (bb => {
+            Bb();
             try {
-              const Yq = Nq(Hq, qq, []);
-              if (!0 === Yq) Eq();
+              const Bb = Zb(lb, bb, []);
+              if (!0 === Bb) ub();
               else {
-                if ("string" === typeof Yq) throw Yq.startsWith(xq.e) && (Qq = !0), new Error(Yq);
-                gq(Yq, Nq(Aq.G, Yq, []))
+                if ("string" === typeof Bb) throw Bb.startsWith(Lb.b) && (Cb = !0), new Error(Bb);
+                hb(Bb, Zb(Yb.u, Bb, []))
               }
-            } catch (cq) {
-              lq(cq)
+            } catch (Sb) {
+              Ob(Sb)
             }
-          })), Oq("error", (() => {
-            Qq = !0, lq(new Error("The zstd decoder's worker did not run"))
-          })), Oq("messageerror", (() => {
-            lq(new Error(`${qq}'s decoder sent a piece that could not be read`))
+          })), Gb("error", (() => {
+            Cb = !0, Ob(new Error("The zstd decoder's worker did not run"))
+          })), Gb("messageerror", (() => {
+            Ob(new Error(`${bb}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, Aq._)(this.decoded), Nq(Vq, mq, [
-          [qq, Eq]
+        })), (0, Yb.X)(this.decoded), Zb(pb, Ub, [
+          [bb, ub]
         ])
       }
-      push(qq) {
-        Nq(Vq, this.worker, [qq, [Nq(oq, qq, [])]])
+      push(bb) {
+        Zb(pb, this.worker, [bb, [Zb(Kb, bb, [])]])
       }
       end() {
-        Nq(Vq, this.worker, [null])
+        Zb(pb, this.worker, [null])
       }
       markWorkerFailed() {
-        Qq = !0
+        Cb = !0
       }
-      fail(qq) {
-        this.reject(qq), this.terminate()
+      fail(bb) {
+        this.reject(bb), this.terminate()
       }
       terminate() {
-        Nq(dq, this.worker, [])
+        Zb(ob, this.worker, [])
       }
     }
 
-    function vq() {
-      if (globalThis.Worker !== aq) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(gq.p + gq.u(65), gq.b), {
+    function nb() {
+      if (globalThis.Worker !== Xb) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(hb.p + hb.u(65), hb.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const hq = Reflect.apply,
-      nq = ArrayBuffer,
-      bq = "undefined" === typeof Response ? void 0 : Response,
-      iq = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      Zq = function() {
-        let qq;
-        void 0 !== iq && new iq({
+    const Db = Reflect.apply,
+      xb = ArrayBuffer,
+      zb = "undefined" === typeof Response ? void 0 : Response,
+      gb = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      ib = function() {
+        let bb;
+        void 0 !== gb && new gb({
           __proto__: null,
-          start(Eq) {
+          start(ub) {
             const {
-              enqueue: gq,
-              close: Yq,
-              error: lq
-            } = Object.getPrototypeOf(Eq);
-            qq = {
-              enqueue: gq,
-              close: Yq,
-              error: lq
+              enqueue: hb,
+              close: Bb,
+              error: Ob
+            } = Object.getPrototypeOf(ub);
+            bb = {
+              enqueue: hb,
+              close: Bb,
+              error: Ob
             }
           }
         }, {
           __proto__: null
         });
-        return qq
+        return bb
       }(),
-      fq = function() {
+      vb = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== Zq && (0, mq.n)(bq, "Response", !0) && (0, mq.n)(iq, "ReadableStream", !0) && (0, mq.n)(Zq.enqueue, "enqueue") && (0, mq.n)(Zq.close, "close") && (0, mq.n)(Zq.error, "error") && (0, mq.n)(Aq.eb, "body") && (0, mq.n)(Aq.U, "getReader") && (0, mq.n)(Aq.ab, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== ib && (0, Ub.k)(zb, "Response", !0) && (0, Ub.k)(gb, "ReadableStream", !0) && (0, Ub.k)(ib.enqueue, "enqueue") && (0, Ub.k)(ib.close, "close") && (0, Ub.k)(ib.error, "error") && (0, Ub.k)(Yb._, "body") && (0, Ub.k)(Yb.M, "getReader") && (0, Ub.k)(Yb.Z, "read")
         } catch {
           return !1
         }
       }();
-    async function Mq(qq, Eq, gq, Yq, Oq, mq, cq) {
-      const uq = new nq(Eq),
+    async function tb(bb, ub, hb, Bb, Gb, Ub, Sb) {
+      const ab = new xb(ub),
         {
-          controller: Bq,
-          compiled: Wq
-        } = function(qq) {
+          controller: Hb,
+          compiled: wb
+        } = function(bb) {
           try {
-            let qq;
-            const Eq = new iq({
+            let bb;
+            const ub = new gb({
                 __proto__: null,
-                start(Eq) {
-                  qq = Eq
+                start(ub) {
+                  bb = ub
                 }
               }, {
                 __proto__: null
               }),
-              gq = new bq(Eq, {
+              hb = new zb(ub, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -243,395 +243,395 @@ export const modules = {
                 }
               });
             return {
-              controller: qq,
-              compiled: (0, Aq._)((0, Aq.I)((0, Aq.jb)(gq)))
+              controller: bb,
+              compiled: (0, Yb.X)((0, Yb.w)((0, Yb.cb)(hb)))
             }
-          } catch (Eq) {
-            throw new Error(`${qq} could not be streamed into a compile: ${(0,xq.i)(Eq)}`)
+          } catch (ub) {
+            throw new Error(`${bb} could not be streamed into a compile: ${(0,Lb.e)(ub)}`)
           }
-        }(qq),
+        }(bb),
         {
-          enqueue: Nq,
-          close: aq,
-          error: Vq
-        } = Zq,
-        dq = qq => {
+          enqueue: Zb,
+          close: Xb,
+          error: pb
+        } = ib,
+        ob = bb => {
           try {
-            hq(Vq, Bq, [qq])
+            Db(pb, Hb, [bb])
           } catch {}
         };
-      let jq = 0;
-      const Hq = (gq, Yq) => {
-        if (jq + Yq > Eq) throw new Error(`${qq} decoded past its module's ${Eq} bytes`);
-        hq(Aq.fb, new Aq.r(uq), [new Aq.r(gq), jq]);
+      let Ab = 0;
+      const lb = (hb, Bb) => {
+        if (Ab + Bb > ub) throw new Error(`${bb} decoded past its module's ${ub} bytes`);
+        Db(Yb.$, new Yb.m(ab), [new Yb.m(hb), Ab]);
         try {
-          hq(Nq, Bq, [new Aq.r(uq, jq, Yq)])
+          Db(Zb, Hb, [new Yb.m(ab, Ab, Bb)])
         } catch {}
-        jq += Yq
+        Ab += Bb
       };
-      let oq, Pq;
+      let Kb, Wb;
       try {
-        oq = new rq(qq, Eq, Hq, Yq, cq)
-      } catch (vq) {
-        throw dq(vq), vq
+        Kb = new jb(bb, ub, lb, Bb, Sb)
+      } catch (nb) {
+        throw ob(nb), nb
       }
-      const Qq = qq => {
-        oq.fail(qq), void 0 !== Pq && Tq(Pq)
+      const Cb = bb => {
+        Kb.fail(bb), void 0 !== Wb && Jb(Wb)
       };
-      let yq = !1;
-      gq.addEventListener("abort", (() => {
-        yq && oq.markWorkerFailed(), Qq(new Error(`${qq} stalled`))
+      let db = !1;
+      hb.addEventListener("abort", (() => {
+        db && Kb.markWorkerFailed(), Cb(new Error(`${bb} stalled`))
       }), {
         once: !0
-      }), (0, lq.u)(Wq, (() => {}), Qq);
+      }), (0, Ob.u)(wb, (() => {}), Cb);
       try {
-        let mq;
+        let Ub;
         try {
-          mq = await fetch(qq, {
-            signal: gq
+          Ub = await fetch(bb, {
+            signal: hb
           })
-        } catch (vq) {
-          throw new Error(`Fetching ${qq} failed: ${(0,xq.i)(vq)}`)
+        } catch (nb) {
+          throw new Error(`Fetching ${bb} failed: ${(0,Lb.e)(nb)}`)
         }
         const {
-          ok: cq,
-          status: uq,
-          body: Bq
-        } = function(qq, Eq) {
+          ok: Sb,
+          status: ab,
+          body: Hb
+        } = function(bb, ub) {
           try {
             const {
-              ok: qq,
-              status: gq
-            } = Eq;
+              ok: bb,
+              status: hb
+            } = ub;
             return {
-              ok: qq,
-              status: gq,
-              body: hq(Aq.eb, Eq, [])
+              ok: bb,
+              status: hb,
+              body: Db(Yb._, ub, [])
             }
           } catch {
-            throw new Error(`${qq} came in a response a page script made`)
+            throw new Error(`${bb} came in a response a page script made`)
           }
-        }(qq, mq);
-        if (!cq) throw new Error(`Fetching ${qq} failed: HTTP ${uq}`);
-        Yq();
-        const Wq = hq(Aq.U, Bq, []);
-        Pq = Wq;
-        const Nq = () => {
-          Tq(Wq)
+        }(bb, Ub);
+        if (!Sb) throw new Error(`Fetching ${bb} failed: HTTP ${ab}`);
+        Bb();
+        const wb = Db(Yb.M, Hb, []);
+        Wb = wb;
+        const Zb = () => {
+          Jb(wb)
         };
-        for ((0, lq.u)(oq.decoded, Nq, Nq);;) {
-          let Eq;
+        for ((0, Ob.u)(Kb.decoded, Zb, Zb);;) {
+          let ub;
           try {
-            Eq = await hq(Aq.ab, Wq, [])
-          } catch (vq) {
-            throw new Error(`Downloading ${qq} failed: ${(0,xq.i)(vq)}`)
+            ub = await Db(Yb.Z, wb, [])
+          } catch (nb) {
+            throw new Error(`Downloading ${bb} failed: ${(0,Lb.e)(nb)}`)
           }
-          if (Eq.done) break;
-          Yq(), oq.push(Eq.value)
+          if (ub.done) break;
+          Bb(), Kb.push(ub.value)
         }
-        if (yq = !0, oq.end(), await oq.decoded, Oq(), jq !== Eq) throw new Error(`${qq} ended before its module did`)
-      } catch (vq) {
-        throw dq(vq), Qq(vq), vq
+        if (db = !0, Kb.end(), await Kb.decoded, Gb(), Ab !== ub) throw new Error(`${bb} ended before its module did`)
+      } catch (nb) {
+        throw ob(nb), Cb(nb), nb
       }
-      oq.terminate();
+      Kb.terminate();
       try {
-        hq(aq, Bq, [])
+        Db(Xb, Hb, [])
       } catch {}
-      const tq = await Wq;
-      return void 0 !== mq && await (0, Aq.H)(qq, new Aq.r(uq), {
-        sha256: mq.sha256,
+      const rb = await wb;
+      return void 0 !== Ub && await (0, Yb.v)(bb, new Yb.m(ab), {
+        sha256: Ub.sha256,
         onMismatch: () => {}
-      }), tq
+      }), rb
     }
 
-    function Tq(qq) {
+    function Jb(bb) {
       try {
-        (0, Aq._)(qq.cancel())
+        (0, Yb.X)(bb.cancel())
       } catch {}
     }
-    const zq = ".zst.bin",
-      Sq = 1e3;
-    let pq = null;
+    const eb = ".zst.bin",
+      Nb = 1e3;
+    let sb = null;
 
-    function Gq(qq) {
-      return pq ??= function() {
-        const qq = new Map,
-          Eq = "bloxd_wasm_webgpu:5005524,bloxd_wasm_webgl:5368803,bloxd_wasm_webgl1:4769492,bloxd_wasm_workers:196044,bloxd_wasm_models:311680,bloxd_wasm_client:3671383";
-        for (const gq of Eq?.split(",") ?? []) {
-          const [Eq = "", Yq] = gq.split(":"), lq = Number(Yq);
-          Number.isInteger(lq) && lq > 0 && qq.set(Eq, lq)
+    function Mb(bb) {
+      return sb ??= function() {
+        const bb = new Map,
+          ub = "bloxd_wasm_webgpu:5005524,bloxd_wasm_webgl:5368803,bloxd_wasm_webgl1:4769492,bloxd_wasm_workers:196044,bloxd_wasm_models:311680,bloxd_wasm_client:3671383";
+        for (const hb of ub?.split(",") ?? []) {
+          const [ub = "", Bb] = hb.split(":"), Ob = Number(Bb);
+          Number.isInteger(Ob) && Ob > 0 && bb.set(ub, Ob)
         }
-        return qq
-      }(), pq.get(qq)
+        return bb
+      }(), sb.get(bb)
     }
-    async function Lq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Yq = Gq(qq.name);
-      if (void 0 === Yq) return Jq(await kq(qq, Eq, gq), "cold-wasm");
-      const Oq = fq ? new tq : null;
-      let mq;
+    async function mb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const Bb = Mb(bb.name);
+      if (void 0 === Bb) return Ib(await Pb(bb, ub, hb), "cold-wasm");
+      const Gb = vb ? new rb : null;
+      let Ub;
       try {
-        if (cq = qq.url(), Wq()?.includes(Bq(cq)) && await async function(qq) {
-            const Eq = new AbortController;
-            let gq;
-            const Yq = (0, lq.f)((qq => {
-              gq = setTimeout((() => {
-                Eq.abort(), qq(null)
-              }), Sq)
+        if (Sb = bb.url(), wb()?.includes(Hb(Sb)) && await async function(bb) {
+            const ub = new AbortController;
+            let hb;
+            const Bb = (0, Ob.k)((bb => {
+              hb = setTimeout((() => {
+                ub.abort(), bb(null)
+              }), Nb)
             }));
             try {
-              const gq = fetch(qq.href, {
+              const hb = fetch(bb.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: Eq.signal
+                  signal: ub.signal
                 }),
-                Oq = await (0, lq.q)([gq, Yq]);
-              return !!Oq?.ok && ((0, Aq._)(Oq.body.cancel()), !0)
+                Gb = await (0, Ob.r)([hb, Bb]);
+              return !!Gb?.ok && ((0, Yb.X)(Gb.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(gq)
+              clearTimeout(hb)
             }
-          }(qq.url())) return Oq?.stop(), await async function(qq, Eq, gq, Yq) {
-          let lq = !1;
-          const Oq = gq && {
-            sha256: gq.sha256,
+          }(bb.url())) return Gb?.stop(), await async function(bb, ub, hb, Bb) {
+          let Ob = !1;
+          const Gb = hb && {
+            sha256: hb.sha256,
             onMismatch: () => {
-              lq = !0
+              Ob = !0
             }
           };
           try {
-            return Jq(await kq(qq, Oq, Yq), "warm")
-          } catch (mq) {
-            const Yq = await Rq(qq, Eq, gq, null);
-            if (null === Yq) throw lq && gq.onMismatch(), mq;
-            return console.warn(`${qq.url().href} from the HTTP cache failed: ${(0,xq.i)(mq)}: loaded its copy instead`), Jq(Yq, lq ? "warm-refused" : "warm-broken")
+            return Ib(await Pb(bb, Gb, Bb), "warm")
+          } catch (Ub) {
+            const Bb = await qb(bb, ub, hb, null);
+            if (null === Bb) throw Ob && hb.onMismatch(), Ub;
+            return console.warn(`${bb.url().href} from the HTTP cache failed: ${(0,Lb.e)(Ub)}: loaded its copy instead`), Ib(Bb, Ob ? "warm-refused" : "warm-broken")
           }
-        }(qq, Yq, Eq, gq);
-        mq = await Rq(qq, Yq, Eq, Oq)
+        }(bb, Bb, ub, hb);
+        Ub = await qb(bb, Bb, ub, Gb)
       } finally {
-        Oq?.stop()
+        Gb?.stop()
       }
-      var cq;
-      return null !== mq ? Jq(mq, "cold-worker") : Jq(await kq(qq, Eq, gq), "cold-wasm")
+      var Sb;
+      return null !== Ub ? Ib(Ub, "cold-worker") : Ib(await Pb(bb, ub, hb), "cold-wasm")
     }
 
-    function Jq(qq, Eq) {
+    function Ib(bb, ub) {
       return {
         __proto__: null,
-        module: qq,
-        path: Eq
+        module: bb,
+        path: ub
       }
     }
 
-    function kq(qq, Eq, gq) {
-      return void 0 === Gq(qq.name) ? (0, Aq.N)(qq.url(), Eq, gq) : (0, Aq.N)(qq.url(), Eq, {
-        ...gq,
+    function Pb(bb, ub, hb) {
+      return void 0 === Mb(bb.name) ? (0, Yb.C)(bb.url(), ub, hb) : (0, Yb.C)(bb.url(), ub, {
+        ...hb,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(qq) {
-            const Eq = Wq();
-            if (null === Eq) return;
-            const gq = Bq(qq),
-              Yq = Eq.filter((qq => qq !== gq));
-            Yq.push(gq);
+          ! function(bb) {
+            const ub = wb();
+            if (null === ub) return;
+            const hb = Hb(bb),
+              Bb = ub.filter((bb => bb !== hb));
+            Bb.push(hb);
             try {
-              localStorage.setItem(cq, JSON.stringify(Yq.slice(-uq)))
-            } catch (lq) {
-              console.warn(`Bloxd wasm: ${gq} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, lq)
+              localStorage.setItem(Sb, JSON.stringify(Bb.slice(-ab)))
+            } catch (Ob) {
+              console.warn(`Bloxd wasm: ${hb} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, Ob)
             }
-          }(qq.url()), gq.onDownloaded?.()
+          }(bb.url()), hb.onDownloaded?.()
         }
       })
     }
-    async function Rq(qq, Eq, gq, Yq) {
-      if (!fq || !yq()) return null;
-      const lq = qq.url(),
-        Oq = `${lq.href}${zq}`;
+    async function qb(bb, ub, hb, Bb) {
+      if (!vb || !db()) return null;
+      const Ob = bb.url(),
+        Gb = `${Ob.href}${eb}`;
       try {
-        return await (0, Aq.gb)(Oq, ((qq, lq, mq) => Mq(Oq, Eq, qq, lq, mq, gq, Yq)))
-      } catch (mq) {
-        return console.warn(`${(0,xq.i)(mq)}: loading ${lq.href} instead`), null
+        return await (0, Yb.bb)(Gb, ((bb, Ob, Ub) => tb(Gb, ub, bb, Ob, Ub, hb, Bb)))
+      } catch (Ub) {
+        return console.warn(`${(0,Lb.e)(Ub)}: loading ${Ob.href} instead`), null
       }
     }
-    let Uq = null,
-      Fq = !1;
-    const sq = new Map,
-      Xq = new Map;
+    let Eb = null,
+      yb = !1;
+    const Vb = new Map,
+      Fb = new Map;
 
-    function wq(qq, Eq, gq) {
-      return null === Uq ? Uq = Cq(qq, Eq) : qq !== Uq.build ? console.warn(`Bloxd wasm: ${qq.name} was asked for after ${Uq.build.name} started loading, which this thread keeps`) : Eq.name !== Uq.workers.name && console.warn(`Bloxd wasm: ${Eq.name} was asked for workers after ${Uq.workers.name}, which this thread keeps`), gq?.reloadFailedDownload && !Fq && (0, Yq.W)() && (Fq = !0, Uq = Cq(Uq.build, Uq.workers)), Uq.loaded
+    function fb(bb, ub, hb) {
+      return null === Eb ? Eb = Tb(bb, ub) : bb !== Eb.build ? console.warn(`Bloxd wasm: ${bb.name} was asked for after ${Eb.build.name} started loading, which this thread keeps`) : ub.name !== Eb.workers.name && console.warn(`Bloxd wasm: ${ub.name} was asked for workers after ${Eb.workers.name}, which this thread keeps`), hb?.reloadFailedDownload && !yb && (0, Bb.S)() && (yb = !0, Eb = Tb(Eb.build, Eb.workers)), Eb.loaded
     }
 
-    function Kq(qq, Eq) {
-      if (null !== Uq) return (0, lq.e)([]);
-      const gq = qq.filter((qq => !sq.has(qq.name))).map((qq => {
-        const gq = new AbortController,
-          Yq = {
-            compiled: kq(qq, (0, Oq.d)(qq.name), {
-              priority: Eq,
-              lE: gq.signal,
+    function kb(bb, ub) {
+      if (null !== Eb) return (0, Ob.h)([]);
+      const hb = bb.filter((bb => !Vb.has(bb.name))).map((bb => {
+        const hb = new AbortController,
+          Bb = {
+            compiled: Pb(bb, (0, Gb.d)(bb.name), {
+              priority: ub,
+              Lu: hb.signal,
               onDownloaded: () => {
-                Yq.downloaded = !0
+                Bb.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  Yq.downloaded = !1, null !== Uq && gq.abort()
+                  Bb.downloaded = !1, null !== Eb && hb.abort()
                 }
               }
             }),
-            cancel: gq,
+            cancel: hb,
             downloaded: !1
           };
-        return sq.set(qq.name, Yq), (0, lq.f)((Eq => {
-          (0, lq.u)(Yq.compiled, (() => {
-            Yq.downloaded = !0, Eq()
-          }), (Yq => {
-            gq.signal.aborted || console.warn(`Bloxd wasm: ${qq.name}'s compile ahead of the load failed: the load compiles it afresh`, Yq), Eq()
+        return Vb.set(bb.name, Bb), (0, Ob.k)((ub => {
+          (0, Ob.u)(Bb.compiled, (() => {
+            Bb.downloaded = !0, ub()
+          }), (Bb => {
+            hb.signal.aborted || console.warn(`Bloxd wasm: ${bb.name}'s compile ahead of the load failed: the load compiles it afresh`, Bb), ub()
           }))
         }))
       }));
-      return (0, lq.e)(gq)
+      return (0, Ob.h)(hb)
     }
 
-    function Cq(qq, Eq) {
-      const gq = (0, Yq.H)((async () => {
-        (0, mq.E)(), Xq.clear();
-        const gq = eq(qq),
-          Yq = Eq.name === qq.name ? gq : eq(Eq);
+    function Tb(bb, ub) {
+      const hb = (0, Bb.E)((async () => {
+        (0, Ub.w)(), Fb.clear();
+        const hb = Qb(bb),
+          Bb = ub.name === bb.name ? hb : Qb(ub);
         for (const {
-            cancel: qq
+            cancel: bb
           }
-          of sq.values()) qq.abort();
-        sq.clear(), await (0, lq.e)([gq, Yq]);
-        const Oq = await gq,
-          xq = await Yq;
-        return (0, mq.E)(), {
-          module: Oq,
-          workerModule: xq
+          of Vb.values()) bb.abort();
+        Vb.clear(), await (0, Ob.h)([hb, Bb]);
+        const Gb = await hb,
+          Lb = await Bb;
+        return (0, Ub.w)(), {
+          module: Gb,
+          workerModule: Lb
         }
-      }), qq);
+      }), bb);
       return {
-        build: qq,
-        workers: Eq,
-        loaded: gq
+        build: bb,
+        workers: ub,
+        loaded: hb
       }
     }
 
-    function Iq(qq) {
-      return Xq.get(qq)
+    function cb(bb) {
+      return Fb.get(bb)
     }
 
-    function eq(qq) {
-      const Eq = performance.now(),
-        gq = sq.get(qq.name);
-      sq.delete(qq.name);
-      const Yq = !0 === gq?.downloaded ? gq : void 0;
-      return void 0 !== gq && void 0 === Yq && gq.cancel.abort(), (0, lq.f)(((gq, Oq) => {
-        const mq = (Yq, lq) => {
-            Xq.set(qq.name, {
-              path: lq,
-              ms: performance.now() - Eq
-            }), gq(Yq)
+    function Qb(bb) {
+      const ub = performance.now(),
+        hb = Vb.get(bb.name);
+      Vb.delete(bb.name);
+      const Bb = !0 === hb?.downloaded ? hb : void 0;
+      return void 0 !== hb && void 0 === Bb && hb.cancel.abort(), (0, Ob.k)(((hb, Gb) => {
+        const Ub = (Bb, Ob) => {
+            Fb.set(bb.name, {
+              path: Ob,
+              ms: performance.now() - ub
+            }), hb(Bb)
           },
-          xq = () => {
-            (0, lq.u)(qE(qq), (qq => {
+          Lb = () => {
+            (0, Ob.u)(bu(bb), (bb => {
               let {
-                module: Eq,
-                path: gq
-              } = qq;
-              mq(Eq, gq)
-            }), Oq)
+                module: ub,
+                path: hb
+              } = bb;
+              Ub(ub, hb)
+            }), Gb)
           };
-        void 0 === Yq ? xq() : (0, lq.u)(Yq.compiled, (qq => {
-          mq(qq, "ahead")
-        }), xq)
+        void 0 === Bb ? Lb() : (0, Ob.u)(Bb.compiled, (bb => {
+          Ub(bb, "ahead")
+        }), Lb)
       }))
     }
-    async function Dq(qq, Eq) {
+    async function Rb(bb, ub) {
       const {
-        module: gq
-      } = await qE(qq, {
-        retries: Eq
+        module: hb
+      } = await bu(bb, {
+        retries: ub
       });
-      return gq
+      return hb
     }
-    async function qE(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await Lq(qq, (0, Oq.d)(qq.name), Eq)
+    async function bu(bb) {
+      let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await mb(bb, (0, Gb.d)(bb.name), ub)
     }
   },
-  6500: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq
+  6358: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Ub
     });
-    var Yq = gq(2805);
-    const lq = {
-      bloxd_wasm: () => "6d78896f037d6c3dd2ec91f53e012efc14d4c7478e36fc57749ae14be1df3096",
-      bloxd_wasm_client: () => "132c78fe4d5d985a39aef9cb5338e6d40926f1581f341ef925ca4f1b873982cf",
-      bloxd_wasm_workers: () => "9fa00e1e679c4b317e391d15a0e20bcce764b10ac53881c003b3245b86db6cf5",
-      bloxd_wasm_models: () => "9dd9f9fb8ff600ad7045604d8a17da38690a8b012f1e8b7f578a1a671baf7185",
-      bloxd_wasm_webgpu: () => "72b5e9034b38cfcfd84eb4e4b1607ea3fedbb7078518766dd27ac431c9922848",
-      bloxd_wasm_webgl: () => "a5cefc5390d0e4cf10eab192e6d4403fc337fb14cfe0e3164c3430a7c721595d",
-      bloxd_wasm_webgl1: () => "3cb76bb92c5501eb795864d943ed2c567c8b5ff7777cd5f2c08b0940197979c9",
-      bloxd_wasm_replay: () => "f8132694ecb3c07d332a67ad7dab19d035d58dc2cea1ddbf2ca6dc7ec556cd0c",
-      bloxd_wasm_recorder: () => "166b4da1bfa19d1d90b1f2d66b23de17c858096a88eb92fe87a8c9e58f77c3bb",
-      bloxd_wasm_anim: () => "11dd5bcc2c7323ae0a5b9e4cd8b8c81d457a9ea85d6e339c6454ed1bb80a27c4",
-      bloxd_wasm_textures: () => "2ba4917ae218104948db870865715dacd8571878aedd4fece740312291892fac",
-      bloxd_wasm_shader_pack: () => "dfb97693642c8a1ee7219f62c2557fcfb1c20ef622361f5b18389c544478cae6"
+    var Bb = hb(2688);
+    const Ob = {
+      bloxd_wasm: () => "3b91fa895928d8c20ebf400bda89ab044ad7bc6b888817ddf1222f7c57feeb9c",
+      bloxd_wasm_client: () => "f8fce5947f2faa12e1ab09590f42ab320ab7503a3faa2b92511d0c8b5961045e",
+      bloxd_wasm_workers: () => "97913e9056cda526c2dc8ccbbbd9e745eb1ac954c2c44cba6c7873fc1747a23c",
+      bloxd_wasm_models: () => "c8d7121eb692beab251440772c33579d323be2e080195d116336055405d68c6b",
+      bloxd_wasm_webgpu: () => "19061547ec948fcba5a47bac197b276e7d2b5e59be20d2aaff03a98029648a35",
+      bloxd_wasm_webgl: () => "368a1de884ceea9044ed27e803110479e191485e8237c1d5316b43218c30116d",
+      bloxd_wasm_webgl1: () => "5a9131e0f012a1be4913bc2fcccdbb8d2fa9e6060e384fce80f6463266a8c00a",
+      bloxd_wasm_replay: () => "2682ec56a7ca06252a5e84c7b45e4853cfe028e5944d11f804b256bb15d9e0af",
+      bloxd_wasm_recorder: () => "4b50bdb382eedb09ed05f5762ed2c0dc0736e9ab3343761cacc34ca07ef84644",
+      bloxd_wasm_anim: () => "e9760697ea51a31a4ccfa90e459f7ee2ef0e9d3e3212f5f9bdc92eccc7a75ce1",
+      bloxd_wasm_textures: () => "435e32982ee604bfb0a866d92a90abb139a38b2cd93d29123f4edbda32e26fc0",
+      bloxd_wasm_shader_pack: () => "752c76e3c73a60bbf217aaaf2e581c1eeace9b5713c141db27df430f66cfe32d"
     };
-    var Oq = gq(4524);
+    var Gb = hb(4466);
 
-    function mq(qq) {
-      const Eq = Object.prototype.hasOwnProperty.call(lq, qq) ? lq[qq]() : void 0;
-      if (void 0 !== Eq) return {
-        sha256: Eq,
-        onMismatch: Oq.C
+    function Ub(bb) {
+      const ub = Object.prototype.hasOwnProperty.call(Ob, bb) ? Ob[bb]() : void 0;
+      if (void 0 !== ub) return {
+        sha256: ub,
+        onMismatch: Gb.v
       };
-      throw new Yq.j(`${qq} has no release digest, so this build refuses it`)
+      throw new Bb.i(`${bb} has no release digest, so this build refuses it`)
     }
   },
-  36345: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Yq,
-      g: () => Oq,
-      j: () => Aq,
-      k: () => mq,
-      l: () => lq
+  35912: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Bb,
+      d: () => Gb,
+      f: () => Yb,
+      j: () => Ub,
+      l: () => Ob
     });
-    const Yq = /^alloc_failed (\d+) bytes$/;
+    const Bb = /^alloc_failed (\d+) bytes$/;
 
-    function lq(qq, Eq) {
-      return Oq(qq, Eq) ? `trap=alloc_failed ${Eq} bytes` : `trap=${qq}`
+    function Ob(bb, ub) {
+      return Gb(bb, ub) ? `trap=alloc_failed ${ub} bytes` : `trap=${bb}`
     }
 
-    function Oq(qq, Eq) {
-      return "unreachable" === qq && Eq > 0
+    function Gb(bb, ub) {
+      return "unreachable" === bb && ub > 0
     }
 
-    function mq(qq, Eq, gq) {
-      const Yq = function(qq) {
-        return qq instanceof WebAssembly.RuntimeError ? /unreachable/i.test(qq.message) ? "unreachable" : /out of bounds/i.test(qq.message) ? "out_of_bounds" : "runtime_error" : (qq instanceof RangeError || qq instanceof Error && "InternalError" === qq.name) && /call stack|recursion/i.test(qq.message) ? "stack_overflow" : "js_error"
-      }(qq);
-      if ("unreachable" !== Yq) return {
-        kind: Yq,
+    function Ub(bb, ub, hb) {
+      const Bb = function(bb) {
+        return bb instanceof WebAssembly.RuntimeError ? /unreachable/i.test(bb.message) ? "unreachable" : /out of bounds/i.test(bb.message) ? "out_of_bounds" : "runtime_error" : (bb instanceof RangeError || bb instanceof Error && "InternalError" === bb.name) && /call stack|recursion/i.test(bb.message) ? "stack_overflow" : "js_error"
+      }(bb);
+      if ("unreachable" !== Bb) return {
+        kind: Bb,
         panic: null,
         refusedBytes: 0
       };
-      const lq = Eq(),
-        Oq = gq();
+      const Ob = ub(),
+        Gb = hb();
       return {
-        kind: Yq,
-        panic: Oq > 0 ? null : lq,
-        refusedBytes: Oq
+        kind: Bb,
+        panic: Gb > 0 ? null : Ob,
+        refusedBytes: Gb
       }
     }
-    const xq = 300;
+    const Lb = 300;
 
-    function Aq(qq) {
-      return qq.replace(/\s*\n\s*/g, " / ").slice(0, xq)
+    function Yb(bb) {
+      return bb.replace(/\s*\n\s*/g, " / ").slice(0, Lb)
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

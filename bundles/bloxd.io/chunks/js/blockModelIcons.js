@@ -1,352 +1,321 @@
 export const id = 4;
 export const ids = [4];
 export const modules = {
-  36475: (qq, Eq, gq) => {
-    var Yq = {
-      "./Artisan Bench.json": [40921, 266],
-      "./Aspen Item Pedestal.json": [40927, 267],
-      "./Cedar Item Pedestal.json": [40929, 268],
-      "./Cherry Item Pedestal.json": [40935, 269],
-      "./Furnace.json": [40940, 270],
-      "./Jungle Item Pedestal.json": [40947, 271],
-      "./Mango Item Pedestal.json": [40952, 272],
-      "./Palm Item Pedestal.json": [40956, 273],
-      "./Pear Item Pedestal.json": [40963, 274],
-      "./Pine Item Pedestal.json": [40965, 275],
-      "./Plum Item Pedestal.json": [40973, 276],
-      "./Potion Table.json": [40975, 277],
-      "./Salvaging Table.json": [40977, 278],
-      "./Showcase.json": [40980, 279],
-      "./Spectral Item Pedestal.json": [40983, 280],
-      "./Workbench.json": [40988, 281]
-    };
-
-    function lq(qq) {
-      if (!gq.o(Yq, qq)) return Promise.resolve().then((() => {
-        var Eq = new Error("Cannot find module '" + qq + "'");
-        throw Eq.code = "MODULE_NOT_FOUND", Eq
-      }));
-      var Eq = Yq[qq],
-        lq = Eq[0];
-      return gq.e(Eq[1]).then((() => gq(lq)))
-    }
-    lq.keys = () => Object.keys(Yq), lq.id = 36475, qq.exports = lq
-  },
-  36467: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      getBlockModelIconUrl: () => Wq,
-      hasBlockModelIcon: () => cq
+  36020: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      getBlockModelIconUrl: () => wb,
+      hasBlockModelIcon: () => Sb
     });
-    var Yq = gq(36454),
-      lq = gq(36448);
-    const Oq = gq(36475),
-      mq = new Map(Oq.keys().filter((qq => qq.startsWith("./"))).map((qq => [qq.slice(2, -5), qq]))),
-      xq = new Map,
-      Aq = new Map;
+    var Bb = hb(36010),
+      Ob = hb(36006);
+    const Gb = hb(36025),
+      Ub = new Map(Gb.keys().filter((bb => bb.startsWith("./"))).map((bb => [bb.slice(2, -5), bb]))),
+      Lb = new Map,
+      Yb = new Map;
 
-    function cq(qq) {
-      return mq.has(qq)
+    function Sb(bb) {
+      return Ub.has(bb)
     }
 
-    function uq(qq) {
-      return Oq(mq.get(qq))
+    function ab(bb) {
+      return Gb(Ub.get(bb))
     }
-    async function Bq(qq, Eq, gq) {
+    async function Hb(bb, ub, hb) {
       const {
-        data: Yq,
-        texture: Oq
+        data: Bb,
+        texture: Gb
       } = await
-      function(qq) {
-        let Eq = xq.get(qq);
-        return Eq || (Eq = uq(qq).then((async qq => {
-          const Eq = new Image;
-          Eq.src = qq.texture, await Eq.decode();
-          const gq = document.createElement("canvas");
-          gq.width = Eq.width, gq.height = Eq.height;
-          const Yq = gq.getContext("2d");
-          return Yq.drawImage(Eq, 0, 0), {
-            data: qq,
+      function(bb) {
+        let ub = Lb.get(bb);
+        return ub || (ub = ab(bb).then((async bb => {
+          const ub = new Image;
+          ub.src = bb.texture, await ub.decode();
+          const hb = document.createElement("canvas");
+          hb.width = ub.width, hb.height = ub.height;
+          const Bb = hb.getContext("2d");
+          return Bb.drawImage(ub, 0, 0), {
+            data: bb,
             texture: {
-              width: Eq.width,
-              height: Eq.height,
-              pixels: Yq.getImageData(0, 0, Eq.width, Eq.height).data
+              width: ub.width,
+              height: ub.height,
+              pixels: Bb.getImageData(0, 0, ub.width, ub.height).data
             }
           }
-        })), Eq.catch((() => {
-          xq.delete(qq)
-        })), xq.set(qq, Eq)), Eq
-      }(qq), mq = document.createElement("canvas");
-      return mq.width = Eq, mq.height = Eq, mq.getContext("2d").putImageData(new ImageData((0, lq.h)(Yq, Oq, Eq, gq), Eq, Eq), 0, 0), mq.toDataURL()
+        })), ub.catch((() => {
+          Lb.delete(bb)
+        })), Lb.set(bb, ub)), ub
+      }(bb), Ub = document.createElement("canvas");
+      return Ub.width = ub, Ub.height = ub, Ub.getContext("2d").putImageData(new ImageData((0, Ob.j)(Bb, Gb, ub, hb), ub, ub), 0, 0), Ub.toDataURL()
     }
 
-    function Wq(qq, Eq, gq) {
-      const lq = `${Eq}|${gq}|${qq}`;
-      let Oq = Aq.get(lq);
-      return Oq || (Oq = (0, Yq.e)(qq, (() => uq(qq)), Eq, gq).then((Yq => null !== Yq && void 0 !== Yq ? Yq : Bq(qq, Eq, gq))), Oq.catch((() => {
-        Aq.delete(lq)
-      })), Aq.set(lq, Oq)), Oq
+    function wb(bb, ub, hb) {
+      const Ob = `${ub}|${hb}|${bb}`;
+      let Gb = Yb.get(Ob);
+      return Gb || (Gb = (0, Bb.h)(bb, (() => ab(bb)), ub, hb).then((Bb => null !== Bb && void 0 !== Bb ? Bb : Hb(bb, ub, hb))), Gb.catch((() => {
+        Yb.delete(Ob)
+      })), Yb.set(Ob, Gb)), Gb
     }
   },
-  36454: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => hq,
-      e: () => nq,
-      h: () => oq
+  36010: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Db,
+      h: () => xb,
+      j: () => Kb
     });
-    var Yq = gq(278),
-      lq = gq(96);
-    const Oq = new(gq(36461).d)(new URL(gq.p + gq.u(3), gq.b), {
+    var Bb = hb(275),
+      Ob = hb(86);
+    const Gb = new(hb(36018).c)(new URL(hb.p + hb.u(3), hb.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var mq = gq(1758),
-      xq = gq(3094);
-    const Aq = 1e4,
-      cq = 3e4;
-    let uq = null,
-      Bq = null,
-      Wq = null,
-      Nq = !1,
-      aq = 0;
-    const Vq = new Map;
-    let dq = null;
-    const jq = new Map,
-      Hq = new Map;
+    var Ub = hb(1672),
+      Lb = hb(2991);
+    const Yb = 1e4,
+      Sb = 3e4;
+    let ab = null,
+      Hb = null,
+      wb = null,
+      Zb = !1,
+      Xb = 0;
+    const pb = new Map;
+    let ob = null;
+    const Ab = new Map,
+      lb = new Map;
 
-    function oq(qq) {
-      const Eq = new Promise(((Eq, gq) => {
-        const Yq = new Image;
-        Yq.crossOrigin = "anonymous", Yq.fetchPriority = "high", Yq.onload = () => {
-          Eq(Yq)
-        }, Yq.onerror = () => {
-          gq(new Error(`A block icon's texture did not load: ${qq.slice(0,100)}`))
-        }, Yq.src = qq
+    function Kb(bb) {
+      const ub = new Promise(((ub, hb) => {
+        const Bb = new Image;
+        Bb.crossOrigin = "anonymous", Bb.fetchPriority = "high", Bb.onload = () => {
+          ub(Bb)
+        }, Bb.onerror = () => {
+          hb(new Error(`A block icon's texture did not load: ${bb.slice(0,100)}`))
+        }, Bb.src = bb
       }));
-      return (0, xq.g)(Eq)
+      return (0, Lb.g)(ub)
     }
 
-    function Pq(qq) {
-      var Eq, gq;
-      Nq || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${qq}`), Nq = !0, null === (Eq = uq) || void 0 === Eq || Eq.terminate(), uq = null, Bq = null, jq.clear(), Hq.clear();
-      for (const Yq of Vq.values()) Yq(null);
-      Vq.clear(), null === (gq = dq) || void 0 === gq || gq()
+    function Wb(bb) {
+      var ub, hb;
+      Zb || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${bb}`), Zb = !0, null === (ub = ab) || void 0 === ub || ub.terminate(), ab = null, Hb = null, Ab.clear(), lb.clear();
+      for (const Bb of pb.values()) Bb(null);
+      pb.clear(), null === (hb = ob) || void 0 === hb || hb()
     }
 
-    function Qq() {
-      return Wq ??= async function() {
+    function Cb() {
+      return wb ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === Yq.c.ios_icon_worker_v1 && (0, lq.isWebKit)()) return;
+        if ("page" === Bb.b.ios_icon_worker_v1 && (0, Ob.isWebKit)()) return;
         try {
-          uq = await async function() {
-            return await Oq.ready(), Oq.start()
+          ab = await async function() {
+            return await Gb.ready(), Gb.start()
           }()
-        } catch (xq) {
-          return void Pq(`did not start (${String(xq)})`)
+        } catch (Lb) {
+          return void Wb(`did not start (${String(Lb)})`)
         }
-        let qq = () => {};
-        const Eq = new Promise((Eq => {
-          qq = Eq
+        let bb = () => {};
+        const ub = new Promise((ub => {
+          bb = ub
         }));
-        uq.onmessage = Eq => {
+        ab.onmessage = ub => {
           let {
-            data: gq
-          } = Eq;
-          if ("started" === gq.type) Bq = uq, qq();
-          else if ("failed" === gq.type) Pq(`failed a draw (${gq.message})`);
+            data: hb
+          } = ub;
+          if ("started" === hb.type) Hb = ab, bb();
+          else if ("failed" === hb.type) Wb(`failed a draw (${hb.message})`);
           else {
-            var Yq, lq;
-            null === (Yq = Vq.get(gq.id)) || void 0 === Yq || Yq(gq.url), Vq.delete(gq.id), null === (lq = dq) || void 0 === lq || lq()
+            var Bb, Ob;
+            null === (Bb = pb.get(hb.id)) || void 0 === Bb || Bb(hb.url), pb.delete(hb.id), null === (Ob = ob) || void 0 === Ob || Ob()
           }
-        }, uq.onerror = Eq => {
-          Eq.preventDefault(), Pq(`stopped (${Eq.message||"its script did not load or run"})`), qq()
+        }, ab.onerror = ub => {
+          ub.preventDefault(), Wb(`stopped (${ub.message||"its script did not load or run"})`), bb()
         };
-        const gq = `did not start in ${cq/1e3} s`;
-        await (0, mq.k)(Eq, cq, gq).catch((() => {
-          Pq(gq)
+        const hb = `did not start in ${Sb/1e3} s`;
+        await (0, Ub.q)(ub, Sb, hb).catch((() => {
+          Wb(hb)
         }))
-      }(), Wq
+      }(), wb
     }
 
-    function yq() {
-      if (null !== dq || 0 === Vq.size) return;
-      const qq = new Promise((qq => {
-          dq = qq
+    function db() {
+      if (null !== ob || 0 === pb.size) return;
+      const bb = new Promise((bb => {
+          ob = bb
         })),
-        Eq = `did not answer in ${Aq/1e3} s`;
-      (0, mq.k)(qq, Aq, Eq).then((() => {
-        dq = null, yq()
+        ub = `did not answer in ${Yb/1e3} s`;
+      (0, Ub.q)(bb, Yb, ub).then((() => {
+        ob = null, db()
       }), (() => {
-        dq = null, Pq(Eq)
+        ob = null, Wb(ub)
       }))
     }
 
-    function tq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      qq.postMessage(Eq, gq)
+    function rb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      bb.postMessage(ub, hb)
     }
 
-    function rq(qq, Eq, gq, Yq) {
-      let lq = Eq.get(gq);
-      return void 0 === lq && (lq = Yq().then((async Eq => {
+    function jb(bb, ub, hb, Bb) {
+      let Ob = ub.get(hb);
+      return void 0 === Ob && (Ob = Bb().then((async ub => {
         let {
-          image: gq,
-          request: Yq
-        } = Eq;
+          image: hb,
+          request: Bb
+        } = ub;
         try {
-          const Eq = await createImageBitmap(gq);
-          tq(qq, Yq(Eq), [Eq])
-        } catch (lq) {
-          Pq(`could not take an image (${String(lq)})`)
+          const ub = await createImageBitmap(hb);
+          rb(bb, Bb(ub), [ub])
+        } catch (Ob) {
+          Wb(`could not take an image (${String(Ob)})`)
         }
-      })), lq.catch((() => {
-        Eq.get(gq) === lq && Eq.delete(gq)
-      })), Eq.set(gq, lq)), lq
+      })), Ob.catch((() => {
+        ub.get(hb) === Ob && ub.delete(hb)
+      })), ub.set(hb, Ob)), Ob
     }
-    async function vq(qq, Eq) {
-      Qq();
-      const gq = Bq;
-      if (null === gq) return null;
-      if (await qq(gq), Bq !== gq) return null;
-      const Yq = ++aq;
-      return new Promise((qq => {
-        Vq.set(Yq, qq), tq(gq, Eq(Yq)), yq()
+    async function nb(bb, ub) {
+      Cb();
+      const hb = Hb;
+      if (null === hb) return null;
+      if (await bb(hb), Hb !== hb) return null;
+      const Bb = ++Xb;
+      return new Promise((bb => {
+        pb.set(Bb, bb), rb(hb, ub(Bb)), db()
       }))
     }
 
-    function hq(qq, Eq, gq) {
-      return vq((Eq => Promise.all([qq.top, qq.left, qq.right].map((qq => function(qq, Eq) {
-        return rq(qq, jq, Eq, (async () => ({
-          image: await oq(Eq),
-          request: qq => ({
+    function Db(bb, ub, hb) {
+      return nb((ub => Promise.all([bb.top, bb.left, bb.right].map((bb => function(bb, ub) {
+        return jb(bb, Ab, ub, (async () => ({
+          image: await Kb(ub),
+          request: bb => ({
             type: "texture",
-            url: Eq,
-            bitmap: qq
+            url: ub,
+            bitmap: bb
           })
         })))
-      }(Eq, qq))))), (Yq => ({
+      }(ub, bb))))), (Bb => ({
         type: "draw",
-        id: Yq,
-        ...qq,
-        size: Eq,
-        outlineWidth: gq
+        id: Bb,
+        ...bb,
+        size: ub,
+        outlineWidth: hb
       })))
     }
 
-    function nq(qq, Eq, gq, Yq) {
-      return vq((gq => function(qq, Eq, gq) {
-        return rq(qq, Hq, Eq, (async () => {
+    function xb(bb, ub, hb, Bb) {
+      return nb((hb => function(bb, ub, hb) {
+        return jb(bb, lb, ub, (async () => {
           const {
-            texture: qq,
-            ...Yq
-          } = await gq();
+            texture: bb,
+            ...Bb
+          } = await hb();
           return {
-            image: await oq(qq),
-            request: qq => ({
+            image: await Kb(bb),
+            request: bb => ({
               type: "model",
-              name: Eq,
-              bitmap: qq,
-              geometry: Yq
+              name: ub,
+              bitmap: bb,
+              geometry: Bb
             })
           }
         }))
-      }(gq, qq, Eq)), (Eq => ({
+      }(hb, bb, ub)), (ub => ({
         type: "drawModel",
-        id: Eq,
-        name: qq,
-        size: gq,
-        outlineWidth: Yq
+        id: ub,
+        name: bb,
+        size: hb,
+        outlineWidth: Bb
       })))
     }
   },
-  36448: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Oq,
-      e: () => xq,
-      h: () => mq
+  36006: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb,
+      h: () => Lb,
+      j: () => Ub
     });
-    const Yq = 1 / 32,
-      lq = [15, 15, 15],
-      Oq = {
+    const Bb = 1 / 32,
+      Ob = [15, 15, 15],
+      Gb = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function mq(qq, Eq, gq, lq) {
+    function Ub(bb, ub, hb, Ob) {
       const {
-        vertices: Oq,
-        uvs: mq,
-        indices: Aq,
-        shades: cq
-      } = qq, uq = gq * Yq, Bq = gq - 2 * uq, Wq = new Float32Array(Oq.length);
-      for (let Yq = 0; Yq < Oq.length; Yq += 3) Wq[Yq] = uq + Oq[Yq] * Bq, Wq[Yq + 1] = uq + Oq[Yq + 1] * Bq, Wq[Yq + 2] = Oq[Yq + 2];
-      const Nq = new Float32Array(gq * gq).fill(-1 / 0),
-        aq = new Uint8ClampedArray(gq * gq * 4),
-        Vq = 255 * qq.alphaCutoff;
-      for (let Yq = 0; Yq < Aq.length; Yq += 3) {
-        const [qq, lq, Oq] = [Aq[Yq], Aq[Yq + 1], Aq[Yq + 2]], [xq, uq, Bq] = [3 * qq, 3 * lq, 3 * Oq], [dq, jq, Hq, oq, Pq, Qq] = [Wq[xq], Wq[xq + 1], Wq[uq], Wq[uq + 1], Wq[Bq], Wq[Bq + 1]], yq = (Hq - dq) * (Qq - jq) - (Pq - dq) * (oq - jq);
-        if (Math.abs(yq) < 1e-9) continue;
-        const tq = cq[Yq / 3],
-          [rq, vq, hq, nq, bq, iq] = [mq[2 * qq], mq[2 * qq + 1], mq[2 * lq], mq[2 * lq + 1], mq[2 * Oq], mq[2 * Oq + 1]],
-          Zq = Math.max(0, Math.floor(Math.min(dq, Hq, Pq))),
-          fq = Math.min(gq - 1, Math.ceil(Math.max(dq, Hq, Pq))),
-          Mq = Math.max(0, Math.floor(Math.min(jq, oq, Qq))),
-          Tq = Math.min(gq - 1, Math.ceil(Math.max(jq, oq, Qq)));
-        for (let Yq = Mq; Yq <= Tq; Yq++)
-          for (let qq = Zq; qq <= fq; qq++) {
-            const [lq, Oq] = [qq + .5, Yq + .5], mq = ((lq - dq) * (Qq - jq) - (Pq - dq) * (Oq - jq)) / yq, Aq = ((Hq - dq) * (Oq - jq) - (lq - dq) * (oq - jq)) / yq, cq = 1 - mq - Aq;
-            if (cq < 0 || mq < 0 || Aq < 0) continue;
-            const Zq = cq * Wq[xq + 2] + mq * Wq[uq + 2] + Aq * Wq[Bq + 2],
-              fq = Yq * gq + qq;
-            if (Zq <= Nq[fq]) continue;
-            const Mq = Math.max(0, Math.min(Eq.width - 1, Math.floor((cq * rq + mq * hq + Aq * bq) * Eq.width))),
-              Tq = 4 * (Math.max(0, Math.min(Eq.height - 1, Math.floor((cq * vq + mq * nq + Aq * iq) * Eq.height))) * Eq.width + Mq);
-            Eq.pixels[Tq + 3] < Vq || (Nq[fq] = Zq, aq[4 * fq] = Eq.pixels[Tq] * tq, aq[4 * fq + 1] = Eq.pixels[Tq + 1] * tq, aq[4 * fq + 2] = Eq.pixels[Tq + 2] * tq, aq[4 * fq + 3] = 255)
+        vertices: Gb,
+        uvs: Ub,
+        indices: Yb,
+        shades: Sb
+      } = bb, ab = hb * Bb, Hb = hb - 2 * ab, wb = new Float32Array(Gb.length);
+      for (let Bb = 0; Bb < Gb.length; Bb += 3) wb[Bb] = ab + Gb[Bb] * Hb, wb[Bb + 1] = ab + Gb[Bb + 1] * Hb, wb[Bb + 2] = Gb[Bb + 2];
+      const Zb = new Float32Array(hb * hb).fill(-1 / 0),
+        Xb = new Uint8ClampedArray(hb * hb * 4),
+        pb = 255 * bb.alphaCutoff;
+      for (let Bb = 0; Bb < Yb.length; Bb += 3) {
+        const [bb, Ob, Gb] = [Yb[Bb], Yb[Bb + 1], Yb[Bb + 2]], [Lb, ab, Hb] = [3 * bb, 3 * Ob, 3 * Gb], [ob, Ab, lb, Kb, Wb, Cb] = [wb[Lb], wb[Lb + 1], wb[ab], wb[ab + 1], wb[Hb], wb[Hb + 1]], db = (lb - ob) * (Cb - Ab) - (Wb - ob) * (Kb - Ab);
+        if (Math.abs(db) < 1e-9) continue;
+        const rb = Sb[Bb / 3],
+          [jb, nb, Db, xb, zb, gb] = [Ub[2 * bb], Ub[2 * bb + 1], Ub[2 * Ob], Ub[2 * Ob + 1], Ub[2 * Gb], Ub[2 * Gb + 1]],
+          ib = Math.max(0, Math.floor(Math.min(ob, lb, Wb))),
+          vb = Math.min(hb - 1, Math.ceil(Math.max(ob, lb, Wb))),
+          tb = Math.max(0, Math.floor(Math.min(Ab, Kb, Cb))),
+          Jb = Math.min(hb - 1, Math.ceil(Math.max(Ab, Kb, Cb)));
+        for (let Bb = tb; Bb <= Jb; Bb++)
+          for (let bb = ib; bb <= vb; bb++) {
+            const [Ob, Gb] = [bb + .5, Bb + .5], Ub = ((Ob - ob) * (Cb - Ab) - (Wb - ob) * (Gb - Ab)) / db, Yb = ((lb - ob) * (Gb - Ab) - (Ob - ob) * (Kb - Ab)) / db, Sb = 1 - Ub - Yb;
+            if (Sb < 0 || Ub < 0 || Yb < 0) continue;
+            const ib = Sb * wb[Lb + 2] + Ub * wb[ab + 2] + Yb * wb[Hb + 2],
+              vb = Bb * hb + bb;
+            if (ib <= Zb[vb]) continue;
+            const tb = Math.max(0, Math.min(ub.width - 1, Math.floor((Sb * jb + Ub * Db + Yb * zb) * ub.width))),
+              Jb = 4 * (Math.max(0, Math.min(ub.height - 1, Math.floor((Sb * nb + Ub * xb + Yb * gb) * ub.height))) * ub.width + tb);
+            ub.pixels[Jb + 3] < pb || (Zb[vb] = ib, Xb[4 * vb] = ub.pixels[Jb] * rb, Xb[4 * vb + 1] = ub.pixels[Jb + 1] * rb, Xb[4 * vb + 2] = ub.pixels[Jb + 2] * rb, Xb[4 * vb + 3] = 255)
           }
       }
-      return xq(aq, gq, lq), aq
+      return Lb(Xb, hb, Ob), Xb
     }
 
-    function xq(qq, Eq, gq) {
-      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Eq => 0 !== qq[4 * Eq + 3];
-      const Oq = (qq, gq) => qq < 0 || gq < 0 || qq >= Eq || gq >= Eq || !Yq(gq * Eq + qq),
-        mq = [];
-      for (let lq = 0; lq < Eq; lq++)
-        for (let qq = 0; qq < Eq; qq++)
-          if (!Oq(qq, lq)) qq: for (let Yq = -gq; Yq <= gq; Yq++) {
-            const xq = gq - Math.abs(Yq);
-            for (let gq = -xq; gq <= xq; gq++)
-              if (Oq(qq + gq, lq + Yq)) {
-                mq.push(lq * Eq + qq);
-                break qq
+    function Lb(bb, ub, hb) {
+      let Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ub => 0 !== bb[4 * ub + 3];
+      const Gb = (bb, hb) => bb < 0 || hb < 0 || bb >= ub || hb >= ub || !Bb(hb * ub + bb),
+        Ub = [];
+      for (let Ob = 0; Ob < ub; Ob++)
+        for (let bb = 0; bb < ub; bb++)
+          if (!Gb(bb, Ob)) bb: for (let Bb = -hb; Bb <= hb; Bb++) {
+            const Lb = hb - Math.abs(Bb);
+            for (let hb = -Lb; hb <= Lb; hb++)
+              if (Gb(bb + hb, Ob + Bb)) {
+                Ub.push(Ob * ub + bb);
+                break bb
               }
           }
-      for (const xq of mq) qq.set(lq, 4 * xq), qq[4 * xq + 3] = 255
+      for (const Lb of Ub) bb.set(Ob, 4 * Lb), bb[4 * Lb + 3] = 255
     }
   },
-  36461: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => lq
+  36018: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Ob
     });
-    const Yq = {
-      wait: function(qq) {
-        return new Promise((Eq => {
-          setTimeout(Eq, qq)
+    const Bb = {
+      wait: function(bb) {
+        return new Promise((ub => {
+          setTimeout(ub, bb)
         }))
       },
       stallMs: 2e4
     };
-    class lq {
-      constructor(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Yq;
-        this.url = qq, this.options = Eq, this.timing = gq, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = qq
+    class Ob {
+      constructor(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Bb;
+        this.url = bb, this.options = ub, this.timing = hb, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = bb
       }
       ready() {
         if (null === this.fetched) {
-          const qq = new AbortController;
-          this.fetchAbort = qq, this.fetched = this.fetchWithRetries(qq.signal).finally((() => {
-            this.fetchAbort === qq && (this.fetchAbort = null)
+          const bb = new AbortController;
+          this.fetchAbort = bb, this.fetched = this.fetchWithRetries(bb.signal).finally((() => {
+            this.fetchAbort === bb && (this.fetchAbort = null)
           }))
         }
         return this.fetched
@@ -357,51 +326,82 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(qq) {
-        for (let Eq = 0;; Eq++) {
-          const gq = new URL(this.url);
-          if (Eq > 0 && gq.searchParams.set("cache-bust", `${Date.now()}-${Eq}`), await this.fetchWhole(gq, qq)) return void(this.scriptUrl = gq);
-          if (Eq >= 3 || qq.aborted) return;
-          if (await this.timing.wait(500 * 2 ** Eq), qq.aborted) return
+      async fetchWithRetries(bb) {
+        for (let ub = 0;; ub++) {
+          const hb = new URL(this.url);
+          if (ub > 0 && hb.searchParams.set("cache-bust", `${Date.now()}-${ub}`), await this.fetchWhole(hb, bb)) return void(this.scriptUrl = hb);
+          if (ub >= 3 || bb.aborted) return;
+          if (await this.timing.wait(500 * 2 ** ub), bb.aborted) return
         }
       }
-      async fetchWhole(qq, Eq) {
-        const gq = new AbortController;
-        let Yq;
-        const lq = () => {
-            clearTimeout(Yq), Yq = setTimeout((() => {
-              gq.abort()
+      async fetchWhole(bb, ub) {
+        const hb = new AbortController;
+        let Bb;
+        const Ob = () => {
+            clearTimeout(Bb), Bb = setTimeout((() => {
+              hb.abort()
             }), this.timing.stallMs)
           },
-          Oq = () => {
-            gq.abort()
+          Gb = () => {
+            hb.abort()
           };
-        Eq.addEventListener("abort", Oq, {
+        ub.addEventListener("abort", Gb, {
           once: !0
-        }), lq();
+        }), Ob();
         try {
-          var mq;
-          const Eq = await fetch(qq, {
-            signal: gq.signal
+          var Ub;
+          const ub = await fetch(bb, {
+            signal: hb.signal
           });
-          if (!Eq.ok) return !1;
-          const Yq = null === (mq = Eq.body) || void 0 === mq ? void 0 : mq.getReader();
-          if (!Yq) return !1;
+          if (!ub.ok) return !1;
+          const Bb = null === (Ub = ub.body) || void 0 === Ub ? void 0 : Ub.getReader();
+          if (!Bb) return !1;
           for (;;) {
             const {
-              done: qq
-            } = await Yq.read();
-            if (qq) return !0;
-            lq()
+              done: bb
+            } = await Bb.read();
+            if (bb) return !0;
+            Ob()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(Yq), Eq.removeEventListener("abort", Oq)
+          clearTimeout(Bb), ub.removeEventListener("abort", Gb)
         }
       }
     }
+  },
+  36025: (bb, ub, hb) => {
+    var Bb = {
+      "./Artisan Bench.json": [40622, 266],
+      "./Aspen Item Pedestal.json": [40626, 267],
+      "./Cedar Item Pedestal.json": [40633, 268],
+      "./Cherry Item Pedestal.json": [40641, 269],
+      "./Furnace.json": [40647, 270],
+      "./Jungle Item Pedestal.json": [40649, 271],
+      "./Mango Item Pedestal.json": [40657, 272],
+      "./Palm Item Pedestal.json": [40664, 273],
+      "./Pear Item Pedestal.json": [40671, 274],
+      "./Pine Item Pedestal.json": [40676, 275],
+      "./Plum Item Pedestal.json": [40678, 276],
+      "./Potion Table.json": [40687, 277],
+      "./Salvaging Table.json": [40694, 278],
+      "./Showcase.json": [40702, 279],
+      "./Spectral Item Pedestal.json": [40708, 280],
+      "./Workbench.json": [40713, 281]
+    };
+
+    function Ob(bb) {
+      if (!hb.o(Bb, bb)) return Promise.resolve().then((() => {
+        var ub = new Error("Cannot find module '" + bb + "'");
+        throw ub.code = "MODULE_NOT_FOUND", ub
+      }));
+      var ub = Bb[bb],
+        Ob = ub[0];
+      return hb.e(ub[1]).then((() => hb(Ob)))
+    }
+    Ob.keys = () => Object.keys(Bb), Ob.id = 36025, bb.exports = Ob
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

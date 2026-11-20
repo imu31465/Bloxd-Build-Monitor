@@ -1,414 +1,414 @@
 export const id = 98;
 export const ids = [98, 186];
 export const modules = {
-  9158: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      EverythingMenu: () => xx
+  8964: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      EverythingMenu: () => UL
     });
-    var Yq = gq(57),
-      lq = gq(1018),
-      Oq = gq.n(lq),
-      mq = gq(1183),
-      xq = gq(1025),
-      Aq = gq(2054),
-      cq = gq(1422),
-      uq = gq(1086),
-      Bq = gq(1070);
+    var Bb = hb(49),
+      Ob = hb(958),
+      Gb = hb.n(Ob),
+      Ub = hb(1095),
+      Lb = hb(966),
+      Yb = hb(1948),
+      Sb = hb(1357),
+      ab = hb(1023),
+      Hb = hb(1007);
 
-    function Wq(qq) {
+    function wb(bb) {
       let {
-        items: Eq,
-        link: gq,
-        onClick: Yq,
-        selectedItemId: lq,
-        className: Wq,
-        padStartsOnTab: Nq = !0
-      } = qq;
+        items: ub,
+        link: hb,
+        onClick: Bb,
+        selectedItemId: Ob,
+        className: wb,
+        padStartsOnTab: Zb = !0
+      } = bb;
       const {
-        t: aq
-      } = (0, mq.v)(), Vq = (0, uq.l)(), dq = [];
-      for (const Oq of Eq) {
-        var jq;
-        const qq = dq[dq.length - 1];
-        var Hq;
-        if (qq && qq.title === (null !== (jq = Oq.section) && void 0 !== jq ? jq : null)) qq.items.push(Oq);
-        else dq.push({
-          title: null !== (Hq = Oq.section) && void 0 !== Hq ? Hq : null,
-          items: [Oq]
+        t: Xb
+      } = (0, Ub.K)(), pb = (0, ab.k)(), ob = [];
+      for (const Gb of ub) {
+        var Ab;
+        const bb = ob[ob.length - 1];
+        var lb;
+        if (bb && bb.title === (null !== (Ab = Gb.section) && void 0 !== Ab ? Ab : null)) bb.items.push(Gb);
+        else ob.push({
+          title: null !== (lb = Gb.section) && void 0 !== lb ? lb : null,
+          items: [Gb]
         })
       }
-      return (0, Bq.jsxs)("div", {
-        className: Oq()("MenuSideBarBody", Wq),
+      return (0, Hb.jsxs)("div", {
+        className: Gb()("MenuSideBarBody", wb),
         "data-pad-tabs": "2",
-        children: [dq.map(((qq, Eq) => {
-          var gq;
-          return (0, Bq.jsxs)("div", {
+        children: [ob.map(((bb, ub) => {
+          var hb;
+          return (0, Hb.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [qq.title && (0, Bq.jsx)("div", {
+            children: [bb.title && (0, Hb.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: aq(qq.title)
-            }), qq.items.map((qq => {
-              var Eq;
-              const gq = !!qq.iconElement || !!qq.faIcon;
-              return (0, Bq.jsxs)("div", {
+              children: Xb(bb.title)
+            }), bb.items.map((bb => {
+              var ub;
+              const hb = !!bb.iconElement || !!bb.faIcon;
+              return (0, Hb.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": lq === qq.id ? "true" : void 0,
-                "data-pad-default-focus": Nq && lq === qq.id || void 0,
-                className: Oq()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: lq === qq.id
+                "data-pad-selected": Ob === bb.id ? "true" : void 0,
+                "data-pad-default-focus": Zb && Ob === bb.id || void 0,
+                className: Gb()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: Ob === bb.id
                 }),
                 onClick: () => {
-                  Yq(qq.id)
+                  Bb(bb.id)
                 },
-                children: [gq && (0, Bq.jsx)("div", {
+                children: [hb && (0, Hb.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (Eq = qq.iconElement) && void 0 !== Eq ? Eq : (0, Bq.jsx)(xq.d, {
-                    name: qq.faIcon
+                  children: null !== (ub = bb.iconElement) && void 0 !== ub ? ub : (0, Hb.jsx)(Lb.e, {
+                    name: bb.faIcon
                   })
-                }), (!Vq || !gq) && (0, Bq.jsx)("div", {
-                  children: aq(qq.title)
-                }), qq.redDot && (0, Bq.jsx)(Aq.d, {
+                }), (!pb || !hb) && (0, Hb.jsx)("div", {
+                  children: Xb(bb.title)
+                }), bb.redDot && (0, Hb.jsx)(Yb.e, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, qq.id)
+              }, bb.id)
             }))]
-          }, null !== (gq = qq.title) && void 0 !== gq ? gq : Eq)
-        })), gq && (0, Bq.jsxs)("div", {
-          ...(0, cq.V)(),
+          }, null !== (hb = bb.title) && void 0 !== hb ? hb : ub)
+        })), hb && (0, Hb.jsxs)("div", {
+          ...(0, Sb.V)(),
           "data-pad-destructive": !0,
           className: "MenuSideBarBodyTab MenuSideBarLink",
-          onClick: gq.onClick,
-          children: [(0, Bq.jsx)("div", {
+          onClick: hb.onClick,
+          children: [(0, Hb.jsx)("div", {
             className: "MenuSideBarBodyTabIcon",
-            children: (0, Bq.jsx)(xq.d, {
-              name: gq.faIcon
+            children: (0, Hb.jsx)(Lb.e, {
+              name: hb.faIcon
             })
-          }), (0, Bq.jsx)("div", {
-            children: aq(gq.title)
-          }), (0, Bq.jsx)(xq.d, {
+          }), (0, Hb.jsx)("div", {
+            children: Xb(hb.title)
+          }), (0, Hb.jsx)(Lb.e, {
             name: "arrow-right",
             className: "MenuSideBarLinkArrow"
           })]
         })]
       })
     }
-    var Nq = gq(2907),
-      aq = gq(1101),
-      Vq = gq(2383),
-      dq = gq(3018),
-      jq = gq(96),
-      Hq = gq(1904),
-      oq = gq(2218),
-      Pq = gq(2226),
-      Qq = gq(1659),
-      yq = gq(1326),
-      tq = gq(4828),
-      rq = gq(24),
-      vq = gq(9160);
+    var Zb = hb(2789),
+      Xb = hb(1029),
+      pb = hb(2288),
+      ob = hb(2903),
+      Ab = hb(86),
+      lb = hb(1811),
+      Kb = hb(2131),
+      Wb = hb(2138),
+      Cb = hb(1585),
+      db = hb(1242),
+      rb = hb(4765),
+      jb = hb(13),
+      nb = hb(8972);
 
-    function hq(qq) {
+    function Db(bb) {
       let {
-        setApplySettingsCallback: Eq
-      } = qq;
+        setApplySettingsCallback: ub
+      } = bb;
       const {
-        clientEscMenuOptions: gq
-      } = (0, rq.j)(["clientEscMenuOptions"]), [lq, Oq] = (0, Yq.useState)(!1), [mq, xq] = (0, Yq.useState)(!1), [Aq, uq] = (0, Yq.useState)(6400), [Wq, Nq] = (0, Yq.useState)(3600), [aq, Vq] = (0, Yq.useState)(!1), [dq, jq] = (0, Yq.useState)(!1);
+        clientEscMenuOptions: hb
+      } = (0, jb.j)(["clientEscMenuOptions"]), [Ob, Gb] = (0, Bb.useState)(!1), [Ub, Lb] = (0, Bb.useState)(!1), [Yb, ab] = (0, Bb.useState)(6400), [wb, Zb] = (0, Bb.useState)(3600), [Xb, pb] = (0, Bb.useState)(!1), [ob, Ab] = (0, Bb.useState)(!1);
 
-      function Hq(qq) {
-        const Eq = "screenshot" === qq ? xq : Oq;
-        Eq(!0);
-        const gq = aq ? "normals" : dq ? "depth" : null;
-        vq.devTools.downloadScene(qq, {
-          width: Aq,
-          height: Wq,
-          colouring: gq
-        }).catch((qq => {
-          console.error("Couldn't download the scene", qq)
+      function lb(bb) {
+        const ub = "screenshot" === bb ? Lb : Gb;
+        ub(!0);
+        const hb = Xb ? "normals" : ob ? "depth" : null;
+        nb.devTools.downloadScene(bb, {
+          width: Yb,
+          height: wb,
+          colouring: hb
+        }).catch((bb => {
+          console.error("Couldn't download the scene", bb)
         })).finally((() => {
-          Eq(!1)
+          ub(!1)
         }))
       }
-      return (0, Bq.jsxs)("div", {
+      return (0, Hb.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, Bq.jsx)(tq.d, {
+        children: [(0, Hb.jsx)(rb.c, {
           label: "Disable Ambient Occlusion",
-          checked: gq.disableAmbientOcclusion,
-          onClick: qq => {
-            rq.b.setClientEscMenuOptions({
-              disableAmbientOcclusion: qq
-            }), Eq((() => tq.l))
+          checked: hb.disableAmbientOcclusion,
+          onClick: bb => {
+            jb.d.setClientEscMenuOptions({
+              disableAmbientOcclusion: bb
+            }), ub((() => rb.k))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), vq.devTools.supports("ambientLight") && (0, Bq.jsx)(tq.h, {
+        }), nb.devTools.supports("ambientLight") && (0, Hb.jsx)(rb.h, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: gq.ambientLightIntensity,
-          onChange: qq => {
-            vq.devTools.setAmbientLightIntensity(qq).then((() => {
-              rq.b.setClientEscMenuOptions({
-                ambientLightIntensity: qq
+          initValue: hb.ambientLightIntensity,
+          onChange: bb => {
+            nb.devTools.setAmbientLightIntensity(bb).then((() => {
+              jb.d.setClientEscMenuOptions({
+                ambientLightIntensity: bb
               })
-            })).catch((qq => {
-              console.error("Couldn't set the ambient light", qq)
+            })).catch((bb => {
+              console.error("Couldn't set the ambient light", bb)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), vq.devTools.supports("weaponRaycasts") && (0, Bq.jsx)(tq.d, {
+        }), nb.devTools.supports("weaponRaycasts") && (0, Hb.jsx)(rb.c, {
           label: "Show Weapon Raycasts",
-          checked: gq.showWeaponRaycasts,
-          onClick: qq => {
-            rq.b.setClientEscMenuOptions({
-              showWeaponRaycasts: qq
+          checked: hb.showWeaponRaycasts,
+          onClick: bb => {
+            jb.d.setClientEscMenuOptions({
+              showWeaponRaycasts: bb
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), vq.devTools.supports("sceneDownload") && (0, Bq.jsxs)("div", {
+        }), nb.devTools.supports("sceneDownload") && (0, Hb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, Bq.jsxs)("div", {
+          children: [(0, Hb.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, Bq.jsx)(tq.d, {
+            children: [(0, Hb.jsx)(rb.c, {
               label: "Apply normal-based coloring",
-              checked: aq,
-              onClick: qq => {
-                Vq(qq), qq && jq(!1)
+              checked: Xb,
+              onClick: bb => {
+                pb(bb), bb && Ab(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, Bq.jsx)(tq.d, {
+            }), (0, Hb.jsx)(rb.c, {
               label: "Apply depth-based coloring",
-              checked: dq,
-              onClick: qq => {
-                jq(qq), qq && Vq(!1)
+              checked: ob,
+              onClick: bb => {
+                Ab(bb), bb && pb(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, Bq.jsxs)("div", {
+            }), (0, Hb.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, Bq.jsx)("div", {
+              children: [(0, Hb.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, Bq.jsx)(Qq.b, {
+              }), (0, Hb.jsx)(Cb.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (qq, Eq) => {
-                  const gq = parseInt(qq) || 6400;
-                  uq(gq)
+                onValueChange: (bb, ub) => {
+                  const hb = parseInt(bb) || 6400;
+                  ab(hb)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: Aq.toString()
-              }), (0, Bq.jsx)("span", {
+                defaultValue: Yb.toString()
+              }), (0, Hb.jsx)("span", {
                 children: "X"
-              }), (0, Bq.jsx)(Qq.b, {
+              }), (0, Hb.jsx)(Cb.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (qq, Eq) => {
-                  const gq = parseInt(qq) || 3600;
-                  Nq(gq)
+                onValueChange: (bb, ub) => {
+                  const hb = parseInt(bb) || 3600;
+                  Zb(hb)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: Wq.toString()
+                defaultValue: wb.toString()
               })]
-            }), (0, Bq.jsxs)("div", {
+            }), (0, Hb.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, Bq.jsxs)(cq.g, {
+              children: [(0, Hb.jsxs)(Sb.e, {
                 onClick: () => {
-                  Hq("screenshot")
+                  lb("screenshot")
                 },
-                disabled: mq,
-                children: [mq && (0, Bq.jsx)(yq.e, {}), "Download Screenshot"]
-              }), (0, Bq.jsxs)(cq.g, {
+                disabled: Ub,
+                children: [Ub && (0, Hb.jsx)(db.c, {}), "Download Screenshot"]
+              }), (0, Hb.jsxs)(Sb.e, {
                 onClick: () => {
-                  Hq("glb")
+                  lb("glb")
                 },
-                disabled: lq,
-                children: [lq && (0, Bq.jsx)(yq.e, {}), "Download GLB"]
+                disabled: Ob,
+                children: [Ob && (0, Hb.jsx)(db.c, {}), "Download GLB"]
               })]
             })]
-          }), (0, Bq.jsx)("div", {
+          }), (0, Hb.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var nq = gq(136),
-      bq = gq(1109),
-      iq = gq(1195),
-      Zq = gq(2916),
-      fq = gq(1498),
-      Mq = gq(1261),
-      Tq = gq(1219),
-      zq = gq(2990),
-      Sq = gq(2020),
-      pq = gq(1477),
-      Gq = gq(307),
-      Lq = gq(2235),
-      Jq = gq(2250),
-      kq = gq(2601),
-      Rq = gq(1628),
-      Uq = gq(2965),
-      Fq = gq(2940),
-      sq = gq(2992),
-      Xq = gq(201);
+    var xb = hb(115),
+      zb = hb(1038),
+      gb = hb(1103),
+      ib = hb(2792),
+      vb = hb(1415),
+      tb = hb(1166),
+      Jb = hb(1131),
+      eb = hb(2873),
+      Nb = hb(1919),
+      sb = hb(1398),
+      Mb = hb(314),
+      mb = hb(2142),
+      Ib = hb(2155),
+      Pb = hb(2510),
+      qb = hb(1544),
+      Eb = hb(2845),
+      yb = hb(2826),
+      Vb = hb(2875),
+      Fb = hb(197);
 
-    function wq(qq) {
+    function fb(bb) {
       const {
-        t: Eq,
-        selectedLanguage: gq
-      } = (0, mq.v)(), {
-        userContext: lq
-      } = (0, aq.c)(), {
-        superRankInfo: Oq
-      } = lq, xq = qq && ((0, Gq.Jc)(Oq) || lq.ranksMayChange) && (0, Jq.purchasesAllowed)(), {
-        accountId: Aq,
-        data: cq
-      } = (0, kq.h)(Uq.c, xq);
-      if ((0, Yq.useEffect)((() => {
-          if (xq) return Uq.c.watchAccount(), Rq.c.addRefetchListener("billing", (qq => {
-            "reconnected" === qq ? Uq.c.refreshAfterReconnect() : Uq.c.refresh()
+        t: ub,
+        selectedLanguage: hb
+      } = (0, Ub.K)(), {
+        userContext: Ob
+      } = (0, Xb.d)(), {
+        superRankInfo: Gb
+      } = Ob, Lb = bb && ((0, Mb.Cc)(Gb) || Ob.ranksMayChange) && (0, Ib.purchasesAllowed)(), {
+        accountId: Yb,
+        data: Sb
+      } = (0, Pb.e)(Eb.c, Lb);
+      if ((0, Bb.useEffect)((() => {
+          if (Lb) return Eb.c.watchAccount(), qb.b.addRefetchListener("billing", (bb => {
+            "reconnected" === bb ? Eb.c.refreshAfterReconnect() : Eb.c.refresh()
           }))
-        }), [xq]), !xq || !(0, Gq.Jc)(Oq) || null === cq || Aq !== lq.whamm) return null;
-      const uq = function(qq, Eq, gq) {
-        const Yq = sq.f[(0, sq.d)(sq.f, Eq)],
-          lq = void 0 === Yq ? void 0 : (0, Xq.b)(qq.entitlements, Yq.entitlementId);
-        return void 0 === lq || null === lq.expiresAt || (0, Fq.g)(lq) <= gq ? null : lq.willRenew && null === lq.billingIssueDetectedAt ? {
+        }), [Lb]), !Lb || !(0, Mb.Cc)(Gb) || null === Sb || Yb !== Ob.whamm) return null;
+      const ab = function(bb, ub, hb) {
+        const Bb = Vb.h[(0, Vb.c)(Vb.h, ub)],
+          Ob = void 0 === Bb ? void 0 : (0, Fb.d)(bb.entitlements, Bb.entitlementId);
+        return void 0 === Ob || null === Ob.expiresAt || (0, yb.h)(Ob) <= hb ? null : Ob.willRenew && null === Ob.billingIssueDetectedAt ? {
           renews: !0,
-          at: Math.max(lq.expiresAt, gq)
+          at: Math.max(Ob.expiresAt, hb)
         } : {
           renews: !1,
-          at: (0, Fq.g)(lq)
+          at: (0, yb.h)(Ob)
         }
-      }(cq, Oq.tier, Date.now());
-      if (null === uq) return null;
-      const Bq = uq.renews ? "store:renewsOn" : "store:endsOn";
-      return Eq(Bq, {
-        date: new Date(uq.at).toLocaleDateString((0, mq.h)(gq.code, Bq), {
+      }(Sb, Gb.tier, Date.now());
+      if (null === ab) return null;
+      const Hb = ab.renews ? "store:renewsOn" : "store:endsOn";
+      return ub(Hb, {
+        date: new Date(ab.at).toLocaleDateString((0, Ub.o)(hb.code, Hb), {
           year: "numeric",
           month: "short",
           day: "numeric"
         })
       })
     }
-    var Kq = gq(1341),
-      Cq = gq(1207),
-      Iq = gq(4721),
-      eq = gq(1448),
-      Dq = gq(3517),
-      qE = gq(2201);
+    var kb = hb(1260),
+      Tb = hb(1112),
+      cb = hb(4653),
+      Qb = hb(1380),
+      Rb = hb(3440),
+      bu = hb(2121);
 
-    function EE(qq) {
+    function uu(bb) {
       let {
-        showing: Eq
-      } = qq;
+        showing: ub
+      } = bb;
       const {
-        t: gq
-      } = (0, mq.v)(), {
-        data: Yq,
-        failed: lq
-      } = (0, kq.h)(Dq.d, Eq);
-      return 0 === (null === Yq || void 0 === Yq ? void 0 : Yq.length) || null === Yq && !lq ? null : (0, Bq.jsxs)("div", {
+        t: hb
+      } = (0, Ub.K)(), {
+        data: Bb,
+        failed: Ob
+      } = (0, Pb.e)(Rb.d, ub);
+      return 0 === (null === Bb || void 0 === Bb ? void 0 : Bb.length) || null === Bb && !Ob ? null : (0, Hb.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, Bq.jsx)("div", {
+        children: [(0, Hb.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: gq("paymentHistory:title")
-        }), null === Yq && lq && (0, Bq.jsx)("div", {
+          children: hb("paymentHistory:title")
+        }), null === Bb && Ob && (0, Hb.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: gq("paymentHistory:loadFailed")
-        }), null !== Yq && (0, Bq.jsx)("ul", {
+          children: hb("paymentHistory:loadFailed")
+        }), null !== Bb && (0, Hb.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: Yq.map((qq => (0, Bq.jsxs)("li", {
+          children: Bb.map((bb => (0, Hb.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, Bq.jsx)(qE.e, {
-              entry: qq
-            }), (0, Bq.jsxs)("div", {
+            children: [(0, Hb.jsx)(bu.c, {
+              entry: bb
+            }), (0, Hb.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, Bq.jsx)("div", {
-                children: (0, qE.j)(gq, qq)
-              }), (0, Bq.jsxs)("div", {
+              children: [(0, Hb.jsx)("div", {
+                children: (0, bu.i)(hb, bb)
+              }), (0, Hb.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(qq.at).toLocaleDateString(), "number" === typeof qq.orderId && ` \xb7 ${gq("paymentHistory:order",{orderId:qq.orderId})}`]
+                children: [new Date(bb.at).toLocaleDateString(), "number" === typeof bb.orderId && ` \xb7 ${hb("paymentHistory:order",{orderId:bb.orderId})}`]
               })]
             })]
-          }, (0, Dq.b)(qq))))
+          }, (0, Rb.c)(bb))))
         })]
       })
     }
-    var gE = gq(1864),
-      YE = gq(1234),
-      lE = gq(1336),
-      OE = gq(1298),
-      mE = gq(1758),
-      xE = gq(2929);
-    async function AE() {
+    var hu = hb(1777),
+      Bu = hb(1141),
+      Ou = hb(1249),
+      Gu = hb(1206),
+      Uu = hb(1672),
+      Lu = hb(2813);
+    async function Yu() {
       try {
-        return function(qq) {
-          const Eq = new Map;
+        return function(bb) {
+          const ub = new Map;
           for (const {
-              store: gq,
-              status: Yq,
-              autoRenewStatus: lq,
-              managementUrl: Oq
+              store: hb,
+              status: Bb,
+              autoRenewStatus: Ob,
+              managementUrl: Gb
             }
-            of Object.values(qq.subscriptions)) !(0, Fq.j)(gq) || (0, Fq.m)(Yq) || "willNotRenew" === lq || Eq.has(gq) || Eq.set(gq, null !== Oq && void 0 !== Oq ? Oq : Fq.p[gq]);
-          return Array.from(Eq, (qq => {
-            let [Eq, gq] = qq;
+            of Object.values(bb.subscriptions)) !(0, yb.k)(hb) || (0, yb.m)(Bb) || "willNotRenew" === Ob || ub.has(hb) || ub.set(hb, null !== Gb && void 0 !== Gb ? Gb : yb.q[hb]);
+          return Array.from(ub, (bb => {
+            let [ub, hb] = bb;
             return {
-              store: Eq,
-              managementUrl: gq
+              store: ub,
+              managementUrl: hb
             }
           }))
-        }(await (0, mE.k)((0, xE.d)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (qq) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", qq), null
+        }(await (0, Uu.q)((0, Lu.g)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (bb) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", bb), null
       }
     }
-    var cE = gq(296),
-      uE = gq(2454);
-    const BE = {
+    var Su = hb(298),
+      au = hb(2374);
+    const Hu = {
       appStore: {
         name: "App Store",
-        ...cE.Pb.appStore
+        ...Su.ec.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...cE.Pb.googlePlay
+        ...Su.ec.googlePlay
       },
       discord: {
         name: "Discord",
-        ...cE.Pb.discord
+        ...Su.ec.discord
       }
     };
 
-    function WE(qq) {
+    function wu(bb) {
       let {
-        warning: Eq,
-        subscriptions: gq
-      } = qq;
+        warning: ub,
+        subscriptions: hb
+      } = bb;
       const {
-        t: Yq
-      } = (0, mq.v)();
-      return null !== gq && 0 === gq.length ? (0, Bq.jsx)(Bq.Fragment, {
-        children: Yq(Eq)
-      }) : (0, Bq.jsxs)("div", {
+        t: Bb
+      } = (0, Ub.K)();
+      return null !== hb && 0 === hb.length ? (0, Hb.jsx)(Hb.Fragment, {
+        children: Bb(ub)
+      }) : (0, Hb.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [Yq(Eq), null === gq && (0, Bq.jsx)("div", {
+        children: [Bb(ub), null === hb && (0, Hb.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: Yq("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== gq && (0, Bq.jsxs)(Bq.Fragment, {
-          children: [(0, Bq.jsx)("div", {
+          children: Bb("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== hb && (0, Hb.jsxs)(Hb.Fragment, {
+          children: [(0, Hb.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: Yq("auth:deleteAccountStoreSubscriptions")
-          }), (0, Bq.jsx)(uE.e, {
+            children: Bb("auth:deleteAccountStoreSubscriptions")
+          }), (0, Hb.jsx)(au.c, {
             className: "DeleteAccountSubtitleLinks",
-            links: gq.map((qq => {
+            links: hb.map((bb => {
               let {
-                store: Eq,
-                managementUrl: gq
-              } = qq;
+                store: ub,
+                managementUrl: hb
+              } = bb;
               return {
-                ...BE[Eq],
-                url: gq
+                ...Hu[ub],
+                url: hb
               }
             }))
           })]
@@ -416,703 +416,703 @@ export const modules = {
       })
     }
 
-    function NE(qq) {
+    function Zu(bb) {
       let {
-        showing: Eq
-      } = qq;
+        showing: ub
+      } = bb;
       const {
-        userContext: gq,
-        isUserContextUpdating: lq
-      } = (0, aq.c)(), {
-        t: Oq
-      } = (0, mq.v)(), [xq, Aq] = (0, Yq.useState)(!1), [uq, Wq] = (0, Yq.useState)(null), Nq = (0, Yq.useRef)(Eq);
-      (0, Yq.useEffect)((() => (Nq.current = Eq, () => {
-        Nq.current = !1
-      })), [Eq]);
-      const Vq = lq || xq;
-      async function dq() {
-        const qq = function(qq) {
-            if ((0, nq.c)()) return "auth:discordActivityDeleteAccountLossWarning";
-            return qq ? "auth:deleteAccountLossWarning" : "auth:deleteGuestAccountWarning"
-          }(gq.isLoggedIn()),
-          Eq = (0, gE.c)(gq.availableUserContextTypes) ? await AE() : [];
-        if (!Nq.current) return YE.b.ok();
-        if (!0 !== await lE.NotificationProvider.showPromptPopup({
+        userContext: hb,
+        isUserContextUpdating: Ob
+      } = (0, Xb.d)(), {
+        t: Gb
+      } = (0, Ub.K)(), [Lb, Yb] = (0, Bb.useState)(!1), [ab, wb] = (0, Bb.useState)(null), Zb = (0, Bb.useRef)(ub);
+      (0, Bb.useEffect)((() => (Zb.current = ub, () => {
+        Zb.current = !1
+      })), [ub]);
+      const pb = Ob || Lb;
+      async function ob() {
+        const bb = function(bb) {
+            if ((0, xb.d)()) return "auth:discordActivityDeleteAccountLossWarning";
+            return bb ? "auth:deleteAccountLossWarning" : "auth:deleteGuestAccountWarning"
+          }(hb.isLoggedIn()),
+          ub = (0, hu.b)(hb.availableUserContextTypes) ? await Yu() : [];
+        if (!Zb.current) return Bu.b.ok();
+        if (!0 !== await Ou.NotificationProvider.showPromptPopup({
             title: "auth:deleteAccountPopupTitleNamed",
             textOpts: {
               title: {
-                playerName: (0, Mq.e)(gq.getPlayerName(), !jq.featureFlags.canSeeRealPlayerNames)
+                playerName: (0, tb.e)(hb.getPlayerName(), !Ab.featureFlags.canSeeRealPlayerNames)
               }
             },
-            subtitle: (0, Bq.jsx)(WE, {
-              warning: qq,
-              subscriptions: Eq
+            subtitle: (0, Hb.jsx)(wu, {
+              warning: bb,
+              subscriptions: ub
             }),
             confirmText: "auth:deleteAccount",
             destructive: !0,
             confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
             cancelText: "general:cancel",
             cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-          }).getResult()) return YE.b.ok();
-        const Yq = await (0, bq.postJsonWithMetricsCookiesAndJsonResponse)(`${iq.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-          gameState: rq.b.get("gameState")
+          }).getResult()) return Bu.b.ok();
+        const Bb = await (0, zb.postJsonWithMetricsCookiesAndJsonResponse)(`${gb.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+          gameState: jb.d.get("gameState")
         }, {
           retries: 3
-        }, gq.getMetricsCookies());
-        if (Yq.error) return YE.b.error(Yq.error);
-        if ((0, nq.c)()) {
-          (await OE.q.discordActivity()).exit("User deleted their account")
+        }, hb.getMetricsCookies());
+        if (Bb.error) return Bu.b.error(Bb.error);
+        if ((0, xb.d)()) {
+          (await Gu.l.discordActivity()).exit("User deleted their account")
         }
-        return (0, bq.forgetStoredGuestAccount)(gq.whamm), (0, bq.forceGlobalSignOut)(!0), YE.b.ok()
+        return (0, zb.forgetStoredGuestAccount)(hb.whamm), (0, zb.forceGlobalSignOut)(!0), Bu.b.ok()
       }
-      return (0, Bq.jsxs)("div", {
+      return (0, Hb.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, Bq.jsxs)(cq.K, {
+        children: [(0, Hb.jsxs)(Sb.H, {
           onClick: async function() {
-            if (!xq) {
-              Aq(!0);
+            if (!Lb) {
+              Yb(!0);
               try {
-                const qq = await dq(),
-                  Eq = qq.isError() ? qq.asError().message : null;
-                Wq(Eq)
-              } catch (qq) {
-                console.error("Failed to delete account:", qq), Wq(Oq("auth:genericDeleteAccountError"))
+                const bb = await ob(),
+                  ub = bb.isError() ? bb.asError().message : null;
+                wb(ub)
+              } catch (bb) {
+                console.error("Failed to delete account:", bb), wb(Gb("auth:genericDeleteAccountError"))
               }
-              Aq(!1)
+              Yb(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: Vq,
-          children: [Vq && (0, Bq.jsx)("div", {
+          disabled: pb,
+          children: [pb && (0, Hb.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, Bq.jsx)(yq.e, {})
-          }), Oq("auth:deleteAccount")]
-        }), uq && (0, Bq.jsx)("div", {
+            children: (0, Hb.jsx)(db.c, {})
+          }), Gb("auth:deleteAccount")]
+        }), ab && (0, Hb.jsx)("div", {
           className: "DeleteAccountError",
-          children: uq
+          children: ab
         })]
       })
     }
-    var aE = gq(3466),
-      VE = gq(3476),
-      dE = gq(3471);
+    var Xu = hb(3373),
+      pu = hb(3385),
+      ou = hb(3379);
 
-    function jE(qq) {
+    function Au(bb) {
       let {
-        showing: Eq
-      } = qq;
+        showing: ub
+      } = bb;
       const {
-        t: gq
-      } = (0, mq.v)(), {
-        data: Yq,
-        failed: lq
-      } = (0, kq.h)(aE.d, Eq), Oq = null === Yq ? null : (0, aE.h)(Yq);
-      return (0, Bq.jsxs)("div", {
+        t: hb
+      } = (0, Ub.K)(), {
+        data: Bb,
+        failed: Ob
+      } = (0, Pb.e)(Xu.e, ub), Gb = null === Bb ? null : (0, Xu.h)(Bb);
+      return (0, Hb.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, Bq.jsx)("div", {
+        children: [(0, Hb.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: gq("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === Oq && !lq && (0, Bq.jsx)(yq.e, {}), null === Oq && lq && (0, Bq.jsxs)("div", {
+          children: hb("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === Gb && !Ob && (0, Hb.jsx)(db.c, {}), null === Gb && Ob && (0, Hb.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [gq("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, Bq.jsx)(cq.g, {
+          children: [hb("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, Hb.jsx)(Sb.e, {
             className: "SmallTextLight",
             onClick: () => {
-              aE.d.refresh()
+              Xu.e.refresh()
             },
-            children: gq("general:tryAgain")
+            children: hb("general:tryAgain")
           })]
-        }), 0 === (null === Oq || void 0 === Oq ? void 0 : Oq.length) && (0, Bq.jsx)("div", {
+        }), 0 === (null === Gb || void 0 === Gb ? void 0 : Gb.length) && (0, Hb.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: gq("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== Oq && Oq.length > 0 && (0, Bq.jsx)("ul", {
+          children: hb("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== Gb && Gb.length > 0 && (0, Hb.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: Oq.map((qq => {
+          children: Gb.map((bb => {
             let {
-              name: Eq,
-              exclusion: Yq
-            } = qq;
-            const lq = dE.e[Yq];
-            return (0, Bq.jsxs)("li", {
+              name: ub,
+              exclusion: Bb
+            } = bb;
+            const Ob = ou.h[Bb];
+            return (0, Hb.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, Bq.jsx)("div", {
+              children: [(0, Hb.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: Eq
-              }), (0, Bq.jsx)(cq.i, {
+                children: ub
+              }), (0, Hb.jsx)(Sb.g, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, VE.g)(lq, Eq, {
+                  (0, pu.g)(Ob, ub, {
                     chatMessage: null
                   })
                 },
-                children: gq(dE.f[lq].text)
+                children: hb(ou.i[Ob].text)
               })]
-            }, Eq)
+            }, ub)
           }))
         })]
       })
     }
-    const HE = (0, Yq.memo)((function(qq) {
-      var Eq;
+    const lu = (0, Bb.memo)((function(bb) {
+      var ub;
       let {
-        showing: gq,
-        inGame: lq
-      } = qq;
+        showing: hb,
+        inGame: Ob
+      } = bb;
       const {
-        t: Aq,
-        selectedLanguage: uq
-      } = (0, mq.v)(), {
-        hideSocialLocationFrom: Wq
-      } = (0, rq.j)(["hideSocialLocationFrom"]), Vq = (0, Nq.c)(), {
-        userContext: dq,
-        isUserContextUpdating: Hq
-      } = (0, aq.c)(), [oq, Pq] = (0, Yq.useState)(null !== (Eq = dq.getPlayerName()) && void 0 !== Eq ? Eq : ""), [vq, hq] = (0, Yq.useState)(null), {
-        purchasing: kq,
-        outcome: Rq,
-        purchase: Uq
-      } = (0, Zq.c)("/super-rank-welcome"), Fq = (0, Gq.nc)((0, mq.h)(uq.code, "general:timeLeft"), dq.superRankInfo), sq = wq(gq), Xq = Fq ? Aq("general:timeLeft", {
-        time: Fq
-      }) : sq, [Dq, qE] = (0, Yq.useState)(!1), [gE, YE] = (0, Yq.useState)(!1), lE = (0, Yq.useRef)(null), OE = (0, Yq.useRef)(null), mE = (0, Sq.e)({
+        t: Yb,
+        selectedLanguage: ab
+      } = (0, Ub.K)(), {
+        hideSocialLocationFrom: wb
+      } = (0, jb.j)(["hideSocialLocationFrom"]), pb = (0, Zb.d)(), {
+        userContext: ob,
+        isUserContextUpdating: lb
+      } = (0, Xb.d)(), [Kb, Wb] = (0, Bb.useState)(null !== (ub = ob.getPlayerName()) && void 0 !== ub ? ub : ""), [nb, Db] = (0, Bb.useState)(null), {
+        purchasing: Pb,
+        outcome: qb,
+        purchase: Eb
+      } = (0, ib.b)("/super-rank-welcome"), yb = (0, Mb.gc)((0, Ub.o)(ab.code, "general:timeLeft"), ob.superRankInfo), Vb = fb(hb), Fb = yb ? Yb("general:timeLeft", {
+        time: yb
+      }) : Vb, [Rb, bu] = (0, Bb.useState)(!1), [hu, Bu] = (0, Bb.useState)(!1), Ou = (0, Bb.useRef)(null), Gu = (0, Bb.useRef)(null), Uu = (0, Nb.f)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), xE = null === mE, AE = null !== mE && void 0 !== mE ? mE : [], cE = dq !== bq.NULL_USER_CONTEXT && !dq.isLoggedIn(), uE = cE && 0 !== (null === mE || void 0 === mE ? void 0 : mE.length), [BE, WE] = (0, Yq.useState)([]), [aE, VE] = (0, Yq.useState)(!1), dE = dq.playerHasRank("youtuber"), HE = (0, Yq.useCallback)((() => pq.e.getPlayerProfile(dq, {
-        lowerCaseName: dq.getPlayerName().toLowerCase()
-      }).then((qq => {
-        WE(qq.socialLinks)
-      })).catch((qq => {
-        console.error("Failed to refresh social links", qq)
-      }))), [dq]);
+      }), Lu = null === Uu, Yu = null !== Uu && void 0 !== Uu ? Uu : [], Su = ob !== zb.NULL_USER_CONTEXT && !ob.isLoggedIn(), au = Su && 0 !== (null === Uu || void 0 === Uu ? void 0 : Uu.length), [Hu, wu] = (0, Bb.useState)([]), [Xu, pu] = (0, Bb.useState)(!1), ou = ob.playerHasRank("youtuber"), lu = (0, Bb.useCallback)((() => sb.e.getPlayerProfile(ob, {
+        lowerCaseName: ob.getPlayerName().toLowerCase()
+      }).then((bb => {
+        wu(bb.socialLinks)
+      })).catch((bb => {
+        console.error("Failed to refresh social links", bb)
+      }))), [ob]);
 
-      function PE(qq) {
-        qq !== oq && ((0, Mq.r)(qq) ? (qq = (0, Mq.t)(qq), hq("Only letters, numbers, and _")) : hq(null), lE.current && (lE.current.value = qq), Pq(qq))
+      function Wu(bb) {
+        bb !== Kb && ((0, tb.n)(bb) ? (bb = (0, tb.r)(bb), Db("Only letters, numbers, and _")) : Db(null), Ou.current && (Ou.current.value = bb), Wb(bb))
       }
-      return (0, Yq.useEffect)((() => (!0 === gq ? (clearInterval(OE.current), OE.current = setInterval(Vq, 1e3)) : clearInterval(OE.current), () => {
-        clearInterval(OE.current)
-      })), [gq, Vq]), (0, Yq.useEffect)((() => {
-        var qq;
-        Pq(null !== (qq = dq.getPlayerName()) && void 0 !== qq ? qq : "")
-      }), [dq]), (0, Yq.useEffect)((() => {
-        if (!gq || !dE || Hq) return;
-        let qq = !1;
-        return VE(!0), WE([]), pq.e.getPlayerProfile(dq, {
-          lowerCaseName: dq.getPlayerName().toLowerCase()
-        }).then((Eq => {
-          qq || WE(Eq.socialLinks)
-        })).catch((qq => {
-          console.error("Failed to load social links", qq)
+      return (0, Bb.useEffect)((() => (!0 === hb ? (clearInterval(Gu.current), Gu.current = setInterval(pb, 1e3)) : clearInterval(Gu.current), () => {
+        clearInterval(Gu.current)
+      })), [hb, pb]), (0, Bb.useEffect)((() => {
+        var bb;
+        Wb(null !== (bb = ob.getPlayerName()) && void 0 !== bb ? bb : "")
+      }), [ob]), (0, Bb.useEffect)((() => {
+        if (!hb || !ou || lb) return;
+        let bb = !1;
+        return pu(!0), wu([]), sb.e.getPlayerProfile(ob, {
+          lowerCaseName: ob.getPlayerName().toLowerCase()
+        }).then((ub => {
+          bb || wu(ub.socialLinks)
+        })).catch((bb => {
+          console.error("Failed to load social links", bb)
         })).finally((() => {
-          qq || VE(!1)
+          bb || pu(!1)
         })), () => {
-          qq = !0
+          bb = !0
         }
-      }), [gq, dE, Hq, dq]), (0, Bq.jsxs)("div", {
-        className: Oq()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: lq
+      }), [hb, ou, lb, ob]), (0, Hb.jsxs)("div", {
+        className: Gb()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: Ob
         }),
-        children: [lq && (0, Bq.jsx)("div", {
+        children: [Ob && (0, Hb.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: Aq("settingsMenu:accountSettingsInGameWarning")
-        }), (0, Bq.jsxs)("div", {
+          children: Yb("settingsMenu:accountSettingsInGameWarning")
+        }), (0, Hb.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, Bq.jsxs)("div", {
+          children: [(0, Hb.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [Aq("homePage:discordNamePopupTitle"), (0, Bq.jsxs)(fq.LinkPreserveSearch, {
+            children: [Yb("homePage:discordNamePopupTitle"), (0, Hb.jsxs)(vb.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, Tq.d)({
-                name: dq.getPlayerName()
+              to: (0, Jb.g)({
+                name: ob.getPlayerName()
               }),
               onClick: () => {
-                rq.b.set({
+                jb.d.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, Bq.jsx)(xq.d, {
+              children: [(0, Hb.jsx)(Lb.e, {
                 name: "arrow-up-right-from-square"
-              }), " ", Aq("profileCard:viewProfile")]
+              }), " ", Yb("profileCard:viewProfile")]
             })]
-          }), (0, Bq.jsxs)("div", {
+          }), (0, Hb.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, Bq.jsxs)("div", {
+            children: [(0, Hb.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [jq.featureFlags.canChangeName && (0, Bq.jsx)(Qq.b, {
+              children: [Ab.featureFlags.canChangeName && (0, Hb.jsx)(Cb.b, {
                 className: "EnterName",
-                placeholderText: Aq("homePage:enterName"),
-                maxLength: Mq.l,
-                defaultValue: oq,
-                onValueChange: qq => {
-                  PE(qq)
+                placeholderText: Yb("homePage:enterName"),
+                maxLength: tb.l,
+                defaultValue: Kb,
+                onValueChange: bb => {
+                  Wu(bb)
                 },
-                forcedText: Dq || !jq.featureFlags.canChangeName ? oq : null,
+                forcedText: Rb || !Ab.featureFlags.canChangeName ? Kb : null,
                 blurOnEnter: !0,
-                domRef: lE
-              }), (0, Bq.jsx)(cq.g, {
+                domRef: Ou
+              }), (0, Hb.jsx)(Sb.e, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  PE((0, Mq.h)())
+                  Wu((0, tb.h)())
                 },
-                children: (0, Bq.jsx)(xq.d, {
+                children: (0, Hb.jsx)(Lb.e, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !jq.featureFlags.canChangeName && (0, Bq.jsx)("div", {
+              }), !Ab.featureFlags.canChangeName && (0, Hb.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, Mq.e)(oq, !jq.featureFlags.canSeeRealPlayerNames)
+                children: (0, tb.e)(Kb, !Ab.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, Bq.jsx)(cq.g, {
+            }), (0, Hb.jsx)(Sb.e, {
               className: "ChooseNameButton",
-              disabled: Dq || oq === dq.getPlayerName(),
+              disabled: Rb || Kb === ob.getPlayerName(),
               onClick: () => {
-                oq.length < Mq.n ? hq(Aq("homePage:changeNameMinLengthError", {
-                  length: Mq.n
-                })) : oq.length > Mq.l ? hq(Aq("homePage:changeNameMaxLengthError", {
-                  length: Mq.l
-                })) : (qE(!0), hq(null), async function(qq, Eq, gq, Yq) {
-                  const lq = await (0, bq.postJsonWithMetricsCookiesAndJsonResponse)(`${iq.clientSideServerUrls.indexUrl}/index/name/update`, {
-                    name: qq
+                Kb.length < tb.m ? Db(Yb("homePage:changeNameMinLengthError", {
+                  length: tb.m
+                })) : Kb.length > tb.l ? Db(Yb("homePage:changeNameMaxLengthError", {
+                  length: tb.l
+                })) : (bu(!0), Db(null), async function(bb, ub, hb, Bb) {
+                  const Ob = await (0, zb.postJsonWithMetricsCookiesAndJsonResponse)(`${gb.clientSideServerUrls.indexUrl}/index/name/update`, {
+                    name: bb
                   }, {
                     retries: 3
-                  }, Eq.getMetricsCookies()).catch((qq => (console.error("Bad response from the server when trying to update name:", qq), {
+                  }, ub.getMetricsCookies()).catch((bb => (console.error("Bad response from the server when trying to update name:", bb), {
                     err: "An error occurred trying to change your name! Please report on discord what steps you took to get this error message."
                   })));
-                  lq.err ? (console.error("Error when trying to get with new name from DB", lq.err), Yq(lq.err)) : !0 === lq.nameExists ? Yq("Name is already taken") : gq(qq)
-                }(oq, dq, (qq => {
-                  dq.setPlayerName(qq), qE(!1)
-                }), (qq => {
-                  hq(qq), qE(!1)
+                  Ob.err ? (console.error("Error when trying to get with new name from DB", Ob.err), Bb(Ob.err)) : !0 === Ob.nameExists ? Bb("Name is already taken") : hb(bb)
+                }(Kb, ob, (bb => {
+                  ob.setPlayerName(bb), bu(!1)
+                }), (bb => {
+                  Db(bb), bu(!1)
                 })))
               },
-              children: Aq("general:choose")
+              children: Yb("general:choose")
             })]
-          }), vq && (0, Bq.jsx)("div", {
+          }), nb && (0, Hb.jsx)("div", {
             className: "ChooseAccNameError",
-            children: vq
+            children: nb
           })]
-        }), (0, Bq.jsx)(tq.d, {
+        }), (0, Hb.jsx)(rb.c, {
           label: (() => {
-            if ((0, Cq.l)(Wq)) {
-              const qq = (0, mq.h)(uq.code, "general:timeLeft"),
-                Eq = (0, Gq.lb)(qq, Date.now(), Wq + Cq.k);
-              return `${Aq("settingsMenu:hideSocialLocation")} (${Aq("general:timeLeft",{time:Eq})})`
+            if ((0, Tb.n)(wb)) {
+              const bb = (0, Ub.o)(ab.code, "general:timeLeft"),
+                ub = (0, Mb.fb)(bb, Date.now(), wb + Tb.k);
+              return `${Yb("settingsMenu:hideSocialLocation")} (${Yb("general:timeLeft",{time:ub})})`
             }
-            return Aq("settingsMenu:hideSocialLocation")
+            return Yb("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const qq = !(0, Cq.l)(Wq);
-            (0, eq.reportAnalyticsClick)({
+            const bb = !(0, Tb.n)(wb);
+            (0, Qb.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: qq ? "on" : "off"
-            }), YE(!0), pq.e.setHideSocialLocation(dq, qq).then((() => {
-              rq.b.set({
-                hideSocialLocationFrom: qq ? Date.now() : null
+              value: bb ? "on" : "off"
+            }), Bu(!0), sb.e.setHideSocialLocation(ob, bb).then((() => {
+              jb.d.set({
+                hideSocialLocationFrom: bb ? Date.now() : null
               })
             })).finally((() => {
-              YE(!1)
+              Bu(!1)
             }))
           },
-          checked: (0, Cq.l)(Wq),
-          disabled: gE
-        }), dE && (0, Bq.jsxs)("div", {
+          checked: (0, Tb.n)(wb),
+          disabled: hu
+        }), ou && (0, Hb.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, Bq.jsx)("div", {
+          children: [(0, Hb.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: Aq("settingsMenu:socialLinks")
-          }), aE && (0, Bq.jsx)(yq.e, {}), !aE && (0, Bq.jsx)(Iq.d, {
-            socialLinks: BE,
+            children: Yb("settingsMenu:socialLinks")
+          }), Xu && (0, Hb.jsx)(db.c, {}), !Xu && (0, Hb.jsx)(cb.e, {
+            socialLinks: Hu,
             editable: !0,
-            userContext: dq,
-            onLinksUpdated: HE
+            userContext: ob,
+            onLinksUpdated: lu
           })]
-        }), (0, Bq.jsxs)("div", {
+        }), (0, Hb.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, Bq.jsx)("div", {
+          children: [(0, Hb.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: Aq(uE ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), xE && (0, Bq.jsx)(yq.e, {}), !xE && 0 === AE.length && (0, Bq.jsx)("div", {
+            children: Yb(au ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), Lu && (0, Hb.jsx)(db.c, {}), !Lu && 0 === Yu.length && (0, Hb.jsx)("div", {
             className: "NoLoginOptions",
-            children: Aq("auth:noLoginOptions")
-          }), !xE && AE.length > 0 && "crazygames" !== nq.n && (0, Bq.jsx)("div", {
+            children: Yb("auth:noLoginOptions")
+          }), !Lu && Yu.length > 0 && "crazygames" !== xb.s && (0, Hb.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: AE
-          }), !xE && AE.length > 0 && "crazygames" === nq.n && (0, Bq.jsxs)("div", {
+            children: Yu
+          }), !Lu && Yu.length > 0 && "crazygames" === xb.s && (0, Hb.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [AE[0], AE.length > 1 && (0, Bq.jsxs)(Bq.Fragment, {
-              children: [(0, Bq.jsxs)("div", {
+            children: [Yu[0], Yu.length > 1 && (0, Hb.jsxs)(Hb.Fragment, {
+              children: [(0, Hb.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, Bq.jsx)("span", {
+                children: [(0, Hb.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: Aq("auth:legacyLoginOptions")
-                }), (0, Bq.jsx)(Kq.c, {
+                  children: Yb("auth:legacyLoginOptions")
+                }), (0, Hb.jsx)(kb.b, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: Aq("auth:legacyLoginOptionsInfo")
+                  hoverInfo: Yb("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, Bq.jsx)("div", {
+              }), (0, Hb.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: AE.slice(1)
+                children: Yu.slice(1)
               })]
             })]
-          }), jq.featureFlags.useLogin && (null !== dq.loggedInInfo || dq.isLoggedIn()) && (0, Bq.jsxs)(Bq.Fragment, {
-            children: [(0, Bq.jsx)("div", {
+          }), Ab.featureFlags.useLogin && (null !== ob.loggedInInfo || ob.isLoggedIn()) && (0, Hb.jsxs)(Hb.Fragment, {
+            children: [(0, Hb.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, Bq.jsxs)(cq.K, {
+            }), (0, Hb.jsxs)(Sb.H, {
               onClick: () => {
-                (0, bq.forceGlobalSignOut)()
+                (0, zb.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, Bq.jsx)(xq.d, {
+              children: [(0, Hb.jsx)(Lb.e, {
                 name: "right-from-bracket"
-              }), Aq("auth:signOut")]
+              }), Yb("auth:signOut")]
             })]
           })]
-        }), !dq.playerHasRank("super") && (0, Jq.purchasesAllowed)() && (0, Bq.jsxs)("div", {
+        }), !ob.playerHasRank("super") && (0, Ib.purchasesAllowed)() && (0, Hb.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, Bq.jsxs)("div", {
+          children: [(0, Hb.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, Bq.jsx)(xq.d, {
+            children: [(0, Hb.jsx)(Lb.e, {
               name: "bolt"
-            }), Aq("homePage:superRank")]
-          }), (0, Bq.jsxs)("div", {
+            }), Yb("homePage:superRank")]
+          }), (0, Hb.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, Bq.jsxs)(cq.p, {
+            children: [(0, Hb.jsxs)(Sb.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Lq.n)({
+                (0, mb.o)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, Bq.jsx)(xq.d, {
+              children: [(0, Hb.jsx)(Lb.e, {
                 name: "bolt"
-              }), Aq("homePage:getSuperRank")]
-            }), (0, Bq.jsxs)(cq.p, {
+              }), Yb("homePage:getSuperRank")]
+            }), (0, Hb.jsxs)(Sb.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Lq.n)({
+                (0, mb.o)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, Bq.jsx)(xq.d, {
+              children: [(0, Hb.jsx)(Lb.e, {
                 name: "bolt"
-              }), Aq("homePage:giftSuperRank")]
+              }), Yb("homePage:giftSuperRank")]
             })]
           })]
-        }), dq.playerHasRank("super") && (0, Bq.jsxs)("div", {
+        }), ob.playerHasRank("super") && (0, Hb.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, Bq.jsxs)("div", {
+          children: [(0, Hb.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, Bq.jsx)(xq.d, {
+            children: [(0, Hb.jsx)(Lb.e, {
               name: "bolt"
-            }), Aq("homePage:superRank"), Xq && (0, Bq.jsxs)("div", {
+            }), Yb("homePage:superRank"), Fb && (0, Hb.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", Xq, ")"]
+              children: ["(", Fb, ")"]
             })]
-          }), (0, Jq.purchasesAllowed)() && (0, Bq.jsxs)("div", {
+          }), (0, Ib.purchasesAllowed)() && (0, Hb.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, Gq.Jc)(dq.superRankInfo) && (0, Bq.jsxs)(cq.p, {
+            children: [!(0, Mb.Cc)(ob.superRankInfo) && (0, Hb.jsxs)(Sb.m, {
               className: "AccountSettingsSuperRankProlong",
-              loading: kq,
+              loading: Pb,
               onClick: () => {
-                Uq(zq.n.id, null)
+                Eb(eb.o.id, null)
               },
-              children: [(0, Bq.jsx)(xq.d, {
+              children: [(0, Hb.jsx)(Lb.e, {
                 name: "bolt"
-              }), Aq("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: zq.n.product.days,
-                price: zq.n.price
+              }), Yb("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: eb.o.product.days,
+                price: eb.o.price
               })]
-            }), (0, Bq.jsxs)(cq.p, {
+            }), (0, Hb.jsxs)(Sb.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Lq.n)({
+                (0, mb.o)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, Bq.jsx)(xq.d, {
+              children: [(0, Hb.jsx)(Lb.e, {
                 name: "bolt"
-              }), Aq("homePage:giftSuperRank")]
+              }), Yb("homePage:giftSuperRank")]
             })]
-          }), Rq && (0, Bq.jsx)("div", {
+          }), qb && (0, Hb.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: Aq(Rq.translationKey)
+            children: Yb(qb.translationKey)
           })]
-        }), (0, Bq.jsx)(EE, {
-          showing: gq
-        }), jq.featureFlags.useSocialFeatures && (0, Bq.jsx)(jE, {
-          showing: gq
-        }), (0, Bq.jsxs)("div", {
+        }), (0, Hb.jsx)(uu, {
+          showing: hb
+        }), Ab.featureFlags.useSocialFeatures && (0, Hb.jsx)(Au, {
+          showing: hb
+        }), (0, Hb.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, Bq.jsxs)("div", {
+          children: [(0, Hb.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, Bq.jsx)("div", {
+            children: [(0, Hb.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: Aq(oE(cE, uE))
-            }), (0, nq.c)() && (0, Bq.jsx)("div", {
+              children: Yb(Ku(Su, au))
+            }), (0, xb.d)() && (0, Hb.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: Aq("auth:discordActivityKickWarning")
-            }), (0, Bq.jsx)(NE, {
-              showing: gq
+              children: Yb("auth:discordActivityKickWarning")
+            }), (0, Hb.jsx)(Zu, {
+              showing: hb
             })]
-          }), (0, Bq.jsx)("div", {
+          }), (0, Hb.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: Aq("auth:deleteAccountWarning")
+            children: Yb("auth:deleteAccountWarning")
           })]
         })]
       })
     }));
 
-    function oE(qq, Eq) {
-      return qq ? Eq ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function Ku(bb, ub) {
+      return bb ? ub ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var PE = gq(9176),
-      QE = gq(3040),
-      yE = gq(1241),
-      tE = gq(1405);
-    const rE = (0, Yq.memo)((function(qq) {
+    var Wu = hb(8978),
+      Cu = hb(2925),
+      du = hb(1144),
+      ru = hb(1336);
+    const ju = (0, Bb.memo)((function(bb) {
         let {
-          inGame: Eq
-        } = qq;
+          inGame: ub
+        } = bb;
         const {
-          t: gq,
-          selectedLanguage: Yq
-        } = (0, mq.v)(), {
-          clientEscMenuOptions: lq,
-          showDebugOverlay: Oq
-        } = (0, rq.j)(["clientEscMenuOptions", "showDebugOverlay"]), xq = (0, Vq.h)("hideCoordinates");
-        let Aq = "settingsMenu:showCoordinates",
-          cq = "settingsMenu:showChunkCoordinates";
+          t: hb,
+          selectedLanguage: Bb
+        } = (0, Ub.K)(), {
+          clientEscMenuOptions: Ob,
+          showDebugOverlay: Gb
+        } = (0, jb.j)(["clientEscMenuOptions", "showDebugOverlay"]), Lb = (0, pb.f)("hideCoordinates");
+        let Yb = "settingsMenu:showCoordinates",
+          Sb = "settingsMenu:showChunkCoordinates";
 
-        function uq(qq) {
-          const Eq = new Intl.DisplayNames([qq], {
+        function ab(bb) {
+          const ub = new Intl.DisplayNames([bb], {
             type: "language"
-          }).of(qq);
-          return Eq.charAt(0).toUpperCase() + Eq.slice(1)
+          }).of(bb);
+          return ub.charAt(0).toUpperCase() + ub.slice(1)
         }
-        return xq && (Aq = "settingsMenu:showCoordinatesHidden", cq = "settingsMenu:showChunkCoordinatesHidden"), (0, Bq.jsxs)("div", {
+        return Lb && (Yb = "settingsMenu:showCoordinatesHidden", Sb = "settingsMenu:showChunkCoordinatesHidden"), (0, Hb.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [Eq && jq.featureFlags.canUseInviteLinks && (0, Bq.jsxs)("div", {
+          children: [ub && Ab.featureFlags.canUseInviteLinks && (0, Hb.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, Bq.jsx)("div", {
+            children: [(0, Hb.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: gq("settingsMenu:inviteLink")
-            }), (0, Bq.jsx)(PE.e, {})]
-          }), (0, Bq.jsxs)("div", {
+              children: hb("settingsMenu:inviteLink")
+            }), (0, Hb.jsx)(Wu.i, {})]
+          }), (0, Hb.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, Bq.jsx)("div", {
+            children: [(0, Hb.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: gq("settingsMenu:language")
-            }), (0, Bq.jsx)(QE.d, {
-              options: Object.entries(mq.f).map((qq => {
-                let [Eq, gq] = qq;
+              children: hb("settingsMenu:language")
+            }), (0, Hb.jsx)(Cu.b, {
+              options: Object.entries(Ub.h).map((bb => {
+                let [ub, hb] = bb;
                 return {
-                  label: (0, Bq.jsxs)("div", {
+                  label: (0, Hb.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, Bq.jsx)("img", {
-                      src: gq.flagImg,
+                    children: [(0, Hb.jsx)("img", {
+                      src: hb.flagImg,
                       alt: "flag"
-                    }), (0, Bq.jsxs)("span", {
-                      children: [uq(Eq), " ", (0, Bq.jsxs)("span", {
+                    }), (0, Hb.jsxs)("span", {
+                      children: [ab(ub), " ", (0, Hb.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", Eq, ")"]
+                        children: ["(", ub, ")"]
                       })]
                     })]
                   }),
-                  value: Eq
+                  value: ub
                 }
               })),
-              value: Yq.code,
-              onChange: qq => {
-                yE.h.get().setCurrentLanguage(qq.value)
+              value: Bb.code,
+              onChange: bb => {
+                du.h.get().setCurrentLanguage(bb.value)
               }
             })]
-          }), !(0, jq.isMobileApp)() && (0, tE.d)() && jq.featureFlags.useForceRotateForceFullscreenOverlay && (0, Bq.jsx)(tq.d, {
-            label: gq("settingsMenu:disableFullscreenMode"),
-            checked: lq.disableFullscreen,
-            onClick: qq => {
-              rq.b.setClientEscMenuOptions({
-                disableFullscreen: qq
+          }), !(0, Ab.isMobileApp)() && (0, ru.g)() && Ab.featureFlags.useForceRotateForceFullscreenOverlay && (0, Hb.jsx)(rb.c, {
+            label: hb("settingsMenu:disableFullscreenMode"),
+            checked: Ob.disableFullscreen,
+            onClick: bb => {
+              jb.d.setClientEscMenuOptions({
+                disableFullscreen: bb
               })
             }
-          }), (0, Bq.jsx)(tq.d, {
-            label: gq(Aq),
-            checked: lq.showCoordinates,
-            onClick: qq => {
-              rq.b.setClientEscMenuOptions({
-                showCoordinates: qq
+          }), (0, Hb.jsx)(rb.c, {
+            label: hb(Yb),
+            checked: Ob.showCoordinates,
+            onClick: bb => {
+              jb.d.setClientEscMenuOptions({
+                showCoordinates: bb
               })
             },
-            disabled: xq
-          }), (0, Bq.jsx)(tq.d, {
-            label: gq(cq),
-            checked: lq.showChunkCoordinates,
-            onClick: qq => {
-              rq.b.setClientEscMenuOptions({
-                showChunkCoordinates: qq
+            disabled: Lb
+          }), (0, Hb.jsx)(rb.c, {
+            label: hb(Sb),
+            checked: Ob.showChunkCoordinates,
+            onClick: bb => {
+              jb.d.setClientEscMenuOptions({
+                showChunkCoordinates: bb
               })
             },
-            disabled: xq
-          }), (0, Bq.jsx)(tq.d, {
-            label: gq("settingsMenu:showFps"),
-            checked: lq.showFPS,
-            onClick: qq => {
-              rq.b.setClientEscMenuOptions({
-                showFPS: qq
+            disabled: Lb
+          }), (0, Hb.jsx)(rb.c, {
+            label: hb("settingsMenu:showFps"),
+            checked: Ob.showFPS,
+            onClick: bb => {
+              jb.d.setClientEscMenuOptions({
+                showFPS: bb
               })
             }
-          }), (0, Bq.jsx)(tq.d, {
-            label: gq("settingsMenu:disableBunnyHopping"),
-            checked: lq.disableBunnyHopping,
-            onClick: qq => {
-              rq.b.setClientEscMenuOptions({
-                disableBunnyHopping: qq
+          }), (0, Hb.jsx)(rb.c, {
+            label: hb("settingsMenu:disableBunnyHopping"),
+            checked: Ob.disableBunnyHopping,
+            onClick: bb => {
+              jb.d.setClientEscMenuOptions({
+                disableBunnyHopping: bb
               })
             }
-          }), (0, OE.F)() && (0, Bq.jsx)(tq.d, {
-            label: gq("settingsMenu:showChat"),
-            checked: lq.showChat,
-            onClick: qq => {
-              rq.b.setClientEscMenuOptions({
-                showChat: qq
+          }), (0, Gu.z)() && (0, Hb.jsx)(rb.c, {
+            label: hb("settingsMenu:showChat"),
+            checked: Ob.showChat,
+            onClick: bb => {
+              jb.d.setClientEscMenuOptions({
+                showChat: bb
               })
             }
-          }), (0, Bq.jsx)(tq.d, {
-            label: gq("settingsMenu:showDebugOverlay"),
-            checked: Oq,
-            onClick: qq => {
-              rq.b.set({
-                showDebugOverlay: qq
+          }), (0, Hb.jsx)(rb.c, {
+            label: hb("settingsMenu:showDebugOverlay"),
+            checked: Gb,
+            onClick: bb => {
+              jb.d.set({
+                showDebugOverlay: bb
               })
             }
-          }), jq.featureFlags.useSocialFeatures && (0, Bq.jsx)(tq.d, {
-            label: gq("settingsMenu:showFriendOnlineToasts"),
-            checked: lq.showFriendOnlineToasts,
-            onClick: qq => {
-              rq.b.setClientEscMenuOptions({
-                showFriendOnlineToasts: qq
+          }), Ab.featureFlags.useSocialFeatures && (0, Hb.jsx)(rb.c, {
+            label: hb("settingsMenu:showFriendOnlineToasts"),
+            checked: Ob.showFriendOnlineToasts,
+            onClick: bb => {
+              jb.d.setClientEscMenuOptions({
+                showFriendOnlineToasts: bb
               })
             }
-          }), (0, Bq.jsx)(tq.d, {
-            label: gq("settingsMenu:showNewItemIndicator"),
-            checked: lq.showNewItemIndicator,
-            onClick: qq => {
-              rq.b.setClientEscMenuOptions({
-                showNewItemIndicator: qq
+          }), (0, Hb.jsx)(rb.c, {
+            label: hb("settingsMenu:showNewItemIndicator"),
+            checked: Ob.showNewItemIndicator,
+            onClick: bb => {
+              jb.d.setClientEscMenuOptions({
+                showNewItemIndicator: bb
               })
             }
           })]
         })
       })),
-      vE = (0, Yq.memo)((function() {
+      nu = (0, Bb.memo)((function() {
         const {
-          t: qq
-        } = (0, mq.v)(), {
-          soundVolume: Eq,
-          musicVolume: gq
-        } = (0, rq.j)(["soundVolume", "musicVolume"]);
-        return (0, Bq.jsxs)("div", {
+          t: bb
+        } = (0, Ub.K)(), {
+          soundVolume: ub,
+          musicVolume: hb
+        } = (0, jb.j)(["soundVolume", "musicVolume"]);
+        return (0, Hb.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, Bq.jsx)(tq.h, {
-            name: qq("settingsMenu:musicVolume"),
+          children: [(0, Hb.jsx)(rb.h, {
+            name: bb("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: gq,
-            onChange: qq => {
-              rq.b.set({
-                musicVolume: Math.round(100 * qq) / 100
+            initValue: hb,
+            onChange: bb => {
+              jb.d.set({
+                musicVolume: Math.round(100 * bb) / 100
               })
             },
-            format: qq => qq.toFixed(2)
-          }), (0, Bq.jsx)(tq.h, {
-            name: qq("settingsMenu:soundEffectsVolume"),
+            format: bb => bb.toFixed(2)
+          }), (0, Hb.jsx)(rb.h, {
+            name: bb("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: Eq,
-            onChange: qq => {
-              rq.b.set({
-                soundVolume: Math.round(100 * qq) / 100
+            initValue: ub,
+            onChange: bb => {
+              jb.d.set({
+                soundVolume: Math.round(100 * bb) / 100
               })
             },
-            format: qq => qq.toFixed(2)
+            format: bb => bb.toFixed(2)
           })]
         })
       }));
-    var hE = gq(687),
-      nE = gq(1416),
-      bE = gq(3531),
-      iE = gq(9178),
-      ZE = gq(3369);
-    const fE = {
+    var Du = hb(665),
+      xu = hb(1348),
+      zu = hb(3451),
+      gu = hb(8985),
+      iu = hb(3278);
+    const vu = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function ME() {
+    function tu() {
       const {
-        t: qq
-      } = (0, mq.v)(), Eq = (0, ZE.c)(), {
-        mobilePushNotificationsCanAsk: gq
-      } = (0, rq.j)(["mobilePushNotificationsCanAsk"]), [lq, Oq] = (0, Yq.useState)(null), [xq, Aq] = (0, Yq.useState)(!1), [uq, Wq] = (0, Yq.useState)(null), [Nq, aq] = (0, Yq.useState)(!1), Vq = (0, Yq.useCallback)((() => {
-        (0, bE.e)().then((qq => {
-          Eq.current && (Oq(qq), Aq(!1))
-        })).catch((qq => {
-          console.error("Failed to load push notification targets:", qq), Eq.current && Aq(!0)
+        t: bb
+      } = (0, Ub.K)(), ub = (0, iu.d)(), {
+        mobilePushNotificationsCanAsk: hb
+      } = (0, jb.j)(["mobilePushNotificationsCanAsk"]), [Ob, Gb] = (0, Bb.useState)(null), [Lb, Yb] = (0, Bb.useState)(!1), [ab, wb] = (0, Bb.useState)(null), [Zb, Xb] = (0, Bb.useState)(!1), pb = (0, Bb.useCallback)((() => {
+        (0, zu.b)().then((bb => {
+          ub.current && (Gb(bb), Yb(!1))
+        })).catch((bb => {
+          console.error("Failed to load push notification targets:", bb), ub.current && Yb(!0)
         }))
-      }), [Eq]), dq = (0, Yq.useCallback)((() => {
-        (0, iE.d)().then((qq => {
-          Eq.current && Wq((() => qq))
+      }), [ub]), ob = (0, Bb.useCallback)((() => {
+        (0, gu.c)().then((bb => {
+          ub.current && wb((() => bb))
         }))
-      }), [Eq]);
-      (0, Yq.useEffect)((() => {
-        Vq()
-      }), [Vq]), (0, Yq.useEffect)((() => {
-        dq()
-      }), [dq, gq]), (0, nE.f)(bE.k, Vq);
-      const jq = null === lq ? [] : Object.keys(fE).filter((qq => lq[qq] > 0));
-      return (0, Bq.jsxs)("div", {
+      }), [ub]);
+      (0, Bb.useEffect)((() => {
+        pb()
+      }), [pb]), (0, Bb.useEffect)((() => {
+        ob()
+      }), [ob, hb]), (0, xu.h)(zu.h, pb);
+      const Ab = null === Ob ? [] : Object.keys(vu).filter((bb => Ob[bb] > 0));
+      return (0, Hb.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, Bq.jsx)("div", {
+        children: [(0, Hb.jsx)("div", {
           className: "SliderText",
-          children: qq("notificationSettings:pushNotifications")
-        }), null === lq && xq && (0, Bq.jsx)("div", {
+          children: bb("notificationSettings:pushNotifications")
+        }), null === Ob && Lb && (0, Hb.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: qq("notificationSettings:pushTargetsLoadFailed")
-        }), null !== lq && 0 === jq.length && (0, Bq.jsx)("div", {
+          children: bb("notificationSettings:pushTargetsLoadFailed")
+        }), null !== Ob && 0 === Ab.length && (0, Hb.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: qq("notificationSettings:pushTargetsNone")
-        }), jq.length > 0 && (0, Bq.jsx)("ul", {
+          children: bb("notificationSettings:pushTargetsNone")
+        }), Ab.length > 0 && (0, Hb.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: jq.map((Eq => {
-            var gq;
-            return (0, Bq.jsx)("li", {
-              children: qq(fE[Eq], {
-                count: null !== (gq = null === lq || void 0 === lq ? void 0 : lq[Eq]) && void 0 !== gq ? gq : 0
+          children: Ab.map((ub => {
+            var hb;
+            return (0, Hb.jsx)("li", {
+              children: bb(vu[ub], {
+                count: null !== (hb = null === Ob || void 0 === Ob ? void 0 : Ob[ub]) && void 0 !== hb ? hb : 0
               })
-            }, Eq)
+            }, ub)
           }))
-        }), null !== uq && (0, Bq.jsx)(cq.g, {
+        }), null !== ab && (0, Hb.jsx)(Sb.e, {
           className: "PushNotificationSettingsButton",
-          loading: Nq,
+          loading: Zb,
           onClick: () => {
-            aq(!0), uq().catch((qq => {
-              console.error("Failed to turn on push notifications:", qq)
+            Xb(!0), ab().catch((bb => {
+              console.error("Failed to turn on push notifications:", bb)
             })).finally((() => {
-              Eq.current && (aq(!1), dq())
+              ub.current && (Xb(!1), ob())
             }))
           },
-          children: qq("notificationSettings:pushTurnOn")
+          children: bb("notificationSettings:pushTurnOn")
         })]
       })
     }
-    const TE = {
+    const Ju = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1126,337 +1126,337 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      zE = (0, Yq.memo)((function() {
+      eu = (0, Bb.memo)((function() {
         const {
-          t: qq
-        } = (0, mq.v)(), {
-          clientEscMenuOptions: Eq
-        } = (0, rq.j)(["clientEscMenuOptions"]);
-        return (0, Bq.jsxs)("div", {
+          t: bb
+        } = (0, Ub.K)(), {
+          clientEscMenuOptions: ub
+        } = (0, jb.j)(["clientEscMenuOptions"]);
+        return (0, Hb.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, Bq.jsx)(tq.f, {
-            label: qq("notificationSettings:friendRequests"),
-            options: hE.e.map((Eq => ({
-              value: Eq,
-              label: qq(TE[Eq].label)
+          children: [(0, Hb.jsx)(rb.g, {
+            label: bb("notificationSettings:friendRequests"),
+            options: Du.e.map((ub => ({
+              value: ub,
+              label: bb(Ju[ub].label)
             }))),
-            value: Eq.friendRequestNotifications,
-            onChange: qq => {
-              rq.b.setClientEscMenuOptions({
-                friendRequestNotifications: qq
+            value: ub.friendRequestNotifications,
+            onChange: bb => {
+              jb.d.setClientEscMenuOptions({
+                friendRequestNotifications: bb
               })
             },
-            circleInfoText: (0, Bq.jsx)("div", {
+            circleInfoText: (0, Hb.jsx)("div", {
               className: "NotificationSettingLevelsInfo",
-              children: hE.e.map((Eq => (0, Bq.jsxs)("div", {
-                children: [(0, Bq.jsx)("b", {
-                  children: qq(TE[Eq].label)
-                }), ": ", qq(TE[Eq].info)]
-              }, Eq)))
+              children: Du.e.map((ub => (0, Hb.jsxs)("div", {
+                children: [(0, Hb.jsx)("b", {
+                  children: bb(Ju[ub].label)
+                }), ": ", bb(Ju[ub].info)]
+              }, ub)))
             })
-          }), (0, Bq.jsx)(ME, {})]
+          }), (0, Hb.jsx)(tu, {})]
         })
       }));
-    var SE = gq(4334),
-      pE = gq(190),
-      GE = gq(275),
-      LE = gq(6535),
-      JE = gq(3324),
-      kE = gq(9185),
-      RE = gq(598),
-      UE = gq(31);
-    var FE = gq(611),
-      sE = gq(38),
-      XE = gq(4201);
-    const wE = new Map([
+    var Nu = hb(4262),
+      su = hb(191),
+      Mu = hb(270),
+      mu = hb(6394),
+      Iu = hb(3237),
+      Pu = hb(8992),
+      qu = hb(588),
+      Eu = hb(16);
+    var yu = hb(599),
+      Vu = hb(29),
+      Fu = hb(4131);
+    const fu = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function KE(qq) {
-      return wE.has(qq) ? Hq.gameBridge.lookup("Gy", null) : null
+    function ku(bb) {
+      return fu.has(bb) ? lb.gameBridge.lookup("VK", null) : null
     }
 
-    function CE(qq) {
-      if (!(0, RE.H)(rq.b.get("clientEscMenuOptions")[qq])) return rq.b.get("clientEscMenuOptions")[qq];
-      const Eq = KE(qq);
-      return null !== Eq ? Eq[wE.get(qq)] : sE.i.getItem(qq)
+    function Tu(bb) {
+      if (!(0, qu.J)(jb.d.get("clientEscMenuOptions")[bb])) return jb.d.get("clientEscMenuOptions")[bb];
+      const ub = ku(bb);
+      return null !== ub ? ub[fu.get(bb)] : Vu.j.getItem(bb)
     }
 
-    function IE(qq, Eq) {
-      if ("useTouchControls" === qq) return void(0, XE.e)(Eq);
-      qq in rq.b.get("clientEscMenuOptions") && rq.b.setClientEscMenuOptions({
-        [qq]: Eq
+    function cu(bb, ub) {
+      if ("useTouchControls" === bb) return void(0, Fu.e)(ub);
+      bb in jb.d.get("clientEscMenuOptions") && jb.d.setClientEscMenuOptions({
+        [bb]: ub
       });
-      const gq = KE(qq);
-      null !== gq && Hq.gameBridge.send("setChunkAddDistance", {
-        ...gq,
-        [wE.get(qq)]: Eq
-      }), sE.i.setItem(qq, Eq)
+      const hb = ku(bb);
+      null !== hb && lb.gameBridge.send("setChunkAddDistance", {
+        ...hb,
+        [fu.get(bb)]: ub
+      }), Vu.j.setItem(bb, ub)
     }
-    var eE = gq(4248),
-      DE = gq(9189),
-      qg = gq(9191),
-      Eg = gq(4325);
+    var Qu = hb(4185),
+      Ru = hb(8996),
+      bh = hb(9e3),
+      uh = hb(4260);
 
-    function gg(qq) {
-      var Eq, lq, xq, Aq;
+    function hh(bb) {
+      var ub, Ob, Lb, Yb;
       let {
-        minChunkAddDist: cq,
-        getValue: uq,
-        onChange: Wq,
-        setApplySettingsCallback: Nq
-      } = qq;
+        minChunkAddDist: Sb,
+        getValue: ab,
+        onChange: wb,
+        setApplySettingsCallback: Zb
+      } = bb;
       const {
-        t: aq
-      } = (0, mq.v)(), {
-        clientEscMenuOptions: dq
-      } = (0, rq.j)(["clientEscMenuOptions", "showDistantNametags"]), Hq = (0, Yq.useRef)(uq("showFog")), oq = (0, Yq.useRef)(dq.antiAliasing), Pq = (0, Yq.useRef)(dq.useWebGpu), [Qq, yq] = (0, Yq.useState)(null), [hq, nq] = (0, Yq.useState)((() => (0, JE.d)(jq.featureFlags.settings.canUseShaderPacks))), [bq] = (0, Yq.useState)((() => rq.b.isWebGpuDefaultOff())), [iq] = (0, Yq.useState)(GE.f);
-      (0, Yq.useEffect)((() => {
-        let qq = !1;
-        return (0, jq.hasUsableWebGpuAdapter)().then((Eq => {
-          qq || yq(Eq)
-        })), (0, JE.h)(jq.featureFlags.settings.canUseShaderPacks) && (0, LE.d)().then((async Eq => {
-          const Yq = null !== Eq && await async function(qq) {
+        t: Xb
+      } = (0, Ub.K)(), {
+        clientEscMenuOptions: ob
+      } = (0, jb.j)(["clientEscMenuOptions", "showDistantNametags"]), lb = (0, Bb.useRef)(ab("showFog")), Kb = (0, Bb.useRef)(ob.antiAliasing), Wb = (0, Bb.useRef)(ob.useWebGpu), [Cb, db] = (0, Bb.useState)(null), [Db, xb] = (0, Bb.useState)((() => (0, Iu.e)(Ab.featureFlags.settings.canUseShaderPacks))), [zb] = (0, Bb.useState)((() => jb.d.isWebGpuDefaultOff())), [gb] = (0, Bb.useState)(Mu.g);
+      (0, Bb.useEffect)((() => {
+        let bb = !1;
+        return (0, Ab.hasUsableWebGpuAdapter)().then((ub => {
+          bb || db(ub)
+        })), (0, Iu.j)(Ab.featureFlags.settings.canUseShaderPacks) && (0, mu.g)().then((async ub => {
+          const Bb = null !== ub && await async function(bb) {
             const [{
-              isShaderPackActive: Eq
+              isShaderPackActive: ub
             }, {
-              loadPageShaderPackCompiler: Yq
-            }] = await Promise.all([gq.e(128).then((() => gq(6531))), Promise.all([gq.e(75), gq.e(132), gq.e(131)]).then((() => gq(6496)))]);
-            return Eq(qq, await Yq())
-          }(Eq);
-          qq || nq(Yq)
+              loadPageShaderPackCompiler: Bb
+            }] = await Promise.all([hb.e(128).then((() => hb(6388))), Promise.all([hb.e(75), hb.e(132), hb.e(131)]).then((() => hb(6350)))]);
+            return ub(bb, await Bb())
+          }(ub);
+          bb || xb(Bb)
         })), () => {
-          qq = !0
+          bb = !0
         }
       }), []);
-      const Zq = function(qq, Eq, gq, Yq, lq) {
-          return (0, kE.b)(gq, Yq) && !0 === Eq ? {
+      const ib = function(bb, ub, hb, Bb, Ob) {
+          return (0, Pu.b)(hb, Bb) && !0 === ub ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== Eq ? "settingsMenu:newWebGpu" : lq ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: qq && !1 !== Eq,
-            disabled: !0 !== Eq
+            translationKey: !1 !== ub ? "settingsMenu:newWebGpu" : Ob ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: bb && !1 !== ub,
+            disabled: !0 !== ub
           }
-        }(dq.useWebGpu, Qq, hq, bq, iq),
-        fq = (dq.useWebGpu || (0, kE.b)(hq, bq)) && hq && !0 === Qq,
-        Mq = (0, Vq.h)("lightingOverride"),
-        Tq = !(0, RE.H)(Mq);
-      let zq = "settingsMenu:enableLighting";
-      Tq && (zq = Mq ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const Sq = qq => {
-          var Eq, gq, Yq;
-          const lq = null !== (Eq = qq.showFog) && void 0 !== Eq ? Eq : uq("showFog"),
-            Oq = null !== (gq = qq.antiAliasing) && void 0 !== gq ? gq : dq.antiAliasing,
-            mq = null !== (Yq = qq.useWebGpu) && void 0 !== Yq ? Yq : dq.useWebGpu,
-            xq = !FE.v && lq !== Hq.current || Oq !== oq.current || mq !== Pq.current;
-          Nq(xq ? () => tq.l : null)
+        }(ob.useWebGpu, Cb, Db, zb, gb),
+        vb = (ob.useWebGpu || (0, Pu.b)(Db, zb)) && Db && !0 === Cb,
+        tb = (0, pb.f)("lightingOverride"),
+        Jb = !(0, qu.J)(tb);
+      let eb = "settingsMenu:enableLighting";
+      Jb && (eb = tb ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const Nb = bb => {
+          var ub, hb, Bb;
+          const Ob = null !== (ub = bb.showFog) && void 0 !== ub ? ub : ab("showFog"),
+            Gb = null !== (hb = bb.antiAliasing) && void 0 !== hb ? hb : ob.antiAliasing,
+            Ub = null !== (Bb = bb.useWebGpu) && void 0 !== Bb ? Bb : ob.useWebGpu,
+            Lb = !yu.o && Ob !== lb.current || Gb !== Kb.current || Ub !== Wb.current;
+          Zb(Lb ? () => rb.k : null)
         },
-        pq = (0, Vq.h)("fogChunkDistanceOverride"),
-        Gq = (0, Vq.h)("fogBlockDistanceOverride"),
-        Lq = !(0, RE.H)(pq) || !(0, RE.H)(Gq),
-        Jq = Lq ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [kq, Rq] = (0, SE.h)(cq),
-        [Uq, Fq] = (0, Eg.g)(cq),
-        sq = aq("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        Xq = Uq < kq,
-        wq = Math.min(null !== (Eq = uq("chunkHorizAddDist")) && void 0 !== Eq ? Eq : cq[0], Uq),
-        Kq = !Lq && function(qq, Eq) {
-          return !0 === qq.showFog && qq.fogChunkDistance > Eq
-        }(dq, wq);
-      return (0, Bq.jsxs)("div", {
+        sb = (0, pb.f)("fogChunkDistanceOverride"),
+        Mb = (0, pb.f)("fogBlockDistanceOverride"),
+        mb = !(0, qu.J)(sb) || !(0, qu.J)(Mb),
+        Ib = mb ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [Pb, qb] = (0, Nu.h)(Sb),
+        [Eb, yb] = (0, uh.f)(Sb),
+        Vb = Xb("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        Fb = Eb < Pb,
+        fb = Math.min(null !== (ub = ab("chunkHorizAddDist")) && void 0 !== ub ? ub : Sb[0], Eb),
+        kb = !mb && function(bb, ub) {
+          return !0 === bb.showFog && bb.fogChunkDistance > ub
+        }(ob, fb);
+      return (0, Hb.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, Bq.jsx)(tq.h, {
-          name: aq("settingsMenu:horizontalChunkLoadDistance"),
-          min: cq[0],
-          max: kq,
-          selectableMax: Uq,
-          cappedNote: sq,
+        children: [(0, Hb.jsx)(rb.h, {
+          name: Xb("settingsMenu:horizontalChunkLoadDistance"),
+          min: Sb[0],
+          max: Pb,
+          selectableMax: Eb,
+          cappedNote: Vb,
           step: 1,
-          initValue: wq,
-          onChange: qq => {
-            !0 === uq("showFog") && qq < uq("fogChunkDistance") && Wq("fogChunkDistance", qq), Wq("chunkHorizAddDist", qq), UE.i.TV("updatedChunkLoadDist")
+          initValue: fb,
+          onChange: bb => {
+            !0 === ab("showFog") && bb < ab("fogChunkDistance") && wb("fogChunkDistance", bb), wb("chunkHorizAddDist", bb), Eu.i.vp("updatedChunkLoadDist")
           },
-          circleInfoText: aq("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, Bq.jsx)(tq.h, {
-          name: aq("settingsMenu:verticalChunkLoadDistance"),
-          min: cq[1],
-          max: Rq,
-          selectableMax: Fq,
-          cappedNote: Xq ? void 0 : sq,
+          circleInfoText: Xb("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, Hb.jsx)(rb.h, {
+          name: Xb("settingsMenu:verticalChunkLoadDistance"),
+          min: Sb[1],
+          max: qb,
+          selectableMax: yb,
+          cappedNote: Fb ? void 0 : Vb,
           step: 1,
-          initValue: Math.min(null !== (lq = uq("chunkVertAddDist")) && void 0 !== lq ? lq : cq[1], Fq),
-          onChange: qq => {
-            Wq("chunkVertAddDist", qq), UE.i.TV("updatedChunkLoadDist")
+          initValue: Math.min(null !== (Ob = ab("chunkVertAddDist")) && void 0 !== Ob ? Ob : Sb[1], yb),
+          onChange: bb => {
+            wb("chunkVertAddDist", bb), Eu.i.vp("updatedChunkLoadDist")
           },
-          circleInfoText: aq("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: Xb("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, Bq.jsx)(tq.d, {
-          label: aq("settingsMenu:chunkFadeIn"),
-          checked: dq.chunkFadeIn,
-          onClick: qq => {
-            rq.b.setClientEscMenuOptions({
-              chunkFadeIn: qq
+        }), (0, Hb.jsx)(rb.c, {
+          label: Xb("settingsMenu:chunkFadeIn"),
+          checked: ob.chunkFadeIn,
+          onClick: bb => {
+            jb.d.setClientEscMenuOptions({
+              chunkFadeIn: bb
             })
           },
-          circleInfoText: aq("settingsMenu:chunkFadeInInfo")
-        }), vq.devTools.supports("chunkBorders") && (0, Bq.jsx)(tq.d, {
-          label: aq("settingsMenu:showChunkBorders"),
-          checked: dq.showChunkBorders,
-          onClick: qq => {
-            rq.b.setClientEscMenuOptions({
-              showChunkBorders: qq
+          circleInfoText: Xb("settingsMenu:chunkFadeInInfo")
+        }), nb.devTools.supports("chunkBorders") && (0, Hb.jsx)(rb.c, {
+          label: Xb("settingsMenu:showChunkBorders"),
+          checked: ob.showChunkBorders,
+          onClick: bb => {
+            jb.d.setClientEscMenuOptions({
+              showChunkBorders: bb
             })
           },
-          circleInfoText: aq("settingsMenu:showChunkBordersInfo")
-        }), (0, Bq.jsx)(tq.d, {
-          label: aq(zq),
-          checked: dq.enableLighting,
-          onClick: qq => {
-            rq.b.setClientEscMenuOptions({
-              enableLighting: qq
+          circleInfoText: Xb("settingsMenu:showChunkBordersInfo")
+        }), (0, Hb.jsx)(rb.c, {
+          label: Xb(eb),
+          checked: ob.enableLighting,
+          onClick: bb => {
+            jb.d.setClientEscMenuOptions({
+              enableLighting: bb
             })
           },
-          disabled: Tq
-        }), (0, Bq.jsxs)("div", {
+          disabled: Jb
+        }), (0, Hb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, Bq.jsx)(tq.d, {
-            label: aq(Jq),
-            checked: dq.showFog,
-            onClick: qq => {
-              Sq({
-                showFog: qq
-              }), rq.b.setClientEscMenuOptions({
-                showFog: qq
+          children: [(0, Hb.jsx)(rb.c, {
+            label: Xb(Ib),
+            checked: ob.showFog,
+            onClick: bb => {
+              Nb({
+                showFog: bb
+              }), jb.d.setClientEscMenuOptions({
+                showFog: bb
               })
             },
-            disabled: Lq,
-            className: Oq()({
-              SettingBoxWarning: Kq
+            disabled: mb,
+            className: Gb()({
+              SettingBoxWarning: kb
             })
-          }), (0, Bq.jsx)(tq.h, {
-            name: aq("settingsMenu:fogChunkDistance"),
-            min: cq[0],
-            max: pE.c.maxChunkHorizAddDistance,
+          }), (0, Hb.jsx)(rb.h, {
+            name: Xb("settingsMenu:fogChunkDistance"),
+            min: Sb[0],
+            max: su.e.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (xq = dq.fogChunkDistance) && void 0 !== xq ? xq : cq[0],
-            onChange: qq => {
-              rq.b.setClientEscMenuOptions({
-                fogChunkDistance: qq
-              }), UE.i.TV("fogChunkDistanceChanged", qq)
+            initValue: null !== (Lb = ob.fogChunkDistance) && void 0 !== Lb ? Lb : Sb[0],
+            onChange: bb => {
+              jb.d.setClientEscMenuOptions({
+                fogChunkDistance: bb
+              }), Eu.i.vp("fogChunkDistanceChanged", bb)
             },
-            circleInfoText: aq("settingsMenu:fogChunkDistanceInfo"),
-            disabled: Lq || !1 === uq("showFog"),
-            className: Oq()({
-              SettingBoxWarning: Kq
+            circleInfoText: Xb("settingsMenu:fogChunkDistanceInfo"),
+            disabled: mb || !1 === ab("showFog"),
+            className: Gb()({
+              SettingBoxWarning: kb
             })
-          }), Kq && (0, Bq.jsx)("div", {
+          }), kb && (0, Hb.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: aq("settingsMenu:fogChunkDistanceInfo")
+            children: Xb("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !FE.v && (0, Bq.jsx)(tq.d, {
-          label: aq(fq ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !fq && dq.disableTexAtlas,
-          onClick: qq => {
-            rq.b.setClientEscMenuOptions({
-              disableTexAtlas: qq
+        }), !yu.o && (0, Hb.jsx)(rb.c, {
+          label: Xb(vb ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !vb && ob.disableTexAtlas,
+          onClick: bb => {
+            jb.d.setClientEscMenuOptions({
+              disableTexAtlas: bb
             })
           },
-          circleInfoText: aq("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: fq
-        }), (0, Bq.jsx)(tq.h, {
-          name: aq("settingsMenu:fieldOfView"),
+          circleInfoText: Xb("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: vb
+        }), (0, Hb.jsx)(rb.h, {
+          name: Xb("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: dq.cameraFOV,
-          onChange: qq => {
-            rq.b.setClientEscMenuOptions({
-              cameraFOV: qq
+          initValue: ob.cameraFOV,
+          onChange: bb => {
+            jb.d.setClientEscMenuOptions({
+              cameraFOV: bb
             })
           }
-        }), (0, Bq.jsx)(tq.d, {
-          label: aq("settingsMenu:disableViewBobbing"),
-          checked: dq.disableBobbing,
-          onClick: qq => {
-            rq.b.setClientEscMenuOptions({
-              disableBobbing: qq
+        }), (0, Hb.jsx)(rb.c, {
+          label: Xb("settingsMenu:disableViewBobbing"),
+          checked: ob.disableBobbing,
+          onClick: bb => {
+            jb.d.setClientEscMenuOptions({
+              disableBobbing: bb
             })
           },
-          circleInfoText: aq("settingsMenu:disableViewBobbingInfo")
-        }), (0, Bq.jsx)(tq.d, {
-          label: aq("settingsMenu:antiAliasing"),
-          checked: dq.antiAliasing,
-          onClick: qq => {
-            Sq({
-              antiAliasing: qq
-            }), (0, eE.e)("antiAliasing"), rq.b.setClientEscMenuOptions({
-              antiAliasing: qq
+          circleInfoText: Xb("settingsMenu:disableViewBobbingInfo")
+        }), (0, Hb.jsx)(rb.c, {
+          label: Xb("settingsMenu:antiAliasing"),
+          checked: ob.antiAliasing,
+          onClick: bb => {
+            Nb({
+              antiAliasing: bb
+            }), (0, Qu.e)("antiAliasing"), jb.d.setClientEscMenuOptions({
+              antiAliasing: bb
             })
           },
-          circleInfoText: aq("settingsMenu:antiAliasingInfo")
-        }), (0, Bq.jsx)(tq.h, {
-          name: aq("settingsMenu:pixelScale"),
+          circleInfoText: Xb("settingsMenu:antiAliasingInfo")
+        }), (0, Hb.jsx)(rb.h, {
+          name: Xb("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (Aq = dq.pixelScale) && void 0 !== Aq ? Aq : 1,
-          onChange: qq => {
-            (qq !== rq.b.get("clientEscMenuOptions").pixelScale || (0, qg.p)()) && (0, eE.e)("pixelScale"), rq.b.setClientEscMenuOptions({
-              pixelScale: qq
+          initValue: null !== (Yb = ob.pixelScale) && void 0 !== Yb ? Yb : 1,
+          onChange: bb => {
+            (bb !== jb.d.get("clientEscMenuOptions").pixelScale || (0, bh.r)()) && (0, Qu.e)("pixelScale"), jb.d.setClientEscMenuOptions({
+              pixelScale: bb
             })
           },
-          circleInfoText: aq("settingsMenu:pixelScaleInfo"),
-          format: qq => `${qq}x`
-        }), (0, Bq.jsx)(tq.d, {
-          label: aq("settingsMenu:pixelSmoothing"),
-          checked: dq.pixelSmoothing,
-          onClick: qq => {
-            rq.b.setClientEscMenuOptions({
-              pixelSmoothing: qq
+          circleInfoText: Xb("settingsMenu:pixelScaleInfo"),
+          format: bb => `${bb}x`
+        }), (0, Hb.jsx)(rb.c, {
+          label: Xb("settingsMenu:pixelSmoothing"),
+          checked: ob.pixelSmoothing,
+          onClick: bb => {
+            jb.d.setClientEscMenuOptions({
+              pixelSmoothing: bb
             })
           },
-          circleInfoText: aq("settingsMenu:pixelSmoothingInfo")
-        }), FE.v && (0, Bq.jsx)(tq.d, {
-          label: aq("settingsMenu:distantNametags"),
-          checked: (0, DE.e)(),
-          onClick: qq => {
-            rq.b.set({
-              showDistantNametags: qq
+          circleInfoText: Xb("settingsMenu:pixelSmoothingInfo")
+        }), yu.o && (0, Hb.jsx)(rb.c, {
+          label: Xb("settingsMenu:distantNametags"),
+          checked: (0, Ru.d)(),
+          onClick: bb => {
+            jb.d.set({
+              showDistantNametags: bb
             })
           },
-          circleInfoText: aq("settingsMenu:distantNametagsInfo")
-        }), (0, Bq.jsx)(tq.d, {
-          label: aq(Zq.translationKey),
-          checked: Zq.checked,
-          onClick: qq => {
-            Sq({
-              useWebGpu: qq
-            }), rq.b.setClientEscMenuOptions({
-              useWebGpu: qq
+          circleInfoText: Xb("settingsMenu:distantNametagsInfo")
+        }), (0, Hb.jsx)(rb.c, {
+          label: Xb(ib.translationKey),
+          checked: ib.checked,
+          onClick: bb => {
+            Nb({
+              useWebGpu: bb
+            }), jb.d.setClientEscMenuOptions({
+              useWebGpu: bb
             })
           },
-          circleInfoText: aq("settingsMenu:newWebGpuInfo"),
-          disabled: Zq.disabled
+          circleInfoText: Xb("settingsMenu:newWebGpuInfo"),
+          disabled: ib.disabled
         })]
       })
     }
-    var Yg = gq(4243),
-      lg = gq(8834),
-      Og = gq(9207),
-      mg = gq(8843),
-      xg = gq(9216);
-    const Ag = {
+    var Bh = hb(4176),
+      Oh = hb(8599),
+      Gh = hb(9023),
+      Uh = hb(8605),
+      Lh = hb(9031);
+    const Yh = {
         color: 16777215,
         name: "white"
       },
-      cg = {
+      Sh = {
         color: 0,
         name: "black"
       },
-      ug = [Ag, {
+      ah = [Yh, {
         color: 5046092,
         name: "green"
       }, {
@@ -1471,73 +1471,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, cg],
-      Bg = [cg, Ag];
+      }, Sh],
+      Hh = [Sh, Yh];
 
-    function Wg(qq) {
-      return `${qq} px`
+    function wh(bb) {
+      return `${bb} px`
     }
 
-    function Ng(qq) {
-      return `${qq}%`
+    function Zh(bb) {
+      return `${bb}%`
     }
 
-    function ag(qq) {
+    function Xh(bb) {
       let {
-        label: Eq,
-        value: gq,
-        swatches: Yq,
-        onChange: lq
-      } = qq;
+        label: ub,
+        value: hb,
+        swatches: Bb,
+        onChange: Ob
+      } = bb;
       const {
-        t: xq
-      } = (0, mq.v)(), Aq = !Yq.some((qq => qq.color === gq));
-      return (0, Bq.jsxs)("div", {
+        t: Lb
+      } = (0, Ub.K)(), Yb = !Bb.some((bb => bb.color === hb));
+      return (0, Hb.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, Bq.jsx)("div", {
+        children: [(0, Hb.jsx)("div", {
           className: "SliderText",
-          children: Eq
-        }), (0, Bq.jsxs)("div", {
+          children: ub
+        }), (0, Hb.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": Eq,
-          children: [Yq.map((qq => {
+          "aria-label": ub,
+          children: [Bb.map((bb => {
             let {
-              color: Eq,
-              name: Yq
-            } = qq;
-            return (0, Bq.jsx)("button", {
+              color: ub,
+              name: Bb
+            } = bb;
+            return (0, Hb.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": Eq === gq,
-              "aria-label": xq(`crosshairSettings:color_${Yq}`),
+              "aria-checked": ub === hb,
+              "aria-label": Lb(`crosshairSettings:color_${Bb}`),
               "data-pad-focusable": !0,
-              className: Oq()("CrosshairSwatch", {
-                Selected: Eq === gq
+              className: Gb()("CrosshairSwatch", {
+                Selected: ub === hb
               }),
               style: {
-                background: (0, xg.k)(Eq)
+                background: (0, Lh.h)(ub)
               },
               onClick: () => {
-                lq(Eq)
+                Ob(ub)
               }
-            }, Eq)
-          })), (0, Bq.jsx)("label", {
-            className: Oq()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: Aq
+            }, ub)
+          })), (0, Hb.jsx)("label", {
+            className: Gb()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: Yb
             }),
-            style: Aq ? {
-              background: (0, xg.k)(gq)
+            style: Yb ? {
+              background: (0, Lh.h)(hb)
             } : void 0,
-            title: xq("crosshairSettings:customColor"),
+            title: Lb("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, Bq.jsx)("input", {
+            children: (0, Hb.jsx)("input", {
               type: "color",
-              "aria-label": xq("crosshairSettings:customColor"),
-              value: (0, xg.k)(gq),
-              onChange: qq => {
-                const Eq = (0, xg.q)(qq.target.value);
-                null !== Eq && lq(Eq)
+              "aria-label": Lb("crosshairSettings:customColor"),
+              value: (0, Lh.h)(hb),
+              onChange: bb => {
+                const ub = (0, Lh.m)(bb.target.value);
+                null !== ub && Ob(ub)
               }
             })
           })]
@@ -1545,119 +1545,119 @@ export const modules = {
       })
     }
 
-    function Vg(qq) {
+    function ph(bb) {
       let {
-        settings: Eq,
-        onChange: gq
-      } = qq;
+        settings: ub,
+        onChange: hb
+      } = bb;
       const {
-        t: Yq
-      } = (0, mq.v)(), lq = (qq, Yq) => {
-        gq((0, xg.v)(Eq, qq, Yq))
-      }, Oq = function(qq, gq) {
-        let Yq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Wg;
+        t: Bb
+      } = (0, Ub.K)(), Ob = (bb, Bb) => {
+        hb((0, Lh.p)(ub, bb, Bb))
+      }, Gb = function(bb, hb) {
+        let Bb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : wh;
         const {
-          min: Oq,
-          max: mq,
-          step: xq
-        } = xg.e[qq];
-        return (0, Bq.jsx)(tq.h, {
-          name: gq,
-          min: Oq,
-          max: mq,
-          step: xq,
-          initValue: Eq[qq],
-          format: Yq,
-          onChange: Eq => {
-            lq(qq, Eq)
+          min: Gb,
+          max: Ub,
+          step: Lb
+        } = Lh.b[bb];
+        return (0, Hb.jsx)(rb.h, {
+          name: hb,
+          min: Gb,
+          max: Ub,
+          step: Lb,
+          initValue: ub[bb],
+          format: Bb,
+          onChange: ub => {
+            Ob(bb, ub)
           }
-        }, qq)
-      }, xq = ["lines", "dot", "circle"].filter((qq => Eq[qq])), Aq = (qq, gq, Yq) => (0, Bq.jsx)(tq.d, {
-        label: gq,
-        checked: Eq[qq],
-        disabled: 1 === xq.length && xq[0] === qq,
-        circleInfoText: Yq,
-        onClick: Eq => {
-          lq(qq, Eq)
+        }, bb)
+      }, Lb = ["lines", "dot", "circle"].filter((bb => ub[bb])), Yb = (bb, hb, Bb) => (0, Hb.jsx)(rb.c, {
+        label: hb,
+        checked: ub[bb],
+        disabled: 1 === Lb.length && Lb[0] === bb,
+        circleInfoText: Bb,
+        onClick: ub => {
+          Ob(bb, ub)
         }
-      }, qq), cq = "shapes" === Eq.style;
-      return (0, Bq.jsxs)(Bq.Fragment, {
-        children: [(0, Bq.jsx)(tq.f, {
-          label: Yq("crosshairSettings:style"),
+      }, bb), Sb = "shapes" === ub.style;
+      return (0, Hb.jsxs)(Hb.Fragment, {
+        children: [(0, Hb.jsx)(rb.g, {
+          label: Bb("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: Yq("crosshairSettings:styleClassic")
+            label: Bb("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: Yq("crosshairSettings:styleShapes")
+            label: Bb("crosshairSettings:styleShapes")
           }],
-          value: Eq.style,
-          onChange: qq => {
-            lq("style", qq)
+          value: ub.style,
+          onChange: bb => {
+            Ob("style", bb)
           }
-        }), (0, Bq.jsx)(ag, {
-          label: Yq("crosshairSettings:color"),
-          value: Eq.color,
-          swatches: ug,
-          onChange: qq => {
-            lq("color", qq)
+        }), (0, Hb.jsx)(Xh, {
+          label: Bb("crosshairSettings:color"),
+          value: ub.color,
+          swatches: ah,
+          onChange: bb => {
+            Ob("color", bb)
           }
-        }), Oq("opacity", Yq("crosshairSettings:opacity"), Ng), !cq && Oq("size", Yq("crosshairSettings:size"), Ng), cq && (0, Bq.jsxs)("div", {
+        }), Gb("opacity", Bb("crosshairSettings:opacity"), Zh), !Sb && Gb("size", Bb("crosshairSettings:size"), Zh), Sb && (0, Hb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [Aq("lines", Yq("crosshairSettings:lines")), Eq.lines && Oq("lineLength", Yq("crosshairSettings:lineLength")), Eq.lines && Oq("lineThickness", Yq("crosshairSettings:lineThickness")), Eq.lines && Oq("gap", Yq("crosshairSettings:gap")), Eq.lines && Aq("tStyle", Yq("crosshairSettings:tStyle"))]
-        }), cq && (0, Bq.jsxs)("div", {
+          children: [Yb("lines", Bb("crosshairSettings:lines")), ub.lines && Gb("lineLength", Bb("crosshairSettings:lineLength")), ub.lines && Gb("lineThickness", Bb("crosshairSettings:lineThickness")), ub.lines && Gb("gap", Bb("crosshairSettings:gap")), ub.lines && Yb("tStyle", Bb("crosshairSettings:tStyle"))]
+        }), Sb && (0, Hb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [Aq("dot", Yq("crosshairSettings:dot")), Eq.dot && Oq("dotSize", Yq("crosshairSettings:dotSize"))]
-        }), cq && (0, Bq.jsxs)("div", {
+          children: [Yb("dot", Bb("crosshairSettings:dot")), ub.dot && Gb("dotSize", Bb("crosshairSettings:dotSize"))]
+        }), Sb && (0, Hb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [Aq("circle", Yq("crosshairSettings:circle")), Eq.circle && Oq("circleRadius", Yq("crosshairSettings:circleRadius")), Eq.circle && Oq("circleThickness", Yq("crosshairSettings:circleThickness"))]
-        }), (0, Bq.jsxs)("div", {
+          children: [Yb("circle", Bb("crosshairSettings:circle")), ub.circle && Gb("circleRadius", Bb("crosshairSettings:circleRadius")), ub.circle && Gb("circleThickness", Bb("crosshairSettings:circleThickness"))]
+        }), (0, Hb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [Oq("outline", Yq("crosshairSettings:outline"), (qq => qq > 0 ? Wg(qq) : Yq("crosshairSettings:off"))), Eq.outline > 0 && (0, Bq.jsx)(ag, {
-            label: Yq("crosshairSettings:outlineColor"),
-            value: Eq.outlineColor,
-            swatches: Bg,
-            onChange: qq => {
-              lq("outlineColor", qq)
+          children: [Gb("outline", Bb("crosshairSettings:outline"), (bb => bb > 0 ? wh(bb) : Bb("crosshairSettings:off"))), ub.outline > 0 && (0, Hb.jsx)(Xh, {
+            label: Bb("crosshairSettings:outlineColor"),
+            value: ub.outlineColor,
+            swatches: Hh,
+            onChange: bb => {
+              Ob("outlineColor", bb)
             }
           })]
-        }), Aq("growOnClick", Yq("crosshairSettings:growOnClick")), cq && Aq("forGuns", Yq("crosshairSettings:forGuns"), Yq("crosshairSettings:forGunsInfo"))]
+        }), Yb("growOnClick", Bb("crosshairSettings:growOnClick")), Sb && Yb("forGuns", Bb("crosshairSettings:forGuns"), Bb("crosshairSettings:forGunsInfo"))]
       })
     }
-    var dg = gq(71),
-      jg = gq(1267),
-      Hg = gq(9224),
-      og = gq(9230),
-      Pg = gq(9233),
-      Qg = gq(9239);
-    const yg = ["sky", "grass", "stone", "sand", "snow", "night"],
-      tg = "4rem";
+    var oh = hb(65),
+      Ah = hb(1177),
+      lh = hb(9033),
+      Kh = hb(9040),
+      Wh = hb(9046),
+      Ch = hb(9049);
+    const dh = ["sky", "grass", "stone", "sand", "snow", "night"],
+      rh = "4rem";
 
-    function rg(qq) {
+    function jh(bb) {
       return {
-        backgroundImage: `url(${qq})`,
-        backgroundSize: `${tg} ${tg}`,
+        backgroundImage: `url(${bb})`,
+        backgroundSize: `${rh} ${rh}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function vg(qq) {
+    function nh(bb) {
       return {
         ...(() => {
-          switch (qq) {
+          switch (bb) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return rg(Hg);
+              return jh(lh);
             case "stone":
-              return rg(og);
+              return jh(Kh);
             case "sand":
-              return rg(Pg);
+              return jh(Wh);
             case "snow":
-              return rg(Qg);
+              return jh(Ch);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1668,21 +1668,21 @@ export const modules = {
       }
     }
 
-    function hg(qq) {
+    function Dh(bb) {
       return Object.freeze({
-        ...xg.f,
+        ...Lh.e,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...qq
+        ...bb
       })
     }
-    const ng = [{
+    const xh = [{
         id: "default",
-        settings: xg.f
+        settings: Lh.e
       }, {
         id: "cross",
-        settings: hg({
+        settings: Dh({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1691,7 +1691,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: hg({
+        settings: Dh({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1702,13 +1702,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: hg({
+        settings: Dh({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: hg({
+        settings: Dh({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1717,7 +1717,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: hg({
+        settings: Dh({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -1727,7 +1727,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: hg({
+        settings: Dh({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -1736,7 +1736,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: hg({
+        settings: Dh({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -1744,571 +1744,571 @@ export const modules = {
           outline: 1.5
         })
       }],
-      bg = ["growOnClick", "forGuns"];
-    var ig = gq(9246);
+      zh = ["growOnClick", "forGuns"];
+    var gh = hb(9057);
 
-    function Zg(qq) {
+    function ih(bb) {
       let {
-        label: Eq,
-        selected: gq,
-        onClick: Yq,
-        className: lq,
-        style: mq,
-        children: xq
-      } = qq;
-      return (0, Bq.jsx)("button", {
+        label: ub,
+        selected: hb,
+        onClick: Bb,
+        className: Ob,
+        style: Ub,
+        children: Lb
+      } = bb;
+      return (0, Hb.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": gq,
-        title: Eq,
-        "aria-label": Eq,
+        "aria-checked": hb,
+        title: ub,
+        "aria-label": ub,
         "data-pad-focusable": !0,
-        className: Oq()("CrosshairBackdropSwatch", lq, {
-          Selected: gq
+        className: Gb()("CrosshairBackdropSwatch", Ob, {
+          Selected: hb
         }),
-        style: mq,
-        onClick: Yq,
-        children: xq
+        style: Ub,
+        onClick: Bb,
+        children: Lb
       })
     }
 
-    function fg(qq) {
+    function vh(bb) {
       let {
-        backdrop: Eq,
-        onChange: gq,
-        game: Yq
-      } = qq;
+        backdrop: ub,
+        onChange: hb,
+        game: Bb
+      } = bb;
       const {
-        t: lq
-      } = (0, mq.v)();
-      return (0, Bq.jsxs)("div", {
+        t: Ob
+      } = (0, Ub.K)();
+      return (0, Hb.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": lq("crosshairSettings:background"),
-        children: [Yq && (0, Bq.jsx)(Zg, {
-          label: lq("crosshairSettings:bg_game"),
-          selected: Yq.selected,
-          onClick: Yq.onSelect,
+        "aria-label": Ob("crosshairSettings:background"),
+        children: [Bb && (0, Hb.jsx)(ih, {
+          label: Ob("crosshairSettings:bg_game"),
+          selected: Bb.selected,
+          onClick: Bb.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, Bq.jsx)(xq.d, {
+          children: (0, Hb.jsx)(Lb.e, {
             name: "cube"
           })
-        }), yg.map((qq => (0, Bq.jsx)(Zg, {
-          label: lq(`crosshairSettings:bg_${qq}`),
-          selected: !(null !== Yq && void 0 !== Yq && Yq.selected) && qq === Eq,
-          style: vg(qq),
+        }), dh.map((bb => (0, Hb.jsx)(ih, {
+          label: Ob(`crosshairSettings:bg_${bb}`),
+          selected: !(null !== Bb && void 0 !== Bb && Bb.selected) && bb === ub,
+          style: nh(bb),
           onClick: () => {
-            gq(qq)
+            hb(bb)
           }
-        }, qq)))]
+        }, bb)))]
       })
     }
 
-    function Mg(qq) {
+    function th(bb) {
       let {
-        settings: Eq,
-        touch: gq,
-        backdrop: Yq,
-        onChange: lq
-      } = qq;
+        settings: ub,
+        touch: hb,
+        backdrop: Bb,
+        onChange: Ob
+      } = bb;
       const {
-        t: xq
-      } = (0, mq.v)(), Aq = function(qq) {
-        var Eq;
-        return null !== (Eq = ng.find((Eq => (0, xg.u)(Eq.settings, qq, bg)))) && void 0 !== Eq ? Eq : null
-      }(Eq);
-      return (0, Bq.jsx)("div", {
+        t: Lb
+      } = (0, Ub.K)(), Yb = function(bb) {
+        var ub;
+        return null !== (ub = xh.find((ub => (0, Lh.o)(ub.settings, bb, zh)))) && void 0 !== ub ? ub : null
+      }(ub);
+      return (0, Hb.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": xq("crosshairSettings:presets"),
-        children: ng.map((qq => {
-          const mq = (null === Aq || void 0 === Aq ? void 0 : Aq.id) === qq.id;
-          return (0, Bq.jsxs)("button", {
+        "aria-label": Lb("crosshairSettings:presets"),
+        children: xh.map((bb => {
+          const Ub = (null === Yb || void 0 === Yb ? void 0 : Yb.id) === bb.id;
+          return (0, Hb.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": mq,
+            "aria-checked": Ub,
             "data-pad-focusable": !0,
-            className: Oq()("CrosshairPreset", {
-              Selected: mq
+            className: Gb()("CrosshairPreset", {
+              Selected: Ub
             }),
             onClick: () => {
-              lq(function(qq, Eq) {
+              Ob(function(bb, ub) {
                 return {
-                  ...Eq.settings,
-                  growOnClick: qq.growOnClick,
-                  forGuns: qq.forGuns
+                  ...ub.settings,
+                  growOnClick: bb.growOnClick,
+                  forGuns: bb.forGuns
                 }
-              }(Eq, qq))
+              }(ub, bb))
             },
-            children: [(0, Bq.jsx)("div", {
+            children: [(0, Hb.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: vg(Yq),
-              children: (0, Bq.jsx)(ig.c, {
-                settings: qq.settings,
-                touch: gq,
+              style: nh(Bb),
+              children: (0, Hb.jsx)(gh.d, {
+                settings: bb.settings,
+                touch: hb,
                 inPreview: !0
               })
-            }), (0, Bq.jsx)("div", {
+            }), (0, Hb.jsx)("div", {
               className: "CrosshairPresetName",
-              children: xq(`crosshairSettings:preset_${qq.id}`)
+              children: Lb(`crosshairSettings:preset_${bb.id}`)
             })]
-          }, qq.id)
+          }, bb.id)
         }))
       })
     }
-    var Tg = gq(1650);
+    var Jh = hb(1577);
 
-    function zg(qq, Eq) {
-      const [gq, lq] = (0, Yq.useState)(!1), Oq = () => {
-        lq(!1)
-      }, [mq, xq] = (0, Yq.useState)(!1), Aq = (0, Yq.useRef)({
-        growOnClick: qq.growOnClick,
-        forGuns: qq.forGuns
+    function eh(bb, ub) {
+      const [hb, Ob] = (0, Bb.useState)(!1), Gb = () => {
+        Ob(!1)
+      }, [Ub, Lb] = (0, Bb.useState)(!1), Yb = (0, Bb.useRef)({
+        growOnClick: bb.growOnClick,
+        forGuns: bb.forGuns
       });
-      (0, Yq.useEffect)((() => {
-        const Eq = Aq.current;
-        Aq.current = {
-          growOnClick: qq.growOnClick,
-          forGuns: qq.forGuns
-        }, (qq.growOnClick && !Eq.growOnClick || qq.forGuns && !Eq.forGuns) && xq(!0)
-      }), [qq.growOnClick, qq.forGuns]), (0, Yq.useEffect)((() => {
-        if (!mq) return;
-        const qq = setTimeout((() => {
-          xq(!1)
+      (0, Bb.useEffect)((() => {
+        const ub = Yb.current;
+        Yb.current = {
+          growOnClick: bb.growOnClick,
+          forGuns: bb.forGuns
+        }, (bb.growOnClick && !ub.growOnClick || bb.forGuns && !ub.forGuns) && Lb(!0)
+      }), [bb.growOnClick, bb.forGuns]), (0, Bb.useEffect)((() => {
+        if (!Ub) return;
+        const bb = setTimeout((() => {
+          Lb(!1)
         }), 600);
         return () => {
-          clearTimeout(qq)
+          clearTimeout(bb)
         }
-      }), [mq]);
-      const cq = gq || mq;
+      }), [Ub]);
+      const Sb = hb || Ub;
       return {
         view: {
-          pressed: cq,
-          spread: cq && qq.forGuns && !qq.growOnClick ? 6 : 0
+          pressed: Sb,
+          spread: Sb && bb.forGuns && !bb.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: qq => {
-            !qq.target.closest(Eq) && (0, Tg.e)(qq.currentTarget, qq.pointerId) && lq(!0)
+          onPointerDown: bb => {
+            !bb.target.closest(ub) && (0, Jh.c)(bb.currentTarget, bb.pointerId) && Ob(!0)
           },
-          onPointerUp: Oq,
-          onPointerCancel: Oq,
-          onLostPointerCapture: Oq
+          onPointerUp: Gb,
+          onPointerCancel: Gb,
+          onLostPointerCapture: Gb
         }
       }
     }
 
-    function Sg(qq) {
+    function Nh(bb) {
       let {
-        settings: Eq,
-        touch: gq,
-        backdrop: Yq,
-        className: lq,
-        children: mq,
-        label: xq
-      } = qq;
-      const Aq = zg(Eq, ".CrosshairStageControls");
-      return (0, Bq.jsxs)("div", {
-        className: Oq()("CrosshairStage", lq),
-        style: vg(Yq),
-        ...Aq.handlers,
-        children: [(0, Bq.jsx)("div", {
+        settings: ub,
+        touch: hb,
+        backdrop: Bb,
+        className: Ob,
+        children: Ub,
+        label: Lb
+      } = bb;
+      const Yb = eh(ub, ".CrosshairStageControls");
+      return (0, Hb.jsxs)("div", {
+        className: Gb()("CrosshairStage", Ob),
+        style: nh(Bb),
+        ...Yb.handlers,
+        children: [(0, Hb.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": xq,
-          children: (0, Bq.jsx)(ig.c, {
-            settings: Eq,
-            touch: gq,
+          "aria-label": Lb,
+          children: (0, Hb.jsx)(gh.d, {
+            settings: ub,
+            touch: hb,
             inPreview: !0,
-            ...Aq.view
+            ...Yb.view
           })
-        }), mq]
+        }), Ub]
       })
     }
-    const pg = "crosshairFullScreen";
+    const sh = "crosshairFullScreen";
 
-    function Gg(qq) {
+    function Mh(bb) {
       let {
-        settings: Eq,
-        touch: gq,
-        backdrop: lq,
-        onBackdrop: Aq,
-        inGame: uq,
-        onChange: Wq,
-        onClose: Nq
-      } = qq;
+        settings: ub,
+        touch: hb,
+        backdrop: Ob,
+        onBackdrop: Yb,
+        inGame: ab,
+        onChange: wb,
+        onClose: Zb
+      } = bb;
       const {
-        t: aq
-      } = (0, mq.v)(), Vq = (0, Yq.useRef)(null);
-      (0, jg.w)("popup", Vq, Nq),
-      function(qq) {
-        const Eq = (0, Yq.useRef)(qq);
-        Eq.current = qq, (0, Yq.useEffect)((() => {
+        t: Xb
+      } = (0, Ub.K)(), pb = (0, Bb.useRef)(null);
+      (0, Ah.v)("popup", pb, Zb),
+      function(bb) {
+        const ub = (0, Bb.useRef)(bb);
+        ub.current = bb, (0, Bb.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [pg]: !0
+            [sh]: !0
           }, "");
-          let qq = !1;
-          const gq = () => {
-            qq = !0, Eq.current()
+          let bb = !1;
+          const hb = () => {
+            bb = !0, ub.current()
           };
-          return window.addEventListener("popstate", gq), () => {
-            var Eq;
-            window.removeEventListener("popstate", gq), !qq && null !== (Eq = window.history.state) && void 0 !== Eq && Eq[pg] && window.history.back()
+          return window.addEventListener("popstate", hb), () => {
+            var ub;
+            window.removeEventListener("popstate", hb), !bb && null !== (ub = window.history.state) && void 0 !== ub && ub[sh] && window.history.back()
           }
         }), [])
-      }(Nq);
-      const dq = (0, Yq.useRef)(Nq);
-      dq.current = Nq, (0, Yq.useEffect)((() => {
-        function qq(qq) {
-          "Escape" === qq.key && (qq.stopPropagation(), dq.current())
+      }(Zb);
+      const ob = (0, Bb.useRef)(Zb);
+      ob.current = Zb, (0, Bb.useEffect)((() => {
+        function bb(bb) {
+          "Escape" === bb.key && (bb.stopPropagation(), ob.current())
         }
-        return window.addEventListener("keydown", qq, !0), () => {
-          window.removeEventListener("keydown", qq, !0)
+        return window.addEventListener("keydown", bb, !0), () => {
+          window.removeEventListener("keydown", bb, !0)
         }
       }), []);
-      const jq = zg(Eq, ".CrosshairFullScreenPanel"),
-        [Hq, oq] = (0, Yq.useState)(!0),
-        Pq = Hq && uq;
-      (0, Yq.useEffect)((() => {
-        if (Pq) return rq.b.set({
+      const Ab = eh(ub, ".CrosshairFullScreenPanel"),
+        [lb, Kb] = (0, Bb.useState)(!0),
+        Wb = lb && ab;
+      (0, Bb.useEffect)((() => {
+        if (Wb) return jb.d.set({
           crosshairGameView: !0
         }), () => {
-          rq.b.set({
+          jb.d.set({
             crosshairGameView: !1
           })
         }
-      }), [Pq]);
-      const [Qq, yq] = (0, Yq.useState)(!0);
-      return (0, dg.createPortal)((0, Bq.jsxs)("div", {
-        ref: Vq,
+      }), [Wb]);
+      const [Cb, db] = (0, Bb.useState)(!0);
+      return (0, oh.createPortal)((0, Hb.jsxs)("div", {
+        ref: pb,
         className: "CrosshairFullScreen",
-        style: Pq ? void 0 : vg(lq),
-        ...jq.handlers,
-        children: [(0, Bq.jsx)(ig.c, {
-          settings: Eq,
-          touch: gq,
+        style: Wb ? void 0 : nh(Ob),
+        ...Ab.handlers,
+        children: [(0, Hb.jsx)(gh.d, {
+          settings: ub,
+          touch: hb,
           inEditor: !0,
-          ...jq.view
-        }), (0, Bq.jsxs)("div", {
-          className: Oq()("CrosshairFullScreenPanel", {
-            Collapsed: !Qq
+          ...Ab.view
+        }), (0, Hb.jsxs)("div", {
+          className: Gb()("CrosshairFullScreenPanel", {
+            Collapsed: !Cb
           }),
-          children: [(0, Bq.jsxs)("div", {
+          children: [(0, Hb.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, Bq.jsx)(fg, {
-              backdrop: lq,
-              onChange: qq => {
-                oq(!1), Aq(qq)
+            children: [(0, Hb.jsx)(vh, {
+              backdrop: Ob,
+              onChange: bb => {
+                Kb(!1), Yb(bb)
               },
-              game: uq ? {
-                selected: Pq,
+              game: ab ? {
+                selected: Wb,
                 onSelect: () => {
-                  oq(!0)
+                  Kb(!0)
                 }
               } : void 0
-            }), (0, Bq.jsx)(cq.Q, {
+            }), (0, Hb.jsx)(Sb.O, {
               className: "CrosshairPanelToggle",
-              ariaLabel: aq(Qq ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: Xb(Cb ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                yq(!Qq)
+                db(!Cb)
               },
-              children: (0, Bq.jsx)(xq.d, {
-                name: Qq ? "caret-up" : "pen"
+              children: (0, Hb.jsx)(Lb.e, {
+                name: Cb ? "caret-up" : "pen"
               })
-            }), (0, Bq.jsx)(cq.g, {
+            }), (0, Hb.jsx)(Sb.e, {
               className: "CrosshairFullScreenDone",
-              onClick: Nq,
+              onClick: Zb,
               padDefaultFocus: !0,
-              children: aq("crosshairSettings:done")
+              children: Xb("crosshairSettings:done")
             })]
-          }), Qq && (0, Bq.jsxs)("div", {
+          }), Cb && (0, Hb.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, Bq.jsx)(Mg, {
-              settings: Eq,
-              touch: gq,
-              backdrop: lq,
-              onChange: Wq
-            }), (0, Bq.jsx)(Vg, {
-              settings: Eq,
-              onChange: Wq
+            children: [(0, Hb.jsx)(th, {
+              settings: ub,
+              touch: hb,
+              backdrop: Ob,
+              onChange: wb
+            }), (0, Hb.jsx)(ph, {
+              settings: ub,
+              onChange: wb
             })]
           })]
         })]
       }), document.body)
     }
-    var Lg = gq(2595),
-      Jg = gq(9254);
+    var mh = hb(2500),
+      Ih = hb(9071);
 
-    function kg(qq) {
+    function Ph(bb) {
       let {
-        settings: Eq,
-        onChange: gq
-      } = qq;
+        settings: ub,
+        onChange: hb
+      } = bb;
       const {
-        t: lq
-      } = (0, mq.v)(), Aq = (0, Jg.i)(Eq), [uq, Wq] = (0, Lg.i)(), [Nq, aq] = (0, Yq.useState)(!1), Vq = (0, Yq.useRef)(null), [dq, jq] = (0, Lg.i)(), [Hq, oq] = (0, Yq.useState)(!1);
-      return (0, Bq.jsxs)("div", {
+        t: Ob
+      } = (0, Ub.K)(), Yb = (0, Ih.f)(ub), [ab, wb] = (0, mh.h)(), [Zb, Xb] = (0, Bb.useState)(!1), pb = (0, Bb.useRef)(null), [ob, Ab] = (0, mh.h)(), [lb, Kb] = (0, Bb.useState)(!1);
+      return (0, Hb.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, Bq.jsxs)("div", {
+        children: [(0, Hb.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, Bq.jsxs)(cq.Q, {
-            className: Oq()("CrosshairCopy", {
-              ActiveSecondaryButton: uq
+          children: [(0, Hb.jsxs)(Sb.O, {
+            className: Gb()("CrosshairCopy", {
+              ActiveSecondaryButton: ab
             }),
             onClick: () => {
-              (0, Lg.f)(Aq, {
+              (0, mh.f)(Yb, {
                 useShareSheet: !1,
-                onOutcome: qq => {
-                  aq("failed" === qq), "copied" === qq && Wq()
+                onOutcome: bb => {
+                  Xb("failed" === bb), "copied" === bb && wb()
                 }
               })
             },
-            children: [(0, Bq.jsx)(xq.d, {
-              name: uq ? "check" : "copy"
-            }), " ", lq(uq ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, Bq.jsx)(Qq.b, {
+            children: [(0, Hb.jsx)(Lb.e, {
+              name: ab ? "check" : "copy"
+            }), " ", Ob(ab ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, Hb.jsx)(Cb.b, {
             className: "CrosshairPaste",
-            domRef: Vq,
-            ariaLabel: lq("crosshairSettings:paste"),
-            placeholderText: lq("crosshairSettings:paste"),
-            onValueChange: qq => {
-              const Eq = (0, Jg.e)(qq);
-              oq(!Eq && qq.trim().length >= Jg.b), Eq && (gq(Eq), Vq.current.value = "", jq())
+            domRef: pb,
+            ariaLabel: Ob("crosshairSettings:paste"),
+            placeholderText: Ob("crosshairSettings:paste"),
+            onValueChange: bb => {
+              const ub = (0, Ih.e)(bb);
+              Kb(!ub && bb.trim().length >= Ih.b), ub && (hb(ub), pb.current.value = "", Ab())
             }
           })]
-        }), Nq && (0, Bq.jsx)("input", {
+        }), Zb && (0, Hb.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: Aq,
-          "aria-label": lq("crosshairSettings:copy"),
-          onFocus: qq => {
-            qq.currentTarget.select()
+          value: Yb,
+          "aria-label": Ob("crosshairSettings:copy"),
+          onFocus: bb => {
+            bb.currentTarget.select()
           }
-        }), (0, Bq.jsxs)("div", {
+        }), (0, Hb.jsxs)("div", {
           "aria-live": "polite",
-          children: [Hq && (0, Bq.jsx)("div", {
+          children: [lb && (0, Hb.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: lq("crosshairSettings:pasteInvalid")
-          }), dq && !Hq && (0, Bq.jsx)("div", {
+            children: Ob("crosshairSettings:pasteInvalid")
+          }), ob && !lb && (0, Hb.jsx)("div", {
             className: "CrosshairShareNote",
-            children: lq("crosshairSettings:applied")
+            children: Ob("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var Rg = gq(9263);
-    let Ug = "sky";
+    var qh = hb(9073);
+    let Eh = "sky";
 
-    function Fg(qq) {
+    function yh(bb) {
       let {
-        showing: Eq
-      } = qq;
+        showing: ub
+      } = bb;
       const {
-        t: gq
-      } = (0, mq.v)(), {
-        isTouchScreen: lq,
-        gameState: Oq,
-        clientEscMenuOptions: Aq
-      } = (0, rq.j)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), uq = (0, Rg.f)(), [Wq, Nq] = (0, Yq.useState)(Ug), aq = qq => {
-        Ug = qq, Nq(qq)
-      }, [Vq, dq] = (0, Yq.useState)(!1);
-      return (0, Yq.useEffect)((() => {
-        Eq || dq(!1)
-      }), [Eq]), (0, Bq.jsxs)("div", {
+        t: hb
+      } = (0, Ub.K)(), {
+        isTouchScreen: Ob,
+        gameState: Gb,
+        clientEscMenuOptions: Yb
+      } = (0, jb.j)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), ab = (0, qh.e)(), [wb, Zb] = (0, Bb.useState)(Eh), Xb = bb => {
+        Eh = bb, Zb(bb)
+      }, [pb, ob] = (0, Bb.useState)(!1);
+      return (0, Bb.useEffect)((() => {
+        ub || ob(!1)
+      }), [ub]), (0, Hb.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, Bq.jsx)("div", {
+        children: [(0, Hb.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, Bq.jsx)(Sg, {
+          children: (0, Hb.jsx)(Nh, {
             className: "CrosshairPreviewStage",
-            settings: uq,
-            touch: lq,
-            backdrop: Wq,
-            label: gq("crosshairSettings:preview"),
-            children: (0, Bq.jsxs)("div", {
+            settings: ab,
+            touch: Ob,
+            backdrop: wb,
+            label: hb("crosshairSettings:preview"),
+            children: (0, Hb.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, Bq.jsx)(fg, {
-                backdrop: Wq,
-                onChange: aq
-              }), (0, Bq.jsxs)(cq.Q, {
+              children: [(0, Hb.jsx)(vh, {
+                backdrop: wb,
+                onChange: Xb
+              }), (0, Hb.jsxs)(Sb.O, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  dq(!0)
+                  ob(!0)
                 },
-                children: [(0, Bq.jsx)(xq.d, {
+                children: [(0, Hb.jsx)(Lb.e, {
                   name: "expand"
-                }), " ", gq("crosshairSettings:fullScreen")]
+                }), " ", hb("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, Bq.jsx)("div", {
+        }), (0, Hb.jsx)("div", {
           className: "SettingBox",
-          children: (0, Bq.jsx)(Mg, {
-            settings: uq,
-            touch: lq,
-            backdrop: Wq,
-            onChange: Rg.c
+          children: (0, Hb.jsx)(th, {
+            settings: ab,
+            touch: Ob,
+            backdrop: wb,
+            onChange: qh.b
           })
-        }), (0, Bq.jsx)(kg, {
-          settings: uq,
-          onChange: Rg.c
-        }), lq && (0, Bq.jsx)(mg.e, {
-          note: (0, Og.d)(lq, Aq.touchActionButtons) ? gq("crosshairSettings:touchNote") : void 0
-        }), (0, Bq.jsx)(Vg, {
-          settings: uq,
-          onChange: Rg.c
-        }), Vq && (0, Bq.jsx)(Gg, {
-          settings: uq,
-          touch: lq,
-          backdrop: Wq,
-          onBackdrop: aq,
-          inGame: "inGame" === Oq,
-          onChange: Rg.c,
+        }), (0, Hb.jsx)(Ph, {
+          settings: ab,
+          onChange: qh.b
+        }), Ob && (0, Hb.jsx)(Uh.e, {
+          note: (0, Gh.g)(Ob, Yb.touchActionButtons) ? hb("crosshairSettings:touchNote") : void 0
+        }), (0, Hb.jsx)(ph, {
+          settings: ab,
+          onChange: qh.b
+        }), pb && (0, Hb.jsx)(Mh, {
+          settings: ab,
+          touch: Ob,
+          backdrop: wb,
+          onBackdrop: Xb,
+          inGame: "inGame" === Gb,
+          onChange: qh.b,
           onClose: () => {
-            dq(!1)
+            ob(!1)
           }
         })]
       })
     }
-    var sg = gq(8837),
-      Xg = gq(1376),
-      wg = gq(4826),
-      Kg = gq(9270),
-      Cg = gq(1942),
-      Ig = gq(4135),
-      eg = gq(1945),
-      Dg = gq(691);
-    const qY = (0, Yq.memo)((function() {
+    var Vh = hb(8603),
+      Fh = hb(1296),
+      fh = hb(4760),
+      kh = hb(9077),
+      Th = hb(1857),
+      ch = hb(4053),
+      Qh = hb(1865),
+      Rh = hb(668);
+    const bB = (0, Bb.memo)((function() {
       const {
-        clientEscMenuOptions: qq
-      } = (0, rq.j)(["clientEscMenuOptions"]), {
-        recording: Eq,
-        clipping: gq,
-        hasClipBuffer: lq
-      } = (0, Cg.g)("replayRecorder"), mq = (0, Cg.f)("connectedGame", (qq => qq.replay)), xq = (0, Ig.o)(), Aq = !1 === (0, Vq.h)("canRecordReplays");
-      (0, Yq.useEffect)((() => {
-        Hq.gameBridge.send("setRecorderPrefs", {
-          clipping: qq.enableClipping,
-          clipSeconds: qq.clipDurationSeconds
+        clientEscMenuOptions: bb
+      } = (0, jb.j)(["clientEscMenuOptions"]), {
+        recording: ub,
+        clipping: hb,
+        hasClipBuffer: Ob
+      } = (0, Th.i)("replayRecorder"), Ub = (0, Th.g)("connectedGame", (bb => bb.replay)), Lb = (0, ch.g)(), Yb = !1 === (0, pb.f)("canRecordReplays");
+      (0, Bb.useEffect)((() => {
+        lb.gameBridge.send("setRecorderPrefs", {
+          clipping: bb.enableClipping,
+          clipSeconds: bb.clipDurationSeconds
         })
-      }), [qq.enableClipping, qq.clipDurationSeconds]);
-      const uq = xq || mq,
-        Wq = !uq && !Aq,
-        Nq = Eq || Wq,
-        aq = Wq,
-        dq = aq && gq && !Eq;
+      }), [bb.enableClipping, bb.clipDurationSeconds]);
+      const ab = Lb || Ub,
+        wb = !ab && !Yb,
+        Zb = ub || wb,
+        Xb = wb,
+        ob = Xb && hb && !ub;
 
-      function jq() {
-        Nq && Hq.gameBridge.send("toggleRecording", null)
+      function Ab() {
+        Zb && lb.gameBridge.send("toggleRecording", null)
       }
-      return (0, Bq.jsxs)("div", {
+      return (0, Hb.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, Bq.jsxs)("div", {
+        children: [(0, Hb.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, Bq.jsx)("div", {
+          children: [(0, Hb.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: Eq ? (0, Bq.jsxs)(Bq.Fragment, {
-              children: [(0, Bq.jsxs)(cq.K, {
+            children: ub ? (0, Hb.jsxs)(Hb.Fragment, {
+              children: [(0, Hb.jsxs)(Sb.H, {
                 className: "ReplayViewerCategoryButton",
-                onClick: jq,
-                disabled: !Nq,
-                children: [(0, Bq.jsx)("span", {
+                onClick: Ab,
+                disabled: !Zb,
+                children: [(0, Hb.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, Bq.jsx)(eg.c, {
+                }), (0, Hb.jsx)(Qh.e, {
                   noaAction: "recordGame"
                 })]
-              }), (0, Bq.jsx)(Kg.b, {
+              }), (0, Hb.jsx)(kh.c, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, Bq.jsxs)(cq.g, {
+            }) : (0, Hb.jsxs)(Sb.e, {
               className: "ReplayViewerCategoryButton",
-              onClick: jq,
-              disabled: !Nq,
-              children: [(0, Bq.jsx)("span", {
+              onClick: Ab,
+              disabled: !Zb,
+              children: [(0, Hb.jsx)("span", {
                 children: "Start Recording"
-              }), (0, Bq.jsx)(eg.c, {
+              }), (0, Hb.jsx)(Qh.e, {
                 noaAction: "recordGame"
               })]
             })
-          }), Aq && (0, Bq.jsx)("div", {
+          }), Yb && (0, Hb.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), uq && !Eq && (0, Bq.jsx)("div", {
+          }), ab && !ub && (0, Hb.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, Bq.jsxs)("div", {
+        }), (0, Hb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, Bq.jsx)(tq.d, {
+          children: [(0, Hb.jsx)(rb.c, {
             label: "Enable clipping",
-            checked: qq.enableClipping,
-            disabled: !aq,
-            onClick: function(qq) {
-              aq && rq.b.setClientEscMenuOptions({
-                enableClipping: qq
+            checked: bb.enableClipping,
+            disabled: !Xb,
+            onClick: function(bb) {
+              Xb && jb.d.setClientEscMenuOptions({
+                enableClipping: bb
               })
             },
-            className: Oq()({
-              SettingBoxDisabled: !aq
+            className: Gb()({
+              SettingBoxDisabled: !Xb
             })
-          }), (0, Bq.jsx)(tq.h, {
+          }), (0, Hb.jsx)(rb.h, {
             name: "Clip duration (seconds)",
-            min: Dg.j,
-            max: Dg.h,
-            step: Dg.d,
-            initValue: qq.clipDurationSeconds,
-            onChange: function(qq) {
-              rq.b.setClientEscMenuOptions({
-                clipDurationSeconds: qq
+            min: Rh.j,
+            max: Rh.h,
+            step: Rh.c,
+            initValue: bb.clipDurationSeconds,
+            onChange: function(bb) {
+              jb.d.setClientEscMenuOptions({
+                clipDurationSeconds: bb
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !aq || !qq.enableClipping
+            disabled: !Xb || !bb.enableClipping
           })]
-        }), (0, Bq.jsxs)("div", {
+        }), (0, Hb.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, Bq.jsxs)(cq.g, {
+          children: [(0, Hb.jsxs)(Sb.e, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              dq && Hq.gameBridge.send("saveClip", null)
+              ob && lb.gameBridge.send("saveClip", null)
             },
-            disabled: !dq,
-            children: [(0, Bq.jsx)("span", {
+            disabled: !ob,
+            children: [(0, Hb.jsx)("span", {
               children: "Record clip"
-            }), (0, Bq.jsx)(eg.c, {
+            }), (0, Hb.jsx)(Qh.e, {
               noaAction: "recordClip"
             })]
-          }), qq.enableClipping && !lq && aq && !Eq && (0, Bq.jsx)("div", {
+          }), bb.enableClipping && !Ob && Xb && !ub && (0, Hb.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), Eq && (0, Bq.jsx)("div", {
+          }), ub && (0, Hb.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, Bq.jsxs)("div", {
+        }), (0, Hb.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, Bq.jsxs)(cq.g, {
+          children: [(0, Hb.jsxs)(Sb.e, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, Ig.l)(!0), rq.b.set({
+              (0, ch.e)(!0), jb.d.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: xq,
-            children: [(0, Bq.jsx)("span", {
+            disabled: Lb,
+            children: [(0, Hb.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, Bq.jsx)(eg.c, {
+            }), (0, Hb.jsx)(Qh.e, {
               noaAction: "replayViewerOpen"
             })]
-          }), xq && (0, Bq.jsx)("div", {
+          }), Lb && (0, Hb.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, Bq.jsxs)("div", {
+        }), (0, Hb.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, Bq.jsx)("div", {
+          children: [(0, Hb.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, Bq.jsx)("iframe", {
+          }), (0, Hb.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2319,8 +2319,8 @@ export const modules = {
         })]
       })
     }));
-    var EY = gq(1870);
-    const gY = {
+    var uB = hb(1784);
+    const hB = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2342,11 +2342,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, Bq.jsx)("svg", {
+        icon: () => (0, Hb.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, Bq.jsx)("path", {
+          children: (0, Hb.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2365,7 +2365,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      pN: {
+      vZ: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2391,283 +2391,283 @@ export const modules = {
       }
     };
 
-    function YY() {
-      return Promise.all([gq.e(75), gq.e(132), gq.e(126), gq.e(123)]).then((() => gq(40813))).then((qq => ({
-        default: qq.ShaderPackCategory
-      })), (qq => (console.error("Failed to load the shader pack settings", qq), {
-        default: lY
+    function BB() {
+      return Promise.all([hb.e(75), hb.e(132), hb.e(126), hb.e(123)]).then((() => hb(40508))).then((bb => ({
+        default: bb.ShaderPackCategory
+      })), (bb => (console.error("Failed to load the shader pack settings", bb), {
+        default: OB
       })))
     }
 
-    function lY() {
+    function OB() {
       const {
-        t: qq
-      } = (0, mq.v)();
-      return (0, Bq.jsx)("div", {
+        t: bb
+      } = (0, Ub.K)();
+      return (0, Hb.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: qq("shaderPack:tabLoadFailed")
+        children: bb("shaderPack:tabLoadFailed")
       })
     }
-    var OY = gq(1367);
-    const mY = (0, Yq.lazy)((() => gq.e(264).then((() => gq(40797))).then((qq => ({
-        default: qq.BloxdInformation
+    var GB = hb(1288);
+    const UB = (0, Bb.lazy)((() => hb.e(264).then((() => hb(40497))).then((bb => ({
+        default: bb.BloxdInformation
       }))))),
-      xY = (0, Yq.lazy)(YY);
+      LB = (0, Bb.lazy)(BB);
 
-    function AY(qq) {
-      return qq ? "general" : "account"
+    function YB(bb) {
+      return bb ? "general" : "account"
     }
-    const cY = new Map,
-      uY = (0, Yq.memo)((function(qq) {
+    const SB = new Map,
+      aB = (0, Bb.memo)((function(bb) {
         let {
-          show: Eq,
-          setBeforeResumeCallback: gq
-        } = qq;
-        (0, dq.b)();
+          show: ub,
+          setBeforeResumeCallback: hb
+        } = bb;
+        (0, ob.e)();
         const {
-          gameState: lq,
-          openSettingsCategory: Oq
-        } = (0, rq.j)(["gameState", "openSettingsCategory"]), {
-          userContext: Aq
-        } = (0, aq.c)(), {
-          t: uq
-        } = (0, mq.v)(), Qq = (0, Nq.c)(), yq = (0, Vq.h)("minChunkAddDist"), tq = "inGame" === lq, [vq, bq] = (0, Yq.useState)(AY(tq)), [iq, Zq] = (0, Yq.useState)(null), [fq, Mq] = (0, Yq.useState)([]), Tq = (0, Yq.useRef)(function() {
-          const qq = new Date,
-            Eq = 6 * (qq.getMonth() + qq.getDate()) % cE.w.length;
-          return [...cE.w, ...cE.w].slice(Eq, Eq + 6)
-        }()), zq = (0, Yq.useRef)(null), Sq = (0, nE.h)(Xg.j, (0, Xg.c)()), pq = Object.keys(gY).filter((qq => {
-          switch (qq) {
+          gameState: Ob,
+          openSettingsCategory: Gb
+        } = (0, jb.j)(["gameState", "openSettingsCategory"]), {
+          userContext: Yb
+        } = (0, Xb.d)(), {
+          t: ab
+        } = (0, Ub.K)(), Cb = (0, Zb.d)(), db = (0, pb.f)("minChunkAddDist"), rb = "inGame" === Ob, [nb, zb] = (0, Bb.useState)(YB(rb)), [gb, ib] = (0, Bb.useState)(null), [vb, tb] = (0, Bb.useState)([]), Jb = (0, Bb.useRef)(function() {
+          const bb = new Date,
+            ub = 6 * (bb.getMonth() + bb.getDate()) % Su.B.length;
+          return [...Su.B, ...Su.B].slice(ub, ub + 6)
+        }()), eb = (0, Bb.useRef)(null), Nb = (0, xu.k)(Fh.j, (0, Fh.c)()), sb = Object.keys(hB).filter((bb => {
+          switch (bb) {
             case "replayViewer":
-              return tq;
+              return rb;
             case "developerTools":
-              return Aq.playerHasRank("developer") || !1;
+              return Yb.playerHasRank("developer") || !1;
             case "texturePack":
-              return jq.featureFlags.settings.canChangeTexturePack;
-            case "pN":
-              return jq.featureFlags.settings.canUseShaderPacks;
+              return Ab.featureFlags.settings.canChangeTexturePack;
+            case "vZ":
+              return Ab.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return jq.featureFlags.useSocialFeatures;
+              return Ab.featureFlags.useSocialFeatures;
             case "alternativeDomains":
-              return "crazygames" !== nq.n;
+              return "crazygames" !== xb.s;
             case "controller":
-              return jq.featureFlags.useControllerSupport && (Sq || "controller" === vq);
+              return Ab.featureFlags.useControllerSupport && (Nb || "controller" === nb);
             default:
               return !0
           }
         }));
-        (0, nE.f)("toggleFullCoordinateOverlay", (() => {
-          const qq = CE("showCoordinates") && CE("showChunkCoordinates") && CE("showFPS");
-          IE("showCoordinates", !qq), IE("showChunkCoordinates", !qq), IE("showFPS", !qq), Qq()
-        })), (0, nE.f)("updatedChunkLoadDist", (() => {
-          Qq()
-        })), (0, Yq.useEffect)((() => {
-          if (Zq(null), null === rq.b.get("openSettingsCategory")) {
-            const qq = (0, OY.c)() ? cY.get(tq) : void 0;
-            bq(qq && pq.includes(qq) ? qq : AY(tq))
+        (0, xu.h)("toggleFullCoordinateOverlay", (() => {
+          const bb = Tu("showCoordinates") && Tu("showChunkCoordinates") && Tu("showFPS");
+          cu("showCoordinates", !bb), cu("showChunkCoordinates", !bb), cu("showFPS", !bb), Cb()
+        })), (0, xu.h)("updatedChunkLoadDist", (() => {
+          Cb()
+        })), (0, Bb.useEffect)((() => {
+          if (ib(null), null === jb.d.get("openSettingsCategory")) {
+            const bb = (0, GB.f)() ? SB.get(rb) : void 0;
+            zb(bb && sb.includes(bb) ? bb : YB(rb))
           }
-        }), [Eq]), (0, Yq.useEffect)((() => {
-          null !== Oq && (bq(Oq), cY.set(tq, Oq), rq.b.set({
+        }), [ub]), (0, Bb.useEffect)((() => {
+          null !== Gb && (zb(Gb), SB.set(rb, Gb), jb.d.set({
             openSettingsCategory: null
           }))
-        }), [Oq, tq]), (0, Yq.useLayoutEffect)((() => {
-          zq.current && (zq.current.scrollTop = 0)
-        }), [vq, Eq]), (0, Yq.useEffect)((() => {
-          "updateLog" === vq && (0, Pq.b)().then(Mq)
-        }), [vq]), (0, Yq.useEffect)((() => {
-          if ((0, RE.H)(yq)) return;
-          const [qq, Eq] = (0, Yg.e)(), [gq, Yq] = (0, SE.h)(yq), lq = (0, EY.e)(yq[0], qq, gq), Oq = (0, EY.e)(yq[1], Eq, Yq);
-          Hq.gameBridge.send("setChunkAddDistance", {
-            horizontal: lq,
-            vertical: Oq
+        }), [Gb, rb]), (0, Bb.useLayoutEffect)((() => {
+          eb.current && (eb.current.scrollTop = 0)
+        }), [nb, ub]), (0, Bb.useEffect)((() => {
+          "updateLog" === nb && (0, Wb.e)().then(tb)
+        }), [nb]), (0, Bb.useEffect)((() => {
+          if ((0, qu.J)(db)) return;
+          const [bb, ub] = (0, Bh.e)(), [hb, Bb] = (0, Nu.h)(db), Ob = (0, uB.f)(db[0], bb, hb), Gb = (0, uB.f)(db[1], ub, Bb);
+          lb.gameBridge.send("setChunkAddDistance", {
+            horizontal: Ob,
+            vertical: Gb
           })
-        }), [yq]);
-        const Gq = (0, Yq.useCallback)((async () => {
-          iq && (await iq(), Zq(null))
-        }), [iq]);
+        }), [db]);
+        const Mb = (0, Bb.useCallback)((async () => {
+          gb && (await gb(), ib(null))
+        }), [gb]);
 
-        function Lq() {
-          rq.b.set({
+        function mb() {
+          jb.d.set({
             openEverythingMenuName: null
           })
         }
-        return (0, Yq.useEffect)((() => {
-          gq((() => Gq))
-        }), [Gq, gq]), (0, Bq.jsxs)("div", {
+        return (0, Bb.useEffect)((() => {
+          hb((() => Mb))
+        }), [Mb, hb]), (0, Hb.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: Eq ? {} : {
+          style: ub ? {} : {
             display: "none"
           },
-          children: [(0, Bq.jsx)("div", {
+          children: [(0, Hb.jsx)("div", {
             className: "MenuSideBar",
-            children: (0, Bq.jsx)("div", {
+            children: (0, Hb.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, Bq.jsx)(Wq, {
-                items: pq.map((qq => {
-                  const Eq = gY[qq].icon;
+              children: (0, Hb.jsx)(wb, {
+                items: sb.map((bb => {
+                  const ub = hB[bb].icon;
                   return {
-                    id: qq,
-                    faIcon: "string" === typeof Eq ? Eq : void 0,
-                    iconElement: "string" === typeof Eq ? void 0 : (0, Bq.jsx)(Eq, {}),
-                    title: uq(gY[qq].displayName),
+                    id: bb,
+                    faIcon: "string" === typeof ub ? ub : void 0,
+                    iconElement: "string" === typeof ub ? void 0 : (0, Hb.jsx)(ub, {}),
+                    title: ab(hB[bb].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: vq,
-                onClick: qq => {
-                  !async function(qq) {
-                    await Gq(), bq(qq), cY.set(tq, qq)
-                  }(qq)
+                selectedItemId: nb,
+                onClick: bb => {
+                  !async function(bb) {
+                    await Mb(), zb(bb), SB.set(rb, bb)
+                  }(bb)
                 }
               })
             })
-          }), (0, Bq.jsxs)("div", {
-            ref: zq,
+          }), (0, Hb.jsxs)("div", {
+            ref: eb,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === vq && (0, Bq.jsx)(HE, {
-              showing: Eq,
-              inGame: tq
-            }), "general" === vq && (0, Bq.jsx)(rE, {
-              inGame: tq
-            }), "audio" === vq && (0, Bq.jsx)(vE, {}), "notifications" === vq && (0, Bq.jsx)(zE, {}), "graphics" === vq && (0, Bq.jsx)(gg, {
-              minChunkAddDist: null !== yq && void 0 !== yq ? yq : [2, 2],
-              getValue: CE,
-              onChange: IE,
-              setApplySettingsCallback: Zq
-            }), "controls" === vq && (0, Bq.jsx)(lg.f, {}), "crosshair" === vq && (0, Bq.jsx)(Fg, {
-              showing: Eq
-            }), "controller" === vq && jq.featureFlags.useControllerSupport && (0, Bq.jsx)(sg.e, {}), jq.featureFlags.settings.canChangeTexturePack && "texturePack" === vq && (0, Bq.jsx)(wg.b, {
-              setApplySettingsCallback: Zq
-            }), jq.featureFlags.settings.canUseShaderPacks && "pN" === vq && (0, Bq.jsx)(Yq.Suspense, {
+            children: ["account" === nb && (0, Hb.jsx)(lu, {
+              showing: ub,
+              inGame: rb
+            }), "general" === nb && (0, Hb.jsx)(ju, {
+              inGame: rb
+            }), "audio" === nb && (0, Hb.jsx)(nu, {}), "notifications" === nb && (0, Hb.jsx)(eu, {}), "graphics" === nb && (0, Hb.jsx)(hh, {
+              minChunkAddDist: null !== db && void 0 !== db ? db : [2, 2],
+              getValue: Tu,
+              onChange: cu,
+              setApplySettingsCallback: ib
+            }), "controls" === nb && (0, Hb.jsx)(Oh.h, {}), "crosshair" === nb && (0, Hb.jsx)(yh, {
+              showing: ub
+            }), "controller" === nb && Ab.featureFlags.useControllerSupport && (0, Hb.jsx)(Vh.d, {}), Ab.featureFlags.settings.canChangeTexturePack && "texturePack" === nb && (0, Hb.jsx)(fh.c, {
+              setApplySettingsCallback: ib
+            }), Ab.featureFlags.settings.canUseShaderPacks && "vZ" === nb && (0, Hb.jsx)(Bb.Suspense, {
               fallback: null,
-              children: (0, Bq.jsx)(xY, {
-                setApplySettingsCallback: Zq
+              children: (0, Hb.jsx)(LB, {
+                setApplySettingsCallback: ib
               })
-            }), "updateLog" === vq && (0, Bq.jsx)("div", {
+            }), "updateLog" === nb && (0, Hb.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, Bq.jsx)("div", {
+              children: (0, Hb.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: fq.map(((qq, Eq) => (0, Bq.jsx)(oq.e, {
-                  updateLog: qq,
-                  index: Eq,
-                  close: Lq
-                }, Eq)))
+                children: vb.map(((bb, ub) => (0, Hb.jsx)(Kb.b, {
+                  updateLog: bb,
+                  index: ub,
+                  close: mb
+                }, ub)))
               })
-            }), "information" === vq && (0, Bq.jsx)("div", {
+            }), "information" === nb && (0, Hb.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, Bq.jsx)(Yq.Suspense, {
+              children: (0, Hb.jsx)(Bb.Suspense, {
                 fallback: null,
-                children: (0, Bq.jsx)(mY, {})
+                children: (0, Hb.jsx)(UB, {})
               })
-            }), "alternativeDomains" === vq && (0, Bq.jsxs)("div", {
+            }), "alternativeDomains" === nb && (0, Hb.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, Bq.jsx)("div", {
+              children: [(0, Hb.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: uq("settingsMenu:unblockedDomainsDescription")
-              }), (0, Bq.jsx)("div", {
+                children: ab("settingsMenu:unblockedDomainsDescription")
+              }), (0, Hb.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: Tq.current.map((qq => (0, Bq.jsxs)(cq.g, {
+                children: Jb.current.map((bb => (0, Hb.jsxs)(Sb.e, {
                   onClick: () => {
-                    window.open(`https://${qq}`)
+                    window.open(`https://${bb}`)
                   },
-                  children: [(0, Bq.jsx)(xq.d, {
+                  children: [(0, Hb.jsx)(Lb.e, {
                     name: "arrow-up-right-from-square"
-                  }), " ", qq]
-                }, qq)))
+                  }), " ", bb]
+                }, bb)))
               })]
-            }), "replayViewer" === vq && (0, Bq.jsx)(qY, {}), "developerTools" === vq && (0, Bq.jsx)("div", {
+            }), "replayViewer" === nb && (0, Hb.jsx)(bB, {}), "developerTools" === nb && (0, Hb.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, Bq.jsx)(hq, {
-                setApplySettingsCallback: Zq
+              children: (0, Hb.jsx)(Db, {
+                setApplySettingsCallback: ib
               })
-            }), null !== iq && (0, Bq.jsx)("div", {
+            }), null !== gb && (0, Hb.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, Bq.jsx)(cq.g, {
+              children: (0, Hb.jsx)(Sb.e, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: Gq,
-                children: uq("general:apply")
+                onClick: Mb,
+                children: ab("general:apply")
               })
             })]
           })]
         })
       }));
-    var BY = gq(2538);
-    const WY = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
-      NY = (0, Yq.lazy)((() => Promise.resolve().then((() => gq(4486))).then((qq => {
-        qq.needGameClientAfterPaint();
-        const Eq = qq.matchmakingLibrariesPromise.then((qq => (0, BY.b)(qq.loadCharacterCustomisationUI(), (qq => qq.CharacterCustomisationUI))));
-        return Promise.all([qq.ensureGameSetup(), Eq]).then((qq => {
-          let [, Eq] = qq;
-          return Eq
+    var HB = hb(2440);
+    const wB = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
+      ZB = (0, Bb.lazy)((() => Promise.resolve().then((() => hb(4420))).then((bb => {
+        bb.needGameClientAfterPaint();
+        const ub = bb.matchmakingLibrariesPromise.then((bb => (0, HB.e)(bb.loadCharacterCustomisationUI(), (bb => bb.CharacterCustomisationUI))));
+        return Promise.all([bb.ensureGameSetup(), ub]).then((bb => {
+          let [, ub] = bb;
+          return ub
         }))
       }))));
 
-    function aY(qq) {
+    function XB(bb) {
       let {
-        show: Eq
-      } = qq;
+        show: ub
+      } = bb;
       const {
-        userContext: gq
-      } = (0, aq.c)(), [lq, Oq] = (0, Yq.useState)("characters");
-      if (!Eq) return null;
-      const mq = WY.filter((qq => "cape" !== qq && "nameColour" !== qq || gq.getPlayerRanks().includes("super") || (0, Jq.purchasesAllowed)())).map((qq => ({
-        id: qq,
-        faIcon: cE.G[qq],
-        title: cE.H[qq],
+        userContext: hb
+      } = (0, Xb.d)(), [Ob, Gb] = (0, Bb.useState)("characters");
+      if (!ub) return null;
+      const Ub = wB.filter((bb => "cape" !== bb && "nameColour" !== bb || hb.getPlayerRanks().includes("super") || (0, Ib.purchasesAllowed)())).map((bb => ({
+        id: bb,
+        faIcon: Su.J[bb],
+        title: Su.N[bb],
         redDot: !1
       })));
-      return (0, Bq.jsxs)("div", {
+      return (0, Hb.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, Bq.jsx)("div", {
+        children: [(0, Hb.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, Bq.jsx)(Wq, {
-            items: mq,
-            selectedItemId: lq,
-            onClick: qq => {
-              Oq(qq)
+          children: (0, Hb.jsx)(wb, {
+            items: Ub,
+            selectedItemId: Ob,
+            onClick: bb => {
+              Gb(bb)
             }
           })
-        }), (0, Bq.jsx)("div", {
+        }), (0, Hb.jsx)("div", {
           className: "MenuBody",
-          children: (0, Bq.jsx)(Yq.Suspense, {
-            fallback: (0, Bq.jsx)("div", {
+          children: (0, Hb.jsx)(Bb.Suspense, {
+            fallback: (0, Hb.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, Bq.jsx)(yq.e, {})
+              children: (0, Hb.jsx)(db.c, {})
             }),
-            children: (0, Bq.jsx)(NY, {
-              selectedTab: lq
+            children: (0, Hb.jsx)(ZB, {
+              selectedTab: Ob
             })
           })
         })]
       })
     }
-    var VY = gq(1440),
-      dY = gq(1442),
-      jY = gq(9277),
-      HY = gq(4359),
-      oY = gq(3286),
-      PY = gq(3337),
-      QY = gq(9304),
-      yY = gq(8729),
-      tY = gq(9283),
-      rY = gq(9297),
-      vY = gq(1895),
-      hY = gq(1876),
-      nY = gq(4739),
-      bY = gq(1252),
-      iY = gq(1214),
-      ZY = gq(1646),
-      fY = gq(8823),
-      MY = gq(2394),
-      TY = gq(2402);
+    var pB = hb(1366),
+      oB = hb(1374),
+      AB = hb(9085),
+      lB = hb(4292),
+      KB = hb(3198),
+      WB = hb(3253),
+      CB = hb(9115),
+      dB = hb(8493),
+      rB = hb(9094),
+      jB = hb(9100),
+      nB = hb(1799),
+      DB = hb(1789),
+      xB = hb(4672),
+      zB = hb(1158),
+      gB = hb(1124),
+      iB = hb(1572),
+      vB = hb(8581),
+      tB = hb(2300),
+      JB = hb(2309);
 
-    function zY(qq) {
-      return qq ? Object.keys(qq).sort(((Eq, gq) => {
-        var Yq, lq, Oq, mq;
-        const xq = (null !== (Yq = null === (lq = qq[gq]) || void 0 === lq ? void 0 : lq.sortPriority) && void 0 !== Yq ? Yq : 0) - (null !== (Oq = null === (mq = qq[Eq]) || void 0 === mq ? void 0 : mq.sortPriority) && void 0 !== Oq ? Oq : 0);
-        return 0 !== xq ? xq : Eq.localeCompare(gq)
+    function eB(bb) {
+      return bb ? Object.keys(bb).sort(((ub, hb) => {
+        var Bb, Ob, Gb, Ub;
+        const Lb = (null !== (Bb = null === (Ob = bb[hb]) || void 0 === Ob ? void 0 : Ob.sortPriority) && void 0 !== Bb ? Bb : 0) - (null !== (Gb = null === (Ub = bb[ub]) || void 0 === Ub ? void 0 : Ub.sortPriority) && void 0 !== Gb ? Gb : 0);
+        return 0 !== Lb ? Lb : ub.localeCompare(hb)
       })) : []
     }
-    const SY = [{
+    const NB = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -2681,241 +2681,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function pY(qq) {
+    function sB(bb) {
       for (const {
-          threshold: Eq,
-          suffix: gq
+          threshold: ub,
+          suffix: hb
         }
-        of SY)
-        if (qq >= Eq) {
-          const Yq = qq / Eq;
-          return Yq >= 100 ? `${Math.floor(Yq)}${gq}` : Yq >= 10 ? `${Yq.toFixed(1).replace(/\.0$/,"")}${gq}` : `${Yq.toFixed(2).replace(/\.?0+$/,"")}${gq}`
-        } return String(qq)
+        of NB)
+        if (bb >= ub) {
+          const Bb = bb / ub;
+          return Bb >= 100 ? `${Math.floor(Bb)}${hb}` : Bb >= 10 ? `${Bb.toFixed(1).replace(/\.0$/,"")}${hb}` : `${Bb.toFixed(2).replace(/\.?0+$/,"")}${hb}`
+        } return String(bb)
     }
-    var GY = gq(4858);
-    const LY = {
+    var MB = hb(4791);
+    const mB = {
         normal: "0.8em",
         big: "1em"
       },
-      JY = (0, Yq.memo)((function(qq) {
+      IB = (0, Bb.memo)((function(bb) {
         let {
-          item: Eq,
-          amount: gq = 0,
-          size: Yq = "normal",
-          tier: lq = null
-        } = qq;
-        return (0, Bq.jsx)("div", {
-          className: Oq()("SmpSlot", `SmpSlot-${Yq}`),
-          children: Eq && (0, Bq.jsx)(vY.e, {
-            itemName: Eq,
-            amount: gq > 1 ? gq : 0,
-            amountFontSize: LY[Yq],
-            enchantmentTier: lq
+          item: ub,
+          amount: hb = 0,
+          size: Bb = "normal",
+          tier: Ob = null
+        } = bb;
+        return (0, Hb.jsx)("div", {
+          className: Gb()("SmpSlot", `SmpSlot-${Bb}`),
+          children: ub && (0, Hb.jsx)(nB.d, {
+            itemName: ub,
+            amount: hb > 1 ? hb : 0,
+            amountFontSize: mB[Bb],
+            enchantmentTier: Ob
           })
         })
       }));
 
-    function kY(qq) {
+    function PB(bb) {
       let {
-        amount: Eq,
-        exact: gq = !1,
-        className: Yq
-      } = qq;
-      return (0, Bq.jsxs)("span", {
-        className: Oq()("SmpGold", Yq),
-        children: [(0, Bq.jsx)("span", {
+        amount: ub,
+        exact: hb = !1,
+        className: Bb
+      } = bb;
+      return (0, Hb.jsxs)("span", {
+        className: Gb()("SmpGold", Bb),
+        children: [(0, Hb.jsx)("span", {
           className: "SmpCoin",
-          children: (0, Bq.jsx)(vY.e, {
+          children: (0, Hb.jsx)(nB.d, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), gq ? Eq.toLocaleString("en-US") : pY(Eq)]
+        }), hb ? ub.toLocaleString("en-US") : sB(ub)]
       })
     }
 
-    function RY(qq) {
+    function qB(bb) {
       let {
-        count: Eq = 5,
-        grid: gq = !1
-      } = qq;
-      return (0, Bq.jsx)("div", {
-        className: gq ? "SmpCardGrid" : "SmpList",
+        count: ub = 5,
+        grid: hb = !1
+      } = bb;
+      return (0, Hb.jsx)("div", {
+        className: hb ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: Eq
-        }, ((qq, Eq) => (0, Bq.jsxs)("div", {
-          className: Oq()(gq ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, Bq.jsx)("div", {
-            className: Oq()("SmpSlot", gq ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, Bq.jsxs)("div", {
+          length: ub
+        }, ((bb, ub) => (0, Hb.jsxs)("div", {
+          className: Gb()(hb ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, Hb.jsx)("div", {
+            className: Gb()("SmpSlot", hb ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, Hb.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, Bq.jsx)("b", {}), (0, Bq.jsx)("small", {})]
-          }), (0, Bq.jsx)("div", {
+            children: [(0, Hb.jsx)("b", {}), (0, Hb.jsx)("small", {})]
+          }), (0, Hb.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, Eq)))
+        }, ub)))
       })
     }
 
-    function UY(qq) {
+    function EB(bb) {
       let {
-        title: Eq,
-        children: gq
-      } = qq;
-      return (0, Bq.jsxs)("div", {
+        title: ub,
+        children: hb
+      } = bb;
+      return (0, Hb.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, Bq.jsx)("b", {
-          children: Eq
-        }), gq && (0, Bq.jsx)("small", {
-          children: gq
+        children: [(0, Hb.jsx)("b", {
+          children: ub
+        }), hb && (0, Hb.jsx)("small", {
+          children: hb
         })]
       })
     }
 
-    function FY(qq) {
+    function yB(bb) {
       let {
-        entry: Eq
-      } = qq;
-      return (0, Bq.jsx)(UY, {
-        title: (0, Bq.jsx)(hY.c, {
-          text: Eq.item.customTitle
+        entry: ub
+      } = bb;
+      return (0, Hb.jsx)(EB, {
+        title: (0, Hb.jsx)(DB.c, {
+          text: ub.item.customTitle
         }),
-        children: (0, Bq.jsx)(hY.c, {
-          text: Eq.item.description
+        children: (0, Hb.jsx)(DB.c, {
+          text: ub.item.description
         })
       })
     }
 
-    function sY(qq) {
-      return (0, Bq.jsx)(GY.c, {
-        ...qq,
-        className: Oq()("SmpChoice", qq.className),
+    function VB(bb) {
+      return (0, Hb.jsx)(MB.c, {
+        ...bb,
+        className: Gb()("SmpChoice", bb.className),
         reselectable: !0
       })
     }
 
-    function XY() {
-      return (0, Bq.jsx)("span", {
+    function FB() {
+      return (0, Hb.jsx)("span", {
         className: "SmpLoader",
-        children: (0, Bq.jsx)(yq.e, {})
+        children: (0, Hb.jsx)(db.c, {})
       })
     }
 
-    function wY(qq) {
+    function fB(bb) {
       let {
-        value: Eq,
-        onChange: gq,
-        min: lq = 1,
-        max: Oq,
-        step: mq = 1,
-        label: xq
-      } = qq;
-      const Aq = (0, Yq.useRef)(null),
-        cq = (0, Yq.useRef)(Eq);
-      cq.current = Eq;
-      const [uq, Wq] = (0, Yq.useState)(null), Nq = qq => Math.max(lq, Math.min(Oq, Math.floor(qq))), aq = qq => {
-        const Eq = cq.current,
-          Yq = "function" === typeof mq ? mq(Eq, qq) : mq,
-          lq = Nq(Eq + Yq * qq);
-        cq.current = lq, gq(lq)
+        value: ub,
+        onChange: hb,
+        min: Ob = 1,
+        max: Gb,
+        step: Ub = 1,
+        label: Lb
+      } = bb;
+      const Yb = (0, Bb.useRef)(null),
+        Sb = (0, Bb.useRef)(ub);
+      Sb.current = ub;
+      const [ab, wb] = (0, Bb.useState)(null), Zb = bb => Math.max(Ob, Math.min(Gb, Math.floor(bb))), Xb = bb => {
+        const ub = Sb.current,
+          Bb = "function" === typeof Ub ? Ub(ub, bb) : Ub,
+          Ob = Zb(ub + Bb * bb);
+        Sb.current = Ob, hb(Ob)
       };
-      (0, Yq.useEffect)((() => {
-        if (null === uq) return;
-        let qq;
-        const Eq = () => {
-            Wq(null)
+      (0, Bb.useEffect)((() => {
+        if (null === ab) return;
+        let bb;
+        const ub = () => {
+            wb(null)
           },
-          gq = setTimeout((() => {
-            qq = setInterval((() => {
-              aq(uq);
-              const qq = cq.current;
-              (uq > 0 ? qq >= Oq : qq <= lq) && Eq()
+          hb = setTimeout((() => {
+            bb = setInterval((() => {
+              Xb(ab);
+              const bb = Sb.current;
+              (ab > 0 ? bb >= Gb : bb <= Ob) && ub()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", Eq), window.addEventListener("pointercancel", Eq), window.addEventListener("blur", Eq), () => {
-          clearTimeout(gq), clearInterval(qq), window.removeEventListener("pointerup", Eq), window.removeEventListener("pointercancel", Eq), window.removeEventListener("blur", Eq)
+        return window.addEventListener("pointerup", ub), window.addEventListener("pointercancel", ub), window.addEventListener("blur", ub), () => {
+          clearTimeout(hb), clearInterval(bb), window.removeEventListener("pointerup", ub), window.removeEventListener("pointercancel", ub), window.removeEventListener("blur", ub)
         }
-      }), [uq]), (0, Yq.useEffect)((() => {
-        const qq = Aq.current;
-        qq && document.activeElement !== qq && qq.value !== String(Eq) && (qq.value = String(Eq))
-      }), [Eq]), (0, Yq.useEffect)((() => {
-        const qq = Aq.current;
-        if (!qq) return;
-        const Eq = () => {
-          qq.value = String(cq.current)
+      }), [ab]), (0, Bb.useEffect)((() => {
+        const bb = Yb.current;
+        bb && document.activeElement !== bb && bb.value !== String(ub) && (bb.value = String(ub))
+      }), [ub]), (0, Bb.useEffect)((() => {
+        const bb = Yb.current;
+        if (!bb) return;
+        const ub = () => {
+          bb.value = String(Sb.current)
         };
-        return qq.addEventListener("blur", Eq), () => {
-          qq.removeEventListener("blur", Eq)
+        return bb.addEventListener("blur", ub), () => {
+          bb.removeEventListener("blur", ub)
         }
       }), []);
-      const Vq = qq => (0, Bq.jsx)("button", {
+      const pb = bb => (0, Hb.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${qq>0?"More":"Less"} ${xq}`,
-        disabled: qq > 0 ? Eq >= Oq : Eq <= lq,
-        onPointerDown: Eq => {
-          0 === Eq.button && (aq(qq), Wq(qq))
+        "aria-label": `${bb>0?"More":"Less"} ${Lb}`,
+        disabled: bb > 0 ? ub >= Gb : ub <= Ob,
+        onPointerDown: ub => {
+          0 === ub.button && (Xb(bb), wb(bb))
         },
-        onKeyDown: Eq => {
-          "Enter" !== Eq.key && " " !== Eq.key || aq(qq)
+        onKeyDown: ub => {
+          "Enter" !== ub.key && " " !== ub.key || Xb(bb)
         },
-        onContextMenu: qq => {
-          qq.preventDefault()
+        onContextMenu: bb => {
+          bb.preventDefault()
         },
-        children: qq > 0 ? "+" : "\u2212"
+        children: bb > 0 ? "+" : "\u2212"
       });
-      return (0, Bq.jsxs)("div", {
+      return (0, Hb.jsxs)("div", {
         className: "SmpStepper",
-        children: [Vq(-1), (0, Bq.jsx)(Qq.b, {
+        children: [pb(-1), (0, Hb.jsx)(Cb.b, {
           className: "SmpStepperInput",
-          domRef: Aq,
-          defaultValue: String(Eq),
-          ariaLabel: xq,
+          domRef: Yb,
+          defaultValue: String(ub),
+          ariaLabel: Lb,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: qq => {
-            const Eq = qq.replace(/[^\d]/g, "");
-            Aq.current && Eq !== qq && (Aq.current.value = Eq), "" !== Eq && gq(Nq(Number(Eq)))
+          onValueChange: bb => {
+            const ub = bb.replace(/[^\d]/g, "");
+            Yb.current && ub !== bb && (Yb.current.value = ub), "" !== ub && hb(Zb(Number(ub)))
           }
-        }), Vq(1)]
+        }), pb(1)]
       })
     }
 
-    function KY(qq) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, qq))) - 1))
+    function kB(bb) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, bb))) - 1))
     }
-    var CY = gq(9301),
-      IY = gq(1226);
-    const eY = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    IY.A, Gq.Tc.length;
+    var TB = hb(9106),
+      cB = hb(1133);
+    const QB = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    cB.B, Mb.Kc.length;
     new Map;
-    var DY = gq(3166);
+    var RB = hb(3063);
 
-    function ql(qq, Eq) {
-      var gq;
-      return Eq && (null === (gq = qq[Eq]) || void 0 === gq ? void 0 : gq.smp) || null
+    function bO(bb, ub) {
+      var hb;
+      return ub && (null === (hb = bb[ub]) || void 0 === hb ? void 0 : hb.smp) || null
     }
 
-    function El(qq, Eq) {
-      const gq = [];
-      for (const lq of zY(qq)) {
-        var Yq;
-        const Oq = qq[lq];
-        (null === (Yq = Oq.smp) || void 0 === Yq ? void 0 : Yq.kind) === Eq && gq.push({
-          key: lq,
-          item: Oq,
-          meta: Oq.smp
+    function uO(bb, ub) {
+      const hb = [];
+      for (const Ob of eB(bb)) {
+        var Bb;
+        const Gb = bb[Ob];
+        (null === (Bb = Gb.smp) || void 0 === Bb ? void 0 : Bb.kind) === ub && hb.push({
+          key: Ob,
+          item: Gb,
+          meta: Gb.smp
         })
       }
-      return gq
+      return hb
     }
 
-    function gl(qq, Eq) {
-      var gq;
-      return null !== (gq = El(qq, Eq)[0]) && void 0 !== gq ? gq : null
+    function hO(bb, ub) {
+      var hb;
+      return null !== (hb = uO(bb, ub)[0]) && void 0 !== hb ? hb : null
     }
-    const Yl = "50% 0% 50% 0%",
-      ll = [{
+    const BO = "50% 0% 50% 0%",
+      OO = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -2929,746 +2929,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function Ol(qq) {
-      const Eq = qq - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function GO(bb) {
+      const ub = bb - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: gq,
-          suffix: Yq
+          divisor: hb,
+          suffix: Bb
         }
-        of ll)
-        if (Eq >= gq) return `${Math.floor(Eq/gq)}${Yq}`;
+        of OO)
+        if (ub >= hb) return `${Math.floor(ub/hb)}${Bb}`;
       return "<1s"
     }
 
-    function ml(qq) {
-      const Eq = qq.map(yY.f),
-        gq = [];
-      return Eq.forEach(((qq, Yq) => {
-        const lq = function(qq) {
-            const Eq = qq.match(/\d+/);
-            return Eq ? Number(Eq[0]) : 0
-          }(qq),
-          Oq = Yq === Eq.length - 1;
-        (Oq || 1 === lq || 10 === lq || 100 === lq) && gq.push({
-          label: qq,
-          quantity: lq,
-          isAll: Oq
+    function UO(bb) {
+      const ub = bb.map(dB.f),
+        hb = [];
+      return ub.forEach(((bb, Bb) => {
+        const Ob = function(bb) {
+            const ub = bb.match(/\d+/);
+            return ub ? Number(ub[0]) : 0
+          }(bb),
+          Gb = Bb === ub.length - 1;
+        (Gb || 1 === Ob || 10 === Ob || 100 === Ob) && hb.push({
+          label: bb,
+          quantity: Ob,
+          isAll: Gb
         })
-      })), gq
+      })), hb
     }
-    let xl = null;
+    let LO = null;
 
-    function Al(qq, Eq) {
-      const gq = Eq.trim().toLowerCase();
-      if (!gq) return [];
-      const Yq = qq => {
-          if (qq === gq) return 0;
-          if (qq.startsWith(gq)) return 1;
-          const Eq = qq.indexOf(gq);
-          return -1 === Eq ? -1 : 2 + Eq
+    function YO(bb, ub) {
+      const hb = ub.trim().toLowerCase();
+      if (!hb) return [];
+      const Bb = bb => {
+          if (bb === hb) return 0;
+          if (bb.startsWith(hb)) return 1;
+          const ub = bb.indexOf(hb);
+          return -1 === ub ? -1 : 2 + ub
         },
-        lq = [];
-      for (const xq of qq) {
-        const qq = [Yq(xq.lowerLabel), Yq(xq.lowerName)].filter((qq => -1 !== qq));
-        qq.length && lq.push({
-          item: xq,
-          rank: Math.min(...qq)
+        Ob = [];
+      for (const Lb of bb) {
+        const bb = [Bb(Lb.lowerLabel), Bb(Lb.lowerName)].filter((bb => -1 !== bb));
+        bb.length && Ob.push({
+          item: Lb,
+          rank: Math.min(...bb)
         })
       }
-      if (lq.length > 0) return lq.sort(((qq, Eq) => qq.rank - Eq.rank)).map((qq => qq.item));
-      const Oq = [...gq],
-        mq = qq => {
-          let Eq = 0;
-          for (const gq of Oq) {
-            if (Eq = qq.indexOf(gq, Eq), -1 === Eq) return !1;
-            Eq++
+      if (Ob.length > 0) return Ob.sort(((bb, ub) => bb.rank - ub.rank)).map((bb => bb.item));
+      const Gb = [...hb],
+        Ub = bb => {
+          let ub = 0;
+          for (const hb of Gb) {
+            if (ub = bb.indexOf(hb, ub), -1 === ub) return !1;
+            ub++
           }
           return !0
         };
-      return qq.filter((qq => mq(qq.lowerLabel) || mq(qq.lowerName)))
+      return bb.filter((bb => Ub(bb.lowerLabel) || Ub(bb.lowerName)))
     }
 
-    function cl(qq, Eq) {
-      var gq;
-      return null !== (gq = null === qq || void 0 === qq ? void 0 : qq[Eq]) && void 0 !== gq ? gq : Eq
+    function SO(bb, ub) {
+      var hb;
+      return null !== (hb = null === bb || void 0 === bb ? void 0 : bb[ub]) && void 0 !== hb ? hb : ub
     }
 
-    function ul(qq, Eq) {
-      const gq = qq.userInput;
-      return void 0 !== Eq && "dropdown" === (null === gq || void 0 === gq ? void 0 : gq.type) && gq.dropdownOptions.map(yY.f).includes(Eq) ? Eq : function(qq) {
-        const Eq = qq.userInput;
-        if ("dropdown" !== (null === Eq || void 0 === Eq ? void 0 : Eq.type) || 0 === Eq.dropdownOptions.length) return null;
-        const gq = Eq.dropdownOptions.map(yY.f);
-        return Eq.initialValue && gq.includes(Eq.initialValue) ? Eq.initialValue : gq[gq.length - 1]
-      }(qq)
+    function aO(bb, ub) {
+      const hb = bb.userInput;
+      return void 0 !== ub && "dropdown" === (null === hb || void 0 === hb ? void 0 : hb.type) && hb.dropdownOptions.map(dB.f).includes(ub) ? ub : function(bb) {
+        const ub = bb.userInput;
+        if ("dropdown" !== (null === ub || void 0 === ub ? void 0 : ub.type) || 0 === ub.dropdownOptions.length) return null;
+        const hb = ub.dropdownOptions.map(dB.f);
+        return ub.initialValue && hb.includes(ub.initialValue) ? ub.initialValue : hb[hb.length - 1]
+      }(bb)
     }
 
-    function Bl(qq) {
-      return void 0 === qq ? "" : JSON.stringify(qq)
+    function HO(bb) {
+      return void 0 === bb ? "" : JSON.stringify(bb)
     }
-    const Wl = (0, Yq.createContext)(null);
+    const wO = (0, Bb.createContext)(null);
 
-    function Nl() {
-      return (0, Yq.useContext)(Wl)
+    function ZO() {
+      return (0, Bb.useContext)(wO)
     }
-    var al = gq(2607);
-    const Vl = (0, Yq.memo)((function(qq) {
+    var XO = hb(2517);
+    const pO = (0, Bb.memo)((function(bb) {
         let {
-          name: Eq,
-          label: gq,
-          onPick: Yq
-        } = qq;
-        return (0, Bq.jsxs)("button", {
+          name: ub,
+          label: hb,
+          onPick: Bb
+        } = bb;
+        return (0, Hb.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: gq,
+          title: hb,
           onClick: () => {
-            Yq(Eq)
+            Bb(ub)
           },
-          children: [(0, Bq.jsx)(JY, {
-            item: Eq,
+          children: [(0, Hb.jsx)(IB, {
+            item: ub,
             size: "big"
-          }), (0, Bq.jsx)("span", {
-            children: gq
+          }), (0, Hb.jsx)("span", {
+            children: hb
           })]
         })
       })),
-      dl = (0, Yq.memo)((function(qq) {
+      oO = (0, Bb.memo)((function(bb) {
         let {
-          items: Eq,
-          query: gq,
-          onPick: lq
-        } = qq;
+          items: ub,
+          query: hb,
+          onPick: Ob
+        } = bb;
         const {
-          t: Oq
-        } = (0, mq.v)(), [xq, Aq] = (0, Yq.useState)(new Set), cq = (0, Yq.useMemo)((() => function(qq) {
-          const Eq = new Map;
-          for (const gq of qq) {
-            let qq = Eq.get(gq.category);
-            qq || (qq = [], Eq.set(gq.category, qq)), qq.push(gq)
+          t: Gb
+        } = (0, Ub.K)(), [Lb, Yb] = (0, Bb.useState)(new Set), Sb = (0, Bb.useMemo)((() => function(bb) {
+          const ub = new Map;
+          for (const hb of bb) {
+            let bb = ub.get(hb.category);
+            bb || (bb = [], ub.set(hb.category, bb)), bb.push(hb)
           }
-          return [...eY, "other"].filter((qq => Eq.has(qq))).map((qq => ({
-            category: qq,
-            items: Eq.get(qq)
+          return [...QB, "other"].filter((bb => ub.has(bb))).map((bb => ({
+            category: bb,
+            items: ub.get(bb)
           })))
-        }(Eq)), [Eq]), uq = (0, Yq.useMemo)((() => Al(Eq, gq).slice(0, 60)), [Eq, gq]);
-        return gq.trim() ? 0 === uq.length ? (0, Bq.jsx)(UY, {
-          title: Oq("smpShop:noItemsFound", {
-            query: gq.trim()
+        }(ub)), [ub]), ab = (0, Bb.useMemo)((() => YO(ub, hb).slice(0, 60)), [ub, hb]);
+        return hb.trim() ? 0 === ab.length ? (0, Hb.jsx)(EB, {
+          title: Gb("smpShop:noItemsFound", {
+            query: hb.trim()
           }),
-          children: Oq("smpShop:tryShorterName")
-        }) : (0, Bq.jsx)(al.c, {
+          children: Gb("smpShop:tryShorterName")
+        }) : (0, Hb.jsx)(XO.d, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: Yl,
-          observerUpdateDeps: [gq],
-          children: uq.map((qq => (0, Bq.jsx)(Vl, {
-            name: qq.name,
-            label: qq.label,
-            onPick: lq
-          }, qq.name)))
-        }) : (0, Bq.jsx)(Bq.Fragment, {
-          children: cq.map((qq => {
+          rootMargin: BO,
+          observerUpdateDeps: [hb],
+          children: ab.map((bb => (0, Hb.jsx)(pO, {
+            name: bb.name,
+            label: bb.label,
+            onPick: Ob
+          }, bb.name)))
+        }) : (0, Hb.jsx)(Hb.Fragment, {
+          children: Sb.map((bb => {
             let {
-              category: Eq,
-              items: gq
-            } = qq;
-            const Yq = xq.has(Eq) || gq.length <= 48,
-              mq = Yq ? gq : gq.slice(0, 48);
-            return (0, Bq.jsxs)("section", {
+              category: ub,
+              items: hb
+            } = bb;
+            const Bb = Lb.has(ub) || hb.length <= 48,
+              Ub = Bb ? hb : hb.slice(0, 48);
+            return (0, Hb.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, Bq.jsxs)("h4", {
-                children: [Oq("other" === Eq ? "smpShop:otherItems" : `creativeInventory:${Eq}`), !Yq && (0, Bq.jsx)("button", {
+              children: [(0, Hb.jsxs)("h4", {
+                children: [Gb("other" === ub ? "smpShop:otherItems" : `creativeInventory:${ub}`), !Bb && (0, Hb.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    Aq(new Set([...xq, Eq]))
+                    Yb(new Set([...Lb, ub]))
                   },
-                  children: Oq("smpShop:showAll", {
-                    count: gq.length
+                  children: Gb("smpShop:showAll", {
+                    count: hb.length
                   })
                 })]
-              }), (0, Bq.jsx)(al.c, {
+              }), (0, Hb.jsx)(XO.d, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: Yl,
-                observerUpdateDeps: [Yq],
-                children: mq.map((qq => (0, Bq.jsx)(Vl, {
-                  name: qq.name,
-                  label: qq.label,
-                  onPick: lq
-                }, qq.name)))
+                rootMargin: BO,
+                observerUpdateDeps: [Bb],
+                children: Ub.map((bb => (0, Hb.jsx)(pO, {
+                  name: bb.name,
+                  label: bb.label,
+                  onPick: Ob
+                }, bb.name)))
               })]
-            }, Eq)
+            }, ub)
           }))
         })
       }));
 
-    function jl(qq, Eq) {
+    function AO(bb, ub) {
       const {
-        searched: gq,
-        shown: lq,
-        searchFor: Oq,
-        loading: mq
-      } = function(qq, Eq) {
-        var gq;
-        const lq = Nl(),
-          [Oq, mq] = (0, Yq.useState)(void 0),
-          xq = (0, Yq.useRef)(void 0),
-          Aq = (0, Yq.useRef)(0),
-          cq = (0, Yq.useRef)(void 0),
-          uq = null !== (gq = null === qq || void 0 === qq ? void 0 : qq.meta.item) && void 0 !== gq ? gq : null,
-          Bq = !!qq && lq.isPending(qq.key);
-        (0, Yq.useEffect)((() => {
-          if (!qq || Bq || !Eq || void 0 === Oq || Oq === uq) return;
-          const gq = Oq === xq.current && lq.gaveUpAt(qq.key) > Aq.current && cq.current !== Oq;
-          (Oq !== xq.current || gq) && lq.act(qq.key, null !== Oq && void 0 !== Oq ? Oq : "*", gq) && (gq && (cq.current = Oq), xq.current = Oq, Aq.current = Date.now())
-        }), [qq, Bq, Eq, Oq, uq, lq]);
-        const Wq = (0, Yq.useCallback)((qq => {
-            xq.current = void 0, cq.current = void 0, mq(qq)
+        searched: hb,
+        shown: Ob,
+        searchFor: Gb,
+        loading: Ub
+      } = function(bb, ub) {
+        var hb;
+        const Ob = ZO(),
+          [Gb, Ub] = (0, Bb.useState)(void 0),
+          Lb = (0, Bb.useRef)(void 0),
+          Yb = (0, Bb.useRef)(0),
+          Sb = (0, Bb.useRef)(void 0),
+          ab = null !== (hb = null === bb || void 0 === bb ? void 0 : bb.meta.item) && void 0 !== hb ? hb : null,
+          Hb = !!bb && Ob.isPending(bb.key);
+        (0, Bb.useEffect)((() => {
+          if (!bb || Hb || !ub || void 0 === Gb || Gb === ab) return;
+          const hb = Gb === Lb.current && Ob.gaveUpAt(bb.key) > Yb.current && Sb.current !== Gb;
+          (Gb !== Lb.current || hb) && Ob.act(bb.key, null !== Gb && void 0 !== Gb ? Gb : "*", hb) && (hb && (Sb.current = Gb), Lb.current = Gb, Yb.current = Date.now())
+        }), [bb, Hb, ub, Gb, ab, Ob]);
+        const wb = (0, Bb.useCallback)((bb => {
+            Lb.current = void 0, Sb.current = void 0, Ub(bb)
           }), []),
-          Nq = void 0 !== Oq && Oq !== uq && (Bq || xq.current !== Oq);
+          Zb = void 0 !== Gb && Gb !== ab && (Hb || Lb.current !== Gb);
         return {
-          searched: uq,
-          shown: Nq ? Oq : uq,
-          searchFor: Wq,
-          loading: Nq || Bq || null !== uq && !Eq
+          searched: ab,
+          shown: Zb ? Gb : ab,
+          searchFor: wb,
+          loading: Zb || Hb || null !== ab && !ub
         }
-      }(qq, Eq), xq = (0, Yq.useMemo)((() => function() {
-        var qq;
-        let Eq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          Yq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const lq = `${(0,DY.k)()}\x1f${Eq.join("\x1e")}\x1f${gq.join("\x1e")}\x1f${JSON.stringify(Yq)}`;
-        if ((null === (qq = xl) || void 0 === qq ? void 0 : qq.key) === lq) return xl.items;
-        const Oq = new Set(gq),
-          mq = new Set,
-          xq = [],
-          Aq = (qq, Eq) => {
-            var gq;
-            if (!qq || mq.has(qq) || Oq.has(qq)) return;
-            mq.add(qq);
-            const lq = null !== (gq = Yq[qq]) && void 0 !== gq ? gq : qq;
-            xq.push({
-              name: qq,
-              label: lq,
-              lowerLabel: lq.toLowerCase(),
-              lowerName: qq.toLowerCase(),
-              category: Eq
+      }(bb, ub), Lb = (0, Bb.useMemo)((() => function() {
+        var bb;
+        let ub = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          hb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          Bb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Ob = `${(0,RB.g)()}\x1f${ub.join("\x1e")}\x1f${hb.join("\x1e")}\x1f${JSON.stringify(Bb)}`;
+        if ((null === (bb = LO) || void 0 === bb ? void 0 : bb.key) === Ob) return LO.items;
+        const Gb = new Set(hb),
+          Ub = new Set,
+          Lb = [],
+          Yb = (bb, ub) => {
+            var hb;
+            if (!bb || Ub.has(bb) || Gb.has(bb)) return;
+            Ub.add(bb);
+            const Ob = null !== (hb = Bb[bb]) && void 0 !== hb ? hb : bb;
+            Lb.push({
+              name: bb,
+              label: Ob,
+              lowerLabel: Ob.toLowerCase(),
+              lowerName: bb.toLowerCase(),
+              category: ub
             })
           };
-        for (const uq of (0, CY.creativeItemIds)()) {
-          var cq;
-          (0, CY.itemIsDisabled)(uq, !0, !0, !1) || (0, CY.showOnlyInCreativeSearch)(uq) || Aq((0, DY.h)(uq), null !== (cq = (0, CY.creativeCategoryOf)(uq)) && void 0 !== cq ? cq : "other")
+        for (const ab of (0, TB.creativeItemIds)()) {
+          var Sb;
+          (0, TB.itemIsDisabled)(ab, !0, !0, !1) || (0, TB.showOnlyInCreativeSearch)(ab) || Yb((0, RB.f)(ab), null !== (Sb = (0, TB.creativeCategoryOf)(ab)) && void 0 !== Sb ? Sb : "other")
         }
-        for (const uq of Eq) Aq(uq, "other");
-        return xl = {
-          key: lq,
-          items: xq
-        }, xq
-      }(null === qq || void 0 === qq ? void 0 : qq.meta.extra, null === qq || void 0 === qq ? void 0 : qq.meta.excluded, null === qq || void 0 === qq ? void 0 : qq.meta.names)), [null === qq || void 0 === qq ? void 0 : qq.meta.extra, null === qq || void 0 === qq ? void 0 : qq.meta.excluded, null === qq || void 0 === qq ? void 0 : qq.meta.names]), [Aq, cq] = (0, Yq.useState)(""), [uq, Bq] = (0, Yq.useState)(0), [Wq, Nq] = (0, Yq.useState)("recent"), aq = (0, Yq.useCallback)((qq => {
-        cq(""), Bq((qq => qq + 1)), Oq(qq)
-      }), [Oq]), Vq = "browse" === Wq || "" !== Aq.trim();
+        for (const ab of ub) Yb(ab, "other");
+        return LO = {
+          key: Ob,
+          items: Lb
+        }, Lb
+      }(null === bb || void 0 === bb ? void 0 : bb.meta.extra, null === bb || void 0 === bb ? void 0 : bb.meta.excluded, null === bb || void 0 === bb ? void 0 : bb.meta.names)), [null === bb || void 0 === bb ? void 0 : bb.meta.extra, null === bb || void 0 === bb ? void 0 : bb.meta.excluded, null === bb || void 0 === bb ? void 0 : bb.meta.names]), [Yb, Sb] = (0, Bb.useState)(""), [ab, Hb] = (0, Bb.useState)(0), [wb, Zb] = (0, Bb.useState)("recent"), Xb = (0, Bb.useCallback)((bb => {
+        Sb(""), Hb((bb => bb + 1)), Gb(bb)
+      }), [Gb]), pb = "browse" === wb || "" !== Yb.trim();
       return {
-        searched: gq,
-        shown: lq,
-        searchFor: Oq,
-        loading: mq,
-        catalogue: xq,
-        names: null === qq || void 0 === qq ? void 0 : qq.meta.names,
-        query: Aq,
-        setQuery: cq,
-        searchBoxKey: uq,
-        pickItem: aq,
-        setView: Nq,
-        browsing: Vq
+        searched: hb,
+        shown: Ob,
+        searchFor: Gb,
+        loading: Ub,
+        catalogue: Lb,
+        names: null === bb || void 0 === bb ? void 0 : bb.meta.names,
+        query: Yb,
+        setQuery: Sb,
+        searchBoxKey: ab,
+        pickItem: Xb,
+        setView: Zb,
+        browsing: pb
       }
     }
 
-    function Hl(qq) {
+    function lO(bb) {
       let {
-        browser: Eq,
-        children: gq
-      } = qq;
+        browser: ub,
+        children: hb
+      } = bb;
       const {
-        t: Yq
-      } = (0, mq.v)(), lq = Nl();
-      return (0, Bq.jsxs)("div", {
+        t: Bb
+      } = (0, Ub.K)(), Ob = ZO();
+      return (0, Hb.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, Bq.jsx)("div", {
+        children: [(0, Hb.jsx)("div", {
           className: "SmpSearch",
-          children: (0, Bq.jsx)(Qq.b, {
+          children: (0, Hb.jsx)(Cb.b, {
             className: "SmpSearchInput",
-            placeholderText: Yq("smpShop:searchPlaceholder"),
-            defaultValue: Eq.query,
-            onValueChange: qq => {
-              Eq.setQuery(qq), Eq.searched && qq.trim() && Eq.searchFor(null)
+            placeholderText: Bb("smpShop:searchPlaceholder"),
+            defaultValue: ub.query,
+            onValueChange: bb => {
+              ub.setQuery(bb), ub.searched && bb.trim() && ub.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const qq = Al(Eq.catalogue, Eq.query)[0];
-              qq ? Eq.pickItem(qq.name) : Eq.query.trim() && lq.notify(Yq("smpShop:noItemsFound", {
-                query: Eq.query.trim()
+              const bb = YO(ub.catalogue, ub.query)[0];
+              bb ? ub.pickItem(bb.name) : ub.query.trim() && Ob.notify(Bb("smpShop:noItemsFound", {
+                query: ub.query.trim()
               }))
             }
-          }, Eq.searchBoxKey)
-        }), gq]
+          }, ub.searchBoxKey)
+        }), hb]
       })
     }
 
-    function ol(qq) {
+    function KO(bb) {
       let {
-        browser: Eq,
-        recentLabel: gq,
-        children: Yq
-      } = qq;
+        browser: ub,
+        recentLabel: hb,
+        children: Bb
+      } = bb;
       const {
-        t: lq
-      } = (0, mq.v)();
-      return (0, Bq.jsxs)("div", {
+        t: Ob
+      } = (0, Ub.K)();
+      return (0, Hb.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, Bq.jsx)(sY, {
+        children: [(0, Hb.jsx)(VB, {
           options: [{
             value: "recent",
-            label: gq
+            label: hb
           }, {
             value: "browse",
-            label: lq("smpShop:browseItems")
+            label: Ob("smpShop:browseItems")
           }],
-          value: Eq.browsing ? "browse" : "recent",
-          onChange: Eq.setView,
-          ariaLabel: lq("smpShop:show")
-        }), !Eq.browsing && Yq]
+          value: ub.browsing ? "browse" : "recent",
+          onChange: ub.setView,
+          ariaLabel: Ob("smpShop:show")
+        }), !ub.browsing && Bb]
       })
     }
 
-    function Pl(qq) {
+    function WO(bb) {
       let {
-        item: Eq,
-        names: gq,
-        summary: Yq,
-        onBack: lq,
-        children: Oq
-      } = qq;
+        item: ub,
+        names: hb,
+        summary: Bb,
+        onBack: Ob,
+        children: Gb
+      } = bb;
       const {
-        t: xq
-      } = (0, mq.v)();
-      return (0, Bq.jsxs)("div", {
+        t: Lb
+      } = (0, Ub.K)();
+      return (0, Hb.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, Bq.jsx)(cq.d, {
+        children: [(0, Hb.jsx)(Sb.d, {
           className: "SmpBackButton",
-          onClick: lq,
-          children: xq("general:back")
-        }), (0, Bq.jsx)(JY, {
-          item: Eq,
+          onClick: Ob,
+          children: Lb("general:back")
+        }), (0, Hb.jsx)(IB, {
+          item: ub,
           size: "big"
-        }), (0, Bq.jsxs)("div", {
+        }), (0, Hb.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, Bq.jsx)("b", {
-            children: cl(gq, Eq)
-          }), Yq && (0, Bq.jsx)("small", {
-            children: Yq
+          children: [(0, Hb.jsx)("b", {
+            children: SO(hb, ub)
+          }), Bb && (0, Hb.jsx)("small", {
+            children: Bb
           })]
-        }), Oq]
+        }), Gb]
       })
     }
 
-    function Ql(qq) {
+    function CO(bb) {
       let {
-        browser: Eq,
-        className: gq,
-        action: Yq,
-        above: lq,
-        list: mq,
-        summary: xq,
-        recentLabel: Aq,
-        listControls: cq,
-        onBack: uq
-      } = qq;
-      return (0, Bq.jsxs)("div", {
-        className: Oq()("SmpScreen", gq),
-        children: [(0, Bq.jsx)(Hl, {
-          browser: Eq,
-          children: Yq
-        }), Eq.shown && (0, Bq.jsx)(Pl, {
-          item: Eq.shown,
-          names: Eq.names,
-          summary: !Eq.loading && xq,
+        browser: ub,
+        className: hb,
+        action: Bb,
+        above: Ob,
+        list: Ub,
+        summary: Lb,
+        recentLabel: Yb,
+        listControls: Sb,
+        onBack: ab
+      } = bb;
+      return (0, Hb.jsxs)("div", {
+        className: Gb()("SmpScreen", hb),
+        children: [(0, Hb.jsx)(lO, {
+          browser: ub,
+          children: Bb
+        }), ub.shown && (0, Hb.jsx)(WO, {
+          item: ub.shown,
+          names: ub.names,
+          summary: !ub.loading && Lb,
           onBack: () => {
-            null === uq || void 0 === uq || uq(), Eq.searchFor(null)
+            null === ab || void 0 === ab || ab(), ub.searchFor(null)
           },
-          children: cq
-        }), lq, Eq.shown ? mq : (0, Bq.jsxs)(Bq.Fragment, {
-          children: [(0, Bq.jsx)(ol, {
-            browser: Eq,
-            recentLabel: Aq,
-            children: cq
-          }), Eq.browsing ? (0, Bq.jsx)(dl, {
-            items: Eq.catalogue,
-            query: Eq.query,
-            onPick: Eq.pickItem
-          }) : mq]
+          children: Sb
+        }), Ob, ub.shown ? Ub : (0, Hb.jsxs)(Hb.Fragment, {
+          children: [(0, Hb.jsx)(KO, {
+            browser: ub,
+            recentLabel: Yb,
+            children: Sb
+          }), ub.browsing ? (0, Hb.jsx)(oO, {
+            items: ub.catalogue,
+            query: ub.query,
+            onPick: ub.pickItem
+          }) : Ub]
         })]
       })
     }
 
-    function yl(qq, Eq) {
-      const gq = qq.map((qq => {
+    function dO(bb, ub) {
+      const hb = bb.map((bb => {
         let {
-          meta: Eq
-        } = qq;
-        return Eq.pricePerItem
+          meta: ub
+        } = bb;
+        return ub.pricePerItem
       }));
-      return "min" === Eq ? Math.min(...gq) : Math.max(...gq)
+      return "min" === ub ? Math.min(...hb) : Math.max(...hb)
     }
-    var tl = gq(6434);
-    const rl = (0, Yq.memo)((function(qq) {
-      var Eq;
+    var rO = hb(6300);
+    const jO = (0, Bb.memo)((function(bb) {
+      var ub;
       const {
-        t: gq
-      } = (0, mq.v)(), Yq = null === qq.seller, lq = qq.quantity * qq.pricePerItem;
-      return (0, Bq.jsxs)("div", {
-        className: qq.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, Bq.jsx)(JY, {
-          item: qq.item,
-          amount: qq.quantity,
-          size: qq.grid ? "big" : "normal",
-          tier: qq.tier
-        }), (0, Bq.jsxs)("div", {
+        t: hb
+      } = (0, Ub.K)(), Bb = null === bb.seller, Ob = bb.quantity * bb.pricePerItem;
+      return (0, Hb.jsxs)("div", {
+        className: bb.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, Hb.jsx)(IB, {
+          item: bb.item,
+          amount: bb.quantity,
+          size: bb.grid ? "big" : "normal",
+          tier: bb.tier
+        }), (0, Hb.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, Bq.jsx)("b", {
-            children: (0, Bq.jsx)(hY.c, {
-              text: null !== (Eq = qq.title) && void 0 !== Eq ? Eq : `${qq.quantity}x ${qq.item}`
+          children: [(0, Hb.jsx)("b", {
+            children: (0, Hb.jsx)(DB.c, {
+              text: null !== (ub = bb.title) && void 0 !== ub ? ub : `${bb.quantity}x ${bb.item}`
             })
-          }), (0, Bq.jsxs)("small", {
+          }), (0, Hb.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, Bq.jsx)("span", {
-              children: Yq ? gq("smpShop:you") : (0, Bq.jsx)(hY.c, {
+            children: [(0, Hb.jsx)("span", {
+              children: Bb ? hb("smpShop:you") : (0, Hb.jsx)(DB.c, {
                 text: [{
-                  entityName: qq.seller
+                  entityName: bb.seller
                 }]
               })
-            }), (0, Bq.jsx)("span", {
-              children: gq("smpShop:timeLeft", {
-                time: Ol(qq.expiresAt)
+            }), (0, Hb.jsx)("span", {
+              children: hb("smpShop:timeLeft", {
+                time: GO(bb.expiresAt)
               })
             })]
           })]
-        }), (0, Bq.jsxs)("div", {
+        }), (0, Hb.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, Bq.jsx)(kY, {
-            amount: qq.pricePerItem
-          }), (0, Bq.jsx)("small", {
-            children: gq("smpShop:each")
+          children: [(0, Hb.jsx)(PB, {
+            amount: bb.pricePerItem
+          }), (0, Hb.jsx)("small", {
+            children: hb("smpShop:each")
           })]
-        }), (0, Bq.jsx)(cq.g, {
+        }), (0, Hb.jsx)(Sb.e, {
           className: "SmpBuyButton",
-          disabled: Yq || !qq.canAfford && !qq.busy,
-          loading: qq.busy,
+          disabled: Bb || !bb.canAfford && !bb.busy,
+          loading: bb.busy,
           onClick: () => {
-            qq.onBuy(qq.itemKey)
+            bb.onBuy(bb.itemKey)
           },
-          children: Yq ? gq("smpShop:yours") : (0, Bq.jsx)(kY, {
-            amount: lq
+          children: Bb ? hb("smpShop:yours") : (0, Hb.jsx)(PB, {
+            amount: Ob
           })
         })]
       })
     }));
 
-    function vl(qq) {
+    function nO(bb) {
       let {
-        view: Eq,
-        onChange: gq
-      } = qq;
+        view: ub,
+        onChange: hb
+      } = bb;
       const {
-        t: Yq
-      } = (0, mq.v)();
-      return (0, Bq.jsx)(GY.c, {
+        t: Bb
+      } = (0, Ub.K)();
+      return (0, Hb.jsx)(MB.c, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: Yq("smpShop:layout"),
+        ariaLabel: Bb("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, Bq.jsx)(xq.d, {
+          label: (0, Hb.jsx)(Lb.e, {
             name: "list"
           }),
-          ariaLabel: Yq("smpShop:listView")
+          ariaLabel: Bb("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, Bq.jsx)(xq.d, {
+          label: (0, Hb.jsx)(Lb.e, {
             name: "grid-2"
           }),
-          ariaLabel: Yq("smpShop:gridView")
+          ariaLabel: Bb("smpShop:gridView")
         }],
-        value: Eq,
-        onChange: gq
+        value: ub,
+        onChange: hb
       })
     }
 
-    function hl(qq) {
+    function DO(bb) {
       let {
-        entries: Eq,
-        view: gq
-      } = qq;
+        entries: ub,
+        view: hb
+      } = bb;
       const {
-        t: Yq
-      } = (0, mq.v)(), lq = Nl(), Oq = "grid" === gq;
-      return (0, Bq.jsxs)(Bq.Fragment, {
-        children: [!Oq && (0, Bq.jsxs)("div", {
+        t: Bb
+      } = (0, Ub.K)(), Ob = ZO(), Gb = "grid" === hb;
+      return (0, Hb.jsxs)(Hb.Fragment, {
+        children: [!Gb && (0, Hb.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, Bq.jsx)("span", {}), (0, Bq.jsx)("span", {
-            children: Yq("smpShop:columnItem")
-          }), (0, Bq.jsx)("span", {
-            children: Yq("smpShop:columnPriceEach")
-          }), (0, Bq.jsx)("span", {
-            children: Yq("smpShop:columnTotal")
+          children: [(0, Hb.jsx)("span", {}), (0, Hb.jsx)("span", {
+            children: Bb("smpShop:columnItem")
+          }), (0, Hb.jsx)("span", {
+            children: Bb("smpShop:columnPriceEach")
+          }), (0, Hb.jsx)("span", {
+            children: Bb("smpShop:columnTotal")
           })]
-        }), (0, Bq.jsx)(al.c, {
-          lazyLoadedClassName: Oq ? "SmpCardGrid" : "SmpList",
+        }), (0, Hb.jsx)(XO.d, {
+          lazyLoadedClassName: Gb ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: Yl,
-          observerUpdateDeps: [Eq.length],
-          children: Eq.map((qq => {
-            var Eq, gq;
+          rootMargin: BO,
+          observerUpdateDeps: [ub.length],
+          children: ub.map((bb => {
+            var ub, hb;
             let {
-              key: Yq,
-              item: mq,
-              meta: xq
-            } = qq;
-            const Aq = xq.quantity * xq.pricePerItem;
-            return (0, Bq.jsx)(rl, {
-              itemKey: Yq,
-              item: xq.item,
-              title: mq.customTitle,
-              quantity: xq.quantity,
-              pricePerItem: xq.pricePerItem,
-              seller: xq.seller,
-              expiresAt: xq.expiresAt,
-              tier: null !== (Eq = null === (gq = mq.enchant) || void 0 === gq ? void 0 : gq.tier) && void 0 !== Eq ? Eq : null,
-              busy: lq.isPending(Yq) || null !== xq.seller && !1 === mq.canBuy,
-              canAfford: lq.canAfford(mq, Aq),
-              grid: Oq,
-              onBuy: lq.act
-            }, Yq)
+              key: Bb,
+              item: Ub,
+              meta: Lb
+            } = bb;
+            const Yb = Lb.quantity * Lb.pricePerItem;
+            return (0, Hb.jsx)(jO, {
+              itemKey: Bb,
+              item: Lb.item,
+              title: Ub.customTitle,
+              quantity: Lb.quantity,
+              pricePerItem: Lb.pricePerItem,
+              seller: Lb.seller,
+              expiresAt: Lb.expiresAt,
+              tier: null !== (ub = null === (hb = Ub.enchant) || void 0 === hb ? void 0 : hb.tier) && void 0 !== ub ? ub : null,
+              busy: Ob.isPending(Bb) || null !== Lb.seller && !1 === Ub.canBuy,
+              canAfford: Ob.canAfford(Ub, Yb),
+              grid: Gb,
+              onBuy: Ob.act
+            }, Bb)
           }))
-        }, gq)]
+        }, hb)]
       })
     }
-    const nl = [1, 10, 100],
-      bl = [1, 10, 100, 999];
+    const xO = [1, 10, 100],
+      zO = [1, 10, 100, 999];
 
-    function il(qq) {
-      var Eq, gq, lq, Aq, uq, Wq, Nq, aq, Vq, dq;
+    function gO(bb) {
+      var ub, hb, Ob, Yb, ab, wb, Zb, Xb, pb, ob;
       const {
-        t: jq
-      } = (0, mq.v)(), Hq = Nl(), {
-        creator: oq,
-        mode: Pq
-      } = qq, [yq, tq] = (0, Yq.useState)(null !== (Eq = null === oq || void 0 === oq ? void 0 : oq.meta.item) && void 0 !== Eq ? Eq : null), [rq, vq] = (0, Yq.useState)(1), [hq, nq] = (0, Yq.useState)(0), [bq, iq] = (0, Yq.useState)(""), [Zq, fq] = (0, Yq.useState)(0), Mq = (0, Yq.useRef)(yq), Tq = (0, Yq.useRef)(!1), [zq, Sq] = (0, Yq.useState)(!1), pq = null !== (gq = null === oq || void 0 === oq ? void 0 : oq.meta.item) && void 0 !== gq ? gq : null, Gq = null !== (lq = null === oq || void 0 === oq ? void 0 : oq.meta.owned) && void 0 !== lq ? lq : 0;
-      (0, Yq.useEffect)((() => {
-        qq.searching || null === pq || pq === Mq.current || (Mq.current = pq, Tq.current = !1, tq(pq), nq(0), vq("list" === Pq ? Math.max(1, Gq) : 1))
-      }), [pq, qq.searching]);
-      const Lq = !!oq && !!yq && oq.meta.item === yq,
-        Jq = Lq ? oq.meta.owned : null !== (Aq = null === (uq = qq.inventory) || void 0 === uq || null === (Wq = uq.find((qq => qq.item === yq))) || void 0 === Wq ? void 0 : Wq.quantity) && void 0 !== Aq ? Aq : 0,
-        kq = "list" === Pq ? Math.max(1, Jq) : 45954,
-        Rq = null !== (Nq = qq.prices[0]) && void 0 !== Nq ? Nq : null,
-        Uq = qq.prices.length ? Math.round(qq.prices.reduce(((qq, Eq) => qq + Eq), 0) / qq.prices.length) : null,
-        Fq = null === (aq = qq.inventory) || void 0 === aq || null === (Vq = aq.find((qq => qq.item === yq))) || void 0 === Vq ? void 0 : Vq.sellPrice;
-      (0, Yq.useEffect)((() => {
-        var qq;
-        Lq && (vq((qq => "list" === Pq ? Math.min(Math.max(1, qq), Math.max(1, Jq)) : qq)), Tq.current || nq(null !== (qq = null !== Rq && void 0 !== Rq ? Rq : Uq) && void 0 !== qq ? qq : Math.max(1, null !== Fq && void 0 !== Fq ? Fq : 1)))
-      }), [Lq, Jq, yq, Rq, Uq]);
-      const sq = qq => {
-          Tq.current = !0, nq(qq)
+        t: Ab
+      } = (0, Ub.K)(), lb = ZO(), {
+        creator: Kb,
+        mode: Wb
+      } = bb, [db, rb] = (0, Bb.useState)(null !== (ub = null === Kb || void 0 === Kb ? void 0 : Kb.meta.item) && void 0 !== ub ? ub : null), [jb, nb] = (0, Bb.useState)(1), [Db, xb] = (0, Bb.useState)(0), [zb, gb] = (0, Bb.useState)(""), [ib, vb] = (0, Bb.useState)(0), tb = (0, Bb.useRef)(db), Jb = (0, Bb.useRef)(!1), [eb, Nb] = (0, Bb.useState)(!1), sb = null !== (hb = null === Kb || void 0 === Kb ? void 0 : Kb.meta.item) && void 0 !== hb ? hb : null, Mb = null !== (Ob = null === Kb || void 0 === Kb ? void 0 : Kb.meta.owned) && void 0 !== Ob ? Ob : 0;
+      (0, Bb.useEffect)((() => {
+        bb.searching || null === sb || sb === tb.current || (tb.current = sb, Jb.current = !1, rb(sb), xb(0), nb("list" === Wb ? Math.max(1, Mb) : 1))
+      }), [sb, bb.searching]);
+      const mb = !!Kb && !!db && Kb.meta.item === db,
+        Ib = mb ? Kb.meta.owned : null !== (Yb = null === (ab = bb.inventory) || void 0 === ab || null === (wb = ab.find((bb => bb.item === db))) || void 0 === wb ? void 0 : wb.quantity) && void 0 !== Yb ? Yb : 0,
+        Pb = "list" === Wb ? Math.max(1, Ib) : 45954,
+        qb = null !== (Zb = bb.prices[0]) && void 0 !== Zb ? Zb : null,
+        Eb = bb.prices.length ? Math.round(bb.prices.reduce(((bb, ub) => bb + ub), 0) / bb.prices.length) : null,
+        yb = null === (Xb = bb.inventory) || void 0 === Xb || null === (pb = Xb.find((bb => bb.item === db))) || void 0 === pb ? void 0 : pb.sellPrice;
+      (0, Bb.useEffect)((() => {
+        var bb;
+        mb && (nb((bb => "list" === Wb ? Math.min(Math.max(1, bb), Math.max(1, Ib)) : bb)), Jb.current || xb(null !== (bb = null !== qb && void 0 !== qb ? qb : Eb) && void 0 !== bb ? bb : Math.max(1, null !== yb && void 0 !== yb ? yb : 1)))
+      }), [mb, Ib, db, qb, Eb]);
+      const Vb = bb => {
+          Jb.current = !0, xb(bb)
         },
-        Xq = Eq => {
-          var gq, Yq, lq;
-          Mq.current = Eq, Tq.current = !1, Sq(!1), iq(""), fq((qq => qq + 1)), tq(Eq), nq(0), vq("list" === Pq && null !== (gq = null === (Yq = qq.inventory) || void 0 === Yq || null === (lq = Yq.find((qq => qq.item === Eq))) || void 0 === lq ? void 0 : lq.quantity) && void 0 !== gq ? gq : 1), (null === oq || void 0 === oq ? void 0 : oq.meta.item) !== Eq && qq.onPickItem(Eq)
+        Fb = ub => {
+          var hb, Bb, Ob;
+          tb.current = ub, Jb.current = !1, Nb(!1), gb(""), vb((bb => bb + 1)), rb(ub), xb(0), nb("list" === Wb && null !== (hb = null === (Bb = bb.inventory) || void 0 === Bb || null === (Ob = Bb.find((bb => bb.item === ub))) || void 0 === Ob ? void 0 : Ob.quantity) && void 0 !== hb ? hb : 1), (null === Kb || void 0 === Kb ? void 0 : Kb.meta.item) !== ub && bb.onPickItem(ub)
         },
-        wq = rq * hq,
-        Kq = "list" === Pq && null !== oq && void 0 !== oq && oq.meta.fee ? function(qq, Eq) {
-          const gq = Math.max(0, Eq - qq.taxFreeAllowance);
-          return Math.ceil(Math.round(gq * qq.rate * 1e6) / 1e6)
-        }(oq.meta.fee, wq) : 0,
-        Cq = !!oq && Hq.isPending(oq.key),
-        Iq = Lq && !qq.searching && rq >= 1 && hq >= 1 && ("order" === Pq || Jq >= rq) && !Cq,
-        eq = !!yq && !Lq && !qq.searching && rq >= 1 && hq >= 1,
-        Dq = () => {
-          Iq ? Hq.act(oq.key, `${rq}|${hq}`) : eq && (qq.onPickItem(yq), Sq(!0))
+        fb = jb * Db,
+        kb = "list" === Wb && null !== Kb && void 0 !== Kb && Kb.meta.fee ? function(bb, ub) {
+          const hb = Math.max(0, ub - bb.taxFreeAllowance);
+          return Math.ceil(Math.round(hb * bb.rate * 1e6) / 1e6)
+        }(Kb.meta.fee, fb) : 0,
+        Tb = !!Kb && lb.isPending(Kb.key),
+        cb = mb && !bb.searching && jb >= 1 && Db >= 1 && ("order" === Wb || Ib >= jb) && !Tb,
+        Qb = !!db && !mb && !bb.searching && jb >= 1 && Db >= 1,
+        Rb = () => {
+          cb ? lb.act(Kb.key, `${jb}|${Db}`) : Qb && (bb.onPickItem(db), Nb(!0))
         };
-      (0, Yq.useEffect)((() => {
-        zq && Lq && !qq.searching && (Sq(!1), Dq())
-      }), [zq, Lq, qq.searching]);
-      const qE = !!yq && !Lq && (qq.searching || zq),
-        EE = yq ? cl(qq.names, yq) : "",
-        gE = (0, Yq.useMemo)((() => Al(qq.catalogue, bq).slice(0, 8)), [qq.catalogue, bq]),
-        YE = ("list" === Pq ? nl.filter((qq => qq < Jq)) : bl).map((qq => ({
-          value: qq,
-          label: String(qq)
+      (0, Bb.useEffect)((() => {
+        eb && mb && !bb.searching && (Nb(!1), Rb())
+      }), [eb, mb, bb.searching]);
+      const bu = !!db && !mb && (bb.searching || eb),
+        uu = db ? SO(bb.names, db) : "",
+        hu = (0, Bb.useMemo)((() => YO(bb.catalogue, zb).slice(0, 8)), [bb.catalogue, zb]),
+        Bu = ("list" === Wb ? xO.filter((bb => bb < Ib)) : zO).map((bb => ({
+          value: bb,
+          label: String(bb)
         })));
-      "list" === Pq && Jq > 0 && YE.push({
-        value: Jq,
-        label: jq("smpShop:all", {
-          count: Jq
+      "list" === Wb && Ib > 0 && Bu.push({
+        value: Ib,
+        label: Ab("smpShop:all", {
+          count: Ib
         })
       });
-      const lE = [];
-      return null !== Rq && (Rq > 1 && lE.push({
-        value: Rq - 1,
-        label: jq("smpShop:undercut", {
-          price: pY(Rq - 1)
+      const Ou = [];
+      return null !== qb && (qb > 1 && Ou.push({
+        value: qb - 1,
+        label: Ab("smpShop:undercut", {
+          price: sB(qb - 1)
         })
-      }), lE.push({
-        value: Rq,
-        label: jq("smpShop:lowest", {
-          price: pY(Rq)
+      }), Ou.push({
+        value: qb,
+        label: Ab("smpShop:lowest", {
+          price: sB(qb)
         })
-      })), null !== Uq && Uq !== Rq && lE.push({
-        value: Uq,
-        label: jq("smpShop:average", {
-          price: pY(Uq)
+      })), null !== Eb && Eb !== qb && Ou.push({
+        value: Eb,
+        label: Ab("smpShop:average", {
+          price: sB(Eb)
         })
-      }), (0, Bq.jsxs)("div", {
+      }), (0, Hb.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, Bq.jsxs)("div", {
+        children: [(0, Hb.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, Bq.jsx)("b", {
-            children: jq("list" === Pq ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, Bq.jsx)("button", {
+          children: [(0, Hb.jsx)("b", {
+            children: Ab("list" === Wb ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, Hb.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": jq("smpShop:close"),
-            onClick: qq.onClose,
-            children: (0, Bq.jsx)(xq.d, {
+            "aria-label": Ab("smpShop:close"),
+            onClick: bb.onClose,
+            children: (0, Hb.jsx)(Lb.e, {
               name: "xmark"
             })
           })]
-        }), "list" === Pq && (0, Bq.jsx)("div", {
+        }), "list" === Wb && (0, Hb.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (dq = qq.inventory) && void 0 !== dq && dq.length ? qq.inventory.map((qq => {
+          children: null !== (ob = bb.inventory) && void 0 !== ob && ob.length ? bb.inventory.map((bb => {
             let {
-              item: Eq,
-              quantity: gq
-            } = qq;
-            return (0, Bq.jsx)("button", {
+              item: ub,
+              quantity: hb
+            } = bb;
+            return (0, Hb.jsx)("button", {
               type: "button",
-              title: Eq,
-              className: Oq()("SmpPickerSlot", {
-                SmpPickerSlotOn: Eq === yq
+              title: ub,
+              className: Gb()("SmpPickerSlot", {
+                SmpPickerSlotOn: ub === db
               }),
               onClick: () => {
-                Xq(Eq)
+                Fb(ub)
               },
-              children: (0, Bq.jsx)(JY, {
-                item: Eq,
-                amount: gq
+              children: (0, Hb.jsx)(IB, {
+                item: ub,
+                amount: hb
               })
-            }, Eq)
-          })) : (0, Bq.jsx)("span", {
+            }, ub)
+          })) : (0, Hb.jsx)("span", {
             className: "SmpMuted",
-            children: jq("smpShop:nothingToList")
+            children: Ab("smpShop:nothingToList")
           })
-        }), ("list" === Pq || !yq) && (0, Bq.jsxs)("div", {
+        }), ("list" === Wb || !db) && (0, Hb.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, Bq.jsx)(Qq.b, {
+          children: [(0, Hb.jsx)(Cb.b, {
             className: "SmpSearchInput",
-            placeholderText: jq("list" === Pq ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: bq,
-            onValueChange: iq,
+            placeholderText: Ab("list" === Wb ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: zb,
+            onValueChange: gb,
             blurOnEnter: !0,
             onEnter: () => {
-              gE[0] && Xq(gE[0].name)
+              hu[0] && Fb(hu[0].name)
             }
-          }, Zq), gE.length > 0 && (0, Bq.jsx)("div", {
+          }, ib), hu.length > 0 && (0, Hb.jsx)("div", {
             className: "SmpPicker",
-            children: gE.map((qq => {
+            children: hu.map((bb => {
               let {
-                name: Eq
-              } = qq;
-              return (0, Bq.jsx)("button", {
+                name: ub
+              } = bb;
+              return (0, Hb.jsx)("button", {
                 type: "button",
-                title: Eq,
-                className: Oq()("SmpPickerSlot", {
-                  SmpPickerSlotOn: Eq === yq
+                title: ub,
+                className: Gb()("SmpPickerSlot", {
+                  SmpPickerSlotOn: ub === db
                 }),
                 onClick: () => {
-                  Xq(Eq)
+                  Fb(ub)
                 },
-                children: (0, Bq.jsx)(JY, {
-                  item: Eq
+                children: (0, Hb.jsx)(IB, {
+                  item: ub
                 })
-              }, Eq)
+              }, ub)
             }))
           })]
-        }), yq && (0, Bq.jsxs)(Bq.Fragment, {
-          children: [(0, Bq.jsxs)("div", {
+        }), db && (0, Hb.jsxs)(Hb.Fragment, {
+          children: [(0, Hb.jsxs)("div", {
             className: "SmpPickedName",
-            children: [EE, qE && (0, Bq.jsx)(XY, {})]
-          }), (0, Bq.jsxs)("div", {
+            children: [uu, bu && (0, Hb.jsx)(FB, {})]
+          }), (0, Hb.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, Bq.jsxs)("div", {
+            children: [(0, Hb.jsxs)("div", {
               className: "SmpField",
-              children: [(0, Bq.jsxs)("span", {
-                children: [jq("smpShop:quantity"), "list" === Pq && Lq && (0, Bq.jsx)("small", {
-                  children: jq("smpShop:youHave", {
-                    count: Jq
+              children: [(0, Hb.jsxs)("span", {
+                children: [Ab("smpShop:quantity"), "list" === Wb && mb && (0, Hb.jsx)("small", {
+                  children: Ab("smpShop:youHave", {
+                    count: Ib
                   })
                 })]
-              }), (0, Bq.jsx)(wY, {
-                value: rq,
-                onChange: vq,
-                max: kq,
-                label: jq("smpShop:quantity")
-              }), (0, Bq.jsx)(sY, {
-                options: YE,
-                value: rq,
-                onChange: vq,
-                ariaLabel: jq("smpShop:quantity")
+              }), (0, Hb.jsx)(fB, {
+                value: jb,
+                onChange: nb,
+                max: Pb,
+                label: Ab("smpShop:quantity")
+              }), (0, Hb.jsx)(VB, {
+                options: Bu,
+                value: jb,
+                onChange: nb,
+                ariaLabel: Ab("smpShop:quantity")
               })]
-            }), (0, Bq.jsxs)("div", {
+            }), (0, Hb.jsxs)("div", {
               className: "SmpField",
-              children: [(0, Bq.jsx)("span", {
-                children: jq("smpShop:pricePerItem")
-              }), (0, Bq.jsx)(wY, {
-                value: Math.max(1, hq),
-                onChange: sq,
+              children: [(0, Hb.jsx)("span", {
+                children: Ab("smpShop:pricePerItem")
+              }), (0, Hb.jsx)(fB, {
+                value: Math.max(1, Db),
+                onChange: Vb,
                 max: 9999999,
-                step: KY,
-                label: jq("smpShop:pricePerItem")
-              }), (0, Bq.jsx)(sY, {
-                options: lE,
-                value: hq,
-                onChange: sq,
-                ariaLabel: jq("smpShop:pricePerItem")
+                step: kB,
+                label: Ab("smpShop:pricePerItem")
+              }), (0, Hb.jsx)(VB, {
+                options: Ou,
+                value: Db,
+                onChange: Vb,
+                ariaLabel: Ab("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === Pq && (0, Bq.jsxs)("div", {
+          }), "list" === Wb && (0, Hb.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, Bq.jsxs)("span", {
-              children: [jq("smpShop:youGet"), " ", (0, Bq.jsx)(kY, {
-                amount: Math.max(0, wq - Kq),
+            children: [(0, Hb.jsxs)("span", {
+              children: [Ab("smpShop:youGet"), " ", (0, Hb.jsx)(PB, {
+                amount: Math.max(0, fb - kb),
                 exact: !0
               })]
-            }), (0, Bq.jsx)("small", {
-              children: Kq > 0 ? jq("smpShop:listingFee", {
-                fee: Kq.toLocaleString("en-US")
-              }) : jq("smpShop:listingRules")
+            }), (0, Hb.jsx)("small", {
+              children: kb > 0 ? Ab("smpShop:listingFee", {
+                fee: kb.toLocaleString("en-US")
+              }) : Ab("smpShop:listingRules")
             })]
-          }), (0, Bq.jsx)(cq.v, {
+          }), (0, Hb.jsx)(Sb.q, {
             className: "SmpSubmit",
-            disabled: !Iq && !eq && !Cq,
-            loading: Cq || qE || Lq && qq.searching,
-            onClick: Dq,
-            children: "list" === Pq ? jq("smpShop:listButton", {
-              count: rq,
-              item: EE
-            }) : (0, Bq.jsxs)(Bq.Fragment, {
-              children: [jq("smpShop:orderButton", {
-                count: rq,
-                item: EE
-              }), " ", hq >= 1 && (0, Bq.jsx)(kY, {
-                amount: wq
+            disabled: !cb && !Qb && !Tb,
+            loading: Tb || bu || mb && bb.searching,
+            onClick: Rb,
+            children: "list" === Wb ? Ab("smpShop:listButton", {
+              count: jb,
+              item: uu
+            }) : (0, Hb.jsxs)(Hb.Fragment, {
+              children: [Ab("smpShop:orderButton", {
+                count: jb,
+                item: uu
+              }), " ", Db >= 1 && (0, Hb.jsx)(PB, {
+                amount: fb
               })]
             })
           })]
@@ -3676,627 +3676,627 @@ export const modules = {
       })
     }
 
-    function Zl() {
-      var qq;
+    function iO() {
+      var bb;
       const {
-        t: Eq
-      } = (0, mq.v)(), gq = Nl(), lq = null === (qq = gq.shopInfo[gq.categoryKey]) || void 0 === qq ? void 0 : qq.items, Oq = gl(lq, "search"), xq = gl(lq, "creator"), Aq = El(lq, "enchantedCreator"), uq = El(lq, "listing"), Wq = gl(lq, "empty"), Nq = jl(Oq, uq.length > 0 || null !== Wq), {
-        searched: aq,
-        shown: Vq,
-        loading: dq
-      } = Nq, [jq, Hq] = (0, Yq.useState)(!1), [oq, Pq] = function() {
-        const [qq, Eq] = (0, tl.b)("smpMarketView", "list");
-        return ["grid" === qq ? "grid" : "list", Eq]
-      }(), Qq = "grid" === oq, yq = (0, Yq.useMemo)((() => uq.filter((qq => {
+        t: ub
+      } = (0, Ub.K)(), hb = ZO(), Ob = null === (bb = hb.shopInfo[hb.categoryKey]) || void 0 === bb ? void 0 : bb.items, Gb = hO(Ob, "search"), Lb = hO(Ob, "creator"), Yb = uO(Ob, "enchantedCreator"), ab = uO(Ob, "listing"), wb = hO(Ob, "empty"), Zb = AO(Gb, ab.length > 0 || null !== wb), {
+        searched: Xb,
+        shown: pb,
+        loading: ob
+      } = Zb, [Ab, lb] = (0, Bb.useState)(!1), [Kb, Wb] = function() {
+        const [bb, ub] = (0, rO.d)("smpMarketView", "list");
+        return ["grid" === bb ? "grid" : "list", ub]
+      }(), Cb = "grid" === Kb, db = (0, Bb.useMemo)((() => ab.filter((bb => {
         let {
-          meta: Eq
-        } = qq;
-        return null !== Eq.seller && Eq.item === aq
-      })).map((qq => {
+          meta: ub
+        } = bb;
+        return null !== ub.seller && ub.item === Xb
+      })).map((bb => {
         let {
-          meta: Eq
-        } = qq;
-        return Eq.pricePerItem
-      })).sort(((qq, Eq) => qq - Eq))), [uq, aq]), tq = (0, Yq.useMemo)((() => {
-        const qq = new Set(Nq.catalogue.map((qq => {
+          meta: ub
+        } = bb;
+        return ub.pricePerItem
+      })).sort(((bb, ub) => bb - ub))), [ab, Xb]), rb = (0, Bb.useMemo)((() => {
+        const bb = new Set(Zb.catalogue.map((bb => {
           let {
-            name: Eq
-          } = qq;
-          return Eq
+            name: ub
+          } = bb;
+          return ub
         })));
-        return function(qq) {
-          for (const Eq in qq)
-            if ("sell" === qq[Eq].smp) return El(qq[Eq].items, "sell").filter((qq => {
+        return function(bb) {
+          for (const ub in bb)
+            if ("sell" === bb[ub].smp) return uO(bb[ub].items, "sell").filter((bb => {
               let {
-                item: Eq
-              } = qq;
-              return !Eq.enchant
-            })).map((qq => {
+                item: ub
+              } = bb;
+              return !ub.enchant
+            })).map((bb => {
               let {
-                meta: Eq
-              } = qq;
+                meta: ub
+              } = bb;
               return {
-                item: Eq.item,
-                quantity: Eq.quantity,
-                sellPrice: Eq.pricePerItem
+                item: ub.item,
+                quantity: ub.quantity,
+                sellPrice: ub.pricePerItem
               }
             }));
           return []
-        }(gq.shopInfo).filter((Eq => {
+        }(hb.shopInfo).filter((ub => {
           let {
-            item: gq
-          } = Eq;
-          return qq.has(gq)
+            item: hb
+          } = ub;
+          return bb.has(hb)
         }))
-      }), [gq.shopInfo, Nq.catalogue]);
-      return (0, Bq.jsx)(Ql, {
-        browser: Nq,
+      }), [hb.shopInfo, Zb.catalogue]);
+      return (0, Hb.jsx)(CO, {
+        browser: Zb,
         className: "SmpMarketTab",
-        recentLabel: Eq("smpShop:recentlyListed"),
-        action: (0, Bq.jsx)(cq.v, {
+        recentLabel: ub("smpShop:recentlyListed"),
+        action: (0, Hb.jsx)(Sb.q, {
           className: "SmpSellButton",
           onClick: () => {
-            Hq((qq => !qq))
+            lb((bb => !bb))
           },
-          children: Eq("smpShop:sell")
+          children: ub("smpShop:sell")
         }),
-        above: jq && (0, Bq.jsxs)(Bq.Fragment, {
-          children: [(0, Bq.jsx)(il, {
+        above: Ab && (0, Hb.jsxs)(Hb.Fragment, {
+          children: [(0, Hb.jsx)(gO, {
             mode: "list",
-            creator: xq,
-            inventory: tq,
-            catalogue: Nq.catalogue,
-            names: Nq.names,
-            searching: dq,
-            prices: yq,
-            onPickItem: Nq.searchFor,
+            creator: Lb,
+            inventory: rb,
+            catalogue: Zb.catalogue,
+            names: Zb.names,
+            searching: ob,
+            prices: db,
+            onPickItem: Zb.searchFor,
             onClose: () => {
-              Hq(!1)
+              lb(!1)
             }
-          }), Aq.length > 0 && (0, Bq.jsx)(fl, {
-            entries: Aq
+          }), Yb.length > 0 && (0, Hb.jsx)(vO, {
+            entries: Yb
           })]
         }),
-        listControls: (0, Bq.jsx)(vl, {
-          view: oq,
-          onChange: Pq
+        listControls: (0, Hb.jsx)(nO, {
+          view: Kb,
+          onChange: Wb
         }),
-        summary: Vq && (uq.length > 0 ? Eq(1 === uq.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: uq.length,
-          price: pY(yl(uq, "min"))
-        }) : Eq("smpShop:noOneSelling", {
-          item: cl(Nq.names, Vq)
+        summary: pb && (ab.length > 0 ? ub(1 === ab.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: ab.length,
+          price: sB(dO(ab, "min"))
+        }) : ub("smpShop:noOneSelling", {
+          item: SO(Zb.names, pb)
         })),
-        list: dq ? (0, Bq.jsx)(RY, {
-          grid: Qq
-        }) : uq.length > 0 ? (0, Bq.jsx)(hl, {
-          entries: uq,
-          view: oq
-        }) : Wq ? (0, Bq.jsx)(FY, {
-          entry: Wq
-        }) : (0, Bq.jsx)(RY, {
+        list: ob ? (0, Hb.jsx)(qB, {
+          grid: Cb
+        }) : ab.length > 0 ? (0, Hb.jsx)(DO, {
+          entries: ab,
+          view: Kb
+        }) : wb ? (0, Hb.jsx)(yB, {
+          entry: wb
+        }) : (0, Hb.jsx)(qB, {
           count: 3,
-          grid: Qq
+          grid: Cb
         })
       })
     }
 
-    function fl(qq) {
+    function vO(bb) {
       let {
-        entries: Eq
-      } = qq;
+        entries: ub
+      } = bb;
       const {
-        t: gq
-      } = (0, mq.v)(), lq = Nl(), [Oq, xq] = (0, Yq.useState)({});
-      return (0, Bq.jsx)("div", {
+        t: hb
+      } = (0, Ub.K)(), Ob = ZO(), [Gb, Lb] = (0, Bb.useState)({});
+      return (0, Hb.jsx)("div", {
         className: "SmpList",
-        children: Eq.map((qq => {
-          var Eq, Yq, mq;
+        children: ub.map((bb => {
+          var ub, Bb, Ub;
           let {
-            key: Aq,
-            item: uq,
-            meta: Wq
-          } = qq;
-          const Nq = null !== (Eq = Oq[Aq]) && void 0 !== Eq ? Eq : 1;
-          return (0, Bq.jsxs)("div", {
+            key: Yb,
+            item: ab,
+            meta: wb
+          } = bb;
+          const Zb = null !== (ub = Gb[Yb]) && void 0 !== ub ? ub : 1;
+          return (0, Hb.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, Bq.jsx)(JY, {
-              item: Wq.item,
-              amount: Wq.quantity,
-              tier: null !== (Yq = null === (mq = uq.enchant) || void 0 === mq ? void 0 : mq.tier) && void 0 !== Yq ? Yq : null
-            }), (0, Bq.jsxs)("div", {
+            children: [(0, Hb.jsx)(IB, {
+              item: wb.item,
+              amount: wb.quantity,
+              tier: null !== (Bb = null === (Ub = ab.enchant) || void 0 === Ub ? void 0 : Ub.tier) && void 0 !== Bb ? Bb : null
+            }), (0, Hb.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, Bq.jsx)("b", {
-                children: (0, Bq.jsx)(hY.c, {
-                  text: uq.customTitle
+              children: [(0, Hb.jsx)("b", {
+                children: (0, Hb.jsx)(DB.c, {
+                  text: ab.customTitle
                 })
-              }), (0, Bq.jsx)("small", {
-                children: gq("smpShop:enchantedListing")
+              }), (0, Hb.jsx)("small", {
+                children: hb("smpShop:enchantedListing")
               })]
-            }), (0, Bq.jsx)(wY, {
-              value: Nq,
-              onChange: qq => {
-                xq({
-                  ...Oq,
-                  [Aq]: qq
+            }), (0, Hb.jsx)(fB, {
+              value: Zb,
+              onChange: bb => {
+                Lb({
+                  ...Gb,
+                  [Yb]: bb
                 })
               },
               max: 9999999,
-              step: KY,
-              label: gq("smpShop:pricePerItem")
-            }), (0, Bq.jsxs)(cq.v, {
-              loading: lq.isPending(Aq),
+              step: kB,
+              label: hb("smpShop:pricePerItem")
+            }), (0, Hb.jsxs)(Sb.q, {
+              loading: Ob.isPending(Yb),
               onClick: () => {
-                lq.act(Aq, String(Nq))
+                Ob.act(Yb, String(Zb))
               },
-              children: [gq("smpShop:list"), " ", (0, Bq.jsx)(kY, {
-                amount: Nq
+              children: [hb("smpShop:list"), " ", (0, Hb.jsx)(PB, {
+                amount: Zb
               })]
             })]
-          }, Aq)
+          }, Yb)
         }))
       })
     }
-    const Ml = (0, Yq.memo)((function(qq) {
+    const tO = (0, Bb.memo)((function(bb) {
       let {
-        itemKey: Eq,
-        item: gq,
-        quantity: Yq,
-        pricePerItem: lq,
-        tier: mq,
-        selected: xq,
-        onSelect: Aq
-      } = qq;
-      return (0, Bq.jsxs)("button", {
+        itemKey: ub,
+        item: hb,
+        quantity: Bb,
+        pricePerItem: Ob,
+        tier: Ub,
+        selected: Lb,
+        onSelect: Yb
+      } = bb;
+      return (0, Hb.jsxs)("button", {
         type: "button",
-        className: Oq()("SmpInventorySlot", {
-          SmpInventorySlotOn: xq
+        className: Gb()("SmpInventorySlot", {
+          SmpInventorySlotOn: Lb
         }),
-        title: gq,
+        title: hb,
         onClick: () => {
-          Aq(Eq)
+          Yb(ub)
         },
-        children: [(0, Bq.jsx)(JY, {
-          item: gq,
-          amount: Yq,
-          tier: mq
-        }), (0, Bq.jsx)(kY, {
-          amount: lq
+        children: [(0, Hb.jsx)(IB, {
+          item: hb,
+          amount: Bb,
+          tier: Ub
+        }), (0, Hb.jsx)(PB, {
+          amount: Ob
         })]
       })
     }));
 
-    function Tl() {
-      var qq;
+    function JO() {
+      var bb;
       const {
-        t: Eq
-      } = (0, mq.v)(), gq = Nl(), lq = null === (qq = gq.shopInfo[gq.categoryKey]) || void 0 === qq ? void 0 : qq.items, xq = El(lq, "sell"), Aq = gl(lq, "empty"), [cq, uq] = (0, Yq.useState)(null), [Wq, Nq] = (0, Yq.useState)({}), aq = xq.find((qq => {
+        t: ub
+      } = (0, Ub.K)(), hb = ZO(), Ob = null === (bb = hb.shopInfo[hb.categoryKey]) || void 0 === bb ? void 0 : bb.items, Lb = uO(Ob, "sell"), Yb = hO(Ob, "empty"), [Sb, ab] = (0, Bb.useState)(null), [wb, Zb] = (0, Bb.useState)({}), Xb = Lb.find((bb => {
         let {
-          key: Eq
-        } = qq;
-        return Eq === cq
+          key: ub
+        } = bb;
+        return ub === Sb
       }));
-      return 0 === xq.length ? (0, Bq.jsx)("div", {
+      return 0 === Lb.length ? (0, Hb.jsx)("div", {
         className: "SmpScreen",
-        children: (0, Bq.jsx)(UY, {
-          title: Aq ? (0, Bq.jsx)(hY.c, {
-            text: Aq.item.customTitle
-          }) : Eq("smpShop:nothingToSell"),
-          children: Aq && (0, Bq.jsx)(hY.c, {
-            text: Aq.item.description
+        children: (0, Hb.jsx)(EB, {
+          title: Yb ? (0, Hb.jsx)(DB.c, {
+            text: Yb.item.customTitle
+          }) : ub("smpShop:nothingToSell"),
+          children: Yb && (0, Hb.jsx)(DB.c, {
+            text: Yb.item.description
           })
         })
-      }) : (0, Bq.jsxs)("div", {
+      }) : (0, Hb.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, Bq.jsx)("div", {
+        children: [(0, Hb.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: xq.map((qq => {
-            var Eq, gq;
+          children: Lb.map((bb => {
+            var ub, hb;
             let {
-              key: Yq,
-              item: lq,
-              meta: Oq
-            } = qq;
-            return (0, Bq.jsx)(Ml, {
-              itemKey: Yq,
-              item: Oq.item,
-              quantity: Oq.quantity,
-              pricePerItem: Oq.pricePerItem,
-              tier: null !== (Eq = null === (gq = lq.enchant) || void 0 === gq ? void 0 : gq.tier) && void 0 !== Eq ? Eq : null,
-              selected: Yq === cq,
-              onSelect: uq
-            }, Yq)
+              key: Bb,
+              item: Ob,
+              meta: Gb
+            } = bb;
+            return (0, Hb.jsx)(tO, {
+              itemKey: Bb,
+              item: Gb.item,
+              quantity: Gb.quantity,
+              pricePerItem: Gb.pricePerItem,
+              tier: null !== (ub = null === (hb = Ob.enchant) || void 0 === hb ? void 0 : hb.tier) && void 0 !== ub ? ub : null,
+              selected: Bb === Sb,
+              onSelect: ab
+            }, Bb)
           }))
-        }), (0, Bq.jsx)("div", {
-          className: Oq()("SmpSellBar", {
-            SmpSellBarIdle: !aq
+        }), (0, Hb.jsx)("div", {
+          className: Gb()("SmpSellBar", {
+            SmpSellBarIdle: !Xb
           }),
-          children: aq ? (0, Bq.jsx)(zl, {
-            entry: aq,
-            choice: ul(aq.item, Wq[aq.key]),
-            onChoose: qq => {
-              Nq({
-                ...Wq,
-                [aq.key]: qq
+          children: Xb ? (0, Hb.jsx)(eO, {
+            entry: Xb,
+            choice: aO(Xb.item, wb[Xb.key]),
+            onChoose: bb => {
+              Zb({
+                ...wb,
+                [Xb.key]: bb
               })
             }
-          }) : (0, Bq.jsx)("span", {
+          }) : (0, Hb.jsx)("span", {
             className: "SmpMuted",
-            children: Eq("smpShop:tapToSell")
+            children: ub("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function zl(qq) {
-      var Eq, gq, Yq, lq;
+    function eO(bb) {
+      var ub, hb, Bb, Ob;
       let {
-        entry: Oq,
-        choice: xq,
-        onChoose: Aq
-      } = qq;
+        entry: Gb,
+        choice: Lb,
+        onChoose: Yb
+      } = bb;
       const {
-        t: uq
-      } = (0, mq.v)(), Wq = Nl(), {
-        key: Nq,
-        item: aq,
-        meta: Vq
-      } = Oq, dq = ml("dropdown" === (null === (Eq = aq.userInput) || void 0 === Eq ? void 0 : Eq.type) ? aq.userInput.dropdownOptions : []), jq = null === xq ? 0 : -(0, yY.d)(aq, xq);
-      return (0, Bq.jsxs)(Bq.Fragment, {
-        children: [(0, Bq.jsx)(JY, {
-          item: Vq.item,
-          amount: Vq.quantity,
-          tier: null !== (gq = null === (Yq = aq.enchant) || void 0 === Yq ? void 0 : Yq.tier) && void 0 !== gq ? gq : null
-        }), (0, Bq.jsxs)("div", {
+        t: ab
+      } = (0, Ub.K)(), wb = ZO(), {
+        key: Zb,
+        item: Xb,
+        meta: pb
+      } = Gb, ob = UO("dropdown" === (null === (ub = Xb.userInput) || void 0 === ub ? void 0 : ub.type) ? Xb.userInput.dropdownOptions : []), Ab = null === Lb ? 0 : -(0, dB.d)(Xb, Lb);
+      return (0, Hb.jsxs)(Hb.Fragment, {
+        children: [(0, Hb.jsx)(IB, {
+          item: pb.item,
+          amount: pb.quantity,
+          tier: null !== (hb = null === (Bb = Xb.enchant) || void 0 === Bb ? void 0 : Bb.tier) && void 0 !== hb ? hb : null
+        }), (0, Hb.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, Bq.jsx)("b", {
-            children: (0, Bq.jsx)(hY.c, {
-              text: null !== (lq = aq.customTitle) && void 0 !== lq ? lq : Vq.item
+          children: [(0, Hb.jsx)("b", {
+            children: (0, Hb.jsx)(DB.c, {
+              text: null !== (Ob = Xb.customTitle) && void 0 !== Ob ? Ob : pb.item
             })
-          }), (0, Bq.jsx)("small", {
-            children: uq("smpShop:sellEach", {
-              count: Vq.quantity
+          }), (0, Hb.jsx)("small", {
+            children: ab("smpShop:sellEach", {
+              count: pb.quantity
             })
           })]
-        }), (0, Bq.jsx)(sY, {
-          options: dq.map((qq => {
+        }), (0, Hb.jsx)(VB, {
+          options: ob.map((bb => {
             let {
-              label: Eq,
-              quantity: gq,
-              isAll: Yq
-            } = qq;
+              label: ub,
+              quantity: hb,
+              isAll: Bb
+            } = bb;
             return {
-              value: Eq,
-              label: Yq ? uq("smpShop:all", {
-                count: gq
-              }) : String(gq)
+              value: ub,
+              label: Bb ? ab("smpShop:all", {
+                count: hb
+              }) : String(hb)
             }
           })),
-          value: xq,
-          onChange: Aq,
-          ariaLabel: uq("smpShop:quantity")
-        }), (0, Bq.jsxs)(cq.v, {
-          loading: Wq.isPending(Nq),
-          disabled: null === xq,
+          value: Lb,
+          onChange: Yb,
+          ariaLabel: ab("smpShop:quantity")
+        }), (0, Hb.jsxs)(Sb.q, {
+          loading: wb.isPending(Zb),
+          disabled: null === Lb,
           onClick: () => {
-            Wq.act(Nq, xq)
+            wb.act(Zb, Lb)
           },
-          children: [uq("smpShop:sellButton"), " ", (0, Bq.jsx)(kY, {
-            amount: jq
+          children: [ab("smpShop:sellButton"), " ", (0, Hb.jsx)(PB, {
+            amount: Ab
           })]
         })]
       })
     }
 
-    function Sl() {
-      var qq;
+    function NO() {
+      var bb;
       const {
-        t: Eq
-      } = (0, mq.v)(), gq = Nl(), Yq = null === (qq = gq.shopInfo[gq.categoryKey]) || void 0 === qq ? void 0 : qq.items, lq = El(Yq, "collect"), Oq = El(Yq, "myListing"), xq = (qq, Eq) => gq.isPending(qq) || !1 === Eq.canBuy;
-      return (0, Bq.jsxs)("div", {
+        t: ub
+      } = (0, Ub.K)(), hb = ZO(), Bb = null === (bb = hb.shopInfo[hb.categoryKey]) || void 0 === bb ? void 0 : bb.items, Ob = uO(Bb, "collect"), Gb = uO(Bb, "myListing"), Lb = (bb, ub) => hb.isPending(bb) || !1 === ub.canBuy;
+      return (0, Hb.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, Bq.jsx)("h3", {
+        children: [(0, Hb.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: Eq("smpShop:readyToCollect")
-        }), lq.length > 0 ? (0, Bq.jsx)("div", {
+          children: ub("smpShop:readyToCollect")
+        }), Ob.length > 0 ? (0, Hb.jsx)("div", {
           className: "SmpList",
-          children: lq.map((qq => {
-            var Yq, lq;
+          children: Ob.map((bb => {
+            var Bb, Ob;
             let {
-              key: Oq,
-              item: mq,
-              meta: Aq
-            } = qq;
-            return (0, Bq.jsxs)("div", {
+              key: Gb,
+              item: Ub,
+              meta: Yb
+            } = bb;
+            return (0, Hb.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, Bq.jsx)(JY, {
-                item: "sold" === Aq.type ? "Gold Coin" : Aq.item,
-                amount: "sold" === Aq.type ? 0 : Aq.quantity,
-                tier: null !== (Yq = null === (lq = mq.enchant) || void 0 === lq ? void 0 : lq.tier) && void 0 !== Yq ? Yq : null
-              }), (0, Bq.jsxs)("div", {
+              children: [(0, Hb.jsx)(IB, {
+                item: "sold" === Yb.type ? "Gold Coin" : Yb.item,
+                amount: "sold" === Yb.type ? 0 : Yb.quantity,
+                tier: null !== (Bb = null === (Ob = Ub.enchant) || void 0 === Ob ? void 0 : Ob.tier) && void 0 !== Bb ? Bb : null
+              }), (0, Hb.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, Bq.jsx)("b", {
-                  children: (0, Bq.jsx)(hY.c, {
-                    text: mq.customTitle
+                children: [(0, Hb.jsx)("b", {
+                  children: (0, Hb.jsx)(DB.c, {
+                    text: Ub.customTitle
                   })
-                }), (0, Bq.jsx)("small", {
-                  children: (0, Bq.jsx)(hY.c, {
-                    text: mq.description
+                }), (0, Hb.jsx)("small", {
+                  children: (0, Hb.jsx)(DB.c, {
+                    text: Ub.description
                   })
                 })]
-              }), (0, Bq.jsx)(cq.p, {
-                loading: xq(Oq, mq),
+              }), (0, Hb.jsx)(Sb.m, {
+                loading: Lb(Gb, Ub),
                 onClick: () => {
-                  gq.act(Oq)
+                  hb.act(Gb)
                 },
-                children: Eq("smpShop:collect")
+                children: ub("smpShop:collect")
               })]
-            }, Oq)
+            }, Gb)
           }))
-        }) : (0, Bq.jsx)(UY, {
-          title: Eq("smpShop:nothingToCollect"),
-          children: Eq("smpShop:nothingToCollectHint")
-        }), (0, Bq.jsx)("h3", {
+        }) : (0, Hb.jsx)(EB, {
+          title: ub("smpShop:nothingToCollect"),
+          children: ub("smpShop:nothingToCollectHint")
+        }), (0, Hb.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: Eq("smpShop:activeListings", {
-            count: Oq.length
+          children: ub("smpShop:activeListings", {
+            count: Gb.length
           })
-        }), Oq.length > 0 ? (0, Bq.jsx)("div", {
+        }), Gb.length > 0 ? (0, Hb.jsx)("div", {
           className: "SmpList",
-          children: Oq.map((qq => {
-            var Yq, lq;
+          children: Gb.map((bb => {
+            var Bb, Ob;
             let {
-              key: Oq,
-              item: mq,
-              meta: Aq
-            } = qq;
-            return (0, Bq.jsxs)("div", {
+              key: Gb,
+              item: Ub,
+              meta: Yb
+            } = bb;
+            return (0, Hb.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, Bq.jsx)(JY, {
-                item: Aq.item,
-                amount: Aq.quantity,
-                tier: null !== (Yq = null === (lq = mq.enchant) || void 0 === lq ? void 0 : lq.tier) && void 0 !== Yq ? Yq : null
-              }), (0, Bq.jsxs)("div", {
+              children: [(0, Hb.jsx)(IB, {
+                item: Yb.item,
+                amount: Yb.quantity,
+                tier: null !== (Bb = null === (Ob = Ub.enchant) || void 0 === Ob ? void 0 : Ob.tier) && void 0 !== Bb ? Bb : null
+              }), (0, Hb.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, Bq.jsx)("b", {
-                  children: (0, Bq.jsx)(hY.c, {
-                    text: mq.customTitle
+                children: [(0, Hb.jsx)("b", {
+                  children: (0, Hb.jsx)(DB.c, {
+                    text: Ub.customTitle
                   })
-                }), (0, Bq.jsx)("small", {
-                  children: Eq("smpShop:timeLeft", {
-                    time: Ol(Aq.expiresAt)
+                }), (0, Hb.jsx)("small", {
+                  children: ub("smpShop:timeLeft", {
+                    time: GO(Yb.expiresAt)
                   })
                 })]
-              }), (0, Bq.jsxs)("div", {
+              }), (0, Hb.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, Bq.jsx)(kY, {
-                  amount: Aq.pricePerItem
-                }), (0, Bq.jsx)("small", {
-                  children: Eq("smpShop:each")
+                children: [(0, Hb.jsx)(PB, {
+                  amount: Yb.pricePerItem
+                }), (0, Hb.jsx)("small", {
+                  children: ub("smpShop:each")
                 })]
-              }), (0, Bq.jsx)(cq.K, {
-                loading: xq(Oq, mq),
+              }), (0, Hb.jsx)(Sb.H, {
+                loading: Lb(Gb, Ub),
                 onClick: () => {
-                  gq.act(Oq)
+                  hb.act(Gb)
                 },
-                children: Eq("smpShop:cancel")
+                children: ub("smpShop:cancel")
               })]
-            }, Oq)
+            }, Gb)
           }))
-        }) : (0, Bq.jsx)(UY, {
-          title: Eq("smpShop:noActiveListings"),
-          children: Eq("smpShop:noActiveListingsHint")
+        }) : (0, Hb.jsx)(EB, {
+          title: ub("smpShop:noActiveListings"),
+          children: ub("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function pl(qq) {
+    function sO(bb) {
       let {
-        done: Eq,
-        of: gq
-      } = qq;
-      return (0, Bq.jsx)("span", {
+        done: ub,
+        of: hb
+      } = bb;
+      return (0, Hb.jsx)("span", {
         className: "SmpProgress",
-        children: (0, Bq.jsx)("i", {
+        children: (0, Hb.jsx)("i", {
           style: {
-            width: `${Math.min(100,Eq/Math.max(1,gq)*100)}%`
+            width: `${Math.min(100,ub/Math.max(1,hb)*100)}%`
           }
         })
       })
     }
 
-    function Gl(qq) {
-      var Eq, gq, Yq;
+    function MO(bb) {
+      var ub, hb, Bb;
       let {
-        entry: lq,
-        choice: Oq,
-        onChoose: xq
-      } = qq;
+        entry: Ob,
+        choice: Gb,
+        onChoose: Lb
+      } = bb;
       const {
-        t: Aq
-      } = (0, mq.v)(), uq = Nl(), {
-        key: Wq,
-        item: Nq,
-        meta: aq
-      } = lq, Vq = "dropdown" === (null === (Eq = Nq.userInput) || void 0 === Eq ? void 0 : Eq.type) ? Nq.userInput.dropdownOptions : [], dq = !0 === aq.processing, jq = null !== aq.creator && (aq.owned > 0 || dq), Hq = jq && aq.owned > 0 ? ml(Vq) : [], oq = null === Oq ? 0 : null !== (gq = null === (Yq = Hq.find((qq => qq.label === Oq))) || void 0 === Yq ? void 0 : Yq.quantity) && void 0 !== gq ? gq : 0;
-      return (0, Bq.jsxs)("div", {
+        t: Yb
+      } = (0, Ub.K)(), ab = ZO(), {
+        key: wb,
+        item: Zb,
+        meta: Xb
+      } = Ob, pb = "dropdown" === (null === (ub = Zb.userInput) || void 0 === ub ? void 0 : ub.type) ? Zb.userInput.dropdownOptions : [], ob = !0 === Xb.processing, Ab = null !== Xb.creator && (Xb.owned > 0 || ob), lb = Ab && Xb.owned > 0 ? UO(pb) : [], Kb = null === Gb ? 0 : null !== (hb = null === (Bb = lb.find((bb => bb.label === Gb))) || void 0 === Bb ? void 0 : Bb.quantity) && void 0 !== hb ? hb : 0;
+      return (0, Hb.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, Bq.jsx)(JY, {
-          item: aq.item
-        }), (0, Bq.jsxs)("div", {
+        children: [(0, Hb.jsx)(IB, {
+          item: Xb.item
+        }), (0, Hb.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, Bq.jsx)("b", {
-            children: (0, Bq.jsx)(hY.c, {
-              text: Nq.customTitle
+          children: [(0, Hb.jsx)("b", {
+            children: (0, Hb.jsx)(DB.c, {
+              text: Zb.customTitle
             })
-          }), (0, Bq.jsxs)("small", {
-            children: [(0, Bq.jsx)(kY, {
-              amount: aq.pricePerItem
-            }), " ", Aq("smpShop:each"), " \xb7", " ", null === aq.creator ? Aq("smpShop:you") : (0, Bq.jsx)(hY.c, {
+          }), (0, Hb.jsxs)("small", {
+            children: [(0, Hb.jsx)(PB, {
+              amount: Xb.pricePerItem
+            }), " ", Yb("smpShop:each"), " \xb7", " ", null === Xb.creator ? Yb("smpShop:you") : (0, Hb.jsx)(DB.c, {
               text: [{
-                entityName: aq.creator
+                entityName: Xb.creator
               }]
             })]
-          }), (0, Bq.jsx)(pl, {
-            done: aq.delivered,
-            of: aq.wanted
+          }), (0, Hb.jsx)(sO, {
+            done: Xb.delivered,
+            of: Xb.wanted
           })]
-        }), jq ? (0, Bq.jsxs)(Bq.Fragment, {
-          children: [(0, Bq.jsx)(sY, {
-            options: Hq.map((qq => {
+        }), Ab ? (0, Hb.jsxs)(Hb.Fragment, {
+          children: [(0, Hb.jsx)(VB, {
+            options: lb.map((bb => {
               let {
-                label: Eq,
-                quantity: gq,
-                isAll: Yq
-              } = qq;
+                label: ub,
+                quantity: hb,
+                isAll: Bb
+              } = bb;
               return {
-                value: Eq,
-                label: Yq ? Aq("smpShop:max", {
-                  count: gq
-                }) : String(gq)
+                value: ub,
+                label: Bb ? Yb("smpShop:max", {
+                  count: hb
+                }) : String(hb)
               }
             })),
-            value: Oq,
-            onChange: xq,
-            ariaLabel: Aq("smpShop:quantity")
-          }), (0, Bq.jsxs)(cq.v, {
-            loading: uq.isPending(Wq) || dq,
-            disabled: null === Oq,
+            value: Gb,
+            onChange: Lb,
+            ariaLabel: Yb("smpShop:quantity")
+          }), (0, Hb.jsxs)(Sb.q, {
+            loading: ab.isPending(wb) || ob,
+            disabled: null === Gb,
             onClick: () => {
-              uq.act(Wq, Oq)
+              ab.act(wb, Gb)
             },
-            children: [Aq("smpShop:deliver"), " ", (0, Bq.jsx)(kY, {
-              amount: oq * aq.pricePerItem
+            children: [Yb("smpShop:deliver"), " ", (0, Hb.jsx)(PB, {
+              amount: Kb * Xb.pricePerItem
             })]
           })]
-        }) : (0, Bq.jsx)("span", {
+        }) : (0, Hb.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === aq.creator ? Aq("smpShop:yourOrder") : Aq("smpShop:youHave", {
+          children: null === Xb.creator ? Yb("smpShop:yourOrder") : Yb("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function Ll() {
-      var qq;
+    function mO() {
+      var bb;
       const {
-        t: Eq
-      } = (0, mq.v)(), gq = Nl(), lq = null === (qq = gq.shopInfo[gq.categoryKey]) || void 0 === qq ? void 0 : qq.items, Oq = gl(lq, "search"), xq = gl(lq, "creator"), Aq = El(lq, "order"), uq = gl(lq, "empty"), Wq = jl(Oq, Aq.length > 0 || null !== uq), [Nq, aq] = (0, Yq.useState)(!1), [Vq, dq] = (0, Yq.useState)({});
-      return (0, Bq.jsx)(Ql, {
-        browser: Wq,
-        recentLabel: Eq("smpShop:recentOrders"),
-        action: (0, Bq.jsx)(cq.v, {
+        t: ub
+      } = (0, Ub.K)(), hb = ZO(), Ob = null === (bb = hb.shopInfo[hb.categoryKey]) || void 0 === bb ? void 0 : bb.items, Gb = hO(Ob, "search"), Lb = hO(Ob, "creator"), Yb = uO(Ob, "order"), ab = hO(Ob, "empty"), wb = AO(Gb, Yb.length > 0 || null !== ab), [Zb, Xb] = (0, Bb.useState)(!1), [pb, ob] = (0, Bb.useState)({});
+      return (0, Hb.jsx)(CO, {
+        browser: wb,
+        recentLabel: ub("smpShop:recentOrders"),
+        action: (0, Hb.jsx)(Sb.q, {
           onClick: () => {
-            aq((qq => !qq))
+            Xb((bb => !bb))
           },
-          children: Eq("smpShop:createOrder")
+          children: ub("smpShop:createOrder")
         }),
-        above: Nq && (0, Bq.jsx)(il, {
+        above: Zb && (0, Hb.jsx)(gO, {
           mode: "order",
-          creator: xq,
-          catalogue: Wq.catalogue,
-          names: Wq.names,
-          searching: Wq.loading,
+          creator: Lb,
+          catalogue: wb.catalogue,
+          names: wb.names,
+          searching: wb.loading,
           prices: [],
-          onPickItem: Wq.searchFor,
+          onPickItem: wb.searchFor,
           onClose: () => {
-            aq(!1)
+            Xb(!1)
           }
         }),
         onBack: () => {
-          aq(!1)
+          Xb(!1)
         },
-        summary: Aq.length > 0 && Eq(1 === Aq.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: Aq.length,
-          price: pY(yl(Aq, "max"))
+        summary: Yb.length > 0 && ub(1 === Yb.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: Yb.length,
+          price: sB(dO(Yb, "max"))
         }),
-        list: Wq.loading ? (0, Bq.jsx)(RY, {}) : Aq.length > 0 ? (0, Bq.jsx)(al.c, {
+        list: wb.loading ? (0, Hb.jsx)(qB, {}) : Yb.length > 0 ? (0, Hb.jsx)(XO.d, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: Yl,
-          observerUpdateDeps: [Aq.length],
-          children: Aq.map((qq => (0, Bq.jsx)(Gl, {
-            entry: qq,
-            choice: ul(qq.item, Vq[qq.key]),
-            onChoose: Eq => {
-              dq({
-                ...Vq,
-                [qq.key]: Eq
+          rootMargin: BO,
+          observerUpdateDeps: [Yb.length],
+          children: Yb.map((bb => (0, Hb.jsx)(MO, {
+            entry: bb,
+            choice: aO(bb.item, pb[bb.key]),
+            onChoose: ub => {
+              ob({
+                ...pb,
+                [bb.key]: ub
               })
             }
-          }, qq.key)))
-        }) : uq ? (0, Bq.jsx)(FY, {
-          entry: uq
-        }) : (0, Bq.jsx)(RY, {
+          }, bb.key)))
+        }) : ab ? (0, Hb.jsx)(yB, {
+          entry: ab
+        }) : (0, Hb.jsx)(qB, {
           count: 3
         })
       })
     }
 
-    function Jl() {
-      var qq;
+    function IO() {
+      var bb;
       const {
-        t: Eq
-      } = (0, mq.v)(), gq = Nl(), Yq = El(null === (qq = gq.shopInfo[gq.categoryKey]) || void 0 === qq ? void 0 : qq.items, "myOrder");
-      return 0 === Yq.length ? (0, Bq.jsx)("div", {
+        t: ub
+      } = (0, Ub.K)(), hb = ZO(), Bb = uO(null === (bb = hb.shopInfo[hb.categoryKey]) || void 0 === bb ? void 0 : bb.items, "myOrder");
+      return 0 === Bb.length ? (0, Hb.jsx)("div", {
         className: "SmpScreen",
-        children: (0, Bq.jsx)(UY, {
-          title: Eq("smpShop:noOrders"),
-          children: Eq("smpShop:noOrdersHint")
+        children: (0, Hb.jsx)(EB, {
+          title: ub("smpShop:noOrders"),
+          children: ub("smpShop:noOrdersHint")
         })
-      }) : (0, Bq.jsx)("div", {
+      }) : (0, Hb.jsx)("div", {
         className: "SmpScreen",
-        children: (0, Bq.jsx)("div", {
+        children: (0, Hb.jsx)("div", {
           className: "SmpList",
-          children: Yq.map((qq => {
+          children: Bb.map((bb => {
             let {
-              key: Yq,
-              item: lq,
-              meta: Oq
-            } = qq;
-            const mq = gq.isPending(Yq) || !1 === lq.canBuy;
-            return (0, Bq.jsxs)("div", {
+              key: Bb,
+              item: Ob,
+              meta: Gb
+            } = bb;
+            const Ub = hb.isPending(Bb) || !1 === Ob.canBuy;
+            return (0, Hb.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, Bq.jsx)(JY, {
-                item: Oq.item,
-                amount: Oq.collectable
-              }), (0, Bq.jsxs)("div", {
+              children: [(0, Hb.jsx)(IB, {
+                item: Gb.item,
+                amount: Gb.collectable
+              }), (0, Hb.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, Bq.jsx)("b", {
-                  children: (0, Bq.jsx)(hY.c, {
-                    text: lq.customTitle
+                children: [(0, Hb.jsx)("b", {
+                  children: (0, Hb.jsx)(DB.c, {
+                    text: Ob.customTitle
                   })
-                }), (0, Bq.jsxs)("small", {
-                  children: [(0, Bq.jsx)(kY, {
-                    amount: Oq.pricePerItem
-                  }), " ", Eq("smpShop:each"), Oq.collectable > 0 && ` \xb7 ${Eq("smpShop:readyCount",{count:Oq.collectable})}`]
-                }), (0, Bq.jsx)(pl, {
-                  done: Oq.delivered,
-                  of: Oq.wanted
+                }), (0, Hb.jsxs)("small", {
+                  children: [(0, Hb.jsx)(PB, {
+                    amount: Gb.pricePerItem
+                  }), " ", ub("smpShop:each"), Gb.collectable > 0 && ` \xb7 ${ub("smpShop:readyCount",{count:Gb.collectable})}`]
+                }), (0, Hb.jsx)(sO, {
+                  done: Gb.delivered,
+                  of: Gb.wanted
                 })]
-              }), Oq.collectable > 0 ? (0, Bq.jsx)(cq.p, {
-                loading: mq,
+              }), Gb.collectable > 0 ? (0, Hb.jsx)(Sb.m, {
+                loading: Ub,
                 onClick: () => {
-                  gq.act(Yq)
+                  hb.act(Bb)
                 },
-                children: Eq("smpShop:collectCount", {
-                  count: Oq.collectable
+                children: ub("smpShop:collectCount", {
+                  count: Gb.collectable
                 })
-              }) : (0, Bq.jsx)(cq.K, {
-                loading: mq,
+              }) : (0, Hb.jsx)(Sb.H, {
+                loading: Ub,
                 onClick: () => {
-                  gq.act(Yq)
+                  hb.act(Bb)
                 },
-                children: Eq("smpShop:cancel")
+                children: ub("smpShop:cancel")
               })]
-            }, Yq)
+            }, Bb)
           }))
         })
       })
     }
-    const kl = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      Rl = {
+    const PO = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      qO = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4304,775 +4304,775 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function Ul(qq, Eq) {
-      let gq = !1;
-      const Yq = {};
-      for (const lq in qq) Eq(lq, qq[lq]) ? Yq[lq] = qq[lq] : gq = !0;
-      return gq ? Yq : qq
+    function EO(bb, ub) {
+      let hb = !1;
+      const Bb = {};
+      for (const Ob in bb) ub(Ob, bb[Ob]) ? Bb[Ob] = bb[Ob] : hb = !0;
+      return hb ? Bb : bb
     }
 
-    function Fl(qq) {
-      var Eq, gq, lq, Aq;
+    function yO(bb) {
+      var ub, hb, Ob, Yb;
       const {
-        show: cq,
-        shopInfo: uq,
-        selectedCategoryKey: Wq
-      } = qq, {
-        t: Nq
-      } = (0, mq.v)(), aq = null !== Wq && void 0 !== Wq ? Wq : "", Vq = ql(uq, aq), dq = null === (Eq = uq[aq]) || void 0 === Eq ? void 0 : Eq.items, jq = null !== Vq, [Hq, oq] = (0, Yq.useState)({}), [Pq, Qq] = (0, Yq.useState)([]), [yq, tq] = (0, Yq.useState)(!1), [rq, vq] = (0, Yq.useState)(null), [, hq] = (0, Yq.useState)(0), nq = (0, Yq.useRef)(0), bq = (0, Yq.useRef)({}), iq = (0, Yq.useRef)({
-        items: dq,
-        pending: Hq,
-        shopInfo: uq,
-        active: jq,
-        canAfford: qq.canAfford,
-        buy: qq.buy
+        show: Sb,
+        shopInfo: ab,
+        selectedCategoryKey: wb
+      } = bb, {
+        t: Zb
+      } = (0, Ub.K)(), Xb = null !== wb && void 0 !== wb ? wb : "", pb = bO(ab, Xb), ob = null === (ub = ab[Xb]) || void 0 === ub ? void 0 : ub.items, Ab = null !== pb, [lb, Kb] = (0, Bb.useState)({}), [Wb, Cb] = (0, Bb.useState)([]), [db, rb] = (0, Bb.useState)(!1), [jb, nb] = (0, Bb.useState)(null), [, Db] = (0, Bb.useState)(0), xb = (0, Bb.useRef)(0), zb = (0, Bb.useRef)({}), gb = (0, Bb.useRef)({
+        items: ob,
+        pending: lb,
+        shopInfo: ab,
+        active: Ab,
+        canAfford: bb.canAfford,
+        buy: bb.buy
       });
-      iq.current = {
-        items: dq,
-        pending: Hq,
-        shopInfo: uq,
-        active: jq,
-        canAfford: qq.canAfford,
-        buy: qq.buy
+      gb.current = {
+        items: ob,
+        pending: lb,
+        shopInfo: ab,
+        active: Ab,
+        canAfford: bb.canAfford,
+        buy: bb.buy
       };
-      const Zq = (0, Yq.useCallback)((qq => {
-        nq.current++;
-        const Eq = nq.current;
-        Qq((gq => [{
-          id: Eq,
-          text: qq
-        }, ...gq].slice(0, 8))), vq(Eq)
+      const ib = (0, Bb.useCallback)((bb => {
+        xb.current++;
+        const ub = xb.current;
+        Cb((hb => [{
+          id: ub,
+          text: bb
+        }, ...hb].slice(0, 8))), nb(ub)
       }), []);
-      (0, Yq.useEffect)((() => {
-        if (null === rq) return;
-        const qq = setTimeout((() => {
-          vq(null)
+      (0, Bb.useEffect)((() => {
+        if (null === jb) return;
+        const bb = setTimeout((() => {
+          nb(null)
         }), 3e3);
         return () => {
-          clearTimeout(qq)
+          clearTimeout(bb)
         }
-      }), [rq]), (0, Yq.useEffect)((() => {
-        const Eq = qq.message;
-        if (!Eq) return;
+      }), [jb]), (0, Bb.useEffect)((() => {
+        const ub = bb.message;
+        if (!ub) return;
         const {
-          shopInfo: gq,
-          active: Yq,
-          items: lq
-        } = iq.current, Oq = null !== Eq.categoryKey ? null !== ql(gq, Eq.categoryKey) : Yq;
-        (Oq || Yq) && Zq(Eq.text), Oq && oq((qq => Ul(qq, (qq => {
-          var Eq, gq;
-          return !kl.has(null === lq || void 0 === lq || null === (Eq = lq[qq]) || void 0 === Eq || null === (gq = Eq.smp) || void 0 === gq ? void 0 : gq.kind)
+          shopInfo: hb,
+          active: Bb,
+          items: Ob
+        } = gb.current, Gb = null !== ub.categoryKey ? null !== bO(hb, ub.categoryKey) : Bb;
+        (Gb || Bb) && ib(ub.text), Gb && Kb((bb => EO(bb, (bb => {
+          var ub, hb;
+          return !PO.has(null === Ob || void 0 === Ob || null === (ub = Ob[bb]) || void 0 === ub || null === (hb = ub.smp) || void 0 === hb ? void 0 : hb.kind)
         }))))
-      }), [qq.message, Zq]), (0, Yq.useEffect)((() => {
-        oq((qq => Ul(qq, ((qq, Eq) => Bl(null === dq || void 0 === dq ? void 0 : dq[qq]) === Eq.snapshot))))
-      }), [uq, dq]);
-      const fq = Object.keys(Hq).length > 0;
-      (0, Yq.useEffect)((() => {
-        if (!fq) return;
-        const qq = setInterval((() => {
-          hq((qq => qq + 1));
-          const qq = Date.now(),
+      }), [bb.message, ib]), (0, Bb.useEffect)((() => {
+        Kb((bb => EO(bb, ((bb, ub) => HO(null === ob || void 0 === ob ? void 0 : ob[bb]) === ub.snapshot))))
+      }), [ab, ob]);
+      const vb = Object.keys(lb).length > 0;
+      (0, Bb.useEffect)((() => {
+        if (!vb) return;
+        const bb = setInterval((() => {
+          Db((bb => bb + 1));
+          const bb = Date.now(),
             {
-              pending: Eq,
-              items: gq
-            } = iq.current,
-            Yq = Object.keys(Eq).filter((gq => qq - Eq[gq].at >= 12e3));
-          if (0 === Yq.length) return;
-          const lq = Yq.some((qq => {
-            var Yq, lq;
-            return "search" !== (null === gq || void 0 === gq || null === (Yq = gq[qq]) || void 0 === Yq || null === (lq = Yq.smp) || void 0 === lq ? void 0 : lq.kind) || Eq[qq].resend
+              pending: ub,
+              items: hb
+            } = gb.current,
+            Bb = Object.keys(ub).filter((hb => bb - ub[hb].at >= 12e3));
+          if (0 === Bb.length) return;
+          const Ob = Bb.some((bb => {
+            var Bb, Ob;
+            return "search" !== (null === hb || void 0 === hb || null === (Bb = hb[bb]) || void 0 === Bb || null === (Ob = Bb.smp) || void 0 === Ob ? void 0 : Ob.kind) || ub[bb].resend
           }));
-          for (const Oq of Yq) bq.current[Oq] = qq;
-          oq((qq => Ul(qq, (qq => !Yq.includes(qq))))), lq && Zq(Nq("smpShop:noAnswer"))
+          for (const Gb of Bb) zb.current[Gb] = bb;
+          Kb((bb => EO(bb, (bb => !Bb.includes(bb))))), Ob && ib(Zb("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(qq)
+          clearInterval(bb)
         }
-      }), [fq]), (0, Yq.useEffect)((() => {
-        oq({})
-      }), [aq]), (0, Yq.useEffect)((() => {
-        cq || tq(!1)
-      }), [cq]);
-      const Mq = (0, Yq.useCallback)((function(qq, Eq) {
-          let gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [vb]), (0, Bb.useEffect)((() => {
+        Kb({})
+      }), [Xb]), (0, Bb.useEffect)((() => {
+        Sb || rb(!1)
+      }), [Sb]);
+      const tb = (0, Bb.useCallback)((function(bb, ub) {
+          let hb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: Yq,
-            pending: lq,
-            canAfford: Oq,
-            buy: mq
-          } = iq.current, xq = null === Yq || void 0 === Yq ? void 0 : Yq[qq];
-          if (!xq || qq in lq || !1 === xq.canBuy) return !1;
-          if (!Oq(xq, (0, yY.d)(xq, Eq))) return !1;
-          mq(qq, xq, Eq);
-          const Aq = {
-            snapshot: Bl(xq),
+            items: Bb,
+            pending: Ob,
+            canAfford: Gb,
+            buy: Ub
+          } = gb.current, Lb = null === Bb || void 0 === Bb ? void 0 : Bb[bb];
+          if (!Lb || bb in Ob || !1 === Lb.canBuy) return !1;
+          if (!Gb(Lb, (0, dB.d)(Lb, ub))) return !1;
+          Ub(bb, Lb, ub);
+          const Yb = {
+            snapshot: HO(Lb),
             at: Date.now(),
-            resend: gq
+            resend: hb
           };
-          return iq.current.pending = {
-            ...iq.current.pending,
-            [qq]: Aq
-          }, oq((Eq => ({
-            ...Eq,
-            [qq]: Aq
+          return gb.current.pending = {
+            ...gb.current.pending,
+            [bb]: Yb
+          }, Kb((ub => ({
+            ...ub,
+            [bb]: Yb
           }))), !0
         }), []),
-        Tq = (0, Yq.useMemo)((() => ({
-          shopInfo: uq,
-          categoryKey: aq,
-          canAfford: qq.canAfford,
-          isPending: qq => qq in Hq,
-          gaveUpAt: qq => {
-            var Eq;
-            return null !== (Eq = bq.current[qq]) && void 0 !== Eq ? Eq : 0
+        Jb = (0, Bb.useMemo)((() => ({
+          shopInfo: ab,
+          categoryKey: Xb,
+          canAfford: bb.canAfford,
+          isPending: bb => bb in lb,
+          gaveUpAt: bb => {
+            var ub;
+            return null !== (ub = zb.current[bb]) && void 0 !== ub ? ub : 0
           },
-          act: Mq,
-          notify: Zq
-        })), [uq, aq, qq.canAfford, Hq, Mq, Zq]),
-        zq = Math.min(...Object.values(Hq).map((qq => qq.at))),
-        Sq = fq && Date.now() - zq > 1500,
-        pq = Pq.length > 1,
-        Gq = null !== (gq = null === (lq = uq[aq]) || void 0 === lq ? void 0 : lq.customTitle) && void 0 !== gq ? gq : aq,
-        Lq = null === (Aq = uq[aq]) || void 0 === Aq ? void 0 : Aq.description;
-      let Jq = null;
-      return "market" === Vq ? Jq = (0, Bq.jsx)(Zl, {}) : "sell" === Vq ? Jq = (0, Bq.jsx)(Tl, {}) : "collect" === Vq ? Jq = (0, Bq.jsx)(Sl, {}) : "orders" === Vq ? Jq = (0, Bq.jsx)(Ll, {}) : "myOrders" === Vq && (Jq = (0, Bq.jsx)(Jl, {})), (0, Bq.jsx)(Wl.Provider, {
-        value: Tq,
-        children: (0, Bq.jsx)("div", {
+          act: tb,
+          notify: ib
+        })), [ab, Xb, bb.canAfford, lb, tb, ib]),
+        eb = Math.min(...Object.values(lb).map((bb => bb.at))),
+        Nb = vb && Date.now() - eb > 1500,
+        sb = Wb.length > 1,
+        Mb = null !== (hb = null === (Ob = ab[Xb]) || void 0 === Ob ? void 0 : Ob.customTitle) && void 0 !== hb ? hb : Xb,
+        mb = null === (Yb = ab[Xb]) || void 0 === Yb ? void 0 : Yb.description;
+      let Ib = null;
+      return "market" === pb ? Ib = (0, Hb.jsx)(iO, {}) : "sell" === pb ? Ib = (0, Hb.jsx)(JO, {}) : "collect" === pb ? Ib = (0, Hb.jsx)(NO, {}) : "orders" === pb ? Ib = (0, Hb.jsx)(mO, {}) : "myOrders" === pb && (Ib = (0, Hb.jsx)(IO, {})), (0, Hb.jsx)(wO.Provider, {
+        value: Jb,
+        children: (0, Hb.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !jq,
-          children: (0, Bq.jsxs)("div", {
+          hidden: !Ab,
+          children: (0, Hb.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, Bq.jsx)("header", {
+            children: [(0, Hb.jsx)("header", {
               className: "SmpHeader",
-              children: (0, Bq.jsxs)("div", {
+              children: (0, Hb.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, Bq.jsxs)("h2", {
-                  children: [Vq && (0, Bq.jsx)(xq.d, {
-                    name: Rl[Vq]
-                  }), Nq(Gq)]
-                }), Lq && (0, Bq.jsx)("p", {
-                  children: (0, Bq.jsx)(hY.c, {
-                    text: Lq
+                children: [(0, Hb.jsxs)("h2", {
+                  children: [pb && (0, Hb.jsx)(Lb.e, {
+                    name: qO[pb]
+                  }), Zb(Mb)]
+                }), mb && (0, Hb.jsx)("p", {
+                  children: (0, Hb.jsx)(DB.c, {
+                    text: mb
                   })
                 })]
               })
-            }), (0, Bq.jsx)("main", {
+            }), (0, Hb.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: cq && Jq
-            }), (0, Bq.jsxs)("button", {
+              children: Sb && Ib
+            }), (0, Hb.jsxs)("button", {
               type: "button",
-              className: Oq()("SmpStatus", {
-                SmpStatusWaiting: fq,
-                SmpStatusFresh: !fq && null !== rq,
-                SmpStatusHasHistory: pq
+              className: Gb()("SmpStatus", {
+                SmpStatusWaiting: vb,
+                SmpStatusFresh: !vb && null !== jb,
+                SmpStatusHasHistory: sb
               }),
               "aria-live": "polite",
-              "aria-expanded": pq ? yq : void 0,
+              "aria-expanded": sb ? db : void 0,
               onClick: () => {
-                pq && tq((qq => !qq))
+                sb && rb((bb => !bb))
               },
-              children: [fq ? (0, Bq.jsxs)("span", {
+              children: [vb ? (0, Hb.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, Bq.jsx)(XY, {}), Nq(Sq ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : Pq[0] ? (0, Bq.jsx)("span", {
+                children: [(0, Hb.jsx)(FB, {}), Zb(Nb ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : Wb[0] ? (0, Hb.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, Bq.jsx)(hY.c, {
-                  text: Pq[0].text
+                children: (0, Hb.jsx)(DB.c, {
+                  text: Wb[0].text
                 })
-              }, Pq[0].id) : (0, Bq.jsx)("span", {
+              }, Wb[0].id) : (0, Hb.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: Nq("smpShop:ready")
-              }), pq && (0, Bq.jsx)("small", {
-                children: Nq("smpShop:recentMessages", {
-                  count: Pq.length
+                children: Zb("smpShop:ready")
+              }), sb && (0, Hb.jsx)("small", {
+                children: Zb("smpShop:recentMessages", {
+                  count: Wb.length
                 })
               })]
-            }), yq && pq && (0, Bq.jsx)("div", {
+            }), db && sb && (0, Hb.jsx)("div", {
               className: "SmpStatusHistory",
-              children: Pq.map((qq => (0, Bq.jsx)("div", {
-                children: (0, Bq.jsx)(hY.c, {
-                  text: qq.text
+              children: Wb.map((bb => (0, Hb.jsx)("div", {
+                children: (0, Hb.jsx)(DB.c, {
+                  text: bb.text
                 })
-              }, qq.id)))
+              }, bb.id)))
             })]
           })
         })
       })
     }
-    class sl {
-      constructor(qq) {
-        this.info = qq
+    class VO {
+      constructor(bb) {
+        this.info = bb
       }
-      static fromShopInfo(qq) {
-        const Eq = {};
-        for (const gq in qq) {
-          const Yq = !0 === qq[gq].redDot && !0 !== qq[gq].forceRemoveRedDot;
-          Eq[gq] = {
-            redDot: Yq,
+      static fromShopInfo(bb) {
+        const ub = {};
+        for (const hb in bb) {
+          const Bb = !0 === bb[hb].redDot && !0 !== bb[hb].forceRemoveRedDot;
+          ub[hb] = {
+            redDot: Bb,
             items: {}
           };
-          for (const lq in qq[gq].items) {
-            const Yq = qq[gq].items[lq],
-              Oq = !0 === Yq.redDot && !0 !== Yq.forceRemoveRedDot;
-            Eq[gq].items[lq] = {
-              redDot: Oq
+          for (const Ob in bb[hb].items) {
+            const Bb = bb[hb].items[Ob],
+              Gb = !0 === Bb.redDot && !0 !== Bb.forceRemoveRedDot;
+            ub[hb].items[Ob] = {
+              redDot: Gb
             }
           }
         }
-        return new sl(Eq)
+        return new VO(ub)
       }
       anyCategoryHasRedDots() {
-        for (const qq in this.info)
-          if (this.categoryHasRedDot(qq)) return !0;
+        for (const bb in this.info)
+          if (this.categoryHasRedDot(bb)) return !0;
         return !1
       }
-      doesCategoryExist(qq) {
-        return !(0, RE.H)(this.info[qq])
+      doesCategoryExist(bb) {
+        return !(0, qu.J)(this.info[bb])
       }
-      categoryHasRedDot(qq) {
-        return !0 === this.info[qq].redDot
+      categoryHasRedDot(bb) {
+        return !0 === this.info[bb].redDot
       }
-      updateCategoryRedDot(qq, Eq) {
-        this.info[qq].redDot = Eq
+      updateCategoryRedDot(bb, ub) {
+        this.info[bb].redDot = ub
       }
-      doesItemExist(qq, Eq) {
-        return this.doesCategoryExist(qq) && !(0, RE.H)(this.info[qq].items[Eq])
+      doesItemExist(bb, ub) {
+        return this.doesCategoryExist(bb) && !(0, qu.J)(this.info[bb].items[ub])
       }
-      itemHasRedDot(qq, Eq) {
-        return !0 === this.info[qq].items[Eq].redDot
+      itemHasRedDot(bb, ub) {
+        return !0 === this.info[bb].items[ub].redDot
       }
-      updateItemRedDot(qq, Eq, gq) {
-        this.info[qq].items[Eq].redDot = gq
+      updateItemRedDot(bb, ub, hb) {
+        this.info[bb].items[ub].redDot = hb
       }
       shallowCopy() {
-        return new sl(this.info)
+        return new VO(this.info)
       }
     }
 
-    function Xl(qq, Eq) {
-      return `${qq}\x1f${Eq}`
+    function FO(bb, ub) {
+      return `${bb}\x1f${ub}`
     }
 
-    function wl(qq, Eq) {
-      return !(0, RE.H)(Eq) && !(0, RE.H)(qq) && Eq in qq
+    function fO(bb, ub) {
+      return !(0, qu.J)(ub) && !(0, qu.J)(bb) && ub in bb
     }
-    const Kl = (0, Yq.memo)((function(qq) {
-      var Eq, gq;
+    const kO = (0, Bb.memo)((function(bb) {
+      var ub, hb;
       let {
-        show: lq
-      } = qq;
-      const mq = (0, Cg.f)("players", EO),
-        xq = (0, Cg.f)("players", gO),
-        uq = (0, MY.c)(),
-        [Nq, aq] = (0, Yq.useState)({
+        show: Ob
+      } = bb;
+      const Ub = (0, Th.g)("players", uG),
+        Lb = (0, Th.g)("players", hG),
+        ab = (0, tB.d)(),
+        [Zb, Xb] = (0, Bb.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: sl.fromShopInfo({}),
+          redDotInfo: VO.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        dq = (0, Yq.useRef)(""),
-        jq = (0, Yq.useRef)(null),
-        oq = (0, Yq.useRef)(null),
-        Pq = (0, Yq.useRef)(0),
-        Qq = (0, Yq.useRef)(void 0),
-        yq = (0, Yq.useRef)(null),
-        tq = (0, Yq.useRef)(Nq),
-        vq = Nq.redDotInfo.anyCategoryHasRedDots(),
-        [hq, bq] = (0, Yq.useState)(null),
-        iq = (0, Yq.useRef)(!1);
-      let Zq = !1,
-        fq = 0,
-        Mq = 0;
-      if (Nq.currencyAmounts) {
-        for (const qq in Nq.currencyAmounts) {
-          var Tq;
-          const Eq = Nq.currencyAmounts[qq];
-          Eq.hidden || (fq++, (null === (Tq = Eq.subtext) || void 0 === Tq ? void 0 : Tq.length) > 0 && Mq++)
+        ob = (0, Bb.useRef)(""),
+        Ab = (0, Bb.useRef)(null),
+        Kb = (0, Bb.useRef)(null),
+        Wb = (0, Bb.useRef)(0),
+        Cb = (0, Bb.useRef)(void 0),
+        db = (0, Bb.useRef)(null),
+        rb = (0, Bb.useRef)(Zb),
+        nb = Zb.redDotInfo.anyCategoryHasRedDots(),
+        [Db, zb] = (0, Bb.useState)(null),
+        gb = (0, Bb.useRef)(!1);
+      let ib = !1,
+        vb = 0,
+        tb = 0;
+      if (Zb.currencyAmounts) {
+        for (const bb in Zb.currencyAmounts) {
+          var Jb;
+          const ub = Zb.currencyAmounts[bb];
+          ub.hidden || (vb++, (null === (Jb = ub.subtext) || void 0 === Jb ? void 0 : Jb.length) > 0 && tb++)
         }
-        Zq = fq + Mq > 4
-      }(0, Yq.useEffect)((() => {
-        UE.i.TV("showShopIconRedDot", vq, !0)
-      }), [vq]), (0, Yq.useEffect)((() => {
-        Hq.gameBridge.send("setShopOpen", lq), lq || (clearTimeout(Qq.current), aq((qq => qq.awaitingPurchase ? {
-          ...qq,
+        ib = vb + tb > 4
+      }(0, Bb.useEffect)((() => {
+        Eu.i.vp("showShopIconRedDot", nb, !0)
+      }), [nb]), (0, Bb.useEffect)((() => {
+        lb.gameBridge.send("setShopOpen", Ob), Ob || (clearTimeout(Cb.current), Xb((bb => bb.awaitingPurchase ? {
+          ...bb,
           awaitingPurchase: !1
-        } : qq)))
-      }), [lq]), (0, Yq.useEffect)((() => () => {
-        Hq.gameBridge.send("setShopOpen", !1), clearTimeout(Qq.current)
-      }), []), (0, Yq.useEffect)((() => {
-        tq.current = Nq
-      }), [Nq]), (0, Yq.useEffect)((() => {
-        if (null === hq) return;
-        return (0, ZY.e)("pointerdown", (qq => {
-          const Eq = qq.target;
-          null !== Eq && void 0 !== Eq && Eq.closest(".ShopItem") || bq(null)
+        } : bb)))
+      }), [Ob]), (0, Bb.useEffect)((() => () => {
+        lb.gameBridge.send("setShopOpen", !1), clearTimeout(Cb.current)
+      }), []), (0, Bb.useEffect)((() => {
+        rb.current = Zb
+      }), [Zb]), (0, Bb.useEffect)((() => {
+        if (null === Db) return;
+        return (0, iB.c)("pointerdown", (bb => {
+          const ub = bb.target;
+          null !== ub && void 0 !== ub && ub.closest(".ShopItem") || zb(null)
         }))
-      }), [hq]);
-      const zq = qq => {
-          aq((Eq => ({
-            ...Eq,
-            ...qq
+      }), [Db]);
+      const eb = bb => {
+          Xb((ub => ({
+            ...ub,
+            ...bb
           })))
         },
-        Sq = qq => {
-          var Eq;
-          clearTimeout(null === (Eq = Nq.onBoughtInfo) || void 0 === Eq ? void 0 : Eq.timeout);
-          const gq = setTimeout((() => {
-            zq({
+        Nb = bb => {
+          var ub;
+          clearTimeout(null === (ub = Zb.onBoughtInfo) || void 0 === ub ? void 0 : ub.timeout);
+          const hb = setTimeout((() => {
+            eb({
               onBoughtInfo: null
             })
           }), 3e3);
-          dq.current = qq, zq({
+          ob.current = bb, eb({
             onBoughtInfo: {
-              text: qq,
-              timeout: gq,
-              categoryKey: jq.current
+              text: bb,
+              timeout: hb,
+              categoryKey: Ab.current
             }
           })
         },
-        pq = qq => {
+        sb = bb => {
           const {
-            shopInfo: Eq,
-            userInputsPerItem: gq,
-            redDotInfo: Yq,
-            autoSelectCategory: Oq
-          } = function(qq, Eq, gq, Yq, lq, Oq) {
-            if ((0, RE.H)(qq) || 0 === Object.keys(qq).length) return {
+            shopInfo: ub,
+            userInputsPerItem: hb,
+            redDotInfo: Bb,
+            autoSelectCategory: Gb
+          } = function(bb, ub, hb, Bb, Ob, Gb) {
+            if ((0, qu.J)(bb) || 0 === Object.keys(bb).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: sl.fromShopInfo({}),
+              redDotInfo: VO.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const mq = nq.k[nq.n].adConfig.showRewardedAds,
-              xq = {};
-            let Aq = null;
-            for (const dq in qq) {
-              const Eq = qq[dq],
-                gq = {};
-              let Yq = !1;
-              for (const qq in Eq.items) {
-                const lq = Eq.items[qq];
-                (0, yY.h)(lq, mq) && (gq[qq] = lq, Yq = !0)
+            const Ub = xb.n[xb.s].adConfig.showRewardedAds,
+              Lb = {};
+            let Yb = null;
+            for (const ob in bb) {
+              const ub = bb[ob],
+                hb = {};
+              let Bb = !1;
+              for (const bb in ub.items) {
+                const Ob = ub.items[bb];
+                (0, dB.j)(Ob, Ub) && (hb[bb] = Ob, Bb = !0)
               }
-              Yq && (xq[dq] = {
-                ...Eq,
-                items: gq
-              }, !0 === Eq.autoSelectCategory && (Aq = dq))
+              Bb && (Lb[ob] = {
+                ...ub,
+                items: hb
+              }, !0 === ub.autoSelectCategory && (Yb = ob))
             }
-            const cq = {},
-              uq = (qq, Eq, Yq, mq) => {
-                var xq, Aq;
-                const uq = Xl(qq, Eq),
-                  Bq = null !== (xq = gq[uq]) && void 0 !== xq ? xq : gq[Eq];
-                if (null !== (Aq = mq.userInput) && void 0 !== Aq && Aq.type) switch (mq.userInput.type) {
+            const Sb = {},
+              ab = (bb, ub, Bb, Ub) => {
+                var Lb, Yb;
+                const ab = FO(bb, ub),
+                  Hb = null !== (Lb = hb[ab]) && void 0 !== Lb ? Lb : hb[ub];
+                if (null !== (Yb = Ub.userInput) && void 0 !== Yb && Yb.type) switch (Ub.userInput.type) {
                   case "dropdown": {
-                    var Wq;
-                    const qq = !Bq || !mq.userInput.dropdownOptions.some((qq => (0, yY.f)(qq) === Bq)),
-                      Eq = mq.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === Yq || void 0 === Yq || null === (Wq = Yq.userInput) || void 0 === Wq ? void 0 : Wq.type) || JSON.stringify(Yq.userInput.dropdownOptions) !== JSON.stringify(mq.userInput.dropdownOptions)),
-                      gq = mq.userInput,
-                      lq = !(0, RE.H)(gq.initialValue) && gq.dropdownOptions.some((qq => (0, yY.f)(qq) === gq.initialValue));
-                    var Nq;
-                    return void(qq || Eq ? lq ? cq[uq] = null !== (Nq = mq.userInput.initialValue) && void 0 !== Nq ? Nq : null : mq.userInput.dropdownOptions.length > 0 ? cq[uq] = (0, yY.f)(mq.userInput.dropdownOptions[0]) : cq[uq] = null : cq[uq] = Bq)
+                    var wb;
+                    const bb = !Hb || !Ub.userInput.dropdownOptions.some((bb => (0, dB.f)(bb) === Hb)),
+                      ub = Ub.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === Bb || void 0 === Bb || null === (wb = Bb.userInput) || void 0 === wb ? void 0 : wb.type) || JSON.stringify(Bb.userInput.dropdownOptions) !== JSON.stringify(Ub.userInput.dropdownOptions)),
+                      hb = Ub.userInput,
+                      Ob = !(0, qu.J)(hb.initialValue) && hb.dropdownOptions.some((bb => (0, dB.f)(bb) === hb.initialValue));
+                    var Zb;
+                    return void(bb || ub ? Ob ? Sb[ab] = null !== (Zb = Ub.userInput.initialValue) && void 0 !== Zb ? Zb : null : Ub.userInput.dropdownOptions.length > 0 ? Sb[ab] = (0, dB.f)(Ub.userInput.dropdownOptions[0]) : Sb[ab] = null : Sb[ab] = Hb)
                   }
                   case "text":
                   case "number":
-                    var aq, Vq, dq;
-                    return void((null === Yq || void 0 === Yq ? void 0 : Yq.userInput) !== mq.userInput ? cq[uq] = null !== (aq = null !== (Vq = mq.userInput.initialValue) && void 0 !== Vq ? Vq : Bq) && void 0 !== aq ? aq : "" : cq[uq] = null !== (dq = null !== Bq && void 0 !== Bq ? Bq : mq.userInput.initialValue) && void 0 !== dq ? dq : "");
+                    var Xb, pb, ob;
+                    return void((null === Bb || void 0 === Bb ? void 0 : Bb.userInput) !== Ub.userInput ? Sb[ab] = null !== (Xb = null !== (pb = Ub.userInput.initialValue) && void 0 !== pb ? pb : Hb) && void 0 !== Xb ? Xb : "" : Sb[ab] = null !== (ob = null !== Hb && void 0 !== Hb ? Hb : Ub.userInput.initialValue) && void 0 !== ob ? ob : "");
                   case "color":
-                    var jq, Hq, oq;
-                    return void((null === Yq || void 0 === Yq ? void 0 : Yq.userInput) !== mq.userInput ? cq[uq] = null !== (jq = null !== (Hq = mq.userInput.initialValue) && void 0 !== Hq ? Hq : Bq) && void 0 !== jq ? jq : "#000000" : cq[uq] = null !== (oq = null !== Bq && void 0 !== Bq ? Bq : mq.userInput.initialValue) && void 0 !== oq ? oq : "#000000");
+                    var Ab, lb, Kb;
+                    return void((null === Bb || void 0 === Bb ? void 0 : Bb.userInput) !== Ub.userInput ? Sb[ab] = null !== (Ab = null !== (lb = Ub.userInput.initialValue) && void 0 !== lb ? lb : Hb) && void 0 !== Ab ? Ab : "#000000" : Sb[ab] = null !== (Kb = null !== Hb && void 0 !== Hb ? Hb : Ub.userInput.initialValue) && void 0 !== Kb ? Kb : "#000000");
                   case "player": {
-                    const qq = (0, yY.g)(lq, Oq, mq.userInput);
-                    return void(Bq && qq.includes(Bq) ? cq[uq] = Bq : cq[uq] = qq.length > 0 ? qq[0] : null)
+                    const bb = (0, dB.g)(Ob, Gb, Ub.userInput);
+                    return void(Hb && bb.includes(Hb) ? Sb[ab] = Hb : Sb[ab] = bb.length > 0 ? bb[0] : null)
                   }
                 }
               };
-            for (const dq in xq)
-              for (const qq in xq[dq].items) {
-                var Bq;
-                const gq = xq[dq].items[qq];
-                uq(dq, qq, null === (Bq = Eq[dq]) || void 0 === Bq ? void 0 : Bq.items[qq], gq)
+            for (const ob in Lb)
+              for (const bb in Lb[ob].items) {
+                var Hb;
+                const hb = Lb[ob].items[bb];
+                ab(ob, bb, null === (Hb = ub[ob]) || void 0 === Hb ? void 0 : Hb.items[bb], hb)
               }
-            const Wq = sl.fromShopInfo(xq);
-            for (const dq in xq) {
-              var Nq;
-              if (Yq.doesCategoryExist(dq)) {
-                (null === (Nq = Eq[dq]) || void 0 === Nq ? void 0 : Nq.redDot) === xq[dq].redDot && Wq.updateCategoryRedDot(dq, Yq.categoryHasRedDot(dq));
-                for (const qq in xq[dq].items) {
-                  var aq, Vq;
-                  Yq.doesItemExist(dq, qq) && (null === (aq = Eq[dq]) || void 0 === aq || null === (Vq = aq.items[qq]) || void 0 === Vq ? void 0 : Vq.redDot) === xq[dq].items[qq].redDot && Wq.updateItemRedDot(dq, qq, Yq.itemHasRedDot(dq, qq))
+            const wb = VO.fromShopInfo(Lb);
+            for (const ob in Lb) {
+              var Zb;
+              if (Bb.doesCategoryExist(ob)) {
+                (null === (Zb = ub[ob]) || void 0 === Zb ? void 0 : Zb.redDot) === Lb[ob].redDot && wb.updateCategoryRedDot(ob, Bb.categoryHasRedDot(ob));
+                for (const bb in Lb[ob].items) {
+                  var Xb, pb;
+                  Bb.doesItemExist(ob, bb) && (null === (Xb = ub[ob]) || void 0 === Xb || null === (pb = Xb.items[bb]) || void 0 === pb ? void 0 : pb.redDot) === Lb[ob].items[bb].redDot && wb.updateItemRedDot(ob, bb, Bb.itemHasRedDot(ob, bb))
                 }
               }
             }
             return {
-              shopInfo: xq,
-              userInputsPerItem: cq,
-              redDotInfo: Wq,
-              autoSelectCategory: Aq
+              shopInfo: Lb,
+              userInputsPerItem: Sb,
+              redDotInfo: wb,
+              autoSelectCategory: Yb
             }
-          }(qq, Nq.shopInfo, Nq.userInputsPerItem, Nq.redDotInfo, mq, xq), Aq = {
-            shopInfo: Eq,
-            userInputsPerItem: gq,
-            redDotInfo: Yq
+          }(bb, Zb.shopInfo, Zb.userInputsPerItem, Zb.redDotInfo, Ub, Lb), Yb = {
+            shopInfo: ub,
+            userInputsPerItem: hb,
+            redDotInfo: Bb
           };
-          if (null === Oq || lq)
-            if (Eq[Nq.selectedCategoryKey]) Aq.selectedCategoryKey = Nq.selectedCategoryKey;
+          if (null === Gb || Ob)
+            if (ub[Zb.selectedCategoryKey]) Yb.selectedCategoryKey = Zb.selectedCategoryKey;
             else {
-              const qq = zY(Eq);
-              Aq.selectedCategoryKey = qq.length > 0 ? qq[0] : null
+              const bb = eB(ub);
+              Yb.selectedCategoryKey = bb.length > 0 ? bb[0] : null
             }
-          else Aq.selectedCategoryKey = Oq;
-          return 0 === Object.keys(Eq).length && lq && rq.b.set({
+          else Yb.selectedCategoryKey = Gb;
+          return 0 === Object.keys(ub).length && Ob && jb.d.set({
             openEverythingMenuName: null
-          }), Aq
+          }), Yb
         },
-        Lq = (qq, Eq, gq) => {
-          const Yq = Nq.selectedCategoryKey,
-            lq = Xl(Yq, qq),
-            Oq = null !== gq && void 0 !== gq ? gq : Nq.userInputsPerItem[lq],
-            mq = {
-              categoryKey: Yq,
-              itemKey: qq,
-              userInput: Oq
+        mb = (bb, ub, hb) => {
+          const Bb = Zb.selectedCategoryKey,
+            Ob = FO(Bb, bb),
+            Gb = null !== hb && void 0 !== hb ? hb : Zb.userInputsPerItem[Ob],
+            Ub = {
+              categoryKey: Bb,
+              itemKey: bb,
+              userInput: Gb
             };
-          if (jq.current = Yq, Eq.isRewardedAd) {
-            if (Date.now() - Pq.current < 5e3) return;
-            (0, OE.kb)((() => {
-              var gq, Yq, Oq;
+          if (Ab.current = Bb, ub.isRewardedAd) {
+            if (Date.now() - Wb.current < 5e3) return;
+            (0, Gu.bb)((() => {
+              var hb, Bb, Gb;
               console.log("bought rewarded ad");
-              const xq = mq.categoryKey ? null === (gq = tq.current.shopInfo[mq.categoryKey]) || void 0 === gq ? void 0 : gq.items[qq] : null;
-              if (!xq || !xq.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (Yq = Eq.userInput) || void 0 === Yq ? void 0 : Yq.type) === (null === xq || void 0 === xq || null === (Oq = xq.userInput) || void 0 === Oq ? void 0 : Oq.type) ? (mq.userInput = tq.current.userInputsPerItem[lq], Hq.gameBridge.send("buyShopItem", mq), Eq.onBoughtMessage && Sq(Eq.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), Pq.current = Date.now()
+              const Lb = Ub.categoryKey ? null === (hb = rb.current.shopInfo[Ub.categoryKey]) || void 0 === hb ? void 0 : hb.items[bb] : null;
+              if (!Lb || !Lb.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (Bb = ub.userInput) || void 0 === Bb ? void 0 : Bb.type) === (null === Lb || void 0 === Lb || null === (Gb = Lb.userInput) || void 0 === Gb ? void 0 : Gb.type) ? (Ub.userInput = rb.current.userInputsPerItem[Ob], lb.gameBridge.send("buyShopItem", Ub), ub.onBoughtMessage && Nb(ub.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), Wb.current = Date.now()
           } else {
-            Hq.gameBridge.send("buyShopItem", mq), zq({
+            lb.gameBridge.send("buyShopItem", Ub), eb({
               awaitingPurchase: !0
-            }), clearTimeout(Qq.current), Qq.current = setTimeout((() => {
-              yq.current = null, zq({
+            }), clearTimeout(Cb.current), Cb.current = setTimeout((() => {
+              db.current = null, eb({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const qq = (0, yY.d)(Eq, Oq);
-            if (yq.current = null, !isNaN(qq) && wl(Nq.currencyAmounts, Eq.currency)) {
-              0 !== qq && (yq.current = {
-                currency: Eq.currency,
-                amountBefore: Nq.currencyAmounts[Eq.currency].amount
+            const bb = (0, dB.d)(ub, Gb);
+            if (db.current = null, !isNaN(bb) && fO(Zb.currencyAmounts, ub.currency)) {
+              0 !== bb && (db.current = {
+                currency: ub.currency,
+                amountBefore: Zb.currencyAmounts[ub.currency].amount
               });
-              const gq = {
-                ...Nq.currencyAmounts
+              const hb = {
+                ...Zb.currencyAmounts
               };
-              gq[Eq.currency].amount -= qq, zq({
-                currencyAmounts: gq
+              hb[ub.currency].amount -= bb, eb({
+                currencyAmounts: hb
               })
             }
-            Eq.onBoughtMessage && Sq(Eq.onBoughtMessage)
+            ub.onBoughtMessage && Nb(ub.onBoughtMessage)
           }
         },
-        Jq = (qq, Eq) => {
-          if (null === Eq || !qq.shopInfo[Eq]) return qq;
-          let gq = qq.redDotInfo;
-          return gq.categoryHasRedDot(Eq) && (gq.updateCategoryRedDot(Eq, !1), gq = gq.shallowCopy()), {
-            ...qq,
-            selectedCategoryKey: Eq,
-            redDotInfo: gq
+        Ib = (bb, ub) => {
+          if (null === ub || !bb.shopInfo[ub]) return bb;
+          let hb = bb.redDotInfo;
+          return hb.categoryHasRedDot(ub) && (hb.updateCategoryRedDot(ub, !1), hb = hb.shallowCopy()), {
+            ...bb,
+            selectedCategoryKey: ub,
+            redDotInfo: hb
           }
         },
-        kq = qq => {
-          aq((Eq => Jq(Eq, qq)))
+        Pb = bb => {
+          Xb((ub => Ib(ub, bb)))
         };
-      (0, nE.f)(fY.m, (() => {
-        aq((qq => {
-          const Eq = (0, fY.n)(zY(qq.shopInfo), qq.selectedCategoryKey, (Eq => (0, fY.j)(qq.shopInfo[Eq].items)));
-          return Eq === qq.selectedCategoryKey ? qq : Jq(qq, Eq)
+      (0, xu.h)(vB.l, (() => {
+        Xb((bb => {
+          const ub = (0, vB.m)(eB(bb.shopInfo), bb.selectedCategoryKey, (ub => (0, vB.h)(bb.shopInfo[ub].items)));
+          return ub === bb.selectedCategoryKey ? bb : Ib(bb, ub)
         }))
-      })), (0, nE.f)("showShopFromServer", (qq => {
+      })), (0, xu.h)("showShopFromServer", (bb => {
         let {
-          toggle: Eq,
-          kg: gq
-        } = qq;
-        gq && kq(gq), 0 === Object.keys(Nq.shopInfo).length || Eq && lq ? rq.b.set({
+          toggle: ub,
+          kh: hb
+        } = bb;
+        hb && Pb(hb), 0 === Object.keys(Zb.shopInfo).length || ub && Ob ? jb.d.set({
           openEverythingMenuName: null
-        }) : rq.b.set({
-          openEverythingMenuName: cE.p.SHOP
+        }) : jb.d.set({
+          openEverythingMenuName: Su.u.SHOP
         })
-      })), (0, nE.f)("closeShopOnDamaged", (() => {
-        lq && rq.b.set({
+      })), (0, xu.h)("closeShopOnDamaged", (() => {
+        Ob && jb.d.set({
           openEverythingMenuName: null
         })
-      })), (0, nE.f)("overShopInfo", (qq => {
-        Sq(qq)
-      })), (0, Vq.g)("currencyAmounts", (qq => {
-        var Eq;
-        const gq = yq.current;
-        gq && (null === qq || void 0 === qq || null === (Eq = qq[gq.currency]) || void 0 === Eq ? void 0 : Eq.amount) === gq.amountBefore ? zq({
-          currencyAmounts: qq
-        }) : (yq.current = null, zq({
-          currencyAmounts: qq,
+      })), (0, xu.h)("overShopInfo", (bb => {
+        Nb(bb)
+      })), (0, pb.e)("currencyAmounts", (bb => {
+        var ub;
+        const hb = db.current;
+        hb && (null === bb || void 0 === bb || null === (ub = bb[hb.currency]) || void 0 === ub ? void 0 : ub.amount) === hb.amountBefore ? eb({
+          currencyAmounts: bb
+        }) : (db.current = null, eb({
+          currencyAmounts: bb,
           awaitingPurchase: !1
         }))
-      })), (0, Vq.g)("shopInfo", (qq => {
-        zq({
-          ...pq(qq),
+      })), (0, pb.e)("shopInfo", (bb => {
+        eb({
+          ...sb(bb),
           awaitingPurchase: !1
         })
       }));
-      const Rq = (0, Yq.useRef)({
-        playerIds: mq,
-        localPlayerId: xq
+      const qb = (0, Bb.useRef)({
+        playerIds: Ub,
+        localPlayerId: Lb
       });
-      (0, Yq.useEffect)((() => {
-        Rq.current.playerIds === mq && Rq.current.localPlayerId === xq || (Rq.current = {
-          playerIds: mq,
-          localPlayerId: xq
-        }, aq((qq => {
-          const Eq = pq(qq.shopInfo);
+      (0, Bb.useEffect)((() => {
+        qb.current.playerIds === Ub && qb.current.localPlayerId === Lb || (qb.current = {
+          playerIds: Ub,
+          localPlayerId: Lb
+        }, Xb((bb => {
+          const ub = sb(bb.shopInfo);
           return {
-            ...qq,
-            ...Eq
+            ...bb,
+            ...ub
           }
         })))
-      }), [mq, xq]);
-      const Uq = Nq.selectedCategoryKey,
-        Fq = (qq, Eq) => {
-          var gq, Yq;
-          return (isNaN(Eq) || (0, RE.H)(qq.currency) || wl(Nq.currencyAmounts, qq.currency) && Eq <= Nq.currencyAmounts[qq.currency].amount) && (null === (gq = qq.canBuy) || void 0 === gq || gq) && !(null !== (Yq = qq.hidden) && void 0 !== Yq && Yq)
+      }), [Ub, Lb]);
+      const Eb = Zb.selectedCategoryKey,
+        yb = (bb, ub) => {
+          var hb, Bb;
+          return (isNaN(ub) || (0, qu.J)(bb.currency) || fO(Zb.currencyAmounts, bb.currency) && ub <= Zb.currencyAmounts[bb.currency].amount) && (null === (hb = bb.canBuy) || void 0 === hb || hb) && !(null !== (Bb = bb.hidden) && void 0 !== Bb && Bb)
         },
-        sq = (qq, Eq) => {
-          var gq, Yq, lq;
-          const mq = Xl(Uq, qq),
-            xq = Nq.shopInfo[Uq].items[qq],
-            uq = Nq.userInputsPerItem[mq],
-            Wq = (0, yY.d)(xq, uq),
-            aq = Fq(xq, Wq),
-            Vq = xq.enchant,
-            dq = Vq ? (0, Gq.Eb)(null !== (gq = xq.customTitle) && void 0 !== gq ? gq : qq, {
-              colour: Gq.Ab[Vq.tier]
-            }) : null !== (Yq = xq.customTitle) && void 0 !== Yq ? Yq : qq,
-            jq = Eq => {
-              const gq = null !== Eq && void 0 !== Eq ? Eq : uq,
-                Yq = void 0 !== Eq ? (0, yY.d)(xq, Eq) : Wq;
-              Fq(xq, Yq) && null !== gq && Lq(qq, xq, Eq);
-              let lq = Nq.redDotInfo;
-              lq.itemHasRedDot(Uq, qq) && (lq.updateItemRedDot(Uq, qq, !1), lq = lq.shallowCopy()), zq({
-                redDotInfo: lq
+        Vb = (bb, ub) => {
+          var hb, Bb, Ob;
+          const Ub = FO(Eb, bb),
+            Lb = Zb.shopInfo[Eb].items[bb],
+            ab = Zb.userInputsPerItem[Ub],
+            wb = (0, dB.d)(Lb, ab),
+            Xb = yb(Lb, wb),
+            pb = Lb.enchant,
+            ob = pb ? (0, Mb.wb)(null !== (hb = Lb.customTitle) && void 0 !== hb ? hb : bb, {
+              colour: Mb.rb[pb.tier]
+            }) : null !== (Bb = Lb.customTitle) && void 0 !== Bb ? Bb : bb,
+            Ab = ub => {
+              const hb = null !== ub && void 0 !== ub ? ub : ab,
+                Bb = void 0 !== ub ? (0, dB.d)(Lb, ub) : wb;
+              yb(Lb, Bb) && null !== hb && mb(bb, Lb, ub);
+              let Ob = Zb.redDotInfo;
+              Ob.itemHasRedDot(Eb, bb) && (Ob.updateItemRedDot(Eb, bb, !1), Ob = Ob.shallowCopy()), eb({
+                redDotInfo: Ob
               })
             };
-          return (0, Bq.jsxs)("div", {
-            className: Oq()("ShopItem", {
-              ShopItemNoInput: !xq.userInput,
-              ShopItemNoInputCanBuy: !xq.userInput && aq,
-              ShopItemNoInputSelected: xq.isSelected,
-              ShopItemEnchant: !!Vq
+          return (0, Hb.jsxs)("div", {
+            className: Gb()("ShopItem", {
+              ShopItemNoInput: !Lb.userInput,
+              ShopItemNoInputCanBuy: !Lb.userInput && Xb,
+              ShopItemNoInputSelected: Lb.isSelected,
+              ShopItemEnchant: !!pb
             }),
-            "data-pad-focusable": !xq.userInput || void 0,
-            "data-pad-unavailable": !xq.userInput && !aq || void 0,
-            "data-pad-repeat": null !== (lq = (0, fY.d)(xq)) && void 0 !== lq ? lq : void 0,
-            "data-pad-repeat-wait": Nq.awaitingPurchase || void 0,
+            "data-pad-focusable": !Lb.userInput || void 0,
+            "data-pad-unavailable": !Lb.userInput && !Xb || void 0,
+            "data-pad-repeat": null !== (Ob = (0, vB.c)(Lb)) && void 0 !== Ob ? Ob : void 0,
+            "data-pad-repeat-wait": Zb.awaitingPurchase || void 0,
             onClick: () => {
-              if (Vq && iq.current) {
-                if (hq !== mq) return void bq(mq);
-                bq(null)
+              if (pb && gb.current) {
+                if (Db !== Ub) return void zb(Ub);
+                zb(null)
               }
-              xq.userInput || jq()
+              Lb.userInput || Ab()
             },
-            onPointerDown: qq => {
-              Vq && (iq.current = (0, rY.q)(qq))
+            onPointerDown: bb => {
+              pb && (gb.current = (0, jB.p)(bb))
             },
-            onPointerEnter: qq => {
-              Vq && !(0, rY.q)(qq) && bq(mq)
+            onPointerEnter: bb => {
+              pb && !(0, jB.p)(bb) && zb(Ub)
             },
-            onPointerLeave: qq => {
-              Vq && !(0, rY.q)(qq) && bq((qq => qq === mq ? null : qq))
+            onPointerLeave: bb => {
+              pb && !(0, jB.p)(bb) && zb((bb => bb === Ub ? null : bb))
             },
             style: {
-              zIndex: Object.keys(Nq.shopInfo[Uq].items).length - Eq
+              zIndex: Object.keys(Zb.shopInfo[Eb].items).length - ub
             },
-            children: [Nq.redDotInfo.itemHasRedDot(Uq, qq) && (0, Bq.jsx)(Aq.d, {
+            children: [Zb.redDotInfo.itemHasRedDot(Eb, bb) && (0, Hb.jsx)(Yb.e, {
               top: "-6px",
               right: "-6px"
-            }), xq.badge && (0, Bq.jsx)("div", {
+            }), Lb.badge && (0, Hb.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, Bq.jsx)("div", {
-                className: Oq()("ShopBadgeMain", xq.badge.type),
-                children: (0, Bq.jsx)(hY.c, {
-                  text: xq.badge.text
+              children: (0, Hb.jsx)("div", {
+                className: Gb()("ShopBadgeMain", Lb.badge.type),
+                children: (0, Hb.jsx)(DB.c, {
+                  text: Lb.badge.text
                 })
               })
-            }), (0, Bq.jsx)("div", {
+            }), (0, Hb.jsx)("div", {
               className: "ShopItemLeft",
-              children: xq.image && (0, Bq.jsx)(Cl, {
-                item: xq,
+              children: Lb.image && (0, Hb.jsx)(TO, {
+                item: Lb,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, Bq.jsxs)("div", {
+            }), (0, Hb.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, Bq.jsxs)("div", {
+              children: [(0, Hb.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, Bq.jsx)("div", {
+                children: [(0, Hb.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, Bq.jsx)(hY.c, {
-                    text: dq
+                  children: (0, Hb.jsx)(DB.c, {
+                    text: ob
                   })
-                }), (0, Bq.jsx)("div", {
+                }), (0, Hb.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, Bq.jsx)(hY.c, {
-                    text: xq.description
+                  children: (0, Hb.jsx)(DB.c, {
+                    text: Lb.description
                   })
                 })]
-              }), xq.userInput && (0, Bq.jsxs)("div", {
+              }), Lb.userInput && (0, Hb.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: qq => {
-                  qq.stopPropagation()
+                onClick: bb => {
+                  bb.stopPropagation()
                 },
-                children: [(0, Bq.jsx)(Dl, {
-                  item: xq,
-                  currInput: uq,
-                  updateInput: Eq => {
-                    ((qq, Eq, gq) => {
-                      const Yq = Xl(qq, Eq),
-                        lq = {
-                          ...Nq.userInputsPerItem
+                children: [(0, Hb.jsx)(RO, {
+                  item: Lb,
+                  currInput: ab,
+                  updateInput: ub => {
+                    ((bb, ub, hb) => {
+                      const Bb = FO(bb, ub),
+                        Ob = {
+                          ...Zb.userInputsPerItem
                         };
-                      lq[Yq] = gq, zq({
-                        userInputsPerItem: lq
+                      Ob[Bb] = hb, eb({
+                        userInputsPerItem: Ob
                       })
-                    })(Uq, qq, Eq)
+                    })(Eb, bb, ub)
                   },
-                  onSubmit: qq => {
-                    jq(qq)
+                  onSubmit: bb => {
+                    Ab(bb)
                   }
-                }), ("dropdown" !== xq.userInput.type || !xq.userInput.autoSubmit) && (0, Bq.jsx)(cq.g, {
+                }), ("dropdown" !== Lb.userInput.type || !Lb.userInput.autoSubmit) && (0, Hb.jsx)(Sb.e, {
                   className: "ItemCostButton",
-                  disabled: !aq && null !== uq,
+                  disabled: !Xb && null !== ab,
                   onClick: () => {
-                    jq()
+                    Ab()
                   },
-                  children: (0, Bq.jsx)(el, {
-                    item: xq,
-                    cost: Wq,
-                    currencyAmounts: Nq.currencyAmounts
+                  children: (0, Hb.jsx)(QO, {
+                    item: Lb,
+                    cost: wb,
+                    currencyAmounts: Zb.currencyAmounts
                   })
                 })]
               })]
-            }), !xq.userInput && (0, Bq.jsx)("div", {
+            }), !Lb.userInput && (0, Hb.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, Bq.jsx)(el, {
-                item: xq,
-                cost: Wq,
-                currencyAmounts: Nq.currencyAmounts
+              children: (0, Hb.jsx)(QO, {
+                item: Lb,
+                cost: wb,
+                currencyAmounts: Zb.currencyAmounts
               })
-            }), Vq && hq === mq && (0, Bq.jsxs)("div", {
+            }), pb && Db === Ub && (0, Hb.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, Bq.jsx)(hY.c, {
-                text: dq
-              }), (0, Bq.jsx)("div", {
+              children: [(0, Hb.jsx)(DB.c, {
+                text: ob
+              }), (0, Hb.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, Bq.jsx)(hY.c, {
-                  text: (0, tY.e)("", Vq.enchantments, Vq.enchantmentData)
+                children: (0, Hb.jsx)(DB.c, {
+                  text: (0, rB.d)("", pb.enchantments, pb.enchantmentData)
                 })
               })]
             })]
-          }, mq)
+          }, Ub)
         },
-        Xq = function(qq) {
-          for (const Eq in qq)
-            if (qq[Eq].smp) return !0;
+        Fb = function(bb) {
+          for (const ub in bb)
+            if (bb[ub].smp) return !0;
           return !1
-        }(Nq.shopInfo),
-        wq = ql(Nq.shopInfo, Uq);
-      return (0, Bq.jsx)(oY.d, {
+        }(Zb.shopInfo),
+        fb = bO(Zb.shopInfo, Eb);
+      return (0, Hb.jsx)(KB.d, {
         className: "Menu ShopBody",
-        show: lq,
-        children: 0 !== Object.keys(Nq.shopInfo).length && (0, Bq.jsxs)(Bq.Fragment, {
-          children: [(0, Bq.jsxs)("div", {
+        show: Ob,
+        children: 0 !== Object.keys(Zb.shopInfo).length && (0, Hb.jsxs)(Hb.Fragment, {
+          children: [(0, Hb.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, Bq.jsx)(Wq, {
-              items: zY(Nq.shopInfo).map((qq => {
-                var Eq;
+            children: [(0, Hb.jsx)(wb, {
+              items: eB(Zb.shopInfo).map((bb => {
+                var ub;
                 return {
-                  id: qq,
-                  title: null !== (Eq = Nq.shopInfo[qq].customTitle) && void 0 !== Eq ? Eq : qq,
-                  redDot: Nq.redDotInfo.categoryHasRedDot(qq)
+                  id: bb,
+                  title: null !== (ub = Zb.shopInfo[bb].customTitle) && void 0 !== ub ? ub : bb,
+                  redDot: Zb.redDotInfo.categoryHasRedDot(bb)
                 }
               })),
-              link: uq ? {
+              link: ab ? {
                 faIcon: "users-gear",
                 title: "lobbyManageEntry:manageLobby",
                 onClick: () => {
-                  (0, TY.f)({
-                    page: (0, TY.b)(),
+                  (0, JB.h)({
+                    page: (0, JB.e)(),
                     source: "shop"
                   })
                 }
               } : void 0,
-              selectedItemId: Uq,
-              onClick: kq,
-              padStartsOnTab: (0, fY.g)(Uq)
-            }), (0, Bq.jsx)("div", {
+              selectedItemId: Eb,
+              onClick: Pb,
+              padStartsOnTab: (0, vB.f)(Eb)
+            }), (0, Hb.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: Nq.currencyAmounts && Object.keys(Nq.currencyAmounts).map((qq => {
-                var Eq;
-                const gq = Nq.currencyAmounts[qq];
-                return gq.hidden ? null : (0, Bq.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (Zq ? "SmallText" : ""),
-                  children: [(0, Bq.jsxs)("div", {
+              children: Zb.currencyAmounts && Object.keys(Zb.currencyAmounts).map((bb => {
+                var ub;
+                const hb = Zb.currencyAmounts[bb];
+                return hb.hidden ? null : (0, Hb.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (ib ? "SmallText" : ""),
+                  children: [(0, Hb.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, Bq.jsx)("div", {
+                    children: [(0, Hb.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: gq.iconColour
+                        color: hb.iconColour
                       },
-                      children: (0, Bq.jsx)(YO, {
-                        iconName: gq.icon
+                      children: (0, Hb.jsx)(BG, {
+                        iconName: hb.icon
                       })
-                    }), "\xa0", (0, QY.c)(gq.amount, 6)]
-                  }), (null === (Eq = gq.subtext) || void 0 === Eq ? void 0 : Eq.length) > 0 && (0, Bq.jsx)("div", {
+                    }), "\xa0", (0, CB.b)(hb.amount, 6)]
+                  }), (null === (ub = hb.subtext) || void 0 === ub ? void 0 : ub.length) > 0 && (0, Hb.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, Bq.jsx)(hY.c, {
-                      text: gq.subtext
+                    children: (0, Hb.jsx)(DB.c, {
+                      text: hb.subtext
                     })
                   })]
-                }, qq)
+                }, bb)
               }))
             })]
-          }), (0, Bq.jsxs)("div", {
+          }), (0, Hb.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [Xq && (0, Bq.jsx)(Fl, {
-              show: lq,
-              shopInfo: Nq.shopInfo,
-              selectedCategoryKey: Uq,
-              buy: (qq, Eq, gq) => {
-                Lq(qq, Eq, gq)
+            children: [Fb && (0, Hb.jsx)(yO, {
+              show: Ob,
+              shopInfo: Zb.shopInfo,
+              selectedCategoryKey: Eb,
+              buy: (bb, ub, hb) => {
+                mb(bb, ub, hb)
               },
-              canAfford: Fq,
-              message: Nq.onBoughtInfo
-            }), null === wq && (0, Bq.jsxs)(Bq.Fragment, {
-              children: [(0, Bq.jsx)("div", {
-                className: Oq()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== Nq.onBoughtInfo
+              canAfford: yb,
+              message: Zb.onBoughtInfo
+            }), null === fb && (0, Hb.jsxs)(Hb.Fragment, {
+              children: [(0, Hb.jsx)("div", {
+                className: Gb()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== Zb.onBoughtInfo
                 }),
-                children: (0, Bq.jsx)(hY.c, {
-                  text: dq.current
+                children: (0, Hb.jsx)(DB.c, {
+                  text: ob.current
                 })
-              }), (0, Bq.jsx)("div", {
+              }), (0, Hb.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, Bq.jsxs)("div", {
+                children: (0, Hb.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (Eq = Nq.shopInfo[Uq]) || void 0 === Eq ? void 0 : Eq.description) && (0, Bq.jsx)("div", {
+                  children: [(null === (ub = Zb.shopInfo[Eb]) || void 0 === ub ? void 0 : ub.description) && (0, Hb.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, Bq.jsx)(hY.c, {
-                      text: Nq.shopInfo[Uq].description
+                    children: (0, Hb.jsx)(DB.c, {
+                      text: Zb.shopInfo[Eb].description
                     })
-                  }), lq && (0, Bq.jsx)("div", {
+                  }), Ob && (0, Hb.jsx)("div", {
                     className: "ShopItems",
-                    ref: oq,
+                    ref: Kb,
                     "data-pad-initial-area": !0,
-                    children: zY(null === (gq = Nq.shopInfo[Uq]) || void 0 === gq ? void 0 : gq.items).map(((qq, Eq) => sq(qq, Eq)))
+                    children: eB(null === (hb = Zb.shopInfo[Eb]) || void 0 === hb ? void 0 : hb.items).map(((bb, ub) => Vb(bb, ub)))
                   })]
                 })
               })]
@@ -5082,784 +5082,784 @@ export const modules = {
       })
     }));
 
-    function Cl(qq) {
+    function TO(bb) {
       let {
-        item: Eq,
-        minWidth: gq,
-        minHeight: Yq
-      } = qq;
+        item: ub,
+        minWidth: hb,
+        minHeight: Bb
+      } = bb;
       const {
-        image: lq,
-        schematicId: Oq,
-        imageColour: mq
-      } = Eq;
-      if (Oq) return (0, Bq.jsx)("div", {
+        image: Ob,
+        schematicId: Gb,
+        imageColour: Ub
+      } = ub;
+      if (Gb) return (0, Hb.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${gq}rem`,
-          height: `${Yq}rem`
+          width: `${hb}rem`,
+          height: `${Bb}rem`
         },
-        children: (0, Bq.jsx)(nY.d, {
+        children: (0, Hb.jsx)(xB.b, {
           game: {
-            schematicId: Oq
+            schematicId: Gb
           }
         })
       });
-      var Aq, cq;
-      if ((0, vY.i)(lq)) return (0, Bq.jsx)("div", {
+      var Yb, Sb;
+      if ((0, nB.e)(Ob)) return (0, Hb.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${gq}rem`,
+          minWidth: `${hb}rem`,
           height: "0",
-          minHeight: `${Yq}rem`
+          minHeight: `${Bb}rem`
         },
-        children: (0, Bq.jsx)(vY.e, {
-          itemName: lq,
-          amount: null !== (Aq = Eq.amount) && void 0 !== Aq ? Aq : 0,
-          amountFontSize: Yq / 4 + "rem",
-          enchantmentTier: null === (cq = Eq.enchant) || void 0 === cq ? void 0 : cq.tier
+        children: (0, Hb.jsx)(nB.d, {
+          itemName: Ob,
+          amount: null !== (Yb = ub.amount) && void 0 !== Yb ? Yb : 0,
+          amountFontSize: Bb / 4 + "rem",
+          enchantmentTier: null === (Sb = ub.enchant) || void 0 === Sb ? void 0 : Sb.tier
         })
       });
-      const uq = lq.slice(-4);
-      return ".jpg" === uq || ".png" === uq ? (0, Bq.jsx)(Il, {
-        image: lq,
-        minWidth: gq
-      }) : (0, Bq.jsx)(xq.d, {
-        name: lq,
+      const ab = Ob.slice(-4);
+      return ".jpg" === ab || ".png" === ab ? (0, Hb.jsx)(cO, {
+        image: Ob,
+        minWidth: hb
+      }) : (0, Hb.jsx)(Lb.e, {
+        name: Ob,
         className: "SelectedItemImage",
         style: {
-          color: mq
+          color: Ub
         }
       })
     }
 
-    function Il(qq) {
+    function cO(bb) {
       let {
-        image: Eq,
-        minWidth: gq
-      } = qq;
+        image: ub,
+        minWidth: hb
+      } = bb;
       const {
-        gameNameWithVariation: Yq
-      } = (0, Cg.g)("connectedGame"), lq = Eq.endsWith(".jpg");
-      return (0, Bq.jsx)("img", {
-        className: Oq()({
-          ShopPixelImage: !lq
+        gameNameWithVariation: Bb
+      } = (0, Th.i)("connectedGame"), Ob = ub.endsWith(".jpg");
+      return (0, Hb.jsx)("img", {
+        className: Gb()({
+          ShopPixelImage: !Ob
         }),
         style: {
-          width: `${lq?1.6*gq:gq}rem`,
+          width: `${Ob?1.6*hb:hb}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,Gq.Yb)(Yq)}/${Eq}`,
-        alt: Eq,
+        src: `/textures/games/${(0,Mb.Xb)(Bb)}/${ub}`,
+        alt: ub,
         draggable: !1
       })
     }
 
-    function el(qq) {
+    function QO(bb) {
       let {
-        item: Eq,
-        cost: gq,
-        currencyAmounts: Yq
-      } = qq;
-      const lq = !isNaN(gq) && 0 !== gq && wl(Yq, Eq.currency);
-      let Oq = null;
-      return Eq.buyButtonText ? Oq = Eq.buyButtonText : lq ? (Oq = gq, Eq.sell && (Oq = -1 * gq), Oq = Oq.toString()) : 0 === gq ? Oq = "Free" : Eq.isRewardedAd && (Oq = "Watch ad"), (0, RE.H)(Oq) || " " === Oq ? null : (0, Bq.jsxs)("div", {
+        item: ub,
+        cost: hb,
+        currencyAmounts: Bb
+      } = bb;
+      const Ob = !isNaN(hb) && 0 !== hb && fO(Bb, ub.currency);
+      let Gb = null;
+      return ub.buyButtonText ? Gb = ub.buyButtonText : Ob ? (Gb = hb, ub.sell && (Gb = -1 * hb), Gb = Gb.toString()) : 0 === hb ? Gb = "Free" : ub.isRewardedAd && (Gb = "Watch ad"), (0, qu.J)(Gb) || " " === Gb ? null : (0, Hb.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [lq && (0, Bq.jsx)("div", {
+        children: [Ob && (0, Hb.jsx)("div", {
           style: {
-            color: Yq[Eq.currency].iconColour
+            color: Bb[ub.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, Bq.jsx)(YO, {
-            iconName: Yq[Eq.currency].icon
+          children: (0, Hb.jsx)(BG, {
+            iconName: Bb[ub.currency].icon
           })
-        }), (0, Bq.jsx)("div", {
+        }), (0, Hb.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, Bq.jsx)(hY.c, {
-            text: Oq
+          children: (0, Hb.jsx)(DB.c, {
+            text: Gb
           })
         })]
       })
     }
 
-    function Dl(qq) {
+    function RO(bb) {
       let {
-        item: Eq,
-        currInput: gq,
-        updateInput: lq,
-        onSubmit: Oq
-      } = qq;
+        item: ub,
+        currInput: hb,
+        updateInput: Ob,
+        onSubmit: Gb
+      } = bb;
       const {
-        t: xq
-      } = (0, mq.v)(), Aq = (0, Yq.useRef)(null);
-      if ((0, Yq.useEffect)((() => {
-          const qq = Aq.current;
-          qq && qq.value !== gq && document.activeElement !== qq && (qq.value = null !== gq && void 0 !== gq ? gq : "")
-        }), [gq]), !Eq.userInput) return null;
-      let cq = Eq.userInput;
-      if (jq.featureFlags.sanitizeShopInput && "text" === Eq.userInput.type && (cq = {
+        t: Lb
+      } = (0, Ub.K)(), Yb = (0, Bb.useRef)(null);
+      if ((0, Bb.useEffect)((() => {
+          const bb = Yb.current;
+          bb && bb.value !== hb && document.activeElement !== bb && (bb.value = null !== hb && void 0 !== hb ? hb : "")
+        }), [hb]), !ub.userInput) return null;
+      let Sb = ub.userInput;
+      if (Ab.featureFlags.sanitizeShopInput && "text" === ub.userInput.type && (Sb = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === cq.type || "number" === cq.type) {
-        var uq, Wq;
-        console.assert(void 0 !== gq, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Eq)}`);
-        const qq = "text" === cq.type && cq.wordCharsOnly;
-        return (0, Bq.jsx)("div", {
+        }), "text" === Sb.type || "number" === Sb.type) {
+        var ab, wb;
+        console.assert(void 0 !== hb, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(ub)}`);
+        const bb = "text" === Sb.type && Sb.wordCharsOnly;
+        return (0, Hb.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, Bq.jsx)(Qq.b, {
+          children: (0, Hb.jsx)(Cb.b, {
             className: "ShopItemUserInputText",
-            placeholderText: xq(cq.placeholderText),
-            defaultValue: gq,
-            domRef: Aq,
-            onValueChange: (Eq, gq) => {
-              !0 === qq && (Eq = (0, iY.tb)(Eq)), Aq.current.value = Eq, lq(Eq)
+            placeholderText: Lb(Sb.placeholderText),
+            defaultValue: hb,
+            domRef: Yb,
+            onValueChange: (ub, hb) => {
+              !0 === bb && (ub = (0, gB.vb)(ub)), Yb.current.value = ub, Ob(ub)
             },
-            onEnter: Oq,
-            type: cq.type
-          }, (null !== (uq = cq.initialValue) && void 0 !== uq ? uq : "") + (null !== (Wq = cq.placeholderText) && void 0 !== Wq ? Wq : ""))
+            onEnter: Gb,
+            type: Sb.type
+          }, (null !== (ab = Sb.initialValue) && void 0 !== ab ? ab : "") + (null !== (wb = Sb.placeholderText) && void 0 !== wb ? wb : ""))
         })
       }
-      if ("dropdown" === cq.type) {
-        console.assert(void 0 !== gq, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Eq)}`);
-        const qq = cq.autoSubmit;
-        return (0, Bq.jsx)("div", {
+      if ("dropdown" === Sb.type) {
+        console.assert(void 0 !== hb, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(ub)}`);
+        const bb = Sb.autoSubmit;
+        return (0, Hb.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, Bq.jsx)(QE.d, {
-            options: cq.dropdownOptions.map((qq => (0, yY.f)(qq))),
-            value: gq,
-            onChange: Eq => {
+          children: (0, Hb.jsx)(Cu.b, {
+            options: Sb.dropdownOptions.map((bb => (0, dB.f)(bb))),
+            value: hb,
+            onChange: ub => {
               let {
-                value: gq
-              } = Eq;
-              lq(gq), qq && Oq(gq)
+                value: hb
+              } = ub;
+              Ob(hb), bb && Gb(hb)
             }
           })
         })
       }
-      return "player" === cq.type ? (0, Bq.jsx)(qO, {
-        userInput: cq,
-        currInput: gq,
-        updateInput: lq
-      }) : "color" === cq.type ? (0, Bq.jsx)("div", {
+      return "player" === Sb.type ? (0, Hb.jsx)(bG, {
+        userInput: Sb,
+        currInput: hb,
+        updateInput: Ob
+      }) : "color" === Sb.type ? (0, Hb.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, Bq.jsx)("input", {
+        children: (0, Hb.jsx)("input", {
           type: "color",
-          value: gq,
-          onChange: qq => {
-            lq(qq.target.value)
+          value: hb,
+          onChange: bb => {
+            Ob(bb.target.value)
           }
         })
       }) : null
     }
 
-    function qO(qq) {
+    function bG(bb) {
       let {
-        userInput: Eq,
-        currInput: gq,
-        updateInput: Yq
-      } = qq;
-      const lq = (0, Cg.g)("players"),
-        Oq = (0, Cg.g)("hiddenPlayerNames"),
-        mq = (0, yY.g)(lq.ids, lq.localId, Eq);
-      return (0, Bq.jsx)("div", {
+        userInput: ub,
+        currInput: hb,
+        updateInput: Bb
+      } = bb;
+      const Ob = (0, Th.i)("players"),
+        Gb = (0, Th.i)("hiddenPlayerNames"),
+        Ub = (0, dB.g)(Ob.ids, Ob.localId, ub);
+      return (0, Hb.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, Bq.jsx)(QE.d, {
-          options: mq.map((qq => {
+        children: (0, Hb.jsx)(Cu.b, {
+          options: Ub.map((bb => {
             const {
-              name: Eq
-            } = lq.byId[qq];
+              name: ub
+            } = Ob.byId[bb];
             return {
-              value: qq,
-              label: null === Eq ? "" : (0, bY.g)(Eq, Oq)
+              value: bb,
+              label: null === ub ? "" : (0, zB.f)(ub, Gb)
             }
           })),
-          value: gq,
-          onChange: qq => {
+          value: hb,
+          onChange: bb => {
             let {
-              value: Eq
-            } = qq;
-            Yq(Eq)
+              value: ub
+            } = bb;
+            Bb(ub)
           }
         })
       })
     }
 
-    function EO(qq) {
+    function uG(bb) {
       let {
-        ids: Eq
-      } = qq;
-      return Eq
+        ids: ub
+      } = bb;
+      return ub
     }
 
-    function gO(qq) {
+    function hG(bb) {
       let {
-        localId: Eq
-      } = qq;
-      return Eq
+        localId: ub
+      } = bb;
+      return ub
     }
 
-    function YO(qq) {
+    function BG(bb) {
       let {
-        iconName: Eq
-      } = qq;
-      return Hq.gameBridge.lookup("isItemName", Eq) ? (0, Bq.jsx)(vY.e, {
-        itemName: Eq,
+        iconName: ub
+      } = bb;
+      return lb.gameBridge.lookup("isItemName", ub) ? (0, Hb.jsx)(nB.d, {
+        itemName: ub,
         amount: 1
-      }) : (0, Bq.jsx)(xq.d, {
-        name: Eq,
+      }) : (0, Hb.jsx)(Lb.e, {
+        name: ub,
         className: "2x"
       })
     }
-    var lO = gq(1622);
-    const OO = (0, gq(1380).h)((qq => qq.PadLobbyShortcuts)),
-      mO = (0, Yq.lazy)((() => Promise.resolve().then((() => gq(4486))).then((qq => ({
-        default: qq.Lobbyleaderboard
+    var OG = hb(1537);
+    const GG = (0, hb(1302).l)((bb => bb.PadLobbyShortcuts)),
+      UG = (0, Bb.lazy)((() => Promise.resolve().then((() => hb(4420))).then((bb => ({
+        default: bb.Lobbyleaderboard
       }))))),
-      xO = (0, Yq.lazy)((() => gq.e(215).then((() => gq(40821))).then((qq => ({
-        default: qq.LobbyManageView
+      LG = (0, Bb.lazy)((() => hb.e(215).then((() => hb(40517))).then((bb => ({
+        default: bb.LobbyManageView
       })))));
 
-    function AO(qq) {
+    function YG(bb) {
       let {
-        show: Eq
-      } = qq;
-      return Eq ? (0, Bq.jsx)(cO, {}) : null
+        show: ub
+      } = bb;
+      return ub ? (0, Hb.jsx)(SG, {}) : null
     }
 
-    function cO() {
-      const qq = (0, MY.c)();
-      return (0, Bq.jsxs)(Bq.Fragment, {
-        children: [(0, Bq.jsx)(OO, {}), (0, Bq.jsxs)(Yq.Suspense, {
-          fallback: (0, Bq.jsx)("div", {
+    function SG() {
+      const bb = (0, tB.d)();
+      return (0, Hb.jsxs)(Hb.Fragment, {
+        children: [(0, Hb.jsx)(GG, {}), (0, Hb.jsxs)(Bb.Suspense, {
+          fallback: (0, Hb.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, Bq.jsx)(yq.e, {})
+            children: (0, Hb.jsx)(db.c, {})
           }),
-          children: [qq && (0, Bq.jsx)(xO, {
-            leaderboard: (0, Bq.jsx)(mO, {})
-          }), !qq && (0, Bq.jsx)(mO, {})]
+          children: [bb && (0, Hb.jsx)(LG, {
+            leaderboard: (0, Hb.jsx)(UG, {})
+          }), !bb && (0, Hb.jsx)(UG, {})]
         })]
       })
     }
-    var uO = gq(1540),
-      BO = gq(2924),
-      WO = gq(1710),
-      NO = gq(2971),
-      aO = gq(2599),
-      VO = gq(1468),
-      dO = gq(1431),
-      jO = gq(2904),
-      HO = gq(2919),
-      oO = gq(2307);
-    const PO = "storeRecentGiftRecipients",
-      QO = new Map;
+    var aG = hb(1455),
+      HG = hb(2807),
+      wG = hb(1622),
+      ZG = hb(2860),
+      XG = hb(2508),
+      pG = hb(1392),
+      oG = hb(1359),
+      AG = hb(2780),
+      lG = hb(2799),
+      KG = hb(2208);
+    const WG = "storeRecentGiftRecipients",
+      CG = new Map;
 
-    function yO() {
+    function dG() {
       try {
-        const qq = sE.i.getItem(PO);
-        return Array.isArray(qq) ? qq.filter((qq => "string" === typeof(null === qq || void 0 === qq ? void 0 : qq.name) && qq.name.length > 0)).map((qq => ({
-          name: qq.name,
-          cosmetics: qq.cosmetics && "object" === typeof qq.cosmetics ? qq.cosmetics : null
+        const bb = Vu.j.getItem(WG);
+        return Array.isArray(bb) ? bb.filter((bb => "string" === typeof(null === bb || void 0 === bb ? void 0 : bb.name) && bb.name.length > 0)).map((bb => ({
+          name: bb.name,
+          cosmetics: bb.cosmetics && "object" === typeof bb.cosmetics ? bb.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function tO(qq) {
-      var Eq;
-      const [gq, lq] = (0, Yq.useState)(""), [Oq, mq] = (0, Yq.useState)("search"), [xq, Aq] = (0, Yq.useState)(null), [cq, uq] = (0, Yq.useState)(null), Bq = (0, Yq.useRef)(null), Wq = (0, Yq.useRef)(null);
-      (0, Yq.useEffect)((() => () => {
-        Bq.current && clearTimeout(Bq.current)
+    function rG(bb) {
+      var ub;
+      const [hb, Ob] = (0, Bb.useState)(""), [Gb, Ub] = (0, Bb.useState)("search"), [Lb, Yb] = (0, Bb.useState)(null), [Sb, ab] = (0, Bb.useState)(null), Hb = (0, Bb.useRef)(null), wb = (0, Bb.useRef)(null);
+      (0, Bb.useEffect)((() => () => {
+        Hb.current && clearTimeout(Hb.current)
       }), []);
-      const Nq = null !== (Eq = null === xq || void 0 === xq ? void 0 : xq.name) && void 0 !== Eq ? Eq : null;
+      const Zb = null !== (ub = null === Lb || void 0 === Lb ? void 0 : Lb.name) && void 0 !== ub ? ub : null;
 
-      function aq() {
-        Bq.current && (clearTimeout(Bq.current), Bq.current = null)
-      }(0, Yq.useEffect)((() => {
-        if (null === Nq || qq === bq.NULL_USER_CONTEXT) return;
-        const Eq = Nq.toLowerCase();
-        if (Eq === qq.getPlayerName().toLowerCase()) return void uq({
-          name: Nq,
+      function Xb() {
+        Hb.current && (clearTimeout(Hb.current), Hb.current = null)
+      }(0, Bb.useEffect)((() => {
+        if (null === Zb || bb === zb.NULL_USER_CONTEXT) return;
+        const ub = Zb.toLowerCase();
+        if (ub === bb.getPlayerName().toLowerCase()) return void ab({
+          name: Zb,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const gq = QO.get(Eq);
-        if (gq) return void uq({
-          name: Nq,
-          result: gq
+        const hb = CG.get(ub);
+        if (hb) return void ab({
+          name: Zb,
+          result: hb
         });
-        let Yq = !1;
-        return async function(qq, Eq) {
+        let Bb = !1;
+        return async function(bb, ub) {
           try {
-            const gq = await (0, bq.postJsonWithMetricsCookiesAndJsonResponse)(`${iq.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: Eq
+            const hb = await (0, zb.postJsonWithMetricsCookiesAndJsonResponse)(`${gb.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: ub
             }, {
               retries: 1
-            }, qq.getMetricsCookies());
-            if ("boolean" !== typeof(null === gq || void 0 === gq ? void 0 : gq.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(gq)}`);
-            return gq
-          } catch (gq) {
-            return console.error("Failed to look up gift recipient:", gq), {
+            }, bb.getMetricsCookies());
+            if ("boolean" !== typeof(null === hb || void 0 === hb ? void 0 : hb.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(hb)}`);
+            return hb
+          } catch (hb) {
+            return console.error("Failed to look up gift recipient:", hb), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(qq, Nq).catch((qq => (console.error("Gift recipient lookup failed:", qq), {
+        }(bb, Zb).catch((bb => (console.error("Gift recipient lookup failed:", bb), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((qq => {
-          !0 !== qq.giftRecipientFound && "store:giftRecipientLookupFailed" === qq.giftRecipientError || QO.set(Eq, qq), Yq || uq({
-            name: Nq,
-            result: qq
+        }))).then((bb => {
+          !0 !== bb.giftRecipientFound && "store:giftRecipientLookupFailed" === bb.giftRecipientError || CG.set(ub, bb), Bb || ab({
+            name: Zb,
+            result: bb
           })
         })), () => {
-          Yq = !0
+          Bb = !0
         }
-      }), [Nq, qq]);
-      const Vq = (0, Yq.useMemo)((() => {
-        const qq = gq.trim();
-        if (!qq) return {
+      }), [Zb, bb]);
+      const pb = (0, Bb.useMemo)((() => {
+        const bb = hb.trim();
+        if (!bb) return {
           status: "none"
         };
-        if (!xq || xq.name !== qq || (null === cq || void 0 === cq ? void 0 : cq.name) !== xq.name) return {
+        if (!Lb || Lb.name !== bb || (null === Sb || void 0 === Sb ? void 0 : Sb.name) !== Lb.name) return {
           status: "pending",
-          name: qq
+          name: bb
         };
-        const Eq = cq.result;
-        return !1 === Eq.giftRecipientFound ? {
+        const ub = Sb.result;
+        return !1 === ub.giftRecipientFound ? {
           status: "error",
-          name: xq.name,
-          error: Eq.giftRecipientError
+          name: Lb.name,
+          error: ub.giftRecipientError
         } : {
           status: "found",
-          name: Eq.giftRecipientName,
-          ownedPacks: Eq.giftRecipientOwnedPacks,
-          hasSuperRank: Eq.giftRecipientHasSuperRank,
-          isSubscriber: Eq.giftRecipientIsSubscriber
+          name: ub.giftRecipientName,
+          ownedPacks: ub.giftRecipientOwnedPacks,
+          hasSuperRank: ub.giftRecipientHasSuperRank,
+          isSubscriber: ub.giftRecipientIsSubscriber
         }
-      }), [gq, xq, cq]);
-      (0, Yq.useEffect)((() => {
-        "found" === Vq.status && "typed" === (null === xq || void 0 === xq ? void 0 : xq.source) && Wq.current !== Vq.name && (Wq.current = Vq.name, (0, eq.reportAnalyticsClick)({
+      }), [hb, Lb, Sb]);
+      (0, Bb.useEffect)((() => {
+        "found" === pb.status && "typed" === (null === Lb || void 0 === Lb ? void 0 : Lb.source) && wb.current !== pb.name && (wb.current = pb.name, (0, Qb.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [Vq, xq]);
-      const dq = (null === cq || void 0 === cq ? void 0 : cq.name) === (null === xq || void 0 === xq ? void 0 : xq.name) ? null === cq || void 0 === cq ? void 0 : cq.result : null,
-        jq = !0 === (null === dq || void 0 === dq ? void 0 : dq.giftRecipientFound) ? dq.giftRecipientCosmetics : null;
+      }), [pb, Lb]);
+      const ob = (null === Sb || void 0 === Sb ? void 0 : Sb.name) === (null === Lb || void 0 === Lb ? void 0 : Lb.name) ? null === Sb || void 0 === Sb ? void 0 : Sb.result : null,
+        Ab = !0 === (null === ob || void 0 === ob ? void 0 : ob.giftRecipientFound) ? ob.giftRecipientCosmetics : null;
       return {
-        query: gq,
-        via: Oq,
-        recipient: Vq,
-        recipientCosmetics: jq,
-        type: function(qq) {
-          lq(qq), mq("search"), aq();
-          const Eq = qq.trim();
-          Eq ? Bq.current = setTimeout((() => {
-            Aq({
-              name: Eq,
+        query: hb,
+        via: Gb,
+        recipient: pb,
+        recipientCosmetics: Ab,
+        type: function(bb) {
+          Ob(bb), Ub("search"), Xb();
+          const ub = bb.trim();
+          ub ? Hb.current = setTimeout((() => {
+            Yb({
+              name: ub,
               source: "typed"
             })
-          }), 400) : Aq(null)
+          }), 400) : Yb(null)
         },
-        choose: function(qq, Eq) {
-          aq(), lq(qq), mq("typed" === Eq ? "search" : "prefilled" === Eq ? "prefilled" : "suggestion"), Aq({
-            name: qq,
-            source: Eq
-          }), "typed" !== Eq && "prefilled" !== Eq && (0, eq.reportAnalyticsClick)({
+        choose: function(bb, ub) {
+          Xb(), Ob(bb), Ub("typed" === ub ? "search" : "prefilled" === ub ? "prefilled" : "suggestion"), Yb({
+            name: bb,
+            source: ub
+          }), "typed" !== ub && "prefilled" !== ub && (0, Qb.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: Eq
+            value: ub
           })
         },
         clear: function() {
-          aq(), lq(""), mq("search"), Aq(null)
+          Xb(), Ob(""), Ub("search"), Yb(null)
         },
-        recordGift: function(qq, Eq) {
-          ! function(qq) {
-            QO.delete(qq.toLowerCase())
-          }(qq), uq((gq => {
-            if (!gq || gq.name.toLowerCase() !== qq.toLowerCase() || !0 !== gq.result.giftRecipientFound || "superRank" === Eq) return gq;
-            const Yq = gq.result.giftRecipientOwnedPacks;
+        recordGift: function(bb, ub) {
+          ! function(bb) {
+            CG.delete(bb.toLowerCase())
+          }(bb), ab((hb => {
+            if (!hb || hb.name.toLowerCase() !== bb.toLowerCase() || !0 !== hb.result.giftRecipientFound || "superRank" === ub) return hb;
+            const Bb = hb.result.giftRecipientOwnedPacks;
             return {
-              ...gq,
+              ...hb,
               result: {
-                ...gq.result,
-                giftRecipientOwnedPacks: Yq.includes(Eq) ? Yq : [...Yq, Eq]
+                ...hb.result,
+                giftRecipientOwnedPacks: Bb.includes(ub) ? Bb : [...Bb, ub]
               }
             }
           }))
         }
       }
     }
-    var rO = gq(2299),
-      vO = gq(4494),
-      hO = gq(248),
-      nO = gq(3027);
-    const bO = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var iO = gq(2243),
-      ZO = gq(576),
-      fO = gq(2332),
-      MO = gq(2517);
+    var jG = hb(2201),
+      nG = hb(4427),
+      DG = hb(248),
+      xG = hb(2911);
+    const zG = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var gG = hb(2151),
+      iG = hb(568),
+      vG = hb(2238),
+      tG = hb(2418);
 
-    function TO(qq) {
+    function JG(bb) {
       let {
-        cosmetics: Eq
-      } = qq;
-      return (0, Bq.jsx)("span", {
+        cosmetics: ub
+      } = bb;
+      return (0, Hb.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, Bq.jsx)(fO.e, {
-          cosmetics: Eq
+        children: (0, Hb.jsx)(vG.e, {
+          cosmetics: ub
         })
       })
     }
 
-    function zO(qq, Eq) {
-      var gq, Yq;
-      const lq = null !== (gq = qq.friend) && void 0 !== gq ? gq : {
+    function eG(bb, ub) {
+      var hb, Bb;
+      const Ob = null !== (hb = bb.friend) && void 0 !== hb ? hb : {
         isError: !1,
-        name: qq.name,
+        name: bb.name,
         ranks: [],
-        cosmetics: null !== (Yq = qq.cosmetics) && void 0 !== Yq ? Yq : {},
-        nameColour: ZO.e,
+        cosmetics: null !== (Bb = bb.cosmetics) && void 0 !== Bb ? Bb : {},
+        nameColour: iG.d,
         location: {
           status: "noGamePlayed"
         }
       };
-      return Eq ? {
-        ...lq,
-        cosmetics: Eq
-      } : lq
+      return ub ? {
+        ...Ob,
+        cosmetics: ub
+      } : Ob
     }
 
-    function SO(qq) {
+    function NG(bb) {
       let {
-        pending: Eq
-      } = qq;
-      return (0, Bq.jsx)("span", {
+        pending: ub
+      } = bb;
+      return (0, Hb.jsx)("span", {
         className: "StoreRecipientLoader",
-        children: Eq && (0, Bq.jsx)(yq.e, {})
+        children: ub && (0, Hb.jsx)(db.c, {})
       })
     }
 
-    function pO(qq) {
-      var Eq;
+    function sG(bb) {
+      var ub;
       let {
-        selfName: gq,
-        giftRecipient: lq,
-        suggestionsVersion: Aq,
-        pulseSignal: uq,
-        disabled: Wq
-      } = qq;
+        selfName: hb,
+        giftRecipient: Ob,
+        suggestionsVersion: Yb,
+        pulseSignal: ab,
+        disabled: wb
+      } = bb;
       const {
-        t: Nq
-      } = (0, mq.v)(), aq = (0, Rq.g)(), Vq = (0, Yq.useRef)(null), dq = (0, Yq.useRef)(null), {
-        query: Hq,
-        via: oq,
-        recipient: Pq,
-        recipientCosmetics: yq
-      } = lq, tq = (0, oO.l)(Hq), rq = (0, Yq.useMemo)((() => {
-        const qq = jq.featureFlags.useSocialFeatures ? aq.friends.filter((qq => !qq.isError)) : [];
-        return (0, oO.g)({
-          onlineFriends: (0, Rq.d)(qq),
-          recentRecipients: yO(),
-          friends: qq,
-          selfName: gq,
+        t: Zb
+      } = (0, Ub.K)(), Xb = (0, qb.i)(), pb = (0, Bb.useRef)(null), ob = (0, Bb.useRef)(null), {
+        query: lb,
+        via: Kb,
+        recipient: Wb,
+        recipientCosmetics: db
+      } = Ob, rb = (0, KG.n)(lb), jb = (0, Bb.useMemo)((() => {
+        const bb = Ab.featureFlags.useSocialFeatures ? Xb.friends.filter((bb => !bb.isError)) : [];
+        return (0, KG.j)({
+          onlineFriends: (0, qb.d)(bb),
+          recentRecipients: dG(),
+          friends: bb,
+          selfName: hb,
           max: 8
         })
-      }), [aq.friends, gq, Aq]), vq = Hq.trim().toLowerCase(), hq = "search" !== oq && vq ? rq.find((qq => qq.name.toLowerCase() === vq)) : void 0, nq = hq && "prefilled" === oq ? [hq, ...rq.filter((qq => qq !== hq))] : rq, bq = "" !== vq && !hq, iq = bq ? Hq : "", Zq = nq.length > 0;
-      (0, Yq.useEffect)((() => {
-        Vq.current && Vq.current.value !== iq && (Vq.current.value = iq)
-      }), [iq]), (0, Yq.useEffect)((() => {
-        Vq.current && (Vq.current.disabled = Wq)
-      }), [Wq, uq]);
-      const fq = (0, Yq.useRef)(0);
+      }), [Xb.friends, hb, Yb]), nb = lb.trim().toLowerCase(), Db = "search" !== Kb && nb ? jb.find((bb => bb.name.toLowerCase() === nb)) : void 0, xb = Db && "prefilled" === Kb ? [Db, ...jb.filter((bb => bb !== Db))] : jb, zb = "" !== nb && !Db, gb = zb ? lb : "", ib = xb.length > 0;
+      (0, Bb.useEffect)((() => {
+        pb.current && pb.current.value !== gb && (pb.current.value = gb)
+      }), [gb]), (0, Bb.useEffect)((() => {
+        pb.current && (pb.current.disabled = wb)
+      }), [wb, ab]);
+      const vb = (0, Bb.useRef)(0);
 
-      function Tq() {
-        "self" !== tq && (0, eq.reportAnalyticsClick)({
+      function Jb() {
+        "self" !== rb && (0, Qb.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), lq.clear()
+        }), Ob.clear()
       }
 
-      function zq(qq) {
-        var Eq, gq;
-        if (Wq) return;
-        if (" " === qq.key || "Enter" === qq.key) return qq.preventDefault(), void qq.currentTarget.click();
-        const Yq = Array.from(null !== (Eq = null === (gq = dq.current) || void 0 === gq ? void 0 : gq.querySelectorAll("[role=radio]")) && void 0 !== Eq ? Eq : []),
-          lq = Yq.indexOf(qq.currentTarget);
-        let Oq;
-        "ArrowRight" === qq.key || "ArrowDown" === qq.key ? Oq = Yq[(lq + 1) % Yq.length] : "ArrowLeft" === qq.key || "ArrowUp" === qq.key ? Oq = Yq[(lq - 1 + Yq.length) % Yq.length] : "Home" === qq.key ? Oq = Yq[0] : "End" === qq.key && (Oq = Yq[Yq.length - 1]), Oq && (qq.preventDefault(), Oq.focus(), Oq.click())
-      }(0, Yq.useEffect)((() => {
-        var qq;
-        uq > fq.current && !Wq && (fq.current = uq, null === (qq = Vq.current) || void 0 === qq || qq.focus())
-      }), [uq, Wq]);
-      const Sq = "self" === tq,
-        pq = null !== (Eq = null === hq || void 0 === hq ? void 0 : hq.name) && void 0 !== Eq ? Eq : null,
-        Gq = "error" === Pq.status ? Pq.error : null,
-        Lq = "store:giftRecipientLookupFailed" === Gq;
-      return (0, Bq.jsxs)("div", {
-        className: Oq()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: Wq,
-          StoreRecipientStripNoChips: !Zq
+      function eb(bb) {
+        var ub, hb;
+        if (wb) return;
+        if (" " === bb.key || "Enter" === bb.key) return bb.preventDefault(), void bb.currentTarget.click();
+        const Bb = Array.from(null !== (ub = null === (hb = ob.current) || void 0 === hb ? void 0 : hb.querySelectorAll("[role=radio]")) && void 0 !== ub ? ub : []),
+          Ob = Bb.indexOf(bb.currentTarget);
+        let Gb;
+        "ArrowRight" === bb.key || "ArrowDown" === bb.key ? Gb = Bb[(Ob + 1) % Bb.length] : "ArrowLeft" === bb.key || "ArrowUp" === bb.key ? Gb = Bb[(Ob - 1 + Bb.length) % Bb.length] : "Home" === bb.key ? Gb = Bb[0] : "End" === bb.key && (Gb = Bb[Bb.length - 1]), Gb && (bb.preventDefault(), Gb.focus(), Gb.click())
+      }(0, Bb.useEffect)((() => {
+        var bb;
+        ab > vb.current && !wb && (vb.current = ab, null === (bb = pb.current) || void 0 === bb || bb.focus())
+      }), [ab, wb]);
+      const Nb = "self" === rb,
+        sb = null !== (ub = null === Db || void 0 === Db ? void 0 : Db.name) && void 0 !== ub ? ub : null,
+        Mb = "error" === Wb.status ? Wb.error : null,
+        mb = "store:giftRecipientLookupFailed" === Mb;
+      return (0, Hb.jsxs)("div", {
+        className: Gb()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: wb,
+          StoreRecipientStripNoChips: !ib
         }),
-        children: [(0, Bq.jsx)("span", {
+        children: [(0, Hb.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: Nq("store:buyingFor")
-        }), (0, Bq.jsxs)("div", {
-          ref: dq,
+          children: Zb("store:buyingFor")
+        }), (0, Hb.jsxs)("div", {
+          ref: ob,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": Nq("store:whoIsItFor"),
-          children: [(0, Bq.jsxs)("div", {
+          "aria-label": Zb("store:whoIsItFor"),
+          children: [(0, Hb.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": Sq,
-            tabIndex: Wq || !Sq && null !== pq ? -1 : 0,
-            className: Oq()("StoreRecipientMe", {
-              StoreRecipientChecked: Sq
+            "aria-checked": Nb,
+            tabIndex: wb || !Nb && null !== sb ? -1 : 0,
+            className: Gb()("StoreRecipientMe", {
+              StoreRecipientChecked: Nb
             }),
             onClick: () => {
-              Wq || Tq()
+              wb || Jb()
             },
-            onKeyDown: zq,
-            children: [(0, Bq.jsx)(xq.d, {
+            onKeyDown: eb,
+            children: [(0, Hb.jsx)(Lb.e, {
               name: "user"
-            }), " ", Nq("store:me")]
-          }), Zq && (0, Bq.jsx)("div", {
+            }), " ", Zb("store:me")]
+          }), ib && (0, Hb.jsx)("div", {
             className: "StoreRecipientChips",
-            children: nq.map((qq => {
-              const Eq = qq === hq;
-              return (0, Bq.jsx)("div", {
+            children: xb.map((bb => {
+              const ub = bb === Db;
+              return (0, Hb.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": Eq,
-                tabIndex: !Wq && Eq ? 0 : -1,
-                title: qq.name,
-                className: Oq()("StoreRecipientChip", {
-                  StoreRecipientChecked: Eq
+                "aria-checked": ub,
+                tabIndex: !wb && ub ? 0 : -1,
+                title: bb.name,
+                className: Gb()("StoreRecipientChip", {
+                  StoreRecipientChecked: ub
                 }),
                 onClick: () => {
-                  Wq || function(qq) {
-                    "gift" !== tq && (0, eq.reportAnalyticsClick)({
+                  wb || function(bb) {
+                    "gift" !== rb && (0, Qb.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), lq.choose(qq.name, qq.kind)
-                  }(qq)
+                    }), Ob.choose(bb.name, bb.kind)
+                  }(bb)
                 },
-                onKeyDown: zq,
-                children: (0, Bq.jsx)(MO.h, {
-                  playerSocialPreview: zO(qq, Eq ? yq : null),
+                onKeyDown: eb,
+                children: (0, Hb.jsx)(tG.h, {
+                  playerSocialPreview: eG(bb, ub ? db : null),
                   opensProfileCard: !1,
-                  isFriend: null !== qq.friend,
+                  isFriend: null !== bb.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== qq.friend,
-                  status: null === qq.friend ? null : void 0,
-                  trailing: Eq ? (0, Bq.jsx)(SO, {
-                    pending: "pending" === Pq.status
+                  showLocation: null !== bb.friend,
+                  status: null === bb.friend ? null : void 0,
+                  trailing: ub ? (0, Hb.jsx)(NG, {
+                    pending: "pending" === Wb.status
                   }) : void 0
                 })
-              }, qq.name)
+              }, bb.name)
             }))
           })]
-        }), (0, Bq.jsxs)("div", {
-          className: Oq()("StoreRecipientSearch", {
-            StoreRecipientChecked: bq,
-            StoreRecipientSearchPulse: uq > 0 && !bq,
-            StoreRecipientSearchError: null !== Gq && !Lq
+        }), (0, Hb.jsxs)("div", {
+          className: Gb()("StoreRecipientSearch", {
+            StoreRecipientChecked: zb,
+            StoreRecipientSearchPulse: ab > 0 && !zb,
+            StoreRecipientSearchError: null !== Mb && !mb
           }),
           onClick: () => {
-            var qq;
-            null === (qq = Vq.current) || void 0 === qq || qq.focus()
+            var bb;
+            null === (bb = pb.current) || void 0 === bb || bb.focus()
           },
-          children: [bq && "found" === Pq.status && yq && (0, Bq.jsx)(TO, {
-            cosmetics: yq
-          }), !(bq && "found" === Pq.status && yq) && (0, Bq.jsx)(xq.d, {
+          children: [zb && "found" === Wb.status && db && (0, Hb.jsx)(JG, {
+            cosmetics: db
+          }), !(zb && "found" === Wb.status && db) && (0, Hb.jsx)(Lb.e, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, Bq.jsx)(Qq.b, {
+          }), (0, Hb.jsx)(Cb.b, {
             className: "StoreRecipientSearchInput",
-            domRef: Vq,
-            placeholderText: Nq("store:searchName"),
-            defaultValue: iq,
-            maxLength: Mq.l,
-            onValueChange: function(qq) {
-              "gift" !== tq && qq.trim() && (0, eq.reportAnalyticsClick)({
+            domRef: pb,
+            placeholderText: Zb("store:searchName"),
+            defaultValue: gb,
+            maxLength: tb.l,
+            onValueChange: function(bb) {
+              "gift" !== rb && bb.trim() && (0, Qb.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), lq.type(qq)
+              }), Ob.type(bb)
             },
             onEnter: () => {
-              var qq;
-              const Eq = null === (qq = Vq.current) || void 0 === qq ? void 0 : qq.value.trim();
-              Eq && lq.choose(Eq, "typed")
+              var bb;
+              const ub = null === (bb = pb.current) || void 0 === bb ? void 0 : bb.value.trim();
+              ub && Ob.choose(ub, "typed")
             },
             blurOnEnter: !0
-          }), bq && (0, Bq.jsx)(SO, {
-            pending: "pending" === Pq.status
-          }), bq && (0, Bq.jsx)("div", {
-            ...(0, cq.V)({
-              disabled: Wq
+          }), zb && (0, Hb.jsx)(NG, {
+            pending: "pending" === Wb.status
+          }), zb && (0, Hb.jsx)("div", {
+            ...(0, Sb.V)({
+              disabled: wb
             }),
-            "aria-label": Nq("store:clearRecipient"),
-            title: Nq("store:clearRecipient"),
+            "aria-label": Zb("store:clearRecipient"),
+            title: Zb("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: qq => {
-              qq.stopPropagation(), Wq || Tq()
+            onClick: bb => {
+              bb.stopPropagation(), wb || Jb()
             },
-            children: (0, Bq.jsx)(xq.d, {
+            children: (0, Hb.jsx)(Lb.e, {
               name: "xmark"
             })
           })]
-        }, uq), Gq && (0, Bq.jsx)("div", {
-          className: Oq()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: Lq
+        }, ab), Mb && (0, Hb.jsx)("div", {
+          className: Gb()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: mb
           }),
           role: "status",
-          children: Nq(Gq)
+          children: Zb(Mb)
         })]
       })
     }
-    var GO = gq(2297),
-      LO = gq(2210),
-      JO = gq(3458),
-      kO = gq(3033),
-      RO = gq(2254);
-    const UO = gq.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var MG = hb(2197),
+      mG = hb(2128),
+      IG = hb(3371),
+      PG = hb(2918),
+      qG = hb(2161);
+    const EG = hb.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function FO() {
-      (0, RO.h)(UO, {
+    function yG() {
+      (0, qG.k)(EG, {
         lowPriority: !1
       })
     }
 
-    function sO(qq) {
+    function VG(bb) {
       let {
-        onBack: Eq,
-        cta: gq,
-        recipient: lq,
-        afterCta: Oq
-      } = qq;
+        onBack: ub,
+        cta: hb,
+        recipient: Ob,
+        afterCta: Gb
+      } = bb;
       const {
-        t: Aq
-      } = (0, mq.v)(), [uq, Wq] = (0, Yq.useState)("starting"), Nq = (0, Yq.useRef)(null), aq = (0, ZE.c)(), Vq = (0, Yq.useRef)(null), dq = (0, Yq.useCallback)((() => {
-        const qq = Nq.current;
-        null !== qq.error && qq.load();
-        const Eq = qq.play();
-        Vq.current = Eq, Eq.catch((qq => {
-          (0, JO.e)("Failed to play Super Rank video", qq), aq.current && Vq.current === Eq && Wq("failed")
+        t: Yb
+      } = (0, Ub.K)(), [ab, wb] = (0, Bb.useState)("starting"), Zb = (0, Bb.useRef)(null), Xb = (0, iu.d)(), pb = (0, Bb.useRef)(null), ob = (0, Bb.useCallback)((() => {
+        const bb = Zb.current;
+        null !== bb.error && bb.load();
+        const ub = bb.play();
+        pb.current = ub, ub.catch((bb => {
+          (0, IG.e)("Failed to play Super Rank video", bb), Xb.current && pb.current === ub && wb("failed")
         }))
-      }), [aq]);
-      return (0, Yq.useEffect)((() => {
-        const qq = Nq.current;
-        let Eq;
+      }), [Xb]);
+      return (0, Bb.useEffect)((() => {
+        const bb = Zb.current;
+        let ub;
 
-        function gq() {
-          clearTimeout(Eq), Eq = setTimeout(dq, 3e3)
+        function hb() {
+          clearTimeout(ub), ub = setTimeout(ob, 3e3)
         }
-        return dq(), qq.addEventListener("ended", gq), () => {
-          clearTimeout(Eq), qq.removeEventListener("ended", gq)
+        return ob(), bb.addEventListener("ended", hb), () => {
+          clearTimeout(ub), bb.removeEventListener("ended", hb)
         }
-      }), [dq]), (0, Bq.jsxs)("div", {
+      }), [ob]), (0, Hb.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, Bq.jsxs)("div", {
+        children: [(0, Hb.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, Bq.jsx)(cq.d, {
+          children: [(0, Hb.jsx)(Sb.d, {
             className: "StoreDetailBackButton",
-            onClick: Eq,
+            onClick: ub,
             padBack: !0,
-            children: Aq("general:back")
-          }), (0, Bq.jsxs)("div", {
+            children: Yb("general:back")
+          }), (0, Hb.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, Bq.jsx)(xq.d, {
+            children: [(0, Hb.jsx)(Lb.e, {
               name: "bolt"
-            }), " ", Aq("homePage:superRank")]
-          }), lq]
-        }), (0, Bq.jsxs)("div", {
+            }), " ", Yb("homePage:superRank")]
+          }), Ob]
+        }), (0, Hb.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, Bq.jsxs)("div", {
+          children: [(0, Hb.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, Bq.jsx)("video", {
-              ref: Nq,
-              src: `${iq.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: UO,
+            children: [(0, Hb.jsx)("video", {
+              ref: Zb,
+              src: `${gb.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: EG,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === uq,
+              controls: "playing" === ab,
               onPlaying: () => {
-                Wq("playing")
+                wb("playing")
               },
               onError: () => {
-                Wq("failed")
+                wb("failed")
               }
-            }), ("failed" === uq || "loading" === uq) && (0, Bq.jsx)("div", {
+            }), ("failed" === ab || "loading" === ab) && (0, Hb.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, Bq.jsx)(cq.g, {
-                ariaLabel: Aq("general:play"),
-                loading: "loading" === uq,
+              children: (0, Hb.jsx)(Sb.e, {
+                ariaLabel: Yb("general:play"),
+                loading: "loading" === ab,
                 onClick: () => {
-                  Wq("loading"), dq()
+                  wb("loading"), ob()
                 },
                 touchPressOn: "pointerup",
-                children: (0, Bq.jsx)(xq.d, {
+                children: (0, Hb.jsx)(Lb.e, {
                   name: "play"
                 })
               })
             })]
-          }), (0, Bq.jsxs)("div", {
+          }), (0, Hb.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, Bq.jsx)("div", {
+            children: [(0, Hb.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, Bq.jsx)(kO.d, {})
-            }), (0, Bq.jsxs)("div", {
+              children: (0, Hb.jsx)(PG.b, {})
+            }), (0, Hb.jsxs)("div", {
               className: "StoreTileActions",
-              children: [gq, Oq]
+              children: [hb, Gb]
             })]
           })]
         })]
       })
     }
-    var XO = gq(2535),
-      wO = gq(3422),
-      KO = gq(3003),
-      CO = gq(3011);
-    const IO = [ZO.s.yellow, ZO.s.green, ZO.s.aqua, ZO.s.blue, ZO.s.purple, ZO.s.red];
+    var FG = hb(2432),
+      fG = hb(3326),
+      kG = hb(2890),
+      TG = hb(2899);
+    const cG = [iG.m.yellow, iG.m.green, iG.m.aqua, iG.m.blue, iG.m.purple, iG.m.red];
 
-    function eO(qq) {
-      return "needsRecipient" === qq || "lookingUp" === qq || "gift" === qq || "recipientOwns" === qq || "recipientSharesOwned" === qq || "recipientSubscribed" === qq
+    function QG(bb) {
+      return "needsRecipient" === bb || "lookingUp" === bb || "gift" === bb || "recipientOwns" === bb || "recipientSharesOwned" === bb || "recipientSubscribed" === bb
     }
 
-    function DO(qq) {
+    function RG(bb) {
       const {
-        onKeyDown: Eq,
-        ...gq
-      } = (0, cq.V)();
+        onKeyDown: ub,
+        ...hb
+      } = (0, Sb.V)();
       return {
-        ...gq,
-        "aria-label": qq,
-        onKeyDown: qq => {
-          qq.target === qq.currentTarget && (null === Eq || void 0 === Eq || Eq(qq))
+        ...hb,
+        "aria-label": bb,
+        onKeyDown: bb => {
+          bb.target === bb.currentTarget && (null === ub || void 0 === ub || ub(bb))
         }
       }
     }
 
-    function qm(qq) {
+    function bU(bb) {
       let {
-        text: Eq
-      } = qq;
-      return (0, Bq.jsx)("span", {
+        text: ub
+      } = bb;
+      return (0, Hb.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(Eq).map(((qq, Eq) => (0, Bq.jsx)("span", {
+        children: Array.from(ub).map(((bb, ub) => (0, Hb.jsx)("span", {
           style: {
-            color: IO[Eq % IO.length]
+            color: cG[ub % cG.length]
           },
-          children: qq
-        }, Eq)))
+          children: bb
+        }, ub)))
       })
     }
-    const Em = {
+    const uU = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -5867,82 +5867,82 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function gm(qq) {
+    function hU(bb) {
       let {
-        state: Eq,
-        item: gq,
-        price: Yq,
-        busy: lq,
-        highlight: Aq = !1,
-        onAct: uq,
-        onNeedRecipient: Wq,
-        onLogin: Nq
-      } = qq;
+        state: ub,
+        item: hb,
+        price: Bb,
+        busy: Ob,
+        highlight: Yb = !1,
+        onAct: ab,
+        onNeedRecipient: wb,
+        onLogin: Zb
+      } = bb;
       const {
-        t: aq
-      } = (0, mq.v)(), Vq = "superRank" === gq ? zq.n.product.days : null, dq = qq => null === Vq ? aq(qq ? "general:gift" : "general:buy") : aq(qq ? "store:giftDays" : "store:buyDays", {
-        days: Vq
-      }), jq = (qq, Eq) => {
-        const gq = (0, Bq.jsxs)(Bq.Fragment, {
-          children: [null === qq && (0, Bq.jsx)("span", {
+        t: Xb
+      } = (0, Ub.K)(), pb = "superRank" === hb ? eb.o.product.days : null, ob = bb => null === pb ? Xb(bb ? "general:gift" : "general:buy") : Xb(bb ? "store:giftDays" : "store:buyDays", {
+        days: pb
+      }), Ab = (bb, ub) => {
+        const hb = (0, Hb.jsxs)(Hb.Fragment, {
+          children: [null === bb && (0, Hb.jsx)("span", {
             className: "StoreCtaLabel StoreCtaLabelPending"
-          }), null !== qq && (0, Bq.jsx)("span", {
+          }), null !== bb && (0, Hb.jsx)("span", {
             className: "StoreCtaLabel",
-            title: qq,
-            children: qq
+            title: bb,
+            children: bb
           })]
         });
-        return null !== Vq ? (0, Bq.jsxs)(Bq.Fragment, {
-          children: [Eq && (0, Bq.jsx)("span", {
+        return null !== pb ? (0, Hb.jsxs)(Hb.Fragment, {
+          children: [ub && (0, Hb.jsx)("span", {
             className: "StoreCtaIcon",
-            children: Eq
-          }), gq, (0, Bq.jsxs)("span", {
+            children: ub
+          }), hb, (0, Hb.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: ["\xb7", (0, Bq.jsx)(LO.b, {
-              amount: Yq
+            children: ["\xb7", (0, Hb.jsx)(mG.b, {
+              amount: Bb
             })]
           })]
-        }) : (0, Bq.jsxs)(Bq.Fragment, {
-          children: [(0, Bq.jsxs)("span", {
+        }) : (0, Hb.jsxs)(Hb.Fragment, {
+          children: [(0, Hb.jsxs)("span", {
             className: "StoreCtaLead",
-            children: [gq, "\xb7"]
-          }), (0, Bq.jsxs)("span", {
+            children: [hb, "\xb7"]
+          }), (0, Hb.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: [Eq, (0, Bq.jsx)(LO.b, {
-              amount: Yq
+            children: [ub, (0, Hb.jsx)(mG.b, {
+              amount: Bb
             })]
           })]
         })
       };
-      let Hq;
-      switch (Eq) {
+      let lb;
+      switch (ub) {
         case "pending":
-          Hq = (0, Bq.jsx)(cq.p, {
+          lb = (0, Hb.jsx)(Sb.m, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: jq(null)
+            children: Ab(null)
           });
           break;
         case "login":
-          Hq = (0, Bq.jsx)(cq.p, {
+          lb = (0, Hb.jsx)(Sb.m, {
             className: "StoreCtaButton",
-            onClick: Nq,
-            children: jq(dq(!1))
+            onClick: Zb,
+            children: Ab(ob(!1))
           });
           break;
         case "owned":
-          Hq = (0, Bq.jsx)(cq.i, {
+          lb = (0, Hb.jsx)(Sb.g, {
             className: "StoreCtaButton",
             onClick: () => {
-              rq.b.set({
-                openEverythingMenuName: cE.p.CUSTOMISATION
+              jb.d.set({
+                openEverythingMenuName: Su.u.CUSTOMISATION
               })
             },
-            children: (0, Bq.jsxs)("span", {
+            children: (0, Hb.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, Bq.jsx)(xq.d, {
+              children: [(0, Hb.jsx)(Lb.e, {
                 name: "shirt"
-              }), " ", aq("store:equip")]
+              }), " ", Xb("store:equip")]
             })
           });
           break;
@@ -5951,206 +5951,206 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          Hq = (0, Bq.jsx)(cq.p, {
+          lb = (0, Hb.jsx)(Sb.m, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, Bq.jsx)("span", {
+            children: (0, Hb.jsx)("span", {
               className: "StoreCtaLabel",
-              children: aq(Em[Eq])
+              children: Xb(uU[ub])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          Hq = (0, Bq.jsx)(cq.p, {
+          lb = (0, Hb.jsx)(Sb.m, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === Eq || null === Yq,
-            loading: "lookingUp" === Eq || lq,
-            onClick: uq,
+            disabled: "needsRecipient" === ub || null === Bb,
+            loading: "lookingUp" === ub || Ob,
+            onClick: ab,
             analyticsClick: {
               id: "store.gift",
-              value: gq
+              value: hb
             },
-            children: jq(dq(!0), oO.b)
+            children: Ab(ob(!0), KG.d)
           });
           break;
         case "buy":
         case "recharge":
-          Hq = (0, Bq.jsx)(cq.p, {
+          lb = (0, Hb.jsx)(Sb.m, {
             className: "StoreCtaButton",
-            loading: lq,
-            disabled: null === Yq,
-            onClick: uq,
+            loading: Ob,
+            disabled: null === Bb,
+            onClick: ab,
             analyticsClick: {
               id: "store.buy",
-              value: gq
+              value: hb
             },
-            children: jq(dq(!1))
+            children: Ab(ob(!1))
           })
       }
-      return (0, Bq.jsx)("div", {
-        className: Oq()("StoreCta", {
-          StoreCtaHighlight: Aq,
-          StoreCtaLabelFirst: null !== Vq
+      return (0, Hb.jsx)("div", {
+        className: Gb()("StoreCta", {
+          StoreCtaHighlight: Yb,
+          StoreCtaLabelFirst: null !== pb
         }),
-        onClick: qq => {
-          qq.stopPropagation(), "needsRecipient" === Eq && Wq()
+        onClick: bb => {
+          bb.stopPropagation(), "needsRecipient" === ub && wb()
         },
-        children: Hq
+        children: lb
       })
     }
 
-    function Ym() {
+    function BU() {
       const {
-        t: qq
-      } = (0, mq.v)();
-      return (0, Bq.jsxs)("ul", {
+        t: bb
+      } = (0, Ub.K)();
+      return (0, Hb.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, Bq.jsxs)("li", {
-          children: [(0, Bq.jsx)(xq.d, {
+        children: [(0, Hb.jsxs)("li", {
+          children: [(0, Hb.jsx)(Lb.e, {
             name: "check"
-          }), (0, Bq.jsx)(qm, {
-            text: qq("store:colourfulNames")
+          }), (0, Hb.jsx)(bU, {
+            text: bb("store:colourfulNames")
           })]
-        }), (0, Bq.jsxs)("li", {
-          children: [(0, Bq.jsx)(xq.d, {
+        }), (0, Hb.jsxs)("li", {
+          children: [(0, Hb.jsx)(Lb.e, {
             name: "check"
-          }), qq("store:perkCapes")]
-        }), (0, Bq.jsxs)("li", {
-          children: [(0, Bq.jsx)(xq.d, {
+          }), bb("store:perkCapes")]
+        }), (0, Hb.jsxs)("li", {
+          children: [(0, Hb.jsx)(Lb.e, {
             name: "check"
-          }), qq("store:perkNoAdverts")]
-        }), (0, Bq.jsxs)("li", {
-          children: [(0, Bq.jsx)(xq.d, {
+          }), bb("store:perkNoAdverts")]
+        }), (0, Hb.jsxs)("li", {
+          children: [(0, Hb.jsx)(Lb.e, {
             name: "check"
-          }), qq("store:perkFriends", {
-            count: (0, Cq.d)(["super"])
+          }), bb("store:perkFriends", {
+            count: (0, Tb.d)(["super"])
           })]
         })]
       })
     }
 
-    function lm(qq) {
+    function OU(bb) {
       let {
-        daysLeft: Eq,
-        totalDays: gq,
-        urgent: Yq
-      } = qq;
+        daysLeft: ub,
+        totalDays: hb,
+        urgent: Bb
+      } = bb;
       const {
-        t: lq
-      } = (0, mq.v)(), xq = gq > 0 ? Math.min(1, Math.max(.03, Eq / gq)) : 1;
-      return (0, Bq.jsxs)("div", {
-        className: Oq()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: Yq
+        t: Ob
+      } = (0, Ub.K)(), Lb = hb > 0 ? Math.min(1, Math.max(.03, ub / hb)) : 1;
+      return (0, Hb.jsxs)("div", {
+        className: Gb()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: Bb
         }),
-        children: [(0, Bq.jsx)("span", {
+        children: [(0, Hb.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === Eq ? lq("store:oneDayLeft") : lq("store:daysLeft", {
-            days: Eq
+          children: 1 === ub ? Ob("store:oneDayLeft") : Ob("store:daysLeft", {
+            days: ub
           })
-        }), (0, Bq.jsx)("div", {
+        }), (0, Hb.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, Bq.jsx)("i", {
+          children: (0, Hb.jsx)("i", {
             style: {
-              width: 100 * xq + "%"
+              width: 100 * Lb + "%"
             }
           })
         })]
       })
     }
 
-    function Om(qq) {
+    function GU(bb) {
       let {
-        state: Eq,
-        urgent: gq,
-        daysLeft: Yq,
-        totalDays: lq,
-        recipientHasSuperRank: Aq,
-        busy: cq,
-        highlight: uq,
-        onOpen: Wq,
-        onAct: Nq,
-        onNeedRecipient: aq,
-        onLogin: Vq
-      } = qq;
+        state: ub,
+        urgent: hb,
+        daysLeft: Bb,
+        totalDays: Ob,
+        recipientHasSuperRank: Yb,
+        busy: Sb,
+        highlight: ab,
+        onOpen: wb,
+        onAct: Zb,
+        onNeedRecipient: Xb,
+        onLogin: pb
+      } = bb;
       const {
-        t: dq
-      } = (0, mq.v)(), jq = eO(Eq), {
-        days: Hq
-      } = zq.n.product, oq = dq("store:recipientHasSuperRank", {
-        giftDays: Hq
-      }), Pq = wq("subscribed" === Eq);
-      return (0, Bq.jsxs)("div", {
-        className: Oq()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: jq,
-          StoreSuperRankTileUrgent: "recharge" === Eq && gq,
-          StoreSuperRankTileWithChip: Aq,
-          StoreSuperRankTileGiftReady: "gift" === Eq
+        t: ob
+      } = (0, Ub.K)(), Ab = QG(ub), {
+        days: lb
+      } = eb.o.product, Kb = ob("store:recipientHasSuperRank", {
+        giftDays: lb
+      }), Wb = fb("subscribed" === ub);
+      return (0, Hb.jsxs)("div", {
+        className: Gb()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: Ab,
+          StoreSuperRankTileUrgent: "recharge" === ub && hb,
+          StoreSuperRankTileWithChip: Yb,
+          StoreSuperRankTileGiftReady: "gift" === ub
         }),
-        ...DO(dq("homePage:superRank")),
+        ...RG(ob("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: FO,
-        onFocus: FO,
-        onClick: Wq,
-        children: [(0, Bq.jsx)("div", {
+        onPointerEnter: yG,
+        onFocus: yG,
+        onClick: wb,
+        children: [(0, Hb.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${iO.g})`
+            backgroundImage: `url(${gG.f})`
           }
-        }), jq && (0, Bq.jsx)("div", {
+        }), Ab && (0, Hb.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, Bq.jsxs)("div", {
+        }), (0, Hb.jsxs)("div", {
           className: "StoreTileContent",
-          children: [Aq && (0, Bq.jsx)("span", {
+          children: [Yb && (0, Hb.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: oq,
-            children: oq
-          }), (0, Bq.jsxs)("div", {
+            title: Kb,
+            children: Kb
+          }), (0, Hb.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, Bq.jsx)(xq.d, {
+            children: [(0, Hb.jsx)(Lb.e, {
               name: "bolt"
-            }), " ", dq("homePage:superRank")]
-          }), jq && (0, Bq.jsx)("div", {
+            }), " ", ob("homePage:superRank")]
+          }), Ab && (0, Hb.jsx)("div", {
             className: "StoreTilePitch",
-            children: dq("store:giftPitch", {
-              days: Hq
+            children: ob("store:giftPitch", {
+              days: lb
             })
-          }), "recharge" === Eq && (0, Bq.jsx)(lm, {
-            daysLeft: Yq,
-            totalDays: lq,
-            urgent: gq
-          }), Pq && (0, Bq.jsx)("div", {
+          }), "recharge" === ub && (0, Hb.jsx)(OU, {
+            daysLeft: Bb,
+            totalDays: Ob,
+            urgent: hb
+          }), Wb && (0, Hb.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, Bq.jsx)("span", {
+            children: (0, Hb.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: Pq
+              children: Wb
             })
-          }), (0, Bq.jsx)(Ym, {}), (0, Bq.jsxs)("div", {
+          }), (0, Hb.jsx)(BU, {}), (0, Hb.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, Bq.jsx)(gm, {
-              state: Eq,
+            children: [(0, Hb.jsx)(hU, {
+              state: ub,
               item: "superRank",
-              price: zq.n.price,
-              busy: cq,
-              highlight: uq,
-              onAct: Nq,
-              onNeedRecipient: aq,
-              onLogin: Vq
-            }), "needsRecipient" === Eq && (0, Bq.jsx)("span", {
+              price: eb.o.price,
+              busy: Sb,
+              highlight: ab,
+              onAct: Zb,
+              onNeedRecipient: Xb,
+              onLogin: pb
+            }), "needsRecipient" === ub && (0, Hb.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: dq("store:pickRecipientFirst")
-            }), "recharge" === Eq && gq && (0, Bq.jsx)("span", {
+              children: ob("store:pickRecipientFirst")
+            }), "recharge" === ub && hb && (0, Hb.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === Yq ? dq("store:endsInOneDay") : dq("store:endsInDays", {
-                days: Yq
+              children: 1 === Bb ? ob("store:endsInOneDay") : ob("store:endsInDays", {
+                days: Bb
               })
             })]
           })]
         })]
       })
     }
-    const mm = {
+    const UU = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6158,403 +6158,403 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function xm(qq) {
-      var Eq;
+    function LU(bb) {
+      var ub;
       let {
-        pack: gq,
-        state: lq,
-        busy: Aq,
-        onOpen: cq,
-        onAct: uq,
-        onNeedRecipient: Wq,
-        onLogin: Nq
-      } = qq;
+        pack: hb,
+        state: Ob,
+        busy: Yb,
+        onOpen: Sb,
+        onAct: ab,
+        onNeedRecipient: wb,
+        onLogin: Zb
+      } = bb;
       const {
-        t: aq
-      } = (0, mq.v)(), Vq = uO.d[gq], dq = jO.l[gq], jq = (0, iO.n)(gq), Hq = (0, Yq.useRef)(null);
-      (0, KO.k)(gq, Hq);
-      const oq = eO(lq),
-        Pq = null !== (Eq = Vq.displayName) && void 0 !== Eq ? Eq : gq,
-        Qq = (0, wO.e)((() => {
-          (0, XO.g)();
-          const qq = (0, KO.d)(gq);
-          void 0 !== qq && (0, RO.h)((0, KO.b)(qq))
+        t: Xb
+      } = (0, Ub.K)(), pb = aG.d[hb], ob = AG.n[hb], Ab = (0, gG.o)(hb), lb = (0, Bb.useRef)(null);
+      (0, kG.h)(hb, lb);
+      const Kb = QG(Ob),
+        Wb = null !== (ub = pb.displayName) && void 0 !== ub ? ub : hb,
+        Cb = (0, fG.d)((() => {
+          (0, FG.f)();
+          const bb = (0, kG.d)(hb);
+          void 0 !== bb && (0, qG.k)((0, kG.b)(bb))
         })),
-        [yq] = (0, Yq.useState)(nO.i);
-      return (0, Bq.jsxs)("div", {
-        className: Oq()("StoreTile StorePackTile", mm[Vq.tier], {
-          StorePackTileOwned: "owned" === lq,
-          StorePackTileRecipientOwns: "recipientOwns" === lq,
-          StoreTileGift: oq
+        [db] = (0, Bb.useState)(xG.g);
+      return (0, Hb.jsxs)("div", {
+        className: Gb()("StoreTile StorePackTile", UU[pb.tier], {
+          StorePackTileOwned: "owned" === Ob,
+          StorePackTileRecipientOwns: "recipientOwns" === Ob,
+          StoreTileGift: Kb
         }),
-        ...DO(Pq),
-        ref: Hq,
-        "data-store-item": gq,
-        onClick: cq,
-        onPointerMove: qq => {
-          "mouse" !== qq.pointerType || 0 === qq.movementX && 0 === qq.movementY || yq || Qq.start()
+        ...RG(Wb),
+        ref: lb,
+        "data-store-item": hb,
+        onClick: Sb,
+        onPointerMove: bb => {
+          "mouse" !== bb.pointerType || 0 === bb.movementX && 0 === bb.movementY || db || Cb.start()
         },
-        onPointerLeave: Qq.cancel,
-        children: [dq && (0, Bq.jsx)(dq, {}), (0, Bq.jsx)("div", {
+        onPointerLeave: Cb.cancel,
+        children: [ob && (0, Hb.jsx)(ob, {}), (0, Hb.jsx)("div", {
           className: "StorePackCharacters",
-          children: jq.map((qq => (0, Bq.jsx)("div", {
+          children: Ab.map((bb => (0, Hb.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,iO.h)(qq)})`
+              backgroundImage: `url(${(0,gG.i)(bb)})`
             }
-          }, qq)))
-        }), (0, Bq.jsx)("div", {
+          }, bb)))
+        }), (0, Hb.jsx)("div", {
           className: "StoreTileScrim"
-        }), oq && (0, Bq.jsx)("div", {
+        }), Kb && (0, Hb.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, Bq.jsxs)("div", {
+        }), (0, Hb.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, Bq.jsx)("div", {
+          children: [(0, Hb.jsx)("div", {
             className: "StoreTileTitle",
-            children: Pq
-          }), (0, Bq.jsxs)("div", {
+            children: Wb
+          }), (0, Hb.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, Bq.jsx)(CO.b, {
-              tier: Vq.tier
-            }), " \xb7 ", aq("store:itemCount", {
-              count: (0, GO.d)(gq)
-            }), "owned" === lq && (0, Bq.jsxs)("span", {
+            children: [(0, Hb.jsx)(TG.c, {
+              tier: pb.tier
+            }), " \xb7 ", Xb("store:itemCount", {
+              count: (0, MG.g)(hb)
+            }), "owned" === Ob && (0, Hb.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, Bq.jsx)(xq.d, {
+              children: [" \xb7 ", (0, Hb.jsx)(Lb.e, {
                 name: "check"
-              }), " ", aq("general:owned")]
+              }), " ", Xb("general:owned")]
             })]
-          }), (0, Bq.jsx)(gm, {
-            state: lq,
-            item: gq,
-            price: (0, zq.f)(gq),
-            busy: Aq,
-            onAct: uq,
-            onNeedRecipient: Wq,
-            onLogin: Nq
+          }), (0, Hb.jsx)(hU, {
+            state: Ob,
+            item: hb,
+            price: (0, eb.g)(hb),
+            busy: Yb,
+            onAct: ab,
+            onNeedRecipient: wb,
+            onLogin: Zb
           })]
         })]
       })
     }
-    var Am = gq(2975),
-      cm = gq(1534),
-      um = gq(1435),
-      Bm = gq(3443);
+    var YU = hb(2864),
+      SU = hb(1451),
+      aU = hb(1361),
+      HU = hb(3350);
 
-    function Wm() {
-      return (0, Bq.jsx)("span", {
+    function wU() {
+      return (0, Hb.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var Nm = gq(1332),
-      am = gq(1547),
-      Vm = gq(9313);
+    var ZU = hb(1247),
+      XU = hb(1463),
+      pU = hb(9122);
 
-    function dm(qq) {
+    function oU(bb) {
       let {
-        character: Eq,
-        drawn: gq,
-        onDrawn: lq
-      } = qq;
-      const mq = (0, Yq.useRef)(null),
-        xq = (0, Vm.f)(Eq);
-      return (0, Bq.jsx)("div", {
-        className: Oq()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: gq
+        character: ub,
+        drawn: hb,
+        onDrawn: Ob
+      } = bb;
+      const Ub = (0, Bb.useRef)(null),
+        Lb = (0, pU.f)(ub);
+      return (0, Hb.jsx)("div", {
+        className: Gb()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: hb
         }),
-        children: (0, Bq.jsx)(Yq.Suspense, {
+        children: (0, Hb.jsx)(Bb.Suspense, {
           fallback: null,
-          children: (0, Bq.jsx)(XO.c, {
-            ref: mq,
+          children: (0, Hb.jsx)(FG.c, {
+            ref: Ub,
             framing: "store",
-            turntableFromYaw: gq ? xq.yaw : null,
+            turntableFromYaw: hb ? Lb.yaw : null,
             onReady: () => {
-              var qq, gq;
-              null === (qq = mq.current) || void 0 === qq || qq.setOrbit(xq), null === (gq = mq.current) || void 0 === gq || gq.setAllCosmetics(am.b[Eq].cosmetics)
+              var bb, hb;
+              null === (bb = Ub.current) || void 0 === bb || bb.setOrbit(Lb), null === (hb = Ub.current) || void 0 === hb || hb.setAllCosmetics(XU.e[ub].cosmetics)
             },
-            onDrawn: lq
+            onDrawn: Ob
           })
         })
       })
     }
-    const jm = {
+    const AU = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      Hm = new Set(["wildSpirits"]);
+      lU = new Set(["wildSpirits"]);
 
-    function om(qq) {
-      var Eq;
+    function KU(bb) {
+      var ub;
       let {
-        tile: gq,
-        design: lq,
-        canGoLive: Aq,
-        live: cq,
-        busy: uq,
-        highlight: Wq,
-        onLiveStart: Nq,
-        onLiveEnd: aq,
-        onOpen: Vq,
-        onAct: dq,
-        onNeedRecipient: jq,
-        onLogin: Hq
-      } = qq;
+        tile: hb,
+        design: Ob,
+        canGoLive: Yb,
+        live: Sb,
+        busy: ab,
+        highlight: wb,
+        onLiveStart: Zb,
+        onLiveEnd: Xb,
+        onOpen: pb,
+        onAct: ob,
+        onNeedRecipient: Ab,
+        onLogin: lb
+      } = bb;
       const {
-        t: oq
-      } = (0, mq.v)(), {
-        pack: Pq,
-        state: Qq
-      } = gq, yq = uO.d[Pq], tq = (0, uO.h)(Pq), rq = (0, iO.l)(Pq), vq = jO.l[rq], hq = Hm.has(rq), {
-        tier: nq
-      } = yq, bq = "legendary" === nq || "mythic" === nq, iq = (0, Yq.useRef)(null);
-      (0, Nm.e)(iq, "epic" === nq || bq || hq);
-      const [Zq, Mq] = (0, Yq.useState)(!1);
-      return !cq && Zq && Mq(!1), (0, Bq.jsxs)("div", {
-        ref: iq,
-        className: Oq()("StoreCharacterCard", `StoreCharacterCard${lq}`, jm[nq], {
-          StoreCharacterCardOwned: "owned" === Qq || "recipientOwns" === Qq,
-          StoreCharacterCardGift: eO(Qq),
-          StoreCharacterCardItem: void 0 === tq
+        t: Kb
+      } = (0, Ub.K)(), {
+        pack: Wb,
+        state: Cb
+      } = hb, db = aG.d[Wb], rb = (0, aG.g)(Wb), jb = (0, gG.m)(Wb), nb = AG.n[jb], Db = lU.has(jb), {
+        tier: xb
+      } = db, zb = "legendary" === xb || "mythic" === xb, gb = (0, Bb.useRef)(null);
+      (0, ZU.d)(gb, "epic" === xb || zb || Db);
+      const [ib, tb] = (0, Bb.useState)(!1);
+      return !Sb && ib && tb(!1), (0, Hb.jsxs)("div", {
+        ref: gb,
+        className: Gb()("StoreCharacterCard", `StoreCharacterCard${Ob}`, AU[xb], {
+          StoreCharacterCardOwned: "owned" === Cb || "recipientOwns" === Cb,
+          StoreCharacterCardGift: QG(Cb),
+          StoreCharacterCardItem: void 0 === rb
         }),
-        onPointerMove: qq => {
-          "mouse" !== qq.pointerType || 0 === qq.movementX && 0 === qq.movementY || !Aq || cq || void 0 === tq || Nq()
+        onPointerMove: bb => {
+          "mouse" !== bb.pointerType || 0 === bb.movementX && 0 === bb.movementY || !Yb || Sb || void 0 === rb || Zb()
         },
-        onPointerLeave: aq,
-        children: [(0, Bq.jsx)("div", {
+        onPointerLeave: Xb,
+        children: [(0, Hb.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: vq && (0, Bq.jsx)(vq, {
+          children: nb && (0, Hb.jsx)(nb, {
             simple: !0
           })
-        }), bq && (0, Bq.jsx)("div", {
+        }), zb && (0, Hb.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, Bq.jsxs)(fq.LinkPreserveSearch, {
+        }), (0, Hb.jsxs)(vb.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, cm.g)({
+          to: (0, SU.h)({
             kind: "pack",
-            pack: Pq
+            pack: Wb
           }),
-          "data-store-item": Pq,
-          onClick: qq => {
-            (0, um.e)(qq) && (qq.preventDefault(), Vq())
+          "data-store-item": Wb,
+          onClick: bb => {
+            (0, aU.c)(bb) && (bb.preventDefault(), pb())
           },
-          children: [(0, Bq.jsxs)("div", {
+          children: [(0, Hb.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, Bq.jsx)("div", {
+            children: [(0, Hb.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, Bq.jsx)("div", {
-              className: Oq()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: Zq
+            }), (0, Hb.jsx)("div", {
+              className: Gb()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: ib
               }),
               style: {
-                backgroundImage: `url(${(0,iO.r)(Pq)})`
+                backgroundImage: `url(${(0,gG.v)(Wb)})`
               }
-            }), cq && void 0 !== tq && (0, Bq.jsx)(dm, {
-              character: tq,
-              drawn: Zq,
+            }), Sb && void 0 !== rb && (0, Hb.jsx)(oU, {
+              character: rb,
+              drawn: ib,
               onDrawn: () => {
-                Mq(!0)
+                tb(!0)
               }
             })]
-          }), (0, Bq.jsx)("div", {
+          }), (0, Hb.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (Eq = yq.displayName) && void 0 !== Eq ? Eq : Pq
-          }), (0, Bq.jsx)(CO.b, {
-            tier: nq,
+            children: null !== (ub = db.displayName) && void 0 !== ub ? ub : Wb
+          }), (0, Hb.jsx)(TG.c, {
+            tier: xb,
             className: "StoreCharacterTier"
           })]
-        }), (0, Bq.jsx)("div", {
+        }), (0, Hb.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), hq && (0, Bq.jsx)("span", {
+        }), Db && (0, Hb.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, Bq.jsx)(Wm, {})
-        }), "owned" === Qq && (0, Bq.jsx)("span", {
+          children: (0, Hb.jsx)(wU, {})
+        }), "owned" === Cb && (0, Hb.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: oq("general:owned"),
-          "aria-label": oq("general:owned"),
-          children: (0, Bq.jsx)(xq.d, {
+          title: Kb("general:owned"),
+          "aria-label": Kb("general:owned"),
+          children: (0, Hb.jsx)(Lb.e, {
             name: "check"
           })
-        }), (0, Bq.jsx)("div", {
+        }), (0, Hb.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, Bq.jsx)(gm, {
-            state: Qq,
-            item: Pq,
-            price: (0, zq.f)(Pq),
-            busy: uq,
-            highlight: Wq,
-            onAct: dq,
-            onNeedRecipient: jq,
-            onLogin: Hq
+          children: (0, Hb.jsx)(hU, {
+            state: Cb,
+            item: Wb,
+            price: (0, eb.g)(Wb),
+            busy: ab,
+            highlight: wb,
+            onAct: ob,
+            onNeedRecipient: Ab,
+            onLogin: lb
           })
         })]
       })
     }
 
-    function Pm(qq) {
+    function WU(bb) {
       let {
-        tiles: Eq,
-        busy: gq,
-        highlightItem: lq,
-        onOpen: Oq,
-        onAct: mq,
-        onNeedRecipient: xq,
-        onLogin: Aq
-      } = qq;
-      const cq = (0, Bm.m)("storeCharacterCardFoil"),
-        uq = (0, Bm.m)("storeCharacterCardSpotlight"),
-        Wq = cq ? "Foil" : uq ? "Spotlight" : "Showcase",
-        [Nq] = (0, Yq.useState)(nO.i),
-        [aq, Vq] = (0, Yq.useState)(null);
-      return (0, Bq.jsx)("div", {
+        tiles: ub,
+        busy: hb,
+        highlightItem: Ob,
+        onOpen: Gb,
+        onAct: Ub,
+        onNeedRecipient: Lb,
+        onLogin: Yb
+      } = bb;
+      const Sb = (0, HU.i)("storeCharacterCardFoil"),
+        ab = (0, HU.i)("storeCharacterCardSpotlight"),
+        wb = Sb ? "Foil" : ab ? "Spotlight" : "Showcase",
+        [Zb] = (0, Bb.useState)(xG.g),
+        [Xb, pb] = (0, Bb.useState)(null);
+      return (0, Hb.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: Eq.map((qq => (0, Bq.jsx)(om, {
-          tile: qq,
-          design: Wq,
-          canGoLive: !Nq,
-          live: aq === qq.pack,
-          busy: gq,
-          highlight: lq === qq.pack,
+        children: ub.map((bb => (0, Hb.jsx)(KU, {
+          tile: bb,
+          design: wb,
+          canGoLive: !Zb,
+          live: Xb === bb.pack,
+          busy: hb,
+          highlight: Ob === bb.pack,
           onLiveStart: () => {
-            Vq(qq.pack)
+            pb(bb.pack)
           },
           onLiveEnd: () => {
-            Vq((Eq => Eq === qq.pack ? null : Eq))
+            pb((ub => ub === bb.pack ? null : ub))
           },
           onOpen: () => {
-            Oq(qq.pack)
+            Gb(bb.pack)
           },
           onAct: () => {
-            mq(qq.pack)
+            Ub(bb.pack)
           },
-          onNeedRecipient: xq,
+          onNeedRecipient: Lb,
           onLogin: () => {
-            Aq(qq.pack)
+            Yb(bb.pack)
           }
-        }, qq.pack)))
+        }, bb.pack)))
       })
     }
-    var Qm = gq(9326);
+    var CU = hb(9131);
 
-    function ym(qq) {
+    function dU(bb) {
       let {
-        title: Eq
-      } = qq;
-      return (0, Bq.jsx)("h2", {
+        title: ub
+      } = bb;
+      return (0, Hb.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, Bq.jsx)("span", {
+        children: (0, Hb.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: Eq
+          children: ub
         })
       })
     }
 
-    function tm(qq) {
+    function rU(bb) {
       let {
-        mountAtOnce: Eq,
-        children: gq
-      } = qq;
-      const lq = (0, Yq.useRef)(null),
-        [Oq, mq] = (0, Yq.useState)(Eq),
-        xq = (0, Qm.d)();
-      return (0, Yq.useLayoutEffect)((() => {
-        const qq = lq.current;
-        qq && qq.getBoundingClientRect().top < qq.parentElement.getBoundingClientRect().bottom && mq(!0)
-      }), []), Oq || xq ? (0, Bq.jsx)(Bq.Fragment, {
-        children: gq
-      }) : (0, Bq.jsx)("div", {
-        ref: lq
+        mountAtOnce: ub,
+        children: hb
+      } = bb;
+      const Ob = (0, Bb.useRef)(null),
+        [Gb, Ub] = (0, Bb.useState)(ub),
+        Lb = (0, CU.b)();
+      return (0, Bb.useLayoutEffect)((() => {
+        const bb = Ob.current;
+        bb && bb.getBoundingClientRect().top < bb.parentElement.getBoundingClientRect().bottom && Ub(!0)
+      }), []), Gb || Lb ? (0, Hb.jsx)(Hb.Fragment, {
+        children: hb
+      }) : (0, Hb.jsx)("div", {
+        ref: Ob
       })
     }
 
-    function rm(qq) {
+    function jU(bb) {
       let {
-        layout: Eq,
-        mountAtOnce: gq,
-        bundleGift: Yq,
-        superRankTotalDays: lq,
-        busy: Oq,
-        highlightItem: xq,
-        onOpen: Aq,
-        onAct: cq,
-        onNeedRecipient: uq,
-        onLogin: Wq
-      } = qq;
+        layout: ub,
+        mountAtOnce: hb,
+        bundleGift: Bb,
+        superRankTotalDays: Ob,
+        busy: Gb,
+        highlightItem: Lb,
+        onOpen: Yb,
+        onAct: Sb,
+        onNeedRecipient: ab,
+        onLogin: wb
+      } = bb;
       const {
-        t: Nq
-      } = (0, mq.v)(), aq = Eq.packs.filter((qq => void 0 === (0, uO.h)(qq.pack) && !(0, uO.m)(qq.pack))), Vq = Eq.packs.filter((qq => void 0 !== (0, uO.h)(qq.pack))), dq = Eq.packs.filter((qq => (0, uO.m)(qq.pack)));
-      return (0, Bq.jsxs)(Bq.Fragment, {
-        children: [(0, Bq.jsx)(Am.d, {
+        t: Zb
+      } = (0, Ub.K)(), Xb = ub.packs.filter((bb => void 0 === (0, aG.g)(bb.pack) && !(0, aG.k)(bb.pack))), pb = ub.packs.filter((bb => void 0 !== (0, aG.g)(bb.pack))), ob = ub.packs.filter((bb => (0, aG.k)(bb.pack)));
+      return (0, Hb.jsxs)(Hb.Fragment, {
+        children: [(0, Hb.jsx)(YU.c, {
           className: "StoreSuperGems",
-          gift: Yq,
-          highlightSku: xq
-        }), (0, Bq.jsx)(ym, {
-          title: Nq("store:rank")
-        }), (0, Bq.jsx)(Om, {
-          state: Eq.superRank.state,
-          urgent: Eq.superRank.urgent,
-          daysLeft: Eq.superRankDaysLeft,
-          totalDays: lq,
-          recipientHasSuperRank: Eq.recipientHasSuperRank,
-          busy: Oq,
-          highlight: "superRank" === xq,
+          gift: Bb,
+          highlightSku: Lb
+        }), (0, Hb.jsx)(dU, {
+          title: Zb("store:rank")
+        }), (0, Hb.jsx)(GU, {
+          state: ub.superRank.state,
+          urgent: ub.superRank.urgent,
+          daysLeft: ub.superRankDaysLeft,
+          totalDays: Ob,
+          recipientHasSuperRank: ub.recipientHasSuperRank,
+          busy: Gb,
+          highlight: "superRank" === Lb,
           onOpen: () => {
-            Aq("superRank")
+            Yb("superRank")
           },
           onAct: () => {
-            cq("superRank")
+            Sb("superRank")
           },
-          onNeedRecipient: uq,
+          onNeedRecipient: ab,
           onLogin: () => {
-            Wq("superRank")
+            wb("superRank")
           }
-        }), (0, Bq.jsxs)(tm, {
-          mountAtOnce: gq,
-          children: [(0, Bq.jsx)(ym, {
-            title: Nq("store:bundles")
-          }), (0, Bq.jsx)("div", {
+        }), (0, Hb.jsxs)(rU, {
+          mountAtOnce: hb,
+          children: [(0, Hb.jsx)(dU, {
+            title: Zb("store:bundles")
+          }), (0, Hb.jsx)("div", {
             className: "StorePackGrid",
-            children: aq.map((qq => (0, Bq.jsx)(xm, {
-              pack: qq.pack,
-              state: qq.state,
-              busy: Oq,
+            children: Xb.map((bb => (0, Hb.jsx)(LU, {
+              pack: bb.pack,
+              state: bb.state,
+              busy: Gb,
               onOpen: () => {
-                Aq(qq.pack)
+                Yb(bb.pack)
               },
               onAct: () => {
-                cq(qq.pack)
+                Sb(bb.pack)
               },
-              onNeedRecipient: uq,
+              onNeedRecipient: ab,
               onLogin: () => {
-                Wq(qq.pack)
+                wb(bb.pack)
               }
-            }, qq.pack)))
-          }), (0, Bq.jsxs)(tm, {
-            mountAtOnce: gq,
-            children: [(0, Bq.jsx)(ym, {
-              title: Nq("store:characters")
-            }), (0, Bq.jsx)(Pm, {
-              tiles: Vq,
-              busy: Oq,
-              highlightItem: xq,
-              onOpen: Aq,
-              onAct: cq,
-              onNeedRecipient: uq,
-              onLogin: Wq
-            }), dq.length > 0 && (0, Bq.jsxs)(Bq.Fragment, {
-              children: [(0, Bq.jsx)(ym, {
-                title: Nq("store:premiumItems")
-              }), (0, Bq.jsx)(Pm, {
-                tiles: dq,
-                busy: Oq,
-                highlightItem: xq,
-                onOpen: Aq,
-                onAct: cq,
-                onNeedRecipient: uq,
-                onLogin: Wq
+            }, bb.pack)))
+          }), (0, Hb.jsxs)(rU, {
+            mountAtOnce: hb,
+            children: [(0, Hb.jsx)(dU, {
+              title: Zb("store:characters")
+            }), (0, Hb.jsx)(WU, {
+              tiles: pb,
+              busy: Gb,
+              highlightItem: Lb,
+              onOpen: Yb,
+              onAct: Sb,
+              onNeedRecipient: ab,
+              onLogin: wb
+            }), ob.length > 0 && (0, Hb.jsxs)(Hb.Fragment, {
+              children: [(0, Hb.jsx)(dU, {
+                title: Zb("store:premiumItems")
+              }), (0, Hb.jsx)(WU, {
+                tiles: ob,
+                busy: Gb,
+                highlightItem: Lb,
+                onOpen: Yb,
+                onAct: Sb,
+                onNeedRecipient: ab,
+                onLogin: wb
               })]
             })]
           })]
@@ -6562,792 +6562,792 @@ export const modules = {
       })
     }
 
-    function hm(qq) {
+    function nU(bb) {
       let {
-        state: Eq,
-        mode: gq,
-        giftName: Yq,
-        busy: lq,
-        highlight: Oq,
-        purchaseError: xq,
-        onBack: Aq,
-        onChooseRecipient: uq,
-        onAct: Wq,
-        onLogin: Nq
-      } = qq;
+        state: ub,
+        mode: hb,
+        giftName: Bb,
+        busy: Ob,
+        highlight: Gb,
+        purchaseError: Lb,
+        onBack: Yb,
+        onChooseRecipient: ab,
+        onAct: wb,
+        onLogin: Zb
+      } = bb;
       const {
-        t: aq
-      } = (0, mq.v)(), Vq = wq("gift" !== gq);
-      return (0, Bq.jsx)(sO, {
-        onBack: Aq,
-        recipient: "gift" === gq && (0, Bq.jsxs)(Bq.Fragment, {
-          children: [Yq && (0, Bq.jsxs)("span", {
+        t: Xb
+      } = (0, Ub.K)(), pb = fb("gift" !== hb);
+      return (0, Hb.jsx)(VG, {
+        onBack: Yb,
+        recipient: "gift" === hb && (0, Hb.jsxs)(Hb.Fragment, {
+          children: [Bb && (0, Hb.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: aq("store:giftFor", {
-              name: Yq
+            title: Xb("store:giftFor", {
+              name: Bb
             }),
-            children: [oO.b, " ", aq("store:giftFor", {
-              name: Yq
+            children: [KG.d, " ", Xb("store:giftFor", {
+              name: Bb
             })]
-          }), !Yq && (0, Bq.jsxs)("div", {
-            ...(0, cq.V)(),
+          }), !Bb && (0, Hb.jsxs)("div", {
+            ...(0, Sb.V)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: uq,
-            children: [oO.b, " ", aq("store:chooseRecipient")]
+            onClick: ab,
+            children: [KG.d, " ", Xb("store:chooseRecipient")]
           })]
         }),
-        cta: (0, Bq.jsx)(gm, {
-          state: Eq,
+        cta: (0, Hb.jsx)(hU, {
+          state: ub,
           item: "superRank",
-          price: zq.n.price,
-          busy: lq,
-          highlight: Oq,
-          onAct: Wq,
-          onNeedRecipient: uq,
-          onLogin: Nq
+          price: eb.o.price,
+          busy: Ob,
+          highlight: Gb,
+          onAct: wb,
+          onNeedRecipient: ab,
+          onLogin: Zb
         }),
-        afterCta: (0, Bq.jsxs)(Bq.Fragment, {
-          children: [Vq && (0, Bq.jsx)("span", {
+        afterCta: (0, Hb.jsxs)(Hb.Fragment, {
+          children: [pb && (0, Hb.jsx)("span", {
             className: "StoreTileNote",
-            children: Vq
-          }), xq && (0, Bq.jsx)("span", {
+            children: pb
+          }), Lb && (0, Hb.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: aq(xq)
+            children: Xb(Lb)
           })]
         })
       })
     }
-    var nm = gq(147);
-    const bm = nm.i("kind", [nm.s({
-      kind: nm.n("refused"),
-      heldTierId: nm.M(),
-      until: nm.q()
-    }), nm.s({
-      kind: nm.n("refund"),
-      tierId: nm.M(),
-      refundedMs: nm.q(),
-      forfeitedMs: nm.q(),
-      premiumCurrency: nm.q()
-    }), nm.s({
-      kind: nm.n("none")
+    var DU = hb(127);
+    const xU = DU.m("kind", [DU.C({
+      kind: DU.u("refused"),
+      heldTierId: DU.W(),
+      until: DU.y()
+    }), DU.C({
+      kind: DU.u("refund"),
+      tierId: DU.W(),
+      refundedMs: DU.y(),
+      forfeitedMs: DU.y(),
+      premiumCurrency: DU.y()
+    }), DU.C({
+      kind: DU.u("none")
     })]);
-    async function im(qq) {
-      const Eq = await (0, bq.postJsonWithMetricsCookiesAndJsonResponse)(`${iq.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
-        productId: qq
+    async function zU(bb) {
+      const ub = await (0, zb.postJsonWithMetricsCookiesAndJsonResponse)(`${gb.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
+        productId: bb
       }, {
         retries: 1
       });
-      return bm.parse(Eq)
+      return xU.parse(ub)
     }
-    var Zm = gq(2951),
-      fm = gq(2981);
+    var gU = hb(2834),
+      iU = hb(2866);
 
-    function Mm(qq, Eq) {
-      const gq = Math.max(1, Math.round(Eq / Gq.k));
-      return [1 === gq ? `${qq}OneDay` : qq, {
-        days: gq.toLocaleString()
+    function vU(bb, ub) {
+      const hb = Math.max(1, Math.round(ub / Mb.g));
+      return [1 === hb ? `${bb}OneDay` : bb, {
+        days: hb.toLocaleString()
       }]
     }
 
-    function Tm() {
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, Jq.purchasesAllowed)() ? (0, Bq.jsx)(zm, {}) : null
+    function tU() {
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, Ib.purchasesAllowed)() ? (0, Hb.jsx)(JU, {}) : null
     }
 
-    function zm() {
+    function JU() {
       const {
-        t: qq
-      } = (0, mq.v)(), {
-        userContext: Eq
-      } = (0, aq.c)(), {
-        purchaseUnderWay: gq,
-        notice: lq,
-        subscribe: Oq
-      } = (0, Zm.e)(), [xq, Aq] = (0, Yq.useState)(null), [uq, Wq] = (0, Yq.useState)(0), [Nq, Vq] = (0, Yq.useState)(!1), dq = (0, Yq.useRef)(!0), jq = Eq !== bq.NULL_USER_CONTEXT, Hq = null !== xq && xq.loadedFor === Eq ? xq.offer : null, oq = null === lq || void 0 === lq ? void 0 : lq.pendingIntentId, Pq = (0, Yq.useRef)(oq);
+        t: bb
+      } = (0, Ub.K)(), {
+        userContext: ub
+      } = (0, Xb.d)(), {
+        purchaseUnderWay: hb,
+        notice: Ob,
+        subscribe: Gb
+      } = (0, gU.c)(), [Lb, Yb] = (0, Bb.useState)(null), [ab, wb] = (0, Bb.useState)(0), [Zb, pb] = (0, Bb.useState)(!1), ob = (0, Bb.useRef)(!0), Ab = ub !== zb.NULL_USER_CONTEXT, lb = null !== Lb && Lb.loadedFor === ub ? Lb.offer : null, Kb = null === Ob || void 0 === Ob ? void 0 : Ob.pendingIntentId, Wb = (0, Bb.useRef)(Kb);
 
-      function Qq() {
-        Wq((qq => qq + 1))
+      function Cb() {
+        wb((bb => bb + 1))
       }
-      async function yq(qq) {
-        Vq(!1), await Oq(qq), dq.current && Qq()
+      async function db(bb) {
+        pb(!1), await Gb(bb), ob.current && Cb()
       }
-      if ((0, Yq.useEffect)((() => (dq.current = !0, () => {
-          dq.current = !1
-        })), []), (0, Yq.useEffect)((() => {
-          void 0 !== Pq.current && void 0 === oq && Qq(), Pq.current = oq
-        }), [oq]), (0, Yq.useEffect)((() => {
-          if (!jq) return;
-          let qq = !1;
-          return Vq(!1), async function() {
+      if ((0, Bb.useEffect)((() => (ob.current = !0, () => {
+          ob.current = !1
+        })), []), (0, Bb.useEffect)((() => {
+          void 0 !== Wb.current && void 0 === Kb && Cb(), Wb.current = Kb
+        }), [Kb]), (0, Bb.useEffect)((() => {
+          if (!Ab) return;
+          let bb = !1;
+          return pb(!1), async function() {
             const {
-              offering: qq
-            } = await (0, xE.d)().getOfferings("superRankPage"), Eq = null === qq || void 0 === qq ? void 0 : qq.packages.find((qq => null !== qq.price));
-            return void 0 === Eq ? {
+              offering: bb
+            } = await (0, Lu.g)().getOfferings("superRankPage"), ub = null === bb || void 0 === bb ? void 0 : bb.packages.find((bb => null !== bb.price));
+            return void 0 === ub ? {
               kind: "unavailable"
             } : {
               kind: "loaded",
-              pkg: Eq,
-              preview: await im(Eq.productId)
+              pkg: ub,
+              preview: await zU(ub.productId)
             }
-          }().catch((qq => (console.error("Billing: loading the Super Rank subscription or its preview failed:", qq), {
+          }().catch((bb => (console.error("Billing: loading the Super Rank subscription or its preview failed:", bb), {
             kind: "loadFailed"
-          }))).then((gq => {
-            qq || Aq((qq => "loadFailed" === gq.kind && (null === qq || void 0 === qq ? void 0 : qq.loadedFor) === Eq ? qq : {
-              loadedFor: Eq,
-              offer: gq
+          }))).then((hb => {
+            bb || Yb((bb => "loadFailed" === hb.kind && (null === bb || void 0 === bb ? void 0 : bb.loadedFor) === ub ? bb : {
+              loadedFor: ub,
+              offer: hb
             }))
           })), () => {
-            qq = !0
+            bb = !0
           }
-        }), [Eq, jq, uq]), null === Hq) return null;
-      if ("loaded" !== Hq.kind) return (0, Bq.jsx)(fm.i, {
+        }), [ub, Ab, ab]), null === lb) return null;
+      if ("loaded" !== lb.kind) return (0, Hb.jsx)(iU.k, {
         notice: {
           kind: "error",
-          key: "unavailable" === Hq.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === lb.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: tq,
-        preview: rq
-      } = Hq;
-      if ("refused" === rq.kind) return (0, Bq.jsx)(fm.i, {
+        pkg: rb,
+        preview: jb
+      } = lb;
+      if ("refused" === jb.kind) return (0, Hb.jsx)(iU.k, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(rq.until).toLocaleDateString()
+            date: new Date(jb.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const vq = (0, Am.g)(tq.price);
-      if (Nq && "refund" === rq.kind) {
+      const nb = (0, YU.f)(rb.price);
+      if (Zb && "refund" === jb.kind) {
         const {
-          refundedMs: Eq,
-          forfeitedMs: Yq,
-          premiumCurrency: lq
-        } = rq, Oq = Yq + (0 === lq ? Eq : 0), [mq, xq] = Mm("payments:subscribeRefundsGemRank", Eq), [Aq, uq] = Mm("payments:subscribeForfeitsGemRank", Oq);
-        return (0, Bq.jsxs)("div", {
+          refundedMs: ub,
+          forfeitedMs: Bb,
+          premiumCurrency: Ob
+        } = jb, Gb = Bb + (0 === Ob ? ub : 0), [Ub, Lb] = vU("payments:subscribeRefundsGemRank", ub), [Yb, ab] = vU("payments:subscribeForfeitsGemRank", Gb);
+        return (0, Hb.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, Bq.jsx)("div", {
-            children: qq("payments:subscribeEndsGemRank")
-          }), lq > 0 && (0, Bq.jsx)("div", {
-            children: qq(mq, {
-              ...xq,
-              amount: lq.toLocaleString()
+          children: [(0, Hb.jsx)("div", {
+            children: bb("payments:subscribeEndsGemRank")
+          }), Ob > 0 && (0, Hb.jsx)("div", {
+            children: bb(Ub, {
+              ...Lb,
+              amount: Ob.toLocaleString()
             })
-          }), Oq > 0 && (0, Bq.jsx)("div", {
-            children: qq(Aq, uq)
-          }), (0, Bq.jsxs)("div", {
+          }), Gb > 0 && (0, Hb.jsx)("div", {
+            children: bb(Yb, ab)
+          }), (0, Hb.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, Bq.jsx)(cq.i, {
+            children: [(0, Hb.jsx)(Sb.g, {
               onClick: () => {
-                Vq(!1)
+                pb(!1)
               },
-              children: qq("general:cancel")
-            }), (0, Bq.jsx)(cq.p, {
+              children: bb("general:cancel")
+            }), (0, Hb.jsx)(Sb.m, {
               onClick: () => {
-                yq(tq)
+                db(rb)
               },
-              loading: gq,
-              children: qq("payments:subscribeContinue", {
-                price: vq
+              loading: hb,
+              children: bb("payments:subscribeContinue", {
+                price: nb
               })
             })]
           })]
         })
       }
-      return (0, Bq.jsxs)("div", {
+      return (0, Hb.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, Bq.jsx)(fm.i, {
-          notice: lq,
+        children: [(0, Hb.jsx)(iU.k, {
+          notice: Ob,
           className: "SmallTextBold"
-        }), (0, Bq.jsx)(fm.d, {
+        }), (0, Hb.jsx)(iU.d, {
           className: "SmallTextBold"
-        }), (0, Bq.jsx)(cq.p, {
+        }), (0, Hb.jsx)(Sb.m, {
           onClick: () => {
-            "refund" === rq.kind ? Vq(!0) : yq(tq)
+            "refund" === jb.kind ? pb(!0) : db(rb)
           },
-          disabled: void 0 !== oq,
-          loading: gq,
-          children: qq("payments:subscribeToSuperRank", {
-            price: vq
+          disabled: void 0 !== Kb,
+          loading: hb,
+          children: bb("payments:subscribeToSuperRank", {
+            price: nb
           })
         })]
       })
     }
-    const Sm = {
+    const eU = {
       kind: "board"
     };
-    let pm = !1;
+    let NU = !1;
 
-    function Gm(qq) {
-      return "found" === qq.status || "error" === qq.status && "store:giftRecipientLookupFailed" === qq.error ? qq.name : null
-    }(0, Lq.u)(BO.prefetchBillingOfferings);
-    const Lm = (0, Yq.memo)((function(qq) {
-      var Eq;
+    function sU(bb) {
+      return "found" === bb.status || "error" === bb.status && "store:giftRecipientLookupFailed" === bb.error ? bb.name : null
+    }(0, mb.u)(HG.prefetchBillingOfferings);
+    const MU = (0, Bb.memo)((function(bb) {
+      var ub;
       let {
-        show: lq
-      } = qq;
+        show: Ob
+      } = bb;
       const {
-        t: xq
-      } = (0, mq.v)(), {
-        userContext: Aq
-      } = (0, aq.c)(), cq = Aq !== bq.NULL_USER_CONTEXT, uq = tO(Aq), [Wq, Nq] = (0, dq.b)(), {
-        page: Vq,
-        urlMode: jq,
-        goTo: Hq
-      } = (0, rO.g)(), oq = function(qq) {
-        return "superRank" === qq.kind ? "superRank" : "pack" === qq.kind ? qq.pack : null
-      }(Vq), {
-        openEverythingMenuName: Pq,
-        gameState: Qq
-      } = (0, rq.j)(["openEverythingMenuName", "gameState"]), yq = null !== Pq;
-      ! function(qq, Eq) {
-        const [lq] = (0, Yq.useState)(nO.i), [Oq, mq] = (0, Yq.useState)(!1);
-        lq && Eq && !Oq && mq(!0);
-        const xq = (0, OY.q)(),
-          Aq = lq && Oq && qq && !xq;
-        (0, Yq.useEffect)((() => {
-          if (!Aq) return;
-          let qq = null,
-            Eq = null,
-            Yq = null;
-          const lq = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, xE.d)().purchaseUnderWay,
-            Oq = () => {
-              var gq;
-              null === (gq = Yq) || void 0 === gq || gq(), Yq = null, null !== qq && (clearTimeout(qq), qq = null), null !== Eq && (clearTimeout(Eq), Eq = null)
+        t: Lb
+      } = (0, Ub.K)(), {
+        userContext: Yb
+      } = (0, Xb.d)(), Sb = Yb !== zb.NULL_USER_CONTEXT, ab = rG(Yb), [wb, Zb] = (0, ob.e)(), {
+        page: pb,
+        urlMode: Ab,
+        goTo: lb
+      } = (0, jG.i)(), Kb = function(bb) {
+        return "superRank" === bb.kind ? "superRank" : "pack" === bb.kind ? bb.pack : null
+      }(pb), {
+        openEverythingMenuName: Wb,
+        gameState: Cb
+      } = (0, jb.j)(["openEverythingMenuName", "gameState"]), db = null !== Wb;
+      ! function(bb, ub) {
+        const [Ob] = (0, Bb.useState)(xG.g), [Gb, Ub] = (0, Bb.useState)(!1);
+        Ob && ub && !Gb && Ub(!0);
+        const Lb = (0, GB.r)(),
+          Yb = Ob && Gb && bb && !Lb;
+        (0, Bb.useEffect)((() => {
+          if (!Yb) return;
+          let bb = null,
+            ub = null,
+            Bb = null;
+          const Ob = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, Lu.g)().purchaseUnderWay,
+            Gb = () => {
+              var hb;
+              null === (hb = Bb) || void 0 === hb || hb(), Bb = null, null !== bb && (clearTimeout(bb), bb = null), null !== ub && (clearTimeout(ub), ub = null)
             },
-            mq = () => {
-              (0, vO.t)(!1), (0, vO.p)(!1), Oq(), qq = setTimeout((() => {
-                qq = null, Yq = (0, hO.e)((() => {
-                  Yq = null, lq() ? mq() : ((0, vO.t)(!0), Eq = setTimeout((() => {
-                    Eq = null, Yq = (0, hO.e)((() => {
-                      Yq = null, lq() ? mq() : (0, vO.p)(!0)
+            Ub = () => {
+              (0, nG.p)(!1), (0, nG.o)(!1), Gb(), bb = setTimeout((() => {
+                bb = null, Bb = (0, DG.e)((() => {
+                  Bb = null, Ob() ? Ub() : ((0, nG.p)(!0), ub = setTimeout((() => {
+                    ub = null, Bb = (0, DG.e)((() => {
+                      Bb = null, Ob() ? Ub() : (0, nG.o)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => gq(4486))).then((qq => {
-                    qq.startBackgroundGameSetup()
-                  }), (qq => {
-                    console.warn("Background game setup: its chunk failed to load", qq)
+                  }), 3e3), Promise.resolve().then((() => hb(4420))).then((bb => {
+                    bb.startBackgroundGameSetup()
+                  }), (bb => {
+                    console.warn("Background game setup: its chunk failed to load", bb)
                   })))
                 }))
               }), 2e3)
             };
-          for (const gq of bO) window.addEventListener(gq, mq, {
+          for (const hb of zG) window.addEventListener(hb, Ub, {
             capture: !0,
             passive: !0
           });
-          return mq(), () => {
-            for (const qq of bO) window.removeEventListener(qq, mq, {
+          return Ub(), () => {
+            for (const bb of zG) window.removeEventListener(bb, Ub, {
               capture: !0
             });
-            Oq(), (0, vO.t)(!1), (0, vO.p)(!1)
+            Gb(), (0, nG.p)(!1), (0, nG.o)(!1)
           }
-        }), [Aq])
-      }(lq && yq, "pack" === Vq.kind);
-      const tq = "landingPage" === Qq;
-      (0, Yq.useEffect)((() => {
-        yq && (0, BO.prefetchBillingOfferings)()
-      }), [yq]), (0, Yq.useEffect)((() => {
-        yq && !lq && tq && (0, iO.v)()
-      }), [yq, lq, tq]);
-      const [vq, hq] = (0, Yq.useState)(0), [nq, iq] = (0, Yq.useState)(null), [Zq, fq] = (0, Yq.useState)(null), [Mq, Tq] = (0, Yq.useState)(null), [Sq, pq] = (0, Yq.useState)(null), Gq = (0, Yq.useRef)(null), kq = (0, Yq.useRef)(null), Rq = (0, Yq.useRef)(null), Uq = (0, Yq.useRef)(!1), Fq = (0, Lq.A)(), sq = (0, Yq.useRef)(0), Xq = (0, Yq.useRef)(!1);
+        }), [Yb])
+      }(Ob && db, "pack" === pb.kind);
+      const rb = "landingPage" === Cb;
+      (0, Bb.useEffect)((() => {
+        db && (0, HG.prefetchBillingOfferings)()
+      }), [db]), (0, Bb.useEffect)((() => {
+        db && !Ob && rb && (0, gG.y)()
+      }), [db, Ob, rb]);
+      const [nb, Db] = (0, Bb.useState)(0), [xb, gb] = (0, Bb.useState)(null), [ib, vb] = (0, Bb.useState)(null), [tb, Jb] = (0, Bb.useState)(null), [Nb, sb] = (0, Bb.useState)(null), Mb = (0, Bb.useRef)(null), Pb = (0, Bb.useRef)(null), qb = (0, Bb.useRef)(null), Eb = (0, Bb.useRef)(!1), yb = (0, mb.B)(), Vb = (0, Bb.useRef)(0), Fb = (0, Bb.useRef)(!1);
 
-      function wq() {
-        hq((qq => qq + 1))
-      }(0, Yq.useEffect)((() => {
-        if (lq) {
-          if (pm = !0, (0, Lq.j)(), Fq && Fq.seq !== sq.current) {
-            var qq;
-            sq.current = Fq.seq, "loginResume" !== Fq.source && (0, Lq.z)();
-            const Eq = (0, Lq.b)(Fq);
-            jq || Hq(Eq), pq(null !== (qq = Fq.highlight) && void 0 !== qq ? qq : null), fq(null), "gift" === Fq.mode && Fq.giftRecipientName ? uq.choose(Fq.giftRecipientName, "prefilled") : "current" !== Fq.mode && uq.clear(), "gift" !== Fq.mode || Fq.giftRecipientName || wq(), (0, eq.reportAnalyticsClick)({
+      function fb() {
+        Db((bb => bb + 1))
+      }(0, Bb.useEffect)((() => {
+        if (Ob) {
+          if (NU = !0, (0, mb.m)(), yb && yb.seq !== Vb.current) {
+            var bb;
+            Vb.current = yb.seq, "loginResume" !== yb.source && (0, mb.A)();
+            const ub = (0, mb.d)(yb);
+            Ab || lb(ub), sb(null !== (bb = yb.highlight) && void 0 !== bb ? bb : null), vb(null), "gift" === yb.mode && yb.giftRecipientName ? ab.choose(yb.giftRecipientName, "prefilled") : "current" !== yb.mode && ab.clear(), "gift" !== yb.mode || yb.giftRecipientName || fb(), (0, Qb.reportAnalyticsClick)({
               id: "store.open",
-              value: Fq.source
+              value: yb.source
             })
-          } else Xq.current || (0, eq.reportAnalyticsClick)({
+          } else Fb.current || (0, Qb.reportAnalyticsClick)({
             id: "store.open",
             value: "menuTab"
           });
-          Xq.current = !0
-        } else Xq.current = !1
-      }), [lq, Fq]), (0, Yq.useEffect)((() => {
-        if (!Sq) return;
-        const qq = setTimeout((() => {
-          pq(null)
+          Fb.current = !0
+        } else Fb.current = !1
+      }), [Ob, yb]), (0, Bb.useEffect)((() => {
+        if (!Nb) return;
+        const bb = setTimeout((() => {
+          sb(null)
         }), 4e3);
         return () => {
-          clearTimeout(qq)
+          clearTimeout(bb)
         }
-      }), [Sq]), (0, Yq.useLayoutEffect)((() => {
-        const qq = Gq.current;
-        if (!lq || !qq) return kq.current = null, void(Rq.current = null);
-        var Eq;
-        if (oq) kq.current = oq, null === (Eq = qq.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === Eq || Eq.focus();
-        else if (kq.current) {
-          const Eq = Rq.current;
-          null !== Eq && (qq.scrollTop = Eq);
-          const gq = qq.querySelector(`[data-store-item="${kq.current}"]`);
-          if (gq) {
-            const Yq = gq.getBoundingClientRect(),
-              lq = qq.getBoundingClientRect();
-            gq.focus({
-              preventScroll: null !== Eq && Yq.bottom > lq.top && Yq.top < lq.bottom
+      }), [Nb]), (0, Bb.useLayoutEffect)((() => {
+        const bb = Mb.current;
+        if (!Ob || !bb) return Pb.current = null, void(qb.current = null);
+        var ub;
+        if (Kb) Pb.current = Kb, null === (ub = bb.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === ub || ub.focus();
+        else if (Pb.current) {
+          const ub = qb.current;
+          null !== ub && (bb.scrollTop = ub);
+          const hb = bb.querySelector(`[data-store-item="${Pb.current}"]`);
+          if (hb) {
+            const Bb = hb.getBoundingClientRect(),
+              Ob = bb.getBoundingClientRect();
+            hb.focus({
+              preventScroll: null !== ub && Bb.bottom > Ob.top && Bb.top < Ob.bottom
             })
           }
-          kq.current = null
+          Pb.current = null
         }
-      }), [oq, lq]), (0, Yq.useEffect)((() => {
-        fq(null)
-      }), [uq.query]), (0, Yq.useEffect)((() => {
-        if (!Mq) return;
-        const qq = setTimeout((() => {
-          Tq(null)
+      }), [Kb, Ob]), (0, Bb.useEffect)((() => {
+        vb(null)
+      }), [ab.query]), (0, Bb.useEffect)((() => {
+        if (!tb) return;
+        const bb = setTimeout((() => {
+          Jb(null)
         }), 8e3);
         return () => {
-          clearTimeout(qq)
+          clearTimeout(bb)
         }
-      }), [Mq]);
-      const Kq = Aq.superRankInfo,
-        Cq = Aq.isLoggedIn() || (0, Jq.guestsMayBuy)(),
-        Iq = Aq.getOwnedCosmeticPacks(),
-        Dq = (0, oO.l)(uq.query),
-        qE = (0, oO.c)({
-          mode: Dq,
-          loggedIn: cq ? Cq : null,
-          superRankInfo: Kq,
+      }), [tb]);
+      const kb = Yb.superRankInfo,
+        Tb = Yb.isLoggedIn() || (0, Ib.guestsMayBuy)(),
+        cb = Yb.getOwnedCosmeticPacks(),
+        Rb = (0, KG.n)(ab.query),
+        bu = (0, KG.g)({
+          mode: Rb,
+          loggedIn: Sb ? Tb : null,
+          superRankInfo: kb,
           now: Date.now(),
-          ownedPacks: Iq,
-          packs: uO.w,
-          recipient: uq.recipient
+          ownedPacks: cb,
+          packs: aG.v,
+          recipient: ab.recipient
         });
-      (0, Yq.useEffect)((() => {
-        if (!Cq || !lq) return;
-        const qq = (0, Lq.z)(),
-          Eq = qq && (0, oO.h)(qq, uO.w);
-        qq && Eq && ((0, eq.reportAnalyticsClick)({
+      (0, Bb.useEffect)((() => {
+        if (!Tb || !Ob) return;
+        const bb = (0, mb.A)(),
+          ub = bb && (0, KG.l)(bb, aG.v);
+        bb && ub && ((0, Qb.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: qq.item
-        }), (0, Lq.n)(Eq))
-      }), [Cq, lq]);
-      const EE = (0, oO.p)({
-        superRankDaysLeft: qE.superRankDaysLeft,
-        openedThisSession: pm || lq,
-        seenNewItems: (0, Lq.f)()
+          value: bb.item
+        }), (0, mb.o)(ub))
+      }), [Tb, Ob]);
+      const uu = (0, KG.p)({
+        superRankDaysLeft: bu.superRankDaysLeft,
+        openedThisSession: NU || Ob,
+        seenNewItems: (0, mb.k)()
       });
-      if ((0, Yq.useEffect)((() => {
-          (0, Lq.w)(EE)
-        }), [EE]), !lq || !(0, Jq.purchasesAllowed)()) return null;
-      const gE = Nq > Wq && Wq <= 700,
-        YE = !gE && Nq <= 420,
-        lE = "gift" === Dq ? Gm(uq.recipient) : null,
-        OE = null !== nq;
+      if ((0, Bb.useEffect)((() => {
+          (0, mb.y)(uu)
+        }), [uu]), !Ob || !(0, Ib.purchasesAllowed)()) return null;
+      const hu = Zb > wb && wb <= 700,
+        Bu = !hu && Zb <= 420,
+        Ou = "gift" === Rb ? sU(ab.recipient) : null,
+        Gu = null !== xb;
 
-      function mE(qq) {
-        (0, NO.c)(qq, "gift" === Dq ? uq.query.trim() : null)
+      function Uu(bb) {
+        (0, ZG.b)(bb, "gift" === Rb ? ab.query.trim() : null)
       }
 
-      function AE(qq, Eq) {
-        (0, eq.reportAnalyticsClick)({
+      function Yu(bb, ub) {
+        (0, Qb.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${Eq?"gift":"self"}:${qq}`
-        }), Eq && (uq.recordGift(Eq.name, qq), cE(Eq))
+          value: `${ub?"gift":"self"}:${bb}`
+        }), ub && (ab.recordGift(ub.name, bb), Su(ub))
       }
 
-      function cE(qq) {
-        ! function(qq) {
+      function Su(bb) {
+        ! function(bb) {
           try {
-            sE.i.setItem(PO, (0, oO.t)(yO(), qq))
+            Vu.j.setItem(WG, (0, KG.w)(dG(), bb))
           } catch {}
         }({
-          name: qq.name,
-          cosmetics: qq.cosmetics
-        }), Hq(Sm), Tq((Eq => {
-          var gq;
+          name: bb.name,
+          cosmetics: bb.cosmetics
+        }), lb(eU), Jb((ub => {
+          var hb;
           return {
-            name: qq.name,
-            seq: (null !== (gq = null === Eq || void 0 === Eq ? void 0 : Eq.seq) && void 0 !== gq ? gq : 0) + 1
+            name: bb.name,
+            seq: (null !== (hb = null === ub || void 0 === ub ? void 0 : ub.seq) && void 0 !== hb ? hb : 0) + 1
           }
         }))
       }
-      async function uE(qq) {
-        var Eq, gq;
-        if (Uq.current) return;
-        if (!Cq) return void mE(qq);
-        fq(null), pq(null);
-        const Yq = "gift" === Dq ? {
-          name: Gm(uq.recipient),
-          cosmetics: uq.recipientCosmetics
+      async function au(bb) {
+        var ub, hb;
+        if (Eb.current) return;
+        if (!Tb) return void Uu(bb);
+        vb(null), sb(null);
+        const Bb = "gift" === Rb ? {
+          name: sU(ab.recipient),
+          cosmetics: ab.recipientCosmetics
         } : null;
-        if (Yq && !Yq.name) return void wq();
-        const lq = "superRank" === qq ? zq.n.id : (0, zq.b)(qq);
-        Uq.current = !0;
-        const Oq = await (0, HO.d)(lq, null !== (Eq = null === Yq || void 0 === Yq ? void 0 : Yq.name) && void 0 !== Eq ? Eq : null);
-        if (Uq.current = !1, !Oq) return;
-        iq(qq);
-        const mq = await aO.e.purchase(lq, null !== (gq = null === Yq || void 0 === Yq ? void 0 : Yq.name) && void 0 !== gq ? gq : null);
-        iq(null), mq ? fq(mq) : (AE(qq, Yq), Yq || (await (0, VO.flushClientAnalyticsEvents)(), (0, WO.refreshWithoutConfirmation)("superRank" === qq ? "/super-rank-welcome" : `/pack-welcome/${qq}`)))
+        if (Bb && !Bb.name) return void fb();
+        const Ob = "superRank" === bb ? eb.o.id : (0, eb.d)(bb);
+        Eb.current = !0;
+        const Gb = await (0, lG.d)(Ob, null !== (ub = null === Bb || void 0 === Bb ? void 0 : Bb.name) && void 0 !== ub ? ub : null);
+        if (Eb.current = !1, !Gb) return;
+        gb(bb);
+        const Ub = await XG.d.purchase(Ob, null !== (hb = null === Bb || void 0 === Bb ? void 0 : Bb.name) && void 0 !== hb ? hb : null);
+        gb(null), Ub ? vb(Ub) : (Yu(bb, Bb), Bb || (await (0, pG.flushClientAnalyticsEvents)(), (0, wG.refreshWithoutConfirmation)("superRank" === bb ? "/super-rank-welcome" : `/pack-welcome/${bb}`)))
       }
-      const BE = Oq()("Store", {
-        StoreGift: "gift" === Dq,
-        StorePortrait: gE,
-        StoreCompact: YE
+      const Hu = Gb()("Store", {
+        StoreGift: "gift" === Rb,
+        StorePortrait: hu,
+        StoreCompact: Bu
       });
-      if ("pack" === Vq.kind) {
-        const qq = Vq.pack,
-          Eq = qE.packs.find((Eq => Eq.pack === qq));
-        return (0, Bq.jsx)("div", {
-          ref: Gq,
+      if ("pack" === pb.kind) {
+        const bb = pb.pack,
+          ub = bu.packs.find((ub => ub.pack === bb));
+        return (0, Hb.jsx)("div", {
+          ref: Mb,
           className: "CosmeticShopContainer",
-          children: (0, Bq.jsx)(jO.g, {
-            pack: qq,
+          children: (0, Hb.jsx)(AG.h, {
+            pack: bb,
             onBack: () => {
-              Hq(Sm)
+              lb(eU)
             },
-            onPurchased: Eq => {
-              AE(qq, Eq ? {
-                name: Eq,
+            onPurchased: ub => {
+              Yu(bb, ub ? {
+                name: ub,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === Dq && lE && Eq && (0, Bq.jsxs)(Bq.Fragment, {
-              children: [(0, Bq.jsx)(gm, {
-                state: Eq.state,
-                item: qq,
-                price: (WE = qq, "superRank" === WE ? zq.n.price : (0, zq.f)(WE)),
-                busy: OE,
+            giftCta: "gift" === Rb && Ou && ub && (0, Hb.jsxs)(Hb.Fragment, {
+              children: [(0, Hb.jsx)(hU, {
+                state: ub.state,
+                item: bb,
+                price: (wu = bb, "superRank" === wu ? eb.o.price : (0, eb.g)(wu)),
+                busy: Gu,
                 onAct: () => {
-                  uE(qq)
+                  au(bb)
                 },
                 onNeedRecipient: () => {
-                  Hq(Sm), wq()
+                  lb(eU), fb()
                 },
                 onLogin: () => {
-                  mE(qq)
+                  Uu(bb)
                 },
-                highlight: Sq === qq
-              }), Zq && (0, Bq.jsx)("span", {
+                highlight: Nb === bb
+              }), ib && (0, Hb.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: xq(Zq)
+                children: Lb(ib)
               })]
             }),
-            ownedPacks: Iq,
-            startAsGift: "gift" === Dq,
-            initialGiftRecipient: "gift" === Dq ? null !== lE && void 0 !== lE ? lE : uq.query.trim() : "",
-            highlightCta: Sq === qq
-          }, qq)
+            ownedPacks: cb,
+            startAsGift: "gift" === Rb,
+            initialGiftRecipient: "gift" === Rb ? null !== Ou && void 0 !== Ou ? Ou : ab.query.trim() : "",
+            highlightCta: Nb === bb
+          }, bb)
         })
       }
-      var WE;
-      return "superRank" === Vq.kind ? (0, Bq.jsx)("div", {
-        ref: Gq,
-        className: Oq()(BE, "StoreDetailView"),
-        children: (0, Bq.jsx)(hm, {
-          state: qE.superRank.state,
-          mode: Dq,
-          giftName: lE,
-          busy: OE,
-          highlight: "superRank" === Sq,
-          purchaseError: Zq,
+      var wu;
+      return "superRank" === pb.kind ? (0, Hb.jsx)("div", {
+        ref: Mb,
+        className: Gb()(Hu, "StoreDetailView"),
+        children: (0, Hb.jsx)(nU, {
+          state: bu.superRank.state,
+          mode: Rb,
+          giftName: Ou,
+          busy: Gu,
+          highlight: "superRank" === Nb,
+          purchaseError: ib,
           onBack: () => {
-            Hq(Sm)
+            lb(eU)
           },
           onChooseRecipient: () => {
-            Hq(Sm), wq()
+            lb(eU), fb()
           },
           onAct: () => {
-            uE("superRank")
+            au("superRank")
           },
           onLogin: () => {
-            mE("superRank")
+            Uu("superRank")
           }
         })
-      }) : (0, Bq.jsxs)("div", {
-        ref: Gq,
-        className: BE,
-        onScroll: qq => {
-          Rq.current = qq.currentTarget.scrollTop
+      }) : (0, Hb.jsxs)("div", {
+        ref: Mb,
+        className: Hu,
+        onScroll: bb => {
+          qb.current = bb.currentTarget.scrollTop
         },
-        children: [(0, Bq.jsx)("div", {
+        children: [(0, Hb.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, Bq.jsx)(pO, {
-            selfName: cq ? Aq.getPlayerName() : "",
-            giftRecipient: uq,
-            suggestionsVersion: null !== (Eq = null === Mq || void 0 === Mq ? void 0 : Mq.seq) && void 0 !== Eq ? Eq : 0,
-            pulseSignal: vq,
-            disabled: OE || !cq
+          children: (0, Hb.jsx)(sG, {
+            selfName: Sb ? Yb.getPlayerName() : "",
+            giftRecipient: ab,
+            suggestionsVersion: null !== (ub = null === tb || void 0 === tb ? void 0 : tb.seq) && void 0 !== ub ? ub : 0,
+            pulseSignal: nb,
+            disabled: Gu || !Sb
           })
-        }), Mq && (0, Bq.jsxs)("div", {
+        }), tb && (0, Hb.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            Tq(null)
+            Jb(null)
           },
-          children: [(0, Bq.jsx)(dO.b, {
-            showSignal: Mq.seq
-          }), oO.b, " ", xq("store:giftSent", {
-            name: Mq.name
+          children: [(0, Hb.jsx)(oG.b, {
+            showSignal: tb.seq
+          }), KG.d, " ", Lb("store:giftSent", {
+            name: tb.name
           })]
-        }, Mq.seq), !Mq && Zq && (0, Bq.jsx)("div", {
+        }, tb.seq), !tb && ib && (0, Hb.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: xq(Zq)
-        }), (0, Bq.jsx)(rm, {
-          layout: qE,
-          mountAtOnce: null !== kq.current,
-          bundleGift: "gift" === Dq ? {
-            recipientName: lE,
-            lookingUp: "pending" === uq.recipient.status,
-            busy: OE,
-            onNeedRecipient: wq,
-            onSent: qq => {
-              (0, eq.reportAnalyticsClick)({
+          children: Lb(ib)
+        }), (0, Hb.jsx)(jU, {
+          layout: bu,
+          mountAtOnce: null !== Pb.current,
+          bundleGift: "gift" === Rb ? {
+            recipientName: Ou,
+            lookingUp: "pending" === ab.recipient.status,
+            busy: Gu,
+            onNeedRecipient: fb,
+            onSent: bb => {
+              (0, Qb.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), cE({
-                name: qq,
-                cosmetics: uq.recipientCosmetics
+              }), Su({
+                name: bb,
+                cosmetics: ab.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, oO.q)(Kq),
-          busy: OE,
-          highlightItem: Sq,
-          onOpen: function(qq) {
-            (0, eq.reportAnalyticsClick)({
+          superRankTotalDays: (0, KG.s)(kb),
+          busy: Gu,
+          highlightItem: Nb,
+          onOpen: function(bb) {
+            (0, Qb.reportAnalyticsClick)({
               id: "store.item_open",
-              value: qq
-            }), Hq((0, Lq.c)(qq))
+              value: bb
+            }), lb((0, mb.h)(bb))
           },
-          onAct: uE,
-          onNeedRecipient: wq,
-          onLogin: mE
-        }), "gift" !== Dq && (0, Bq.jsx)(Tm, {})]
+          onAct: au,
+          onNeedRecipient: fb,
+          onLogin: Uu
+        }), "gift" !== Rb && (0, Hb.jsx)(tU, {})]
       })
     }));
-    var Jm = gq(2597),
-      km = gq(8814),
-      Rm = gq(8601),
-      Um = gq(2653),
-      Fm = gq(2506),
-      sm = gq(2553),
-      Xm = gq(2563),
-      wm = gq(2569),
-      Km = gq(2641),
-      Cm = gq(2619),
-      Im = gq(2322),
-      em = gq(2344),
-      Dm = gq(2335),
-      qx = gq(2012),
-      Ex = gq(2576),
-      gx = gq(2352);
+    var mU = hb(2505),
+      IU = hb(8575),
+      PU = hb(8386),
+      qU = hb(2542),
+      EU = hb(2412),
+      yU = hb(2454),
+      VU = hb(2468),
+      FU = hb(2472),
+      fU = hb(2536),
+      kU = hb(2523),
+      TU = hb(2221),
+      cU = hb(2257),
+      QU = hb(2242),
+      RU = hb(1917),
+      bL = hb(2481),
+      uL = hb(2265);
 
-    function Yx(qq) {
+    function hL(bb) {
       let {
-        show: Eq
-      } = qq;
-      return Eq ? (0, Bq.jsx)(lx, {}) : null
+        show: ub
+      } = bb;
+      return ub ? (0, Hb.jsx)(BL, {}) : null
     }
 
-    function lx() {
+    function BL() {
       const {
-        t: qq
-      } = (0, mq.v)(), {
-        followsLeader: Eq
-      } = (0, Fm.c)(), {
-        loading: gq,
-        friends: lq,
-        requests: Aq,
-        invites: uq
-      } = (0, Rq.g)(), {
-        userContext: Wq
-      } = (0, aq.c)(), [Nq, Vq] = (0, Yq.useState)(gx.j);
-      (0, Yq.useEffect)((() => {
-        (0, gx.b)()
+        t: bb
+      } = (0, Ub.K)(), {
+        followsLeader: ub
+      } = (0, EU.d)(), {
+        loading: hb,
+        friends: Ob,
+        requests: Yb,
+        invites: ab
+      } = (0, qb.i)(), {
+        userContext: wb
+      } = (0, Xb.d)(), [Zb, pb] = (0, Bb.useState)(uL.k);
+      (0, Bb.useEffect)((() => {
+        (0, uL.b)()
       }), []);
-      const dq = Aq.map((qq => qq.name)),
+      const ob = Yb.map((bb => bb.name)),
         {
-          state: jq,
-          recentRequesters: Hq
-        } = (0, Cm.o)(),
-        oq = new Map([...("loaded" === jq.status ? jq.recentPlayers : []).map((qq => [qq.preview.name, qq])), ...Hq.map((qq => [qq.name, qq]))]),
-        Pq = (0, Yq.useRef)(null),
-        [tq, rq] = (0, Yq.useState)(""),
-        [vq, hq] = (0, Yq.useState)("Enter"),
-        [nq, bq] = (0, Yq.useState)(null);
+          state: Ab,
+          recentRequesters: lb
+        } = (0, kU.t)(),
+        Kb = new Map([...("loaded" === Ab.status ? Ab.recentPlayers : []).map((bb => [bb.preview.name, bb])), ...lb.map((bb => [bb.name, bb]))]),
+        Wb = (0, Bb.useRef)(null),
+        [rb, jb] = (0, Bb.useState)(""),
+        [nb, Db] = (0, Bb.useState)("Enter"),
+        [xb, zb] = (0, Bb.useState)(null);
 
-      function iq() {
-        tq && (hq("Loading"), (0, Dm.i)(tq, "social_menu").then((qq => {
-          if (Pq.current) switch (qq.kind) {
+      function gb() {
+        rb && (Db("Loading"), (0, QU.j)(rb, "social_menu").then((bb => {
+          if (Wb.current) switch (bb.kind) {
             case "sent":
-              hq("Success");
+              Db("Success");
               break;
             case "becameFriends":
-              hq("BecameFriends");
+              Db("BecameFriends");
               break;
             case "failed":
-              bq(qq.message), hq("Error")
+              zb(bb.message), Db("Error")
           }
         })))
       }
-      return (0, Yq.useEffect)((() => {
-        if ("Enter" === vq || "Loading" === vq) return;
-        const qq = setTimeout((() => {
-          Pq.current.value = "", rq(""), hq("Enter")
-        }), "Success" === vq ? 1e3 : 4e3);
+      return (0, Bb.useEffect)((() => {
+        if ("Enter" === nb || "Loading" === nb) return;
+        const bb = setTimeout((() => {
+          Wb.current.value = "", jb(""), Db("Enter")
+        }), "Success" === nb ? 1e3 : 4e3);
         return () => {
-          clearTimeout(qq)
+          clearTimeout(bb)
         }
-      }), [vq]), (0, Bq.jsx)("div", {
+      }), [nb]), (0, Hb.jsx)("div", {
         className: "SocialMenu",
-        children: (0, Bq.jsxs)("div", {
+        children: (0, Hb.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, Bq.jsxs)("div", {
+          children: [(0, Hb.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, Bq.jsxs)("div", {
+            children: [(0, Hb.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, Bq.jsx)(wm.c, {
-                label: qq("socialBar:addFriend")
-              }), (0, Bq.jsxs)("div", {
+              children: [(0, Hb.jsx)(FU.d, {
+                label: bb("socialBar:addFriend")
+              }), (0, Hb.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, Bq.jsxs)("div", {
-                  className: Oq()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${vq}`]: !0
+                children: [(0, Hb.jsxs)("div", {
+                  className: Gb()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${nb}`]: !0
                   }),
-                  children: ["Loading" === vq && (0, Bq.jsx)(yq.e, {}), "Success" === vq && (0, Bq.jsx)(xq.d, {
+                  children: ["Loading" === nb && (0, Hb.jsx)(db.c, {}), "Success" === nb && (0, Hb.jsx)(Lb.e, {
                     name: "check"
-                  }), "BecameFriends" === vq && (0, Bq.jsx)(Bq.Fragment, {
-                    children: qq("socialBar:nowFriends", {
-                      playerName: tq
+                  }), "BecameFriends" === nb && (0, Hb.jsx)(Hb.Fragment, {
+                    children: bb("socialBar:nowFriends", {
+                      playerName: rb
                     })
-                  }), "Error" === vq && nq && (0, Bq.jsx)(Bq.Fragment, {
-                    children: qq(nq.translationKey, nq.params)
+                  }), "Error" === nb && xb && (0, Hb.jsx)(Hb.Fragment, {
+                    children: bb(xb.translationKey, xb.params)
                   })]
-                }), (0, Bq.jsxs)("div", {
+                }), (0, Hb.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, Bq.jsx)(Qq.b, {
+                  children: [(0, Hb.jsx)(Cb.b, {
                     className: "PlayerSearchInput",
-                    placeholderText: qq("socialBar:enterPlayerName"),
-                    domRef: Pq,
-                    onValueChange: qq => {
-                      rq((0, Mq.t)(qq)), Pq.current.value = (0, Mq.t)(qq)
+                    placeholderText: bb("socialBar:enterPlayerName"),
+                    domRef: Wb,
+                    onValueChange: bb => {
+                      jb((0, tb.r)(bb)), Wb.current.value = (0, tb.r)(bb)
                     },
                     onEnter: () => {
-                      tq && (0, eq.reportAnalyticsClick)({
+                      rb && (0, Qb.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), iq()
+                      }), gb()
                     }
-                  }), (0, Bq.jsxs)(cq.g, {
+                  }), (0, Hb.jsxs)(Sb.e, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      iq()
+                      gb()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, Bq.jsx)(xq.d, {
+                    children: [(0, Hb.jsx)(Lb.e, {
                       name: "user-plus"
-                    }), " ", qq("socialBar:sendRequest")]
+                    }), " ", bb("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, Bq.jsx)(Ex.b, {
+              }), (0, Hb.jsx)(bL.e, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), uq.length > 0 && (0, Bq.jsxs)("div", {
+            }), ab.length > 0 && (0, Hb.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, Bq.jsx)(wm.c, {
-                label: qq("socialBar:invites"),
-                meta: uq.length
-              }), uq.map((Eq => (0, Bq.jsxs)("div", {
+              children: [(0, Hb.jsx)(FU.d, {
+                label: bb("socialBar:invites"),
+                meta: ab.length
+              }), ab.map((ub => (0, Hb.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, Bq.jsx)("div", {
+                children: [(0, Hb.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, Bq.jsx)(Im.b, {
-                    invite: Eq
+                  children: (0, Hb.jsx)(TU.e, {
+                    invite: ub
                   })
-                }), (0, Bq.jsx)("div", {
+                }), (0, Hb.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, Bq.jsx)(Im.d, {
-                    invite: Eq
+                  children: (0, Hb.jsx)(TU.h, {
+                    invite: ub
                   })
-                }), (0, Bq.jsx)(cq.p, {
+                }), (0, Hb.jsx)(Sb.m, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, em.e)(Eq)
+                    (0, cU.e)(ub)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${Eq.destination.kind}`
+                    value: `social_menu:${ub.destination.kind}`
                   },
-                  children: qq("general:join")
-                }), (0, Bq.jsx)(Kq.e, {
-                  tooltipInner: (0, Bq.jsx)(Bq.Fragment, {
-                    children: qq("general:decline")
+                  children: bb("general:join")
+                }), (0, Hb.jsx)(kb.d, {
+                  tooltipInner: (0, Hb.jsx)(Hb.Fragment, {
+                    children: bb("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, Bq.jsx)(cq.i, {
+                  children: (0, Hb.jsx)(Sb.g, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === Nq || void 0 === Nq ? void 0 : Nq.kind) && Nq.inviteId === Eq.id,
+                    padDefaultFocus: "invite" === (null === Zb || void 0 === Zb ? void 0 : Zb.kind) && Zb.inviteId === ub.id,
                     onClick: () => {
-                      Rq.c.declineInvite(Eq.id)
+                      qb.b.declineInvite(ub.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${Eq.destination.kind}`
+                      value: `social_menu:${ub.destination.kind}`
                     },
-                    children: (0, Bq.jsx)(xq.d, {
+                    children: (0, Hb.jsx)(Lb.e, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, Eq.id)))]
-            }), (0, Bq.jsxs)("div", {
-              className: Oq()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !gq && 0 === Aq.length
+              }, ub.id)))]
+            }), (0, Hb.jsxs)("div", {
+              className: Gb()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !hb && 0 === Yb.length
               }),
-              children: [(0, Bq.jsx)(wm.c, {
-                label: (0, Bq.jsxs)(Bq.Fragment, {
-                  children: [(0, Bq.jsx)(xq.d, {
-                    name: qx.i
-                  }), " ", qq("socialBar:requests")]
+              children: [(0, Hb.jsx)(FU.d, {
+                label: (0, Hb.jsxs)(Hb.Fragment, {
+                  children: [(0, Hb.jsx)(Lb.e, {
+                    name: RU.f
+                  }), " ", bb("socialBar:requests")]
                 }),
-                meta: (0, Bq.jsxs)(Bq.Fragment, {
-                  children: [Aq.length, Aq.length === Cq.p && (0, Bq.jsx)("span", {
+                meta: (0, Hb.jsxs)(Hb.Fragment, {
+                  children: [Yb.length, Yb.length === Tb.r && (0, Hb.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: qq("socialBar:limitReached")
+                    children: bb("socialBar:limitReached")
                   })]
                 })
-              }), gq && (0, Bq.jsx)("div", {
+              }), hb && (0, Hb.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, Bq.jsx)(yq.e, {})
-              }), !gq && 0 === Aq.length && (0, Bq.jsx)("div", {
+                children: (0, Hb.jsx)(db.c, {})
+              }), !hb && 0 === Yb.length && (0, Hb.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: qq("socialBar:noFriendRequests")
-              }), !gq && Aq.length > 0 && (0, Bq.jsx)("div", {
+                children: bb("socialBar:noFriendRequests")
+              }), !hb && Yb.length > 0 && (0, Hb.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, Bq.jsx)(al.c, {
+                children: (0, Hb.jsx)(XO.d, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [Aq],
-                  children: Aq.map(((Eq, gq) => {
-                    const Yq = oq.get(Eq.name);
-                    return (0, Bq.jsxs)(Xm.i, {
-                      playerSocialPreview: Eq,
-                      zIndex: Aq.length - gq,
-                      padDefaultFocus: (0, gx.h)(Nq, Eq.name, gq),
-                      status: Yq && (0, Bq.jsx)(Km.e, {
-                        gameNameWithVariation: Yq.gameNameWithVariation,
-                        isPrivateLobby: Yq.isPrivateLobby
+                  observerUpdateDeps: [Yb],
+                  children: Yb.map(((ub, hb) => {
+                    const Bb = Kb.get(ub.name);
+                    return (0, Hb.jsxs)(VU.f, {
+                      playerSocialPreview: ub,
+                      zIndex: Yb.length - hb,
+                      padDefaultFocus: (0, uL.i)(Zb, ub.name, hb),
+                      status: Bb && (0, Hb.jsx)(fU.d, {
+                        gameNameWithVariation: Bb.gameNameWithVariation,
+                        isPrivateLobby: Bb.isPrivateLobby
                       }),
-                      children: [(0, Bq.jsx)(Kq.e, {
-                        tooltipInner: (0, Bq.jsx)(Bq.Fragment, {
-                          children: qq("general:accept")
+                      children: [(0, Hb.jsx)(kb.d, {
+                        tooltipInner: (0, Hb.jsx)(Hb.Fragment, {
+                          children: bb("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, Bq.jsx)(cq.g, {
+                        children: (0, Hb.jsx)(Sb.e, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            Vq((0, gx.e)(dq, gq)), (0, Dm.h)(Eq.name, !0, {
+                            pb((0, uL.e)(ob, hb)), (0, QU.g)(ub.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -7356,19 +7356,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, Bq.jsx)(xq.d, {
+                          children: (0, Hb.jsx)(Lb.e, {
                             name: "check"
                           })
                         })
-                      }), (0, Bq.jsx)(Kq.e, {
-                        tooltipInner: (0, Bq.jsx)(Bq.Fragment, {
-                          children: qq("general:decline")
+                      }), (0, Hb.jsx)(kb.d, {
+                        tooltipInner: (0, Hb.jsx)(Hb.Fragment, {
+                          children: bb("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, Bq.jsx)(cq.i, {
+                        children: (0, Hb.jsx)(Sb.g, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            Vq((0, gx.e)(dq, gq)), (0, Dm.h)(Eq.name, !1, {
+                            pb((0, uL.e)(ob, hb)), (0, QU.g)(ub.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -7376,62 +7376,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, Bq.jsx)(xq.d, {
+                          children: (0, Hb.jsx)(Lb.e, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${Eq.name}_${Eq.isError}`)
+                    }, `${ub.name}_${ub.isError}`)
                   }))
                 })
               })]
-            }), (0, Bq.jsx)(Km.l, {})]
-          }), (0, Bq.jsxs)("div", {
+            }), (0, Hb.jsx)(fU.i, {})]
+          }), (0, Hb.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, Bq.jsxs)("div", {
+            children: [(0, Hb.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, Bq.jsx)(wm.c, {
-                label: qq("socialBar:party")
-              }), (0, Bq.jsx)(sm.d, {})]
-            }), (0, Bq.jsxs)("div", {
+              children: [(0, Hb.jsx)(FU.d, {
+                label: bb("socialBar:party")
+              }), (0, Hb.jsx)(yU.c, {})]
+            }), (0, Hb.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, Bq.jsx)(wm.c, {
-                label: (0, Bq.jsxs)(Bq.Fragment, {
-                  children: [(0, Bq.jsx)(xq.d, {
-                    name: qx.e
-                  }), " ", qq("socialBar:friends")]
+              children: [(0, Hb.jsx)(FU.d, {
+                label: (0, Hb.jsxs)(Hb.Fragment, {
+                  children: [(0, Hb.jsx)(Lb.e, {
+                    name: RU.c
+                  }), " ", bb("socialBar:friends")]
                 }),
-                meta: (0, Bq.jsxs)(Bq.Fragment, {
-                  children: [lq.length, lq.length >= (0, Cq.d)(Wq.getPlayerRanks()) && (0, Bq.jsx)("span", {
+                meta: (0, Hb.jsxs)(Hb.Fragment, {
+                  children: [Ob.length, Ob.length >= (0, Tb.d)(wb.getPlayerRanks()) && (0, Hb.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: qq("socialBar:limitReached")
+                    children: bb("socialBar:limitReached")
                   })]
                 })
-              }), gq && (0, Bq.jsx)("div", {
+              }), hb && (0, Hb.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, Bq.jsx)(yq.e, {})
-              }), !gq && 0 === lq.length && (0, Bq.jsx)("div", {
+                children: (0, Hb.jsx)(db.c, {})
+              }), !hb && 0 === Ob.length && (0, Hb.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: qq("socialBar:noFriends")
-              }), !gq && lq.length > 0 && (0, Bq.jsx)("div", {
+                children: bb("socialBar:noFriends")
+              }), !hb && Ob.length > 0 && (0, Hb.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, Bq.jsx)(al.c, {
+                children: (0, Hb.jsx)(XO.d, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [lq],
-                  children: lq.map(((qq, gq) => (0, Bq.jsx)(Xm.i, {
-                    playerSocialPreview: qq,
+                  observerUpdateDeps: [Ob],
+                  children: Ob.map(((bb, hb) => (0, Hb.jsx)(VU.f, {
+                    playerSocialPreview: bb,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: qq => {
-                      Rq.c.removeFriendFromState(qq)
+                    onFriendRemoved: bb => {
+                      qb.b.removeFriendFromState(bb)
                     },
-                    zIndex: lq.length - gq,
-                    children: (0, Bq.jsx)(Xm.e, {
-                      friend: qq,
-                      followsLeader: Eq,
+                    zIndex: Ob.length - hb,
+                    children: (0, Hb.jsx)(VU.d, {
+                      friend: bb,
+                      followsLeader: ub,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${qq.name}_${qq.isError}`)))
+                  }, `${bb.name}_${bb.isError}`)))
                 })
               })]
             })]
@@ -7439,225 +7439,225 @@ export const modules = {
         })
       })
     }
-    var Ox = gq(2487);
-    const mx = qq => {
+    var OL = hb(2398);
+    const GL = bb => {
         let {
-          action: Eq,
-          padAction: gq
-        } = qq;
+          action: ub,
+          padAction: hb
+        } = bb;
         const {
-          isTouchScreen: Yq
-        } = (0, rq.j)(["isTouchScreen"]), lq = (0, OY.q)();
-        return Yq && !lq ? null : (0, Bq.jsx)(eg.c, {
+          isTouchScreen: Bb
+        } = (0, jb.j)(["isTouchScreen"]), Ob = (0, GB.r)();
+        return Bb && !Ob ? null : (0, Hb.jsx)(Qh.e, {
           className: "EverythingMenuTabKey",
-          noaAction: Eq,
+          noaAction: ub,
           padHidesKey: !0,
-          padMenuShortcut: gq
+          padMenuShortcut: hb
         })
       },
-      xx = (0, Yq.memo)((function() {
+      UL = (0, Bb.memo)((function() {
         const {
-          t: qq
-        } = (0, mq.v)(), {
-          gameState: Eq,
-          openEverythingMenuName: gq,
-          initSdkSelectorFinished: lq,
-          crosshairGameView: xq
-        } = (0, rq.j)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
-          userContext: Aq
-        } = (0, aq.c)(), uq = (0, Jq.purchasesAllowed)(), Wq = (0, Lq.E)(), Nq = (qq, Eq) => (0, Bq.jsx)(mx, {
-          action: qq,
-          padAction: Eq
-        }), [Vq, dq] = (0, Yq.useState)(null), Hq = (0, Yq.useRef)(null), oq = {
-          ..."inGame" === Eq ? {} : (0, cq.V)({
+          t: bb
+        } = (0, Ub.K)(), {
+          gameState: ub,
+          openEverythingMenuName: hb,
+          initSdkSelectorFinished: Ob,
+          crosshairGameView: Lb
+        } = (0, jb.j)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
+          userContext: Yb
+        } = (0, Xb.d)(), ab = (0, Ib.purchasesAllowed)(), wb = (0, mb.D)(), Zb = (bb, ub) => (0, Hb.jsx)(GL, {
+          action: bb,
+          padAction: ub
+        }), [pb, ob] = (0, Bb.useState)(null), lb = (0, Bb.useRef)(null), Kb = {
+          ..."inGame" === ub ? {} : (0, Sb.V)({
             focusOnClick: !1
           }),
-          ...VY.d
-        }, Pq = qq => {
-          const Eq = (0, dY.g)((Eq => {
-            (0, cq.T)(Eq.currentTarget), rq.b.set({
-              openEverythingMenuName: qq
+          ...pB.c
+        }, Wb = bb => {
+          const ub = (0, oB.d)((ub => {
+            (0, Sb.T)(ub.currentTarget), jb.d.set({
+              openEverythingMenuName: bb
             })
           }), "pointerup");
           return {
-            ...oq,
-            onPointerDown: qq => {
-              oq.onPointerDown(qq), Eq.onPointerDown(qq)
+            ...Kb,
+            onPointerDown: bb => {
+              Kb.onPointerDown(bb), ub.onPointerDown(bb)
             },
-            onPointerUp: qq => {
-              oq.onPointerUp(qq), Eq.onPointerUp(qq)
+            onPointerUp: bb => {
+              Kb.onPointerUp(bb), ub.onPointerUp(bb)
             },
-            onClick: Eq.onClick
+            onClick: ub.onClick
           }
-        }, Qq = null !== gq, yq = gq !== cE.p.COSMETIC_SHOP && !xq;
-        async function tq() {
+        }, Cb = null !== hb, db = hb !== Su.u.COSMETIC_SHOP && !Lb;
+        async function rb() {
           await async function() {
-            if (!Vq) return;
-            await Vq(), dq(null)
-          }(), rq.b.set({
+            if (!pb) return;
+            await pb(), ob(null)
+          }(), jb.d.set({
             openEverythingMenuName: null
           })
         }
-        const vq = (0, Yq.useRef)(null),
-          hq = (0, Yq.useCallback)((() => null !== vq.current && (0, Rm.f)(vq.current)), []);
+        const nb = (0, Bb.useRef)(null),
+          Db = (0, Bb.useCallback)((() => null !== nb.current && (0, PU.h)(nb.current)), []);
 
-        function bq() {
-          hq() || tq()
-        }(0, Yq.useEffect)((() => (0, lO.t)(hq)), [hq]);
-        const iq = (0, Yq.useMemo)((() => "inGame" === Eq ? {
-          text: qq("settingsMenu:exitGame"),
+        function zb() {
+          Db() || rb()
+        }(0, Bb.useEffect)((() => (0, OG.x)(Db)), [Db]);
+        const gb = (0, Bb.useMemo)((() => "inGame" === ub ? {
+          text: bb("settingsMenu:exitGame"),
           onClick: () => {
-            (0, km.b)()
+            (0, IU.c)()
           }
-        } : (0, nq.c)() ? {
-          text: qq("settingsMenu:exitGame"),
+        } : (0, xb.d)() ? {
+          text: bb("settingsMenu:exitGame"),
           onClick: () => {
-            OE.q.discordActivity().then((qq => {
-              qq.exit("User exited the game")
+            Gu.l.discordActivity().then((bb => {
+              bb.exit("User exited the game")
             }))
           }
-        } : null), [Eq, qq]);
-        const Zq = (0, Bq.jsx)("div", {
+        } : null), [ub, bb]);
+        const ib = (0, Hb.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
-          onClick: bq,
-          children: (0, Bq.jsx)(cq.m, {
+          onClick: zb,
+          children: (0, Hb.jsx)(Sb.i, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, Bq.jsx)(jY.b, {
-          showing: Qq,
+        return (0, Hb.jsx)(AB.b, {
+          showing: Cb,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: gq === cE.p.SHOP,
-          doGameplayStartStopOnShow: "inGame" === Eq,
-          children: (0, Bq.jsx)(oY.d, {
+          keepsMovement: hb === Su.u.SHOP,
+          doGameplayStartStopOnShow: "inGame" === ub,
+          children: (0, Hb.jsx)(KB.d, {
             className: "EverythingMenuContainer",
-            show: Qq && !xq,
-            children: (0, Bq.jsx)(HY.c, {
-              close: bq,
+            show: Cb && !Lb,
+            children: (0, Hb.jsx)(lB.b, {
+              close: zb,
               togglePointerLock: !1,
-              children: (0, Bq.jsxs)("div", {
+              children: (0, Hb.jsxs)("div", {
                 className: "EverythingMenu",
-                children: [!(0, lO.l)(gq) && (0, Bq.jsxs)("div", {
+                children: [!(0, OG.o)(hb) && (0, Hb.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, Bq.jsxs)("div", {
+                  children: [(0, Hb.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [iq && (0, Bq.jsx)(cq.d, {
+                    children: [gb && (0, Hb.jsx)(Sb.d, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        iq.onClick()
+                        gb.onClick()
                       },
-                      children: iq.text
-                    }), Qq && uq && (0, Bq.jsx)("div", {
-                      ...oq,
+                      children: gb.text
+                    }), Cb && ab && (0, Hb.jsx)("div", {
+                      ...Kb,
                       className: "EverythingMenuWallet",
-                      title: qq("homePage:getPremiumCurrency"),
+                      title: bb("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, Lq.n)({
+                        (0, mb.o)({
                           mode: "current",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, Bq.jsx)(Jm.e, {})
+                      children: (0, Hb.jsx)(mU.f, {})
                     })]
-                  }), (0, Bq.jsxs)("div", {
+                  }), (0, Hb.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
                     "data-pad-tabs": "1",
-                    children: [(0, Bq.jsxs)("div", {
-                      ...Pq(cE.p.SETTINGS),
+                    children: [(0, Hb.jsxs)("div", {
+                      ...Wb(Su.u.SETTINGS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": gq === cE.p.SETTINGS ? "true" : void 0,
-                      className: Oq()("EverythingMenuTab", {
-                        EverythingMenuTabActive: gq === cE.p.SETTINGS
+                      "data-pad-selected": hb === Su.u.SETTINGS ? "true" : void 0,
+                      className: Gb()("EverythingMenuTab", {
+                        EverythingMenuTabActive: hb === Su.u.SETTINGS
                       }),
-                      children: [qq("general:settings"), Nq("OpenSettings", "pause")]
-                    }), (0, Bq.jsxs)("div", {
-                      ...Pq(cE.p.CUSTOMISATION),
+                      children: [bb("general:settings"), Zb("OpenSettings", "pause")]
+                    }), (0, Hb.jsxs)("div", {
+                      ...Wb(Su.u.CUSTOMISATION),
                       "data-pad-tab": !0,
-                      "data-pad-selected": gq === cE.p.CUSTOMISATION ? "true" : void 0,
-                      className: Oq()("EverythingMenuTab", {
-                        EverythingMenuTabActive: gq === cE.p.CUSTOMISATION
+                      "data-pad-selected": hb === Su.u.CUSTOMISATION ? "true" : void 0,
+                      className: Gb()("EverythingMenuTab", {
+                        EverythingMenuTabActive: hb === Su.u.CUSTOMISATION
                       }),
-                      children: [qq("general:player"), Nq("OpenCharacterCustomization")]
-                    }), jq.featureFlags.useSocialFeatures && (0, Bq.jsxs)("div", {
-                      ...Pq(cE.p.SOCIAL),
+                      children: [bb("general:player"), Zb("OpenCharacterCustomization")]
+                    }), Ab.featureFlags.useSocialFeatures && (0, Hb.jsxs)("div", {
+                      ...Wb(Su.u.SOCIAL),
                       "data-pad-tab": !0,
-                      "data-pad-selected": gq === cE.p.SOCIAL ? "true" : void 0,
-                      className: Oq()("EverythingMenuTab", {
-                        EverythingMenuTabActive: gq === cE.p.SOCIAL
+                      "data-pad-selected": hb === Su.u.SOCIAL ? "true" : void 0,
+                      className: Gb()("EverythingMenuTab", {
+                        EverythingMenuTabActive: hb === Su.u.SOCIAL
                       }),
-                      ...(0, eq.d)({
+                      ...(0, Qb.b)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, gq === cE.p.SOCIAL),
-                      children: [qq("socialBar:social"), (0, Bq.jsx)(Ox.e, {})]
-                    }), uq && (0, Bq.jsxs)("div", {
-                      ...Pq(cE.p.COSMETIC_SHOP),
+                      }, hb === Su.u.SOCIAL),
+                      children: [bb("socialBar:social"), (0, Hb.jsx)(OL.b, {})]
+                    }), ab && (0, Hb.jsxs)("div", {
+                      ...Wb(Su.u.COSMETIC_SHOP),
                       "data-pad-tab": !0,
-                      "data-pad-selected": gq === cE.p.COSMETIC_SHOP ? "true" : void 0,
-                      className: Oq()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: gq === cE.p.COSMETIC_SHOP
+                      "data-pad-selected": hb === Su.u.COSMETIC_SHOP ? "true" : void 0,
+                      className: Gb()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: hb === Su.u.COSMETIC_SHOP
                       }),
-                      children: [(0, Bq.jsx)("span", {
+                      children: [(0, Hb.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: qq("store:title")
-                      }), "new" === Wq && (0, Bq.jsx)(Wm, {}), "dot" === Wq && (0, Bq.jsx)("span", {
+                        children: bb("store:title")
+                      }), "new" === wb && (0, Hb.jsx)(wU, {}), "dot" === wb && (0, Hb.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === Eq && (0, Bq.jsxs)("div", {
-                      ...Pq(cE.p.LOBBY_LEADERBOARD),
+                    }), "inGame" === ub && (0, Hb.jsxs)("div", {
+                      ...Wb(Su.u.LOBBY_LEADERBOARD),
                       "data-pad-tab": !0,
-                      "data-pad-selected": gq === cE.p.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: Oq()("EverythingMenuTab", {
-                        EverythingMenuTabActive: gq === cE.p.LOBBY_LEADERBOARD
+                      "data-pad-selected": hb === Su.u.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: Gb()("EverythingMenuTab", {
+                        EverythingMenuTabActive: hb === Su.u.LOBBY_LEADERBOARD
                       }),
-                      children: [qq("general:lobby"), Nq("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [bb("general:lobby"), Zb("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, Bq.jsx)("div", {
+                  }), (0, Hb.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: Zq
+                    children: ib
                   })]
-                }), (0, lO.l)(gq) && Zq, (0, Bq.jsxs)("div", {
-                  ref: vq,
+                }), (0, OG.o)(hb) && ib, (0, Hb.jsxs)("div", {
+                  ref: nb,
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === Eq ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === ub ? "0.85" : "1"
                   },
-                  children: [(0, Bq.jsx)(uY, {
-                    show: gq === cE.p.SETTINGS,
-                    setBeforeResumeCallback: dq
-                  }), (0, Bq.jsx)(aY, {
-                    show: gq === cE.p.CUSTOMISATION
-                  }), (0, Bq.jsx)(Yq.Suspense, {
+                  children: [(0, Hb.jsx)(aB, {
+                    show: hb === Su.u.SETTINGS,
+                    setBeforeResumeCallback: ob
+                  }), (0, Hb.jsx)(XB, {
+                    show: hb === Su.u.CUSTOMISATION
+                  }), (0, Hb.jsx)(Bb.Suspense, {
                     fallback: null,
-                    children: (0, Bq.jsx)(Kl, {
-                      show: gq === cE.p.SHOP
+                    children: (0, Hb.jsx)(kO, {
+                      show: hb === Su.u.SHOP
                     })
-                  }), (0, Bq.jsx)(AO, {
-                    show: gq === cE.p.LOBBY_LEADERBOARD
-                  }), (0, Bq.jsx)(Lm, {
-                    show: gq === cE.p.COSMETIC_SHOP
-                  }), (0, Bq.jsx)(Yx, {
-                    show: gq === cE.p.SOCIAL
+                  }), (0, Hb.jsx)(YG, {
+                    show: hb === Su.u.LOBBY_LEADERBOARD
+                  }), (0, Hb.jsx)(MU, {
+                    show: hb === Su.u.COSMETIC_SHOP
+                  }), (0, Hb.jsx)(hL, {
+                    show: hb === Su.u.SOCIAL
                   })]
-                }), !(0, jq.isMobileApp)() && (0, PY.e)(Aq.getPlayerRanks()) && (0, Bq.jsx)(oY.d, {
-                  ref: Hq,
+                }), !(0, Ab.isMobileApp)() && (0, WB.i)(Yb.getPlayerRanks()) && (0, Hb.jsx)(KB.d, {
+                  ref: lb,
                   className: "EverythingMenuBannerDiv",
-                  show: yq,
+                  show: db,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, Bq.jsx)(Um.d, {
+                  children: (0, Hb.jsx)(qU.d, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: Hq
+                      parentRef: lb
                     },
-                    showing: Qq && yq,
+                    showing: Cb && db,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -7669,135 +7669,135 @@ export const modules = {
         })
       }))
   },
-  9283: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Oq
+  9094: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb
     });
-    var Yq = gq(307),
-      lq = gq(9292);
+    var Bb = hb(314),
+      Ob = hb(9097);
 
-    function Oq(qq, Eq, gq) {
-      const Oq = Object.entries(Eq).sort(((qq, Eq) => Eq[1] - qq[1])),
-        mq = (0, Yq.Eb)(qq);
-      mq.push(qq ? "\n\n" : "\n");
-      for (const [lq, aq] of Oq) {
-        var xq, Aq, cq;
-        const qq = null !== (xq = null === gq || void 0 === gq || null === (Aq = gq[lq]) || void 0 === Aq ? void 0 : Aq.icon) && void 0 !== xq ? xq : `${lq} Enchantment`;
-        mq.push({
-          icon: qq,
+    function Gb(bb, ub, hb) {
+      const Gb = Object.entries(ub).sort(((bb, ub) => ub[1] - bb[1])),
+        Ub = (0, Bb.wb)(bb);
+      Ub.push(bb ? "\n\n" : "\n");
+      for (const [Ob, Xb] of Gb) {
+        var Lb, Yb, Sb;
+        const bb = null !== (Lb = null === hb || void 0 === hb || null === (Yb = hb[Ob]) || void 0 === Yb ? void 0 : Yb.icon) && void 0 !== Lb ? Lb : `${Ob} Enchantment`;
+        Ub.push({
+          icon: bb,
           style: {
             fontSize: "1.5rem"
           }
-        }), mq.push({
-          str: `${lq} ${null!==(cq=(0,Yq.X)(aq))&&void 0!==cq?cq:aq}\n`
+        }), Ub.push({
+          str: `${Ob} ${null!==(Sb=(0,Bb.R)(Xb))&&void 0!==Sb?Sb:Xb}\n`
         })
       }
-      mq.push({
+      Ub.push({
         str: "\n"
       });
-      for (const [Yq, aq] of Oq) {
-        var uq, Bq, Wq, Nq;
-        const qq = null !== (uq = null === gq || void 0 === gq || null === (Bq = gq[Yq]) || void 0 === Bq ? void 0 : Bq.icon) && void 0 !== uq ? uq : `${Yq} Enchantment`,
-          Eq = null !== (Wq = null === gq || void 0 === gq || null === (Nq = gq[Yq]) || void 0 === Nq ? void 0 : Nq.description) && void 0 !== Wq ? Wq : (0, lq.n)(Yq);
-        mq.push({
-          icon: qq,
+      for (const [Bb, Xb] of Gb) {
+        var ab, Hb, wb, Zb;
+        const bb = null !== (ab = null === hb || void 0 === hb || null === (Hb = hb[Bb]) || void 0 === Hb ? void 0 : Hb.icon) && void 0 !== ab ? ab : `${Bb} Enchantment`,
+          ub = null !== (wb = null === hb || void 0 === hb || null === (Zb = hb[Bb]) || void 0 === Zb ? void 0 : Zb.description) && void 0 !== wb ? wb : (0, Ob.l)(Bb);
+        Ub.push({
+          icon: bb,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), mq.push({
-          str: Eq,
+        }), Ub.push({
+          str: ub,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), mq.push({
+        }), Ub.push({
           str: "\n"
         })
       }
-      return mq
+      return Ub
     }
   },
-  9297: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => cq,
-      h: () => Hq,
-      i: () => dq,
-      k: () => Aq,
-      m: () => jq,
-      n: () => uq,
-      q: () => Wq,
-      t: () => Vq,
-      x: () => Bq
+  9100: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Sb,
+      g: () => lb,
+      i: () => ob,
+      j: () => Yb,
+      k: () => Ab,
+      n: () => ab,
+      p: () => wb,
+      q: () => pb,
+      t: () => Hb
     });
-    var Yq = gq(296),
-      lq = gq(598),
-      Oq = gq(307),
-      mq = gq(4085),
-      xq = gq(9283);
+    var Bb = hb(298),
+      Ob = hb(588),
+      Gb = hb(314),
+      Ub = hb(4005),
+      Lb = hb(9094);
 
-    function Aq(qq, Eq) {
-      var gq;
+    function Yb(bb, ub) {
+      var hb;
       let {
-        player: Yq,
-        chestOrCreative: lq
-      } = qq;
-      var Oq;
-      return Eq < Yq.length ? null !== (Oq = Yq[Eq]) && void 0 !== Oq ? Oq : null : null !== (gq = lq[Eq - Yq.length]) && void 0 !== gq ? gq : null
+        player: Bb,
+        chestOrCreative: Ob
+      } = bb;
+      var Gb;
+      return ub < Bb.length ? null !== (Gb = Bb[ub]) && void 0 !== Gb ? Gb : null : null !== (hb = Ob[ub - Bb.length]) && void 0 !== hb ? hb : null
     }
 
-    function cq(qq) {
-      var Eq;
-      return null !== (Eq = qq.amount) && void 0 !== Eq ? Eq : 0
+    function Sb(bb) {
+      var ub;
+      return null !== (ub = bb.amount) && void 0 !== ub ? ub : 0
     }
 
-    function uq(qq) {
-      return 0 === qq.button || void 0 === qq.button
+    function ab(bb) {
+      return 0 === bb.button || void 0 === bb.button
     }
 
-    function Bq(qq) {
-      return !!qq.shiftKey
+    function Hb(bb) {
+      return !!bb.shiftKey
     }
 
-    function Wq(qq) {
-      return "touches" in qq || "touch" === qq.pointerType || "pen" === qq.pointerType
+    function wb(bb) {
+      return "touches" in bb || "touch" === bb.pointerType || "pen" === bb.pointerType
     }
-    const Nq = new Set,
-      aq = 50;
+    const Zb = new Set,
+      Xb = 50;
 
-    function Vq(qq, Eq) {
-      var gq;
-      const Yq = null === (gq = qq[Eq]) || void 0 === gq ? void 0 : gq.displayName;
-      return (0, lq.H)(Yq) ? "string" !== typeof Eq ? "" : (!Nq.has(Eq) && Nq.size < aq && (Nq.add(Eq), console.warn(`No item called "${Eq}", so its hover shows the name as given`)), Eq) : Yq
+    function pb(bb, ub) {
+      var hb;
+      const Bb = null === (hb = bb[ub]) || void 0 === hb ? void 0 : hb.displayName;
+      return (0, Ob.J)(Bb) ? "string" !== typeof ub ? "" : (!Zb.has(ub) && Zb.size < Xb && (Zb.add(ub), console.warn(`No item called "${ub}", so its hover shows the name as given`)), ub) : Bb
     }
 
-    function dq(qq, Eq, gq) {
-      var Aq, cq, uq, Bq, Wq, Nq, aq, dq, jq, Hq, oq, Pq, Qq, yq;
-      const tq = qq.attributes,
-        rq = null !== (Aq = null === (cq = Eq[qq.name]) || void 0 === cq ? void 0 : cq.rootName) && void 0 !== Aq ? Aq : qq.name,
-        vq = null !== (uq = null !== (Bq = tq.customDisplayName) && void 0 !== Bq ? Bq : null === (Wq = Eq[qq.name]) || void 0 === Wq ? void 0 : Wq.displayName) && void 0 !== uq ? uq : Vq(Eq, rq);
-      let hq = vq;
-      const nq = null === (Nq = tq.customAttributes) || void 0 === Nq ? void 0 : Nq.enchantmentTier;
-      nq && (hq = (0, Oq.Eb)(vq, {
-        colour: Oq.Ab[nq]
+    function ob(bb, ub, hb) {
+      var Yb, Sb, ab, Hb, wb, Zb, Xb, ob, Ab, lb, Kb, Wb, Cb, db;
+      const rb = bb.attributes,
+        jb = null !== (Yb = null === (Sb = ub[bb.name]) || void 0 === Sb ? void 0 : Sb.rootName) && void 0 !== Yb ? Yb : bb.name,
+        nb = null !== (ab = null !== (Hb = rb.customDisplayName) && void 0 !== Hb ? Hb : null === (wb = ub[bb.name]) || void 0 === wb ? void 0 : wb.displayName) && void 0 !== ab ? ab : pb(ub, jb);
+      let Db = nb;
+      const xb = null === (Zb = rb.customAttributes) || void 0 === Zb ? void 0 : Zb.enchantmentTier;
+      xb && (Db = (0, Gb.wb)(nb, {
+        colour: Gb.rb[xb]
       }));
-      const bq = null !== (aq = null !== (dq = null !== (jq = function(qq, Eq) {
-        var gq;
-        if (void 0 === qq || null !== (gq = Eq.customAttributes) && void 0 !== gq && gq.author) return qq;
-        const lq = (0, Yq.Zb)(qq);
-        return lq.every((qq => "string" === typeof qq)) ? qq : lq.map((qq => "string" === typeof qq ? qq : {
-          icon: qq.icon,
+      const zb = null !== (Xb = null !== (ob = null !== (Ab = function(bb, ub) {
+        var hb;
+        if (void 0 === bb || null !== (hb = ub.customAttributes) && void 0 !== hb && hb.author) return bb;
+        const Ob = (0, Bb.nc)(bb);
+        return Ob.every((bb => "string" === typeof bb)) ? bb : Ob.map((bb => "string" === typeof bb ? bb : {
+          icon: bb.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(tq.customDescription, tq)) && void 0 !== jq ? jq : null === (Hq = Eq[qq.name]) || void 0 === Hq ? void 0 : Hq.description) && void 0 !== dq ? dq : null === (oq = Eq[rq]) || void 0 === oq ? void 0 : oq.description) && void 0 !== aq ? aq : "";
-      let iq = bq;
-      if (null !== (Pq = tq.customAttributes) && void 0 !== Pq && Pq.enchantments) iq = (0, xq.e)(bq, tq.customAttributes.enchantments, tq.customAttributes.enchantmentData);
-      else if (gq[rq]) iq = (0, Oq.Eb)(bq), iq.push({
+      }(rb.customDescription, rb)) && void 0 !== Ab ? Ab : null === (lb = ub[bb.name]) || void 0 === lb ? void 0 : lb.description) && void 0 !== ob ? ob : null === (Kb = ub[jb]) || void 0 === Kb ? void 0 : Kb.description) && void 0 !== Xb ? Xb : "";
+      let gb = zb;
+      if (null !== (Wb = rb.customAttributes) && void 0 !== Wb && Wb.enchantments) gb = (0, Lb.d)(zb, rb.customAttributes.enchantments, rb.customAttributes.enchantmentData);
+      else if (hb[jb]) gb = (0, Gb.wb)(zb), gb.push({
         str: "\n"
-      }), iq.push({
+      }), gb.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -7805,373 +7805,373 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (Qq = tq.customAttributes) && void 0 !== Qq && Qq.mobSettings) {
-        var Zq, fq;
-        const qq = tq.customAttributes.mobSettings;
-        var Mq, Tq;
-        if (iq = [], (0, lq.H)(tq.customAttributes.health) || (iq.push({
+      else if (null !== (Cb = rb.customAttributes) && void 0 !== Cb && Cb.mobSettings) {
+        var ib, vb;
+        const bb = rb.customAttributes.mobSettings;
+        var tb, Jb;
+        if (gb = [], (0, Ob.J)(rb.customAttributes.health) || (gb.push({
             str: "\n"
-          }), iq.push({
+          }), gb.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), iq.push({
+          }), gb.push({
             str: " "
-          }), iq.push({
-            str: tq.customAttributes.health.toString()
-          }), (0, lq.H)(qq.maxHealth) || (iq.push({
+          }), gb.push({
+            str: rb.customAttributes.health.toString()
+          }), (0, Ob.J)(bb.maxHealth) || (gb.push({
             str: "/"
-          }), iq.push({
-            str: qq.maxHealth.toString()
-          }))), !(0, lq.H)(qq.attackDamage) && qq.attackDamage > 0 && (iq.push({
+          }), gb.push({
+            str: bb.maxHealth.toString()
+          }))), !(0, Ob.J)(bb.attackDamage) && bb.attackDamage > 0 && (gb.push({
             str: "\n"
-          }), iq.push({
+          }), gb.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), iq.push({
+          }), gb.push({
             str: " "
-          }), iq.push({
-            str: qq.attackDamage.toString()
-          })), !(0, lq.H)(qq.secondaryAttackDamage) && qq.secondaryAttackDamage > 0 && (iq.push({
+          }), gb.push({
+            str: bb.attackDamage.toString()
+          })), !(0, Ob.J)(bb.secondaryAttackDamage) && bb.secondaryAttackDamage > 0 && (gb.push({
             str: "\n"
-          }), iq.push({
+          }), gb.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), iq.push({
+          }), gb.push({
             str: " "
-          }), iq.push({
-            str: qq.secondaryAttackDamage.toString()
-          })), (0, lq.H)(qq.baseRunningSpeed) || (iq.push({
+          }), gb.push({
+            str: bb.secondaryAttackDamage.toString()
+          })), (0, Ob.J)(bb.baseRunningSpeed) || (gb.push({
             str: "\n"
-          }), iq.push({
+          }), gb.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), iq.push({
+          }), gb.push({
             str: " "
-          }), iq.push({
-            str: qq.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === qq.metaInfo) iq.push({
+          }), gb.push({
+            str: bb.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === bb.metaInfo) gb.push({
           str: "\n"
-        }), iq.push({
+        }), gb.push({
           str: {
             translationKey: "general:has"
           }
-        }), iq.push({
+        }), gb.push({
           str: " "
-        }), iq.push({
-          icon: null !== (Mq = null === (Tq = qq.tameInfo) || void 0 === Tq ? void 0 : Tq.saddleItemName) && void 0 !== Mq ? Mq : "Saddle",
+        }), gb.push({
+          icon: null !== (tb = null === (Jb = bb.tameInfo) || void 0 === Jb ? void 0 : Jb.saddleItemName) && void 0 !== tb ? tb : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (iq.push({
+        if (gb.push({
             str: "\n"
-          }), iq.push({
+          }), gb.push({
             str: "\n"
-          }), qq.petInfo && null !== (Zq = qq.tameInfo) && void 0 !== Zq && Zq.supportsFriendship) {
-          const Eq = mq.c.getIconsFromFriendshipPoints(qq.petInfo.friendshipPoints);
-          for (const qq of Eq) iq.push({
-            icon: qq,
+          }), bb.petInfo && null !== (ib = bb.tameInfo) && void 0 !== ib && ib.supportsFriendship) {
+          const ub = Ub.d.getIconsFromFriendshipPoints(bb.petInfo.friendshipPoints);
+          for (const bb of ub) gb.push({
+            icon: bb,
             style: {
               fontSize: "1.5em"
             }
           });
-          iq.push({
+          gb.push({
             str: "\n"
           });
-          const gq = mq.c.getMobHungerLevel(qq.petInfo.lastFedAt);
-          for (const qq of mq.c.hungerLevelIcons[gq]) iq.push({
-            icon: qq,
+          const hb = Ub.d.getMobHungerLevel(bb.petInfo.lastFedAt);
+          for (const bb of Ub.d.hungerLevelIcons[hb]) gb.push({
+            icon: bb,
             style: {
               fontSize: "1.5em"
             }
           });
-          iq.push({
+          gb.push({
             str: " "
-          }), iq.push({
-            str: mq.c.hungerLevelTranslations[gq],
+          }), gb.push({
+            str: Ub.d.hungerLevelTranslations[hb],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (qq.tameInfo && null !== (fq = qq.tameInfo) && void 0 !== fq && fq.supportsFriendship) {
-          var zq, Sq;
-          let Eq = null !== (zq = qq.tameInfo.likedFoods) && void 0 !== zq ? zq : [];
-          iq.push({
+        if (bb.tameInfo && null !== (vb = bb.tameInfo) && void 0 !== vb && vb.supportsFriendship) {
+          var eb, Nb;
+          let ub = null !== (eb = bb.tameInfo.likedFoods) && void 0 !== eb ? eb : [];
+          gb.push({
             str: "\n"
-          }), iq.push({
+          }), gb.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: mq.c.feedTextColours[mq.c.MobFoodType.Superliked]
+              color: Ub.d.feedTextColours[Ub.d.MobFoodType.Superliked]
             }
-          }), iq.push({
+          }), gb.push({
             str: " "
-          }), null !== (Sq = qq.petInfo) && void 0 !== Sq && Sq.superlikedFoodKnown ? (iq.push({
-            icon: qq.petInfo.superlikedFood,
+          }), null !== (Nb = bb.petInfo) && void 0 !== Nb && Nb.superlikedFoodKnown ? (gb.push({
+            icon: bb.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), Eq = Eq.filter((Eq => Eq !== qq.petInfo.superlikedFood))) : iq.push({
+          }), ub = ub.filter((ub => ub !== bb.petInfo.superlikedFood))) : gb.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), iq.push({
+          }), gb.push({
             str: "\n"
-          }), iq.push({
+          }), gb.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: mq.c.feedTextColours[mq.c.MobFoodType.Liked]
+              color: Ub.d.feedTextColours[Ub.d.MobFoodType.Liked]
             }
-          }), iq.push({
+          }), gb.push({
             str: " "
           });
-          for (const qq of Eq) iq.push({
-            icon: qq,
+          for (const bb of ub) gb.push({
+            icon: bb,
             style: {
               fontSize: "1.5em"
             }
           });
-          iq.push({
+          gb.push({
             str: "\n"
-          }), iq.push({
+          }), gb.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: mq.c.feedTextColours[mq.c.MobFoodType.Neutral]
+              color: Ub.d.feedTextColours[Ub.d.MobFoodType.Neutral]
             }
-          }), iq.push({
+          }), gb.push({
             str: " "
           });
-          for (const gq of null !== (pq = qq.tameInfo.neutralFoods) && void 0 !== pq ? pq : []) {
-            var pq;
-            iq.push({
-              icon: gq,
+          for (const hb of null !== (sb = bb.tameInfo.neutralFoods) && void 0 !== sb ? sb : []) {
+            var sb;
+            gb.push({
+              icon: hb,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          iq.push({
+          gb.push({
             str: "\n"
-          }), iq.push({
+          }), gb.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: mq.c.feedTextColours[mq.c.MobFoodType.Disliked]
+              color: Ub.d.feedTextColours[Ub.d.MobFoodType.Disliked]
             }
-          }), iq.push({
+          }), gb.push({
             str: " "
           });
-          for (const gq of null !== (Gq = qq.tameInfo.dislikedFoods) && void 0 !== Gq ? Gq : []) {
-            var Gq;
-            iq.push({
-              icon: gq,
+          for (const hb of null !== (Mb = bb.tameInfo.dislikedFoods) && void 0 !== Mb ? Mb : []) {
+            var Mb;
+            gb.push({
+              icon: hb,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        iq.length > 0 ? (iq.shift(), iq.unshift(...(0, Oq.Eb)(bq))) : iq = (0, Oq.Eb)(bq)
+        gb.length > 0 ? (gb.shift(), gb.unshift(...(0, Gb.wb)(zb))) : gb = (0, Gb.wb)(zb)
       }
       return {
-        name: hq,
-        desc: iq,
-        fontStyle: null !== (yq = tq.customAttributes) && void 0 !== yq && yq.author ? "italic" : "normal"
+        name: Db,
+        desc: gb,
+        fontStyle: null !== (db = rb.customAttributes) && void 0 !== db && db.author ? "italic" : "normal"
       }
     }
 
-    function jq(qq, Eq, gq, Yq) {
-      const lq = Aq(qq, gq),
-        Oq = Aq(qq, Yq);
-      if (!lq) return !1;
-      const mq = Eq[lq.name].armourReduction,
-        xq = Eq[Oq.name].armourReduction;
-      if (xq === mq) {
-        var cq, uq, Bq, Wq;
-        const qq = null !== (cq = null === (uq = lq.attributes.customAttributes) || void 0 === uq ? void 0 : uq.enchantmentTier) && void 0 !== cq ? cq : "Tier 0",
-          Eq = null !== (Bq = null === (Wq = Oq.attributes.customAttributes) || void 0 === Wq ? void 0 : Wq.enchantmentTier) && void 0 !== Bq ? Bq : "Tier 0";
-        return parseInt(qq.replace("Tier ", "")) >= parseInt(Eq.replace("Tier ", ""))
+    function Ab(bb, ub, hb, Bb) {
+      const Ob = Yb(bb, hb),
+        Gb = Yb(bb, Bb);
+      if (!Ob) return !1;
+      const Ub = ub[Ob.name].armourReduction,
+        Lb = ub[Gb.name].armourReduction;
+      if (Lb === Ub) {
+        var Sb, ab, Hb, wb;
+        const bb = null !== (Sb = null === (ab = Ob.attributes.customAttributes) || void 0 === ab ? void 0 : ab.enchantmentTier) && void 0 !== Sb ? Sb : "Tier 0",
+          ub = null !== (Hb = null === (wb = Gb.attributes.customAttributes) || void 0 === wb ? void 0 : wb.enchantmentTier) && void 0 !== Hb ? Hb : "Tier 0";
+        return parseInt(bb.replace("Tier ", "")) >= parseInt(ub.replace("Tier ", ""))
       }
-      return mq > xq
+      return Ub > Lb
     }
 
-    function Hq(qq) {
-      let Eq;
-      if ("number" === typeof qq) {
-        const gq = document.querySelector(`[data-inven-idx="${qq}"]`);
-        if (!gq) return null;
-        Eq = gq.getBoundingClientRect()
-      } else Eq = qq.getBoundingClientRect();
+    function lb(bb) {
+      let ub;
+      if ("number" === typeof bb) {
+        const hb = document.querySelector(`[data-inven-idx="${bb}"]`);
+        if (!hb) return null;
+        ub = hb.getBoundingClientRect()
+      } else ub = bb.getBoundingClientRect();
       return {
-        x: Eq.left + Eq.width / 2,
-        y: Eq.top + Eq.height / 2
+        x: ub.left + ub.width / 2,
+        y: ub.top + ub.height / 2
       }
     }
   },
-  9176: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Nq,
-      e: () => aq,
-      g: () => Vq
+  8978: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Zb,
+      i: () => Xb,
+      k: () => pb
     });
-    var Yq = gq(1422),
-      lq = gq(57),
-      Oq = gq(1298),
-      mq = gq(4359),
-      xq = gq(2325),
-      Aq = gq(1183),
-      cq = gq(96),
-      uq = gq(1942),
-      Bq = gq(1326),
-      Wq = gq(1070);
+    var Bb = hb(1357),
+      Ob = hb(49),
+      Gb = hb(1206),
+      Ub = hb(4292),
+      Lb = hb(2230),
+      Yb = hb(1095),
+      Sb = hb(86),
+      ab = hb(1857),
+      Hb = hb(1242),
+      wb = hb(1007);
 
-    function Nq(qq) {
+    function Zb(bb) {
       let {
-        show: Eq,
-        onClose: gq
-      } = qq;
+        show: ub,
+        onClose: hb
+      } = bb;
       const {
-        requestedGameNameWithVariation: Yq,
-        lobbyName: lq,
-        shownLobbyName: Oq
-      } = (0, uq.g)("connectedGame"), Aq = (0, xq.c)(Yq, lq, !1);
-      return cq.featureFlags.canUseInviteLinks && (0, Wq.jsx)(mq.c, {
-        show: Eq,
-        close: gq,
+        requestedGameNameWithVariation: Bb,
+        lobbyName: Ob,
+        shownLobbyName: Gb
+      } = (0, ab.i)("connectedGame"), Yb = (0, Lb.d)(Bb, Ob, !1);
+      return Sb.featureFlags.canUseInviteLinks && (0, wb.jsx)(Ub.b, {
+        show: ub,
+        close: hb,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, Wq.jsxs)("div", {
+        children: (0, wb.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, Wq.jsx)("div", {
+          children: [(0, wb.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, Wq.jsxs)("div", {
+          }), (0, wb.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, Wq.jsx)("div", {
+            children: [(0, wb.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === Aq ? (0, Wq.jsx)(Bq.e, {}) : Aq, (0, Wq.jsx)("br", {}), "Lobby Name: ", Oq, (0, Wq.jsx)("br", {}), (0, Wq.jsx)("br", {}), (0, Wq.jsx)("br", {}), (0, Wq.jsx)("div", {
+            }), "Game: ", null === Yb ? (0, wb.jsx)(Hb.c, {}) : Yb, (0, wb.jsx)("br", {}), "Lobby Name: ", Gb, (0, wb.jsx)("br", {}), (0, wb.jsx)("br", {}), (0, wb.jsx)("br", {}), (0, wb.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, Wq.jsx)(aq, {})]
+          }), (0, wb.jsx)(Xb, {})]
         })
       })
     }
 
-    function aq() {
-      var qq;
+    function Xb() {
+      var bb;
       const {
-        t: Eq
-      } = (0, Aq.v)(), gq = null !== (qq = Vq(cq.featureFlags.canUseInviteLinks)) && void 0 !== qq ? qq : "Loading Link...", [Oq, mq] = (0, lq.useState)(0), [xq, uq] = (0, lq.useReducer)((qq => qq + 1), 0);
-      return (0, lq.useEffect)((() => {
-        const qq = setTimeout((() => {
-          uq()
+        t: ub
+      } = (0, Yb.K)(), hb = null !== (bb = pb(Sb.featureFlags.canUseInviteLinks)) && void 0 !== bb ? bb : "Loading Link...", [Gb, Ub] = (0, Ob.useState)(0), [Lb, ab] = (0, Ob.useReducer)((bb => bb + 1), 0);
+      return (0, Ob.useEffect)((() => {
+        const bb = setTimeout((() => {
+          ab()
         }), 1100);
         return () => {
-          clearTimeout(qq)
+          clearTimeout(bb)
         }
-      }), [Oq]), cq.featureFlags.canUseInviteLinks && (0, Wq.jsxs)("div", {
+      }), [Gb]), Sb.featureFlags.canUseInviteLinks && (0, wb.jsxs)("div", {
         className: "InviteLinkInnerWrapper",
-        children: [(0, Wq.jsx)("div", {
+        children: [(0, wb.jsx)("div", {
           className: "InviteLinkInner",
-          children: gq
-        }), (0, Wq.jsx)(Yq.g, {
+          children: hb
+        }), (0, wb.jsx)(Bb.e, {
           className: "InviteLinkCopyButton",
           onClick: () => {
-            navigator.clipboard.writeText(gq).catch((qq => {
-              console.error("Failed to copy invite link:", qq)
-            })), mq(Date.now())
+            navigator.clipboard.writeText(hb).catch((bb => {
+              console.error("Failed to copy invite link:", bb)
+            })), Ub(Date.now())
           },
-          disabled: Date.now() - Oq < 1e3,
-          children: Date.now() - Oq < 1e3 ? Eq("general:copied") : Eq("general:copy")
+          disabled: Date.now() - Gb < 1e3,
+          children: Date.now() - Gb < 1e3 ? ub("general:copied") : ub("general:copy")
         })]
       })
     }
 
-    function Vq(qq) {
-      const [Eq, gq] = (0, lq.useState)(null);
-      return (0, lq.useEffect)((() => {
-        if (!qq) return;
-        let Eq = !0;
-        return (0, Oq.G)().then((qq => {
-          Eq && gq(qq)
-        })).catch((qq => {
-          console.error("Failed to get invite link:", qq)
+    function pb(bb) {
+      const [ub, hb] = (0, Ob.useState)(null);
+      return (0, Ob.useEffect)((() => {
+        if (!bb) return;
+        let ub = !0;
+        return (0, Gb.C)().then((bb => {
+          ub && hb(bb)
+        })).catch((bb => {
+          console.error("Failed to get invite link:", bb)
         })), () => {
-          Eq = !1
+          ub = !1
         }
-      }), [qq]), Eq
+      }), [bb]), ub
     }
   },
-  9270: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => cq
+  9077: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Sb
     });
-    var Yq = gq(57),
-      lq = gq(1018),
-      Oq = gq.n(lq),
-      mq = gq(1942),
-      xq = gq(1070);
+    var Bb = hb(49),
+      Ob = hb(958),
+      Gb = hb.n(Ob),
+      Ub = hb(1857),
+      Lb = hb(1007);
 
-    function Aq(qq) {
-      const Eq = Math.floor(qq / 3600),
-        gq = Math.floor(qq % 3600 / 60),
-        Yq = Math.floor(qq % 60),
-        lq = `${gq.toString().padStart(2,"0")}:${Yq.toString().padStart(2,"0")}`;
-      return Eq > 0 ? `${Eq}:${lq}` : lq
+    function Yb(bb) {
+      const ub = Math.floor(bb / 3600),
+        hb = Math.floor(bb % 3600 / 60),
+        Bb = Math.floor(bb % 60),
+        Ob = `${hb.toString().padStart(2,"0")}:${Bb.toString().padStart(2,"0")}`;
+      return ub > 0 ? `${ub}:${Ob}` : Ob
     }
-    const cq = (0, Yq.memo)((function(qq) {
+    const Sb = (0, Bb.memo)((function(bb) {
       let {
-        className: Eq
-      } = qq;
+        className: ub
+      } = bb;
       const {
-        recording: gq,
-        seconds: Yq
-      } = (0, mq.g)("replayRecorder");
-      return gq ? (0, xq.jsxs)("div", {
-        className: Oq()("RecordingIndicator", Eq),
-        children: [(0, xq.jsx)("span", {
+        recording: hb,
+        seconds: Bb
+      } = (0, Ub.i)("replayRecorder");
+      return hb ? (0, Lb.jsxs)("div", {
+        className: Gb()("RecordingIndicator", ub),
+        children: [(0, Lb.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, xq.jsx)("span", {
+        }), (0, Lb.jsx)("span", {
           className: "RecordingIndicatorLabel",
           children: "REC"
-        }), (0, xq.jsx)("span", {
+        }), (0, Lb.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: Aq(Yq)
+          children: Yb(Bb)
         })]
       }) : null
     }))
   },
-  4721: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => dq
+  4653: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => ob
     });
-    var Yq = gq(1018),
-      lq = gq.n(Yq),
-      Oq = gq(4465),
-      mq = gq(1183),
-      xq = gq(1025),
-      Aq = gq(1422),
-      cq = gq(1477),
-      uq = gq(1336),
-      Bq = gq(2460),
-      Wq = gq(1070);
-    const Nq = {
+    var Bb = hb(958),
+      Ob = hb.n(Bb),
+      Gb = hb(4409),
+      Ub = hb(1095),
+      Lb = hb(966),
+      Yb = hb(1357),
+      Sb = hb(1398),
+      ab = hb(1249),
+      Hb = hb(2378),
+      wb = hb(1007);
+    const Zb = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -8199,440 +8199,440 @@ export const modules = {
       }
     };
 
-    function aq(qq) {
+    function Xb(bb) {
       let {
-        platform: Eq
-      } = qq;
-      const gq = "youtube" === Eq;
-      return (0, Wq.jsxs)("span", {
-        className: lq()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: gq
+        platform: ub
+      } = bb;
+      const hb = "youtube" === ub;
+      return (0, wb.jsxs)("span", {
+        className: Ob()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: hb
         }),
-        children: [gq && (0, Wq.jsx)(Bq.b, {
+        children: [hb && (0, wb.jsx)(Hb.c, {
           variant: "white"
-        }), !gq && (0, Wq.jsx)(xq.d, {
-          name: Nq[Eq].icon,
+        }), !hb && (0, wb.jsx)(Lb.e, {
+          name: Zb[ub].icon,
           kit: "brands"
         })]
       })
     }
 
-    function Vq(qq) {
+    function pb(bb) {
       let {
-        platform: Eq,
-        link: gq,
-        editable: Yq,
-        userContext: lq,
-        onLinksUpdated: Bq
-      } = qq;
+        platform: ub,
+        link: hb,
+        editable: Bb,
+        userContext: Ob,
+        onLinksUpdated: Hb
+      } = bb;
       const {
-        t: Vq
-      } = (0, mq.v)(), dq = Nq[Eq];
-      if (!gq && !Yq) return null;
+        t: pb
+      } = (0, Ub.K)(), ob = Zb[ub];
+      if (!hb && !Bb) return null;
 
-      function jq() {
-        var qq;
-        if (!lq || !Bq) return;
-        uq.NotificationProvider.showInputPopup({
+      function Ab() {
+        var bb;
+        if (!Ob || !Hb) return;
+        ab.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: dq.name
+              platform: ob.name
             }
           },
-          prefixText: Oq.w[Eq],
+          prefixText: Gb.u[ub],
           placeholderText: "playBloxd",
-          initialValue: null !== (qq = null === gq || void 0 === gq ? void 0 : gq.handle) && void 0 !== qq ? qq : "",
+          initialValue: null !== (bb = null === hb || void 0 === hb ? void 0 : hb.handle) && void 0 !== bb ? bb : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: gq ? "general:remove" : void 0
-        }).getResult().then((async qq => {
-          if ("notificationTornDown" !== qq && null !== qq) try {
-            "submit" === qq.type ? await cq.e.setSocialLink(lq, Eq, qq.value) : await cq.e.clearSocialLink(lq, Eq), Bq()
-          } catch (gq) {
-            console.error("Failed to update social link", gq), uq.NotificationProvider.showAlertPopup({
-              title: gq.errorMessageForUser,
+          secondaryButtonText: hb ? "general:remove" : void 0
+        }).getResult().then((async bb => {
+          if ("notificationTornDown" !== bb && null !== bb) try {
+            "submit" === bb.type ? await Sb.e.setSocialLink(Ob, ub, bb.value) : await Sb.e.clearSocialLink(Ob, ub), Hb()
+          } catch (hb) {
+            console.error("Failed to update social link", hb), ab.NotificationProvider.showAlertPopup({
+              title: hb.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (gq) {
-        const qq = `@${gq.handle}`;
-        return (0, Wq.jsxs)("a", {
+      if (hb) {
+        const bb = `@${hb.handle}`;
+        return (0, wb.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: dq.color
+            background: ob.color
           },
-          href: gq.profileUrl,
+          href: hb.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, Wq.jsxs)("div", {
+          children: [(0, wb.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, Wq.jsx)(aq, {
-              platform: Eq
-            }), (0, Wq.jsx)("span", {
+            children: [(0, wb.jsx)(Xb, {
+              platform: ub
+            }), (0, wb.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, Wq.jsx)("span", {
+              children: (0, wb.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: qq
+                children: bb
               })
             })]
-          }), Yq && (0, Wq.jsx)("button", {
+          }), Bb && (0, wb.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, Aq.V)({
+            ...(0, Yb.V)({
               stopPropagation: !0
             }),
-            onClick: qq => {
-              qq.stopPropagation(), qq.preventDefault(), jq()
+            onClick: bb => {
+              bb.stopPropagation(), bb.preventDefault(), Ab()
             },
-            children: (0, Wq.jsx)(xq.d, {
+            children: (0, wb.jsx)(Lb.e, {
               name: "pen-to-square"
             })
-          }), !Yq && (0, Wq.jsx)("span", {
+          }), !Bb && (0, wb.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, Wq.jsx)(xq.d, {
+            children: (0, wb.jsx)(Lb.e, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, Wq.jsxs)("button", {
+      return (0, wb.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: dq.color
+          background: ob.color
         },
-        ...(0, Aq.V)(),
+        ...(0, Yb.V)(),
         onClick: () => {
-          jq()
+          Ab()
         },
-        children: [(0, Wq.jsx)(aq, {
-          platform: Eq
-        }), (0, Wq.jsxs)("span", {
+        children: [(0, wb.jsx)(Xb, {
+          platform: ub
+        }), (0, wb.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, Wq.jsx)("span", {
+          children: [(0, wb.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: dq.name
-          }), (0, Wq.jsx)("span", {
+            children: ob.name
+          }), (0, wb.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: Vq("homePage:profileSocialLinkAdd")
+            children: pb("homePage:profileSocialLinkAdd")
           })]
-        }), (0, Wq.jsx)("span", {
+        }), (0, wb.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, Wq.jsx)(xq.d, {
+          children: (0, wb.jsx)(Lb.e, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function dq(qq) {
+    function ob(bb) {
       let {
-        socialLinks: Eq,
-        editable: gq = !1,
-        userContext: Yq,
-        onLinksUpdated: lq
-      } = qq;
-      if (!gq && 0 === Eq.length) return null;
-      const mq = new Map(Eq.map((qq => [qq.platform, qq]))),
-        xq = gq ? Oq.u : Eq.map((qq => qq.platform));
-      return (0, Wq.jsx)("div", {
+        socialLinks: ub,
+        editable: hb = !1,
+        userContext: Bb,
+        onLinksUpdated: Ob
+      } = bb;
+      if (!hb && 0 === ub.length) return null;
+      const Ub = new Map(ub.map((bb => [bb.platform, bb]))),
+        Lb = hb ? Gb.q : ub.map((bb => bb.platform));
+      return (0, wb.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, Wq.jsx)("div", {
+        children: (0, wb.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: xq.map((qq => (0, Wq.jsx)(Vq, {
-            platform: qq,
-            link: mq.get(qq),
-            editable: gq,
-            userContext: Yq,
-            onLinksUpdated: lq
-          }, qq)))
+          children: Lb.map((bb => (0, wb.jsx)(pb, {
+            platform: bb,
+            link: Ub.get(bb),
+            editable: hb,
+            userContext: Bb,
+            onLinksUpdated: Ob
+          }, bb)))
         })
       })
     }
   },
-  9277: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq
+  9085: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Gb
     });
-    var Yq = gq(4364),
-      lq = gq(4367);
+    var Bb = hb(4296),
+      Ob = hb(4302);
 
-    function Oq(qq) {
+    function Gb(bb) {
       let {
-        children: Eq,
-        showing: gq,
-        globallyUniqueKey: Oq,
-        alwaysMountChildren: mq = !1,
-        doGameplayStartStopOnShow: xq = !0,
-        keepsMovement: Aq = !1
-      } = qq;
-      return (0, lq.e)(!0, gq, Oq, Aq), (0, Yq.d)(xq, gq), gq || mq ? Eq : null
+        children: ub,
+        showing: hb,
+        globallyUniqueKey: Gb,
+        alwaysMountChildren: Ub = !1,
+        doGameplayStartStopOnShow: Lb = !0,
+        keepsMovement: Yb = !1
+      } = bb;
+      return (0, Ob.c)(!0, hb, Gb, Yb), (0, Bb.c)(Lb, hb), hb || Ub ? ub : null
     }
   },
-  9326: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Oq
+  9131: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Gb
     });
-    var Yq = gq(57),
-      lq = gq(3455);
+    var Bb = hb(49),
+      Ob = hb(3364);
 
-    function Oq() {
-      const [qq, Eq] = (0, Yq.useState)(!1);
-      return (0, Yq.useLayoutEffect)((() => {
-        let qq = !0;
-        return (0, lq.b)().then((() => {
-          qq && Eq(!0)
+    function Gb() {
+      const [bb, ub] = (0, Bb.useState)(!1);
+      return (0, Bb.useLayoutEffect)((() => {
+        let bb = !0;
+        return (0, Ob.e)().then((() => {
+          bb && ub(!0)
         })), () => {
-          qq = !1
+          bb = !1
         }
-      }), []), qq
+      }), []), bb
     }
   },
-  6434: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq
+  6300: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb
     });
-    var Yq = gq(57),
-      lq = gq(38);
+    var Bb = hb(49),
+      Ob = hb(29);
 
-    function Oq(qq, Eq) {
-      var gq;
-      const [Oq, mq] = (0, Yq.useState)(null !== (gq = lq.i.getItem(qq)) && void 0 !== gq ? gq : Eq);
-      return [Oq, Eq => {
-        lq.i.setItem(qq, Eq), mq(Eq)
+    function Gb(bb, ub) {
+      var hb;
+      const [Gb, Ub] = (0, Bb.useState)(null !== (hb = Ob.j.getItem(bb)) && void 0 !== hb ? hb : ub);
+      return [Gb, ub => {
+        Ob.j.setItem(bb, ub), Ub(ub)
       }]
     }
   },
-  9246: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Vq,
-      g: () => aq
+  9057: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => pb,
+      e: () => Xb
     });
-    gq(9251);
-    var Yq = gq(1018),
-      lq = gq.n(Yq),
-      Oq = gq(57),
-      mq = gq(9216);
+    hb(9062);
+    var Bb = hb(958),
+      Ob = hb.n(Bb),
+      Gb = hb(49),
+      Ub = hb(9031);
 
-    function xq(qq, Eq) {
-      return Math.max(1, Math.round(qq * Eq))
+    function Lb(bb, ub) {
+      return Math.max(1, Math.round(bb * ub))
     }
 
-    function Aq(qq, Eq) {
-      const gq = Eq * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        Yq = function(qq, Eq) {
-          if (qq.lines) return xq(qq.lineThickness, Eq) % 2;
-          if (qq.dot) return xq(qq.dotSize, Eq) % 2;
-          return cq(qq, Eq) % 2
-        }(qq, Eq),
-        lq = uq(qq.lineThickness * gq, Yq),
-        Oq = xq(qq.lineLength, gq),
-        mq = Math.round(qq.gap * gq),
-        Aq = qq.outline > 0 ? xq(qq.outline, gq) : 0,
-        Wq = [];
-      if (qq.lines && (Wq.push({
-          x: lq + mq,
+    function Yb(bb, ub) {
+      const hb = ub * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        Bb = function(bb, ub) {
+          if (bb.lines) return Lb(bb.lineThickness, ub) % 2;
+          if (bb.dot) return Lb(bb.dotSize, ub) % 2;
+          return Sb(bb, ub) % 2
+        }(bb, ub),
+        Ob = ab(bb.lineThickness * hb, Bb),
+        Gb = Lb(bb.lineLength, hb),
+        Ub = Math.round(bb.gap * hb),
+        Yb = bb.outline > 0 ? Lb(bb.outline, hb) : 0,
+        wb = [];
+      if (bb.lines && (wb.push({
+          x: Ob + Ub,
           y: 0,
-          w: Oq,
-          h: lq,
+          w: Gb,
+          h: Ob,
           arm: "right"
-        }), Wq.push({
-          x: -mq - Oq,
+        }), wb.push({
+          x: -Ub - Gb,
           y: 0,
-          w: Oq,
-          h: lq,
+          w: Gb,
+          h: Ob,
           arm: "left"
-        }), Wq.push({
+        }), wb.push({
           x: 0,
-          y: lq + mq,
-          w: lq,
-          h: Oq,
+          y: Ob + Ub,
+          w: Ob,
+          h: Gb,
           arm: "down"
-        }), qq.tStyle || Wq.push({
+        }), bb.tStyle || wb.push({
           x: 0,
-          y: -mq - Oq,
-          w: lq,
-          h: Oq,
+          y: -Ub - Gb,
+          w: Ob,
+          h: Gb,
           arm: "up"
-        }), 0 === mq && Wq.push({
+        }), 0 === Ub && wb.push({
           x: 0,
           y: 0,
-          w: lq,
-          h: lq
-        })), qq.dot) {
-        const Eq = uq(qq.dotSize * gq, Yq),
-          Oq = qq.lines && 0 === mq && qq.dotSize > qq.lineThickness ? Math.max(Eq, lq + 2) : Eq,
-          xq = (lq - Oq) / 2;
-        Wq.push({
-          x: xq,
-          y: xq,
-          w: Oq,
-          h: Oq
+          w: Ob,
+          h: Ob
+        })), bb.dot) {
+        const ub = ab(bb.dotSize * hb, Bb),
+          Gb = bb.lines && 0 === Ub && bb.dotSize > bb.lineThickness ? Math.max(ub, Ob + 2) : ub,
+          Lb = (Ob - Gb) / 2;
+        wb.push({
+          x: Lb,
+          y: Lb,
+          w: Gb,
+          h: Gb
         })
       }
-      const Nq = Wq.map((qq => ({
-        ...qq,
-        x: qq.x - Aq,
-        y: qq.y - Aq,
-        w: qq.w + 2 * Aq,
-        h: qq.h + 2 * Aq
+      const Zb = wb.map((bb => ({
+        ...bb,
+        x: bb.x - Yb,
+        y: bb.y - Yb,
+        w: bb.w + 2 * Yb,
+        h: bb.h + 2 * Yb
       })));
-      let aq = null,
-        Vq = null;
-      if (qq.circle) {
-        const Eq = xq(qq.circleThickness, gq),
-          Oq = function(qq, Eq) {
-            return qq + (qq % 2 === Eq ? 0 : 1)
-          }(cq(qq, gq), Yq),
-          mq = (lq - Oq) / 2;
-        aq = Bq(mq, Oq, Eq), Aq > 0 && (Vq = Bq(mq - Aq, Oq + 2 * Aq, Eq + 2 * Aq))
+      let Xb = null,
+        pb = null;
+      if (bb.circle) {
+        const ub = Lb(bb.circleThickness, hb),
+          Gb = function(bb, ub) {
+            return bb + (bb % 2 === ub ? 0 : 1)
+          }(Sb(bb, hb), Bb),
+          Ub = (Ob - Gb) / 2;
+        Xb = Hb(Ub, Gb, ub), Yb > 0 && (pb = Hb(Ub - Yb, Gb + 2 * Yb, ub + 2 * Yb))
       }
       return {
-        cell: lq,
-        fills: Wq,
-        outlines: Aq > 0 ? Nq : [],
-        ring: aq,
-        ringOutline: Vq
+        cell: Ob,
+        fills: wb,
+        outlines: Yb > 0 ? Zb : [],
+        ring: Xb,
+        ringOutline: pb
       }
     }
 
-    function cq(qq, Eq) {
-      return Math.round(qq.circleRadius * Eq * 2 + xq(qq.circleThickness, Eq))
+    function Sb(bb, ub) {
+      return Math.round(bb.circleRadius * ub * 2 + Lb(bb.circleThickness, ub))
     }
 
-    function uq(qq, Eq) {
-      return Math.max(2 - Eq, 2 * Math.round((qq - Eq) / 2) + Eq)
+    function ab(bb, ub) {
+      return Math.max(2 - ub, 2 * Math.round((bb - ub) / 2) + ub)
     }
 
-    function Bq(qq, Eq, gq) {
-      const Yq = 2 * gq >= Eq - 1;
+    function Hb(bb, ub, hb) {
+      const Bb = 2 * hb >= ub - 1;
       return {
-        x: qq,
-        y: qq,
-        size: Eq,
-        border: Math.min(gq, Math.floor(Eq / 2)),
-        filled: Yq
+        x: bb,
+        y: bb,
+        size: ub,
+        border: Math.min(hb, Math.floor(ub / 2)),
+        filled: Bb
       }
     }
-    var Wq = gq(1070);
-    const Nq = 1.4;
+    var wb = hb(1007);
+    const Zb = 1.4;
 
-    function aq(qq, Eq) {
-      return qq && Eq ? `scale(${Nq})` : "scale(1)"
+    function Xb(bb, ub) {
+      return bb && ub ? `scale(${Zb})` : "scale(1)"
     }
 
-    function Vq(qq) {
-      return "classic" === qq.settings.style ? (0, Wq.jsx)(Hq, {
-        ...qq
-      }) : (0, Wq.jsx)(vq, {
-        ...qq
+    function pb(bb) {
+      return "classic" === bb.settings.style ? (0, wb.jsx)(lb, {
+        ...bb
+      }) : (0, wb.jsx)(nb, {
+        ...bb
       })
     }
-    const dq = .125;
+    const ob = .125;
 
-    function jq(qq, Eq) {
-      const gq = {};
-      if (qq.color !== mq.f.color && (gq.color = (0, mq.k)(qq.color)), qq.opacity !== mq.f.opacity && (gq.opacity = qq.opacity / 100), qq.outline !== mq.f.outline || qq.outlineColor !== mq.f.outlineColor) {
-        const Eq = qq.outline,
-          Yq = (0, mq.k)(qq.outlineColor);
-        gq.textShadow = Eq > 0 ? `-${Eq}px 0 ${Yq}, 0 ${Eq}px ${Yq}, ${Eq}px 0 ${Yq}, 0 -${Eq}px ${Yq}` : "none"
+    function Ab(bb, ub) {
+      const hb = {};
+      if (bb.color !== Ub.e.color && (hb.color = (0, Ub.h)(bb.color)), bb.opacity !== Ub.e.opacity && (hb.opacity = bb.opacity / 100), bb.outline !== Ub.e.outline || bb.outlineColor !== Ub.e.outlineColor) {
+        const ub = bb.outline,
+          Bb = (0, Ub.h)(bb.outlineColor);
+        hb.textShadow = ub > 0 ? `-${ub}px 0 ${Bb}, 0 ${ub}px ${Bb}, ${ub}px 0 ${Bb}, 0 -${ub}px ${Bb}` : "none"
       }
-      if (qq.size !== mq.f.size) {
-        const Yq = qq.size / 100;
-        gq.fontSize = Eq ? `calc(max(1.3rem, 18px) * ${Yq})` : `calc(1.3rem * ${Yq})`, gq.marginTop = `-${dq}em`, gq.transformOrigin = `50% calc(50% + ${dq}em)`
+      if (bb.size !== Ub.e.size) {
+        const Bb = bb.size / 100;
+        hb.fontSize = ub ? `calc(max(1.3rem, 18px) * ${Bb})` : `calc(1.3rem * ${Bb})`, hb.marginTop = `-${ob}em`, hb.transformOrigin = `50% calc(50% + ${ob}em)`
       }
-      return gq
+      return hb
     }
 
-    function Hq(qq) {
+    function lb(bb) {
       let {
-        settings: Eq,
-        touch: gq,
-        inPreview: Yq,
-        inEditor: Oq,
-        pressed: mq = !1,
-        pressRef: xq
-      } = qq;
-      return (0, Wq.jsx)("div", {
-        className: lq()("Crosshair", {
-          Touch: gq,
-          CrosshairInPreview: Yq,
-          CrosshairInEditor: Oq || Yq
+        settings: ub,
+        touch: hb,
+        inPreview: Bb,
+        inEditor: Gb,
+        pressed: Ub = !1,
+        pressRef: Lb
+      } = bb;
+      return (0, wb.jsx)("div", {
+        className: Ob()("Crosshair", {
+          Touch: hb,
+          CrosshairInPreview: Bb,
+          CrosshairInEditor: Gb || Bb
         }),
-        ref: xq,
+        ref: Lb,
         style: {
-          transform: aq(mq, Eq.growOnClick),
-          ...jq(Eq, gq)
+          transform: Xb(Ub, ub.growOnClick),
+          ...Ab(ub, hb)
         },
         children: "+"
       })
     }
 
-    function oq(qq, Eq) {
-      return qq / Eq + "px"
+    function Kb(bb, ub) {
+      return bb / ub + "px"
     }
 
-    function Pq(qq, Eq, gq, Yq) {
+    function Wb(bb, ub, hb, Bb) {
       return {
-        ...tq(qq, Eq, gq),
-        width: oq(qq.w, gq),
-        height: oq(qq.h, gq),
-        background: Yq
+        ...rb(bb, ub, hb),
+        width: Kb(bb.w, hb),
+        height: Kb(bb.h, hb),
+        background: Bb
       }
     }
 
-    function Qq(qq, Eq, gq) {
+    function Cb(bb, ub, hb) {
       return {
-        left: oq(qq.x, Eq),
-        top: oq(qq.y, Eq),
-        width: oq(qq.size, Eq),
-        height: oq(qq.size, Eq),
-        borderWidth: oq(qq.border, Eq),
-        borderColor: gq,
-        background: qq.filled ? gq : void 0
+        left: Kb(bb.x, ub),
+        top: Kb(bb.y, ub),
+        width: Kb(bb.size, ub),
+        height: Kb(bb.size, ub),
+        borderWidth: Kb(bb.border, ub),
+        borderColor: hb,
+        background: bb.filled ? hb : void 0
       }
     }
-    const yq = {
+    const db = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function tq(qq, Eq, gq) {
-      const [Yq, lq] = qq.arm ? yq[qq.arm] : [0, 0], Oq = Math.round(Eq * gq);
+    function rb(bb, ub, hb) {
+      const [Bb, Ob] = bb.arm ? db[bb.arm] : [0, 0], Gb = Math.round(ub * hb);
       return {
-        left: oq(qq.x + Yq * Oq, gq),
-        top: oq(qq.y + lq * Oq, gq)
+        left: Kb(bb.x + Bb * Gb, hb),
+        top: Kb(bb.y + Ob * Gb, hb)
       }
     }
 
-    function rq(qq) {
-      return qq.arm ? {
-        "data-arm": qq.arm,
-        "data-x": qq.x,
-        "data-y": qq.y
+    function jb(bb) {
+      return bb.arm ? {
+        "data-arm": bb.arm,
+        "data-x": bb.x,
+        "data-y": bb.y
       } : {}
     }
 
-    function vq(qq) {
+    function nb(bb) {
       let {
-        settings: Eq,
-        inPreview: gq,
-        inEditor: Yq,
-        pressed: xq = !1,
-        spread: cq,
-        spreadRef: uq
-      } = qq;
-      const Bq = (0, Oq.useRef)(null),
+        settings: ub,
+        inPreview: hb,
+        inEditor: Bb,
+        pressed: Lb = !1,
+        spread: Sb,
+        spreadRef: ab
+      } = bb;
+      const Hb = (0, Gb.useRef)(null),
         {
-          box: aq,
-          dpr: Vq
-        } = function(qq) {
-          const [Eq, gq] = (0, Oq.useState)({
+          box: Xb,
+          dpr: pb
+        } = function(bb) {
+          const [ub, hb] = (0, Gb.useState)({
             box: {
               left: 0,
               top: 0,
@@ -8641,200 +8641,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, Oq.useLayoutEffect)((() => {
-            const Eq = qq.current;
-            if (!Eq) return;
-            const Yq = () => {
-              const qq = Eq.getBoundingClientRect(),
-                Yq = window.devicePixelRatio || 1;
-              gq((Eq => Eq.dpr === Yq && Eq.box.left === qq.left && Eq.box.top === qq.top && Eq.box.width === qq.width && Eq.box.height === qq.height ? Eq : {
+          return (0, Gb.useLayoutEffect)((() => {
+            const ub = bb.current;
+            if (!ub) return;
+            const Bb = () => {
+              const bb = ub.getBoundingClientRect(),
+                Bb = window.devicePixelRatio || 1;
+              hb((ub => ub.dpr === Bb && ub.box.left === bb.left && ub.box.top === bb.top && ub.box.width === bb.width && ub.box.height === bb.height ? ub : {
                 box: {
-                  left: qq.left,
-                  top: qq.top,
-                  width: qq.width,
-                  height: qq.height
+                  left: bb.left,
+                  top: bb.top,
+                  width: bb.width,
+                  height: bb.height
                 },
-                dpr: Yq
+                dpr: Bb
               }))
             };
-            Yq();
-            const lq = new ResizeObserver(Yq);
-            return lq.observe(Eq), window.addEventListener("resize", Yq), window.addEventListener("scroll", Yq, !0), () => {
-              lq.disconnect(), window.removeEventListener("resize", Yq), window.removeEventListener("scroll", Yq, !0)
+            Bb();
+            const Ob = new ResizeObserver(Bb);
+            return Ob.observe(ub), window.addEventListener("resize", Bb), window.addEventListener("scroll", Bb, !0), () => {
+              Ob.disconnect(), window.removeEventListener("resize", Bb), window.removeEventListener("scroll", Bb, !0)
             }
-          }), [qq]), Eq
-        }(Bq),
-        dq = (0, Oq.useRef)(Vq);
-      dq.current = Vq;
-      const jq = Aq(Eq, Vq, xq && Eq.growOnClick ? Nq : 1),
-        Hq = function(qq, Eq, gq) {
-          const Yq = Math.round((qq.left + qq.width / 2) * gq - Eq / 2),
-            lq = Math.round((qq.top + qq.height / 2) * gq - Eq / 2);
+          }), [bb]), ub
+        }(Hb),
+        ob = (0, Gb.useRef)(pb);
+      ob.current = pb;
+      const Ab = Yb(ub, pb, Lb && ub.growOnClick ? Zb : 1),
+        lb = function(bb, ub, hb) {
+          const Bb = Math.round((bb.left + bb.width / 2) * hb - ub / 2),
+            Ob = Math.round((bb.top + bb.height / 2) * hb - ub / 2);
           return {
-            x: Yq / gq - qq.left,
-            y: lq / gq - qq.top
+            x: Bb / hb - bb.left,
+            y: Ob / hb - bb.top
           }
-        }(aq, jq.cell, Vq),
-        oq = (0, mq.k)(Eq.color),
-        yq = (0, mq.k)(Eq.outlineColor),
-        vq = (0, Oq.useRef)(0);
-      (0, Oq.useLayoutEffect)((() => {
-        if (uq) return uq.current = qq => {
-          var Eq;
-          vq.current = qq, null === (Eq = Bq.current) || void 0 === Eq || Eq.querySelectorAll("[data-arm]").forEach((Eq => {
-            Object.assign(Eq.style, tq(function(qq) {
+        }(Xb, Ab.cell, pb),
+        Kb = (0, Ub.h)(ub.color),
+        db = (0, Ub.h)(ub.outlineColor),
+        nb = (0, Gb.useRef)(0);
+      (0, Gb.useLayoutEffect)((() => {
+        if (ab) return ab.current = bb => {
+          var ub;
+          nb.current = bb, null === (ub = Hb.current) || void 0 === ub || ub.querySelectorAll("[data-arm]").forEach((ub => {
+            Object.assign(ub.style, rb(function(bb) {
               return {
-                x: Number(qq.dataset.x),
-                y: Number(qq.dataset.y),
-                arm: qq.dataset.arm
+                x: Number(bb.dataset.x),
+                y: Number(bb.dataset.y),
+                arm: bb.dataset.arm
               }
-            }(Eq), qq, dq.current))
+            }(ub), bb, ob.current))
           }))
         }, () => {
-          uq.current = null
+          ab.current = null
         }
-      }), [uq]);
-      const hq = null !== cq && void 0 !== cq ? cq : vq.current;
-      return (0, Wq.jsx)("div", {
-        ref: Bq,
-        className: lq()("CrosshairShapes", {
-          CrosshairInPreview: gq,
-          CrosshairInEditor: Yq || gq,
-          CrosshairSpreads: void 0 !== uq
+      }), [ab]);
+      const Db = null !== Sb && void 0 !== Sb ? Sb : nb.current;
+      return (0, wb.jsx)("div", {
+        ref: Hb,
+        className: Ob()("CrosshairShapes", {
+          CrosshairInPreview: hb,
+          CrosshairInEditor: Bb || hb,
+          CrosshairSpreads: void 0 !== ab
         }),
-        children: (0, Wq.jsx)("div", {
+        children: (0, wb.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: Hq.x,
-            top: Hq.y,
-            opacity: Eq.opacity / 100
+            left: lb.x,
+            top: lb.y,
+            opacity: ub.opacity / 100
           },
-          children: (0, Wq.jsxs)("div", {
+          children: (0, wb.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [jq.ringOutline && (0, Wq.jsx)("div", {
+            children: [Ab.ringOutline && (0, wb.jsx)("div", {
               className: "CrosshairRing",
-              style: Qq(jq.ringOutline, Vq, yq)
-            }), jq.outlines.map(((qq, Eq) => (0, Wq.jsx)("div", {
+              style: Cb(Ab.ringOutline, pb, db)
+            }), Ab.outlines.map(((bb, ub) => (0, wb.jsx)("div", {
               className: "CrosshairPart",
-              ...rq(qq),
-              style: Pq(qq, hq, Vq, yq)
-            }, `o${Eq}`))), jq.ring && (0, Wq.jsx)("div", {
+              ...jb(bb),
+              style: Wb(bb, Db, pb, db)
+            }, `o${ub}`))), Ab.ring && (0, wb.jsx)("div", {
               className: "CrosshairRing",
-              style: Qq(jq.ring, Vq, oq)
-            }), jq.fills.map(((qq, Eq) => (0, Wq.jsx)("div", {
+              style: Cb(Ab.ring, pb, Kb)
+            }), Ab.fills.map(((bb, ub) => (0, wb.jsx)("div", {
               className: "CrosshairPart",
-              ...rq(qq),
-              style: Pq(qq, hq, Vq, oq)
-            }, `f${Eq}`)))]
+              ...jb(bb),
+              style: Wb(bb, Db, pb, Kb)
+            }, `f${ub}`)))]
           })
         })
       })
     }
   },
-  9254: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => uq,
-      e: () => dq,
-      i: () => Vq
+  9071: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => ab,
+      e: () => ob,
+      f: () => pb
     });
-    var Yq = gq(9216);
-    const lq = "XH1-",
-      Oq = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      mq = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      xq = ["color", "outlineColor"],
-      Aq = 1 + 3 * xq.length + mq.length + 1,
-      cq = Math.ceil(8 * Aq / Math.log2(62)),
-      uq = lq.length + cq;
+    var Bb = hb(9031);
+    const Ob = "XH1-",
+      Gb = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      Ub = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      Lb = ["color", "outlineColor"],
+      Yb = 1 + 3 * Lb.length + Ub.length + 1,
+      Sb = Math.ceil(8 * Yb / Math.log2(62)),
+      ab = Ob.length + Sb;
 
-    function Bq(qq) {
-      let Eq = 90;
-      for (const gq of qq) Eq = 31 * Eq + gq & 255;
-      return Eq
+    function Hb(bb) {
+      let ub = 90;
+      for (const hb of bb) ub = 31 * ub + hb & 255;
+      return ub
     }
-    const Wq = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      Nq = BigInt(Wq.length);
+    const wb = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      Zb = BigInt(wb.length);
 
-    function aq(qq, Eq) {
-      let gq = 0n;
-      for (const lq of qq) {
-        const qq = Wq.indexOf(lq);
-        if (qq < 0) return null;
-        gq = gq * Nq + BigInt(qq)
+    function Xb(bb, ub) {
+      let hb = 0n;
+      for (const Ob of bb) {
+        const bb = wb.indexOf(Ob);
+        if (bb < 0) return null;
+        hb = hb * Zb + BigInt(bb)
       }
-      if (gq >> BigInt(8 * Eq) !== 0n) return null;
-      const Yq = [];
-      for (let lq = 0; lq < Eq; lq++) Yq.unshift(Number(0xffn & gq)), gq >>= 8n;
-      return Yq
+      if (hb >> BigInt(8 * ub) !== 0n) return null;
+      const Bb = [];
+      for (let Ob = 0; Ob < ub; Ob++) Bb.unshift(Number(0xffn & hb)), hb >>= 8n;
+      return Bb
     }
 
-    function Vq(qq) {
-      let Eq = "shapes" === qq.style ? 1 : 0;
-      Oq.forEach(((gq, Yq) => {
-        qq[gq] && (Eq |= 1 << Yq + 1)
+    function pb(bb) {
+      let ub = "shapes" === bb.style ? 1 : 0;
+      Gb.forEach(((hb, Bb) => {
+        bb[hb] && (ub |= 1 << Bb + 1)
       }));
-      const gq = [Eq];
-      for (const lq of xq) {
-        const Eq = (0, Yq.j)(lq, qq[lq]);
-        gq.push(Eq >> 16 & 255, Eq >> 8 & 255, 255 & Eq)
+      const hb = [ub];
+      for (const Ob of Lb) {
+        const ub = (0, Bb.g)(Ob, bb[Ob]);
+        hb.push(ub >> 16 & 255, ub >> 8 & 255, 255 & ub)
       }
-      for (const lq of mq) {
+      for (const Ob of Ub) {
         const {
-          min: Eq,
-          step: Oq
-        } = Yq.e[lq];
-        gq.push(Math.round(((0, Yq.j)(lq, qq[lq]) - Eq) / Oq))
+          min: ub,
+          step: Gb
+        } = Bb.b[Ob];
+        hb.push(Math.round(((0, Bb.g)(Ob, bb[Ob]) - ub) / Gb))
       }
-      return gq.push(Bq(gq)), lq + function(qq, Eq) {
-        let gq = 0n;
-        for (const lq of qq) gq = gq << 8n | BigInt(lq);
-        let Yq = "";
-        for (let lq = 0; lq < Eq; lq++) Yq = Wq[Number(gq % Nq)] + Yq, gq /= Nq;
-        return Yq
-      }(gq, cq)
+      return hb.push(Hb(hb)), Ob + function(bb, ub) {
+        let hb = 0n;
+        for (const Ob of bb) hb = hb << 8n | BigInt(Ob);
+        let Bb = "";
+        for (let Ob = 0; Ob < ub; Ob++) Bb = wb[Number(hb % Zb)] + Bb, hb /= Zb;
+        return Bb
+      }(hb, Sb)
     }
 
-    function dq(qq) {
-      for (const Eq of qq.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${cq}})`, "gi"))) {
-        const qq = jq(aq(Eq[1], Aq));
-        if (qq) return qq
+    function ob(bb) {
+      for (const ub of bb.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Sb}})`, "gi"))) {
+        const bb = Ab(Xb(ub[1], Yb));
+        if (bb) return bb
       }
       return null
     }
 
-    function jq(qq) {
-      if (!qq || qq.length !== Aq || Bq(qq.slice(0, -1)) !== qq[qq.length - 1]) return null;
-      const Eq = qq[0],
-        gq = {
-          ...Yq.f,
-          style: 1 & Eq ? "shapes" : "classic"
+    function Ab(bb) {
+      if (!bb || bb.length !== Yb || Hb(bb.slice(0, -1)) !== bb[bb.length - 1]) return null;
+      const ub = bb[0],
+        hb = {
+          ...Bb.e,
+          style: 1 & ub ? "shapes" : "classic"
         };
-      Oq.forEach(((qq, Yq) => {
-        gq[qq] = 0 !== (Eq & 1 << Yq + 1)
+      Gb.forEach(((bb, Bb) => {
+        hb[bb] = 0 !== (ub & 1 << Bb + 1)
       }));
-      let lq = 1;
-      for (const Yq of xq) gq[Yq] = qq[lq] << 16 | qq[lq + 1] << 8 | qq[lq + 2], lq += 3;
-      for (const Oq of mq) {
+      let Ob = 1;
+      for (const Bb of Lb) hb[Bb] = bb[Ob] << 16 | bb[Ob + 1] << 8 | bb[Ob + 2], Ob += 3;
+      for (const Gb of Ub) {
         const {
-          min: Eq,
-          step: mq
-        } = Yq.e[Oq];
-        gq[Oq] = (0, Yq.j)(Oq, Eq + qq[lq] * mq), lq++
+          min: ub,
+          step: Ub
+        } = Bb.b[Gb];
+        hb[Gb] = (0, Bb.g)(Gb, ub + bb[Ob] * Ub), Ob++
       }
-      return gq
+      return hb
     }
   },
-  9216: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Yq,
-      f: () => lq,
-      j: () => Oq,
-      k: () => cq,
-      n: () => Aq,
-      q: () => uq,
-      u: () => xq,
-      v: () => mq
+  9031: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Bb,
+      e: () => Ob,
+      g: () => Gb,
+      h: () => Sb,
+      j: () => Yb,
+      m: () => ab,
+      o: () => Lb,
+      p: () => Ub
     });
-    const Yq = {
+    const Bb = {
         opacity: {
           min: 5,
           max: 100,
@@ -8891,7 +8891,7 @@ export const modules = {
           step: 1
         }
       },
-      lq = Object.freeze({
+      Ob = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -8912,279 +8912,279 @@ export const modules = {
         forGuns: !1
       });
 
-    function Oq(qq, Eq) {
-      var gq;
+    function Gb(bb, ub) {
+      var hb;
       const {
-        min: Oq,
-        max: mq,
-        step: xq
-      } = Yq[qq];
-      if (!Number.isFinite(Eq)) return lq[qq];
-      const Aq = (null !== (gq = String(xq).split(".")[1]) && void 0 !== gq ? gq : "").length,
-        cq = Number((Math.round(Eq / xq) * xq).toFixed(Aq));
-      return Math.min(mq, Math.max(Oq, cq))
+        min: Gb,
+        max: Ub,
+        step: Lb
+      } = Bb[bb];
+      if (!Number.isFinite(ub)) return Ob[bb];
+      const Yb = (null !== (hb = String(Lb).split(".")[1]) && void 0 !== hb ? hb : "").length,
+        Sb = Number((Math.round(ub / Lb) * Lb).toFixed(Yb));
+      return Math.min(Ub, Math.max(Gb, Sb))
     }
 
-    function mq(qq, Eq, gq) {
-      const Yq = "number" === typeof gq ? Oq(Eq, gq) : gq;
+    function Ub(bb, ub, hb) {
+      const Bb = "number" === typeof hb ? Gb(ub, hb) : hb;
       return {
-        ...qq,
-        [Eq]: Yq
+        ...bb,
+        [ub]: Bb
       }
     }
 
-    function xq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(lq).every((Yq => gq.includes(Yq) || qq[Yq] === Eq[Yq]))
+    function Lb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(Ob).every((Bb => hb.includes(Bb) || bb[Bb] === ub[Bb]))
     }
 
-    function Aq(qq) {
-      return xq(qq, lq)
+    function Yb(bb) {
+      return Lb(bb, Ob)
     }
 
-    function cq(qq) {
-      return `#${qq.toString(16).padStart(6,"0")}`
+    function Sb(bb) {
+      return `#${bb.toString(16).padStart(6,"0")}`
     }
 
-    function uq(qq) {
-      const Eq = /^#?([0-9a-f]{6})$/i.exec(qq.trim());
-      return Eq ? parseInt(Eq[1], 16) : null
+    function ab(bb) {
+      const ub = /^#?([0-9a-f]{6})$/i.exec(bb.trim());
+      return ub ? parseInt(ub[1], 16) : null
     }
   },
-  9263: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Bq,
-      f: () => Wq
+  9073: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Hb,
+      e: () => wb
     });
-    var Yq = gq(57),
-      lq = gq(38),
-      Oq = gq(9254),
-      mq = gq(9216);
-    const xq = "crosshairCode";
-    let Aq = null;
-    const cq = new Set;
+    var Bb = hb(49),
+      Ob = hb(29),
+      Gb = hb(9071),
+      Ub = hb(9031);
+    const Lb = "crosshairCode";
+    let Yb = null;
+    const Sb = new Set;
 
-    function uq() {
-      if (null === Aq) {
-        var qq;
-        const Eq = lq.i.getItem(xq);
-        Aq = null !== (qq = "string" === typeof Eq ? (0, Oq.e)(Eq) : null) && void 0 !== qq ? qq : mq.f
+    function ab() {
+      if (null === Yb) {
+        var bb;
+        const ub = Ob.j.getItem(Lb);
+        Yb = null !== (bb = "string" === typeof ub ? (0, Gb.e)(ub) : null) && void 0 !== bb ? bb : Ub.e
       }
-      return Aq
+      return Yb
     }
 
-    function Bq(qq) {
-      Aq = qq, (0, mq.n)(qq) ? lq.i.removeItem(xq) : lq.i.setItem(xq, (0, Oq.i)(qq));
-      for (const Eq of cq) Eq()
+    function Hb(bb) {
+      Yb = bb, (0, Ub.j)(bb) ? Ob.j.removeItem(Lb) : Ob.j.setItem(Lb, (0, Gb.f)(bb));
+      for (const ub of Sb) ub()
     }
 
-    function Wq() {
-      const [qq, Eq] = (0, Yq.useState)(uq);
-      return (0, Yq.useEffect)((() => {
-        const qq = () => {
-          Eq(uq())
+    function wb() {
+      const [bb, ub] = (0, Bb.useState)(ab);
+      return (0, Bb.useEffect)((() => {
+        const bb = () => {
+          ub(ab())
         };
-        return qq(), gq = qq, cq.add(gq), () => {
-          cq.delete(gq)
+        return bb(), hb = bb, Sb.add(hb), () => {
+          Sb.delete(hb)
         };
-        var gq
-      }), []), qq
+        var hb
+      }), []), bb
     }
   },
-  8850: (qq, Eq, gq) => {
-    function Yq(qq) {
+  8615: (bb, ub, hb) => {
+    function Bb(bb) {
       return {
-        x: (qq.left + qq.right) / 2,
-        y: (qq.top + qq.bottom) / 2
+        x: (bb.left + bb.right) / 2,
+        y: (bb.top + bb.bottom) / 2
       }
     }
 
-    function lq(qq) {
-      return 0 === qq.length ? null : qq.reduce(((qq, Eq) => ({
-        left: Math.min(qq.left, Eq.left),
-        top: Math.min(qq.top, Eq.top),
-        right: Math.max(qq.right, Eq.right),
-        bottom: Math.max(qq.bottom, Eq.bottom)
+    function Ob(bb) {
+      return 0 === bb.length ? null : bb.reduce(((bb, ub) => ({
+        left: Math.min(bb.left, ub.left),
+        top: Math.min(bb.top, ub.top),
+        right: Math.max(bb.right, ub.right),
+        bottom: Math.max(bb.bottom, ub.bottom)
       })))
     }
 
-    function Oq(qq, Eq) {
-      const gq = Math.max(0, (Eq - (qq.right - qq.left)) / 2),
-        Yq = Math.max(0, (Eq - (qq.bottom - qq.top)) / 2);
+    function Gb(bb, ub) {
+      const hb = Math.max(0, (ub - (bb.right - bb.left)) / 2),
+        Bb = Math.max(0, (ub - (bb.bottom - bb.top)) / 2);
       return {
-        left: qq.left - gq,
-        top: qq.top - Yq,
-        right: qq.right + gq,
-        bottom: qq.bottom + Yq
+        left: bb.left - hb,
+        top: bb.top - Bb,
+        right: bb.right + hb,
+        bottom: bb.bottom + Bb
       }
     }
 
-    function mq(qq, Eq) {
-      return Eq.x >= qq.left && Eq.x <= qq.right && Eq.y >= qq.top && Eq.y <= qq.bottom
+    function Ub(bb, ub) {
+      return ub.x >= bb.left && ub.x <= bb.right && ub.y >= bb.top && ub.y <= bb.bottom
     }
 
-    function xq(qq, Eq, gq) {
-      let lq = null,
-        xq = 1 / 0;
+    function Lb(bb, ub, hb) {
+      let Ob = null,
+        Lb = 1 / 0;
       for (const {
-          id: Yq,
-          box: Oq
+          id: Bb,
+          box: Gb
         }
-        of Eq) {
-        const Eq = (Oq.right - Oq.left) * (Oq.bottom - Oq.top);
-        mq(Oq, qq) && Eq < xq && (xq = Eq, lq = Yq)
+        of ub) {
+        const ub = (Gb.right - Gb.left) * (Gb.bottom - Gb.top);
+        Ub(Gb, bb) && ub < Lb && (Lb = ub, Ob = Bb)
       }
-      if (null !== lq) return lq;
-      let Aq = 1 / 0;
+      if (null !== Ob) return Ob;
+      let Yb = 1 / 0;
       for (const {
-          id: cq,
-          box: uq
+          id: Sb,
+          box: ab
         }
-        of Eq) {
-        if (!mq(Oq(uq, gq), qq)) continue;
-        const Eq = Yq(uq),
-          xq = Math.hypot(qq.x - Eq.x, qq.y - Eq.y);
-        xq < Aq && (Aq = xq, lq = cq)
+        of ub) {
+        if (!Ub(Gb(ab, hb), bb)) continue;
+        const ub = Bb(ab),
+          Lb = Math.hypot(bb.x - ub.x, bb.y - ub.y);
+        Lb < Yb && (Yb = Lb, Ob = Sb)
       }
-      return lq
+      return Ob
     }
 
-    function Aq(qq, Eq, gq) {
+    function Yb(bb, ub, hb) {
       return {
-        left: gq.left,
-        top: gq.top,
-        right: qq - gq.right,
-        bottom: Eq - gq.bottom
+        left: hb.left,
+        top: hb.top,
+        right: bb - hb.right,
+        bottom: ub - hb.bottom
       }
     }
 
-    function cq(qq, Eq, gq, Yq) {
-      const lq = (qq, Eq, gq) => Math.max(Math.min(Eq, 0), Math.min(Math.max(gq, 0), qq));
+    function Sb(bb, ub, hb, Bb) {
+      const Ob = (bb, ub, hb) => Math.max(Math.min(ub, 0), Math.min(Math.max(hb, 0), bb));
       return {
-        x: lq(Eq, Yq.left - qq.left, Yq.right - qq.right),
-        y: lq(gq, Yq.top - qq.top, Yq.bottom - qq.bottom)
+        x: Ob(ub, Bb.left - bb.left, Bb.right - bb.right),
+        y: Ob(hb, Bb.top - bb.top, Bb.bottom - bb.bottom)
       }
     }
 
-    function uq(qq, Eq, gq, Yq, lq) {
-      const Oq = qq.dx * Yq + Eq,
-        mq = qq.dy * lq + gq,
-        xq = qq => Math.max(-1, Math.min(1, qq));
+    function ab(bb, ub, hb, Bb, Ob) {
+      const Gb = bb.dx * Bb + ub,
+        Ub = bb.dy * Ob + hb,
+        Lb = bb => Math.max(-1, Math.min(1, bb));
       return {
-        dx: xq(Oq / Yq),
-        dy: xq(mq / lq)
+        dx: Lb(Gb / Bb),
+        dy: Lb(Ub / Ob)
       }
     }
 
-    function Bq(qq, Eq, gq, Yq) {
-      return Eq <= 0 || gq <= 0 ? 1 : Math.max(.05, Math.min(1, qq / Eq, Yq / gq))
+    function Hb(bb, ub, hb, Bb) {
+      return ub <= 0 || hb <= 0 ? 1 : Math.max(.05, Math.min(1, bb / ub, Bb / hb))
     }
 
-    function Wq(qq, Eq, gq) {
-      return Math.min(qq.right, Eq.right) - Math.max(qq.left, Eq.left) > gq && Math.min(qq.bottom, Eq.bottom) - Math.max(qq.top, Eq.top) > gq
+    function wb(bb, ub, hb) {
+      return Math.min(bb.right, ub.right) - Math.max(bb.left, ub.left) > hb && Math.min(bb.bottom, ub.bottom) - Math.max(bb.top, ub.top) > hb
     }
 
-    function Nq(qq, Eq) {
-      const gq = (qq, Eq, gq, Yq) => Eq - qq > Yq - gq ? gq - qq > Eq - Yq ? Yq - Eq : gq - qq : qq < gq ? gq - qq : Eq > Yq ? Yq - Eq : 0;
+    function Zb(bb, ub) {
+      const hb = (bb, ub, hb, Bb) => ub - bb > Bb - hb ? hb - bb > ub - Bb ? Bb - ub : hb - bb : bb < hb ? hb - bb : ub > Bb ? Bb - ub : 0;
       return {
-        x: gq(qq.left, qq.right, Eq.left, Eq.right),
-        y: gq(qq.top, qq.bottom, Eq.top, Eq.bottom)
+        x: hb(bb.left, bb.right, ub.left, ub.right),
+        y: hb(bb.top, bb.bottom, ub.top, ub.bottom)
       }
     }
 
-    function aq(qq, Eq) {
+    function Xb(bb, ub) {
       let {
-        avoid: gq = null,
-        bounds: Yq = null
-      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, lq = 0, Oq = 1 / 0;
-      return qq.forEach(((qq, mq) => {
-        const xq = Eq.filter((Eq => Wq(qq, Eq, 0))).length,
-          Aq = null !== Yq && (qq.left < Yq.left || qq.top < Yq.top || qq.right > Yq.right || qq.bottom > Yq.bottom),
-          cq = xq + (gq && Wq(qq, gq, 0) ? 1e3 : 0) + (Aq ? 1e6 : 0);
-        cq < Oq && (lq = mq, Oq = cq)
-      })), lq
+        avoid: hb = null,
+        bounds: Bb = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, Ob = 0, Gb = 1 / 0;
+      return bb.forEach(((bb, Ub) => {
+        const Lb = ub.filter((ub => wb(bb, ub, 0))).length,
+          Yb = null !== Bb && (bb.left < Bb.left || bb.top < Bb.top || bb.right > Bb.right || bb.bottom > Bb.bottom),
+          Sb = Lb + (hb && wb(bb, hb, 0) ? 1e3 : 0) + (Yb ? 1e6 : 0);
+        Sb < Gb && (Ob = Ub, Gb = Sb)
+      })), Ob
     }
-    gq.d(Eq, {
-      A: () => Nq,
-      D: () => lq,
-      b: () => Yq,
-      d: () => mq,
-      e: () => Wq,
-      i: () => cq,
-      m: () => Oq,
-      n: () => aq,
-      q: () => uq,
-      t: () => xq,
-      v: () => Bq,
-      x: () => Aq
+    hb.d(ub, {
+      A: () => Ob,
+      b: () => Bb,
+      c: () => Ub,
+      f: () => wb,
+      i: () => Sb,
+      j: () => Gb,
+      l: () => Xb,
+      n: () => ab,
+      o: () => Lb,
+      r: () => Hb,
+      u: () => Yb,
+      w: () => Zb
     })
   },
-  9207: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq,
-      d: () => lq
+  9023: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb,
+      g: () => Ob
     });
-    var Yq = gq(24);
+    var Bb = hb(13);
 
-    function lq(qq, Eq) {
-      return qq && !Eq
+    function Ob(bb, ub) {
+      return bb && !ub
     }
 
-    function Oq() {
-      return lq(Yq.b.get("isTouchScreen"), Yq.b.get("clientEscMenuOptions").touchActionButtons)
+    function Gb() {
+      return Ob(Bb.d.get("isTouchScreen"), Bb.d.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  8604: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => lq,
-      e: () => Yq
+  8391: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Ob,
+      e: () => Bb
     });
-    const Yq = "controllerOpenKeyboard",
-      lq = "controllerKeyboardVisible"
+    const Bb = "controllerOpenKeyboard",
+      Ob = "controllerKeyboardVisible"
   },
-  9167: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Yq
+  8975: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Bb
     });
-    const Yq = new Set(["chunkBorders"])
+    const Bb = new Set(["chunkBorders"])
   },
-  9160: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      ALL_DEV_TOOLS: () => mq,
-      coreDevTools: () => cq,
-      devTools: () => Aq
+  8972: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      ALL_DEV_TOOLS: () => Ub,
+      coreDevTools: () => Sb,
+      devTools: () => Yb
     });
-    var Yq = gq(611),
-      lq = gq(1283),
-      Oq = gq(9167);
-    const mq = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function xq() {
+    var Bb = hb(599),
+      Ob = hb(1193),
+      Gb = hb(8975);
+    const Ub = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function Lb() {
       const {
-        noaDevTools: qq
-      } = await gq.e(231).then((() => gq(40806)));
-      return qq
+        noaDevTools: bb
+      } = await hb.e(231).then((() => hb(40506)));
+      return bb
     }
-    const Aq = new class {
+    const Yb = new class {
         constructor() {
-          this.loadHost = xq, this.tools = mq
+          this.loadHost = Lb, this.tools = Ub
         }
-        setHost(qq) {
-          this.tools = null === qq ? mq : qq.tools, this.loadHost = null === qq ? xq : async () => qq
+        setHost(bb) {
+          this.tools = null === bb ? Ub : bb.tools, this.loadHost = null === bb ? Lb : async () => bb
         }
-        supports(qq) {
-          return this.tools.has(qq)
+        supports(bb) {
+          return this.tools.has(bb)
         }
-        async downloadScene(qq, Eq) {
-          const gq = await this.loadHost();
-          await gq.downloadScene(qq, Eq)
+        async downloadScene(bb, ub) {
+          const hb = await this.loadHost();
+          await hb.downloadScene(bb, ub)
         }
-        async setAmbientLightIntensity(qq) {
-          const Eq = await this.loadHost();
-          await Eq.setAmbientLightIntensity(qq)
+        async setAmbientLightIntensity(bb) {
+          const ub = await this.loadHost();
+          await ub.setAmbientLightIntensity(bb)
         }
       },
-      cq = {
-        tools: Oq.e,
+      Sb = {
+        tools: Gb.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -9192,121 +9192,121 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    Yq.v && Aq.setHost(cq), (0, lq.w)((() => {
-      Aq.setHost(cq)
+    Bb.o && Yb.setHost(Sb), (0, Ob.v)((() => {
+      Yb.setHost(Sb)
     }))
   },
-  9321: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => mq,
-      d: () => lq,
-      f: () => uq
+  9124: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Ub,
+      c: () => Ob,
+      g: () => ab
     });
-    var Yq = gq(1547);
+    var Bb = hb(1463);
 
-    function lq(qq) {
-      var Eq;
+    function Ob(bb) {
+      var ub;
       return {
-        ...mq.store,
-        yaw: mq.store.yaw + (null !== (Eq = Yq.b[qq].previewYaw) && void 0 !== Eq ? Eq : 0)
+        ...Ub.store,
+        yaw: Ub.store.yaw + (null !== (ub = Bb.e[bb].previewYaw) && void 0 !== ub ? ub : 0)
       }
     }
-    const Oq = {
+    const Gb = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      mq = {
-        player: Oq,
+      Ub = {
+        player: Gb,
         store: {
-          ...Oq,
+          ...Gb,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function xq(qq, Eq) {
-      qq instanceof Promise ? qq.then(Eq).catch((qq => {
-        console.error("Couldn't open the preview", qq)
-      })) : Eq(qq)
+    function Lb(bb, ub) {
+      bb instanceof Promise ? bb.then(ub).catch((bb => {
+        console.error("Couldn't open the preview", bb)
+      })) : ub(bb)
     }
-    class Aq {
-      constructor(qq) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, xq(qq, (qq => {
-          this.closed ? qq.close() : (this.opened = qq, null !== this.size && qq.resize(this.size.width, this.size.height), null !== this.view && qq.show(this.view))
+    class Yb {
+      constructor(bb) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, Lb(bb, (bb => {
+          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height), null !== this.view && bb.show(this.view))
         }))
       }
-      show(qq) {
-        var Eq;
-        this.view = qq, null === (Eq = this.opened) || void 0 === Eq || Eq.show(qq)
+      show(bb) {
+        var ub;
+        this.view = bb, null === (ub = this.opened) || void 0 === ub || ub.show(bb)
       }
-      resize(qq, Eq) {
-        var gq;
+      resize(bb, ub) {
+        var hb;
         this.size = {
-          width: qq,
-          height: Eq
-        }, null === (gq = this.opened) || void 0 === gq || gq.resize(qq, Eq)
+          width: bb,
+          height: ub
+        }, null === (hb = this.opened) || void 0 === hb || hb.resize(bb, ub)
       }
       close() {
-        var qq;
-        this.closed = !0, null === (qq = this.opened) || void 0 === qq || qq.close(), this.opened = null
+        var bb;
+        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
       }
     }
-    class cq {
-      constructor(qq) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(qq).then((qq => qq.ready)), xq(qq, (qq => {
-          this.closed ? qq.close() : (this.opened = qq, null !== this.size && qq.resize(this.size.width, this.size.height))
+    class Sb {
+      constructor(bb) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(bb).then((bb => bb.ready)), Lb(bb, (bb => {
+          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var qq, Eq;
-        return null !== (qq = null === (Eq = this.opened) || void 0 === Eq ? void 0 : Eq.isReady()) && void 0 !== qq && qq
+        var bb, ub;
+        return null !== (bb = null === (ub = this.opened) || void 0 === ub ? void 0 : ub.isReady()) && void 0 !== bb && bb
       }
-      setCosmetic(qq, Eq) {
-        var gq;
-        null === (gq = this.opened) || void 0 === gq || gq.setCosmetic(qq, Eq)
+      setCosmetic(bb, ub) {
+        var hb;
+        null === (hb = this.opened) || void 0 === hb || hb.setCosmetic(bb, ub)
       }
-      playEmote(qq) {
-        var Eq;
-        null === (Eq = this.opened) || void 0 === Eq || Eq.playEmote(qq)
+      playEmote(bb) {
+        var ub;
+        null === (ub = this.opened) || void 0 === ub || ub.playEmote(bb)
       }
-      setOrbit(qq) {
-        var Eq;
-        null === (Eq = this.opened) || void 0 === Eq || Eq.setOrbit(qq)
+      setOrbit(bb) {
+        var ub;
+        null === (ub = this.opened) || void 0 === ub || ub.setOrbit(bb)
       }
       resetCamera() {
-        var qq;
-        null === (qq = this.opened) || void 0 === qq || qq.resetCamera()
+        var bb;
+        null === (bb = this.opened) || void 0 === bb || bb.resetCamera()
       }
-      async untilDrawn(qq) {
-        var Eq;
-        await this.ready, await (null === (Eq = this.opened) || void 0 === Eq ? void 0 : Eq.untilDrawn(qq))
+      async untilDrawn(bb) {
+        var ub;
+        await this.ready, await (null === (ub = this.opened) || void 0 === ub ? void 0 : ub.untilDrawn(bb))
       }
-      resize(qq, Eq) {
-        var gq;
+      resize(bb, ub) {
+        var hb;
         this.size = {
-          width: qq,
-          height: Eq
-        }, null === (gq = this.opened) || void 0 === gq || gq.resize(qq, Eq)
+          width: bb,
+          height: ub
+        }, null === (hb = this.opened) || void 0 === hb || hb.resize(bb, ub)
       }
       close() {
-        var qq;
-        this.closed = !0, null === (qq = this.opened) || void 0 === qq || qq.close(), this.opened = null
+        var bb;
+        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
       }
     }
-    const uq = new class {
+    const ab = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(qq) {
-        this.host = qq
+      setHost(bb) {
+        this.host = bb
       }
-      setDefaultHost(qq) {
-        this.makeDefault = qq
+      setDefaultHost(bb) {
+        this.makeDefault = bb
       }
       current() {
         if (null === this.host) {
@@ -9315,99 +9315,99 @@ export const modules = {
         }
         return this.host
       }
-      openMob(qq) {
-        return new Aq(this.current().openMob(qq))
+      openMob(bb) {
+        return new Yb(this.current().openMob(bb))
       }
-      openPet(qq) {
-        return new Aq(this.current().openPet(qq))
+      openPet(bb) {
+        return new Yb(this.current().openPet(bb))
       }
-      openMobLineup(qq) {
-        return new Aq(this.current().openMobLineup(qq))
+      openMobLineup(bb) {
+        return new Yb(this.current().openMobLineup(bb))
       }
-      openCharacter(qq, Eq) {
-        return new cq(this.current().openCharacter(qq, Eq))
+      openCharacter(bb, ub) {
+        return new Sb(this.current().openCharacter(bb, ub))
       }
     }
   },
-  9313: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Yq.c,
-      f: () => Yq.d,
-      i: () => Yq.f
+  9122: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Bb.b,
+      f: () => Bb.c,
+      j: () => Bb.g
     });
-    var Yq = gq(9321);
-    class lq {
-      constructor(qq) {
-        this.load = qq, this.loaded = null, this.loading = null
+    var Bb = hb(9124);
+    class Ob {
+      constructor(bb) {
+        this.load = bb, this.loaded = null, this.loading = null
       }
-      run(qq) {
-        return null !== this.loaded ? qq(this.loaded) : (this.loading ??= this.load().then((qq => (this.loaded = qq, qq)), (qq => {
-          throw this.loading = null, qq
-        })), this.loading.then(qq))
+      run(bb) {
+        return null !== this.loaded ? bb(this.loaded) : (this.loading ??= this.load().then((bb => (this.loaded = bb, bb)), (bb => {
+          throw this.loading = null, bb
+        })), this.loading.then(bb))
       }
     }
-    class Oq {
+    class Gb {
       constructor() {
-        this.mobScene = new lq((() => Promise.all([gq.e(70), gq.e(227), gq.e(226), gq.e(246), gq.e(95), gq.e(247), gq.e(73), gq.e(72), gq.e(244), gq.e(71), gq.e(254), gq.e(248), gq.e(253), gq.e(251), gq.e(243), gq.e(265), gq.e(223), gq.e(238), gq.e(249), gq.e(252), gq.e(75), gq.e(197), gq.e(217), gq.e(94), gq.e(220), gq.e(235), gq.e(114), gq.e(236), gq.e(74), gq.e(113), gq.e(155)]).then((() => gq(40829))))), this.characterScene = new lq((() => Promise.all([gq.e(70), gq.e(227), gq.e(226), gq.e(246), gq.e(95), gq.e(247), gq.e(73), gq.e(72), gq.e(244), gq.e(71), gq.e(254), gq.e(248), gq.e(253), gq.e(251), gq.e(243), gq.e(265), gq.e(223), gq.e(238), gq.e(249), gq.e(252), gq.e(75), gq.e(197), gq.e(217), gq.e(94), gq.e(220), gq.e(235), gq.e(114), gq.e(236), gq.e(74), gq.e(113), gq.e(154)]).then((() => gq(40917)))))
+        this.mobScene = new Ob((() => Promise.all([hb.e(70), hb.e(227), hb.e(226), hb.e(246), hb.e(95), hb.e(247), hb.e(73), hb.e(72), hb.e(244), hb.e(71), hb.e(254), hb.e(248), hb.e(253), hb.e(251), hb.e(243), hb.e(265), hb.e(223), hb.e(238), hb.e(249), hb.e(252), hb.e(75), hb.e(197), hb.e(217), hb.e(94), hb.e(220), hb.e(235), hb.e(114), hb.e(236), hb.e(74), hb.e(113), hb.e(155)]).then((() => hb(40524))))), this.characterScene = new Ob((() => Promise.all([hb.e(70), hb.e(227), hb.e(226), hb.e(246), hb.e(95), hb.e(247), hb.e(73), hb.e(72), hb.e(244), hb.e(71), hb.e(254), hb.e(248), hb.e(253), hb.e(251), hb.e(243), hb.e(265), hb.e(223), hb.e(238), hb.e(249), hb.e(252), hb.e(75), hb.e(197), hb.e(217), hb.e(94), hb.e(220), hb.e(235), hb.e(114), hb.e(236), hb.e(74), hb.e(113), hb.e(154)]).then((() => hb(40617)))))
       }
-      openMob(qq) {
-        return this.mobScene.run((Eq => Eq.openMobPreview(qq)))
+      openMob(bb) {
+        return this.mobScene.run((ub => ub.openMobPreview(bb)))
       }
-      openPet(qq) {
-        return this.mobScene.run((Eq => Eq.openPetPreview(qq)))
+      openPet(bb) {
+        return this.mobScene.run((ub => ub.openPetPreview(bb)))
       }
-      openMobLineup(qq) {
-        return this.mobScene.run((Eq => Eq.openMobLineupPreview(qq)))
+      openMobLineup(bb) {
+        return this.mobScene.run((ub => ub.openMobLineupPreview(bb)))
       }
-      openCharacter(qq, Eq) {
-        return this.characterScene.run((gq => gq.openCharacterPreview(qq, Eq)))
+      openCharacter(bb, ub) {
+        return this.characterScene.run((hb => hb.openCharacterPreview(bb, ub)))
       }
     }
-    Yq.f.setDefaultHost((() => new Oq))
+    Bb.g.setDefaultHost((() => new Gb))
   },
-  6535: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq,
-      d: () => Oq
+  6394: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Ob,
+      g: () => Gb
     });
-    var Yq = gq(38);
-    const lq = "shaderPack";
-    async function Oq() {
-      var qq;
-      let Eq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (qq = await Yq.f.getItem(lq, Eq)) && void 0 !== qq ? qq : null
+    var Bb = hb(29);
+    const Ob = "shaderPack";
+    async function Gb() {
+      var bb;
+      let ub = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (bb = await Bb.f.getItem(Ob, ub)) && void 0 !== bb ? bb : null
     }
   },
-  9185: (qq, Eq, gq) => {
-    function Yq(qq, Eq) {
-      return qq && !Eq
+  8992: (bb, ub, hb) => {
+    function Bb(bb, ub) {
+      return bb && !ub
     }
-    gq.d(Eq, {
-      b: () => Yq
+    hb.d(ub, {
+      b: () => Bb
     })
   },
-  9200: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Oq
+  9016: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Gb
     });
-    var Yq = gq(1046);
+    var Bb = hb(981);
 
-    function lq() {
-      var qq, Eq;
-      return null !== (qq = null === (Eq = screen.orientation) || void 0 === Eq ? void 0 : Eq.type) && void 0 !== qq ? qq : innerWidth > innerHeight ? "landscape" : "portrait"
+    function Ob() {
+      var bb, ub;
+      return null !== (bb = null === (ub = screen.orientation) || void 0 === ub ? void 0 : ub.type) && void 0 !== bb ? bb : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const Oq = new class {
+    const Gb = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && lq() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && Ob() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = lq(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, Yq.lV)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = Ob(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, Bb.cX)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -9415,34 +9415,34 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const qq of this.resizers) qq()
+            for (const bb of this.resizers) bb()
           }
         }), 1e3)
       }
-      heldSizer(qq) {
-        let Eq = !1;
+      heldSizer(bb) {
+        let ub = !1;
         return () => {
-          if (Eq && this.isHeld()) return null;
-          const gq = qq();
-          return Eq ||= null !== gq, gq
+          if (ub && this.isHeld()) return null;
+          const hb = bb();
+          return ub ||= null !== hb, hb
         }
       }
-      onRelease(qq) {
-        return this.resizers.add(qq), () => {
-          this.resizers.delete(qq)
+      onRelease(bb) {
+        return this.resizers.add(bb), () => {
+          this.resizers.delete(bb)
         }
       }
     }
   },
-  8846: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => xq,
-      e: () => Aq
+  8613: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Lb,
+      f: () => Yb
     });
-    var Yq = gq(24),
-      lq = gq(1308),
-      Oq = gq(96);
-    const mq = {
+    var Bb = hb(13),
+      Ob = hb(1218),
+      Gb = hb(86);
+    const Ub = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -9485,111 +9485,111 @@ export const modules = {
       }
     };
 
-    function xq() {
-      return (0, Oq.isMobile)() && "function" === typeof navigator.vibrate
+    function Lb() {
+      return (0, Gb.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const Aq = new class {
-      constructor(qq) {
-        this.deps = qq, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const Yb = new class {
+      constructor(bb) {
+        this.deps = bb, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(qq, Eq) {
-        var gq;
+      play(bb, ub) {
+        var hb;
         if (!this.deps.enabled()) return;
-        const Yq = mq[qq],
-          lq = null !== Eq && void 0 !== Eq ? Eq : Yq.pattern;
-        if (null === lq) return void console.warn("No vibration pattern for", qq);
-        const Oq = this.deps.now();
-        Oq - this.lastAnyAt < 40 && Yq.priority < this.playingPriority || Oq - (null !== (gq = this.lastAt.get(qq)) && void 0 !== gq ? gq : -1 / 0) < Yq.minGapMs || Oq < this.playingUntil && Yq.priority < this.playingPriority || (this.lastAt.set(qq, Oq), this.lastAnyAt = Oq, this.playingUntil = Oq + lq.reduce(((qq, Eq) => qq + Eq), 0), this.playingPriority = Yq.priority, this.deps.vibrate(lq))
+        const Bb = Ub[bb],
+          Ob = null !== ub && void 0 !== ub ? ub : Bb.pattern;
+        if (null === Ob) return void console.warn("No vibration pattern for", bb);
+        const Gb = this.deps.now();
+        Gb - this.lastAnyAt < 40 && Bb.priority < this.playingPriority || Gb - (null !== (hb = this.lastAt.get(bb)) && void 0 !== hb ? hb : -1 / 0) < Bb.minGapMs || Gb < this.playingUntil && Bb.priority < this.playingPriority || (this.lastAt.set(bb, Gb), this.lastAnyAt = Gb, this.playingUntil = Gb + Ob.reduce(((bb, ub) => bb + ub), 0), this.playingPriority = Bb.priority, this.deps.vibrate(Ob))
       }
     }({
-      vibrate: qq => {
-        navigator.vibrate([...qq])
+      vibrate: bb => {
+        navigator.vibrate([...bb])
       },
       now: () => performance.now(),
-      enabled: () => xq() && Yq.b.get("isTouchScreen") && Yq.b.get("clientEscMenuOptions").vibration && !(0, lq.i)()
+      enabled: () => Lb() && Bb.d.get("isTouchScreen") && Bb.d.get("clientEscMenuOptions").vibration && !(0, Ob.c)()
     })
   },
-  9178: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Nq,
-      h: () => Wq
+  8985: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Zb,
+      e: () => wb
     });
-    var Yq = gq(24),
-      lq = gq(1677),
-      Oq = gq(38),
-      mq = gq(1336),
-      xq = gq(3526),
-      Aq = gq(1448),
-      cq = gq(1367);
-    const uq = 2592e5,
-      Bq = "notificationOptInLastPromptedAt";
-    async function Wq() {
-      var qq;
-      const Eq = await Nq();
-      if (null === Eq) return;
-      const gq = null !== (qq = Oq.i.getItem(Bq)) && void 0 !== qq ? qq : 0;
-      if (Date.now() - gq < uq) return;
-      if ((0, cq.c)()) return;
-      const Yq = await mq.NotificationProvider.showPromptPopup({
+    var Bb = hb(13),
+      Ob = hb(1593),
+      Gb = hb(29),
+      Ub = hb(1249),
+      Lb = hb(3448),
+      Yb = hb(1380),
+      Sb = hb(1288);
+    const ab = 2592e5,
+      Hb = "notificationOptInLastPromptedAt";
+    async function wb() {
+      var bb;
+      const ub = await Zb();
+      if (null === ub) return;
+      const hb = null !== (bb = Gb.j.getItem(Hb)) && void 0 !== bb ? bb : 0;
+      if (Date.now() - hb < ab) return;
+      if ((0, Sb.f)()) return;
+      const Bb = await Ub.NotificationProvider.showPromptPopup({
         icon: "bell",
         title: "mobilePushNotifications:optInTitle",
-        subtitle: lq.c.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
+        subtitle: Ob.e.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
         confirmText: "mobilePushNotifications:optInConfirm",
         cancelText: "mobilePushNotifications:optInCancel",
         padStartsOn: "cancel"
       }).getResult();
-      "notificationTornDown" !== Yq && (Oq.i.setItem(Bq, Date.now()), (0, Aq.reportAnalyticsClick)({
-        id: !0 === Yq ? "push.allow" : "push.deny",
-        value: lq.c.supports("notifications") ? "app" : "browser"
-      }), !0 === Yq && Eq().catch((qq => {
-        console.error("Failed to ask for push notifications:", qq)
+      "notificationTornDown" !== Bb && (Gb.j.setItem(Hb, Date.now()), (0, Yb.reportAnalyticsClick)({
+        id: !0 === Bb ? "push.allow" : "push.deny",
+        value: Ob.e.supports("notifications") ? "app" : "browser"
+      }), !0 === Bb && ub().catch((bb => {
+        console.error("Failed to ask for push notifications:", bb)
       })))
     }
-    async function Nq() {
-      return await lq.c.ready, lq.c.supports("notifications") ? Yq.b.get("mobilePushNotificationsCanAsk") ? async () => {
-        lq.c.request("notifications.requestPermission", {}).then((qq => {
+    async function Zb() {
+      return await Ob.e.ready, Ob.e.supports("notifications") ? Bb.d.get("mobilePushNotificationsCanAsk") ? async () => {
+        Ob.e.request("notifications.requestPermission", {}).then((bb => {
           let {
-            canAsk: Eq
-          } = qq;
-          Yq.b.set({
-            mobilePushNotificationsCanAsk: Eq
+            canAsk: ub
+          } = bb;
+          Bb.d.set({
+            mobilePushNotificationsCanAsk: ub
           })
-        }), (qq => {
-          console.error("The app couldn't ask for push notifications:", qq)
+        }), (bb => {
+          console.error("The app couldn't ask for push notifications:", bb)
         }))
-      }: null: await xq.c.canAsk() ? () => xq.c.requestPermission() : null
+      }: null: await Lb.b.canAsk() ? () => Lb.b.requestPermission() : null
     }
   },
-  9189: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => xq,
-      g: () => Aq
+  8996: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Lb,
+      g: () => Yb
     });
-    var Yq = gq(24);
-    const lq = 24,
-      Oq = "farNametags",
-      mq = 1e5;
+    var Bb = hb(13);
+    const Ob = 24,
+      Gb = "farNametags",
+      Ub = 1e5;
 
-    function xq() {
-      var qq;
-      return null === (qq = Yq.b.get("showDistantNametags")) || void 0 === qq || qq
+    function Lb() {
+      var bb;
+      return null === (bb = Bb.d.get("showDistantNametags")) || void 0 === bb || bb
     }
 
-    function Aq() {
-      var qq;
-      return null !== (qq = function() {
-        const qq = new URLSearchParams(window.location.search).get(Oq),
-          Eq = null === qq || "" === qq ? NaN : Number(qq);
-        return Number.isFinite(Eq) && Eq >= 0 ? Math.min(Eq, mq) : null
-      }()) && void 0 !== qq ? qq : xq() ? 0 : lq
+    function Yb() {
+      var bb;
+      return null !== (bb = function() {
+        const bb = new URLSearchParams(window.location.search).get(Gb),
+          ub = null === bb || "" === bb ? NaN : Number(bb);
+        return Number.isFinite(ub) && ub >= 0 ? Math.min(ub, Ub) : null
+      }()) && void 0 !== bb ? bb : Lb() ? 0 : Ob
     }
   },
-  9304: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => lq,
-      d: () => mq
+  9115: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Ob,
+      c: () => Ub
     });
-    const Yq = [{
+    const Bb = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -9771,79 +9771,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function lq(qq) {
-      let Eq, gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof qq) {
-        if (!Number.isFinite(qq)) return "0";
-        if (Math.abs(qq) < 100) {
-          const Eq = qq < 0 ? "-" : "",
-            gq = Math.abs(qq);
-          return gq >= 10 ? `${Eq}${gq.toFixed(1).replace(/\.0$/,"")}` : `${Eq}${gq.toFixed(2).replace(/\.?0+$/,"")}`
+    function Ob(bb) {
+      let ub, hb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof bb) {
+        if (!Number.isFinite(bb)) return "0";
+        if (Math.abs(bb) < 100) {
+          const ub = bb < 0 ? "-" : "",
+            hb = Math.abs(bb);
+          return hb >= 10 ? `${ub}${hb.toFixed(1).replace(/\.0$/,"")}` : `${ub}${hb.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        Eq = BigInt(Math.floor(qq))
-      } else Eq = qq;
-      const lq = Eq < 0n ? -Eq : Eq,
-        Oq = Eq < 0n ? "-" : "",
-        mq = lq.toString();
-      if (mq.length <= gq) return `${Oq}${mq}`;
-      const xq = 3 * Math.floor((mq.length - 1) / 3);
-      if (xq < 3) return `${Oq}${mq}`;
-      if (xq > 3 * Yq.length) {
-        const qq = mq[0],
-          Eq = mq.slice(1, 3).replace(/0+$/, "");
-        return `${Oq}${Eq?`${qq}.${Eq}`:qq}e${mq.length-1}`
+        ub = BigInt(Math.floor(bb))
+      } else ub = bb;
+      const Ob = ub < 0n ? -ub : ub,
+        Gb = ub < 0n ? "-" : "",
+        Ub = Ob.toString();
+      if (Ub.length <= hb) return `${Gb}${Ub}`;
+      const Lb = 3 * Math.floor((Ub.length - 1) / 3);
+      if (Lb < 3) return `${Gb}${Ub}`;
+      if (Lb > 3 * Bb.length) {
+        const bb = Ub[0],
+          ub = Ub.slice(1, 3).replace(/0+$/, "");
+        return `${Gb}${ub?`${bb}.${ub}`:bb}e${Ub.length-1}`
       }
       const {
-        threshold: Aq,
-        suffix: cq
-      } = Yq[Yq.length - xq / 3], uq = lq / Aq, Bq = Number(1000n * (lq % Aq) / Aq), Wq = Number(uq) + Bq / 1e3;
-      let Nq;
-      return Nq = Wq >= 100 ? Math.floor(Wq).toString() : Wq >= 10 ? Wq.toFixed(1).replace(/\.0$/, "") : Wq.toFixed(2).replace(/\.?0+$/, ""), `${Oq}${Nq}${cq}`
+        threshold: Yb,
+        suffix: Sb
+      } = Bb[Bb.length - Lb / 3], ab = Ob / Yb, Hb = Number(1000n * (Ob % Yb) / Yb), wb = Number(ab) + Hb / 1e3;
+      let Zb;
+      return Zb = wb >= 100 ? Math.floor(wb).toString() : wb >= 10 ? wb.toFixed(1).replace(/\.0$/, "") : wb.toFixed(2).replace(/\.?0+$/, ""), `${Gb}${Zb}${Sb}`
     }
-    const Oq = Yq.map((qq => {
+    const Gb = Bb.map((bb => {
       let {
-        threshold: Eq,
-        suffix: gq
-      } = qq;
+        threshold: ub,
+        suffix: hb
+      } = bb;
       return {
-        threshold: Number(Eq),
-        suffix: gq
+        threshold: Number(ub),
+        suffix: hb
       }
-    })).filter((qq => {
+    })).filter((bb => {
       let {
-        threshold: Eq
-      } = qq;
-      return Number.isFinite(Eq)
+        threshold: ub
+      } = bb;
+      return Number.isFinite(ub)
     }));
 
-    function mq(qq) {
-      const Eq = Math.abs(qq),
-        gq = qq < 0 ? "-" : "";
+    function Ub(bb) {
+      const ub = Math.abs(bb),
+        hb = bb < 0 ? "-" : "";
       for (const {
-          threshold: Yq,
-          suffix: lq
+          threshold: Bb,
+          suffix: Ob
         }
-        of Oq)
-        if (Eq >= Yq) {
-          const qq = Eq / Yq;
-          if (qq >= 1e3) return `${gq}${Eq.toExponential(2).replace("e+","e")}`;
-          let Oq;
-          return Oq = qq >= 100 ? Math.floor(qq).toString() : qq >= 10 ? qq.toFixed(1).replace(/\.0$/, "") : qq.toFixed(2).replace(/\.?0+$/, ""), `${gq}${Oq}${lq}`
-        } return `${gq}${Eq}`
+        of Gb)
+        if (ub >= Bb) {
+          const bb = ub / Bb;
+          if (bb >= 1e3) return `${hb}${ub.toExponential(2).replace("e+","e")}`;
+          let Gb;
+          return Gb = bb >= 100 ? Math.floor(bb).toString() : bb >= 10 ? bb.toFixed(1).replace(/\.0$/, "") : bb.toFixed(2).replace(/\.?0+$/, ""), `${hb}${Gb}${Ob}`
+        } return `${hb}${ub}`
     }
   },
-  9292: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => uq,
-      h: () => Wq,
-      j: () => Bq,
-      n: () => mq,
-      q: () => cq,
-      r: () => Aq
+  9097: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => ab,
+      g: () => wb,
+      j: () => Hb,
+      l: () => Ub,
+      o: () => Sb,
+      q: () => Yb
     });
-    var Yq = gq(307);
-    const lq = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      Oq = {
+    var Bb = hb(314);
+    const Ob = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      Gb = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -9918,13 +9918,13 @@ export const modules = {
         }
       };
 
-    function mq(qq) {
-      var Eq;
-      return null !== (Eq = Oq[qq]) && void 0 !== Eq ? Eq : {
+    function Ub(bb) {
+      var ub;
+      return null !== (ub = Gb[bb]) && void 0 !== ub ? ub : {
         translationKey: ""
       }
     }
-    const xq = {
+    const Lb = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -9977,107 +9977,107 @@ export const modules = {
       }]
     };
 
-    function Aq(qq) {
-      return lq.includes(qq)
+    function Yb(bb) {
+      return Ob.includes(bb)
     }
 
-    function cq(qq) {
-      var Eq;
-      return !0 === (null === qq || void 0 === qq || null === (Eq = qq.customAttributes) || void 0 === Eq ? void 0 : Eq.cannotEnchant)
+    function Sb(bb) {
+      var ub;
+      return !0 === (null === bb || void 0 === bb || null === (ub = bb.customAttributes) || void 0 === ub ? void 0 : ub.cannotEnchant)
     }
 
-    function uq(qq, Eq) {
+    function ab(bb, ub) {
       const {
-        max: gq
-      } = xq[qq].at(-1);
-      return Eq <= gq
+        max: hb
+      } = Lb[bb].at(-1);
+      return ub <= hb
     }
 
-    function Bq(qq) {
-      const Eq = Math.sin(qq / 80),
-        gq = qq => {
-          if (qq <= 0) return 0;
-          if (qq > 1) return 1;
-          let Eq = 0;
-          const gq = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let Yq = 0; Yq < gq.length; Yq++) {
-            Eq += (Yq % 2 === 0 ? 1 : -1) * gq[Yq] * Math.pow(qq, 2 + Yq) / (2 + Yq)
+    function Hb(bb) {
+      const ub = Math.sin(bb / 80),
+        hb = bb => {
+          if (bb <= 0) return 0;
+          if (bb > 1) return 1;
+          let ub = 0;
+          const hb = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let Bb = 0; Bb < hb.length; Bb++) {
+            ub += (Bb % 2 === 0 ? 1 : -1) * hb[Bb] * Math.pow(bb, 2 + Bb) / (2 + Bb)
           }
-          return 72 * Eq
+          return 72 * ub
         },
-        Yq = .3 - .78 * Eq,
-        lq = .5 - .78 * Eq,
-        Oq = .6 - .7 * Eq,
-        mq = .8 - .6 * Eq;
-      let xq = gq(Yq),
-        Aq = gq(lq) - xq,
-        cq = gq(Oq) - Aq - xq,
-        uq = gq(mq) - cq - Aq - xq;
-      Yq < .041 && (Aq /= 1 - xq, cq /= 1 - xq, uq /= 1 - xq, xq = 0), lq < .041 && (xq /= 1 - Aq, cq /= 1 - Aq, uq /= 1 - Aq, Aq = 0), Oq < .041 && (xq /= 1 - cq, Aq /= 1 - cq, uq /= 1 - cq, cq = 0), mq < .041 && (xq /= 1 - uq, Aq /= 1 - uq, cq /= 1 - uq, uq = 0);
+        Bb = .3 - .78 * ub,
+        Ob = .5 - .78 * ub,
+        Gb = .6 - .7 * ub,
+        Ub = .8 - .6 * ub;
+      let Lb = hb(Bb),
+        Yb = hb(Ob) - Lb,
+        Sb = hb(Gb) - Yb - Lb,
+        ab = hb(Ub) - Sb - Yb - Lb;
+      Bb < .041 && (Yb /= 1 - Lb, Sb /= 1 - Lb, ab /= 1 - Lb, Lb = 0), Ob < .041 && (Lb /= 1 - Yb, Sb /= 1 - Yb, ab /= 1 - Yb, Yb = 0), Gb < .041 && (Lb /= 1 - Sb, Yb /= 1 - Sb, ab /= 1 - Sb, Sb = 0), Ub < .041 && (Lb /= 1 - ab, Yb /= 1 - ab, Sb /= 1 - ab, ab = 0);
       return {
-        commonProb: xq,
-        uncommonProb: Aq,
-        rareProb: cq,
-        epicProb: uq,
-        legendaryProb: 1 - (uq + cq + Aq + xq)
+        commonProb: Lb,
+        uncommonProb: Yb,
+        rareProb: Sb,
+        epicProb: ab,
+        legendaryProb: 1 - (ab + Sb + Yb + Lb)
       }
     }
 
-    function Wq(qq, Eq) {
+    function wb(bb, ub) {
       const {
-        min: gq,
-        max: lq
-      } = xq[qq][Eq], Oq = Yq.c.sampleUniformIntDistribution(gq, lq, "includeMax");
+        min: hb,
+        max: Ob
+      } = Lb[bb][ub], Gb = Bb.d.sampleUniformIntDistribution(hb, Ob, "includeMax");
       return {
-        ...Bq(Oq),
-        level: Oq
+        ...Hb(Gb),
+        level: Gb
       }
     }
   },
-  8729: (qq, Eq, gq) => {
-    function Yq(qq, Eq) {
-      return !qq.hidden && (Eq || !qq.isRewardedAd)
+  8493: (bb, ub, hb) => {
+    function Bb(bb, ub) {
+      return !bb.hidden && (ub || !bb.isRewardedAd)
     }
 
-    function lq(qq) {
-      return "object" === typeof qq ? qq.option : qq
+    function Ob(bb) {
+      return "object" === typeof bb ? bb.option : bb
     }
 
-    function Oq(qq, Eq) {
-      var gq;
-      if ("dropdown" === (null === (gq = qq.userInput) || void 0 === gq ? void 0 : gq.type) && "object" === typeof qq.userInput.dropdownOptions[0]) {
-        for (const gq of qq.userInput.dropdownOptions)
-          if (lq(gq) === Eq) return "object" === typeof gq ? gq.cost : qq.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", qq, "input:", Eq)
+    function Gb(bb, ub) {
+      var hb;
+      if ("dropdown" === (null === (hb = bb.userInput) || void 0 === hb ? void 0 : hb.type) && "object" === typeof bb.userInput.dropdownOptions[0]) {
+        for (const hb of bb.userInput.dropdownOptions)
+          if (Ob(hb) === ub) return "object" === typeof hb ? hb.cost : bb.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", bb, "input:", ub)
       }
-      return qq.cost
+      return bb.cost
     }
 
-    function mq(qq, Eq, gq) {
-      var Yq;
-      const lq = null !== (Yq = gq.excludedPlayers) && void 0 !== Yq ? Yq : [Eq];
-      return qq.filter((qq => !lq.includes(qq)))
+    function Ub(bb, ub, hb) {
+      var Bb;
+      const Ob = null !== (Bb = hb.excludedPlayers) && void 0 !== Bb ? Bb : [ub];
+      return bb.filter((bb => !Ob.includes(bb)))
     }
-    gq.d(Eq, {
-      d: () => Oq,
-      f: () => lq,
-      g: () => mq,
-      h: () => Yq
+    hb.d(ub, {
+      d: () => Gb,
+      f: () => Ob,
+      g: () => Ub,
+      j: () => Bb
     })
   },
-  9251: () => {},
-  9224: qq => {
-    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  9062: () => {},
+  9033: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  9230: qq => {
-    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  9040: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  9233: qq => {
-    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  9046: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  9239: qq => {
-    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  9049: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

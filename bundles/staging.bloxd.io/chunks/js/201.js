@@ -1,77 +1,77 @@
 export const id = 201;
 export const ids = [201];
 export const modules = {
-  39082: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Yq
+  38755: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Bb
     });
-    class Yq {
-      constructor(qq, Eq) {
-        this.read = qq, this.apply = Eq, this.release = null
+    class Bb {
+      constructor(bb, ub) {
+        this.read = bb, this.apply = ub, this.release = null
       }
-      turn(qq, Eq) {
-        const gq = null === this.release ? this.read() : this.release.transitionMs;
+      turn(bb, ub) {
+        const hb = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: Eq,
-          forcedCameraDirection: [qq[0], qq[1], qq[2]]
+          forcedCameraDirectionTransitionMs: ub,
+          forcedCameraDirection: [bb[0], bb[1], bb[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), Eq + 100),
-          transitionMs: gq
+          }), ub + 100),
+          transitionMs: hb
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(qq) {
-        null !== this.release && (clearTimeout(this.release.timer), qq && this.apply({
+      stop(bb) {
+        null !== this.release && (clearTimeout(this.release.timer), bb && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  38625: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Oq,
-      g: () => lq
+  38264: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Gb,
+      d: () => Ob
     });
-    const Yq = new Map;
+    const Bb = new Map;
 
-    function lq(qq, Eq) {
-      Yq.set(qq, Eq)
+    function Ob(bb, ub) {
+      Bb.set(bb, ub)
     }
 
-    function Oq(qq) {
-      return qq ? Yq.get(qq) : void 0
+    function Gb(bb) {
+      return bb ? Bb.get(bb) : void 0
     }
   },
-  39516: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq
+  39214: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Ob
     });
-    var Yq = gq(38202);
+    var Bb = hb(37824);
 
-    function lq(qq, Eq, gq) {
-      var lq, Oq, mq, xq, Aq, cq, uq;
-      const Bq = (0, Yq.b)(qq, Eq, gq[0], gq[1], gq[2]),
-        Wq = Bq ? null !== (lq = Bq.textCell) && void 0 !== lq ? lq : Bq.rect.anchor : gq,
-        Nq = Eq(Wq[0], Wq[1], Wq[2]);
+    function Ob(bb, ub, hb) {
+      var Ob, Gb, Ub, Lb, Yb, Sb, ab;
+      const Hb = (0, Bb.e)(bb, ub, hb[0], hb[1], hb[2]),
+        wb = Hb ? null !== (Ob = Hb.textCell) && void 0 !== Ob ? Ob : Hb.rect.anchor : hb,
+        Zb = ub(wb[0], wb[1], wb[2]);
       return {
-        pos: [gq[0], gq[1], gq[2]],
-        noticeboardSpan: Bq && {
-          width: Bq.rect.width,
-          height: Bq.rect.height
+        pos: [hb[0], hb[1], hb[2]],
+        noticeboardSpan: Hb && {
+          width: Hb.rect.width,
+          height: Hb.rect.height
         },
-        text: null !== (Oq = null === Nq || void 0 === Nq || null === (mq = Nq.persisted) || void 0 === mq || null === (xq = mq.shared) || void 0 === xq ? void 0 : xq.text) && void 0 !== Oq ? Oq : "",
-        textSize: null !== (Aq = null === Nq || void 0 === Nq || null === (cq = Nq.persisted) || void 0 === cq || null === (uq = cq.shared) || void 0 === uq ? void 0 : uq.textSize) && void 0 !== Aq ? Aq : null
+        text: null !== (Gb = null === Zb || void 0 === Zb || null === (Ub = Zb.persisted) || void 0 === Ub || null === (Lb = Ub.shared) || void 0 === Lb ? void 0 : Lb.text) && void 0 !== Gb ? Gb : "",
+        textSize: null !== (Yb = null === Zb || void 0 === Zb || null === (Sb = Zb.persisted) || void 0 === Sb || null === (ab = Sb.shared) || void 0 === ab ? void 0 : ab.textSize) && void 0 !== Yb ? Yb : null
       }
     }
   },
-  38477: (qq, Eq, gq) => {
-    function Yq(qq) {
-      switch (qq.kind) {
+  38128: (bb, ub, hb) => {
+    function Bb(bb) {
+      switch (bb.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -80,452 +80,452 @@ export const modules = {
           return !0
       }
     }
-    gq.d(Eq, {
-      e: () => lq,
-      g: () => Oq,
-      h: () => Yq
+    hb.d(ub, {
+      d: () => Ob,
+      h: () => Gb,
+      k: () => Bb
     });
-    const lq = 4,
-      Oq = 3
+    const Ob = 4,
+      Gb = 3
   },
-  39102: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => lq,
-      f: () => Oq
+  38777: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Ob,
+      e: () => Gb
     });
-    var Yq = gq(307);
-    const lq = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
-    class Oq {
-      constructor(qq) {
-        this.importGame = qq, this.loads = new Map, this.loaded = new Map
+    var Bb = hb(314);
+    const Ob = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
+    class Gb {
+      constructor(bb) {
+        this.importGame = bb, this.loads = new Map, this.loaded = new Map
       }
-      load(qq) {
-        const Eq = (0, Yq.Yb)(qq);
-        if (!lq.has(Eq)) return Promise.resolve(void 0);
-        let gq = this.loads.get(Eq);
-        return gq || (gq = this.importGame(Eq).then((qq => {
-          const gq = qq.default;
-          if ("function" !== typeof gq) throw new Error(`${Eq}'s client code has no default-exported factory`);
-          return this.loaded.set(Eq, gq), gq
-        })).catch((qq => {
-          throw this.loads.delete(Eq), qq
-        })), this.loads.set(Eq, gq)), gq
+      load(bb) {
+        const ub = (0, Bb.Xb)(bb);
+        if (!Ob.has(ub)) return Promise.resolve(void 0);
+        let hb = this.loads.get(ub);
+        return hb || (hb = this.importGame(ub).then((bb => {
+          const hb = bb.default;
+          if ("function" !== typeof hb) throw new Error(`${ub}'s client code has no default-exported factory`);
+          return this.loaded.set(ub, hb), hb
+        })).catch((bb => {
+          throw this.loads.delete(ub), bb
+        })), this.loads.set(ub, hb)), hb
       }
-      loadedFactory(qq) {
-        const Eq = (0, Yq.Yb)(qq);
-        if (!lq.has(Eq)) return;
-        const gq = this.loaded.get(Eq);
-        if (!gq) throw new Error(`${Eq}'s client code started before it loaded`);
-        return gq
+      loadedFactory(bb) {
+        const ub = (0, Bb.Xb)(bb);
+        if (!Ob.has(ub)) return;
+        const hb = this.loaded.get(ub);
+        if (!hb) throw new Error(`${ub}'s client code started before it loaded`);
+        return hb
       }
     }
   },
-  39523: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => mq
+  39218: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Ub
     });
-    var Yq = gq(9464),
-      lq = gq(9301),
-      Oq = gq(3166);
+    var Bb = hb(9280),
+      Ob = hb(9106),
+      Gb = hb(3063);
 
-    function mq(qq) {
-      if (qq === Yq.b) return 0;
-      const Eq = (0, Oq.e)(qq);
-      if (void 0 !== Eq && Eq <= lq.MAX_BLOCK_ID) return Eq;
-      const gq = (0, Oq.e)(qq.split("|")[0]);
-      if (void 0 !== gq && gq <= lq.MAX_BLOCK_ID && (0, lq.rootMetaDescOf)(gq) === qq) return gq;
-      throw new Error(`Invalid block name. You sent ${qq}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function Ub(bb) {
+      if (bb === Bb.e) return 0;
+      const ub = (0, Gb.e)(bb);
+      if (void 0 !== ub && ub <= Ob.MAX_BLOCK_ID) return ub;
+      const hb = (0, Gb.e)(bb.split("|")[0]);
+      if (void 0 !== hb && hb <= Ob.MAX_BLOCK_ID && (0, Ob.rootMetaDescOf)(hb) === bb) return hb;
+      throw new Error(`Invalid block name. You sent ${bb}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  39155: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => lq
+  38828: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Ob
     });
-    var Yq = gq(24);
-    class lq {
-      constructor(qq) {
-        this.screen = qq, this.hidesHud = !1
+    var Bb = hb(13);
+    class Ob {
+      constructor(bb) {
+        this.screen = bb, this.hidesHud = !1
       }
-      show(qq, Eq) {
-        this.screen.setFade(qq.colour, qq.alpha), this.screen.setLetterbox(!0 === Eq.letterbox, qq.alpha < 1), this.setHudHidden(!0 === Eq.hideHud)
+      show(bb, ub) {
+        this.screen.setFade(bb.colour, bb.alpha), this.screen.setLetterbox(!0 === ub.letterbox, bb.alpha < 1), this.setHudHidden(!0 === ub.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(qq) {
-        this.hidesHud !== qq && (this.hidesHud = qq, Yq.b.set({
-          isUiHiddenByCamera: qq
+      setHudHidden(bb) {
+        this.hidesHud !== bb && (this.hidesHud = bb, Bb.d.set({
+          isUiHiddenByCamera: bb
         }))
       }
     }
   },
-  39118: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      C: () => uq,
-      d: () => Yq,
-      h: () => Wq,
-      k: () => Bq,
-      o: () => mq,
-      p: () => aq,
-      q: () => Aq,
-      s: () => Vq,
-      v: () => cq,
-      z: () => xq
+  38798: (bb, ub, hb) => {
+    hb.d(ub, {
+      C: () => Lb,
+      F: () => ab,
+      e: () => Bb,
+      g: () => wb,
+      i: () => Hb,
+      m: () => Ub,
+      o: () => Xb,
+      s: () => Yb,
+      w: () => pb,
+      y: () => Sb
     });
-    const Yq = Math.PI / 2 - .001,
-      lq = 2 * Math.PI,
-      Oq = 1e-9;
+    const Bb = Math.PI / 2 - .001,
+      Ob = 2 * Math.PI,
+      Gb = 1e-9;
 
-    function mq(qq, Eq) {
-      Eq.heading = qq.heading, Eq.pitch = qq.pitch
+    function Ub(bb, ub) {
+      ub.heading = bb.heading, ub.pitch = bb.pitch
     }
 
-    function xq(qq, Eq) {
-      const gq = Eq - qq;
-      return gq - lq * Math.floor((gq + Math.PI) / lq)
+    function Lb(bb, ub) {
+      const hb = ub - bb;
+      return hb - Ob * Math.floor((hb + Math.PI) / Ob)
     }
 
-    function Aq(qq, Eq, gq) {
-      return qq + xq(qq, Eq) * gq
+    function Yb(bb, ub, hb) {
+      return bb + Lb(bb, ub) * hb
     }
 
-    function cq(qq) {
-      if (!Number.isFinite(qq)) return qq;
-      const Eq = qq - lq * Math.floor(qq / lq);
-      return Eq < lq ? Eq : 0
+    function Sb(bb) {
+      if (!Number.isFinite(bb)) return bb;
+      const ub = bb - Ob * Math.floor(bb / Ob);
+      return ub < Ob ? ub : 0
     }
 
-    function uq(qq, Eq) {
-      return qq + xq(qq, Eq)
+    function ab(bb, ub) {
+      return bb + Lb(bb, ub)
     }
 
-    function Bq(qq) {
-      return Math.max(-Yq, Math.min(Yq, qq))
+    function Hb(bb) {
+      return Math.max(-Bb, Math.min(Bb, bb))
     }
 
-    function Wq(qq, Eq, gq) {
-      const Yq = Math.cos(Eq);
-      return gq[0] = Yq * Math.sin(qq), gq[1] = -Math.sin(Eq), gq[2] = Yq * Math.cos(qq), gq
+    function wb(bb, ub, hb) {
+      const Bb = Math.cos(ub);
+      return hb[0] = Bb * Math.sin(bb), hb[1] = -Math.sin(ub), hb[2] = Bb * Math.cos(bb), hb
     }
 
-    function Nq(qq, Eq, gq, Yq) {
-      const lq = Math.sqrt(qq * qq + gq * gq);
-      return lq < Oq && Math.abs(Eq) < Oq || (lq >= Oq && (Yq.heading = Math.atan2(qq, gq)), Yq.pitch = Bq(Math.atan2(-Eq, lq) + 0)), Yq
+    function Zb(bb, ub, hb, Bb) {
+      const Ob = Math.sqrt(bb * bb + hb * hb);
+      return Ob < Gb && Math.abs(ub) < Gb || (Ob >= Gb && (Bb.heading = Math.atan2(bb, hb)), Bb.pitch = Hb(Math.atan2(-ub, Ob) + 0)), Bb
     }
 
-    function aq(qq, Eq) {
-      return Nq(qq[0], qq[1], qq[2], Eq)
+    function Xb(bb, ub) {
+      return Zb(bb[0], bb[1], bb[2], ub)
     }
 
-    function Vq(qq, Eq, gq) {
-      return Nq(Eq[0] - qq[0], Eq[1] - qq[1], Eq[2] - qq[2], gq)
+    function pb(bb, ub, hb) {
+      return Zb(ub[0] - bb[0], ub[1] - bb[1], ub[2] - bb[2], hb)
     }
   },
-  39147: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Oq,
-      f: () => lq
+  38825: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb,
+      e: () => Ob
     });
-    var Yq = gq(39118);
+    var Bb = hb(38798);
 
-    function lq(qq) {
-      var Eq;
-      const gq = "default" === qq.mode ? "movement" : null !== (Eq = qq.playerFacing) && void 0 !== Eq ? Eq : "movement";
-      return "cursor" === gq ? {
-        facing: gq,
+    function Ob(bb) {
+      var ub;
+      const hb = "default" === bb.mode ? "movement" : null !== (ub = bb.playerFacing) && void 0 !== ub ? ub : "movement";
+      return "cursor" === hb ? {
+        facing: hb,
         mouseTurns: null
       } : {
-        facing: gq,
-        mouseTurns: "default" !== qq.mode && void 0 !== qq.playerLook ? "look" : "view"
+        facing: hb,
+        mouseTurns: "default" !== bb.mode && void 0 !== bb.playerLook ? "look" : "view"
       }
     }
 
-    function Oq(qq, Eq, gq, lq, Oq, mq) {
-      return mq.VJ = 0, mq.dJ = 0, mq.pointedAt = void 0, void 0 !== lq ? Oq ? (mq.pointedAt = lq, qq) : (0, Yq.v)(lq.heading) : Oq ? (mq.VJ = Eq, mq.dJ = gq, qq) : (0, Yq.v)(qq + Eq)
+    function Gb(bb, ub, hb, Ob, Gb, Ub) {
+      return Ub.MJ = 0, Ub.mJ = 0, Ub.pointedAt = void 0, void 0 !== Ob ? Gb ? (Ub.pointedAt = Ob, bb) : (0, Bb.y)(Ob.heading) : Gb ? (Ub.MJ = ub, Ub.mJ = hb, bb) : (0, Bb.y)(bb + ub)
     }
   },
-  39129: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Rq
+  38810: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => qb
     });
-    var Yq = gq(39138),
-      lq = gq(39118),
-      Oq = gq(37042);
+    var Bb = hb(38814),
+      Ob = hb(38798),
+      Gb = hb(36647);
 
-    function mq(qq, Eq, gq, Yq) {
-      if (!(Yq > 0)) return Eq;
-      const lq = Eq > qq ? Math.min(Eq, qq + gq / Yq) : Math.max(Eq, qq - gq / Yq);
-      return Math.abs(Eq - lq) < 1e-9 ? Eq : lq
+    function Ub(bb, ub, hb, Bb) {
+      if (!(Bb > 0)) return ub;
+      const Ob = ub > bb ? Math.min(ub, bb + hb / Bb) : Math.max(ub, bb - hb / Bb);
+      return Math.abs(ub - Ob) < 1e-9 ? ub : Ob
     }
-    class xq {
+    class Lb {
       constructor() {
         this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.heldMs = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: Yq.h,
+          colour: Bb.g,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(qq) {
-        !this.isGoingOut() && this.sinceTurnMs < Yq.m.minFadeTurnMs ? this.waiting = {
+      fadeOut(bb) {
+        !this.isGoingOut() && this.sinceTurnMs < Bb.m.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: qq
-        } : (this.waiting = null, this.startOut(qq))
+          transition: bb
+        } : (this.waiting = null, this.startOut(bb))
       }
-      fadeIn(qq) {
-        this.isGoingOut() ? this.sinceTurnMs < Yq.m.minFadeTurnMs ? this.waiting = {
+      fadeIn(bb) {
+        this.isGoingOut() ? this.sinceTurnMs < Bb.m.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: qq
-        } : (this.waiting = null, this.startIn(qq)) : this.waiting = null
+          minMs: bb
+        } : (this.waiting = null, this.startIn(bb)) : this.waiting = null
       }
-      advance(qq) {
-        const Eq = this.waiting;
-        if (null === Eq) return this.step(qq);
-        const gq = Yq.m.minFadeTurnMs - this.sinceTurnMs;
-        if (gq > qq) return this.step(qq);
-        const lq = this.step(gq);
-        return this.waiting = null, "out" === Eq.turn ? this.startOut(Eq.transition) : this.startIn(Eq.minMs), this.step(qq - gq) || lq
+      advance(bb) {
+        const ub = this.waiting;
+        if (null === ub) return this.step(bb);
+        const hb = Bb.m.minFadeTurnMs - this.sinceTurnMs;
+        if (hb > bb) return this.step(bb);
+        const Ob = this.step(hb);
+        return this.waiting = null, "out" === ub.turn ? this.startOut(ub.transition) : this.startIn(ub.minMs), this.step(bb - hb) || Ob
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(qq) {
-        ("in" === this.phase || null === this.phase && this.clearMs < Yq.m.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = qq.colour), this.outMs = qq.outMs, this.holdMs = qq.holdMs, this.inMs = qq.inMs
+      startOut(bb) {
+        ("in" === this.phase || null === this.phase && this.clearMs < Bb.m.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = bb.colour), this.outMs = bb.outMs, this.holdMs = bb.holdMs, this.inMs = bb.inMs
       }
-      startIn(qq) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(qq, this.inMs)
+      startIn(bb) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(bb, this.inMs)
       }
-      step(qq) {
-        const Eq = this.screen;
-        this.sinceTurnMs += qq, null === this.phase && (this.clearMs += qq);
-        let gq = !1,
-          lq = qq;
+      step(bb) {
+        const ub = this.screen;
+        this.sinceTurnMs += bb, null === this.phase && (this.clearMs += bb);
+        let hb = !1,
+          Ob = bb;
         if ("out" === this.phase) {
-          const Yq = (1 - Eq.alpha) * this.outMs;
-          if (Eq.alpha = mq(Eq.alpha, 1, qq, this.outMs), Eq.alpha < 1) return !1;
-          this.phase = "hold", this.heldMs = 0, lq = Math.max(0, qq - Yq), gq = !0
+          const Bb = (1 - ub.alpha) * this.outMs;
+          if (ub.alpha = Ub(ub.alpha, 1, bb, this.outMs), ub.alpha < 1) return !1;
+          this.phase = "hold", this.heldMs = 0, Ob = Math.max(0, bb - Bb), hb = !0
         }
-        let Oq = qq;
+        let Gb = bb;
         if ("hold" === this.phase) {
-          this.heldMs += lq;
-          const qq = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - Yq.m.minFadeTurnMs);
-          if (qq < 0 || gq) return gq;
-          this.phase = "in", this.sinceTurnMs = qq, Oq = qq
+          this.heldMs += Ob;
+          const bb = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - Bb.m.minFadeTurnMs);
+          if (bb < 0 || hb) return hb;
+          this.phase = "in", this.sinceTurnMs = bb, Gb = bb
         }
-        return "in" === this.phase && (Eq.alpha = mq(Eq.alpha, 0, Oq, this.inMs), Eq.alpha <= 0 && (this.phase = null, this.clearMs = 0)), gq
+        return "in" === this.phase && (ub.alpha = Ub(ub.alpha, 0, Gb, this.inMs), ub.alpha <= 0 && (this.phase = null, this.clearMs = 0)), hb
       }
     }
-    var Aq = gq(39115),
-      cq = gq(39141),
-      uq = gq(1870),
-      Bq = gq(36626);
+    var Yb = hb(38791),
+      Sb = hb(38816),
+      ab = hb(1784),
+      Hb = hb(36188);
 
-    function Wq(qq, Eq) {
-      for (let gq = 0; gq < Eq.length; gq++) Eq[gq] = qq[gq]
+    function wb(bb, ub) {
+      for (let hb = 0; hb < ub.length; hb++) ub[hb] = bb[hb]
     }
 
-    function Nq(qq, Eq) {
-      var gq;
-      return null !== (gq = qq.fov) && void 0 !== gq ? gq : Eq.getDefaultFov()
+    function Zb(bb, ub) {
+      var hb;
+      return null !== (hb = bb.fov) && void 0 !== hb ? hb : ub.getDefaultFov()
     }
 
-    function aq(qq, Eq, gq, Yq, lq) {
-      const Oq = 2 / Yq,
-        mq = Math.exp(-Oq * lq);
-      for (let xq = 0; xq < qq.length; xq++) {
-        const Yq = qq[xq] - gq[xq],
-          Aq = (Eq[xq] + Oq * Yq) * lq;
-        qq[xq] = gq[xq] + (Yq + Aq) * mq, Eq[xq] = (Eq[xq] - Oq * Aq) * mq
+    function Xb(bb, ub, hb, Bb, Ob) {
+      const Gb = 2 / Bb,
+        Ub = Math.exp(-Gb * Ob);
+      for (let Lb = 0; Lb < bb.length; Lb++) {
+        const Bb = bb[Lb] - hb[Lb],
+          Yb = (ub[Lb] + Gb * Bb) * Ob;
+        bb[Lb] = hb[Lb] + (Bb + Yb) * Ub, ub[Lb] = (ub[Lb] - Gb * Yb) * Ub
       }
     }
-    class Vq {
-      constructor(qq, Eq, gq, Yq) {
-        var Oq, mq, xq, Aq, cq;
-        this.settings = qq, this.kB = Eq, this.targets = gq, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.JV = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class pb {
+      constructor(bb, ub, hb, Bb) {
+        var Gb, Ub, Lb, Yb, Sb;
+        this.settings = bb, this.eH = ub, this.targets = hb, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.Mp = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, lq.v)((0, uq.j)(null !== (Oq = qq.viewHeading) && void 0 !== Oq ? Oq : 0)),
-          pitch: (0, lq.k)((0, uq.j)(null !== (mq = qq.viewElevation) && void 0 !== mq ? mq : 45))
-        }, this.closestDistance = null !== (xq = qq.closestDistance) && void 0 !== xq ? xq : Math.min(6, null !== (Aq = qq.furthestDistance) && void 0 !== Aq ? Aq : 1 / 0), this.furthestDistance = null !== (cq = qq.furthestDistance) && void 0 !== cq ? cq : Math.max(64, this.closestDistance);
-        const Bq = (0, lq.h)(this.base.heading, this.base.pitch, this.forward),
-          Wq = Yq.position,
-          Nq = this.closestDistance;
-        this.goal = [Wq[0] + Bq[0] * Nq, Wq[1] + Bq[1] * Nq, Wq[2] + Bq[2] * Nq, Nq, this.base.heading, this.base.pitch]
+          heading: (0, Ob.y)((0, ab.k)(null !== (Gb = bb.viewHeading) && void 0 !== Gb ? Gb : 0)),
+          pitch: (0, Ob.i)((0, ab.k)(null !== (Ub = bb.viewElevation) && void 0 !== Ub ? Ub : 45))
+        }, this.closestDistance = null !== (Lb = bb.closestDistance) && void 0 !== Lb ? Lb : Math.min(6, null !== (Yb = bb.furthestDistance) && void 0 !== Yb ? Yb : 1 / 0), this.furthestDistance = null !== (Sb = bb.furthestDistance) && void 0 !== Sb ? Sb : Math.max(64, this.closestDistance);
+        const Hb = (0, Ob.g)(this.base.heading, this.base.pitch, this.forward),
+          wb = Bb.position,
+          Zb = this.closestDistance;
+        this.goal = [wb[0] + Hb[0] * Zb, wb[1] + Hb[1] * Zb, wb[2] + Hb[2] * Zb, Zb, this.base.heading, this.base.pitch]
       }
-      update(qq, Eq, gq) {
-        var Yq, Oq;
-        this.placeGoal(null !== (Yq = this.settings.fov) && void 0 !== Yq ? Yq : this.kB.getBaseFov()), this.goal[4] = (0, lq.C)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const mq = null !== (Oq = this.settings.smoothMs) && void 0 !== Oq ? Oq : 400;
-        !this.started || mq < 1 ? (Wq(this.goal, this.smoothed), this.JV.fill(0), this.started = !0) : aq(this.smoothed, this.JV, this.goal, mq, qq), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, lq.k)(this.smoothed[5]), Eq.apply(this.angles, gq);
-        const xq = (0, lq.h)(gq.heading, gq.pitch, this.forward);
-        for (let lq = 0; lq < 3; lq++) gq.position[lq] = this.smoothed[lq] - xq[lq] * this.smoothed[3];
-        gq.fov = Nq(this.settings, this.kB)
+      update(bb, ub, hb) {
+        var Bb, Gb;
+        this.placeGoal(null !== (Bb = this.settings.fov) && void 0 !== Bb ? Bb : this.eH.getBaseFov()), this.goal[4] = (0, Ob.F)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const Ub = null !== (Gb = this.settings.smoothMs) && void 0 !== Gb ? Gb : 400;
+        !this.started || Ub < 1 ? (wb(this.goal, this.smoothed), this.Mp.fill(0), this.started = !0) : Xb(this.smoothed, this.Mp, this.goal, Ub, bb), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, Ob.i)(this.smoothed[5]), ub.apply(this.angles, hb);
+        const Lb = (0, Ob.g)(hb.heading, hb.pitch, this.forward);
+        for (let Ob = 0; Ob < 3; Ob++) hb.position[Ob] = this.smoothed[Ob] - Lb[Ob] * this.smoothed[3];
+        hb.fov = Zb(this.settings, this.eH)
       }
-      continueFrom(qq) {
-        qq instanceof Vq && (Wq(qq.goal, this.goal), Wq(qq.smoothed, this.smoothed), Wq(qq.JV, this.JV), this.framedTargets = qq.framedTargets, this.started = qq.started)
+      continueFrom(bb) {
+        bb instanceof pb && (wb(bb.goal, this.goal), wb(bb.smoothed, this.smoothed), wb(bb.Mp, this.Mp), this.framedTargets = bb.framedTargets, this.started = bb.started)
       }
       reset() {
-        this.JV.fill(0), this.started = !1
+        this.Mp.fill(0), this.started = !1
       }
-      placeGoal(qq) {
-        var Eq;
-        let gq = 0;
-        for (const uq of this.settings.targets) {
-          const qq = this.targets.currentAimPoint(uq);
-          qq && (0, Aq.g)(qq, this.pointAt(gq++))
+      placeGoal(bb) {
+        var ub;
+        let hb = 0;
+        for (const ab of this.settings.targets) {
+          const bb = this.targets.currentAimPoint(ab);
+          bb && (0, Yb.e)(bb, this.pointAt(hb++))
         }
-        if (gq > 0) this.framedTargets = !0;
+        if (hb > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const qq = this.targets.aimPoint(this.kB.localPlayerId);
-          qq && (0, Aq.g)(qq, this.pointAt(gq++))
+          const bb = this.targets.aimPoint(this.eH.localPlayerId);
+          bb && (0, Yb.e)(bb, this.pointAt(hb++))
         }
-        const Yq = this.goal;
-        if (0 === gq) return void(Yq[3] = this.withinDistances(Yq[3]));
-        for (let Aq = 0; Aq < 3; Aq++) {
-          let qq = 1 / 0,
-            Eq = -1 / 0;
-          for (let Yq = 0; Yq < gq; Yq++) qq = Math.min(qq, this.points[Yq][Aq]), Eq = Math.max(Eq, this.points[Yq][Aq]);
-          Yq[Aq] = (qq + Eq) / 2
+        const Bb = this.goal;
+        if (0 === hb) return void(Bb[3] = this.withinDistances(Bb[3]));
+        for (let Yb = 0; Yb < 3; Yb++) {
+          let bb = 1 / 0,
+            ub = -1 / 0;
+          for (let Bb = 0; Bb < hb; Bb++) bb = Math.min(bb, this.points[Bb][Yb]), ub = Math.max(ub, this.points[Bb][Yb]);
+          Bb[Yb] = (bb + ub) / 2
         }
-        let lq = 0;
-        for (let Aq = 0; Aq < gq; Aq++) {
-          const qq = this.points[Aq];
-          lq = Math.max(lq, Math.hypot(qq[0] - Yq[0], qq[1] - Yq[1], qq[2] - Yq[2]))
+        let Ob = 0;
+        for (let Yb = 0; Yb < hb; Yb++) {
+          const bb = this.points[Yb];
+          Ob = Math.max(Ob, Math.hypot(bb[0] - Bb[0], bb[1] - Bb[1], bb[2] - Bb[2]))
         }
-        const Oq = Math.tan((0, uq.j)(qq) / 2),
-          mq = Math.atan(Oq * (!0 === this.settings.letterbox ? Bq.c : 1)),
-          xq = Math.atan(Oq * this.kB.getAspectRatio()),
-          cq = (lq + (null !== (Eq = this.settings.padding) && void 0 !== Eq ? Eq : 2)) / Math.sin(Math.min(mq, xq));
-        Yq[3] = this.withinDistances(cq)
+        const Gb = Math.tan((0, ab.k)(bb) / 2),
+          Ub = Math.atan(Gb * (!0 === this.settings.letterbox ? Hb.g : 1)),
+          Lb = Math.atan(Gb * this.eH.getAspectRatio()),
+          Sb = (Ob + (null !== (ub = this.settings.padding) && void 0 !== ub ? ub : 2)) / Math.sin(Math.min(Ub, Lb));
+        Bb[3] = this.withinDistances(Sb)
       }
-      withinDistances(qq) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, qq))
+      withinDistances(bb) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, bb))
       }
-      pointAt(qq) {
-        return qq === this.points.length && this.points.push([0, 0, 0]), this.points[qq]
+      pointAt(bb) {
+        return bb === this.points.length && this.points.push([0, 0, 0]), this.points[bb]
       }
     }
-    class dq {
-      constructor(qq) {
-        this.limits = qq, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
+    class ob {
+      constructor(bb) {
+        this.limits = bb, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
       }
-      continueFrom(qq) {
-        this.limits && (this.yawOffset = qq.yawOffset, this.pitchOffset = qq.pitchOffset, this.idleMs = qq.idleMs)
+      continueFrom(bb) {
+        this.limits && (this.yawOffset = bb.yawOffset, this.pitchOffset = bb.pitchOffset, this.idleMs = bb.idleMs)
       }
-      update(qq, Eq) {
-        const gq = this.limits;
-        if (!gq) return;
-        const Yq = Number.isFinite(Eq.VJ) ? Eq.VJ : 0,
-          lq = Number.isFinite(Eq.dJ) ? Eq.dJ : 0;
-        if (Eq.pointedAt) this.idleMs = 0, this.pointedAt = {
-          heading: Eq.pointedAt.heading,
-          pitch: Eq.pointedAt.pitch
+      update(bb, ub) {
+        const hb = this.limits;
+        if (!hb) return;
+        const Bb = Number.isFinite(ub.MJ) ? ub.MJ : 0,
+          Ob = Number.isFinite(ub.mJ) ? ub.mJ : 0;
+        if (ub.pointedAt) this.idleMs = 0, this.pointedAt = {
+          heading: ub.pointedAt.heading,
+          pitch: ub.pointedAt.pitch
         };
-        else if (0 !== Yq || 0 !== lq) this.idleMs = 0, this.yawOffset += Yq, this.pitchOffset += lq;
+        else if (0 !== Bb || 0 !== Ob) this.idleMs = 0, this.yawOffset += Bb, this.pitchOffset += Ob;
         else {
-          const Eq = Math.max(0, this.idleMs + qq - 200) - Math.max(0, this.idleMs - 200);
-          if (this.idleMs += qq, void 0 !== gq.returnMs && Eq > 0) {
-            const qq = gq.returnMs > 0 ? Math.exp(-3 * Eq / gq.returnMs) : 0;
-            this.yawOffset *= qq, this.pitchOffset *= qq
+          const ub = Math.max(0, this.idleMs + bb - 200) - Math.max(0, this.idleMs - 200);
+          if (this.idleMs += bb, void 0 !== hb.returnMs && ub > 0) {
+            const bb = hb.returnMs > 0 ? Math.exp(-3 * ub / hb.returnMs) : 0;
+            this.yawOffset *= bb, this.pitchOffset *= bb
           }
         }
-        this.clampOffsets(gq)
+        this.clampOffsets(hb)
       }
-      clampOffsets(qq) {
-        if (qq.maxYaw >= 180) this.yawOffset = (0, lq.z)(0, this.yawOffset);
+      clampOffsets(bb) {
+        if (bb.maxYaw >= 180) this.yawOffset = (0, Ob.C)(0, this.yawOffset);
         else {
-          const Eq = (0, uq.j)(qq.maxYaw);
-          this.yawOffset = Math.max(-Eq, Math.min(Eq, this.yawOffset))
+          const ub = (0, ab.k)(bb.maxYaw);
+          this.yawOffset = Math.max(-ub, Math.min(ub, this.yawOffset))
         }
-        const Eq = (0, uq.j)(qq.maxPitch);
-        this.pitchOffset = Math.max(-Eq, Math.min(Eq, this.pitchOffset))
+        const ub = (0, ab.k)(bb.maxPitch);
+        this.pitchOffset = Math.max(-ub, Math.min(ub, this.pitchOffset))
       }
-      apply(qq, Eq) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, lq.z)(qq.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - qq.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const gq = (0, lq.k)(qq.pitch + this.pitchOffset);
-        this.pitchOffset = gq - qq.pitch, Eq.heading = (0, lq.v)(qq.heading + this.yawOffset), Eq.pitch = gq
+      apply(bb, ub) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, Ob.C)(bb.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - bb.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const hb = (0, Ob.i)(bb.pitch + this.pitchOffset);
+        this.pitchOffset = hb - bb.pitch, ub.heading = (0, Ob.y)(bb.heading + this.yawOffset), ub.pitch = hb
       }
-      unapply(qq, Eq) {
-        Eq.heading = (0, lq.v)(qq.heading - this.yawOffset), Eq.pitch = (0, lq.k)(qq.pitch - this.pitchOffset)
+      unapply(bb, ub) {
+        ub.heading = (0, Ob.y)(bb.heading - this.yawOffset), ub.pitch = (0, Ob.i)(bb.pitch - this.pitchOffset)
       }
     }
-    const jq = 1e-6;
+    const Ab = 1e-6;
 
-    function Hq(qq) {
-      return Math.sqrt(qq[0] * qq[0] + qq[1] * qq[1] + qq[2] * qq[2])
+    function lb(bb) {
+      return Math.sqrt(bb[0] * bb[0] + bb[1] * bb[1] + bb[2] * bb[2])
     }
 
-    function oq(qq, Eq, gq, Yq, lq) {
-      const Oq = lq * lq,
-        mq = Oq * lq;
-      return (2 * mq - 3 * Oq + 1) * qq + (mq - 2 * Oq + lq) * Eq + (-2 * mq + 3 * Oq) * gq + (mq - Oq) * Yq
+    function Kb(bb, ub, hb, Bb, Ob) {
+      const Gb = Ob * Ob,
+        Ub = Gb * Ob;
+      return (2 * Ub - 3 * Gb + 1) * bb + (Ub - 2 * Gb + Ob) * ub + (-2 * Ub + 3 * Gb) * hb + (Ub - Gb) * Bb
     }
 
-    function Pq(qq, Eq, gq, Yq, lq) {
-      const Oq = lq * lq;
-      return (6 * Oq - 6 * lq) * qq + (3 * Oq - 4 * lq + 1) * Eq + (-6 * Oq + 6 * lq) * gq + (3 * Oq - 2 * lq) * Yq
+    function Wb(bb, ub, hb, Bb, Ob) {
+      const Gb = Ob * Ob;
+      return (6 * Gb - 6 * Ob) * bb + (3 * Gb - 4 * Ob + 1) * ub + (-6 * Gb + 6 * Ob) * hb + (3 * Gb - 2 * Ob) * Bb
     }
 
-    function Qq(qq, Eq) {
-      const gq = Eq[0] - qq[0],
-        Yq = Eq[1] - qq[1],
-        lq = Eq[2] - qq[2];
-      return Math.sqrt(gq * gq + Yq * Yq + lq * lq)
+    function Cb(bb, ub) {
+      const hb = ub[0] - bb[0],
+        Bb = ub[1] - bb[1],
+        Ob = ub[2] - bb[2];
+      return Math.sqrt(hb * hb + Bb * Bb + Ob * Ob)
     }
 
-    function yq(qq, Eq, gq, Yq, lq, Oq) {
-      for (let mq = 0; mq < 3; mq++) Oq[mq] = lq ? qq[mq] * Yq : gq[mq] - Eq[mq];
-      return lq && function(qq, Eq) {
-        const gq = Hq(qq);
-        if (gq > Eq) {
-          const Yq = Eq / gq;
-          qq[0] *= Yq, qq[1] *= Yq, qq[2] *= Yq
+    function db(bb, ub, hb, Bb, Ob, Gb) {
+      for (let Ub = 0; Ub < 3; Ub++) Gb[Ub] = Ob ? bb[Ub] * Bb : hb[Ub] - ub[Ub];
+      return Ob && function(bb, ub) {
+        const hb = lb(bb);
+        if (hb > ub) {
+          const Bb = ub / hb;
+          bb[0] *= Bb, bb[1] *= Bb, bb[2] *= Bb
         }
-      }(Oq, 3 * Qq(Eq, gq)), Oq
+      }(Gb, 3 * Cb(ub, hb)), Gb
     }
 
-    function tq(qq, Eq, gq, Yq) {
-      for (let lq = 0; lq < 3; lq++) Yq[lq] = 6 * (Eq[lq] - qq[lq]) - 2 * gq[lq];
-      if (Hq(Yq) < jq)
-        for (let lq = 0; lq < 3; lq++) Yq[lq] = Eq[lq] - qq[lq];
-      return Yq
+    function rb(bb, ub, hb, Bb) {
+      for (let Ob = 0; Ob < 3; Ob++) Bb[Ob] = 6 * (ub[Ob] - bb[Ob]) - 2 * hb[Ob];
+      if (lb(Bb) < Ab)
+        for (let Ob = 0; Ob < 3; Ob++) Bb[Ob] = ub[Ob] - bb[Ob];
+      return Bb
     }
 
-    function rq(qq, Eq) {
-      return [2 * Eq[0] - qq[0], 2 * Eq[1] - qq[1], 2 * Eq[2] - qq[2]]
+    function jb(bb, ub) {
+      return [2 * ub[0] - bb[0], 2 * ub[1] - bb[1], 2 * ub[2] - bb[2]]
     }
 
-    function vq(qq, Eq, gq, Yq, lq, Oq, mq) {
-      if (!Oq && !mq) return 0;
-      const xq = Oq ? qq : 2 * Eq - gq,
-        Aq = mq ? gq : 2 * Eq - qq,
-        cq = Oq ? Yq : lq,
-        uq = mq ? lq : Yq,
-        Bq = (Eq - xq) / cq,
-        Wq = (Aq - Eq) / uq;
-      if (Bq * Wq <= 0) return 0;
-      const Nq = (Aq - xq) / (cq + uq),
-        aq = 3 * Math.min(Math.abs(Bq), Math.abs(Wq));
-      return Math.max(-aq, Math.min(aq, Nq))
+    function nb(bb, ub, hb, Bb, Ob, Gb, Ub) {
+      if (!Gb && !Ub) return 0;
+      const Lb = Gb ? bb : 2 * ub - hb,
+        Yb = Ub ? hb : 2 * ub - bb,
+        Sb = Gb ? Bb : Ob,
+        ab = Ub ? Ob : Bb,
+        Hb = (ub - Lb) / Sb,
+        wb = (Yb - ub) / ab;
+      if (Hb * wb <= 0) return 0;
+      const Zb = (Yb - Lb) / (Sb + ab),
+        Xb = 3 * Math.min(Math.abs(Hb), Math.abs(wb));
+      return Math.max(-Xb, Math.min(Xb, Zb))
     }
 
-    function hq(qq, Eq, gq, Yq, lq, Oq, mq) {
+    function Db(bb, ub, hb, Bb, Ob, Gb, Ub) {
       const {
-        u: xq,
-        segmentMs: Aq
-      } = qq;
-      if (!qq.curved) return gq + (Yq - gq) * xq;
-      return oq(gq, vq(Eq, gq, Yq, qq.beforeMs, Aq, Oq, !0) * Aq, Yq, vq(gq, Yq, lq, Aq, qq.afterMs, !0, mq) * Aq, xq)
+        u: Lb,
+        segmentMs: Yb
+      } = bb;
+      if (!bb.curved) return hb + (Bb - hb) * Lb;
+      return Kb(hb, nb(ub, hb, Bb, bb.beforeMs, Yb, Gb, !0) * Yb, Bb, nb(hb, Bb, Ob, Yb, bb.afterMs, !0, Ub) * Yb, Lb)
     }
 
-    function nq(qq) {
-      return Math.abs(qq.pitch) >= lq.d
+    function xb(bb) {
+      return Math.abs(bb.pitch) >= Ob.e
     }
-    class bq {
-      constructor(qq, Eq, gq, Yq, lq) {
-        this.nodes = qq, this.prevNodes = gq, this.nextNodes = Yq, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class zb {
+      constructor(bb, ub, hb, Bb, Ob) {
+        this.nodes = bb, this.prevNodes = hb, this.nextNodes = Bb, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -540,84 +540,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = qq.map(((qq, gq) => this.nodeTangent(Eq, lq, gq)))
+        }, this.tangents = bb.map(((bb, hb) => this.nodeTangent(ub, Ob, hb)))
       }
-      sample(qq, Eq, gq) {
+      sample(bb, ub, hb) {
         const {
-          index: Yq,
-          toIndex: Oq,
-          segmentMs: mq,
-          curved: xq
-        } = qq, Aq = this.fromAngles, cq = this.toAngles, uq = this.nodeAngles(Yq, gq.position, Eq, Aq), Bq = this.nodeAngles(Oq, gq.position, Eq, cq);
-        if (mq > 0 && "aim" !== uq && "aim" !== Bq && this.liveTangent(qq, Aq)) return gq.heading = (0, lq.v)(Aq.heading), void(gq.pitch = Aq.pitch);
-        if ("none" === uq && "none" === Bq) return;
-        !xq && mq > 0 && ("tangent" === uq && this.liveTangent(qq, Aq), "tangent" === Bq && this.liveTangent(qq, cq)), "none" === uq ? (0, lq.o)(cq, Aq) : "none" === Bq && (0, lq.o)(Aq, cq);
-        const Wq = xq && qq.beforeIndex >= 0 && "none" !== this.nodeAngles(qq.beforeIndex, gq.position, Eq, this.beforeAngles),
-          Nq = xq && qq.afterIndex >= 0 && "none" !== this.nodeAngles(qq.afterIndex, gq.position, Eq, this.afterAngles),
-          aq = (0, lq.C)(Aq.heading, cq.heading),
-          Vq = hq(qq, Wq ? (0, lq.C)(Aq.heading, this.beforeAngles.heading) : 0, Aq.heading, aq, Nq ? (0, lq.C)(aq, this.afterAngles.heading) : 0, Wq, Nq);
-        gq.heading = (0, lq.v)(Vq), gq.pitch = (0, lq.k)(hq(qq, this.beforeAngles.pitch, Aq.pitch, cq.pitch, this.afterAngles.pitch, Wq, Nq))
+          index: Bb,
+          toIndex: Gb,
+          segmentMs: Ub,
+          curved: Lb
+        } = bb, Yb = this.fromAngles, Sb = this.toAngles, ab = this.nodeAngles(Bb, hb.position, ub, Yb), Hb = this.nodeAngles(Gb, hb.position, ub, Sb);
+        if (Ub > 0 && "aim" !== ab && "aim" !== Hb && this.liveTangent(bb, Yb)) return hb.heading = (0, Ob.y)(Yb.heading), void(hb.pitch = Yb.pitch);
+        if ("none" === ab && "none" === Hb) return;
+        !Lb && Ub > 0 && ("tangent" === ab && this.liveTangent(bb, Yb), "tangent" === Hb && this.liveTangent(bb, Sb)), "none" === ab ? (0, Ob.m)(Sb, Yb) : "none" === Hb && (0, Ob.m)(Yb, Sb);
+        const wb = Lb && bb.beforeIndex >= 0 && "none" !== this.nodeAngles(bb.beforeIndex, hb.position, ub, this.beforeAngles),
+          Zb = Lb && bb.afterIndex >= 0 && "none" !== this.nodeAngles(bb.afterIndex, hb.position, ub, this.afterAngles),
+          Xb = (0, Ob.F)(Yb.heading, Sb.heading),
+          pb = Db(bb, wb ? (0, Ob.F)(Yb.heading, this.beforeAngles.heading) : 0, Yb.heading, Xb, Zb ? (0, Ob.F)(Xb, this.afterAngles.heading) : 0, wb, Zb);
+        hb.heading = (0, Ob.y)(pb), hb.pitch = (0, Ob.i)(Db(bb, this.beforeAngles.pitch, Yb.pitch, Sb.pitch, this.afterAngles.pitch, wb, Zb))
       }
-      nodeAngles(qq, Eq, gq, Yq) {
-        const lq = this.rawNodeAngles(qq, Eq, gq, Yq);
-        return "none" !== lq && nq(Yq) && !this.borrowHeading(this.prevNodes[qq], Eq, gq, Yq) && this.borrowHeading(this.nextNodes[qq], Eq, gq, Yq), lq
+      nodeAngles(bb, ub, hb, Bb) {
+        const Ob = this.rawNodeAngles(bb, ub, hb, Bb);
+        return "none" !== Ob && xb(Bb) && !this.borrowHeading(this.prevNodes[bb], ub, hb, Bb) && this.borrowHeading(this.nextNodes[bb], ub, hb, Bb), Ob
       }
-      borrowHeading(qq, Eq, gq, Yq) {
-        const lq = this.borrowedAngles;
-        return !(qq < 0 || "none" === this.rawNodeAngles(qq, Eq, gq, lq) || nq(lq)) && (Yq.heading = lq.heading, !0)
+      borrowHeading(bb, ub, hb, Bb) {
+        const Ob = this.borrowedAngles;
+        return !(bb < 0 || "none" === this.rawNodeAngles(bb, ub, hb, Ob) || xb(Ob)) && (Bb.heading = Ob.heading, !0)
       }
-      rawNodeAngles(qq, Eq, gq, Yq) {
-        const Oq = this.nodes[qq].keyframe;
-        if (Oq.lookDirection) return (0, lq.p)(Oq.lookDirection, Yq), "aim";
-        if (void 0 !== Oq.lookAt) {
-          const qq = gq(Oq.lookAt);
-          if (qq) return (0, lq.s)(Eq, qq, Yq), "aim"
+      rawNodeAngles(bb, ub, hb, Bb) {
+        const Gb = this.nodes[bb].keyframe;
+        if (Gb.lookDirection) return (0, Ob.o)(Gb.lookDirection, Bb), "aim";
+        if (void 0 !== Gb.lookAt) {
+          const bb = hb(Gb.lookAt);
+          if (bb) return (0, Ob.w)(ub, bb, Bb), "aim"
         }
-        const mq = this.tangents[qq];
-        return mq ? ((0, lq.o)(mq, Yq), "tangent") : "none"
+        const Ub = this.tangents[bb];
+        return Ub ? ((0, Ob.m)(Ub, Bb), "tangent") : "none"
       }
-      liveTangent(qq, Eq) {
-        const gq = this.nodes[qq.index].position,
-          Yq = this.nodes[qq.toIndex].position,
-          Oq = this.derivative;
-        for (let lq = 0; lq < 3; lq++) Oq[lq] = Pq(gq[lq], qq.fromTangent[lq], Yq[lq], qq.toTangent[lq], qq.u);
-        return Hq(Oq) > 1e-9 ? ((0, lq.p)(Oq, Eq), !0) : !(Qq(gq, Yq) < jq) && ((0, lq.p)(tq(gq, Yq, qq.u < .5 ? qq.toTangent : qq.fromTangent, Oq), Eq), !0)
+      liveTangent(bb, ub) {
+        const hb = this.nodes[bb.index].position,
+          Bb = this.nodes[bb.toIndex].position,
+          Gb = this.derivative;
+        for (let Ob = 0; Ob < 3; Ob++) Gb[Ob] = Wb(hb[Ob], bb.fromTangent[Ob], Bb[Ob], bb.toTangent[Ob], bb.u);
+        return lb(Gb) > 1e-9 ? ((0, Ob.o)(Gb, ub), !0) : !(Cb(hb, Bb) < Ab) && ((0, Ob.o)(rb(hb, Bb, bb.u < .5 ? bb.toTangent : bb.fromTangent, Gb), ub), !0)
       }
-      nodeTangent(qq, Eq, gq) {
-        var Yq;
-        const Oq = qq[gq];
-        if (Hq(Oq) > 1e-9) return (0, lq.p)(Oq, {
+      nodeTangent(bb, ub, hb) {
+        var Bb;
+        const Gb = bb[hb];
+        if (lb(Gb) > 1e-9) return (0, Ob.o)(Gb, {
           heading: 0,
           pitch: 0
         });
-        const mq = null !== (Yq = this.restDirectionTo(gq, gq + 1, qq, Eq)) && void 0 !== Yq ? Yq : this.restDirectionTo(gq, gq - 1, qq, Eq);
-        return mq ? (0, lq.p)(mq, {
+        const Ub = null !== (Bb = this.restDirectionTo(hb, hb + 1, bb, ub)) && void 0 !== Bb ? Bb : this.restDirectionTo(hb, hb - 1, bb, ub);
+        return Ub ? (0, Ob.o)(Ub, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(qq, Eq, gq, Yq) {
-        const lq = this.nodes[qq],
-          Oq = this.nodes[Eq];
-        if (!Oq || Qq(lq.position, Oq.position) < jq) return null;
-        const [mq, xq] = Eq > qq ? [lq, Oq] : [Oq, lq], Aq = yq(gq[Eq], mq.position, xq.position, xq.timeMs - mq.timeMs, Yq, [0, 0, 0]);
-        return tq(mq.position, xq.position, Aq, [0, 0, 0])
+      restDirectionTo(bb, ub, hb, Bb) {
+        const Ob = this.nodes[bb],
+          Gb = this.nodes[ub];
+        if (!Gb || Cb(Ob.position, Gb.position) < Ab) return null;
+        const [Ub, Lb] = ub > bb ? [Ob, Gb] : [Gb, Ob], Yb = db(hb[ub], Ub.position, Lb.position, Lb.timeMs - Ub.timeMs, Bb, [0, 0, 0]);
+        return rb(Ub.position, Lb.position, Yb, [0, 0, 0])
       }
     }
 
-    function iq(qq, Eq) {
-      const gq = qq.lookDirection || Eq.lookDirection ? function(qq, Eq) {
-        if (!qq || !Eq) return qq === Eq;
-        const gq = Hq(qq),
-          Yq = Hq(Eq);
-        return Math.hypot(qq[0] / gq - Eq[0] / Yq, qq[1] / gq - Eq[1] / Yq, qq[2] / gq - Eq[2] / Yq) < jq
-      }(qq.lookDirection, Eq.lookDirection) : (Yq = qq.lookAt, lq = Eq.lookAt, "object" !== typeof Yq || "object" !== typeof lq ? Yq === lq : Qq(Yq, lq) < jq);
-      var Yq, lq;
-      return Qq(qq.position, Eq.position) < jq && qq.fov === Eq.fov && gq
+    function gb(bb, ub) {
+      const hb = bb.lookDirection || ub.lookDirection ? function(bb, ub) {
+        if (!bb || !ub) return bb === ub;
+        const hb = lb(bb),
+          Bb = lb(ub);
+        return Math.hypot(bb[0] / hb - ub[0] / Bb, bb[1] / hb - ub[1] / Bb, bb[2] / hb - ub[2] / Bb) < Ab
+      }(bb.lookDirection, ub.lookDirection) : (Bb = bb.lookAt, Ob = ub.lookAt, "object" !== typeof Bb || "object" !== typeof Ob ? Bb === Ob : Cb(Bb, Ob) < Ab);
+      var Bb, Ob;
+      return Cb(bb.position, ub.position) < Ab && bb.fov === ub.fov && hb
     }
-    class Zq {
-      constructor(qq, Eq, gq) {
-        if (this.smooth = Eq, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class ib {
+      constructor(bb, ub, hb) {
+        if (this.smooth = ub, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -629,306 +629,306 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === qq.length) throw new Error("A camera path needs at least one keyframe");
-        for (let Oq = 1; Oq < qq.length; Oq++)
-          if (!(qq[Oq].timeMs > qq[Oq - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = qq.map((qq => {
-          var Eq;
+          }, 0 === bb.length) throw new Error("A camera path needs at least one keyframe");
+        for (let Gb = 1; Gb < bb.length; Gb++)
+          if (!(bb[Gb].timeMs > bb[Gb - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = bb.map((bb => {
+          var ub;
           return {
-            timeMs: qq.timeMs,
-            position: [...qq.position],
-            keyframe: qq,
-            easing: (0, Oq.r)(null !== (Eq = qq.easing) && void 0 !== Eq ? Eq : "linear")
+            timeMs: bb.timeMs,
+            position: [...bb.position],
+            keyframe: bb,
+            easing: (0, Gb.k)(null !== (ub = bb.easing) && void 0 !== ub ? ub : "linear")
           }
         }));
-        const Yq = this.nodes[0],
-          lq = this.nodes[this.nodes.length - 1],
-          mq = gq && this.nodes.length > 1;
-        mq && !iq(Yq.keyframe, lq.keyframe) && this.nodes.push({
-          ...Yq,
-          timeMs: lq.timeMs + (lq.timeMs - Yq.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = mq ? this.nodes[this.nodes.length - 1].timeMs - Yq.timeMs : 0, this.prevNodes = this.nodes.map(((qq, Eq) => this.neighbour(Eq, -1))), this.nextNodes = this.nodes.map(((qq, Eq) => this.neighbour(Eq, 1))), this.prevGaps = this.prevNodes.map(((qq, Eq) => qq >= 0 ? this.gapMs(Eq, -1) : 0)), this.nextGaps = this.nextNodes.map(((qq, Eq) => qq >= 0 ? this.gapMs(Eq, 1) : 0)), this.velocities = this.nodes.map(((qq, Eq) => {
-          const gq = this.prevNodes[Eq],
-            Yq = this.nextNodes[Eq];
-          return function(qq, Eq, gq, Yq, lq, Oq) {
-            if (Oq[0] = 0, Oq[1] = 0, Oq[2] = 0, !qq && !gq) return Oq;
-            const mq = null !== qq && void 0 !== qq ? qq : rq(null !== gq && void 0 !== gq ? gq : Eq, Eq),
-              xq = null !== gq && void 0 !== gq ? gq : rq(null !== qq && void 0 !== qq ? qq : Eq, Eq),
-              Aq = qq ? Yq : lq,
-              cq = gq ? lq : Yq,
-              uq = Qq(mq, Eq),
-              Bq = Qq(Eq, xq);
-            if (uq < jq || Bq < jq) return Oq;
-            const Wq = Math.sqrt(uq),
-              Nq = Math.sqrt(Bq),
-              aq = (Wq + Nq) / (Aq + cq);
-            for (let Vq = 0; Vq < 3; Vq++) {
-              const qq = (Eq[Vq] - mq[Vq]) / Wq - (xq[Vq] - mq[Vq]) / (Wq + Nq) + (xq[Vq] - Eq[Vq]) / Nq;
-              Oq[Vq] = qq * aq
+        const Bb = this.nodes[0],
+          Ob = this.nodes[this.nodes.length - 1],
+          Ub = hb && this.nodes.length > 1;
+        Ub && !gb(Bb.keyframe, Ob.keyframe) && this.nodes.push({
+          ...Bb,
+          timeMs: Ob.timeMs + (Ob.timeMs - Bb.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = Ub ? this.nodes[this.nodes.length - 1].timeMs - Bb.timeMs : 0, this.prevNodes = this.nodes.map(((bb, ub) => this.neighbour(ub, -1))), this.nextNodes = this.nodes.map(((bb, ub) => this.neighbour(ub, 1))), this.prevGaps = this.prevNodes.map(((bb, ub) => bb >= 0 ? this.gapMs(ub, -1) : 0)), this.nextGaps = this.nextNodes.map(((bb, ub) => bb >= 0 ? this.gapMs(ub, 1) : 0)), this.velocities = this.nodes.map(((bb, ub) => {
+          const hb = this.prevNodes[ub],
+            Bb = this.nextNodes[ub];
+          return function(bb, ub, hb, Bb, Ob, Gb) {
+            if (Gb[0] = 0, Gb[1] = 0, Gb[2] = 0, !bb && !hb) return Gb;
+            const Ub = null !== bb && void 0 !== bb ? bb : jb(null !== hb && void 0 !== hb ? hb : ub, ub),
+              Lb = null !== hb && void 0 !== hb ? hb : jb(null !== bb && void 0 !== bb ? bb : ub, ub),
+              Yb = bb ? Bb : Ob,
+              Sb = hb ? Ob : Bb,
+              ab = Cb(Ub, ub),
+              Hb = Cb(ub, Lb);
+            if (ab < Ab || Hb < Ab) return Gb;
+            const wb = Math.sqrt(ab),
+              Zb = Math.sqrt(Hb),
+              Xb = (wb + Zb) / (Yb + Sb);
+            for (let pb = 0; pb < 3; pb++) {
+              const bb = (ub[pb] - Ub[pb]) / wb - (Lb[pb] - Ub[pb]) / (wb + Zb) + (Lb[pb] - ub[pb]) / Zb;
+              Gb[pb] = bb * Xb
             }
-            return Oq
-          }(gq >= 0 ? this.nodes[gq].position : null, qq.position, Yq >= 0 ? this.nodes[Yq].position : null, this.prevGaps[Eq], this.nextGaps[Eq], [0, 0, 0])
-        })), this.aim = new bq(this.nodes, this.velocities, this.prevNodes, this.nextNodes, Eq)
+            return Gb
+          }(hb >= 0 ? this.nodes[hb].position : null, bb.position, Bb >= 0 ? this.nodes[Bb].position : null, this.prevGaps[ub], this.nextGaps[ub], [0, 0, 0])
+        })), this.aim = new zb(this.nodes, this.velocities, this.prevNodes, this.nextNodes, ub)
       }
-      sample(qq, Eq, gq, Yq) {
-        const lq = this.findSegment(this.pathTime(qq));
-        this.samplePosition(lq, Yq.position), this.aim.sample(lq, Eq, Yq);
+      sample(bb, ub, hb, Bb) {
+        const Ob = this.findSegment(this.pathTime(bb));
+        this.samplePosition(Ob, Bb.position), this.aim.sample(Ob, ub, Bb);
         const {
-          beforeIndex: Oq,
-          afterIndex: mq
-        } = lq;
-        Yq.fov = hq(lq, Oq >= 0 ? this.fovAt(Oq, gq) : 0, this.fovAt(lq.index, gq), this.fovAt(lq.toIndex, gq), mq >= 0 ? this.fovAt(mq, gq) : 0, Oq >= 0, mq >= 0)
+          beforeIndex: Gb,
+          afterIndex: Ub
+        } = Ob;
+        Bb.fov = Db(Ob, Gb >= 0 ? this.fovAt(Gb, hb) : 0, this.fovAt(Ob.index, hb), this.fovAt(Ob.toIndex, hb), Ub >= 0 ? this.fovAt(Ub, hb) : 0, Gb >= 0, Ub >= 0)
       }
-      pathTime(qq) {
-        const Eq = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || qq <= Eq) return qq;
-        const gq = qq - Eq;
-        return Eq + gq - this.loopMs * Math.floor(gq / this.loopMs)
+      pathTime(bb) {
+        const ub = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || bb <= ub) return bb;
+        const hb = bb - ub;
+        return ub + hb - this.loopMs * Math.floor(hb / this.loopMs)
       }
-      findSegment(qq) {
-        const Eq = this.nodes,
-          gq = this.segment;
-        let Yq = gq.index;
-        for (qq < Eq[Yq].timeMs && (Yq = 0); Yq < Eq.length - 2 && Eq[Yq + 1].timeMs <= qq;) Yq++;
-        const lq = Math.min(Yq + 1, Eq.length - 1),
-          mq = Eq[lq].timeMs - Eq[Yq].timeMs;
-        return gq.index = Yq, gq.toIndex = lq, gq.segmentMs = mq, gq.u = mq > 0 ? (0, Oq.o)((qq - Eq[Yq].timeMs) / mq, Eq[Yq].easing) : 1, gq.curved = this.smooth && mq > 0, gq.beforeIndex = this.prevNodes[Yq], gq.afterIndex = this.nextNodes[lq], gq.beforeMs = this.prevGaps[Yq], gq.afterMs = this.nextGaps[lq], gq
+      findSegment(bb) {
+        const ub = this.nodes,
+          hb = this.segment;
+        let Bb = hb.index;
+        for (bb < ub[Bb].timeMs && (Bb = 0); Bb < ub.length - 2 && ub[Bb + 1].timeMs <= bb;) Bb++;
+        const Ob = Math.min(Bb + 1, ub.length - 1),
+          Ub = ub[Ob].timeMs - ub[Bb].timeMs;
+        return hb.index = Bb, hb.toIndex = Ob, hb.segmentMs = Ub, hb.u = Ub > 0 ? (0, Gb.j)((bb - ub[Bb].timeMs) / Ub, ub[Bb].easing) : 1, hb.curved = this.smooth && Ub > 0, hb.beforeIndex = this.prevNodes[Bb], hb.afterIndex = this.nextNodes[Ob], hb.beforeMs = this.prevGaps[Bb], hb.afterMs = this.nextGaps[Ob], hb
       }
-      samplePosition(qq, Eq) {
+      samplePosition(bb, ub) {
         const {
-          fromTangent: gq,
-          toTangent: Yq,
-          curved: lq
-        } = qq, Oq = this.nodes[qq.index].position, mq = this.nodes[qq.toIndex].position;
-        yq(this.velocities[qq.index], Oq, mq, qq.segmentMs, lq, gq), yq(this.velocities[qq.toIndex], Oq, mq, qq.segmentMs, lq, Yq);
-        const xq = qq.u;
-        for (let Aq = 0; Aq < 3; Aq++) Eq[Aq] = lq ? oq(Oq[Aq], gq[Aq], mq[Aq], Yq[Aq], xq) : Oq[Aq] + (mq[Aq] - Oq[Aq]) * xq
+          fromTangent: hb,
+          toTangent: Bb,
+          curved: Ob
+        } = bb, Gb = this.nodes[bb.index].position, Ub = this.nodes[bb.toIndex].position;
+        db(this.velocities[bb.index], Gb, Ub, bb.segmentMs, Ob, hb), db(this.velocities[bb.toIndex], Gb, Ub, bb.segmentMs, Ob, Bb);
+        const Lb = bb.u;
+        for (let Yb = 0; Yb < 3; Yb++) ub[Yb] = Ob ? Kb(Gb[Yb], hb[Yb], Ub[Yb], Bb[Yb], Lb) : Gb[Yb] + (Ub[Yb] - Gb[Yb]) * Lb
       }
-      fovAt(qq, Eq) {
-        var gq;
-        return null !== (gq = this.nodes[qq].keyframe.fov) && void 0 !== gq ? gq : Eq
+      fovAt(bb, ub) {
+        var hb;
+        return null !== (hb = this.nodes[bb].keyframe.fov) && void 0 !== hb ? hb : ub
       }
-      neighbour(qq, Eq) {
-        const gq = this.nodes.length - 1,
-          Yq = qq + Eq;
-        return Yq >= 0 && Yq <= gq ? Yq : this.loopMs <= 0 || gq < 2 ? -1 : Yq < 0 ? gq - 1 : 1
+      neighbour(bb, ub) {
+        const hb = this.nodes.length - 1,
+          Bb = bb + ub;
+        return Bb >= 0 && Bb <= hb ? Bb : this.loopMs <= 0 || hb < 2 ? -1 : Bb < 0 ? hb - 1 : 1
       }
-      gapMs(qq, Eq) {
-        const gq = this.nodes.length - 1;
-        if (1 === Eq) {
-          const Eq = qq === gq ? 0 : qq;
-          return this.nodes[Eq + 1].timeMs - this.nodes[Eq].timeMs
+      gapMs(bb, ub) {
+        const hb = this.nodes.length - 1;
+        if (1 === ub) {
+          const ub = bb === hb ? 0 : bb;
+          return this.nodes[ub + 1].timeMs - this.nodes[ub].timeMs
         }
-        const Yq = 0 === qq ? gq : qq;
-        return this.nodes[Yq].timeMs - this.nodes[Yq - 1].timeMs
+        const Bb = 0 === bb ? hb : bb;
+        return this.nodes[Bb].timeMs - this.nodes[Bb - 1].timeMs
       }
     }
-    class fq {
-      constructor(qq) {
-        this.kB = qq, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = Eq => qq.getEntityPosition(Eq), this.readAimPoint = Eq => qq.getEntityAimPoint(Eq)
+    class vb {
+      constructor(bb) {
+        this.eH = bb, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = ub => bb.getEntityPosition(ub), this.readAimPoint = ub => bb.getEntityAimPoint(ub)
       }
-      aimPoint(qq) {
-        return "string" !== typeof qq ? (0, Aq.q)(qq, 3) ? qq : null : this.resolve(qq, this.readAimPoint, this.lastAimPoints)
+      aimPoint(bb) {
+        return "string" !== typeof bb ? (0, Yb.n)(bb, 3) ? bb : null : this.resolve(bb, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(qq) {
-        const Eq = "string" === typeof qq ? this.kB.getEntityAimPoint(qq) : qq;
-        return Eq && (0, Aq.q)(Eq, 3) ? Eq : null
+      currentAimPoint(bb) {
+        const ub = "string" === typeof bb ? this.eH.getEntityAimPoint(bb) : bb;
+        return ub && (0, Yb.n)(ub, 3) ? ub : null
       }
-      feetPosition(qq) {
-        return this.resolve(qq, this.readFeet, this.lastFeet)
+      feetPosition(bb) {
+        return this.resolve(bb, this.readFeet, this.lastFeet)
       }
-      heading(qq) {
-        const Eq = this.kB.getEntityHeading(qq);
-        if (null !== Eq && Number.isFinite(Eq)) return this.lastHeadings.set(qq, Eq), Eq;
-        const gq = this.lastHeadings.get(qq);
-        return void 0 !== gq ? gq : qq === this.kB.localPlayerId ? 0 : this.heading(this.kB.localPlayerId)
+      heading(bb) {
+        const ub = this.eH.getEntityHeading(bb);
+        if (null !== ub && Number.isFinite(ub)) return this.lastHeadings.set(bb, ub), ub;
+        const hb = this.lastHeadings.get(bb);
+        return void 0 !== hb ? hb : bb === this.eH.localPlayerId ? 0 : this.heading(this.eH.localPlayerId)
       }
-      resolve(qq, Eq, gq) {
-        const Yq = Eq(qq);
-        let lq = gq.get(qq);
-        return Yq && (0, Aq.q)(Yq, 3) ? (lq || (lq = [0, 0, 0], gq.set(qq, lq)), lq[0] = Yq[0], lq[1] = Yq[1], lq[2] = Yq[2], lq) : lq || (qq === this.kB.localPlayerId ? null : this.resolve(this.kB.localPlayerId, Eq, gq))
+      resolve(bb, ub, hb) {
+        const Bb = ub(bb);
+        let Ob = hb.get(bb);
+        return Bb && (0, Yb.n)(Bb, 3) ? (Ob || (Ob = [0, 0, 0], hb.set(bb, Ob)), Ob[0] = Bb[0], Ob[1] = Bb[1], Ob[2] = Bb[2], Ob) : Ob || (bb === this.eH.localPlayerId ? null : this.resolve(this.eH.localPlayerId, ub, hb))
       }
     }
 
-    function Mq(qq) {
+    function tb(bb) {
       return {
-        heading: qq.heading,
-        pitch: qq.pitch
+        heading: bb.heading,
+        pitch: bb.pitch
       }
     }
 
-    function Tq(qq, Eq) {
-      Number.isFinite(qq.heading) && Number.isFinite(qq.pitch) || (0, lq.o)(Eq, qq)
+    function Jb(bb, ub) {
+      Number.isFinite(bb.heading) && Number.isFinite(bb.pitch) || (0, Ob.m)(ub, bb)
     }
 
-    function zq(qq, Eq, gq, Yq, Oq) {
-      if (Eq) return void(0, lq.p)(Eq, Oq);
-      const mq = Yq.aimPoint(gq);
-      mq && (0, lq.s)(qq, mq, Oq)
+    function eb(bb, ub, hb, Bb, Gb) {
+      if (ub) return void(0, Ob.o)(ub, Gb);
+      const Ub = Bb.aimPoint(hb);
+      Ub && (0, Ob.w)(bb, Ub, Gb)
     }
-    class Sq {
-      constructor(qq, Eq, gq, Yq) {
-        this.settings = qq, this.kB = Eq, this.targets = gq, this.base = void 0, this.base = Mq(Yq)
+    class Nb {
+      constructor(bb, ub, hb, Bb) {
+        this.settings = bb, this.eH = ub, this.targets = hb, this.base = void 0, this.base = tb(Bb)
       }
-      update(qq, Eq, gq) {
-        var Yq;
-        const lq = this.settings;
-        (0, Aq.g)(lq.position, gq.position), zq(lq.position, lq.lookDirection, null !== (Yq = lq.lookAt) && void 0 !== Yq ? Yq : this.kB.localPlayerId, this.targets, this.base), Eq.apply(this.base, gq), gq.fov = Nq(lq, this.kB)
+      update(bb, ub, hb) {
+        var Bb;
+        const Ob = this.settings;
+        (0, Yb.e)(Ob.position, hb.position), eb(Ob.position, Ob.lookDirection, null !== (Bb = Ob.lookAt) && void 0 !== Bb ? Bb : this.eH.localPlayerId, this.targets, this.base), ub.apply(this.base, hb), hb.fov = Zb(Ob, this.eH)
       }
-      continueFrom(qq) {
-        qq instanceof Sq && (0, lq.o)(qq.base, this.base)
+      continueFrom(bb) {
+        bb instanceof Nb && (0, Ob.m)(bb.base, this.base)
       }
-      reset(qq) {
-        Tq(this.base, qq)
+      reset(bb) {
+        Jb(this.base, bb)
       }
     }
-    class pq {
-      constructor(qq, Eq, gq, Yq) {
-        this.settings = qq, this.kB = Eq, this.targets = gq, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.JV = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = Mq(Yq), this.goal = [...Yq.position]
+    class sb {
+      constructor(bb, ub, hb, Bb) {
+        this.settings = bb, this.eH = ub, this.targets = hb, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.Mp = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = tb(Bb), this.goal = [...Bb.position]
       }
-      update(qq, Eq, gq) {
-        var Yq, lq, Oq;
-        const mq = this.settings,
-          xq = null !== (Yq = mq.target) && void 0 !== Yq ? Yq : this.kB.localPlayerId,
-          cq = this.targets.feetPosition(xq);
-        let uq = !1;
-        cq && (uq = this.foundFeet && Qq(this.lastFeet, cq) > 32 + .1 * qq, (0, Aq.g)(cq, this.lastFeet), this.foundFeet = !0, this.placeGoal(cq, xq));
-        const Bq = null !== (lq = mq.smoothMs) && void 0 !== lq ? lq : 0;
-        !this.started || Bq < 1 || uq ? ((0, Aq.g)(this.goal, this.smoothed), this.JV.fill(0), this.started = !0) : aq(this.smoothed, this.JV, this.goal, Bq, qq), uq && (this.distance = -1), (0, Aq.g)(this.smoothed, gq.position);
-        const Wq = !0 === mq.avoidTerrain ? this.pullIn(xq, qq, gq) : 1;
-        let Vq = this.goal;
-        if ("target" === mq.offsetSpace) Vq = gq.position;
-        else if (Wq < 1) {
-          Vq = this.aimOrigin;
-          for (let qq = 0; qq < 3; qq++) Vq[qq] = gq.position[qq] + (this.goal[qq] - this.smoothed[qq]) * Wq
+      update(bb, ub, hb) {
+        var Bb, Ob, Gb;
+        const Ub = this.settings,
+          Lb = null !== (Bb = Ub.target) && void 0 !== Bb ? Bb : this.eH.localPlayerId,
+          Sb = this.targets.feetPosition(Lb);
+        let ab = !1;
+        Sb && (ab = this.foundFeet && Cb(this.lastFeet, Sb) > 32 + .1 * bb, (0, Yb.e)(Sb, this.lastFeet), this.foundFeet = !0, this.placeGoal(Sb, Lb));
+        const Hb = null !== (Ob = Ub.smoothMs) && void 0 !== Ob ? Ob : 0;
+        !this.started || Hb < 1 || ab ? ((0, Yb.e)(this.goal, this.smoothed), this.Mp.fill(0), this.started = !0) : Xb(this.smoothed, this.Mp, this.goal, Hb, bb), ab && (this.distance = -1), (0, Yb.e)(this.smoothed, hb.position);
+        const wb = !0 === Ub.avoidTerrain ? this.pullIn(Lb, bb, hb) : 1;
+        let pb = this.goal;
+        if ("target" === Ub.offsetSpace) pb = hb.position;
+        else if (wb < 1) {
+          pb = this.aimOrigin;
+          for (let bb = 0; bb < 3; bb++) pb[bb] = hb.position[bb] + (this.goal[bb] - this.smoothed[bb]) * wb
         }
-        zq(Vq, mq.lookDirection, null !== (Oq = mq.lookAt) && void 0 !== Oq ? Oq : xq, this.targets, this.base), Eq.apply(this.base, gq), gq.fov = Nq(mq, this.kB)
+        eb(pb, Ub.lookDirection, null !== (Gb = Ub.lookAt) && void 0 !== Gb ? Gb : Lb, this.targets, this.base), ub.apply(this.base, hb), hb.fov = Zb(Ub, this.eH)
       }
-      continueFrom(qq) {
-        qq instanceof pq && (0, Yq.v)(qq.settings.target, this.settings.target) && ((0, lq.o)(qq.base, this.base), (0, Aq.g)(qq.goal, this.goal), (0, Aq.g)(qq.lastFeet, this.lastFeet), this.foundFeet = qq.foundFeet, (0, Aq.g)(qq.smoothed, this.smoothed), (0, Aq.g)(qq.JV, this.JV), this.started = qq.started, !0 === qq.settings.avoidTerrain && (this.distance = qq.distance))
+      continueFrom(bb) {
+        bb instanceof sb && (0, Bb.u)(bb.settings.target, this.settings.target) && ((0, Ob.m)(bb.base, this.base), (0, Yb.e)(bb.goal, this.goal), (0, Yb.e)(bb.lastFeet, this.lastFeet), this.foundFeet = bb.foundFeet, (0, Yb.e)(bb.smoothed, this.smoothed), (0, Yb.e)(bb.Mp, this.Mp), this.started = bb.started, !0 === bb.settings.avoidTerrain && (this.distance = bb.distance))
       }
-      reset(qq) {
-        Tq(this.base, qq), this.JV.fill(0), this.started = !1, this.distance = -1
+      reset(bb) {
+        Jb(this.base, bb), this.Mp.fill(0), this.started = !1, this.distance = -1
       }
-      pullIn(qq, Eq, gq) {
-        const Yq = this.targets.aimPoint(qq);
-        if (!Yq) return 1;
-        const lq = gq.position,
-          Oq = Qq(Yq, lq);
-        if (!(Oq > 0)) return 1;
-        const mq = this.toCamera;
-        for (let Aq = 0; Aq < 3; Aq++) mq[Aq] = (lq[Aq] - Yq[Aq]) / Oq;
-        const xq = function(qq, Eq, gq) {
-          return qq < 0 || Eq < qq ? Eq : Eq + (qq - Eq) * Math.exp(-gq / 150)
-        }(this.distance, function(qq, Eq, gq, Yq) {
-          const lq = qq.raycastTerrain(Eq, gq, Yq);
-          return null !== lq && Number.isFinite(lq) ? Math.min(Yq, Math.max(0, lq - .2)) : Yq
-        }(this.kB, Yq, mq, Oq), Eq);
-        if (Oq - xq < .001) return this.distance = -1, 1;
-        this.distance = xq;
-        for (let Aq = 0; Aq < 3; Aq++) lq[Aq] = Yq[Aq] + mq[Aq] * xq;
-        return xq / Oq
+      pullIn(bb, ub, hb) {
+        const Bb = this.targets.aimPoint(bb);
+        if (!Bb) return 1;
+        const Ob = hb.position,
+          Gb = Cb(Bb, Ob);
+        if (!(Gb > 0)) return 1;
+        const Ub = this.toCamera;
+        for (let Yb = 0; Yb < 3; Yb++) Ub[Yb] = (Ob[Yb] - Bb[Yb]) / Gb;
+        const Lb = function(bb, ub, hb) {
+          return bb < 0 || ub < bb ? ub : ub + (bb - ub) * Math.exp(-hb / 150)
+        }(this.distance, function(bb, ub, hb, Bb) {
+          const Ob = bb.raycastTerrain(ub, hb, Bb);
+          return null !== Ob && Number.isFinite(Ob) ? Math.min(Bb, Math.max(0, Ob - .2)) : Bb
+        }(this.eH, Bb, Ub, Gb), ub);
+        if (Gb - Lb < .001) return this.distance = -1, 1;
+        this.distance = Lb;
+        for (let Yb = 0; Yb < 3; Yb++) Ob[Yb] = Bb[Yb] + Ub[Yb] * Lb;
+        return Lb / Gb
       }
-      placeGoal(qq, Eq) {
-        const gq = this.settings.offset;
-        let Yq = gq[0],
-          lq = gq[2];
+      placeGoal(bb, ub) {
+        const hb = this.settings.offset;
+        let Bb = hb[0],
+          Ob = hb[2];
         if ("target" === this.settings.offsetSpace) {
-          const qq = this.targets.heading(Eq),
-            Oq = Math.cos(qq),
-            mq = Math.sin(qq);
-          Yq = gq[0] * Oq + gq[2] * mq, lq = -gq[0] * mq + gq[2] * Oq
+          const bb = this.targets.heading(ub),
+            Gb = Math.cos(bb),
+            Ub = Math.sin(bb);
+          Bb = hb[0] * Gb + hb[2] * Ub, Ob = -hb[0] * Ub + hb[2] * Gb
         }
-        this.goal[0] = qq[0] + Yq, this.goal[1] = qq[1] + gq[1], this.goal[2] = qq[2] + lq
+        this.goal[0] = bb[0] + Bb, this.goal[1] = bb[1] + hb[1], this.goal[2] = bb[2] + Ob
       }
     }
-    class Gq {
-      constructor(qq, Eq, gq, Yq) {
-        var lq, Oq;
-        this.settings = qq, this.kB = Eq, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = qq.keyframes.length > 0 ? new Zq(qq.keyframes, null === (lq = qq.smooth) || void 0 === lq || lq, null !== (Oq = qq.loop) && void 0 !== Oq && Oq) : null, this.base = (0, Aq.e)(Yq, (0, Aq.j)()), this.resolveTarget = qq => gq.aimPoint(qq)
+    class Mb {
+      constructor(bb, ub, hb, Bb) {
+        var Ob, Gb;
+        this.settings = bb, this.eH = ub, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = bb.keyframes.length > 0 ? new ib(bb.keyframes, null === (Ob = bb.smooth) || void 0 === Ob || Ob, null !== (Gb = bb.loop) && void 0 !== Gb && Gb) : null, this.base = (0, Yb.d)(Bb, (0, Yb.g)()), this.resolveTarget = bb => hb.aimPoint(bb)
       }
-      update(qq, Eq, gq) {
-        this.elapsedMs += qq;
-        const Yq = Nq(this.settings, this.kB);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, Yq, this.base) : this.base.fov = Yq, (0, Aq.g)(this.base.position, gq.position), gq.fov = this.base.fov, Eq.apply(this.base, gq)
+      update(bb, ub, hb) {
+        this.elapsedMs += bb;
+        const Bb = Zb(this.settings, this.eH);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, Bb, this.base) : this.base.fov = Bb, (0, Yb.e)(this.base.position, hb.position), hb.fov = this.base.fov, ub.apply(this.base, hb)
       }
-      continueFrom(qq) {
-        qq instanceof Gq && (0, Yq.v)(qq.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = qq.elapsedMs, (0, Aq.e)(qq.base, this.base))
+      continueFrom(bb) {
+        bb instanceof Mb && (0, Bb.u)(bb.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = bb.elapsedMs, (0, Yb.d)(bb.base, this.base))
       }
-      reset(qq) {
-        Tq(this.base, qq), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(bb) {
+        Jb(this.base, bb), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function Lq(qq, Eq) {
-      return (0, Yq.y)(qq, Eq)
+    function mb(bb, ub) {
+      return (0, Bb.y)(bb, ub)
     }
-    class Jq {
-      constructor(qq, Eq, gq) {
-        var Yq;
-        this.settings = qq, this.kB = Eq, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const lq = null !== gq && gq.settings.mode === qq.mode,
-          Oq = lq ? gq.pose : Eq.getDefaultPose();
-        this.pose = (0, Aq.e)(Oq, (0, Aq.j)()), this.lastGoodPose = (0, Aq.e)(lq ? gq.lastGoodPose : Oq, (0, Aq.j)()), this.look = new dq(qq.playerLook), this.targets = null !== (Yq = null === gq || void 0 === gq ? void 0 : gq.targets) && void 0 !== Yq ? Yq : new fq(Eq);
-        const mq = (0, Aq.e)(Oq, (0, Aq.j)());
-        lq && gq.look.unapply(mq, mq), this.mode = function(qq, Eq, gq, Yq) {
-          switch (qq.mode) {
+    class Ib {
+      constructor(bb, ub, hb) {
+        var Bb;
+        this.settings = bb, this.eH = ub, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const Ob = null !== hb && hb.settings.mode === bb.mode,
+          Gb = Ob ? hb.pose : ub.getDefaultPose();
+        this.pose = (0, Yb.d)(Gb, (0, Yb.g)()), this.lastGoodPose = (0, Yb.d)(Ob ? hb.lastGoodPose : Gb, (0, Yb.g)()), this.look = new ob(bb.playerLook), this.targets = null !== (Bb = null === hb || void 0 === hb ? void 0 : hb.targets) && void 0 !== Bb ? Bb : new vb(ub);
+        const Ub = (0, Yb.d)(Gb, (0, Yb.g)());
+        Ob && hb.look.unapply(Ub, Ub), this.mode = function(bb, ub, hb, Bb) {
+          switch (bb.mode) {
             case "fixed":
-              return new Sq(qq, Eq, gq, Yq);
+              return new Nb(bb, ub, hb, Bb);
             case "follow":
-              return new pq(qq, Eq, gq, Yq);
+              return new sb(bb, ub, hb, Bb);
             case "path":
-              return new Gq(qq, Eq, gq, Yq);
+              return new Mb(bb, ub, hb, Bb);
             case "frame":
-              return new Vq(qq, Eq, gq, Yq)
+              return new pb(bb, ub, hb, Bb)
           }
-        }(qq, Eq, this.targets, mq), lq && (this.look.continueFrom(gq.look), this.mode.continueFrom(gq.mode))
+        }(bb, ub, this.targets, Ub), Ob && (this.look.continueFrom(hb.look), this.mode.continueFrom(hb.mode))
       }
-      update(qq, Eq) {
-        return this.look.update(qq, Eq), this.mode.update(qq, this.look, this.pose), (0, Aq.m)(this.pose) ? (0, Aq.e)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, Aq.e)(this.lastGoodPose, this.pose), this.mode.reset((0, Aq.m)(this.lastGoodPose) ? this.lastGoodPose : this.kB.getDefaultPose())), this.pose
+      update(bb, ub) {
+        return this.look.update(bb, ub), this.mode.update(bb, this.look, this.pose), (0, Yb.j)(this.pose) ? (0, Yb.d)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, Yb.d)(this.lastGoodPose, this.pose), this.mode.reset((0, Yb.j)(this.lastGoodPose) ? this.lastGoodPose : this.eH.getDefaultPose())), this.pose
       }
     }
 
-    function kq(qq) {
-      return [0, 0, qq[2], qq[3]]
+    function Pb(bb) {
+      return [0, 0, bb[2], bb[3]]
     }
-    class Rq {
-      constructor(qq) {
-        this.kB = qq, this.settings = {
+    class qb {
+      constructor(bb) {
+        this.eH = bb, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new xq, this.shot = null, this.blend = null, this.mixed = (0, Aq.j)(), this.output = (0, Aq.j)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new Lb, this.shot = null, this.blend = null, this.mixed = (0, Yb.g)(), this.output = (0, Yb.g)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(qq) {
-        const Eq = (0, cq.b)(qq);
-        if ((0, Yq.v)(Eq, this.pending ? this.pending.settings : this.settings)) return;
-        const gq = Lq(this.settings, Eq);
-        if (void 0 !== Eq.transition && !gq) return this.pending = {
-          settings: Eq,
-          shot: "default" === Eq.mode ? null : new Jq(Eq, this.kB, null)
-        }, void this.fade.fadeOut(Eq.transition);
-        const lq = null !== this.pending;
-        this.pending = null, !lq && gq || this.fade.fadeIn(Yq.m.minTransitionFadeMs), this.show(Eq, !1)
+      setSettings(bb) {
+        const ub = (0, Sb.b)(bb);
+        if ((0, Bb.u)(ub, this.pending ? this.pending.settings : this.settings)) return;
+        const hb = mb(this.settings, ub);
+        if (void 0 !== ub.transition && !hb) return this.pending = {
+          settings: ub,
+          shot: "default" === ub.mode ? null : new Ib(ub, this.eH, null)
+        }, void this.fade.fadeOut(ub.transition);
+        const Ob = null !== this.pending;
+        this.pending = null, !Ob && hb || this.fade.fadeIn(Bb.m.minTransitionFadeMs), this.show(ub, !1)
       }
-      show(qq, Eq) {
-        var gq, lq;
-        if ((0, Yq.v)(qq, this.settings)) return;
-        const mq = !Eq && Lq(this.settings, qq);
-        this.settings = qq;
-        const xq = null !== this.blend && this.blend.elapsedMs > 0,
-          cq = (0, Aq.e)(this.hasOutput ? this.output : this.kB.getDefaultPose(), (0, Aq.j)());
-        if (this.shot = "default" === qq.mode ? null : new Jq(qq, this.kB, Eq ? null : this.shot), mq) return;
-        const uq = Eq || !this.shot && !this.hasOutput ? 0 : null !== (gq = qq.blendInMs) && void 0 !== gq ? gq : 0;
-        if (uq <= 0) return void(this.blend = null);
-        const Bq = (0, Oq.r)(null !== (lq = qq.blendEasing) && void 0 !== lq ? lq : "easeInOut");
+      show(bb, ub) {
+        var hb, Ob;
+        if ((0, Bb.u)(bb, this.settings)) return;
+        const Ub = !ub && mb(this.settings, bb);
+        this.settings = bb;
+        const Lb = null !== this.blend && this.blend.elapsedMs > 0,
+          Sb = (0, Yb.d)(this.hasOutput ? this.output : this.eH.getDefaultPose(), (0, Yb.g)());
+        if (this.shot = "default" === bb.mode ? null : new Ib(bb, this.eH, ub ? null : this.shot), Ub) return;
+        const ab = ub || !this.shot && !this.hasOutput ? 0 : null !== (hb = bb.blendInMs) && void 0 !== hb ? hb : 0;
+        if (ab <= 0) return void(this.blend = null);
+        const Hb = (0, Gb.k)(null !== (Ob = bb.blendEasing) && void 0 !== Ob ? Ob : "easeInOut");
         this.blend = {
-          from: cq,
+          from: Sb,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: uq,
-          easing: xq ? kq(Bq) : Bq
+          durationMs: ab,
+          easing: Lb ? Pb(Hb) : Hb
         }
       }
       getSettings() {
@@ -943,66 +943,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(qq, Eq) {
-        const gq = Number.isFinite(qq) && qq > 0 ? qq : 0;
-        if (this.fade.advance(gq) && null !== this.pending) {
+      update(bb, ub) {
+        const hb = Number.isFinite(bb) && bb > 0 ? bb : 0;
+        if (this.fade.advance(hb) && null !== this.pending) {
           const {
-            settings: qq
+            settings: bb
           } = this.pending;
-          this.pending = null, this.show(qq, !0)
+          this.pending = null, this.show(bb, !0)
         }
         this.loadingPositions.length = 0;
-        const Yq = this.pending;
-        if (null !== Yq && void 0 !== Yq && Yq.shot) {
-          const qq = "path" === Yq.settings.mode ? 0 : gq;
-          this.noteLoadingPosition(Yq.shot.update(qq, Aq.b).position)
+        const Bb = this.pending;
+        if (null !== Bb && void 0 !== Bb && Bb.shot) {
+          const bb = "path" === Bb.settings.mode ? 0 : hb;
+          this.noteLoadingPosition(Bb.shot.update(bb, Yb.b).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const mq = this.shot ? this.shot.update(gq, Eq) : this.kB.getDefaultPose();
-        this.shot && this.noteLoadingPosition(mq.position);
-        const xq = this.blend;
-        if (!xq) return this.writeOutput(mq);
-        xq.elapsedMs += gq;
-        const cq = Math.min(1, xq.elapsedMs / xq.durationMs);
-        if (xq.headingDelta = Number.isFinite(xq.headingDelta) ? (0, lq.C)(xq.headingDelta, mq.heading - xq.from.heading) : (0, lq.z)(xq.from.heading, mq.heading), (0, Aq.s)(xq.from, mq, xq.headingDelta, (0, Oq.o)(cq, xq.easing), this.mixed), cq >= 1) {
+        const Ub = this.shot ? this.shot.update(hb, ub) : this.eH.getDefaultPose();
+        this.shot && this.noteLoadingPosition(Ub.position);
+        const Lb = this.blend;
+        if (!Lb) return this.writeOutput(Ub);
+        Lb.elapsedMs += hb;
+        const Sb = Math.min(1, Lb.elapsedMs / Lb.durationMs);
+        if (Lb.headingDelta = Number.isFinite(Lb.headingDelta) ? (0, Ob.F)(Lb.headingDelta, Ub.heading - Lb.from.heading) : (0, Ob.C)(Lb.from.heading, Ub.heading), (0, Yb.q)(Lb.from, Ub, Lb.headingDelta, (0, Gb.j)(Sb, Lb.easing), this.mixed), Sb >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else xq.fromScripted && this.noteLoadingPosition(xq.from.position);
+        } else Lb.fromScripted && this.noteLoadingPosition(Lb.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(qq) {
-        if (qq.every(Number.isFinite)) {
-          const Eq = this.loadingPositions;
-          Eq.push((0, Aq.g)(qq, this.loadingSlots[Eq.length]))
+      noteLoadingPosition(bb) {
+        if (bb.every(Number.isFinite)) {
+          const ub = this.loadingPositions;
+          ub.push((0, Yb.e)(bb, this.loadingSlots[ub.length]))
         }
       }
-      writeOutput(qq) {
-        const Eq = this.output;
-        (0, Aq.m)(qq) ? (0, Aq.e)(qq, Eq) : this.hasOutput || (0, Aq.e)(this.kB.getDefaultPose(), Eq), Eq.pitch = (0, lq.k)(Eq.pitch);
-        const gq = this.kB.getDefaultFov(),
-          Oq = Number.isFinite(gq) && gq > 0 && gq < 180,
-          mq = Oq ? Math.min(Yq.m.minFov, gq) : Yq.m.minFov,
-          xq = Oq ? Math.max(Yq.m.maxFov, gq) : Yq.m.maxFov;
-        return Eq.fov = Number.isFinite(Eq.fov) ? Math.min(xq, Math.max(mq, Eq.fov)) : xq, this.hasOutput = !0, Eq
+      writeOutput(bb) {
+        const ub = this.output;
+        (0, Yb.j)(bb) ? (0, Yb.d)(bb, ub) : this.hasOutput || (0, Yb.d)(this.eH.getDefaultPose(), ub), ub.pitch = (0, Ob.i)(ub.pitch);
+        const hb = this.eH.getDefaultFov(),
+          Gb = Number.isFinite(hb) && hb > 0 && hb < 180,
+          Ub = Gb ? Math.min(Bb.m.minFov, hb) : Bb.m.minFov,
+          Lb = Gb ? Math.max(Bb.m.maxFov, hb) : Bb.m.maxFov;
+        return ub.fov = Number.isFinite(ub.fov) ? Math.min(Lb, Math.max(Ub, ub.fov)) : Lb, this.hasOutput = !0, ub
       }
     }
   },
-  39115: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq,
-      e: () => xq,
-      g: () => mq,
-      j: () => Oq,
-      m: () => cq,
-      q: () => Aq,
-      s: () => uq
+  38791: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Ob,
+      d: () => Lb,
+      e: () => Ub,
+      g: () => Gb,
+      j: () => Sb,
+      n: () => Yb,
+      q: () => ab
     });
-    var Yq = gq(39118);
-    const lq = {
-      VJ: 0,
-      dJ: 0
+    var Bb = hb(38798);
+    const Ob = {
+      MJ: 0,
+      mJ: 0
     };
 
-    function Oq() {
+    function Gb() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1011,196 +1011,196 @@ export const modules = {
       }
     }
 
-    function mq(qq, Eq) {
-      return Eq[0] = qq[0], Eq[1] = qq[1], Eq[2] = qq[2], Eq
+    function Ub(bb, ub) {
+      return ub[0] = bb[0], ub[1] = bb[1], ub[2] = bb[2], ub
     }
 
-    function xq(qq, Eq) {
-      return mq(qq.position, Eq.position), Eq.heading = qq.heading, Eq.pitch = qq.pitch, Eq.fov = qq.fov, Eq
+    function Lb(bb, ub) {
+      return Ub(bb.position, ub.position), ub.heading = bb.heading, ub.pitch = bb.pitch, ub.fov = bb.fov, ub
     }
 
-    function Aq(qq, Eq) {
-      return Array.isArray(qq) && qq.length === Eq && qq.every(Number.isFinite)
+    function Yb(bb, ub) {
+      return Array.isArray(bb) && bb.length === ub && bb.every(Number.isFinite)
     }
 
-    function cq(qq) {
-      return Aq(qq.position, 3) && Number.isFinite(qq.heading) && Number.isFinite(qq.pitch) && Number.isFinite(qq.fov)
+    function Sb(bb) {
+      return Yb(bb.position, 3) && Number.isFinite(bb.heading) && Number.isFinite(bb.pitch) && Number.isFinite(bb.fov)
     }
 
-    function uq(qq, Eq, gq, lq, Oq) {
-      for (let Yq = 0; Yq < 3; Yq++) Oq.position[Yq] = qq.position[Yq] + (Eq.position[Yq] - qq.position[Yq]) * lq;
-      return Oq.heading = (0, Yq.v)(qq.heading + gq * lq), Oq.pitch = qq.pitch + (Eq.pitch - qq.pitch) * lq, Oq.fov = qq.fov + (Eq.fov - qq.fov) * lq, Oq
+    function ab(bb, ub, hb, Ob, Gb) {
+      for (let Bb = 0; Bb < 3; Bb++) Gb.position[Bb] = bb.position[Bb] + (ub.position[Bb] - bb.position[Bb]) * Ob;
+      return Gb.heading = (0, Bb.y)(bb.heading + hb * Ob), Gb.pitch = bb.pitch + (ub.pitch - bb.pitch) * Ob, Gb.fov = bb.fov + (ub.fov - bb.fov) * Ob, Gb
     }
   },
-  39141: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => tq,
-      c: () => Wq
+  38816: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => rb,
+      c: () => wb
     });
-    var Yq = gq(39138),
-      lq = gq(39115);
-    const Oq = Yq.l,
-      mq = Yq.q;
+    var Bb = hb(38814),
+      Ob = hb(38791);
+    const Gb = Bb.i,
+      Ub = Bb.p;
 
-    function xq(qq, Eq, gq, Yq) {
-      return Number.isFinite(qq) ? Math.min(gq, Math.max(Eq, qq)) : Yq
+    function Lb(bb, ub, hb, Bb) {
+      return Number.isFinite(bb) ? Math.min(hb, Math.max(ub, bb)) : Bb
     }
 
-    function Aq(qq, Eq, gq) {
-      return void 0 !== qq && Number.isFinite(qq) ? Math.min(gq, Math.max(Eq, qq)) : void 0
+    function Yb(bb, ub, hb) {
+      return void 0 !== bb && Number.isFinite(bb) ? Math.min(hb, Math.max(ub, bb)) : void 0
     }
 
-    function cq(qq) {
-      const Eq = Yq.m.maxCoordinate;
-      return [Math.min(Eq, Math.max(-Eq, qq[0])), Math.min(Eq, Math.max(-Eq, qq[1])), Math.min(Eq, Math.max(-Eq, qq[2]))]
+    function Sb(bb) {
+      const ub = Bb.m.maxCoordinate;
+      return [Math.min(ub, Math.max(-ub, bb[0])), Math.min(ub, Math.max(-ub, bb[1])), Math.min(ub, Math.max(-ub, bb[2]))]
     }
 
-    function uq(qq) {
-      return "string" === typeof qq ? qq : (0, lq.q)(qq, 3) ? cq(qq) : void 0
+    function ab(bb) {
+      return "string" === typeof bb ? bb : (0, Ob.n)(bb, 3) ? Sb(bb) : void 0
     }
-    const Bq = new RegExp(Yq.u);
+    const Hb = new RegExp(Bb.s);
 
-    function Wq(qq) {
-      return "string" === typeof qq && Bq.test(qq)
+    function wb(bb) {
+      return "string" === typeof bb && Hb.test(bb)
     }
 
-    function Nq(qq) {
-      const Eq = [];
-      if (!Array.isArray(qq)) return Eq;
-      for (const gq of qq.slice(0, Yq.m.maxFrameTargets)) {
-        const qq = uq(gq);
-        void 0 === qq || "string" === typeof qq && !Wq(qq) || Eq.push(qq)
+    function Zb(bb) {
+      const ub = [];
+      if (!Array.isArray(bb)) return ub;
+      for (const hb of bb.slice(0, Bb.m.maxFrameTargets)) {
+        const bb = ab(hb);
+        void 0 === bb || "string" === typeof bb && !wb(bb) || ub.push(bb)
       }
-      return Eq
+      return ub
     }
 
-    function aq(qq) {
-      if (!(0, lq.q)(qq, 3)) return;
-      const Eq = Math.max(Math.abs(qq[0]), Math.abs(qq[1]), Math.abs(qq[2])),
-        gq = Math.hypot(qq[0] / Eq, qq[1] / Eq, qq[2] / Eq);
-      return 0 === Eq || Eq * gq < Yq.m.minDirectionLength ? void 0 : [qq[0] / Eq / gq, qq[1] / Eq / gq, qq[2] / Eq / gq]
+    function Xb(bb) {
+      if (!(0, Ob.n)(bb, 3)) return;
+      const ub = Math.max(Math.abs(bb[0]), Math.abs(bb[1]), Math.abs(bb[2])),
+        hb = Math.hypot(bb[0] / ub, bb[1] / ub, bb[2] / ub);
+      return 0 === ub || ub * hb < Bb.m.minDirectionLength ? void 0 : [bb[0] / ub / hb, bb[1] / ub / hb, bb[2] / ub / hb]
     }
 
-    function Vq(qq) {
-      if (void 0 !== qq) return "string" === typeof qq ? Oq.includes(qq) ? qq : void 0 : (0, lq.q)(qq, 4) ? [xq(qq[0], 0, 1, 0), xq(qq[1], Yq.m.minEasingY, Yq.m.maxEasingY, 0), xq(qq[2], 0, 1, 1), xq(qq[3], Yq.m.minEasingY, Yq.m.maxEasingY, 1)] : "linear"
+    function pb(bb) {
+      if (void 0 !== bb) return "string" === typeof bb ? Gb.includes(bb) ? bb : void 0 : (0, Ob.n)(bb, 4) ? [Lb(bb[0], 0, 1, 0), Lb(bb[1], Bb.m.minEasingY, Bb.m.maxEasingY, 0), Lb(bb[2], 0, 1, 1), Lb(bb[3], Bb.m.minEasingY, Bb.m.maxEasingY, 1)] : "linear"
     }
 
-    function dq(qq) {
-      if (qq) return {
-        maxYaw: xq(qq.maxYaw, 0, Yq.m.maxPlayerLook, 0),
-        maxPitch: xq(qq.maxPitch, 0, Yq.m.maxPlayerLook, 0),
-        returnMs: Aq(qq.returnMs, 0, Yq.m.maxReturnMs)
+    function ob(bb) {
+      if (bb) return {
+        maxYaw: Lb(bb.maxYaw, 0, Bb.m.maxPlayerLook, 0),
+        maxPitch: Lb(bb.maxPitch, 0, Bb.m.maxPlayerLook, 0),
+        returnMs: Yb(bb.returnMs, 0, Bb.m.maxReturnMs)
       }
     }
-    const jq = new RegExp(Yq.d);
+    const Ab = new RegExp(Bb.d);
 
-    function Hq(qq) {
-      var Eq;
-      if ("object" !== typeof qq || null === qq) return;
-      const gq = Yq.m.maxTransitionMs,
-        lq = Yq.m.minTransitionFadeMs;
+    function lb(bb) {
+      var ub;
+      if ("object" !== typeof bb || null === bb) return;
+      const hb = Bb.m.maxTransitionMs,
+        Ob = Bb.m.minTransitionFadeMs;
       return {
-        colour: "string" === typeof qq.colour && jq.test(qq.colour) ? qq.colour : Yq.h,
-        outMs: xq(qq.outMs, lq, gq, lq),
-        holdMs: xq(null !== (Eq = qq.holdMs) && void 0 !== Eq ? Eq : 0, 0, gq, 0),
-        inMs: xq(qq.inMs, lq, gq, lq)
+        colour: "string" === typeof bb.colour && Ab.test(bb.colour) ? bb.colour : Bb.g,
+        outMs: Lb(bb.outMs, Ob, hb, Ob),
+        holdMs: Lb(null !== (ub = bb.holdMs) && void 0 !== ub ? ub : 0, 0, hb, 0),
+        inMs: Lb(bb.inMs, Ob, hb, Ob)
       }
     }
 
-    function oq(qq) {
-      return !0 === qq || void 0
+    function Kb(bb) {
+      return !0 === bb || void 0
     }
 
-    function Pq(qq) {
-      if ("object" !== typeof qq || null === qq) return !1;
-      const Eq = qq.lookAt;
-      return Number.isFinite(qq.timeMs) && (0, lq.q)(qq.position, 3) && (void 0 === Eq || "string" === typeof Eq || (0, lq.q)(Eq, 3))
+    function Wb(bb) {
+      if ("object" !== typeof bb || null === bb) return !1;
+      const ub = bb.lookAt;
+      return Number.isFinite(bb.timeMs) && (0, Ob.n)(bb.position, 3) && (void 0 === ub || "string" === typeof ub || (0, Ob.n)(ub, 3))
     }
 
-    function Qq(qq) {
+    function Cb(bb) {
       return {
-        ...qq,
-        timeMs: xq(qq.timeMs, 0, Yq.m.maxPathMs, 0),
-        position: cq(qq.position),
-        lookAt: uq(qq.lookAt),
-        lookDirection: aq(qq.lookDirection),
-        fov: Aq(qq.fov, Yq.m.minFov, Yq.m.maxFov),
-        easing: Vq(qq.easing)
+        ...bb,
+        timeMs: Lb(bb.timeMs, 0, Bb.m.maxPathMs, 0),
+        position: Sb(bb.position),
+        lookAt: ab(bb.lookAt),
+        lookDirection: Xb(bb.lookDirection),
+        fov: Yb(bb.fov, Bb.m.minFov, Bb.m.maxFov),
+        easing: pb(bb.easing)
       }
     }
 
-    function yq(qq) {
-      const Eq = [];
-      if (!Array.isArray(qq)) return Eq;
-      for (const gq of qq.slice(0, Yq.m.maxKeyframes)) {
-        if (!Pq(gq)) continue;
-        const qq = Qq(gq);
-        (0 === Eq.length || qq.timeMs > Eq[Eq.length - 1].timeMs) && Eq.push(qq)
+    function db(bb) {
+      const ub = [];
+      if (!Array.isArray(bb)) return ub;
+      for (const hb of bb.slice(0, Bb.m.maxKeyframes)) {
+        if (!Wb(hb)) continue;
+        const bb = Cb(hb);
+        (0 === ub.length || bb.timeMs > ub[ub.length - 1].timeMs) && ub.push(bb)
       }
-      return Eq
+      return ub
     }
 
-    function tq(qq) {
-      if ("object" !== typeof qq || null === qq) return {
+    function rb(bb) {
+      if ("object" !== typeof bb || null === bb) return {
         mode: "default"
       };
-      const Eq = {
-          blendInMs: Aq(qq.blendInMs, 0, Yq.m.maxBlendInMs),
-          blendEasing: Vq(qq.blendEasing),
-          transition: Hq(qq.transition),
-          letterbox: oq(qq.letterbox),
-          hideHud: oq(qq.hideHud)
+      const ub = {
+          blendInMs: Yb(bb.blendInMs, 0, Bb.m.maxBlendInMs),
+          blendEasing: pb(bb.blendEasing),
+          transition: lb(bb.transition),
+          letterbox: Kb(bb.letterbox),
+          hideHud: Kb(bb.hideHud)
         },
-        gq = {
+        hb = {
           mode: "default",
-          ...Eq
+          ...ub
         };
-      if ("default" === qq.mode || "fixed" === qq.mode && !(0, lq.q)(qq.position, 3)) return gq;
-      const Oq = {
-        ...Eq,
-        fov: Aq(qq.fov, Yq.m.minFov, Yq.m.maxFov),
-        playerFacing: (Bq = qq.playerFacing, mq.includes(Bq) ? Bq : void 0),
-        playerLook: dq(qq.playerLook)
+      if ("default" === bb.mode || "fixed" === bb.mode && !(0, Ob.n)(bb.position, 3)) return hb;
+      const Gb = {
+        ...ub,
+        fov: Yb(bb.fov, Bb.m.minFov, Bb.m.maxFov),
+        playerFacing: (Hb = bb.playerFacing, Ub.includes(Hb) ? Hb : void 0),
+        playerLook: ob(bb.playerLook)
       };
-      var Bq, Wq;
-      switch (qq.mode) {
+      var Hb, wb;
+      switch (bb.mode) {
         case "fixed":
           return {
-            ...qq, ...Oq, position: cq(qq.position), lookAt: uq(qq.lookAt), lookDirection: aq(qq.lookDirection)
+            ...bb, ...Gb, position: Sb(bb.position), lookAt: ab(bb.lookAt), lookDirection: Xb(bb.lookDirection)
           };
         case "follow":
           return {
-            ...qq, ...Oq, target: "string" === typeof qq.target ? qq.target : void 0, lookAt: uq(qq.lookAt), offset: (Wq = qq.offset, Array.isArray(Wq) ? [xq(Wq[0], -Yq.m.maxOffset, Yq.m.maxOffset, 0), xq(Wq[1], -Yq.m.maxOffset, Yq.m.maxOffset, 0), xq(Wq[2], -Yq.m.maxOffset, Yq.m.maxOffset, 0)] : [0, 0, 0]), lookDirection: aq(qq.lookDirection), smoothMs: Aq(qq.smoothMs, 0, Yq.m.maxSmoothMs)
+            ...bb, ...Gb, target: "string" === typeof bb.target ? bb.target : void 0, lookAt: ab(bb.lookAt), offset: (wb = bb.offset, Array.isArray(wb) ? [Lb(wb[0], -Bb.m.maxOffset, Bb.m.maxOffset, 0), Lb(wb[1], -Bb.m.maxOffset, Bb.m.maxOffset, 0), Lb(wb[2], -Bb.m.maxOffset, Bb.m.maxOffset, 0)] : [0, 0, 0]), lookDirection: Xb(bb.lookDirection), smoothMs: Yb(bb.smoothMs, 0, Bb.m.maxSmoothMs)
           };
         case "path":
           return {
-            ...qq, ...Oq, keyframes: yq(qq.keyframes)
+            ...bb, ...Gb, keyframes: db(bb.keyframes)
           };
         case "frame":
           return {
-            ...qq, ...Oq, targets: Nq(qq.targets), viewHeading: Aq(qq.viewHeading, -Yq.m.maxFrameHeading, Yq.m.maxFrameHeading), viewElevation: Aq(qq.viewElevation, 0, Yq.m.maxFrameElevation), padding: Aq(qq.padding, 0, Yq.m.maxFrameDistance), closestDistance: Aq(qq.closestDistance, 0, Yq.m.maxFrameDistance), furthestDistance: Aq(qq.furthestDistance, 0, Yq.m.maxFrameDistance), smoothMs: Aq(qq.smoothMs, 0, Yq.m.maxSmoothMs)
+            ...bb, ...Gb, targets: Zb(bb.targets), viewHeading: Yb(bb.viewHeading, -Bb.m.maxFrameHeading, Bb.m.maxFrameHeading), viewElevation: Yb(bb.viewElevation, 0, Bb.m.maxFrameElevation), padding: Yb(bb.padding, 0, Bb.m.maxFrameDistance), closestDistance: Yb(bb.closestDistance, 0, Bb.m.maxFrameDistance), furthestDistance: Yb(bb.furthestDistance, 0, Bb.m.maxFrameDistance), smoothMs: Yb(bb.smoothMs, 0, Bb.m.maxSmoothMs)
           };
         default:
-          return gq
+          return hb
       }
     }
   },
-  38638: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => xq
+  38277: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Lb
     });
-    var Yq = gq(1214);
+    var Bb = hb(1124);
 
-    function lq(qq) {
-      const Eq = /(\d*\.?\d+)px/.exec(qq);
-      return Eq ? Number(Eq[1]) : null
+    function Ob(bb) {
+      const ub = /(\d*\.?\d+)px/.exec(bb);
+      return ub ? Number(ub[1]) : null
     }
 
-    function Oq(qq) {
-      return qq.split(/[\s,]+/).pop()
+    function Gb(bb) {
+      return bb.split(/[\s,]+/).pop()
     }
-    let mq = !1;
-    const xq = {
+    let Ub = !1;
+    const Lb = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -1211,360 +1211,360 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(qq, Eq, Yq, xq, Aq, cq) {
-        if (Aq <= 0 || cq <= 0 || this.fontSize <= 0) return {
+      drawText: function(bb, ub, Bb, Lb, Yb, Sb) {
+        if (Yb <= 0 || Sb <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: uq,
-          fontVariant: Bq,
-          fontWeight: Wq,
-          fontSize: Nq,
-          font: aq
-        } = this, Vq = [uq, Bq, Wq, `${Nq}px`, aq].filter(Boolean).join(" "), dq = [
-          [Wq, `${Nq}px`, Oq(aq)].filter(Boolean).join(" "), `${Nq}px sans-serif`
-        ], jq = qq.font, Hq = function(qq, Eq, gq) {
-          for (const Yq of Eq) {
-            qq.font = Yq;
-            const Eq = lq(qq.font),
-              mq = Oq(Yq);
-            if (null !== Eq && Math.abs(Eq - gq) <= .5 && qq.font.toLowerCase().includes(mq.toLowerCase())) return Yq
+          fontStyle: ab,
+          fontVariant: Hb,
+          fontWeight: wb,
+          fontSize: Zb,
+          font: Xb
+        } = this, pb = [ab, Hb, wb, `${Zb}px`, Xb].filter(Boolean).join(" "), ob = [
+          [wb, `${Zb}px`, Gb(Xb)].filter(Boolean).join(" "), `${Zb}px sans-serif`
+        ], Ab = bb.font, lb = function(bb, ub, hb) {
+          for (const Bb of ub) {
+            bb.font = Bb;
+            const ub = Ob(bb.font),
+              Ub = Gb(Bb);
+            if (null !== ub && Math.abs(ub - hb) <= .5 && bb.font.toLowerCase().includes(Ub.toLowerCase())) return Bb
           }
           return null
-        }(qq, [Vq, ...dq], Nq);
-        Hq !== Vq && function(qq, Eq, Yq) {
-          mq || (mq = !0, Promise.resolve().then((() => gq(1046))).then((gq => {
+        }(bb, [pb, ...ob], Zb);
+        lb !== pb && function(bb, ub, Bb) {
+          Ub || (Ub = !0, Promise.resolve().then((() => hb(981))).then((hb => {
             let {
-              lV: lq
-            } = gq;
-            lq(new Error("A canvas didn't take canvasTxt's font"), {
-              font: qq,
-              jN: Eq,
-              drawnWith: null !== Yq && void 0 !== Yq ? Yq : "the kept font, scaled"
+              cX: Ob
+            } = hb;
+            Ob(new Error("A canvas didn't take canvasTxt's font"), {
+              font: bb,
+              HZ: ub,
+              drawnWith: null !== Bb && void 0 !== Bb ? Bb : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(Vq, jq, Hq);
-        const oq = lq(qq.font);
-        if (null === Hq && null !== oq && oq > 0) {
-          const gq = Nq / oq;
-          qq.save();
+        }(pb, Ab, lb);
+        const Kb = Ob(bb.font);
+        if (null === lb && null !== Kb && Kb > 0) {
+          const hb = Zb / Kb;
+          bb.save();
           try {
-            return qq.scale(gq, gq), {
-              height: this.drawLines(qq, Eq, Yq / gq, xq / gq, Aq / gq, cq / gq, oq).height * gq
+            return bb.scale(hb, hb), {
+              height: this.drawLines(bb, ub, Bb / hb, Lb / hb, Yb / hb, Sb / hb, Kb).height * hb
             }
           } finally {
-            qq.restore()
+            bb.restore()
           }
         }
-        return this.drawLines(qq, Eq, Yq, xq, Aq, cq, Nq)
+        return this.drawLines(bb, ub, Bb, Lb, Yb, Sb, Zb)
       },
-      drawLines: function(qq, Eq, gq, lq, Oq, mq, xq) {
-        const Aq = gq + Oq,
-          cq = lq + mq;
-        let uq, Bq = lq + mq / 2 + xq / 2;
-        "right" === this.align ? (uq = Aq, qq.textAlign = "right") : "left" === this.align ? (uq = gq, qq.textAlign = "left") : (uq = gq + Oq / 2, qq.textAlign = "center");
-        for (const Yq of Eq) {
-          qq.measureText(Yq).width >= Oq && (Eq = Eq.replace(Yq, ""))
+      drawLines: function(bb, ub, hb, Ob, Gb, Ub, Lb) {
+        const Yb = hb + Gb,
+          Sb = Ob + Ub;
+        let ab, Hb = Ob + Ub / 2 + Lb / 2;
+        "right" === this.align ? (ab = Yb, bb.textAlign = "right") : "left" === this.align ? (ab = hb, bb.textAlign = "left") : (ab = hb + Gb / 2, bb.textAlign = "center");
+        for (const Bb of ub) {
+          bb.measureText(Bb).width >= Gb && (ub = ub.replace(Bb, ""))
         }
-        Eq = (0, Yq.W)(Eq);
-        const Wq = [],
-          Nq = Eq.split("\n"),
-          aq = this.justify ? qq.measureText("\u200a").width : 0;
-        Nq.forEach((Eq => {
-          let gq = qq.measureText(Eq).width;
-          if (gq <= Oq) Wq.push(Eq);
+        ub = (0, Bb.cb)(ub);
+        const wb = [],
+          Zb = ub.split("\n"),
+          Xb = this.justify ? bb.measureText("\u200a").width : 0;
+        Zb.forEach((ub => {
+          let hb = bb.measureText(ub).width;
+          if (hb <= Gb) wb.push(ub);
           else {
-            let Yq = Eq;
-            const lq = Oq;
-            let mq, xq, Aq;
-            for (gq = qq.measureText(Yq).width; gq > lq;) {
-              for (mq = 0, xq = 0, Aq = ""; xq < lq;) mq++, Aq = Yq.substr(0, mq), xq = qq.measureText(Aq).width;
-              mq--, Aq = Aq.substr(0, mq);
-              const Eq = mq;
-              if (" " !== Yq.substr(mq, 1)) {
+            let Bb = ub;
+            const Ob = Gb;
+            let Ub, Lb, Yb;
+            for (hb = bb.measureText(Bb).width; hb > Ob;) {
+              for (Ub = 0, Lb = 0, Yb = ""; Lb < Ob;) Ub++, Yb = Bb.substr(0, Ub), Lb = bb.measureText(Yb).width;
+              Ub--, Yb = Yb.substr(0, Ub);
+              const ub = Ub;
+              if (" " !== Bb.substr(Ub, 1)) {
                 for (;
-                  " " !== Yq.substr(mq, 1) && 0 !== mq;) mq--;
-                0 === mq && (mq = Eq), Aq = Yq.substr(0, mq)
+                  " " !== Bb.substr(Ub, 1) && 0 !== Ub;) Ub--;
+                0 === Ub && (Ub = ub), Yb = Bb.substr(0, Ub)
               }
-              Aq = this.justify ? this.justifyLine(qq, Aq, aq, "\u200a", Oq) : Aq, Yq = Yq.substr(mq), gq = qq.measureText(Yq).width, Wq.push(Aq)
+              Yb = this.justify ? this.justifyLine(bb, Yb, Xb, "\u200a", Gb) : Yb, Bb = Bb.substr(Ub), hb = bb.measureText(Bb).width, wb.push(Yb)
             }
-            gq > 0 && Wq.push(Yq)
+            hb > 0 && wb.push(Bb)
           }
         }));
-        const Vq = this.lineHeight ? this.lineHeight : this.getTextHeight(qq, Eq),
-          dq = Vq * (Wq.length - 1),
-          jq = dq / 2;
-        let Hq = lq;
-        "top" === this.vAlign ? Bq = lq + xq : "bottom" === this.vAlign ? (Bq = cq - dq, Hq = cq) : (Hq = lq + mq / 2, Bq -= jq), Wq.forEach((Eq => {
-          Eq = Eq.trim(), qq.fillText(Eq, uq, Bq), Bq += Vq
-        })), this.debug && (qq.lineWidth = 3, qq.strokeStyle = "#00909e", qq.strokeRect(gq, lq, Oq, mq), qq.lineWidth = 2, qq.strokeStyle = "#f6d743", qq.beginPath(), qq.moveTo(uq, lq), qq.lineTo(uq, cq), qq.stroke(), qq.strokeStyle = "#ff6363", qq.beginPath(), qq.moveTo(gq, Hq), qq.lineTo(Aq, Hq), qq.stroke());
+        const pb = this.lineHeight ? this.lineHeight : this.getTextHeight(bb, ub),
+          ob = pb * (wb.length - 1),
+          Ab = ob / 2;
+        let lb = Ob;
+        "top" === this.vAlign ? Hb = Ob + Lb : "bottom" === this.vAlign ? (Hb = Sb - ob, lb = Sb) : (lb = Ob + Ub / 2, Hb -= Ab), wb.forEach((ub => {
+          ub = ub.trim(), bb.fillText(ub, ab, Hb), Hb += pb
+        })), this.debug && (bb.lineWidth = 3, bb.strokeStyle = "#00909e", bb.strokeRect(hb, Ob, Gb, Ub), bb.lineWidth = 2, bb.strokeStyle = "#f6d743", bb.beginPath(), bb.moveTo(ab, Ob), bb.lineTo(ab, Sb), bb.stroke(), bb.strokeStyle = "#ff6363", bb.beginPath(), bb.moveTo(hb, lb), bb.lineTo(Yb, lb), bb.stroke());
         return {
-          height: dq + Vq
+          height: ob + pb
         }
       },
-      getTextHeight: function(qq, Eq) {
-        const gq = qq.textBaseline;
-        qq.textBaseline = "bottom";
+      getTextHeight: function(bb, ub) {
+        const hb = bb.textBaseline;
+        bb.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: Yq
-        } = qq.measureText(Eq);
-        return qq.textBaseline = gq, Yq
+          actualBoundingBoxAscent: Bb
+        } = bb.measureText(ub);
+        return bb.textBaseline = hb, Bb
       },
-      justifyLine: function(qq, Eq, gq, Yq, lq) {
-        const Oq = Eq.trim(),
-          mq = qq.measureText(Oq).width,
-          xq = Oq.split(/\s+/).length - 1,
-          Aq = Math.floor((lq - mq) / gq);
-        if (xq <= 0 || Aq <= 0) return Oq;
-        const cq = Math.floor(Aq / xq);
-        let uq = Aq - xq * cq,
-          Bq = [];
-        for (let Wq = 0; Wq < cq; Wq++) Bq.push(Yq);
-        Bq = Bq.join("");
-        return Oq.replace(/\s+/g, (qq => {
-          const Eq = uq > 0 ? Bq + Yq : Bq;
-          return uq--, qq + Eq
+      justifyLine: function(bb, ub, hb, Bb, Ob) {
+        const Gb = ub.trim(),
+          Ub = bb.measureText(Gb).width,
+          Lb = Gb.split(/\s+/).length - 1,
+          Yb = Math.floor((Ob - Ub) / hb);
+        if (Lb <= 0 || Yb <= 0) return Gb;
+        const Sb = Math.floor(Yb / Lb);
+        let ab = Yb - Lb * Sb,
+          Hb = [];
+        for (let wb = 0; wb < Sb; wb++) Hb.push(Bb);
+        Hb = Hb.join("");
+        return Gb.replace(/\s+/g, (bb => {
+          const ub = ab > 0 ? Hb + Bb : Hb;
+          return ab--, bb + ub
         }))
       }
     }
   },
-  39080: (qq, Eq, gq) => {
-    function Yq(qq, Eq) {
-      return Eq.set(qq), Eq
+  38752: (bb, ub, hb) => {
+    function Bb(bb, ub) {
+      return ub.set(bb), ub
     }
-    gq.d(Eq, {
-      c: () => Yq
+    hb.d(ub, {
+      c: () => Bb
     })
   },
-  38642: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Vq,
-      g: () => aq,
-      k: () => Wq,
-      l: () => uq,
-      n: () => Bq
+  38286: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => pb,
+      d: () => Xb,
+      g: () => wb,
+      j: () => ab,
+      k: () => Hb
     });
-    var Yq = gq(4096),
-      lq = gq(307);
-    const Oq = 1024,
-      mq = 1536,
-      xq = 2 * Yq.j + 1,
-      Aq = new Intl.NumberFormat("en", {
+    var Bb = hb(4013),
+      Ob = hb(314);
+    const Gb = 1024,
+      Ub = 1536,
+      Lb = 2 * Bb.i + 1,
+      Yb = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      cq = 1.5;
+      Sb = 1.5;
 
-    function uq(qq, Eq, gq) {
-      if ("string" !== typeof qq) return Eq;
+    function ab(bb, ub, hb) {
+      if ("string" !== typeof bb) return ub;
       try {
-        const gq = JSON.parse(qq);
-        return gq && "object" === typeof gq ? gq : Eq
-      } catch (Yq) {
-        return void 0 !== gq && console.error(`Couldn't parse ${gq}`, Yq), Eq
+        const hb = JSON.parse(bb);
+        return hb && "object" === typeof hb ? hb : ub
+      } catch (Bb) {
+        return void 0 !== hb && console.error(`Couldn't parse ${hb}`, Bb), ub
       }
     }
 
-    function Bq(qq) {
-      return uq(qq, null, "a leaderboard's rows")
+    function Hb(bb) {
+      return ab(bb, null, "a leaderboard's rows")
     }
 
-    function Wq(qq, Eq) {
-      var gq, Yq;
-      return null !== Eq && void 0 !== Eq ? Eq : {
-        status: null !== (gq = qq.status) && void 0 !== gq ? gq : "loading",
-        entries: null !== (Yq = qq.entries) && void 0 !== Yq ? Yq : []
+    function wb(bb, ub) {
+      var hb, Bb;
+      return null !== ub && void 0 !== ub ? ub : {
+        status: null !== (hb = bb.status) && void 0 !== hb ? hb : "loading",
+        entries: null !== (Bb = bb.entries) && void 0 !== Bb ? Bb : []
       }
     }
 
-    function Nq(qq, Eq) {
-      return "number" === typeof qq && Number.isFinite(qq) && qq > 0 ? qq : Eq
+    function Zb(bb, ub) {
+      return "number" === typeof bb && Number.isFinite(bb) && bb > 0 ? bb : ub
     }
 
-    function aq(qq, Eq) {
-      const gq = Nq(qq.size, 1);
-      let Yq = Nq(qq.width, Nq(2.5 * gq, 2.5)),
-        lq = Nq(qq.height, Nq(3.75 * gq, 3.75));
-      Number.isFinite(Oq * lq / Yq) && Number.isFinite(mq * Yq / lq) || (Yq = 2.5, lq = 3.75);
-      const xq = lq / Yq,
-        Aq = Math.max(1, Math.min(Oq, Eq / xq));
+    function Xb(bb, ub) {
+      const hb = Zb(bb.size, 1);
+      let Bb = Zb(bb.width, Zb(2.5 * hb, 2.5)),
+        Ob = Zb(bb.height, Zb(3.75 * hb, 3.75));
+      Number.isFinite(Gb * Ob / Bb) && Number.isFinite(Ub * Bb / Ob) || (Bb = 2.5, Ob = 3.75);
+      const Lb = Ob / Bb,
+        Yb = Math.max(1, Math.min(Gb, ub / Lb));
       return {
-        width: Yq,
-        height: lq,
-        layoutWidth: Math.max(Oq, mq / xq),
-        layoutHeight: Math.max(mq, Oq * xq),
-        pixelWidth: Math.round(Aq),
-        pixelHeight: Math.round(Math.max(1, Math.min(Eq, Aq * xq)))
+        width: Bb,
+        height: Ob,
+        layoutWidth: Math.max(Gb, Ub / Lb),
+        layoutHeight: Math.max(Ub, Gb * Lb),
+        pixelWidth: Math.round(Yb),
+        pixelHeight: Math.round(Math.max(1, Math.min(ub, Yb * Lb)))
       }
     }
 
-    function Vq(qq, Eq, gq, mq, uq, Bq) {
-      qq.setTransform(1, 0, 0, 1, 0, 0), qq.fillStyle = lq.M.defaultNameTagBackground, qq.fillRect(0, 0, Eq, gq), qq.scale(Eq / mq.layoutWidth, gq / mq.layoutHeight), qq.translate((mq.layoutWidth - Oq) / 2, 0),
-        function(qq, Eq, gq, Oq) {
-          var mq, uq, Bq, Wq;
+    function pb(bb, ub, hb, Ub, ab, Hb) {
+      bb.setTransform(1, 0, 0, 1, 0, 0), bb.fillStyle = Ob.I.defaultNameTagBackground, bb.fillRect(0, 0, ub, hb), bb.scale(ub / Ub.layoutWidth, hb / Ub.layoutHeight), bb.translate((Ub.layoutWidth - Gb) / 2, 0),
+        function(bb, ub, hb, Gb) {
+          var Ub, ab, Hb, wb;
           const {
-            top: Nq,
-            around: aq,
-            showPlayerText: Vq,
-            localPlayerDbId: Hq
-          } = gq, {
-            whiteUiText: oq,
-            grayUiText: Pq,
-            yellowUiText: Qq
-          } = lq.M;
-          qq.textBaseline = "middle";
-          const yq = function(Eq, gq, Yq, lq, Oq, mq) {
-              let xq = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              qq.font = `bold ${lq}px 'Jetbrains Mono', monospace`, qq.fillStyle = Oq, qq.textAlign = xq;
-              let Aq = Eq.replace(/[\r\n\t]/g, " ");
-              if (qq.measureText(Aq).width > mq) {
-                for (; Aq.length > 0 && qq.measureText(`${Aq}\u2026`).width > mq;) Aq = Aq.slice(0, -1);
-                Aq += "\u2026"
+            top: Zb,
+            around: Xb,
+            showPlayerText: pb,
+            localPlayerDbId: lb
+          } = hb, {
+            whiteUiText: Kb,
+            grayUiText: Wb,
+            yellowUiText: Cb
+          } = Ob.I;
+          bb.textBaseline = "middle";
+          const db = function(ub, hb, Bb, Ob, Gb, Ub) {
+              let Lb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              bb.font = `bold ${Ob}px 'Jetbrains Mono', monospace`, bb.fillStyle = Gb, bb.textAlign = Lb;
+              let Yb = ub.replace(/[\r\n\t]/g, " ");
+              if (bb.measureText(Yb).width > Ub) {
+                for (; Yb.length > 0 && bb.measureText(`${Yb}\u2026`).width > Ub;) Yb = Yb.slice(0, -1);
+                Yb += "\u2026"
               }
-              qq.fillText(Aq, gq, Yq)
+              bb.fillText(Yb, hb, Bb)
             },
-            tq = Eq => {
-              qq.fillStyle = oq, qq.globalAlpha = .15, qq.fillRect(24, Eq, 976, 2), qq.globalAlpha = 1
+            rb = ub => {
+              bb.fillStyle = Kb, bb.globalAlpha = .15, bb.fillRect(24, ub, 976, 2), bb.globalAlpha = 1
             },
-            rq = null === Hq ? null : (0, lq.wc)(Hq),
-            vq = qq => null !== rq && qq.playerHash === rq,
-            hq = dq(Nq.entries, Yq.k),
-            nq = "ready" === Nq.status && hq.length > 0,
-            bq = null === aq ? [] : dq(aq.entries, xq),
-            iq = hq.some(vq),
-            Zq = null === aq ? null : function(qq) {
-              const Eq = qq;
-              if (!Eq || !Number.isFinite(Eq.rank) || !Number.isFinite(Eq.tied) || !Number.isFinite(Eq.total)) return null;
-              return Eq
-            }(aq.standing),
-            fq = bq.find(vq),
-            Mq = hq.find(vq),
-            Tq = null === Zq || void 0 === fq ? null : {
-              value: fq.value,
-              rank: Zq.rank
+            jb = null === lb ? null : (0, Ob.qc)(lb),
+            nb = bb => null !== jb && bb.playerHash === jb,
+            Db = ob(Zb.entries, Bb.k),
+            xb = "ready" === Zb.status && Db.length > 0,
+            zb = null === Xb ? [] : ob(Xb.entries, Lb),
+            gb = Db.some(nb),
+            ib = null === Xb ? null : function(bb) {
+              const ub = bb;
+              if (!ub || !Number.isFinite(ub.rank) || !Number.isFinite(ub.tied) || !Number.isFinite(ub.total)) return null;
+              return ub
+            }(Xb.standing),
+            vb = zb.find(nb),
+            tb = Db.find(nb),
+            Jb = null === ib || void 0 === vb ? null : {
+              value: vb.value,
+              rank: ib.rank
             },
-            zq = jq(hq, void 0 === Mq || Mq.value === (null === Tq || void 0 === Tq ? void 0 : Tq.value) ? Tq : null),
-            Sq = jq(bq, Tq),
-            pq = (qq, Eq) => {
-              const gq = qq.findIndex(vq);
-              return gq >= 0 ? Eq[gq] : null
+            eb = Ab(Db, void 0 === tb || tb.value === (null === Jb || void 0 === Jb ? void 0 : Jb.value) ? Jb : null),
+            Nb = Ab(zb, Jb),
+            sb = (bb, ub) => {
+              const hb = bb.findIndex(nb);
+              return hb >= 0 ? ub[hb] : null
             },
-            Gq = null !== (mq = null !== (uq = null === Zq || void 0 === Zq ? void 0 : Zq.rank) && void 0 !== uq ? uq : pq(bq, Sq)) && void 0 !== mq ? mq : pq(hq, zq);
-          qq.font = "bold 34px 'Jetbrains Mono', monospace";
-          const Lq = [...nq ? zq : [], ...iq ? [] : Sq],
-            Jq = Math.min(280, Math.max(0, ...Lq.map((Eq => qq.measureText(Aq.format(Eq)).width)))),
-            kq = Jq <= 80,
-            Rq = kq ? 80 : 32 + Jq,
-            Uq = kq ? 148 : Rq + 28,
-            Fq = 660 - Uq;
-          yq(`TOP ${Yq.k}  /  ALL TIME`, 24, 52, 28, Pq, 976), yq(Vq ? String(null !== (Bq = Eq.title) && void 0 !== Bq ? Bq : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, oq, 976), yq("RANK", 32, 174, 28, Pq, Uq - 40), yq("PLAYER", Uq, 174, 28, Pq, Fq), yq(Vq ? String(null !== (Wq = Eq.scoreLabel) && void 0 !== Wq ? Wq : "Score").slice(0, 24) : "Score", 992, 174, 28, Pq, 304, "right"), tq(202);
-          const sq = (Oq - 232) / (Yq.k + cq + xq),
-            Xq = 208 + Yq.k * sq,
-            wq = Xq + cq * sq,
-            Kq = (Eq, gq, Yq, lq) => {
-              const Oq = vq(Eq);
-              qq.fillStyle = Oq ? Qq : oq, qq.globalAlpha = Oq ? .15 : lq ? .035 : 0, qq.fillRect(24, Yq - sq / 2 + 1, 976, sq - 2), qq.globalAlpha = 1;
-              const mq = Oq ? Qq : oq;
-              yq(Aq.format(gq), Rq, Yq, 34, mq, kq ? 80 : Jq, kq ? "center" : "right"), yq(Vq ? String(Eq.name).slice(0, 64) : "Player", Uq, Yq, 34, mq, Fq);
-              const xq = Aq.format(Eq.value);
-              yq(qq.measureText(xq).width > 304 ? Eq.value.toExponential(6) : xq, 992, Yq, 34, mq, 304, "right")
+            Mb = null !== (Ub = null !== (ab = null === ib || void 0 === ib ? void 0 : ib.rank) && void 0 !== ab ? ab : sb(zb, Nb)) && void 0 !== Ub ? Ub : sb(Db, eb);
+          bb.font = "bold 34px 'Jetbrains Mono', monospace";
+          const mb = [...xb ? eb : [], ...gb ? [] : Nb],
+            Ib = Math.min(280, Math.max(0, ...mb.map((ub => bb.measureText(Yb.format(ub)).width)))),
+            Pb = Ib <= 80,
+            qb = Pb ? 80 : 32 + Ib,
+            Eb = Pb ? 148 : qb + 28,
+            yb = 660 - Eb;
+          db(`TOP ${Bb.k}  /  ALL TIME`, 24, 52, 28, Wb, 976), db(pb ? String(null !== (Hb = ub.title) && void 0 !== Hb ? Hb : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Kb, 976), db("RANK", 32, 174, 28, Wb, Eb - 40), db("PLAYER", Eb, 174, 28, Wb, yb), db(pb ? String(null !== (wb = ub.scoreLabel) && void 0 !== wb ? wb : "Score").slice(0, 24) : "Score", 992, 174, 28, Wb, 304, "right"), rb(202);
+          const Vb = (Gb - 232) / (Bb.k + Sb + Lb),
+            Fb = 208 + Bb.k * Vb,
+            fb = Fb + Sb * Vb,
+            kb = (ub, hb, Bb, Ob) => {
+              const Gb = nb(ub);
+              bb.fillStyle = Gb ? Cb : Kb, bb.globalAlpha = Gb ? .15 : Ob ? .035 : 0, bb.fillRect(24, Bb - Vb / 2 + 1, 976, Vb - 2), bb.globalAlpha = 1;
+              const Ub = Gb ? Cb : Kb;
+              db(Yb.format(hb), qb, Bb, 34, Ub, Pb ? 80 : Ib, Pb ? "center" : "right"), db(pb ? String(ub.name).slice(0, 64) : "Player", Eb, Bb, 34, Ub, yb);
+              const Lb = Yb.format(ub.value);
+              db(bb.measureText(Lb).width > 304 ? ub.value.toExponential(6) : Lb, 992, Bb, 34, Ub, 304, "right")
             };
-          if (nq)
-            for (const [Yq, lq] of hq.entries()) Kq(lq, zq[Yq], 208 + (Yq + .5) * sq, Yq % 2 === 0);
+          if (xb)
+            for (const [Bb, Ob] of Db.entries()) kb(Ob, eb[Bb], 208 + (Bb + .5) * Vb, Bb % 2 === 0);
           else {
-            const qq = "error" === Nq.status,
-              Eq = qq ? "Couldn't load leaderboard" : "ready" === Nq.status ? "No scores yet" : "Loading leaderboard\u2026",
-              gq = qq ? "Trying again shortly" : "ready" === Nq.status ? "Be the first on the board!" : "Fetching the top players",
-              Yq = (208 + Xq) / 2;
-            yq(Eq, 512, Yq - 28, 40, qq ? lq.M.redUiText : oq, 960, "center"), yq(gq, 512, Yq + 27, 30, Pq, 960, "center")
+            const bb = "error" === Zb.status,
+              ub = bb ? "Couldn't load leaderboard" : "ready" === Zb.status ? "No scores yet" : "Loading leaderboard\u2026",
+              hb = bb ? "Trying again shortly" : "ready" === Zb.status ? "Be the first on the board!" : "Fetching the top players",
+              Bb = (208 + Fb) / 2;
+            db(ub, 512, Bb - 28, 40, bb ? Ob.I.redUiText : Kb, 960, "center"), db(hb, 512, Bb + 27, 30, Wb, 960, "center")
           }
-          const Cq = Xq + cq * sq / 2;
-          if (null === Gq) tq(Cq);
+          const Tb = Fb + Sb * Vb / 2;
+          if (null === Mb) rb(Tb);
           else {
-            const Eq = null === Zq ? 0 : Zq.tied - 1,
-              gq = `YOUR RANK #${Aq.format(Gq)}${null===Zq?"":` of ${Aq.format(Zq.total)}`}`;
-            qq.font = "bold 36px 'Jetbrains Mono', monospace";
-            const Yq = Math.max(20, Math.min(36, Math.floor(34560 / qq.measureText(gq).width)));
-            yq(gq, 512, Cq - (Eq > 0 ? 15 : 0), Yq, Qq, 960, "center"), Eq > 0 && yq(`Tied with ${Aq.format(Eq)} other${1===Eq?"":"s"}`, 512, Cq + 24, 24, Pq, 960, "center")
+            const ub = null === ib ? 0 : ib.tied - 1,
+              hb = `YOUR RANK #${Yb.format(Mb)}${null===ib?"":` of ${Yb.format(ib.total)}`}`;
+            bb.font = "bold 36px 'Jetbrains Mono', monospace";
+            const Bb = Math.max(20, Math.min(36, Math.floor(34560 / bb.measureText(hb).width)));
+            db(hb, 512, Tb - (ub > 0 ? 15 : 0), Bb, Cb, 960, "center"), ub > 0 && db(`Tied with ${Yb.format(ub)} other${1===ub?"":"s"}`, 512, Tb + 24, 24, Wb, 960, "center")
           }
-          if (null === aq) return;
-          const Iq = wq + xq * sq / 2;
-          if (iq) yq(`You're in the top ${Yq.k}!`, 512, Iq, 40, Qq, 960, "center");
-          else if (0 === bq.length) yq("You're not on this board yet", 512, Iq, 34, Pq, 960, "center");
+          if (null === Xb) return;
+          const cb = fb + Lb * Vb / 2;
+          if (gb) db(`You're in the top ${Bb.k}!`, 512, cb, 40, Cb, 960, "center");
+          else if (0 === zb.length) db("You're not on this board yet", 512, cb, 34, Wb, 960, "center");
           else
-            for (const [Yq, lq] of bq.entries()) Kq(lq, Sq[Yq], wq + (Yq + .5) * sq, Yq % 2 === 0)
-        }(qq, uq, Bq, mq.layoutHeight)
+            for (const [Bb, Ob] of zb.entries()) kb(Ob, Nb[Bb], fb + (Bb + .5) * Vb, Bb % 2 === 0)
+        }(bb, ab, Hb, Ub.layoutHeight)
     }
 
-    function dq(qq, Eq) {
-      return Array.isArray(qq) ? qq.slice(0, Eq).filter((qq => qq && Number.isFinite(qq.rank) && Number.isFinite(qq.value))) : []
+    function ob(bb, ub) {
+      return Array.isArray(bb) ? bb.slice(0, ub).filter((bb => bb && Number.isFinite(bb.rank) && Number.isFinite(bb.value))) : []
     }
 
-    function jq(qq, Eq) {
-      const gq = [];
-      let Yq = !1;
-      return qq.forEach(((lq, Oq) => {
-        if (null !== Eq && lq.value === Eq.value) return void gq.push(Eq.rank);
-        const mq = Oq > 0 && lq.value === qq[Oq - 1].value;
-        mq || (Yq = 0 === Oq && 1 !== lq.rank), gq.push(mq && !Yq ? gq[Oq - 1] : lq.rank)
-      })), gq
+    function Ab(bb, ub) {
+      const hb = [];
+      let Bb = !1;
+      return bb.forEach(((Ob, Gb) => {
+        if (null !== ub && Ob.value === ub.value) return void hb.push(ub.rank);
+        const Ub = Gb > 0 && Ob.value === bb[Gb - 1].value;
+        Ub || (Bb = 0 === Gb && 1 !== Ob.rank), hb.push(Ub && !Bb ? hb[Gb - 1] : Ob.rank)
+      })), hb
     }
   },
-  38817: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => lq,
-      e: () => Oq
+  38491: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Ob,
+      e: () => Gb
     });
-    const Yq = 32;
+    const Bb = 32;
 
-    function lq(qq) {
-      return Array.from(qq).length
+    function Ob(bb) {
+      return Array.from(bb).length
     }
 
-    function Oq(qq) {
-      const Eq = [""];
-      let gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        lq = "";
-      const Oq = () => {
-        Eq.push(""), gq = 0, lq = ""
+    function Gb(bb) {
+      const ub = [""];
+      let hb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        Ob = "";
+      const Gb = () => {
+        ub.push(""), hb = 0, Ob = ""
       };
-      for (const mq of qq.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(mq)) Oq();
-        else if (/^\s+$/.test(mq)) lq += mq;
-      else if (mq.length > 0) {
-        const qq = Array.from(mq);
-        gq > 0 && gq + lq.length + qq.length > Yq && Oq(), Eq[Eq.length - 1] += lq, gq += lq.length, lq = "";
-        for (const lq of qq) gq >= Yq && Oq(), Eq[Eq.length - 1] += lq, gq++
+      for (const Ub of bb.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(Ub)) Gb();
+        else if (/^\s+$/.test(Ub)) Ob += Ub;
+      else if (Ub.length > 0) {
+        const bb = Array.from(Ub);
+        hb > 0 && hb + Ob.length + bb.length > Bb && Gb(), ub[ub.length - 1] += Ob, hb += Ob.length, Ob = "";
+        for (const Ob of bb) hb >= Bb && Gb(), ub[ub.length - 1] += Ob, hb++
       }
-      return Eq[Eq.length - 1] += lq, Eq
+      return ub[ub.length - 1] += Ob, ub
     }
   },
-  39077: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq
+  38750: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Ub
     });
-    var Yq = gq(36687),
-      lq = gq.n(Yq);
-    const Oq = [1, 1, 1];
+    var Bb = hb(36242),
+      Ob = hb.n(Bb);
+    const Gb = [1, 1, 1];
 
-    function mq(qq) {
-      if (!qq) return [...Oq];
+    function Ub(bb) {
+      if (!bb) return [...Gb];
       try {
-        const [Eq, gq, Yq] = lq()(qq).rgb().array();
-        return [Eq / 255, gq / 255, Yq / 255]
-      } catch (Eq) {
-        return console.warn(`Invalid groundArrowPath colour "${qq}":`, Eq), [...Oq]
+        const [ub, hb, Bb] = Ob()(bb).rgb().array();
+        return [ub / 255, hb / 255, Bb / 255]
+      } catch (ub) {
+        return console.warn(`Invalid groundArrowPath colour "${bb}":`, ub), [...Gb]
       }
     }
   },
-  34293: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq,
-      f: () => xq,
-      g: () => mq,
-      j: () => lq,
-      k: () => Yq
+  33944: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb,
+      e: () => Lb,
+      f: () => Ub,
+      j: () => Ob,
+      m: () => Bb
     });
-    const Yq = {
+    const Bb = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1651,41 +1651,41 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      lq = "/textures/dayNight/sun.png",
-      Oq = "/textures/dayNight/moon.png",
-      mq = "/textures/dayNight/stars",
-      xq = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      Ob = "/textures/dayNight/sun.png",
+      Gb = "/textures/dayNight/moon.png",
+      Ub = "/textures/dayNight/stars",
+      Lb = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  39138: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => uq,
-      h: () => Bq,
-      l: () => Yq,
-      m: () => Aq,
-      q: () => lq,
-      u: () => cq,
-      v: () => xq,
-      y: () => mq
+  38814: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => ab,
+      g: () => Hb,
+      i: () => Bb,
+      m: () => Yb,
+      p: () => Ob,
+      s: () => Sb,
+      u: () => Lb,
+      y: () => Ub
     });
-    const Yq = ["linear", "easeIn", "easeOut", "easeInOut"],
-      lq = ["movement", "camera", "cursor"],
-      Oq = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const Bb = ["linear", "easeIn", "easeOut", "easeInOut"],
+      Ob = ["movement", "camera", "cursor"],
+      Gb = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function mq(qq, Eq) {
-      return xq(qq, Eq, Oq)
+    function Ub(bb, ub) {
+      return Lb(bb, ub, Gb)
     }
 
-    function xq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (qq === Eq || Number.isNaN(qq) && Number.isNaN(Eq)) return !0;
-      if ("object" !== typeof qq || "object" !== typeof Eq || null === qq || null === Eq || Array.isArray(qq) !== Array.isArray(Eq)) return !1;
-      const Yq = qq,
-        lq = Eq;
-      for (const Oq of new Set([...Object.keys(Yq), ...Object.keys(lq)]))
-        if (!gq.includes(Oq) && !xq(Yq[Oq], lq[Oq])) return !1;
+    function Lb(bb, ub) {
+      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (bb === ub || Number.isNaN(bb) && Number.isNaN(ub)) return !0;
+      if ("object" !== typeof bb || "object" !== typeof ub || null === bb || null === ub || Array.isArray(bb) !== Array.isArray(ub)) return !1;
+      const Bb = bb,
+        Ob = ub;
+      for (const Gb of new Set([...Object.keys(Bb), ...Object.keys(Ob)]))
+        if (!hb.includes(Gb) && !Lb(Bb[Gb], Ob[Gb])) return !1;
       return !0
     }
-    const Aq = {
+    const Yb = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1707,10 +1707,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      cq = "^-[1-9][0-9]*$",
-      uq = "^#[0-9a-fA-F]{6}$",
-      Bq = "#000000"
+      Sb = "^-[1-9][0-9]*$",
+      ab = "^#[0-9a-fA-F]{6}$",
+      Hb = "#000000"
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

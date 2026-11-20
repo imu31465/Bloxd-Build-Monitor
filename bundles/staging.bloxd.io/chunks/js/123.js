@@ -1,40 +1,40 @@
 export const id = 123;
 export const ids = [123];
 export const modules = {
-  40813: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      ShaderPackCategory: () => fq
+  40508: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      ShaderPackCategory: () => vb
     });
-    var Yq = gq(57),
-      lq = gq(1512),
-      Oq = gq(1422),
-      mq = gq(1498),
-      xq = gq(1183),
-      Aq = gq(96),
-      cq = gq(24),
-      uq = gq(1622),
-      Bq = gq(6496),
-      Wq = gq(275),
-      Nq = gq(6531),
-      aq = gq(6526),
-      Vq = gq(6535),
-      dq = gq(6422),
-      jq = gq(4828),
-      Hq = gq(6473),
-      oq = gq(6490),
-      Pq = gq(3328);
+    var Bb = hb(49),
+      Ob = hb(1431),
+      Gb = hb(1357),
+      Ub = hb(1415),
+      Lb = hb(1095),
+      Yb = hb(86),
+      Sb = hb(13),
+      ab = hb(1537),
+      Hb = hb(6350),
+      wb = hb(270),
+      Zb = hb(6388),
+      Xb = hb(6384),
+      pb = hb(6394),
+      ob = hb(6279),
+      Ab = hb(4765),
+      lb = hb(6335),
+      Kb = hb(6347),
+      Wb = hb(3244);
 
-    function Qq(qq, Eq) {
-      const gq = (0, Nq.storedPackOutcome)(qq, Eq);
-      return "none" !== gq.kind || "noCompiler" === gq.reason
+    function Cb(bb, ub) {
+      const hb = (0, Zb.storedPackOutcome)(bb, ub);
+      return "none" !== hb.kind || "noCompiler" === hb.reason
     }
-    var yq = gq(1018),
-      tq = gq.n(yq),
-      rq = gq(6482),
-      vq = gq(1025),
-      hq = gq(6467),
-      nq = gq(1070);
-    const bq = {
+    var db = hb(958),
+      rb = hb.n(db),
+      jb = hb(6344),
+      nb = hb(966),
+      Db = hb(6331),
+      xb = hb(1007);
+    const zb = {
       ready: "shaderPack:statusReady",
       readyAfterReload: "shaderPack:statusReadyAfterReload",
       noWebGpu: "shaderPack:statusNoWebGpu",
@@ -47,249 +47,249 @@ export const modules = {
       noCompiler: "shaderPack:statusNoCompiler"
     };
 
-    function iq(qq, Eq) {
-      return "failedRecheck" === qq && Eq.listing ? "shaderPack:statusFailedRecheckListed" : bq[qq]
+    function gb(bb, ub) {
+      return "failedRecheck" === bb && ub.listing ? "shaderPack:statusFailedRecheckListed" : zb[bb]
     }
 
-    function Zq(qq) {
+    function ib(bb) {
       let {
-        stored: Eq,
-        checking: gq,
-        webGpuUsable: Yq,
-        changePending: lq,
-        compiler: Oq,
-        t: mq
-      } = qq;
-      const xq = function(qq, Eq, gq, Yq, lq) {
-          const Oq = (0, Nq.storedPackOutcome)(qq, lq);
-          return "none" === Oq.kind ? "noCompiler" === Oq.reason ? Eq ? "checking" : "noCompiler" : "otherApiVersion" === Oq.reason ? "wrongApiVersion" : "failed" : (0, Pq.c)() ? "harnessBuild" : "blocked" === Oq.kind ? (0, Nq.shaderPackNeedsCheck)(qq, lq) ? Eq ? "checking" : !1 === gq ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === gq ? "offNoWebGpu" : Yq ? "readyAfterReload" : "ready"
-        }(Eq, gq, Yq, lq, Oq),
-        Aq = "failed" === xq || "failedRecheck" === xq,
-        cq = Aq || "wrongApiVersion" === xq || "noCompiler" === xq,
-        uq = "ready" === xq || "readyAfterReload" === xq ? Eq.validation.offInStrict : [];
-      return (0, nq.jsxs)(nq.Fragment, {
-        children: [(0, nq.jsxs)("div", {
-          className: tq()("ShaderPackStatus", {
-            Ready: "ready" === xq,
-            Failed: cq
+        stored: ub,
+        checking: hb,
+        webGpuUsable: Bb,
+        changePending: Ob,
+        compiler: Gb,
+        t: Ub
+      } = bb;
+      const Lb = function(bb, ub, hb, Bb, Ob) {
+          const Gb = (0, Zb.storedPackOutcome)(bb, Ob);
+          return "none" === Gb.kind ? "noCompiler" === Gb.reason ? ub ? "checking" : "noCompiler" : "otherApiVersion" === Gb.reason ? "wrongApiVersion" : "failed" : (0, Wb.c)() ? "harnessBuild" : "blocked" === Gb.kind ? (0, Zb.shaderPackNeedsCheck)(bb, Ob) ? ub ? "checking" : !1 === hb ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === hb ? "offNoWebGpu" : Bb ? "readyAfterReload" : "ready"
+        }(ub, hb, Bb, Ob, Gb),
+        Yb = "failed" === Lb || "failedRecheck" === Lb,
+        Sb = Yb || "wrongApiVersion" === Lb || "noCompiler" === Lb,
+        ab = "ready" === Lb || "readyAfterReload" === Lb ? ub.validation.offInStrict : [];
+      return (0, xb.jsxs)(xb.Fragment, {
+        children: [(0, xb.jsxs)("div", {
+          className: rb()("ShaderPackStatus", {
+            Ready: "ready" === Lb,
+            Failed: Sb
           }),
-          children: ["ready" === xq && (0, nq.jsx)(vq.d, {
+          children: ["ready" === Lb && (0, xb.jsx)(nb.e, {
             name: "circle-check"
-          }), cq && (0, nq.jsx)(vq.d, {
+          }), Sb && (0, xb.jsx)(nb.e, {
             name: "triangle-exclamation"
-          }), "harnessBuild" === xq ? (0, Pq.b)() : mq(iq(xq, Eq), {
-            packVersion: String(Eq.manifest.apiVersion),
-            version: String(rq.b)
+          }), "harnessBuild" === Lb ? (0, Wb.b)() : Ub(gb(Lb, ub), {
+            packVersion: String(ub.manifest.apiVersion),
+            version: String(jb.c)
           })]
-        }), Aq && (0, nq.jsx)(hq.b, {
-          diagnostics: Eq.validation.errors,
-          more: Eq.validation.moreErrors,
-          t: mq
-        }), uq.length > 0 && (0, nq.jsxs)(nq.Fragment, {
-          children: [(0, nq.jsxs)("div", {
+        }), Yb && (0, xb.jsx)(Db.b, {
+          diagnostics: ub.validation.errors,
+          more: ub.validation.moreErrors,
+          t: Ub
+        }), ab.length > 0 && (0, xb.jsxs)(xb.Fragment, {
+          children: [(0, xb.jsxs)("div", {
             className: "ShaderPackStatus OffInStrict",
-            children: [(0, nq.jsx)(vq.d, {
+            children: [(0, xb.jsx)(nb.e, {
               name: "triangle-exclamation"
-            }), mq("shaderPack:offInStrict")]
-          }), (0, nq.jsx)(hq.b, {
-            diagnostics: uq,
-            t: mq
+            }), Ub("shaderPack:offInStrict")]
+          }), (0, xb.jsx)(Db.b, {
+            diagnostics: ab,
+            t: Ub
           })]
         })]
       })
     }
 
-    function fq(qq) {
+    function vb(bb) {
       let {
-        setApplySettingsCallback: Eq
-      } = qq;
+        setApplySettingsCallback: ub
+      } = bb;
       const {
-        t: gq
-      } = (0, xq.v)(), [lq, mq] = (0, Yq.useState)(null), [cq, uq] = (0, Yq.useState)(null), [Pq, yq] = (0, Yq.useState)(null), [tq] = (0, Yq.useState)(Wq.f), [rq, vq] = (0, Yq.useState)(!0), [hq, bq] = (0, Yq.useState)(!1), {
-        loading: iq,
-        error: fq,
-        setError: Tq,
-        onFiles: zq
-      } = (0, oq.c)((async qq => {
-        const Eq = await (0, Bq.loadPageShaderPackCompiler)();
-        if (!Eq) return void Tq(gq("shaderPack:compilerUnavailable"));
-        uq(Eq);
-        const Yq = (0, Nq.toStoredShaderPack)(qq, await (0, aq.e)(Eq, qq.files));
-        await (0, Nq.saveShaderPack)(Yq, Eq) ? (mq(Yq), Sq(lq, Yq, Eq)) : Tq(gq("shaderPack:saveFailed"))
+        t: hb
+      } = (0, Lb.K)(), [Ob, Ub] = (0, Bb.useState)(null), [Sb, ab] = (0, Bb.useState)(null), [Wb, db] = (0, Bb.useState)(null), [rb] = (0, Bb.useState)(wb.g), [jb, nb] = (0, Bb.useState)(!0), [Db, zb] = (0, Bb.useState)(!1), {
+        loading: gb,
+        error: vb,
+        setError: Jb,
+        onFiles: eb
+      } = (0, Kb.d)((async bb => {
+        const ub = await (0, Hb.loadPageShaderPackCompiler)();
+        if (!ub) return void Jb(hb("shaderPack:compilerUnavailable"));
+        ab(ub);
+        const Bb = (0, Zb.toStoredShaderPack)(bb, await (0, Xb.d)(ub, bb.files));
+        await (0, Zb.saveShaderPack)(Bb, ub) ? (Ub(Bb), Nb(Ob, Bb, ub)) : Jb(hb("shaderPack:saveFailed"))
       }));
 
-      function Sq(qq, gq, Yq) {
-        (function(qq, Eq, gq, Yq) {
-          return gq || Qq(qq, Yq) || Qq(Eq, Yq)
-        })(qq, gq, (0, Nq.isShaderPackChangePending)(), Yq) && ((0, Nq.markShaderPackChangePending)(), Eq((() => jq.l)))
+      function Nb(bb, hb, Bb) {
+        (function(bb, ub, hb, Bb) {
+          return hb || Cb(bb, Bb) || Cb(ub, Bb)
+        })(bb, hb, (0, Zb.isShaderPackChangePending)(), Bb) && ((0, Zb.markShaderPackChangePending)(), ub((() => Ab.k)))
       }
-      return (0, Yq.useEffect)((() => {
-        let qq = !1;
+      return (0, Bb.useEffect)((() => {
+        let bb = !1;
         return async function() {
-          const Eq = (0, Aq.hasUsableWebGpuAdapter)(),
-            gq = await (0, Vq.d)();
-          if (qq) return;
-          mq(gq), bq(!0), vq(!1);
-          const Yq = null !== gq ? (0, Bq.loadPageShaderPackCompiler)() : null,
-            lq = await Eq;
-          if (qq) return;
-          yq(lq);
-          const Oq = await Yq;
-          if (!qq && (uq(Oq), null !== gq && lq && null !== Oq && (0, Nq.shaderPackNeedsCheck)(gq, Oq))) {
-            const Eq = await (0, aq.b)(gq, Oq);
-            qq || mq((qq => qq === gq ? Eq : qq))
+          const ub = (0, Yb.hasUsableWebGpuAdapter)(),
+            hb = await (0, pb.g)();
+          if (bb) return;
+          Ub(hb), zb(!0), nb(!1);
+          const Bb = null !== hb ? (0, Hb.loadPageShaderPackCompiler)() : null,
+            Ob = await ub;
+          if (bb) return;
+          db(Ob);
+          const Gb = await Bb;
+          if (!bb && (ab(Gb), null !== hb && Ob && null !== Gb && (0, Zb.shaderPackNeedsCheck)(hb, Gb))) {
+            const ub = await (0, Xb.c)(hb, Gb);
+            bb || Ub((bb => bb === hb ? ub : bb))
           }
-        }().catch((Eq => {
-          console.error("Failed to load the stored shader pack", Eq), qq || Tq(gq("shaderPack:unexpectedError"))
+        }().catch((ub => {
+          console.error("Failed to load the stored shader pack", ub), bb || Jb(hb("shaderPack:unexpectedError"))
         })).finally((() => {
-          qq || (vq(!1), bq(!1))
+          bb || (nb(!1), zb(!1))
         })), () => {
-          qq = !0
+          bb = !0
         }
-      }), []), (0, nq.jsxs)("div", {
+      }), []), (0, xb.jsxs)("div", {
         className: "ShaderPackCategory SettingsMenuRightInner",
-        children: [(0, nq.jsx)("div", {
+        children: [(0, xb.jsx)("div", {
           className: "ShaderPackIntro",
-          children: gq("shaderPack:intro")
-        }), (0, nq.jsx)(Mq, {
-          to: dq.V,
+          children: hb("shaderPack:intro")
+        }), (0, xb.jsx)(tb, {
+          to: ob.U,
           className: "ShaderPackBrowseLink",
-          children: (0, nq.jsx)(Oq.p, {
+          children: (0, xb.jsx)(Gb.m, {
             className: "ShaderPackBrowseButton",
-            children: gq("shaderPackListing:browse")
+            children: hb("shaderPackListing:browse")
           })
-        }), !1 === Pq && (0, nq.jsx)("div", {
+        }), !1 === Wb && (0, xb.jsx)("div", {
           className: "SettingsBoxWarning",
-          children: gq(tq ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), null !== fq && (0, nq.jsxs)("div", {
+          children: hb(rb ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), null !== vb && (0, xb.jsxs)("div", {
           className: "ShaderPackCategoryError",
-          children: [gq("general:error"), ": ", fq]
-        }), lq && (0, nq.jsxs)("div", {
+          children: [hb("general:error"), ": ", vb]
+        }), Ob && (0, xb.jsxs)("div", {
           className: "SettingBox ShaderPackSummary",
-          children: [(0, nq.jsxs)("div", {
+          children: [(0, xb.jsxs)("div", {
             className: "ShaderPackSummaryHeader",
-            children: [(0, nq.jsxs)("div", {
-              children: [(0, nq.jsx)("div", {
+            children: [(0, xb.jsxs)("div", {
+              children: [(0, xb.jsx)("div", {
                 className: "ShaderPackName",
-                children: lq.manifest.name
-              }), lq.manifest.author && (0, nq.jsx)("div", {
+                children: Ob.manifest.name
+              }), Ob.manifest.author && (0, xb.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, Hq.k)(gq, "shaderPack:byAuthor", {
-                  author: lq.manifest.author
+                children: (0, lb.k)(hb, "shaderPack:byAuthor", {
+                  author: Ob.manifest.author
                 })
-              }), lq.manifest.description && (0, nq.jsx)("div", {
+              }), Ob.manifest.description && (0, xb.jsx)("div", {
                 className: "ShaderPackDescription",
-                children: lq.manifest.description
-              }), lq.listing && (0, nq.jsx)("div", {
+                children: Ob.manifest.description
+              }), Ob.listing && (0, xb.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, nq.jsx)(Mq, {
-                  to: (0, dq.$)(lq.listing.packId),
+                children: (0, xb.jsx)(tb, {
+                  to: (0, ob.Z)(Ob.listing.packId),
                   className: "ShaderPackListingLink",
-                  children: gq("shaderPackListing:openPackPage")
+                  children: hb("shaderPackListing:openPackPage")
                 })
               })]
-            }), (0, nq.jsx)(Oq.L, {
-              disabled: rq || iq,
+            }), (0, xb.jsx)(Gb.I, {
+              disabled: jb || gb,
               onClick: async function() {
-                vq(!0), Tq(null), await (0, Nq.removeShaderPack)(), mq(null), vq(!1), Sq(lq, null, cq)
+                nb(!0), Jb(null), await (0, Zb.removeShaderPack)(), Ub(null), nb(!1), Nb(Ob, null, Sb)
               },
-              children: gq("shaderPack:removePack")
+              children: hb("shaderPack:removePack")
             })]
-          }), (0, nq.jsx)(Zq, {
-            stored: lq,
-            checking: hq,
-            webGpuUsable: Pq,
-            changePending: (0, Nq.isShaderPackChangePending)(),
-            compiler: cq,
-            t: gq
+          }), (0, xb.jsx)(ib, {
+            stored: Ob,
+            checking: Db,
+            webGpuUsable: Wb,
+            changePending: (0, Zb.isShaderPackChangePending)(),
+            compiler: Sb,
+            t: hb
           })]
-        }), (0, nq.jsx)(oq.b, {
-          busy: rq || iq || hq,
-          disabled: rq || iq || hq || !0 !== Pq,
-          onFiles: zq
+        }), (0, xb.jsx)(Kb.c, {
+          busy: jb || gb || Db,
+          disabled: jb || gb || Db || !0 !== Wb,
+          onFiles: eb
         })]
       })
     }
 
-    function Mq(qq) {
+    function tb(bb) {
       let {
-        to: Eq,
-        className: gq,
-        children: Yq
-      } = qq;
+        to: ub,
+        className: hb,
+        children: Bb
+      } = bb;
       const {
-        gameState: Oq
-      } = (0, cq.j)(["gameState"]), {
-        pathname: xq,
-        search: Aq
-      } = (0, lq.q)(), Bq = "landingPage" !== Oq && "studio" !== Oq;
-      return (0, nq.jsx)(mq.LinkPreserveSearch, {
-        to: Eq,
-        className: gq,
-        target: Bq ? "_blank" : void 0,
+        gameState: Gb
+      } = (0, Sb.j)(["gameState"]), {
+        pathname: Lb,
+        search: Yb
+      } = (0, Ob.x)(), Hb = "landingPage" !== Gb && "studio" !== Gb;
+      return (0, xb.jsx)(Ub.LinkPreserveSearch, {
+        to: ub,
+        className: hb,
+        target: Hb ? "_blank" : void 0,
         onClick: () => {
-          Bq || ((0, dq.C)(`${xq}${Aq}`), (0, uq.f)())
+          Hb || ((0, ob.I)(`${Lb}${Yb}`), (0, ab.i)())
         },
-        children: Yq
+        children: Bb
       })
     }
   },
-  6422: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      $: () => Aq,
-      B: () => nq,
-      C: () => uq,
-      G: () => iq,
-      K: () => Vq,
-      O: () => Gq,
-      R: () => Sq,
-      V: () => mq,
-      X: () => pq,
-      ab: () => xq,
-      b: () => Hq,
-      c: () => vq,
-      db: () => Tq,
-      f: () => dq,
-      fb: () => zq,
-      g: () => Wq,
-      hb: () => oq,
-      ib: () => bq,
-      j: () => Bq,
-      m: () => Zq,
-      p: () => Nq,
-      r: () => fq,
-      s: () => Lq,
-      w: () => aq,
-      z: () => jq
+  6279: (bb, ub, hb) => {
+    hb.d(ub, {
+      A: () => Xb,
+      D: () => Ab,
+      F: () => xb,
+      I: () => ab,
+      L: () => gb,
+      M: () => pb,
+      P: () => Mb,
+      R: () => Nb,
+      U: () => Ub,
+      V: () => sb,
+      Z: () => Yb,
+      _: () => Lb,
+      cb: () => Jb,
+      db: () => eb,
+      e: () => lb,
+      gb: () => Kb,
+      i: () => nb,
+      j: () => ob,
+      jb: () => zb,
+      k: () => wb,
+      m: () => Hb,
+      q: () => ib,
+      u: () => Zb,
+      v: () => vb,
+      w: () => mb
     });
-    var Yq = gq(6424),
-      lq = gq(163),
-      Oq = gq(4387);
-    const mq = "/shader-packs",
-      xq = `${mq}/publish`;
+    var Bb = hb(6281),
+      Ob = hb(148),
+      Gb = hb(4322);
+    const Ub = "/shader-packs",
+      Lb = `${Ub}/publish`;
 
-    function Aq(qq) {
-      return `${mq}/${encodeURIComponent(qq)}`
+    function Yb(bb) {
+      return `${Ub}/${encodeURIComponent(bb)}`
     }
-    let cq = null;
+    let Sb = null;
 
-    function uq(qq) {
-      cq = qq
-    }
-
-    function Bq() {
-      return cq
+    function ab(bb) {
+      Sb = bb
     }
 
-    function Wq() {
-      cq = null
+    function Hb() {
+      return Sb
     }
 
-    function Nq(qq) {
-      return qq.playerHasRank("developer") || qq.playerHasRank("admin")
+    function wb() {
+      Sb = null
     }
-    const aq = ["terrain", "water", "models", "sunShadows", "strict"],
-      Vq = {
+
+    function Zb(bb) {
+      return bb.playerHasRank("developer") || bb.playerHasRank("admin")
+    }
+    const Xb = ["terrain", "water", "models", "sunShadows", "strict"],
+      pb = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -297,89 +297,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function dq(qq, Eq) {
-      return qq.withFeatures.includes(Eq) ? "with" : qq.withoutFeatures.includes(Eq) ? "without" : null
+    function ob(bb, ub) {
+      return bb.withFeatures.includes(ub) ? "with" : bb.withoutFeatures.includes(ub) ? "without" : null
     }
 
-    function jq(qq) {
-      return null === qq ? "with" : "with" === qq ? "without" : null
+    function Ab(bb) {
+      return null === bb ? "with" : "with" === bb ? "without" : null
     }
 
-    function Hq(qq) {
-      return "with" === qq ? "only" : null === qq ? "include" : void 0
+    function lb(bb) {
+      return "with" === bb ? "only" : null === bb ? "include" : void 0
     }
 
-    function oq(qq, Eq) {
-      const gq = dq(qq, Eq),
-        Yq = qq => qq.filter((qq => qq !== Eq));
+    function Kb(bb, ub) {
+      const hb = ob(bb, ub),
+        Bb = bb => bb.filter((bb => bb !== ub));
       return {
-        withFeatures: null === gq ? [...qq.withFeatures, Eq] : Yq(qq.withFeatures),
-        withoutFeatures: "with" === gq ? [...qq.withoutFeatures, Eq] : Yq(qq.withoutFeatures)
+        withFeatures: null === hb ? [...bb.withFeatures, ub] : Bb(bb.withFeatures),
+        withoutFeatures: "with" === hb ? [...bb.withoutFeatures, ub] : Bb(bb.withoutFeatures)
       }
     }
-    const Pq = "section",
-      Qq = "sort",
-      yq = "filters",
-      tq = "q",
-      rq = "banned",
-      vq = "popular",
-      hq = "strict";
+    const Wb = "section",
+      Cb = "sort",
+      db = "filters",
+      rb = "q",
+      jb = "banned",
+      nb = "popular",
+      Db = "strict";
 
-    function nq(qq) {
-      var Eq, gq, lq;
-      const mq = qq.get(Pq),
-        xq = (null !== (Eq = qq.get(yq)) && void 0 !== Eq ? Eq : hq).split(","),
-        Aq = qq.get(rq);
+    function xb(bb) {
+      var ub, hb, Ob;
+      const Ub = bb.get(Wb),
+        Lb = (null !== (ub = bb.get(db)) && void 0 !== ub ? ub : Db).split(","),
+        Yb = bb.get(jb);
       return {
-        section: "favourites" === mq || "mine" === mq ? mq : "explore",
-        sort: null !== (gq = Yq.v.find((Eq => Eq === qq.get(Qq)))) && void 0 !== gq ? gq : vq,
-        withFeatures: aq.filter((qq => xq.includes(qq) && !xq.includes(`-${qq}`))),
-        withoutFeatures: aq.filter((qq => xq.includes(`-${qq}`))),
-        searchQuery: (null === (lq = qq.get(tq)) || void 0 === lq ? void 0 : lq.slice(0, Yq.I)) || null,
-        pageNumber: (0, Oq.e)(qq.get(Oq.d)),
-        banned: "only" === Aq ? "with" : "include" === Aq ? null : "without"
+        section: "favourites" === Ub || "mine" === Ub ? Ub : "explore",
+        sort: null !== (hb = Bb.q.find((ub => ub === bb.get(Cb)))) && void 0 !== hb ? hb : nb,
+        withFeatures: Xb.filter((bb => Lb.includes(bb) && !Lb.includes(`-${bb}`))),
+        withoutFeatures: Xb.filter((bb => Lb.includes(`-${bb}`))),
+        searchQuery: (null === (Ob = bb.get(rb)) || void 0 === Ob ? void 0 : Ob.slice(0, Bb.C)) || null,
+        pageNumber: (0, Gb.d)(bb.get(Gb.c)),
+        banned: "only" === Yb ? "with" : "include" === Yb ? null : "without"
       }
     }
 
-    function bq(qq, Eq) {
-      var gq;
-      const Yq = Mq(Eq);
-      (0, Oq.f)(qq, Pq, "explore" === Eq.section ? null : Eq.section), (0, Oq.f)(qq, Qq, Eq.sort === vq ? null : Eq.sort), (0, Oq.f)(qq, yq, Yq === hq ? null : Yq), (0, Oq.f)(qq, tq, Eq.searchQuery), (0, Oq.f)(qq, rq, null !== (gq = Hq(Eq.banned)) && void 0 !== gq ? gq : null), (0, Oq.g)(qq, Eq.pageNumber)
+    function zb(bb, ub) {
+      var hb;
+      const Bb = tb(ub);
+      (0, Gb.g)(bb, Wb, "explore" === ub.section ? null : ub.section), (0, Gb.g)(bb, Cb, ub.sort === nb ? null : ub.sort), (0, Gb.g)(bb, db, Bb === Db ? null : Bb), (0, Gb.g)(bb, rb, ub.searchQuery), (0, Gb.g)(bb, jb, null !== (hb = lb(ub.banned)) && void 0 !== hb ? hb : null), (0, Gb.h)(bb, ub.pageNumber)
     }
 
-    function iq(qq) {
-      const Eq = new URLSearchParams;
-      return bq(Eq, {
+    function gb(bb) {
+      const ub = new URLSearchParams;
+      return zb(ub, {
         section: "explore",
-        sort: vq,
-        withFeatures: "strict" === qq ? [qq] : [qq, "strict"],
+        sort: nb,
+        withFeatures: "strict" === bb ? [bb] : [bb, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${mq}?${Eq.toString()}`
+      }), `${Ub}?${ub.toString()}`
     }
 
-    function Zq(qq) {
-      return Mq(qq) === hq
+    function ib(bb) {
+      return tb(bb) === Db
     }
 
-    function fq(qq) {
-      return null !== qq.searchQuery || "with" === qq.banned || Mq(qq) !== hq
+    function vb(bb) {
+      return null !== bb.searchQuery || "with" === bb.banned || tb(bb) !== Db
     }
 
-    function Mq(qq) {
-      return aq.flatMap((Eq => {
-        const gq = dq(qq, Eq);
-        return "with" === gq ? [Eq] : "without" === gq ? [`-${Eq}`] : []
+    function tb(bb) {
+      return Xb.flatMap((ub => {
+        const hb = ob(bb, ub);
+        return "with" === hb ? [ub] : "without" === hb ? [`-${ub}`] : []
       })).join(",")
     }
-    const Tq = {
+    const Jb = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      zq = {
+      eb = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -387,78 +387,78 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function Sq(qq) {
-      return Math.round(100 * Math.max(0, 1 - 1 / qq))
+    function Nb(bb) {
+      return Math.round(100 * Math.max(0, 1 - 1 / bb))
     }
 
-    function pq(qq, Eq, gq, lq) {
-      const Oq = [];
-      qq.isBanned && Oq.push({
+    function sb(bb, ub, hb, Ob) {
+      const Gb = [];
+      bb.isBanned && Gb.push({
         tone: "warning",
-        text: lq("shaderPackListing:ownerBanned"),
+        text: Ob("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: mq
-      } = qq;
-      if (null === qq.brokenError || mq && !mq.error || Oq.push({
+        pending: Ub
+      } = bb;
+      if (null === bb.brokenError || Ub && !Ub.error || Gb.push({
           tone: "warning",
-          text: lq("shaderPackListing:ownerBroken"),
-          detail: qq.brokenError
-        }), null !== mq && void 0 !== mq && mq.error) Oq.push({
+          text: Ob("shaderPackListing:ownerBroken"),
+          detail: bb.brokenError
+        }), null !== Ub && void 0 !== Ub && Ub.error) Gb.push({
         tone: "warning",
-        text: lq(Eq ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, Yq.k)(mq.error) ? null : mq.error
+        text: Ob(ub ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, Bb.j)(Ub.error) ? null : Ub.error
       });
-      else if (mq) {
-        const qq = null === mq.renderNotBefore ? 0 : mq.renderNotBefore - gq,
-          Yq = String(Math.ceil(qq / 6e4)),
-          xq = lq(Eq ? qq > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : qq > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: Yq
+      else if (Ub) {
+        const bb = null === Ub.renderNotBefore ? 0 : Ub.renderNotBefore - hb,
+          Bb = String(Math.ceil(bb / 6e4)),
+          Lb = Ob(ub ? bb > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : bb > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: Bb
           });
-        Oq.push({
+        Gb.push({
           tone: "info",
-          text: xq,
+          text: Lb,
           detail: null
         })
       }
-      return qq.listed || Oq.push({
+      return bb.listed || Gb.push({
         tone: "info",
-        text: lq("shaderPackListing:ownerUnlisted"),
+        text: Ob("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), Oq
+      }), Gb
     }
 
-    function Gq(qq) {
-      return Math.max(1, Math.round(qq / 1024))
+    function Mb(bb) {
+      return Math.max(1, Math.round(bb / 1024))
     }
 
-    function Lq(qq, Eq, gq) {
-      return qq instanceof lq.b && qq.errorMessageForUser ? qq.errorMessageForUser : Eq(gq)
+    function mb(bb, ub, hb) {
+      return bb instanceof Ob.b && bb.errorMessageForUser ? bb.errorMessageForUser : ub(hb)
     }
   },
-  6424: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      D: () => mq,
-      E: () => Yq,
-      G: () => Wq,
-      I: () => uq,
-      K: () => oq,
-      N: () => Bq,
-      R: () => cq,
-      e: () => Nq,
-      g: () => Vq,
-      i: () => aq,
-      k: () => Hq,
-      m: () => Qq,
-      n: () => Aq,
-      p: () => lq,
-      r: () => Pq,
-      v: () => Oq,
-      z: () => xq
+  6281: (bb, ub, hb) => {
+    hb.d(ub, {
+      A: () => wb,
+      C: () => ab,
+      G: () => Kb,
+      J: () => Hb,
+      L: () => Sb,
+      d: () => Zb,
+      f: () => pb,
+      g: () => Xb,
+      j: () => lb,
+      k: () => Cb,
+      l: () => Yb,
+      o: () => Ob,
+      p: () => Wb,
+      q: () => Gb,
+      s: () => Lb,
+      v: () => Ub,
+      z: () => Bb
     });
-    const Yq = ["forest", "desert", "water", "night", "cave"];
-    const lq = {
+    const Bb = ["forest", "desert", "water", "night", "cave"];
+    const Ob = {
         full: {
           width: 3840,
           height: 2160
@@ -472,43 +472,43 @@ export const modules = {
           height: 360
         }
       },
-      Oq = ["popular", "updated", "newest"],
-      mq = 3,
-      xq = 32,
-      Aq = 300;
+      Gb = ["popular", "updated", "newest"],
+      Ub = 3,
+      Lb = 32,
+      Yb = 300;
 
-    function cq(qq, Eq) {
-      return qq.slice(0, Eq).replace(/[\uD800-\uDBFF]$/, "")
+    function Sb(bb, ub) {
+      return bb.slice(0, ub).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const uq = 64,
-      Bq = 512,
-      Wq = 18e5;
-    const Nq = "Bloxdhub",
-      aq = "https://bloxdhub.com/shaders";
+    const ab = 64,
+      Hb = 512,
+      wb = 18e5;
+    const Zb = "Bloxdhub",
+      Xb = "https://bloxdhub.com/shaders";
 
-    function Vq(qq) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(qq)}`
+    function pb(bb) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(bb)}`
     }
-    const dq = "Screenshot generation failed.",
-      jq = "Its screenshots couldn't be generated:";
+    const ob = "Screenshot generation failed.",
+      Ab = "Its screenshots couldn't be generated:";
 
-    function Hq(qq) {
-      var Eq;
-      return qq === dq || null !== (Eq = null === qq || void 0 === qq ? void 0 : qq.startsWith(jq)) && void 0 !== Eq && Eq
-    }
-
-    function oq(qq, Eq) {
-      return `shaderPacks/${qq}/${Eq}.json`
+    function lb(bb) {
+      var ub;
+      return bb === ob || null !== (ub = null === bb || void 0 === bb ? void 0 : bb.startsWith(Ab)) && void 0 !== ub && ub
     }
 
-    function Pq(qq, Eq, gq, Yq) {
-      return null === Eq.renderId ? Qq(qq, Eq.baselineVersion, gq, Yq) : `${qq}/${function(qq,Eq,gq,Yq){return`shaderPacks/${qq}/${Eq}/${gq}-${Yq}.webp`}(Eq.packId,Eq.renderId,gq,Yq)}`
+    function Kb(bb, ub) {
+      return `shaderPacks/${bb}/${ub}.json`
     }
 
-    function Qq(qq, Eq, gq, Yq) {
-      return `${qq}/${function(qq,Eq,gq){return`shaderPacks/baseline/${qq}/${Eq}-${gq}.webp`}(Eq,gq,Yq)}`
+    function Wb(bb, ub, hb, Bb) {
+      return null === ub.renderId ? Cb(bb, ub.baselineVersion, hb, Bb) : `${bb}/${function(bb,ub,hb,Bb){return`shaderPacks/${bb}/${ub}/${hb}-${Bb}.webp`}(ub.packId,ub.renderId,hb,Bb)}`
+    }
+
+    function Cb(bb, ub, hb, Bb) {
+      return `${bb}/${function(bb,ub,hb){return`shaderPacks/baseline/${bb}/${ub}-${hb}.webp`}(ub,hb,Bb)}`
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

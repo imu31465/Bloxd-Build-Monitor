@@ -1,29 +1,29 @@
 export const id = 69;
 export const ids = [69];
 export const modules = {
-  36461: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => lq
+  36018: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Ob
     });
-    const Yq = {
-      wait: function(qq) {
-        return new Promise((Eq => {
-          setTimeout(Eq, qq)
+    const Bb = {
+      wait: function(bb) {
+        return new Promise((ub => {
+          setTimeout(ub, bb)
         }))
       },
       stallMs: 2e4
     };
-    class lq {
-      constructor(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Yq;
-        this.url = qq, this.options = Eq, this.timing = gq, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = qq
+    class Ob {
+      constructor(bb) {
+        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Bb;
+        this.url = bb, this.options = ub, this.timing = hb, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = bb
       }
       ready() {
         if (null === this.fetched) {
-          const qq = new AbortController;
-          this.fetchAbort = qq, this.fetched = this.fetchWithRetries(qq.signal).finally((() => {
-            this.fetchAbort === qq && (this.fetchAbort = null)
+          const bb = new AbortController;
+          this.fetchAbort = bb, this.fetched = this.fetchWithRetries(bb.signal).finally((() => {
+            this.fetchAbort === bb && (this.fetchAbort = null)
           }))
         }
         return this.fetched
@@ -34,81 +34,81 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(qq) {
-        for (let Eq = 0;; Eq++) {
-          const gq = new URL(this.url);
-          if (Eq > 0 && gq.searchParams.set("cache-bust", `${Date.now()}-${Eq}`), await this.fetchWhole(gq, qq)) return void(this.scriptUrl = gq);
-          if (Eq >= 3 || qq.aborted) return;
-          if (await this.timing.wait(500 * 2 ** Eq), qq.aborted) return
+      async fetchWithRetries(bb) {
+        for (let ub = 0;; ub++) {
+          const hb = new URL(this.url);
+          if (ub > 0 && hb.searchParams.set("cache-bust", `${Date.now()}-${ub}`), await this.fetchWhole(hb, bb)) return void(this.scriptUrl = hb);
+          if (ub >= 3 || bb.aborted) return;
+          if (await this.timing.wait(500 * 2 ** ub), bb.aborted) return
         }
       }
-      async fetchWhole(qq, Eq) {
-        const gq = new AbortController;
-        let Yq;
-        const lq = () => {
-            clearTimeout(Yq), Yq = setTimeout((() => {
-              gq.abort()
+      async fetchWhole(bb, ub) {
+        const hb = new AbortController;
+        let Bb;
+        const Ob = () => {
+            clearTimeout(Bb), Bb = setTimeout((() => {
+              hb.abort()
             }), this.timing.stallMs)
           },
-          Oq = () => {
-            gq.abort()
+          Gb = () => {
+            hb.abort()
           };
-        Eq.addEventListener("abort", Oq, {
+        ub.addEventListener("abort", Gb, {
           once: !0
-        }), lq();
+        }), Ob();
         try {
-          var mq;
-          const Eq = await fetch(qq, {
-            signal: gq.signal
+          var Ub;
+          const ub = await fetch(bb, {
+            signal: hb.signal
           });
-          if (!Eq.ok) return !1;
-          const Yq = null === (mq = Eq.body) || void 0 === mq ? void 0 : mq.getReader();
-          if (!Yq) return !1;
+          if (!ub.ok) return !1;
+          const Bb = null === (Ub = ub.body) || void 0 === Ub ? void 0 : Ub.getReader();
+          if (!Bb) return !1;
           for (;;) {
             const {
-              done: qq
-            } = await Yq.read();
-            if (qq) return !0;
-            lq()
+              done: bb
+            } = await Bb.read();
+            if (bb) return !0;
+            Ob()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(Yq), Eq.removeEventListener("abort", Oq)
+          clearTimeout(Bb), ub.removeEventListener("abort", Gb)
         }
       }
     }
   },
-  43110: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      createWorldgenWorker: () => cq,
-      prefetchWorldgenWorker: () => xq,
-      stopWorldgenWorkerPrefetch: () => Aq,
-      worldgenWorkerReady: () => mq
+  42750: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      createWorldgenWorker: () => Sb,
+      prefetchWorldgenWorker: () => Lb,
+      stopWorldgenWorkerPrefetch: () => Yb,
+      worldgenWorkerReady: () => Ub
     });
-    const Yq = new(gq(36461).d)(new URL(gq.p + gq.u(68), gq.b), {
+    const Bb = new(hb(36018).c)(new URL(hb.p + hb.u(68), hb.b), {
       name: "worldgenWorker",
       type: "module"
     });
-    let lq = !1,
-      Oq = !1;
+    let Ob = !1,
+      Gb = !1;
 
-    function mq() {
-      return lq = !0, Yq.ready()
+    function Ub() {
+      return Ob = !0, Bb.ready()
     }
 
-    function xq() {
-      Yq.ready()
+    function Lb() {
+      Bb.ready()
     }
 
-    function Aq() {
-      lq || Oq || (Oq = !0, Yq.cancel())
+    function Yb() {
+      Ob || Gb || (Gb = !0, Bb.cancel())
     }
 
-    function cq() {
-      return Yq.start()
+    function Sb() {
+      return Bb.start()
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);

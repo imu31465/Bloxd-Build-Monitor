@@ -1,216 +1,216 @@
 export const id = 109;
 export const ids = [109];
 export const modules = {
-  8854: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      default: () => uE
+  8624: (bb, ub, hb) => {
+    hb.r(ub), hb.d(ub, {
+      default: () => au
     });
-    var Yq = gq(1512),
-      lq = gq(24),
-      Oq = gq(4486),
-      mq = gq(57),
-      xq = gq(1416);
-    var Aq = gq(1904),
-      cq = gq(1498),
-      uq = gq(1336),
-      Bq = gq(1183),
-      Wq = gq(163),
-      Nq = gq(1214),
-      aq = gq(2330),
-      Vq = gq(8858);
+    var Bb = hb(1431),
+      Ob = hb(13),
+      Gb = hb(4420),
+      Ub = hb(49),
+      Lb = hb(1348);
+    var Yb = hb(1811),
+      Sb = hb(1415),
+      ab = hb(1249),
+      Hb = hb(1095),
+      wb = hb(148),
+      Zb = hb(1124),
+      Xb = hb(2233),
+      pb = hb(8626);
 
-    function dq(qq, Eq) {
-      const gq = !0 === Eq.debugResult.gameRefused,
-        Yq = gq || Eq.code === Wq.h.REQUEST_TO_MATCHMAKING ? (0, Vq.i)(Eq.message) : null;
-      return null !== Yq ? (jq(qq, qq((0, Vq.l)(Yq)), qq(Vq.j[Yq])), !0) : !!gq && (async function(qq) {
+    function ob(bb, ub) {
+      const hb = !0 === ub.debugResult.gameRefused,
+        Bb = hb || ub.code === wb.k.REQUEST_TO_MATCHMAKING ? (0, pb.h)(ub.message) : null;
+      return null !== Bb ? (Ab(bb, bb((0, pb.n)(Bb)), bb(pb.k[Bb])), !0) : !!hb && (async function(bb) {
         const {
-          gameNameWithVariation: Eq,
-          lobbyName: gq,
-          shownLobbyName: Yq
-        } = Aq.gameBridge.latest("connectedGame"), lq = "classic" === Eq && (0, Nq.I)(gq) ? Yq : await (0, aq.e)(qq, Eq, gq);
-        return "" !== lq ? qq("general:cantJoinGame", {
-          game: lq
-        }) : qq("general:cantJoinThisGame")
-      }(qq).then((gq => {
-        jq(qq, gq, Eq.message)
+          gameNameWithVariation: ub,
+          lobbyName: hb,
+          shownLobbyName: Bb
+        } = Yb.gameBridge.latest("connectedGame"), Ob = "classic" === ub && (0, Zb.S)(hb) ? Bb : await (0, Xb.b)(bb, ub, hb);
+        return "" !== Ob ? bb("general:cantJoinGame", {
+          game: Ob
+        }) : bb("general:cantJoinThisGame")
+      }(bb).then((hb => {
+        Ab(bb, hb, ub.message)
       })), !0)
     }
 
-    function jq(qq, Eq, gq) {
-      uq.NotificationProvider.showPromptPopup({
+    function Ab(bb, ub, hb) {
+      ab.NotificationProvider.showPromptPopup({
         icon: "lock",
-        title: Eq,
-        subtitle: gq,
-        confirmText: qq("general:ok"),
+        title: ub,
+        subtitle: hb,
+        confirmText: bb("general:ok"),
         cancelText: ""
       })
     }
-    var Hq = gq(4413),
-      oq = gq(1109),
-      Pq = gq(31),
-      Qq = gq(1234),
-      yq = gq(1710),
-      tq = gq(96),
-      rq = gq(1298),
-      vq = gq(1405),
-      hq = gq(4352),
-      nq = gq(4183),
-      bq = gq(3135),
-      iq = gq(1070);
-    const Zq = "https://discord.gg/playbloxd";
+    var lb = hb(4353),
+      Kb = hb(1038),
+      Wb = hb(16),
+      Cb = hb(1141),
+      db = hb(1622),
+      rb = hb(86),
+      jb = hb(1206),
+      nb = hb(1336),
+      Db = hb(4287),
+      xb = hb(4111),
+      zb = hb(3036),
+      gb = hb(1007);
+    const ib = "https://discord.gg/playbloxd";
 
-    function fq(qq) {
+    function vb(bb) {
       let {
-        failure: Eq
-      } = qq;
+        failure: ub
+      } = bb;
       const {
-        t: gq
-      } = (0, Bq.v)(), Yq = "chosen" === Eq.packSource, lq = tq.featureFlags.useDiscord ? Yq ? "texturePackLoad:failedHelpCustomPack" : "texturePackLoad:failedHelp" : Yq ? "texturePackLoad:failedHelpCustomPackNoDiscord" : "texturePackLoad:failedHelpNoDiscord";
-      return (0, iq.jsxs)(iq.Fragment, {
-        children: [gq(lq, {
-          code: Eq.code
-        }), "default" !== Eq.packSource && Eq.code === bq.k.Error && (0, iq.jsxs)("div", {
+        t: hb
+      } = (0, Hb.K)(), Bb = "chosen" === ub.packSource, Ob = rb.featureFlags.useDiscord ? Bb ? "texturePackLoad:failedHelpCustomPack" : "texturePackLoad:failedHelp" : Bb ? "texturePackLoad:failedHelpCustomPackNoDiscord" : "texturePackLoad:failedHelpNoDiscord";
+      return (0, gb.jsxs)(gb.Fragment, {
+        children: [hb(Ob, {
+          code: ub.code
+        }), "default" !== ub.packSource && ub.code === zb.j.Error && (0, gb.jsxs)("div", {
           style: {
             paddingTop: "1rem",
             overflowWrap: "anywhere"
           },
-          children: [gq("texturePackLoad:details"), " ", Eq.reason]
-        }), tq.featureFlags.useDiscord && (0, iq.jsx)("div", {
+          children: [hb("texturePackLoad:details"), " ", ub.reason]
+        }), rb.featureFlags.useDiscord && (0, gb.jsx)("div", {
           style: {
             paddingTop: "1rem"
           },
-          children: (0, iq.jsx)("a", {
-            href: Zq,
+          children: (0, gb.jsx)("a", {
+            href: ib,
             target: "_blank",
             rel: "noreferrer",
-            children: gq("texturePackLoad:reportOnDiscord")
+            children: hb("texturePackLoad:reportOnDiscord")
           })
         })]
       })
     }
-    var Mq = gq(1313),
-      Tq = gq(729),
-      zq = gq(1216),
-      Sq = gq(987),
-      pq = gq(1477),
-      Gq = gq(3174),
-      Lq = gq(3056),
-      Jq = gq(1339),
-      kq = gq(1326),
-      Rq = gq(4821),
-      Uq = gq(8860),
-      Fq = gq(2879);
+    var tb = hb(1227),
+      Jb = hb(701),
+      eb = hb(1127),
+      Nb = hb(934),
+      sb = hb(1398),
+      Mb = hb(3076),
+      mb = hb(2941),
+      Ib = hb(1255),
+      Pb = hb(1242),
+      qb = hb(4756),
+      Eb = hb(8631),
+      yb = hb(2758);
 
-    function sq(qq) {
+    function Vb(bb) {
       let {
-        onApply: Eq,
-        onSkip: gq
-      } = qq;
+        onApply: ub,
+        onSkip: hb
+      } = bb;
       const {
-        t: Yq
-      } = (0, Bq.v)();
-      return (0, mq.useEffect)((() => {
-        Fq.d.skipPlayWait()
-      }), []), (0, iq.jsx)(Jq.j, {
+        t: Bb
+      } = (0, Hb.K)();
+      return (0, Ub.useEffect)((() => {
+        yb.f.skipPlayWait()
+      }), []), (0, gb.jsx)(Ib.h, {
         icon: "download",
         title: "customTexturePack:downloadTitle",
-        subtitle: (0, iq.jsxs)("div", {
+        subtitle: (0, gb.jsxs)("div", {
           className: "CustomTexturePackDownloaderSubtitleText",
-          children: [Yq("customTexturePack:downloadPrompt"), (0, iq.jsx)("div", {
+          children: [Bb("customTexturePack:downloadPrompt"), (0, gb.jsx)("div", {
             className: "CustomTexturePackDownloaderWarningText",
-            children: Yq("customTexturePack:authorWarning")
-          }), (0, iq.jsx)("div", {
+            children: Bb("customTexturePack:authorWarning")
+          }), (0, gb.jsx)("div", {
             className: "CustomTexturePackDownloaderSecondaryText",
-            children: Yq("customTexturePack:existingPackSaved")
+            children: Bb("customTexturePack:existingPackSaved")
           })]
         }),
         confirm: {
           text: "general:apply",
-          onClick: Eq
+          onClick: ub
         },
         cancel: {
           text: "customTexturePack:skip",
-          onClick: gq
+          onClick: hb
         }
       })
     }
-    async function Xq() {
-      let qq = !1;
-      const Eq = uq.NotificationProvider.showCustomPopup({
-        body: Eq => (0, iq.jsx)(sq, {
+    async function Fb() {
+      let bb = !1;
+      const ub = ab.NotificationProvider.showCustomPopup({
+        body: ub => (0, gb.jsx)(Vb, {
           onApply: () => {
-            qq = !0, Eq()
+            bb = !0, ub()
           },
-          onSkip: Eq
+          onSkip: ub
         }),
         disableExitButton: !0,
         disablePressBackgroundToClose: !0
       });
-      return await Eq.getResult(), qq
+      return await ub.getResult(), bb
     }
-    let wq = {
+    let fb = {
       wanted: !1
     };
-    let Kq = null;
+    let kb = null;
 
-    function Cq(qq) {
-      qq.setGamePackConfirm(Xq), Kq = qq
+    function Tb(bb) {
+      bb.setGamePackConfirm(Fb), kb = bb
     }
-    var Iq = gq(3369);
+    var cb = hb(3278);
 
-    function eq(qq) {
+    function Qb(bb) {
       let {
-        schematicId: Eq,
-        texturePackKey: gq,
-        onClose: Yq
-      } = qq;
-      const [lq, Oq] = (0, mq.useState)("prompt"), [xq, Aq] = (0, mq.useState)(null), cq = (0, Iq.c)();
+        schematicId: ub,
+        texturePackKey: hb,
+        onClose: Bb
+      } = bb;
+      const [Ob, Gb] = (0, Ub.useState)("prompt"), [Lb, Yb] = (0, Ub.useState)(null), Sb = (0, cb.d)();
 
-      function uq() {
-        Yq()
+      function ab() {
+        Bb()
       }
-      return "prompt" === lq ? (0, iq.jsx)(sq, {
+      return "prompt" === Ob ? (0, gb.jsx)(Vb, {
         onApply: async function() {
-          Oq("downloading");
+          Gb("downloading");
           try {
-            const qq = await async function(qq, Eq) {
-              const gq = await (0, Rq.e)(Eq);
-              if (gq) return {
-                pack: gq,
-                key: Eq
+            const bb = await async function(bb, ub) {
+              const hb = await (0, qb.e)(ub);
+              if (hb) return {
+                pack: hb,
+                key: ub
               };
-              const Yq = await oq.userContextManager.getCurrentUserContext(),
-                lq = (await pq.e.getGame(Yq, qq, !0)).customTexturePackKey;
-              if (!lq) return null;
-              const Oq = await (0, Rq.e)(lq);
-              if (!Oq) throw new Error("The texture pack could not be found");
+              const Bb = await Kb.userContextManager.getCurrentUserContext(),
+                Ob = (await sb.e.getGame(Bb, bb, !0)).customTexturePackKey;
+              if (!Ob) return null;
+              const Gb = await (0, qb.e)(Ob);
+              if (!Gb) throw new Error("The texture pack could not be found");
               return {
-                pack: Oq,
-                key: lq
+                pack: Gb,
+                key: Ob
               }
-            }(Eq, gq);
-            if (!cq.current) return;
-            if (!qq) return void Yq();
-            if ((0, Gq.k)(qq.pack)) return void Oq("refused");
-            Lq.c.setFromJson(qq.pack, "customGame"), await Lq.c.saveTemporaryTexturePack(qq.key), cq.current && (0, yq.reloadBloxd)()
-          } catch (qq) {
-            Aq(qq instanceof Error ? qq.message : String(qq)), Oq("error")
+            }(ub, hb);
+            if (!Sb.current) return;
+            if (!bb) return void Bb();
+            if ((0, Mb.f)(bb.pack)) return void Gb("refused");
+            mb.b.setFromJson(bb.pack, "customGame"), await mb.b.saveTemporaryTexturePack(bb.key), Sb.current && (0, db.reloadBloxd)()
+          } catch (bb) {
+            Yb(bb instanceof Error ? bb.message : String(bb)), Gb("error")
           }
         },
-        onSkip: uq
-      }) : "downloading" === lq ? (0, iq.jsx)(Jq.j, {
+        onSkip: ab
+      }) : "downloading" === Ob ? (0, gb.jsx)(Ib.h, {
         icon: "download",
         title: "customTexturePack:downloading",
-        subtitle: (0, iq.jsx)("div", {
+        subtitle: (0, gb.jsx)("div", {
           className: "CustomTexturePackDownloaderLogoLoaderContainer",
-          children: (0, iq.jsx)(kq.e, {
+          children: (0, gb.jsx)(Pb.c, {
             showFace: !0
           })
         })
-      }) : "error" === lq ? (0, iq.jsx)(Jq.j, {
+      }) : "error" === Ob ? (0, gb.jsx)(Ib.h, {
         icon: "face-worried",
         title: "customTexturePack:errorTitle",
-        subtitle: xq,
+        subtitle: Lb,
         confirm: {
           text: "customTexturePack:refreshPage",
           onClick: () => {
@@ -219,486 +219,486 @@ export const modules = {
         },
         cancel: {
           text: "customTexturePack:skip",
-          onClick: uq
+          onClick: ab
         }
-      }) : "refused" === lq ? (0, iq.jsx)(Jq.j, {
+      }) : "refused" === Ob ? (0, gb.jsx)(Ib.h, {
         icon: "face-worried",
         title: "customTexturePack:cantApplyTitle",
         subtitle: "customTexturePack:gamePackHasExternalUrls",
         confirm: {
           text: "general:continue",
-          onClick: uq
+          onClick: ab
         }
       }) : null
     }
-    var Dq = gq(8876),
-      qE = gq(4158),
-      EE = gq(1748),
-      gE = gq(2853),
-      YE = gq(3311),
-      lE = gq(4508),
-      OE = gq(1283),
-      mE = gq(611),
-      xE = gq(700);
+    var Rb = hb(8642),
+      bu = hb(4080),
+      uu = hb(1659),
+      hu = hb(2736),
+      Bu = hb(3218),
+      Ou = hb(4444),
+      Gu = hb(1193),
+      Uu = hb(599),
+      Lu = hb(670);
 
-    function AE() {
-      const qq = lq.b.get("clientEscMenuOptions");
-      Aq.gameBridge.send("setLookSensitivity", lq.b.get("isTouchScreen") ? (0, xE.j)(qq) : qq.mouseSensitivity)
+    function Yu() {
+      const bb = Ob.d.get("clientEscMenuOptions");
+      Yb.gameBridge.send("setLookSensitivity", Ob.d.get("isTouchScreen") ? (0, Lu.l)(bb) : bb.mouseSensitivity)
     }
-    async function cE(qq, Eq, gq) {
-      const Yq = (0, lE.J)(Eq);
-      async function mq(qq, Eq, gq, Yq) {
-        var mq;
-        if (Yq.aborted) return null;
-        null === lq.b.get("gameEntrySource") && (0, lq.f)("directPlayUrl"), mE.v && (0, Uq.d)().catch((() => {})), lq.b.set({
+    async function Su(bb, ub, hb) {
+      const Bb = (0, Ou.K)(ub);
+      async function Ub(bb, ub, hb, Bb) {
+        var Ub;
+        if (Bb.aborted) return null;
+        null === Ob.d.get("gameEntrySource") && (0, Ob.h)("directPlayUrl"), Uu.o && (0, Eb.c)().catch((() => {})), Ob.d.set({
           gameState: "findingLobby"
-        }), Pq.i.TV("loadingScreenState", "loadingPage:findingLobby");
-        const xq = await oq.userContextManager.getCurrentUserContext();
-        Aq.gameBridge.send("setRequestedGame", {
-          gameNameWithVariation: Eq,
-          discordContext: qq instanceof zq.f ? qq.getSerialisableParams() : null
-        }), (0, EE.e)();
-        const cq = await async function(qq, Eq, gq, Yq, lq) {
+        }), Wb.i.vp("loadingScreenState", "loadingPage:findingLobby");
+        const Lb = await Kb.userContextManager.getCurrentUserContext();
+        Yb.gameBridge.send("setRequestedGame", {
+          gameNameWithVariation: ub,
+          discordContext: bb instanceof eb.f ? bb.getSerialisableParams() : null
+        }), (0, uu.i)();
+        const Sb = await async function(bb, ub, hb, Bb, Ob) {
           try {
-            await Oq.reqLibsLoadedPromise
-          } catch (mq) {
-            return Qq.b.errorWithCode(mq.toString(), Wq.h.LOAD_REQUIRED_LIBS, {
-              error: mq,
+            await Gb.reqLibsLoadedPromise
+          } catch (Ub) {
+            return Cb.b.errorWithCode(Ub.toString(), wb.k.LOAD_REQUIRED_LIBS, {
+              error: Ub,
               severity: "medium"
             })
           }
-          return Pq.i.TV("matchmakeAndPlayStepCompleted", {
-            step: Wq.h.LOAD_REQUIRED_LIBS,
+          return Wb.i.vp("matchmakeAndPlayStepCompleted", {
+            step: wb.k.LOAD_REQUIRED_LIBS,
             totalSubSteps: 1
-          }), (0, Oq.matchmakeAndPlayMaybeUnloaded)(qq, Eq, gq, Yq, lq)
-        }(qq, Eq, gq, xq, Yq), uq = cq.isError() ? cq.asError() : null;
-        if (uq && !uq.debugResult.lE) {
-          console.log("Failed to join lobby:", uq.message);
-          const qq = "timedOut" === uq.debugResult.gameServerUnreachable;
-          (0, gE.d)("matchmake_failed", uq.message, qq ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : Wq.h[uq.code])
+          }), (0, Gb.matchmakeAndPlayMaybeUnloaded)(bb, ub, hb, Bb, Ob)
+        }(bb, ub, hb, Lb, Bb), ab = Sb.isError() ? Sb.asError() : null;
+        if (ab && !ab.debugResult.Lu) {
+          console.log("Failed to join lobby:", ab.message);
+          const bb = "timedOut" === ab.debugResult.gameServerUnreachable;
+          (0, hu.i)("matchmake_failed", ab.message, bb ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : wb.k[ab.code])
         }
-        if (Yq.aborted) return Aq.gameBridge.send("leaveGame", {
+        if (Bb.aborted) return Yb.gameBridge.send("leaveGame", {
           reloadPath: null
         }), null;
-        if (null !== uq && void 0 !== uq && uq.debugResult.lE) return console.log("Join cancelled:", uq.message), null;
-        if (uq) return cq;
+        if (null !== ab && void 0 !== ab && ab.debugResult.Lu) return console.log("Join cancelled:", ab.message), null;
+        if (ab) return Sb;
         const {
-          gameNameWithVariation: Bq,
-          lobbyName: aq,
-          addLobbyToRecentlyPlayed: Vq
-        } = cq.getValue();
-        let dq;
-        AE(), (0, OE.D)().setGameViewShown(!0);
-        const jq = null === (mq = Tq.c[Bq]) || void 0 === mq ? void 0 : mq.recentlyPlayedAs;
-        return dq = (0, Sq.j)(Bq) ? {
+          gameNameWithVariation: Hb,
+          lobbyName: Xb,
+          addLobbyToRecentlyPlayed: pb
+        } = Sb.getValue();
+        let ob;
+        Yu(), (0, Gu.D)().setGameViewShown(!0);
+        const Ab = null === (Ub = Jb.e[Hb]) || void 0 === Ub ? void 0 : Ub.recentlyPlayedAs;
+        return ob = (0, Nb.i)(Hb) ? {
           type: "custom",
           name: "",
-          schematicId: (0, Sq.o)(Bq),
+          schematicId: (0, Nb.p)(Hb),
           recentLobbies: []
-        } : "classic" !== Bq || (0, Nq.N)(aq) ? jq ? {
+        } : "classic" !== Hb || (0, Zb.X)(Xb) ? Ab ? {
           type: "bloxd",
-          gameNameWithVariation: jq,
+          gameNameWithVariation: Ab,
           recentLobbies: []
         } : {
           type: "bloxd",
-          gameNameWithVariation: Bq,
+          gameNameWithVariation: Hb,
           recentLobbies: []
         } : {
           type: "bloxd",
           gameNameWithVariation: "classic_worlds",
           recentLobbies: []
-        }, pq.e.addRecentlyPlayedGame(xq, dq, Vq && !jq ? aq : void 0).then((qq => {
-          xq.setRecentlyPlayedGames(qq)
-        })).catch((qq => {
-          console.error("Failed to record recently played game", qq)
-        })), (0, rq.U)(), cq
+        }, sb.e.addRecentlyPlayedGame(Lb, ob, pb && !Ab ? Xb : void 0).then((bb => {
+          Lb.setRecentlyPlayedGames(bb)
+        })).catch((bb => {
+          console.error("Failed to record recently played game", bb)
+        })), (0, jb.P)(), Sb
       }
-      return Yq && (0, lq.f)("updateRejoin"), (0, YE.j)((async lq => {
+      return Bb && (0, Ob.h)("updateRejoin"), (0, Bu.k)((async Ob => {
         try {
-          let xq = qq,
-            Aq = await mq(xq, Eq, gq, lq);
-          for (let qq = 0; Yq && qq < lE.h; qq++) {
-            var Oq;
-            if (null === (Oq = Aq) || void 0 === Oq || !Oq.isError() || Aq.asError().code !== Wq.h.REQUEST_TO_MATCHMAKING) break;
-            if (!await (0, lE.N)((0, lE.q)(qq), lq)) return Aq;
-            xq = (0, lE.u)(xq, qq + 1, "string" === typeof xq && (0, Nq.N)(xq)), Aq = await mq(xq, Eq, gq, lq)
+          let Lb = bb,
+            Yb = await Ub(Lb, ub, hb, Ob);
+          for (let bb = 0; Bb && bb < Ou.i; bb++) {
+            var Gb;
+            if (null === (Gb = Yb) || void 0 === Gb || !Gb.isError() || Yb.asError().code !== wb.k.REQUEST_TO_MATCHMAKING) break;
+            if (!await (0, Ou.O)((0, Ou.t)(bb), Ob)) return Yb;
+            Lb = (0, Ou.v)(Lb, bb + 1, "string" === typeof Lb && (0, Zb.X)(Lb)), Yb = await Ub(Lb, ub, hb, Ob)
           }
-          return Aq
-        } catch (xq) {
-          if ((0, gE.d)("matchmake_failed", xq, "unexpected"), Aq.gameBridge.send("leaveGame", {
-              reloadPath: lq.aborted ? null : "/"
-            }), lq.aborted) return null;
-          throw xq
+          return Yb
+        } catch (Lb) {
+          if ((0, hu.i)("matchmake_failed", Lb, "unexpected"), Yb.gameBridge.send("leaveGame", {
+              reloadPath: Ob.aborted ? null : "/"
+            }), Ob.aborted) return null;
+          throw Lb
         }
-      }), (async qq => {
-        var gq;
-        if (Yq) return;
-        const lq = (0, rq.L)();
-        null !== lq && (await lq, qq.aborted) || (null !== (gq = Tq.c[Eq]) && void 0 !== gq && gq.playAdBeforeMatchmaking ? (Fq.d.skipPlayWait(), await new Promise((qq => {
-          (0, rq.ob)((() => {
-            qq(!0)
+      }), (async bb => {
+        var hb;
+        if (Bb) return;
+        const Ob = (0, jb.I)();
+        null !== Ob && (await Ob, bb.aborted) || (null !== (hb = Jb.e[ub]) && void 0 !== hb && hb.playAdBeforeMatchmaking ? (yb.f.skipPlayWait(), await new Promise((bb => {
+          (0, jb.fb)((() => {
+            bb(!0)
           }), "video_start")
-        }))) : (0, rq.ob)((() => {}), "video_start"))
+        }))) : (0, jb.fb)((() => {}), "video_start"))
       }))
     }
 
-    function uE() {
+    function au() {
       const {
-        t: qq
-      } = (0, Bq.v)(), Eq = (0, cq.useNavigatePreserveSearch)(), gq = (0, Yq.q)(), Vq = (0, Yq.v)(), jq = (0, mq.useRef)({
-        t: qq,
-        navigate: Eq
+        t: bb
+      } = (0, Hb.K)(), ub = (0, Sb.useNavigatePreserveSearch)(), hb = (0, Bb.x)(), pb = (0, Bb.F)(), Ab = (0, Ub.useRef)({
+        t: bb,
+        navigate: ub
       });
-      jq.current = {
-        t: qq,
-        navigate: Eq
+      Ab.current = {
+        t: bb,
+        navigate: ub
       };
-      const Pq = (0, mq.useRef)("");
-      Pq.current = gq.pathname + gq.search;
+      const Wb = (0, Ub.useRef)("");
+      Wb.current = hb.pathname + hb.search;
       const {
-        gameState: Qq,
-        clientEscMenuOptions: Zq
-      } = (0, lq.j)(["gameState", "clientEscMenuOptions"]), Tq = (0, mq.useRef)(null), zq = (0, mq.useRef)(null);
-      var Gq;
-      (0, YE.k)(), (0, YE.l)(), Gq = mE.v, (0, mq.useEffect)((() => {
-        if (!Gq) return;
-        let qq = !0;
-        return (0, Uq.d)().then((Eq => {
-          qq && Cq(Eq)
+        gameState: Cb,
+        clientEscMenuOptions: ib
+      } = (0, Ob.j)(["gameState", "clientEscMenuOptions"]), Jb = (0, Ub.useRef)(null), eb = (0, Ub.useRef)(null);
+      var Mb;
+      (0, Bu.l)(), (0, Bu.m)(), Mb = Uu.o, (0, Ub.useEffect)((() => {
+        if (!Mb) return;
+        let bb = !0;
+        return (0, Eb.c)().then((ub => {
+          bb && Tb(ub)
         })).catch((() => {})), () => {
-          var Eq;
-          qq = !1, wq.wanted = !1, null === (Eq = Kq) || void 0 === Eq || Eq.setGamePackConfirm(null), Kq = null
+          var ub;
+          bb = !1, fb.wanted = !1, null === (ub = kb) || void 0 === ub || ub.setGamePackConfirm(null), kb = null
         }
-      }), [Gq]), (0, mq.useEffect)((() => {
-        var qq;
-        (0, Oq.needGameClientNow)();
+      }), [Mb]), (0, Ub.useEffect)((() => {
+        var bb;
+        (0, Gb.needGameClientNow)();
         const {
-          t: Eq,
-          navigate: Yq
-        } = jq.current, mq = (0, Dq.e)(Vq, gq.search);
-        if (Vq.lobbyName && !new URLSearchParams(gq.search).has("lobby")) return void Yq((0, Mq.e)(mq.gameNameWithVariation, mq.lobbyName), {
+          t: ub,
+          navigate: Bb
+        } = Ab.current, Ub = (0, Rb.b)(pb, hb.search);
+        if (pb.lobbyName && !new URLSearchParams(hb.search).has("lobby")) return void Bb((0, tb.e)(Ub.gameNameWithVariation, Ub.lobbyName), {
           replace: !0
         });
-        let xq = Promise.resolve({
+        let Lb = Promise.resolve({
           shouldMatchmake: !0
         });
-        if ("/play/discord-custom-lobby" === gq.pathname) {
-          const qq = lq.b.get("discordContext");
-          if (!qq) return void Yq("/");
-          xq = Hq.d.setupDiscordLobby(qq, "classic").then((() => ({
+        if ("/play/discord-custom-lobby" === hb.pathname) {
+          const bb = Ob.d.get("discordContext");
+          if (!bb) return void Bb("/");
+          Lb = lb.d.setupDiscordLobby(bb, "classic").then((() => ({
             shouldMatchmake: !0,
-            discordContext: qq
-          }))).catch((Eq => (console.error("Failed to setup discord lobby", Eq), {
+            discordContext: bb
+          }))).catch((ub => (console.error("Failed to setup discord lobby", ub), {
             shouldMatchmake: !1,
-            discordContext: qq
+            discordContext: bb
           })))
-        } else if (!mq.gameNameWithVariation || !(0, Nq.K)(mq.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${mq.gameNameWithVariation}`), void Yq(-1);
-        if (mq.gameNameWithVariation === Tq.current && mq.lobbyName === zq.current) return;
-        if (Aq.gameBridge.latest("connectedGame").replay) return void(0, YE.h)(null);
-        (0, rq.O)(), lq.b.set({
+        } else if (!Ub.gameNameWithVariation || !(0, Zb.W)(Ub.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${Ub.gameNameWithVariation}`), void Bb(-1);
+        if (Ub.gameNameWithVariation === Jb.current && Ub.lobbyName === eb.current) return;
+        if (Yb.gameBridge.latest("connectedGame").replay) return void(0, Bu.g)(null);
+        (0, jb.L)(), Ob.d.set({
           gameState: "loadingScreen"
         });
-        const cq = function() {
-          wq.wanted = !1;
-          const qq = {
+        const Sb = function() {
+          fb.wanted = !1;
+          const bb = {
             wanted: !0
           };
-          return wq = qq, () => qq.wanted
+          return fb = bb, () => bb.wanted
         }();
-        if ("releaseCountdown" === (null === (qq = (0, aq.g)(mq.gameNameWithVariation)) || void 0 === qq ? void 0 : qq.type)) return console.error(`Game hasn't been released yet: ${mq.gameNameWithVariation}`), void Yq(-1);
-        const Bq = mq.gameNameWithVariation;
-        if (Bq && (mE.v || (0, Sq.j)(Bq))) {
-          const qq = mE.v ? Promise.all([(0, Uq.d)(), oq.userContextManager.getCurrentUserContext()]).then((qq => {
-            let [Eq, gq] = qq;
-            if (cq()) return Cq(Eq), Eq.packForGame(Bq, gq, cq)
-          })) : async function(qq) {
-            await Lq.c.indexedDbValuesAreLoaded();
-            const Eq = await oq.userContextManager.getCurrentUserContext(),
-              gq = (0, Sq.o)(qq);
-            let Yq;
+        if ("releaseCountdown" === (null === (bb = (0, Xb.e)(Ub.gameNameWithVariation)) || void 0 === bb ? void 0 : bb.type)) return console.error(`Game hasn't been released yet: ${Ub.gameNameWithVariation}`), void Bb(-1);
+        const Hb = Ub.gameNameWithVariation;
+        if (Hb && (Uu.o || (0, Nb.i)(Hb))) {
+          const bb = Uu.o ? Promise.all([(0, Eb.c)(), Kb.userContextManager.getCurrentUserContext()]).then((bb => {
+            let [ub, hb] = bb;
+            if (Sb()) return Tb(ub), ub.packForGame(Hb, hb, Sb)
+          })) : async function(bb) {
+            await mb.b.indexedDbValuesAreLoaded();
+            const ub = await Kb.userContextManager.getCurrentUserContext(),
+              hb = (0, Nb.p)(bb);
+            let Bb;
             try {
-              Yq = await pq.e.getGame(Eq, gq, !0)
-            } catch (mq) {
-              return void console.error("Failed to get game", mq)
+              Bb = await sb.e.getGame(ub, hb, !0)
+            } catch (Ub) {
+              return void console.error("Failed to get game", Ub)
             }
-            const lq = Yq.customTexturePackKey;
-            if (!lq) return void(Lq.c.isUsingTemporaryTexturePack() && ((0, yq.reloadBloxd)(), await new Promise((() => {}))));
-            if (Lq.c.isUsingTemporaryTexturePack() && Lq.c.getTemporaryTexturePackSource() === lq) return;
-            const Oq = uq.NotificationProvider.showCustomPopup({
-              body: qq => (0, iq.jsx)(eq, {
-                schematicId: gq,
-                texturePackKey: lq,
-                onClose: qq
+            const Ob = Bb.customTexturePackKey;
+            if (!Ob) return void(mb.b.isUsingTemporaryTexturePack() && ((0, db.reloadBloxd)(), await new Promise((() => {}))));
+            if (mb.b.isUsingTemporaryTexturePack() && mb.b.getTemporaryTexturePackSource() === Ob) return;
+            const Gb = ab.NotificationProvider.showCustomPopup({
+              body: bb => (0, gb.jsx)(Qb, {
+                schematicId: hb,
+                texturePackKey: Ob,
+                onClose: bb
               }),
               disableExitButton: !0,
               disablePressBackgroundToClose: !0
             });
-            await Oq.getResult()
-          }(Bq), Eq = xq;
-          xq = qq.catch((qq => {
-            console.error("Failed to check for custom texture pack", qq)
-          })).then((() => Eq))
-        }(0, YE.h)(null);
-        let Qq = !1;
-        const vq = gq.pathname + gq.search,
-          Zq = () => !Qq && Pq.current === vq;
-        return xq.then((qq => {
+            await Gb.getResult()
+          }(Hb), ub = Lb;
+          Lb = bb.catch((bb => {
+            console.error("Failed to check for custom texture pack", bb)
+          })).then((() => ub))
+        }(0, Bu.g)(null);
+        let Cb = !1;
+        const nb = hb.pathname + hb.search,
+          ib = () => !Cb && Wb.current === nb;
+        return Lb.then((bb => {
           let {
-            shouldMatchmake: gq,
-            discordContext: Oq
-          } = qq;
-          Zq() && (gq ? cE(null !== Oq && void 0 !== Oq ? Oq : mq.lobbyName, Oq ? "classic" : mq.gameNameWithVariation, mq.directJoinVmUrl).then((qq => {
-            var gq;
-            if (null !== qq && Zq())
-              if (qq.isError()) {
-                var Oq;
-                const xq = qq.asError(),
-                  cq = null !== (Oq = xq.debugResult.severity) && void 0 !== Oq ? Oq : "high";
-                if (xq.code === Wq.h.SHADER_PACK) return void(0, qE.c)(xq.message, Yq);
-                const Bq = lq.b.get("gameEntrySource"),
-                  Nq = xq.code === Wq.h.INITIALISE_WEBGL ? (0, nq.d)() : null,
+            shouldMatchmake: hb,
+            discordContext: Gb
+          } = bb;
+          ib() && (hb ? Su(null !== Gb && void 0 !== Gb ? Gb : Ub.lobbyName, Gb ? "classic" : Ub.gameNameWithVariation, Ub.directJoinVmUrl).then((bb => {
+            var hb;
+            if (null !== bb && ib())
+              if (bb.isError()) {
+                var Gb;
+                const Lb = bb.asError(),
+                  Sb = null !== (Gb = Lb.debugResult.severity) && void 0 !== Gb ? Gb : "high";
+                if (Lb.code === wb.k.SHADER_PACK) return void(0, bu.d)(Lb.message, Bb);
+                const Hb = Ob.d.get("gameEntrySource"),
+                  Zb = Lb.code === wb.k.INITIALISE_WEBGL ? (0, xb.e)() : null,
                   {
-                    error: aq
-                  } = xq.debugResult;
-                let Vq;
-                if (dq(Eq, xq)) Vq = Promise.resolve(!1);
-                else if (null !== Nq) Vq = (0, nq.g)(Nq);
-                else if (aq instanceof bq.m) gq = aq, Vq = uq.NotificationProvider.showPromptPopup({
+                    error: Xb
+                  } = Lb.debugResult;
+                let pb;
+                if (ob(ub, Lb)) pb = Promise.resolve(!1);
+                else if (null !== Zb) pb = (0, xb.l)(Zb);
+                else if (Xb instanceof zb.n) hb = Xb, pb = ab.NotificationProvider.showPromptPopup({
                   icon: "face-dizzy",
                   title: "texturePackLoad:failedTitle",
-                  subtitle: (0, iq.jsx)(fq, {
-                    failure: gq
+                  subtitle: (0, gb.jsx)(vb, {
+                    failure: hb
                   }),
                   confirmText: "general:tryAgain",
                   cancelText: "general:back"
-                }).getResult().then((qq => !0 === qq));
+                }).getResult().then((bb => !0 === bb));
                 else {
-                  let qq;
-                  switch (cq) {
+                  let bb;
+                  switch (Sb) {
                     case "low":
-                      qq = "face-diagonal-mouth";
+                      bb = "face-diagonal-mouth";
                       break;
                     case "medium":
-                      qq = "face-worried";
+                      bb = "face-worried";
                       break;
                     case "high":
-                      qq = "face-dizzy"
+                      bb = "face-dizzy"
                   }
-                  Vq = uq.NotificationProvider.showPromptPopup({
-                    icon: qq,
-                    title: Wq.u[xq.code],
-                    subtitle: (0, iq.jsxs)(iq.Fragment, {
-                      children: [xq.debugResult.gameServerUnreachable ? Eq((0, tq.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable") : xq.message, xq.debugResult.error instanceof Error && (0, iq.jsx)("div", {
+                  pb = ab.NotificationProvider.showPromptPopup({
+                    icon: bb,
+                    title: wb.y[Lb.code],
+                    subtitle: (0, gb.jsxs)(gb.Fragment, {
+                      children: [Lb.debugResult.gameServerUnreachable ? ub((0, rb.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable") : Lb.message, Lb.debugResult.error instanceof Error && (0, gb.jsx)("div", {
                         style: {
                           fontSize: "0.9rem",
                           paddingTop: "1rem"
                         },
-                        children: (0, iq.jsx)(hq.b, {
-                          errorString: xq.debugResult.error.stack
+                        children: (0, gb.jsx)(Db.d, {
+                          errorString: Lb.debugResult.error.stack
                         })
                       })]
                     }),
-                    confirmText: Eq("general:tryAgain"),
-                    cancelText: Eq("general:cancel")
-                  }).getResult().then((qq => !0 === qq))
+                    confirmText: ub("general:tryAgain"),
+                    cancelText: ub("general:cancel")
+                  }).getResult().then((bb => !0 === bb))
                 }
-                Vq.then((qq => {
-                  if (qq) {
-                    (0, lq.f)(Bq);
-                    const qq = (0, Mq.e)(mq.gameNameWithVariation, mq.lobbyName);
-                    "low" === cq ? Yq(qq) : (0, yq.reloadBloxd)(qq)
+                pb.then((bb => {
+                  if (bb) {
+                    (0, Ob.h)(Hb);
+                    const bb = (0, tb.e)(Ub.gameNameWithVariation, Ub.lobbyName);
+                    "low" === Sb ? Bb(bb) : (0, db.reloadBloxd)(bb)
                   }
-                })), Aq.gameBridge.send("leaveGame", {
+                })), Yb.gameBridge.send("leaveGame", {
                   reloadPath: "/"
-                }), Yq(-1)
+                }), Bb(-1)
               } else {
-                Tq.current = qq.getValue().gameNameWithVariation, zq.current = qq.getValue().lobbyName;
-                const Eq = (0, Mq.e)(Tq.current, qq.getValue().lobbyName);
-                Yq(Eq, {
+                Jb.current = bb.getValue().gameNameWithVariation, eb.current = bb.getValue().lobbyName;
+                const ub = (0, tb.e)(Jb.current, bb.getValue().lobbyName);
+                Bb(ub, {
                   replace: !0
                 })
               }
-          })).catch((qq => {
-            if (!Zq()) return;
-            uq.NotificationProvider.showPromptPopup({
+          })).catch((bb => {
+            if (!ib()) return;
+            ab.NotificationProvider.showPromptPopup({
               icon: "face-dizzy",
               title: "Unexpected Error",
-              subtitle: (0, iq.jsxs)(iq.Fragment, {
-                children: [Eq("homePage:pleaseCopyError"), (0, iq.jsx)("div", {
+              subtitle: (0, gb.jsxs)(gb.Fragment, {
+                children: [ub("homePage:pleaseCopyError"), (0, gb.jsx)("div", {
                   style: {
                     fontSize: "0.9rem",
                     paddingTop: "1rem"
                   },
-                  children: (0, iq.jsx)(hq.b, {
-                    errorString: qq.stack
+                  children: (0, gb.jsx)(Db.d, {
+                    errorString: bb.stack
                   })
                 })]
               }),
-              confirmText: Eq("general:tryAgain"),
-              cancelText: Eq("general:cancel")
-            }).getResult().then((qq => {
-              !0 === qq && (0, yq.reloadBloxd)((0, Mq.e)(mq.gameNameWithVariation, mq.lobbyName))
-            })), Yq(-1)
-          })) : Yq(-1))
+              confirmText: ub("general:tryAgain"),
+              cancelText: ub("general:cancel")
+            }).getResult().then((bb => {
+              !0 === bb && (0, db.reloadBloxd)((0, tb.e)(Ub.gameNameWithVariation, Ub.lobbyName))
+            })), Bb(-1)
+          })) : Bb(-1))
         })), () => {
-          Qq = !0
+          Cb = !0
         }
-      }), [Vq, gq.search, gq.pathname]), (0, mq.useEffect)((() => {
-        Zq.disableFullscreen && (0, vq.c)() ? (0, vq.f)() : !Zq.disableFullscreen && (0, vq.d)() && (0, vq.o)()
-      }), [Qq, Zq]), (0, mq.useEffect)((() => {
-        "inGame" === Qq && AE()
-      }), [Qq, Zq]), (0, mq.useEffect)((() => {
-        "inGame" !== Qq && lq.b.set({
+      }), [pb, hb.search, hb.pathname]), (0, Ub.useEffect)((() => {
+        ib.disableFullscreen && (0, nb.e)() ? (0, nb.i)() : !ib.disableFullscreen && (0, nb.g)() && (0, nb.o)()
+      }), [Cb, ib]), (0, Ub.useEffect)((() => {
+        "inGame" === Cb && Yu()
+      }), [Cb, ib]), (0, Ub.useEffect)((() => {
+        "inGame" !== Cb && Ob.d.set({
           openInGameMenuName: null
         })
-      }), [Qq]);
-      const Jq = function(qq) {
-        const Eq = (0, lq.c)(qq),
-          [gq, Yq] = (0, mq.useState)(0),
-          [Oq, Aq] = (0, mq.useState)(!1);
-        (0, xq.f)("gameJoined", (() => {
-          (0, lq.c)(lq.b.get("gameState")) && (Yq((qq => qq + 1)), Aq(!0))
-        })), (0, mq.useEffect)((() => {
-          Eq || Aq(!1)
-        }), [Eq]);
-        const cq = "inGame" === qq;
+      }), [Cb]);
+      const Ib = function(bb) {
+        const ub = (0, Ob.f)(bb),
+          [hb, Bb] = (0, Ub.useState)(0),
+          [Gb, Yb] = (0, Ub.useState)(!1);
+        (0, Lb.h)("gameJoined", (() => {
+          (0, Ob.f)(Ob.d.get("gameState")) && (Bb((bb => bb + 1)), Yb(!0))
+        })), (0, Ub.useEffect)((() => {
+          ub || Yb(!1)
+        }), [ub]);
+        const Sb = "inGame" === bb;
         return {
-          mounted: cq || Eq && Oq,
-          shown: cq,
-          key: gq
+          mounted: Sb || ub && Gb,
+          shown: Sb,
+          key: hb
         }
-      }(Qq);
-      return (0, iq.jsx)(iq.Fragment, {
-        children: Jq.mounted && (0, iq.jsx)(Oq.InGameUi, {
-          shown: Jq.shown
-        }, Jq.key)
+      }(Cb);
+      return (0, gb.jsx)(gb.Fragment, {
+        children: Ib.mounted && (0, gb.jsx)(Gb.InGameUi, {
+          shown: Ib.shown
+        }, Ib.key)
       })
     }
   },
-  4821: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => lq
+  4756: (bb, ub, hb) => {
+    hb.d(ub, {
+      e: () => Ob
     });
-    var Yq = gq(1195);
-    async function lq(qq) {
-      const Eq = await fetch(`${Yq.clientSideServerUrls.s3Url}/${qq}`, {
+    var Bb = hb(1103);
+    async function Ob(bb) {
+      const ub = await fetch(`${Bb.clientSideServerUrls.s3Url}/${bb}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === Eq.status || 403 === Eq.status) return null;
-      if (!Eq.ok) throw new Error(`Failed to download the texture pack (${Eq.status})`);
-      return await Eq.json()
+      if (404 === ub.status || 403 === ub.status) return null;
+      if (!ub.ok) throw new Error(`Failed to download the texture pack (${ub.status})`);
+      return await ub.json()
     }
   },
-  8876: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => mq
+  8642: (bb, ub, hb) => {
+    hb.d(ub, {
+      b: () => Ub
     });
-    var Yq = gq(1313),
-      lq = gq(1214),
-      Oq = gq(598);
+    var Bb = hb(1227),
+      Ob = hb(1124),
+      Gb = hb(588);
 
-    function mq(qq) {
-      return qq = function(qq, Eq) {
-        var gq;
-        const Yq = new URLSearchParams(Eq),
-          lq = Yq.get("lobby"),
-          Oq = Yq.get("vm"),
-          mq = null !== (gq = lq) && void 0 !== gq ? gq : qq.lobbyName,
-          xq = null !== Oq && void 0 !== Oq ? Oq : qq.directJoinVmUrl;
-        if (mq === qq.lobbyName && xq === qq.directJoinVmUrl) return qq;
+    function Ub(bb) {
+      return bb = function(bb, ub) {
+        var hb;
+        const Bb = new URLSearchParams(ub),
+          Ob = Bb.get("lobby"),
+          Gb = Bb.get("vm"),
+          Ub = null !== (hb = Ob) && void 0 !== hb ? hb : bb.lobbyName,
+          Lb = null !== Gb && void 0 !== Gb ? Gb : bb.directJoinVmUrl;
+        if (Ub === bb.lobbyName && Lb === bb.directJoinVmUrl) return bb;
         return {
-          ...qq,
-          lobbyName: mq,
-          directJoinVmUrl: xq
+          ...bb,
+          lobbyName: Ub,
+          directJoinVmUrl: Lb
         }
-      }(qq, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), qq = function(qq) {
-        if ((0, Oq.H)(qq.directJoinVmUrl)) return qq;
-        const Eq = (0, lq.gb)(qq.directJoinVmUrl);
-        null === Eq && (qq.directJoinVmUrl = void 0);
-        return qq
-      }(qq = function(qq) {
-        if ((0, Oq.H)(qq.gameNameWithVariation)) return qq;
-        return qq.gameNameWithVariation = (0, Yq.i)(qq.gameNameWithVariation), qq
-      }(qq))
+      }(bb, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), bb = function(bb) {
+        if ((0, Gb.J)(bb.directJoinVmUrl)) return bb;
+        const ub = (0, Ob.jb)(bb.directJoinVmUrl);
+        null === ub && (bb.directJoinVmUrl = void 0);
+        return bb
+      }(bb = function(bb) {
+        if ((0, Gb.J)(bb.gameNameWithVariation)) return bb;
+        return bb.gameNameWithVariation = (0, Bb.o)(bb.gameNameWithVariation), bb
+      }(bb))
     }
   },
-  8867: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Oq,
-      h: () => lq
+  8633: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => Gb,
+      g: () => Ob
     });
-    let Yq = !1;
+    let Bb = !1;
 
-    function lq() {
-      Yq = !0
+    function Ob() {
+      Bb = !0
     }
 
-    function Oq() {
-      return Yq
+    function Gb() {
+      return Bb
     }
   },
-  8860: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => uq,
-      g: () => Bq
+  8631: (bb, ub, hb) => {
+    hb.d(ub, {
+      c: () => ab,
+      g: () => Hb
     });
-    var Yq = gq(3056),
-      lq = gq(2254),
-      Oq = gq(3090),
-      mq = gq(4472),
-      xq = gq(3383),
-      Aq = gq(8867);
-    let cq = null;
+    var Bb = hb(2941),
+      Ob = hb(2161),
+      Gb = hb(2987),
+      Ub = hb(4413),
+      Lb = hb(3291),
+      Yb = hb(8633);
+    let Sb = null;
 
-    function uq() {
-      return mq.b.cancelDownloadForJoin(), (0, xq.b)(), (0, lq.g)(), (0, Aq.h)(), (0, Oq.d)(), Promise.all([gq.e(70), gq.e(73), gq.e(72), gq.e(71), gq.e(84), gq.e(261), gq.e(200), gq.e(218), gq.e(239), gq.e(213), gq.e(46)]).then((() => gq(40404))).catch((() => {})), Promise.all([gq.e(75), gq.e(133), gq.e(88), gq.e(56)]).then((() => gq(40483))).then((qq => {
+    function ab() {
+      return Ub.c.cancelDownloadForJoin(), (0, Lb.e)(), (0, Ob.h)(), (0, Yb.g)(), (0, Gb.i)(), Promise.all([hb.e(70), hb.e(73), hb.e(72), hb.e(71), hb.e(84), hb.e(261), hb.e(200), hb.e(218), hb.e(239), hb.e(213), hb.e(46)]).then((() => hb(40127))).catch((() => {})), Promise.all([hb.e(75), hb.e(133), hb.e(88), hb.e(56)]).then((() => hb(40192))).then((bb => {
         let {
-          startJoinLoad: Eq
-        } = qq;
-        Eq()
-      }), (() => {})), cq ??= Promise.all([gq.e(72), gq.e(75), gq.e(130), gq.e(74), gq.e(133), gq.e(263), gq.e(187), gq.e(88), gq.e(87), gq.e(86), gq.e(213), gq.e(61)]).then((() => gq(40581))).then((qq => (qq.startWasmPlay(), qq.followPageUiPack((qq => {
-        Yq.c.showGamePack(qq)
-      })), qq)), (qq => {
-        throw cq = null, qq
-      })), cq
+          startJoinLoad: ub
+        } = bb;
+        ub()
+      }), (() => {})), Sb ??= Promise.all([hb.e(72), hb.e(75), hb.e(130), hb.e(74), hb.e(133), hb.e(263), hb.e(187), hb.e(88), hb.e(87), hb.e(86), hb.e(213), hb.e(61)]).then((() => hb(40288))).then((bb => (bb.startWasmPlay(), bb.followPageUiPack((bb => {
+        Bb.b.showGamePack(bb)
+      })), bb)), (bb => {
+        throw Sb = null, bb
+      })), Sb
     }
 
-    function Bq() {
-      return Promise.all([gq.e(72), gq.e(75), gq.e(130), gq.e(74), gq.e(133), gq.e(263), gq.e(187), gq.e(88), gq.e(87), gq.e(86), gq.e(213), gq.e(61)]).then((() => gq(40581))).then((qq => {
-        qq.startWasmPreviews(), qq.prefetchWasmPreviews()
+    function Hb() {
+      return Promise.all([hb.e(72), hb.e(75), hb.e(130), hb.e(74), hb.e(133), hb.e(263), hb.e(187), hb.e(88), hb.e(87), hb.e(86), hb.e(213), hb.e(61)]).then((() => hb(40288))).then((bb => {
+        bb.startWasmPreviews(), bb.prefetchWasmPreviews()
       }))
     }
   },
-  8858: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq,
-      f: () => mq,
-      i: () => xq,
-      j: () => cq,
-      l: () => Aq
+  8626: (bb, ub, hb) => {
+    hb.d(ub, {
+      d: () => Gb,
+      e: () => Ub,
+      h: () => Lb,
+      k: () => Sb,
+      n: () => Yb
     });
-    var Yq = gq(190),
-      lq = gq(4456);
+    var Bb = hb(191),
+      Ob = hb(4393);
 
-    function Oq(qq) {
-      return mq(qq) === Yq.b.gameOrPluginOnPlayerAuthRejected.code
+    function Gb(bb) {
+      return Ub(bb) === Bb.d.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function mq(qq) {
-      return "object" === typeof qq && null !== qq ? qq.code : void 0
+    function Ub(bb) {
+      return "object" === typeof bb && null !== bb ? bb.code : void 0
     }
 
-    function xq(qq) {
-      var Eq;
-      return null !== (Eq = Object.keys(lq.c).find((Eq => lq.c[Eq] === qq))) && void 0 !== Eq ? Eq : null
+    function Lb(bb) {
+      var ub;
+      return null !== (ub = Object.keys(Ob.c).find((ub => Ob.c[ub] === bb))) && void 0 !== ub ? ub : null
     }
 
-    function Aq(qq) {
-      return "notWhitelisted" === qq ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function Yb(bb) {
+      return "notWhitelisted" === bb ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const cq = {
+    const Sb = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
@@ -707,4 +707,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const bb in modules) Object.freeze(modules[bb]);
