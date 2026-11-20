@@ -1,22 +1,22 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  38873: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      default: () => Rk
+  38835: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      default: () => kb
     });
-    const Rk = function(kk, Fk, Bk) {
-      let Rk;
+    const kb = function(bb, cb, sb) {
+      let kb;
       return {
-        onCreate: kk => {
-          Rk = kk
+        onCreate: bb => {
+          kb = bb
         },
-        onPlayerAltAction: (kk, Fk, Bk, tk, ak, Xk) => {
-          Xk && "Mesh" === Rk.getEntityType(Xk) && ("Permanent Upgrades" === Rk.getEntityName(Xk) ? Rk.openShop(kk, !1, "Upgrades") : "Items" === Rk.getEntityName(Xk) ? Rk.openShop(kk, !1, "Items") : "Prestige" === Rk.getEntityName(Xk) && Rk.openShop(kk, !1, "Prestige"))
+        onPlayerAltAction: (bb, cb, sb, Wb, ab, Tb) => {
+          Tb && "Mesh" === kb.getEntityType(Tb) && ("Permanent Upgrades" === kb.getEntityName(Tb) ? kb.openShop(bb, !1, "Upgrades") : "Items" === kb.getEntityName(Tb) ? kb.openShop(bb, !1, "Items") : "Prestige" === kb.getEntityName(Tb) && kb.openShop(bb, !1, "Prestige"))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

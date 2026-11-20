@@ -1,53 +1,53 @@
 export const id = 83;
 export const ids = [83];
 export const modules = {
-  4507: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => ik,
-      d: () => mk
+  4493: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Vb,
+      g: () => eb
     });
-    var Rk = Bk(1253),
-      tk = Bk(29);
-    var ak = Bk(291);
-    var Xk = Bk(606);
-    var bk = Bk(2303),
-      wk = Bk(4511),
-      dk = Bk(4533),
-      sk = Bk(4546);
-    class Vk {
-      constructor(kk, Fk, Bk, Rk, tk, ak) {
-        this.id = kk, this.type = Fk, this.parameters = Bk, this.tearDownNotification = Rk, this.onDonePromise = tk, this.resolveRequest = ak
+    var kb = sb(1294),
+      Wb = sb(26);
+    var ab = sb(344);
+    var Tb = sb(628);
+    var Ub = sb(2305),
+      Ib = sb(4498),
+      Hb = sb(4523),
+      fb = sb(4536);
+    class Mb {
+      constructor(bb, cb, sb, kb, Wb, ab) {
+        this.id = bb, this.type = cb, this.parameters = sb, this.tearDownNotification = kb, this.onDonePromise = Wb, this.resolveRequest = ab
       }
     }
-    const Jk = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
-    class Ak {
-      constructor(kk, Fk, Bk, Rk, tk, ak) {
-        this.id = kk, this.type = Fk, this.parameters = Bk, this.resolveRequest = Rk, this.onDonePromise = tk, this.tearDownNotification = ak, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
-        const Xk = mk[Fk];
-        if (!Xk) throw console.error(`No QTE implementation registered for type: ${Fk}`), new Error(`No QTE implementation registered for type: ${Fk}`);
-        this.implementation = new Xk(Bk, (kk => {
-          this.isCompleted = !0, this.resolveRequest(kk)
+    const Xb = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class nb {
+      constructor(bb, cb, sb, kb, Wb, ab) {
+        this.id = bb, this.type = cb, this.parameters = sb, this.resolveRequest = kb, this.onDonePromise = Wb, this.tearDownNotification = ab, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const Tb = eb[cb];
+        if (!Tb) throw console.error(`No QTE implementation registered for type: ${cb}`), new Error(`No QTE implementation registered for type: ${cb}`);
+        this.implementation = new Tb(sb, (bb => {
+          this.isCompleted = !0, this.resolveRequest(bb)
         }), this.tearDownNotification), this.setupInputHandlers()
       }
       setupInputHandlers() {
-        this.mouseSub = tk.o.subscribe("QTEMouseState", (kk => {
+        this.mouseSub = Wb.j.subscribe("QTEMouseState", (bb => {
           let {
-            isDown: Fk
-          } = kk;
-          this.isCompleted || this.implementation.handleMouseInput(Fk)
-        })), this.stopInputActions = (0, dk.l)((kk => {
-          this.isCompleted || !Jk.has(kk.action) && !(0, dk.h)(kk) || this.implementation.handleMouseInput(kk.down)
-        })), this.tickSub = tk.o.subscribe("noaTick", (kk => {
+            isDown: cb
+          } = bb;
+          this.isCompleted || this.implementation.handleMouseInput(cb)
+        })), this.stopInputActions = (0, Hb.i)((bb => {
+          this.isCompleted || !Xb.has(bb.action) && !(0, Hb.h)(bb) || this.implementation.handleMouseInput(bb.down)
+        })), this.tickSub = Wb.j.subscribe("noaTick", (bb => {
           if (this.isCompleted) return;
-          const Fk = kk / 1e3;
-          this.implementation.handleTick(Fk)
-        })), this.stopShellTicks = (0, wk.x)((() => {
-          this.isCompleted || this.implementation.handleTick(bk.u / 1e3)
+          const cb = bb / 1e3;
+          this.implementation.handleTick(cb)
+        })), this.stopShellTicks = (0, Ib.C)((() => {
+          this.isCompleted || this.implementation.handleTick(Ub.s / 1e3)
         }))
       }
       cleanup() {
-        var kk, Fk;
-        this.mouseSub && (tk.o.unsubscribe(this.mouseSub), this.mouseSub = null), null === (kk = this.stopInputActions) || void 0 === kk || kk.call(this), this.stopInputActions = null, null === (Fk = this.stopShellTicks) || void 0 === Fk || Fk.call(this), this.stopShellTicks = null, this.tickSub && (tk.o.unsubscribe(this.tickSub), this.tickSub = null)
+        var bb, cb;
+        this.mouseSub && (Wb.j.unsubscribe(this.mouseSub), this.mouseSub = null), null === (bb = this.stopInputActions) || void 0 === bb || bb.call(this), this.stopInputActions = null, null === (cb = this.stopShellTicks) || void 0 === cb || cb.call(this), this.stopShellTicks = null, this.tickSub && (Wb.j.unsubscribe(this.tickSub), this.tickSub = null)
       }
       async waitUntilDone() {
         await this.onDonePromise
@@ -59,28 +59,28 @@ export const modules = {
         this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
-    const ek = new Rk.c,
-      yk = new Map;
-    let fk = null;
-    const mk = {
+    const mb = new kb.d,
+      lb = new Map;
+    let Qb = null;
+    const eb = {
       progressBar: class {
-        constructor(kk, Fk, Bk) {
-          var Rk, tk, ak, Xk;
-          this.resolveRequest = Fk, this.tearDownNotification = Bk, this.progress = 0, this.Gk = void 0, this.Tk = void 0, this.rk = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
-          const bk = kk;
-          this.Gk = null !== (Rk = bk.Gk) && void 0 !== Rk ? Rk : .075, this.Tk = null !== (tk = bk.Tk) && void 0 !== tk ? tk : 1, this.progress = null !== (ak = bk.Uk) && void 0 !== ak ? ak : 30, this.rk = null !== (Xk = bk.rk) && void 0 !== Xk && Xk, this.parameters = bk
+        constructor(bb, cb, sb) {
+          var kb, Wb, ab, Tb;
+          this.resolveRequest = cb, this.tearDownNotification = sb, this.progress = 0, this.Kb = void 0, this.Zb = void 0, this.zb = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const Ub = bb;
+          this.Kb = null !== (kb = Ub.Kb) && void 0 !== kb ? kb : .075, this.Zb = null !== (Wb = Ub.Zb) && void 0 !== Wb ? Wb : 1, this.progress = null !== (ab = Ub.Gb) && void 0 !== ab ? ab : 30, this.zb = null !== (Tb = Ub.zb) && void 0 !== Tb && Tb, this.parameters = Ub
         }
-        handleMouseInput(kk) {
-          kk && !this.isCompleted && (this.clickCount++, this.progress += this.Tk, this.progress >= 100 && this.complete(!0))
+        handleMouseInput(bb) {
+          bb && !this.isCompleted && (this.clickCount++, this.progress += this.Zb, this.progress >= 100 && this.complete(!0))
         }
         handleTick() {
           if (!this.isCompleted)
-            if (this.progress -= this.Gk, this.rk && this.progress <= 0) this.complete(!1);
+            if (this.progress -= this.Kb, this.zb && this.progress <= 0) this.complete(!1);
             else if (this.progress <= 0) this.progress = 0;
           else if (this.progress >= 100) return void this.complete(!0)
         }
-        complete(kk) {
-          this.isCompleted = !0, this.resolveRequest(kk)
+        complete(bb) {
+          this.isCompleted = !0, this.resolveRequest(bb)
         }
         getState() {
           return {
@@ -98,30 +98,30 @@ export const modules = {
         }
       },
       timedClick: class {
-        constructor(kk, Fk, Bk) {
-          var Rk;
-          this.resolveRequest = Fk, this.tearDownNotification = Bk, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = kk, this.timeWindowMs = null !== (Rk = this.parameters.qk) && void 0 !== Rk ? Rk : 3e3, this.startTime = Date.now()
+        constructor(bb, cb, sb) {
+          var kb;
+          this.resolveRequest = cb, this.tearDownNotification = sb, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = bb, this.timeWindowMs = null !== (kb = this.parameters.Rb) && void 0 !== kb ? kb : 3e3, this.startTime = Date.now()
         }
-        handleMouseInput(kk) {
-          if (!kk || this.isCompleted) return;
+        handleMouseInput(bb) {
+          if (!bb || this.isCompleted) return;
           Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
         }
         handleTick() {
           if (this.isCompleted) return;
           Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
         }
-        complete(kk) {
-          this.isCompleted = !0, this.resolveRequest(kk)
+        complete(bb) {
+          this.isCompleted = !0, this.resolveRequest(bb)
         }
         getState() {
-          const kk = Date.now() - this.startTime,
-            Fk = Math.max(0, this.timeWindowMs - kk);
+          const bb = Date.now() - this.startTime,
+            cb = Math.max(0, this.timeWindowMs - bb);
           return {
             type: this.type,
             parameters: this.parameters,
             state: {
-              timeRemaining: Fk,
-              qk: this.timeWindowMs
+              timeRemaining: cb,
+              Rb: this.timeWindowMs
             },
             isActive: !0
           }
@@ -131,49 +131,49 @@ export const modules = {
         }
       },
       gravityBar: class {
-        constructor(kk, Fk, Bk) {
-          var Rk;
-          this.resolveRequest = Fk, this.tearDownNotification = Bk, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
-          const tk = kk;
+        constructor(bb, cb, sb) {
+          var kb;
+          this.resolveRequest = cb, this.tearDownNotification = sb, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const Wb = bb;
           this.parameters = {
-            ...tk,
-            xk: ak.b.clamp(tk.xk, .05, 1)
-          }, this.progress = null !== (Rk = tk.Uk) && void 0 !== Rk ? Rk : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+            ...Wb,
+            pb: ab.d.clamp(Wb.pb, .05, 1)
+          }, this.progress = null !== (kb = Wb.Gb) && void 0 !== kb ? kb : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
-        handleMouseInput(kk) {
-          this.isMouseDown = kk
+        handleMouseInput(bb) {
+          this.isMouseDown = bb
         }
-        handleTick(kk) {
-          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(kk))
+        handleTick(bb) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(bb))
         }
         updateMover() {
           this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
-          const kk = Math.sign(this.moverTarget - this.moverPosition);
-          this.moverPosition += kk * this.parameters.jk * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+          const bb = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += bb * this.parameters.bc * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
         }
         pickNewMoverTarget() {
           this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
         randomNumTicksUntilDirectionChange() {
-          const kk = ak.b.clamp(1 - .7 * this.parameters.lk, 0, 1.4);
-          return Math.floor(60 * kk + 40 * Math.random())
+          const bb = ab.d.clamp(1 - .7 * this.parameters.sc, 0, 1.4);
+          return Math.floor(60 * bb + 40 * Math.random())
         }
         updateCatchZone() {
-          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.nk : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = ak.b.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
-          const kk = this.parameters.xk / 2,
-            Fk = kk,
-            Bk = 1 - kk;
-          this.catchZonePosition <= Fk ? (this.catchZonePosition = Fk, this.catchZoneVelocity = 0) : this.catchZonePosition >= Bk && (this.catchZonePosition = Bk, this.catchZoneVelocity = 0)
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.kc : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = ab.d.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const bb = this.parameters.pb / 2,
+            cb = bb,
+            sb = 1 - bb;
+          this.catchZonePosition <= cb ? (this.catchZonePosition = cb, this.catchZoneVelocity = 0) : this.catchZonePosition >= sb && (this.catchZonePosition = sb, this.catchZoneVelocity = 0)
         }
         isMoverInCatchZone() {
-          const kk = this.parameters.xk / 2;
-          return this.moverPosition >= this.catchZonePosition - kk && this.moverPosition <= this.catchZonePosition + kk
+          const bb = this.parameters.pb / 2;
+          return this.moverPosition >= this.catchZonePosition - bb && this.moverPosition <= this.catchZonePosition + bb
         }
-        updateProgress(kk) {
-          this.isMoverInCatchZone() ? this.progress += this.parameters.Ik * kk : this.progress -= this.parameters.Qk * kk, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.rk && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        updateProgress(bb) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.Wc * bb : this.progress -= this.parameters.ac * bb, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.zb && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
         }
-        complete(kk) {
-          this.isCompleted = !0, this.resolveRequest(kk)
+        complete(bb) {
+          this.isCompleted = !0, this.resolveRequest(bb)
         }
         getState() {
           return {
@@ -181,7 +181,7 @@ export const modules = {
             parameters: this.parameters,
             state: {
               catchZonePosition: this.catchZonePosition,
-              xk: this.parameters.xk,
+              pb: this.parameters.pb,
               moverPosition: this.moverPosition,
               progress: this.progress,
               isCatching: this.isMoverInCatchZone()
@@ -194,38 +194,38 @@ export const modules = {
         }
       },
       precisionBar: class {
-        constructor(kk, Fk, Bk) {
-          var Rk, tk, Xk, bk, wk;
-          this.resolveRequest = Fk, this.tearDownNotification = Bk, this.startTime = void 0, this.speed = void 0, this.FF = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
-          const dk = kk;
+        constructor(bb, cb, sb) {
+          var kb, Wb, Tb, Ub, Ib;
+          this.resolveRequest = cb, this.tearDownNotification = sb, this.startTime = void 0, this.speed = void 0, this.Uc = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const Hb = bb;
           this.parameters = {
-            ...dk,
-            speed: null !== (Rk = dk.speed) && void 0 !== Rk ? Rk : .5,
-            FF: ak.b.clamp(dk.FF, .05, 1),
-            label: null !== (tk = dk.label) && void 0 !== tk ? tk : [{
+            ...Hb,
+            speed: null !== (kb = Hb.speed) && void 0 !== kb ? kb : .5,
+            Uc: ab.d.clamp(Hb.Uc, .05, 1),
+            label: null !== (Wb = Hb.label) && void 0 !== Wb ? Wb : [{
               str: "Click when the marker is within the green zone."
             }],
-            icon: null !== (Xk = dk.icon) && void 0 !== Xk ? Xk : null,
-            scale: null !== (bk = dk.scale) && void 0 !== bk ? bk : 1,
-            rotation: null !== (wk = dk.rotation) && void 0 !== wk ? wk : 0
-          }, this.speed = this.parameters.speed, this.FF = this.parameters.FF, this.startTime = Date.now()
+            icon: null !== (Tb = Hb.icon) && void 0 !== Tb ? Tb : null,
+            scale: null !== (Ub = Hb.scale) && void 0 !== Ub ? Ub : 1,
+            rotation: null !== (Ib = Hb.rotation) && void 0 !== Ib ? Ib : 0
+          }, this.speed = this.parameters.speed, this.Uc = this.parameters.Uc, this.startTime = Date.now()
         }
-        handleMouseInput(kk) {
-          if (kk) {
+        handleMouseInput(bb) {
+          if (bb) {
             this.updateMarkerPosition();
-            const kk = Math.abs(this.markerPosition - .5) <= this.FF / 2;
-            this.complete(kk)
+            const bb = Math.abs(this.markerPosition - .5) <= this.Uc / 2;
+            this.complete(bb)
           }
         }
         handleTick() {
           this.isCompleted || this.updateMarkerPosition()
         }
         updateMarkerPosition() {
-          const kk = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
-          this.markerPosition = kk <= .5 ? 2 * kk : 2 - 2 * kk
+          const bb = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = bb <= .5 ? 2 * bb : 2 - 2 * bb
         }
-        complete(kk) {
-          this.isCompleted = !0, this.resolveRequest(kk)
+        complete(bb) {
+          this.isCompleted = !0, this.resolveRequest(bb)
         }
         getState() {
           return this.updateMarkerPosition(), {
@@ -242,29 +242,29 @@ export const modules = {
         }
       },
       rhythmClick: class {
-        constructor(kk, Fk, Bk) {
-          this.resolveRequest = Fk, this.tearDownNotification = Bk, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = kk, this.shrinkStartTime = Date.now()
+        constructor(bb, cb, sb) {
+          this.resolveRequest = cb, this.tearDownNotification = sb, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = bb, this.shrinkStartTime = Date.now()
         }
-        handleMouseInput(kk) {
-          if (!kk || this.isCompleted) return;
-          const Fk = this.getOuterCircleProgress();
-          if (Fk <= this.parameters.aF && Fk >= -this.parameters.aF) {
-            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.RF) return void this.complete(!0)
+        handleMouseInput(bb) {
+          if (!bb || this.isCompleted) return;
+          const cb = this.getOuterCircleProgress();
+          if (cb <= this.parameters.Mc && cb >= -this.parameters.Mc) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.Hc) return void this.complete(!0)
           } else this.handleMiss();
           this.shrinkStartTime = Date.now()
         }
         handleMiss() {
-          this.misses++, this.lastClickResult = !1, !(0, Xk.F)(this.parameters.XF) && this.misses > this.parameters.XF ? this.complete(!1) : this.shrinkStartTime = Date.now()
+          this.misses++, this.lastClickResult = !1, !(0, Tb.L)(this.parameters.Xc) && this.misses > this.parameters.Xc ? this.complete(!1) : this.shrinkStartTime = Date.now()
         }
         handleTick() {
           if (this.isCompleted) return;
-          this.getOuterCircleProgress() < -this.parameters.aF && this.handleMiss()
+          this.getOuterCircleProgress() < -this.parameters.Mc && this.handleMiss()
         }
         getOuterCircleProgress() {
-          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.tF
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.fc
         }
-        complete(kk) {
-          this.isCompleted = !0, this.resolveRequest(kk)
+        complete(bb) {
+          this.isCompleted = !0, this.resolveRequest(bb)
         }
         getState() {
           return {
@@ -273,7 +273,7 @@ export const modules = {
             state: {
               outerCircleProgress: this.getOuterCircleProgress(),
               successes: this.successes,
-              RF: this.parameters.RF,
+              Hc: this.parameters.Hc,
               misses: this.misses,
               lastClickResult: this.lastClickResult
             },
@@ -286,61 +286,61 @@ export const modules = {
       }
     };
 
-    function Wk() {
-      (0, sk.i)(bk.A.Qte, fk ? bk.A.Qte : 0), fk ? tk.o.Hf("qteStateUpdated", fk.getState()) : tk.o.Hf("qteStateUpdated", {
+    function Cb() {
+      (0, fb.d)(Ub.z.Qte, Qb ? Ub.z.Qte : 0), Qb ? Wb.j.QQ("qteStateUpdated", Qb.getState()) : Wb.j.QQ("qteStateUpdated", {
         type: null,
         typeSpecificParameters: null,
         isActive: !1
       })
     }
-    class vk {
-      constructor(kk, Fk) {
-        this.resultPromise = kk, this.tearDownQTE = Fk
+    class Nb {
+      constructor(bb, cb) {
+        this.resultPromise = bb, this.tearDownQTE = cb
       }
-      static create(kk, Fk, Bk) {
-        const Rk = Promise.race([kk, Fk]);
-        return new vk(Rk, Bk)
+      static create(bb, cb, sb) {
+        const kb = Promise.race([bb, cb]);
+        return new Nb(kb, sb)
       }
       async getResult() {
         return await this.resultPromise
       }
     }
-    class ik {
-      static queueQTE(kk, Fk, Bk) {
-        let Rk, tk;
-        const ak = new Promise((kk => {
-            Rk = kk
+    class Vb {
+      static queueQTE(bb, cb, sb) {
+        let kb, Wb;
+        const ab = new Promise((bb => {
+            kb = bb
           })),
-          Xk = new Promise((kk => {
-            tk = () => {
-              kk("qteTornDown")
+          Tb = new Promise((bb => {
+            Wb = () => {
+              bb("qteTornDown")
             }
           })),
-          bk = Promise.race([ak, Xk]).then((() => {})),
-          wk = new Vk(kk, Fk, Bk, tk, bk, Rk);
-        return yk.set(kk, wk), ek.enqueue(wk), fk || this.processNextQTE(), vk.create(ak, Xk, tk)
+          Ub = Promise.race([ab, Tb]).then((() => {})),
+          Ib = new Mb(bb, cb, sb, Wb, Ub, kb);
+        return lb.set(bb, Ib), mb.enqueue(Ib), Qb || this.processNextQTE(), Nb.create(ab, Tb, Wb)
       }
       static async processNextQTE() {
-        if (fk || ek.Se()) return void(ek.Se() && fk && (fk = null, Wk()));
-        const kk = await ek.dequeue();
-        if (!yk.has(kk.id)) return void await this.processNextQTE();
-        yk.delete(kk.id);
-        const Fk = new Ak(kk.id, kk.type, kk.parameters, kk.resolveRequest, kk.onDonePromise, kk.tearDownNotification);
-        fk = Fk, Wk();
+        if (Qb || mb.Ym()) return void(mb.Ym() && Qb && (Qb = null, Cb()));
+        const bb = await mb.dequeue();
+        if (!lb.has(bb.id)) return void await this.processNextQTE();
+        lb.delete(bb.id);
+        const cb = new nb(bb.id, bb.type, bb.parameters, bb.resolveRequest, bb.onDonePromise, bb.tearDownNotification);
+        Qb = cb, Cb();
         try {
-          await Fk.waitUntilDone()
-        } catch (Bk) {
-          console.error("Error while waiting for QTE to resolve:", Bk.stack)
+          await cb.waitUntilDone()
+        } catch (sb) {
+          console.error("Error while waiting for QTE to resolve:", sb.stack)
         }
-        fk === Fk && (fk.cleanup(), fk = null, Wk()), await this.processNextQTE()
+        Qb === cb && (Qb.cleanup(), Qb = null, Cb()), await this.processNextQTE()
       }
-      static cancelQTE(kk) {
-        if (fk && fk.id === kk) return fk.tearDown(), fk = null, Wk(), void this.processNextQTE();
-        const Fk = yk.get(kk);
-        Fk && (yk.delete(kk), Fk.tearDownNotification())
+      static cancelQTE(bb) {
+        if (Qb && Qb.id === bb) return Qb.tearDown(), Qb = null, Cb(), void this.processNextQTE();
+        const cb = lb.get(bb);
+        cb && (lb.delete(bb), cb.tearDownNotification())
       }
       static getCurrentState() {
-        return fk ? fk.getState() : {
+        return Qb ? Qb.getState() : {
           type: null,
           parameters: null,
           state: null,
@@ -348,60 +348,60 @@ export const modules = {
         }
       }
       static reset() {
-        fk && (fk.tearDown(), fk = null), yk.forEach(((kk, Fk) => {
-          this.cancelQTE(Fk)
-        })), ek.emptyQueue(), yk.clear(), Wk()
+        Qb && (Qb.tearDown(), Qb = null), lb.forEach(((bb, cb) => {
+          this.cancelQTE(cb)
+        })), mb.emptyQueue(), lb.clear(), Cb()
       }
     }
   },
-  4531: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      $: () => Hk,
-      A: () => ek,
-      Cb: () => zk,
-      D: () => Kk,
-      Db: () => ck,
-      F: () => dk,
-      Fb: () => Tk,
-      G: () => yk,
-      H: () => wk,
-      Jb: () => rk,
-      Kb: () => vk,
-      L: () => Jk,
-      Lb: () => ik,
-      N: () => Vk,
-      O: () => Ok,
-      Ob: () => hk,
-      R: () => Sk,
-      Rb: () => tk,
-      T: () => Nk,
-      Tb: () => pk,
-      X: () => Ek,
-      bb: () => Pk,
-      d: () => Zk,
-      fb: () => Dk,
-      g: () => Ck,
-      h: () => sk,
-      i: () => Wk,
-      j: () => qk,
-      jb: () => Gk,
-      kb: () => uk,
-      m: () => mk,
-      ob: () => Uk,
-      pb: () => Mk,
-      q: () => fk,
-      qb: () => Ak,
-      t: () => Xk,
-      tb: () => Lk,
-      u: () => bk,
-      vb: () => Yk,
-      y: () => Rk,
-      yb: () => gk,
-      z: () => ak
+  4517: (bb, cb, sb) => {
+    sb.d(cb, {
+      Ab: () => Lb,
+      B: () => mb,
+      D: () => ob,
+      Db: () => Pb,
+      Eb: () => Zb,
+      G: () => Hb,
+      Gb: () => Eb,
+      I: () => lb,
+      Ib: () => Ob,
+      L: () => Ib,
+      Lb: () => Gb,
+      Nb: () => Nb,
+      O: () => Xb,
+      Rb: () => Vb,
+      S: () => Mb,
+      U: () => Yb,
+      Vb: () => qb,
+      X: () => Jb,
+      Xb: () => Wb,
+      Yb: () => rb,
+      _: () => gb,
+      ab: () => hb,
+      d: () => wb,
+      db: () => Bb,
+      f: () => Ab,
+      fb: () => zb,
+      h: () => fb,
+      hb: () => Kb,
+      i: () => Cb,
+      jb: () => ib,
+      k: () => db,
+      l: () => eb,
+      n: () => Qb,
+      nb: () => tb,
+      p: () => Tb,
+      rb: () => Db,
+      sb: () => yb,
+      t: () => Ub,
+      v: () => kb,
+      vb: () => nb,
+      xb: () => ub,
+      y: () => ab
     });
-    const Rk = 32,
-      tk = 33.333333333333336,
-      ak = {
+    const kb = 32,
+      Wb = 33.333333333333336,
+      ab = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -435,18 +435,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      Xk = {
+      Tb = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      bk = {
+      Ub = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      wk = {
+      Ib = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -454,20 +454,20 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      dk = {
+      Hb = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      sk = {
+      fb = {
         Look: 0,
         Remesh: 1
       },
-      Vk = 8,
-      Jk = 1,
-      Ak = {
+      Mb = 8,
+      Xb = 1,
+      nb = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -476,7 +476,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      ek = {
+      mb = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -504,12 +504,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      yk = {
+      lb = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      fk = {
+      Qb = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -561,7 +561,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      mk = {
+      eb = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -571,10 +571,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      Wk = 4,
-      vk = 4,
-      ik = 65535,
-      Yk = {
+      Cb = 4,
+      Nb = 4,
+      Vb = 65535,
+      Lb = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -587,7 +587,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      Lk = {
+      ub = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -595,12 +595,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      Ok = 88,
-      Ek = 0,
-      Sk = 24,
-      Nk = 48,
-      Hk = 80,
-      uk = {
+      Yb = 88,
+      hb = 0,
+      Jb = 24,
+      gb = 48,
+      Bb = 80,
+      tb = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -611,18 +611,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      Mk = {
+      yb = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      gk = {
+      Pb = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Uk = {
+      Db = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -640,34 +640,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      ck = {
+      Eb = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      Gk = 65535,
-      Tk = {
+      ib = 65535,
+      Ob = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      rk = {
+      Gb = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      Dk = 2,
-      zk = {
+      Kb = 2,
+      Zb = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      Pk = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      hk = {
+      zb = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      qb = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -679,7 +679,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      qk = {
+      db = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -706,7 +706,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      Ck = {
+      Ab = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -864,8 +864,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      Zk = 8,
-      pk = {
+      wb = 8,
+      rb = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -890,289 +890,289 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      Kk = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      ob = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  4511: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      A: () => Hk,
-      B: () => uk,
-      D: () => Wk,
-      G: () => Xk,
-      J: () => bk,
-      N: () => Sk,
-      b: () => Ek,
-      e: () => ik,
-      h: () => gk,
-      l: () => Mk,
-      m: () => mk,
-      p: () => Lk,
-      s: () => vk,
-      t: () => Yk,
-      x: () => Nk
+  4498: (bb, cb, sb) => {
+    sb.d(cb, {
+      C: () => gb,
+      G: () => Bb,
+      H: () => tb,
+      L: () => Cb,
+      M: () => Tb,
+      N: () => Ub,
+      P: () => Jb,
+      c: () => hb,
+      g: () => Vb,
+      k: () => Pb,
+      o: () => yb,
+      r: () => eb,
+      u: () => ub,
+      v: () => Nb,
+      y: () => Lb
     });
-    var Rk = Bk(4517);
-    const tk = {
+    var kb = sb(4507);
+    const Wb = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let ak = tk;
+    let ab = Wb;
 
-    function Xk(kk) {
-      ak = null !== kk && void 0 !== kk ? kk : tk
+    function Tb(bb) {
+      ab = null !== bb && void 0 !== bb ? bb : Wb
     }
 
-    function bk() {
-      return ak
+    function Ub() {
+      return ab
     }
-    const wk = new Set,
-      dk = new Set;
-    let sk = -1;
-    const Vk = new Set,
-      Jk = new Set;
-    let Ak = 0,
-      ek = 0;
-    const yk = new Set,
-      fk = new Set;
+    const Ib = new Set,
+      Hb = new Set;
+    let fb = -1;
+    const Mb = new Set,
+      Xb = new Set;
+    let nb = 0,
+      mb = 0;
+    const lb = new Set,
+      Qb = new Set;
 
-    function mk(kk) {
-      return wk.add(kk), () => {
-        wk.delete(kk)
+    function eb(bb) {
+      return Ib.add(bb), () => {
+        Ib.delete(bb)
       }
     }
 
-    function Wk(kk, Fk) {
-      for (const Rk of wk) try {
-        Rk(kk)
-      } catch (Bk) {
-        Fk(Bk)
+    function Cb(bb, cb) {
+      for (const kb of Ib) try {
+        kb(bb)
+      } catch (sb) {
+        cb(sb)
       }
     }
 
-    function vk(kk) {
-      return dk.add(kk), () => {
-        dk.delete(kk)
+    function Nb(bb) {
+      return Hb.add(bb), () => {
+        Hb.delete(bb)
       }
     }
 
-    function ik(kk, Fk) {
-      const Bk = sk < 0 ? 0 : kk - sk;
-      sk = kk;
-      for (const tk of dk) try {
-        tk(Bk)
-      } catch (Rk) {
-        Fk(Rk)
+    function Vb(bb, cb) {
+      const sb = fb < 0 ? 0 : bb - fb;
+      fb = bb;
+      for (const Wb of Hb) try {
+        Wb(sb)
+      } catch (kb) {
+        cb(kb)
       }
     }
 
-    function Yk(kk) {
-      return Vk.add(kk), () => {
-        Vk.delete(kk)
+    function Lb(bb) {
+      return Mb.add(bb), () => {
+        Mb.delete(bb)
       }
     }
 
-    function Lk(kk) {
-      return Jk.add(kk), () => {
-        Jk.delete(kk)
+    function ub(bb) {
+      return Xb.add(bb), () => {
+        Xb.delete(bb)
       }
     }
-    let Ok = 0;
+    let Yb = 0;
 
-    function Ek(kk) {
-      Ok += kk
+    function hb(bb) {
+      Yb += bb
     }
 
-    function Sk() {
-      const kk = Ok;
-      return Ok = 0, kk
+    function Jb() {
+      const bb = Yb;
+      return Yb = 0, bb
     }
 
-    function Nk(kk) {
-      return yk.add(kk), () => {
-        yk.delete(kk)
-      }
-    }
-
-    function Hk(kk) {
-      return fk.add(kk), () => {
-        fk.delete(kk)
+    function gb(bb) {
+      return lb.add(bb), () => {
+        lb.delete(bb)
       }
     }
 
-    function uk() {
-      Ak = 0, ek = 0, sk = -1
+    function Bb(bb) {
+      return Qb.add(bb), () => {
+        Qb.delete(bb)
+      }
     }
 
-    function Mk(kk, Fk) {
-      if ("paced" === kk) return ek += Fk, null;
-      if ("drawn" !== kk && "skipped" !== kk) return null;
-      const Bk = Fk + ek;
-      return ek = 0, Bk
+    function tb() {
+      nb = 0, mb = 0, fb = -1
     }
 
-    function gk(kk, Fk, Bk, tk) {
-      const ak = (0, Rk.i)(Fk),
-        Xk = kk > 0 ? performance.now() : 0;
-      for (let Rk = 0; Rk < kk; Rk++)
-        for (const kk of yk) try {
-          kk()
-        } catch (bk) {
-          tk(bk)
+    function yb(bb, cb) {
+      if ("paced" === bb) return mb += cb, null;
+      if ("drawn" !== bb && "skipped" !== bb) return null;
+      const sb = cb + mb;
+      return mb = 0, sb
+    }
+
+    function Pb(bb, cb, sb, Wb) {
+      const ab = (0, kb.h)(cb),
+        Tb = bb > 0 ? performance.now() : 0;
+      for (let kb = 0; kb < bb; kb++)
+        for (const bb of lb) try {
+          bb()
+        } catch (Ub) {
+          Wb(Ub)
         }
-      if (kk > 0 && Ek(performance.now() - Xk), null !== Bk) {
-        for (const kk of Vk) try {
-          kk(Bk)
-        } catch (bk) {
-          tk(bk)
+      if (bb > 0 && hb(performance.now() - Tb), null !== sb) {
+        for (const bb of Mb) try {
+          bb(sb)
+        } catch (Ub) {
+          Wb(Ub)
         }
-        Ak += Bk
+        nb += sb
       }
-      if ("drawn" === Fk) {
-        const kk = Ak;
-        Ak = 0;
-        for (const Fk of Jk) try {
-          Fk(kk)
-        } catch (bk) {
-          tk(bk)
+      if ("drawn" === cb) {
+        const bb = nb;
+        nb = 0;
+        for (const cb of Xb) try {
+          cb(bb)
+        } catch (Ub) {
+          Wb(Ub)
         }
       }
-      for (const Rk of fk) try {
-        Rk(kk, ak)
-      } catch (bk) {
-        tk(bk)
+      for (const kb of Qb) try {
+        kb(bb, ab)
+      } catch (Ub) {
+        Wb(Ub)
       }
     }
   },
-  4524: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      A: () => Ik,
-      Ab: () => Hk,
-      B: () => Rk.g,
-      Bc: () => Rk.Fb,
-      C: () => dk,
-      Cb: () => Rk.G,
-      Cc: () => Rk.Jb,
-      Eb: () => gk,
-      Ec: () => Nk,
-      G: () => Rk.h,
-      Gc: () => Rk.Kb,
-      Hb: () => Yk,
-      I: () => Rk.i,
-      Ib: () => XF,
-      Jb: () => vk,
-      K: () => lk,
-      Kc: () => Rk.Lb,
-      Lc: () => Rk.Rb,
-      M: () => Rk.q,
-      Nb: () => VF,
-      Ob: () => tk.n,
-      P: () => Rk.t,
-      Pb: () => mk,
-      Pc: () => ak,
-      Qc: () => fk,
-      Rb: () => RF,
-      S: () => Rk.u,
-      Sb: () => Rk.O,
-      Sc: () => wF,
-      T: () => Vk,
-      Tc: () => Pk,
-      Ub: () => Rk.R,
-      Uc: () => qk,
-      V: () => Wk,
-      Wc: () => zk,
-      Xc: () => pk,
-      Yb: () => Rk.T,
-      Z: () => Rk.y,
-      Zb: () => Rk.X,
-      _b: () => Rk.$,
-      ab: () => Rk.z,
-      bb: () => hk,
-      cc: () => Rk.jb,
-      db: () => aF,
-      dc: () => eF,
-      dd: () => Ck,
-      e: () => FF,
-      ec: () => sF,
-      ed: () => xk,
-      fd: () => Kk,
-      g: () => yk,
-      gb: () => sk,
-      gd: () => bF,
-      hb: () => Rk.A,
-      hc: () => tF,
-      hd: () => yF,
-      i: () => ek,
-      ib: () => Zk,
-      ic: () => Rk.kb,
-      jb: () => nk,
-      jc: () => Rk.ob,
-      jd: () => ik,
-      k: () => dF,
-      kd: () => jk,
-      l: () => Sk,
-      m: () => Ok,
-      mb: () => kF,
-      mc: () => Rk.pb,
-      md: () => Tk,
-      nc: () => Qk,
-      o: () => Rk.d,
-      ob: () => BF,
-      od: () => Gk,
-      p: () => JF,
-      q: () => uk,
-      qb: () => tk.g,
-      qd: () => ck,
-      rb: () => Ek,
-      rc: () => Rk.tb,
-      rd: () => wk,
-      s: () => Xk,
-      sc: () => Rk.vb,
-      td: () => rk,
-      u: () => Uk,
-      ub: () => Dk,
-      wb: () => Mk,
-      wc: () => Rk.yb,
-      wd: () => fF,
-      xc: () => Rk.Db,
-      xd: () => Ak,
-      y: () => AF
+  4512: (bb, cb, sb) => {
+    sb.d(cb, {
+      $c: () => kb.sb,
+      $d: () => Sb,
+      Bb: () => cc,
+      Bc: () => kb._,
+      Bd: () => kb.Nb,
+      C: () => kb.f,
+      Cd: () => kb.Rb,
+      Ce: () => lc,
+      F: () => Hb,
+      Fb: () => Wb.e,
+      Fc: () => kb.ab,
+      Fe: () => nb,
+      Gd: () => kb.Xb,
+      Hc: () => kb.db,
+      Hd: () => ab,
+      I: () => kb.h,
+      Ib: () => hb,
+      K: () => kb.i,
+      Kd: () => Qb,
+      Lc: () => kb.jb,
+      Ld: () => Uc,
+      M: () => vb,
+      Mb: () => Kb,
+      Nc: () => nc,
+      Od: () => zb,
+      P: () => kb.n,
+      Pb: () => yb,
+      Pc: () => Hc,
+      Qd: () => db,
+      Sd: () => Zb,
+      T: () => kb.p,
+      Tb: () => Bb,
+      Tc: () => kc,
+      Vc: () => kb.nb,
+      Vd: () => rb,
+      W: () => kb.t,
+      Xb: () => kb.I,
+      Xc: () => kb.rb,
+      Zd: () => Ab,
+      _: () => Mb,
+      _b: () => Pb,
+      bb: () => Cb,
+      c: () => bc,
+      cb: () => kb.v,
+      cc: () => Lb,
+      cd: () => jb,
+      ce: () => ob,
+      f: () => lb,
+      fc: () => ac,
+      fd: () => kb.xb,
+      fe: () => Tc,
+      g: () => mb,
+      gb: () => kb.y,
+      ge: () => mc,
+      he: () => Vb,
+      i: () => Ic,
+      ib: () => qb,
+      id: () => kb.Ab,
+      jb: () => Wc,
+      jc: () => Nb,
+      ke: () => Rb,
+      lc: () => fc,
+      m: () => Jb,
+      mb: () => fb,
+      md: () => kb.Db,
+      n: () => Yb,
+      oe: () => Ob,
+      pc: () => Wb.i,
+      pd: () => kb.Gb,
+      q: () => kb.d,
+      qb: () => kb.B,
+      r: () => Mc,
+      rc: () => eb,
+      sc: () => sc,
+      se: () => ib,
+      t: () => tb,
+      tb: () => wb,
+      td: () => kb.Ib,
+      u: () => Tb,
+      ud: () => kb.Lb,
+      v: () => Db,
+      vb: () => Fb,
+      ve: () => Eb,
+      wc: () => kb.U,
+      x: () => Xc,
+      xd: () => gb,
+      xe: () => Ib,
+      yb: () => pb,
+      yc: () => kb.X,
+      z: () => xb,
+      ze: () => Gb
     });
-    var Rk = Bk(4531),
-      tk = Bk(2303);
-    const ak = Math.round(1e3 / Rk.Rb),
-      Xk = 4,
-      bk = 2;
+    var kb = sb(4517),
+      Wb = sb(2305);
+    const ab = Math.round(1e3 / kb.Xb),
+      Tb = 4,
+      Ub = 2;
 
-    function wk() {
-      return crypto.getRandomValues(new Uint32Array(bk))
+    function Ib() {
+      return crypto.getRandomValues(new Uint32Array(Ub))
     }
-    const dk = {
+    const Hb = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      sk = 16,
-      Vk = {
+      fb = 16,
+      Mb = {
         Draws: 1,
         NetAll: 2
       },
-      Jk = {
+      Xb = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function Ak(kk) {
-      return (kk.nametagsHidden ? Lk.NametagsHidden : 0) | (kk.crouchToggle ? Lk.CrouchToggle : 0) | (kk.bhopDisabled ? Lk.BhopDisabled : 0) | (kk.disableBobbing ? Lk.DisableBobbing : 0) | (kk.ezTowering ? Lk.EzTowering : 0) | (kk.ezBridging ? Lk.EzBridging : 0) | (kk.showChunkBorders ? Lk.ShowChunkBorders : 0)
+    function nb(bb) {
+      return (bb.nametagsHidden ? ub.NametagsHidden : 0) | (bb.crouchToggle ? ub.CrouchToggle : 0) | (bb.bhopDisabled ? ub.BhopDisabled : 0) | (bb.disableBobbing ? ub.DisableBobbing : 0) | (bb.ezTowering ? ub.EzTowering : 0) | (bb.ezBridging ? ub.EzBridging : 0) | (bb.showChunkBorders ? ub.ShowChunkBorders : 0)
     }
-    const ek = {
+    const mb = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      yk = {
+      lb = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -1180,7 +1180,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      fk = {
+      Qb = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -1189,7 +1189,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      mk = {
+      eb = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -1198,20 +1198,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      Wk = 5,
-      vk = 4294967295;
+      Cb = 5,
+      Nb = 4294967295;
 
-    function ik(kk) {
-      return (kk.showFog ? Jk.ShowFog : 0) | (kk.lighting ? Jk.Lighting : 0) | (kk.chunkFade ? Jk.ChunkFade : 0)
+    function Vb(bb) {
+      return (bb.showFog ? Xb.ShowFog : 0) | (bb.lighting ? Xb.Lighting : 0) | (bb.chunkFade ? Xb.ChunkFade : 0)
     }
-    const Yk = {
+    const Lb = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      Lk = {
+      ub = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -1221,50 +1221,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      Ok = {
+      Yb = {
         Release: 1,
         KeepTouches: 2
       },
-      Ek = {
+      hb = {
         Point: 1,
         Stamped: 2
       },
-      Sk = {
+      Jb = {
         Add: 1,
         Clear: 2
       },
-      Nk = 1,
-      Hk = 8,
-      uk = 16777215,
-      Mk = 4,
-      gk = {
+      gb = 1,
+      Bb = 8,
+      tb = 16777215,
+      yb = 4,
+      Pb = {
         Resume: 1
       },
-      Uk = {
+      Db = {
         Held: 1
       };
 
-    function ck(kk, Fk) {
-      return (kk | Fk << 8) >>> 0
+    function Eb(bb, cb) {
+      return (bb | cb << 8) >>> 0
     }
 
-    function Gk(kk) {
-      return 255 & kk
+    function ib(bb) {
+      return 255 & bb
     }
 
-    function Tk(kk) {
-      return kk >>> 8
+    function Ob(bb) {
+      return bb >>> 8
     }
 
-    function rk(kk) {
-      return kk + 3 & -4
+    function Gb(bb) {
+      return bb + 3 & -4
     }
-    const Dk = 16777216,
-      zk = 20;
-    const Pk = 8,
-      hk = 8,
-      qk = 16777216,
-      Ck = {
+    const Kb = 16777216,
+      Zb = 20;
+    const zb = 8,
+      qb = 8,
+      db = 16777216,
+      Ab = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -1272,19 +1272,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      Zk = {
+      wb = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      pk = 16,
-      Kk = {
+      rb = 16,
+      ob = {
         Lost: 0,
         Gone: 1
       },
-      xk = {
+      Sb = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -1292,18 +1292,18 @@ export const modules = {
         Retire: 5
       };
 
-    function jk(kk) {
-      return kk === xk.WorldgenSeed || kk === xk.Generate
+    function Rb(bb) {
+      return bb === Sb.WorldgenSeed || bb === Sb.Generate
     }
-    const lk = 4,
-      nk = 99,
-      Ik = {
+    const vb = 4,
+      Fb = 99,
+      xb = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      Qk = {
+      jb = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -1311,40 +1311,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      kF = 12,
-      FF = 16,
-      BF = 4,
-      RF = 12,
-      tF = {
+      pb = 12,
+      bc = 16,
+      cc = 4,
+      sc = 12,
+      kc = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      aF = 4,
-      XF = 8,
-      bF = 8,
-      wF = {
+      Wc = 4,
+      ac = 8,
+      Tc = 8,
+      Uc = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      dF = {
+      Ic = {
         Crit: 1,
         HitSelf: 2
       },
-      sF = {
+      Hc = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      VF = {
+      fc = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      JF = 12,
-      AF = {
+      Mc = 12,
+      Xc = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -1353,102 +1353,102 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      eF = 67108864;
+      nc = 67108864;
 
-    function yF(kk) {
-      for (const [Fk, Bk] of Object.entries(Rk.g))
-        if (Bk === kk) return Fk;
-      return `Unknown${kk}`
+    function mc(bb) {
+      for (const [cb, sb] of Object.entries(kb.f))
+        if (sb === bb) return cb;
+      return `Unknown${bb}`
     }
 
-    function fF(kk) {
+    function lc(bb) {
       return {
-        status: kk[Rk.z.Status],
-        lastError: kk[Rk.z.LastError],
-        lastErrorDetail: kk[Rk.z.LastErrorDetail],
-        errorCount: kk[Rk.z.ErrorCount],
-        frameIndex: kk[Rk.z.FrameIndex],
-        tickIndex: kk[Rk.z.TickIndex],
-        renderPending: kk[Rk.z.RenderPending],
-        firstView: kk[Rk.z.FirstView],
-        chunksCancelled: kk[Rk.z.ChunksCancelled]
+        status: bb[kb.y.Status],
+        lastError: bb[kb.y.LastError],
+        lastErrorDetail: bb[kb.y.LastErrorDetail],
+        errorCount: bb[kb.y.ErrorCount],
+        frameIndex: bb[kb.y.FrameIndex],
+        tickIndex: bb[kb.y.TickIndex],
+        renderPending: bb[kb.y.RenderPending],
+        firstView: bb[kb.y.FirstView],
+        chunksCancelled: bb[kb.y.ChunksCancelled]
       }
     }
   },
-  4517: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Xk,
-      g: () => ak,
-      i: () => tk
+  4507: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Tb,
+      g: () => ab,
+      h: () => Wb
     });
-    var Rk = Bk(4524);
+    var kb = sb(4512);
 
-    function tk(kk) {
-      return "none" !== kk
+    function Wb(bb) {
+      return "none" !== bb
     }
 
-    function ak(kk, Fk) {
-      if (!kk) return "none";
-      switch (Fk) {
-        case Rk.S.Drawn:
+    function ab(bb, cb) {
+      if (!bb) return "none";
+      switch (cb) {
+        case kb.W.Drawn:
           return "drawn";
-        case Rk.S.Paced:
+        case kb.W.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function Xk(kk) {
-      return "drawn" === kk
+    function Tb(bb) {
+      return "drawn" === bb
     }
   },
-  4533: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => wk,
-      h: () => ak,
-      l: () => bk
+  4523: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Ib,
+      h: () => ab,
+      i: () => Ub
     });
-    var Rk = Bk(2303),
-      tk = Bk(4541);
+    var kb = sb(2305),
+      Wb = sb(4530);
 
-    function ak(kk) {
+    function ab(bb) {
       let {
-        action: Fk,
-        flags: Bk
-      } = kk;
-      return "mid-fire" === Fk && 0 !== (Bk & Rk.d.AltLeftClick)
+        action: cb,
+        flags: sb
+      } = bb;
+      return "mid-fire" === cb && 0 !== (sb & kb.b.AltLeftClick)
     }
-    const Xk = new Set;
+    const Tb = new Set;
 
-    function bk(kk) {
-      return Xk.add(kk), () => {
-        Xk.delete(kk)
+    function Ub(bb) {
+      return Tb.add(bb), () => {
+        Tb.delete(bb)
       }
     }
 
-    function wk(kk) {
-      const Fk = tk.c[255 & kk];
-      if (void 0 === Fk) return;
-      const Bk = kk >>> 8 & 255,
-        ak = {
-          action: Fk,
-          down: 0 !== (Bk & Rk.d.Down),
-          flags: Bk,
-          press: kk >>> 16
+    function Ib(bb) {
+      const cb = Wb.b[255 & bb];
+      if (void 0 === cb) return;
+      const sb = bb >>> 8 & 255,
+        ab = {
+          action: cb,
+          down: 0 !== (sb & kb.b.Down),
+          flags: sb,
+          press: bb >>> 16
         };
-      for (const Rk of Xk) Rk(ak)
+      for (const kb of Tb) kb(ab)
     }
   },
-  4541: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => tk,
-      f: () => ak,
-      j: () => Xk,
-      m: () => Rk,
-      o: () => bk
+  4530: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Wb,
+      f: () => ab,
+      h: () => Tb,
+      i: () => kb,
+      m: () => Ub
     });
-    const Rk = {
+    const kb = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -1645,8 +1645,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      tk = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      ak = {
+      Wb = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      ab = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -1709,63 +1709,63 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      Xk = {
+      Tb = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      bk = [16]
+      Ub = [16]
   },
-  4546: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => bk,
-      g: () => Xk,
-      i: () => dk
+  4536: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Ub,
+      c: () => Tb,
+      d: () => Hb
     });
-    var Rk = Bk(2303),
-      tk = Bk(2305);
-    const ak = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var kb = sb(2305),
+      Wb = sb(2310);
+    const ab = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function Xk(kk) {
-      return kk instanceof HTMLElement && (!!(kk.isContentEditable || kk instanceof HTMLTextAreaElement || kk instanceof HTMLSelectElement) || kk instanceof HTMLInputElement && !ak.has(kk.type))
+    function Tb(bb) {
+      return bb instanceof HTMLElement && (!!(bb.isContentEditable || bb instanceof HTMLTextAreaElement || bb instanceof HTMLSelectElement) || bb instanceof HTMLInputElement && !ab.has(bb.type))
     }
 
-    function bk(kk) {
-      let Fk = null;
-      const Bk = Bk => {
-          const tk = Xk(Bk);
-          tk !== Fk && (Fk = tk, kk(Rk.j.UiCapture, Rk.A.Keyboard, 0, 0, tk ? Rk.A.Keyboard : 0))
+    function Ub(bb) {
+      let cb = null;
+      const sb = sb => {
+          const Wb = Tb(sb);
+          Wb !== cb && (cb = Wb, bb(kb.h.UiCapture, kb.z.Keyboard, 0, 0, Wb ? kb.z.Keyboard : 0))
         },
-        tk = kk => {
-          Bk(kk.target)
+        Wb = bb => {
+          sb(bb.target)
         },
-        ak = kk => {
-          Bk(kk.relatedTarget)
+        ab = bb => {
+          sb(bb.relatedTarget)
         },
-        bk = () => {
-          Bk(document.activeElement)
+        Ub = () => {
+          sb(document.activeElement)
         },
-        wk = {
+        Ib = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", tk, wk), document.addEventListener("focusout", ak, wk), document.addEventListener("keydown", bk, wk), Bk(document.activeElement), () => {
-        document.removeEventListener("focusin", tk, wk), document.removeEventListener("focusout", ak, wk), document.removeEventListener("keydown", bk, wk)
+      return document.addEventListener("focusin", Wb, Ib), document.addEventListener("focusout", ab, Ib), document.addEventListener("keydown", Ub, Ib), sb(document.activeElement), () => {
+        document.removeEventListener("focusin", Wb, Ib), document.removeEventListener("focusout", ab, Ib), document.removeEventListener("keydown", Ub, Ib)
       }
     }
-    const wk = new Map;
+    const Ib = new Map;
 
-    function dk(kk, Fk) {
-      var Bk;
-      let Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      wk.set(Rk, (null !== (Bk = wk.get(Rk)) && void 0 !== Bk ? Bk : 0) & ~kk | Fk & kk);
-      let ak = 0;
-      for (const tk of wk.values()) ak |= tk;
-      return (0, tk.x)(kk, ak & kk)
+    function Hb(bb, cb) {
+      var sb;
+      let kb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      Ib.set(kb, (null !== (sb = Ib.get(kb)) && void 0 !== sb ? sb : 0) & ~bb | cb & bb);
+      let ab = 0;
+      for (const Wb of Ib.values()) ab |= Wb;
+      return (0, Wb.w)(bb, ab & bb)
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

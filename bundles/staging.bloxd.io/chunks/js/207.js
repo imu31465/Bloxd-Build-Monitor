@@ -1,22 +1,22 @@
 export const id = 207;
 export const ids = [207];
 export const modules = {
-  36003: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      reportCappedWasmFailure: () => Xk,
-      reportWasmFailure: () => ak
+  35937: (bb, cb, sb) => {
+    sb.d(cb, {
+      reportCappedWasmFailure: () => Tb,
+      reportWasmFailure: () => ab
     });
-    var Rk = Bk(3037);
-    const tk = Rk.c - 4;
+    var kb = sb(2984);
+    const Wb = kb.c - 4;
 
-    function ak(kk, Fk, Bk) {
-      (0, Rk.g)(kk, Fk, Bk, !1)
+    function ab(bb, cb, sb) {
+      (0, kb.d)(bb, cb, sb, !1)
     }
 
-    function Xk(kk, Fk, Bk) {
-      (0, Rk.g)(kk, Fk, Bk, !1, tk)
+    function Tb(bb, cb, sb) {
+      (0, kb.d)(bb, cb, sb, !1, Wb)
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

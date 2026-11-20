@@ -1,52 +1,52 @@
 export const id = 49;
 export const ids = [49];
 export const modules = {
-  38286: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      SkyblockEntityFacing: () => bk,
-      needsSkyblockEntityFacing: () => Xk
+  38245: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      SkyblockEntityFacing: () => Ub,
+      needsSkyblockEntityFacing: () => Tb
     });
-    var Rk = Bk(597),
-      tk = Bk(4002),
-      ak = Bk(38290);
+    var kb = sb(624),
+      Wb = sb(4023),
+      ab = sb(38253);
 
-    function Xk(kk, Fk) {
-      if (kk.metaInfo === Rk.d || "Iron Guardian" === kk.type || "Gold Guardian" === kk.type) return !0;
-      if ("Pig" === kk.type) return "sitting" === kk.pose;
-      if ("Person" !== kk.meshKind || void 0 === kk.meshOpts) return !1;
-      let Bk = null === Fk || void 0 === Fk ? void 0 : Fk.get(kk.meshOpts);
-      if (void 0 === Bk) {
-        var ak, Xk;
-        const Rk = (0, tk.h)(kk);
-        Bk = !1, "pig_napoleon" === (null === Rk || void 0 === Rk || null === (ak = Rk.opts.textures) || void 0 === ak ? void 0 : ak.head) ? Bk = !0 : "npc_pig_head" === (null === Rk || void 0 === Rk || null === (Xk = Rk.opts.textures) || void 0 === Xk ? void 0 : Xk.head) && (Bk = "sitting" === Rk.opts.pose || "sitting"), Fk && (Fk.size >= 256 && Fk.clear(), Fk.set(kk.meshOpts, Bk))
+    function Tb(bb, cb) {
+      if (bb.metaInfo === kb.b || "Iron Guardian" === bb.type || "Gold Guardian" === bb.type) return !0;
+      if ("Pig" === bb.type) return "sitting" === bb.pose;
+      if ("Person" !== bb.meshKind || void 0 === bb.meshOpts) return !1;
+      let sb = null === cb || void 0 === cb ? void 0 : cb.get(bb.meshOpts);
+      if (void 0 === sb) {
+        var ab, Tb;
+        const kb = (0, Wb.h)(bb);
+        sb = !1, "pig_napoleon" === (null === kb || void 0 === kb || null === (ab = kb.opts.textures) || void 0 === ab ? void 0 : ab.head) ? sb = !0 : "npc_pig_head" === (null === kb || void 0 === kb || null === (Tb = kb.opts.textures) || void 0 === Tb ? void 0 : Tb.head) && (sb = "sitting" === kb.opts.pose || "sitting"), cb && (cb.size >= 256 && cb.clear(), cb.set(bb.meshOpts, sb))
       }
-      return "sitting" === Bk ? "sitting" === kk.pose : Bk
-    }(0, ak.d)("skyblock", ((kk, Fk) => {
-      Fk.setFacingTolerance(Xk(kk) ? 0 : null)
+      return "sitting" === sb ? "sitting" === bb.pose : sb
+    }(0, ab.g)("skyblock", ((bb, cb) => {
+      cb.setFacingTolerance(Tb(bb) ? 0 : null)
     }));
-    class bk {
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.api = kk, this.alsoVisit = Fk, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = kk => {
-          var Fk;
-          const Bk = this.api.getEntityInfo(kk);
-          Bk && (Xk(Bk, this.meshFacingCache) && (this.api.setFacingTolerance(kk, 0), this.nextFacing.add(kk)), null === (Fk = this.alsoVisit) || void 0 === Fk || Fk.call(this, kk, Bk))
+    class Ub {
+      constructor(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.api = bb, this.alsoVisit = cb, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = bb => {
+          var cb;
+          const sb = this.api.getEntityInfo(bb);
+          sb && (Tb(sb, this.meshFacingCache) && (this.api.setFacingTolerance(bb, 0), this.nextFacing.add(bb)), null === (cb = this.alsoVisit) || void 0 === cb || cb.call(this, bb, sb))
         }
       }
-      yJ() {
+      aX() {
         const {
-          api: kk
-        } = this, Fk = this.nextFacing;
-        kk.forEachEntity(this.visit);
-        for (const Bk of this.facing) Fk.has(Bk) || kk.setFacingTolerance(Bk, null);
-        this.facing.clear(), this.nextFacing = this.facing, this.facing = Fk
+          api: bb
+        } = this, cb = this.nextFacing;
+        bb.forEachEntity(this.visit);
+        for (const sb of this.facing) cb.has(sb) || bb.setFacingTolerance(sb, null);
+        this.facing.clear(), this.nextFacing = this.facing, this.facing = cb
       }
       dispose() {
-        for (const kk of this.facing) this.api.setFacingTolerance(kk, null);
+        for (const bb of this.facing) this.api.setFacingTolerance(bb, null);
         this.facing.clear(), this.meshFacingCache.clear()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

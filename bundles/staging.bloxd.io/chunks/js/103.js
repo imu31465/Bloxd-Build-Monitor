@@ -1,184 +1,184 @@
 export const id = 103;
 export const ids = [103];
 export const modules = {
-  4643: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Vk,
-      f: () => sk,
-      h: () => Jk
+  4641: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Mb,
+      f: () => fb,
+      h: () => Xb
     });
-    Bk(4645);
-    var Rk = Bk(1149),
-      tk = Bk(1020),
-      ak = Bk.n(tk),
-      Xk = Bk(1312),
-      bk = (Bk(61), Bk(4121)),
-      wk = Bk(1028),
-      dk = Bk(1069);
+    sb(4643);
+    var kb = sb(1197),
+      Wb = sb(1033),
+      ab = sb.n(Wb),
+      Tb = sb(1341),
+      Ub = (sb(64), sb(4129)),
+      Ib = sb(1039),
+      Hb = sb(1087);
 
-    function sk(kk) {
+    function fb(bb) {
       let {
-        children: Fk,
-        label: Bk,
-        className: tk,
-        circleInfoText: bk,
-        disabled: sk,
-        onLabelClick: Vk
-      } = kk;
+        children: cb,
+        label: sb,
+        className: Wb,
+        circleInfoText: Ub,
+        disabled: fb,
+        onLabelClick: Mb
+      } = bb;
       const {
-        t: Jk
-      } = (0, Rk.x)(), Ak = (0, dk.jsxs)("div", {
-        className: ak()("Label", {
-          ClickableLabel: void 0 !== Vk
+        t: Xb
+      } = (0, kb.E)(), nb = (0, Hb.jsxs)("div", {
+        className: ab()("Label", {
+          ClickableLabel: void 0 !== Mb
         }),
-        onClick: Vk,
-        children: [Jk(Bk), bk && (0, dk.jsx)(wk.d, {
+        onClick: Mb,
+        children: [Xb(sb), Ub && (0, Hb.jsx)(Ib.b, {
           name: "circle-info"
         })]
       });
-      return (0, dk.jsxs)("div", {
-        className: ak()("LabeledInput", {
-          [tk]: tk,
-          DisabledLabelInput: sk
+      return (0, Hb.jsxs)("div", {
+        className: ab()("LabeledInput", {
+          [Wb]: Wb,
+          DisabledLabelInput: fb
         }),
-        children: [bk && (0, dk.jsx)(Xk.d, {
-          tooltipInner: (0, dk.jsx)("div", {
+        children: [Ub && (0, Hb.jsx)(Tb.f, {
+          tooltipInner: (0, Hb.jsx)("div", {
             className: "LabeledInputTooltip",
-            children: Jk(bk)
+            children: Xb(Ub)
           }),
-          children: Ak
-        }), !bk && Ak, Fk]
+          children: nb
+        }), !Ub && nb, cb]
       })
     }
 
-    function Vk(kk) {
+    function Mb(bb) {
       let {
-        checked: Fk,
-        setChecked: Bk
-      } = kk;
-      return (0, dk.jsx)("div", {
+        checked: cb,
+        setChecked: sb
+      } = bb;
+      return (0, Hb.jsx)("div", {
         className: "OtherInput ClickableOtherInput",
         "data-pad-focusable": !0,
-        onClick: kk => {
-          Bk(!Fk)
+        onClick: bb => {
+          sb(!cb)
         },
-        children: (0, dk.jsx)(bk.c, {
-          checked: Fk,
-          onChange: kk => {
-            Bk(kk.target.checked)
+        children: (0, Hb.jsx)(Ub.e, {
+          checked: cb,
+          onChange: bb => {
+            sb(bb.target.checked)
           },
           disabled: !1
         })
       })
     }
 
-    function Jk(kk) {
+    function Xb(bb) {
       let {
-        checked: Fk,
-        setChecked: Bk,
-        disabled: Rk
-      } = kk;
-      return (0, dk.jsx)("div", {
-        className: ak()("SwitchContainer", {
-          SwitchContainerDisabled: Rk
+        checked: cb,
+        setChecked: sb,
+        disabled: kb
+      } = bb;
+      return (0, Hb.jsx)("div", {
+        className: ab()("SwitchContainer", {
+          SwitchContainerDisabled: kb
         }),
         onClick: () => {
-          Rk || Bk(!Fk)
+          kb || sb(!cb)
         },
-        children: (0, dk.jsx)(bk.c, {
+        children: (0, Hb.jsx)(Ub.e, {
           className: "SwitchCheckbox",
-          checked: Fk,
-          onChange: kk => {
-            Bk(kk.target.checked)
+          checked: cb,
+          onChange: bb => {
+            sb(bb.target.checked)
           },
-          disabled: !!Rk
+          disabled: !!kb
         })
       })
     }
   },
-  4650: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => dk
+  4648: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Hb
     });
-    var Rk = Bk(1020),
-      tk = Bk.n(Rk),
-      ak = Bk(4366),
-      Xk = Bk(1149),
-      bk = Bk(1069);
-    const wk = [...ak.j, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var kb = sb(1033),
+      Wb = sb.n(kb),
+      ab = sb(4371),
+      Tb = sb(1197),
+      Ub = sb(1087);
+    const Ib = [...ab.l, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function dk(kk) {
+    function Hb(bb) {
       const {
-        disabled: Fk,
-        hideWrapper: Bk
-      } = kk, {
-        t: Rk
-      } = (0, Xk.x)(), dk = kk.advancedMode ? wk.map((Fk => [Fk, kk.callbacks[Fk]])) : ak.j.map((Fk => [Fk, kk.callbacks[Fk]])), Vk = (0, bk.jsx)("div", {
-        className: tk()("PluginsGrid", {
-          SectionBody: !Bk
+        disabled: cb,
+        hideWrapper: sb
+      } = bb, {
+        t: kb
+      } = (0, Tb.E)(), Hb = bb.advancedMode ? Ib.map((cb => [cb, bb.callbacks[cb]])) : ab.l.map((cb => [cb, bb.callbacks[cb]])), Mb = (0, Ub.jsx)("div", {
+        className: Wb()("PluginsGrid", {
+          SectionBody: !sb
         }),
-        children: dk.map((kk => {
-          let [Bk, Rk] = kk;
-          return (0, bk.jsx)(sk, {
-            plugin: Bk,
-            callbacks: Rk,
-            disabled: Fk
-          }, Bk)
+        children: Hb.map((bb => {
+          let [sb, kb] = bb;
+          return (0, Ub.jsx)(fb, {
+            plugin: sb,
+            callbacks: kb,
+            disabled: cb
+          }, sb)
         }))
       });
-      return Bk ? Vk : (0, bk.jsxs)("div", {
+      return sb ? Mb : (0, Ub.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, bk.jsx)("div", {
+        children: [(0, Ub.jsx)("div", {
           className: "SectionTitle",
-          children: Rk("worldBuilder:pluginsSection")
-        }), Vk]
+          children: kb("worldBuilder:pluginsSection")
+        }), Mb]
       })
     }
 
-    function sk(kk) {
+    function fb(bb) {
       let {
-        plugin: Fk,
+        plugin: cb,
         callbacks: {
-          isEnabled: Bk,
-          lY: Rk
+          isEnabled: sb,
+          GV: kb
         },
-        disabled: ak
-      } = kk;
+        disabled: ab
+      } = bb;
       const {
-        t: wk
-      } = (0, Xk.x)(), dk = Bk();
-      return (0, bk.jsxs)("div", {
-        className: tk()("PluginCard", {
-          PluginCardEnabled: dk,
-          PluginCardDisabledForm: ak
+        t: Ib
+      } = (0, Tb.E)(), Hb = sb();
+      return (0, Ub.jsxs)("div", {
+        className: Wb()("PluginCard", {
+          PluginCardEnabled: Hb,
+          PluginCardDisabledForm: ab
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": ak || void 0,
+        "aria-disabled": ab || void 0,
         onClick: () => {
-          ak || Rk(!dk)
+          ab || kb(!Hb)
         },
-        children: [(0, bk.jsx)("div", {
+        children: [(0, Ub.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, bk.jsx)("img", {
-            src: `/textures/games/classic/customGames/${Fk}.png`,
-            alt: Fk
+          children: (0, Ub.jsx)("img", {
+            src: `/textures/games/classic/customGames/${cb}.png`,
+            alt: cb
           })
-        }), (0, bk.jsxs)("div", {
+        }), (0, Ub.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, bk.jsx)("div", {
+          children: [(0, Ub.jsx)("div", {
             className: "PluginCardTitle",
-            children: wk(Vk[Fk])
-          }), (0, bk.jsx)("div", {
+            children: Ib(Mb[cb])
+          }), (0, Ub.jsx)("div", {
             className: "PluginCardDescription",
-            children: wk(Jk[Fk])
+            children: Ib(Xb[cb])
           })]
-        }), (0, bk.jsx)("span", {
+        }), (0, Ub.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: wk(dk ? "general:on" : "general:off")
+          children: Ib(Hb ? "general:on" : "general:off")
         })]
       })
     }
-    const Vk = {
+    const Mb = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -187,7 +187,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      Jk = {
+      Xb = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -197,656 +197,656 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  4635: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      h: () => aF,
-      d: () => tF,
-      e: () => RF,
-      i: () => XF
+  4638: (bb, cb, sb) => {
+    sb.d(cb, {
+      g: () => Wc,
+      b: () => kc,
+      c: () => sc,
+      i: () => ac
     });
-    var Rk = Bk(61),
-      tk = Bk(1300),
-      ak = Bk(1389),
-      Xk = Bk(1620),
-      bk = Bk(1149),
-      wk = Bk(1288),
-      dk = Bk(1312),
-      sk = Bk(1028),
-      Vk = Bk(1173),
-      Jk = Bk(1020),
-      Ak = Bk.n(Jk),
-      ek = Bk(279),
-      yk = Bk(4366),
-      fk = Bk(1192),
-      mk = Bk(4643),
-      Wk = Bk(2926),
-      vk = Bk(4650),
-      ik = Bk(1069);
+    var kb = sb(64),
+      Wb = sb(1332),
+      ab = sb(1431),
+      Tb = sb(1664),
+      Ub = sb(1197),
+      Ib = sb(1327),
+      Hb = sb(1341),
+      fb = sb(1039),
+      Mb = sb(1235),
+      Xb = sb(1033),
+      nb = sb.n(Xb),
+      mb = sb(334),
+      lb = sb(4371),
+      Qb = sb(1253),
+      eb = sb(4641),
+      Cb = sb(2889),
+      Nb = sb(4648),
+      Vb = sb(1087);
 
-    function Yk(kk) {
+    function Lb(bb) {
       let {
-        icon: Fk,
-        title: Bk,
-        disabled: Rk,
-        children: tk
-      } = kk;
-      return (0, ik.jsxs)("div", {
-        className: Ak()("ManageCard", {
-          ManageCardDisabled: Rk
+        icon: cb,
+        title: sb,
+        disabled: kb,
+        children: Wb
+      } = bb;
+      return (0, Vb.jsxs)("div", {
+        className: nb()("ManageCard", {
+          ManageCardDisabled: kb
         }),
-        children: [(0, ik.jsxs)("div", {
+        children: [(0, Vb.jsxs)("div", {
           className: "ManageCardHead",
-          children: [(0, ik.jsx)("div", {
+          children: [(0, Vb.jsx)("div", {
             className: "ManageCardIcon",
-            children: (0, ik.jsx)(sk.d, {
-              name: Fk
+            children: (0, Vb.jsx)(fb.b, {
+              name: cb
             })
-          }), (0, ik.jsx)("div", {
-            children: (0, ik.jsx)("h2", {
+          }), (0, Vb.jsx)("div", {
+            children: (0, Vb.jsx)("h2", {
               className: "ManageCardTitle",
-              children: Bk
+              children: sb
             })
           })]
-        }), (0, ik.jsxs)("div", {
+        }), (0, Vb.jsxs)("div", {
           className: "ManageCardBody",
-          children: [tk, Rk && (0, ik.jsx)("div", {
+          children: [Wb, kb && (0, Vb.jsx)("div", {
             className: "ManageCardDisabledOverlay"
           })]
         })]
       })
     }
 
-    function Lk(kk) {
+    function ub(bb) {
       let {
-        label: Fk,
-        caption: Bk,
-        children: Rk
-      } = kk;
-      return (0, ik.jsxs)("div", {
+        label: cb,
+        caption: sb,
+        children: kb
+      } = bb;
+      return (0, Vb.jsxs)("div", {
         className: "ManageStackedField",
-        children: [(0, ik.jsx)("div", {
+        children: [(0, Vb.jsx)("div", {
           className: "ManageStackedFieldLabel",
-          children: Fk
-        }), Rk, Bk && (0, ik.jsx)("div", {
+          children: cb
+        }), kb, sb && (0, Vb.jsx)("div", {
           className: "ManageStackedFieldCaption",
-          children: Bk
+          children: sb
         })]
       })
     }
 
-    function Ok(kk) {
+    function Yb(bb) {
       let {
-        label: Fk,
-        caption: Bk,
-        disabled: Rk,
-        children: tk
-      } = kk;
-      return (0, ik.jsxs)("div", {
-        className: Ak()("ManageField", {
-          ManageFieldDisabled: Rk
+        label: cb,
+        caption: sb,
+        disabled: kb,
+        children: Wb
+      } = bb;
+      return (0, Vb.jsxs)("div", {
+        className: nb()("ManageField", {
+          ManageFieldDisabled: kb
         }),
-        children: [(0, ik.jsxs)("div", {
+        children: [(0, Vb.jsxs)("div", {
           className: "ManageFieldText",
-          children: [(0, ik.jsx)("div", {
+          children: [(0, Vb.jsx)("div", {
             className: "ManageFieldLabel",
-            children: Fk
-          }), (0, ik.jsx)("div", {
+            children: cb
+          }), (0, Vb.jsx)("div", {
             className: "ManageFieldCaption",
-            children: Bk
+            children: sb
           })]
-        }), (0, ik.jsx)("div", {
+        }), (0, Vb.jsx)("div", {
           className: "ManageFieldControl",
-          children: tk
+          children: Wb
         })]
       })
     }
 
-    function Ek(kk) {
-      var Fk, Bk;
+    function hb(bb) {
+      var cb, sb;
       let {
-        schematicData: Rk,
-        updateSchematicData: tk,
-        publishFormEnabled: ak,
-        formEnabled: Xk
-      } = kk;
+        schematicData: kb,
+        updateSchematicData: Wb,
+        publishFormEnabled: ab,
+        formEnabled: Tb
+      } = bb;
       const {
-        t: wk
-      } = (0, bk.x)(), dk = !ak, sk = {
+        t: Ib
+      } = (0, Ub.E)(), Hb = !ab, fb = {
         tpRequests: {
-          isEnabled: () => !Rk.disableTpRequests,
-          lY: kk => tk("disableTpRequests", !kk)
+          isEnabled: () => !kb.disableTpRequests,
+          GV: bb => Wb("disableTpRequests", !bb)
         },
         spawnProtection: {
-          isEnabled: () => !Rk.disableSpawnProtection,
-          lY: kk => tk("disableSpawnProtection", !kk)
+          isEnabled: () => !kb.disableSpawnProtection,
+          GV: bb => Wb("disableSpawnProtection", !bb)
         },
         spawnReset: {
-          isEnabled: () => !!Rk.enableSpawnReset,
-          lY: kk => tk("enableSpawnReset", kk)
+          isEnabled: () => !!kb.enableSpawnReset,
+          GV: bb => Wb("enableSpawnReset", bb)
         },
         smpMarketplace: {
-          isEnabled: () => !!Rk.enableSmpMarketplace,
-          lY: kk => tk("enableSmpMarketplace", kk)
+          isEnabled: () => !!kb.enableSmpMarketplace,
+          GV: bb => Wb("enableSmpMarketplace", bb)
         },
         survivalGuns: {
-          isEnabled: () => !!Rk.enableSurvivalGuns,
-          lY: kk => tk("enableSurvivalGuns", kk)
+          isEnabled: () => !!kb.enableSurvivalGuns,
+          GV: bb => Wb("enableSurvivalGuns", bb)
         },
         fallDamage: {
-          isEnabled: () => !Rk.disableFallDamage,
-          lY: kk => tk("disableFallDamage", !kk)
+          isEnabled: () => !kb.disableFallDamage,
+          GV: bb => Wb("disableFallDamage", !bb)
         },
         dayNight: {
-          isEnabled: () => !!Rk.enableDayNight,
-          lY: kk => tk("enableDayNight", kk)
+          isEnabled: () => !!kb.enableDayNight,
+          GV: bb => Wb("enableDayNight", bb)
         }
       };
-      return (0, ik.jsxs)(ik.Fragment, {
-        children: [!1 === Rk.schematicContainsSpawnBlock && (0, ik.jsx)("div", {
+      return (0, Vb.jsxs)(Vb.Fragment, {
+        children: [!1 === kb.schematicContainsSpawnBlock && (0, Vb.jsx)("div", {
           className: "ManageWarningBanner",
-          children: wk("worldBuilder:mustContainSpawnBlock")
-        }), (0, ik.jsxs)("div", {
+          children: Ib("worldBuilder:mustContainSpawnBlock")
+        }), (0, Vb.jsxs)("div", {
           className: "ManageSettingsGrid",
-          children: [(0, ik.jsxs)(Yk, {
+          children: [(0, Vb.jsxs)(Lb, {
             icon: "globe",
-            title: wk("worldBuilder:worldRulesSection"),
-            disabled: !Xk,
-            children: [(0, ik.jsx)(Ok, {
-              label: wk("classic:defaultGamemode"),
-              caption: wk("classic:defaultGamemodeDescription"),
-              disabled: dk,
-              children: (0, ik.jsx)(Wk.c, {
+            title: Ib("worldBuilder:worldRulesSection"),
+            disabled: !Tb,
+            children: [(0, Vb.jsx)(Yb, {
+              label: Ib("classic:defaultGamemode"),
+              caption: Ib("classic:defaultGamemodeDescription"),
+              disabled: Hb,
+              children: (0, Vb.jsx)(Cb.e, {
                 controlClassName: "ManageDropdown",
-                options: yk.C.map((kk => ({
-                  value: kk,
-                  label: ek.r[kk]
+                options: lb.D.map((bb => ({
+                  value: bb,
+                  label: mb.s[bb]
                 }))),
-                value: Rk.defaultGamemode,
-                onChange: kk => tk("defaultGamemode", kk.value)
+                value: kb.defaultGamemode,
+                onChange: bb => Wb("defaultGamemode", bb.value)
               })
-            }), (0, ik.jsx)(Ok, {
-              label: wk("classic:voidDeathHeight"),
-              caption: wk("classic:voidDeathHeightDescription"),
-              disabled: dk,
-              children: (0, ik.jsxs)("div", {
+            }), (0, Vb.jsx)(Yb, {
+              label: Ib("classic:voidDeathHeight"),
+              caption: Ib("classic:voidDeathHeightDescription"),
+              disabled: Hb,
+              children: (0, Vb.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, ik.jsx)("input", {
+                children: [(0, Vb.jsx)("input", {
                   type: "number",
-                  max: fk.z,
-                  value: null !== (Fk = Rk.voidDeathHeight) && void 0 !== Fk ? Fk : "",
-                  onChange: kk => {
-                    const Fk = parseInt(kk.target.value);
-                    tk("voidDeathHeight", Fk)
+                  max: Qb.z,
+                  value: null !== (cb = kb.voidDeathHeight) && void 0 !== cb ? cb : "",
+                  onChange: bb => {
+                    const cb = parseInt(bb.target.value);
+                    Wb("voidDeathHeight", cb)
                   }
-                }), (0, ik.jsx)("span", {
+                }), (0, Vb.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: wk("worldBuilder:blocksUnit")
+                  children: Ib("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, ik.jsx)(Ok, {
-              label: wk("classic:worldBorder"),
-              caption: wk("classic:worldBorderDescription"),
-              disabled: dk,
-              children: (0, ik.jsxs)("div", {
+            }), (0, Vb.jsx)(Yb, {
+              label: Ib("classic:worldBorder"),
+              caption: Ib("classic:worldBorderDescription"),
+              disabled: Hb,
+              children: (0, Vb.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, ik.jsx)("input", {
+                children: [(0, Vb.jsx)("input", {
                   type: "number",
-                  min: fk.J,
-                  max: fk.C,
-                  placeholder: wk("worldBuilder:noWorldBorderLimit"),
-                  value: null !== (Bk = Rk.worldBorder) && void 0 !== Bk ? Bk : "",
-                  onChange: kk => {
-                    const Fk = parseInt(kk.target.value);
-                    tk("worldBorder", isNaN(Fk) ? null : Fk)
+                  min: Qb.G,
+                  max: Qb.D,
+                  placeholder: Ib("worldBuilder:noWorldBorderLimit"),
+                  value: null !== (sb = kb.worldBorder) && void 0 !== sb ? sb : "",
+                  onChange: bb => {
+                    const cb = parseInt(bb.target.value);
+                    Wb("worldBorder", isNaN(cb) ? null : cb)
                   }
-                }), (0, ik.jsx)("span", {
+                }), (0, Vb.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: wk("worldBuilder:blocksUnit")
+                  children: Ib("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, ik.jsx)(Ok, {
-              label: wk("classic:disableMobs"),
-              caption: wk("classic:disableMobsDescription"),
-              disabled: dk,
-              children: (0, ik.jsx)(mk.h, {
-                checked: Rk.disableMobs,
-                setChecked: kk => tk("disableMobs", kk),
-                disabled: dk
+            }), (0, Vb.jsx)(Yb, {
+              label: Ib("classic:disableMobs"),
+              caption: Ib("classic:disableMobsDescription"),
+              disabled: Hb,
+              children: (0, Vb.jsx)(eb.h, {
+                checked: kb.disableMobs,
+                setChecked: bb => Wb("disableMobs", bb),
+                disabled: Hb
               })
             })]
-          }), (0, ik.jsxs)(Yk, {
+          }), (0, Vb.jsxs)(Lb, {
             icon: "user-group",
-            title: wk("worldBuilder:playerAndLobbySection"),
-            disabled: !Xk,
-            children: [(0, ik.jsx)(Ok, {
-              label: wk("classic:disableKeepInventory"),
-              caption: wk("classic:disableKeepInventoryDescription"),
-              disabled: dk,
-              children: (0, ik.jsx)(mk.h, {
-                checked: Rk.disableKeepInventory,
-                setChecked: kk => tk("disableKeepInventory", kk),
-                disabled: dk
+            title: Ib("worldBuilder:playerAndLobbySection"),
+            disabled: !Tb,
+            children: [(0, Vb.jsx)(Yb, {
+              label: Ib("classic:disableKeepInventory"),
+              caption: Ib("classic:disableKeepInventoryDescription"),
+              disabled: Hb,
+              children: (0, Vb.jsx)(eb.h, {
+                checked: kb.disableKeepInventory,
+                setChecked: bb => Wb("disableKeepInventory", bb),
+                disabled: Hb
               })
-            }), (0, ik.jsx)(Ok, {
-              label: wk("classic:persistInventory"),
-              caption: wk("classic:persistInventoryDescription"),
-              disabled: dk,
-              children: (0, ik.jsx)(Wk.c, {
+            }), (0, Vb.jsx)(Yb, {
+              label: Ib("classic:persistInventory"),
+              caption: Ib("classic:persistInventoryDescription"),
+              disabled: Hb,
+              children: (0, Vb.jsx)(Cb.e, {
                 controlClassName: "ManageDropdown",
-                options: yk.m.map((kk => ({
-                  value: kk,
-                  label: ek.g[kk]
+                options: lb.p.map((bb => ({
+                  value: bb,
+                  label: mb.k[bb]
                 }))),
-                value: Rk.persistInventory,
-                onChange: kk => tk("persistInventory", kk.value)
+                value: kb.persistInventory,
+                onChange: bb => Wb("persistInventory", bb.value)
               })
-            }), (0, ik.jsx)(Ok, {
-              label: wk("classic:persistWorld"),
-              caption: wk("classic:persistWorldDescription"),
-              disabled: dk,
-              children: (0, ik.jsx)(mk.h, {
-                checked: Rk.persistWorld,
-                setChecked: kk => tk("persistWorld", kk),
-                disabled: dk
+            }), (0, Vb.jsx)(Yb, {
+              label: Ib("classic:persistWorld"),
+              caption: Ib("classic:persistWorldDescription"),
+              disabled: Hb,
+              children: (0, Vb.jsx)(eb.h, {
+                checked: kb.persistWorld,
+                setChecked: bb => Wb("persistWorld", bb),
+                disabled: Hb
               })
-            }), (0, ik.jsx)(Ok, {
-              label: wk("classic:disableLobbySpawn"),
-              caption: wk("classic:disableLobbySpawnDescription"),
-              disabled: dk,
-              children: (0, ik.jsx)(mk.h, {
-                checked: Rk.disableLobbySpawn,
-                setChecked: kk => tk("disableLobbySpawn", kk),
-                disabled: dk
+            }), (0, Vb.jsx)(Yb, {
+              label: Ib("classic:disableLobbySpawn"),
+              caption: Ib("classic:disableLobbySpawnDescription"),
+              disabled: Hb,
+              children: (0, Vb.jsx)(eb.h, {
+                checked: kb.disableLobbySpawn,
+                setChecked: bb => Wb("disableLobbySpawn", bb),
+                disabled: Hb
               })
-            }), (0, ik.jsx)(Ok, {
-              label: wk("classic:hideLobbyCode"),
-              caption: wk("classic:hideLobbyCodeDescription"),
-              disabled: dk,
-              children: (0, ik.jsx)(mk.h, {
-                checked: Rk.hideLobbyCode,
-                setChecked: kk => tk("hideLobbyCode", kk),
-                disabled: dk
+            }), (0, Vb.jsx)(Yb, {
+              label: Ib("classic:hideLobbyCode"),
+              caption: Ib("classic:hideLobbyCodeDescription"),
+              disabled: Hb,
+              children: (0, Vb.jsx)(eb.h, {
+                checked: kb.hideLobbyCode,
+                setChecked: bb => Wb("hideLobbyCode", bb),
+                disabled: Hb
               })
             })]
           })]
-        }), (0, ik.jsx)(Yk, {
+        }), (0, Vb.jsx)(Lb, {
           icon: "layer-group",
-          title: wk("worldBuilder:pluginsSection"),
-          disabled: !Xk,
-          children: (0, ik.jsx)(vk.b, {
-            callbacks: sk,
-            disabled: dk,
+          title: Ib("worldBuilder:pluginsSection"),
+          disabled: !Tb,
+          children: (0, Vb.jsx)(Nb.b, {
+            callbacks: fb,
+            disabled: Hb,
             advancedMode: !0,
             hideWrapper: !0
           })
         })]
       })
     }
-    var Sk = Bk(4655),
-      Nk = Bk(4121),
-      Hk = Bk(1441),
-      uk = Bk(3294),
-      Mk = Bk(1096),
-      gk = Bk(4612),
-      Uk = Bk(4664),
-      ck = Bk(1396);
-    const Gk = 50,
-      Tk = .3;
-    async function rk(kk) {
-      const Fk = await
-      function(kk) {
-        return new Promise(((Fk, Bk) => {
-          const Rk = new FileReader;
-          Rk.onload = () => Fk(Rk.result), Rk.onerror = Bk, Rk.readAsDataURL(kk)
+    var Jb = sb(4656),
+      gb = sb(4129),
+      Bb = sb(1474),
+      tb = sb(3281),
+      yb = sb(1117),
+      Pb = sb(4615),
+      Db = sb(4665),
+      Eb = sb(1436);
+    const ib = 50,
+      Ob = .3;
+    async function Gb(bb) {
+      const cb = await
+      function(bb) {
+        return new Promise(((cb, sb) => {
+          const kb = new FileReader;
+          kb.onload = () => cb(kb.result), kb.onerror = sb, kb.readAsDataURL(bb)
         }))
-      }(kk), Bk = await
-      function(kk) {
-        return new Promise(((Fk, Bk) => {
-          const Rk = new Image;
-          Rk.onload = () => Fk(Rk), Rk.onerror = () => Bk(new Error("Failed to load image")), Rk.src = kk
+      }(bb), sb = await
+      function(bb) {
+        return new Promise(((cb, sb) => {
+          const kb = new Image;
+          kb.onload = () => cb(kb), kb.onerror = () => sb(new Error("Failed to load image")), kb.src = bb
         }))
-      }(Fk);
-      if (Bk.naturalHeight > Bk.naturalWidth) throw new Dk;
-      const Rk = 1024 * Gk,
+      }(cb);
+      if (sb.naturalHeight > sb.naturalWidth) throw new Kb;
+      const kb = 1024 * ib,
         {
-          dataUrl: tk,
-          finalQuality: ak
-        } = function(kk, Fk) {
-          const Bk = document.createElement("canvas");
-          Bk.width = kk.naturalWidth, Bk.height = kk.naturalHeight, Bk.getContext("2d").drawImage(kk, 0, 0);
-          let Rk = .92,
-            tk = Bk.toDataURL("image/jpeg", Rk);
-          for (; .75 * tk.length > Fk && Rk > .05;) Rk -= .05, tk = Bk.toDataURL("image/jpeg", Rk);
+          dataUrl: Wb,
+          finalQuality: ab
+        } = function(bb, cb) {
+          const sb = document.createElement("canvas");
+          sb.width = bb.naturalWidth, sb.height = bb.naturalHeight, sb.getContext("2d").drawImage(bb, 0, 0);
+          let kb = .92,
+            Wb = sb.toDataURL("image/jpeg", kb);
+          for (; .75 * Wb.length > cb && kb > .05;) kb -= .05, Wb = sb.toDataURL("image/jpeg", kb);
           return {
-            dataUrl: tk,
-            finalQuality: Rk
+            dataUrl: Wb,
+            finalQuality: kb
           }
-        }(Bk, Rk);
-      if (Math.ceil(.75 * tk.length) > Rk) throw new zk;
+        }(sb, kb);
+      if (Math.ceil(.75 * Wb.length) > kb) throw new Zb;
       return {
-        base64Jpg: tk,
-        heavilyCompressed: ak < Tk
+        base64Jpg: Wb,
+        heavilyCompressed: ab < Ob
       }
     }
-    class Dk extends Error {}
-    class zk extends Error {}
-    var Pk = function(kk) {
-      return kk[kk.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", kk[kk.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", kk
-    }(Pk || {});
+    class Kb extends Error {}
+    class Zb extends Error {}
+    var zb = function(bb) {
+      return bb[bb.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", bb[bb.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", bb
+    }(zb || {});
 
-    function hk(kk) {
-      var Fk;
+    function qb(bb) {
+      var cb;
       let {
-        schematicId: Bk,
-        hasReadUploadPolicy: tk,
-        onPolicyValidationError: wk,
-        onThumbnailReady: dk
-      } = kk;
+        schematicId: sb,
+        hasReadUploadPolicy: Wb,
+        onPolicyValidationError: Ib,
+        onThumbnailReady: Hb
+      } = bb;
       const {
-        t: Jk
-      } = (0, bk.x)(), [ek, yk] = (0, Rk.useState)(null), [fk, mk] = (0, Rk.useState)(""), [Wk, vk] = (0, Rk.useState)(""), [Yk, Lk] = (0, Rk.useState)(!0), [Ok, Ek] = (0, Rk.useState)(!1), Sk = (0, Rk.useRef)(!1), [Nk, Hk] = (0, Rk.useState)(null), [uk, Mk] = (0, Rk.useState)(!1), [gk, ck] = (0, Rk.useState)(!1), Gk = (0, Rk.useRef)(0), {
-        getRootProps: Tk,
-        getInputProps: Pk,
-        isDragActive: hk
-      } = (0, Uk.d)({
+        t: Xb
+      } = (0, Ub.E)(), [mb, lb] = (0, kb.useState)(null), [Qb, eb] = (0, kb.useState)(""), [Cb, Nb] = (0, kb.useState)(""), [Lb, ub] = (0, kb.useState)(!0), [Yb, hb] = (0, kb.useState)(!1), Jb = (0, kb.useRef)(!1), [gb, Bb] = (0, kb.useState)(null), [tb, yb] = (0, kb.useState)(!1), [Pb, Eb] = (0, kb.useState)(!1), ib = (0, kb.useRef)(0), {
+        getRootProps: Ob,
+        getInputProps: zb,
+        isDragActive: qb
+      } = (0, Db.c)({
         accept: {
           "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"]
         },
         multiple: !1,
-        onDrop: async kk => {
-          if (0 === kk.length) return;
-          const Fk = kk[0],
-            Bk = ++Gk.current;
-          Hk(null), Mk(!1), yk(null), mk(Fk.name);
+        onDrop: async bb => {
+          if (0 === bb.length) return;
+          const cb = bb[0],
+            sb = ++ib.current;
+          Bb(null), yb(!1), lb(null), eb(cb.name);
           try {
-            const kk = await rk(Fk);
-            if (Bk !== Gk.current) return;
-            yk(kk), Mk(kk.heavilyCompressed)
-          } catch (Rk) {
-            if (Bk !== Gk.current) return;
-            Hk(Jk(Rk instanceof Dk ? "thumbnail:portraitImagesNotAllowed" : Rk instanceof zk ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
+            const bb = await Gb(cb);
+            if (sb !== ib.current) return;
+            lb(bb), yb(bb.heavilyCompressed)
+          } catch (kb) {
+            if (sb !== ib.current) return;
+            Bb(Xb(kb instanceof Kb ? "thumbnail:portraitImagesNotAllowed" : kb instanceof Zb ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
           }
         },
         useFsAccessApi: !1
-      }), qk = fk.length <= 30 ? fk : `${fk.slice(0,27)}...`, Ck = null !== (Fk = null === ek || void 0 === ek ? void 0 : ek.base64Jpg) && void 0 !== Fk ? Fk : null, Zk = Wk.trim(), pk = Zk.length >= Vk.o && Zk.length <= Vk.m, Kk = gk && !ek && !Nk, xk = gk && !pk;
-      return (0, ik.jsxs)("div", {
+      }), db = Qb.length <= 30 ? Qb : `${Qb.slice(0,27)}...`, Ab = null !== (cb = null === mb || void 0 === mb ? void 0 : mb.base64Jpg) && void 0 !== cb ? cb : null, wb = Cb.trim(), rb = wb.length >= Mb.l && wb.length <= Mb.i, ob = Pb && !mb && !gb, Sb = Pb && !rb;
+      return (0, Vb.jsxs)("div", {
         className: "ThumbnailUploadContainer",
-        children: [(0, ik.jsxs)("div", {
-          ...Tk({
-            className: Ak()("ThumbnailUploadDropzone", {
-              ActiveDrag: hk,
-              ValidationError: Kk
+        children: [(0, Vb.jsxs)("div", {
+          ...Ob({
+            className: nb()("ThumbnailUploadDropzone", {
+              ActiveDrag: qb,
+              ValidationError: ob
             })
           }),
-          children: [(0, ik.jsx)("input", {
-            ...Pk()
-          }), !hk && Ck ? (0, ik.jsxs)(ik.Fragment, {
-            children: [(0, ik.jsxs)("div", {
+          children: [(0, Vb.jsx)("input", {
+            ...zb()
+          }), !qb && Ab ? (0, Vb.jsxs)(Vb.Fragment, {
+            children: [(0, Vb.jsxs)("div", {
               className: "ThumbnailAspectPreviews",
-              children: [(0, ik.jsxs)("div", {
+              children: [(0, Vb.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, ik.jsx)("div", {
+                children: [(0, Vb.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "1:1"
-                }), (0, ik.jsx)("div", {
+                }), (0, Vb.jsx)("div", {
                   className: "ThumbnailAspectFrame Square",
-                  children: (0, ik.jsx)("img", {
-                    src: Ck,
+                  children: (0, Vb.jsx)("img", {
+                    src: Ab,
                     alt: "1:1 preview"
                   })
                 })]
-              }), (0, ik.jsxs)("div", {
+              }), (0, Vb.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, ik.jsx)("div", {
+                children: [(0, Vb.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "16:9"
-                }), (0, ik.jsx)("div", {
+                }), (0, Vb.jsx)("div", {
                   className: "ThumbnailAspectFrame Wide",
-                  children: (0, ik.jsx)("img", {
-                    src: Ck,
+                  children: (0, Vb.jsx)("img", {
+                    src: Ab,
                     alt: "16:9 preview"
                   })
                 })]
               })]
-            }), (0, ik.jsxs)("div", {
-              children: [(0, ik.jsx)("div", {
+            }), (0, Vb.jsxs)("div", {
+              children: [(0, Vb.jsx)("div", {
                 className: "ThumbnailUploadInstructions Active",
-                children: qk
-              }), (0, ik.jsx)("div", {
+                children: db
+              }), (0, Vb.jsx)("div", {
                 className: "ThumbnailUploadInstructions Preview",
-                children: Jk("thumbnail:preview")
+                children: Xb("thumbnail:preview")
               })]
             })]
-          }) : (0, ik.jsxs)(ik.Fragment, {
-            children: [(0, ik.jsx)("div", {
+          }) : (0, Vb.jsxs)(Vb.Fragment, {
+            children: [(0, Vb.jsx)("div", {
               className: "ThumbnailUploadIcon",
-              children: (0, ik.jsx)(sk.d, {
+              children: (0, Vb.jsx)(fb.b, {
                 name: "image"
               })
-            }), (0, ik.jsx)("div", {
+            }), (0, Vb.jsx)("div", {
               className: "ThumbnailUploadInstructions",
-              children: Jk("thumbnail:dragImageHere")
+              children: Xb("thumbnail:dragImageHere")
             })]
           })]
-        }), Kk && (0, ik.jsx)("div", {
+        }), ob && (0, Vb.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: Jk("thumbnail:imageRequired")
-        }), (0, ik.jsx)(Xk.e, {
-          className: Ak()("ThumbnailUploadNameInput", {
-            ValidationError: xk
+          children: Xb("thumbnail:imageRequired")
+        }), (0, Vb.jsx)(Tb.c, {
+          className: nb()("ThumbnailUploadNameInput", {
+            ValidationError: Sb
           }),
-          placeholderText: Jk("thumbnail:thumbnailName"),
-          defaultValue: Wk,
-          onValueChange: kk => {
-            vk(kk)
+          placeholderText: Xb("thumbnail:thumbnailName"),
+          defaultValue: Cb,
+          onValueChange: bb => {
+            Nb(bb)
           },
-          maxLength: Vk.m
-        }), xk && (0, ik.jsx)("div", {
+          maxLength: Mb.i
+        }), Sb && (0, Vb.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: Jk("thumbnail:nameRequired", {
-            min: Vk.o,
-            max: Vk.m
+          children: Xb("thumbnail:nameRequired", {
+            min: Mb.l,
+            max: Mb.i
           })
-        }), (0, ik.jsxs)("label", {
+        }), (0, Vb.jsxs)("label", {
           className: "ThumbnailUploadCheckbox",
-          children: [(0, ik.jsx)("input", {
+          children: [(0, Vb.jsx)("input", {
             type: "checkbox",
-            checked: Yk,
-            onChange: kk => {
-              Lk(kk.target.checked)
+            checked: Lb,
+            onChange: bb => {
+              ub(bb.target.checked)
             }
-          }), Jk("thumbnail:setAsThumbnailOnceApproved")]
-        }), uk && (0, ik.jsx)("div", {
+          }), Xb("thumbnail:setAsThumbnailOnceApproved")]
+        }), tb && (0, Vb.jsx)("div", {
           className: "ThumbnailUploadWarning",
-          children: Jk("thumbnail:heavyCompressionWarning")
-        }), Nk && (0, ik.jsx)("div", {
+          children: Xb("thumbnail:heavyCompressionWarning")
+        }), gb && (0, Vb.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: Nk
-        }), (0, ik.jsx)(ak.o, {
-          disabled: Ok,
+          children: gb
+        }), (0, Vb.jsx)(ab.n, {
+          disabled: Yb,
           className: "ThumbnailUploadButton",
           onClick: async () => {
-            if (ck(!0), !Sk.current && ek && pk && tk) {
-              Sk.current = !0, Ek(!0), Hk(null);
+            if (Eb(!0), !Jb.current && mb && rb && Wb) {
+              Jb.current = !0, hb(!0), Bb(null);
               try {
-                await dk(ek.base64Jpg, Zk, Yk ? Bk : null)
-              } catch (kk) {
-                Hk(kk.errorMessageForUser ? Jk(kk.errorMessageForUser, kk.errorMessageTranslationParams) : Jk("thumbnail:failedToUploadImage"))
+                await Hb(mb.base64Jpg, wb, Lb ? sb : null)
+              } catch (bb) {
+                Bb(bb.errorMessageForUser ? Xb(bb.errorMessageForUser, bb.errorMessageTranslationParams) : Xb("thumbnail:failedToUploadImage"))
               } finally {
-                Sk.current = !1, Ek(!1)
+                Jb.current = !1, hb(!1)
               }
-            } else tk || wk()
+            } else Wb || Ib()
           },
-          children: Jk(Ok ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
+          children: Xb(Yb ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
         })]
       })
     }
-    const qk = 2e3;
+    const db = 2e3;
 
-    function Ck(kk) {
+    function Ab(bb) {
       let {
-        schematicId: Fk,
-        ownedThumbnailCount: Bk,
-        onClose: tk,
-        onThumbnailReady: ak
-      } = kk;
+        schematicId: cb,
+        ownedThumbnailCount: sb,
+        onClose: Wb,
+        onThumbnailReady: ab
+      } = bb;
       const {
-        t: Xk
-      } = (0, bk.x)(), {
-        userContext: wk
-      } = (0, Mk.e)(), [dk, Jk] = (0, Rk.useState)(!1), [ek, yk] = (0, Rk.useState)(!1), [fk, mk] = (0, Rk.useState)(!1), Wk = (0, Rk.useRef)();
-      (0, Rk.useEffect)((() => () => {
-        clearTimeout(Wk.current)
+        t: Tb
+      } = (0, Ub.E)(), {
+        userContext: Ib
+      } = (0, yb.c)(), [Hb, Xb] = (0, kb.useState)(!1), [mb, lb] = (0, kb.useState)(!1), [Qb, eb] = (0, kb.useState)(!1), Cb = (0, kb.useRef)();
+      (0, kb.useEffect)((() => () => {
+        clearTimeout(Cb.current)
       }), []);
-      const vk = function(kk, Fk) {
-        const Bk = [];
-        return kk.isLoggedIn() || Bk.push(Pk.NOT_LOGGED_IN), Fk >= Vk.W && Bk.push(Pk.THUMBNAIL_LIMIT_REACHED), Bk
-      }(wk, Bk);
-      if (vk.length > 0) {
-        const kk = {
-          [Pk.NOT_LOGGED_IN]: {
+      const Nb = function(bb, cb) {
+        const sb = [];
+        return bb.isLoggedIn() || sb.push(zb.NOT_LOGGED_IN), cb >= Mb.O && sb.push(zb.THUMBNAIL_LIMIT_REACHED), sb
+      }(Ib, sb);
+      if (Nb.length > 0) {
+        const bb = {
+          [zb.NOT_LOGGED_IN]: {
             key: "thumbnail:mustBeLoggedInToUpload"
           },
-          [Pk.THUMBNAIL_LIMIT_REACHED]: {
+          [zb.THUMBNAIL_LIMIT_REACHED]: {
             key: "thumbnail:thumbnailLimitReachedPleaseDelete",
             params: {
-              max: Vk.W
+              max: Mb.O
             }
           }
         };
-        return (0, ik.jsxs)("div", {
+        return (0, Vb.jsxs)("div", {
           className: "ThumbnailUploaderInner",
-          children: [(0, ik.jsx)("h1", {
+          children: [(0, Vb.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: Xk("thumbnail:cannotUploadThumbnail")
-          }), vk.map(((Fk, Bk) => {
-            const Rk = kk[Fk];
-            return (0, ik.jsxs)("div", {
+            children: Tb("thumbnail:cannotUploadThumbnail")
+          }), Nb.map(((cb, sb) => {
+            const kb = bb[cb];
+            return (0, Vb.jsxs)("div", {
               className: "CannotUploadThumbnailItem",
-              children: [(0, ik.jsx)(sk.d, {
+              children: [(0, Vb.jsx)(fb.b, {
                 name: "triangle-exclamation"
-              }), (0, ik.jsx)("span", {
-                children: Xk(Rk.key, Rk.params)
+              }), (0, Vb.jsx)("span", {
+                children: Tb(kb.key, kb.params)
               })]
-            }, Bk)
+            }, sb)
           }))]
         })
       }
-      return (0, ik.jsxs)("div", {
-        className: Ak()("ThumbnailUploaderInner", {
-          ThumbnailUploaderSuccess: dk
+      return (0, Vb.jsxs)("div", {
+        className: nb()("ThumbnailUploaderInner", {
+          ThumbnailUploaderSuccess: Hb
         }),
-        children: [dk && (0, ik.jsxs)("div", {
+        children: [Hb && (0, Vb.jsxs)("div", {
           className: "ThumbnailUploadSuccessOverlay",
-          children: [(0, ik.jsxs)("div", {
+          children: [(0, Vb.jsxs)("div", {
             className: "ThumbnailUploadSuccessIcon FullyFancyText AnimFadeInScaleUp",
-            children: [(0, ik.jsx)(sk.d, {
+            children: [(0, Vb.jsx)(fb.b, {
               name: "check"
-            }), (0, ik.jsx)(ck.d, {})]
-          }), (0, ik.jsx)("div", {
+            }), (0, Vb.jsx)(Eb.e, {})]
+          }), (0, Vb.jsx)("div", {
             className: "ThumbnailUploadSuccessText AnimFadeInScaleUp",
-            children: Xk("thumbnail:thumbnailUploaded")
+            children: Tb("thumbnail:thumbnailUploaded")
           })]
-        }), (0, ik.jsx)("h1", {
+        }), (0, Vb.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: Xk("thumbnail:uploadThumbnail")
-        }), (0, ik.jsxs)("div", {
+          children: Tb("thumbnail:uploadThumbnail")
+        }), (0, Vb.jsxs)("div", {
           className: "ThumbnailUploaderBody",
-          children: [(0, ik.jsxs)("div", {
+          children: [(0, Vb.jsxs)("div", {
             className: "ThumbnailUploaderLeft",
-            children: [(0, ik.jsx)("h3", {
+            children: [(0, Vb.jsx)("h3", {
               className: "SchematicPopupSubtitle",
-              children: Xk("thumbnail:chooseImage", {
-                maxSizeKb: Gk
+              children: Tb("thumbnail:chooseImage", {
+                maxSizeKb: ib
               })
-            }), (0, ik.jsx)(hk, {
-              schematicId: Fk,
-              hasReadUploadPolicy: ek,
+            }), (0, Vb.jsx)(qb, {
+              schematicId: cb,
+              hasReadUploadPolicy: mb,
               onPolicyValidationError: () => {
-                mk(!0)
+                eb(!0)
               },
-              onThumbnailReady: async (kk, Fk, Bk) => {
-                await ak(kk, Fk, Bk), Jk(!0), Wk.current = setTimeout(tk, qk)
+              onThumbnailReady: async (bb, cb, sb) => {
+                await ab(bb, cb, sb), Xb(!0), Cb.current = setTimeout(Wb, db)
               }
             })]
-          }), (0, ik.jsxs)("div", {
+          }), (0, Vb.jsxs)("div", {
             className: "ThumbnailUploadPolicy",
-            children: [(0, ik.jsx)("h3", {
+            children: [(0, Vb.jsx)("h3", {
               className: "ThumbnailUploadPolicyTitle",
-              children: Xk("thumbnail:uploadPolicy")
-            }), (0, ik.jsxs)("ul", {
+              children: Tb("thumbnail:uploadPolicy")
+            }), (0, Vb.jsxs)("ul", {
               className: "ThumbnailUploadPolicyList",
-              children: [(0, ik.jsxs)("li", {
+              children: [(0, Vb.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, ik.jsx)(sk.d, {
+                children: [(0, Vb.jsx)(fb.b, {
                   name: "check"
-                }), (0, ik.jsx)("span", {
-                  children: Xk("thumbnail:policyFollowGuidelines")
+                }), (0, Vb.jsx)("span", {
+                  children: Tb("thumbnail:policyFollowGuidelines")
                 })]
-              }), (0, ik.jsxs)("li", {
+              }), (0, Vb.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, ik.jsx)(sk.d, {
+                children: [(0, Vb.jsx)(fb.b, {
                   name: "check"
-                }), (0, ik.jsx)("span", {
-                  children: Xk("thumbnail:policyInGameAssets")
+                }), (0, Vb.jsx)("span", {
+                  children: Tb("thumbnail:policyInGameAssets")
                 })]
-              }), (0, ik.jsxs)("li", {
+              }), (0, Vb.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, ik.jsx)(sk.d, {
+                children: [(0, Vb.jsx)(fb.b, {
                   name: "check"
-                }), (0, ik.jsx)("span", {
-                  children: Xk("thumbnail:policyLimitText")
+                }), (0, Vb.jsx)("span", {
+                  children: Tb("thumbnail:policyLimitText")
                 })]
-              }), (0, ik.jsxs)("li", {
+              }), (0, Vb.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, ik.jsx)(sk.d, {
+                children: [(0, Vb.jsx)(fb.b, {
                   name: "x"
-                }), (0, ik.jsx)("span", {
-                  children: Xk("thumbnail:policyCopyrightContent")
+                }), (0, Vb.jsx)("span", {
+                  children: Tb("thumbnail:policyCopyrightContent")
                 })]
-              }), (0, ik.jsxs)("li", {
+              }), (0, Vb.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, ik.jsx)(sk.d, {
+                children: [(0, Vb.jsx)(fb.b, {
                   name: "x"
-                }), (0, ik.jsx)("span", {
-                  children: Xk("thumbnail:policyOutOfGameAssets")
+                }), (0, Vb.jsx)("span", {
+                  children: Tb("thumbnail:policyOutOfGameAssets")
                 })]
-              }), (0, ik.jsxs)("li", {
+              }), (0, Vb.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, ik.jsx)(sk.d, {
+                children: [(0, Vb.jsx)(fb.b, {
                   name: "x"
-                }), (0, ik.jsx)("span", {
-                  children: Xk("thumbnail:policyBloxdTags")
+                }), (0, Vb.jsx)("span", {
+                  children: Tb("thumbnail:policyBloxdTags")
                 })]
-              }), (0, ik.jsxs)("li", {
+              }), (0, Vb.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, ik.jsx)(sk.d, {
+                children: [(0, Vb.jsx)(fb.b, {
                   name: "x"
-                }), (0, ik.jsx)("span", {
-                  children: Xk("thumbnail:policyMustReflectGame")
+                }), (0, Vb.jsx)("span", {
+                  children: Tb("thumbnail:policyMustReflectGame")
                 })]
               })]
-            }), (0, ik.jsxs)("label", {
-              className: Ak()("ThumbnailUploadCheckbox Policy", {
-                ValidationError: fk && !ek
+            }), (0, Vb.jsxs)("label", {
+              className: nb()("ThumbnailUploadCheckbox Policy", {
+                ValidationError: Qb && !mb
               }),
-              children: [(0, ik.jsx)("input", {
+              children: [(0, Vb.jsx)("input", {
                 type: "checkbox",
-                checked: ek,
-                onChange: kk => {
-                  yk(kk.target.checked)
+                checked: mb,
+                onChange: bb => {
+                  lb(bb.target.checked)
                 }
-              }), Xk("thumbnail:agreeToUploadPolicy")]
-            }), fk && !ek && (0, ik.jsx)("div", {
+              }), Tb("thumbnail:agreeToUploadPolicy")]
+            }), Qb && !mb && (0, Vb.jsx)("div", {
               className: "ThumbnailPolicyError",
-              children: Xk("thumbnail:policyRequired")
+              children: Tb("thumbnail:policyRequired")
             })]
           })]
         })]
       })
     }
-    var Zk = Bk(1154);
-    const pk = {
+    var wb = sb(1208);
+    const rb = {
       "custom-game-bad-thumbnail": {
         reason: "thumbnail:rejectionInappropriate",
         tips: ["thumbnail:rejectionInappropriateTip1", "thumbnail:rejectionInappropriateTip2", "thumbnail:rejectionInappropriateTip3"]
@@ -877,207 +877,207 @@ export const modules = {
       }
     };
 
-    function Kk(kk) {
-      var Fk, Bk;
+    function ob(bb) {
+      var cb, sb;
       let {
-        schematicData: Xk,
-        updateSchematicData: dk,
-        publishFormEnabled: Vk,
-        onClose: Jk
-      } = kk;
+        schematicData: Tb,
+        updateSchematicData: Hb,
+        publishFormEnabled: Mb,
+        onClose: Xb
+      } = bb;
       const {
-        t: ek
-      } = (0, bk.x)(), {
-        userContext: yk,
-        isUserContextUpdating: fk
-      } = (0, Mk.e)(), mk = (0, uk.d)(), [Wk, vk] = (0, Rk.useState)([]), [Yk, Lk] = (0, Rk.useState)([]), [Ok, Ek] = (0, Rk.useState)(!0), [Sk, Nk] = (0, Rk.useState)(null !== (Fk = Xk.customThumbnailId) && void 0 !== Fk ? Fk : null), [Uk, ck] = (0, Rk.useState)(null), Gk = (0, Rk.useRef)(null !== (Bk = Xk.customThumbnailId) && void 0 !== Bk ? Bk : null), Tk = (0, Rk.useRef)(0), rk = (0, Rk.useRef)(null), Dk = (0, Rk.useRef)(null), zk = (0, Rk.useRef)(null), Pk = (0, Rk.useRef)(!1);
+        t: mb
+      } = (0, Ub.E)(), {
+        userContext: lb,
+        isUserContextUpdating: Qb
+      } = (0, yb.c)(), eb = (0, tb.e)(), [Cb, Nb] = (0, kb.useState)([]), [Lb, ub] = (0, kb.useState)([]), [Yb, hb] = (0, kb.useState)(!0), [Jb, gb] = (0, kb.useState)(null !== (cb = Tb.customThumbnailId) && void 0 !== cb ? cb : null), [Db, Eb] = (0, kb.useState)(null), ib = (0, kb.useRef)(null !== (sb = Tb.customThumbnailId) && void 0 !== sb ? sb : null), Ob = (0, kb.useRef)(0), Gb = (0, kb.useRef)(null), Kb = (0, kb.useRef)(null), Zb = (0, kb.useRef)(null), zb = (0, kb.useRef)(!1);
 
-      function hk(kk, Fk) {
-        zk.current && (clearTimeout(zk.current), zk.current = null), ck(kk), null !== kk && Fk && (zk.current = setTimeout((() => {
-          ck(null), zk.current = null
+      function qb(bb, cb) {
+        Zb.current && (clearTimeout(Zb.current), Zb.current = null), Eb(bb), null !== bb && cb && (Zb.current = setTimeout((() => {
+          Eb(null), Zb.current = null
         }), 5e3))
-      }(0, Rk.useEffect)((() => () => {
-        clearTimeout(Dk.current), clearTimeout(zk.current)
+      }(0, kb.useEffect)((() => () => {
+        clearTimeout(Kb.current), clearTimeout(Zb.current)
       }), []);
-      const qk = (0, Rk.useCallback)((() => {
-        Ek(!0), Hk.b.getOwnedThumbnails(yk).then((kk => {
-          const Fk = [],
-            Bk = [];
-          for (const Rk of kk.thumbnails) Rk.rejectionPolicyId ? Fk.push(Rk) : Bk.push(Rk);
-          Fk.sort(((kk, Fk) => kk.lastUpdatedAt - Fk.lastUpdatedAt)), Bk.sort(((kk, Fk) => {
-            const Bk = kk.approved ? 1 : 0,
-              Rk = (Fk.approved ? 1 : 0) - Bk;
-            return 0 !== Rk ? Rk : Fk.lastUpdatedAt - kk.lastUpdatedAt
-          })), Lk(Fk), vk(Bk)
-        })).catch((kk => {
-          console.error("Failed to fetch thumbnails:", kk)
+      const db = (0, kb.useCallback)((() => {
+        hb(!0), Bb.b.getOwnedThumbnails(lb).then((bb => {
+          const cb = [],
+            sb = [];
+          for (const kb of bb.thumbnails) kb.rejectionPolicyId ? cb.push(kb) : sb.push(kb);
+          cb.sort(((bb, cb) => bb.lastUpdatedAt - cb.lastUpdatedAt)), sb.sort(((bb, cb) => {
+            const sb = bb.approved ? 1 : 0,
+              kb = (cb.approved ? 1 : 0) - sb;
+            return 0 !== kb ? kb : cb.lastUpdatedAt - bb.lastUpdatedAt
+          })), ub(cb), Nb(sb)
+        })).catch((bb => {
+          console.error("Failed to fetch thumbnails:", bb)
         })).finally((() => {
-          Ek(!1)
+          hb(!1)
         }))
-      }), [yk]);
-      async function pk(kk, Fk, Bk) {
-        return Hk.b.uploadSchematicThumbnail(yk, kk, Fk, Bk).then((() => {
-          hk({
-            text: ek("thumbnail:uploadedAwaitingModeration"),
+      }), [lb]);
+      async function rb(bb, cb, sb) {
+        return Bb.b.uploadSchematicThumbnail(lb, bb, cb, sb).then((() => {
+          qb({
+            text: mb("thumbnail:uploadedAwaitingModeration"),
             type: "success"
-          }, !0), qk()
+          }, !0), db()
         }))
       }
 
-      function Kk() {
-        Tk.current = Date.now(), Dk.current = null;
-        const kk = rk.current;
-        rk.current = null, hk({
-          text: ek("thumbnail:settingThumbnail"),
+      function ob() {
+        Ob.current = Date.now(), Kb.current = null;
+        const bb = Gb.current;
+        Gb.current = null, qb({
+          text: mb("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), Hk.b.setSchematicThumbnail(yk, Xk.schematicId, kk).then((() => {
-          mk.current && (hk({
-            text: ek("thumbnail:thumbnailUpdated"),
+        }, !1), Bb.b.setSchematicThumbnail(lb, Tb.schematicId, bb).then((() => {
+          eb.current && (qb({
+            text: mb("thumbnail:thumbnailUpdated"),
             type: "success"
-          }, !0), Gk.current = kk, dk("customThumbnailId", kk), dk("customThumbnailBlurhash", void 0), dk("customThumbnailVariants", void 0))
-        })).catch((kk => {
-          mk.current && (hk({
-            text: kk.errorMessageForUser ? ek(kk.errorMessageForUser, kk.errorMessageTranslationParams) : ek("thumbnail:failedToSetThumbnail"),
+          }, !0), ib.current = bb, Hb("customThumbnailId", bb), Hb("customThumbnailBlurhash", void 0), Hb("customThumbnailVariants", void 0))
+        })).catch((bb => {
+          eb.current && (qb({
+            text: bb.errorMessageForUser ? mb(bb.errorMessageForUser, bb.errorMessageTranslationParams) : mb("thumbnail:failedToSetThumbnail"),
             type: "error"
-          }, !0), Nk(Gk.current))
+          }, !0), gb(ib.current))
         }))
       }
 
-      function lk(kk) {
-        Nk(kk), rk.current = kk;
-        const Fk = Date.now() - Tk.current;
-        Fk >= 1e3 ? Kk() : (hk({
-          text: ek("thumbnail:settingThumbnail"),
+      function vb(bb) {
+        gb(bb), Gb.current = bb;
+        const cb = Date.now() - Ob.current;
+        cb >= 1e3 ? ob() : (qb({
+          text: mb("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), Dk.current || (Dk.current = setTimeout((() => {
-          Kk()
-        }), 1e3 - Fk)))
+        }, !1), Kb.current || (Kb.current = setTimeout((() => {
+          ob()
+        }), 1e3 - cb)))
       }
-      return (0, Rk.useEffect)((() => {
-        !1 === fk && qk()
-      }), [fk, qk]), Yk.length > 0 ? (0, ik.jsx)(xk, {
-        rejectedThumbnails: Yk,
-        userContext: yk,
-        isMountedRef: mk,
-        onAcknowledged: qk
-      }) : (0, ik.jsxs)("div", {
+      return (0, kb.useEffect)((() => {
+        !1 === Qb && db()
+      }), [Qb, db]), Lb.length > 0 ? (0, Vb.jsx)(Sb, {
+        rejectedThumbnails: Lb,
+        userContext: lb,
+        isMountedRef: eb,
+        onAcknowledged: db
+      }) : (0, Vb.jsxs)("div", {
         className: "BloxdForm ThumbnailSection",
-        children: [(0, ik.jsxs)("div", {
+        children: [(0, Vb.jsxs)("div", {
           className: "SectionTitle",
-          children: [ek("thumbnail:gameThumbnail"), Uk && (0, ik.jsx)("span", {
-            className: Ak()("ThumbnailActionMsg", `ThumbnailActionMsg--${Uk.type}`),
-            children: Uk.text
+          children: [mb("thumbnail:gameThumbnail"), Db && (0, Vb.jsx)("span", {
+            className: nb()("ThumbnailActionMsg", `ThumbnailActionMsg--${Db.type}`),
+            children: Db.text
           })]
-        }), (0, ik.jsx)("div", {
+        }), (0, Vb.jsx)("div", {
           className: "SectionBody",
-          children: (0, ik.jsxs)("div", {
+          children: (0, Vb.jsxs)("div", {
             className: "ThumbnailGrid",
-            children: [(0, ik.jsxs)("div", {
-              className: Ak()("ThumbnailGridItem ThumbnailGridItemDefault", {
-                ThumbnailGridItemSelected: null === Sk
+            children: [(0, Vb.jsxs)("div", {
+              className: nb()("ThumbnailGridItem ThumbnailGridItemDefault", {
+                ThumbnailGridItemSelected: null === Jb
               }),
-              onClick: () => lk(null),
-              children: [(0, ik.jsx)(gk.c, {
+              onClick: () => vb(null),
+              children: [(0, Vb.jsx)(Pb.c, {
                 game: {
-                  schematicId: Xk.schematicId,
-                  imageBlurhash: Xk.imageBlurhash
+                  schematicId: Tb.schematicId,
+                  imageBlurhash: Tb.imageBlurhash
                 }
-              }), (0, ik.jsx)("div", {
+              }), (0, Vb.jsx)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailDefaultLabel",
-                children: ek("general:default")
+                children: mb("general:default")
               })]
-            }), Ok && (0, ik.jsx)(wk.b, {}), Wk.map(((kk, Fk) => (0, ik.jsxs)("div", {
-              className: Ak()("ThumbnailGridItem", {
-                ThumbnailGridItemSelected: Sk === kk.id,
-                ThumbnailGridItemPending: !kk.approved
+            }), Yb && (0, Vb.jsx)(Ib.d, {}), Cb.map(((bb, cb) => (0, Vb.jsxs)("div", {
+              className: nb()("ThumbnailGridItem", {
+                ThumbnailGridItemSelected: Jb === bb.id,
+                ThumbnailGridItemPending: !bb.approved
               }),
               onClick: () => {
-                kk.approved && lk(kk.id)
+                bb.approved && vb(bb.id)
               },
-              children: [kk.approved && (0, ik.jsx)("img", {
-                src: `${Zk.clientSideServerUrls.s3Url}/customThumbnails/${kk.id}.jpg`,
+              children: [bb.approved && (0, Vb.jsx)("img", {
+                src: `${wb.clientSideServerUrls.s3Url}/customThumbnails/${bb.id}.jpg`,
                 alt: "Thumbnail"
-              }), kk.approved && (0, ik.jsx)("div", {
+              }), bb.approved && (0, Vb.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: kk.name
-              }), kk.id && (0, ik.jsx)(ak.J, {
+                children: bb.name
+              }), bb.id && (0, Vb.jsx)(ab.G, {
                 className: "ThumbnailDeleteButton",
-                onClick: Fk => async function(kk, Fk, Bk) {
-                  kk.stopPropagation();
-                  const Rk = await tk.NotificationProvider.showCustomPopup({
-                      body: kk => (0, ik.jsx)(jk, {
-                        thumbnailId: Fk,
-                        thumbnailName: Bk,
-                        onClose: Fk => {
-                          Fk && (Pk.current = !0), kk()
+                onClick: cb => async function(bb, cb, sb) {
+                  bb.stopPropagation();
+                  const kb = await Wb.NotificationProvider.showCustomPopup({
+                      body: bb => (0, Vb.jsx)(Rb, {
+                        thumbnailId: cb,
+                        thumbnailName: sb,
+                        onClose: cb => {
+                          cb && (zb.current = !0), bb()
                         }
                       }),
                       middleScreenPopupClassName: "ThumbnailDeleteConfirmPopup",
-                      onClose: Jk
+                      onClose: Xb
                     }).getResult(),
-                    ak = Pk.current;
-                  Pk.current = !1, ak && !0 === Rk && (mk.current && hk({
-                    text: ek("thumbnail:deletingThumbnail"),
+                    ab = zb.current;
+                  zb.current = !1, ab && !0 === kb && (eb.current && qb({
+                    text: mb("thumbnail:deletingThumbnail"),
                     type: "info"
-                  }, !1), Hk.b.deleteSchematicThumbnail(yk, Fk).then((() => {
-                    mk.current && (hk({
-                      text: ek("thumbnail:thumbnailDeleted"),
+                  }, !1), Bb.b.deleteSchematicThumbnail(lb, cb).then((() => {
+                    eb.current && (qb({
+                      text: mb("thumbnail:thumbnailDeleted"),
                       type: "success"
-                    }, !0), Gk.current === Fk && lk(null), qk())
-                  })).catch((kk => {
-                    mk.current && hk({
-                      text: kk.errorMessageForUser ? ek(kk.errorMessageForUser, kk.errorMessageTranslationParams) : ek("thumbnail:failedToDeleteThumbnail"),
+                    }, !0), ib.current === cb && vb(null), db())
+                  })).catch((bb => {
+                    eb.current && qb({
+                      text: bb.errorMessageForUser ? mb(bb.errorMessageForUser, bb.errorMessageTranslationParams) : mb("thumbnail:failedToDeleteThumbnail"),
                       type: "error"
                     }, !0)
                   })))
-                }(Fk, kk.id, kk.name),
-                children: (0, ik.jsx)(sk.d, {
+                }(cb, bb.id, bb.name),
+                children: (0, Vb.jsx)(fb.b, {
                   name: "trash-can"
                 })
-              }), !kk.approved && (0, ik.jsx)("div", {
+              }), !bb.approved && (0, Vb.jsx)("div", {
                 className: "ThumbnailUnapprovedIcon",
-                children: (0, ik.jsx)(sk.d, {
+                children: (0, Vb.jsx)(fb.b, {
                   name: "hourglass-clock"
                 })
-              }), !kk.approved && (0, ik.jsxs)("div", {
+              }), !bb.approved && (0, Vb.jsxs)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailPendingLabel",
-                children: [kk.name, (0, ik.jsx)("br", {}), ek("thumbnail:pendingApproval")]
+                children: [bb.name, (0, Vb.jsx)("br", {}), mb("thumbnail:pendingApproval")]
               })]
-            }, Fk))), (0, ik.jsxs)("div", {
-              className: Ak()("ThumbnailGridItem ThumbnailUploadTile", {
-                ThumbnailUploadTileDisabled: !Vk
+            }, cb))), (0, Vb.jsxs)("div", {
+              className: nb()("ThumbnailGridItem ThumbnailUploadTile", {
+                ThumbnailUploadTileDisabled: !Mb
               }),
               onClick: () => {
-                Vk && function(kk) {
+                Mb && function(bb) {
                   let {
-                    schematicId: Fk,
-                    ownedThumbnailCount: Bk,
-                    onThumbnailReady: Rk,
-                    onClose: ak
-                  } = kk;
-                  tk.NotificationProvider.showCustomPopup({
-                    body: kk => (0, ik.jsx)(Ck, {
-                      schematicId: Fk,
-                      ownedThumbnailCount: Bk,
-                      onClose: kk,
-                      onThumbnailReady: Rk
+                    schematicId: cb,
+                    ownedThumbnailCount: sb,
+                    onThumbnailReady: kb,
+                    onClose: ab
+                  } = bb;
+                  Wb.NotificationProvider.showCustomPopup({
+                    body: bb => (0, Vb.jsx)(Ab, {
+                      schematicId: cb,
+                      ownedThumbnailCount: sb,
+                      onClose: bb,
+                      onThumbnailReady: kb
                     }),
                     middleScreenPopupClassName: "SchematicThumbnailPopup",
-                    onClose: ak,
+                    onClose: ab,
                     unlockPointerKey: "schematicThumbnailUploaderPopup"
                   })
                 }({
-                  schematicId: Xk.schematicId,
-                  ownedThumbnailCount: Wk.length,
-                  onThumbnailReady: pk,
-                  onClose: Jk
+                  schematicId: Tb.schematicId,
+                  ownedThumbnailCount: Cb.length,
+                  onThumbnailReady: rb,
+                  onClose: Xb
                 })
               },
-              children: [(0, ik.jsx)(sk.d, {
+              children: [(0, Vb.jsx)(fb.b, {
                 name: "plus"
-              }), (0, ik.jsx)("div", {
+              }), (0, Vb.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: ek("thumbnail:uploadThumbnail")
+                children: mb("thumbnail:uploadThumbnail")
               })]
             })]
           })
@@ -1085,640 +1085,640 @@ export const modules = {
       })
     }
 
-    function xk(kk) {
+    function Sb(bb) {
       let {
-        rejectedThumbnails: Fk,
-        userContext: Bk,
-        isMountedRef: tk,
-        onAcknowledged: Xk
-      } = kk;
+        rejectedThumbnails: cb,
+        userContext: sb,
+        isMountedRef: Wb,
+        onAcknowledged: Tb
+      } = bb;
       const {
-        t: dk
-      } = (0, bk.x)(), [Vk, Jk] = (0, Rk.useState)(!1), [Ak, ek] = (0, Rk.useState)(!1), yk = function(kk) {
-        const Fk = new Map;
-        for (const Bk of kk) {
-          const kk = Bk.rejectionPolicyId,
-            Rk = Fk.get(kk);
-          Rk ? Rk.push(Bk) : Fk.set(kk, [Bk])
+        t: Hb
+      } = (0, Ub.E)(), [Mb, Xb] = (0, kb.useState)(!1), [nb, mb] = (0, kb.useState)(!1), lb = function(bb) {
+        const cb = new Map;
+        for (const sb of bb) {
+          const bb = sb.rejectionPolicyId,
+            kb = cb.get(bb);
+          kb ? kb.push(sb) : cb.set(bb, [sb])
         }
-        return Fk
-      }(Fk);
-      return (0, ik.jsxs)("div", {
+        return cb
+      }(cb);
+      return (0, Vb.jsxs)("div", {
         className: "ThumbnailRejectionNotice",
-        children: [(0, ik.jsxs)("div", {
+        children: [(0, Vb.jsxs)("div", {
           className: "ThumbnailRejectionNoticeTitle",
-          children: [(0, ik.jsx)(sk.d, {
+          children: [(0, Vb.jsx)(fb.b, {
             name: "triangle-exclamation"
-          }), " ", dk("thumbnail:thumbnailsRejected"), " ", (0, ik.jsx)(sk.d, {
+          }), " ", Hb("thumbnail:thumbnailsRejected"), " ", (0, Vb.jsx)(fb.b, {
             name: "triangle-exclamation"
           })]
-        }), (0, ik.jsx)("div", {
+        }), (0, Vb.jsx)("div", {
           className: "ThumbnailRejectionNoticeSubtitle",
-          children: dk("thumbnail:thumbnailsRejectedDescription")
-        }), (0, ik.jsx)("div", {
+          children: Hb("thumbnail:thumbnailsRejectedDescription")
+        }), (0, Vb.jsx)("div", {
           className: "ThumbnailRejectionNoticeList",
-          children: [...yk.entries()].map((kk => {
-            let [Fk, Bk] = kk;
-            const Rk = pk[Fk];
-            return (0, ik.jsxs)("div", {
+          children: [...lb.entries()].map((bb => {
+            let [cb, sb] = bb;
+            const kb = rb[cb];
+            return (0, Vb.jsxs)("div", {
               className: "ThumbnailRejectionNoticeGroup",
-              children: [(0, ik.jsx)("div", {
+              children: [(0, Vb.jsx)("div", {
                 className: "ThumbnailRejectionNoticeItems",
-                children: Bk.map((kk => (0, ik.jsxs)("div", {
+                children: sb.map((bb => (0, Vb.jsxs)("div", {
                   className: "ThumbnailRejectionNoticeItem",
-                  children: [(0, ik.jsx)("div", {
+                  children: [(0, Vb.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemIcon",
-                    children: (0, ik.jsx)(sk.d, {
+                    children: (0, Vb.jsx)(fb.b, {
                       name: "image-slash"
                     })
-                  }), (0, ik.jsx)("div", {
+                  }), (0, Vb.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemDetails",
-                    children: (0, ik.jsx)("div", {
+                    children: (0, Vb.jsx)("div", {
                       className: "ThumbnailRejectionNoticeItemName",
-                      children: kk.name
+                      children: bb.name
                     })
                   })]
-                }, kk.id)))
-              }), (0, ik.jsxs)("div", {
+                }, bb.id)))
+              }), (0, Vb.jsxs)("div", {
                 className: "ThumbnailRejectionNoticeGroupReason",
-                children: [dk("thumbnail:rejectionReason"), " ", Rk ? dk(Rk.reason) : Fk]
-              }), Rk && (0, ik.jsx)("ul", {
+                children: [Hb("thumbnail:rejectionReason"), " ", kb ? Hb(kb.reason) : cb]
+              }), kb && (0, Vb.jsx)("ul", {
                 className: "ThumbnailRejectionNoticeGroupTips",
-                children: Rk.tips.map((kk => (0, ik.jsx)("li", {
-                  children: dk(kk)
-                }, kk)))
+                children: kb.tips.map((bb => (0, Vb.jsx)("li", {
+                  children: Hb(bb)
+                }, bb)))
               })]
-            }, Fk)
+            }, cb)
           }))
-        }), (0, ik.jsxs)("label", {
+        }), (0, Vb.jsxs)("label", {
           className: "ThumbnailRejectionNoticeCheckbox",
-          children: [(0, ik.jsx)(Nk.c, {
-            checked: Vk,
-            onChange: kk => Jk(kk.target.checked),
-            disabled: Ak
-          }), (0, ik.jsx)("span", {
-            children: dk("thumbnail:haveReadRejectionReasons")
+          children: [(0, Vb.jsx)(gb.e, {
+            checked: Mb,
+            onChange: bb => Xb(bb.target.checked),
+            disabled: nb
+          }), (0, Vb.jsx)("span", {
+            children: Hb("thumbnail:haveReadRejectionReasons")
           })]
-        }), (0, ik.jsx)(ak.o, {
+        }), (0, Vb.jsx)(ab.n, {
           onClick: async function() {
-            ek(!0);
-            const kk = await Promise.allSettled(Fk.map((kk => Hk.b.deleteSchematicThumbnail(Bk, kk.id))));
-            if (!tk.current) return;
-            const Rk = kk.filter((kk => "rejected" === kk.status));
-            Rk.length > 0 && console.error("Some rejected thumbnails failed to delete:", Rk), Xk()
+            mb(!0);
+            const bb = await Promise.allSettled(cb.map((bb => Bb.b.deleteSchematicThumbnail(sb, bb.id))));
+            if (!Wb.current) return;
+            const kb = bb.filter((bb => "rejected" === bb.status));
+            kb.length > 0 && console.error("Some rejected thumbnails failed to delete:", kb), Tb()
           },
-          disabled: !Vk || Ak,
+          disabled: !Mb || nb,
           className: "ThumbnailRejectionNoticeAcceptButton",
-          children: Ak ? (0, ik.jsx)(wk.b, {}) : dk("general:accept")
+          children: nb ? (0, Vb.jsx)(Ib.d, {}) : Hb("general:accept")
         })]
       })
     }
 
-    function jk(kk) {
+    function Rb(bb) {
       let {
-        thumbnailId: Fk,
-        thumbnailName: Bk,
-        onClose: Rk
-      } = kk;
+        thumbnailId: cb,
+        thumbnailName: sb,
+        onClose: kb
+      } = bb;
       const {
-        t: tk
-      } = (0, bk.x)();
-      return (0, ik.jsxs)("div", {
+        t: Wb
+      } = (0, Ub.E)();
+      return (0, Vb.jsxs)("div", {
         className: "ThumbnailDeleteConfirm",
-        children: [(0, ik.jsx)("div", {
+        children: [(0, Vb.jsx)("div", {
           className: "ThumbnailDeleteConfirmTitle",
-          children: tk("thumbnail:deleteThumbnail")
-        }), (0, ik.jsxs)("div", {
+          children: Wb("thumbnail:deleteThumbnail")
+        }), (0, Vb.jsxs)("div", {
           className: "ThumbnailDeleteConfirmImageContainer",
-          children: [(0, ik.jsx)("img", {
+          children: [(0, Vb.jsx)("img", {
             className: "ThumbnailDeleteConfirmImage",
-            src: `${Zk.clientSideServerUrls.s3Url}/customThumbnails/${Fk}.jpg`,
+            src: `${wb.clientSideServerUrls.s3Url}/customThumbnails/${cb}.jpg`,
             alt: "Thumbnail to delete"
-          }), (0, ik.jsx)("div", {
+          }), (0, Vb.jsx)("div", {
             className: "ThumbnailGridItemLabel",
-            children: Bk
+            children: sb
           })]
-        }), (0, ik.jsx)("div", {
+        }), (0, Vb.jsx)("div", {
           className: "ThumbnailDeleteConfirmSubtitle",
-          children: tk("thumbnail:deleteThumbnailConfirmation")
-        }), (0, ik.jsxs)("div", {
+          children: Wb("thumbnail:deleteThumbnailConfirmation")
+        }), (0, Vb.jsxs)("div", {
           className: "ThumbnailDeleteConfirmButtons",
-          children: [(0, ik.jsxs)(ak.J, {
+          children: [(0, Vb.jsxs)(ab.G, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => Rk(!0),
-            children: [(0, ik.jsx)(sk.d, {
+            onClick: () => kb(!0),
+            children: [(0, Vb.jsx)(fb.b, {
               name: "trash-can"
-            }), " ", tk("general:delete")]
-          }), (0, ik.jsx)(ak.j, {
+            }), " ", Wb("general:delete")]
+          }), (0, Vb.jsx)(ab.h, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => Rk(!1),
-            children: tk("general:cancel")
+            onClick: () => kb(!1),
+            children: Wb("general:cancel")
           })]
         })]
       })
     }
-    var lk = Bk(2954),
-      nk = Bk(4681),
-      Ik = Bk(4686),
-      Qk = Bk(4724);
+    var vb = sb(2916),
+      Fb = sb(4688),
+      xb = sb(4694),
+      jb = sb(4736);
 
-    function kF(kk) {
+    function pb(bb) {
       let {
-        schematicData: Fk,
-        setTexturePack: Bk,
-        initializeTexturePack: tk,
-        publishFormEnabled: ak
-      } = kk;
+        schematicData: cb,
+        setTexturePack: sb,
+        initializeTexturePack: Wb,
+        publishFormEnabled: ab
+      } = bb;
       const {
-        t: Xk
-      } = (0, bk.x)(), [wk, dk] = (0, Rk.useState)(null), [sk, Vk] = (0, Rk.useState)(null), [Jk, ek] = (0, Rk.useState)(!1), yk = (0, uk.d)(), fk = ak && !Jk, mk = Fk.customTexturePackKey;
+        t: Tb
+      } = (0, Ub.E)(), [Ib, Hb] = (0, kb.useState)(null), [fb, Mb] = (0, kb.useState)(null), [Xb, mb] = (0, kb.useState)(!1), lb = (0, tb.e)(), Qb = ab && !Xb, eb = cb.customTexturePackKey;
 
-      function Wk(kk) {
-        var Fk;
-        dk(kk.metaData.id), Vk(null !== (Fk = kk.metaData.fromFolderName) && void 0 !== Fk ? Fk : null), (kk.metaData.id !== lk.p.CUSTOM || kk.metaData.fromFolderName) && Bk(kk)
+      function Cb(bb) {
+        var cb;
+        Hb(bb.metaData.id), Mb(null !== (cb = bb.metaData.fromFolderName) && void 0 !== cb ? cb : null), (bb.metaData.id !== vb.o.CUSTOM || bb.metaData.fromFolderName) && sb(bb)
       }
-      return (0, Rk.useEffect)((() => {
-        mk && (ek(!0), (0, nk.d)(mk).then((kk => {
-          var Fk;
-          yk.current && (kk ? (dk(kk.metaData.id), Vk(null !== (Fk = kk.metaData.fromFolderName) && void 0 !== Fk ? Fk : null), tk(kk)) : console.error(`No texture pack at ${mk}`))
-        })).catch((kk => {
-          console.error("Error fetching texture pack: ", kk)
+      return (0, kb.useEffect)((() => {
+        eb && (mb(!0), (0, Fb.e)(eb).then((bb => {
+          var cb;
+          lb.current && (bb ? (Hb(bb.metaData.id), Mb(null !== (cb = bb.metaData.fromFolderName) && void 0 !== cb ? cb : null), Wb(bb)) : console.error(`No texture pack at ${eb}`))
+        })).catch((bb => {
+          console.error("Error fetching texture pack: ", bb)
         })).finally((() => {
-          ek(!1)
+          mb(!1)
         })))
-      }), [mk, tk, yk]), (0, ik.jsxs)("div", {
+      }), [eb, Wb, lb]), (0, Vb.jsxs)("div", {
         className: "BloxdForm TexturePackSection",
-        children: [(0, ik.jsx)("div", {
+        children: [(0, Vb.jsx)("div", {
           className: "SectionTitle",
-          children: Xk("customTexturePack:customTexturePack")
-        }), (0, ik.jsxs)("div", {
+          children: Tb("customTexturePack:customTexturePack")
+        }), (0, Vb.jsxs)("div", {
           className: "TexturePackList",
-          children: [(0, ik.jsx)("div", {
-            className: Ak()("TexturePack", {
-              Selected: null === wk && !Jk,
-              Disabled: !fk
+          children: [(0, Vb.jsx)("div", {
+            className: nb()("TexturePack", {
+              Selected: null === Ib && !Xb,
+              Disabled: !Qb
             }),
             onClick: () => {
-              fk && (dk(null), Bk(null), Vk(null))
+              Qb && (Hb(null), sb(null), Mb(null))
             },
-            children: (0, ik.jsx)("div", {
+            children: (0, Vb.jsx)("div", {
               className: "TexturePackName",
               children: "No Override"
             })
-          }), Object.values(lk.p).map((kk => (0, ik.jsx)(Ik.f, {
-            id: kk,
-            isSelected: kk === wk,
-            setSelected: Wk,
-            disabled: !fk
-          }, kk)))]
-        }), wk === lk.p.CUSTOM && (0, ik.jsx)(Qk.d, {
-          folderName: sk,
-          onTexturePackUpdated: Wk,
-          disabled: !fk,
+          }), Object.values(vb.o).map((bb => (0, Vb.jsx)(xb.h, {
+            id: bb,
+            isSelected: bb === Ib,
+            setSelected: Cb,
+            disabled: !Qb
+          }, bb)))]
+        }), Ib === vb.o.CUSTOM && (0, Vb.jsx)(jb.b, {
+          folderName: fb,
+          onTexturePackUpdated: Cb,
+          disabled: !Qb,
           maxFileSizeMb: 25,
           packOwner: "customGame"
         })]
       })
     }
-    var FF = Bk(4735);
+    var bc = sb(4756);
 
-    function BF(kk) {
-      var Fk;
+    function cc(bb) {
+      var cb;
       let {
-        gameCategory: Bk,
-        setGameCategory: Rk,
-        disabled: tk
-      } = kk;
-      const Xk = null !== (Fk = (0, ek.db)(Bk)) && void 0 !== Fk ? Fk : "other";
-      return (0, ik.jsxs)("div", {
+        gameCategory: sb,
+        setGameCategory: kb,
+        disabled: Wb
+      } = bb;
+      const Tb = null !== (cb = (0, mb.nb)(sb)) && void 0 !== cb ? cb : "other";
+      return (0, Vb.jsxs)("div", {
         className: "GameCategoryPicker",
-        children: [(0, ik.jsx)(mk.f, {
+        children: [(0, Vb.jsx)(eb.f, {
           label: "worldBuilder:gameCategoryGroup",
           className: "GameCategoryGroup",
-          disabled: tk,
-          children: (0, ik.jsx)(Wk.c, {
-            options: ek.V.map((kk => ({
-              value: kk,
-              label: ek.R[kk]
+          disabled: Wb,
+          children: (0, Vb.jsx)(Cb.e, {
+            options: mb.bb.map((bb => ({
+              value: bb,
+              label: mb.$[bb]
             }))),
-            value: Xk,
-            onChange: kk => {
-              kk.value !== Xk && Rk(ek.M[kk.value][0])
+            value: Tb,
+            onChange: bb => {
+              bb.value !== Tb && kb(mb.X[bb.value][0])
             }
           })
-        }), (0, ik.jsx)(mk.f, {
+        }), (0, Vb.jsx)(eb.f, {
           label: "worldBuilder:gameCategory",
           className: "GameCategory",
-          disabled: tk,
-          children: (0, ik.jsx)("div", {
+          disabled: Wb,
+          children: (0, Vb.jsx)("div", {
             className: "GameCategoryOptions",
-            children: ek.M[Xk].map((kk => (0, ik.jsx)(ak.O, {
-              active: kk === Bk,
+            children: mb.X[Tb].map((bb => (0, Vb.jsx)(ab.M, {
+              active: bb === sb,
               onClick: () => {
-                Rk(kk)
+                kb(bb)
               },
-              children: (0, ek.cb)(kk)
-            }, kk)))
+              children: (0, mb.lb)(bb)
+            }, bb)))
           })
         })]
       })
     }
 
-    function RF(kk) {
+    function sc(bb) {
       let {
-        editor: Fk,
-        onClose: Bk
-      } = kk;
+        editor: cb,
+        onClose: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, bk.x)(), {
-        schematicData: tk,
-        updateSchematicData: ak,
-        publishFormEnabled: wk,
-        formEnabled: dk
-      } = Fk;
-      return (0, ik.jsxs)(ik.Fragment, {
-        children: [(0, ik.jsxs)(Yk, {
+        t: kb
+      } = (0, Ub.E)(), {
+        schematicData: Wb,
+        updateSchematicData: ab,
+        publishFormEnabled: Ib,
+        formEnabled: Hb
+      } = cb;
+      return (0, Vb.jsxs)(Vb.Fragment, {
+        children: [(0, Vb.jsxs)(Lb, {
           icon: "pen-to-square",
-          title: Rk("worldBuilder:basicsSection"),
-          disabled: !dk,
-          children: [(0, ik.jsx)(Lk, {
-            label: Rk("general:name"),
-            caption: Rk("worldBuilder:schematicNameTagsHint"),
-            children: (0, ik.jsx)(Xk.e, {
+          title: kb("worldBuilder:basicsSection"),
+          disabled: !Hb,
+          children: [(0, Vb.jsx)(ub, {
+            label: kb("general:name"),
+            caption: kb("worldBuilder:schematicNameTagsHint"),
+            children: (0, Vb.jsx)(Tb.c, {
               className: "SchematicPageName",
-              defaultValue: tk.name,
-              onValueChange: kk => ak("name", kk),
-              placeholderText: Rk("worldBuilder:schematicNamePlaceholder"),
-              maxLength: Vk.rb
+              defaultValue: Wb.name,
+              onValueChange: bb => ab("name", bb),
+              placeholderText: kb("worldBuilder:schematicNamePlaceholder"),
+              maxLength: Mb.ib
             })
-          }), (0, ik.jsx)(Lk, {
-            label: Rk("general:description"),
-            children: (0, ik.jsx)(Xk.e, {
+          }), (0, Vb.jsx)(ub, {
+            label: kb("general:description"),
+            children: (0, Vb.jsx)(Tb.c, {
               className: "SchematicPageDescription",
               useTextarea: !0,
-              defaultValue: tk.description,
-              onValueChange: kk => ak("description", kk),
-              placeholderText: Rk("worldBuilder:schematicDescriptionPlaceholder"),
-              maxLength: Vk.nb
+              defaultValue: Wb.description,
+              onValueChange: bb => ab("description", bb),
+              placeholderText: kb("worldBuilder:schematicDescriptionPlaceholder"),
+              maxLength: Mb.fb
             })
-          }), (0, ik.jsx)(BF, {
-            gameCategory: tk.gameCategory,
-            setGameCategory: kk => ak("gameCategory", kk),
-            disabled: !wk
-          }), !0 === tk.gamePublished && (0, ik.jsx)(Kk, {
-            schematicData: tk,
-            updateSchematicData: ak,
-            publishFormEnabled: wk,
+          }), (0, Vb.jsx)(cc, {
+            gameCategory: Wb.gameCategory,
+            setGameCategory: bb => ab("gameCategory", bb),
+            disabled: !Ib
+          }), !0 === Wb.gamePublished && (0, Vb.jsx)(ob, {
+            schematicData: Wb,
+            updateSchematicData: ab,
+            publishFormEnabled: Ib,
             onClose: function() {
-              null === Bk || void 0 === Bk || Bk()
+              null === sb || void 0 === sb || sb()
             }
           })]
-        }), (0, ik.jsx)(Ek, {
-          schematicData: tk,
-          updateSchematicData: ak,
-          publishFormEnabled: wk,
-          formEnabled: dk
-        }), !0 === tk.gamePublished && (0, ik.jsx)(Yk, {
+        }), (0, Vb.jsx)(hb, {
+          schematicData: Wb,
+          updateSchematicData: ab,
+          publishFormEnabled: Ib,
+          formEnabled: Hb
+        }), !0 === Wb.gamePublished && (0, Vb.jsx)(Lb, {
           icon: "palette",
-          title: Rk("worldBuilder:texturePackSection"),
-          disabled: !dk,
-          children: (0, ik.jsx)(kF, {
-            schematicData: tk,
-            setTexturePack: Fk.setTexturePack,
-            initializeTexturePack: Fk.initializeTexturePack,
-            publishFormEnabled: wk
+          title: kb("worldBuilder:texturePackSection"),
+          disabled: !Hb,
+          children: (0, Vb.jsx)(pb, {
+            schematicData: Wb,
+            setTexturePack: cb.setTexturePack,
+            initializeTexturePack: cb.initializeTexturePack,
+            publishFormEnabled: Ib
           })
         })]
       })
     }
 
-    function tF(kk) {
+    function kc(bb) {
       let {
-        editor: Fk
-      } = kk;
+        editor: cb
+      } = bb;
       const {
-        t: Bk
-      } = (0, bk.x)(), {
-        schematicData: Rk,
-        formEnabled: tk,
-        hasUnsavedChanges: Xk
-      } = Fk, Vk = tk && Xk;
-      return (0, ik.jsxs)("footer", {
+        t: sb
+      } = (0, Ub.E)(), {
+        schematicData: kb,
+        formEnabled: Wb,
+        hasUnsavedChanges: Tb
+      } = cb, Mb = Wb && Tb;
+      return (0, Vb.jsxs)("footer", {
         className: "SchematicPageFooter",
-        children: [tk && Xk && (0, ik.jsxs)("div", {
+        children: [Wb && Tb && (0, Vb.jsxs)("div", {
           className: "SchematicPageFooterStatus",
-          children: [(0, ik.jsx)("span", {
+          children: [(0, Vb.jsx)("span", {
             className: "SchematicPageFooterStatusDot"
-          }), Bk("worldBuilder:unsavedChanges")]
-        }), (0, ik.jsx)(dk.d, {
-          tooltipInner: (0, ik.jsx)("div", {
+          }), sb("worldBuilder:unsavedChanges")]
+        }), (0, Vb.jsx)(Hb.f, {
+          tooltipInner: (0, Vb.jsx)("div", {
             className: "SaveButtonTooltip",
-            children: Bk(tk && !Xk ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
+            children: sb(Wb && !Tb ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
           }),
-          children: (0, ik.jsxs)(ak.g, {
+          children: (0, Vb.jsxs)(ab.d, {
             className: "SaveChangesButton",
-            onClick: () => Fk.saveSchematic(Rk.gamePublished),
-            disabled: !Vk,
-            children: [(0, ik.jsxs)("span", {
-              className: tk ? "" : "SaveChangesButtonBodyHidden",
-              children: [(0, ik.jsx)(sk.d, {
+            onClick: () => cb.saveSchematic(kb.gamePublished),
+            disabled: !Mb,
+            children: [(0, Vb.jsxs)("span", {
+              className: Wb ? "" : "SaveChangesButtonBodyHidden",
+              children: [(0, Vb.jsx)(fb.b, {
                 name: "wrench"
-              }), " ", Bk("worldBuilder:saveChanges")]
-            }), !tk && (0, ik.jsx)(wk.b, {})]
+              }), " ", sb("worldBuilder:saveChanges")]
+            }), !Wb && (0, Vb.jsx)(Ib.d, {})]
           })
         })]
       })
     }
 
-    function aF(kk) {
+    function Wc(bb) {
       let {
-        schematic: Fk,
-        onSchematicUpdate: Bk,
-        onClose: tk,
-        inSourceWorld: Xk
-      } = kk;
+        schematic: cb,
+        onSchematicUpdate: sb,
+        onClose: Wb,
+        inSourceWorld: Tb
+      } = bb;
       const {
-        t: wk
-      } = (0, bk.x)();
+        t: Ib
+      } = (0, Ub.E)();
 
-      function dk() {
-        null === tk || void 0 === tk || tk()
+      function Hb() {
+        null === Wb || void 0 === Wb || Wb()
       }
-      const sk = (0, FF.c)(Fk, {
-        onNavigateAway: dk,
-        inSourceWorld: Xk
+      const fb = (0, bc.c)(cb, {
+        onNavigateAway: Hb,
+        inSourceWorld: Tb
       });
-      return (0, Rk.useEffect)((() => {
-        null === Bk || void 0 === Bk || Bk(sk.schematicData)
-      }), [sk.schematicData, Bk]), (0, ik.jsxs)("div", {
+      return (0, kb.useEffect)((() => {
+        null === sb || void 0 === sb || sb(fb.schematicData)
+      }), [fb.schematicData, sb]), (0, Vb.jsxs)("div", {
         className: "SchematicPage SchematicPagePopupVariant",
-        children: [(0, ik.jsxs)("div", {
+        children: [(0, Vb.jsxs)("div", {
           className: "SchematicPageBody",
-          children: [(0, ik.jsx)(ak.c, {
-            onClick: dk,
-            children: wk("worldBuilder:back")
-          }), (0, ik.jsx)(Yk, {
+          children: [(0, Vb.jsx)(ab.b, {
+            onClick: Hb,
+            children: Ib("worldBuilder:back")
+          }), (0, Vb.jsx)(Lb, {
             icon: "rocket-launch",
-            title: wk("worldBuilder:actionsSection"),
-            disabled: !sk.formEnabled,
-            children: (0, ik.jsx)(Sk.e, {
-              editor: sk
+            title: Ib("worldBuilder:actionsSection"),
+            disabled: !fb.formEnabled,
+            children: (0, Vb.jsx)(Jb.d, {
+              editor: fb
             })
-          }), (0, ik.jsx)(RF, {
-            editor: sk,
-            onClose: dk
+          }), (0, Vb.jsx)(sc, {
+            editor: fb,
+            onClose: Hb
           })]
-        }), (0, ik.jsx)(tF, {
-          editor: sk
+        }), (0, Vb.jsx)(kc, {
+          editor: fb
         })]
       })
     }
 
-    function XF(kk) {
+    function ac(bb) {
       let {
-        schematic: Fk,
-        onSchematicUpdate: Bk,
-        onClose: Rk,
-        inSourceWorld: ak
-      } = kk;
-      tk.NotificationProvider.showCustomPopup({
-        body: kk => (0, ik.jsx)(aF, {
-          schematic: Fk,
-          onSchematicUpdate: Bk,
-          onClose: kk,
-          inSourceWorld: ak
+        schematic: cb,
+        onSchematicUpdate: sb,
+        onClose: kb,
+        inSourceWorld: ab
+      } = bb;
+      Wb.NotificationProvider.showCustomPopup({
+        body: bb => (0, Vb.jsx)(Wc, {
+          schematic: cb,
+          onSchematicUpdate: sb,
+          onClose: bb,
+          inSourceWorld: ab
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: Rk,
+        onClose: kb,
         unlockPointerKey: "schematicPagePopup"
       })
     }
   },
-  4655: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Vk
+  4656: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Mb
     });
-    var Rk = Bk(1020),
-      tk = Bk.n(Rk),
-      ak = Bk(1149),
-      Xk = Bk(1028),
-      bk = Bk(1389),
-      wk = Bk(1312),
-      dk = Bk(1288),
-      sk = Bk(1069);
+    var kb = sb(1033),
+      Wb = sb.n(kb),
+      ab = sb(1197),
+      Tb = sb(1039),
+      Ub = sb(1431),
+      Ib = sb(1341),
+      Hb = sb(1327),
+      fb = sb(1087);
 
-    function Vk(kk) {
+    function Mb(bb) {
       let {
-        editor: Fk,
-        className: Bk
-      } = kk;
+        editor: cb,
+        className: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, ak.x)(), {
-        schematicData: Vk,
-        formEnabled: Jk,
-        publishFormEnabled: Ak
-      } = Fk, ek = !Jk || !Ak;
-      return (0, sk.jsxs)("div", {
-        className: tk()("PublishButtonContainer", Bk),
-        children: [Fk.canEditSourceWorld && (0, sk.jsxs)(bk.g, {
-          onClick: Fk.editSourceWorld,
-          disabled: ek,
-          children: [(0, sk.jsx)(Xk.d, {
+        t: kb
+      } = (0, ab.E)(), {
+        schematicData: Mb,
+        formEnabled: Xb,
+        publishFormEnabled: nb
+      } = cb, mb = !Xb || !nb;
+      return (0, fb.jsxs)("div", {
+        className: Wb()("PublishButtonContainer", sb),
+        children: [cb.canEditSourceWorld && (0, fb.jsxs)(Ub.d, {
+          onClick: cb.editSourceWorld,
+          disabled: mb,
+          children: [(0, fb.jsx)(Tb.b, {
             name: "edit"
-          }), " ", Rk("worldBuilder:editSourceWorld")]
-        }), !Vk.gamePublished && (0, sk.jsx)(wk.d, {
-          tooltipInner: (0, sk.jsx)("div", {
+          }), " ", kb("worldBuilder:editSourceWorld")]
+        }), !Mb.gamePublished && (0, fb.jsx)(Ib.f, {
+          tooltipInner: (0, fb.jsx)("div", {
             className: "PublishButtonTooltip",
-            children: Rk("worldBuilder:publishAsGameDescription")
+            children: kb("worldBuilder:publishAsGameDescription")
           }),
-          children: (0, sk.jsxs)(bk.o, {
-            onClick: () => Fk.saveSchematic(!0),
-            disabled: ek,
-            children: [(0, sk.jsx)(Xk.d, {
+          children: (0, fb.jsxs)(Ub.n, {
+            onClick: () => cb.saveSchematic(!0),
+            disabled: mb,
+            children: [(0, fb.jsx)(Tb.b, {
               name: "rocket-launch"
-            }), " ", Rk("worldBuilder:publishAsGame"), " ", (0, sk.jsx)(Xk.d, {
+            }), " ", kb("worldBuilder:publishAsGame"), " ", (0, fb.jsx)(Tb.b, {
               name: "info-circle"
             })]
           })
-        }), !0 === Vk.gamePublished && (0, sk.jsxs)(sk.Fragment, {
-          children: [(0, sk.jsx)(wk.d, {
-            tooltipInner: (0, sk.jsx)("div", {
+        }), !0 === Mb.gamePublished && (0, fb.jsxs)(fb.Fragment, {
+          children: [(0, fb.jsx)(Ib.f, {
+            tooltipInner: (0, fb.jsx)("div", {
               className: "PublishButtonTooltip",
-              children: Rk("worldBuilder:unpublishAsGameDescription")
+              children: kb("worldBuilder:unpublishAsGameDescription")
             }),
-            children: (0, sk.jsxs)(bk.J, {
-              onClick: Fk.unpublishSchematic,
-              disabled: ek,
-              children: [(0, sk.jsx)(Xk.d, {
+            children: (0, fb.jsxs)(Ub.G, {
+              onClick: cb.unpublishSchematic,
+              disabled: mb,
+              children: [(0, fb.jsx)(Tb.b, {
                 name: "rocket-launch"
-              }), " ", Rk("worldBuilder:unpublishAsGame"), " ", (0, sk.jsx)(Xk.d, {
+              }), " ", kb("worldBuilder:unpublishAsGame"), " ", (0, fb.jsx)(Tb.b, {
                 name: "info-circle"
               })]
             })
-          }), (0, sk.jsxs)(bk.g, {
-            onClick: Fk.playGame,
-            disabled: ek,
-            children: [(0, sk.jsx)(Xk.d, {
+          }), (0, fb.jsxs)(Ub.d, {
+            onClick: cb.playGame,
+            disabled: mb,
+            children: [(0, fb.jsx)(Tb.b, {
               name: "joystick"
-            }), " ", Rk("general:playGame")]
+            }), " ", kb("general:playGame")]
           })]
-        }), !Jk && (0, sk.jsx)(dk.b, {
+        }), !Xb && (0, fb.jsx)(Hb.d, {
           loaderType: "Secondary"
         })]
       })
     }
   },
-  4681: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => tk
+  4688: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Wb
     });
-    var Rk = Bk(1154);
-    async function tk(kk) {
-      const Fk = await fetch(`${Rk.clientSideServerUrls.s3Url}/${kk}`, {
+    var kb = sb(1208);
+    async function Wb(bb) {
+      const cb = await fetch(`${kb.clientSideServerUrls.s3Url}/${bb}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === Fk.status || 403 === Fk.status) return null;
-      if (!Fk.ok) throw new Error(`Failed to download the texture pack (${Fk.status})`);
-      return await Fk.json()
+      if (404 === cb.status || 403 === cb.status) return null;
+      if (!cb.ok) throw new Error(`Failed to download the texture pack (${cb.status})`);
+      return await cb.json()
     }
   },
-  4735: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => fk
+  4756: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Qb
     });
-    var Rk = Bk(61),
-      tk = Bk(1273),
-      ak = Bk(994),
-      Xk = Bk(152),
-      bk = Bk(1490),
-      wk = Bk(22),
-      dk = Bk(1847),
-      sk = Bk(1441),
-      Vk = Bk(4324),
-      Jk = Bk(1300),
-      Ak = Bk(1096),
-      ek = Bk(1459);
+    var kb = sb(64),
+      Wb = sb(1316),
+      ab = sb(1008),
+      Tb = sb(195),
+      Ub = sb(1534),
+      Ib = sb(19),
+      Hb = sb(1870),
+      fb = sb(1474),
+      Mb = sb(4330),
+      Xb = sb(1332),
+      nb = sb(1117),
+      mb = sb(1495);
 
-    function yk(kk, Fk) {
+    function lb(bb, cb) {
       return {
-        schematicId: kk.schematicId,
-        name: kk.name,
-        description: kk.description,
-        gamePublished: Fk,
-        gameCategory: kk.gameCategory,
-        defaultGamemode: kk.defaultGamemode,
-        voidDeathHeight: kk.voidDeathHeight,
-        disableKeepInventory: kk.disableKeepInventory,
-        disableTpRequests: kk.disableTpRequests,
-        disableLobbySpawn: kk.disableLobbySpawn,
-        disableMobs: kk.disableMobs,
-        disableSpawnProtection: kk.disableSpawnProtection,
-        disableFallDamage: kk.disableFallDamage,
-        worldBorder: kk.worldBorder,
-        hideLobbyCode: kk.hideLobbyCode,
-        enableSmpMarketplace: kk.enableSmpMarketplace,
-        enableSurvivalGuns: kk.enableSurvivalGuns,
-        enableSpawnReset: kk.enableSpawnReset,
-        enableDayNight: kk.enableDayNight,
-        persistWorld: kk.persistWorld,
-        persistInventory: kk.persistInventory
+        schematicId: bb.schematicId,
+        name: bb.name,
+        description: bb.description,
+        gamePublished: cb,
+        gameCategory: bb.gameCategory,
+        defaultGamemode: bb.defaultGamemode,
+        voidDeathHeight: bb.voidDeathHeight,
+        disableKeepInventory: bb.disableKeepInventory,
+        disableTpRequests: bb.disableTpRequests,
+        disableLobbySpawn: bb.disableLobbySpawn,
+        disableMobs: bb.disableMobs,
+        disableSpawnProtection: bb.disableSpawnProtection,
+        disableFallDamage: bb.disableFallDamage,
+        worldBorder: bb.worldBorder,
+        hideLobbyCode: bb.hideLobbyCode,
+        enableSmpMarketplace: bb.enableSmpMarketplace,
+        enableSurvivalGuns: bb.enableSurvivalGuns,
+        enableSpawnReset: bb.enableSpawnReset,
+        enableDayNight: bb.enableDayNight,
+        persistWorld: bb.persistWorld,
+        persistInventory: bb.persistInventory
       }
     }
 
-    function fk(kk) {
+    function Qb(bb) {
       let {
-        onNavigateAway: Fk,
-        inSourceWorld: Bk = !1
+        onNavigateAway: cb,
+        inSourceWorld: sb = !1
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
       const {
-        userContext: fk
-      } = (0, Ak.e)(), mk = (0, ek.useNavigatePreserveSearch)(), [Wk, vk] = (0, Rk.useState)({
-        ...kk
-      }), [ik, Yk] = (0, Rk.useState)("Enter"), [Lk, Ok] = (0, Rk.useState)(void 0), Ek = (0, Rk.useRef)(yk(kk, kk.gamePublished)), Sk = (0, Rk.useRef)(void 0), Nk = "Enter" === ik, Hk = fk.playerHasRank("developer") || fk.playerHasRank("admin") || "Enter" === ik && !1 !== Wk.schematicContainsSpawnBlock, uk = void 0 !== Lk && Lk !== Sk.current || JSON.stringify(yk(Wk, Wk.gamePublished)) !== JSON.stringify(Ek.current);
+        userContext: Qb
+      } = (0, nb.c)(), eb = (0, mb.useNavigatePreserveSearch)(), [Cb, Nb] = (0, kb.useState)({
+        ...bb
+      }), [Vb, Lb] = (0, kb.useState)("Enter"), [ub, Yb] = (0, kb.useState)(void 0), hb = (0, kb.useRef)(lb(bb, bb.gamePublished)), Jb = (0, kb.useRef)(void 0), gb = "Enter" === Vb, Bb = Qb.playerHasRank("developer") || Qb.playerHasRank("admin") || "Enter" === Vb && !1 !== Cb.schematicContainsSpawnBlock, tb = void 0 !== ub && ub !== Jb.current || JSON.stringify(lb(Cb, Cb.gamePublished)) !== JSON.stringify(hb.current);
 
-      function Mk(kk, Fk) {
-        vk((Bk => ({
-          ...Bk,
-          [kk]: Fk
+      function yb(bb, cb) {
+        Nb((sb => ({
+          ...sb,
+          [bb]: cb
         })))
       }
-      const gk = (0, Rk.useCallback)((kk => {
-        Sk.current = kk, Ok(kk)
+      const Pb = (0, kb.useCallback)((bb => {
+        Jb.current = bb, Yb(bb)
       }), []);
 
-      function Uk(kk) {
-        Yk("Loading");
-        const Fk = yk(Wk, kk),
-          Bk = Lk !== Sk.current ? Lk : void 0;
-        sk.b.updateSchematic(fk, Fk, Bk).then((Bk => {
+      function Db(bb) {
+        Lb("Loading");
+        const cb = lb(Cb, bb),
+          sb = ub !== Jb.current ? ub : void 0;
+        fb.b.updateSchematic(Qb, cb, sb).then((sb => {
           let {
-            customTexturePackKey: Rk
-          } = Bk;
-          Yk("Success"), Mk("customTexturePackKey", Rk), Ek.current = Fk, Sk.current = void 0, Ok(void 0), setTimeout((() => {
-            Mk("gamePublished", kk), Yk("Enter")
+            customTexturePackKey: kb
+          } = sb;
+          Lb("Success"), yb("customTexturePackKey", kb), hb.current = cb, Jb.current = void 0, Yb(void 0), setTimeout((() => {
+            yb("gamePublished", bb), Lb("Enter")
           }), 1e3)
-        })).catch((kk => {
-          var Fk;
-          (console.error("Failed to save schematic:", kk), Yk("Error"), kk instanceof Xk.c && kk.errorMessageForUser) && Jk.NotificationProvider.showAlertPopup({
+        })).catch((bb => {
+          var cb;
+          (console.error("Failed to save schematic:", bb), Lb("Error"), bb instanceof Tb.d && bb.errorMessageForUser) && Xb.NotificationProvider.showAlertPopup({
             title: "worldBuilder:changesNotSaved",
-            subtitle: kk.errorMessageForUser,
+            subtitle: bb.errorMessageForUser,
             textOpts: {
-              subtitle: null !== (Fk = kk.errorMessageTranslationParams) && void 0 !== Fk ? Fk : void 0
+              subtitle: null !== (cb = bb.errorMessageTranslationParams) && void 0 !== cb ? cb : void 0
             },
             confirmText: "general:ok"
           });
           setTimeout((() => {
-            Yk("Enter")
+            Lb("Enter")
           }), 1e3)
         }))
       }
       return {
-        schematicData: Wk,
-        updateSchematicData: Mk,
-        setTexturePack: Ok,
-        initializeTexturePack: gk,
-        updateState: ik,
-        formEnabled: Nk,
-        publishFormEnabled: Hk,
-        hasUnsavedChanges: uk,
-        canEditSourceWorld: !Bk,
-        saveSchematic: Uk,
+        schematicData: Cb,
+        updateSchematicData: yb,
+        setTexturePack: Yb,
+        initializeTexturePack: Pb,
+        updateState: Vb,
+        formEnabled: gb,
+        publishFormEnabled: Bb,
+        hasUnsavedChanges: tb,
+        canEditSourceWorld: !sb,
+        saveSchematic: Db,
         unpublishSchematic: function() {
-          Jk.NotificationProvider.showPromptPopup({
+          Xb.NotificationProvider.showPromptPopup({
             icon: "rocket-launch",
             title: "worldBuilder:unpublishAsGameConfirmTitle",
             subtitle: "worldBuilder:unpublishAsGameConfirmSubtitle",
             confirmText: "worldBuilder:unpublishAsGame",
             cancelText: "general:cancel",
             unlockPointerKey: "unpublishGamePrompt"
-          }).getResult().then((kk => {
-            !0 === kk && Uk(!1)
+          }).getResult().then((bb => {
+            !0 === bb && Db(!1)
           }))
         },
         editSourceWorld: function() {
-          Yk("Loading"), Vk.c.getSourceWorld(Wk.schematicId).then((kk => {
-            dk.gameBridge.send("leaveGame", {
+          Lb("Loading"), Mb.d.getSourceWorld(Cb.schematicId).then((bb => {
+            Hb.gameBridge.send("leaveGame", {
               reloadPath: "/"
-            }), (0, wk.f)("other"), mk((0, tk.b)("classic", kk)), null === Fk || void 0 === Fk || Fk()
-          })).catch((kk => {
-            console.error("Failed to get source world:", kk), Yk("Error"), setTimeout((() => {
-              Yk("Enter")
+            }), (0, Ib.l)("other"), eb((0, Wb.b)("classic", bb)), null === cb || void 0 === cb || cb()
+          })).catch((bb => {
+            console.error("Failed to get source world:", bb), Lb("Error"), setTimeout((() => {
+              Lb("Enter")
             }), 1e3)
           }))
         },
         playGame: function() {
-          dk.gameBridge.send("leaveGame", {
+          Hb.gameBridge.send("leaveGame", {
             reloadPath: "/"
-          }), mk((0, bk.y)((0, ak.C)(Wk.schematicId), Wk)), null === Fk || void 0 === Fk || Fk()
+          }), eb((0, Ub.v)((0, ab.x)(Cb.schematicId), Cb)), null === cb || void 0 === cb || cb()
         }
       }
     }
   },
-  4645: () => {}
+  4643: () => {}
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

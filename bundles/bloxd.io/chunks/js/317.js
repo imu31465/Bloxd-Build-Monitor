@@ -1,49 +1,49 @@
 export const id = 317;
 export const ids = [317];
 export const modules = {
-  41334: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Xk
+  41332: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Tb
     });
-    var Rk = Bk(39270);
-    const tk = "instancesDeclaration",
-      ak = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
-    Rk.d.IncludesShadersStore[tk] || (Rk.d.IncludesShadersStore[tk] = ak);
-    const Xk = {
-      name: tk,
-      shader: ak
+    var kb = sb(39267);
+    const Wb = "instancesDeclaration",
+      ab = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
+    kb.d.IncludesShadersStore[Wb] || (kb.d.IncludesShadersStore[Wb] = ab);
+    const Tb = {
+      name: Wb,
+      shader: ab
     }
   },
-  41407: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Xk
+  41396: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Tb
     });
-    var Rk = Bk(39270);
-    const tk = "instancesVertex",
-      ak = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
-    Rk.d.IncludesShadersStore[tk] || (Rk.d.IncludesShadersStore[tk] = ak);
-    const Xk = {
-      name: tk,
-      shader: ak
+    var kb = sb(39267);
+    const Wb = "instancesVertex",
+      ab = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
+    kb.d.IncludesShadersStore[Wb] || (kb.d.IncludesShadersStore[Wb] = ab);
+    const Tb = {
+      name: Wb,
+      shader: ab
     }
   },
-  61655: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      greasedLineVertexShader: () => dk
+  61319: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      greasedLineVertexShader: () => Hb
     });
-    var Rk = Bk(39270),
-      tk = Bk(41334),
-      ak = Bk(41407);
-    const Xk = "greasedLineVertexShader",
-      bk = "precision highp float;\n#include<instancesDeclaration>\nattribute float grl_widths;\n#ifdef GREASED_LINE_USE_OFFSETS\nattribute vec3 grl_offsets;\n#endif\nattribute float grl_colorPointers;attribute vec3 position;uniform mat4 viewProjection;uniform mat4 projection;varying float grlCounters;varying float grlColorPointer;\n#ifdef GREASED_LINE_CAMERA_FACING\nattribute vec4 grl_nextAndCounters;attribute vec4 grl_previousAndSide;uniform vec2 grlResolution;uniform float grlAspect;uniform float grlWidth;uniform float grlSizeAttenuation;vec2 grlFix( vec4 i,float aspect ) {vec2 res=i.xy/i.w;res.x*=aspect;return res;}\n#else\nattribute vec3 grl_slopes;attribute float grl_counters;\n#endif\nvoid main() {\n#include<instancesVertex>\ngrlColorPointer=grl_colorPointers;mat4 grlMatrix=viewProjection*finalWorld ;\n#ifdef GREASED_LINE_CAMERA_FACING\nfloat grlBaseWidth=grlWidth;vec3 grlPrevious=grl_previousAndSide.xyz;float grlSide=grl_previousAndSide.w;vec3 grlNext=grl_nextAndCounters.xyz;grlCounters=grl_nextAndCounters.w;float grlWidth=grlBaseWidth*grl_widths;\n#ifdef GREASED_LINE_USE_OFFSETS\nvec3 grlPositionOffset=grl_offsets;\n#else\nvec3 grlPositionOffset=vec3(0.);\n#endif\nvec3 positionUpdated=position+grlPositionOffset;vec3 worldDir=normalize(grlNext-grlPrevious);vec3 nearPosition=positionUpdated+(worldDir*0.01);vec4 grlFinalPosition=grlMatrix*vec4( positionUpdated ,1.0);vec4 screenNearPos=grlMatrix*vec4(nearPosition,1.0);vec2 grlLinePosition=grlFix(grlFinalPosition,grlAspect);vec2 grlLineNearPosition=grlFix(screenNearPos,grlAspect);vec2 grlDir=normalize(grlLineNearPosition-grlLinePosition);vec4 grlNormal=vec4( -grlDir.y,grlDir.x,0.,1. );\n#ifdef GREASED_LINE_RIGHT_HANDED_COORDINATE_SYSTEM\ngrlNormal.xy*=-.5*grlWidth;\n#else\ngrlNormal.xy*=.5*grlWidth;\n#endif\ngrlNormal*=projection;if (grlSizeAttenuation==1.) {grlNormal.xy*=grlFinalPosition.w;grlNormal.xy/=( vec4( grlResolution,0.,1. )*projection ).xy;}\ngrlFinalPosition.xy+=grlNormal.xy*grlSide;gl_Position=grlFinalPosition;\n#else\ngrlCounters=grl_counters;\n#ifdef GREASED_LINE_USE_OFFSETS\nvec3 grlPositionOffset=grl_offsets;\n#else\nvec3 grlPositionOffset=vec3(0.);\n#endif\nvec4 grlFinalPosition=grlMatrix*vec4( (position+grlPositionOffset)+grl_slopes*grl_widths ,1.0 ) ;gl_Position=grlFinalPosition;\n#endif\n}\n";
-    Rk.d.ShadersStore[Xk] || (Rk.d.ShadersStore[Xk] = bk);
-    const wk = [tk.e, ak.c];
-    for (const sk of wk) Rk.d.IncludesShadersStore[sk.name] || (Rk.d.IncludesShadersStore[sk.name] = sk.shader);
-    const dk = {
-      name: Xk,
-      shader: bk
+    var kb = sb(39267),
+      Wb = sb(41332),
+      ab = sb(41396);
+    const Tb = "greasedLineVertexShader",
+      Ub = "precision highp float;\n#include<instancesDeclaration>\nattribute float grl_widths;\n#ifdef GREASED_LINE_USE_OFFSETS\nattribute vec3 grl_offsets;\n#endif\nattribute float grl_colorPointers;attribute vec3 position;uniform mat4 viewProjection;uniform mat4 projection;varying float grlCounters;varying float grlColorPointer;\n#ifdef GREASED_LINE_CAMERA_FACING\nattribute vec4 grl_nextAndCounters;attribute vec4 grl_previousAndSide;uniform vec2 grlResolution;uniform float grlAspect;uniform float grlWidth;uniform float grlSizeAttenuation;vec2 grlFix( vec4 i,float aspect ) {vec2 res=i.xy/i.w;res.x*=aspect;return res;}\n#else\nattribute vec3 grl_slopes;attribute float grl_counters;\n#endif\nvoid main() {\n#include<instancesVertex>\ngrlColorPointer=grl_colorPointers;mat4 grlMatrix=viewProjection*finalWorld ;\n#ifdef GREASED_LINE_CAMERA_FACING\nfloat grlBaseWidth=grlWidth;vec3 grlPrevious=grl_previousAndSide.xyz;float grlSide=grl_previousAndSide.w;vec3 grlNext=grl_nextAndCounters.xyz;grlCounters=grl_nextAndCounters.w;float grlWidth=grlBaseWidth*grl_widths;\n#ifdef GREASED_LINE_USE_OFFSETS\nvec3 grlPositionOffset=grl_offsets;\n#else\nvec3 grlPositionOffset=vec3(0.);\n#endif\nvec3 positionUpdated=position+grlPositionOffset;vec3 worldDir=normalize(grlNext-grlPrevious);vec3 nearPosition=positionUpdated+(worldDir*0.01);vec4 grlFinalPosition=grlMatrix*vec4( positionUpdated ,1.0);vec4 screenNearPos=grlMatrix*vec4(nearPosition,1.0);vec2 grlLinePosition=grlFix(grlFinalPosition,grlAspect);vec2 grlLineNearPosition=grlFix(screenNearPos,grlAspect);vec2 grlDir=normalize(grlLineNearPosition-grlLinePosition);vec4 grlNormal=vec4( -grlDir.y,grlDir.x,0.,1. );\n#ifdef GREASED_LINE_RIGHT_HANDED_COORDINATE_SYSTEM\ngrlNormal.xy*=-.5*grlWidth;\n#else\ngrlNormal.xy*=.5*grlWidth;\n#endif\ngrlNormal*=projection;if (grlSizeAttenuation==1.) {grlNormal.xy*=grlFinalPosition.w;grlNormal.xy/=( vec4( grlResolution,0.,1. )*projection ).xy;}\ngrlFinalPosition.xy+=grlNormal.xy*grlSide;gl_Position=grlFinalPosition;\n#else\ngrlCounters=grl_counters;\n#ifdef GREASED_LINE_USE_OFFSETS\nvec3 grlPositionOffset=grl_offsets;\n#else\nvec3 grlPositionOffset=vec3(0.);\n#endif\nvec4 grlFinalPosition=grlMatrix*vec4( (position+grlPositionOffset)+grl_slopes*grl_widths ,1.0 ) ;gl_Position=grlFinalPosition;\n#endif\n}\n";
+    kb.d.ShadersStore[Tb] || (kb.d.ShadersStore[Tb] = Ub);
+    const Ib = [Wb.e, ab.c];
+    for (const fb of Ib) kb.d.IncludesShadersStore[fb.name] || (kb.d.IncludesShadersStore[fb.name] = fb.shader);
+    const Hb = {
+      name: Tb,
+      shader: Ub
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,30 +1,30 @@
-/*! For license information please see 6ndy1f.wasmMatchmaking.3ef714e7.chunk.js.LICENSE.txt */
+/*! For license information please see fsa8nn.wasmMatchmaking.d70986a1.chunk.js.LICENSE.txt */
 export const id = 59;
 export const ids = [59, 91];
 export const modules = {
-  36279: (kk, Fk) => {
-    function Bk(kk) {
-      if (kk && "object" === typeof kk) {
-        var Fk = kk.which || kk.keyCode || kk.charCode;
-        Fk && (kk = Fk)
+  36201: (bb, cb) => {
+    function sb(bb) {
+      if (bb && "object" === typeof bb) {
+        var cb = bb.which || bb.keyCode || bb.charCode;
+        cb && (bb = cb)
       }
-      if ("number" === typeof kk) return Xk[kk];
-      var Bk, ak = String(kk);
-      return (Bk = Rk[ak.toLowerCase()]) ? Bk : (Bk = tk[ak.toLowerCase()]) || (1 === ak.length ? ak.charCodeAt(0) : void 0)
+      if ("number" === typeof bb) return Tb[bb];
+      var sb, ab = String(bb);
+      return (sb = kb[ab.toLowerCase()]) ? sb : (sb = Wb[ab.toLowerCase()]) || (1 === ab.length ? ab.charCodeAt(0) : void 0)
     }
-    Bk.isEventKey = function(kk, Fk) {
-      if (kk && "object" === typeof kk) {
-        var Bk = kk.which || kk.keyCode || kk.charCode;
-        if (null === Bk || void 0 === Bk) return !1;
-        if ("string" === typeof Fk) {
-          var ak;
-          if (ak = Rk[Fk.toLowerCase()]) return ak === Bk;
-          if (ak = tk[Fk.toLowerCase()]) return ak === Bk
-        } else if ("number" === typeof Fk) return Fk === Bk;
+    sb.isEventKey = function(bb, cb) {
+      if (bb && "object" === typeof bb) {
+        var sb = bb.which || bb.keyCode || bb.charCode;
+        if (null === sb || void 0 === sb) return !1;
+        if ("string" === typeof cb) {
+          var ab;
+          if (ab = kb[cb.toLowerCase()]) return ab === sb;
+          if (ab = Wb[cb.toLowerCase()]) return ab === sb
+        } else if ("number" === typeof cb) return cb === sb;
         return !1
       }
     };
-    var Rk = (Fk = kk.exports = Bk).code = Fk.codes = {
+    var kb = (cb = bb.exports = sb).code = cb.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      tk = Fk.aliases = {
+      Wb = cb.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (ak = 97; ak < 123; ak++) Rk[String.fromCharCode(ak)] = ak - 32;
-    for (var ak = 48; ak < 58; ak++) Rk[ak - 48] = ak;
-    for (ak = 1; ak < 13; ak++) Rk["f" + ak] = ak + 111;
-    for (ak = 0; ak < 10; ak++) Rk["numpad " + ak] = ak + 96;
-    var Xk = Fk.names = Fk.title = {};
-    for (ak in Rk) Xk[Rk[ak]] = ak;
-    for (var bk in tk) Rk[bk] = tk[bk]
+    for (ab = 97; ab < 123; ab++) kb[String.fromCharCode(ab)] = ab - 32;
+    for (var ab = 48; ab < 58; ab++) kb[ab - 48] = ab;
+    for (ab = 1; ab < 13; ab++) kb["f" + ab] = ab + 111;
+    for (ab = 0; ab < 10; ab++) kb["numpad " + ab] = ab + 96;
+    var Tb = cb.names = cb.title = {};
+    for (ab in kb) Tb[kb[ab]] = ab;
+    for (var Ub in Wb) kb[Ub] = Wb[Ub]
   },
-  36427: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => Xk
+  36344: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Tb
     });
-    var Rk = Bk(61);
-    const tk = Rk.useLayoutEffect;
-    const ak = function(kk) {
-      var Fk = (0, Rk.useRef)(kk);
-      return tk((function() {
-        Fk.current = kk
-      })), Fk
+    var kb = sb(64);
+    const Wb = kb.useLayoutEffect;
+    const ab = function(bb) {
+      var cb = (0, kb.useRef)(bb);
+      return Wb((function() {
+        cb.current = bb
+      })), cb
     };
-    var Xk = function(kk) {
-      var Fk = ak(kk);
-      (0, Rk.useEffect)((function() {
-        var kk = function(kk) {
-          var Bk;
-          if (null != Fk.current && (Bk = Fk.current(kk)), kk.defaultPrevented && (kk.returnValue = ""), "string" === typeof Bk) return kk.returnValue = Bk, Bk
+    var Tb = function(bb) {
+      var cb = ab(bb);
+      (0, kb.useEffect)((function() {
+        var bb = function(bb) {
+          var sb;
+          if (null != cb.current && (sb = cb.current(bb)), bb.defaultPrevented && (bb.returnValue = ""), "string" === typeof sb) return bb.returnValue = sb, sb
         };
-        return window.addEventListener("beforeunload", kk),
+        return window.addEventListener("beforeunload", bb),
           function() {
-            window.removeEventListener("beforeunload", kk)
+            window.removeEventListener("beforeunload", bb)
           }
       }), [])
     }
   },
-  36313: kk => {
-    var Fk, Bk = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      Rk = /OS X/.test(Bk),
-      tk = /Opera/.test(Bk),
-      ak = !/like Gecko/.test(Bk) && !tk,
-      Xk = kk.exports = {
-        0: Rk ? "<menu>" : "<UNK>",
+  36231: bb => {
+    var cb, sb = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      kb = /OS X/.test(sb),
+      Wb = /Opera/.test(sb),
+      ab = !/like Gecko/.test(sb) && !Wb,
+      Tb = bb.exports = {
+        0: kb ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: Rk ? "<meta>" : "<menu>",
+        93: kb ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: Rk && ak ? "-" : "<volume-mute>",
+        173: kb && ab ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: tk ? "`" : "<unicode>",
+        231: Wb ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,454 +234,454 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (Fk = 58; Fk < 65; ++Fk) Xk[Fk] = String.fromCharCode(Fk);
-    for (Fk = 48; Fk < 58; ++Fk) Xk[Fk] = Fk - 48 + "";
-    for (Fk = 65; Fk < 91; ++Fk) Xk[Fk] = String.fromCharCode(Fk);
-    for (Fk = 96; Fk < 106; ++Fk) Xk[Fk] = "<num-" + (Fk - 96) + ">";
-    for (Fk = 112; Fk < 136; ++Fk) Xk[Fk] = "F" + (Fk - 111)
+    for (cb = 58; cb < 65; ++cb) Tb[cb] = String.fromCharCode(cb);
+    for (cb = 48; cb < 58; ++cb) Tb[cb] = cb - 48 + "";
+    for (cb = 65; cb < 91; ++cb) Tb[cb] = String.fromCharCode(cb);
+    for (cb = 96; cb < 106; ++cb) Tb[cb] = "<num-" + (cb - 96) + ">";
+    for (cb = 112; cb < 136; ++cb) Tb[cb] = "F" + (cb - 111)
   },
-  36355: (kk, Fk, Bk) => {
-    function Rk(kk, Fk, Bk, Rk) {
-      return !(Bk && !kk.aimable) && (!Fk || kk.gun && "head" !== Rk)
+  36258: (bb, cb, sb) => {
+    function kb(bb, cb, sb, kb) {
+      return !(sb && !bb.aimable) && (!cb || bb.gun && "head" !== kb)
     }
 
-    function tk(kk) {
-      return Math.max(.1 * kk, 1)
+    function Wb(bb) {
+      return Math.max(.1 * bb, 1)
     }
 
-    function ak(kk, Fk) {
-      return !kk && Fk
+    function ab(bb, cb) {
+      return !bb && cb
     }
-    Bk.d(Fk, {
-      b: () => ak,
-      e: () => tk,
-      h: () => Rk
+    sb.d(cb, {
+      e: () => ab,
+      g: () => Wb,
+      k: () => kb
     })
   },
-  36359: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => bk,
-      g: () => Xk
+  36263: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Ub,
+      i: () => Tb
     });
-    let Rk = null;
-    const tk = {
+    let kb = null;
+    const Wb = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      ak = {
-        crosshairAccuracy: kk => {
-          const Fk = tk.crosshairAccuracy.at(-1);
-          Fk ? Fk.hook(kk) : Rk = kk
+      ab = {
+        crosshairAccuracy: bb => {
+          const cb = Wb.crosshairAccuracy.at(-1);
+          cb ? cb.hook(bb) : kb = bb
         },
-        turnDamageIndicators: kk => {
-          var Fk;
-          null === (Fk = tk.turnDamageIndicators.at(-1)) || void 0 === Fk || Fk.hook(kk)
+        turnDamageIndicators: bb => {
+          var cb;
+          null === (cb = Wb.turnDamageIndicators.at(-1)) || void 0 === cb || cb.hook(bb)
         }
       };
 
-    function Xk(kk, Fk) {
-      const Bk = {
-          hook: Fk
+    function Tb(bb, cb) {
+      const sb = {
+          hook: cb
         },
-        Xk = tk[kk];
-      if (Xk.push(Bk), "crosshairAccuracy" === kk && null !== Rk) {
-        const kk = Rk;
-        Rk = null, ak.crosshairAccuracy(kk)
+        Tb = Wb[bb];
+      if (Tb.push(sb), "crosshairAccuracy" === bb && null !== kb) {
+        const bb = kb;
+        kb = null, ab.crosshairAccuracy(bb)
       }
       return () => {
-        const kk = Xk.indexOf(Bk); - 1 !== kk && Xk.splice(kk, 1)
+        const bb = Tb.indexOf(sb); - 1 !== bb && Tb.splice(bb, 1)
       }
     }
 
-    function bk() {
-      return ak
+    function Ub() {
+      return ab
     }
   },
-  6361: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => tk,
-      e: () => ak
+  6328: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Wb,
+      d: () => ab
     });
-    var Rk = Bk(42);
-    const tk = "shaderPack";
-    async function ak() {
-      var kk;
-      let Fk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (kk = await Rk.f.getItem(tk, Fk)) && void 0 !== kk ? kk : null
+    var kb = sb(37);
+    const Wb = "shaderPack";
+    async function ab() {
+      var bb;
+      let cb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (bb = await kb.d.getItem(Wb, cb)) && void 0 !== bb ? bb : null
     }
   },
-  8583: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => ak,
-      d: () => tk
+  8514: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => ab,
+      d: () => Wb
     });
-    let Rk = !1;
+    let kb = !1;
 
-    function tk() {
-      Rk = !0
+    function Wb() {
+      kb = !0
     }
 
-    function ak() {
-      return Rk
+    function ab() {
+      return kb
     }
   },
-  36173: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      InGameUi: () => vk.b,
-      LobbyLeaderboard: () => ik.d,
-      loadCharacterCustomisationUI: () => Yk,
-      loadCharacterPreview: () => Lk,
-      matchmakeAndPlay: () => Nk,
-      setUpGame: () => Ok
+  36099: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      InGameUi: () => Nb.c,
+      LobbyLeaderboard: () => Vb.e,
+      loadCharacterCustomisationUI: () => Lb,
+      loadCharacterPreview: () => ub,
+      matchmakeAndPlay: () => gb,
+      setUpGame: () => Yb
     });
-    var Rk = Bk(1195),
-      tk = Bk(152),
-      ak = Bk(22),
-      Xk = Bk(36179),
-      bk = Bk(36188),
-      wk = Bk(1863),
-      dk = Bk(36225);
+    var kb = sb(1255),
+      Wb = sb(195),
+      ab = sb(19),
+      Tb = sb(36102),
+      Ub = sb(36106),
+      Ib = sb(1895),
+      Hb = sb(36142);
 
-    function sk() {
-      return !1 !== wk.b.get("canCustomiseChar")
+    function fb() {
+      return !1 !== Ib.e.get("canCustomiseChar")
     }
-    let Vk = !1;
-    var Jk = Bk(1267),
-      Ak = Bk(1203),
-      ek = Bk(672),
-      yk = Bk(8583);
-    var fk = Bk(8580),
-      mk = Bk(3374),
-      Wk = Bk(1716);
-    var vk = Bk(36240),
-      ik = Bk(36683);
+    let Mb = !1;
+    var Xb = sb(1312),
+      nb = sb(1258),
+      mb = sb(706),
+      lb = sb(8514);
+    var Qb = sb(8512),
+      eb = sb(3369),
+      Cb = sb(1763);
+    var Nb = sb(36156),
+      Vb = sb(36576);
 
-    function Yk() {
-      return Promise.all([Bk.e(281), Bk.e(387)]).then((() => Bk(40717)))
-    }
-
-    function Lk() {
-      return Bk.e(282).then((() => Bk(40720)))
+    function Lb() {
+      return Promise.all([sb.e(281), sb.e(387)]).then((() => sb(40707)))
     }
 
-    function Ok() {
-      return (0, fk.e)()
+    function ub() {
+      return sb.e(282).then((() => sb(40713)))
     }
-    Vk || (Vk = !0, document.addEventListener("keydown", (kk => {
-        (0, dk.b)(kk, sk)
+
+    function Yb() {
+      return (0, Qb.h)()
+    }
+    Mb || (Mb = !0, document.addEventListener("keydown", (bb => {
+        (0, Hb.e)(bb, fb)
       }))),
-      function(kk) {
-        var Fk;
-        return !0 !== (null === kk || void 0 === kk ? void 0 : kk.saveData) && !/2g$/.test(null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.effectiveType) && void 0 !== Fk ? Fk : "")
-      }(navigator.connection) && (0, ek.e)((() => {
-        (0, yk.c)() || Promise.all([Bk.e(74), Bk.e(132), Bk.e(87), Bk.e(55)]).then((() => Bk(40163))).then((kk => {
-          (0, yk.c)() || kk.startLoadAheadOfJoin({
-            joinStarted: yk.c,
-            language: Ak.c.get().getCurrentLanguageCode()
+      function(bb) {
+        var cb;
+        return !0 !== (null === bb || void 0 === bb ? void 0 : bb.saveData) && !/2g$/.test(null !== (cb = null === bb || void 0 === bb ? void 0 : bb.effectiveType) && void 0 !== cb ? cb : "")
+      }(navigator.connection) && (0, mb.d)((() => {
+        (0, lb.c)() || Promise.all([sb.e(74), sb.e(132), sb.e(87), sb.e(55)]).then((() => sb(40182))).then((bb => {
+          (0, lb.c)() || bb.startLoadAheadOfJoin({
+            joinStarted: lb.c,
+            language: nb.e.get().getCurrentLanguageCode()
           })
-        }), (kk => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", kk)
+        }), (bb => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", bb)
         }))
       }));
-    const Ek = ak.c.get("router");
-    null === Ek ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function kk(Fk) {
-      if ((0, Wk.b)(Fk.state.location.pathname)) return void(0, fk.d)().catch((() => {}));
-      const Bk = Fk.subscribe((Rk => {
-        (0, Wk.b)(Rk.location.pathname) && (Bk(), (0, mk.d)().then((() => {
-          kk(Fk)
+    const hb = ab.d.get("router");
+    null === hb ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function bb(cb) {
+      if ((0, Cb.c)(cb.state.location.pathname)) return void(0, Qb.e)().catch((() => {}));
+      const sb = cb.subscribe((kb => {
+        (0, Cb.c)(kb.location.pathname) && (sb(), (0, eb.e)().then((() => {
+          bb(cb)
         })))
       }))
-    }(Ek), (0, Xk.b)();
-    const Sk = (0, bk.b)((async function(kk, Fk) {
+    }(hb), (0, Tb.b)();
+    const Jb = (0, Ub.d)((async function(bb, cb) {
       let {
-        place: Bk,
-        userContext: ak,
-        direct: Xk,
-        rematch: bk
-      } = kk;
-      const wk = Xk ? 1 / 0 : performance.now();
-      let dk;
+        place: sb,
+        userContext: ab,
+        direct: Tb,
+        rematch: Ub
+      } = bb;
+      const Ib = Tb ? 1 / 0 : performance.now();
+      let Hb;
       try {
-        dk = await (0, fk.d)()
-      } catch (sk) {
-        return console.error("The wasm client did not load:", sk), (0, Jk.u)({
+        Hb = await (0, Qb.e)()
+      } catch (fb) {
+        return console.error("The wasm client did not load:", fb), (0, Xb.o)({
           websocketUrl: null
-        }), Rk.c.errorWithCode(String(sk), tk.k.CONNECT_TO_GAME_SERVER, {
-          error: sk,
-          severity: Fk.aborted ? "low" : "medium",
-          yB: Fk.aborted
+        }), kb.d.errorWithCode(String(fb), Wb.k.CONNECT_TO_GAME_SERVER, {
+          error: fb,
+          severity: cb.aborted ? "low" : "medium",
+          Gs: cb.aborted
         })
       }
-      return dk.playWasmGame({
-        userContext: ak,
-        place: Bk,
-        matchedAt: wk,
-        rematch: bk
-      }, Fk)
+      return Hb.playWasmGame({
+        userContext: ab,
+        place: sb,
+        matchedAt: Ib,
+        rematch: Ub
+      }, cb)
     }));
 
-    function Nk() {
-      return (0, fk.d)().catch((() => {})), Sk(...arguments)
+    function gb() {
+      return (0, Qb.e)().catch((() => {})), Jb(...arguments)
     }
   },
-  8580: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => sk,
-      e: () => Vk
+  8512: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => fb,
+      h: () => Mb
     });
-    var Rk = Bk(2943),
-      tk = Bk(2190),
-      ak = Bk(2992),
-      Xk = Bk(4389),
-      bk = Bk(3309),
-      wk = Bk(8583);
-    let dk = null;
+    var kb = sb(2904),
+      Wb = sb(2199),
+      ab = sb(2946),
+      Tb = sb(4386),
+      Ub = sb(3294),
+      Ib = sb(8514);
+    let Hb = null;
 
-    function sk() {
-      return Xk.b.cancelDownloadForJoin(), (0, bk.e)(), (0, tk.g)(), (0, wk.d)(), (0, ak.e)(), Promise.all([Bk.e(69), Bk.e(72), Bk.e(71), Bk.e(70), Bk.e(83), Bk.e(259), Bk.e(199), Bk.e(216), Bk.e(237), Bk.e(212), Bk.e(46)]).then((() => Bk(40095))).catch((() => {})), Promise.all([Bk.e(74), Bk.e(132), Bk.e(87), Bk.e(55)]).then((() => Bk(40163))).then((kk => {
+    function fb() {
+      return Tb.b.cancelDownloadForJoin(), (0, Ub.b)(), (0, Wb.e)(), (0, Ib.d)(), (0, ab.l)(), Promise.all([sb.e(69), sb.e(72), sb.e(71), sb.e(70), sb.e(83), sb.e(259), sb.e(199), sb.e(216), sb.e(237), sb.e(212), sb.e(46)]).then((() => sb(40112))).catch((() => {})), Promise.all([sb.e(74), sb.e(132), sb.e(87), sb.e(55)]).then((() => sb(40182))).then((bb => {
         let {
-          startJoinLoad: Fk
-        } = kk;
-        Fk()
-      }), (() => {})), dk ??= Promise.all([Bk.e(71), Bk.e(74), Bk.e(129), Bk.e(73), Bk.e(132), Bk.e(262), Bk.e(186), Bk.e(87), Bk.e(86), Bk.e(85), Bk.e(212), Bk.e(60)]).then((() => Bk(40278))).then((kk => (kk.startWasmPlay(), kk.followPageUiPack((kk => {
-        Rk.e.showGamePack(kk)
-      })), kk)), (kk => {
-        throw dk = null, kk
-      })), dk
+          startJoinLoad: cb
+        } = bb;
+        cb()
+      }), (() => {})), Hb ??= Promise.all([sb.e(71), sb.e(74), sb.e(129), sb.e(73), sb.e(132), sb.e(262), sb.e(186), sb.e(87), sb.e(86), sb.e(85), sb.e(212), sb.e(60)]).then((() => sb(40275))).then((bb => (bb.startWasmPlay(), bb.followPageUiPack((bb => {
+        kb.e.showGamePack(bb)
+      })), bb)), (bb => {
+        throw Hb = null, bb
+      })), Hb
     }
 
-    function Vk() {
-      return Promise.all([Bk.e(71), Bk.e(74), Bk.e(129), Bk.e(73), Bk.e(132), Bk.e(262), Bk.e(186), Bk.e(87), Bk.e(86), Bk.e(85), Bk.e(212), Bk.e(60)]).then((() => Bk(40278))).then((kk => {
-        kk.startWasmPreviews(), kk.prefetchWasmPreviews()
+    function Mb() {
+      return Promise.all([sb.e(71), sb.e(74), sb.e(129), sb.e(73), sb.e(132), sb.e(262), sb.e(186), sb.e(87), sb.e(86), sb.e(85), sb.e(212), sb.e(60)]).then((() => sb(40275))).then((bb => {
+        bb.startWasmPreviews(), bb.prefetchWasmPreviews()
       }))
     }
   },
-  4575: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      Howl: () => tk.Howl,
-      Howler: () => tk.Howler,
-      iosAudio: () => wk,
-      musicOutput: () => fk,
-      readyAudioContext: () => mk
+  4579: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      Howl: () => Wb.Howl,
+      Howler: () => Wb.Howler,
+      iosAudio: () => Ib,
+      musicOutput: () => Qb,
+      readyAudioContext: () => eb
     });
-    var Rk, tk = Bk(4579),
-      ak = Bk(98);
-    const Xk = tk.Howler;
-    let bk;
+    var kb, Wb = sb(4585),
+      ab = sb(117);
+    const Tb = Wb.Howler;
+    let Ub;
 
-    function wk() {
-      return bk ??= "ios" === (0, ak.getOperatingSystem)(), bk
+    function Ib() {
+      return Ub ??= "ios" === (0, ab.getOperatingSystem)(), Ub
     }
 
-    function dk() {
-      var kk, Fk;
-      if (Xk.ctx || !Xk.usingWebAudio || "undefined" === typeof AudioContext || !wk()) return;
-      const Bk = navigator.audioSession;
-      let Rk;
-      "auto" === (null === Bk || void 0 === Bk ? void 0 : Bk.type) && (Bk.type = "ambient");
+    function Hb() {
+      var bb, cb;
+      if (Tb.ctx || !Tb.usingWebAudio || "undefined" === typeof AudioContext || !Ib()) return;
+      const sb = navigator.audioSession;
+      let kb;
+      "auto" === (null === sb || void 0 === sb ? void 0 : sb.type) && (sb.type = "ambient");
       try {
-        Rk = new AudioContext({
+        kb = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const tk = Rk.createGain();
-      tk.gain.setValueAtTime(Xk._muted ? 0 : null !== (kk = Xk._volume) && void 0 !== kk ? kk : 1, Rk.currentTime), tk.connect(Rk.destination), Xk.ctx = Rk, Xk.masterGain = tk, null === (Fk = Xk._setup) || void 0 === Fk || Fk.call(Xk)
+      const Wb = kb.createGain();
+      Wb.gain.setValueAtTime(Tb._muted ? 0 : null !== (bb = Tb._volume) && void 0 !== bb ? bb : 1, kb.currentTime), Wb.connect(kb.destination), Tb.ctx = kb, Tb.masterGain = Wb, null === (cb = Tb._setup) || void 0 === cb || cb.call(Tb)
     }
-    Xk._mobileUnloaded = !0;
-    const sk = Xk.volume.bind(tk.Howler);
-    Xk.volume = function() {
-      return dk(), sk(...arguments)
+    Tb._mobileUnloaded = !0;
+    const fb = Tb.volume.bind(Wb.Howler);
+    Tb.volume = function() {
+      return Hb(), fb(...arguments)
     };
-    const Vk = Xk.mute.bind(tk.Howler);
-    Xk.mute = kk => (dk(), Vk(kk));
-    const Jk = tk.Howl.prototype,
-      Ak = Jk.init;
-    Jk.init = function(kk) {
-      return dk(), Ak.call(this, kk)
+    const Mb = Tb.mute.bind(Wb.Howler);
+    Tb.mute = bb => (Hb(), Mb(bb));
+    const Xb = Wb.Howl.prototype,
+      nb = Xb.init;
+    Xb.init = function(bb) {
+      return Hb(), nb.call(this, bb)
     };
-    let ek = 0;
-    const yk = null === (Rk = Xk._autoSuspend) || void 0 === Rk ? void 0 : Rk.bind(tk.Howler);
+    let mb = 0;
+    const lb = null === (kb = Tb._autoSuspend) || void 0 === kb ? void 0 : kb.bind(Wb.Howler);
 
-    function fk() {
-      mk();
+    function Qb() {
+      eb();
       const {
-        ctx: kk,
-        masterGain: Fk
-      } = Xk;
-      return kk && Fk ? {
-        ctx: kk,
-        destination: Fk,
-        holdAwake: kk => {
-          var Fk, Bk;
-          (ek += kk ? 1 : -1, kk) ? null === (Fk = Xk._autoResume) || void 0 === Fk || Fk.call(Xk): null === (Bk = Xk._autoSuspend) || void 0 === Bk || Bk.call(Xk)
+        ctx: bb,
+        masterGain: cb
+      } = Tb;
+      return bb && cb ? {
+        ctx: bb,
+        destination: cb,
+        holdAwake: bb => {
+          var cb, sb;
+          (mb += bb ? 1 : -1, bb) ? null === (cb = Tb._autoResume) || void 0 === cb || cb.call(Tb): null === (sb = Tb._autoSuspend) || void 0 === sb || sb.call(Tb)
         },
         wake: () => {
-          var Fk;
-          "running" !== kk.state && (null === (Fk = Xk._autoResume) || void 0 === Fk || Fk.call(Xk), kk.resume().catch((() => {})))
+          var cb;
+          "running" !== bb.state && (null === (cb = Tb._autoResume) || void 0 === cb || cb.call(Tb), bb.resume().catch((() => {})))
         }
       } : null
     }
 
-    function mk() {
-      var kk;
-      (Xk.volume(), Xk.ctx && Xk.autoUnlock) && (null === (kk = Xk._unlockAudio) || void 0 === kk || kk.call(Xk))
+    function eb() {
+      var bb;
+      (Tb.volume(), Tb.ctx && Tb.autoUnlock) && (null === (bb = Tb._unlockAudio) || void 0 === bb || bb.call(Tb))
     }
-    yk && (Xk._autoSuspend = () => ek > 0 ? tk.Howler : yk())
+    lb && (Tb._autoSuspend = () => mb > 0 ? Wb.Howler : lb())
   },
-  36460: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Xk,
-      h: () => tk,
-      i: () => Rk
+  36367: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Tb,
+      d: () => Wb,
+      e: () => kb
     });
 
-    function Rk(kk) {
-      return kk.replace(/[_\-\s]*\d+$/, "") || kk
+    function kb(bb) {
+      return bb.replace(/[_\-\s]*\d+$/, "") || bb
     }
 
-    function tk(kk, Fk, Bk) {
-      return Bk <= 0 ? 0 : kk * Bk / Math.max(Fk, Bk)
+    function Wb(bb, cb, sb) {
+      return sb <= 0 ? 0 : bb * sb / Math.max(cb, sb)
     }
 
-    function ak(kk, Fk) {
-      const Bk = kk.getDurationMs();
-      return Bk > 0 ? kk.loudness * Math.max(0, 1 - (Fk - kk.startMs) / Bk) : 0
+    function ab(bb, cb) {
+      const sb = bb.getDurationMs();
+      return sb > 0 ? bb.loudness * Math.max(0, 1 - (cb - bb.startMs) / sb) : 0
     }
-    class Xk {
+    class Tb {
       constructor() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = kk, this.maxPerGroup = Fk, this.voices = []
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = bb, this.maxPerGroup = cb, this.voices = []
       }
-      admit(kk) {
-        if (this.voices = this.voices.filter((kk => kk.isAlive())), null !== kk.group) {
-          const Fk = this.voices.filter((Fk => Fk.group === kk.group));
-          if (Fk.length >= this.maxPerGroup && !this.dropLeastWorth(Fk, kk)) return !1
+      admit(bb) {
+        if (this.voices = this.voices.filter((bb => bb.isAlive())), null !== bb.group) {
+          const cb = this.voices.filter((cb => cb.group === bb.group));
+          if (cb.length >= this.maxPerGroup && !this.dropLeastWorth(cb, bb)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, kk)) && (this.voices.push(kk), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, bb)) && (this.voices.push(bb), !0)
       }
-      dropLeastWorth(kk, Fk) {
-        let Bk = null,
-          Rk = 1 / 0;
-        for (const tk of kk) {
-          if (!tk.canStop()) continue;
-          const kk = ak(tk, Fk.startMs);
-          kk < Rk && (Bk = tk, Rk = kk)
+      dropLeastWorth(bb, cb) {
+        let sb = null,
+          kb = 1 / 0;
+        for (const Wb of bb) {
+          if (!Wb.canStop()) continue;
+          const bb = ab(Wb, cb.startMs);
+          bb < kb && (sb = Wb, kb = bb)
         }
-        return !(!Bk || Fk.loudness < Rk) && (this.voices.splice(this.voices.indexOf(Bk), 1), Bk.stop(), !0)
+        return !(!sb || cb.loudness < kb) && (this.voices.splice(this.voices.indexOf(sb), 1), sb.stop(), !0)
       }
     }
   },
-  36469: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => ak,
-      d: () => Xk,
-      e: () => Rk
+  36374: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => ab,
+      e: () => Tb,
+      h: () => kb
     });
-    class Rk {
-      constructor(kk) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = kk
+    class kb {
+      constructor(bb) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = bb
       }
-      setMultiplierType(kk, Fk) {
-        var Bk;
-        this.multipliers[kk] = Fk, null === (Bk = this._onUpdate) || void 0 === Bk || Bk.call(this)
+      setMultiplierType(bb, cb) {
+        var sb;
+        this.multipliers[bb] = cb, null === (sb = this._onUpdate) || void 0 === sb || sb.call(this)
       }
-      removeMultiplier(kk) {
-        var Fk;
-        delete this.multipliers[kk], null === (Fk = this._onUpdate) || void 0 === Fk || Fk.call(this)
+      removeMultiplier(bb) {
+        var cb;
+        delete this.multipliers[bb], null === (cb = this._onUpdate) || void 0 === cb || cb.call(this)
       }
-      getMultiplierType(kk) {
-        return this.multipliers[kk]
+      getMultiplierType(bb) {
+        return this.multipliers[bb]
       }
       getTotalMultipliedVal() {
-        let kk = 1;
-        for (const Fk in this.multipliers) kk *= this.multipliers[Fk];
-        return kk
+        let bb = 1;
+        for (const cb in this.multipliers) bb *= this.multipliers[cb];
+        return bb
       }
     }
-    class tk {
+    class Wb {
       constructor() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = kk
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = bb
       }
-      setBooleanType(kk, Fk) {
-        const Bk = this._getTotalBooleanVal();
-        this.booleans[kk] = !!Fk;
-        const Rk = this.getTotalBooleanVal();
-        var tk;
-        Rk !== Bk && (null === (tk = this._onUpdate) || void 0 === tk || tk.call(this, Rk, this.booleans));
-        return Rk
+      setBooleanType(bb, cb) {
+        const sb = this._getTotalBooleanVal();
+        this.booleans[bb] = !!cb;
+        const kb = this.getTotalBooleanVal();
+        var Wb;
+        kb !== sb && (null === (Wb = this._onUpdate) || void 0 === Wb || Wb.call(this, kb, this.booleans));
+        return kb
       }
-      removeBoolean(kk) {
-        const Fk = this._getTotalBooleanVal();
-        delete this.booleans[kk];
-        const Bk = this._getTotalBooleanVal();
-        var Rk;
-        null !== Bk && Bk !== Fk && (null === (Rk = this._onUpdate) || void 0 === Rk || Rk.call(this, Bk, this.booleans));
-        return null !== Bk && void 0 !== Bk && Bk
+      removeBoolean(bb) {
+        const cb = this._getTotalBooleanVal();
+        delete this.booleans[bb];
+        const sb = this._getTotalBooleanVal();
+        var kb;
+        null !== sb && sb !== cb && (null === (kb = this._onUpdate) || void 0 === kb || kb.call(this, sb, this.booleans));
+        return null !== sb && void 0 !== sb && sb
       }
-      getBooleanType(kk) {
-        return this.booleans[kk]
+      getBooleanType(bb) {
+        return this.booleans[bb]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var kk;
-        null === (kk = this._onUpdate) || void 0 === kk || kk.call(this, this.getTotalBooleanVal(), this.booleans)
+        var bb;
+        null === (bb = this._onUpdate) || void 0 === bb || bb.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class ak extends tk {
+    class ab extends Wb {
       getTotalBooleanVal() {
-        const kk = this._getTotalBooleanVal();
-        if (null === kk) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return kk
+        const bb = this._getTotalBooleanVal();
+        if (null === bb) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return bb
       }
       _getTotalBooleanVal() {
-        let kk = !1,
-          Fk = !0;
-        for (const Bk in this.booleans) kk = !0, Fk &&= this.booleans[Bk];
-        return kk ? Fk : null
+        let bb = !1,
+          cb = !0;
+        for (const sb in this.booleans) bb = !0, cb &&= this.booleans[sb];
+        return bb ? cb : null
       }
     }
-    class Xk extends tk {
+    class Tb extends Wb {
       getTotalBooleanVal() {
-        const kk = this._getTotalBooleanVal();
-        if (null === kk) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return kk
+        const bb = this._getTotalBooleanVal();
+        if (null === bb) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return bb
       }
       _getTotalBooleanVal() {
-        let kk = !1,
-          Fk = !1;
-        for (const Bk in this.booleans) kk = !0, Fk ||= this.booleans[Bk];
-        return kk ? Fk : null
+        let bb = !1,
+          cb = !1;
+        for (const sb in this.booleans) bb = !0, cb ||= this.booleans[sb];
+        return bb ? cb : null
       }
     }
   },
-  9169: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => tk,
-      d: () => ak
+  9103: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Wb,
+      f: () => ab
     });
-    var Rk = Bk(9127);
-    const tk = "Air",
-      ak = Object.freeze(new Rk.g(tk, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var kb = sb(9064);
+    const Wb = "Air",
+      ab = Object.freeze(new kb.f(Wb, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  36466: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => ak,
-      d: () => Rk,
-      g: () => tk
+  36372: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => ab,
+      h: () => kb,
+      l: () => Wb
     });
-    const Rk = 15,
-      tk = 3,
-      ak = 30
+    const kb = 15,
+      Wb = 3,
+      ab = 30
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  36329: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Ak,
-      g: () => ek,
-      j: () => Jk,
-      n: () => Vk
+  36235: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => nb,
+      e: () => mb,
+      i: () => Xb,
+      j: () => Mb
     });
-    var Rk = Bk(9004),
-      tk = Bk(36332),
-      ak = Bk(36340),
-      Xk = Bk(8372),
-      bk = Bk(1387),
-      wk = Bk(61),
-      dk = Bk(67),
-      sk = Bk(1069);
+    var kb = sb(8917),
+      Wb = sb(36240),
+      ab = sb(36247),
+      Tb = sb(8330),
+      Ub = sb(1423),
+      Ib = sb(64),
+      Hb = sb(89),
+      fb = sb(1087);
 
-    function Vk() {
-      var kk;
-      return (0, bk.g)(tk.c, (0, tk.o)()), (0, sk.jsx)(sk.Fragment, {
-        children: null === (kk = (0, tk.o)()) || void 0 === kk ? void 0 : kk.content
+    function Mb() {
+      var bb;
+      return (0, Ub.h)(Wb.c, (0, Wb.l)()), (0, fb.jsx)(fb.Fragment, {
+        children: null === (bb = (0, Wb.l)()) || void 0 === bb ? void 0 : bb.content
       })
     }
 
-    function Jk(kk) {
-      var Fk;
+    function Xb(bb) {
+      var cb;
       let {
-        show: Bk
-      } = kk;
-      (0, bk.g)(tk.c, (0, tk.o)());
-      const dk = null === (Fk = (0, tk.o)()) || void 0 === Fk ? void 0 : Fk.menu;
-      return (0, wk.useEffect)((() => {
-        var kk;
-        Bk || (null === dk || void 0 === dk || null === (kk = dk.onClose) || void 0 === kk || kk.call(dk), (0, ak.u)())
-      }), [Bk, dk]), (0, wk.useEffect)((() => Bk ? (0, Xk.h)(ak.C, ak.h) : void 0), [Bk]), (0, sk.jsx)(Rk.d, {
-        showing: Bk,
+        show: sb
+      } = bb;
+      (0, Ub.h)(Wb.c, (0, Wb.l)());
+      const Hb = null === (cb = (0, Wb.l)()) || void 0 === cb ? void 0 : cb.menu;
+      return (0, Ib.useEffect)((() => {
+        var bb;
+        sb || (null === Hb || void 0 === Hb || null === (bb = Hb.onClose) || void 0 === bb || bb.call(Hb), (0, ab.o)())
+      }), [sb, Hb]), (0, Ib.useEffect)((() => sb ? (0, Tb.e)(ab.v, ab.g) : void 0), [sb]), (0, fb.jsx)(kb.b, {
+        showing: sb,
         globallyUniqueKey: "clientGameMenu",
-        children: null === dk || void 0 === dk ? void 0 : dk.content
+        children: null === Hb || void 0 === Hb ? void 0 : Hb.content
       })
     }
 
-    function Ak(kk) {
+    function nb(bb) {
       let {
-        placement: Fk = "bottom"
-      } = kk;
-      return (0, sk.jsx)("div", {
-        id: `clientGameHud-${Fk}`,
+        placement: cb = "bottom"
+      } = bb;
+      return (0, fb.jsx)("div", {
+        id: `clientGameHud-${cb}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function ek(kk) {
+    function mb(bb) {
       let {
-        children: Fk,
-        placement: Bk = "bottom"
-      } = kk;
-      const [Rk, tk] = (0, wk.useState)(null);
-      return (0, wk.useEffect)((() => {
-        tk(document.getElementById(`clientGameHud-${Bk}`))
-      }), [Bk]), Rk ? (0, dk.createPortal)(Fk, Rk) : null
+        children: cb,
+        placement: sb = "bottom"
+      } = bb;
+      const [kb, Wb] = (0, Ib.useState)(null);
+      return (0, Ib.useEffect)((() => {
+        Wb(document.getElementById(`clientGameHud-${sb}`))
+      }), [sb]), kb ? (0, Hb.createPortal)(cb, kb) : null
     }
   },
-  4559: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => fk,
-      f: () => mk
+  4553: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Qb,
+      e: () => eb
     });
-    var Rk = Bk(1020),
-      tk = Bk.n(Rk),
-      ak = Bk(61),
-      Xk = Bk(1149),
-      bk = Bk(4566),
-      wk = Bk(1812),
-      dk = Bk(2320),
-      sk = Bk(4568),
-      Vk = Bk(1069);
-    const Jk = new WeakMap;
-    let Ak = 0;
+    var kb = sb(1033),
+      Wb = sb.n(kb),
+      ab = sb(64),
+      Tb = sb(1197),
+      Ub = sb(4556),
+      Ib = sb(1839),
+      Hb = sb(2337),
+      fb = sb(4561),
+      Mb = sb(1087);
+    const Xb = new WeakMap;
+    let nb = 0;
 
-    function ek(kk) {
-      let Fk = Jk.get(kk);
-      return void 0 === Fk && (Fk = Ak++, Jk.set(kk, Fk)), Fk
+    function mb(bb) {
+      let cb = Xb.get(bb);
+      return void 0 === cb && (cb = nb++, Xb.set(bb, cb)), cb
     }
 
-    function yk(kk) {
+    function lb(bb) {
       let {
-        piece: Fk
-      } = kk;
-      return "space" === Fk.kind ? (0, Vk.jsx)(Vk.Fragment, {
-        children: Fk.text
-      }) : (0, Vk.jsx)("span", {
+        piece: cb
+      } = bb;
+      return "space" === cb.kind ? (0, Mb.jsx)(Mb.Fragment, {
+        children: cb.text
+      }) : (0, Mb.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${Fk.delayMs}ms`
+          "--word-delay": `${cb.delayMs}ms`
         },
-        children: (0, Vk.jsx)(bk.c, {
-          text: "icon" === Fk.kind ? `[[${Fk.icon}]]` : Fk.text
+        children: (0, Mb.jsx)(Ub.b, {
+          text: "icon" === cb.kind ? `[[${cb.icon}]]` : cb.text
         })
       })
     }
 
-    function fk(kk) {
+    function Qb(bb) {
       let {
-        display: Fk
-      } = kk;
+        display: cb
+      } = bb;
       const {
-        selectedLanguage: Bk
-      } = (0, Xk.x)(), Rk = (0, ak.useMemo)((() => (0, sk.e)((0, sk.h)(Fk).plan.pieces)), [Fk, Bk.code]);
-      return (0, Vk.jsxs)("div", {
-        className: tk()("Dialogue", {
-          DialogueAnimateIn: !1 !== Fk.animateIn
+        selectedLanguage: sb
+      } = (0, Tb.E)(), kb = (0, ab.useMemo)((() => (0, fb.e)((0, fb.h)(cb).plan.pieces)), [cb, sb.code]);
+      return (0, Mb.jsxs)("div", {
+        className: Wb()("Dialogue", {
+          DialogueAnimateIn: !1 !== cb.animateIn
         }),
-        children: [Fk.speakerName && (0, Vk.jsx)(wk.d, {
-          text: Fk.speakerName,
+        children: [cb.speakerName && (0, Mb.jsx)(Ib.d, {
+          text: cb.speakerName,
           className: "DialogueSpeaker"
-        }), (0, Vk.jsx)("p", {
+        }), (0, Mb.jsx)("p", {
           className: "DialogueLine",
-          children: Rk.map(((kk, Fk) => 1 === kk.length && "space" === kk[0].kind ? kk[0].text : (0, Vk.jsx)("span", {
+          children: kb.map(((bb, cb) => 1 === bb.length && "space" === bb[0].kind ? bb[0].text : (0, Mb.jsx)("span", {
             className: "DialogueGlue",
-            children: kk.map(((kk, Fk) => (0, Vk.jsx)(yk, {
-              piece: kk
-            }, Fk)))
-          }, Fk)))
+            children: bb.map(((bb, cb) => (0, Mb.jsx)(lb, {
+              piece: bb
+            }, cb)))
+          }, cb)))
         })]
       })
     }
-    const mk = (0, ak.memo)((function() {
-      const kk = (0, dk.j)("dialogue");
-      return (0, Vk.jsx)("div", {
+    const eb = (0, ab.memo)((function() {
+      const bb = (0, Hb.d)("dialogue");
+      return (0, Mb.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: kk && (0, Vk.jsx)(fk, {
-          display: kk
-        }, ek(kk))
+        children: bb && (0, Mb.jsx)(Qb, {
+          display: bb
+        }, mb(bb))
       })
     }))
   },
-  4566: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => bk
+  4556: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Ub
     });
-    var Rk = Bk(61),
-      tk = Bk(279),
-      ak = Bk(1835),
-      Xk = Bk(1069);
+    var kb = sb(64),
+      Wb = sb(334),
+      ab = sb(1858),
+      Tb = sb(1087);
 
-    function bk(kk) {
+    function Ub(bb) {
       let {
-        text: Fk
-      } = kk;
-      const Bk = [];
-      let bk = "";
-      return (0, tk.bc)(Fk).forEach(((kk, Fk) => {
-        if ("string" === typeof kk || !(0, ak.f)(kk.icon)) return void(bk += "string" === typeof kk ? kk : kk.icon);
-        const tk = Math.max(0, bk.trimEnd().search(/\S{1,12}$/));
-        Bk.push((0, Xk.jsxs)(Rk.Fragment, {
-          children: [bk.slice(0, tk), (0, Xk.jsxs)("span", {
+        text: cb
+      } = bb;
+      const sb = [];
+      let Ub = "";
+      return (0, Wb.ic)(cb).forEach(((bb, cb) => {
+        if ("string" === typeof bb || !(0, ab.e)(bb.icon)) return void(Ub += "string" === typeof bb ? bb : bb.icon);
+        const Wb = Math.max(0, Ub.trimEnd().search(/\S{1,12}$/));
+        sb.push((0, Tb.jsxs)(kb.Fragment, {
+          children: [Ub.slice(0, Wb), (0, Tb.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [bk.slice(tk), (0, Xk.jsx)("span", {
+            children: [Ub.slice(Wb), (0, Tb.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": kk.icon,
-              children: (0, Xk.jsx)(ak.e, {
-                itemName: kk.icon,
+              "aria-label": bb.icon,
+              children: (0, Tb.jsx)(ab.d, {
+                itemName: bb.icon,
                 amount: 0
               })
             })]
           })]
-        }, Fk)), bk = ""
-      })), Bk.push(bk), (0, Xk.jsx)(Xk.Fragment, {
-        children: Bk
+        }, cb)), Ub = ""
+      })), sb.push(Ub), (0, Tb.jsx)(Tb.Fragment, {
+        children: sb
       })
     }
   },
-  9004: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => ak
+  8917: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => ab
     });
-    var Rk = Bk(4277),
-      tk = Bk(4283);
+    var kb = sb(4275),
+      Wb = sb(4282);
 
-    function ak(kk) {
+    function ab(bb) {
       let {
-        children: Fk,
-        showing: Bk,
-        globallyUniqueKey: ak,
-        alwaysMountChildren: Xk = !1,
-        doGameplayStartStopOnShow: bk = !0,
-        keepsMovement: wk = !1
-      } = kk;
-      return (0, tk.d)(!0, Bk, ak, wk), (0, Rk.e)(bk, Bk), Bk || Xk ? Fk : null
+        children: cb,
+        showing: sb,
+        globallyUniqueKey: ab,
+        alwaysMountChildren: Tb = !1,
+        doGameplayStartStopOnShow: Ub = !0,
+        keepsMovement: Ib = !1
+      } = bb;
+      return (0, Wb.d)(!0, sb, ab, Ib), (0, kb.e)(Ub, sb), sb || Tb ? cb : null
     }
   },
-  4568: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Gk,
-      h: () => ck
+  4561: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => ib,
+      h: () => Eb
     });
-    var Rk = Bk(4570),
-      tk = Bk(279);
-    const ak = 120,
-      Xk = 260,
-      bk = 1.15,
-      wk = 1.2,
-      dk = 2,
-      sk = 1.08,
-      Vk = .8,
-      Jk = .95,
-      Ak = 8,
-      ek = "[\"')\\]\u300d\u300f\uff09]*",
-      yk = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ek}$`),
-      fk = new RegExp(`[?\uff1f]${ek}$`),
-      mk = new RegExp(`[!\uff01]${ek}$`),
-      Wk = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      vk = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      ik = new RegExp(`[${vk}]`),
-      Yk = new RegExp(`[${vk}]|[^${vk}]+`, "g"),
-      Lk = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var kb = sb(4569),
+      Wb = sb(334);
+    const ab = 120,
+      Tb = 260,
+      Ub = 1.15,
+      Ib = 1.2,
+      Hb = 2,
+      fb = 1.08,
+      Mb = .8,
+      Xb = .95,
+      nb = 8,
+      mb = "[\"')\\]\u300d\u300f\uff09]*",
+      lb = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${mb}$`),
+      Qb = new RegExp(`[?\uff1f]${mb}$`),
+      eb = new RegExp(`[!\uff01]${mb}$`),
+      Cb = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      Nb = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      Vb = new RegExp(`[${Nb}]`),
+      Lb = new RegExp(`[${Nb}]|[^${Nb}]+`, "g"),
+      ub = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function Ok(kk) {
-      let Fk = 2166136261;
-      for (let Bk = 0; Bk < kk.length; Bk++) Fk ^= kk.charCodeAt(Bk), Fk = Math.imul(Fk, 16777619);
-      return (Fk >>> 0) / 4294967295 * 2 - 1
+    function Yb(bb) {
+      let cb = 2166136261;
+      for (let sb = 0; sb < bb.length; sb++) cb ^= bb.charCodeAt(sb), cb = Math.imul(cb, 16777619);
+      return (cb >>> 0) / 4294967295 * 2 - 1
     }
 
-    function Ek(kk) {
-      var Fk;
-      if (ik.test(kk)) return 1;
-      const Bk = kk.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Rk = Bk.replace(/[^0-9]/g, "");
-      if (Rk.length > 0 && !/\p{L}/u.test(Bk)) return Math.min(Rk.length, 4);
-      const tk = null !== (Fk = Bk.match(Lk)) && void 0 !== Fk ? Fk : [];
-      if (0 === tk.length) {
-        var ak, Xk;
-        const kk = null !== (ak = null === (Xk = Bk.match(/\p{L}/gu)) || void 0 === Xk ? void 0 : Xk.length) && void 0 !== ak ? ak : 0;
-        return 0 === kk ? 0 : Math.min(Math.max(1, Math.round(kk / 2.5)), Ak)
+    function hb(bb) {
+      var cb;
+      if (Vb.test(bb)) return 1;
+      const sb = bb.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        kb = sb.replace(/[^0-9]/g, "");
+      if (kb.length > 0 && !/\p{L}/u.test(sb)) return Math.min(kb.length, 4);
+      const Wb = null !== (cb = sb.match(ub)) && void 0 !== cb ? cb : [];
+      if (0 === Wb.length) {
+        var ab, Tb;
+        const bb = null !== (ab = null === (Tb = sb.match(/\p{L}/gu)) || void 0 === Tb ? void 0 : Tb.length) && void 0 !== ab ? ab : 0;
+        return 0 === bb ? 0 : Math.min(Math.max(1, Math.round(bb / 2.5)), nb)
       }
-      const bk = Bk.replace(/[^\p{L}]/gu, ""),
-        wk = tk.length > 1 && "e" === tk.at(-1) && bk.endsWith("e") && !bk.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(kk.replace(/[^\p{L}]/gu, ""));
-      return Math.min(tk.length - (wk ? 1 : 0), Ak)
+      const Ub = sb.replace(/[^\p{L}]/gu, ""),
+        Ib = Wb.length > 1 && "e" === Wb.at(-1) && Ub.endsWith("e") && !Ub.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(bb.replace(/[^\p{L}]/gu, ""));
+      return Math.min(Wb.length - (Ib ? 1 : 0), nb)
     }
 
-    function Sk(kk) {
-      return kk.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function Jb(bb) {
+      return bb.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Nk(kk) {
-      const Fk = kk.replace(/[^\p{L}]/gu, "");
-      return Fk.length >= 2 && Fk === Fk.toUpperCase() && Fk !== Fk.toLowerCase()
+    function gb(bb) {
+      const cb = bb.replace(/[^\p{L}]/gu, "");
+      return cb.length >= 2 && cb === cb.toUpperCase() && cb !== cb.toLowerCase()
     }
 
-    function Hk(kk, Fk) {
-      var Bk;
-      const Ak = Fk && (0, Rk.l)(Fk),
-        ek = null !== (Bk = null === Ak || void 0 === Ak ? void 0 : Ak.syllableMs) && void 0 !== Bk ? Bk : Rk.e,
-        vk = function(kk) {
-          const Fk = [];
-          for (const Rk of (0, tk.bc)(kk))
-            if ("string" === typeof Rk)
-              for (const kk of Rk.split(/(\s+)/)) {
-                if ("" === kk) continue;
-                if (/^\s+$/.test(kk)) {
-                  Fk.push({
+    function Bb(bb, cb) {
+      var sb;
+      const nb = cb && (0, kb.g)(cb),
+        mb = null !== (sb = null === nb || void 0 === nb ? void 0 : nb.syllableMs) && void 0 !== sb ? sb : kb.b,
+        Nb = function(bb) {
+          const cb = [];
+          for (const kb of (0, Wb.ic)(bb))
+            if ("string" === typeof kb)
+              for (const bb of kb.split(/(\s+)/)) {
+                if ("" === bb) continue;
+                if (/^\s+$/.test(bb)) {
+                  cb.push({
                     kind: "space",
-                    text: kk
+                    text: bb
                   });
                   continue
                 }
-                if (!ik.test(kk)) {
-                  Fk.push({
+                if (!Vb.test(bb)) {
+                  cb.push({
                     kind: "word",
-                    text: kk,
+                    text: bb,
                     delayMs: 0
                   });
                   continue
                 }
-                let Rk = !0;
-                for (const tk of null !== (Bk = kk.match(Yk)) && void 0 !== Bk ? Bk : []) {
-                  var Bk;
-                  const kk = Fk.at(-1);
-                  Rk || "word" !== (null === kk || void 0 === kk ? void 0 : kk.kind) || ik.test(tk) || /[\p{L}\p{N}]/u.test(tk) ? (Rk || Fk.push({
+                let kb = !0;
+                for (const Wb of null !== (sb = bb.match(Lb)) && void 0 !== sb ? sb : []) {
+                  var sb;
+                  const bb = cb.at(-1);
+                  kb || "word" !== (null === bb || void 0 === bb ? void 0 : bb.kind) || Vb.test(Wb) || /[\p{L}\p{N}]/u.test(Wb) ? (kb || cb.push({
                     kind: "space",
                     text: "\u200b"
-                  }), Fk.push({
+                  }), cb.push({
                     kind: "word",
-                    text: tk,
+                    text: Wb,
                     delayMs: 0
-                  }), Rk = !1) : kk.text += tk
+                  }), kb = !1) : bb.text += Wb
                 }
-              } else Fk.push({
+              } else cb.push({
                 kind: "icon",
-                text: Rk.icon,
+                text: kb.icon,
                 delayMs: 0
               });
-          return Fk
-        }(kk),
-        Lk = [];
-      let Hk = [];
-      for (const Rk of vk) "space" !== Rk.kind && (Hk.push(Rk), yk.test(Rk.text) && (Lk.push(Hk), Hk = []));
-      Lk.push(Hk);
-      const uk = [];
-      let Mk = 0;
-      for (const Rk of Lk) {
-        var gk, Uk;
-        const kk = null !== (gk = null === (Uk = Rk.at(-1)) || void 0 === Uk ? void 0 : Uk.text) && void 0 !== gk ? gk : "",
-          Fk = fk.test(kk),
-          Bk = mk.test(kk),
-          tk = Rk.map((kk => "word" === kk.kind ? Ek(kk.text) : 1)),
-          vk = tk.findLastIndex((kk => kk > 0));
-        for (const [fk, mk] of Rk.entries()) {
-          const kk = "word" === mk.kind,
-            Rk = tk[fk];
-          mk.delayMs = Mk;
-          for (let tk = 0; Ak && tk < Rk; tk++) {
+          return cb
+        }(bb),
+        ub = [];
+      let Bb = [];
+      for (const kb of Nb) "space" !== kb.kind && (Bb.push(kb), lb.test(kb.text) && (ub.push(Bb), Bb = []));
+      ub.push(Bb);
+      const tb = [];
+      let yb = 0;
+      for (const kb of ub) {
+        var Pb, Db;
+        const bb = null !== (Pb = null === (Db = kb.at(-1)) || void 0 === Db ? void 0 : Db.text) && void 0 !== Pb ? Pb : "",
+          cb = Qb.test(bb),
+          sb = eb.test(bb),
+          Wb = kb.map((bb => "word" === bb.kind ? hb(bb.text) : 1)),
+          Nb = Wb.findLastIndex((bb => bb > 0));
+        for (const [Qb, eb] of kb.entries()) {
+          const bb = "word" === eb.kind,
+            kb = Wb[Qb];
+          eb.delayMs = yb;
+          for (let Wb = 0; nb && Wb < kb; Wb++) {
             const {
-              intonation: ak
-            } = Ak;
-            let Xk = vk > 0 ? -ak.declineSemitones * (fk / vk) : 0;
-            Xk += Ok(`${Sk(mk.text)}|${tk}`) * ak.variationSemitones;
-            const yk = Math.min(1, ak.variationSemitones);
-            let Wk = Ak.glideSemitones,
-              ik = 1;
-            Bk && (Xk += ak.exclaimLiftSemitones, ik *= bk), Fk && fk === vk && (Xk += ak.questionRiseSemitones * (Rk > 1 ? .5 + .5 * tk / (Rk - 1) : 1), tk === Rk - 1 && (Wk = Math.abs(Wk) + ak.questionRiseSemitones / 2)), kk && Nk(mk.text) && (Xk += dk * yk, ik *= wk), Rk > 1 && 0 === tk && (Xk += Vk * yk, ik *= sk), uk.push({
-              atMs: Mk + tk * ek,
-              semitones: Xk,
-              glideSemitones: Wk,
-              durationMs: tk < Rk - 1 ? Math.min(Ak.durationMs, ek * Jk) : Ak.durationMs,
-              level: ik
+              intonation: ab
+            } = nb;
+            let Tb = Nb > 0 ? -ab.declineSemitones * (Qb / Nb) : 0;
+            Tb += Yb(`${Jb(eb.text)}|${Wb}`) * ab.variationSemitones;
+            const lb = Math.min(1, ab.variationSemitones);
+            let Cb = nb.glideSemitones,
+              Vb = 1;
+            sb && (Tb += ab.exclaimLiftSemitones, Vb *= Ub), cb && Qb === Nb && (Tb += ab.questionRiseSemitones * (kb > 1 ? .5 + .5 * Wb / (kb - 1) : 1), Wb === kb - 1 && (Cb = Math.abs(Cb) + ab.questionRiseSemitones / 2)), bb && gb(eb.text) && (Tb += Hb * lb, Vb *= Ib), kb > 1 && 0 === Wb && (Tb += Mb * lb, Vb *= fb), tb.push({
+              atMs: yb + Wb * mb,
+              semitones: Tb,
+              glideSemitones: Cb,
+              durationMs: Wb < kb - 1 ? Math.min(nb.durationMs, mb * Xb) : nb.durationMs,
+              level: Vb
             })
           }
-          Mk += Rk * ek + (yk.test(mk.text) ? Xk : Wk.test(mk.text) ? ak : 0)
+          yb += kb * mb + (lb.test(eb.text) ? Tb : Cb.test(eb.text) ? ab : 0)
         }
       }
       return {
-        pieces: vk.map((kk => "space" === kk.kind ? kk : "icon" === kk.kind ? {
+        pieces: Nb.map((bb => "space" === bb.kind ? bb : "icon" === bb.kind ? {
           kind: "icon",
-          icon: kk.text,
-          delayMs: kk.delayMs
+          icon: bb.text,
+          delayMs: bb.delayMs
         } : {
           kind: "word",
-          text: kk.text,
-          delayMs: kk.delayMs
+          text: bb.text,
+          delayMs: bb.delayMs
         })),
-        blips: uk
+        blips: tb
       }
     }
-    var uk = Bk(1149),
-      Mk = Bk(1203),
-      gk = Bk(1849);
+    var tb = sb(1197),
+      yb = sb(1258),
+      Pb = sb(1876);
 
-    function Uk(kk) {
-      if ("string" === typeof kk) return kk;
-      const Fk = Mk.c.get().getCurrentLanguageCode();
-      return (0, uk.m)(Fk, kk.translationKey, (0, uk.k)(kk.params, gk.b.shown))
+    function Db(bb) {
+      if ("string" === typeof bb) return bb;
+      const cb = yb.e.get().getCurrentLanguageCode();
+      return (0, tb.q)(cb, bb.translationKey, (0, tb.p)(bb.params, Pb.b.shown))
     }
 
-    function ck(kk) {
-      const Fk = void 0 === kk.voice ? null : (0, Rk.m)(kk.voice),
-        Bk = Fk && (0, Rk.l)(Fk);
+    function Eb(bb) {
+      const cb = void 0 === bb.voice ? null : (0, kb.i)(bb.voice),
+        sb = cb && (0, kb.g)(cb);
       return {
-        plan: Hk(Uk(kk.line), Bk),
-        synth: Bk
+        plan: Bb(Db(bb.line), sb),
+        synth: sb
       }
     }
 
-    function Gk(kk) {
-      const Fk = [];
-      let Bk = [];
-      for (const [tk, ak] of kk.entries()) {
-        var Rk;
-        "space" === ak.kind && (" " !== ak.text || "icon" !== (null === (Rk = kk[tk + 1]) || void 0 === Rk ? void 0 : Rk.kind)) ? (Bk.length > 0 && Fk.push(Bk), Fk.push([ak]), Bk = []) : Bk.push(ak)
+    function ib(bb) {
+      const cb = [];
+      let sb = [];
+      for (const [Wb, ab] of bb.entries()) {
+        var kb;
+        "space" === ab.kind && (" " !== ab.text || "icon" !== (null === (kb = bb[Wb + 1]) || void 0 === kb ? void 0 : kb.kind)) ? (sb.length > 0 && cb.push(sb), cb.push([ab]), sb = []) : sb.push(ab)
       }
-      return Bk.length > 0 && Fk.push(Bk), Fk
+      return sb.length > 0 && cb.push(sb), cb
     }
   },
-  8372: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => ak,
-      h: () => tk
+  8330: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => ab,
+      e: () => Wb
     });
-    let Rk = null;
-    const tk = function(kk) {
-        const Fk = {
-          cycle: kk,
+    let kb = null;
+    const Wb = function(bb) {
+        const cb = {
+          cycle: bb,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Rk = Fk, () => {
-          Rk === Fk && (Rk = null)
+        return kb = cb, () => {
+          kb === cb && (kb = null)
         }
       },
-      ak = () => {
-        var kk;
-        return null !== (kk = Rk) && void 0 !== kk && kk.canCycle() ? Rk.cycle : null
+      ab = () => {
+        var bb;
+        return null !== (bb = kb) && void 0 !== bb && bb.canCycle() ? kb.cycle : null
       }
   },
-  36340: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      C: () => ek,
-      G: () => Wk,
-      d: () => ak,
-      h: () => yk,
-      l: () => fk,
-      p: () => bk,
-      s: () => Jk,
-      u: () => mk,
-      w: () => Vk,
-      z: () => vk
+  36247: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => ab,
+      g: () => lb,
+      i: () => Qb,
+      l: () => Ub,
+      n: () => Xb,
+      o: () => eb,
+      q: () => Mb,
+      s: () => Nb,
+      v: () => mb,
+      z: () => Cb
     });
-    var Rk = Bk(22),
-      tk = Bk(29);
-    const ak = "clientGameInventoryButtonsChanged",
-      Xk = new Map;
+    var kb = sb(19),
+      Wb = sb(26);
+    const ab = "clientGameInventoryButtonsChanged",
+      Tb = new Map;
 
-    function bk() {
-      return [...Xk.values()].sort(((kk, Fk) => {
-        var Bk, Rk;
-        return (null !== (Bk = kk.order) && void 0 !== Bk ? Bk : 0) - (null !== (Rk = Fk.order) && void 0 !== Rk ? Rk : 0)
+    function Ub() {
+      return [...Tb.values()].sort(((bb, cb) => {
+        var sb, kb;
+        return (null !== (sb = bb.order) && void 0 !== sb ? sb : 0) - (null !== (kb = cb.order) && void 0 !== kb ? kb : 0)
       }))
     }
-    let wk = null;
+    let Ib = null;
 
-    function dk(kk) {
-      wk = kk
+    function Hb(bb) {
+      Ib = bb
     }
-    let sk = !1;
+    let fb = !1;
 
-    function Vk(kk) {
-      sk = !0;
+    function Mb(bb) {
+      fb = !0;
       try {
-        kk.onClick()
+        bb.onClick()
       } finally {
-        sk = !1
+        fb = !1
       }
-      kk.panel && "clientGame" === Rk.c.get("openInGameMenuName") && dk(kk.id)
+      bb.panel && "clientGame" === kb.d.get("openInGameMenuName") && Hb(bb.id)
     }
 
-    function Jk() {
-      return sk
+    function Xb() {
+      return fb
     }
 
-    function Ak() {
-      return bk().filter((kk => kk.panel && !kk.disabled))
+    function nb() {
+      return Ub().filter((bb => bb.panel && !bb.disabled))
     }
 
-    function ek(kk) {
-      const Fk = Ak(),
-        Bk = Fk.findIndex((kk => kk.id === wk));
-      return !(Bk < 0 || Fk.length < 2) && (Vk(Fk[(Bk + kk + Fk.length) % Fk.length]), !0)
+    function mb(bb) {
+      const cb = nb(),
+        sb = cb.findIndex((bb => bb.id === Ib));
+      return !(sb < 0 || cb.length < 2) && (Mb(cb[(sb + bb + cb.length) % cb.length]), !0)
     }
 
-    function yk() {
-      return null !== wk && Ak().length > 1
+    function lb() {
+      return null !== Ib && nb().length > 1
     }
 
-    function fk() {
-      dk(null)
+    function Qb() {
+      Hb(null)
     }
 
-    function mk() {
-      "inventory" !== Rk.c.get("openInGameMenuName") && dk(null)
+    function eb() {
+      "inventory" !== kb.d.get("openInGameMenuName") && Hb(null)
     }
 
-    function Wk() {
-      const kk = wk;
-      return dk(null), kk
+    function Cb() {
+      const bb = Ib;
+      return Hb(null), bb
     }
 
-    function vk(kk) {
-      return Xk.set(kk.id, kk), tk.o.Hf(ak, bk(), !0), () => {
-        Xk.get(kk.id) === kk && (Xk.delete(kk.id), tk.o.Hf(ak, bk()))
+    function Nb(bb) {
+      return Tb.set(bb.id, bb), Wb.j.QQ(ab, Ub(), !0), () => {
+        Tb.get(bb.id) === bb && (Tb.delete(bb.id), Wb.j.QQ(ab, Ub()))
       }
     }
   },
-  36332: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => bk,
-      f: () => fk,
-      i: () => mk,
-      l: () => Jk,
-      o: () => dk,
-      q: () => yk,
-      s: () => Ak,
-      w: () => sk
+  36240: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Ub,
+      e: () => Qb,
+      g: () => eb,
+      i: () => Xb,
+      l: () => Hb,
+      m: () => lb,
+      p: () => nb,
+      s: () => fb
     });
-    var Rk = Bk(22),
-      tk = Bk(29),
-      ak = Bk(1239),
-      Xk = Bk(36340);
-    const bk = "clientGameUiChanged";
-    let wk = null;
+    var kb = sb(19),
+      Wb = sb(26),
+      ab = sb(1287),
+      Tb = sb(36247);
+    const Ub = "clientGameUiChanged";
+    let Ib = null;
 
-    function dk() {
-      return wk
+    function Hb() {
+      return Ib
     }
 
-    function sk(kk, Fk) {
-      const Bk = {
-        content: kk,
-        menu: Fk
+    function fb(bb, cb) {
+      const sb = {
+        content: bb,
+        menu: cb
       };
-      return wk = Bk, tk.o.Hf(bk, wk, !0), () => {
-        wk === Bk && (wk = null, ek = !1, fk(), tk.o.Hf(bk, null))
+      return Ib = sb, Wb.j.QQ(Ub, Ib, !0), () => {
+        Ib === sb && (Ib = null, mb = !1, Qb(), Wb.j.QQ(Ub, null))
       }
     }
-    let Vk = null;
+    let Mb = null;
 
-    function Jk() {
-      return Vk
+    function Xb() {
+      return Mb
     }
 
-    function Ak(kk) {
-      return Vk = kk, () => {
-        Vk === kk && (Vk = null)
+    function nb(bb) {
+      return Mb = bb, () => {
+        Mb === bb && (Mb = null)
       }
     }
-    let ek = !1;
+    let mb = !1;
 
-    function yk() {
-      const kk = Rk.c.get("openInGameMenuName");
-      "clientGame" !== kk && (ek = "inventory" === kk), (0, Xk.s)() || (0, Xk.l)(), (0, ak.m)(ak.e), Rk.c.set({
+    function lb() {
+      const bb = kb.d.get("openInGameMenuName");
+      "clientGame" !== bb && (mb = "inventory" === bb), (0, Tb.n)() || (0, Tb.i)(), (0, ab.n)(ab.b), kb.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function fk() {
-      Wk(!1)
+    function Qb() {
+      Cb(!1)
     }
 
-    function mk() {
-      Wk(ek)
+    function eb() {
+      Cb(mb)
     }
 
-    function Wk(kk) {
-      "clientGame" === Rk.c.get("openInGameMenuName") && Rk.c.set({
-        openInGameMenuName: kk ? "inventory" : null
-      }), kk || (0, Xk.l)(), ek = !1
+    function Cb(bb) {
+      "clientGame" === kb.d.get("openInGameMenuName") && kb.d.set({
+        openInGameMenuName: bb ? "inventory" : null
+      }), bb || (0, Tb.i)(), mb = !1
     }
   },
-  38148: (kk, Fk, Bk) => {
-    function Rk(kk, Fk, Bk) {
-      const Rk = new Set,
-        tk = new ResizeObserver(Bk),
-        ak = () => {
-          const Fk = new Set(document.querySelectorAll(kk));
-          let ak = !1;
-          for (const kk of Rk) Fk.has(kk) || (tk.unobserve(kk), Rk.delete(kk), ak = !0);
-          for (const kk of Fk) Rk.has(kk) || (tk.observe(kk), Xk.observe(kk, {
+  38124: (bb, cb, sb) => {
+    function kb(bb, cb, sb) {
+      const kb = new Set,
+        Wb = new ResizeObserver(sb),
+        ab = () => {
+          const cb = new Set(document.querySelectorAll(bb));
+          let ab = !1;
+          for (const bb of kb) cb.has(bb) || (Wb.unobserve(bb), kb.delete(bb), ab = !0);
+          for (const bb of cb) kb.has(bb) || (Wb.observe(bb), Tb.observe(bb, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), Rk.add(kk));
-          ak && Bk()
+          }), kb.add(bb));
+          ab && sb()
         },
-        Xk = new MutationObserver((Fk => {
-          Fk.some((kk => "attributes" === kk.type)) && Bk(), Fk.some((Fk => function(kk, Fk, Bk) {
-            if ("childList" !== kk.type) return !1;
-            for (const Rk of kk.addedNodes)
-              if (Rk instanceof Element && (Rk.matches(Fk) || Rk.querySelector(Fk))) return !0;
-            for (const Rk of kk.removedNodes)
-              if (Rk instanceof Element)
-                for (const kk of Bk)
-                  if (Rk.contains(kk)) return !0;
+        Tb = new MutationObserver((cb => {
+          cb.some((bb => "attributes" === bb.type)) && sb(), cb.some((cb => function(bb, cb, sb) {
+            if ("childList" !== bb.type) return !1;
+            for (const kb of bb.addedNodes)
+              if (kb instanceof Element && (kb.matches(cb) || kb.querySelector(cb))) return !0;
+            for (const kb of bb.removedNodes)
+              if (kb instanceof Element)
+                for (const bb of sb)
+                  if (kb.contains(bb)) return !0;
             return !1
-          }(Fk, kk, Rk))) && ak()
+          }(cb, bb, kb))) && ab()
         }));
-      Xk.observe(document.body, {
+      Tb.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const bk of Fk) tk.observe(bk);
-      return window.addEventListener("resize", Bk), ak(), Bk(), () => {
-        tk.disconnect(), Xk.disconnect(), window.removeEventListener("resize", Bk)
+      for (const Ub of cb) Wb.observe(Ub);
+      return window.addEventListener("resize", sb), ab(), sb(), () => {
+        Wb.disconnect(), Tb.disconnect(), window.removeEventListener("resize", sb)
       }
     }
-    Bk.d(Fk, {
-      d: () => Rk
+    sb.d(cb, {
+      c: () => kb
     })
   },
-  8565: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => bk,
-      e: () => wk
+  8487: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Ub,
+      f: () => Ib
     });
-    var Rk = Bk(22),
-      tk = Bk(1267),
-      ak = Bk(98);
-    const Xk = {
+    var kb = sb(19),
+      Wb = sb(1312),
+      ab = sb(117);
+    const Tb = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,350 @@ export const modules = {
       }
     };
 
-    function bk() {
-      return (0, ak.isMobile)() && "function" === typeof navigator.vibrate
+    function Ub() {
+      return (0, ab.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const wk = new class {
-      constructor(kk) {
-        this.deps = kk, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const Ib = new class {
+      constructor(bb) {
+        this.deps = bb, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(kk, Fk) {
-        var Bk;
+      play(bb, cb) {
+        var sb;
         if (!this.deps.enabled()) return;
-        const Rk = Xk[kk],
-          tk = null !== Fk && void 0 !== Fk ? Fk : Rk.pattern;
-        if (null === tk) return void console.warn("No vibration pattern for", kk);
-        const ak = this.deps.now();
-        ak - this.lastAnyAt < 40 && Rk.priority < this.playingPriority || ak - (null !== (Bk = this.lastAt.get(kk)) && void 0 !== Bk ? Bk : -1 / 0) < Rk.minGapMs || ak < this.playingUntil && Rk.priority < this.playingPriority || (this.lastAt.set(kk, ak), this.lastAnyAt = ak, this.playingUntil = ak + tk.reduce(((kk, Fk) => kk + Fk), 0), this.playingPriority = Rk.priority, this.deps.vibrate(tk))
+        const kb = Tb[bb],
+          Wb = null !== cb && void 0 !== cb ? cb : kb.pattern;
+        if (null === Wb) return void console.warn("No vibration pattern for", bb);
+        const ab = this.deps.now();
+        ab - this.lastAnyAt < 40 && kb.priority < this.playingPriority || ab - (null !== (sb = this.lastAt.get(bb)) && void 0 !== sb ? sb : -1 / 0) < kb.minGapMs || ab < this.playingUntil && kb.priority < this.playingPriority || (this.lastAt.set(bb, ab), this.lastAnyAt = ab, this.playingUntil = ab + Wb.reduce(((bb, cb) => bb + cb), 0), this.playingPriority = kb.priority, this.deps.vibrate(Wb))
       }
     }({
-      vibrate: kk => {
-        navigator.vibrate([...kk])
+      vibrate: bb => {
+        navigator.vibrate([...bb])
       },
       now: () => performance.now(),
-      enabled: () => bk() && Rk.c.get("isTouchScreen") && Rk.c.get("clientEscMenuOptions").vibration && !(0, tk.i)()
+      enabled: () => Ub() && kb.d.get("isTouchScreen") && kb.d.get("clientEscMenuOptions").vibration && !(0, Wb.h)()
     })
   },
-  36813: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => bk,
-      c: () => Xk
+  36717: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Ub,
+      g: () => Tb
     });
-    var Rk = Bk(36805),
-      tk = Bk(291),
-      ak = Bk(1808);
+    var kb = sb(36705),
+      Wb = sb(344),
+      ab = sb(1832);
 
-    function Xk(kk) {
-      if ("La" in kk) return Lk.createAnimationScript(kk);
-      return new dk(kk).createAnimationScript()
+    function Tb(bb) {
+      if ("da" in bb) return ub.createAnimationScript(bb);
+      return new Hb(bb).createAnimationScript()
     }
 
-    function bk(kk, Fk, Bk, tk) {
-      const ak = kk.La <= 0 ? 1 : Fk + Bk * Math.max(0, tk) / kk.La;
-      return kk.Oa === Rk.n.LoopOnLastFrame ? ak % 1 : kk.Oa === Rk.n.NoLoop && ak >= 1 ? null : Math.min(1, ak)
+    function Ub(bb, cb, sb, Wb) {
+      const ab = bb.da <= 0 ? 1 : cb + sb * Math.max(0, Wb) / bb.da;
+      return bb.Aa === kb.m.LoopOnLastFrame ? ab % 1 : bb.Aa === kb.m.NoLoop && ab >= 1 ? null : Math.min(1, ab)
     }
-    class wk {
-      createAnimationScript(kk) {
+    class Ib {
+      createAnimationScript(bb) {
         const {
-          La: Fk,
-          loop: Bk,
-          Ea: Rk
-        } = kk;
+          da: cb,
+          loop: sb,
+          ra: kb
+        } = bb;
         return {
-          La: Math.round(Fk),
-          Oa: this.createLoopMode(null !== Bk && void 0 !== Bk && Bk),
-          Ea: this.createNodeSkeletonAnimationScript(null !== Rk && void 0 !== Rk ? Rk : null)
+          da: Math.round(cb),
+          Aa: this.createLoopMode(null !== sb && void 0 !== sb && sb),
+          ra: this.createNodeSkeletonAnimationScript(null !== kb && void 0 !== kb ? kb : null)
         }
       }
-      createLoopMode(kk) {
-        switch (kk) {
+      createLoopMode(bb) {
+        switch (bb) {
           case !1:
-            return Rk.n.NoLoop;
+            return kb.m.NoLoop;
           case !0:
-            return Rk.n.LoopOnLastFrame;
+            return kb.m.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return Rk.n.HoldOnLastFrame
+            return kb.m.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${kk}`)
+        throw new Error(`Invalid loop mode schema: ${bb}`)
       }
-      createNodeSkeletonAnimationScript(kk) {
-        if (null === kk) return null;
-        const Fk = {};
-        for (const Bk in kk) {
-          const Rk = kk[Bk];
-          Fk[Bk] = this.createNodeAnimationScript(Rk)
+      createNodeSkeletonAnimationScript(bb) {
+        if (null === bb) return null;
+        const cb = {};
+        for (const sb in bb) {
+          const kb = bb[sb];
+          cb[sb] = this.createNodeAnimationScript(kb)
         }
-        return Fk
+        return cb
       }
-      createNodeAnimationScript(kk) {
+      createNodeAnimationScript(bb) {
         const {
-          timeline: Fk
-        } = kk, Bk = Fk.filter((kk => Number.isFinite(kk.timeFraction)));
-        return Bk.sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(Bk, "rotation", Jk),
-          position: this.createTimelineFromKeyframes(Bk, "position", ek)
+          timeline: cb
+        } = bb, sb = cb.filter((bb => Number.isFinite(bb.timeFraction)));
+        return sb.sort(((bb, cb) => bb.timeFraction - cb.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(sb, "rotation", Xb),
+          position: this.createTimelineFromKeyframes(sb, "position", mb)
         }
       }
-      createTimelineFromKeyframes(kk, Fk, Bk) {
-        const Rk = [];
-        for (const wk of kk) {
-          const kk = wk[Fk];
-          if (kk) {
-            const Fk = this.createAnimationFrameWithoutPrecomputes(wk.timeFraction, kk);
-            sk(Fk) && Rk.push(Fk)
+      createTimelineFromKeyframes(bb, cb, sb) {
+        const kb = [];
+        for (const Ib of bb) {
+          const bb = Ib[cb];
+          if (bb) {
+            const cb = this.createAnimationFrameWithoutPrecomputes(Ib.timeFraction, bb);
+            fb(cb) && kb.push(cb)
           }
         }
-        const tk = [];
-        for (let wk = 0; wk < Rk.length; wk++) {
-          var ak, Xk, bk;
-          const kk = Rk[wk],
-            Fk = null !== (ak = Rk[wk - 1]) && void 0 !== ak ? ak : kk,
-            dk = null !== (Xk = Rk[wk + 1]) && void 0 !== Xk ? Xk : kk,
-            sk = null !== (bk = Rk[wk + 2]) && void 0 !== bk ? bk : dk;
-          tk.push({
-            ...kk,
-            ...Bk(Fk.post, Fk.timeFraction, kk.post, kk.timeFraction, dk.pre, dk.timeFraction, sk.pre, sk.timeFraction)
+        const Wb = [];
+        for (let Ib = 0; Ib < kb.length; Ib++) {
+          var ab, Tb, Ub;
+          const bb = kb[Ib],
+            cb = null !== (ab = kb[Ib - 1]) && void 0 !== ab ? ab : bb,
+            Hb = null !== (Tb = kb[Ib + 1]) && void 0 !== Tb ? Tb : bb,
+            fb = null !== (Ub = kb[Ib + 2]) && void 0 !== Ub ? Ub : Hb;
+          Wb.push({
+            ...bb,
+            ...sb(cb.post, cb.timeFraction, bb.post, bb.timeFraction, Hb.pre, Hb.timeFraction, fb.pre, fb.timeFraction)
           })
         }
-        return tk
+        return Wb
       }
-      createAnimationFrameWithoutPrecomputes(kk, Fk) {
-        let Bk, Rk, tk = null;
-        var ak;
-        if ("object" === typeof Fk && "point" in Fk) tk = null !== (ak = Fk.Ha) && void 0 !== ak ? ak : null, Bk = Fk.point, Rk = Fk.point;
-        else if ("object" === typeof Fk && "pre" in Fk) {
-          var Xk;
-          tk = null !== (Xk = Fk.Ha) && void 0 !== Xk ? Xk : null, Bk = Fk.pre, Rk = Fk.post
-        } else Bk = Fk, Rk = Fk;
+      createAnimationFrameWithoutPrecomputes(bb, cb) {
+        let sb, kb, Wb = null;
+        var ab;
+        if ("object" === typeof cb && "point" in cb) Wb = null !== (ab = cb.Ra) && void 0 !== ab ? ab : null, sb = cb.point, kb = cb.point;
+        else if ("object" === typeof cb && "pre" in cb) {
+          var Tb;
+          Wb = null !== (Tb = cb.Ra) && void 0 !== Tb ? Tb : null, sb = cb.pre, kb = cb.post
+        } else sb = cb, kb = cb;
         return {
-          timeFraction: kk,
-          Ha: this.createLerpMode(tk),
-          pre: Bk,
-          post: Rk
+          timeFraction: bb,
+          Ra: this.createLerpMode(Wb),
+          pre: sb,
+          post: kb
         }
       }
-      createLerpMode(kk) {
-        return null === kk ? Rk.l.Linear : wk.LERP_MODE_SCHEMA_MAPPING[kk]
+      createLerpMode(bb) {
+        return null === bb ? kb.i.Linear : Ib.LERP_MODE_SCHEMA_MAPPING[bb]
       }
     }
-    wk.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Rk.l.Linear,
-      "catmull-rom-spline": Rk.l.CatmullRomSpline
+    Ib.LERP_MODE_SCHEMA_MAPPING = {
+      linear: kb.i.Linear,
+      "catmull-rom-spline": kb.i.CatmullRomSpline
     };
-    class dk {
-      constructor(kk) {
-        this.animationSchema = kk
+    class Hb {
+      constructor(bb) {
+        this.animationSchema = bb
       }
       createAnimationScript() {
         const {
-          animation_length: kk,
-          loop: Fk,
-          bones: Bk
+          animation_length: bb,
+          loop: cb,
+          bones: sb
         } = this.animationSchema;
         return {
-          La: Math.round(1e3 * kk),
-          Oa: this.createLoopMode(null !== Fk && void 0 !== Fk && Fk),
-          Ea: this.createNodeSkeletonAnimationScript(null !== Bk && void 0 !== Bk ? Bk : null)
+          da: Math.round(1e3 * bb),
+          Aa: this.createLoopMode(null !== cb && void 0 !== cb && cb),
+          ra: this.createNodeSkeletonAnimationScript(null !== sb && void 0 !== sb ? sb : null)
         }
       }
-      createLoopMode(kk) {
-        switch (kk) {
+      createLoopMode(bb) {
+        switch (bb) {
           case !1:
-            return Rk.n.NoLoop;
+            return kb.m.NoLoop;
           case !0:
-            return Rk.n.LoopOnLastFrame;
+            return kb.m.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return Rk.n.HoldOnLastFrame
+            return kb.m.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${kk}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${bb}`)
       }
-      createNodeSkeletonAnimationScript(kk) {
-        if (null === kk) return null;
-        const Fk = {};
-        for (const Bk in kk) {
-          const Rk = kk[Bk];
-          Fk[Bk] = this.createNodeAnimationScript(Rk)
+      createNodeSkeletonAnimationScript(bb) {
+        if (null === bb) return null;
+        const cb = {};
+        for (const sb in bb) {
+          const kb = bb[sb];
+          cb[sb] = this.createNodeAnimationScript(kb)
         }
-        return Fk
+        return cb
       }
-      createNodeAnimationScript(kk) {
+      createNodeAnimationScript(bb) {
         const {
-          rotation: Fk,
-          position: Bk
-        } = kk;
+          rotation: cb,
+          position: sb
+        } = bb;
         return {
-          rotation: this.createAnimationTimeline(null !== Fk && void 0 !== Fk ? Fk : null, fk, Jk, !0),
-          position: this.createAnimationTimeline(null !== Bk && void 0 !== Bk ? Bk : null, Wk, ek, !1)
+          rotation: this.createAnimationTimeline(null !== cb && void 0 !== cb ? cb : null, Qb, Xb, !0),
+          position: this.createAnimationTimeline(null !== sb && void 0 !== sb ? sb : null, Cb, mb, !1)
         }
       }
-      createAnimationTimeline(kk, Fk, Bk, Rk) {
-        if (null === kk) return [];
-        if (Array.isArray(kk)) {
-          kk = {
-            "0.0": kk
+      createAnimationTimeline(bb, cb, sb, kb) {
+        if (null === bb) return [];
+        if (Array.isArray(bb)) {
+          bb = {
+            "0.0": bb
           }
         }
-        const tk = Object.entries(kk).map((kk => {
-          let [Bk, Rk] = kk;
-          const tk = Number(Bk) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(tk, Rk, Fk)
-        })).filter(sk);
-        tk.sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)), Rk && function(kk) {
-          for (let Fk = 1; Fk < kk.length; Fk++) {
-            const Bk = kk[Fk - 1].post,
-              Rk = kk[Fk],
-              tk = vk(Rk.pre),
-              ak = vk(Rk.post),
-              Xk = Yk(Bk, Rk.pre);
-            Yk(Bk, tk) < Xk && (kk[Fk] = {
-              ...Rk,
-              pre: tk,
-              post: ak
+        const Wb = Object.entries(bb).map((bb => {
+          let [sb, kb] = bb;
+          const Wb = Number(sb) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(Wb, kb, cb)
+        })).filter(fb);
+        Wb.sort(((bb, cb) => bb.timeFraction - cb.timeFraction)), kb && function(bb) {
+          for (let cb = 1; cb < bb.length; cb++) {
+            const sb = bb[cb - 1].post,
+              kb = bb[cb],
+              Wb = Nb(kb.pre),
+              ab = Nb(kb.post),
+              Tb = Lb(sb, kb.pre);
+            Lb(sb, Wb) < Tb && (bb[cb] = {
+              ...kb,
+              pre: Wb,
+              post: ab
             })
           }
-        }(tk);
-        const ak = [];
-        for (let dk = 0; dk < tk.length; dk++) {
-          var Xk, bk, wk;
-          const kk = tk[dk],
-            Fk = null !== (Xk = tk[dk - 1]) && void 0 !== Xk ? Xk : kk,
-            Rk = null !== (bk = tk[dk + 1]) && void 0 !== bk ? bk : kk,
-            sk = null !== (wk = tk[dk + 2]) && void 0 !== wk ? wk : Rk;
-          ak.push({
-            ...kk,
-            ...Bk(Fk.post, Fk.timeFraction, kk.post, kk.timeFraction, Rk.pre, Rk.timeFraction, sk.pre, sk.timeFraction)
+        }(Wb);
+        const ab = [];
+        for (let Hb = 0; Hb < Wb.length; Hb++) {
+          var Tb, Ub, Ib;
+          const bb = Wb[Hb],
+            cb = null !== (Tb = Wb[Hb - 1]) && void 0 !== Tb ? Tb : bb,
+            kb = null !== (Ub = Wb[Hb + 1]) && void 0 !== Ub ? Ub : bb,
+            fb = null !== (Ib = Wb[Hb + 2]) && void 0 !== Ib ? Ib : kb;
+          ab.push({
+            ...bb,
+            ...sb(cb.post, cb.timeFraction, bb.post, bb.timeFraction, kb.pre, kb.timeFraction, fb.pre, fb.timeFraction)
           })
         }
-        return ak
+        return ab
       }
-      createAnimationFrameWithoutPrecomputes(kk, Fk, Bk) {
-        let Rk, tk, ak = null;
-        if ("object" === typeof Fk && "post" in Fk) {
-          var Xk;
-          ak = null !== (Xk = Fk.lerp_mode) && void 0 !== Xk ? Xk : null, tk = yk(Fk.post, Bk), Rk = Fk.pre ? yk(Fk.pre, Bk) : tk
+      createAnimationFrameWithoutPrecomputes(bb, cb, sb) {
+        let kb, Wb, ab = null;
+        if ("object" === typeof cb && "post" in cb) {
+          var Tb;
+          ab = null !== (Tb = cb.lerp_mode) && void 0 !== Tb ? Tb : null, Wb = lb(cb.post, sb), kb = cb.pre ? lb(cb.pre, sb) : Wb
         } else {
-          const kk = yk(Fk, Bk);
-          tk = kk, Rk = kk
+          const bb = lb(cb, sb);
+          Wb = bb, kb = bb
         }
         return {
-          timeFraction: kk,
-          Ha: this.createLerpMode(ak),
-          pre: Rk,
-          post: tk
+          timeFraction: bb,
+          Ra: this.createLerpMode(ab),
+          pre: kb,
+          post: Wb
         }
       }
-      createLerpMode(kk) {
-        return null === kk ? Rk.l.Linear : dk.LERP_MODE_SCHEMA_MAPPING[kk]
+      createLerpMode(bb) {
+        return null === bb ? kb.i.Linear : Hb.LERP_MODE_SCHEMA_MAPPING[bb]
       }
     }
 
-    function sk(kk) {
-      return Number.isFinite(kk.timeFraction) && Vk(kk.pre) && Vk(kk.post)
+    function fb(bb) {
+      return Number.isFinite(bb.timeFraction) && Mb(bb.pre) && Mb(bb.post)
     }
 
-    function Vk(kk) {
-      return Number.isFinite(kk[0]) && Number.isFinite(kk[1]) && Number.isFinite(kk[2])
+    function Mb(bb) {
+      return Number.isFinite(bb[0]) && Number.isFinite(bb[1]) && Number.isFinite(bb[2])
     }
 
-    function Jk(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
-      const wk = ak - Fk,
-        dk = ak - Rk,
-        sk = bk - Rk,
-        Vk = [null, null, null];
-      for (let Jk = 0; Jk < Vk.length; Jk++) Vk[Jk] = Ak(kk[Jk], Bk[Jk], tk[Jk], Xk[Jk], wk, sk);
+    function Xb(bb, cb, sb, kb, Wb, ab, Tb, Ub) {
+      const Ib = ab - cb,
+        Hb = ab - kb,
+        fb = Ub - kb,
+        Mb = [null, null, null];
+      for (let Xb = 0; Xb < Mb.length; Xb++) Mb[Xb] = nb(bb[Xb], sb[Xb], Wb[Xb], Tb[Xb], Ib, fb);
       return {
-        ua: dk,
-        Ma: Vk
+        va: Hb,
+        Fa: Mb
       }
     }
 
-    function Ak(kk, Fk, Bk, Rk, ak, Xk) {
+    function nb(bb, cb, sb, kb, ab, Tb) {
       return {
-        Ua: tk.b.computeShortestRotation(kk, Bk) / ak,
-        ca: tk.b.computeShortestRotation(Fk, Rk) / Xk,
-        delta: tk.b.computeShortestRotation(Fk, Bk)
+        ja: Wb.d.computeShortestRotation(bb, sb) / ab,
+        bT: Wb.d.computeShortestRotation(cb, kb) / Tb,
+        delta: Wb.d.computeShortestRotation(cb, sb)
       }
     }
 
-    function ek(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
-      const wk = ak - Fk,
-        dk = ak - Rk,
-        sk = bk - Rk,
-        Vk = [null, null, null];
-      for (let Jk = 0; Jk < Vk.length; Jk++) Vk[Jk] = {
-        Ua: (tk[Jk] - kk[Jk]) / wk,
-        ca: (Xk[Jk] - Bk[Jk]) / sk,
-        delta: tk[Jk] - Bk[Jk]
+    function mb(bb, cb, sb, kb, Wb, ab, Tb, Ub) {
+      const Ib = ab - cb,
+        Hb = ab - kb,
+        fb = Ub - kb,
+        Mb = [null, null, null];
+      for (let Xb = 0; Xb < Mb.length; Xb++) Mb[Xb] = {
+        ja: (Wb[Xb] - bb[Xb]) / Ib,
+        bT: (Tb[Xb] - sb[Xb]) / fb,
+        delta: Wb[Xb] - sb[Xb]
       };
       return {
-        ua: dk,
-        Ma: Vk
+        va: Hb,
+        Fa: Mb
       }
     }
 
-    function yk(kk, Fk) {
-      return null === Fk ? kk : Fk(kk)
+    function lb(bb, cb) {
+      return null === cb ? bb : cb(bb)
     }
 
-    function fk(kk) {
-      const [Fk, Bk, Rk] = kk, Xk = -(0, ak.k)(Fk), bk = -(0, ak.k)(Bk), wk = (0, ak.k)(Rk), dk = tk.b.quaternionFromEulerZYX(Xk, bk, wk);
-      return tk.b.eulerYXZFromQuaternion(dk)
+    function Qb(bb) {
+      const [cb, sb, kb] = bb, Tb = -(0, ab.i)(cb), Ub = -(0, ab.i)(sb), Ib = (0, ab.i)(kb), Hb = Wb.d.quaternionFromEulerZYX(Tb, Ub, Ib);
+      return Wb.d.eulerYXZFromQuaternion(Hb)
     }
-    dk.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Rk.l.Linear,
-      catmullrom: Rk.l.CatmullRomSpline
+    Hb.LERP_MODE_SCHEMA_MAPPING = {
+      linear: kb.i.Linear,
+      catmullrom: kb.i.CatmullRomSpline
     };
-    const mk = 1 / 16;
+    const eb = 1 / 16;
 
-    function Wk(kk) {
-      return [-kk[0] * mk, kk[1] * mk, kk[2] * mk]
+    function Cb(bb) {
+      return [-bb[0] * eb, bb[1] * eb, bb[2] * eb]
     }
 
-    function vk(kk) {
-      const [Fk, Bk, Rk] = kk;
-      return [Fk >= 0 ? Math.PI - Fk : -Math.PI - Fk, ik(Bk + Math.PI), ik(Rk + Math.PI)]
+    function Nb(bb) {
+      const [cb, sb, kb] = bb;
+      return [cb >= 0 ? Math.PI - cb : -Math.PI - cb, Vb(sb + Math.PI), Vb(kb + Math.PI)]
     }
 
-    function ik(kk) {
-      return tk.b.mod(kk + Math.PI, 2 * Math.PI) - Math.PI
+    function Vb(bb) {
+      return Wb.d.mod(bb + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function Yk(kk, Fk) {
-      return Math.abs(tk.b.computeShortestRotation(kk[0], Fk[0])) + Math.abs(tk.b.computeShortestRotation(kk[1], Fk[1])) + Math.abs(tk.b.computeShortestRotation(kk[2], Fk[2]))
+    function Lb(bb, cb) {
+      return Math.abs(Wb.d.computeShortestRotation(bb[0], cb[0])) + Math.abs(Wb.d.computeShortestRotation(bb[1], cb[1])) + Math.abs(Wb.d.computeShortestRotation(bb[2], cb[2]))
     }
-    const Lk = new wk
+    const ub = new Ib
   },
-  36805: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Xk,
-      h: () => ak,
-      l: () => Rk,
-      n: () => tk
+  36705: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Tb,
+      f: () => ab,
+      i: () => kb,
+      m: () => Wb
     });
-    let Rk = function(kk) {
-        return kk[kk.Linear = 0] = "Linear", kk[kk.CatmullRomSpline = 1] = "CatmullRomSpline", kk
+    let kb = function(bb) {
+        return bb[bb.Linear = 0] = "Linear", bb[bb.CatmullRomSpline = 1] = "CatmullRomSpline", bb
       }({}),
-      tk = function(kk) {
-        return kk[kk.NoLoop = 0] = "NoLoop", kk[kk.LoopOnLastFrame = 1] = "LoopOnLastFrame", kk[kk.HoldOnLastFrame = 2] = "HoldOnLastFrame", kk
+      Wb = function(bb) {
+        return bb[bb.NoLoop = 0] = "NoLoop", bb[bb.LoopOnLastFrame = 1] = "LoopOnLastFrame", bb[bb.HoldOnLastFrame = 2] = "HoldOnLastFrame", bb
       }({}),
-      ak = function(kk) {
-        return kk[kk.Movement = 0] = "Movement", kk[kk.Action = 1] = "Action", kk[kk.Emote = 2] = "Emote", kk[kk.Custom = 3] = "Custom", kk
+      ab = function(bb) {
+        return bb[bb.Movement = 0] = "Movement", bb[bb.Action = 1] = "Action", bb[bb.Emote = 2] = "Emote", bb[bb.Custom = 3] = "Custom", bb
       }({}),
-      Xk = function(kk) {
-        return kk[kk.Start = 0] = "Start", kk[kk.Stop = 1] = "Stop", kk
+      Tb = function(bb) {
+        return bb[bb.Start = 0] = "Start", bb[bb.Stop = 1] = "Stop", bb
       }({})
   },
-  4570: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => tk,
-      i: () => Rk,
-      j: () => ak,
-      l: () => wk,
-      m: () => Xk
+  4569: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Wb,
+      e: () => kb,
+      f: () => ab,
+      g: () => Ib,
+      i: () => Tb
     });
-    const Rk = ["sine", "triangle", "square", "sawtooth"],
-      tk = 55,
-      ak = {
+    const kb = ["sine", "triangle", "square", "sawtooth"],
+      Wb = 55,
+      ab = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,39 +1116,39 @@ export const modules = {
         }
       };
 
-    function Xk(kk) {
-      return "string" !== typeof kk ? kk : Object.hasOwn(ak, kk) ? ak[kk] : null
+    function Tb(bb) {
+      return "string" !== typeof bb ? bb : Object.hasOwn(ab, bb) ? ab[bb] : null
     }
 
-    function bk(kk, Fk, Bk) {
-      return Math.min(Bk, Math.max(Fk, kk))
+    function Ub(bb, cb, sb) {
+      return Math.min(sb, Math.max(cb, bb))
     }
 
-    function wk(kk) {
-      const Fk = bk(kk.durationMs, 10, 500),
-        Bk = bk(kk.attackMs, 0, Fk),
+    function Ib(bb) {
+      const cb = Ub(bb.durationMs, 10, 500),
+        sb = Ub(bb.attackMs, 0, cb),
         {
-          intonation: tk
-        } = kk;
+          intonation: Wb
+        } = bb;
       return {
-        waveform: Rk.includes(kk.waveform) ? kk.waveform : "sine",
-        pitchHz: bk(kk.pitchHz, 20, 4e3),
-        glideSemitones: bk(kk.glideSemitones, -24, 24),
-        durationMs: Fk,
-        attackMs: Bk,
-        releaseMs: bk(kk.releaseMs, 0, Fk - Bk),
-        lowpassHz: null === kk.lowpassHz ? null : bk(kk.lowpassHz, 20, 2e4),
-        volume: bk(kk.volume, 0, 2),
+        waveform: kb.includes(bb.waveform) ? bb.waveform : "sine",
+        pitchHz: Ub(bb.pitchHz, 20, 4e3),
+        glideSemitones: Ub(bb.glideSemitones, -24, 24),
+        durationMs: cb,
+        attackMs: sb,
+        releaseMs: Ub(bb.releaseMs, 0, cb - sb),
+        lowpassHz: null === bb.lowpassHz ? null : Ub(bb.lowpassHz, 20, 2e4),
+        volume: Ub(bb.volume, 0, 2),
         intonation: {
-          variationSemitones: bk(tk.variationSemitones, 0, 6),
-          declineSemitones: bk(tk.declineSemitones, 0, 12),
-          questionRiseSemitones: bk(tk.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: bk(tk.exclaimLiftSemitones, 0, 12)
+          variationSemitones: Ub(Wb.variationSemitones, 0, 6),
+          declineSemitones: Ub(Wb.declineSemitones, 0, 12),
+          questionRiseSemitones: Ub(Wb.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: Ub(Wb.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: bk(kk.syllableMs, 25, 200)
+        syllableMs: Ub(bb.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

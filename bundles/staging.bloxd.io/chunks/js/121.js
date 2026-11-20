@@ -1,203 +1,203 @@
 export const id = 121;
 export const ids = [121];
 export const modules = {
-  6260: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => bk
+  6214: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Ub
     });
-    var Rk = Bk(1020),
-      tk = Bk.n(Rk),
-      ak = Bk(1149),
-      Xk = Bk(1069);
+    var kb = sb(1033),
+      Wb = sb.n(kb),
+      ab = sb(1197),
+      Tb = sb(1087);
 
-    function bk(kk) {
+    function Ub(bb) {
       let {
-        item: Fk,
-        className: Bk
-      } = kk;
+        item: cb,
+        className: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, ak.x)();
-      return null === Fk.renderId || Fk.previewsOutdated ? (0, Xk.jsx)("div", {
-        className: tk()("ShaderPackPreviewsNotice", Bk),
-        children: (0, Xk.jsx)("span", {
-          children: Rk(null === Fk.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+        t: kb
+      } = (0, ab.E)();
+      return null === cb.renderId || cb.previewsOutdated ? (0, Tb.jsx)("div", {
+        className: Wb()("ShaderPackPreviewsNotice", sb),
+        children: (0, Tb.jsx)("span", {
+          children: kb(null === cb.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
         })
       }) : null
     }
   },
-  6273: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => dk
+  6232: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Hb
     });
-    var Rk = Bk(1020),
-      tk = Bk.n(Rk),
-      ak = Bk(6253),
-      Xk = Bk(1149),
-      bk = Bk(6245),
-      wk = Bk(1069);
+    var kb = sb(1033),
+      Wb = sb.n(kb),
+      ab = sb(6209),
+      Tb = sb(1197),
+      Ub = sb(6204),
+      Ib = sb(1087);
 
-    function dk(kk) {
+    function Hb(bb) {
       let {
-        selected: Fk,
-        onSelect: Bk,
-        imageUrl: Rk
-      } = kk;
+        selected: cb,
+        onSelect: sb,
+        imageUrl: kb
+      } = bb;
       const {
-        t: dk
-      } = (0, Xk.x)();
-      return (0, wk.jsx)("div", {
+        t: Hb
+      } = (0, Tb.E)();
+      return (0, Ib.jsx)("div", {
         className: "ShaderPackViewPicker",
-        children: ak.I.map((kk => {
-          const ak = Rk(kk);
-          return (0, wk.jsxs)("button", {
+        children: ab.K.map((bb => {
+          const ab = kb(bb);
+          return (0, Ib.jsxs)("button", {
             type: "button",
-            "aria-pressed": kk === Fk,
-            className: tk()("ShaderPackViewOption", {
-              Selected: kk === Fk
+            "aria-pressed": bb === cb,
+            className: Wb()("ShaderPackViewOption", {
+              Selected: bb === cb
             }),
             onClick: () => {
-              Bk(kk)
+              sb(bb)
             },
-            children: [null !== ak && (0, wk.jsx)("img", {
-              src: ak,
+            children: [null !== ab && (0, Ib.jsx)("img", {
+              src: ab,
               alt: "",
               loading: "lazy",
               draggable: !1
-            }), (0, wk.jsx)("span", {
+            }), (0, Ib.jsx)("span", {
               className: "SmallTextBold",
-              children: dk(bk.ab[kk])
+              children: Hb(Ub.cb[bb])
             })]
-          }, kk)
+          }, bb)
         }))
       })
     }
   },
-  6264: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Jk,
-      f: () => Ak,
-      g: () => Vk,
-      h: () => ek
+  6219: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Xb,
+      f: () => nb,
+      h: () => Mb,
+      l: () => mb
     });
-    var Rk = Bk(61),
-      tk = Bk(6253),
-      ak = Bk(1441),
-      Xk = Bk(6245),
-      bk = Bk(6267),
-      wk = Bk(1096);
-    const dk = "shaderPackListingView",
-      sk = "shaderPackListingFilterOpen";
+    var kb = sb(64),
+      Wb = sb(6209),
+      ab = sb(1474),
+      Tb = sb(6204),
+      Ub = sb(6226),
+      Ib = sb(1117);
+    const Hb = "shaderPackListingView",
+      fb = "shaderPackListingFilterOpen";
 
-    function Vk() {
-      var kk;
-      const [Fk, Bk] = (0, bk.c)(dk, tk.I[0]);
-      return [null !== (kk = tk.I.find((kk => kk === Fk))) && void 0 !== kk ? kk : tk.I[0], Bk]
+    function Mb() {
+      var bb;
+      const [cb, sb] = (0, Ub.d)(Hb, Wb.K[0]);
+      return [null !== (bb = Wb.K.find((bb => bb === cb))) && void 0 !== bb ? bb : Wb.K[0], sb]
     }
 
-    function Jk() {
-      (0, Rk.useEffect)((() => () => {
-        window.location.pathname.startsWith(Xk.S) || (0, Xk.h)()
+    function Xb() {
+      (0, kb.useEffect)((() => () => {
+        window.location.pathname.startsWith(Tb.T) || (0, Tb.k)()
       }), [])
     }
 
-    function Ak() {
-      return (0, bk.c)(sk, !1)
+    function nb() {
+      return (0, Ub.d)(fb, !1)
     }
 
-    function ek() {
+    function mb() {
       const {
-        userContext: kk,
-        isUserContextUpdating: Fk
-      } = (0, wk.e)(), [Bk, tk] = (0, Rk.useState)(null), Xk = (0, Rk.useRef)(new Set);
+        userContext: bb,
+        isUserContextUpdating: cb
+      } = (0, Ib.c)(), [sb, Wb] = (0, kb.useState)(null), Tb = (0, kb.useRef)(new Set);
 
-      function bk(kk, Fk) {
-        tk((Bk => {
-          const Rk = new Set(Bk);
-          return Fk ? Rk.add(kk) : Rk.delete(kk), Rk
+      function Ub(bb, cb) {
+        Wb((sb => {
+          const kb = new Set(sb);
+          return cb ? kb.add(bb) : kb.delete(bb), kb
         }))
       }
-      return (0, Rk.useEffect)((() => {
-        if (Fk) return;
-        let Bk = !1;
-        return ak.b.getFavouriteShaderPacks(kk).then((kk => {
-          Bk || tk(new Set(kk))
-        })).catch((kk => {
-          console.error("Failed to get favourite shader packs", kk), Bk || tk(new Set)
+      return (0, kb.useEffect)((() => {
+        if (cb) return;
+        let sb = !1;
+        return ab.b.getFavouriteShaderPacks(bb).then((bb => {
+          sb || Wb(new Set(bb))
+        })).catch((bb => {
+          console.error("Failed to get favourite shader packs", bb), sb || Wb(new Set)
         })), () => {
-          Bk = !0
+          sb = !0
         }
-      }), [kk, Fk]), {
-        isFavourite: kk => null === Bk ? null : Bk.has(kk),
-        toggle: function(Fk) {
-          if (null === Bk || Xk.current.has(Fk)) return;
-          Xk.current.add(Fk);
-          const Rk = !Bk.has(Fk);
-          bk(Fk, Rk), (Rk ? ak.b.favouriteShaderPack(kk, Fk) : ak.b.unfavouriteShaderPack(kk, Fk)).catch((kk => {
-            console.error("Failed to change a favourite shader pack", kk), bk(Fk, !Rk)
+      }), [bb, cb]), {
+        isFavourite: bb => null === sb ? null : sb.has(bb),
+        toggle: function(cb) {
+          if (null === sb || Tb.current.has(cb)) return;
+          Tb.current.add(cb);
+          const kb = !sb.has(cb);
+          Ub(cb, kb), (kb ? ab.b.favouriteShaderPack(bb, cb) : ab.b.unfavouriteShaderPack(bb, cb)).catch((bb => {
+            console.error("Failed to change a favourite shader pack", bb), Ub(cb, !kb)
           })).finally((() => {
-            Xk.current.delete(Fk)
+            Tb.current.delete(cb)
           }))
         }
       }
     }
   },
-  6245: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      A: () => mk,
-      E: () => Hk,
-      G: () => sk,
-      K: () => Mk,
-      L: () => yk,
-      M: () => zk,
-      O: () => rk,
-      S: () => Xk,
-      U: () => Dk,
-      W: () => wk,
-      Y: () => bk,
-      Z: () => Gk,
-      ab: () => Tk,
-      b: () => Wk,
-      db: () => vk,
-      e: () => Sk,
-      eb: () => uk,
-      f: () => fk,
-      h: () => Jk,
-      j: () => Vk,
-      m: () => gk,
-      q: () => Ak,
-      r: () => Uk,
-      v: () => Pk,
-      z: () => ek
+  6204: (bb, cb, sb) => {
+    sb.d(cb, {
+      A: () => mb,
+      D: () => eb,
+      F: () => Bb,
+      G: () => fb,
+      I: () => yb,
+      K: () => lb,
+      O: () => Zb,
+      Q: () => Gb,
+      T: () => Tb,
+      X: () => Kb,
+      Z: () => Ib,
+      _: () => Ub,
+      ab: () => ib,
+      cb: () => Ob,
+      db: () => Nb,
+      e: () => Cb,
+      f: () => Jb,
+      gb: () => tb,
+      h: () => Qb,
+      k: () => Xb,
+      m: () => Mb,
+      p: () => Pb,
+      t: () => nb,
+      x: () => Db,
+      y: () => zb
     });
-    var Rk = Bk(6253),
-      tk = Bk(152),
-      ak = Bk(4299);
-    const Xk = "/shader-packs",
-      bk = `${Xk}/publish`;
+    var kb = sb(6209),
+      Wb = sb(195),
+      ab = sb(4295);
+    const Tb = "/shader-packs",
+      Ub = `${Tb}/publish`;
 
-    function wk(kk) {
-      return `${Xk}/${encodeURIComponent(kk)}`
+    function Ib(bb) {
+      return `${Tb}/${encodeURIComponent(bb)}`
     }
-    let dk = null;
+    let Hb = null;
 
-    function sk(kk) {
-      dk = kk
-    }
-
-    function Vk() {
-      return dk
+    function fb(bb) {
+      Hb = bb
     }
 
-    function Jk() {
-      dk = null
+    function Mb() {
+      return Hb
     }
 
-    function Ak(kk) {
-      return kk.playerHasRank("developer") || kk.playerHasRank("admin")
+    function Xb() {
+      Hb = null
     }
-    const ek = ["terrain", "water", "models", "sunShadows", "strict"],
-      yk = {
+
+    function nb(bb) {
+      return bb.playerHasRank("developer") || bb.playerHasRank("admin")
+    }
+    const mb = ["terrain", "water", "models", "sunShadows", "strict"],
+      lb = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -205,89 +205,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function fk(kk, Fk) {
-      return kk.withFeatures.includes(Fk) ? "with" : kk.withoutFeatures.includes(Fk) ? "without" : null
+    function Qb(bb, cb) {
+      return bb.withFeatures.includes(cb) ? "with" : bb.withoutFeatures.includes(cb) ? "without" : null
     }
 
-    function mk(kk) {
-      return null === kk ? "with" : "with" === kk ? "without" : null
+    function eb(bb) {
+      return null === bb ? "with" : "with" === bb ? "without" : null
     }
 
-    function Wk(kk) {
-      return "with" === kk ? "only" : null === kk ? "include" : void 0
+    function Cb(bb) {
+      return "with" === bb ? "only" : null === bb ? "include" : void 0
     }
 
-    function vk(kk, Fk) {
-      const Bk = fk(kk, Fk),
-        Rk = kk => kk.filter((kk => kk !== Fk));
+    function Nb(bb, cb) {
+      const sb = Qb(bb, cb),
+        kb = bb => bb.filter((bb => bb !== cb));
       return {
-        withFeatures: null === Bk ? [...kk.withFeatures, Fk] : Rk(kk.withFeatures),
-        withoutFeatures: "with" === Bk ? [...kk.withoutFeatures, Fk] : Rk(kk.withoutFeatures)
+        withFeatures: null === sb ? [...bb.withFeatures, cb] : kb(bb.withFeatures),
+        withoutFeatures: "with" === sb ? [...bb.withoutFeatures, cb] : kb(bb.withoutFeatures)
       }
     }
-    const ik = "section",
-      Yk = "sort",
-      Lk = "filters",
-      Ok = "q",
-      Ek = "banned",
-      Sk = "popular",
-      Nk = "strict";
+    const Vb = "section",
+      Lb = "sort",
+      ub = "filters",
+      Yb = "q",
+      hb = "banned",
+      Jb = "popular",
+      gb = "strict";
 
-    function Hk(kk) {
-      var Fk, Bk, tk;
-      const Xk = kk.get(ik),
-        bk = (null !== (Fk = kk.get(Lk)) && void 0 !== Fk ? Fk : Nk).split(","),
-        wk = kk.get(Ek);
+    function Bb(bb) {
+      var cb, sb, Wb;
+      const Tb = bb.get(Vb),
+        Ub = (null !== (cb = bb.get(ub)) && void 0 !== cb ? cb : gb).split(","),
+        Ib = bb.get(hb);
       return {
-        section: "favourites" === Xk || "mine" === Xk ? Xk : "explore",
-        sort: null !== (Bk = Rk.B.find((Fk => Fk === kk.get(Yk)))) && void 0 !== Bk ? Bk : Sk,
-        withFeatures: ek.filter((kk => bk.includes(kk) && !bk.includes(`-${kk}`))),
-        withoutFeatures: ek.filter((kk => bk.includes(`-${kk}`))),
-        searchQuery: (null === (tk = kk.get(Ok)) || void 0 === tk ? void 0 : tk.slice(0, Rk.M)) || null,
-        pageNumber: (0, ak.g)(kk.get(ak.d)),
-        banned: "only" === wk ? "with" : "include" === wk ? null : "without"
+        section: "favourites" === Tb || "mine" === Tb ? Tb : "explore",
+        sort: null !== (sb = kb.A.find((cb => cb === bb.get(Lb)))) && void 0 !== sb ? sb : Jb,
+        withFeatures: mb.filter((bb => Ub.includes(bb) && !Ub.includes(`-${bb}`))),
+        withoutFeatures: mb.filter((bb => Ub.includes(`-${bb}`))),
+        searchQuery: (null === (Wb = bb.get(Yb)) || void 0 === Wb ? void 0 : Wb.slice(0, kb.N)) || null,
+        pageNumber: (0, ab.d)(bb.get(ab.b)),
+        banned: "only" === Ib ? "with" : "include" === Ib ? null : "without"
       }
     }
 
-    function uk(kk, Fk) {
-      var Bk;
-      const Rk = ck(Fk);
-      (0, ak.k)(kk, ik, "explore" === Fk.section ? null : Fk.section), (0, ak.k)(kk, Yk, Fk.sort === Sk ? null : Fk.sort), (0, ak.k)(kk, Lk, Rk === Nk ? null : Rk), (0, ak.k)(kk, Ok, Fk.searchQuery), (0, ak.k)(kk, Ek, null !== (Bk = Wk(Fk.banned)) && void 0 !== Bk ? Bk : null), (0, ak.l)(kk, Fk.pageNumber)
+    function tb(bb, cb) {
+      var sb;
+      const kb = Eb(cb);
+      (0, ab.g)(bb, Vb, "explore" === cb.section ? null : cb.section), (0, ab.g)(bb, Lb, cb.sort === Jb ? null : cb.sort), (0, ab.g)(bb, ub, kb === gb ? null : kb), (0, ab.g)(bb, Yb, cb.searchQuery), (0, ab.g)(bb, hb, null !== (sb = Cb(cb.banned)) && void 0 !== sb ? sb : null), (0, ab.k)(bb, cb.pageNumber)
     }
 
-    function Mk(kk) {
-      const Fk = new URLSearchParams;
-      return uk(Fk, {
+    function yb(bb) {
+      const cb = new URLSearchParams;
+      return tb(cb, {
         section: "explore",
-        sort: Sk,
-        withFeatures: "strict" === kk ? [kk] : [kk, "strict"],
+        sort: Jb,
+        withFeatures: "strict" === bb ? [bb] : [bb, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${Xk}?${Fk.toString()}`
+      }), `${Tb}?${cb.toString()}`
     }
 
-    function gk(kk) {
-      return ck(kk) === Nk
+    function Pb(bb) {
+      return Eb(bb) === gb
     }
 
-    function Uk(kk) {
-      return null !== kk.searchQuery || "with" === kk.banned || ck(kk) !== Nk
+    function Db(bb) {
+      return null !== bb.searchQuery || "with" === bb.banned || Eb(bb) !== gb
     }
 
-    function ck(kk) {
-      return ek.flatMap((Fk => {
-        const Bk = fk(kk, Fk);
-        return "with" === Bk ? [Fk] : "without" === Bk ? [`-${Fk}`] : []
+    function Eb(bb) {
+      return mb.flatMap((cb => {
+        const sb = Qb(bb, cb);
+        return "with" === sb ? [cb] : "without" === sb ? [`-${cb}`] : []
       })).join(",")
     }
-    const Gk = {
+    const ib = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      Tk = {
+      Ob = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -295,93 +295,93 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function rk(kk) {
-      return Math.round(100 * Math.max(0, 1 - 1 / kk))
+    function Gb(bb) {
+      return Math.round(100 * Math.max(0, 1 - 1 / bb))
     }
 
-    function Dk(kk, Fk, Bk, tk) {
-      const ak = [];
-      kk.isBanned && ak.push({
+    function Kb(bb, cb, sb, Wb) {
+      const ab = [];
+      bb.isBanned && ab.push({
         tone: "warning",
-        text: tk("shaderPackListing:ownerBanned"),
+        text: Wb("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: Xk
-      } = kk;
-      if (null === kk.brokenError || Xk && !Xk.error || ak.push({
+        pending: Tb
+      } = bb;
+      if (null === bb.brokenError || Tb && !Tb.error || ab.push({
           tone: "warning",
-          text: tk("shaderPackListing:ownerBroken"),
-          detail: kk.brokenError
-        }), null !== Xk && void 0 !== Xk && Xk.error) ak.push({
+          text: Wb("shaderPackListing:ownerBroken"),
+          detail: bb.brokenError
+        }), null !== Tb && void 0 !== Tb && Tb.error) ab.push({
         tone: "warning",
-        text: tk(Fk ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, Rk.k)(Xk.error) ? null : Xk.error
+        text: Wb(cb ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, kb.l)(Tb.error) ? null : Tb.error
       });
-      else if (Xk) {
-        const kk = null === Xk.renderNotBefore ? 0 : Xk.renderNotBefore - Bk,
-          Rk = String(Math.ceil(kk / 6e4)),
-          bk = tk(Fk ? kk > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : kk > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: Rk
+      else if (Tb) {
+        const bb = null === Tb.renderNotBefore ? 0 : Tb.renderNotBefore - sb,
+          kb = String(Math.ceil(bb / 6e4)),
+          Ub = Wb(cb ? bb > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : bb > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: kb
           });
-        ak.push({
+        ab.push({
           tone: "info",
-          text: bk,
+          text: Ub,
           detail: null
         })
       }
-      return kk.listed || ak.push({
+      return bb.listed || ab.push({
         tone: "info",
-        text: tk("shaderPackListing:ownerUnlisted"),
+        text: Wb("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), ak
+      }), ab
     }
 
-    function zk(kk) {
-      return Math.max(1, Math.round(kk / 1024))
+    function Zb(bb) {
+      return Math.max(1, Math.round(bb / 1024))
     }
 
-    function Pk(kk, Fk, Bk) {
-      return kk instanceof tk.c && kk.errorMessageForUser ? kk.errorMessageForUser : Fk(Bk)
+    function zb(bb, cb, sb) {
+      return bb instanceof Wb.d && bb.errorMessageForUser ? bb.errorMessageForUser : cb(sb)
     }
   },
-  6267: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => ak
+  6226: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => ab
     });
-    var Rk = Bk(61),
-      tk = Bk(42);
+    var kb = sb(64),
+      Wb = sb(37);
 
-    function ak(kk, Fk) {
-      var Bk;
-      const [ak, Xk] = (0, Rk.useState)(null !== (Bk = tk.i.getItem(kk)) && void 0 !== Bk ? Bk : Fk);
-      return [ak, Fk => {
-        tk.i.setItem(kk, Fk), Xk(Fk)
+    function ab(bb, cb) {
+      var sb;
+      const [ab, Tb] = (0, kb.useState)(null !== (sb = Wb.h.getItem(bb)) && void 0 !== sb ? sb : cb);
+      return [ab, cb => {
+        Wb.h.setItem(bb, cb), Tb(cb)
       }]
     }
   },
-  6253: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      B: () => ak,
-      D: () => bk,
-      G: () => Xk,
-      I: () => Rk,
-      J: () => Jk,
-      M: () => sk,
-      Q: () => vk,
-      R: () => Vk,
-      T: () => dk,
-      e: () => Ak,
-      h: () => yk,
-      i: () => ek,
-      k: () => Wk,
-      n: () => Yk,
-      p: () => wk,
-      t: () => tk,
-      x: () => ik
+  6209: (bb, cb, sb) => {
+    sb.d(cb, {
+      A: () => ab,
+      D: () => Ub,
+      H: () => Tb,
+      K: () => kb,
+      M: () => Xb,
+      N: () => fb,
+      R: () => Nb,
+      U: () => Mb,
+      Y: () => Hb,
+      b: () => nb,
+      f: () => lb,
+      h: () => mb,
+      l: () => Cb,
+      p: () => Lb,
+      t: () => Ib,
+      w: () => Wb,
+      y: () => Vb
     });
-    const Rk = ["forest", "desert", "water", "night", "cave"];
-    const tk = {
+    const kb = ["forest", "desert", "water", "night", "cave"];
+    const Wb = {
         full: {
           width: 3840,
           height: 2160
@@ -395,43 +395,43 @@ export const modules = {
           height: 360
         }
       },
-      ak = ["popular", "updated", "newest"],
-      Xk = 3,
-      bk = 32,
-      wk = 300;
+      ab = ["popular", "updated", "newest"],
+      Tb = 3,
+      Ub = 32,
+      Ib = 300;
 
-    function dk(kk, Fk) {
-      return kk.slice(0, Fk).replace(/[\uD800-\uDBFF]$/, "")
+    function Hb(bb, cb) {
+      return bb.slice(0, cb).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const sk = 64,
-      Vk = 512,
-      Jk = 18e5;
-    const Ak = "Bloxdhub",
-      ek = "https://bloxdhub.com/shaders";
+    const fb = 64,
+      Mb = 512,
+      Xb = 18e5;
+    const nb = "Bloxdhub",
+      mb = "https://bloxdhub.com/shaders";
 
-    function yk(kk) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(kk)}`
+    function lb(bb) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(bb)}`
     }
-    const fk = "Screenshot generation failed.",
-      mk = "Its screenshots couldn't be generated:";
+    const Qb = "Screenshot generation failed.",
+      eb = "Its screenshots couldn't be generated:";
 
-    function Wk(kk) {
-      var Fk;
-      return kk === fk || null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.startsWith(mk)) && void 0 !== Fk && Fk
-    }
-
-    function vk(kk, Fk) {
-      return `shaderPacks/${kk}/${Fk}.json`
+    function Cb(bb) {
+      var cb;
+      return bb === Qb || null !== (cb = null === bb || void 0 === bb ? void 0 : bb.startsWith(eb)) && void 0 !== cb && cb
     }
 
-    function ik(kk, Fk, Bk, Rk) {
-      return null === Fk.renderId ? Yk(kk, Fk.baselineVersion, Bk, Rk) : `${kk}/${function(kk,Fk,Bk,Rk){return`shaderPacks/${kk}/${Fk}/${Bk}-${Rk}.webp`}(Fk.packId,Fk.renderId,Bk,Rk)}`
+    function Nb(bb, cb) {
+      return `shaderPacks/${bb}/${cb}.json`
     }
 
-    function Yk(kk, Fk, Bk, Rk) {
-      return `${kk}/${function(kk,Fk,Bk){return`shaderPacks/baseline/${kk}/${Fk}-${Bk}.webp`}(Fk,Bk,Rk)}`
+    function Vb(bb, cb, sb, kb) {
+      return null === cb.renderId ? Lb(bb, cb.baselineVersion, sb, kb) : `${bb}/${function(bb,cb,sb,kb){return`shaderPacks/${bb}/${cb}/${sb}-${kb}.webp`}(cb.packId,cb.renderId,sb,kb)}`
+    }
+
+    function Lb(bb, cb, sb, kb) {
+      return `${bb}/${function(bb,cb,sb){return`shaderPacks/baseline/${bb}/${cb}-${sb}.webp`}(cb,sb,kb)}`
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

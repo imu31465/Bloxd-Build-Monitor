@@ -1,80 +1,80 @@
 export const id = 91;
 export const ids = [91];
 export const modules = {
-  4575: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      Howl: () => tk.Howl,
-      Howler: () => tk.Howler,
-      iosAudio: () => wk,
-      musicOutput: () => fk,
-      readyAudioContext: () => mk
+  4579: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      Howl: () => Wb.Howl,
+      Howler: () => Wb.Howler,
+      iosAudio: () => Ib,
+      musicOutput: () => Qb,
+      readyAudioContext: () => eb
     });
-    var Rk, tk = Bk(4579),
-      ak = Bk(98);
-    const Xk = tk.Howler;
-    let bk;
+    var kb, Wb = sb(4585),
+      ab = sb(117);
+    const Tb = Wb.Howler;
+    let Ub;
 
-    function wk() {
-      return bk ??= "ios" === (0, ak.getOperatingSystem)(), bk
+    function Ib() {
+      return Ub ??= "ios" === (0, ab.getOperatingSystem)(), Ub
     }
 
-    function dk() {
-      var kk, Fk;
-      if (Xk.ctx || !Xk.usingWebAudio || "undefined" === typeof AudioContext || !wk()) return;
-      const Bk = navigator.audioSession;
-      let Rk;
-      "auto" === (null === Bk || void 0 === Bk ? void 0 : Bk.type) && (Bk.type = "ambient");
+    function Hb() {
+      var bb, cb;
+      if (Tb.ctx || !Tb.usingWebAudio || "undefined" === typeof AudioContext || !Ib()) return;
+      const sb = navigator.audioSession;
+      let kb;
+      "auto" === (null === sb || void 0 === sb ? void 0 : sb.type) && (sb.type = "ambient");
       try {
-        Rk = new AudioContext({
+        kb = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const tk = Rk.createGain();
-      tk.gain.setValueAtTime(Xk._muted ? 0 : null !== (kk = Xk._volume) && void 0 !== kk ? kk : 1, Rk.currentTime), tk.connect(Rk.destination), Xk.ctx = Rk, Xk.masterGain = tk, null === (Fk = Xk._setup) || void 0 === Fk || Fk.call(Xk)
+      const Wb = kb.createGain();
+      Wb.gain.setValueAtTime(Tb._muted ? 0 : null !== (bb = Tb._volume) && void 0 !== bb ? bb : 1, kb.currentTime), Wb.connect(kb.destination), Tb.ctx = kb, Tb.masterGain = Wb, null === (cb = Tb._setup) || void 0 === cb || cb.call(Tb)
     }
-    Xk._mobileUnloaded = !0;
-    const sk = Xk.volume.bind(tk.Howler);
-    Xk.volume = function() {
-      return dk(), sk(...arguments)
+    Tb._mobileUnloaded = !0;
+    const fb = Tb.volume.bind(Wb.Howler);
+    Tb.volume = function() {
+      return Hb(), fb(...arguments)
     };
-    const Vk = Xk.mute.bind(tk.Howler);
-    Xk.mute = kk => (dk(), Vk(kk));
-    const Jk = tk.Howl.prototype,
-      Ak = Jk.init;
-    Jk.init = function(kk) {
-      return dk(), Ak.call(this, kk)
+    const Mb = Tb.mute.bind(Wb.Howler);
+    Tb.mute = bb => (Hb(), Mb(bb));
+    const Xb = Wb.Howl.prototype,
+      nb = Xb.init;
+    Xb.init = function(bb) {
+      return Hb(), nb.call(this, bb)
     };
-    let ek = 0;
-    const yk = null === (Rk = Xk._autoSuspend) || void 0 === Rk ? void 0 : Rk.bind(tk.Howler);
+    let mb = 0;
+    const lb = null === (kb = Tb._autoSuspend) || void 0 === kb ? void 0 : kb.bind(Wb.Howler);
 
-    function fk() {
-      mk();
+    function Qb() {
+      eb();
       const {
-        ctx: kk,
-        masterGain: Fk
-      } = Xk;
-      return kk && Fk ? {
-        ctx: kk,
-        destination: Fk,
-        holdAwake: kk => {
-          var Fk, Bk;
-          (ek += kk ? 1 : -1, kk) ? null === (Fk = Xk._autoResume) || void 0 === Fk || Fk.call(Xk): null === (Bk = Xk._autoSuspend) || void 0 === Bk || Bk.call(Xk)
+        ctx: bb,
+        masterGain: cb
+      } = Tb;
+      return bb && cb ? {
+        ctx: bb,
+        destination: cb,
+        holdAwake: bb => {
+          var cb, sb;
+          (mb += bb ? 1 : -1, bb) ? null === (cb = Tb._autoResume) || void 0 === cb || cb.call(Tb): null === (sb = Tb._autoSuspend) || void 0 === sb || sb.call(Tb)
         },
         wake: () => {
-          var Fk;
-          "running" !== kk.state && (null === (Fk = Xk._autoResume) || void 0 === Fk || Fk.call(Xk), kk.resume().catch((() => {})))
+          var cb;
+          "running" !== bb.state && (null === (cb = Tb._autoResume) || void 0 === cb || cb.call(Tb), bb.resume().catch((() => {})))
         }
       } : null
     }
 
-    function mk() {
-      var kk;
-      (Xk.volume(), Xk.ctx && Xk.autoUnlock) && (null === (kk = Xk._unlockAudio) || void 0 === kk || kk.call(Xk))
+    function eb() {
+      var bb;
+      (Tb.volume(), Tb.ctx && Tb.autoUnlock) && (null === (bb = Tb._unlockAudio) || void 0 === bb || bb.call(Tb))
     }
-    yk && (Xk._autoSuspend = () => ek > 0 ? tk.Howler : yk())
+    lb && (Tb._autoSuspend = () => mb > 0 ? Wb.Howler : lb())
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,36 +1,36 @@
 export const id = 254;
 export const ids = [254];
 export const modules = {
-  39887: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => Ok,
-      c: () => Yk,
-      f: () => vk,
-      h: () => ik,
-      k: () => Wk,
-      n: () => mk
+  39889: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Yb,
+      g: () => Lb,
+      i: () => Nb,
+      k: () => Vb,
+      m: () => Cb,
+      q: () => eb
     });
-    var Rk = Bk(39414),
-      tk = Bk(39489),
-      ak = Bk(36758),
-      Xk = Bk(39541),
-      bk = Bk(39895),
-      wk = Bk(39762),
-      dk = Bk(39445),
-      sk = Bk(39753),
-      Vk = Bk(36772),
-      Jk = Bk(39741),
-      Ak = Bk(39735),
-      ek = Bk(39774),
-      yk = Bk(36798);
-    const fk = {
+    var kb = sb(39441),
+      Wb = sb(39524),
+      ab = sb(36656),
+      Tb = sb(39576),
+      Ub = sb(39895),
+      Ib = sb(39777),
+      Hb = sb(39475),
+      fb = sb(39774),
+      Mb = sb(36677),
+      Xb = sb(39767),
+      nb = sb(39761),
+      mb = sb(39787),
+      lb = sb(36698);
+    const Qb = {
       effect: null,
       subMesh: null
     };
-    class mk extends sk.d {
-      constructor(kk, Fk, Bk) {
-        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        super(kk, Fk, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4]), this._textures = {}, this._internalTextures = {}, this._textureArrays = {}, this._externalTextures = {}, this._floats = {}, this._ints = {}, this._uints = {}, this._floatsArrays = {}, this._colors3 = {}, this._colors3Arrays = {}, this._colors4 = {}, this._colors4Arrays = {}, this._vectors2 = {}, this._vectors3 = {}, this._vectors4 = {}, this._quaternions = {}, this._quaternionsArrays = {}, this._matrices = {}, this._matrixArrays = {}, this._matrices3x3 = {}, this._matrices2x2 = {}, this._vectors2Arrays = {}, this._vectors3Arrays = {}, this._vectors4Arrays = {}, this._uniformBuffers = {}, this._textureSamplers = {}, this._storageBuffers = {}, this._cachedWorldViewMatrix = new ak.c, this._cachedWorldViewProjectionMatrix = new ak.c, this._multiview = !1, this._vertexPullingMetadata = null, this._materialHelperNeedsPreviousMatrices = !1, this._shaderPath = Bk, this._options = {
+    class eb extends fb.d {
+      constructor(bb, cb, sb) {
+        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        super(bb, cb, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4]), this._textures = {}, this._internalTextures = {}, this._textureArrays = {}, this._externalTextures = {}, this._floats = {}, this._ints = {}, this._uints = {}, this._floatsArrays = {}, this._colors3 = {}, this._colors3Arrays = {}, this._colors4 = {}, this._colors4Arrays = {}, this._vectors2 = {}, this._vectors3 = {}, this._vectors4 = {}, this._quaternions = {}, this._quaternionsArrays = {}, this._matrices = {}, this._matrixArrays = {}, this._matrices3x3 = {}, this._matrices2x2 = {}, this._vectors2Arrays = {}, this._vectors3Arrays = {}, this._vectors4Arrays = {}, this._uniformBuffers = {}, this._textureSamplers = {}, this._storageBuffers = {}, this._cachedWorldViewMatrix = new ab.e, this._cachedWorldViewProjectionMatrix = new ab.e, this._multiview = !1, this._vertexPullingMetadata = null, this._materialHelperNeedsPreviousMatrices = !1, this._shaderPath = sb, this._options = {
           needAlphaBlending: !1,
           needAlphaTesting: !1,
           attributes: ["position", "normal", "uv"],
@@ -42,14 +42,14 @@ export const modules = {
           storageBuffers: [],
           defines: [],
           useClipPlane: !1,
-          ...Rk
+          ...kb
         }
       }
       get shaderPath() {
         return this._shaderPath
       }
-      set shaderPath(kk) {
-        this._shaderPath = kk
+      set shaderPath(bb) {
+        this._shaderPath = bb
       }
       get options() {
         return this._options
@@ -66,508 +66,508 @@ export const modules = {
       needAlphaTesting() {
         return this._options.needAlphaTesting
       }
-      _checkUniform(kk) {
-        -1 === this._options.uniforms.indexOf(kk) && this._options.uniforms.push(kk)
+      _checkUniform(bb) {
+        -1 === this._options.uniforms.indexOf(bb) && this._options.uniforms.push(bb)
       }
-      setTexture(kk, Fk) {
-        return -1 === this._options.samplers.indexOf(kk) && this._options.samplers.push(kk), this._textures[kk] = Fk, this
+      setTexture(bb, cb) {
+        return -1 === this._options.samplers.indexOf(bb) && this._options.samplers.push(bb), this._textures[bb] = cb, this
       }
-      setInternalTexture(kk, Fk) {
-        return -1 === this._options.samplers.indexOf(kk) && this._options.samplers.push(kk), this._internalTextures[kk] = Fk, this
+      setInternalTexture(bb, cb) {
+        return -1 === this._options.samplers.indexOf(bb) && this._options.samplers.push(bb), this._internalTextures[bb] = cb, this
       }
-      removeTexture(kk) {
-        delete this._textures[kk]
+      removeTexture(bb) {
+        delete this._textures[bb]
       }
-      setTextureArray(kk, Fk) {
-        return -1 === this._options.samplers.indexOf(kk) && this._options.samplers.push(kk), this._checkUniform(kk), this._textureArrays[kk] = Fk, this
+      setTextureArray(bb, cb) {
+        return -1 === this._options.samplers.indexOf(bb) && this._options.samplers.push(bb), this._checkUniform(bb), this._textureArrays[bb] = cb, this
       }
-      setExternalTexture(kk, Fk) {
-        return -1 === this._options.externalTextures.indexOf(kk) && this._options.externalTextures.push(kk), this._externalTextures[kk] = Fk, this
+      setExternalTexture(bb, cb) {
+        return -1 === this._options.externalTextures.indexOf(bb) && this._options.externalTextures.push(bb), this._externalTextures[bb] = cb, this
       }
-      setFloat(kk, Fk) {
-        return this._checkUniform(kk), this._floats[kk] = Fk, this
+      setFloat(bb, cb) {
+        return this._checkUniform(bb), this._floats[bb] = cb, this
       }
-      setInt(kk, Fk) {
-        return this._checkUniform(kk), this._ints[kk] = Fk, this
+      setInt(bb, cb) {
+        return this._checkUniform(bb), this._ints[bb] = cb, this
       }
-      setUInt(kk, Fk) {
-        return this._checkUniform(kk), this._uints[kk] = Fk, this
+      setUInt(bb, cb) {
+        return this._checkUniform(bb), this._uints[bb] = cb, this
       }
-      setFloats(kk, Fk) {
-        return this._checkUniform(kk), this._floatsArrays[kk] = Fk, this
+      setFloats(bb, cb) {
+        return this._checkUniform(bb), this._floatsArrays[bb] = cb, this
       }
-      setColor3(kk, Fk) {
-        return this._checkUniform(kk), this._colors3[kk] = Fk, this
+      setColor3(bb, cb) {
+        return this._checkUniform(bb), this._colors3[bb] = cb, this
       }
-      setColor3Array(kk, Fk) {
-        return this._checkUniform(kk), this._colors3Arrays[kk] = Fk.reduce(((kk, Fk) => (kk.push(Fk.r, Fk.g, Fk.b), kk)), []), this
+      setColor3Array(bb, cb) {
+        return this._checkUniform(bb), this._colors3Arrays[bb] = cb.reduce(((bb, cb) => (bb.push(cb.r, cb.g, cb.b), bb)), []), this
       }
-      setColor4(kk, Fk) {
-        return this._checkUniform(kk), this._colors4[kk] = Fk, this
+      setColor4(bb, cb) {
+        return this._checkUniform(bb), this._colors4[bb] = cb, this
       }
-      setColor4Array(kk, Fk) {
-        return this._checkUniform(kk), this._colors4Arrays[kk] = Fk.reduce(((kk, Fk) => (kk.push(Fk.r, Fk.g, Fk.b, Fk.a), kk)), []), this
+      setColor4Array(bb, cb) {
+        return this._checkUniform(bb), this._colors4Arrays[bb] = cb.reduce(((bb, cb) => (bb.push(cb.r, cb.g, cb.b, cb.a), bb)), []), this
       }
-      setVector2(kk, Fk) {
-        return this._checkUniform(kk), this._vectors2[kk] = Fk, this
+      setVector2(bb, cb) {
+        return this._checkUniform(bb), this._vectors2[bb] = cb, this
       }
-      setVector3(kk, Fk) {
-        return this._checkUniform(kk), this._vectors3[kk] = Fk, this
+      setVector3(bb, cb) {
+        return this._checkUniform(bb), this._vectors3[bb] = cb, this
       }
-      setVector4(kk, Fk) {
-        return this._checkUniform(kk), this._vectors4[kk] = Fk, this
+      setVector4(bb, cb) {
+        return this._checkUniform(bb), this._vectors4[bb] = cb, this
       }
-      setQuaternion(kk, Fk) {
-        return this._checkUniform(kk), this._quaternions[kk] = Fk, this
+      setQuaternion(bb, cb) {
+        return this._checkUniform(bb), this._quaternions[bb] = cb, this
       }
-      setQuaternionArray(kk, Fk) {
-        return this._checkUniform(kk), this._quaternionsArrays[kk] = Fk.reduce(((kk, Fk) => (Fk.toArray(kk, kk.length), kk)), []), this
+      setQuaternionArray(bb, cb) {
+        return this._checkUniform(bb), this._quaternionsArrays[bb] = cb.reduce(((bb, cb) => (cb.toArray(bb, bb.length), bb)), []), this
       }
-      setMatrix(kk, Fk) {
-        return this._checkUniform(kk), this._matrices[kk] = Fk, this
+      setMatrix(bb, cb) {
+        return this._checkUniform(bb), this._matrices[bb] = cb, this
       }
-      setMatrices(kk, Fk) {
-        this._checkUniform(kk);
-        const Bk = new Float32Array(16 * Fk.length);
-        for (let Rk = 0; Rk < Fk.length; Rk++) {
-          Fk[Rk].copyToArray(Bk, 16 * Rk)
+      setMatrices(bb, cb) {
+        this._checkUniform(bb);
+        const sb = new Float32Array(16 * cb.length);
+        for (let kb = 0; kb < cb.length; kb++) {
+          cb[kb].copyToArray(sb, 16 * kb)
         }
-        return this._matrixArrays[kk] = Bk, this
+        return this._matrixArrays[bb] = sb, this
       }
-      setMatrix3x3(kk, Fk) {
-        return this._checkUniform(kk), this._matrices3x3[kk] = Fk, this
+      setMatrix3x3(bb, cb) {
+        return this._checkUniform(bb), this._matrices3x3[bb] = cb, this
       }
-      setMatrix2x2(kk, Fk) {
-        return this._checkUniform(kk), this._matrices2x2[kk] = Fk, this
+      setMatrix2x2(bb, cb) {
+        return this._checkUniform(bb), this._matrices2x2[bb] = cb, this
       }
-      setArray2(kk, Fk) {
-        return this._checkUniform(kk), this._vectors2Arrays[kk] = Fk, this
+      setArray2(bb, cb) {
+        return this._checkUniform(bb), this._vectors2Arrays[bb] = cb, this
       }
-      setArray3(kk, Fk) {
-        return this._checkUniform(kk), this._vectors3Arrays[kk] = Fk, this
+      setArray3(bb, cb) {
+        return this._checkUniform(bb), this._vectors3Arrays[bb] = cb, this
       }
-      setArray4(kk, Fk) {
-        return this._checkUniform(kk), this._vectors4Arrays[kk] = Fk, this
+      setArray4(bb, cb) {
+        return this._checkUniform(bb), this._vectors4Arrays[bb] = cb, this
       }
-      setUniformBuffer(kk, Fk) {
-        return -1 === this._options.uniformBuffers.indexOf(kk) && this._options.uniformBuffers.push(kk), this._uniformBuffers[kk] = Fk, this
+      setUniformBuffer(bb, cb) {
+        return -1 === this._options.uniformBuffers.indexOf(bb) && this._options.uniformBuffers.push(bb), this._uniformBuffers[bb] = cb, this
       }
-      setTextureSampler(kk, Fk) {
-        return -1 === this._options.samplerObjects.indexOf(kk) && this._options.samplerObjects.push(kk), this._textureSamplers[kk] = Fk, this
+      setTextureSampler(bb, cb) {
+        return -1 === this._options.samplerObjects.indexOf(bb) && this._options.samplerObjects.push(bb), this._textureSamplers[bb] = cb, this
       }
-      setStorageBuffer(kk, Fk) {
-        return -1 === this._options.storageBuffers.indexOf(kk) && this._options.storageBuffers.push(kk), this._storageBuffers[kk] = Fk, this
+      setStorageBuffer(bb, cb) {
+        return -1 === this._options.storageBuffers.indexOf(bb) && this._options.storageBuffers.push(bb), this._storageBuffers[bb] = cb, this
       }
-      setDefine(kk, Fk) {
-        const Bk = kk.trimEnd() + " ",
-          Rk = this.options.defines.findIndex((Fk => Fk === kk || Fk.startsWith(Bk)));
-        return Rk >= 0 && this.options.defines.splice(Rk, 1), ("boolean" !== typeof Fk || Fk) && this.options.defines.push(Bk + Fk), this
+      setDefine(bb, cb) {
+        const sb = bb.trimEnd() + " ",
+          kb = this.options.defines.findIndex((cb => cb === bb || cb.startsWith(sb)));
+        return kb >= 0 && this.options.defines.splice(kb, 1), ("boolean" !== typeof cb || cb) && this.options.defines.push(sb + cb), this
       }
-      isReadyForSubMesh(kk, Fk, Bk) {
-        return this.isReady(kk, Bk, Fk)
+      isReadyForSubMesh(bb, cb, sb) {
+        return this.isReady(bb, sb, cb)
       }
-      isReady(kk, Fk, Bk) {
-        const Rk = Bk && this._storeEffectOnSubMeshes;
+      isReady(bb, cb, sb) {
+        const kb = sb && this._storeEffectOnSubMeshes;
         if (this.isFrozen) {
-          const kk = Rk ? Bk._drawWrapper : this._drawWrapper;
-          if (kk.effect && kk._wasPreviouslyReady && kk._wasPreviouslyUsingInstances === Fk) return !0
+          const bb = kb ? sb._drawWrapper : this._drawWrapper;
+          if (bb.effect && bb._wasPreviouslyReady && bb._wasPreviouslyUsingInstances === cb) return !0
         }
-        const ak = this.XN(),
-          bk = ak.ne(),
-          dk = [],
-          sk = [];
-        let Vk = null,
-          yk = this._shaderPath,
-          mk = this._options.uniforms,
-          Wk = this._options.uniformBuffers,
-          vk = this._options.samplers;
-        bk.getCaps().multiview && ak.activeCamera && ak.activeCamera.outputRenderTarget && ak.activeCamera.outputRenderTarget.getViewCount() > 1 && (this._multiview = !0, dk.push("#define MULTIVIEW"), -1 !== mk.indexOf("viewProjection") && -1 === mk.indexOf("viewProjectionR") && mk.push("viewProjectionR"));
-        for (let tk = 0; tk < this._options.defines.length; tk++) {
-          const kk = 0 === this._options.defines[tk].indexOf("#define") ? this._options.defines[tk] : `#define ${this._options.defines[tk]}`;
-          dk.push(kk)
+        const ab = this.EY(),
+          Ub = ab.Sm(),
+          Hb = [],
+          fb = [];
+        let Mb = null,
+          lb = this._shaderPath,
+          eb = this._options.uniforms,
+          Cb = this._options.uniformBuffers,
+          Nb = this._options.samplers;
+        Ub.getCaps().multiview && ab.activeCamera && ab.activeCamera.outputRenderTarget && ab.activeCamera.outputRenderTarget.getViewCount() > 1 && (this._multiview = !0, Hb.push("#define MULTIVIEW"), -1 !== eb.indexOf("viewProjection") && -1 === eb.indexOf("viewProjectionR") && eb.push("viewProjectionR"));
+        for (let Wb = 0; Wb < this._options.defines.length; Wb++) {
+          const bb = 0 === this._options.defines[Wb].indexOf("#define") ? this._options.defines[Wb] : `#define ${this._options.defines[Wb]}`;
+          Hb.push(bb)
         }
-        for (let tk = 0; tk < this._options.attributes.length; tk++) sk.push(this._options.attributes[tk]);
-        if (kk && kk.isVerticesDataPresent(Xk.n.ColorKind) && (-1 === sk.indexOf(Xk.n.ColorKind) && sk.push(Xk.n.ColorKind), dk.push("#define VERTEXCOLOR")), Fk && (dk.push("#define INSTANCES"), (0, Ak.pb)(sk, this._materialHelperNeedsPreviousMatrices), kk?.hasThinInstances && (dk.push("#define THIN_INSTANCES"), kk && kk.isVerticesDataPresent(Xk.n.ColorInstanceKind) && (sk.push(Xk.n.ColorInstanceKind), dk.push("#define INSTANCESCOLOR")))), kk && kk.useBones && kk.computeBonesUsingShaders && kk.skeleton) {
-          sk.push(Xk.n.MatricesIndicesKind), sk.push(Xk.n.MatricesWeightsKind), kk.numBoneInfluencers > 4 && (sk.push(Xk.n.MatricesIndicesExtraKind), sk.push(Xk.n.MatricesWeightsExtraKind));
-          const Fk = kk.skeleton;
-          dk.push("#define NUM_BONE_INFLUENCERS " + kk.numBoneInfluencers), Vk = new wk.c, Vk.addCPUSkinningFallback(0, kk), Fk.isUsingTextureForMatrices ? (dk.push("#define BONETEXTURE"), -1 === mk.indexOf("boneTextureInfo") && mk.push("boneTextureInfo"), -1 === this._options.samplers.indexOf("boneSampler") && this._options.samplers.push("boneSampler")) : (dk.push("#define BonesPerMesh " + (Fk.bones.length + 1)), -1 === mk.indexOf("mBones") && mk.push("mBones"))
-        } else dk.push("#define NUM_BONE_INFLUENCERS 0");
-        let ik = 0;
-        const Yk = kk ? kk.morphTargetManager : null;
-        if (Yk) {
-          const Fk = -1 !== dk.indexOf("#define UV1"),
-            Bk = -1 !== dk.indexOf("#define UV2"),
-            Rk = -1 !== dk.indexOf("#define TANGENT"),
-            tk = -1 !== dk.indexOf("#define NORMAL"),
-            ak = -1 !== dk.indexOf("#define VERTEXCOLOR");
-          ik = (0, Ak.R)(Yk, dk, sk, kk, !0, tk, Rk, Fk, Bk, ak), Yk.isUsingTextureForTargets && (-1 === mk.indexOf("morphTargetTextureIndices") && mk.push("morphTargetTextureIndices"), -1 === this._options.samplers.indexOf("morphTargets") && this._options.samplers.push("morphTargets")), ik > 0 && (mk = mk.slice(), mk.push("morphTargetInfluences"), mk.push("morphTargetCount"), mk.push("morphTargetTextureInfo"), mk.push("morphTargetTextureIndices"))
-        } else dk.push("#define NUM_MORPH_INFLUENCERS 0");
-        if (kk) {
-          const Bk = kk.bakedVertexAnimationManager;
-          Bk && Bk.isEnabled && (dk.push("#define BAKED_VERTEX_ANIMATION_TEXTURE"), -1 === mk.indexOf("bakedVertexAnimationSettings") && mk.push("bakedVertexAnimationSettings"), -1 === mk.indexOf("bakedVertexAnimationTextureSizeInverted") && mk.push("bakedVertexAnimationTextureSizeInverted"), -1 === mk.indexOf("bakedVertexAnimationTime") && mk.push("bakedVertexAnimationTime"), -1 === this._options.samplers.indexOf("bakedVertexAnimationTexture") && this._options.samplers.push("bakedVertexAnimationTexture"), Fk && sk.push("bakedVertexAnimationSettingsInstanced"))
+        for (let Wb = 0; Wb < this._options.attributes.length; Wb++) fb.push(this._options.attributes[Wb]);
+        if (bb && bb.isVerticesDataPresent(Tb.l.ColorKind) && (-1 === fb.indexOf(Tb.l.ColorKind) && fb.push(Tb.l.ColorKind), Hb.push("#define VERTEXCOLOR")), cb && (Hb.push("#define INSTANCES"), (0, nb.Db)(fb, this._materialHelperNeedsPreviousMatrices), bb?.hasThinInstances && (Hb.push("#define THIN_INSTANCES"), bb && bb.isVerticesDataPresent(Tb.l.ColorInstanceKind) && (fb.push(Tb.l.ColorInstanceKind), Hb.push("#define INSTANCESCOLOR")))), bb && bb.useBones && bb.computeBonesUsingShaders && bb.skeleton) {
+          fb.push(Tb.l.MatricesIndicesKind), fb.push(Tb.l.MatricesWeightsKind), bb.numBoneInfluencers > 4 && (fb.push(Tb.l.MatricesIndicesExtraKind), fb.push(Tb.l.MatricesWeightsExtraKind));
+          const cb = bb.skeleton;
+          Hb.push("#define NUM_BONE_INFLUENCERS " + bb.numBoneInfluencers), Mb = new Ib.b, Mb.addCPUSkinningFallback(0, bb), cb.isUsingTextureForMatrices ? (Hb.push("#define BONETEXTURE"), -1 === eb.indexOf("boneTextureInfo") && eb.push("boneTextureInfo"), -1 === this._options.samplers.indexOf("boneSampler") && this._options.samplers.push("boneSampler")) : (Hb.push("#define BonesPerMesh " + (cb.bones.length + 1)), -1 === eb.indexOf("mBones") && eb.push("mBones"))
+        } else Hb.push("#define NUM_BONE_INFLUENCERS 0");
+        let Vb = 0;
+        const Lb = bb ? bb.morphTargetManager : null;
+        if (Lb) {
+          const cb = -1 !== Hb.indexOf("#define UV1"),
+            sb = -1 !== Hb.indexOf("#define UV2"),
+            kb = -1 !== Hb.indexOf("#define TANGENT"),
+            Wb = -1 !== Hb.indexOf("#define NORMAL"),
+            ab = -1 !== Hb.indexOf("#define VERTEXCOLOR");
+          Vb = (0, nb.R)(Lb, Hb, fb, bb, !0, Wb, kb, cb, sb, ab), Lb.isUsingTextureForTargets && (-1 === eb.indexOf("morphTargetTextureIndices") && eb.push("morphTargetTextureIndices"), -1 === this._options.samplers.indexOf("morphTargets") && this._options.samplers.push("morphTargets")), Vb > 0 && (eb = eb.slice(), eb.push("morphTargetInfluences"), eb.push("morphTargetCount"), eb.push("morphTargetTextureInfo"), eb.push("morphTargetTextureIndices"))
+        } else Hb.push("#define NUM_MORPH_INFLUENCERS 0");
+        if (bb) {
+          const sb = bb.bakedVertexAnimationManager;
+          sb && sb.isEnabled && (Hb.push("#define BAKED_VERTEX_ANIMATION_TEXTURE"), -1 === eb.indexOf("bakedVertexAnimationSettings") && eb.push("bakedVertexAnimationSettings"), -1 === eb.indexOf("bakedVertexAnimationTextureSizeInverted") && eb.push("bakedVertexAnimationTextureSizeInverted"), -1 === eb.indexOf("bakedVertexAnimationTime") && eb.push("bakedVertexAnimationTime"), -1 === this._options.samplers.indexOf("bakedVertexAnimationTexture") && this._options.samplers.push("bakedVertexAnimationTexture"), cb && fb.push("bakedVertexAnimationSettingsInstanced"))
         }
-        for (const tk in this._textures)
-          if (!this._textures[tk].isReady()) return !1;
-        for (const tk in this._internalTextures)
-          if (!this._internalTextures[tk].isReady) return !1;
-        kk && this.needAlphaTestingForMesh(kk) && dk.push("#define ALPHATEST"), !1 !== this._options.useClipPlane && ((0, Jk.b)(mk), (0, Jk.i)(this, ak, dk)), ak.fogEnabled && kk?.applyFog && ak.fogMode !== tk.c.FOGMODE_NONE && (dk.push("#define FOG"), -1 === mk.indexOf("view") && mk.push("view"), -1 === mk.indexOf("vFogInfos") && mk.push("vFogInfos"), -1 === mk.indexOf("vFogColor") && mk.push("vFogColor")), this._useLogarithmicDepth && (dk.push("#define LOGARITHMICDEPTH"), -1 === mk.indexOf("logarithmicDepthConstant") && mk.push("logarithmicDepthConstant"));
-        const Lk = Bk ? Bk.getRenderingMesh() : kk;
-        if (Lk && this.useVertexPulling) {
-          const kk = Lk.geometry;
-          kk && (this._vertexPullingMetadata = (0, ek.f)(kk), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((kk, Fk) => {
-            mk.push(`vp_${Fk}_info`)
-          }))), dk.push("#define USE_VERTEX_PULLING");
-          const Fk = Lk.geometry?.getIndexBuffer();
-          Fk && !Lk.isUnIndexed && (dk.push("#define VERTEX_PULLING_USE_INDEX_BUFFER"), Fk.is32Bits && dk.push("#define VERTEX_PULLING_INDEX_BUFFER_32BITS"))
+        for (const Wb in this._textures)
+          if (!this._textures[Wb].isReady()) return !1;
+        for (const Wb in this._internalTextures)
+          if (!this._internalTextures[Wb].isReady) return !1;
+        bb && this.needAlphaTestingForMesh(bb) && Hb.push("#define ALPHATEST"), !1 !== this._options.useClipPlane && ((0, Xb.c)(eb), (0, Xb.j)(this, ab, Hb)), ab.fogEnabled && bb?.applyFog && ab.fogMode !== Wb.c.FOGMODE_NONE && (Hb.push("#define FOG"), -1 === eb.indexOf("view") && eb.push("view"), -1 === eb.indexOf("vFogInfos") && eb.push("vFogInfos"), -1 === eb.indexOf("vFogColor") && eb.push("vFogColor")), this._useLogarithmicDepth && (Hb.push("#define LOGARITHMICDEPTH"), -1 === eb.indexOf("logarithmicDepthConstant") && eb.push("logarithmicDepthConstant"));
+        const ub = sb ? sb.getRenderingMesh() : bb;
+        if (ub && this.useVertexPulling) {
+          const bb = ub.geometry;
+          bb && (this._vertexPullingMetadata = (0, mb.h)(bb), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((bb, cb) => {
+            eb.push(`vp_${cb}_info`)
+          }))), Hb.push("#define USE_VERTEX_PULLING");
+          const cb = ub.geometry?.getIndexBuffer();
+          cb && !ub.isUnIndexed && (Hb.push("#define VERTEX_PULLING_USE_INDEX_BUFFER"), cb.is32Bits && Hb.push("#define VERTEX_PULLING_INDEX_BUFFER_32BITS"))
         }
-        this.customShaderNameResolve && (mk = mk.slice(), Wk = Wk.slice(), vk = vk.slice(), yk = this.customShaderNameResolve(this.name, mk, Wk, vk, dk, sk));
-        const Ok = Rk ? Bk._getDrawWrapper(void 0, !0) : this._drawWrapper,
-          Ek = Ok?.effect ?? null,
-          Sk = Ok?.defines ?? null,
-          Nk = dk.join("\n");
-        let Hk = Ek;
-        return Sk !== Nk && (Hk = bk.createEffect(yk, {
-          attributes: sk,
-          uniformsNames: mk,
-          uniformBuffersNames: Wk,
-          samplers: vk,
-          defines: Nk,
-          fallbacks: Vk,
+        this.customShaderNameResolve && (eb = eb.slice(), Cb = Cb.slice(), Nb = Nb.slice(), lb = this.customShaderNameResolve(this.name, eb, Cb, Nb, Hb, fb));
+        const Yb = kb ? sb._getDrawWrapper(void 0, !0) : this._drawWrapper,
+          hb = Yb?.effect ?? null,
+          Jb = Yb?.defines ?? null,
+          gb = Hb.join("\n");
+        let Bb = hb;
+        return Jb !== gb && (Bb = Ub.createEffect(lb, {
+          attributes: fb,
+          uniformsNames: eb,
+          uniformBuffersNames: Cb,
+          samplers: Nb,
+          defines: gb,
+          fallbacks: Mb,
           onCompiled: this.onCompiled,
           onError: this.onError,
           indexParameters: {
-            maxSimultaneousMorphTargets: ik
+            maxSimultaneousMorphTargets: Vb
           },
           shaderLanguage: this._options.shaderLanguage,
           extraInitializationsAsync: this._options.extraInitializationsAsync
-        }, bk), Rk ? Bk.setEffect(Hk, Nk, this._materialContext) : Ok && Ok.setEffect(Hk, Nk), this._onEffectCreatedObservable && (fk.effect = Hk, fk.subMesh = Bk ?? kk?.AY[0] ?? null, this._onEffectCreatedObservable.notifyObservers(fk))), Ok._wasPreviouslyUsingInstances = !!Fk, !!Hk?.isReady() && (Ek !== Hk && ak.resetCachedMaterial(), Ok._wasPreviouslyReady = !0, !0)
+        }, Ub), kb ? sb.setEffect(Bb, gb, this._materialContext) : Yb && Yb.setEffect(Bb, gb), this._onEffectCreatedObservable && (Qb.effect = Bb, Qb.subMesh = sb ?? bb?.XV[0] ?? null, this._onEffectCreatedObservable.notifyObservers(Qb))), Yb._wasPreviouslyUsingInstances = !!cb, !!Bb?.isReady() && (hb !== Bb && ab.resetCachedMaterial(), Yb._wasPreviouslyReady = !0, !0)
       }
-      bindOnlyWorldMatrix(kk, Fk) {
-        const Bk = Fk ?? this.getEffect();
-        if (!Bk) return;
-        const Rk = this._options.uniforms; - 1 !== Rk.indexOf("world") && Bk.setMatrix("world", kk);
-        const tk = this.XN(); - 1 !== Rk.indexOf("worldView") && (kk.multiplyToRef(tk.getViewMatrix(), this._cachedWorldViewMatrix), Bk.setMatrix("worldView", this._cachedWorldViewMatrix)), -1 !== Rk.indexOf("worldViewProjection") && (kk.multiplyToRef(tk.getTransformMatrix(), this._cachedWorldViewProjectionMatrix), Bk.setMatrix("worldViewProjection", this._cachedWorldViewProjectionMatrix)), -1 !== Rk.indexOf("view") && Bk.setMatrix("view", tk.getViewMatrix())
+      bindOnlyWorldMatrix(bb, cb) {
+        const sb = cb ?? this.getEffect();
+        if (!sb) return;
+        const kb = this._options.uniforms; - 1 !== kb.indexOf("world") && sb.setMatrix("world", bb);
+        const Wb = this.EY(); - 1 !== kb.indexOf("worldView") && (bb.multiplyToRef(Wb.getViewMatrix(), this._cachedWorldViewMatrix), sb.setMatrix("worldView", this._cachedWorldViewMatrix)), -1 !== kb.indexOf("worldViewProjection") && (bb.multiplyToRef(Wb.getTransformMatrix(), this._cachedWorldViewProjectionMatrix), sb.setMatrix("worldViewProjection", this._cachedWorldViewProjectionMatrix)), -1 !== kb.indexOf("view") && sb.setMatrix("view", Wb.getViewMatrix())
       }
-      bindForSubMesh(kk, Fk, Bk) {
-        this.bind(kk, Fk, Bk._drawWrapperOverride?.effect, Bk)
+      bindForSubMesh(bb, cb, sb) {
+        this.bind(bb, cb, sb._drawWrapperOverride?.effect, sb)
       }
-      bind(kk, Fk, Bk, Rk) {
-        const tk = Rk && this._storeEffectOnSubMeshes,
-          ak = Bk ?? (tk ? Rk.effect : this.getEffect());
-        if (!ak) return;
-        const Xk = this.XN();
-        this._activeEffect = ak, this.bindOnlyWorldMatrix(kk, Bk);
-        const bk = this._options.uniformBuffers;
-        let wk = !1;
-        if (ak && bk && bk.length > 0 && Xk.ne().supportsUniformBuffers)
-          for (let sk = 0; sk < bk.length; ++sk) {
-            switch (bk[sk]) {
+      bind(bb, cb, sb, kb) {
+        const Wb = kb && this._storeEffectOnSubMeshes,
+          ab = sb ?? (Wb ? kb.effect : this.getEffect());
+        if (!ab) return;
+        const Tb = this.EY();
+        this._activeEffect = ab, this.bindOnlyWorldMatrix(bb, sb);
+        const Ub = this._options.uniformBuffers;
+        let Ib = !1;
+        if (ab && Ub && Ub.length > 0 && Tb.Sm().supportsUniformBuffers)
+          for (let fb = 0; fb < Ub.length; ++fb) {
+            switch (Ub[fb]) {
               case "Mesh":
-                Fk && (Fk.getMeshUniformBuffer().bindToEffect(ak, "Mesh"), Fk.transferToEffect(kk));
+                cb && (cb.getMeshUniformBuffer().bindToEffect(ab, "Mesh"), cb.transferToEffect(bb));
                 break;
               case "Scene":
-                (0, Ak.B)(ak, Xk.getSceneUniformBuffer()), Xk.finalizeSceneUbo(), wk = !0
+                (0, nb.v)(ab, Tb.getSceneUniformBuffer()), Tb.finalizeSceneUbo(), Ib = !0
             }
           }
-        const dk = Fk && tk ? this._mustRebind(Xk, ak, Rk, Fk.visibility) : Xk.getCachedMaterial() !== this;
-        if (ak && dk) {
-          let kk;
-          for (kk in wk || -1 === this._options.uniforms.indexOf("view") || ak.setMatrix("view", Xk.getViewMatrix()), wk || -1 === this._options.uniforms.indexOf("projection") || ak.setMatrix("projection", Xk.getProjectionMatrix()), wk || -1 === this._options.uniforms.indexOf("viewProjection") || (ak.setMatrix("viewProjection", Xk.getTransformMatrix()), this._multiview && ak.setMatrix("viewProjectionR", Xk._transformMatrixR)), Xk.activeCamera && -1 !== this._options.uniforms.indexOf("cameraPosition") && ak.setVector3("cameraPosition", Xk.activeCamera.globalPosition), (0, Ak.g)(Fk, ak), (0, Jk.e)(ak, this, Xk), this._vertexPullingMetadata && (0, ek.e)(ak, this._vertexPullingMetadata), this._useLogarithmicDepth && (0, Ak.u)(tk ? Rk.materialDefines : ak.defines, ak, Xk), Fk && (0, Ak.i)(Xk, Fk, ak), this._textures) ak.setTexture(kk, this._textures[kk]);
-          for (kk in this._internalTextures) ak._bindTexture(kk, this._internalTextures[kk]);
-          for (kk in this._textureArrays) ak.setTextureArray(kk, this._textureArrays[kk]);
-          for (kk in this._ints) ak.setInt(kk, this._ints[kk]);
-          for (kk in this._uints) ak.setUInt(kk, this._uints[kk]);
-          for (kk in this._floats) ak.setFloat(kk, this._floats[kk]);
-          for (kk in this._floatsArrays) ak.setArray(kk, this._floatsArrays[kk]);
-          for (kk in this._colors3) ak.setColor3(kk, this._colors3[kk]);
-          for (kk in this._colors3Arrays) ak.setArray3(kk, this._colors3Arrays[kk]);
-          for (kk in this._colors4) {
-            const Fk = this._colors4[kk];
-            ak.setFloat4(kk, Fk.r, Fk.g, Fk.b, Fk.a)
+        const Hb = cb && Wb ? this._mustRebind(Tb, ab, kb, cb.visibility) : Tb.getCachedMaterial() !== this;
+        if (ab && Hb) {
+          let bb;
+          for (bb in Ib || -1 === this._options.uniforms.indexOf("view") || ab.setMatrix("view", Tb.getViewMatrix()), Ib || -1 === this._options.uniforms.indexOf("projection") || ab.setMatrix("projection", Tb.getProjectionMatrix()), Ib || -1 === this._options.uniforms.indexOf("viewProjection") || (ab.setMatrix("viewProjection", Tb.getTransformMatrix()), this._multiview && ab.setMatrix("viewProjectionR", Tb._transformMatrixR)), Tb.activeCamera && -1 !== this._options.uniforms.indexOf("cameraPosition") && ab.setVector3("cameraPosition", Tb.activeCamera.globalPosition), (0, nb.e)(cb, ab), (0, Xb.f)(ab, this, Tb), this._vertexPullingMetadata && (0, mb.d)(ab, this._vertexPullingMetadata), this._useLogarithmicDepth && (0, nb.s)(Wb ? kb.materialDefines : ab.defines, ab, Tb), cb && (0, nb.g)(Tb, cb, ab), this._textures) ab.setTexture(bb, this._textures[bb]);
+          for (bb in this._internalTextures) ab._bindTexture(bb, this._internalTextures[bb]);
+          for (bb in this._textureArrays) ab.setTextureArray(bb, this._textureArrays[bb]);
+          for (bb in this._ints) ab.setInt(bb, this._ints[bb]);
+          for (bb in this._uints) ab.setUInt(bb, this._uints[bb]);
+          for (bb in this._floats) ab.setFloat(bb, this._floats[bb]);
+          for (bb in this._floatsArrays) ab.setArray(bb, this._floatsArrays[bb]);
+          for (bb in this._colors3) ab.setColor3(bb, this._colors3[bb]);
+          for (bb in this._colors3Arrays) ab.setArray3(bb, this._colors3Arrays[bb]);
+          for (bb in this._colors4) {
+            const cb = this._colors4[bb];
+            ab.setFloat4(bb, cb.r, cb.g, cb.b, cb.a)
           }
-          for (kk in this._colors4Arrays) ak.setArray4(kk, this._colors4Arrays[kk]);
-          for (kk in this._vectors2) ak.setVector2(kk, this._vectors2[kk]);
-          for (kk in this._vectors3) ak.setVector3(kk, this._vectors3[kk]);
-          for (kk in this._vectors4) ak.setVector4(kk, this._vectors4[kk]);
-          for (kk in this._quaternions) ak.setQuaternion(kk, this._quaternions[kk]);
-          for (kk in this._matrices) ak.setMatrix(kk, this._matrices[kk]);
-          for (kk in this._matrixArrays) ak.setMatrices(kk, this._matrixArrays[kk]);
-          for (kk in this._matrices3x3) ak.setMatrix3x3(kk, this._matrices3x3[kk]);
-          for (kk in this._matrices2x2) ak.setMatrix2x2(kk, this._matrices2x2[kk]);
-          for (kk in this._vectors2Arrays) ak.setArray2(kk, this._vectors2Arrays[kk]);
-          for (kk in this._vectors3Arrays) ak.setArray3(kk, this._vectors3Arrays[kk]);
-          for (kk in this._vectors4Arrays) ak.setArray4(kk, this._vectors4Arrays[kk]);
-          for (kk in this._quaternionsArrays) ak.setArray4(kk, this._quaternionsArrays[kk]);
-          for (kk in this._uniformBuffers) {
-            const Fk = this._uniformBuffers[kk].getBuffer();
-            Fk && ak.bindUniformBuffer(Fk, kk)
+          for (bb in this._colors4Arrays) ab.setArray4(bb, this._colors4Arrays[bb]);
+          for (bb in this._vectors2) ab.setVector2(bb, this._vectors2[bb]);
+          for (bb in this._vectors3) ab.setVector3(bb, this._vectors3[bb]);
+          for (bb in this._vectors4) ab.setVector4(bb, this._vectors4[bb]);
+          for (bb in this._quaternions) ab.setQuaternion(bb, this._quaternions[bb]);
+          for (bb in this._matrices) ab.setMatrix(bb, this._matrices[bb]);
+          for (bb in this._matrixArrays) ab.setMatrices(bb, this._matrixArrays[bb]);
+          for (bb in this._matrices3x3) ab.setMatrix3x3(bb, this._matrices3x3[bb]);
+          for (bb in this._matrices2x2) ab.setMatrix2x2(bb, this._matrices2x2[bb]);
+          for (bb in this._vectors2Arrays) ab.setArray2(bb, this._vectors2Arrays[bb]);
+          for (bb in this._vectors3Arrays) ab.setArray3(bb, this._vectors3Arrays[bb]);
+          for (bb in this._vectors4Arrays) ab.setArray4(bb, this._vectors4Arrays[bb]);
+          for (bb in this._quaternionsArrays) ab.setArray4(bb, this._quaternionsArrays[bb]);
+          for (bb in this._uniformBuffers) {
+            const cb = this._uniformBuffers[bb].getBuffer();
+            cb && ab.bindUniformBuffer(cb, bb)
           }
-          const Bk = Xk.ne(),
-            bk = Bk.setExternalTexture;
-          if (bk)
-            for (kk in this._externalTextures) bk.call(Bk, kk, this._externalTextures[kk]);
-          const dk = Bk.setTextureSampler;
-          if (dk)
-            for (kk in this._textureSamplers) dk.call(Bk, kk, this._textureSamplers[kk]);
-          const sk = Bk.setStorageBuffer;
-          if (sk)
-            for (kk in this._storageBuffers) sk.call(Bk, kk, this._storageBuffers[kk])
+          const sb = Tb.Sm(),
+            Ub = sb.setExternalTexture;
+          if (Ub)
+            for (bb in this._externalTextures) Ub.call(sb, bb, this._externalTextures[bb]);
+          const Hb = sb.setTextureSampler;
+          if (Hb)
+            for (bb in this._textureSamplers) Hb.call(sb, bb, this._textureSamplers[bb]);
+          const fb = sb.setStorageBuffer;
+          if (fb)
+            for (bb in this._storageBuffers) fb.call(sb, bb, this._storageBuffers[bb])
         }
-        if (ak && Fk && (dk || !this.isFrozen)) {
-          (0, Ak.x)(Fk, ak), Fk.morphTargetManager && Fk.morphTargetManager.isUsingTextureForTargets && Fk.morphTargetManager._bind(ak);
-          const kk = Fk.bakedVertexAnimationManager;
-          if (kk && kk.isEnabled) {
-            const kk = tk ? Rk._drawWrapper : this._drawWrapper;
-            Fk.bakedVertexAnimationManager?.bind(ak, !!kk._wasPreviouslyUsingInstances)
+        if (ab && cb && (Hb || !this.isFrozen)) {
+          (0, nb.t)(cb, ab), cb.morphTargetManager && cb.morphTargetManager.isUsingTextureForTargets && cb.morphTargetManager._bind(ab);
+          const bb = cb.bakedVertexAnimationManager;
+          if (bb && bb.isEnabled) {
+            const bb = Wb ? kb._drawWrapper : this._drawWrapper;
+            cb.bakedVertexAnimationManager?.bind(ab, !!bb._wasPreviouslyUsingInstances)
           }
         }
-        this._afterBind(Fk, ak, Rk)
+        this._afterBind(cb, ab, kb)
       }
       getActiveTextures() {
-        const kk = super.getActiveTextures();
-        for (const Fk in this._textures) kk.push(this._textures[Fk]);
-        for (const Fk in this._textureArrays) {
-          const Bk = this._textureArrays[Fk];
-          for (let Fk = 0; Fk < Bk.length; Fk++) kk.push(Bk[Fk])
+        const bb = super.getActiveTextures();
+        for (const cb in this._textures) bb.push(this._textures[cb]);
+        for (const cb in this._textureArrays) {
+          const sb = this._textureArrays[cb];
+          for (let cb = 0; cb < sb.length; cb++) bb.push(sb[cb])
         }
-        return kk
+        return bb
       }
-      hasTexture(kk) {
-        if (super.hasTexture(kk)) return !0;
-        for (const Bk in this._textures)
-          if (this._textures[Bk] === kk) return !0;
-        const Fk = kk.getInternalTexture();
-        for (const Bk in this._internalTextures)
-          if (this._internalTextures[Bk] === Fk) return !0;
-        for (const Bk in this._textureArrays) {
-          const Fk = this._textureArrays[Bk];
-          for (let Bk = 0; Bk < Fk.length; Bk++)
-            if (Fk[Bk] === kk) return !0
+      hasTexture(bb) {
+        if (super.hasTexture(bb)) return !0;
+        for (const sb in this._textures)
+          if (this._textures[sb] === bb) return !0;
+        const cb = bb.getInternalTexture();
+        for (const sb in this._internalTextures)
+          if (this._internalTextures[sb] === cb) return !0;
+        for (const sb in this._textureArrays) {
+          const cb = this._textureArrays[sb];
+          for (let sb = 0; sb < cb.length; sb++)
+            if (cb[sb] === bb) return !0
         }
         return !1
       }
-      clone(kk) {
-        const Fk = Rk.c.Clone((() => new mk(kk, this.XN(), this._shaderPath, this._options, this._storeEffectOnSubMeshes)), this);
-        Fk.name = kk, Fk.id = kk, "object" === typeof Fk._shaderPath && (Fk._shaderPath = {
-          ...Fk._shaderPath
+      clone(bb) {
+        const cb = kb.d.Clone((() => new eb(bb, this.EY(), this._shaderPath, this._options, this._storeEffectOnSubMeshes)), this);
+        cb.name = bb, cb.id = bb, "object" === typeof cb._shaderPath && (cb._shaderPath = {
+          ...cb._shaderPath
         }), this._options = {
           ...this._options
         };
-        const Bk = Object.keys(this._options);
-        for (const Rk of Bk) {
-          const kk = this._options[Rk];
-          Array.isArray(kk) && (this._options[Rk] = kk.slice(0))
+        const sb = Object.keys(this._options);
+        for (const kb of sb) {
+          const bb = this._options[kb];
+          Array.isArray(bb) && (this._options[kb] = bb.slice(0))
         }
-        this.stencil.copyTo(Fk.stencil);
-        for (const Rk in this._textures) Fk.setTexture(Rk, this._textures[Rk]);
-        for (const Rk in this._internalTextures) Fk.setInternalTexture(Rk, this._internalTextures[Rk]);
-        for (const Rk in this._textureArrays) Fk.setTextureArray(Rk, this._textureArrays[Rk]);
-        for (const Rk in this._externalTextures) Fk.setExternalTexture(Rk, this._externalTextures[Rk]);
-        for (const Rk in this._ints) Fk.setInt(Rk, this._ints[Rk]);
-        for (const Rk in this._uints) Fk.setUInt(Rk, this._uints[Rk]);
-        for (const Rk in this._floats) Fk.setFloat(Rk, this._floats[Rk]);
-        for (const Rk in this._floatsArrays) Fk.setFloats(Rk, this._floatsArrays[Rk]);
-        for (const Rk in this._colors3) Fk.setColor3(Rk, this._colors3[Rk]);
-        for (const Rk in this._colors3Arrays) Fk._colors3Arrays[Rk] = this._colors3Arrays[Rk];
-        for (const Rk in this._colors4) Fk.setColor4(Rk, this._colors4[Rk]);
-        for (const Rk in this._colors4Arrays) Fk._colors4Arrays[Rk] = this._colors4Arrays[Rk];
-        for (const Rk in this._vectors2) Fk.setVector2(Rk, this._vectors2[Rk]);
-        for (const Rk in this._vectors3) Fk.setVector3(Rk, this._vectors3[Rk]);
-        for (const Rk in this._vectors4) Fk.setVector4(Rk, this._vectors4[Rk]);
-        for (const Rk in this._quaternions) Fk.setQuaternion(Rk, this._quaternions[Rk]);
-        for (const Rk in this._quaternionsArrays) Fk._quaternionsArrays[Rk] = this._quaternionsArrays[Rk];
-        for (const Rk in this._matrices) Fk.setMatrix(Rk, this._matrices[Rk]);
-        for (const Rk in this._matrixArrays) Fk._matrixArrays[Rk] = this._matrixArrays[Rk].slice();
-        for (const Rk in this._matrices3x3) Fk.setMatrix3x3(Rk, this._matrices3x3[Rk]);
-        for (const Rk in this._matrices2x2) Fk.setMatrix2x2(Rk, this._matrices2x2[Rk]);
-        for (const Rk in this._vectors2Arrays) Fk.setArray2(Rk, this._vectors2Arrays[Rk]);
-        for (const Rk in this._vectors3Arrays) Fk.setArray3(Rk, this._vectors3Arrays[Rk]);
-        for (const Rk in this._vectors4Arrays) Fk.setArray4(Rk, this._vectors4Arrays[Rk]);
-        for (const Rk in this._uniformBuffers) Fk.setUniformBuffer(Rk, this._uniformBuffers[Rk]);
-        for (const Rk in this._textureSamplers) Fk.setTextureSampler(Rk, this._textureSamplers[Rk]);
-        for (const Rk in this._storageBuffers) Fk.setStorageBuffer(Rk, this._storageBuffers[Rk]);
-        return Fk
+        this.stencil.copyTo(cb.stencil);
+        for (const kb in this._textures) cb.setTexture(kb, this._textures[kb]);
+        for (const kb in this._internalTextures) cb.setInternalTexture(kb, this._internalTextures[kb]);
+        for (const kb in this._textureArrays) cb.setTextureArray(kb, this._textureArrays[kb]);
+        for (const kb in this._externalTextures) cb.setExternalTexture(kb, this._externalTextures[kb]);
+        for (const kb in this._ints) cb.setInt(kb, this._ints[kb]);
+        for (const kb in this._uints) cb.setUInt(kb, this._uints[kb]);
+        for (const kb in this._floats) cb.setFloat(kb, this._floats[kb]);
+        for (const kb in this._floatsArrays) cb.setFloats(kb, this._floatsArrays[kb]);
+        for (const kb in this._colors3) cb.setColor3(kb, this._colors3[kb]);
+        for (const kb in this._colors3Arrays) cb._colors3Arrays[kb] = this._colors3Arrays[kb];
+        for (const kb in this._colors4) cb.setColor4(kb, this._colors4[kb]);
+        for (const kb in this._colors4Arrays) cb._colors4Arrays[kb] = this._colors4Arrays[kb];
+        for (const kb in this._vectors2) cb.setVector2(kb, this._vectors2[kb]);
+        for (const kb in this._vectors3) cb.setVector3(kb, this._vectors3[kb]);
+        for (const kb in this._vectors4) cb.setVector4(kb, this._vectors4[kb]);
+        for (const kb in this._quaternions) cb.setQuaternion(kb, this._quaternions[kb]);
+        for (const kb in this._quaternionsArrays) cb._quaternionsArrays[kb] = this._quaternionsArrays[kb];
+        for (const kb in this._matrices) cb.setMatrix(kb, this._matrices[kb]);
+        for (const kb in this._matrixArrays) cb._matrixArrays[kb] = this._matrixArrays[kb].slice();
+        for (const kb in this._matrices3x3) cb.setMatrix3x3(kb, this._matrices3x3[kb]);
+        for (const kb in this._matrices2x2) cb.setMatrix2x2(kb, this._matrices2x2[kb]);
+        for (const kb in this._vectors2Arrays) cb.setArray2(kb, this._vectors2Arrays[kb]);
+        for (const kb in this._vectors3Arrays) cb.setArray3(kb, this._vectors3Arrays[kb]);
+        for (const kb in this._vectors4Arrays) cb.setArray4(kb, this._vectors4Arrays[kb]);
+        for (const kb in this._uniformBuffers) cb.setUniformBuffer(kb, this._uniformBuffers[kb]);
+        for (const kb in this._textureSamplers) cb.setTextureSampler(kb, this._textureSamplers[kb]);
+        for (const kb in this._storageBuffers) cb.setStorageBuffer(kb, this._storageBuffers[kb]);
+        return cb
       }
-      dispose(kk, Fk, Bk) {
-        if (Fk) {
-          let kk;
-          for (kk in this._textures) this._textures[kk].dispose();
-          for (kk in this._internalTextures) this._internalTextures[kk].dispose();
-          for (kk in this._textureArrays) {
-            const Fk = this._textureArrays[kk];
-            for (let kk = 0; kk < Fk.length; kk++) Fk[kk].dispose()
+      dispose(bb, cb, sb) {
+        if (cb) {
+          let bb;
+          for (bb in this._textures) this._textures[bb].dispose();
+          for (bb in this._internalTextures) this._internalTextures[bb].dispose();
+          for (bb in this._textureArrays) {
+            const cb = this._textureArrays[bb];
+            for (let bb = 0; bb < cb.length; bb++) cb[bb].dispose()
           }
         }
-        this._textures = {}, this._internalTextures = {}, super.dispose(kk, Fk, Bk)
+        this._textures = {}, this._internalTextures = {}, super.dispose(bb, cb, sb)
       }
       serialize() {
-        const kk = Rk.c.Serialize(this);
-        let Fk;
-        for (Fk in kk.customType = "BABYLON.ShaderMaterial", kk.uniqueId = this.uniqueId, kk.options = this._options, kk.shaderPath = this._shaderPath, kk.storeEffectOnSubMeshes = this._storeEffectOnSubMeshes, kk.stencil = this.stencil.serialize(), kk.textures = {}, this._textures) kk.textures[Fk] = this._textures[Fk].serialize();
-        for (Fk in kk.textureArrays = {}, this._textureArrays) {
-          kk.textureArrays[Fk] = [];
-          const Bk = this._textureArrays[Fk];
-          for (let Rk = 0; Rk < Bk.length; Rk++) kk.textureArrays[Fk].push(Bk[Rk].serialize())
+        const bb = kb.d.Serialize(this);
+        let cb;
+        for (cb in bb.customType = "BABYLON.ShaderMaterial", bb.uniqueId = this.uniqueId, bb.options = this._options, bb.shaderPath = this._shaderPath, bb.storeEffectOnSubMeshes = this._storeEffectOnSubMeshes, bb.stencil = this.stencil.serialize(), bb.textures = {}, this._textures) bb.textures[cb] = this._textures[cb].serialize();
+        for (cb in bb.textureArrays = {}, this._textureArrays) {
+          bb.textureArrays[cb] = [];
+          const sb = this._textureArrays[cb];
+          for (let kb = 0; kb < sb.length; kb++) bb.textureArrays[cb].push(sb[kb].serialize())
         }
-        for (Fk in kk.ints = {}, this._ints) kk.ints[Fk] = this._ints[Fk];
-        for (Fk in kk.uints = {}, this._uints) kk.uints[Fk] = this._uints[Fk];
-        for (Fk in kk.floats = {}, this._floats) kk.floats[Fk] = this._floats[Fk];
-        for (Fk in kk.floatsArrays = {}, this._floatsArrays) kk.floatsArrays[Fk] = this._floatsArrays[Fk];
-        for (Fk in kk.colors3 = {}, this._colors3) {
-          const Bk = this._colors3[Fk];
-          kk.colors3[Fk] = [Bk.r, Bk.g, Bk.b]
+        for (cb in bb.ints = {}, this._ints) bb.ints[cb] = this._ints[cb];
+        for (cb in bb.uints = {}, this._uints) bb.uints[cb] = this._uints[cb];
+        for (cb in bb.floats = {}, this._floats) bb.floats[cb] = this._floats[cb];
+        for (cb in bb.floatsArrays = {}, this._floatsArrays) bb.floatsArrays[cb] = this._floatsArrays[cb];
+        for (cb in bb.colors3 = {}, this._colors3) {
+          const sb = this._colors3[cb];
+          bb.colors3[cb] = [sb.r, sb.g, sb.b]
         }
-        for (Fk in kk.colors3Arrays = {}, this._colors3Arrays) kk.colors3Arrays[Fk] = this._colors3Arrays[Fk];
-        for (Fk in kk.colors4 = {}, this._colors4) {
-          const Bk = this._colors4[Fk];
-          kk.colors4[Fk] = [Bk.r, Bk.g, Bk.b, Bk.a]
+        for (cb in bb.colors3Arrays = {}, this._colors3Arrays) bb.colors3Arrays[cb] = this._colors3Arrays[cb];
+        for (cb in bb.colors4 = {}, this._colors4) {
+          const sb = this._colors4[cb];
+          bb.colors4[cb] = [sb.r, sb.g, sb.b, sb.a]
         }
-        for (Fk in kk.colors4Arrays = {}, this._colors4Arrays) kk.colors4Arrays[Fk] = this._colors4Arrays[Fk];
-        for (Fk in kk.vectors2 = {}, this._vectors2) {
-          const Bk = this._vectors2[Fk];
-          kk.vectors2[Fk] = [Bk.x, Bk.y]
+        for (cb in bb.colors4Arrays = {}, this._colors4Arrays) bb.colors4Arrays[cb] = this._colors4Arrays[cb];
+        for (cb in bb.vectors2 = {}, this._vectors2) {
+          const sb = this._vectors2[cb];
+          bb.vectors2[cb] = [sb.x, sb.y]
         }
-        for (Fk in kk.vectors3 = {}, this._vectors3) {
-          const Bk = this._vectors3[Fk];
-          kk.vectors3[Fk] = [Bk.x, Bk.y, Bk.z]
+        for (cb in bb.vectors3 = {}, this._vectors3) {
+          const sb = this._vectors3[cb];
+          bb.vectors3[cb] = [sb.x, sb.y, sb.z]
         }
-        for (Fk in kk.vectors4 = {}, this._vectors4) {
-          const Bk = this._vectors4[Fk];
-          kk.vectors4[Fk] = [Bk.x, Bk.y, Bk.z, Bk.w]
+        for (cb in bb.vectors4 = {}, this._vectors4) {
+          const sb = this._vectors4[cb];
+          bb.vectors4[cb] = [sb.x, sb.y, sb.z, sb.w]
         }
-        for (Fk in kk.quaternions = {}, this._quaternions) kk.quaternions[Fk] = this._quaternions[Fk].PBk();
-        for (Fk in kk.matrices = {}, this._matrices) kk.matrices[Fk] = this._matrices[Fk].PBk();
-        for (Fk in kk.matrixArray = {}, this._matrixArrays) kk.matrixArray[Fk] = this._matrixArrays[Fk];
-        for (Fk in kk.matrices3x3 = {}, this._matrices3x3) kk.matrices3x3[Fk] = this._matrices3x3[Fk];
-        for (Fk in kk.matrices2x2 = {}, this._matrices2x2) kk.matrices2x2[Fk] = this._matrices2x2[Fk];
-        for (Fk in kk.vectors2Arrays = {}, this._vectors2Arrays) kk.vectors2Arrays[Fk] = this._vectors2Arrays[Fk];
-        for (Fk in kk.vectors3Arrays = {}, this._vectors3Arrays) kk.vectors3Arrays[Fk] = this._vectors3Arrays[Fk];
-        for (Fk in kk.vectors4Arrays = {}, this._vectors4Arrays) kk.vectors4Arrays[Fk] = this._vectors4Arrays[Fk];
-        for (Fk in kk.quaternionsArrays = {}, this._quaternionsArrays) kk.quaternionsArrays[Fk] = this._quaternionsArrays[Fk];
-        return kk
+        for (cb in bb.quaternions = {}, this._quaternions) bb.quaternions[cb] = this._quaternions[cb].Osb();
+        for (cb in bb.matrices = {}, this._matrices) bb.matrices[cb] = this._matrices[cb].Osb();
+        for (cb in bb.matrixArray = {}, this._matrixArrays) bb.matrixArray[cb] = this._matrixArrays[cb];
+        for (cb in bb.matrices3x3 = {}, this._matrices3x3) bb.matrices3x3[cb] = this._matrices3x3[cb];
+        for (cb in bb.matrices2x2 = {}, this._matrices2x2) bb.matrices2x2[cb] = this._matrices2x2[cb];
+        for (cb in bb.vectors2Arrays = {}, this._vectors2Arrays) bb.vectors2Arrays[cb] = this._vectors2Arrays[cb];
+        for (cb in bb.vectors3Arrays = {}, this._vectors3Arrays) bb.vectors3Arrays[cb] = this._vectors3Arrays[cb];
+        for (cb in bb.vectors4Arrays = {}, this._vectors4Arrays) bb.vectors4Arrays[cb] = this._vectors4Arrays[cb];
+        for (cb in bb.quaternionsArrays = {}, this._quaternionsArrays) bb.quaternionsArrays[cb] = this._quaternionsArrays[cb];
+        return bb
       }
     }
 
-    function Wk(kk, Fk, Bk) {
-      const tk = Rk.c.Parse((() => new mk(kk.name, Fk, kk.shaderPath, kk.options, kk.storeEffectOnSubMeshes)), kk, Fk, Bk);
-      let Xk;
-      for (Xk in kk.stencil && tk.stencil.parse(kk.stencil, Fk, Bk), kk.textures) tk.setTexture(Xk, bk.f.Parse(kk.textures[Xk], Fk, Bk));
-      for (Xk in kk.textureArrays) {
-        const Rk = kk.textureArrays[Xk],
-          ak = [];
-        for (let kk = 0; kk < Rk.length; kk++) ak.push(bk.f.Parse(Rk[kk], Fk, Bk));
-        tk.setTextureArray(Xk, ak)
+    function Cb(bb, cb, sb) {
+      const Wb = kb.d.Parse((() => new eb(bb.name, cb, bb.shaderPath, bb.options, bb.storeEffectOnSubMeshes)), bb, cb, sb);
+      let Tb;
+      for (Tb in bb.stencil && Wb.stencil.parse(bb.stencil, cb, sb), bb.textures) Wb.setTexture(Tb, Ub.e.Parse(bb.textures[Tb], cb, sb));
+      for (Tb in bb.textureArrays) {
+        const kb = bb.textureArrays[Tb],
+          ab = [];
+        for (let bb = 0; bb < kb.length; bb++) ab.push(Ub.e.Parse(kb[bb], cb, sb));
+        Wb.setTextureArray(Tb, ab)
       }
-      for (Xk in kk.ints) tk.setInt(Xk, kk.ints[Xk]);
-      for (Xk in kk.uints) tk.setUInt(Xk, kk.uints[Xk]);
-      for (Xk in kk.floats) tk.setFloat(Xk, kk.floats[Xk]);
-      for (Xk in kk.floatsArrays) tk.setFloats(Xk, kk.floatsArrays[Xk]);
-      for (Xk in kk.colors3) {
-        const Fk = kk.colors3[Xk];
-        tk.setColor3(Xk, {
-          r: Fk[0],
-          g: Fk[1],
-          b: Fk[2]
+      for (Tb in bb.ints) Wb.setInt(Tb, bb.ints[Tb]);
+      for (Tb in bb.uints) Wb.setUInt(Tb, bb.uints[Tb]);
+      for (Tb in bb.floats) Wb.setFloat(Tb, bb.floats[Tb]);
+      for (Tb in bb.floatsArrays) Wb.setFloats(Tb, bb.floatsArrays[Tb]);
+      for (Tb in bb.colors3) {
+        const cb = bb.colors3[Tb];
+        Wb.setColor3(Tb, {
+          r: cb[0],
+          g: cb[1],
+          b: cb[2]
         })
       }
-      for (Xk in kk.colors3Arrays) {
-        const Fk = kk.colors3Arrays[Xk].reduce(((kk, Fk, Bk) => (Bk % 3 === 0 ? kk.push([Fk]) : kk[kk.length - 1].push(Fk), kk)), []).map((kk => ({
-          r: kk[0],
-          g: kk[1],
-          b: kk[2]
+      for (Tb in bb.colors3Arrays) {
+        const cb = bb.colors3Arrays[Tb].reduce(((bb, cb, sb) => (sb % 3 === 0 ? bb.push([cb]) : bb[bb.length - 1].push(cb), bb)), []).map((bb => ({
+          r: bb[0],
+          g: bb[1],
+          b: bb[2]
         })));
-        tk.setColor3Array(Xk, Fk)
+        Wb.setColor3Array(Tb, cb)
       }
-      for (Xk in kk.colors4) {
-        const Fk = kk.colors4[Xk];
-        tk.setColor4(Xk, {
-          r: Fk[0],
-          g: Fk[1],
-          b: Fk[2],
-          a: Fk[3]
+      for (Tb in bb.colors4) {
+        const cb = bb.colors4[Tb];
+        Wb.setColor4(Tb, {
+          r: cb[0],
+          g: cb[1],
+          b: cb[2],
+          a: cb[3]
         })
       }
-      for (Xk in kk.colors4Arrays) {
-        const Fk = kk.colors4Arrays[Xk].reduce(((kk, Fk, Bk) => (Bk % 4 === 0 ? kk.push([Fk]) : kk[kk.length - 1].push(Fk), kk)), []).map((kk => ({
-          r: kk[0],
-          g: kk[1],
-          b: kk[2],
-          a: kk[3]
+      for (Tb in bb.colors4Arrays) {
+        const cb = bb.colors4Arrays[Tb].reduce(((bb, cb, sb) => (sb % 4 === 0 ? bb.push([cb]) : bb[bb.length - 1].push(cb), bb)), []).map((bb => ({
+          r: bb[0],
+          g: bb[1],
+          b: bb[2],
+          a: bb[3]
         })));
-        tk.setColor4Array(Xk, Fk)
+        Wb.setColor4Array(Tb, cb)
       }
-      for (Xk in kk.vectors2) {
-        const Fk = kk.vectors2[Xk];
-        tk.setVector2(Xk, {
-          x: Fk[0],
-          y: Fk[1]
+      for (Tb in bb.vectors2) {
+        const cb = bb.vectors2[Tb];
+        Wb.setVector2(Tb, {
+          x: cb[0],
+          y: cb[1]
         })
       }
-      for (Xk in kk.vectors3) {
-        const Fk = kk.vectors3[Xk];
-        tk.setVector3(Xk, {
-          x: Fk[0],
-          y: Fk[1],
-          z: Fk[2]
+      for (Tb in bb.vectors3) {
+        const cb = bb.vectors3[Tb];
+        Wb.setVector3(Tb, {
+          x: cb[0],
+          y: cb[1],
+          z: cb[2]
         })
       }
-      for (Xk in kk.vectors4) {
-        const Fk = kk.vectors4[Xk];
-        tk.setVector4(Xk, {
-          x: Fk[0],
-          y: Fk[1],
-          z: Fk[2],
-          w: Fk[3]
+      for (Tb in bb.vectors4) {
+        const cb = bb.vectors4[Tb];
+        Wb.setVector4(Tb, {
+          x: cb[0],
+          y: cb[1],
+          z: cb[2],
+          w: cb[3]
         })
       }
-      for (Xk in kk.quaternions) tk.setQuaternion(Xk, ak.e.FromArray(kk.quaternions[Xk]));
-      for (Xk in kk.matrices) tk.setMatrix(Xk, ak.c.FromArray(kk.matrices[Xk]));
-      const wk = tk;
-      for (Xk in kk.matrixArray) wk._matrixArrays[Xk] = new Float32Array(kk.matrixArray[Xk]);
-      for (Xk in kk.matrices3x3) tk.setMatrix3x3(Xk, kk.matrices3x3[Xk]);
-      for (Xk in kk.matrices2x2) tk.setMatrix2x2(Xk, kk.matrices2x2[Xk]);
-      for (Xk in kk.vectors2Arrays) tk.setArray2(Xk, kk.vectors2Arrays[Xk]);
-      for (Xk in kk.vectors3Arrays) tk.setArray3(Xk, kk.vectors3Arrays[Xk]);
-      for (Xk in kk.vectors4Arrays) tk.setArray4(Xk, kk.vectors4Arrays[Xk]);
-      for (Xk in kk.quaternionsArrays) tk.setArray4(Xk, kk.quaternionsArrays[Xk]);
-      return tk
+      for (Tb in bb.quaternions) Wb.setQuaternion(Tb, ab.f.FromArray(bb.quaternions[Tb]));
+      for (Tb in bb.matrices) Wb.setMatrix(Tb, ab.e.FromArray(bb.matrices[Tb]));
+      const Ib = Wb;
+      for (Tb in bb.matrixArray) Ib._matrixArrays[Tb] = new Float32Array(bb.matrixArray[Tb]);
+      for (Tb in bb.matrices3x3) Wb.setMatrix3x3(Tb, bb.matrices3x3[Tb]);
+      for (Tb in bb.matrices2x2) Wb.setMatrix2x2(Tb, bb.matrices2x2[Tb]);
+      for (Tb in bb.vectors2Arrays) Wb.setArray2(Tb, bb.vectors2Arrays[Tb]);
+      for (Tb in bb.vectors3Arrays) Wb.setArray3(Tb, bb.vectors3Arrays[Tb]);
+      for (Tb in bb.vectors4Arrays) Wb.setArray4(Tb, bb.vectors4Arrays[Tb]);
+      for (Tb in bb.quaternionsArrays) Wb.setArray4(Tb, bb.quaternionsArrays[Tb]);
+      return Wb
     }
-    async function vk(kk, Fk, Bk) {
-      let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-      return await new Promise(((tk, ak) => {
-        const Xk = new dk.d;
-        Xk.addEventListener("readystatechange", (() => {
-          if (4 == Xk.readyState)
-            if (200 == Xk.status) {
-              const Fk = Wk(JSON.parse(Xk.responseText), Bk || Vk.c.LastCreatedScene, Rk);
-              kk && (Fk.name = kk), tk(Fk)
-            } else ak("Unable to load the ShaderMaterial")
-        })), Xk.open("GET", Fk), Xk.send()
+    async function Nb(bb, cb, sb) {
+      let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
+      return await new Promise(((Wb, ab) => {
+        const Tb = new Hb.c;
+        Tb.addEventListener("readystatechange", (() => {
+          if (4 == Tb.readyState)
+            if (200 == Tb.status) {
+              const cb = Cb(JSON.parse(Tb.responseText), sb || Mb.d.LastCreatedScene, kb);
+              bb && (cb.name = bb), Wb(cb)
+            } else ab("Unable to load the ShaderMaterial")
+        })), Tb.open("GET", cb), Tb.send()
       }))
     }
-    async function ik(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const Rk = this?.SnippetUrl ?? mk.SnippetUrl;
-      return await new Promise(((tk, ak) => {
-        const Xk = new dk.d;
-        Xk.addEventListener("readystatechange", (() => {
-          if (4 == Xk.readyState)
-            if (200 == Xk.status) {
-              const Rk = JSON.parse(JSON.parse(Xk.responseText).jsonPayload),
-                ak = Wk(JSON.parse(Rk.shaderMaterial), Fk || Vk.c.LastCreatedScene, Bk);
-              ak.snippetId = kk, tk(ak)
-            } else ak("Unable to load the snippet " + kk)
-        })), Xk.open("GET", Rk + "/" + kk.replace(/#/g, "/")), Xk.send()
+    async function Vb(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const kb = this?.SnippetUrl ?? eb.SnippetUrl;
+      return await new Promise(((Wb, ab) => {
+        const Tb = new Hb.c;
+        Tb.addEventListener("readystatechange", (() => {
+          if (4 == Tb.readyState)
+            if (200 == Tb.status) {
+              const kb = JSON.parse(JSON.parse(Tb.responseText).jsonPayload),
+                ab = Cb(JSON.parse(kb.shaderMaterial), cb || Mb.d.LastCreatedScene, sb);
+              ab.snippetId = bb, Wb(ab)
+            } else ab("Unable to load the snippet " + bb)
+        })), Tb.open("GET", kb + "/" + bb.replace(/#/g, "/")), Tb.send()
       }))
     }
-    mk.SnippetUrl = "https://snippet.babylonjs.com";
-    const Yk = ik;
-    let Lk = !1;
+    eb.SnippetUrl = "https://snippet.babylonjs.com";
+    const Lb = Vb;
+    let ub = !1;
 
-    function Ok() {
-      Lk || (Lk = !0, mk.Parse = Wk, mk.ParseFromFileAsync = vk, mk.ParseFromSnippetAsync = ik, mk.CreateFromSnippetAsync = Yk, (0, yk.d)("BABYLON.ShaderMaterial", mk))
+    function Yb() {
+      ub || (ub = !0, eb.Parse = Cb, eb.ParseFromFileAsync = Nb, eb.ParseFromSnippetAsync = Vb, eb.CreateFromSnippetAsync = Lb, (0, lb.h)("BABYLON.ShaderMaterial", eb))
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,279 +1,279 @@
 export const id = 93;
 export const ids = [91, 93];
 export const modules = {
-  36355: (kk, Fk, Bk) => {
-    function Rk(kk, Fk, Bk, Rk) {
-      return !(Bk && !kk.aimable) && (!Fk || kk.gun && "head" !== Rk)
+  36258: (bb, cb, sb) => {
+    function kb(bb, cb, sb, kb) {
+      return !(sb && !bb.aimable) && (!cb || bb.gun && "head" !== kb)
     }
 
-    function tk(kk) {
-      return Math.max(.1 * kk, 1)
+    function Wb(bb) {
+      return Math.max(.1 * bb, 1)
     }
 
-    function ak(kk, Fk) {
-      return !kk && Fk
+    function ab(bb, cb) {
+      return !bb && cb
     }
-    Bk.d(Fk, {
-      b: () => ak,
-      e: () => tk,
-      h: () => Rk
+    sb.d(cb, {
+      e: () => ab,
+      g: () => Wb,
+      k: () => kb
     })
   },
-  36359: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => bk,
-      g: () => Xk
+  36263: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Ub,
+      i: () => Tb
     });
-    let Rk = null;
-    const tk = {
+    let kb = null;
+    const Wb = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      ak = {
-        crosshairAccuracy: kk => {
-          const Fk = tk.crosshairAccuracy.at(-1);
-          Fk ? Fk.hook(kk) : Rk = kk
+      ab = {
+        crosshairAccuracy: bb => {
+          const cb = Wb.crosshairAccuracy.at(-1);
+          cb ? cb.hook(bb) : kb = bb
         },
-        turnDamageIndicators: kk => {
-          var Fk;
-          null === (Fk = tk.turnDamageIndicators.at(-1)) || void 0 === Fk || Fk.hook(kk)
+        turnDamageIndicators: bb => {
+          var cb;
+          null === (cb = Wb.turnDamageIndicators.at(-1)) || void 0 === cb || cb.hook(bb)
         }
       };
 
-    function Xk(kk, Fk) {
-      const Bk = {
-          hook: Fk
+    function Tb(bb, cb) {
+      const sb = {
+          hook: cb
         },
-        Xk = tk[kk];
-      if (Xk.push(Bk), "crosshairAccuracy" === kk && null !== Rk) {
-        const kk = Rk;
-        Rk = null, ak.crosshairAccuracy(kk)
+        Tb = Wb[bb];
+      if (Tb.push(sb), "crosshairAccuracy" === bb && null !== kb) {
+        const bb = kb;
+        kb = null, ab.crosshairAccuracy(bb)
       }
       return () => {
-        const kk = Xk.indexOf(Bk); - 1 !== kk && Xk.splice(kk, 1)
+        const bb = Tb.indexOf(sb); - 1 !== bb && Tb.splice(bb, 1)
       }
     }
 
-    function bk() {
-      return ak
+    function Ub() {
+      return ab
     }
   },
-  4575: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      Howl: () => tk.Howl,
-      Howler: () => tk.Howler,
-      iosAudio: () => wk,
-      musicOutput: () => fk,
-      readyAudioContext: () => mk
+  4579: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      Howl: () => Wb.Howl,
+      Howler: () => Wb.Howler,
+      iosAudio: () => Ib,
+      musicOutput: () => Qb,
+      readyAudioContext: () => eb
     });
-    var Rk, tk = Bk(4579),
-      ak = Bk(98);
-    const Xk = tk.Howler;
-    let bk;
+    var kb, Wb = sb(4585),
+      ab = sb(117);
+    const Tb = Wb.Howler;
+    let Ub;
 
-    function wk() {
-      return bk ??= "ios" === (0, ak.getOperatingSystem)(), bk
+    function Ib() {
+      return Ub ??= "ios" === (0, ab.getOperatingSystem)(), Ub
     }
 
-    function dk() {
-      var kk, Fk;
-      if (Xk.ctx || !Xk.usingWebAudio || "undefined" === typeof AudioContext || !wk()) return;
-      const Bk = navigator.audioSession;
-      let Rk;
-      "auto" === (null === Bk || void 0 === Bk ? void 0 : Bk.type) && (Bk.type = "ambient");
+    function Hb() {
+      var bb, cb;
+      if (Tb.ctx || !Tb.usingWebAudio || "undefined" === typeof AudioContext || !Ib()) return;
+      const sb = navigator.audioSession;
+      let kb;
+      "auto" === (null === sb || void 0 === sb ? void 0 : sb.type) && (sb.type = "ambient");
       try {
-        Rk = new AudioContext({
+        kb = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const tk = Rk.createGain();
-      tk.gain.setValueAtTime(Xk._muted ? 0 : null !== (kk = Xk._volume) && void 0 !== kk ? kk : 1, Rk.currentTime), tk.connect(Rk.destination), Xk.ctx = Rk, Xk.masterGain = tk, null === (Fk = Xk._setup) || void 0 === Fk || Fk.call(Xk)
+      const Wb = kb.createGain();
+      Wb.gain.setValueAtTime(Tb._muted ? 0 : null !== (bb = Tb._volume) && void 0 !== bb ? bb : 1, kb.currentTime), Wb.connect(kb.destination), Tb.ctx = kb, Tb.masterGain = Wb, null === (cb = Tb._setup) || void 0 === cb || cb.call(Tb)
     }
-    Xk._mobileUnloaded = !0;
-    const sk = Xk.volume.bind(tk.Howler);
-    Xk.volume = function() {
-      return dk(), sk(...arguments)
+    Tb._mobileUnloaded = !0;
+    const fb = Tb.volume.bind(Wb.Howler);
+    Tb.volume = function() {
+      return Hb(), fb(...arguments)
     };
-    const Vk = Xk.mute.bind(tk.Howler);
-    Xk.mute = kk => (dk(), Vk(kk));
-    const Jk = tk.Howl.prototype,
-      Ak = Jk.init;
-    Jk.init = function(kk) {
-      return dk(), Ak.call(this, kk)
+    const Mb = Tb.mute.bind(Wb.Howler);
+    Tb.mute = bb => (Hb(), Mb(bb));
+    const Xb = Wb.Howl.prototype,
+      nb = Xb.init;
+    Xb.init = function(bb) {
+      return Hb(), nb.call(this, bb)
     };
-    let ek = 0;
-    const yk = null === (Rk = Xk._autoSuspend) || void 0 === Rk ? void 0 : Rk.bind(tk.Howler);
+    let mb = 0;
+    const lb = null === (kb = Tb._autoSuspend) || void 0 === kb ? void 0 : kb.bind(Wb.Howler);
 
-    function fk() {
-      mk();
+    function Qb() {
+      eb();
       const {
-        ctx: kk,
-        masterGain: Fk
-      } = Xk;
-      return kk && Fk ? {
-        ctx: kk,
-        destination: Fk,
-        holdAwake: kk => {
-          var Fk, Bk;
-          (ek += kk ? 1 : -1, kk) ? null === (Fk = Xk._autoResume) || void 0 === Fk || Fk.call(Xk): null === (Bk = Xk._autoSuspend) || void 0 === Bk || Bk.call(Xk)
+        ctx: bb,
+        masterGain: cb
+      } = Tb;
+      return bb && cb ? {
+        ctx: bb,
+        destination: cb,
+        holdAwake: bb => {
+          var cb, sb;
+          (mb += bb ? 1 : -1, bb) ? null === (cb = Tb._autoResume) || void 0 === cb || cb.call(Tb): null === (sb = Tb._autoSuspend) || void 0 === sb || sb.call(Tb)
         },
         wake: () => {
-          var Fk;
-          "running" !== kk.state && (null === (Fk = Xk._autoResume) || void 0 === Fk || Fk.call(Xk), kk.resume().catch((() => {})))
+          var cb;
+          "running" !== bb.state && (null === (cb = Tb._autoResume) || void 0 === cb || cb.call(Tb), bb.resume().catch((() => {})))
         }
       } : null
     }
 
-    function mk() {
-      var kk;
-      (Xk.volume(), Xk.ctx && Xk.autoUnlock) && (null === (kk = Xk._unlockAudio) || void 0 === kk || kk.call(Xk))
+    function eb() {
+      var bb;
+      (Tb.volume(), Tb.ctx && Tb.autoUnlock) && (null === (bb = Tb._unlockAudio) || void 0 === bb || bb.call(Tb))
     }
-    yk && (Xk._autoSuspend = () => ek > 0 ? tk.Howler : yk())
+    lb && (Tb._autoSuspend = () => mb > 0 ? Wb.Howler : lb())
   },
-  36460: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Xk,
-      h: () => tk,
-      i: () => Rk
+  36367: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Tb,
+      d: () => Wb,
+      e: () => kb
     });
 
-    function Rk(kk) {
-      return kk.replace(/[_\-\s]*\d+$/, "") || kk
+    function kb(bb) {
+      return bb.replace(/[_\-\s]*\d+$/, "") || bb
     }
 
-    function tk(kk, Fk, Bk) {
-      return Bk <= 0 ? 0 : kk * Bk / Math.max(Fk, Bk)
+    function Wb(bb, cb, sb) {
+      return sb <= 0 ? 0 : bb * sb / Math.max(cb, sb)
     }
 
-    function ak(kk, Fk) {
-      const Bk = kk.getDurationMs();
-      return Bk > 0 ? kk.loudness * Math.max(0, 1 - (Fk - kk.startMs) / Bk) : 0
+    function ab(bb, cb) {
+      const sb = bb.getDurationMs();
+      return sb > 0 ? bb.loudness * Math.max(0, 1 - (cb - bb.startMs) / sb) : 0
     }
-    class Xk {
+    class Tb {
       constructor() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = kk, this.maxPerGroup = Fk, this.voices = []
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = bb, this.maxPerGroup = cb, this.voices = []
       }
-      admit(kk) {
-        if (this.voices = this.voices.filter((kk => kk.isAlive())), null !== kk.group) {
-          const Fk = this.voices.filter((Fk => Fk.group === kk.group));
-          if (Fk.length >= this.maxPerGroup && !this.dropLeastWorth(Fk, kk)) return !1
+      admit(bb) {
+        if (this.voices = this.voices.filter((bb => bb.isAlive())), null !== bb.group) {
+          const cb = this.voices.filter((cb => cb.group === bb.group));
+          if (cb.length >= this.maxPerGroup && !this.dropLeastWorth(cb, bb)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, kk)) && (this.voices.push(kk), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, bb)) && (this.voices.push(bb), !0)
       }
-      dropLeastWorth(kk, Fk) {
-        let Bk = null,
-          Rk = 1 / 0;
-        for (const tk of kk) {
-          if (!tk.canStop()) continue;
-          const kk = ak(tk, Fk.startMs);
-          kk < Rk && (Bk = tk, Rk = kk)
+      dropLeastWorth(bb, cb) {
+        let sb = null,
+          kb = 1 / 0;
+        for (const Wb of bb) {
+          if (!Wb.canStop()) continue;
+          const bb = ab(Wb, cb.startMs);
+          bb < kb && (sb = Wb, kb = bb)
         }
-        return !(!Bk || Fk.loudness < Rk) && (this.voices.splice(this.voices.indexOf(Bk), 1), Bk.stop(), !0)
+        return !(!sb || cb.loudness < kb) && (this.voices.splice(this.voices.indexOf(sb), 1), sb.stop(), !0)
       }
     }
   },
-  36469: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => ak,
-      d: () => Xk,
-      e: () => Rk
+  36374: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => ab,
+      e: () => Tb,
+      h: () => kb
     });
-    class Rk {
-      constructor(kk) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = kk
+    class kb {
+      constructor(bb) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = bb
       }
-      setMultiplierType(kk, Fk) {
-        var Bk;
-        this.multipliers[kk] = Fk, null === (Bk = this._onUpdate) || void 0 === Bk || Bk.call(this)
+      setMultiplierType(bb, cb) {
+        var sb;
+        this.multipliers[bb] = cb, null === (sb = this._onUpdate) || void 0 === sb || sb.call(this)
       }
-      removeMultiplier(kk) {
-        var Fk;
-        delete this.multipliers[kk], null === (Fk = this._onUpdate) || void 0 === Fk || Fk.call(this)
+      removeMultiplier(bb) {
+        var cb;
+        delete this.multipliers[bb], null === (cb = this._onUpdate) || void 0 === cb || cb.call(this)
       }
-      getMultiplierType(kk) {
-        return this.multipliers[kk]
+      getMultiplierType(bb) {
+        return this.multipliers[bb]
       }
       getTotalMultipliedVal() {
-        let kk = 1;
-        for (const Fk in this.multipliers) kk *= this.multipliers[Fk];
-        return kk
+        let bb = 1;
+        for (const cb in this.multipliers) bb *= this.multipliers[cb];
+        return bb
       }
     }
-    class tk {
+    class Wb {
       constructor() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = kk
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = bb
       }
-      setBooleanType(kk, Fk) {
-        const Bk = this._getTotalBooleanVal();
-        this.booleans[kk] = !!Fk;
-        const Rk = this.getTotalBooleanVal();
-        var tk;
-        Rk !== Bk && (null === (tk = this._onUpdate) || void 0 === tk || tk.call(this, Rk, this.booleans));
-        return Rk
+      setBooleanType(bb, cb) {
+        const sb = this._getTotalBooleanVal();
+        this.booleans[bb] = !!cb;
+        const kb = this.getTotalBooleanVal();
+        var Wb;
+        kb !== sb && (null === (Wb = this._onUpdate) || void 0 === Wb || Wb.call(this, kb, this.booleans));
+        return kb
       }
-      removeBoolean(kk) {
-        const Fk = this._getTotalBooleanVal();
-        delete this.booleans[kk];
-        const Bk = this._getTotalBooleanVal();
-        var Rk;
-        null !== Bk && Bk !== Fk && (null === (Rk = this._onUpdate) || void 0 === Rk || Rk.call(this, Bk, this.booleans));
-        return null !== Bk && void 0 !== Bk && Bk
+      removeBoolean(bb) {
+        const cb = this._getTotalBooleanVal();
+        delete this.booleans[bb];
+        const sb = this._getTotalBooleanVal();
+        var kb;
+        null !== sb && sb !== cb && (null === (kb = this._onUpdate) || void 0 === kb || kb.call(this, sb, this.booleans));
+        return null !== sb && void 0 !== sb && sb
       }
-      getBooleanType(kk) {
-        return this.booleans[kk]
+      getBooleanType(bb) {
+        return this.booleans[bb]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var kk;
-        null === (kk = this._onUpdate) || void 0 === kk || kk.call(this, this.getTotalBooleanVal(), this.booleans)
+        var bb;
+        null === (bb = this._onUpdate) || void 0 === bb || bb.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class ak extends tk {
+    class ab extends Wb {
       getTotalBooleanVal() {
-        const kk = this._getTotalBooleanVal();
-        if (null === kk) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return kk
+        const bb = this._getTotalBooleanVal();
+        if (null === bb) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return bb
       }
       _getTotalBooleanVal() {
-        let kk = !1,
-          Fk = !0;
-        for (const Bk in this.booleans) kk = !0, Fk &&= this.booleans[Bk];
-        return kk ? Fk : null
+        let bb = !1,
+          cb = !0;
+        for (const sb in this.booleans) bb = !0, cb &&= this.booleans[sb];
+        return bb ? cb : null
       }
     }
-    class Xk extends tk {
+    class Tb extends Wb {
       getTotalBooleanVal() {
-        const kk = this._getTotalBooleanVal();
-        if (null === kk) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return kk
+        const bb = this._getTotalBooleanVal();
+        if (null === bb) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return bb
       }
       _getTotalBooleanVal() {
-        let kk = !1,
-          Fk = !1;
-        for (const Bk in this.booleans) kk = !0, Fk ||= this.booleans[Bk];
-        return kk ? Fk : null
+        let bb = !1,
+          cb = !1;
+        for (const sb in this.booleans) bb = !0, cb ||= this.booleans[sb];
+        return bb ? cb : null
       }
     }
   },
-  37497: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Vk,
-      i: () => Xk
+  37403: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Mb,
+      f: () => Tb
     });
-    var Rk = Bk(9109),
-      tk = Bk(9095),
-      ak = Bk(291);
-    const Xk = {
+    var kb = sb(9044),
+      Wb = sb(9017),
+      ab = sb(344);
+    const Tb = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -3212,52 +3212,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...bk("White"),
-      ...bk("Orange"),
-      ...bk("Magenta"),
-      ...bk("Light Blue"),
-      ...bk("Yellow"),
-      ...bk("Lime"),
-      ...bk("Pink"),
-      ...bk("Gray"),
-      ...bk("Light Gray"),
-      ...bk("Cyan"),
-      ...bk("Purple"),
-      ...bk("Blue"),
-      ...bk("Brown"),
-      ...bk("Green"),
-      ...bk("Red"),
-      ...bk("Black"),
-      ...bk("Draugr"),
-      ...bk("Skull"),
-      ...bk("Rainbow"),
-      ...wk("Sheep"),
-      ...wk("Cow"),
-      ...wk("Pig"),
-      ...wk("Horse"),
-      ...wk("Camel"),
-      ...wk("Wolf"),
-      ...wk("Deer"),
-      ...wk("Wildcat"),
-      ...dk("Radar"),
-      ...dk("Inactive Radar"),
-      ...dk("Active Radar"),
-      ...sk("Magenta"),
-      ...sk("Light Gray"),
-      ...sk("Red"),
-      ...sk("White"),
-      ...sk("Orange"),
-      ...sk("Light Blue"),
-      ...sk("Yellow"),
-      ...sk("Lime"),
-      ...sk("Pink"),
-      ...sk("Gray"),
-      ...sk("Cyan"),
-      ...sk("Purple"),
-      ...sk("Blue"),
-      ...sk("Brown"),
-      ...sk("Green"),
-      ...sk("Black"),
+      ...Ub("White"),
+      ...Ub("Orange"),
+      ...Ub("Magenta"),
+      ...Ub("Light Blue"),
+      ...Ub("Yellow"),
+      ...Ub("Lime"),
+      ...Ub("Pink"),
+      ...Ub("Gray"),
+      ...Ub("Light Gray"),
+      ...Ub("Cyan"),
+      ...Ub("Purple"),
+      ...Ub("Blue"),
+      ...Ub("Brown"),
+      ...Ub("Green"),
+      ...Ub("Red"),
+      ...Ub("Black"),
+      ...Ub("Draugr"),
+      ...Ub("Skull"),
+      ...Ub("Rainbow"),
+      ...Ib("Sheep"),
+      ...Ib("Cow"),
+      ...Ib("Pig"),
+      ...Ib("Horse"),
+      ...Ib("Camel"),
+      ...Ib("Wolf"),
+      ...Ib("Deer"),
+      ...Ib("Wildcat"),
+      ...Hb("Radar"),
+      ...Hb("Inactive Radar"),
+      ...Hb("Active Radar"),
+      ...fb("Magenta"),
+      ...fb("Light Gray"),
+      ...fb("Red"),
+      ...fb("White"),
+      ...fb("Orange"),
+      ...fb("Light Blue"),
+      ...fb("Yellow"),
+      ...fb("Lime"),
+      ...fb("Pink"),
+      ...fb("Gray"),
+      ...fb("Cyan"),
+      ...fb("Purple"),
+      ...fb("Blue"),
+      ...fb("Brown"),
+      ...fb("Green"),
+      ...fb("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3371,11 +3371,11 @@ export const modules = {
         }]
       },
       ... function() {
-        const kk = "Lunite Auto Miner";
+        const bb = "Lunite Auto Miner";
         return {
-          [kk]: {
+          [bb]: {
             positions: [{
-              block: kk,
+              block: bb,
               x: 0,
               y: 0,
               z: 0
@@ -3401,9 +3401,9 @@ export const modules = {
               z: -2
             }]
           },
-          [`${kk}|meta|rot2`]: {
+          [`${bb}|meta|rot2`]: {
             positions: [{
-              block: `${kk}|meta|rot2`,
+              block: `${bb}|meta|rot2`,
               x: 0,
               y: 0,
               z: 0
@@ -3429,9 +3429,9 @@ export const modules = {
               z: 0
             }]
           },
-          [`${kk}|meta|rot3`]: {
+          [`${bb}|meta|rot3`]: {
             positions: [{
-              block: `${kk}|meta|rot3`,
+              block: `${bb}|meta|rot3`,
               x: 0,
               y: 0,
               z: 0
@@ -3457,9 +3457,9 @@ export const modules = {
               z: 2
             }]
           },
-          [`${kk}|meta|rot4`]: {
+          [`${bb}|meta|rot4`]: {
             positions: [{
-              block: `${kk}|meta|rot4`,
+              block: `${bb}|meta|rot4`,
               x: 0,
               y: 0,
               z: 0
@@ -3488,74 +3488,74 @@ export const modules = {
         }
       }(),
       ... function() {
-        const kk = {
-            1: kk => ({
+        const bb = {
+            1: bb => ({
               x: 0,
-              z: kk
+              z: bb
             }),
-            2: kk => ({
-              x: kk,
+            2: bb => ({
+              x: bb,
               z: 0
             }),
-            3: kk => ({
+            3: bb => ({
               x: 0,
-              z: -kk
+              z: -bb
             }),
-            4: kk => ({
-              x: -kk,
+            4: bb => ({
+              x: -bb,
               z: 0
             })
           },
-          Fk = {};
-        for (let Bk = 1; Bk <= 4; Bk++) {
-          const tk = 1 === Bk ? "" : `|meta|rot${Bk}`;
-          Fk[`${Rk.b[0].block}${tk}`] = {
-            positions: Rk.b.map((Fk => {
+          cb = {};
+        for (let sb = 1; sb <= 4; sb++) {
+          const Wb = 1 === sb ? "" : `|meta|rot${sb}`;
+          cb[`${kb.b[0].block}${Wb}`] = {
+            positions: kb.b.map((cb => {
               let {
-                block: Rk,
-                y: ak,
-                z: Xk
-              } = Fk;
+                block: kb,
+                y: ab,
+                z: Tb
+              } = cb;
               return {
-                block: `${Rk}${tk}`,
-                y: ak,
-                ...kk[Bk](Xk)
+                block: `${kb}${Wb}`,
+                y: ab,
+                ...bb[sb](Tb)
               }
             }))
           }
         }
-        return Fk
+        return cb
       }(),
       ... function() {
-        const kk = {};
-        for (let Fk = 1; Fk <= Rk.i; Fk++) {
-          const Bk = (0, Rk.Ub)(Fk),
-            tk = Rk.j[Fk - 1],
-            ak = [{
-              block: Bk,
+        const bb = {};
+        for (let cb = 1; cb <= kb.i; cb++) {
+          const sb = (0, kb._b)(cb),
+            Wb = kb.m[cb - 1],
+            ab = [{
+              block: sb,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const kk of Rk.f)
-            for (let Fk = 1; Fk <= tk; Fk++) {
-              if ("southwest" === kk && 1 === Fk) continue;
+          for (const bb of kb.e)
+            for (let cb = 1; cb <= Wb; cb++) {
+              if ("southwest" === bb && 1 === cb) continue;
               const {
-                x: Bk,
-                z: tk
-              } = Rk.g[kk];
-              ak.push({
-                block: (0, Rk.Rb)(kk, Fk),
-                x: Bk,
-                y: Fk - 1,
-                z: tk
+                x: sb,
+                z: Wb
+              } = kb.f[bb];
+              ab.push({
+                block: (0, kb.Wb)(bb, cb),
+                x: sb,
+                y: cb - 1,
+                z: Wb
               })
             }
-          kk[Bk] = {
-            positions: ak
+          bb[sb] = {
+            positions: ab
           }
         }
-        return kk
+        return bb
       }(),
       "Solar Panel": {
         positions: [{
@@ -3669,159 +3669,159 @@ export const modules = {
       }
     };
 
-    function bk(kk) {
+    function Ub(bb) {
       return {
-        [`${kk} Banner`]: {
+        [`${bb} Banner`]: {
           positions: [{
-            block: `${kk} Banner`,
+            block: `${bb} Banner`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot1|bot`,
+            block: `_${bb} Banner Flag|meta|rot1|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot2|bot`]: {
+        [`${bb} Banner|meta|rot2|bot`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot2|bot`,
+            block: `${bb} Banner|meta|rot2|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot2|bot`,
+            block: `_${bb} Banner Flag|meta|rot2|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot3|bot`]: {
+        [`${bb} Banner|meta|rot3|bot`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot3|bot`,
+            block: `${bb} Banner|meta|rot3|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot3|bot`,
+            block: `_${bb} Banner Flag|meta|rot3|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot4|bot`]: {
+        [`${bb} Banner|meta|rot4|bot`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot4|bot`,
+            block: `${bb} Banner|meta|rot4|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot4|bot`,
+            block: `_${bb} Banner Flag|meta|rot4|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot1|side`]: {
+        [`${bb} Banner|meta|rot1|side`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot1|side`,
+            block: `${bb} Banner|meta|rot1|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot1|side`,
+            block: `_${bb} Banner Flag|meta|rot1|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot2|side`]: {
+        [`${bb} Banner|meta|rot2|side`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot2|side`,
+            block: `${bb} Banner|meta|rot2|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot2|side`,
+            block: `_${bb} Banner Flag|meta|rot2|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot3|side`]: {
+        [`${bb} Banner|meta|rot3|side`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot3|side`,
+            block: `${bb} Banner|meta|rot3|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot3|side`,
+            block: `_${bb} Banner Flag|meta|rot3|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot4|side`]: {
+        [`${bb} Banner|meta|rot4|side`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot4|side`,
+            block: `${bb} Banner|meta|rot4|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot4|side`,
+            block: `_${bb} Banner Flag|meta|rot4|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot1|top`]: {
+        [`${bb} Banner|meta|rot1|top`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot1|top`,
+            block: `${bb} Banner|meta|rot1|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag`,
+            block: `_${bb} Banner Flag`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot2|top`]: {
+        [`${bb} Banner|meta|rot2|top`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot2|top`,
+            block: `${bb} Banner|meta|rot2|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot2|top`,
+            block: `_${bb} Banner Flag|meta|rot2|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot3|top`]: {
+        [`${bb} Banner|meta|rot3|top`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot3|top`,
+            block: `${bb} Banner|meta|rot3|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot3|top`,
+            block: `_${bb} Banner Flag|meta|rot3|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot4|top`]: {
+        [`${bb} Banner|meta|rot4|top`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot4|top`,
+            block: `${bb} Banner|meta|rot4|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot4|top`,
+            block: `_${bb} Banner Flag|meta|rot4|top`,
             x: 0,
             y: -1,
             z: 0
@@ -3830,96 +3830,96 @@ export const modules = {
       }
     }
 
-    function wk(kk) {
-      const Fk = (0, ak.Zb)(kk);
+    function Ib(bb) {
+      const cb = (0, ab.Xb)(bb);
       return {
-        [Fk]: {
+        [cb]: {
           positions: [{
-            block: Fk,
+            block: cb,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Fk} Top Left`,
+            block: `_${cb} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Fk} Top Right`,
+            block: `_${cb} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${Fk} Bottom Right`,
+            block: `_${cb} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${Fk}|meta|rot2`]: {
+        [`${cb}|meta|rot2`]: {
           positions: [{
-            block: `${Fk}|meta|rot2`,
+            block: `${cb}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Fk} Top Left|meta|rot2`,
+            block: `_${cb} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Fk} Top Right|meta|rot2`,
+            block: `_${cb} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${Fk} Bottom Right|meta|rot2`,
+            block: `_${cb} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${Fk}|meta|rot3`]: {
+        [`${cb}|meta|rot3`]: {
           positions: [{
-            block: `${Fk}|meta|rot3`,
+            block: `${cb}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Fk} Top Left|meta|rot3`,
+            block: `_${cb} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Fk} Top Right|meta|rot3`,
+            block: `_${cb} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${Fk} Bottom Right|meta|rot3`,
+            block: `_${cb} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${Fk}|meta|rot4`]: {
+        [`${cb}|meta|rot4`]: {
           positions: [{
-            block: `${Fk}|meta|rot4`,
+            block: `${cb}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Fk} Top Left|meta|rot4`,
+            block: `_${cb} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Fk} Top Right|meta|rot4`,
+            block: `_${cb} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${Fk} Bottom Right|meta|rot4`,
+            block: `_${cb} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3928,77 +3928,77 @@ export const modules = {
       }
     }
 
-    function dk(kk) {
-      const Fk = `_${kk} Back`,
-        Bk = `_${kk} Dish`;
+    function Hb(bb) {
+      const cb = `_${bb} Back`,
+        sb = `_${bb} Dish`;
       return {
-        [kk]: {
+        [bb]: {
           positions: [{
-            block: kk,
+            block: bb,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: Fk,
+            block: cb,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: Bk,
+            block: sb,
             x: 0,
             y: 1,
             z: -1
           }]
         },
-        [`${kk}|meta|rot2`]: {
+        [`${bb}|meta|rot2`]: {
           positions: [{
-            block: `${kk}|meta|rot2`,
+            block: `${bb}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Fk}|meta|rot2`,
+            block: `${cb}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${Bk}|meta|rot2`,
+            block: `${sb}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
           }]
         },
-        [`${kk}|meta|rot3`]: {
+        [`${bb}|meta|rot3`]: {
           positions: [{
-            block: `${kk}|meta|rot3`,
+            block: `${bb}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Fk}|meta|rot3`,
+            block: `${cb}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${Bk}|meta|rot3`,
+            block: `${sb}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
           }]
         },
-        [`${kk}|meta|rot4`]: {
+        [`${bb}|meta|rot4`]: {
           positions: [{
-            block: `${kk}|meta|rot4`,
+            block: `${bb}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Fk}|meta|rot4`,
+            block: `${cb}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${Bk}|meta|rot4`,
+            block: `${sb}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -4007,22 +4007,22 @@ export const modules = {
       }
     }
 
-    function sk(kk) {
-      const Fk = `Small ${kk} Pod`;
+    function fb(bb) {
+      const cb = `Small ${bb} Pod`;
       return {
-        [Fk]: {
+        [cb]: {
           positions: [{
-            block: Fk,
+            block: cb,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_Small ${kk} Pod Mid`,
+            block: `_Small ${bb} Pod Mid`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_Small ${kk} Pod Top`,
+            block: `_Small ${bb} Pod Top`,
             x: 0,
             y: 2,
             z: 0
@@ -4030,290 +4030,290 @@ export const modules = {
         }
       }
     }
-    for (const Jk in Xk) {
-      for (const kk of Xk[Jk].positions)
-        if (kk.id = tk.j[kk.block].id, Jk === kk.block && (0 !== kk.x || 0 !== kk.y || 0 !== kk.z)) throw new Error(`Multiblock "${Jk}" has main block "${kk.block}" at non-origin position (${kk.x}, ${kk.y}, ${kk.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      Xk[tk.j[Jk].id] = Xk[Jk]
+    for (const Xb in Tb) {
+      for (const bb of Tb[Xb].positions)
+        if (bb.id = Wb.g[bb.block].id, Xb === bb.block && (0 !== bb.x || 0 !== bb.y || 0 !== bb.z)) throw new Error(`Multiblock "${Xb}" has main block "${bb.block}" at non-origin position (${bb.x}, ${bb.y}, ${bb.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      Tb[Wb.g[Xb].id] = Tb[Xb]
     }
-    const Vk = {};
-    for (const Jk in Xk)
+    const Mb = {};
+    for (const Xb in Tb)
       for (const {
-          block: kk,
-          x: Fk,
-          y: Bk,
-          z: Rk
+          block: bb,
+          x: cb,
+          y: sb,
+          z: kb
         }
-        of Xk[Jk].positions) {
-        const ak = {
-          mainMultiblock: Jk,
-          compX: Fk,
-          compY: Bk,
-          compZ: Rk
+        of Tb[Xb].positions) {
+        const ab = {
+          mainMultiblock: Xb,
+          compX: cb,
+          compY: sb,
+          compZ: kb
         };
-        Vk[kk] = ak, Vk[tk.j[kk].id] = ak
+        Mb[bb] = ab, Mb[Wb.g[bb].id] = ab
       }
   },
-  37872: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => wk,
-      e: () => bk
+  37832: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Ib,
+      f: () => Ub
     });
-    var Rk = Bk(9095),
-      tk = Bk(9132),
-      ak = Bk(9136);
-    const Xk = tk.t.map((kk => {
+    var kb = sb(9017),
+      Wb = sb(9067),
+      ab = sb(9070);
+    const Tb = Wb.p.map((bb => {
       let {
-        dx: Fk,
-        dz: Bk
-      } = kk;
-      return [Fk, 0, Bk]
+        dx: cb,
+        dz: sb
+      } = bb;
+      return [cb, 0, sb]
     }));
 
-    function bk(kk) {
-      const Fk = Rk.j[kk];
-      return !!Fk && kk !== Rk.e && !Fk.model && !Fk.EA && !1 !== Fk.solid && !Fk.nb
+    function Ub(bb) {
+      const cb = kb.g[bb];
+      return !!cb && bb !== kb.d && !cb.model && !cb.Nn && !1 !== cb.solid && !cb.hQ
     }
-    class wk {
-      constructor(kk) {
-        this.model = kk, this.reshapeOffsets = [...Xk, [0, -1, 0]]
+    class Ib {
+      constructor(bb) {
+        this.model = bb, this.reshapeOffsets = [...Tb, [0, -1, 0]]
       }
-      handles(kk) {
-        const Fk = Rk.j[kk];
-        return (null === Fk || void 0 === Fk ? void 0 : Fk.model) === this.model && void 0 !== Fk.attachedTop
+      handles(bb) {
+        const cb = kb.g[bb];
+        return (null === cb || void 0 === cb ? void 0 : cb.model) === this.model && void 0 !== cb.attachedTop
       }
-      affects(kk) {
-        return this.handles(kk) || bk(kk) || (0, ak.t)(Rk.j[kk])
+      affects(bb) {
+        return this.handles(bb) || Ub(bb) || (0, ab.t)(kb.g[bb])
       }
-      shape(kk, Fk, Bk, Xk, wk) {
-        let dk = this.handles(kk(Fk, Bk + 1, Xk)) ? tk.l : 0;
-        return tk.t.forEach(((wk, sk) => {
+      shape(bb, cb, sb, Tb, Ib) {
+        let Hb = this.handles(bb(cb, sb + 1, Tb)) ? Wb.f : 0;
+        return Wb.p.forEach(((Ib, fb) => {
           let {
-            dx: Vk,
-            dz: Jk
-          } = wk;
-          const Ak = kk(Fk + Vk, Bk, Xk + Jk);
-          (this.handles(Ak) || bk(Ak) || function(kk, Fk) {
-            const Bk = Rk.j[kk];
-            return (0, ak.t)(Bk) && (0, ak.p)(Bk.meta.rot) === (0 !== tk.t[Fk].dx)
-          }(Ak, sk)) && (dk |= 1 << sk)
-        })), (0, Rk.m)((0, tk.n)(Rk.j[wk].meta.rootName, dk))
+            dx: Mb,
+            dz: Xb
+          } = Ib;
+          const nb = bb(cb + Mb, sb, Tb + Xb);
+          (this.handles(nb) || Ub(nb) || function(bb, cb) {
+            const sb = kb.g[bb];
+            return (0, ab.t)(sb) && (0, ab.o)(sb.meta.rot) === (0 !== Wb.p[cb].dx)
+          }(nb, fb)) && (Hb |= 1 << fb)
+        })), (0, kb.j)((0, Wb.i)(kb.g[Ib].meta.rootName, Hb))
       }
     }
   },
-  37678: (kk, Fk, Bk) => {
-    function Rk(kk, Fk) {
-      var Bk;
-      Fk || (Fk = {});
-      const Rk = null !== (Bk = Fk.customAttributes) && void 0 !== Bk ? Bk : {};
-      var tk, ak, Xk;
-      "Gun" === (null === kk || void 0 === kk ? void 0 : kk.type) && (Rk.shotsLeft = null !== (tk = null !== (ak = Rk.shotsLeft) && void 0 !== ak ? ak : null === (Xk = Rk.gunStats) || void 0 === Xk ? void 0 : Xk.clipSize) && void 0 !== tk ? tk : kk.clipSize);
-      if (Rk.enchantmentTier && (Rk.enchantmentTier = Rk.enchantmentTier.toString()), Rk.enchantments)
-        for (const Vk in Rk.enchantments) {
-          const kk = Rk.enchantments[Vk];
-          if ("number" !== typeof kk) {
-            const Fk = parseInt(kk);
-            isNaN(Fk) || Fk < 0 ? Rk.enchantments[Vk] = void 0 : Rk.enchantments[Vk] = Fk > 1e9 ? 1e9 : Fk
+  37591: (bb, cb, sb) => {
+    function kb(bb, cb) {
+      var sb;
+      cb || (cb = {});
+      const kb = null !== (sb = cb.customAttributes) && void 0 !== sb ? sb : {};
+      var Wb, ab, Tb;
+      "Gun" === (null === bb || void 0 === bb ? void 0 : bb.type) && (kb.shotsLeft = null !== (Wb = null !== (ab = kb.shotsLeft) && void 0 !== ab ? ab : null === (Tb = kb.gunStats) || void 0 === Tb ? void 0 : Tb.clipSize) && void 0 !== Wb ? Wb : bb.clipSize);
+      if (kb.enchantmentTier && (kb.enchantmentTier = kb.enchantmentTier.toString()), kb.enchantments)
+        for (const Mb in kb.enchantments) {
+          const bb = kb.enchantments[Mb];
+          if ("number" !== typeof bb) {
+            const cb = parseInt(bb);
+            isNaN(cb) || cb < 0 ? kb.enchantments[Mb] = void 0 : kb.enchantments[Mb] = cb > 1e9 ? 1e9 : cb
           }
         }
-      if (Rk.enchantmentData)
-        for (const Vk in Rk.enchantmentData) {
-          const kk = Rk.enchantmentData[Vk];
-          if (!kk) continue;
-          if ("object" !== typeof kk) {
-            Rk.enchantmentData[Vk] = void 0;
+      if (kb.enchantmentData)
+        for (const Mb in kb.enchantmentData) {
+          const bb = kb.enchantmentData[Mb];
+          if (!bb) continue;
+          if ("object" !== typeof bb) {
+            kb.enchantmentData[Mb] = void 0;
             continue
           }
-          const Fk = kk.icon,
-            Bk = kk.description;
-          var bk, wk, dk, sk;
-          if ("string" !== typeof Fk) Rk.enchantmentData[Vk].icon = null !== (bk = null === Fk || void 0 === Fk || null === (wk = Fk.toString) || void 0 === wk ? void 0 : wk.call(Fk)) && void 0 !== bk ? bk : void 0;
-          if ("string" !== typeof Bk) Rk.enchantmentData[Vk].description = null !== (dk = null === Bk || void 0 === Bk || null === (sk = Bk.toString) || void 0 === sk ? void 0 : sk.call(Bk)) && void 0 !== dk ? dk : void 0
+          const cb = bb.icon,
+            sb = bb.description;
+          var Ub, Ib, Hb, fb;
+          if ("string" !== typeof cb) kb.enchantmentData[Mb].icon = null !== (Ub = null === cb || void 0 === cb || null === (Ib = cb.toString) || void 0 === Ib ? void 0 : Ib.call(cb)) && void 0 !== Ub ? Ub : void 0;
+          if ("string" !== typeof sb) kb.enchantmentData[Mb].description = null !== (Hb = null === sb || void 0 === sb || null === (fb = sb.toString) || void 0 === fb ? void 0 : fb.call(sb)) && void 0 !== Hb ? Hb : void 0
         }
-      return Fk.customAttributes = Rk, Fk
+      return cb.customAttributes = kb, cb
     }
-    Bk.d(Fk, {
-      c: () => Rk
+    sb.d(cb, {
+      d: () => kb
     })
   },
-  37865: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => Ok,
-      c: () => mk,
-      d: () => wk,
-      f: () => Vk,
-      g: () => Ek
+  37825: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Yb,
+      g: () => eb,
+      i: () => Ib,
+      l: () => Mb,
+      m: () => hb
     });
-    var Rk = Bk(9095),
-      tk = Bk(9114),
-      ak = Bk(37872);
-    const Xk = (0, Rk.m)("Noticeboard"),
-      bk = (0, Rk.m)("Standing Noticeboard|meta|rot4|lrud");
+    var kb = sb(9017),
+      Wb = sb(9057),
+      ab = sb(37832);
+    const Tb = (0, kb.j)("Noticeboard"),
+      Ub = (0, kb.j)("Standing Noticeboard|meta|rot4|lrud");
 
-    function wk(kk) {
-      return Xk <= kk && kk <= bk
+    function Ib(bb) {
+      return Tb <= bb && bb <= Ub
     }
-    const dk = new Uint8Array(bk - Xk + 1);
-    for (let Sk = Xk; Sk <= bk; Sk++) dk[Sk - Xk] = (0, tk.r)(Rk.j[Sk].meta.metaStr);
-    const sk = 64,
-      Vk = sk * sk,
-      [Jk, Ak, ek, yk] = [0, 1, 2, 3];
+    const Hb = new Uint8Array(Ub - Tb + 1);
+    for (let Jb = Tb; Jb <= Ub; Jb++) Hb[Jb - Tb] = (0, Wb.u)(kb.g[Jb].meta.metaStr);
+    const fb = 64,
+      Mb = fb * fb,
+      [Xb, nb, mb, lb] = [0, 1, 2, 3];
 
-    function fk(kk) {
-      var Fk, Bk;
-      return "string" === typeof(null === kk || void 0 === kk || null === (Fk = kk.persisted) || void 0 === Fk || null === (Bk = Fk.shared) || void 0 === Bk ? void 0 : Bk.text)
-    }
-
-    function mk(kk) {
-      return fk(kk) && "" !== kk.persisted.shared.text.trim()
+    function Qb(bb) {
+      var cb, sb;
+      return "string" === typeof(null === bb || void 0 === bb || null === (cb = bb.persisted) || void 0 === cb || null === (sb = cb.shared) || void 0 === sb ? void 0 : sb.text)
     }
 
-    function Wk(kk, Fk) {
-      let [Bk, , Rk] = Fk;
-      const [ak, , Xk] = tk.t[kk][Ak];
-      return Bk * ak + Rk * Xk
+    function eb(bb) {
+      return Qb(bb) && "" !== bb.persisted.shared.text.trim()
     }
 
-    function vk(kk, Fk, Bk) {
-      return Bk[1] - Fk[1] || Wk(kk, Fk) - Wk(kk, Bk)
+    function Cb(bb, cb) {
+      let [sb, , kb] = cb;
+      const [ab, , Tb] = Wb.z[bb][nb];
+      return sb * ab + kb * Tb
     }
 
-    function ik(kk, Fk, Bk, ak, bk) {
-      var wk;
-      let sk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : kk(Fk[0], Fk[1], Fk[2]);
-      if (!(dk[sk - Xk] & 1 << Bk)) return null;
-      const [Vk, Jk, Ak] = tk.t[bk][Bk], ek = [Fk[0] + Vk, Fk[1] + Jk, Fk[2] + Ak], yk = kk(ek[0], ek[1], ek[2]), fk = null === (wk = Rk.j[yk]) || void 0 === wk ? void 0 : wk.meta;
-      return (null === fk || void 0 === fk ? void 0 : fk.rootId) === ak && fk.rot === bk && dk[yk - Xk] & 1 << (1 ^ Bk) ? ek : null
+    function Nb(bb, cb, sb) {
+      return sb[1] - cb[1] || Cb(bb, cb) - Cb(bb, sb)
     }
 
-    function Yk(kk, Fk, Bk, ak) {
-      const Xk = kk(Fk, Bk, ak);
-      if (!wk(Xk)) return null;
+    function Vb(bb, cb, sb, ab, Ub) {
+      var Ib;
+      let fb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bb(cb[0], cb[1], cb[2]);
+      if (!(Hb[fb - Tb] & 1 << sb)) return null;
+      const [Mb, Xb, nb] = Wb.z[Ub][sb], mb = [cb[0] + Mb, cb[1] + Xb, cb[2] + nb], lb = bb(mb[0], mb[1], mb[2]), Qb = null === (Ib = kb.g[lb]) || void 0 === Ib ? void 0 : Ib.meta;
+      return (null === Qb || void 0 === Qb ? void 0 : Qb.rootId) === ab && Qb.rot === Ub && Hb[lb - Tb] & 1 << (1 ^ sb) ? mb : null
+    }
+
+    function Lb(bb, cb, sb, ab) {
+      const Tb = bb(cb, sb, ab);
+      if (!Ib(Tb)) return null;
       const {
-        rootId: bk,
-        rot: dk
-      } = Rk.j[Xk].meta, Vk = (Fk, Bk) => {
-        let Rk = Fk,
-          tk = 1;
-        for (let ak = ik(kk, Rk, Bk, bk, dk); ak && tk < sk; ak = ik(kk, Rk, Bk, bk, dk)) Rk = ak, tk++;
+        rootId: Ub,
+        rot: Hb
+      } = kb.g[Tb].meta, Mb = (cb, sb) => {
+        let kb = cb,
+          Wb = 1;
+        for (let ab = Vb(bb, kb, sb, Ub, Hb); ab && Wb < fb; ab = Vb(bb, kb, sb, Ub, Hb)) kb = ab, Wb++;
         return {
-          end: Rk,
-          cells: tk
+          end: kb,
+          cells: Wb
         }
-      }, fk = Vk(Vk([Fk, Bk, ak], Jk).end, ek).end, mk = Vk(fk, Ak).cells, [Wk, , vk] = tk.t[dk][Ak];
-      let Yk = 1;
-      kk: for (; Yk < sk; Yk++)
-        for (let Fk = 0; Fk < mk; Fk++)
-          if (!ik(kk, [fk[0] + Wk * Fk, fk[1] - Yk + 1, fk[2] + vk * Fk], yk, bk, dk)) break kk;
+      }, Qb = Mb(Mb([cb, sb, ab], Xb).end, mb).end, eb = Mb(Qb, nb).cells, [Cb, , Nb] = Wb.z[Hb][nb];
+      let Lb = 1;
+      bb: for (; Lb < fb; Lb++)
+        for (let cb = 0; cb < eb; cb++)
+          if (!Vb(bb, [Qb[0] + Cb * cb, Qb[1] - Lb + 1, Qb[2] + Nb * cb], lb, Ub, Hb)) break bb;
       return {
-        anchor: fk,
-        rootId: bk,
-        rot: dk,
-        width: mk,
-        height: Yk
+        anchor: Qb,
+        rootId: Ub,
+        rot: Hb,
+        width: eb,
+        height: Lb
       }
     }
 
-    function Lk(kk, Fk) {
-      for (const Bk of function(kk) {
+    function ub(bb, cb) {
+      for (const sb of function(bb) {
           let {
-            anchor: Fk,
-            rot: Bk,
-            width: Rk,
-            height: ak
-          } = kk;
-          const [Xk, , bk] = tk.t[Bk][Ak], wk = [];
-          for (let tk = 0; tk < ak; tk++)
-            for (let kk = 0; kk < Rk; kk++) wk.push([Fk[0] + Xk * kk, Fk[1] - tk, Fk[2] + bk * kk]);
-          return wk
-        }(kk))
-        if (fk(Fk(Bk[0], Bk[1], Bk[2]))) return Bk;
+            anchor: cb,
+            rot: sb,
+            width: kb,
+            height: ab
+          } = bb;
+          const [Tb, , Ub] = Wb.z[sb][nb], Ib = [];
+          for (let Wb = 0; Wb < ab; Wb++)
+            for (let bb = 0; bb < kb; bb++) Ib.push([cb[0] + Tb * bb, cb[1] - Wb, cb[2] + Ub * bb]);
+          return Ib
+        }(bb))
+        if (Qb(cb(sb[0], sb[1], sb[2]))) return sb;
       return null
     }
 
-    function Ok(kk, Fk, Bk, tk, ak) {
-      const Xk = kk(Bk, tk, ak);
-      if (!wk(Xk)) return null;
+    function Yb(bb, cb, sb, Wb, ab) {
+      const Tb = bb(sb, Wb, ab);
+      if (!Ib(Tb)) return null;
       const {
-        rootId: bk,
-        rot: dk
-      } = Rk.j[Xk].meta, sk = [
-        [Bk, tk, ak]
-      ], Jk = new Set([sk[0].join()]);
-      let Ak = sk[0],
-        ek = null;
-      for (let Rk = 0; Rk < sk.length; Rk++) {
-        const Bk = sk[Rk];
-        if (vk(dk, Bk, Ak) < 0 && (Ak = Bk), fk(Fk(Bk[0], Bk[1], Bk[2]))) {
-          const Fk = Yk(kk, Bk[0], Bk[1], Bk[2]);
-          (!ek || vk(dk, Fk.anchor, ek.anchor) < 0) && (ek = Fk)
+        rootId: Ub,
+        rot: Hb
+      } = kb.g[Tb].meta, fb = [
+        [sb, Wb, ab]
+      ], Xb = new Set([fb[0].join()]);
+      let nb = fb[0],
+        mb = null;
+      for (let kb = 0; kb < fb.length; kb++) {
+        const sb = fb[kb];
+        if (Nb(Hb, sb, nb) < 0 && (nb = sb), Qb(cb(sb[0], sb[1], sb[2]))) {
+          const cb = Lb(bb, sb[0], sb[1], sb[2]);
+          (!mb || Nb(Hb, cb.anchor, mb.anchor) < 0) && (mb = cb)
         }
-        for (let Fk = 0; Fk < 4 && sk.length < Vk; Fk++) {
-          const Rk = ik(kk, Bk, Fk, bk, dk);
-          Rk && !Jk.has(Rk.join()) && (Jk.add(Rk.join()), sk.push(Rk))
+        for (let cb = 0; cb < 4 && fb.length < Mb; cb++) {
+          const kb = Vb(bb, sb, cb, Ub, Hb);
+          kb && !Xb.has(kb.join()) && (Xb.add(kb.join()), fb.push(kb))
         }
       }
-      return ek ??= Yk(kk, Ak[0], Ak[1], Ak[2]), {
-        cells: sk,
-        topLeft: Ak,
-        rect: ek,
-        textCell: Lk(ek, Fk)
+      return mb ??= Lb(bb, nb[0], nb[1], nb[2]), {
+        cells: fb,
+        topLeft: nb,
+        rect: mb,
+        textCell: ub(mb, cb)
       }
     }
 
-    function Ek(kk, Fk, Bk, Xk, bk) {
-      if (null !== Bk && wk(Bk)) {
+    function hb(bb, cb, sb, Tb, Ub) {
+      if (null !== sb && Ib(sb)) {
         const {
-          rootName: kk,
-          rot: Fk
-        } = Rk.j[Bk].meta;
-        if (tk.t[Fk].some((kk => {
-            let [Fk, Bk, Rk] = kk;
-            return Fk === Xk[0] && Bk === Xk[1] && Rk === Xk[2]
+          rootName: bb,
+          rot: cb
+        } = kb.g[sb].meta;
+        if (Wb.z[cb].some((bb => {
+            let [cb, sb, kb] = bb;
+            return cb === Tb[0] && sb === Tb[1] && kb === Tb[2]
           }))) return {
-          root: kk,
-          rot: Fk
+          root: bb,
+          rot: cb
         }
       }
-      const [dk, sk] = tk.l[bk], Vk = kk(Fk[0] - dk, Fk[1], Fk[2] - sk);
+      const [Hb, fb] = Wb.p[Ub], Mb = bb(cb[0] - Hb, cb[1], cb[2] - fb);
       return {
-        root: (0, ak.e)(Vk) ? tk.w : tk.v,
-        rot: bk
+        root: (0, ab.f)(Mb) ? Wb.E : Wb.A,
+        rot: Ub
       }
     }
   },
-  36466: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => ak,
-      d: () => Rk,
-      g: () => tk
+  36372: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => ab,
+      h: () => kb,
+      l: () => Wb
     });
-    const Rk = 15,
-      tk = 3,
-      ak = 30
+    const kb = 15,
+      Wb = 3,
+      ab = 30
   },
-  37875: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => ak,
-      e: () => Xk,
-      i: () => tk,
-      m: () => bk
+  37838: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => ab,
+      d: () => Tb,
+      e: () => Wb,
+      f: () => Ub
     });
-    var Rk = Bk(297);
-    const tk = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...Bk(597).y.map((kk => `${kk} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...Rk.k, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      ak = ["Obby RPG"];
+    var kb = sb(353);
+    const Wb = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...sb(624).t.map((bb => `${bb} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...kb.g, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      ab = ["Obby RPG"];
 
-    function Xk(kk) {
-      const Fk = kk.indexOf("|");
-      return -1 === Fk ? {
-        item: kk,
+    function Tb(bb) {
+      const cb = bb.indexOf("|");
+      return -1 === cb ? {
+        item: bb,
         clientPredictedThrower: null
       } : {
-        item: kk.slice(0, Fk),
-        clientPredictedThrower: kk.slice(Fk + 1)
+        item: bb.slice(0, cb),
+        clientPredictedThrower: bb.slice(cb + 1)
       }
     }
-    const bk = [...tk, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const Ub = [...Wb, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

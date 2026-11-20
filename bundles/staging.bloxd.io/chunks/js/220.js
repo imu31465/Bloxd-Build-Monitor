@@ -1,82 +1,82 @@
 export const id = 220;
 export const ids = [220];
 export const modules = {
-  39212: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      getBlockFaces: () => Jk,
-      getIngameIconUrl: () => yk,
-      getItemIconUrl: () => ek,
-      getItemTextureUrl: () => Ak,
-      getParticleTextureUrl: () => fk
+  39219: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      getBlockFaces: () => Xb,
+      getIngameIconUrl: () => lb,
+      getItemIconUrl: () => mb,
+      getItemTextureUrl: () => nb,
+      getParticleTextureUrl: () => Qb
     });
-    var Rk = Bk(4197),
-      tk = Bk(36708),
-      ak = Bk(9090),
-      Xk = Bk(2951);
-    const bk = new Set,
-      wk = new Set;
-    let dk = null;
+    var kb = sb(4203),
+      Wb = sb(36604),
+      ab = sb(9009),
+      Tb = sb(2913);
+    const Ub = new Set,
+      Ib = new Set;
+    let Hb = null;
 
-    function sk(kk) {
-      bk.has(kk) || (bk.add(kk), wk.add(kk), dk ??= setTimeout((() => {
-        console.warn(`Docs gallery: no default texture for ${wk.size} names`, [...wk]), wk.clear(), dk = null
+    function fb(bb) {
+      Ub.has(bb) || (Ub.add(bb), Ib.add(bb), Hb ??= setTimeout((() => {
+        console.warn(`Docs gallery: no default texture for ${Ib.size} names`, [...Ib]), Ib.clear(), Hb = null
       }), 1e3))
     }
 
-    function Vk(kk, Fk) {
+    function Mb(bb, cb) {
       try {
-        return (0, ak.getDefaultTexture)(kk, Fk).url
+        return (0, ab.getDefaultTexture)(bb, cb).url
       } catch {
-        return sk(kk), null
+        return fb(bb), null
       }
     }
 
-    function Jk(kk) {
-      var Fk, Bk;
-      const ak = tk.m[kk];
-      if (!ak || ak.itemTexture || !ak.textureInfo) return null;
+    function Xb(bb) {
+      var cb, sb;
+      const ab = Wb.l[bb];
+      if (!ab || ab.itemTexture || !ab.textureInfo) return null;
       const {
-        textureInfo: bk,
-        texturePerSide: wk
-      } = ak, dk = kk => {
-        return "string" === typeof(Fk = wk && Array.isArray(bk) ? bk[wk[kk]] : bk) ? Vk(Fk, Xk.h.BLOCK) : Fk && "object" === typeof Fk && "animTextures" in Fk ? Vk((0, Rk.j)(Fk), Xk.h.BLOCK) : null;
-        var Fk
-      }, sk = dk(2);
-      return sk ? {
-        top: sk,
-        left: null !== (Fk = dk(4)) && void 0 !== Fk ? Fk : sk,
-        right: null !== (Bk = dk(0)) && void 0 !== Bk ? Bk : sk
+        textureInfo: Ub,
+        texturePerSide: Ib
+      } = ab, Hb = bb => {
+        return "string" === typeof(cb = Ib && Array.isArray(Ub) ? Ub[Ib[bb]] : Ub) ? Mb(cb, Tb.j.BLOCK) : cb && "object" === typeof cb && "animTextures" in cb ? Mb((0, kb.j)(cb), Tb.j.BLOCK) : null;
+        var cb
+      }, fb = Hb(2);
+      return fb ? {
+        top: fb,
+        left: null !== (cb = Hb(4)) && void 0 !== cb ? cb : fb,
+        right: null !== (sb = Hb(0)) && void 0 !== sb ? sb : fb
       } : null
     }
 
-    function Ak(kk) {
-      var Fk;
-      const Bk = tk.m[kk];
-      return Vk(null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.itemTexture) && void 0 !== Fk ? Fk : "string" === typeof(null === Bk || void 0 === Bk ? void 0 : Bk.textureInfo) ? Bk.textureInfo : kk, Xk.h.ITEM)
+    function nb(bb) {
+      var cb;
+      const sb = Wb.l[bb];
+      return Mb(null !== (cb = null === sb || void 0 === sb ? void 0 : sb.itemTexture) && void 0 !== cb ? cb : "string" === typeof(null === sb || void 0 === sb ? void 0 : sb.textureInfo) ? sb.textureInfo : bb, Tb.j.ITEM)
     }
 
-    function ek(kk) {
-      var Fk, Bk;
-      return tk.m[kk] ? null !== (Fk = null === (Bk = Jk(kk)) || void 0 === Bk ? void 0 : Bk.top) && void 0 !== Fk ? Fk : Ak(kk) : null
+    function mb(bb) {
+      var cb, sb;
+      return Wb.l[bb] ? null !== (cb = null === (sb = Xb(bb)) || void 0 === sb ? void 0 : sb.top) && void 0 !== cb ? cb : nb(bb) : null
     }
 
-    function yk(kk) {
-      return Vk(kk, Xk.h.ICON)
+    function lb(bb) {
+      return Mb(bb, Tb.j.ICON)
     }
 
-    function fk(kk) {
+    function Qb(bb) {
       try {
-        return Bk(3114)(`./${kk}.png`)
+        return sb(3089)(`./${bb}.png`)
       } catch {
-        return sk(kk), null
+        return fb(bb), null
       }
     }
   },
-  36728: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Rk
+  36632: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => kb
     });
-    const Rk = {
+    const kb = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -238,4 +238,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

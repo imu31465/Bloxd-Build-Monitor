@@ -1,18 +1,18 @@
 export const id = 72;
 export const ids = [72];
 export const modules = {
-  36726: (kk, Fk, Bk) => {
-    if (Bk.d(Fk, {
-        b: () => wk,
-        c: () => tk,
-        d: () => Xk,
-        g: () => ak,
-        h: () => Yk,
-        i: () => mk
-      }), 39 == Bk.j) var Rk = Bk(36728);
-    const tk = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
-      ak = ["Blade", "Guard", "Handle"],
-      Xk = {
+  36623: (bb, cb, sb) => {
+    if (sb.d(cb, {
+        d: () => Ib,
+        h: () => Wb,
+        l: () => Tb,
+        n: () => ab,
+        q: () => Lb,
+        u: () => eb
+      }), 39 == sb.j) var kb = sb(36632);
+    const Wb = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      ab = ["Blade", "Guard", "Handle"],
+      Tb = {
         Wood: {
           material: "Wood",
           baseSword: "Wood Sword",
@@ -131,59 +131,59 @@ export const modules = {
           handleReach: .5
         }
       },
-      bk = 4,
-      wk = "Coal",
-      dk = {
+      Ub = 4,
+      Ib = "Coal",
+      Hb = {
         Blade: 1,
         Guard: .6,
         Handle: .4
       },
-      sk = 1.15,
-      Vk = 1.35,
-      Jk = .06,
-      Ak = {
+      fb = 1.15,
+      Mb = 1.35,
+      Xb = .06,
+      nb = {
         defence: {
           name: "Bulwark",
           amount: .06,
-          describe: kk => `${Ek(.06*kk)} less damage taken`
+          describe: bb => `${hb(.06*bb)} less damage taken`
         },
         coins: {
           name: "Midas",
           amount: 4,
-          describe: kk => `Mobs you slay drop ${Math.round(4*kk)}+ extra coins`
+          describe: bb => `Mobs you slay drop ${Math.round(4*bb)}+ extra coins`
         },
         crit: {
           name: "Keen Edge",
           chance: .12,
           amount: .6,
-          describe: kk => `${Ek(.12*kk)} chance to strike for +60% damage`
+          describe: bb => `${hb(.12*bb)} chance to strike for +60% damage`
         },
         bossBane: {
           name: "Bossbane",
           amount: .2,
-          describe: kk => `+${Ek(.2*kk)} damage to bosses`
+          describe: bb => `+${hb(.2*bb)} damage to bosses`
         },
         firePool: {
           name: "Magma Pool",
           chance: .15,
           amount: .12,
           cooldownMs: 3e3,
-          describe: kk => `${Ek(.15*kk)} chance to leave a fire pool under the mob that burns for 3s`
+          describe: bb => `${hb(.15*bb)} chance to leave a fire pool under the mob that burns for 3s`
         },
         lifesteal: {
           name: "Bloodthirst",
           amount: .06,
-          describe: kk => `Heal ${Ek(.06*kk)} of the damage you deal`
+          describe: bb => `Heal ${hb(.06*bb)} of the damage you deal`
         },
         starfall: {
           name: "Starfall",
           chance: .1,
           amount: .6,
           cooldownMs: 4e3,
-          describe: kk => `${Ek(.1*kk)} chance to call a falling star that hits nearby mobs and slows them`
+          describe: bb => `${hb(.1*bb)} chance to call a falling star that hits nearby mobs and slows them`
         }
       },
-      ek = {
+      mb = {
         eclipseField: {
           name: "Eclipse Field",
           description: "Right-click: slow every mob within 6 blocks for 3s",
@@ -225,120 +225,120 @@ export const modules = {
           cooldownMs: 25e3
         }
       },
-      yk = 39 == Bk.j ? Rk.d : null,
-      fk = "skyblock:forged:";
+      lb = 39 == sb.j ? kb.c : null,
+      Qb = "skyblock:forged:";
 
-    function mk(kk, Fk) {
-      return `${kk} ${Fk}`
+    function eb(bb, cb) {
+      return `${bb} ${cb}`
     }
-    tk.flatMap((kk => ak.map((Fk => mk(kk, Fk)))));
+    Wb.flatMap((bb => ab.map((cb => eb(bb, cb)))));
 
-    function Wk(kk) {
+    function Cb(bb) {
       let {
-        blade: Fk,
-        guard: Bk,
-        handle: Rk
-      } = kk;
-      return `${fk}${Fk.toLowerCase()}-${Bk.toLowerCase()}-${Rk.toLowerCase()}`
+        blade: cb,
+        guard: sb,
+        handle: kb
+      } = bb;
+      return `${Qb}${cb.toLowerCase()}-${sb.toLowerCase()}-${kb.toLowerCase()}`
     }
 
-    function vk(kk) {
-      if (! function(kk) {
-          return "string" === typeof kk && kk.startsWith(fk)
-        }(kk)) return null;
-      const Fk = kk.slice(fk.length).split("-").map((kk => tk.find((Fk => Fk.toLowerCase() === kk))));
-      return 3 !== Fk.length || Fk.includes(void 0) ? null : {
-        blade: Fk[0],
-        guard: Fk[1],
-        handle: Fk[2]
+    function Nb(bb) {
+      if (! function(bb) {
+          return "string" === typeof bb && bb.startsWith(Qb)
+        }(bb)) return null;
+      const cb = bb.slice(Qb.length).split("-").map((bb => Wb.find((cb => cb.toLowerCase() === bb))));
+      return 3 !== cb.length || cb.includes(void 0) ? null : {
+        blade: cb[0],
+        guard: cb[1],
+        handle: cb[2]
       }
     }
-    const ik = new Map;
+    const Vb = new Map;
 
-    function Yk(kk) {
-      var Fk;
-      let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yk;
-      const Rk = "string" === typeof kk ? vk(kk) : kk;
-      if (null === Rk) return null;
-      const tk = Wk(Rk),
-        wk = Bk === yk ? ik.get(tk) : void 0;
-      if (void 0 !== wk) return wk;
-      const fk = function(kk, Fk) {
-        var Bk, Rk, tk, wk, yk, fk, mk, vk, ik;
+    function Lb(bb) {
+      var cb;
+      let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lb;
+      const kb = "string" === typeof bb ? Nb(bb) : bb;
+      if (null === kb) return null;
+      const Wb = Cb(kb),
+        Ib = sb === lb ? Vb.get(Wb) : void 0;
+      if (void 0 !== Ib) return Ib;
+      const Qb = function(bb, cb) {
+        var sb, kb, Wb, Ib, lb, Qb, eb, Nb, Vb;
         const {
-          blade: Yk,
-          guard: Nk,
-          handle: Hk
-        } = kk, uk = Xk, Mk = Yk === Nk && Nk === Hk, gk = Ok((1 + uk[Yk].bladeDamage) * (Mk ? 1 + Jk : 1)), Uk = null !== (Bk = Fk.damageMultiplier) && void 0 !== Bk ? Bk : gk, ck = null !== (Rk = Fk.cooldownMultiplier) && void 0 !== Rk ? Rk : uk[Hk].handleCooldown, Gk = null !== (tk = Fk.knockbackMultiplier) && void 0 !== tk ? tk : Ok(1 + uk[Hk].handleKnockback), Tk = null !== (wk = Fk.reachBonus) && void 0 !== wk ? wk : uk[Hk].handleReach, rk = null !== (yk = Fk.damageReduction) && void 0 !== yk ? yk : uk[Nk].guardReduction, Dk = null !== (fk = Fk.traits) && void 0 !== fk ? fk : function(kk) {
-          const Fk = {},
-            Bk = {};
-          for (const bk of ak) {
-            var Rk, tk;
-            const ak = Xk[Lk(kk, bk)].trait;
-            null !== ak && (Fk[ak] = (null !== (Rk = Fk[ak]) && void 0 !== Rk ? Rk : 0) + dk[bk], Bk[ak] = (null !== (tk = Bk[ak]) && void 0 !== tk ? tk : 0) + 1)
+          blade: Lb,
+          guard: gb,
+          handle: Bb
+        } = bb, tb = Tb, yb = Lb === gb && gb === Bb, Pb = Yb((1 + tb[Lb].bladeDamage) * (yb ? 1 + Xb : 1)), Db = null !== (sb = cb.damageMultiplier) && void 0 !== sb ? sb : Pb, Eb = null !== (kb = cb.cooldownMultiplier) && void 0 !== kb ? kb : tb[Bb].handleCooldown, ib = null !== (Wb = cb.knockbackMultiplier) && void 0 !== Wb ? Wb : Yb(1 + tb[Bb].handleKnockback), Ob = null !== (Ib = cb.reachBonus) && void 0 !== Ib ? Ib : tb[Bb].handleReach, Gb = null !== (lb = cb.damageReduction) && void 0 !== lb ? lb : tb[gb].guardReduction, Kb = null !== (Qb = cb.traits) && void 0 !== Qb ? Qb : function(bb) {
+          const cb = {},
+            sb = {};
+          for (const Ub of ab) {
+            var kb, Wb;
+            const ab = Tb[ub(bb, Ub)].trait;
+            null !== ab && (cb[ab] = (null !== (kb = cb[ab]) && void 0 !== kb ? kb : 0) + Hb[Ub], sb[ab] = (null !== (Wb = sb[ab]) && void 0 !== Wb ? Wb : 0) + 1)
           }
-          for (const ak of Object.keys(Fk)) {
-            const kk = 3 === Bk[ak] ? Vk : 2 === Bk[ak] ? sk : 1;
-            Fk[ak] = Ok(Fk[ak] * kk)
+          for (const ab of Object.keys(cb)) {
+            const bb = 3 === sb[ab] ? Mb : 2 === sb[ab] ? fb : 1;
+            cb[ab] = Yb(cb[ab] * bb)
           }
-          return Fk
-        }(kk), zk = null !== (mk = Fk.ability) && void 0 !== mk ? mk : null, Pk = void 0 !== Fk.name, hk = null !== (vk = Fk.name) && void 0 !== vk ? vk : Mk ? `Pure ${Yk} Sword` : `${uk[Nk].epithet} ${Yk} Sword`, qk = null !== (ik = Fk.lore) && void 0 !== ik ? ik : `Forged by the Forge Mother from a ${Yk.toLowerCase()} blade, ${Nk.toLowerCase()} guard and ${Hk.toLowerCase()} handle.`, Ck = function(kk) {
+          return cb
+        }(bb), Zb = null !== (eb = cb.ability) && void 0 !== eb ? eb : null, zb = void 0 !== cb.name, qb = null !== (Nb = cb.name) && void 0 !== Nb ? Nb : yb ? `Pure ${Lb} Sword` : `${tb[gb].epithet} ${Lb} Sword`, db = null !== (Vb = cb.lore) && void 0 !== Vb ? Vb : `Forged by the Forge Mother from a ${Lb.toLowerCase()} blade, ${gb.toLowerCase()} guard and ${Bb.toLowerCase()} handle.`, Ab = function(bb) {
           let {
-            blade: Fk,
-            guard: Bk,
-            handle: Rk
-          } = kk;
-          const tk = Xk;
-          return bk * (tk[Fk].value + tk[Bk].value + tk[Rk].value)
-        }(kk), Zk = uk[Yk].value + uk[Nk].value + uk[Hk].value, pk = Pk ? "Tier 5" : Zk <= 4 ? "Tier 1" : Zk <= 8 ? "Tier 2" : Zk <= 14 ? "Tier 3" : Zk <= 22 ? "Tier 4" : "Tier 5", Kk = [];
-        1 !== Uk && Kk.push(`${Sk(Uk-1)} damage`);
-        1 !== ck && Kk.push(`${Ek(1/ck-1)} faster strikes`);
-        1 !== Gk && Kk.push(`${Sk(Gk-1)} knockback`);
-        Tk > 0 && Kk.push(`+${Tk} reach`);
-        rk > 0 && Kk.push(`${Ek(rk)} less damage taken while held`);
-        const xk = [];
-        for (const ak of Object.keys(Dk)) xk.push(`${Ak[ak].name}: ${Ak[ak].describe(Dk[ak])}`);
-        null !== zk && xk.push(`${ek[zk].name}: ${ek[zk].description}`);
-        return Kk.push(...xk), {
-          id: Wk(kk),
-          parts: kk,
-          baseSword: uk[Yk].baseSword,
-          displayName: hk,
-          lore: qk,
-          properties: Kk,
-          effects: xk,
-          named: Pk,
-          damageMultiplier: Uk,
-          cooldownMultiplier: ck,
-          knockbackMultiplier: Gk,
-          reachBonus: Tk,
-          damageReduction: rk,
-          traits: Dk,
-          ability: zk,
-          coalCost: Ck,
-          enchantmentTier: pk,
-          powerMultiplier: Ok(Uk / ck)
+            blade: cb,
+            guard: sb,
+            handle: kb
+          } = bb;
+          const Wb = Tb;
+          return Ub * (Wb[cb].value + Wb[sb].value + Wb[kb].value)
+        }(bb), wb = tb[Lb].value + tb[gb].value + tb[Bb].value, rb = zb ? "Tier 5" : wb <= 4 ? "Tier 1" : wb <= 8 ? "Tier 2" : wb <= 14 ? "Tier 3" : wb <= 22 ? "Tier 4" : "Tier 5", ob = [];
+        1 !== Db && ob.push(`${Jb(Db-1)} damage`);
+        1 !== Eb && ob.push(`${hb(1/Eb-1)} faster strikes`);
+        1 !== ib && ob.push(`${Jb(ib-1)} knockback`);
+        Ob > 0 && ob.push(`+${Ob} reach`);
+        Gb > 0 && ob.push(`${hb(Gb)} less damage taken while held`);
+        const Sb = [];
+        for (const ab of Object.keys(Kb)) Sb.push(`${nb[ab].name}: ${nb[ab].describe(Kb[ab])}`);
+        null !== Zb && Sb.push(`${mb[Zb].name}: ${mb[Zb].description}`);
+        return ob.push(...Sb), {
+          id: Cb(bb),
+          parts: bb,
+          baseSword: tb[Lb].baseSword,
+          displayName: qb,
+          lore: db,
+          properties: ob,
+          effects: Sb,
+          named: zb,
+          damageMultiplier: Db,
+          cooldownMultiplier: Eb,
+          knockbackMultiplier: ib,
+          reachBonus: Ob,
+          damageReduction: Gb,
+          traits: Kb,
+          ability: Zb,
+          coalCost: Ab,
+          enchantmentTier: rb,
+          powerMultiplier: Yb(Db / Eb)
         }
-      }(Rk, null !== (Fk = Bk[tk]) && void 0 !== Fk ? Fk : {});
-      return Bk === yk && ik.set(tk, fk), fk
+      }(kb, null !== (cb = sb[Wb]) && void 0 !== cb ? cb : {});
+      return sb === lb && Vb.set(Wb, Qb), Qb
     }
 
-    function Lk(kk, Fk) {
-      return "Blade" === Fk ? kk.blade : "Guard" === Fk ? kk.guard : kk.handle
+    function ub(bb, cb) {
+      return "Blade" === cb ? bb.blade : "Guard" === cb ? bb.guard : bb.handle
     }
 
-    function Ok(kk) {
-      return Math.round(100 * kk) / 100
+    function Yb(bb) {
+      return Math.round(100 * bb) / 100
     }
 
-    function Ek(kk) {
-      return `${Math.round(100*kk)}%`
+    function hb(bb) {
+      return `${Math.round(100*bb)}%`
     }
 
-    function Sk(kk) {
-      return `${kk>=0?"+":""}${Ek(kk)}`
+    function Jb(bb) {
+      return `${bb>=0?"+":""}${hb(bb)}`
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,25 +1,25 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  39041: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      default: () => kR
+  39032: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      default: () => ck
     });
-    const Rk = [0, 90, 180, 270],
-      tk = "plotsblueprint";
-    var ak = Bk(61),
-      Xk = Bk(36332),
-      bk = Bk(22),
-      wk = Bk(1585),
-      dk = Bk(1650),
-      sk = Bk(29);
-    const Vk = [
+    const kb = [0, 90, 180, 270],
+      Wb = "plotsblueprint";
+    var ab = sb(64),
+      Tb = sb(36240),
+      Ub = sb(19),
+      Ib = sb(1626),
+      Hb = sb(1704),
+      fb = sb(26);
+    const Mb = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      Jk = {
+      Xb = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -93,18 +93,18 @@ export const modules = {
           tier: "large"
         }
       },
-      Ak = ["small", "medium", "large"].flatMap((kk => Vk.flat().filter((Fk => Jk[Fk].tier === kk))));
+      nb = ["small", "medium", "large"].flatMap((bb => Mb.flat().filter((cb => Xb[cb].tier === bb))));
 
-    function ek(kk) {
-      return Jk[kk]
+    function mb(bb) {
+      return Xb[bb]
     }
-    const yk = new Map(Vk.flatMap((kk => kk.slice(1).map(((Fk, Bk) => [Fk, kk[Bk]])))));
+    const lb = new Map(Mb.flatMap((bb => bb.slice(1).map(((cb, sb) => [cb, bb[sb]])))));
 
-    function fk(kk) {
-      var Fk;
-      return null !== (Fk = yk.get(kk)) && void 0 !== Fk ? Fk : null
+    function Qb(bb) {
+      var cb;
+      return null !== (cb = lb.get(bb)) && void 0 !== cb ? cb : null
     }
-    const mk = {
+    const eb = {
       farm_hut: "plotsGame:journalNoteFarmHut",
       rusticHome_tent: "plotsGame:journalNoteRusticHomeTent",
       castle_tower: "plotsGame:journalNoteCastleTower",
@@ -112,180 +112,180 @@ export const modules = {
       farm_barn: "plotsGame:journalNoteFarmBarn"
     };
 
-    function Wk(kk, Fk) {
-      const Bk = new Set(kk),
-        Rk = function(kk) {
-          const Fk = new Set(kk);
-          return new Set(Ak.filter((kk => {
-            const Bk = fk(kk);
-            return null === Bk || Fk.has(Bk)
+    function Cb(bb, cb) {
+      const sb = new Set(bb),
+        kb = function(bb) {
+          const cb = new Set(bb);
+          return new Set(nb.filter((bb => {
+            const sb = Qb(bb);
+            return null === sb || cb.has(sb)
           })))
-        }(Bk);
-      return Ak.map((kk => {
-        const tk = kk === Fk;
-        return Bk.has(kk) ? {
-          id: kk,
-          active: tk,
+        }(sb);
+      return nb.map((bb => {
+        const Wb = bb === cb;
+        return sb.has(bb) ? {
+          id: bb,
+          active: Wb,
           state: "completed",
           unlockedBy: null
-        } : Rk.has(kk) ? {
-          id: kk,
-          active: tk,
+        } : kb.has(bb) ? {
+          id: bb,
+          active: Wb,
           state: "open",
           unlockedBy: null
         } : {
-          id: kk,
-          active: tk,
+          id: bb,
+          active: Wb,
           state: "locked",
-          unlockedBy: fk(kk)
+          unlockedBy: Qb(bb)
         }
       }))
     }
-    const vk = "plotsJournalChanged";
-    class ik {
-      constructor(kk, Fk) {
-        this.api = kk, this.placement = Fk, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.ve("journal_opened")
-        }, this.build = kk => {
-          this.ve("placement_started"), this.placement.start(kk), (0, Xk.f)()
+    const Nb = "plotsJournalChanged";
+    class Vb {
+      constructor(bb, cb) {
+        this.api = bb, this.placement = cb, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.lm("journal_opened")
+        }, this.build = bb => {
+          this.lm("placement_started"), this.placement.start(bb), (0, Tb.e)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${tk} cancel`)
+          this.api.sendCommand(`${Wb} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      he(kk) {
-        let [, Fk, Bk] = kk;
-        this.pages = Wk(Fk, Bk), sk.o.Hf(vk, this.pages, !0)
+      Km(bb) {
+        let [, cb, sb] = bb;
+        this.pages = Cb(cb, sb), fb.j.QQ(Nb, this.pages, !0)
       }
       openFromServer() {
-        this.openRequested = !0, this.yJ()
+        this.openRequested = !0, this.aX()
       }
-      yJ() {
-        this.openRequested && !bk.c.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, wk.s)() || (0, dk.isTypingInInput)() || null !== this.placement.getView() || (0, Xk.q)())
+      aX() {
+        this.openRequested && !Ub.d.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, Ib.q)() || (0, Hb.isTypingInInput)() || null !== this.placement.getView() || (0, Tb.m)())
       }
-      ve(kk) {
-        this.reported.has(kk) || (this.reported.add(kk), this.api.sendCommand(`${tk} report ${kk}`))
+      lm(bb) {
+        this.reported.has(bb) || (this.reported.add(bb), this.api.sendCommand(`${Wb} report ${bb}`))
       }
     }
-    var Yk = Bk(1020),
-      Lk = Bk.n(Yk),
-      Ok = Bk(1028),
-      Ek = Bk(1389),
-      Sk = Bk(4268),
-      Nk = Bk(3214),
-      Hk = Bk(1387),
-      uk = Bk(1987),
-      Mk = Bk(1149),
-      gk = Bk(9095);
-    const Uk = [0, 90, 180, 270],
-      ck = /^(meta\|rot\d)\|([lrud]+)$/,
-      Gk = "nesw",
-      Tk = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      rk = function(kk) {
-        const Fk = new WeakMap;
-        return (Bk, Rk) => {
-          let tk = Fk.get(Bk);
-          return void 0 === tk && (tk = kk(Bk, Rk), Fk.set(Bk, tk)), tk
+    var Lb = sb(1033),
+      ub = sb.n(Lb),
+      Yb = sb(1039),
+      hb = sb(1431),
+      Jb = sb(4270),
+      gb = sb(3184),
+      Bb = sb(1423),
+      tb = sb(2013),
+      yb = sb(1197),
+      Pb = sb(9017);
+    const Db = [0, 90, 180, 270],
+      Eb = /^(meta\|rot\d)\|([lrud]+)$/,
+      ib = "nesw",
+      Ob = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      Gb = function(bb) {
+        const cb = new WeakMap;
+        return (sb, kb) => {
+          let Wb = cb.get(sb);
+          return void 0 === Wb && (Wb = bb(sb, kb), cb.set(sb, Wb)), Wb
         }
-      }((kk => new Dk(kk)));
-    class Dk {
-      constructor(kk) {
-        this.blockMetadata = kk, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const Fk = new Set(Object.keys(kk).map((Fk => kk[Fk].id)));
-        Fk.add(0), this.maxBlockId = Math.max(...Fk)
+      }((bb => new Kb(bb)));
+    class Kb {
+      constructor(bb) {
+        this.blockMetadata = bb, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const cb = new Set(Object.keys(bb).map((cb => bb[cb].id)));
+        cb.add(0), this.maxBlockId = Math.max(...cb)
       }
       static
-      for (kk) {
-        return rk(kk)
+      for (bb) {
+        return Gb(bb)
       }
-      getBlockIdMapping(kk, Fk) {
-        const Bk = this.getBlockIdMappingKey(kk, Fk);
-        let Rk = this.blockIdMappings.get(Bk);
-        return void 0 === Rk && Uk.includes(kk) && (Rk = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, kk, Fk), this.blockIdMappings.set(Bk, Rk)), Rk
+      getBlockIdMapping(bb, cb) {
+        const sb = this.getBlockIdMappingKey(bb, cb);
+        let kb = this.blockIdMappings.get(sb);
+        return void 0 === kb && Db.includes(bb) && (kb = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, bb, cb), this.blockIdMappings.set(sb, kb)), kb
       }
-      turnBlockId(kk, Fk, Bk) {
-        return this.mapBlockId(this.blockMetadata[kk], Fk, this.getRotationMapping(Fk, Bk), Bk)
+      turnBlockId(bb, cb, sb) {
+        return this.mapBlockId(this.blockMetadata[bb], cb, this.getRotationMapping(cb, sb), sb)
       }
-      getBlockIdMappingKey(kk, Fk) {
-        return `r${kk}|m${Number(Fk)}`
+      getBlockIdMappingKey(bb, cb) {
+        return `r${bb}|m${Number(cb)}`
       }
-      createBlockIdMapping(kk, Fk, Bk, Rk) {
-        const tk = new Uint16Array(Fk + 1),
-          ak = this.getRotationMapping(Bk, Rk);
-        for (const Xk in kk) {
-          const Fk = kk[Xk];
-          tk[Fk.id] = this.mapBlockId(Fk, Bk, ak, Rk)
+      createBlockIdMapping(bb, cb, sb, kb) {
+        const Wb = new Uint16Array(cb + 1),
+          ab = this.getRotationMapping(sb, kb);
+        for (const Tb in bb) {
+          const cb = bb[Tb];
+          Wb[cb.id] = this.mapBlockId(cb, sb, ab, kb)
         }
-        return tk
+        return Wb
       }
-      getRotationMapping(kk, Fk) {
-        const Bk = Math.round(kk / 90),
-          Rk = new Uint8Array(4);
-        for (let tk = 0; tk < 4; tk++) Rk[tk] = (4 + tk - Bk) % 4;
-        if (Fk) {
-          let kk = Rk[0];
-          Rk[0] = Rk[1], Rk[1] = kk, kk = Rk[2], Rk[2] = Rk[3], Rk[3] = kk
+      getRotationMapping(bb, cb) {
+        const sb = Math.round(bb / 90),
+          kb = new Uint8Array(4);
+        for (let Wb = 0; Wb < 4; Wb++) kb[Wb] = (4 + Wb - sb) % 4;
+        if (cb) {
+          let bb = kb[0];
+          kb[0] = kb[1], kb[1] = bb, bb = kb[2], kb[2] = kb[3], kb[3] = bb
         }
-        return Rk
+        return kb
       }
-      mapBlockId(kk, Fk, Bk, Rk) {
-        var tk;
+      mapBlockId(bb, cb, sb, kb) {
+        var Wb;
         const {
-          blockMetadata: ak
-        } = this, Xk = Math.round(Fk / 90), {
-          id: bk,
-          meta: wk
-        } = kk, {
-          rot: dk,
-          rootName: sk,
-          metaStr: Vk
-        } = wk;
-        let Jk;
-        const [, Ak, ek] = null !== (tk = Tk.exec(Vk)) && void 0 !== tk ? tk : [];
-        if (void 0 !== Ak) {
-          var yk, fk;
-          Jk = null !== (yk = null === (fk = ak[`${sk}|meta|${[Gk.split("").filter(((kk,Fk)=>Ak.split("").some((kk=>{const Bk=Gk.indexOf(kk);return((Rk?3-Bk:Bk)+Xk)%4===Fk})))).join(""),ek].filter(Boolean).join("|")}`]) || void 0 === fk ? void 0 : fk.id) && void 0 !== yk ? yk : bk
-        } else if (null === dk) Jk = bk;
+          blockMetadata: ab
+        } = this, Tb = Math.round(cb / 90), {
+          id: Ub,
+          meta: Ib
+        } = bb, {
+          rot: Hb,
+          rootName: fb,
+          metaStr: Mb
+        } = Ib;
+        let Xb;
+        const [, nb, mb] = null !== (Wb = Ob.exec(Mb)) && void 0 !== Wb ? Wb : [];
+        if (void 0 !== nb) {
+          var lb, Qb;
+          Xb = null !== (lb = null === (Qb = ab[`${fb}|meta|${[ib.split("").filter(((bb,cb)=>nb.split("").some((bb=>{const sb=ib.indexOf(bb);return((kb?3-sb:sb)+Tb)%4===cb})))).join(""),mb].filter(Boolean).join("|")}`]) || void 0 === Qb ? void 0 : Qb.id) && void 0 !== lb ? lb : Ub
+        } else if (null === Hb) Xb = Ub;
         else {
-          var mk, Wk;
-          const kk = Bk[dk - 1] + 1;
-          let Fk = Vk.replace(`rot${dk}`, `rot${kk}`);
-          Rk && wk.stairsCorner && (Fk = Fk.replace(/(Left|Right)$/, (kk => "Left" === kk ? "Right" : "Left"))), Rk && "Chest" === sk && (Fk = Fk.replace(/\|(left|right)$/, ((kk, Fk) => "left" === Fk ? "|right" : "|left")));
-          const tk = ck.exec(Fk);
-          if (Rk && null !== tk) {
-            const kk = "lrud".split("").filter((kk => tk[2].includes("l" === kk ? "r" : "r" === kk ? "l" : kk)));
-            Fk = `${tk[1]}|${kk.join("")}`
+          var eb, Cb;
+          const bb = sb[Hb - 1] + 1;
+          let cb = Mb.replace(`rot${Hb}`, `rot${bb}`);
+          kb && Ib.stairsCorner && (cb = cb.replace(/(Left|Right)$/, (bb => "Left" === bb ? "Right" : "Left"))), kb && "Chest" === fb && (cb = cb.replace(/\|(left|right)$/, ((bb, cb) => "left" === cb ? "|right" : "|left")));
+          const Wb = Eb.exec(cb);
+          if (kb && null !== Wb) {
+            const bb = "lrud".split("").filter((bb => Wb[2].includes("l" === bb ? "r" : "r" === bb ? "l" : bb)));
+            cb = `${Wb[1]}|${bb.join("")}`
           }
-          const Xk = `${sk}|${Fk}`;
-          if (Jk = null !== (mk = null === (Wk = ak[Xk]) || void 0 === Wk ? void 0 : Wk.id) && void 0 !== mk ? mk : null, null === Jk) {
-            const kk = ak[sk];
-            Jk = kk.rootMetaDesc === Xk ? kk.id : bk
+          const Tb = `${fb}|${cb}`;
+          if (Xb = null !== (eb = null === (Cb = ab[Tb]) || void 0 === Cb ? void 0 : Cb.id) && void 0 !== eb ? eb : null, null === Xb) {
+            const bb = ab[fb];
+            Xb = bb.rootMetaDesc === Tb ? bb.id : Ub
           }
         }
-        return Jk
+        return Xb
       }
     }
 
-    function zk(kk, Fk, Bk) {
+    function Zb(bb, cb, sb) {
       let {
-        xRotationMappedOrigin: Rk,
-        shouldSwapXZ: tk
-      } = Bk;
-      const ak = tk ? Fk : kk;
-      return null === Rk ? ak : Rk - ak
+        xRotationMappedOrigin: kb,
+        shouldSwapXZ: Wb
+      } = sb;
+      const ab = Wb ? cb : bb;
+      return null === kb ? ab : kb - ab
     }
 
-    function Pk(kk, Fk, Bk) {
+    function zb(bb, cb, sb) {
       let {
-        zRotationMappedOrigin: Rk,
-        shouldSwapXZ: tk
-      } = Bk;
-      const ak = tk ? kk : Fk;
-      return null === Rk ? ak : Rk - ak
+        zRotationMappedOrigin: kb,
+        shouldSwapXZ: Wb
+      } = sb;
+      const ab = Wb ? bb : cb;
+      return null === kb ? ab : kb - ab
     }
-    const hk = {
+    const qb = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -347,493 +347,493 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      qk = new Map;
+      db = new Map;
 
-    function Ck(kk, Fk) {
-      const Bk = `${kk}|${Fk}`;
-      let Rk = qk.get(Bk);
-      if (void 0 === Rk) {
+    function Ab(bb, cb) {
+      const sb = `${bb}|${cb}`;
+      let kb = db.get(sb);
+      if (void 0 === kb) {
         const {
-          size: tk,
-          palette: ak,
-          layers: Xk
-        } = hk[kk], bk = 90 === Fk || 270 === Fk, [wk, dk] = bk ? [tk[2], tk[0]] : [tk[0], tk[2]], sk = function(kk, Fk, Bk) {
-          let Rk = null,
-            tk = null,
-            ak = !1;
-          switch (kk) {
+          size: Wb,
+          palette: ab,
+          layers: Tb
+        } = qb[bb], Ub = 90 === cb || 270 === cb, [Ib, Hb] = Ub ? [Wb[2], Wb[0]] : [Wb[0], Wb[2]], fb = function(bb, cb, sb) {
+          let kb = null,
+            Wb = null,
+            ab = !1;
+          switch (bb) {
             case 0:
               break;
             case 90:
-              Rk = Fk - 1, ak = !0;
+              kb = cb - 1, ab = !0;
               break;
             case 180:
-              Rk = Fk - 1, tk = Bk - 1;
+              kb = cb - 1, Wb = sb - 1;
               break;
             case 270:
-              tk = Bk - 1, ak = !0;
+              Wb = sb - 1, ab = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${kk}`)
+              throw new Error(`Invalid rotation: ${bb}`)
           }
           return {
-            xRotationMappedOrigin: Rk,
-            zRotationMappedOrigin: tk,
-            shouldSwapXZ: ak
+            xRotationMappedOrigin: kb,
+            zRotationMappedOrigin: Wb,
+            shouldSwapXZ: ab
           }
-        }(Fk, wk, dk), Vk = Dk.for(gk.j), Jk = ak.map((kk => (0, gk.h)(Vk.turnBlockId((0, gk.m)(kk), Fk, !1)))), Ak = [];
-        Xk.forEach(((kk, Fk) => {
-          kk.split(" ").forEach(((kk, Bk) => {
-            for (let Rk = 0; Rk < kk.length; Rk++)
-              if ("." !== kk[Rk]) {
-                const tk = [zk(Rk, Bk, sk), Fk, Pk(Rk, Bk, sk)];
-                Ak.push({
-                  offset: tk,
-                  block: Jk[kk.charCodeAt(Rk) - "a".charCodeAt(0)]
+        }(cb, Ib, Hb), Mb = Kb.for(Pb.g), Xb = ab.map((bb => (0, Pb.f)(Mb.turnBlockId((0, Pb.j)(bb), cb, !1)))), nb = [];
+        Tb.forEach(((bb, cb) => {
+          bb.split(" ").forEach(((bb, sb) => {
+            for (let kb = 0; kb < bb.length; kb++)
+              if ("." !== bb[kb]) {
+                const Wb = [Zb(kb, sb, fb), cb, zb(kb, sb, fb)];
+                nb.push({
+                  offset: Wb,
+                  block: Xb[bb.charCodeAt(kb) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), Rk = {
-          size: [wk, tk[1], dk],
-          cells: Ak
-        }, qk.set(Bk, Rk)
+        })), kb = {
+          size: [Ib, Wb[1], Hb],
+          cells: nb
+        }, db.set(sb, kb)
       }
-      return Rk
+      return kb
     }
-    const Zk = {
-      farm_hut: Bk.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-      farm_house: Bk.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-      farm_barn: Bk.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-      rusticHome_tent: Bk.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-      rusticHome_cabin: Bk.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-      rusticHome_house: Bk.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-      market_stand: Bk.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-      market_stall: Bk.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-      market_shop: Bk.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-      castle_wall: Bk.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-      castle_gate: Bk.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-      castle_tower: Bk.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    const wb = {
+      farm_hut: sb.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+      farm_house: sb.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+      farm_barn: sb.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+      rusticHome_tent: sb.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+      rusticHome_cabin: sb.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+      rusticHome_house: sb.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+      market_stand: sb.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+      market_stall: sb.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+      market_shop: sb.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+      castle_wall: sb.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+      castle_gate: sb.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+      castle_tower: sb.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
     };
-    var pk = Bk(1069);
-    const Kk = {
+    var rb = sb(1087);
+    const ob = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function xk(kk) {
+    function Sb(bb) {
       let {
-        page: Fk,
-        building: Bk,
-        onBuild: Rk,
-        onPutAway: tk
-      } = kk;
+        page: cb,
+        building: sb,
+        onBuild: kb,
+        onPutAway: Wb
+      } = bb;
       const {
-        t: ak
-      } = (0, Mk.x)(), {
-        displayName: Xk,
-        tier: bk
-      } = ek(Fk.id), wk = Ck(Fk.id, 0).cells.length, dk = mk[Fk.id], sk = "locked" === Fk.state, Vk = Bk ? Ek.g : Ek.o;
-      return (0, pk.jsxs)("article", {
-        className: Lk()("PlotsJournalPage", {
-          Locked: sk
+        t: ab
+      } = (0, yb.E)(), {
+        displayName: Tb,
+        tier: Ub
+      } = mb(cb.id), Ib = Ab(cb.id, 0).cells.length, Hb = eb[cb.id], fb = "locked" === cb.state, Mb = sb ? hb.d : hb.n;
+      return (0, rb.jsxs)("article", {
+        className: ub()("PlotsJournalPage", {
+          Locked: fb
         }),
-        children: [(0, pk.jsx)("h3", {
+        children: [(0, rb.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: ak(Xk.translationKey)
-        }), (0, pk.jsxs)("div", {
+          children: ab(Tb.translationKey)
+        }), (0, rb.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [ak(Kk[bk]), " \xb7 ", ak("plotsGame:journalBlocks", {
-            blocks: String(wk)
+          children: [ab(ob[Ub]), " \xb7 ", ab("plotsGame:journalBlocks", {
+            blocks: String(Ib)
           })]
-        }), (0, pk.jsxs)("div", {
+        }), (0, rb.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [Ak.map((kk => (0, pk.jsx)("img", {
-            className: Lk()({
-              Shown: kk === Fk.id
+          children: [nb.map((bb => (0, rb.jsx)("img", {
+            className: ub()({
+              Shown: bb === cb.id
             }),
-            src: Zk[kk],
+            src: wb[bb],
             alt: "",
             draggable: !1
-          }, kk))), "completed" === Fk.state && (0, pk.jsx)("span", {
+          }, bb))), "completed" === cb.state && (0, rb.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: ak("plotsGame:journalBuilt")
-          }), sk && (0, pk.jsx)("span", {
+            children: ab("plotsGame:journalBuilt")
+          }), fb && (0, rb.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, pk.jsx)(Ok.d, {
+            children: (0, rb.jsx)(Yb.b, {
               name: "lock"
             })
           })]
-        }), void 0 !== dk && "completed" !== Fk.state && (0, pk.jsx)("p", {
+        }), void 0 !== Hb && "completed" !== cb.state && (0, rb.jsx)("p", {
           className: "PlotsJournalNote",
-          children: ak(dk)
-        }), (0, pk.jsxs)("div", {
+          children: ab(Hb)
+        }), (0, rb.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === Fk.state && (0, pk.jsx)("p", {
+          children: ["locked" === cb.state && (0, rb.jsx)("p", {
             className: "PlotsJournalHint",
-            children: ak("plotsGame:journalLocked", {
-              name: ak(ek(Fk.unlockedBy).displayName.translationKey)
+            children: ab("plotsGame:journalLocked", {
+              name: ab(mb(cb.unlockedBy).displayName.translationKey)
             })
-          }), Fk.active && (0, pk.jsxs)(pk.Fragment, {
-            children: [(0, pk.jsx)("p", {
+          }), cb.active && (0, rb.jsxs)(rb.Fragment, {
+            children: [(0, rb.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: ak("plotsGame:journalBuilding")
-            }), (0, pk.jsx)(Ek.j, {
-              onClick: tk,
-              children: ak("plotsGame:journalPutAway")
+              children: ab("plotsGame:journalBuilding")
+            }), (0, rb.jsx)(hb.h, {
+              onClick: Wb,
+              children: ab("plotsGame:journalPutAway")
             })]
-          }), !sk && !Fk.active && (0, pk.jsx)(Vk, {
+          }), !fb && !cb.active && (0, rb.jsx)(Mb, {
             onClick: () => {
-              Rk(Fk.id)
+              kb(cb.id)
             },
-            children: ak("plotsGame:placementBuild")
+            children: ab("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function jk(kk) {
+    function Rb(bb) {
       let {
-        className: Fk,
-        page: Bk,
-        hidden: Rk,
-        building: tk,
-        journal: ak
-      } = kk;
-      return (0, pk.jsxs)("div", {
-        ref: kk => {
-          null !== kk && (kk.inert = Rk)
+        className: cb,
+        page: sb,
+        hidden: kb,
+        building: Wb,
+        journal: ab
+      } = bb;
+      return (0, rb.jsxs)("div", {
+        ref: bb => {
+          null !== bb && (bb.inert = kb)
         },
-        className: Lk()("PlotsJournalSide", Fk),
-        children: [void 0 !== Bk && (0, pk.jsx)(xk, {
-          page: Bk,
-          building: tk,
-          onBuild: ak.build,
-          onPutAway: ak.putAway
-        }), void 0 === Bk && (0, pk.jsx)("div", {
+        className: ub()("PlotsJournalSide", cb),
+        children: [void 0 !== sb && (0, rb.jsx)(Sb, {
+          page: sb,
+          building: Wb,
+          onBuild: ab.build,
+          onPutAway: ab.putAway
+        }), void 0 === sb && (0, rb.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var lk = Bk(291),
-      nk = Bk(1808);
+    var vb = sb(344),
+      Fb = sb(1832);
 
-    function Ik(kk) {
-      return Math.cos((0, nk.k)(kk))
+    function xb(bb) {
+      return Math.cos((0, Fb.i)(bb))
     }
 
-    function Qk(kk) {
-      return (0, nk.v)(Math.acos(lk.b.clamp(kk, -1, 1)))
+    function jb(bb) {
+      return (0, Fb.r)(Math.acos(vb.d.clamp(bb, -1, 1)))
     }
 
-    function kF(kk, Fk, Bk, Rk, tk) {
-      const ak = Math.abs(Fk - kk),
-        Xk = (0, nk.v)(tk / (Bk * Math.abs(Math.sin((0, nk.k)(kk))))),
-        bk = 450 * Math.min(1, ak / Rk),
-        wk = Xk > 0 ? 3 * ak / Xk : 1 / 0;
-      return Math.round(Math.max(120, Math.min(bk, wk)))
+    function pb(bb, cb, sb, kb, Wb) {
+      const ab = Math.abs(cb - bb),
+        Tb = (0, Fb.r)(Wb / (sb * Math.abs(Math.sin((0, Fb.i)(bb))))),
+        Ub = 450 * Math.min(1, ab / kb),
+        Ib = Tb > 0 ? 3 * ab / Tb : 1 / 0;
+      return Math.round(Math.max(120, Math.min(Ub, Ib)))
     }
-    class FF {
+    class bc {
       constructor() {
         this.samples = []
       }
-      add(kk, Fk) {
+      add(bb, cb) {
         for (this.samples.push({
-            x: kk,
-            at: Fk
-          }); Fk - this.samples[0].at > 100;) this.samples.shift()
+            x: bb,
+            at: cb
+          }); cb - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const kk = this.samples[0],
-          Fk = this.samples[this.samples.length - 1];
-        return Fk.at > kk.at ? (Fk.x - kk.x) / (Fk.at - kk.at) : 0
+        const bb = this.samples[0],
+          cb = this.samples[this.samples.length - 1];
+        return cb.at > bb.at ? (cb.x - bb.x) / (cb.at - bb.at) : 0
       }
     }
 
-    function BF(kk, Fk) {
-      return kk > Fk && kk >= 600
+    function cc(bb, cb) {
+      return bb > cb && bb >= 600
     }
 
-    function RF(kk) {
-      return Qk(new DOMMatrixReadOnly(getComputedStyle(kk).transform).m11)
+    function sc(bb) {
+      return jb(new DOMMatrixReadOnly(getComputedStyle(bb).transform).m11)
     }
 
-    function tF(kk, Fk) {
-      kk.style.transform = `rotateY(${-Fk}deg)`, kk.classList.add("Turning")
+    function kc(bb, cb) {
+      bb.style.transform = `rotateY(${-cb}deg)`, bb.classList.add("Turning")
     }
 
-    function aF(kk) {
+    function Wc(bb) {
       let {
-        journal: Fk
-      } = kk;
+        journal: cb
+      } = bb;
       const {
-        t: Bk
-      } = (0, Mk.x)(), Rk = (0, Hk.g)(vk, Fk.getPages()), tk = (0, uk.d)(BF), [bk, wk] = (0, ak.useState)((() => function(kk) {
-        const Fk = kk.findIndex((kk => kk.active));
-        return -1 !== Fk ? Fk : Math.max(0, kk.findIndex((kk => "open" === kk.state)))
-      }(Rk))), sk = (0, ak.useRef)(null), Vk = (0, ak.useRef)(null), Jk = (0, ak.useRef)({
+        t: sb
+      } = (0, yb.E)(), kb = (0, Bb.h)(Nb, cb.getPages()), Wb = (0, tb.c)(cc), [Ub, Ib] = (0, ab.useState)((() => function(bb) {
+        const cb = bb.findIndex((bb => bb.active));
+        return -1 !== cb ? cb : Math.max(0, bb.findIndex((bb => "open" === bb.state)))
+      }(kb))), fb = (0, ab.useRef)(null), Mb = (0, ab.useRef)(null), Xb = (0, ab.useRef)({
         Forward: null,
         Back: null
-      }), Ak = tk ? 2 : 1, ek = tk ? 180 : 90, yk = bk - bk % Ak, fk = yk > 0, mk = yk + Ak < Rk.length, Wk = (0, ak.useCallback)((() => {
-        const kk = Vk.current;
-        return null === kk ? yk : (Vk.current = null, kk.animation.cancel(), (Fk = Jk.current[kk.direction]).style.transform = "", Fk.classList.remove("Turning"), null === kk.next ? yk : (wk(kk.next), kk.next));
-        var Fk
-      }), [yk]), ik = (0, ak.useCallback)(((kk, Fk, Bk, Rk) => {
-        const tk = Jk.current[kk],
-          ak = RF(tk),
-          Xk = Fk === ("Forward" === kk) ? ek : 0;
-        tF(tk, Xk);
-        const bk = tk.animate([{
-          transform: `rotateY(${-ak}deg)`
+      }), nb = Wb ? 2 : 1, mb = Wb ? 180 : 90, lb = Ub - Ub % nb, Qb = lb > 0, eb = lb + nb < kb.length, Cb = (0, ab.useCallback)((() => {
+        const bb = Mb.current;
+        return null === bb ? lb : (Mb.current = null, bb.animation.cancel(), (cb = Xb.current[bb.direction]).style.transform = "", cb.classList.remove("Turning"), null === bb.next ? lb : (Ib(bb.next), bb.next));
+        var cb
+      }), [lb]), Vb = (0, ab.useCallback)(((bb, cb, sb, kb) => {
+        const Wb = Xb.current[bb],
+          ab = sc(Wb),
+          Tb = cb === ("Forward" === bb) ? mb : 0;
+        kc(Wb, Tb);
+        const Ub = Wb.animate([{
+          transform: `rotateY(${-ab}deg)`
         }, {
-          transform: `rotateY(${-Xk}deg)`
+          transform: `rotateY(${-Tb}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : kF(ak, Xk, tk.offsetWidth, ek, Xk > ak ? -Bk : Bk),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : pb(ab, Tb, Wb.offsetWidth, mb, Tb > ab ? -sb : sb),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        Vk.current = {
-          direction: kk,
-          animation: bk,
-          next: Fk ? Rk + ("Forward" === kk ? Ak : -Ak) : null
-        }, bk.onfinish = () => {
-          var kk;
-          (null === (kk = Vk.current) || void 0 === kk ? void 0 : kk.animation) === bk && Wk()
+        Mb.current = {
+          direction: bb,
+          animation: Ub,
+          next: cb ? kb + ("Forward" === bb ? nb : -nb) : null
+        }, Ub.onfinish = () => {
+          var bb;
+          (null === (bb = Mb.current) || void 0 === bb ? void 0 : bb.animation) === Ub && Cb()
         }
-      }), [Ak, ek, Wk]), Yk = (0, ak.useCallback)((kk => {
-        if (null !== sk.current) return;
-        const Fk = Wk();
-        ("Forward" === kk ? Fk + Ak < Rk.length : Fk > 0) && ik(kk, !0, 0, Fk)
-      }), [Wk, ik, Ak, Rk.length]);
-      (0, ak.useEffect)((() => {
-        Fk.onOpened()
-      }), [Fk]), (0, ak.useEffect)((() => () => {
-        var kk;
-        null === (kk = Vk.current) || void 0 === kk || kk.animation.cancel()
-      }), []), (0, ak.useEffect)((() => {
-        const kk = kk => {
-          var Fk;
-          kk.pointerId !== (null === (Fk = sk.current) || void 0 === Fk ? void 0 : Fk.pointerId) || sk.current.following || (sk.current = null)
+      }), [nb, mb, Cb]), Lb = (0, ab.useCallback)((bb => {
+        if (null !== fb.current) return;
+        const cb = Cb();
+        ("Forward" === bb ? cb + nb < kb.length : cb > 0) && Vb(bb, !0, 0, cb)
+      }), [Cb, Vb, nb, kb.length]);
+      (0, ab.useEffect)((() => {
+        cb.onOpened()
+      }), [cb]), (0, ab.useEffect)((() => () => {
+        var bb;
+        null === (bb = Mb.current) || void 0 === bb || bb.animation.cancel()
+      }), []), (0, ab.useEffect)((() => {
+        const bb = bb => {
+          var cb;
+          bb.pointerId !== (null === (cb = fb.current) || void 0 === cb ? void 0 : cb.pointerId) || fb.current.following || (fb.current = null)
         };
-        return window.addEventListener("pointerup", kk), () => {
-          window.removeEventListener("pointerup", kk)
+        return window.addEventListener("pointerup", bb), () => {
+          window.removeEventListener("pointerup", bb)
         }
-      }), []), (0, Nk.b)((kk => ("ArrowLeft" === kk.code || "ArrowRight" === kk.code) && !(0, dk.isTypingInInput)()), (kk => {
-        kk.stopPropagation(), Yk("ArrowLeft" === kk.code ? "Back" : "Forward")
+      }), []), (0, gb.e)((bb => ("ArrowLeft" === bb.code || "ArrowRight" === bb.code) && !(0, Hb.isTypingInInput)()), (bb => {
+        bb.stopPropagation(), Lb("ArrowLeft" === bb.code ? "Back" : "Forward")
       }));
-      const Ok = (kk, Fk, Bk) => {
-          const Rk = function(kk, Fk, Bk, Rk) {
-            return (kk < 0 ? Bk : Rk) ? lk.b.clampAbs(kk, Fk) : Math.sign(kk) * Fk * (1 - 1 / (.55 * Math.abs(kk) / Fk + 1))
-          }(kk.base + Bk, Ak * kk.width, mk, fk);
-          return "Forward" === Fk ? Math.min(Rk, 0) : Math.max(Rk, 0)
+      const Yb = (bb, cb, sb) => {
+          const kb = function(bb, cb, sb, kb) {
+            return (bb < 0 ? sb : kb) ? vb.d.clampAbs(bb, cb) : Math.sign(bb) * cb * (1 - 1 / (.55 * Math.abs(bb) / cb + 1))
+          }(bb.base + sb, nb * bb.width, eb, Qb);
+          return "Forward" === cb ? Math.min(kb, 0) : Math.max(kb, 0)
         },
-        gk = (kk, Fk) => {
-          const Bk = sk.current;
-          if (sk.current = null, null === Bk.direction) return;
-          Bk.speed.add(kk, Fk);
-          const Rk = Bk.speed.get(),
-            tk = Ok(Bk, Bk.direction, kk - Bk.x);
-          ik(Bk.direction, null !== function(kk, Fk, Bk, Rk, tk) {
-            if (Math.abs(Fk) >= .3 ? Math.sign(Fk) !== Math.sign(kk) : Math.abs(kk) < .5 * Bk) return null;
-            const ak = kk < 0 ? "Forward" : "Back";
-            return ("Forward" === ak ? Rk : tk) ? ak : null
-          }(tk, Rk, Ak * Bk.width, mk, fk), Rk, yk)
+        Pb = (bb, cb) => {
+          const sb = fb.current;
+          if (fb.current = null, null === sb.direction) return;
+          sb.speed.add(bb, cb);
+          const kb = sb.speed.get(),
+            Wb = Yb(sb, sb.direction, bb - sb.x);
+          Vb(sb.direction, null !== function(bb, cb, sb, kb, Wb) {
+            if (Math.abs(cb) >= .3 ? Math.sign(cb) !== Math.sign(bb) : Math.abs(bb) < .5 * sb) return null;
+            const ab = bb < 0 ? "Forward" : "Back";
+            return ("Forward" === ab ? kb : Wb) ? ab : null
+          }(Wb, kb, nb * sb.width, eb, Qb), kb, lb)
         },
-        Uk = Rk.some((kk => kk.active)),
-        ck = (kk, Bk, tk) => (0, pk.jsx)(jk, {
-          className: kk,
-          page: Bk >= 0 && Bk < Rk.length ? Rk[Bk] : void 0,
-          hidden: tk,
-          building: Uk,
-          journal: Fk
+        Db = kb.some((bb => bb.active)),
+        Eb = (bb, sb, Wb) => (0, rb.jsx)(Rb, {
+          className: bb,
+          page: sb >= 0 && sb < kb.length ? kb[sb] : void 0,
+          hidden: Wb,
+          building: Db,
+          journal: cb
         });
-      return (0, pk.jsx)(Sk.e, {
-        close: Xk.i,
+      return (0, rb.jsx)(Jb.c, {
+        close: Tb.g,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, pk.jsxs)("section", {
-          className: Lk()("PlotsJournal", {
-            Spread: tk
+        children: (0, rb.jsxs)("section", {
+          className: ub()("PlotsJournal", {
+            Spread: Wb
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": Bk("plotsGame:journalTitle"),
-          children: [(0, pk.jsx)(Ek.k, {
+          "aria-label": sb("plotsGame:journalTitle"),
+          children: [(0, rb.jsx)(hb.j, {
             className: "PlotsJournalClose",
-            onClick: Xk.i
-          }), (0, pk.jsx)(XF, {
+            onClick: Tb.g
+          }), (0, rb.jsx)(ac, {
             direction: "Back",
-            disabled: !fk,
-            onTurn: Yk
-          }), (0, pk.jsx)("div", {
+            disabled: !Qb,
+            onTurn: Lb
+          }), (0, rb.jsx)("div", {
             className: "PlotsJournalBookPages",
-            onPointerDown: kk => {
-              var Fk;
-              if (!kk.isPrimary || 0 !== kk.button || null !== Vk.current && null !== kk.target.closest("button")) return;
-              const Bk = new FF;
-              Bk.add(kk.clientX, kk.timeStamp);
-              const Rk = Jk.current.Forward.offsetWidth,
-                tk = Vk.current;
-              Vk.current = null;
-              let ak = 0;
-              if (null !== tk) {
-                const Fk = Jk.current[tk.direction],
-                  Bk = RF(Fk);
-                tk.animation.cancel(), tF(Fk, Bk), ak = function(kk, Fk, Bk, Rk) {
-                  return (kk < 0 ? Bk : Rk) ? kk : Math.sign(kk) * Fk * (1 / (1 - Math.min(Math.abs(kk) / Fk, .99)) - 1) / .55
-                }(function(kk, Fk, Bk, Rk) {
-                  return Bk * (Ik(Fk) - Ik("Forward" === kk ? 0 : Rk))
-                }(tk.direction, Bk, Rk, ek), Ak * Rk, mk, fk), kk.currentTarget.setPointerCapture(kk.pointerId)
+            onPointerDown: bb => {
+              var cb;
+              if (!bb.isPrimary || 0 !== bb.button || null !== Mb.current && null !== bb.target.closest("button")) return;
+              const sb = new bc;
+              sb.add(bb.clientX, bb.timeStamp);
+              const kb = Xb.current.Forward.offsetWidth,
+                Wb = Mb.current;
+              Mb.current = null;
+              let ab = 0;
+              if (null !== Wb) {
+                const cb = Xb.current[Wb.direction],
+                  sb = sc(cb);
+                Wb.animation.cancel(), kc(cb, sb), ab = function(bb, cb, sb, kb) {
+                  return (bb < 0 ? sb : kb) ? bb : Math.sign(bb) * cb * (1 / (1 - Math.min(Math.abs(bb) / cb, .99)) - 1) / .55
+                }(function(bb, cb, sb, kb) {
+                  return sb * (xb(cb) - xb("Forward" === bb ? 0 : kb))
+                }(Wb.direction, sb, kb, mb), nb * kb, eb, Qb), bb.currentTarget.setPointerCapture(bb.pointerId)
               }
-              sk.current = {
-                pointerId: kk.pointerId,
-                x: kk.clientX,
-                y: kk.clientY,
-                base: ak,
-                width: Rk,
-                following: null !== tk,
-                direction: null !== (Fk = null === tk || void 0 === tk ? void 0 : tk.direction) && void 0 !== Fk ? Fk : null,
-                speed: Bk
+              fb.current = {
+                pointerId: bb.pointerId,
+                x: bb.clientX,
+                y: bb.clientY,
+                base: ab,
+                width: kb,
+                following: null !== Wb,
+                direction: null !== (cb = null === Wb || void 0 === Wb ? void 0 : Wb.direction) && void 0 !== cb ? cb : null,
+                speed: sb
               }
             },
-            onPointerMove: kk => {
-              const Fk = sk.current;
-              if (null === Fk || kk.pointerId !== Fk.pointerId) return;
-              if (0 === kk.buttons) return void gk(kk.clientX, kk.timeStamp);
-              const Bk = kk.clientX - Fk.x;
-              !Fk.following && function(kk, Fk) {
-                return Math.abs(kk) > 8 && Math.abs(kk) > Math.abs(Fk)
-              }(Bk, kk.clientY - Fk.y) && (Fk.following = !0, Fk.direction = Bk < 0 ? "Forward" : "Back", kk.currentTarget.setPointerCapture(kk.pointerId)), null !== Fk.direction && (Fk.speed.add(kk.clientX, kk.timeStamp), tF(Jk.current[Fk.direction], function(kk, Fk, Bk, Rk) {
-                const tk = Bk * Ik("Forward" === kk ? 0 : Rk) + Fk;
-                return lk.b.clamp(Qk(tk / Bk), 0, Rk)
-              }(Fk.direction, Ok(Fk, Fk.direction, Bk), Fk.width, ek)))
+            onPointerMove: bb => {
+              const cb = fb.current;
+              if (null === cb || bb.pointerId !== cb.pointerId) return;
+              if (0 === bb.buttons) return void Pb(bb.clientX, bb.timeStamp);
+              const sb = bb.clientX - cb.x;
+              !cb.following && function(bb, cb) {
+                return Math.abs(bb) > 8 && Math.abs(bb) > Math.abs(cb)
+              }(sb, bb.clientY - cb.y) && (cb.following = !0, cb.direction = sb < 0 ? "Forward" : "Back", bb.currentTarget.setPointerCapture(bb.pointerId)), null !== cb.direction && (cb.speed.add(bb.clientX, bb.timeStamp), kc(Xb.current[cb.direction], function(bb, cb, sb, kb) {
+                const Wb = sb * xb("Forward" === bb ? 0 : kb) + cb;
+                return vb.d.clamp(jb(Wb / sb), 0, kb)
+              }(cb.direction, Yb(cb, cb.direction, sb), cb.width, mb)))
             },
-            onPointerUp: kk => {
-              var Fk;
-              kk.pointerId === (null === (Fk = sk.current) || void 0 === Fk ? void 0 : Fk.pointerId) && gk(kk.clientX, kk.timeStamp)
+            onPointerUp: bb => {
+              var cb;
+              bb.pointerId === (null === (cb = fb.current) || void 0 === cb ? void 0 : cb.pointerId) && Pb(bb.clientX, bb.timeStamp)
             },
-            onPointerCancel: kk => {
-              const Fk = sk.current;
-              kk.pointerId === (null === Fk || void 0 === Fk ? void 0 : Fk.pointerId) && (sk.current = null, null !== Fk.direction && ik(Fk.direction, !1, 0, yk))
+            onPointerCancel: bb => {
+              const cb = fb.current;
+              bb.pointerId === (null === cb || void 0 === cb ? void 0 : cb.pointerId) && (fb.current = null, null !== cb.direction && Vb(cb.direction, !1, 0, lb))
             },
-            children: (0, pk.jsxs)("div", {
+            children: (0, rb.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [tk && ck("Left", yk - 2, !0), ck("Right", yk + 2 * Ak - 1, !0), (0, pk.jsxs)("div", {
-                ref: kk => {
-                  Jk.current.Back = kk
+              children: [Wb && Eb("Left", lb - 2, !0), Eb("Right", lb + 2 * nb - 1, !0), (0, rb.jsxs)("div", {
+                ref: bb => {
+                  Xb.current.Back = bb
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [ck("Recto", yk - 1, !0), tk && ck("Verso", yk, !1)]
-              }), (0, pk.jsxs)("div", {
-                ref: kk => {
-                  Jk.current.Forward = kk
+                children: [Eb("Recto", lb - 1, !0), Wb && Eb("Verso", lb, !1)]
+              }), (0, rb.jsxs)("div", {
+                ref: bb => {
+                  Xb.current.Forward = bb
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [ck("Recto", yk + Ak - 1, !1), tk && ck("Verso", yk + Ak, !0)]
+                children: [Eb("Recto", lb + nb - 1, !1), Wb && Eb("Verso", lb + nb, !0)]
               })]
             })
-          }), (0, pk.jsx)(XF, {
+          }), (0, rb.jsx)(ac, {
             direction: "Forward",
-            disabled: !mk,
-            onTurn: Yk
+            disabled: !eb,
+            onTurn: Lb
           })]
         })
       })
     }
 
-    function XF(kk) {
+    function ac(bb) {
       let {
-        direction: Fk,
-        disabled: Bk,
-        onTurn: Rk
-      } = kk;
+        direction: cb,
+        disabled: sb,
+        onTurn: kb
+      } = bb;
       const {
-        t: tk
-      } = (0, Mk.x)();
-      return (0, pk.jsx)("div", {
-        className: Lk()("PlotsJournalArrow", Fk),
-        children: (0, pk.jsx)(Ek.g, {
-          disabled: Bk,
-          ariaLabel: tk("Forward" === Fk ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: Wb
+      } = (0, yb.E)();
+      return (0, rb.jsx)("div", {
+        className: ub()("PlotsJournalArrow", cb),
+        children: (0, rb.jsx)(hb.d, {
+          disabled: sb,
+          ariaLabel: Wb("Forward" === cb ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            Rk(Fk)
+            kb(cb)
           },
-          children: (0, pk.jsx)(Ok.d, {
+          children: (0, rb.jsx)(Yb.b, {
             name: "angle-up"
           })
         })
       })
     }
-    var bF = Bk(36329),
-      wF = Bk(1835),
-      dF = Bk(1879);
-    const sF = "plotsStepChanged",
-      VF = "plotsPlotChanged";
-    class JF {
+    var Tc = sb(36235),
+      Uc = sb(1858),
+      Ic = sb(1915);
+    const Hc = "plotsStepChanged",
+      fc = "plotsPlotChanged";
+    class Mc {
       constructor() {
         this.step = ["none"], this.plot = ["none"]
       }
       getStep() {
         return this.step
       }
-      receiveStep(kk) {
-        this.step = kk, sk.o.Hf(sF, kk, !0)
+      receiveStep(bb) {
+        this.step = bb, fb.j.QQ(Hc, bb, !0)
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(kk) {
-        this.plot = kk, sk.o.Hf(VF, kk, !0)
+      receivePlot(bb) {
+        this.plot = bb, fb.j.QQ(fc, bb, !0)
       }
     }
-    const AF = "KeyJ";
+    const Xc = "KeyJ";
 
-    function eF(kk) {
+    function nc(bb) {
       let {
-        hud: Fk,
-        journal: Bk
-      } = kk;
-      const Rk = (0, Hk.g)(vk, Bk.getPages()),
-        tk = (0, Hk.g)(sF, Fk.getStep()),
+        hud: cb,
+        journal: sb
+      } = bb;
+      const kb = (0, Bb.h)(Nb, sb.getPages()),
+        Wb = (0, Bb.h)(Hc, cb.getStep()),
         {
-          isTouchScreen: ak
-        } = (0, bk.h)(["isTouchScreen"]),
+          isTouchScreen: ab
+        } = (0, Ub.p)(["isTouchScreen"]),
         {
-          t: sk
-        } = (0, Mk.x)(),
-        Vk = null !== Rk && "none" === tk[0];
-      return (0, Nk.b)((kk => null !== Rk && kk.code === AF && !kk.repeat && !(0, dk.isTypingInInput)()), (kk => {
-        (0, wk.F)(kk, Vk, Xk.q)
-      })), Vk ? (0, pk.jsx)(bF.g, {
+          t: fb
+        } = (0, yb.E)(),
+        Mb = null !== kb && "none" === Wb[0];
+      return (0, gb.e)((bb => null !== kb && bb.code === Xc && !bb.repeat && !(0, Hb.isTypingInInput)()), (bb => {
+        (0, Ib.C)(bb, Mb, Tb.m)
+      })), Mb ? (0, rb.jsx)(Tc.e, {
         placement: "topRight",
-        children: (0, pk.jsx)("div", {
+        children: (0, rb.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, pk.jsxs)("button", {
+          children: (0, rb.jsxs)("button", {
             type: "button",
-            className: Lk()("PlotsJournalButton SmallTextBold", {
-              Touch: ak
+            className: ub()("PlotsJournalButton SmallTextBold", {
+              Touch: ab
             }),
-            onClick: Xk.q,
-            children: [(0, pk.jsx)("span", {
+            onClick: Tb.m,
+            children: [(0, rb.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, pk.jsx)(wF.e, {
+              children: (0, rb.jsx)(Uc.d, {
                 itemName: "Book",
                 amount: 0
               })
-            }), sk("plotsGame:journalButton"), !ak && (0, pk.jsx)(dF.c, {
+            }), fb("plotsGame:journalButton"), !ab && (0, rb.jsx)(Ic.d, {
               className: "PlotsJournalButtonKey",
-              keyCode: AF
+              keyCode: Xc
             })]
           })
         })
       }) : null
     }
-    var yF = Bk(38064),
-      fF = Bk(37830),
-      mF = Bk(36605),
-      WF = Bk(9114),
-      vF = Bk(9132),
-      iF = Bk(37497);
-    const YF = new Map([
+    var mc = sb(38020),
+      lc = sb(37780),
+      Qc = sb(36502),
+      ec = sb(9057),
+      Cc = sb(9067),
+      Nc = sb(37403);
+    const Vc = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -858,791 +858,791 @@ export const modules = {
         ["White Concrete", [.89, .894, .894]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      oF = [...mF.b.blockRemoveActionRoots, ...fF.b, ...WF.g, "Board", "Code Block", "Custom Lobby Block"],
-      LF = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let OF = null;
+      Lc = [...Qc.d.blockRemoveActionRoots, ...lc.d, ...ec.k, "Board", "Code Block", "Custom Lobby Block"],
+      uc = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let Yc = null;
 
-    function EF() {
-      return OF ??= function() {
-        const kk = SF(),
-          Fk = Math.max(...kk.map((kk => gk.j[kk].id))) + 1,
-          Bk = new Int32Array(Fk),
-          Rk = new Int32Array(Fk),
-          tk = new Uint8Array(Fk).fill(1),
-          ak = new Uint8Array(Fk),
-          Xk = new Uint8Array(Fk),
-          bk = new Array(Fk).fill("Air"),
-          wk = new Map,
-          dk = kk => {
-            let Fk = wk.get(kk);
-            return void 0 === Fk && (Fk = wk.size + 1, wk.set(kk, Fk)), Fk
+    function hc() {
+      return Yc ??= function() {
+        const bb = Jc(),
+          cb = Math.max(...bb.map((bb => Pb.g[bb].id))) + 1,
+          sb = new Int32Array(cb),
+          kb = new Int32Array(cb),
+          Wb = new Uint8Array(cb).fill(1),
+          ab = new Uint8Array(cb),
+          Tb = new Uint8Array(cb),
+          Ub = new Array(cb).fill("Air"),
+          Ib = new Map,
+          Hb = bb => {
+            let cb = Ib.get(bb);
+            return void 0 === cb && (cb = Ib.size + 1, Ib.set(bb, cb)), cb
           },
-          sk = new Set(oF);
-        for (const Jk of kk) {
-          var Vk;
+          fb = new Set(Lc);
+        for (const Xb of bb) {
+          var Mb;
           const {
-            id: kk,
-            meta: Fk,
-            altActionable: wk,
-            canBePlacedOver: Ak
-          } = gk.j[Jk];
-          Bk[kk] = dk(NF(Jk));
-          const ek = Fk.stairsCorner;
-          if (null === ek) Rk[kk] = Bk[kk];
+            id: bb,
+            meta: cb,
+            altActionable: Ib,
+            canBePlacedOver: nb
+          } = Pb.g[Xb];
+          sb[bb] = Hb(gc(Xb));
+          const mb = cb.stairsCorner;
+          if (null === mb) kb[bb] = sb[bb];
           else {
-            const Bk = ek.endsWith("Right");
-            Rk[kk] = dk(`${Fk.rootName}|rot${Bk?Fk.rot%4+1:Fk.rot}|${Fk.halfblockPlacement}|${ek.replace("Right","Left")}`)
+            const sb = mb.endsWith("Right");
+            kb[bb] = Hb(`${cb.rootName}|rot${sb?cb.rot%4+1:cb.rot}|${cb.halfblockPlacement}|${mb.replace("Right","Left")}`)
           }
-          tk[kk] = Ak ? 1 : 0, ak[kk] = wk || null !== Fk.open || Jk in iF.e || sk.has(Fk.rootName) || void 0 !== (0, fF.e)(Fk.rootName) ? 1 : 0;
+          Wb[bb] = nb ? 1 : 0, ab[bb] = Ib || null !== cb.open || Xb in Nc.d || fb.has(cb.rootName) || void 0 !== (0, lc.f)(cb.rootName) ? 1 : 0;
           const {
-            rootName: yk
-          } = Fk;
-          Xk[kk] = null !== Fk.open || fF.b.includes(yk) || yk.includes("Bookshelf") || yk.includes("Mailbox") ? 1 : 0, bk[kk] = null !== (Vk = (0, yF.d)(kk)) && void 0 !== Vk ? Vk : yk
+            rootName: lb
+          } = cb;
+          Tb[bb] = null !== cb.open || lc.d.includes(lb) || lb.includes("Bookshelf") || lb.includes("Mailbox") ? 1 : 0, Ub[bb] = null !== (Mb = (0, mc.e)(bb)) && void 0 !== Mb ? Mb : lb
         }
         return {
-          kinds: Bk,
-          shapes: Rk,
-          empty: tk,
-          inUse: ak,
-          ownAltActionMessage: Xk,
-          placingItems: bk
+          kinds: sb,
+          shapes: kb,
+          empty: Wb,
+          inUse: ab,
+          ownAltActionMessage: Tb,
+          placingItems: Ub
         }
-      }(), OF
+      }(), Yc
     }
 
-    function SF() {
-      return Object.keys(gk.j).filter((kk => gk.j[kk].name === kk))
+    function Jc() {
+      return Object.keys(Pb.g).filter((bb => Pb.g[bb].name === bb))
     }
 
-    function NF(kk) {
-      var Fk;
-      const Bk = gk.j[kk],
+    function gc(bb) {
+      var cb;
+      const sb = Pb.g[bb],
         {
-          rootName: Rk,
-          rot: tk
-        } = Bk.meta,
-        [, ...ak] = (null !== (Fk = Bk.rootMetaDesc) && void 0 !== Fk ? Fk : kk).split("|"),
-        Xk = ak.filter((kk => !("meta" === kk || LF.test(kk) || (0, vF.E)(Bk) && /^[nesw]+$/.test(kk) || WF.g.includes(Rk) && /^[lrud]+$/.test(kk) || lk.J.includes(Rk) && /^(left|right)$/.test(kk))));
-      return [Rk, ...Xk].map((kk => "fenceGate" === Bk.model && kk === `rot${tk}` ? "rot" + ((tk - 1) % 2 + 1) : kk)).join("|")
+          rootName: kb,
+          rot: Wb
+        } = sb.meta,
+        [, ...ab] = (null !== (cb = sb.rootMetaDesc) && void 0 !== cb ? cb : bb).split("|"),
+        Tb = ab.filter((bb => !("meta" === bb || uc.test(bb) || (0, Cc.C)(sb) && /^[nesw]+$/.test(bb) || ec.k.includes(kb) && /^[lrud]+$/.test(bb) || vb.K.includes(kb) && /^(left|right)$/.test(bb))));
+      return [kb, ...Tb].map((bb => "fenceGate" === sb.model && bb === `rot${Wb}` ? "rot" + ((Wb - 1) % 2 + 1) : bb)).join("|")
     }
 
-    function HF(kk, Fk) {
+    function Bc(bb, cb) {
       const {
-        kinds: Bk,
-        shapes: Rk
-      } = EF();
-      return Bk[kk] === Bk[Fk] || Rk[kk] === Rk[Fk]
+        kinds: sb,
+        shapes: kb
+      } = hc();
+      return sb[bb] === sb[cb] || kb[bb] === kb[cb]
     }
 
-    function uF(kk) {
-      return 1 === EF().empty[kk]
+    function tc(bb) {
+      return 1 === hc().empty[bb]
     }
 
-    function MF(kk) {
-      return EF().placingItems[kk]
+    function yc(bb) {
+      return hc().placingItems[bb]
     }
 
-    function gF(kk) {
-      return YF.get(gk.j[kk].meta.rootName)
+    function Pc(bb) {
+      return Vc.get(Pb.g[bb].meta.rootName)
     }
-    var UF = Bk(9112),
-      cF = Bk(9127);
-    const GF = [0, 0, 0, 1, 1, 1],
-      TF = (0, UF.d)([
+    var Dc = sb(9050),
+      Ec = sb(9064);
+    const ic = [0, 0, 0, 1, 1, 1],
+      Oc = (0, Dc.b)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      rF = (0, UF.d)([
+      Gc = (0, Dc.b)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      DF = (0, UF.d)([
+      Kc = (0, Dc.b)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      zF = [0, 1, 2, 3].map((kk => (0, UF.d)((0, UF.q)([
+      Zc = [0, 1, 2, 3].map((bb => (0, Dc.b)((0, Dc.m)([
         [3, 2, 0, 5, 7, 3]
-      ], kk))));
+      ], bb))));
 
-    function PF(kk) {
+    function zc(bb) {
       const {
-        nb: Fk,
-        model: Bk,
-        blockModel: Rk,
-        meta: tk
-      } = gk.j[kk];
-      return void 0 !== Fk ? Fk : "CentreCross" === Bk ? TF : null !== Rk && void 0 !== Rk && Rk.startsWith("torch") ? tk.halfblockPlacement === cF.e.side ? zF[tk.rot - 1] : tk.halfblockPlacement === cF.e.top ? DF : rF : GF
+        hQ: cb,
+        model: sb,
+        blockModel: kb,
+        meta: Wb
+      } = Pb.g[bb];
+      return void 0 !== cb ? cb : "CentreCross" === sb ? Oc : null !== kb && void 0 !== kb && kb.startsWith("torch") ? Wb.halfblockPlacement === Ec.e.side ? Zc[Wb.rot - 1] : Wb.halfblockPlacement === Ec.e.top ? Kc : Gc : ic
     }
-    var hF = Bk(36568),
-      qF = Bk(182);
+    var qc = sb(36469),
+      dc = sb(223);
 
-    function CF(kk, Fk) {
-      const Bk = qF.h.Qm / 2;
-      return kk[0] < Fk[0] + Bk && kk[0] + 1 > Fk[0] - Bk && kk[1] < Fk[1] + qF.h.FW && kk[1] + 1 > Fk[1] && kk[2] < Fk[2] + Bk && kk[2] + 1 > Fk[2] - Bk
+    function Ac(bb, cb) {
+      const sb = dc.e.YC / 2;
+      return bb[0] < cb[0] + sb && bb[0] + 1 > cb[0] - sb && bb[1] < cb[1] + dc.e.JC && bb[1] + 1 > cb[1] && bb[2] < cb[2] + sb && bb[2] + 1 > cb[2] - sb
     }
 
-    function ZF(kk, Fk, Bk, Rk, tk) {
-      const ak = Math.hypot(...Fk.dir);
-      if (!Number.isFinite(ak) || 0 === ak) return -1;
+    function wc(bb, cb, sb, kb, Wb) {
+      const ab = Math.hypot(...cb.dir);
+      if (!Number.isFinite(ab) || 0 === ab) return -1;
       const {
-        from: Xk,
-        reach: bk,
-        solid: wk
-      } = Fk, dk = [Fk.dir[0] / ak, Fk.dir[1] / ak, Fk.dir[2] / ak], sk = null === wk ? bk : Math.min(bk, function(kk, Fk, Bk) {
-        const Rk = pF(kk, Fk, Bk);
-        if (Rk !== 1 / 0) return Rk;
-        return (Bk[0] + .5 - kk[0]) * Fk[0] + (Bk[1] + .5 - kk[1]) * Fk[1] + (Bk[2] + .5 - kk[2]) * Fk[2]
-      }(Xk, dk, wk) + .75);
-      let Vk = -1,
-        Jk = 1 / 0,
-        Ak = 1 / 0;
-      for (let ek = 0; ek < kk.length; ek += 4) {
-        const Fk = [kk[ek], kk[ek + 1], kk[ek + 2]],
-          ak = tk(ek) ? bk : sk;
-        let wk = -1,
-          yk = pF(Xk, dk, Fk);
-        if (yk > ak) {
-          const kk = [Fk[0] + .5 - Xk[0], Fk[1] + .5 - Xk[1], Fk[2] + .5 - Xk[2]];
-          if (yk = kk[0] * dk[0] + kk[1] * dk[1] + kk[2] * dk[2], yk <= 0 || yk > ak) continue;
-          if (wk = Math.hypot(kk[0] - yk * dk[0], kk[1] - yk * dk[1], kk[2] - yk * dk[2]), wk > .7 || !Rk(ek)) continue
-        }(wk < Jk || wk === Jk && yk < Ak) && Bk(ek) && (Vk = ek, Jk = wk, Ak = yk)
+        from: Tb,
+        reach: Ub,
+        solid: Ib
+      } = cb, Hb = [cb.dir[0] / ab, cb.dir[1] / ab, cb.dir[2] / ab], fb = null === Ib ? Ub : Math.min(Ub, function(bb, cb, sb) {
+        const kb = rc(bb, cb, sb);
+        if (kb !== 1 / 0) return kb;
+        return (sb[0] + .5 - bb[0]) * cb[0] + (sb[1] + .5 - bb[1]) * cb[1] + (sb[2] + .5 - bb[2]) * cb[2]
+      }(Tb, Hb, Ib) + .75);
+      let Mb = -1,
+        Xb = 1 / 0,
+        nb = 1 / 0;
+      for (let mb = 0; mb < bb.length; mb += 4) {
+        const cb = [bb[mb], bb[mb + 1], bb[mb + 2]],
+          ab = Wb(mb) ? Ub : fb;
+        let Ib = -1,
+          lb = rc(Tb, Hb, cb);
+        if (lb > ab) {
+          const bb = [cb[0] + .5 - Tb[0], cb[1] + .5 - Tb[1], cb[2] + .5 - Tb[2]];
+          if (lb = bb[0] * Hb[0] + bb[1] * Hb[1] + bb[2] * Hb[2], lb <= 0 || lb > ab) continue;
+          if (Ib = Math.hypot(bb[0] - lb * Hb[0], bb[1] - lb * Hb[1], bb[2] - lb * Hb[2]), Ib > .7 || !kb(mb)) continue
+        }(Ib < Xb || Ib === Xb && lb < nb) && sb(mb) && (Mb = mb, Xb = Ib, nb = lb)
       }
-      return Vk
+      return Mb
     }
 
-    function pF(kk, Fk, Bk) {
-      let Rk = 0,
-        tk = 1 / 0;
-      for (let ak = 0; ak < 3; ak++) {
-        const Xk = Bk[ak] - kk[ak];
-        if (0 === Fk[ak]) {
-          if (Xk > 0 || Xk + 1 < 0) return 1 / 0;
+    function rc(bb, cb, sb) {
+      let kb = 0,
+        Wb = 1 / 0;
+      for (let ab = 0; ab < 3; ab++) {
+        const Tb = sb[ab] - bb[ab];
+        if (0 === cb[ab]) {
+          if (Tb > 0 || Tb + 1 < 0) return 1 / 0;
           continue
         }
-        const bk = Xk / Fk[ak],
-          wk = (Xk + 1) / Fk[ak];
-        Rk = Math.max(Rk, Math.min(bk, wk)), tk = Math.min(tk, Math.max(bk, wk))
+        const Ub = Tb / cb[ab],
+          Ib = (Tb + 1) / cb[ab];
+        kb = Math.max(kb, Math.min(Ub, Ib)), Wb = Math.min(Wb, Math.max(Ub, Ib))
       }
-      return Rk <= tk ? Rk : 1 / 0
+      return kb <= Wb ? kb : 1 / 0
     }
-    var KF = Bk(37728),
-      xF = Bk(38157);
-    const jF = [1, 1, 1];
-    class lF {
-      constructor(kk) {
-        this.api = kk, this.meshes = null, this.shown = null
+    var oc = sb(37657),
+      Sc = sb(38126);
+    const Rc = [1, 1, 1];
+    class vc {
+      constructor(bb) {
+        this.api = bb, this.meshes = null, this.shown = null
       }
-      show(kk) {
-        if (!(0, hF.c)(kk, this.shown))
-          if (this.shown = null === kk ? null : [kk[0], kk[1], kk[2]], null !== this.meshes)
-            for (const Fk of this.meshes) this.api.setGameMesh(Fk, null === kk ? {
+      show(bb) {
+        if (!(0, qc.f)(bb, this.shown))
+          if (this.shown = null === bb ? null : [bb[0], bb[1], bb[2]], null !== this.meshes)
+            for (const cb of this.meshes) this.api.setGameMesh(cb, null === bb ? {
               visible: !1
             } : {
-              anchor: kk,
+              anchor: bb,
               visible: !0
             });
-          else if (null !== kk) {
-          const Fk = [KF.i, KF.i, KF.i, 0, 0, 0];
-          this.meshes = [this.build([Fk], KF.k, kk), this.build((0, KF.e)(), KF.r, kk)]
+          else if (null !== bb) {
+          const cb = [oc.c, oc.c, oc.c, 0, 0, 0];
+          this.meshes = [this.build([cb], oc.e, bb), this.build((0, oc.b)(), oc.i, bb)]
         }
       }
       dispose() {
-        for (const Fk of null !== (kk = this.meshes) && void 0 !== kk ? kk : []) {
-          var kk;
-          this.api.disposeGameMesh(Fk)
+        for (const cb of null !== (bb = this.meshes) && void 0 !== bb ? bb : []) {
+          var bb;
+          this.api.disposeGameMesh(cb)
         }
         this.meshes = null, this.shown = null
       }
-      build(kk, Fk, Bk) {
-        const Rk = [],
-          tk = [];
-        for (const [ak, Xk, bk, wk, dk, sk] of kk)(0, xF.g)(Rk, tk, [wk + .5, dk + .5, sk + .5], [ak, Xk, bk]);
+      build(bb, cb, sb) {
+        const kb = [],
+          Wb = [];
+        for (const [ab, Tb, Ub, Ib, Hb, fb] of bb)(0, Sc.g)(kb, Wb, [Ib + .5, Hb + .5, fb + .5], [ab, Tb, Ub]);
         return this.api.createGameMesh({
-          positions: Rk,
-          indices: tk
+          positions: kb,
+          indices: Wb
         }, {
-          rgb: jF,
-          alpha: Fk,
+          rgb: Rc,
+          alpha: cb,
           onTop: !0
-        }, Bk)
+        }, sb)
       }
     }
-    class nF {
-      constructor(kk) {
-        this.api = kk, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    class Fc {
+      constructor(bb) {
+        this.api = bb, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(kk) {
-        const Fk = qF.h.Ze;
+      watch(bb) {
+        const cb = dc.e.qm;
         this.chunks = [];
-        for (let Bk = 0; Bk < kk.length; Bk += 3) {
-          const Rk = Math.floor(kk[Bk] / Fk),
-            tk = Math.floor(kk[Bk + 1] / Fk),
-            ak = Math.floor(kk[Bk + 2] / Fk);
-          this.watches(Rk, tk, ak) || this.chunks.push(Rk, tk, ak)
+        for (let sb = 0; sb < bb.length; sb += 3) {
+          const kb = Math.floor(bb[sb] / cb),
+            Wb = Math.floor(bb[sb + 1] / cb),
+            ab = Math.floor(bb[sb + 2] / cb);
+          this.watches(kb, Wb, ab) || this.chunks.push(kb, Wb, ab)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const kk = performance.now();
-        if (kk - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = kk;
-        let Fk = !1;
-        for (let Bk = 0; Bk < this.chunks.length; Bk += 3) {
-          const kk = this.api.getChunkVersion(this.chunks[Bk], this.chunks[Bk + 1], this.chunks[Bk + 2]);
-          this.versions[Bk / 3] !== kk && (this.versions[Bk / 3] = kk, Fk = !0)
+        const bb = performance.now();
+        if (bb - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = bb;
+        let cb = !1;
+        for (let sb = 0; sb < this.chunks.length; sb += 3) {
+          const bb = this.api.getChunkVersion(this.chunks[sb], this.chunks[sb + 1], this.chunks[sb + 2]);
+          this.versions[sb / 3] !== bb && (this.versions[sb / 3] = bb, cb = !0)
         }
-        return Fk
+        return cb
       }
-      watches(kk, Fk, Bk) {
-        for (let Rk = 0; Rk < this.chunks.length; Rk += 3)
-          if (this.chunks[Rk] === kk && this.chunks[Rk + 1] === Fk && this.chunks[Rk + 2] === Bk) return !0;
+      watches(bb, cb, sb) {
+        for (let kb = 0; kb < this.chunks.length; kb += 3)
+          if (this.chunks[kb] === bb && this.chunks[kb + 1] === cb && this.chunks[kb + 2] === sb) return !0;
         return !1
       }
     }
-    const IF = .35,
-      QF = {
+    const xc = .35,
+      jc = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      kB = {
+      pc = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      FB = [.95, .2, .15];
-    class BB {
+      bs = [.95, .2, .15];
+    class cs {
       constructor() {
         this.groups = []
       }
-      add(kk, Fk, Bk, Rk, tk) {
-        let ak = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : GF;
-        for (const Xk of this.groups)
-          if (aB(Xk, Rk, tk)) return Xk.cells.push(kk, Fk, Bk), void Xk.boxes.push(ak);
+      add(bb, cb, sb, kb, Wb) {
+        let ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : ic;
+        for (const Tb of this.groups)
+          if (Ws(Tb, kb, Wb)) return Tb.cells.push(bb, cb, sb), void Tb.boxes.push(ab);
         this.groups.push({
-          rgb: Rk,
-          look: tk,
-          cells: [kk, Fk, Bk],
-          boxes: [ak]
+          rgb: kb,
+          look: Wb,
+          cells: [bb, cb, sb],
+          boxes: [ab]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class RB {
-      constructor(kk) {
-        this.api = kk, this.shown = []
+    class ss {
+      constructor(bb) {
+        this.api = bb, this.shown = []
       }
-      show(kk) {
-        const Fk = [];
-        for (const Bk of kk) {
-          const kk = this.shown.findIndex((kk => {
+      show(bb) {
+        const cb = [];
+        for (const sb of bb) {
+          const bb = this.shown.findIndex((bb => {
             let {
-              group: Fk
-            } = kk;
-            return aB(Fk, Bk.rgb, Bk.look) && XB(Fk, Bk)
-          })); - 1 === kk ? Fk.push(this.build(Bk)) : (Fk.push(this.shown[kk]), this.shown.splice(kk, 1))
+              group: cb
+            } = bb;
+            return Ws(cb, sb.rgb, sb.look) && as(cb, sb)
+          })); - 1 === bb ? cb.push(this.build(sb)) : (cb.push(this.shown[bb]), this.shown.splice(bb, 1))
         }
-        this.dispose(), this.shown = Fk
+        this.dispose(), this.shown = cb
       }
       dispose() {
         for (const {
-            meshes: kk
+            meshes: bb
           }
           of this.shown)
-          for (const Fk of kk) this.api.disposeGameMesh(Fk);
+          for (const cb of bb) this.api.disposeGameMesh(cb);
         this.shown = []
       }
-      build(kk) {
+      build(bb) {
         const {
-          rgb: Fk,
-          look: Bk,
-          boxes: Rk
-        } = kk, tk = [Fk[0] + (1 - Fk[0]) * IF, Fk[1] + (1 - Fk[1]) * IF, Fk[2] + (1 - Fk[2]) * IF], ak = [this.buildMesh(kk.cells, Fk, Bk.alpha, ((kk, Fk, tk, ak) => {
-          tB(kk, Fk, tk, Rk[ak], Bk.size, !1)
-        })), this.buildMesh(kk.cells, tk, Bk.alpha, ((kk, Fk, tk, ak) => {
-          tB(kk, Fk, tk, Rk[ak], Bk.size, !0)
+          rgb: cb,
+          look: sb,
+          boxes: kb
+        } = bb, Wb = [cb[0] + (1 - cb[0]) * xc, cb[1] + (1 - cb[1]) * xc, cb[2] + (1 - cb[2]) * xc], ab = [this.buildMesh(bb.cells, cb, sb.alpha, ((bb, cb, Wb, ab) => {
+          ks(bb, cb, Wb, kb[ab], sb.size, !1)
+        })), this.buildMesh(bb.cells, Wb, sb.alpha, ((bb, cb, Wb, ab) => {
+          ks(bb, cb, Wb, kb[ab], sb.size, !0)
         }))];
-        return Bk.crossed && ak.push(this.buildMesh(kk.cells, Fk, .9, ((kk, Fk, Rk) => {
-          (0, xF.k)(kk, Fk, Rk, Bk.size + .01, .12)
+        return sb.crossed && ab.push(this.buildMesh(bb.cells, cb, .9, ((bb, cb, kb) => {
+          (0, Sc.j)(bb, cb, kb, sb.size + .01, .12)
         }))), {
-          group: kk,
-          meshes: ak
+          group: bb,
+          meshes: ab
         }
       }
-      buildMesh(kk, Fk, Bk, Rk) {
-        const tk = [kk[0], kk[1], kk[2]],
-          ak = [],
-          Xk = [];
-        for (let bk = 0; bk < kk.length; bk += 3) Rk(ak, Xk, [kk[bk] - tk[0] + .5, kk[bk + 1] - tk[1] + .5, kk[bk + 2] - tk[2] + .5], bk / 3);
+      buildMesh(bb, cb, sb, kb) {
+        const Wb = [bb[0], bb[1], bb[2]],
+          ab = [],
+          Tb = [];
+        for (let Ub = 0; Ub < bb.length; Ub += 3) kb(ab, Tb, [bb[Ub] - Wb[0] + .5, bb[Ub + 1] - Wb[1] + .5, bb[Ub + 2] - Wb[2] + .5], Ub / 3);
         return this.api.createGameMesh({
-          positions: ak,
-          indices: Xk
+          positions: ab,
+          indices: Tb
         }, {
-          rgb: [Fk[0], Fk[1], Fk[2]],
-          alpha: Bk
-        }, tk)
+          rgb: [cb[0], cb[1], cb[2]],
+          alpha: sb
+        }, Wb)
       }
     }
 
-    function tB(kk, Fk, Bk, Rk, tk, ak) {
-      for (let Xk = 0; Xk < Rk.length; Xk += 6) {
-        const bk = [0, 0, 0],
-          wk = [0, 0, 0];
-        for (let kk = 0; kk < 3; kk++) bk[kk] = Bk[kk] + ((Rk[Xk + kk] + Rk[Xk + kk + 3]) / 2 - .5) * tk, wk[kk] = (Rk[Xk + kk + 3] - Rk[Xk + kk]) * tk;
-        (0, xF.e)(kk, Fk, bk, wk, ak)
+    function ks(bb, cb, sb, kb, Wb, ab) {
+      for (let Tb = 0; Tb < kb.length; Tb += 6) {
+        const Ub = [0, 0, 0],
+          Ib = [0, 0, 0];
+        for (let bb = 0; bb < 3; bb++) Ub[bb] = sb[bb] + ((kb[Tb + bb] + kb[Tb + bb + 3]) / 2 - .5) * Wb, Ib[bb] = (kb[Tb + bb + 3] - kb[Tb + bb]) * Wb;
+        (0, Sc.d)(bb, cb, Ub, Ib, ab)
       }
     }
 
-    function aB(kk, Fk, Bk) {
-      return kk.rgb[0] === Fk[0] && kk.rgb[1] === Fk[1] && kk.rgb[2] === Fk[2] && kk.look === Bk
+    function Ws(bb, cb, sb) {
+      return bb.rgb[0] === cb[0] && bb.rgb[1] === cb[1] && bb.rgb[2] === cb[2] && bb.look === sb
     }
 
-    function XB(kk, Fk) {
-      if (kk.cells.length !== Fk.cells.length) return !1;
-      for (let Bk = 0; Bk < kk.cells.length; Bk++)
-        if (kk.cells[Bk] !== Fk.cells[Bk]) return !1;
-      return kk.boxes.every(((kk, Bk) => kk === Fk.boxes[Bk]))
+    function as(bb, cb) {
+      if (bb.cells.length !== cb.cells.length) return !1;
+      for (let sb = 0; sb < bb.cells.length; sb++)
+        if (bb.cells[sb] !== cb.cells[sb]) return !1;
+      return bb.boxes.every(((bb, sb) => bb === cb.boxes[sb]))
     }
 
-    function bB(kk, Fk) {
-      return kk.getClientOption(Fk, "blockReach") + 1
+    function Ts(bb, cb) {
+      return bb.getClientOption(cb, "blockReach") + 1
     }
-    class wB {
-      constructor(kk, Fk, Bk) {
-        this.api = kk, this.localPlayerId = Fk, this.pickNext = Bk, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class Us {
+      constructor(bb, cb, sb) {
+        this.api = bb, this.localPlayerId = cb, this.pickNext = sb, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(kk) {
-        const [Fk, , Bk] = kk.cameraDirection, Rk = Math.hypot(Fk, Bk);
-        Rk > .001 && (this.heading = [Fk / Rk, Bk / Rk])
+      look(bb) {
+        const [cb, , sb] = bb.cameraDirection, kb = Math.hypot(cb, sb);
+        kb > .001 && (this.heading = [cb / kb, sb / kb])
       }
-      tapped(kk, Fk, Bk) {
-        const Rk = bB(this.api, this.localPlayerId),
+      tapped(bb, cb, sb) {
+        const kb = Ts(this.api, this.localPlayerId),
           {
-            origin: tk,
-            direction: ak
+            origin: Wb,
+            direction: ab
           } = this.api.getActionRay(),
-          Xk = [...tk],
-          bk = [
-            [Xk, [Xk[0] + ak[0] * Rk, Xk[1] + ak[1] * Rk, Xk[2] + ak[2] * Rk]]
+          Tb = [...Wb],
+          Ub = [
+            [Tb, [Tb[0] + ab[0] * kb, Tb[1] + ab[1] * kb, Tb[2] + ab[2] * kb]]
           ];
-        null !== kk && bk.push([Xk, (0, hF.b)(kk)]), this.tap = {
-          lines: bk,
-          next: Fk,
-          ms: Bk
+        null !== bb && Ub.push([Tb, (0, qc.e)(bb)]), this.tap = {
+          lines: Ub,
+          next: cb,
+          ms: sb
         }
       }
-      filled(kk, Fk) {
-        this.tap = null, this.turnFrom(kk, Fk), this.retry(Fk)
+      filled(bb, cb) {
+        this.tap = null, this.turnFrom(bb, cb), this.retry(cb)
       }
-      arrived(kk, Fk) {
+      arrived(bb, cb) {
         const {
-          tap: Bk
+          tap: sb
         } = this;
-        if (null === Bk || Fk - Bk.ms > 1500) return null;
-        const Rk = (0, hF.b)(kk);
-        return (0, hF.c)(Bk.next, kk) || Bk.lines.some((kk => {
-          let [Fk, Bk] = kk;
-          return function(kk, Fk, Bk) {
-            const Rk = [Bk[0] - Fk[0], Bk[1] - Fk[1], Bk[2] - Fk[2]],
-              tk = [kk[0] - Fk[0], kk[1] - Fk[1], kk[2] - Fk[2]],
-              ak = Rk[0] ** 2 + Rk[1] ** 2 + Rk[2] ** 2,
-              Xk = 0 === ak ? 0 : Math.min(1, Math.max(0, (tk[0] * Rk[0] + tk[1] * Rk[1] + tk[2] * Rk[2]) / ak));
-            return Math.hypot(tk[0] - Rk[0] * Xk, tk[1] - Rk[1] * Xk, tk[2] - Rk[2] * Xk)
-          }(Rk, Fk, Bk) <= .9
-        })) ? (this.tap = null, this.turnFrom(kk, Fk), Bk.ms) : null
+        if (null === sb || cb - sb.ms > 1500) return null;
+        const kb = (0, qc.e)(bb);
+        return (0, qc.f)(sb.next, bb) || sb.lines.some((bb => {
+          let [cb, sb] = bb;
+          return function(bb, cb, sb) {
+            const kb = [sb[0] - cb[0], sb[1] - cb[1], sb[2] - cb[2]],
+              Wb = [bb[0] - cb[0], bb[1] - cb[1], bb[2] - cb[2]],
+              ab = kb[0] ** 2 + kb[1] ** 2 + kb[2] ** 2,
+              Tb = 0 === ab ? 0 : Math.min(1, Math.max(0, (Wb[0] * kb[0] + Wb[1] * kb[1] + Wb[2] * kb[2]) / ab));
+            return Math.hypot(Wb[0] - kb[0] * Tb, Wb[1] - kb[1] * Tb, Wb[2] - kb[2] * Tb)
+          }(kb, cb, sb) <= .9
+        })) ? (this.tap = null, this.turnFrom(bb, cb), sb.ms) : null
       }
-      turnFrom(kk, Fk) {
+      turnFrom(bb, cb) {
         this.pending = {
-          from: kk,
-          ms: Fk,
-          turnMs: Math.max(50, Math.min(250, Fk - this.lastFillMs))
-        }, this.lastFillMs = Fk
+          from: bb,
+          ms: cb,
+          turnMs: Math.max(50, Math.min(250, cb - this.lastFillMs))
+        }, this.lastFillMs = cb
       }
-      retry(kk) {
+      retry(bb) {
         const {
-          pending: Fk
+          pending: cb
         } = this;
-        if (null === Fk) return;
-        if (kk - Fk.ms > 1500) return void(this.pending = null);
-        const Bk = this.pickNext((0, hF.b)(Fk.from), (kk => (0, hF.c)(kk, Fk.from)));
-        if (null === Bk) return;
+        if (null === cb) return;
+        if (bb - cb.ms > 1500) return void(this.pending = null);
+        const sb = this.pickNext((0, qc.e)(cb.from), (bb => (0, qc.f)(bb, cb.from)));
+        if (null === sb) return;
         this.pending = null;
         const {
-          turning: Rk
+          turning: kb
         } = this;
-        if (null !== Rk && kk < Rk.endMs && (0, hF.c)(Rk.to, Bk)) return;
-        const tk = this.api.getActionRay().origin,
-          ak = [Bk[0] + .5 - tk[0], Bk[1] + .5 - tk[1], Bk[2] + .5 - tk[2]],
-          Xk = Math.hypot(ak[0], ak[2]);
-        if (Xk < .3) {
-          const kk = Math.max(Xk, .001);
-          ak[0] = this.heading[0] * kk, ak[2] = this.heading[1] * kk
+        if (null !== kb && bb < kb.endMs && (0, qc.f)(kb.to, sb)) return;
+        const Wb = this.api.getActionRay().origin,
+          ab = [sb[0] + .5 - Wb[0], sb[1] + .5 - Wb[1], sb[2] + .5 - Wb[2]],
+          Tb = Math.hypot(ab[0], ab[2]);
+        if (Tb < .3) {
+          const bb = Math.max(Tb, .001);
+          ab[0] = this.heading[0] * bb, ab[2] = this.heading[1] * bb
         }
-        this.api.turnCamera(ak, Fk.turnMs), this.turning = {
-          to: Bk,
-          endMs: kk + Fk.turnMs
+        this.api.turnCamera(ab, cb.turnMs), this.turning = {
+          to: sb,
+          endMs: bb + cb.turnMs
         }
       }
     }
-    class dB {
-      constructor(kk, Fk, Bk) {
-        this.api = kk, this.localPlayerId = Fk, this.juice = Bk, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new nF(kk), this.meshes = new RB(kk), this.outline = new lF(kk), this.turn = new wB(kk, Fk, ((kk, Fk) => this.pickNext(kk, Fk)))
+    class Is {
+      constructor(bb, cb, sb) {
+        this.api = bb, this.localPlayerId = cb, this.juice = sb, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new Fc(bb), this.meshes = new ss(bb), this.outline = new vc(bb), this.turn = new Us(bb, cb, ((bb, cb) => this.pickNext(bb, cb)))
       }
-      he(kk) {
-        const Fk = "active" === kk[0] ? `${kk[1]}|${kk[3]}|${kk[4]}|${kk[5]}|${kk[6]}` : "";
-        if ("active" !== kk[0]) "built" === kk[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      Km(bb) {
+        const cb = "active" === bb[0] ? `${bb[1]}|${bb[3]}|${bb[4]}|${bb[5]}|${bb[6]}` : "";
+        if ("active" !== bb[0]) "built" === bb[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , Bk, Rk, tk, ak] = kk;
-          Fk !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = Bk) : Bk === this.layerY ? this.burstUnlisted(Rk) : Bk > this.layerY && this.finishLayer(Bk), this.layerY = Bk, this.layerCells.has(Bk) || this.layerCells.set(Bk, Rk.filter(VB)), this.ghostCells = Rk, this.palette = tk, this.occupiedCells = ak
+          const [, , , , , , , sb, kb, Wb, ab] = bb;
+          cb !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = sb) : sb === this.layerY ? this.burstUnlisted(kb) : sb > this.layerY && this.finishLayer(sb), this.layerY = sb, this.layerCells.has(sb) || this.layerCells.set(sb, kb.filter(fs)), this.ghostCells = kb, this.palette = Wb, this.occupiedCells = ab
         }
-        Fk !== this.blueprint && (this.blueprint = Fk, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((kk => this.api.blockNameToBlockId(kk))), this.chunkWatch.watch([...this.ghostCells.filter(VB), ...this.occupiedCells]), this.refresh()
+        cb !== this.blueprint && (this.blueprint = cb, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((bb => this.api.blockNameToBlockId(bb))), this.chunkWatch.watch([...this.ghostCells.filter(fs), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(kk) {
-        this.burstUnlisted([]), kk > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = kk)
+      finishLayer(bb) {
+        this.burstUnlisted([]), bb > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = bb)
       }
-      yJ() {
+      aX() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const kk = performance.now();
-        let Fk = !1;
-        for (const [tk, ak] of this.foreseen) {
-          var Bk;
-          if (kk - ak > 1e3) this.foreseen.delete(tk), Fk = !0, (null === (Bk = this.lastFilled) || void 0 === Bk ? void 0 : Bk.join()) === tk && (this.lastFilled = this.lastSeenFilled)
+        const bb = performance.now();
+        let cb = !1;
+        for (const [Wb, ab] of this.foreseen) {
+          var sb;
+          if (bb - ab > 1e3) this.foreseen.delete(Wb), cb = !0, (null === (sb = this.lastFilled) || void 0 === sb ? void 0 : sb.join()) === Wb && (this.lastFilled = this.lastSeenFilled)
         }
-        const Rk = sB(this.api.getPositionView(this.localPlayerId));
-        (Fk || Rk.some(((kk, Fk) => kk !== this.playerCells[Fk]))) && this.showNext()
+        const kb = Hs(this.api.getPositionView(this.localPlayerId));
+        (cb || kb.some(((bb, cb) => bb !== this.playerCells[cb]))) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(kk) {
-        const Fk = new Set;
-        for (let tk = 0; tk < kk.length; tk += 4) Fk.add(`${kk[tk]},${kk[tk+1]},${kk[tk+2]}`);
-        const Bk = [],
+      burstUnlisted(bb) {
+        const cb = new Set;
+        for (let Wb = 0; Wb < bb.length; Wb += 4) cb.add(`${bb[Wb]},${bb[Wb+1]},${bb[Wb+2]}`);
+        const sb = [],
           {
-            ghostCells: Rk
+            ghostCells: kb
           } = this;
-        for (let tk = 0; tk < Rk.length; tk += 4) {
-          const kk = `${Rk[tk]},${Rk[tk+1]},${Rk[tk+2]}`;
-          !Fk.has(kk) && this.open.delete(kk) && Bk.push(this.filledCell(tk))
+        for (let Wb = 0; Wb < kb.length; Wb += 4) {
+          const bb = `${kb[Wb]},${kb[Wb+1]},${kb[Wb+2]}`;
+          !cb.has(bb) && this.open.delete(bb) && sb.push(this.filledCell(Wb))
         }
-        this.burst(Bk)
+        this.burst(sb)
       }
       refresh() {
         const {
-          ghostCells: kk,
-          palette: Fk,
-          occupiedCells: Bk
-        } = this, Rk = new BB, tk = new Set, ak = [], Xk = [];
-        for (let bk = 0; bk < kk.length; bk += 4) {
-          const [Bk, wk, dk, sk] = [kk[bk], kk[bk + 1], kk[bk + 2], kk[bk + 3]], Vk = this.api.getBlockId(Bk, wk, dk), Jk = `${Bk},${wk},${dk}`, Ak = HF(this.blockIds[sk], Vk);
-          !Ak && uF(Vk) ? Rk.add(Bk, wk, dk, gF(Fk[sk]), QF, PF(Fk[sk])) : Ak ? this.open.has(Jk) && ak.push(this.filledCell(bk)) : Rk.add(Bk, wk, dk, FB, kB), !Ak && this.api.isBlockInLoadedChunk(Bk, wk, dk) && (tk.add(Jk), Xk.push(Bk, wk, dk, uF(Vk) ? 0 : 1))
+          ghostCells: bb,
+          palette: cb,
+          occupiedCells: sb
+        } = this, kb = new cs, Wb = new Set, ab = [], Tb = [];
+        for (let Ub = 0; Ub < bb.length; Ub += 4) {
+          const [sb, Ib, Hb, fb] = [bb[Ub], bb[Ub + 1], bb[Ub + 2], bb[Ub + 3]], Mb = this.api.getBlockId(sb, Ib, Hb), Xb = `${sb},${Ib},${Hb}`, nb = Bc(this.blockIds[fb], Mb);
+          !nb && tc(Mb) ? kb.add(sb, Ib, Hb, Pc(cb[fb]), jc, zc(cb[fb])) : nb ? this.open.has(Xb) && ab.push(this.filledCell(Ub)) : kb.add(sb, Ib, Hb, bs, pc), !nb && this.api.isBlockInLoadedChunk(sb, Ib, Hb) && (Wb.add(Xb), Tb.push(sb, Ib, Hb, tc(Mb) ? 0 : 1))
         }
-        this.open = tk, this.nextCells = Xk;
-        for (let bk = 0; bk < Bk.length; bk += 3) {
-          const [kk, Fk, tk] = [Bk[bk], Bk[bk + 1], Bk[bk + 2]];
-          uF(this.api.getBlockId(kk, Fk, tk)) || Rk.add(kk, Fk, tk, FB, kB)
+        this.open = Wb, this.nextCells = Tb;
+        for (let Ub = 0; Ub < sb.length; Ub += 3) {
+          const [bb, cb, Wb] = [sb[Ub], sb[Ub + 1], sb[Ub + 2]];
+          tc(this.api.getBlockId(bb, cb, Wb)) || kb.add(bb, cb, Wb, bs, pc)
         }
-        this.meshes.show(Rk.toArray()), this.burst(ak), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(kb.toArray()), this.burst(ab), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(kk) {
-        const Fk = performance.now(),
-          Bk = [];
-        for (const [tk, ak, Xk] of kk) {
-          const kk = [tk, ak, Xk];
-          this.lastSeenFilled = kk, this.foreseen.delete(kk.join()) || Bk.push(kk)
+      burst(bb) {
+        const cb = performance.now(),
+          sb = [];
+        for (const [Wb, ab, Tb] of bb) {
+          const bb = [Wb, ab, Tb];
+          this.lastSeenFilled = bb, this.foreseen.delete(bb.join()) || sb.push(bb)
         }
-        const Rk = this.isHolding(Fk);
-        for (const tk of Bk) {
-          if (this.lastFilled = tk, Rk && this.pressFilled) {
-            this.turn.filled(tk, Fk);
+        const kb = this.isHolding(cb);
+        for (const Wb of sb) {
+          if (this.lastFilled = Wb, kb && this.pressFilled) {
+            this.turn.filled(Wb, cb);
             continue
           }
-          const kk = this.turn.arrived(tk, Fk);
-          if (null !== kk) {
-            this.pressFilled = Rk;
-            for (const [Fk, Bk] of this.foreseen) Bk <= kk && this.foreseen.delete(Fk)
+          const bb = this.turn.arrived(Wb, cb);
+          if (null !== bb) {
+            this.pressFilled = kb;
+            for (const [cb, sb] of this.foreseen) sb <= bb && this.foreseen.delete(cb)
           }
         }
-        this.juice.filled(kk)
+        this.juice.filled(bb)
       }
       showNext() {
-        var kk;
-        const Fk = this.api.getPositionView(this.localPlayerId);
-        this.playerCells.splice(0, 1 / 0, ...sB(Fk));
-        const Bk = this.lastFilled;
-        this.nextCell = this.pickNext(null === Bk ? [Fk[0], Fk[1] + 1, Fk[2]] : (0, hF.b)(Bk), (() => !1)), this.outline.show(null !== (kk = this.aimed) && void 0 !== kk ? kk : this.nextCell)
+        var bb;
+        const cb = this.api.getPositionView(this.localPlayerId);
+        this.playerCells.splice(0, 1 / 0, ...Hs(cb));
+        const sb = this.lastFilled;
+        this.nextCell = this.pickNext(null === sb ? [cb[0], cb[1] + 1, cb[2]] : (0, qc.e)(sb), (() => !1)), this.outline.show(null !== (bb = this.aimed) && void 0 !== bb ? bb : this.nextCell)
       }
-      pickNext(kk, Fk) {
-        const Bk = this.api.getPositionView(this.localPlayerId),
-          Rk = [Bk[0], Bk[1] + qF.h.FW * qF.h.playerEyeToHeightRatio, Bk[2]],
-          tk = bB(this.api, this.localPlayerId),
+      pickNext(bb, cb) {
+        const sb = this.api.getPositionView(this.localPlayerId),
+          kb = [sb[0], sb[1] + dc.e.JC * dc.e.playerEyeToHeightRatio, sb[2]],
+          Wb = Ts(this.api, this.localPlayerId),
           {
-            nextCells: ak
+            nextCells: ab
           } = this,
-          Xk = kk => [ak[kk], ak[kk + 1], ak[kk + 2]],
-          bk = function(kk, Fk, Bk, Rk, tk, ak) {
-            let Xk = -1,
-              bk = -1,
-              wk = 1 / 0;
-            for (let dk = 0; dk < kk.length; dk += Fk) {
-              const Fk = (ak(dk) ? 2 : 0) + (Rk(dk) ? 1 : 0);
-              if (Fk < bk || tk(dk)) continue;
-              const sk = (kk[dk] + .5 - Bk[0]) ** 2 + (kk[dk + 1] + .5 - Bk[1]) ** 2 + (kk[dk + 2] + .5 - Bk[2]) ** 2;
-              (Fk > bk || sk < wk) && (Xk = dk, bk = Fk, wk = sk)
+          Tb = bb => [ab[bb], ab[bb + 1], ab[bb + 2]],
+          Ub = function(bb, cb, sb, kb, Wb, ab) {
+            let Tb = -1,
+              Ub = -1,
+              Ib = 1 / 0;
+            for (let Hb = 0; Hb < bb.length; Hb += cb) {
+              const cb = (ab(Hb) ? 2 : 0) + (kb(Hb) ? 1 : 0);
+              if (cb < Ub || Wb(Hb)) continue;
+              const fb = (bb[Hb] + .5 - sb[0]) ** 2 + (bb[Hb + 1] + .5 - sb[1]) ** 2 + (bb[Hb + 2] + .5 - sb[2]) ** 2;
+              (cb > Ub || fb < Ib) && (Tb = Hb, Ub = cb, Ib = fb)
             }
-            return Xk
-          }(ak, 4, kk, (kk => 1 === ak[kk + 3]), (kk => {
-            const Rk = Xk(kk);
-            return CF(Rk, Bk) || this.foreseen.has(Rk.join()) || Fk(Rk)
-          }), (kk => function(kk, Fk, Bk) {
-            return (Fk[0] + .5 - kk[0]) ** 2 + (Fk[1] + .5 - kk[1]) ** 2 + (Fk[2] + .5 - kk[2]) ** 2 <= Bk ** 2
-          }(Rk, Xk(kk), tk)));
-        return -1 === bk ? null : Xk(bk)
+            return Tb
+          }(ab, 4, bb, (bb => 1 === ab[bb + 3]), (bb => {
+            const kb = Tb(bb);
+            return Ac(kb, sb) || this.foreseen.has(kb.join()) || cb(kb)
+          }), (bb => function(bb, cb, sb) {
+            return (cb[0] + .5 - bb[0]) ** 2 + (cb[1] + .5 - bb[1]) ** 2 + (cb[2] + .5 - bb[2]) ** 2 <= sb ** 2
+          }(kb, Tb(bb), Wb)));
+        return -1 === Ub ? null : Tb(Ub)
       }
-      afterRender(kk) {
-        var Fk;
-        this.turn.look(kk);
-        const Bk = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === Bk ? null : Bk.position), this.outline.show(null !== (Fk = this.aimed) && void 0 !== Fk ? Fk : this.nextCell)
+      afterRender(bb) {
+        var cb;
+        this.turn.look(bb);
+        const sb = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === sb ? null : sb.position), this.outline.show(null !== (cb = this.aimed) && void 0 !== cb ? cb : this.nextCell)
       }
-      isHolding(kk) {
-        return null !== this.altMs && kk - this.altMs <= 500
+      isHolding(bb) {
+        return null !== this.altMs && bb - this.altMs <= 500
       }
-      attemptAltAction(kk) {
-        const Fk = performance.now();
-        if (this.isHolding(Fk) || (this.pressFilled = !1), this.altMs = Fk, this.pressFilled) return "preventPlacement";
-        const Bk = this.findAimed(kk);
-        if (null !== Bk) return this.foreseen.set(Bk.join(), Fk), this.lastFilled = Bk, this.aimed = null, this.showNext(), this.turn.filled(Bk, Fk), this.pressFilled = !0, "preventPlacement";
-        null !== this.nextCell && this.turn.tapped(kk, this.nextCell, Fk)
+      attemptAltAction(bb) {
+        const cb = performance.now();
+        if (this.isHolding(cb) || (this.pressFilled = !1), this.altMs = cb, this.pressFilled) return "preventPlacement";
+        const sb = this.findAimed(bb);
+        if (null !== sb) return this.foreseen.set(sb.join(), cb), this.lastFilled = sb, this.aimed = null, this.showNext(), this.turn.filled(sb, cb), this.pressFilled = !0, "preventPlacement";
+        null !== this.nextCell && this.turn.tapped(bb, this.nextCell, cb)
       }
-      findAimed(kk) {
-        return function(kk, Fk, Bk, Rk, tk, ak, Xk) {
-          const bk = kk.LFk(Fk),
-            wk = null === bk || null === kk.blockNameToBlockId(bk.name, !0) ? null : bk.name,
-            dk = kk.getPositionView(Fk),
+      findAimed(bb) {
+        return function(bb, cb, sb, kb, Wb, ab, Tb) {
+          const Ub = bb.Xcb(cb),
+            Ib = null === Ub || null === bb.blockNameToBlockId(Ub.name, !0) ? null : Ub.name,
+            Hb = bb.getPositionView(cb),
             {
-              origin: sk,
-              direction: Vk
-            } = kk.getActionRay(),
-            Jk = ZF(Rk, {
-              from: sk,
-              dir: Vk,
-              reach: bB(kk, Fk),
-              solid: Bk
-            }, (Fk => {
-              const Bk = [Rk[Fk], Rk[Fk + 1], Rk[Fk + 2]];
-              return !HF(tk[Rk[Fk + 3]], kk.getBlockId(...Bk)) && !Xk.has(Bk.join()) && kk.isBlockInLoadedChunk(...Bk) && !CF(Bk, dk)
-            }), (kk => null === wk || wk === MF(tk[Rk[kk + 3]])), (kk => null !== ak && Rk[kk] === ak[0] && Rk[kk + 1] === ak[1] && Rk[kk + 2] === ak[2]));
-          return -1 === Jk ? null : [Rk[Jk], Rk[Jk + 1], Rk[Jk + 2]]
-        }(this.api, this.localPlayerId, kk, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
+              origin: fb,
+              direction: Mb
+            } = bb.getActionRay(),
+            Xb = wc(kb, {
+              from: fb,
+              dir: Mb,
+              reach: Ts(bb, cb),
+              solid: sb
+            }, (cb => {
+              const sb = [kb[cb], kb[cb + 1], kb[cb + 2]];
+              return !Bc(Wb[kb[cb + 3]], bb.getBlockId(...sb)) && !Tb.has(sb.join()) && bb.isBlockInLoadedChunk(...sb) && !Ac(sb, Hb)
+            }), (bb => null === Ib || Ib === yc(Wb[kb[bb + 3]])), (bb => null !== ab && kb[bb] === ab[0] && kb[bb + 1] === ab[1] && kb[bb + 2] === ab[2]));
+          return -1 === Xb ? null : [kb[Xb], kb[Xb + 1], kb[Xb + 2]]
+        }(this.api, this.localPlayerId, bb, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(kk) {
+      filledCell(bb) {
         const {
-          ghostCells: Fk
-        } = this, [Bk, Rk, tk] = gF(this.palette[Fk[kk + 3]]);
-        return [Fk[kk], Fk[kk + 1], Fk[kk + 2], Bk, Rk, tk]
+          ghostCells: cb
+        } = this, [sb, kb, Wb] = Pc(this.palette[cb[bb + 3]]);
+        return [cb[bb], cb[bb + 1], cb[bb + 2], sb, kb, Wb]
       }
     }
 
-    function sB(kk) {
-      let [Fk, Bk, Rk] = kk;
-      const tk = qF.h.Qm / 2;
-      return [Math.floor(Fk), Math.floor(Bk), Math.floor(Rk), Math.floor(Fk - tk), Math.floor(Fk + tk), Math.floor(Bk + qF.h.FW), Math.floor(Rk - tk), Math.floor(Rk + tk)]
+    function Hs(bb) {
+      let [cb, sb, kb] = bb;
+      const Wb = dc.e.YC / 2;
+      return [Math.floor(cb), Math.floor(sb), Math.floor(kb), Math.floor(cb - Wb), Math.floor(cb + Wb), Math.floor(sb + dc.e.JC), Math.floor(kb - Wb), Math.floor(kb + Wb)]
     }
 
-    function VB(kk, Fk) {
-      return Fk % 4 !== 3
+    function fs(bb, cb) {
+      return cb % 4 !== 3
     }
 
-    function JB(kk, Fk, Bk, Rk, tk) {
-      if (!kk.isBlockInLoadedChunk(Fk, Rk - 6, Bk) || !kk.isBlockInLoadedChunk(Fk, Rk + 6 + tk, Bk) || !kk.canModifyBlockAt(Fk, Rk, Bk)) return NaN;
-      let ak = Rk - 1;
-      if (0 !== kk.getBlockId(Fk, ak, Bk)) {
-        for (; ak < Rk + 6 && 0 !== kk.getBlockId(Fk, ak + 1, Bk);) ak++;
-        return ak
+    function Ms(bb, cb, sb, kb, Wb) {
+      if (!bb.isBlockInLoadedChunk(cb, kb - 6, sb) || !bb.isBlockInLoadedChunk(cb, kb + 6 + Wb, sb) || !bb.canModifyBlockAt(cb, kb, sb)) return NaN;
+      let ab = kb - 1;
+      if (0 !== bb.getBlockId(cb, ab, sb)) {
+        for (; ab < kb + 6 && 0 !== bb.getBlockId(cb, ab + 1, sb);) ab++;
+        return ab
       }
-      for (; ak > Rk - 6;)
-        if (ak--, 0 !== kk.getBlockId(Fk, ak, Bk)) return ak;
+      for (; ab > kb - 6;)
+        if (ab--, 0 !== bb.getBlockId(cb, ab, sb)) return ab;
       return NaN
     }
 
-    function AB(kk, Fk, Bk, Rk, tk) {
-      let ak = 0;
-      for (let Xk = Rk + 1; Xk <= Rk + tk; Xk++) 0 !== kk.getBlockId(Fk, Xk, Bk) && ak++;
-      return ak
+    function Xs(bb, cb, sb, kb, Wb) {
+      let ab = 0;
+      for (let Tb = kb + 1; Tb <= kb + Wb; Tb++) 0 !== bb.getBlockId(cb, Tb, sb) && ab++;
+      return ab
     }
 
-    function eB(kk) {
-      const Fk = new Map;
-      for (const Xk of kk) {
-        var Bk;
-        if (Number.isNaN(Xk)) return null;
-        Fk.set(Xk, (null !== (Bk = Fk.get(Xk)) && void 0 !== Bk ? Bk : 0) + 1)
+    function ns(bb) {
+      const cb = new Map;
+      for (const Tb of bb) {
+        var sb;
+        if (Number.isNaN(Tb)) return null;
+        cb.set(Tb, (null !== (sb = cb.get(Tb)) && void 0 !== sb ? sb : 0) + 1)
       }
-      let Rk = NaN,
-        tk = 0;
-      for (const [Xk, bk] of Fk)(bk > tk || bk === tk && Xk < Rk) && (Rk = Xk, tk = bk);
-      let ak = 0;
-      for (const Xk of kk) ak += Math.abs(Xk - Rk);
-      return ak
+      let kb = NaN,
+        Wb = 0;
+      for (const [Tb, Ub] of cb)(Ub > Wb || Ub === Wb && Tb < kb) && (kb = Tb, Wb = Ub);
+      let ab = 0;
+      for (const Tb of bb) ab += Math.abs(Tb - kb);
+      return ab
     }
 
-    function yB(kk, Fk, Bk, Rk) {
+    function ms(bb, cb, sb, kb) {
       const {
-        eye: tk,
-        forward: ak,
-        tanHalfFovX: Xk,
-        tanHalfFovY: bk
-      } = kk, [wk, dk] = function(kk) {
-        let [Fk, Bk, Rk] = kk;
-        const tk = Math.hypot(Fk, Rk),
-          [ak, Xk] = [Rk / tk, -Fk / tk];
+        eye: Wb,
+        forward: ab,
+        tanHalfFovX: Tb,
+        tanHalfFovY: Ub
+      } = bb, [Ib, Hb] = function(bb) {
+        let [cb, sb, kb] = bb;
+        const Wb = Math.hypot(cb, kb),
+          [ab, Tb] = [kb / Wb, -cb / Wb];
         return [
-          [ak, 0, Xk],
-          [Bk * Xk, Rk * ak - Fk * Xk, -Bk * ak]
+          [ab, 0, Tb],
+          [sb * Tb, kb * ab - cb * Tb, -sb * ab]
         ]
-      }(ak), [sk, Vk] = [Fk * Xk, Bk * bk], Jk = ak[0] + sk * wk[0] + Vk * dk[0], Ak = ak[1] + Vk * dk[1], ek = ak[2] + sk * wk[2] + Vk * dk[2], yk = (Rk - tk[1]) / Ak;
-      return yk > 0 && yk < 1 / 0 ? [tk[0] + yk * Jk, tk[2] + yk * ek] : null
+      }(ab), [fb, Mb] = [cb * Tb, sb * Ub], Xb = ab[0] + fb * Ib[0] + Mb * Hb[0], nb = ab[1] + Mb * Hb[1], mb = ab[2] + fb * Ib[2] + Mb * Hb[2], lb = (kb - Wb[1]) / nb;
+      return lb > 0 && lb < 1 / 0 ? [Wb[0] + lb * Xb, Wb[2] + lb * mb] : null
     }
-    const fB = "plotsBlueprintPlacementChanged",
-      mB = {
+    const ls = "plotsBlueprintPlacementChanged",
+      Qs = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class WB {
-      constructor(kk, Fk) {
-        this.api = kk, this.localPlayerId = Fk, this.placing = null, this.view = null, this.camera = {
+    class es {
+      constructor(bb, cb) {
+        this.api = bb, this.localPlayerId = cb, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = kk => {
-          var Fk, Bk, Rk, ak;
-          const Xk = null !== (Fk = null === (Bk = this.placing) || void 0 === Bk ? void 0 : Bk.rotation) && void 0 !== Fk ? Fk : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = bb => {
+          var cb, sb, kb, ab;
+          const Tb = null !== (cb = null === (sb = this.placing) || void 0 === sb ? void 0 : sb.rotation) && void 0 !== cb ? cb : 0,
             {
-              size: bk
-            } = Ck(kk, Xk),
-            wk = this.api.rW(this.localPlayerId),
-            [dk, sk] = null !== (Rk = null !== (ak = function(kk, Fk, Bk) {
-              const [Rk, tk, ak] = Fk, [Xk, bk, wk] = [Math.floor(Bk[0]), Math.floor(Bk[1]), Math.floor(Bk[2])], dk = 6 + Math.max(Rk, ak) / 2, [sk, Vk] = [Math.ceil(dk + Rk / 2), Math.ceil(dk + ak / 2)], [Jk, Ak] = [Xk - sk, wk - Vk], [ek, yk] = [2 * sk + 1, 2 * Vk + 1], fk = new Float64Array(ek * yk), mk = new Uint16Array(ek * yk);
-              for (let Yk = 0; Yk < ek; Yk++)
-                for (let Fk = 0; Fk < yk; Fk++) {
-                  const Bk = JB(kk, Jk + Yk, Ak + Fk, bk, tk);
-                  fk[Yk * yk + Fk] = Bk, Number.isNaN(Bk) || (mk[Yk * yk + Fk] = AB(kk, Jk + Yk, Ak + Fk, Bk, tk))
+              size: Ub
+            } = Ab(bb, Tb),
+            Ib = this.api.aN(this.localPlayerId),
+            [Hb, fb] = null !== (kb = null !== (ab = function(bb, cb, sb) {
+              const [kb, Wb, ab] = cb, [Tb, Ub, Ib] = [Math.floor(sb[0]), Math.floor(sb[1]), Math.floor(sb[2])], Hb = 6 + Math.max(kb, ab) / 2, [fb, Mb] = [Math.ceil(Hb + kb / 2), Math.ceil(Hb + ab / 2)], [Xb, nb] = [Tb - fb, Ib - Mb], [mb, lb] = [2 * fb + 1, 2 * Mb + 1], Qb = new Float64Array(mb * lb), eb = new Uint16Array(mb * lb);
+              for (let Lb = 0; Lb < mb; Lb++)
+                for (let cb = 0; cb < lb; cb++) {
+                  const sb = Ms(bb, Xb + Lb, nb + cb, Ub, Wb);
+                  Qb[Lb * lb + cb] = sb, Number.isNaN(sb) || (eb[Lb * lb + cb] = Xs(bb, Xb + Lb, nb + cb, sb, Wb))
                 }
-              const Wk = [];
-              let vk = null,
-                ik = 1 / 0;
-              for (let Yk = 0; Yk + Rk <= ek; Yk++)
-                for (let kk = 0; kk + ak <= yk; kk++) {
-                  const [Fk, tk] = [Jk + Yk, Ak + kk], bk = Math.hypot(Fk + Rk / 2 - Bk[0], tk + ak / 2 - Bk[2]);
-                  if (bk > dk || Xk >= Fk - 2 && Xk < Fk + Rk + 2 && wk >= tk - 2 && wk < tk + ak + 2) continue;
-                  Wk.length = 0;
-                  let sk = 0;
-                  for (let Bk = 0; Bk < Rk; Bk++)
-                    for (let Fk = 0; Fk < ak; Fk++) Wk.push(fk[(Yk + Bk) * yk + kk + Fk]), sk += mk[(Yk + Bk) * yk + kk + Fk];
-                  const Vk = eB(Wk);
-                  if (null === Vk) continue;
-                  const ek = bk + 3 * (Vk + sk);
-                  ek < ik && (ik = ek, vk = [Fk, tk])
+              const Cb = [];
+              let Nb = null,
+                Vb = 1 / 0;
+              for (let Lb = 0; Lb + kb <= mb; Lb++)
+                for (let bb = 0; bb + ab <= lb; bb++) {
+                  const [cb, Wb] = [Xb + Lb, nb + bb], Ub = Math.hypot(cb + kb / 2 - sb[0], Wb + ab / 2 - sb[2]);
+                  if (Ub > Hb || Tb >= cb - 2 && Tb < cb + kb + 2 && Ib >= Wb - 2 && Ib < Wb + ab + 2) continue;
+                  Cb.length = 0;
+                  let fb = 0;
+                  for (let sb = 0; sb < kb; sb++)
+                    for (let cb = 0; cb < ab; cb++) Cb.push(Qb[(Lb + sb) * lb + bb + cb]), fb += eb[(Lb + sb) * lb + bb + cb];
+                  const Mb = ns(Cb);
+                  if (null === Mb) continue;
+                  const mb = Ub + 3 * (Mb + fb);
+                  mb < Vb && (Vb = mb, Nb = [cb, Wb])
                 }
-              return vk
-            }(this.api, bk, wk)) && void 0 !== ak ? ak : this.cornerOnTarget(bk)) && void 0 !== Rk ? Rk : [Math.floor(wk[0]) + 2, Math.floor(wk[2])];
+              return Nb
+            }(this.api, Ub, Ib)) && void 0 !== ab ? ab : this.cornerOnTarget(Ub)) && void 0 !== kb ? kb : [Math.floor(Ib[0]) + 2, Math.floor(Ib[2])];
           this.placing = {
-            id: kk,
-            rotation: Xk,
-            corner: [dk, this.playerLevel(), sk],
+            id: bb,
+            rotation: Tb,
+            corner: [Hb, this.playerLevel(), fb],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null
-          }, this.update(), this.api.sendCommand(`${tk} preview`)
+          }, this.update(), this.api.sendCommand(`${Wb} preview`)
         }, this.rotate = () => {
           const {
-            id: kk,
-            rotation: Fk,
-            corner: Bk
-          } = this.placing, tk = Rk[(Rk.indexOf(Fk) + 1) % Rk.length], [ak, , Xk] = Ck(kk, Fk).size, [bk, , wk] = Ck(kk, tk).size;
-          this.moveTo(Bk[0] + Math.floor(ak / 2) - Math.floor(bk / 2), Bk[2] + Math.floor(Xk / 2) - Math.floor(wk / 2), tk)
-        }, this.hoverAt = (kk, Fk) => {
-          this.placing.hover = [kk, Fk], this.moveCentreTo(this.camera, kk, Fk)
+            id: bb,
+            rotation: cb,
+            corner: sb
+          } = this.placing, Wb = kb[(kb.indexOf(cb) + 1) % kb.length], [ab, , Tb] = Ab(bb, cb).size, [Ub, , Ib] = Ab(bb, Wb).size;
+          this.moveTo(sb[0] + Math.floor(ab / 2) - Math.floor(Ub / 2), sb[2] + Math.floor(Tb / 2) - Math.floor(Ib / 2), Wb)
+        }, this.hoverAt = (bb, cb) => {
+          this.placing.hover = [bb, cb], this.moveCentreTo(this.camera, bb, cb)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (kk, Fk) => {
-          const Bk = this.placing,
+        }, this.beginDrag = (bb, cb) => {
+          const sb = this.placing,
             {
-              eye: Rk,
-              forward: tk,
-              tanHalfFovX: ak,
-              tanHalfFovY: Xk
+              eye: kb,
+              forward: Wb,
+              tanHalfFovX: ab,
+              tanHalfFovY: Tb
             } = this.camera,
-            bk = {
-              eye: [Rk[0], Rk[1], Rk[2]],
-              forward: [tk[0], tk[1], tk[2]],
-              tanHalfFovX: ak,
-              tanHalfFovY: Xk
+            Ub = {
+              eye: [kb[0], kb[1], kb[2]],
+              forward: [Wb[0], Wb[1], Wb[2]],
+              tanHalfFovX: ab,
+              tanHalfFovY: Tb
             },
-            wk = Bk.corner[1],
-            dk = yB(bk, kk, Fk, wk);
-          Bk.hover = null, Bk.drag = dk && {
-            view: bk,
-            ground: dk,
-            corner: [Bk.corner[0], Bk.corner[2]],
-            level: wk
+            Ib = sb.corner[1],
+            Hb = ms(Ub, bb, cb, Ib);
+          sb.hover = null, sb.drag = Hb && {
+            view: Ub,
+            ground: Hb,
+            corner: [sb.corner[0], sb.corner[2]],
+            level: Ib
           }
-        }, this.dragTo = (kk, Fk) => {
-          const Bk = this.placing.drag,
-            Rk = Bk && yB(Bk.view, kk, Fk, Bk.level);
-          null !== Bk && null !== Rk && this.moveTo(Bk.corner[0] + Math.round(Rk[0] - Bk.ground[0]), Bk.corner[1] + Math.round(Rk[1] - Bk.ground[1]))
+        }, this.dragTo = (bb, cb) => {
+          const sb = this.placing.drag,
+            kb = sb && ms(sb.view, bb, cb, sb.level);
+          null !== sb && null !== kb && this.moveTo(sb.corner[0] + Math.round(kb[0] - sb.ground[0]), sb.corner[1] + Math.round(kb[1] - sb.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const kk = this.view;
-          kk.waiting || (kk.blocked ? this.Hf({
-            ...kk,
+          const bb = this.view;
+          bb.waiting || (bb.blocked ? this.QQ({
+            ...bb,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const kk = this.placing,
+          const bb = this.placing,
             {
-              id: Fk,
-              rotation: Bk,
-              corner: Rk
-            } = kk;
-          this.api.sendCommand(`${tk} place ${Fk} ${Rk.join(" ")} ${Bk}`), kk.sent = {
+              id: cb,
+              rotation: sb,
+              corner: kb
+            } = bb;
+          this.api.sendCommand(`${Wb} place ${cb} ${kb.join(" ")} ${sb}`), bb.sent = {
             atMs: performance.now(),
-            corner: [...Rk],
-            rotation: Bk,
+            corner: [...kb],
+            rotation: sb,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${tk} preview off`))
-        }, this.chunkWatch = new nF(kk), this.meshes = new RB(kk)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${Wb} preview off`))
+        }, this.chunkWatch = new Fc(bb), this.meshes = new ss(bb)
       }
       getView() {
         return this.view
       }
-      yJ() {
-        const kk = this.placing;
-        null !== kk && (null !== kk.sent && !kk.sent.timedOut && performance.now() - kk.sent.atMs > 3e3 ? (kk.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(kk) || this.chunkWatch.changed()) && this.update())
+      aX() {
+        const bb = this.placing;
+        null !== bb && (null !== bb.sent && !bb.sent.timedOut && performance.now() - bb.sent.atMs > 3e3 ? (bb.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(bb) || this.chunkWatch.changed()) && this.update())
       }
-      afterRender(kk) {
-        const Fk = this.placing;
-        null !== Fk && (! function(kk, Fk) {
-          for (let Bk = 0; Bk < 3; Bk++) Fk.eye[Bk] = kk.cameraPosition[Bk], Fk.forward[Bk] = kk.cameraDirection[Bk];
-          Fk.tanHalfFovX = kk.tanHalfFovX, Fk.tanHalfFovY = kk.tanHalfFovY
-        }(kk, this.camera), null !== Fk.hover && this.moveCentreTo(this.camera, Fk.hover[0], Fk.hover[1]))
+      afterRender(bb) {
+        const cb = this.placing;
+        null !== cb && (! function(bb, cb) {
+          for (let sb = 0; sb < 3; sb++) cb.eye[sb] = bb.cameraPosition[sb], cb.forward[sb] = bb.cameraDirection[sb];
+          cb.tanHalfFovX = bb.tanHalfFovX, cb.tanHalfFovY = bb.tanHalfFovY
+        }(bb, this.camera), null !== cb.hover && this.moveCentreTo(this.camera, cb.hover[0], cb.hover[1]))
       }
-      he(kk) {
-        const Fk = this.placing;
-        if (null === Fk || null === Fk.sent || "active" !== kk[0]) return;
+      Km(bb) {
+        const cb = this.placing;
+        if (null === cb || null === cb.sent || "active" !== bb[0]) return;
         const {
-          sent: Bk
-        } = Fk, [, Rk, tk, ak, Xk, bk, wk] = kk;
-        tk && Rk === Fk.id && wk === Bk.rotation && ak === Bk.corner[0] && Xk === Bk.corner[1] && bk === Bk.corner[2] && this.close()
+          sent: sb
+        } = cb, [, kb, Wb, ab, Tb, Ub, Ib] = bb;
+        Wb && kb === cb.id && Ib === sb.rotation && ab === sb.corner[0] && Tb === sb.corner[1] && Ub === sb.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1650,142 +1650,142 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(kk) {
-        let [Fk, , Bk] = kk;
-        const Rk = this.api.getTargetedBlock();
-        if (null === Rk) return null;
-        const [tk, , ak] = Rk.position;
-        return [tk - Math.floor(Fk / 2), ak - Math.floor(Bk / 2)]
+      cornerOnTarget(bb) {
+        let [cb, , sb] = bb;
+        const kb = this.api.getTargetedBlock();
+        if (null === kb) return null;
+        const [Wb, , ab] = kb.position;
+        return [Wb - Math.floor(cb / 2), ab - Math.floor(sb / 2)]
       }
       playerLevel() {
-        var kk;
-        const [Fk, Bk, Rk] = this.api.rW(this.localPlayerId);
-        if (null !== (kk = this.api.getLocalPlayerMovement()) && void 0 !== kk && kk.onGround) return Math.ceil(Bk - .01);
-        const [tk, ak, Xk] = [Math.floor(Fk), Math.floor(Bk), Math.floor(Rk)];
-        for (let bk = ak; bk >= ak - 2; bk--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(tk, bk, Xk))) return bk + 1;
-        return ak
+        var bb;
+        const [cb, sb, kb] = this.api.aN(this.localPlayerId);
+        if (null !== (bb = this.api.getLocalPlayerMovement()) && void 0 !== bb && bb.onGround) return Math.ceil(sb - .01);
+        const [Wb, ab, Tb] = [Math.floor(cb), Math.floor(sb), Math.floor(kb)];
+        for (let Ub = ab; Ub >= ab - 2; Ub--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(Wb, Ub, Tb))) return Ub + 1;
+        return ab
       }
-      followPlayerLevel(kk) {
-        if (vB(kk)) return !1;
-        const Fk = this.playerLevel();
-        return Fk !== kk.corner[1] && (kk.corner[1] = Fk, !0)
+      followPlayerLevel(bb) {
+        if (Cs(bb)) return !1;
+        const cb = this.playerLevel();
+        return cb !== bb.corner[1] && (bb.corner[1] = cb, !0)
       }
-      moveCentreTo(kk, Fk, Bk) {
-        const Rk = this.placing,
-          tk = yB(kk, Fk, Bk, Rk.corner[1]);
-        if (null !== tk) {
-          const [kk, , Fk] = Ck(Rk.id, Rk.rotation).size;
-          this.moveTo(Math.round(tk[0] - kk / 2), Math.round(tk[1] - Fk / 2))
+      moveCentreTo(bb, cb, sb) {
+        const kb = this.placing,
+          Wb = ms(bb, cb, sb, kb.corner[1]);
+        if (null !== Wb) {
+          const [bb, , cb] = Ab(kb.id, kb.rotation).size;
+          this.moveTo(Math.round(Wb[0] - bb / 2), Math.round(Wb[1] - cb / 2))
         }
       }
-      moveTo(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const Rk = this.placing;
-        if (vB(Rk)) return;
-        const [tk, ak, Xk] = Rk.corner;
-        if (this.centreOnPlot(tk, Xk) && !this.centreOnPlot(kk, Fk, Bk))
-          if (this.centreOnPlot(kk, Xk, Bk)) Fk = Xk;
+      moveTo(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const kb = this.placing;
+        if (Cs(kb)) return;
+        const [Wb, ab, Tb] = kb.corner;
+        if (this.centreOnPlot(Wb, Tb) && !this.centreOnPlot(bb, cb, sb))
+          if (this.centreOnPlot(bb, Tb, sb)) cb = Tb;
           else {
-            if (!this.centreOnPlot(tk, Fk, Bk)) return;
-            kk = tk
-          } kk === tk && Fk === Xk && Bk === Rk.rotation || (Rk.rotation = Bk, Rk.corner = [kk, ak, Fk], this.update())
+            if (!this.centreOnPlot(Wb, cb, sb)) return;
+            bb = Wb
+          } bb === Wb && cb === Tb && sb === kb.rotation || (kb.rotation = sb, kb.corner = [bb, ab, cb], this.update())
       }
-      centreOnPlot(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: Rk,
-          corner: tk
-        } = this.placing, [ak, , Xk] = Ck(Rk, Bk).size;
-        return this.api.canModifyBlockAt(kk + Math.floor(ak / 2), tk[1], Fk + Math.floor(Xk / 2))
+          id: kb,
+          corner: Wb
+        } = this.placing, [ab, , Tb] = Ab(kb, sb).size;
+        return this.api.canModifyBlockAt(bb + Math.floor(ab / 2), Wb[1], cb + Math.floor(Tb / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.Hf(null)
+        this.placing = null, this.meshes.dispose(), this.QQ(null)
       }
       update() {
         const {
-          id: kk,
-          rotation: Fk,
-          corner: Bk,
-          refusals: Rk
-        } = this.placing, tk = new BB, ak = [];
-        let Xk = !1,
-          bk = 0;
+          id: bb,
+          rotation: cb,
+          corner: sb,
+          refusals: kb
+        } = this.placing, Wb = new cs, ab = [];
+        let Tb = !1,
+          Ub = 0;
         for (const {
-            offset: sk,
-            block: Vk
+            offset: fb,
+            block: Mb
           }
-          of Ck(kk, Fk).cells) {
-          const [kk, Fk, Rk] = [Bk[0] + sk[0], Bk[1] + sk[1], Bk[2] + sk[2]];
-          ak.push(kk, Fk, Rk);
-          const wk = !this.api.canModifyBlockAt(kk, Fk, Rk),
-            dk = this.api.getBlockId(kk, Fk, Rk),
-            Jk = !uF(dk) && !HF(this.api.blockNameToBlockId(Vk), dk);
-          Xk ||= wk, bk += Jk ? 1 : 0, wk || Jk ? tk.add(kk, Fk, Rk, FB, kB) : tk.add(kk, Fk, Rk, gF(Vk), mB, PF(Vk))
+          of Ab(bb, cb).cells) {
+          const [bb, cb, kb] = [sb[0] + fb[0], sb[1] + fb[1], sb[2] + fb[2]];
+          ab.push(bb, cb, kb);
+          const Ib = !this.api.canModifyBlockAt(bb, cb, kb),
+            Hb = this.api.getBlockId(bb, cb, kb),
+            Xb = !tc(Hb) && !Bc(this.api.blockNameToBlockId(Mb), Hb);
+          Tb ||= Ib, Ub += Xb ? 1 : 0, Ib || Xb ? Wb.add(bb, cb, kb, bs, pc) : Wb.add(bb, cb, kb, Pc(Mb), Qs, zc(Mb))
         }
-        this.chunkWatch.watch(ak), this.meshes.show(tk.toArray());
-        const wk = this.view,
-          dk = vB(this.placing);
-        (null === wk || void 0 === wk ? void 0 : wk.id) === kk && wk.blocked === Xk && wk.toClear === bk && wk.waiting === dk && wk.refusals === Rk || this.Hf({
-          id: kk,
-          blocked: Xk,
-          toClear: bk,
-          waiting: dk,
-          refusals: Rk
+        this.chunkWatch.watch(ab), this.meshes.show(Wb.toArray());
+        const Ib = this.view,
+          Hb = Cs(this.placing);
+        (null === Ib || void 0 === Ib ? void 0 : Ib.id) === bb && Ib.blocked === Tb && Ib.toClear === Ub && Ib.waiting === Hb && Ib.refusals === kb || this.QQ({
+          id: bb,
+          blocked: Tb,
+          toClear: Ub,
+          waiting: Hb,
+          refusals: kb
         })
       }
-      Hf(kk) {
-        this.view = kk, sk.o.Hf(fB, kk, !0)
+      QQ(bb) {
+        this.view = bb, fb.j.QQ(ls, bb, !0)
       }
     }
 
-    function vB(kk) {
+    function Cs(bb) {
       let {
-        sent: Fk
-      } = kk;
-      return null !== Fk && !Fk.timedOut
+        sent: cb
+      } = bb;
+      return null !== cb && !cb.timedOut
     }
-    var iB = Bk(4002),
-      YB = Bk(38766);
+    var Ns = sb(4023),
+      Vs = sb(38719);
 
-    function oB(kk, Fk, Bk) {
-      const Rk = [255 * kk, 255 * Fk, 255 * Bk],
-        [tk, ak, Xk] = Rk.map((kk => kk + .4 * (255 - kk)));
+    function Ls(bb, cb, sb) {
+      const kb = [255 * bb, 255 * cb, 255 * sb],
+        [Wb, ab, Tb] = kb.map((bb => bb + .4 * (255 - bb)));
       return {
         texture: "square_particle",
-        KV: 48,
-        minLifeTime: .3 / YB.b,
-        maxLifeTime: .55 / YB.b,
+        GM: 48,
+        minLifeTime: .3 / Vs.d,
+        maxLifeTime: .55 / Vs.d,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * YB.b * YB.b, 0],
+        gravity: [0, -14 * Vs.d * Vs.d, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...Rk, 1],
-          maxColor: [tk, ak, Xk, 1]
+          minColor: [...kb, 1],
+          maxColor: [Wb, ab, Tb, 1]
         }, {
           timeFraction: 1,
-          minColor: [...Rk, 0],
-          maxColor: [tk, ak, Xk, 0]
+          minColor: [...kb, 0],
+          maxColor: [Wb, ab, Tb, 0]
         }],
-        blendMode: iB.d.Standard
+        blendMode: Ns.f.Standard
       }
     }
-    const LB = {
+    const us = {
       texture: "glint",
       mipmaps: !1,
-      KV: 96,
-      minLifeTime: .5 / YB.b,
-      maxLifeTime: .9 / YB.b,
+      GM: 96,
+      minLifeTime: .5 / Vs.d,
+      maxLifeTime: .9 / Vs.d,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * YB.b * YB.b, 0],
+      gravity: [0, 2 * Vs.d * Vs.d, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -1794,601 +1794,601 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: iB.d.OneOne
+      blendMode: Ns.f.OneOne
     };
-    class OB {
-      constructor(kk, Fk) {
-        this.api = kk, this.localPlayerId = Fk, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class Ys {
+      constructor(bb, cb) {
+        this.api = bb, this.localPlayerId = cb, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(kk) {
+      filled(bb) {
         if (this.api.particlesEnabled())
-          for (const [Fk, Bk, Rk, tk, ak, Xk] of kk.slice(0, 3)) {
-            const kk = `${tk},${ak},${Xk}`;
-            let bk = this.chips.get(kk);
-            void 0 === bk && (bk = this.api.createParticles(oB(tk, ak, Xk), {
-              pos: [Fk + .5, Bk + .5, Rk + .5]
-            }), this.chips.set(kk, bk));
-            for (let Fk = 0; Fk < 8; Fk++) this.setPoint(Fk, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            bk.emitPoints([Fk + .5, Bk + .5, Rk + .5], this.points, 8)
+          for (const [cb, sb, kb, Wb, ab, Tb] of bb.slice(0, 3)) {
+            const bb = `${Wb},${ab},${Tb}`;
+            let Ub = this.chips.get(bb);
+            void 0 === Ub && (Ub = this.api.createParticles(Ls(Wb, ab, Tb), {
+              pos: [cb + .5, sb + .5, kb + .5]
+            }), this.chips.set(bb, Ub));
+            for (let cb = 0; cb < 8; cb++) this.setPoint(cb, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            Ub.emitPoints([cb + .5, sb + .5, kb + .5], this.points, 8)
           }
       }
-      layerDone(kk) {
+      layerDone(bb) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const Fk = kk.length / 3;
-        if (0 === Fk || !this.api.particlesEnabled()) return;
-        const Bk = Math.min(Fk, 48),
-          [Rk, tk, ak] = [kk[0] + .5, kk[1] + 1, kk[2] + .5];
-        let Xk = 0;
-        for (let bk = 0; bk < Bk; bk++) {
-          const wk = 3 * Math.floor(bk * Fk / Bk);
-          for (let Fk = 0; Fk < 2; Fk++) this.setPoint(Xk++, kk[wk] + Math.random() - Rk, kk[wk + 1] + 1 - tk, kk[wk + 2] + Math.random() - ak, .6 + .8 * Math.random())
+        const cb = bb.length / 3;
+        if (0 === cb || !this.api.particlesEnabled()) return;
+        const sb = Math.min(cb, 48),
+          [kb, Wb, ab] = [bb[0] + .5, bb[1] + 1, bb[2] + .5];
+        let Tb = 0;
+        for (let Ub = 0; Ub < sb; Ub++) {
+          const Ib = 3 * Math.floor(Ub * cb / sb);
+          for (let cb = 0; cb < 2; cb++) this.setPoint(Tb++, bb[Ib] + Math.random() - kb, bb[Ib + 1] + 1 - Wb, bb[Ib + 2] + Math.random() - ab, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(LB, {
-          pos: [Rk, tk, ak]
-        }), this.sparkles.emitPoints([Rk, tk, ak], this.points, Xk)
+        this.sparkles ??= this.api.createParticles(us, {
+          pos: [kb, Wb, ab]
+        }), this.sparkles.emitPoints([kb, Wb, ab], this.points, Tb)
       }
       dispose() {
-        var kk;
-        for (const Fk of this.chips.values()) Fk.stop();
-        this.chips.clear(), null === (kk = this.sparkles) || void 0 === kk || kk.stop(), this.sparkles = null
+        var bb;
+        for (const cb of this.chips.values()) cb.stop();
+        this.chips.clear(), null === (bb = this.sparkles) || void 0 === bb || bb.stop(), this.sparkles = null
       }
-      setPoint(kk, Fk, Bk, Rk, tk) {
-        const ak = 4 * kk;
-        this.points[ak] = Fk, this.points[ak + 1] = Bk, this.points[ak + 2] = Rk, this.points[ak + 3] = tk
+      setPoint(bb, cb, sb, kb, Wb) {
+        const ab = 4 * bb;
+        this.points[ab] = cb, this.points[ab + 1] = sb, this.points[ab + 2] = kb, this.points[ab + 3] = Wb
       }
     }
-    var EB = Bk(1881);
-    const SB = "SpecialAction1",
-      NB = "KeyY",
-      HB = "KeyX";
+    var hs = sb(1917);
+    const gs = "SpecialAction1",
+      Bs = "KeyY",
+      ts = "KeyX";
 
-    function uB(kk) {
+    function ys(bb) {
       let {
-        placement: Fk
-      } = kk;
-      const Bk = (0, Hk.g)(fB, Fk.getView()),
+        placement: cb
+      } = bb;
+      const sb = (0, Bb.h)(ls, cb.getView()),
         {
-          t: Rk
-        } = (0, Mk.x)(),
+          t: kb
+        } = (0, yb.E)(),
         {
-          isTouchScreen: tk
-        } = (0, bk.h)(["isTouchScreen"]),
-        ak = null !== Bk,
-        Xk = ak && !Bk.blocked && !Bk.waiting;
-      if ((0, Nk.b)((kk => ak && !kk.repeat && !(0, dk.isTypingInInput)() && !(0, wk.s)() && !tk), (kk => {
-          const Bk = function(kk, Fk, Bk) {
-            if (kk === HB) return Fk.stop;
-            if (kk === NB) return Bk ? Fk.build : gB;
-            return EB.s[SB].includes(kk) ? Fk.rotate : null
-          }(kk.code, Fk, Xk);
-          null !== Bk && (kk.stopPropagation(), Bk())
-        })), !ak) return null;
-      let sk = tk ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return Bk.blocked ? sk = "plotsGame:placementOffPlot" : Bk.toClear > 0 && (sk = "plotsGame:placementClear"), (0, pk.jsx)(bF.g, {
+          isTouchScreen: Wb
+        } = (0, Ub.p)(["isTouchScreen"]),
+        ab = null !== sb,
+        Tb = ab && !sb.blocked && !sb.waiting;
+      if ((0, gb.e)((bb => ab && !bb.repeat && !(0, Hb.isTypingInInput)() && !(0, Ib.q)() && !Wb), (bb => {
+          const sb = function(bb, cb, sb) {
+            if (bb === ts) return cb.stop;
+            if (bb === Bs) return sb ? cb.build : Ds;
+            return hs.v[gs].includes(bb) ? cb.rotate : null
+          }(bb.code, cb, Tb);
+          null !== sb && (bb.stopPropagation(), sb())
+        })), !ab) return null;
+      let fb = Wb ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return sb.blocked ? fb = "plotsGame:placementOffPlot" : sb.toClear > 0 && (fb = "plotsGame:placementClear"), (0, rb.jsx)(Tc.e, {
         placement: "bottom",
-        children: (0, pk.jsxs)("div", {
+        children: (0, rb.jsxs)("div", {
           className: "PlotsPlacementCard",
-          children: [(0, pk.jsx)("div", {
+          children: [(0, rb.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: Rk(ek(Bk.id).displayName.translationKey)
-          }), (0, pk.jsx)("div", {
-            className: Lk()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: Bk.refusals > 0
+            children: kb(mb(sb.id).displayName.translationKey)
+          }), (0, rb.jsx)("div", {
+            className: ub()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: sb.refusals > 0
             }),
-            children: Rk(sk)
-          }, Bk.refusals), (0, pk.jsxs)("div", {
+            children: kb(fb)
+          }, sb.refusals), (0, rb.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, pk.jsxs)(Ek.g, {
-              onClick: Fk.rotate,
-              children: [(0, pk.jsx)(MB, {
-                noaAction: SB
-              }), Rk("plotsGame:placementRotate")]
-            }), (0, pk.jsxs)(Ek.J, {
-              onClick: Fk.stop,
-              children: [(0, pk.jsx)(MB, {
-                keyCode: HB
-              }), Rk("general:cancel")]
-            }), (0, pk.jsxs)(Ek.o, {
-              disabled: !Xk,
-              onClick: Fk.build,
-              children: [(0, pk.jsx)(MB, {
-                keyCode: NB
-              }), Rk("plotsGame:placementBuild")]
+            children: [(0, rb.jsxs)(hb.d, {
+              onClick: cb.rotate,
+              children: [(0, rb.jsx)(Ps, {
+                noaAction: gs
+              }), kb("plotsGame:placementRotate")]
+            }), (0, rb.jsxs)(hb.G, {
+              onClick: cb.stop,
+              children: [(0, rb.jsx)(Ps, {
+                keyCode: ts
+              }), kb("general:cancel")]
+            }), (0, rb.jsxs)(hb.n, {
+              disabled: !Tb,
+              onClick: cb.build,
+              children: [(0, rb.jsx)(Ps, {
+                keyCode: Bs
+              }), kb("plotsGame:placementBuild")]
             })]
           })]
         })
       })
     }
 
-    function MB(kk) {
-      return (0, pk.jsx)(dF.c, {
+    function Ps(bb) {
+      return (0, rb.jsx)(Ic.d, {
         className: "PlotsPlacementKey",
-        ...kk
+        ...bb
       })
     }
 
-    function gB() {}
-    var UB = Bk(4283);
-    class cB {
-      constructor(kk) {
-        this.placement = kk, this.press = null
+    function Ds() {}
+    var Es = sb(4282);
+    class is {
+      constructor(bb) {
+        this.placement = bb, this.press = null
       }
-      down(kk) {
+      down(bb) {
         if (null !== this.press) return !1;
         const {
-          id: Fk,
-          mouse: Bk,
-          x: Rk,
-          y: tk,
-          atMs: ak
-        } = kk;
+          id: cb,
+          mouse: sb,
+          x: kb,
+          y: Wb,
+          atMs: ab
+        } = bb;
         return this.press = {
-          id: Fk,
-          mouse: Bk,
-          x: Rk,
-          y: tk,
-          atMs: ak,
+          id: cb,
+          mouse: sb,
+          x: kb,
+          y: Wb,
+          atMs: ab,
           moved: !1
-        }, Bk || this.placement.beginDrag(kk.ndcX, kk.ndcY), !0
+        }, sb || this.placement.beginDrag(bb.ndcX, bb.ndcY), !0
       }
-      move(kk) {
-        const Fk = this.press;
-        null !== Fk && Fk.id === kk.id && (Fk.moved ||= Math.hypot(kk.x - Fk.x, kk.y - Fk.y) > 8), kk.mouse ? this.placement.hoverAt(kk.ndcX, kk.ndcY) : (null === Fk || void 0 === Fk ? void 0 : Fk.id) === kk.id && this.placement.dragTo(kk.ndcX, kk.ndcY)
+      move(bb) {
+        const cb = this.press;
+        null !== cb && cb.id === bb.id && (cb.moved ||= Math.hypot(bb.x - cb.x, bb.y - cb.y) > 8), bb.mouse ? this.placement.hoverAt(bb.ndcX, bb.ndcY) : (null === cb || void 0 === cb ? void 0 : cb.id) === bb.id && this.placement.dragTo(bb.ndcX, bb.ndcY)
       }
-      up(kk) {
-        const Fk = this.press;
-        (null === Fk || void 0 === Fk ? void 0 : Fk.id) === kk.id && (this.move(kk), this.end(), !Fk.moved && (Fk.mouse || kk.atMs - Fk.atMs <= 250) && this.placement.tap())
+      up(bb) {
+        const cb = this.press;
+        (null === cb || void 0 === cb ? void 0 : cb.id) === bb.id && (this.move(bb), this.end(), !cb.moved && (cb.mouse || bb.atMs - cb.atMs <= 250) && this.placement.tap())
       }
-      cancel(kk) {
-        var Fk;
-        (null === (Fk = this.press) || void 0 === Fk ? void 0 : Fk.id) === kk && this.end()
+      cancel(bb) {
+        var cb;
+        (null === (cb = this.press) || void 0 === cb ? void 0 : cb.id) === bb && this.end()
       }
-      leave(kk) {
+      leave(bb) {
         let {
-          id: Fk,
-          mouse: Bk
-        } = kk;
-        Bk && this.placement.endHover(), this.cancel(Fk)
+          id: cb,
+          mouse: sb
+        } = bb;
+        sb && this.placement.endHover(), this.cancel(cb)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
 
-    function GB(kk) {
+    function Os(bb) {
       let {
-        placement: Fk
-      } = kk;
-      return null === (0, Hk.g)(fB, Fk.getView()) ? null : (0, pk.jsx)(TB, {
-        placement: Fk
+        placement: cb
+      } = bb;
+      return null === (0, Bb.h)(ls, cb.getView()) ? null : (0, rb.jsx)(Gs, {
+        placement: cb
       })
     }
 
-    function TB(kk) {
+    function Gs(bb) {
       let {
-        placement: Fk
-      } = kk;
-      (0, UB.d)(!0, !0, "PlotsPlacementLayer");
-      const Bk = (0, ak.useMemo)((() => new cB(Fk)), [Fk]);
-      return (0, pk.jsx)("div", {
+        placement: cb
+      } = bb;
+      (0, Es.d)(!0, !0, "PlotsPlacementLayer");
+      const sb = (0, ab.useMemo)((() => new is(cb)), [cb]);
+      return (0, rb.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: kk => {
-          "mouse" === kk.pointerType && 0 !== kk.button || !Bk.down(rB(kk)) || kk.currentTarget.setPointerCapture(kk.pointerId)
+        onPointerDown: bb => {
+          "mouse" === bb.pointerType && 0 !== bb.button || !sb.down(Ks(bb)) || bb.currentTarget.setPointerCapture(bb.pointerId)
         },
-        onPointerMove: kk => {
-          Bk.move(rB(kk))
+        onPointerMove: bb => {
+          sb.move(Ks(bb))
         },
-        onPointerUp: kk => {
-          Bk.up(rB(kk))
+        onPointerUp: bb => {
+          sb.up(Ks(bb))
         },
-        onPointerCancel: kk => {
-          Bk.cancel(kk.pointerId)
+        onPointerCancel: bb => {
+          sb.cancel(bb.pointerId)
         },
-        onLostPointerCapture: kk => {
-          Bk.cancel(kk.pointerId)
+        onLostPointerCapture: bb => {
+          sb.cancel(bb.pointerId)
         },
-        onPointerLeave: kk => {
-          Bk.leave(rB(kk))
+        onPointerLeave: bb => {
+          sb.leave(Ks(bb))
         },
         "aria-hidden": !0
       })
     }
 
-    function rB(kk) {
+    function Ks(bb) {
       const {
-        left: Fk,
-        top: Bk,
-        width: Rk,
-        height: tk
-      } = kk.currentTarget.getBoundingClientRect();
+        left: cb,
+        top: sb,
+        width: kb,
+        height: Wb
+      } = bb.currentTarget.getBoundingClientRect();
       return {
-        id: kk.pointerId,
-        mouse: "mouse" === kk.pointerType,
-        x: kk.clientX,
-        y: kk.clientY,
-        ndcX: (kk.clientX - Fk) / Rk * 2 - 1,
-        ndcY: 1 - (kk.clientY - Bk) / tk * 2,
-        atMs: kk.timeStamp
+        id: bb.pointerId,
+        mouse: "mouse" === bb.pointerType,
+        x: bb.clientX,
+        y: bb.clientY,
+        ndcX: (bb.clientX - cb) / kb * 2 - 1,
+        ndcY: 1 - (bb.clientY - sb) / Wb * 2,
+        atMs: bb.timeStamp
       }
     }
-    var DB = Bk(2274),
-      zB = Bk(36423),
-      PB = Bk(1876),
-      hB = Bk(1213);
-    const qB = {
+    var Zs = sb(2279),
+      zs = sb(36334),
+      qs = sb(1912),
+      ds = sb(1269);
+    const As = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function CB(kk) {
+    function ws(bb) {
       let {
-        hud: Fk
-      } = kk;
-      const Bk = (0, Hk.g)(VF, Fk.getPlot()),
-        [Rk, tk] = (0, ak.useState)(null),
-        Xk = (0, zB.q)(Rk);
-      if ("none" === Bk[0]) return null;
-      const [, bk, wk, dk, sk, Vk] = Bk;
-      return (0, pk.jsx)("div", {
-        className: Lk()("PlotsPlotBannerContainer", {
-          Below: Xk
+        hud: cb
+      } = bb;
+      const sb = (0, Bb.h)(fc, cb.getPlot()),
+        [kb, Wb] = (0, ab.useState)(null),
+        Tb = (0, zs.n)(kb);
+      if ("none" === sb[0]) return null;
+      const [, Ub, Ib, Hb, fb, Mb] = sb;
+      return (0, rb.jsx)("div", {
+        className: ub()("PlotsPlotBannerContainer", {
+          Below: Tb
         }),
-        children: (0, pk.jsx)(ZB, {
-          plotX: bk,
-          plotZ: wk,
-          ownerName: dk,
-          ownerId: sk,
-          relation: Vk,
-          plaqueRef: tk
-        }, `${bk},${wk}`)
+        children: (0, rb.jsx)(rs, {
+          plotX: Ub,
+          plotZ: Ib,
+          ownerName: Hb,
+          ownerId: fb,
+          relation: Mb,
+          plaqueRef: Wb
+        }, `${Ub},${Ib}`)
       })
     }
 
-    function ZB(kk) {
-      var Fk, Bk;
+    function rs(bb) {
+      var cb, sb;
       let {
-        plotX: Rk,
-        plotZ: tk,
-        ownerName: ak,
-        ownerId: Xk,
-        relation: bk,
-        plaqueRef: wk
-      } = kk;
+        plotX: kb,
+        plotZ: Wb,
+        ownerName: ab,
+        ownerId: Tb,
+        relation: Ub,
+        plaqueRef: Ib
+      } = bb;
       const {
-        t: dk
-      } = (0, Mk.x)(), sk = (0, PB.h)("hiddenPlayerNames"), Vk = (0, PB.h)("players"), Jk = null === Xk ? null : null !== (Fk = null === (Bk = Vk.byId[Xk]) || void 0 === Bk ? void 0 : Bk.cosmetics) && void 0 !== Fk ? Fk : null, Ak = dk("plotsGame:plotBannerCoords", {
-        x: Rk,
-        z: tk
-      }), ek = "own" === bk || null !== ak;
-      return (0, pk.jsxs)("div", {
-        ref: wk,
-        className: Lk()("PlotsPlotBanner", {
-          Own: "own" === bk,
-          Shared: "shared" === bk
+        t: Hb
+      } = (0, yb.E)(), fb = (0, qs.f)("hiddenPlayerNames"), Mb = (0, qs.f)("players"), Xb = null === Tb ? null : null !== (cb = null === (sb = Mb.byId[Tb]) || void 0 === sb ? void 0 : sb.cosmetics) && void 0 !== cb ? cb : null, nb = Hb("plotsGame:plotBannerCoords", {
+        x: kb,
+        z: Wb
+      }), mb = "own" === Ub || null !== ab;
+      return (0, rb.jsxs)("div", {
+        ref: Ib,
+        className: ub()("PlotsPlotBanner", {
+          Own: "own" === Ub,
+          Shared: "shared" === Ub
         }),
         role: "status",
-        children: [(0, pk.jsxs)("span", {
-          className: Lk()("PlotsPlotBannerSeal", {
-            Face: null !== Jk
+        children: [(0, rb.jsxs)("span", {
+          className: ub()("PlotsPlotBannerSeal", {
+            Face: null !== Xb
           }),
-          children: [null !== Jk && (0, pk.jsx)(DB.c, {
-            cosmetics: Jk
-          }), null === Jk && (0, pk.jsx)(Ok.d, {
-            name: qB[bk]
+          children: [null !== Xb && (0, rb.jsx)(Zs.b, {
+            cosmetics: Xb
+          }), null === Xb && (0, rb.jsx)(Yb.b, {
+            name: As[Ub]
           })]
-        }), (0, pk.jsxs)("div", {
+        }), (0, rb.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, pk.jsxs)("div", {
+          children: [(0, rb.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === bk && dk("plotsGame:plotBannerYours"), "own" !== bk && null !== ak && dk("plotsGame:plotBannerOwner", {
-              name: (0, hB.i)(ak, sk)
-            }), !ek && Ak]
-          }), ek && (0, pk.jsxs)("div", {
+            children: ["own" === Ub && Hb("plotsGame:plotBannerYours"), "own" !== Ub && null !== ab && Hb("plotsGame:plotBannerOwner", {
+              name: (0, ds.e)(ab, fb)
+            }), !mb && nb]
+          }), mb && (0, rb.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [Ak, "shared" === bk && (0, pk.jsx)("span", {
+            children: [nb, "shared" === Ub && (0, rb.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: dk("plotsGame:plotBannerShared")
+              children: Hb("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
 
-    function pB(kk) {
+    function os(bb) {
       let {
-        progress: Fk,
-        goal: Bk
-      } = kk;
-      const Rk = Math.min(Fk, Bk);
-      return (0, pk.jsxs)("div", {
+        progress: cb,
+        goal: sb
+      } = bb;
+      const kb = Math.min(cb, sb);
+      return (0, rb.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, pk.jsx)("div", {
+        children: [(0, rb.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": Bk,
-          "aria-valuenow": Rk,
-          children: (0, pk.jsx)("div", {
+          "aria-valuemax": sb,
+          "aria-valuenow": kb,
+          children: (0, rb.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${Rk/Bk})`
+              transform: `scaleX(${kb/sb})`
             }
           })
-        }), (0, pk.jsxs)("span", {
+        }), (0, rb.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [Rk, "/", Bk]
+          children: [kb, "/", sb]
         })]
       })
     }
 
-    function KB(kk) {
+    function Ss(bb) {
       return {
-        translationKey: `plotsGame:${kk}`,
+        translationKey: `plotsGame:${bb}`,
         actions: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []
       }
     }
-    const xB = {
+    const Rs = {
       house: {
         icon: "house",
         titleKey: "plotsGame:starterLotHouseTitle",
-        desktop: KB("starterLotHouseHint", ["alt-fire"]),
-        touch: KB("starterLotHouseHint", ["alt-fire"]),
+        desktop: Ss("starterLotHouseHint", ["alt-fire"]),
+        touch: Ss("starterLotHouseHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotHousePlain"
       },
       garden: {
         icon: "sparkle",
         titleKey: "plotsGame:starterLotGarden",
-        desktop: KB("starterLotGardenHint", ["alt-fire"]),
-        touch: KB("starterLotGardenHint", ["alt-fire"]),
+        desktop: Ss("starterLotGardenHint", ["alt-fire"]),
+        touch: Ss("starterLotGardenHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotGardenPlain"
       },
       boulder: {
         icon: "hammer",
         titleKey: "plotsGame:starterLotBoulder",
-        desktop: KB("starterLotBreakHint", ["primary-fire"]),
-        touch: KB("starterLotBreakHintTouch"),
+        desktop: Ss("starterLotBreakHint", ["primary-fire"]),
+        touch: Ss("starterLotBreakHintTouch"),
         plainKey: "plotsGame:starterLotBreakPlain"
       },
       fly: {
         icon: "angles-up",
         titleKey: "plotsGame:starterLotFly",
-        desktop: KB("starterLotFlyHint", ["jump"]),
-        touch: KB("starterLotFlyHintTouch"),
+        desktop: Ss("starterLotFlyHint", ["jump"]),
+        touch: Ss("starterLotFlyHintTouch"),
         plainKey: "plotsGame:starterLotFlyPlain"
       },
       backpack: {
         icon: "backpack",
         titleKey: "plotsGame:starterLotBackpack",
-        desktop: KB("starterLotBackpackHint", ["OpenInventory"]),
-        touch: KB("starterLotBackpackHintTouch"),
+        desktop: Ss("starterLotBackpackHint", ["OpenInventory"]),
+        touch: Ss("starterLotBackpackHintTouch"),
         plainKey: "plotsGame:starterLotBackpackPlain"
       },
       neighbour: {
         icon: "person",
         titleKey: "plotsGame:starterLotNeighbour",
-        desktop: KB("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
-        touch: KB("starterLotNeighbourHintTouch"),
+        desktop: Ss("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
+        touch: Ss("starterLotNeighbourHintTouch"),
         plainKey: "plotsGame:starterLotNeighbourPlain"
       }
     };
 
-    function jB(kk, Fk, Bk) {
+    function vs(bb, cb, sb) {
       const {
-        translationKey: Rk,
-        actions: tk
-      } = Bk ? Fk.touch : Fk.desktop;
-      if (0 === tk.length) return kk(Rk);
-      const ak = [];
-      for (const Xk of tk) {
-        const Rk = (0, EB.r)(Xk, Bk),
-          tk = EB.s[Xk][0];
-        if (null === Rk && void 0 === tk) return kk(Fk.plainKey);
-        ak.push(null === Rk ? (0, EB.n)(tk) : kk(Rk.translationKey))
+        translationKey: kb,
+        actions: Wb
+      } = sb ? cb.touch : cb.desktop;
+      if (0 === Wb.length) return bb(kb);
+      const ab = [];
+      for (const Tb of Wb) {
+        const kb = (0, hs.s)(Tb, sb),
+          Wb = hs.v[Tb][0];
+        if (null === kb && void 0 === Wb) return bb(cb.plainKey);
+        ab.push(null === kb ? (0, hs.n)(Wb) : bb(kb.translationKey))
       }
-      return kk(Rk, {
-        key: ak.join("")
+      return bb(kb, {
+        key: ab.join("")
       })
     }
 
-    function lB(kk) {
+    function Fs(bb) {
       let {
-        hud: Fk
-      } = kk;
-      const Bk = (0, Hk.g)(sF, Fk.getStep()),
+        hud: cb
+      } = bb;
+      const sb = (0, Bb.h)(Hc, cb.getStep()),
         {
-          t: Rk
-        } = (0, Mk.x)();
-      return (0, pk.jsxs)(bF.g, {
+          t: kb
+        } = (0, yb.E)();
+      return (0, rb.jsxs)(Tc.e, {
         placement: "bottom",
-        children: ["step" === Bk[0] && (0, pk.jsx)(nB, {
-          step: Bk[1],
-          progress: Bk[2],
-          goal: Bk[3]
-        }, Bk[1]), "celebrate" === Bk[0] && (0, pk.jsx)(IB, {
-          className: Lk()("Celebrate", {
-            Gold: "house" === Bk[1]
+        children: ["step" === sb[0] && (0, rb.jsx)(xs, {
+          step: sb[1],
+          progress: sb[2],
+          goal: sb[3]
+        }, sb[1]), "celebrate" === sb[0] && (0, rb.jsx)(ps, {
+          className: ub()("Celebrate", {
+            Gold: "house" === sb[1]
           }),
           icon: "star",
-          title: Rk("house" === Bk[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
-        }, `celebrate-${Bk[1]}`)]
+          title: kb("house" === sb[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
+        }, `celebrate-${sb[1]}`)]
       })
     }
 
-    function nB(kk) {
+    function xs(bb) {
       let {
-        step: Fk,
-        progress: Bk,
-        goal: Rk
-      } = kk;
+        step: cb,
+        progress: sb,
+        goal: kb
+      } = bb;
       const {
-        isTouchScreen: tk
-      } = (0, bk.h)(["isTouchScreen"]), {
-        t: ak
-      } = (0, Mk.x)(), Xk = xB[Fk];
-      return (0, pk.jsxs)(IB, {
-        icon: Xk.icon,
-        title: ak(Xk.titleKey),
-        children: [(0, pk.jsx)("div", {
+        isTouchScreen: Wb
+      } = (0, Ub.p)(["isTouchScreen"]), {
+        t: ab
+      } = (0, yb.E)(), Tb = Rs[cb];
+      return (0, rb.jsxs)(ps, {
+        icon: Tb.icon,
+        title: ab(Tb.titleKey),
+        children: [(0, rb.jsx)("div", {
           className: "PlotsStepCardHint SmallTextLight",
-          children: jB(ak, Xk, tk)
-        }), Rk > 1 && (0, pk.jsx)(pB, {
-          progress: Bk,
-          goal: Rk
-        }), "backpack" === Fk && tk && (0, pk.jsx)(QB, {})]
+          children: vs(ab, Tb, Wb)
+        }), kb > 1 && (0, rb.jsx)(os, {
+          progress: sb,
+          goal: kb
+        }), "backpack" === cb && Wb && (0, rb.jsx)(bk, {})]
       })
     }
 
-    function IB(kk) {
+    function ps(bb) {
       let {
-        className: Fk,
-        icon: Bk,
-        title: Rk,
-        children: tk
-      } = kk;
-      return (0, pk.jsxs)("div", {
-        className: Lk()("PlotsStepCard", Fk),
+        className: cb,
+        icon: sb,
+        title: kb,
+        children: Wb
+      } = bb;
+      return (0, rb.jsxs)("div", {
+        className: ub()("PlotsStepCard", cb),
         role: "status",
-        children: [(0, pk.jsx)("span", {
+        children: [(0, rb.jsx)("span", {
           className: "PlotsStepCardIcon",
-          children: (0, pk.jsx)(Ok.d, {
-            name: Bk
+          children: (0, rb.jsx)(Yb.b, {
+            name: sb
           })
-        }), (0, pk.jsxs)("div", {
+        }), (0, rb.jsxs)("div", {
           className: "PlotsStepCardBody",
-          children: [(0, pk.jsx)("div", {
+          children: [(0, rb.jsx)("div", {
             className: "PlotsStepCardTitle SmallTextBold",
-            children: Rk
-          }), tk]
+            children: kb
+          }), Wb]
         })]
       })
     }
 
-    function QB() {
-      return (0, ak.useEffect)((() => (bk.c.set({
+    function bk() {
+      return (0, ab.useEffect)((() => (Ub.d.set({
         backpackPointerRequested: !0
       }), () => {
-        bk.c.set({
+        Ub.d.set({
           backpackPointerRequested: !1
         })
       })), []), null
     }
-    const kR = function(kk, Fk, Bk, Rk) {
+    const ck = function(bb, cb, sb, kb) {
       let {
-        localPlayerId: tk
-      } = Rk;
-      const bk = new JF;
-      let wk = null,
-        dk = null,
-        sk = null,
-        Vk = null,
-        Jk = null;
-      const Ak = [];
+        localPlayerId: Wb
+      } = kb;
+      const Ub = new Mc;
+      let Ib = null,
+        Hb = null,
+        fb = null,
+        Mb = null,
+        Xb = null;
+      const nb = [];
       return {
-        onCreate: kk => {
-          wk = new OB(kk, tk), dk = new dB(kk, tk, wk), sk = new dB(kk, tk, wk), Vk = new WB(kk, tk), Jk = new ik(kk, Vk), Ak.push((0, Xk.w)((0, ak.createElement)(ak.Fragment, null, (0, ak.createElement)(CB, {
-            hud: bk
-          }), (0, ak.createElement)(lB, {
-            hud: bk
-          }), (0, ak.createElement)(eF, {
-            hud: bk,
-            journal: Jk
-          }), (0, ak.createElement)(GB, {
-            placement: Vk
-          }), (0, ak.createElement)(uB, {
-            placement: Vk
+        onCreate: bb => {
+          Ib = new Ys(bb, Wb), Hb = new Is(bb, Wb, Ib), fb = new Is(bb, Wb, Ib), Mb = new es(bb, Wb), Xb = new Vb(bb, Mb), nb.push((0, Tb.s)((0, ab.createElement)(ab.Fragment, null, (0, ab.createElement)(ws, {
+            hud: Ub
+          }), (0, ab.createElement)(Fs, {
+            hud: Ub
+          }), (0, ab.createElement)(nc, {
+            hud: Ub,
+            journal: Xb
+          }), (0, ab.createElement)(Os, {
+            placement: Mb
+          }), (0, ab.createElement)(ys, {
+            placement: Mb
           })), {
-            content: (0, ak.createElement)(aF, {
-              journal: Jk
+            content: (0, ab.createElement)(Wc, {
+              journal: Xb
             })
           }))
         },
-        yJ: () => {
-          dk.yJ(), sk.yJ(), Vk.yJ(), Jk.yJ()
+        aX: () => {
+          Hb.aX(), fb.aX(), Mb.aX(), Xb.aX()
         },
-        onPlayerAttemptAltAction: (kk, Fk, Bk, Rk, tk, ak) => {
-          var Xk;
-          if (null !== ak) return;
-          const bk = void 0 === Fk ? null : [Fk, Bk, Rk];
-          return null !== (Xk = dk.attemptAltAction(bk)) && void 0 !== Xk ? Xk : sk.attemptAltAction(bk)
+        onPlayerAttemptAltAction: (bb, cb, sb, kb, Wb, ab) => {
+          var Tb;
+          if (null !== ab) return;
+          const Ub = void 0 === cb ? null : [cb, sb, kb];
+          return null !== (Tb = Hb.attemptAltAction(Ub)) && void 0 !== Tb ? Tb : fb.attemptAltAction(Ub)
         },
         onPlayerClickUp: () => {
-          dk.endPress(), sk.endPress()
+          Hb.endPress(), fb.endPress()
         },
-        onAfterRender: (kk, Fk) => {
-          Vk.afterRender(Fk), dk.afterRender(Fk), sk.afterRender(Fk)
+        onAfterRender: (bb, cb) => {
+          Mb.afterRender(cb), Hb.afterRender(cb), fb.afterRender(cb)
         },
         onClose: () => {
-          for (const kk of Ak) kk();
-          wk.dispose(), dk.dispose(), sk.dispose(), Vk.dispose(), wk = null, dk = null, sk = null, Vk = null, Jk = null
+          for (const bb of nb) bb();
+          Ib.dispose(), Hb.dispose(), fb.dispose(), Mb.dispose(), Ib = null, Hb = null, fb = null, Mb = null, Xb = null
         },
-        onReceivedMessageFromServer: (kk, Fk) => {
-          if ("plotsStarterLot" === kk) bk.receiveStep(Fk);
-          else if ("plotsPlot" === kk) bk.receivePlot(Fk);
-          else if ("plotsStarterHouse" === kk) dk.he(Fk);
-          else if ("plotsBlueprint" === kk) {
-            const kk = Fk;
-            sk.he(kk), Vk.he(kk)
-          } else "plotsJournal" === kk ? Jk.he(Fk) : "plotsJournalOpen" === kk ? Jk.openFromServer() : "plotsPreviewEnd" === kk && Vk.endFromServer()
+        onReceivedMessageFromServer: (bb, cb) => {
+          if ("plotsStarterLot" === bb) Ub.receiveStep(cb);
+          else if ("plotsPlot" === bb) Ub.receivePlot(cb);
+          else if ("plotsStarterHouse" === bb) Hb.Km(cb);
+          else if ("plotsBlueprint" === bb) {
+            const bb = cb;
+            fb.Km(bb), Mb.Km(bb)
+          } else "plotsJournal" === bb ? Xb.Km(cb) : "plotsJournalOpen" === bb ? Xb.openFromServer() : "plotsPreviewEnd" === bb && Mb.endFromServer()
         }
       }
     }
   },
-  38766: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => Rk,
-      e: () => ak
+  38719: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => kb,
+      e: () => ab
     });
-    const Rk = 1 / .6,
-      tk = {
+    const kb = 1 / .6,
+      Wb = {
         kind: "smokePuff"
       };
-    class ak {
-      constructor(kk, Fk, Bk) {
-        this.style = kk, this.KV = Fk, this.half = Bk, this.particles = null, this.lastFrame = -1
+    class ab {
+      constructor(bb, cb, sb) {
+        this.style = bb, this.GM = cb, this.half = sb, this.particles = null, this.lastFrame = -1
       }
-      emit(kk, Fk, Bk) {
-        let ak = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return Bk !== this.lastFrame && (this.lastFrame = Bk, this.particles || (this.particles = kk.createParticles(function(kk, Fk) {
+      emit(bb, cb, sb) {
+        let ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return sb !== this.lastFrame && (this.lastFrame = sb, this.particles || (this.particles = bb.createParticles(function(bb, cb) {
           const [
-            [Bk, ak, Xk],
-            [bk, wk, dk]
-          ] = kk.colours;
+            [sb, ab, Tb],
+            [Ub, Ib, Hb]
+          ] = bb.colours;
           return {
-            texture: kk.soft ? tk : "square_particle",
-            KV: Fk,
-            minLifeTime: kk.life[0] / Rk,
-            maxLifeTime: kk.life[1] / Rk,
-            minEmitPower: kk.power[0] * Rk,
-            maxEmitPower: kk.power[1] * Rk,
-            minSize: kk.size[0],
-            maxSize: kk.size[1],
+            texture: bb.soft ? Wb : "square_particle",
+            GM: cb,
+            minLifeTime: bb.life[0] / kb,
+            maxLifeTime: bb.life[1] / kb,
+            minEmitPower: bb.power[0] * kb,
+            maxEmitPower: bb.power[1] * kb,
+            minSize: bb.size[0],
+            maxSize: bb.size[1],
             emitRate: 0,
-            gravity: [0, kk.lift * Rk * Rk, 0],
-            dir1: [-kk.spread, 1, -kk.spread],
-            dir2: [kk.spread, 1, kk.spread],
+            gravity: [0, bb.lift * kb * kb, 0],
+            dir1: [-bb.spread, 1, -bb.spread],
+            dir2: [bb.spread, 1, bb.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [Bk, ak, Xk, kk.alpha],
-              maxColor: [bk, wk, dk, kk.alpha]
+              minColor: [sb, ab, Tb, bb.alpha],
+              maxColor: [Ub, Ib, Hb, bb.alpha]
             }, {
               timeFraction: 1,
-              minColor: [Bk, ak, Xk, 0],
-              maxColor: [bk, wk, dk, 0]
+              minColor: [sb, ab, Tb, 0],
+              maxColor: [Ub, Ib, Hb, 0]
             }],
-            blendMode: kk.blendMode
+            blendMode: bb.blendMode
           }
-        }(this.style, this.KV), {
-          pos: Fk,
+        }(this.style, this.GM), {
+          pos: cb,
           half: this.half
-        })), this.particles.moveTo(Fk, this.half), this.particles.emit(ak), !0)
+        })), this.particles.moveTo(cb, this.half), this.particles.emit(ab), !0)
       }
       dispose() {
-        var kk;
-        null === (kk = this.particles) || void 0 === kk || kk.stop(), this.particles = null
+        var bb;
+        null === (bb = this.particles) || void 0 === bb || bb.stop(), this.particles = null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

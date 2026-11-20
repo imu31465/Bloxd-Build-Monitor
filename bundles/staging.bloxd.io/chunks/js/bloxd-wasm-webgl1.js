@@ -1,1964 +1,1964 @@
 export const id = 7;
 export const ids = [7];
 export const modules = {
-  42723: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/bloxd_wasm_webgl1_bg.08521555d5dddcfed4fd.wasm"
+  42627: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/bloxd_wasm_webgl1_bg.1d328d3830f4880c4541.wasm"
   },
-  42721: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      bloxdWasmWebgl1: () => uF
+  42623: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      bloxdWasmWebgl1: () => tc
     });
-    var Rk = {};
-    Bk.r(Rk), Bk.d(Rk, {
-      gf: () => tk,
-      ptk: () => ak,
-      Renderer: () => Xk,
-      HV: () => bk,
-      default: () => HF,
-      initSync: () => NF,
-      uV: () => wk,
-      GBk: () => dk,
-      MV: () => sk,
-      gV: () => Vk,
-      UV: () => Jk,
-      cV: () => Ak,
-      GV: () => ek,
-      TV: () => yk,
-      rV: () => fk,
-      TBk: () => mk,
-      hV: () => Wk,
-      NBk: () => vk,
-      Ktk: () => ik,
-      HBk: () => Yk,
-      xtk: () => Lk,
-      jtk: () => Ok,
-      MBk: () => Ek,
-      ltk: () => Sk,
-      UBk: () => Nk,
-      CV: () => Hk,
-      ZV: () => uk
+    var kb = {};
+    sb.r(kb), sb.d(kb, {
+      DQ: () => Wb,
+      qWb: () => ab,
+      Renderer: () => Tb,
+      CM: () => Ub,
+      default: () => Bc,
+      initSync: () => gc,
+      NM: () => Ib,
+      ysb: () => Hb,
+      VM: () => fb,
+      LM: () => Mb,
+      uM: () => Xb,
+      YM: () => nb,
+      hM: () => mb,
+      JM: () => lb,
+      gM: () => Qb,
+      Psb: () => eb,
+      PM: () => Cb,
+      Lsb: () => Nb,
+      dWb: () => Vb,
+      Ysb: () => Lb,
+      AWb: () => ub,
+      wWb: () => Yb,
+      Jsb: () => hb,
+      rWb: () => Jb,
+      Bsb: () => gb,
+      EM: () => Bb,
+      iM: () => tb
     });
-    class tk {
+    class Wb {
       __destroy_into_raw() {
-        const kk = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Tk.unregister(this), kk
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, Ob.unregister(this), bb
       }
       free() {
-        const kk = this.__destroy_into_raw();
-        OF.DMqn(kk, 0)
+        const bb = this.__destroy_into_raw();
+        Yc.lIhE(bb, 0)
       }
-      static gBk() {
-        return OF.Uaz5() >>> 0
+      static gsb() {
+        return Yc.UwIh() >>> 0
       }
-      ntk() {
-        return OF.Wb7h(this.__wbg_ptr)
+      oWb() {
+        return Yc.bFWV(this.__wbg_ptr)
       }
-      nRk() {
-        return OF.qYan(this.__wbg_ptr) >>> 0
+      rkb() {
+        return Yc.F6Vq(this.__wbg_ptr) >>> 0
       }
-      Itk(kk, Fk, Bk) {
-        return OF.pPNu(this.__wbg_ptr, kk, Fk, Bk) >>> 0
+      SWb(bb, cb, sb) {
+        return Yc.hvzA(this.__wbg_ptr, bb, cb, sb) >>> 0
       }
-      nJ(kk, Fk, Bk) {
-        return OF.vQGr(this.__wbg_ptr, kk, Fk, Bk) >>> 0
+      dX(bb, cb, sb) {
+        return Yc.VRc4(this.__wbg_ptr, bb, cb, sb) >>> 0
       }
-      Qtk() {
-        return OF.H7DU(this.__wbg_ptr) >>> 0
+      RWb() {
+        return Yc.PM75(this.__wbg_ptr) >>> 0
       }
-      QRk(kk, Fk, Bk, Rk, tk, ak, Xk) {
-        return OF.IfTe(this.__wbg_ptr, kk, Fk, Bk, Rk, tk, ak, Xk)
+      Skb(bb, cb, sb, kb, Wb, ab, Tb) {
+        return Yc.MXi8(this.__wbg_ptr, bb, cb, sb, kb, Wb, ab, Tb)
       }
-      kak(kk, Fk, Bk) {
-        return OF.duYF(this.__wbg_ptr, kk, Fk, Bk) >>> 0
+      vWb(bb, cb, sb) {
+        return Yc.CrE2(this.__wbg_ptr, bb, cb, sb) >>> 0
       }
-      Fak() {
-        return OF.joFz(this.__wbg_ptr) >>> 0
+      FWb() {
+        return Yc.C0mc(this.__wbg_ptr) >>> 0
       }
-      Bak() {
-        return OF.HReB(this.__wbg_ptr) >>> 0
+      xWb() {
+        return Yc.ZQin(this.__wbg_ptr) >>> 0
       }
-      tak() {
-        return OF.OkCJ(this.__wbg_ptr) >>> 0
+      pWb() {
+        return Yc.h2P4(this.__wbg_ptr) >>> 0
       }
-      craft(kk, Fk, Bk) {
-        return OF.srCd(this.__wbg_ptr, kk, Fk, Bk) >>> 0
+      craft(bb, cb, sb) {
+        return Yc.o5sw(this.__wbg_ptr, bb, cb, sb) >>> 0
       }
-      atk(kk, Fk, Bk) {
-        return OF.joJX(this.__wbg_ptr, kk, Fk, Bk) >>> 0
+      pkb(bb, cb, sb) {
+        return Yc.Tqxg(this.__wbg_ptr, bb, cb, sb) >>> 0
       }
-      ktk() {
-        return OF.M4AR(this.__wbg_ptr) >>> 0
+      Rkb() {
+        return Yc.ZxG0(this.__wbg_ptr) >>> 0
       }
-      Ftk(kk) {
-        return OF.MDHt(this.__wbg_ptr, kk) >>> 0
+      vkb(bb) {
+        return Yc.o8hG(this.__wbg_ptr, bb) >>> 0
       }
-      Btk(kk, Fk, Bk, Rk, tk, ak) {
-        return OF.aeFy(this.__wbg_ptr, kk, Fk, Bk, Rk, tk, ak) >>> 0
+      Fkb(bb, cb, sb, kb, Wb, ab) {
+        return Yc.aM74(this.__wbg_ptr, bb, cb, sb, kb, Wb, ab) >>> 0
       }
-      IRk() {
-        return OF.g7As(this.__wbg_ptr) >>> 0
+      okb() {
+        return Yc.ZtaL(this.__wbg_ptr) >>> 0
       }
-      aak() {
-        return OF.FYc7(this.__wbg_ptr) >>> 0
+      bab() {
+        return Yc.n0Lg(this.__wbg_ptr) >>> 0
       }
-      Xak(kk) {
-        return OF.XO1x(this.__wbg_ptr, kk) >>> 0
+      sab(bb) {
+        return Yc.nciU(this.__wbg_ptr, bb) >>> 0
       }
-      btk(kk) {
-        return OF.u8rY(this.__wbg_ptr, kk) >>> 0
+      cWb(bb) {
+        return Yc.Y7Av(this.__wbg_ptr, bb) >>> 0
       }
-      wak(kk) {
-        return OF.zemg(this.__wbg_ptr, kk) >>> 0
+      kab(bb) {
+        return Yc.OaWB(this.__wbg_ptr, bb) >>> 0
       }
-      sak(kk) {
-        return OF.Q9Vf(this.__wbg_ptr, kk) >>> 0
+      Wab(bb) {
+        return Yc.kjIs(this.__wbg_ptr, bb) >>> 0
       }
-      frame(kk, Fk, Bk, Rk, tk, ak) {
-        return OF.aP9E(this.__wbg_ptr, kk, Fk, Bk, Rk, tk, ak) >>> 0
+      frame(bb, cb, sb, kb, Wb, ab) {
+        return Yc.We8c(this.__wbg_ptr, bb, cb, sb, kb, Wb, ab) >>> 0
       }
-      Jak(kk) {
-        return 0 !== OF.rBB7(this.__wbg_ptr, kk)
+      Uab(bb) {
+        return 0 !== Yc.hvd8(this.__wbg_ptr, bb)
       }
-      Aak(kk, Fk) {
-        return OF.KYBp(this.__wbg_ptr, kk, Fk) >>> 0
+      Iab(bb, cb) {
+        return Yc.aCfx(this.__wbg_ptr, bb, cb) >>> 0
       }
-      eak(kk) {
-        return OF.Upkh(this.__wbg_ptr, kk) >>> 0
+      Hab(bb) {
+        return Yc.OCgJ(this.__wbg_ptr, bb) >>> 0
       }
-      cA() {
-        return OF.rSDu(this.__wbg_ptr) >>> 0
+      tn() {
+        return Yc.UH7F(this.__wbg_ptr) >>> 0
       }
-      yak() {
-        return OF.NF8u(this.__wbg_ptr) >>> 0
+      Mab() {
+        return Yc.wf08(this.__wbg_ptr) >>> 0
       }
-      XJ() {
-        return OF.uiH9(this.__wbg_ptr) >>> 0
+      FM() {
+        return Yc.dsCy(this.__wbg_ptr) >>> 0
       }
-      Wak(kk, Fk, Bk, Rk, tk) {
-        return OF.yjiO(this.__wbg_ptr, kk, Fk, Bk, Rk, tk) >>> 0
+      Xab(bb, cb, sb, kb, Wb) {
+        return Yc.iiI5(this.__wbg_ptr, bb, cb, sb, kb, Wb) >>> 0
       }
-      vak(kk, Fk, Bk) {
-        return OF.mHX4(this.__wbg_ptr, kk, Fk, Bk) >>> 0
+      mab(bb, cb, sb) {
+        return Yc.hGZ0(this.__wbg_ptr, bb, cb, sb) >>> 0
       }
-      iak(kk, Fk, Bk, Rk) {
-        return OF.u689(this.__wbg_ptr, kk, Fk, Bk, Rk) >>> 0
+      Qab(bb, cb, sb, kb) {
+        return Yc.uJc6(this.__wbg_ptr, bb, cb, sb, kb) >>> 0
       }
-      Lak(kk, Fk, Bk) {
-        return OF.KKdU(this.__wbg_ptr, kk, Fk, Bk) >>> 0
+      eab(bb, cb, sb) {
+        return Yc.fyBI(this.__wbg_ptr, bb, cb, sb) >>> 0
       }
-      Eak(kk, Fk) {
-        return OF.NW5A(this.__wbg_ptr, kk, Fk) >>> 0
+      Cab(bb, cb) {
+        return Yc.haMS(this.__wbg_ptr, bb, cb) >>> 0
       }
-      Xtk(kk) {
-        return OF.WPpL(this.__wbg_ptr, kk) >>> 0
+      bWb(bb) {
+        return Yc.YDV3(this.__wbg_ptr, bb) >>> 0
       }
-      qY() {
-        return OF.If8X(this.__wbg_ptr) >>> 0
+      JV() {
+        return Yc.nzLN(this.__wbg_ptr) >>> 0
       }
-      Sak() {
-        return OF.a8My(this.__wbg_ptr) >>> 0
+      Nab() {
+        return Yc.itrj(this.__wbg_ptr) >>> 0
       }
-      Nak() {
-        return OF.rZqq(this.__wbg_ptr) >>> 0
+      Vab() {
+        return Yc.jlOL(this.__wbg_ptr) >>> 0
       }
-      Hak() {
-        return OF.fa0N(this.__wbg_ptr) >>> 0
+      uab() {
+        return Yc.BVJi(this.__wbg_ptr) >>> 0
       }
-      constructor(kk, Fk) {
-        const Bk = OF.X8RH(kk, Fk);
-        return this.__wbg_ptr = Bk, Tk.register(this, this.__wbg_ptr, this), this
+      constructor(bb, cb) {
+        const sb = Yc.euyU(bb, cb);
+        return this.__wbg_ptr = sb, Ob.register(this, this.__wbg_ptr, this), this
       }
-      uak(kk) {
-        return OF.PScH(this.__wbg_ptr, kk) >>> 0
+      Yab(bb) {
+        return Yc.XlP3(this.__wbg_ptr, bb) >>> 0
       }
-      Pf() {
-        return OF.UBEE(this.__wbg_ptr) >>> 0
+      zQ() {
+        return Yc.m99J(this.__wbg_ptr) >>> 0
       }
-      Ltk(kk, Fk) {
-        return OF.b14o(this.__wbg_ptr, kk, Fk) >>> 0
+      eWb(bb, cb) {
+        return Yc.SF6Q(this.__wbg_ptr, bb, cb) >>> 0
       }
-      vtk(kk) {
-        return OF.W6iy(this.__wbg_ptr, kk) >>> 0
+      nWb(bb) {
+        return Yc.ZaKO(this.__wbg_ptr, bb) >>> 0
       }
-      Mak(kk, Fk, Bk, Rk) {
-        return OF.s6iU(this.__wbg_ptr, kk, Fk, Bk, Rk) >>> 0
+      hab(bb, cb, sb, kb) {
+        return Yc.SnmR(this.__wbg_ptr, bb, cb, sb, kb) >>> 0
       }
-      Ntk(kk) {
-        return OF.R1Fv(this.__wbg_ptr, kk) >>> 0
+      LWb(bb) {
+        return Yc.fDGD(this.__wbg_ptr, bb) >>> 0
       }
-      Jtk() {
-        OF.h2Ca(this.__wbg_ptr)
+      TWb() {
+        Yc.Lflr(this.__wbg_ptr)
       }
-      gtk(kk) {
-        OF.WpM1(this.__wbg_ptr, kk)
+      gWb(bb) {
+        Yc.JrZu(this.__wbg_ptr, bb)
       }
-      Mtk(kk) {
-        return OF.DsLq(this.__wbg_ptr, kk)
+      JWb(bb) {
+        return Yc.PtJE(this.__wbg_ptr, bb)
       }
-      Vtk() {
-        return OF.riLl(this.__wbg_ptr) >>> 0
+      aWb() {
+        return Yc.IRpq(this.__wbg_ptr) >>> 0
       }
-      Tf() {
-        return OF.Zo3b(this.__wbg_ptr) >>> 0
+      OQ() {
+        return Yc.HpMg(this.__wbg_ptr) >>> 0
       }
-      Etk() {
-        return OF.t8xF(this.__wbg_ptr) >>> 0
+      NWb() {
+        return Yc.FOrB(this.__wbg_ptr) >>> 0
       }
-      Rak(kk) {
-        return OF.Pzv2(this.__wbg_ptr, kk) >>> 0
+      jWb(bb) {
+        return Yc.RBmS(this.__wbg_ptr, bb) >>> 0
       }
-      gak(kk) {
-        return OF.Qyzg(this.__wbg_ptr, kk) >>> 0
+      Jab(bb) {
+        return Yc.L4Uv(this.__wbg_ptr, bb) >>> 0
       }
-      Uak(kk) {
-        return OF.bR9m(this.__wbg_ptr, kk) >>> 0
+      gab(bb) {
+        return Yc.Qa3U(this.__wbg_ptr, bb) >>> 0
       }
-      cak(kk) {
-        return OF.APDT(this.__wbg_ptr, kk) >>> 0
+      Bab(bb) {
+        return Yc.nOj6(this.__wbg_ptr, bb) >>> 0
       }
-      salvage(kk, Fk, Bk) {
-        return OF.K5iE(this.__wbg_ptr, kk, Fk, Bk) >>> 0
+      salvage(bb, cb, sb) {
+        return Yc.SZri(this.__wbg_ptr, bb, cb, sb) >>> 0
       }
-      dtk(kk) {
-        return OF.Pv0p(this.__wbg_ptr, kk) >>> 0
+      kWb(bb) {
+        return Yc.cTyV(this.__wbg_ptr, bb) >>> 0
       }
-      lRk() {
-        return OF.zzKi(this.__wbg_ptr) >>> 0
+      wkb() {
+        return Yc.F1Qb(this.__wbg_ptr) >>> 0
       }
-      Gak(kk) {
-        return OF.VYOt(this.__wbg_ptr, kk) >>> 0
+      yab(bb) {
+        return Yc.o3Ye(this.__wbg_ptr, bb) >>> 0
       }
-      Tak(kk) {
-        OF.VzPf(this.__wbg_ptr, kk)
+      Pab(bb) {
+        Yc.Qj97(this.__wbg_ptr, bb)
       }
-      rak(kk) {
-        return 0 !== OF.QvzD(this.__wbg_ptr, zk(kk))
+      Dab(bb) {
+        return 0 !== Yc.WXiz(this.__wbg_ptr, Zb(bb))
       }
-      WA(kk, Fk, Bk, Rk) {
-        return OF.xYnC(this.__wbg_ptr, kk, Fk, Bk, Rk) >>> 0
+      Mn(bb, cb, sb, kb) {
+        return Yc.uwAn(this.__wbg_ptr, bb, cb, sb, kb) >>> 0
       }
-      uBk(kk, Fk, Bk) {
-        const Rk = fF(kk, OF.mCFP, OF.eKAg),
-          tk = EF,
-          ak = AF(Fk, OF.mCFP),
-          Xk = EF,
-          bk = function(kk, Fk) {
-            const Bk = Fk(8 * kk.length, 8) >>> 0;
-            return kF().set(kk, Bk / 8), EF = kk.length, Bk
-          }(Bk, OF.mCFP),
-          wk = EF;
-        return 0 !== OF.MFJg(this.__wbg_ptr, Rk, tk, ak, Xk, bk, wk)
+      hsb(bb, cb, sb) {
+        const kb = lc(bb, Yc.Jegw, Yc.xZje),
+          Wb = hc,
+          ab = Xc(cb, Yc.Jegw),
+          Tb = hc,
+          Ub = function(bb, cb) {
+            const sb = cb(8 * bb.length, 8) >>> 0;
+            return pb().set(bb, sb / 8), hc = bb.length, sb
+          }(sb, Yc.Jegw),
+          Ib = hc;
+        return 0 !== Yc.EM9f(this.__wbg_ptr, kb, Wb, ab, Tb, Ub, Ib)
       }
-      Dak(kk) {
-        OF.HBq8(this.__wbg_ptr, kk)
+      Eab(bb) {
+        Yc.mi5w(this.__wbg_ptr, bb)
       }
-      Pak(kk, Fk) {
-        return 0 !== OF.edE1(this.__wbg_ptr, kk, Fk)
+      Oab(bb, cb) {
+        return 0 !== Yc.TgIM(this.__wbg_ptr, bb, cb)
       }
-      hak(kk) {
-        return OF.NWpm(this.__wbg_ptr, kk) >>> 0
+      Gab(bb) {
+        return Yc.avAg(this.__wbg_ptr, bb) >>> 0
       }
-      Uf(kk, Fk) {
-        OF.ipjq(this.__wbg_ptr, kk, Fk)
+      EQ(bb, cb) {
+        Yc.NWVb(this.__wbg_ptr, bb, cb)
       }
-      Vak(kk) {
-        OF.nQsC(this.__wbg_ptr, zk(kk))
+      aab(bb) {
+        Yc.WzBg(this.__wbg_ptr, Zb(bb))
       }
-      qak(kk) {
-        OF.CXrM(this.__wbg_ptr, kk)
+      Kab(bb) {
+        Yc.GQb7(this.__wbg_ptr, bb)
       }
-      ttk(kk, Fk, Bk) {
-        return OF.HFvw(this.__wbg_ptr, kk, Fk, Bk) >>> 0
+      jkb(bb, cb, sb) {
+        return Yc.rT1T(this.__wbg_ptr, bb, cb, sb) >>> 0
       }
-      stk(kk) {
-        return OF.uuhi(this.__wbg_ptr, kk) >>> 0
+      WWb(bb) {
+        return Yc.kZmz(this.__wbg_ptr, bb) >>> 0
       }
-      Cak(kk) {
-        OF.kMrH(this.__wbg_ptr, kk)
+      Zab(bb) {
+        Yc.To4H(this.__wbg_ptr, bb)
       }
-      Zak(kk) {
-        Pk(kk, Xk);
-        var Fk = kk.__destroy_into_raw();
-        OF.dTuB(this.__wbg_ptr, Fk)
+      zab(bb) {
+        zb(bb, Tb);
+        var cb = bb.__destroy_into_raw();
+        Yc.YCUL(this.__wbg_ptr, cb)
       }
-      CBk(kk, Fk, Bk, Rk, tk, ak) {
-        var Xk = VF(kk) ? 0 : eF(kk, OF.mCFP),
-          bk = EF;
-        const wk = eF(Fk, OF.mCFP),
-          dk = EF,
-          sk = yF(Bk, OF.mCFP),
-          Vk = EF,
-          Jk = AF(Rk, OF.mCFP),
-          Ak = EF;
-        return 0 !== OF.KRwh(this.__wbg_ptr, Xk, bk, wk, dk, sk, Vk, Jk, Ak, tk, ak)
+      Zsb(bb, cb, sb, kb, Wb, ab) {
+        var Tb = fc(bb) ? 0 : nc(bb, Yc.Jegw),
+          Ub = hc;
+        const Ib = nc(cb, Yc.Jegw),
+          Hb = hc,
+          fb = mc(sb, Yc.Jegw),
+          Mb = hc,
+          Xb = Xc(kb, Yc.Jegw),
+          nb = hc;
+        return 0 !== Yc.qmo1(this.__wbg_ptr, Tb, Ub, Ib, Hb, fb, Mb, Xb, nb, Wb, ab)
       }
-      pak(kk, Fk, Bk, Rk, tk) {
-        var ak = VF(tk) ? 0 : eF(tk, OF.mCFP),
-          Xk = EF;
-        OF.ps0y(this.__wbg_ptr, kk, Fk, Bk, Rk, ak, Xk)
+      qab(bb, cb, sb, kb, Wb) {
+        var ab = fc(Wb) ? 0 : nc(Wb, Yc.Jegw),
+          Tb = hc;
+        Yc.krGU(this.__wbg_ptr, bb, cb, sb, kb, ab, Tb)
       }
-      Kak(kk, Fk, Bk, Rk) {
-        const tk = yF(kk, OF.mCFP),
-          ak = EF,
-          Xk = AF(Fk, OF.mCFP),
-          bk = EF,
-          wk = yF(Bk, OF.mCFP),
-          dk = EF;
-        return 0 !== OF.A5ft(this.__wbg_ptr, tk, ak, Xk, bk, wk, dk, VF(Rk) ? 0 : zk(Rk))
+      dab(bb, cb, sb, kb) {
+        const Wb = mc(bb, Yc.Jegw),
+          ab = hc,
+          Tb = Xc(cb, Yc.Jegw),
+          Ub = hc,
+          Ib = mc(sb, Yc.Jegw),
+          Hb = hc;
+        return 0 !== Yc.Fs2G(this.__wbg_ptr, Wb, ab, Tb, Ub, Ib, Hb, fc(kb) ? 0 : Zb(kb))
       }
-      xak(kk) {
-        const Fk = fF(kk, OF.mCFP, OF.eKAg),
-          Bk = EF;
-        return 0 !== OF.GD6s(this.__wbg_ptr, Fk, Bk)
+      Aab(bb) {
+        const cb = lc(bb, Yc.Jegw, Yc.xZje),
+          sb = hc;
+        return 0 !== Yc.pSyJ(this.__wbg_ptr, cb, sb)
       }
-      jak(kk) {
-        return OF.lSvj(this.__wbg_ptr, kk) >>> 0
+      wab(bb) {
+        return Yc.KhzV(this.__wbg_ptr, bb) >>> 0
       }
-      cBk() {
-        return OF.aPG9(this.__wbg_ptr) >>> 0
+      tsb() {
+        return Yc.Gjc4(this.__wbg_ptr) >>> 0
       }
-      Iak() {
-        const kk = OF.azjw(this.__wbg_ptr);
-        var Fk = xk(kk[0], kk[1]).slice();
-        return OF.yan4(kk[0], 4 * kk[1], 4), Fk
+      rab() {
+        const bb = Yc.L1QH(this.__wbg_ptr);
+        var cb = Sb(bb[0], bb[1]).slice();
+        return Yc.bAk3(bb[0], 4 * bb[1], 4), cb
       }
-      Qak() {
-        const kk = OF.rfJx(this.__wbg_ptr);
-        return 16777215 === kk ? void 0 : 0 !== kk
+      oab() {
+        const bb = Yc.AnRv(this.__wbg_ptr);
+        return 16777215 === bb ? void 0 : 0 !== bb
       }
-      Gf(kk) {
-        const Fk = OF.shNy(this.__wbg_ptr, kk);
-        var Bk = Zk(Fk[0], Fk[1]).slice();
-        return OF.yan4(Fk[0], 8 * Fk[1], 8), Bk
+      iQ(bb) {
+        const cb = Yc.xmXf(this.__wbg_ptr, bb);
+        var sb = wb(cb[0], cb[1]).slice();
+        return Yc.bAk3(cb[0], 8 * cb[1], 8), sb
       }
-      kXk() {
-        const kk = OF.Rhvn(this.__wbg_ptr);
-        var Fk = Kk(kk[0], kk[1]);
-        return OF.yan4(kk[0], 4 * kk[1], 4), Fk
+      Sab() {
+        const bb = Yc.paSo(this.__wbg_ptr);
+        var cb = ob(bb[0], bb[1]);
+        return Yc.bAk3(bb[0], 4 * bb[1], 4), cb
       }
-      FXk(kk, Fk, Bk, Rk, tk) {
-        return OF.c2gW(this.__wbg_ptr, kk, Fk, Bk, Rk, tk) >>> 0
+      Rab(bb, cb, sb, kb, Wb) {
+        return Yc.aamO(this.__wbg_ptr, bb, cb, sb, kb, Wb) >>> 0
       }
-      BXk() {
-        const kk = OF.aRSp(this.__wbg_ptr);
-        var Fk = Kk(kk[0], kk[1]);
-        return OF.yan4(kk[0], 4 * kk[1], 4), Fk
+      vab() {
+        const bb = Yc.b0EW(this.__wbg_ptr);
+        var cb = ob(bb[0], bb[1]);
+        return Yc.bAk3(bb[0], 4 * bb[1], 4), cb
       }
-      RXk() {
-        return OF.impT(this.__wbg_ptr) >>> 0
+      Fab() {
+        return Yc.ZD3k(this.__wbg_ptr) >>> 0
       }
-      tXk() {
-        return OF.d8Qa(this.__wbg_ptr) >>> 0
+      jab() {
+        return Yc.lxH7(this.__wbg_ptr) >>> 0
       }
     }
-    Symbol.dispose && (tk.prototype[Symbol.dispose] = tk.prototype.free);
-    class ak {
+    Symbol.dispose && (Wb.prototype[Symbol.dispose] = Wb.prototype.free);
+    class ab {
       __destroy_into_raw() {
-        const kk = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, rk.unregister(this), kk
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, Gb.unregister(this), bb
       }
       free() {
-        const kk = this.__destroy_into_raw();
-        OF.XjIj(kk, 0)
+        const bb = this.__destroy_into_raw();
+        Yc.JgVK(bb, 0)
       }
-      attach(kk) {
-        Pk(kk, tk);
-        return 0 !== OF.AEar(this.__wbg_ptr, kk.__wbg_ptr)
+      attach(bb) {
+        zb(bb, Wb);
+        return 0 !== Yc.v8du(this.__wbg_ptr, bb.__wbg_ptr)
       }
       attached() {
-        return 0 !== OF.eGme(this.__wbg_ptr)
+        return 0 !== Yc.j6Zq(this.__wbg_ptr)
       }
-      close(kk) {
-        const Fk = OF.h2fV(this.__wbg_ptr, kk);
-        var Bk = jk(Fk[0], Fk[1]).slice();
-        return OF.yan4(Fk[0], 1 * Fk[1], 1), Bk
+      close(bb) {
+        const cb = Yc.IBfL(this.__wbg_ptr, bb);
+        var sb = Rb(cb[0], cb[1]).slice();
+        return Yc.bAk3(cb[0], 1 * cb[1], 1), sb
       }
       detach() {
-        OF.j43m(this.__wbg_ptr)
+        Yc.T3It(this.__wbg_ptr)
       }
-      aXk() {
-        return OF.S9PQ(this.__wbg_ptr) >>> 0
+      bTb() {
+        return Yc.uY4x(this.__wbg_ptr) >>> 0
       }
-      XXk() {
-        return OF.R7DE(this.__wbg_ptr) >>> 0
+      cTb() {
+        return Yc.iJvu(this.__wbg_ptr) >>> 0
       }
-      frame(kk) {
-        return OF.Epdz(this.__wbg_ptr, kk) >>> 0
+      frame(bb) {
+        return Yc.TPLp(this.__wbg_ptr, bb) >>> 0
       }
-      bXk(kk, Fk, Bk, Rk) {
-        const tk = eF(Rk, OF.mCFP),
-          ak = EF;
-        return OF.rIFE(this.__wbg_ptr, kk, Fk, Bk, tk, ak)
+      sTb(bb, cb, sb, kb) {
+        const Wb = nc(kb, Yc.Jegw),
+          ab = hc;
+        return Yc.Bb3l(this.__wbg_ptr, bb, cb, sb, Wb, ab)
       }
-      wXk() {
-        return 0 !== OF.RpNY(this.__wbg_ptr)
+      kTb() {
+        return 0 !== Yc.QF6f(this.__wbg_ptr)
       }
-      dXk(kk, Fk) {
-        const Bk = eF(Fk, OF.mCFP),
-          Rk = EF;
-        OF.KkXj(this.__wbg_ptr, kk, Bk, Rk)
+      WTb(bb, cb) {
+        const sb = nc(cb, Yc.Jegw),
+          kb = hc;
+        Yc.Sp2v(this.__wbg_ptr, bb, sb, kb)
       }
       constructor() {
-        const kk = OF.kJ4b();
-        return this.__wbg_ptr = kk, rk.register(this, this.__wbg_ptr, this), this
+        const bb = Yc.c87i();
+        return this.__wbg_ptr = bb, Gb.register(this, this.__wbg_ptr, this), this
       }
-      open(kk, Fk, Bk, Rk) {
-        return 0 !== OF.ULO7(this.__wbg_ptr, kk, Fk, Bk, Rk)
+      open(bb, cb, sb, kb) {
+        return 0 !== Yc.x4qi(this.__wbg_ptr, bb, cb, sb, kb)
       }
-      orbit(kk) {
-        const Fk = OF.OiBb(this.__wbg_ptr, kk);
-        var Bk = Zk(Fk[0], Fk[1]).slice();
-        return OF.yan4(Fk[0], 8 * Fk[1], 8), Bk
+      orbit(bb) {
+        const cb = Yc.jb3J(this.__wbg_ptr, bb);
+        var sb = wb(cb[0], cb[1]).slice();
+        return Yc.bAk3(cb[0], 8 * cb[1], 8), sb
       }
-      replay(kk) {
-        return OF.uwCu(this.__wbg_ptr, kk) >>> 0
+      replay(bb) {
+        return Yc.gKI5(this.__wbg_ptr, bb) >>> 0
       }
-      resize(kk, Fk, Bk) {
-        OF.JUNl(this.__wbg_ptr, kk, Fk, Bk)
+      resize(bb, cb, sb) {
+        Yc.n3Fj(this.__wbg_ptr, bb, cb, sb)
       }
-      sXk(kk) {
-        const Fk = eF(kk, OF.mCFP),
-          Bk = EF;
-        return 0 !== OF.izho(this.__wbg_ptr, Fk, Bk)
+      aTb(bb) {
+        const cb = nc(bb, Yc.Jegw),
+          sb = hc;
+        return 0 !== Yc.iYn8(this.__wbg_ptr, cb, sb)
       }
-      JXk(kk, Fk, Bk, Rk, tk) {
-        const ak = fF(Fk, OF.mCFP, OF.eKAg),
-          Xk = EF;
-        return OF.GnNO(this.__wbg_ptr, kk, ak, Xk, Bk, Rk, tk) >>> 0
+      UTb(bb, cb, sb, kb, Wb) {
+        const ab = lc(cb, Yc.Jegw, Yc.xZje),
+          Tb = hc;
+        return Yc.gyd7(this.__wbg_ptr, bb, ab, Tb, sb, kb, Wb) >>> 0
       }
-      AXk(kk) {
-        OF.jB7H(this.__wbg_ptr, kk)
+      ITb(bb) {
+        Yc.WU5j(this.__wbg_ptr, bb)
       }
-      eXk(kk, Fk, Bk, Rk, tk) {
-        const ak = fF(Bk, OF.mCFP, OF.eKAg),
-          Xk = EF;
-        return OF.Johi(this.__wbg_ptr, kk, Fk, ak, Xk, Rk, tk) >>> 0
+      HTb(bb, cb, sb, kb, Wb) {
+        const ab = lc(sb, Yc.Jegw, Yc.xZje),
+          Tb = hc;
+        return Yc.Ve8L(this.__wbg_ptr, bb, cb, ab, Tb, kb, Wb) >>> 0
       }
-      yXk(kk, Fk, Bk, Rk) {
-        OF.Zlps(this.__wbg_ptr, kk, Fk, Bk, Rk)
+      fTb(bb, cb, sb, kb) {
+        Yc.JO7o(this.__wbg_ptr, bb, cb, sb, kb)
       }
-      fXk(kk, Fk, Bk, Rk, tk) {
-        const ak = fF(Bk, OF.mCFP, OF.eKAg),
-          Xk = EF,
-          bk = fF(Rk, OF.mCFP, OF.eKAg),
-          wk = EF;
-        return OF.JVhf(this.__wbg_ptr, kk, Fk, ak, Xk, bk, wk, tk) >>> 0
+      MTb(bb, cb, sb, kb, Wb) {
+        const ab = lc(sb, Yc.Jegw, Yc.xZje),
+          Tb = hc,
+          Ub = lc(kb, Yc.Jegw, Yc.xZje),
+          Ib = hc;
+        return Yc.n2RV(this.__wbg_ptr, bb, cb, ab, Tb, Ub, Ib, Wb) >>> 0
       }
-      VXk(kk, Fk, Bk, Rk) {
-        const tk = fF(Fk, OF.mCFP, OF.eKAg),
-          ak = EF,
-          Xk = AF(Bk, OF.mCFP),
-          bk = EF;
-        return OF.NU6W(this.__wbg_ptr, kk, tk, ak, Xk, bk, Rk) >>> 0
+      TTb(bb, cb, sb, kb) {
+        const Wb = lc(cb, Yc.Jegw, Yc.xZje),
+          ab = hc,
+          Tb = Xc(sb, Yc.Jegw),
+          Ub = hc;
+        return Yc.Wp2x(this.__wbg_ptr, bb, Wb, ab, Tb, Ub, kb) >>> 0
       }
-      Zak(kk) {
-        Pk(kk, Xk);
-        var Fk = kk.__destroy_into_raw();
-        return 0 !== OF.TgoI(this.__wbg_ptr, Fk)
+      zab(bb) {
+        zb(bb, Tb);
+        var cb = bb.__destroy_into_raw();
+        return 0 !== Yc.VWvW(this.__wbg_ptr, cb)
       }
-      CBk(kk, Fk, Bk, Rk, tk) {
-        var ak = VF(kk) ? 0 : eF(kk, OF.mCFP),
-          Xk = EF;
-        const bk = eF(Fk, OF.mCFP),
-          wk = EF,
-          dk = yF(Bk, OF.mCFP),
-          sk = EF,
-          Vk = AF(Rk, OF.mCFP),
-          Jk = EF;
-        return 0 !== OF.c5oD(this.__wbg_ptr, ak, Xk, bk, wk, dk, sk, Vk, Jk, tk)
+      Zsb(bb, cb, sb, kb, Wb) {
+        var ab = fc(bb) ? 0 : nc(bb, Yc.Jegw),
+          Tb = hc;
+        const Ub = nc(cb, Yc.Jegw),
+          Ib = hc,
+          Hb = mc(sb, Yc.Jegw),
+          fb = hc,
+          Mb = Xc(kb, Yc.Jegw),
+          Xb = hc;
+        return 0 !== Yc.q6eF(this.__wbg_ptr, ab, Tb, Ub, Ib, Hb, fb, Mb, Xb, Wb)
       }
-      mXk() {
-        const kk = OF.DW4R(this.__wbg_ptr);
-        var Fk = xk(kk[0], kk[1]).slice();
-        return OF.yan4(kk[0], 4 * kk[1], 4), Fk
+      XTb() {
+        const bb = Yc.hGVu(this.__wbg_ptr);
+        var cb = Sb(bb[0], bb[1]).slice();
+        return Yc.bAk3(bb[0], 4 * bb[1], 4), cb
       }
-      WXk(kk) {
-        const Fk = OF.eY2V(this.__wbg_ptr, kk);
-        var Bk = jk(Fk[0], Fk[1]).slice();
-        return OF.yan4(Fk[0], 1 * Fk[1], 1), Bk
+      nTb(bb) {
+        const cb = Yc.U67b(this.__wbg_ptr, bb);
+        var sb = Rb(cb[0], cb[1]).slice();
+        return Yc.bAk3(cb[0], 1 * cb[1], 1), sb
       }
-      vXk(kk) {
-        const Fk = OF.YjwL(this.__wbg_ptr, kk);
-        var Bk = xk(Fk[0], Fk[1]).slice();
-        return OF.yan4(Fk[0], 4 * Fk[1], 4), Bk
+      mTb(bb) {
+        const cb = Yc.ijJo(this.__wbg_ptr, bb);
+        var sb = Sb(cb[0], cb[1]).slice();
+        return Yc.bAk3(cb[0], 4 * cb[1], 4), sb
       }
     }
-    Symbol.dispose && (ak.prototype[Symbol.dispose] = ak.prototype.free);
-    class Xk {
-      static __wrap(kk) {
-        const Fk = Object.create(Xk.prototype);
-        return Fk.__wbg_ptr = kk, Dk.register(Fk, Fk.__wbg_ptr, Fk), Fk
+    Symbol.dispose && (ab.prototype[Symbol.dispose] = ab.prototype.free);
+    class Tb {
+      static __wrap(bb) {
+        const cb = Object.create(Tb.prototype);
+        return cb.__wbg_ptr = bb, Kb.register(cb, cb.__wbg_ptr, cb), cb
       }
       __destroy_into_raw() {
-        const kk = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Dk.unregister(this), kk
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, Kb.unregister(this), bb
       }
       free() {
-        const kk = this.__destroy_into_raw();
-        OF.ZF5K(kk, 0)
+        const bb = this.__destroy_into_raw();
+        Yc.D4sr(bb, 0)
       }
     }
 
-    function bk(kk, Fk) {
-      const Bk = fF(kk, OF.mCFP, OF.eKAg),
-        Rk = EF,
-        tk = OF.ixT4(Bk, Rk, Fk);
-      if (tk[1]) throw mF(tk[0])
+    function Ub(bb, cb) {
+      const sb = lc(bb, Yc.Jegw, Yc.xZje),
+        kb = hc,
+        Wb = Yc.W7tH(sb, kb, cb);
+      if (Wb[1]) throw Qc(Wb[0])
     }
 
-    function wk() {
-      OF.gkVU()
+    function Ib() {
+      Yc.Q7XY()
     }
 
-    function dk() {
-      return OF.s2av()
+    function Hb() {
+      return Yc.mA5M()
     }
 
-    function sk() {
-      return OF.AZEG() >>> 0
+    function fb() {
+      return Yc.HnHD() >>> 0
     }
 
-    function Vk(kk) {
-      return 0 !== OF.ATTT(kk)
+    function Mb(bb) {
+      return 0 !== Yc.NynH(bb)
     }
 
-    function Jk(kk) {
-      return 0 !== OF.gi7z(kk)
+    function Xb(bb) {
+      return 0 !== Yc.X2FT(bb)
     }
 
-    function Ak(kk) {
-      OF.uR4S(kk)
+    function nb(bb) {
+      Yc.FU9J(bb)
     }
 
-    function ek() {
-      return OF.UnKF() >>> 0
+    function mb() {
+      return Yc.hTe0() >>> 0
     }
 
-    function yk() {
-      return OF.BAe9() >>> 0
+    function lb() {
+      return Yc.B7uy() >>> 0
     }
 
-    function fk() {
-      return 0 !== OF.BDoG()
+    function Qb() {
+      return 0 !== Yc.h8Qz()
     }
 
-    function mk(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
-      return mF(OF.m1OL(zk(kk), Fk, zk(Bk), Rk, tk, ak, VF(Xk) ? Number.MAX_SAFE_INTEGER : Xk >>> 0, bk))
+    function eb(bb, cb, sb, kb, Wb, ab, Tb, Ub) {
+      return Qc(Yc.XehL(Zb(bb), cb, Zb(sb), kb, Wb, ab, fc(Tb) ? Number.MAX_SAFE_INTEGER : Tb >>> 0, Ub))
     }
 
-    function Wk() {
-      return OF.wRjA() >>> 0
+    function Cb() {
+      return Yc.VbnB() >>> 0
     }
 
-    function vk(kk, Fk) {
-      OF.pI1S(kk, zk(Fk))
+    function Nb(bb, cb) {
+      Yc.v6YV(bb, Zb(cb))
     }
 
-    function ik(kk, Fk) {
-      OF.MBUL(kk, zk(Fk))
+    function Vb(bb, cb) {
+      Yc.K6Lk(bb, Zb(cb))
     }
 
-    function Yk(kk) {
-      OF.gBaM(kk)
+    function Lb(bb) {
+      Yc.oFMR(bb)
     }
 
-    function Lk(kk) {
-      OF.yvNi(kk)
+    function ub(bb) {
+      Yc.Cz0W(bb)
     }
 
-    function Ok(kk) {
-      const Fk = eF(kk, OF.mCFP),
-        Bk = EF;
-      return 0 !== OF.LNHI(Fk, Bk)
+    function Yb(bb) {
+      const cb = nc(bb, Yc.Jegw),
+        sb = hc;
+      return 0 !== Yc.eYY6(cb, sb)
     }
 
-    function Ek(kk) {
-      var Fk = VF(kk) ? 0 : eF(kk, OF.mCFP),
-        Bk = EF;
-      const Rk = OF.OFA7(Fk, Bk);
-      let tk;
-      return 0 !== Rk[0] && (tk = Kk(Rk[0], Rk[1]), OF.yan4(Rk[0], 4 * Rk[1], 4)), tk
+    function hb(bb) {
+      var cb = fc(bb) ? 0 : nc(bb, Yc.Jegw),
+        sb = hc;
+      const kb = Yc.MSBU(cb, sb);
+      let Wb;
+      return 0 !== kb[0] && (Wb = ob(kb[0], kb[1]), Yc.bAk3(kb[0], 4 * kb[1], 4)), Wb
     }
 
-    function Sk() {
-      const kk = OF.CSSC();
-      let Fk;
-      return 0 !== kk[0] && (Fk = BF(kk[0], kk[1]), OF.yan4(kk[0], 1 * kk[1], 1)), Fk
+    function Jb() {
+      const bb = Yc.qfs8();
+      let cb;
+      return 0 !== bb[0] && (cb = cc(bb[0], bb[1]), Yc.bAk3(bb[0], 1 * bb[1], 1)), cb
     }
 
-    function Nk(kk, Fk) {
-      const Bk = OF.SmCs(kk, Fk);
-      let Rk;
-      return 0 !== Bk[0] && (Rk = BF(Bk[0], Bk[1]), OF.yan4(Bk[0], 1 * Bk[1], 1)), Rk
+    function gb(bb, cb) {
+      const sb = Yc.b5VR(bb, cb);
+      let kb;
+      return 0 !== sb[0] && (kb = cc(sb[0], sb[1]), Yc.bAk3(sb[0], 1 * sb[1], 1)), kb
     }
 
-    function Hk() {
-      let kk, Fk;
+    function Bb() {
+      let bb, cb;
       try {
-        const Bk = OF.Nqwk();
-        return kk = Bk[0], Fk = Bk[1], BF(Bk[0], Bk[1])
+        const sb = Yc.A703();
+        return bb = sb[0], cb = sb[1], cc(sb[0], sb[1])
       } finally {
-        OF.yan4(kk, Fk, 1)
+        Yc.bAk3(bb, cb, 1)
       }
     }
 
-    function uk(kk) {
-      OF.Vri7(zk(kk))
+    function tb(bb) {
+      Yc.QbTU(Zb(bb))
     }
 
-    function Mk() {
-      const kk = {
+    function yb() {
+      const bb = {
         __proto__: null,
-        lJ53: function(kk, Fk) {
-          return zk(Error(BF(kk, Fk)))
+        VHHZ: function(bb, cb) {
+          return Zb(Error(cc(bb, cb)))
         },
-        xJgI: function(kk) {
-          const Fk = bF(kk),
-            Bk = "boolean" === typeof Fk ? Fk : void 0;
-          return VF(Bk) ? 16777215 : Bk ? 1 : 0
+        m8MF: function(bb) {
+          const cb = Tc(bb),
+            sb = "boolean" === typeof cb ? cb : void 0;
+          return fc(sb) ? 16777215 : sb ? 1 : 0
         },
-        bMRs: function(kk, Fk) {
-          const Bk = fF(qk(bF(Fk)), OF.mCFP, OF.eKAg),
-            Rk = EF;
-          nk().setInt32(kk + 4, Rk, !0), nk().setInt32(kk + 0, Bk, !0)
+        sETv: function(bb, cb) {
+          const sb = lc(db(Tc(cb)), Yc.Jegw, Yc.xZje),
+            kb = hc;
+          Fb().setInt32(bb + 4, kb, !0), Fb().setInt32(bb + 0, sb, !0)
         },
-        YKMX: function(kk) {
-          return "function" === typeof bF(kk)
+        Q1zd: function(bb) {
+          return "function" === typeof Tc(bb)
         },
-        JA4H: function(kk) {
-          const Fk = bF(kk);
-          return "object" === typeof Fk && null !== Fk
+        Kps8: function(bb) {
+          const cb = Tc(bb);
+          return "object" === typeof cb && null !== cb
         },
-        ZGKj: function(kk) {
-          return void 0 === bF(kk)
+        Onf5: function(bb) {
+          return void 0 === Tc(bb)
         },
-        wQ75: function(kk, Fk) {
-          const Bk = bF(Fk),
-            Rk = "number" === typeof Bk ? Bk : void 0;
-          nk().setFloat64(kk + 8, VF(Rk) ? 0 : Rk, !0), nk().setInt32(kk + 0, !VF(Rk), !0)
+        O0eL: function(bb, cb) {
+          const sb = Tc(cb),
+            kb = "number" === typeof sb ? sb : void 0;
+          Fb().setFloat64(bb + 8, fc(kb) ? 0 : kb, !0), Fb().setInt32(bb + 0, !fc(kb), !0)
         },
-        mvzs: function(kk) {
-          throw mF(kk)
+        KhmU: function(bb) {
+          throw Qc(bb)
         },
-        p8uy: function(kk, Fk) {
-          const Bk = bF(Fk),
-            Rk = "string" === typeof Bk ? Bk : void 0;
-          var tk = VF(Rk) ? 0 : fF(Rk, OF.mCFP, OF.eKAg),
-            ak = EF;
-          nk().setInt32(kk + 4, ak, !0), nk().setInt32(kk + 0, tk, !0)
+        PlcT: function(bb, cb) {
+          const sb = Tc(cb),
+            kb = "string" === typeof sb ? sb : void 0;
+          var Wb = fc(kb) ? 0 : lc(kb, Yc.Jegw, Yc.xZje),
+            ab = hc;
+          Fb().setInt32(bb + 4, ab, !0), Fb().setInt32(bb + 0, Wb, !0)
         },
-        TV2a: function(kk, Fk) {
-          throw new Error(BF(kk, Fk))
+        G2xM: function(bb, cb) {
+          throw new Error(cc(bb, cb))
         },
-        KKO7: function(kk) {
-          bF(kk)._wbg_cb_unref()
+        uLKk: function(bb) {
+          Tc(bb)._wbg_cb_unref()
         },
-        l5rq: function(kk, Fk) {
-          bF(kk).activeTexture(Fk >>> 0)
+        Y0e8: function(bb, cb) {
+          Tc(bb).activeTexture(cb >>> 0)
         },
-        dmT4: function(kk, Fk) {
-          bF(kk).activeTexture(Fk >>> 0)
+        gLul: function(bb, cb) {
+          Tc(bb).activeTexture(cb >>> 0)
         },
-        wmq0: function() {
-          return wF((function(kk, Fk, Bk, Rk) {
-            bF(kk).addEventListener(BF(Fk, Bk), bF(Rk))
+        A6ZQ: function() {
+          return Uc((function(bb, cb, sb, kb) {
+            Tc(bb).addEventListener(cc(cb, sb), Tc(kb))
           }), arguments)
         },
-        XcR6: function(kk, Fk, Bk) {
-          bF(kk).attachShader(bF(Fk), bF(Bk))
+        grTw: function(bb, cb, sb) {
+          Tc(bb).attachShader(Tc(cb), Tc(sb))
         },
-        benb: function(kk, Fk, Bk) {
-          bF(kk).attachShader(bF(Fk), bF(Bk))
+        u9vu: function(bb, cb, sb) {
+          Tc(bb).attachShader(Tc(cb), Tc(sb))
         },
-        l2qx: function(kk, Fk, Bk) {
-          bF(kk).beginQuery(Fk >>> 0, bF(Bk))
+        utZg: function(bb, cb, sb) {
+          Tc(bb).beginQuery(cb >>> 0, Tc(sb))
         },
-        Z5l1: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).bindAttribLocation(bF(Fk), Bk >>> 0, BF(Rk, tk))
+        qgx3: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).bindAttribLocation(Tc(cb), sb >>> 0, cc(kb, Wb))
         },
-        aHh2: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).bindAttribLocation(bF(Fk), Bk >>> 0, BF(Rk, tk))
+        cr0Y: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).bindAttribLocation(Tc(cb), sb >>> 0, cc(kb, Wb))
         },
-        DSm2: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).bindBufferRange(Fk >>> 0, Bk >>> 0, bF(Rk), tk, ak)
+        F0jw: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).bindBufferRange(cb >>> 0, sb >>> 0, Tc(kb), Wb, ab)
         },
-        idzM: function(kk, Fk, Bk) {
-          bF(kk).bindBuffer(Fk >>> 0, bF(Bk))
+        QPR4: function(bb, cb, sb) {
+          Tc(bb).bindBuffer(cb >>> 0, Tc(sb))
         },
-        f0L3: function(kk, Fk, Bk) {
-          bF(kk).bindBuffer(Fk >>> 0, bF(Bk))
+        EN4y: function(bb, cb, sb) {
+          Tc(bb).bindBuffer(cb >>> 0, Tc(sb))
         },
-        HYqQ: function(kk, Fk, Bk) {
-          bF(kk).bindFramebuffer(Fk >>> 0, bF(Bk))
+        t25b: function(bb, cb, sb) {
+          Tc(bb).bindFramebuffer(cb >>> 0, Tc(sb))
         },
-        Zwh7: function(kk, Fk, Bk) {
-          bF(kk).bindFramebuffer(Fk >>> 0, bF(Bk))
+        PNZg: function(bb, cb, sb) {
+          Tc(bb).bindFramebuffer(cb >>> 0, Tc(sb))
         },
-        ISvq: function(kk, Fk, Bk) {
-          bF(kk).bindRenderbuffer(Fk >>> 0, bF(Bk))
+        feL0: function(bb, cb, sb) {
+          Tc(bb).bindRenderbuffer(cb >>> 0, Tc(sb))
         },
-        bma5: function(kk, Fk, Bk) {
-          bF(kk).bindRenderbuffer(Fk >>> 0, bF(Bk))
+        rQut: function(bb, cb, sb) {
+          Tc(bb).bindRenderbuffer(cb >>> 0, Tc(sb))
         },
-        m3vX: function(kk, Fk, Bk) {
-          bF(kk).bindTexture(Fk >>> 0, bF(Bk))
+        EZzl: function(bb, cb, sb) {
+          Tc(bb).bindTexture(cb >>> 0, Tc(sb))
         },
-        cwFw: function(kk, Fk, Bk) {
-          bF(kk).bindTexture(Fk >>> 0, bF(Bk))
+        eg5U: function(bb, cb, sb) {
+          Tc(bb).bindTexture(cb >>> 0, Tc(sb))
         },
-        w1i3: function(kk, Fk) {
-          bF(kk).bindVertexArrayOES(bF(Fk))
+        PRoB: function(bb, cb) {
+          Tc(bb).bindVertexArrayOES(Tc(cb))
         },
-        Yb8r: function(kk, Fk) {
-          bF(kk).bindVertexArray(bF(Fk))
+        c2Gu: function(bb, cb) {
+          Tc(bb).bindVertexArray(Tc(cb))
         },
-        JXto: function(kk, Fk, Bk) {
-          bF(kk).blendEquationSeparate(Fk >>> 0, Bk >>> 0)
+        LuRG: function(bb, cb, sb) {
+          Tc(bb).blendEquationSeparate(cb >>> 0, sb >>> 0)
         },
-        tamS: function(kk, Fk, Bk) {
-          bF(kk).blendEquationSeparate(Fk >>> 0, Bk >>> 0)
+        unO5: function(bb, cb, sb) {
+          Tc(bb).blendEquationSeparate(cb >>> 0, sb >>> 0)
         },
-        uOJS: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).blendFuncSeparate(Fk >>> 0, Bk >>> 0, Rk >>> 0, tk >>> 0)
+        SK7P: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).blendFuncSeparate(cb >>> 0, sb >>> 0, kb >>> 0, Wb >>> 0)
         },
-        vUMf: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).blendFuncSeparate(Fk >>> 0, Bk >>> 0, Rk >>> 0, tk >>> 0)
+        p3de: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).blendFuncSeparate(cb >>> 0, sb >>> 0, kb >>> 0, Wb >>> 0)
         },
-        Tkvg: function(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk, sk) {
-          bF(kk).blitFramebuffer(Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk >>> 0, sk >>> 0)
+        st3K: function(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb, fb) {
+          Tc(bb).blitFramebuffer(cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb >>> 0, fb >>> 0)
         },
-        WFhT: function(kk, Fk, Bk, Rk) {
-          bF(kk).bufferData(Fk >>> 0, Bk, Rk >>> 0)
+        iR6B: function(bb, cb, sb, kb) {
+          Tc(bb).bufferData(cb >>> 0, sb, kb >>> 0)
         },
-        Rxe8: function(kk, Fk, Bk, Rk) {
-          bF(kk).bufferData(Fk >>> 0, bF(Bk), Rk >>> 0)
+        kaaj: function(bb, cb, sb, kb) {
+          Tc(bb).bufferData(cb >>> 0, Tc(sb), kb >>> 0)
         },
-        I1fV: function(kk, Fk, Bk, Rk) {
-          bF(kk).bufferData(Fk >>> 0, bF(Bk), Rk >>> 0)
+        ylmV: function(bb, cb, sb, kb) {
+          Tc(bb).bufferData(cb >>> 0, Tc(sb), kb >>> 0)
         },
-        OXbx: function(kk, Fk, Bk, Rk) {
-          bF(kk).bufferData(Fk >>> 0, Bk, Rk >>> 0)
+        S3L0: function(bb, cb, sb, kb) {
+          Tc(bb).bufferData(cb >>> 0, sb, kb >>> 0)
         },
-        kRBI: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).bufferSubData(Fk >>> 0, Bk, jk(Rk, tk))
+        z6QH: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).bufferSubData(cb >>> 0, sb, Rb(kb, Wb))
         },
-        xxQz: function() {
-          return wF((function(kk, Fk, Bk, Rk, tk, ak) {
-            return zk(bF(kk).call(bF(Fk), bF(Bk), bF(Rk), bF(tk), bF(ak)))
+        o8l3: function() {
+          return Uc((function(bb, cb, sb, kb, Wb, ab) {
+            return Zb(Tc(bb).call(Tc(cb), Tc(sb), Tc(kb), Tc(Wb), Tc(ab)))
           }), arguments)
         },
-        z0lU: function() {
-          return wF((function(kk, Fk, Bk) {
-            return zk(bF(kk).call(bF(Fk), bF(Bk)))
+        wHjZ: function() {
+          return Uc((function(bb, cb, sb) {
+            return Zb(Tc(bb).call(Tc(cb), Tc(sb)))
           }), arguments)
         },
-        tQMS: function(kk) {
-          bF(kk).call()
+        hAF1: function(bb) {
+          Tc(bb).call()
         },
-        zc1Y: function() {
-          return wF((function(kk, Fk) {
-            return zk(bF(kk).call(bF(Fk)))
+        FYPN: function() {
+          return Uc((function(bb, cb) {
+            return Zb(Tc(bb).call(Tc(cb)))
           }), arguments)
         },
-        Pf5b: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).clearColor(Fk, Bk, Rk, tk)
+        zMfo: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).clearColor(cb, sb, kb, Wb)
         },
-        Mz2A: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).clearColor(Fk, Bk, Rk, tk)
+        xjUY: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).clearColor(cb, sb, kb, Wb)
         },
-        PCK8: function(kk, Fk) {
-          bF(kk).clearDepth(Fk)
+        xw2a: function(bb, cb) {
+          Tc(bb).clearDepth(cb)
         },
-        UlKT: function(kk, Fk) {
-          bF(kk).clearDepth(Fk)
+        Rrgk: function(bb, cb) {
+          Tc(bb).clearDepth(cb)
         },
-        LMoG: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).clearRect(Fk, Bk, Rk, tk)
+        I5Ts: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).clearRect(cb, sb, kb, Wb)
         },
-        ra1K: function(kk, Fk) {
-          bF(kk).clear(Fk >>> 0)
+        VsiM: function(bb, cb) {
+          Tc(bb).clear(cb >>> 0)
         },
-        nkTi: function(kk, Fk) {
-          bF(kk).clear(Fk >>> 0)
+        OgGM: function(bb, cb) {
+          Tc(bb).clear(cb >>> 0)
         },
-        FUst: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).colorMask(0 !== Fk, 0 !== Bk, 0 !== Rk, 0 !== tk)
+        uCpU: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).colorMask(0 !== cb, 0 !== sb, 0 !== kb, 0 !== Wb)
         },
-        ssw6: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).colorMask(0 !== Fk, 0 !== Bk, 0 !== Rk, 0 !== tk)
+        yoBV: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).colorMask(0 !== cb, 0 !== sb, 0 !== kb, 0 !== Wb)
         },
-        zCQ1: function(kk, Fk) {
-          bF(kk).compileShader(bF(Fk))
+        JHkH: function(bb, cb) {
+          Tc(bb).compileShader(Tc(cb))
         },
-        Anad: function(kk, Fk) {
-          bF(kk).compileShader(bF(Fk))
+        dSvy: function(bb, cb) {
+          Tc(bb).compileShader(Tc(cb))
         },
-        l7CW: function(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk) {
-          bF(kk).copyTexSubImage2D(Fk >>> 0, Bk, Rk, tk, ak, Xk, bk, wk)
+        ljKZ: function(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib) {
+          Tc(bb).copyTexSubImage2D(cb >>> 0, sb, kb, Wb, ab, Tb, Ub, Ib)
         },
-        po2k: function(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk) {
-          bF(kk).copyTexSubImage2D(Fk >>> 0, Bk, Rk, tk, ak, Xk, bk, wk)
+        KqEX: function(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib) {
+          Tc(bb).copyTexSubImage2D(cb >>> 0, sb, kb, Wb, ab, Tb, Ub, Ib)
         },
-        YsZJ: function(kk) {
-          const Fk = bF(kk).createBuffer();
-          return VF(Fk) ? 0 : zk(Fk)
+        ZAs1: function(bb) {
+          const cb = Tc(bb).createBuffer();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        kI8x: function(kk) {
-          const Fk = bF(kk).createBuffer();
-          return VF(Fk) ? 0 : zk(Fk)
+        Sg1c: function(bb) {
+          const cb = Tc(bb).createBuffer();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        YRoJ: function() {
-          return wF((function(kk, Fk, Bk) {
-            return zk(bF(kk).createElement(BF(Fk, Bk)))
+        v3x2: function() {
+          return Uc((function(bb, cb, sb) {
+            return Zb(Tc(bb).createElement(cc(cb, sb)))
           }), arguments)
         },
-        ZsJV: function(kk) {
-          const Fk = bF(kk).createFramebuffer();
-          return VF(Fk) ? 0 : zk(Fk)
+        qPlk: function(bb) {
+          const cb = Tc(bb).createFramebuffer();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        j2CB: function(kk) {
-          const Fk = bF(kk).createFramebuffer();
-          return VF(Fk) ? 0 : zk(Fk)
+        eknh: function(bb) {
+          const cb = Tc(bb).createFramebuffer();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        MiBc: function(kk) {
-          const Fk = bF(kk).createProgram();
-          return VF(Fk) ? 0 : zk(Fk)
+        eqK1: function(bb) {
+          const cb = Tc(bb).createProgram();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        kGq8: function(kk) {
-          const Fk = bF(kk).createProgram();
-          return VF(Fk) ? 0 : zk(Fk)
+        cg7g: function(bb) {
+          const cb = Tc(bb).createProgram();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        uMvr: function(kk) {
-          const Fk = bF(kk).createQuery();
-          return VF(Fk) ? 0 : zk(Fk)
+        JSsl: function(bb) {
+          const cb = Tc(bb).createQuery();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        cnKm: function(kk) {
-          const Fk = bF(kk).createRenderbuffer();
-          return VF(Fk) ? 0 : zk(Fk)
+        ozYV: function(bb) {
+          const cb = Tc(bb).createRenderbuffer();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        Zz9B: function(kk) {
-          const Fk = bF(kk).createRenderbuffer();
-          return VF(Fk) ? 0 : zk(Fk)
+        vrPq: function(bb) {
+          const cb = Tc(bb).createRenderbuffer();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        ARz1: function(kk, Fk) {
-          const Bk = bF(kk).createShader(Fk >>> 0);
-          return VF(Bk) ? 0 : zk(Bk)
+        f9tQ: function(bb, cb) {
+          const sb = Tc(bb).createShader(cb >>> 0);
+          return fc(sb) ? 0 : Zb(sb)
         },
-        j5vV: function(kk, Fk) {
-          const Bk = bF(kk).createShader(Fk >>> 0);
-          return VF(Bk) ? 0 : zk(Bk)
+        E7DP: function(bb, cb) {
+          const sb = Tc(bb).createShader(cb >>> 0);
+          return fc(sb) ? 0 : Zb(sb)
         },
-        qmrG: function(kk) {
-          const Fk = bF(kk).createTexture();
-          return VF(Fk) ? 0 : zk(Fk)
+        oQIk: function(bb) {
+          const cb = Tc(bb).createTexture();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        bHAN: function(kk) {
-          const Fk = bF(kk).createTexture();
-          return VF(Fk) ? 0 : zk(Fk)
+        UlXm: function(bb) {
+          const cb = Tc(bb).createTexture();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        ycuQ: function(kk) {
-          const Fk = bF(kk).createVertexArrayOES();
-          return VF(Fk) ? 0 : zk(Fk)
+        N1H6: function(bb) {
+          const cb = Tc(bb).createVertexArrayOES();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        ypQd: function(kk) {
-          const Fk = bF(kk).createVertexArray();
-          return VF(Fk) ? 0 : zk(Fk)
+        BTX8: function(bb) {
+          const cb = Tc(bb).createVertexArray();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        DQS5: function(kk, Fk) {
-          bF(kk).cullFace(Fk >>> 0)
+        rwJQ: function(bb, cb) {
+          Tc(bb).cullFace(cb >>> 0)
         },
-        NIBe: function(kk, Fk) {
-          bF(kk).cullFace(Fk >>> 0)
+        fiZ1: function(bb, cb) {
+          Tc(bb).cullFace(cb >>> 0)
         },
-        I9ru: function(kk, Fk) {
-          bF(kk).deleteBuffer(bF(Fk))
+        tqcf: function(bb, cb) {
+          Tc(bb).deleteBuffer(Tc(cb))
         },
-        fGOb: function(kk, Fk) {
-          bF(kk).deleteBuffer(bF(Fk))
+        S5VT: function(bb, cb) {
+          Tc(bb).deleteBuffer(Tc(cb))
         },
-        Mhn3: function(kk, Fk) {
-          bF(kk).deleteFramebuffer(bF(Fk))
+        fQL7: function(bb, cb) {
+          Tc(bb).deleteFramebuffer(Tc(cb))
         },
-        acLC: function(kk, Fk) {
-          bF(kk).deleteFramebuffer(bF(Fk))
+        fWnu: function(bb, cb) {
+          Tc(bb).deleteFramebuffer(Tc(cb))
         },
-        W1w6: function(kk, Fk) {
-          bF(kk).deleteProgram(bF(Fk))
+        YvLf: function(bb, cb) {
+          Tc(bb).deleteProgram(Tc(cb))
         },
-        LAuO: function(kk, Fk) {
-          bF(kk).deleteProgram(bF(Fk))
+        tEkx: function(bb, cb) {
+          Tc(bb).deleteProgram(Tc(cb))
         },
-        uXLn: function(kk, Fk) {
-          bF(kk).deleteQuery(bF(Fk))
+        m0fb: function(bb, cb) {
+          Tc(bb).deleteQuery(Tc(cb))
         },
-        HPrL: function(kk, Fk) {
-          bF(kk).deleteRenderbuffer(bF(Fk))
+        dQFf: function(bb, cb) {
+          Tc(bb).deleteRenderbuffer(Tc(cb))
         },
-        z72k: function(kk, Fk) {
-          bF(kk).deleteRenderbuffer(bF(Fk))
+        Bjn0: function(bb, cb) {
+          Tc(bb).deleteRenderbuffer(Tc(cb))
         },
-        EdUO: function(kk, Fk) {
-          bF(kk).deleteSampler(bF(Fk))
+        VpAc: function(bb, cb) {
+          Tc(bb).deleteSampler(Tc(cb))
         },
-        GzA6: function(kk, Fk) {
-          bF(kk).deleteShader(bF(Fk))
+        DgcS: function(bb, cb) {
+          Tc(bb).deleteShader(Tc(cb))
         },
-        Rcp0: function(kk, Fk) {
-          bF(kk).deleteShader(bF(Fk))
+        kP7N: function(bb, cb) {
+          Tc(bb).deleteShader(Tc(cb))
         },
-        VLgw: function(kk, Fk) {
-          bF(kk).deleteTexture(bF(Fk))
+        FqEL: function(bb, cb) {
+          Tc(bb).deleteTexture(Tc(cb))
         },
-        ANGH: function(kk, Fk) {
-          bF(kk).deleteTexture(bF(Fk))
+        Oep8: function(bb, cb) {
+          Tc(bb).deleteTexture(Tc(cb))
         },
-        mtcP: function(kk, Fk) {
-          bF(kk).deleteVertexArrayOES(bF(Fk))
+        fiEE: function(bb, cb) {
+          Tc(bb).deleteVertexArrayOES(Tc(cb))
         },
-        k8nC: function(kk, Fk) {
-          bF(kk).deleteVertexArray(bF(Fk))
+        IC1r: function(bb, cb) {
+          Tc(bb).deleteVertexArray(Tc(cb))
         },
-        qhwD: function(kk, Fk) {
-          bF(kk).depthFunc(Fk >>> 0)
+        XaeK: function(bb, cb) {
+          Tc(bb).depthFunc(cb >>> 0)
         },
-        ejSv: function(kk, Fk) {
-          bF(kk).depthFunc(Fk >>> 0)
+        MXhM: function(bb, cb) {
+          Tc(bb).depthFunc(cb >>> 0)
         },
-        xvpH: function(kk, Fk) {
-          bF(kk).depthMask(0 !== Fk)
+        soq2: function(bb, cb) {
+          Tc(bb).depthMask(0 !== cb)
         },
-        ObA0: function(kk, Fk) {
-          bF(kk).depthMask(0 !== Fk)
+        kSoU: function(bb, cb) {
+          Tc(bb).depthMask(0 !== cb)
         },
-        nwQB: function(kk, Fk, Bk) {
-          bF(kk).depthRange(Fk, Bk)
+        eupY: function(bb, cb, sb) {
+          Tc(bb).depthRange(cb, sb)
         },
-        YxSy: function(kk, Fk, Bk) {
-          bF(kk).depthRange(Fk, Bk)
+        ccnI: function(bb, cb, sb) {
+          Tc(bb).depthRange(cb, sb)
         },
-        Ca8S: function(kk, Fk, Bk) {
-          bF(kk).detachShader(bF(Fk), bF(Bk))
+        PUBw: function(bb, cb, sb) {
+          Tc(bb).detachShader(Tc(cb), Tc(sb))
         },
-        Tgg7: function(kk, Fk, Bk) {
-          bF(kk).detachShader(bF(Fk), bF(Bk))
+        KW8I: function(bb, cb, sb) {
+          Tc(bb).detachShader(Tc(cb), Tc(sb))
         },
-        ov5H: function(kk, Fk) {
-          bF(kk).disable(Fk >>> 0)
+        yIC3: function(bb, cb) {
+          Tc(bb).disable(cb >>> 0)
         },
-        C5cZ: function(kk, Fk) {
-          bF(kk).disable(Fk >>> 0)
+        Znb9: function(bb, cb) {
+          Tc(bb).disable(cb >>> 0)
         },
-        urzQ: function(kk) {
-          const Fk = bF(kk).document;
-          return VF(Fk) ? 0 : zk(Fk)
+        mTsR: function(bb) {
+          const cb = Tc(bb).document;
+          return fc(cb) ? 0 : Zb(cb)
         },
-        LRRB: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).drawArraysInstancedANGLE(Fk >>> 0, Bk, Rk, tk)
+        XnO6: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).drawArraysInstancedANGLE(cb >>> 0, sb, kb, Wb)
         },
-        sZxu: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).drawArraysInstanced(Fk >>> 0, Bk, Rk, tk)
+        Hbia: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).drawArraysInstanced(cb >>> 0, sb, kb, Wb)
         },
-        jgQv: function(kk, Fk, Bk, Rk) {
-          bF(kk).drawArrays(Fk >>> 0, Bk, Rk)
+        swVP: function(bb, cb, sb, kb) {
+          Tc(bb).drawArrays(cb >>> 0, sb, kb)
         },
-        S5nl: function(kk, Fk, Bk, Rk) {
-          bF(kk).drawArrays(Fk >>> 0, Bk, Rk)
+        I6NY: function(bb, cb, sb, kb) {
+          Tc(bb).drawArrays(cb >>> 0, sb, kb)
         },
-        dGL1: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).drawElementsInstancedANGLE(Fk >>> 0, Bk, Rk >>> 0, tk, ak)
+        HJIy: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).drawElementsInstancedANGLE(cb >>> 0, sb, kb >>> 0, Wb, ab)
         },
-        QoD5: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).drawElementsInstanced(Fk >>> 0, Bk, Rk >>> 0, tk, ak)
+        eEfH: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).drawElementsInstanced(cb >>> 0, sb, kb >>> 0, Wb, ab)
         },
-        NGyy: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).drawElements(Fk >>> 0, Bk, Rk >>> 0, tk)
+        VoXv: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).drawElements(cb >>> 0, sb, kb >>> 0, Wb)
         },
-        N13N: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).drawElements(Fk >>> 0, Bk, Rk >>> 0, tk)
+        KVKF: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).drawElements(cb >>> 0, sb, kb >>> 0, Wb)
         },
-        L8Tu: function() {
-          return wF((function(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk) {
-            bF(kk).drawImage(bF(Fk), Bk, Rk, tk, ak, Xk, bk, wk, dk)
+        ckYC: function() {
+          return Uc((function(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb) {
+            Tc(bb).drawImage(Tc(cb), sb, kb, Wb, ab, Tb, Ub, Ib, Hb)
           }), arguments)
         },
-        y5Cr: function(kk) {
-          return bF(kk).drawingBufferHeight
+        NpNK: function(bb) {
+          return Tc(bb).drawingBufferHeight
         },
-        Zp2P: function(kk) {
-          return bF(kk).drawingBufferWidth
+        bLxW: function(bb) {
+          return Tc(bb).drawingBufferWidth
         },
-        eg6Y: function(kk, Fk) {
-          bF(kk).enableVertexAttribArray(Fk >>> 0)
+        zeFC: function(bb, cb) {
+          Tc(bb).enableVertexAttribArray(cb >>> 0)
         },
-        WiSA: function(kk, Fk) {
-          bF(kk).enableVertexAttribArray(Fk >>> 0)
+        vx18: function(bb, cb) {
+          Tc(bb).enableVertexAttribArray(cb >>> 0)
         },
-        PdUT: function(kk, Fk) {
-          bF(kk).enable(Fk >>> 0)
+        cJyz: function(bb, cb) {
+          Tc(bb).enable(cb >>> 0)
         },
-        ZMUQ: function(kk, Fk) {
-          bF(kk).enable(Fk >>> 0)
+        RViO: function(bb, cb) {
+          Tc(bb).enable(cb >>> 0)
         },
-        kekL: function(kk, Fk) {
-          bF(kk).endQuery(Fk >>> 0)
+        jogd: function(bb, cb) {
+          Tc(bb).endQuery(cb >>> 0)
         },
-        UgWt: function(kk) {
-          console.error(bF(kk))
+        h3mN: function(bb) {
+          console.error(Tc(bb))
         },
-        flEL: function(kk, Fk) {
-          console.error(BF(kk, Fk))
+        sLIO: function(bb, cb) {
+          console.error(cc(bb, cb))
         },
-        rAtE: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).framebufferRenderbuffer(Fk >>> 0, Bk >>> 0, Rk >>> 0, bF(tk))
+        Ax8T: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).framebufferRenderbuffer(cb >>> 0, sb >>> 0, kb >>> 0, Tc(Wb))
         },
-        LNIp: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).framebufferRenderbuffer(Fk >>> 0, Bk >>> 0, Rk >>> 0, bF(tk))
+        Qwid: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).framebufferRenderbuffer(cb >>> 0, sb >>> 0, kb >>> 0, Tc(Wb))
         },
-        fzYp: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).framebufferTexture2D(Fk >>> 0, Bk >>> 0, Rk >>> 0, bF(tk), ak)
+        G40q: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).framebufferTexture2D(cb >>> 0, sb >>> 0, kb >>> 0, Tc(Wb), ab)
         },
-        PBNN: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).framebufferTexture2D(Fk >>> 0, Bk >>> 0, Rk >>> 0, bF(tk), ak)
+        gPMm: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).framebufferTexture2D(cb >>> 0, sb >>> 0, kb >>> 0, Tc(Wb), ab)
         },
-        tuOK: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).framebufferTextureLayer(Fk >>> 0, Bk >>> 0, bF(Rk), tk, ak)
+        iUGt: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).framebufferTextureLayer(cb >>> 0, sb >>> 0, Tc(kb), Wb, ab)
         },
-        jHA6: function(kk, Fk) {
-          bF(kk).frontFace(Fk >>> 0)
+        V2W6: function(bb, cb) {
+          Tc(bb).frontFace(cb >>> 0)
         },
-        xRa1: function(kk, Fk) {
-          bF(kk).frontFace(Fk >>> 0)
+        Ukz3: function(bb, cb) {
+          Tc(bb).frontFace(cb >>> 0)
         },
-        Slb1: function() {
-          return wF((function(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk) {
-            return bF(kk).gameCall(Fk >>> 0, Bk, Rk, tk, ak, Xk, bk, wk, dk)
+        wcMZ: function() {
+          return Uc((function(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb) {
+            return Tc(bb).gameCall(cb >>> 0, sb, kb, Wb, ab, Tb, Ub, Ib, Hb)
           }), arguments)
         },
-        iMMX: function(kk, Fk) {
-          bF(kk).generateMipmap(Fk >>> 0)
+        c6Zi: function(bb, cb) {
+          Tc(bb).generateMipmap(cb >>> 0)
         },
-        O5T3: function(kk, Fk) {
-          bF(kk).generateMipmap(Fk >>> 0)
+        eHfs: function(bb, cb) {
+          Tc(bb).generateMipmap(cb >>> 0)
         },
-        vY4O: function(kk, Fk, Bk) {
-          const Rk = bF(kk).getActiveUniform(bF(Fk), Bk >>> 0);
-          return VF(Rk) ? 0 : zk(Rk)
+        IT6o: function(bb, cb, sb) {
+          const kb = Tc(bb).getActiveUniform(Tc(cb), sb >>> 0);
+          return fc(kb) ? 0 : Zb(kb)
         },
-        iwl4: function(kk, Fk, Bk) {
-          const Rk = bF(kk).getActiveUniform(bF(Fk), Bk >>> 0);
-          return VF(Rk) ? 0 : zk(Rk)
+        X86q: function(bb, cb, sb) {
+          const kb = Tc(bb).getActiveUniform(Tc(cb), sb >>> 0);
+          return fc(kb) ? 0 : Zb(kb)
         },
-        p8M0: function() {
-          return wF((function(kk, Fk, Bk, Rk) {
-            const tk = bF(kk).getContext(BF(Fk, Bk), bF(Rk));
-            return VF(tk) ? 0 : zk(tk)
+        tvbc: function() {
+          return Uc((function(bb, cb, sb, kb) {
+            const Wb = Tc(bb).getContext(cc(cb, sb), Tc(kb));
+            return fc(Wb) ? 0 : Zb(Wb)
           }), arguments)
         },
-        ZQwR: function() {
-          return wF((function(kk, Fk, Bk, Rk) {
-            const tk = bF(kk).getContext(BF(Fk, Bk), bF(Rk));
-            return VF(tk) ? 0 : zk(tk)
+        y5v5: function() {
+          return Uc((function(bb, cb, sb, kb) {
+            const Wb = Tc(bb).getContext(cc(cb, sb), Tc(kb));
+            return fc(Wb) ? 0 : Zb(Wb)
           }), arguments)
         },
-        X8xf: function() {
-          return wF((function(kk, Fk, Bk) {
-            const Rk = bF(kk).getContext(BF(Fk, Bk));
-            return VF(Rk) ? 0 : zk(Rk)
+        EQtW: function() {
+          return Uc((function(bb, cb, sb) {
+            const kb = Tc(bb).getContext(cc(cb, sb));
+            return fc(kb) ? 0 : Zb(kb)
           }), arguments)
         },
-        F54t: function(kk) {
-          return bF(kk).getError()
+        MXnX: function(bb) {
+          return Tc(bb).getError()
         },
-        ZeEp: function(kk) {
-          return bF(kk).getError()
+        l23E: function(bb) {
+          return Tc(bb).getError()
         },
-        WFIs: function() {
-          return wF((function(kk, Fk, Bk) {
-            const Rk = bF(kk).getExtension(BF(Fk, Bk));
-            return VF(Rk) ? 0 : zk(Rk)
+        x5Jo: function() {
+          return Uc((function(bb, cb, sb) {
+            const kb = Tc(bb).getExtension(cc(cb, sb));
+            return fc(kb) ? 0 : Zb(kb)
           }), arguments)
         },
-        aBWq: function() {
-          return wF((function(kk, Fk, Bk, Rk) {
-            const tk = bF(Fk).getItem(BF(Bk, Rk));
-            var ak = VF(tk) ? 0 : fF(tk, OF.mCFP, OF.eKAg),
-              Xk = EF;
-            nk().setInt32(kk + 4, Xk, !0), nk().setInt32(kk + 0, ak, !0)
+        Rzeo: function() {
+          return Uc((function(bb, cb, sb, kb) {
+            const Wb = Tc(cb).getItem(cc(sb, kb));
+            var ab = fc(Wb) ? 0 : lc(Wb, Yc.Jegw, Yc.xZje),
+              Tb = hc;
+            Fb().setInt32(bb + 4, Tb, !0), Fb().setInt32(bb + 0, ab, !0)
           }), arguments)
         },
-        GVC5: function() {
-          return wF((function(kk, Fk) {
-            return zk(bF(kk).getParameter(Fk >>> 0))
+        XM5s: function() {
+          return Uc((function(bb, cb) {
+            return Zb(Tc(bb).getParameter(cb >>> 0))
           }), arguments)
         },
-        WzEy: function() {
-          return wF((function(kk, Fk) {
-            return zk(bF(kk).getParameter(Fk >>> 0))
+        GDEk: function() {
+          return Uc((function(bb, cb) {
+            return Zb(Tc(bb).getParameter(cb >>> 0))
           }), arguments)
         },
-        Oa9l: function(kk, Fk, Bk) {
-          const Rk = bF(Fk).getProgramInfoLog(bF(Bk));
-          var tk = VF(Rk) ? 0 : fF(Rk, OF.mCFP, OF.eKAg),
-            ak = EF;
-          nk().setInt32(kk + 4, ak, !0), nk().setInt32(kk + 0, tk, !0)
+        oAzl: function(bb, cb, sb) {
+          const kb = Tc(cb).getProgramInfoLog(Tc(sb));
+          var Wb = fc(kb) ? 0 : lc(kb, Yc.Jegw, Yc.xZje),
+            ab = hc;
+          Fb().setInt32(bb + 4, ab, !0), Fb().setInt32(bb + 0, Wb, !0)
         },
-        MWvh: function(kk, Fk, Bk) {
-          const Rk = bF(Fk).getProgramInfoLog(bF(Bk));
-          var tk = VF(Rk) ? 0 : fF(Rk, OF.mCFP, OF.eKAg),
-            ak = EF;
-          nk().setInt32(kk + 4, ak, !0), nk().setInt32(kk + 0, tk, !0)
+        RAKI: function(bb, cb, sb) {
+          const kb = Tc(cb).getProgramInfoLog(Tc(sb));
+          var Wb = fc(kb) ? 0 : lc(kb, Yc.Jegw, Yc.xZje),
+            ab = hc;
+          Fb().setInt32(bb + 4, ab, !0), Fb().setInt32(bb + 0, Wb, !0)
         },
-        BDls: function(kk, Fk, Bk) {
-          return zk(bF(kk).getProgramParameter(bF(Fk), Bk >>> 0))
+        tazh: function(bb, cb, sb) {
+          return Zb(Tc(bb).getProgramParameter(Tc(cb), sb >>> 0))
         },
-        VJoH: function(kk, Fk, Bk) {
-          return zk(bF(kk).getProgramParameter(bF(Fk), Bk >>> 0))
+        Xsi0: function(bb, cb, sb) {
+          return Zb(Tc(bb).getProgramParameter(Tc(cb), sb >>> 0))
         },
-        kcoR: function() {
-          return wF((function(kk, Fk, Bk, Rk) {
-            const tk = fF(bF(Fk).getPropertyValue(BF(Bk, Rk)), OF.mCFP, OF.eKAg),
-              ak = EF;
-            nk().setInt32(kk + 4, ak, !0), nk().setInt32(kk + 0, tk, !0)
+        stYr: function() {
+          return Uc((function(bb, cb, sb, kb) {
+            const Wb = lc(Tc(cb).getPropertyValue(cc(sb, kb)), Yc.Jegw, Yc.xZje),
+              ab = hc;
+            Fb().setInt32(bb + 4, ab, !0), Fb().setInt32(bb + 0, Wb, !0)
           }), arguments)
         },
-        hvOn: function(kk, Fk, Bk) {
-          return zk(bF(kk).getQueryParameter(bF(Fk), Bk >>> 0))
+        Umpq: function(bb, cb, sb) {
+          return Zb(Tc(bb).getQueryParameter(Tc(cb), sb >>> 0))
         },
-        zMW5: function(kk, Fk, Bk) {
-          const Rk = bF(Fk).getShaderInfoLog(bF(Bk));
-          var tk = VF(Rk) ? 0 : fF(Rk, OF.mCFP, OF.eKAg),
-            ak = EF;
-          nk().setInt32(kk + 4, ak, !0), nk().setInt32(kk + 0, tk, !0)
+        vL2L: function(bb, cb, sb) {
+          const kb = Tc(cb).getShaderInfoLog(Tc(sb));
+          var Wb = fc(kb) ? 0 : lc(kb, Yc.Jegw, Yc.xZje),
+            ab = hc;
+          Fb().setInt32(bb + 4, ab, !0), Fb().setInt32(bb + 0, Wb, !0)
         },
-        tYW7: function(kk, Fk, Bk) {
-          const Rk = bF(Fk).getShaderInfoLog(bF(Bk));
-          var tk = VF(Rk) ? 0 : fF(Rk, OF.mCFP, OF.eKAg),
-            ak = EF;
-          nk().setInt32(kk + 4, ak, !0), nk().setInt32(kk + 0, tk, !0)
+        rQ7x: function(bb, cb, sb) {
+          const kb = Tc(cb).getShaderInfoLog(Tc(sb));
+          var Wb = fc(kb) ? 0 : lc(kb, Yc.Jegw, Yc.xZje),
+            ab = hc;
+          Fb().setInt32(bb + 4, ab, !0), Fb().setInt32(bb + 0, Wb, !0)
         },
-        xwZG: function(kk, Fk, Bk) {
-          const Rk = bF(kk).getShaderPrecisionFormat(Fk >>> 0, Bk >>> 0);
-          return VF(Rk) ? 0 : zk(Rk)
+        bUuL: function(bb, cb, sb) {
+          const kb = Tc(bb).getShaderPrecisionFormat(cb >>> 0, sb >>> 0);
+          return fc(kb) ? 0 : Zb(kb)
         },
-        bo44: function(kk, Fk, Bk) {
-          const Rk = bF(kk).getShaderPrecisionFormat(Fk >>> 0, Bk >>> 0);
-          return VF(Rk) ? 0 : zk(Rk)
+        fTwc: function(bb, cb, sb) {
+          const kb = Tc(bb).getShaderPrecisionFormat(cb >>> 0, sb >>> 0);
+          return fc(kb) ? 0 : Zb(kb)
         },
-        zfEl: function(kk) {
-          const Fk = bF(kk).getSupportedExtensions();
-          return VF(Fk) ? 0 : zk(Fk)
+        yrjF: function(bb) {
+          const cb = Tc(bb).getSupportedExtensions();
+          return fc(cb) ? 0 : Zb(cb)
         },
-        ezc3: function(kk, Fk, Bk, Rk) {
-          const tk = bF(kk).getUniformLocation(bF(Fk), BF(Bk, Rk));
-          return VF(tk) ? 0 : zk(tk)
+        OM5B: function(bb, cb, sb, kb) {
+          const Wb = Tc(bb).getUniformLocation(Tc(cb), cc(sb, kb));
+          return fc(Wb) ? 0 : Zb(Wb)
         },
-        Dk4m: function(kk, Fk, Bk, Rk) {
-          const tk = bF(kk).getUniformLocation(bF(Fk), BF(Bk, Rk));
-          return VF(tk) ? 0 : zk(tk)
+        WQxz: function(bb, cb, sb, kb) {
+          const Wb = Tc(bb).getUniformLocation(Tc(cb), cc(sb, kb));
+          return fc(Wb) ? 0 : Zb(Wb)
         },
-        ixJM: function() {
-          return wF((function(kk, Fk) {
-            return zk(Reflect.get(bF(kk), bF(Fk)))
+        yOPl: function() {
+          return Uc((function(bb, cb) {
+            return Zb(Reflect.get(Tc(bb), Tc(cb)))
           }), arguments)
         },
-        QOEt: function(kk, Fk) {
-          return zk(bF(kk)[Fk >>> 0])
+        GvEL: function(bb, cb) {
+          return Zb(Tc(bb)[cb >>> 0])
         },
-        wXBL: function(kk, Fk, Bk, Rk) {
-          const tk = bF(Fk).get(BF(Bk, Rk));
-          var ak = VF(tk) ? 0 : fF(tk, OF.mCFP, OF.eKAg),
-            Xk = EF;
-          nk().setInt32(kk + 4, Xk, !0), nk().setInt32(kk + 0, ak, !0)
+        Zc2S: function(bb, cb, sb, kb) {
+          const Wb = Tc(cb).get(cc(sb, kb));
+          var ab = fc(Wb) ? 0 : lc(Wb, Yc.Jegw, Yc.xZje),
+            Tb = hc;
+          Fb().setInt32(bb + 4, Tb, !0), Fb().setInt32(bb + 0, ab, !0)
         },
-        B50M: function(kk, Fk) {
-          return zk(bF(kk)[Fk >>> 0])
+        qeuU: function(bb, cb) {
+          return Zb(Tc(bb)[cb >>> 0])
         },
-        HYgm: function() {
-          return wF((function(kk, Fk) {
-            return Reflect.has(bF(kk), bF(Fk))
+        PQOM: function() {
+          return Uc((function(bb, cb) {
+            return Reflect.has(Tc(bb), Tc(cb))
           }), arguments)
         },
-        yqBC: function(kk) {
-          return bF(kk).height
+        L3Ba: function(bb) {
+          return Tc(bb).height
         },
-        OiZn: function(kk) {
-          return bF(kk).height
+        gaxc: function(bb) {
+          return Tc(bb).height
         },
-        R3Iy: function(kk) {
-          return bF(kk).height
+        aGRK: function(bb) {
+          return Tc(bb).height
         },
-        I1MT: function(kk) {
-          console.info(bF(kk))
+        qNKn: function(bb) {
+          console.info(Tc(bb))
         },
-        Uiaf: function(kk) {
-          let Fk;
+        MxIa: function(bb) {
+          let cb;
           try {
-            Fk = bF(kk) instanceof CanvasRenderingContext2D
-          } catch (Bk) {
-            Fk = !1
+            cb = Tc(bb) instanceof CanvasRenderingContext2D
+          } catch (sb) {
+            cb = !1
           }
-          return Fk
+          return cb
         },
-        rO9O: function(kk) {
-          let Fk;
+        VZ1r: function(bb) {
+          let cb;
           try {
-            Fk = bF(kk) instanceof Error
-          } catch (Bk) {
-            Fk = !1
+            cb = Tc(bb) instanceof Error
+          } catch (sb) {
+            cb = !1
           }
-          return Fk
+          return cb
         },
-        FPn3: function(kk) {
-          let Fk;
+        ayY2: function(bb) {
+          let cb;
           try {
-            Fk = bF(kk) instanceof HTMLCanvasElement
-          } catch (Bk) {
-            Fk = !1
+            cb = Tc(bb) instanceof HTMLCanvasElement
+          } catch (sb) {
+            cb = !1
           }
-          return Fk
+          return cb
         },
-        wKJZ: function(kk) {
-          let Fk;
+        MQu9: function(bb) {
+          let cb;
           try {
-            Fk = bF(kk) instanceof ImageBitmap
-          } catch (Bk) {
-            Fk = !1
+            cb = Tc(bb) instanceof ImageBitmap
+          } catch (sb) {
+            cb = !1
           }
-          return Fk
+          return cb
         },
-        AvZI: function(kk) {
-          let Fk;
+        m2sO: function(bb) {
+          let cb;
           try {
-            Fk = bF(kk) instanceof OffscreenCanvas
-          } catch (Bk) {
-            Fk = !1
+            cb = Tc(bb) instanceof OffscreenCanvas
+          } catch (sb) {
+            cb = !1
           }
-          return Fk
+          return cb
         },
-        E1n1: function(kk) {
-          let Fk;
+        qA1P: function(bb) {
+          let cb;
           try {
-            Fk = bF(kk) instanceof Performance
-          } catch (Bk) {
-            Fk = !1
+            cb = Tc(bb) instanceof Performance
+          } catch (sb) {
+            cb = !1
           }
-          return Fk
+          return cb
         },
-        ap3L: function(kk) {
-          let Fk;
+        u1aU: function(bb) {
+          let cb;
           try {
-            Fk = bF(kk) instanceof WebGLRenderingContext
-          } catch (Bk) {
-            Fk = !1
+            cb = Tc(bb) instanceof WebGLRenderingContext
+          } catch (sb) {
+            cb = !1
           }
-          return Fk
+          return cb
         },
-        RWLx: function(kk) {
-          let Fk;
+        WmqT: function(bb) {
+          let cb;
           try {
-            Fk = bF(kk) instanceof Window
-          } catch (Bk) {
-            Fk = !1
+            cb = Tc(bb) instanceof Window
+          } catch (sb) {
+            cb = !1
           }
-          return Fk
+          return cb
         },
-        pgep: function(kk) {
-          return Array.isArray(bF(kk))
+        YEnB: function(bb) {
+          return Array.isArray(Tc(bb))
         },
-        LRff: function(kk) {
-          return bF(kk).isContextLost()
+        JNtf: function(bb) {
+          return Tc(bb).isContextLost()
         },
-        OMLY: function(kk) {
-          return bF(kk).length
+        c1un: function(bb) {
+          return Tc(bb).length
         },
-        kVSc: function(kk) {
-          return bF(kk).length
+        V3lE: function(bb) {
+          return Tc(bb).length
         },
-        xzG7: function(kk, Fk) {
-          bF(kk).linkProgram(bF(Fk))
+        gWC6: function(bb, cb) {
+          Tc(bb).linkProgram(Tc(cb))
         },
-        bbyn: function(kk, Fk) {
-          bF(kk).linkProgram(bF(Fk))
+        Rr2a: function(bb, cb) {
+          Tc(bb).linkProgram(Tc(cb))
         },
-        BPEN: function() {
-          return wF((function(kk) {
-            const Fk = bF(kk).localStorage;
-            return VF(Fk) ? 0 : zk(Fk)
+        X3yk: function() {
+          return Uc((function(bb) {
+            const cb = Tc(bb).localStorage;
+            return fc(cb) ? 0 : Zb(cb)
           }), arguments)
         },
-        uvdV: function(kk) {
-          return zk(bF(kk).location)
+        cRls: function(bb) {
+          return Zb(Tc(bb).location)
         },
-        jxuP: function(kk) {
-          return zk(bF(kk).message)
+        g2kO: function(bb) {
+          return Zb(Tc(bb).message)
         },
-        A4xW: function(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk) {
-          bF(kk).multiDrawArraysWEBGL(Fk >>> 0, pk(Bk, Rk), tk >>> 0, pk(ak, Xk), bk >>> 0, wk)
+        GAU7: function(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib) {
+          Tc(bb).multiDrawArraysWEBGL(cb >>> 0, rb(sb, kb), Wb >>> 0, rb(ab, Tb), Ub >>> 0, Ib)
         },
-        Mvme: function(kk, Fk) {
-          const Bk = fF(bF(Fk).name, OF.mCFP, OF.eKAg),
-            Rk = EF;
-          nk().setInt32(kk + 4, Rk, !0), nk().setInt32(kk + 0, Bk, !0)
+        oGMa: function(bb, cb) {
+          const sb = lc(Tc(cb).name, Yc.Jegw, Yc.xZje),
+            kb = hc;
+          Fb().setInt32(bb + 4, kb, !0), Fb().setInt32(bb + 0, sb, !0)
         },
-        EVIc: function(kk) {
-          return zk(bF(kk).name)
+        LXiB: function(bb) {
+          return Zb(Tc(bb).name)
         },
-        d3BI: function(kk, Fk) {
-          return zk(new Error(BF(kk, Fk)))
+        Hvye: function(bb, cb) {
+          return Zb(new Error(cc(bb, cb)))
         },
-        QGT8: function() {
-          return zk(new Object)
+        lpH9: function() {
+          return Zb(new Object)
         },
-        B7HO: function() {
-          return wF((function(kk, Fk) {
-            return zk(new OffscreenCanvas(kk >>> 0, Fk >>> 0))
+        j8PA: function() {
+          return Uc((function(bb, cb) {
+            return Zb(new OffscreenCanvas(bb >>> 0, cb >>> 0))
           }), arguments)
         },
-        DrA0: function(kk, Fk) {
-          return zk(new Uint8Array(jk(kk, Fk)))
+        dVOX: function(bb, cb) {
+          return Zb(new Uint8Array(Rb(bb, cb)))
         },
-        BU1q: function(kk, Fk) {
+        y11P: function(bb, cb) {
           try {
-            var Bk = {
-              a: kk,
-              b: Fk
+            var sb = {
+              a: bb,
+              b: cb
             };
-            const Rk = new Promise(((kk, Fk) => {
-              const Rk = Bk.a;
-              Bk.a = 0;
+            const kb = new Promise(((bb, cb) => {
+              const kb = sb.a;
+              sb.a = 0;
               try {
-                return function(kk, Fk, Bk, Rk) {
-                  OF.zNvS(kk, Fk, zk(Bk), zk(Rk))
-                }(Rk, Bk.b, kk, Fk)
+                return function(bb, cb, sb, kb) {
+                  Yc.dqft(bb, cb, Zb(sb), Zb(kb))
+                }(kb, sb.b, bb, cb)
               } finally {
-                Bk.a = Rk
+                sb.a = kb
               }
             }));
-            return zk(Rk)
+            return Zb(kb)
           } finally {
-            Bk.a = 0
+            sb.a = 0
           }
         },
-        dU5p: function() {
-          return wF((function(kk, Fk) {
-            return zk(new URLSearchParams(BF(kk, Fk)))
+        BM1g: function() {
+          return Uc((function(bb, cb) {
+            return Zb(new URLSearchParams(cc(bb, cb)))
           }), arguments)
         },
-        BHRP: function() {
+        Otns: function() {
           return performance.now()
         },
-        wdGF: function(kk) {
-          return Performance.prototype.now.call(bF(kk))
+        BYao: function(bb) {
+          return Performance.prototype.now.call(Tc(bb))
         },
-        ytC0: function() {
+        DJK2: function() {
           return Date.now()
         },
-        T5rx: function() {
+        YQSb: function() {
           return Date.now()
         },
-        OCwu: function(kk, Fk, Bk) {
-          bF(kk).pixelStorei(Fk >>> 0, Bk)
+        fxqF: function(bb, cb, sb) {
+          Tc(bb).pixelStorei(cb >>> 0, sb)
         },
-        x5GT: function(kk, Fk, Bk) {
-          bF(kk).pixelStorei(Fk >>> 0, Bk)
+        Ze13: function(bb, cb, sb) {
+          Tc(bb).pixelStorei(cb >>> 0, sb)
         },
-        Tu0B: function(kk, Fk, Bk) {
-          bF(kk).polygonOffset(Fk, Bk)
+        EmsZ: function(bb, cb, sb) {
+          Tc(bb).polygonOffset(cb, sb)
         },
-        KNnq: function(kk, Fk, Bk) {
-          bF(kk).polygonOffset(Fk, Bk)
+        d28p: function(bb, cb, sb) {
+          Tc(bb).polygonOffset(cb, sb)
         },
-        N4vy: function(kk) {
-          return bF(kk).precision
+        zTpQ: function(bb) {
+          return Tc(bb).precision
         },
-        Bc6D: function(kk) {
-          bF(kk).preventDefault()
+        HrDY: function(bb) {
+          Tc(bb).preventDefault()
         },
-        cYNH: function(kk, Fk, Bk, Rk) {
-          return bF(kk).probe(Fk >>> 0, Bk >>> 0, Rk >>> 0)
+        MsRP: function(bb, cb, sb, kb) {
+          return Tc(bb).probe(cb >>> 0, sb >>> 0, kb >>> 0)
         },
-        RpqZ: function(kk, Fk, Bk) {
-          Uint8Array.prototype.set.call(jk(kk, Fk), bF(Bk))
+        fRXF: function(bb, cb, sb) {
+          Uint8Array.prototype.set.call(Rb(bb, cb), Tc(sb))
         },
-        i1dW: function(kk) {
-          return zk(bF(kk).queueMicrotask)
+        eONh: function(bb) {
+          return Zb(Tc(bb).queueMicrotask)
         },
-        Onem: function(kk) {
-          queueMicrotask(bF(kk))
+        jsK1: function(bb) {
+          queueMicrotask(Tc(bb))
         },
-        U8e1: function(kk) {
-          return bF(kk).rangeMax
+        L8fs: function(bb) {
+          return Tc(bb).rangeMax
         },
-        ZpIe: function(kk) {
-          return bF(kk).rangeMin
+        vijN: function(bb) {
+          return Tc(bb).rangeMin
         },
-        hWDI: function() {
-          return wF((function(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
-            bF(kk).readPixels(Fk, Bk, Rk, tk, ak >>> 0, Xk >>> 0, bF(bk))
+        vDFd: function() {
+          return Uc((function(bb, cb, sb, kb, Wb, ab, Tb, Ub) {
+            Tc(bb).readPixels(cb, sb, kb, Wb, ab >>> 0, Tb >>> 0, Tc(Ub))
           }), arguments)
         },
-        iMHE: function() {
-          return wF((function(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
-            bF(kk).readPixels(Fk, Bk, Rk, tk, ak >>> 0, Xk >>> 0, bF(bk))
+        jyZh: function() {
+          return Uc((function(bb, cb, sb, kb, Wb, ab, Tb, Ub) {
+            Tc(bb).readPixels(cb, sb, kb, Wb, ab >>> 0, Tb >>> 0, Tc(Ub))
           }), arguments)
         },
-        rg4S: function() {
-          return wF((function(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
-            bF(kk).readPixels(Fk, Bk, Rk, tk, ak >>> 0, Xk >>> 0, bk)
+        bOPc: function() {
+          return Uc((function(bb, cb, sb, kb, Wb, ab, Tb, Ub) {
+            Tc(bb).readPixels(cb, sb, kb, Wb, ab >>> 0, Tb >>> 0, Ub)
           }), arguments)
         },
-        u7NJ: function() {
-          return wF((function(kk, Fk, Bk, Rk) {
-            bF(kk).removeEventListener(BF(Fk, Bk), bF(Rk))
+        ZEwc: function() {
+          return Uc((function(bb, cb, sb, kb) {
+            Tc(bb).removeEventListener(cc(cb, sb), Tc(kb))
           }), arguments)
         },
-        imDD: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).renderbufferStorage(Fk >>> 0, Bk >>> 0, Rk, tk)
+        uZFB: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).renderbufferStorage(cb >>> 0, sb >>> 0, kb, Wb)
         },
-        hvod: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).renderbufferStorage(Fk >>> 0, Bk >>> 0, Rk, tk)
+        ihcY: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).renderbufferStorage(cb >>> 0, sb >>> 0, kb, Wb)
         },
-        KPnH: function(kk) {
-          return zk(Xk.__wrap(kk))
+        lYXN: function(bb) {
+          return Zb(Tb.__wrap(bb))
         },
-        m2Gf: function(kk) {
-          return zk(Promise.resolve(bF(kk)))
+        bzrU: function(bb) {
+          return Zb(Promise.resolve(Tc(bb)))
         },
-        sc6w: function(kk) {
-          bF(kk).restoreContext()
+        Pj1B: function(bb) {
+          Tc(bb).restoreContext()
         },
-        MHwb: function() {
-          return wF((function(kk, Fk) {
-            const Bk = fF(bF(Fk).search, OF.mCFP, OF.eKAg),
-              Rk = EF;
-            nk().setInt32(kk + 4, Rk, !0), nk().setInt32(kk + 0, Bk, !0)
+        QimY: function() {
+          return Uc((function(bb, cb) {
+            const sb = lc(Tc(cb).search, Yc.Jegw, Yc.xZje),
+              kb = hc;
+            Fb().setInt32(bb + 4, kb, !0), Fb().setInt32(bb + 0, sb, !0)
           }), arguments)
         },
-        qRRs: function() {
-          return wF((function(kk, Fk, Bk) {
-            return bF(kk).setTimeout(bF(Fk), Bk)
+        xzvA: function() {
+          return Uc((function(bb, cb, sb) {
+            return Tc(bb).setTimeout(Tc(cb), sb)
           }), arguments)
         },
-        VwUC: function() {
-          return wF((function(kk, Fk, Bk) {
-            return Reflect.set(bF(kk), bF(Fk), bF(Bk))
+        qZJU: function() {
+          return Uc((function(bb, cb, sb) {
+            return Reflect.set(Tc(bb), Tc(cb), Tc(sb))
           }), arguments)
         },
-        i4AT: function(kk, Fk) {
-          bF(kk).alpha = 0 !== Fk
+        UEgh: function(bb, cb) {
+          Tc(bb).alpha = 0 !== cb
         },
-        RtzY: function(kk, Fk) {
-          bF(kk).antialias = 0 !== Fk
+        nSXN: function(bb, cb) {
+          Tc(bb).antialias = 0 !== cb
         },
-        foBq: function(kk, Fk) {
-          bF(kk).depth = 0 !== Fk
+        vp09: function(bb, cb) {
+          Tc(bb).depth = 0 !== cb
         },
-        Vaev: function(kk, Fk) {
-          bF(kk).height = Fk >>> 0
+        uTJR: function(bb, cb) {
+          Tc(bb).height = cb >>> 0
         },
-        M8fG: function(kk, Fk) {
-          bF(kk).powerPreference = Gk[Fk]
+        W1Bw: function(bb, cb) {
+          Tc(bb).powerPreference = ib[cb]
         },
-        PHnb: function(kk, Fk) {
-          bF(kk).premultipliedAlpha = 0 !== Fk
+        Lt16: function(bb, cb) {
+          Tc(bb).premultipliedAlpha = 0 !== cb
         },
-        OFWC: function(kk, Fk) {
-          bF(kk).preserveDrawingBuffer = 0 !== Fk
+        EV9M: function(bb, cb) {
+          Tc(bb).preserveDrawingBuffer = 0 !== cb
         },
-        NDqf: function(kk, Fk) {
-          bF(kk).stencil = 0 !== Fk
+        Z90H: function(bb, cb) {
+          Tc(bb).stencil = 0 !== cb
         },
-        p7RM: function(kk, Fk) {
-          bF(kk).width = Fk >>> 0
+        ap1H: function(bb, cb) {
+          Tc(bb).width = cb >>> 0
         },
-        tmRx: function(kk, Fk, Bk, Rk) {
-          bF(kk).shaderSource(bF(Fk), BF(Bk, Rk))
+        BpWU: function(bb, cb, sb, kb) {
+          Tc(bb).shaderSource(Tc(cb), cc(sb, kb))
         },
-        uZAV: function(kk, Fk, Bk, Rk) {
-          bF(kk).shaderSource(bF(Fk), BF(Bk, Rk))
+        BjOq: function(bb, cb, sb, kb) {
+          Tc(bb).shaderSource(Tc(cb), cc(sb, kb))
         },
-        wn2p: function(kk) {
-          return bF(kk).size
+        MfsM: function(bb) {
+          return Tc(bb).size
         },
-        mZMg: function() {
-          const kk = "undefined" === typeof global ? null : global;
-          return VF(kk) ? 0 : zk(kk)
+        KaMP: function() {
+          const bb = "undefined" === typeof global ? null : global;
+          return fc(bb) ? 0 : Zb(bb)
         },
-        E7KQ: function() {
-          const kk = "undefined" === typeof globalThis ? null : globalThis;
-          return VF(kk) ? 0 : zk(kk)
+        xZaR: function() {
+          const bb = "undefined" === typeof globalThis ? null : globalThis;
+          return fc(bb) ? 0 : Zb(bb)
         },
-        mwzc: function() {
-          const kk = "undefined" === typeof self ? null : self;
-          return VF(kk) ? 0 : zk(kk)
+        FKIz: function() {
+          const bb = "undefined" === typeof self ? null : self;
+          return fc(bb) ? 0 : Zb(bb)
         },
-        w8pN: function() {
-          const kk = "undefined" === typeof window ? null : window;
-          return VF(kk) ? 0 : zk(kk)
+        xXGr: function() {
+          const bb = "undefined" === typeof window ? null : window;
+          return fc(bb) ? 0 : Zb(bb)
         },
-        sqP6: function(kk) {
-          return zk(bF(kk).style)
+        TiPs: function(bb) {
+          return Zb(Tc(bb).style)
         },
-        NutJ: function(kk, Fk, Bk) {
-          return zk(bF(kk).subarray(Fk >>> 0, Bk >>> 0))
+        TSFh: function(bb, cb, sb) {
+          return Zb(Tc(bb).subarray(cb >>> 0, sb >>> 0))
         },
-        G439: function() {
-          return wF((function(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk) {
-            bF(kk).texImage2D(Fk >>> 0, Bk, Rk, tk, ak, Xk, bk >>> 0, wk >>> 0, bF(dk))
+        f10b: function() {
+          return Uc((function(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb) {
+            Tc(bb).texImage2D(cb >>> 0, sb, kb, Wb, ab, Tb, Ub >>> 0, Ib >>> 0, Tc(Hb))
           }), arguments)
         },
-        pDJF: function(kk, Fk, Bk, Rk) {
-          bF(kk).texParameterf(Fk >>> 0, Bk >>> 0, Rk)
+        XUsP: function(bb, cb, sb, kb) {
+          Tc(bb).texParameterf(cb >>> 0, sb >>> 0, kb)
         },
-        kQlK: function(kk, Fk, Bk, Rk) {
-          bF(kk).texParameterf(Fk >>> 0, Bk >>> 0, Rk)
+        Qjjh: function(bb, cb, sb, kb) {
+          Tc(bb).texParameterf(cb >>> 0, sb >>> 0, kb)
         },
-        TVcJ: function(kk, Fk, Bk, Rk) {
-          bF(kk).texParameteri(Fk >>> 0, Bk >>> 0, Rk)
+        PTfp: function(bb, cb, sb, kb) {
+          Tc(bb).texParameteri(cb >>> 0, sb >>> 0, kb)
         },
-        xJRX: function(kk, Fk, Bk, Rk) {
-          bF(kk).texParameteri(Fk >>> 0, Bk >>> 0, Rk)
+        zPxm: function(bb, cb, sb, kb) {
+          Tc(bb).texParameteri(cb >>> 0, sb >>> 0, kb)
         },
-        QfA2: function() {
-          return wF((function(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
-            bF(kk).texSubImage2D(Fk >>> 0, Bk, Rk, tk, ak >>> 0, Xk >>> 0, bF(bk))
+        rSvx: function() {
+          return Uc((function(bb, cb, sb, kb, Wb, ab, Tb, Ub) {
+            Tc(bb).texSubImage2D(cb >>> 0, sb, kb, Wb, ab >>> 0, Tb >>> 0, Tc(Ub))
           }), arguments)
         },
-        zO1z: function() {
-          return wF((function(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
-            bF(kk).texSubImage2D(Fk >>> 0, Bk, Rk, tk, ak >>> 0, Xk >>> 0, bF(bk))
+        itp8: function() {
+          return Uc((function(bb, cb, sb, kb, Wb, ab, Tb, Ub) {
+            Tc(bb).texSubImage2D(cb >>> 0, sb, kb, Wb, ab >>> 0, Tb >>> 0, Tc(Ub))
           }), arguments)
         },
-        HYvF: function() {
-          return wF((function(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
-            bF(kk).texSubImage2D(Fk >>> 0, Bk, Rk, tk, ak >>> 0, Xk >>> 0, bF(bk))
+        DFQZ: function() {
+          return Uc((function(bb, cb, sb, kb, Wb, ab, Tb, Ub) {
+            Tc(bb).texSubImage2D(cb >>> 0, sb, kb, Wb, ab >>> 0, Tb >>> 0, Tc(Ub))
           }), arguments)
         },
-        Q3Xs: function() {
-          return wF((function(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk) {
-            bF(kk).texSubImage2D(Fk >>> 0, Bk, Rk, tk, ak, Xk, bk >>> 0, wk >>> 0, bF(dk))
+        KU8u: function() {
+          return Uc((function(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb) {
+            Tc(bb).texSubImage2D(cb >>> 0, sb, kb, Wb, ab, Tb, Ub >>> 0, Ib >>> 0, Tc(Hb))
           }), arguments)
         },
-        gvWh: function(kk, Fk) {
-          return zk(bF(kk).then(bF(Fk)))
+        Pqfu: function(bb, cb) {
+          return Zb(Tc(bb).then(Tc(cb)))
         },
-        NT3A: function(kk) {
-          return bF(kk).type
+        S00z: function(bb) {
+          return Tc(bb).type
         },
-        XuP2: function(kk, Fk, Bk) {
-          bF(kk).uniform1f(bF(Fk), Bk)
+        s8VT: function(bb, cb, sb) {
+          Tc(bb).uniform1f(Tc(cb), sb)
         },
-        CPhj: function(kk, Fk, Bk) {
-          bF(kk).uniform1f(bF(Fk), Bk)
+        IG2E: function(bb, cb, sb) {
+          Tc(bb).uniform1f(Tc(cb), sb)
         },
-        rrdA: function(kk, Fk, Bk) {
-          bF(kk).uniform1i(bF(Fk), Bk)
+        cJ2p: function(bb, cb, sb) {
+          Tc(bb).uniform1i(Tc(cb), sb)
         },
-        zVf0: function(kk, Fk, Bk) {
-          bF(kk).uniform1i(bF(Fk), Bk)
+        HrRJ: function(bb, cb, sb) {
+          Tc(bb).uniform1i(Tc(cb), sb)
         },
-        Qur8: function(kk, Fk, Bk) {
-          bF(kk).uniform1ui(bF(Fk), Bk >>> 0)
+        rROh: function(bb, cb, sb) {
+          Tc(bb).uniform1ui(Tc(cb), sb >>> 0)
         },
-        w2R3: function(kk, Fk, Bk, Rk) {
-          bF(kk).uniform2f(bF(Fk), Bk, Rk)
+        W2jM: function(bb, cb, sb, kb) {
+          Tc(bb).uniform2f(Tc(cb), sb, kb)
         },
-        Tgls: function(kk, Fk, Bk, Rk) {
-          bF(kk).uniform2f(bF(Fk), Bk, Rk)
+        SQSm: function(bb, cb, sb, kb) {
+          Tc(bb).uniform2f(Tc(cb), sb, kb)
         },
-        pIun: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).uniform4f(bF(Fk), Bk, Rk, tk, ak)
+        Uo6f: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).uniform4f(Tc(cb), sb, kb, Wb, ab)
         },
-        nMk3: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).uniform4f(bF(Fk), Bk, Rk, tk, ak)
+        NA6i: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).uniform4f(Tc(cb), sb, kb, Wb, ab)
         },
-        C4t6: function(kk, Fk, Bk, Rk) {
-          bF(kk).uniform4fv(bF(Fk), Ck(Bk, Rk))
+        EnP8: function(bb, cb, sb, kb) {
+          Tc(bb).uniform4fv(Tc(cb), Ab(sb, kb))
         },
-        o9m4: function(kk, Fk, Bk, Rk) {
-          bF(kk).uniform4fv(bF(Fk), Ck(Bk, Rk))
+        yJTu: function(bb, cb, sb, kb) {
+          Tc(bb).uniform4fv(Tc(cb), Ab(sb, kb))
         },
-        CO2v: function(kk, Fk) {
-          bF(kk).useProgram(bF(Fk))
+        sfPt: function(bb, cb) {
+          Tc(bb).useProgram(Tc(cb))
         },
-        cmPX: function(kk, Fk) {
-          bF(kk).useProgram(bF(Fk))
+        DBca: function(bb, cb) {
+          Tc(bb).useProgram(Tc(cb))
         },
-        ZXf5: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).vertexAttrib4f(Fk >>> 0, Bk, Rk, tk, ak)
+        c64u: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).vertexAttrib4f(cb >>> 0, sb, kb, Wb, ab)
         },
-        ZROk: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).vertexAttrib4f(Fk >>> 0, Bk, Rk, tk, ak)
+        dWeU: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).vertexAttrib4f(cb >>> 0, sb, kb, Wb, ab)
         },
-        lpJd: function(kk, Fk, Bk) {
-          bF(kk).vertexAttribDivisorANGLE(Fk >>> 0, Bk >>> 0)
+        m4FJ: function(bb, cb, sb) {
+          Tc(bb).vertexAttribDivisorANGLE(cb >>> 0, sb >>> 0)
         },
-        eVIc: function(kk, Fk, Bk) {
-          bF(kk).vertexAttribDivisor(Fk >>> 0, Bk >>> 0)
+        R6DM: function(bb, cb, sb) {
+          Tc(bb).vertexAttribDivisor(cb >>> 0, sb >>> 0)
         },
-        hFkc: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).vertexAttribI4i(Fk >>> 0, Bk, Rk, tk, ak)
+        Infd: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).vertexAttribI4i(cb >>> 0, sb, kb, Wb, ab)
         },
-        yDyB: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).vertexAttribI4ui(Fk >>> 0, Bk >>> 0, Rk >>> 0, tk >>> 0, ak >>> 0)
+        pdM1: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).vertexAttribI4ui(cb >>> 0, sb >>> 0, kb >>> 0, Wb >>> 0, ab >>> 0)
         },
-        LTN3: function(kk, Fk, Bk, Rk, tk, ak) {
-          bF(kk).vertexAttribIPointer(Fk >>> 0, Bk, Rk >>> 0, tk, ak)
+        Up7E: function(bb, cb, sb, kb, Wb, ab) {
+          Tc(bb).vertexAttribIPointer(cb >>> 0, sb, kb >>> 0, Wb, ab)
         },
-        MMol: function(kk, Fk, Bk, Rk, tk, ak, Xk) {
-          bF(kk).vertexAttribPointer(Fk >>> 0, Bk, Rk >>> 0, 0 !== tk, ak, Xk)
+        KCXD: function(bb, cb, sb, kb, Wb, ab, Tb) {
+          Tc(bb).vertexAttribPointer(cb >>> 0, sb, kb >>> 0, 0 !== Wb, ab, Tb)
         },
-        qfgp: function(kk, Fk, Bk, Rk, tk, ak, Xk) {
-          bF(kk).vertexAttribPointer(Fk >>> 0, Bk, Rk >>> 0, 0 !== tk, ak, Xk)
+        dSOu: function(bb, cb, sb, kb, Wb, ab, Tb) {
+          Tc(bb).vertexAttribPointer(cb >>> 0, sb, kb >>> 0, 0 !== Wb, ab, Tb)
         },
-        hTY4: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).viewport(Fk, Bk, Rk, tk)
+        tpM7: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).viewport(cb, sb, kb, Wb)
         },
-        lTsG: function(kk, Fk, Bk, Rk, tk) {
-          bF(kk).viewport(Fk, Bk, Rk, tk)
+        TISU: function(bb, cb, sb, kb, Wb) {
+          Tc(bb).viewport(cb, sb, kb, Wb)
         },
-        QM2S: function(kk, Fk) {
-          console.warn(BF(kk, Fk))
+        PQUb: function(bb, cb) {
+          console.warn(cc(bb, cb))
         },
-        CJ0h: function(kk) {
-          return bF(kk).width
+        SiLm: function(bb) {
+          return Tc(bb).width
         },
-        qh5W: function(kk) {
-          return bF(kk).width
+        EWtf: function(bb) {
+          return Tc(bb).width
         },
-        HzRb: function(kk) {
-          return bF(kk).width
+        sVcx: function(bb) {
+          return Tc(bb).width
         },
-        rIU8: function(kk, Fk) {
-          return zk(JF(kk, Fk, ck))
+        vSB2: function(bb, cb) {
+          return Zb(Mc(bb, cb, Eb))
         },
-        NmuB: function(kk, Fk) {
-          return zk(JF(kk, Fk, Uk))
+        Hf0I: function(bb, cb) {
+          return Zb(Mc(bb, cb, Db))
         },
-        xtLu: function(kk, Fk) {
-          return zk(JF(kk, Fk, gk))
+        wJwP: function(bb, cb) {
+          return Zb(Mc(bb, cb, Pb))
         },
-        EXCY: function(kk, Fk) {
-          return zk(jk(kk, Fk))
+        JyY7: function(bb, cb) {
+          return Zb(Rb(bb, cb))
         },
-        FSaN: function(kk, Fk) {
-          return zk(BF(kk, Fk))
+        JMmT: function(bb, cb) {
+          return Zb(cc(bb, cb))
         },
-        R65L: function(kk) {
-          return zk(bF(kk))
+        xk3R: function(bb) {
+          return Zb(Tc(bb))
         },
-        CVhH: function(kk) {
-          mF(kk)
+        MPdo: function(bb) {
+          Qc(bb)
         }
       };
       return {
         __proto__: null,
-        ze36: kk
+        EqFZ: bb
       }
     }
 
-    function gk(kk, Fk) {
-      OF.jDFJ(kk, Fk)
+    function Pb(bb, cb) {
+      Yc.FKuZ(bb, cb)
     }
 
-    function Uk(kk, Fk, Bk) {
-      OF.cJzl(kk, Fk, zk(Bk))
+    function Db(bb, cb, sb) {
+      Yc.EMSM(bb, cb, Zb(sb))
     }
 
-    function ck(kk, Fk, Bk) {
-      const Rk = OF.siHL(kk, Fk, zk(Bk));
-      if (Rk[1]) throw mF(Rk[0])
+    function Eb(bb, cb, sb) {
+      const kb = Yc.RBae(bb, cb, Zb(sb));
+      if (kb[1]) throw Qc(kb[0])
     }
-    Symbol.dispose && (Xk.prototype[Symbol.dispose] = Xk.prototype.free);
-    const Gk = ["default", "low-power", "high-performance"],
-      Tk = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (Tb.prototype[Symbol.dispose] = Tb.prototype.free);
+    const ib = ["default", "low-power", "high-performance"],
+      Ob = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((kk => OF.DMqn(kk, 1))),
-      rk = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((bb => Yc.lIhE(bb, 1))),
+      Gb = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((kk => OF.XjIj(kk, 1))),
-      Dk = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((bb => Yc.JgVK(bb, 1))),
+      Kb = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((kk => OF.ZF5K(kk, 1)));
+      } : new FinalizationRegistry((bb => Yc.D4sr(bb, 1)));
 
-    function zk(kk) {
-      sF === dF.length && dF.push(dF.length + 1);
-      const Fk = sF;
-      return sF = dF[Fk], dF[Fk] = kk, Fk
+    function Zb(bb) {
+      Hc === Ic.length && Ic.push(Ic.length + 1);
+      const cb = Hc;
+      return Hc = Ic[cb], Ic[cb] = bb, cb
     }
 
-    function Pk(kk, Fk) {
-      if (!(kk instanceof Fk)) throw new Error(`expected instance of ${Fk.name}`)
+    function zb(bb, cb) {
+      if (!(bb instanceof cb)) throw new Error(`expected instance of ${cb.name}`)
     }
-    const hk = "undefined" === typeof FinalizationRegistry ? {
+    const qb = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((kk => OF.a5iq(kk.a, kk.b)));
+    } : new FinalizationRegistry((bb => Yc.bLKd(bb.a, bb.b)));
 
-    function qk(kk) {
-      const Fk = typeof kk;
-      if ("number" == Fk || "boolean" == Fk || null == kk) return `${kk}`;
-      if ("string" == Fk) return `"${kk}"`;
-      if ("symbol" == Fk) {
-        const Fk = kk.description;
-        return null == Fk ? "Symbol" : `Symbol(${Fk})`
+    function db(bb) {
+      const cb = typeof bb;
+      if ("number" == cb || "boolean" == cb || null == bb) return `${bb}`;
+      if ("string" == cb) return `"${bb}"`;
+      if ("symbol" == cb) {
+        const cb = bb.description;
+        return null == cb ? "Symbol" : `Symbol(${cb})`
       }
-      if ("function" == Fk) {
-        const Fk = kk.name;
-        return "string" == typeof Fk && Fk.length > 0 ? `Function(${Fk})` : "Function"
+      if ("function" == cb) {
+        const cb = bb.name;
+        return "string" == typeof cb && cb.length > 0 ? `Function(${cb})` : "Function"
       }
-      if (Array.isArray(kk)) {
-        const Fk = kk.length;
-        let Bk = "[";
-        Fk > 0 && (Bk += qk(kk[0]));
-        for (let Rk = 1; Rk < Fk; Rk++) Bk += ", " + qk(kk[Rk]);
-        return Bk += "]", Bk
+      if (Array.isArray(bb)) {
+        const cb = bb.length;
+        let sb = "[";
+        cb > 0 && (sb += db(bb[0]));
+        for (let kb = 1; kb < cb; kb++) sb += ", " + db(bb[kb]);
+        return sb += "]", sb
       }
-      const Bk = /\[object ([^\]]+)\]/.exec(toString.call(kk));
-      let Rk;
-      if (!(Bk && Bk.length > 1)) return toString.call(kk);
-      if (Rk = Bk[1], "Object" == Rk) try {
-        return "Object(" + JSON.stringify(kk) + ")"
-      } catch (tk) {
+      const sb = /\[object ([^\]]+)\]/.exec(toString.call(bb));
+      let kb;
+      if (!(sb && sb.length > 1)) return toString.call(bb);
+      if (kb = sb[1], "Object" == kb) try {
+        return "Object(" + JSON.stringify(bb) + ")"
+      } catch (Wb) {
         return "Object"
       }
-      return kk instanceof Error ? `${kk.name}: ${kk.message}\n${kk.stack}` : Rk
+      return bb instanceof Error ? `${bb.name}: ${bb.message}\n${bb.stack}` : kb
     }
 
-    function Ck(kk, Fk) {
-      return kk >>>= 0,
+    function Ab(bb, cb) {
+      return bb >>>= 0,
         function() {
-          null !== Ik && 0 !== Ik.byteLength || (Ik = new Float32Array(OF.memory.buffer));
-          return Ik
-        }().subarray(kk / 4, kk / 4 + Fk)
+          null !== xb && 0 !== xb.byteLength || (xb = new Float32Array(Yc.memory.buffer));
+          return xb
+        }().subarray(bb / 4, bb / 4 + cb)
     }
 
-    function Zk(kk, Fk) {
-      return kk >>>= 0, kF().subarray(kk / 8, kk / 8 + Fk)
+    function wb(bb, cb) {
+      return bb >>>= 0, pb().subarray(bb / 8, bb / 8 + cb)
     }
 
-    function pk(kk, Fk) {
-      return kk >>>= 0,
+    function rb(bb, cb) {
+      return bb >>>= 0,
         function() {
-          null !== FF && 0 !== FF.byteLength || (FF = new Int32Array(OF.memory.buffer));
-          return FF
-        }().subarray(kk / 4, kk / 4 + Fk)
+          null !== bc && 0 !== bc.byteLength || (bc = new Int32Array(Yc.memory.buffer));
+          return bc
+        }().subarray(bb / 4, bb / 4 + cb)
     }
 
-    function Kk(kk, Fk) {
-      kk >>>= 0;
-      const Bk = nk(),
-        Rk = [];
-      for (let tk = kk; tk < kk + 4 * Fk; tk += 4) Rk.push(mF(Bk.getUint32(tk, !0)));
-      return Rk
+    function ob(bb, cb) {
+      bb >>>= 0;
+      const sb = Fb(),
+        kb = [];
+      for (let Wb = bb; Wb < bb + 4 * cb; Wb += 4) kb.push(Qc(sb.getUint32(Wb, !0)));
+      return kb
     }
 
-    function xk(kk, Fk) {
-      return kk >>>= 0, tF().subarray(kk / 4, kk / 4 + Fk)
+    function Sb(bb, cb) {
+      return bb >>>= 0, kc().subarray(bb / 4, bb / 4 + cb)
     }
 
-    function jk(kk, Fk) {
-      return kk >>>= 0, XF().subarray(kk / 1, kk / 1 + Fk)
+    function Rb(bb, cb) {
+      return bb >>>= 0, ac().subarray(bb / 1, bb / 1 + cb)
     }
-    let lk = null;
+    let vb = null;
 
-    function nk() {
-      return (null === lk || !0 === lk.buffer.detached || void 0 === lk.buffer.detached && lk.buffer !== OF.memory.buffer) && (lk = new DataView(OF.memory.buffer)), lk
+    function Fb() {
+      return (null === vb || !0 === vb.buffer.detached || void 0 === vb.buffer.detached && vb.buffer !== Yc.memory.buffer) && (vb = new DataView(Yc.memory.buffer)), vb
     }
-    let Ik = null;
-    let Qk = null;
+    let xb = null;
+    let jb = null;
 
-    function kF() {
-      return null !== Qk && 0 !== Qk.byteLength || (Qk = new Float64Array(OF.memory.buffer)), Qk
+    function pb() {
+      return null !== jb && 0 !== jb.byteLength || (jb = new Float64Array(Yc.memory.buffer)), jb
     }
-    let FF = null;
+    let bc = null;
 
-    function BF(kk, Fk) {
-      return function(kk, Fk) {
-        iF += Fk, iF >= vF && (WF = new TextDecoder("utf-8", {
+    function cc(bb, cb) {
+      return function(bb, cb) {
+        Nc += cb, Nc >= Cc && (ec = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), WF.decode(), iF = Fk);
-        return WF.decode(XF().subarray(kk, kk + Fk))
-      }(kk >>> 0, Fk)
+        }), ec.decode(), Nc = cb);
+        return ec.decode(ac().subarray(bb, bb + cb))
+      }(bb >>> 0, cb)
     }
-    let RF = null;
+    let sc = null;
 
-    function tF() {
-      return null !== RF && 0 !== RF.byteLength || (RF = new Uint32Array(OF.memory.buffer)), RF
+    function kc() {
+      return null !== sc && 0 !== sc.byteLength || (sc = new Uint32Array(Yc.memory.buffer)), sc
     }
-    let aF = null;
+    let Wc = null;
 
-    function XF() {
-      return null !== aF && 0 !== aF.byteLength || (aF = new Uint8Array(OF.memory.buffer)), aF
-    }
-
-    function bF(kk) {
-      return dF[kk]
+    function ac() {
+      return null !== Wc && 0 !== Wc.byteLength || (Wc = new Uint8Array(Yc.memory.buffer)), Wc
     }
 
-    function wF(kk, Fk) {
+    function Tc(bb) {
+      return Ic[bb]
+    }
+
+    function Uc(bb, cb) {
       try {
-        return kk.apply(this, Fk)
-      } catch (Bk) {
-        OF.KYfB(zk(Bk))
+        return bb.apply(this, cb)
+      } catch (sb) {
+        Yc.nYXn(Zb(sb))
       }
     }
-    let dF = new Array(1024).fill(void 0);
-    dF.push(void 0, null, !0, !1);
-    let sF = dF.length;
+    let Ic = new Array(1024).fill(void 0);
+    Ic.push(void 0, null, !0, !1);
+    let Hc = Ic.length;
 
-    function VF(kk) {
-      return void 0 === kk || null === kk
+    function fc(bb) {
+      return void 0 === bb || null === bb
     }
 
-    function JF(kk, Fk, Bk) {
-      const Rk = {
-          a: kk,
-          b: Fk,
+    function Mc(bb, cb, sb) {
+      const kb = {
+          a: bb,
+          b: cb,
           cnt: 1
         },
-        tk = function() {
-          Rk.cnt++;
-          const kk = Rk.a;
-          Rk.a = 0;
+        Wb = function() {
+          kb.cnt++;
+          const bb = kb.a;
+          kb.a = 0;
           try {
-            for (var Fk = arguments.length, ak = new Array(Fk), Xk = 0; Xk < Fk; Xk++) ak[Xk] = arguments[Xk];
-            return Bk(kk, Rk.b, ...ak)
+            for (var cb = arguments.length, ab = new Array(cb), Tb = 0; Tb < cb; Tb++) ab[Tb] = arguments[Tb];
+            return sb(bb, kb.b, ...ab)
           } finally {
-            Rk.a = kk, tk._wbg_cb_unref()
+            kb.a = bb, Wb._wbg_cb_unref()
           }
         };
-      return tk._wbg_cb_unref = () => {
-        0 === --Rk.cnt && (OF.a5iq(Rk.a, Rk.b), Rk.a = 0, hk.unregister(Rk))
-      }, hk.register(tk, Rk, Rk), tk
+      return Wb._wbg_cb_unref = () => {
+        0 === --kb.cnt && (Yc.bLKd(kb.a, kb.b), kb.a = 0, qb.unregister(kb))
+      }, qb.register(Wb, kb, kb), Wb
     }
 
-    function AF(kk, Fk) {
-      const Bk = Fk(4 * kk.length, 4) >>> 0;
-      return tF().set(kk, Bk / 4), EF = kk.length, Bk
+    function Xc(bb, cb) {
+      const sb = cb(4 * bb.length, 4) >>> 0;
+      return kc().set(bb, sb / 4), hc = bb.length, sb
     }
 
-    function eF(kk, Fk) {
-      const Bk = Fk(1 * kk.length, 1) >>> 0;
-      return XF().set(kk, Bk / 1), EF = kk.length, Bk
+    function nc(bb, cb) {
+      const sb = cb(1 * bb.length, 1) >>> 0;
+      return ac().set(bb, sb / 1), hc = bb.length, sb
     }
 
-    function yF(kk, Fk) {
-      const Bk = Fk(4 * kk.length, 4) >>> 0,
-        Rk = nk();
-      for (let tk = 0; tk < kk.length; tk++) Rk.setUint32(Bk + 4 * tk, zk(kk[tk]), !0);
-      return EF = kk.length, Bk
+    function mc(bb, cb) {
+      const sb = cb(4 * bb.length, 4) >>> 0,
+        kb = Fb();
+      for (let Wb = 0; Wb < bb.length; Wb++) kb.setUint32(sb + 4 * Wb, Zb(bb[Wb]), !0);
+      return hc = bb.length, sb
     }
 
-    function fF(kk, Fk, Bk) {
-      if (void 0 === Bk) {
-        const Bk = YF.encode(kk),
-          Rk = Fk(Bk.length, 1) >>> 0;
-        return XF().subarray(Rk, Rk + Bk.length).set(Bk), EF = Bk.length, Rk
+    function lc(bb, cb, sb) {
+      if (void 0 === sb) {
+        const sb = Vc.encode(bb),
+          kb = cb(sb.length, 1) >>> 0;
+        return ac().subarray(kb, kb + sb.length).set(sb), hc = sb.length, kb
       }
-      let Rk = kk.length,
-        tk = Fk(Rk, 1) >>> 0;
-      const ak = XF();
-      let Xk = 0;
-      for (; Xk < Rk; Xk++) {
-        const Fk = kk.charCodeAt(Xk);
-        if (Fk > 127) break;
-        ak[tk + Xk] = Fk
+      let kb = bb.length,
+        Wb = cb(kb, 1) >>> 0;
+      const ab = ac();
+      let Tb = 0;
+      for (; Tb < kb; Tb++) {
+        const cb = bb.charCodeAt(Tb);
+        if (cb > 127) break;
+        ab[Wb + Tb] = cb
       }
-      if (Xk !== Rk) {
-        0 !== Xk && (kk = kk.slice(Xk)), tk = Bk(tk, Rk, Rk = Xk + 3 * kk.length, 1) >>> 0;
-        const Fk = XF().subarray(tk + Xk, tk + Rk);
-        Xk += YF.encodeInto(kk, Fk).written, tk = Bk(tk, Rk, Xk, 1) >>> 0
+      if (Tb !== kb) {
+        0 !== Tb && (bb = bb.slice(Tb)), Wb = sb(Wb, kb, kb = Tb + 3 * bb.length, 1) >>> 0;
+        const cb = ac().subarray(Wb + Tb, Wb + kb);
+        Tb += Vc.encodeInto(bb, cb).written, Wb = sb(Wb, kb, Tb, 1) >>> 0
       }
-      return EF = Xk, tk
+      return hc = Tb, Wb
     }
 
-    function mF(kk) {
-      const Fk = bF(kk);
-      return function(kk) {
-        kk < 1028 || (dF[kk] = sF, sF = kk)
-      }(kk), Fk
+    function Qc(bb) {
+      const cb = Tc(bb);
+      return function(bb) {
+        bb < 1028 || (Ic[bb] = Hc, Hc = bb)
+      }(bb), cb
     }
-    let WF = new TextDecoder("utf-8", {
+    let ec = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    WF.decode();
-    const vF = 2146435072;
-    let iF = 0;
-    const YF = new TextEncoder;
-    "encodeInto" in YF || (YF.encodeInto = function(kk, Fk) {
-      const Bk = YF.encode(kk);
-      return Fk.set(Bk), {
-        read: kk.length,
-        written: Bk.length
+    ec.decode();
+    const Cc = 2146435072;
+    let Nc = 0;
+    const Vc = new TextEncoder;
+    "encodeInto" in Vc || (Vc.encodeInto = function(bb, cb) {
+      const sb = Vc.encode(bb);
+      return cb.set(sb), {
+        read: bb.length,
+        written: sb.length
       }
     });
-    let oF, LF, OF, EF = 0;
+    let Lc, uc, Yc, hc = 0;
 
-    function SF(kk, Fk) {
-      return LF = kk, OF = kk.exports, oF = Fk, lk = null, Ik = null, Qk = null, FF = null, RF = null, aF = null, OF.Qhug(), OF
+    function Jc(bb, cb) {
+      return uc = bb, Yc = bb.exports, Lc = cb, vb = null, xb = null, jb = null, bc = null, sc = null, Wc = null, Yc.rzpb(), Yc
     }
 
-    function NF(kk) {
-      if (void 0 !== OF) return OF;
-      void 0 !== kk && (Object.getPrototypeOf(kk) === Object.prototype ? ({
-        module: kk
-      } = kk) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const Fk = Mk();
-      kk instanceof WebAssembly.Module || (kk = new WebAssembly.Module(kk));
-      return SF(new WebAssembly.Instance(kk, Fk), kk)
+    function gc(bb) {
+      if (void 0 !== Yc) return Yc;
+      void 0 !== bb && (Object.getPrototypeOf(bb) === Object.prototype ? ({
+        module: bb
+      } = bb) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const cb = yb();
+      bb instanceof WebAssembly.Module || (bb = new WebAssembly.Module(bb));
+      return Jc(new WebAssembly.Instance(bb, cb), bb)
     }
-    async function HF(kk) {
-      if (void 0 !== OF) return OF;
-      void 0 !== kk && (Object.getPrototypeOf(kk) === Object.prototype ? ({
-        module_or_path: kk
-      } = kk) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const Fk = Mk();
-      ("string" === typeof kk || "function" === typeof Request && kk instanceof Request || "function" === typeof URL && kk instanceof URL) && (kk = fetch(kk));
+    async function Bc(bb) {
+      if (void 0 !== Yc) return Yc;
+      void 0 !== bb && (Object.getPrototypeOf(bb) === Object.prototype ? ({
+        module_or_path: bb
+      } = bb) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const cb = yb();
+      ("string" === typeof bb || "function" === typeof Request && bb instanceof Request || "function" === typeof URL && bb instanceof URL) && (bb = fetch(bb));
       const {
-        instance: Bk,
-        module: Rk
-      } = await async function(kk, Fk) {
-        if ("function" === typeof Response && kk instanceof Response) {
-          if (!kk.ok) throw new Error(`failed to fetch Wasm: ${kk.status} ${kk.statusText} fetching '${kk.url}'`);
+        instance: sb,
+        module: kb
+      } = await async function(bb, cb) {
+        if ("function" === typeof Response && bb instanceof Response) {
+          if (!bb.ok) throw new Error(`failed to fetch Wasm: ${bb.status} ${bb.statusText} fetching '${bb.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(kk, Fk)
-          } catch (Bk) {
-            if (! function(kk) {
-                switch (kk) {
+            return await WebAssembly.instantiateStreaming(bb, cb)
+          } catch (sb) {
+            if (! function(bb) {
+                switch (bb) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(kk.type) || "application/wasm" === kk.headers.get("Content-Type")) throw Bk;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", Bk)
+              }(bb.type) || "application/wasm" === bb.headers.get("Content-Type")) throw sb;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", sb)
           }
-          const Rk = await kk.arrayBuffer();
-          return await WebAssembly.instantiate(Rk, Fk)
+          const kb = await bb.arrayBuffer();
+          return await WebAssembly.instantiate(kb, cb)
         } {
-          const Bk = await WebAssembly.instantiate(kk, Fk);
-          return Bk instanceof WebAssembly.Instance ? {
-            instance: Bk,
-            module: kk
-          } : Bk
+          const sb = await WebAssembly.instantiate(bb, cb);
+          return sb instanceof WebAssembly.Instance ? {
+            instance: sb,
+            module: bb
+          } : sb
         }
-      }(await kk, Fk);
-      return SF(Bk, Rk)
+      }(await bb, cb);
+      return Jc(sb, kb)
     }
-    const uF = {
+    const tc = {
       name: "bloxd_wasm_webgl1",
-      url: () => new Bk.U(Bk(42723)),
-      init: HF,
-      bindings: Rk
+      url: () => new sb.U(sb(42627)),
+      init: Bc,
+      bindings: kb
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

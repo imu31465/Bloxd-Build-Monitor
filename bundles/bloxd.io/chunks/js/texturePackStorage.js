@@ -1,72 +1,72 @@
 export const id = 52;
 export const ids = [52];
 export const modules = {
-  9053: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      announceStoredTexturePack: () => tk.d,
-      takeOneShotTexturePack: () => Rk.i
+  8974: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      announceStoredTexturePack: () => Wb.d,
+      takeOneShotTexturePack: () => kb.e
     });
-    var Rk = Bk(9055),
-      tk = Bk(9064)
+    var kb = sb(8981),
+      Wb = sb(8988)
   },
-  9064: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => tk,
-      f: () => ak
+  8988: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Wb,
+      g: () => ab
     });
-    var Rk = Bk(3073);
+    var kb = sb(3029);
 
-    function tk() {
+    function Wb() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const kk = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const bb = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const Fk = new BroadcastChannel(Rk.l);
-        Fk.postMessage({
-          stored: kk
-        }), Fk.close()
+        const cb = new BroadcastChannel(kb.j);
+        cb.postMessage({
+          stored: bb
+        }), cb.close()
       } catch {
         return null
       }
-      return kk
+      return bb
     }
 
-    function ak(kk) {
-      const Fk = "object" === typeof kk && null !== kk ? kk.stored : null;
-      return "string" === typeof Fk ? Fk : null
+    function ab(bb) {
+      const cb = "object" === typeof bb && null !== bb ? bb.stored : null;
+      return "string" === typeof cb ? cb : null
     }
   },
-  9055: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Xk,
-      g: () => tk,
-      i: () => ak
+  8981: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Tb,
+      c: () => Wb,
+      e: () => ab
     });
-    var Rk = Bk(3073);
-    async function tk(kk, Fk, Bk) {
-      let tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const ak = Xk(await kk.getItem(Rk.h, Fk));
-      if (null === ak || tk()) return null;
-      const bk = await kk.getItem(Rk.i, Fk);
-      return tk() ? null : (await async function(kk) {
-        await Promise.all([kk.removeItem(Rk.h), kk.removeItem(Rk.i)])
-      }(kk).catch(Bk), {
-        pack: ak,
-        source: "string" === typeof bk ? bk : null
+    var kb = sb(3029);
+    async function Wb(bb, cb, sb) {
+      let Wb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const ab = Tb(await bb.getItem(kb.f, cb));
+      if (null === ab || Wb()) return null;
+      const Ub = await bb.getItem(kb.h, cb);
+      return Wb() ? null : (await async function(bb) {
+        await Promise.all([bb.removeItem(kb.f), bb.removeItem(kb.h)])
+      }(bb).catch(sb), {
+        pack: ab,
+        source: "string" === typeof Ub ? Ub : null
       })
     }
 
-    function ak(kk) {
-      return (0, Rk.s)() ? Promise.resolve(null) : tk(kk, !1, (kk => {
-        console.error("Error removing temporary texture pack: ", kk)
-      }), Rk.s)
+    function ab(bb) {
+      return (0, kb.n)() ? Promise.resolve(null) : Wb(bb, !1, (bb => {
+        console.error("Error removing temporary texture pack: ", bb)
+      }), kb.n)
     }
 
-    function Xk(kk) {
-      if ("object" !== typeof kk || null === kk) return null;
-      const Fk = kk.metaData;
-      return "object" !== typeof Fk || null === Fk || "string" !== typeof Fk.id ? null : kk
+    function Tb(bb) {
+      if ("object" !== typeof bb || null === bb) return null;
+      const cb = bb.metaData;
+      return "object" !== typeof cb || null === cb || "string" !== typeof cb.id ? null : bb
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

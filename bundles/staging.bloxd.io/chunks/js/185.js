@@ -1,43 +1,43 @@
 export const id = 185;
 export const ids = [185];
 export const modules = {
-  8891: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      ALL_DEV_TOOLS: () => Xk,
-      coreDevTools: () => dk,
-      devTools: () => wk
+  8819: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      ALL_DEV_TOOLS: () => Tb,
+      coreDevTools: () => Hb,
+      devTools: () => Ib
     });
-    var Rk = Bk(624),
-      tk = Bk(1245),
-      ak = Bk(8894);
-    const Xk = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function bk() {
+    var kb = sb(649),
+      Wb = sb(1291),
+      ab = sb(8827);
+    const Tb = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function Ub() {
       const {
-        noaDevTools: kk
-      } = await Bk.e(230).then((() => Bk(40492)));
-      return kk
+        noaDevTools: bb
+      } = await sb.e(230).then((() => sb(40495)));
+      return bb
     }
-    const wk = new class {
+    const Ib = new class {
         constructor() {
-          this.loadHost = bk, this.tools = Xk
+          this.loadHost = Ub, this.tools = Tb
         }
-        setHost(kk) {
-          this.tools = null === kk ? Xk : kk.tools, this.loadHost = null === kk ? bk : async () => kk
+        setHost(bb) {
+          this.tools = null === bb ? Tb : bb.tools, this.loadHost = null === bb ? Ub : async () => bb
         }
-        supports(kk) {
-          return this.tools.has(kk)
+        supports(bb) {
+          return this.tools.has(bb)
         }
-        async downloadScene(kk, Fk) {
-          const Bk = await this.loadHost();
-          await Bk.downloadScene(kk, Fk)
+        async downloadScene(bb, cb) {
+          const sb = await this.loadHost();
+          await sb.downloadScene(bb, cb)
         }
-        async setAmbientLightIntensity(kk) {
-          const Fk = await this.loadHost();
-          await Fk.setAmbientLightIntensity(kk)
+        async setAmbientLightIntensity(bb) {
+          const cb = await this.loadHost();
+          await cb.setAmbientLightIntensity(bb)
         }
       },
-      dk = {
-        tools: ak.e,
+      Hb = {
+        tools: ab.c,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -45,10 +45,10 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    Rk.p && wk.setHost(dk), (0, tk.o)((() => {
-      wk.setHost(dk)
+    kb.s && Ib.setHost(Hb), (0, Wb.o)((() => {
+      Ib.setHost(Hb)
     }))
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

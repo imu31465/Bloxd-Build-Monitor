@@ -1,8 +1,8 @@
 export const id = 214;
 export const ids = [214];
 export const modules = {
-  36378: kk => {
-    kk.exports = {
+  36279: bb => {
+    bb.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -153,363 +153,363 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36372: (kk, Fk, Bk) => {
-    var Rk = Bk(36378),
-      tk = Bk(36385),
-      ak = Object.hasOwnProperty,
-      Xk = Object.create(null);
-    for (var bk in Rk) ak.call(Rk, bk) && (Xk[Rk[bk]] = bk);
-    var wk = kk.exports = {
+  36273: (bb, cb, sb) => {
+    var kb = sb(36279),
+      Wb = sb(36287),
+      ab = Object.hasOwnProperty,
+      Tb = Object.create(null);
+    for (var Ub in kb) ab.call(kb, Ub) && (Tb[kb[Ub]] = Ub);
+    var Ib = bb.exports = {
       to: {},
       get: {}
     };
 
-    function dk(kk, Fk, Bk) {
-      return Math.min(Math.max(Fk, kk), Bk)
+    function Hb(bb, cb, sb) {
+      return Math.min(Math.max(cb, bb), sb)
     }
 
-    function sk(kk) {
-      var Fk = Math.round(kk).toString(16).toUpperCase();
-      return Fk.length < 2 ? "0" + Fk : Fk
+    function fb(bb) {
+      var cb = Math.round(bb).toString(16).toUpperCase();
+      return cb.length < 2 ? "0" + cb : cb
     }
-    wk.get = function(kk) {
-      var Fk, Bk;
-      switch (kk.substring(0, 3).toLowerCase()) {
+    Ib.get = function(bb) {
+      var cb, sb;
+      switch (bb.substring(0, 3).toLowerCase()) {
         case "hsl":
-          Fk = wk.get.hsl(kk), Bk = "hsl";
+          cb = Ib.get.hsl(bb), sb = "hsl";
           break;
         case "hwb":
-          Fk = wk.get.hwb(kk), Bk = "hwb";
+          cb = Ib.get.hwb(bb), sb = "hwb";
           break;
         default:
-          Fk = wk.get.rgb(kk), Bk = "rgb"
+          cb = Ib.get.rgb(bb), sb = "rgb"
       }
-      return Fk ? {
-        model: Bk,
-        value: Fk
+      return cb ? {
+        model: sb,
+        value: cb
       } : null
-    }, wk.get.rgb = function(kk) {
-      if (!kk) return null;
-      var Fk, Bk, tk, Xk = [0, 0, 0, 1];
-      if (Fk = kk.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
-        for (tk = Fk[2], Fk = Fk[1], Bk = 0; Bk < 3; Bk++) {
-          var bk = 2 * Bk;
-          Xk[Bk] = parseInt(Fk.slice(bk, bk + 2), 16)
+    }, Ib.get.rgb = function(bb) {
+      if (!bb) return null;
+      var cb, sb, Wb, Tb = [0, 0, 0, 1];
+      if (cb = bb.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (Wb = cb[2], cb = cb[1], sb = 0; sb < 3; sb++) {
+          var Ub = 2 * sb;
+          Tb[sb] = parseInt(cb.slice(Ub, Ub + 2), 16)
         }
-        tk && (Xk[3] = parseInt(tk, 16) / 255)
-      } else if (Fk = kk.match(/^#([a-f0-9]{3,4})$/i)) {
-        for (tk = (Fk = Fk[1])[3], Bk = 0; Bk < 3; Bk++) Xk[Bk] = parseInt(Fk[Bk] + Fk[Bk], 16);
-        tk && (Xk[3] = parseInt(tk + tk, 16) / 255)
-      } else if (Fk = kk.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
-        for (Bk = 0; Bk < 3; Bk++) Xk[Bk] = parseInt(Fk[Bk + 1], 0);
-        Fk[4] && (Fk[5] ? Xk[3] = .01 * parseFloat(Fk[4]) : Xk[3] = parseFloat(Fk[4]))
+        Wb && (Tb[3] = parseInt(Wb, 16) / 255)
+      } else if (cb = bb.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (Wb = (cb = cb[1])[3], sb = 0; sb < 3; sb++) Tb[sb] = parseInt(cb[sb] + cb[sb], 16);
+        Wb && (Tb[3] = parseInt(Wb + Wb, 16) / 255)
+      } else if (cb = bb.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (sb = 0; sb < 3; sb++) Tb[sb] = parseInt(cb[sb + 1], 0);
+        cb[4] && (cb[5] ? Tb[3] = .01 * parseFloat(cb[4]) : Tb[3] = parseFloat(cb[4]))
       } else {
-        if (!(Fk = kk.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (Fk = kk.match(/^(\w+)$/)) ? "transparent" === Fk[1] ? [0, 0, 0, 0] : ak.call(Rk, Fk[1]) ? ((Xk = Rk[Fk[1]])[3] = 1, Xk) : null : null;
-        for (Bk = 0; Bk < 3; Bk++) Xk[Bk] = Math.round(2.55 * parseFloat(Fk[Bk + 1]));
-        Fk[4] && (Fk[5] ? Xk[3] = .01 * parseFloat(Fk[4]) : Xk[3] = parseFloat(Fk[4]))
+        if (!(cb = bb.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (cb = bb.match(/^(\w+)$/)) ? "transparent" === cb[1] ? [0, 0, 0, 0] : ab.call(kb, cb[1]) ? ((Tb = kb[cb[1]])[3] = 1, Tb) : null : null;
+        for (sb = 0; sb < 3; sb++) Tb[sb] = Math.round(2.55 * parseFloat(cb[sb + 1]));
+        cb[4] && (cb[5] ? Tb[3] = .01 * parseFloat(cb[4]) : Tb[3] = parseFloat(cb[4]))
       }
-      for (Bk = 0; Bk < 3; Bk++) Xk[Bk] = dk(Xk[Bk], 0, 255);
-      return Xk[3] = dk(Xk[3], 0, 1), Xk
-    }, wk.get.hsl = function(kk) {
-      if (!kk) return null;
-      var Fk = kk.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (Fk) {
-        var Bk = parseFloat(Fk[4]);
-        return [(parseFloat(Fk[1]) % 360 + 360) % 360, dk(parseFloat(Fk[2]), 0, 100), dk(parseFloat(Fk[3]), 0, 100), dk(isNaN(Bk) ? 1 : Bk, 0, 1)]
-      }
-      return null
-    }, wk.get.hwb = function(kk) {
-      if (!kk) return null;
-      var Fk = kk.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (Fk) {
-        var Bk = parseFloat(Fk[4]);
-        return [(parseFloat(Fk[1]) % 360 + 360) % 360, dk(parseFloat(Fk[2]), 0, 100), dk(parseFloat(Fk[3]), 0, 100), dk(isNaN(Bk) ? 1 : Bk, 0, 1)]
+      for (sb = 0; sb < 3; sb++) Tb[sb] = Hb(Tb[sb], 0, 255);
+      return Tb[3] = Hb(Tb[3], 0, 1), Tb
+    }, Ib.get.hsl = function(bb) {
+      if (!bb) return null;
+      var cb = bb.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (cb) {
+        var sb = parseFloat(cb[4]);
+        return [(parseFloat(cb[1]) % 360 + 360) % 360, Hb(parseFloat(cb[2]), 0, 100), Hb(parseFloat(cb[3]), 0, 100), Hb(isNaN(sb) ? 1 : sb, 0, 1)]
       }
       return null
-    }, wk.to.hex = function() {
-      var kk = tk(arguments);
-      return "#" + sk(kk[0]) + sk(kk[1]) + sk(kk[2]) + (kk[3] < 1 ? sk(Math.round(255 * kk[3])) : "")
-    }, wk.to.rgb = function() {
-      var kk = tk(arguments);
-      return kk.length < 4 || 1 === kk[3] ? "rgb(" + Math.round(kk[0]) + ", " + Math.round(kk[1]) + ", " + Math.round(kk[2]) + ")" : "rgba(" + Math.round(kk[0]) + ", " + Math.round(kk[1]) + ", " + Math.round(kk[2]) + ", " + kk[3] + ")"
-    }, wk.to.rgb.percent = function() {
-      var kk = tk(arguments),
-        Fk = Math.round(kk[0] / 255 * 100),
-        Bk = Math.round(kk[1] / 255 * 100),
-        Rk = Math.round(kk[2] / 255 * 100);
-      return kk.length < 4 || 1 === kk[3] ? "rgb(" + Fk + "%, " + Bk + "%, " + Rk + "%)" : "rgba(" + Fk + "%, " + Bk + "%, " + Rk + "%, " + kk[3] + ")"
-    }, wk.to.hsl = function() {
-      var kk = tk(arguments);
-      return kk.length < 4 || 1 === kk[3] ? "hsl(" + kk[0] + ", " + kk[1] + "%, " + kk[2] + "%)" : "hsla(" + kk[0] + ", " + kk[1] + "%, " + kk[2] + "%, " + kk[3] + ")"
-    }, wk.to.hwb = function() {
-      var kk = tk(arguments),
-        Fk = "";
-      return kk.length >= 4 && 1 !== kk[3] && (Fk = ", " + kk[3]), "hwb(" + kk[0] + ", " + kk[1] + "%, " + kk[2] + "%" + Fk + ")"
-    }, wk.to.keyword = function(kk) {
-      return Xk[kk.slice(0, 3)]
+    }, Ib.get.hwb = function(bb) {
+      if (!bb) return null;
+      var cb = bb.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (cb) {
+        var sb = parseFloat(cb[4]);
+        return [(parseFloat(cb[1]) % 360 + 360) % 360, Hb(parseFloat(cb[2]), 0, 100), Hb(parseFloat(cb[3]), 0, 100), Hb(isNaN(sb) ? 1 : sb, 0, 1)]
+      }
+      return null
+    }, Ib.to.hex = function() {
+      var bb = Wb(arguments);
+      return "#" + fb(bb[0]) + fb(bb[1]) + fb(bb[2]) + (bb[3] < 1 ? fb(Math.round(255 * bb[3])) : "")
+    }, Ib.to.rgb = function() {
+      var bb = Wb(arguments);
+      return bb.length < 4 || 1 === bb[3] ? "rgb(" + Math.round(bb[0]) + ", " + Math.round(bb[1]) + ", " + Math.round(bb[2]) + ")" : "rgba(" + Math.round(bb[0]) + ", " + Math.round(bb[1]) + ", " + Math.round(bb[2]) + ", " + bb[3] + ")"
+    }, Ib.to.rgb.percent = function() {
+      var bb = Wb(arguments),
+        cb = Math.round(bb[0] / 255 * 100),
+        sb = Math.round(bb[1] / 255 * 100),
+        kb = Math.round(bb[2] / 255 * 100);
+      return bb.length < 4 || 1 === bb[3] ? "rgb(" + cb + "%, " + sb + "%, " + kb + "%)" : "rgba(" + cb + "%, " + sb + "%, " + kb + "%, " + bb[3] + ")"
+    }, Ib.to.hsl = function() {
+      var bb = Wb(arguments);
+      return bb.length < 4 || 1 === bb[3] ? "hsl(" + bb[0] + ", " + bb[1] + "%, " + bb[2] + "%)" : "hsla(" + bb[0] + ", " + bb[1] + "%, " + bb[2] + "%, " + bb[3] + ")"
+    }, Ib.to.hwb = function() {
+      var bb = Wb(arguments),
+        cb = "";
+      return bb.length >= 4 && 1 !== bb[3] && (cb = ", " + bb[3]), "hwb(" + bb[0] + ", " + bb[1] + "%, " + bb[2] + "%" + cb + ")"
+    }, Ib.to.keyword = function(bb) {
+      return Tb[bb.slice(0, 3)]
     }
   },
-  36366: (kk, Fk, Bk) => {
-    const Rk = Bk(36372),
-      tk = Bk(36396),
-      ak = ["keyword", "gray", "hex"],
-      Xk = {};
-    for (const Ak of Object.keys(tk)) Xk[[...tk[Ak].labels].sort().join("")] = Ak;
-    const bk = {};
+  36266: (bb, cb, sb) => {
+    const kb = sb(36273),
+      Wb = sb(36304),
+      ab = ["keyword", "gray", "hex"],
+      Tb = {};
+    for (const nb of Object.keys(Wb)) Tb[[...Wb[nb].labels].sort().join("")] = nb;
+    const Ub = {};
 
-    function wk(kk, Fk) {
-      if (!(this instanceof wk)) return new wk(kk, Fk);
-      if (Fk && Fk in ak && (Fk = null), Fk && !(Fk in tk)) throw new Error("Unknown model: " + Fk);
-      let Bk, dk;
-      if (null == kk) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-      else if (kk instanceof wk) this.model = kk.model, this.color = [...kk.color], this.valpha = kk.valpha;
-      else if ("string" === typeof kk) {
-        const Fk = Rk.get(kk);
-        if (null === Fk) throw new Error("Unable to parse color from string: " + kk);
-        this.model = Fk.model, dk = tk[this.model].channels, this.color = Fk.value.slice(0, dk), this.valpha = "number" === typeof Fk.value[dk] ? Fk.value[dk] : 1
-      } else if (kk.length > 0) {
-        this.model = Fk || "rgb", dk = tk[this.model].channels;
-        const Bk = Array.prototype.slice.call(kk, 0, dk);
-        this.color = Jk(Bk, dk), this.valpha = "number" === typeof kk[dk] ? kk[dk] : 1
-      } else if ("number" === typeof kk) this.model = "rgb", this.color = [kk >> 16 & 255, kk >> 8 & 255, 255 & kk], this.valpha = 1;
+    function Ib(bb, cb) {
+      if (!(this instanceof Ib)) return new Ib(bb, cb);
+      if (cb && cb in ab && (cb = null), cb && !(cb in Wb)) throw new Error("Unknown model: " + cb);
+      let sb, Hb;
+      if (null == bb) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
+      else if (bb instanceof Ib) this.model = bb.model, this.color = [...bb.color], this.valpha = bb.valpha;
+      else if ("string" === typeof bb) {
+        const cb = kb.get(bb);
+        if (null === cb) throw new Error("Unable to parse color from string: " + bb);
+        this.model = cb.model, Hb = Wb[this.model].channels, this.color = cb.value.slice(0, Hb), this.valpha = "number" === typeof cb.value[Hb] ? cb.value[Hb] : 1
+      } else if (bb.length > 0) {
+        this.model = cb || "rgb", Hb = Wb[this.model].channels;
+        const sb = Array.prototype.slice.call(bb, 0, Hb);
+        this.color = Xb(sb, Hb), this.valpha = "number" === typeof bb[Hb] ? bb[Hb] : 1
+      } else if ("number" === typeof bb) this.model = "rgb", this.color = [bb >> 16 & 255, bb >> 8 & 255, 255 & bb], this.valpha = 1;
       else {
         this.valpha = 1;
-        const Fk = Object.keys(kk);
-        "alpha" in kk && (Fk.splice(Fk.indexOf("alpha"), 1), this.valpha = "number" === typeof kk.alpha ? kk.alpha : 0);
-        const Rk = Fk.sort().join("");
-        if (!(Rk in Xk)) throw new Error("Unable to parse color from object: " + JSON.stringify(kk));
-        this.model = Xk[Rk];
+        const cb = Object.keys(bb);
+        "alpha" in bb && (cb.splice(cb.indexOf("alpha"), 1), this.valpha = "number" === typeof bb.alpha ? bb.alpha : 0);
+        const kb = cb.sort().join("");
+        if (!(kb in Tb)) throw new Error("Unable to parse color from object: " + JSON.stringify(bb));
+        this.model = Tb[kb];
         const {
-          labels: ak
-        } = tk[this.model], bk = [];
-        for (Bk = 0; Bk < ak.length; Bk++) bk.push(kk[ak[Bk]]);
-        this.color = Jk(bk)
+          labels: ab
+        } = Wb[this.model], Ub = [];
+        for (sb = 0; sb < ab.length; sb++) Ub.push(bb[ab[sb]]);
+        this.color = Xb(Ub)
       }
-      if (bk[this.model])
-        for (dk = tk[this.model].channels, Bk = 0; Bk < dk; Bk++) {
-          const kk = bk[this.model][Bk];
-          kk && (this.color[Bk] = kk(this.color[Bk]))
+      if (Ub[this.model])
+        for (Hb = Wb[this.model].channels, sb = 0; sb < Hb; sb++) {
+          const bb = Ub[this.model][sb];
+          bb && (this.color[sb] = bb(this.color[sb]))
         }
       this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
     }
-    wk.prototype = {
+    Ib.prototype = {
       toString() {
         return this.string()
       },
       toJSON() {
         return this[this.model]()
       },
-      string(kk) {
-        let Fk = this.model in Rk.to ? this : this.rgb();
-        Fk = Fk.round("number" === typeof kk ? kk : 1);
-        const Bk = 1 === Fk.valpha ? Fk.color : [...Fk.color, this.valpha];
-        return Rk.to[Fk.model](Bk)
+      string(bb) {
+        let cb = this.model in kb.to ? this : this.rgb();
+        cb = cb.round("number" === typeof bb ? bb : 1);
+        const sb = 1 === cb.valpha ? cb.color : [...cb.color, this.valpha];
+        return kb.to[cb.model](sb)
       },
-      percentString(kk) {
-        const Fk = this.rgb().round("number" === typeof kk ? kk : 1),
-          Bk = 1 === Fk.valpha ? Fk.color : [...Fk.color, this.valpha];
-        return Rk.to.rgb.percent(Bk)
+      percentString(bb) {
+        const cb = this.rgb().round("number" === typeof bb ? bb : 1),
+          sb = 1 === cb.valpha ? cb.color : [...cb.color, this.valpha];
+        return kb.to.rgb.percent(sb)
       },
       array() {
         return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
       },
       object() {
-        const kk = {},
+        const bb = {},
           {
-            channels: Fk
-          } = tk[this.model],
+            channels: cb
+          } = Wb[this.model],
           {
-            labels: Bk
-          } = tk[this.model];
-        for (let Rk = 0; Rk < Fk; Rk++) kk[Bk[Rk]] = this.color[Rk];
-        return 1 !== this.valpha && (kk.alpha = this.valpha), kk
+            labels: sb
+          } = Wb[this.model];
+        for (let kb = 0; kb < cb; kb++) bb[sb[kb]] = this.color[kb];
+        return 1 !== this.valpha && (bb.alpha = this.valpha), bb
       },
       unitArray() {
-        const kk = this.rgb().color;
-        return kk[0] /= 255, kk[1] /= 255, kk[2] /= 255, 1 !== this.valpha && kk.push(this.valpha), kk
+        const bb = this.rgb().color;
+        return bb[0] /= 255, bb[1] /= 255, bb[2] /= 255, 1 !== this.valpha && bb.push(this.valpha), bb
       },
       unitObject() {
-        const kk = this.rgb().object();
-        return kk.r /= 255, kk.g /= 255, kk.b /= 255, 1 !== this.valpha && (kk.alpha = this.valpha), kk
+        const bb = this.rgb().object();
+        return bb.r /= 255, bb.g /= 255, bb.b /= 255, 1 !== this.valpha && (bb.alpha = this.valpha), bb
       },
-      round(kk) {
-        return kk = Math.max(kk || 0, 0), new wk([...this.color.map(dk(kk)), this.valpha], this.model)
+      round(bb) {
+        return bb = Math.max(bb || 0, 0), new Ib([...this.color.map(Hb(bb)), this.valpha], this.model)
       },
-      alpha(kk) {
-        return void 0 !== kk ? new wk([...this.color, Math.max(0, Math.min(1, kk))], this.model) : this.valpha
+      alpha(bb) {
+        return void 0 !== bb ? new Ib([...this.color, Math.max(0, Math.min(1, bb))], this.model) : this.valpha
       },
-      red: sk("rgb", 0, Vk(255)),
-      green: sk("rgb", 1, Vk(255)),
-      blue: sk("rgb", 2, Vk(255)),
-      hue: sk(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (kk => (kk % 360 + 360) % 360)),
-      saturationl: sk("hsl", 1, Vk(100)),
-      lightness: sk("hsl", 2, Vk(100)),
-      saturationv: sk("hsv", 1, Vk(100)),
-      value: sk("hsv", 2, Vk(100)),
-      chroma: sk("hcg", 1, Vk(100)),
-      gray: sk("hcg", 2, Vk(100)),
-      white: sk("hwb", 1, Vk(100)),
-      wblack: sk("hwb", 2, Vk(100)),
-      cyan: sk("cmyk", 0, Vk(100)),
-      magenta: sk("cmyk", 1, Vk(100)),
-      yellow: sk("cmyk", 2, Vk(100)),
-      black: sk("cmyk", 3, Vk(100)),
-      x: sk("xyz", 0, Vk(95.047)),
-      y: sk("xyz", 1, Vk(100)),
-      z: sk("xyz", 2, Vk(108.833)),
-      l: sk("lab", 0, Vk(100)),
-      a: sk("lab", 1),
-      b: sk("lab", 2),
-      keyword(kk) {
-        return void 0 !== kk ? new wk(kk) : tk[this.model].keyword(this.color)
+      red: fb("rgb", 0, Mb(255)),
+      green: fb("rgb", 1, Mb(255)),
+      blue: fb("rgb", 2, Mb(255)),
+      hue: fb(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (bb => (bb % 360 + 360) % 360)),
+      saturationl: fb("hsl", 1, Mb(100)),
+      lightness: fb("hsl", 2, Mb(100)),
+      saturationv: fb("hsv", 1, Mb(100)),
+      value: fb("hsv", 2, Mb(100)),
+      chroma: fb("hcg", 1, Mb(100)),
+      gray: fb("hcg", 2, Mb(100)),
+      white: fb("hwb", 1, Mb(100)),
+      wblack: fb("hwb", 2, Mb(100)),
+      cyan: fb("cmyk", 0, Mb(100)),
+      magenta: fb("cmyk", 1, Mb(100)),
+      yellow: fb("cmyk", 2, Mb(100)),
+      black: fb("cmyk", 3, Mb(100)),
+      x: fb("xyz", 0, Mb(95.047)),
+      y: fb("xyz", 1, Mb(100)),
+      z: fb("xyz", 2, Mb(108.833)),
+      l: fb("lab", 0, Mb(100)),
+      a: fb("lab", 1),
+      b: fb("lab", 2),
+      keyword(bb) {
+        return void 0 !== bb ? new Ib(bb) : Wb[this.model].keyword(this.color)
       },
-      hex(kk) {
-        return void 0 !== kk ? new wk(kk) : Rk.to.hex(this.rgb().round().color)
+      hex(bb) {
+        return void 0 !== bb ? new Ib(bb) : kb.to.hex(this.rgb().round().color)
       },
-      hexa(kk) {
-        if (void 0 !== kk) return new wk(kk);
-        const Fk = this.rgb().round().color;
-        let Bk = Math.round(255 * this.valpha).toString(16).toUpperCase();
-        return 1 === Bk.length && (Bk = "0" + Bk), Rk.to.hex(Fk) + Bk
+      hexa(bb) {
+        if (void 0 !== bb) return new Ib(bb);
+        const cb = this.rgb().round().color;
+        let sb = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === sb.length && (sb = "0" + sb), kb.to.hex(cb) + sb
       },
       rgbNumber() {
-        const kk = this.rgb().color;
-        return (255 & kk[0]) << 16 | (255 & kk[1]) << 8 | 255 & kk[2]
+        const bb = this.rgb().color;
+        return (255 & bb[0]) << 16 | (255 & bb[1]) << 8 | 255 & bb[2]
       },
       luminosity() {
-        const kk = this.rgb().color,
-          Fk = [];
-        for (const [Bk, Rk] of kk.entries()) {
-          const kk = Rk / 255;
-          Fk[Bk] = kk <= .04045 ? kk / 12.92 : ((kk + .055) / 1.055) ** 2.4
+        const bb = this.rgb().color,
+          cb = [];
+        for (const [sb, kb] of bb.entries()) {
+          const bb = kb / 255;
+          cb[sb] = bb <= .04045 ? bb / 12.92 : ((bb + .055) / 1.055) ** 2.4
         }
-        return .2126 * Fk[0] + .7152 * Fk[1] + .0722 * Fk[2]
+        return .2126 * cb[0] + .7152 * cb[1] + .0722 * cb[2]
       },
-      contrast(kk) {
-        const Fk = this.luminosity(),
-          Bk = kk.luminosity();
-        return Fk > Bk ? (Fk + .05) / (Bk + .05) : (Bk + .05) / (Fk + .05)
+      contrast(bb) {
+        const cb = this.luminosity(),
+          sb = bb.luminosity();
+        return cb > sb ? (cb + .05) / (sb + .05) : (sb + .05) / (cb + .05)
       },
-      level(kk) {
-        const Fk = this.contrast(kk);
-        return Fk >= 7 ? "AAA" : Fk >= 4.5 ? "AA" : ""
+      level(bb) {
+        const cb = this.contrast(bb);
+        return cb >= 7 ? "AAA" : cb >= 4.5 ? "AA" : ""
       },
       isDark() {
-        const kk = this.rgb().color;
-        return (2126 * kk[0] + 7152 * kk[1] + 722 * kk[2]) / 1e4 < 128
+        const bb = this.rgb().color;
+        return (2126 * bb[0] + 7152 * bb[1] + 722 * bb[2]) / 1e4 < 128
       },
       isLight() {
         return !this.isDark()
       },
-      bt() {
-        const kk = this.rgb();
-        for (let Fk = 0; Fk < 3; Fk++) kk.color[Fk] = 255 - kk.color[Fk];
-        return kk
+      Of() {
+        const bb = this.rgb();
+        for (let cb = 0; cb < 3; cb++) bb.color[cb] = 255 - bb.color[cb];
+        return bb
       },
-      lighten(kk) {
-        const Fk = this.hsl();
-        return Fk.color[2] += Fk.color[2] * kk, Fk
+      lighten(bb) {
+        const cb = this.hsl();
+        return cb.color[2] += cb.color[2] * bb, cb
       },
-      darken(kk) {
-        const Fk = this.hsl();
-        return Fk.color[2] -= Fk.color[2] * kk, Fk
+      darken(bb) {
+        const cb = this.hsl();
+        return cb.color[2] -= cb.color[2] * bb, cb
       },
-      saturate(kk) {
-        const Fk = this.hsl();
-        return Fk.color[1] += Fk.color[1] * kk, Fk
+      saturate(bb) {
+        const cb = this.hsl();
+        return cb.color[1] += cb.color[1] * bb, cb
       },
-      desaturate(kk) {
-        const Fk = this.hsl();
-        return Fk.color[1] -= Fk.color[1] * kk, Fk
+      desaturate(bb) {
+        const cb = this.hsl();
+        return cb.color[1] -= cb.color[1] * bb, cb
       },
-      whiten(kk) {
-        const Fk = this.hwb();
-        return Fk.color[1] += Fk.color[1] * kk, Fk
+      whiten(bb) {
+        const cb = this.hwb();
+        return cb.color[1] += cb.color[1] * bb, cb
       },
-      blacken(kk) {
-        const Fk = this.hwb();
-        return Fk.color[2] += Fk.color[2] * kk, Fk
+      blacken(bb) {
+        const cb = this.hwb();
+        return cb.color[2] += cb.color[2] * bb, cb
       },
       grayscale() {
-        const kk = this.rgb().color,
-          Fk = .3 * kk[0] + .59 * kk[1] + .11 * kk[2];
-        return wk.rgb(Fk, Fk, Fk)
+        const bb = this.rgb().color,
+          cb = .3 * bb[0] + .59 * bb[1] + .11 * bb[2];
+        return Ib.rgb(cb, cb, cb)
       },
-      fade(kk) {
-        return this.alpha(this.valpha - this.valpha * kk)
+      fade(bb) {
+        return this.alpha(this.valpha - this.valpha * bb)
       },
-      opaquer(kk) {
-        return this.alpha(this.valpha + this.valpha * kk)
+      opaquer(bb) {
+        return this.alpha(this.valpha + this.valpha * bb)
       },
-      rotate(kk) {
-        const Fk = this.hsl();
-        let Bk = Fk.color[0];
-        return Bk = (Bk + kk) % 360, Bk = Bk < 0 ? 360 + Bk : Bk, Fk.color[0] = Bk, Fk
+      rotate(bb) {
+        const cb = this.hsl();
+        let sb = cb.color[0];
+        return sb = (sb + bb) % 360, sb = sb < 0 ? 360 + sb : sb, cb.color[0] = sb, cb
       },
-      mix(kk, Fk) {
-        if (!kk || !kk.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof kk);
-        const Bk = kk.rgb(),
-          Rk = this.rgb(),
-          tk = void 0 === Fk ? .5 : Fk,
-          ak = 2 * tk - 1,
-          Xk = Bk.alpha() - Rk.alpha(),
-          bk = ((ak * Xk === -1 ? ak : (ak + Xk) / (1 + ak * Xk)) + 1) / 2,
-          dk = 1 - bk;
-        return wk.rgb(bk * Bk.red() + dk * Rk.red(), bk * Bk.green() + dk * Rk.green(), bk * Bk.blue() + dk * Rk.blue(), Bk.alpha() * tk + Rk.alpha() * (1 - tk))
+      mix(bb, cb) {
+        if (!bb || !bb.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof bb);
+        const sb = bb.rgb(),
+          kb = this.rgb(),
+          Wb = void 0 === cb ? .5 : cb,
+          ab = 2 * Wb - 1,
+          Tb = sb.alpha() - kb.alpha(),
+          Ub = ((ab * Tb === -1 ? ab : (ab + Tb) / (1 + ab * Tb)) + 1) / 2,
+          Hb = 1 - Ub;
+        return Ib.rgb(Ub * sb.red() + Hb * kb.red(), Ub * sb.green() + Hb * kb.green(), Ub * sb.blue() + Hb * kb.blue(), sb.alpha() * Wb + kb.alpha() * (1 - Wb))
       }
     };
-    for (const Ak of Object.keys(tk)) {
-      if (ak.includes(Ak)) continue;
+    for (const nb of Object.keys(Wb)) {
+      if (ab.includes(nb)) continue;
       const {
-        channels: kk
-      } = tk[Ak];
-      wk.prototype[Ak] = function() {
-        if (this.model === Ak) return new wk(this);
-        for (var kk = arguments.length, Fk = new Array(kk), Bk = 0; Bk < kk; Bk++) Fk[Bk] = arguments[Bk];
-        return Fk.length > 0 ? new wk(Fk, Ak) : new wk([...(Rk = tk[this.model][Ak].raw(this.color), Array.isArray(Rk) ? Rk : [Rk]), this.valpha], Ak);
-        var Rk
-      }, wk[Ak] = function() {
-        for (var Fk = arguments.length, Bk = new Array(Fk), Rk = 0; Rk < Fk; Rk++) Bk[Rk] = arguments[Rk];
-        let tk = Bk[0];
-        return "number" === typeof tk && (tk = Jk(Bk, kk)), new wk(tk, Ak)
+        channels: bb
+      } = Wb[nb];
+      Ib.prototype[nb] = function() {
+        if (this.model === nb) return new Ib(this);
+        for (var bb = arguments.length, cb = new Array(bb), sb = 0; sb < bb; sb++) cb[sb] = arguments[sb];
+        return cb.length > 0 ? new Ib(cb, nb) : new Ib([...(kb = Wb[this.model][nb].raw(this.color), Array.isArray(kb) ? kb : [kb]), this.valpha], nb);
+        var kb
+      }, Ib[nb] = function() {
+        for (var cb = arguments.length, sb = new Array(cb), kb = 0; kb < cb; kb++) sb[kb] = arguments[kb];
+        let Wb = sb[0];
+        return "number" === typeof Wb && (Wb = Xb(sb, bb)), new Ib(Wb, nb)
       }
     }
 
-    function dk(kk) {
-      return function(Fk) {
-        return function(kk, Fk) {
-          return Number(kk.toFixed(Fk))
-        }(Fk, kk)
+    function Hb(bb) {
+      return function(cb) {
+        return function(bb, cb) {
+          return Number(bb.toFixed(cb))
+        }(cb, bb)
       }
     }
 
-    function sk(kk, Fk, Bk) {
-      kk = Array.isArray(kk) ? kk : [kk];
-      for (const Rk of kk)(bk[Rk] || (bk[Rk] = []))[Fk] = Bk;
-      return kk = kk[0],
-        function(Rk) {
-          let tk;
-          return void 0 !== Rk ? (Bk && (Rk = Bk(Rk)), tk = this[kk](), tk.color[Fk] = Rk, tk) : (tk = this[kk]().color[Fk], Bk && (tk = Bk(tk)), tk)
+    function fb(bb, cb, sb) {
+      bb = Array.isArray(bb) ? bb : [bb];
+      for (const kb of bb)(Ub[kb] || (Ub[kb] = []))[cb] = sb;
+      return bb = bb[0],
+        function(kb) {
+          let Wb;
+          return void 0 !== kb ? (sb && (kb = sb(kb)), Wb = this[bb](), Wb.color[cb] = kb, Wb) : (Wb = this[bb]().color[cb], sb && (Wb = sb(Wb)), Wb)
         }
     }
 
-    function Vk(kk) {
-      return function(Fk) {
-        return Math.max(0, Math.min(kk, Fk))
+    function Mb(bb) {
+      return function(cb) {
+        return Math.max(0, Math.min(bb, cb))
       }
     }
 
-    function Jk(kk, Fk) {
-      for (let Bk = 0; Bk < Fk; Bk++) "number" !== typeof kk[Bk] && (kk[Bk] = 0);
-      return kk
+    function Xb(bb, cb) {
+      for (let sb = 0; sb < cb; sb++) "number" !== typeof bb[sb] && (bb[sb] = 0);
+      return bb
     }
-    kk.exports = wk
+    bb.exports = Ib
   },
-  36401: (kk, Fk, Bk) => {
-    const Rk = Bk(36406),
-      tk = {};
-    for (const Xk of Object.keys(Rk)) tk[Rk[Xk]] = Xk;
-    const ak = {
+  36308: (bb, cb, sb) => {
+    const kb = sb(36314),
+      Wb = {};
+    for (const Tb of Object.keys(kb)) Wb[kb[Tb]] = Tb;
+    const ab = {
       rgb: {
         channels: 3,
         labels: "rgb"
@@ -571,422 +571,422 @@ export const modules = {
         labels: ["gray"]
       }
     };
-    kk.exports = ak;
-    for (const Xk of Object.keys(ak)) {
-      if (!("channels" in ak[Xk])) throw new Error("missing channels property: " + Xk);
-      if (!("labels" in ak[Xk])) throw new Error("missing channel labels property: " + Xk);
-      if (ak[Xk].labels.length !== ak[Xk].channels) throw new Error("channel and label counts mismatch: " + Xk);
+    bb.exports = ab;
+    for (const Tb of Object.keys(ab)) {
+      if (!("channels" in ab[Tb])) throw new Error("missing channels property: " + Tb);
+      if (!("labels" in ab[Tb])) throw new Error("missing channel labels property: " + Tb);
+      if (ab[Tb].labels.length !== ab[Tb].channels) throw new Error("channel and label counts mismatch: " + Tb);
       const {
-        channels: kk,
-        labels: Fk
-      } = ak[Xk];
-      delete ak[Xk].channels, delete ak[Xk].labels, Object.defineProperty(ak[Xk], "channels", {
-        value: kk
-      }), Object.defineProperty(ak[Xk], "labels", {
-        value: Fk
+        channels: bb,
+        labels: cb
+      } = ab[Tb];
+      delete ab[Tb].channels, delete ab[Tb].labels, Object.defineProperty(ab[Tb], "channels", {
+        value: bb
+      }), Object.defineProperty(ab[Tb], "labels", {
+        value: cb
       })
     }
-    ak.rgb.hsl = function(kk) {
-      const Fk = kk[0] / 255,
-        Bk = kk[1] / 255,
-        Rk = kk[2] / 255,
-        tk = Math.min(Fk, Bk, Rk),
-        ak = Math.max(Fk, Bk, Rk),
-        Xk = ak - tk;
-      let bk, wk;
-      ak === tk ? bk = 0 : Fk === ak ? bk = (Bk - Rk) / Xk : Bk === ak ? bk = 2 + (Rk - Fk) / Xk : Rk === ak && (bk = 4 + (Fk - Bk) / Xk), bk = Math.min(60 * bk, 360), bk < 0 && (bk += 360);
-      const dk = (tk + ak) / 2;
-      return wk = ak === tk ? 0 : dk <= .5 ? Xk / (ak + tk) : Xk / (2 - ak - tk), [bk, 100 * wk, 100 * dk]
-    }, ak.rgb.hsv = function(kk) {
-      let Fk, Bk, Rk, tk, ak;
-      const Xk = kk[0] / 255,
-        bk = kk[1] / 255,
-        wk = kk[2] / 255,
-        dk = Math.max(Xk, bk, wk),
-        sk = dk - Math.min(Xk, bk, wk),
-        Vk = function(kk) {
-          return (dk - kk) / 6 / sk + .5
+    ab.rgb.hsl = function(bb) {
+      const cb = bb[0] / 255,
+        sb = bb[1] / 255,
+        kb = bb[2] / 255,
+        Wb = Math.min(cb, sb, kb),
+        ab = Math.max(cb, sb, kb),
+        Tb = ab - Wb;
+      let Ub, Ib;
+      ab === Wb ? Ub = 0 : cb === ab ? Ub = (sb - kb) / Tb : sb === ab ? Ub = 2 + (kb - cb) / Tb : kb === ab && (Ub = 4 + (cb - sb) / Tb), Ub = Math.min(60 * Ub, 360), Ub < 0 && (Ub += 360);
+      const Hb = (Wb + ab) / 2;
+      return Ib = ab === Wb ? 0 : Hb <= .5 ? Tb / (ab + Wb) : Tb / (2 - ab - Wb), [Ub, 100 * Ib, 100 * Hb]
+    }, ab.rgb.hsv = function(bb) {
+      let cb, sb, kb, Wb, ab;
+      const Tb = bb[0] / 255,
+        Ub = bb[1] / 255,
+        Ib = bb[2] / 255,
+        Hb = Math.max(Tb, Ub, Ib),
+        fb = Hb - Math.min(Tb, Ub, Ib),
+        Mb = function(bb) {
+          return (Hb - bb) / 6 / fb + .5
         };
-      return 0 === sk ? (tk = 0, ak = 0) : (ak = sk / dk, Fk = Vk(Xk), Bk = Vk(bk), Rk = Vk(wk), Xk === dk ? tk = Rk - Bk : bk === dk ? tk = 1 / 3 + Fk - Rk : wk === dk && (tk = 2 / 3 + Bk - Fk), tk < 0 ? tk += 1 : tk > 1 && (tk -= 1)), [360 * tk, 100 * ak, 100 * dk]
-    }, ak.rgb.hwb = function(kk) {
-      const Fk = kk[0],
-        Bk = kk[1];
-      let Rk = kk[2];
-      const tk = ak.rgb.hsl(kk)[0],
-        Xk = 1 / 255 * Math.min(Fk, Math.min(Bk, Rk));
-      return Rk = 1 - 1 / 255 * Math.max(Fk, Math.max(Bk, Rk)), [tk, 100 * Xk, 100 * Rk]
-    }, ak.rgb.cmyk = function(kk) {
-      const Fk = kk[0] / 255,
-        Bk = kk[1] / 255,
-        Rk = kk[2] / 255,
-        tk = Math.min(1 - Fk, 1 - Bk, 1 - Rk);
-      return [100 * ((1 - Fk - tk) / (1 - tk) || 0), 100 * ((1 - Bk - tk) / (1 - tk) || 0), 100 * ((1 - Rk - tk) / (1 - tk) || 0), 100 * tk]
-    }, ak.rgb.keyword = function(kk) {
-      const Fk = tk[kk];
-      if (Fk) return Fk;
-      let Bk, ak = 1 / 0;
-      for (const tk of Object.keys(Rk)) {
-        const Fk = Rk[tk],
-          wk = (bk = Fk, ((Xk = kk)[0] - bk[0]) ** 2 + (Xk[1] - bk[1]) ** 2 + (Xk[2] - bk[2]) ** 2);
-        wk < ak && (ak = wk, Bk = tk)
+      return 0 === fb ? (Wb = 0, ab = 0) : (ab = fb / Hb, cb = Mb(Tb), sb = Mb(Ub), kb = Mb(Ib), Tb === Hb ? Wb = kb - sb : Ub === Hb ? Wb = 1 / 3 + cb - kb : Ib === Hb && (Wb = 2 / 3 + sb - cb), Wb < 0 ? Wb += 1 : Wb > 1 && (Wb -= 1)), [360 * Wb, 100 * ab, 100 * Hb]
+    }, ab.rgb.hwb = function(bb) {
+      const cb = bb[0],
+        sb = bb[1];
+      let kb = bb[2];
+      const Wb = ab.rgb.hsl(bb)[0],
+        Tb = 1 / 255 * Math.min(cb, Math.min(sb, kb));
+      return kb = 1 - 1 / 255 * Math.max(cb, Math.max(sb, kb)), [Wb, 100 * Tb, 100 * kb]
+    }, ab.rgb.cmyk = function(bb) {
+      const cb = bb[0] / 255,
+        sb = bb[1] / 255,
+        kb = bb[2] / 255,
+        Wb = Math.min(1 - cb, 1 - sb, 1 - kb);
+      return [100 * ((1 - cb - Wb) / (1 - Wb) || 0), 100 * ((1 - sb - Wb) / (1 - Wb) || 0), 100 * ((1 - kb - Wb) / (1 - Wb) || 0), 100 * Wb]
+    }, ab.rgb.keyword = function(bb) {
+      const cb = Wb[bb];
+      if (cb) return cb;
+      let sb, ab = 1 / 0;
+      for (const Wb of Object.keys(kb)) {
+        const cb = kb[Wb],
+          Ib = (Ub = cb, ((Tb = bb)[0] - Ub[0]) ** 2 + (Tb[1] - Ub[1]) ** 2 + (Tb[2] - Ub[2]) ** 2);
+        Ib < ab && (ab = Ib, sb = Wb)
       }
-      var Xk, bk;
-      return Bk
-    }, ak.keyword.rgb = function(kk) {
-      return Rk[kk]
-    }, ak.rgb.xyz = function(kk) {
-      let Fk = kk[0] / 255,
-        Bk = kk[1] / 255,
-        Rk = kk[2] / 255;
-      Fk = Fk > .04045 ? ((Fk + .055) / 1.055) ** 2.4 : Fk / 12.92, Bk = Bk > .04045 ? ((Bk + .055) / 1.055) ** 2.4 : Bk / 12.92, Rk = Rk > .04045 ? ((Rk + .055) / 1.055) ** 2.4 : Rk / 12.92;
-      return [100 * (.4124 * Fk + .3576 * Bk + .1805 * Rk), 100 * (.2126 * Fk + .7152 * Bk + .0722 * Rk), 100 * (.0193 * Fk + .1192 * Bk + .9505 * Rk)]
-    }, ak.rgb.lab = function(kk) {
-      const Fk = ak.rgb.xyz(kk);
-      let Bk = Fk[0],
-        Rk = Fk[1],
-        tk = Fk[2];
-      Bk /= 95.047, Rk /= 100, tk /= 108.883, Bk = Bk > .008856 ? Bk ** (1 / 3) : 7.787 * Bk + 16 / 116, Rk = Rk > .008856 ? Rk ** (1 / 3) : 7.787 * Rk + 16 / 116, tk = tk > .008856 ? tk ** (1 / 3) : 7.787 * tk + 16 / 116;
-      return [116 * Rk - 16, 500 * (Bk - Rk), 200 * (Rk - tk)]
-    }, ak.hsl.rgb = function(kk) {
-      const Fk = kk[0] / 360,
-        Bk = kk[1] / 100,
-        Rk = kk[2] / 100;
-      let tk, ak, Xk;
-      if (0 === Bk) return Xk = 255 * Rk, [Xk, Xk, Xk];
-      tk = Rk < .5 ? Rk * (1 + Bk) : Rk + Bk - Rk * Bk;
-      const bk = 2 * Rk - tk,
-        wk = [0, 0, 0];
-      for (let dk = 0; dk < 3; dk++) ak = Fk + 1 / 3 * -(dk - 1), ak < 0 && ak++, ak > 1 && ak--, Xk = 6 * ak < 1 ? bk + 6 * (tk - bk) * ak : 2 * ak < 1 ? tk : 3 * ak < 2 ? bk + (tk - bk) * (2 / 3 - ak) * 6 : bk, wk[dk] = 255 * Xk;
-      return wk
-    }, ak.hsl.hsv = function(kk) {
-      const Fk = kk[0];
-      let Bk = kk[1] / 100,
-        Rk = kk[2] / 100,
-        tk = Bk;
-      const ak = Math.max(Rk, .01);
-      Rk *= 2, Bk *= Rk <= 1 ? Rk : 2 - Rk, tk *= ak <= 1 ? ak : 2 - ak;
-      return [Fk, 100 * (0 === Rk ? 2 * tk / (ak + tk) : 2 * Bk / (Rk + Bk)), 100 * ((Rk + Bk) / 2)]
-    }, ak.hsv.rgb = function(kk) {
-      const Fk = kk[0] / 60,
-        Bk = kk[1] / 100;
-      let Rk = kk[2] / 100;
-      const tk = Math.floor(Fk) % 6,
-        ak = Fk - Math.floor(Fk),
-        Xk = 255 * Rk * (1 - Bk),
-        bk = 255 * Rk * (1 - Bk * ak),
-        wk = 255 * Rk * (1 - Bk * (1 - ak));
-      switch (Rk *= 255, tk) {
+      var Tb, Ub;
+      return sb
+    }, ab.keyword.rgb = function(bb) {
+      return kb[bb]
+    }, ab.rgb.xyz = function(bb) {
+      let cb = bb[0] / 255,
+        sb = bb[1] / 255,
+        kb = bb[2] / 255;
+      cb = cb > .04045 ? ((cb + .055) / 1.055) ** 2.4 : cb / 12.92, sb = sb > .04045 ? ((sb + .055) / 1.055) ** 2.4 : sb / 12.92, kb = kb > .04045 ? ((kb + .055) / 1.055) ** 2.4 : kb / 12.92;
+      return [100 * (.4124 * cb + .3576 * sb + .1805 * kb), 100 * (.2126 * cb + .7152 * sb + .0722 * kb), 100 * (.0193 * cb + .1192 * sb + .9505 * kb)]
+    }, ab.rgb.lab = function(bb) {
+      const cb = ab.rgb.xyz(bb);
+      let sb = cb[0],
+        kb = cb[1],
+        Wb = cb[2];
+      sb /= 95.047, kb /= 100, Wb /= 108.883, sb = sb > .008856 ? sb ** (1 / 3) : 7.787 * sb + 16 / 116, kb = kb > .008856 ? kb ** (1 / 3) : 7.787 * kb + 16 / 116, Wb = Wb > .008856 ? Wb ** (1 / 3) : 7.787 * Wb + 16 / 116;
+      return [116 * kb - 16, 500 * (sb - kb), 200 * (kb - Wb)]
+    }, ab.hsl.rgb = function(bb) {
+      const cb = bb[0] / 360,
+        sb = bb[1] / 100,
+        kb = bb[2] / 100;
+      let Wb, ab, Tb;
+      if (0 === sb) return Tb = 255 * kb, [Tb, Tb, Tb];
+      Wb = kb < .5 ? kb * (1 + sb) : kb + sb - kb * sb;
+      const Ub = 2 * kb - Wb,
+        Ib = [0, 0, 0];
+      for (let Hb = 0; Hb < 3; Hb++) ab = cb + 1 / 3 * -(Hb - 1), ab < 0 && ab++, ab > 1 && ab--, Tb = 6 * ab < 1 ? Ub + 6 * (Wb - Ub) * ab : 2 * ab < 1 ? Wb : 3 * ab < 2 ? Ub + (Wb - Ub) * (2 / 3 - ab) * 6 : Ub, Ib[Hb] = 255 * Tb;
+      return Ib
+    }, ab.hsl.hsv = function(bb) {
+      const cb = bb[0];
+      let sb = bb[1] / 100,
+        kb = bb[2] / 100,
+        Wb = sb;
+      const ab = Math.max(kb, .01);
+      kb *= 2, sb *= kb <= 1 ? kb : 2 - kb, Wb *= ab <= 1 ? ab : 2 - ab;
+      return [cb, 100 * (0 === kb ? 2 * Wb / (ab + Wb) : 2 * sb / (kb + sb)), 100 * ((kb + sb) / 2)]
+    }, ab.hsv.rgb = function(bb) {
+      const cb = bb[0] / 60,
+        sb = bb[1] / 100;
+      let kb = bb[2] / 100;
+      const Wb = Math.floor(cb) % 6,
+        ab = cb - Math.floor(cb),
+        Tb = 255 * kb * (1 - sb),
+        Ub = 255 * kb * (1 - sb * ab),
+        Ib = 255 * kb * (1 - sb * (1 - ab));
+      switch (kb *= 255, Wb) {
         case 0:
-          return [Rk, wk, Xk];
+          return [kb, Ib, Tb];
         case 1:
-          return [bk, Rk, Xk];
+          return [Ub, kb, Tb];
         case 2:
-          return [Xk, Rk, wk];
+          return [Tb, kb, Ib];
         case 3:
-          return [Xk, bk, Rk];
+          return [Tb, Ub, kb];
         case 4:
-          return [wk, Xk, Rk];
+          return [Ib, Tb, kb];
         case 5:
-          return [Rk, Xk, bk]
+          return [kb, Tb, Ub]
       }
-    }, ak.hsv.hsl = function(kk) {
-      const Fk = kk[0],
-        Bk = kk[1] / 100,
-        Rk = kk[2] / 100,
-        tk = Math.max(Rk, .01);
-      let ak, Xk;
-      Xk = (2 - Bk) * Rk;
-      const bk = (2 - Bk) * tk;
-      return ak = Bk * tk, ak /= bk <= 1 ? bk : 2 - bk, ak = ak || 0, Xk /= 2, [Fk, 100 * ak, 100 * Xk]
-    }, ak.hwb.rgb = function(kk) {
-      const Fk = kk[0] / 360;
-      let Bk = kk[1] / 100,
-        Rk = kk[2] / 100;
-      const tk = Bk + Rk;
-      let ak;
-      tk > 1 && (Bk /= tk, Rk /= tk);
-      const Xk = Math.floor(6 * Fk),
-        bk = 1 - Rk;
-      ak = 6 * Fk - Xk, 0 !== (1 & Xk) && (ak = 1 - ak);
-      const wk = Bk + ak * (bk - Bk);
-      let dk, sk, Vk;
-      switch (Xk) {
+    }, ab.hsv.hsl = function(bb) {
+      const cb = bb[0],
+        sb = bb[1] / 100,
+        kb = bb[2] / 100,
+        Wb = Math.max(kb, .01);
+      let ab, Tb;
+      Tb = (2 - sb) * kb;
+      const Ub = (2 - sb) * Wb;
+      return ab = sb * Wb, ab /= Ub <= 1 ? Ub : 2 - Ub, ab = ab || 0, Tb /= 2, [cb, 100 * ab, 100 * Tb]
+    }, ab.hwb.rgb = function(bb) {
+      const cb = bb[0] / 360;
+      let sb = bb[1] / 100,
+        kb = bb[2] / 100;
+      const Wb = sb + kb;
+      let ab;
+      Wb > 1 && (sb /= Wb, kb /= Wb);
+      const Tb = Math.floor(6 * cb),
+        Ub = 1 - kb;
+      ab = 6 * cb - Tb, 0 !== (1 & Tb) && (ab = 1 - ab);
+      const Ib = sb + ab * (Ub - sb);
+      let Hb, fb, Mb;
+      switch (Tb) {
         default:
         case 6:
         case 0:
-          dk = bk, sk = wk, Vk = Bk;
+          Hb = Ub, fb = Ib, Mb = sb;
           break;
         case 1:
-          dk = wk, sk = bk, Vk = Bk;
+          Hb = Ib, fb = Ub, Mb = sb;
           break;
         case 2:
-          dk = Bk, sk = bk, Vk = wk;
+          Hb = sb, fb = Ub, Mb = Ib;
           break;
         case 3:
-          dk = Bk, sk = wk, Vk = bk;
+          Hb = sb, fb = Ib, Mb = Ub;
           break;
         case 4:
-          dk = wk, sk = Bk, Vk = bk;
+          Hb = Ib, fb = sb, Mb = Ub;
           break;
         case 5:
-          dk = bk, sk = Bk, Vk = wk
+          Hb = Ub, fb = sb, Mb = Ib
       }
-      return [255 * dk, 255 * sk, 255 * Vk]
-    }, ak.cmyk.rgb = function(kk) {
-      const Fk = kk[0] / 100,
-        Bk = kk[1] / 100,
-        Rk = kk[2] / 100,
-        tk = kk[3] / 100;
-      return [255 * (1 - Math.min(1, Fk * (1 - tk) + tk)), 255 * (1 - Math.min(1, Bk * (1 - tk) + tk)), 255 * (1 - Math.min(1, Rk * (1 - tk) + tk))]
-    }, ak.xyz.rgb = function(kk) {
-      const Fk = kk[0] / 100,
-        Bk = kk[1] / 100,
-        Rk = kk[2] / 100;
-      let tk, ak, Xk;
-      return tk = 3.2406 * Fk + -1.5372 * Bk + -.4986 * Rk, ak = -.9689 * Fk + 1.8758 * Bk + .0415 * Rk, Xk = .0557 * Fk + -.204 * Bk + 1.057 * Rk, tk = tk > .0031308 ? 1.055 * tk ** (1 / 2.4) - .055 : 12.92 * tk, ak = ak > .0031308 ? 1.055 * ak ** (1 / 2.4) - .055 : 12.92 * ak, Xk = Xk > .0031308 ? 1.055 * Xk ** (1 / 2.4) - .055 : 12.92 * Xk, tk = Math.min(Math.max(0, tk), 1), ak = Math.min(Math.max(0, ak), 1), Xk = Math.min(Math.max(0, Xk), 1), [255 * tk, 255 * ak, 255 * Xk]
-    }, ak.xyz.lab = function(kk) {
-      let Fk = kk[0],
-        Bk = kk[1],
-        Rk = kk[2];
-      Fk /= 95.047, Bk /= 100, Rk /= 108.883, Fk = Fk > .008856 ? Fk ** (1 / 3) : 7.787 * Fk + 16 / 116, Bk = Bk > .008856 ? Bk ** (1 / 3) : 7.787 * Bk + 16 / 116, Rk = Rk > .008856 ? Rk ** (1 / 3) : 7.787 * Rk + 16 / 116;
-      return [116 * Bk - 16, 500 * (Fk - Bk), 200 * (Bk - Rk)]
-    }, ak.lab.xyz = function(kk) {
-      let Fk, Bk, Rk;
-      Bk = (kk[0] + 16) / 116, Fk = kk[1] / 500 + Bk, Rk = Bk - kk[2] / 200;
-      const tk = Bk ** 3,
-        ak = Fk ** 3,
-        Xk = Rk ** 3;
-      return Bk = tk > .008856 ? tk : (Bk - 16 / 116) / 7.787, Fk = ak > .008856 ? ak : (Fk - 16 / 116) / 7.787, Rk = Xk > .008856 ? Xk : (Rk - 16 / 116) / 7.787, Fk *= 95.047, Bk *= 100, Rk *= 108.883, [Fk, Bk, Rk]
-    }, ak.lab.lch = function(kk) {
-      const Fk = kk[0],
-        Bk = kk[1],
-        Rk = kk[2];
-      let tk;
-      tk = 360 * Math.atan2(Rk, Bk) / 2 / Math.PI, tk < 0 && (tk += 360);
-      return [Fk, Math.sqrt(Bk * Bk + Rk * Rk), tk]
-    }, ak.lch.lab = function(kk) {
-      const Fk = kk[0],
-        Bk = kk[1],
-        Rk = kk[2] / 360 * 2 * Math.PI;
-      return [Fk, Bk * Math.cos(Rk), Bk * Math.sin(Rk)]
-    }, ak.rgb.ansi16 = function(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const [Bk, Rk, tk] = kk;
-      let Xk = null === Fk ? ak.rgb.hsv(kk)[2] : Fk;
-      if (Xk = Math.round(Xk / 50), 0 === Xk) return 30;
-      let bk = 30 + (Math.round(tk / 255) << 2 | Math.round(Rk / 255) << 1 | Math.round(Bk / 255));
-      return 2 === Xk && (bk += 60), bk
-    }, ak.hsv.ansi16 = function(kk) {
-      return ak.rgb.ansi16(ak.hsv.rgb(kk), kk[2])
-    }, ak.rgb.ansi256 = function(kk) {
-      const Fk = kk[0],
-        Bk = kk[1],
-        Rk = kk[2];
-      if (Fk === Bk && Bk === Rk) return Fk < 8 ? 16 : Fk > 248 ? 231 : Math.round((Fk - 8) / 247 * 24) + 232;
-      return 16 + 36 * Math.round(Fk / 255 * 5) + 6 * Math.round(Bk / 255 * 5) + Math.round(Rk / 255 * 5)
-    }, ak.ansi16.rgb = function(kk) {
-      let Fk = kk % 10;
-      if (0 === Fk || 7 === Fk) return kk > 50 && (Fk += 3.5), Fk = Fk / 10.5 * 255, [Fk, Fk, Fk];
-      const Bk = .5 * (1 + ~~(kk > 50));
-      return [(1 & Fk) * Bk * 255, (Fk >> 1 & 1) * Bk * 255, (Fk >> 2 & 1) * Bk * 255]
-    }, ak.ansi256.rgb = function(kk) {
-      if (kk >= 232) {
-        const Fk = 10 * (kk - 232) + 8;
-        return [Fk, Fk, Fk]
+      return [255 * Hb, 255 * fb, 255 * Mb]
+    }, ab.cmyk.rgb = function(bb) {
+      const cb = bb[0] / 100,
+        sb = bb[1] / 100,
+        kb = bb[2] / 100,
+        Wb = bb[3] / 100;
+      return [255 * (1 - Math.min(1, cb * (1 - Wb) + Wb)), 255 * (1 - Math.min(1, sb * (1 - Wb) + Wb)), 255 * (1 - Math.min(1, kb * (1 - Wb) + Wb))]
+    }, ab.xyz.rgb = function(bb) {
+      const cb = bb[0] / 100,
+        sb = bb[1] / 100,
+        kb = bb[2] / 100;
+      let Wb, ab, Tb;
+      return Wb = 3.2406 * cb + -1.5372 * sb + -.4986 * kb, ab = -.9689 * cb + 1.8758 * sb + .0415 * kb, Tb = .0557 * cb + -.204 * sb + 1.057 * kb, Wb = Wb > .0031308 ? 1.055 * Wb ** (1 / 2.4) - .055 : 12.92 * Wb, ab = ab > .0031308 ? 1.055 * ab ** (1 / 2.4) - .055 : 12.92 * ab, Tb = Tb > .0031308 ? 1.055 * Tb ** (1 / 2.4) - .055 : 12.92 * Tb, Wb = Math.min(Math.max(0, Wb), 1), ab = Math.min(Math.max(0, ab), 1), Tb = Math.min(Math.max(0, Tb), 1), [255 * Wb, 255 * ab, 255 * Tb]
+    }, ab.xyz.lab = function(bb) {
+      let cb = bb[0],
+        sb = bb[1],
+        kb = bb[2];
+      cb /= 95.047, sb /= 100, kb /= 108.883, cb = cb > .008856 ? cb ** (1 / 3) : 7.787 * cb + 16 / 116, sb = sb > .008856 ? sb ** (1 / 3) : 7.787 * sb + 16 / 116, kb = kb > .008856 ? kb ** (1 / 3) : 7.787 * kb + 16 / 116;
+      return [116 * sb - 16, 500 * (cb - sb), 200 * (sb - kb)]
+    }, ab.lab.xyz = function(bb) {
+      let cb, sb, kb;
+      sb = (bb[0] + 16) / 116, cb = bb[1] / 500 + sb, kb = sb - bb[2] / 200;
+      const Wb = sb ** 3,
+        ab = cb ** 3,
+        Tb = kb ** 3;
+      return sb = Wb > .008856 ? Wb : (sb - 16 / 116) / 7.787, cb = ab > .008856 ? ab : (cb - 16 / 116) / 7.787, kb = Tb > .008856 ? Tb : (kb - 16 / 116) / 7.787, cb *= 95.047, sb *= 100, kb *= 108.883, [cb, sb, kb]
+    }, ab.lab.lch = function(bb) {
+      const cb = bb[0],
+        sb = bb[1],
+        kb = bb[2];
+      let Wb;
+      Wb = 360 * Math.atan2(kb, sb) / 2 / Math.PI, Wb < 0 && (Wb += 360);
+      return [cb, Math.sqrt(sb * sb + kb * kb), Wb]
+    }, ab.lch.lab = function(bb) {
+      const cb = bb[0],
+        sb = bb[1],
+        kb = bb[2] / 360 * 2 * Math.PI;
+      return [cb, sb * Math.cos(kb), sb * Math.sin(kb)]
+    }, ab.rgb.ansi16 = function(bb) {
+      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [sb, kb, Wb] = bb;
+      let Tb = null === cb ? ab.rgb.hsv(bb)[2] : cb;
+      if (Tb = Math.round(Tb / 50), 0 === Tb) return 30;
+      let Ub = 30 + (Math.round(Wb / 255) << 2 | Math.round(kb / 255) << 1 | Math.round(sb / 255));
+      return 2 === Tb && (Ub += 60), Ub
+    }, ab.hsv.ansi16 = function(bb) {
+      return ab.rgb.ansi16(ab.hsv.rgb(bb), bb[2])
+    }, ab.rgb.ansi256 = function(bb) {
+      const cb = bb[0],
+        sb = bb[1],
+        kb = bb[2];
+      if (cb === sb && sb === kb) return cb < 8 ? 16 : cb > 248 ? 231 : Math.round((cb - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(cb / 255 * 5) + 6 * Math.round(sb / 255 * 5) + Math.round(kb / 255 * 5)
+    }, ab.ansi16.rgb = function(bb) {
+      let cb = bb % 10;
+      if (0 === cb || 7 === cb) return bb > 50 && (cb += 3.5), cb = cb / 10.5 * 255, [cb, cb, cb];
+      const sb = .5 * (1 + ~~(bb > 50));
+      return [(1 & cb) * sb * 255, (cb >> 1 & 1) * sb * 255, (cb >> 2 & 1) * sb * 255]
+    }, ab.ansi256.rgb = function(bb) {
+      if (bb >= 232) {
+        const cb = 10 * (bb - 232) + 8;
+        return [cb, cb, cb]
       }
-      let Fk;
-      kk -= 16;
-      return [Math.floor(kk / 36) / 5 * 255, Math.floor((Fk = kk % 36) / 6) / 5 * 255, Fk % 6 / 5 * 255]
-    }, ak.rgb.hex = function(kk) {
-      const Fk = (((255 & Math.round(kk[0])) << 16) + ((255 & Math.round(kk[1])) << 8) + (255 & Math.round(kk[2]))).toString(16).toUpperCase();
-      return "000000".substring(Fk.length) + Fk
-    }, ak.hex.rgb = function(kk) {
-      const Fk = kk.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!Fk) return [0, 0, 0];
-      let Bk = Fk[0];
-      3 === Fk[0].length && (Bk = Bk.split("").map((kk => kk + kk)).join(""));
-      const Rk = parseInt(Bk, 16);
-      return [Rk >> 16 & 255, Rk >> 8 & 255, 255 & Rk]
-    }, ak.rgb.hcg = function(kk) {
-      const Fk = kk[0] / 255,
-        Bk = kk[1] / 255,
-        Rk = kk[2] / 255,
-        tk = Math.max(Math.max(Fk, Bk), Rk),
-        ak = Math.min(Math.min(Fk, Bk), Rk),
-        Xk = tk - ak;
-      let bk, wk;
-      return bk = Xk < 1 ? ak / (1 - Xk) : 0, wk = Xk <= 0 ? 0 : tk === Fk ? (Bk - Rk) / Xk % 6 : tk === Bk ? 2 + (Rk - Fk) / Xk : 4 + (Fk - Bk) / Xk, wk /= 6, wk %= 1, [360 * wk, 100 * Xk, 100 * bk]
-    }, ak.hsl.hcg = function(kk) {
-      const Fk = kk[1] / 100,
-        Bk = kk[2] / 100,
-        Rk = Bk < .5 ? 2 * Fk * Bk : 2 * Fk * (1 - Bk);
-      let tk = 0;
-      return Rk < 1 && (tk = (Bk - .5 * Rk) / (1 - Rk)), [kk[0], 100 * Rk, 100 * tk]
-    }, ak.hsv.hcg = function(kk) {
-      const Fk = kk[1] / 100,
-        Bk = kk[2] / 100,
-        Rk = Fk * Bk;
-      let tk = 0;
-      return Rk < 1 && (tk = (Bk - Rk) / (1 - Rk)), [kk[0], 100 * Rk, 100 * tk]
-    }, ak.hcg.rgb = function(kk) {
-      const Fk = kk[0] / 360,
-        Bk = kk[1] / 100,
-        Rk = kk[2] / 100;
-      if (0 === Bk) return [255 * Rk, 255 * Rk, 255 * Rk];
-      const tk = [0, 0, 0],
-        ak = Fk % 1 * 6,
-        Xk = ak % 1,
-        bk = 1 - Xk;
-      let wk = 0;
-      switch (Math.floor(ak)) {
+      let cb;
+      bb -= 16;
+      return [Math.floor(bb / 36) / 5 * 255, Math.floor((cb = bb % 36) / 6) / 5 * 255, cb % 6 / 5 * 255]
+    }, ab.rgb.hex = function(bb) {
+      const cb = (((255 & Math.round(bb[0])) << 16) + ((255 & Math.round(bb[1])) << 8) + (255 & Math.round(bb[2]))).toString(16).toUpperCase();
+      return "000000".substring(cb.length) + cb
+    }, ab.hex.rgb = function(bb) {
+      const cb = bb.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!cb) return [0, 0, 0];
+      let sb = cb[0];
+      3 === cb[0].length && (sb = sb.split("").map((bb => bb + bb)).join(""));
+      const kb = parseInt(sb, 16);
+      return [kb >> 16 & 255, kb >> 8 & 255, 255 & kb]
+    }, ab.rgb.hcg = function(bb) {
+      const cb = bb[0] / 255,
+        sb = bb[1] / 255,
+        kb = bb[2] / 255,
+        Wb = Math.max(Math.max(cb, sb), kb),
+        ab = Math.min(Math.min(cb, sb), kb),
+        Tb = Wb - ab;
+      let Ub, Ib;
+      return Ub = Tb < 1 ? ab / (1 - Tb) : 0, Ib = Tb <= 0 ? 0 : Wb === cb ? (sb - kb) / Tb % 6 : Wb === sb ? 2 + (kb - cb) / Tb : 4 + (cb - sb) / Tb, Ib /= 6, Ib %= 1, [360 * Ib, 100 * Tb, 100 * Ub]
+    }, ab.hsl.hcg = function(bb) {
+      const cb = bb[1] / 100,
+        sb = bb[2] / 100,
+        kb = sb < .5 ? 2 * cb * sb : 2 * cb * (1 - sb);
+      let Wb = 0;
+      return kb < 1 && (Wb = (sb - .5 * kb) / (1 - kb)), [bb[0], 100 * kb, 100 * Wb]
+    }, ab.hsv.hcg = function(bb) {
+      const cb = bb[1] / 100,
+        sb = bb[2] / 100,
+        kb = cb * sb;
+      let Wb = 0;
+      return kb < 1 && (Wb = (sb - kb) / (1 - kb)), [bb[0], 100 * kb, 100 * Wb]
+    }, ab.hcg.rgb = function(bb) {
+      const cb = bb[0] / 360,
+        sb = bb[1] / 100,
+        kb = bb[2] / 100;
+      if (0 === sb) return [255 * kb, 255 * kb, 255 * kb];
+      const Wb = [0, 0, 0],
+        ab = cb % 1 * 6,
+        Tb = ab % 1,
+        Ub = 1 - Tb;
+      let Ib = 0;
+      switch (Math.floor(ab)) {
         case 0:
-          tk[0] = 1, tk[1] = Xk, tk[2] = 0;
+          Wb[0] = 1, Wb[1] = Tb, Wb[2] = 0;
           break;
         case 1:
-          tk[0] = bk, tk[1] = 1, tk[2] = 0;
+          Wb[0] = Ub, Wb[1] = 1, Wb[2] = 0;
           break;
         case 2:
-          tk[0] = 0, tk[1] = 1, tk[2] = Xk;
+          Wb[0] = 0, Wb[1] = 1, Wb[2] = Tb;
           break;
         case 3:
-          tk[0] = 0, tk[1] = bk, tk[2] = 1;
+          Wb[0] = 0, Wb[1] = Ub, Wb[2] = 1;
           break;
         case 4:
-          tk[0] = Xk, tk[1] = 0, tk[2] = 1;
+          Wb[0] = Tb, Wb[1] = 0, Wb[2] = 1;
           break;
         default:
-          tk[0] = 1, tk[1] = 0, tk[2] = bk
+          Wb[0] = 1, Wb[1] = 0, Wb[2] = Ub
       }
-      return wk = (1 - Bk) * Rk, [255 * (Bk * tk[0] + wk), 255 * (Bk * tk[1] + wk), 255 * (Bk * tk[2] + wk)]
-    }, ak.hcg.hsv = function(kk) {
-      const Fk = kk[1] / 100,
-        Bk = Fk + kk[2] / 100 * (1 - Fk);
-      let Rk = 0;
-      return Bk > 0 && (Rk = Fk / Bk), [kk[0], 100 * Rk, 100 * Bk]
-    }, ak.hcg.hsl = function(kk) {
-      const Fk = kk[1] / 100,
-        Bk = kk[2] / 100 * (1 - Fk) + .5 * Fk;
-      let Rk = 0;
-      return Bk > 0 && Bk < .5 ? Rk = Fk / (2 * Bk) : Bk >= .5 && Bk < 1 && (Rk = Fk / (2 * (1 - Bk))), [kk[0], 100 * Rk, 100 * Bk]
-    }, ak.hcg.hwb = function(kk) {
-      const Fk = kk[1] / 100,
-        Bk = Fk + kk[2] / 100 * (1 - Fk);
-      return [kk[0], 100 * (Bk - Fk), 100 * (1 - Bk)]
-    }, ak.hwb.hcg = function(kk) {
-      const Fk = kk[1] / 100,
-        Bk = 1 - kk[2] / 100,
-        Rk = Bk - Fk;
-      let tk = 0;
-      return Rk < 1 && (tk = (Bk - Rk) / (1 - Rk)), [kk[0], 100 * Rk, 100 * tk]
-    }, ak.apple.rgb = function(kk) {
-      return [kk[0] / 65535 * 255, kk[1] / 65535 * 255, kk[2] / 65535 * 255]
-    }, ak.rgb.apple = function(kk) {
-      return [kk[0] / 255 * 65535, kk[1] / 255 * 65535, kk[2] / 255 * 65535]
-    }, ak.gray.rgb = function(kk) {
-      return [kk[0] / 100 * 255, kk[0] / 100 * 255, kk[0] / 100 * 255]
-    }, ak.gray.hsl = function(kk) {
-      return [0, 0, kk[0]]
-    }, ak.gray.hsv = ak.gray.hsl, ak.gray.hwb = function(kk) {
-      return [0, 100, kk[0]]
-    }, ak.gray.cmyk = function(kk) {
-      return [0, 0, 0, kk[0]]
-    }, ak.gray.lab = function(kk) {
-      return [kk[0], 0, 0]
-    }, ak.gray.hex = function(kk) {
-      const Fk = 255 & Math.round(kk[0] / 100 * 255),
-        Bk = ((Fk << 16) + (Fk << 8) + Fk).toString(16).toUpperCase();
-      return "000000".substring(Bk.length) + Bk
-    }, ak.rgb.gray = function(kk) {
-      return [(kk[0] + kk[1] + kk[2]) / 3 / 255 * 100]
+      return Ib = (1 - sb) * kb, [255 * (sb * Wb[0] + Ib), 255 * (sb * Wb[1] + Ib), 255 * (sb * Wb[2] + Ib)]
+    }, ab.hcg.hsv = function(bb) {
+      const cb = bb[1] / 100,
+        sb = cb + bb[2] / 100 * (1 - cb);
+      let kb = 0;
+      return sb > 0 && (kb = cb / sb), [bb[0], 100 * kb, 100 * sb]
+    }, ab.hcg.hsl = function(bb) {
+      const cb = bb[1] / 100,
+        sb = bb[2] / 100 * (1 - cb) + .5 * cb;
+      let kb = 0;
+      return sb > 0 && sb < .5 ? kb = cb / (2 * sb) : sb >= .5 && sb < 1 && (kb = cb / (2 * (1 - sb))), [bb[0], 100 * kb, 100 * sb]
+    }, ab.hcg.hwb = function(bb) {
+      const cb = bb[1] / 100,
+        sb = cb + bb[2] / 100 * (1 - cb);
+      return [bb[0], 100 * (sb - cb), 100 * (1 - sb)]
+    }, ab.hwb.hcg = function(bb) {
+      const cb = bb[1] / 100,
+        sb = 1 - bb[2] / 100,
+        kb = sb - cb;
+      let Wb = 0;
+      return kb < 1 && (Wb = (sb - kb) / (1 - kb)), [bb[0], 100 * kb, 100 * Wb]
+    }, ab.apple.rgb = function(bb) {
+      return [bb[0] / 65535 * 255, bb[1] / 65535 * 255, bb[2] / 65535 * 255]
+    }, ab.rgb.apple = function(bb) {
+      return [bb[0] / 255 * 65535, bb[1] / 255 * 65535, bb[2] / 255 * 65535]
+    }, ab.gray.rgb = function(bb) {
+      return [bb[0] / 100 * 255, bb[0] / 100 * 255, bb[0] / 100 * 255]
+    }, ab.gray.hsl = function(bb) {
+      return [0, 0, bb[0]]
+    }, ab.gray.hsv = ab.gray.hsl, ab.gray.hwb = function(bb) {
+      return [0, 100, bb[0]]
+    }, ab.gray.cmyk = function(bb) {
+      return [0, 0, 0, bb[0]]
+    }, ab.gray.lab = function(bb) {
+      return [bb[0], 0, 0]
+    }, ab.gray.hex = function(bb) {
+      const cb = 255 & Math.round(bb[0] / 100 * 255),
+        sb = ((cb << 16) + (cb << 8) + cb).toString(16).toUpperCase();
+      return "000000".substring(sb.length) + sb
+    }, ab.rgb.gray = function(bb) {
+      return [(bb[0] + bb[1] + bb[2]) / 3 / 255 * 100]
     }
   },
-  36396: (kk, Fk, Bk) => {
-    const Rk = Bk(36401),
-      tk = Bk(36409),
-      ak = {};
-    Object.keys(Rk).forEach((kk => {
-      ak[kk] = {}, Object.defineProperty(ak[kk], "channels", {
-        value: Rk[kk].channels
-      }), Object.defineProperty(ak[kk], "labels", {
-        value: Rk[kk].labels
+  36304: (bb, cb, sb) => {
+    const kb = sb(36308),
+      Wb = sb(36320),
+      ab = {};
+    Object.keys(kb).forEach((bb => {
+      ab[bb] = {}, Object.defineProperty(ab[bb], "channels", {
+        value: kb[bb].channels
+      }), Object.defineProperty(ab[bb], "labels", {
+        value: kb[bb].labels
       });
-      const Fk = tk(kk);
-      Object.keys(Fk).forEach((Bk => {
-        const Rk = Fk[Bk];
-        ak[kk][Bk] = function(kk) {
-          const Fk = function() {
-            for (var Fk = arguments.length, Bk = new Array(Fk), Rk = 0; Rk < Fk; Rk++) Bk[Rk] = arguments[Rk];
-            const tk = Bk[0];
-            if (void 0 === tk || null === tk) return tk;
-            tk.length > 1 && (Bk = tk);
-            const ak = kk(Bk);
-            if ("object" === typeof ak)
-              for (let kk = ak.length, Xk = 0; Xk < kk; Xk++) ak[Xk] = Math.round(ak[Xk]);
-            return ak
+      const cb = Wb(bb);
+      Object.keys(cb).forEach((sb => {
+        const kb = cb[sb];
+        ab[bb][sb] = function(bb) {
+          const cb = function() {
+            for (var cb = arguments.length, sb = new Array(cb), kb = 0; kb < cb; kb++) sb[kb] = arguments[kb];
+            const Wb = sb[0];
+            if (void 0 === Wb || null === Wb) return Wb;
+            Wb.length > 1 && (sb = Wb);
+            const ab = bb(sb);
+            if ("object" === typeof ab)
+              for (let bb = ab.length, Tb = 0; Tb < bb; Tb++) ab[Tb] = Math.round(ab[Tb]);
+            return ab
           };
-          return "conversion" in kk && (Fk.conversion = kk.conversion), Fk
-        }(Rk), ak[kk][Bk].raw = function(kk) {
-          const Fk = function() {
-            for (var Fk = arguments.length, Bk = new Array(Fk), Rk = 0; Rk < Fk; Rk++) Bk[Rk] = arguments[Rk];
-            const tk = Bk[0];
-            return void 0 === tk || null === tk ? tk : (tk.length > 1 && (Bk = tk), kk(Bk))
+          return "conversion" in bb && (cb.conversion = bb.conversion), cb
+        }(kb), ab[bb][sb].raw = function(bb) {
+          const cb = function() {
+            for (var cb = arguments.length, sb = new Array(cb), kb = 0; kb < cb; kb++) sb[kb] = arguments[kb];
+            const Wb = sb[0];
+            return void 0 === Wb || null === Wb ? Wb : (Wb.length > 1 && (sb = Wb), bb(sb))
           };
-          return "conversion" in kk && (Fk.conversion = kk.conversion), Fk
-        }(Rk)
+          return "conversion" in bb && (cb.conversion = bb.conversion), cb
+        }(kb)
       }))
-    })), kk.exports = ak
+    })), bb.exports = ab
   },
-  36409: (kk, Fk, Bk) => {
-    const Rk = Bk(36401);
+  36320: (bb, cb, sb) => {
+    const kb = sb(36308);
 
-    function tk(kk) {
-      const Fk = function() {
-          const kk = {},
-            Fk = Object.keys(Rk);
-          for (let Bk = Fk.length, Rk = 0; Rk < Bk; Rk++) kk[Fk[Rk]] = {
+    function Wb(bb) {
+      const cb = function() {
+          const bb = {},
+            cb = Object.keys(kb);
+          for (let sb = cb.length, kb = 0; kb < sb; kb++) bb[cb[kb]] = {
             distance: -1,
             parent: null
           };
-          return kk
+          return bb
         }(),
-        Bk = [kk];
-      for (Fk[kk].distance = 0; Bk.length;) {
-        const kk = Bk.pop(),
-          tk = Object.keys(Rk[kk]);
-        for (let Rk = tk.length, ak = 0; ak < Rk; ak++) {
-          const Rk = tk[ak],
-            Xk = Fk[Rk]; - 1 === Xk.distance && (Xk.distance = Fk[kk].distance + 1, Xk.parent = kk, Bk.unshift(Rk))
+        sb = [bb];
+      for (cb[bb].distance = 0; sb.length;) {
+        const bb = sb.pop(),
+          Wb = Object.keys(kb[bb]);
+        for (let kb = Wb.length, ab = 0; ab < kb; ab++) {
+          const kb = Wb[ab],
+            Tb = cb[kb]; - 1 === Tb.distance && (Tb.distance = cb[bb].distance + 1, Tb.parent = bb, sb.unshift(kb))
         }
       }
-      return Fk
+      return cb
     }
 
-    function ak(kk, Fk) {
-      return function(Bk) {
-        return Fk(kk(Bk))
+    function ab(bb, cb) {
+      return function(sb) {
+        return cb(bb(sb))
       }
     }
 
-    function Xk(kk, Fk) {
-      const Bk = [Fk[kk].parent, kk];
-      let tk = Rk[Fk[kk].parent][kk],
-        Xk = Fk[kk].parent;
-      for (; Fk[Xk].parent;) Bk.unshift(Fk[Xk].parent), tk = ak(Rk[Fk[Xk].parent][Xk], tk), Xk = Fk[Xk].parent;
-      return tk.conversion = Bk, tk
+    function Tb(bb, cb) {
+      const sb = [cb[bb].parent, bb];
+      let Wb = kb[cb[bb].parent][bb],
+        Tb = cb[bb].parent;
+      for (; cb[Tb].parent;) sb.unshift(cb[Tb].parent), Wb = ab(kb[cb[Tb].parent][Tb], Wb), Tb = cb[Tb].parent;
+      return Wb.conversion = sb, Wb
     }
-    kk.exports = function(kk) {
-      const Fk = tk(kk),
-        Bk = {},
-        Rk = Object.keys(Fk);
-      for (let tk = Rk.length, ak = 0; ak < tk; ak++) {
-        const kk = Rk[ak];
-        null !== Fk[kk].parent && (Bk[kk] = Xk(kk, Fk))
+    bb.exports = function(bb) {
+      const cb = Wb(bb),
+        sb = {},
+        kb = Object.keys(cb);
+      for (let Wb = kb.length, ab = 0; ab < Wb; ab++) {
+        const bb = kb[ab];
+        null !== cb[bb].parent && (sb[bb] = Tb(bb, cb))
       }
-      return Bk
+      return sb
     }
   },
-  36406: kk => {
-    kk.exports = {
+  36314: bb => {
+    bb.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -1137,28 +1137,28 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36385: (kk, Fk, Bk) => {
-    var Rk = Bk(36389),
-      tk = Array.prototype.concat,
-      ak = Array.prototype.slice,
-      Xk = kk.exports = function(kk) {
-        for (var Fk = [], Bk = 0, Xk = kk.length; Bk < Xk; Bk++) {
-          var bk = kk[Bk];
-          Rk(bk) ? Fk = tk.call(Fk, ak.call(bk)) : Fk.push(bk)
+  36287: (bb, cb, sb) => {
+    var kb = sb(36295),
+      Wb = Array.prototype.concat,
+      ab = Array.prototype.slice,
+      Tb = bb.exports = function(bb) {
+        for (var cb = [], sb = 0, Tb = bb.length; sb < Tb; sb++) {
+          var Ub = bb[sb];
+          kb(Ub) ? cb = Wb.call(cb, ab.call(Ub)) : cb.push(Ub)
         }
-        return Fk
+        return cb
       };
-    Xk.wrap = function(kk) {
+    Tb.wrap = function(bb) {
       return function() {
-        return kk(Xk(arguments))
+        return bb(Tb(arguments))
       }
     }
   },
-  36389: kk => {
-    kk.exports = function(kk) {
-      return !(!kk || "string" === typeof kk) && (kk instanceof Array || Array.isArray(kk) || kk.length >= 0 && (kk.splice instanceof Function || Object.getOwnPropertyDescriptor(kk, kk.length - 1) && "String" !== kk.constructor.name))
+  36295: bb => {
+    bb.exports = function(bb) {
+      return !(!bb || "string" === typeof bb) && (bb instanceof Array || Array.isArray(bb) || bb.length >= 0 && (bb.splice instanceof Function || Object.getOwnPropertyDescriptor(bb, bb.length - 1) && "String" !== bb.constructor.name))
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

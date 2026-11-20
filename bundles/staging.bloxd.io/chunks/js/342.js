@@ -1,97 +1,97 @@
 export const id = 342;
 export const ids = [342, 343];
 export const modules = {
-  42770: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      gamePackSource: () => ak
+  42668: (bb, cb, sb) => {
+    sb.d(cb, {
+      gamePackSource: () => ab
     });
-    var Rk = Bk(4681),
-      tk = Bk(1441);
+    var kb = sb(4688),
+      Wb = sb(1474);
 
-    function ak(kk) {
+    function ab(bb) {
       return {
-        packKey: async Fk => (await tk.b.getGame(kk, Fk, !0)).customTexturePackKey,
-        fetchPack: Rk.d
+        packKey: async cb => (await Wb.b.getGame(bb, cb, !0)).customTexturePackKey,
+        fetchPack: kb.e
       }
     }
   },
-  42762: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      fetchGuestContext: () => Jk,
-      guestJoinTarget: () => vk,
-      guestJoinWithPack: () => ek,
-      guestPackForGame: () => Ak,
-      invalidateGuestTrafficCode: () => Wk
+  42664: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      fetchGuestContext: () => Xb,
+      guestJoinTarget: () => Nb,
+      guestJoinWithPack: () => mb,
+      guestPackForGame: () => nb,
+      invalidateGuestTrafficCode: () => Cb
     });
-    var Rk = Bk(1154),
-      tk = Bk(1441),
-      ak = Bk(98),
-      Xk = Bk(36194),
-      bk = Bk(1101),
-      wk = Bk(40355),
-      dk = Bk(42770),
-      sk = Bk(40297);
+    var kb = sb(1208),
+      Wb = sb(1474),
+      ab = sb(117),
+      Tb = sb(36112),
+      Ub = sb(1126),
+      Ib = sb(40373),
+      Hb = sb(42668),
+      fb = sb(40314);
 
-    function Vk() {
-      if (ak.featureFlags.useTurnstile) throw new wk.TurnstilePageError
+    function Mb() {
+      if (ab.featureFlags.useTurnstile) throw new Ib.TurnstilePageError
     }
 
-    function Jk() {
-      return (0, bk.fetchAnonymousUserContext)().catch((kk => (console.warn("the guest context didn't load", kk), null)))
+    function Xb() {
+      return (0, Ub.fetchAnonymousUserContext)().catch((bb => (console.warn("the guest context didn't load", bb), null)))
     }
-    async function Ak(kk, Fk, Bk, Rk) {
+    async function nb(bb, cb, sb, kb) {
       try {
-        const tk = await Bk;
-        if (null === tk) return void console.warn(`the texture pack step for ${kk} has no guest context: the pack in play stays`);
-        await Fk.packForGame(kk, (0, dk.gamePackSource)(tk), Rk)
-      } catch (tk) {
-        console.warn(`the texture pack step for ${kk} failed: the pack in play stays`, tk)
+        const Wb = await sb;
+        if (null === Wb) return void console.warn(`the texture pack step for ${bb} has no guest context: the pack in play stays`);
+        await cb.packForGame(bb, (0, Hb.gamePackSource)(Wb), kb)
+      } catch (Wb) {
+        console.warn(`the texture pack step for ${bb} failed: the pack in play stays`, Wb)
       }
     }
-    async function ek(kk, Fk, Bk, Rk) {
-      Vk();
-      const tk = Jk();
-      return await Bk(((Fk, Bk) => Ak(kk, Fk, tk, Bk))), vk(kk, Fk, Rk(), await tk)
+    async function mb(bb, cb, sb, kb) {
+      Mb();
+      const Wb = Xb();
+      return await sb(((cb, sb) => nb(bb, cb, Wb, sb))), Nb(bb, cb, kb(), await Wb)
     }
-    let yk = null,
-      fk = null;
-    async function mk() {
-      if ((null === yk || yk.hasExpired()) && (fk ??= (0, bk.fetchAnonymousUserContext)().then((kk => {
-          yk = kk
+    let lb = null,
+      Qb = null;
+    async function eb() {
+      if ((null === lb || lb.hasExpired()) && (Qb ??= (0, Ub.fetchAnonymousUserContext)().then((bb => {
+          lb = bb
         })).finally((() => {
-          fk = null
-        })), await fk), null === yk) throw new Error("no guest context to post as");
-      return yk.getMetricsCookies()
+          Qb = null
+        })), await Qb), null === lb) throw new Error("no guest context to post as");
+      return lb.getMetricsCookies()
     }
-    async function Wk() {
-      var kk;
-      await (null === (kk = yk) || void 0 === kk ? void 0 : kk.invalidateTrafficCode())
+    async function Cb() {
+      var bb;
+      await (null === (bb = lb) || void 0 === bb ? void 0 : bb.invalidateTrafficCode())
     }
-    async function vk(kk, Fk, Bk) {
-      let ak = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      Vk();
-      const wk = null !== ak && void 0 !== ak ? ak : await (0, bk.fetchAnonymousUserContext)();
-      if (yk = wk, wk.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
-      const dk = await tk.b.matchmakePlayer(wk, Fk, kk, (0, Xk.b)()),
-        Jk = performance.now();
-      if (!("gameServerHost" in dk)) throw new Error(`matchmaking refused: ${dk.failReason}`);
-      const Ak = Rk.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(dk.gameServerHost);
-      if (Ak.isError()) throw new Error(`no socket URL for ${dk.gameServerHost}: ${Ak.asError().message}`);
-      const ek = {
-        endpoint: Ak.getValue(),
-        gameNameWithVariation: dk.gameNameWithVariation,
-        lobbyName: dk.lobbyName
+    async function Nb(bb, cb, sb) {
+      let ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      Mb();
+      const Ib = null !== ab && void 0 !== ab ? ab : await (0, Ub.fetchAnonymousUserContext)();
+      if (lb = Ib, Ib.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const Hb = await Wb.b.matchmakePlayer(Ib, cb, bb, (0, Tb.e)()),
+        Xb = performance.now();
+      if (!("gameServerHost" in Hb)) throw new Error(`matchmaking refused: ${Hb.failReason}`);
+      const nb = kb.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(Hb.gameServerHost);
+      if (nb.isError()) throw new Error(`no socket URL for ${Hb.gameServerHost}: ${nb.asError().message}`);
+      const mb = {
+        endpoint: nb.getValue(),
+        gameNameWithVariation: Hb.gameNameWithVariation,
+        lobbyName: Hb.lobbyName
       };
       return {
         target: {
-          ...await (0, sk.e)(wk, ek, Bk, !1),
-          postCookies: mk
+          ...await (0, fb.e)(Ib, mb, sb, !1),
+          postCookies: eb
         },
-        matchedAt: Jk,
-        freshMs: sk.c
+        matchedAt: Xb,
+        freshMs: fb.d
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

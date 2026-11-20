@@ -1,73 +1,73 @@
 export const id = 154;
 export const ids = [154];
 export const modules = {
-  8556: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => bk
+  8485: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Ub
     });
-    var Rk = Bk(22),
-      tk = Bk(1149),
-      ak = Bk(4688),
-      Xk = Bk(1069);
+    var kb = sb(19),
+      Wb = sb(1197),
+      ab = sb(4703),
+      Tb = sb(1087);
 
-    function bk(kk) {
+    function Ub(bb) {
       let {
-        note: Fk
-      } = kk;
+        note: cb
+      } = bb;
       const {
-        t: Bk
-      } = (0, tk.x)(), {
-        clientEscMenuOptions: bk
-      } = (0, Rk.h)(["clientEscMenuOptions"]);
-      return (0, Xk.jsx)(ak.e, {
-        label: Bk("touchSettings:actionButtons"),
-        checked: bk.touchActionButtons,
-        onClick: kk => {
-          Rk.c.setClientEscMenuOptions({
-            touchActionButtons: kk
+        t: sb
+      } = (0, Wb.E)(), {
+        clientEscMenuOptions: Ub
+      } = (0, kb.p)(["clientEscMenuOptions"]);
+      return (0, Tb.jsx)(ab.d, {
+        label: sb("touchSettings:actionButtons"),
+        checked: Ub.touchActionButtons,
+        onClick: bb => {
+          kb.d.setClientEscMenuOptions({
+            touchActionButtons: bb
           })
         },
-        circleInfoText: Bk("touchSettings:actionButtonsInfo"),
-        note: Fk
+        circleInfoText: sb("touchSettings:actionButtonsInfo"),
+        note: cb
       })
     }
   },
-  8540: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => GB,
-      e: () => cB
+  8478: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Os,
+      f: () => is
     });
-    var Rk = Bk(1149),
-      tk = Bk(61),
-      ak = Bk(1881),
-      Xk = Bk(1892),
-      bk = Bk(1020),
-      wk = Bk.n(bk),
-      dk = Bk(1389),
-      sk = Bk(22),
-      Vk = Bk(98),
-      Jk = Bk(112),
-      Ak = Bk(4688),
-      ek = Bk(2320),
-      yk = Bk(271),
-      fk = Bk(1897),
-      mk = Bk(1903),
-      Wk = Bk(8548),
-      vk = Bk(8556),
-      ik = Bk(279),
-      Yk = Bk(1069);
-    const Lk = {
+    var kb = sb(1197),
+      Wb = sb(64),
+      ab = sb(1917),
+      Tb = sb(1927),
+      Ub = sb(1033),
+      Ib = sb.n(Ub),
+      Hb = sb(1431),
+      fb = sb(19),
+      Mb = sb(117),
+      Xb = sb(137),
+      nb = sb(4703),
+      mb = sb(2337),
+      lb = sb(316),
+      Qb = sb(1934),
+      eb = sb(1938),
+      Cb = sb(8481),
+      Nb = sb(8485),
+      Vb = sb(334),
+      Lb = sb(1087);
+    const ub = {
       floating: "settingsMenu:joystickFloating",
       fixed_shown: "settingsMenu:joystickFixed",
       fixed_hidden: "settingsMenu:joystickHidden"
     };
-    var Ok = Bk(8565);
-    var Ek = Bk(1418),
-      Sk = Bk(1300),
-      Nk = Bk(1028),
-      Hk = Bk(1355),
-      uk = Bk(2340);
-    const Mk = {
+    var Yb = sb(8487);
+    var hb = sb(1454),
+      Jb = sb(1332),
+      gb = sb(1039),
+      Bb = sb(1381),
+      tb = sb(2355);
+    const yb = {
         jump: "cluster",
         crouch: "cluster",
         attack: "cluster",
@@ -76,305 +76,305 @@ export const modules = {
         game: "cluster",
         arrows: "hotbar",
         inventory: "hotbar",
-        ...Object.fromEntries(uk.D.map((kk => [kk, "menu"])))
+        ...Object.fromEntries(tb.E.map((bb => [bb, "menu"])))
       },
-      gk = kk => uk.w.filter((Fk => Mk[Fk] === kk)),
-      Uk = new Set(gk("cluster")),
-      ck = ["cluster"],
-      Gk = [...ck, ...uk.w.filter((kk => !ck.includes(kk) && !Mk[kk]))],
-      Tk = Gk.flatMap((kk => [kk, ...gk(kk)])).map((kk => ({
-        id: kk,
-        label: `hudLayout:${kk}`,
-        ...uk.v[kk],
-        parent: Mk[kk]
+      Pb = bb => tb.x.filter((cb => yb[cb] === bb)),
+      Db = new Set(Pb("cluster")),
+      Eb = ["cluster"],
+      ib = [...Eb, ...tb.x.filter((bb => !Eb.includes(bb) && !yb[bb]))],
+      Ob = ib.flatMap((bb => [bb, ...Pb(bb)])).map((bb => ({
+        id: bb,
+        label: `hudLayout:${bb}`,
+        ...tb.w[bb],
+        parent: yb[bb]
       }))),
-      rk = Object.fromEntries(Tk.map((kk => [kk.id, kk]))),
-      Dk = "data-hud-el";
+      Gb = Object.fromEntries(Ob.map((bb => [bb.id, bb]))),
+      Kb = "data-hud-el";
 
-    function zk(kk, Fk, Bk, Rk) {
-      const tk = Bk(function(kk, Fk) {
-          return "attack" !== kk || Fk ? rk[kk].label : "hudLayout:attackContext"
-        }(kk, Fk)),
-        ak = Rk[kk];
-      return ak ? Bk("hudLayout:slotWithKey", {
-        slot: tk,
-        key: ak
-      }) : tk
+    function Zb(bb, cb, sb, kb) {
+      const Wb = sb(function(bb, cb) {
+          return "attack" !== bb || cb ? Gb[bb].label : "hudLayout:attackContext"
+        }(bb, cb)),
+        ab = kb[bb];
+      return ab ? sb("hudLayout:slotWithKey", {
+        slot: Wb,
+        key: ab
+      }) : Wb
     }
 
-    function Pk(kk, Fk, Bk, Rk) {
-      return kk.map((kk => zk(kk, Fk, Bk, Rk))).join(", ")
+    function zb(bb, cb, sb, kb) {
+      return bb.map((bb => Zb(bb, cb, sb, kb))).join(", ")
     }
 
-    function hk(kk) {
+    function qb(bb) {
       let {
-        className: Fk,
-        keepPlace: Bk
-      } = kk;
-      return Bk ? (0, Yk.jsx)("div", {
-        className: wk()(Fk, "Placeholder")
+        className: cb,
+        keepPlace: sb
+      } = bb;
+      return sb ? (0, Lb.jsx)("div", {
+        className: Ib()(cb, "Placeholder")
       }) : null
     }
 
-    function qk(kk) {
+    function db(bb) {
       let {
-        id: Fk,
-        elements: Bk,
-        actionButtons: tk,
-        keyNames: ak,
-        className: Xk,
-        keepPlace: bk,
-        onHidden: wk
-      } = kk;
+        id: cb,
+        elements: sb,
+        actionButtons: Wb,
+        keyNames: ab,
+        className: Tb,
+        keepPlace: Ub,
+        onHidden: Ib
+      } = bb;
       const {
-        t: sk
-      } = (0, Rk.x)();
-      if (!rk[Fk].hide) return (0, Yk.jsx)(hk, {
-        className: Xk,
-        keepPlace: bk
+        t: fb
+      } = (0, kb.E)();
+      if (!Gb[cb].hide) return (0, Lb.jsx)(qb, {
+        className: Tb,
+        keepPlace: Ub
       });
-      const Vk = (0, uk.r)(Bk, Fk);
-      return (0, Yk.jsx)(dk.O, {
-        className: Xk,
-        ariaLabel: sk(Vk ? "hudLayout:showElement" : "hudLayout:hideElement", {
-          name: zk(Fk, tk, sk, ak)
+      const Mb = (0, tb.t)(sb, cb);
+      return (0, Lb.jsx)(Hb.M, {
+        className: Tb,
+        ariaLabel: fb(Mb ? "hudLayout:showElement" : "hudLayout:hideElement", {
+          name: Zb(cb, Wb, fb, ab)
         }),
-        pressed: !Vk,
+        pressed: !Mb,
         onClick: () => {
-          wk(Fk, !Vk)
+          Ib(cb, !Mb)
         },
-        children: (0, Yk.jsx)(Nk.d, {
-          name: Vk ? "eye-slash" : "eye"
+        children: (0, Lb.jsx)(gb.b, {
+          name: Mb ? "eye-slash" : "eye"
         })
       })
     }
 
-    function Ck(kk) {
-      var Fk;
+    function Ab(bb) {
+      var cb;
       let {
-        id: Bk,
-        elements: tk,
-        actionButtons: ak,
-        keyNames: Xk,
-        className: bk,
-        keepPlace: wk,
-        onlyWhenMoved: sk,
-        locked: Vk,
-        onReset: Jk
-      } = kk;
+        id: sb,
+        elements: Wb,
+        actionButtons: ab,
+        keyNames: Tb,
+        className: Ub,
+        keepPlace: Ib,
+        onlyWhenMoved: fb,
+        locked: Mb,
+        onReset: Xb
+      } = bb;
       const {
-        t: Ak
-      } = (0, Rk.x)(), ek = rk[Bk], yk = (0, uk.H)(null !== (Fk = tk[Bk]) && void 0 !== Fk ? Fk : uk.n);
-      return !ek.move && !ek.scale || sk && yk ? (0, Yk.jsx)(hk, {
-        className: bk,
-        keepPlace: wk
-      }) : (0, Yk.jsx)(dk.O, {
-        className: bk,
-        disabled: yk || Vk,
-        ariaLabel: Ak("hudLayout:resetElement", {
-          name: zk(Bk, ak, Ak, Xk)
+        t: nb
+      } = (0, kb.E)(), mb = Gb[sb], lb = (0, tb.M)(null !== (cb = Wb[sb]) && void 0 !== cb ? cb : tb.p);
+      return !mb.move && !mb.scale || fb && lb ? (0, Lb.jsx)(qb, {
+        className: Ub,
+        keepPlace: Ib
+      }) : (0, Lb.jsx)(Hb.M, {
+        className: Ub,
+        disabled: lb || Mb,
+        ariaLabel: nb("hudLayout:resetElement", {
+          name: Zb(sb, ab, nb, Tb)
         }),
         analyticsClick: {
           id: "hud_layout.reset_element",
-          value: Bk
+          value: sb
         },
-        onClick: kk => {
-          sk && xk(kk.currentTarget), Jk(Bk)
+        onClick: bb => {
+          fb && Sb(bb.currentTarget), Xb(sb)
         },
-        children: (0, Yk.jsx)(Nk.d, {
+        children: (0, Lb.jsx)(gb.b, {
           name: "rotate-left"
         })
       })
     }
 
-    function Zk(kk) {
+    function wb(bb) {
       let {
-        id: Fk,
-        actionButtons: Bk,
-        keyNames: tk,
-        className: ak,
-        keepPlace: Xk,
-        locked: bk,
-        lockable: wk,
-        onLocked: sk
-      } = kk;
+        id: cb,
+        actionButtons: sb,
+        keyNames: Wb,
+        className: ab,
+        keepPlace: Tb,
+        locked: Ub,
+        lockable: Ib,
+        onLocked: fb
+      } = bb;
       const {
-        t: Vk
-      } = (0, Rk.x)();
-      return wk || bk ? (0, Yk.jsx)(dk.O, {
-        className: ak,
-        ariaLabel: Vk(bk ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
-          name: zk(Fk, Bk, Vk, tk)
+        t: Mb
+      } = (0, kb.E)();
+      return Ib || Ub ? (0, Lb.jsx)(Hb.M, {
+        className: ab,
+        ariaLabel: Mb(Ub ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
+          name: Zb(cb, sb, Mb, Wb)
         }),
-        pressed: bk,
-        active: bk,
+        pressed: Ub,
+        active: Ub,
         analyticsClick: {
           id: "hud_layout.edit",
-          value: `${bk?"unlock":"lock"}:${Fk}`
+          value: `${Ub?"unlock":"lock"}:${cb}`
         },
         onClick: () => {
-          sk(Fk, !bk)
+          fb(cb, !Ub)
         },
-        children: (0, Yk.jsx)(Nk.d, {
-          name: bk ? "lock" : "lock-open"
+        children: (0, Lb.jsx)(gb.b, {
+          name: Ub ? "lock" : "lock-open"
         })
-      }) : (0, Yk.jsx)(hk, {
-        className: ak,
-        keepPlace: Xk
+      }) : (0, Lb.jsx)(qb, {
+        className: ab,
+        keepPlace: Tb
       })
     }
 
-    function pk(kk) {
+    function rb(bb) {
       let {
-        className: Fk,
-        open: Bk,
-        name: tk,
-        onToggle: ak
-      } = kk;
+        className: cb,
+        open: sb,
+        name: Wb,
+        onToggle: ab
+      } = bb;
       const {
-        t: Xk
-      } = (0, Rk.x)();
-      return (0, Yk.jsx)(dk.O, {
-        className: Fk,
-        ariaLabel: Xk(Bk ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
-          name: tk
+        t: Tb
+      } = (0, kb.E)();
+      return (0, Lb.jsx)(Hb.M, {
+        className: cb,
+        ariaLabel: Tb(sb ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
+          name: Wb
         }),
-        pressed: Bk,
+        pressed: sb,
         analyticsClick: {
           id: "hud_layout.children",
-          value: Bk ? "close" : "open"
+          value: sb ? "close" : "open"
         },
         onClick: () => {
-          ak(!Bk)
+          ab(!sb)
         },
-        children: (0, Yk.jsx)(Nk.d, {
-          name: Bk ? "angle-up" : "angle-down"
+        children: (0, Lb.jsx)(gb.b, {
+          name: sb ? "angle-up" : "angle-down"
         })
       })
     }
 
-    function Kk(kk, Fk) {
-      var Bk;
-      kk.contains(document.activeElement) && Fk.focus({
+    function ob(bb, cb) {
+      var sb;
+      bb.contains(document.activeElement) && cb.focus({
         preventScroll: !0
-      }), null === (Bk = (0, Hk.d)()) || void 0 === Bk || Bk.handOverPadFocus(kk, Fk)
+      }), null === (sb = (0, Bb.g)()) || void 0 === sb || sb.handOverPadFocus(bb, cb)
     }
 
-    function xk(kk) {
-      const Fk = kk.closest("[data-hud-row]"),
-        Bk = null === Fk || void 0 === Fk ? void 0 : Fk.querySelector(".HudElementRowName");
-      return !(!Fk || !Bk) && (Kk(Fk, Bk), !0)
+    function Sb(bb) {
+      const cb = bb.closest("[data-hud-row]"),
+        sb = null === cb || void 0 === cb ? void 0 : cb.querySelector(".HudElementRowName");
+      return !(!cb || !sb) && (ob(cb, sb), !0)
     }
-    const jk = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
+    const Rb = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
 
-    function lk(kk, Fk) {
-      return "joystick" === kk && !Fk
+    function vb(bb, cb) {
+      return "joystick" === bb && !cb
     }
 
-    function nk() {
+    function Fb() {
       const {
-        t: kk
-      } = (0, Rk.x)();
-      return (0, Yk.jsx)(dk.O, {
+        t: bb
+      } = (0, kb.E)();
+      return (0, Lb.jsx)(Hb.M, {
         className: "HudFixJoystickButton",
         analyticsClick: {
           id: "hud_layout.fix_joystick"
         },
-        onClick: kk => {
-          const Fk = kk.currentTarget;
-          if (!xk(Fk)) {
-            const kk = function(kk) {
-              var Fk, Bk;
-              const Rk = [kk.previousElementSibling, kk.nextElementSibling].find((kk => kk instanceof HTMLElement && kk.matches(jk)));
-              return null !== (Fk = null !== Rk && void 0 !== Rk ? Rk : null === (Bk = kk.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === Bk ? void 0 : Bk.querySelector(`:is(${jk}):not(.HudFixJoystickButton)`)) && void 0 !== Fk ? Fk : null
-            }(Fk);
-            kk && Kk(Fk, kk)
+        onClick: bb => {
+          const cb = bb.currentTarget;
+          if (!Sb(cb)) {
+            const bb = function(bb) {
+              var cb, sb;
+              const kb = [bb.previousElementSibling, bb.nextElementSibling].find((bb => bb instanceof HTMLElement && bb.matches(Rb)));
+              return null !== (cb = null !== kb && void 0 !== kb ? kb : null === (sb = bb.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === sb ? void 0 : sb.querySelector(`:is(${Rb}):not(.HudFixJoystickButton)`)) && void 0 !== cb ? cb : null
+            }(cb);
+            bb && ob(cb, bb)
           }
-          sk.c.setClientEscMenuOptions({
+          fb.d.setClientEscMenuOptions({
             joystickMode: "fixed_shown"
           })
         },
-        children: kk("hudLayout:fixJoystick")
+        children: bb("hudLayout:fixJoystick")
       })
     }
-    var Ik = Bk(67),
-      Qk = Bk(1230),
-      kF = Bk(1090),
-      FF = Bk(2607),
-      BF = Bk(8567),
-      RF = Bk(2347),
-      tF = Bk(2359),
-      aF = Bk(2943);
-    const XF = ["J", "C", "A", "P", "U", "X", "G"],
-      bF = Object.freeze({
+    var xb = sb(89),
+      jb = sb(1278),
+      pb = sb(1113),
+      bc = sb(2598),
+      cc = sb(8496),
+      sc = sb(2358),
+      kc = sb(2367),
+      Wc = sb(2904);
+    const ac = ["J", "C", "A", "P", "U", "X", "G"],
+      Tc = Object.freeze({
         faces: null,
         names: Object.freeze({}),
         shop: !0,
         bag: !0,
         items: null,
-        rowIcons: uk.D
+        rowIcons: tb.E
       });
 
-    function wF(kk, Fk) {
-      kk.replaceChildren(...[...Fk.childNodes].map((kk => kk.cloneNode(!0))))
+    function Uc(bb, cb) {
+      bb.replaceChildren(...[...cb.childNodes].map((bb => bb.cloneNode(!0))))
     }
-    const dF = kk => ({
-      [Dk]: kk
+    const Ic = bb => ({
+      [Kb]: bb
     });
 
-    function sF(kk) {
+    function Hc(bb) {
       let {
-        id: Fk,
-        slot: Bk,
-        icon: Rk,
-        label: ak,
-        hidden: Xk,
-        className: bk,
-        face: dk
-      } = kk;
-      const sk = (0, tk.useRef)(null);
-      return (0, tk.useLayoutEffect)((() => {
-        dk && sk.current && wF(sk.current, dk)
-      }), [dk]), (0, Yk.jsxs)("div", {
-        className: wk()("TouchKeyHit", `TouchSlot${Bk}`, bk, {
-          HudPreviewGhost: Xk.has(Fk)
+        id: cb,
+        slot: sb,
+        icon: kb,
+        label: ab,
+        hidden: Tb,
+        className: Ub,
+        face: Hb
+      } = bb;
+      const fb = (0, Wb.useRef)(null);
+      return (0, Wb.useLayoutEffect)((() => {
+        Hb && fb.current && Uc(fb.current, Hb)
+      }), [Hb]), (0, Lb.jsxs)("div", {
+        className: Ib()("TouchKeyHit", `TouchSlot${sb}`, Ub, {
+          HudPreviewGhost: Tb.has(cb)
         }),
-        ...dF(Fk),
-        children: [dk && (0, Yk.jsx)("div", {
-          ref: sk,
-          className: wk()("TouchKey", {
-            Labelled: dk.classList.contains("Labelled")
+        ...Ic(cb),
+        children: [Hb && (0, Lb.jsx)("div", {
+          ref: fb,
+          className: Ib()("TouchKey", {
+            Labelled: Hb.classList.contains("Labelled")
           })
-        }), !dk && (0, Yk.jsxs)("div", {
-          className: wk()("TouchKey", {
-            Labelled: void 0 !== ak
+        }), !Hb && (0, Lb.jsxs)("div", {
+          className: Ib()("TouchKey", {
+            Labelled: void 0 !== ab
           }),
-          children: [Rk && (0, Yk.jsx)(Nk.d, {
-            name: Rk
-          }), void 0 !== ak && (0, Yk.jsx)("span", {
+          children: [kb && (0, Lb.jsx)(gb.b, {
+            name: kb
+          }), void 0 !== ab && (0, Lb.jsx)("span", {
             className: "TouchKeyLabel",
-            children: ak
+            children: ab
           })]
         })]
       })
     }
 
-    function VF(kk) {
+    function fc(bb) {
       let {
-        item: Fk,
-        selected: Bk
-      } = kk;
-      const Rk = (0, tk.useRef)(null);
-      return (0, tk.useLayoutEffect)((() => {
-        Rk.current && wF(Rk.current, Fk)
-      }), [Fk]), (0, Yk.jsx)("div", {
-        ref: Rk,
-        className: wk()("InvenItem", {
-          Selected: Bk
+        item: cb,
+        selected: sb
+      } = bb;
+      const kb = (0, Wb.useRef)(null);
+      return (0, Wb.useLayoutEffect)((() => {
+        kb.current && Uc(kb.current, cb)
+      }), [cb]), (0, Lb.jsx)("div", {
+        ref: kb,
+        className: Ib()("InvenItem", {
+          Selected: sb
         })
       })
     }
-    const JF = {
+    const Mc = {
         emotes: "face-smile",
         perspective: "video",
         scoreboard: "list",
@@ -383,148 +383,148 @@ export const modules = {
         invite: "user-plus",
         settings: "gear"
       },
-      AF = kk => void 0 === kk ? {} : {
+      Xc = bb => void 0 === bb ? {} : {
         style: {
-          "--parked": kk
+          "--parked": bb
         }
       };
 
-    function eF(kk) {
+    function nc(bb) {
       let {
-        id: Fk,
-        hidden: Bk,
-        parked: Rk,
-        unslotted: tk = !1
-      } = kk;
-      return (0, Yk.jsx)("div", {
-        className: wk()("TopRightIcon", tF.n[Fk], {
-          HudPreviewGhost: Bk.has(Fk),
-          [RF.b]: void 0 !== Rk,
-          [RF.d]: tk
+        id: cb,
+        hidden: sb,
+        parked: kb,
+        unslotted: Wb = !1
+      } = bb;
+      return (0, Lb.jsx)("div", {
+        className: Ib()("TopRightIcon", kc.l[cb], {
+          HudPreviewGhost: sb.has(cb),
+          [sc.b]: void 0 !== kb,
+          [sc.d]: Wb
         }),
-        ...AF(Rk),
-        children: (0, Yk.jsx)("div", {
+        ...Xc(kb),
+        children: (0, Lb.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          ...dF(Fk),
-          children: (0, Yk.jsx)("div", {
+          ...Ic(cb),
+          children: (0, Lb.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, Yk.jsx)(Nk.d, {
-              name: JF[Fk]
+            children: (0, Lb.jsx)(gb.b, {
+              name: Mc[cb]
             })
           })
         })
       })
     }
 
-    function yF(kk) {
+    function mc(bb) {
       let {
-        portraitPhone: Fk,
-        icons: Bk,
-        hidden: Rk,
-        moved: tk,
-        trayState: ak
-      } = kk;
-      const Xk = Fk ? (0, RF.A)(Bk) : [],
-        bk = Bk.filter((kk => "settings" === kk)),
-        dk = Bk.filter((kk => "settings" !== kk && !Xk.includes(kk))).reverse(),
-        sk = Xk.length > 0 && "gone" === ak,
-        Vk = [...bk, ...sk ? ["tray"] : [], ...dk].filter((kk => "tray" === kk || Rk.has(kk) && !tk.has(kk))),
-        Jk = kk => {
-          const Fk = Vk.indexOf(kk);
-          return Fk < 0 ? void 0 : Fk
+        portraitPhone: cb,
+        icons: sb,
+        hidden: kb,
+        moved: Wb,
+        trayState: ab
+      } = bb;
+      const Tb = cb ? (0, sc.D)(sb) : [],
+        Ub = sb.filter((bb => "settings" === bb)),
+        Hb = sb.filter((bb => "settings" !== bb && !Tb.includes(bb))).reverse(),
+        fb = Tb.length > 0 && "gone" === ab,
+        Mb = [...Ub, ...fb ? ["tray"] : [], ...Hb].filter((bb => "tray" === bb || kb.has(bb) && !Wb.has(bb))),
+        Xb = bb => {
+          const cb = Mb.indexOf(bb);
+          return cb < 0 ? void 0 : cb
         },
-        Ak = (kk, Fk) => (0, Yk.jsx)(eF, {
-          id: kk,
-          hidden: Rk,
-          parked: Fk ? Jk(kk) : void 0,
-          unslotted: Fk && Rk.has(kk) && tk.has(kk)
-        }, kk);
-      return (0, Yk.jsxs)("div", {
-        className: wk()("TopRightIcons TouchInGame", {
-          Column: Fk
+        nb = (bb, cb) => (0, Lb.jsx)(nc, {
+          id: bb,
+          hidden: kb,
+          parked: cb ? Xb(bb) : void 0,
+          unslotted: cb && kb.has(bb) && Wb.has(bb)
+        }, bb);
+      return (0, Lb.jsxs)("div", {
+        className: Ib()("TopRightIcons TouchInGame", {
+          Column: cb
         }),
-        children: [bk.map((kk => Ak(kk, !0))), Xk.length > 0 && (0, Yk.jsxs)("div", {
-          className: wk()("TopRightIcon TopRightTrayToggle Open", {
-            [RF.b]: sk
+        children: [Ub.map((bb => nb(bb, !0))), Tb.length > 0 && (0, Lb.jsxs)("div", {
+          className: Ib()("TopRightIcon TopRightTrayToggle Open", {
+            [sc.b]: fb
           }),
-          ...AF(Jk("tray")),
-          children: [(0, Yk.jsx)("div", {
-            className: wk()("UiItemIcon SmallTextBold", {
-              HudPreviewGhost: "filled" !== ak
+          ...Xc(Xb("tray")),
+          children: [(0, Lb.jsx)("div", {
+            className: Ib()("UiItemIcon SmallTextBold", {
+              HudPreviewGhost: "filled" !== ab
             }),
-            children: (0, Yk.jsx)("div", {
+            children: (0, Lb.jsx)("div", {
               className: "ScaleOnHover",
-              children: (0, Yk.jsx)(Nk.d, {
+              children: (0, Lb.jsx)(gb.b, {
                 name: "ellipsis"
               })
             })
-          }), (0, Yk.jsx)("div", {
+          }), (0, Lb.jsx)("div", {
             className: "TopRightTray",
-            children: Xk.map((kk => Ak(kk, !1)))
+            children: Tb.map((bb => nb(bb, !1)))
           })]
-        }), dk.map((kk => Ak(kk, !0)))]
+        }), Hb.map((bb => nb(bb, !0)))]
       })
     }
 
-    function fF(kk) {
+    function lc(bb) {
       let {
-        next: Fk,
-        hidden: Bk
-      } = kk;
-      return (0, Yk.jsx)("div", {
-        className: wk()("HotBarArrow", Fk ? "Next" : "Previous", {
-          HudPreviewGhost: Bk
+        next: cb,
+        hidden: sb
+      } = bb;
+      return (0, Lb.jsx)("div", {
+        className: Ib()("HotBarArrow", cb ? "Next" : "Previous", {
+          HudPreviewGhost: sb
         }),
-        ...dF("arrows"),
-        children: (0, Yk.jsx)("div", {
+        ...Ic("arrows"),
+        children: (0, Lb.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, Yk.jsx)("div", {
+          children: (0, Lb.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, Yk.jsx)(Nk.d, {
-              name: Fk ? "caret-right" : "caret-left"
+            children: (0, Lb.jsx)(gb.b, {
+              name: cb ? "caret-right" : "caret-left"
             })
           })
         })
       })
     }
 
-    function mF() {
-      return (0, Yk.jsx)("div", {
+    function Qc() {
+      return (0, Lb.jsx)("div", {
         className: "SocialBarContainer",
-        children: (0, Yk.jsx)("div", {
+        children: (0, Lb.jsx)("div", {
           className: "SocialBarOuter",
-          children: (0, Yk.jsx)("div", {
+          children: (0, Lb.jsx)("div", {
             className: "SocialBar",
-            children: (0, Yk.jsx)("div", {
+            children: (0, Lb.jsx)("div", {
               className: "CondensedSocialBarInner",
-              children: (0, Yk.jsx)("div", {
+              children: (0, Lb.jsx)("div", {
                 className: "CondensedSectionsContainer",
-                children: (0, Yk.jsxs)("div", {
+                children: (0, Lb.jsxs)("div", {
                   className: "CondensedSections",
-                  children: [(0, Yk.jsxs)("div", {
+                  children: [(0, Lb.jsxs)("div", {
                     className: "CondensedSection CondensedSectionFriendRequests",
-                    children: [(0, Yk.jsx)("div", {
+                    children: [(0, Lb.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, Yk.jsx)("div", {
+                    }), (0, Lb.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, Yk.jsx)(Nk.d, {
+                      children: (0, Lb.jsx)(gb.b, {
                         name: "user-clock"
                       })
                     })]
-                  }), (0, Yk.jsx)("div", {
+                  }), (0, Lb.jsx)("div", {
                     className: "SocialBarDividerContainer",
-                    children: (0, Yk.jsx)("div", {
+                    children: (0, Lb.jsx)("div", {
                       className: "SocialBarDivider"
                     })
-                  }), (0, Yk.jsxs)("div", {
+                  }), (0, Lb.jsxs)("div", {
                     className: "CondensedSection CondensedSectionOnlineFriends",
-                    children: [(0, Yk.jsx)("div", {
+                    children: [(0, Lb.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, Yk.jsx)("div", {
+                    }), (0, Lb.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, Yk.jsx)(Nk.d, {
+                      children: (0, Lb.jsx)(gb.b, {
                         name: "user"
                       })
                     })]
@@ -536,7 +536,7 @@ export const modules = {
         })
       })
     }
-    const WF = {
+    const ec = {
         J: "jump",
         C: "crouch",
         A: "attack",
@@ -545,12 +545,12 @@ export const modules = {
         X: "extra",
         G: "game"
       },
-      vF = {
+      Cc = {
         J: "JumpKey",
         C: "CrouchKey"
       },
-      iF = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-      YF = {
+      Nc = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      Vc = {
         0: "swords",
         1: "hammer",
         2: "cube",
@@ -558,307 +558,307 @@ export const modules = {
         5: "cookie"
       };
 
-    function oF(kk) {
+    function Lc(bb) {
       let {
-        presence: Fk,
-        portraitPhone: Bk,
-        hidden: tk,
-        actionButtons: ak,
-        joystickFixed: Xk,
-        keysAbove: bk,
-        auraBar: dk,
-        trayState: sk,
-        moved: Jk
-      } = kk;
+        presence: cb,
+        portraitPhone: sb,
+        hidden: Wb,
+        actionButtons: ab,
+        joystickFixed: Tb,
+        keysAbove: Ub,
+        auraBar: Hb,
+        trayState: fb,
+        moved: Xb
+      } = bb;
       const {
-        t: Ak
-      } = (0, Rk.x)(), {
-        faces: ek,
-        items: yk
-      } = Fk, fk = kk => ({
-        HudPreviewGhost: tk.has(kk)
+        t: nb
+      } = (0, kb.E)(), {
+        faces: mb,
+        items: lb
+      } = cb, Qb = bb => ({
+        HudPreviewGhost: Wb.has(bb)
       });
-      return (0, Yk.jsxs)("div", {
+      return (0, Lb.jsxs)("div", {
         className: "InGameUi HudPreviewInGameUi",
-        children: [(0, Yk.jsx)("div", {
+        children: [(0, Lb.jsx)("div", {
           className: "InGameHeaderContainer Touchscreen",
-          children: (0, Yk.jsxs)("div", {
+          children: (0, Lb.jsxs)("div", {
             className: "InGameHeader",
-            children: [(0, Yk.jsx)("div", {
+            children: [(0, Lb.jsx)("div", {
               className: "InGameHeaderLogo",
               children: "bloxd.io"
-            }), (0, Yk.jsx)("div", {
+            }), (0, Lb.jsx)("div", {
               className: "InGameHeaderSpacer"
-            }), (0, Yk.jsx)("div", {
+            }), (0, Lb.jsx)("div", {
               className: "InGameHeaderGameName",
-              children: Ak("hudLayout:previewGameName")
+              children: nb("hudLayout:previewGameName")
             })]
           })
-        }), (0, Yk.jsx)("div", {
+        }), (0, Lb.jsx)("div", {
           className: "TopLeftElements",
-          children: (0, Yk.jsx)("div", {
+          children: (0, Lb.jsx)("div", {
             className: "InGameHeaderAndChat",
-            children: (0, Yk.jsxs)("div", {
+            children: (0, Lb.jsxs)("div", {
               className: "Chat",
-              children: [(0, Yk.jsx)("div", {
+              children: [(0, Lb.jsx)("div", {
                 className: "ChatMessages HideScrollbar",
-                children: [Ak("hudLayout:previewChatLine"), Ak("hudLayout:previewChatJoined", {
+                children: [nb("hudLayout:previewChatLine"), nb("hudLayout:previewChatJoined", {
                   name: "Steve"
-                }), Ak("hudLayout:previewChatJoined", {
+                }), nb("hudLayout:previewChatJoined", {
                   name: "Alex"
-                })].map((kk => (0, Yk.jsx)("div", {
+                })].map((bb => (0, Lb.jsx)("div", {
                   className: "MessageWrapper",
-                  children: (0, Yk.jsx)("div", {
+                  children: (0, Lb.jsx)("div", {
                     className: "TextFromServer",
-                    children: (0, Yk.jsx)("div", {
+                    children: (0, Lb.jsx)("div", {
                       className: "IndividualText",
-                      children: kk
+                      children: bb
                     })
                   })
-                }, kk)))
-              }), (0, Yk.jsx)("button", {
+                }, bb)))
+              }), (0, Lb.jsx)("button", {
                 type: "button",
                 tabIndex: -1,
-                className: wk()("ChatIconWrapper SmallTextLight", fk("chat")),
-                ...dF("chat"),
-                children: (0, Yk.jsx)(Nk.d, {
+                className: Ib()("ChatIconWrapper SmallTextLight", Qb("chat")),
+                ...Ic("chat"),
+                children: (0, Lb.jsx)(gb.b, {
                   name: "comment-dots",
                   className: "ChatIcon"
                 })
               })]
             })
           })
-        }), (0, Yk.jsx)("div", {
+        }), (0, Lb.jsx)("div", {
           className: "RightElements RightElementsTouchscreen",
-          children: (0, Yk.jsxs)("div", {
+          children: (0, Lb.jsxs)("div", {
             className: "TopRightElements",
-            children: [(0, Yk.jsx)("div", {
+            children: [(0, Lb.jsx)("div", {
               className: "TopRightElementsLeft",
-              children: (0, Yk.jsx)("div", {
+              children: (0, Lb.jsx)("div", {
                 className: "TopRightIconsContainer",
-                ...dF("menu"),
-                children: (0, Yk.jsx)(yF, {
-                  portraitPhone: Bk,
-                  icons: Fk.rowIcons,
-                  hidden: tk,
-                  trayState: sk,
-                  moved: Jk
+                ...Ic("menu"),
+                children: (0, Lb.jsx)(mc, {
+                  portraitPhone: sb,
+                  icons: cb.rowIcons,
+                  hidden: Wb,
+                  trayState: fb,
+                  moved: Xb
                 })
               })
-            }), Vk.featureFlags.useSocialFeatures && (0, Yk.jsx)("div", {
+            }), Mb.featureFlags.useSocialFeatures && (0, Lb.jsx)("div", {
               className: "TopRightElementsRight",
-              children: (0, Yk.jsx)(mF, {})
+              children: (0, Lb.jsx)(Qc, {})
             })]
           })
-        }), (0, Yk.jsx)("div", {
+        }), (0, Lb.jsx)("div", {
           className: "HudPreviewCrosshair"
-        }), (0, Yk.jsx)("div", {
+        }), (0, Lb.jsx)("div", {
           className: "TouchInteractHit HudPreviewInteract",
-          children: (0, Yk.jsxs)("div", {
+          children: (0, Lb.jsxs)("div", {
             className: "TouchInteractKey",
-            ...dF("interact"),
-            children: [(0, Yk.jsx)("div", {
+            ...Ic("interact"),
+            children: [(0, Lb.jsx)("div", {
               className: "TouchInteractIcon",
-              children: (0, Yk.jsx)(Nk.d, {
+              children: (0, Lb.jsx)(gb.b, {
                 name: "hand-back-point-up"
               })
-            }), (0, Yk.jsx)("div", {
-              children: Ak("hudLayout:previewInteract")
+            }), (0, Lb.jsx)("div", {
+              children: nb("hudLayout:previewInteract")
             })]
           })
-        }), (0, Yk.jsx)("div", {
+        }), (0, Lb.jsx)("div", {
           className: "BottomCentre",
-          children: (0, Yk.jsxs)("div", {
+          children: (0, Lb.jsxs)("div", {
             className: "BottomElements",
-            children: [(0, Yk.jsx)("div", {
+            children: [(0, Lb.jsx)("div", {
               className: "BottomLeftElements Touch"
-            }), (0, Yk.jsxs)("div", {
+            }), (0, Lb.jsxs)("div", {
               className: "BottomMiddleElements",
-              children: [(0, Yk.jsx)("div", {
+              children: [(0, Lb.jsx)("div", {
                 className: "BottomScreenStatBarList",
-                ...dF("hotbar"),
-                children: (0, Yk.jsx)("div", {
+                ...Ic("hotbar"),
+                children: (0, Lb.jsx)("div", {
                   className: "BottomScreenStatBarWrapper",
-                  children: (0, Yk.jsxs)("div", {
+                  children: (0, Lb.jsxs)("div", {
                     className: "BottomScreenStatBarBackground",
-                    children: [(0, Yk.jsx)("div", {
+                    children: [(0, Lb.jsx)("div", {
                       className: "BottomScreenStatBar HealthBar",
                       style: {
                         transform: "scaleX(0.8)",
                         transformOrigin: "left center"
                       }
-                    }), (0, Yk.jsxs)("div", {
+                    }), (0, Lb.jsxs)("div", {
                       className: "BottomScreenStatBarText SmallTextBold",
-                      children: [(0, Yk.jsx)(Nk.d, {
+                      children: [(0, Lb.jsx)(gb.b, {
                         name: "heart"
                       }), " 80/100"]
                     })]
                   })
                 })
-              }), dk && (0, Yk.jsxs)("div", {
+              }), Hb && (0, Lb.jsxs)("div", {
                 className: "AuraBarWrapper",
-                children: [(0, Yk.jsxs)("div", {
+                children: [(0, Lb.jsxs)("div", {
                   className: "AuraBarLabel SmallTextBold",
-                  children: [(0, Yk.jsx)("img", {
+                  children: [(0, Lb.jsx)("img", {
                     className: "AuraBarLabelImage",
-                    src: (0, aF.i)("glint"),
+                    src: (0, Wc.g)("glint"),
                     alt: ""
-                  }), (0, Yk.jsx)("div", {
+                  }), (0, Lb.jsx)("div", {
                     className: "AuraBarLabelText",
                     children: "0"
                   })]
-                }), (0, Yk.jsx)("div", {
+                }), (0, Lb.jsx)("div", {
                   className: "AuraBar",
-                  children: (0, Yk.jsx)("div", {
+                  children: (0, Lb.jsx)("div", {
                     className: "AuraBarBackground",
                     style: {
                       width: "40%"
                     }
                   })
                 })]
-              }), (0, Yk.jsx)("div", {
+              }), (0, Lb.jsx)("div", {
                 className: "HotBarRow",
-                children: (0, Yk.jsx)("div", {
-                  className: wk()("HotBarContainer Touch", {
-                    KeysAbove: bk
+                children: (0, Lb.jsx)("div", {
+                  className: Ib()("HotBarContainer Touch", {
+                    KeysAbove: Ub
                   }),
-                  children: (0, Yk.jsxs)("div", {
+                  children: (0, Lb.jsxs)("div", {
                     className: "HotBar",
-                    ...dF("hotbar"),
-                    children: [(0, Yk.jsxs)("div", {
-                      className: wk()("TouchInventoryKeys", {
-                        NoAuraBar: !dk
+                    ...Ic("hotbar"),
+                    children: [(0, Lb.jsxs)("div", {
+                      className: Ib()("TouchInventoryKeys", {
+                        NoAuraBar: !Hb
                       }),
-                      children: [(0, Yk.jsx)("div", {
-                        className: wk()("TouchInventoryKey ShopKey", fk("inventory"), {
-                          Hidden: !Fk.shop
+                      children: [(0, Lb.jsx)("div", {
+                        className: Ib()("TouchInventoryKey ShopKey", Qb("inventory"), {
+                          Hidden: !cb.shop
                         }),
-                        ...dF("inventory"),
-                        children: (0, Yk.jsx)("div", {
+                        ...Ic("inventory"),
+                        children: (0, Lb.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, Yk.jsx)("div", {
+                          children: (0, Lb.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, Yk.jsx)(Nk.d, {
+                            children: (0, Lb.jsx)(gb.b, {
                               name: "cart-shopping"
                             })
                           })
                         })
-                      }), (0, Yk.jsx)("div", {
-                        className: wk()("TouchInventoryKey BagKey", fk("inventory"), {
-                          Hidden: !Fk.bag
+                      }), (0, Lb.jsx)("div", {
+                        className: Ib()("TouchInventoryKey BagKey", Qb("inventory"), {
+                          Hidden: !cb.bag
                         }),
-                        ...dF("inventory"),
-                        children: (0, Yk.jsx)("div", {
+                        ...Ic("inventory"),
+                        children: (0, Lb.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, Yk.jsx)("div", {
+                          children: (0, Lb.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, Yk.jsx)(Nk.d, {
+                            children: (0, Lb.jsx)(gb.b, {
                               name: "backpack"
                             })
                           })
                         })
                       })]
-                    }), (0, Yk.jsx)(fF, {
+                    }), (0, Lb.jsx)(lc, {
                       next: !1,
-                      hidden: tk.has("arrows")
-                    }), (0, Yk.jsxs)("div", {
+                      hidden: Wb.has("arrows")
+                    }), (0, Lb.jsxs)("div", {
                       className: "HotBarGameItemsContainer",
-                      children: [null !== yk && yk.map(((kk, Fk) => (0, Yk.jsx)(VF, {
-                        item: kk,
-                        selected: kk.classList.contains("Selected")
-                      }, Fk))), null === yk && iF.map((kk => {
-                        const Fk = YF[kk];
-                        return (0, Yk.jsx)("div", {
-                          className: wk()("InvenItem", {
-                            Selected: 0 === kk
+                      children: [null !== lb && lb.map(((bb, cb) => (0, Lb.jsx)(fc, {
+                        item: bb,
+                        selected: bb.classList.contains("Selected")
+                      }, cb))), null === lb && Nc.map((bb => {
+                        const cb = Vc[bb];
+                        return (0, Lb.jsx)("div", {
+                          className: Ib()("InvenItem", {
+                            Selected: 0 === bb
                           }),
-                          children: Fk && (0, Yk.jsx)("div", {
+                          children: cb && (0, Lb.jsx)("div", {
                             className: "HudPreviewItem",
-                            children: (0, Yk.jsx)(Nk.d, {
-                              name: Fk
+                            children: (0, Lb.jsx)(gb.b, {
+                              name: cb
                             })
                           })
-                        }, kk)
+                        }, bb)
                       }))]
-                    }), (0, Yk.jsx)(fF, {
+                    }), (0, Lb.jsx)(lc, {
                       next: !0,
-                      hidden: tk.has("arrows")
+                      hidden: Wb.has("arrows")
                     })]
                   })
                 })
               })]
-            }), (0, Yk.jsx)("div", {
+            }), (0, Lb.jsx)("div", {
               className: "BottomRightElements",
-              children: (0, Yk.jsxs)("div", {
+              children: (0, Lb.jsxs)("div", {
                 className: "TouchComponentsButtons",
-                children: [null !== ek && XF.map((kk => {
-                  const Fk = ek[kk];
-                  return Fk && (0, Yk.jsx)(sF, {
-                    id: WF[kk],
-                    slot: kk,
-                    face: Fk,
-                    className: vF[kk],
-                    hidden: tk
-                  }, kk)
-                })), null === ek && (0, Yk.jsxs)(Yk.Fragment, {
-                  children: [(0, Yk.jsx)(sF, {
+                children: [null !== mb && ac.map((bb => {
+                  const cb = mb[bb];
+                  return cb && (0, Lb.jsx)(Hc, {
+                    id: ec[bb],
+                    slot: bb,
+                    face: cb,
+                    className: Cc[bb],
+                    hidden: Wb
+                  }, bb)
+                })), null === mb && (0, Lb.jsxs)(Lb.Fragment, {
+                  children: [(0, Lb.jsx)(Hc, {
                     id: "jump",
                     slot: "J",
                     icon: "arrow-up-from-line",
                     className: "JumpKey",
-                    hidden: tk
-                  }), (0, Yk.jsx)(sF, {
+                    hidden: Wb
+                  }), (0, Lb.jsx)(Hc, {
                     id: "crouch",
                     slot: "C",
                     icon: "arrow-down-to-line",
                     className: "CrouchKey",
-                    hidden: tk
-                  }), ak && (0, Yk.jsxs)(Yk.Fragment, {
-                    children: [(0, Yk.jsx)(sF, {
+                    hidden: Wb
+                  }), ab && (0, Lb.jsxs)(Lb.Fragment, {
+                    children: [(0, Lb.jsx)(Hc, {
                       id: "attack",
                       slot: "A",
                       icon: "swords",
-                      hidden: tk
-                    }), (0, Yk.jsx)(sF, {
+                      hidden: Wb
+                    }), (0, Lb.jsx)(Hc, {
                       id: "use",
                       slot: "U",
                       icon: "hand-back-point-up",
-                      hidden: tk
+                      hidden: Wb
                     })]
-                  }), !ak && (0, Yk.jsx)(sF, {
+                  }), !ab && (0, Lb.jsx)(Hc, {
                     id: "attack",
                     slot: "P",
                     icon: "crosshairs",
-                    label: Ak("touchKeys:scope"),
-                    hidden: tk
-                  }), (0, Yk.jsx)(sF, {
+                    label: nb("touchKeys:scope"),
+                    hidden: Wb
+                  }), (0, Lb.jsx)(Hc, {
                     id: "extra",
                     slot: "X",
                     icon: "feather-pointed",
-                    label: Ak("touchKeys:fly"),
-                    hidden: tk
-                  }), (0, Yk.jsx)(sF, {
+                    label: nb("touchKeys:fly"),
+                    hidden: Wb
+                  }), (0, Lb.jsx)(Hc, {
                     id: "game",
                     slot: "G",
                     icon: "bolt",
-                    hidden: tk
+                    hidden: Wb
                   })]
                 })]
               })
             })]
           })
-        }), (0, Yk.jsx)("div", {
+        }), (0, Lb.jsx)("div", {
           className: "TouchMovementWrapper",
-          children: (0, Yk.jsx)("div", {
+          children: (0, Lb.jsx)("div", {
             className: "JoystickZone HudPreviewJoystickZone",
-            children: (0, Yk.jsxs)("div", {
-              className: wk()("Joystick Resting HudPreviewJoystick", {
-                Floating: !Xk
+            children: (0, Lb.jsxs)("div", {
+              className: Ib()("Joystick Resting HudPreviewJoystick", {
+                Floating: !Tb
               }),
-              ...dF("joystick"),
-              children: [(0, Yk.jsx)("div", {
+              ...Ic("joystick"),
+              children: [(0, Lb.jsx)("div", {
                 className: "JoystickBase"
-              }), (0, Yk.jsx)("div", {
+              }), (0, Lb.jsx)("div", {
                 className: "JoystickKnob"
               })]
             })
@@ -867,1015 +867,1015 @@ export const modules = {
       })
     }
 
-    function LF() {
-      const [kk, Fk] = (0, tk.useState)({}), Bk = (0, tk.useCallback)((kk => {
-        Fk((Fk => [...new Set([...Object.keys(Fk), ...Object.keys(kk)])].every((Bk => Fk[Bk] === kk[Bk])) ? Fk : kk))
+    function uc() {
+      const [bb, cb] = (0, Wb.useState)({}), sb = (0, Wb.useCallback)((bb => {
+        cb((cb => [...new Set([...Object.keys(cb), ...Object.keys(bb)])].every((sb => cb[sb] === bb[sb])) ? cb : bb))
       }), []);
-      return [kk, Bk]
+      return [bb, sb]
     }
-    const OF = .05;
+    const Yc = .05;
 
-    function EF(kk) {
-      var Fk;
+    function hc(bb) {
+      var cb;
       let {
-        selected: Bk,
-        layout: tk,
-        actionButtons: ak,
-        keyNames: Xk,
-        overlaps: bk,
-        scaleCaps: sk,
-        joystickFixed: Vk,
-        onScale: Jk,
-        onHidden: Ak,
-        onReset: ek,
-        locked: yk,
-        lockable: fk,
-        onLocked: mk,
-        extra: Wk
-      } = kk;
+        selected: sb,
+        layout: Wb,
+        actionButtons: ab,
+        keyNames: Tb,
+        overlaps: Ub,
+        scaleCaps: fb,
+        joystickFixed: Mb,
+        onScale: Xb,
+        onHidden: nb,
+        onReset: mb,
+        locked: lb,
+        lockable: Qb,
+        onLocked: eb,
+        extra: Cb
+      } = bb;
       const {
-        t: vk
-      } = (0, Rk.x)(), ik = Bk ? rk[Bk] : null, Lk = null !== Bk && yk.has(Bk), Ok = (Bk && tk.hudElements[Bk] || uk.n)[2], Ek = null !== (Fk = Bk && sk[Bk]) && void 0 !== Fk ? Fk : uk.i, Sk = kk => {
-        Bk && Jk(Bk, Math.min(Ek, Math.round(100 * (Ok + .1 * kk)) / 100))
+        t: Nb
+      } = (0, kb.E)(), Vb = sb ? Gb[sb] : null, ub = null !== sb && lb.has(sb), Yb = (sb && Wb.hudElements[sb] || tb.p)[2], hb = null !== (cb = sb && fb[sb]) && void 0 !== cb ? cb : tb.h, Jb = bb => {
+        sb && Xb(sb, Math.min(hb, Math.round(100 * (Yb + .1 * bb)) / 100))
       };
-      return (0, Yk.jsxs)(Yk.Fragment, {
-        children: [(0, Yk.jsxs)("div", {
-          className: wk()("HudQuickName SmallTextBold", {
-            Overlap: bk.length > 0
+      return (0, Lb.jsxs)(Lb.Fragment, {
+        children: [(0, Lb.jsxs)("div", {
+          className: Ib()("HudQuickName SmallTextBold", {
+            Overlap: Ub.length > 0
           }),
-          children: [bk.length > 0 && (0, Yk.jsx)(Nk.d, {
+          children: [Ub.length > 0 && (0, Lb.jsx)(gb.b, {
             name: "triangle-exclamation"
-          }), ik ? zk(ik.id, ak, vk, Xk) : vk("hudLayout:fullScreenHint"), bk.length > 0 && (0, Yk.jsx)("span", {
+          }), Vb ? Zb(Vb.id, ab, Nb, Tb) : Nb("hudLayout:fullScreenHint"), Ub.length > 0 && (0, Lb.jsx)("span", {
             className: "HudQuickOverlap",
-            children: vk("hudLayout:overlapsShort", {
-              names: Pk(bk, ak, vk, Xk)
+            children: Nb("hudLayout:overlapsShort", {
+              names: zb(Ub, ab, Nb, Tb)
             })
           })]
-        }), (null === ik || void 0 === ik ? void 0 : ik.scale) && (0, Yk.jsxs)("div", {
+        }), (null === Vb || void 0 === Vb ? void 0 : Vb.scale) && (0, Lb.jsxs)("div", {
           className: "HudQuickSize",
-          children: [(0, Yk.jsx)(dk.O, {
-            disabled: Lk || Ok <= uk.j,
-            ariaLabel: vk("hudLayout:smaller"),
+          children: [(0, Lb.jsx)(Hb.M, {
+            disabled: ub || Yb <= tb.k,
+            ariaLabel: Nb("hudLayout:smaller"),
             onClick: () => {
-              Sk(-1)
+              Jb(-1)
             },
-            children: (0, Yk.jsx)(Nk.d, {
+            children: (0, Lb.jsx)(gb.b, {
               name: "minus"
             })
-          }), (0, Yk.jsx)("span", {
+          }), (0, Lb.jsx)("span", {
             className: "HudQuickSizeValue",
-            children: `${Math.round(100*Ok)}%`
-          }), (0, Yk.jsx)(dk.O, {
-            disabled: Lk || Ok >= Ek,
-            ariaLabel: vk("hudLayout:larger"),
+            children: `${Math.round(100*Yb)}%`
+          }), (0, Lb.jsx)(Hb.M, {
+            disabled: ub || Yb >= hb,
+            ariaLabel: Nb("hudLayout:larger"),
             onClick: () => {
-              Sk(1)
+              Jb(1)
             },
-            children: (0, Yk.jsx)(Nk.d, {
+            children: (0, Lb.jsx)(gb.b, {
               name: "plus"
             })
           })]
-        }), (ik || Wk) && (0, Yk.jsxs)("div", {
+        }), (Vb || Cb) && (0, Lb.jsxs)("div", {
           className: "HudQuickActions",
-          children: [ik && (0, Yk.jsxs)(Yk.Fragment, {
-            children: [(0, Yk.jsx)(Zk, {
-              id: ik.id,
-              actionButtons: ak,
-              keyNames: Xk,
-              locked: Lk,
-              lockable: fk(ik.id),
-              onLocked: mk
-            }), (0, Yk.jsx)(qk, {
-              id: ik.id,
-              elements: tk.hudElements,
-              actionButtons: ak,
-              keyNames: Xk,
-              onHidden: Ak
-            }), (0, Yk.jsx)(Ck, {
-              id: ik.id,
-              elements: tk.hudElements,
-              actionButtons: ak,
-              keyNames: Xk,
-              locked: Lk,
-              onReset: ek
-            }), lk(ik.id, Vk) && (0, Yk.jsx)(nk, {})]
-          }), Wk]
+          children: [Vb && (0, Lb.jsxs)(Lb.Fragment, {
+            children: [(0, Lb.jsx)(wb, {
+              id: Vb.id,
+              actionButtons: ab,
+              keyNames: Tb,
+              locked: ub,
+              lockable: Qb(Vb.id),
+              onLocked: eb
+            }), (0, Lb.jsx)(db, {
+              id: Vb.id,
+              elements: Wb.hudElements,
+              actionButtons: ab,
+              keyNames: Tb,
+              onHidden: nb
+            }), (0, Lb.jsx)(Ab, {
+              id: Vb.id,
+              elements: Wb.hudElements,
+              actionButtons: ab,
+              keyNames: Tb,
+              locked: ub,
+              onReset: mb
+            }), vb(Vb.id, Mb) && (0, Lb.jsx)(Fb, {})]
+          }), Cb]
         })]
       })
     }
-    var SF = Bk(1083),
-      NF = Bk(4148);
-    const HF = "HudPreviewDoc",
-      uF = {
+    var Jc = sb(1104),
+      gc = sb(4152);
+    const Bc = "HudPreviewDoc",
+      tc = {
         hotbar: "TouchHotbar",
         keysAbove: "TouchHotbarKeysAbove",
         hasShop: "TouchHotbarHasShop",
         hasBag: "TouchHotbarHasBag"
       },
-      MF = new Set([HF, ...Object.values(uF)]),
-      gF = new Set(uk.w.map(tF.H)),
-      UF = new Set(tF.h),
-      cF = 'style, link[rel="stylesheet"]';
+      yc = new Set([Bc, ...Object.values(tc)]),
+      Pc = new Set(tb.x.map(kc.x)),
+      Dc = new Set(kc.h),
+      Ec = 'style, link[rel="stylesheet"]';
 
-    function GF(kk, Fk, Bk, Rk) {
-      const tk = new Map,
-        ak = new Set,
-        Xk = new URL(kk.baseURI).origin,
-        bk = Fk => {
-          var Bk;
-          if ("LINK" !== Fk.nodeName) return !0;
-          const Rk = null === (Bk = Fk.getAttribute("href")) || void 0 === Bk ? void 0 : Bk.trim();
-          if (!Rk) return !1;
+    function ic(bb, cb, sb, kb) {
+      const Wb = new Map,
+        ab = new Set,
+        Tb = new URL(bb.baseURI).origin,
+        Ub = cb => {
+          var sb;
+          if ("LINK" !== cb.nodeName) return !0;
+          const kb = null === (sb = cb.getAttribute("href")) || void 0 === sb ? void 0 : sb.trim();
+          if (!kb) return !1;
           try {
-            return new URL(Rk, kk.baseURI).origin === Xk
+            return new URL(kb, bb.baseURI).origin === Tb
           } catch {
             return !1
           }
         };
-      let wk = null;
-      const dk = () => {
-          wk !== (0 === ak.size) && (wk = 0 === ak.size, null === Rk || void 0 === Rk || Rk(wk))
+      let Ib = null;
+      const Hb = () => {
+          Ib !== (0 === ab.size) && (Ib = 0 === ab.size, null === kb || void 0 === kb || kb(Ib))
         },
-        sk = kk => {
-          const Fk = kk.cloneNode(!0);
-          if ("LINK" === Fk.tagName) {
-            ak.add(Fk);
-            const kk = () => {
-              ak.delete(Fk), dk()
+        fb = bb => {
+          const cb = bb.cloneNode(!0);
+          if ("LINK" === cb.tagName) {
+            ab.add(cb);
+            const bb = () => {
+              ab.delete(cb), Hb()
             };
-            Fk.addEventListener("load", kk), Fk.addEventListener("error", kk), Bk && Fk.addEventListener("load", Bk)
+            cb.addEventListener("load", bb), cb.addEventListener("error", bb), sb && cb.addEventListener("load", sb)
           }
-          return Fk
+          return cb
         },
-        Vk = () => {
-          const Rk = function(kk) {
-              const Fk = [...kk.body.children].filter((kk => kk.matches(cF)));
-              return [...kk.head.querySelectorAll(cF), ...Fk]
-            }(kk).filter(bk),
-            Xk = new Set(Rk);
-          for (const [kk, Fk] of tk) Xk.has(kk) || (Fk.remove(), tk.delete(kk), ak.delete(Fk));
-          let wk = null;
-          for (let kk = Rk.length - 1; kk >= 0; kk--) {
-            const ak = Rk[kk];
-            let Xk = tk.get(ak);
-            Xk ? "STYLE" === ak.tagName && Xk.textContent !== ak.textContent && (Xk.textContent = ak.textContent, null === Bk || void 0 === Bk || Bk()) : (Xk = sk(ak), tk.set(ak, Xk), Fk.head.insertBefore(Xk, wk)), wk = Xk
+        Mb = () => {
+          const kb = function(bb) {
+              const cb = [...bb.body.children].filter((bb => bb.matches(Ec)));
+              return [...bb.head.querySelectorAll(Ec), ...cb]
+            }(bb).filter(Ub),
+            Tb = new Set(kb);
+          for (const [bb, cb] of Wb) Tb.has(bb) || (cb.remove(), Wb.delete(bb), ab.delete(cb));
+          let Ib = null;
+          for (let bb = kb.length - 1; bb >= 0; bb--) {
+            const ab = kb[bb];
+            let Tb = Wb.get(ab);
+            Tb ? "STYLE" === ab.tagName && Tb.textContent !== ab.textContent && (Tb.textContent = ab.textContent, null === sb || void 0 === sb || sb()) : (Tb = fb(ab), Wb.set(ab, Tb), cb.head.insertBefore(Tb, Ib)), Ib = Tb
           }
-          dk()
+          Hb()
         };
-      Vk();
-      const Jk = new MutationObserver(Vk);
-      return Jk.observe(kk.head, {
+      Mb();
+      const Xb = new MutationObserver(Mb);
+      return Xb.observe(bb.head, {
         childList: !0,
         subtree: !0,
         characterData: !0
-      }), Jk.observe(kk.body, {
+      }), Xb.observe(bb.body, {
         childList: !0
       }), () => {
-        Jk.disconnect()
+        Xb.disconnect()
       }
     }
 
-    function TF(kk, Fk, Bk) {
+    function Oc(bb, cb, sb) {
       let {
-        keysAbove: Rk
-      } = Bk;
-      const tk = [...kk.documentElement.classList].filter((kk => !MF.has(kk) && !UF.has(kk))),
-        ak = [...Fk.documentElement.classList].filter((kk => UF.has(kk))),
-        Xk = [HF, uF.hotbar, uF.hasShop, uF.hasBag];
-      Rk && Xk.push(uF.keysAbove), Fk.documentElement.className = [...tk, ...Xk, ...ak].join(" ")
+        keysAbove: kb
+      } = sb;
+      const Wb = [...bb.documentElement.classList].filter((bb => !yc.has(bb) && !Dc.has(bb))),
+        ab = [...cb.documentElement.classList].filter((bb => Dc.has(bb))),
+        Tb = [Bc, tc.hotbar, tc.hasShop, tc.hasBag];
+      kb && Tb.push(tc.keysAbove), cb.documentElement.className = [...Wb, ...Tb, ...ab].join(" ")
     }
-    const rF = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
+    const Gc = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
 
-    function DF(kk, Fk, Bk, Rk, tk) {
-      const ak = (0, uk.z)(Bk, Rk, "joystick"),
-        Xk = (0, tF.I)((0, tF.W)(Bk, Rk, tk), Rk),
-        bk = Xk.classes.filter((kk => !gF.has(kk))),
-        wk = Fk.documentElement;
-      (0, tF._)({
-        ...Xk,
-        classes: bk
+    function Kc(bb, cb, sb, kb, Wb) {
+      const ab = (0, tb.A)(sb, kb, "joystick"),
+        Tb = (0, kc.A)((0, kc.L)(sb, kb, Wb), kb),
+        Ub = Tb.classes.filter((bb => !Pc.has(bb))),
+        Ib = cb.documentElement;
+      (0, kc.R)({
+        ...Tb,
+        classes: Ub
       }, {
-        vars: wk,
-        safe: wk,
-        classes: wk
+        vars: Ib,
+        safe: Ib,
+        classes: Ib
       });
-      const dk = (0, tF.N)(Bk.hudLayouts[Rk].hudSafe, window.innerWidth, window.innerHeight, zF(), (0, tF.X)(Fk));
-      wk.style.setProperty("--preview-joystick-shift-left", `${dk[3]}px`), wk.style.setProperty("--preview-joystick-shift-bottom", `${dk[2]}px`), wk.style.setProperty("--preview-joystick-scale", String(ak[2])), (0, NF.d)(wk, Fk, Bk, Rk);
-      for (const sk of rF) wk.style.setProperty(sk, kk.documentElement.style.getPropertyValue(sk) || "0px")
+      const Hb = (0, kc.D)(sb.hudLayouts[kb].hudSafe, window.innerWidth, window.innerHeight, Zc(), (0, kc.O)(cb));
+      Ib.style.setProperty("--preview-joystick-shift-left", `${Hb[3]}px`), Ib.style.setProperty("--preview-joystick-shift-bottom", `${Hb[2]}px`), Ib.style.setProperty("--preview-joystick-scale", String(ab[2])), (0, gc.i)(Ib, cb, sb, kb);
+      for (const fb of Gc) Ib.style.setProperty(fb, bb.documentElement.style.getPropertyValue(fb) || "0px")
     }
 
-    function zF() {
-      return (0, tF.U)(sk.c.get("notchSize"), window.innerWidth, window.innerHeight)
+    function Zc() {
+      return (0, kc.I)(fb.d.get("notchSize"), window.innerWidth, window.innerHeight)
     }
 
-    function PF(kk) {
-      return (0, tF.z)(zF(), (0, tF.X)(kk))
+    function zc(bb) {
+      return (0, kc.u)(Zc(), (0, kc.O)(bb))
     }
 
-    function hF(kk, Fk, Bk) {
-      const Rk = kk.documentElement.style,
-        tk = (0, tF.R)(Fk),
-        ak = Rk.getPropertyValue(tk);
+    function qc(bb, cb, sb) {
+      const kb = bb.documentElement.style,
+        Wb = (0, kc.F)(cb),
+        ab = kb.getPropertyValue(Wb);
       try {
-        return Bk((kk => {
-          Rk.setProperty(tk, String(kk))
+        return sb((bb => {
+          kb.setProperty(Wb, String(bb))
         }))
       } finally {
-        "" === ak ? Rk.removeProperty(tk) : Rk.setProperty(tk, ak)
+        "" === ab ? kb.removeProperty(Wb) : kb.setProperty(Wb, ab)
       }
     }
 
-    function qF(kk, Fk) {
-      const [Bk, Rk] = hF(kk, "hotbar", (Fk => {
-        const Bk = Bk => {
-          var Rk, tk;
-          return Fk(Bk), null !== (Rk = null === (tk = kk.querySelector(".HotBarGameItemsContainer")) || void 0 === tk ? void 0 : tk.getBoundingClientRect().width) && void 0 !== Rk ? Rk : 0
+    function dc(bb, cb) {
+      const [sb, kb] = qc(bb, "hotbar", (cb => {
+        const sb = sb => {
+          var kb, Wb;
+          return cb(sb), null !== (kb = null === (Wb = bb.querySelector(".HotBarGameItemsContainer")) || void 0 === Wb ? void 0 : Wb.getBoundingClientRect().width) && void 0 !== kb ? kb : 0
         };
-        return [Bk(1), Bk(uk.i)]
+        return [sb(1), sb(tb.h)]
       }));
-      return Bk <= 0 ? uk.i : Math.min(uk.i, Math.max(1, Math.floor(Rk / Bk / Fk + 1e-6) * Fk))
+      return sb <= 0 ? tb.h : Math.min(tb.h, Math.max(1, Math.floor(kb / sb / cb + 1e-6) * cb))
     }
-    const CF = 3,
-      ZF = .5,
-      pF = kk => kk.right - kk.left;
-    const KF = (kk, Fk) => Math.abs((0, BF.e)(kk).x - (0, BF.e)(Fk).x) + Math.abs((0, BF.e)(kk).y - (0, BF.e)(Fk).y) + Math.abs(pF(kk) - pF(Fk));
+    const Ac = 3,
+      wc = .5,
+      rc = bb => bb.right - bb.left;
+    const oc = (bb, cb) => Math.abs((0, cc.d)(bb).x - (0, cc.d)(cb).x) + Math.abs((0, cc.d)(bb).y - (0, cc.d)(cb).y) + Math.abs(rc(bb) - rc(cb));
 
-    function xF(kk, Fk, Bk, Rk, tk) {
+    function Sc(bb, cb, sb, kb, Wb) {
       let {
-        canKeep: ak = () => !0,
-        passes: Xk = CF,
-        before: bk,
-        keysAboveOf: wk
+        canKeep: ab = () => !0,
+        passes: Tb = Ac,
+        before: Ub,
+        keysAboveOf: Ib
       } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-      const dk = void 0 !== wk && wk(kk) !== wk(Fk),
-        sk = Fk.hudLayouts[Bk].hudLocked.filter((kk => ak(kk) && !(dk && "inventory" === kk))),
-        Vk = new Set(sk);
-      if (0 === Vk.size) return Fk;
-      const Jk = [...Uk].filter((Rk => !sk.includes(Rk) && (0, uk.z)(kk, Bk, Rk).join() === (0, uk.z)(Fk, Bk, Rk).join())),
-        Ak = kk => {
-          const Fk = (0, BF.E)(Jk.flatMap((Fk => kk[Fk] ? [kk[Fk]] : [])));
+      const Hb = void 0 !== Ib && Ib(bb) !== Ib(cb),
+        fb = cb.hudLayouts[sb].hudLocked.filter((bb => ab(bb) && !(Hb && "inventory" === bb))),
+        Mb = new Set(fb);
+      if (0 === Mb.size) return cb;
+      const Xb = [...Db].filter((kb => !fb.includes(kb) && (0, tb.A)(bb, sb, kb).join() === (0, tb.A)(cb, sb, kb).join())),
+        nb = bb => {
+          const cb = (0, cc.F)(Xb.flatMap((cb => bb[cb] ? [bb[cb]] : [])));
           return {
-            ...kk,
-            cluster: null !== Fk && void 0 !== Fk ? Fk : void 0
+            ...bb,
+            cluster: null !== cb && void 0 !== cb ? cb : void 0
           }
         },
-        ek = kk => {
-          const Fk = tk(kk);
-          return Fk && Ak(Fk)
+        mb = bb => {
+          const cb = Wb(bb);
+          return cb && nb(cb)
         },
-        yk = bk ? Ak(bk) : ek(kk);
-      let fk = yk && ek(Fk);
-      if (!yk || !fk) return Fk;
-      let mk = Fk;
-      for (let Wk = 0; Wk < Xk && Vk.size > 0; Wk++) {
-        const kk = new Map;
-        for (const Fk of Vk) {
-          const tk = yk[Fk],
-            ak = fk[Fk],
-            Xk = tk && ak ? jF(Fk, (0, uk.z)(mk, Bk, Fk), tk, ak, Rk) : null;
-          Xk ? kk.set(Fk, Xk) : Vk.delete(Fk)
+        lb = Ub ? nb(Ub) : mb(bb);
+      let Qb = lb && mb(cb);
+      if (!lb || !Qb) return cb;
+      let eb = cb;
+      for (let Cb = 0; Cb < Tb && Mb.size > 0; Cb++) {
+        const bb = new Map;
+        for (const cb of Mb) {
+          const Wb = lb[cb],
+            ab = Qb[cb],
+            Tb = Wb && ab ? Rc(cb, (0, tb.A)(eb, sb, cb), Wb, ab, kb) : null;
+          Tb ? bb.set(cb, Tb) : Mb.delete(cb)
         }
-        if (0 === kk.size) break;
-        let tk = mk;
-        for (const [Fk, Rk] of kk) tk = (0, uk.ab)(tk, Bk, Fk, Rk);
-        const ak = ek(tk);
-        if (!ak) return Fk;
-        let Xk = mk;
-        for (const [Fk, Rk] of kk) {
-          const kk = ak[Fk];
-          kk && KF(yk[Fk], kk) < KF(yk[Fk], fk[Fk]) - ZF ? Xk = (0, uk.ab)(Xk, Bk, Fk, Rk) : Vk.delete(Fk)
+        if (0 === bb.size) break;
+        let Wb = eb;
+        for (const [cb, kb] of bb) Wb = (0, tb.hb)(Wb, sb, cb, kb);
+        const ab = mb(Wb);
+        if (!ab) return cb;
+        let Tb = eb;
+        for (const [cb, kb] of bb) {
+          const bb = ab[cb];
+          bb && oc(lb[cb], bb) < oc(lb[cb], Qb[cb]) - wc ? Tb = (0, tb.hb)(Tb, sb, cb, kb) : Mb.delete(cb)
         }
-        if (Xk === mk) break;
-        const bk = [...kk.keys()].every((kk => Vk.has(kk)));
-        if (mk = Xk, fk = bk ? ak : ek(mk), !fk) return Fk
+        if (Tb === eb) break;
+        const Ub = [...bb.keys()].every((bb => Mb.has(bb)));
+        if (eb = Tb, Qb = Ub ? ab : mb(eb), !Qb) return cb
       }
-      return tk(mk), mk
+      return Wb(eb), eb
     }
 
-    function jF(kk, Fk, Bk, Rk, tk) {
-      let [ak, Xk, bk] = Fk;
-      const wk = uk.v[kk],
-        dk = {};
-      wk.scale && pF(Rk) > 0 && Math.abs(pF(Bk) - pF(Rk)) > ZF && (dk.scale = Math.max(uk.j, Math.min(uk.i, bk * pF(Bk) / pF(Rk))));
-      const sk = (0, BF.e)(Bk).x - (0, BF.e)(Rk).x,
-        Vk = (0, BF.e)(Bk).y - (0, BF.e)(Rk).y;
-      return wk.move && (Math.abs(sk) > ZF || Math.abs(Vk) > ZF) && (dk.dx = ak + sk / tk.width, dk.dy = Xk + Vk / tk.height), void 0 === dk.scale && void 0 === dk.dx ? null : dk
+    function Rc(bb, cb, sb, kb, Wb) {
+      let [ab, Tb, Ub] = cb;
+      const Ib = tb.w[bb],
+        Hb = {};
+      Ib.scale && rc(kb) > 0 && Math.abs(rc(sb) - rc(kb)) > wc && (Hb.scale = Math.max(tb.k, Math.min(tb.h, Ub * rc(sb) / rc(kb))));
+      const fb = (0, cc.d)(sb).x - (0, cc.d)(kb).x,
+        Mb = (0, cc.d)(sb).y - (0, cc.d)(kb).y;
+      return Ib.move && (Math.abs(fb) > wc || Math.abs(Mb) > wc) && (Hb.dx = ab + fb / Wb.width, Hb.dy = Tb + Mb / Wb.height), void 0 === Hb.scale && void 0 === Hb.dx ? null : Hb
     }
-    let lF = 0;
+    let vc = 0;
 
-    function nF() {
-      return lF > 0
+    function Fc() {
+      return vc > 0
     }
-    const IF = kk => 0 === kk.dx && 0 === kk.dy,
-      QF = .001,
-      kB = kk => Math.abs(kk.dx) >= 5e-4 || Math.abs(kk.dy) >= 5e-4 ? kk : {
-        dx: kk.dx,
-        dy: kk.dy < 0 ? -.001 : QF
+    const xc = bb => 0 === bb.dx && 0 === bb.dy,
+      jc = .001,
+      pc = bb => Math.abs(bb.dx) >= 5e-4 || Math.abs(bb.dy) >= 5e-4 ? bb : {
+        dx: bb.dx,
+        dy: bb.dy < 0 ? -.001 : jc
       };
 
-    function FB(kk) {
+    function bs(bb) {
       let {
-        preview: Fk,
-        stageRef: Bk,
-        ringRef: Rk,
-        centreLineRef: ak,
-        snapCentre: Xk,
-        ready: bk,
-        measure: wk,
-        k: dk,
-        viewport: sk,
-        boxes: Vk,
-        pieces: Jk,
-        selected: Ak,
-        insets: ek,
-        layout: yk,
-        canMove: fk,
-        onSelect: mk,
-        onMove: Wk
-      } = kk;
-      const vk = (0, tk.useRef)(null),
-        ik = (0, tk.useCallback)((() => null !== vk.current), []),
-        Yk = (kk, Fk) => {
-          if (!Fk) return null;
-          const Bk = (0, BF.e)(kk.origin),
-            Rk = (0, BF.e)(Fk),
-            tk = (kk.to.dx - kk.from.dx) * sk.width,
-            ak = (kk.to.dy - kk.from.dy) * sk.height,
-            Xk = Fk.right - Fk.left,
-            bk = Fk.bottom - Fk.top;
+        preview: cb,
+        stageRef: sb,
+        ringRef: kb,
+        centreLineRef: ab,
+        snapCentre: Tb,
+        ready: Ub,
+        measure: Ib,
+        k: Hb,
+        viewport: fb,
+        boxes: Mb,
+        pieces: Xb,
+        selected: nb,
+        insets: mb,
+        layout: lb,
+        canMove: Qb,
+        onSelect: eb,
+        onMove: Cb
+      } = bb;
+      const Nb = (0, Wb.useRef)(null),
+        Vb = (0, Wb.useCallback)((() => null !== Nb.current), []),
+        Lb = (bb, cb) => {
+          if (!cb) return null;
+          const sb = (0, cc.d)(bb.origin),
+            kb = (0, cc.d)(cb),
+            Wb = (bb.to.dx - bb.from.dx) * fb.width,
+            ab = (bb.to.dy - bb.from.dy) * fb.height,
+            Tb = cb.right - cb.left,
+            Ub = cb.bottom - cb.top;
           return {
             skew: {
-              x: Rk.x - Bk.x - tk,
-              y: Rk.y - Bk.y - ak
+              x: kb.x - sb.x - Wb,
+              y: kb.y - sb.y - ab
             },
             box: {
-              left: Bk.x - Xk / 2,
-              top: Bk.y - bk / 2,
-              right: Bk.x + Xk / 2,
-              bottom: Bk.y + bk / 2
+              left: sb.x - Tb / 2,
+              top: sb.y - Ub / 2,
+              right: sb.x + Tb / 2,
+              bottom: sb.y + Ub / 2
             }
           }
         },
-        Lk = (kk, Bk) => {
-          var tk;
-          const Xk = vk.current;
-          if (!Xk || Xk.pointerId !== kk.pointerId) return;
-          vk.current = null, null === (tk = ak.current) || void 0 === tk || tk.classList.remove("Shown", "Snapped");
-          const bk = Rk.current;
-          if (bk && null !== Xk.ringStyle && bk.setAttribute("style", Xk.ringStyle), Bk && Xk.moved) {
-            const kk = IF(Xk.to) ? null : wk(Xk.id),
-              Fk = kk ? (0, BF.D)(kk, (0, BF.B)(sk.width, sk.height, ek)) : {
+        ub = (bb, sb) => {
+          var Wb;
+          const Tb = Nb.current;
+          if (!Tb || Tb.pointerId !== bb.pointerId) return;
+          Nb.current = null, null === (Wb = ab.current) || void 0 === Wb || Wb.classList.remove("Shown", "Snapped");
+          const Ub = kb.current;
+          if (Ub && null !== Tb.ringStyle && Ub.setAttribute("style", Tb.ringStyle), sb && Tb.moved) {
+            const bb = xc(Tb.to) ? null : Ib(Tb.id),
+              cb = bb ? (0, cc.E)(bb, (0, cc.B)(fb.width, fb.height, mb)) : {
                 x: 0,
                 y: 0
               },
-              Bk = {
-                dx: Xk.to.dx + Fk.x / sk.width,
-                dy: Xk.to.dy + Fk.y / sk.height
+              sb = {
+                dx: Tb.to.dx + cb.x / fb.width,
+                dy: Tb.to.dy + cb.y / fb.height
               },
-              Rk = IF(Xk.to) ? Bk : kB(Bk);
-            Wk(Xk.id, Rk.dx, Rk.dy)
-          } else Fk(Xk.id, null), Bk && Xk.tapPick && mk(Xk.tapPick)
+              kb = xc(Tb.to) ? sb : pc(sb);
+            Cb(Tb.id, kb.dx, kb.dy)
+          } else cb(Tb.id, null), sb && Tb.tapPick && eb(Tb.tapPick)
         };
       return {
-        busy: ik,
+        busy: Vb,
         handlers: {
-          onPointerDown: kk => {
-            var Fk;
-            if (!bk || vk.current || !kk.target.closest(".HudPreviewHandle")) return;
-            const Rk = Bk.current.getBoundingClientRect(),
-              tk = {
-                x: (kk.clientX - Rk.left) / dk,
-                y: (kk.clientY - Rk.top) / dk
+          onPointerDown: bb => {
+            var cb;
+            if (!Ub || Nb.current || !bb.target.closest(".HudPreviewHandle")) return;
+            const kb = sb.current.getBoundingClientRect(),
+              Wb = {
+                x: (bb.clientX - kb.left) / Hb,
+                y: (bb.clientY - kb.top) / Hb
               },
-              ak = (0, BF.v)(tk, Jk, 40 / dk),
-              Xk = "cluster" === Ak && void 0 !== Vk.cluster && null !== (0, BF.v)(tk, [{
+              ab = (0, cc.x)(Wb, Xb, 40 / Hb),
+              Tb = "cluster" === nb && void 0 !== Mb.cluster && null !== (0, cc.x)(Wb, [{
                 id: "cluster",
-                box: Vk.cluster
-              }], 40 / dk),
-              wk = "menu" === Ak && void 0 !== Vk.menu && (0, BF.h)(Vk.menu, tk) && ("menu" === ak || null !== ak && (0, RF.r)(ak, yk.hudElements[ak])),
-              sk = Xk ? "cluster" : wk ? "menu" : null,
-              ek = null !== sk,
-              Wk = null !== sk && void 0 !== sk ? sk : ak;
-            if (!Wk) return;
-            if (function(kk) {
-                lF++;
-                const Fk = Bk => {
-                  Bk.pointerId === kk && (lF = Math.max(0, lF - 1), window.removeEventListener("pointerup", Fk, !0), window.removeEventListener("pointercancel", Fk, !0))
+                box: Mb.cluster
+              }], 40 / Hb),
+              Ib = "menu" === nb && void 0 !== Mb.menu && (0, cc.f)(Mb.menu, Wb) && ("menu" === ab || null !== ab && (0, sc.x)(ab, lb.hudElements[ab])),
+              fb = Tb ? "cluster" : Ib ? "menu" : null,
+              mb = null !== fb,
+              Cb = null !== fb && void 0 !== fb ? fb : ab;
+            if (!Cb) return;
+            if (function(bb) {
+                vc++;
+                const cb = sb => {
+                  sb.pointerId === bb && (vc = Math.max(0, vc - 1), window.removeEventListener("pointerup", cb, !0), window.removeEventListener("pointercancel", cb, !0))
                 };
-                window.addEventListener("pointerup", Fk, !0), window.addEventListener("pointercancel", Fk, !0)
-              }(kk.pointerId), !fk(Wk)) return void mk(ek && ak ? ak : Wk);
-            mk(Wk);
-            const [ik, Yk] = null !== (Fk = yk.hudElements[Wk]) && void 0 !== Fk ? Fk : [0, 0], Lk = {
-              dx: ik,
-              dy: Yk
-            }, Ok = {
+                window.addEventListener("pointerup", cb, !0), window.addEventListener("pointercancel", cb, !0)
+              }(bb.pointerId), !Qb(Cb)) return void eb(mb && ab ? ab : Cb);
+            eb(Cb);
+            const [Vb, Lb] = null !== (cb = lb.hudElements[Cb]) && void 0 !== cb ? cb : [0, 0], ub = {
+              dx: Vb,
+              dy: Lb
+            }, Yb = {
               skew: {
                 x: 0,
                 y: 0
               },
-              box: Vk[Wk]
+              box: Mb[Cb]
             };
-            vk.current = {
-              id: Wk,
-              pointerId: kk.pointerId,
-              startX: kk.clientX,
-              startY: kk.clientY,
-              origin: Vk[Wk],
-              from: Lk,
-              to: Lk,
+            Nb.current = {
+              id: Cb,
+              pointerId: bb.pointerId,
+              startX: bb.clientX,
+              startY: bb.clientY,
+              origin: Mb[Cb],
+              from: ub,
+              to: ub,
               moved: !1,
-              home: IF(Lk) ? {
-                centre: (0, BF.e)(Vk[Wk]),
-                anchor: Ok
+              home: xc(ub) ? {
+                centre: (0, cc.d)(Mb[Cb]),
+                anchor: Yb
               } : null,
-              away: IF(Lk) ? null : Ok,
-              anchor: Ok,
+              away: xc(ub) ? null : Yb,
+              anchor: Yb,
               ringStyle: null,
-              tapPick: ek ? ak : null
-            }, kk.currentTarget.setPointerCapture(kk.pointerId)
+              tapPick: mb ? ab : null
+            }, bb.currentTarget.setPointerCapture(bb.pointerId)
           },
-          onPointerMove: kk => {
-            const Bk = vk.current;
-            if (!Bk || Bk.pointerId !== kk.pointerId) return;
-            const tk = kk.clientX - Bk.startX,
-              bk = kk.clientY - Bk.startY;
-            if (!Bk.moved && Math.hypot(tk, bk) < 5) return;
-            const Vk = !Bk.moved;
-            var Jk, Ak;
-            (Bk.moved = !0, Vk) && (Bk.ringStyle = null !== (Jk = null === (Ak = Rk.current) || void 0 === Ak ? void 0 : Ak.getAttribute("style")) && void 0 !== Jk ? Jk : null);
-            const yk = (0, BF.B)(sk.width, sk.height, ek);
-            if (!Bk.home) {
-              var fk;
-              Bk.to = {
+          onPointerMove: bb => {
+            const sb = Nb.current;
+            if (!sb || sb.pointerId !== bb.pointerId) return;
+            const Wb = bb.clientX - sb.startX,
+              Ub = bb.clientY - sb.startY;
+            if (!sb.moved && Math.hypot(Wb, Ub) < 5) return;
+            const Mb = !sb.moved;
+            var Xb, nb;
+            (sb.moved = !0, Mb) && (sb.ringStyle = null !== (Xb = null === (nb = kb.current) || void 0 === nb ? void 0 : nb.getAttribute("style")) && void 0 !== Xb ? Xb : null);
+            const lb = (0, cc.B)(fb.width, fb.height, mb);
+            if (!sb.home) {
+              var Qb;
+              sb.to = {
                 dx: 0,
                 dy: 0
-              }, Fk(Bk.id, Bk.to);
-              const kk = wk(Bk.id),
-                Rk = null !== (fk = Yk(Bk, kk)) && void 0 !== fk ? fk : {
+              }, cb(sb.id, sb.to);
+              const bb = Ib(sb.id),
+                kb = null !== (Qb = Lb(sb, bb)) && void 0 !== Qb ? Qb : {
                   skew: {
                     x: 0,
                     y: 0
                   },
-                  box: Bk.origin
+                  box: sb.origin
                 },
-                tk = (0, BF.e)(Bk.origin);
-              Bk.home = {
-                centre: kk ? (0, BF.e)(kk) : {
-                  x: tk.x - Bk.from.dx * sk.width,
-                  y: tk.y - Bk.from.dy * sk.height
+                Wb = (0, cc.d)(sb.origin);
+              sb.home = {
+                centre: bb ? (0, cc.d)(bb) : {
+                  x: Wb.x - sb.from.dx * fb.width,
+                  y: Wb.y - sb.from.dy * fb.height
                 },
-                anchor: Rk
+                anchor: kb
               }
             }
-            const mk = Bk.home;
-            let Wk = !1;
-            const ik = kk => {
-                Wk = !1;
-                let Rk = (0, BF.o)(kk.box, tk / dk, bk / dk, yk);
-                const ak = sk.width / 2;
-                if (Xk && Math.abs((0, BF.e)(Bk.origin).x + Rk.x - ak) <= 8 / dk) {
-                  const Fk = ak - (0, BF.e)(Bk.origin).x,
-                    tk = (0, BF.o)(kk.box, Fk, Rk.y, yk);
-                  Wk = Math.abs(tk.x - Fk) < .01, Wk && (Rk = tk)
+            const eb = sb.home;
+            let Cb = !1;
+            const Vb = bb => {
+                Cb = !1;
+                let kb = (0, cc.l)(bb.box, Wb / Hb, Ub / Hb, lb);
+                const ab = fb.width / 2;
+                if (Tb && Math.abs((0, cc.d)(sb.origin).x + kb.x - ab) <= 8 / Hb) {
+                  const cb = ab - (0, cc.d)(sb.origin).x,
+                    Wb = (0, cc.l)(bb.box, cb, kb.y, lb);
+                  Cb = Math.abs(Wb.x - cb) < .01, Cb && (kb = Wb)
                 }
-                const wk = (0, BF.u)(Bk.from, Rk.x - kk.skew.x, Rk.y - kk.skew.y, sk.width, sk.height);
-                Bk.to = kB(wk), Bk.anchor = kk, Fk(Bk.id, Bk.to)
+                const Ib = (0, cc.t)(sb.from, kb.x - bb.skew.x, kb.y - bb.skew.y, fb.width, fb.height);
+                sb.to = pc(Ib), sb.anchor = bb, cb(sb.id, sb.to)
               },
-              Lk = (0, BF.o)(mk.anchor.box, tk / dk, bk / dk, yk),
-              Ok = ak.current,
-              Ek = (0, BF.e)(Bk.origin),
-              Sk = ((0, uk.L)(Bk.id) ? 20 : 6) / dk;
-            if (Math.abs(Ek.x + Lk.x - mk.centre.x) <= Sk && Math.abs(Ek.y + Lk.y - mk.centre.y) <= Sk) Bk.to = {
+              ub = (0, cc.l)(eb.anchor.box, Wb / Hb, Ub / Hb, lb),
+              Yb = ab.current,
+              hb = (0, cc.d)(sb.origin),
+              Jb = ((0, tb.Q)(sb.id) ? 20 : 6) / Hb;
+            if (Math.abs(hb.x + ub.x - eb.centre.x) <= Jb && Math.abs(hb.y + ub.y - eb.centre.y) <= Jb) sb.to = {
               dx: 0,
               dy: 0
-            }, Bk.anchor = mk.anchor, Wk = Xk && Math.abs(mk.centre.x - sk.width / 2) < 1, Fk(Bk.id, Bk.to);
-            else if (Bk.away) ik(Bk.away);
+            }, sb.anchor = eb.anchor, Cb = Tb && Math.abs(eb.centre.x - fb.width / 2) < 1, cb(sb.id, sb.to);
+            else if (sb.away) Vb(sb.away);
             else {
-              var Nk;
-              ik(mk.anchor), Bk.away = null !== (Nk = Yk(Bk, wk(Bk.id))) && void 0 !== Nk ? Nk : mk.anchor, ik(Bk.away)
+              var gb;
+              Vb(eb.anchor), sb.away = null !== (gb = Lb(sb, Ib(sb.id))) && void 0 !== gb ? gb : eb.anchor, Vb(sb.away)
             }
-            null === Ok || void 0 === Ok || Ok.classList.add("Shown"), null === Ok || void 0 === Ok || Ok.classList.toggle("Snapped", Wk), (kk => {
-              const Fk = Rk.current;
-              if (Fk) {
+            null === Yb || void 0 === Yb || Yb.classList.add("Shown"), null === Yb || void 0 === Yb || Yb.classList.toggle("Snapped", Cb), (bb => {
+              const cb = kb.current;
+              if (cb) {
                 const {
-                  skew: Bk,
-                  box: Rk
-                } = kk.anchor;
-                Fk.style.left = Rk.left * dk + "px", Fk.style.top = Rk.top * dk + "px", Fk.style.width = (Rk.right - Rk.left) * dk + "px", Fk.style.height = (Rk.bottom - Rk.top) * dk + "px", Fk.style.translate = `${((kk.to.dx-kk.from.dx)*sk.width+Bk.x)*dk}px ${((kk.to.dy-kk.from.dy)*sk.height+Bk.y)*dk}px`
+                  skew: sb,
+                  box: kb
+                } = bb.anchor;
+                cb.style.left = kb.left * Hb + "px", cb.style.top = kb.top * Hb + "px", cb.style.width = (kb.right - kb.left) * Hb + "px", cb.style.height = (kb.bottom - kb.top) * Hb + "px", cb.style.translate = `${((bb.to.dx-bb.from.dx)*fb.width+sb.x)*Hb}px ${((bb.to.dy-bb.from.dy)*fb.height+sb.y)*Hb}px`
               }
-            })(Bk)
+            })(sb)
           },
-          onPointerUp: kk => {
-            Lk(kk, !0)
+          onPointerUp: bb => {
+            ub(bb, !0)
           },
-          onPointerCancel: kk => {
-            Lk(kk, !1)
+          onPointerCancel: bb => {
+            ub(bb, !1)
           }
         }
       }
     }
 
-    function BB(kk, Fk) {
-      return Object.keys(kk).filter((kk => kk !== Fk)).map((Fk => kk[Fk]))
+    function cs(bb, cb) {
+      return Object.keys(bb).filter((bb => bb !== cb)).map((cb => bb[cb]))
     }
 
-    function RB(kk) {
-      const Fk = [],
-        Bk = Fk => (0, uk.L)(Fk) && !kk.documentElement.classList.contains((0, tF.K)(Fk));
-      for (const Xk of kk.querySelectorAll(`[${Dk}]`)) {
-        const kk = Bk(Xk.getAttribute(Dk)) ? Xk.querySelector(".ScaleOnHover") : null,
-          Rk = (null !== kk && void 0 !== kk ? kk : Xk).getBoundingClientRect();
-        (Rk.width > 0 || Rk.height > 0) && Fk.push({
-          id: Xk.getAttribute(Dk),
+    function ss(bb) {
+      const cb = [],
+        sb = cb => (0, tb.Q)(cb) && !bb.documentElement.classList.contains((0, kc.B)(cb));
+      for (const Tb of bb.querySelectorAll(`[${Kb}]`)) {
+        const bb = sb(Tb.getAttribute(Kb)) ? Tb.querySelector(".ScaleOnHover") : null,
+          kb = (null !== bb && void 0 !== bb ? bb : Tb).getBoundingClientRect();
+        (kb.width > 0 || kb.height > 0) && cb.push({
+          id: Tb.getAttribute(Kb),
           box: {
-            left: Rk.left,
-            top: Rk.top,
-            right: Rk.right,
-            bottom: Rk.bottom
+            left: kb.left,
+            top: kb.top,
+            right: kb.right,
+            bottom: kb.bottom
           }
         })
       }
-      const Rk = kk => (0, BF.E)(Fk.filter((Fk => {
+      const kb = bb => (0, cc.F)(cb.filter((cb => {
           let {
-            id: Bk
-          } = Fk;
-          return kk(Bk)
-        })).map((kk => {
+            id: sb
+          } = cb;
+          return bb(sb)
+        })).map((bb => {
           let {
-            box: Fk
-          } = kk;
-          return Fk
+            box: cb
+          } = bb;
+          return cb
         }))),
-        tk = {};
-      for (const Xk of new Set(Fk.map((kk => kk.id)))) tk[Xk] = Rk((kk => kk === Xk));
-      const ak = Rk((kk => Uk.has(kk)));
-      return ak && (tk.cluster = ak), {
-        boxes: tk,
-        pieces: Fk
+        Wb = {};
+      for (const Tb of new Set(cb.map((bb => bb.id)))) Wb[Tb] = kb((bb => bb === Tb));
+      const ab = kb((bb => Db.has(bb)));
+      return ab && (Wb.cluster = ab), {
+        boxes: Wb,
+        pieces: cb
       }
     }
 
-    function tB(kk, Fk, Bk) {
-      const Rk = Fk.right - Fk.left,
-        tk = Fk.bottom - Fk.top;
-      return hF(kk, "cluster", (Fk => {
-        const ak = Bk => {
-            Fk(Bk);
-            const Rk = [...kk.querySelectorAll(`[${Dk}]:not(.HudPreviewGhost)`)].filter((kk => Uk.has(kk.getAttribute(Dk)))).map((kk => {
-                const Fk = kk.getBoundingClientRect();
+    function ks(bb, cb, sb) {
+      const kb = cb.right - cb.left,
+        Wb = cb.bottom - cb.top;
+      return qc(bb, "cluster", (cb => {
+        const ab = sb => {
+            cb(sb);
+            const kb = [...bb.querySelectorAll(`[${Kb}]:not(.HudPreviewGhost)`)].filter((bb => Db.has(bb.getAttribute(Kb)))).map((bb => {
+                const cb = bb.getBoundingClientRect();
                 return {
-                  left: Fk.left,
-                  top: Fk.top,
-                  right: Fk.right,
-                  bottom: Fk.bottom
+                  left: cb.left,
+                  top: cb.top,
+                  right: cb.right,
+                  bottom: cb.bottom
                 }
               })),
-              tk = (0, BF.E)(Rk);
-            return tk ? {
-              w: tk.right - tk.left,
-              h: tk.bottom - tk.top
+              Wb = (0, cc.F)(kb);
+            return Wb ? {
+              w: Wb.right - Wb.left,
+              h: Wb.bottom - Wb.top
             } : null
           },
-          Xk = kk => !kk || kk.w <= Rk && kk.h <= tk,
-          bk = ak(1),
-          wk = ak(uk.i);
-        if (!bk || Xk(wk)) return uk.i;
-        const dk = (kk, Fk, Bk) => Fk > kk ? 1 + (Bk - kk) * (uk.i - 1) / (Fk - kk) : uk.i;
-        let sk = Math.floor(Math.min(uk.i, dk(bk.w, wk.w, Rk), dk(bk.h, wk.h, tk)) / Bk + 1e-6) * Bk;
-        for (; sk > 1 && !Xk(ak(sk));) sk = Math.round(100 * (sk - Bk)) / 100;
-        return Math.max(1, sk)
+          Tb = bb => !bb || bb.w <= kb && bb.h <= Wb,
+          Ub = ab(1),
+          Ib = ab(tb.h);
+        if (!Ub || Tb(Ib)) return tb.h;
+        const Hb = (bb, cb, sb) => cb > bb ? 1 + (sb - bb) * (tb.h - 1) / (cb - bb) : tb.h;
+        let fb = Math.floor(Math.min(tb.h, Hb(Ub.w, Ib.w, kb), Hb(Ub.h, Ib.h, Wb)) / sb + 1e-6) * sb;
+        for (; fb > 1 && !Tb(ab(fb));) fb = Math.round(100 * (fb - sb)) / 100;
+        return Math.max(1, fb)
       }))
     }
 
-    function aB(kk) {
-      TF(document, kk, {
+    function Ws(bb) {
+      Oc(document, bb, {
         keysAbove: !1
       });
-      const Fk = parseFloat(getComputedStyle(kk.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
-        Bk = Number.isFinite(Fk) && Fk < 0;
-      return TF(document, kk, {
-        keysAbove: Bk
-      }), Bk
+      const cb = parseFloat(getComputedStyle(bb.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
+        sb = Number.isFinite(cb) && cb < 0;
+      return Oc(document, bb, {
+        keysAbove: sb
+      }), sb
     }
 
-    function XB(kk, Fk) {
+    function as(bb, cb) {
       let {
-        layout: Bk,
-        orientation: Rk,
-        viewport: ak,
-        replicaKey: Xk,
-        joystickFixed: bk,
-        busy: wk
-      } = Fk;
-      const [dk, sk] = (0, tk.useState)(null), [Vk, Jk] = (0, tk.useState)({
+        layout: sb,
+        orientation: kb,
+        viewport: ab,
+        replicaKey: Tb,
+        joystickFixed: Ub,
+        busy: Ib
+      } = cb;
+      const [Hb, fb] = (0, Wb.useState)(null), [Mb, Xb] = (0, Wb.useState)({
         boxes: {},
         pieces: []
-      }), [Ak, ek] = (0, tk.useState)({
+      }), [nb, mb] = (0, Wb.useState)({
         top: 0,
         right: 0,
         bottom: 0,
         left: 0
-      }), [yk, fk] = (0, tk.useState)(!1), [mk, Wk] = (0, tk.useState)(!1), [vk, ik] = (0, tk.useState)(!1), Yk = (0, tk.useCallback)((kk => {
-        Wk(kk), kk && ik(!0)
-      }), []), Lk = Bk.hudLayouts[Rk].hudSafe, Ok = (0, tk.useCallback)((() => {
-        var Fk;
-        const Bk = null === (Fk = kk.current) || void 0 === Fk ? void 0 : Fk.contentDocument;
-        null !== Bk && void 0 !== Bk && Bk.body && sk(Bk)
-      }), [kk]), Ek = (0, tk.useCallback)((() => {
-        dk && ((0, RF.u)(dk), Jk(RB(dk)), ek(function(kk, Fk) {
-          const Bk = PF(kk),
-            [Rk, tk, ak, Xk] = Fk ? (0, tF.D)(Fk, window.innerWidth, window.innerHeight, Bk) : Bk;
+      }), [lb, Qb] = (0, Wb.useState)(!1), [eb, Cb] = (0, Wb.useState)(!1), [Nb, Vb] = (0, Wb.useState)(!1), Lb = (0, Wb.useCallback)((bb => {
+        Cb(bb), bb && Vb(!0)
+      }), []), ub = sb.hudLayouts[kb].hudSafe, Yb = (0, Wb.useCallback)((() => {
+        var cb;
+        const sb = null === (cb = bb.current) || void 0 === cb ? void 0 : cb.contentDocument;
+        null !== sb && void 0 !== sb && sb.body && fb(sb)
+      }), [bb]), hb = (0, Wb.useCallback)((() => {
+        Hb && ((0, sc.z)(Hb), Xb(ss(Hb)), mb(function(bb, cb) {
+          const sb = zc(bb),
+            [kb, Wb, ab, Tb] = cb ? (0, kc.v)(cb, window.innerWidth, window.innerHeight, sb) : sb;
           return {
-            top: Rk,
-            right: tk,
-            bottom: ak,
-            left: Xk
+            top: kb,
+            right: Wb,
+            bottom: ab,
+            left: Tb
           }
-        }(dk, Lk)))
-      }), [dk, Lk]), Sk = (0, tk.useCallback)((() => {
-        dk && fk(aB(dk))
-      }), [dk]), Nk = (0, tk.useRef)((() => {}));
-      return Nk.current = () => {
-        Sk(), wk() || Ek()
-      }, (0, tk.useLayoutEffect)((() => {
-        if (dk) return GF(document, dk, (() => {
-          Nk.current()
-        }), Yk)
-      }), [dk, Yk]), (0, tk.useLayoutEffect)(Sk, [Sk, ak]), (0, tk.useLayoutEffect)((() => {
-        dk && (TF(document, dk, {
-          keysAbove: yk
-        }), DF(document, dk, Bk, Rk, bk), Sk(), Ek())
-      }), [dk, Bk, Rk, yk, Xk, bk, ak, Ek, Sk]), (0, tk.useEffect)((() => {
-        var kk;
-        if (!dk) return;
-        const Fk = new ResizeObserver((() => {
-          wk() || Ek()
+        }(Hb, ub)))
+      }), [Hb, ub]), Jb = (0, Wb.useCallback)((() => {
+        Hb && Qb(Ws(Hb))
+      }), [Hb]), gb = (0, Wb.useRef)((() => {}));
+      return gb.current = () => {
+        Jb(), Ib() || hb()
+      }, (0, Wb.useLayoutEffect)((() => {
+        if (Hb) return ic(document, Hb, (() => {
+          gb.current()
+        }), Lb)
+      }), [Hb, Lb]), (0, Wb.useLayoutEffect)(Jb, [Jb, ab]), (0, Wb.useLayoutEffect)((() => {
+        Hb && (Oc(document, Hb, {
+          keysAbove: lb
+        }), Kc(document, Hb, sb, kb, Ub), Jb(), hb())
+      }), [Hb, sb, kb, lb, Tb, Ub, ab, hb, Jb]), (0, Wb.useEffect)((() => {
+        var bb;
+        if (!Hb) return;
+        const cb = new ResizeObserver((() => {
+          Ib() || hb()
         }));
-        for (const Bk of dk.querySelectorAll(`[${Dk}]`)) Fk.observe(Bk);
-        return null === (kk = dk.fonts) || void 0 === kk || kk.ready.then(Ek), () => {
-          Fk.disconnect()
+        for (const sb of Hb.querySelectorAll(`[${Kb}]`)) cb.observe(sb);
+        return null === (bb = Hb.fonts) || void 0 === bb || bb.ready.then(hb), () => {
+          cb.disconnect()
         }
-      }), [dk, Ek, wk, Xk]), {
-        doc: dk,
-        onLoad: Ok,
-        boxes: Vk.boxes,
-        pieces: Vk.pieces,
-        insets: Ak,
-        keysAbove: yk,
-        ready: mk,
-        settled: vk
+      }), [Hb, hb, Ib, Tb]), {
+        doc: Hb,
+        onLoad: Yb,
+        boxes: Mb.boxes,
+        pieces: Mb.pieces,
+        insets: nb,
+        keysAbove: lb,
+        ready: eb,
+        settled: Nb
       }
     }
-    const bB = [
+    const Ts = [
         ["hotbar", "arrows"],
         ["hotbar", "inventory"]
       ],
-      wB = (kk, Fk, Bk) => {
-        const Rk = kk => (0, RF.r)(kk, Bk.hudElements[kk]);
-        return "cluster" === kk && Uk.has(Fk) || "cluster" === Fk && Uk.has(kk) || "menu" === kk && Rk(Fk) || "menu" === Fk && Rk(kk) || bB.some((Rk => {
-          let [tk, ak] = Rk;
-          const Xk = Bk.hudElements.hotbar,
-            bk = "inventory" === ak && Bk.hudLocked.includes(ak) && void 0 !== Xk && !(0, uk.H)(Xk);
-          return (kk === tk && Fk === ak || kk === ak && Fk === tk) && !bk
+      Us = (bb, cb, sb) => {
+        const kb = bb => (0, sc.x)(bb, sb.hudElements[bb]);
+        return "cluster" === bb && Db.has(cb) || "cluster" === cb && Db.has(bb) || "menu" === bb && kb(cb) || "menu" === cb && kb(bb) || Ts.some((kb => {
+          let [Wb, ab] = kb;
+          const Tb = sb.hudElements.hotbar,
+            Ub = "inventory" === ab && sb.hudLocked.includes(ab) && void 0 !== Tb && !(0, tb.M)(Tb);
+          return (bb === Wb && cb === ab || bb === ab && cb === Wb) && !Ub
         }))
       };
-    const dB = ["Above", "Below", "Left", "Right"];
+    const Is = ["Above", "Below", "Left", "Right"];
 
-    function sB(kk, Fk, Bk, Rk, tk) {
-      const ak = Bk[kk],
-        Xk = (ak.left + ak.right) / 2,
-        bk = (ak.top + ak.bottom) / 2,
-        wk = (7.5 * Fk.length + 14) / Rk,
-        dk = 18 / Rk,
-        sk = {
+    function Hs(bb, cb, sb, kb, Wb) {
+      const ab = sb[bb],
+        Tb = (ab.left + ab.right) / 2,
+        Ub = (ab.top + ab.bottom) / 2,
+        Ib = (7.5 * cb.length + 14) / kb,
+        Hb = 18 / kb,
+        fb = {
           Above: {
-            left: Xk - wk / 2,
-            top: ak.top - dk,
-            right: Xk + wk / 2,
-            bottom: ak.top
+            left: Tb - Ib / 2,
+            top: ab.top - Hb,
+            right: Tb + Ib / 2,
+            bottom: ab.top
           },
           Below: {
-            left: Xk - wk / 2,
-            top: ak.bottom,
-            right: Xk + wk / 2,
-            bottom: ak.bottom + dk
+            left: Tb - Ib / 2,
+            top: ab.bottom,
+            right: Tb + Ib / 2,
+            bottom: ab.bottom + Hb
           },
           Left: {
-            left: ak.left - wk,
-            top: bk - dk / 2,
-            right: ak.left,
-            bottom: bk + dk / 2
+            left: ab.left - Ib,
+            top: Ub - Hb / 2,
+            right: ab.left,
+            bottom: Ub + Hb / 2
           },
           Right: {
-            left: ak.right,
-            top: bk - dk / 2,
-            right: ak.right + wk,
-            bottom: bk + dk / 2
+            left: ab.right,
+            top: Ub - Hb / 2,
+            right: ab.right + Ib,
+            bottom: Ub + Hb / 2
           }
         },
-        Vk = BB(Bk, kk),
-        Jk = {
+        Mb = cs(sb, bb),
+        Xb = {
           left: 0,
           top: 0,
-          right: tk.width,
-          bottom: tk.height
+          right: Wb.width,
+          bottom: Wb.height
         };
-      return dB[(0, BF.s)(dB.map((kk => sk[kk])), Vk, {
-        bounds: Jk
+      return Is[(0, cc.q)(Is.map((bb => fb[bb])), Mb, {
+        bounds: Xb
       })]
     }
 
-    function VB() {
-      const [kk, Fk] = (0, kF.c)();
-      return (0, tk.useMemo)((() => ({
-        width: kk,
-        height: Fk
-      })), [kk, Fk])
+    function fs() {
+      const [bb, cb] = (0, pb.c)();
+      return (0, Wb.useMemo)((() => ({
+        width: bb,
+        height: cb
+      })), [bb, cb])
     }
 
-    function JB(kk) {
-      var Fk;
+    function Ms(bb) {
+      var cb;
       const {
-        layout: Bk,
-        orientation: ak,
-        selected: Xk,
-        onSelect: bk,
-        onMove: dk,
-        canMove: sk,
-        actionButtons: Vk,
-        joystickFixed: Jk,
-        presence: Ak,
-        keyNames: yk,
-        maxHeight: fk,
-        fill: mk = !1,
-        apiRef: Wk
-      } = kk, {
-        t: vk
-      } = (0, Rk.x)(), ik = VB(), Lk = (null !== (Fk = (0, ek.j)("maxAuraLevel")) && void 0 !== Fk ? Fk : 0) > 0, Ok = Bk.hudLayouts[ak], Ek = (0, tk.useRef)(null), Sk = (0, tk.useRef)(null), Hk = (0, tk.useRef)(null), Mk = (0, tk.useRef)(null), gk = (0, tk.useRef)(null), ck = (0, tk.useRef)(null), Gk = (0, FF.e)(Ek).width, Tk = mk ? 1 : Gk > 0 ? (0, BF.x)(Gk, ik.width, ik.height, fk) : 0, rk = (0, tk.useRef)((() => !1)), Dk = (0, tk.useCallback)((() => rk.current()), []), {
-        doc: Pk,
-        onLoad: hk,
-        boxes: qk,
-        pieces: Ck,
-        insets: Zk,
-        keysAbove: pk,
-        ready: Kk,
-        settled: xk
-      } = XB(Hk, {
-        layout: Bk,
-        orientation: ak,
-        viewport: ik,
-        replicaKey: `${Vk}:${Jk}:${Lk}`,
-        joystickFixed: Jk,
-        busy: Dk
-      }), jk = (0, tk.useCallback)((kk => {
-        Pk && DF(document, Pk, kk, ak, Jk)
-      }), [Pk, ak, Jk]), lk = (0, tk.useCallback)((kk => Pk && xk ? (jk(kk), aB(Pk), function(kk) {
+        layout: sb,
+        orientation: ab,
+        selected: Tb,
+        onSelect: Ub,
+        onMove: Hb,
+        canMove: fb,
+        actionButtons: Mb,
+        joystickFixed: Xb,
+        presence: nb,
+        keyNames: lb,
+        maxHeight: Qb,
+        fill: eb = !1,
+        apiRef: Cb
+      } = bb, {
+        t: Nb
+      } = (0, kb.E)(), Vb = fs(), ub = (null !== (cb = (0, mb.d)("maxAuraLevel")) && void 0 !== cb ? cb : 0) > 0, Yb = sb.hudLayouts[ab], hb = (0, Wb.useRef)(null), Jb = (0, Wb.useRef)(null), Bb = (0, Wb.useRef)(null), yb = (0, Wb.useRef)(null), Pb = (0, Wb.useRef)(null), Eb = (0, Wb.useRef)(null), ib = (0, bc.b)(hb).width, Ob = eb ? 1 : ib > 0 ? (0, cc.y)(ib, Vb.width, Vb.height, Qb) : 0, Gb = (0, Wb.useRef)((() => !1)), Kb = (0, Wb.useCallback)((() => Gb.current()), []), {
+        doc: zb,
+        onLoad: qb,
+        boxes: db,
+        pieces: Ab,
+        insets: wb,
+        keysAbove: rb,
+        ready: ob,
+        settled: Sb
+      } = as(Bb, {
+        layout: sb,
+        orientation: ab,
+        viewport: Vb,
+        replicaKey: `${Mb}:${Xb}:${ub}`,
+        joystickFixed: Xb,
+        busy: Kb
+      }), Rb = (0, Wb.useCallback)((bb => {
+        zb && Kc(document, zb, bb, ab, Xb)
+      }), [zb, ab, Xb]), vb = (0, Wb.useCallback)((bb => zb && Sb ? (Rb(bb), Ws(zb), function(bb) {
         let {
-          boxes: Fk,
-          pieces: Bk
-        } = kk;
-        const Rk = Bk.find((kk => "inventory" === kk.id));
-        if (!Rk || !Fk.inventory) return Fk;
-        const tk = (0, BF.e)(Fk.inventory),
-          ak = pF(Rk.box) / 2,
-          Xk = (Rk.box.bottom - Rk.box.top) / 2;
+          boxes: cb,
+          pieces: sb
+        } = bb;
+        const kb = sb.find((bb => "inventory" === bb.id));
+        if (!kb || !cb.inventory) return cb;
+        const Wb = (0, cc.d)(cb.inventory),
+          ab = rc(kb.box) / 2,
+          Tb = (kb.box.bottom - kb.box.top) / 2;
         return {
-          ...Fk,
+          ...cb,
           inventory: {
-            left: tk.x - ak,
-            top: tk.y - Xk,
-            right: tk.x + ak,
-            bottom: tk.y + Xk
+            left: Wb.x - ab,
+            top: Wb.y - Tb,
+            right: Wb.x + ab,
+            bottom: Wb.y + Tb
           }
         }
-      }(RB(Pk))) : null), [Pk, xk, jk]), nk = (0, tk.useCallback)((kk => !!Pk && (jk(kk), aB(Pk))), [Pk, jk]), Qk = (0, tk.useRef)(null), kF = (0, tk.useRef)(null), aF = (0, tk.useRef)(Bk);
-      aF.current = Bk;
-      const XF = (0, tk.useCallback)((() => {
-        null !== Qk.current && (cancelAnimationFrame(Qk.current), Qk.current = null)
+      }(ss(zb))) : null), [zb, Sb, Rb]), Fb = (0, Wb.useCallback)((bb => !!zb && (Rb(bb), Ws(zb))), [zb, Rb]), jb = (0, Wb.useRef)(null), pb = (0, Wb.useRef)(null), Wc = (0, Wb.useRef)(sb);
+      Wc.current = sb;
+      const ac = (0, Wb.useCallback)((() => {
+        null !== jb.current && (cancelAnimationFrame(jb.current), jb.current = null)
       }), []);
-      (0, tk.useEffect)((() => XF), [Bk, XF]);
+      (0, Wb.useEffect)((() => ac), [sb, ac]);
       const {
-        lockable: bF
-      } = kk, wF = (0, tk.useCallback)((kk => {
-        if (jk(kk), !xk || 0 === Bk.hudLayouts[ak].hudLocked.length) return;
-        const Fk = Bk;
-        XF(), Qk.current = requestAnimationFrame((() => {
-          var Bk;
-          if (Qk.current = null, aF.current !== Fk) return;
-          const Rk = (null === (Bk = kF.current) || void 0 === Bk ? void 0 : Bk.from) === Fk ? kF.current.boxes : lk(Fk);
-          Rk && (kF.current = {
-            from: Fk,
-            boxes: Rk
-          }), jk(Rk ? xF(Fk, kk, ak, ik, lk, {
-            canKeep: bF,
+        lockable: Tc
+      } = bb, Uc = (0, Wb.useCallback)((bb => {
+        if (Rb(bb), !Sb || 0 === sb.hudLayouts[ab].hudLocked.length) return;
+        const cb = sb;
+        ac(), jb.current = requestAnimationFrame((() => {
+          var sb;
+          if (jb.current = null, Wc.current !== cb) return;
+          const kb = (null === (sb = pb.current) || void 0 === sb ? void 0 : sb.from) === cb ? pb.current.boxes : vb(cb);
+          kb && (pb.current = {
+            from: cb,
+            boxes: kb
+          }), Rb(kb ? Sc(cb, bb, ab, Vb, vb, {
+            canKeep: Tc,
             passes: 1,
-            before: Rk,
-            keysAboveOf: nk
-          }) : kk)
+            before: kb,
+            keysAboveOf: Fb
+          }) : bb)
         }))
-      }), [jk, xk, Bk, ak, ik, lk, nk, bF, XF]), dF = FB({
-        preview: (kk, Fk) => {
-          Fk ? wF((0, uk.ab)(Bk, ak, kk, Fk)) : (XF(), jk(Bk))
+      }), [Rb, Sb, sb, ab, Vb, vb, Fb, Tc, ac]), Ic = bs({
+        preview: (bb, cb) => {
+          cb ? Uc((0, tb.hb)(sb, ab, bb, cb)) : (ac(), Rb(sb))
         },
-        stageRef: Sk,
-        ringRef: Mk,
-        centreLineRef: gk,
-        snapCentre: Bk.hudSnapCentre,
-        ready: xk,
-        measure: kk => {
-          var Fk;
-          return Pk && Kk && null !== (Fk = RB(Pk).boxes[kk]) && void 0 !== Fk ? Fk : null
+        stageRef: Jb,
+        ringRef: yb,
+        centreLineRef: Pb,
+        snapCentre: sb.hudSnapCentre,
+        ready: Sb,
+        measure: bb => {
+          var cb;
+          return zb && ob && null !== (cb = ss(zb).boxes[bb]) && void 0 !== cb ? cb : null
         },
-        k: Tk,
-        viewport: ik,
-        boxes: qk,
-        pieces: Ck,
-        selected: Xk,
-        insets: Zk,
-        layout: Ok,
-        canMove: sk,
-        onSelect: bk,
-        onMove: (kk, Fk, Bk) => {
-          XF(), dk(kk, Fk, Bk)
+        k: Ob,
+        viewport: Vb,
+        boxes: db,
+        pieces: Ab,
+        selected: Tb,
+        insets: wb,
+        layout: Yb,
+        canMove: fb,
+        onSelect: Ub,
+        onMove: (bb, cb, sb) => {
+          ac(), Hb(bb, cb, sb)
         }
       });
-      (0, tk.useLayoutEffect)((() => {
-        rk.current = dF.busy
-      }), [dF.busy]);
-      const sF = (0, tk.useRef)([]),
-        VF = (0, tk.useRef)(Ok.hudElements);
-      (0, tk.useEffect)((() => {
-        for (const tk of Object.keys(Ok.hudElements)) {
-          var kk, Fk, Bk, Rk;
-          (null !== (kk = null === (Fk = Ok.hudElements[tk]) || void 0 === Fk ? void 0 : Fk[2]) && void 0 !== kk ? kk : 1) > (null !== (Bk = null === (Rk = VF.current[tk]) || void 0 === Rk ? void 0 : Rk[2]) && void 0 !== Bk ? Bk : 1) && sk(tk) && !(0, RF.r)(tk, Ok.hudElements[tk]) && sF.current.push(tk)
+      (0, Wb.useLayoutEffect)((() => {
+        Gb.current = Ic.busy
+      }), [Ic.busy]);
+      const Hc = (0, Wb.useRef)([]),
+        fc = (0, Wb.useRef)(Yb.hudElements);
+      (0, Wb.useEffect)((() => {
+        for (const Wb of Object.keys(Yb.hudElements)) {
+          var bb, cb, sb, kb;
+          (null !== (bb = null === (cb = Yb.hudElements[Wb]) || void 0 === cb ? void 0 : cb[2]) && void 0 !== bb ? bb : 1) > (null !== (sb = null === (kb = fc.current[Wb]) || void 0 === kb ? void 0 : kb[2]) && void 0 !== sb ? sb : 1) && fb(Wb) && !(0, sc.x)(Wb, Yb.hudElements[Wb]) && Hc.current.push(Wb)
         }
-        VF.current = Ok.hudElements
-      }), [Ok.hudElements, sk]), (0, tk.useEffect)((() => {
-        if (!Kk) return;
-        const kk = sF.current.shift(),
-          Fk = kk && qk[kk];
-        if (!kk || !Fk || dF.busy()) return;
-        const Bk = (0, BF.D)(Fk, (0, BF.B)(ik.width, ik.height, Zk));
-        if (0 !== Bk.x || 0 !== Bk.y) {
-          var Rk;
-          const [Fk, tk] = null !== (Rk = Ok.hudElements[kk]) && void 0 !== Rk ? Rk : [0, 0];
-          dk(kk, Fk + Bk.x / ik.width, tk + Bk.y / ik.height)
+        fc.current = Yb.hudElements
+      }), [Yb.hudElements, fb]), (0, Wb.useEffect)((() => {
+        if (!ob) return;
+        const bb = Hc.current.shift(),
+          cb = bb && db[bb];
+        if (!bb || !cb || Ic.busy()) return;
+        const sb = (0, cc.E)(cb, (0, cc.B)(Vb.width, Vb.height, wb));
+        if (0 !== sb.x || 0 !== sb.y) {
+          var kb;
+          const [cb, Wb] = null !== (kb = Yb.hudElements[bb]) && void 0 !== kb ? kb : [0, 0];
+          Hb(bb, cb + sb.x / Vb.width, Wb + sb.y / Vb.height)
         }
-      }), [qk, Kk]), (0, tk.useImperativeHandle)(Wk, (() => ({
-        setScale: (kk, Fk) => {
-          wF((0, uk.ab)(Bk, ak, kk, {
-            scale: Fk
+      }), [db, ob]), (0, Wb.useImperativeHandle)(Cb, (() => ({
+        setScale: (bb, cb) => {
+          Uc((0, tb.hb)(sb, ab, bb, {
+            scale: cb
           }))
         },
-        setOpacity: kk => {
-          jk({
-            ...Bk,
-            hudKeyOpacity: kk
+        setOpacity: bb => {
+          Rb({
+            ...sb,
+            hudKeyOpacity: bb
           })
         },
-        keepLocks: (kk, Fk) => (XF(), xF(kk, Fk, ak, ik, lk, {
-          canKeep: bF,
-          keysAboveOf: nk
+        keepLocks: (bb, cb) => (ac(), Sc(bb, cb, ab, Vb, vb, {
+          canKeep: Tc,
+          keysAboveOf: Fb
         })),
-        setSafe: kk => {
-          wF((0, uk.db)(Bk, ak, kk)), ck.current && (ck.current.style.inset = (0, tF.D)(kk, ik.width, ik.height, PF(null !== Pk && void 0 !== Pk ? Pk : document)).map((kk => kk * Tk + "px")).join(" "))
+        setSafe: bb => {
+          Uc((0, tb.mb)(sb, ab, bb)), Eb.current && (Eb.current.style.inset = (0, kc.v)(bb, Vb.width, Vb.height, zc(null !== zb && void 0 !== zb ? zb : document)).map((bb => bb * Ob + "px")).join(" "))
         }
-      })), [jk, wF, lk, nk, XF, bF, Pk, Bk, ak, ik, Tk]);
-      const JF = new Set(Object.keys(Ok.hudElements).filter((kk => (0, uk.r)(Ok.hudElements, kk)))),
-        AF = Xk ? qk[Xk] : void 0,
-        eF = Xk ? zk(Xk, Vk, vk, yk) : "",
-        yF = (0, SF.g)(ik.width, ik.height),
-        fF = Xk ? function(kk, Fk, Bk, Rk) {
-          const tk = kk => (0, uk.r)(Bk.hudElements, kk) || (0, RF.q)(kk, Bk, Rk);
-          if (tk(kk)) return [];
-          const ak = Fk.filter((Fk => {
+      })), [Rb, Uc, vb, Fb, ac, Tc, zb, sb, ab, Vb, Ob]);
+      const Mc = new Set(Object.keys(Yb.hudElements).filter((bb => (0, tb.t)(Yb.hudElements, bb)))),
+        Xc = Tb ? db[Tb] : void 0,
+        nc = Tb ? Zb(Tb, Mb, Nb, lb) : "",
+        mc = (0, Jc.e)(Vb.width, Vb.height),
+        lc = Tb ? function(bb, cb, sb, kb) {
+          const Wb = bb => (0, tb.t)(sb.hudElements, bb) || (0, sc.t)(bb, sb, kb);
+          if (Wb(bb)) return [];
+          const ab = cb.filter((cb => {
               let {
-                id: Bk
-              } = Fk;
-              return "cluster" === kk ? Uk.has(Bk) : Bk === kk
+                id: sb
+              } = cb;
+              return "cluster" === bb ? Db.has(sb) : sb === bb
             })),
-            Xk = new Set;
-          for (const bk of Fk) bk.id === kk || Xk.has(bk.id) || wB(kk, bk.id, Bk) || tk(bk.id) || void 0 === Bk.hudElements[kk] && void 0 === Bk.hudElements[bk.id] || ak.some((kk => {
+            Tb = new Set;
+          for (const Ub of cb) Ub.id === bb || Tb.has(Ub.id) || Us(bb, Ub.id, sb) || Wb(Ub.id) || void 0 === sb.hudElements[bb] && void 0 === sb.hudElements[Ub.id] || ab.some((bb => {
             let {
-              id: Fk,
-              box: Bk
-            } = kk;
-            return Fk !== bk.id && (0, BF.k)(Bk, bk.box, 2)
-          })) && Xk.add(bk.id);
-          return [...Xk]
-        }(Xk, Ck, Ok, yF) : [],
-        mF = new Set((0, RF.p)(Ok.hudElements)),
-        WF = (0, RF.E)(Ok, (0, RF.A)(Ak.rowIcons)).state,
-        vF = fF.join(),
-        iF = (0, tk.useRef)(kk.onReady);
-      iF.current = kk.onReady, (0, tk.useEffect)((() => {
-        var kk;
-        null === (kk = iF.current) || void 0 === kk || kk.call(iF, xk)
-      }), [xk]);
-      const YF = (0, tk.useRef)(kk.onMeasured);
-      (0, tk.useLayoutEffect)((() => {
-        YF.current = kk.onMeasured
-      })), (0, tk.useEffect)((() => {
-        var kk;
-        const Fk = Pk ? {
-          hotbar: qF(Pk, OF),
-          cluster: tB(Pk, (0, BF.B)(ik.width, ik.height, Zk), OF)
+              id: cb,
+              box: sb
+            } = bb;
+            return cb !== Ub.id && (0, cc.j)(sb, Ub.box, 2)
+          })) && Tb.add(Ub.id);
+          return [...Tb]
+        }(Tb, Ab, Yb, mc) : [],
+        Qc = new Set((0, sc.q)(Yb.hudElements)),
+        ec = (0, sc.H)(Yb, (0, sc.D)(nb.rowIcons)).state,
+        Cc = lc.join(),
+        Nc = (0, Wb.useRef)(bb.onReady);
+      Nc.current = bb.onReady, (0, Wb.useEffect)((() => {
+        var bb;
+        null === (bb = Nc.current) || void 0 === bb || bb.call(Nc, Sb)
+      }), [Sb]);
+      const Vc = (0, Wb.useRef)(bb.onMeasured);
+      (0, Wb.useLayoutEffect)((() => {
+        Vc.current = bb.onMeasured
+      })), (0, Wb.useEffect)((() => {
+        var bb;
+        const cb = zb ? {
+          hotbar: dc(zb, Yc),
+          cluster: ks(zb, (0, cc.B)(Vb.width, Vb.height, wb), Yc)
         } : {};
-        null === (kk = YF.current) || void 0 === kk || kk.call(YF, qk, vF ? vF.split(",") : [], Fk)
-      }), [qk, vF, Pk, ik, Zk]);
-      const LF = kk => ({
-        left: kk.left * Tk,
-        top: kk.top * Tk,
-        width: (kk.right - kk.left) * Tk,
-        height: (kk.bottom - kk.top) * Tk
+        null === (bb = Vc.current) || void 0 === bb || bb.call(Vc, db, Cc ? Cc.split(",") : [], cb)
+      }), [db, Cc, zb, Vb, wb]);
+      const uc = bb => ({
+        left: bb.left * Ob,
+        top: bb.top * Ob,
+        width: (bb.right - bb.left) * Ob,
+        height: (bb.bottom - bb.top) * Ob
       });
-      return (0, Yk.jsx)("div", {
-        ref: Ek,
-        className: wk()("HudPreviewBox", {
-          Fill: mk
+      return (0, Lb.jsx)("div", {
+        ref: hb,
+        className: Ib()("HudPreviewBox", {
+          Fill: eb
         }),
         style: {
-          height: ik.height * Tk
+          height: Vb.height * Ob
         },
-        children: (0, Yk.jsxs)("div", {
-          ref: Sk,
+        children: (0, Lb.jsxs)("div", {
+          ref: Jb,
           className: "HudPreviewStage",
           style: {
-            width: ik.width * Tk,
-            height: ik.height * Tk
+            width: Vb.width * Ob,
+            height: Vb.height * Ob
           },
-          children: [(0, Yk.jsx)("iframe", {
-            ref: Hk,
+          children: [(0, Lb.jsx)("iframe", {
+            ref: Bb,
             className: "HudPreviewFrame",
             srcDoc: "<!DOCTYPE html><html><head></head><body></body></html>",
-            onLoad: hk,
-            title: vk("hudLayout:preview"),
+            onLoad: qb,
+            title: Nb("hudLayout:preview"),
             "aria-hidden": !0,
             tabIndex: -1,
             style: {
-              width: ik.width,
-              height: ik.height,
-              transform: `scale(${Tk})`
+              width: Vb.width,
+              height: Vb.height,
+              transform: `scale(${Ob})`
             }
-          }), Pk && (0, Ik.createPortal)((0, Yk.jsx)(oF, {
-            presence: Ak,
-            portraitPhone: yF,
-            hidden: JF,
-            actionButtons: Vk,
-            joystickFixed: Jk,
-            keysAbove: pk,
-            auraBar: Lk,
-            trayState: WF,
-            moved: mF
-          }), Pk.body), (0, Yk.jsxs)("div", {
+          }), zb && (0, xb.createPortal)((0, Lb.jsx)(Lc, {
+            presence: nb,
+            portraitPhone: mc,
+            hidden: Mc,
+            actionButtons: Mb,
+            joystickFixed: Xb,
+            keysAbove: rb,
+            auraBar: ub,
+            trayState: ec,
+            moved: Qc
+          }), zb.body), (0, Lb.jsxs)("div", {
             className: "HudPreviewOverlay",
-            ...dF.handlers,
-            children: [(0, Yk.jsx)("div", {
-              ref: ck,
+            ...Ic.handlers,
+            children: [(0, Lb.jsx)("div", {
+              ref: Eb,
               className: "HudPreviewSafeZone",
               style: {
-                top: Zk.top * Tk,
-                right: Zk.right * Tk,
-                bottom: Zk.bottom * Tk,
-                left: Zk.left * Tk
+                top: wb.top * Ob,
+                right: wb.right * Ob,
+                bottom: wb.bottom * Ob,
+                left: wb.left * Ob
               }
-            }), Ck.map(((kk, Fk) => {
+            }), Ab.map(((bb, cb) => {
               let {
-                id: Bk,
-                box: Rk
-              } = kk;
-              return (0, Yk.jsx)("div", {
+                id: sb,
+                box: kb
+              } = bb;
+              return (0, Lb.jsx)("div", {
                 className: "HudPreviewHandle",
-                style: LF((0, BF.q)(Rk, 40 / Tk))
-              }, `${Bk}:${Fk}`)
-            })), Ok.hudLocked.map((kk => {
-              const Fk = qk[kk];
-              return Fk && (0, Yk.jsx)("span", {
+                style: uc((0, cc.n)(kb, 40 / Ob))
+              }, `${sb}:${cb}`)
+            })), Yb.hudLocked.map((bb => {
+              const cb = db[bb];
+              return cb && (0, Lb.jsx)("span", {
                 className: "HudPreviewLockBadge",
                 style: {
-                  left: Fk.right * Tk,
-                  top: Fk.top * Tk
+                  left: cb.right * Ob,
+                  top: cb.top * Ob
                 },
-                children: (0, Yk.jsx)(Nk.d, {
+                children: (0, Lb.jsx)(gb.b, {
                   name: "lock"
                 })
-              }, kk)
-            })), (0, Yk.jsx)("div", {
-              ref: gk,
+              }, bb)
+            })), (0, Lb.jsx)("div", {
+              ref: Pb,
               className: "HudPreviewCentreLine",
               style: {
-                left: ik.width / 2 * Tk
+                left: Vb.width / 2 * Ob
               }
-            }), Xk && AF && (0, Yk.jsx)("div", {
-              ref: Mk,
-              className: wk()("HudPreviewRing", {
-                Fixed: !sk(Xk),
-                Overlap: fF.length > 0
+            }), Tb && Xc && (0, Lb.jsx)("div", {
+              ref: yb,
+              className: Ib()("HudPreviewRing", {
+                Fixed: !fb(Tb),
+                Overlap: lc.length > 0
               }),
-              style: LF(AF),
-              children: (0, Yk.jsx)("span", {
-                className: wk()("HudPreviewRingLabel", sB(Xk, eF, qk, Tk, ik)),
-                children: eF
+              style: uc(Xc),
+              children: (0, Lb.jsx)("span", {
+                className: Ib()("HudPreviewRingLabel", Hs(Tb, nc, db, Ob, Vb)),
+                children: nc
               })
             })]
           })]
@@ -1883,1187 +1883,1187 @@ export const modules = {
       })
     }
 
-    function AB(kk, Fk) {
-      (0, tk.useEffect)((() => {
-        var Bk;
-        null === (Bk = kk.current) || void 0 === Bk || Bk.toggleAttribute("inert", Fk)
-      }), [kk, Fk])
+    function Xs(bb, cb) {
+      (0, Wb.useEffect)((() => {
+        var sb;
+        null === (sb = bb.current) || void 0 === sb || sb.toggleAttribute("inert", cb)
+      }), [bb, cb])
     }
-    const eB = "hudFullScreen";
+    const ns = "hudFullScreen";
 
-    function yB(kk) {
+    function ms(bb) {
       let {
-        onScale: Fk,
-        onHidden: Bk,
-        onReset: ak,
-        locked: Xk,
-        lockable: bk,
-        onLocked: wk,
-        onClose: sk,
-        ...Vk
-      } = kk;
+        onScale: cb,
+        onHidden: sb,
+        onReset: ab,
+        locked: Tb,
+        lockable: Ub,
+        onLocked: Ib,
+        onClose: fb,
+        ...Mb
+      } = bb;
       const {
-        t: Jk
-      } = (0, Rk.x)(), Ak = (0, tk.useRef)(null);
-      (0, Qk.s)("popup", Ak, sk),
-      function(kk) {
-        const Fk = (0, tk.useRef)(kk);
-        Fk.current = kk, (0, tk.useEffect)((() => {
+        t: Xb
+      } = (0, kb.E)(), nb = (0, Wb.useRef)(null);
+      (0, jb.o)("popup", nb, fb),
+      function(bb) {
+        const cb = (0, Wb.useRef)(bb);
+        cb.current = bb, (0, Wb.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [eB]: !0
+            [ns]: !0
           }, "");
-          let kk = !1;
-          const Bk = () => {
-            kk = !0, Fk.current()
+          let bb = !1;
+          const sb = () => {
+            bb = !0, cb.current()
           };
-          return window.addEventListener("popstate", Bk), () => {
-            var Fk;
-            window.removeEventListener("popstate", Bk), !kk && null !== (Fk = window.history.state) && void 0 !== Fk && Fk[eB] && window.history.back()
+          return window.addEventListener("popstate", sb), () => {
+            var cb;
+            window.removeEventListener("popstate", sb), !bb && null !== (cb = window.history.state) && void 0 !== cb && cb[ns] && window.history.back()
           }
         }), [])
-      }(sk), (0, tk.useEffect)((() => {
-        function kk(kk) {
-          "Escape" === kk.key && (kk.stopPropagation(), sk())
+      }(fb), (0, Wb.useEffect)((() => {
+        function bb(bb) {
+          "Escape" === bb.key && (bb.stopPropagation(), fb())
         }
-        return window.addEventListener("keydown", kk, !0), () => {
-          window.removeEventListener("keydown", kk, !0)
+        return window.addEventListener("keydown", bb, !0), () => {
+          window.removeEventListener("keydown", bb, !0)
         }
-      }), [sk]);
+      }), [fb]);
       const {
-        selected: ek
-      } = Vk, yk = (0, tk.useRef)(null), fk = (0, tk.useRef)(null), [mk, Wk] = (0, tk.useState)(!1);
-      AB(fk, !mk);
-      const [vk, ik] = (0, tk.useState)(null), [Lk, Ok] = (0, tk.useState)([]), [Ek, Sk] = LF(), Nk = (0, tk.useRef)(Vk.selected);
-      Nk.current = Vk.selected;
-      const Hk = (0, tk.useRef)({}),
-        uk = (0, tk.useCallback)((() => {
-          const kk = yk.current;
-          kk && ik(function(kk, Fk, Bk) {
-            var Rk;
+        selected: mb
+      } = Mb, lb = (0, Wb.useRef)(null), Qb = (0, Wb.useRef)(null), [eb, Cb] = (0, Wb.useState)(!1);
+      Xs(Qb, !eb);
+      const [Nb, Vb] = (0, Wb.useState)(null), [ub, Yb] = (0, Wb.useState)([]), [hb, Jb] = uc(), gb = (0, Wb.useRef)(Mb.selected);
+      gb.current = Mb.selected;
+      const Bb = (0, Wb.useRef)({}),
+        tb = (0, Wb.useCallback)((() => {
+          const bb = lb.current;
+          bb && Vb(function(bb, cb, sb) {
+            var kb;
             const {
-              innerWidth: tk,
-              innerHeight: ak
-            } = window, Xk = kk.offsetWidth, bk = kk.offsetHeight, wk = Math.max(zF()[0], 6), dk = [];
-            for (const Jk of [wk, .2 * ak, .5 * ak - bk / 2, .33 * ak])
-              for (const kk of [.5, .3, .7]) dk.push({
-                left: Math.max(0, Math.min(tk - Xk - 6, Math.max(6, tk * kk - Xk / 2))),
-                top: Jk
+              innerWidth: Wb,
+              innerHeight: ab
+            } = window, Tb = bb.offsetWidth, Ub = bb.offsetHeight, Ib = Math.max(Zc()[0], 6), Hb = [];
+            for (const Xb of [Ib, .2 * ab, .5 * ab - Ub / 2, .33 * ab])
+              for (const bb of [.5, .3, .7]) Hb.push({
+                left: Math.max(0, Math.min(Wb - Tb - 6, Math.max(6, Wb * bb - Tb / 2))),
+                top: Xb
               });
-            const sk = dk.map((kk => ({
-                left: kk.left - 6,
-                top: kk.top - 6,
-                right: kk.left + Xk + 6,
-                bottom: kk.top + bk + 6
+            const fb = Hb.map((bb => ({
+                left: bb.left - 6,
+                top: bb.top - 6,
+                right: bb.left + Tb + 6,
+                bottom: bb.top + Ub + 6
               }))),
-              Vk = BB(Fk, Bk);
-            return dk[(0, BF.s)(sk, Vk, {
-              avoid: Bk && null !== (Rk = Fk[Bk]) && void 0 !== Rk ? Rk : null
+              Mb = cs(cb, sb);
+            return Hb[(0, cc.q)(fb, Mb, {
+              avoid: sb && null !== (kb = cb[sb]) && void 0 !== kb ? kb : null
             })]
-          }(kk, Hk.current, Nk.current))
+          }(bb, Bb.current, gb.current))
         }), []),
-        Mk = (0, tk.useCallback)(((kk, Fk, Bk) => {
-          Ok(Fk), Sk(Bk), Hk.current = kk, uk()
-        }), [uk, Sk]);
-      return (0, tk.useLayoutEffect)(uk, [Vk.selected, uk]), (0, Ik.createPortal)((0, Yk.jsxs)("div", {
-        ref: Ak,
+        yb = (0, Wb.useCallback)(((bb, cb, sb) => {
+          Yb(cb), Jb(sb), Bb.current = bb, tb()
+        }), [tb, Jb]);
+      return (0, Wb.useLayoutEffect)(tb, [Mb.selected, tb]), (0, xb.createPortal)((0, Lb.jsxs)("div", {
+        ref: nb,
         className: "HudFullScreenEditor",
-        children: [(0, Yk.jsx)(JB, {
-          ...Vk,
+        children: [(0, Lb.jsx)(Ms, {
+          ...Mb,
           maxHeight: window.innerHeight,
           fill: !0,
-          onMeasured: Mk,
-          onReady: Wk,
-          lockable: bk
-        }), (0, Yk.jsxs)("div", {
-          ref: yk,
+          onMeasured: yb,
+          onReady: Cb,
+          lockable: Ub
+        }), (0, Lb.jsxs)("div", {
+          ref: lb,
           className: "HudFullScreenToolbar",
-          style: null === vk ? void 0 : {
-            left: vk.left,
-            top: vk.top,
+          style: null === Nb ? void 0 : {
+            left: Nb.left,
+            top: Nb.top,
             transform: "none"
           },
-          children: [(0, Yk.jsx)("div", {
-            ref: fk,
+          children: [(0, Lb.jsx)("div", {
+            ref: Qb,
             className: "HudFullScreenControls",
-            children: (0, Yk.jsx)(EF, {
-              selected: ek,
-              layout: Vk.layout.hudLayouts[Vk.orientation],
-              actionButtons: Vk.actionButtons,
-              keyNames: Vk.keyNames,
-              overlaps: Lk,
-              scaleCaps: Ek,
-              onScale: Fk,
-              onHidden: Bk,
-              onReset: ak,
-              locked: Xk,
-              lockable: bk,
-              onLocked: wk,
-              joystickFixed: Vk.joystickFixed
+            children: (0, Lb.jsx)(hc, {
+              selected: mb,
+              layout: Mb.layout.hudLayouts[Mb.orientation],
+              actionButtons: Mb.actionButtons,
+              keyNames: Mb.keyNames,
+              overlaps: ub,
+              scaleCaps: hb,
+              onScale: cb,
+              onHidden: sb,
+              onReset: ab,
+              locked: Tb,
+              lockable: Ub,
+              onLocked: Ib,
+              joystickFixed: Mb.joystickFixed
             })
-          }), (0, Yk.jsx)(dk.g, {
+          }), (0, Lb.jsx)(Hb.d, {
             className: "HudFullScreenDone",
-            onClick: sk,
+            onClick: fb,
             padDefaultFocus: !0,
-            children: Jk("hudLayout:done")
+            children: Xb("hudLayout:done")
           })]
         })]
       }), document.body)
     }
-    const fB = kk => `${Math.round(100*kk)}%`;
+    const ls = bb => `${Math.round(100*bb)}%`;
 
-    function mB(kk) {
+    function Qs(bb) {
       let {
-        info: Fk,
-        tuple: Bk,
-        props: tk
-      } = kk;
+        info: cb,
+        tuple: sb,
+        props: Wb
+      } = bb;
       const {
-        t: ak
-      } = (0, Rk.x)();
-      return (0, Yk.jsx)(Ak.l, {
-        name: ak("hudLayout:size"),
-        min: uk.j,
-        max: uk.i,
-        step: OF,
-        initValue: Bk[2],
-        disabled: tk.locked.has(Fk.id),
-        selectableMax: tk.scaleCaps[Fk.id],
-        cappedNote: ak("hudLayout:sizeCapped"),
-        format: fB,
-        onChange: kk => {
-          tk.onScalePreview(Fk.id, kk)
+        t: ab
+      } = (0, kb.E)();
+      return (0, Lb.jsx)(nb.i, {
+        name: ab("hudLayout:size"),
+        min: tb.k,
+        max: tb.h,
+        step: Yc,
+        initValue: sb[2],
+        disabled: Wb.locked.has(cb.id),
+        selectableMax: Wb.scaleCaps[cb.id],
+        cappedNote: ab("hudLayout:sizeCapped"),
+        format: ls,
+        onChange: bb => {
+          Wb.onScalePreview(cb.id, bb)
         },
-        onChangeComplete: kk => {
-          tk.onScale(Fk.id, kk)
+        onChangeComplete: bb => {
+          Wb.onScale(cb.id, bb)
         }
       })
     }
 
-    function WB(kk) {
+    function es(bb) {
       const {
-        t: Fk
-      } = (0, Rk.x)(), {
-        present: Bk,
-        elements: ak,
-        selected: Xk,
-        onSelect: bk,
-        onHidden: dk,
-        onReset: sk,
-        note: Vk,
-        actionButtons: Jk,
-        keyNames: Ak,
-        sizeBesidePreview: ek,
-        locked: yk,
-        lockable: fk,
-        onLocked: mk
-      } = kk, {
-        rowIconsOpen: Wk,
-        onRowIconsOpen: vk
-      } = kk, ik = (0, tk.useRef)(null), Lk = null !== Xk && (Wk || !(0, uk.L)(Xk));
-      return (0, tk.useEffect)((() => {
-        var kk;
-        const Fk = Xk ? null === (kk = ik.current) || void 0 === kk ? void 0 : kk.querySelector(`[data-hud-row="${Xk}"]`) : null;
-        if (!Fk) return;
-        const Bk = Fk.closest(".SettingsMenuRight"),
-          Rk = performance.now();
-        let tk = null;
-        const ak = () => {
-            clearInterval(wk), null === Bk || void 0 === Bk || Bk.removeEventListener("scroll", bk)
+        t: cb
+      } = (0, kb.E)(), {
+        present: sb,
+        elements: ab,
+        selected: Tb,
+        onSelect: Ub,
+        onHidden: Hb,
+        onReset: fb,
+        note: Mb,
+        actionButtons: Xb,
+        keyNames: nb,
+        sizeBesidePreview: mb,
+        locked: lb,
+        lockable: Qb,
+        onLocked: eb
+      } = bb, {
+        rowIconsOpen: Cb,
+        onRowIconsOpen: Nb
+      } = bb, Vb = (0, Wb.useRef)(null), ub = null !== Tb && (Cb || !(0, tb.Q)(Tb));
+      return (0, Wb.useEffect)((() => {
+        var bb;
+        const cb = Tb ? null === (bb = Vb.current) || void 0 === bb ? void 0 : bb.querySelector(`[data-hud-row="${Tb}"]`) : null;
+        if (!cb) return;
+        const sb = cb.closest(".SettingsMenuRight"),
+          kb = performance.now();
+        let Wb = null;
+        const ab = () => {
+            clearInterval(Ib), null === sb || void 0 === sb || sb.removeEventListener("scroll", Ub)
           },
-          bk = () => {
-            nF() || ak()
+          Ub = () => {
+            Fc() || ab()
           },
-          wk = setInterval((() => {
-            const kk = performance.now();
-            kk - Rk > 1500 ? ak() : nF() ? tk = null : null === tk ? tk = kk : kk - tk >= 150 && (ak(), function(kk) {
-              var Fk;
-              const Bk = kk.closest(".SettingsMenuRight"),
-                Rk = null === (Fk = kk.closest(".HudLayoutSettings")) || void 0 === Fk ? void 0 : Fk.querySelector(".HudLayoutPreviewBox");
-              if (!Bk || !Rk) return;
-              const tk = Rk.getBoundingClientRect().bottom + 8,
-                ak = Bk.getBoundingClientRect().bottom - 8,
-                Xk = kk.getBoundingClientRect();
-              Xk.top < tk ? Bk.scrollBy({
-                top: Xk.top - tk,
+          Ib = setInterval((() => {
+            const bb = performance.now();
+            bb - kb > 1500 ? ab() : Fc() ? Wb = null : null === Wb ? Wb = bb : bb - Wb >= 150 && (ab(), function(bb) {
+              var cb;
+              const sb = bb.closest(".SettingsMenuRight"),
+                kb = null === (cb = bb.closest(".HudLayoutSettings")) || void 0 === cb ? void 0 : cb.querySelector(".HudLayoutPreviewBox");
+              if (!sb || !kb) return;
+              const Wb = kb.getBoundingClientRect().bottom + 8,
+                ab = sb.getBoundingClientRect().bottom - 8,
+                Tb = bb.getBoundingClientRect();
+              Tb.top < Wb ? sb.scrollBy({
+                top: Tb.top - Wb,
                 behavior: "smooth"
-              }) : Xk.bottom > ak && Bk.scrollBy({
-                top: Math.min(Xk.bottom - ak, Xk.top - tk),
+              }) : Tb.bottom > ab && sb.scrollBy({
+                top: Math.min(Tb.bottom - ab, Tb.top - Wb),
                 behavior: "smooth"
               })
-            }(Fk))
+            }(cb))
           }), 50);
-        return null === Bk || void 0 === Bk || Bk.addEventListener("scroll", bk, {
+        return null === sb || void 0 === sb || sb.addEventListener("scroll", Ub, {
           passive: !0
-        }), ak
-      }), [Xk, Lk]), (0, Yk.jsx)("div", {
-        ref: ik,
+        }), ab
+      }), [Tb, ub]), (0, Lb.jsx)("div", {
+        ref: Vb,
         className: "SettingBoxGroup HudElementList",
-        children: Tk.filter((kk => Bk.has(kk.id) && (Wk || !(0, uk.L)(kk.id)))).map((Bk => {
-          const Rk = ((kk, Fk) => {
-              var Bk;
-              return null !== (Bk = kk[Fk]) && void 0 !== Bk ? Bk : uk.n
-            })(ak, Bk.id),
-            tk = (0, uk.r)(ak, Bk.id),
-            ik = Bk.id === Xk,
-            Lk = Bk.scale && !ek,
-            Ok = Vk(Bk.id, ik);
-          return (0, Yk.jsxs)("div", {
-            "data-hud-row": Bk.id,
-            className: wk()("SettingBox HudElementRow", {
-              Open: ik,
-              Hidden: tk,
-              Child: void 0 !== Bk.parent
+        children: Ob.filter((bb => sb.has(bb.id) && (Cb || !(0, tb.Q)(bb.id)))).map((sb => {
+          const kb = ((bb, cb) => {
+              var sb;
+              return null !== (sb = bb[cb]) && void 0 !== sb ? sb : tb.p
+            })(ab, sb.id),
+            Wb = (0, tb.t)(ab, sb.id),
+            Vb = sb.id === Tb,
+            ub = sb.scale && !mb,
+            Yb = Mb(sb.id, Vb);
+          return (0, Lb.jsxs)("div", {
+            "data-hud-row": sb.id,
+            className: Ib()("SettingBox HudElementRow", {
+              Open: Vb,
+              Hidden: Wb,
+              Child: void 0 !== sb.parent
             }),
-            children: [(0, Yk.jsxs)("div", {
+            children: [(0, Lb.jsxs)("div", {
               className: "HudElementRowHead",
-              children: [(0, Yk.jsxs)("button", {
+              children: [(0, Lb.jsxs)("button", {
                 type: "button",
                 className: "HudElementRowName",
-                "aria-expanded": Lk ? ik : void 0,
+                "aria-expanded": ub ? Vb : void 0,
                 onClick: () => {
-                  bk(Bk.id)
+                  Ub(sb.id)
                 },
-                children: [zk(Bk.id, Jk, Fk, Ak), Bk.scale && 1 !== Rk[2] && !(ik && Lk) && (0, Yk.jsx)("span", {
+                children: [Zb(sb.id, Xb, cb, nb), sb.scale && 1 !== kb[2] && !(Vb && ub) && (0, Lb.jsx)("span", {
                   className: "HudElementRowSize",
-                  children: fB(Rk[2])
-                }), Lk && (0, Yk.jsx)("span", {
+                  children: ls(kb[2])
+                }), ub && (0, Lb.jsx)("span", {
                   className: "HudElementRowChevron",
                   children: "\u25be"
                 })]
-              }), (0, Yk.jsx)(Zk, {
+              }), (0, Lb.jsx)(wb, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: Bk.id,
-                actionButtons: Jk,
-                keyNames: Ak,
-                locked: yk.has(Bk.id),
-                lockable: fk(Bk.id),
-                onLocked: mk
-              }), "menu" === Bk.id && (0, Yk.jsx)(pk, {
+                id: sb.id,
+                actionButtons: Xb,
+                keyNames: nb,
+                locked: lb.has(sb.id),
+                lockable: Qb(sb.id),
+                onLocked: eb
+              }), "menu" === sb.id && (0, Lb.jsx)(rb, {
                 className: "HudElementRowIcon",
-                open: Wk,
-                name: zk(Bk.id, Jk, Fk, Ak),
-                onToggle: vk
-              }), "menu" !== Bk.id && (0, Yk.jsx)(qk, {
+                open: Cb,
+                name: Zb(sb.id, Xb, cb, nb),
+                onToggle: Nb
+              }), "menu" !== sb.id && (0, Lb.jsx)(db, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: Bk.id,
-                elements: ak,
-                actionButtons: Jk,
-                keyNames: Ak,
-                onHidden: dk
-              }), (0, Yk.jsx)(Ck, {
+                id: sb.id,
+                elements: ab,
+                actionButtons: Xb,
+                keyNames: nb,
+                onHidden: Hb
+              }), (0, Lb.jsx)(Ab, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
                 onlyWhenMoved: !0,
-                locked: yk.has(Bk.id),
-                id: Bk.id,
-                elements: ak,
-                actionButtons: Jk,
-                keyNames: Ak,
-                onReset: sk
+                locked: lb.has(sb.id),
+                id: sb.id,
+                elements: ab,
+                actionButtons: Xb,
+                keyNames: nb,
+                onReset: fb
               })]
-            }), ik && Lk && (0, Yk.jsx)(mB, {
-              info: Bk,
-              tuple: Rk,
-              props: kk
-            }), Ok && (0, Yk.jsx)("div", {
+            }), Vb && ub && (0, Lb.jsx)(Qs, {
+              info: sb,
+              tuple: kb,
+              props: bb
+            }), Yb && (0, Lb.jsx)("div", {
               className: "HudElementNote",
-              children: Ok
+              children: Yb
             })]
-          }, Bk.id)
+          }, sb.id)
         }))
       })
     }
 
-    function vB(kk) {
+    function Cs(bb) {
       let {
-        preview: Fk,
-        quick: Bk,
-        onFullScreen: ak,
-        resting: Xk,
-        onSidePanel: bk
-      } = kk;
+        preview: cb,
+        quick: sb,
+        onFullScreen: ab,
+        resting: Tb,
+        onSidePanel: Ub
+      } = bb;
       const {
-        t: wk
-      } = (0, Rk.x)(), sk = VB(), Vk = (0, tk.useRef)(null), {
-        width: Jk
-      } = (0, FF.e)(Vk), Ak = Math.floor(sk.width * Math.min(1, Fk.maxHeight / sk.height)), ek = Jk - Ak - 12, yk = ek >= 130, fk = Jk > 0;
-      (0, tk.useEffect)((() => {
-        fk && bk(yk)
-      }), [fk, yk, bk]);
-      const mk = (0, BF.x)(yk ? Ak : Jk, sk.width, sk.height, Fk.maxHeight),
-        Wk = Xk ? (0, Yk.jsx)("div", {
+        t: Ib
+      } = (0, kb.E)(), fb = fs(), Mb = (0, Wb.useRef)(null), {
+        width: Xb
+      } = (0, bc.b)(Mb), nb = Math.floor(fb.width * Math.min(1, cb.maxHeight / fb.height)), mb = Xb - nb - 12, lb = mb >= 130, Qb = Xb > 0;
+      (0, Wb.useEffect)((() => {
+        Qb && Ub(lb)
+      }), [Qb, lb, Ub]);
+      const eb = (0, cc.y)(lb ? nb : Xb, fb.width, fb.height, cb.maxHeight),
+        Cb = Tb ? (0, Lb.jsx)("div", {
           className: "HudPreviewResting",
           style: {
-            height: sk.height * mk
+            height: fb.height * eb
           }
-        }) : (0, Yk.jsx)(JB, {
-          ...Fk
+        }) : (0, Lb.jsx)(Ms, {
+          ...cb
         }),
-        vk = kk => (0, Yk.jsxs)(dk.O, {
+        Nb = bb => (0, Lb.jsxs)(Hb.M, {
           className: "HudLayoutFullScreenButton",
-          ariaLabel: wk("hudLayout:fullScreen"),
+          ariaLabel: Ib("hudLayout:fullScreen"),
           analyticsClick: {
             id: "hud_layout.full_screen"
           },
-          onClick: ak,
-          children: [(0, Yk.jsx)(Nk.d, {
+          onClick: ab,
+          children: [(0, Lb.jsx)(gb.b, {
             name: "expand"
-          }), kk && (0, Yk.jsx)("span", {
-            children: wk("hudLayout:fullScreen")
+          }), bb && (0, Lb.jsx)("span", {
+            children: Ib("hudLayout:fullScreen")
           })]
         });
-      return (0, Yk.jsxs)("div", {
-        ref: Vk,
+      return (0, Lb.jsxs)("div", {
+        ref: Mb,
         className: "SettingBox HudLayoutPreviewBox",
-        children: [Jk > 0 && yk && (0, Yk.jsxs)("div", {
+        children: [Xb > 0 && lb && (0, Lb.jsxs)("div", {
           className: "HudLayoutPreviewRow",
-          children: [(0, Yk.jsx)("div", {
+          children: [(0, Lb.jsx)("div", {
             style: {
-              width: Ak
+              width: nb
             },
-            children: Wk
-          }), (0, Yk.jsx)("div", {
+            children: Cb
+          }), (0, Lb.jsx)("div", {
             className: "HudLayoutSidePanel",
-            children: (0, Yk.jsx)(EF, {
-              selected: Fk.selected,
-              ...Bk,
-              joystickFixed: Fk.joystickFixed,
-              extra: vk(!Fk.selected || ek >= 278)
+            children: (0, Lb.jsx)(hc, {
+              selected: cb.selected,
+              ...sb,
+              joystickFixed: cb.joystickFixed,
+              extra: Nb(!cb.selected || mb >= 278)
             })
           })]
-        }), Jk > 0 && !yk && (0, Yk.jsxs)(Yk.Fragment, {
-          children: [Wk, (0, Yk.jsx)("div", {
+        }), Xb > 0 && !lb && (0, Lb.jsxs)(Lb.Fragment, {
+          children: [Cb, (0, Lb.jsx)("div", {
             className: "HudLayoutCornerButton",
-            children: vk(!1)
+            children: Nb(!1)
           })]
         })]
       })
     }
-    var iB = Bk(2352),
-      YB = Bk(4145),
-      oB = Bk(2334);
-    const LB = kk => {
-      const Fk = tF.r * ("sides" === kk ? window.innerWidth : window.innerHeight);
-      return Math.min(64, 2 * Math.floor(Fk / 2))
+    var Ns = sb(2362),
+      Vs = sb(4148),
+      Ls = sb(2348);
+    const us = bb => {
+      const cb = kc.p * ("sides" === bb ? window.innerWidth : window.innerHeight);
+      return Math.min(64, 2 * Math.floor(cb / 2))
     };
 
-    function OB(kk, Fk, Bk) {
-      const [Rk, tk, ak, Xk] = kk;
-      return "sides" === Fk ? [Rk, Bk, ak, Bk] : [Bk, tk, Bk, Xk]
+    function Ys(bb, cb, sb) {
+      const [kb, Wb, ab, Tb] = bb;
+      return "sides" === cb ? [kb, sb, ab, sb] : [sb, Wb, sb, Tb]
     }
-    const EB = [null, null, null, null],
-      SB = kk => `${kk}px`;
+    const hs = [null, null, null, null],
+      gs = bb => `${bb}px`;
 
-    function NB(kk) {
+    function Bs(bb) {
       let {
-        safe: Fk,
-        onPreview: Bk,
-        onCommit: ak
-      } = kk;
+        safe: cb,
+        onPreview: sb,
+        onCommit: ab
+      } = bb;
       const {
-        t: Xk
-      } = (0, Rk.x)(), bk = (0, tF.D)(null !== Fk && void 0 !== Fk ? Fk : EB, window.innerWidth, window.innerHeight, PF(document).map(Math.round)), wk = (0, tk.useRef)(null !== Fk && void 0 !== Fk ? Fk : EB);
-      wk.current = null !== Fk && void 0 !== Fk ? Fk : EB;
-      const sk = kk => {
-        const Fk = Math.min(LB(kk), "sides" === kk ? Math.max(bk[1], bk[3]) : Math.max(bk[0], bk[2]));
-        return (0, Yk.jsx)(Ak.l, {
-          name: Xk("sides" === kk ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
+        t: Tb
+      } = (0, kb.E)(), Ub = (0, kc.v)(null !== cb && void 0 !== cb ? cb : hs, window.innerWidth, window.innerHeight, zc(document).map(Math.round)), Ib = (0, Wb.useRef)(null !== cb && void 0 !== cb ? cb : hs);
+      Ib.current = null !== cb && void 0 !== cb ? cb : hs;
+      const fb = bb => {
+        const cb = Math.min(us(bb), "sides" === bb ? Math.max(Ub[1], Ub[3]) : Math.max(Ub[0], Ub[2]));
+        return (0, Lb.jsx)(nb.i, {
+          name: Tb("sides" === bb ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
           min: 0,
-          max: LB(kk),
+          max: us(bb),
           step: 2,
-          initValue: Fk,
-          format: SB,
-          onChange: Fk => {
-            Bk(OB(wk.current, kk, Fk))
+          initValue: cb,
+          format: gs,
+          onChange: cb => {
+            sb(Ys(Ib.current, bb, cb))
           },
-          onChangeComplete: Rk => {
-            if (Rk === Fk) return void Bk(wk.current);
-            const tk = OB(wk.current, kk, Rk);
-            wk.current = tk, ak(tk), (0, Ek.reportAnalyticsClick)({
+          onChangeComplete: kb => {
+            if (kb === cb) return void sb(Ib.current);
+            const Wb = Ys(Ib.current, bb, kb);
+            Ib.current = Wb, ab(Wb), (0, hb.reportAnalyticsClick)({
               id: "hud_layout.safe_zone",
-              value: kk
+              value: bb
             })
           }
         })
       };
-      return (0, Yk.jsxs)("div", {
+      return (0, Lb.jsxs)("div", {
         className: "SettingBoxGroup HudSafeZone",
-        children: [(0, Yk.jsxs)("div", {
+        children: [(0, Lb.jsxs)("div", {
           className: "SettingBox HudSafeZoneHeader",
-          children: [(0, Yk.jsx)("div", {
-            children: Xk("hudLayout:safeZone")
-          }), (0, Yk.jsx)(dk.O, {
-            active: null === Fk,
-            pressed: null === Fk,
+          children: [(0, Lb.jsx)("div", {
+            children: Tb("hudLayout:safeZone")
+          }), (0, Lb.jsx)(Hb.M, {
+            active: null === cb,
+            pressed: null === cb,
             onClick: () => {
-              ak(null)
+              ab(null)
             },
-            children: Xk("hudLayout:safeZoneAuto")
+            children: Tb("hudLayout:safeZoneAuto")
           })]
-        }), sk("sides"), sk("ends")]
+        }), fb("sides"), fb("ends")]
       })
     }
 
-    function HB() {
+    function ts() {
       const {
-        t: kk
-      } = (0, Rk.x)(), Fk = (0, uk.Z)(), {
-        clientEscMenuOptions: Bk
-      } = (0, sk.h)(["clientEscMenuOptions"]), ak = (0, iB.e)(), Xk = Fk.hudLayouts[ak], [bk, wk] = (0, tk.useState)(null), {
-        rowIconsOpen: Vk,
-        onRowIconsOpen: Jk,
-        select: ek
-      } = function(kk, Fk) {
-        const [Bk, Rk] = (0, tk.useState)((() => uk.D.some((Fk => void 0 !== kk.hudElements[Fk] || kk.hudLocked.includes(Fk))))), ak = (0, tk.useCallback)((kk => {
-          Fk(kk), (0, uk.L)(kk) && Rk(!0)
-        }), [Fk]);
+        t: bb
+      } = (0, kb.E)(), cb = (0, tb.db)(), {
+        clientEscMenuOptions: sb
+      } = (0, fb.p)(["clientEscMenuOptions"]), ab = (0, Ns.d)(), Tb = cb.hudLayouts[ab], [Ub, Ib] = (0, Wb.useState)(null), {
+        rowIconsOpen: Mb,
+        onRowIconsOpen: Xb,
+        select: mb
+      } = function(bb, cb) {
+        const [sb, kb] = (0, Wb.useState)((() => tb.E.some((cb => void 0 !== bb.hudElements[cb] || bb.hudLocked.includes(cb))))), ab = (0, Wb.useCallback)((bb => {
+          cb(bb), (0, tb.Q)(bb) && kb(!0)
+        }), [cb]);
         return {
-          rowIconsOpen: Bk,
-          onRowIconsOpen: Rk,
-          select: ak
+          rowIconsOpen: sb,
+          onRowIconsOpen: kb,
+          select: ab
         }
-      }(Xk, wk), [yk, fk] = (0, tk.useState)([]), [mk, Wk] = (0, tk.useState)(null), [vk, ik] = LF(), Lk = (0, tk.useCallback)(((kk, Fk, Bk) => {
-        fk(Fk), ik(Bk);
-        const Rk = Object.keys(kk);
-        Wk((kk => (null === kk || void 0 === kk ? void 0 : kk.size) === Rk.length && Rk.every((Fk => kk.has(Fk))) ? kk : new Set(Rk)))
-      }), [ik]), {
-        gameState: Ok
-      } = (0, sk.h)(["gameState"]), Nk = (0, oB.g)(), [Hk] = (0, tk.useState)((() => "inGame" === Ok ? function(kk, Fk) {
-        const Bk = kk.querySelector(".InGameUi .TouchComponentsButtons");
-        if (!Bk) return bF;
-        const Rk = {},
-          tk = {};
-        for (const dk of XF) {
-          const kk = Bk.querySelector(`.TouchSlot${dk} > .TouchKey`);
-          if (kk) {
-            var ak, Xk;
-            Rk[dk] = kk.cloneNode(!0);
-            const Fk = (null !== (ak = null === (Xk = kk.querySelector(".TouchKeyLabel")) || void 0 === Xk ? void 0 : Xk.textContent) && void 0 !== ak ? ak : "").split(/\s+/).filter((kk => !/[\d\xd7]/.test(kk))).join(" ");
-            Fk && (tk[dk] = Fk)
+      }(Tb, Ib), [lb, Qb] = (0, Wb.useState)([]), [eb, Cb] = (0, Wb.useState)(null), [Nb, Vb] = uc(), ub = (0, Wb.useCallback)(((bb, cb, sb) => {
+        Qb(cb), Vb(sb);
+        const kb = Object.keys(bb);
+        Cb((bb => (null === bb || void 0 === bb ? void 0 : bb.size) === kb.length && kb.every((cb => bb.has(cb))) ? bb : new Set(kb)))
+      }), [Vb]), {
+        gameState: Yb
+      } = (0, fb.p)(["gameState"]), gb = (0, Ls.j)(), [Bb] = (0, Wb.useState)((() => "inGame" === Yb ? function(bb, cb) {
+        const sb = bb.querySelector(".InGameUi .TouchComponentsButtons");
+        if (!sb) return Tc;
+        const kb = {},
+          Wb = {};
+        for (const Hb of ac) {
+          const bb = sb.querySelector(`.TouchSlot${Hb} > .TouchKey`);
+          if (bb) {
+            var ab, Tb;
+            kb[Hb] = bb.cloneNode(!0);
+            const cb = (null !== (ab = null === (Tb = bb.querySelector(".TouchKeyLabel")) || void 0 === Tb ? void 0 : Tb.textContent) && void 0 !== ab ? ab : "").split(/\s+/).filter((bb => !/[\d\xd7]/.test(bb))).join(" ");
+            cb && (Wb[Hb] = cb)
           }
         }
-        const bk = Fk => {
-            const Bk = kk.querySelector(`.InGameUi ${Fk}`);
-            return null !== Bk && !Bk.classList.contains("Hidden")
+        const Ub = cb => {
+            const sb = bb.querySelector(`.InGameUi ${cb}`);
+            return null !== sb && !sb.classList.contains("Hidden")
           },
-          wk = [...kk.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((kk => kk.cloneNode(!0)));
+          Ib = [...bb.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((bb => bb.cloneNode(!0)));
         return {
-          faces: Object.keys(Rk).length > 0 ? Rk : null,
-          names: tk,
-          shop: bk(".TouchInventoryKey.ShopKey"),
-          bag: bk(".TouchInventoryKey.BagKey"),
-          items: wk.length > 0 ? wk : null,
-          rowIcons: Fk
+          faces: Object.keys(kb).length > 0 ? kb : null,
+          names: Wb,
+          shop: Ub(".TouchInventoryKey.ShopKey"),
+          bag: Ub(".TouchInventoryKey.BagKey"),
+          items: Ib.length > 0 ? Ib : null,
+          rowIcons: cb
         }
-      }(document, Nk) : bF)), Mk = (0, tk.useRef)(null), gk = (0, tk.useRef)(null), Uk = function(kk) {
-        const [Fk, Bk] = (0, tk.useState)((() => .4 * window.innerHeight));
-        return (0, tk.useLayoutEffect)((() => {
-          var Fk;
-          const Rk = null === (Fk = kk.current) || void 0 === Fk ? void 0 : Fk.closest(".SettingsMenuRight");
-          if (!Rk) return;
-          const tk = () => {
-            const kk = Rk.clientHeight < uB ? .4 : .5;
-            Bk(Math.max(80, Rk.clientHeight * kk - 24))
+      }(document, gb) : Tc)), yb = (0, Wb.useRef)(null), Pb = (0, Wb.useRef)(null), Db = function(bb) {
+        const [cb, sb] = (0, Wb.useState)((() => .4 * window.innerHeight));
+        return (0, Wb.useLayoutEffect)((() => {
+          var cb;
+          const kb = null === (cb = bb.current) || void 0 === cb ? void 0 : cb.closest(".SettingsMenuRight");
+          if (!kb) return;
+          const Wb = () => {
+            const bb = kb.clientHeight < ys ? .4 : .5;
+            sb(Math.max(80, kb.clientHeight * bb - 24))
           };
-          tk();
-          const ak = new ResizeObserver(tk);
-          return ak.observe(Rk), () => {
-            ak.disconnect()
+          Wb();
+          const ab = new ResizeObserver(Wb);
+          return ab.observe(kb), () => {
+            ab.disconnect()
           }
-        }), [kk]), Fk
-      }(gk), ck = (0, YB.t)(Bk.joystickMode), Gk = Bk.touchActionButtons, Dk = (0, tk.useMemo)((() => function(kk, Fk) {
-        const Bk = {},
-          Rk = [
+        }), [bb]), cb
+      }(Pb), Eb = (0, Vs.l)(sb.joystickMode), ib = sb.touchActionButtons, Kb = (0, Wb.useMemo)((() => function(bb, cb) {
+        const sb = {},
+          kb = [
             ["extra", "X"],
             ["game", "G"]
           ];
-        Fk || Rk.push(["attack", "P"]);
-        for (const [tk, ak] of Rk) {
-          const Fk = kk.names[ak];
-          Fk && (Bk[tk] = Fk)
+        cb || kb.push(["attack", "P"]);
+        for (const [Wb, ab] of kb) {
+          const cb = bb.names[ab];
+          cb && (sb[Wb] = cb)
         }
-        return Bk
-      }(Hk, Gk)), [Hk, Gk]);
-      (0, tk.useEffect)((() => {
-        (0, Ek.reportAnalyticsClick)({
+        return sb
+      }(Bb, ib)), [Bb, ib]);
+      (0, Wb.useEffect)((() => {
+        (0, hb.reportAnalyticsClick)({
           id: "hud_layout.open"
         })
       }), []);
-      const [zk, hk] = (0, tk.useState)(!1), [qk, Ck] = (0, tk.useState)(!1), Zk = (0, tk.useRef)(null);
-      AB(Zk, !qk);
-      const [pk, Kk] = (0, tk.useState)(!1), xk = (0, tk.useCallback)((() => {
-        Kk(!1)
-      }), []), jk = (0, tk.useMemo)((() => new Set(Xk.hudLocked)), [Xk.hudLocked]), Ik = kk => {
-        var Fk, Bk;
-        const Rk = (0, uk.q)(),
-          tk = kk(Rk);
-        (0, uk.S)(null !== (Fk = null === (Bk = Mk.current) || void 0 === Bk ? void 0 : Bk.keepLocks(Rk, tk)) && void 0 !== Fk ? Fk : tk)
-      }, Qk = (kk, Fk) => {
-        Ik((Bk => (0, uk.ab)(Bk, ak, kk, Fk)))
-      }, kF = (kk, Fk, Bk) => {
-        Qk(kk, {
-          dx: Fk,
-          dy: Bk
-        }), (0, Ek.reportAnalyticsClick)({
+      const [Zb, qb] = (0, Wb.useState)(!1), [db, Ab] = (0, Wb.useState)(!1), wb = (0, Wb.useRef)(null);
+      Xs(wb, !db);
+      const [rb, ob] = (0, Wb.useState)(!1), Sb = (0, Wb.useCallback)((() => {
+        ob(!1)
+      }), []), Rb = (0, Wb.useMemo)((() => new Set(Tb.hudLocked)), [Tb.hudLocked]), xb = bb => {
+        var cb, sb;
+        const kb = (0, tb.r)(),
+          Wb = bb(kb);
+        (0, tb.Z)(null !== (cb = null === (sb = yb.current) || void 0 === sb ? void 0 : sb.keepLocks(kb, Wb)) && void 0 !== cb ? cb : Wb)
+      }, jb = (bb, cb) => {
+        xb((sb => (0, tb.hb)(sb, ab, bb, cb)))
+      }, pb = (bb, cb, sb) => {
+        jb(bb, {
+          dx: cb,
+          dy: sb
+        }), (0, hb.reportAnalyticsClick)({
           id: "hud_layout.edit",
-          value: `move:${kk}`
+          value: `move:${bb}`
         })
-      }, FF = (kk, Fk) => {
-        Ik((Bk => (0, uk.bb)(Bk, ak, kk, Fk)))
-      }, BF = kk => {
-        const Fk = rk[kk];
-        return (Fk.move || Fk.scale) && ("joystick" !== kk || ck) && !(0, RF.r)(kk, Xk.hudElements[kk])
-      }, tF = kk => rk[kk].move && ("joystick" !== kk || ck) && !jk.has(kk), aF = new Set(Tk.map((kk => kk.id)).filter((kk => {
-        const Fk = (0, uk.L)(kk) && !Hk.rowIcons.includes(kk);
-        return null === mk || mk.has(kk) || (0, uk.r)(Xk.hudElements, kk) && !Fk
-      }))), wF = {
-        present: aF,
-        actionButtons: Gk,
-        keyNames: Dk,
-        scaleCaps: vk,
-        sizeBesidePreview: zk,
-        elements: Xk.hudElements,
-        selected: bk,
-        onSelect: ek,
-        rowIconsOpen: Vk,
-        onRowIconsOpen: Jk,
-        onScalePreview: (kk, Fk) => {
-          var Bk;
-          null === (Bk = Mk.current) || void 0 === Bk || Bk.setScale(kk, Fk)
+      }, bc = (bb, cb) => {
+        xb((sb => (0, tb.kb)(sb, ab, bb, cb)))
+      }, cc = bb => {
+        const cb = Gb[bb];
+        return (cb.move || cb.scale) && ("joystick" !== bb || Eb) && !(0, sc.x)(bb, Tb.hudElements[bb])
+      }, kc = bb => Gb[bb].move && ("joystick" !== bb || Eb) && !Rb.has(bb), Wc = new Set(Ob.map((bb => bb.id)).filter((bb => {
+        const cb = (0, tb.Q)(bb) && !Bb.rowIcons.includes(bb);
+        return null === eb || eb.has(bb) || (0, tb.t)(Tb.hudElements, bb) && !cb
+      }))), Uc = {
+        present: Wc,
+        actionButtons: ib,
+        keyNames: Kb,
+        scaleCaps: Nb,
+        sizeBesidePreview: Zb,
+        elements: Tb.hudElements,
+        selected: Ub,
+        onSelect: mb,
+        rowIconsOpen: Mb,
+        onRowIconsOpen: Xb,
+        onScalePreview: (bb, cb) => {
+          var sb;
+          null === (sb = yb.current) || void 0 === sb || sb.setScale(bb, cb)
         },
-        onScale: (kk, Fk) => {
-          Qk(kk, {
-            scale: Fk
-          }), (0, Ek.reportAnalyticsClick)({
+        onScale: (bb, cb) => {
+          jb(bb, {
+            scale: cb
+          }), (0, hb.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `size:${kk}`
+            value: `size:${bb}`
           })
         },
-        onHidden: (kk, Fk) => {
-          Qk(kk, {
-            hidden: Fk
-          }), (0, Ek.reportAnalyticsClick)({
+        onHidden: (bb, cb) => {
+          jb(bb, {
+            hidden: cb
+          }), (0, hb.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `${Fk?"hide":"show"}:${kk}`
+            value: `${cb?"hide":"show"}:${bb}`
           })
         },
-        onReset: kk => {
-          Qk(kk, uk.c)
+        onReset: bb => {
+          jb(bb, tb.b)
         },
-        locked: jk,
-        lockable: BF,
-        onLocked: FF,
-        note: (Fk, Bk) => {
-          const Rk = Bk && yk.length > 0 ? kk("hudLayout:overlapsNote", {
-            names: Pk(yk, Gk, kk, Dk)
+        locked: Rb,
+        lockable: cc,
+        onLocked: bc,
+        note: (cb, sb) => {
+          const kb = sb && lb.length > 0 ? bb("hudLayout:overlapsNote", {
+            names: zb(lb, ib, bb, Kb)
           }) : null;
-          return Bk && lk(Fk, ck) ? (0, Yk.jsxs)(Yk.Fragment, {
-            children: [Rk && (0, Yk.jsx)("span", {
-              children: Rk
-            }), (0, Yk.jsx)("span", {
-              children: kk("hudLayout:floatingJoystickNote")
-            }), !zk && (0, Yk.jsx)(nk, {})]
-          }) : Rk || (Bk && jk.has(Fk) ? kk("hudLayout:lockedNote") : Bk && "cluster" === Fk ? kk("hudLayout:clusterNote") : Bk && "menu" === Fk ? kk("hudLayout:menuNote") : Bk && (0, RF.r)(Fk, Xk.hudElements[Fk]) && tF(Fk) ? kk("hudLayout:rowIconNote") : Bk && "arrows" === Fk ? kk("hudLayout:arrowsNote") : "inventory" === Fk && (0, uk.r)(Xk.hudElements, "inventory") ? kk("hudLayout:inventoryHiddenNote") : null)
+          return sb && vb(cb, Eb) ? (0, Lb.jsxs)(Lb.Fragment, {
+            children: [kb && (0, Lb.jsx)("span", {
+              children: kb
+            }), (0, Lb.jsx)("span", {
+              children: bb("hudLayout:floatingJoystickNote")
+            }), !Zb && (0, Lb.jsx)(Fb, {})]
+          }) : kb || (sb && Rb.has(cb) ? bb("hudLayout:lockedNote") : sb && "cluster" === cb ? bb("hudLayout:clusterNote") : sb && "menu" === cb ? bb("hudLayout:menuNote") : sb && (0, sc.x)(cb, Tb.hudElements[cb]) && kc(cb) ? bb("hudLayout:rowIconNote") : sb && "arrows" === cb ? bb("hudLayout:arrowsNote") : "inventory" === cb && (0, tb.t)(Tb.hudElements, "inventory") ? bb("hudLayout:inventoryHiddenNote") : null)
         }
       };
-      return (0, Yk.jsxs)("div", {
-        ref: gk,
+      return (0, Lb.jsxs)("div", {
+        ref: Pb,
         className: "HudLayoutSettings",
-        children: [(0, Yk.jsxs)("div", {
-          ref: Zk,
+        children: [(0, Lb.jsxs)("div", {
+          ref: wb,
           className: "HudLayoutBody",
-          children: [(0, Yk.jsx)("div", {
+          children: [(0, Lb.jsx)("div", {
             className: "HudLayoutOrientation",
-            children: kk("landscape" === ak ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
-          }), (0, Yk.jsx)(vB, {
+            children: bb("landscape" === ab ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
+          }), (0, Lb.jsx)(Cs, {
             preview: {
-              layout: Fk,
-              orientation: ak,
-              selected: bk,
-              onSelect: ek,
-              onMove: kF,
-              canMove: tF,
-              actionButtons: Gk,
-              joystickFixed: ck,
-              presence: Hk,
-              keyNames: Dk,
-              maxHeight: Uk,
-              apiRef: Mk,
-              onMeasured: Lk,
-              onReady: Ck,
-              lockable: BF
+              layout: cb,
+              orientation: ab,
+              selected: Ub,
+              onSelect: mb,
+              onMove: pb,
+              canMove: kc,
+              actionButtons: ib,
+              joystickFixed: Eb,
+              presence: Bb,
+              keyNames: Kb,
+              maxHeight: Db,
+              apiRef: yb,
+              onMeasured: ub,
+              onReady: Ab,
+              lockable: cc
             },
             quick: {
-              layout: Xk,
-              actionButtons: Gk,
-              keyNames: Dk,
-              scaleCaps: vk,
-              overlaps: yk,
-              onScale: wF.onScale,
-              onHidden: wF.onHidden,
-              onReset: wF.onReset,
-              locked: jk,
-              lockable: BF,
-              onLocked: FF
+              layout: Tb,
+              actionButtons: ib,
+              keyNames: Kb,
+              scaleCaps: Nb,
+              overlaps: lb,
+              onScale: Uc.onScale,
+              onHidden: Uc.onHidden,
+              onReset: Uc.onReset,
+              locked: Rb,
+              lockable: cc,
+              onLocked: bc
             },
             onFullScreen: () => {
-              Kk(!0)
+              ob(!0)
             },
-            resting: pk,
-            onSidePanel: hk
-          }), pk && (0, Yk.jsx)(yB, {
-            layout: Fk,
-            orientation: ak,
-            selected: bk,
-            onSelect: ek,
-            onMove: kF,
-            canMove: tF,
-            actionButtons: Gk,
-            joystickFixed: ck,
-            presence: Hk,
-            keyNames: Dk,
-            onScale: wF.onScale,
-            onHidden: wF.onHidden,
-            onReset: wF.onReset,
-            locked: jk,
-            lockable: BF,
-            onLocked: FF,
-            apiRef: Mk,
-            onClose: xk
-          }), (0, Yk.jsx)(NB, {
-            safe: Xk.hudSafe,
-            onCommit: kk => {
-              Ik((Fk => (0, uk.db)(Fk, ak, kk)))
+            resting: rb,
+            onSidePanel: qb
+          }), rb && (0, Lb.jsx)(ms, {
+            layout: cb,
+            orientation: ab,
+            selected: Ub,
+            onSelect: mb,
+            onMove: pb,
+            canMove: kc,
+            actionButtons: ib,
+            joystickFixed: Eb,
+            presence: Bb,
+            keyNames: Kb,
+            onScale: Uc.onScale,
+            onHidden: Uc.onHidden,
+            onReset: Uc.onReset,
+            locked: Rb,
+            lockable: cc,
+            onLocked: bc,
+            apiRef: yb,
+            onClose: Sb
+          }), (0, Lb.jsx)(Bs, {
+            safe: Tb.hudSafe,
+            onCommit: bb => {
+              xb((cb => (0, tb.mb)(cb, ab, bb)))
             },
-            onPreview: kk => {
-              var Fk;
-              null === (Fk = Mk.current) || void 0 === Fk || Fk.setSafe(kk)
+            onPreview: bb => {
+              var cb;
+              null === (cb = yb.current) || void 0 === cb || cb.setSafe(bb)
             }
-          }), (0, Yk.jsx)(Ak.e, {
-            label: kk("hudLayout:snapCentre"),
-            checked: Fk.hudSnapCentre,
-            onClick: kk => {
-              (0, uk.R)(kk)
+          }), (0, Lb.jsx)(nb.d, {
+            label: bb("hudLayout:snapCentre"),
+            checked: cb.hudSnapCentre,
+            onClick: bb => {
+              (0, tb.V)(bb)
             },
-            circleInfoText: kk("hudLayout:snapCentreInfo")
-          }), (0, Yk.jsx)(WB, {
-            ...wF
-          }), (0, Yk.jsx)(Ak.i, {
-            label: kk("hudLayout:shape"),
-            options: uk.E.map((Fk => ({
-              value: Fk,
-              label: kk(`hudLayout:shape_${Fk}`)
+            circleInfoText: bb("hudLayout:snapCentreInfo")
+          }), (0, Lb.jsx)(es, {
+            ...Uc
+          }), (0, Lb.jsx)(nb.g, {
+            label: bb("hudLayout:shape"),
+            options: tb.G.map((cb => ({
+              value: cb,
+              label: bb(`hudLayout:shape_${cb}`)
             }))),
-            value: Fk.hudShape,
-            onChange: kk => {
-              Ik((Fk => ({
-                ...Fk,
-                hudShape: kk
-              }))), (0, Ek.reportAnalyticsClick)({
+            value: cb.hudShape,
+            onChange: bb => {
+              xb((cb => ({
+                ...cb,
+                hudShape: bb
+              }))), (0, hb.reportAnalyticsClick)({
                 id: "hud_layout.shape",
-                value: kk
+                value: bb
               })
             }
-          }), (0, Yk.jsx)(Ak.l, {
-            name: kk("hudLayout:opacity"),
-            min: uk.f,
+          }), (0, Lb.jsx)(nb.i, {
+            name: bb("hudLayout:opacity"),
+            min: tb.f,
             max: 1,
             step: .05,
-            initValue: Fk.hudKeyOpacity,
-            format: kk => `${Math.round(100*kk)}%`,
-            circleInfoText: kk("hudLayout:opacityInfo"),
-            onChange: kk => {
-              var Fk;
-              null === (Fk = Mk.current) || void 0 === Fk || Fk.setOpacity(kk)
+            initValue: cb.hudKeyOpacity,
+            format: bb => `${Math.round(100*bb)}%`,
+            circleInfoText: bb("hudLayout:opacityInfo"),
+            onChange: bb => {
+              var cb;
+              null === (cb = yb.current) || void 0 === cb || cb.setOpacity(bb)
             },
-            onChangeComplete: kk => {
-              (0, uk.N)(kk), (0, Ek.reportAnalyticsClick)({
+            onChangeComplete: bb => {
+              (0, tb.T)(bb), (0, hb.reportAnalyticsClick)({
                 id: "hud_layout.edit",
                 value: "opacity"
               })
             }
           })]
-        }), (0, Yk.jsx)(dk.J, {
+        }), (0, Lb.jsx)(Hb.G, {
           className: "HudLayoutResetAll",
           analyticsClick: {
             id: "hud_layout.reset_all"
           },
           onClick: () => {
             !async function() {
-              const kk = Sk.NotificationProvider.showPromptPopup({
+              const bb = Jb.NotificationProvider.showPromptPopup({
                 title: "hudLayout:resetAllTitle",
                 subtitle: "hudLayout:resetAllSubtitle",
                 confirmText: "hudLayout:resetAllConfirm",
                 cancelText: "general:cancel",
                 destructive: !0
               });
-              !0 === await kk.getResult() && (0, uk.M)()
+              !0 === await bb.getResult() && (0, tb.S)()
             }()
           },
-          children: kk("hudLayout:resetAll")
+          children: bb("hudLayout:resetAll")
         })]
       })
     }
-    const uB = 350;
-    const MB = [function() {
+    const ys = 350;
+    const Ps = [function() {
       const {
-        t: kk
-      } = (0, Rk.x)(), [Fk, Bk] = (0, tk.useState)(!1), ak = (0, tk.useRef)(null);
-      return (0, tk.useEffect)((() => {
-        var kk;
-        Fk && (null === (kk = ak.current) || void 0 === kk || kk.scrollIntoView({
+        t: bb
+      } = (0, kb.E)(), [cb, sb] = (0, Wb.useState)(!1), ab = (0, Wb.useRef)(null);
+      return (0, Wb.useEffect)((() => {
+        var bb;
+        cb && (null === (bb = ab.current) || void 0 === bb || bb.scrollIntoView({
           block: "start",
           behavior: "smooth"
         }))
-      }), [Fk]), (0, Yk.jsxs)("div", {
+      }), [cb]), (0, Lb.jsxs)("div", {
         className: "HudLayoutSection",
-        children: [(0, Yk.jsxs)("button", {
-          ref: ak,
+        children: [(0, Lb.jsxs)("button", {
+          ref: ab,
           type: "button",
           className: "SettingBox SettingBoxFeatured HudLayoutEntry",
-          "aria-expanded": Fk,
+          "aria-expanded": cb,
           onClick: () => {
-            Bk(!Fk)
+            sb(!cb)
           },
-          children: [(0, Yk.jsx)(Nk.d, {
+          children: [(0, Lb.jsx)(gb.b, {
             name: "arrows-up-down-left-right",
             className: "HudLayoutEntryIcon"
-          }), (0, Yk.jsxs)("span", {
+          }), (0, Lb.jsxs)("span", {
             className: "HudLayoutEntryText",
-            children: [(0, Yk.jsx)("span", {
+            children: [(0, Lb.jsx)("span", {
               className: "HudLayoutEntryTitle",
-              children: kk("hudLayout:title")
-            }), (0, Yk.jsx)("span", {
+              children: bb("hudLayout:title")
+            }), (0, Lb.jsx)("span", {
               className: "HudLayoutEntrySub",
-              children: kk("hudLayout:entrySub")
+              children: bb("hudLayout:entrySub")
             })]
-          }), (0, Yk.jsx)("span", {
+          }), (0, Lb.jsx)("span", {
             className: "HudLayoutEntryChevron",
             children: "\u25be"
           })]
-        }), Fk && (0, Yk.jsx)(HB, {})]
+        }), cb && (0, Lb.jsx)(ts, {})]
       })
     }, function() {
       const {
-        t: kk
-      } = (0, Rk.x)(), {
-        joystickMode: Fk,
-        touchSpeedCurve: Bk,
-        autorun: tk,
-        jumpLock: ak
-      } = (0, sk.h)(["clientEscMenuOptions"]).clientEscMenuOptions;
-      return (0, Yk.jsxs)(Yk.Fragment, {
-        children: [(0, Yk.jsx)(Ak.i, {
-          label: kk("settingsMenu:joystick"),
-          options: ik.zb.map((Fk => ({
-            value: Fk,
-            label: kk(Lk[Fk])
+        t: bb
+      } = (0, kb.E)(), {
+        joystickMode: cb,
+        touchSpeedCurve: sb,
+        autorun: Wb,
+        jumpLock: ab
+      } = (0, fb.p)(["clientEscMenuOptions"]).clientEscMenuOptions;
+      return (0, Lb.jsxs)(Lb.Fragment, {
+        children: [(0, Lb.jsx)(nb.g, {
+          label: bb("settingsMenu:joystick"),
+          options: Vb.Fb.map((cb => ({
+            value: cb,
+            label: bb(ub[cb])
           }))),
-          value: Fk,
-          onChange: kk => {
-            sk.c.setClientEscMenuOptions({
-              joystickMode: kk
+          value: cb,
+          onChange: bb => {
+            fb.d.setClientEscMenuOptions({
+              joystickMode: bb
             })
           },
-          circleInfoText: kk("settingsMenu:joystickInfo")
-        }), (0, Yk.jsx)(Ak.e, {
-          label: kk("settingsMenu:preciseWalking"),
-          checked: Bk,
-          onClick: kk => {
-            sk.c.setClientEscMenuOptions({
-              touchSpeedCurve: kk
+          circleInfoText: bb("settingsMenu:joystickInfo")
+        }), (0, Lb.jsx)(nb.d, {
+          label: bb("settingsMenu:preciseWalking"),
+          checked: sb,
+          onClick: bb => {
+            fb.d.setClientEscMenuOptions({
+              touchSpeedCurve: bb
             })
           },
-          circleInfoText: kk("settingsMenu:preciseWalkingInfo")
-        }), (0, Yk.jsx)(Ak.e, {
-          label: kk("settingsMenu:autoRun"),
-          checked: tk,
-          onClick: kk => {
-            sk.c.setClientEscMenuOptions({
-              autorun: kk
+          circleInfoText: bb("settingsMenu:preciseWalkingInfo")
+        }), (0, Lb.jsx)(nb.d, {
+          label: bb("settingsMenu:autoRun"),
+          checked: Wb,
+          onClick: bb => {
+            fb.d.setClientEscMenuOptions({
+              autorun: bb
             })
           },
-          circleInfoText: kk("settingsMenu:autoRunInfo")
-        }), (0, Yk.jsx)(Ak.e, {
-          label: kk("settingsMenu:jumpLock"),
-          checked: ak,
-          onClick: kk => {
-            sk.c.setClientEscMenuOptions({
-              jumpLock: kk
+          circleInfoText: bb("settingsMenu:autoRunInfo")
+        }), (0, Lb.jsx)(nb.d, {
+          label: bb("settingsMenu:jumpLock"),
+          checked: ab,
+          onClick: bb => {
+            fb.d.setClientEscMenuOptions({
+              jumpLock: bb
             })
           },
-          circleInfoText: kk("settingsMenu:jumpLockInfo")
+          circleInfoText: bb("settingsMenu:jumpLockInfo")
         })]
       })
     }, function() {
-      return (0, Yk.jsx)(vk.d, {})
+      return (0, Lb.jsx)(Nb.e, {})
     }, function() {
       const {
-        t: kk
-      } = (0, Rk.x)(), {
-        clientEscMenuOptions: Fk
-      } = (0, sk.h)(["clientEscMenuOptions"]);
-      return (0, Ok.c)() ? (0, Yk.jsx)(Ak.e, {
-        label: kk("settingsMenu:vibration"),
-        checked: Fk.vibration,
-        onClick: kk => {
-          sk.c.setClientEscMenuOptions({
-            vibration: kk
+        t: bb
+      } = (0, kb.E)(), {
+        clientEscMenuOptions: cb
+      } = (0, fb.p)(["clientEscMenuOptions"]);
+      return (0, Yb.b)() ? (0, Lb.jsx)(nb.d, {
+        label: bb("settingsMenu:vibration"),
+        checked: cb.vibration,
+        onClick: bb => {
+          fb.d.setClientEscMenuOptions({
+            vibration: bb
           })
         },
-        circleInfoText: kk("settingsMenu:vibrationInfo")
+        circleInfoText: bb("settingsMenu:vibrationInfo")
       }) : null
     }];
 
-    function gB() {
-      return (0, Yk.jsx)(Yk.Fragment, {
-        children: MB.map(((kk, Fk) => (0, Yk.jsx)(kk, {}, Fk)))
+    function Ds() {
+      return (0, Lb.jsx)(Lb.Fragment, {
+        children: Ps.map(((bb, cb) => (0, Lb.jsx)(bb, {}, cb)))
       })
     }
-    var UB = Bk(4126);
+    var Es = sb(4134);
 
-    function cB() {
+    function is() {
       const {
-        t: kk
-      } = (0, Rk.x)(), {
-        isTouchScreen: Fk,
-        clientEscMenuOptions: Bk,
-        gameState: Xk
-      } = (0, sk.h)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), bk = (0, ek.j)("ezBridging"), wk = (0, ek.j)("ezTowering"), fk = "inGame" !== Xk || !0 === bk, mk = (0, yk.e)() && ("inGame" !== Xk || !0 === wk), [, vk] = (0, tk.useReducer)((kk => kk + 1), 0), ik = (0, Wk.g)(), [Lk, Ok] = (0, tk.useState)(UB.f);
-      return (0, Yk.jsxs)("div", {
+        t: bb
+      } = (0, kb.E)(), {
+        isTouchScreen: cb,
+        clientEscMenuOptions: sb,
+        gameState: Tb
+      } = (0, fb.p)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), Ub = (0, mb.d)("ezBridging"), Ib = (0, mb.d)("ezTowering"), Qb = "inGame" !== Tb || !0 === Ub, eb = (0, lb.f)() && ("inGame" !== Tb || !0 === Ib), [, Nb] = (0, Wb.useReducer)((bb => bb + 1), 0), Vb = (0, Cb.g)(), [ub, Yb] = (0, Wb.useState)(Es.h);
+      return (0, Lb.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [ik && (0, Yk.jsxs)("div", {
+        children: [Vb && (0, Lb.jsxs)("div", {
           className: "SettingBox SettingBoxWithButton",
-          children: [(0, Yk.jsx)("div", {
-            children: kk("controller:settingsControlsNote")
-          }), (0, Yk.jsx)(dk.O, {
+          children: [(0, Lb.jsx)("div", {
+            children: bb("controller:settingsControlsNote")
+          }), (0, Lb.jsx)(Hb.M, {
             onClick: () => {
-              sk.c.set({
+              fb.d.set({
                 openSettingsCategory: "controller"
               })
             },
-            children: kk("controller:settingsOpenController")
+            children: bb("controller:settingsOpenController")
           })]
-        }), (0, Vk.isTouchscreen)() && !(0, Vk.isMobile)() ? (0, Yk.jsx)(Yk.Fragment, {
-          children: (0, Yk.jsx)(Ak.e, {
-            label: kk("settingsMenu:useTouchControls"),
-            checked: Lk,
-            onClick: kk => {
-              (0, UB.d)(kk), Ok(kk)
+        }), (0, Mb.isTouchscreen)() && !(0, Mb.isMobile)() ? (0, Lb.jsx)(Lb.Fragment, {
+          children: (0, Lb.jsx)(nb.d, {
+            label: bb("settingsMenu:useTouchControls"),
+            checked: ub,
+            onClick: bb => {
+              (0, Es.e)(bb), Yb(bb)
             }
           })
-        }) : null, Fk && (0, Yk.jsx)(gB, {}), fk && (0, Yk.jsx)(Ak.e, {
-          label: kk("settingsMenu:ezBridging"),
-          checked: Bk.ezBridging,
-          onClick: kk => {
-            sk.c.setClientEscMenuOptions({
-              ezBridging: kk
+        }) : null, cb && (0, Lb.jsx)(Ds, {}), Qb && (0, Lb.jsx)(nb.d, {
+          label: bb("settingsMenu:ezBridging"),
+          checked: sb.ezBridging,
+          onClick: bb => {
+            fb.d.setClientEscMenuOptions({
+              ezBridging: bb
             })
           },
-          circleInfoText: kk("settingsMenu:ezBridgingInfo")
-        }), mk && (0, Yk.jsx)(Ak.e, {
-          label: kk("settingsMenu:ezTowering"),
-          checked: Bk.ezTowering,
-          onClick: kk => {
-            sk.c.setClientEscMenuOptions({
-              ezTowering: kk
+          circleInfoText: bb("settingsMenu:ezBridgingInfo")
+        }), eb && (0, Lb.jsx)(nb.d, {
+          label: bb("settingsMenu:ezTowering"),
+          checked: sb.ezTowering,
+          onClick: bb => {
+            fb.d.setClientEscMenuOptions({
+              ezTowering: bb
             })
           },
-          circleInfoText: kk("settingsMenu:ezToweringInfo")
-        }), (0, Yk.jsx)(Ak.e, {
-          label: kk("settingsMenu:crouchToggle"),
-          checked: Bk.crouchIsToggle,
-          onClick: kk => {
-            sk.c.setClientEscMenuOptions({
-              crouchIsToggle: kk
+          circleInfoText: bb("settingsMenu:ezToweringInfo")
+        }), (0, Lb.jsx)(nb.d, {
+          label: bb("settingsMenu:crouchToggle"),
+          checked: sb.crouchIsToggle,
+          onClick: bb => {
+            fb.d.setClientEscMenuOptions({
+              crouchIsToggle: bb
             })
           },
-          circleInfoText: kk("settingsMenu:crouchToggleInfo")
-        }), (0, Yk.jsx)(Ak.e, {
-          label: kk("settingsMenu:hideUiToggle"),
-          checked: Bk.hideUiIsToggle,
-          onClick: kk => {
-            sk.c.setClientEscMenuOptions({
-              hideUiIsToggle: kk
+          circleInfoText: bb("settingsMenu:crouchToggleInfo")
+        }), (0, Lb.jsx)(nb.d, {
+          label: bb("settingsMenu:hideUiToggle"),
+          checked: sb.hideUiIsToggle,
+          onClick: bb => {
+            fb.d.setClientEscMenuOptions({
+              hideUiIsToggle: bb
             })
           },
-          circleInfoText: kk("settingsMenu:hideUiToggleInfo")
-        }), "mouseOnly" !== (0, Jk.c)() && (0, Yk.jsx)(Ak.l, {
-          name: kk("settingsMenu:touchscreenSensitivity"),
+          circleInfoText: bb("settingsMenu:hideUiToggleInfo")
+        }), "mouseOnly" !== (0, Xb.c)() && (0, Lb.jsx)(nb.i, {
+          name: bb("settingsMenu:touchscreenSensitivity"),
           min: 1,
           max: 900,
           step: 1,
-          initValue: Bk.touchscreenSensitivity,
-          onChange: kk => {
-            sk.c.setClientEscMenuOptions({
-              touchscreenSensitivity: kk
+          initValue: sb.touchscreenSensitivity,
+          onChange: bb => {
+            fb.d.setClientEscMenuOptions({
+              touchscreenSensitivity: bb
             })
           }
-        }), !(0, Vk.isMobile)() && (0, Yk.jsx)(Ak.l, {
-          name: kk("settingsMenu:mouseSensitivity"),
+        }), !(0, Mb.isMobile)() && (0, Lb.jsx)(nb.i, {
+          name: bb("settingsMenu:mouseSensitivity"),
           min: 1,
           max: 200,
           step: 1,
-          initValue: Bk.mouseSensitivity,
-          onChange: kk => {
-            sk.c.setClientEscMenuOptions({
-              mouseSensitivity: kk
+          initValue: sb.mouseSensitivity,
+          onChange: bb => {
+            fb.d.setClientEscMenuOptions({
+              mouseSensitivity: bb
             })
           }
-        }), !(0, Vk.isMobile)() && (0, Yk.jsxs)("div", {
+        }), !(0, Mb.isMobile)() && (0, Lb.jsxs)("div", {
           className: "ControlsContainer",
-          children: [(0, Yk.jsx)("div", {
+          children: [(0, Lb.jsx)("div", {
             className: "SliderText",
-            children: kk("settingsMenu:keyBindings")
-          }), ak.e.map((Fk => (0, Yk.jsx)(GB, {
-            title: kk(Fk.name.translationKey, Fk.name.params),
-            defaultOpen: ak.i.has(Fk.id),
-            children: Fk.actions.map((kk => (0, Yk.jsx)(TB, {
-              noaAction: kk,
-              forceUpdate: vk,
-              clashesWith: Fk.clashesWith,
-              showPadGlyph: ik
-            }, kk)))
-          }, Fk.name.translationKey))), (0, Yk.jsx)(dk.J, {
+            children: bb("settingsMenu:keyBindings")
+          }), ab.h.map((cb => (0, Lb.jsx)(Os, {
+            title: bb(cb.name.translationKey, cb.name.params),
+            defaultOpen: ab.j.has(cb.id),
+            children: cb.actions.map((bb => (0, Lb.jsx)(Gs, {
+              noaAction: bb,
+              forceUpdate: Nb,
+              clashesWith: cb.clashesWith,
+              showPadGlyph: Vb
+            }, bb)))
+          }, cb.name.translationKey))), (0, Lb.jsx)(Hb.G, {
             className: "ResetBindingsButton",
             onClick: () => {
-              (0, ak.z)(), vk()
+              (0, ab.E)(), Nb()
             },
-            children: kk("controls:resetBindings")
+            children: bb("controls:resetBindings")
           })]
         })]
       })
     }
 
-    function GB(kk) {
+    function Os(bb) {
       let {
-        title: Fk,
-        defaultOpen: Bk,
-        children: Rk
-      } = kk;
-      const [ak, Xk] = (0, tk.useState)(Bk);
-      return (0, Yk.jsxs)("div", {
-        className: wk()("ControlsSection", {
-          Collapsed: !ak
+        title: cb,
+        defaultOpen: sb,
+        children: kb
+      } = bb;
+      const [ab, Tb] = (0, Wb.useState)(sb);
+      return (0, Lb.jsxs)("div", {
+        className: Ib()("ControlsSection", {
+          Collapsed: !ab
         }),
-        children: [(0, Yk.jsxs)("div", {
+        children: [(0, Lb.jsxs)("div", {
           className: "ControlsSectionHeader",
           "data-pad-focusable": !0,
           onClick: () => {
-            Xk(!ak)
+            Tb(!ab)
           },
-          children: [(0, Yk.jsx)("div", {
+          children: [(0, Lb.jsx)("div", {
             className: "ControlsSectionTitle",
-            children: Fk
-          }), (0, Yk.jsx)("div", {
+            children: cb
+          }), (0, Lb.jsx)("div", {
             className: "ControlsSectionChevron",
             children: "\u25be"
           })]
-        }), ak && (0, Yk.jsx)("div", {
+        }), ab && (0, Lb.jsx)("div", {
           className: "ControlsSectionRows",
-          children: Rk
+          children: kb
         })]
       })
     }
 
-    function TB(kk) {
+    function Gs(bb) {
       let {
-        noaAction: Fk,
-        forceUpdate: Bk,
-        clashesWith: bk,
-        showPadGlyph: sk
-      } = kk;
+        noaAction: cb,
+        forceUpdate: sb,
+        clashesWith: Ub,
+        showPadGlyph: fb
+      } = bb;
       const {
-        t: Vk
-      } = (0, Rk.x)(), Jk = (0, mk.d)(Fk), [Ak, ek] = (0, tk.useState)(!1), [yk, Wk] = (0, tk.useState)("controls:clickToEnterNewBinding"), [vk, ik] = (0, tk.useState)(null), [Lk, Ok] = (0, tk.useState)(null), Ek = (0, tk.useRef)(null);
-      (0, tk.useEffect)((() => {
-        Ak && Ek.current && Ek.current.focus()
-      }), [Ak]);
-      const Sk = ak.s[Fk].filter((kk => Xk.d[kk]));
-      let Nk = null;
-      const Hk = [],
-        uk = bk.flatMap((kk => {
-          var Fk, Bk;
-          return null !== (Fk = null === (Bk = ak.e.find((Fk => Fk.id === kk))) || void 0 === Bk ? void 0 : Bk.actions) && void 0 !== Fk ? Fk : []
+        t: Mb
+      } = (0, kb.E)(), Xb = (0, eb.d)(cb), [nb, mb] = (0, Wb.useState)(!1), [lb, Cb] = (0, Wb.useState)("controls:clickToEnterNewBinding"), [Nb, Vb] = (0, Wb.useState)(null), [ub, Yb] = (0, Wb.useState)(null), hb = (0, Wb.useRef)(null);
+      (0, Wb.useEffect)((() => {
+        nb && hb.current && hb.current.focus()
+      }), [nb]);
+      const Jb = ab.v[cb].filter((bb => Tb.l[bb]));
+      let gb = null;
+      const Bb = [],
+        tb = Ub.flatMap((bb => {
+          var cb, sb;
+          return null !== (cb = null === (sb = ab.h.find((cb => cb.id === bb))) || void 0 === sb ? void 0 : sb.actions) && void 0 !== cb ? cb : []
         }));
-      for (const Rk of uk) {
-        if (Rk === Fk) continue;
-        const kk = ak.s[Rk];
-        for (const Fk of kk) Sk.includes(Fk) && Hk.push(Vk(ak.t[Rk].translationKey, ak.t[Rk].params))
+      for (const kb of tb) {
+        if (kb === cb) continue;
+        const bb = ab.v[kb];
+        for (const cb of bb) Jb.includes(cb) && Bb.push(Mb(ab.z[kb].translationKey, ab.z[kb].params))
       }
-      Hk.length > 0 && (Nk = Vk("controls:sharedBindingsWarning") + " ", Nk += Hk.join(", "));
-      const Mk = () => {
-          ek(!1), ik(null), Wk("controls:clickToEnterNewBinding"), Ok(null)
+      Bb.length > 0 && (gb = Mb("controls:sharedBindingsWarning") + " ", gb += Bb.join(", "));
+      const yb = () => {
+          mb(!1), Vb(null), Cb("controls:clickToEnterNewBinding"), Yb(null)
         },
-        gk = () => "BindingInput_" + Fk;
-      return (0, Yk.jsxs)("div", {
-        className: wk()("ControlRow", {
-          WarningBorder: null !== Nk
+        Pb = () => "BindingInput_" + cb;
+      return (0, Lb.jsxs)("div", {
+        className: Ib()("ControlRow", {
+          WarningBorder: null !== gb
         }),
-        children: [(0, Yk.jsxs)("div", {
+        children: [(0, Lb.jsxs)("div", {
           className: "ControlRowInner",
-          children: [(0, Yk.jsxs)("div", {
+          children: [(0, Lb.jsxs)("div", {
             className: "ControlName",
-            children: [Vk(ak.t[Fk].translationKey, ak.t[Fk].params), sk && Jk && (0, Yk.jsx)(fk.e, {
-              glyph: Jk,
+            children: [Mb(ab.z[cb].translationKey, ab.z[cb].params), fb && Xb && (0, Lb.jsx)(Qb.b, {
+              glyph: Xb,
               className: "ControlPadGlyph"
             })]
-          }), (0, Yk.jsxs)("div", {
+          }), (0, Lb.jsxs)("div", {
             className: "ControlBindingsContainer",
-            children: [(0, Yk.jsxs)("div", {
+            children: [(0, Lb.jsxs)("div", {
               className: "ControlBindingsList",
-              children: [Sk.map((kk => (0, Yk.jsxs)("div", {
+              children: [Jb.map((bb => (0, Lb.jsxs)("div", {
                 className: "ControlBinding",
-                children: [(0, Yk.jsx)("div", {
-                  children: (0, ak.n)(kk)
-                }), (0, Yk.jsx)("div", {
+                children: [(0, Lb.jsx)("div", {
+                  children: (0, ab.n)(bb)
+                }), (0, Lb.jsx)("div", {
                   className: "ControlBindingRemoveIcon",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    const Rk = (0, ak.v)(Fk, kk);
-                    Rk.isError() ? Ok(Rk.asError().message) : Ok(null), Bk()
+                    const kb = (0, ab.C)(cb, bb);
+                    kb.isError() ? Yb(kb.asError().message) : Yb(null), sb()
                   },
                   children: "\xd7"
                 })]
-              }, kk))), !Ak && (0, Yk.jsx)("div", {
+              }, bb))), !nb && (0, Lb.jsx)("div", {
                 className: "ControlBinding ControlBindingAdd",
                 onClick: () => {
-                  ek(!0), Ok(null)
+                  mb(!0), Yb(null)
                 },
-                children: (0, Yk.jsx)("div", {
+                children: (0, Lb.jsx)("div", {
                   className: "ControlBindingAddIcon",
                   children: "+"
                 })
               })]
-            }), Ak && (0, Yk.jsxs)("div", {
+            }), nb && (0, Lb.jsxs)("div", {
               className: "ControlBindingAddInput",
-              children: [(0, Yk.jsxs)("div", {
+              children: [(0, Lb.jsxs)("div", {
                 className: "InputContainer",
-                children: [(0, Yk.jsx)("div", {
+                children: [(0, Lb.jsx)("div", {
                   className: "InputOverlay",
-                  children: vk ? (0, ak.n)(vk) : (0, Yk.jsx)("div", {
+                  children: Nb ? (0, ab.n)(Nb) : (0, Lb.jsx)("div", {
                     className: "InputOverlayPlaceholder",
-                    children: Vk(yk)
+                    children: Mb(lb)
                   })
-                }), (0, Yk.jsx)("input", {
-                  ref: Ek,
-                  id: gk(),
+                }), (0, Lb.jsx)("input", {
+                  ref: hb,
+                  id: Pb(),
                   "data-pad-no-osk": !0,
                   defaultValue: "",
-                  onKeyDown: kk => {
-                    if ("Escape" === kk.code) return Mk(), kk.preventDefault(), void kk.stopPropagation();
-                    const Fk = kk.code;
-                    Xk.b.includes(Fk) ? (Ok(null), ik(Fk)) : (Ok("controls:keyIsReserved"), ik(null)), kk.preventDefault(), kk.stopPropagation()
+                  onKeyDown: bb => {
+                    if ("Escape" === bb.code) return yb(), bb.preventDefault(), void bb.stopPropagation();
+                    const cb = bb.code;
+                    Tb.d.includes(cb) ? (Yb(null), Vb(cb)) : (Yb("controls:keyIsReserved"), Vb(null)), bb.preventDefault(), bb.stopPropagation()
                   },
-                  onMouseDown: kk => {
-                    const Fk = "Mouse" + (kk.button + 1);
-                    document.activeElement && document.activeElement.id === gk() ? Xk.b.includes(Fk) ? (Ok(null), ik(Fk)) : (Ok("controls:keyIsReserved"), ik(null)) : Wk("controls:enterNewBinding"), kk.stopPropagation()
+                  onMouseDown: bb => {
+                    const cb = "Mouse" + (bb.button + 1);
+                    document.activeElement && document.activeElement.id === Pb() ? Tb.d.includes(cb) ? (Yb(null), Vb(cb)) : (Yb("controls:keyIsReserved"), Vb(null)) : Cb("controls:enterNewBinding"), bb.stopPropagation()
                   },
                   onBlur: () => {
-                    Wk("controls:clickToEnterNewBinding")
+                    Cb("controls:clickToEnterNewBinding")
                   }
                 })]
-              }), (0, Yk.jsx)(dk.g, {
-                onPointerDown: kk => {
-                  kk.preventDefault()
+              }), (0, Lb.jsx)(Hb.d, {
+                onPointerDown: bb => {
+                  bb.preventDefault()
                 },
                 onClick: () => {
-                  (0, ak.b)(Fk, vk), Bk(), Mk()
+                  (0, ab.d)(cb, Nb), sb(), yb()
                 },
                 className: "ControlBindingAddButton",
-                disabled: null === vk,
-                children: Vk("general:add")
-              }), (0, Yk.jsx)("div", {
+                disabled: null === Nb,
+                children: Mb("general:add")
+              }), (0, Lb.jsx)("div", {
                 className: "ControlBindingAddCancel",
                 onClick: () => {
-                  Mk()
+                  yb()
                 },
                 children: "\xd7"
               })]
-            }), Lk && (0, Yk.jsx)("div", {
+            }), ub && (0, Lb.jsx)("div", {
               className: "ControlBindingError",
-              children: Vk(Lk)
+              children: Mb(ub)
             })]
           })]
-        }), Nk && (0, Yk.jsx)("div", {
+        }), gb && (0, Lb.jsx)("div", {
           className: "ControlRowWarning",
-          children: Nk
+          children: gb
         })]
       })
     }
   },
-  8519: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => bk
+  8457: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Ub
     });
-    var Rk = Bk(22),
-      tk = Bk(3239),
-      ak = Bk(1300),
-      Xk = Bk(1344);
-    const bk = async () => {
-      if ((0, Xk.h)()) {
-        if (!0 !== await ak.NotificationProvider.showPromptPopup({
+    var kb = sb(19),
+      Wb = sb(3208),
+      ab = sb(1332),
+      Tb = sb(1371);
+    const Ub = async () => {
+      if ((0, Tb.g)()) {
+        if (!0 !== await ab.NotificationProvider.showPromptPopup({
             title: "controller:menusLeaveGameTitle",
             confirmText: "controller:menusLeaveGameLeave",
             cancelText: "controller:menusLeaveGameStay",
             destructive: !0
-          }).getResult() || "inGame" !== Rk.c.get("gameState")) return
-      }(0, tk.c)()
+          }).getResult() || "inGame" !== kb.d.get("gameState")) return
+      }(0, Wb.e)()
     }
   },
-  8521: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => wk,
-      d: () => ak,
-      f: () => Xk,
-      j: () => tk,
-      m: () => bk
+  8466: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Ib,
+      c: () => ab,
+      e: () => Tb,
+      h: () => Wb,
+      i: () => Ub
     });
-    var Rk = Bk(1870);
-    const tk = "controllerPadShopOpen",
-      ak = kk => Rk.f.includes(kk),
-      Xk = kk => Object.values(kk).some((kk => !1 !== kk.canBuy && !kk.isRewardedAd)),
-      bk = (kk, Fk, Bk) => {
-        var Rk, tk, Xk, bk;
-        const wk = kk.filter((kk => !ak(kk))),
-          dk = null !== Fk && kk.includes(Fk) ? Fk : null;
-        return null !== dk && !ak(dk) && Bk(dk) ? dk : null !== (Rk = null !== (tk = null !== (Xk = null !== (bk = wk.find(Bk)) && void 0 !== bk ? bk : wk[0]) && void 0 !== Xk ? Xk : dk) && void 0 !== tk ? tk : kk[0]) && void 0 !== Rk ? Rk : null
+    var kb = sb(1902);
+    const Wb = "controllerPadShopOpen",
+      ab = bb => kb.g.includes(bb),
+      Tb = bb => Object.values(bb).some((bb => !1 !== bb.canBuy && !bb.isRewardedAd)),
+      Ub = (bb, cb, sb) => {
+        var kb, Wb, Tb, Ub;
+        const Ib = bb.filter((bb => !ab(bb))),
+          Hb = null !== cb && bb.includes(cb) ? cb : null;
+        return null !== Hb && !ab(Hb) && sb(Hb) ? Hb : null !== (kb = null !== (Wb = null !== (Tb = null !== (Ub = Ib.find(sb)) && void 0 !== Ub ? Ub : Ib[0]) && void 0 !== Tb ? Tb : Hb) && void 0 !== Wb ? Wb : bb[0]) && void 0 !== kb ? kb : null
       },
-      wk = kk => kk.userInput || kk.isRewardedAd || "boolean" === typeof kk.isSelected ? null : JSON.stringify([kk.image, kk.cost, kk.currency, kk.amount, kk.customTitle, kk.buyButtonText, kk.description, kk.canBuy])
+      Ib = bb => bb.userInput || bb.isRewardedAd || "boolean" === typeof bb.isSelected ? null : JSON.stringify([bb.image, bb.cost, bb.currency, bb.amount, bb.customTitle, bb.buyButtonText, bb.description, bb.canBuy])
   },
-  8548: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => dk,
-      g: () => sk
+  8481: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Hb,
+      g: () => fb
     });
-    var Rk = Bk(61),
-      tk = Bk(1387),
-      ak = Bk(1912),
-      Xk = Bk(1355),
-      bk = Bk(1376),
-      wk = Bk(1069);
-    const dk = () => {
-        const kk = (0, Xk.s)();
-        if ((0, Rk.useEffect)((() => {
-            (0, Xk.i)()
-          }), []), !kk) return null;
+    var kb = sb(64),
+      Wb = sb(1423),
+      ab = sb(1943),
+      Tb = sb(1381),
+      Ub = sb(1403),
+      Ib = sb(1087);
+    const Hb = () => {
+        const bb = (0, Tb.r)();
+        if ((0, kb.useEffect)((() => {
+            (0, Tb.j)()
+          }), []), !bb) return null;
         const {
-          ControllerCategory: Fk
-        } = kk;
-        return (0, wk.jsx)(bk.e, {
-          children: (0, wk.jsx)(Fk, {})
+          ControllerCategory: cb
+        } = bb;
+        return (0, Ib.jsx)(Ub.b, {
+          children: (0, Ib.jsx)(cb, {})
         })
       },
-      sk = () => {
-        var kk;
-        const Fk = (0, Xk.s)(),
-          [, Bk] = (0, Rk.useReducer)((kk => kk + 1), 0);
-        return (0, tk.f)(ak.d, Bk), null !== (kk = null === Fk || void 0 === Fk ? void 0 : Fk.hasActivePad()) && void 0 !== kk && kk
+      fb = () => {
+        var bb;
+        const cb = (0, Tb.r)(),
+          [, sb] = (0, kb.useReducer)((bb => bb + 1), 0);
+        return (0, Wb.f)(ab.b, sb), null !== (bb = null === cb || void 0 === cb ? void 0 : cb.hasActivePad()) && void 0 !== bb && bb
       }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

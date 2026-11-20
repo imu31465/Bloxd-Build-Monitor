@@ -1,143 +1,143 @@
 export const id = 42;
 export const ids = [42];
 export const modules = {
-  40931: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Xk
+  40919: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Tb
     });
-    var Rk = Bk(132),
-      tk = Bk(1157);
+    var kb = sb(167),
+      Wb = sb(1217);
 
-    function ak(kk) {
-      return (0, Rk.c)() ? `https://${tk.b.discordDomain}/${kk.href}` : kk.href
+    function ab(bb) {
+      return (0, kb.b)() ? `https://${Wb.d.discordDomain}/${bb.href}` : bb.href
     }
-    const Xk = {
-      scriptUrl: ak(new Bk.U(Bk(40936))),
-      wasmBinaryUrl: ak(new Bk.U(Bk(40939)))
+    const Tb = {
+      scriptUrl: ab(new sb.U(sb(40924))),
+      wasmBinaryUrl: ab(new sb.U(sb(40928)))
     }
   },
-  9082: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => tk,
-      h: () => ak,
-      l: () => Xk
+  9002: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Wb,
+      h: () => ab,
+      i: () => Tb
     });
-    const Rk = 1179937895,
-      tk = 1313821514;
+    const kb = 1179937895,
+      Wb = 1313821514;
 
-    function ak(kk) {
-      const Fk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength);
-      if (kk.byteLength < 20 || Fk.getUint32(0, !0) !== Rk || 2 !== Fk.getUint32(4, !0)) return null;
-      const Bk = Math.min(Fk.getUint32(8, !0), kk.byteLength),
-        ak = Fk.getUint32(12, !0);
-      if (Fk.getUint32(16, !0) !== tk || 20 + ak > Bk) return null;
-      let Xk;
+    function ab(bb) {
+      const cb = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
+      if (bb.byteLength < 20 || cb.getUint32(0, !0) !== kb || 2 !== cb.getUint32(4, !0)) return null;
+      const sb = Math.min(cb.getUint32(8, !0), bb.byteLength),
+        ab = cb.getUint32(12, !0);
+      if (cb.getUint32(16, !0) !== Wb || 20 + ab > sb) return null;
+      let Tb;
       try {
-        Xk = JSON.parse((new TextDecoder).decode(kk.subarray(20, 20 + ak)))
+        Tb = JSON.parse((new TextDecoder).decode(bb.subarray(20, 20 + ab)))
       } catch {
         return null
       }
-      return "object" === typeof Xk && null !== Xk ? {
-        json: Xk,
-        jsonEnd: 20 + ak,
-        length: Bk
+      return "object" === typeof Tb && null !== Tb ? {
+        json: Tb,
+        jsonEnd: 20 + ab,
+        length: sb
       } : null
     }
 
-    function Xk(kk) {
-      var Fk;
-      const Bk = null === (Fk = ak(kk)) || void 0 === Fk ? void 0 : Fk.json;
-      if (void 0 === Bk || !Array.isArray(Bk.extensionsUsed) || !Bk.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const Rk = Bk.meshes;
-      return Array.isArray(Rk) && Rk.some((kk => {
-        const Fk = null === kk || void 0 === kk ? void 0 : kk.primitives;
-        return Array.isArray(Fk) && Fk.some((kk => {
-          const Fk = null === kk || void 0 === kk ? void 0 : kk.extensions;
-          return null != (null === Fk || void 0 === Fk ? void 0 : Fk.KHR_draco_mesh_compression)
+    function Tb(bb) {
+      var cb;
+      const sb = null === (cb = ab(bb)) || void 0 === cb ? void 0 : cb.json;
+      if (void 0 === sb || !Array.isArray(sb.extensionsUsed) || !sb.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
+      const kb = sb.meshes;
+      return Array.isArray(kb) && kb.some((bb => {
+        const cb = null === bb || void 0 === bb ? void 0 : bb.primitives;
+        return Array.isArray(cb) && cb.some((bb => {
+          const cb = null === bb || void 0 === bb ? void 0 : bb.extensions;
+          return null != (null === cb || void 0 === cb ? void 0 : cb.KHR_draco_mesh_compression)
         }))
       }))
     }
   },
-  42819: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      MODELS_MODULE_RETRY_DELAYS_MS: () => mk,
-      pageModelPool: () => ik
+  42721: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      MODELS_MODULE_RETRY_DELAYS_MS: () => eb,
+      pageModelPool: () => Vb
     });
-    var Rk = Bk(3506),
-      tk = Bk(36046),
-      ak = Bk(40171),
-      Xk = Bk(40931),
-      bk = Bk(36019);
+    var kb = sb(3505),
+      Wb = sb(35976),
+      ab = sb(40189),
+      Tb = sb(40919),
+      Ub = sb(35945);
     Error;
-    class wk extends Error {
-      constructor(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        super(`Draco ${kk}: ${Fk}`), this.stage = kk, this.url = Bk, this.status = Rk, this.name = "DracoLoadError"
+    class Ib extends Error {
+      constructor(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        super(`Draco ${bb}: ${cb}`), this.stage = bb, this.url = sb, this.status = kb, this.name = "DracoLoadError"
       }
       get goneUrl() {
         return 404 === this.status || 410 === this.status ? this.url : null
       }
     }
 
-    function dk(kk, Fk) {
-      let Bk = null,
-        tk = !1;
+    function Hb(bb, cb) {
+      let sb = null,
+        Wb = !1;
       return {
         get: () => {
-          if (null === Bk) {
-            const ak = async function(kk, Fk) {
+          if (null === sb) {
+            const ab = async function(bb, cb) {
               try {
-                return (await (0, Rk.N)(kk)).buffer
-              } catch (Bk) {
-                throw new wk(Fk, (0, bk.j)(Bk), kk, Bk instanceof Rk.g ? Bk.status : null)
+                return (await (0, kb.C)(bb)).buffer
+              } catch (sb) {
+                throw new Ib(cb, (0, Ub.h)(sb), bb, sb instanceof kb.i ? sb.status : null)
               }
-            }(kk, Fk);
-            Bk = ak, ak.then((() => {
-              tk = Bk === ak
+            }(bb, cb);
+            sb = ab, ab.then((() => {
+              Wb = sb === ab
             }), (() => {
-              Bk = null
+              sb = null
             }))
           }
-          return Bk
+          return sb
         },
         forget: () => {
-          tk && (Bk = null, tk = !1)
+          Wb && (sb = null, Wb = !1)
         }
       }
     }
 
-    function sk(kk, Fk) {
-      const Bk = dk(Fk, "wasm"),
-        Rk = dk(kk, "script");
+    function fb(bb, cb) {
+      const sb = Hb(cb, "wasm"),
+        kb = Hb(bb, "script");
       return async function() {
-        arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (Bk.forget(), Rk.forget());
-        const [kk, Fk] = await Promise.all([Bk.get(), Rk.get()]);
+        arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (sb.forget(), kb.forget());
+        const [bb, cb] = await Promise.all([sb.get(), kb.get()]);
         return {
-          script: Fk,
-          wasmBinary: kk
+          script: cb,
+          wasmBinary: bb
         }
       }
     }
-    var Vk = Bk(9082),
-      Jk = Bk(2906),
-      Ak = Bk(40393),
-      ek = Bk(40431);
-    class yk extends Error {
-      constructor(kk) {
-        super(`no model worker could install it: ${kk}`), this.name = "DracoInstallError"
+    var Mb = sb(9002),
+      Xb = sb(2867),
+      nb = sb(40396),
+      mb = sb(40428);
+    class lb extends Error {
+      constructor(bb) {
+        super(`no model worker could install it: ${bb}`), this.name = "DracoInstallError"
       }
     }
-    class fk {
-      constructor(kk) {
-        this.opts = kk, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.Le = null, this.downloads = 0, this.installFailure = "", this.nextSeq = 0, this.jobLosses = 0;
-        for (let Fk = 0; Fk < Math.max(1, kk.count); Fk++) this.slots.push({
+    class Qb {
+      constructor(bb) {
+        this.opts = bb, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.Vm = null, this.downloads = 0, this.installFailure = "", this.nextSeq = 0, this.jobLosses = 0;
+        for (let cb = 0; cb < Math.max(1, bb.count); cb++) this.slots.push({
           worker: null,
           starting: !1,
           timer: null,
           job: null,
           seq: 0,
-          Le: "none",
+          Vm: "none",
           installSeq: 0,
           failedDownload: 0,
           losses: 0,
@@ -147,18 +147,18 @@ export const modules = {
         this.downloadDecoder(), this.pump()
       }
       get pending() {
-        return this.queue.length + this.slots.filter((kk => null !== kk.job)).length
+        return this.queue.length + this.slots.filter((bb => null !== bb.job)).length
       }
-      build(kk, Fk) {
-        if (null !== this.stopped) return Promise.resolve((0, Ak.p)(kk, this.stopped));
-        const Bk = (0, Vk.l)(Fk);
-        return Bk && this.downloadDecoder(), new Promise((Rk => {
+      build(bb, cb) {
+        if (null !== this.stopped) return Promise.resolve((0, nb.t)(bb, this.stopped));
+        const sb = (0, Mb.i)(cb);
+        return sb && this.downloadDecoder(), new Promise((kb => {
           this.queue.push({
-            word: kk,
-            glb: Fk,
-            draco: Bk,
+            word: bb,
+            glb: cb,
+            draco: sb,
             attempts: 0,
-            resolve: Rk
+            resolve: kb
           }), this.pump()
         }))
       }
@@ -166,218 +166,218 @@ export const modules = {
         this.fail(null)
       }
       files() {
-        return "object" === typeof this.Le ? this.Le : null
+        return "object" === typeof this.Vm ? this.Vm : null
       }
       pump() {
-        const kk = this.files();
-        for (const Fk of this.slots) {
+        const bb = this.files();
+        for (const cb of this.slots) {
           if (null !== this.stopped) return;
-          if (Fk.gaveUp || Fk.starting) continue;
-          if (null === Fk.worker) {
-            this.start(Fk);
+          if (cb.gaveUp || cb.starting) continue;
+          if (null === cb.worker) {
+            this.start(cb);
             continue
           }
-          if (null !== kk && "none" === Fk.Le && Fk.failedDownload !== this.downloads && this.install(Fk, Fk.worker, kk), null !== Fk.job) continue;
-          const Bk = this.queue.findIndex((kk => "installed" === Fk.Le || !kk.draco));
-          Bk >= 0 && this.run(Fk, Fk.worker, this.queue.splice(Bk, 1)[0])
+          if (null !== bb && "none" === cb.Vm && cb.failedDownload !== this.downloads && this.install(cb, cb.worker, bb), null !== cb.job) continue;
+          const sb = this.queue.findIndex((bb => "installed" === cb.Vm || !bb.draco));
+          sb >= 0 && this.run(cb, cb.worker, this.queue.splice(sb, 1)[0])
         }
         null === this.stopped && this.checkDecoder()
       }
       checkDecoder() {
         if (null === this.files()) return;
-        this.slots.some((kk => !kk.gaveUp && ("none" !== kk.Le || kk.failedDownload !== this.downloads))) || (this.Le = "uninstallable", this.decoderFailed(new yk(this.installFailure)))
+        this.slots.some((bb => !bb.gaveUp && ("none" !== bb.Vm || bb.failedDownload !== this.downloads))) || (this.Vm = "uninstallable", this.decoderFailed(new lb(this.installFailure)))
       }
-      start(kk) {
-        if (kk.losses >= 6) return kk.gaveUp = !0, void(this.slots.every((kk => kk.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
-        kk.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((Fk => {
-          let [Bk, Rk] = Fk;
-          null === this.stopped && this.launch(kk, Bk, Rk)
-        }), (kk => {
-          this.fail(kk)
+      start(bb) {
+        if (bb.losses >= 6) return bb.gaveUp = !0, void(this.slots.every((bb => bb.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
+        bb.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((cb => {
+          let [sb, kb] = cb;
+          null === this.stopped && this.launch(bb, sb, kb)
+        }), (bb => {
+          this.fail(bb)
         }))
       }
-      launch(kk, Fk, Bk) {
-        let Rk;
+      launch(bb, cb, sb) {
+        let kb;
         try {
-          Rk = Fk()
-        } catch (tk) {
-          return void this.lose(kk, `a model worker could not be created (${String(tk)})`)
+          kb = cb()
+        } catch (Wb) {
+          return void this.lose(bb, `a model worker could not be created (${String(Wb)})`)
         }
-        kk.worker = Rk, this.startTimer(kk, 3e4, (Fk => {
-          this.lose(kk, `a model worker did not start: ${(0,ek.i)(Fk)}`)
-        })), Rk.onmessage = Fk => {
+        bb.worker = kb, this.startTimer(bb, 3e4, (cb => {
+          this.lose(bb, `a model worker did not start: ${(0,mb.i)(cb)}`)
+        })), kb.onmessage = cb => {
           let {
-            data: Bk
-          } = Fk;
-          this.answered(kk, Rk, Bk)
-        }, Rk.onerror = Fk => {
-          this.lose(kk, kk.starting ? `a model worker failed to start: ${Fk.message}` : `a model worker failed: ${Fk.message}`)
-        }, Rk.postMessage({
+            data: sb
+          } = cb;
+          this.answered(bb, kb, sb)
+        }, kb.onerror = cb => {
+          this.lose(bb, bb.starting ? `a model worker failed to start: ${cb.message}` : `a model worker failed: ${cb.message}`)
+        }, kb.postMessage({
           type: "start",
-          module: Bk
+          module: sb
         })
       }
-      startTimer(kk, Fk, Bk) {
-        kk.timer = new ek.f(Fk, (Fk => {
-          kk.timer = null, Bk(Fk)
+      startTimer(bb, cb, sb) {
+        bb.timer = new mb.g(cb, (cb => {
+          bb.timer = null, sb(cb)
         }), void 0, this.opts.visibility)
       }
-      clearTimer(kk) {
-        var Fk;
-        null === (Fk = kk.timer) || void 0 === Fk || Fk.cancel(), kk.timer = null
+      clearTimer(bb) {
+        var cb;
+        null === (cb = bb.timer) || void 0 === cb || cb.cancel(), bb.timer = null
       }
-      answered(kk, Fk, Bk) {
-        if ("lost" === Bk.type) return void this.lose(kk, Bk.reason);
-        if (kk.starting) return "started" !== Bk.type ? void this.lose(kk, `a model worker answered ${Bk.type} before it started`) : (this.clearTimer(kk), kk.starting = !1, kk.startedAt = performance.now(), void this.pump());
-        if ("dracoInstalled" === Bk.type || "dracoFailed" === Bk.type) {
-          if (Bk.seq !== kk.installSeq) return;
-          return void("installing" === kk.Le ? (this.clearTimer(kk), "dracoInstalled" === Bk.type ? (kk.Le = "installed", this.pump()) : this.installFailed(kk, Bk.reason)) : "dracoInstalled" === Bk.type && "none" === kk.Le && kk.failedDownload === this.downloads && (kk.Le = "installed", this.pump()))
+      answered(bb, cb, sb) {
+        if ("lost" === sb.type) return void this.lose(bb, sb.reason);
+        if (bb.starting) return "started" !== sb.type ? void this.lose(bb, `a model worker answered ${sb.type} before it started`) : (this.clearTimer(bb), bb.starting = !1, bb.startedAt = performance.now(), void this.pump());
+        if ("dracoInstalled" === sb.type || "dracoFailed" === sb.type) {
+          if (sb.seq !== bb.installSeq) return;
+          return void("installing" === bb.Vm ? (this.clearTimer(bb), "dracoInstalled" === sb.type ? (bb.Vm = "installed", this.pump()) : this.installFailed(bb, sb.reason)) : "dracoInstalled" === sb.type && "none" === bb.Vm && bb.failedDownload === this.downloads && (bb.Vm = "installed", this.pump()))
         }
-        const Rk = kk.job;
-        null !== Rk && "started" !== Bk.type && Bk.seq === kk.seq && ("trapped" !== Bk.type ? (kk.job = null, kk.losses = 0, this.jobLosses = 0, Rk.resolve(new Uint8Array(Bk.record)), this.pump()) : this.lose(kk, Bk.trap, !0))
+        const kb = bb.job;
+        null !== kb && "started" !== sb.type && sb.seq === bb.seq && ("trapped" !== sb.type ? (bb.job = null, bb.losses = 0, this.jobLosses = 0, kb.resolve(new Uint8Array(sb.record)), this.pump()) : this.lose(bb, sb.trap, !0))
       }
-      install(kk, Fk, Bk) {
-        const Rk = this.nextSeq++;
-        kk.Le = "installing", kk.installSeq = Rk, this.startTimer(kk, 3e4, (Fk => {
-          this.installFailed(kk, `no install within ${Math.round(Fk)} ms`)
+      install(bb, cb, sb) {
+        const kb = this.nextSeq++;
+        bb.Vm = "installing", bb.installSeq = kb, this.startTimer(bb, 3e4, (cb => {
+          this.installFailed(bb, `no install within ${Math.round(cb)} ms`)
         }));
-        const tk = Bk.script.slice(0),
-          ak = Bk.wasmBinary.slice(0);
-        Fk.postMessage({
+        const Wb = sb.script.slice(0),
+          ab = sb.wasmBinary.slice(0);
+        cb.postMessage({
           type: "installDraco",
-          seq: Rk,
-          script: tk,
-          wasmBinary: ak
-        }, [tk, ak])
+          seq: kb,
+          script: Wb,
+          wasmBinary: ab
+        }, [Wb, ab])
       }
-      installFailed(kk, Fk) {
-        console.warn(`[modelPool] a model worker could not install the Draco decoder: ${Fk}`), this.noInstall(kk, Fk), this.pump()
+      installFailed(bb, cb) {
+        console.warn(`[modelPool] a model worker could not install the Draco decoder: ${cb}`), this.noInstall(bb, cb), this.pump()
       }
-      noInstall(kk, Fk) {
-        kk.Le = "none", kk.failedDownload = this.downloads, this.installFailure = Fk
+      noInstall(bb, cb) {
+        bb.Vm = "none", bb.failedDownload = this.downloads, this.installFailure = cb
       }
       downloadDecoder() {
-        if (null !== this.stopped || "downloading" === this.Le || null !== this.files()) return;
-        const kk = "uninstallable" === this.Le;
-        this.Le = "downloading", this.opts.downloadFiles(kk).then((kk => {
-          null === this.stopped && (this.Le = kk, this.downloads++, this.pump())
-        }), (kk => {
-          this.Le = null, this.decoderFailed(kk)
+        if (null !== this.stopped || "downloading" === this.Vm || null !== this.files()) return;
+        const bb = "uninstallable" === this.Vm;
+        this.Vm = "downloading", this.opts.downloadFiles(bb).then((bb => {
+          null === this.stopped && (this.Vm = bb, this.downloads++, this.pump())
+        }), (bb => {
+          this.Vm = null, this.decoderFailed(bb)
         }))
       }
-      decoderFailed(kk) {
+      decoderFailed(bb) {
         if (null !== this.stopped) return;
-        const Fk = (0, bk.j)(kk);
-        let Bk = 0;
-        for (const Rk of this.queue.splice(0)) Rk.draco ? (Rk.resolve((0, Ak.i)(Rk.word, Fk)), Bk++) : this.queue.push(Rk);
-        Bk > 0 && this.opts.onDecoderFailed(kk)
+        const cb = (0, Ub.h)(bb);
+        let sb = 0;
+        for (const kb of this.queue.splice(0)) kb.draco ? (kb.resolve((0, nb.h)(kb.word, cb)), sb++) : this.queue.push(kb);
+        sb > 0 && this.opts.onDecoderFailed(bb)
       }
-      run(kk, Fk, Bk) {
-        const Rk = this.nextSeq++;
-        kk.seq = Rk, kk.job = Bk, Bk.attempts++;
-        const tk = Bk.glb.slice();
-        Fk.postMessage({
+      run(bb, cb, sb) {
+        const kb = this.nextSeq++;
+        bb.seq = kb, bb.job = sb, sb.attempts++;
+        const Wb = sb.glb.slice();
+        cb.postMessage({
           type: "job",
-          seq: Rk,
-          word: Bk.word,
-          glb: tk.buffer
-        }, [tk.buffer])
+          seq: kb,
+          word: sb.word,
+          glb: Wb.buffer
+        }, [Wb.buffer])
       }
-      lose(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.clearTimer(kk);
-        const Rk = kk.worker;
-        null !== Rk && (Rk.onmessage = null, Rk.onerror = null, Rk.terminate());
-        const tk = !Bk && "installing" === kk.Le;
-        kk.worker = null, kk.starting = !1, kk.Le = "none", tk && this.noInstall(kk, Fk), void 0 !== kk.startedAt && performance.now() - kk.startedAt >= 6e4 && (kk.losses = 0), kk.startedAt = void 0;
-        const ak = kk.job;
-        if (kk.job = null, null !== ak || tk || kk.losses++, this.opts.onWorkerLost(Fk), null !== ak && tk) ak.attempts--, this.queue.unshift(ak);
-        else if (null !== ak && (ak.attempts < 2 ? this.queue.unshift(ak) : ak.resolve((0, Ak.o)(ak.word, Fk)), this.jobLosses++, this.jobLosses >= 32)) return void this.fail(new Error("model workers were lost on 32 jobs with no file built"));
+      lose(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.clearTimer(bb);
+        const kb = bb.worker;
+        null !== kb && (kb.onmessage = null, kb.onerror = null, kb.terminate());
+        const Wb = !sb && "installing" === bb.Vm;
+        bb.worker = null, bb.starting = !1, bb.Vm = "none", Wb && this.noInstall(bb, cb), void 0 !== bb.startedAt && performance.now() - bb.startedAt >= 6e4 && (bb.losses = 0), bb.startedAt = void 0;
+        const ab = bb.job;
+        if (bb.job = null, null !== ab || Wb || bb.losses++, this.opts.onWorkerLost(cb), null !== ab && Wb) ab.attempts--, this.queue.unshift(ab);
+        else if (null !== ab && (ab.attempts < 2 ? this.queue.unshift(ab) : ab.resolve((0, nb.q)(ab.word, cb)), this.jobLosses++, this.jobLosses >= 32)) return void this.fail(new Error("model workers were lost on 32 jobs with no file built"));
         this.pump()
       }
-      fail(kk) {
+      fail(bb) {
         if (null !== this.stopped) return;
-        this.stopped = null === kk ? "the model workers stopped" : `the model workers could not start: ${(0,bk.j)(kk)}`;
-        const Fk = this.stopped,
-          Bk = kk => {
-            kk.resolve((0, Ak.p)(kk.word, Fk))
+        this.stopped = null === bb ? "the model workers stopped" : `the model workers could not start: ${(0,Ub.h)(bb)}`;
+        const cb = this.stopped,
+          sb = bb => {
+            bb.resolve((0, nb.t)(bb.word, cb))
           };
-        for (const tk of this.slots) {
-          var Rk;
-          this.clearTimer(tk), null === (Rk = tk.worker) || void 0 === Rk || Rk.terminate(), tk.worker = null, null !== tk.job && Bk(tk.job), tk.job = null
+        for (const Wb of this.slots) {
+          var kb;
+          this.clearTimer(Wb), null === (kb = Wb.worker) || void 0 === kb || kb.terminate(), Wb.worker = null, null !== Wb.job && sb(Wb.job), Wb.job = null
         }
-        this.queue.splice(0).forEach(Bk), null !== kk && this.opts.onUnavailable(kk)
+        this.queue.splice(0).forEach(sb), null !== bb && this.opts.onUnavailable(bb)
       }
     }
-    const mk = [...Rk.v, 5e3, 15e3, 3e4];
-    let Wk = null;
-    const vk = new Set;
+    const eb = [...kb.r, 5e3, 15e3, 3e4];
+    let Cb = null;
+    const Nb = new Set;
 
-    function ik(kk) {
-      return vk.add(kk), Wk ??= function() {
-        let kk = (Fk = navigator.hardwareConcurrency, bk = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, Fk > 2 && !(0, Jk.o)(bk) ? 2 : 1);
-        var Fk, bk;
-        const dk = new fk({
-          module: (0, tk.d)(ak.d, {
-            delays: mk,
-            onRetry: (kk, Fk) => {
-              Wk === dk && Yk((Bk => {
-                Bk.onModuleRetry(kk, Fk)
+    function Vb(bb) {
+      return Nb.add(bb), Cb ??= function() {
+        let bb = (cb = navigator.hardwareConcurrency, Ub = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, cb > 2 && !(0, Xb.s)(Ub) ? 2 : 1);
+        var cb, Ub;
+        const Hb = new Qb({
+          module: (0, Wb.f)(ab.d, {
+            delays: eb,
+            onRetry: (bb, cb) => {
+              Cb === Hb && Lb((sb => {
+                sb.onModuleRetry(bb, cb)
               }))
             }
           }),
-          downloadFiles: sk(Xk.e.scriptUrl, Xk.e.wasmBinaryUrl),
-          loadWorker: async () => (await Bk.e(43).then((() => Bk(61254)))).createModelWorker,
-          count: kk,
-          onUnavailable: kk => {
-            if (Wk === dk) {
-              Wk = null;
-              const Fk = function(kk) {
-                return kk instanceof Rk.e ? [ak.d.url().href] : void 0
-              }(kk);
-              Yk((Bk => {
-                Bk.onUnavailable(kk, Fk)
+          downloadFiles: fb(Tb.c.scriptUrl, Tb.c.wasmBinaryUrl),
+          loadWorker: async () => (await sb.e(43).then((() => sb(60918)))).createModelWorker,
+          count: bb,
+          onUnavailable: bb => {
+            if (Cb === Hb) {
+              Cb = null;
+              const cb = function(bb) {
+                return bb instanceof kb.e ? [ab.d.url().href] : void 0
+              }(bb);
+              Lb((sb => {
+                sb.onUnavailable(bb, cb)
               }))
             }
           },
-          onDecoderFailed: kk => {
-            if (Wk === dk) {
-              const Fk = kk instanceof wk ? kk.goneUrl : null,
-                Bk = null === Fk ? void 0 : [Fk];
-              Yk((Fk => {
-                Fk.onDecoderFailed(kk, Bk)
+          onDecoderFailed: bb => {
+            if (Cb === Hb) {
+              const cb = bb instanceof Ib ? bb.goneUrl : null,
+                sb = null === cb ? void 0 : [cb];
+              Lb((cb => {
+                cb.onDecoderFailed(bb, sb)
               }))
             }
           },
-          onWorkerLost: kk => {
-            Wk === dk && Yk((Fk => {
-              Fk.onWorkerLost(kk)
+          onWorkerLost: bb => {
+            Cb === Hb && Lb((cb => {
+              cb.onWorkerLost(bb)
             }))
           }
         });
-        return dk
+        return Hb
       }(), {
-        pool: Wk,
+        pool: Cb,
         unlisten: () => {
-          vk.delete(kk)
+          Nb.delete(bb)
         }
       }
     }
 
-    function Yk(kk) {
-      for (const Bk of [...vk]) try {
-        kk(Bk)
-      } catch (Fk) {
-        console.error("[pageModelPool] a listener threw", Fk)
+    function Lb(bb) {
+      for (const sb of [...Nb]) try {
+        bb(sb)
+      } catch (cb) {
+        console.error("[pageModelPool] a listener threw", cb)
       }
     }
   },
-  40936: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  40924: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   },
-  40939: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  40928: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

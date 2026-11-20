@@ -1,11 +1,11 @@
 export const id = 21;
 export const ids = [21];
 export const modules = {
-  39035: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      default: () => ak
+  39023: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      default: () => ab
     });
-    const Rk = {
+    const kb = {
       Maverick: "Portal Config",
       "Bling Bling": "Bank",
       Fred: "Farmer",
@@ -14,45 +14,45 @@ export const modules = {
       Gill: "Farmer's Guild",
       Wren: "Travelling Trader"
     };
-    const tk = 6400;
-    const ak = function(kk, Fk, Bk, ak) {
-      let Xk, {
-          localPlayerId: bk
-        } = ak,
-        wk = [];
+    const Wb = 6400;
+    const ab = function(bb, cb, sb, ab) {
+      let Tb, {
+          localPlayerId: Ub
+        } = ab,
+        Ib = [];
       return {
-        onCreate: kk => {
-          Xk = kk
+        onCreate: bb => {
+          Tb = bb
         },
-        onReceivedMessageFromServer: (kk, Fk) => {
-          "oneBlockNextBlocks" === kk && (wk = Fk.blocks.map((kk => Xk.blockNameToBlockId(kk))))
+        onReceivedMessageFromServer: (bb, cb) => {
+          "oneBlockNextBlocks" === bb && (Ib = cb.blocks.map((bb => Tb.blockNameToBlockId(bb))))
         },
-        yJ: () => {
-          if (0 === wk.length) return;
-          const kk = Xk.getPositionView(bk),
-            Fk = function(kk, Fk) {
-              const Bk = Math.ceil((kk - 3200) / tk);
-              if (Bk !== Math.ceil((Fk - 3200) / tk) || Bk <= 0) return null;
-              const Rk = Bk * tk + 6;
-              return [Rk, 10, Rk]
-            }(kk[0], kk[2]);
-          if (!Fk) return;
-          const [Bk, Rk, ak] = Fk;
-          if (Xk.isBlockInLoadedChunk(Bk, Rk, ak) && 0 === Xk.getBlockId(Bk, Rk, ak)) {
-            const kk = wk.shift();
-            Xk.setBlockId(Bk, Rk, ak, kk)
+        aX: () => {
+          if (0 === Ib.length) return;
+          const bb = Tb.getPositionView(Ub),
+            cb = function(bb, cb) {
+              const sb = Math.ceil((bb - 3200) / Wb);
+              if (sb !== Math.ceil((cb - 3200) / Wb) || sb <= 0) return null;
+              const kb = sb * Wb + 6;
+              return [kb, 10, kb]
+            }(bb[0], bb[2]);
+          if (!cb) return;
+          const [sb, kb, ab] = cb;
+          if (Tb.isBlockInLoadedChunk(sb, kb, ab) && 0 === Tb.getBlockId(sb, kb, ab)) {
+            const bb = Ib.shift();
+            Tb.setBlockId(sb, kb, ab, bb)
           }
         },
-        onPlayerAltAction: (kk, Fk, Bk, tk, ak, bk) => {
-          ! function(kk, Fk, Bk, tk) {
-            if (!Bk || "Mesh" !== kk.getEntityType(Bk)) return !1;
-            const ak = Rk[kk.getEntityName(Bk)];
-            !!ak && kk.openShop(Fk, tk, ak)
-          }(Xk, kk, bk, !1)
+        onPlayerAltAction: (bb, cb, sb, Wb, ab, Ub) => {
+          ! function(bb, cb, sb, Wb) {
+            if (!sb || "Mesh" !== bb.getEntityType(sb)) return !1;
+            const ab = kb[bb.getEntityName(sb)];
+            !!ab && bb.openShop(cb, Wb, ab)
+          }(Tb, bb, Ub, !1)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

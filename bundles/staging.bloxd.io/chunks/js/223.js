@@ -1,127 +1,127 @@
 export const id = 223;
 export const ids = [223, 229, 232];
 export const modules = {
-  39656: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Xk,
-      h: () => bk
+  39690: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Tb,
+      c: () => Ub
     });
-    var Rk = Bk(38320),
-      tk = Bk(39414),
-      ak = Bk(39623),
-      Xk = {};
-    class bk {
-      constructor(kk) {
-        this.attachedToElement = !1, this.attached = {}, this.camera = kk, this.checkInputs = () => {}
+    var kb = sb(38284),
+      Wb = sb(39441),
+      ab = sb(39658),
+      Tb = {};
+    class Ub {
+      constructor(bb) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = bb, this.checkInputs = () => {}
       }
-      add(kk) {
-        const Fk = kk.getSimpleName();
-        this.attached[Fk] ? Rk.b.Warn("camera input of type " + Fk + " already exists on camera") : (this.attached[Fk] = kk, kk.camera = this.camera, kk.checkInputs && (this.checkInputs = this._addCheckInputs(kk.checkInputs.bind(kk))), this.attachedToElement && kk.attachControl(this.noPreventDefault))
+      add(bb) {
+        const cb = bb.getSimpleName();
+        this.attached[cb] ? kb.c.Warn("camera input of type " + cb + " already exists on camera") : (this.attached[cb] = bb, bb.camera = this.camera, bb.checkInputs && (this.checkInputs = this._addCheckInputs(bb.checkInputs.bind(bb))), this.attachedToElement && bb.attachControl(this.noPreventDefault))
       }
-      remove(kk) {
-        for (const Fk in this.attached) {
-          const Bk = this.attached[Fk];
-          if (Bk === kk) return Bk.detachControl(), Bk.camera = null, delete this.attached[Fk], void this.rebuildInputCheck()
+      remove(bb) {
+        for (const cb in this.attached) {
+          const sb = this.attached[cb];
+          if (sb === bb) return sb.detachControl(), sb.camera = null, delete this.attached[cb], void this.rebuildInputCheck()
         }
       }
-      removeByType(kk) {
-        for (const Fk in this.attached) {
-          const Bk = this.attached[Fk];
-          Bk.getClassName() === kk && (Bk.detachControl(), Bk.camera = null, delete this.attached[Fk], this.rebuildInputCheck())
+      removeByType(bb) {
+        for (const cb in this.attached) {
+          const sb = this.attached[cb];
+          sb.getClassName() === bb && (sb.detachControl(), sb.camera = null, delete this.attached[cb], this.rebuildInputCheck())
         }
       }
-      _addCheckInputs(kk) {
-        const Fk = this.checkInputs;
+      _addCheckInputs(bb) {
+        const cb = this.checkInputs;
         return () => {
-          Fk(), kk()
+          cb(), bb()
         }
       }
-      attachInput(kk) {
-        this.attachedToElement && kk.attachControl(this.noPreventDefault)
+      attachInput(bb) {
+        this.attachedToElement && bb.attachControl(this.noPreventDefault)
       }
       attachElement() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (!this.attachedToElement) {
-          kk = !ak.c.ForceAttachControlToAlwaysPreventDefault && kk, this.attachedToElement = !0, this.noPreventDefault = kk;
-          for (const Fk in this.attached) this.attached[Fk].attachControl(kk)
+          bb = !ab.c.ForceAttachControlToAlwaysPreventDefault && bb, this.attachedToElement = !0, this.noPreventDefault = bb;
+          for (const cb in this.attached) this.attached[cb].attachControl(bb)
         }
       }
       detachElement() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const Fk in this.attached) this.attached[Fk].detachControl(), kk && (this.attached[Fk].camera = null);
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const cb in this.attached) this.attached[cb].detachControl(), bb && (this.attached[cb].camera = null);
         this.attachedToElement = !1
       }
       rebuildInputCheck() {
         this.checkInputs = () => {};
-        for (const kk in this.attached) {
-          const Fk = this.attached[kk];
-          Fk.checkInputs && (this.checkInputs = this._addCheckInputs(Fk.checkInputs.bind(Fk)))
+        for (const bb in this.attached) {
+          const cb = this.attached[bb];
+          cb.checkInputs && (this.checkInputs = this._addCheckInputs(cb.checkInputs.bind(cb)))
         }
       }
       clear() {
         this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
       }
-      serialize(kk) {
-        const Fk = {};
-        for (const Bk in this.attached) {
-          const kk = this.attached[Bk],
-            Rk = tk.c.Serialize(kk);
-          Fk[kk.getClassName()] = Rk
+      serialize(bb) {
+        const cb = {};
+        for (const sb in this.attached) {
+          const bb = this.attached[sb],
+            kb = Wb.d.Serialize(bb);
+          cb[bb.getClassName()] = kb
         }
-        kk.inputsmgr = Fk
+        bb.inputsmgr = cb
       }
-      parse(kk) {
-        const Fk = kk.inputsmgr;
-        if (Fk) {
+      parse(bb) {
+        const cb = bb.inputsmgr;
+        if (cb) {
           this.clear();
-          for (const kk in Fk) {
-            const Bk = Xk[kk];
-            if (Bk) {
-              const Rk = Fk[kk],
-                ak = tk.c.Parse((() => new Bk), Rk, null);
-              this.add(ak)
+          for (const bb in cb) {
+            const sb = Tb[bb];
+            if (sb) {
+              const kb = cb[bb],
+                ab = Wb.d.Parse((() => new sb), kb, null);
+              this.add(ab)
             }
           }
         } else
-          for (const Bk in this.attached) {
-            const Fk = Xk[this.attached[Bk].getClassName()];
-            if (Fk) {
-              const Rk = tk.c.Parse((() => new Fk), kk, null);
-              this.remove(this.attached[Bk]), this.add(Rk)
+          for (const sb in this.attached) {
+            const cb = Tb[this.attached[sb].getClassName()];
+            if (cb) {
+              const kb = Wb.d.Parse((() => new cb), bb, null);
+              this.remove(this.attached[sb]), this.add(kb)
             }
           }
       }
     }
   },
-  39659: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Rk.c
+  39695: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => kb.b
     });
-    var Rk = Bk(39665);
-    (0, Rk.d)()
+    var kb = sb(39700);
+    (0, kb.d)()
   },
-  39665: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => sk,
-      d: () => Jk
+  39700: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => fb,
+      d: () => Xb
     });
-    var Rk = Bk(39397),
-      tk = Bk(39404),
-      ak = Bk(36758),
-      Xk = Bk(36917),
-      bk = Bk(39668),
-      wk = Bk(39628),
-      dk = Bk(36798);
-    let sk = (() => {
-        var kk;
-        let Fk, Bk, wk = bk.d,
-          dk = [],
-          sk = [],
-          Vk = [],
-          Jk = [];
-        return kk = class extends wk {
-          constructor(kk, Fk, Bk, tk) {
-            super(kk, Bk, tk), this.groundColor = (0, Rk.l)(this, dk, new Xk.e(0, 0, 0)), this.direction = ((0, Rk.l)(this, sk), (0, Rk.l)(this, Vk, void 0)), (0, Rk.l)(this, Jk), this.direction = Fk || ak.s.Up()
+    var kb = sb(39414),
+      Wb = sb(39418),
+      ab = sb(36656),
+      Tb = sb(36830),
+      Ub = sb(39706),
+      Ib = sb(39667),
+      Hb = sb(36698);
+    let fb = (() => {
+        var bb;
+        let cb, sb, Ib = Ub.b,
+          Hb = [],
+          fb = [],
+          Mb = [],
+          Xb = [];
+        return bb = class extends Ib {
+          constructor(bb, cb, sb, Wb) {
+            super(bb, sb, Wb), this.groundColor = (0, kb.m)(this, Hb, new Tb.e(0, 0, 0)), this.direction = ((0, kb.m)(this, fb), (0, kb.m)(this, Mb, void 0)), (0, kb.m)(this, Xb), this.direction = cb || ab.p.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -129,499 +129,499 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(kk) {
-            return this.direction = ak.s.Normalize(kk.subtract(ak.s.Zero())), this.direction
+          setDirectionToTarget(bb) {
+            return this.direction = ab.p.Normalize(bb.subtract(ab.p.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(kk, Fk) {
-            const Bk = ak.s.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", Bk.x, Bk.y, Bk.z, 0, Fk), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), Fk), this
+          transferToEffect(bb, cb) {
+            const sb = ab.p.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", sb.x, sb.y, sb.z, 0, cb), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), cb), this
           }
-          transferToNodeMaterialEffect(kk, Fk) {
-            const Bk = ak.s.Normalize(this.direction);
-            return kk.setFloat3(Fk, Bk.x, Bk.y, Bk.z), this
+          transferToNodeMaterialEffect(bb, cb) {
+            const sb = ab.p.Normalize(this.direction);
+            return bb.setFloat3(cb, sb.x, sb.y, sb.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = ak.c.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = ab.e.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return bk.d.LIGHTTYPEID_HEMISPHERICLIGHT
+            return Ub.b.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(kk, Fk) {
-            kk["HEMILIGHT" + Fk] = !0
+          prepareLightSpecificDefines(bb, cb) {
+            bb["HEMILIGHT" + cb] = !0
           }
         }, (() => {
-          const ak = "function" === typeof Symbol && Symbol.metadata ? Object.create(wk[Symbol.metadata] ?? null) : void 0;
-          Fk = [(0, tk.l)()], Bk = [(0, tk.K)()], (0, Rk.j)(null, null, Fk, {
+          const ab = "function" === typeof Symbol && Symbol.metadata ? Object.create(Ib[Symbol.metadata] ?? null) : void 0;
+          cb = [(0, Wb.o)()], sb = [(0, Wb.C)()], (0, kb.j)(null, null, cb, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: kk => "groundColor" in kk,
-              get: kk => kk.groundColor,
-              set: (kk, Fk) => {
-                kk.groundColor = Fk
+              has: bb => "groundColor" in bb,
+              get: bb => bb.groundColor,
+              set: (bb, cb) => {
+                bb.groundColor = cb
               }
             },
-            metadata: ak
-          }, dk, sk), (0, Rk.j)(null, null, Bk, {
+            metadata: ab
+          }, Hb, fb), (0, kb.j)(null, null, sb, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: kk => "direction" in kk,
-              get: kk => kk.direction,
-              set: (kk, Fk) => {
-                kk.direction = Fk
+              has: bb => "direction" in bb,
+              get: bb => bb.direction,
+              set: (bb, cb) => {
+                bb.direction = cb
               }
             },
-            metadata: ak
-          }, Vk, Jk), ak && Object.defineProperty(kk, Symbol.metadata, {
+            metadata: ab
+          }, Mb, Xb), ab && Object.defineProperty(bb, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: ak
+            value: ab
           })
-        })(), kk
+        })(), bb
       })(),
-      Vk = !1;
+      Mb = !1;
 
-    function Jk() {
-      Vk || (Vk = !0, wk.b.AddNodeConstructor("Light_Type_3", ((kk, Fk) => () => new sk(kk, ak.s.Zero(), Fk))), (0, dk.d)("BABYLON.HemisphericLight", sk))
+    function Xb() {
+      Mb || (Mb = !0, Ib.c.AddNodeConstructor("Light_Type_3", ((bb, cb) => () => new fb(bb, ab.p.Zero(), cb))), (0, Hb.h)("BABYLON.HemisphericLight", fb))
     }
   },
-  36911: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      Color3: () => Rk.e,
-      c: () => Rk.i
+  36821: (bb, cb, sb) => {
+    sb.d(cb, {
+      Color3: () => kb.e,
+      e: () => kb.g
     });
-    var Rk = Bk(36917);
-    (0, Rk.j)()
+    var kb = sb(36830);
+    (0, kb.j)()
   },
-  37459: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => tk
+  37365: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Wb
     });
-    var Rk = Bk(37467);
-    class tk {
-      static GetPlanes(kk) {
-        const Fk = [];
-        for (let Bk = 0; Bk < 6; Bk++) Fk.push(new Rk.c(0, 0, 0, 0));
-        return tk.GetPlanesToRef(kk, Fk), Fk
+    var kb = sb(37368);
+    class Wb {
+      static GetPlanes(bb) {
+        const cb = [];
+        for (let sb = 0; sb < 6; sb++) cb.push(new kb.c(0, 0, 0, 0));
+        return Wb.GetPlanesToRef(bb, cb), cb
       }
-      static GetNearPlaneToRef(kk, Fk) {
-        const Bk = kk.m;
-        Fk.normal.x = Bk[3] + Bk[2], Fk.normal.y = Bk[7] + Bk[6], Fk.normal.z = Bk[11] + Bk[10], Fk.d = Bk[15] + Bk[14], Fk.normalize()
+      static GetNearPlaneToRef(bb, cb) {
+        const sb = bb.m;
+        cb.normal.x = sb[3] + sb[2], cb.normal.y = sb[7] + sb[6], cb.normal.z = sb[11] + sb[10], cb.d = sb[15] + sb[14], cb.normalize()
       }
-      static GetFarPlaneToRef(kk, Fk) {
-        const Bk = kk.m;
-        Fk.normal.x = Bk[3] - Bk[2], Fk.normal.y = Bk[7] - Bk[6], Fk.normal.z = Bk[11] - Bk[10], Fk.d = Bk[15] - Bk[14], Fk.normalize()
+      static GetFarPlaneToRef(bb, cb) {
+        const sb = bb.m;
+        cb.normal.x = sb[3] - sb[2], cb.normal.y = sb[7] - sb[6], cb.normal.z = sb[11] - sb[10], cb.d = sb[15] - sb[14], cb.normalize()
       }
-      static GetLeftPlaneToRef(kk, Fk) {
-        const Bk = kk.m;
-        Fk.normal.x = Bk[3] + Bk[0], Fk.normal.y = Bk[7] + Bk[4], Fk.normal.z = Bk[11] + Bk[8], Fk.d = Bk[15] + Bk[12], Fk.normalize()
+      static GetLeftPlaneToRef(bb, cb) {
+        const sb = bb.m;
+        cb.normal.x = sb[3] + sb[0], cb.normal.y = sb[7] + sb[4], cb.normal.z = sb[11] + sb[8], cb.d = sb[15] + sb[12], cb.normalize()
       }
-      static GetRightPlaneToRef(kk, Fk) {
-        const Bk = kk.m;
-        Fk.normal.x = Bk[3] - Bk[0], Fk.normal.y = Bk[7] - Bk[4], Fk.normal.z = Bk[11] - Bk[8], Fk.d = Bk[15] - Bk[12], Fk.normalize()
+      static GetRightPlaneToRef(bb, cb) {
+        const sb = bb.m;
+        cb.normal.x = sb[3] - sb[0], cb.normal.y = sb[7] - sb[4], cb.normal.z = sb[11] - sb[8], cb.d = sb[15] - sb[12], cb.normalize()
       }
-      static GetTopPlaneToRef(kk, Fk) {
-        const Bk = kk.m;
-        Fk.normal.x = Bk[3] - Bk[1], Fk.normal.y = Bk[7] - Bk[5], Fk.normal.z = Bk[11] - Bk[9], Fk.d = Bk[15] - Bk[13], Fk.normalize()
+      static GetTopPlaneToRef(bb, cb) {
+        const sb = bb.m;
+        cb.normal.x = sb[3] - sb[1], cb.normal.y = sb[7] - sb[5], cb.normal.z = sb[11] - sb[9], cb.d = sb[15] - sb[13], cb.normalize()
       }
-      static GetBottomPlaneToRef(kk, Fk) {
-        const Bk = kk.m;
-        Fk.normal.x = Bk[3] + Bk[1], Fk.normal.y = Bk[7] + Bk[5], Fk.normal.z = Bk[11] + Bk[9], Fk.d = Bk[15] + Bk[13], Fk.normalize()
+      static GetBottomPlaneToRef(bb, cb) {
+        const sb = bb.m;
+        cb.normal.x = sb[3] + sb[1], cb.normal.y = sb[7] + sb[5], cb.normal.z = sb[11] + sb[9], cb.d = sb[15] + sb[13], cb.normalize()
       }
-      static GetPlanesToRef(kk, Fk) {
-        tk.GetNearPlaneToRef(kk, Fk[0]), tk.GetFarPlaneToRef(kk, Fk[1]), tk.GetLeftPlaneToRef(kk, Fk[2]), tk.GetRightPlaneToRef(kk, Fk[3]), tk.GetTopPlaneToRef(kk, Fk[4]), tk.GetBottomPlaneToRef(kk, Fk[5])
+      static GetPlanesToRef(bb, cb) {
+        Wb.GetNearPlaneToRef(bb, cb[0]), Wb.GetFarPlaneToRef(bb, cb[1]), Wb.GetLeftPlaneToRef(bb, cb[2]), Wb.GetRightPlaneToRef(bb, cb[3]), Wb.GetTopPlaneToRef(bb, cb[4]), Wb.GetBottomPlaneToRef(bb, cb[5])
       }
-      static IsPointInFrustum(kk, Fk) {
-        for (let Bk = 0; Bk < 6; Bk++)
-          if (Fk[Bk].dotCoordinate(kk) < 0) return !1;
+      static IsPointInFrustum(bb, cb) {
+        for (let sb = 0; sb < 6; sb++)
+          if (cb[sb].dotCoordinate(bb) < 0) return !1;
         return !0
       }
     }
   },
-  37467: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => tk
+  37368: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Wb
     });
-    var Rk = Bk(36758);
-    class tk {
-      constructor(kk, Fk, Bk, tk) {
-        this.normal = new Rk.s(kk, Fk, Bk), this.d = tk
+    var kb = sb(36656);
+    class Wb {
+      constructor(bb, cb, sb, Wb) {
+        this.normal = new kb.p(bb, cb, sb), this.d = Wb
       }
-      PBk() {
+      Osb() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new tk(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new Wb(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let kk = this.normal.getHashCode();
-        return kk = 397 * kk ^ this.d, kk
+        let bb = this.normal.getHashCode();
+        return bb = 397 * bb ^ this.d, bb
       }
       normalize() {
-        const kk = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let Fk = 0;
-        return 0 !== kk && (Fk = 1 / kk), this.normal.x *= Fk, this.normal.y *= Fk, this.normal.z *= Fk, this.d *= Fk, this
+        const bb = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let cb = 0;
+        return 0 !== bb && (cb = 1 / bb), this.normal.x *= cb, this.normal.y *= cb, this.normal.z *= cb, this.d *= cb, this
       }
-      transform(kk) {
-        const Fk = tk._TmpMatrix;
-        kk.invertToRef(Fk);
-        const Bk = Fk.m,
-          Rk = this.normal.x,
-          ak = this.normal.y,
-          Xk = this.normal.z,
-          bk = this.d,
-          wk = Rk * Bk[0] + ak * Bk[1] + Xk * Bk[2] + bk * Bk[3],
-          dk = Rk * Bk[4] + ak * Bk[5] + Xk * Bk[6] + bk * Bk[7],
-          sk = Rk * Bk[8] + ak * Bk[9] + Xk * Bk[10] + bk * Bk[11],
-          Vk = Rk * Bk[12] + ak * Bk[13] + Xk * Bk[14] + bk * Bk[15];
-        return new tk(wk, dk, sk, Vk)
+      transform(bb) {
+        const cb = Wb._TmpMatrix;
+        bb.invertToRef(cb);
+        const sb = cb.m,
+          kb = this.normal.x,
+          ab = this.normal.y,
+          Tb = this.normal.z,
+          Ub = this.d,
+          Ib = kb * sb[0] + ab * sb[1] + Tb * sb[2] + Ub * sb[3],
+          Hb = kb * sb[4] + ab * sb[5] + Tb * sb[6] + Ub * sb[7],
+          fb = kb * sb[8] + ab * sb[9] + Tb * sb[10] + Ub * sb[11],
+          Mb = kb * sb[12] + ab * sb[13] + Tb * sb[14] + Ub * sb[15];
+        return new Wb(Ib, Hb, fb, Mb)
       }
-      dotCoordinate(kk) {
-        return this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z + this.d
+      dotCoordinate(bb) {
+        return this.normal.x * bb.x + this.normal.y * bb.y + this.normal.z * bb.z + this.d
       }
-      copyFromPoints(kk, Fk, Bk) {
-        const Rk = Fk.x - kk.x,
-          tk = Fk.y - kk.y,
-          ak = Fk.z - kk.z,
-          Xk = Bk.x - kk.x,
-          bk = Bk.y - kk.y,
-          wk = Bk.z - kk.z,
-          dk = tk * wk - ak * bk,
-          sk = ak * Xk - Rk * wk,
-          Vk = Rk * bk - tk * Xk,
-          Jk = Math.sqrt(dk * dk + sk * sk + Vk * Vk);
-        let Ak;
-        return Ak = 0 !== Jk ? 1 / Jk : 0, this.normal.x = dk * Ak, this.normal.y = sk * Ak, this.normal.z = Vk * Ak, this.d = -(this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z), this
+      copyFromPoints(bb, cb, sb) {
+        const kb = cb.x - bb.x,
+          Wb = cb.y - bb.y,
+          ab = cb.z - bb.z,
+          Tb = sb.x - bb.x,
+          Ub = sb.y - bb.y,
+          Ib = sb.z - bb.z,
+          Hb = Wb * Ib - ab * Ub,
+          fb = ab * Tb - kb * Ib,
+          Mb = kb * Ub - Wb * Tb,
+          Xb = Math.sqrt(Hb * Hb + fb * fb + Mb * Mb);
+        let nb;
+        return nb = 0 !== Xb ? 1 / Xb : 0, this.normal.x = Hb * nb, this.normal.y = fb * nb, this.normal.z = Mb * nb, this.d = -(this.normal.x * bb.x + this.normal.y * bb.y + this.normal.z * bb.z), this
       }
-      isFrontFacingTo(kk, Fk) {
-        return Rk.s.Dot(this.normal, kk) <= Fk
+      isFrontFacingTo(bb, cb) {
+        return kb.p.Dot(this.normal, bb) <= cb
       }
-      signedDistanceTo(kk) {
-        return Rk.s.Dot(kk, this.normal) + this.d
+      signedDistanceTo(bb) {
+        return kb.p.Dot(bb, this.normal) + this.d
       }
-      static FromArray(kk) {
-        return new tk(kk[0], kk[1], kk[2], kk[3])
+      static FromArray(bb) {
+        return new Wb(bb[0], bb[1], bb[2], bb[3])
       }
-      static FromPoints(kk, Fk, Bk) {
-        const Rk = new tk(0, 0, 0, 0);
-        return Rk.copyFromPoints(kk, Fk, Bk), Rk
+      static FromPoints(bb, cb, sb) {
+        const kb = new Wb(0, 0, 0, 0);
+        return kb.copyFromPoints(bb, cb, sb), kb
       }
-      static FromPositionAndNormal(kk, Fk) {
-        const Bk = new tk(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(kk, Fk, Bk)
+      static FromPositionAndNormal(bb, cb) {
+        const sb = new Wb(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(bb, cb, sb)
       }
-      static FromPositionAndNormalToRef(kk, Fk, Bk) {
-        return Bk.normal.sBk(Fk), Bk.normal.normalize(), Bk.d = -kk.dot(Bk.normal), Bk
+      static FromPositionAndNormalToRef(bb, cb, sb) {
+        return sb.normal.ssb(cb), sb.normal.normalize(), sb.d = -bb.dot(sb.normal), sb
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(kk, Fk, Bk) {
-        const tk = -(Fk.x * kk.x + Fk.y * kk.y + Fk.z * kk.z);
-        return Rk.s.Dot(Bk, Fk) + tk
+      static SignedDistanceToPlaneFromPositionAndNormal(bb, cb, sb) {
+        const Wb = -(cb.x * bb.x + cb.y * bb.y + cb.z * bb.z);
+        return kb.p.Dot(sb, cb) + Wb
       }
     }
-    tk._TmpMatrix = Rk.c.Identity()
+    Wb._TmpMatrix = kb.e.Identity()
   },
-  36754: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      Matrix: () => Rk.c,
-      Quaternion: () => Rk.e,
-      RegisterMathVector: () => Rk.i,
-      TmpVectors: () => Rk.l,
-      Vector2: () => Rk.p,
-      Qe: () => Rk.s,
-      Vector4: () => Rk.v
+  36654: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      Matrix: () => kb.e,
+      Quaternion: () => kb.f,
+      RegisterMathVector: () => kb.j,
+      TmpVectors: () => kb.m,
+      Vector2: () => kb.n,
+      Fm: () => kb.p,
+      Vector4: () => kb.t
     });
-    var Rk = Bk(36758);
-    (0, Rk.i)()
+    var kb = sb(36656);
+    (0, kb.j)()
   },
-  37759: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Rk
+  37700: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => kb
     });
-    class Rk {
-      constructor(kk, Fk, Bk, Rk) {
-        this.x = kk, this.y = Fk, this.width = Bk, this.height = Rk
+    class kb {
+      constructor(bb, cb, sb, kb) {
+        this.x = bb, this.y = cb, this.width = sb, this.height = kb
       }
-      toGlobal(kk, Fk) {
-        return new Rk(this.x * kk, this.y * Fk, this.width * kk, this.height * Fk)
+      toGlobal(bb, cb) {
+        return new kb(this.x * bb, this.y * cb, this.width * bb, this.height * cb)
       }
-      toGlobalToRef(kk, Fk, Bk) {
-        return Bk.x = this.x * kk, Bk.y = this.y * Fk, Bk.width = this.width * kk, Bk.height = this.height * Fk, this
+      toGlobalToRef(bb, cb, sb) {
+        return sb.x = this.x * bb, sb.y = this.y * cb, sb.width = this.width * bb, sb.height = this.height * cb, this
       }
       clone() {
-        return new Rk(this.x, this.y, this.width, this.height)
+        return new kb(this.x, this.y, this.width, this.height)
       }
     }
   },
-  39811: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => dk
+  39830: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Hb
     });
-    var Rk = Bk(36758),
-      tk = Bk(36917),
-      ak = Bk(39817),
-      Xk = Bk(39829),
-      bk = Bk(39847);
+    var kb = sb(36656),
+      Wb = sb(36830),
+      ab = sb(39835),
+      Tb = sb(39848),
+      Ub = sb(39861);
 
-    function wk(kk) {
-      let Fk = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
-      const Bk = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
-        ak = [],
-        wk = kk.width || kk.size || 1,
-        dk = kk.height || kk.size || 1,
-        sk = kk.depth || kk.size || 1,
-        Vk = kk.wrap || !1;
-      let Jk = void 0 === kk.topBaseAt ? 1 : kk.topBaseAt,
-        Ak = void 0 === kk.bottomBaseAt ? 0 : kk.bottomBaseAt;
-      Jk = (Jk + 4) % 4, Ak = (Ak + 4) % 4;
-      let ek = [2, 0, 3, 1][Jk],
-        yk = [2, 0, 1, 3][Ak],
-        fk = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
-      if (Vk) {
-        Fk = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], fk = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
-        let kk = [
+    function Ib(bb) {
+      let cb = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
+      const sb = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
+        ab = [],
+        Ib = bb.width || bb.size || 1,
+        Hb = bb.height || bb.size || 1,
+        fb = bb.depth || bb.size || 1,
+        Mb = bb.wrap || !1;
+      let Xb = void 0 === bb.topBaseAt ? 1 : bb.topBaseAt,
+        nb = void 0 === bb.bottomBaseAt ? 0 : bb.bottomBaseAt;
+      Xb = (Xb + 4) % 4, nb = (nb + 4) % 4;
+      let mb = [2, 0, 3, 1][Xb],
+        lb = [2, 0, 1, 3][nb],
+        Qb = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
+      if (Mb) {
+        cb = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], Qb = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
+        let bb = [
             [1, 1, 1],
             [-1, 1, 1],
             [-1, 1, -1],
             [1, 1, -1]
           ],
-          Bk = [
+          sb = [
             [-1, -1, 1],
             [1, -1, 1],
             [1, -1, -1],
             [-1, -1, -1]
           ];
-        const Rk = [17, 18, 19, 16],
-          tk = [22, 23, 20, 21];
-        for (; ek > 0;) kk.unshift(kk.pop()), Rk.unshift(Rk.pop()), ek--;
-        for (; yk > 0;) Bk.unshift(Bk.pop()), tk.unshift(tk.pop()), yk--;
-        kk = kk.flat(), Bk = Bk.flat(), fk = fk.concat(kk).concat(Bk), Fk.push(Rk[0], Rk[2], Rk[3], Rk[0], Rk[1], Rk[2]), Fk.push(tk[0], tk[2], tk[3], tk[0], tk[1], tk[2])
+        const kb = [17, 18, 19, 16],
+          Wb = [22, 23, 20, 21];
+        for (; mb > 0;) bb.unshift(bb.pop()), kb.unshift(kb.pop()), mb--;
+        for (; lb > 0;) sb.unshift(sb.pop()), Wb.unshift(Wb.pop()), lb--;
+        bb = bb.flat(), sb = sb.flat(), Qb = Qb.concat(bb).concat(sb), cb.push(kb[0], kb[2], kb[3], kb[0], kb[1], kb[2]), cb.push(Wb[0], Wb[2], Wb[3], Wb[0], Wb[1], Wb[2])
       }
-      const mk = [wk / 2, dk / 2, sk / 2],
-        Wk = fk.reduce(((kk, Fk, Bk) => kk.concat(Fk * mk[Bk % 3])), []),
-        vk = 0 === kk.sideOrientation ? 0 : kk.sideOrientation || Xk.e.DEFAULTSIDE,
-        ik = kk.faceUV || new Array(6),
-        Yk = kk.faceColors,
-        Lk = [];
-      for (let Xk = 0; Xk < 6; Xk++) void 0 === ik[Xk] && (ik[Xk] = new Rk.v(0, 0, 1, 1)), Yk && void 0 === Yk[Xk] && (Yk[Xk] = new tk.i(1, 1, 1, 1));
-      for (let Rk = 0; Rk < 6; Rk++)
-        if (ak.push(ik[Rk].z, bk.c ? 1 - ik[Rk].w : ik[Rk].w), ak.push(ik[Rk].x, bk.c ? 1 - ik[Rk].w : ik[Rk].w), ak.push(ik[Rk].x, bk.c ? 1 - ik[Rk].y : ik[Rk].y), ak.push(ik[Rk].z, bk.c ? 1 - ik[Rk].y : ik[Rk].y), Yk)
-          for (let kk = 0; kk < 4; kk++) Lk.push(Yk[Rk].r, Yk[Rk].g, Yk[Rk].b, Yk[Rk].a);
-      Xk.e._ComputeSides(vk, Wk, Fk, Bk, ak, kk.frontUVs, kk.backUVs);
-      const Ok = new Xk.e;
-      if (Ok.indices = Fk, Ok.positions = Wk, Ok.normals = Bk, Ok.uvs = ak, Yk) {
-        const kk = vk === Xk.e.DOUBLESIDE ? Lk.concat(Lk) : Lk;
-        Ok.colors = kk
+      const eb = [Ib / 2, Hb / 2, fb / 2],
+        Cb = Qb.reduce(((bb, cb, sb) => bb.concat(cb * eb[sb % 3])), []),
+        Nb = 0 === bb.sideOrientation ? 0 : bb.sideOrientation || Tb.e.DEFAULTSIDE,
+        Vb = bb.faceUV || new Array(6),
+        Lb = bb.faceColors,
+        ub = [];
+      for (let Tb = 0; Tb < 6; Tb++) void 0 === Vb[Tb] && (Vb[Tb] = new kb.t(0, 0, 1, 1)), Lb && void 0 === Lb[Tb] && (Lb[Tb] = new Wb.g(1, 1, 1, 1));
+      for (let kb = 0; kb < 6; kb++)
+        if (ab.push(Vb[kb].z, Ub.e ? 1 - Vb[kb].w : Vb[kb].w), ab.push(Vb[kb].x, Ub.e ? 1 - Vb[kb].w : Vb[kb].w), ab.push(Vb[kb].x, Ub.e ? 1 - Vb[kb].y : Vb[kb].y), ab.push(Vb[kb].z, Ub.e ? 1 - Vb[kb].y : Vb[kb].y), Lb)
+          for (let bb = 0; bb < 4; bb++) ub.push(Lb[kb].r, Lb[kb].g, Lb[kb].b, Lb[kb].a);
+      Tb.e._ComputeSides(Nb, Cb, cb, sb, ab, bb.frontUVs, bb.backUVs);
+      const Yb = new Tb.e;
+      if (Yb.indices = cb, Yb.positions = Cb, Yb.normals = sb, Yb.uvs = ab, Lb) {
+        const bb = Nb === Tb.e.DOUBLESIDE ? ub.concat(ub) : ub;
+        Yb.colors = bb
       }
-      return Ok
+      return Yb
     }
 
-    function dk(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Rk = new ak.b(kk, Bk);
-      Fk.sideOrientation = ak.b._GetDefaultSideOrientation(Fk.sideOrientation), Rk._originalBuilderSideOrientation = Fk.sideOrientation;
-      return wk(Fk).applyToMesh(Rk, Fk.updatable), Rk
+    function Hb(bb) {
+      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const kb = new ab.b(bb, sb);
+      cb.sideOrientation = ab.b._GetDefaultSideOrientation(cb.sideOrientation), kb._originalBuilderSideOrientation = cb.sideOrientation;
+      return Ib(cb).applyToMesh(kb, cb.updatable), kb
     }
-    let sk = !1;
-    sk || (sk = !0, Xk.e.CreateBox = wk, ak.b.CreateBox = function(kk, Fk) {
-      return dk(kk, {
-        size: Fk,
+    let fb = !1;
+    fb || (fb = !0, Tb.e.CreateBox = Ib, ab.b.CreateBox = function(bb, cb) {
+      return Hb(bb, {
+        size: cb,
         sideOrientation: arguments.length > 4 ? arguments[4] : void 0,
         updatable: arguments.length > 3 ? arguments[3] : void 0
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
     })
   },
-  39865: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Vk
+  39873: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Mb
     });
-    var Rk = Bk(36758),
-      tk = Bk(39817),
-      ak = Bk(39829),
-      Xk = Bk(39870),
-      bk = Bk(39541),
-      wk = Bk(38320);
+    var kb = sb(36656),
+      Wb = sb(39835),
+      ab = sb(39848),
+      Tb = sb(39877),
+      Ub = sb(39576),
+      Ib = sb(38284);
 
-    function dk(kk) {
-      const Fk = [],
-        Bk = [],
-        Rk = kk.lines,
-        tk = kk.colors,
-        Xk = [];
-      let bk = 0;
-      for (let ak = 0; ak < Rk.length; ak++) {
-        const kk = Rk[ak];
-        for (let Rk = 0; Rk < kk.length; Rk++) {
+    function Hb(bb) {
+      const cb = [],
+        sb = [],
+        kb = bb.lines,
+        Wb = bb.colors,
+        Tb = [];
+      let Ub = 0;
+      for (let ab = 0; ab < kb.length; ab++) {
+        const bb = kb[ab];
+        for (let kb = 0; kb < bb.length; kb++) {
           const {
-            x: wk,
-            y: dk,
-            z: sk
-          } = kk[Rk];
-          if (Bk.push(wk, dk, sk), tk) {
-            const kk = tk[ak],
+            x: Ib,
+            y: Hb,
+            z: fb
+          } = bb[kb];
+          if (sb.push(Ib, Hb, fb), Wb) {
+            const bb = Wb[ab],
               {
-                r: Fk,
-                g: Bk,
-                b: bk,
-                a: wk
-              } = kk[Rk];
-            Xk.push(Fk, Bk, bk, wk)
+                r: cb,
+                g: sb,
+                b: Ub,
+                a: Ib
+              } = bb[kb];
+            Tb.push(cb, sb, Ub, Ib)
           }
-          Rk > 0 && (Fk.push(bk - 1), Fk.push(bk)), bk++
+          kb > 0 && (cb.push(Ub - 1), cb.push(Ub)), Ub++
         }
       }
-      const wk = new ak.e;
-      return wk.indices = Fk, wk.positions = Bk, tk && (wk.colors = Xk), wk
+      const Ib = new ab.e;
+      return Ib.indices = cb, Ib.positions = sb, Wb && (Ib.colors = Tb), Ib
     }
 
-    function sk(kk) {
-      const Fk = kk.dashSize || 3,
-        Bk = kk.gapSize || 1,
-        tk = kk.dashNb || 200,
-        Xk = kk.points,
-        bk = [],
-        wk = [],
-        dk = Rk.s.Zero();
-      let sk, Vk, Jk, Ak = 0,
-        ek = 0;
-      for (Jk = 0; Jk < Xk.length - 1; Jk++) Xk[Jk + 1].subtractToRef(Xk[Jk], dk), Ak += dk.length();
-      const yk = Ak / tk,
-        fk = Fk * yk / (Fk + Bk);
-      for (Jk = 0; Jk < Xk.length - 1; Jk++) {
-        Xk[Jk + 1].subtractToRef(Xk[Jk], dk), sk = Math.floor(dk.length() / yk), dk.normalize();
-        for (let kk = 0; kk < sk; kk++) Vk = yk * kk, bk.push(Xk[Jk].x + Vk * dk.x, Xk[Jk].y + Vk * dk.y, Xk[Jk].z + Vk * dk.z), bk.push(Xk[Jk].x + (Vk + fk) * dk.x, Xk[Jk].y + (Vk + fk) * dk.y, Xk[Jk].z + (Vk + fk) * dk.z), wk.push(ek, ek + 1), ek += 2
+    function fb(bb) {
+      const cb = bb.dashSize || 3,
+        sb = bb.gapSize || 1,
+        Wb = bb.dashNb || 200,
+        Tb = bb.points,
+        Ub = [],
+        Ib = [],
+        Hb = kb.p.Zero();
+      let fb, Mb, Xb, nb = 0,
+        mb = 0;
+      for (Xb = 0; Xb < Tb.length - 1; Xb++) Tb[Xb + 1].subtractToRef(Tb[Xb], Hb), nb += Hb.length();
+      const lb = nb / Wb,
+        Qb = cb * lb / (cb + sb);
+      for (Xb = 0; Xb < Tb.length - 1; Xb++) {
+        Tb[Xb + 1].subtractToRef(Tb[Xb], Hb), fb = Math.floor(Hb.length() / lb), Hb.normalize();
+        for (let bb = 0; bb < fb; bb++) Mb = lb * bb, Ub.push(Tb[Xb].x + Mb * Hb.x, Tb[Xb].y + Mb * Hb.y, Tb[Xb].z + Mb * Hb.z), Ub.push(Tb[Xb].x + (Mb + Qb) * Hb.x, Tb[Xb].y + (Mb + Qb) * Hb.y, Tb[Xb].z + (Mb + Qb) * Hb.z), Ib.push(mb, mb + 1), mb += 2
       }
-      const mk = new ak.e;
-      return mk.positions = bk, mk.indices = wk, mk
+      const eb = new ab.e;
+      return eb.positions = Ub, eb.indices = Ib, eb
     }
 
-    function Vk(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Rk = Fk.instance,
-        tk = Fk.lines,
-        ak = Fk.colors;
-      if (Rk) {
-        const kk = Rk.getVerticesData(bk.n.PositionKind);
-        let Fk, Bk;
-        ak && (Fk = Rk.getVerticesData(bk.n.ColorKind));
-        let Xk = 0,
-          wk = 0;
-        for (let Rk = 0; Rk < tk.length; Rk++) {
-          const bk = tk[Rk];
-          for (let tk = 0; tk < bk.length; tk++) kk[Xk] = bk[tk].x, kk[Xk + 1] = bk[tk].y, kk[Xk + 2] = bk[tk].z, ak && Fk && (Bk = ak[Rk], Fk[wk] = Bk[tk].r, Fk[wk + 1] = Bk[tk].g, Fk[wk + 2] = Bk[tk].b, Fk[wk + 3] = Bk[tk].a, wk += 4), Xk += 3
+    function Mb(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const kb = cb.instance,
+        Wb = cb.lines,
+        ab = cb.colors;
+      if (kb) {
+        const bb = kb.getVerticesData(Ub.l.PositionKind);
+        let cb, sb;
+        ab && (cb = kb.getVerticesData(Ub.l.ColorKind));
+        let Tb = 0,
+          Ib = 0;
+        for (let kb = 0; kb < Wb.length; kb++) {
+          const Ub = Wb[kb];
+          for (let Wb = 0; Wb < Ub.length; Wb++) bb[Tb] = Ub[Wb].x, bb[Tb + 1] = Ub[Wb].y, bb[Tb + 2] = Ub[Wb].z, ab && cb && (sb = ab[kb], cb[Ib] = sb[Wb].r, cb[Ib + 1] = sb[Wb].g, cb[Ib + 2] = sb[Wb].b, cb[Ib + 3] = sb[Wb].a, Ib += 4), Tb += 3
         }
-        return Rk.updateVerticesData(bk.n.PositionKind, kk, !1, !1), ak && Fk && Rk.updateVerticesData(bk.n.ColorKind, Fk, !1, !1), Rk.refreshBoundingInfo(), Rk
+        return kb.updateVerticesData(Ub.l.PositionKind, bb, !1, !1), ab && cb && kb.updateVerticesData(Ub.l.ColorKind, cb, !1, !1), kb.refreshBoundingInfo(), kb
       }
-      const wk = !!ak,
-        sk = new Xk.e(kk, Bk, null, void 0, void 0, wk, Fk.useVertexAlpha, Fk.material);
-      return dk(Fk).applyToMesh(sk, Fk.updatable), sk
+      const Ib = !!ab,
+        fb = new Tb.c(bb, sb, null, void 0, void 0, Ib, cb.useVertexAlpha, cb.material);
+      return Hb(cb).applyToMesh(fb, cb.updatable), fb
     }
 
-    function Jk(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Rk = Fk.colors ? [Fk.colors] : null;
-      return Vk(kk, {
-        lines: [Fk.points],
-        updatable: Fk.updatable,
-        instance: Fk.instance,
-        colors: Rk,
-        useVertexAlpha: Fk.useVertexAlpha,
-        material: Fk.material
-      }, Bk)
+    function Xb(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const kb = cb.colors ? [cb.colors] : null;
+      return Mb(bb, {
+        lines: [cb.points],
+        updatable: cb.updatable,
+        instance: cb.instance,
+        colors: kb,
+        useVertexAlpha: cb.useVertexAlpha,
+        material: cb.material
+      }, sb)
     }
 
-    function Ak(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const ak = Fk.points,
-        bk = Fk.instance,
-        dk = Fk.gapSize || 1,
-        Vk = Fk.dashSize || 3;
-      if (bk) {
-        const kk = kk => {
-          const Fk = Rk.s.Zero(),
-            Bk = kk.length / 6;
-          let tk, Xk, wk, dk, sk = 0,
-            Vk = 0;
-          for (wk = 0; wk < ak.length - 1; wk++) ak[wk + 1].subtractToRef(ak[wk], Fk), sk += Fk.length();
-          const Jk = sk / Bk,
-            Ak = bk._creationDataStorage.dashSize,
-            ek = Ak * Jk / (Ak + bk._creationDataStorage.gapSize);
-          for (wk = 0; wk < ak.length - 1; wk++)
-            for (ak[wk + 1].subtractToRef(ak[wk], Fk), tk = Math.floor(Fk.length() / Jk), Fk.normalize(), dk = 0; dk < tk && Vk < kk.length;) Xk = Jk * dk, kk[Vk] = ak[wk].x + Xk * Fk.x, kk[Vk + 1] = ak[wk].y + Xk * Fk.y, kk[Vk + 2] = ak[wk].z + Xk * Fk.z, kk[Vk + 3] = ak[wk].x + (Xk + ek) * Fk.x, kk[Vk + 4] = ak[wk].y + (Xk + ek) * Fk.y, kk[Vk + 5] = ak[wk].z + (Xk + ek) * Fk.z, Vk += 6, dk++;
-          for (; Vk < kk.length;) kk[Vk] = ak[wk].x, kk[Vk + 1] = ak[wk].y, kk[Vk + 2] = ak[wk].z, Vk += 3
+    function nb(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const ab = cb.points,
+        Ub = cb.instance,
+        Hb = cb.gapSize || 1,
+        Mb = cb.dashSize || 3;
+      if (Ub) {
+        const bb = bb => {
+          const cb = kb.p.Zero(),
+            sb = bb.length / 6;
+          let Wb, Tb, Ib, Hb, fb = 0,
+            Mb = 0;
+          for (Ib = 0; Ib < ab.length - 1; Ib++) ab[Ib + 1].subtractToRef(ab[Ib], cb), fb += cb.length();
+          const Xb = fb / sb,
+            nb = Ub._creationDataStorage.dashSize,
+            mb = nb * Xb / (nb + Ub._creationDataStorage.gapSize);
+          for (Ib = 0; Ib < ab.length - 1; Ib++)
+            for (ab[Ib + 1].subtractToRef(ab[Ib], cb), Wb = Math.floor(cb.length() / Xb), cb.normalize(), Hb = 0; Hb < Wb && Mb < bb.length;) Tb = Xb * Hb, bb[Mb] = ab[Ib].x + Tb * cb.x, bb[Mb + 1] = ab[Ib].y + Tb * cb.y, bb[Mb + 2] = ab[Ib].z + Tb * cb.z, bb[Mb + 3] = ab[Ib].x + (Tb + mb) * cb.x, bb[Mb + 4] = ab[Ib].y + (Tb + mb) * cb.y, bb[Mb + 5] = ab[Ib].z + (Tb + mb) * cb.z, Mb += 6, Hb++;
+          for (; Mb < bb.length;) bb[Mb] = ab[Ib].x, bb[Mb + 1] = ab[Ib].y, bb[Mb + 2] = ab[Ib].z, Mb += 3
         };
-        return (Fk.dashNb || Fk.dashSize || Fk.gapSize || Fk.useVertexAlpha || Fk.material) && wk.b.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), bk.updateMeshPositions(kk, !1), bk
+        return (cb.dashNb || cb.dashSize || cb.gapSize || cb.useVertexAlpha || cb.material) && Ib.c.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), Ub.updateMeshPositions(bb, !1), Ub
       }
-      const Jk = new Xk.e(kk, Bk, null, void 0, void 0, void 0, Fk.useVertexAlpha, Fk.material);
-      return sk(Fk).applyToMesh(Jk, Fk.updatable), Jk._creationDataStorage = new tk.e, Jk._creationDataStorage.dashSize = Vk, Jk._creationDataStorage.gapSize = dk, Jk
+      const Xb = new Tb.c(bb, sb, null, void 0, void 0, void 0, cb.useVertexAlpha, cb.material);
+      return fb(cb).applyToMesh(Xb, cb.updatable), Xb._creationDataStorage = new Wb.h, Xb._creationDataStorage.dashSize = Mb, Xb._creationDataStorage.gapSize = Hb, Xb
     }
-    let ek = !1;
-    ek || (ek = !0, ak.e.CreateLineSystem = dk, ak.e.CreateDashedLines = sk, tk.b.CreateLines = function(kk, Fk) {
-      return Jk(kk, {
-        points: Fk,
+    let mb = !1;
+    mb || (mb = !0, ab.e.CreateLineSystem = Hb, ab.e.CreateDashedLines = fb, Wb.b.CreateLines = function(bb, cb) {
+      return Xb(bb, {
+        points: cb,
         updatable: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         instance: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
-    }, tk.b.CreateDashedLines = function(kk, Fk, Bk, Rk, tk) {
-      return Ak(kk, {
-        points: Fk,
-        dashSize: Bk,
-        gapSize: Rk,
-        dashNb: tk,
+    }, Wb.b.CreateDashedLines = function(bb, cb, sb, kb, Wb) {
+      return nb(bb, {
+        points: cb,
+        dashSize: sb,
+        gapSize: kb,
+        dashNb: Wb,
         updatable: arguments.length > 6 ? arguments[6] : void 0,
         instance: arguments.length > 7 ? arguments[7] : void 0
       }, arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null)
     })
   },
-  39870: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Jk,
-      f: () => yk
+  39877: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Xb,
+      f: () => lb
     });
-    var Rk, tk, ak = Bk(36917),
-      Xk = Bk(39541),
-      bk = Bk(39817),
-      wk = Bk(39879),
-      dk = Bk(39695),
-      sk = Bk(39887),
-      Vk = Bk(39296);
-    class Jk extends bk.b {
-      _isShaderMaterial(kk) {
-        return !!kk && "ShaderMaterial" === kk.getClassName()
+    var kb, Wb, ab = sb(36830),
+      Tb = sb(39576),
+      Ub = sb(39835),
+      Ib = sb(39884),
+      Hb = sb(39730),
+      fb = sb(39889),
+      Mb = sb(39296);
+    class Xb extends Ub.b {
+      _isShaderMaterial(bb) {
+        return !!bb && "ShaderMaterial" === bb.getClassName()
       }
-      constructor(kk) {
-        let Fk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          Rk = arguments.length > 5 ? arguments[5] : void 0,
-          tk = arguments.length > 6 ? arguments[6] : void 0,
-          bk = arguments.length > 7 ? arguments[7] : void 0;
-        super(kk, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, Fk, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = Rk, this.useVertexAlpha = tk, this.color = new ak.e(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, Fk && (this.color = Fk.color.clone(), this.alpha = Fk.alpha, this.useVertexColor = Fk.useVertexColor, this.useVertexAlpha = Fk.useVertexAlpha), this.intersectionThreshold = .1;
-        const wk = {
-          attributes: [Xk.n.PositionKind],
+      constructor(bb) {
+        let cb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          kb = arguments.length > 5 ? arguments[5] : void 0,
+          Wb = arguments.length > 6 ? arguments[6] : void 0,
+          Ub = arguments.length > 7 ? arguments[7] : void 0;
+        super(bb, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, cb, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = kb, this.useVertexAlpha = Wb, this.color = new ab.e(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, cb && (this.color = cb.color.clone(), this.alpha = cb.alpha, this.useVertexColor = cb.useVertexColor, this.useVertexAlpha = cb.useVertexAlpha), this.intersectionThreshold = .1;
+        const Ib = {
+          attributes: [Tb.l.PositionKind],
           uniforms: ["world", "viewProjection"],
           needAlphaBlending: !0,
           defines: [],
           useClipPlane: null,
           shaderLanguage: 0
         };
-        if (this.useVertexAlpha ? wk.defines.push("#define VERTEXALPHA") : wk.needAlphaBlending = !1, this.useVertexColor ? (wk.defines.push("#define VERTEXCOLOR"), wk.attributes.push(Xk.n.ColorKind)) : (wk.uniforms.push("color"), this._color4 = new ak.i), bk) this.material = bk;
+        if (this.useVertexAlpha ? Ib.defines.push("#define VERTEXALPHA") : Ib.needAlphaBlending = !1, this.useVertexColor ? (Ib.defines.push("#define VERTEXCOLOR"), Ib.attributes.push(Tb.l.ColorKind)) : (Ib.uniforms.push("color"), this._color4 = new ab.g), Ub) this.material = Ub;
         else {
-          this.XN().ne().isWebGPU && !Jk.ForceGLSL && (this._shaderLanguage = 1), wk.shaderLanguage = this._shaderLanguage, wk.extraInitializationsAsync = async () => {
-            1 === this._shaderLanguage ? await Promise.all([Bk.e(334).then((() => Bk(41975))), Bk.e(340).then((() => Bk(41977)))]) : await Promise.all([Bk.e(316).then((() => Bk(41980))), Bk.e(322).then((() => Bk(41983)))])
+          this.EY().Sm().isWebGPU && !Xb.ForceGLSL && (this._shaderLanguage = 1), Ib.shaderLanguage = this._shaderLanguage, Ib.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([sb.e(334).then((() => sb(41916))), sb.e(340).then((() => sb(41922)))]) : await Promise.all([sb.e(316).then((() => sb(41925))), sb.e(322).then((() => sb(41928)))])
           };
-          const kk = new sk.n("colorShader", this.XN(), "color", wk, !1);
-          kk.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(kk)
+          const bb = new fb.q("colorShader", this.EY(), "color", Ib, !1);
+          bb.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(bb)
         }
       }
       getClassName() {
@@ -630,193 +630,193 @@ export const modules = {
       get material() {
         return this._internalAbstractMeshDataInfo._material
       }
-      set material(kk) {
-        const Fk = this.material;
-        if (Fk === kk) return;
-        const Bk = Fk && this._ownsMaterial;
-        this._ownsMaterial = !1, this._setInternalMaterial(kk), Bk && Fk?.dispose()
+      set material(bb) {
+        const cb = this.material;
+        if (cb === bb) return;
+        const sb = cb && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(bb), sb && cb?.dispose()
       }
-      _setInternalMaterial(kk) {
-        this._setMaterial(kk), this.material && (this.material.fillMode = dk.c.LineListDrawMode, this.material.disableLighting = !0)
+      _setInternalMaterial(bb) {
+        this._setMaterial(bb), this.material && (this.material.fillMode = Hb.e.LineListDrawMode, this.material.disableLighting = !0)
       }
       get checkCollisions() {
         return !1
       }
-      set checkCollisions(kk) {}
-      _bind(kk, Fk) {
+      set checkCollisions(bb) {}
+      _bind(bb, cb) {
         if (!this._geometry) return this;
-        const Bk = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
-        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(Fk, Bk) : this._geometry._bind(Fk, Bk, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+        const sb = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(cb, sb) : this._geometry._bind(cb, sb, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
           const {
-            r: kk,
-            g: Fk,
-            b: Bk
+            r: bb,
+            g: cb,
+            b: sb
           } = this.color;
-          this._color4.set(kk, Fk, Bk, this.alpha), this.material.setColor4("color", this._color4)
+          this._color4.set(bb, cb, sb, this.alpha), this.material.setColor4("color", this._color4)
         }
         return this
       }
-      _draw(kk, Fk, Bk) {
+      _draw(bb, cb, sb) {
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        const Rk = this.XN().ne();
-        return this._unIndexed ? Rk.drawArraysType(dk.c.LineListDrawMode, kk.verticesStart, kk.verticesCount, Bk) : Rk.drawElementsType(dk.c.LineListDrawMode, kk.indexStart, kk.indexCount, Bk), this
+        const kb = this.EY().Sm();
+        return this._unIndexed ? kb.drawArraysType(Hb.e.LineListDrawMode, bb.verticesStart, bb.verticesCount, sb) : kb.drawElementsType(Hb.e.LineListDrawMode, bb.indexStart, bb.indexCount, sb), this
       }
-      dispose(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || Fk) && this.material?.dispose(!1, !1, !0), super.dispose(kk)
+      dispose(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || cb) && this.material?.dispose(!1, !1, !0), super.dispose(bb)
       }
-      clone(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          Bk = arguments.length > 2 ? arguments[2] : void 0;
-        if (Fk && void 0 === Fk._addToSceneRootNodes) {
-          const Bk = Fk;
-          return Bk.source = this, new Jk(kk, this.XN(), Bk.parent, Bk.source, Bk.doNotCloneChildren)
+      clone(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          sb = arguments.length > 2 ? arguments[2] : void 0;
+        if (cb && void 0 === cb._addToSceneRootNodes) {
+          const sb = cb;
+          return sb.source = this, new Xb(bb, this.EY(), sb.parent, sb.source, sb.doNotCloneChildren)
         }
-        return new Jk(kk, this.XN(), Fk, this, Bk)
+        return new Xb(bb, this.EY(), cb, this, sb)
       }
-      createInstance(kk) {
-        const Fk = new Ak(kk, this);
-        if (this.gH) {
-          Fk.gH = {};
-          for (const kk in this.gH) Fk.gH[kk] = this.gH[kk]
+      createInstance(bb) {
+        const cb = new nb(bb, this);
+        if (this.LJ) {
+          cb.LJ = {};
+          for (const bb in this.LJ) cb.LJ[bb] = this.LJ[bb]
         }
-        return Fk
+        return cb
       }
-      serialize(kk) {
-        super.serialize(kk), kk.color = this.color.PBk(), kk.alpha = this.alpha
+      serialize(bb) {
+        super.serialize(bb), bb.color = this.color.Osb(), bb.alpha = this.alpha
       }
-      static Parse(kk, Fk) {
-        const Bk = new Jk(kk.name, Fk);
-        return Bk.color = ak.e.FromArray(kk.color), Bk.alpha = kk.alpha, Bk
+      static Parse(bb, cb) {
+        const sb = new Xb(bb.name, cb);
+        return sb.color = ab.e.FromArray(bb.color), sb.alpha = bb.alpha, sb
       }
     }
-    Jk.ForceGLSL = !1;
-    class Ak extends wk.b {
-      constructor(kk, Fk) {
-        super(kk, Fk), this.intersectionThreshold = Fk.intersectionThreshold
+    Xb.ForceGLSL = !1;
+    class nb extends Ib.e {
+      constructor(bb, cb) {
+        super(bb, cb), this.intersectionThreshold = cb.intersectionThreshold
       }
       getClassName() {
         return "InstancedLinesMesh"
       }
     }
-    let ek = !1;
+    let mb = !1;
 
-    function yk() {
-      ek || (ek = !0, bk.b._LinesMeshParser = (kk, Fk) => Jk.Parse(kk, Fk))
-    }(Rk = Jk.prototype).enableEdgesRendering ?? (Rk.enableEdgesRendering = (0, Vk.g)("LinesMesh", "enableEdgesRendering")), (tk = Ak.prototype).enableEdgesRendering ?? (tk.enableEdgesRendering = (0, Vk.g)("InstancedLinesMesh", "enableEdgesRendering"))
+    function lb() {
+      mb || (mb = !0, Ub.b._LinesMeshParser = (bb, cb) => Xb.Parse(bb, cb))
+    }(kb = Xb.prototype).enableEdgesRendering ?? (kb.enableEdgesRendering = (0, Mb.e)("LinesMesh", "enableEdgesRendering")), (Wb = nb.prototype).enableEdgesRendering ?? (Wb.enableEdgesRendering = (0, Mb.e)("InstancedLinesMesh", "enableEdgesRendering"))
   },
-  38318: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => ak
+  38279: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => ab
     });
-    var Rk = Bk(38320);
-    const tk = (kk, Fk, Bk) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : Bk && "object" === typeof kk ? {
-      ...kk
-    } : null : kk.clone(Fk) : null;
-    class ak {
-      static DeepCopy(kk, Fk, Bk, ak) {
-        let Xk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const bk = function(kk) {
-          const Fk = [];
+    var kb = sb(38284);
+    const Wb = (bb, cb, sb) => bb ? bb.getClassName && "Mesh" === bb.getClassName() ? null : !bb.getClassName || "SubMesh" !== bb.getClassName() && "PhysicsBody" !== bb.getClassName() ? bb.clone ? bb.clone() : Array.isArray(bb) ? bb.slice() : sb && "object" === typeof bb ? {
+      ...bb
+    } : null : bb.clone(cb) : null;
+    class ab {
+      static DeepCopy(bb, cb, sb, ab) {
+        let Tb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const Ub = function(bb) {
+          const cb = [];
           do {
-            const Bk = Object.getOwnPropertyNames(kk);
-            for (const kk of Bk) - 1 === Fk.indexOf(kk) && Fk.push(kk)
-          } while (kk = Object.getPrototypeOf(kk));
-          return Fk
-        }(kk);
-        for (const dk of bk) {
-          if ("_" === dk[0] && (!ak || -1 === ak.indexOf(dk))) continue;
-          if (dk.endsWith("Observable")) continue;
-          if (Bk && -1 !== Bk.indexOf(dk)) continue;
-          const bk = kk[dk],
-            sk = typeof bk;
-          if ("function" !== sk) try {
-            if ("object" === sk)
-              if (bk instanceof Uint8Array) Fk[dk] = Uint8Array.from(bk);
-              else if (bk instanceof Array) {
-              if (Fk[dk] = [], bk.length > 0)
-                if ("object" == typeof bk[0])
-                  for (let kk = 0; kk < bk.length; kk++) {
-                    const Bk = tk(bk[kk], Fk, Xk); - 1 === Fk[dk].indexOf(Bk) && Fk[dk].push(Bk)
-                  } else Fk[dk] = bk.slice(0)
-            } else Fk[dk] = tk(bk, Fk, Xk);
-            else Fk[dk] = bk
-          } catch (wk) {
-            Rk.b.Warn(wk.message)
+            const sb = Object.getOwnPropertyNames(bb);
+            for (const bb of sb) - 1 === cb.indexOf(bb) && cb.push(bb)
+          } while (bb = Object.getPrototypeOf(bb));
+          return cb
+        }(bb);
+        for (const Hb of Ub) {
+          if ("_" === Hb[0] && (!ab || -1 === ab.indexOf(Hb))) continue;
+          if (Hb.endsWith("Observable")) continue;
+          if (sb && -1 !== sb.indexOf(Hb)) continue;
+          const Ub = bb[Hb],
+            fb = typeof Ub;
+          if ("function" !== fb) try {
+            if ("object" === fb)
+              if (Ub instanceof Uint8Array) cb[Hb] = Uint8Array.from(Ub);
+              else if (Ub instanceof Array) {
+              if (cb[Hb] = [], Ub.length > 0)
+                if ("object" == typeof Ub[0])
+                  for (let bb = 0; bb < Ub.length; bb++) {
+                    const sb = Wb(Ub[bb], cb, Tb); - 1 === cb[Hb].indexOf(sb) && cb[Hb].push(sb)
+                  } else cb[Hb] = Ub.slice(0)
+            } else cb[Hb] = Wb(Ub, cb, Tb);
+            else cb[Hb] = Ub
+          } catch (Ib) {
+            kb.c.Warn(Ib.message)
           }
         }
       }
     }
   },
-  37578: (kk, Fk, Bk) => {
-    function Rk() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (kk => {
-        const Fk = 16 * Math.random() | 0;
-        return ("x" === kk ? Fk : 3 & Fk | 8).toString(16)
+  37501: (bb, cb, sb) => {
+    function kb() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (bb => {
+        const cb = 16 * Math.random() | 0;
+        return ("x" === bb ? cb : 3 & cb | 8).toString(16)
       }))
     }
-    Bk.d(Fk, {
-      e: () => Rk
+    sb.d(cb, {
+      b: () => kb
     })
   },
-  38320: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => Rk
+  38284: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => kb
     });
-    class Rk {
-      static _CheckLimit(kk, Fk) {
-        let Bk = Rk._LogLimitOutputs[kk];
-        return Bk ? Bk.current++ : (Bk = {
-          limit: Fk,
+    class kb {
+      static _CheckLimit(bb, cb) {
+        let sb = kb._LogLimitOutputs[bb];
+        return sb ? sb.current++ : (sb = {
+          limit: cb,
           current: 1
-        }, Rk._LogLimitOutputs[kk] = Bk), Bk.current <= Bk.limit
+        }, kb._LogLimitOutputs[bb] = sb), sb.current <= sb.limit
       }
-      static _GenerateLimitMessage(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const Bk = Rk._LogLimitOutputs[kk];
-        if (!Bk || !Rk.MessageLimitReached) return;
-        const tk = this._Levels[Fk];
-        Bk.current === Bk.limit && Rk[tk.name](Rk.MessageLimitReached.replace(/%LIMIT%/g, "" + Bk.limit).replace(/%TYPE%/g, tk.name ?? ""))
+      static _GenerateLimitMessage(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const sb = kb._LogLimitOutputs[bb];
+        if (!sb || !kb.MessageLimitReached) return;
+        const Wb = this._Levels[cb];
+        sb.current === sb.limit && kb[Wb.name](kb.MessageLimitReached.replace(/%LIMIT%/g, "" + sb.limit).replace(/%TYPE%/g, Wb.name ?? ""))
       }
-      static _AddLogEntry(kk) {
-        Rk._LogCache = kk + Rk._LogCache, Rk.OnNewCacheEntry && Rk.OnNewCacheEntry(kk)
+      static _AddLogEntry(bb) {
+        kb._LogCache = bb + kb._LogCache, kb.OnNewCacheEntry && kb.OnNewCacheEntry(bb)
       }
-      static _FormatMessage(kk) {
-        const Fk = kk => kk < 10 ? "0" + kk : "" + kk,
-          Bk = new Date;
-        return "[" + Fk(Bk.getHours()) + ":" + Fk(Bk.getMinutes()) + ":" + Fk(Bk.getSeconds()) + "]: " + kk
+      static _FormatMessage(bb) {
+        const cb = bb => bb < 10 ? "0" + bb : "" + bb,
+          sb = new Date;
+        return "[" + cb(sb.getHours()) + ":" + cb(sb.getMinutes()) + ":" + cb(sb.getSeconds()) + "]: " + bb
       }
-      static _LogDisabled(kk, Fk) {}
+      static _LogDisabled(bb, cb) {}
       static _LogEnabled() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Fk = arguments.length > 1 ? arguments[1] : void 0,
-          Bk = arguments.length > 2 ? arguments[2] : void 0;
-        const tk = Array.isArray(Fk) ? Fk[0] : Fk;
-        if (void 0 !== Bk && !Rk._CheckLimit(tk, Bk)) return;
-        const ak = Rk._FormatMessage(tk),
-          Xk = this._Levels[kk],
-          bk = Array.isArray(Fk) ? Fk.slice(1) : [];
-        Xk.logFunc && Xk.logFunc("BJS - " + ak, ...bk);
-        const wk = `<div style='color:${Xk.color}'>${ak}</div><br>`;
-        Rk._AddLogEntry(wk), Rk._GenerateLimitMessage(tk, kk)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          cb = arguments.length > 1 ? arguments[1] : void 0,
+          sb = arguments.length > 2 ? arguments[2] : void 0;
+        const Wb = Array.isArray(cb) ? cb[0] : cb;
+        if (void 0 !== sb && !kb._CheckLimit(Wb, sb)) return;
+        const ab = kb._FormatMessage(Wb),
+          Tb = this._Levels[bb],
+          Ub = Array.isArray(cb) ? cb.slice(1) : [];
+        Tb.logFunc && Tb.logFunc("BJS - " + ab, ...Ub);
+        const Ib = `<div style='color:${Tb.color}'>${ab}</div><br>`;
+        kb._AddLogEntry(Ib), kb._GenerateLimitMessage(Wb, bb)
       }
       static get LogCache() {
-        return Rk._LogCache
+        return kb._LogCache
       }
       static ClearLogCache() {
-        Rk._LogCache = "", Rk._LogLimitOutputs = {}, Rk.errorsCount = 0
+        kb._LogCache = "", kb._LogLimitOutputs = {}, kb.errorsCount = 0
       }
-      static set LogLevels(kk) {
-        Rk.Log = Rk._LogDisabled, Rk.Warn = Rk._LogDisabled, Rk.Error = Rk._LogDisabled;
-        const Fk = [Rk.MessageLogLevel, Rk.WarningLogLevel, Rk.ErrorLogLevel];
-        for (const Bk of Fk)
-          if ((kk & Bk) === Bk) {
-            const kk = this._Levels[Bk];
-            Rk[kk.name] = Rk._LogEnabled.bind(Rk, Bk)
+      static set LogLevels(bb) {
+        kb.Log = kb._LogDisabled, kb.Warn = kb._LogDisabled, kb.Error = kb._LogDisabled;
+        const cb = [kb.MessageLogLevel, kb.WarningLogLevel, kb.ErrorLogLevel];
+        for (const sb of cb)
+          if ((bb & sb) === sb) {
+            const bb = this._Levels[sb];
+            kb[bb.name] = kb._LogEnabled.bind(kb, sb)
           }
       }
     }
-    Rk.NoneLogLevel = 0, Rk.MessageLogLevel = 1, Rk.WarningLogLevel = 2, Rk.ErrorLogLevel = 4, Rk.AllLogLevel = 7, Rk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Rk._LogCache = "", Rk._LogLimitOutputs = {}, Rk._Levels = [{}, {
+    kb.NoneLogLevel = 0, kb.MessageLogLevel = 1, kb.WarningLogLevel = 2, kb.ErrorLogLevel = 4, kb.AllLogLevel = 7, kb.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", kb._LogCache = "", kb._LogLimitOutputs = {}, kb._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -828,15 +828,15 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Rk.errorsCount = 0, Rk.Log = Rk._LogEnabled.bind(Rk, Rk.MessageLogLevel), Rk.Warn = Rk._LogEnabled.bind(Rk, Rk.WarningLogLevel), Rk.Error = Rk._LogEnabled.bind(Rk, Rk.ErrorLogLevel)
+    }], kb.errorsCount = 0, kb.Log = kb._LogEnabled.bind(kb, kb.MessageLogLevel), kb.Warn = kb._LogEnabled.bind(kb, kb.WarningLogLevel), kb.Error = kb._LogEnabled.bind(kb, kb.ErrorLogLevel)
   },
-  39486: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Rk.c
+  39522: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => kb.c
     });
-    var Rk = Bk(39489);
-    (0, Rk.b)()
+    var kb = sb(39524);
+    (0, kb.b)()
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,260 +1,260 @@
 export const id = 233;
 export const ids = [232, 233];
 export const modules = {
-  60917: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      RegisterShaderMaterial: () => Rk.b,
-      ShaderMaterial: () => Rk.n,
-      ShaderMaterialCreateFromSnippetAsync: () => Rk.c,
-      ShaderMaterialParse: () => Rk.k,
-      ShaderMaterialParseFromFileAsync: () => Rk.f,
-      ShaderMaterialParseFromSnippetAsync: () => Rk.h
+  60571: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      RegisterShaderMaterial: () => kb.d,
+      ShaderMaterial: () => kb.q,
+      ShaderMaterialCreateFromSnippetAsync: () => kb.g,
+      ShaderMaterialParse: () => kb.m,
+      ShaderMaterialParseFromFileAsync: () => kb.i,
+      ShaderMaterialParseFromSnippetAsync: () => kb.k
     });
-    var Rk = Bk(39887);
-    (0, Rk.b)()
+    var kb = sb(39889);
+    (0, kb.d)()
   },
-  37459: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => tk
+  37365: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Wb
     });
-    var Rk = Bk(37467);
-    class tk {
-      static GetPlanes(kk) {
-        const Fk = [];
-        for (let Bk = 0; Bk < 6; Bk++) Fk.push(new Rk.c(0, 0, 0, 0));
-        return tk.GetPlanesToRef(kk, Fk), Fk
+    var kb = sb(37368);
+    class Wb {
+      static GetPlanes(bb) {
+        const cb = [];
+        for (let sb = 0; sb < 6; sb++) cb.push(new kb.c(0, 0, 0, 0));
+        return Wb.GetPlanesToRef(bb, cb), cb
       }
-      static GetNearPlaneToRef(kk, Fk) {
-        const Bk = kk.m;
-        Fk.normal.x = Bk[3] + Bk[2], Fk.normal.y = Bk[7] + Bk[6], Fk.normal.z = Bk[11] + Bk[10], Fk.d = Bk[15] + Bk[14], Fk.normalize()
+      static GetNearPlaneToRef(bb, cb) {
+        const sb = bb.m;
+        cb.normal.x = sb[3] + sb[2], cb.normal.y = sb[7] + sb[6], cb.normal.z = sb[11] + sb[10], cb.d = sb[15] + sb[14], cb.normalize()
       }
-      static GetFarPlaneToRef(kk, Fk) {
-        const Bk = kk.m;
-        Fk.normal.x = Bk[3] - Bk[2], Fk.normal.y = Bk[7] - Bk[6], Fk.normal.z = Bk[11] - Bk[10], Fk.d = Bk[15] - Bk[14], Fk.normalize()
+      static GetFarPlaneToRef(bb, cb) {
+        const sb = bb.m;
+        cb.normal.x = sb[3] - sb[2], cb.normal.y = sb[7] - sb[6], cb.normal.z = sb[11] - sb[10], cb.d = sb[15] - sb[14], cb.normalize()
       }
-      static GetLeftPlaneToRef(kk, Fk) {
-        const Bk = kk.m;
-        Fk.normal.x = Bk[3] + Bk[0], Fk.normal.y = Bk[7] + Bk[4], Fk.normal.z = Bk[11] + Bk[8], Fk.d = Bk[15] + Bk[12], Fk.normalize()
+      static GetLeftPlaneToRef(bb, cb) {
+        const sb = bb.m;
+        cb.normal.x = sb[3] + sb[0], cb.normal.y = sb[7] + sb[4], cb.normal.z = sb[11] + sb[8], cb.d = sb[15] + sb[12], cb.normalize()
       }
-      static GetRightPlaneToRef(kk, Fk) {
-        const Bk = kk.m;
-        Fk.normal.x = Bk[3] - Bk[0], Fk.normal.y = Bk[7] - Bk[4], Fk.normal.z = Bk[11] - Bk[8], Fk.d = Bk[15] - Bk[12], Fk.normalize()
+      static GetRightPlaneToRef(bb, cb) {
+        const sb = bb.m;
+        cb.normal.x = sb[3] - sb[0], cb.normal.y = sb[7] - sb[4], cb.normal.z = sb[11] - sb[8], cb.d = sb[15] - sb[12], cb.normalize()
       }
-      static GetTopPlaneToRef(kk, Fk) {
-        const Bk = kk.m;
-        Fk.normal.x = Bk[3] - Bk[1], Fk.normal.y = Bk[7] - Bk[5], Fk.normal.z = Bk[11] - Bk[9], Fk.d = Bk[15] - Bk[13], Fk.normalize()
+      static GetTopPlaneToRef(bb, cb) {
+        const sb = bb.m;
+        cb.normal.x = sb[3] - sb[1], cb.normal.y = sb[7] - sb[5], cb.normal.z = sb[11] - sb[9], cb.d = sb[15] - sb[13], cb.normalize()
       }
-      static GetBottomPlaneToRef(kk, Fk) {
-        const Bk = kk.m;
-        Fk.normal.x = Bk[3] + Bk[1], Fk.normal.y = Bk[7] + Bk[5], Fk.normal.z = Bk[11] + Bk[9], Fk.d = Bk[15] + Bk[13], Fk.normalize()
+      static GetBottomPlaneToRef(bb, cb) {
+        const sb = bb.m;
+        cb.normal.x = sb[3] + sb[1], cb.normal.y = sb[7] + sb[5], cb.normal.z = sb[11] + sb[9], cb.d = sb[15] + sb[13], cb.normalize()
       }
-      static GetPlanesToRef(kk, Fk) {
-        tk.GetNearPlaneToRef(kk, Fk[0]), tk.GetFarPlaneToRef(kk, Fk[1]), tk.GetLeftPlaneToRef(kk, Fk[2]), tk.GetRightPlaneToRef(kk, Fk[3]), tk.GetTopPlaneToRef(kk, Fk[4]), tk.GetBottomPlaneToRef(kk, Fk[5])
+      static GetPlanesToRef(bb, cb) {
+        Wb.GetNearPlaneToRef(bb, cb[0]), Wb.GetFarPlaneToRef(bb, cb[1]), Wb.GetLeftPlaneToRef(bb, cb[2]), Wb.GetRightPlaneToRef(bb, cb[3]), Wb.GetTopPlaneToRef(bb, cb[4]), Wb.GetBottomPlaneToRef(bb, cb[5])
       }
-      static IsPointInFrustum(kk, Fk) {
-        for (let Bk = 0; Bk < 6; Bk++)
-          if (Fk[Bk].dotCoordinate(kk) < 0) return !1;
+      static IsPointInFrustum(bb, cb) {
+        for (let sb = 0; sb < 6; sb++)
+          if (cb[sb].dotCoordinate(bb) < 0) return !1;
         return !0
       }
     }
   },
-  37467: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => tk
+  37368: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Wb
     });
-    var Rk = Bk(36758);
-    class tk {
-      constructor(kk, Fk, Bk, tk) {
-        this.normal = new Rk.s(kk, Fk, Bk), this.d = tk
+    var kb = sb(36656);
+    class Wb {
+      constructor(bb, cb, sb, Wb) {
+        this.normal = new kb.p(bb, cb, sb), this.d = Wb
       }
-      PBk() {
+      Osb() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new tk(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new Wb(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let kk = this.normal.getHashCode();
-        return kk = 397 * kk ^ this.d, kk
+        let bb = this.normal.getHashCode();
+        return bb = 397 * bb ^ this.d, bb
       }
       normalize() {
-        const kk = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let Fk = 0;
-        return 0 !== kk && (Fk = 1 / kk), this.normal.x *= Fk, this.normal.y *= Fk, this.normal.z *= Fk, this.d *= Fk, this
+        const bb = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let cb = 0;
+        return 0 !== bb && (cb = 1 / bb), this.normal.x *= cb, this.normal.y *= cb, this.normal.z *= cb, this.d *= cb, this
       }
-      transform(kk) {
-        const Fk = tk._TmpMatrix;
-        kk.invertToRef(Fk);
-        const Bk = Fk.m,
-          Rk = this.normal.x,
-          ak = this.normal.y,
-          Xk = this.normal.z,
-          bk = this.d,
-          wk = Rk * Bk[0] + ak * Bk[1] + Xk * Bk[2] + bk * Bk[3],
-          dk = Rk * Bk[4] + ak * Bk[5] + Xk * Bk[6] + bk * Bk[7],
-          sk = Rk * Bk[8] + ak * Bk[9] + Xk * Bk[10] + bk * Bk[11],
-          Vk = Rk * Bk[12] + ak * Bk[13] + Xk * Bk[14] + bk * Bk[15];
-        return new tk(wk, dk, sk, Vk)
+      transform(bb) {
+        const cb = Wb._TmpMatrix;
+        bb.invertToRef(cb);
+        const sb = cb.m,
+          kb = this.normal.x,
+          ab = this.normal.y,
+          Tb = this.normal.z,
+          Ub = this.d,
+          Ib = kb * sb[0] + ab * sb[1] + Tb * sb[2] + Ub * sb[3],
+          Hb = kb * sb[4] + ab * sb[5] + Tb * sb[6] + Ub * sb[7],
+          fb = kb * sb[8] + ab * sb[9] + Tb * sb[10] + Ub * sb[11],
+          Mb = kb * sb[12] + ab * sb[13] + Tb * sb[14] + Ub * sb[15];
+        return new Wb(Ib, Hb, fb, Mb)
       }
-      dotCoordinate(kk) {
-        return this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z + this.d
+      dotCoordinate(bb) {
+        return this.normal.x * bb.x + this.normal.y * bb.y + this.normal.z * bb.z + this.d
       }
-      copyFromPoints(kk, Fk, Bk) {
-        const Rk = Fk.x - kk.x,
-          tk = Fk.y - kk.y,
-          ak = Fk.z - kk.z,
-          Xk = Bk.x - kk.x,
-          bk = Bk.y - kk.y,
-          wk = Bk.z - kk.z,
-          dk = tk * wk - ak * bk,
-          sk = ak * Xk - Rk * wk,
-          Vk = Rk * bk - tk * Xk,
-          Jk = Math.sqrt(dk * dk + sk * sk + Vk * Vk);
-        let Ak;
-        return Ak = 0 !== Jk ? 1 / Jk : 0, this.normal.x = dk * Ak, this.normal.y = sk * Ak, this.normal.z = Vk * Ak, this.d = -(this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z), this
+      copyFromPoints(bb, cb, sb) {
+        const kb = cb.x - bb.x,
+          Wb = cb.y - bb.y,
+          ab = cb.z - bb.z,
+          Tb = sb.x - bb.x,
+          Ub = sb.y - bb.y,
+          Ib = sb.z - bb.z,
+          Hb = Wb * Ib - ab * Ub,
+          fb = ab * Tb - kb * Ib,
+          Mb = kb * Ub - Wb * Tb,
+          Xb = Math.sqrt(Hb * Hb + fb * fb + Mb * Mb);
+        let nb;
+        return nb = 0 !== Xb ? 1 / Xb : 0, this.normal.x = Hb * nb, this.normal.y = fb * nb, this.normal.z = Mb * nb, this.d = -(this.normal.x * bb.x + this.normal.y * bb.y + this.normal.z * bb.z), this
       }
-      isFrontFacingTo(kk, Fk) {
-        return Rk.s.Dot(this.normal, kk) <= Fk
+      isFrontFacingTo(bb, cb) {
+        return kb.p.Dot(this.normal, bb) <= cb
       }
-      signedDistanceTo(kk) {
-        return Rk.s.Dot(kk, this.normal) + this.d
+      signedDistanceTo(bb) {
+        return kb.p.Dot(bb, this.normal) + this.d
       }
-      static FromArray(kk) {
-        return new tk(kk[0], kk[1], kk[2], kk[3])
+      static FromArray(bb) {
+        return new Wb(bb[0], bb[1], bb[2], bb[3])
       }
-      static FromPoints(kk, Fk, Bk) {
-        const Rk = new tk(0, 0, 0, 0);
-        return Rk.copyFromPoints(kk, Fk, Bk), Rk
+      static FromPoints(bb, cb, sb) {
+        const kb = new Wb(0, 0, 0, 0);
+        return kb.copyFromPoints(bb, cb, sb), kb
       }
-      static FromPositionAndNormal(kk, Fk) {
-        const Bk = new tk(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(kk, Fk, Bk)
+      static FromPositionAndNormal(bb, cb) {
+        const sb = new Wb(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(bb, cb, sb)
       }
-      static FromPositionAndNormalToRef(kk, Fk, Bk) {
-        return Bk.normal.sBk(Fk), Bk.normal.normalize(), Bk.d = -kk.dot(Bk.normal), Bk
+      static FromPositionAndNormalToRef(bb, cb, sb) {
+        return sb.normal.ssb(cb), sb.normal.normalize(), sb.d = -bb.dot(sb.normal), sb
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(kk, Fk, Bk) {
-        const tk = -(Fk.x * kk.x + Fk.y * kk.y + Fk.z * kk.z);
-        return Rk.s.Dot(Bk, Fk) + tk
+      static SignedDistanceToPlaneFromPositionAndNormal(bb, cb, sb) {
+        const Wb = -(cb.x * bb.x + cb.y * bb.y + cb.z * bb.z);
+        return kb.p.Dot(sb, cb) + Wb
       }
     }
-    tk._TmpMatrix = Rk.c.Identity()
+    Wb._TmpMatrix = kb.e.Identity()
   },
-  38318: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => ak
+  38279: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => ab
     });
-    var Rk = Bk(38320);
-    const tk = (kk, Fk, Bk) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : Bk && "object" === typeof kk ? {
-      ...kk
-    } : null : kk.clone(Fk) : null;
-    class ak {
-      static DeepCopy(kk, Fk, Bk, ak) {
-        let Xk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const bk = function(kk) {
-          const Fk = [];
+    var kb = sb(38284);
+    const Wb = (bb, cb, sb) => bb ? bb.getClassName && "Mesh" === bb.getClassName() ? null : !bb.getClassName || "SubMesh" !== bb.getClassName() && "PhysicsBody" !== bb.getClassName() ? bb.clone ? bb.clone() : Array.isArray(bb) ? bb.slice() : sb && "object" === typeof bb ? {
+      ...bb
+    } : null : bb.clone(cb) : null;
+    class ab {
+      static DeepCopy(bb, cb, sb, ab) {
+        let Tb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const Ub = function(bb) {
+          const cb = [];
           do {
-            const Bk = Object.getOwnPropertyNames(kk);
-            for (const kk of Bk) - 1 === Fk.indexOf(kk) && Fk.push(kk)
-          } while (kk = Object.getPrototypeOf(kk));
-          return Fk
-        }(kk);
-        for (const dk of bk) {
-          if ("_" === dk[0] && (!ak || -1 === ak.indexOf(dk))) continue;
-          if (dk.endsWith("Observable")) continue;
-          if (Bk && -1 !== Bk.indexOf(dk)) continue;
-          const bk = kk[dk],
-            sk = typeof bk;
-          if ("function" !== sk) try {
-            if ("object" === sk)
-              if (bk instanceof Uint8Array) Fk[dk] = Uint8Array.from(bk);
-              else if (bk instanceof Array) {
-              if (Fk[dk] = [], bk.length > 0)
-                if ("object" == typeof bk[0])
-                  for (let kk = 0; kk < bk.length; kk++) {
-                    const Bk = tk(bk[kk], Fk, Xk); - 1 === Fk[dk].indexOf(Bk) && Fk[dk].push(Bk)
-                  } else Fk[dk] = bk.slice(0)
-            } else Fk[dk] = tk(bk, Fk, Xk);
-            else Fk[dk] = bk
-          } catch (wk) {
-            Rk.b.Warn(wk.message)
+            const sb = Object.getOwnPropertyNames(bb);
+            for (const bb of sb) - 1 === cb.indexOf(bb) && cb.push(bb)
+          } while (bb = Object.getPrototypeOf(bb));
+          return cb
+        }(bb);
+        for (const Hb of Ub) {
+          if ("_" === Hb[0] && (!ab || -1 === ab.indexOf(Hb))) continue;
+          if (Hb.endsWith("Observable")) continue;
+          if (sb && -1 !== sb.indexOf(Hb)) continue;
+          const Ub = bb[Hb],
+            fb = typeof Ub;
+          if ("function" !== fb) try {
+            if ("object" === fb)
+              if (Ub instanceof Uint8Array) cb[Hb] = Uint8Array.from(Ub);
+              else if (Ub instanceof Array) {
+              if (cb[Hb] = [], Ub.length > 0)
+                if ("object" == typeof Ub[0])
+                  for (let bb = 0; bb < Ub.length; bb++) {
+                    const sb = Wb(Ub[bb], cb, Tb); - 1 === cb[Hb].indexOf(sb) && cb[Hb].push(sb)
+                  } else cb[Hb] = Ub.slice(0)
+            } else cb[Hb] = Wb(Ub, cb, Tb);
+            else cb[Hb] = Ub
+          } catch (Ib) {
+            kb.c.Warn(Ib.message)
           }
         }
       }
     }
   },
-  37578: (kk, Fk, Bk) => {
-    function Rk() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (kk => {
-        const Fk = 16 * Math.random() | 0;
-        return ("x" === kk ? Fk : 3 & Fk | 8).toString(16)
+  37501: (bb, cb, sb) => {
+    function kb() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (bb => {
+        const cb = 16 * Math.random() | 0;
+        return ("x" === bb ? cb : 3 & cb | 8).toString(16)
       }))
     }
-    Bk.d(Fk, {
-      e: () => Rk
+    sb.d(cb, {
+      b: () => kb
     })
   },
-  38320: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => Rk
+  38284: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => kb
     });
-    class Rk {
-      static _CheckLimit(kk, Fk) {
-        let Bk = Rk._LogLimitOutputs[kk];
-        return Bk ? Bk.current++ : (Bk = {
-          limit: Fk,
+    class kb {
+      static _CheckLimit(bb, cb) {
+        let sb = kb._LogLimitOutputs[bb];
+        return sb ? sb.current++ : (sb = {
+          limit: cb,
           current: 1
-        }, Rk._LogLimitOutputs[kk] = Bk), Bk.current <= Bk.limit
+        }, kb._LogLimitOutputs[bb] = sb), sb.current <= sb.limit
       }
-      static _GenerateLimitMessage(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const Bk = Rk._LogLimitOutputs[kk];
-        if (!Bk || !Rk.MessageLimitReached) return;
-        const tk = this._Levels[Fk];
-        Bk.current === Bk.limit && Rk[tk.name](Rk.MessageLimitReached.replace(/%LIMIT%/g, "" + Bk.limit).replace(/%TYPE%/g, tk.name ?? ""))
+      static _GenerateLimitMessage(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const sb = kb._LogLimitOutputs[bb];
+        if (!sb || !kb.MessageLimitReached) return;
+        const Wb = this._Levels[cb];
+        sb.current === sb.limit && kb[Wb.name](kb.MessageLimitReached.replace(/%LIMIT%/g, "" + sb.limit).replace(/%TYPE%/g, Wb.name ?? ""))
       }
-      static _AddLogEntry(kk) {
-        Rk._LogCache = kk + Rk._LogCache, Rk.OnNewCacheEntry && Rk.OnNewCacheEntry(kk)
+      static _AddLogEntry(bb) {
+        kb._LogCache = bb + kb._LogCache, kb.OnNewCacheEntry && kb.OnNewCacheEntry(bb)
       }
-      static _FormatMessage(kk) {
-        const Fk = kk => kk < 10 ? "0" + kk : "" + kk,
-          Bk = new Date;
-        return "[" + Fk(Bk.getHours()) + ":" + Fk(Bk.getMinutes()) + ":" + Fk(Bk.getSeconds()) + "]: " + kk
+      static _FormatMessage(bb) {
+        const cb = bb => bb < 10 ? "0" + bb : "" + bb,
+          sb = new Date;
+        return "[" + cb(sb.getHours()) + ":" + cb(sb.getMinutes()) + ":" + cb(sb.getSeconds()) + "]: " + bb
       }
-      static _LogDisabled(kk, Fk) {}
+      static _LogDisabled(bb, cb) {}
       static _LogEnabled() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Fk = arguments.length > 1 ? arguments[1] : void 0,
-          Bk = arguments.length > 2 ? arguments[2] : void 0;
-        const tk = Array.isArray(Fk) ? Fk[0] : Fk;
-        if (void 0 !== Bk && !Rk._CheckLimit(tk, Bk)) return;
-        const ak = Rk._FormatMessage(tk),
-          Xk = this._Levels[kk],
-          bk = Array.isArray(Fk) ? Fk.slice(1) : [];
-        Xk.logFunc && Xk.logFunc("BJS - " + ak, ...bk);
-        const wk = `<div style='color:${Xk.color}'>${ak}</div><br>`;
-        Rk._AddLogEntry(wk), Rk._GenerateLimitMessage(tk, kk)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          cb = arguments.length > 1 ? arguments[1] : void 0,
+          sb = arguments.length > 2 ? arguments[2] : void 0;
+        const Wb = Array.isArray(cb) ? cb[0] : cb;
+        if (void 0 !== sb && !kb._CheckLimit(Wb, sb)) return;
+        const ab = kb._FormatMessage(Wb),
+          Tb = this._Levels[bb],
+          Ub = Array.isArray(cb) ? cb.slice(1) : [];
+        Tb.logFunc && Tb.logFunc("BJS - " + ab, ...Ub);
+        const Ib = `<div style='color:${Tb.color}'>${ab}</div><br>`;
+        kb._AddLogEntry(Ib), kb._GenerateLimitMessage(Wb, bb)
       }
       static get LogCache() {
-        return Rk._LogCache
+        return kb._LogCache
       }
       static ClearLogCache() {
-        Rk._LogCache = "", Rk._LogLimitOutputs = {}, Rk.errorsCount = 0
+        kb._LogCache = "", kb._LogLimitOutputs = {}, kb.errorsCount = 0
       }
-      static set LogLevels(kk) {
-        Rk.Log = Rk._LogDisabled, Rk.Warn = Rk._LogDisabled, Rk.Error = Rk._LogDisabled;
-        const Fk = [Rk.MessageLogLevel, Rk.WarningLogLevel, Rk.ErrorLogLevel];
-        for (const Bk of Fk)
-          if ((kk & Bk) === Bk) {
-            const kk = this._Levels[Bk];
-            Rk[kk.name] = Rk._LogEnabled.bind(Rk, Bk)
+      static set LogLevels(bb) {
+        kb.Log = kb._LogDisabled, kb.Warn = kb._LogDisabled, kb.Error = kb._LogDisabled;
+        const cb = [kb.MessageLogLevel, kb.WarningLogLevel, kb.ErrorLogLevel];
+        for (const sb of cb)
+          if ((bb & sb) === sb) {
+            const bb = this._Levels[sb];
+            kb[bb.name] = kb._LogEnabled.bind(kb, sb)
           }
       }
     }
-    Rk.NoneLogLevel = 0, Rk.MessageLogLevel = 1, Rk.WarningLogLevel = 2, Rk.ErrorLogLevel = 4, Rk.AllLogLevel = 7, Rk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Rk._LogCache = "", Rk._LogLimitOutputs = {}, Rk._Levels = [{}, {
+    kb.NoneLogLevel = 0, kb.MessageLogLevel = 1, kb.WarningLogLevel = 2, kb.ErrorLogLevel = 4, kb.AllLogLevel = 7, kb.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", kb._LogCache = "", kb._LogLimitOutputs = {}, kb._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -266,8 +266,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Rk.errorsCount = 0, Rk.Log = Rk._LogEnabled.bind(Rk, Rk.MessageLogLevel), Rk.Warn = Rk._LogEnabled.bind(Rk, Rk.WarningLogLevel), Rk.Error = Rk._LogEnabled.bind(Rk, Rk.ErrorLogLevel)
+    }], kb.errorsCount = 0, kb.Log = kb._LogEnabled.bind(kb, kb.MessageLogLevel), kb.Warn = kb._LogEnabled.bind(kb, kb.WarningLogLevel), kb.Error = kb._LogEnabled.bind(kb, kb.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,495 +1,495 @@
 export const id = 88;
 export const ids = [88];
 export const modules = {
-  40905: (kk, Fk, Bk) => {
-    async function Rk(kk, Fk) {
+  40891: (bb, cb, sb) => {
+    async function kb(bb, cb) {
       const [{
-        clientSideServerUrls: Rk
+        clientSideServerUrls: kb
       }, {
-        postJsonWithMetricsCookiesAndJsonResponse: tk
+        postJsonWithMetricsCookiesAndJsonResponse: Wb
       }, {
-        gameBridge: ak
-      }] = await Promise.all([Promise.resolve().then((() => Bk(1154))), Promise.resolve().then((() => Bk(1101))), Promise.resolve().then((() => Bk(1847)))]), Xk = ak.latest("connectedGame").websocketUrl;
-      if (!Xk) throw new Error("AI Helper: not connected to a game server");
-      const bk = `${Rk.getHttpUrlFromWebSocketUrl(Xk)}${kk}`;
-      return await tk(bk, Fk, {
+        gameBridge: ab
+      }] = await Promise.all([Promise.resolve().then((() => sb(1208))), Promise.resolve().then((() => sb(1126))), Promise.resolve().then((() => sb(1870)))]), Tb = ab.latest("connectedGame").websocketUrl;
+      if (!Tb) throw new Error("AI Helper: not connected to a game server");
+      const Ub = `${kb.getHttpUrlFromWebSocketUrl(Tb)}${bb}`;
+      return await Wb(Ub, cb, {
         retries: 0
       })
     }
-    Bk.r(Fk), Bk.d(Fk, {
-      postToGameServer: () => Rk
+    sb.r(cb), sb.d(cb, {
+      postToGameServer: () => kb
     })
   },
-  40898: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      WorldCodeAiPanel: () => KV,
-      default: () => xV
+  40888: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      WorldCodeAiPanel: () => oM,
+      default: () => SM
     });
-    var Rk = Bk(61),
-      tk = Bk(1020),
-      ak = Bk.n(tk),
-      Xk = Bk(1069);
+    var kb = sb(64),
+      Wb = sb(1033),
+      ab = sb.n(Wb),
+      Tb = sb(1087);
 
-    function bk(kk) {
+    function Ub(bb) {
       let {
-        title: Fk,
-        children: Bk,
-        isCalm: tk = !1,
-        isElsewhere: bk = !1,
-        defaultOpen: wk = !1,
-        isOpen: dk,
-        onToggle: sk,
-        className: Vk
-      } = kk;
-      const [Jk, Ak] = (0, Rk.useState)(wk), ek = null !== dk && void 0 !== dk ? dk : Jk;
-      return (0, Xk.jsxs)("div", {
-        className: ak()("WorldCodeAiLog", tk && "WorldCodeAiLog-calm", bk && "WorldCodeAiLog-elsewhere", ek && "WorldCodeAiLog-open", Vk),
-        children: [(0, Xk.jsxs)("button", {
+        title: cb,
+        children: sb,
+        isCalm: Wb = !1,
+        isElsewhere: Ub = !1,
+        defaultOpen: Ib = !1,
+        isOpen: Hb,
+        onToggle: fb,
+        className: Mb
+      } = bb;
+      const [Xb, nb] = (0, kb.useState)(Ib), mb = null !== Hb && void 0 !== Hb ? Hb : Xb;
+      return (0, Tb.jsxs)("div", {
+        className: ab()("WorldCodeAiLog", Wb && "WorldCodeAiLog-calm", Ub && "WorldCodeAiLog-elsewhere", mb && "WorldCodeAiLog-open", Mb),
+        children: [(0, Tb.jsxs)("button", {
           className: "WorldCodeAiLogToggle",
-          "aria-expanded": ek,
+          "aria-expanded": mb,
           onClick: () => {
-            void 0 === dk && Ak(!ek), null === sk || void 0 === sk || sk(!ek)
+            void 0 === Hb && nb(!mb), null === fb || void 0 === fb || fb(!mb)
           },
-          children: [(0, Xk.jsx)("span", {
+          children: [(0, Tb.jsx)("span", {
             className: "WorldCodeAiLogChevron",
             "aria-hidden": "true",
-            children: ek ? "\u25be" : "\u25b8"
-          }), Fk]
-        }), ek && (0, Xk.jsx)("div", {
+            children: mb ? "\u25be" : "\u25b8"
+          }), cb]
+        }), mb && (0, Tb.jsx)("div", {
           className: "WorldCodeAiLogBody",
-          children: Bk
+          children: sb
         })]
       })
     }
-    var wk = Bk(1847),
-      dk = Bk(6193),
-      sk = Bk(1389),
-      Vk = Bk(36565),
-      Jk = Bk(1028),
-      Ak = Bk(4467),
-      ek = Bk(36582),
-      yk = Bk(1535),
-      fk = Bk(4553),
-      mk = Bk(6175);
-    const Wk = new URL(yk.b).host;
+    var Ib = sb(1870),
+      Hb = sb(6153),
+      fb = sb(1431),
+      Mb = sb(36460),
+      Xb = sb(1039),
+      nb = sb(4469),
+      mb = sb(36479),
+      lb = sb(1572),
+      Qb = sb(4545),
+      eb = sb(6142);
+    const Cb = new URL(lb.e).host;
 
-    function vk(kk) {
-      const Fk = kk.trim();
-      let Bk;
+    function Nb(bb) {
+      const cb = bb.trim();
+      let sb;
       try {
-        const kk = /^docs\//i.test(Fk) ? `${yk.b}/` : `${yk.b}/docs/`,
-          Rk = Fk.toLowerCase().replace(/^www\./, "").startsWith(`${Wk}/`);
-        Bk = new URL(Rk ? `https://${Fk}` : Fk, kk)
+        const bb = /^docs\//i.test(cb) ? `${lb.e}/` : `${lb.e}/docs/`,
+          kb = cb.toLowerCase().replace(/^www\./, "").startsWith(`${Cb}/`);
+        sb = new URL(kb ? `https://${cb}` : cb, bb)
       } catch {
         return null
       }
-      if ("https:" !== Bk.protocol && "http:" !== Bk.protocol || Bk.host !== Wk && Bk.host !== `www.${Wk}`) return null;
-      const Rk = Bk.pathname.toLowerCase();
-      return ik(Rk) || null !== (0, fk.A)(Rk) ? Rk : (0, fk.w)(Rk)
+      if ("https:" !== sb.protocol && "http:" !== sb.protocol || sb.host !== Cb && sb.host !== `www.${Cb}`) return null;
+      const kb = sb.pathname.toLowerCase();
+      return Vb(kb) || null !== (0, Qb.B)(kb) ? kb : (0, Qb.z)(kb)
     }
 
-    function ik(kk) {
-      return kk === fk.i || kk === fk.k
+    function Vb(bb) {
+      return bb === Qb.j || bb === Qb.n
     }
 
-    function Yk(kk) {
-      const Fk = vk(kk);
-      return null === Fk ? kk : `${yk.b}${Fk}`
+    function Lb(bb) {
+      const cb = Nb(bb);
+      return null === cb ? bb : `${lb.e}${cb}`
     }
-    var Lk = Bk(194),
-      Ok = Bk(40827),
-      Ek = Bk.n(Ok);
+    var ub = sb(232),
+      Yb = sb(40826),
+      hb = sb.n(Yb);
 
-    function Sk(kk) {
-      const Fk = [];
-      let Bk = 0;
-      return kk.split("\n").forEach(((kk, Rk) => {
-        Fk.push({
-          text: kk,
-          from: Bk,
-          index: Rk
-        }), Bk += kk.length + 1
-      })), Fk
-    }
-
-    function Nk(kk) {
-      return kk.replace(/^\s*\/\/.*$/, "").replace(/\s+/g, "").replace(/['`]/g, '"').replace(/[;,]+$/, "")
+    function Jb(bb) {
+      const cb = [];
+      let sb = 0;
+      return bb.split("\n").forEach(((bb, kb) => {
+        cb.push({
+          text: bb,
+          from: sb,
+          index: kb
+        }), sb += bb.length + 1
+      })), cb
     }
 
-    function Hk(kk, Fk, Bk) {
-      if (0 === Fk.length) return null;
-      let Rk = null;
-      for (let tk = 0; tk + Fk.length <= kk.length; tk++) {
-        if (Fk.every(((Fk, Rk) => Bk(kk[tk + Rk].text) === Fk))) {
-          if (Rk) return {
-            ...Rk,
+    function gb(bb) {
+      return bb.replace(/^\s*\/\/.*$/, "").replace(/\s+/g, "").replace(/['`]/g, '"').replace(/[;,]+$/, "")
+    }
+
+    function Bb(bb, cb, sb) {
+      if (0 === cb.length) return null;
+      let kb = null;
+      for (let Wb = 0; Wb + cb.length <= bb.length; Wb++) {
+        if (cb.every(((cb, kb) => sb(bb[Wb + kb].text) === cb))) {
+          if (kb) return {
+            ...kb,
             isOnly: !1
           };
-          const Bk = kk[tk + Fk.length - 1];
-          Rk = {
-            from: kk[tk].from,
-            to: Bk.from + Bk.text.length
+          const sb = bb[Wb + cb.length - 1];
+          kb = {
+            from: bb[Wb].from,
+            to: sb.from + sb.text.length
           }
         }
       }
-      return Rk ? {
-        ...Rk,
+      return kb ? {
+        ...kb,
         isOnly: !0
       } : null
     }
 
-    function uk(kk, Fk) {
-      if ("" === Fk.trim()) return null;
-      const Bk = Sk(kk),
-        Rk = function(kk) {
-          return kk.split("\n").map((kk => kk.trim())).filter(((kk, Fk, Bk) => "" !== kk || Fk > 0 && Fk < Bk.length - 1))
-        }(Fk),
-        tk = Hk(Bk, Rk, (kk => kk.trim()));
-      if (null !== tk) return {
-        from: tk.from,
-        to: tk.to,
-        isLoose: !tk.isOnly
+    function tb(bb, cb) {
+      if ("" === cb.trim()) return null;
+      const sb = Jb(bb),
+        kb = function(bb) {
+          return bb.split("\n").map((bb => bb.trim())).filter(((bb, cb, sb) => "" !== bb || cb > 0 && cb < sb.length - 1))
+        }(cb),
+        Wb = Bb(sb, kb, (bb => bb.trim()));
+      if (null !== Wb) return {
+        from: Wb.from,
+        to: Wb.to,
+        isLoose: !Wb.isOnly
       };
-      const ak = kk => kk.trim().replace(/;+$/, ""),
-        Xk = Hk(Bk, Rk.map(ak), ak);
-      if (null !== Xk) {
-        const Bk = kk.indexOf(Fk),
-          Rk = -1 !== Bk && (Bk < Xk.from || Bk >= Xk.to);
+      const ab = bb => bb.trim().replace(/;+$/, ""),
+        Tb = Bb(sb, kb.map(ab), ab);
+      if (null !== Tb) {
+        const sb = bb.indexOf(cb),
+          kb = -1 !== sb && (sb < Tb.from || sb >= Tb.to);
         return {
-          from: Xk.from,
-          to: Xk.to,
-          isLoose: !Xk.isOnly || Rk
+          from: Tb.from,
+          to: Tb.to,
+          isLoose: !Tb.isOnly || kb
         }
       }
-      const bk = kk.indexOf(Fk);
-      if (-1 !== bk) {
-        var wk, dk, sk;
-        const Bk = /\w/.test(Fk[0]) && /\w/.test(null !== (wk = kk[bk - 1]) && void 0 !== wk ? wk : "") || /\w/.test(null !== (dk = Fk.at(-1)) && void 0 !== dk ? dk : "") && /\w/.test(null !== (sk = kk[bk + Fk.length]) && void 0 !== sk ? sk : "");
+      const Ub = bb.indexOf(cb);
+      if (-1 !== Ub) {
+        var Ib, Hb, fb;
+        const sb = /\w/.test(cb[0]) && /\w/.test(null !== (Ib = bb[Ub - 1]) && void 0 !== Ib ? Ib : "") || /\w/.test(null !== (Hb = cb.at(-1)) && void 0 !== Hb ? Hb : "") && /\w/.test(null !== (fb = bb[Ub + cb.length]) && void 0 !== fb ? fb : "");
         return {
-          from: bk,
-          to: bk + Fk.length,
-          isLoose: Bk || -1 !== kk.indexOf(Fk, bk + 1)
+          from: Ub,
+          to: Ub + cb.length,
+          isLoose: sb || -1 !== bb.indexOf(cb, Ub + 1)
         }
       }
-      const Vk = Fk.split("\n").map(Nk).filter(Boolean),
-        Jk = Hk(Bk.filter((kk => "" !== Nk(kk.text))), Vk, Nk);
-      return null === Jk ? null : {
-        from: Jk.from,
-        to: Jk.to,
+      const Mb = cb.split("\n").map(gb).filter(Boolean),
+        Xb = Bb(sb.filter((bb => "" !== gb(bb.text))), Mb, gb);
+      return null === Xb ? null : {
+        from: Xb.from,
+        to: Xb.to,
         isLoose: !0
       }
     }
 
-    function Mk(kk) {
-      var Fk, Bk;
-      return null !== (Fk = null === (Bk = /^[ \t]*/.exec(kk)) || void 0 === Bk ? void 0 : Bk[0]) && void 0 !== Fk ? Fk : ""
+    function yb(bb) {
+      var cb, sb;
+      return null !== (cb = null === (sb = /^[ \t]*/.exec(bb)) || void 0 === sb ? void 0 : sb[0]) && void 0 !== cb ? cb : ""
     }
 
-    function gk(kk, Fk, Bk, Rk) {
-      if (Fk.from > 0 && "\n" !== kk[Fk.from - 1]) return Rk;
-      const tk = kk.slice(Fk.from, Fk.to).split("\n").filter((kk => "" !== kk.trim())),
-        ak = Bk.split("\n").filter((kk => "" !== kk.trim()));
-      if (0 === tk.length || 0 === ak.length) return Rk;
-      const Xk = Mk(tk[0]),
-        bk = Mk(ak[0]);
-      if (Xk === bk) return Rk;
-      const wk = ak.length > 1 && ak.length === tk.length && ak.slice(1).every(((kk, Fk) => Mk(kk) === Mk(tk[Fk + 1]))),
-        dk = Rk.split("\n"),
-        sk = dk.findIndex((kk => "" !== kk.trim()));
-      if (-1 === sk || Mk(dk[sk]) === Xk) return Rk;
-      let Vk = !1;
-      return dk.map(((kk, Fk) => {
-        var Bk, Rk;
-        const tk = Vk;
-        return (null !== (Bk = null === (Rk = kk.replace(/\\`/g, "").match(/`/g)) || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Bk ? Bk : 0) % 2 === 1 && (Vk = !Vk), tk || wk && Fk !== sk ? kk : function(kk, Fk, Bk) {
-          if ("" === kk.trim()) return kk;
-          const Rk = Mk(kk);
-          return Rk.startsWith(Fk) ? Bk + kk.slice(Fk.length) : Fk.startsWith(Rk) ? Bk.slice(0, Math.max(0, Bk.length - (Fk.length - Rk.length))) + kk.trimStart() : kk
-        }(kk, bk, Xk)
+    function Pb(bb, cb, sb, kb) {
+      if (cb.from > 0 && "\n" !== bb[cb.from - 1]) return kb;
+      const Wb = bb.slice(cb.from, cb.to).split("\n").filter((bb => "" !== bb.trim())),
+        ab = sb.split("\n").filter((bb => "" !== bb.trim()));
+      if (0 === Wb.length || 0 === ab.length) return kb;
+      const Tb = yb(Wb[0]),
+        Ub = yb(ab[0]);
+      if (Tb === Ub) return kb;
+      const Ib = ab.length > 1 && ab.length === Wb.length && ab.slice(1).every(((bb, cb) => yb(bb) === yb(Wb[cb + 1]))),
+        Hb = kb.split("\n"),
+        fb = Hb.findIndex((bb => "" !== bb.trim()));
+      if (-1 === fb || yb(Hb[fb]) === Tb) return kb;
+      let Mb = !1;
+      return Hb.map(((bb, cb) => {
+        var sb, kb;
+        const Wb = Mb;
+        return (null !== (sb = null === (kb = bb.replace(/\\`/g, "").match(/`/g)) || void 0 === kb ? void 0 : kb.length) && void 0 !== sb ? sb : 0) % 2 === 1 && (Mb = !Mb), Wb || Ib && cb !== fb ? bb : function(bb, cb, sb) {
+          if ("" === bb.trim()) return bb;
+          const kb = yb(bb);
+          return kb.startsWith(cb) ? sb + bb.slice(cb.length) : cb.startsWith(kb) ? sb.slice(0, Math.max(0, sb.length - (cb.length - kb.length))) + bb.trimStart() : bb
+        }(bb, Ub, Tb)
       })).join("\n")
     }
 
-    function Uk(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const Rk = new Map;
-      for (const bk of kk.split("\n")) {
-        const kk = bk.trim(),
-          Fk = kk.replace(/;$/, "");
-        "" === Fk || kk.endsWith(";") || Rk.has(Fk) || Rk.set(Fk, kk)
+    function Db(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const kb = new Map;
+      for (const Ub of bb.split("\n")) {
+        const bb = Ub.trim(),
+          cb = bb.replace(/;$/, "");
+        "" === cb || bb.endsWith(";") || kb.has(cb) || kb.set(cb, bb)
       }
-      const tk = Fk.split("\n");
-      let ak = !1;
-      const Xk = tk.map(((kk, Fk) => {
-        var Xk, bk, wk;
-        const dk = ak;
-        (null !== (Xk = null === (bk = kk.replace(/\\`/g, "").match(/`/g)) || void 0 === bk ? void 0 : bk.length) && void 0 !== Xk ? Xk : 0) % 2 === 1 && (ak = !ak);
-        const sk = kk.trim(),
-          Vk = Rk.get(sk.replace(/;$/, ""));
-        if (void 0 === Vk || Vk === sk || dk || ak) return kk;
-        const Jk = null !== (wk = tk.slice(Fk + 1).find((kk => "" !== kk.trim()))) && void 0 !== wk ? wk : Bk;
-        return /^(?:[([`+-]|\/(?![/*]))/.test(Jk.trim()) ? kk : kk.slice(0, kk.length - kk.trimStart().length) + Vk
+      const Wb = cb.split("\n");
+      let ab = !1;
+      const Tb = Wb.map(((bb, cb) => {
+        var Tb, Ub, Ib;
+        const Hb = ab;
+        (null !== (Tb = null === (Ub = bb.replace(/\\`/g, "").match(/`/g)) || void 0 === Ub ? void 0 : Ub.length) && void 0 !== Tb ? Tb : 0) % 2 === 1 && (ab = !ab);
+        const fb = bb.trim(),
+          Mb = kb.get(fb.replace(/;$/, ""));
+        if (void 0 === Mb || Mb === fb || Hb || ab) return bb;
+        const Xb = null !== (Ib = Wb.slice(cb + 1).find((bb => "" !== bb.trim()))) && void 0 !== Ib ? Ib : sb;
+        return /^(?:[([`+-]|\/(?![/*]))/.test(Xb.trim()) ? bb : bb.slice(0, bb.length - bb.trimStart().length) + Mb
       })).join("\n");
-      return Xk.trim() === kk.trim() && Fk.trim() !== kk.trim() ? Fk : Xk
+      return Tb.trim() === bb.trim() && cb.trim() !== bb.trim() ? cb : Tb
     }
 
-    function ck(kk) {
-      var Fk;
-      return null !== (Fk = kk.split("\n").find((kk => "" !== kk.trim()))) && void 0 !== Fk ? Fk : ""
+    function Eb(bb) {
+      var cb;
+      return null !== (cb = bb.split("\n").find((bb => "" !== bb.trim()))) && void 0 !== cb ? cb : ""
     }
 
-    function Gk(kk, Fk) {
-      if (kk === Fk) return 1;
-      if (kk.length < 2 || Fk.length < 2) return 0;
-      const Bk = new Map;
-      for (let Xk = 0; Xk < kk.length - 1; Xk++) {
-        var Rk;
-        const Fk = kk.slice(Xk, Xk + 2);
-        Bk.set(Fk, (null !== (Rk = Bk.get(Fk)) && void 0 !== Rk ? Rk : 0) + 1)
+    function ib(bb, cb) {
+      if (bb === cb) return 1;
+      if (bb.length < 2 || cb.length < 2) return 0;
+      const sb = new Map;
+      for (let Tb = 0; Tb < bb.length - 1; Tb++) {
+        var kb;
+        const cb = bb.slice(Tb, Tb + 2);
+        sb.set(cb, (null !== (kb = sb.get(cb)) && void 0 !== kb ? kb : 0) + 1)
       }
-      let tk = 0;
-      for (let Xk = 0; Xk < Fk.length - 1; Xk++) {
-        var ak;
-        const kk = Fk.slice(Xk, Xk + 2),
-          Rk = null !== (ak = Bk.get(kk)) && void 0 !== ak ? ak : 0;
-        Rk > 0 && (Bk.set(kk, Rk - 1), tk++)
+      let Wb = 0;
+      for (let Tb = 0; Tb < cb.length - 1; Tb++) {
+        var ab;
+        const bb = cb.slice(Tb, Tb + 2),
+          kb = null !== (ab = sb.get(bb)) && void 0 !== ab ? ab : 0;
+        kb > 0 && (sb.set(bb, kb - 1), Wb++)
       }
-      return 2 * tk / (kk.length + Fk.length - 2)
+      return 2 * Wb / (bb.length + cb.length - 2)
     }
 
-    function Tk(kk, Fk) {
-      const Bk = Fk.split("\n").map(Nk).filter(Boolean),
-        Rk = Sk(kk).filter((kk => "" !== Nk(kk.text)));
-      if (0 === Bk.length || 0 === Rk.length) return null;
-      const tk = Math.min(Bk.length, Rk.length);
-      let ak = null;
-      for (let bk = 0; bk + tk <= Rk.length; bk++) {
-        let kk = 0;
-        for (let Fk = 0; Fk < tk; Fk++) kk += Gk(Nk(Rk[bk + Fk].text), Bk[Fk]);
-        kk /= Bk.length, (null === ak || kk > ak.score) && (ak = {
-          start: bk,
-          score: kk
+    function Ob(bb, cb) {
+      const sb = cb.split("\n").map(gb).filter(Boolean),
+        kb = Jb(bb).filter((bb => "" !== gb(bb.text)));
+      if (0 === sb.length || 0 === kb.length) return null;
+      const Wb = Math.min(sb.length, kb.length);
+      let ab = null;
+      for (let Ub = 0; Ub + Wb <= kb.length; Ub++) {
+        let bb = 0;
+        for (let cb = 0; cb < Wb; cb++) bb += ib(gb(kb[Ub + cb].text), sb[cb]);
+        bb /= sb.length, (null === ab || bb > ab.score) && (ab = {
+          start: Ub,
+          score: bb
         })
       }
-      if (null === ak || ak.score < .5) return null;
-      const Xk = Rk.slice(ak.start, ak.start + tk);
+      if (null === ab || ab.score < .5) return null;
+      const Tb = kb.slice(ab.start, ab.start + Wb);
       return {
-        line: Xk[0].index + 1,
-        lastLine: Xk[Xk.length - 1].index + 1,
-        text: Xk.map((kk => kk.text.trim())).join("\n")
+        line: Tb[0].index + 1,
+        lastLine: Tb[Tb.length - 1].index + 1,
+        text: Tb.map((bb => bb.text.trim())).join("\n")
       }
     }
 
-    function rk(kk) {
-      return Ek().isFunctionExpression(kk) || Ek().isArrowFunction(kk)
+    function Gb(bb) {
+      return hb().isFunctionExpression(bb) || hb().isArrowFunction(bb)
     }
 
-    function Dk(kk) {
-      return Ek().isExpressionStatement(kk) && Ek().isBinaryExpression(kk.expression) && Ek().isPropertyAccessExpression(kk.expression.left) && ! function(kk) {
-        return Ek().isIdentifier(kk) && ("globalThis" === kk.text || "window" === kk.text || "self" === kk.text)
-      }(kk.expression.left.expression)
+    function Kb(bb) {
+      return hb().isExpressionStatement(bb) && hb().isBinaryExpression(bb.expression) && hb().isPropertyAccessExpression(bb.expression.left) && ! function(bb) {
+        return hb().isIdentifier(bb) && ("globalThis" === bb.text || "window" === bb.text || "self" === bb.text)
+      }(bb.expression.left.expression)
     }
 
-    function zk(kk, Fk, Bk) {
-      let Rk = Bk;
-      for (const ak of (null !== (tk = Ek().getLeadingCommentRanges(kk, Fk.getFullStart())) && void 0 !== tk ? tk : []).reverse()) {
-        var tk;
-        if (/\n[^\S\n]*\n/.test(kk.slice(ak.end, Rk))) break;
-        Rk = ak.pos
+    function Zb(bb, cb, sb) {
+      let kb = sb;
+      for (const ab of (null !== (Wb = hb().getLeadingCommentRanges(bb, cb.getFullStart())) && void 0 !== Wb ? Wb : []).reverse()) {
+        var Wb;
+        if (/\n[^\S\n]*\n/.test(bb.slice(ab.end, kb))) break;
+        kb = ab.pos
       }
-      return Rk
+      return kb
     }
 
-    function Pk(kk) {
-      var Fk;
+    function zb(bb) {
+      var cb;
       const {
-        parseDiagnostics: Bk
-      } = kk;
-      return (null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.length) && void 0 !== Fk ? Fk : 0) > 0
+        parseDiagnostics: sb
+      } = bb;
+      return (null !== (cb = null === sb || void 0 === sb ? void 0 : sb.length) && void 0 !== cb ? cb : 0) > 0
     }
 
-    function hk(kk) {
-      const Fk = Ek().createSourceFile("worldCode.js", kk, Ek().ScriptTarget.Latest, !1, Ek().ScriptKind.JS),
-        Bk = [],
-        Rk = (tk, ak) => {
-          const Xk = function(kk) {
-            var Fk, Bk;
-            if (Ek().isFunctionDeclaration(kk)) return null !== (Fk = null === (Bk = kk.name) || void 0 === Bk ? void 0 : Bk.text) && void 0 !== Fk ? Fk : null;
-            if (Ek().isVariableStatement(kk) && 1 === kk.declarationList.declarations.length) {
-              const Fk = kk.declarationList.declarations[0];
-              return Ek().isIdentifier(Fk.name) && Fk.initializer && rk(Fk.initializer) ? Fk.name.text : null
+    function qb(bb) {
+      const cb = hb().createSourceFile("worldCode.js", bb, hb().ScriptTarget.Latest, !1, hb().ScriptKind.JS),
+        sb = [],
+        kb = (Wb, ab) => {
+          const Tb = function(bb) {
+            var cb, sb;
+            if (hb().isFunctionDeclaration(bb)) return null !== (cb = null === (sb = bb.name) || void 0 === sb ? void 0 : sb.text) && void 0 !== cb ? cb : null;
+            if (hb().isVariableStatement(bb) && 1 === bb.declarationList.declarations.length) {
+              const cb = bb.declarationList.declarations[0];
+              return hb().isIdentifier(cb.name) && cb.initializer && Gb(cb.initializer) ? cb.name.text : null
             }
-            if (Ek().isExpressionStatement(kk) && Ek().isBinaryExpression(kk.expression) && kk.expression.operatorToken.kind === Ek().SyntaxKind.EqualsToken && rk(kk.expression.right)) {
-              const Fk = kk.expression.left;
-              return Ek().isIdentifier(Fk) ? Fk.text : Ek().isPropertyAccessExpression(Fk) ? Fk.name.text : null
+            if (hb().isExpressionStatement(bb) && hb().isBinaryExpression(bb.expression) && bb.expression.operatorToken.kind === hb().SyntaxKind.EqualsToken && Gb(bb.expression.right)) {
+              const cb = bb.expression.left;
+              return hb().isIdentifier(cb) ? cb.text : hb().isPropertyAccessExpression(cb) ? cb.name.text : null
             }
             return null
-          }(tk);
-          if (null !== Xk) {
-            const Rk = tk.getStart(Fk);
-            Bk.push({
-              name: Xk,
-              from: Rk,
-              to: tk.getEnd(),
-              commentFrom: zk(kk, tk, Rk),
-              topLevel: ak,
-              isProperty: Dk(tk)
+          }(Wb);
+          if (null !== Tb) {
+            const kb = Wb.getStart(cb);
+            sb.push({
+              name: Tb,
+              from: kb,
+              to: Wb.getEnd(),
+              commentFrom: Zb(bb, Wb, kb),
+              topLevel: ab,
+              isProperty: Kb(Wb)
             })
           }
-          Ek().forEachChild(tk, (kk => {
-            Rk(kk, !1)
+          hb().forEachChild(Wb, (bb => {
+            kb(bb, !1)
           }))
         };
-      for (const tk of Fk.statements) Rk(tk, !0);
+      for (const Wb of cb.statements) kb(Wb, !0);
       return {
-        functions: Bk,
-        hasErrors: Pk(Fk)
+        functions: sb,
+        hasErrors: zb(cb)
       }
     }
 
-    function qk(kk) {
-      return hk(kk).functions
+    function db(bb) {
+      return qb(bb).functions
     }
 
-    function Ck(kk) {
-      return kk.trim().replace(/^(?:callback:|function\s+)/, "").replace(/\s*\(.*$/s, "").trim()
+    function Ab(bb) {
+      return bb.trim().replace(/^(?:callback:|function\s+)/, "").replace(/\s*\(.*$/s, "").trim()
     }
 
-    function Zk(kk, Fk) {
-      var Bk;
-      const Rk = kk.filter((kk => kk.name === Fk)),
-        tk = Rk.filter((kk => !kk.isProperty)),
-        ak = tk.length > 0 ? tk : Rk;
-      return null !== (Bk = ak.find((kk => kk.topLevel))) && void 0 !== Bk ? Bk : ak[0]
+    function wb(bb, cb) {
+      var sb;
+      const kb = bb.filter((bb => bb.name === cb)),
+        Wb = kb.filter((bb => !bb.isProperty)),
+        ab = Wb.length > 0 ? Wb : kb;
+      return null !== (sb = ab.find((bb => bb.topLevel))) && void 0 !== sb ? sb : ab[0]
     }
 
-    function pk(kk, Fk) {
-      return "" === kk.trim() ? `${Fk.trim()}\n` : `${kk.replace(/\s*$/,"")}\n\n${Fk.trim()}\n`
+    function rb(bb, cb) {
+      return "" === bb.trim() ? `${cb.trim()}\n` : `${bb.replace(/\s*$/,"")}\n\n${cb.trim()}\n`
     }
 
-    function Kk(kk, Fk, Bk) {
-      var Rk, tk;
-      const ak = hk(kk),
+    function ob(bb, cb, sb) {
+      var kb, Wb;
+      const ab = qb(bb),
         {
-          functions: Xk
-        } = ak,
-        bk = qk(Bk),
-        wk = null !== (Rk = bk.find((kk => kk.topLevel && !kk.isProperty))) && void 0 !== Rk ? Rk : bk.find((kk => kk.topLevel)),
-        dk = Ck(Fk),
-        sk = wk ? Zk(Xk, wk.name) : void 0,
-        Vk = null !== (tk = void 0 !== sk && !bk.some((kk => kk.topLevel && kk.name === dk)) ? sk : Zk(Xk, dk)) && void 0 !== tk ? tk : sk;
-      return Vk ? xk(kk, ak, Vk, bk, Bk) : pk(kk, Bk)
+          functions: Tb
+        } = ab,
+        Ub = db(sb),
+        Ib = null !== (kb = Ub.find((bb => bb.topLevel && !bb.isProperty))) && void 0 !== kb ? kb : Ub.find((bb => bb.topLevel)),
+        Hb = Ab(cb),
+        fb = Ib ? wb(Tb, Ib.name) : void 0,
+        Mb = null !== (Wb = void 0 !== fb && !Ub.some((bb => bb.topLevel && bb.name === Hb)) ? fb : wb(Tb, Hb)) && void 0 !== Wb ? Wb : fb;
+      return Mb ? Sb(bb, ab, Mb, Ub, sb) : rb(bb, sb)
     }
 
-    function xk(kk, Fk, Bk, Rk, tk) {
+    function Sb(bb, cb, sb, kb, Wb) {
       let {
-        functions: ak,
-        hasErrors: Xk
-      } = Fk;
-      const bk = ak.some((kk => kk.from > Bk.from && kk.to <= Bk.to && !Rk.some((Fk => Fk.name === kk.name))));
-      if (Xk && bk) return null;
-      const wk = /^\s*(?:\/\/|\/\*)/.test(tk) ? Bk.commentFrom : Bk.from;
-      return kk.slice(0, wk) + Uk(kk.slice(wk, Bk.to), tk.trim(), ck(kk.slice(Bk.to))) + kk.slice(Bk.to)
+        functions: ab,
+        hasErrors: Tb
+      } = cb;
+      const Ub = ab.some((bb => bb.from > sb.from && bb.to <= sb.to && !kb.some((cb => cb.name === bb.name))));
+      if (Tb && Ub) return null;
+      const Ib = /^\s*(?:\/\/|\/\*)/.test(Wb) ? sb.commentFrom : sb.from;
+      return bb.slice(0, Ib) + Db(bb.slice(Ib, sb.to), Wb.trim(), Eb(bb.slice(sb.to))) + bb.slice(sb.to)
     }
 
-    function jk(kk, Fk, Bk, Rk, tk) {
-      const ak = Rk.trim();
-      if (ak.includes("\n") || !ak.endsWith("{")) return null;
-      const Xk = hk(kk),
-        bk = Xk.functions.find((Rk => Rk.topLevel && lk(kk, Rk.from) <= Fk && Bk < Rk.to && !kk.slice(Rk.from, Bk).includes("\n"))),
-        wk = hk(tk),
-        dk = wk.functions.filter((kk => kk.topLevel)),
-        sk = !wk.hasErrors && (1 === dk.length || dk.some((kk => kk.name === (null === bk || void 0 === bk ? void 0 : bk.name)))),
-        Vk = 1 === dk.length && dk[0].name !== (null === bk || void 0 === bk ? void 0 : bk.name) ? dk[0].name : void 0,
-        Jk = void 0 === Vk ? void 0 : Xk.functions.find((kk => kk.topLevel && kk.name === Vk));
-      return bk && sk ? xk(kk, Xk, null !== Jk && void 0 !== Jk ? Jk : bk, wk.functions, tk) : function(kk, Fk, Bk, Rk, tk) {
-        const ak = Ek().createSourceFile("worldCode.js", kk, Ek().ScriptTarget.Latest, !0, Ek().ScriptKind.JS),
-          Xk = ak.statements.find((Rk => {
-            const tk = Rk.getStart(ak);
-            return lk(kk, tk) <= Fk && Bk < Rk.getEnd() && !kk.slice(tk, Bk).includes("\n")
+    function Rb(bb, cb, sb, kb, Wb) {
+      const ab = kb.trim();
+      if (ab.includes("\n") || !ab.endsWith("{")) return null;
+      const Tb = qb(bb),
+        Ub = Tb.functions.find((kb => kb.topLevel && vb(bb, kb.from) <= cb && sb < kb.to && !bb.slice(kb.from, sb).includes("\n"))),
+        Ib = qb(Wb),
+        Hb = Ib.functions.filter((bb => bb.topLevel)),
+        fb = !Ib.hasErrors && (1 === Hb.length || Hb.some((bb => bb.name === (null === Ub || void 0 === Ub ? void 0 : Ub.name)))),
+        Mb = 1 === Hb.length && Hb[0].name !== (null === Ub || void 0 === Ub ? void 0 : Ub.name) ? Hb[0].name : void 0,
+        Xb = void 0 === Mb ? void 0 : Tb.functions.find((bb => bb.topLevel && bb.name === Mb));
+      return Ub && fb ? Sb(bb, Tb, null !== Xb && void 0 !== Xb ? Xb : Ub, Ib.functions, Wb) : function(bb, cb, sb, kb, Wb) {
+        const ab = hb().createSourceFile("worldCode.js", bb, hb().ScriptTarget.Latest, !0, hb().ScriptKind.JS),
+          Tb = ab.statements.find((kb => {
+            const Wb = kb.getStart(ab);
+            return vb(bb, Wb) <= cb && sb < kb.getEnd() && !bb.slice(Wb, sb).includes("\n")
           })),
-          bk = Ek().createSourceFile("replace.js", tk.trim(), Ek().ScriptTarget.Latest, !0, Ek().ScriptKind.JS),
-          wk = 1 === bk.statements.length ? bk.statements[0] : void 0;
-        if (!Xk || !wk || Pk(bk) || wk.kind !== Xk.kind || !wk.getText(bk).startsWith(Rk)) return null;
-        const dk = Xk.getStart(ak);
-        return kk.slice(0, dk) + tk.trim() + kk.slice(Xk.getEnd())
-      }(kk, Fk, Bk, ak, tk)
+          Ub = hb().createSourceFile("replace.js", Wb.trim(), hb().ScriptTarget.Latest, !0, hb().ScriptKind.JS),
+          Ib = 1 === Ub.statements.length ? Ub.statements[0] : void 0;
+        if (!Tb || !Ib || zb(Ub) || Ib.kind !== Tb.kind || !Ib.getText(Ub).startsWith(kb)) return null;
+        const Hb = Tb.getStart(ab);
+        return bb.slice(0, Hb) + Wb.trim() + bb.slice(Tb.getEnd())
+      }(bb, cb, sb, ab, Wb)
     }
 
-    function lk(kk, Fk) {
-      let Bk = Fk;
-      for (; Bk > 0 && (" " === kk[Bk - 1] || "\t" === kk[Bk - 1]);) Bk--;
-      return 0 === Bk || "\n" === kk[Bk - 1] ? Bk : Fk
+    function vb(bb, cb) {
+      let sb = cb;
+      for (; sb > 0 && (" " === bb[sb - 1] || "\t" === bb[sb - 1]);) sb--;
+      return 0 === sb || "\n" === bb[sb - 1] ? sb : cb
     }
 
-    function nk(kk, Fk, Bk) {
-      const Rk = Fk.trim().toLowerCase();
-      if ("" !== kk.trim() && ("top" === Rk || "start" === Rk)) return `${Bk.trim()}\n\n${kk.replace(/^\s+/,"")}`;
-      const tk = "end" === Rk ? void 0 : Zk(qk(kk), Ck(Fk));
-      return tk ? `${kk.slice(0,tk.to)}\n\n${Bk.trim()}${kk.slice(tk.to)}` : pk(kk, Bk)
+    function Fb(bb, cb, sb) {
+      const kb = cb.trim().toLowerCase();
+      if ("" !== bb.trim() && ("top" === kb || "start" === kb)) return `${sb.trim()}\n\n${bb.replace(/^\s+/,"")}`;
+      const Wb = "end" === kb ? void 0 : wb(db(bb), Ab(cb));
+      return Wb ? `${bb.slice(0,Wb.to)}\n\n${sb.trim()}${bb.slice(Wb.to)}` : rb(bb, sb)
     }
 
-    function Ik(kk) {
-      return [...new Set(qk(kk).filter((kk => kk.topLevel)).map((kk => kk.name)))]
+    function xb(bb) {
+      return [...new Set(db(bb).filter((bb => bb.topLevel)).map((bb => bb.name)))]
     }
-    const Qk = 120,
-      kF = /\b(?:my|his|her|their)\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\b(?:i am|i'm)\s+\d+\b|\b\d+\s+years?\s+old\b|\be-?mail\b|\bphone number\b|\bpassword\b|\bwhere (?:i|we) live\b/i;
+    const jb = 120,
+      pb = /\b(?:my|his|her|their)\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\b(?:i am|i'm)\s+\d+\b|\b\d+\s+years?\s+old\b|\be-?mail\b|\bphone number\b|\bpassword\b|\bwhere (?:i|we) live\b/i;
 
-    function FF(kk) {
-      let Fk = kk.replace(/\s+/g, " ").trim();
-      if ("" === Fk || kF.test(Fk)) return null;
-      if (Fk.length > Qk) {
-        const kk = Fk.slice(0, Qk);
-        Fk = `${kk.slice(0,Math.max(kk.lastIndexOf(" "),60)).trimEnd()}\u2026`
+    function bc(bb) {
+      let cb = bb.replace(/\s+/g, " ").trim();
+      if ("" === cb || pb.test(cb)) return null;
+      if (cb.length > jb) {
+        const bb = cb.slice(0, jb);
+        cb = `${bb.slice(0,Math.max(bb.lastIndexOf(" "),60)).trimEnd()}\u2026`
       }
-      return Fk.charAt(0).toUpperCase() + Fk.slice(1)
+      return cb.charAt(0).toUpperCase() + cb.slice(1)
     }
-    const BF = /(?:===?\s*|\bcase\s+|startsWith\(\s*)["'`]\/?([a-zA-Z][\w-]{0,20})/g;
+    const cc = /(?:===?\s*|\bcase\s+|startsWith\(\s*)["'`]\/?([a-zA-Z][\w-]{0,20})/g;
 
-    function RF(kk) {
-      var Fk, Bk;
-      const Rk = null === (Fk = /\(([^)]*)\)/.exec(kk)) || void 0 === Fk || null === (Bk = Fk[1].split(",")[1]) || void 0 === Bk ? void 0 : Bk.trim();
-      return Rk && /^[A-Za-z_$][\w$]*$/.test(Rk) ? [...kk.matchAll(/\b([A-Za-z_$][\w$]*)\s*\(([^()]*)\)/g)].flatMap((kk => kk[2].split(",").some((kk => kk.trim() === Rk)) ? [kk[1]] : [])) : []
+    function sc(bb) {
+      var cb, sb;
+      const kb = null === (cb = /\(([^)]*)\)/.exec(bb)) || void 0 === cb || null === (sb = cb[1].split(",")[1]) || void 0 === sb ? void 0 : sb.trim();
+      return kb && /^[A-Za-z_$][\w$]*$/.test(kb) ? [...bb.matchAll(/\b([A-Za-z_$][\w$]*)\s*\(([^()]*)\)/g)].flatMap((bb => bb[2].split(",").some((bb => bb.trim() === kb)) ? [bb[1]] : [])) : []
     }
 
-    function tF(kk, Fk) {
-      const Bk = new Set,
-        Rk = new Set,
-        tk = new Set,
-        ak = Object.values(kk).map((kk => {
-          const Fk = qk(kk),
-            Bk = Fk.filter((kk => "playerCommand" === kk.name)).map((Fk => kk.slice(Fk.from, Fk.to)));
+    function kc(bb, cb) {
+      const sb = new Set,
+        kb = new Set,
+        Wb = new Set,
+        ab = Object.values(bb).map((bb => {
+          const cb = db(bb),
+            sb = cb.filter((bb => "playerCommand" === bb.name)).map((cb => bb.slice(cb.from, cb.to)));
           return {
-            text: kk,
-            found: Fk,
-            own: Bk
+            text: bb,
+            found: cb,
+            own: sb
           }
         })),
-        Xk = new Set(ak.flatMap((kk => {
+        Tb = new Set(ab.flatMap((bb => {
           let {
-            own: Fk
-          } = kk;
-          return Fk.flatMap(RF)
+            own: cb
+          } = bb;
+          return cb.flatMap(sc)
         })));
       for (const {
-          text: wk,
-          found: dk,
-          own: sk
+          text: Ib,
+          found: Hb,
+          own: fb
         }
-        of ak) {
-        for (const tk of Ik(wk)) Fk.has(tk) ? Bk.add(tk) : Rk.add(tk);
-        const kk = [...sk, ...dk.filter((kk => "playerCommand" !== kk.name && Xk.has(kk.name))).map((kk => wk.slice(kk.from, kk.to)))],
-          ak = kk.length > 0 || !/\bplayerCommand\b/.test(wk) ? kk : [wk];
-        for (const Fk of ak)
-          for (const kk of Fk.matchAll(BF)) tk.add(`/${kk[1].split(/\s/)[0]}`)
+        of ab) {
+        for (const Wb of xb(Ib)) cb.has(Wb) ? sb.add(Wb) : kb.add(Wb);
+        const bb = [...fb, ...Hb.filter((bb => "playerCommand" !== bb.name && Tb.has(bb.name))).map((bb => Ib.slice(bb.from, bb.to)))],
+          ab = bb.length > 0 || !/\bplayerCommand\b/.test(Ib) ? bb : [Ib];
+        for (const cb of ab)
+          for (const bb of cb.matchAll(cc)) Wb.add(`/${bb[1].split(/\s/)[0]}`)
       }
-      const bk = kk => [...kk].slice(0, 12);
+      const Ub = bb => [...bb].slice(0, 12);
       return {
-        callbacks: bk(Bk),
-        commands: bk(tk),
-        functions: bk(Rk)
+        callbacks: Ub(sb),
+        commands: Ub(Wb),
+        functions: Ub(kb)
       }
     }
-    const aF = new Map([
+    const Wc = new Map([
       ["onPlayerJoin", "When a player joins"],
       ["onPlayerLeave", "When a player leaves"],
       ["onPlayerChat", "When a player chats"],
@@ -520,87 +520,87 @@ export const modules = {
       ["doPeriodicSave", "When the game saves"]
     ]);
 
-    function XF(kk) {
-      const Fk = aF.get(kk);
-      if (Fk) return Fk;
-      return `When: ${kk.replace(/^on/,"").replace(/([a-z])([A-Z])/g,"$1 $2").toLowerCase()}`
+    function ac(bb) {
+      const cb = Wc.get(bb);
+      if (cb) return cb;
+      return `When: ${bb.replace(/^on/,"").replace(/([a-z])([A-Z])/g,"$1 $2").toLowerCase()}`
     }
 
-    function bF(kk) {
-      return Array.isArray(kk) && kk.every((kk => "string" === typeof kk))
+    function Tc(bb) {
+      return Array.isArray(bb) && bb.every((bb => "string" === typeof bb))
     }
-    const wF = /\b(?:game|minigame|tycoon|rpg|simulator|obby|shop|store|upgrades?|levels?|rounds?|teams?|quests?|leaderboards?|lobby|economy|inventory|bosse?s?|waves?|missions?)\b/gi,
-      dF = /,|\band\b|\bthen\b|\bplus\b|\bwith\b|\balso\b/gi;
+    const Uc = /\b(?:game|minigame|tycoon|rpg|simulator|obby|shop|store|upgrades?|levels?|rounds?|teams?|quests?|leaderboards?|lobby|economy|inventory|bosse?s?|waves?|missions?)\b/gi,
+      Ic = /,|\band\b|\bthen\b|\bplus\b|\bwith\b|\balso\b/gi;
 
-    function sF(kk) {
-      var Fk, Bk;
-      const Rk = kk.trim().split(/\s+/).length,
-        tk = new Set((null !== (Fk = kk.match(wF)) && void 0 !== Fk ? Fk : []).map((kk => kk.toLowerCase().replace(/s$/, "")))).size,
-        ak = (null !== (Bk = kk.match(dF)) && void 0 !== Bk ? Bk : []).length;
-      return tk >= 2 && ak >= 2 || Rk >= 30 && ak >= 3
-    }
-
-    function VF(kk) {
-      const Fk = kk.split(/\n|\|/).map((kk => kk.replace(/^\s*(?:[-*\u2022]|\d+[.)]|step\s*\d+[:.)]?)\s*/i, "").replace(/\s+/g, " ").trim())).filter((kk => "" !== kk)).slice(0, 5).map((kk => kk.length > 90 ? `${kk.slice(0,89).trimEnd()}\u2026` : kk));
-      return Fk.length >= 2 ? Fk : []
-    }
-    var JF = Bk(4583);
-
-    function AF(kk) {
-      return kk.replace(/^on/, "").replace(/^player/i, "").toLowerCase()
+    function Hc(bb) {
+      var cb, sb;
+      const kb = bb.trim().split(/\s+/).length,
+        Wb = new Set((null !== (cb = bb.match(Uc)) && void 0 !== cb ? cb : []).map((bb => bb.toLowerCase().replace(/s$/, "")))).size,
+        ab = (null !== (sb = bb.match(Ic)) && void 0 !== sb ? sb : []).length;
+      return Wb >= 2 && ab >= 2 || kb >= 30 && ab >= 3
     }
 
-    function eF(kk) {
-      const Fk = new Set;
-      for (const Bk of kk.matchAll(/^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(/gm)) Fk.add(Bk[1]);
-      for (const Bk of kk.matchAll(/^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|[A-Za-z_$][\w$]*\s*=>)/gm)) Fk.add(Bk[1]);
-      return [...Fk]
+    function fc(bb) {
+      const cb = bb.split(/\n|\|/).map((bb => bb.replace(/^\s*(?:[-*\u2022]|\d+[.)]|step\s*\d+[:.)]?)\s*/i, "").replace(/\s+/g, " ").trim())).filter((bb => "" !== bb)).slice(0, 5).map((bb => bb.length > 90 ? `${bb.slice(0,89).trimEnd()}\u2026` : bb));
+      return cb.length >= 2 ? cb : []
+    }
+    var Mc = sb(4588);
+
+    function Xc(bb) {
+      return bb.replace(/^on/, "").replace(/^player/i, "").toLowerCase()
     }
 
-    function yF(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const Rk = new Set(Fk),
-        tk = new Map;
-      for (const Vk of Fk) {
-        var ak;
-        const kk = AF(Vk);
-        tk.set(kk, [...null !== (ak = tk.get(kk)) && void 0 !== ak ? ak : [], Vk])
+    function nc(bb) {
+      const cb = new Set;
+      for (const sb of bb.matchAll(/^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(/gm)) cb.add(sb[1]);
+      for (const sb of bb.matchAll(/^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|[A-Za-z_$][\w$]*\s*=>)/gm)) cb.add(sb[1]);
+      return [...cb]
+    }
+
+    function mc(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const kb = new Set(cb),
+        Wb = new Map;
+      for (const Mb of cb) {
+        var ab;
+        const bb = Xc(Mb);
+        Wb.set(bb, [...null !== (ab = Wb.get(bb)) && void 0 !== ab ? ab : [], Mb])
       }
-      const Xk = eF(kk),
-        bk = new Set(eF(Bk)),
-        wk = [];
-      let dk = kk;
-      for (const Vk of Xk) {
-        var sk;
-        if (Rk.has(Vk) || bk.has(Vk) || !/^(on|player)[A-Z]/.test(Vk)) continue;
-        const kk = null !== (sk = tk.get(AF(Vk))) && void 0 !== sk ? sk : [];
-        1 !== kk.length || Xk.includes(kk[0]) || (dk = (0, JF.y)(dk, new RegExp(`${Vk}(?![\\w$])`, "g"), JF.r, (() => kk[0])), wk.push({
-          from: Vk,
-          to: kk[0]
+      const Tb = nc(bb),
+        Ub = new Set(nc(sb)),
+        Ib = [];
+      let Hb = bb;
+      for (const Mb of Tb) {
+        var fb;
+        if (kb.has(Mb) || Ub.has(Mb) || !/^(on|player)[A-Z]/.test(Mb)) continue;
+        const bb = null !== (fb = Wb.get(Xc(Mb))) && void 0 !== fb ? fb : [];
+        1 !== bb.length || Tb.includes(bb[0]) || (Hb = (0, Mc.t)(Hb, new RegExp(`${Mb}(?![\\w$])`, "g"), Mc.m, (() => bb[0])), Ib.push({
+          from: Mb,
+          to: bb[0]
         }))
       }
       return {
-        code: dk,
-        renames: wk
+        code: Hb,
+        renames: Ib
       }
     }
-    const fF = {
+    const lc = {
         functions: "api",
         callbacks: "callback",
         "client options": "clientOption"
       },
-      mF = Object.keys(fF).map((kk => `"${kk}"`)).join(", ").replace(/, ([^,]*)$/, " or $1"),
-      WF = {
+      Qc = Object.keys(lc).map((bb => `"${bb}"`)).join(", ").replace(/, ([^,]*)$/, " or $1"),
+      ec = {
         type: "string",
         description: "A few plain words for the creator on what this change does, under 80 characters"
       },
-      vF = {
+      Cc = {
         readOnlyHint: !0,
         destructiveHint: !1,
         idempotentHint: !0,
         openWorldHint: !1
       },
-      iF = [{
+      Nc = [{
         name: "write_file",
         title: "Write a file",
         description: "Replaces a file with new code, or makes a new file",
@@ -611,7 +611,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: WF,
+            why: ec,
             content: {
               type: "string",
               description: "The whole new file"
@@ -636,7 +636,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: WF,
+            why: ec,
             search: {
               type: "string",
               description: "Lines to find, copied exactly from the current file"
@@ -669,7 +669,7 @@ export const modules = {
               type: "string",
               description: "The function's or callback's name, e.g. onPlayerJoin"
             },
-            why: WF,
+            why: ec,
             code: {
               type: "string",
               description: "The whole new function"
@@ -698,7 +698,7 @@ export const modules = {
               type: "string",
               description: 'Where it goes: "top", "end", or the name of the function to put it after'
             },
-            why: WF,
+            why: ec,
             code: {
               type: "string",
               description: "Only the new code"
@@ -731,7 +731,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: WF
+            why: ec
           },
           required: ["name"]
         },
@@ -768,7 +768,7 @@ export const modules = {
         inputSchema: {
           type: "object",
           properties: {
-            why: WF,
+            why: ec,
             search: {
               type: "string",
               description: "Lines to find, copied exactly from the open code"
@@ -906,7 +906,7 @@ export const modules = {
           },
           required: ["path"]
         },
-        annotations: vF,
+        annotations: Cc,
         _meta: {
           isLookup: !0
         }
@@ -919,7 +919,7 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: vF,
+        annotations: Cc,
         _meta: {
           isLookup: !0
         }
@@ -937,7 +937,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: vF,
+        annotations: Cc,
         _meta: {
           isLookup: !0
         }
@@ -950,25 +950,25 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: vF,
+        annotations: Cc,
         _meta: {
           isLookup: !0
         }
       }, {
         name: "fetch_url",
         title: "Read a docs page",
-        description: `Reads a page of Bloxd's docs as Markdown. ${fk.j} lists every page with its link; then read the page, or the part of a long page, you need`,
+        description: `Reads a page of Bloxd's docs as Markdown. ${Qb.m} lists every page with its link; then read the page, or the part of a long page, you need`,
         inputSchema: {
           type: "object",
           properties: {
             url: {
               type: "string",
-              description: `${fk.j}, or a page it links to`
+              description: `${Qb.m}, or a page it links to`
             }
           },
           required: ["url"]
         },
-        annotations: vF,
+        annotations: Cc,
         _meta: {
           isLookup: !0
         }
@@ -981,7 +981,7 @@ export const modules = {
           properties: {
             list: {
               type: "string",
-              description: `${mF}, to list every one of them`
+              description: `${Qc}, to list every one of them`
             },
             name: {
               type: "string",
@@ -990,7 +990,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: vF,
+        annotations: Cc,
         _meta: {
           isLookup: !0
         }
@@ -1008,7 +1008,7 @@ export const modules = {
           },
           required: ["words"]
         },
-        annotations: vF,
+        annotations: Cc,
         _meta: {
           isLookup: !0
         }
@@ -1026,7 +1026,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: vF,
+        annotations: Cc,
         _meta: {
           isLookup: !0
         }
@@ -1044,7 +1044,7 @@ export const modules = {
           },
           required: ["name"]
         },
-        annotations: vF,
+        annotations: Cc,
         _meta: {
           isLookup: !0
         }
@@ -1057,290 +1057,290 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: vF,
+        annotations: Cc,
         _meta: {
           isLookup: !0
         }
       }];
 
-    function YF(kk) {
-      var Fk;
-      return !0 === (null === (Fk = oF(kk)._meta) || void 0 === Fk ? void 0 : Fk.isLookup)
+    function Vc(bb) {
+      var cb;
+      return !0 === (null === (cb = Lc(bb)._meta) || void 0 === cb ? void 0 : cb.isLookup)
     }
 
-    function oF(kk) {
-      const Fk = iF.find((Fk => Fk.name === kk));
-      if (!Fk) throw new Error(`No AI Helper tool ${kk}`);
-      return Fk
+    function Lc(bb) {
+      const cb = Nc.find((cb => cb.name === bb));
+      if (!cb) throw new Error(`No AI Helper tool ${bb}`);
+      return cb
     }
-    const LF = iF.map((kk => kk.name)).filter((kk => "plan" !== kk && "remember" !== kk)).join("|"),
-      OF = new RegExp(String.raw`^(?:\s*(?:We(?:'ll|'d| will| need to| should| must| can(?!'t))|Will use|Need to|Simpler:)(?:[^\n.]*\.(?=[A-Z])|[^\n]*(?:\n+|$))|\s*(?:Now,? )?(?:I'll |I will |[Ll]et's |[Ll]et me )?(?:[Ww]rite|[Mm]ake|[Ss]end|[Oo]utput|[Pp]roduce|[Uu]se|[Dd]o|[Cc]all) (?:the |an? |one )?(?:${LF})\b[^\n.]*\.?[ \t]*\n*)+`),
-      EF = [new RegExp(String.raw`(?:^|[^\w"</=.])(?:${LF})\b(?!\s*\()`), /\btool calls?\b|^(?:so,? )?(?:(?:we(?:'ll| will)?|I'll|let's) (?:produce|output|generate)|now (?:produce|output))\b|^The user (?:wants?|wanted|asks?|asked|requests?|requested|says|said)\b/i, /^We (?:need|have) to\b/, /^(?:Now|Then),? (?:replace|apply) \S+\.?$|^First edit\b|^Provide (?:the )?(?:entire|full)\b/, /^Let's (?:update|write|implement|produce|output|apply|edit) (?:the )?(?:code|edits?|changes?|calls?|function)\b/, /^(?:Implement|Proceed)\.?$/],
-      SF = /[.!?](?=[ \t]|[A-Z]|$)|\n|$/g;
+    const uc = Nc.map((bb => bb.name)).filter((bb => "plan" !== bb && "remember" !== bb)).join("|"),
+      Yc = new RegExp(String.raw`^(?:\s*(?:We(?:'ll|'d| will| need to| should| must| can(?!'t))|Will use|Need to|Simpler:)(?:[^\n.]*\.(?=[A-Z])|[^\n]*(?:\n+|$))|\s*(?:Now,? )?(?:I'll |I will |[Ll]et's |[Ll]et me )?(?:[Ww]rite|[Mm]ake|[Ss]end|[Oo]utput|[Pp]roduce|[Uu]se|[Dd]o|[Cc]all) (?:the |an? |one )?(?:${uc})\b[^\n.]*\.?[ \t]*\n*)+`),
+      hc = [new RegExp(String.raw`(?:^|[^\w"</=.])(?:${uc})\b(?!\s*\()`), /\btool calls?\b|^(?:so,? )?(?:(?:we(?:'ll| will)?|I'll|let's) (?:produce|output|generate)|now (?:produce|output))\b|^The user (?:wants?|wanted|asks?|asked|requests?|requested|says|said)\b/i, /^We (?:need|have) to\b/, /^(?:Now|Then),? (?:replace|apply) \S+\.?$|^First edit\b|^Provide (?:the )?(?:entire|full)\b/, /^Let's (?:update|write|implement|produce|output|apply|edit) (?:the )?(?:code|edits?|changes?|calls?|function)\b/, /^(?:Implement|Proceed)\.?$/],
+      Jc = /[.!?](?=[ \t]|[A-Z]|$)|\n|$/g;
 
-    function NF(kk) {
-      const Fk = kk.trim();
-      return EF.some((kk => kk.test(Fk)))
+    function gc(bb) {
+      const cb = bb.trim();
+      return hc.some((bb => bb.test(cb)))
     }
 
-    function HF(kk, Fk) {
-      const Bk = kk.replace(OF, "");
-      return Fk ? function(kk) {
-        const Fk = kk.indexOf("```"),
-          Bk = -1 === Fk ? kk : kk.slice(0, Fk);
-        let Rk = -1,
-          tk = -1,
-          ak = 0;
-        for (const Xk of Bk.matchAll(SF)) {
-          const kk = Xk.index + Xk[0].length;
-          NF(Bk.slice(ak, kk)) && (Rk = -1 === Rk ? ak : Rk, tk = kk), ak = kk
+    function Bc(bb, cb) {
+      const sb = bb.replace(Yc, "");
+      return cb ? function(bb) {
+        const cb = bb.indexOf("```"),
+          sb = -1 === cb ? bb : bb.slice(0, cb);
+        let kb = -1,
+          Wb = -1,
+          ab = 0;
+        for (const Tb of sb.matchAll(Jc)) {
+          const bb = Tb.index + Tb[0].length;
+          gc(sb.slice(ab, bb)) && (kb = -1 === kb ? ab : kb, Wb = bb), ab = bb
         }
-        return -1 === tk ? kk : "" !== Bk.slice(tk).trim() ? kk.slice(tk).trimStart() : `${kk.slice(0,Rk).trimEnd()}\n${kk.slice(Bk.length)}`.trim()
-      }(Bk) : "" !== Bk.trim() ? Bk : kk
+        return -1 === Wb ? bb : "" !== sb.slice(Wb).trim() ? bb.slice(Wb).trimStart() : `${bb.slice(0,kb).trimEnd()}\n${bb.slice(sb.length)}`.trim()
+      }(sb) : "" !== sb.trim() ? sb : bb
     }
-    const uF = /^(?=[\s\S]{200})[^\n]*(?:\\n[^\n]*){3}$/,
-      MF = new Set(["content", "code"]);
+    const tc = /^(?=[\s\S]{200})[^\n]*(?:\\n[^\n]*){3}$/,
+      yc = new Set(["content", "code"]);
 
-    function gF(kk) {
-      const Fk = "string" === typeof kk ? kk.split(/[./:]/).pop() : void 0;
-      return function(kk) {
-        return iF.some((Fk => Fk.name === kk))
-      }(Fk) ? Fk : null
+    function Pc(bb) {
+      const cb = "string" === typeof bb ? bb.split(/[./:]/).pop() : void 0;
+      return function(bb) {
+        return Nc.some((cb => cb.name === bb))
+      }(cb) ? cb : null
     }
 
-    function UF(kk, Fk) {
-      return Bk => {
-        const Rk = [];
-        let tk;
-        for (const wk of Bk.matchAll(kk)) {
-          var ak;
-          const kk = gF(wk[1]);
-          if (null === kk) continue;
-          const dk = {};
-          for (const Bk of wk[2].matchAll(Fk)) {
-            var Xk, bk;
-            dk[null !== (Xk = Bk[1]) && void 0 !== Xk ? Xk : Bk[2]] = null !== (bk = Bk[3]) && void 0 !== bk ? bk : Bk[4]
-          }(null === (ak = tk) || void 0 === ak ? void 0 : ak.call.name) === kk && "" === Bk.slice(tk.index + tk.call.source.length, wk.index).trim() ? Rk[Rk.length - 1] = {
+    function Dc(bb, cb) {
+      return sb => {
+        const kb = [];
+        let Wb;
+        for (const Ib of sb.matchAll(bb)) {
+          var ab;
+          const bb = Pc(Ib[1]);
+          if (null === bb) continue;
+          const Hb = {};
+          for (const sb of Ib[2].matchAll(cb)) {
+            var Tb, Ub;
+            Hb[null !== (Tb = sb[1]) && void 0 !== Tb ? Tb : sb[2]] = null !== (Ub = sb[3]) && void 0 !== Ub ? Ub : sb[4]
+          }(null === (ab = Wb) || void 0 === ab ? void 0 : ab.call.name) === bb && "" === sb.slice(Wb.index + Wb.call.source.length, Ib.index).trim() ? kb[kb.length - 1] = {
             call: {
-              name: kk,
-              args: dk,
-              source: Bk.slice(tk.index, wk.index + wk[0].length)
+              name: bb,
+              args: Hb,
+              source: sb.slice(Wb.index, Ib.index + Ib[0].length)
             },
-            index: tk.index
-          } : Rk.push({
+            index: Wb.index
+          } : kb.push({
             call: {
-              name: kk,
-              args: dk,
-              source: wk[0]
+              name: bb,
+              args: Hb,
+              source: Ib[0]
             },
-            index: wk.index
-          }), tk = "" === wk[2].trim() && oF(kk).inputSchema.required.length > 0 ? Rk.at(-1) : void 0
+            index: Ib.index
+          }), Wb = "" === Ib[2].trim() && Lc(bb).inputSchema.required.length > 0 ? kb.at(-1) : void 0
         }
-        return Rk
+        return kb
       }
     }
 
-    function cF(kk) {
-      return kk.replace(/\\(["\\nt])/g, ((kk, Fk) => "n" === Fk ? "\n" : "t" === Fk ? "\t" : Fk))
+    function Ec(bb) {
+      return bb.replace(/\\(["\\nt])/g, ((bb, cb) => "n" === cb ? "\n" : "t" === cb ? "\t" : cb))
     }
 
-    function GF(kk) {
-      let Fk = null !== kk && void 0 !== kk ? kk : {};
-      if ("string" === typeof Fk) try {
-        Fk = JSON.parse("" === Fk ? "{}" : Fk)
+    function ic(bb) {
+      let cb = null !== bb && void 0 !== bb ? bb : {};
+      if ("string" === typeof cb) try {
+        cb = JSON.parse("" === cb ? "{}" : cb)
       } catch {
         return null
       }
-      if ("object" !== typeof Fk || null === Fk) return null;
-      const Bk = {};
-      for (const [Rk, tk] of Object.entries(Fk)) "string" === typeof tk ? Bk[Rk] = MF.has(Rk) && uF.test(tk) && !tk.includes("\n") ? cF(tk) : tk : "boolean" === typeof tk || "number" === typeof tk ? Bk[Rk] = String(tk) : "object" !== typeof tk || null === tk || Array.isArray(tk) ? Array.isArray(tk) && tk.every((kk => "string" === typeof kk)) && (Bk[Rk] = tk.join("\n")) : Bk[Rk] = JSON.stringify(tk);
-      return Bk
+      if ("object" !== typeof cb || null === cb) return null;
+      const sb = {};
+      for (const [kb, Wb] of Object.entries(cb)) "string" === typeof Wb ? sb[kb] = yc.has(kb) && tc.test(Wb) && !Wb.includes("\n") ? Ec(Wb) : Wb : "boolean" === typeof Wb || "number" === typeof Wb ? sb[kb] = String(Wb) : "object" !== typeof Wb || null === Wb || Array.isArray(Wb) ? Array.isArray(Wb) && Wb.every((bb => "string" === typeof bb)) && (sb[kb] = Wb.join("\n")) : sb[kb] = JSON.stringify(Wb);
+      return sb
     }
 
-    function TF(kk, Fk) {
-      let Bk = 0,
-        Rk = !1;
-      for (let tk = Fk; tk < kk.length; tk++) {
-        const Fk = kk[tk];
-        if (Rk) "\\" === Fk ? tk++ : '"' === Fk && (Rk = !1);
-        else if ('"' === Fk) Rk = !0;
-        else if ("{" === Fk) Bk++;
-        else if ("}" === Fk && (Bk--, 0 === Bk)) return tk + 1
+    function Oc(bb, cb) {
+      let sb = 0,
+        kb = !1;
+      for (let Wb = cb; Wb < bb.length; Wb++) {
+        const cb = bb[Wb];
+        if (kb) "\\" === cb ? Wb++ : '"' === cb && (kb = !1);
+        else if ('"' === cb) kb = !0;
+        else if ("{" === cb) sb++;
+        else if ("}" === cb && (sb--, 0 === sb)) return Wb + 1
       }
       return null
     }
 
-    function rF(kk, Fk) {
-      let Bk = kk;
+    function Gc(bb, cb) {
+      let sb = bb;
       for (const {
-          call: Rk,
-          index: tk
+          call: kb,
+          index: Wb
         }
-        of Fk) Bk = Bk.slice(0, tk) + " ".repeat(Rk.source.length) + Bk.slice(tk + Rk.source.length);
-      return Bk
+        of cb) sb = sb.slice(0, Wb) + " ".repeat(kb.source.length) + sb.slice(Wb + kb.source.length);
+      return sb
     }
-    const DF = new RegExp(`\\b(${iF.map((kk=>kk.name)).join("|")})\\s*\\(\\s*(?=\\{)`, "g");
-    const zF = {
-        formatCall: (kk, Fk) => {
-          const Bk = Object.fromEntries(Object.entries(Fk).filter((kk => {
-            let [, Fk] = kk;
-            return void 0 !== Fk
+    const Kc = new RegExp(`\\b(${Nc.map((bb=>bb.name)).join("|")})\\s*\\(\\s*(?=\\{)`, "g");
+    const Zc = {
+        formatCall: (bb, cb) => {
+          const sb = Object.fromEntries(Object.entries(cb).filter((bb => {
+            let [, cb] = bb;
+            return void 0 !== cb
           })));
-          return `${kk}(${JSON.stringify(Bk)})`
+          return `${bb}(${JSON.stringify(sb)})`
         },
-        declareTools: kk => kk,
+        declareTools: bb => bb,
         callStyle: "Make each call with function calling, its code in full: never write a call, or the code it carries, in your answer's words or in a code fence.",
-        fileResult: (kk, Fk, Bk) => `<file path="${kk}"${Bk?' open_in_editor="true"':""}>\n${Fk}\n</file>`,
-        editFailure: (kk, Fk) => `${kk} failed: ${Fk}`,
-        lookupResult: (kk, Fk, Bk) => `${kk} ${Fk}:\n${Bk}`
+        fileResult: (bb, cb, sb) => `<file path="${bb}"${sb?' open_in_editor="true"':""}>\n${cb}\n</file>`,
+        editFailure: (bb, cb) => `${bb} failed: ${cb}`,
+        lookupResult: (bb, cb, sb) => `${bb} ${cb}:\n${sb}`
       },
-      PF = /(?:<\|start\|>\s*assistant\s*)?<\|channel\|>[^<{]*?\bto=([\w./:-]+)[^{]*?(?=\{)/g;
+      zc = /(?:<\|start\|>\s*assistant\s*)?<\|channel\|>[^<{]*?\bto=([\w./:-]+)[^{]*?(?=\{)/g;
 
-    function hF(kk) {
-      const Fk = [];
-      for (const tk of kk.matchAll(PF)) {
-        const ak = gF(tk[1]),
-          Xk = tk.index + tk[0].length,
-          bk = TF(kk, Xk),
-          wk = null === bk ? null : GF(kk.slice(Xk, bk));
-        if (null !== ak && null !== bk && null !== wk) {
-          var Bk, Rk;
-          const Xk = null !== (Bk = null === (Rk = kk.slice(bk).match(/^\s*<\|call\|>/)) || void 0 === Rk ? void 0 : Rk[0]) && void 0 !== Bk ? Bk : "";
-          Fk.push({
+    function qc(bb) {
+      const cb = [];
+      for (const Wb of bb.matchAll(zc)) {
+        const ab = Pc(Wb[1]),
+          Tb = Wb.index + Wb[0].length,
+          Ub = Oc(bb, Tb),
+          Ib = null === Ub ? null : ic(bb.slice(Tb, Ub));
+        if (null !== ab && null !== Ub && null !== Ib) {
+          var sb, kb;
+          const Tb = null !== (sb = null === (kb = bb.slice(Ub).match(/^\s*<\|call\|>/)) || void 0 === kb ? void 0 : kb[0]) && void 0 !== sb ? sb : "";
+          cb.push({
             call: {
-              name: ak,
-              args: wk,
-              source: kk.slice(tk.index, bk + Xk.length)
+              name: ab,
+              args: Ib,
+              source: bb.slice(Wb.index, Ub + Tb.length)
             },
-            index: tk.index
+            index: Wb.index
           })
         }
       }
-      return Fk
+      return cb
     }
 
-    function qF(kk) {
-      var Fk, Bk, Rk, tk;
-      let ak = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      if ("object" !== typeof kk || null === kk) return [];
-      const Xk = kk;
-      if (Array.isArray(Xk.tool_calls)) return Xk.tool_calls.flatMap((kk => qF(kk, !0)));
-      if (void 0 !== Xk.tool_call) return qF(Xk.tool_call, !0);
-      if (void 0 !== Xk.function) return qF(Xk.function, !0);
-      const bk = null !== (Fk = null !== (Bk = null !== (Rk = null !== (tk = Xk.arguments) && void 0 !== tk ? tk : Xk.params) && void 0 !== Rk ? Rk : Xk.param) && void 0 !== Bk ? Bk : Xk.args) && void 0 !== Fk ? Fk : Xk.input,
-        wk = gF(Xk.tool);
-      if (null !== wk) {
+    function dc(bb) {
+      var cb, sb, kb, Wb;
+      let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      if ("object" !== typeof bb || null === bb) return [];
+      const Tb = bb;
+      if (Array.isArray(Tb.tool_calls)) return Tb.tool_calls.flatMap((bb => dc(bb, !0)));
+      if (void 0 !== Tb.tool_call) return dc(Tb.tool_call, !0);
+      if (void 0 !== Tb.function) return dc(Tb.function, !0);
+      const Ub = null !== (cb = null !== (sb = null !== (kb = null !== (Wb = Tb.arguments) && void 0 !== Wb ? Wb : Tb.params) && void 0 !== kb ? kb : Tb.param) && void 0 !== sb ? sb : Tb.args) && void 0 !== cb ? cb : Tb.input,
+        Ib = Pc(Tb.tool);
+      if (null !== Ib) {
         const {
-          tool: kk,
-          ...Fk
-        } = Xk, Bk = GF(null !== bk && void 0 !== bk ? bk : Fk);
-        return null === Bk ? [] : [{
-          name: wk,
-          args: Bk
+          tool: bb,
+          ...cb
+        } = Tb, sb = ic(null !== Ub && void 0 !== Ub ? Ub : cb);
+        return null === sb ? [] : [{
+          name: Ib,
+          args: sb
         }]
       }
-      if (!ak && void 0 === bk) return [];
-      const dk = gF(Xk.name),
-        sk = GF(bk);
-      return null === dk || null === sk ? [] : [{
-        name: dk,
-        args: sk
+      if (!ab && void 0 === Ub) return [];
+      const Hb = Pc(Tb.name),
+        fb = ic(Ub);
+      return null === Hb || null === fb ? [] : [{
+        name: Hb,
+        args: fb
       }]
     }
 
-    function CF(kk) {
-      const Fk = [];
-      let Bk = kk.indexOf("{");
-      for (; - 1 !== Bk;) {
-        const Rk = TF(kk, Bk);
-        let tk = [];
-        if (null !== Rk) try {
-          tk = qF(JSON.parse(kk.slice(Bk, Rk)))
+    function Ac(bb) {
+      const cb = [];
+      let sb = bb.indexOf("{");
+      for (; - 1 !== sb;) {
+        const kb = Oc(bb, sb);
+        let Wb = [];
+        if (null !== kb) try {
+          Wb = dc(JSON.parse(bb.slice(sb, kb)))
         } catch {}
-        if (null !== Rk && tk.length > 0) {
-          const ak = kk.slice(Bk, Rk);
-          Fk.push(...tk.map((kk => ({
+        if (null !== kb && Wb.length > 0) {
+          const ab = bb.slice(sb, kb);
+          cb.push(...Wb.map((bb => ({
             call: {
-              ...kk,
-              source: ak
+              ...bb,
+              source: ab
             },
-            index: Bk
-          })))), Bk = kk.indexOf("{", Rk)
-        } else Bk = kk.indexOf("{", Bk + 1)
+            index: sb
+          })))), sb = bb.indexOf("{", kb)
+        } else sb = bb.indexOf("{", sb + 1)
       }
-      return Fk
+      return cb
     }
 
-    function ZF(kk) {
-      if (Array.isArray(kk)) return `[${kk.map(ZF).join(", ")}]`;
-      if ("object" === typeof kk && null !== kk) {
-        return `{${Object.entries(kk).map((kk=>{let[Fk,Bk]=kk;return`${JSON.stringify(Fk)}: ${ZF(Bk)}`})).join(", ")}}`
+    function wc(bb) {
+      if (Array.isArray(bb)) return `[${bb.map(wc).join(", ")}]`;
+      if ("object" === typeof bb && null !== bb) {
+        return `{${Object.entries(bb).map((bb=>{let[cb,sb]=bb;return`${JSON.stringify(cb)}: ${wc(sb)}`})).join(", ")}}`
       }
-      return JSON.stringify(kk)
+      return JSON.stringify(bb)
     }
-    const pF = {
-        formatCall: (kk, Fk) => `<tool_call>\n<function=${kk}>\n${Object.entries(Fk).flatMap((kk=>{let[Fk,Bk]=kk;return void 0===Bk?[]:[`<parameter=${Fk}>\n${Bk}\n</parameter>\n`]})).join("")}</function>\n</tool_call>`,
-        declareTools: (kk, Fk, Bk) => Bk || 0 === Fk.length ? kk : `${function(kk){return`# Tools\n\nYou have access to the following functions:\n\n<tools>${kk.map((kk=>`\n${ZF({type:"function",function:{name:kk.name,description:kk.description,parameters:kk.inputSchema}})}`)).join("")}\n</tools>\n\nIf you choose to call a function ONLY reply in the following format with NO suffix:\n\n<tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>\nvalue_1\n</parameter>\n<parameter=example_parameter_2>\nThis is the value for the second parameter\nthat can span\nmultiple lines\n</parameter>\n</function>\n</tool_call>\n\n<IMPORTANT>\nReminder:\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\n- Required parameters MUST be specified\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\n</IMPORTANT>`}(Fk)}\n\n${kk}`,
+    const rc = {
+        formatCall: (bb, cb) => `<tool_call>\n<function=${bb}>\n${Object.entries(cb).flatMap((bb=>{let[cb,sb]=bb;return void 0===sb?[]:[`<parameter=${cb}>\n${sb}\n</parameter>\n`]})).join("")}</function>\n</tool_call>`,
+        declareTools: (bb, cb, sb) => sb || 0 === cb.length ? bb : `${function(bb){return`# Tools\n\nYou have access to the following functions:\n\n<tools>${bb.map((bb=>`\n${wc({type:"function",function:{name:bb.name,description:bb.description,parameters:bb.inputSchema}})}`)).join("")}\n</tools>\n\nIf you choose to call a function ONLY reply in the following format with NO suffix:\n\n<tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>\nvalue_1\n</parameter>\n<parameter=example_parameter_2>\nThis is the value for the second parameter\nthat can span\nmultiple lines\n</parameter>\n</function>\n</tool_call>\n\n<IMPORTANT>\nReminder:\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\n- Required parameters MUST be specified\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\n</IMPORTANT>`}(cb)}\n\n${bb}`,
         callStyle: "Write each call in your answer as a <tool_call> holding a <function=name> block with a <parameter=name> for each argument, the code inside as it is, not escaped and in full: never as JSON or inside a code fence.",
-        fileResult: (kk, Fk, Bk) => `<tool_response>\nview_file ${kk}${Bk?" (open in the editor)":""}:\n${Fk}\n</tool_response>`,
-        editFailure: (kk, Fk) => `<tool_response>\nError: ${Fk}\n</tool_response>`,
-        lookupResult: (kk, Fk, Bk) => `<tool_response>\n${kk} ${Fk}:\n${Bk}\n</tool_response>`
+        fileResult: (bb, cb, sb) => `<tool_response>\nview_file ${bb}${sb?" (open in the editor)":""}:\n${cb}\n</tool_response>`,
+        editFailure: (bb, cb) => `<tool_response>\nError: ${cb}\n</tool_response>`,
+        lookupResult: (bb, cb, sb) => `<tool_response>\n${bb} ${cb}:\n${sb}\n</tool_response>`
       },
-      KF = UF(/(?:<tool_call>\s*)?<function=([\w.:/-]+)>((?:(?!<tool_call\b|<function=)[\s\S])*?(?:<\/parameter>(?=\s*(?:<tool_call\b|<function=|$))|(?=<\/function>|<\/tool_call>)))(?:<\/function>(?:\s*<\/tool_call>)?|<\/tool_call>|\s*(?=<tool_call\b|<function=|$))/g, /<parameter(?:=([\w-]+)|\s+name\s*=\s*"([^"]+)")\s*>\n?([\s\S]*?)(?:\n?<\/parameter>|(?=<parameter[=\s])|\n?$)/g),
-      xF = new Set(["path", "why", "name", "after", "question", "allow_other", "note"]),
-      jF = {
-        formatCall: (kk, Fk) => `<tool_call name="${kk}">\n${Object.entries(Fk).flatMap((kk=>{let[Fk,Bk]=kk;return void 0===Bk?[]:[`<param name="${Fk}">${xF.has(Fk)?Bk:`\n${Bk}\n`}</param>\n`]})).join("")}</tool_call>`,
-        declareTools: kk => kk,
+      oc = Dc(/(?:<tool_call>\s*)?<function=([\w.:/-]+)>((?:(?!<tool_call\b|<function=)[\s\S])*?(?:<\/parameter>(?=\s*(?:<tool_call\b|<function=|$))|(?=<\/function>|<\/tool_call>)))(?:<\/function>(?:\s*<\/tool_call>)?|<\/tool_call>|\s*(?=<tool_call\b|<function=|$))/g, /<parameter(?:=([\w-]+)|\s+name\s*=\s*"([^"]+)")\s*>\n?([\s\S]*?)(?:\n?<\/parameter>|(?=<parameter[=\s])|\n?$)/g),
+      Sc = new Set(["path", "why", "name", "after", "question", "allow_other", "note"]),
+      Rc = {
+        formatCall: (bb, cb) => `<tool_call name="${bb}">\n${Object.entries(cb).flatMap((bb=>{let[cb,sb]=bb;return void 0===sb?[]:[`<param name="${cb}">${Sc.has(cb)?sb:`\n${sb}\n`}</param>\n`]})).join("")}</tool_call>`,
+        declareTools: bb => bb,
         callStyle: "Write each call in your answer as a <tool_call> with a <param> for each argument, the code inside as it is, not escaped and in full: never as JSON, a function call or inside a code fence.",
-        fileResult: (kk, Fk, Bk) => `<tool_result name="view_file" path="${kk}"${Bk?' open_in_editor="true"':""}>\n${Fk}\n</tool_result>`,
-        editFailure: (kk, Fk) => `<tool_result name="${kk}" is_error="true">\n${Fk}\n</tool_result>`,
-        lookupResult: (kk, Fk, Bk) => `<tool_result name="${kk}" about="${Fk.replace(/"/g,"'")}">\n${Bk}\n</tool_result>`
+        fileResult: (bb, cb, sb) => `<tool_result name="view_file" path="${bb}"${sb?' open_in_editor="true"':""}>\n${cb}\n</tool_result>`,
+        editFailure: (bb, cb) => `<tool_result name="${bb}" is_error="true">\n${cb}\n</tool_result>`,
+        lookupResult: (bb, cb, sb) => `<tool_result name="${bb}" about="${cb.replace(/"/g,"'")}">\n${sb}\n</tool_result>`
       },
-      lF = UF(/<tool_call\s+name\s*=\s*"([^"]+)"\s*>((?:(?!<tool_call\b)[\s\S])*?(?:<\/param(?:eter)?>(?=\s*(?:<tool_call\b|$))|(?=<\/(?:tool_call|invoke|function)>)))(?:<\/(?:tool_call|invoke|function)>|\s*(?=<tool_call\b|$))/g, /<(?:param(?:eter)?\s+name\s*=\s*"([^"]+)"|(?:param(?:eter)?(?:=|\s+)|(?=(?:search|replace)>))([\w-]+))\s*>\n?(?:([\s\S]*?)\n?<\/(?:param(?:eter)?|\1\2)>|((?=\s*\S)(?![\s\S]*<\/[\w-]+[^>]*>)[\s\S]*?)\s*$)/g),
-      nF = {
-        simple: jF,
-        qwenXml: pF,
-        deepseek: zF
+      vc = Dc(/<tool_call\s+name\s*=\s*"([^"]+)"\s*>((?:(?!<tool_call\b)[\s\S])*?(?:<\/param(?:eter)?>(?=\s*(?:<tool_call\b|$))|(?=<\/(?:tool_call|invoke|function)>)))(?:<\/(?:tool_call|invoke|function)>|\s*(?=<tool_call\b|$))/g, /<(?:param(?:eter)?\s+name\s*=\s*"([^"]+)"|(?:param(?:eter)?(?:=|\s+)|(?=(?:search|replace)>))([\w-]+))\s*>\n?(?:([\s\S]*?)\n?<\/(?:param(?:eter)?|\1\2)>|((?=\s*\S)(?![\s\S]*<\/[\w-]+[^>]*>)[\s\S]*?)\s*$)/g),
+      Fc = {
+        simple: Rc,
+        qwenXml: rc,
+        deepseek: Zc
       },
-      IF = {
-        simple: lF,
-        qwenXml: KF,
-        deepseek: function(kk) {
-          const Fk = [];
-          for (const bk of kk.matchAll(DF)) {
-            var Bk, Rk, tk, ak, Xk;
-            const wk = gF(bk[1]),
-              dk = bk.index + bk[0].length,
-              sk = TF(kk, dk);
-            if (null === wk || null === sk || (null !== (Bk = null === (Rk = Fk.at(-1)) || void 0 === Rk ? void 0 : Rk.index) && void 0 !== Bk ? Bk : -1) + (null !== (tk = null === (ak = Fk.at(-1)) || void 0 === ak ? void 0 : ak.call.source.length) && void 0 !== tk ? tk : 0) > bk.index) continue;
-            const Vk = GF(kk.slice(dk, sk));
-            if (null === Vk) continue;
-            const Jk = /^\s*\)/.exec(kk.slice(sk)),
-              Ak = kk.slice(bk.index, sk + (null !== (Xk = null === Jk || void 0 === Jk ? void 0 : Jk[0].length) && void 0 !== Xk ? Xk : 0));
-            Fk.push({
+      xc = {
+        simple: vc,
+        qwenXml: oc,
+        deepseek: function(bb) {
+          const cb = [];
+          for (const Ub of bb.matchAll(Kc)) {
+            var sb, kb, Wb, ab, Tb;
+            const Ib = Pc(Ub[1]),
+              Hb = Ub.index + Ub[0].length,
+              fb = Oc(bb, Hb);
+            if (null === Ib || null === fb || (null !== (sb = null === (kb = cb.at(-1)) || void 0 === kb ? void 0 : kb.index) && void 0 !== sb ? sb : -1) + (null !== (Wb = null === (ab = cb.at(-1)) || void 0 === ab ? void 0 : ab.call.source.length) && void 0 !== Wb ? Wb : 0) > Ub.index) continue;
+            const Mb = ic(bb.slice(Hb, fb));
+            if (null === Mb) continue;
+            const Xb = /^\s*\)/.exec(bb.slice(fb)),
+              nb = bb.slice(Ub.index, fb + (null !== (Tb = null === Xb || void 0 === Xb ? void 0 : Xb[0].length) && void 0 !== Tb ? Tb : 0));
+            cb.push({
               call: {
-                name: wk,
-                args: Vk,
-                source: Ak
+                name: Ib,
+                args: Mb,
+                source: nb
               },
-              index: bk.index
+              index: Ub.index
             })
           }
-          return Fk
+          return cb
         }
       },
-      QF = ["simple", "qwenXml"];
+      jc = ["simple", "qwenXml"];
 
-    function kB(kk) {
-      return "deepseek" === kk ? "simple" : kk
+    function pc(bb) {
+      return "deepseek" === bb ? "simple" : bb
     }
-    const FB = /<\|[a-z_]+\|>/g,
-      BB = /^[ \t]*`{1,2}[ \t]*$/gm,
-      RB = /^[ \t]*<\/(?:tool_call|invoke|function|param(?:eter)?)>[ \t]*$/gm,
-      tB = /^[ \t]*(?:Wait|Oops|Hmm)\b[^\n]*\b(?:redo|re-do|the format|let me (?:fix|try|rewrite|write) (?:that|it|this))\b[^\n]*$/gim,
-      aB = /```[\w-]*/g,
-      XB = /^[\s[\],]*$/,
-      bB = {
+    const bs = /<\|[a-z_]+\|>/g,
+      cs = /^[ \t]*`{1,2}[ \t]*$/gm,
+      ss = /^[ \t]*<\/(?:tool_call|invoke|function|param(?:eter)?)>[ \t]*$/gm,
+      ks = /^[ \t]*(?:Wait|Oops|Hmm)\b[^\n]*\b(?:redo|re-do|the format|let me (?:fix|try|rewrite|write) (?:that|it|this))\b[^\n]*$/gim,
+      Ws = /```[\w-]*/g,
+      as = /^[\s[\],]*$/,
+      Ts = {
         use_prefab: 0,
         add_world_code: 1,
         write_file: 2,
@@ -1365,823 +1365,823 @@ export const modules = {
         view_prefab: 21
       };
 
-    function wB(kk) {
-      return oF(kk.name).inputSchema.required.every((Fk => void 0 !== kk.args[Fk]))
+    function Us(bb) {
+      return Lc(bb.name).inputSchema.required.every((cb => void 0 !== bb.args[cb]))
     }
 
-    function dB(kk, Fk) {
-      const Bk = gF(kk),
-        Rk = GF(Fk);
-      return null === Bk || null === Rk ? null : {
-        name: Bk,
-        args: Rk
+    function Is(bb, cb) {
+      const sb = Pc(bb),
+        kb = ic(cb);
+      return null === sb || null === kb ? null : {
+        name: sb,
+        args: kb
       }
     }
 
-    function sB(kk, Fk) {
-      const Bk = [];
-      for (const Rk of function(kk) {
-          const Fk = kB(kk),
-            Bk = QF.filter((kk => kk !== Fk));
-          return [IF[Fk], ...kk === Fk ? [] : [IF[kk]], ...Bk.map((kk => IF[kk])), hF, CF]
-        }(Fk)) Bk.push(...Rk(rF(kk, Bk)));
-      return Bk.map((kk => {
+    function Hs(bb, cb) {
+      const sb = [];
+      for (const kb of function(bb) {
+          const cb = pc(bb),
+            sb = jc.filter((bb => bb !== cb));
+          return [xc[cb], ...bb === cb ? [] : [xc[bb]], ...sb.map((bb => xc[bb])), qc, Ac]
+        }(cb)) sb.push(...kb(Gc(bb, sb)));
+      return sb.map((bb => {
         let {
-          call: Fk
-        } = kk;
-        return Fk
+          call: cb
+        } = bb;
+        return cb
       }))
     }
 
-    function VB(kk, Fk) {
-      return sB(kk, Fk).sort(((kk, Fk) => bB[kk.name] - bB[Fk.name]))
+    function fs(bb, cb) {
+      return Hs(bb, cb).sort(((bb, cb) => Ts[bb.name] - Ts[cb.name]))
     }
 
-    function JB(kk) {
-      return function(kk) {
-        const Fk = [...kk.matchAll(aB)],
-          Bk = [];
-        let Rk = 0;
-        for (; Rk < Fk.length;) {
-          const tk = Fk[Rk],
-            ak = Fk.at(Rk + 1);
-          void 0 !== ak && "```" === ak[0] ? (XB.test(kk.slice(tk.index + tk[0].length, ak.index)) && Bk.push({
-            from: tk.index,
-            to: ak.index + ak[0].length
-          }), Rk += 2) : (Bk.push({
-            from: tk.index,
-            to: tk.index + tk[0].length
-          }), Rk++)
+    function Ms(bb) {
+      return function(bb) {
+        const cb = [...bb.matchAll(Ws)],
+          sb = [];
+        let kb = 0;
+        for (; kb < cb.length;) {
+          const Wb = cb[kb],
+            ab = cb.at(kb + 1);
+          void 0 !== ab && "```" === ab[0] ? (as.test(bb.slice(Wb.index + Wb[0].length, ab.index)) && sb.push({
+            from: Wb.index,
+            to: ab.index + ab[0].length
+          }), kb += 2) : (sb.push({
+            from: Wb.index,
+            to: Wb.index + Wb[0].length
+          }), kb++)
         }
-        let tk = kk;
+        let Wb = bb;
         for (const {
-            from: ak,
-            to: Xk
+            from: ab,
+            to: Tb
           }
-          of Bk.reverse()) tk = tk.slice(0, ak) + tk.slice(Xk);
-        return tk
-      }(kk.replace(FB, "").replace(BB, "").replace(RB, "").replace(tB, ""))
+          of sb.reverse()) Wb = Wb.slice(0, ab) + Wb.slice(Tb);
+        return Wb
+      }(bb.replace(bs, "").replace(cs, "").replace(ss, "").replace(ks, ""))
     }
 
-    function AB(kk) {
-      return /^(?:on[A-Z]\w*|tick|playerCommand)$/.test(kk)
+    function Xs(bb) {
+      return /^(?:on[A-Z]\w*|tick|playerCommand)$/.test(bb)
     }
-    const eB = new Set(["tick", "onPlayerJoin", "onPlayerLeave", "onMobDespawned", "onBlockStand", "onBlockStandStart", "onBlockStandStop", "onPlayerJump", "onPlayerSelectInventorySlot", "onEntityCollision", "onChunkLoaded", "onClose"]),
-      yB = {
+    const ns = new Set(["tick", "onPlayerJoin", "onPlayerLeave", "onMobDespawned", "onBlockStand", "onBlockStandStart", "onBlockStandStop", "onPlayerJump", "onPlayerSelectInventorySlot", "onEntityCollision", "onChunkLoaded", "onClose"]),
+      ms = {
         playerCommand: {
-          stopsWhen: kk => `${kk} !== undefined && ${kk} !== false`,
+          stopsWhen: bb => `${bb} !== undefined && ${bb} !== false`,
           passedOn: !1
         },
         onPlayerChat: {
-          stopsWhen: kk => `${kk} === false || ${kk} === null`,
+          stopsWhen: bb => `${bb} === false || ${bb} === null`,
           passedOn: !0
         },
         onPlayerDamagingOtherPlayer: {
-          stopsWhen: kk => `${kk} === "preventDamage"`,
+          stopsWhen: bb => `${bb} === "preventDamage"`,
           passedOn: !0
         }
       };
 
-    function fB(kk) {
-      var Fk;
-      const Bk = Ek().createSourceFile("worldCode.js", kk, Ek().ScriptTarget.Latest, !0, Ek().ScriptKind.JS),
+    function ls(bb) {
+      var cb;
+      const sb = hb().createSourceFile("worldCode.js", bb, hb().ScriptTarget.Latest, !0, hb().ScriptKind.JS),
         {
-          parseDiagnostics: Rk
-        } = Bk;
+          parseDiagnostics: kb
+        } = sb;
       return {
-        file: Bk,
-        hasErrors: (null !== (Fk = null === Rk || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Fk ? Fk : 0) > 0
+        file: sb,
+        hasErrors: (null !== (cb = null === kb || void 0 === kb ? void 0 : kb.length) && void 0 !== cb ? cb : 0) > 0
       }
     }
 
-    function mB(kk) {
-      return void 0 !== kk && (Ek().isFunctionExpression(kk) || Ek().isArrowFunction(kk))
+    function Qs(bb) {
+      return void 0 !== bb && (hb().isFunctionExpression(bb) || hb().isArrowFunction(bb))
     }
 
-    function WB(kk) {
-      if (Ek().isFunctionDeclaration(kk) && kk.name) return {
-        oe: kk,
-        nameNode: kk.name
+    function es(bb) {
+      if (hb().isFunctionDeclaration(bb) && bb.name) return {
+        Nm: bb,
+        nameNode: bb.name
       };
-      if (Ek().isVariableStatement(kk) && 1 === kk.declarationList.declarations.length) {
-        const Fk = kk.declarationList.declarations[0],
-          Bk = Fk.initializer && vB(Fk.initializer);
-        if (Ek().isIdentifier(Fk.name) && mB(Bk)) return {
-          oe: Bk,
-          nameNode: Fk.name
+      if (hb().isVariableStatement(bb) && 1 === bb.declarationList.declarations.length) {
+        const cb = bb.declarationList.declarations[0],
+          sb = cb.initializer && Cs(cb.initializer);
+        if (hb().isIdentifier(cb.name) && Qs(sb)) return {
+          Nm: sb,
+          nameNode: cb.name
         }
       }
-      const Fk = iB(kk),
-        Bk = Fk && vB(Fk.value);
-      return Fk && mB(Bk) ? {
-        oe: Bk,
-        nameNode: Fk.name
+      const cb = Ns(bb),
+        sb = cb && Cs(cb.value);
+      return cb && Qs(sb) ? {
+        Nm: sb,
+        nameNode: cb.name
       } : null
     }
 
-    function vB(kk) {
-      return Ek().isParenthesizedExpression(kk) ? vB(kk.expression) : kk
+    function Cs(bb) {
+      return hb().isParenthesizedExpression(bb) ? Cs(bb.expression) : bb
     }
 
-    function iB(kk) {
-      return Ek().isExpressionStatement(kk) && Ek().isBinaryExpression(kk.expression) && kk.expression.operatorToken.kind === Ek().SyntaxKind.EqualsToken && Ek().isIdentifier(kk.expression.left) ? {
-        name: kk.expression.left,
-        value: kk.expression.right
+    function Ns(bb) {
+      return hb().isExpressionStatement(bb) && hb().isBinaryExpression(bb.expression) && bb.expression.operatorToken.kind === hb().SyntaxKind.EqualsToken && hb().isIdentifier(bb.expression.left) ? {
+        name: bb.expression.left,
+        value: bb.expression.right
       } : null
     }
 
-    function YB(kk) {
-      return Ek().isIdentifier(kk) ? [kk.text] : kk.elements.flatMap((kk => Ek().isOmittedExpression(kk) ? [] : YB(kk.name)))
+    function Vs(bb) {
+      return hb().isIdentifier(bb) ? [bb.text] : bb.elements.flatMap((bb => hb().isOmittedExpression(bb) ? [] : Vs(bb.name)))
     }
 
-    function oB(kk) {
-      if (!Ek().isVariableStatement(kk)) return null;
-      const Fk = kk.declarationList.declarations.find((kk => Ek().isIdentifier(kk.name) && "CONFIG" === kk.name.text));
-      return null !== Fk && void 0 !== Fk && Fk.initializer && Ek().isObjectLiteralExpression(Fk.initializer) ? Fk.initializer : null
+    function Ls(bb) {
+      if (!hb().isVariableStatement(bb)) return null;
+      const cb = bb.declarationList.declarations.find((bb => hb().isIdentifier(bb.name) && "CONFIG" === bb.name.text));
+      return null !== cb && void 0 !== cb && cb.initializer && hb().isObjectLiteralExpression(cb.initializer) ? cb.initializer : null
     }
 
-    function LB(kk, Fk) {
-      return Fk.statements.map((Bk => {
-        var Rk;
-        const tk = function(kk, Fk, Bk) {
-            let Rk = Bk.getStart(Fk);
-            for (const ak of (null !== (tk = Ek().getLeadingCommentRanges(kk, Bk.getFullStart())) && void 0 !== tk ? tk : []).reverse()) {
-              var tk;
-              if (/\n[^\S\n]*\n/.test(kk.slice(ak.end, Rk))) break;
-              Rk = ak.pos
+    function us(bb, cb) {
+      return cb.statements.map((sb => {
+        var kb;
+        const Wb = function(bb, cb, sb) {
+            let kb = sb.getStart(cb);
+            for (const ab of (null !== (Wb = hb().getLeadingCommentRanges(bb, sb.getFullStart())) && void 0 !== Wb ? Wb : []).reverse()) {
+              var Wb;
+              if (/\n[^\S\n]*\n/.test(bb.slice(ab.end, kb))) break;
+              kb = ab.pos
             }
-            return Rk
-          }(kk, Fk, Bk),
-          ak = WB(Bk);
-        if (null !== ak && void 0 !== ak && ak.nameNode) {
-          const kk = ak.nameNode.text;
+            return kb
+          }(bb, cb, sb),
+          ab = es(sb);
+        if (null !== ab && void 0 !== ab && ab.nameNode) {
+          const bb = ab.nameNode.text;
           return {
-            kind: AB(kk) ? "callback" : "function",
-            names: [kk],
-            from: tk,
-            to: Bk.getEnd(),
-            node: Bk
+            kind: Xs(bb) ? "callback" : "function",
+            names: [bb],
+            from: Wb,
+            to: sb.getEnd(),
+            node: sb
           }
         }
-        const Xk = Ek().isVariableStatement(Bk) ? Bk.declarationList.declarations.flatMap((kk => YB(kk.name))) : [];
-        if (oB(Bk)) {
+        const Tb = hb().isVariableStatement(sb) ? sb.declarationList.declarations.flatMap((bb => Vs(bb.name))) : [];
+        if (Ls(sb)) {
           return {
             kind: "config",
-            names: ["CONFIG", ...Xk.filter((kk => "CONFIG" !== kk))],
-            from: tk,
-            to: Bk.getEnd(),
-            node: Bk
+            names: ["CONFIG", ...Tb.filter((bb => "CONFIG" !== bb))],
+            from: Wb,
+            to: sb.getEnd(),
+            node: sb
           }
         }
-        if (Ek().isVariableStatement(Bk)) return {
+        if (hb().isVariableStatement(sb)) return {
           kind: "variable",
-          names: Xk,
-          from: tk,
-          to: Bk.getEnd(),
-          node: Bk
+          names: Tb,
+          from: Wb,
+          to: sb.getEnd(),
+          node: sb
         };
-        if (Ek().isClassDeclaration(Bk) && Bk.name) return {
+        if (hb().isClassDeclaration(sb) && sb.name) return {
           kind: "function",
-          names: [Bk.name.text],
-          from: tk,
-          to: Bk.getEnd(),
-          node: Bk
+          names: [sb.name.text],
+          from: Wb,
+          to: sb.getEnd(),
+          node: sb
         };
-        const bk = null === (Rk = iB(Bk)) || void 0 === Rk ? void 0 : Rk.name.text;
+        const Ub = null === (kb = Ns(sb)) || void 0 === kb ? void 0 : kb.name.text;
         return {
           kind: "other",
-          names: void 0 !== bk && AB(bk) ? [bk] : [],
-          from: tk,
-          to: Bk.getEnd(),
-          node: Bk
+          names: void 0 !== Ub && Xs(Ub) ? [Ub] : [],
+          from: Wb,
+          to: sb.getEnd(),
+          node: sb
         }
       }))
     }
 
-    function OB(kk) {
-      if (!Ek().isPropertyAssignment(kk) && !Ek().isShorthandPropertyAssignment(kk)) return null;
-      const Fk = kk.name;
-      return Ek().isIdentifier(Fk) || Ek().isStringLiteral(Fk) ? Fk.text : null
+    function Ys(bb) {
+      if (!hb().isPropertyAssignment(bb) && !hb().isShorthandPropertyAssignment(bb)) return null;
+      const cb = bb.name;
+      return hb().isIdentifier(cb) || hb().isStringLiteral(cb) ? cb.text : null
     }
 
-    function EB(kk, Fk) {
-      return kk.lastIndexOf("\n", Fk - 1) + 1
+    function hs(bb, cb) {
+      return bb.lastIndexOf("\n", cb - 1) + 1
     }
 
-    function SB(kk, Fk) {
-      var Bk, Rk;
-      const tk = kk.slice(EB(kk, Fk), Fk);
-      return /^\s*$/.test(tk) ? tk : `${null!==(Bk=null===(Rk=/^\s*/.exec(tk))||void 0===Rk?void 0:Rk[0])&&void 0!==Bk?Bk:""}\t`
+    function gs(bb, cb) {
+      var sb, kb;
+      const Wb = bb.slice(hs(bb, cb), cb);
+      return /^\s*$/.test(Wb) ? Wb : `${null!==(sb=null===(kb=/^\s*/.exec(Wb))||void 0===kb?void 0:kb[0])&&void 0!==sb?sb:""}\t`
     }
 
-    function NB(kk, Fk, Bk) {
-      const Rk = kk.slice(EB(kk, Fk.getStart(Bk)), function(kk, Fk) {
-          const Bk = kk.indexOf("\n", Fk);
-          return -1 === Bk ? kk.length : Bk
-        }(kk, Fk.getEnd())),
-        tk = Rk.trim(),
-        ak = /^[\w$"']+\s*:/.test(tk) && "" === kk.slice(EB(kk, Fk.getStart(Bk)), Fk.getStart(Bk)).trim() ? Rk.replace(/^\s*/, "\t") : `\t${Fk.getText(Bk)},`;
-      return /,\s*(?:\/\/.*)?$/.test(ak) ? ak : ak.replace(/(\s*(?:\/\/.*)?)$/, ",$1")
+    function Bs(bb, cb, sb) {
+      const kb = bb.slice(hs(bb, cb.getStart(sb)), function(bb, cb) {
+          const sb = bb.indexOf("\n", cb);
+          return -1 === sb ? bb.length : sb
+        }(bb, cb.getEnd())),
+        Wb = kb.trim(),
+        ab = /^[\w$"']+\s*:/.test(Wb) && "" === bb.slice(hs(bb, cb.getStart(sb)), cb.getStart(sb)).trim() ? kb.replace(/^\s*/, "\t") : `\t${cb.getText(sb)},`;
+      return /,\s*(?:\/\/.*)?$/.test(ab) ? ab : ab.replace(/(\s*(?:\/\/.*)?)$/, ",$1")
     }
 
-    function HB(kk, Fk) {
-      let Bk = kk;
-      for (const Rk of [...Fk].sort(((kk, Fk) => Fk.from - kk.from))) Bk = Bk.slice(0, Rk.from) + Rk.text + Bk.slice(Rk.to);
-      return Bk
+    function ts(bb, cb) {
+      let sb = bb;
+      for (const kb of [...cb].sort(((bb, cb) => cb.from - bb.from))) sb = sb.slice(0, kb.from) + kb.text + sb.slice(kb.to);
+      return sb
     }
 
-    function uB(kk) {
-      return kk.charAt(0).toUpperCase() + kk.slice(1)
+    function ys(bb) {
+      return bb.charAt(0).toUpperCase() + bb.slice(1)
     }
 
-    function MB(kk) {
-      return kk.replace(/[^A-Za-z0-9]+(.)?/g, ((kk, Fk) => Fk ? Fk.toUpperCase() : ""))
+    function Ps(bb) {
+      return bb.replace(/[^A-Za-z0-9]+(.)?/g, ((bb, cb) => cb ? cb.toUpperCase() : ""))
     }
 
-    function gB(kk, Fk) {
-      var Bk, Rk;
-      const tk = kk.filter((kk => kk.names.includes(Fk))),
-        ak = tk.filter((kk => !Ek().isFunctionDeclaration(kk.node) && function(kk, Fk) {
-          return !Ek().isVariableStatement(kk) || kk.declarationList.declarations.some((kk => void 0 !== kk.initializer && YB(kk.name).includes(Fk)))
-        }(kk.node, Fk))),
-        Xk = null !== (Bk = ak[ak.length - 1]) && void 0 !== Bk ? Bk : tk[tk.length - 1];
-      if ("callback" === (null === Xk || void 0 === Xk ? void 0 : Xk.kind)) return WB(Xk.node);
-      const bk = "other" === (null === Xk || void 0 === Xk ? void 0 : Xk.kind) ? null === (Rk = iB(Xk.node)) || void 0 === Rk ? void 0 : Rk.value : void 0;
-      if (!bk || !Ek().isIdentifier(bk)) return null;
-      const wk = kk.filter((kk => {
-          var Fk;
-          const Bk = null === (Fk = iB(kk.node)) || void 0 === Fk ? void 0 : Fk.value;
-          return void 0 !== Bk && Ek().isIdentifier(Bk) && Bk.text === bk.text
+    function Ds(bb, cb) {
+      var sb, kb;
+      const Wb = bb.filter((bb => bb.names.includes(cb))),
+        ab = Wb.filter((bb => !hb().isFunctionDeclaration(bb.node) && function(bb, cb) {
+          return !hb().isVariableStatement(bb) || bb.declarationList.declarations.some((bb => void 0 !== bb.initializer && Vs(bb.name).includes(cb)))
+        }(bb.node, cb))),
+        Tb = null !== (sb = ab[ab.length - 1]) && void 0 !== sb ? sb : Wb[Wb.length - 1];
+      if ("callback" === (null === Tb || void 0 === Tb ? void 0 : Tb.kind)) return es(Tb.node);
+      const Ub = "other" === (null === Tb || void 0 === Tb ? void 0 : Tb.kind) ? null === (kb = Ns(Tb.node)) || void 0 === kb ? void 0 : kb.value : void 0;
+      if (!Ub || !hb().isIdentifier(Ub)) return null;
+      const Ib = bb.filter((bb => {
+          var cb;
+          const sb = null === (cb = Ns(bb.node)) || void 0 === cb ? void 0 : cb.value;
+          return void 0 !== sb && hb().isIdentifier(sb) && sb.text === Ub.text
         })),
-        dk = kk.filter((kk => kk.names.includes(bk.text))),
-        sk = 1 === dk.length && "function" === dk[0].kind ? WB(dk[0].node) : null;
-      return 1 === wk.length ? sk : null
+        Hb = bb.filter((bb => bb.names.includes(Ub.text))),
+        fb = 1 === Hb.length && "function" === Hb[0].kind ? es(Hb[0].node) : null;
+      return 1 === Ib.length ? fb : null
     }
 
-    function UB(kk) {
-      return kk.parameters.map((kk => Ek().isIdentifier(kk.name) ? kk.name.text : null))
+    function Es(bb) {
+      return bb.parameters.map((bb => hb().isIdentifier(bb.name) ? bb.name.text : null))
     }
 
-    function cB(kk, Fk, Bk, Rk, tk, ak, Xk) {
-      var bk;
-      let wk = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+    function is(bb, cb, sb, kb, Wb, ab, Tb) {
+      var Ub;
+      let Ib = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
       const {
-        oe: dk
-      } = Bk, sk = dk.body;
-      if (!sk) return [];
-      const Vk = [],
-        Jk = UB(dk),
-        Ak = [],
-        ek = new Set([...Jk.filter((kk => null !== kk)), ...rB(sk)]),
-        yk = (kk, Fk) => {
-          let Bk = kk;
-          for (let Rk = Fk; ek.has(Bk); Rk++) Bk = `${kk}${Rk}`;
-          return ek.add(Bk), Bk
+        Nm: Hb
+      } = sb, fb = Hb.body;
+      if (!fb) return [];
+      const Mb = [],
+        Xb = Es(Hb),
+        nb = [],
+        mb = new Set([...Xb.filter((bb => null !== bb)), ...Ks(fb)]),
+        lb = (bb, cb) => {
+          let sb = bb;
+          for (let kb = cb; mb.has(sb); kb++) sb = `${bb}${kb}`;
+          return mb.add(sb), sb
         },
-        fk = [];
-      for (const [Ek, Hk] of ak.entries()) {
-        var mk;
-        const kk = Jk[Ek];
-        if (void 0 !== kk && null !== (mk = dk.parameters[Ek]) && void 0 !== mk && mk.dotDotDotToken) {
-          Ak.push(null === kk ? "undefined" : `...${kk}`);
+        Qb = [];
+      for (const [hb, Bb] of ab.entries()) {
+        var eb;
+        const bb = Xb[hb];
+        if (void 0 !== bb && null !== (eb = Hb.parameters[hb]) && void 0 !== eb && eb.dotDotDotToken) {
+          nb.push(null === bb ? "undefined" : `...${bb}`);
           break
         }
-        if (void 0 !== kk) {
-          Ak.push(null !== kk && void 0 !== kk ? kk : "undefined");
+        if (void 0 !== bb) {
+          nb.push(null !== bb && void 0 !== bb ? bb : "undefined");
           continue
         }
-        const Fk = yk(Hk, Ek);
-        fk.push(Fk), Ak.push(Fk)
+        const cb = lb(Bb, hb);
+        Qb.push(cb), nb.push(cb)
       }
-      if (fk.length > 0) {
-        const kk = dk.getChildren(Fk).find((kk => kk.kind === Ek().SyntaxKind.CloseParenToken)),
-          Bk = kk ? kk.getStart(Fk) : -1;
-        if (-1 === Bk) {
-          const kk = dk.parameters[0];
-          if (!kk) return [];
-          Vk.push({
-            from: kk.getStart(Fk),
-            to: kk.getEnd(),
-            text: `(${[kk.getText(Fk),...fk].join(", ")})`
+      if (Qb.length > 0) {
+        const bb = Hb.getChildren(cb).find((bb => bb.kind === hb().SyntaxKind.CloseParenToken)),
+          sb = bb ? bb.getStart(cb) : -1;
+        if (-1 === sb) {
+          const bb = Hb.parameters[0];
+          if (!bb) return [];
+          Mb.push({
+            from: bb.getStart(cb),
+            to: bb.getEnd(),
+            text: `(${[bb.getText(cb),...Qb].join(", ")})`
           })
         } else {
-          const kk = dk.parameters.hasTrailingComma ? " " : dk.parameters.length > 0 ? ", " : "";
-          Vk.push({
-            from: Bk,
-            to: Bk,
-            text: `${kk}${fk.join(", ")}`
+          const bb = Hb.parameters.hasTrailingComma ? " " : Hb.parameters.length > 0 ? ", " : "";
+          Mb.push({
+            from: sb,
+            to: sb,
+            text: `${bb}${Qb.join(", ")}`
           })
         }
       }
-      const Wk = `${tk}(${Ak.join(", ")})`,
-        vk = yk(`${MB(Xk)}Result`, 2),
-        ik = yB[Rk],
-        Yk = eB.has(Rk) ? [Wk] : ik ? [`const ${vk} = ${Wk}`, `if (${ik.stopsWhen(vk)}) return ${vk}`] : [`const ${vk} = ${Wk}`],
-        Lk = !eB.has(Rk) && (null === (bk = null === ik || void 0 === ik ? void 0 : ik.passedOn) || void 0 === bk || bk);
-      if (Lk && Ek().isBlock(sk)) {
-        const Bk = function(kk, Fk) {
-            const Bk = new Set;
-            for (const Rk of kk.statements) {
-              const kk = Ek().isVariableStatement(Rk) ? Rk.declarationList.declarations[0] : void 0;
-              kk && Ek().isIdentifier(kk.name) && kk.initializer && GB(kk.initializer, Fk) && Bk.add(kk.name.text)
+      const Cb = `${Wb}(${nb.join(", ")})`,
+        Nb = lb(`${Ps(Tb)}Result`, 2),
+        Vb = ms[kb],
+        Lb = ns.has(kb) ? [Cb] : Vb ? [`const ${Nb} = ${Cb}`, `if (${Vb.stopsWhen(Nb)}) return ${Nb}`] : [`const ${Nb} = ${Cb}`],
+        ub = !ns.has(kb) && (null === (Ub = null === Vb || void 0 === Vb ? void 0 : Vb.passedOn) || void 0 === Ub || Ub);
+      if (ub && hb().isBlock(fb)) {
+        const sb = function(bb, cb) {
+            const sb = new Set;
+            for (const kb of bb.statements) {
+              const bb = hb().isVariableStatement(kb) ? kb.declarationList.declarations[0] : void 0;
+              bb && hb().isIdentifier(bb.name) && bb.initializer && Os(bb.initializer, cb) && sb.add(bb.name.text)
             }
-            return Bk
-          }(sk, Rk),
-          tk = kk => {
-            if (!Ek().isFunctionLike(kk) && ! function(kk, Fk, Bk) {
-                if (!Ek().isIfStatement(kk) || !Ek().isReturnStatement(kk.thenStatement) || !kk.thenStatement.expression) return !1;
-                const Rk = kk.thenStatement.expression;
-                return Ek().isIdentifier(Rk) && Fk.has(Rk.text) && kk.expression.getText(Bk).startsWith(`${Rk.text} `)
-              }(kk, Bk, Fk)) {
-              if (Ek().isReturnStatement(kk) && !kk.expression) Vk.push({
-                from: kk.getStart(Fk),
-                to: kk.getEnd(),
-                text: `return ${vk}`
+            return sb
+          }(fb, kb),
+          Wb = bb => {
+            if (!hb().isFunctionLike(bb) && ! function(bb, cb, sb) {
+                if (!hb().isIfStatement(bb) || !hb().isReturnStatement(bb.thenStatement) || !bb.thenStatement.expression) return !1;
+                const kb = bb.thenStatement.expression;
+                return hb().isIdentifier(kb) && cb.has(kb.text) && bb.expression.getText(sb).startsWith(`${kb.text} `)
+              }(bb, sb, cb)) {
+              if (hb().isReturnStatement(bb) && !bb.expression) Mb.push({
+                from: bb.getStart(cb),
+                to: bb.getEnd(),
+                text: `return ${Nb}`
               });
-              else if (Ek().isReturnStatement(kk) && kk.expression) {
-                const Rk = TB(kk.expression, Bk);
-                Rk && Vk.push({
-                  from: Rk.getStart(Fk),
-                  to: Rk.getEnd(),
-                  text: `${Rk.text} !== undefined ? ${Rk.text} : ${vk}`
+              else if (hb().isReturnStatement(bb) && bb.expression) {
+                const kb = Gs(bb.expression, sb);
+                kb && Mb.push({
+                  from: kb.getStart(cb),
+                  to: kb.getEnd(),
+                  text: `${kb.text} !== undefined ? ${kb.text} : ${Nb}`
                 })
               }
-              Ek().forEachChild(kk, tk)
+              hb().forEachChild(bb, Wb)
             }
           };
-        sk.statements.forEach(tk);
-        const ak = sk.statements[sk.statements.length - 1];
-        if (!ak || !Ek().isReturnStatement(ak) && !Ek().isThrowStatement(ak)) {
-          const Bk = sk.getEnd() - 1,
-            Rk = ak ? SB(kk, ak.getStart(Fk)) : `${kk.slice(EB(kk,dk.getStart(Fk)),dk.getStart(Fk)).replace(/\S.*$/,"")}\t`,
-            tk = kk.slice(EB(kk, Bk), Bk),
-            Xk = /^\s*$/.test(tk) ? `${Rk}return ${vk}\n${tk}` : `\n${Rk}return ${vk}\n`;
-          Vk.push({
-            from: /^\s*$/.test(tk) ? EB(kk, Bk) : Bk,
-            to: Bk,
-            text: Xk
+        fb.statements.forEach(Wb);
+        const ab = fb.statements[fb.statements.length - 1];
+        if (!ab || !hb().isReturnStatement(ab) && !hb().isThrowStatement(ab)) {
+          const sb = fb.getEnd() - 1,
+            kb = ab ? gs(bb, ab.getStart(cb)) : `${bb.slice(hs(bb,Hb.getStart(cb)),Hb.getStart(cb)).replace(/\S.*$/,"")}\t`,
+            Wb = bb.slice(hs(bb, sb), sb),
+            Tb = /^\s*$/.test(Wb) ? `${kb}return ${Nb}\n${Wb}` : `\n${kb}return ${Nb}\n`;
+          Mb.push({
+            from: /^\s*$/.test(Wb) ? hs(bb, sb) : sb,
+            to: sb,
+            text: Tb
           })
         }
       }
-      const Ok = Ek().isBlock(sk) ? [...sk.statements] : [],
-        Sk = Ok.findIndex((kk => ! function(kk, Fk) {
-          return Ek().isExpressionStatement(kk) && GB(kk.expression, Fk)
-        }(kk, Rk))),
-        Nk = Ok[(-1 === Sk ? Ok.length : Sk) - 1];
-      if (wk && eB.has(Rk) && Nk) Vk.push({
-        from: Nk.getEnd(),
-        to: Nk.getEnd(),
-        text: `\n${SB(kk,Nk.getStart(Fk))}${Wk}`
+      const Yb = hb().isBlock(fb) ? [...fb.statements] : [],
+        Jb = Yb.findIndex((bb => ! function(bb, cb) {
+          return hb().isExpressionStatement(bb) && Os(bb.expression, cb)
+        }(bb, kb))),
+        gb = Yb[(-1 === Jb ? Yb.length : Jb) - 1];
+      if (Ib && ns.has(kb) && gb) Mb.push({
+        from: gb.getEnd(),
+        to: gb.getEnd(),
+        text: `\n${gs(bb,gb.getStart(cb))}${Cb}`
       });
-      else if (Ek().isBlock(sk)) {
-        const Bk = sk.statements[0],
-          Rk = Bk ? SB(kk, Bk.getStart(Fk)) : `${kk.slice(EB(kk,dk.getStart(Fk)),dk.getStart(Fk)).replace(/\S.*$/,"")}\t`,
-          tk = sk.getStart(Fk) + 1,
-          ak = void 0 !== Bk && !kk.slice(tk, Bk.getStart(Fk)).includes("\n");
-        Vk.push({
-          from: tk,
-          to: ak ? Bk.getStart(Fk) : tk,
-          text: `\n${Yk.map((kk=>`${Rk}${kk}`)).join("\n")}${Bk?ak?`\n${Rk}`:"":"\n"}`
+      else if (hb().isBlock(fb)) {
+        const sb = fb.statements[0],
+          kb = sb ? gs(bb, sb.getStart(cb)) : `${bb.slice(hs(bb,Hb.getStart(cb)),Hb.getStart(cb)).replace(/\S.*$/,"")}\t`,
+          Wb = fb.getStart(cb) + 1,
+          ab = void 0 !== sb && !bb.slice(Wb, sb.getStart(cb)).includes("\n");
+        Mb.push({
+          from: Wb,
+          to: ab ? sb.getStart(cb) : Wb,
+          text: `\n${Lb.map((bb=>`${kb}${bb}`)).join("\n")}${sb?ab?`\n${kb}`:"":"\n"}`
         })
       } else {
-        const Bk = kk.slice(EB(kk, dk.getStart(Fk)), dk.getStart(Fk)).replace(/\S.*$/, ""),
-          Rk = yk("ownResult", 2),
-          tk = Lk ? [`const ${Rk} = ${sk.getText(Fk)}`, `return ${Rk} !== undefined ? ${Rk} : ${vk}`] : [`return ${sk.getText(Fk)}`];
-        Vk.push({
-          from: sk.getStart(Fk),
-          to: sk.getEnd(),
-          text: `{\n${[...Yk,...tk].map((kk=>`${Bk}\t${kk}`)).join("\n")}\n${Bk}}`
+        const sb = bb.slice(hs(bb, Hb.getStart(cb)), Hb.getStart(cb)).replace(/\S.*$/, ""),
+          kb = lb("ownResult", 2),
+          Wb = ub ? [`const ${kb} = ${fb.getText(cb)}`, `return ${kb} !== undefined ? ${kb} : ${Nb}`] : [`return ${fb.getText(cb)}`];
+        Mb.push({
+          from: fb.getStart(cb),
+          to: fb.getEnd(),
+          text: `{\n${[...Lb,...Wb].map((bb=>`${sb}\t${bb}`)).join("\n")}\n${sb}}`
         })
       }
-      return Vk
+      return Mb
     }
 
-    function GB(kk, Fk) {
-      return Ek().isCallExpression(kk) && Ek().isIdentifier(kk.expression) && kk.expression.text.endsWith(uB(Fk)) && kk.expression.text !== uB(Fk)
+    function Os(bb, cb) {
+      return hb().isCallExpression(bb) && hb().isIdentifier(bb.expression) && bb.expression.text.endsWith(ys(cb)) && bb.expression.text !== ys(cb)
     }
 
-    function TB(kk, Fk) {
-      return Ek().isIdentifier(kk) ? Fk.has(kk.text) ? kk : null : Ek().isConditionalExpression(kk) ? TB(kk.whenFalse, Fk) : null
+    function Gs(bb, cb) {
+      return hb().isIdentifier(bb) ? cb.has(bb.text) ? bb : null : hb().isConditionalExpression(bb) ? Gs(bb.whenFalse, cb) : null
     }
 
-    function rB(kk) {
-      const Fk = [],
-        Bk = kk => {
-          Ek().isIdentifier(kk) && Fk.push(kk.text), Ek().forEachChild(kk, Bk)
+    function Ks(bb) {
+      const cb = [],
+        sb = bb => {
+          hb().isIdentifier(bb) && cb.push(bb.text), hb().forEachChild(bb, sb)
         };
-      return Bk(kk), Fk
+      return sb(bb), cb
     }
 
-    function DB(kk, Fk, Bk) {
-      var Rk, tk;
-      return (0, JF.i)(null !== (Rk = null === (tk = kk.body) || void 0 === tk ? void 0 : tk.getText(Fk)) && void 0 !== Rk ? Rk : "", new RegExp(`${Bk}\\s*\\(`), JF.r).length > 0
+    function Zs(bb, cb, sb) {
+      var kb, Wb;
+      return (0, Mc.e)(null !== (kb = null === (Wb = bb.body) || void 0 === Wb ? void 0 : Wb.getText(cb)) && void 0 !== kb ? kb : "", new RegExp(`${sb}\\s*\\(`), Mc.m).length > 0
     }
 
-    function zB(kk, Fk, Bk) {
-      var Rk;
+    function zs(bb, cb, sb) {
+      var kb;
       const {
-        owner: tk,
-        heading: ak
-      } = Bk, Xk = null !== (Rk = Bk.overrides) && void 0 !== Rk ? Rk : new Set;
-      if ("" === kk.trim() && !0 !== Bk.chainCallbacks) {
-        const kk = `${ak?`${ak}\n`:""}${Fk.trim()}\n`,
+        owner: Wb,
+        heading: ab
+      } = sb, Tb = null !== (kb = sb.overrides) && void 0 !== kb ? kb : new Set;
+      if ("" === bb.trim() && !0 !== sb.chainCallbacks) {
+        const bb = `${ab?`${ab}\n`:""}${cb.trim()}\n`,
           {
-            file: Bk,
-            hasErrors: Rk
-          } = fB(kk);
-        if (Rk) return null;
-        const tk = LB(kk, Bk);
+            file: sb,
+            hasErrors: kb
+          } = ls(bb);
+        if (kb) return null;
+        const Wb = us(bb, sb);
         return {
-          text: kk,
-          added: tk.flatMap((kk => "config" === kk.kind ? [] : kk.names)),
+          text: bb,
+          added: Wb.flatMap((bb => "config" === bb.kind ? [] : bb.names)),
           chained: [],
-          settings: tk.flatMap((kk => {
-            var Fk;
-            const Bk = "config" === kk.kind ? oB(kk.node) : null;
-            return (null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.properties) && void 0 !== Fk ? Fk : []).flatMap((kk => {
-              const Fk = OB(kk);
-              return null === Fk ? [] : [Fk]
+          settings: Wb.flatMap((bb => {
+            var cb;
+            const sb = "config" === bb.kind ? Ls(bb.node) : null;
+            return (null !== (cb = null === sb || void 0 === sb ? void 0 : sb.properties) && void 0 !== cb ? cb : []).flatMap((bb => {
+              const cb = Ys(bb);
+              return null === cb ? [] : [cb]
             }))
           }))
         }
       }
-      const bk = fB(kk),
-        wk = fB(Fk);
-      if (bk.hasErrors || wk.hasErrors) return null;
-      const dk = LB(kk, bk.file),
-        sk = LB(Fk, wk.file),
-        Vk = new Set(dk.flatMap((kk => kk.names))),
-        Jk = new Set(Vk),
-        Ak = [],
-        ek = [],
-        yk = [],
-        fk = [];
-      let mk = [];
-      const Wk = sk.find((kk => "config" === kk.kind)),
-        vk = dk.find((kk => "config" === kk.kind));
-      if (Wk) {
-        const Bk = oB(Wk.node),
-          Rk = vk ? oB(vk.node) : null;
-        if (Bk && Rk) {
-          const tk = function(kk, Fk, Bk, Rk, tk, ak, Xk) {
-            const bk = new Map;
-            for (const vk of Bk.properties) {
-              const kk = OB(vk);
-              null !== kk && bk.set(kk, vk)
+      const Ub = ls(bb),
+        Ib = ls(cb);
+      if (Ub.hasErrors || Ib.hasErrors) return null;
+      const Hb = us(bb, Ub.file),
+        fb = us(cb, Ib.file),
+        Mb = new Set(Hb.flatMap((bb => bb.names))),
+        Xb = new Set(Mb),
+        nb = [],
+        mb = [],
+        lb = [],
+        Qb = [];
+      let eb = [];
+      const Cb = fb.find((bb => "config" === bb.kind)),
+        Nb = Hb.find((bb => "config" === bb.kind));
+      if (Cb) {
+        const sb = Ls(Cb.node),
+          kb = Nb ? Ls(Nb.node) : null;
+        if (sb && kb) {
+          const Wb = function(bb, cb, sb, kb, Wb, ab, Tb) {
+            const Ub = new Map;
+            for (const Nb of sb.properties) {
+              const bb = Ys(Nb);
+              null !== bb && Ub.set(bb, Nb)
             }
-            const wk = [],
-              dk = [],
-              sk = [],
-              Vk = new Map;
-            for (const vk of ak.properties) {
-              const kk = OB(vk);
-              if (null === kk) continue;
-              const Bk = bk.get(kk);
-              if (Bk) {
-                if (Xk.has(kk) && Ek().isPropertyAssignment(Bk) && Ek().isPropertyAssignment(vk)) {
-                  const Rk = vk.initializer.getText(tk);
-                  Bk.initializer.getText(Fk) !== Rk && (wk.push({
-                    from: Bk.initializer.getStart(Fk),
-                    to: Bk.initializer.getEnd(),
-                    text: Rk
-                  }), Vk.set(Bk, Rk), dk.push(kk))
+            const Ib = [],
+              Hb = [],
+              fb = [],
+              Mb = new Map;
+            for (const Nb of ab.properties) {
+              const bb = Ys(Nb);
+              if (null === bb) continue;
+              const sb = Ub.get(bb);
+              if (sb) {
+                if (Tb.has(bb) && hb().isPropertyAssignment(sb) && hb().isPropertyAssignment(Nb)) {
+                  const kb = Nb.initializer.getText(Wb);
+                  sb.initializer.getText(cb) !== kb && (Ib.push({
+                    from: sb.initializer.getStart(cb),
+                    to: sb.initializer.getEnd(),
+                    text: kb
+                  }), Mb.set(sb, kb), Hb.push(bb))
                 }
-              } else sk.push(NB(Rk, vk, tk)), dk.push(kk)
+              } else fb.push(Bs(kb, Nb, Wb)), Hb.push(bb)
             }
-            if (0 === sk.length) return {
-              edits: wk,
-              settings: dk
+            if (0 === fb.length) return {
+              edits: Ib,
+              settings: Hb
             };
-            const Jk = Bk.getEnd() - 1,
-              Ak = Bk.properties[Bk.properties.length - 1];
-            if (!kk.slice(Bk.getStart(Fk), Jk).includes("\n")) {
-              const kk = Bk.properties.map((kk => {
-                const Bk = Vk.get(kk);
-                return Ek().isPropertyAssignment(kk) && void 0 !== Bk ? `\t${kk.name.getText(Fk)}: ${Bk},` : `\t${kk.getText(Fk)},`
+            const Xb = sb.getEnd() - 1,
+              nb = sb.properties[sb.properties.length - 1];
+            if (!bb.slice(sb.getStart(cb), Xb).includes("\n")) {
+              const bb = sb.properties.map((bb => {
+                const sb = Mb.get(bb);
+                return hb().isPropertyAssignment(bb) && void 0 !== sb ? `\t${bb.name.getText(cb)}: ${sb},` : `\t${bb.getText(cb)},`
               }));
               return {
                 edits: [{
-                  from: Bk.getStart(Fk),
-                  to: Bk.getEnd(),
-                  text: `{\n${[...kk,...sk].join("\n")}\n}`
+                  from: sb.getStart(cb),
+                  to: sb.getEnd(),
+                  text: `{\n${[...bb,...fb].join("\n")}\n}`
                 }],
-                settings: dk
+                settings: Hb
               }
             }
-            const ek = void 0 !== Ak && !Bk.properties.hasTrailingComma,
-              yk = EB(kk, Jk),
-              fk = kk.slice(yk, Jk);
-            if ("" === fk.trim()) return ek && wk.push({
-              from: Ak.getEnd(),
-              to: Ak.getEnd(),
+            const mb = void 0 !== nb && !sb.properties.hasTrailingComma,
+              lb = hs(bb, Xb),
+              Qb = bb.slice(lb, Xb);
+            if ("" === Qb.trim()) return mb && Ib.push({
+              from: nb.getEnd(),
+              to: nb.getEnd(),
               text: ","
-            }), wk.push({
-              from: yk,
-              to: yk,
-              text: `${sk.join("\n")}\n`
+            }), Ib.push({
+              from: lb,
+              to: lb,
+              text: `${fb.join("\n")}\n`
             }), {
-              edits: wk,
-              settings: dk
+              edits: Ib,
+              settings: Hb
             };
-            const mk = yk + fk.trimEnd().length,
-              Wk = ek && Ak.getEnd() === mk;
-            return ek && !Wk && wk.push({
-              from: Ak.getEnd(),
-              to: Ak.getEnd(),
+            const eb = lb + Qb.trimEnd().length,
+              Cb = mb && nb.getEnd() === eb;
+            return mb && !Cb && Ib.push({
+              from: nb.getEnd(),
+              to: nb.getEnd(),
               text: ","
-            }), wk.push({
-              from: mk,
-              to: Jk,
-              text: `${Wk?",":""}\n${sk.join("\n")}\n`
+            }), Ib.push({
+              from: eb,
+              to: Xb,
+              text: `${Cb?",":""}\n${fb.join("\n")}\n`
             }), {
-              edits: wk,
-              settings: dk
+              edits: Ib,
+              settings: Hb
             }
-          }(kk, bk.file, Rk, Fk, wk.file, Bk, Xk);
-          Ak.push(...tk.edits), mk = tk.settings
-        } else if (Bk) {
-          if (Jk.has("CONFIG")) return null;
-          const Rk = function(kk, Fk) {
-              const Bk = Fk.statements[0];
-              return Bk ? EB(kk, Bk.getStart(Fk)) : kk.length
-            }(kk, bk.file),
-            tk = Rk > 0 && "\n" !== kk[Rk - 1] ? "\n" : "";
-          Ak.push({
-            from: Rk,
-            to: Rk,
-            text: `${tk}${Fk.slice(Wk.from,Wk.to)}\n\n`
-          }), mk = Bk.properties.flatMap((kk => {
-            const Fk = OB(kk);
-            return null === Fk ? [] : [Fk]
+          }(bb, Ub.file, kb, cb, Ib.file, sb, Tb);
+          nb.push(...Wb.edits), eb = Wb.settings
+        } else if (sb) {
+          if (Xb.has("CONFIG")) return null;
+          const kb = function(bb, cb) {
+              const sb = cb.statements[0];
+              return sb ? hs(bb, sb.getStart(cb)) : bb.length
+            }(bb, Ub.file),
+            Wb = kb > 0 && "\n" !== bb[kb - 1] ? "\n" : "";
+          nb.push({
+            from: kb,
+            to: kb,
+            text: `${Wb}${cb.slice(Cb.from,Cb.to)}\n\n`
+          }), eb = sb.properties.flatMap((bb => {
+            const cb = Ys(bb);
+            return null === cb ? [] : [cb]
           }))
         }
       }
-      const ik = [],
-        Yk = (kk, Bk) => {
-          const Rk = ik[ik.length - 1],
-            tk = void 0 !== Rk && Rk >= 0 && Rk === Bk - 1 && !/\n[^\S\n]*\n/.test(Fk.slice(sk[Rk].to, sk[Bk].from)) ? "\n" : "\n\n";
-          ek.push(0 === ek.length ? kk : `${tk}${kk}`), ik.push(Bk)
+      const Vb = [],
+        Lb = (bb, sb) => {
+          const kb = Vb[Vb.length - 1],
+            Wb = void 0 !== kb && kb >= 0 && kb === sb - 1 && !/\n[^\S\n]*\n/.test(cb.slice(fb[kb].to, fb[sb].from)) ? "\n" : "\n\n";
+          mb.push(0 === mb.length ? bb : `${Wb}${bb}`), Vb.push(sb)
         };
-      for (const [Ok, Ek] of sk.entries()) {
-        if ("config" === Ek.kind) continue;
-        const Rk = Fk.slice(Ek.from, Ek.to);
-        if ("callback" === Ek.kind) {
-          const Fk = Ek.names[0],
-            ak = gB(dk, Fk);
-          if (!ak && Vk.has(Fk)) {
-            if (!0 === Bk.chainCallbacks) continue;
+      for (const [Yb, hb] of fb.entries()) {
+        if ("config" === hb.kind) continue;
+        const kb = cb.slice(hb.from, hb.to);
+        if ("callback" === hb.kind) {
+          const cb = hb.names[0],
+            ab = Ds(Hb, cb);
+          if (!ab && Mb.has(cb)) {
+            if (!0 === sb.chainCallbacks) continue;
             return null
           }
-          if (!ak && !0 !== Bk.chainCallbacks) {
-            Jk.has(Fk) || (Yk(Rk, Ok), yk.push(Fk), Jk.add(Fk));
+          if (!ab && !0 !== sb.chainCallbacks) {
+            Xb.has(cb) || (Lb(kb, Yb), lb.push(cb), Xb.add(cb));
             continue
           }
-          const Xk = `${MB(tk)}${uB(Fk)}`,
-            sk = WB(Ek.node);
-          if (null === sk || void 0 === sk || !sk.nameNode) continue;
-          if (!Jk.has(Xk)) {
-            const kk = sk.nameNode.getStart(wk.file) - Ek.from,
-              Fk = sk.nameNode.getEnd() - Ek.from;
-            Yk(Rk.slice(0, kk) + Xk + Rk.slice(Fk), Ok), yk.push(Xk), Jk.add(Xk)
+          const Tb = `${Ps(Wb)}${ys(cb)}`,
+            fb = es(hb.node);
+          if (null === fb || void 0 === fb || !fb.nameNode) continue;
+          if (!Xb.has(Tb)) {
+            const bb = fb.nameNode.getStart(Ib.file) - hb.from,
+              cb = fb.nameNode.getEnd() - hb.from;
+            Lb(kb.slice(0, bb) + Tb + kb.slice(cb), Yb), lb.push(Tb), Xb.add(Tb)
           }
-          const ek = UB(sk.oe).map(((kk, Fk) => null !== kk && void 0 !== kk ? kk : `arg${Fk}`));
-          if (!ak) {
-            const kk = `${Xk}(${ek.join(", ")})`,
-              Bk = `${MB(tk)}Result`;
-            Yk(`function ${Fk}(${ek.join(", ")}) {\n\t${eB.has(Fk)?kk:`const ${Bk} = ${kk}\n\treturn ${Bk}`}\n}`, -1), yk.push(Fk), Jk.add(Fk);
+          const mb = Es(fb.Nm).map(((bb, cb) => null !== bb && void 0 !== bb ? bb : `arg${cb}`));
+          if (!ab) {
+            const bb = `${Tb}(${mb.join(", ")})`,
+              sb = `${Ps(Wb)}Result`;
+            Lb(`function ${cb}(${mb.join(", ")}) {\n\t${ns.has(cb)?bb:`const ${sb} = ${bb}\n\treturn ${sb}`}\n}`, -1), lb.push(cb), Xb.add(cb);
             continue
           }
-          DB(ak.oe, bk.file, Xk) || (Ak.push(...cB(kk, bk.file, ak, Fk, Xk, ek, tk, !0 === Bk.runsLast)), fk.push(Fk));
+          Zs(ab.Nm, Ub.file, Tb) || (nb.push(...is(bb, Ub.file, ab, cb, Tb, mb, Wb, !0 === sb.runsLast)), Qb.push(cb));
           continue
         }
-        const ak = Ek.names.filter((kk => !Jk.has(kk)));
-        if ("other" === Ek.kind || Ek.names.length > 0 && ak.length === Ek.names.length) {
-          Yk(Rk, Ok), yk.push(...ak);
-          for (const kk of ak) Jk.add(kk)
+        const ab = hb.names.filter((bb => !Xb.has(bb)));
+        if ("other" === hb.kind || hb.names.length > 0 && ab.length === hb.names.length) {
+          Lb(kb, Yb), lb.push(...ab);
+          for (const bb of ab) Xb.add(bb)
         }
       }
-      let Lk = HB(kk, Ak);
-      if (ek.length > 0) {
-        const kk = Lk.replace(/\s*$/, "");
-        Lk = `${""===kk?"":`${kk}\n\n`}${ak?`${ak}\n`:""}${ek.join("")}\n`
+      let ub = ts(bb, nb);
+      if (mb.length > 0) {
+        const bb = ub.replace(/\s*$/, "");
+        ub = `${""===bb?"":`${bb}\n\n`}${ab?`${ab}\n`:""}${mb.join("")}\n`
       }
-      return fB(Lk).hasErrors ? null : {
-        text: Lk,
-        added: yk,
-        chained: fk,
-        settings: mk
+      return ls(ub).hasErrors ? null : {
+        text: ub,
+        added: lb,
+        chained: Qb,
+        settings: eb
       }
     }
 
-    function PB(kk) {
+    function qs(bb) {
       const {
-        file: Fk
-      } = fB(kk);
-      return new Set(LB(kk, Fk).flatMap((kk => kk.names)))
+        file: cb
+      } = ls(bb);
+      return new Set(us(bb, cb).flatMap((bb => bb.names)))
     }
 
-    function hB(kk) {
+    function ds(bb) {
       const {
-        file: Fk
-      } = fB(kk), Bk = new Set, Rk = kk => {
-        Ek().isCallExpression(kk) && Ek().isIdentifier(kk.expression) && Bk.add(kk.expression.text), Ek().forEachChild(kk, Rk)
+        file: cb
+      } = ls(bb), sb = new Set, kb = bb => {
+        hb().isCallExpression(bb) && hb().isIdentifier(bb.expression) && sb.add(bb.expression.text), hb().forEachChild(bb, kb)
       };
-      return Rk(Fk), Bk
+      return kb(cb), sb
     }
 
-    function qB(kk) {
-      return !fB(kk).hasErrors
+    function As(bb) {
+      return !ls(bb).hasErrors
     }
 
-    function CB(kk, Fk) {
-      return Ek().isCallExpression(kk) && Ek().isPropertyAccessExpression(kk.expression) && "api" === kk.expression.expression.getText(Fk)
+    function ws(bb, cb) {
+      return hb().isCallExpression(bb) && hb().isPropertyAccessExpression(bb.expression) && "api" === bb.expression.expression.getText(cb)
     }
 
-    function ZB(kk, Fk) {
-      var Bk;
-      const Rk = kk.getPropertiesOfType(kk.getNonNullableType(Fk)),
-        tk = null !== (Bk = Rk.find((kk => "color" === kk.name))) && void 0 !== Bk ? Bk : Rk[0];
-      if (!tk) return;
-      const ak = kk.typeToString(kk.getNonNullableType(kk.getTypeOfSymbol(tk))),
-        Xk = "color" === tk.name ? '"red"' : ak.includes("number") ? "1" : "boolean" === ak ? "true" : '"..."';
-      return `{ ${tk.name}: ${Xk} }`
+    function rs(bb, cb) {
+      var sb;
+      const kb = bb.getPropertiesOfType(bb.getNonNullableType(cb)),
+        Wb = null !== (sb = kb.find((bb => "color" === bb.name))) && void 0 !== sb ? sb : kb[0];
+      if (!Wb) return;
+      const ab = bb.typeToString(bb.getNonNullableType(bb.getTypeOfSymbol(Wb))),
+        Tb = "color" === Wb.name ? '"red"' : ab.includes("number") ? "1" : "boolean" === ab ? "true" : '"..."';
+      return `{ ${Wb.name}: ${Tb} }`
     }
 
-    function pB(kk) {
-      return kk.isUnion() ? kk.types.every((kk => 0 !== (kk.flags & Ek().TypeFlags.Object))) : 0 !== (kk.flags & Ek().TypeFlags.Object)
+    function os(bb) {
+      return bb.isUnion() ? bb.types.every((bb => 0 !== (bb.flags & hb().TypeFlags.Object))) : 0 !== (bb.flags & hb().TypeFlags.Object)
     }
 
-    function KB(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const Rk = kk.getNonNullableType(Fk);
-      if (Rk.isUnion()) {
-        const Fk = [...new Set(Rk.types.map((Fk => KB(kk, Fk, Bk))))];
-        return Fk.length > 7 ? `${Fk.slice(0,7).join(" or ")} or ...` : Fk.join(" or ")
+    function Ss(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const kb = bb.getNonNullableType(cb);
+      if (kb.isUnion()) {
+        const cb = [...new Set(kb.types.map((cb => Ss(bb, cb, sb))))];
+        return cb.length > 7 ? `${cb.slice(0,7).join(" or ")} or ...` : cb.join(" or ")
       }
-      if (Rk.isStringLiteral()) return `"${Rk.value}"`;
-      if (Rk.isNumberLiteral()) return `${Rk.value}`;
-      if (Rk.flags & Ek().TypeFlags.StringLike) return "text";
-      if (Rk.flags & Ek().TypeFlags.NumberLike) return "a number";
-      if (Rk.flags & Ek().TypeFlags.BooleanLike) return "true or false";
-      if (kk.isTupleType(Rk)) {
-        return `[${kk.getTypeArguments(Rk).map((Fk=>KB(kk,Fk,Bk+1))).join(", ")}]`
+      if (kb.isStringLiteral()) return `"${kb.value}"`;
+      if (kb.isNumberLiteral()) return `${kb.value}`;
+      if (kb.flags & hb().TypeFlags.StringLike) return "text";
+      if (kb.flags & hb().TypeFlags.NumberLike) return "a number";
+      if (kb.flags & hb().TypeFlags.BooleanLike) return "true or false";
+      if (bb.isTupleType(kb)) {
+        return `[${bb.getTypeArguments(kb).map((cb=>Ss(bb,cb,sb+1))).join(", ")}]`
       }
-      if (kk.isArrayType(Rk)) {
-        if (Bk > 1) return "a list";
-        const Fk = KB(kk, kk.getTypeArguments(Rk)[0], Bk + 1);
-        return `a list of ${Fk.includes(" or ")?`(${Fk})`:Fk}`
+      if (bb.isArrayType(kb)) {
+        if (sb > 1) return "a list";
+        const cb = Ss(bb, bb.getTypeArguments(kb)[0], sb + 1);
+        return `a list of ${cb.includes(" or ")?`(${cb})`:cb}`
       }
-      if (Rk.getCallSignatures().length > 0) return "a function";
-      const tk = kk.getPropertiesOfType(Rk);
-      if (0 === tk.length || Bk > 1) return "{ ... }";
-      return `{ ${tk.slice(0,10).map((kk=>`${kk.name}${kk.flags&Ek().SymbolFlags.Optional?"?":""}`)).join(", ")}${tk.length>10?", ...":""} }`
+      if (kb.getCallSignatures().length > 0) return "a function";
+      const Wb = bb.getPropertiesOfType(kb);
+      if (0 === Wb.length || sb > 1) return "{ ... }";
+      return `{ ${Wb.slice(0,10).map((bb=>`${bb.name}${bb.flags&hb().SymbolFlags.Optional?"?":""}`)).join(", ")}${Wb.length>10?", ...":""} }`
     }
 
-    function xB(kk, Fk, Bk) {
-      const Rk = (Fk, Bk) => kk.isTypeAssignableTo(Fk, Bk) || xB(kk, Fk, Bk),
-        tk = Fk => kk.getTypeArguments(Fk)[0];
-      if ("string | number" === kk.typeToString(Fk)) return !0;
-      if (Fk.isUnion() && !(Fk.flags & Ek().TypeFlags.Boolean)) return Fk.types.every((kk => Rk(kk, Bk)));
-      const ak = kk.getNonNullableType(Bk);
-      return (ak.isUnion() ? ak.types : [ak]).some((Bk => kk.isTupleType(Bk) ? kk.isArrayType(Fk) && kk.getTypeArguments(Bk).every((kk => Rk(tk(Fk), kk))) : kk.isArrayType(Bk) ? kk.isArrayType(Fk) && Rk(tk(Fk), tk(Bk)) : Bk.flags & (Ek().TypeFlags.Object | Ek().TypeFlags.Intersection) && 0 === Bk.getCallSignatures().length ? !!(Fk.flags & (Ek().TypeFlags.Object | Ek().TypeFlags.Intersection)) && !kk.isArrayType(Fk) && !kk.isTupleType(Fk) && kk.getPropertiesOfType(Bk).every((kk => 0 !== (kk.flags & Ek().SymbolFlags.Optional) || void 0 !== Fk.getProperty(kk.name))) && kk.getPropertiesOfType(Fk).every((Fk => {
-        var tk;
-        if (kk.getTypeOfSymbol(Fk).flags & Ek().TypeFlags.Undefined) return !0;
-        const ak = Bk.getProperty(Fk.name),
-          Xk = ak ? kk.getTypeOfSymbol(ak) : null === (tk = kk.getIndexInfoOfType(Bk, Ek().IndexKind.String)) || void 0 === tk ? void 0 : tk.type;
-        return void 0 !== Xk && Rk(kk.getTypeOfSymbol(Fk), Xk)
-      })) : Bk.isNumberLiteral() && Fk.flags === Ek().TypeFlags.Number || Bk.isStringLiteral() && Fk.flags === Ek().TypeFlags.String))
+    function Rs(bb, cb, sb) {
+      const kb = (cb, sb) => bb.isTypeAssignableTo(cb, sb) || Rs(bb, cb, sb),
+        Wb = cb => bb.getTypeArguments(cb)[0];
+      if ("string | number" === bb.typeToString(cb)) return !0;
+      if (cb.isUnion() && !(cb.flags & hb().TypeFlags.Boolean)) return cb.types.every((bb => kb(bb, sb)));
+      const ab = bb.getNonNullableType(sb);
+      return (ab.isUnion() ? ab.types : [ab]).some((sb => bb.isTupleType(sb) ? bb.isArrayType(cb) && bb.getTypeArguments(sb).every((bb => kb(Wb(cb), bb))) : bb.isArrayType(sb) ? bb.isArrayType(cb) && kb(Wb(cb), Wb(sb)) : sb.flags & (hb().TypeFlags.Object | hb().TypeFlags.Intersection) && 0 === sb.getCallSignatures().length ? !!(cb.flags & (hb().TypeFlags.Object | hb().TypeFlags.Intersection)) && !bb.isArrayType(cb) && !bb.isTupleType(cb) && bb.getPropertiesOfType(sb).every((bb => 0 !== (bb.flags & hb().SymbolFlags.Optional) || void 0 !== cb.getProperty(bb.name))) && bb.getPropertiesOfType(cb).every((cb => {
+        var Wb;
+        if (bb.getTypeOfSymbol(cb).flags & hb().TypeFlags.Undefined) return !0;
+        const ab = sb.getProperty(cb.name),
+          Tb = ab ? bb.getTypeOfSymbol(ab) : null === (Wb = bb.getIndexInfoOfType(sb, hb().IndexKind.String)) || void 0 === Wb ? void 0 : Wb.type;
+        return void 0 !== Tb && kb(bb.getTypeOfSymbol(cb), Tb)
+      })) : sb.isNumberLiteral() && cb.flags === hb().TypeFlags.Number || sb.isStringLiteral() && cb.flags === hb().TypeFlags.String))
     }
 
-    function jB(kk, Fk) {
-      return Ek().isTypeReferenceNode(kk) && Ek().isIdentifier(kk.typeName) && Fk.has(kk.typeName.text) || !!Ek().forEachChild(kk, (kk => jB(kk, Fk) || void 0))
+    function vs(bb, cb) {
+      return hb().isTypeReferenceNode(bb) && hb().isIdentifier(bb.typeName) && cb.has(bb.typeName.text) || !!hb().forEachChild(bb, (bb => vs(bb, cb) || void 0))
     }
 
-    function lB(kk, Fk) {
-      const Bk = new Set,
-        Rk = tk => {
-          if (CB(tk, kk)) {
-            var ak, Xk, bk;
-            const Rk = Fk.getResolvedSignature(tk),
-              wk = null !== (ak = null === Rk || void 0 === Rk ? void 0 : Rk.getParameters()) && void 0 !== ak ? ak : [],
-              dk = new Set((null !== (Xk = null === Rk || void 0 === Rk || null === (bk = Rk.getDeclaration()) || void 0 === bk ? void 0 : bk.typeParameters) && void 0 !== Xk ? Xk : []).map((kk => kk.name.text)));
-            tk.arguments.forEach(((Fk, Rk) => {
-              var ak;
-              const Xk = null === (ak = wk[Rk]) || void 0 === ak ? void 0 : ak.valueDeclaration,
-                bk = Xk && Ek().isParameter(Xk) ? Xk.type : void 0;
-              if (Fk.kind === Ek().SyntaxKind.NullKeyword && bk && !jB(bk, dk) && !/\b(?:null|any|unknown)\b/.test(bk.getText())) {
-                const Fk = Rk === tk.arguments.length - 1;
-                Bk.add(`${tk.expression.getText(kk)} can't take null as ${wk[Rk].name}: ${Fk?"leave it out":"give undefined instead"}, or it throws when that line runs.`)
+    function Fs(bb, cb) {
+      const sb = new Set,
+        kb = Wb => {
+          if (ws(Wb, bb)) {
+            var ab, Tb, Ub;
+            const kb = cb.getResolvedSignature(Wb),
+              Ib = null !== (ab = null === kb || void 0 === kb ? void 0 : kb.getParameters()) && void 0 !== ab ? ab : [],
+              Hb = new Set((null !== (Tb = null === kb || void 0 === kb || null === (Ub = kb.getDeclaration()) || void 0 === Ub ? void 0 : Ub.typeParameters) && void 0 !== Tb ? Tb : []).map((bb => bb.name.text)));
+            Wb.arguments.forEach(((cb, kb) => {
+              var ab;
+              const Tb = null === (ab = Ib[kb]) || void 0 === ab ? void 0 : ab.valueDeclaration,
+                Ub = Tb && hb().isParameter(Tb) ? Tb.type : void 0;
+              if (cb.kind === hb().SyntaxKind.NullKeyword && Ub && !vs(Ub, Hb) && !/\b(?:null|any|unknown)\b/.test(Ub.getText())) {
+                const cb = kb === Wb.arguments.length - 1;
+                sb.add(`${Wb.expression.getText(bb)} can't take null as ${Ib[kb].name}: ${cb?"leave it out":"give undefined instead"}, or it throws when that line runs.`)
               }
             }))
           }
-          Ek().forEachChild(tk, Rk)
+          hb().forEachChild(Wb, kb)
         };
-      return Rk(kk), [...Bk]
+      return kb(bb), [...sb]
     }
 
-    function nB(kk) {
-      return fB(kk).file
+    function xs(bb) {
+      return ls(bb).file
     }
 
-    function IB(kk) {
+    function ps(bb) {
       return {
-        from: kk.getFullStart(),
-        to: kk.getEnd()
+        from: bb.getFullStart(),
+        to: bb.getEnd()
       }
     }
 
-    function QB(kk) {
-      if (!/\buse_?prefab\s*\(/i.test(kk)) return {
-        code: kk,
+    function bk(bb) {
+      if (!/\buse_?prefab\s*\(/i.test(bb)) return {
+        code: bb,
         calls: []
       };
-      const Fk = nB(kk),
-        Bk = function(kk) {
-          const Fk = new Map;
-          for (const Bk of kk.statements)
-            if (Ek().isVariableStatement(Bk))
-              for (const kk of Bk.declarationList.declarations)
-                if (Ek().isIdentifier(kk.name) && "CONFIG" === kk.name.text && kk.initializer && Ek().isObjectLiteralExpression(kk.initializer))
-                  for (const Bk of kk.initializer.properties) Ek().isPropertyAssignment(Bk) && (Ek().isIdentifier(Bk.name) || Ek().isStringLiteral(Bk.name)) && Fk.set(Bk.name.text, Bk.initializer.getText());
-          return Fk
-        }(Fk),
-        Rk = [],
-        tk = [],
-        ak = kk => {
-          var Fk;
-          return Ek().isPropertyAccessExpression(kk) && Ek().isIdentifier(kk.expression) && "CONFIG" === kk.expression.text && null !== (Fk = Bk.get(kk.name.text)) && void 0 !== Fk ? Fk : kk.getText()
+      const cb = xs(bb),
+        sb = function(bb) {
+          const cb = new Map;
+          for (const sb of bb.statements)
+            if (hb().isVariableStatement(sb))
+              for (const bb of sb.declarationList.declarations)
+                if (hb().isIdentifier(bb.name) && "CONFIG" === bb.name.text && bb.initializer && hb().isObjectLiteralExpression(bb.initializer))
+                  for (const sb of bb.initializer.properties) hb().isPropertyAssignment(sb) && (hb().isIdentifier(sb.name) || hb().isStringLiteral(sb.name)) && cb.set(sb.name.text, sb.initializer.getText());
+          return cb
+        }(cb),
+        kb = [],
+        Wb = [],
+        ab = bb => {
+          var cb;
+          return hb().isPropertyAccessExpression(bb) && hb().isIdentifier(bb.expression) && "CONFIG" === bb.expression.text && null !== (cb = sb.get(bb.name.text)) && void 0 !== cb ? cb : bb.getText()
         },
-        Xk = kk => kk && (Ek().isStringLiteral(kk) || Ek().isNoSubstitutionTemplateLiteral(kk)) ? kk.text : kk && Ek().isObjectLiteralExpression(kk) ? kk.properties.flatMap((kk => Ek().isPropertyAssignment(kk) && (Ek().isIdentifier(kk.name) || Ek().isStringLiteral(kk.name)) ? [`${kk.name.text}: ${ak(kk.initializer)}`] : Ek().isShorthandPropertyAssignment(kk) && Bk.has(kk.name.text) ? [`${kk.name.text}: ${Bk.get(kk.name.text)}`] : [])).join("\n") : "";
-      for (const bk of Fk.statements) {
-        const kk = Ek().isExpressionStatement(bk) ? bk.expression : null;
-        if (!kk || !Ek().isCallExpression(kk) || !Ek().isIdentifier(kk.expression) || !/^use_?prefab$/i.test(kk.expression.text)) continue;
-        const [Fk, Bk] = kk.arguments;
-        if (Fk && (Ek().isStringLiteral(Fk) || Ek().isNoSubstitutionTemplateLiteral(Fk))) Rk.push({
-          name: Fk.text,
-          settings: Xk(Bk)
+        Tb = bb => bb && (hb().isStringLiteral(bb) || hb().isNoSubstitutionTemplateLiteral(bb)) ? bb.text : bb && hb().isObjectLiteralExpression(bb) ? bb.properties.flatMap((bb => hb().isPropertyAssignment(bb) && (hb().isIdentifier(bb.name) || hb().isStringLiteral(bb.name)) ? [`${bb.name.text}: ${ab(bb.initializer)}`] : hb().isShorthandPropertyAssignment(bb) && sb.has(bb.name.text) ? [`${bb.name.text}: ${sb.get(bb.name.text)}`] : [])).join("\n") : "";
+      for (const Ub of cb.statements) {
+        const bb = hb().isExpressionStatement(Ub) ? Ub.expression : null;
+        if (!bb || !hb().isCallExpression(bb) || !hb().isIdentifier(bb.expression) || !/^use_?prefab$/i.test(bb.expression.text)) continue;
+        const [cb, sb] = bb.arguments;
+        if (cb && (hb().isStringLiteral(cb) || hb().isNoSubstitutionTemplateLiteral(cb))) kb.push({
+          name: cb.text,
+          settings: Tb(sb)
         });
         else {
-          if (!Fk || !Ek().isObjectLiteralExpression(Fk)) continue;
+          if (!cb || !hb().isObjectLiteralExpression(cb)) continue;
           {
-            const kk = kk => {
-                var Bk;
-                return null === (Bk = Fk.properties.find((Fk => Ek().isPropertyAssignment(Fk) && Ek().isIdentifier(Fk.name) && Fk.name.text === kk))) || void 0 === Bk ? void 0 : Bk.initializer
+            const bb = bb => {
+                var sb;
+                return null === (sb = cb.properties.find((cb => hb().isPropertyAssignment(cb) && hb().isIdentifier(cb.name) && cb.name.text === bb))) || void 0 === sb ? void 0 : sb.initializer
               },
-              Bk = kk("name");
-            Bk && Ek().isStringLiteral(Bk) && Rk.push({
-              name: Bk.text,
-              settings: Xk(kk("settings"))
+              sb = bb("name");
+            sb && hb().isStringLiteral(sb) && kb.push({
+              name: sb.text,
+              settings: Tb(bb("settings"))
             })
           }
         }
-        tk.push({
-          ...IB(bk),
+        Wb.push({
+          ...ps(Ub),
           text: ""
         })
       }
       return {
-        code: HB(kk, tk),
-        calls: Rk
+        code: ts(bb, Wb),
+        calls: kb
       }
     }
 
-    function kR(kk) {
-      if (!/=\s*(?:on[A-Z]\w*|tick|playerCommand)\b/.test(kk)) return kk;
-      const Fk = nB(kk),
-        Bk = new Set(Fk.statements.flatMap((kk => Ek().isFunctionDeclaration(kk) && kk.name ? [kk.name.text] : []))),
-        Rk = [];
-      for (const tk of Fk.statements)
-        if (Ek().isExpressionStatement(tk) && Ek().isBinaryExpression(tk.expression) && tk.expression.operatorToken.kind === Ek().SyntaxKind.EqualsToken && Ek().isIdentifier(tk.expression.left) && Bk.add(tk.expression.left.text), Ek().isVariableStatement(tk))
-          for (const kk of tk.declarationList.declarations) {
-            const Fk = kk.initializer;
-            Fk && Ek().isIdentifier(Fk) && AB(Fk.text) && !Bk.has(Fk.text) && Rk.push({
-              from: Fk.getStart(),
-              to: Fk.getEnd(),
+    function ck(bb) {
+      if (!/=\s*(?:on[A-Z]\w*|tick|playerCommand)\b/.test(bb)) return bb;
+      const cb = xs(bb),
+        sb = new Set(cb.statements.flatMap((bb => hb().isFunctionDeclaration(bb) && bb.name ? [bb.name.text] : []))),
+        kb = [];
+      for (const Wb of cb.statements)
+        if (hb().isExpressionStatement(Wb) && hb().isBinaryExpression(Wb.expression) && Wb.expression.operatorToken.kind === hb().SyntaxKind.EqualsToken && hb().isIdentifier(Wb.expression.left) && sb.add(Wb.expression.left.text), hb().isVariableStatement(Wb))
+          for (const bb of Wb.declarationList.declarations) {
+            const cb = bb.initializer;
+            cb && hb().isIdentifier(cb) && Xs(cb.text) && !sb.has(cb.text) && kb.push({
+              from: cb.getStart(),
+              to: cb.getEnd(),
               text: "function () {}"
-            }), Fk && Ek().isIdentifier(kk.name) && Bk.add(kk.name.text)
+            }), cb && hb().isIdentifier(bb.name) && sb.add(bb.name.text)
           }
-      return HB(kk, Rk)
+      return ts(bb, kb)
     }
 
-    function FR(kk, Fk) {
-      if (!kk.includes("api.setBlockRect(")) return kk;
-      const Bk = nB(kk);
-      if (Bk.statements.some((kk => {
-          var Fk;
-          return Ek().isFunctionDeclaration(kk) && "fillBox" === (null === (Fk = kk.name) || void 0 === Fk ? void 0 : Fk.text) && 3 !== kk.parameters.length
-        }))) return kk;
-      const Rk = [],
-        tk = kk => {
-          var ak;
-          Ek().isFunctionDeclaration(kk) && "fillBox" === (null === (ak = kk.name) || void 0 === ak ? void 0 : ak.text) || (CB(kk, Bk) && "setBlockRect" === kk.expression.name.text && 3 === kk.arguments.length && !Fk.includes(kk.getText()) && Rk.push({
-            from: kk.expression.getStart(),
-            to: kk.expression.getEnd(),
+    function sk(bb, cb) {
+      if (!bb.includes("api.setBlockRect(")) return bb;
+      const sb = xs(bb);
+      if (sb.statements.some((bb => {
+          var cb;
+          return hb().isFunctionDeclaration(bb) && "fillBox" === (null === (cb = bb.name) || void 0 === cb ? void 0 : cb.text) && 3 !== bb.parameters.length
+        }))) return bb;
+      const kb = [],
+        Wb = bb => {
+          var ab;
+          hb().isFunctionDeclaration(bb) && "fillBox" === (null === (ab = bb.name) || void 0 === ab ? void 0 : ab.text) || (ws(bb, sb) && "setBlockRect" === bb.expression.name.text && 3 === bb.arguments.length && !cb.includes(bb.getText()) && kb.push({
+            from: bb.expression.getStart(),
+            to: bb.expression.getEnd(),
             text: "fillBox"
-          }), Ek().forEachChild(kk, tk))
+          }), hb().forEachChild(bb, Wb))
         };
-      return tk(Bk), HB(kk, Rk)
+      return Wb(sb), ts(bb, kb)
     }
-    const BR = [{
+    const kk = [{
         name: "parkour",
         kind: "game",
         title: "Parkour / obby",
@@ -4416,7 +4416,7 @@ export const modules = {
         }],
         setup: "Put your own Bloxd name in admins to get the admin commands, and set spawnPosition to where players should start."
       }],
-      RR = [{
+      Wk = [{
         group: "timers",
         code: "// Ready-made timers: runLater(seconds, fn) runs fn once after some seconds, repeatEvery(seconds, fn) runs it every\n// few seconds, and cancelTimer(id) stops either. Time is counted in tick. The list is a var made on first use, so\n// they can be called from the top of the file, above this code.\nvar timerList\nvar nextTimerId\n\nfunction runLater(seconds, fn) {\n\treturn addToTimerList(seconds, 0, fn)\n}\n\nfunction repeatEvery(seconds, fn) {\n\treturn addToTimerList(seconds, Math.max(50, seconds * 1000), fn)\n}\n\nfunction addToTimerList(seconds, everyMs, fn) {\n\tif (!timerList) {\n\t\ttimerList = []\n\t\tnextTimerId = 1\n\t}\n\tconst id = nextTimerId++\n\ttimerList.push({ id: id, msLeft: seconds * 1000, everyMs: everyMs, fn: fn })\n\treturn id\n}\n\nfunction cancelTimer(id) {\n\tconst index = timerList ? timerList.findIndex((timer) => timer.id === id) : -1\n\tif (index !== -1) {\n\t\ttimerList.splice(index, 1)\n\t}\n}\n\nfunction tick(ms) {\n\tif (!timerList) {\n\t\treturn\n\t}\n\tfor (const timer of timerList.slice()) {\n\t\tif (!timerList.includes(timer)) {\n\t\t\tcontinue\n\t\t}\n\t\ttimer.msLeft -= ms\n\t\tif (timer.msLeft > 0) {\n\t\t\tcontinue\n\t\t}\n\t\tif (timer.everyMs > 0) {\n\t\t\ttimer.msLeft += timer.everyMs\n\t\t} else {\n\t\t\tcancelTimer(timer.id)\n\t\t}\n\t\ttimer.fn()\n\t}\n}",
         helpers: [{
@@ -5003,180 +5003,180 @@ export const modules = {
           about: "Stops a risingLava (the handle it returned). With clear true it also takes away the blocks it placed, and only those, e.g. for the next round. Returns nothing.",
           example: "stopLava(lava, true)"
         }]
-      }].flatMap((kk => kk.helpers.map((Fk => ({
-        ...Fk,
-        group: kk.group,
-        code: kk.code,
-        ...kk.uses ? {
-          uses: kk.uses
+      }].flatMap((bb => bb.helpers.map((cb => ({
+        ...cb,
+        group: bb.group,
+        code: bb.code,
+        ...bb.uses ? {
+          uses: bb.uses
         } : {}
       })))));
 
-    function tR(kk) {
+    function ak(bb) {
       const {
-        file: Fk,
-        hasErrors: Bk
-      } = fB(`(${kk})`), Rk = Fk.statements[0];
-      if (Bk || 1 !== Fk.statements.length || !Rk || !Ek().isExpressionStatement(Rk)) return null;
-      const tk = Rk.expression;
-      return Ek().isParenthesizedExpression(tk) ? tk.expression : tk
+        file: cb,
+        hasErrors: sb
+      } = ls(`(${bb})`), kb = cb.statements[0];
+      if (sb || 1 !== cb.statements.length || !kb || !hb().isExpressionStatement(kb)) return null;
+      const Wb = kb.expression;
+      return hb().isParenthesizedExpression(Wb) ? Wb.expression : Wb
     }
 
-    function aR(kk) {
-      return !!(Ek().isNumericLiteral(kk) || Ek().isStringLiteral(kk) || Ek().isNoSubstitutionTemplateLiteral(kk)) || (kk.kind === Ek().SyntaxKind.TrueKeyword || kk.kind === Ek().SyntaxKind.FalseKeyword || kk.kind === Ek().SyntaxKind.NullKeyword || (!Ek().isPrefixUnaryExpression(kk) || kk.operator !== Ek().SyntaxKind.MinusToken && kk.operator !== Ek().SyntaxKind.PlusToken ? Ek().isArrayLiteralExpression(kk) ? kk.elements.every((kk => aR(kk))) : !!Ek().isObjectLiteralExpression(kk) && kk.properties.every((kk => Ek().isPropertyAssignment(kk) && (Ek().isIdentifier(kk.name) || Ek().isStringLiteral(kk.name)) && aR(kk.initializer))) : Ek().isNumericLiteral(kk.operand)))
+    function Tk(bb) {
+      return !!(hb().isNumericLiteral(bb) || hb().isStringLiteral(bb) || hb().isNoSubstitutionTemplateLiteral(bb)) || (bb.kind === hb().SyntaxKind.TrueKeyword || bb.kind === hb().SyntaxKind.FalseKeyword || bb.kind === hb().SyntaxKind.NullKeyword || (!hb().isPrefixUnaryExpression(bb) || bb.operator !== hb().SyntaxKind.MinusToken && bb.operator !== hb().SyntaxKind.PlusToken ? hb().isArrayLiteralExpression(bb) ? bb.elements.every((bb => Tk(bb))) : !!hb().isObjectLiteralExpression(bb) && bb.properties.every((bb => hb().isPropertyAssignment(bb) && (hb().isIdentifier(bb.name) || hb().isStringLiteral(bb.name)) && Tk(bb.initializer))) : hb().isNumericLiteral(bb.operand)))
     }
 
-    function XR(kk) {
-      return Ek().isNumericLiteral(kk) || Ek().isPrefixUnaryExpression(kk) && Ek().isNumericLiteral(kk.operand)
+    function Uk(bb) {
+      return hb().isNumericLiteral(bb) || hb().isPrefixUnaryExpression(bb) && hb().isNumericLiteral(bb.operand)
     }
 
-    function bR(kk) {
-      return Ek().isStringLiteral(kk) || Ek().isNoSubstitutionTemplateLiteral(kk) ? kk.text : null
+    function Ik(bb) {
+      return hb().isStringLiteral(bb) || hb().isNoSubstitutionTemplateLiteral(bb) ? bb.text : null
     }
-    const wR = /"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/g;
+    const Hk = /"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/g;
 
-    function dR(kk) {
-      const Fk = kk.trim();
-      if ("" === Fk) return [];
-      if (Fk.startsWith("{")) try {
-        const kk = JSON.parse(Fk);
-        if (kk && "object" === typeof kk && !Array.isArray(kk)) return Object.entries(kk).map((kk => {
-          let [Fk, Bk] = kk;
-          return [Fk, JSON.stringify(Bk)]
+    function fk(bb) {
+      const cb = bb.trim();
+      if ("" === cb) return [];
+      if (cb.startsWith("{")) try {
+        const bb = JSON.parse(cb);
+        if (bb && "object" === typeof bb && !Array.isArray(bb)) return Object.entries(bb).map((bb => {
+          let [cb, sb] = bb;
+          return [cb, JSON.stringify(sb)]
         }))
       } catch {}
-      const Bk = function(kk) {
-        const Fk = tR(kk);
-        if (!Fk || !Ek().isObjectLiteralExpression(Fk)) return null;
-        const Bk = [];
-        for (const Rk of Fk.properties) {
-          if (!Ek().isPropertyAssignment(Rk) || !Ek().isIdentifier(Rk.name) && !Ek().isStringLiteral(Rk.name)) return null;
-          Bk.push([Rk.name.text, Rk.initializer.getText()])
+      const sb = function(bb) {
+        const cb = ak(bb);
+        if (!cb || !hb().isObjectLiteralExpression(cb)) return null;
+        const sb = [];
+        for (const kb of cb.properties) {
+          if (!hb().isPropertyAssignment(kb) || !hb().isIdentifier(kb.name) && !hb().isStringLiteral(kb.name)) return null;
+          sb.push([kb.name.text, kb.initializer.getText()])
         }
-        return Bk
-      }(Fk.startsWith("{") ? Fk : `{${Fk}}`);
-      if (Bk) return Bk;
-      const Rk = [];
-      let tk = null,
-        ak = 0;
-      const Xk = Fk.startsWith("{") ? Fk.replace(/^\{/, "").replace(/\}\s*$/, "") : Fk;
-      for (const Vk of Xk.split("\n")) {
-        var bk, wk, dk, sk;
-        const kk = /\/\//.exec(Vk.replace(wR, (kk => " ".repeat(kk.length)))),
-          Fk = (kk ? Vk.slice(0, kk.index) : Vk).trim();
-        if ("" === Fk) continue;
-        if (tk && ak > 0) tk[1] += `\n${Fk}`;
+        return sb
+      }(cb.startsWith("{") ? cb : `{${cb}}`);
+      if (sb) return sb;
+      const kb = [];
+      let Wb = null,
+        ab = 0;
+      const Tb = cb.startsWith("{") ? cb.replace(/^\{/, "").replace(/\}\s*$/, "") : cb;
+      for (const Mb of Tb.split("\n")) {
+        var Ub, Ib, Hb, fb;
+        const bb = /\/\//.exec(Mb.replace(Hk, (bb => " ".repeat(bb.length)))),
+          cb = (bb ? Mb.slice(0, bb.index) : Mb).trim();
+        if ("" === cb) continue;
+        if (Wb && ab > 0) Wb[1] += `\n${cb}`;
         else {
-          const kk = /^["']?([A-Za-z_$][\w$]*)["']?\s*[:=]\s*(.*)$/.exec(Fk.replace(/^[-*\u2022]\s*/, ""));
-          if (!kk) continue;
-          tk = [kk[1], kk[2]], Rk.push(tk)
+          const bb = /^["']?([A-Za-z_$][\w$]*)["']?\s*[:=]\s*(.*)$/.exec(cb.replace(/^[-*\u2022]\s*/, ""));
+          if (!bb) continue;
+          Wb = [bb[1], bb[2]], kb.push(Wb)
         }
-        const Bk = Fk.replace(wR, "");
-        ak = Math.max(0, ak + (null !== (bk = null === (wk = Bk.match(/[[{(]/g)) || void 0 === wk ? void 0 : wk.length) && void 0 !== bk ? bk : 0) - (null !== (dk = null === (sk = Bk.match(/[\]})]/g)) || void 0 === sk ? void 0 : sk.length) && void 0 !== dk ? dk : 0))
+        const sb = cb.replace(Hk, "");
+        ab = Math.max(0, ab + (null !== (Ub = null === (Ib = sb.match(/[[{(]/g)) || void 0 === Ib ? void 0 : Ib.length) && void 0 !== Ub ? Ub : 0) - (null !== (Hb = null === (fb = sb.match(/[\]})]/g)) || void 0 === fb ? void 0 : fb.length) && void 0 !== Hb ? Hb : 0))
       }
-      return Rk.map((kk => {
-        let [Fk, Bk] = kk;
-        return [Fk, Bk.trim().replace(/[,;]\s*$/, "")]
+      return kb.map((bb => {
+        let [cb, sb] = bb;
+        return [cb, sb.trim().replace(/[,;]\s*$/, "")]
       }))
     }
 
-    function sR(kk, Fk, Bk) {
-      const Rk = "string" === kk.kind || "block" === kk.kind || "item" === kk.kind || "mob" === kk.kind;
-      let tk = tR(Fk),
-        ak = Fk;
-      var Xk;
-      if (tk && aR(tk) || !Rk || (Xk = Fk, ak = JSON.stringify(Xk.replace(/^["'`]|["'`]$/g, "")), tk = tR(ak)), !tk || !aR(tk)) return {
-        problem: `${kk.key} must be a plain value like ${kk.value}, not ${Fk}`
+    function Mk(bb, cb, sb) {
+      const kb = "string" === bb.kind || "block" === bb.kind || "item" === bb.kind || "mob" === bb.kind;
+      let Wb = ak(cb),
+        ab = cb;
+      var Tb;
+      if (Wb && Tk(Wb) || !kb || (Tb = cb, ab = JSON.stringify(Tb.replace(/^["'`]|["'`]$/g, "")), Wb = ak(ab)), !Wb || !Tk(Wb)) return {
+        problem: `${bb.key} must be a plain value like ${bb.value}, not ${cb}`
       };
-      if ("number" === kk.kind && !XR(tk)) return {
-        problem: `${kk.key} must be a number, like ${kk.value}`
+      if ("number" === bb.kind && !Uk(Wb)) return {
+        problem: `${bb.key} must be a number, like ${bb.value}`
       };
-      if ("boolean" === kk.kind && tk.kind !== Ek().SyntaxKind.TrueKeyword && tk.kind !== Ek().SyntaxKind.FalseKeyword) return {
-        problem: `${kk.key} must be true or false`
+      if ("boolean" === bb.kind && Wb.kind !== hb().SyntaxKind.TrueKeyword && Wb.kind !== hb().SyntaxKind.FalseKeyword) return {
+        problem: `${bb.key} must be true or false`
       };
-      if ("position" === kk.kind && ! function(kk) {
-          return Ek().isArrayLiteralExpression(kk) && 3 === kk.elements.length && kk.elements.every(XR)
-        }(tk) && (tk.kind !== Ek().SyntaxKind.NullKeyword || "null" !== kk.value)) return {
-        problem: `${kk.key} must be a position [x, y, z], like ${"null"===kk.value?"[0, 10, 0]":kk.value}`
+      if ("position" === bb.kind && ! function(bb) {
+          return hb().isArrayLiteralExpression(bb) && 3 === bb.elements.length && bb.elements.every(Uk)
+        }(Wb) && (Wb.kind !== hb().SyntaxKind.NullKeyword || "null" !== bb.value)) return {
+        problem: `${bb.key} must be a position [x, y, z], like ${"null"===bb.value?"[0, 10, 0]":bb.value}`
       };
-      if ("list" === kk.kind && !Ek().isArrayLiteralExpression(tk)) return {
-        problem: `${kk.key} must be a list in [ ], like ${kk.value}`
+      if ("list" === bb.kind && !hb().isArrayLiteralExpression(Wb)) return {
+        problem: `${bb.key} must be a list in [ ], like ${bb.value}`
       };
-      if ("list" === kk.kind && kk.names && Bk && Ek().isArrayLiteralExpression(tk)) return function(kk, Fk, Bk, Rk) {
-        const tk = kk => kk.elements.flatMap(((Fk, Rk) => {
-            if (Ek().isArrayLiteralExpression(Fk)) return tk(Fk);
-            if ("item" === Bk && Ek().isObjectLiteralExpression(Fk)) return ak(Fk);
-            const Xk = kk.elements[Rk + 1],
-              bk = void 0 !== Xk && Ek().isArrayLiteralExpression(Xk);
-            return null === bR(Fk) || bk ? [] : [Fk]
+      if ("list" === bb.kind && bb.names && sb && hb().isArrayLiteralExpression(Wb)) return function(bb, cb, sb, kb) {
+        const Wb = bb => bb.elements.flatMap(((cb, kb) => {
+            if (hb().isArrayLiteralExpression(cb)) return Wb(cb);
+            if ("item" === sb && hb().isObjectLiteralExpression(cb)) return ab(cb);
+            const Tb = bb.elements[kb + 1],
+              Ub = void 0 !== Tb && hb().isArrayLiteralExpression(Tb);
+            return null === Ik(cb) || Ub ? [] : [cb]
           })),
-          ak = kk => kk.properties.flatMap((kk => {
-            if (!Ek().isPropertyAssignment(kk) || !["item", "ammo", "projectile", "items"].includes(kk.name.getText().replace(/["']/g, ""))) return [];
-            const Fk = kk.initializer;
-            return Ek().isArrayLiteralExpression(Fk) ? tk(Fk) : null !== bR(Fk) ? [Fk] : []
+          ab = bb => bb.properties.flatMap((bb => {
+            if (!hb().isPropertyAssignment(bb) || !["item", "ammo", "projectile", "items"].includes(bb.name.getText().replace(/["']/g, ""))) return [];
+            const cb = bb.initializer;
+            return hb().isArrayLiteralExpression(cb) ? Wb(cb) : null !== Ik(cb) ? [cb] : []
           })),
-          Xk = tk(Fk),
-          bk = Fk.getStart();
-        let wk = Fk.getText();
-        const dk = [],
-          sk = [],
-          Vk = new Map([...kk.value.matchAll(/\{ item: "([^"]+)"[^}]*?action: "(\w+)"/g)].map((kk => [kk[2], kk[1]]))),
-          Jk = kk => {
-            var Fk;
-            const Bk = kk.parent,
-              Rk = null === Bk || void 0 === Bk ? void 0 : Bk.parent;
-            if (!Ek().isPropertyAssignment(Bk) || "item" !== Bk.name.getText().replace(/["']/g, "") || !Rk || !Ek().isObjectLiteralExpression(Rk)) return;
-            const tk = kk => Rk.properties.find((Fk => Ek().isPropertyAssignment(Fk) && Fk.name.getText().replace(/["']/g, "") === kk)),
-              ak = tk("action"),
-              Xk = ak ? Vk.get(null !== (Fk = bR(ak.initializer)) && void 0 !== Fk ? Fk : "") : void 0;
-            return Xk ? {
-              property: Bk,
-              item: Xk,
-              named: void 0 !== tk("name")
+          Tb = Wb(cb),
+          Ub = cb.getStart();
+        let Ib = cb.getText();
+        const Hb = [],
+          fb = [],
+          Mb = new Map([...bb.value.matchAll(/\{ item: "([^"]+)"[^}]*?action: "(\w+)"/g)].map((bb => [bb[2], bb[1]]))),
+          Xb = bb => {
+            var cb;
+            const sb = bb.parent,
+              kb = null === sb || void 0 === sb ? void 0 : sb.parent;
+            if (!hb().isPropertyAssignment(sb) || "item" !== sb.name.getText().replace(/["']/g, "") || !kb || !hb().isObjectLiteralExpression(kb)) return;
+            const Wb = bb => kb.properties.find((cb => hb().isPropertyAssignment(cb) && cb.name.getText().replace(/["']/g, "") === bb)),
+              ab = Wb("action"),
+              Tb = ab ? Mb.get(null !== (cb = Ik(ab.initializer)) && void 0 !== cb ? cb : "") : void 0;
+            return Tb ? {
+              property: sb,
+              item: Tb,
+              named: void 0 !== Wb("name")
             } : void 0
           };
-        for (const ek of [...Xk].reverse()) {
-          var Ak;
-          const kk = null !== (Ak = bR(ek)) && void 0 !== Ak ? Ak : "",
-            Fk = Rk(Bk, kk),
-            tk = null === Fk ? Jk(ek) : void 0;
-          if (tk) {
-            const Fk = tk.named ? `item: ${JSON.stringify(tk.item)}` : `item: ${JSON.stringify(tk.item)}, name: ${JSON.stringify(kk)}`;
-            dk.unshift(`"${kk}" isn't an item, so it is a ${tk.item}${tk.named?"":` named "${kk}"`}`), wk = `${wk.slice(0,tk.property.getStart()-bk)}${Fk}${wk.slice(tk.property.getEnd()-bk)}`
-          } else null === Fk ? sk.unshift(`"${kk}"`) : Fk !== kk && (dk.unshift(`"${kk}" is "${Fk}"`), wk = `${wk.slice(0,ek.getStart()-bk)}${JSON.stringify(Fk)}${wk.slice(ek.getEnd()-bk)}`)
+        for (const mb of [...Tb].reverse()) {
+          var nb;
+          const bb = null !== (nb = Ik(mb)) && void 0 !== nb ? nb : "",
+            cb = kb(sb, bb),
+            Wb = null === cb ? Xb(mb) : void 0;
+          if (Wb) {
+            const cb = Wb.named ? `item: ${JSON.stringify(Wb.item)}` : `item: ${JSON.stringify(Wb.item)}, name: ${JSON.stringify(bb)}`;
+            Hb.unshift(`"${bb}" isn't an item, so it is a ${Wb.item}${Wb.named?"":` named "${bb}"`}`), Ib = `${Ib.slice(0,Wb.property.getStart()-Ub)}${cb}${Ib.slice(Wb.property.getEnd()-Ub)}`
+          } else null === cb ? fb.unshift(`"${bb}"`) : cb !== bb && (Hb.unshift(`"${bb}" is "${cb}"`), Ib = `${Ib.slice(0,mb.getStart()-Ub)}${JSON.stringify(cb)}${Ib.slice(mb.getEnd()-Ub)}`)
         }
-        if (sk.length > 0) return {
-          problem: `${sk.join(", ")} ${1===sk.length?"item"===Bk?"isn't an":"isn't a":"aren't"} ${Bk} name${1===sk.length?"":"s"}, so ${kk.key} kept ${kk.value}`
+        if (fb.length > 0) return {
+          problem: `${fb.join(", ")} ${1===fb.length?"item"===sb?"isn't an":"isn't a":"aren't"} ${sb} name${1===fb.length?"":"s"}, so ${bb.key} kept ${bb.value}`
         };
         return {
-          value: wk,
-          ...dk.length > 0 ? {
-            fixed: dk.join(", ")
+          value: Ib,
+          ...Hb.length > 0 ? {
+            fixed: Hb.join(", ")
           } : {}
         }
-      }(kk, tk, kk.names, Bk);
-      if (Rk) {
-        const Fk = bR(tk);
-        if (null === Fk) return {
-          problem: `${kk.key} must be text in quotes, like ${kk.value}`
+      }(bb, Wb, bb.names, sb);
+      if (kb) {
+        const cb = Ik(Wb);
+        if (null === cb) return {
+          problem: `${bb.key} must be text in quotes, like ${bb.value}`
         };
-        if (("block" === kk.kind || "item" === kk.kind || "mob" === kk.kind) && Bk) {
-          const Rk = Bk(kk.kind, Fk);
-          if (null === Rk) return {
-            problem: `"${Fk}" isn't ${"item"===kk.kind?"an":"a"} ${kk.kind} name, so ${kk.key} kept ${kk.value}`
+        if (("block" === bb.kind || "item" === bb.kind || "mob" === bb.kind) && sb) {
+          const kb = sb(bb.kind, cb);
+          if (null === kb) return {
+            problem: `"${cb}" isn't ${"item"===bb.kind?"an":"a"} ${bb.kind} name, so ${bb.key} kept ${bb.value}`
           };
-          if (Rk !== Fk) return {
-            value: JSON.stringify(Rk),
-            fixed: `"${Fk}" is "${Rk}"`
+          if (kb !== cb) return {
+            value: JSON.stringify(kb),
+            fixed: `"${cb}" is "${kb}"`
           }
         }
       }
       return {
-        value: tk.getText()
+        value: Wb.getText()
       }
     }
-    const VR = BR,
-      JR = new Map([
+    const Xk = kk,
+      nk = new Map([
         ["parkour", "parkour, obbies and races to a finish"],
         ["pvp", "fighting other players: arenas, kills, last one standing"],
         ["teams", "teams against each other"],
@@ -5190,707 +5190,707 @@ export const modules = {
         ["screen", "text on players' screens and announcements"]
       ]);
 
-    function AR(kk) {
-      return kk.toLowerCase().replace(/[^a-z0-9]/g, "")
+    function mk(bb) {
+      return bb.toLowerCase().replace(/[^a-z0-9]/g, "")
     }
 
-    function eR(kk) {
-      var Fk;
-      const Bk = AR(kk);
-      return null !== (Fk = VR.find((kk => AR(kk.name) === Bk || AR(kk.title) === Bk))) && void 0 !== Fk ? Fk : null
+    function lk(bb) {
+      var cb;
+      const sb = mk(bb);
+      return null !== (cb = Xk.find((bb => mk(bb.name) === sb || mk(bb.title) === sb))) && void 0 !== cb ? cb : null
     }
 
-    function yR(kk) {
-      var Fk;
-      return null !== (Fk = RR.find((Fk => Fk.name === kk))) && void 0 !== Fk ? Fk : null
+    function Qk(bb) {
+      var cb;
+      return null !== (cb = Wk.find((cb => cb.name === bb))) && void 0 !== cb ? cb : null
     }
 
-    function fR(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-      const Bk = function(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return 0 === kk.length ? "" : `const CONFIG = {\n${kk.map((kk=>{var Bk;return`\t${kk.key}: ${null!==(Bk=Fk.get(kk.key))&&void 0!==Bk?Bk:kk.value}, // ${kk.about}`})).join("\n")}\n}`
-      }(kk.settings, Fk);
-      return `${""===Bk?"":`${Bk}\n\n`}${kk.code.trim()}\n`
+    function ek(bb) {
+      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+      const sb = function(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return 0 === bb.length ? "" : `const CONFIG = {\n${bb.map((bb=>{var sb;return`\t${bb.key}: ${null!==(sb=cb.get(bb.key))&&void 0!==sb?sb:bb.value}, // ${bb.about}`})).join("\n")}\n}`
+      }(bb.settings, cb);
+      return `${""===sb?"":`${sb}\n\n`}${bb.code.trim()}\n`
     }
 
-    function mR(kk) {
-      const Fk = [],
-        Bk = new Set,
-        Rk = kk => {
-          const tk = yR(kk);
-          if (tk && !Bk.has(tk.group)) {
-            Bk.add(tk.group);
-            for (const kk of null !== (ak = tk.uses) && void 0 !== ak ? ak : []) {
-              var ak;
-              Rk(kk)
+    function Ck(bb) {
+      const cb = [],
+        sb = new Set,
+        kb = bb => {
+          const Wb = Qk(bb);
+          if (Wb && !sb.has(Wb.group)) {
+            sb.add(Wb.group);
+            for (const bb of null !== (ab = Wb.uses) && void 0 !== ab ? ab : []) {
+              var ab;
+              kb(bb)
             }
-            Fk.push(tk)
+            cb.push(Wb)
           }
         };
-      for (const tk of kk) Rk(tk);
-      return Fk
+      for (const Wb of bb) kb(Wb);
+      return cb
     }
 
-    function WR(kk, Fk) {
-      const Bk = kk => kk.replace(/\s+/g, ""),
-        Rk = new RegExp(`function ${Fk.name}\\s*\\([^)]*\\)\\s*\\{`).exec(kk);
-      return !!Rk && Bk(Fk.code).includes(Bk(kk.slice(Rk.index, Rk.index + 200)).slice(0, 60))
+    function Nk(bb, cb) {
+      const sb = bb => bb.replace(/\s+/g, ""),
+        kb = new RegExp(`function ${cb.name}\\s*\\([^)]*\\)\\s*\\{`).exec(bb);
+      return !!kb && sb(cb.code).includes(sb(bb.slice(kb.index, kb.index + 200)).slice(0, 60))
     }
 
-    function vR(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set;
-      if (!qB(kk)) return {
-        text: kk,
+    function Vk(bb) {
+      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set;
+      if (!As(bb)) return {
+        text: bb,
         added: []
       };
-      let Bk = kk;
-      const Rk = [];
-      for (let tk = 0; tk < 4; tk++) {
-        const kk = PB(Bk),
-          tk = [...hB(Bk)].filter((Rk => {
-            const tk = yR(Rk);
-            return null !== tk && !Fk.has(Rk) && (!kk.has(Rk) || WR(Bk, tk))
+      let sb = bb;
+      const kb = [];
+      for (let Wb = 0; Wb < 4; Wb++) {
+        const bb = qs(sb),
+          Wb = [...ds(sb)].filter((kb => {
+            const Wb = Qk(kb);
+            return null !== Wb && !cb.has(kb) && (!bb.has(kb) || Nk(sb, Wb))
           }));
-        let ak = !1;
-        for (const Fk of mR(tk)) {
-          const Xk = zB(Bk, Fk.code, {
-            owner: Fk.group,
+        let ab = !1;
+        for (const cb of Ck(Wb)) {
+          const Tb = zs(sb, cb.code, {
+            owner: cb.group,
             chainCallbacks: !0
           });
-          Xk && Xk.text !== Bk && (Bk = Xk.text, ak = !0, kk.has(Fk.name) || Rk.push(...RR.filter((kk => kk.group === Fk.group && tk.includes(kk.name))).map((kk => kk.name))))
+          Tb && Tb.text !== sb && (sb = Tb.text, ab = !0, bb.has(cb.name) || kb.push(...Wk.filter((bb => bb.group === cb.group && Wb.includes(bb.name))).map((bb => bb.name))))
         }
-        if (!ak) break
+        if (!ab) break
       }
       return {
-        text: Bk,
-        added: [...new Set(Rk)]
+        text: sb,
+        added: [...new Set(kb)]
       }
     }
 
-    function iR(kk, Fk) {
-      const Bk = [...PB(Fk.code)].filter((kk => "CONFIG" !== kk && !AB(kk)));
-      if (0 === Bk.length) return kk.includes(Fk.code.trim().slice(0, 80));
-      const Rk = qB(kk) ? PB(kk) : new Set;
-      return 2 * Bk.filter((kk => Rk.has(kk))).length >= Bk.length
+    function Lk(bb, cb) {
+      const sb = [...qs(cb.code)].filter((bb => "CONFIG" !== bb && !Xs(bb)));
+      if (0 === sb.length) return bb.includes(cb.code.trim().slice(0, 80));
+      const kb = As(bb) ? qs(bb) : new Set;
+      return 2 * sb.filter((bb => kb.has(bb))).length >= sb.length
     }
 
-    function YR(kk) {
-      const Fk = /^const CONFIG = \{\n([\s\S]*?)\n\}/m.exec(kk.code);
-      return Fk ? Fk[1].split("\n").flatMap((kk => {
-        const Fk = /^\t(\w+): (.+?), \/\/ (.*)$/.exec(kk);
-        if (!Fk) return [];
-        const [, Bk, Rk, tk] = Fk;
+    function uk(bb) {
+      const cb = /^const CONFIG = \{\n([\s\S]*?)\n\}/m.exec(bb.code);
+      return cb ? cb[1].split("\n").flatMap((bb => {
+        const cb = /^\t(\w+): (.+?), \/\/ (.*)$/.exec(bb);
+        if (!cb) return [];
+        const [, sb, kb, Wb] = cb;
         return [{
-          key: Bk,
-          kind: /^-?\d/.test(Rk) ? "number" : "true" === Rk || "false" === Rk ? "boolean" : Rk.startsWith("[") ? "list" : "string",
-          value: Rk,
-          about: tk
+          key: sb,
+          kind: /^-?\d/.test(kb) ? "number" : "true" === kb || "false" === kb ? "boolean" : kb.startsWith("[") ? "list" : "string",
+          value: kb,
+          about: Wb
         }]
       })) : []
     }
 
-    function oR(kk) {
-      const Fk = new Set(kk.settings.map((kk => kk.key))),
-        Bk = new Map;
-      for (const Rk of mR(hB(kk.code)))
-        for (const kk of YR(Rk)) Fk.has(kk.key) || Bk.set(kk.key, kk);
-      return [...Bk.values()]
+    function Yk(bb) {
+      const cb = new Set(bb.settings.map((bb => bb.key))),
+        sb = new Map;
+      for (const kb of Ck(ds(bb.code)))
+        for (const bb of uk(kb)) cb.has(bb.key) || sb.set(bb.key, bb);
+      return [...sb.values()]
     }
 
-    function LR(kk, Fk, Bk, Rk) {
-      const tk = oR(Fk),
-        ak = function(kk, Fk, Bk) {
-          const Rk = new Map,
-            tk = [],
-            ak = [],
-            Xk = new Map(kk.settings.map((kk => [kk.key.toLowerCase(), kk])));
-          for (const [bk, wk] of dR(Fk)) {
-            const Fk = Xk.get(bk.toLowerCase());
-            if (!Fk) {
-              tk.push(`${kk.name} has no setting ${bk}`);
+    function hk(bb, cb, sb, kb) {
+      const Wb = Yk(cb),
+        ab = function(bb, cb, sb) {
+          const kb = new Map,
+            Wb = [],
+            ab = [],
+            Tb = new Map(bb.settings.map((bb => [bb.key.toLowerCase(), bb])));
+          for (const [Ub, Ib] of fk(cb)) {
+            const cb = Tb.get(Ub.toLowerCase());
+            if (!cb) {
+              Wb.push(`${bb.name} has no setting ${Ub}`);
               continue
             }
-            if (/^CONFIG\.\w+$/.test(wk.trim())) continue;
-            const dk = sR(Fk, wk, Bk);
-            "problem" in dk ? tk.push(dk.problem) : (Rk.set(Fk.key, dk.value), dk.fixed && ak.push(dk.fixed))
+            if (/^CONFIG\.\w+$/.test(Ib.trim())) continue;
+            const Hb = Mk(cb, Ib, sb);
+            "problem" in Hb ? Wb.push(Hb.problem) : (kb.set(cb.key, Hb.value), Hb.fixed && ab.push(Hb.fixed))
           }
           return {
-            values: Rk,
-            problems: tk,
-            fixed: ak
+            values: kb,
+            problems: Wb,
+            fixed: ab
           }
         }({
-          ...Fk,
-          settings: [...Fk.settings, ...tk]
-        }, Bk, Rk),
-        Xk = tk.filter((kk => ak.values.has(kk.key))),
-        bk = zB(kk, fR({
-          ...Fk,
-          settings: [...Fk.settings, ...Xk]
-        }, ak.values), {
-          owner: Fk.name,
-          overrides: new Set(ak.values.keys()),
-          heading: "" === kk.trim() ? void 0 : `// ---- ${Fk.title} (ready-made) ----`
+          ...cb,
+          settings: [...cb.settings, ...Wb]
+        }, sb, kb),
+        Tb = Wb.filter((bb => ab.values.has(bb.key))),
+        Ub = zs(bb, ek({
+          ...cb,
+          settings: [...cb.settings, ...Tb]
+        }, ab.values), {
+          owner: cb.name,
+          overrides: new Set(ab.values.keys()),
+          heading: "" === bb.trim() ? void 0 : `// ---- ${cb.title} (ready-made) ----`
         });
-      if (!bk) return {
-        error: qB(kk) ? "The prefab couldn't be fitted into the code around it without breaking it. Put it into an empty file instead." : "The code around it doesn't parse (a bracket is likely missing), so the prefab couldn't be fitted in. Fix the code first."
+      if (!Ub) return {
+        error: As(bb) ? "The prefab couldn't be fitted into the code around it without breaking it. Put it into an empty file instead." : "The code around it doesn't parse (a bracket is likely missing), so the prefab couldn't be fitted in. Fix the code first."
       };
-      const wk = vR(bk.text);
+      const Ib = Vk(Ub.text);
       return {
-        prefab: Fk,
-        text: wk.text,
-        problems: ak.problems,
-        fixed: ak.fixed,
-        chained: bk.chained,
-        helpers: wk.added
+        prefab: cb,
+        text: Ib.text,
+        problems: ab.problems,
+        fixed: ab.fixed,
+        chained: Ub.chained,
+        helpers: Ib.added
       }
     }
 
-    function OR(kk) {
-      return `- ${kk.name}: ${kk.summary}. Settings: ${kk.settings.map((kk=>kk.key)).join(", ")}`
+    function Jk(bb) {
+      return `- ${bb.name}: ${bb.summary}. Settings: ${bb.settings.map((bb=>bb.key)).join(", ")}`
     }
 
-    function ER(kk) {
-      var Fk;
-      const Bk = null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.trim().toLowerCase()) && void 0 !== Fk ? Fk : "",
-        Rk = [...JR.keys()].find((kk => kk === Bk)),
-        tk = Rk ? VR.filter((kk => kk.category === Rk)) : VR,
-        ak = Rk ? RR.filter((kk => kk.category === Rk)) : [];
-      return `${Rk?`Prefabs for ${JR.get(Rk)}:`:""===Bk||"all"===Bk?"Every prefab:":`There is no category ${kk}. Every prefab:`}\n${tk.length>0?tk.map(OR).join("\n"):"(none yet)"}${ak.length>0?`\nReady-made functions for it (call them; their code is added by itself):\n${ak.map((kk=>`- ${kk.signature}: ${kk.about}`)).join("\n")}`:""}${Rk?"":`\nCategories: ${[...JR.keys()].join(", ")}`}`
+    function gk(bb) {
+      var cb;
+      const sb = null !== (cb = null === bb || void 0 === bb ? void 0 : bb.trim().toLowerCase()) && void 0 !== cb ? cb : "",
+        kb = [...nk.keys()].find((bb => bb === sb)),
+        Wb = kb ? Xk.filter((bb => bb.category === kb)) : Xk,
+        ab = kb ? Wk.filter((bb => bb.category === kb)) : [];
+      return `${kb?`Prefabs for ${nk.get(kb)}:`:""===sb||"all"===sb?"Every prefab:":`There is no category ${bb}. Every prefab:`}\n${Wb.length>0?Wb.map(Jk).join("\n"):"(none yet)"}${ab.length>0?`\nReady-made functions for it (call them; their code is added by itself):\n${ab.map((bb=>`- ${bb.signature}: ${bb.about}`)).join("\n")}`:""}${kb?"":`\nCategories: ${[...nk.keys()].join(", ")}`}`
     }
 
-    function SR(kk, Fk) {
-      var Bk;
-      const Rk = [...kk.settings, ...oR(kk)].map((kk => `- ${kk.key} (${kk.kind}, default ${kk.value}): ${kk.about}`)).join("\n"),
-        tk = null !== (Bk = kk.changeable) && void 0 !== Bk && Bk.length ? `\nFunctions to replace by name for a game of their own:\n${kk.changeable.map((kk=>`- ${kk.name}: ${kk.about}`)).join("\n")}` : "",
-        ak = Fk ? `\nIts code, as it goes in with the default settings:\n${fR(kk)}` : "";
-      return `${kk.name} (${kk.title}): ${kk.summary}.\nHow it plays: ${kk.howItPlays}\nSettings:\n${Rk}${tk}${kk.setup?`\nThe creator sets up: ${kk.setup}`:""}${ak}`
+    function Bk(bb, cb) {
+      var sb;
+      const kb = [...bb.settings, ...Yk(bb)].map((bb => `- ${bb.key} (${bb.kind}, default ${bb.value}): ${bb.about}`)).join("\n"),
+        Wb = null !== (sb = bb.changeable) && void 0 !== sb && sb.length ? `\nFunctions to replace by name for a game of their own:\n${bb.changeable.map((bb=>`- ${bb.name}: ${bb.about}`)).join("\n")}` : "",
+        ab = cb ? `\nIts code, as it goes in with the default settings:\n${ek(bb)}` : "";
+      return `${bb.name} (${bb.title}): ${bb.summary}.\nHow it plays: ${bb.howItPlays}\nSettings:\n${kb}${Wb}${bb.setup?`\nThe creator sets up: ${bb.setup}`:""}${ab}`
     }
 
-    function NR(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4;
-      const Bk = function(kk) {
-          return new Set(kk.toLowerCase().split(/[^a-z0-9]+/).filter((kk => kk.length > 1)))
-        }(kk),
-        Rk = ` ${kk.toLowerCase().replace(/[^a-z0-9]+/g," ")} `;
-      return VR.map((kk => {
-        const Fk = kk.keywords.map((kk => kk.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())).filter((kk => kk.includes(" ") ? Rk.includes(` ${kk} `) : Bk.has(kk))),
-          tk = Math.min(...Fk.map((kk => Rk.indexOf(` ${kk} `))));
+    function tk(bb) {
+      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4;
+      const sb = function(bb) {
+          return new Set(bb.toLowerCase().split(/[^a-z0-9]+/).filter((bb => bb.length > 1)))
+        }(bb),
+        kb = ` ${bb.toLowerCase().replace(/[^a-z0-9]+/g," ")} `;
+      return Xk.map((bb => {
+        const cb = bb.keywords.map((bb => bb.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())).filter((bb => bb.includes(" ") ? kb.includes(` ${bb} `) : sb.has(bb))),
+          Wb = Math.min(...cb.map((bb => kb.indexOf(` ${bb} `))));
         return {
-          prefab: kk,
-          score: Fk.length,
-          first: tk
+          prefab: bb,
+          score: cb.length,
+          first: Wb
         }
-      })).filter((kk => kk.score > 0)).sort(((kk, Fk) => Fk.score - kk.score || kk.first - Fk.first)).slice(0, Fk).map((kk => kk.prefab))
+      })).filter((bb => bb.score > 0)).sort(((bb, cb) => cb.score - bb.score || bb.first - cb.first)).slice(0, cb).map((bb => bb.prefab))
     }
-    const HR = /\byour\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\bhow old\b|\bwhere (?:do )?you live\b|\be-?mail\b|\bphone number\b|\bpassword\b/i;
+    const yk = /\byour\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\bhow old\b|\bwhere (?:do )?you live\b|\be-?mail\b|\bphone number\b|\bpassword\b/i;
 
-    function uR(kk) {
-      var Fk, Bk, Rk, tk, ak, Xk;
-      const bk = function(kk) {
-          var Fk, Bk;
-          const Rk = null === (Fk = kk.questions) || void 0 === Fk ? void 0 : Fk.trim();
-          if (null !== (Bk = kk.question) && void 0 !== Bk && Bk.trim() || !Rk) return kk;
-          const tk = {
-            ...kk,
-            question: Rk
+    function Pk(bb) {
+      var cb, sb, kb, Wb, ab, Tb;
+      const Ub = function(bb) {
+          var cb, sb;
+          const kb = null === (cb = bb.questions) || void 0 === cb ? void 0 : cb.trim();
+          if (null !== (sb = bb.question) && void 0 !== sb && sb.trim() || !kb) return bb;
+          const Wb = {
+            ...bb,
+            question: kb
           };
-          if (!/^[[{]/.test(Rk)) return tk;
+          if (!/^[[{]/.test(kb)) return Wb;
           try {
-            const Fk = JSON.parse(Rk),
-              Bk = Array.isArray(Fk) ? Fk[0] : Fk;
-            if ("string" === typeof Bk) {
-              const Rk = Array.isArray(Fk) ? Fk.slice(1).filter((kk => "string" === typeof kk)) : [];
+            const cb = JSON.parse(kb),
+              sb = Array.isArray(cb) ? cb[0] : cb;
+            if ("string" === typeof sb) {
+              const kb = Array.isArray(cb) ? cb.slice(1).filter((bb => "string" === typeof bb)) : [];
               return {
-                ...kk,
-                question: Bk,
-                ...Rk.length > 0 && void 0 === kk.choices ? {
-                  choices: Rk.join("\n")
+                ...bb,
+                question: sb,
+                ...kb.length > 0 && void 0 === bb.choices ? {
+                  choices: kb.join("\n")
                 } : {}
               }
             }
-            if ("object" !== typeof Bk || null === Bk) return tk;
-            const ak = Bk,
-              Xk = kk => "string" === typeof kk ? kk : "boolean" === typeof kk ? String(kk) : Array.isArray(kk) ? kk.filter((kk => "string" === typeof kk)).join("\n") : void 0,
-              bk = {
-                question: Xk(ak.question),
-                choices: Xk(ak.choices),
-                allow_other: Xk(ak.allow_other)
+            if ("object" !== typeof sb || null === sb) return Wb;
+            const ab = sb,
+              Tb = bb => "string" === typeof bb ? bb : "boolean" === typeof bb ? String(bb) : Array.isArray(bb) ? bb.filter((bb => "string" === typeof bb)).join("\n") : void 0,
+              Ub = {
+                question: Tb(ab.question),
+                choices: Tb(ab.choices),
+                allow_other: Tb(ab.allow_other)
               };
             return {
-              ...kk,
-              ...Object.fromEntries(Object.entries(bk).filter((kk => {
-                let [, Fk] = kk;
-                return void 0 !== Fk
+              ...bb,
+              ...Object.fromEntries(Object.entries(Ub).filter((bb => {
+                let [, cb] = bb;
+                return void 0 !== cb
               })))
             }
           } catch {
-            return Rk.startsWith("[") ? tk : kk
+            return kb.startsWith("[") ? Wb : bb
           }
-        }(kk),
-        wk = null !== (Fk = null === (Bk = bk.question) || void 0 === Bk ? void 0 : Bk.replace(/\s+/g, " ").trim()) && void 0 !== Fk ? Fk : "",
-        dk = (null !== (Rk = bk.choices) && void 0 !== Rk ? Rk : "").includes("\n") ? (null !== (tk = bk.choices) && void 0 !== tk ? tk : "").split("\n") : (null !== (ak = bk.choices) && void 0 !== ak ? ak : "").split("|"),
-        sk = [...new Set(dk.map((kk => kk.replace(/^\s*(?:[-*\u2022]|\d+[.)])\s*/, "").trim())).filter(Boolean))].slice(0, 4),
-        Vk = "false" !== (null === (Xk = bk.allow_other) || void 0 === Xk ? void 0 : Xk.trim().toLowerCase());
-      return "" === wk || HR.test(wk) || sk.length < 2 && !Vk ? null : {
-        question: wk,
-        choices: sk,
-        allowOther: Vk
+        }(bb),
+        Ib = null !== (cb = null === (sb = Ub.question) || void 0 === sb ? void 0 : sb.replace(/\s+/g, " ").trim()) && void 0 !== cb ? cb : "",
+        Hb = (null !== (kb = Ub.choices) && void 0 !== kb ? kb : "").includes("\n") ? (null !== (Wb = Ub.choices) && void 0 !== Wb ? Wb : "").split("\n") : (null !== (ab = Ub.choices) && void 0 !== ab ? ab : "").split("|"),
+        fb = [...new Set(Hb.map((bb => bb.replace(/^\s*(?:[-*\u2022]|\d+[.)])\s*/, "").trim())).filter(Boolean))].slice(0, 4),
+        Mb = "false" !== (null === (Tb = Ub.allow_other) || void 0 === Tb ? void 0 : Tb.trim().toLowerCase());
+      return "" === Ib || yk.test(Ib) || fb.length < 2 && !Mb ? null : {
+        question: Ib,
+        choices: fb,
+        allowOther: Mb
       }
     }
-    const MR = /^\s*(?:\.\.\.|\u2026)\s*$/,
-      gR = /^[ \t]*(?:\/\/|\/\*)[ \t]*(?:(?:\.\.\.|\u2026)[ \t]*(?:\*\/)?[ \t]*$|(?:\.\.\.|\u2026)?[ \t]*(?:existing code|rest of (?:the |your )?(?:code|file)))/im;
+    const Dk = /^\s*(?:\.\.\.|\u2026)\s*$/,
+      Ek = /^[ \t]*(?:\/\/|\/\*)[ \t]*(?:(?:\.\.\.|\u2026)[ \t]*(?:\*\/)?[ \t]*$|(?:\.\.\.|\u2026)?[ \t]*(?:existing code|rest of (?:the |your )?(?:code|file)))/im;
 
-    function UR(kk, Fk) {
-      if (MR.test(kk)) return !0;
-      const Bk = new Set(Fk.split("\n").map((kk => kk.trim())));
-      return kk.split("\n").some((kk => gR.test(kk) && !Bk.has(kk.trim())))
+    function ik(bb, cb) {
+      if (Dk.test(bb)) return !0;
+      const sb = new Set(cb.split("\n").map((bb => bb.trim())));
+      return bb.split("\n").some((bb => Ek.test(bb) && !sb.has(bb.trim())))
     }
-    const cR = /```(?:js|javascript|ts|typescript)?\n([\s\S]*?)```/g,
-      GR = String.raw`on[A-Z]\w*|tick|playerCommand`,
-      TR = new RegExp(String.raw`^(?:(?:async\s+)?function\s+(?:${GR})\s*\(|(?:${GR})\s*=\s*(?:async\s+)?(?:function\b|\())`, "m"),
-      rR = new RegExp(`^(?:${GR})$`),
-      DR = new RegExp(String.raw`^(${GR})(\s*\([^()\n]*\)\s*\{)`, "gm"),
-      zR = new RegExp(String.raw`\bapi\.|\bfunction\s+(?:${GR})\b|\buse_?prefab\s*\(`, "i");
+    const Ok = /```(?:js|javascript|ts|typescript)?\n([\s\S]*?)```/g,
+      Gk = String.raw`on[A-Z]\w*|tick|playerCommand`,
+      Kk = new RegExp(String.raw`^(?:(?:async\s+)?function\s+(?:${Gk})\s*\(|(?:${Gk})\s*=\s*(?:async\s+)?(?:function\b|\())`, "m"),
+      Zk = new RegExp(`^(?:${Gk})$`),
+      zk = new RegExp(String.raw`^(${Gk})(\s*\([^()\n]*\)\s*\{)`, "gm"),
+      qk = new RegExp(String.raw`\bapi\.|\bfunction\s+(?:${Gk})\b|\buse_?prefab\s*\(`, "i");
 
-    function PR(kk) {
-      return kk.replace(/^\s*```[\w-]*[^\n]*\n/, "").replace(/\n?```\s*$/, "")
-    }
-
-    function hR(kk) {
-      return PR(kk).replace(/\s*$/, "\n")
+    function dk(bb) {
+      return bb.replace(/^\s*```[\w-]*[^\n]*\n/, "").replace(/\n?```\s*$/, "")
     }
 
-    function qR(kk, Fk) {
-      switch (kk) {
+    function Ak(bb) {
+      return dk(bb).replace(/\s*$/, "\n")
+    }
+
+    function wk(bb, cb) {
+      switch (bb) {
         case "view_file":
-          return void 0 === Fk.path ? Fk : {
-            path: CR(Fk.path)
+          return void 0 === cb.path ? cb : {
+            path: rk(cb.path)
           };
         case "fetch_url":
-          return void 0 === Fk.url ? Fk : {
-            url: Yk(Fk.url)
+          return void 0 === cb.url ? cb : {
+            url: Lb(cb.url)
           };
         default:
-          return Fk
+          return cb
       }
     }
 
-    function CR(kk) {
-      return kk.trim().replace(/^\.?\//, "")
+    function rk(bb) {
+      return bb.trim().replace(/^\.?\//, "")
     }
 
-    function ZR(kk) {
-      return kk.replace(DR, "function $1$2")
+    function Sk(bb) {
+      return bb.replace(zk, "function $1$2")
     }
 
-    function pR(kk) {
-      return kk.replace(/\bif\s*\(\s*(\/\*(?:(?!\*\/)[^])*\*\/)\s*\)/g, "if (false $1)")
+    function Rk(bb) {
+      return bb.replace(/\bif\s*\(\s*(\/\*(?:(?!\*\/)[^])*\*\/)\s*\)/g, "if (false $1)")
     }
 
-    function KR(kk, Fk, Bk, Rk) {
-      let tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
-        ak = arguments.length > 5 ? arguments[5] : void 0,
-        Xk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "offer",
-        bk = arguments.length > 7 ? arguments[7] : void 0,
-        wk = arguments.length > 8 ? arguments[8] : void 0;
-      const dk = {
-          ...Bk
+    function vk(bb, cb, sb, kb) {
+      let Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+        ab = arguments.length > 5 ? arguments[5] : void 0,
+        Tb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "offer",
+        Ub = arguments.length > 7 ? arguments[7] : void 0,
+        Ib = arguments.length > 8 ? arguments[8] : void 0;
+      const Hb = {
+          ...sb
         },
-        sk = new Set,
-        Vk = [];
-      let Jk;
-      const Ak = (kk, Fk, Bk, Rk) => {
-        Vk.push({
-          tool: kk,
-          path: Fk,
-          reason: Bk,
+        fb = new Set,
+        Mb = [];
+      let Xb;
+      const nb = (bb, cb, sb, kb) => {
+        Mb.push({
+          tool: bb,
+          path: cb,
+          reason: sb,
           closest: null,
           functions: [],
-          ...Rk,
-          ...Jk ? {
-            call: Jk
+          ...kb,
+          ...Xb ? {
+            call: Xb
           } : {}
         })
       };
-      let yk = kk;
-      const fk = Object.keys(Bk).some(ek.d),
-        mk = kk => null !== kk && fk && (0, ek.d)(kk),
-        Wk = kk => mk(kk) ? `${ek.i}${(0,ek.g)(kk)}` : null !== ak && void 0 !== ak ? ak : CR(kk),
-        vk = kk => void 0 === ak || mk(kk),
-        ik = kk => void 0 !== bk && !bk.has(kk),
-        Yk = new Set,
-        Lk = kk => JSON.stringify({
-          name: kk.name,
-          args: kk.args
+      let lb = bb;
+      const Qb = Object.keys(sb).some(mb.e),
+        eb = bb => null !== bb && Qb && (0, mb.e)(bb),
+        Cb = bb => eb(bb) ? `${mb.j}${(0,mb.g)(bb)}` : null !== ab && void 0 !== ab ? ab : rk(bb),
+        Nb = bb => void 0 === ab || eb(bb),
+        Vb = bb => void 0 !== Ub && !Ub.has(bb),
+        Lb = new Set,
+        ub = bb => JSON.stringify({
+          name: bb.name,
+          args: bb.args
         }),
-        Ok = kk => {
-          const Fk = mk(kk) ? {
+        Yb = bb => {
+          const cb = eb(bb) ? {
               name: "view_world_code",
               args: {}
             } : {
               name: "view_file",
               args: {
-                path: kk
+                path: bb
               }
             },
-            Bk = Jk ? {
-              ...Fk,
-              call: Jk
-            } : Fk;
-          Yk.add(Lk(Bk)), Sk(Bk)
+            sb = Xb ? {
+              ...cb,
+              call: Xb
+            } : cb;
+          Lb.add(ub(sb)), Jb(sb)
         },
-        Ek = [],
-        Sk = kk => {
-          const Fk = Lk(kk);
-          Ek.length < 4 && !Ek.some((kk => Lk(kk) === Fk)) && Ek.push(kk)
+        hb = [],
+        Jb = bb => {
+          const cb = ub(bb);
+          hb.length < 4 && !hb.some((bb => ub(bb) === cb)) && hb.push(bb)
         },
-        Nk = [],
-        Hk = [],
-        Mk = [],
-        Gk = new Map,
-        rk = new Map,
-        Dk = (kk, Fk, Bk) => {
-          var Rk;
-          const tk = function(kk) {
-              const Fk = kk.replace(/\s+/g, " ").trim();
-              if (Fk.length <= 80) return Fk;
-              const Bk = Fk.slice(0, 80);
-              return `${Bk.slice(0,Math.max(Bk.lastIndexOf(" "),40)).replace(/[\s,.;:]+$/,"")}\u2026`
-            }(null !== Fk && void 0 !== Fk ? Fk : ""),
-            ak = null !== (Rk = Gk.get(kk)) && void 0 !== Rk ? Rk : [];
-          var Xk;
-          ("" === tk || ak.includes(tk) || Gk.set(kk, [...ak, tk]), "" !== tk) && rk.set(kk, [...null !== (Xk = rk.get(kk)) && void 0 !== Xk ? Xk : [], {
-            why: tk,
-            code: Bk
+        gb = [],
+        Bb = [],
+        yb = [],
+        ib = new Map,
+        Gb = new Map,
+        Kb = (bb, cb, sb) => {
+          var kb;
+          const Wb = function(bb) {
+              const cb = bb.replace(/\s+/g, " ").trim();
+              if (cb.length <= 80) return cb;
+              const sb = cb.slice(0, 80);
+              return `${sb.slice(0,Math.max(sb.lastIndexOf(" "),40)).replace(/[\s,.;:]+$/,"")}\u2026`
+            }(null !== cb && void 0 !== cb ? cb : ""),
+            ab = null !== (kb = ib.get(bb)) && void 0 !== kb ? kb : [];
+          var Tb;
+          ("" === Wb || ab.includes(Wb) || ib.set(bb, [...ab, Wb]), "" !== Wb) && Gb.set(bb, [...null !== (Tb = Gb.get(bb)) && void 0 !== Tb ? Tb : [], {
+            why: Wb,
+            code: sb
           }])
         },
-        zk = new Set,
-        Pk = [],
-        hk = new Map,
-        qk = [];
-      let Zk = null;
-      const pk = [];
-      let xk = [];
-      const lk = (kk, Fk) => void 0 !== ak && !mk(kk) && (null === kk || CR(kk) !== ak) && TR.test(Fk),
-        Qk = (kk, Fk, Bk, Rk) => {
-          var tk, ak;
-          const Xk = function(kk, Fk, Bk, Rk) {
-            const tk = eR(Fk);
-            return tk ? LR(kk, tk, Bk, Rk) : {
-              error: `There is no prefab called ${Fk}. The prefabs are: ${VR.map((kk=>kk.name)).join(", ")}.`
+        Zb = new Set,
+        zb = [],
+        qb = new Map,
+        db = [];
+      let wb = null;
+      const rb = [];
+      let Sb = [];
+      const vb = (bb, cb) => void 0 !== ab && !eb(bb) && (null === bb || rk(bb) !== ab) && Kk.test(cb),
+        jb = (bb, cb, sb, kb) => {
+          var Wb, ab;
+          const Tb = function(bb, cb, sb, kb) {
+            const Wb = lk(cb);
+            return Wb ? hk(bb, Wb, sb, kb) : {
+              error: `There is no prefab called ${cb}. The prefabs are: ${Xk.map((bb=>bb.name)).join(", ")}.`
             }
-          }(null !== (tk = dk[kk]) && void 0 !== tk ? tk : "", Fk, Bk, wk);
-          return "error" in Xk ? (Ak("use_prefab", kk, "prefab", {
-            detail: Xk.error
-          }), !1) : (dk[kk] = Xk.text, sk.add(kk), hk.set(kk, {
-            prefab: Xk.prefab,
-            settings: Bk
-          }), Dk(kk, null !== Rk && void 0 !== Rk ? Rk : Xk.prefab.title, Xk.text), Pk.push({
-            name: Xk.prefab.name,
-            title: Xk.prefab.title,
-            path: kk,
-            problems: Xk.problems,
-            fixed: Xk.fixed,
-            setup: null !== (ak = Xk.prefab.setup) && void 0 !== ak ? ak : null
+          }(null !== (Wb = Hb[bb]) && void 0 !== Wb ? Wb : "", cb, sb, Ib);
+          return "error" in Tb ? (nb("use_prefab", bb, "prefab", {
+            detail: Tb.error
+          }), !1) : (Hb[bb] = Tb.text, fb.add(bb), qb.set(bb, {
+            prefab: Tb.prefab,
+            settings: sb
+          }), Kb(bb, null !== kb && void 0 !== kb ? kb : Tb.prefab.title, Tb.text), zb.push({
+            name: Tb.prefab.name,
+            title: Tb.prefab.title,
+            path: bb,
+            problems: Tb.problems,
+            fixed: Tb.fixed,
+            setup: null !== (ab = Tb.prefab.setup) && void 0 !== ab ? ab : null
           }), !0)
         },
-        kF = (kk, Fk, Bk) => {
-          const Rk = QB(Fk);
-          if (0 === Rk.calls.length) return !1;
-          dk[kk] = Rk.code, sk.add(kk);
-          for (const tk of Rk.calls) Qk(kk, tk.name, tk.settings, Bk);
-          return Dk(kk, Bk, Rk.code), !0
+        pb = (bb, cb, sb) => {
+          const kb = bk(cb);
+          if (0 === kb.calls.length) return !1;
+          Hb[bb] = kb.code, fb.add(bb);
+          for (const Wb of kb.calls) jb(bb, Wb.name, Wb.settings, sb);
+          return Kb(bb, sb, kb.code), !0
         },
-        BF = kk => {
-          const Fk = yF(ZR(hR(kk)), tk);
-          Nk.push(Fk.code), Mk.push(...Fk.renames)
+        cc = bb => {
+          const cb = mc(Sk(Ak(bb)), Wb);
+          gb.push(cb.code), yb.push(...cb.renames)
         },
-        RF = VB(kk, Fk),
-        tF = new Map;
-      for (const ek of RF) {
-        var aF, XF, bF, wF;
-        const kk = null !== (aF = tF.get(ek.name)) && void 0 !== aF ? aF : 0;
-        tF.set(ek.name, kk + 1), Jk = {
-          name: ek.name,
-          nth: kk
+        sc = fs(bb, cb),
+        kc = new Map;
+      for (const mb of sc) {
+        var Wc, ac, Tc, Uc;
+        const bb = null !== (Wc = kc.get(mb.name)) && void 0 !== Wc ? Wc : 0;
+        kc.set(mb.name, bb + 1), Xb = {
+          name: mb.name,
+          nth: bb
         };
-        const Fk = ("replace_function" === ek.name || "insert_code" === ek.name) && void 0 === ek.args.code && void 0 !== ek.args.content ? {
-            ...ek,
+        const cb = ("replace_function" === mb.name || "insert_code" === mb.name) && void 0 === mb.args.code && void 0 !== mb.args.content ? {
+            ...mb,
             args: {
-              ...ek.args,
-              code: ek.args.content,
-              path: null !== (XF = null !== (bF = null !== (wF = ek.args.path) && void 0 !== wF ? wF : ak) && void 0 !== bF ? bF : Rk) && void 0 !== XF ? XF : void 0
+              ...mb.args,
+              code: mb.args.content,
+              path: null !== (ac = null !== (Tc = null !== (Uc = mb.args.path) && void 0 !== Uc ? Uc : ab) && void 0 !== Tc ? Tc : kb) && void 0 !== ac ? ac : void 0
             }
-          } : ek,
+          } : mb,
           {
-            path: tk,
-            content: Xk,
-            search: bk,
-            replace: Vk,
-            code: fk
-          } = Fk.args,
-          mk = oF(Fk.name),
-          Yk = `${Fk.name}\n${JSON.stringify({...Fk.args,why:void 0})}`,
-          Lk = zk.has(Yk);
-        if (mk.annotations.idempotentHint && Lk) yk = yk.replace(Fk.source, "");
+            path: Wb,
+            content: Tb,
+            search: Ub,
+            replace: Mb,
+            code: Qb
+          } = cb.args,
+          eb = Lc(cb.name),
+          Lb = `${cb.name}\n${JSON.stringify({...cb.args,why:void 0})}`,
+          ub = Zb.has(Lb);
+        if (eb.annotations.idempotentHint && ub) lb = lb.replace(cb.source, "");
         else {
-          if (zk.add(Yk), YF(Fk.name)) {
-            const kk = Object.fromEntries(Object.entries(Fk.args).flatMap((kk => {
-              let [Fk, Bk] = kk;
-              return void 0 === Bk || "" === Bk.trim() ? [] : [
-                [Fk, Bk.trim()]
+          if (Zb.add(Lb), Vc(cb.name)) {
+            const bb = Object.fromEntries(Object.entries(cb.args).flatMap((bb => {
+              let [cb, sb] = bb;
+              return void 0 === sb || "" === sb.trim() ? [] : [
+                [cb, sb.trim()]
               ]
             })));
-            Sk({
-              name: Fk.name,
-              args: qR(Fk.name, kk),
-              call: Jk
+            Jb({
+              name: cb.name,
+              args: wk(cb.name, bb),
+              call: Xb
             })
-          } else if ("add_world_code" === Fk.name) {
-            if (void 0 === ak) continue;
-            void 0 !== fk ? BF(fk) : Ak(Fk.name, null, "missingArgs")
-          } else if ("use_prefab" === Fk.name) {
-            const kk = void 0 !== tk && "" !== tk.trim() ? Wk(tk) : void 0 === ak ? null !== Rk && void 0 !== Rk ? Rk : "index.js" : null;
-            if (void 0 === Fk.args.name || "" === Fk.args.name.trim()) Ak(Fk.name, kk, "missingArgs");
-            else if (null !== kk && vk(kk)) {
-              var dF;
-              Qk(kk, Fk.args.name, null !== (dF = Fk.args.settings) && void 0 !== dF ? dF : "", Fk.args.why)
-            } else Ak(Fk.name, kk, "prefab", {
+          } else if ("add_world_code" === cb.name) {
+            if (void 0 === ab) continue;
+            void 0 !== Qb ? cc(Qb) : nb(cb.name, null, "missingArgs")
+          } else if ("use_prefab" === cb.name) {
+            const bb = void 0 !== Wb && "" !== Wb.trim() ? Cb(Wb) : void 0 === ab ? null !== kb && void 0 !== kb ? kb : "index.js" : null;
+            if (void 0 === cb.args.name || "" === cb.args.name.trim()) nb(cb.name, bb, "missingArgs");
+            else if (null !== bb && Nb(bb)) {
+              var Ic;
+              jb(bb, cb.args.name, null !== (Ic = cb.args.settings) && void 0 !== Ic ? Ic : "", cb.args.why)
+            } else nb(cb.name, bb, "prefab", {
               detail: "A prefab goes in World Code, not in a code block."
             })
-          } else if ("ask_creator" === Fk.name) Zk ??= uR(Fk.args);
-          else if ("plan" === Fk.name) {
-            var sF;
-            if (0 === xk.length) xk = VF(null !== (sF = Fk.args.steps) && void 0 !== sF ? sF : "")
-          } else if ("remember" === Fk.name) {
-            var JF;
-            const kk = FF(null !== (JF = Fk.args.note) && void 0 !== JF ? JF : "");
-            null !== kk && 0 === pk.length && pk.push(kk)
-          } else if ("export_game" === Fk.name || "switch_to_world_code" === Fk.name) {
-            if ("switch_to_world_code" === Fk.name && void 0 === ak) continue;
-            const kk = "export_game" === Fk.name ? "exportGame" : "switchToWorldCode";
-            var AF;
-            if (!Hk.some((Fk => Fk.kind === kk))) Hk.push("export_game" === Fk.name ? {
+          } else if ("ask_creator" === cb.name) wb ??= Pk(cb.args);
+          else if ("plan" === cb.name) {
+            var Hc;
+            if (0 === Sb.length) Sb = fc(null !== (Hc = cb.args.steps) && void 0 !== Hc ? Hc : "")
+          } else if ("remember" === cb.name) {
+            var Mc;
+            const bb = bc(null !== (Mc = cb.args.note) && void 0 !== Mc ? Mc : "");
+            null !== bb && 0 === rb.length && rb.push(bb)
+          } else if ("export_game" === cb.name || "switch_to_world_code" === cb.name) {
+            if ("switch_to_world_code" === cb.name && void 0 === ab) continue;
+            const bb = "export_game" === cb.name ? "exportGame" : "switchToWorldCode";
+            var Xc;
+            if (!Bb.some((cb => cb.kind === bb))) Bb.push("export_game" === cb.name ? {
               kind: "exportGame"
             } : {
               kind: "switchToWorldCode",
-              request: (null === (AF = Fk.args.request) || void 0 === AF ? void 0 : AF.trim()) || null
+              request: (null === (Xc = cb.args.request) || void 0 === Xc ? void 0 : Xc.trim()) || null
             })
-          } else if ("write_file" === Fk.name) {
-            var eF, fF;
-            if (wB(Fk))
-              if (void 0 === Xk || "" !== Xk.trim() && !UR(PR(Xk), void 0 === tk ? "" : null !== (eF = dk[Wk(tk)]) && void 0 !== eF ? eF : "")) {
-                if (void 0 !== tk && void 0 !== Xk && lk(tk, Xk)) BF(Xk);
-                else if (void 0 !== tk && ik(Wk(tk)) && "" !== (null !== (fF = Bk[Wk(tk)]) && void 0 !== fF ? fF : "").trim()) Ak(Fk.name, Wk(tk), "unread", void 0 === Xk ? void 0 : {
-                  code: hR(Xk)
-                }), Ok(Wk(tk));
-                else if (void 0 !== tk && void 0 !== Xk) {
-                  const kk = Wk(tk),
-                    Bk = kR(hR(Xk));
-                  if (!vk(kk) || !kF(kk, Bk, Fk.args.why)) {
-                    const Rk = hk.get(kk),
-                      tk = Rk && !iR(Bk, Rk.prefab) ? LR(Bk, Rk.prefab, Rk.settings, wk) : null;
-                    dk[kk] = tk && !("error" in tk) ? tk.text : Bk, sk.add(kk), Dk(kk, Fk.args.why, Xk)
+          } else if ("write_file" === cb.name) {
+            var nc, lc;
+            if (Us(cb))
+              if (void 0 === Tb || "" !== Tb.trim() && !ik(dk(Tb), void 0 === Wb ? "" : null !== (nc = Hb[Cb(Wb)]) && void 0 !== nc ? nc : "")) {
+                if (void 0 !== Wb && void 0 !== Tb && vb(Wb, Tb)) cc(Tb);
+                else if (void 0 !== Wb && Vb(Cb(Wb)) && "" !== (null !== (lc = sb[Cb(Wb)]) && void 0 !== lc ? lc : "").trim()) nb(cb.name, Cb(Wb), "unread", void 0 === Tb ? void 0 : {
+                  code: Ak(Tb)
+                }), Yb(Cb(Wb));
+                else if (void 0 !== Wb && void 0 !== Tb) {
+                  const bb = Cb(Wb),
+                    sb = ck(Ak(Tb));
+                  if (!Nb(bb) || !pb(bb, sb, cb.args.why)) {
+                    const kb = qb.get(bb),
+                      Wb = kb && !Lk(sb, kb.prefab) ? hk(sb, kb.prefab, kb.settings, Ib) : null;
+                    Hb[bb] = Wb && !("error" in Wb) ? Wb.text : sb, fb.add(bb), Kb(bb, cb.args.why, Tb)
                   }
                 }
-              } else Ak(Fk.name, void 0 === tk ? null : Wk(tk), "placeholder");
-            else Ak(Fk.name, void 0 === tk ? null : Wk(tk), "missingArgs")
-          } else if ("replace_function" === Fk.name || "insert_code" === Fk.name) {
-            var mF, WF, vF;
-            const kk = void 0 === tk ? null : Wk(tk),
-              Bk = "replace_function" === Fk.name ? Fk.args.name : Fk.args.after,
-              Rk = void 0 === Bk ? void 0 : Ck(Bk),
-              ak = null === kk ? "" : null !== (mF = dk[kk]) && void 0 !== mF ? mF : "",
-              Xk = void 0 === fk ? "" : PR(fk),
-              bk = null === kk ? void 0 : hk.get(kk),
-              wk = "replace_function" === Fk.name && void 0 !== bk && void 0 !== Rk && rR.test(Rk) && PB(bk.prefab.code).has(Rk),
-              Vk = null === kk || void 0 === fk || void 0 === Bk ? null : wk ? null !== (WF = null === (vF = zB(ak, Xk, {
+              } else nb(cb.name, void 0 === Wb ? null : Cb(Wb), "placeholder");
+            else nb(cb.name, void 0 === Wb ? null : Cb(Wb), "missingArgs")
+          } else if ("replace_function" === cb.name || "insert_code" === cb.name) {
+            var Qc, ec, Cc;
+            const bb = void 0 === Wb ? null : Cb(Wb),
+              sb = "replace_function" === cb.name ? cb.args.name : cb.args.after,
+              kb = void 0 === sb ? void 0 : Ab(sb),
+              ab = null === bb ? "" : null !== (Qc = Hb[bb]) && void 0 !== Qc ? Qc : "",
+              Tb = void 0 === Qb ? "" : dk(Qb),
+              Ub = null === bb ? void 0 : qb.get(bb),
+              Ib = "replace_function" === cb.name && void 0 !== Ub && void 0 !== kb && Zk.test(kb) && qs(Ub.prefab.code).has(kb),
+              Mb = null === bb || void 0 === Qb || void 0 === sb ? null : Ib ? null !== (ec = null === (Cc = zs(ab, Tb, {
                 owner: "extra",
                 runsLast: !0
-              })) || void 0 === vF ? void 0 : vF.text) && void 0 !== WF ? WF : null : "replace_function" === Fk.name ? Kk(ak, Bk, Xk) : nk(ak, Bk, Xk);
-            null === kk || null === Vk ? Ak(Fk.name, kk, wB(Fk) ? "brokenCode" : "missingArgs") : UR(Xk, ak) ? Ak(Fk.name, kk, "placeholder") : "replace_function" === Fk.name && ik(kk) && Ik(ak).includes(null !== Rk && void 0 !== Rk ? Rk : "") ? (Ak(Fk.name, kk, "unread", {
-              code: hR(Xk)
-            }), Ok(kk)) : (dk[kk] = Vk, sk.add(kk), Dk(kk, Fk.args.why, Xk))
+              })) || void 0 === Cc ? void 0 : Cc.text) && void 0 !== ec ? ec : null : "replace_function" === cb.name ? ob(ab, sb, Tb) : Fb(ab, sb, Tb);
+            null === bb || null === Mb ? nb(cb.name, bb, Us(cb) ? "brokenCode" : "missingArgs") : ik(Tb, ab) ? nb(cb.name, bb, "placeholder") : "replace_function" === cb.name && Vb(bb) && xb(ab).includes(null !== kb && void 0 !== kb ? kb : "") ? (nb(cb.name, bb, "unread", {
+              code: Ak(Tb)
+            }), Yb(bb)) : (Hb[bb] = Mb, fb.add(bb), Kb(bb, cb.args.why, Tb))
           } else {
-            var iF, LF;
-            const kk = !0 === (null === (iF = mk._meta) || void 0 === iF ? void 0 : iF.appliesAtOnce) ? null !== ak && void 0 !== ak ? ak : Rk : void 0 === tk ? null : Wk(tk),
-              Bk = null === kk ? "" : null !== (LF = dk[kk]) && void 0 !== LF ? LF : "",
-              Xk = wB(Fk) && void 0 !== bk,
-              wk = Xk ? uk(Bk, bk) : null,
-              Jk = null === wk && void 0 !== bk && bk.includes("\\n") ? uk(Bk, cF(bk)) : null,
-              ek = null !== wk && void 0 !== wk ? wk : Jk,
-              yk = null !== Jk ? cF(null !== Vk && void 0 !== Vk ? Vk : "") : null !== Vk && void 0 !== Vk ? Vk : "",
-              fk = null === ek || void 0 === bk ? yk : Uk(Bk.slice(ek.from, ek.to), gk(Bk, ek, null !== Jk ? cF(bk) : bk, yk), ck(Bk.slice(ek.to)));
-            if (null === kk || null === ek) Ak(Fk.name, kk, Xk ? "noMatch" : "missingArgs", {
-              closest: Xk ? Tk(Bk, bk) : null,
-              functions: vk(kk) ? Ik(Bk) : []
+            var Nc, uc;
+            const bb = !0 === (null === (Nc = eb._meta) || void 0 === Nc ? void 0 : Nc.appliesAtOnce) ? null !== ab && void 0 !== ab ? ab : kb : void 0 === Wb ? null : Cb(Wb),
+              sb = null === bb ? "" : null !== (uc = Hb[bb]) && void 0 !== uc ? uc : "",
+              Tb = Us(cb) && void 0 !== Ub,
+              Ib = Tb ? tb(sb, Ub) : null,
+              Xb = null === Ib && void 0 !== Ub && Ub.includes("\\n") ? tb(sb, Ec(Ub)) : null,
+              mb = null !== Ib && void 0 !== Ib ? Ib : Xb,
+              lb = null !== Xb ? Ec(null !== Mb && void 0 !== Mb ? Mb : "") : null !== Mb && void 0 !== Mb ? Mb : "",
+              Qb = null === mb || void 0 === Ub ? lb : Db(sb.slice(mb.from, mb.to), Pb(sb, mb, null !== Xb ? Ec(Ub) : Ub, lb), Eb(sb.slice(mb.to)));
+            if (null === bb || null === mb) nb(cb.name, bb, Tb ? "noMatch" : "missingArgs", {
+              closest: Tb ? Ob(sb, Ub) : null,
+              functions: Nb(bb) ? xb(sb) : []
             });
-            else if (UR(fk, Bk.slice(ek.from, ek.to))) Ak(Fk.name, kk, "placeholder");
+            else if (ik(Qb, sb.slice(mb.from, mb.to))) nb(cb.name, bb, "placeholder");
             else {
-              const Rk = vk(kk) ? jk(Bk, ek.from, ek.to, null !== bk && void 0 !== bk ? bk : "", yk) : null;
-              dk[kk] = null !== Rk && void 0 !== Rk ? Rk : Bk.slice(0, ek.from) + fk + Bk.slice(ek.to), sk.add(kk), Dk(kk, Fk.args.why, fk)
+              const kb = Nb(bb) ? Rb(sb, mb.from, mb.to, null !== Ub && void 0 !== Ub ? Ub : "", lb) : null;
+              Hb[bb] = null !== kb && void 0 !== kb ? kb : sb.slice(0, mb.from) + Qb + sb.slice(mb.to), fb.add(bb), Kb(bb, cb.args.why, Qb)
             }
           }
-          yk = yk.replace(Fk.source, "")
+          lb = lb.replace(cb.source, "")
         }
       }
-      if (Jk = void 0, yk = HF(JB(yk), RF.length > 0), 0 === RF.length) {
-        var OF, EF;
-        const Fk = [...kk.matchAll(cR)],
-          Bk = 1 === Fk.length ? Fk[0][1] : null,
-          tk = null !== (OF = null !== ak && void 0 !== ak ? ak : Rk) && void 0 !== OF ? OF : "index.js";
-        if (null !== Bk && lk(null, Bk)) BF(Bk), yk = yk.replace(Fk[0][0], "");
-        else if (null !== Bk && zR.test(Bk) && !UR(Bk, null !== (EF = dk[tk]) && void 0 !== EF ? EF : "")) {
-          const kk = kR(hR(Bk));
-          vk(tk) && kF(tk, kk, void 0) || (dk[tk] = kk, sk.add(tk)), yk = yk.replace(Fk[0][0], "")
+      if (Xb = void 0, lb = Bc(Ms(lb), sc.length > 0), 0 === sc.length) {
+        var Yc, hc;
+        const cb = [...bb.matchAll(Ok)],
+          sb = 1 === cb.length ? cb[0][1] : null,
+          Wb = null !== (Yc = null !== ab && void 0 !== ab ? ab : kb) && void 0 !== Yc ? Yc : "index.js";
+        if (null !== sb && vb(null, sb)) cc(sb), lb = lb.replace(cb[0][0], "");
+        else if (null !== sb && qk.test(sb) && !ik(sb, null !== (hc = Hb[Wb]) && void 0 !== hc ? hc : "")) {
+          const bb = ck(Ak(sb));
+          Nb(Wb) && pb(Wb, bb, void 0) || (Hb[Wb] = bb, fb.add(Wb)), lb = lb.replace(cb[0][0], "")
         }
       }
-      for (const ek of sk) {
-        var SF;
-        if (vk(ek)) {
-          var NF;
-          const kk = Object.values(dk).some((kk => /\brequire\s*\(/.test(kk)));
-          dk[ek] = FR(kR(kk ? dk[ek] : dk[ek].replace(/^module\.exports\s*=\s*(?:\{[\s\w$,:]*\}|[\w$]+)\s*;?[ \t]*(?:\n|$)/gm, "")), null !== (NF = Bk[ek]) && void 0 !== NF ? NF : "");
-          const Fk = new Set(Object.keys(dk).filter((kk => kk !== ek && vk(kk))).flatMap((kk => [...PB(dk[kk])]))),
-            Rk = vR(dk[ek], Fk);
-          dk[ek] = Rk.text, qk.push(...Rk.added)
+      for (const mb of fb) {
+        var Jc;
+        if (Nb(mb)) {
+          var gc;
+          const bb = Object.values(Hb).some((bb => /\brequire\s*\(/.test(bb)));
+          Hb[mb] = sk(ck(bb ? Hb[mb] : Hb[mb].replace(/^module\.exports\s*=\s*(?:\{[\s\w$,:]*\}|[\w$]+)\s*;?[ \t]*(?:\n|$)/gm, "")), null !== (gc = sb[mb]) && void 0 !== gc ? gc : "");
+          const cb = new Set(Object.keys(Hb).filter((bb => bb !== mb && Nb(bb))).flatMap((bb => [...qs(Hb[bb])]))),
+            kb = Vk(Hb[mb], cb);
+          Hb[mb] = kb.text, db.push(...kb.added)
         }
-        const kk = yF(pR(ZR(dk[ek])), vk(ek) ? tk : [], null !== (SF = Bk[ek]) && void 0 !== SF ? SF : "");
-        dk[ek] = kk.code, Mk.push(...kk.renames)
+        const bb = mc(Rk(Sk(Hb[mb])), Nb(mb) ? Wb : [], null !== (Jc = sb[mb]) && void 0 !== Jc ? Jc : "");
+        Hb[mb] = bb.code, yb.push(...bb.renames)
       }
-      for (const ek of Pk) {
-        const kk = ek.problems.length > 0 ? ` Kept as it was: ${ek.problems.join("; ")}.` : "",
-          Fk = ek.fixed.length > 0 ? ` Names changed to real ones: ${ek.fixed.join(", ")}.` : "";
-        yk += `\n\nThis uses the ready-made ${ek.title}.${Fk}${kk}${ek.setup?` ${ek.setup}`:""}`
+      for (const mb of zb) {
+        const bb = mb.problems.length > 0 ? ` Kept as it was: ${mb.problems.join("; ")}.` : "",
+          cb = mb.fixed.length > 0 ? ` Names changed to real ones: ${mb.fixed.join(", ")}.` : "";
+        lb += `\n\nThis uses the ready-made ${mb.title}.${cb}${bb}${mb.setup?` ${mb.setup}`:""}`
       }
       for (const {
-          from: ek,
-          to: uk
+          from: mb,
+          to: tb
         }
-        of Mk) yk += `\n\nI renamed \`${ek}\` to \`${uk}\`, the name World Code calls.`;
-      const uF = [];
-      for (const ek of sk) {
-        var MF;
-        const kk = null !== (MF = Bk[ek]) && void 0 !== MF ? MF : "";
-        if (dk[ek] !== kk) {
-          const Fk = Gk.get(ek);
-          uF.push(Fk ? {
-            path: ek,
-            before: kk,
-            after: dk[ek],
-            why: Fk,
-            parts: rk.get(ek)
+        of yb) lb += `\n\nI renamed \`${mb}\` to \`${tb}\`, the name World Code calls.`;
+      const tc = [];
+      for (const mb of fb) {
+        var yc;
+        const bb = null !== (yc = sb[mb]) && void 0 !== yc ? yc : "";
+        if (Hb[mb] !== bb) {
+          const cb = ib.get(mb);
+          tc.push(cb ? {
+            path: mb,
+            before: bb,
+            after: Hb[mb],
+            why: cb,
+            parts: Gb.get(mb)
           } : {
-            path: ek,
-            before: kk,
-            after: dk[ek]
+            path: mb,
+            before: bb,
+            after: Hb[mb]
           })
         }
       }
-      const gF = "direct" === Xk && uF.length > 0,
-        UF = uF.length > 0 || Nk.length > 0;
+      const Pc = "direct" === Tb && tc.length > 0,
+        Dc = tc.length > 0 || gb.length > 0;
       return {
-        text: yk.replace(/\n{3,}/g, "\n\n").trim(),
-        changes: uF,
-        failedEdits: Vk,
-        renamedCallbacks: Mk,
-        worldCode: Nk,
-        inPlace: gF,
-        actions: Hk,
-        question: UF ? null : Zk,
-        notes: pk,
-        plan: UF ? [] : xk,
-        lookups: UF ? Ek.filter((kk => Yk.has(Lk(kk)))) : null !== Zk || xk.length > 0 ? [] : Ek,
-        prefabs: Pk,
-        helpersAdded: [...new Set(qk)]
+        text: lb.replace(/\n{3,}/g, "\n\n").trim(),
+        changes: tc,
+        failedEdits: Mb,
+        renamedCallbacks: yb,
+        worldCode: gb,
+        inPlace: Pc,
+        actions: Bb,
+        question: Dc ? null : wb,
+        notes: rb,
+        plan: Dc ? [] : Sb,
+        lookups: Dc ? hb.filter((bb => Lb.has(ub(bb)))) : null !== wb || Sb.length > 0 ? [] : hb,
+        prefabs: zb,
+        helpersAdded: [...new Set(db)]
       }
     }
 
-    function xR(kk, Fk) {
-      const Bk = "" === kk ? [] : kk.replace(/\n$/, "").split("\n"),
-        Rk = "" === Fk ? [] : Fk.replace(/\n$/, "").split("\n");
-      let tk = 0;
-      for (; tk < Bk.length && tk < Rk.length && Bk[tk] === Rk[tk];) tk++;
-      let ak = Bk.length,
-        Xk = Rk.length;
-      for (; ak > tk && Xk > tk && Bk[ak - 1] === Rk[Xk - 1];) ak--, Xk--;
-      const bk = Bk.slice(tk, ak),
-        wk = Rk.slice(tk, Xk),
-        dk = Array.from({
-          length: bk.length + 1
-        }, (() => new Array(wk.length + 1).fill(0)));
-      for (let Ak = bk.length - 1; Ak >= 0; Ak--)
-        for (let kk = wk.length - 1; kk >= 0; kk--) dk[Ak][kk] = bk[Ak] === wk[kk] ? dk[Ak + 1][kk + 1] + 1 : Math.max(dk[Ak + 1][kk], dk[Ak][kk + 1]);
-      const sk = Bk.slice(0, tk).map((kk => ({
+    function Fk(bb, cb) {
+      const sb = "" === bb ? [] : bb.replace(/\n$/, "").split("\n"),
+        kb = "" === cb ? [] : cb.replace(/\n$/, "").split("\n");
+      let Wb = 0;
+      for (; Wb < sb.length && Wb < kb.length && sb[Wb] === kb[Wb];) Wb++;
+      let ab = sb.length,
+        Tb = kb.length;
+      for (; ab > Wb && Tb > Wb && sb[ab - 1] === kb[Tb - 1];) ab--, Tb--;
+      const Ub = sb.slice(Wb, ab),
+        Ib = kb.slice(Wb, Tb),
+        Hb = Array.from({
+          length: Ub.length + 1
+        }, (() => new Array(Ib.length + 1).fill(0)));
+      for (let nb = Ub.length - 1; nb >= 0; nb--)
+        for (let bb = Ib.length - 1; bb >= 0; bb--) Hb[nb][bb] = Ub[nb] === Ib[bb] ? Hb[nb + 1][bb + 1] + 1 : Math.max(Hb[nb + 1][bb], Hb[nb][bb + 1]);
+      const fb = sb.slice(0, Wb).map((bb => ({
         kind: "same",
-        text: kk
+        text: bb
       })));
-      let Vk = 0,
-        Jk = 0;
-      for (; Vk < bk.length || Jk < wk.length;) Vk < bk.length && Jk < wk.length && bk[Vk] === wk[Jk] ? (sk.push({
+      let Mb = 0,
+        Xb = 0;
+      for (; Mb < Ub.length || Xb < Ib.length;) Mb < Ub.length && Xb < Ib.length && Ub[Mb] === Ib[Xb] ? (fb.push({
         kind: "same",
-        text: bk[Vk]
-      }), Vk++, Jk++) : Jk < wk.length && (Vk === bk.length || dk[Vk][Jk + 1] > dk[Vk + 1][Jk]) ? (sk.push({
+        text: Ub[Mb]
+      }), Mb++, Xb++) : Xb < Ib.length && (Mb === Ub.length || Hb[Mb][Xb + 1] > Hb[Mb + 1][Xb]) ? (fb.push({
         kind: "added",
-        text: wk[Jk]
-      }), Jk++) : (sk.push({
+        text: Ib[Xb]
+      }), Xb++) : (fb.push({
         kind: "removed",
-        text: bk[Vk]
-      }), Vk++);
-      for (const Ak of Bk.slice(ak)) sk.push({
+        text: Ub[Mb]
+      }), Mb++);
+      for (const nb of sb.slice(ab)) fb.push({
         kind: "same",
-        text: Ak
+        text: nb
       });
-      return sk
+      return fb
     }
-    const jR = /\b(?:publish|export)\b|\bsave\b.{0,20}\b(?:game|world|map|it|this|work)\b/i;
+    const xk = /\b(?:publish|export)\b|\bsave\b.{0,20}\b(?:game|world|map|it|this|work)\b/i;
 
-    function lR(kk) {
-      return jR.test(kk)
+    function jk(bb) {
+      return xk.test(bb)
     }
-    const nR = {
+    const pk = {
       worldCode: new Set(["write_file", "edit_file", "replace_function", "use_prefab", "edit_code_in_place", "export_game", "ask_creator", "plan", "remember", "view_file", "view_chunk", "view_game_state", "get_docs", "find_names", "view_prefab", "view_errors"]),
       codeBlock: new Set(["write_file", "edit_file", "replace_function", "add_world_code", "edit_code_in_place", "switch_to_world_code", "ask_creator", "view_world_code", "view_chunk", "view_game_state", "get_docs", "find_names", "view_errors"])
     };
 
-    function IR(kk, Fk, Bk) {
-      return nF[kk].formatCall(Fk, Bk)
+    function bW(bb, cb, sb) {
+      return Fc[bb].formatCall(cb, sb)
     }
 
-    function QR(kk, Fk, Bk, Rk) {
-      return nF[Bk].declareTools(kk, Fk, Rk)
+    function cW(bb, cb, sb, kb) {
+      return Fc[sb].declareTools(bb, cb, kb)
     }
 
-    function kt(kk) {
-      const Fk = null === kk.path ? kk.tool : `${kk.tool} ${kk.path}`;
-      var Bk;
-      if ("prefab" === kk.reason) return `${Fk}: ${null!==(Bk=kk.detail)&&void 0!==Bk?Bk:"the prefab couldn't go in."} Nothing changed.`;
-      if ("missingArgs" === kk.reason) return `${Fk}: the call was missing an argument it needs, so nothing changed.`;
-      if ("placeholder" === kk.reason) return "write_file" === kk.tool ? `${Fk}: the content was only "..." or had a line standing in for the rest, so nothing changed. Send the whole file, every line of it.` : `${Fk}: the code had a line standing in for code left out ("// ... existing code ..."), so nothing changed. Write out every line it replaces.`;
-      if ("unread" === kk.reason) return `${Fk}: you hadn't seen this code, so writing it whole could have lost what it has, and nothing changed. Make the change from its code, which ${null!==kk.path&&(0,ek.d)(kk.path)?"view_world_code":"view_file"} shows.`;
-      if ("brokenCode" === kk.reason) return `${Fk}: the code around that function doesn't parse (a bracket is likely missing), so where it ends isn't clear and nothing changed. Send the whole fixed file with write_file instead.`;
-      return `${Fk}: search matched nothing in the file, so nothing changed. ${kk.closest?`The closest lines (${kk.closest.line}-${kk.closest.lastLine}) are:\n${kk.closest.text}`:"No lines in the file are like it."}\nCopy the lines exactly${kk.functions.length>0?`, or use replace_function with one of these names: ${kk.functions.join(", ")}`:""}.`
+    function sW(bb) {
+      const cb = null === bb.path ? bb.tool : `${bb.tool} ${bb.path}`;
+      var sb;
+      if ("prefab" === bb.reason) return `${cb}: ${null!==(sb=bb.detail)&&void 0!==sb?sb:"the prefab couldn't go in."} Nothing changed.`;
+      if ("missingArgs" === bb.reason) return `${cb}: the call was missing an argument it needs, so nothing changed.`;
+      if ("placeholder" === bb.reason) return "write_file" === bb.tool ? `${cb}: the content was only "..." or had a line standing in for the rest, so nothing changed. Send the whole file, every line of it.` : `${cb}: the code had a line standing in for code left out ("// ... existing code ..."), so nothing changed. Write out every line it replaces.`;
+      if ("unread" === bb.reason) return `${cb}: you hadn't seen this code, so writing it whole could have lost what it has, and nothing changed. Make the change from its code, which ${null!==bb.path&&(0,mb.e)(bb.path)?"view_world_code":"view_file"} shows.`;
+      if ("brokenCode" === bb.reason) return `${cb}: the code around that function doesn't parse (a bracket is likely missing), so where it ends isn't clear and nothing changed. Send the whole fixed file with write_file instead.`;
+      return `${cb}: search matched nothing in the file, so nothing changed. ${bb.closest?`The closest lines (${bb.closest.line}-${bb.closest.lastLine}) are:\n${bb.closest.text}`:"No lines in the file are like it."}\nCopy the lines exactly${bb.functions.length>0?`, or use replace_function with one of these names: ${bb.functions.join(", ")}`:""}.`
     }
-    const Ft = {
+    const kW = {
         offer: "matched",
         list: "matched",
         categories: !1,
         helperIndex: !0
       },
-      Bt = /\b(?:game|minigame|mini-game|gamemode|game mode|map|server)\b/i;
+      WW = /\b(?:game|minigame|mini-game|gamemode|game mode|map|server)\b/i;
 
-    function Rt(kk) {
-      return Object.values(kk).some((kk => "" !== kk.trim()))
+    function aW(bb) {
+      return Object.values(bb).some((bb => "" !== bb.trim()))
     }
-    const tt = {
+    const TW = {
         format: "simple",
         nativeTools: !1
       },
-      Xt = kk => `You are the coding helper inside Bloxd's World Code editor. Bloxd is a voxel game; World Code is JavaScript that runs on the game server for one world. The person asking is a young creator (13 or older) who is new to coding.\n\nHow World Code works:\n- The engine calls special top-level functions ("callbacks") when things happen: function onPlayerJoin(playerId) {...}, function tick(ms) {...}, function playerCommand(playerId, command) {...} and the others ${kk?"in the docs":"in the callback list"}. Define each callback once; never call callbacks yourself.\n- playerCommand gets the chat line without its "/" (e.g. "speed 2"); return true for a command you handled, so the player isn't told it is unknown, and return nothing (never false) for any other, or the game's own commands (/spawn) stop working.\n- tick(ms) runs 20 times a second, with the milliseconds since the last tick. Count time with it (add up ms) instead of setTimeout, and keep it light.\n- Talk to the game only through the api object: api.sendMessage(playerId, text), api.setClientOption(playerId, option, value) and the other methods ${kk?"in the docs":"in the API list"}. Use only methods, callbacks and client options that are ${kk?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables at the top level keep their values while the world runs. Players are identified by playerId (a string, not their name).\n- Values you keep per player (lists, timers, scores, teams) need a start in onPlayerJoin and removing in onPlayerLeave(playerId), so tick never uses a player who left.\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n- Settings: numbers and messages the creator may want to change (times, amounts, prices, speeds, messages shown to players, on/off switches) go in one const CONFIG = { ... } at the top of the file, each value a plain number, a quoted string or true/false with a short comment saying what it does, e.g. waveSeconds: 30, // seconds between zombie waves. The code uses CONFIG.waveSeconds, and a message that mentions a setting builds it from CONFIG ("You start with " + CONFIG.startCoins + " coins"), so changing the setting changes the message too. If the file has a CONFIG, add new settings to it and change a setting there; never make a second one. Don't move code they didn't ask about into CONFIG.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(playerId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: playerId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(playerId).\n- Flying: api.setClientOption(playerId, "creative", true) (false to stop).\n- Leaderboard: in onPlayerJoin, api.setClientOption(playerId, "lobbyLeaderboardInfo", { name: { displayName: "Name", sortPriority: 0 }, coins: { displayName: "Coins", sortPriority: 1 } }); then whenever a value changes, api.setTargetedPlayerSettingForEveryone(playerId, "lobbyLeaderboardValues", { coins: 5 }, true).\n- Text on the right of the screen: api.setClientOption(playerId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(playerId, api.getClientOption(playerId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(playerId); api.setPosition(playerId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(playerId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- A player who can't play any more (e.g. out of lives): api.setPlayerGamemode(playerId, "spectator"); "survival" brings them back.\n- Mob waves: api.attemptSpawnMob(mobType, x, y, z) returns the mob's id. Keep the ids, and remove each in onMobDespawned(mobId) to know when they are all dead.\n- Removing or changing a block later: count ms in tick, then api.setBlock(x, y, z, "Air").\n- Coins as a currency: make it once in onPlayerJoin, only if they don't have it yet (a saved one comes back by itself, and setCurrency again would reset it): if (api.getCurrencyAmount(playerId, "coins") === null) api.setCurrency(playerId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(playerId, "coins", 5). When the request says anything is saved or kept after leaving (e.g. "it saves if you leave"), the coins are saved too: add persistent: true. Otherwise leave it out.\n- Values the request says must stay after leaving (e.g. when they last claimed a reward): api.setPlayerDbValue(playerId, "lastClaim", Date.now()) and api.getPlayerDbValue(playerId, "lastClaim") (null if never set); a saved value is a string or a number. Only those: lives, scores, checkpoints and timers for one game stay in top-level variables, which reset when they leave.\n- A player dying, from anything: onAttemptKillPlayer(killedPlayerId, attackingLifeformId). onPlayerKilledOtherPlayer only covers kills by players.\n- Stopping one player hurting another (e.g. teammates): onPlayerDamagingOtherPlayer(attackingPlayer, damagedPlayer) returns "preventDamage". onAttemptKillPlayer only stops the death, not the damage.\n- A counter of how long each player has been alive: in tick, count only while api.isAlive(playerId), and start again from 0 in onRespawnRequest (the death screen isn't time alive). Other timers don't need this.\n- A reward for reaching a count (5 kills, 10 coins): give it when the count first reaches it (=== 5, or keep a per-player flag such as rewarded[playerId] = true), never on every count after (>= 5 alone gives it again each time).\n- Telling whether a player moved: compare with where they were after any teleport of yours (update the saved position when you teleport them), or your own teleport counts as them moving.\n- A box around a player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position. A bottom corner at by would fill the block they stand in; replacing the ground under them is fine. If they should be trapped, also stop them breaking it: api.setCantChangeBlockRect(playerId, [bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2]).`,
-      bt = kk => `You are the coding helper inside Bloxd's code block editor. Bloxd is a voxel game; a code block is a block in the world holding JavaScript that runs on the game server when a player clicks it. The person asking is a young creator (13 or older) who is new to coding.\n\nHow code blocks work:\n- Each click runs the whole code once, from top to bottom. A code block has no callbacks: something that has to happen later or by itself (when players join, every tick, on a chat command, when a player breaks a block) needs World Code, the world's main code, where callbacks such as onPlayerJoin(playerId), tick() and playerCommand(playerId, command) are defined as functions. Write that part as World Code (see How to answer), and put what one click does in the code block.\n- myId is the id of the player who clicked the block (a string, not their name), and thisPos is the block's position as [x, y, z].\n- Talk to the game only through the api object: api.sendMessage(myId, text), api.setClientOption(myId, option, value) and the other methods ${kk?"in the docs":"in the API list"}. Use only methods and client options that are ${kk?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables made with const or let start again on every click. A value kept between clicks is assigned without const or let, after checking it is there, e.g. clicks = (typeof clicks === "number" ? clicks : 0) + 1. It lasts until World Code is next saved or the world restarts.\n- When the last line has a value, the player who clicked sees it in chat as "Result: ...".\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(myId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: myId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(myId).\n- Teleporting the player onto this block: api.setPosition(myId, thisPos[0] + 0.5, thisPos[1] + 1, thisPos[2] + 0.5).\n- A block next to this one: api.setBlock(thisPos[0], thisPos[1] + 1, thisPos[2], "Block of Gold").\n- Flying: api.setClientOption(myId, "creative", true) (false to stop).\n- Text on the right of the screen: api.setClientOption(myId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(myId, api.getClientOption(myId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(myId); api.setPosition(myId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(myId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- Coins as a currency: make it only if they don't have it yet (setCurrency again would reset it): if (api.getCurrencyAmount(myId, "coins") === null) api.setCurrency(myId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(myId, "coins", 5).\n- A box around the player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position.`,
-      wt = {
+      UW = bb => `You are the coding helper inside Bloxd's World Code editor. Bloxd is a voxel game; World Code is JavaScript that runs on the game server for one world. The person asking is a young creator (13 or older) who is new to coding.\n\nHow World Code works:\n- The engine calls special top-level functions ("callbacks") when things happen: function onPlayerJoin(playerId) {...}, function tick(ms) {...}, function playerCommand(playerId, command) {...} and the others ${bb?"in the docs":"in the callback list"}. Define each callback once; never call callbacks yourself.\n- playerCommand gets the chat line without its "/" (e.g. "speed 2"); return true for a command you handled, so the player isn't told it is unknown, and return nothing (never false) for any other, or the game's own commands (/spawn) stop working.\n- tick(ms) runs 20 times a second, with the milliseconds since the last tick. Count time with it (add up ms) instead of setTimeout, and keep it light.\n- Talk to the game only through the api object: api.sendMessage(playerId, text), api.setClientOption(playerId, option, value) and the other methods ${bb?"in the docs":"in the API list"}. Use only methods, callbacks and client options that are ${bb?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables at the top level keep their values while the world runs. Players are identified by playerId (a string, not their name).\n- Values you keep per player (lists, timers, scores, teams) need a start in onPlayerJoin and removing in onPlayerLeave(playerId), so tick never uses a player who left.\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n- Settings: numbers and messages the creator may want to change (times, amounts, prices, speeds, messages shown to players, on/off switches) go in one const CONFIG = { ... } at the top of the file, each value a plain number, a quoted string or true/false with a short comment saying what it does, e.g. waveSeconds: 30, // seconds between zombie waves. The code uses CONFIG.waveSeconds, and a message that mentions a setting builds it from CONFIG ("You start with " + CONFIG.startCoins + " coins"), so changing the setting changes the message too. If the file has a CONFIG, add new settings to it and change a setting there; never make a second one. Don't move code they didn't ask about into CONFIG.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(playerId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: playerId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(playerId).\n- Flying: api.setClientOption(playerId, "creative", true) (false to stop).\n- Leaderboard: in onPlayerJoin, api.setClientOption(playerId, "lobbyLeaderboardInfo", { name: { displayName: "Name", sortPriority: 0 }, coins: { displayName: "Coins", sortPriority: 1 } }); then whenever a value changes, api.setTargetedPlayerSettingForEveryone(playerId, "lobbyLeaderboardValues", { coins: 5 }, true).\n- Text on the right of the screen: api.setClientOption(playerId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(playerId, api.getClientOption(playerId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(playerId); api.setPosition(playerId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(playerId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- A player who can't play any more (e.g. out of lives): api.setPlayerGamemode(playerId, "spectator"); "survival" brings them back.\n- Mob waves: api.attemptSpawnMob(mobType, x, y, z) returns the mob's id. Keep the ids, and remove each in onMobDespawned(mobId) to know when they are all dead.\n- Removing or changing a block later: count ms in tick, then api.setBlock(x, y, z, "Air").\n- Coins as a currency: make it once in onPlayerJoin, only if they don't have it yet (a saved one comes back by itself, and setCurrency again would reset it): if (api.getCurrencyAmount(playerId, "coins") === null) api.setCurrency(playerId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(playerId, "coins", 5). When the request says anything is saved or kept after leaving (e.g. "it saves if you leave"), the coins are saved too: add persistent: true. Otherwise leave it out.\n- Values the request says must stay after leaving (e.g. when they last claimed a reward): api.setPlayerDbValue(playerId, "lastClaim", Date.now()) and api.getPlayerDbValue(playerId, "lastClaim") (null if never set); a saved value is a string or a number. Only those: lives, scores, checkpoints and timers for one game stay in top-level variables, which reset when they leave.\n- A player dying, from anything: onAttemptKillPlayer(killedPlayerId, attackingLifeformId). onPlayerKilledOtherPlayer only covers kills by players.\n- Stopping one player hurting another (e.g. teammates): onPlayerDamagingOtherPlayer(attackingPlayer, damagedPlayer) returns "preventDamage". onAttemptKillPlayer only stops the death, not the damage.\n- A counter of how long each player has been alive: in tick, count only while api.isAlive(playerId), and start again from 0 in onRespawnRequest (the death screen isn't time alive). Other timers don't need this.\n- A reward for reaching a count (5 kills, 10 coins): give it when the count first reaches it (=== 5, or keep a per-player flag such as rewarded[playerId] = true), never on every count after (>= 5 alone gives it again each time).\n- Telling whether a player moved: compare with where they were after any teleport of yours (update the saved position when you teleport them), or your own teleport counts as them moving.\n- A box around a player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position. A bottom corner at by would fill the block they stand in; replacing the ground under them is fine. If they should be trapped, also stop them breaking it: api.setCantChangeBlockRect(playerId, [bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2]).`,
+      IW = bb => `You are the coding helper inside Bloxd's code block editor. Bloxd is a voxel game; a code block is a block in the world holding JavaScript that runs on the game server when a player clicks it. The person asking is a young creator (13 or older) who is new to coding.\n\nHow code blocks work:\n- Each click runs the whole code once, from top to bottom. A code block has no callbacks: something that has to happen later or by itself (when players join, every tick, on a chat command, when a player breaks a block) needs World Code, the world's main code, where callbacks such as onPlayerJoin(playerId), tick() and playerCommand(playerId, command) are defined as functions. Write that part as World Code (see How to answer), and put what one click does in the code block.\n- myId is the id of the player who clicked the block (a string, not their name), and thisPos is the block's position as [x, y, z].\n- Talk to the game only through the api object: api.sendMessage(myId, text), api.setClientOption(myId, option, value) and the other methods ${bb?"in the docs":"in the API list"}. Use only methods and client options that are ${bb?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables made with const or let start again on every click. A value kept between clicks is assigned without const or let, after checking it is there, e.g. clicks = (typeof clicks === "number" ? clicks : 0) + 1. It lasts until World Code is next saved or the world restarts.\n- When the last line has a value, the player who clicked sees it in chat as "Result: ...".\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(myId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: myId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(myId).\n- Teleporting the player onto this block: api.setPosition(myId, thisPos[0] + 0.5, thisPos[1] + 1, thisPos[2] + 0.5).\n- A block next to this one: api.setBlock(thisPos[0], thisPos[1] + 1, thisPos[2], "Block of Gold").\n- Flying: api.setClientOption(myId, "creative", true) (false to stop).\n- Text on the right of the screen: api.setClientOption(myId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(myId, api.getClientOption(myId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(myId); api.setPosition(myId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(myId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- Coins as a currency: make it only if they don't have it yet (setCurrency again would reset it): if (api.getCurrencyAmount(myId, "coins") === null) api.setCurrency(myId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(myId, "coins", 5).\n- A box around the player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position.`,
+      HW = {
         search: "lines to find",
         replace: "lines to put instead",
         codeBlock: "...all of the code block's code...",
@@ -5898,324 +5898,324 @@ export const modules = {
         worldCode: "...only the World Code to add...",
         function: "function onPlayerJoin(playerId) {\n\t...the whole new function...\n}"
       },
-      dt = Object.values(wt);
-    const st = `You looked at World Code: its files are below, their paths starting ${ek.i}. Put the part of the request that needs World Code (a callback, or something that happens without a click) straight into World Code with the same calls, its path exactly as shown, e.g. ${ek.i}index.js (in World Code the player is playerId; there is no myId or thisPos). A callback World Code already has is changed in place, with what it already does kept, never defined twice. Keep the code block's own change on the path ${ek.c}, and leave it out if the request is all World Code. They are taken to World Code to see the change.`;
+      fW = Object.values(HW);
+    const MW = `You looked at World Code: its files are below, their paths starting ${mb.j}. Put the part of the request that needs World Code (a callback, or something that happens without a click) straight into World Code with the same calls, its path exactly as shown, e.g. ${mb.j}index.js (in World Code the player is playerId; there is no myId or thisPos). A callback World Code already has is changed in place, with what it already does kept, never defined twice. Keep the code block's own change on the path ${mb.d}, and leave it out if the request is all World Code. They are taken to World Code to see the change.`;
 
-    function Vt(kk, Fk, Bk, Rk) {
-      var tk, ak, Xk, bk;
+    function XW(bb, cb, sb, kb) {
+      var Wb, ab, Tb, Ub;
       let {
-        hasWorldCodeFiles: wk,
-        hasLookedUp: dk,
-        movesToWorldCode: sk,
-        listedPrefabs: Vk,
-        guidesToPrefabs: Jk
-      } = Rk;
-      const Ak = Fk ? ek.c : "index.js",
-        yk = Fk ? `${ek.i}index.js` : Ak,
-        mk = (kk, Fk) => IR(Bk, kk, Fk),
-        Wk = Fk => kk.some((kk => kk.name === Fk)),
-        vk = kk.filter((kk => ["content", "replace", "code"].some((Fk => Fk in kk.inputSchema.properties)))),
-        ik = Wk("edit_code_in_place") ? `\nFor a fix of one to a few lines in the code open in the editor, use edit_code_in_place instead: it changes their code straight away, as if they pressed Apply, and they can undo it. search is copied exactly from the open code:\n${mk("edit_code_in_place",{why:"what this fix does",search:wt.search,replace:wt.replace})}` : "",
-        Yk = Wk("export_game") ? `\nWhen the creator asks to export, save or publish their world or game, your answer must contain the export_game call; without it nothing is exported. For example, if the creator writes "export the world", your whole answer is:\nSaving your world as your custom game now!\n${mk("export_game",{})}` : "",
-        Lk = Wk("replace_function") ? `\nWhen you change only one or two functions or callbacks of a file that already has code, you can send just those instead of the whole file. replace_function finds a function by its name and puts your whole new function in its place; with a name the file doesn't have yet, it adds your new callback or function at the end, changing nothing already there:\n${mk("replace_function",{path:yk,name:"onPlayerJoin",why:"what the new function does",code:wt.function})}` : "",
-        Ok = Wk("edit_file") ? `\nFor a file longer than 6000 characters, don't send it whole: change only the parts that need it, with replace_function where you can, and an edit_file call for each other part, where search is copied exactly from the current file:\n${mk("edit_file",{path:Ak,why:"what this part's change does",search:wt.search,replace:wt.replace})}` : "",
-        Ek = Fk ? `2. Then give the whole new code with a write_file call, exactly like this:\n${mk("write_file",{path:Ak,why:"what the change does",content:wt.codeBlock})}` : `2. Then give every file you change, in full, with a write_file call, exactly like this:\n${mk("write_file",{path:Ak,why:"what the change does",content:wt.file})}`,
-        Sk = Fk ? "" : ` If there is no code yet, write it in ${Ak}.`,
-        Nk = mk("switch_to_world_code", {}),
-        Hk = Fk ? wk ? `\n${st}` : `\nIf part of the request needs World Code (a callback, or something that happens without a click), give that part as World Code with an add_world_code call, with its callbacks written as functions (in World Code the player is playerId; there is no myId or thisPos), exactly like this:\n${mk("add_world_code",{code:wt.worldCode})}\n${sk?"In your sentences, say which part goes in World Code: they are taken there, and it is put in for them.":"In your sentences, say which part goes in World Code and that they should press the World Code button to switch there and add it."} Leave out the code block's write_file call if the request is all World Code.${Wk("view_world_code")?`\nTo see what World Code already has before you write that part (a callback it may already define), look at it first:\n${mk("view_world_code",{})}`:""}\nWhen the request is all World Code, also call switch_to_world_code after add_world_code: it takes them to World Code, where its AI Helper is asked to add your World Code part. Give a request instead when they asked to go to World Code for something else:\n${Nk}` : "",
-        uk = Jk && Wk("use_prefab") && Vk.length >= 2,
-        Mk = uk ? Vk.slice(0, 3).map((kk => kk.title)).join("\n") : "A parkour race\nZombie survival\nCapture the flag",
-        gk = uk ? " When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles: the one they pick is put in with use_prefab next." : "",
-        Uk = Wk("ask_creator") ? `\nOnly if the request is too unclear to build anything sensible, ask instead of writing code: call ask_creator with one short question and 2 to 4 short choices, one per line. That is: no idea what kind of thing they want ("make a game"), or asking to make their game better, more fun or cooler without saying how ("make it more fun"): then the choices are 2 to 4 different ideas built on what their code already has, each a short concrete thing to add, not a general word like "more fun" (e.g. for a snowball fight: "Power-ups that drop in", "A score at the top", "Last player standing wins"). Otherwise build it, choosing sensibly, and say in your sentences what you chose so they can ask for something different. Never ask for personal details (name, age, school, where they live).${gk}\n${mk("ask_creator",{question:"What kind of game should it be?",choices:Mk,allow_other:"true"})}` : "",
-        ck = Wk("plan") ? `\n${"deepseek"===Bk?"When a request is big, instead of writing it all at once, you may":"This request is big. Instead of writing it all at once, you may"} call plan with 2 to 5 short steps, one per line, each small enough to build and try on its own, the first one playable. Then send no code: the creator builds the steps one at a time. Build it at once instead if it is really only a few lines:\n${mk("plan",{steps:"Give each player 0 coins when they join, shown on screen\nEarn a coin for each block broken\nA /shop command that sells a sword for 10 coins"})}` : "",
-        Gk = null !== (tk = Vk[0]) && void 0 !== tk ? tk : eR("parkour"),
-        Tk = (null !== (ak = null === Gk || void 0 === Gk ? void 0 : Gk.settings) && void 0 !== ak ? ak : []).slice(0, 2).map((kk => `${kk.key}: ${kk.value}`)).join("\n");
-      return `How to answer:\n1. Start with one or two short, friendly sentences in simple words saying what the change does, in the present tense as they read it before it goes in ("This adds...", "This changes..."; or what was wrong), and anything you had to do differently from what they asked. Don't promise it works: they will press Submit and try it. No long lectures.\n${Ek}${Lk}${Ok}${ik}${Hk}${Wk("use_prefab")?`\nFor a game, or a feature (a kit, a shop, rewards...), that a prefab listed below fits, put the prefab in with use_prefab instead of writing that code yourself: it is tested code that works, and it fits around the code they already have: their code stays as it is, and where both have the same callback (onPlayerJoin...) both run, so never rewrite their code to make room for a prefab. Give only the settings the request changes, one per line as key: value, each value written as in JavaScript (text in quotes, positions as [x, y, z]); the rest keep their defaults. For a game like the one asked for but not the same, still use the closest prefab, then in the same answer, after the use_prefab call, change what it doesn't do: replace one of its functions by name, or add a callback, with replace_function. If no prefab fits, write the code yourself:\n${mk("use_prefab",{name:null!==(Xk=null===Gk||void 0===Gk?void 0:Gk.name)&&void 0!==Xk?Xk:"parkour",settings:Tk,why:null!==(bk=null===Gk||void 0===Gk?void 0:Gk.summary)&&void 0!==bk?bk:"a parkour course"})}`:""}${Yk}${Uk}${ck}${Wk("remember")?`\nIf the creator tells you something lasting about their game that later requests should know (its idea, its rules, names of teams, items or places in it), also call remember with one short sentence about the game. They are asked before it is kept. Only what they said, never personal details, and not what the code already shows:\n${mk("remember",{note:"A zombie survival game: a wave comes every 30 seconds and players start with a sword"})}`:""}${function(kk,Fk,Bk){const Rk=kk.some((kk=>"fetch_url"===kk.name)),tk={view_file:`To see another of their files from the list, before you change it:\n${Fk("view_file",{path:"shop.js"})}`,view_world_code:`To see World Code, so you can change it yourself:\n${Fk("view_world_code",{})}`,view_chunk:`To see the blocks around the player (or give a position "x y z" for another chunk near them):\n${Fk("view_chunk",{})}`,view_game_state:`To see where the player is, their health, what they hold and carry, and the players and mobs near them:\n${Fk("view_game_state",{})}`,fetch_url:`To read the docs: ${fk.j} lists every docs page with its link. Read it, then the page you need (for a long page, the part that has it):\n${Fk("fetch_url",{url:fk.j})}`,get_docs:Rk?`Or, for a name you already know, read its docs in full, or list every api method, callback or client option by name (${mF}):\n${Fk("get_docs",{name:"setClientOption"})}\n${Fk("get_docs",{list:"callbacks"})}`:`To read the full docs of an api method, callback or client option the lists only name:\n${Fk("get_docs",{name:"setClientOption"})}`,find_names:`To find the exact names of blocks, items or mobs:\n${Fk("find_names",{words:"gold sword"})}`,view_errors:`To see all the errors their world showed, not only the newest:\n${Fk("view_errors",{})}`,list_prefabs:`To see the prefabs for one kind of game, and the ready-made functions for it:\n${Fk("list_prefabs",{category:"pvp"})}`,view_prefab:`To see one prefab in full, every setting and the functions to replace to change it, before you use it:\n${Fk("view_prefab",{name:"parkour"})}`},ak=kk.flatMap((kk=>{const Fk=tk[kk.name];return void 0===Fk?[]:[Fk]}));return 0===ak.length?Bk?"\nYou have looked things up as many times as you can: answer now with what you found.":"":`\
+        hasWorldCodeFiles: Ib,
+        hasLookedUp: Hb,
+        movesToWorldCode: fb,
+        listedPrefabs: Mb,
+        guidesToPrefabs: Xb
+      } = kb;
+      const nb = cb ? mb.d : "index.js",
+        lb = cb ? `${mb.j}index.js` : nb,
+        eb = (bb, cb) => bW(sb, bb, cb),
+        Cb = cb => bb.some((bb => bb.name === cb)),
+        Nb = bb.filter((bb => ["content", "replace", "code"].some((cb => cb in bb.inputSchema.properties)))),
+        Vb = Cb("edit_code_in_place") ? `\nFor a fix of one to a few lines in the code open in the editor, use edit_code_in_place instead: it changes their code straight away, as if they pressed Apply, and they can undo it. search is copied exactly from the open code:\n${eb("edit_code_in_place",{why:"what this fix does",search:HW.search,replace:HW.replace})}` : "",
+        Lb = Cb("export_game") ? `\nWhen the creator asks to export, save or publish their world or game, your answer must contain the export_game call; without it nothing is exported. For example, if the creator writes "export the world", your whole answer is:\nSaving your world as your custom game now!\n${eb("export_game",{})}` : "",
+        ub = Cb("replace_function") ? `\nWhen you change only one or two functions or callbacks of a file that already has code, you can send just those instead of the whole file. replace_function finds a function by its name and puts your whole new function in its place; with a name the file doesn't have yet, it adds your new callback or function at the end, changing nothing already there:\n${eb("replace_function",{path:lb,name:"onPlayerJoin",why:"what the new function does",code:HW.function})}` : "",
+        Yb = Cb("edit_file") ? `\nFor a file longer than 6000 characters, don't send it whole: change only the parts that need it, with replace_function where you can, and an edit_file call for each other part, where search is copied exactly from the current file:\n${eb("edit_file",{path:nb,why:"what this part's change does",search:HW.search,replace:HW.replace})}` : "",
+        hb = cb ? `2. Then give the whole new code with a write_file call, exactly like this:\n${eb("write_file",{path:nb,why:"what the change does",content:HW.codeBlock})}` : `2. Then give every file you change, in full, with a write_file call, exactly like this:\n${eb("write_file",{path:nb,why:"what the change does",content:HW.file})}`,
+        Jb = cb ? "" : ` If there is no code yet, write it in ${nb}.`,
+        gb = eb("switch_to_world_code", {}),
+        Bb = cb ? Ib ? `\n${MW}` : `\nIf part of the request needs World Code (a callback, or something that happens without a click), give that part as World Code with an add_world_code call, with its callbacks written as functions (in World Code the player is playerId; there is no myId or thisPos), exactly like this:\n${eb("add_world_code",{code:HW.worldCode})}\n${fb?"In your sentences, say which part goes in World Code: they are taken there, and it is put in for them.":"In your sentences, say which part goes in World Code and that they should press the World Code button to switch there and add it."} Leave out the code block's write_file call if the request is all World Code.${Cb("view_world_code")?`\nTo see what World Code already has before you write that part (a callback it may already define), look at it first:\n${eb("view_world_code",{})}`:""}\nWhen the request is all World Code, also call switch_to_world_code after add_world_code: it takes them to World Code, where its AI Helper is asked to add your World Code part. Give a request instead when they asked to go to World Code for something else:\n${gb}` : "",
+        tb = Xb && Cb("use_prefab") && Mb.length >= 2,
+        yb = tb ? Mb.slice(0, 3).map((bb => bb.title)).join("\n") : "A parkour race\nZombie survival\nCapture the flag",
+        Pb = tb ? " When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles: the one they pick is put in with use_prefab next." : "",
+        Db = Cb("ask_creator") ? `\nOnly if the request is too unclear to build anything sensible, ask instead of writing code: call ask_creator with one short question and 2 to 4 short choices, one per line. That is: no idea what kind of thing they want ("make a game"), or asking to make their game better, more fun or cooler without saying how ("make it more fun"): then the choices are 2 to 4 different ideas built on what their code already has, each a short concrete thing to add, not a general word like "more fun" (e.g. for a snowball fight: "Power-ups that drop in", "A score at the top", "Last player standing wins"). Otherwise build it, choosing sensibly, and say in your sentences what you chose so they can ask for something different. Never ask for personal details (name, age, school, where they live).${Pb}\n${eb("ask_creator",{question:"What kind of game should it be?",choices:yb,allow_other:"true"})}` : "",
+        Eb = Cb("plan") ? `\n${"deepseek"===sb?"When a request is big, instead of writing it all at once, you may":"This request is big. Instead of writing it all at once, you may"} call plan with 2 to 5 short steps, one per line, each small enough to build and try on its own, the first one playable. Then send no code: the creator builds the steps one at a time. Build it at once instead if it is really only a few lines:\n${eb("plan",{steps:"Give each player 0 coins when they join, shown on screen\nEarn a coin for each block broken\nA /shop command that sells a sword for 10 coins"})}` : "",
+        ib = null !== (Wb = Mb[0]) && void 0 !== Wb ? Wb : lk("parkour"),
+        Ob = (null !== (ab = null === ib || void 0 === ib ? void 0 : ib.settings) && void 0 !== ab ? ab : []).slice(0, 2).map((bb => `${bb.key}: ${bb.value}`)).join("\n");
+      return `How to answer:\n1. Start with one or two short, friendly sentences in simple words saying what the change does, in the present tense as they read it before it goes in ("This adds...", "This changes..."; or what was wrong), and anything you had to do differently from what they asked. Don't promise it works: they will press Submit and try it. No long lectures.\n${hb}${ub}${Yb}${Vb}${Bb}${Cb("use_prefab")?`\nFor a game, or a feature (a kit, a shop, rewards...), that a prefab listed below fits, put the prefab in with use_prefab instead of writing that code yourself: it is tested code that works, and it fits around the code they already have: their code stays as it is, and where both have the same callback (onPlayerJoin...) both run, so never rewrite their code to make room for a prefab. Give only the settings the request changes, one per line as key: value, each value written as in JavaScript (text in quotes, positions as [x, y, z]); the rest keep their defaults. For a game like the one asked for but not the same, still use the closest prefab, then in the same answer, after the use_prefab call, change what it doesn't do: replace one of its functions by name, or add a callback, with replace_function. If no prefab fits, write the code yourself:\n${eb("use_prefab",{name:null!==(Tb=null===ib||void 0===ib?void 0:ib.name)&&void 0!==Tb?Tb:"parkour",settings:Ob,why:null!==(Ub=null===ib||void 0===ib?void 0:ib.summary)&&void 0!==Ub?Ub:"a parkour course"})}`:""}${Lb}${Db}${Eb}${Cb("remember")?`\nIf the creator tells you something lasting about their game that later requests should know (its idea, its rules, names of teams, items or places in it), also call remember with one short sentence about the game. They are asked before it is kept. Only what they said, never personal details, and not what the code already shows:\n${eb("remember",{note:"A zombie survival game: a wave comes every 30 seconds and players start with a sword"})}`:""}${function(bb,cb,sb){const kb=bb.some((bb=>"fetch_url"===bb.name)),Wb={view_file:`To see another of their files from the list, before you change it:\n${cb("view_file",{path:"shop.js"})}`,view_world_code:`To see World Code, so you can change it yourself:\n${cb("view_world_code",{})}`,view_chunk:`To see the blocks around the player (or give a position "x y z" for another chunk near them):\n${cb("view_chunk",{})}`,view_game_state:`To see where the player is, their health, what they hold and carry, and the players and mobs near them:\n${cb("view_game_state",{})}`,fetch_url:`To read the docs: ${Qb.m} lists every docs page with its link. Read it, then the page you need (for a long page, the part that has it):\n${cb("fetch_url",{url:Qb.m})}`,get_docs:kb?`Or, for a name you already know, read its docs in full, or list every api method, callback or client option by name (${Qc}):\n${cb("get_docs",{name:"setClientOption"})}\n${cb("get_docs",{list:"callbacks"})}`:`To read the full docs of an api method, callback or client option the lists only name:\n${cb("get_docs",{name:"setClientOption"})}`,find_names:`To find the exact names of blocks, items or mobs:\n${cb("find_names",{words:"gold sword"})}`,view_errors:`To see all the errors their world showed, not only the newest:\n${cb("view_errors",{})}`,list_prefabs:`To see the prefabs for one kind of game, and the ready-made functions for it:\n${cb("list_prefabs",{category:"pvp"})}`,view_prefab:`To see one prefab in full, every setting and the functions to replace to change it, before you use it:\n${cb("view_prefab",{name:"parkour"})}`},ab=bb.flatMap((bb=>{const cb=Wb[bb.name];return void 0===cb?[]:[cb]}));return 0===ab.length?sb?"\nYou have looked things up as many times as you can: answer now with what you found.":"":`\
       nIf you need to see something before you can answer well, look it up first: answer with only look - up calls, no other words and no code, and you are asked again with what they found.$ {
-        Rk ? "The docs aren't in this message: before you use an api method, callback or client option, look up any you aren't sure of, with llms.txt where you can. Make every look-up you need in one answer where you can, up to 4." : "Most requests need no look-up: only look when the answer depends on it."
+        kb ? "The docs aren't in this message: before you use an api method, callback or client option, look up any you aren't sure of, with llms.txt where you can. Make every look-up you need in one answer where you can, up to 4." : "Most requests need no look-up: only look when the answer depends on it."
       }\
       n$ {
-        ak.join("\n")
+        ab.join("\n")
       }
-      `}(kk,mk,dk)}\nGive each call that changes code a why: a few plain words the creator sees beside that change, e.g. "gives everyone a sword when they join".\n3. Keep everything that already works; change only what the request needs. Don't add commands or features they didn't ask for: suggest them in your answer instead.${Sk}\n4. If the request is not about their ${Fk?"code block":"World Code"}, or asks for something unsafe or unkind, say briefly that you can only help with their game's code.\nDo not put code anywhere except in ${vk.map((kk=>kk.name)).join(" or ")} calls. ${function(kk){return nF[kk].callStyle}(Bk)}`
+      `}(bb,eb,Hb)}\nGive each call that changes code a why: a few plain words the creator sees beside that change, e.g. "gives everyone a sword when they join".\n3. Keep everything that already works; change only what the request needs. Don't add commands or features they didn't ask for: suggest them in your answer instead.${Jb}\n4. If the request is not about their ${cb?"code block":"World Code"}, or asks for something unsafe or unkind, say briefly that you can only help with their game's code.\nDo not put code anywhere except in ${Nb.map((bb=>bb.name)).join(" or ")} calls. ${function(bb){return Fc[bb].callStyle}(sb)}`
     }
 
-    function Jt(kk, Fk, Bk) {
-      return Object.keys(kk).filter((kk => !Bk || !(0, ek.d)(kk))).sort(((kk, Bk) => (Bk === Fk ? 1 : 0) - (kk === Fk ? 1 : 0) || kk.localeCompare(Bk)))
+    function nW(bb, cb, sb) {
+      return Object.keys(bb).filter((bb => !sb || !(0, mb.e)(bb))).sort(((bb, sb) => (sb === cb ? 1 : 0) - (bb === cb ? 1 : 0) || bb.localeCompare(sb)))
     }
 
-    function At(kk, Fk, Bk) {
-      var Rk;
-      const tk = Jt(kk, Fk, Bk);
-      return null !== Fk && tk.includes(Fk) ? Fk : null !== (Rk = tk[0]) && void 0 !== Rk ? Rk : null
+    function mW(bb, cb, sb) {
+      var kb;
+      const Wb = nW(bb, cb, sb);
+      return null !== cb && Wb.includes(cb) ? cb : null !== (kb = Wb[0]) && void 0 !== kb ? kb : null
     }
 
-    function et(kk) {
-      const Fk = `${arguments.length>1&&void 0!==arguments[1]?arguments[1]:""}${kk.includes("index.ts")?"index.ts":"index.js"}`;
-      return `Only ${Fk} runs by itself: another file runs when ${Fk} imports or requires it, so keep the import, require and export lines their files have (no import/export is for one file), and put callbacks in ${Fk}.\n`
+    function lW(bb) {
+      const cb = `${arguments.length>1&&void 0!==arguments[1]?arguments[1]:""}${bb.includes("index.ts")?"index.ts":"index.js"}`;
+      return `Only ${cb} runs by itself: another file runs when ${cb} imports or requires it, so keep the import, require and export lines their files have (no import/export is for one file), and put callbacks in ${cb}.\n`
     }
 
-    function yt(kk, Fk) {
-      var Bk;
+    function QW(bb, cb) {
+      var sb;
       const {
-        files: Rk,
-        activePath: tk
-      } = kk, ak = !0 === kk.codeBlock, Xk = Jt(Rk, tk, ak);
-      if (0 === Xk.length || Xk.every((kk => "" === Rk[kk].trim()))) return ak ? "There is no code yet: the code block is empty." : Xk.includes("index.ts") ? "There is no code yet: index.ts is empty. Write it in index.ts." : "There is no code yet: index.js is empty.";
-      const bk = null !== (Bk = At(Rk, tk, ak)) && void 0 !== Bk ? Bk : Xk[0];
-      return `${Xk.length>1?`Their files:\n${Xk.map((kk=>{const Fk=""===(Bk=Rk[kk])?0:Bk.replace(/\n$/,"").split("\n").length;var Bk;return`- ${kk}: ${1===Fk?"1 line":`${Fk} lines`}${kk===bk?" (open in the editor, its code below)":""}`})).join("\n")}\n${ak?"":et(Xk)}\n`:""}${function(kk,Fk,Bk,Rk){return Fk.map((Fk=>nF[Rk].fileResult(Fk,kk[Fk],Fk===Bk))).join("\n\n")}(Rk,[bk],tk,Fk)}`
+        files: kb,
+        activePath: Wb
+      } = bb, ab = !0 === bb.codeBlock, Tb = nW(kb, Wb, ab);
+      if (0 === Tb.length || Tb.every((bb => "" === kb[bb].trim()))) return ab ? "There is no code yet: the code block is empty." : Tb.includes("index.ts") ? "There is no code yet: index.ts is empty. Write it in index.ts." : "There is no code yet: index.js is empty.";
+      const Ub = null !== (sb = mW(kb, Wb, ab)) && void 0 !== sb ? sb : Tb[0];
+      return `${Tb.length>1?`Their files:\n${Tb.map((bb=>{const cb=""===(sb=kb[bb])?0:sb.replace(/\n$/,"").split("\n").length;var sb;return`- ${bb}: ${1===cb?"1 line":`${cb} lines`}${bb===Ub?" (open in the editor, its code below)":""}`})).join("\n")}\n${ab?"":lW(Tb)}\n`:""}${function(bb,cb,sb,kb){return cb.map((cb=>Fc[kb].fileResult(cb,bb[cb],cb===sb))).join("\n\n")}(kb,[Ub],Wb,cb)}`
     }
 
-    function ft(kk) {
-      var Fk, Bk, Rk, tk, ak, Xk;
+    function eW(bb) {
+      var cb, sb, kb, Wb, ab, Tb;
       return {
-        codeBlock: !0 === kk.codeBlock,
-        hasCode: "" !== (null !== (Fk = kk.files[null !== (Bk = kk.activePath) && void 0 !== Bk ? Bk : ""]) && void 0 !== Fk ? Fk : "").trim(),
-        hasBigFile: Object.values(kk.files).some((kk => kk.length > 6e3)),
-        wantsExport: lR(kk.request),
-        canAsk: !0 === kk.canAsk,
-        canRemember: !0 === (null === (Rk = kk.about) || void 0 === Rk ? void 0 : Rk.canRemember),
-        isBigRequest: sF(kk.request),
-        canLookUp: !0 === kk.canLookUp,
-        hasOtherFiles: Object.keys(kk.files).length > 1,
-        hasErrors: kk.errors.length > 0,
-        canChangeWorldCode: !0 === kk.canChangeWorldCode,
-        hasWorldCodeFiles: Object.keys(kk.files).some(ek.d),
-        offersPrefabs: (tk = kk.request, ak = kk.files, Xk = mt(kk), "never" !== Xk.offer && ("always" === Xk.offer || NR(tk, 1).length > 0 || sF(tk) || !Rt(ak) && Bt.test(tk))),
-        listsPrefabs: mt(kk).categories,
-        looksUpDocs: !0 === kk.looksUpDocs
+        codeBlock: !0 === bb.codeBlock,
+        hasCode: "" !== (null !== (cb = bb.files[null !== (sb = bb.activePath) && void 0 !== sb ? sb : ""]) && void 0 !== cb ? cb : "").trim(),
+        hasBigFile: Object.values(bb.files).some((bb => bb.length > 6e3)),
+        wantsExport: jk(bb.request),
+        canAsk: !0 === bb.canAsk,
+        canRemember: !0 === (null === (kb = bb.about) || void 0 === kb ? void 0 : kb.canRemember),
+        isBigRequest: Hc(bb.request),
+        canLookUp: !0 === bb.canLookUp,
+        hasOtherFiles: Object.keys(bb.files).length > 1,
+        hasErrors: bb.errors.length > 0,
+        canChangeWorldCode: !0 === bb.canChangeWorldCode,
+        hasWorldCodeFiles: Object.keys(bb.files).some(mb.e),
+        offersPrefabs: (Wb = bb.request, ab = bb.files, Tb = CW(bb), "never" !== Tb.offer && ("always" === Tb.offer || tk(Wb, 1).length > 0 || Hc(Wb) || !aW(ab) && WW.test(Wb))),
+        listsPrefabs: CW(bb).categories,
+        looksUpDocs: !0 === bb.looksUpDocs
       }
     }
 
-    function mt(kk) {
-      var Fk;
-      return null !== (Fk = kk.prefabs) && void 0 !== Fk ? Fk : Ft
+    function CW(bb) {
+      var cb;
+      return null !== (cb = bb.prefabs) && void 0 !== cb ? cb : kW
     }
 
-    function Wt(kk, Fk) {
-      return "deepseek" === Fk ? function(kk) {
-        const Fk = nR[kk ? "codeBlock" : "worldCode"];
-        return iF.filter((kk => Fk.has(kk.name)))
-      }(!0 === kk.codeBlock) : function(kk) {
-        const Fk = (kk.hasCode || kk.hasBigFile) && !kk.codeBlock || !0 === kk.hasWorldCodeFiles,
-          Bk = !0 === kk.canLookUp,
-          Rk = kk.codeBlock && !0 === kk.canChangeWorldCode && !0 !== kk.hasWorldCodeFiles && Bk,
-          tk = {
+    function NW(bb, cb) {
+      return "deepseek" === cb ? function(bb) {
+        const cb = pk[bb ? "codeBlock" : "worldCode"];
+        return Nc.filter((bb => cb.has(bb.name)))
+      }(!0 === bb.codeBlock) : function(bb) {
+        const cb = (bb.hasCode || bb.hasBigFile) && !bb.codeBlock || !0 === bb.hasWorldCodeFiles,
+          sb = !0 === bb.canLookUp,
+          kb = bb.codeBlock && !0 === bb.canChangeWorldCode && !0 !== bb.hasWorldCodeFiles && sb,
+          Wb = {
             write_file: !0,
-            edit_file: kk.hasBigFile,
-            replace_function: Fk,
+            edit_file: bb.hasBigFile,
+            replace_function: cb,
             insert_code: !1,
-            add_world_code: kk.codeBlock && !0 !== kk.hasWorldCodeFiles,
-            edit_code_in_place: kk.hasCode,
-            export_game: kk.wantsExport,
-            switch_to_world_code: kk.codeBlock,
-            ask_creator: kk.canAsk,
-            remember: !0 === kk.canRemember && !kk.codeBlock,
-            plan: !0 === kk.isBigRequest && kk.canAsk && !kk.codeBlock,
-            view_file: Bk && !0 === kk.hasOtherFiles && !kk.codeBlock,
-            view_world_code: Rk,
-            view_chunk: Bk,
-            view_game_state: Bk,
-            get_docs: Bk,
-            fetch_url: Bk && !0 === kk.looksUpDocs,
-            find_names: Bk,
-            view_errors: Bk && !0 === kk.hasErrors,
-            use_prefab: !0 === kk.offersPrefabs && !kk.codeBlock,
-            list_prefabs: Bk && !0 === kk.listsPrefabs && !kk.codeBlock,
-            view_prefab: Bk && !0 === kk.offersPrefabs && !kk.codeBlock
+            add_world_code: bb.codeBlock && !0 !== bb.hasWorldCodeFiles,
+            edit_code_in_place: bb.hasCode,
+            export_game: bb.wantsExport,
+            switch_to_world_code: bb.codeBlock,
+            ask_creator: bb.canAsk,
+            remember: !0 === bb.canRemember && !bb.codeBlock,
+            plan: !0 === bb.isBigRequest && bb.canAsk && !bb.codeBlock,
+            view_file: sb && !0 === bb.hasOtherFiles && !bb.codeBlock,
+            view_world_code: kb,
+            view_chunk: sb,
+            view_game_state: sb,
+            get_docs: sb,
+            fetch_url: sb && !0 === bb.looksUpDocs,
+            find_names: sb,
+            view_errors: sb && !0 === bb.hasErrors,
+            use_prefab: !0 === bb.offersPrefabs && !bb.codeBlock,
+            list_prefabs: sb && !0 === bb.listsPrefabs && !bb.codeBlock,
+            view_prefab: sb && !0 === bb.offersPrefabs && !bb.codeBlock
           };
-        let ak = iF.filter((kk => tk[kk.name]));
-        for (const Xk of ["remember", "plan"]) ak.filter((kk => !YF(kk.name))).length > 7 && (ak = ak.filter((kk => kk.name !== Xk)));
-        return ak
-      }(ft(kk))
+        let ab = Nc.filter((bb => Wb[bb.name]));
+        for (const Tb of ["remember", "plan"]) ab.filter((bb => !Vc(bb.name))).length > 7 && (ab = ab.filter((bb => bb.name !== Tb)));
+        return ab
+      }(eW(bb))
     }
 
-    function vt(kk, Fk) {
-      var Bk, Rk;
-      const tk = ft(kk),
-        ak = !0 === tk.canLookUp,
-        Xk = (null !== (Bk = null === (Rk = kk.lookups) || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Bk ? Bk : 0) > 0,
-        bk = !0 === tk.hasWorldCodeFiles,
-        wk = [tk.hasCode ? "" : "No open file has code, so don't call edit_code_in_place.", tk.hasBigFile ? "" : "Every file is short, so change them with write_file or replace_function, not edit_file.", ak ? "" : Xk ? "You have looked things up as many times as you can: answer now with what you found, calling no view_ tool, get_docs or find_names." : "Answer with what you have: call no view_ tool, get_docs or find_names.", ak && !0 !== tk.hasErrors ? "Their world showed no errors, so don't call view_errors." : "", ...tk.codeBlock ? [tk.canAsk ? "" : "Build what they asked: don't call ask_creator.", bk ? `${st} So don't call add_world_code or view_world_code.` : "", bk || !0 !== tk.canChangeWorldCode ? "" : "When part of it needs World Code, say which part goes there: they are taken to World Code, and it is put in for them.", bk || !0 === tk.canChangeWorldCode && ak ? "" : "Don't call view_world_code.", bk ? "" : "The code block has no functions, so don't call replace_function."] : [tk.canAsk ? "" : "Build what they asked: don't call ask_creator or plan.", tk.canAsk && !0 !== tk.isBigRequest ? "This request isn't big, so build it rather than calling plan." : "", tk.wantsExport ? "" : "They haven't asked to save, so don't call export_game.", !0 === tk.canRemember ? "" : "Their AI notes are full, so don't call remember.", ak && !0 !== tk.hasOtherFiles ? "They have only the one file, so don't call view_file." : "", !0 === tk.offersPrefabs ? "" : "No prefab fits this request, so don't call use_prefab or view_prefab.", tk.canAsk && !0 === mt(kk).guide && Fk.length >= 2 ? `When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles (${Fk.slice(0,3).map((kk=>kk.title)).join(", ")}...): the one they pick is put in with use_prefab next.` : ""]].filter((kk => "" !== kk));
-      return wk.length > 0 ? `\n\nFor this request: ${wk.join(" ")}` : ""
+    function VW(bb, cb) {
+      var sb, kb;
+      const Wb = eW(bb),
+        ab = !0 === Wb.canLookUp,
+        Tb = (null !== (sb = null === (kb = bb.lookups) || void 0 === kb ? void 0 : kb.length) && void 0 !== sb ? sb : 0) > 0,
+        Ub = !0 === Wb.hasWorldCodeFiles,
+        Ib = [Wb.hasCode ? "" : "No open file has code, so don't call edit_code_in_place.", Wb.hasBigFile ? "" : "Every file is short, so change them with write_file or replace_function, not edit_file.", ab ? "" : Tb ? "You have looked things up as many times as you can: answer now with what you found, calling no view_ tool, get_docs or find_names." : "Answer with what you have: call no view_ tool, get_docs or find_names.", ab && !0 !== Wb.hasErrors ? "Their world showed no errors, so don't call view_errors." : "", ...Wb.codeBlock ? [Wb.canAsk ? "" : "Build what they asked: don't call ask_creator.", Ub ? `${MW} So don't call add_world_code or view_world_code.` : "", Ub || !0 !== Wb.canChangeWorldCode ? "" : "When part of it needs World Code, say which part goes there: they are taken to World Code, and it is put in for them.", Ub || !0 === Wb.canChangeWorldCode && ab ? "" : "Don't call view_world_code.", Ub ? "" : "The code block has no functions, so don't call replace_function."] : [Wb.canAsk ? "" : "Build what they asked: don't call ask_creator or plan.", Wb.canAsk && !0 !== Wb.isBigRequest ? "This request isn't big, so build it rather than calling plan." : "", Wb.wantsExport ? "" : "They haven't asked to save, so don't call export_game.", !0 === Wb.canRemember ? "" : "Their AI notes are full, so don't call remember.", ab && !0 !== Wb.hasOtherFiles ? "They have only the one file, so don't call view_file." : "", !0 === Wb.offersPrefabs ? "" : "No prefab fits this request, so don't call use_prefab or view_prefab.", Wb.canAsk && !0 === CW(bb).guide && cb.length >= 2 ? `When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles (${cb.slice(0,3).map((bb=>bb.title)).join(", ")}...): the one they pick is put in with use_prefab next.` : ""]].filter((bb => "" !== bb));
+      return Ib.length > 0 ? `\n\nFor this request: ${Ib.join(" ")}` : ""
     }
 
-    function it(kk, Fk) {
-      var Bk, Rk, tk, ak, Xk, bk;
-      let wk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tt,
+    function LW(bb, cb) {
+      var sb, kb, Wb, ab, Tb, Ub;
+      let Ib = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : TW,
         {
-          docsInTurn: dk = !1,
-          ws: sk = !1
+          docsInTurn: Hb = !1,
+          tQ: fb = !1
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Vk = "deepseek" === wk.format,
-        Jk = Object.values(Fk.files).join("\n"),
-        Ak = Fk.history.slice(-2).map((kk => kk.text)).join("\n"),
-        ek = `${Fk.request}\n${Ak}\n${Fk.errors.join("\n")}`,
-        yk = !0 === Fk.looksUpDocs,
-        fk = yk && !0 === Fk.canLookUp ? [] : kk.find(ek, Jk, 12),
-        mk = kk.matchItemAndBlockNames(ek, 12),
-        Wk = !0 === Fk.codeBlock,
-        vk = Wk ? "myId" : "playerId",
-        ik = Wt(Fk, wk.format),
-        Yk = ik.some((kk => "use_prefab" === kk.name)),
-        Lk = !Yk || Vk && !0 !== ft(Fk).offersPrefabs ? [] : function(kk, Fk, Bk) {
-          if ("never" === Bk.offer || "none" === Bk.list) return [];
-          if ("all" === Bk.list) return [...VR];
-          const Rk = NR(kk, 4);
-          if (Rt(Fk) || !Bt.test(kk) && !sF(kk)) return Rk;
-          const tk = VR.filter((kk => "game" === kk.kind && !Rk.includes(kk)));
-          return [...Rk, ...tk]
-        }(Fk.request, Fk.files, mt(Fk)),
-        Ok = Yk ? function(kk, Fk, Bk) {
-          const Rk = Fk ? `\nOther kinds of game have prefabs too: look them up with list_prefabs (${[...JR.keys()].join(", ")}).` : "";
-          if (0 === kk.length) return Fk ? `## Prefabs (ready-made games)${Rk}` : "";
-          const tk = Bk && kk.includes(Bk) ? `\nThis request fits ${Bk.name}: put it in with use_prefab, then change only what the request wants differently: what it already does needs no code of yours (its sidebar is the text on the right of the screen).\n${SR(Bk,!1)}` : "";
-          return `## Prefabs: ready-made games and features to start from (use_prefab)\n${kk.map(OR).join("\n")}${tk}${Rk}`
-        }(Lk, mt(Fk).categories, NR(Fk.request, 1)[0]) : "",
-        Ek = Wk || !0 !== mt(Fk).inlineCode ? "" : function(kk) {
-          const Fk = NR(kk, 1)[0];
-          if (!Fk) return "";
-          const Bk = vR(fR(Fk)).text;
-          return `## Tested code for this kind of game (${Fk.title})\nThis code works. Start from it: put it in the file, keeping what the file already has, and change what the request needs. Change settings in its CONFIG.\n\`\`\`js\n${Bk}\`\`\``
-        }(Fk.request),
-        Sk = [fk.length > 0 ? `## Docs for this request\n${fk.map((kk=>kk.text)).join("\n\n")}` : "", mk.length > 0 ? `## Exact item and block names that match the request\n${mk.join(", ")}` : ""].filter((kk => "" !== kk)),
-        Nk = [{
+      const Mb = "deepseek" === Ib.format,
+        Xb = Object.values(cb.files).join("\n"),
+        nb = cb.history.slice(-2).map((bb => bb.text)).join("\n"),
+        mb = `${cb.request}\n${nb}\n${cb.errors.join("\n")}`,
+        lb = !0 === cb.looksUpDocs,
+        Qb = lb && !0 === cb.canLookUp ? [] : bb.find(mb, Xb, 12),
+        eb = bb.matchItemAndBlockNames(mb, 12),
+        Cb = !0 === cb.codeBlock,
+        Nb = Cb ? "myId" : "playerId",
+        Vb = NW(cb, Ib.format),
+        Lb = Vb.some((bb => "use_prefab" === bb.name)),
+        ub = !Lb || Mb && !0 !== eW(cb).offersPrefabs ? [] : function(bb, cb, sb) {
+          if ("never" === sb.offer || "none" === sb.list) return [];
+          if ("all" === sb.list) return [...Xk];
+          const kb = tk(bb, 4);
+          if (aW(cb) || !WW.test(bb) && !Hc(bb)) return kb;
+          const Wb = Xk.filter((bb => "game" === bb.kind && !kb.includes(bb)));
+          return [...kb, ...Wb]
+        }(cb.request, cb.files, CW(cb)),
+        Yb = Lb ? function(bb, cb, sb) {
+          const kb = cb ? `\nOther kinds of game have prefabs too: look them up with list_prefabs (${[...nk.keys()].join(", ")}).` : "";
+          if (0 === bb.length) return cb ? `## Prefabs (ready-made games)${kb}` : "";
+          const Wb = sb && bb.includes(sb) ? `\nThis request fits ${sb.name}: put it in with use_prefab, then change only what the request wants differently: what it already does needs no code of yours (its sidebar is the text on the right of the screen).\n${Bk(sb,!1)}` : "";
+          return `## Prefabs: ready-made games and features to start from (use_prefab)\n${bb.map(Jk).join("\n")}${Wb}${kb}`
+        }(ub, CW(cb).categories, tk(cb.request, 1)[0]) : "",
+        hb = Cb || !0 !== CW(cb).inlineCode ? "" : function(bb) {
+          const cb = tk(bb, 1)[0];
+          if (!cb) return "";
+          const sb = Vk(ek(cb)).text;
+          return `## Tested code for this kind of game (${cb.title})\nThis code works. Start from it: put it in the file, keeping what the file already has, and change what the request needs. Change settings in its CONFIG.\n\`\`\`js\n${sb}\`\`\``
+        }(cb.request),
+        Jb = [Qb.length > 0 ? `## Docs for this request\n${Qb.map((bb=>bb.text)).join("\n\n")}` : "", eb.length > 0 ? `## Exact item and block names that match the request\n${eb.join(", ")}` : ""].filter((bb => "" !== bb)),
+        gb = [{
           role: "system",
-          content: QR([Wk ? bt(yk) : Xt(yk), ...yk ? [] : [Wk ? `## World Code callbacks (all of them; only for World Code, never in the code block)\n${kk.index("callback")}` : `## Callbacks (all of them)\n${kk.index("callback")}`, `## API methods (all of them, call as api.name(...))\n${kk.index("api")}`, `## Client options (all of them, set with api.setClientOption(${vk}, name, value))\n${kk.index("clientOption")}`], ...dk ? [] : Sk, kk.mobTypes.length > 0 ? `## Mob types (for api.attemptSpawnMob)\n${kk.mobTypes.join(", ")}` : "", Vk ? "" : Ok, !Wk && mt(Fk).helperIndex ? `## Ready-made functions (call them by name, without api. and without writing them: their code is added to the file by itself; get_docs shows one)\n${RR.map((kk=>kk.signature)).join(", ")}` : "", Vk ? "" : Ek, Vt(ik, Wk, wk.format, Vk ? {
+          content: cW([Cb ? IW(lb) : UW(lb), ...lb ? [] : [Cb ? `## World Code callbacks (all of them; only for World Code, never in the code block)\n${bb.index("callback")}` : `## Callbacks (all of them)\n${bb.index("callback")}`, `## API methods (all of them, call as api.name(...))\n${bb.index("api")}`, `## Client options (all of them, set with api.setClientOption(${Nb}, name, value))\n${bb.index("clientOption")}`], ...Hb ? [] : Jb, bb.mobTypes.length > 0 ? `## Mob types (for api.attemptSpawnMob)\n${bb.mobTypes.join(", ")}` : "", Mb ? "" : Yb, !Cb && CW(cb).helperIndex ? `## Ready-made functions (call them by name, without api. and without writing them: their code is added to the file by itself; get_docs shows one)\n${Wk.map((bb=>bb.signature)).join(", ")}` : "", Mb ? "" : hb, XW(Vb, Cb, Ib.format, Mb ? {
             hasWorldCodeFiles: !1,
             hasLookedUp: !1,
             movesToWorldCode: !1,
             listedPrefabs: [],
             guidesToPrefabs: !1
           } : {
-            hasWorldCodeFiles: !0 === ft(Fk).hasWorldCodeFiles,
-            hasLookedUp: (null !== (Bk = null === (Rk = Fk.lookups) || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Bk ? Bk : 0) > 0,
-            movesToWorldCode: !0 === Fk.canChangeWorldCode,
-            listedPrefabs: Lk,
-            guidesToPrefabs: !0 === mt(Fk).guide
-          })].filter((kk => "" !== kk)).join("\n\n"), ik, wk.format, wk.nativeTools)
+            hasWorldCodeFiles: !0 === eW(cb).hasWorldCodeFiles,
+            hasLookedUp: (null !== (sb = null === (kb = cb.lookups) || void 0 === kb ? void 0 : kb.length) && void 0 !== sb ? sb : 0) > 0,
+            movesToWorldCode: !0 === cb.canChangeWorldCode,
+            listedPrefabs: ub,
+            guidesToPrefabs: !0 === CW(cb).guide
+          })].filter((bb => "" !== bb)).join("\n\n"), Vb, Ib.format, Ib.nativeTools)
         }];
-      if (!Vk)
-        for (const Dk of Fk.history) Nk.push({
-          role: Dk.role,
-          content: Dk.text
+      if (!Mb)
+        for (const Kb of cb.history) gb.push({
+          role: Kb.role,
+          content: Kb.text
         });
-      const Hk = Vk && !sk && Fk.history.length > 0 ? `Earlier in this chat:\n${Fk.history.map((kk=>`${"user"===kk.role?"They asked":"You answered"}: ${kk.text}`)).join("\n")}\n\n` : "",
-        uk = null !== (tk = Fk.about) && void 0 !== tk && tk.notes.length ? `AI notes (notes they kept):\n${Fk.about.notes.map((kk=>`- ${kk}`)).join("\n")}\n\n` : "",
-        Mk = null !== (ak = Fk.about) && void 0 !== ak && ak.outline ? `Outline of their code:\n${Fk.about.outline}\n\n` : "",
-        gk = Fk.errors.length > 0 ? `\n\nErrors their world showed recently:\n${Fk.errors.slice(-5).join("\n")}` : "",
-        Uk = null === (Xk = Fk.failedEdits) || void 0 === Xk || !Xk.length || Vk && sk ? "" : `\n\nWhat happened to your last answer's changes:\n${function(kk,Fk){return kk.map((kk=>nF[Fk].editFailure(kk.tool,kt(kk)))).join("\n\n")}(Fk.failedEdits,wk.format)}`,
-        ck = [...dk ? Sk : [], ...Vk ? [Ok, Ek] : []].filter((kk => "" !== kk)).map((kk => `${kk}\n\n`)).join(""),
-        Gk = null === (bk = Fk.lookups) || void 0 === bk || !bk.length || Vk && sk ? "" : `\n\nWhat you looked up for this request:\n${Tk=Fk.lookups,rk=wk.format,Tk.map((kk=>nF[rk].lookupResult(kk.tool,kk.about,kk.text))).join("\n\n")}`;
-      var Tk, rk;
-      return Nk.push({
+      const Bb = Mb && !fb && cb.history.length > 0 ? `Earlier in this chat:\n${cb.history.map((bb=>`${"user"===bb.role?"They asked":"You answered"}: ${bb.text}`)).join("\n")}\n\n` : "",
+        tb = null !== (Wb = cb.about) && void 0 !== Wb && Wb.notes.length ? `AI notes (notes they kept):\n${cb.about.notes.map((bb=>`- ${bb}`)).join("\n")}\n\n` : "",
+        yb = null !== (ab = cb.about) && void 0 !== ab && ab.outline ? `Outline of their code:\n${cb.about.outline}\n\n` : "",
+        Pb = cb.errors.length > 0 ? `\n\nErrors their world showed recently:\n${cb.errors.slice(-5).join("\n")}` : "",
+        Db = null === (Tb = cb.failedEdits) || void 0 === Tb || !Tb.length || Mb && fb ? "" : `\n\nWhat happened to your last answer's changes:\n${function(bb,cb){return bb.map((bb=>Fc[cb].editFailure(bb.tool,sW(bb)))).join("\n\n")}(cb.failedEdits,Ib.format)}`,
+        Eb = [...Hb ? Jb : [], ...Mb ? [Yb, hb] : []].filter((bb => "" !== bb)).map((bb => `${bb}\n\n`)).join(""),
+        ib = null === (Ub = cb.lookups) || void 0 === Ub || !Ub.length || Mb && fb ? "" : `\n\nWhat you looked up for this request:\n${Ob=cb.lookups,Gb=Ib.format,Ob.map((bb=>Fc[Gb].lookupResult(bb.tool,bb.about,bb.text))).join("\n\n")}`;
+      var Ob, Gb;
+      return gb.push({
         role: "user",
-        content: `${ck}${uk}${Mk}${Hk}Their code now:\n${yt(Fk,wk.format)}${gk}${Uk}${Gk}${Vk?vt(Fk,Lk):""}\n\nTheir request: ${Fk.request}`
-      }), Nk
+        content: `${Eb}${tb}${yb}${Bb}Their code now:\n${QW(cb,Ib.format)}${Pb}${Db}${ib}${Mb?VW(cb,ub):""}\n\nTheir request: ${cb.request}`
+      }), gb
     }
-    var Yt = Bk(39199);
+    var uW = sb(39208);
 
-    function ot(kk) {
-      var Fk, Bk, Rk, tk, ak, Xk;
+    function YW(bb) {
+      var cb, sb, kb, Wb, ab, Tb;
       const {
-        args: bk
-      } = kk;
-      switch (kk.name) {
+        args: Ub
+      } = bb;
+      switch (bb.name) {
         case "view_file":
-          return null !== (Fk = bk.path) && void 0 !== Fk ? Fk : "a file";
+          return null !== (cb = Ub.path) && void 0 !== cb ? cb : "a file";
         case "view_world_code":
           return "your World Code";
         case "view_chunk":
-          return bk.position ? `the blocks near ${null!==(Bk=null===(Rk=(0,Yt.e)(bk.position))||void 0===Rk?void 0:Rk.map(Math.floor).join(", "))&&void 0!==Bk?Bk:bk.position}` : "the blocks around you";
+          return Ub.position ? `the blocks near ${null!==(sb=null===(kb=(0,uW.e)(Ub.position))||void 0===kb?void 0:kb.map(Math.floor).join(", "))&&void 0!==sb?sb:Ub.position}` : "the blocks around you";
         case "view_game_state":
           return "what you see in your world";
         case "get_docs":
-          return bk.name ? `the docs for ${bk.name}` : `the list of ${Ot(null!==(tk=bk.list)&&void 0!==tk?tk:Lt)}`;
+          return Ub.name ? `the docs for ${Ub.name}` : `the list of ${JW(null!==(Wb=Ub.list)&&void 0!==Wb?Wb:hW)}`;
         case "fetch_url":
-          return function(kk) {
-            const Fk = void 0 === kk ? null : vk(kk);
-            if (null === Fk) return null !== kk && void 0 !== kk ? kk : "a docs page";
-            return ik(Fk) ? "the list of docs pages" : `the docs page ${function(kk){const Fk=(0,fk.A)(kk);return null===Fk?kk:`${Fk.name}${null===Fk.part?"":`/${Fk.part}`}`}(Fk)}`
-          }(bk.url);
+          return function(bb) {
+            const cb = void 0 === bb ? null : Nb(bb);
+            if (null === cb) return null !== bb && void 0 !== bb ? bb : "a docs page";
+            return Vb(cb) ? "the list of docs pages" : `the docs page ${function(bb){const cb=(0,Qb.B)(bb);return null===cb?bb:`${cb.name}${null===cb.part?"":`/${cb.part}`}`}(cb)}`
+          }(Ub.url);
         case "find_names":
-          return `names for "${null!==(ak=bk.words)&&void 0!==ak?ak:""}"`;
+          return `names for "${null!==(ab=Ub.words)&&void 0!==ab?ab:""}"`;
         case "view_errors":
           return "your world's errors";
         case "list_prefabs":
-          return bk.category ? `the ready-made ${bk.category} games` : "the ready-made games";
+          return Ub.category ? `the ready-made ${Ub.category} games` : "the ready-made games";
         case "view_prefab":
-          return `the ready-made ${null!==(Xk=bk.name)&&void 0!==Xk?Xk:"game"}`
+          return `the ready-made ${null!==(Tb=Ub.name)&&void 0!==Tb?Tb:"game"}`
       }
     }
-    const Lt = "functions";
+    const hW = "functions";
 
-    function Ot(kk) {
-      return kk.trim().toLowerCase().replace(/[\s_]+/g, " ").replace(/s?$/, "s")
+    function JW(bb) {
+      return bb.trim().toLowerCase().replace(/[\s_]+/g, " ").replace(/s?$/, "s")
     }
 
-    function Et(kk) {
-      return "get_docs" === kk.name || "fetch_url" === kk.name
+    function gW(bb) {
+      return "get_docs" === bb.name || "fetch_url" === bb.name
     }
-    async function St(kk, Fk) {
-      var Bk;
-      const Rk = ot(kk),
-        tk = Fk => ({
+    async function BW(bb, cb) {
+      var sb;
+      const kb = YW(bb),
+        Wb = cb => ({
           result: {
-            tool: kk.name,
-            about: Rk,
-            text: Fk
+            tool: bb.name,
+            about: kb,
+            text: cb
           }
         });
-      switch (kk.name) {
+      switch (bb.name) {
         case "view_file":
-          return tk((bk = kk.args.path, wk = Fk.files, void 0 === bk ? "No path was given: give the path of a file from the list." : Object.hasOwn(wk, bk) ? "" === wk[bk] ? `${bk} is empty.` : wk[bk] : `There is no file called ${bk}. Their files are: ${Object.keys(wk).join(", ")}.`));
+          return Wb((Ub = bb.args.path, Ib = cb.files, void 0 === Ub ? "No path was given: give the path of a file from the list." : Object.hasOwn(Ib, Ub) ? "" === Ib[Ub] ? `${Ub} is empty.` : Ib[Ub] : `There is no file called ${Ub}. Their files are: ${Object.keys(Ib).join(", ")}.`));
         case "view_world_code": {
-          const kk = Fk.readWorldCode ? await Fk.readWorldCode() : null;
-          if (null === kk) return tk("World Code couldn't be read, so it can't be changed from here. Give its part with add_world_code instead.");
-          const Bk = Object.keys(kk).sort(),
-            Rk = Object.fromEntries(Bk.map((Fk => [`${ek.i}${Fk}`, kk[Fk]]))),
-            ak = Bk.map((Fk => `${ek.i}${Fk}:\n${""===kk[Fk]?"(empty)":kk[Fk]}`)).join("\n\n"),
-            Xk = Bk.length > 1 ? `\n\n${et(Bk,ek.i)}` : "";
+          const bb = cb.readWorldCode ? await cb.readWorldCode() : null;
+          if (null === bb) return Wb("World Code couldn't be read, so it can't be changed from here. Give its part with add_world_code instead.");
+          const sb = Object.keys(bb).sort(),
+            kb = Object.fromEntries(sb.map((cb => [`${mb.j}${cb}`, bb[cb]]))),
+            ab = sb.map((cb => `${mb.j}${cb}:\n${""===bb[cb]?"(empty)":bb[cb]}`)).join("\n\n"),
+            Tb = sb.length > 1 ? `\n\n${lW(sb,mb.j)}` : "";
           return {
-            ...tk("" === ak ? `World Code has no code yet: ${ek.i}index.js is empty.` : `${ak}${Xk}`),
-            worldCodeFiles: Rk
+            ...Wb("" === ab ? `World Code has no code yet: ${mb.j}index.js is empty.` : `${ab}${Tb}`),
+            worldCodeFiles: kb
           }
         }
         case "view_chunk":
-          return tk(await Fk.viewChunk((0, Yt.e)(kk.args.position)));
+          return Wb(await cb.viewChunk((0, uW.e)(bb.args.position)));
         case "view_game_state":
-          return tk(await Fk.viewGameState());
+          return Wb(await cb.viewGameState());
         case "get_docs":
-          return tk(function(kk, Fk, Bk) {
-            if (void 0 === kk) {
-              const kk = (0, Lk.d)(fF, Ot(null !== Fk && void 0 !== Fk ? Fk : Lt));
-              return void 0 === kk ? `There is no list called ${Fk}: ask for ${mF}.` : Bk.index(kk)
+          return Wb(function(bb, cb, sb) {
+            if (void 0 === bb) {
+              const bb = (0, ub.e)(lc, JW(null !== cb && void 0 !== cb ? cb : hW));
+              return void 0 === bb ? `There is no list called ${cb}: ask for ${Qc}.` : sb.index(bb)
             }
-            const Rk = Bk.section(kk);
-            if (Rk) return Rk.text;
-            const tk = Bk.find(kk, "", 3).map((kk => kk.name)).join(", ");
-            return `Nothing is called ${kk}.${""===tk?"":` The closest names are: ${tk}.`}`
-          }(kk.args.name, kk.args.list, Fk.docs));
+            const kb = sb.section(bb);
+            if (kb) return kb.text;
+            const Wb = sb.find(bb, "", 3).map((bb => bb.name)).join(", ");
+            return `Nothing is called ${bb}.${""===Wb?"":` The closest names are: ${Wb}.`}`
+          }(bb.args.name, bb.args.list, cb.docs));
         case "fetch_url":
-          return tk(await Fk.fetchDocsPage(null !== (Bk = kk.args.url) && void 0 !== Bk ? Bk : ""));
+          return Wb(await cb.fetchDocsPage(null !== (sb = bb.args.url) && void 0 !== sb ? sb : ""));
         case "find_names": {
-          var ak, Xk;
-          const Bk = Fk.docs.searchNames(null !== (ak = kk.args.words) && void 0 !== ak ? ak : "", 20);
-          return tk(Bk.length > 0 ? Bk.join(", ") : `No block, item or mob name has any of the words "${null!==(Xk=kk.args.words)&&void 0!==Xk?Xk:""}".`)
+          var ab, Tb;
+          const sb = cb.docs.searchNames(null !== (ab = bb.args.words) && void 0 !== ab ? ab : "", 20);
+          return Wb(sb.length > 0 ? sb.join(", ") : `No block, item or mob name has any of the words "${null!==(Tb=bb.args.words)&&void 0!==Tb?Tb:""}".`)
         }
         case "view_errors":
-          return tk(Fk.errors.length > 0 ? Fk.errors.slice(-30).join("\n") : "Their world showed no errors recently.");
+          return Wb(cb.errors.length > 0 ? cb.errors.slice(-30).join("\n") : "Their world showed no errors recently.");
         case "list_prefabs":
-          return tk(ER(kk.args.category));
+          return Wb(gk(bb.args.category));
         case "view_prefab":
-          return tk(function(kk, Fk) {
-            const Bk = void 0 === kk ? null : eR(kk);
-            return Bk ? SR(Bk, Fk) : `There is no prefab called ${null!==kk&&void 0!==kk?kk:"that"}.\n${ER()}`
-          }(kk.args.name, !0 === Fk.showPrefabCode))
+          return Wb(function(bb, cb) {
+            const sb = void 0 === bb ? null : lk(bb);
+            return sb ? Bk(sb, cb) : `There is no prefab called ${null!==bb&&void 0!==bb?bb:"that"}.\n${gk()}`
+          }(bb.args.name, !0 === cb.showPrefabCode))
       }
-      var bk, wk
+      var Ub, Ib
     }
-    const Nt = [
+    const tW = [
       [/\bme\b/gi, "the player"],
       [/\bmyself\b/gi, "the player"],
       [/\bmy\b/gi, "the player's"],
@@ -6241,206 +6241,206 @@ export const modules = {
       [/\bstolen\b/gi, "taken"]
     ];
 
-    function Ht(kk) {
-      let Fk = kk;
-      for (const [Bk, Rk] of Nt) Fk = Fk.replace(Bk, (kk => kk.length > 1 && kk[0] !== kk[0].toLowerCase() && kk.slice(1) === kk.slice(1).toLowerCase() ? Rk[0].toUpperCase() + Rk.slice(1) : Rk));
-      return Fk
+    function yW(bb) {
+      let cb = bb;
+      for (const [sb, kb] of tW) cb = cb.replace(sb, (bb => bb.length > 1 && bb[0] !== bb[0].toLowerCase() && bb.slice(1) === bb.slice(1).toLowerCase() ? kb[0].toUpperCase() + kb.slice(1) : kb));
+      return cb
     }
-    const ut = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      Mt = ["Qwen3Guard-Gen-0.6B", "Qwen3Guard-Gen-8B"],
-      gt = ["Qwen3Guard-Gen-8B", "Qwen3Guard-Gen-0.6B"],
-      Ut = 12e3,
-      ct = new Set(["Violent", "Non-violent Illegal Acts", "Unethical Acts"]);
+    const PW = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      DW = ["Qwen3Guard-Gen-0.6B", "Qwen3Guard-Gen-8B"],
+      EW = ["Qwen3Guard-Gen-8B", "Qwen3Guard-Gen-0.6B"],
+      iW = 12e3,
+      OW = new Set(["Violent", "Non-violent Illegal Acts", "Unethical Acts"]);
 
-    function Gt(kk) {
-      var Fk, Bk, Rk;
-      const tk = null === (Fk = /Safety:\s*(\w+)/.exec(kk)) || void 0 === Fk ? void 0 : Fk[1],
-        ak = null !== (Bk = null === (Rk = /Categories:\s*(.+)/.exec(kk)) || void 0 === Rk ? void 0 : Rk[1]) && void 0 !== Bk ? Bk : "";
-      return /PII/.test(ak) ? "personalInfo" : "Unsafe" === tk || /Jailbreak|Sexual|Suicide|Self-Harm/i.test(ak) ? "unsafe" : "ok"
-    }
-
-    function Tt(kk) {
-      var Fk, Bk, Rk;
-      const tk = null === (Fk = /Safety:\s*(\w+)/.exec(kk)) || void 0 === Fk ? void 0 : Fk[1];
-      if (!tk) return null;
-      const ak = (null !== (Bk = null === (Rk = /Categories:\s*(.+)/.exec(kk)) || void 0 === Rk ? void 0 : Rk[1]) && void 0 !== Bk ? Bk : "").split(",").map((kk => kk.trim())).filter((kk => "" !== kk && "None" !== kk));
-      return "Safe" !== tk && ak.some((kk => /Sexual/.test(kk))) ? "unsafe" : "Unsafe" !== tk ? "ok" : ak.length > 0 && ak.every((kk => ct.has(kk))) ? "maybeGame" : "unsafe"
-    }
-    async function rt(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Rk = await Fk(kk),
-        tk = null === Rk ? null : Tt(Rk);
-      if (null === tk) return "unchecked";
-      if ("ok" === tk || "unsafe" === tk && (!Bk || null === Rk || /Sexual/.test(Rk))) return tk;
-      const ak = Ht(kk);
-      if (ak === kk) return "unsafe";
-      const Xk = await Fk(ak),
-        bk = null === Xk ? null : Tt(Xk);
-      return null === bk ? "unchecked" : "ok" === bk ? "ok" : "unsafe"
+    function GW(bb) {
+      var cb, sb, kb;
+      const Wb = null === (cb = /Safety:\s*(\w+)/.exec(bb)) || void 0 === cb ? void 0 : cb[1],
+        ab = null !== (sb = null === (kb = /Categories:\s*(.+)/.exec(bb)) || void 0 === kb ? void 0 : kb[1]) && void 0 !== sb ? sb : "";
+      return /PII/.test(ab) ? "personalInfo" : "Unsafe" === Wb || /Jailbreak|Sexual|Suicide|Self-Harm/i.test(ab) ? "unsafe" : "ok"
     }
 
-    function Dt(kk) {
-      const Fk = [];
-      return qt(kk, 0, !1, Fk), Fk.map((kk => kk.trim())).filter((kk => "" !== kk))
+    function KW(bb) {
+      var cb, sb, kb;
+      const Wb = null === (cb = /Safety:\s*(\w+)/.exec(bb)) || void 0 === cb ? void 0 : cb[1];
+      if (!Wb) return null;
+      const ab = (null !== (sb = null === (kb = /Categories:\s*(.+)/.exec(bb)) || void 0 === kb ? void 0 : kb[1]) && void 0 !== sb ? sb : "").split(",").map((bb => bb.trim())).filter((bb => "" !== bb && "None" !== bb));
+      return "Safe" !== Wb && ab.some((bb => /Sexual/.test(bb))) ? "unsafe" : "Unsafe" !== Wb ? "ok" : ab.length > 0 && ab.every((bb => OW.has(bb))) ? "maybeGame" : "unsafe"
     }
-    const zt = new Set(["return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"]);
-
-    function Pt(kk, Fk) {
-      let Bk = Fk - 1;
-      for (; Bk >= 0 && /\s/.test(kk[Bk]);) Bk--;
-      if (Bk < 0 || /[(,=:[!&|?{};+\-*%<>~^]/.test(kk[Bk])) return !0;
-      let Rk = Bk;
-      for (; Rk > 0 && /[\w$]/.test(kk[Rk - 1]);) Rk--;
-      return zt.has(kk.slice(Rk, Bk + 1))
+    async function ZW(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const kb = await cb(bb),
+        Wb = null === kb ? null : KW(kb);
+      if (null === Wb) return "unchecked";
+      if ("ok" === Wb || "unsafe" === Wb && (!sb || null === kb || /Sexual/.test(kb))) return Wb;
+      const ab = yW(bb);
+      if (ab === bb) return "unsafe";
+      const Tb = await cb(ab),
+        Ub = null === Tb ? null : KW(Tb);
+      return null === Ub ? "unchecked" : "ok" === Ub ? "ok" : "unsafe"
     }
 
-    function ht(kk, Fk) {
-      let Bk = !1;
-      for (let Rk = Fk + 1; Rk < kk.length; Rk++) {
-        const Fk = kk[Rk];
-        if ("\\" === Fk) Rk++;
+    function zW(bb) {
+      const cb = [];
+      return wW(bb, 0, !1, cb), cb.map((bb => bb.trim())).filter((bb => "" !== bb))
+    }
+    const qW = new Set(["return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"]);
+
+    function dW(bb, cb) {
+      let sb = cb - 1;
+      for (; sb >= 0 && /\s/.test(bb[sb]);) sb--;
+      if (sb < 0 || /[(,=:[!&|?{};+\-*%<>~^]/.test(bb[sb])) return !0;
+      let kb = sb;
+      for (; kb > 0 && /[\w$]/.test(bb[kb - 1]);) kb--;
+      return qW.has(bb.slice(kb, sb + 1))
+    }
+
+    function AW(bb, cb) {
+      let sb = !1;
+      for (let kb = cb + 1; kb < bb.length; kb++) {
+        const cb = bb[kb];
+        if ("\\" === cb) kb++;
         else {
-          if ("\n" === Fk) break;
-          if (Bk) Bk = "]" !== Fk;
-          else if ("[" === Fk) Bk = !0;
-          else if ("/" === Fk) return Rk + 1
+          if ("\n" === cb) break;
+          if (sb) sb = "]" !== cb;
+          else if ("[" === cb) sb = !0;
+          else if ("/" === cb) return kb + 1
         }
       }
-      return Fk + 1
+      return cb + 1
     }
 
-    function qt(kk, Fk, Bk, Rk) {
-      let tk = Fk,
-        ak = 0;
-      for (; tk < kk.length;) {
-        const Fk = kk[tk],
-          Xk = kk[tk + 1];
-        if ("/" === Fk && "/" === Xk) {
-          const Fk = kk.indexOf("\n", tk);
-          Rk.push(kk.slice(tk + 2, -1 === Fk ? kk.length : Fk)), tk = -1 === Fk ? kk.length : Fk
-        } else if ("/" === Fk && "*" === Xk) {
-          const Fk = kk.indexOf("*/", tk + 2);
-          Rk.push(kk.slice(tk + 2, -1 === Fk ? kk.length : Fk)), tk = -1 === Fk ? kk.length : Fk + 2
-        } else if ("/" === Fk && Pt(kk, tk)) tk = ht(kk, tk);
-        else if ('"' === Fk || "'" === Fk || "`" === Fk) {
-          const Bk = Rk.length;
-          Rk.push("");
-          let ak = "";
-          for (tk++; tk < kk.length && kk[tk] !== Fk;) "\\" === kk[tk] ? (ak += kk.slice(tk, tk + 2), tk += 2) : "`" === Fk && "$" === kk[tk] && "{" === kk[tk + 1] ? (ak += " ", tk = qt(kk, tk + 2, !0, Rk)) : (ak += kk[tk], tk++);
-          Rk[Bk] = ak, tk++
+    function wW(bb, cb, sb, kb) {
+      let Wb = cb,
+        ab = 0;
+      for (; Wb < bb.length;) {
+        const cb = bb[Wb],
+          Tb = bb[Wb + 1];
+        if ("/" === cb && "/" === Tb) {
+          const cb = bb.indexOf("\n", Wb);
+          kb.push(bb.slice(Wb + 2, -1 === cb ? bb.length : cb)), Wb = -1 === cb ? bb.length : cb
+        } else if ("/" === cb && "*" === Tb) {
+          const cb = bb.indexOf("*/", Wb + 2);
+          kb.push(bb.slice(Wb + 2, -1 === cb ? bb.length : cb)), Wb = -1 === cb ? bb.length : cb + 2
+        } else if ("/" === cb && dW(bb, Wb)) Wb = AW(bb, Wb);
+        else if ('"' === cb || "'" === cb || "`" === cb) {
+          const sb = kb.length;
+          kb.push("");
+          let ab = "";
+          for (Wb++; Wb < bb.length && bb[Wb] !== cb;) "\\" === bb[Wb] ? (ab += bb.slice(Wb, Wb + 2), Wb += 2) : "`" === cb && "$" === bb[Wb] && "{" === bb[Wb + 1] ? (ab += " ", Wb = wW(bb, Wb + 2, !0, kb)) : (ab += bb[Wb], Wb++);
+          kb[sb] = ab, Wb++
         } else {
-          if (Bk && "{" === Fk) ak++;
-          else if (Bk && "}" === Fk) {
-            if (0 === ak) return tk + 1;
-            ak--
+          if (sb && "{" === cb) ab++;
+          else if (sb && "}" === cb) {
+            if (0 === ab) return Wb + 1;
+            ab--
           }
-          tk++
+          Wb++
         }
       }
-      return tk
+      return Wb
     }
-    const Ct = 4e5;
-    var Zt = Bk(40905);
-    const pt = 15e3;
-    let Kt = [],
-      xt = null;
+    const rW = 4e5;
+    var oW = sb(40891);
+    const SW = 15e3;
+    let RW = [],
+      vW = null;
 
-    function jt(kk) {
-      return Math.ceil(kk.length / 4)
-    }
-
-    function lt(kk) {
-      return "number" === typeof kk && Number.isInteger(kk) && kk >= 0
+    function FW(bb) {
+      return Math.ceil(bb.length / 4)
     }
 
-    function nt(kk, Fk, Bk) {
-      var Rk;
-      let tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      ! function(kk) {
+    function xW(bb) {
+      return "number" === typeof bb && Number.isInteger(bb) && bb >= 0
+    }
+
+    function jW(bb, cb, sb) {
+      var kb;
+      let Wb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      ! function(bb) {
         if ("undefined" === typeof window) return;
-        if (Kt.push(kk), Kt.length >= 40) return void It();
-        xt ??= setTimeout((() => {
-          It()
-        }), pt)
-      }(null !== (Rk = function(kk) {
-        if (null === kk || "object" !== typeof kk) return null;
+        if (RW.push(bb), RW.length >= 40) return void pW();
+        vW ??= setTimeout((() => {
+          pW()
+        }), SW)
+      }(null !== (kb = function(bb) {
+        if (null === bb || "object" !== typeof bb) return null;
         const {
-          prompt_tokens: Fk,
-          completion_tokens: Bk,
-          prompt_tokens_details: Rk
-        } = kk;
-        if (!lt(Fk) || !lt(Bk)) return null;
-        const tk = null !== Rk && "object" === typeof Rk ? Rk.cached_tokens : void 0;
+          prompt_tokens: cb,
+          completion_tokens: sb,
+          prompt_tokens_details: kb
+        } = bb;
+        if (!xW(cb) || !xW(sb)) return null;
+        const Wb = null !== kb && "object" === typeof kb ? kb.cached_tokens : void 0;
         return {
-          sent: Fk,
-          cached: lt(tk) ? tk : 0,
-          received: Bk
+          sent: cb,
+          cached: xW(Wb) ? Wb : 0,
+          received: sb
         }
-      }(kk)) && void 0 !== Rk ? Rk : {
-        sent: jt(JSON.stringify(Fk)),
+      }(bb)) && void 0 !== kb ? kb : {
+        sent: FW(JSON.stringify(cb)),
         cached: 0,
-        received: jt(Bk) + tk
+        received: FW(sb) + Wb
       })
     }
-    async function It() {
-      null !== xt && (clearTimeout(xt), xt = null);
-      const kk = Kt.slice(0, 40);
-      if (Kt = Kt.slice(40), Kt.length > 0 && (xt = setTimeout((() => {
-          It()
-        }), pt)), 0 !== kk.length) try {
-        await (0, Zt.postToGameServer)("/ai-helper/usage", {
-          calls: kk
+    async function pW() {
+      null !== vW && (clearTimeout(vW), vW = null);
+      const bb = RW.slice(0, 40);
+      if (RW = RW.slice(40), RW.length > 0 && (vW = setTimeout((() => {
+          pW()
+        }), SW)), 0 !== bb.length) try {
+        await (0, oW.postToGameServer)("/ai-helper/usage", {
+          calls: bb
         })
       } catch {}
     }
-    const Qt = 6e4;
-    const ka = new class {
+    const ba = 6e4;
+    const ca = new class {
         constructor() {
           this.calls = new Map, this.fullUntil = new Map
         }
-        record(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          this.calls.set(kk, [...this.recent(kk, Fk), Fk])
+        record(bb) {
+          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          this.calls.set(bb, [...this.recent(bb, cb), cb])
         }
-        markFull(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          this.fullUntil.set(kk, Fk + Qt)
+        markFull(bb) {
+          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          this.fullUntil.set(bb, cb + ba)
         }
-        callsInLastMinute(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          return this.recent(kk, Fk).length
+        callsInLastMinute(bb) {
+          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          return this.recent(bb, cb).length
         }
-        freeAt(kk) {
-          var Fk;
-          let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          const Rk = this.recent(kk, Bk),
-            tk = Rk.length < 2 ? Bk : Rk[Rk.length - 2] + Qt;
-          return Math.max(tk, null !== (Fk = this.fullUntil.get(kk)) && void 0 !== Fk ? Fk : 0, Bk)
+        freeAt(bb) {
+          var cb;
+          let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          const kb = this.recent(bb, sb),
+            Wb = kb.length < 2 ? sb : kb[kb.length - 2] + ba;
+          return Math.max(Wb, null !== (cb = this.fullUntil.get(bb)) && void 0 !== cb ? cb : 0, sb)
         }
-        firstFreeAt(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          return Math.min(...kk.map((kk => this.freeAt(kk, Fk))))
+        firstFreeAt(bb) {
+          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          return Math.min(...bb.map((bb => this.freeAt(bb, cb))))
         }
         clear() {
           this.calls.clear(), this.fullUntil.clear()
         }
-        recent(kk, Fk) {
-          var Bk;
-          return (null !== (Bk = this.calls.get(kk)) && void 0 !== Bk ? Bk : []).filter((kk => Fk - kk < Qt))
+        recent(bb, cb) {
+          var sb;
+          return (null !== (sb = this.calls.get(bb)) && void 0 !== sb ? sb : []).filter((bb => cb - bb < ba))
         }
       },
-      Fa = /\n{3,}/,
-      Ba = /<tool_call\b|<function=/;
+      sa = /\n{3,}/,
+      ka = /<tool_call\b|<function=/;
 
-    function Ra(kk) {
-      const Fk = kk.trimStart(),
-        Bk = Fa.exec(Fk),
-        Rk = Ba.exec(Fk);
-      if (null === Bk || null !== Rk && Rk.index < Bk.index) return null;
-      const tk = Fk.slice(Bk.index + Bk[0].length);
-      return "" === tk.trim() ? null : tk
+    function Wa(bb) {
+      const cb = bb.trimStart(),
+        sb = sa.exec(cb),
+        kb = ka.exec(cb);
+      if (null === sb || null !== kb && kb.index < sb.index) return null;
+      const Wb = cb.slice(sb.index + sb[0].length);
+      return "" === Wb.trim() ? null : Wb
     }
-    const ta = [{
+    const aa = [{
       name: "Qwen3.8-27B",
       temperature: .6,
       nativeTools: !0,
@@ -6459,45 +6459,45 @@ export const modules = {
       temperature: 1,
       reasoningEffort: "high"
     }];
-    const aa = {
+    const Ta = {
       name: "Qwen3.6-27B",
       temperature: .6,
       nativeTools: !0,
       callFormat: "qwenXml"
     };
 
-    function Xa(kk) {
-      return [...ta, aa].find((Fk => Fk.name === kk))
+    function Ua(bb) {
+      return [...aa, Ta].find((cb => cb.name === bb))
     }
 
-    function ba(kk) {
-      var Fk, Bk;
-      return null !== (Fk = null === (Bk = Xa(kk)) || void 0 === Bk ? void 0 : Bk.callFormat) && void 0 !== Fk ? Fk : "simple"
+    function Ia(bb) {
+      var cb, sb;
+      return null !== (cb = null === (sb = Ua(bb)) || void 0 === sb ? void 0 : sb.callFormat) && void 0 !== cb ? cb : "simple"
     }
 
-    function wa(kk) {
-      var Fk;
+    function Ha(bb) {
+      var cb;
       return {
-        format: null !== (Fk = kk.callFormat) && void 0 !== Fk ? Fk : "simple",
-        nativeTools: !0 === kk.nativeTools
+        format: null !== (cb = bb.callFormat) && void 0 !== cb ? cb : "simple",
+        nativeTools: !0 === bb.nativeTools
       }
     }
 
-    function da(kk, Fk) {
-      return "function" === typeof kk ? kk(Fk) : kk
+    function fa(bb, cb) {
+      return "function" === typeof bb ? bb(cb) : bb
     }
-    const sa = "TOO_COMPLEX",
-      Va = `\n\nYou are the quick helper: answer only small requests yourself, and pass everything else to a bigger model by replying with exactly ${sa} and nothing else.\nAnswer yourself only when the whole change is a few lines doing one or two simple things, such as giving an item, sending a message, teleporting, setting a block or a client option, or one callback that does one of those.\nReply ${sa} for anything more: a game or minigame, anything where players make choices, take turns or type commands with options, scores, timers, rounds or values that must be kept, more than about 10 new lines, a fix for an error, a question about what the code does, or exporting, saving or publishing the game. Reply ${sa} too if you aren't sure of an exact api method, option or item name.\nCode runs fresh each time: nothing you write remembers anything from one click or event to the next. So reply ${sa} to any request that says once, again, already, count, how many, total, times, score, every few seconds, until, wait, after or each player, whatever else it asks. "Everyone" alone is fine.\nThese are too complex: reply ${sa} to each of them, and to anything like them:\n- "Count how many times each player clicked this block", "Show how many times this block has been clicked in total": a count kept between clicks\n- "Give me a sword but only once", "Give me a sword, but only once" or "only every 10 seconds": remembering who already got it, or when\n- "Make a rock paper scissors game", "Make a parkour course", "Make a quiz": any game, round or win and lose\n- "Make a /give command" or "a /tp command that takes a player's name": commands with options to read\n- "Make a shop where I buy a sword for 10 coins": currencies, prices and checking what a player has\n- "Start a 60 second countdown", "Spawn a zombie every 5 seconds": timers and things that repeat\n- "Put players into two teams", "Show a leaderboard of the top players": sorting or grouping players\n- "Build me a house" or "a tower": many blocks placed in loops\n- "Teleport me somewhere random but safe": finding the ground or a free space\n- "Why doesn't my code work?", "Fix this error", "What does this line do?"\n- "Export the world", "Save my game", "Publish this": exporting the game is for the bigger model\nThese are small enough to answer yourself:\n- "Give me a diamond sword", "Teleport me onto this block", "Put a gold block on top of this one", "Let me fly", "Heal me", "Say hello to everyone"\n- "Welcome players when they join" (one callback with one message)`,
-      Ja = 24e4,
-      Aa = ["tooLarge", "busy", "timeout", "turnedAway", "failed"];
-    class ea extends Error {
-      constructor(kk) {
-        super(`World Code AI ${kk}`), this.reason = kk
+    const Ma = "TOO_COMPLEX",
+      Xa = `\n\nYou are the quick helper: answer only small requests yourself, and pass everything else to a bigger model by replying with exactly ${Ma} and nothing else.\nAnswer yourself only when the whole change is a few lines doing one or two simple things, such as giving an item, sending a message, teleporting, setting a block or a client option, or one callback that does one of those.\nReply ${Ma} for anything more: a game or minigame, anything where players make choices, take turns or type commands with options, scores, timers, rounds or values that must be kept, more than about 10 new lines, a fix for an error, a question about what the code does, or exporting, saving or publishing the game. Reply ${Ma} too if you aren't sure of an exact api method, option or item name.\nCode runs fresh each time: nothing you write remembers anything from one click or event to the next. So reply ${Ma} to any request that says once, again, already, count, how many, total, times, score, every few seconds, until, wait, after or each player, whatever else it asks. "Everyone" alone is fine.\nThese are too complex: reply ${Ma} to each of them, and to anything like them:\n- "Count how many times each player clicked this block", "Show how many times this block has been clicked in total": a count kept between clicks\n- "Give me a sword but only once", "Give me a sword, but only once" or "only every 10 seconds": remembering who already got it, or when\n- "Make a rock paper scissors game", "Make a parkour course", "Make a quiz": any game, round or win and lose\n- "Make a /give command" or "a /tp command that takes a player's name": commands with options to read\n- "Make a shop where I buy a sword for 10 coins": currencies, prices and checking what a player has\n- "Start a 60 second countdown", "Spawn a zombie every 5 seconds": timers and things that repeat\n- "Put players into two teams", "Show a leaderboard of the top players": sorting or grouping players\n- "Build me a house" or "a tower": many blocks placed in loops\n- "Teleport me somewhere random but safe": finding the ground or a free space\n- "Why doesn't my code work?", "Fix this error", "What does this line do?"\n- "Export the world", "Save my game", "Publish this": exporting the game is for the bigger model\nThese are small enough to answer yourself:\n- "Give me a diamond sword", "Teleport me onto this block", "Put a gold block on top of this one", "Let me fly", "Heal me", "Say hello to everyone"\n- "Welcome players when they join" (one callback with one message)`,
+      na = 24e4,
+      ma = ["tooLarge", "busy", "timeout", "turnedAway", "failed"];
+    class la extends Error {
+      constructor(bb) {
+        super(`World Code AI ${bb}`), this.reason = bb
       }
     }
 
-    function ya(kk) {
-      switch (kk) {
+    function Qa(bb) {
+      switch (bb) {
         case "busy":
           return "Bot.xd is busy right now.";
         case "tooLarge":
@@ -6510,421 +6510,421 @@ export const modules = {
       }
     }
 
-    function fa(kk, Fk) {
-      var Bk, Rk, tk, ak, Xk;
-      const bk = kk[null !== (Bk = Fk.index) && void 0 !== Bk ? Bk : 0] ??= {
+    function ea(bb, cb) {
+      var sb, kb, Wb, ab, Tb;
+      const Ub = bb[null !== (sb = cb.index) && void 0 !== sb ? sb : 0] ??= {
         name: "",
         args: ""
       };
-      bk.name += null !== (Rk = null === (tk = Fk.function) || void 0 === tk ? void 0 : tk.name) && void 0 !== Rk ? Rk : "", bk.args += null !== (ak = null === (Xk = Fk.function) || void 0 === Xk ? void 0 : Xk.arguments) && void 0 !== ak ? ak : ""
+      Ub.name += null !== (kb = null === (Wb = cb.function) || void 0 === Wb ? void 0 : Wb.name) && void 0 !== kb ? kb : "", Ub.args += null !== (ab = null === (Tb = cb.function) || void 0 === Tb ? void 0 : Tb.arguments) && void 0 !== ab ? ab : ""
     }
 
-    function ma(kk) {
-      return "mcp" === kk ? "simple" : kk
+    function Ca(bb) {
+      return "mcp" === bb ? "simple" : bb
     }
 
-    function Wa(kk, Fk, Bk, Rk) {
-      let tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      return va(kk, Fk, Bk, ma(Rk), tk).answer
+    function Na(bb, cb, sb, kb) {
+      let Wb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      return Va(bb, cb, sb, Ca(kb), Wb).answer
     }
 
-    function va(kk, Fk, Bk, Rk, tk) {
-      const ak = Bk.flatMap((kk => {
-        const Fk = dB(kk.name, kk.args);
-        return null === Fk ? [] : [IR(kB(Rk), Fk.name, Fk.args)]
+    function Va(bb, cb, sb, kb, Wb) {
+      const ab = sb.flatMap((bb => {
+        const cb = Is(bb.name, bb.args);
+        return null === cb ? [] : [bW(pc(kb), cb.name, cb.args)]
       }));
-      let Xk = !1;
-      return 0 !== ak.length || 0 !== VB(kk, Rk).length || kk.includes("```") || (ak.push(...tk ? [] : function(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        const Rk = new Map;
-        for (const bk of sB(kk, Fk)) {
-          const kk = Object.values(bk.args).some((kk => void 0 !== kk && Bk.includes(kk.trim())));
-          var tk, ak, Xk;
-          "export_game" === bk.name || "switch_to_world_code" === bk.name || YF(bk.name) || kk || Rk.set(`${bk.name} ${null!==(tk=bk.args.path)&&void 0!==tk?tk:""} ${null!==(ak=bk.args.search)&&void 0!==ak?ak:""} ${null!==(Xk=bk.args.name)&&void 0!==Xk?Xk:""}`, bk.source)
+      let Tb = !1;
+      return 0 !== ab.length || 0 !== fs(bb, kb).length || bb.includes("```") || (ab.push(...Wb ? [] : function(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+        const kb = new Map;
+        for (const Ub of Hs(bb, cb)) {
+          const bb = Object.values(Ub.args).some((bb => void 0 !== bb && sb.includes(bb.trim())));
+          var Wb, ab, Tb;
+          "export_game" === Ub.name || "switch_to_world_code" === Ub.name || Vc(Ub.name) || bb || kb.set(`${Ub.name} ${null!==(Wb=Ub.args.path)&&void 0!==Wb?Wb:""} ${null!==(ab=Ub.args.search)&&void 0!==ab?ab:""} ${null!==(Tb=Ub.args.name)&&void 0!==Tb?Tb:""}`, Ub.source)
         }
-        return [...new Set(Rk.values())]
-      }(Fk, Rk, dt)), Xk = ak.length > 0), {
-        answer: [kk, ...ak].join("\n\n").trim(),
-        hasCallsFromReasoning: Xk
+        return [...new Set(kb.values())]
+      }(cb, kb, fW)), Tb = ab.length > 0), {
+        answer: [bb, ...ab].join("\n\n").trim(),
+        hasCallsFromReasoning: Tb
       }
     }
-    async function ia(kk, Fk) {
-      const Bk = kk.getReader(),
-        Rk = new TextDecoder;
-      let tk = "";
+    async function La(bb, cb) {
+      const sb = bb.getReader(),
+        kb = new TextDecoder;
+      let Wb = "";
       for (;;) {
         const {
-          done: kk,
-          value: ak
-        } = await Bk.read();
-        if (kk) break;
-        tk += Rk.decode(ak, {
+          done: bb,
+          value: ab
+        } = await sb.read();
+        if (bb) break;
+        Wb += kb.decode(ab, {
           stream: !0
         });
-        let Xk = tk.indexOf("\n");
-        for (; - 1 !== Xk;) {
-          const kk = tk.slice(0, Xk).trim();
-          if (tk = tk.slice(Xk + 1), Xk = tk.indexOf("\n"), !kk.startsWith("data:")) continue;
-          const Bk = kk.slice(5).trim();
-          if ("[DONE]" === Bk) return;
-          let Rk;
+        let Tb = Wb.indexOf("\n");
+        for (; - 1 !== Tb;) {
+          const bb = Wb.slice(0, Tb).trim();
+          if (Wb = Wb.slice(Tb + 1), Tb = Wb.indexOf("\n"), !bb.startsWith("data:")) continue;
+          const sb = bb.slice(5).trim();
+          if ("[DONE]" === sb) return;
+          let kb;
           try {
-            Rk = JSON.parse(Bk)
+            kb = JSON.parse(sb)
           } catch {
             continue
           }
-          Fk(Rk)
+          cb(kb)
         }
       }
     }
 
-    function Ya(kk) {
-      return kk.map((kk => ({
+    function ua(bb) {
+      return bb.map((bb => ({
         type: "function",
         function: {
-          name: kk.name,
-          description: kk.description,
-          parameters: kk.inputSchema
+          name: bb.name,
+          description: bb.description,
+          parameters: bb.inputSchema
         }
       })))
     }
 
-    function oa(kk) {
-      return "object" === typeof kk
+    function Ya(bb) {
+      return "object" === typeof bb
     }
-    async function La(kk, Fk, Bk, Rk) {
-      var tk;
-      let ak = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-      if (ka.freeAt(kk.name) > Date.now()) return "busy";
-      ka.record(kk.name);
-      const Xk = await fetch(ut, {
+    async function ha(bb, cb, sb, kb) {
+      var Wb;
+      let ab = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
+      if (ca.freeAt(bb.name) > Date.now()) return "busy";
+      ca.record(bb.name);
+      const Tb = await fetch(PW, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: kk.name,
-          messages: Fk,
+          model: bb.name,
+          messages: cb,
           max_tokens: 16e3,
-          temperature: kk.temperature,
-          reasoning_effort: kk.reasoningEffort,
+          temperature: bb.temperature,
+          reasoning_effort: bb.reasoningEffort,
           stream: !0,
           stream_options: {
             include_usage: !0
           },
-          ...kk.nativeTools && ak.length > 0 ? {
-            tools: Ya(ak)
+          ...bb.nativeTools && ab.length > 0 ? {
+            tools: ua(ab)
           } : {}
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: Bk
+        signal: sb
       });
-      if (429 === Xk.status) return ka.markFull(kk.name), "busy";
-      if (!Xk.ok || !Xk.body) return console.warn(`World Code AI: ${kk.name} answered ${Xk.status}`), Xk.ok ? "failed" : 429 === (bk = Xk.status) ? "busy" : 400 === bk || 413 === bk ? "tooLarge" : 401 === bk || 403 === bk ? "turnedAway" : "failed";
-      var bk;
-      let wk = "",
-        dk = "";
-      const sk = [];
-      let Vk = !1,
-        Jk = !1,
-        Ak = null;
+      if (429 === Tb.status) return ca.markFull(bb.name), "busy";
+      if (!Tb.ok || !Tb.body) return console.warn(`World Code AI: ${bb.name} answered ${Tb.status}`), Tb.ok ? "failed" : 429 === (Ub = Tb.status) ? "busy" : 400 === Ub || 413 === Ub ? "tooLarge" : 401 === Ub || 403 === Ub ? "turnedAway" : "failed";
+      var Ub;
+      let Ib = "",
+        Hb = "";
+      const fb = [];
+      let Mb = !1,
+        Xb = !1,
+        nb = null;
       try {
-        await async function(kk, Fk, Bk) {
-          await ia(kk, (kk => {
-            var Rk;
-            const tk = kk,
-              ak = null === (Rk = tk.choices) || void 0 === Rk ? void 0 : Rk[0];
-            var Xk, bk;
-            ak && Fk(null !== (Xk = ak.delta) && void 0 !== Xk ? Xk : {}, null !== (bk = ak.finish_reason) && void 0 !== bk ? bk : null), tk.usage && (null === Bk || void 0 === Bk || Bk(tk.usage))
+        await async function(bb, cb, sb) {
+          await La(bb, (bb => {
+            var kb;
+            const Wb = bb,
+              ab = null === (kb = Wb.choices) || void 0 === kb ? void 0 : kb[0];
+            var Tb, Ub;
+            ab && cb(null !== (Tb = ab.delta) && void 0 !== Tb ? Tb : {}, null !== (Ub = ab.finish_reason) && void 0 !== Ub ? Ub : null), Wb.usage && (null === sb || void 0 === sb || sb(Wb.usage))
           }))
-        }(Xk.body, ((Fk, Bk) => {
-          var tk, ak, Xk, bk;
-          Vk ||= "length" === Bk, dk += null !== (tk = null !== (ak = Fk.reasoning) && void 0 !== ak ? ak : Fk.reasoning_content) && void 0 !== tk ? tk : "", wk += null !== (Xk = Fk.content) && void 0 !== Xk ? Xk : "";
-          for (const kk of null !== (Ak = Fk.tool_calls) && void 0 !== Ak ? Ak : []) {
-            var Ak;
-            Jk ||= "" !== dk && "" === wk.trim(), fa(sk, kk)
+        }(Tb.body, ((cb, sb) => {
+          var Wb, ab, Tb, Ub;
+          Mb ||= "length" === sb, Hb += null !== (Wb = null !== (ab = cb.reasoning) && void 0 !== ab ? ab : cb.reasoning_content) && void 0 !== Wb ? Wb : "", Ib += null !== (Tb = cb.content) && void 0 !== Tb ? Tb : "";
+          for (const bb of null !== (nb = cb.tool_calls) && void 0 !== nb ? nb : []) {
+            var nb;
+            Xb ||= "" !== Hb && "" === Ib.trim(), ea(fb, bb)
           }
-          const ek = kk.nativeTools && Jk ? null !== (bk = Ra(wk)) && void 0 !== bk ? bk : "" : wk;
-          null === Rk || void 0 === Rk || Rk({
-            model: kk.name,
-            reasoningChars: dk.length,
-            answer: ek,
-            isCalling: sk.length > 0
+          const mb = bb.nativeTools && Xb ? null !== (Ub = Wa(Ib)) && void 0 !== Ub ? Ub : "" : Ib;
+          null === kb || void 0 === kb || kb({
+            model: bb.name,
+            reasoningChars: Hb.length,
+            answer: mb,
+            isCalling: fb.length > 0
           })
-        }), (kk => {
-          Ak = kk
+        }), (bb => {
+          nb = bb
         }))
       } finally {
-        nt(Ak, Fk, wk + dk, 20 * sk.length)
+        jW(nb, cb, Ib + Hb, 20 * fb.length)
       }
-      return null !== (tk = Oa(kk, wk, dk, sk, Vk, Jk)) && void 0 !== tk ? tk : "failed"
+      return null !== (Wb = Ja(bb, Ib, Hb, fb, Mb, Xb)) && void 0 !== Wb ? Wb : "failed"
     }
 
-    function Oa(kk, Fk, Bk, Rk, tk) {
-      var ak;
-      let Xk = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        bk = Fk;
-      var wk;
-      kk.nativeTools && Xk && (bk = null !== (wk = Ra(bk)) && void 0 !== wk ? wk : bk);
-      bk = bk.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-      const dk = va(bk, Bk, Rk, null !== (ak = kk.callFormat) && void 0 !== ak ? ak : "simple", tk);
-      return "" === dk.answer ? null : {
-        model: kk.name,
-        answer: dk.answer,
-        reasoning: Bk,
-        isCutShort: tk,
-        hasCallsFromReasoning: dk.hasCallsFromReasoning
+    function Ja(bb, cb, sb, kb, Wb) {
+      var ab;
+      let Tb = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        Ub = cb;
+      var Ib;
+      bb.nativeTools && Tb && (Ub = null !== (Ib = Wa(Ub)) && void 0 !== Ib ? Ib : Ub);
+      Ub = Ub.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+      const Hb = Va(Ub, sb, kb, null !== (ab = bb.callFormat) && void 0 !== ab ? ab : "simple", Wb);
+      return "" === Hb.answer ? null : {
+        model: bb.name,
+        answer: Hb.answer,
+        reasoning: sb,
+        isCutShort: Wb,
+        hasCallsFromReasoning: Hb.hasCallsFromReasoning
       }
     }
 
-    function Ea(kk) {
-      return kk.replace(/<think>[\s\S]*?(<\/think>|$)/g, "")
+    function ga(bb) {
+      return bb.replace(/<think>[\s\S]*?(<\/think>|$)/g, "")
     }
 
-    function Sa(kk) {
-      return oa(kk) && !kk.isCutShort
+    function Ba(bb) {
+      return Ya(bb) && !bb.isCutShort
     }
-    async function Na(kk, Fk, Bk, Rk, tk) {
-      const ak = kk.map((() => new AbortController)),
-        Xk = () => {
-          for (const kk of ak) kk.abort()
+    async function ta(bb, cb, sb, kb, Wb) {
+      const ab = bb.map((() => new AbortController)),
+        Tb = () => {
+          for (const bb of ab) bb.abort()
         };
-      null !== Bk && void 0 !== Bk && Bk.aborted && Xk(), null === Bk || void 0 === Bk || Bk.addEventListener("abort", Xk, {
+      null !== sb && void 0 !== sb && sb.aborted && Tb(), null === sb || void 0 === sb || sb.addEventListener("abort", Tb, {
         once: !0
       });
-      const bk = kk.map((() => {})),
-        wk = kk.map((() => {}));
-      let dk = null;
-      const sk = kk => void 0 !== kk && ("" !== Ea(kk.answer).trim() || !0 === kk.isCalling);
-      let Vk = () => {};
-      kk.forEach(((kk, Bk) => {
-        const Xk = (0, mk.e)(Ja, ak[Bk].signal);
-        La(kk, da(Fk, kk), Xk.signal, (kk => {
-          wk[Bk] = kk, null === dk && sk(kk) && (dk = Bk), dk === Bk && (null === Rk || void 0 === Rk || Rk(kk))
-        }), tk).catch((Fk => {
-          if (ak[Bk].signal.aborted) return "failed";
-          const Rk = Xk.signal.aborted;
-          return console.warn(`World Code AI: ${kk.name} ${Rk?"took longer than 240 s":"couldn't be reached"}`, Fk), Rk ? "timeout" : "failed"
-        })).then((kk => {
-          Xk.clear(), bk[Bk] = kk, dk !== Bk || Sa(kk) || (dk = null), Vk()
+      const Ub = bb.map((() => {})),
+        Ib = bb.map((() => {}));
+      let Hb = null;
+      const fb = bb => void 0 !== bb && ("" !== ga(bb.answer).trim() || !0 === bb.isCalling);
+      let Mb = () => {};
+      bb.forEach(((bb, sb) => {
+        const Tb = (0, eb.b)(na, ab[sb].signal);
+        ha(bb, fa(cb, bb), Tb.signal, (bb => {
+          Ib[sb] = bb, null === Hb && fb(bb) && (Hb = sb), Hb === sb && (null === kb || void 0 === kb || kb(bb))
+        }), Wb).catch((cb => {
+          if (ab[sb].signal.aborted) return "failed";
+          const kb = Tb.signal.aborted;
+          return console.warn(`World Code AI: ${bb.name} ${kb?"took longer than 240 s":"couldn't be reached"}`, cb), kb ? "timeout" : "failed"
+        })).then((bb => {
+          Tb.clear(), Ub[sb] = bb, Hb !== sb || Ba(bb) || (Hb = null), Mb()
         }))
       }));
-      const Jk = () => {
-        var kk;
-        if (null !== dk) {
-          const kk = bk[dk];
-          return Sa(kk) ? {
-            reply: kk
+      const Xb = () => {
+        var bb;
+        if (null !== Hb) {
+          const bb = Ub[Hb];
+          return Ba(bb) ? {
+            reply: bb
           } : void 0
         }
-        const Fk = bk.find(Sa);
-        if (Fk) return {
-          reply: Fk
+        const cb = Ub.find(Ba);
+        if (cb) return {
+          reply: cb
         };
-        if (!bk.includes(void 0)) return {
-          reply: null !== (kk = bk.find(oa)) && void 0 !== kk ? kk : null
+        if (!Ub.includes(void 0)) return {
+          reply: null !== (bb = Ub.find(Ya)) && void 0 !== bb ? bb : null
         };
         {
-          const kk = bk.findIndex(((kk, Fk) => void 0 === kk && sk(wk[Fk])));
-          if (-1 !== kk) {
-            dk = kk;
-            const Fk = wk[kk];
-            Fk && (null === Rk || void 0 === Rk || Rk(Fk))
+          const bb = Ub.findIndex(((bb, cb) => void 0 === bb && fb(Ib[cb])));
+          if (-1 !== bb) {
+            Hb = bb;
+            const cb = Ib[bb];
+            cb && (null === kb || void 0 === kb || kb(cb))
           }
         }
       };
       try {
         for (;;) {
-          if (null !== Bk && void 0 !== Bk && Bk.aborted) throw new DOMException("The World Code AI request was stopped", "AbortError");
-          const kk = Jk();
-          if (kk) {
-            const Fk = bk.filter((kk => "string" === typeof kk));
+          if (null !== sb && void 0 !== sb && sb.aborted) throw new DOMException("The World Code AI request was stopped", "AbortError");
+          const bb = Xb();
+          if (bb) {
+            const cb = Ub.filter((bb => "string" === typeof bb));
             return {
-              reply: kk.reply,
-              failures: Fk
+              reply: bb.reply,
+              failures: cb
             }
           }
-          await new Promise((kk => {
-            Vk = kk
+          await new Promise((bb => {
+            Mb = bb
           }))
         }
       } finally {
-        null === Bk || void 0 === Bk || Bk.removeEventListener("abort", Xk), Xk()
+        null === sb || void 0 === sb || sb.removeEventListener("abort", Tb), Tb()
       }
     }
 
-    function Ha() {
-      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-      return ka.firstFreeAt(ta.map((kk => kk.name)), kk)
+    function ya() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
+      return ca.firstFreeAt(aa.map((bb => bb.name)), bb)
     }
-    async function ua(kk) {
-      var Fk;
-      let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const Rk = Date.now(),
-        tk = null !== (Fk = Bk.models) && void 0 !== Fk ? Fk : ta,
-        ak = void 0 === Bk.models ? function(kk, Fk) {
-          let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-          const Rk = kk.map((kk => ({
-              model: kk,
-              key: Bk()
-            }))).sort(((kk, Fk) => kk.key - Fk.key)).map((kk => {
+    async function Pa(bb) {
+      var cb;
+      let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const kb = Date.now(),
+        Wb = null !== (cb = sb.models) && void 0 !== cb ? cb : aa,
+        ab = void 0 === sb.models ? function(bb, cb) {
+          let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+          const kb = bb.map((bb => ({
+              model: bb,
+              key: sb()
+            }))).sort(((bb, cb) => bb.key - cb.key)).map((bb => {
               let {
-                model: Fk
-              } = kk;
-              return Fk
+                model: cb
+              } = bb;
+              return cb
             })),
-            tk = [...Rk.filter((kk => Fk(kk))), ...Rk.filter((kk => !Fk(kk)))],
-            ak = [];
-          for (let Xk = 0; Xk < tk.length; Xk += 2) ak.push(tk.slice(Xk, Xk + 2));
-          return ak
-        }(tk, (kk => ka.freeAt(kk.name) <= Rk)) : tk.map((kk => [kk])),
-        Xk = [];
-      for (const wk of ak) {
-        const Fk = await Na(wk, kk, Bk.signal, Bk.onProgress, Bk.tools);
-        if (null !== Fk.reply) {
-          const tk = wk.find((kk => {
-            var Bk;
-            return kk.name === (null === (Bk = Fk.reply) || void 0 === Bk ? void 0 : Bk.model)
+            Wb = [...kb.filter((bb => cb(bb))), ...kb.filter((bb => !cb(bb)))],
+            ab = [];
+          for (let Tb = 0; Tb < Wb.length; Tb += 2) ab.push(Wb.slice(Tb, Tb + 2));
+          return ab
+        }(Wb, (bb => ca.freeAt(bb.name) <= kb)) : Wb.map((bb => [bb])),
+        Tb = [];
+      for (const Ib of ab) {
+        const cb = await ta(Ib, bb, sb.signal, sb.onProgress, sb.tools);
+        if (null !== cb.reply) {
+          const Wb = Ib.find((bb => {
+            var sb;
+            return bb.name === (null === (sb = cb.reply) || void 0 === sb ? void 0 : sb.model)
           }));
           return {
-            ...tk && !1 !== Bk.canNudge ? await Ua(tk, da(kk, tk), Fk.reply, Bk.signal, Bk.onProgress, Bk.tools) : Fk.reply,
-            ms: Date.now() - Rk
+            ...Wb && !1 !== sb.canNudge ? await ia(Wb, fa(bb, Wb), cb.reply, sb.signal, sb.onProgress, sb.tools) : cb.reply,
+            ms: Date.now() - kb
           }
         }
-        Xk.push(...Fk.failures)
+        Tb.push(...cb.failures)
       }
-      const bk = Aa.find((kk => Xk.includes(kk)));
-      throw new ea(null !== bk && void 0 !== bk ? bk : "failed")
+      const Ub = ma.find((bb => Tb.includes(bb)));
+      throw new la(null !== Ub && void 0 !== Ub ? Ub : "failed")
     }
-    const Ma = "You said what you'd change but made no call, so nothing changed. Make the call now, with the code in full.";
+    const Da = "You said what you'd change but made no call, so nothing changed. Make the call now, with the code in full.";
 
-    function ga(kk) {
-      const Fk = kk.trim();
-      return Fk.length <= 400 && !/<tool_call|<function=|<\|channel\|>|```/.test(Fk) && !/^\s*(?:\d+[.)]|[-*\u2022])\s/m.test(Fk) && /^(?:I['\u2019]ll|I will|I['\u2019]m going to|We(?:['\u2019]ll| will| need to| should)|Let me(?! know)|Will|Need to)\s(?!not\b|never\b)[^.!?\n]*\b(?:add|change|replace|update|fix|rewrite|write|create|make|edit|remove|put)\b/i.test(Fk)
+    function Ea(bb) {
+      const cb = bb.trim();
+      return cb.length <= 400 && !/<tool_call|<function=|<\|channel\|>|```/.test(cb) && !/^\s*(?:\d+[.)]|[-*\u2022])\s/m.test(cb) && /^(?:I['\u2019]ll|I will|I['\u2019]m going to|We(?:['\u2019]ll| will| need to| should)|Let me(?! know)|Will|Need to)\s(?!not\b|never\b)[^.!?\n]*\b(?:add|change|replace|update|fix|rewrite|write|create|make|edit|remove|put)\b/i.test(cb)
     }
-    async function Ua(kk, Fk, Bk, Rk, tk, ak) {
-      var Xk;
-      let bk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Ja;
-      if (! function(kk, Fk) {
-          return !kk.isCutShort && ga(kk.answer) && !kk.answer.includes("?") && 0 === VB(kk.answer, Fk).length
-        }(Bk, null !== (Xk = kk.callFormat) && void 0 !== Xk ? Xk : "simple")) return Bk;
-      const wk = [...Fk, {
+    async function ia(bb, cb, sb, kb, Wb, ab) {
+      var Tb;
+      let Ub = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : na;
+      if (! function(bb, cb) {
+          return !bb.isCutShort && Ea(bb.answer) && !bb.answer.includes("?") && 0 === fs(bb.answer, cb).length
+        }(sb, null !== (Tb = bb.callFormat) && void 0 !== Tb ? Tb : "simple")) return sb;
+      const Ib = [...cb, {
           role: "assistant",
-          content: Bk.answer
+          content: sb.answer
         }, {
           role: "user",
-          content: Ma
+          content: Da
         }],
-        dk = (0, mk.e)(bk, Rk);
+        Hb = (0, eb.b)(Ub, kb);
       try {
-        const Fk = await La(kk, wk, dk.signal, tk, ak);
-        return oa(Fk) && "" !== Fk.answer.trim() ? Fk : Bk
-      } catch (sk) {
-        if (null !== Rk && void 0 !== Rk && Rk.aborted) throw sk;
-        return Bk
+        const cb = await ha(bb, Ib, Hb.signal, Wb, ab);
+        return Ya(cb) && "" !== cb.answer.trim() ? cb : sb
+      } catch (fb) {
+        if (null !== kb && void 0 !== kb && kb.aborted) throw fb;
+        return sb
       } finally {
-        dk.clear()
+        Hb.clear()
       }
     }
 
-    function ca(kk) {
-      const Fk = Ea(kk);
-      return /too_complex/i.test(Fk) || /^\W*too[\s_-]*complex\W*$/i.test(Fk.trim())
+    function Oa(bb) {
+      const cb = ga(bb);
+      return /too_complex/i.test(cb) || /^\W*too[\s_-]*complex\W*$/i.test(cb.trim())
     }
 
-    function Ga(kk) {
-      const Fk = Ea(kk).trim();
-      return Fk.length > 19 && !/^\W*too[\s_-]*complex/i.test(Fk)
+    function Ga(bb) {
+      const cb = ga(bb).trim();
+      return cb.length > 19 && !/^\W*too[\s_-]*complex/i.test(cb)
     }
 
-    function Ta(kk) {
-      return kk.map(((kk, Fk) => 0 === Fk && "system" === kk.role ? {
-        ...kk,
-        content: kk.content + Va
-      } : kk))
+    function Ka(bb) {
+      return bb.map(((bb, cb) => 0 === cb && "system" === bb.role ? {
+        ...bb,
+        content: bb.content + Xa
+      } : bb))
     }
-    async function ra(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      for (const Rk of Mt) {
-        const Bk = await Da(Rk, [{
+    async function Za(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      for (const kb of DW) {
+        const sb = await za(kb, [{
           role: "user",
-          content: kk
-        }], Fk);
-        if (null !== Bk && "busy" !== Bk) return Gt(Bk)
+          content: bb
+        }], cb);
+        if (null !== sb && "busy" !== sb) return GW(sb)
       }
-      return Bk ? "unchecked" : "ok"
+      return sb ? "unchecked" : "ok"
     }
-    async function Da(kk, Fk, Bk) {
-      const Rk = (0, mk.e)(2e4, Bk);
-      ka.record(kk);
+    async function za(bb, cb, sb) {
+      const kb = (0, eb.b)(2e4, sb);
+      ca.record(bb);
       try {
-        var tk, ak, Xk, bk;
-        const Bk = await fetch(ut, {
+        var Wb, ab, Tb, Ub;
+        const sb = await fetch(PW, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            model: kk,
-            messages: Fk,
+            model: bb,
+            messages: cb,
             max_tokens: 40
           }),
           credentials: "omit",
           referrerPolicy: "no-referrer",
-          signal: Rk.signal
+          signal: kb.signal
         });
-        if (429 === Bk.status) return ka.markFull(kk), "busy";
-        if (!Bk.ok) return null;
-        const wk = await Bk.json(),
-          dk = String(null !== (tk = null === (ak = wk.choices) || void 0 === ak || null === (Xk = ak[0]) || void 0 === Xk || null === (bk = Xk.message) || void 0 === bk ? void 0 : bk.content) && void 0 !== tk ? tk : "");
-        return nt(wk.usage, Fk, dk),
-          function(kk) {
-            return /Safety:/.test(kk)
-          }(dk) ? dk : null
-      } catch (wk) {
-        if (null !== Bk && void 0 !== Bk && Bk.aborted) throw wk;
+        if (429 === sb.status) return ca.markFull(bb), "busy";
+        if (!sb.ok) return null;
+        const Ib = await sb.json(),
+          Hb = String(null !== (Wb = null === (ab = Ib.choices) || void 0 === ab || null === (Tb = ab[0]) || void 0 === Tb || null === (Ub = Tb.message) || void 0 === Ub ? void 0 : Ub.content) && void 0 !== Wb ? Wb : "");
+        return jW(Ib.usage, cb, Hb),
+          function(bb) {
+            return /Safety:/.test(bb)
+          }(Hb) ? Hb : null
+      } catch (Ib) {
+        if (null !== sb && void 0 !== sb && sb.aborted) throw Ib;
         return null
       } finally {
-        Rk.clear()
+        kb.clear()
       }
     }
-    var za = Bk(42);
-    const Pa = "aiHelperDataSharing";
+    var qa = sb(37);
+    const da = "aiHelperDataSharing";
 
-    function ha() {
-      const kk = za.i.getItem(Pa);
-      return null !== kk && "object" === typeof kk ? kk : {}
+    function Aa() {
+      const bb = qa.h.getItem(da);
+      return null !== bb && "object" === typeof bb ? bb : {}
     }
-    const qa = new class {
+    const wa = new class {
       constructor() {
-        this.player = null, this.unsaved = new Map, this.listeners = new Set, this.listening = !1, this.subscribe = kk => (this.listen(), this.listeners.add(kk), () => {
-          this.listeners.delete(kk)
+        this.player = null, this.unsaved = new Map, this.listeners = new Set, this.listening = !1, this.subscribe = bb => (this.listen(), this.listeners.add(bb), () => {
+          this.listeners.delete(bb)
         })
       }
       get() {
-        var kk, Fk;
-        return null === this.player ? null : null !== (kk = null !== (Fk = this.unsaved.get(this.player)) && void 0 !== Fk ? Fk : ha()[this.player]) && void 0 !== kk ? kk : null
+        var bb, cb;
+        return null === this.player ? null : null !== (bb = null !== (cb = this.unsaved.get(this.player)) && void 0 !== cb ? cb : Aa()[this.player]) && void 0 !== bb ? bb : null
       }
       getPlayer() {
         return this.player
       }
       async refresh() {
         this.listen();
-        const kk = await async function() {
-          var kk, Fk;
+        const bb = await async function() {
+          var bb, cb;
           const {
-            userContextManager: Rk
-          } = await Promise.resolve().then((() => Bk(1101)));
-          return null !== (kk = null === (Fk = Rk.peekCurrentUserContext()) || void 0 === Fk ? void 0 : Fk.whamm) && void 0 !== kk ? kk : null
-        }().catch((kk => (console.error("AI Helper: couldn't look up the player for sharing chats", kk), null)));
-        return kk !== this.player && (this.player = kk, this.notify()), this.get()
+            userContextManager: kb
+          } = await Promise.resolve().then((() => sb(1126)));
+          return null !== (bb = null === (cb = kb.peekCurrentUserContext()) || void 0 === cb ? void 0 : cb.whamm) && void 0 !== bb ? bb : null
+        }().catch((bb => (console.error("AI Helper: couldn't look up the player for sharing chats", bb), null)));
+        return bb !== this.player && (this.player = bb, this.notify()), this.get()
       }
-      set(kk) {
-        null !== this.player && (za.i.setItem(Pa, {
-          ...ha(),
-          [this.player]: kk
-        }) ? this.unsaved.delete(this.player) : this.unsaved.set(this.player, kk), this.notify())
+      set(bb) {
+        null !== this.player && (qa.h.setItem(da, {
+          ...Aa(),
+          [this.player]: bb
+        }) ? this.unsaved.delete(this.player) : this.unsaved.set(this.player, bb), this.notify())
       }
       listen() {
         this.listening || (this.listening = !0, window.addEventListener("storage", (() => {
@@ -6932,133 +6932,133 @@ export const modules = {
         })))
       }
       notify() {
-        for (const kk of this.listeners) kk()
+        for (const bb of this.listeners) bb()
       }
     };
-    let Ca = null,
-      Za = !1;
-    const pa = 4e5,
-      Ka = 6e4,
-      xa = 12,
-      ja = 9e5;
+    let ra = null,
+      oa = !1;
+    const Sa = 4e5,
+      Ra = 6e4,
+      va = 12,
+      Fa = 9e5;
 
-    function la(kk, Fk) {
-      if (kk.length <= Fk) return kk;
-      const Bk = `\n[... ${kk.length-Fk} more characters cut]`;
-      let Rk = Math.max(0, Fk - Bk.length);
-      const tk = kk.charCodeAt(Rk - 1);
-      return tk >= 55296 && tk <= 56319 && Rk--, kk.slice(0, Rk) + Bk
+    function xa(bb, cb) {
+      if (bb.length <= cb) return bb;
+      const sb = `\n[... ${bb.length-cb} more characters cut]`;
+      let kb = Math.max(0, cb - sb.length);
+      const Wb = bb.charCodeAt(kb - 1);
+      return Wb >= 55296 && Wb <= 56319 && kb--, bb.slice(0, kb) + sb
     }
-    var na = Bk(608);
+    var ja = sb(635);
 
-    function Ia(kk) {
-      var Fk;
-      return "system" === (null === (Fk = kk[0]) || void 0 === Fk ? void 0 : Fk.role) ? function(kk) {
-        let Fk = 2166136261;
-        for (let Bk = 0; Bk < kk.length; Bk++) Fk ^= kk.charCodeAt(Bk), Fk = Math.imul(Fk, 16777619);
-        return (Fk >>> 0).toString(16).padStart(8, "0")
-      }(kk[0].content.split("\n\n## ")[0]) : ""
+    function pa(bb) {
+      var cb;
+      return "system" === (null === (cb = bb[0]) || void 0 === cb ? void 0 : cb.role) ? function(bb) {
+        let cb = 2166136261;
+        for (let sb = 0; sb < bb.length; sb++) cb ^= bb.charCodeAt(sb), cb = Math.imul(cb, 16777619);
+        return (cb >>> 0).toString(16).padStart(8, "0")
+      }(bb[0].content.split("\n\n## ")[0]) : ""
     }
 
-    function Qa(kk, Fk, Bk) {
-      const Rk = (tk = Fk.input, JSON.stringify({
-        ...tk,
+    function bT(bb, cb, sb) {
+      const kb = (Wb = cb.input, JSON.stringify({
+        ...Wb,
         prefabs: void 0
       }));
-      var tk;
-      return Rk.length > pa ? null : {
+      var Wb;
+      return kb.length > Sa ? null : {
         sentAt: Date.now(),
-        chatId: kk,
-        responder: Fk.responder,
-        promptVersion: Fk.promptVersion,
-        clientVersion: String(na.e),
-        request: Rk,
-        responses: [kX(Bk)]
+        chatId: bb,
+        responder: cb.responder,
+        promptVersion: cb.promptVersion,
+        clientVersion: String(ja.d),
+        request: kb,
+        responses: [cT(sb)]
       }
     }
 
-    function kX(kk) {
+    function cT(bb) {
       return {
-        model: kk.model,
-        text: la(kk.text, Ka)
+        model: bb.model,
+        text: xa(bb.text, Ra)
       }
     }
-    class FX {
+    class sT {
       constructor() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aX;
-        this.ve = kk, this.chatId = function() {
-          const kk = new Uint8Array(12);
-          return crypto.getRandomValues(kk), Array.from(kk, (kk => kk.toString(16).padStart(2, "0"))).join("")
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : TT;
+        this.lm = bb, this.chatId = function() {
+          const bb = new Uint8Array(12);
+          return crypto.getRandomValues(bb), Array.from(bb, (bb => bb.toString(16).padStart(2, "0"))).join("")
         }(), this.open = new Map
       }
-      requestStarted(kk, Fk) {
-        const Bk = this.open.get(kk);
-        Bk && (clearTimeout(Bk.timer), Fk || (this.open.delete(kk), this.send(Bk.ve)))
+      requestStarted(bb, cb) {
+        const sb = this.open.get(bb);
+        sb && (clearTimeout(sb.timer), cb || (this.open.delete(bb), this.send(sb.lm)))
       }
-      answered(kk, Fk, Bk) {
-        if ("" === Bk.text.trim()) return;
-        const Rk = this.open.get(kk);
-        if (Rk) return void(Rk.ve.responses.length < xa && Rk.ve.responses.push(kX(Bk)));
-        const tk = Qa(this.chatId, Fk, Bk);
-        tk && this.open.set(kk, {
-          ve: tk
+      answered(bb, cb, sb) {
+        if ("" === sb.text.trim()) return;
+        const kb = this.open.get(bb);
+        if (kb) return void(kb.lm.responses.length < va && kb.lm.responses.push(cT(sb)));
+        const Wb = bT(this.chatId, cb, sb);
+        Wb && this.open.set(bb, {
+          lm: Wb
         })
       }
-      drop(kk) {
-        var Fk;
-        clearTimeout(null === (Fk = this.open.get(kk)) || void 0 === Fk ? void 0 : Fk.timer), this.open.delete(kk)
+      drop(bb) {
+        var cb;
+        clearTimeout(null === (cb = this.open.get(bb)) || void 0 === cb ? void 0 : cb.timer), this.open.delete(bb)
       }
-      requestEnded(kk) {
-        const Fk = this.open.get(kk);
-        Fk && (clearTimeout(Fk.timer), Fk.timer = setTimeout((() => {
-          this.open.delete(kk), this.send(Fk.ve)
+      requestEnded(bb) {
+        const cb = this.open.get(bb);
+        cb && (clearTimeout(cb.timer), cb.timer = setTimeout((() => {
+          this.open.delete(bb), this.send(cb.lm)
         }), 2e4))
       }
-      send(kk) {
-        (function(kk) {
-          return (new TextEncoder).encode(JSON.stringify(kk)).length <= ja
-        })(kk) && this.ve(kk)
+      send(bb) {
+        (function(bb) {
+          return (new TextEncoder).encode(JSON.stringify(bb)).length <= Fa
+        })(bb) && this.lm(bb)
       }
     }
-    const BX = [],
-      RX = 5;
-    let tX = !1;
+    const kT = [],
+      WT = 5;
+    let aT = !1;
 
-    function aX(kk) {
+    function TT(bb) {
       (async () => {
-        const Fk = await qa.refresh(),
-          Bk = qa.getPlayer();
-        "yes" === Fk ? await bX([kk]) : null === Fk && null !== Bk && function(kk, Fk) {
-          tX || (tX = !0, qa.subscribe(XX));
-          BX.push({
-            player: kk,
-            ve: Fk
-          }), BX.length > RX && BX.shift()
-        }(Bk, kk)
+        const cb = await wa.refresh(),
+          sb = wa.getPlayer();
+        "yes" === cb ? await IT([bb]) : null === cb && null !== sb && function(bb, cb) {
+          aT || (aT = !0, wa.subscribe(UT));
+          kT.push({
+            player: bb,
+            lm: cb
+          }), kT.length > WT && kT.shift()
+        }(sb, bb)
       })()
     }
 
-    function XX() {
-      const kk = qa.get();
-      if (null === kk) return;
-      const Fk = qa.getPlayer(),
-        Bk = BX.splice(0).filter((kk => kk.player === Fk));
-      "yes" === kk && Bk.length > 0 && bX(Bk.map((kk => kk.ve)))
+    function UT() {
+      const bb = wa.get();
+      if (null === bb) return;
+      const cb = wa.getPlayer(),
+        sb = kT.splice(0).filter((bb => bb.player === cb));
+      "yes" === bb && sb.length > 0 && IT(sb.map((bb => bb.lm)))
     }
-    async function bX(kk) {
-      const Fk = Promise.resolve().then((() => Bk(40905)));
-      for (const Bk of kk) try {
+    async function IT(bb) {
+      const cb = Promise.resolve().then((() => sb(40891)));
+      for (const sb of bb) try {
         const {
-          postToGameServer: kk
-        } = await Fk;
-        await kk("/ai-helper/turn", Bk)
-      } catch (Rk) {
-        console.warn("AI Helper: couldn't share a turn", Rk)
+          postToGameServer: bb
+        } = await cb;
+        await bb("/ai-helper/turn", sb)
+      } catch (kb) {
+        console.warn("AI Helper: couldn't share a turn", kb)
       }
     }
-    var wX = Bk(291),
-      dX = Bk(152);
-    const sX = {
+    var HT = sb(344),
+      fT = sb(195);
+    const MT = {
         openrouter: {
           id: "openrouter",
           name: "OpenRouter",
@@ -7095,292 +7095,292 @@ export const modules = {
           keyPage: ""
         }
       },
-      VX = ["openrouter", "anthropic", "openai", "gemini", "custom"],
-      JX = new Set(Object.values(sX).flatMap((kk => "" === kk.baseUrl ? [] : [new URL(kk.baseUrl).host])));
+      XT = ["openrouter", "anthropic", "openai", "gemini", "custom"],
+      nT = new Set(Object.values(MT).flatMap((bb => "" === bb.baseUrl ? [] : [new URL(bb.baseUrl).host])));
 
-    function AX(kk) {
-      return kk.trim().replace(/^[A-Z_]+\s*=\s*/, "").replace(/^["'`]+|["'`]+$/g, "").replace(/^Bearer\s+/i, "").replace(/\s+/g, "")
+    function mT(bb) {
+      return bb.trim().replace(/^[A-Z_]+\s*=\s*/, "").replace(/^["'`]+|["'`]+$/g, "").replace(/^Bearer\s+/i, "").replace(/\s+/g, "")
     }
 
-    function eX(kk) {
-      return kk.startsWith("sk-or-") ? "openrouter" : kk.startsWith("sk-ant-") ? "anthropic" : kk.startsWith("AIza") ? "gemini" : kk.startsWith("sk-") ? "openai" : null
+    function lT(bb) {
+      return bb.startsWith("sk-or-") ? "openrouter" : bb.startsWith("sk-ant-") ? "anthropic" : bb.startsWith("AIza") ? "gemini" : bb.startsWith("sk-") ? "openai" : null
     }
 
-    function yX(kk) {
-      let Fk;
+    function QT(bb) {
+      let cb;
       try {
-        Fk = new URL(kk.trim())
+        cb = new URL(bb.trim())
       } catch {
         return null
       }
-      const Bk = "localhost" === Fk.hostname || "127.0.0.1" === Fk.hostname;
-      return "https:" !== Fk.protocol && ("http:" !== Fk.protocol || !Bk) || Fk.username || Fk.password || Fk.search ? null : `${Fk.origin}${Fk.pathname}`.replace(/\/chat\/completions\/?$/, "").replace(/\/+$/, "")
+      const sb = "localhost" === cb.hostname || "127.0.0.1" === cb.hostname;
+      return "https:" !== cb.protocol && ("http:" !== cb.protocol || !sb) || cb.username || cb.password || cb.search ? null : `${cb.origin}${cb.pathname}`.replace(/\/chat\/completions\/?$/, "").replace(/\/+$/, "")
     }
 
-    function fX(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      return "custom" === kk && Fk ? new URL(Fk).host : Bk ? sX[kk].shortName : sX[kk].name
+    function eT(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      return "custom" === bb && cb ? new URL(cb).host : sb ? MT[bb].shortName : MT[bb].name
     }
-    class mX extends Error {
-      constructor(kk, Fk, Bk, Rk) {
-        super(`AI key request: ${kk}`), this.problem = kk, this.retryAfterMs = Fk, this.status = Bk, this.detail = Rk
+    class CT extends Error {
+      constructor(bb, cb, sb, kb) {
+        super(`AI key request: ${bb}`), this.problem = bb, this.retryAfterMs = cb, this.status = sb, this.detail = kb
       }
     }
 
-    function WX(kk, Fk) {
-      return ("" === Fk ? kk : kk.split(Fk).join("\u2026")).replace(/[\w-]{24,}/g, "\u2026")
+    function NT(bb, cb) {
+      return ("" === cb ? bb : bb.split(cb).join("\u2026")).replace(/[\w-]{24,}/g, "\u2026")
     }
 
-    function vX(kk, Fk) {
-      const Bk = "custom" === Fk ? "That server" : sX[Fk].shortName;
-      switch (kk) {
+    function VT(bb, cb) {
+      const sb = "custom" === cb ? "That server" : MT[cb].shortName;
+      switch (bb) {
         case "badKey":
-          return `${Bk} didn't accept your key: it may be wrong or deleted. Check you copied all of it.`;
+          return `${sb} didn't accept your key: it may be wrong or deleted. Check you copied all of it.`;
         case "busy":
           return "Too many requests right now. Wait a minute and try again.";
         case "noModel":
-          return `${Bk} can't find that model. Check its name.`;
+          return `${sb} can't find that model. Check its name.`;
         case "unreachable":
-          return "anthropic" === Fk ? "Claude didn't accept your key: check it, or make a new one." : "custom" === Fk ? "Couldn't reach that address. Check it's typed right and the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help." : `Couldn't reach ${Bk}. Check your internet and try again.`;
+          return "anthropic" === cb ? "Claude didn't accept your key: check it, or make a new one." : "custom" === cb ? "Couldn't reach that address. Check it's typed right and the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help." : `Couldn't reach ${sb}. Check your internet and try again.`;
         case "noCredit":
-          return "custom" === Fk ? "That server stopped your key for now: it has used all it can." : `${Bk} stopped your key for now: it has used all it can. Check it on ${Bk}'s website.`;
+          return "custom" === cb ? "That server stopped your key for now: it has used all it can." : `${sb} stopped your key for now: it has used all it can. Check it on ${sb}'s website.`;
         case "blocked":
-          return `${Bk} doesn't work from where you are.`;
+          return `${sb} doesn't work from where you are.`;
         case "timeout":
           return "That took too long. Try again.";
         default:
-          return `${Bk} had a problem with that. Try again in a minute.`
+          return `${sb} had a problem with that. Try again in a minute.`
       }
     }
 
-    function iX(kk) {
-      var Fk;
-      const Bk = kk.at(-1);
-      if (!Bk || null !== dB(Bk.name, Bk.args) || function(kk) {
+    function LT(bb) {
+      var cb;
+      const sb = bb.at(-1);
+      if (!sb || null !== Is(sb.name, sb.args) || function(bb) {
           try {
-            return JSON.parse(kk), !0
+            return JSON.parse(bb), !0
           } catch {
             return !1
           }
-        }(Bk.args)) return;
-      const Rk = null === (Fk = /"path"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(Bk.args)) || void 0 === Fk ? void 0 : Fk[1];
+        }(sb.args)) return;
+      const kb = null === (cb = /"path"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(sb.args)) || void 0 === cb ? void 0 : cb[1];
       return {
-        name: Bk.name || "write_file",
-        path: Rk
+        name: sb.name || "write_file",
+        path: kb
       }
     }
-    const YX = 1e4,
-      oX = 3e5,
-      LX = 16e3;
-    async function OX(kk, Fk, Bk, Rk) {
-      if ("custom" !== kk && ! function(kk) {
-          return JX.has(new URL(kk).host)
-        }(Fk)) throw new Error(`AI key request to an unknown host for ${kk}`);
-      const tk = await fetch(Fk, {
-        ...Bk,
+    const uT = 1e4,
+      YT = 3e5,
+      hT = 16e3;
+    async function JT(bb, cb, sb, kb) {
+      if ("custom" !== bb && ! function(bb) {
+          return nT.has(new URL(bb).host)
+        }(cb)) throw new Error(`AI key request to an unknown host for ${bb}`);
+      const Wb = await fetch(cb, {
+        ...sb,
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: Rk
+        signal: kb
       });
-      if (!tk.ok) {
-        const Fk = await tk.text().catch((() => ""));
-        throw console.warn(`AI key request: ${kk} answered ${tk.status}`), new mX(function(kk, Fk, Bk) {
-          const Rk = !("gemini" === kk && 429 === Fk) && /credit|quota|billing|balance|payment|spend|budget|limit[ _]exceeded|key limit/i.test(Bk);
-          return 401 === Fk ? "badKey" : 404 !== Fk && 400 !== Fk || !/model_not_found|not_found_error[^\n]{0,80}model:|models?\b[^\n]{0,80}?(does not exist|not found)|no such model|unknown model|(invalid|not a valid) model/i.test(Bk) ? 402 === Fk || (400 === Fk || 403 === Fk || 429 === Fk) && Rk && !/rate[ _-]?limit/i.test(Bk) ? "noCredit" : 400 === Fk && /(location|region|country|territory)[^\n]{0,40}not supported|unsupported_country/i.test(Bk) ? "blocked" : 400 === Fk && /api[ _-]?key/i.test(Bk) ? "badKey" : 403 === Fk ? /moderat|flagged/i.test(Bk) ? "refused" : /region|country|territor|location/i.test(Bk) ? "blocked" : "badKey" : 429 === Fk ? "busy" : "failed" : "noModel"
-        }(kk, tk.status, Fk), function(kk) {
-          const Fk = kk.headers.get("retry-after");
-          if (!Fk) return;
-          const Bk = Number(Fk);
-          return Number.isFinite(Bk) ? 1e3 * Bk : Math.max(0, Date.parse(Fk) - Date.now()) || void 0
-        }(tk), tk.status, function(kk, Fk) {
-          let Bk = kk;
+      if (!Wb.ok) {
+        const cb = await Wb.text().catch((() => ""));
+        throw console.warn(`AI key request: ${bb} answered ${Wb.status}`), new CT(function(bb, cb, sb) {
+          const kb = !("gemini" === bb && 429 === cb) && /credit|quota|billing|balance|payment|spend|budget|limit[ _]exceeded|key limit/i.test(sb);
+          return 401 === cb ? "badKey" : 404 !== cb && 400 !== cb || !/model_not_found|not_found_error[^\n]{0,80}model:|models?\b[^\n]{0,80}?(does not exist|not found)|no such model|unknown model|(invalid|not a valid) model/i.test(sb) ? 402 === cb || (400 === cb || 403 === cb || 429 === cb) && kb && !/rate[ _-]?limit/i.test(sb) ? "noCredit" : 400 === cb && /(location|region|country|territory)[^\n]{0,40}not supported|unsupported_country/i.test(sb) ? "blocked" : 400 === cb && /api[ _-]?key/i.test(sb) ? "badKey" : 403 === cb ? /moderat|flagged/i.test(sb) ? "refused" : /region|country|territor|location/i.test(sb) ? "blocked" : "badKey" : 429 === cb ? "busy" : "failed" : "noModel"
+        }(bb, Wb.status, cb), function(bb) {
+          const cb = bb.headers.get("retry-after");
+          if (!cb) return;
+          const sb = Number(cb);
+          return Number.isFinite(sb) ? 1e3 * sb : Math.max(0, Date.parse(cb) - Date.now()) || void 0
+        }(Wb), Wb.status, function(bb, cb) {
+          let sb = bb;
           try {
-            const Fk = JSON.parse(kk),
-              Rk = Fk.error && "object" === typeof Fk.error ? Fk.error.message : void 0,
-              tk = [Fk.error, Rk, Fk.message].find((kk => "string" === typeof kk));
-            Bk = "string" === typeof tk ? tk : kk
+            const cb = JSON.parse(bb),
+              kb = cb.error && "object" === typeof cb.error ? cb.error.message : void 0,
+              Wb = [cb.error, kb, cb.message].find((bb => "string" === typeof bb));
+            sb = "string" === typeof Wb ? Wb : bb
           } catch {}
-          const Rk = Fk.reduce(((kk, Fk) => WX(kk, Fk)), Bk.replace(/\s+/g, " ").trim()).slice(0, 200);
-          return "" === Rk ? void 0 : Rk
-        }(Fk, function(kk) {
-          const Fk = [];
-          return new Headers(kk.headers).forEach(((kk, Bk) => {
-            /authorization|key/i.test(Bk) && Fk.push(kk, kk.replace(/^Bearer\s+/i, ""))
-          })), Fk.filter((kk => kk.length >= 6))
-        }(Bk)))
+          const kb = cb.reduce(((bb, cb) => NT(bb, cb)), sb.replace(/\s+/g, " ").trim()).slice(0, 200);
+          return "" === kb ? void 0 : kb
+        }(cb, function(bb) {
+          const cb = [];
+          return new Headers(bb.headers).forEach(((bb, sb) => {
+            /authorization|key/i.test(sb) && cb.push(bb, bb.replace(/^Bearer\s+/i, ""))
+          })), cb.filter((bb => bb.length >= 6))
+        }(sb)))
       }
-      return tk
+      return Wb
     }
-    async function EX(kk, Fk, Bk) {
-      const Rk = (0, mk.e)(kk, Fk);
+    async function gT(bb, cb, sb) {
+      const kb = (0, eb.b)(bb, cb);
       try {
-        return await Bk(Rk.signal)
-      } catch (tk) {
-        if (tk instanceof mX || null !== Fk && void 0 !== Fk && Fk.aborted) throw tk;
-        throw Rk.signal.aborted || console.warn("AI key request couldn't be read", tk), new mX(Rk.signal.aborted ? "timeout" : "unreachable")
+        return await sb(kb.signal)
+      } catch (Wb) {
+        if (Wb instanceof CT || null !== cb && void 0 !== cb && cb.aborted) throw Wb;
+        throw kb.signal.aborted || console.warn("AI key request couldn't be read", Wb), new CT(kb.signal.aborted ? "timeout" : "unreachable")
       } finally {
-        Rk.clear()
+        kb.clear()
       }
     }
 
-    function SX(kk) {
-      let Fk = kk.length;
-      const Bk = kk.lastIndexOf("<tool_call"); - 1 === Bk || kk.includes("</tool_call>", Bk) || (Fk = Bk);
-      const Rk = [...kk.matchAll(/\{\s*"(?:jsonrpc|name|tool|method|function)"/g)].find((Fk => null === function(kk, Fk) {
-        let Bk = 0,
-          Rk = !1;
-        for (let tk = Fk; tk < kk.length; tk++) {
-          const Fk = kk[tk];
-          if (Rk) "\\" === Fk ? tk++ : '"' === Fk && (Rk = !1);
-          else if ('"' === Fk) Rk = !0;
-          else if ("{" === Fk) Bk++;
-          else if ("}" === Fk && (Bk--, 0 === Bk)) return tk + 1
+    function BT(bb) {
+      let cb = bb.length;
+      const sb = bb.lastIndexOf("<tool_call"); - 1 === sb || bb.includes("</tool_call>", sb) || (cb = sb);
+      const kb = [...bb.matchAll(/\{\s*"(?:jsonrpc|name|tool|method|function)"/g)].find((cb => null === function(bb, cb) {
+        let sb = 0,
+          kb = !1;
+        for (let Wb = cb; Wb < bb.length; Wb++) {
+          const cb = bb[Wb];
+          if (kb) "\\" === cb ? Wb++ : '"' === cb && (kb = !1);
+          else if ('"' === cb) kb = !0;
+          else if ("{" === cb) sb++;
+          else if ("}" === cb && (sb--, 0 === sb)) return Wb + 1
         }
         return null
-      }(kk, Fk.index)));
-      return Rk && Rk.index < Fk && (Fk = Rk.index), kk.slice(0, Fk).replace(/```[\w-]*\s*$/, "").trim()
+      }(bb, cb.index)));
+      return kb && kb.index < cb && (cb = kb.index), bb.slice(0, cb).replace(/```[\w-]*\s*$/, "").trim()
     }
 
-    function NX(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "simple",
-        Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
+    function tT(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "simple",
+        kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
       const {
-        answer: tk,
-        reasoning: ak,
-        pBk: Xk,
-        isCutShort: bk,
-        nativeCalls: wk = []
-      } = Fk, dk = tk.replace(/<think>[\s\S]*?<\/think>/g, ""), sk = "" === Rk ? dk.trim() : function(kk, Fk) {
-        var Bk, Rk;
-        const tk = Fk.trimStart(),
-          ak = kk.trimStart();
-        if (ak.length >= 16 && tk.startsWith(ak.slice(0, 240))) return tk;
-        const Xk = null !== (Bk = null === (Rk = kk.match(/```/g)) || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Bk ? Bk : 0,
-          bk = SX(kk) !== kk.trim() || Xk % 2 === 1 ? 48 : 16;
-        for (let wk = Math.min(kk.length, tk.length, 4e3); wk >= bk; wk--)
-          if (kk.endsWith(tk.slice(0, wk))) return kk + tk.slice(wk);
-        return kk + Fk
-      }(Rk, dk).trim(), Vk = Wa(sk, "", wk, Bk), Jk = Wa(bk ? SX(sk) : sk, ak, wk, Bk, bk), Ak = bk ? iX(wk) : void 0;
-      if (Xk && "" === Jk) throw new mX("refused");
-      if ("" === Jk && (!bk || "" === Vk && !Ak)) throw new mX("failed");
+        answer: Wb,
+        reasoning: ab,
+        qsb: Tb,
+        isCutShort: Ub,
+        nativeCalls: Ib = []
+      } = cb, Hb = Wb.replace(/<think>[\s\S]*?<\/think>/g, ""), fb = "" === kb ? Hb.trim() : function(bb, cb) {
+        var sb, kb;
+        const Wb = cb.trimStart(),
+          ab = bb.trimStart();
+        if (ab.length >= 16 && Wb.startsWith(ab.slice(0, 240))) return Wb;
+        const Tb = null !== (sb = null === (kb = bb.match(/```/g)) || void 0 === kb ? void 0 : kb.length) && void 0 !== sb ? sb : 0,
+          Ub = BT(bb) !== bb.trim() || Tb % 2 === 1 ? 48 : 16;
+        for (let Ib = Math.min(bb.length, Wb.length, 4e3); Ib >= Ub; Ib--)
+          if (bb.endsWith(Wb.slice(0, Ib))) return bb + Wb.slice(Ib);
+        return bb + cb
+      }(kb, Hb).trim(), Mb = Na(fb, "", Ib, sb), Xb = Na(Ub ? BT(fb) : fb, ab, Ib, sb, Ub), nb = Ub ? LT(Ib) : void 0;
+      if (Tb && "" === Xb) throw new CT("refused");
+      if ("" === Xb && (!Ub || "" === Mb && !nb)) throw new CT("failed");
       return {
-        model: kk,
-        answer: Jk,
-        reasoning: ak,
-        isCutShort: bk,
-        written: bk ? Vk : void 0,
-        cutCall: Ak
+        model: bb,
+        answer: Xb,
+        reasoning: ab,
+        isCutShort: Ub,
+        written: Ub ? Mb : void 0,
+        cutCall: nb
       }
     }
 
-    function HX(kk) {
-      const Fk = kk.findIndex((kk => "user" === kk.role));
-      return -1 === Fk ? [] : kk.slice(Fk)
+    function yT(bb) {
+      const cb = bb.findIndex((bb => "user" === bb.role));
+      return -1 === cb ? [] : bb.slice(cb)
     }
 
-    function uX(kk, Fk) {
-      var Bk;
-      const Rk = null !== (Bk = Fk.tools) && void 0 !== Bk ? Bk : [];
-      if (0 === Rk.length) return {};
-      switch (kk) {
+    function PT(bb, cb) {
+      var sb;
+      const kb = null !== (sb = cb.tools) && void 0 !== sb ? sb : [];
+      if (0 === kb.length) return {};
+      switch (bb) {
         case "openai":
           return {
-            tools: Ya(Rk)
+            tools: ua(kb)
           };
         case "anthropic":
           return {
-            tools: Rk.map((kk => ({
-              name: kk.name,
-              description: kk.description,
-              input_schema: kk.inputSchema
+            tools: kb.map((bb => ({
+              name: bb.name,
+              description: bb.description,
+              input_schema: bb.inputSchema
             })))
           };
         case "gemini":
           return {
             tools: [{
-              functionDeclarations: Rk.map((kk => {
+              functionDeclarations: kb.map((bb => {
                 return {
-                  name: kk.name,
-                  description: kk.description,
-                  parameters: (Fk = kk.inputSchema, {
+                  name: bb.name,
+                  description: bb.description,
+                  parameters: (cb = bb.inputSchema, {
                     type: "OBJECT",
-                    properties: Object.fromEntries(Object.entries(Fk.properties).map((kk => {
-                      let [Fk, Bk] = kk;
-                      return [Fk, {
+                    properties: Object.fromEntries(Object.entries(cb.properties).map((bb => {
+                      let [cb, sb] = bb;
+                      return [cb, {
                         type: "STRING",
-                        description: Bk.description
+                        description: sb.description
                       }]
                     }))),
-                    required: Fk.required
+                    required: cb.required
                   })
                 };
-                var Fk
+                var cb
               }))
             }]
           }
       }
     }
-    class MX {
-      constructor(kk, Fk, Bk) {
-        this.provider = kk, this.baseUrl = Fk, this.key = Bk
+    class DT {
+      constructor(bb, cb, sb) {
+        this.provider = bb, this.baseUrl = cb, this.key = sb
       }
-      async check(kk) {
-        return EX(YX, kk, (async kk => {
-          var Fk;
-          const Bk = await OX(this.provider, `${this.baseUrl}/models`, {
+      async check(bb) {
+        return gT(uT, bb, (async bb => {
+          var cb;
+          const sb = await JT(this.provider, `${this.baseUrl}/models`, {
             headers: this.headers()
-          }, kk);
+          }, bb);
           return {
-            models: (null !== (Fk = (await Bk.json()).data) && void 0 !== Fk ? Fk : []).map((kk => ({
-              id: kk.id,
-              name: kk.name
+            models: (null !== (cb = (await sb.json()).data) && void 0 !== cb ? cb : []).map((bb => ({
+              id: bb.id,
+              name: bb.name
             })))
           }
         }))
       }
-      async ask(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return EX(oX, Bk.signal, (async Rk => {
-          var tk;
-          const ak = await OX(this.provider, `${this.baseUrl}/chat/completions`, {
+      async ask(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return gT(YT, sb.signal, (async kb => {
+          var Wb;
+          const ab = await JT(this.provider, `${this.baseUrl}/chat/completions`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
-              model: kk,
-              messages: Fk,
-              ["openai" === this.provider ? "max_completion_tokens" : "max_tokens"]: LX,
+              model: bb,
+              messages: cb,
+              ["openai" === this.provider ? "max_completion_tokens" : "max_tokens"]: hT,
               stream: !0,
-              ...uX("openai", Bk)
+              ...PT("openai", sb)
             })
-          }, Rk);
-          let Xk = "",
-            bk = "",
-            wk = !1,
-            dk = !1;
-          const sk = [];
-          return await ia(null !== (tk = ak.body) && void 0 !== tk ? tk : new ReadableStream, (Fk => {
-            var Rk, tk, ak, Vk, Jk, Ak, ek, yk;
-            const fk = Fk;
-            if (fk.error) throw new mX(402 === Number(fk.error.code) ? "noCredit" : "failed");
-            const mk = null === (Rk = fk.choices) || void 0 === Rk ? void 0 : Rk[0];
-            bk += null !== (tk = null !== (ak = null === mk || void 0 === mk || null === (Vk = mk.delta) || void 0 === Vk ? void 0 : Vk.reasoning) && void 0 !== ak ? ak : null === mk || void 0 === mk || null === (Jk = mk.delta) || void 0 === Jk ? void 0 : Jk.reasoning_content) && void 0 !== tk ? tk : "", Xk += null !== (Ak = null === mk || void 0 === mk || null === (ek = mk.delta) || void 0 === ek ? void 0 : ek.content) && void 0 !== Ak ? Ak : "";
-            for (const kk of null !== (Wk = null === mk || void 0 === mk || null === (vk = mk.delta) || void 0 === vk ? void 0 : vk.tool_calls) && void 0 !== Wk ? Wk : []) {
-              var Wk, vk;
-              fa(sk, kk)
+          }, kb);
+          let Tb = "",
+            Ub = "",
+            Ib = !1,
+            Hb = !1;
+          const fb = [];
+          return await La(null !== (Wb = ab.body) && void 0 !== Wb ? Wb : new ReadableStream, (cb => {
+            var kb, Wb, ab, Mb, Xb, nb, mb, lb;
+            const Qb = cb;
+            if (Qb.error) throw new CT(402 === Number(Qb.error.code) ? "noCredit" : "failed");
+            const eb = null === (kb = Qb.choices) || void 0 === kb ? void 0 : kb[0];
+            Ub += null !== (Wb = null !== (ab = null === eb || void 0 === eb || null === (Mb = eb.delta) || void 0 === Mb ? void 0 : Mb.reasoning) && void 0 !== ab ? ab : null === eb || void 0 === eb || null === (Xb = eb.delta) || void 0 === Xb ? void 0 : Xb.reasoning_content) && void 0 !== Wb ? Wb : "", Tb += null !== (nb = null === eb || void 0 === eb || null === (mb = eb.delta) || void 0 === mb ? void 0 : mb.content) && void 0 !== nb ? nb : "";
+            for (const bb of null !== (Cb = null === eb || void 0 === eb || null === (Nb = eb.delta) || void 0 === Nb ? void 0 : Nb.tool_calls) && void 0 !== Cb ? Cb : []) {
+              var Cb, Nb;
+              ea(fb, bb)
             }
-            wk ||= "content_filter" === (null === mk || void 0 === mk ? void 0 : mk.finish_reason), dk ||= "length" === (null === mk || void 0 === mk ? void 0 : mk.finish_reason), null === (yk = Bk.onProgress) || void 0 === yk || yk.call(Bk, {
-              model: kk,
-              reasoningChars: bk.length,
-              answer: Xk,
-              isCalling: sk.length > 0
+            Ib ||= "content_filter" === (null === eb || void 0 === eb ? void 0 : eb.finish_reason), Hb ||= "length" === (null === eb || void 0 === eb ? void 0 : eb.finish_reason), null === (lb = sb.onProgress) || void 0 === lb || lb.call(sb, {
+              model: bb,
+              reasoningChars: Ub.length,
+              answer: Tb,
+              isCalling: fb.length > 0
             })
-          })), NX(kk, {
-            answer: Xk,
-            reasoning: bk,
-            pBk: wk,
-            isCutShort: dk,
-            nativeCalls: sk
-          }, Bk.callFormat, Bk.continueFrom)
+          })), tT(bb, {
+            answer: Tb,
+            reasoning: Ub,
+            qsb: Ib,
+            isCutShort: Hb,
+            nativeCalls: fb
+          }, sb.callFormat, sb.continueFrom)
         }))
       }
       headers() {
@@ -7392,99 +7392,99 @@ export const modules = {
         }
       }
     }
-    class gX {
-      constructor(kk) {
-        this.key = kk, this.chat = void 0, this.chat = new MX("openrouter", sX.openrouter.baseUrl, kk)
+    class ET {
+      constructor(bb) {
+        this.key = bb, this.chat = void 0, this.chat = new DT("openrouter", MT.openrouter.baseUrl, bb)
       }
-      async check(kk) {
-        return await EX(YX, kk, (async kk => OX("openrouter", `${sX.openrouter.baseUrl}/key`, {
+      async check(bb) {
+        return await gT(uT, bb, (async bb => JT("openrouter", `${MT.openrouter.baseUrl}/key`, {
           headers: {
             Authorization: `Bearer ${this.key}`
           }
-        }, kk))), this.chat.check(kk)
+        }, bb))), this.chat.check(bb)
       }
-      ask(kk, Fk, Bk) {
-        return this.chat.ask(kk, Fk, Bk)
+      ask(bb, cb, sb) {
+        return this.chat.ask(bb, cb, sb)
       }
     }
-    class UX {
-      constructor(kk) {
-        this.key = kk, this.baseUrl = sX.anthropic.baseUrl
+    class iT {
+      constructor(bb) {
+        this.key = bb, this.baseUrl = MT.anthropic.baseUrl
       }
-      async check(kk) {
-        return EX(YX, kk, (async kk => {
-          var Fk;
-          const Bk = await OX("anthropic", `${this.baseUrl}/models?limit=1000`, {
+      async check(bb) {
+        return gT(uT, bb, (async bb => {
+          var cb;
+          const sb = await JT("anthropic", `${this.baseUrl}/models?limit=1000`, {
             headers: this.headers()
-          }, kk);
+          }, bb);
           return {
-            models: (null !== (Fk = (await Bk.json()).data) && void 0 !== Fk ? Fk : []).map((kk => ({
-              id: kk.id,
-              name: kk.display_name
+            models: (null !== (cb = (await sb.json()).data) && void 0 !== cb ? cb : []).map((bb => ({
+              id: bb.id,
+              name: bb.display_name
             })))
           }
         }))
       }
-      async ask(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Rk = Fk.filter((kk => "system" === kk.role)).map((kk => kk.content)).join("\n\n"),
-          tk = HX(Fk).map((kk => ({
-            role: kk.role,
-            content: kk.content
+      async ask(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const kb = cb.filter((bb => "system" === bb.role)).map((bb => bb.content)).join("\n\n"),
+          Wb = yT(cb).map((bb => ({
+            role: bb.role,
+            content: bb.content
           })));
-        return EX(oX, Bk.signal, (async Fk => {
-          var ak;
-          const Xk = await OX("anthropic", `${this.baseUrl}/messages`, {
+        return gT(YT, sb.signal, (async cb => {
+          var ab;
+          const Tb = await JT("anthropic", `${this.baseUrl}/messages`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
-              model: kk,
-              max_tokens: LX,
-              system: Rk,
-              messages: tk,
+              model: bb,
+              max_tokens: hT,
+              system: kb,
+              messages: Wb,
               stream: !0,
-              ...uX("anthropic", Bk)
+              ...PT("anthropic", sb)
             })
-          }, Fk);
-          let bk = "",
-            wk = "",
-            dk = !1,
-            sk = !1;
-          const Vk = new Map;
-          await ia(null !== (ak = Xk.body) && void 0 !== ak ? ak : new ReadableStream, (Fk => {
-            var Rk, tk;
-            const ak = Fk;
-            var Xk, Jk, Ak, ek;
-            if ("error" === ak.type) throw new mX("overloaded_error" === (null === (Xk = ak.error) || void 0 === Xk ? void 0 : Xk.type) || "rate_limit_error" === (null === (Jk = ak.error) || void 0 === Jk ? void 0 : Jk.type) ? "busy" : "failed");
-            if ("content_block_start" === ak.type && "tool_use" === (null === (Rk = ak.content_block) || void 0 === Rk ? void 0 : Rk.type)) Vk.set(null !== (Ak = ak.index) && void 0 !== Ak ? Ak : Vk.size, {
-              name: null !== (ek = ak.content_block.name) && void 0 !== ek ? ek : "",
+          }, cb);
+          let Ub = "",
+            Ib = "",
+            Hb = !1,
+            fb = !1;
+          const Mb = new Map;
+          await La(null !== (ab = Tb.body) && void 0 !== ab ? ab : new ReadableStream, (cb => {
+            var kb, Wb;
+            const ab = cb;
+            var Tb, Xb, nb, mb;
+            if ("error" === ab.type) throw new CT("overloaded_error" === (null === (Tb = ab.error) || void 0 === Tb ? void 0 : Tb.type) || "rate_limit_error" === (null === (Xb = ab.error) || void 0 === Xb ? void 0 : Xb.type) ? "busy" : "failed");
+            if ("content_block_start" === ab.type && "tool_use" === (null === (kb = ab.content_block) || void 0 === kb ? void 0 : kb.type)) Mb.set(null !== (nb = ab.index) && void 0 !== nb ? nb : Mb.size, {
+              name: null !== (mb = ab.content_block.name) && void 0 !== mb ? mb : "",
               args: ""
             });
-            else if ("content_block_delta" === ak.type) {
-              var yk, fk, mk, Wk, vk, ik;
-              bk += null !== (yk = null === (fk = ak.delta) || void 0 === fk ? void 0 : fk.text) && void 0 !== yk ? yk : "", wk += null !== (mk = null === (Wk = ak.delta) || void 0 === Wk ? void 0 : Wk.thinking) && void 0 !== mk ? mk : "";
-              const kk = Vk.get(null !== (vk = ak.index) && void 0 !== vk ? vk : -1);
-              var Yk;
-              if (kk && "input_json_delta" === (null === (ik = ak.delta) || void 0 === ik ? void 0 : ik.type)) kk.args += null !== (Yk = ak.delta.partial_json) && void 0 !== Yk ? Yk : ""
-            } else if ("message_delta" === ak.type) {
-              var Lk, Ok;
-              dk ||= "refusal" === (null === (Lk = ak.delta) || void 0 === Lk ? void 0 : Lk.stop_reason), sk ||= "max_tokens" === (null === (Ok = ak.delta) || void 0 === Ok ? void 0 : Ok.stop_reason)
+            else if ("content_block_delta" === ab.type) {
+              var lb, Qb, eb, Cb, Nb, Vb;
+              Ub += null !== (lb = null === (Qb = ab.delta) || void 0 === Qb ? void 0 : Qb.text) && void 0 !== lb ? lb : "", Ib += null !== (eb = null === (Cb = ab.delta) || void 0 === Cb ? void 0 : Cb.thinking) && void 0 !== eb ? eb : "";
+              const bb = Mb.get(null !== (Nb = ab.index) && void 0 !== Nb ? Nb : -1);
+              var Lb;
+              if (bb && "input_json_delta" === (null === (Vb = ab.delta) || void 0 === Vb ? void 0 : Vb.type)) bb.args += null !== (Lb = ab.delta.partial_json) && void 0 !== Lb ? Lb : ""
+            } else if ("message_delta" === ab.type) {
+              var ub, Yb;
+              Hb ||= "refusal" === (null === (ub = ab.delta) || void 0 === ub ? void 0 : ub.stop_reason), fb ||= "max_tokens" === (null === (Yb = ab.delta) || void 0 === Yb ? void 0 : Yb.stop_reason)
             }
-            null === (tk = Bk.onProgress) || void 0 === tk || tk.call(Bk, {
-              model: kk,
-              reasoningChars: wk.length,
-              answer: bk,
-              isCalling: Vk.size > 0
+            null === (Wb = sb.onProgress) || void 0 === Wb || Wb.call(sb, {
+              model: bb,
+              reasoningChars: Ib.length,
+              answer: Ub,
+              isCalling: Mb.size > 0
             })
           }));
-          const Jk = [...Vk.values()];
-          return NX(kk, {
-            answer: bk,
-            reasoning: wk,
-            pBk: dk,
-            isCutShort: sk,
-            nativeCalls: Jk
-          }, Bk.callFormat, Bk.continueFrom)
+          const Xb = [...Mb.values()];
+          return tT(bb, {
+            answer: Ub,
+            reasoning: Ib,
+            qsb: Hb,
+            isCutShort: fb,
+            nativeCalls: Xb
+          }, sb.callFormat, sb.continueFrom)
         }))
       }
       headers() {
@@ -7496,90 +7496,90 @@ export const modules = {
         }
       }
     }
-    class cX {
-      constructor(kk) {
-        this.key = kk, this.baseUrl = sX.gemini.baseUrl
+    class OT {
+      constructor(bb) {
+        this.key = bb, this.baseUrl = MT.gemini.baseUrl
       }
-      async check(kk) {
-        return EX(YX, kk, (async kk => {
-          var Fk;
-          const Bk = await OX("gemini", `${this.baseUrl}/models?pageSize=1000`, {
+      async check(bb) {
+        return gT(uT, bb, (async bb => {
+          var cb;
+          const sb = await JT("gemini", `${this.baseUrl}/models?pageSize=1000`, {
             headers: this.headers()
-          }, kk);
+          }, bb);
           return {
-            models: (null !== (Fk = (await Bk.json()).models) && void 0 !== Fk ? Fk : []).filter((kk => {
-              var Fk, Bk;
-              return null === (Fk = null === (Bk = kk.supportedGenerationMethods) || void 0 === Bk ? void 0 : Bk.includes("generateContent")) || void 0 === Fk || Fk
-            })).map((kk => ({
-              id: kk.name.replace(/^models\//, ""),
-              name: kk.displayName
+            models: (null !== (cb = (await sb.json()).models) && void 0 !== cb ? cb : []).filter((bb => {
+              var cb, sb;
+              return null === (cb = null === (sb = bb.supportedGenerationMethods) || void 0 === sb ? void 0 : sb.includes("generateContent")) || void 0 === cb || cb
+            })).map((bb => ({
+              id: bb.name.replace(/^models\//, ""),
+              name: bb.displayName
             })))
           }
         }))
       }
-      async ask(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Rk = Fk.filter((kk => "system" === kk.role)).map((kk => ({
-            text: kk.content
+      async ask(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const kb = cb.filter((bb => "system" === bb.role)).map((bb => ({
+            text: bb.content
           }))),
-          tk = HX(Fk).map((kk => ({
-            role: "assistant" === kk.role ? "model" : "user",
+          Wb = yT(cb).map((bb => ({
+            role: "assistant" === bb.role ? "model" : "user",
             parts: [{
-              text: kk.content
+              text: bb.content
             }]
           })));
-        return EX(oX, Bk.signal, (async Fk => {
-          var ak;
-          const Xk = await OX("gemini", `${this.baseUrl}/models/${encodeURIComponent(kk)}:streamGenerateContent?alt=sse`, {
+        return gT(YT, sb.signal, (async cb => {
+          var ab;
+          const Tb = await JT("gemini", `${this.baseUrl}/models/${encodeURIComponent(bb)}:streamGenerateContent?alt=sse`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
               systemInstruction: {
-                parts: Rk
+                parts: kb
               },
-              contents: tk,
+              contents: Wb,
               generationConfig: {
-                maxOutputTokens: LX
+                maxOutputTokens: hT
               },
-              ...uX("gemini", Bk)
+              ...PT("gemini", sb)
             })
-          }, Fk);
-          let bk = "",
-            wk = "",
-            dk = !1,
-            sk = !1;
-          const Vk = [];
-          return await ia(null !== (ak = Xk.body) && void 0 !== ak ? ak : new ReadableStream, (Fk => {
-            var Rk, tk, ak;
-            const Xk = Fk,
-              Jk = null === (Rk = Xk.candidates) || void 0 === Rk ? void 0 : Rk[0];
-            for (const kk of null !== (Ak = null === Jk || void 0 === Jk || null === (ek = Jk.content) || void 0 === ek ? void 0 : ek.parts) && void 0 !== Ak ? Ak : []) {
-              var Ak, ek, yk, fk;
-              if (kk.functionCall) Vk.push({
-                name: null !== (yk = kk.functionCall.name) && void 0 !== yk ? yk : "",
-                args: JSON.stringify(null !== (fk = kk.functionCall.args) && void 0 !== fk ? fk : {})
+          }, cb);
+          let Ub = "",
+            Ib = "",
+            Hb = !1,
+            fb = !1;
+          const Mb = [];
+          return await La(null !== (ab = Tb.body) && void 0 !== ab ? ab : new ReadableStream, (cb => {
+            var kb, Wb, ab;
+            const Tb = cb,
+              Xb = null === (kb = Tb.candidates) || void 0 === kb ? void 0 : kb[0];
+            for (const bb of null !== (nb = null === Xb || void 0 === Xb || null === (mb = Xb.content) || void 0 === mb ? void 0 : mb.parts) && void 0 !== nb ? nb : []) {
+              var nb, mb, lb, Qb;
+              if (bb.functionCall) Mb.push({
+                name: null !== (lb = bb.functionCall.name) && void 0 !== lb ? lb : "",
+                args: JSON.stringify(null !== (Qb = bb.functionCall.args) && void 0 !== Qb ? Qb : {})
               });
-              else if (kk.thought) {
-                var mk;
-                wk += null !== (mk = kk.text) && void 0 !== mk ? mk : ""
+              else if (bb.thought) {
+                var eb;
+                Ib += null !== (eb = bb.text) && void 0 !== eb ? eb : ""
               } else {
-                var Wk;
-                bk += null !== (Wk = kk.text) && void 0 !== Wk ? Wk : ""
+                var Cb;
+                Ub += null !== (Cb = bb.text) && void 0 !== Cb ? Cb : ""
               }
             }
-            dk ||= void 0 !== (null === (tk = Xk.promptFeedback) || void 0 === tk ? void 0 : tk.blockReason) || "SAFETY" === (null === Jk || void 0 === Jk ? void 0 : Jk.finishReason) || "PROHIBITED_CONTENT" === (null === Jk || void 0 === Jk ? void 0 : Jk.finishReason), sk ||= "MAX_TOKENS" === (null === Jk || void 0 === Jk ? void 0 : Jk.finishReason), null === (ak = Bk.onProgress) || void 0 === ak || ak.call(Bk, {
-              model: kk,
-              reasoningChars: wk.length,
-              answer: bk,
-              isCalling: Vk.length > 0
+            Hb ||= void 0 !== (null === (Wb = Tb.promptFeedback) || void 0 === Wb ? void 0 : Wb.blockReason) || "SAFETY" === (null === Xb || void 0 === Xb ? void 0 : Xb.finishReason) || "PROHIBITED_CONTENT" === (null === Xb || void 0 === Xb ? void 0 : Xb.finishReason), fb ||= "MAX_TOKENS" === (null === Xb || void 0 === Xb ? void 0 : Xb.finishReason), null === (ab = sb.onProgress) || void 0 === ab || ab.call(sb, {
+              model: bb,
+              reasoningChars: Ib.length,
+              answer: Ub,
+              isCalling: Mb.length > 0
             })
-          })), NX(kk, {
-            answer: bk,
-            reasoning: wk,
-            pBk: dk,
-            isCutShort: sk,
-            nativeCalls: Vk
-          }, Bk.callFormat, Bk.continueFrom)
+          })), tT(bb, {
+            answer: Ub,
+            reasoning: Ib,
+            qsb: Hb,
+            isCutShort: fb,
+            nativeCalls: Mb
+          }, sb.callFormat, sb.continueFrom)
         }))
       }
       headers() {
@@ -7590,26 +7590,26 @@ export const modules = {
       }
     }
 
-    function GX(kk, Fk, Bk) {
-      switch (kk) {
+    function GT(bb, cb, sb) {
+      switch (bb) {
         case "openrouter":
-          return new gX(Fk);
+          return new ET(cb);
         case "anthropic":
-          return new UX(Fk);
+          return new iT(cb);
         case "gemini":
-          return new cX(Fk);
+          return new OT(cb);
         case "openai":
-          return new MX("openai", sX.openai.baseUrl, Fk);
+          return new DT("openai", MT.openai.baseUrl, cb);
         case "custom":
-          return new MX("custom", null !== Bk && void 0 !== Bk ? Bk : "", Fk)
+          return new DT("custom", null !== sb && void 0 !== sb ? sb : "", cb)
       }
     }
-    const TX = {
+    const KT = {
         fast: "Fast",
         smart: "Smart",
         smartest: "Smartest"
       },
-      rX = {
+      ZT = {
         anthropic: {
           fast: [{
             id: "claude-haiku-5-5",
@@ -7716,436 +7716,436 @@ export const modules = {
         }
       };
 
-    function DX(kk) {
-      return /claude-(sonnet|opus|fable)|gpt-5(\.\d+)?($|-codex|-pro|-sol)|gpt-6(\.\d+)?-(sol|astra)|gemini-[\d.]+-pro|gemini-4/.test(kk) ? "mcp" : "simple"
+    function zT(bb) {
+      return /claude-(sonnet|opus|fable)|gpt-5(\.\d+)?($|-codex|-pro|-sol)|gpt-6(\.\d+)?-(sol|astra)|gemini-[\d.]+-pro|gemini-4/.test(bb) ? "mcp" : "simple"
     }
 
-    function zX(kk, Fk) {
-      return "custom" !== kk && /claude-|gpt-|gemini-/.test(Fk)
+    function qT(bb, cb) {
+      return "custom" !== bb && /claude-|gpt-|gemini-/.test(cb)
     }
 
-    function PX(kk, Fk, Bk) {
-      var Rk;
-      const tk = Bk.find((kk => kk.id === Fk));
+    function dT(bb, cb, sb) {
+      var kb;
+      const Wb = sb.find((bb => bb.id === cb));
       return {
-        id: Fk,
-        name: null !== (Rk = null === tk || void 0 === tk ? void 0 : tk.name) && void 0 !== Rk ? Rk : Fk,
-        callFormat: DX(Fk),
-        nativeTools: zX(kk, Fk)
+        id: cb,
+        name: null !== (kb = null === Wb || void 0 === Wb ? void 0 : Wb.name) && void 0 !== kb ? kb : cb,
+        callFormat: zT(cb),
+        nativeTools: qT(bb, cb)
       }
     }
 
-    function hX(kk, Fk) {
-      return "custom" !== kk ? function(kk, Fk) {
-        if ("custom" === kk) return [];
-        const Bk = new Set(Fk.map((kk => kk.id))),
-          Rk = rX[kk];
-        return Object.keys(Rk).flatMap((tk => {
-          const ak = Rk[tk].find((kk => Bk.has(kk.id)));
-          return ak ? [{
-            ...PX(kk, ak.id, Fk),
-            name: ak.name,
-            tier: tk
+    function AT(bb, cb) {
+      return "custom" !== bb ? function(bb, cb) {
+        if ("custom" === bb) return [];
+        const sb = new Set(cb.map((bb => bb.id))),
+          kb = ZT[bb];
+        return Object.keys(kb).flatMap((Wb => {
+          const ab = kb[Wb].find((bb => sb.has(bb.id)));
+          return ab ? [{
+            ...dT(bb, ab.id, cb),
+            name: ab.name,
+            tier: Wb
           }] : []
         }))
-      }(kk, Fk) : Fk.slice(0, 20).map((Bk => PX(kk, Bk.id, Fk)))
+      }(bb, cb) : cb.slice(0, 20).map((sb => dT(bb, sb.id, cb)))
     }
 
-    function qX(kk) {
-      var Fk;
-      return null !== (Fk = kk.find((kk => "smart" === kk.tier))) && void 0 !== Fk ? Fk : kk[0]
+    function wT(bb) {
+      var cb;
+      return null !== (cb = bb.find((bb => "smart" === bb.tier))) && void 0 !== cb ? cb : bb[0]
     }
 
-    function CX(kk) {
-      var Fk;
-      let Bk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      return null !== (Fk = kk.name) && void 0 !== Fk ? Fk : fX(kk.provider, kk.baseUrl, Bk)
+    function rT(bb) {
+      var cb;
+      let sb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      return null !== (cb = bb.name) && void 0 !== cb ? cb : eT(bb.provider, bb.baseUrl, sb)
     }
-    const ZX = "bloxdAiHelperKeys",
-      pX = {
+    const oT = "bloxdAiHelperKeys",
+      ST = {
         keys: [],
         selected: null,
         remember: !1
       };
 
-    function KX(kk, Fk) {
-      return kk.id === Fk.id || "custom" === kk.provider && "custom" === Fk.provider && kk.baseUrl === Fk.baseUrl
+    function RT(bb, cb) {
+      return bb.id === cb.id || "custom" === bb.provider && "custom" === cb.provider && bb.baseUrl === cb.baseUrl
     }
 
-    function xX(kk) {
-      if ("custom" !== kk.provider) return !0;
+    function vT(bb) {
+      if ("custom" !== bb.provider) return !0;
       try {
-        var Fk;
-        return new URL(null !== (Fk = kk.baseUrl) && void 0 !== Fk ? Fk : "").protocol.startsWith("http")
+        var cb;
+        return new URL(null !== (cb = bb.baseUrl) && void 0 !== cb ? cb : "").protocol.startsWith("http")
       } catch {
         return !1
       }
     }
 
-    function jX(kk) {
+    function FT(bb) {
       try {
-        return "undefined" === typeof window ? null : window[kk]
-      } catch (Fk) {
-        return console.warn(`AI Helper: no ${kk}`, Fk), null
+        return "undefined" === typeof window ? null : window[bb]
+      } catch (cb) {
+        return console.warn(`AI Helper: no ${bb}`, cb), null
       }
     }
-    const lX = new class {
-      constructor(kk, Fk) {
-        var Bk;
-        this.session = kk, this.local = Fk, this.state = void 0, this.listeners = new Set, this.ownsRemembered = !1, this.lastUsedAt = 0, this.getState = () => this.state, this.subscribe = kk => (this.listeners.add(kk), () => {
-          this.listeners.delete(kk)
+    const xT = new class {
+      constructor(bb, cb) {
+        var sb;
+        this.session = bb, this.local = cb, this.state = void 0, this.listeners = new Set, this.ownsRemembered = !1, this.lastUsedAt = 0, this.getState = () => this.state, this.subscribe = bb => (this.listeners.add(bb), () => {
+          this.listeners.delete(bb)
         });
-        for (const ak of [kk, Fk]) null !== ak && void 0 !== ak && ak.getItem(ZX) && !this.read(ak) && ak.removeItem(ZX);
-        const Rk = this.read(kk),
-          tk = this.read(Fk);
-        this.state = null !== Rk && void 0 !== Rk && Rk.remember ? null !== tk && void 0 !== tk && tk.remember ? tk : {
-          ...Rk,
+        for (const ab of [bb, cb]) null !== ab && void 0 !== ab && ab.getItem(oT) && !this.read(ab) && ab.removeItem(oT);
+        const kb = this.read(bb),
+          Wb = this.read(cb);
+        this.state = null !== kb && void 0 !== kb && kb.remember ? null !== Wb && void 0 !== Wb && Wb.remember ? Wb : {
+          ...kb,
           remember: !1
-        } : null !== (Bk = null !== Rk && void 0 !== Rk ? Rk : tk) && void 0 !== Bk ? Bk : pX, this.ownsRemembered = this.state.remember && null !== tk
+        } : null !== (sb = null !== kb && void 0 !== kb ? kb : Wb) && void 0 !== sb ? sb : ST, this.ownsRemembered = this.state.remember && null !== Wb
       }
       nextUsedAt() {
         return this.lastUsedAt = Math.max(Date.now(), this.lastUsedAt + 1), this.lastUsedAt
       }
       activeKey() {
-        const kk = this.state.selected,
-          Fk = kk ? this.state.keys.find((Fk => Fk.id === kk.keyId)) : void 0,
-          Bk = null === Fk || void 0 === Fk ? void 0 : Fk.models.find((Fk => Fk.id === (null === kk || void 0 === kk ? void 0 : kk.modelId)));
-        return Fk && Bk ? {
-          ...Fk,
-          model: Bk
+        const bb = this.state.selected,
+          cb = bb ? this.state.keys.find((cb => cb.id === bb.keyId)) : void 0,
+          sb = null === cb || void 0 === cb ? void 0 : cb.models.find((cb => cb.id === (null === bb || void 0 === bb ? void 0 : bb.modelId)));
+        return cb && sb ? {
+          ...cb,
+          model: sb
         } : null
       }
-      addKey(kk, Fk, Bk) {
-        var Rk, tk, ak;
-        const Xk = this.state.keys.find((Fk => "custom" === Fk.provider && Fk.baseUrl === kk.baseUrl)),
-          bk = "custom" !== kk.provider ? kk.provider : null !== (Rk = null === Xk || void 0 === Xk ? void 0 : Xk.id) && void 0 !== Rk ? Rk : `custom-${Date.now().toString(36)}${Math.random().toString(36).slice(2,6)}`,
-          wk = void 0 === Fk ? qX(kk.models) : null !== (tk = kk.models.find((kk => kk.id === Fk))) && void 0 !== tk ? tk : kk.models[0],
-          dk = this.state.keys.find((kk => kk.id === bk)),
-          sk = {
-            ...kk,
-            id: bk,
+      addKey(bb, cb, sb) {
+        var kb, Wb, ab;
+        const Tb = this.state.keys.find((cb => "custom" === cb.provider && cb.baseUrl === bb.baseUrl)),
+          Ub = "custom" !== bb.provider ? bb.provider : null !== (kb = null === Tb || void 0 === Tb ? void 0 : Tb.id) && void 0 !== kb ? kb : `custom-${Date.now().toString(36)}${Math.random().toString(36).slice(2,6)}`,
+          Ib = void 0 === cb ? wT(bb.models) : null !== (Wb = bb.models.find((bb => bb.id === cb))) && void 0 !== Wb ? Wb : bb.models[0],
+          Hb = this.state.keys.find((bb => bb.id === Ub)),
+          fb = {
+            ...bb,
+            id: Ub,
             usedAt: this.nextUsedAt(),
-            ...wk ? {
-              usedModelId: wk.id
+            ...Ib ? {
+              usedModelId: Ib.id
             } : {},
-            ...null !== dk && void 0 !== dk && dk.name && !kk.name ? {
-              name: dk.name
+            ...null !== Hb && void 0 !== Hb && Hb.name && !bb.name ? {
+              name: Hb.name
             } : {}
           },
-          Vk = this.state.keys.every((kk => kk.id !== bk)),
-          Jk = void 0 !== Bk && Bk !== bk && this.state.keys.some((kk => kk.id === Bk)),
-          Ak = Jk ? this.state.keys.filter((kk => kk.id !== bk)).map((kk => kk.id === Bk ? sk : kk)) : Vk ? [...this.state.keys, sk] : this.state.keys.map((kk => kk.id === bk ? sk : kk)),
-          ek = wk ? {
-            keyId: bk,
-            modelId: wk.id
-          } : (null === (ak = this.state.selected) || void 0 === ak ? void 0 : ak.keyId) === Bk && Jk ? null : this.state.selected;
+          Mb = this.state.keys.every((bb => bb.id !== Ub)),
+          Xb = void 0 !== sb && sb !== Ub && this.state.keys.some((bb => bb.id === sb)),
+          nb = Xb ? this.state.keys.filter((bb => bb.id !== Ub)).map((bb => bb.id === sb ? fb : bb)) : Mb ? [...this.state.keys, fb] : this.state.keys.map((bb => bb.id === Ub ? fb : bb)),
+          mb = Ib ? {
+            keyId: Ub,
+            modelId: Ib.id
+          } : (null === (ab = this.state.selected) || void 0 === ab ? void 0 : ab.keyId) === sb && Xb ? null : this.state.selected;
         return this.update({
-          keys: Ak,
-          selected: ek
-        }), bk
+          keys: nb,
+          selected: mb
+        }), Ub
       }
-      renameKey(kk, Fk) {
-        const Bk = Fk.replace(/\s+/g, " ").trim().slice(0, 30);
+      renameKey(bb, cb) {
+        const sb = cb.replace(/\s+/g, " ").trim().slice(0, 30);
         this.update({
-          keys: this.state.keys.map((Fk => {
-            if (Fk.id !== kk) return Fk;
+          keys: this.state.keys.map((cb => {
+            if (cb.id !== bb) return cb;
             const {
-              name: Rk,
-              ...tk
-            } = Fk;
-            return "" === Bk ? tk : {
-              ...tk,
-              name: Bk
+              name: kb,
+              ...Wb
+            } = cb;
+            return "" === sb ? Wb : {
+              ...Wb,
+              name: sb
             }
           }))
         })
       }
-      select(kk) {
-        const Fk = this.nextUsedAt(),
-          Bk = null === kk ? this.state.keys : this.state.keys.map((Bk => Bk.id === kk.keyId ? {
-            ...Bk,
-            usedAt: Fk,
-            usedModelId: kk.modelId
-          } : Bk));
+      select(bb) {
+        const cb = this.nextUsedAt(),
+          sb = null === bb ? this.state.keys : this.state.keys.map((sb => sb.id === bb.keyId ? {
+            ...sb,
+            usedAt: cb,
+            usedModelId: bb.modelId
+          } : sb));
         this.update({
-          keys: Bk,
-          selected: kk
+          keys: sb,
+          selected: bb
         })
       }
-      refreshModels(kk, Fk, Bk) {
-        const Rk = this.state.keys.find((Fk => Fk.id === kk));
-        if (!Rk || Bk && (Rk.key !== Bk.key || Rk.baseUrl !== Bk.baseUrl)) return !1;
-        const tk = [...Fk.map((kk => {
-            const Fk = Rk.models.find((Fk => Fk.id === kk.id));
+      refreshModels(bb, cb, sb) {
+        const kb = this.state.keys.find((cb => cb.id === bb));
+        if (!kb || sb && (kb.key !== sb.key || kb.baseUrl !== sb.baseUrl)) return !1;
+        const Wb = [...cb.map((bb => {
+            const cb = kb.models.find((cb => cb.id === bb.id));
             return {
-              ...kk,
-              ...!1 === (null === Fk || void 0 === Fk ? void 0 : Fk.nativeTools) ? {
+              ...bb,
+              ...!1 === (null === cb || void 0 === cb ? void 0 : cb.nativeTools) ? {
                 nativeTools: !1
               } : {},
-              ...null !== Fk && void 0 !== Fk && Fk.typed ? {
+              ...null !== cb && void 0 !== cb && cb.typed ? {
                 typed: !0
               } : {}
             }
-          })), ...Rk.models.filter((kk => kk.typed && !Fk.some((Fk => Fk.id === kk.id))))],
-          ak = this.state.selected,
-          Xk = (null === ak || void 0 === ak ? void 0 : ak.keyId) === kk && !tk.some((kk => kk.id === ak.modelId)),
-          bk = qX(tk);
+          })), ...kb.models.filter((bb => bb.typed && !cb.some((cb => cb.id === bb.id))))],
+          ab = this.state.selected,
+          Tb = (null === ab || void 0 === ab ? void 0 : ab.keyId) === bb && !Wb.some((bb => bb.id === ab.modelId)),
+          Ub = wT(Wb);
         return this.update({
-          keys: this.state.keys.map((Fk => Fk.id === kk ? {
-            ...Fk,
-            models: tk
-          } : Fk)),
-          selected: Xk ? bk ? {
-            keyId: kk,
-            modelId: bk.id
-          } : null : ak
+          keys: this.state.keys.map((cb => cb.id === bb ? {
+            ...cb,
+            models: Wb
+          } : cb)),
+          selected: Tb ? Ub ? {
+            keyId: bb,
+            modelId: Ub.id
+          } : null : ab
         }), !0
       }
-      stopNativeTools(kk, Fk) {
+      stopNativeTools(bb, cb) {
         this.update({
-          keys: this.state.keys.map((Bk => {
-            if (Bk.id !== kk) return Bk;
-            const Rk = Bk.models.map((kk => kk.id === Fk ? {
-              ...kk,
+          keys: this.state.keys.map((sb => {
+            if (sb.id !== bb) return sb;
+            const kb = sb.models.map((bb => bb.id === cb ? {
+              ...bb,
               nativeTools: !1
-            } : kk));
+            } : bb));
             return {
-              ...Bk,
-              models: Rk
+              ...sb,
+              models: kb
             }
           }))
         })
       }
-      removeKey(kk) {
-        var Fk;
-        const Bk = this.state,
-          Rk = Bk.keys.findIndex((Fk => Fk.id === kk)),
-          tk = Bk.keys[Rk];
-        if (!tk) return () => {};
-        const ak = Bk.keys.filter((Fk => Fk.id !== kk)),
-          Xk = (null === (Fk = Bk.selected) || void 0 === Fk ? void 0 : Fk.keyId) === kk ? null : Bk.selected;
+      removeKey(bb) {
+        var cb;
+        const sb = this.state,
+          kb = sb.keys.findIndex((cb => cb.id === bb)),
+          Wb = sb.keys[kb];
+        if (!Wb) return () => {};
+        const ab = sb.keys.filter((cb => cb.id !== bb)),
+          Tb = (null === (cb = sb.selected) || void 0 === cb ? void 0 : cb.keyId) === bb ? null : sb.selected;
         return this.update({
-          keys: ak,
-          selected: Xk,
-          remember: ak.length > 0 && Bk.remember
+          keys: ab,
+          selected: Tb,
+          remember: ab.length > 0 && sb.remember
         }), () => {
-          var Fk;
-          const ak = this.state.keys.some((kk => KX(kk, tk)));
-          if (ak) return;
-          const Xk = [...this.state.keys];
-          Xk.splice(Math.min(Rk, Xk.length), 0, tk);
-          const bk = (null === (Fk = Bk.selected) || void 0 === Fk ? void 0 : Fk.keyId) === kk && null === this.state.selected;
+          var cb;
+          const ab = this.state.keys.some((bb => RT(bb, Wb)));
+          if (ab) return;
+          const Tb = [...this.state.keys];
+          Tb.splice(Math.min(kb, Tb.length), 0, Wb);
+          const Ub = (null === (cb = sb.selected) || void 0 === cb ? void 0 : cb.keyId) === bb && null === this.state.selected;
           this.update({
-            keys: Xk,
-            selected: bk ? Bk.selected : this.state.selected,
-            remember: this.state.remember || Bk.remember
+            keys: Tb,
+            selected: Ub ? sb.selected : this.state.selected,
+            remember: this.state.remember || sb.remember
           })
         }
       }
       removeAll() {
-        this.update(pX), this.local && null !== this.local.getItem(ZX) && (this.local.setItem(ZX, JSON.stringify(pX)), this.local.removeItem(ZX))
+        this.update(ST), this.local && null !== this.local.getItem(oT) && (this.local.setItem(oT, JSON.stringify(ST)), this.local.removeItem(oT))
       }
-      setRemember(kk) {
-        var Fk;
-        const Bk = kk && !this.ownsRemembered ? this.read(this.local) : null,
-          Rk = (null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.keys) && void 0 !== Fk ? Fk : []).filter((kk => this.state.keys.every((Fk => !KX(Fk, kk)))));
+      setRemember(bb) {
+        var cb;
+        const sb = bb && !this.ownsRemembered ? this.read(this.local) : null,
+          kb = (null !== (cb = null === sb || void 0 === sb ? void 0 : sb.keys) && void 0 !== cb ? cb : []).filter((bb => this.state.keys.every((cb => !RT(cb, bb)))));
         this.update({
-          remember: kk,
-          keys: [...Rk, ...this.state.keys]
+          remember: bb,
+          keys: [...kb, ...this.state.keys]
         })
       }
-      otherTabChanged(kk) {
-        var Fk;
+      otherTabChanged(bb) {
+        var cb;
         if (!this.state.remember) return;
-        const Bk = kk ? this.parse(kk) : null;
-        Bk ? (this.state = Bk, this.ownsRemembered = Bk.remember) : (this.ownsRemembered = !1, this.state = {
+        const sb = bb ? this.parse(bb) : null;
+        sb ? (this.state = sb, this.ownsRemembered = sb.remember) : (this.ownsRemembered = !1, this.state = {
           ...this.state,
           remember: !1
-        }), null === (Fk = this.session) || void 0 === Fk || Fk.setItem(ZX, JSON.stringify(this.state)), this.notify()
+        }), null === (cb = this.session) || void 0 === cb || cb.setItem(oT, JSON.stringify(this.state)), this.notify()
       }
       notify() {
-        for (const kk of this.listeners) kk()
+        for (const bb of this.listeners) bb()
       }
-      update(kk) {
-        var Fk;
+      update(bb) {
+        var cb;
         this.state = {
           ...this.state,
-          ...kk
+          ...bb
         };
-        const Bk = JSON.stringify(this.state);
-        var Rk;
-        if (null === (Fk = this.session) || void 0 === Fk || Fk.setItem(ZX, Bk), this.state.remember && this.state.keys.length > 0) null === (Rk = this.local) || void 0 === Rk || Rk.setItem(ZX, Bk), this.ownsRemembered = !0;
+        const sb = JSON.stringify(this.state);
+        var kb;
+        if (null === (cb = this.session) || void 0 === cb || cb.setItem(oT, sb), this.state.remember && this.state.keys.length > 0) null === (kb = this.local) || void 0 === kb || kb.setItem(oT, sb), this.ownsRemembered = !0;
         else if (this.ownsRemembered) {
-          var tk, ak;
-          if (0 === this.state.keys.length) null === (ak = this.local) || void 0 === ak || ak.setItem(ZX, JSON.stringify(pX));
-          null === (tk = this.local) || void 0 === tk || tk.removeItem(ZX), this.ownsRemembered = !1
+          var Wb, ab;
+          if (0 === this.state.keys.length) null === (ab = this.local) || void 0 === ab || ab.setItem(oT, JSON.stringify(ST));
+          null === (Wb = this.local) || void 0 === Wb || Wb.removeItem(oT), this.ownsRemembered = !1
         }
         this.notify()
       }
-      read(kk) {
-        const Fk = null === kk || void 0 === kk ? void 0 : kk.getItem(ZX);
-        return Fk ? this.parse(Fk) : null
+      read(bb) {
+        const cb = null === bb || void 0 === bb ? void 0 : bb.getItem(oT);
+        return cb ? this.parse(cb) : null
       }
-      parse(kk) {
+      parse(bb) {
         try {
-          const Fk = {
-            ...pX,
-            ...JSON.parse(kk)
+          const cb = {
+            ...ST,
+            ...JSON.parse(bb)
           };
-          return Array.isArray(Fk.keys) && Fk.keys.every(xX) ? Fk : (console.warn("AI Helper: saved keys are in a form this version doesn't read"), null)
-        } catch (Fk) {
-          return console.warn("AI Helper: saved keys couldn't be read", Fk instanceof Error ? Fk.name : "error"), null
+          return Array.isArray(cb.keys) && cb.keys.every(vT) ? cb : (console.warn("AI Helper: saved keys are in a form this version doesn't read"), null)
+        } catch (cb) {
+          return console.warn("AI Helper: saved keys couldn't be read", cb instanceof Error ? cb.name : "error"), null
         }
       }
-    }(jX("sessionStorage"), jX("localStorage"));
+    }(FT("sessionStorage"), FT("localStorage"));
 
-    function nX() {
-      const kk = function() {
-          const [kk, Fk] = (0, Rk.useState)(lX.getState);
-          return (0, Rk.useEffect)((() => (Fk(lX.getState()), lX.subscribe((() => {
-            Fk(lX.getState())
-          })))), []), kk
+    function jT() {
+      const bb = function() {
+          const [bb, cb] = (0, kb.useState)(xT.getState);
+          return (0, kb.useEffect)((() => (cb(xT.getState()), xT.subscribe((() => {
+            cb(xT.getState())
+          })))), []), bb
         }(),
-        Fk = lX.activeKey();
+        cb = xT.activeKey();
       return {
-        ...kk,
-        active: Fk,
-        isSelected: Bk => {
-          return (Rk = Fk ? kk.selected : null) === (tk = Bk) || null !== Rk && null !== tk && Rk.keyId === tk.keyId && Rk.modelId === tk.modelId;
-          var Rk, tk
+        ...bb,
+        active: cb,
+        isSelected: sb => {
+          return (kb = cb ? bb.selected : null) === (Wb = sb) || null !== kb && null !== Wb && kb.keyId === Wb.keyId && kb.modelId === Wb.modelId;
+          var kb, Wb
         },
-        select: kk => {
-          lX.select(kk)
+        select: bb => {
+          xT.select(bb)
         },
-        removeKey: kk => lX.removeKey(kk),
-        renameKey: (kk, Fk) => {
-          lX.renameKey(kk, Fk)
+        removeKey: bb => xT.removeKey(bb),
+        renameKey: (bb, cb) => {
+          xT.renameKey(bb, cb)
         },
-        setRemember: kk => {
-          lX.setRemember(kk)
+        setRemember: bb => {
+          xT.setRemember(bb)
         }
       }
     }
-    async function IX(kk, Fk) {
-      var Bk;
+    async function pT(bb, cb) {
+      var sb;
       let {
-        provider: Rk,
-        key: tk,
-        baseUrl: ak,
-        modelName: Xk
-      } = kk;
-      const bk = null !== (Bk = null === Xk || void 0 === Xk ? void 0 : Xk.trim()) && void 0 !== Bk ? Bk : "";
-      let wk = [];
+        provider: kb,
+        key: Wb,
+        baseUrl: ab,
+        modelName: Tb
+      } = bb;
+      const Ub = null !== (sb = null === Tb || void 0 === Tb ? void 0 : Tb.trim()) && void 0 !== sb ? sb : "";
+      let Ib = [];
       try {
-        wk = (await GX(Rk, tk, ak).check(Fk)).models
-      } catch (dk) {
-        if (!("custom" === Rk && dk instanceof mX && ("failed" === dk.problem || "noModel" === dk.problem))) throw dk
+        Ib = (await GT(kb, Wb, ab).check(cb)).models
+      } catch (Hb) {
+        if (!("custom" === kb && Hb instanceof CT && ("failed" === Hb.problem || "noModel" === Hb.problem))) throw Hb
       }
-      if (null !== Fk && void 0 !== Fk && Fk.aborted) throw new DOMException("The AI key test was stopped", "AbortError");
-      return "" !== bk ? [{
-        ...PX(Rk, bk, wk),
+      if (null !== cb && void 0 !== cb && cb.aborted) throw new DOMException("The AI key test was stopped", "AbortError");
+      return "" !== Ub ? [{
+        ...dT(kb, Ub, Ib),
         typed: !0
-      }] : hX(Rk, wk)
+      }] : AT(kb, Ib)
     }
-    "undefined" !== typeof window && window.addEventListener("storage", (kk => {
-      kk.storageArea === jX("localStorage") && kk.key === ZX && lX.otherTabChanged(kk.newValue)
+    "undefined" !== typeof window && window.addEventListener("storage", (bb => {
+      bb.storageArea === FT("localStorage") && bb.key === oT && xT.otherTabChanged(bb.newValue)
     }));
-    async function QX(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Rk = GX(kk.provider, kk.key, kk.baseUrl);
-      let tk = {
-        ...Bk,
-        callFormat: kk.model.callFormat,
-        tools: kk.model.nativeTools ? Bk.tools : void 0
+    async function bU(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const kb = GT(bb.provider, bb.key, bb.baseUrl);
+      let Wb = {
+        ...sb,
+        callFormat: bb.model.callFormat,
+        tools: bb.model.nativeTools ? sb.tools : void 0
       };
-      const ak = async () => {
+      const ab = async () => {
         try {
-          return await Rk.ask(kk.model.id, Fk, tk)
-        } catch (Bk) {
-          if (! function(kk, Fk) {
-              var Bk, Rk, tk;
-              return 0 !== (null !== (Bk = null === (Rk = Fk.tools) || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Bk ? Bk : 0) && kk instanceof mX && "failed" === kk.problem && (400 === kk.status || 404 === kk.status && /\btool/i.test(null !== (tk = kk.detail) && void 0 !== tk ? tk : ""))
-            }(Bk, tk)) throw Bk;
-          const ak = {
-              ...tk,
+          return await kb.ask(bb.model.id, cb, Wb)
+        } catch (sb) {
+          if (! function(bb, cb) {
+              var sb, kb, Wb;
+              return 0 !== (null !== (sb = null === (kb = cb.tools) || void 0 === kb ? void 0 : kb.length) && void 0 !== sb ? sb : 0) && bb instanceof CT && "failed" === bb.problem && (400 === bb.status || 404 === bb.status && /\btool/i.test(null !== (Wb = bb.detail) && void 0 !== Wb ? Wb : ""))
+            }(sb, Wb)) throw sb;
+          const ab = {
+              ...Wb,
               tools: void 0
             },
-            Xk = await Rk.ask(kk.model.id, Fk, ak);
-          return lX.stopNativeTools(kk.id, kk.model.id), tk = ak, Xk
+            Tb = await kb.ask(bb.model.id, cb, ab);
+          return xT.stopNativeTools(bb.id, bb.model.id), Wb = ab, Tb
         }
       };
       try {
-        return await ak()
-      } catch (Vk) {
-        var Xk, bk;
-        if (!((sk = Vk) instanceof mX && void 0 !== sk.status && "noCredit" !== sk.problem && (429 === sk.status || 408 === sk.status || sk.status >= 500))) throw Vk;
-        return await (wk = Math.min(null !== (Xk = null !== (bk = Vk.retryAfterMs) && void 0 !== bk ? bk : Bk.retryWaitMs) && void 0 !== Xk ? Xk : 3e3, 2e4), dk = Bk.signal, new Promise(((kk, Fk) => {
-          if (null !== dk && void 0 !== dk && dk.aborted) return void Fk(new DOMException("The AI key request was stopped", "AbortError"));
-          const Bk = setTimeout(kk, wk);
-          null === dk || void 0 === dk || dk.addEventListener("abort", (() => {
-            clearTimeout(Bk), Fk(new DOMException("The AI key request was stopped", "AbortError"))
+        return await ab()
+      } catch (Mb) {
+        var Tb, Ub;
+        if (!((fb = Mb) instanceof CT && void 0 !== fb.status && "noCredit" !== fb.problem && (429 === fb.status || 408 === fb.status || fb.status >= 500))) throw Mb;
+        return await (Ib = Math.min(null !== (Tb = null !== (Ub = Mb.retryAfterMs) && void 0 !== Ub ? Ub : sb.retryWaitMs) && void 0 !== Tb ? Tb : 3e3, 2e4), Hb = sb.signal, new Promise(((bb, cb) => {
+          if (null !== Hb && void 0 !== Hb && Hb.aborted) return void cb(new DOMException("The AI key request was stopped", "AbortError"));
+          const sb = setTimeout(bb, Ib);
+          null === Hb || void 0 === Hb || Hb.addEventListener("abort", (() => {
+            clearTimeout(sb), cb(new DOMException("The AI key request was stopped", "AbortError"))
           }), {
             once: !0
           })
-        }))), ak()
+        }))), ab()
       }
-      var wk, dk, sk
+      var Ib, Hb, fb
     }
-    var kb = Bk(3439);
-    const Fb = "Super Bot.xd",
-      Bb = {
+    var cU = sb(3430);
+    const sU = "Super Bot.xd",
+      kU = {
         ovh: {
-          name: Fb,
+          name: sU,
           temperature: .6,
           nativeTools: !0,
           callFormat: "qwenXml"
         },
         deepseek: {
-          name: Fb,
+          name: sU,
           temperature: 1,
           nativeTools: !0,
           callFormat: "deepseek"
         }
       };
-    const Rb = "bloxdAiHelperSuperBot",
-      tb = "bloxdAiHelperDeepSeekNotice";
+    const WU = "bloxdAiHelperSuperBot",
+      aU = "bloxdAiHelperDeepSeekNotice";
 
-    function ab(kk) {
-      if ("deepseek" !== kk) return !0;
+    function TU(bb) {
+      if ("deepseek" !== bb) return !0;
       try {
-        return "undefined" !== typeof window && "1" === window.localStorage.getItem(tb)
+        return "undefined" !== typeof window && "1" === window.localStorage.getItem(aU)
       } catch {
         return !1
       }
     }
 
-    function Xb() {
+    function UU() {
       try {
-        return "undefined" !== typeof window && "1" === window.sessionStorage.getItem(Rb)
+        return "undefined" !== typeof window && "1" === window.sessionStorage.getItem(WU)
       } catch {
         return !1
       }
     }
-    const bb = new class {
+    const IU = new class {
       constructor() {
-        this.state = void 0, this.listeners = new Set, this.refreshing = null, this.getState = () => this.state, this.subscribe = kk => (this.listeners.add(kk), () => {
-          this.listeners.delete(kk)
+        this.state = void 0, this.listeners = new Set, this.refreshing = null, this.getState = () => this.state, this.subscribe = bb => (this.listeners.add(bb), () => {
+          this.listeners.delete(bb)
         }), this.state = {
-          picked: Xb(),
+          picked: UU(),
           status: null,
           canBuySuperRank: null
-        }, lX.subscribe((() => {
-          null !== lX.getState().selected && this.state.picked && this.update({
+        }, xT.subscribe((() => {
+          null !== xT.getState().selected && this.state.picked && this.update({
             picked: !1
           })
         }))
       }
       isAnswering() {
-        var kk;
-        return this.state.picked && "ok" === (null === (kk = this.state.status) || void 0 === kk ? void 0 : kk.availability)
+        var bb;
+        return this.state.picked && "ok" === (null === (bb = this.state.status) || void 0 === bb ? void 0 : bb.availability)
       }
-      AA() {
-        lX.select(null), this.update({
+      Wn() {
+        xT.select(null), this.update({
           picked: !0
         })
       }
@@ -8154,105 +8154,105 @@ export const modules = {
           picked: !1
         })
       }
-      setStatus(kk) {
-        const Fk = this.state.picked && Vb(kk, this.state.canBuySuperRank) && ab(kk.provider);
+      setStatus(bb) {
+        const cb = this.state.picked && XU(bb, this.state.canBuySuperRank) && TU(bb.provider);
         this.update({
-          status: kk,
-          picked: Fk
+          status: bb,
+          picked: cb
         })
       }
-      setCanBuySuperRank(kk) {
+      setCanBuySuperRank(bb) {
         const {
-          status: Fk
+          status: cb
         } = this.state;
         this.update({
-          canBuySuperRank: kk,
-          picked: this.state.picked && (null === Fk || Vb(Fk, kk))
+          canBuySuperRank: bb,
+          picked: this.state.picked && (null === cb || XU(cb, bb))
         })
       }
       async refresh() {
-        return this.refreshing ??= (0, Zt.postToGameServer)("/ai-helper/super-bot-xd/status", {}).then((kk => {
-          this.setStatus(kk)
-        })).catch((kk => {
-          console.warn("AI Helper: Super Bot.xd's usage couldn't be checked", kk)
+        return this.refreshing ??= (0, oW.postToGameServer)("/ai-helper/super-bot-xd/status", {}).then((bb => {
+          this.setStatus(bb)
+        })).catch((bb => {
+          console.warn("AI Helper: Super Bot.xd's usage couldn't be checked", bb)
         })).finally((() => {
           this.refreshing = null
         })), this.refreshing
       }
-      update(kk) {
+      update(bb) {
         this.state = {
           ...this.state,
-          ...kk
+          ...bb
         };
         try {
-          window.sessionStorage.setItem(Rb, this.state.picked ? "1" : "0")
+          window.sessionStorage.setItem(WU, this.state.picked ? "1" : "0")
         } catch {}
-        for (const Fk of this.listeners) Fk()
+        for (const cb of this.listeners) cb()
       }
     };
 
-    function wb() {
-      const [kk, Fk] = (0, Rk.useState)(bb.getState);
-      return (0, Rk.useEffect)((() => (Fk(bb.getState()), bb.subscribe((() => {
-        Fk(bb.getState())
-      })))), []), kk
+    function HU() {
+      const [bb, cb] = (0, kb.useState)(IU.getState);
+      return (0, kb.useEffect)((() => (cb(IU.getState()), IU.subscribe((() => {
+        cb(IU.getState())
+      })))), []), bb
     }
 
-    function db(kk) {
-      var Fk;
-      let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-      if (null === kk) return "Checking whether Super Bot.xd can answer for you\u2026";
-      switch (kk.availability) {
+    function fU(bb) {
+      var cb;
+      let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+      if (null === bb) return "Checking whether Super Bot.xd can answer for you\u2026";
+      switch (bb.availability) {
         case "ok":
           return null;
         case "guest":
           return "Log in to use Super Bot.xd.";
         case "tooNew":
-          return `Super Bot.xd opens once your account is a week old: ${mb((null!==(Fk=kk.availableFrom)&&void 0!==Fk?Fk:Bk)-Bk)} to go.`;
+          return `Super Bot.xd opens once your account is a week old: ${CU((null!==(cb=bb.availableFrom)&&void 0!==cb?cb:sb)-sb)} to go.`;
         case "noUsageLeft":
-          return kk.isSuper ? `You've used this week's Super Bot.xd usage. It comes back ${function(kk,Fk){const Bk=Math.ceil((kk-Fk)/36e5);if(Bk<=24)return Bk<=1?"within the hour":`in ${Bk} hours`;return`in ${mb(kk-Fk)}`}(kk.resetsAt,Bk)}.` : "0 usage remaining - upgrade to Super for a more powerful AI.";
+          return bb.isSuper ? `You've used this week's Super Bot.xd usage. It comes back ${function(bb,cb){const sb=Math.ceil((bb-cb)/36e5);if(sb<=24)return sb<=1?"within the hour":`in ${sb} hours`;return`in ${CU(bb-cb)}`}(bb.resetsAt,sb)}.` : "0 usage remaining - upgrade to Super for a more powerful AI.";
         case "unavailable":
           return "Super Bot.xd can't answer right now. Try again later."
       }
     }
 
-    function sb(kk) {
-      return null !== kk && !kk.isSuper && "noUsageLeft" === kk.availability
+    function MU(bb) {
+      return null !== bb && !bb.isSuper && "noUsageLeft" === bb.availability
     }
 
-    function Vb(kk, Fk) {
-      return "ok" === kk.availability || !1 !== Fk && sb(kk)
+    function XU(bb, cb) {
+      return "ok" === bb.availability || !1 !== cb && MU(bb)
     }
 
-    function Jb(kk) {
-      return !0 === kk.canBuySuperRank && sb(kk.status)
+    function nU(bb) {
+      return !0 === bb.canBuySuperRank && MU(bb.status)
     }
 
-    function Ab(kk) {
-      return Jb(kk) ? null : db(kk.status)
+    function mU(bb) {
+      return nU(bb) ? null : fU(bb.status)
     }
 
-    function eb(kk) {
-      return kk.picked && null === Ab(kk)
+    function lU(bb) {
+      return bb.picked && null === mU(bb)
     }
 
-    function yb(kk) {
-      return kk.picked && Jb(kk)
+    function QU(bb) {
+      return bb.picked && nU(bb)
     }
 
-    function fb(kk) {
-      return `Usage left: ${kk.left}`
+    function eU(bb) {
+      return `Usage left: ${bb.left}`
     }
 
-    function mb(kk) {
-      const Fk = Math.max(1, Math.ceil(kk / wX.f));
-      return 1 === Fk ? "1 day" : `${Fk} days`
+    function CU(bb) {
+      const cb = Math.max(1, Math.ceil(bb / HT.j));
+      return 1 === cb ? "1 day" : `${cb} days`
     }
 
-    function Wb(kk, Fk) {
-      const Bk = "unavailable" === kk ? db(Fk) : null;
-      if (Bk) return `${Bk} Bot.xd is answering instead.`;
-      switch (kk) {
+    function NU(bb, cb) {
+      const sb = "unavailable" === bb ? fU(cb) : null;
+      if (sb) return `${sb} Bot.xd is answering instead.`;
+      switch (bb) {
         case "busy":
           return "Super Bot.xd is busy, so Bot.xd is answering this one.";
         case "tooLong":
@@ -8267,91 +8267,91 @@ export const modules = {
           return "Super Bot.xd couldn't answer, so Bot.xd is answering this one."
       }
     }
-    async function vb(kk) {
-      if (function(kk) {
-          var Fk, Bk, Rk, tk, ak, Xk, bk;
-          return kk.messages.length > 12 || kk.messages.some((kk => kk.content.length > Ct)) || (null !== (Fk = null === (Bk = kk.toolsJson) || void 0 === Bk ? void 0 : Bk.length) && void 0 !== Fk ? Fk : 0) > 1e5 || (null !== (Rk = null === (tk = kk.request) || void 0 === tk ? void 0 : tk.length) && void 0 !== Rk ? Rk : 0) > Ct || (null !== (ak = null === (Xk = kk.code) || void 0 === Xk ? void 0 : Xk.length) && void 0 !== ak ? ak : 0) > Ct || (null !== (bk = kk.toolResults) && void 0 !== bk ? bk : []).some((kk => kk.text.length > 1e5))
-        }(kk)) return {
+    async function VU(bb) {
+      if (function(bb) {
+          var cb, sb, kb, Wb, ab, Tb, Ub;
+          return bb.messages.length > 12 || bb.messages.some((bb => bb.content.length > rW)) || (null !== (cb = null === (sb = bb.toolsJson) || void 0 === sb ? void 0 : sb.length) && void 0 !== cb ? cb : 0) > 1e5 || (null !== (kb = null === (Wb = bb.request) || void 0 === Wb ? void 0 : Wb.length) && void 0 !== kb ? kb : 0) > rW || (null !== (ab = null === (Tb = bb.code) || void 0 === Tb ? void 0 : Tb.length) && void 0 !== ab ? ab : 0) > rW || (null !== (Ub = bb.toolResults) && void 0 !== Ub ? Ub : []).some((bb => bb.text.length > 1e5))
+        }(bb)) return {
         outcome: "tooLarge"
       };
       try {
-        return await (0, Zt.postToGameServer)("/ai-helper/super-bot-xd/ask", kk)
-      } catch (Fk) {
-        if (Fk instanceof dX.c && 413 === Fk.httpCode) return {
+        return await (0, oW.postToGameServer)("/ai-helper/super-bot-xd/ask", bb)
+      } catch (cb) {
+        if (cb instanceof fT.d && 413 === cb.httpCode) return {
           outcome: "tooLarge"
         };
-        throw Fk
+        throw cb
       }
     }
-    async function ib(kk, Fk) {
-      return Fk ? await new Promise(((Bk, Rk) => {
-        const tk = () => {
-          Rk(new DOMException("The Super Bot.xd request was stopped", "AbortError"))
+    async function LU(bb, cb) {
+      return cb ? await new Promise(((sb, kb) => {
+        const Wb = () => {
+          kb(new DOMException("The Super Bot.xd request was stopped", "AbortError"))
         };
-        Fk.aborted ? tk() : (Fk.addEventListener("abort", tk, {
+        cb.aborted ? Wb() : (cb.addEventListener("abort", Wb, {
           once: !0
-        }), kk.then(Bk, Rk).finally((() => {
-          Fk.removeEventListener("abort", tk)
+        }), bb.then(sb, kb).finally((() => {
+          cb.removeEventListener("abort", Wb)
         })))
-      })) : await kk
+      })) : await bb
     }
-    var Yb = Bk(29),
-      ob = Bk(22),
-      Lb = Bk(2170);
-    let Ob = null;
+    var uU = sb(26),
+      YU = sb(19),
+      hU = sb(2180);
+    let JU = null;
 
-    function Eb() {
-      Ob ??= Promise.resolve().then((() => Bk(2182))), Ob.then((kk => {
+    function gU() {
+      JU ??= Promise.resolve().then((() => sb(2195))), JU.then((bb => {
         let {
-          purchasesAllowed: Fk
-        } = kk;
-        bb.setCanBuySuperRank(Fk())
-      }), (kk => {
-        Ob = null, console.warn("AI Helper: couldn't find out whether Super rank is sold here", kk)
+          purchasesAllowed: cb
+        } = bb;
+        IU.setCanBuySuperRank(cb())
+      }), (bb => {
+        JU = null, console.warn("AI Helper: couldn't find out whether Super rank is sold here", bb)
       }))
     }
-    let Sb = !1,
-      Nb = null;
-    async function Hb() {
-      if (Sb) return !0;
-      Sb = !0;
+    let BU = !1,
+      tU = null;
+    async function yU() {
+      if (BU) return !0;
+      BU = !0;
       try {
-        var kk;
-        if (await bb.refresh(), !yb(bb.getState())) return !1;
+        var bb;
+        if (await IU.refresh(), !QU(IU.getState())) return !1;
         document.activeElement instanceof HTMLElement && document.activeElement.blur();
         const [{
-          NotificationProvider: Fk
+          NotificationProvider: cb
         }, {
-          WorldCodeAiOutOfUsage: Rk
-        }] = await Promise.all([Promise.resolve().then((() => Bk(1300))), Bk.e(346).then((() => Bk(60936)))]);
-        null === (kk = Nb) || void 0 === kk || kk.tearDownNotification();
-        const tk = Fk.showCustomPopup({
-          body: kk => (0, Xk.jsx)(Rk, {
+          WorldCodeAiOutOfUsage: kb
+        }] = await Promise.all([Promise.resolve().then((() => sb(1332))), sb.e(346).then((() => sb(60602)))]);
+        null === (bb = tU) || void 0 === bb || bb.tearDownNotification();
+        const Wb = cb.showCustomPopup({
+          body: bb => (0, Tb.jsx)(kb, {
             onGetSuperRank: () => {
-              kk(),
+              bb(),
                 function() {
-                  Yb.o.Hf("OpenStoreFromCodeEditor"), (0, Lb.m)({
+                  uU.j.QQ("OpenStoreFromCodeEditor"), (0, hU.o)({
                     mode: "self",
                     source: "codeEditorAi",
                     openItem: "superRank"
                   });
-                  const kk = Yb.o.subscribe("appManagerUpdated|openEverythingMenuName", (() => {
-                    null === ob.c.get("openEverythingMenuName") && (Yb.o.unsubscribe(kk), bb.refresh())
+                  const bb = uU.j.subscribe("appManagerUpdated|openEverythingMenuName", (() => {
+                    null === YU.d.get("openEverythingMenuName") && (uU.j.unsubscribe(bb), IU.refresh())
                   }))
                 }()
             }
           })
         });
-        return Nb = tk, tk.getResult().finally((() => {
-          Nb === tk && (Nb = null)
+        return tU = Wb, Wb.getResult().finally((() => {
+          tU === Wb && (tU = null)
         })), !0
-      } catch (Fk) {
-        return console.warn("AI Helper: the out of usage popup couldn't be opened", Fk), !0
+      } catch (cb) {
+        return console.warn("AI Helper: the out of usage popup couldn't be opened", cb), !0
       } finally {
-        Sb = !1
+        BU = !1
       }
     }
-    const ub = {
+    const PU = {
         wood: ["Maple Log"],
         log: ["Maple Log"],
         logs: ["Maple Log"],
@@ -8429,7 +8429,7 @@ export const modules = {
         glowstone: ["Glow Lamp"],
         "sea lantern": ["Glow Lamp", "Lantern"]
       },
-      Mb = {
+      DU = {
         wooden: "wood",
         golden: "gold",
         oak: "maple",
@@ -8441,7 +8441,7 @@ export const modules = {
         egg: "orb",
         stained: ""
       },
-      gb = {
+      EU = {
         teleport: ["setPosition"],
         tp: ["setPosition"],
         heal: ["setHealth", "getHealth"],
@@ -8504,1240 +8504,1240 @@ export const modules = {
         green: ["sendMessage"],
         red: ["sendMessage"]
       },
-      Ub = new Set("a an and are as at be but by can do does for from get got give go has have he her his how i if in into is it its make me my no not of on or our please so that the their them then there they this to u up us was we what when where which who will with you your want wanna like just also add let lets makes".split(" "));
+      iU = new Set("a an and are as at be but by can do does for from get got give go has have he her his how i if in into is it its make me my no not of on or our please so that the their them then there they this to u up us was we what when where which who will with you your want wanna like just also add let lets makes".split(" "));
 
-    function cb(kk) {
-      return kk.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9]+/).filter((kk => kk.length > 1))
+    function OU(bb) {
+      return bb.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9]+/).filter((bb => bb.length > 1))
     }
 
-    function Gb(kk) {
-      return kk.length > 4 && kk.endsWith("ies") ? `${kk.slice(0,-3)}y` : kk.length > 3 && kk.endsWith("s") && !kk.endsWith("ss") ? kk.slice(0, -1) : kk
+    function GU(bb) {
+      return bb.length > 4 && bb.endsWith("ies") ? `${bb.slice(0,-3)}y` : bb.length > 3 && bb.endsWith("s") && !bb.endsWith("ss") ? bb.slice(0, -1) : bb
     }
 
-    function Tb(kk) {
-      return new Set(cb(kk).map((kk => Gb(kk))))
+    function KU(bb) {
+      return new Set(OU(bb).map((bb => GU(bb))))
     }
-    const rb = /^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(|^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/gm;
+    const ZU = /^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(|^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/gm;
 
-    function Db(kk) {
-      return kk.split("\n").map((kk => kk.replace(/\/\/.*$/, "").replace(/(["'`])(?:\\.|(?!\1).)*\1/g, '""'))).join("\n").replace(/\/\*[^]*?\*\//g, (kk => kk.replace(/[^\n]/g, ""))).split("\n")
-    }
-
-    function zb(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const Bk = [],
-        Rk = new Set,
-        tk = Db(Fk ? kk : (0, JF.y)(kk, /require(?=\s*\(\s*["'`](?:\.\.?\/|@plugins\/))/g, JF.r, (() => "projectRequire"))),
-        ak = new Set([...tk.join("\n").matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)/g)].map((kk => kk[1])));
-      return tk.forEach(((kk, Fk) => {
-        for (const tk of (0, JF.i)(kk, /(global|window|document|process|require)\b\s*[.([]/g, JF.r)) Rk.has(tk[1]) || ak.has(tk[1]) || (Rk.add(tk[1]), Bk.push(`Line ${Fk+1} uses "${tk[1]}", which World Code doesn't have, so it throws there. Callbacks need no export: function onPlayerJoin(playerId) {} is enough.`))
-      })), Bk
+    function zU(bb) {
+      return bb.split("\n").map((bb => bb.replace(/\/\/.*$/, "").replace(/(["'`])(?:\\.|(?!\1).)*\1/g, '""'))).join("\n").replace(/\/\*[^]*?\*\//g, (bb => bb.replace(/[^\n]/g, ""))).split("\n")
     }
 
-    function Pb(kk) {
-      const Fk = kk.split("\n"),
-        Bk = [];
-      return Fk.forEach(((kk, Rk) => {
-        var tk, ak, Xk, bk, wk;
-        const dk = kk.indexOf("api.setCurrency(");
-        if (-1 === dk) return;
-        const sk = Fk.slice(Rk, Rk + 3).join(" ").slice(dk),
-          Vk = sk.slice(0, sk.indexOf("}") + 1 || void 0),
-          Jk = null === (tk = /amount\s*:\s*(\d+)/.exec(Vk)) || void 0 === tk ? void 0 : tk[1];
-        if (!/persistent\s*:\s*true/.test(Vk) || void 0 === Jk) return;
-        const Ak = [null !== (ak = Fk[Rk - 2]) && void 0 !== ak ? ak : "", null !== (Xk = Fk[Rk - 1]) && void 0 !== Xk ? Xk : "", kk.slice(0, dk)].join(" ");
-        if (/\bif\s*\(|\belse\b|\?\s*$|&&\s*$/.test(Ak)) return;
-        const ek = null !== (bk = null === (wk = /api\.setCurrency\(\s*[^,]+,\s*["']([^"']+)["']/.exec(Vk)) || void 0 === wk ? void 0 : wk[1]) && void 0 !== bk ? bk : "coins";
-        Bk.push(`Line ${Rk+1} sets the saved "${ek}" back to ${Jk} each time it runs, so a player who rejoins loses what they had. Set it only when api.getCurrencyAmount(playerId, "${ek}") is null.`)
-      })), Bk
+    function qU(bb) {
+      let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const sb = [],
+        kb = new Set,
+        Wb = zU(cb ? bb : (0, Mc.t)(bb, /require(?=\s*\(\s*["'`](?:\.\.?\/|@plugins\/))/g, Mc.m, (() => "projectRequire"))),
+        ab = new Set([...Wb.join("\n").matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)/g)].map((bb => bb[1])));
+      return Wb.forEach(((bb, cb) => {
+        for (const Wb of (0, Mc.e)(bb, /(global|window|document|process|require)\b\s*[.([]/g, Mc.m)) kb.has(Wb[1]) || ab.has(Wb[1]) || (kb.add(Wb[1]), sb.push(`Line ${cb+1} uses "${Wb[1]}", which World Code doesn't have, so it throws there. Callbacks need no export: function onPlayerJoin(playerId) {} is enough.`))
+      })), sb
     }
 
-    function hb(kk) {
-      var Fk, Bk;
-      const Rk = null !== (Fk = null === (Bk = kk.split("### Parameters:")[1]) || void 0 === Bk ? void 0 : Bk.split("###")[0]) && void 0 !== Fk ? Fk : "",
-        tk = [];
-      for (const ak of Rk.split("\n")) {
-        const kk = /^\|\s*([A-Za-z_$][\w$]*)\s*\|(?:\s*`([^`]*)`)?/.exec(ak);
-        kk && "Parameter" !== kk[1] && tk.push({
-          name: kk[1],
-          type: kk[2]
+    function dU(bb) {
+      const cb = bb.split("\n"),
+        sb = [];
+      return cb.forEach(((bb, kb) => {
+        var Wb, ab, Tb, Ub, Ib;
+        const Hb = bb.indexOf("api.setCurrency(");
+        if (-1 === Hb) return;
+        const fb = cb.slice(kb, kb + 3).join(" ").slice(Hb),
+          Mb = fb.slice(0, fb.indexOf("}") + 1 || void 0),
+          Xb = null === (Wb = /amount\s*:\s*(\d+)/.exec(Mb)) || void 0 === Wb ? void 0 : Wb[1];
+        if (!/persistent\s*:\s*true/.test(Mb) || void 0 === Xb) return;
+        const nb = [null !== (ab = cb[kb - 2]) && void 0 !== ab ? ab : "", null !== (Tb = cb[kb - 1]) && void 0 !== Tb ? Tb : "", bb.slice(0, Hb)].join(" ");
+        if (/\bif\s*\(|\belse\b|\?\s*$|&&\s*$/.test(nb)) return;
+        const mb = null !== (Ub = null === (Ib = /api\.setCurrency\(\s*[^,]+,\s*["']([^"']+)["']/.exec(Mb)) || void 0 === Ib ? void 0 : Ib[1]) && void 0 !== Ub ? Ub : "coins";
+        sb.push(`Line ${kb+1} sets the saved "${mb}" back to ${Xb} each time it runs, so a player who rejoins loses what they had. Set it only when api.getCurrencyAmount(playerId, "${mb}") is null.`)
+      })), sb
+    }
+
+    function AU(bb) {
+      var cb, sb;
+      const kb = null !== (cb = null === (sb = bb.split("### Parameters:")[1]) || void 0 === sb ? void 0 : sb.split("###")[0]) && void 0 !== cb ? cb : "",
+        Wb = [];
+      for (const ab of kb.split("\n")) {
+        const bb = /^\|\s*([A-Za-z_$][\w$]*)\s*\|(?:\s*`([^`]*)`)?/.exec(ab);
+        bb && "Parameter" !== bb[1] && Wb.push({
+          name: bb[1],
+          type: bb[2]
         })
       }
-      return tk
+      return Wb
     }
 
-    function qb(kk) {
-      return hb(kk).map((kk => kk.name))
+    function wU(bb) {
+      return AU(bb).map((bb => bb.name))
     }
-    const Cb = "(\"[^\"\\n]*\"|'[^'\\n]*')";
+    const rU = "(\"[^\"\\n]*\"|'[^'\\n]*')";
 
-    function Zb(kk, Fk) {
-      const Bk = [];
-      let Rk = 0,
-        tk = "",
-        ak = "",
-        Xk = Fk;
-      for (let bk = Fk; bk < kk.length; bk++) {
-        const Fk = kk[bk];
-        if (tk) "\\" === Fk ? bk++ : Fk === tk && (tk = "");
-        else if ("/" === Fk && "/" === kk[bk + 1]) {
-          ak += kk.slice(Xk, bk);
-          const Fk = kk.indexOf("\n", bk);
-          bk = -1 === Fk ? kk.length : Fk, Xk = bk
-        } else if ('"' === Fk || "'" === Fk || "`" === Fk) tk = Fk;
-        else if ("[" === Fk || "{" === Fk || "(" === Fk) Rk++;
-        else if (("]" === Fk || "}" === Fk || ")" === Fk) && Rk > 0) Rk--;
+    function oU(bb, cb) {
+      const sb = [];
+      let kb = 0,
+        Wb = "",
+        ab = "",
+        Tb = cb;
+      for (let Ub = cb; Ub < bb.length; Ub++) {
+        const cb = bb[Ub];
+        if (Wb) "\\" === cb ? Ub++ : cb === Wb && (Wb = "");
+        else if ("/" === cb && "/" === bb[Ub + 1]) {
+          ab += bb.slice(Tb, Ub);
+          const cb = bb.indexOf("\n", Ub);
+          Ub = -1 === cb ? bb.length : cb, Tb = Ub
+        } else if ('"' === cb || "'" === cb || "`" === cb) Wb = cb;
+        else if ("[" === cb || "{" === cb || "(" === cb) kb++;
+        else if (("]" === cb || "}" === cb || ")" === cb) && kb > 0) kb--;
         else {
-          if (")" === Fk) {
-            const Fk = (ak + kk.slice(Xk, bk)).trim();
-            return "" !== Fk || Bk.length > 0 ? [...Bk, Fk] : Bk
+          if (")" === cb) {
+            const cb = (ab + bb.slice(Tb, Ub)).trim();
+            return "" !== cb || sb.length > 0 ? [...sb, cb] : sb
           }
-          "," === Fk && 0 === Rk && (Bk.push((ak + kk.slice(Xk, bk)).trim()), ak = "", Xk = bk + 1)
+          "," === cb && 0 === kb && (sb.push((ab + bb.slice(Tb, Ub)).trim()), ab = "", Tb = Ub + 1)
         }
       }
       return []
     }
 
-    function pb(kk, Fk) {
-      var Bk;
-      if (!/^[A-Za-z_$][\w$]*$/.test(Fk)) return;
-      const Rk = Fk.replaceAll("$", "\\$"),
-        tk = `\\((?:[^()]*[\\s,])?${Rk}(?![\\w$])[^()]*\\)`,
-        ak = new RegExp(`(?:const|let|var)\\s+${Rk}(?![\\w$])|${Rk}\\s*(?:\\+?=(?![=>])|=>)|${tk}\\s*=>|function\\s*[\\w$]*\\s*${tk}`, "g");
-      return 1 === (0, JF.i)(kk, ak, JF.r).length ? null === (Bk = new RegExp(`\\b(?:const|let|var)\\s+${Rk}\\s*=\\s*${Cb}\\s*(?:;|//|$)`, "m").exec(kk)) || void 0 === Bk ? void 0 : Bk[1] : void 0
+    function SU(bb, cb) {
+      var sb;
+      if (!/^[A-Za-z_$][\w$]*$/.test(cb)) return;
+      const kb = cb.replaceAll("$", "\\$"),
+        Wb = `\\((?:[^()]*[\\s,])?${kb}(?![\\w$])[^()]*\\)`,
+        ab = new RegExp(`(?:const|let|var)\\s+${kb}(?![\\w$])|${kb}\\s*(?:\\+?=(?![=>])|=>)|${Wb}\\s*=>|function\\s*[\\w$]*\\s*${Wb}`, "g");
+      return 1 === (0, Mc.e)(bb, ab, Mc.m).length ? null === (sb = new RegExp(`\\b(?:const|let|var)\\s+${kb}\\s*=\\s*${rU}\\s*(?:;|//|$)`, "m").exec(bb)) || void 0 === sb ? void 0 : sb[1] : void 0
     }
 
-    function Kb(kk, Fk, Bk) {
-      let Rk;
-      const tk = function(kk) {
-        const Fk = kk.split("\n").slice(1).map((kk => kk.trim())).find((kk => "" !== kk && !kk.startsWith("#") && !kk.startsWith("|") && !kk.startsWith("**") && !kk.startsWith("```")));
-        if (!Fk) return "";
-        const Bk = Fk.search(/\.\s/),
-          Rk = -1 === Bk ? Fk : Fk.slice(0, Bk + 1);
-        return Rk.length > 110 ? `${Rk.slice(0,107)}...` : Rk
-      }(Bk);
-      return Rk = "api" === kk ? `api.${Fk}(${qb(Bk).join(", ")})${tk?` \u2014 ${tk}`:""}` : "callback" === kk ? `${Fk}(${qb(Bk).join(", ")})${tk?` \u2014 ${tk}`:""}` : "clientOption" === kk ? `${Fk}: ${function(kk){var Fk,Bk;return null!==(Fk=null===(Bk=/\*\*Type:\*\*\s*`([^`]+)`/.exec(kk))||void 0===Bk?void 0:Bk[1])&&void 0!==Fk?Fk:""}(Bk)}${tk?` \u2014 ${tk}`:""}`:Fk,{kind:kk,name:Fk,text:Bk,line:Rk,nameWords:Tb(Fk),textWords:Tb(Bk)}}function xb(kk){return kk.toLowerCase().split(/[^a-z0-9]+/).filter((kk=>""!==kk&&"of"!==kk&&"the"!==kk)).sort().join(" ")}const jb=new Set(["block","item"]);function lb(kk){let{names:Fk,isSure:Bk}=kk;return 0===Fk.length?"":1!==Fk.length||Bk?`
+    function RU(bb, cb, sb) {
+      let kb;
+      const Wb = function(bb) {
+        const cb = bb.split("\n").slice(1).map((bb => bb.trim())).find((bb => "" !== bb && !bb.startsWith("#") && !bb.startsWith("|") && !bb.startsWith("**") && !bb.startsWith("```")));
+        if (!cb) return "";
+        const sb = cb.search(/\.\s/),
+          kb = -1 === sb ? cb : cb.slice(0, sb + 1);
+        return kb.length > 110 ? `${kb.slice(0,107)}...` : kb
+      }(sb);
+      return kb = "api" === bb ? `api.${cb}(${wU(sb).join(", ")})${Wb?` \u2014 ${Wb}`:""}` : "callback" === bb ? `${cb}(${wU(sb).join(", ")})${Wb?` \u2014 ${Wb}`:""}` : "clientOption" === bb ? `${cb}: ${function(bb){var cb,sb;return null!==(cb=null===(sb=/\*\*Type:\*\*\s*`([^`]+)`/.exec(bb))||void 0===sb?void 0:sb[1])&&void 0!==cb?cb:""}(sb)}${Wb?` \u2014 ${Wb}`:""}`:cb,{kind:bb,name:cb,text:sb,line:kb,nameWords:KU(cb),textWords:KU(sb)}}function vU(bb){return bb.toLowerCase().split(/[^a-z0-9]+/).filter((bb=>""!==bb&&"of"!==bb&&"the"!==bb)).sort().join(" ")}const FU=new Set(["block","item"]);function xU(bb){let{names:cb,isSure:sb}=bb;return 0===cb.length?"":1!==cb.length||sb?`
       Did you mean $ {
-        Fk.map((kk => `"${kk}"`)).join(" or ")
+        cb.map((bb => `"${bb}"`)).join(" or ")
       } ? `:`
-      The closest name is "${Fk[0]}", which may be something
+      The closest name is "${cb[0]}", which may be something
       else.
-      `}function nb(kk){return kk.split("\n").slice(1).map((kk=>kk.replace(/\s*\[[A-Z]+(?:,[A-Z]+)*\]\s*$/,"").trim())).filter((kk=>""!==kk&&!kk.startsWith("#")))}class Ib{constructor(kk){this.sections=void 0,this.mobTypes=void 0,this.byName=new Map,this.itemAndBlockNames=void 0,this.blockNames=void 0,this.namesByLowerCase=void 0,this.wordCounts=new Map,this.realName=(kk,Fk)=>{if("mob"===kk){var Bk;const kk=Fk.trim().toLowerCase();return null!==(Bk=this.mobTypes.find((Fk=>Fk.toLowerCase()===kk)))&&void 0!==Bk?Bk:null}const Rk=this.suggestNames(Fk),tk=Rk.isSure?Rk.names[0]:void 0;return void 0===tk||"item"!==kk&&!this.blockNames.has(tk)?null:tk};const Fk=[],Bk=(kk,Bk)=>{for(const{name:Rk,text:tk}of function(kk){const Fk=[],Bk=kk.split(/^## /m).slice(1);for(const Rk of Bk){const kk=Rk.indexOf("\n"),Bk=(-1===kk?Rk:Rk.slice(0,kk)).trim(),tk=`
+      `}function jU(bb){return bb.split("\n").slice(1).map((bb=>bb.replace(/\s*\[[A-Z]+(?:,[A-Z]+)*\]\s*$/,"").trim())).filter((bb=>""!==bb&&!bb.startsWith("#")))}class pU{constructor(bb){this.sections=void 0,this.mobTypes=void 0,this.byName=new Map,this.itemAndBlockNames=void 0,this.blockNames=void 0,this.namesByLowerCase=void 0,this.wordCounts=new Map,this.realName=(bb,cb)=>{if("mob"===bb){var sb;const bb=cb.trim().toLowerCase();return null!==(sb=this.mobTypes.find((cb=>cb.toLowerCase()===bb)))&&void 0!==sb?sb:null}const kb=this.suggestNames(cb),Wb=kb.isSure?kb.names[0]:void 0;return void 0===Wb||"item"!==bb&&!this.blockNames.has(Wb)?null:Wb};const cb=[],sb=(bb,sb)=>{for(const{name:kb,text:Wb}of function(bb){const cb=[],sb=bb.split(/^## /m).slice(1);for(const kb of sb){const bb=kb.indexOf("\n"),sb=(-1===bb?kb:kb.slice(0,bb)).trim(),Wb=`
       # # $ {
-        Rk
+        kb
       }
-      `.replace(/\n\s*\n(\s*\n)+/g,"\n\n").trim();Fk.push({name:Bk,text:tk})}return Fk}(Bk))Fk.push(Kb(kk,Rk,tk))};Bk("api",kk.apiReference),Bk("callback",kk.callbacks),Bk("clientOption",kk.clientOptions),Bk("snippet",kk.snippets),Bk("howTo",kk.howTo);const Rk=function(){const kk=RR.map((kk=>`
+      `.replace(/\n\s*\n(\s*\n)+/g,"\n\n").trim();cb.push({name:sb,text:Wb})}return cb}(sb))cb.push(RU(bb,kb,Wb))};sb("api",bb.apiReference),sb("callback",bb.callbacks),sb("clientOption",bb.clientOptions),sb("snippet",bb.snippets),sb("howTo",bb.howTo);const kb=function(){const bb=Wk.map((bb=>`
       # # $ {
-        kk.name
+        bb.name
       }\
       nReady - made
       function($ {
-        kk.category
+        bb.category
       }) : call it as it is, without api.and without writing it;
       its code is added to the file by itself.\n$ {
-        kk.about
+        bb.about
       }\
-      n\ nUsage: \`${kk.signature}\`\n\n\`\`\`js\n${kk.example}\n\`\`\``)),
-  Fk = VR.map((kk => `## ${kk.name}\nPrefab (${kk.kind}, ${kk.category}): put in with use_prefab. ${SR(kk,!1)}`));
+      n\ nUsage: \`${bb.signature}\`\n\n\`\`\`js\n${bb.example}\n\`\`\``)),
+  cb = Xk.map((bb => `## ${bb.name}\nPrefab (${bb.kind}, ${bb.category}): put in with use_prefab. ${Bk(bb,!1)}`));
   return {
-    helpers: `# Ready-made functions\n\n${kk.join("\n\n")}\n`,
-    prefabs: `# Prefabs\n\n${Fk.join("\n\n")}\n`
+    helpers: `# Ready-made functions\n\n${bb.join("\n\n")}\n`,
+    prefabs: `# Prefabs\n\n${cb.join("\n\n")}\n`
   }
 }();
-Bk("helper", Rk.helpers), Bk("prefab", Rk.prefabs), this.sections = Fk;
-for (const ak of Fk) {
-  this.byName.has(ak.name) || this.byName.set(ak.name, ak);
-  for (const kk of ak.textWords) {
-    var tk;
-    this.wordCounts.set(kk, (null !== (tk = this.wordCounts.get(kk)) && void 0 !== tk ? tk : 0) + 1)
+sb("helper", kb.helpers), sb("prefab", kb.prefabs), this.sections = cb;
+for (const ab of cb) {
+  this.byName.has(ab.name) || this.byName.set(ab.name, ab);
+  for (const bb of ab.textWords) {
+    var Wb;
+    this.wordCounts.set(bb, (null !== (Wb = this.wordCounts.get(bb)) && void 0 !== Wb ? Wb : 0) + 1)
   }
 }
-this.itemAndBlockNames = [...new Set([...nb(kk.itemNames), ...nb(kk.blockNames)])], this.blockNames = new Set(nb(kk.blockNames)), this.namesByLowerCase = new Map(this.itemAndBlockNames.map((kk => [kk.toLowerCase(), kk]))), this.mobTypes = function(kk) {
-  var Fk, Bk;
-  const Rk = null !== (Fk = null === (Bk = kk.split("## Mob Variations")[1]) || void 0 === Bk ? void 0 : Bk.split("```")[1]) && void 0 !== Fk ? Fk : "",
-    tk = [];
-  for (const ak of Rk.split("\n")) {
-    const kk = /^([A-Z][\w ]*?):\s*"/.exec(ak.trim());
-    kk && tk.push(kk[1])
+this.itemAndBlockNames = [...new Set([...jU(bb.itemNames), ...jU(bb.blockNames)])], this.blockNames = new Set(jU(bb.blockNames)), this.namesByLowerCase = new Map(this.itemAndBlockNames.map((bb => [bb.toLowerCase(), bb]))), this.mobTypes = function(bb) {
+  var cb, sb;
+  const kb = null !== (cb = null === (sb = bb.split("## Mob Variations")[1]) || void 0 === sb ? void 0 : sb.split("```")[1]) && void 0 !== cb ? cb : "",
+    Wb = [];
+  for (const ab of kb.split("\n")) {
+    const bb = /^([A-Z][\w ]*?):\s*"/.exec(ab.trim());
+    bb && Wb.push(bb[1])
   }
-  return tk
-}(kk.mobSettings)
+  return Wb
+}(bb.mobSettings)
 }
-index(kk) {
-  return this.sections.filter((Fk => Fk.kind === kk)).map((kk => kk.line)).join("\n")
+index(bb) {
+  return this.sections.filter((cb => cb.kind === bb)).map((bb => bb.line)).join("\n")
 }
 callbackNames() {
-  return this.sections.filter((kk => "callback" === kk.kind)).map((kk => kk.name))
+  return this.sections.filter((bb => "callback" === bb.kind)).map((bb => bb.name))
 }
-get(kk) {
-  return this.byName.get(kk)
+get(bb) {
+  return this.byName.get(bb)
 }
-unprefixedApiCalls(kk) {
-  const Fk = Db(kk),
-    Bk = Fk.join("\n"),
-    Rk = new Set([...Bk.matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)|^([\w$]+)\s*=/gm)].map((kk => {
-      var Fk;
-      return null !== (Fk = kk[1]) && void 0 !== Fk ? Fk : kk[2]
+unprefixedApiCalls(bb) {
+  const cb = zU(bb),
+    sb = cb.join("\n"),
+    kb = new Set([...sb.matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)|^([\w$]+)\s*=/gm)].map((bb => {
+      var cb;
+      return null !== (cb = bb[1]) && void 0 !== cb ? cb : bb[2]
     }))),
-    tk = [...Bk.matchAll(/\b(?:const|let|var)\s*([{[][^=]*?[}\]])\s*=/g), ...Bk.matchAll(/\bimport\s+([\w$\s{},*]+?)\s+from\b/g)];
-  for (const Xk of tk)
-    for (const kk of Xk[1].matchAll(/([\w$]+)\s*(?=[,}\]=]|$)/g)) Rk.add(kk[1]);
-  const ak = new Map;
-  return Fk.forEach(((kk, Fk) => {
-    for (const tk of (0, JF.i)(kk, /([\w$]+)\s*\(/g, JF.r)) {
-      var Bk;
-      const Xk = tk[1],
-        bk = /^\s*(?:async\s+)?$/.test(kk.slice(0, tk.index)) && /^[\w$]+\s*\([^()]*\)\s*\{/.test(kk.slice(tk.index));
-      ak.has(Xk) || Rk.has(Xk) || bk || "api" !== (null === (Bk = this.byName.get(Xk)) || void 0 === Bk ? void 0 : Bk.kind) || ak.set(Xk, `Line ${Fk+1} calls ${Xk} without "api.", so it throws there. Did you mean api.${Xk}?`)
+    Wb = [...sb.matchAll(/\b(?:const|let|var)\s*([{[][^=]*?[}\]])\s*=/g), ...sb.matchAll(/\bimport\s+([\w$\s{},*]+?)\s+from\b/g)];
+  for (const Tb of Wb)
+    for (const bb of Tb[1].matchAll(/([\w$]+)\s*(?=[,}\]=]|$)/g)) kb.add(bb[1]);
+  const ab = new Map;
+  return cb.forEach(((bb, cb) => {
+    for (const Wb of (0, Mc.e)(bb, /([\w$]+)\s*\(/g, Mc.m)) {
+      var sb;
+      const Tb = Wb[1],
+        Ub = /^\s*(?:async\s+)?$/.test(bb.slice(0, Wb.index)) && /^[\w$]+\s*\([^()]*\)\s*\{/.test(bb.slice(Wb.index));
+      ab.has(Tb) || kb.has(Tb) || Ub || "api" !== (null === (sb = this.byName.get(Tb)) || void 0 === sb ? void 0 : sb.kind) || ab.set(Tb, `Line ${cb+1} calls ${Tb} without "api.", so it throws there. Did you mean api.${Tb}?`)
     }
-  })), [...ak.values()]
+  })), [...ab.values()]
 }
-unknownApiMethods(kk) {
-  return [...new Set([...kk.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)].map((kk => kk[1])))].filter((kk => {
-    var Fk;
-    return "api" !== (null === (Fk = this.byName.get(kk)) || void 0 === Fk ? void 0 : Fk.kind)
-  })).map((kk => {
-    const Fk = this.find(kk.replace(/([a-z])([A-Z])/g, "$1 $2"), "", 20).filter((kk => "api" === kk.kind)).slice(0, 2).map((kk => `api.${kk.name}`));
-    return `api.${kk} doesn't exist.${Fk.length?` Did you mean ${Fk.join(" or ")}?`:""}`
+unknownApiMethods(bb) {
+  return [...new Set([...bb.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)].map((bb => bb[1])))].filter((bb => {
+    var cb;
+    return "api" !== (null === (cb = this.byName.get(bb)) || void 0 === cb ? void 0 : cb.kind)
+  })).map((bb => {
+    const cb = this.find(bb.replace(/([a-z])([A-Z])/g, "$1 $2"), "", 20).filter((bb => "api" === bb.kind)).slice(0, 2).map((bb => `api.${bb.name}`));
+    return `api.${bb} doesn't exist.${cb.length?` Did you mean ${cb.join(" or ")}?`:""}`
   }))
 }
-unknownItemNames(kk) {
-  const Fk = new Set([...this.itemAndBlockNames, "Air"]),
-    Bk = new Set;
-  for (const Rk of kk.matchAll(/\bapi\.([A-Za-z_$][\w$]*)\(/g)) {
-    const tk = this.byName.get(Rk[1]);
-    if ("api" !== (null === tk || void 0 === tk ? void 0 : tk.kind)) continue;
-    const ak = hb(tk.text).map((kk => {
+unknownItemNames(bb) {
+  const cb = new Set([...this.itemAndBlockNames, "Air"]),
+    sb = new Set;
+  for (const kb of bb.matchAll(/\bapi\.([A-Za-z_$][\w$]*)\(/g)) {
+    const Wb = this.byName.get(kb[1]);
+    if ("api" !== (null === Wb || void 0 === Wb ? void 0 : Wb.kind)) continue;
+    const ab = AU(Wb.text).map((bb => {
         let {
-          type: Fk
-        } = kk;
-        return void 0 !== Fk && /^(ItemName|BlockName)\b/.test(Fk)
+          type: cb
+        } = bb;
+        return void 0 !== cb && /^(ItemName|BlockName)\b/.test(cb)
       })),
-      Xk = Zb(kk, Rk.index + Rk[0].length);
-    Xk.forEach(((Rk, tk) => {
-      var bk, wk, dk, sk;
-      if (!ak[tk] && (tk !== Xk.length - 1 || !ak[ak.length - 1])) return;
-      const Vk = null === (bk = /^CONFIG\.([\w$]+)$/.exec(Rk)) || void 0 === bk ? void 0 : bk[1],
-        Jk = Vk ? null === (wk = new RegExp(`(?:^|[{,])\\s*${Vk.replaceAll("$","\\$")}\\s*:\\s*${Cb}`, "m").exec(kk)) || void 0 === wk ? void 0 : wk[1] : void 0,
-        Ak = pb(kk, Rk),
-        ek = null !== (dk = null === (sk = new RegExp(`\\?\\s*${Cb}\\s*:\\s*${Cb}$`).exec(Rk)) || void 0 === sk ? void 0 : sk.slice(1)) && void 0 !== dk ? dk : [];
-      for (const kk of [null !== (yk = null !== Jk && void 0 !== Jk ? Jk : Ak) && void 0 !== yk ? yk : Rk, ...ek]) {
-        var yk;
-        const Rk = /^(["'`])([^"'`]+)\1$/.exec(kk),
-          tk = "`" === (null === Rk || void 0 === Rk ? void 0 : Rk[1]) && Rk[2].includes("${");
-        !Rk || tk || Fk.has(Rk[2]) || Bk.add(Rk[2])
+      Tb = oU(bb, kb.index + kb[0].length);
+    Tb.forEach(((kb, Wb) => {
+      var Ub, Ib, Hb, fb;
+      if (!ab[Wb] && (Wb !== Tb.length - 1 || !ab[ab.length - 1])) return;
+      const Mb = null === (Ub = /^CONFIG\.([\w$]+)$/.exec(kb)) || void 0 === Ub ? void 0 : Ub[1],
+        Xb = Mb ? null === (Ib = new RegExp(`(?:^|[{,])\\s*${Mb.replaceAll("$","\\$")}\\s*:\\s*${rU}`, "m").exec(bb)) || void 0 === Ib ? void 0 : Ib[1] : void 0,
+        nb = SU(bb, kb),
+        mb = null !== (Hb = null === (fb = new RegExp(`\\?\\s*${rU}\\s*:\\s*${rU}$`).exec(kb)) || void 0 === fb ? void 0 : fb.slice(1)) && void 0 !== Hb ? Hb : [];
+      for (const bb of [null !== (lb = null !== Xb && void 0 !== Xb ? Xb : nb) && void 0 !== lb ? lb : kb, ...mb]) {
+        var lb;
+        const kb = /^(["'`])([^"'`]+)\1$/.exec(bb),
+          Wb = "`" === (null === kb || void 0 === kb ? void 0 : kb[1]) && kb[2].includes("${");
+        !kb || Wb || cb.has(kb[2]) || sb.add(kb[2])
       }
     }))
   }
-  return [...Bk].map((kk => `"${kk}" isn't an item or block name.${lb(this.suggestNames(kk))}`))
+  return [...sb].map((bb => `"${bb}" isn't an item or block name.${xU(this.suggestNames(bb))}`))
 }
-reorderedComparedNames(kk) {
-  const Fk = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
-    Bk = new Map(this.itemAndBlockNames.map((kk => [xb(kk), kk]))),
-    Rk = new Map,
-    tk = [/[!=]==?\s*(["'])([^"'\n]{3,40})\1/g, /(["'])([^"'\n]{3,40})\1\s*[!=]==?/g, /\bcase\s+(["'])([^"'\n]{3,40})\1\s*:/g, /\.includes\(\s*(["'])([^"'\n]{3,40})\1\s*\)/g];
-  for (const bk of tk)
-    for (const tk of kk.matchAll(bk)) {
-      const kk = tk[2],
-        ak = Fk.has(kk) || !/\s/.test(kk.trim()) ? void 0 : Bk.get(xb(kk));
-      ak && Rk.set(kk, ak)
+reorderedComparedNames(bb) {
+  const cb = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
+    sb = new Map(this.itemAndBlockNames.map((bb => [vU(bb), bb]))),
+    kb = new Map,
+    Wb = [/[!=]==?\s*(["'])([^"'\n]{3,40})\1/g, /(["'])([^"'\n]{3,40})\1\s*[!=]==?/g, /\bcase\s+(["'])([^"'\n]{3,40})\1\s*:/g, /\.includes\(\s*(["'])([^"'\n]{3,40})\1\s*\)/g];
+  for (const Ub of Wb)
+    for (const Wb of bb.matchAll(Ub)) {
+      const bb = Wb[2],
+        ab = cb.has(bb) || !/\s/.test(bb.trim()) ? void 0 : sb.get(vU(bb));
+      ab && kb.set(bb, ab)
     }
-  const ak = [...Rk].map((kk => {
-      let [Fk, Bk] = kk;
-      return `"${Fk}" isn't a block or item name, so comparing with it is never true. Did you mean "${Bk}"?`
+  const ab = [...kb].map((bb => {
+      let [cb, sb] = bb;
+      return `"${cb}" isn't a block or item name, so comparing with it is never true. Did you mean "${sb}"?`
     })),
-    Xk = new Map;
-  for (const bk of kk.matchAll(/\b\w*block\w*\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) {
-    const Fk = bk[2],
-      Bk = this.blockNames.has(Fk) || !this.itemAndBlockNames.includes(Fk) ? void 0 : [`Block of ${Fk}`, `${Fk} Block`].find((kk => this.blockNames.has(kk)));
-    !Bk || kk.includes(`"${Bk}"`) || kk.includes(`'${Bk}'`) || Xk.set(Fk, Bk)
+    Tb = new Map;
+  for (const Ub of bb.matchAll(/\b\w*block\w*\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) {
+    const cb = Ub[2],
+      sb = this.blockNames.has(cb) || !this.itemAndBlockNames.includes(cb) ? void 0 : [`Block of ${cb}`, `${cb} Block`].find((bb => this.blockNames.has(bb)));
+    !sb || bb.includes(`"${sb}"`) || bb.includes(`'${sb}'`) || Tb.set(cb, sb)
   }
-  return [...ak, ...[...Xk].map((kk => {
-    let [Fk, Bk] = kk;
-    return `"${Fk}" is an item, not a block, so no block is ever called that. Did you mean "${Bk}"?`
+  return [...ab, ...[...Tb].map((bb => {
+    let [cb, sb] = bb;
+    return `"${cb}" is an item, not a block, so no block is ever called that. Did you mean "${sb}"?`
   }))]
 }
-unknownComparedBlockNames(kk) {
-  const Fk = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
-    Bk = new Set(this.itemAndBlockNames.map((kk => xb(kk)))),
-    Rk = new Set;
-  for (const tk of kk.matchAll(/\b\w*block(?:name|type)?\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) Rk.add(tk[2]);
-  for (const tk of kk.matchAll(/(["'])([^"'\n]+)\1\s*[!=]==?\s*\w*block(?:name|type)?\b/gi)) Rk.add(tk[2]);
-  return [...Rk].filter((kk => !Fk.has(kk) && !(/\s/.test(kk.trim()) && Bk.has(xb(kk))))).map((kk => {
-    const Fk = this.itemAndBlockNames.filter((Fk => xb(Fk) === xb(kk))),
-      Bk = this.itemAndBlockNames.filter((Fk => cb(Fk).includes(kk.toLowerCase()))),
-      Rk = this.suggestNames(kk),
-      tk = Fk.length > 0 ? {
-        names: Fk,
-        isSure: 1 === Fk.length,
+unknownComparedBlockNames(bb) {
+  const cb = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
+    sb = new Set(this.itemAndBlockNames.map((bb => vU(bb)))),
+    kb = new Set;
+  for (const Wb of bb.matchAll(/\b\w*block(?:name|type)?\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) kb.add(Wb[2]);
+  for (const Wb of bb.matchAll(/(["'])([^"'\n]+)\1\s*[!=]==?\s*\w*block(?:name|type)?\b/gi)) kb.add(Wb[2]);
+  return [...kb].filter((bb => !cb.has(bb) && !(/\s/.test(bb.trim()) && sb.has(vU(bb))))).map((bb => {
+    const cb = this.itemAndBlockNames.filter((cb => vU(cb) === vU(bb))),
+      sb = this.itemAndBlockNames.filter((cb => OU(cb).includes(bb.toLowerCase()))),
+      kb = this.suggestNames(bb),
+      Wb = cb.length > 0 ? {
+        names: cb,
+        isSure: 1 === cb.length,
         isDecided: !0
-      } : Rk.names.length > 0 || Rk.isDecided ? Rk : {
-        names: Bk.length <= 2 ? Bk : [],
-        isSure: 1 === Bk.length,
+      } : kb.names.length > 0 || kb.isDecided ? kb : {
+        names: sb.length <= 2 ? sb : [],
+        isSure: 1 === sb.length,
         isDecided: !1
       };
-    return `"${kk}" isn't a block or item name, so comparing a block with it is never true.${lb(tk)}`
+    return `"${bb}" isn't a block or item name, so comparing a block with it is never true.${xU(Wb)}`
   }))
 }
-madeUpStopValues(kk) {
-  const Fk = new Set;
+madeUpStopValues(bb) {
+  const cb = new Set;
   for (const {
-      name: Bk,
-      body: Rk
+      name: sb,
+      body: kb
     }
     of
-    function(kk) {
-      const Fk = [...kk.matchAll(rb)];
-      return Fk.map(((Bk, Rk) => {
-        var tk, ak, Xk;
+    function(bb) {
+      const cb = [...bb.matchAll(ZU)];
+      return cb.map(((sb, kb) => {
+        var Wb, ab, Tb;
         return {
-          name: null !== (tk = Bk[1]) && void 0 !== tk ? tk : Bk[2],
-          body: kk.slice(Bk.index, null !== (ak = null === (Xk = Fk[Rk + 1]) || void 0 === Xk ? void 0 : Xk.index) && void 0 !== ak ? ak : kk.length)
+          name: null !== (Wb = sb[1]) && void 0 !== Wb ? Wb : sb[2],
+          body: bb.slice(sb.index, null !== (ab = null === (Tb = cb[kb + 1]) || void 0 === Tb ? void 0 : Tb.index) && void 0 !== ab ? ab : bb.length)
         }
       }))
-    }(kk)) {
-    const kk = this.byName.get(Bk);
-    if ("callback" === (null === kk || void 0 === kk ? void 0 : kk.kind))
-      for (const tk of Rk.matchAll(/\breturn\s+["']((?:[Pp]revent|[Cc]ancel|[Ss]top|[Bb]lock|[Dd]eny)\w*)["']/g)) {
-        const Rk = tk[1];
-        if (kk.text.includes(`"${Rk}"`)) continue;
-        const ak = [...new Set([...kk.text.matchAll(/Return "(prevent[A-Za-z]*)"/g)].map((kk => kk[1])))],
-          Xk = ak.length > 0 ? `Did you mean ${ak.map((kk=>`"${kk}"`)).join(" or ")}?` : /Return false/i.test(kk.text) ? `To stop it, return false instead of "${Rk}".` : "Check Show Docs for what it can return.";
-        Fk.add(`${Bk} can't use "${Rk}" to stop anything. ${Xk}`)
+    }(bb)) {
+    const bb = this.byName.get(sb);
+    if ("callback" === (null === bb || void 0 === bb ? void 0 : bb.kind))
+      for (const Wb of kb.matchAll(/\breturn\s+["']((?:[Pp]revent|[Cc]ancel|[Ss]top|[Bb]lock|[Dd]eny)\w*)["']/g)) {
+        const kb = Wb[1];
+        if (bb.text.includes(`"${kb}"`)) continue;
+        const ab = [...new Set([...bb.text.matchAll(/Return "(prevent[A-Za-z]*)"/g)].map((bb => bb[1])))],
+          Tb = ab.length > 0 ? `Did you mean ${ab.map((bb=>`"${bb}"`)).join(" or ")}?` : /Return false/i.test(bb.text) ? `To stop it, return false instead of "${kb}".` : "Check Show Docs for what it can return.";
+        cb.add(`${sb} can't use "${kb}" to stop anything. ${Tb}`)
       }
   }
-  return [...Fk]
+  return [...cb]
 }
-codeWarnings(kk) {
-  let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return [...this.unknownApiMethods(kk), ...this.unprefixedApiCalls(kk), ...this.unknownItemNames(kk), ...this.reorderedComparedNames(kk), ...this.unknownComparedBlockNames(kk), ...this.madeUpStopValues(kk), ...Pb(kk), ...zb(kk, Fk)]
+codeWarnings(bb) {
+  let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  return [...this.unknownApiMethods(bb), ...this.unprefixedApiCalls(bb), ...this.unknownItemNames(bb), ...this.reorderedComparedNames(bb), ...this.unknownComparedBlockNames(bb), ...this.madeUpStopValues(bb), ...dU(bb), ...qU(bb, cb)]
 }
-suggestNames(kk) {
-  var Fk;
-  const Bk = kk.trim().toLowerCase().replace(/\s+/g, " "),
-    Rk = Object.hasOwn(ub, Bk) ? ub[Bk] : void 0;
-  if (Rk) {
-    const kk = Rk.filter((kk => this.namesByLowerCase.has(kk.toLowerCase())));
+suggestNames(bb) {
+  var cb;
+  const sb = bb.trim().toLowerCase().replace(/\s+/g, " "),
+    kb = Object.hasOwn(PU, sb) ? PU[sb] : void 0;
+  if (kb) {
+    const bb = kb.filter((bb => this.namesByLowerCase.has(bb.toLowerCase())));
     return {
-      names: kk,
-      isSure: 1 === kk.length,
+      names: bb,
+      isSure: 1 === bb.length,
       isDecided: !0
     }
   }
-  const tk = kk.trim().replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/\s+/).map((kk => Object.hasOwn(Mb, kk) ? Mb[kk] : kk)).filter(Boolean).join(" "),
-    ak = null !== (Fk = this.namesByLowerCase.get(Bk)) && void 0 !== Fk ? Fk : this.namesByLowerCase.get(tk);
-  if (ak) return {
-    names: [ak],
+  const Wb = bb.trim().replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/\s+/).map((bb => Object.hasOwn(DU, bb) ? DU[bb] : bb)).filter(Boolean).join(" "),
+    ab = null !== (cb = this.namesByLowerCase.get(sb)) && void 0 !== cb ? cb : this.namesByLowerCase.get(Wb);
+  if (ab) return {
+    names: [ab],
     isSure: !0,
     isDecided: !0
   };
-  const Xk = this.closestItemAndBlockNames(tk),
-    bk = kk => cb(kk).filter((kk => !Ub.has(kk) && !jb.has(kk))).map(Gb),
-    wk = 1 === Xk.length ? bk(Xk[0]) : [];
+  const Tb = this.closestItemAndBlockNames(Wb),
+    Ub = bb => OU(bb).filter((bb => !iU.has(bb) && !FU.has(bb))).map(GU),
+    Ib = 1 === Tb.length ? Ub(Tb[0]) : [];
   return {
-    names: Xk,
-    isSure: 1 === Xk.length && bk(tk).every((kk => wk.includes(kk))),
+    names: Tb,
+    isSure: 1 === Tb.length && Ub(Wb).every((bb => Ib.includes(bb))),
     isDecided: !1
   }
 }
-closestItemAndBlockNames(kk) {
-  const Fk = new Set(cb(kk).filter((kk => !Ub.has(kk))).map(Gb)),
-    Bk = this.itemAndBlockNames.map((kk => {
-      const Bk = cb(kk).filter((kk => !Ub.has(kk))).map(Gb),
-        Rk = Bk.filter((kk => Fk.has(kk))).length;
+closestItemAndBlockNames(bb) {
+  const cb = new Set(OU(bb).filter((bb => !iU.has(bb))).map(GU)),
+    sb = this.itemAndBlockNames.map((bb => {
+      const sb = OU(bb).filter((bb => !iU.has(bb))).map(GU),
+        kb = sb.filter((bb => cb.has(bb))).length;
       return {
-        candidate: kk,
-        score: 2 * Rk - (Bk.length - Rk)
+        candidate: bb,
+        score: 2 * kb - (sb.length - kb)
       }
-    })).filter((kk => kk.score > 0)),
-    Rk = Math.max(...Bk.map((kk => kk.score)));
-  return Bk.filter((kk => kk.score === Rk)).slice(0, 2).map((kk => kk.candidate))
+    })).filter((bb => bb.score > 0)),
+    kb = Math.max(...sb.map((bb => bb.score)));
+  return sb.filter((bb => bb.score === kb)).slice(0, 2).map((bb => bb.candidate))
 }
-find(kk, Fk, Bk) {
-  const Rk = new Map,
-    tk = (kk, Fk) => {
-      var Bk;
-      kk && Rk.set(kk, (null !== (Bk = Rk.get(kk)) && void 0 !== Bk ? Bk : 0) + Fk)
+find(bb, cb, sb) {
+  const kb = new Map,
+    Wb = (bb, cb) => {
+      var sb;
+      bb && kb.set(bb, (null !== (sb = kb.get(bb)) && void 0 !== sb ? sb : 0) + cb)
     },
-    ak = cb(kk),
-    Xk = ak.filter((kk => !Ub.has(kk)));
-  for (const Vk of ak)
-    for (const kk of Object.hasOwn(gb, Vk) ? gb[Vk] : []) tk(this.byName.get(kk), 6);
-  for (const Vk of `${kk}\n${Fk}`.matchAll(/\bapi\.(\w+)|\b(on[A-Z]\w+|tick|playerCommand)\b|"(\w+)"/g)) {
-    var bk, wk;
-    tk(this.byName.get(null !== (bk = null !== (wk = Vk[1]) && void 0 !== wk ? wk : Vk[2]) && void 0 !== bk ? bk : Vk[3]), Vk[1] || Vk[2] ? 4 : 2)
+    ab = OU(bb),
+    Tb = ab.filter((bb => !iU.has(bb)));
+  for (const Mb of ab)
+    for (const bb of Object.hasOwn(EU, Mb) ? EU[Mb] : []) Wb(this.byName.get(bb), 6);
+  for (const Mb of `${bb}\n${cb}`.matchAll(/\bapi\.(\w+)|\b(on[A-Z]\w+|tick|playerCommand)\b|"(\w+)"/g)) {
+    var Ub, Ib;
+    Wb(this.byName.get(null !== (Ub = null !== (Ib = Mb[1]) && void 0 !== Ib ? Ib : Mb[2]) && void 0 !== Ub ? Ub : Mb[3]), Mb[1] || Mb[2] ? 4 : 2)
   }
-  for (const Vk of (0, JF.i)(Fk, /([A-Za-z_$][\w$]*)\s*\(/g, JF.r)) {
-    const kk = this.byName.get(Vk[1]);
-    "helper" === (null === kk || void 0 === kk ? void 0 : kk.kind) && tk(kk, 3)
+  for (const Mb of (0, Mc.e)(cb, /([A-Za-z_$][\w$]*)\s*\(/g, Mc.m)) {
+    const bb = this.byName.get(Mb[1]);
+    "helper" === (null === bb || void 0 === bb ? void 0 : bb.kind) && Wb(bb, 3)
   }
-  const dk = new Set(Xk.map(Gb));
-  for (const Vk of this.sections) {
-    let kk = 0;
-    for (const Fk of dk) {
-      var sk;
-      const Bk = 1 / Math.log2(2 + (null !== (sk = this.wordCounts.get(Fk)) && void 0 !== sk ? sk : 0));
-      Vk.nameWords.has(Fk) ? kk += 3 * Bk : Vk.textWords.has(Fk) && (kk += Bk)
+  const Hb = new Set(Tb.map(GU));
+  for (const Mb of this.sections) {
+    let bb = 0;
+    for (const cb of Hb) {
+      var fb;
+      const sb = 1 / Math.log2(2 + (null !== (fb = this.wordCounts.get(cb)) && void 0 !== fb ? fb : 0));
+      Mb.nameWords.has(cb) ? bb += 3 * sb : Mb.textWords.has(cb) && (bb += sb)
     }
-    tk(Vk, kk)
+    Wb(Mb, bb)
   }
-  return [...Rk.entries()].filter((kk => {
-    let [Fk, Bk] = kk;
-    return Bk > .5 && "prefab" !== Fk.kind
-  })).sort(((kk, Fk) => Fk[1] - kk[1])).slice(0, Bk).map((kk => {
-    let [Fk] = kk;
-    return Fk
+  return [...kb.entries()].filter((bb => {
+    let [cb, sb] = bb;
+    return sb > .5 && "prefab" !== cb.kind
+  })).sort(((bb, cb) => cb[1] - bb[1])).slice(0, sb).map((bb => {
+    let [cb] = bb;
+    return cb
   }))
 }
-section(kk) {
-  var Fk, Bk;
-  const Rk = kk.trim().replace(/^api\./, "").replace(/\(.*$/, ""),
-    tk = Rk.toLowerCase();
-  return null !== (Fk = null !== (Bk = this.byName.get(Rk)) && void 0 !== Bk ? Bk : this.sections.find((kk => kk.name.toLowerCase() === tk))) && void 0 !== Fk ? Fk : null
+section(bb) {
+  var cb, sb;
+  const kb = bb.trim().replace(/^api\./, "").replace(/\(.*$/, ""),
+    Wb = kb.toLowerCase();
+  return null !== (cb = null !== (sb = this.byName.get(kb)) && void 0 !== sb ? sb : this.sections.find((bb => bb.name.toLowerCase() === Wb))) && void 0 !== cb ? cb : null
 }
-searchNames(kk, Fk) {
-  const Bk = cb(kk).filter((kk => !Ub.has(kk))).map(Gb);
-  if (0 === Bk.length) return [];
-  const Rk = [...this.itemAndBlockNames, ...this.mobTypes].flatMap((kk => {
-      const Fk = new Set(cb(kk).map(Gb)),
-        Rk = Bk.filter((kk => Fk.has(kk))).length;
-      return 0 === Rk ? [] : [{
-        name: kk,
-        found: Rk,
-        length: Fk.size
+searchNames(bb, cb) {
+  const sb = OU(bb).filter((bb => !iU.has(bb))).map(GU);
+  if (0 === sb.length) return [];
+  const kb = [...this.itemAndBlockNames, ...this.mobTypes].flatMap((bb => {
+      const cb = new Set(OU(bb).map(GU)),
+        kb = sb.filter((bb => cb.has(bb))).length;
+      return 0 === kb ? [] : [{
+        name: bb,
+        found: kb,
+        length: cb.size
       }]
     })),
-    tk = Math.max(0, ...Rk.map((kk => kk.found)));
-  return [...new Set(Rk.filter((kk => kk.found === tk)).sort(((kk, Fk) => kk.length - Fk.length || kk.name.localeCompare(Fk.name))).map((kk => kk.name)))].slice(0, Fk)
+    Wb = Math.max(0, ...kb.map((bb => bb.found)));
+  return [...new Set(kb.filter((bb => bb.found === Wb)).sort(((bb, cb) => bb.length - cb.length || bb.name.localeCompare(cb.name))).map((bb => bb.name)))].slice(0, cb)
 }
-matchItemAndBlockNames(kk, Fk) {
-  const Bk = new Set(cb(kk).map(Gb)),
-    Rk = [];
-  for (const tk of this.itemAndBlockNames) {
-    const kk = cb(tk).filter((kk => !Ub.has(kk))).map(Gb);
-    kk.length > 0 && kk.every((kk => Bk.has(kk))) && Rk.push({
-      name: tk,
-      length: kk.length
+matchItemAndBlockNames(bb, cb) {
+  const sb = new Set(OU(bb).map(GU)),
+    kb = [];
+  for (const Wb of this.itemAndBlockNames) {
+    const bb = OU(Wb).filter((bb => !iU.has(bb))).map(GU);
+    bb.length > 0 && bb.every((bb => sb.has(bb))) && kb.push({
+      name: Wb,
+      length: bb.length
     })
   }
-  return Rk.sort(((kk, Fk) => Fk.length - kk.length)).slice(0, Fk).map((kk => kk.name))
+  return kb.sort(((bb, cb) => cb.length - bb.length)).slice(0, cb).map((bb => bb.name))
 }
 }
 
-function Qb(kk, Fk) {
-  var Bk;
-  const Rk = kw(kk, !0),
-    tk = null === (Bk = /^([\w$.]+) (?:needs|couldn't|didn't|isn't a function)/.exec(Rk)) || void 0 === Bk ? void 0 : Bk[1],
-    ak = tk && void 0 !== Fk ? function(kk, Fk) {
-      const Bk = Fk.replace(/[$.]/g, "\\$&"),
-        Rk = new RegExp(`(^|[^\\w$.])${Bk}\\s*\\(`),
-        tk = kk.split("\n").flatMap(((kk, Fk) => Rk.test(kk) ? [Fk + 1] : []));
-      return 1 === tk.length ? tk[0] : void 0
-    }(Fk, tk) : void 0;
-  return ak ? {
-    text: kw(kk, !1),
-    line: ak
+function bI(bb, cb) {
+  var sb;
+  const kb = cI(bb, !0),
+    Wb = null === (sb = /^([\w$.]+) (?:needs|couldn't|didn't|isn't a function)/.exec(kb)) || void 0 === sb ? void 0 : sb[1],
+    ab = Wb && void 0 !== cb ? function(bb, cb) {
+      const sb = cb.replace(/[$.]/g, "\\$&"),
+        kb = new RegExp(`(^|[^\\w$.])${sb}\\s*\\(`),
+        Wb = bb.split("\n").flatMap(((bb, cb) => kb.test(bb) ? [cb + 1] : []));
+      return 1 === Wb.length ? Wb[0] : void 0
+    }(cb, Wb) : void 0;
+  return ab ? {
+    text: cI(bb, !1),
+    line: ab
   } : {
-    text: Rk
+    text: kb
   }
 }
 
-function kw(kk, Fk) {
-  const Bk = kk.replace(/^Logging too many errors\n/, "").replace(/^(First|Last) error of \d+ errors:\n/, ""),
-    [Rk, ...tk] = Bk.split("\n"),
+function cI(bb, cb) {
+  const sb = bb.replace(/^Logging too many errors\n/, "").replace(/^(First|Last) error of \d+ errors:\n/, ""),
+    [kb, ...Wb] = sb.split("\n"),
     {
-      when: ak,
-      rest: Xk
-    } = function(kk) {
-      const Fk = /^Error in world code init:\s*/.exec(kk);
-      if (Fk) return {
+      when: ab,
+      rest: Tb
+    } = function(bb) {
+      const cb = /^Error in world code init:\s*/.exec(bb);
+      if (cb) return {
         when: "when your world started",
-        rest: kk.slice(Fk[0].length)
+        rest: bb.slice(cb[0].length)
       };
-      const Bk = /^Error in (?:callback )?(\w+):\s*/.exec(kk);
-      return Bk ? {
-        when: `in ${Bk[1]}`,
-        rest: kk.slice(Bk[0].length)
+      const sb = /^Error in (?:callback )?(\w+):\s*/.exec(bb);
+      return sb ? {
+        when: `in ${sb[1]}`,
+        rest: bb.slice(sb[0].length)
       } : {
         when: "",
-        rest: kk
+        rest: bb
       }
-    }(Rk.trim()),
-    bk = ak && Fk ? ` ${ak}` : "",
-    wk = /(?:ApiError:\s*)?(\w+) didn't work/.exec(Xk);
-  if (wk) {
-    var dk, sk, Vk, Jk, Ak;
-    const kk = /^Invalid argument #(\d+)(?:\s*\(([^)]*)\))?:?\s*(.*)$/.exec(null !== (dk = null === (sk = tk[0]) || void 0 === sk ? void 0 : sk.trim()) && void 0 !== dk ? dk : ""),
-      Fk = null === (Vk = /^Expected(?: type)?:?\s*(.*)$/.exec(null !== (Jk = null === (Ak = tk[1]) || void 0 === Ak ? void 0 : Ak.trim()) && void 0 !== Jk ? Jk : "")) || void 0 === Vk ? void 0 : Vk[1],
-      Bk = Fk ? function(kk) {
-        const Fk = kk.split(/\s+or\s+/)[0].trim();
-        return /^(a|an|the)\s/i.test(Fk) || !/^[a-z]/i.test(Fk) ? Fk : `${/^[aeiou]/i.test(Fk)?"an":"a"} ${Fk}`
-      }(Fk) : void 0;
-    return Bk && null !== kk && void 0 !== kk && kk[3] ? `api.${wk[1]} needs ${Bk}, but it got ${kk[3]}${bk}.` : kk ? `api.${wk[1]} couldn't use its ${ek=Number(kk[1]),1===ek?"first":2===ek?"second":3===ek?"third":4===ek?"fourth":`#${ek}`} argument${bk}.${Bk?` It needs ${Bk}.`:""}` : `api.${wk[1]} didn't work${bk}.`
+    }(kb.trim()),
+    Ub = ab && cb ? ` ${ab}` : "",
+    Ib = /(?:ApiError:\s*)?(\w+) didn't work/.exec(Tb);
+  if (Ib) {
+    var Hb, fb, Mb, Xb, nb;
+    const bb = /^Invalid argument #(\d+)(?:\s*\(([^)]*)\))?:?\s*(.*)$/.exec(null !== (Hb = null === (fb = Wb[0]) || void 0 === fb ? void 0 : fb.trim()) && void 0 !== Hb ? Hb : ""),
+      cb = null === (Mb = /^Expected(?: type)?:?\s*(.*)$/.exec(null !== (Xb = null === (nb = Wb[1]) || void 0 === nb ? void 0 : nb.trim()) && void 0 !== Xb ? Xb : "")) || void 0 === Mb ? void 0 : Mb[1],
+      sb = cb ? function(bb) {
+        const cb = bb.split(/\s+or\s+/)[0].trim();
+        return /^(a|an|the)\s/i.test(cb) || !/^[a-z]/i.test(cb) ? cb : `${/^[aeiou]/i.test(cb)?"an":"a"} ${cb}`
+      }(cb) : void 0;
+    return sb && null !== bb && void 0 !== bb && bb[3] ? `api.${Ib[1]} needs ${sb}, but it got ${bb[3]}${Ub}.` : bb ? `api.${Ib[1]} couldn't use its ${mb=Number(bb[1]),1===mb?"first":2===mb?"second":3===mb?"third":4===mb?"fourth":`#${mb}`} argument${Ub}.${sb?` It needs ${sb}.`:""}` : `api.${Ib[1]} didn't work${Ub}.`
   }
-  var ek;
-  const yk = /TypeError:\s*(?:(.+?) is )?not a function/.exec(Xk);
-  if (yk) return yk[1] ? `${yk[1]} isn't a function${bk}. Check its name is spelt exactly right.` : `Your code called something that isn't a function${bk}. Check each name it calls is spelt exactly right.`;
-  const fk = /ReferenceError:\s*'?([^'\s]+)'? is not defined/.exec(Xk);
-  if (fk) return `${fk[1]} isn't defined${bk}. Check the spelling, or create it before using it.`;
-  const mk = /TypeError:\s*[Cc]annot read propert(?:y|ies) (?:'([^']+)' )?of (undefined|null)(?: \(reading '([^']+)'\))?/.exec(Xk);
-  if (mk) {
-    var Wk;
-    const kk = null !== (Wk = mk[1]) && void 0 !== Wk ? Wk : mk[3];
-    return `Your code tried to read${kk?` .${kk}`:" something"} from ${mk[2]}${bk}: a value it expected wasn't there.`
+  var mb;
+  const lb = /TypeError:\s*(?:(.+?) is )?not a function/.exec(Tb);
+  if (lb) return lb[1] ? `${lb[1]} isn't a function${Ub}. Check its name is spelt exactly right.` : `Your code called something that isn't a function${Ub}. Check each name it calls is spelt exactly right.`;
+  const Qb = /ReferenceError:\s*'?([^'\s]+)'? is not defined/.exec(Tb);
+  if (Qb) return `${Qb[1]} isn't defined${Ub}. Check the spelling, or create it before using it.`;
+  const eb = /TypeError:\s*[Cc]annot read propert(?:y|ies) (?:'([^']+)' )?of (undefined|null)(?: \(reading '([^']+)'\))?/.exec(Tb);
+  if (eb) {
+    var Cb;
+    const bb = null !== (Cb = eb[1]) && void 0 !== Cb ? Cb : eb[3];
+    return `Your code tried to read${bb?` .${bb}`:" something"} from ${eb[2]}${Ub}: a value it expected wasn't there.`
   }
-  return `Your code hit an error${bk}: ${Xk.replace(/^\w*Error:\s*/,"")}`
+  return `Your code hit an error${Ub}: ${Tb.replace(/^\w*Error:\s*/,"")}`
 }
-const Fw = /^"([^"]+)" isn't an item or block name\..*Did you mean "([^"]+)"\?$/,
-  Bw = /^"([^"]+)" isn't a block or item name, so comparing with it\b.*Did you mean "([^"]+)"\?$/,
-  Rw = /^"([^"]+)" (?:is an item, not a block|isn't a block or item name, so comparing a block with it)\b.*Did you mean "([^"]+)"\?$/,
-  tw = /^([\w$]+) can't use "([^"]+)" to stop anything\. Did you mean "([^"]+)"\?$/,
-  aw = /^Line \d+ calls ([\w$]+) without "api\.", so it throws there\. Did you mean (api\.[\w$]+)\?$/,
-  Xw = /^Line \d+ uses "([\w$]+)", which is never set, so it throws there\. Did you mean "([\w$]+)"\?$/,
-  bw = /^Line \d+ uses "global", which World Code doesn't have\b/,
-  ww = /^[ \t]*global\.([\w$]+)[ \t]*=[ \t]*\1[ \t]*;?[ \t]*(?:\/\/.*)?(?:\r?\n|$)/gm,
-  dw = /^([ \t]*)global\.([\w$]+)([ \t]*=(?!=))/gm;
+const sI = /^"([^"]+)" isn't an item or block name\..*Did you mean "([^"]+)"\?$/,
+  kI = /^"([^"]+)" isn't a block or item name, so comparing with it\b.*Did you mean "([^"]+)"\?$/,
+  WI = /^"([^"]+)" (?:is an item, not a block|isn't a block or item name, so comparing a block with it)\b.*Did you mean "([^"]+)"\?$/,
+  aI = /^([\w$]+) can't use "([^"]+)" to stop anything\. Did you mean "([^"]+)"\?$/,
+  TI = /^Line \d+ calls ([\w$]+) without "api\.", so it throws there\. Did you mean (api\.[\w$]+)\?$/,
+  UI = /^Line \d+ uses "([\w$]+)", which is never set, so it throws there\. Did you mean "([\w$]+)"\?$/,
+  II = /^Line \d+ uses "global", which World Code doesn't have\b/,
+  HI = /^[ \t]*global\.([\w$]+)[ \t]*=[ \t]*\1[ \t]*;?[ \t]*(?:\/\/.*)?(?:\r?\n|$)/gm,
+  fI = /^([ \t]*)global\.([\w$]+)([ \t]*=(?!=))/gm;
 
-function sw(kk) {
-  const Fk = aw.exec(kk);
-  if (Fk) return {
-    from: Fk[1],
-    to: Fk[2],
+function MI(bb) {
+  const cb = TI.exec(bb);
+  if (cb) return {
+    from: cb[1],
+    to: cb[2],
     kind: "call"
   };
-  const Bk = Xw.exec(kk);
-  if (Bk) return {
-    from: Bk[1],
-    to: Bk[2],
+  const sb = UI.exec(bb);
+  if (sb) return {
+    from: sb[1],
+    to: sb[2],
     kind: "variable"
   };
-  if (bw.test(kk)) return {
+  if (II.test(bb)) return {
     from: "global",
     to: "",
     kind: "export"
   };
-  const Rk = tw.exec(kk);
-  if (Rk) return {
-    from: Rk[2],
-    to: Rk[3],
-    callback: Rk[1]
+  const kb = aI.exec(bb);
+  if (kb) return {
+    from: kb[2],
+    to: kb[3],
+    callback: kb[1]
   };
-  const tk = Bw.exec(kk);
-  if (tk) return {
-    from: tk[1],
-    to: tk[2],
+  const Wb = kI.exec(bb);
+  if (Wb) return {
+    from: Wb[1],
+    to: Wb[2],
     kind: "compared"
   };
-  const ak = Rw.exec(kk);
-  if (ak) return {
-    from: ak[1],
-    to: ak[2],
+  const ab = WI.exec(bb);
+  if (ab) return {
+    from: ab[1],
+    to: ab[2],
     kind: "comparedBlock"
   };
-  const Xk = Fw.exec(kk);
-  return Xk ? {
-    from: Xk[1],
-    to: Xk[2]
+  const Tb = sI.exec(bb);
+  return Tb ? {
+    from: Tb[1],
+    to: Tb[2]
   } : void 0
 }
 
-function Vw(kk) {
-  const Fk = kk.map(sw);
-  return Fk.length > 0 && !Fk.includes(void 0) ? Fk : void 0
+function XI(bb) {
+  const cb = bb.map(MI);
+  return cb.length > 0 && !cb.includes(void 0) ? cb : void 0
 }
 
-function Jw(kk, Fk, Bk) {
-  return kk.replaceAll(`"${Fk}"`, `"${Bk}"`).replaceAll(`'${Fk}'`, `'${Bk}'`)
+function nI(bb, cb, sb) {
+  return bb.replaceAll(`"${cb}"`, `"${sb}"`).replaceAll(`'${cb}'`, `'${sb}'`)
 }
 
-function Aw(kk, Fk) {
-  const Bk = kk => Ek().isIdentifier(kk) ? kk.text === Fk : kk.elements.some((kk => !Ek().isOmittedExpression(kk) && Bk(kk.name))),
-    Rk = kk => void 0 !== kk && Ek().isVariableDeclarationList(kk) && kk.declarations.some((kk => Bk(kk.name))),
-    tk = kk => {
-      const Fk = kk => !Ek().isFunctionLike(kk) && !Ek().isClassStaticBlockDeclaration(kk) && (!(!Ek().isVariableDeclarationList(kk) || 0 !== (kk.flags & Ek().NodeFlags.BlockScoped) || !Rk(kk)) || !0 === Ek().forEachChild(kk, Fk));
-      return void 0 !== kk && !0 === Ek().forEachChild(kk, Fk)
+function mI(bb, cb) {
+  const sb = bb => hb().isIdentifier(bb) ? bb.text === cb : bb.elements.some((bb => !hb().isOmittedExpression(bb) && sb(bb.name))),
+    kb = bb => void 0 !== bb && hb().isVariableDeclarationList(bb) && bb.declarations.some((bb => sb(bb.name))),
+    Wb = bb => {
+      const cb = bb => !hb().isFunctionLike(bb) && !hb().isClassStaticBlockDeclaration(bb) && (!(!hb().isVariableDeclarationList(bb) || 0 !== (bb.flags & hb().NodeFlags.BlockScoped) || !kb(bb)) || !0 === hb().forEachChild(bb, cb));
+      return void 0 !== bb && !0 === hb().forEachChild(bb, cb)
     };
-  var ak;
-  if (Ek().isFunctionLike(kk)) return kk.parameters.some((kk => Bk(kk.name))) || Ek().isFunctionExpression(kk) && (null === (ak = kk.name) || void 0 === ak ? void 0 : ak.text) === Fk || "body" in kk && tk(kk.body);
-  return !(!Ek().isSourceFile(kk) || !tk(kk)) || (Ek().isSourceFile(kk) || Ek().isBlock(kk) || Ek().isCaseClause(kk) || Ek().isDefaultClause(kk) ? kk.statements.some((kk => {
-    var Bk;
-    return Ek().isVariableStatement(kk) && Rk(kk.declarationList) || (Ek().isFunctionDeclaration(kk) || Ek().isClassDeclaration(kk)) && (null === (Bk = kk.name) || void 0 === Bk ? void 0 : Bk.text) === Fk || Ek().isImportDeclaration(kk) && (kk => {
-      var Bk;
-      const Rk = null === kk || void 0 === kk ? void 0 : kk.namedBindings;
-      return (null === kk || void 0 === kk || null === (Bk = kk.name) || void 0 === Bk ? void 0 : Bk.text) === Fk || void 0 !== Rk && (Ek().isNamespaceImport(Rk) ? Rk.name.text === Fk : Rk.elements.some((kk => kk.name.text === Fk)))
-    })(kk.importClause)
-  })) : Ek().isForStatement(kk) || Ek().isForInStatement(kk) || Ek().isForOfStatement(kk) ? Rk(kk.initializer) : Ek().isCatchClause(kk) && void 0 !== kk.variableDeclaration && Bk(kk.variableDeclaration.name))
+  var ab;
+  if (hb().isFunctionLike(bb)) return bb.parameters.some((bb => sb(bb.name))) || hb().isFunctionExpression(bb) && (null === (ab = bb.name) || void 0 === ab ? void 0 : ab.text) === cb || "body" in bb && Wb(bb.body);
+  return !(!hb().isSourceFile(bb) || !Wb(bb)) || (hb().isSourceFile(bb) || hb().isBlock(bb) || hb().isCaseClause(bb) || hb().isDefaultClause(bb) ? bb.statements.some((bb => {
+    var sb;
+    return hb().isVariableStatement(bb) && kb(bb.declarationList) || (hb().isFunctionDeclaration(bb) || hb().isClassDeclaration(bb)) && (null === (sb = bb.name) || void 0 === sb ? void 0 : sb.text) === cb || hb().isImportDeclaration(bb) && (bb => {
+      var sb;
+      const kb = null === bb || void 0 === bb ? void 0 : bb.namedBindings;
+      return (null === bb || void 0 === bb || null === (sb = bb.name) || void 0 === sb ? void 0 : sb.text) === cb || void 0 !== kb && (hb().isNamespaceImport(kb) ? kb.name.text === cb : kb.elements.some((bb => bb.name.text === cb)))
+    })(bb.importClause)
+  })) : hb().isForStatement(bb) || hb().isForInStatement(bb) || hb().isForOfStatement(bb) ? kb(bb.initializer) : hb().isCatchClause(bb) && void 0 !== bb.variableDeclaration && sb(bb.variableDeclaration.name))
 }
 
-function ew(kk, Fk) {
-  return Fk.reduce(((kk, Fk) => {
+function lI(bb, cb) {
+  return cb.reduce(((bb, cb) => {
     let {
-      from: Bk,
-      to: Rk,
-      kind: tk,
-      callback: ak
-    } = Fk;
-    if ("export" === tk) return kk.replace(ww, "").replace(dw, "$1$2$3");
-    if ("call" === tk || "variable" === tk) return function(kk, Fk, Bk, Rk) {
-      const tk = Ek().createSourceFile("worldCode.js", kk, Ek().ScriptTarget.Latest, !0, Ek().ScriptKind.JS),
-        ak = [],
-        Xk = (kk, bk) => {
-          const wk = bk || Aw(kk, Fk),
-            dk = kk.parent;
-          if (Ek().isIdentifier(kk) && kk.text === Fk && !wk && dk) {
-            const Xk = Ek().isBindingElement(dk) && dk.propertyName === kk || (Ek().isPropertyAccessExpression(dk) || Ek().isPropertyAssignment(dk) || Ek().isMethodDeclaration(dk) || Ek().isPropertyDeclaration(dk) || Ek().isGetAccessorDeclaration(dk) || Ek().isSetAccessorDeclaration(dk)) && dk.name === kk,
-              bk = Ek().isCallExpression(dk) && dk.expression === kk;
-            Xk || Rk && !bk || ak.push({
-              at: kk.getStart(tk),
-              text: Ek().isShorthandPropertyAssignment(dk) ? `${Fk}: ${Bk}` : Bk
+      from: sb,
+      to: kb,
+      kind: Wb,
+      callback: ab
+    } = cb;
+    if ("export" === Wb) return bb.replace(HI, "").replace(fI, "$1$2$3");
+    if ("call" === Wb || "variable" === Wb) return function(bb, cb, sb, kb) {
+      const Wb = hb().createSourceFile("worldCode.js", bb, hb().ScriptTarget.Latest, !0, hb().ScriptKind.JS),
+        ab = [],
+        Tb = (bb, Ub) => {
+          const Ib = Ub || mI(bb, cb),
+            Hb = bb.parent;
+          if (hb().isIdentifier(bb) && bb.text === cb && !Ib && Hb) {
+            const Tb = hb().isBindingElement(Hb) && Hb.propertyName === bb || (hb().isPropertyAccessExpression(Hb) || hb().isPropertyAssignment(Hb) || hb().isMethodDeclaration(Hb) || hb().isPropertyDeclaration(Hb) || hb().isGetAccessorDeclaration(Hb) || hb().isSetAccessorDeclaration(Hb)) && Hb.name === bb,
+              Ub = hb().isCallExpression(Hb) && Hb.expression === bb;
+            Tb || kb && !Ub || ab.push({
+              at: bb.getStart(Wb),
+              text: hb().isShorthandPropertyAssignment(Hb) ? `${cb}: ${sb}` : sb
             })
           }
-          Ek().forEachChild(kk, (kk => {
-            Xk(kk, wk)
+          hb().forEachChild(bb, (bb => {
+            Tb(bb, Ib)
           }))
         };
-      return Xk(tk, !1), ak.reduceRight(((kk, Bk) => kk.slice(0, Bk.at) + Bk.text + kk.slice(Bk.at + Fk.length)), kk)
-    }(kk, Bk, Rk, "call" === tk);
-    if ("compared" === tk || "comparedBlock" === tk) {
-      const Fk = `(["'])${function(kk){return kk.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(Bk)}\\1`;
-      return ("comparedBlock" === tk ? [`\\b\\w*[Bb]lock\\w*\\s*[!=]==?\\s*${Fk}`, `${Fk}\\s*[!=]==?\\s*\\w*[Bb]lock\\w*\\b`] : [`[!=]==?\\s*${Fk}`, `${Fk}\\s*[!=]==?`, `\\bcase\\s+${Fk}\\s*:`, `\\.includes\\(\\s*${Fk}\\s*\\)`]).reduce(((kk, Fk) => kk.replace(new RegExp(Fk, "g"), (kk => Jw(kk, Bk, Rk)))), kk)
+      return Tb(Wb, !1), ab.reduceRight(((bb, sb) => bb.slice(0, sb.at) + sb.text + bb.slice(sb.at + cb.length)), bb)
+    }(bb, sb, kb, "call" === Wb);
+    if ("compared" === Wb || "comparedBlock" === Wb) {
+      const cb = `(["'])${function(bb){return bb.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(sb)}\\1`;
+      return ("comparedBlock" === Wb ? [`\\b\\w*[Bb]lock\\w*\\s*[!=]==?\\s*${cb}`, `${cb}\\s*[!=]==?\\s*\\w*[Bb]lock\\w*\\b`] : [`[!=]==?\\s*${cb}`, `${cb}\\s*[!=]==?`, `\\bcase\\s+${cb}\\s*:`, `\\.includes\\(\\s*${cb}\\s*\\)`]).reduce(((bb, cb) => bb.replace(new RegExp(cb, "g"), (bb => nI(bb, sb, kb)))), bb)
     }
-    if (void 0 !== ak) {
-      return qk(kk).filter((kk => kk.name === ak && kk.topLevel)).reduceRight(((kk, Fk) => kk.slice(0, Fk.from) + Jw(kk.slice(Fk.from, Fk.to), Bk, Rk) + kk.slice(Fk.to)), kk)
+    if (void 0 !== ab) {
+      return db(bb).filter((bb => bb.name === ab && bb.topLevel)).reduceRight(((bb, cb) => bb.slice(0, cb.from) + nI(bb.slice(cb.from, cb.to), sb, kb) + bb.slice(cb.to)), bb)
     }
-    return Jw(kk, Bk, Rk)
-  }), kk)
+    return nI(bb, sb, kb)
+  }), bb)
 }
 
-function yw(kk) {
+function QI(bb) {
   let {
-    from: Fk,
-    to: Bk,
-    kind: Rk
-  } = kk;
-  return "export" === Rk ? 'The "global." lines are gone: World Code finds your callbacks by their names.' : `"${Fk}" is now "${Bk}".`
+    from: cb,
+    to: sb,
+    kind: kb
+  } = bb;
+  return "export" === kb ? 'The "global." lines are gone: World Code finds your callbacks by their names.' : `"${cb}" is now "${sb}".`
 }
-var fw = Bk(40886);
+var eI = sb(40877);
 
-function mw() {
-  return (0, Xk.jsxs)("svg", {
+function CI() {
+  return (0, Tb.jsxs)("svg", {
     className: "WorldCodeAiKeyIcon",
     viewBox: "0 0 16 16",
     "aria-hidden": "true",
-    children: [(0, Xk.jsx)("circle", {
+    children: [(0, Tb.jsx)("circle", {
       cx: "4.5",
       cy: "8",
       r: "3"
-    }), (0, Xk.jsx)("path", {
+    }), (0, Tb.jsx)("path", {
       d: "M7.5 8h7.5M12.5 8v3M15 8v2.5"
     })]
   })
 }
 
-function Ww(kk) {
+function NI(bb) {
   let {
-    detail: Fk,
-    onOpen: Bk
-  } = kk;
-  return (0, Xk.jsxs)("details", {
+    detail: cb,
+    onOpen: sb
+  } = bb;
+  return (0, Tb.jsxs)("details", {
     className: "WorldCodeAiKeyDetails",
-    onToggle: kk => {
-      kk.currentTarget.open && (null === Bk || void 0 === Bk || Bk())
+    onToggle: bb => {
+      bb.currentTarget.open && (null === sb || void 0 === sb || sb())
     },
-    children: [(0, Xk.jsx)("summary", {
+    children: [(0, Tb.jsx)("summary", {
       children: "Details"
-    }), (0, Xk.jsx)("p", {
-      children: Fk
+    }), (0, Tb.jsx)("p", {
+      children: cb
     })]
   })
 }
 
-function vw(kk) {
+function VI(bb) {
   let {
-    answeredBy: Fk
-  } = kk;
-  return "free" === Fk ? (0, Xk.jsx)("div", {
+    answeredBy: cb
+  } = bb;
+  return "free" === cb ? (0, Tb.jsx)("div", {
     className: "WorldCodeAiAnsweredBy",
     children: "Bot.xd (free)"
-  }) : (0, Xk.jsxs)("div", {
-    className: Fk.isSuperBot ? "WorldCodeAiAnsweredBy" : "WorldCodeAiAnsweredBy WorldCodeAiAnsweredBy-key",
-    children: [!Fk.isSuperBot && (0, Xk.jsx)(mw, {}), Fk.model]
+  }) : (0, Tb.jsxs)("div", {
+    className: cb.isSuperBot ? "WorldCodeAiAnsweredBy" : "WorldCodeAiAnsweredBy WorldCodeAiAnsweredBy-key",
+    children: [!cb.isSuperBot && (0, Tb.jsx)(CI, {}), cb.model]
   })
 }
 
-function iw(kk) {
+function LI(bb) {
   let {
-    notice: Fk,
-    model: Bk,
-    company: Rk,
-    isServer: tk
-  } = kk;
-  switch (Fk) {
+    notice: cb,
+    model: sb,
+    company: kb,
+    isServer: Wb
+  } = bb;
+  switch (cb) {
     case "badKey":
-      return tk ? `${Rk} didn't accept your key: it may be wrong or deleted.` : `${Rk} didn't accept your key: it may be wrong or deleted. Check it on ${Rk}'s website.`;
+      return Wb ? `${kb} didn't accept your key: it may be wrong or deleted.` : `${kb} didn't accept your key: it may be wrong or deleted. Check it on ${kb}'s website.`;
     case "noCredit":
-      return tk ? `${Rk} stopped your key for now: it has used all it can.` : `${Rk} stopped your key for now: it has used all it can. Check it on ${Rk}'s website.`;
+      return Wb ? `${kb} stopped your key for now: it has used all it can.` : `${kb} stopped your key for now: it has used all it can. Check it on ${kb}'s website.`;
     case "busy":
-      return `Too many requests to ${Bk} right now. Wait a minute and try again.`;
+      return `Too many requests to ${sb} right now. Wait a minute and try again.`;
     case "noModel":
-      return `${Rk} can't find ${Bk}. Pick another model, or press Check for new models in AI settings.`;
+      return `${kb} can't find ${sb}. Pick another model, or press Check for new models in AI settings.`;
     case "timeout":
-      return `${Bk} took too long to answer.`;
+      return `${sb} took too long to answer.`;
     case "unreachable":
-      return tk ? `Couldn't reach ${Rk}. Check the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help.` : `Couldn't reach ${Rk}. Check your internet and your key.`;
+      return Wb ? `Couldn't reach ${kb}. Check the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help.` : `Couldn't reach ${kb}. Check your internet and your key.`;
     case "blocked":
-      return `${Rk} doesn't work from where you are.`;
+      return `${kb} doesn't work from where you are.`;
     case "unchecked":
       return "Bloxd's safety check didn't answer, so your key wasn't used.";
     default:
-      return `${Bk} can't be used right now. Try again in a minute.`
+      return `${sb} can't be used right now. Try again in a minute.`
   }
 }
 
-function Yw(kk) {
+function uI(bb) {
   let {
-    notice: Fk,
-    model: Bk,
-    company: Rk
-  } = kk;
-  switch (Fk) {
+    notice: cb,
+    model: sb,
+    company: kb
+  } = bb;
+  switch (cb) {
     case "badKey":
-      return `Not answered: ${Rk} didn't accept your key.`;
+      return `Not answered: ${kb} didn't accept your key.`;
     case "noModel":
-      return `Not answered: ${Rk} couldn't find ${Bk}.`;
+      return `Not answered: ${kb} couldn't find ${sb}.`;
     case "noCredit":
-      return `Not answered: ${Rk} stopped your key for now.`;
+      return `Not answered: ${kb} stopped your key for now.`;
     case "busy":
-      return `Not answered: too many requests to ${Bk}.`;
+      return `Not answered: too many requests to ${sb}.`;
     case "timeout":
-      return `Not answered: ${Bk} took too long.`;
+      return `Not answered: ${sb} took too long.`;
     case "unreachable":
-      return `Not answered: couldn't reach ${Rk}.`;
+      return `Not answered: couldn't reach ${kb}.`;
     case "blocked":
-      return `Not answered: ${Rk} doesn't work from where you are.`;
+      return `Not answered: ${kb} doesn't work from where you are.`;
     case "unchecked":
       return "Not answered: the safety check didn't answer.";
     default:
-      return `Not answered: ${Bk} couldn't be used.`
+      return `Not answered: ${sb} couldn't be used.`
   }
 }
 
-function ow(kk) {
-  return "busy" === kk || "timeout" === kk || "failed" === kk || "unchecked" === kk
+function YI(bb) {
+  return "busy" === bb || "timeout" === bb || "failed" === bb || "unchecked" === bb
 }
 
-function Lw(kk) {
+function hI(bb) {
   let {
-    notice: Fk,
-    onRetry: Bk,
-    onUseFree: Rk,
-    onCheckKey: tk
-  } = kk;
-  return (0, Xk.jsxs)("div", {
+    notice: cb,
+    onRetry: sb,
+    onUseFree: kb,
+    onCheckKey: Wb
+  } = bb;
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiKeyNoticeActions",
-    children: [(0, Xk.jsx)("button", {
-      ...fw.h,
+    children: [(0, Tb.jsx)("button", {
+      ...eI.e,
       className: "WorldCodeAiPrimaryButton",
-      onClick: Rk,
+      onClick: kb,
       children: "Use Bot.xd for this one"
-    }), ow(Fk) && (0, Xk.jsx)("button", {
+    }), YI(cb) && (0, Tb.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: Bk,
+      onClick: sb,
       children: "Try again"
-    }), "unchecked" !== Fk && (0, Xk.jsx)("button", {
+    }), "unchecked" !== cb && (0, Tb.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: tk,
+      onClick: Wb,
       children: "Open AI settings"
     })]
   })
 }
 
-function Ow(kk) {
+function JI(bb) {
   let {
-    hasCode: Fk,
-    canFinish: Bk,
-    onFinish: Rk
-  } = kk;
-  return (0, Xk.jsxs)("div", {
+    hasCode: cb,
+    canFinish: sb,
+    onFinish: kb
+  } = bb;
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiCutShort",
-    children: [(0, Xk.jsx)("p", {
-      children: Fk ? "The answer was cut short because it was too long." : "The answer was cut short before its code because it was too long."
-    }), Bk && (0, Xk.jsx)("button", {
+    children: [(0, Tb.jsx)("p", {
+      children: cb ? "The answer was cut short because it was too long." : "The answer was cut short before its code because it was too long."
+    }), sb && (0, Tb.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: Rk,
+      onClick: kb,
       children: "Finish the answer"
     })]
   })
 }
-const Ew = "worldCodeAiAllowEdits";
+const gI = "worldCodeAiAllowEdits";
 
-function Sw() {
+function BI() {
   try {
-    return "false" !== localStorage.getItem(Ew)
+    return "false" !== localStorage.getItem(gI)
   } catch {
     return !0
   }
 }
 
-function Nw(kk) {
+function tI(bb) {
   let {
-    allow: Fk,
-    onChange: Bk
-  } = kk;
-  return (0, Xk.jsxs)("label", {
+    allow: cb,
+    onChange: sb
+  } = bb;
+  return (0, Tb.jsxs)("label", {
     className: "WorldCodeAiAllowEdits",
-    children: [(0, Xk.jsx)("input", {
+    children: [(0, Tb.jsx)("input", {
       type: "checkbox",
       role: "switch",
-      checked: Fk,
-      onChange: kk => {
-        Bk(kk.target.checked)
+      checked: cb,
+      onChange: bb => {
+        sb(bb.target.checked)
       }
-    }), (0, Xk.jsx)("span", {
+    }), (0, Tb.jsx)("span", {
       children: "Allow AI to make edits to my code"
     })]
   })
 }
-const Hw = {
+const yI = {
   keyId: "bloxd",
   modelId: "superbotxd"
 };
 
-function uw(kk, Fk) {
-  const Bk = Array.from(kk.querySelectorAll(".WorldCodeAiModelGroup")),
-    Rk = Bk.findIndex((kk => kk.contains(Fk)));
-  if (Rk < 0) return !1;
-  const tk = kk.getBoundingClientRect(),
-    ak = Fk => kk.scrollTop + Fk.top - tk.top,
-    Xk = ak(Fk.getBoundingClientRect()) + Fk.getBoundingClientRect().height,
-    bk = kk.scrollHeight - kk.clientHeight,
-    wk = Bk.slice(0, Rk + 1).map((kk => ak(kk.getBoundingClientRect()))).filter((kk => Xk - kk <= tk.height + 1));
-  if (0 === wk.length) return !1;
-  const dk = wk.filter((kk => kk <= bk + 1)),
-    sk = dk.length > 0 ? Math.max(...dk) : Math.min(...wk);
-  return sk > bk && (kk.style.paddingBottom = (parseFloat(getComputedStyle(kk).paddingBottom) || 0) + sk - bk + "px"), kk.scrollTop = sk, !0
+function PI(bb, cb) {
+  const sb = Array.from(bb.querySelectorAll(".WorldCodeAiModelGroup")),
+    kb = sb.findIndex((bb => bb.contains(cb)));
+  if (kb < 0) return !1;
+  const Wb = bb.getBoundingClientRect(),
+    ab = cb => bb.scrollTop + cb.top - Wb.top,
+    Tb = ab(cb.getBoundingClientRect()) + cb.getBoundingClientRect().height,
+    Ub = bb.scrollHeight - bb.clientHeight,
+    Ib = sb.slice(0, kb + 1).map((bb => ab(bb.getBoundingClientRect()))).filter((bb => Tb - bb <= Wb.height + 1));
+  if (0 === Ib.length) return !1;
+  const Hb = Ib.filter((bb => bb <= Ub + 1)),
+    fb = Hb.length > 0 ? Math.max(...Hb) : Math.min(...Ib);
+  return fb > Ub && (bb.style.paddingBottom = (parseFloat(getComputedStyle(bb).paddingBottom) || 0) + fb - Ub + "px"), bb.scrollTop = fb, !0
 }
 
-function Mw(kk) {
+function DI(bb) {
   let {
-    keyName: Fk,
-    placeholder: Bk,
-    onDone: tk
-  } = kk;
-  const [ak, bk] = (0, Rk.useState)(Fk);
-  return (0, Xk.jsxs)("form", {
+    keyName: cb,
+    placeholder: sb,
+    onDone: Wb
+  } = bb;
+  const [ab, Ub] = (0, kb.useState)(cb);
+  return (0, Tb.jsxs)("form", {
     className: "WorldCodeAiKeyRename",
-    onSubmit: kk => {
-      kk.preventDefault(), tk(ak)
+    onSubmit: bb => {
+      bb.preventDefault(), Wb(ab)
     },
-    children: [(0, Xk.jsx)("input", {
+    children: [(0, Tb.jsx)("input", {
       className: "WorldCodeAiAddKeyInput",
       "aria-label": "Name for this key",
-      value: ak,
+      value: ab,
       maxLength: 30,
-      placeholder: Bk,
+      placeholder: sb,
       autoFocus: !0,
-      onChange: kk => {
-        bk(kk.target.value)
+      onChange: bb => {
+        Ub(bb.target.value)
       },
-      onKeyDown: kk => {
-        kk.stopPropagation(), "Escape" === kk.key && (kk.preventDefault(), tk(null))
+      onKeyDown: bb => {
+        bb.stopPropagation(), "Escape" === bb.key && (bb.preventDefault(), Wb(null))
       }
-    }), (0, Xk.jsx)("button", {
+    }), (0, Tb.jsx)("button", {
       type: "submit",
       className: "WorldCodeAiLinkButton",
       children: "Save"
-    }), (0, Xk.jsx)("button", {
+    }), (0, Tb.jsx)("button", {
       type: "button",
       className: "WorldCodeAiKeyLearnMore",
       onClick: () => {
-        tk(null)
+        Wb(null)
       },
       children: "Cancel"
     })]
   })
 }
 
-function gw(kk) {
+function EI(bb) {
   let {
-    savedKey: Fk,
-    isInUse: Bk,
-    onRename: Rk,
-    onEdit: tk
-  } = kk;
-  const ak = CX(Fk),
-    bk = fX(Fk.provider, Fk.baseUrl, !0),
-    wk = function(kk, Fk) {
-      var Bk, Rk;
-      return "" === kk ? "no key needed" : kk.length <= 12 ? "\u2022\u2022\u2022\u2022" : "custom" === Fk ? `key \u2026${kk.slice(-4)}` : `${(null!==(Bk=null===(Rk=/^[a-zA-Z]+-/.exec(kk))||void 0===Rk?void 0:Rk[0])&&void 0!==Bk?Bk:kk.slice(0,4)).slice(0,6)}\u2026${kk.slice(-4)}`
-    }(Fk.key, Fk.provider);
-  return (0, Xk.jsxs)("span", {
+    savedKey: cb,
+    isInUse: sb,
+    onRename: kb,
+    onEdit: Wb
+  } = bb;
+  const ab = rT(cb),
+    Ub = eT(cb.provider, cb.baseUrl, !0),
+    Ib = function(bb, cb) {
+      var sb, kb;
+      return "" === bb ? "no key needed" : bb.length <= 12 ? "\u2022\u2022\u2022\u2022" : "custom" === cb ? `key \u2026${bb.slice(-4)}` : `${(null!==(sb=null===(kb=/^[a-zA-Z]+-/.exec(bb))||void 0===kb?void 0:kb[0])&&void 0!==sb?sb:bb.slice(0,4)).slice(0,6)}\u2026${bb.slice(-4)}`
+    }(cb.key, cb.provider);
+  return (0, Tb.jsxs)("span", {
     className: "WorldCodeAiModelGroupName",
-    title: Fk.baseUrl,
-    children: [ak, " ", Fk.name && (0, Xk.jsxs)("span", {
+    title: cb.baseUrl,
+    children: [ab, " ", cb.name && (0, Tb.jsxs)("span", {
       className: "WorldCodeAiModelHint",
-      children: ["\xb7 ", bk, " "]
-    }), "" === Fk.key ? (0, Xk.jsx)("span", {
+      children: ["\xb7 ", Ub, " "]
+    }), "" === cb.key ? (0, Tb.jsx)("span", {
       className: "WorldCodeAiModelHint",
-      children: wk
-    }) : (0, Xk.jsx)("code", {
-      children: wk
-    }), Bk && (0, Xk.jsxs)(Xk.Fragment, {
-      children: [" ", (0, Xk.jsx)("span", {
+      children: Ib
+    }) : (0, Tb.jsx)("code", {
+      children: Ib
+    }), sb && (0, Tb.jsxs)(Tb.Fragment, {
+      children: [" ", (0, Tb.jsx)("span", {
         className: "WorldCodeAiInUseTag",
         children: "In use"
       })]
-    }), (tk || Rk) && (0, Xk.jsxs)("span", {
+    }), (Wb || kb) && (0, Tb.jsxs)("span", {
       className: "WorldCodeAiKeyLinks",
-      children: [tk && (0, Xk.jsx)("button", {
+      children: [Wb && (0, Tb.jsx)("button", {
         className: "WorldCodeAiKeyLearnMore",
-        "aria-label": `Edit ${ak} key`,
-        onClick: tk,
+        "aria-label": `Edit ${ab} key`,
+        onClick: Wb,
         children: "Edit"
-      }), Rk && (0, Xk.jsx)("button", {
+      }), kb && (0, Tb.jsx)("button", {
         className: "WorldCodeAiKeyLearnMore",
-        "aria-label": `Rename ${ak} key`,
-        onClick: Rk,
+        "aria-label": `Rename ${ab} key`,
+        onClick: kb,
         children: "Rename"
       })]
     })]
   })
 }
 
-function Uw(kk) {
-  var Fk, Bk, tk, bk;
+function iI(bb) {
+  var cb, sb, Wb, Ub;
   let {
-    name: wk,
-    hint: dk,
-    choice: sk,
-    selected: Vk,
-    radioName: Jk,
-    onSelect: Ak,
-    onChosen: ek,
-    disabledWhy: yk
-  } = kk;
-  const fk = (0, Rk.useRef)(!1),
-    mk = `${Jk}-${null!==(Fk=null===sk||void 0===sk?void 0:sk.keyId)&&void 0!==Fk?Fk:"botxd"}-${null!==(Bk=null===sk||void 0===sk?void 0:sk.modelId)&&void 0!==Bk?Bk:"botxd"}`.replace(/[^\w-]/g, "_"),
-    Wk = !!yk;
-  return (0, Xk.jsxs)("label", {
-    className: ak()("WorldCodeAiModelRow", Vk && "Selected", Wk && "Disabled"),
-    "data-key-id": null !== (tk = null === sk || void 0 === sk ? void 0 : sk.keyId) && void 0 !== tk ? tk : "botxd",
-    "data-model-id": null !== (bk = null === sk || void 0 === sk ? void 0 : sk.modelId) && void 0 !== bk ? bk : "botxd",
-    title: null !== yk && void 0 !== yk ? yk : void 0,
+    name: Ib,
+    hint: Hb,
+    choice: fb,
+    selected: Mb,
+    radioName: Xb,
+    onSelect: nb,
+    onChosen: mb,
+    disabledWhy: lb
+  } = bb;
+  const Qb = (0, kb.useRef)(!1),
+    eb = `${Xb}-${null!==(cb=null===fb||void 0===fb?void 0:fb.keyId)&&void 0!==cb?cb:"botxd"}-${null!==(sb=null===fb||void 0===fb?void 0:fb.modelId)&&void 0!==sb?sb:"botxd"}`.replace(/[^\w-]/g, "_"),
+    Cb = !!lb;
+  return (0, Tb.jsxs)("label", {
+    className: ab()("WorldCodeAiModelRow", Mb && "Selected", Cb && "Disabled"),
+    "data-key-id": null !== (Wb = null === fb || void 0 === fb ? void 0 : fb.keyId) && void 0 !== Wb ? Wb : "botxd",
+    "data-model-id": null !== (Ub = null === fb || void 0 === fb ? void 0 : fb.modelId) && void 0 !== Ub ? Ub : "botxd",
+    title: null !== lb && void 0 !== lb ? lb : void 0,
     onPointerDown: () => {
-      fk.current = !Wk
+      Qb.current = !Cb
     },
-    children: [(0, Xk.jsx)("input", {
+    children: [(0, Tb.jsx)("input", {
       type: "radio",
-      name: Jk,
-      "aria-label": wk,
-      "aria-describedby": dk ? mk : void 0,
-      checked: Vk,
-      disabled: Wk,
-      onChange: Ak,
+      name: Xb,
+      "aria-label": Ib,
+      "aria-describedby": Hb ? eb : void 0,
+      checked: Mb,
+      disabled: Cb,
+      onChange: nb,
       onClick: () => {
-        fk.current && (null === ek || void 0 === ek || ek()), fk.current = !1
+        Qb.current && (null === mb || void 0 === mb || mb()), Qb.current = !1
       },
-      onKeyDown: kk => {
-        "Enter" === kk.key && (null === ek || void 0 === ek || ek())
+      onKeyDown: bb => {
+        "Enter" === bb.key && (null === mb || void 0 === mb || mb())
       }
-    }), (0, Xk.jsx)("span", {
+    }), (0, Tb.jsx)("span", {
       className: "WorldCodeAiModelName",
-      children: wk
-    }), dk && (0, Xk.jsx)("span", {
-      id: mk,
+      children: Ib
+    }), Hb && (0, Tb.jsx)("span", {
+      id: eb,
       className: "WorldCodeAiModelHint",
-      children: dk
+      children: Hb
     })]
   })
 }
 
-function Gw(kk) {
+function OI(bb) {
   let {
-    labelledBy: Fk,
-    onPicked: tk,
-    canRename: ak = !1,
-    onEdit: bk,
-    yE: wk,
-    onRefresh: dk,
-    refreshingIds: sk,
-    keyNote: Vk
-  } = kk;
+    labelledBy: cb,
+    onPicked: Wb,
+    canRename: ab = !1,
+    onEdit: Ub,
+    wL: Ib,
+    onRefresh: Hb,
+    refreshingIds: fb,
+    keyNote: Mb
+  } = bb;
   const {
-    keys: Jk,
-    isSelected: Ak,
-    select: ek,
-    renameKey: yk
-  } = nX(), fk = wb();
-  (0, Rk.useEffect)((() => {
-    bb.refresh(), Eb()
+    keys: Xb,
+    isSelected: nb,
+    select: mb,
+    renameKey: lb
+  } = jT(), Qb = HU();
+  (0, kb.useEffect)((() => {
+    IU.refresh(), gU()
   }), []);
-  const mk = Ab(fk),
-    [Wk, vk] = (0, Rk.useState)(null),
-    [ik, Yk] = (0, Rk.useState)(null),
-    [Lk, Ok] = (0, Rk.useState)({}),
-    [Ek] = (0, Rk.useState)((() => function(kk) {
-      const Fk = kk.map(((kk, Fk) => {
-        var Bk;
+  const eb = mU(Qb),
+    [Cb, Nb] = (0, kb.useState)(null),
+    [Vb, Lb] = (0, kb.useState)(null),
+    [ub, Yb] = (0, kb.useState)({}),
+    [hb] = (0, kb.useState)((() => function(bb) {
+      const cb = bb.map(((bb, cb) => {
+        var sb;
         return {
-          id: kk.id,
-          at: null !== (Bk = kk.usedAt) && void 0 !== Bk ? Bk : 0,
-          i: Fk
+          id: bb.id,
+          at: null !== (sb = bb.usedAt) && void 0 !== sb ? sb : 0,
+          i: cb
         }
-      })).sort(((kk, Fk) => Fk.at - kk.at || Fk.i - kk.i));
-      return new Set(Fk.slice(0, 2).map((kk => {
+      })).sort(((bb, cb) => cb.at - bb.at || cb.i - bb.i));
+      return new Set(cb.slice(0, 2).map((bb => {
         let {
-          id: Fk
-        } = kk;
-        return Fk
+          id: cb
+        } = bb;
+        return cb
       })))
-    }(Jk))),
-    [Sk, Nk] = (0, Rk.useState)(new Set),
-    Hk = kk => kk.models.some((Fk => Ak({
-      keyId: kk.id,
-      modelId: Fk.id
+    }(Xb))),
+    [Jb, gb] = (0, kb.useState)(new Set),
+    Bb = bb => bb.models.some((cb => nb({
+      keyId: bb.id,
+      modelId: cb.id
     }))),
-    uk = kk => {
-      const Fk = kk.closest(".WorldCodeAiModelGroupHeader");
-      Yk(null), setTimeout((() => {
-        var kk;
-        null === Fk || void 0 === Fk || null === (kk = Fk.querySelector(".WorldCodeAiModelRemove")) || void 0 === kk || kk.focus()
+    tb = bb => {
+      const cb = bb.closest(".WorldCodeAiModelGroupHeader");
+      Lb(null), setTimeout((() => {
+        var bb;
+        null === cb || void 0 === cb || null === (bb = cb.querySelector(".WorldCodeAiModelRemove")) || void 0 === bb || bb.focus()
       }))
     },
-    Mk = `${Fk}-model`,
-    gk = (kk, Fk, Bk) => {
-      var Rk;
-      return (0, Xk.jsx)(Uw, {
-        name: kk,
-        hint: Fk,
-        choice: Bk,
-        selected: Ak(Bk) && !(null === Bk && fk.picked && null === mk),
-        radioName: Mk,
+    yb = `${cb}-model`,
+    Pb = (bb, cb, sb) => {
+      var kb;
+      return (0, Tb.jsx)(iI, {
+        name: bb,
+        hint: cb,
+        choice: sb,
+        selected: nb(sb) && !(null === sb && Qb.picked && null === eb),
+        radioName: yb,
         onSelect: () => {
-          ek(Bk), bb.unpick()
+          mb(sb), IU.unpick()
         },
-        onChosen: tk
-      }, null !== (Rk = null === Bk || void 0 === Bk ? void 0 : Bk.modelId) && void 0 !== Rk ? Rk : "botxd")
+        onChosen: Wb
+      }, null !== (kb = null === sb || void 0 === sb ? void 0 : sb.modelId) && void 0 !== kb ? kb : "botxd")
     };
-  return (0, Xk.jsxs)("div", {
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiModelList",
     role: "radiogroup",
-    "aria-labelledby": Fk,
-    children: [gk("Bot.xd (free)", "Bloxd's own AI.", null), (0, Xk.jsx)(Uw, {
-      name: Fb,
-      hint: null !== mk && void 0 !== mk ? mk : `Bloxd's better AI. ${fk.status?fb(fk.status):""}`.trim(),
-      choice: Hw,
-      selected: fk.picked && null === mk,
-      radioName: Mk,
+    "aria-labelledby": cb,
+    children: [Pb("Bot.xd (free)", "Bloxd's own AI.", null), (0, Tb.jsx)(iI, {
+      name: sU,
+      hint: null !== eb && void 0 !== eb ? eb : `Bloxd's better AI. ${Qb.status?eU(Qb.status):""}`.trim(),
+      choice: yI,
+      selected: Qb.picked && null === eb,
+      radioName: yb,
       onSelect: () => {
-        var kk, Fk;
-        ab(null !== (kk = null === (Fk = fk.status) || void 0 === Fk ? void 0 : Fk.provider) && void 0 !== kk ? kk : "ovh") && bb.AA()
+        var bb, cb;
+        TU(null !== (bb = null === (cb = Qb.status) || void 0 === cb ? void 0 : cb.provider) && void 0 !== bb ? bb : "ovh") && IU.Wn()
       },
       onChosen: () => {
-        (async function(kk) {
-          var Fk;
-          if (ab(null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.provider) && void 0 !== Fk ? Fk : "ovh")) return bb.AA(), !0;
-          if (Tw) return !1;
-          Tw = !0;
+        (async function(bb) {
+          var cb;
+          if (TU(null !== (cb = null === bb || void 0 === bb ? void 0 : bb.provider) && void 0 !== cb ? cb : "ovh")) return IU.Wn(), !0;
+          if (GI) return !1;
+          GI = !0;
           try {
             const [{
-              NotificationProvider: kk
+              NotificationProvider: bb
             }, {
-              WorldCodeAiDeepSeekNotice: Fk
-            }] = await Promise.all([Promise.resolve().then((() => Bk(1300))), Bk.e(347).then((() => Bk(60940)))]), Rk = kk.showPromptPopup({
+              WorldCodeAiDeepSeekNotice: cb
+            }] = await Promise.all([Promise.resolve().then((() => sb(1332))), sb.e(347).then((() => sb(60606)))]), kb = bb.showPromptPopup({
               title: "superBotXd:deepSeekTitle",
-              subtitle: (0, Xk.jsx)(Fk, {}),
+              subtitle: (0, Tb.jsx)(cb, {}),
               confirmText: "superBotXd:use",
               cancelText: "general:cancel"
             });
-            rw = Rk.tearDownNotification;
-            return !0 === await Rk.getResult() && (function() {
+            KI = kb.tearDownNotification;
+            return !0 === await kb.getResult() && (function() {
               try {
-                window.localStorage.setItem(tb, "1")
+                window.localStorage.setItem(aU, "1")
               } catch {}
-            }(), bb.AA(), !0)
+            }(), IU.Wn(), !0)
           } finally {
-            Tw = !1, rw = null
+            GI = !1, KI = null
           }
-        })(fk.status).then((kk => {
-          kk && (null === tk || void 0 === tk || tk())
+        })(Qb.status).then((bb => {
+          bb && (null === Wb || void 0 === Wb || Wb())
         }))
       },
-      disabledWhy: mk
-    }), Jk.map((kk => {
-      var Fk, Bk, Rk, tk, ek;
-      const fk = CX(kk),
-        mk = Jk.length >= 4 && !Hk(kk) && !Ek.has(kk.id) && !Sk.has(kk.id),
-        Mk = mk ? null !== (Fk = kk.models.find((Fk => Fk.id === kk.usedModelId))) && void 0 !== Fk ? Fk : qX(kk.models) : void 0,
-        Uk = null !== (Bk = null === (Rk = Lk[kk.id]) || void 0 === Rk ? void 0 : Rk.trim().toLowerCase()) && void 0 !== Bk ? Bk : "",
-        ck = Mk ? [Mk] : "" === Uk ? kk.models : kk.models.filter((Fk => Fk.name.toLowerCase().includes(Uk) || Ak({
-          keyId: kk.id,
-          modelId: Fk.id
+      disabledWhy: eb
+    }), Xb.map((bb => {
+      var cb, sb, kb, Wb, mb;
+      const Qb = rT(bb),
+        eb = Xb.length >= 4 && !Bb(bb) && !hb.has(bb.id) && !Jb.has(bb.id),
+        yb = eb ? null !== (cb = bb.models.find((cb => cb.id === bb.usedModelId))) && void 0 !== cb ? cb : wT(bb.models) : void 0,
+        Db = null !== (sb = null === (kb = ub[bb.id]) || void 0 === kb ? void 0 : kb.trim().toLowerCase()) && void 0 !== sb ? sb : "",
+        Eb = yb ? [yb] : "" === Db ? bb.models : bb.models.filter((cb => cb.name.toLowerCase().includes(Db) || nb({
+          keyId: bb.id,
+          modelId: cb.id
         })));
-      return (0, Xk.jsxs)("div", {
+      return (0, Tb.jsxs)("div", {
         className: "WorldCodeAiModelGroup",
         role: "group",
-        "aria-label": fk,
-        "data-key-id": kk.id,
-        children: [(0, Xk.jsxs)("div", {
+        "aria-label": Qb,
+        "data-key-id": bb.id,
+        children: [(0, Tb.jsxs)("div", {
           className: "WorldCodeAiModelGroupHeader",
-          children: [Wk === kk.id ? (0, Xk.jsx)(Mw, {
-            keyName: null !== (tk = kk.name) && void 0 !== tk ? tk : "",
-            placeholder: fX(kk.provider, kk.baseUrl),
-            onDone: Fk => {
-              null !== Fk && yk(kk.id, Fk), vk(null)
+          children: [Cb === bb.id ? (0, Tb.jsx)(DI, {
+            keyName: null !== (Wb = bb.name) && void 0 !== Wb ? Wb : "",
+            placeholder: eT(bb.provider, bb.baseUrl),
+            onDone: cb => {
+              null !== cb && lb(bb.id, cb), Nb(null)
             }
-          }) : (0, Xk.jsx)(gw, {
-            savedKey: kk,
-            isInUse: Hk(kk),
-            onEdit: bk ? () => {
-              bk(kk)
+          }) : (0, Tb.jsx)(EI, {
+            savedKey: bb,
+            isInUse: Bb(bb),
+            onEdit: Ub ? () => {
+              Ub(bb)
             } : void 0,
-            onRename: ak ? () => {
-              vk(kk.id)
+            onRename: ab ? () => {
+              Nb(bb.id)
             } : void 0
-          }), dk && ik !== kk.id && (0, Xk.jsx)("button", {
+          }), Hb && Vb !== bb.id && (0, Tb.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRefresh",
-            "aria-label": `Check ${fk} for new models`,
-            disabled: null === sk || void 0 === sk ? void 0 : sk.has(kk.id),
+            "aria-label": `Check ${Qb} for new models`,
+            disabled: null === fb || void 0 === fb ? void 0 : fb.has(bb.id),
             onClick: () => {
-              dk(kk)
+              Hb(bb)
             },
-            children: null !== sk && void 0 !== sk && sk.has(kk.id) ? "Checking\u2026" : "Check for new models"
-          }), wk && ik !== kk.id && (0, Xk.jsx)("button", {
+            children: null !== fb && void 0 !== fb && fb.has(bb.id) ? "Checking\u2026" : "Check for new models"
+          }), Ib && Vb !== bb.id && (0, Tb.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
-            "aria-label": `Remove ${fk} key`,
+            "aria-label": `Remove ${Qb} key`,
             onClick: () => {
-              Yk(kk.id)
+              Lb(bb.id)
             },
             children: "Remove"
-          }), wk && ik === kk.id && (0, Xk.jsxs)("span", {
+          }), Ib && Vb === bb.id && (0, Tb.jsxs)("span", {
             className: "WorldCodeAiKeyConfirm",
             role: "group",
-            "aria-label": `Remove ${fk} key?`,
-            onKeyDown: kk => {
-              "Escape" === kk.key && (kk.stopPropagation(), kk.preventDefault(), uk(kk.currentTarget))
+            "aria-label": `Remove ${Qb} key?`,
+            onKeyDown: bb => {
+              "Escape" === bb.key && (bb.stopPropagation(), bb.preventDefault(), tb(bb.currentTarget))
             },
-            children: ["Remove key?", (0, Xk.jsx)("button", {
+            children: ["Remove key?", (0, Tb.jsx)("button", {
               className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
-              "aria-label": `Yes, remove ${fk} key`,
+              "aria-label": `Yes, remove ${Qb} key`,
               onClick: () => {
-                Yk(null), wk(kk)
+                Lb(null), Ib(bb)
               },
               children: "Yes"
-            }), (0, Xk.jsx)("button", {
+            }), (0, Tb.jsx)("button", {
               className: "WorldCodeAiLinkButton",
-              "aria-label": `No, keep ${fk} key`,
+              "aria-label": `No, keep ${Qb} key`,
               autoFocus: !0,
-              onClick: kk => {
-                uk(kk.currentTarget)
+              onClick: bb => {
+                tb(bb.currentTarget)
               },
               children: "No"
             })]
           })]
-        }), (null === Vk || void 0 === Vk ? void 0 : Vk.keyId) === kk.id && (0, Xk.jsx)("p", {
+        }), (null === Mb || void 0 === Mb ? void 0 : Mb.keyId) === bb.id && (0, Tb.jsx)("p", {
           className: "WorldCodeAiAiSettingsNote",
           role: "status",
-          children: Vk.text
-        }), !mk && kk.models.length > 12 && (0, Xk.jsx)("input", {
+          children: Mb.text
+        }), !eb && bb.models.length > 12 && (0, Tb.jsx)("input", {
           className: "WorldCodeAiAddKeyInput WorldCodeAiModelFilter",
-          "aria-label": `Find a model from ${fk}`,
-          placeholder: `Find a model (${kk.models.length})`,
-          value: null !== (ek = Lk[kk.id]) && void 0 !== ek ? ek : "",
-          onKeyDown: kk => {
-            kk.stopPropagation()
+          "aria-label": `Find a model from ${Qb}`,
+          placeholder: `Find a model (${bb.models.length})`,
+          value: null !== (mb = ub[bb.id]) && void 0 !== mb ? mb : "",
+          onKeyDown: bb => {
+            bb.stopPropagation()
           },
-          onChange: Fk => {
-            const Bk = Fk.target.value;
-            Ok((Fk => ({
-              ...Fk,
-              [kk.id]: Bk
+          onChange: cb => {
+            const sb = cb.target.value;
+            Yb((cb => ({
+              ...cb,
+              [bb.id]: sb
             })))
           }
-        }), ck.map((Fk => gk(Fk.name, Fk.tier ? TX[Fk.tier] : "", {
-          keyId: kk.id,
-          modelId: Fk.id
-        }))), mk && kk.models.length > 1 && (0, Xk.jsxs)("button", {
+        }), Eb.map((cb => Pb(cb.name, cb.tier ? KT[cb.tier] : "", {
+          keyId: bb.id,
+          modelId: cb.id
+        }))), eb && bb.models.length > 1 && (0, Tb.jsxs)("button", {
           className: "WorldCodeAiKeyLearnMore WorldCodeAiModelUnfold",
-          "aria-label": `Show all ${fk} models`,
-          onClick: Fk => {
-            const Bk = Fk.currentTarget.closest(".WorldCodeAiModelGroup");
-            Nk((Fk => new Set(Fk).add(kk.id))), setTimeout((() => {
-              var kk;
-              null === Bk || void 0 === Bk || null === (kk = Bk.querySelector("input")) || void 0 === kk || kk.focus()
+          "aria-label": `Show all ${Qb} models`,
+          onClick: cb => {
+            const sb = cb.currentTarget.closest(".WorldCodeAiModelGroup");
+            gb((cb => new Set(cb).add(bb.id))), setTimeout((() => {
+              var bb;
+              null === sb || void 0 === sb || null === (bb = sb.querySelector("input")) || void 0 === bb || bb.focus()
             }))
           },
-          children: ["Show all ", kk.models.length, " models"]
+          children: ["Show all ", bb.models.length, " models"]
         })]
-      }, kk.id)
+      }, bb.id)
     }))]
   })
 }
-let Tw = !1,
-  rw = null;
+let GI = !1,
+  KI = null;
 
-function Dw(kk) {
+function ZI(bb) {
   let {
-    checked: Fk,
-    onChange: Bk,
-    title: Rk,
-    onNote: tk,
-    offNote: ak
-  } = kk;
-  return (0, Xk.jsxs)("label", {
+    checked: cb,
+    onChange: sb,
+    title: kb,
+    onNote: Wb,
+    offNote: ab
+  } = bb;
+  return (0, Tb.jsxs)("label", {
     className: "WorldCodeAiSettingSwitch",
-    children: [(0, Xk.jsx)("input", {
+    children: [(0, Tb.jsx)("input", {
       type: "checkbox",
-      checked: Fk,
-      onChange: kk => {
-        Bk(kk.target.checked)
+      checked: cb,
+      onChange: bb => {
+        sb(bb.target.checked)
       }
-    }), (0, Xk.jsxs)("span", {
-      children: [Rk, (0, Xk.jsx)("span", {
+    }), (0, Tb.jsxs)("span", {
+      children: [kb, (0, Tb.jsx)("span", {
         className: "WorldCodeAiAiSettingsNote",
-        children: Fk ? tk : ak
+        children: cb ? Wb : ab
       })]
     })]
   })
 }
 
-function zw() {
+function zI() {
   const {
-    remember: kk,
-    setRemember: Fk
-  } = nX();
-  return (0, Xk.jsx)(Dw, {
-    checked: kk,
-    onChange: Fk,
+    remember: bb,
+    setRemember: cb
+  } = jT();
+  return (0, Tb.jsx)(ZI, {
+    checked: bb,
+    onChange: cb,
     title: "Remember my keys in this browser",
     onNote: "On: saved only in this browser, not synced, for all your keys. Not for shared computers.",
     offNote: "Off: you'll paste your keys again next time. Best on shared computers."
   })
 }
 
-function Pw() {
+function qI() {
   const {
-    answer: kk,
-    hasPlayer: Fk
+    answer: bb,
+    hasPlayer: cb
   } = function() {
-    const kk = () => ({
-        answer: qa.get(),
-        hasPlayer: null !== qa.getPlayer()
+    const bb = () => ({
+        answer: wa.get(),
+        hasPlayer: null !== wa.getPlayer()
       }),
-      [Fk, Bk] = (0, Rk.useState)(kk);
-    return (0, Rk.useEffect)((() => {
-      const Fk = qa.subscribe((() => {
-        Bk(kk())
+      [cb, sb] = (0, kb.useState)(bb);
+    return (0, kb.useEffect)((() => {
+      const cb = wa.subscribe((() => {
+        sb(bb())
       }));
-      return qa.refresh(), Fk
-    }), []), Fk
+      return wa.refresh(), cb
+    }), []), cb
   }();
-  return Fk ? (0, Xk.jsx)("div", {
+  return cb ? (0, Tb.jsx)("div", {
     className: "WorldCodeAiAiSettingsSection",
-    children: (0, Xk.jsx)(Dw, {
-      checked: "yes" === kk,
-      onChange: kk => {
-        qa.set(kk ? "yes" : "no")
+    children: (0, Tb.jsx)(ZI, {
+      checked: "yes" === bb,
+      onChange: bb => {
+        wa.set(bb ? "yes" : "no")
       },
       title: "Help make the AI Helper better",
       onNote: "On: Bloxd keeps your questions, code and the AI's answers for 30 days to improve the AI Helper.",
@@ -9746,258 +9746,258 @@ function Pw() {
   }) : null
 }
 
-function hw(kk) {
+function dI(bb) {
   let {
-    allowEdits: Fk,
-    onAllowEditsChange: Bk,
-    onAddKey: tk,
-    onEditKey: ak
-  } = kk;
+    allowEdits: cb,
+    onAllowEditsChange: sb,
+    onAddKey: Wb,
+    onEditKey: ab
+  } = bb;
   const {
-    keys: bk,
-    removeKey: wk
-  } = nX(), [dk, sk] = (0, Rk.useState)(null), [Vk, Jk] = (0, Rk.useState)(!1), [Ak, ek] = (0, Rk.useState)(!1), yk = (0, Rk.useRef)(null);
-  (0, Rk.useEffect)((() => {
-    var kk, Fk;
-    (dk || Ak) && (null === (kk = yk.current) || void 0 === kk || kk.scrollIntoView({
+    keys: Ub,
+    removeKey: Ib
+  } = jT(), [Hb, fb] = (0, kb.useState)(null), [Mb, Xb] = (0, kb.useState)(!1), [nb, mb] = (0, kb.useState)(!1), lb = (0, kb.useRef)(null);
+  (0, kb.useEffect)((() => {
+    var bb, cb;
+    (Hb || nb) && (null === (bb = lb.current) || void 0 === bb || bb.scrollIntoView({
       block: "nearest"
-    }), null === (Fk = yk.current) || void 0 === Fk || Fk.focus({
+    }), null === (cb = lb.current) || void 0 === cb || cb.focus({
       preventScroll: !0
     }))
-  }), [dk, Ak]);
-  const fk = (0, Rk.useRef)(null),
-    mk = () => {
-      Jk(!1), setTimeout((() => {
-        var kk;
-        null === (kk = fk.current) || void 0 === kk || kk.focus()
+  }), [Hb, nb]);
+  const Qb = (0, kb.useRef)(null),
+    eb = () => {
+      Xb(!1), setTimeout((() => {
+        var bb;
+        null === (bb = Qb.current) || void 0 === bb || bb.focus()
       }))
     },
-    [Wk, vk] = (0, Rk.useState)(new Set),
-    [ik, Yk] = (0, Rk.useState)(null);
-  return (0, Xk.jsxs)("div", {
+    [Cb, Nb] = (0, kb.useState)(new Set),
+    [Vb, Lb] = (0, kb.useState)(null);
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiAiSettings",
-    children: [Bk && (0, Xk.jsxs)("div", {
+    children: [sb && (0, Tb.jsxs)("div", {
       className: "WorldCodeAiAiSettingsSection",
-      children: [(0, Xk.jsx)(Nw, {
-        allow: Fk,
-        onChange: kk => {
-          sk(null), Bk(kk)
+      children: [(0, Tb.jsx)(tI, {
+        allow: cb,
+        onChange: bb => {
+          fb(null), sb(bb)
         }
-      }), (0, Xk.jsx)("p", {
+      }), (0, Tb.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote",
-        children: Fk ? "On: the AI changes this game's code right away, without asking; Undo is under each change. It can't touch other games or your account." : "Off: the AI shows each change to this game's code first, and you press Apply."
+        children: cb ? "On: the AI changes this game's code right away, without asking; Undo is under each change. It can't touch other games or your account." : "Off: the AI shows each change to this game's code first, and you press Apply."
       })]
-    }), (0, Xk.jsxs)("div", {
+    }), (0, Tb.jsxs)("div", {
       className: "WorldCodeAiAiSettingsSection",
-      children: [(0, Xk.jsxs)("div", {
+      children: [(0, Tb.jsxs)("div", {
         className: "WorldCodeAiAiSettingsHeading",
-        children: [(0, Xk.jsx)("h3", {
+        children: [(0, Tb.jsx)("h3", {
           id: "WorldCodeAiModelTitle",
           className: "WorldCodeAiAiSettingsTitle",
           children: "AI model"
-        }), (0, Xk.jsxs)("button", {
+        }), (0, Tb.jsxs)("button", {
           className: "WorldCodeAiSecondaryButton WorldCodeAiAddKeyButton",
-          onClick: tk,
-          children: [(0, Xk.jsx)("span", {
+          onClick: Wb,
+          children: [(0, Tb.jsx)("span", {
             "aria-hidden": "true",
             children: "+ "
           }), "Add API key"]
         })]
-      }), 0 === bk.length && (0, Xk.jsx)("p", {
+      }), 0 === Ub.length && (0, Tb.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote",
         children: "Use a stronger AI with your own key."
-      }), (0, Xk.jsx)(zw, {}), bk.length > 0 && (0, Xk.jsx)("p", {
+      }), (0, Tb.jsx)(zI, {}), Ub.length > 0 && (0, Tb.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote WorldCodeAiForgetAll",
-        children: Vk ? (0, Xk.jsxs)("span", {
+        children: Mb ? (0, Tb.jsxs)("span", {
           className: "WorldCodeAiKeyConfirm",
           role: "group",
           "aria-label": "Forget all keys?",
-          onKeyDown: kk => {
-            "Escape" === kk.key && (kk.stopPropagation(), kk.preventDefault(), mk())
+          onKeyDown: bb => {
+            "Escape" === bb.key && (bb.stopPropagation(), bb.preventDefault(), eb())
           },
-          children: [1 === bk.length ? "Forget your key" : `Forget all ${bk.length} keys`, " in this browser?", (0, Xk.jsx)("button", {
+          children: [1 === Ub.length ? "Forget your key" : `Forget all ${Ub.length} keys`, " in this browser?", (0, Tb.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
             onClick: () => {
-              lX.removeAll(), Jk(!1), sk(null), ek(!0)
+              xT.removeAll(), Xb(!1), fb(null), mb(!0)
             },
             children: "Yes"
-          }), (0, Xk.jsx)("button", {
+          }), (0, Tb.jsx)("button", {
             className: "WorldCodeAiLinkButton",
             autoFocus: !0,
-            onClick: mk,
+            onClick: eb,
             children: "No"
           })]
-        }) : (0, Xk.jsx)("button", {
-          ref: fk,
+        }) : (0, Tb.jsx)("button", {
+          ref: Qb,
           className: "WorldCodeAiKeyLearnMore",
           onClick: () => {
-            Jk(!0)
+            Xb(!0)
           },
           children: "Forget all keys"
         })
-      }), 0 === bk.length && Ak && (0, Xk.jsx)("p", {
-        ref: yk,
+      }), 0 === Ub.length && nb && (0, Tb.jsx)("p", {
+        ref: lb,
         className: "WorldCodeAiAiSettingsNote WorldCodeAiKeyRemoved",
         tabIndex: -1,
         children: "All keys forgotten in this browser. Bot.xd answers now. To stop a key working everywhere, delete it on its company's website."
-      }), dk && (0, Xk.jsxs)("p", {
-        ref: yk,
+      }), Hb && (0, Tb.jsxs)("p", {
+        ref: lb,
         className: "WorldCodeAiAiSettingsNote WorldCodeAiKeyRemoved",
         tabIndex: -1,
-        children: [dk.name, " removed.", dk.wasInUse && " Bot.xd answers now.", dk.keyPage && (0, Xk.jsxs)(Xk.Fragment, {
-          children: [" ", "To stop it working everywhere, delete it on", " ", (0, Xk.jsxs)("a", {
-            href: dk.keyPage,
+        children: [Hb.name, " removed.", Hb.wasInUse && " Bot.xd answers now.", Hb.keyPage && (0, Tb.jsxs)(Tb.Fragment, {
+          children: [" ", "To stop it working everywhere, delete it on", " ", (0, Tb.jsxs)("a", {
+            href: Hb.keyPage,
             target: "_blank",
             rel: "noreferrer noopener",
-            children: [dk.label, "'s website"]
+            children: [Hb.label, "'s website"]
           }), "."]
-        }), " ", (0, Xk.jsx)("button", {
+        }), " ", (0, Tb.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiModelUndo",
           onClick: () => {
-            dk.undo(), sk(null)
+            Hb.undo(), fb(null)
           },
           children: "Undo"
         })]
-      }), (0, Xk.jsx)(Gw, {
+      }), (0, Tb.jsx)(OI, {
         labelledBy: "WorldCodeAiModelTitle",
         onPicked: () => {
-          sk(null), Yk(null)
+          fb(null), Lb(null)
         },
         canRename: !0,
-        onEdit: ak,
-        refreshingIds: Wk,
-        keyNote: ik,
-        onRefresh: kk => {
-          (async kk => {
-            const Fk = fX(kk.provider, kk.baseUrl, !0);
-            vk((Fk => new Set(Fk).add(kk.id))), Yk(null);
+        onEdit: ab,
+        refreshingIds: Cb,
+        keyNote: Vb,
+        onRefresh: bb => {
+          (async bb => {
+            const cb = eT(bb.provider, bb.baseUrl, !0);
+            Nb((cb => new Set(cb).add(bb.id))), Lb(null);
             try {
-              const Bk = await IX({
-                provider: kk.provider,
-                key: kk.key,
-                baseUrl: kk.baseUrl
+              const sb = await pT({
+                provider: bb.provider,
+                key: bb.key,
+                baseUrl: bb.baseUrl
               });
-              0 === Bk.length ? Yk({
-                keyId: kk.id,
-                text: `${Fk} listed no models, so your models stay as they were.`
-              }) : lX.refreshModels(kk.id, Bk, {
-                key: kk.key,
-                baseUrl: kk.baseUrl
-              }) && Yk({
-                keyId: kk.id,
-                text: `${Fk}'s models are up to date.`
+              0 === sb.length ? Lb({
+                keyId: bb.id,
+                text: `${cb} listed no models, so your models stay as they were.`
+              }) : xT.refreshModels(bb.id, sb, {
+                key: bb.key,
+                baseUrl: bb.baseUrl
+              }) && Lb({
+                keyId: bb.id,
+                text: `${cb}'s models are up to date.`
               })
-            } catch (Bk) {
-              Yk({
-                keyId: kk.id,
-                text: vX(Bk instanceof mX ? Bk.problem : "failed", kk.provider)
+            } catch (sb) {
+              Lb({
+                keyId: bb.id,
+                text: VT(sb instanceof CT ? sb.problem : "failed", bb.provider)
               })
             }
-            vk((Fk => {
-              const Bk = new Set(Fk);
-              return Bk.delete(kk.id), Bk
+            Nb((cb => {
+              const sb = new Set(cb);
+              return sb.delete(bb.id), sb
             }))
-          })(kk)
+          })(bb)
         },
-        yE: kk => {
-          var Fk;
-          const Bk = (null === (Fk = lX.activeKey()) || void 0 === Fk ? void 0 : Fk.id) === kk.id,
-            Rk = wk(kk.id);
-          sk({
-            name: CX(kk, !0),
-            label: fX(kk.provider, kk.baseUrl, !0),
-            keyPage: sX[kk.provider].keyPage,
-            wasInUse: Bk,
-            undo: Rk
+        wL: bb => {
+          var cb;
+          const sb = (null === (cb = xT.activeKey()) || void 0 === cb ? void 0 : cb.id) === bb.id,
+            kb = Ib(bb.id);
+          fb({
+            name: rT(bb, !0),
+            label: eT(bb.provider, bb.baseUrl, !0),
+            keyPage: MT[bb.provider].keyPage,
+            wasInUse: sb,
+            undo: kb
           })
         }
       })]
-    }), (0, Xk.jsx)(Pw, {})]
+    }), (0, Tb.jsx)(qI, {})]
   })
 }
-const qw = ["anthropic", "openai", "gemini", "openrouter"];
+const AI = ["anthropic", "openai", "gemini", "openrouter"];
 
-function Cw(kk) {
+function wI(bb) {
   let {
-    provider: Fk,
-    children: Bk
-  } = kk;
-  return (0, Xk.jsx)("a", {
-    href: sX[Fk].keyPage,
+    provider: cb,
+    children: sb
+  } = bb;
+  return (0, Tb.jsx)("a", {
+    href: MT[cb].keyPage,
     target: "_blank",
     rel: "noreferrer noopener",
-    children: Bk
+    children: sb
   })
 }
 
-function Zw() {
-  return (0, Xk.jsxs)(Xk.Fragment, {
-    children: [qw.map(((kk, Fk) => {
-      const Bk = 0 === Fk ? "" : Fk === qw.length - 1 ? " or " : ", ";
-      return (0, Xk.jsxs)("span", {
-        children: [Bk, (0, Xk.jsx)(Cw, {
-          provider: kk,
-          children: sX[kk].shortName
+function rI() {
+  return (0, Tb.jsxs)(Tb.Fragment, {
+    children: [AI.map(((bb, cb) => {
+      const sb = 0 === cb ? "" : cb === AI.length - 1 ? " or " : ", ";
+      return (0, Tb.jsxs)("span", {
+        children: [sb, (0, Tb.jsx)(wI, {
+          provider: bb,
+          children: MT[bb].shortName
         })]
-      }, kk)
+      }, bb)
     })), "'s website"]
   })
 }
 
-function pw(kk) {
-  var Fk;
+function oI(bb) {
+  var cb;
   let {
-    provider: Bk
-  } = kk;
-  const [tk, ak] = (0, Rk.useState)(!1), bk = (0, Rk.useRef)(null);
-  if ((0, Rk.useEffect)((() => {
-      if (tk) {
-        var kk, Fk, Bk;
-        const Rk = null === (kk = bk.current) || void 0 === kk || null === (Fk = kk.closest("form")) || void 0 === Fk ? void 0 : Fk.querySelector(".WorldCodeAiAddKeyActions");
-        null === (Bk = null !== Rk && void 0 !== Rk ? Rk : bk.current) || void 0 === Bk || Bk.scrollIntoView({
+    provider: sb
+  } = bb;
+  const [Wb, ab] = (0, kb.useState)(!1), Ub = (0, kb.useRef)(null);
+  if ((0, kb.useEffect)((() => {
+      if (Wb) {
+        var bb, cb, sb;
+        const kb = null === (bb = Ub.current) || void 0 === bb || null === (cb = bb.closest("form")) || void 0 === cb ? void 0 : cb.querySelector(".WorldCodeAiAddKeyActions");
+        null === (sb = null !== kb && void 0 !== kb ? kb : Ub.current) || void 0 === sb || sb.scrollIntoView({
           block: "nearest",
           behavior: "smooth"
         })
       }
-    }), [tk]), "custom" === Bk) return (0, Xk.jsx)("div", {
+    }), [Wb]), "custom" === sb) return (0, Tb.jsx)("div", {
     className: "WorldCodeAiKeyExplainer",
-    children: (0, Xk.jsx)("p", {
+    children: (0, Tb.jsx)("p", {
       className: "WorldCodeAiAiSettingsNote",
       children: "Paste the key for that server, or leave it empty if it doesn't need one. It goes only to that server, never to Bloxd."
     })
   });
-  const wk = Bk ? sX[Bk] : null;
-  return (0, Xk.jsxs)("div", {
+  const Ib = sb ? MT[sb] : null;
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiKeyExplainer",
-    children: [(0, Xk.jsxs)("ul", {
-      ref: bk,
+    children: [(0, Tb.jsxs)("ul", {
+      ref: Ub,
       id: "WorldCodeAiKeyExplainerLines",
       className: "WorldCodeAiKeyExplainerLines",
-      children: [(0, Xk.jsx)("li", {
-        children: wk ? `An API key works like a password for ${wk.shortName}'s AI (it isn't your ${wk.shortName} login password). Keep it secret.` : "An API key works like a password for an AI company's AI (it isn't your login password). Keep it secret."
-      }), (0, Xk.jsxs)("li", {
-        children: ["You make it on ", wk ? `${wk.shortName}'s website` : (0, Xk.jsx)(Zw, {}), ", and see how much you've used or delete it there."]
-      }), tk && (0, Xk.jsxs)("li", {
-        children: ["Your key stays in this browser and only goes to ", null !== (Fk = null === wk || void 0 === wk ? void 0 : wk.shortName) && void 0 !== Fk ? Fk : "that company", ", never to Bloxd."]
-      }), (0, Xk.jsx)("li", {
+      children: [(0, Tb.jsx)("li", {
+        children: Ib ? `An API key works like a password for ${Ib.shortName}'s AI (it isn't your ${Ib.shortName} login password). Keep it secret.` : "An API key works like a password for an AI company's AI (it isn't your login password). Keep it secret."
+      }), (0, Tb.jsxs)("li", {
+        children: ["You make it on ", Ib ? `${Ib.shortName}'s website` : (0, Tb.jsx)(rI, {}), ", and see how much you've used or delete it there."]
+      }), Wb && (0, Tb.jsxs)("li", {
+        children: ["Your key stays in this browser and only goes to ", null !== (cb = null === Ib || void 0 === Ib ? void 0 : Ib.shortName) && void 0 !== cb ? cb : "that company", ", never to Bloxd."]
+      }), (0, Tb.jsx)("li", {
         className: "WorldCodeAiKeyExplainerMore",
-        children: (0, Xk.jsx)("button", {
+        children: (0, Tb.jsx)("button", {
           type: "button",
           className: "WorldCodeAiKeyLearnMore",
-          "aria-expanded": tk,
+          "aria-expanded": Wb,
           "aria-controls": "WorldCodeAiKeyExplainerLines",
           onClick: () => {
-            ak(!tk)
+            ab(!Wb)
           },
-          children: tk ? "Less about keys" : "More about keys"
+          children: Wb ? "Less about keys" : "More about keys"
         })
       })]
-    }), wk && (0, Xk.jsxs)("a", {
+    }), Ib && (0, Tb.jsxs)("a", {
       className: "WorldCodeAiKeyPageLink",
-      href: wk.keyPage,
+      href: Ib.keyPage,
       target: "_blank",
       rel: "noreferrer noopener",
-      children: ["Get a key on ", wk.shortName, "'s website ", (0, Xk.jsx)("span", {
+      children: ["Get a key on ", Ib.shortName, "'s website ", (0, Tb.jsx)("span", {
         "aria-hidden": "true",
         children: "\u2197"
       })]
@@ -10005,473 +10005,473 @@ function pw(kk) {
   })
 }
 
-function Kw() {
-  const [kk, Fk] = (0, Rk.useState)(!1);
-  return (0, Xk.jsxs)("span", {
+function SI() {
+  const [bb, cb] = (0, kb.useState)(!1);
+  return (0, Tb.jsxs)("span", {
     className: "WorldCodeAiAiSettingsNote",
-    children: ["Any server that works like OpenAI's, such as LM Studio or Ollama.", " ", (0, Xk.jsx)("button", {
+    children: ["Any server that works like OpenAI's, such as LM Studio or Ollama.", " ", (0, Tb.jsx)("button", {
       type: "button",
       className: "WorldCodeAiKeyLearnMore",
-      "aria-expanded": kk,
+      "aria-expanded": bb,
       onClick: () => {
-        Fk(!kk)
+        cb(!bb)
       },
-      children: kk ? "Hide tips" : "Server tips"
-    }), kk && (0, Xk.jsx)("span", {
+      children: bb ? "Hide tips" : "Server tips"
+    }), bb && (0, Tb.jsx)("span", {
       className: "WorldCodeAiServerTips",
       children: "Use https://, or http:// for one on this computer, like http://localhost:1234/v1. It must allow web pages to use it: in LM Studio turn on CORS; for Ollama see its help."
     })]
   })
 }
 
-function xw(kk) {
-  kk.stopPropagation()
+function RI(bb) {
+  bb.stopPropagation()
 }
 
-function jw(kk) {
-  var Fk, Bk, tk, ak, bk;
+function vI(bb) {
+  var cb, sb, Wb, ab, Ub;
   let {
-    editing: wk,
-    onAdded: dk,
-    onOpenSettings: sk
-  } = kk;
+    editing: Ib,
+    onAdded: Hb,
+    onOpenSettings: fb
+  } = bb;
   const {
-    remember: Vk
-  } = nX(), [Jk, Ak] = (0, Rk.useState)(null !== (Fk = null === wk || void 0 === wk ? void 0 : wk.provider) && void 0 !== Fk ? Fk : null), [ek, yk] = (0, Rk.useState)(!!wk), [fk, mk] = (0, Rk.useState)(""), Wk = null !== (Bk = null === wk || void 0 === wk ? void 0 : wk.key) && void 0 !== Bk ? Bk : "", [vk, ik] = (0, Rk.useState)(!1), [Yk, Lk] = (0, Rk.useState)(null !== (tk = null === wk || void 0 === wk ? void 0 : wk.baseUrl) && void 0 !== tk ? tk : ""), Ok = kk => {
-    var Fk, Bk;
-    return kk === (null === wk || void 0 === wk ? void 0 : wk.provider) && ("custom" !== kk || (null !== (Fk = yX(Yk)) && void 0 !== Fk ? Fk : "") === (null !== (Bk = wk.baseUrl) && void 0 !== Bk ? Bk : ""))
-  }, Ek = "" !== Wk && Ok(Jk), Sk = function(kk) {
-    let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AX(fk);
-    return "" === Fk && "" !== Wk && Ok(kk) ? Wk : Fk
-  }, [Nk, Hk] = (0, Rk.useState)(""), [uk, Mk] = (0, Rk.useState)(null !== (ak = null === wk || void 0 === wk ? void 0 : wk.name) && void 0 !== ak ? ak : ""), [gk, Uk] = (0, Rk.useState)(!1), [ck, Gk] = (0, Rk.useState)(null), [Tk, rk] = (0, Rk.useState)(""), [Dk, zk] = (0, Rk.useState)(!1), [Pk, hk] = (0, Rk.useState)(null), [qk, Ck] = (0, Rk.useState)(null), Zk = "custom" === Jk && "" === Sk(Jk), pk = (0, Rk.useRef)(null), Kk = (0, Rk.useRef)(null), xk = (0, Rk.useRef)(null);
-  (0, Rk.useEffect)((() => {
-    var kk, Fk;
-    ck && (null === (kk = Kk.current) || void 0 === kk || kk.scrollIntoView({
+    remember: Mb
+  } = jT(), [Xb, nb] = (0, kb.useState)(null !== (cb = null === Ib || void 0 === Ib ? void 0 : Ib.provider) && void 0 !== cb ? cb : null), [mb, lb] = (0, kb.useState)(!!Ib), [Qb, eb] = (0, kb.useState)(""), Cb = null !== (sb = null === Ib || void 0 === Ib ? void 0 : Ib.key) && void 0 !== sb ? sb : "", [Nb, Vb] = (0, kb.useState)(!1), [Lb, ub] = (0, kb.useState)(null !== (Wb = null === Ib || void 0 === Ib ? void 0 : Ib.baseUrl) && void 0 !== Wb ? Wb : ""), Yb = bb => {
+    var cb, sb;
+    return bb === (null === Ib || void 0 === Ib ? void 0 : Ib.provider) && ("custom" !== bb || (null !== (cb = QT(Lb)) && void 0 !== cb ? cb : "") === (null !== (sb = Ib.baseUrl) && void 0 !== sb ? sb : ""))
+  }, hb = "" !== Cb && Yb(Xb), Jb = function(bb) {
+    let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mT(Qb);
+    return "" === cb && "" !== Cb && Yb(bb) ? Cb : cb
+  }, [gb, Bb] = (0, kb.useState)(""), [tb, yb] = (0, kb.useState)(null !== (ab = null === Ib || void 0 === Ib ? void 0 : Ib.name) && void 0 !== ab ? ab : ""), [Pb, Db] = (0, kb.useState)(!1), [Eb, ib] = (0, kb.useState)(null), [Ob, Gb] = (0, kb.useState)(""), [Kb, Zb] = (0, kb.useState)(!1), [zb, qb] = (0, kb.useState)(null), [db, Ab] = (0, kb.useState)(null), wb = "custom" === Xb && "" === Jb(Xb), rb = (0, kb.useRef)(null), ob = (0, kb.useRef)(null), Sb = (0, kb.useRef)(null);
+  (0, kb.useEffect)((() => {
+    var bb, cb;
+    Eb && (null === (bb = ob.current) || void 0 === bb || bb.scrollIntoView({
       block: "start"
-    }), null === (Fk = xk.current) || void 0 === Fk || Fk.scrollIntoView({
+    }), null === (cb = Sb.current) || void 0 === cb || cb.scrollIntoView({
       block: "nearest"
     }))
-  }), [ck]), (0, Rk.useEffect)((() => () => {
-    var kk;
-    null === (kk = pk.current) || void 0 === kk || kk.abort()
-  }), []), (0, Rk.useEffect)((() => {
-    var kk;
-    Pk && (null === (kk = xk.current) || void 0 === kk || kk.scrollIntoView({
+  }), [Eb]), (0, kb.useEffect)((() => () => {
+    var bb;
+    null === (bb = rb.current) || void 0 === bb || bb.abort()
+  }), []), (0, kb.useEffect)((() => {
+    var bb;
+    zb && (null === (bb = Sb.current) || void 0 === bb || bb.scrollIntoView({
       block: "nearest"
     }))
-  }), [Pk]);
-  const jk = () => {
-      var kk;
-      null === (kk = pk.current) || void 0 === kk || kk.abort(), zk(!1), Gk(null), hk(null), Ck(null)
+  }), [zb]);
+  const Rb = () => {
+      var bb;
+      null === (bb = rb.current) || void 0 === bb || bb.abort(), Zb(!1), ib(null), qb(null), Ab(null)
     },
-    lk = null === ck || void 0 === ck ? void 0 : ck.find((kk => kk.id === Tk));
-  return (0, Xk.jsxs)("form", {
+    vb = null === Eb || void 0 === Eb ? void 0 : Eb.find((bb => bb.id === Ob));
+  return (0, Tb.jsxs)("form", {
     className: "WorldCodeAiAddKey",
-    onSubmit: kk => {
-      kk.preventDefault(), ck ? (() => {
-        var kk;
-        if (!Jk || !ck) return;
-        const Fk = lX.addKey({
-          provider: Jk,
-          key: Sk(Jk),
-          baseUrl: "custom" === Jk && null !== (kk = yX(Yk)) && void 0 !== kk ? kk : void 0,
-          models: ck
-        }, Tk, null === wk || void 0 === wk ? void 0 : wk.id);
-        ("" !== uk.trim() || wk) && lX.renameKey(Fk, uk), dk()
+    onSubmit: bb => {
+      bb.preventDefault(), Eb ? (() => {
+        var bb;
+        if (!Xb || !Eb) return;
+        const cb = xT.addKey({
+          provider: Xb,
+          key: Jb(Xb),
+          baseUrl: "custom" === Xb && null !== (bb = QT(Lb)) && void 0 !== bb ? bb : void 0,
+          models: Eb
+        }, Ob, null === Ib || void 0 === Ib ? void 0 : Ib.id);
+        ("" !== tb.trim() || Ib) && xT.renameKey(cb, tb), Hb()
       })() : (async () => {
-        const Fk = AX(fk);
-        mk(Fk), Ck(null);
-        const Bk = null !== Jk && void 0 !== Jk ? Jk : eX(Fk),
-          Rk = Sk(Bk, Fk);
-        if ("" === Rk && "custom" !== Bk) return void hk("Paste your key first.");
-        if (!Bk) return void hk("Pick the company your key is from.");
-        const tk = "custom" === Bk ? yX(Yk) : null;
-        if ("custom" === Bk && null === tk) return void hk("That address doesn't look right. It should start with https://");
-        if (gk && "" === Nk.trim()) return void hk("Type the name of the model to use.");
-        Ak(Bk), zk(!0), hk(null);
-        const ak = new AbortController;
-        pk.current = ak;
+        const cb = mT(Qb);
+        eb(cb), Ab(null);
+        const sb = null !== Xb && void 0 !== Xb ? Xb : lT(cb),
+          kb = Jb(sb, cb);
+        if ("" === kb && "custom" !== sb) return void qb("Paste your key first.");
+        if (!sb) return void qb("Pick the company your key is from.");
+        const Wb = "custom" === sb ? QT(Lb) : null;
+        if ("custom" === sb && null === Wb) return void qb("That address doesn't look right. It should start with https://");
+        if (Pb && "" === gb.trim()) return void qb("Type the name of the model to use.");
+        nb(sb), Zb(!0), qb(null);
+        const ab = new AbortController;
+        rb.current = ab;
         try {
-          var Xk, bk;
-          const kk = await IX({
-            provider: Bk,
-            key: Rk,
-            baseUrl: null !== tk && void 0 !== tk ? tk : void 0,
-            modelName: gk ? Nk : void 0
-          }, ak.signal);
-          if (zk(!1), 0 === kk.length) return Uk(!0), void hk("custom" === Bk ? "This address doesn't list its models. Type the name of the model to use." : "Type the name of the model to use.");
-          Gk(kk);
-          const Fk = lX.getState().selected,
-            dk = wk && (null === Fk || void 0 === Fk ? void 0 : Fk.keyId) === wk.id ? kk.find((kk => kk.id === Fk.modelId)) : void 0;
-          rk(null !== (Xk = null === (bk = null !== dk && void 0 !== dk ? dk : qX(kk)) || void 0 === bk ? void 0 : bk.id) && void 0 !== Xk ? Xk : "")
-        } catch (kk) {
-          if (ak.signal.aborted) return;
-          zk(!1);
-          const tk = kk instanceof mX ? kk.problem : "failed";
-          if (Ck(kk instanceof mX && kk.detail ? WX(kk.detail, Rk) : null), "badKey" === tk && "" === Rk) return void hk("This address needs a key.");
-          const Xk = "badKey" !== tk || ek ? "" : ` If it isn't from ${sX[Bk].shortName}, pick the company it's from.`;
-          hk(`${vX(tk,Bk)}${Xk}`)
+          var Tb, Ub;
+          const bb = await pT({
+            provider: sb,
+            key: kb,
+            baseUrl: null !== Wb && void 0 !== Wb ? Wb : void 0,
+            modelName: Pb ? gb : void 0
+          }, ab.signal);
+          if (Zb(!1), 0 === bb.length) return Db(!0), void qb("custom" === sb ? "This address doesn't list its models. Type the name of the model to use." : "Type the name of the model to use.");
+          ib(bb);
+          const cb = xT.getState().selected,
+            Hb = Ib && (null === cb || void 0 === cb ? void 0 : cb.keyId) === Ib.id ? bb.find((bb => bb.id === cb.modelId)) : void 0;
+          Gb(null !== (Tb = null === (Ub = null !== Hb && void 0 !== Hb ? Hb : wT(bb)) || void 0 === Ub ? void 0 : Ub.id) && void 0 !== Tb ? Tb : "")
+        } catch (bb) {
+          if (ab.signal.aborted) return;
+          Zb(!1);
+          const Wb = bb instanceof CT ? bb.problem : "failed";
+          if (Ab(bb instanceof CT && bb.detail ? NT(bb.detail, kb) : null), "badKey" === Wb && "" === kb) return void qb("This address needs a key.");
+          const Tb = "badKey" !== Wb || mb ? "" : ` If it isn't from ${MT[sb].shortName}, pick the company it's from.`;
+          qb(`${VT(Wb,sb)}${Tb}`)
         }
       })()
     },
-    children: [(0, Xk.jsxs)("label", {
+    children: [(0, Tb.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, Xk.jsx)("span", {
+      children: [(0, Tb.jsx)("span", {
         children: "Company"
-      }), (0, Xk.jsxs)("select", {
+      }), (0, Tb.jsxs)("select", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyCompany",
-        value: null !== Jk && void 0 !== Jk ? Jk : "",
-        onChange: kk => {
-          Ak(kk.target.value), yk(!0), Uk(!1), jk()
+        value: null !== Xb && void 0 !== Xb ? Xb : "",
+        onChange: bb => {
+          nb(bb.target.value), lb(!0), Db(!1), Rb()
         },
-        onKeyDown: xw,
-        children: [null === Jk && (0, Xk.jsx)("option", {
+        onKeyDown: RI,
+        children: [null === Xb && (0, Tb.jsx)("option", {
           value: "",
           disabled: !0,
           children: "Pick one, or paste your key below"
-        }), VX.map((kk => (0, Xk.jsx)("option", {
-          value: kk,
-          children: sX[kk].name
-        }, kk)))]
+        }), XT.map((bb => (0, Tb.jsx)("option", {
+          value: bb,
+          children: MT[bb].name
+        }, bb)))]
       })]
-    }), "custom" === Jk && (0, Xk.jsxs)("label", {
+    }), "custom" === Xb && (0, Tb.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, Xk.jsx)("span", {
+      children: [(0, Tb.jsx)("span", {
         children: "Server address"
-      }), (0, Xk.jsx)("input", {
+      }), (0, Tb.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyEndpoint",
-        value: Yk,
+        value: Lb,
         placeholder: "https://ai.example.com/v1",
         autoComplete: "off",
         spellCheck: !1,
-        onChange: kk => {
-          Lk(kk.target.value), Uk(!1), jk()
+        onChange: bb => {
+          ub(bb.target.value), Db(!1), Rb()
         },
-        onKeyDown: xw
-      }), (!wk || Yk !== (null !== (bk = wk.baseUrl) && void 0 !== bk ? bk : "")) && (0, Xk.jsx)(Kw, {})]
-    }), (0, Xk.jsxs)("div", {
+        onKeyDown: RI
+      }), (!Ib || Lb !== (null !== (Ub = Ib.baseUrl) && void 0 !== Ub ? Ub : "")) && (0, Tb.jsx)(SI, {})]
+    }), (0, Tb.jsxs)("div", {
       className: "WorldCodeAiAddKeyField",
-      children: [Ek && (0, Xk.jsxs)("span", {
+      children: [hb && (0, Tb.jsxs)("span", {
         className: "WorldCodeAiAddKeySavedKey",
-        children: ["Key ends ", (0, Xk.jsxs)("code", {
-          children: ["\u2026", Wk.slice(-4)]
+        children: ["Key ends ", (0, Tb.jsxs)("code", {
+          children: ["\u2026", Cb.slice(-4)]
         })]
-      }), (0, Xk.jsx)("label", {
+      }), (0, Tb.jsx)("label", {
         htmlFor: "WorldCodeAiAddKeyKey",
-        children: Ek ? "Paste a new key to replace it (optional)" : "Your key"
-      }), (0, Xk.jsxs)("span", {
+        children: hb ? "Paste a new key to replace it (optional)" : "Your key"
+      }), (0, Tb.jsxs)("span", {
         className: "WorldCodeAiAddKeyPaste",
-        children: [(0, Xk.jsx)("input", {
+        children: [(0, Tb.jsx)("input", {
           id: "WorldCodeAiAddKeyKey",
           className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyKey",
-          type: vk ? "text" : "password",
-          value: fk,
-          placeholder: Ek ? "Leave empty to keep it" : "custom" === Jk ? "Paste the key, or leave empty" : "Paste the key here",
+          type: Nb ? "text" : "password",
+          value: Qb,
+          placeholder: hb ? "Leave empty to keep it" : "custom" === Xb ? "Paste the key, or leave empty" : "Paste the key here",
           autoComplete: "off",
           spellCheck: !1,
-          onChange: kk => {
-            mk(kk.target.value), ek || Ak(eX(AX(kk.target.value))), jk()
+          onChange: bb => {
+            eb(bb.target.value), mb || nb(lT(mT(bb.target.value))), Rb()
           },
-          onKeyDown: xw
-        }), (0, Xk.jsx)("button", {
+          onKeyDown: RI
+        }), (0, Tb.jsx)("button", {
           type: "button",
           className: "WorldCodeAiSecondaryButton",
           onClick: () => {
-            ik(!vk)
+            Vb(!Nb)
           },
-          children: vk ? "Hide" : "Show"
+          children: Nb ? "Hide" : "Show"
         })]
-      }), (0, Xk.jsx)(pw, {
-        provider: Jk
+      }), (0, Tb.jsx)(oI, {
+        provider: Xb
       })]
-    }), !wk && (0, Xk.jsxs)("p", {
+    }), !Ib && (0, Tb.jsxs)("p", {
       className: "WorldCodeAiAiSettingsNote WorldCodeAiAddKeyRemember",
-      children: [Vk ? "Your keys are remembered in this browser. Change it in " : "Your keys are kept until you close this tab. To remember them, see ", (0, Xk.jsx)("button", {
+      children: [Mb ? "Your keys are remembered in this browser. Change it in " : "Your keys are kept until you close this tab. To remember them, see ", (0, Tb.jsx)("button", {
         type: "button",
         className: "WorldCodeAiKeyLearnMore",
-        onClick: sk,
+        onClick: fb,
         children: "AI settings"
       }), "."]
-    }), gk && (0, Xk.jsxs)("label", {
+    }), Pb && (0, Tb.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, Xk.jsx)("span", {
+      children: [(0, Tb.jsx)("span", {
         children: "Model name"
-      }), (0, Xk.jsx)("input", {
+      }), (0, Tb.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyModel",
-        value: Nk,
+        value: gb,
         placeholder: "llama-3.3-70b-versatile",
         autoComplete: "off",
         spellCheck: !1,
-        onChange: kk => {
-          Hk(kk.target.value), jk()
+        onChange: bb => {
+          Bb(bb.target.value), Rb()
         },
-        onKeyDown: xw
+        onKeyDown: RI
       })]
-    }), ck && (0, Xk.jsxs)("div", {
-      ref: Kk,
+    }), Eb && (0, Tb.jsxs)("div", {
+      ref: ob,
       className: "WorldCodeAiModelList WorldCodeAiAddKeyModels",
       role: "radiogroup",
       "aria-labelledby": "WorldCodeAiAddKeyModelsTitle",
-      children: [(0, Xk.jsxs)("p", {
+      children: [(0, Tb.jsxs)("p", {
         id: "WorldCodeAiAddKeyModelsTitle",
         className: "WorldCodeAiAddKeyWorks",
-        children: ["" === Sk(Jk) ? "It works." : "Your key works.", " Pick a model:"]
-      }), ck.map((kk => (0, Xk.jsx)(Uw, {
-        name: kk.name,
-        hint: kk.tier ? TX[kk.tier] : "",
+        children: ["" === Jb(Xb) ? "It works." : "Your key works.", " Pick a model:"]
+      }), Eb.map((bb => (0, Tb.jsx)(iI, {
+        name: bb.name,
+        hint: bb.tier ? KT[bb.tier] : "",
         choice: {
-          keyId: null !== Jk && void 0 !== Jk ? Jk : "",
-          modelId: kk.id
+          keyId: null !== Xb && void 0 !== Xb ? Xb : "",
+          modelId: bb.id
         },
-        selected: kk.id === Tk,
+        selected: bb.id === Ob,
         radioName: "WorldCodeAiAddKeyModelPick",
         onSelect: () => {
-          rk(kk.id)
+          Gb(bb.id)
         }
-      }, kk.id))), (0, Xk.jsx)("button", {
+      }, bb.id))), (0, Tb.jsx)("button", {
         type: "button",
         className: "WorldCodeAiKeyLearnMore",
         onClick: () => {
-          Uk(!0), jk()
+          Db(!0), Rb()
         },
         children: "Type a model name yourself"
       })]
-    }), ck && (0, Xk.jsxs)("label", {
+    }), Eb && (0, Tb.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, Xk.jsx)("span", {
+      children: [(0, Tb.jsx)("span", {
         children: "Name it (optional)"
-      }), (0, Xk.jsx)("input", {
+      }), (0, Tb.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyName",
-        value: uk,
+        value: tb,
         maxLength: 30,
-        placeholder: Jk && "custom" !== Jk ? `Like My ${sX[Jk].shortName}` : "Like Home server",
+        placeholder: Xb && "custom" !== Xb ? `Like My ${MT[Xb].shortName}` : "Like Home server",
         autoComplete: "off",
-        onChange: kk => {
-          Mk(kk.target.value)
+        onChange: bb => {
+          yb(bb.target.value)
         },
-        onKeyDown: xw
+        onKeyDown: RI
       })]
-    }), (0, Xk.jsxs)("div", {
-      ref: xk,
+    }), (0, Tb.jsxs)("div", {
+      ref: Sb,
       className: "WorldCodeAiAddKeyActions",
-      children: [Pk && (0, Xk.jsx)("p", {
+      children: [zb && (0, Tb.jsx)("p", {
         className: "WorldCodeAiAddKeyError",
         role: "alert",
-        children: Pk
-      }), Pk && qk && (0, Xk.jsx)(Ww, {
-        detail: qk,
+        children: zb
+      }), zb && db && (0, Tb.jsx)(NI, {
+        detail: db,
         onOpen: () => {
-          var kk, Fk;
-          null === (kk = xk.current) || void 0 === kk || null === (Fk = kk.querySelector(".WorldCodeAiAddKeySave")) || void 0 === Fk || Fk.scrollIntoView({
+          var bb, cb;
+          null === (bb = Sb.current) || void 0 === bb || null === (cb = bb.querySelector(".WorldCodeAiAddKeySave")) || void 0 === cb || cb.scrollIntoView({
             block: "nearest"
           })
         }
-      }), (0, Xk.jsx)("button", {
+      }), (0, Tb.jsx)("button", {
         type: "submit",
         className: "WorldCodeAiPrimaryButton WorldCodeAiAddKeySave",
-        disabled: Dk,
-        children: Dk ? Zk ? "Testing the connection\u2026" : "Testing your key\u2026" : lk ? `Save and use ${lk.name}` : Zk ? "Test connection" : "Test key"
+        disabled: Kb,
+        children: Kb ? wb ? "Testing the connection\u2026" : "Testing your key\u2026" : vb ? `Save and use ${vb.name}` : wb ? "Test connection" : "Test key"
       })]
     })]
   })
 }
-var lw = Bk(1149),
-  nw = Bk(36563),
-  Iw = Bk(36555);
+var FI = sb(1197),
+  xI = sb(36455),
+  jI = sb(36452);
 
-function Qw(kk) {
+function pI(bb) {
   let {
-    step: Fk,
-    placement: Bk = "left",
-    onPrevious: Rk,
-    children: tk
-  } = kk;
+    step: cb,
+    placement: sb = "left",
+    onPrevious: kb,
+    children: Wb
+  } = bb;
   const {
-    t: ak
-  } = (0, lw.x)();
-  return (0, Xk.jsx)(Iw.f, {
+    t: ab
+  } = (0, FI.E)();
+  return (0, Tb.jsx)(jI.g, {
     tutorial: "aiHelperOverview",
-    step: Fk,
-    text: ak(`codeEditorAiTutorial:${Fk}`),
-    placement: Bk,
-    onPrevious: Rk,
-    children: tk
+    step: cb,
+    text: ab(`codeEditorAiTutorial:${cb}`),
+    placement: sb,
+    onPrevious: kb,
+    children: Wb
   })
 }
 
-function kd(kk, Fk) {
-  if (kk.scrollHeight <= kk.clientHeight + 1) Fd(kk);
+function bH(bb, cb) {
+  if (bb.scrollHeight <= bb.clientHeight + 1) cH(bb);
   else {
-    if (!uw(kk, Fk)) {
-      const Bk = Fk.getBoundingClientRect().bottom - kk.getBoundingClientRect().bottom;
-      Bk > 0 && (kk.scrollTop += Bk),
-        function(kk, Fk) {
-          const Bk = kk.getBoundingClientRect(),
-            Rk = Math.max(Bk.top, ...Array.from(kk.querySelectorAll(".WorldCodeAiModelGroupHeader"), (kk => {
-              const Fk = kk.getBoundingClientRect();
-              return Fk.top <= Bk.top + 1 ? Fk.bottom : Bk.top
+    if (!PI(bb, cb)) {
+      const sb = cb.getBoundingClientRect().bottom - bb.getBoundingClientRect().bottom;
+      sb > 0 && (bb.scrollTop += sb),
+        function(bb, cb) {
+          const sb = bb.getBoundingClientRect(),
+            kb = Math.max(sb.top, ...Array.from(bb.querySelectorAll(".WorldCodeAiModelGroupHeader"), (bb => {
+              const cb = bb.getBoundingClientRect();
+              return cb.top <= sb.top + 1 ? cb.bottom : sb.top
             })));
-          if (Rk <= Bk.top) return;
-          const tk = Fk.closest(".WorldCodeAiModelGroup"),
-            ak = tk && parseFloat(getComputedStyle(tk).rowGap) || 6,
-            Xk = Array.from(kk.querySelectorAll(".WorldCodeAiModelRow, .WorldCodeAiModelUnfold")).find((kk => {
-              const Fk = kk.getBoundingClientRect();
-              return Fk.top < Rk + ak - 1 && Fk.bottom > Rk - ak
+          if (kb <= sb.top) return;
+          const Wb = cb.closest(".WorldCodeAiModelGroup"),
+            ab = Wb && parseFloat(getComputedStyle(Wb).rowGap) || 6,
+            Tb = Array.from(bb.querySelectorAll(".WorldCodeAiModelRow, .WorldCodeAiModelUnfold")).find((bb => {
+              const cb = bb.getBoundingClientRect();
+              return cb.top < kb + ab - 1 && cb.bottom > kb - ab
             }));
-          if (!Xk || Xk === Fk) return;
-          const bk = kk.scrollTop;
-          kk.scrollTop -= Rk + ak - Xk.getBoundingClientRect().top, Fk.getBoundingClientRect().bottom > Bk.bottom && (kk.scrollTop = bk, kk.scrollTop += Math.max(0, Xk.getBoundingClientRect().bottom - Rk))
-        }(kk, Fk)
+          if (!Tb || Tb === cb) return;
+          const Ub = bb.scrollTop;
+          bb.scrollTop -= kb + ab - Tb.getBoundingClientRect().top, cb.getBoundingClientRect().bottom > sb.bottom && (bb.scrollTop = Ub, bb.scrollTop += Math.max(0, Tb.getBoundingClientRect().bottom - kb))
+        }(bb, cb)
     }
-    Fd(kk)
+    cH(bb)
   }
 }
 
-function Fd(kk) {
-  const Fk = kk.getBoundingClientRect().top;
-  for (const Bk of Array.from(kk.querySelectorAll(".WorldCodeAiModelGroup"))) {
-    const kk = Bk.querySelector(".WorldCodeAiModelGroupHeader");
-    if (!kk) continue;
-    const Rk = Fk + kk.offsetHeight,
-      tk = Array.from(Bk.querySelectorAll(".WorldCodeAiModelRow")).some((kk => kk.getBoundingClientRect().bottom > Rk + 2));
-    kk.classList.toggle("Unpinned", !tk)
+function cH(bb) {
+  const cb = bb.getBoundingClientRect().top;
+  for (const sb of Array.from(bb.querySelectorAll(".WorldCodeAiModelGroup"))) {
+    const bb = sb.querySelector(".WorldCodeAiModelGroupHeader");
+    if (!bb) continue;
+    const kb = cb + bb.offsetHeight,
+      Wb = Array.from(sb.querySelectorAll(".WorldCodeAiModelRow")).some((bb => bb.getBoundingClientRect().bottom > kb + 2));
+    bb.classList.toggle("Unpinned", !Wb)
   }
 }
 
-function Bd(kk) {
-  const Fk = CX(kk, !0);
-  return kk.model.name.toLowerCase().startsWith(Fk.toLowerCase()) ? kk.model.name : `${Fk} \xb7 ${kk.model.name}`
+function sH(bb) {
+  const cb = rT(bb, !0);
+  return bb.model.name.toLowerCase().startsWith(cb.toLowerCase()) ? bb.model.name : `${cb} \xb7 ${bb.model.name}`
 }
 
-function Rd(kk) {
+function kH(bb) {
   let {
-    onAddKey: Fk,
-    editsOn: Bk,
-    freeOnce: tk = !1,
-    onFreeOnce: bk,
-    children: wk
-  } = kk;
+    onAddKey: cb,
+    editsOn: sb,
+    freeOnce: Wb = !1,
+    onFreeOnce: Ub,
+    children: Ib
+  } = bb;
   const {
-    active: dk,
-    select: sk
-  } = nX(), Vk = eb(wb());
-  (0, Rk.useEffect)((() => {
-    bb.refresh(), Eb()
+    active: Hb,
+    select: fb
+  } = jT(), Mb = lU(HU());
+  (0, kb.useEffect)((() => {
+    IU.refresh(), gU()
   }), []);
-  const [Jk, Ak] = (0, Rk.useState)(!1), ek = (0, Rk.useRef)(null), yk = (0, Rk.useRef)(null), fk = (0, Rk.useRef)(null), mk = () => {
-    var kk;
-    Ak(!1), null === (kk = yk.current) || void 0 === kk || kk.focus()
+  const [Xb, nb] = (0, kb.useState)(!1), mb = (0, kb.useRef)(null), lb = (0, kb.useRef)(null), Qb = (0, kb.useRef)(null), eb = () => {
+    var bb;
+    nb(!1), null === (bb = lb.current) || void 0 === bb || bb.focus()
   };
-  (0, Rk.useEffect)((() => {
-    var kk, Fk;
-    if (!Jk) return;
-    const Bk = null === (kk = fk.current) || void 0 === kk ? void 0 : kk.querySelector("input:checked");
-    null === Bk || void 0 === Bk || Bk.focus({
+  (0, kb.useEffect)((() => {
+    var bb, cb;
+    if (!Xb) return;
+    const sb = null === (bb = Qb.current) || void 0 === bb ? void 0 : bb.querySelector("input:checked");
+    null === sb || void 0 === sb || sb.focus({
       preventScroll: !0
     });
-    const Rk = null === (Fk = fk.current) || void 0 === Fk ? void 0 : Fk.querySelector(".WorldCodeAiModelMenuList"),
-      tk = null === Bk || void 0 === Bk ? void 0 : Bk.closest(".WorldCodeAiModelRow");
-    Rk && tk && kd(Rk, tk);
-    const ak = () => {
-      Rk && Fd(Rk)
+    const kb = null === (cb = Qb.current) || void 0 === cb ? void 0 : cb.querySelector(".WorldCodeAiModelMenuList"),
+      Wb = null === sb || void 0 === sb ? void 0 : sb.closest(".WorldCodeAiModelRow");
+    kb && Wb && bH(kb, Wb);
+    const ab = () => {
+      kb && cH(kb)
     };
-    null === Rk || void 0 === Rk || Rk.addEventListener("scroll", ak, {
+    null === kb || void 0 === kb || kb.addEventListener("scroll", ab, {
       passive: !0
     });
-    const Xk = kk => {
-        var Fk;
-        null !== (Fk = ek.current) && void 0 !== Fk && Fk.contains(kk.target) || Ak(!1)
+    const Tb = bb => {
+        var cb;
+        null !== (cb = mb.current) && void 0 !== cb && cb.contains(bb.target) || nb(!1)
       },
-      bk = kk => {
-        "Escape" === kk.key && (kk.stopPropagation(), kk.preventDefault(), rw && (rw(), 1) || mk())
+      Ub = bb => {
+        "Escape" === bb.key && (bb.stopPropagation(), bb.preventDefault(), KI && (KI(), 1) || eb())
       };
-    return document.addEventListener("pointerdown", Xk), document.addEventListener("keydown", bk, !0), () => {
-      null === Rk || void 0 === Rk || Rk.removeEventListener("scroll", ak), document.removeEventListener("pointerdown", Xk), document.removeEventListener("keydown", bk, !0)
+    return document.addEventListener("pointerdown", Tb), document.addEventListener("keydown", Ub, !0), () => {
+      null === kb || void 0 === kb || kb.removeEventListener("scroll", ab), document.removeEventListener("pointerdown", Tb), document.removeEventListener("keydown", Ub, !0)
     }
-  }), [Jk]);
-  const Wk = tk && null !== dk,
-    vk = Wk ? "Bot.xd (free) \xb7 once" : dk ? Bd(dk) : Vk ? Fb : "Bot.xd (free)";
-  return (0, Xk.jsxs)("div", {
-    ref: ek,
+  }), [Xb]);
+  const Cb = Wb && null !== Hb,
+    Nb = Cb ? "Bot.xd (free) \xb7 once" : Hb ? sH(Hb) : Mb ? sU : "Bot.xd (free)";
+  return (0, Tb.jsxs)("div", {
+    ref: mb,
     className: "WorldCodeAiModelChipRow",
-    onBlur: kk => {
-      var Fk;
-      !Jk || !kk.relatedTarget || null !== (Fk = ek.current) && void 0 !== Fk && Fk.contains(kk.relatedTarget) || Ak(!1)
+    onBlur: bb => {
+      var cb;
+      !Xb || !bb.relatedTarget || null !== (cb = mb.current) && void 0 !== cb && cb.contains(bb.relatedTarget) || nb(!1)
     },
-    children: [(0, Xk.jsxs)("button", {
-      ref: yk,
-      className: ak()("WorldCodeAiModelChip", Jk && "Open"),
-      "aria-expanded": Jk,
-      "aria-label": `AI model: ${vk}`,
+    children: [(0, Tb.jsxs)("button", {
+      ref: lb,
+      className: ab()("WorldCodeAiModelChip", Xb && "Open"),
+      "aria-expanded": Xb,
+      "aria-label": `AI model: ${Nb}`,
       title: "Change AI model",
       onClick: () => {
-        Ak(!Jk)
+        nb(!Xb)
       },
-      children: [dk && !Wk && "" !== dk.key && (0, Xk.jsx)(mw, {}), (0, Xk.jsx)("span", {
+      children: [Hb && !Cb && "" !== Hb.key && (0, Tb.jsx)(CI, {}), (0, Tb.jsx)("span", {
         className: "WorldCodeAiModelChipName",
-        children: vk
-      }), (0, Xk.jsx)("span", {
+        children: Nb
+      }), (0, Tb.jsx)("span", {
         className: "WorldCodeAiModelChipCaret",
         "aria-hidden": "true",
         children: "\u25be"
       })]
-    }), null !== Bk && (0, Xk.jsx)(Qw, {
+    }), null !== sb && (0, Tb.jsx)(pI, {
       step: "aiEdits",
       placement: "top",
-      children: (0, Xk.jsx)("span", {
-        className: ak()("WorldCodeAiEditsTag", !Bk && "WorldCodeAiEditsTag-off"),
-        title: `Allow AI to make edits to my code is ${Bk?"on":"off"}, in AI settings`,
-        children: Bk ? "Edits on" : "Edits off"
+      children: (0, Tb.jsx)("span", {
+        className: ab()("WorldCodeAiEditsTag", !sb && "WorldCodeAiEditsTag-off"),
+        title: `Allow AI to make edits to my code is ${sb?"on":"off"}, in AI settings`,
+        children: sb ? "Edits on" : "Edits off"
       })
-    }), (0, Xk.jsx)("span", {
+    }), (0, Tb.jsx)("span", {
       className: "WorldCodeAiModelChipStatus",
-      children: wk
-    }), Jk && (0, Xk.jsxs)("div", {
-      ref: fk,
+      children: Ib
+    }), Xb && (0, Tb.jsxs)("div", {
+      ref: Qb,
       className: "WorldCodeAiModelMenu",
       role: "dialog",
       "aria-labelledby": "WorldCodeAiModelMenuTitle",
-      children: [(0, Xk.jsx)("h3", {
+      children: [(0, Tb.jsx)("h3", {
         id: "WorldCodeAiModelMenuTitle",
         className: "WorldCodeAiAiSettingsTitle",
         children: "AI model"
-      }), (0, Xk.jsx)("div", {
+      }), (0, Tb.jsx)("div", {
         className: "WorldCodeAiModelMenuList",
-        children: (0, Xk.jsx)(Gw, {
+        children: (0, Tb.jsx)(OI, {
           labelledBy: "WorldCodeAiModelMenuTitle",
           onPicked: () => {
-            null === bk || void 0 === bk || bk(!1), mk()
+            null === Ub || void 0 === Ub || Ub(!1), eb()
           }
         })
-      }), (0, Xk.jsxs)("div", {
+      }), (0, Tb.jsxs)("div", {
         className: "WorldCodeAiModelMenuActions",
-        children: [(0, Xk.jsxs)("button", {
+        children: [(0, Tb.jsxs)("button", {
           className: "WorldCodeAiSecondaryButton WorldCodeAiAddKeyButton",
           onClick: () => {
-            Ak(!1), Fk()
+            nb(!1), cb()
           },
-          children: [(0, Xk.jsx)("span", {
+          children: [(0, Tb.jsx)("span", {
             "aria-hidden": "true",
             children: "+ "
           }), "Add API key"]
-        }), dk && (0, Xk.jsxs)("span", {
+        }), Hb && (0, Tb.jsxs)("span", {
           className: "WorldCodeAiModelMenuBotxd",
-          children: [bk && (Wk ? (0, Xk.jsxs)("button", {
+          children: [Ub && (Cb ? (0, Tb.jsxs)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              bk(!1), mk()
+              Ub(!1), eb()
             },
-            children: ["Back to ", dk.model.name]
-          }) : (0, Xk.jsx)("button", {
+            children: ["Back to ", Hb.model.name]
+          }) : (0, Tb.jsx)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              bk(!0), mk()
+              Ub(!0), eb()
             },
             children: "Ask Bot.xd once"
-          })), (0, Xk.jsx)("button", {
+          })), (0, Tb.jsx)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              sk(null), mk()
+              fb(null), eb()
             },
             children: "Use Bot.xd from now on"
           })]
@@ -10480,379 +10480,379 @@ function Rd(kk) {
     })]
   })
 }
-const td = "kv";
+const WH = "kv";
 
-function ad(kk) {
-  return new Promise(((Fk, Bk) => {
-    kk.oncomplete = () => {
-      Fk()
-    }, kk.onerror = () => {
-      var Fk;
-      Bk(null !== (Fk = kk.error) && void 0 !== Fk ? Fk : new Error("IndexedDB transaction failed"))
-    }, kk.onabort = () => {
-      var Fk;
-      Bk(null !== (Fk = kk.error) && void 0 !== Fk ? Fk : new Error("IndexedDB transaction aborted"))
+function aH(bb) {
+  return new Promise(((cb, sb) => {
+    bb.oncomplete = () => {
+      cb()
+    }, bb.onerror = () => {
+      var cb;
+      sb(null !== (cb = bb.error) && void 0 !== cb ? cb : new Error("IndexedDB transaction failed"))
+    }, bb.onabort = () => {
+      var cb;
+      sb(null !== (cb = bb.error) && void 0 !== cb ? cb : new Error("IndexedDB transaction aborted"))
     }
   }))
 }
-var Xd = Bk(36586);
-const bd = (0, Rk.memo)((function(kk) {
+var TH = sb(36486);
+const UH = (0, kb.memo)((function(bb) {
   let {
-    change: Fk,
-    marked: Bk
-  } = kk;
-  const tk = (0, Rk.useMemo)((() => xR(Fk.before, Fk.after)), [Fk]),
-    bk = [];
-  for (let Rk = 0; Rk < tk.length; Rk++) {
-    if ("same" !== tk[Rk].kind) {
-      bk.push(tk[Rk]);
+    change: cb,
+    marked: sb
+  } = bb;
+  const Wb = (0, kb.useMemo)((() => Fk(cb.before, cb.after)), [cb]),
+    Ub = [];
+  for (let kb = 0; kb < Wb.length; kb++) {
+    if ("same" !== Wb[kb].kind) {
+      Ub.push(Wb[kb]);
       continue
     }
-    let kk = Rk;
-    for (; kk + 1 < tk.length && "same" === tk[kk + 1].kind;) kk++;
-    const Fk = tk.slice(Rk, kk + 1),
-      Bk = 0 === Rk ? 0 : 2,
-      ak = kk === tk.length - 1 ? 0 : 2;
-    Fk.length > Bk + ak + 1 ? bk.push(...Fk.slice(0, Bk), {
+    let bb = kb;
+    for (; bb + 1 < Wb.length && "same" === Wb[bb + 1].kind;) bb++;
+    const cb = Wb.slice(kb, bb + 1),
+      sb = 0 === kb ? 0 : 2,
+      ab = bb === Wb.length - 1 ? 0 : 2;
+    cb.length > sb + ab + 1 ? Ub.push(...cb.slice(0, sb), {
       kind: "fold",
-      count: Fk.length - Bk - ak
-    }, ...Fk.slice(Fk.length - ak)) : bk.push(...Fk), Rk = kk
+      count: cb.length - sb - ab
+    }, ...cb.slice(cb.length - ab)) : Ub.push(...cb), kb = bb
   }
-  return (0, Xk.jsx)("pre", {
+  return (0, Tb.jsx)("pre", {
     className: "WorldCodeAiDiff",
-    children: bk.map(((kk, Fk) => {
-      if ("fold" === kk.kind) return (0, Xk.jsxs)("div", {
+    children: Ub.map(((bb, cb) => {
+      if ("fold" === bb.kind) return (0, Tb.jsxs)("div", {
         className: "WorldCodeAiDiffFold",
-        children: ["\u22ef ", kk.count, " unchanged lines"]
-      }, Fk);
-      const Rk = "added" === kk.kind ? function(kk, Fk) {
-          if (Fk) return kk.includes(`"${Fk}"`) ? `"${Fk}"` : kk.includes(Fk) ? Fk : void 0
-        }(kk.text, Bk) : void 0,
-        tk = Rk ? kk.text.indexOf(Rk) : -1;
-      return (0, Xk.jsxs)("div", {
-        className: ak()("WorldCodeAiDiffLine", `WorldCodeAiDiff-${kk.kind}`, Rk && "WorldCodeAiDiff-marked"),
-        children: [(0, Xk.jsx)("span", {
+        children: ["\u22ef ", bb.count, " unchanged lines"]
+      }, cb);
+      const kb = "added" === bb.kind ? function(bb, cb) {
+          if (cb) return bb.includes(`"${cb}"`) ? `"${cb}"` : bb.includes(cb) ? cb : void 0
+        }(bb.text, sb) : void 0,
+        Wb = kb ? bb.text.indexOf(kb) : -1;
+      return (0, Tb.jsxs)("div", {
+        className: ab()("WorldCodeAiDiffLine", `WorldCodeAiDiff-${bb.kind}`, kb && "WorldCodeAiDiff-marked"),
+        children: [(0, Tb.jsx)("span", {
           className: "WorldCodeAiDiffMark",
-          children: "added" === kk.kind ? "+" : "removed" === kk.kind ? "\u2212" : " "
-        }), (0, Xk.jsx)("span", {
+          children: "added" === bb.kind ? "+" : "removed" === bb.kind ? "\u2212" : " "
+        }), (0, Tb.jsx)("span", {
           className: "WorldCodeAiDiffText",
-          children: Rk ? (0, Xk.jsxs)(Xk.Fragment, {
-            children: [kk.text.slice(0, tk), (0, Xk.jsx)("mark", {
-              children: Rk
-            }), kk.text.slice(tk + Rk.length)]
-          }) : kk.text || " "
+          children: kb ? (0, Tb.jsxs)(Tb.Fragment, {
+            children: [bb.text.slice(0, Wb), (0, Tb.jsx)("mark", {
+              children: kb
+            }), bb.text.slice(Wb + kb.length)]
+          }) : bb.text || " "
         })]
-      }, Fk)
+      }, cb)
     }))
   })
 }));
 
-function wd(kk) {
-  var Fk, Bk;
+function IH(bb) {
+  var cb, sb;
   if ("undefined" === typeof BroadcastChannel) return;
-  const Rk = new BroadcastChannel(kk);
-  return null === (Fk = (Bk = Rk).unref) || void 0 === Fk || Fk.call(Bk), {
-    post: kk => {
-      Rk.postMessage(kk)
+  const kb = new BroadcastChannel(bb);
+  return null === (cb = (sb = kb).unref) || void 0 === cb || cb.call(sb), {
+    post: bb => {
+      kb.postMessage(bb)
     },
-    listen: kk => {
-      const Fk = Fk => {
-        "string" === typeof Fk.data && kk(Fk.data)
+    listen: bb => {
+      const cb = cb => {
+        "string" === typeof cb.data && bb(cb.data)
       };
-      return Rk.addEventListener("message", Fk), () => {
-        Rk.removeEventListener("message", Fk)
+      return kb.addEventListener("message", cb), () => {
+        kb.removeEventListener("message", cb)
       }
     }
   }
 }
 
-function dd(kk) {
-  return Array.isArray(kk) && kk.every((kk => {
-    if ("object" !== typeof kk || null === kk || !("id" in kk) || !("at" in kk) || !("label" in kk) || !("files" in kk)) return !1;
-    const Fk = kk.files;
-    return "object" === typeof Fk && null !== Fk && Object.values(Fk).every((kk => "string" === typeof kk))
+function HH(bb) {
+  return Array.isArray(bb) && bb.every((bb => {
+    if ("object" !== typeof bb || null === bb || !("id" in bb) || !("at" in bb) || !("label" in bb) || !("files" in bb)) return !1;
+    const cb = bb.files;
+    return "object" === typeof cb && null !== cb && Object.values(cb).every((bb => "string" === typeof bb))
   }))
 }
 
-function sd(kk, Fk) {
-  return Fk ? function(kk, Fk) {
-    if (!Fk) return [...kk];
-    const Bk = new Map;
-    for (const Rk of [...Fk, ...kk]) Bk.set(Rk.id, Rk);
-    return [...Bk.values()].sort(((kk, Fk) => kk.at - Fk.at || kk.id - Fk.id)).slice(-30)
-  }(Fk, kk) : [...kk]
+function fH(bb, cb) {
+  return cb ? function(bb, cb) {
+    if (!cb) return [...bb];
+    const sb = new Map;
+    for (const kb of [...cb, ...bb]) sb.set(kb.id, kb);
+    return [...sb.values()].sort(((bb, cb) => bb.at - cb.at || bb.id - cb.id)).slice(-30)
+  }(cb, bb) : [...bb]
 }
 
-function Vd(kk, Fk) {
-  let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  const Rk = new Date(kk).toLocaleTimeString("en-US", {
+function MH(bb, cb) {
+  let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  const kb = new Date(bb).toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "2-digit",
-      ...Bk ? {
+      ...sb ? {
         second: "2-digit"
       } : {}
     }).toLowerCase(),
-    tk = kk => new Date(kk).toDateString();
-  return tk(kk) === tk(Fk) ? Rk : tk(kk) === tk(Fk - 864e5) ? `yesterday ${Rk}` : function(kk, Fk) {
-    const Bk = Math.floor((Fk - kk) / 6e4);
-    if (Bk < 1) return "just now";
-    if (Bk < 60) return `${Bk} min ago`;
-    const Rk = Math.floor(Bk / 60);
-    if (Rk < 24) return `${Rk} h ago`;
-    const tk = Math.floor(Rk / 24);
-    return 1 === tk ? "1 day ago" : `${tk} days ago`
-  }(kk, Fk)
+    Wb = bb => new Date(bb).toDateString();
+  return Wb(bb) === Wb(cb) ? kb : Wb(bb) === Wb(cb - 864e5) ? `yesterday ${kb}` : function(bb, cb) {
+    const sb = Math.floor((cb - bb) / 6e4);
+    if (sb < 1) return "just now";
+    if (sb < 60) return `${sb} min ago`;
+    const kb = Math.floor(sb / 60);
+    if (kb < 24) return `${kb} h ago`;
+    const Wb = Math.floor(kb / 24);
+    return 1 === Wb ? "1 day ago" : `${Wb} days ago`
+  }(bb, cb)
 }
 
-function Jd(kk, Fk) {
-  return [...new Set([...Object.keys(Fk), ...Object.keys(kk.files)])].flatMap((Bk => {
-    var Rk, tk;
-    const ak = null !== (Rk = kk.files[Bk]) && void 0 !== Rk ? Rk : "";
-    return (null !== (tk = Fk[Bk]) && void 0 !== tk ? tk : "") === ak ? [] : [{
-      path: Bk,
-      text: ak
+function XH(bb, cb) {
+  return [...new Set([...Object.keys(cb), ...Object.keys(bb.files)])].flatMap((sb => {
+    var kb, Wb;
+    const ab = null !== (kb = bb.files[sb]) && void 0 !== kb ? kb : "";
+    return (null !== (Wb = cb[sb]) && void 0 !== Wb ? Wb : "") === ab ? [] : [{
+      path: sb,
+      text: ab
     }]
   }))
 }
 
-function Ad(kk) {
-  let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 120;
-  if (kk.length <= Fk) return null;
-  const Bk = kk.slice(0, Fk),
-    Rk = Bk.lastIndexOf(" ");
-  return `${(Rk>Fk/2?Bk.slice(0,Rk):Bk).replace(/[\s,;:.]+$/,"")}\u2026`
+function nH(bb) {
+  let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 120;
+  if (bb.length <= cb) return null;
+  const sb = bb.slice(0, cb),
+    kb = sb.lastIndexOf(" ");
+  return `${(kb>cb/2?sb.slice(0,kb):sb).replace(/[\s,;:.]+$/,"")}\u2026`
 }
 
-function ed(kk) {
+function mH(bb) {
   let {
-    snapshot: Fk,
-    files: Bk,
-    now: tk,
-    withSeconds: bk,
-    onRestore: wk
-  } = kk;
-  const [dk, sk] = (0, Rk.useState)(!1), [Vk, Jk] = (0, Rk.useState)(!1), Ak = Fk.did ? `Before: ${Fk.did}` : Fk.label, ek = Ad(Ak), yk = Fk.did && Fk.label.startsWith('Before "') ? Fk.label.slice(7) : null, fk = null === yk ? null : Ad(yk, 50), mk = null !== fk && null !== yk && void 0 !== yk && yk.startsWith('"') ? `${fk}"` : fk, Wk = (0, Rk.useRef)(null);
-  (0, Rk.useEffect)((() => {
-    const kk = Wk.current,
-      Fk = null === kk || void 0 === kk ? void 0 : kk.closest(".WorldCodeAiMessages");
-    if (!dk || !kk || !Fk) return;
-    const Bk = Fk.getBoundingClientRect(),
-      Rk = kk.getBoundingClientRect(),
-      tk = Rk.bottom - (Bk.bottom - 28),
-      ak = Rk.top - (Bk.top + 16);
-    tk > 0 && Fk.scrollBy({
-      top: Math.min(tk, ak),
+    snapshot: cb,
+    files: sb,
+    now: Wb,
+    withSeconds: Ub,
+    onRestore: Ib
+  } = bb;
+  const [Hb, fb] = (0, kb.useState)(!1), [Mb, Xb] = (0, kb.useState)(!1), nb = cb.did ? `Before: ${cb.did}` : cb.label, mb = nH(nb), lb = cb.did && cb.label.startsWith('Before "') ? cb.label.slice(7) : null, Qb = null === lb ? null : nH(lb, 50), eb = null !== Qb && null !== lb && void 0 !== lb && lb.startsWith('"') ? `${Qb}"` : Qb, Cb = (0, kb.useRef)(null);
+  (0, kb.useEffect)((() => {
+    const bb = Cb.current,
+      cb = null === bb || void 0 === bb ? void 0 : bb.closest(".WorldCodeAiMessages");
+    if (!Hb || !bb || !cb) return;
+    const sb = cb.getBoundingClientRect(),
+      kb = bb.getBoundingClientRect(),
+      Wb = kb.bottom - (sb.bottom - 28),
+      ab = kb.top - (sb.top + 16);
+    Wb > 0 && cb.scrollBy({
+      top: Math.min(Wb, ab),
       behavior: "smooth"
     })
-  }), [dk]);
-  const vk = (0, Rk.useRef)(null),
-    [ik, Yk] = (0, Rk.useState)(!1),
-    Lk = (0, Rk.useCallback)((() => {
-      const kk = vk.current;
-      Yk(null !== kk && kk.scrollTop + kk.clientHeight >= kk.scrollHeight - 24)
+  }), [Hb]);
+  const Nb = (0, kb.useRef)(null),
+    [Vb, Lb] = (0, kb.useState)(!1),
+    ub = (0, kb.useCallback)((() => {
+      const bb = Nb.current;
+      Lb(null !== bb && bb.scrollTop + bb.clientHeight >= bb.scrollHeight - 24)
     }), []);
-  (0, Rk.useEffect)((() => {
-    dk && Lk()
-  }), [dk, Lk]);
-  const Ok = (0, Rk.useMemo)((() => [...new Set([...Object.keys(Fk.files), ...Object.keys(Bk)])].flatMap((kk => {
-    var Rk, tk;
-    const ak = null !== (Rk = Fk.files[kk]) && void 0 !== Rk ? Rk : "",
-      Xk = null !== (tk = Bk[kk]) && void 0 !== tk ? tk : "";
-    return ak === Xk ? [] : [{
-      path: kk,
-      before: ak,
-      after: Xk
+  (0, kb.useEffect)((() => {
+    Hb && ub()
+  }), [Hb, ub]);
+  const Yb = (0, kb.useMemo)((() => [...new Set([...Object.keys(cb.files), ...Object.keys(sb)])].flatMap((bb => {
+    var kb, Wb;
+    const ab = null !== (kb = cb.files[bb]) && void 0 !== kb ? kb : "",
+      Tb = null !== (Wb = sb[bb]) && void 0 !== Wb ? Wb : "";
+    return ab === Tb ? [] : [{
+      path: bb,
+      before: ab,
+      after: Tb
     }]
-  }))), [Fk, Bk]);
-  return (0, Xk.jsxs)("li", {
-    ref: Wk,
+  }))), [cb, sb]);
+  return (0, Tb.jsxs)("li", {
+    ref: Cb,
     className: "WorldCodeAiSnapshot",
-    children: [(0, Xk.jsxs)("div", {
+    children: [(0, Tb.jsxs)("div", {
       className: "WorldCodeAiSnapshotRow",
-      children: [(0, Xk.jsxs)("span", {
+      children: [(0, Tb.jsxs)("span", {
         className: "WorldCodeAiSnapshotLabel",
-        children: [Vk || !ek ? Ak : ek, (ek || mk) && (0, Xk.jsx)("button", {
+        children: [Mb || !mb ? nb : mb, (mb || eb) && (0, Tb.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiSnapshotMore",
-          "aria-expanded": Vk,
+          "aria-expanded": Mb,
           onClick: () => {
-            Jk(!Vk)
+            Xb(!Mb)
           },
-          children: Vk ? "less" : "more"
-        }), (0, Xk.jsxs)("span", {
+          children: Mb ? "less" : "more"
+        }), (0, Tb.jsxs)("span", {
           className: "WorldCodeAiSnapshotAge",
-          children: [" \xb7 ", Vd(Fk.at, tk, bk)]
-        }), null !== yk && (0, Xk.jsxs)("span", {
+          children: [" \xb7 ", MH(cb.at, Wb, Ub)]
+        }), null !== lb && (0, Tb.jsxs)("span", {
           className: "WorldCodeAiSnapshotAsked",
-          children: ["You asked: ", Vk || !mk ? yk : mk]
+          children: ["You asked: ", Mb || !eb ? lb : eb]
         })]
-      }), Ok.length > 0 && (0, Xk.jsx)("button", {
+      }), Yb.length > 0 && (0, Tb.jsx)("button", {
         className: "WorldCodeAiLinkButton",
         onClick: () => {
-          sk(!dk)
+          fb(!Hb)
         },
-        children: dk ? "Hide" : "Compare"
-      }), Ok.length > 0 && wk && (0, Xk.jsx)("button", {
+        children: Hb ? "Hide" : "Compare"
+      }), Yb.length > 0 && Ib && (0, Tb.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
-        onClick: wk,
+        onClick: Ib,
         children: "Go back to this code"
-      }), 0 === Ok.length && (0, Xk.jsx)("span", {
+      }), 0 === Yb.length && (0, Tb.jsx)("span", {
         className: "WorldCodeAiSnapshotNow",
         children: "Same as your code now"
       })]
-    }), dk && (0, Xk.jsxs)("div", {
+    }), Hb && (0, Tb.jsxs)("div", {
       className: "WorldCodeAiChanges",
-      children: [(0, Xk.jsx)("p", {
+      children: [(0, Tb.jsx)("p", {
         className: "WorldCodeAiSnapshotCompareNote",
         children: "What changed since then:"
-      }), (0, Xk.jsx)("div", {
-        ref: vk,
-        className: ak()("WorldCodeAiSnapshotCompare", ik && "WorldCodeAiSnapshotCompare-end"),
-        onScroll: Lk,
-        children: Ok.map((kk => (0, Xk.jsxs)("div", {
+      }), (0, Tb.jsx)("div", {
+        ref: Nb,
+        className: ab()("WorldCodeAiSnapshotCompare", Vb && "WorldCodeAiSnapshotCompare-end"),
+        onScroll: ub,
+        children: Yb.map((bb => (0, Tb.jsxs)("div", {
           className: "WorldCodeAiChange",
-          children: [(0, Xk.jsx)("div", {
+          children: [(0, Tb.jsx)("div", {
             className: "WorldCodeAiChangeHeader",
-            children: (0, Xk.jsx)("span", {
+            children: (0, Tb.jsx)("span", {
               className: "WorldCodeAiChangePath",
-              children: kk.path
+              children: bb.path
             })
-          }), (0, Xk.jsx)(bd, {
-            change: kk
+          }), (0, Tb.jsx)(UH, {
+            change: bb
           })]
-        }, kk.path)))
+        }, bb.path)))
       })]
     })]
   })
 }
 
-function yd(kk) {
+function lH(bb) {
   let {
-    snapshots: Fk,
-    files: Bk,
-    now: Rk,
-    onRestore: tk
-  } = kk;
-  return (0, Xk.jsxs)("div", {
+    snapshots: cb,
+    files: sb,
+    now: kb,
+    onRestore: Wb
+  } = bb;
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiHistory",
-    children: [(0, Xk.jsx)("div", {
+    children: [(0, Tb.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, Xk.jsx)("span", {
+      children: (0, Tb.jsx)("span", {
         children: "Your code before each change"
       })
-    }), 0 === Fk.length ? (0, Xk.jsx)("p", {
+    }), 0 === cb.length ? (0, Tb.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Nothing here yet. Each time a change goes into your code, your code from before it is kept here."
-    }) : (0, Xk.jsx)("ul", {
+    }) : (0, Tb.jsx)("ul", {
       className: "WorldCodeAiSnapshots",
-      children: [...Fk].reverse().map((kk => {
-        const ak = Fk.some((Fk => Fk.id !== kk.id && Vd(Fk.at, Rk) === Vd(kk.at, Rk)));
-        return (0, Xk.jsx)(ed, {
-          snapshot: kk,
-          files: Bk,
-          now: Rk,
-          withSeconds: ak,
-          onRestore: tk && (() => {
-            tk(kk)
+      children: [...cb].reverse().map((bb => {
+        const ab = cb.some((cb => cb.id !== bb.id && MH(cb.at, kb) === MH(bb.at, kb)));
+        return (0, Tb.jsx)(mH, {
+          snapshot: bb,
+          files: sb,
+          now: kb,
+          withSeconds: ab,
+          onRestore: Wb && (() => {
+            Wb(bb)
           })
-        }, kk.id)
+        }, bb.id)
       }))
     })]
   })
 }
 
-function fd(kk) {
+function QH(bb) {
   let {
-    notes: Fk,
-    outline: Bk,
-    Av: tk,
-    onDelete: ak
-  } = kk;
-  const [bk, wk] = (0, Rk.useState)(""), [dk, sk] = (0, Rk.useState)(null), [Vk, Jk] = (0, Rk.useState)(!1), Ak = Fk.length >= 8, ek = Bk.callbacks.length + Bk.commands.length + Bk.functions.length > 0;
-  return (0, Xk.jsxs)("div", {
+    notes: cb,
+    outline: sb,
+    ZN: Wb,
+    onDelete: ab
+  } = bb;
+  const [Ub, Ib] = (0, kb.useState)(""), [Hb, fb] = (0, kb.useState)(null), [Mb, Xb] = (0, kb.useState)(!1), nb = cb.length >= 8, mb = sb.callbacks.length + sb.commands.length + sb.functions.length > 0;
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiHistory WorldCodeAiAbout",
-    children: [(0, Xk.jsx)("div", {
+    children: [(0, Tb.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, Xk.jsx)("span", {
+      children: (0, Tb.jsx)("span", {
         children: "AI notes"
       })
-    }), (0, Xk.jsx)("p", {
+    }), (0, Tb.jsx)("p", {
       className: "WorldCodeAiAboutNote",
       children: "The AI reads these notes with every request, so it remembers what your game is."
-    }), 0 === Fk.length && (0, Xk.jsx)("p", {
+    }), 0 === cb.length && (0, Tb.jsx)("p", {
       className: "WorldCodeAiHint",
       children: 'No notes yet. Add one, like "Two teams, red and blue, race to the flag".'
-    }), (0, Xk.jsx)("ul", {
+    }), (0, Tb.jsx)("ul", {
       className: "WorldCodeAiAboutList",
-      children: Fk.map((kk => (0, Xk.jsxs)("li", {
-        children: [(0, Xk.jsx)("span", {
-          children: kk
-        }), (0, Xk.jsx)("button", {
+      children: cb.map((bb => (0, Tb.jsxs)("li", {
+        children: [(0, Tb.jsx)("span", {
+          children: bb
+        }), (0, Tb.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          "aria-label": `Delete note: ${kk}`,
+          "aria-label": `Delete note: ${bb}`,
           onClick: () => {
-            ak(kk)
+            ab(bb)
           },
           children: "Delete"
         })]
-      }, kk)))
-    }), tk && !Ak && (0, Xk.jsxs)("form", {
+      }, bb)))
+    }), Wb && !nb && (0, Tb.jsxs)("form", {
       className: "WorldCodeAiQuestionOther",
-      onSubmit: kk => {
-        kk.preventDefault(), "" === bk.trim() || Vk || (Jk(!0), sk(null), tk(bk).then((kk => {
-          sk(kk), null === kk && wk("")
+      onSubmit: bb => {
+        bb.preventDefault(), "" === Ub.trim() || Mb || (Xb(!0), fb(null), Wb(Ub).then((bb => {
+          fb(bb), null === bb && Ib("")
         })).catch((() => {
-          sk("That note couldn't be kept. Try again.")
+          fb("That note couldn't be kept. Try again.")
         })).finally((() => {
-          Jk(!1)
+          Xb(!1)
         })))
       },
-      children: [(0, Xk.jsx)("input", {
+      children: [(0, Tb.jsx)("input", {
         className: "WorldCodeAiInput WorldCodeAiQuestionInput",
-        value: bk,
-        maxLength: Qk,
+        value: Ub,
+        maxLength: jb,
         placeholder: "Add a note about your game",
         "aria-label": "Add a note about your game",
-        onChange: kk => {
-          wk(kk.target.value)
+        onChange: bb => {
+          Ib(bb.target.value)
         },
-        onKeyDown: kk => {
-          kk.stopPropagation()
+        onKeyDown: bb => {
+          bb.stopPropagation()
         }
-      }), (0, Xk.jsx)("button", {
+      }), (0, Tb.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
         type: "submit",
-        disabled: "" === bk.trim() || Vk,
-        children: Vk ? "Adding\u2026" : "Add"
+        disabled: "" === Ub.trim() || Mb,
+        children: Mb ? "Adding\u2026" : "Add"
       })]
-    }), Ak && (0, Xk.jsxs)("p", {
+    }), nb && (0, Tb.jsxs)("p", {
       className: "WorldCodeAiHint",
       children: ["That's ", 8, " notes, the most it keeps: delete one to add another."]
-    }), dk && (0, Xk.jsx)("p", {
+    }), Hb && (0, Tb.jsx)("p", {
       className: "WorldCodeAiAboutError",
-      children: dk
-    }), (0, Xk.jsx)("p", {
+      children: Hb
+    }), (0, Tb.jsx)("p", {
       className: "WorldCodeAiAboutHeading",
       children: "In your code now"
-    }), ek ? (0, Xk.jsxs)("ul", {
+    }), mb ? (0, Tb.jsxs)("ul", {
       className: "WorldCodeAiOutline",
-      children: [Bk.callbacks.map((kk => (0, Xk.jsxs)("li", {
-        children: [XF(kk), " ", (0, Xk.jsx)("code", {
-          children: kk
+      children: [sb.callbacks.map((bb => (0, Tb.jsxs)("li", {
+        children: [ac(bb), " ", (0, Tb.jsx)("code", {
+          children: bb
         })]
-      }, kk))), Bk.commands.length > 0 && (0, Xk.jsxs)("li", {
-        children: ["Chat commands: ", Bk.commands.join(", ")]
-      }), Bk.functions.length > 0 && (0, Xk.jsxs)("li", {
-        children: ["Your own functions: ", (0, Xk.jsx)("code", {
-          children: Bk.functions.join(", ")
+      }, bb))), sb.commands.length > 0 && (0, Tb.jsxs)("li", {
+        children: ["Chat commands: ", sb.commands.join(", ")]
+      }), sb.functions.length > 0 && (0, Tb.jsxs)("li", {
+        children: ["Your own functions: ", (0, Tb.jsx)("code", {
+          children: sb.functions.join(", ")
         })]
       })]
-    }) : (0, Xk.jsx)("p", {
+    }) : (0, Tb.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Nothing yet. Ask the AI to make something."
     })]
   })
 }
-const md = {
+const eH = {
   asked: "Remember this about your game?",
   pending: "A note to remember, once the change is in",
   checking: "Saving a note\u2026",
@@ -10861,42 +10861,42 @@ const md = {
   refused: "Note not saved"
 };
 
-function Wd(kk) {
+function CH(bb) {
   let {
-    note: Fk,
-    status: Bk,
-    onAnswer: Rk,
-    isPartLeftOut: tk = !1,
-    defaultOpen: ak
-  } = kk;
-  const wk = tk && ("asked" === Bk || "pending" === Bk);
-  return (0, Xk.jsxs)("div", {
+    note: cb,
+    status: sb,
+    onAnswer: kb,
+    isPartLeftOut: Wb = !1,
+    defaultOpen: ab
+  } = bb;
+  const Ib = Wb && ("asked" === sb || "pending" === sb);
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiToolCard",
-    children: [(0, Xk.jsxs)(bk, {
-      title: md[Bk],
-      isCalm: "refused" !== Bk,
-      defaultOpen: ak,
-      children: [wk && (0, Xk.jsx)("p", {
+    children: [(0, Tb.jsxs)(Ub, {
+      title: eH[sb],
+      isCalm: "refused" !== sb,
+      defaultOpen: ab,
+      children: [Ib && (0, Tb.jsx)("p", {
         children: "The note to remember is hidden while a part is unticked. Tick every part to see it."
-      }), !wk && (0, Xk.jsxs)("p", {
-        children: ['"', Fk, '"']
-      }), !wk && "pending" === Bk && (0, Xk.jsx)("p", {
+      }), !Ib && (0, Tb.jsxs)("p", {
+        children: ['"', cb, '"']
+      }), !Ib && "pending" === sb && (0, Tb.jsx)("p", {
         children: "It goes into AI notes once the change is in."
-      }), "refused" === Bk && (0, Xk.jsx)("p", {
+      }), "refused" === sb && (0, Tb.jsx)("p", {
         children: "This note can't be saved. Notes are only about your game."
       })]
-    }), !wk && "asked" === Bk && Rk && (0, Xk.jsxs)("div", {
+    }), !Ib && "asked" === sb && kb && (0, Tb.jsxs)("div", {
       className: "WorldCodeAiChangeActions",
-      children: [(0, Xk.jsx)("button", {
+      children: [(0, Tb.jsx)("button", {
         className: "WorldCodeAiPrimaryButton",
         onClick: () => {
-          Rk(!0)
+          kb(!0)
         },
         children: "Yes, remember it"
-      }), (0, Xk.jsx)("button", {
+      }), (0, Tb.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
         onClick: () => {
-          Rk(!1)
+          kb(!1)
         },
         children: "No"
       })]
@@ -10904,148 +10904,148 @@ function Wd(kk) {
   })
 }
 
-function vd(kk) {
+function NH(bb) {
   let {
-    steps: Fk,
-    built: Bk,
-    done: Rk,
-    onBuild: tk
-  } = kk;
-  return (0, Xk.jsxs)("div", {
+    steps: cb,
+    built: sb,
+    done: kb,
+    onBuild: Wb
+  } = bb;
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiQuestion WorldCodeAiPlan",
-    children: [(0, Xk.jsx)("p", {
+    children: [(0, Tb.jsx)("p", {
       className: "WorldCodeAiQuestionText",
       children: "The plan: one step at a time"
-    }), (0, Xk.jsx)("ol", {
+    }), (0, Tb.jsx)("ol", {
       className: "WorldCodeAiPlanSteps",
-      children: Fk.map(((kk, Fk) => (0, Xk.jsxs)("li", {
-        className: Fk < Rk ? "WorldCodeAiPlanStep-built" : void 0,
-        children: [Fk < Rk && (0, Xk.jsx)("span", {
+      children: cb.map(((bb, cb) => (0, Tb.jsxs)("li", {
+        className: cb < kb ? "WorldCodeAiPlanStep-built" : void 0,
+        children: [cb < kb && (0, Tb.jsx)("span", {
           className: "WorldCodeAiPlanTick",
           children: "\u2713 "
-        }), kk, Fk < Bk && Fk >= Rk && (0, Xk.jsx)("span", {
+        }), bb, cb < sb && cb >= kb && (0, Tb.jsx)("span", {
           className: "WorldCodeAiPlanAsked",
           children: " (apply it to tick it off)"
         })]
-      }, `${Fk}:${kk}`)))
-    }), Bk < Fk.length && Rk < Bk && (0, Xk.jsxs)("span", {
+      }, `${cb}:${bb}`)))
+    }), sb < cb.length && kb < sb && (0, Tb.jsxs)("span", {
       className: "WorldCodeAiHint",
-      children: ["Apply ", Bk - Rk > 1 ? `steps ${Rk+1} to ${Bk}` : `step ${Bk}`, " to your code and try it, then build step ", Bk + 1, "."]
-    }), Bk < Fk.length && tk && (0, Xk.jsx)("button", {
-      ...fw.h,
-      className: Rk < Bk ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
+      children: ["Apply ", sb - kb > 1 ? `steps ${kb+1} to ${sb}` : `step ${sb}`, " to your code and try it, then build step ", sb + 1, "."]
+    }), sb < cb.length && Wb && (0, Tb.jsx)("button", {
+      ...eI.e,
+      className: kb < sb ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
       onClick: () => {
-        tk(Bk)
+        Wb(sb)
       },
-      children: Rk < Bk ? `Build step ${Bk+1} anyway` : `Build step ${Bk+1}`
-    }), Bk < Fk.length && Bk > 0 && Rk >= Bk && (0, Xk.jsx)("span", {
+      children: kb < sb ? `Build step ${sb+1} anyway` : `Build step ${sb+1}`
+    }), sb < cb.length && sb > 0 && kb >= sb && (0, Tb.jsx)("span", {
       className: "WorldCodeAiHint",
       children: "Try each step in your world before the next."
-    }), Bk === Fk.length && (0, Xk.jsx)("span", {
+    }), sb === cb.length && (0, Tb.jsx)("span", {
       className: "WorldCodeAiHint",
       children: "Every step is asked for."
     })]
   })
 }
 
-function Yd(kk, Fk, Bk) {
-  return `${kk}\n\nYou asked me: "${Fk}" ${null===Bk?"I don't mind: choose what works best.":`My answer: ${Bk.replace(/\.$/,"")}.`} Build it now, without asking again.`
+function VH(bb, cb, sb) {
+  return `${bb}\n\nYou asked me: "${cb}" ${null===sb?"I don't mind: choose what works best.":`My answer: ${sb.replace(/\.$/,"")}.`} Build it now, without asking again.`
 }
 
-function od(kk) {
+function LH(bb) {
   let {
-    question: Fk,
-    onAnswer: Bk,
-    ownAnswerBelow: tk = !1
-  } = kk;
-  const [ak, bk] = (0, Rk.useState)("");
-  return (0, Xk.jsxs)("div", {
+    question: cb,
+    onAnswer: sb,
+    ownAnswerBelow: Wb = !1
+  } = bb;
+  const [ab, Ub] = (0, kb.useState)("");
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiQuestion",
-    children: [(0, Xk.jsx)("p", {
+    children: [(0, Tb.jsx)("p", {
       className: "WorldCodeAiQuestionText",
-      children: Fk.question
-    }), Bk && (0, Xk.jsxs)(Xk.Fragment, {
-      children: [(0, Xk.jsx)("div", {
+      children: cb.question
+    }), sb && (0, Tb.jsxs)(Tb.Fragment, {
+      children: [(0, Tb.jsx)("div", {
         className: "WorldCodeAiQuestionChoices",
-        children: Fk.choices.map(((kk, Fk) => (0, Rk.createElement)("button", {
-          ...fw.h,
-          key: `${Fk}:${kk}`,
+        children: cb.choices.map(((bb, cb) => (0, kb.createElement)("button", {
+          ...eI.e,
+          key: `${cb}:${bb}`,
           className: "WorldCodeAiQuestionChoice",
           onClick: () => {
-            Bk(kk, !1)
+            sb(bb, !1)
           }
-        }, kk)))
-      }), Fk.allowOther && tk && (0, Xk.jsx)("span", {
+        }, bb)))
+      }), cb.allowOther && Wb && (0, Tb.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "Or type your own answer in the box below."
-      }), Fk.allowOther && !tk && (0, Xk.jsxs)("form", {
+      }), cb.allowOther && !Wb && (0, Tb.jsxs)("form", {
         className: "WorldCodeAiQuestionOther",
-        onSubmit: kk => {
-          kk.preventDefault(), "" !== ak.trim() && Bk(ak.trim(), !0)
+        onSubmit: bb => {
+          bb.preventDefault(), "" !== ab.trim() && sb(ab.trim(), !0)
         },
-        children: [(0, Xk.jsx)("input", {
+        children: [(0, Tb.jsx)("input", {
           className: "WorldCodeAiInput",
-          value: ak,
+          value: ab,
           maxLength: 200,
           placeholder: "Or type your own answer",
           "aria-label": "Your own answer",
-          onChange: kk => {
-            bk(kk.target.value)
+          onChange: bb => {
+            Ub(bb.target.value)
           },
-          onKeyDown: kk => {
-            kk.stopPropagation()
+          onKeyDown: bb => {
+            bb.stopPropagation()
           }
-        }), (0, Xk.jsx)("button", {
+        }), (0, Tb.jsx)("button", {
           className: "WorldCodeAiSecondaryButton",
           type: "submit",
-          disabled: "" === ak.trim(),
+          disabled: "" === ab.trim(),
           children: "Send"
         })]
-      }), (0, Xk.jsx)("button", {
-        ...fw.h,
+      }), (0, Tb.jsx)("button", {
+        ...eI.e,
         className: "WorldCodeAiSecondaryButton WorldCodeAiQuestionAiPicks",
         onClick: () => {
-          Bk(null, !1)
+          sb(null, !1)
         },
         children: "Let the AI pick"
       })]
     })]
   })
 }
-const Ld = /^(?:const|let|var)\s+CONFIG\s*=\s*\{/gm;
+const uH = /^(?:const|let|var)\s+CONFIG\s*=\s*\{/gm;
 
-function Od(kk, Fk) {
-  let Bk = 0;
-  for (; Bk < Fk;) {
-    const Rk = kk[Bk],
-      tk = kk[Bk + 1];
-    let ak = Bk + 1;
-    if ("/" === Rk && "/" === tk) {
-      const Fk = kk.indexOf("\n", Bk);
-      ak = -1 === Fk ? kk.length : Fk
-    } else if ("/" === Rk && "*" === tk) {
-      const Fk = kk.indexOf("*/", Bk + 2);
-      ak = -1 === Fk ? kk.length : Fk + 2
-    } else if ('"' === Rk || "'" === Rk || "`" === Rk) {
-      for (ak = Bk + 1; ak < kk.length && kk[ak] !== Rk && ("`" === Rk || "\n" !== kk[ak]);) ak += "\\" === kk[ak] ? 2 : 1;
-      ak++
+function YH(bb, cb) {
+  let sb = 0;
+  for (; sb < cb;) {
+    const kb = bb[sb],
+      Wb = bb[sb + 1];
+    let ab = sb + 1;
+    if ("/" === kb && "/" === Wb) {
+      const cb = bb.indexOf("\n", sb);
+      ab = -1 === cb ? bb.length : cb
+    } else if ("/" === kb && "*" === Wb) {
+      const cb = bb.indexOf("*/", sb + 2);
+      ab = -1 === cb ? bb.length : cb + 2
+    } else if ('"' === kb || "'" === kb || "`" === kb) {
+      for (ab = sb + 1; ab < bb.length && bb[ab] !== kb && ("`" === kb || "\n" !== bb[ab]);) ab += "\\" === bb[ab] ? 2 : 1;
+      ab++
     }
-    if (ak > Fk) return !0;
-    Bk = ak
+    if (ab > cb) return !0;
+    sb = ab
   }
   return !1
 }
 
-function Ed(kk) {
-  const Fk = kk.slice(1, -1);
-  let Bk = "";
-  for (let Rk = 0; Rk < Fk.length; Rk++) {
-    if ("\\" !== Fk[Rk]) {
-      Bk += Fk[Rk];
+function hH(bb) {
+  const cb = bb.slice(1, -1);
+  let sb = "";
+  for (let kb = 0; kb < cb.length; kb++) {
+    if ("\\" !== cb[kb]) {
+      sb += cb[kb];
       continue
     }
-    const kk = Fk[++Rk],
-      tk = {
+    const bb = cb[++kb],
+      Wb = {
         n: "\n",
         t: "\t",
         r: "\r",
@@ -11053,223 +11053,223 @@ function Ed(kk) {
         '"': '"',
         "'": "'"
       },
-      ak = "u" === kk ? Fk.slice(Rk + 1, Rk + 5) : "x" === kk ? Fk.slice(Rk + 1, Rk + 3) : "";
-    if (kk in tk) Bk += tk[kk];
+      ab = "u" === bb ? cb.slice(kb + 1, kb + 5) : "x" === bb ? cb.slice(kb + 1, kb + 3) : "";
+    if (bb in Wb) sb += Wb[bb];
     else {
-      if ("" === ak || !/^[\da-f]+$/i.test(ak) || ak.length !== ("u" === kk ? 4 : 2)) return null;
-      Bk += String.fromCharCode(parseInt(ak, 16)), Rk += ak.length
+      if ("" === ab || !/^[\da-f]+$/i.test(ab) || ab.length !== ("u" === bb ? 4 : 2)) return null;
+      sb += String.fromCharCode(parseInt(ab, 16)), kb += ab.length
     }
   }
-  return Bk
+  return sb
 }
 
-function Sd(kk) {
-  const Fk = function(kk) {
-    Ld.lastIndex = 0;
-    for (let Fk = Ld.exec(kk); Fk; Fk = Ld.exec(kk))
-      if (!Od(kk, Fk.index)) return Fk;
+function JH(bb) {
+  const cb = function(bb) {
+    uH.lastIndex = 0;
+    for (let cb = uH.exec(bb); cb; cb = uH.exec(bb))
+      if (!YH(bb, cb.index)) return cb;
     return null
-  }(kk);
-  if (!Fk) return [];
-  const Bk = function(kk, Fk) {
-    const Bk = [];
-    let Rk = 0,
-      tk = Fk;
-    for (; tk < kk.length;) {
-      var ak;
-      const Fk = kk[tk];
-      if (/\s/.test(Fk)) {
-        tk++;
+  }(bb);
+  if (!cb) return [];
+  const sb = function(bb, cb) {
+    const sb = [];
+    let kb = 0,
+      Wb = cb;
+    for (; Wb < bb.length;) {
+      var ab;
+      const cb = bb[Wb];
+      if (/\s/.test(cb)) {
+        Wb++;
         continue
       }
-      const Xk = tk;
-      if ("/" === Fk && "/" === kk[tk + 1]) {
-        const Fk = kk.indexOf("\n", tk);
-        tk = -1 === Fk ? kk.length : Fk, Bk.push({
+      const Tb = Wb;
+      if ("/" === cb && "/" === bb[Wb + 1]) {
+        const cb = bb.indexOf("\n", Wb);
+        Wb = -1 === cb ? bb.length : cb, sb.push({
           type: "comment",
-          text: kk.slice(Xk + 2, tk).trim(),
-          start: Xk,
-          end: tk
+          text: bb.slice(Tb + 2, Wb).trim(),
+          start: Tb,
+          end: Wb
         });
         continue
       }
-      if ("/" === Fk && "*" === kk[tk + 1]) {
-        const Fk = kk.indexOf("*/", tk + 2);
-        if (-1 === Fk) return null;
-        tk = Fk + 2, Bk.push({
+      if ("/" === cb && "*" === bb[Wb + 1]) {
+        const cb = bb.indexOf("*/", Wb + 2);
+        if (-1 === cb) return null;
+        Wb = cb + 2, sb.push({
           type: "comment",
-          text: kk.slice(Xk + 2, Fk).trim(),
-          start: Xk,
-          end: tk
+          text: bb.slice(Tb + 2, cb).trim(),
+          start: Tb,
+          end: Wb
         });
         continue
       }
-      if ('"' === Fk || "'" === Fk || "`" === Fk) {
-        for (tk++; tk < kk.length && kk[tk] !== Fk;) {
-          if ("\\" === kk[tk]) tk++;
-          else if ("\n" === kk[tk] && "`" !== Fk) return null;
-          tk++
+      if ('"' === cb || "'" === cb || "`" === cb) {
+        for (Wb++; Wb < bb.length && bb[Wb] !== cb;) {
+          if ("\\" === bb[Wb]) Wb++;
+          else if ("\n" === bb[Wb] && "`" !== cb) return null;
+          Wb++
         }
-        if (tk >= kk.length) return null;
-        tk++, Bk.push({
-          type: "`" === Fk ? "template" : "string",
-          text: kk.slice(Xk, tk),
-          start: Xk,
-          end: tk
+        if (Wb >= bb.length) return null;
+        Wb++, sb.push({
+          type: "`" === cb ? "template" : "string",
+          text: bb.slice(Tb, Wb),
+          start: Tb,
+          end: Wb
         });
         continue
       }
-      const bk = /^-?(?:\d[\d_]*(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?\b/i.exec(kk.slice(tk, tk + 40));
-      if (bk && ("-" !== Fk || ":" === (null === (ak = Bk[Bk.length - 1]) || void 0 === ak ? void 0 : ak.text))) {
-        tk += bk[0].length, Bk.push({
+      const Ub = /^-?(?:\d[\d_]*(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?\b/i.exec(bb.slice(Wb, Wb + 40));
+      if (Ub && ("-" !== cb || ":" === (null === (ab = sb[sb.length - 1]) || void 0 === ab ? void 0 : ab.text))) {
+        Wb += Ub[0].length, sb.push({
           type: "number",
-          text: bk[0],
-          start: Xk,
-          end: tk
+          text: Ub[0],
+          start: Tb,
+          end: Wb
         });
         continue
       }
-      const wk = /^[A-Za-z_$][\w$]*/.exec(kk.slice(tk, tk + 80));
-      if (wk) tk += wk[0].length, Bk.push({
+      const Ib = /^[A-Za-z_$][\w$]*/.exec(bb.slice(Wb, Wb + 80));
+      if (Ib) Wb += Ib[0].length, sb.push({
         type: "word",
-        text: wk[0],
-        start: Xk,
-        end: tk
+        text: Ib[0],
+        start: Tb,
+        end: Wb
       });
-      else if (tk++, Bk.push({
+      else if (Wb++, sb.push({
           type: "punct",
-          text: Fk,
-          start: Xk,
-          end: tk
-        }), "{[(".includes(Fk)) Rk++;
-      else if ("}])".includes(Fk) && (Rk--, 0 === Rk)) return Bk
+          text: cb,
+          start: Tb,
+          end: Wb
+        }), "{[(".includes(cb)) kb++;
+      else if ("}])".includes(cb) && (kb--, 0 === kb)) return sb
     }
     return null
-  }(kk, Fk.index + Fk[0].length - 1);
-  if (!Bk) return [];
-  const Rk = [];
-  let tk, ak = 1;
-  for (; ak < Bk.length - 1;) {
-    var Xk, bk, wk, dk, sk, Vk;
-    const Fk = Bk[ak];
-    if ("comment" === Fk.type) {
-      tk = Fk.text, ak++;
+  }(bb, cb.index + cb[0].length - 1);
+  if (!sb) return [];
+  const kb = [];
+  let Wb, ab = 1;
+  for (; ab < sb.length - 1;) {
+    var Tb, Ub, Ib, Hb, fb, Mb;
+    const cb = sb[ab];
+    if ("comment" === cb.type) {
+      Wb = cb.text, ab++;
       continue
     }
-    if ("," === Fk.text) {
-      ak++;
+    if ("," === cb.text) {
+      ab++;
       continue
     }
-    const Jk = Fk,
-      Ak = "word" === Jk.type ? Jk.text : "string" === Jk.type ? Ed(Jk.text) : null;
-    if (null === Ak || ":" !== (null === (Xk = Bk[ak + 1]) || void 0 === Xk ? void 0 : Xk.text)) return [];
-    let ek = ak + 2,
-      yk = 0;
-    const fk = [];
-    for (; ek < Bk.length - 1;) {
-      const kk = Bk[ek];
-      if (0 === yk && "," === kk.text) break;
-      "punct" === kk.type && "{[(".includes(kk.text) ? yk++ : "punct" === kk.type && "}])".includes(kk.text) && yk--, "comment" !== kk.type && fk.push(kk), ek++
+    const Xb = cb,
+      nb = "word" === Xb.type ? Xb.text : "string" === Xb.type ? hH(Xb.text) : null;
+    if (null === nb || ":" !== (null === (Tb = sb[ab + 1]) || void 0 === Tb ? void 0 : Tb.text)) return [];
+    let mb = ab + 2,
+      lb = 0;
+    const Qb = [];
+    for (; mb < sb.length - 1;) {
+      const bb = sb[mb];
+      if (0 === lb && "," === bb.text) break;
+      "punct" === bb.type && "{[(".includes(bb.text) ? lb++ : "punct" === bb.type && "}])".includes(bb.text) && lb--, "comment" !== bb.type && Qb.push(bb), mb++
     }
-    const mk = fk.at(-1),
-      Wk = "," === (null === (bk = Bk[ek]) || void 0 === bk ? void 0 : bk.text) ? Bk[ek + 1] : Bk.slice(ak + 2, ek).find((kk => "comment" === kk.type && void 0 !== mk && kk.start >= mk.end)),
-      vk = "comment" !== (null === Wk || void 0 === Wk ? void 0 : Wk.type) || void 0 === mk || kk.slice(mk.end, Wk.start).includes("\n") ? void 0 : Wk.text,
-      ik = 1 === fk.length ? fk[0] : void 0,
-      Yk = null !== vk && void 0 !== vk ? vk : tk;
-    tk = void 0;
-    const Lk = {
-      key: Ak,
-      raw: null !== (wk = null === ik || void 0 === ik ? void 0 : ik.text) && void 0 !== wk ? wk : "",
-      start: null !== (dk = null === ik || void 0 === ik ? void 0 : ik.start) && void 0 !== dk ? dk : 0,
-      end: null !== (sk = null === ik || void 0 === ik ? void 0 : ik.end) && void 0 !== sk ? sk : 0,
-      ...Yk ? {
-        comment: Yk
+    const eb = Qb.at(-1),
+      Cb = "," === (null === (Ub = sb[mb]) || void 0 === Ub ? void 0 : Ub.text) ? sb[mb + 1] : sb.slice(ab + 2, mb).find((bb => "comment" === bb.type && void 0 !== eb && bb.start >= eb.end)),
+      Nb = "comment" !== (null === Cb || void 0 === Cb ? void 0 : Cb.type) || void 0 === eb || bb.slice(eb.end, Cb.start).includes("\n") ? void 0 : Cb.text,
+      Vb = 1 === Qb.length ? Qb[0] : void 0,
+      Lb = null !== Nb && void 0 !== Nb ? Nb : Wb;
+    Wb = void 0;
+    const ub = {
+      key: nb,
+      raw: null !== (Ib = null === Vb || void 0 === Vb ? void 0 : Vb.text) && void 0 !== Ib ? Ib : "",
+      start: null !== (Hb = null === Vb || void 0 === Vb ? void 0 : Vb.start) && void 0 !== Hb ? Hb : 0,
+      end: null !== (fb = null === Vb || void 0 === Vb ? void 0 : Vb.end) && void 0 !== fb ? fb : 0,
+      ...Lb ? {
+        comment: Lb
       } : {}
     };
-    if ("number" === (null === ik || void 0 === ik ? void 0 : ik.type)) {
-      const kk = Number(ik.text.replace(/_/g, ""));
-      Number.isFinite(kk) && Rk.push({
-        ...Lk,
+    if ("number" === (null === Vb || void 0 === Vb ? void 0 : Vb.type)) {
+      const bb = Number(Vb.text.replace(/_/g, ""));
+      Number.isFinite(bb) && kb.push({
+        ...ub,
         kind: "number",
-        value: kk
+        value: bb
       })
-    } else if ("string" === (null === ik || void 0 === ik ? void 0 : ik.type)) {
-      const kk = Ed(ik.text);
-      null !== kk && Rk.push({
-        ...Lk,
+    } else if ("string" === (null === Vb || void 0 === Vb ? void 0 : Vb.type)) {
+      const bb = hH(Vb.text);
+      null !== bb && kb.push({
+        ...ub,
         kind: "string",
-        value: kk
+        value: bb
       })
-    } else "word" !== (null === ik || void 0 === ik ? void 0 : ik.type) || "true" !== ik.text && "false" !== ik.text || Rk.push({
-      ...Lk,
+    } else "word" !== (null === Vb || void 0 === Vb ? void 0 : Vb.type) || "true" !== Vb.text && "false" !== Vb.text || kb.push({
+      ...ub,
       kind: "boolean",
-      value: "true" === ik.text
+      value: "true" === Vb.text
     });
-    ak = ek, vk && "," === (null === (Vk = Bk[ak]) || void 0 === Vk ? void 0 : Vk.text) && (ak += 2)
+    ab = mb, Nb && "," === (null === (Mb = sb[ab]) || void 0 === Mb ? void 0 : Mb.text) && (ab += 2)
   }
-  return Rk.slice(0, 30)
+  return kb.slice(0, 30)
 }
 
-function Nd(kk, Fk, Bk) {
-  const Rk = Sd(kk).find((kk => kk.key === Fk.key));
-  if (!Rk || Rk.kind !== Fk.kind || Rk.raw !== Fk.raw) return null;
-  let tk;
-  if ("number" === Fk.kind) {
-    if ("number" !== typeof Bk || !Number.isFinite(Bk)) return null;
-    tk = String(Number(Bk.toPrecision(12)))
-  } else if ("boolean" === Fk.kind) {
-    if ("boolean" !== typeof Bk) return null;
-    tk = Bk ? "true" : "false"
+function gH(bb, cb, sb) {
+  const kb = JH(bb).find((bb => bb.key === cb.key));
+  if (!kb || kb.kind !== cb.kind || kb.raw !== cb.raw) return null;
+  let Wb;
+  if ("number" === cb.kind) {
+    if ("number" !== typeof sb || !Number.isFinite(sb)) return null;
+    Wb = String(Number(sb.toPrecision(12)))
+  } else if ("boolean" === cb.kind) {
+    if ("boolean" !== typeof sb) return null;
+    Wb = sb ? "true" : "false"
   } else {
-    if ("string" !== typeof Bk) return null;
-    const kk = Fk.raw.startsWith("'") ? "'" : '"',
-      Rk = "'" === kk ? '"' : "'";
-    ak = Bk, tk = `${Xk=Bk.includes(kk)&&!Bk.includes(Rk)?Rk:kk}${ak.slice(0,200).replace(/\\/g,"\\\\").replace('"'===Xk?/"/g:/'/g,`\\${Xk}`).replace(/\n/g,"\\n").replace(/\r/g,"\\r").replace(/\t/g,"\\t").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029").replace(/[\u0000-\u001f\u007f]/g,(kk=>`\\u${kk.charCodeAt(0).toString(16).padStart(4,"0")}`))}${Xk}`
+    if ("string" !== typeof sb) return null;
+    const bb = cb.raw.startsWith("'") ? "'" : '"',
+      kb = "'" === bb ? '"' : "'";
+    ab = sb, Wb = `${Tb=sb.includes(bb)&&!sb.includes(kb)?kb:bb}${ab.slice(0,200).replace(/\\/g,"\\\\").replace('"'===Tb?/"/g:/'/g,`\\${Tb}`).replace(/\n/g,"\\n").replace(/\r/g,"\\r").replace(/\t/g,"\\t").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029").replace(/[\u0000-\u001f\u007f]/g,(bb=>`\\u${bb.charCodeAt(0).toString(16).padStart(4,"0")}`))}${Tb}`
   }
-  var ak, Xk;
-  return kk.slice(0, Rk.start) + tk + kk.slice(Rk.end)
+  var ab, Tb;
+  return bb.slice(0, kb.start) + Wb + bb.slice(kb.end)
 }
 
-function Hd(kk) {
-  if (!Number.isInteger(kk)) {
-    var Fk;
-    const Bk = Math.min(3, (null !== (Fk = String(kk).split(".")[1]) && void 0 !== Fk ? Fk : "").length);
-    return 10 ** -Math.max(1, Bk)
+function BH(bb) {
+  if (!Number.isInteger(bb)) {
+    var cb;
+    const sb = Math.min(3, (null !== (cb = String(bb).split(".")[1]) && void 0 !== cb ? cb : "").length);
+    return 10 ** -Math.max(1, sb)
   }
-  const Bk = Math.abs(kk);
-  return Bk >= 100 ? 10 ** (Math.floor(Math.log10(Bk)) - 1) : 1
+  const sb = Math.abs(bb);
+  return sb >= 100 ? 10 ** (Math.floor(Math.log10(sb)) - 1) : 1
 }
 
-function ud(kk) {
-  return kk.comment ? kk.comment.charAt(0).toUpperCase() + kk.comment.slice(1) : function(kk) {
-    const Fk = kk.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase();
-    return Fk.charAt(0).toUpperCase() + Fk.slice(1)
-  }(kk.key)
+function tH(bb) {
+  return bb.comment ? bb.comment.charAt(0).toUpperCase() + bb.comment.slice(1) : function(bb) {
+    const cb = bb.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase();
+    return cb.charAt(0).toUpperCase() + cb.slice(1)
+  }(bb.key)
 }
 
-function Md(kk) {
-  return "boolean" === typeof kk ? kk ? "on" : "off" : "number" === typeof kk ? String(kk) : kk.length > 20 ? `\u201c${kk.slice(0,19)}\u2026\u201d` : `\u201c${kk}\u201d`
+function yH(bb) {
+  return "boolean" === typeof bb ? bb ? "on" : "off" : "number" === typeof bb ? String(bb) : bb.length > 20 ? `\u201c${bb.slice(0,19)}\u2026\u201d` : `\u201c${bb}\u201d`
 }
 
-function gd(kk) {
-  let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "changing";
-  if (0 === kk.length) return `Before ${Fk} settings`;
-  const Bk = 3 === kk.length ? 3 : 2,
-    Rk = kk.slice(0, Bk).map((kk => `${kk.name} ${kk.from} \u2192 ${kk.to}`)),
-    tk = kk.length > Bk ? ` and ${kk.length-Bk} more` : "";
-  return `Before ${Fk} settings: ${Rk.join(", ")}${tk}`
+function PH(bb) {
+  let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "changing";
+  if (0 === bb.length) return `Before ${cb} settings`;
+  const sb = 3 === bb.length ? 3 : 2,
+    kb = bb.slice(0, sb).map((bb => `${bb.name} ${bb.from} \u2192 ${bb.to}`)),
+    Wb = bb.length > sb ? ` and ${bb.length-sb} more` : "";
+  return `Before ${cb} settings: ${kb.join(", ")}${Wb}`
 }
-const Ud = /^(?:(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)|(?:const|let|var)\s+([A-Za-z_$][\w$]*)|([A-Za-z_$][\w$]*)\s*=(?!=))/gm;
+const DH = /^(?:(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)|(?:const|let|var)\s+([A-Za-z_$][\w$]*)|([A-Za-z_$][\w$]*)\s*=(?!=))/gm;
 
-function cd(kk) {
-  const Fk = new Set;
-  for (const tk of kk.matchAll(Ud)) {
-    var Bk, Rk;
-    Fk.add(null !== (Bk = null !== (Rk = tk[1]) && void 0 !== Rk ? Rk : tk[2]) && void 0 !== Bk ? Bk : tk[3])
+function EH(bb) {
+  const cb = new Set;
+  for (const Wb of bb.matchAll(DH)) {
+    var sb, kb;
+    cb.add(null !== (sb = null !== (kb = Wb[1]) && void 0 !== kb ? kb : Wb[2]) && void 0 !== sb ? sb : Wb[3])
   }
-  return Fk
+  return cb
 }
-const Gd = new Map([
+const iH = new Map([
     ["tick", ["second", "minute", "timer", "time", "every", "countdown", "wave", "always", "clock"]],
     ["playerCommand", ["command", "/"]],
     ["onPlayerJoin", ["join", "start", "welcome", "spawn", "enter", "arrive"]],
@@ -11292,27 +11292,27 @@ const Gd = new Map([
     ["onPlayerDropItem", ["drop"]],
     ["CONFIG", ["setting", "config", "number", "value"]]
   ]),
-  Td = new Set("a an and the to of in on at for with from by as is are be it its it's this that these those my your their our me you they them we i so if then than when while each all any some more most less make makes made let lets get gets add adds added put puts change changes changed use uses using new now also just only can could should would will want like say says said tell tells told show shows game player players someone everyone people thing things code function part bit way one two three".split(" "));
+  OH = new Set("a an and the to of in on at for with from by as is are be it its it's this that these those my your their our me you they them we i so if then than when while each all any some more most less make makes made let lets get gets add adds added put puts change changes changed use uses using new now also just only can could should would will want like say says said tell tells told show shows game player players someone everyone people thing things code function part bit way one two three".split(" "));
 
-function rd(kk) {
-  return kk.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9/]+/).filter((kk => kk.length >= 3 && !Td.has(kk)))
+function GH(bb) {
+  return bb.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9/]+/).filter((bb => bb.length >= 3 && !OH.has(bb)))
 }
 
-function Dd(kk, Fk) {
-  return kk.some((kk => Fk.some((Fk => function(kk, Fk) {
-    return kk.startsWith(Fk) || Fk.startsWith(kk)
-  }(kk, Fk)))))
+function KH(bb, cb) {
+  return bb.some((bb => cb.some((cb => function(bb, cb) {
+    return bb.startsWith(cb) || cb.startsWith(bb)
+  }(bb, cb)))))
 }
 
-function zd(kk, Fk, Bk) {
-  const Rk = Fk.toLowerCase();
-  return kk.names.some((Fk => {
-    var tk;
-    const ak = null !== (tk = Gd.get(Fk)) && void 0 !== tk ? tk : [];
-    return !!(Rk.includes(Fk.toLowerCase()) || ak.includes("/") && Rk.includes("/")) || Dd(Bk, [...ak.flatMap(rd), ...rd(kk.plainWords.join(" ")), ...kk.configKeys.flatMap(rd)])
+function ZH(bb, cb, sb) {
+  const kb = cb.toLowerCase();
+  return bb.names.some((cb => {
+    var Wb;
+    const ab = null !== (Wb = iH.get(cb)) && void 0 !== Wb ? Wb : [];
+    return !!(kb.includes(cb.toLowerCase()) || ab.includes("/") && kb.includes("/")) || KH(sb, [...ab.flatMap(GH), ...GH(bb.plainWords.join(" ")), ...bb.configKeys.flatMap(GH)])
   }))
 }
-const Pd = new Map([
+const zH = new Map([
   ["tick", "Runs all the time"],
   ["playerCommand", "Chat commands like /help"],
   ["onPlayerJoin", "When a player joins"],
@@ -11358,382 +11358,382 @@ const Pd = new Map([
   ["onClose", "When the game closes"]
 ]);
 
-function hd(kk) {
-  var Fk;
-  return null !== (Fk = Pd.get(kk)) && void 0 !== Fk ? Fk : "CONFIG" === kk ? "Settings" : void 0
+function qH(bb) {
+  var cb;
+  return null !== (cb = zH.get(bb)) && void 0 !== cb ? cb : "CONFIG" === bb ? "Settings" : void 0
 }
-Pd.keys();
-const qd = /^(?:export\s+)?(?:async\s+)?function\b|^(?:(?:const|let|var)\s+)?\w+\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/;
+zH.keys();
+const dH = /^(?:export\s+)?(?:async\s+)?function\b|^(?:(?:const|let|var)\s+)?\w+\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/;
 
-function Cd(kk) {
-  const Fk = kk.trim();
-  return "" === Fk || /^(?:\/\/|\/\*|\*)/.test(Fk)
+function AH(bb) {
+  const cb = bb.trim();
+  return "" === cb || /^(?:\/\/|\/\*|\*)/.test(cb)
 }
 
-function Zd(kk) {
-  const Fk = kk.map((kk => kk.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "").replace(/\/\/.*$/, ""))).join("\n");
-  return ["{}", "()", "[]"].every((kk => {
-    let [Bk, Rk] = kk;
-    return Fk.split(Bk).length === Fk.split(Rk).length
+function wH(bb) {
+  const cb = bb.map((bb => bb.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "").replace(/\/\/.*$/, ""))).join("\n");
+  return ["{}", "()", "[]"].every((bb => {
+    let [sb, kb] = bb;
+    return cb.split(sb).length === cb.split(kb).length
   }))
 }
 
-function pd(kk) {
-  const Fk = [];
-  let Bk = 0;
-  const Rk = Rk => {
-    if (Rk > Bk) {
-      var tk;
-      const ak = kk.slice(Bk, Rk).find((kk => qd.test(kk)));
-      Fk.push({
-        name: void 0 === ak ? null : null !== (tk = jd(ak)) && void 0 !== tk ? tk : null,
-        lines: kk.slice(Bk, Rk)
-      }), Bk = Rk
+function rH(bb) {
+  const cb = [];
+  let sb = 0;
+  const kb = kb => {
+    if (kb > sb) {
+      var Wb;
+      const ab = bb.slice(sb, kb).find((bb => dH.test(bb)));
+      cb.push({
+        name: void 0 === ab ? null : null !== (Wb = RH(ab)) && void 0 !== Wb ? Wb : null,
+        lines: bb.slice(sb, kb)
+      }), sb = kb
     }
   };
-  for (let tk = 1; tk < kk.length; tk++)
-    if (qd.test(kk[tk])) {
-      let Fk = tk;
-      for (; Fk > Bk && Cd(kk[Fk - 1]);) Fk--;
-      Rk(Fk)
-    } return Rk(kk.length), Fk
+  for (let Wb = 1; Wb < bb.length; Wb++)
+    if (dH.test(bb[Wb])) {
+      let cb = Wb;
+      for (; cb > sb && AH(bb[cb - 1]);) cb--;
+      kb(cb)
+    } return kb(bb.length), cb
 }
 
-function Kd(kk) {
-  const Fk = pd(kk.removed),
-    Bk = pd(kk.added);
-  if (Fk.length + Bk.length <= 1) return [kk];
-  const Rk = [];
-  let tk = 0,
-    ak = 0;
-  const Xk = (kk, Fk, Bk) => Fk.slice(Bk).some((Fk => Fk.name === kk));
-  for (; tk < Fk.length || ak < Bk.length;)
-    if (tk < Fk.length && ak < Bk.length && Fk[tk].name === Bk[ak].name) Rk.push({
-      removed: Fk[tk++].lines,
-      added: Bk[ak++].lines
+function oH(bb) {
+  const cb = rH(bb.removed),
+    sb = rH(bb.added);
+  if (cb.length + sb.length <= 1) return [bb];
+  const kb = [];
+  let Wb = 0,
+    ab = 0;
+  const Tb = (bb, cb, sb) => cb.slice(sb).some((cb => cb.name === bb));
+  for (; Wb < cb.length || ab < sb.length;)
+    if (Wb < cb.length && ab < sb.length && cb[Wb].name === sb[ab].name) kb.push({
+      removed: cb[Wb++].lines,
+      added: sb[ab++].lines
     });
-    else if (tk < Fk.length && !Xk(Fk[tk].name, Bk, ak)) Rk.push({
-    removed: Fk[tk++].lines,
+    else if (Wb < cb.length && !Tb(cb[Wb].name, sb, ab)) kb.push({
+    removed: cb[Wb++].lines,
     added: []
   });
   else {
-    if (!(ak < Bk.length) || Xk(Bk[ak].name, Fk, tk)) {
-      Rk.push({
-        removed: Fk.slice(tk).flatMap((kk => kk.lines)),
-        added: Bk.slice(ak).flatMap((kk => kk.lines))
+    if (!(ab < sb.length) || Tb(sb[ab].name, cb, Wb)) {
+      kb.push({
+        removed: cb.slice(Wb).flatMap((bb => bb.lines)),
+        added: sb.slice(ab).flatMap((bb => bb.lines))
       });
       break
     }
-    Rk.push({
+    kb.push({
       removed: [],
-      added: Bk[ak++].lines
+      added: sb[ab++].lines
     })
   }
-  const bk = [];
-  for (const wk of Rk) {
-    const kk = bk[bk.length - 1],
-      Fk = [...wk.removed, ...wk.added].every(Cd);
-    kk && (Fk || [...kk.removed, ...kk.added].every(Cd)) ? bk[bk.length - 1] = {
-      removed: [...kk.removed, ...wk.removed],
-      added: [...kk.added, ...wk.added]
-    } : bk.push(wk)
+  const Ub = [];
+  for (const Ib of kb) {
+    const bb = Ub[Ub.length - 1],
+      cb = [...Ib.removed, ...Ib.added].every(AH);
+    bb && (cb || [...bb.removed, ...bb.added].every(AH)) ? Ub[Ub.length - 1] = {
+      removed: [...bb.removed, ...Ib.removed],
+      added: [...bb.added, ...Ib.added]
+    } : Ub.push(Ib)
   }
-  return bk.every((kk => Zd(kk.removed) && Zd(kk.added))) ? bk : [kk]
+  return Ub.every((bb => wH(bb.removed) && wH(bb.added))) ? Ub : [bb]
 }
 
-function xd(kk, Fk) {
-  const Bk = [];
-  for (const ak of xR(kk, Fk)) {
-    const kk = Bk[Bk.length - 1];
-    "same" === ak.kind ? Bk.push({
+function SH(bb, cb) {
+  const sb = [];
+  for (const ab of Fk(bb, cb)) {
+    const bb = sb[sb.length - 1];
+    "same" === ab.kind ? sb.push({
       kind: "same",
-      text: ak.text
-    }) : "hunk" === (null === kk || void 0 === kk ? void 0 : kk.kind) ? kk[ak.kind].push(ak.text) : Bk.push({
+      text: ab.text
+    }) : "hunk" === (null === bb || void 0 === bb ? void 0 : bb.kind) ? bb[ab.kind].push(ab.text) : sb.push({
       kind: "hunk",
-      removed: "removed" === ak.kind ? [ak.text] : [],
-      added: "added" === ak.kind ? [ak.text] : []
+      removed: "removed" === ab.kind ? [ab.text] : [],
+      added: "added" === ab.kind ? [ab.text] : []
     })
   }
-  const Rk = [];
-  let tk = 0;
-  for (let ak = 0; ak < Bk.length; ak++) {
-    const kk = Bk[ak];
-    if ("same" === kk.kind) {
-      Rk.push(kk);
+  const kb = [];
+  let Wb = 0;
+  for (let ab = 0; ab < sb.length; ab++) {
+    const bb = sb[ab];
+    if ("same" === bb.kind) {
+      kb.push(bb);
       continue
     }
-    let Fk = Kd(kk);
-    if (1 === Fk.length) {
-      let Rk = ak + 1;
-      const tk = [];
-      for (; Rk < Bk.length; Rk++) {
-        const kk = Bk[Rk];
-        if ("same" !== kk.kind || !/^[\s})\];,]+$/.test(kk.text)) break;
-        tk.push(kk.text)
+    let cb = oH(bb);
+    if (1 === cb.length) {
+      let kb = ab + 1;
+      const Wb = [];
+      for (; kb < sb.length; kb++) {
+        const bb = sb[kb];
+        if ("same" !== bb.kind || !/^[\s})\];,]+$/.test(bb.text)) break;
+        Wb.push(bb.text)
       }
-      const Xk = tk.length > 0 ? Kd({
-        removed: [...kk.removed, ...tk],
-        added: [...kk.added, ...tk]
-      }) : Fk;
-      Xk.length > 1 && (Fk = Xk, ak = Rk - 1)
+      const Tb = Wb.length > 0 ? oH({
+        removed: [...bb.removed, ...Wb],
+        added: [...bb.added, ...Wb]
+      }) : cb;
+      Tb.length > 1 && (cb = Tb, ab = kb - 1)
     }
-    for (const Bk of Fk) Rk.push({
+    for (const sb of cb) kb.push({
       kind: "hunk",
-      index: tk++,
-      removed: Bk.removed,
-      added: Bk.added
+      index: Wb++,
+      removed: sb.removed,
+      added: sb.added
     })
   }
-  return Rk
+  return kb
 }
 
-function jd(kk) {
-  var Fk, Bk;
-  const Rk = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^\s*(?:export\s+)?(?:const|let|var|class)\s+(\w+)|^(\w+)\s*=(?!=)/.exec(kk);
-  return Rk ? null !== (Fk = null !== (Bk = Rk[1]) && void 0 !== Bk ? Bk : Rk[2]) && void 0 !== Fk ? Fk : Rk[3] : void 0
+function RH(bb) {
+  var cb, sb;
+  const kb = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^\s*(?:export\s+)?(?:const|let|var|class)\s+(\w+)|^(\w+)\s*=(?!=)/.exec(bb);
+  return kb ? null !== (cb = null !== (sb = kb[1]) && void 0 !== sb ? sb : kb[2]) && void 0 !== cb ? cb : kb[3] : void 0
 }
 
-function ld(kk) {
-  const Fk = jd(kk);
-  if (!Fk || /^\s/.test(kk)) return;
-  return /^(?:export\s+)?(?:async\s+)?function\b/.test(kk) || /=\s*(?:async\s+)?(?:function\b|\(|\w+\s*=>)/.test(kk) || "CONFIG" === Fk ? hd(Fk) : void 0
+function vH(bb) {
+  const cb = RH(bb);
+  if (!cb || /^\s/.test(bb)) return;
+  return /^(?:export\s+)?(?:async\s+)?function\b/.test(bb) || /=\s*(?:async\s+)?(?:function\b|\(|\w+\s*=>)/.test(bb) || "CONFIG" === cb ? qH(cb) : void 0
 }
 
-function nd(kk) {
-  const Fk = new Map;
-  for (const Bk of kk) {
-    const kk = ld(Bk),
-      Rk = jd(Bk);
-    kk && Rk && Fk.set(Rk, kk)
+function FH(bb) {
+  const cb = new Map;
+  for (const sb of bb) {
+    const bb = vH(sb),
+      kb = RH(sb);
+    bb && kb && cb.set(kb, bb)
   }
-  return Fk
+  return cb
 }
 
-function Id(kk) {
-  return [...new Set(kk.flatMap((kk => {
-    const Fk = /^\s/.test(kk) ? void 0 : jd(kk);
-    return Fk ? [Fk] : []
+function xH(bb) {
+  return [...new Set(bb.flatMap((bb => {
+    const cb = /^\s/.test(bb) ? void 0 : RH(bb);
+    return cb ? [cb] : []
   })))]
 }
 
-function Qd(kk) {
-  var Fk;
-  return kk.length <= 1 ? null !== (Fk = kk[0]) && void 0 !== Fk ? Fk : "" : `${kk.slice(0,-1).join(", ")} and ${kk[kk.length-1]}`
+function jH(bb) {
+  var cb;
+  return bb.length <= 1 ? null !== (cb = bb[0]) && void 0 !== cb ? cb : "" : `${bb.slice(0,-1).join(", ")} and ${bb[bb.length-1]}`
 }
 
-function ks(kk) {
-  return kk.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase()
+function pH(bb) {
+  return bb.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase()
 }
 
-function Fs(kk) {
-  return kk.charAt(0).toUpperCase() + kk.slice(1)
+function bf(bb) {
+  return bb.charAt(0).toUpperCase() + bb.slice(1)
 }
-const Bs = new Set("api const let var function return if else for of in new true false null undefined this typeof while break continue playerId attacker killed damaged command ms Math Date JSON String Number Object Array console length push".split(" "));
+const sf = new Set("api const let var function return if else for of in new true false null undefined this typeof while break continue playerId attacker killed damaged command ms Math Date JSON String Number Object Array console length push".split(" "));
 
-function Rs(kk) {
-  return [...new Set(kk.flatMap((kk => {
-    const Fk = kk.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "");
-    return (0, JF.i)(Fk, /[A-Za-z_$][\w$]{2,}(?!\s*:(?!:))/g, JF.r).map((kk => kk[0])).filter((kk => !Bs.has(kk)))
+function kf(bb) {
+  return [...new Set(bb.flatMap((bb => {
+    const cb = bb.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "");
+    return (0, Mc.e)(cb, /[A-Za-z_$][\w$]{2,}(?!\s*:(?!:))/g, Mc.m).map((bb => bb[0])).filter((bb => !sf.has(bb)))
   })))]
 }
 
-function ts(kk, Fk) {
-  var Bk;
-  const Rk = (null !== (Bk = kk.parts) && void 0 !== Bk ? Bk : []).map((kk => {
+function Wf(bb, cb) {
+  var sb;
+  const kb = (null !== (sb = bb.parts) && void 0 !== sb ? sb : []).map((bb => {
       return {
-        why: kk.why,
-        lines: (Fk = kk.code, new Set(Fk.split("\n").map((kk => kk.trim())).filter((kk => kk.length > 1))))
+        why: bb.why,
+        lines: (cb = bb.code, new Set(cb.split("\n").map((bb => bb.trim())).filter((bb => bb.length > 1))))
       };
-      var Fk
+      var cb
     })),
-    tk = xd(kk.before, kk.after);
-  let ak = 1;
-  const Xk = tk.flatMap(((kk, Fk) => {
-      if ("hunk" !== kk.kind) return ak++, [];
-      let Bk;
-      for (const tk of Rk) {
-        const Fk = kk.added.filter((kk => tk.lines.has(kk.trim()))).length;
-        Fk > 0 && (!Bk || Fk > Bk.score) && (Bk = {
-          why: tk.why,
-          score: Fk
+    Wb = SH(bb.before, bb.after);
+  let ab = 1;
+  const Tb = Wb.flatMap(((bb, cb) => {
+      if ("hunk" !== bb.kind) return ab++, [];
+      let sb;
+      for (const Wb of kb) {
+        const cb = bb.added.filter((bb => Wb.lines.has(bb.trim()))).length;
+        cb > 0 && (!sb || cb > sb.score) && (sb = {
+          why: Wb.why,
+          score: cb
         })
       }
-      const Xk = function(kk, Fk, Bk) {
-          const Rk = Id(kk.added),
-            tk = Id(kk.removed),
-            ak = Rk.filter((kk => tk.includes(kk))),
-            Xk = Rk.filter((kk => !ak.includes(kk))),
-            bk = tk.filter((kk => !ak.includes(kk))),
-            wk = new Map([...nd(kk.removed), ...nd(kk.added)]),
-            dk = [...ak, ...Xk].filter((kk => wk.has(kk))),
-            sk = (Fk, Bk) => {
+      const Tb = function(bb, cb, sb) {
+          const kb = xH(bb.added),
+            Wb = xH(bb.removed),
+            ab = kb.filter((bb => Wb.includes(bb))),
+            Tb = kb.filter((bb => !ab.includes(bb))),
+            Ub = Wb.filter((bb => !ab.includes(bb))),
+            Ib = new Map([...FH(bb.removed), ...FH(bb.added)]),
+            Hb = [...ab, ...Tb].filter((bb => Ib.has(bb))),
+            fb = (cb, sb) => {
               return {
-                names: Fk,
-                configKeys: Fk.includes("CONFIG") ? (Rk = kk.added, Rk.flatMap((kk => {
-                  const Fk = /^\s+(\w+)\s*:/.exec(kk);
-                  return Fk ? [Fk[1]] : []
+                names: cb,
+                configKeys: cb.includes("CONFIG") ? (kb = bb.added, kb.flatMap((bb => {
+                  const cb = /^\s+(\w+)\s*:/.exec(bb);
+                  return cb ? [cb[1]] : []
                 }))) : [],
-                plainWords: Fk.flatMap((kk => {
-                  const Fk = wk.get(kk);
-                  return Fk ? [Fk] : []
+                plainWords: cb.flatMap((bb => {
+                  const cb = Ib.get(bb);
+                  return cb ? [cb] : []
                 })),
-                onlyAdds: Bk,
-                uses: Rs(kk.added),
-                takesOut: bk,
-                removedUses: Rs(kk.removed)
+                onlyAdds: sb,
+                uses: kf(bb.added),
+                takesOut: Ub,
+                removedUses: kf(bb.removed)
               };
-              var Rk
+              var kb
             },
-            Vk = new Set([...kk.added, ...kk.removed].flatMap((kk => {
-              var Fk;
-              const Bk = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^(\w+)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/.exec(kk);
-              return Bk ? [null !== (Fk = Bk[1]) && void 0 !== Fk ? Fk : Bk[2]] : []
+            Mb = new Set([...bb.added, ...bb.removed].flatMap((bb => {
+              var cb;
+              const sb = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^(\w+)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/.exec(bb);
+              return sb ? [null !== (cb = sb[1]) && void 0 !== cb ? cb : sb[2]] : []
             }))),
-            Jk = kk => {
-              const Fk = ks(kk);
-              return Vk.has(kk) ? `"${Fk}"` : Fk
+            Xb = bb => {
+              const cb = pH(bb);
+              return Mb.has(bb) ? `"${cb}"` : cb
             },
-            Ak = [...ak, ...Xk, ...bk];
-          if (Ak.some((kk => wk.has(kk)))) {
-            const kk = kk => {
-                const Fk = kk.filter((kk => wk.has(kk)));
-                return Qd(Fk.length > 0 ? Fk.map((kk => {
-                  var Fk;
-                  return null !== (Fk = wk.get(kk)) && void 0 !== Fk ? Fk : kk
-                })) : kk.map(Jk))
+            nb = [...ab, ...Tb, ...Ub];
+          if (nb.some((bb => Ib.has(bb)))) {
+            const bb = bb => {
+                const cb = bb.filter((bb => Ib.has(bb)));
+                return jH(cb.length > 0 ? cb.map((bb => {
+                  var cb;
+                  return null !== (cb = Ib.get(bb)) && void 0 !== cb ? cb : bb
+                })) : bb.map(Xb))
               },
-              Fk = [ak.length > 0 ? `${kk(ak)} \u2014 changed` : "", Xk.length > 0 ? `${kk(Xk)} \u2014 added` : "", bk.length > 0 ? `${kk(bk)} \u2014 taken out` : ""].filter(Boolean),
-              Bk = [...Ak.filter((kk => wk.has(kk))), ...Ak.filter((kk => !wk.has(kk)))],
-              Rk = dk.every((kk => Xk.includes(kk)));
+              cb = [ab.length > 0 ? `${bb(ab)} \u2014 changed` : "", Tb.length > 0 ? `${bb(Tb)} \u2014 added` : "", Ub.length > 0 ? `${bb(Ub)} \u2014 taken out` : ""].filter(Boolean),
+              sb = [...nb.filter((bb => Ib.has(bb))), ...nb.filter((bb => !Ib.has(bb)))],
+              kb = Hb.every((bb => Tb.includes(bb)));
             return {
-              named: Fs(Fk.join("; ")),
-              codeNames: Bk,
-              takesOut: bk,
+              named: bf(cb.join("; ")),
+              codeNames: sb,
+              takesOut: Ub,
               isPlain: !0,
-              about: sk(dk, Rk)
+              about: fb(Hb, kb)
             }
           }
-          const ek = [ak.length > 0 ? `changes ${Qd(ak.map(Jk))}` : "", Xk.length > 0 ? `adds ${Qd(Xk.map(Jk))}` : "", bk.length > 0 ? `takes out ${Qd(bk.map(Jk))}` : ""].filter(Boolean);
-          if (ek.length > 0) return {
-            named: Fs(ek.join(", ")),
-            codeNames: Ak,
-            takesOut: bk,
+          const mb = [ab.length > 0 ? `changes ${jH(ab.map(Xb))}` : "", Tb.length > 0 ? `adds ${jH(Tb.map(Xb))}` : "", Ub.length > 0 ? `takes out ${jH(Ub.map(Xb))}` : ""].filter(Boolean);
+          if (mb.length > 0) return {
+            named: bf(mb.join(", ")),
+            codeNames: nb,
+            takesOut: Ub,
             isPlain: !1,
-            about: sk([], !1)
+            about: fb([], !1)
           };
-          const yk = Fk.flatMap((kk => "same" === kk.kind ? [kk.text] : kk.added));
-          for (let fk = yk.length - 1; fk >= 0; fk--) {
-            const kk = yk[fk],
-              Fk = /^\s/.test(kk) ? void 0 : jd(kk);
-            if (!Fk && "" !== kk.trim() && !/^\s/.test(kk) && !/^(?:\/\/|\/\*|\*)/.test(kk.trim())) break;
-            if (Fk) {
-              const Bk = ld(kk);
-              return Bk ? (wk.set(Fk, Bk), {
-                named: `${Bk} \u2014 changed`,
-                codeNames: [Fk],
+          const lb = cb.flatMap((bb => "same" === bb.kind ? [bb.text] : bb.added));
+          for (let Qb = lb.length - 1; Qb >= 0; Qb--) {
+            const bb = lb[Qb],
+              cb = /^\s/.test(bb) ? void 0 : RH(bb);
+            if (!cb && "" !== bb.trim() && !/^\s/.test(bb) && !/^(?:\/\/|\/\*|\*)/.test(bb.trim())) break;
+            if (cb) {
+              const sb = vH(bb);
+              return sb ? (Ib.set(cb, sb), {
+                named: `${sb} \u2014 changed`,
+                codeNames: [cb],
                 takesOut: [],
                 isPlain: !0,
-                about: sk([Fk], !1)
+                about: fb([cb], !1)
               }) : {
-                named: `Changes ${/\bfunction\b|=>/.test(kk)?`"${ks(Fk)}"`:ks(Fk)}`,
-                codeNames: [Fk],
+                named: `Changes ${/\bfunction\b|=>/.test(bb)?`"${pH(cb)}"`:pH(cb)}`,
+                codeNames: [cb],
                 takesOut: [],
                 isPlain: !1,
-                about: sk([], !1)
+                about: fb([], !1)
               }
             }
           }
           return {
-            named: 0 === kk.added.length ? `Takes out lines from line ${Bk}` : `Changes line ${Bk}`,
+            named: 0 === bb.added.length ? `Takes out lines from line ${sb}` : `Changes line ${sb}`,
             codeNames: [],
             takesOut: [],
             isPlain: !1,
-            about: sk([], !1)
+            about: fb([], !1)
           }
-        }(kk, tk.slice(0, Fk), ak),
-        bk = ak;
-      return ak += kk.added.length, [{
-        index: kk.index,
-        removed: kk.removed,
-        added: kk.added,
-        line: bk,
-        ...Xk,
-        ...Bk ? {
-          why: Bk.why
+        }(bb, Wb.slice(0, cb), ab),
+        Ub = ab;
+      return ab += bb.added.length, [{
+        index: bb.index,
+        removed: bb.removed,
+        added: bb.added,
+        line: Ub,
+        ...Tb,
+        ...sb ? {
+          why: sb.why
         } : {}
       }]
     })),
-    bk = function(kk, Fk) {
-      const Bk = Fk ? rd(Fk) : [];
-      if (!Fk || 0 === Bk.length) return kk.map((() => {}));
-      const Rk = kk.map((kk => zd(kk, Fk, Bk) || void 0 !== kk.why && Dd(Bk, rd(kk.why)))),
-        tk = new Set(kk.flatMap(((kk, Fk) => {
-          var Bk;
-          return Rk[Fk] && null !== (Bk = kk.uses) && void 0 !== Bk ? Bk : []
+    Ub = function(bb, cb) {
+      const sb = cb ? GH(cb) : [];
+      if (!cb || 0 === sb.length) return bb.map((() => {}));
+      const kb = bb.map((bb => ZH(bb, cb, sb) || void 0 !== bb.why && KH(sb, GH(bb.why)))),
+        Wb = new Set(bb.flatMap(((bb, cb) => {
+          var sb;
+          return kb[cb] && null !== (sb = bb.uses) && void 0 !== sb ? sb : []
         }))),
-        ak = kk.map(((kk, Fk) => {
-          var Bk;
-          return Rk[Fk] || (null !== (Bk = kk.uses) && void 0 !== Bk ? Bk : []).some((kk => tk.has(kk)))
+        ab = bb.map(((bb, cb) => {
+          var sb;
+          return kb[cb] || (null !== (sb = bb.uses) && void 0 !== sb ? sb : []).some((bb => Wb.has(bb)))
         }));
-      if (!Rk.includes(!0)) return kk.map((() => {}));
-      const Xk = new Set(kk.flatMap((kk => kk.names)));
-      return kk.map(((kk, Rk) => {
-        if (0 === kk.names.length) {
-          var bk, wk;
-          const Rk = (null !== (bk = kk.takesOut) && void 0 !== bk ? bk : []).filter((kk => ("CONFIG" === kk || Gd.has(kk)) && !Xk.has(kk)));
-          return 0 === Rk.length || zd({
-            ...kk,
-            names: Rk
-          }, Fk, Bk) || void 0 !== kk.why && Dd(Bk, rd(kk.why)) || (null !== (wk = kk.removedUses) && void 0 !== wk ? wk : []).some((kk => tk.has(kk))) ? void 0 : "takesOut"
+      if (!kb.includes(!0)) return bb.map((() => {}));
+      const Tb = new Set(bb.flatMap((bb => bb.names)));
+      return bb.map(((bb, kb) => {
+        if (0 === bb.names.length) {
+          var Ub, Ib;
+          const kb = (null !== (Ub = bb.takesOut) && void 0 !== Ub ? Ub : []).filter((bb => ("CONFIG" === bb || iH.has(bb)) && !Tb.has(bb)));
+          return 0 === kb.length || ZH({
+            ...bb,
+            names: kb
+          }, cb, sb) || void 0 !== bb.why && KH(sb, GH(bb.why)) || (null !== (Ib = bb.removedUses) && void 0 !== Ib ? Ib : []).some((bb => Wb.has(bb))) ? void 0 : "takesOut"
         }
-        if (!ak[Rk]) return kk.onlyAdds ? "adds" : "changes"
+        if (!ab[kb]) return bb.onlyAdds ? "adds" : "changes"
       }))
-    }(Xk.map((kk => ({
-      ...kk.about,
-      ...kk.why ? {
-        why: kk.why
+    }(Tb.map((bb => ({
+      ...bb.about,
+      ...bb.why ? {
+        why: bb.why
       } : {}
-    }))), Fk),
-    wk = Xk.map(((kk, Fk) => {
+    }))), cb),
+    Ib = Tb.map(((bb, cb) => {
       let {
-        named: Bk,
-        codeNames: Rk,
-        isPlain: tk,
-        about: ak,
-        ...wk
-      } = kk;
-      const dk = void 0 !== wk.why && 1 === Xk.filter((kk => kk.why === wk.why)).length && wk.why ? wk.why.charAt(0).toUpperCase() + wk.why.slice(1) : void 0,
-        sk = !tk && dk ? dk : Bk,
-        Vk = bk[Fk],
-        Jk = Vk ? sk.replace(/ \u2014 (added|changed|taken out)$/, "") : sk;
+        named: sb,
+        codeNames: kb,
+        isPlain: Wb,
+        about: ab,
+        ...Ib
+      } = bb;
+      const Hb = void 0 !== Ib.why && 1 === Tb.filter((bb => bb.why === Ib.why)).length && Ib.why ? Ib.why.charAt(0).toUpperCase() + Ib.why.slice(1) : void 0,
+        fb = !Wb && Hb ? Hb : sb,
+        Mb = Ub[cb],
+        Xb = Mb ? fb.replace(/ \u2014 (added|changed|taken out)$/, "") : fb;
       return {
-        ...wk,
-        label: Jk,
-        codeNames: Rk,
-        ...tk && dk ? {
-          detail: dk
+        ...Ib,
+        label: Xb,
+        codeNames: kb,
+        ...Wb && Hb ? {
+          detail: Hb
         } : {},
-        ...Vk ? {
-          also: Vk
+        ...Mb ? {
+          also: Mb
         } : {}
       }
     })),
-    dk = kk => {
-      var Fk, Bk;
-      return `${null!==(Fk=kk.also)&&void 0!==Fk?Fk:""}|${kk.label}|${null!==(Bk=kk.detail)&&void 0!==Bk?Bk:""}`
+    Hb = bb => {
+      var cb, sb;
+      return `${null!==(cb=bb.also)&&void 0!==cb?cb:""}|${bb.label}|${null!==(sb=bb.detail)&&void 0!==sb?sb:""}`
     };
-  return wk.map((kk => {
+  return Ib.map((bb => {
     let {
-      line: Fk,
-      ...Bk
-    } = kk;
-    return wk.filter((kk => dk(kk) === dk(Bk))).length > 1 ? {
-      ...Bk,
-      label: `${Bk.label} (line ${Fk})`
-    } : Bk
+      line: cb,
+      ...sb
+    } = bb;
+    return Ib.filter((bb => Hb(bb) === Hb(sb))).length > 1 ? {
+      ...sb,
+      label: `${sb.label} (line ${cb})`
+    } : sb
   }))
 }
-const as = {
+const af = {
     added: "adds",
     changed: "changes",
     updated: "updates",
@@ -11745,1301 +11745,1301 @@ const as = {
     gave: "gives",
     moved: "moves"
   },
-  Xs = Object.keys(as).join("|"),
-  bs = new Set(["is", "its", "this", "was", "as", "us", "always", "less", "plus", "across", "yours", "theirs"]),
-  ws = /(?:^|[,;:(]|\b(?:and|so|but|or|then|right|because|until|since|just|even))\s*$/i;
-const ds = /```[\s\S]*?(?:```|$)|`[^`\n]*`|"[^"\n]*"|\u201c[^\u201d\n]*\u201d|['\u2018][^'\u2019\n]*['\u2019](?![\w])/g;
+  Tf = Object.keys(af).join("|"),
+  Uf = new Set(["is", "its", "this", "was", "as", "us", "always", "less", "plus", "across", "yours", "theirs"]),
+  If = /(?:^|[,;:(]|\b(?:and|so|but|or|then|right|because|until|since|just|even))\s*$/i;
+const Hf = /```[\s\S]*?(?:```|$)|`[^`\n]*`|"[^"\n]*"|\u201c[^\u201d\n]*\u201d|['\u2018][^'\u2019\n]*['\u2019](?![\w])/g;
 
-function ss(kk) {
-  return !/^['\u2018]/.test(kk[0]) || !(0, JF.e)(kk, "\\w\u2019'")
+function ff(bb) {
+  return !/^['\u2018]/.test(bb[0]) || !(0, Mc.d)(bb, "\\w\u2019'")
 }
-const Vs = /\b(?:last time|before|earlier|previous(?:ly)?|already|in my last|a mistake|an error|wrong)\b/i;
+const Mf = /\b(?:last time|before|earlier|previous(?:ly)?|already|in my last|a mistake|an error|wrong)\b/i;
 
-function As(kk) {
-  const Fk = function(kk) {
-      return (0, JF.i)(kk, ds, ss).map((kk => [kk.index, kk.index + kk[0].length]))
-    }(kk),
-    Bk = kk => Fk.some((Fk => {
-      let [Bk, Rk] = Fk;
-      return kk >= Bk && kk < Rk
+function Xf(bb) {
+  const cb = function(bb) {
+      return (0, Mc.e)(bb, Hf, ff).map((bb => [bb.index, bb.index + bb[0].length]))
+    }(bb),
+    sb = bb => cb.some((cb => {
+      let [sb, kb] = cb;
+      return bb >= sb && bb < kb
     })),
-    Rk = [];
-  for (const ak of kk.matchAll(new RegExp(`(^|[.!?]\\s+|\\n\\s*)I(?:'ve|\u2019ve| have)?( also)? (${Xs})\\b`, "g"))) {
-    const Fk = ak.index + ak[1].length,
-      tk = ak.index + ak[0].length,
-      Xk = kk.slice(tk),
-      bk = /[.!?](?=\s|$)|\n/.exec(Xk),
-      wk = bk ? Xk.slice(0, bk.index) : Xk;
-    if (!Bk(Fk) && !Vs.test(wk)) {
-      Rk.push({
-        at: Fk,
-        length: tk - Fk,
-        words: `${ak[2]?"It also":"This"} ${as[ak[3]]}`
+    kb = [];
+  for (const ab of bb.matchAll(new RegExp(`(^|[.!?]\\s+|\\n\\s*)I(?:'ve|\u2019ve| have)?( also)? (${Tf})\\b`, "g"))) {
+    const cb = ab.index + ab[1].length,
+      Wb = ab.index + ab[0].length,
+      Tb = bb.slice(Wb),
+      Ub = /[.!?](?=\s|$)|\n/.exec(Tb),
+      Ib = Ub ? Tb.slice(0, Ub.index) : Tb;
+    if (!sb(cb) && !Mf.test(Ib)) {
+      kb.push({
+        at: cb,
+        length: Wb - cb,
+        words: `${ab[2]?"It also":"This"} ${af[ab[3]]}`
       });
-      for (const kk of wk.matchAll(new RegExp(`\\b(and|then|also) (${Xs})\\b(?!\\s+(?:of|by|from|with|when|if|in|on|at|to|for|so|as|after|before|into)\\b)`, "g"))) Bk(tk + kk.index) || Rk.push({
-        at: tk + kk.index,
-        length: kk[0].length,
-        words: `${kk[1]} ${as[kk[2]]}`
+      for (const bb of Ib.matchAll(new RegExp(`\\b(and|then|also) (${Tf})\\b(?!\\s+(?:of|by|from|with|when|if|in|on|at|to|for|so|as|after|before|into)\\b)`, "g"))) sb(Wb + bb.index) || kb.push({
+        at: Wb + bb.index,
+        length: bb[0].length,
+        words: `${bb[1]} ${af[bb[2]]}`
       })
     }
   }
-  for (const ak of kk.matchAll(/\bnow ([a-z]{2,}s)\b/g)) {
-    const Fk = Math.max(kk.lastIndexOf(".", ak.index), kk.lastIndexOf("\n", ak.index)) + 1,
-      Xk = /[.!?](?=\s|$)|\n/.exec(kk.slice(ak.index)),
-      bk = kk.slice(Fk, Xk ? ak.index + Xk.index : kk.length),
-      wk = Rk.some((kk => ak.index < kk.at + kk.length && kk.at < ak.index + ak[0].length)),
-      dk = ws.test(kk.slice(Fk, ak.index));
-    bs.has(ak[1]) || dk || Bk(ak.index) || Vs.test(bk) || wk || Rk.push({
-      at: ak.index,
-      length: ak[0].length,
-      words: `will ${tk=ak[1],"has"===tk?"have":tk.endsWith("ies")?`${tk.slice(0,-3)}y`:/(?:ch|sh|x|zz|o|ss)es$/.test(tk)?tk.slice(0,-2):tk.slice(0,-1)}`
+  for (const ab of bb.matchAll(/\bnow ([a-z]{2,}s)\b/g)) {
+    const cb = Math.max(bb.lastIndexOf(".", ab.index), bb.lastIndexOf("\n", ab.index)) + 1,
+      Tb = /[.!?](?=\s|$)|\n/.exec(bb.slice(ab.index)),
+      Ub = bb.slice(cb, Tb ? ab.index + Tb.index : bb.length),
+      Ib = kb.some((bb => ab.index < bb.at + bb.length && bb.at < ab.index + ab[0].length)),
+      Hb = If.test(bb.slice(cb, ab.index));
+    Uf.has(ab[1]) || Hb || sb(ab.index) || Mf.test(Ub) || Ib || kb.push({
+      at: ab.index,
+      length: ab[0].length,
+      words: `will ${Wb=ab[1],"has"===Wb?"have":Wb.endsWith("ies")?`${Wb.slice(0,-3)}y`:/(?:ch|sh|x|zz|o|ss)es$/.test(Wb)?Wb.slice(0,-2):Wb.slice(0,-1)}`
     })
   }
-  var tk;
-  return Rk.sort(((kk, Fk) => Fk.at - kk.at)).reduce(((kk, Fk) => kk.slice(0, Fk.at) + Fk.words + kk.slice(Fk.at + Fk.length)), kk)
+  var Wb;
+  return kb.sort(((bb, cb) => cb.at - bb.at)).reduce(((bb, cb) => bb.slice(0, cb.at) + cb.words + bb.slice(cb.at + cb.length)), bb)
 }
 
-function es(kk) {
+function nf(bb) {
   let {
-    path: Fk,
-    field: Bk,
-    onWrite: tk,
-    isChanged: ak
-  } = kk;
-  const [bk, wk] = (0, Rk.useState)(null), [dk, sk] = (0, Rk.useState)(null), Vk = ud(Bk), [Jk, Ak] = (0, Rk.useState)(!1), ek = (0, Rk.useRef)(null), yk = async kk => {
-    if (tk && !Jk) {
-      wk(null), Ak(!0);
+    path: cb,
+    field: sb,
+    onWrite: Wb,
+    isChanged: ab
+  } = bb;
+  const [Ub, Ib] = (0, kb.useState)(null), [Hb, fb] = (0, kb.useState)(null), Mb = tH(sb), [Xb, nb] = (0, kb.useState)(!1), mb = (0, kb.useRef)(null), lb = async bb => {
+    if (Wb && !Xb) {
+      Ib(null), nb(!0);
       try {
-        const Xk = await tk(Fk, Bk, kk);
-        var Rk, ak;
-        if (sk(Xk ? null : "Your code changed here. Look at it again."), Xk) null === (Rk = ek.current) || void 0 === Rk || null === (ak = Rk.scrollIntoView) || void 0 === ak || ak.call(Rk, {
+        const Tb = await Wb(cb, sb, bb);
+        var kb, ab;
+        if (fb(Tb ? null : "Your code changed here. Look at it again."), Tb) null === (kb = mb.current) || void 0 === kb || null === (ab = kb.scrollIntoView) || void 0 === ab || ab.call(kb, {
           block: "nearest"
         })
       } finally {
-        Ak(!1)
+        nb(!1)
       }
     }
-  }, fk = () => {
-    if (null !== bk)
-      if ("number" === Bk.kind) {
-        const kk = Number(bk.trim());
-        if ("" === bk.trim() || !Number.isFinite(kk)) return sk("That needs to be a number."), void wk(null);
-        yk(kk)
-      } else yk(bk)
-  }, mk = `WorldCodeAiSetting-${Fk}-${Bk.key}`;
-  return (0, Xk.jsxs)("li", {
-    ref: ek,
+  }, Qb = () => {
+    if (null !== Ub)
+      if ("number" === sb.kind) {
+        const bb = Number(Ub.trim());
+        if ("" === Ub.trim() || !Number.isFinite(bb)) return fb("That needs to be a number."), void Ib(null);
+        lb(bb)
+      } else lb(Ub)
+  }, eb = `WorldCodeAiSetting-${cb}-${sb.key}`;
+  return (0, Tb.jsxs)("li", {
+    ref: mb,
     className: "WorldCodeAiSetting",
-    children: [(0, Xk.jsxs)("label", {
+    children: [(0, Tb.jsxs)("label", {
       className: "WorldCodeAiSettingLabel",
-      htmlFor: mk,
-      children: [Vk, Bk.comment && (0, Xk.jsx)("code", {
-        children: Bk.key
+      htmlFor: eb,
+      children: [Mb, sb.comment && (0, Tb.jsx)("code", {
+        children: sb.key
       })]
-    }), "boolean" === Bk.kind ? (0, Xk.jsxs)("label", {
+    }), "boolean" === sb.kind ? (0, Tb.jsxs)("label", {
       className: "WorldCodeAiSwitch",
-      children: [(0, Xk.jsx)("input", {
-        id: mk,
+      children: [(0, Tb.jsx)("input", {
+        id: eb,
         type: "checkbox",
         role: "switch",
-        checked: !0 === Bk.value,
-        disabled: !tk,
-        onChange: kk => {
-          yk(kk.target.checked)
+        checked: !0 === sb.value,
+        disabled: !Wb,
+        onChange: bb => {
+          lb(bb.target.checked)
         }
-      }), (0, Xk.jsx)("span", {
-        children: Bk.value ? "On" : "Off"
+      }), (0, Tb.jsx)("span", {
+        children: sb.value ? "On" : "Off"
       })]
-    }) : (0, Xk.jsxs)("div", {
+    }) : (0, Tb.jsxs)("div", {
       className: "WorldCodeAiSettingControl",
-      children: ["number" === Bk.kind && (0, Xk.jsx)("button", {
+      children: ["number" === sb.kind && (0, Tb.jsx)("button", {
         className: "WorldCodeAiSecondaryButton WorldCodeAiStepper",
-        "aria-label": `Less ${Vk}`,
-        disabled: !tk,
+        "aria-label": `Less ${Mb}`,
+        disabled: !Wb,
         onClick: () => {
-          yk(Bk.value - Hd(Bk.value))
+          lb(sb.value - BH(sb.value))
         },
         children: "\u2212"
-      }), (0, Xk.jsx)("input", {
-        id: mk,
+      }), (0, Tb.jsx)("input", {
+        id: eb,
         className: "WorldCodeAiInput WorldCodeAiSettingInput",
-        type: "number" === Bk.kind ? "number" : "text",
-        inputMode: "number" === Bk.kind ? "decimal" : void 0,
-        maxLength: "string" === Bk.kind ? 200 : void 0,
-        value: null !== bk && void 0 !== bk ? bk : String(Bk.value),
-        disabled: !tk,
-        onChange: kk => {
-          wk(kk.target.value)
+        type: "number" === sb.kind ? "number" : "text",
+        inputMode: "number" === sb.kind ? "decimal" : void 0,
+        maxLength: "string" === sb.kind ? 200 : void 0,
+        value: null !== Ub && void 0 !== Ub ? Ub : String(sb.value),
+        disabled: !Wb,
+        onChange: bb => {
+          Ib(bb.target.value)
         },
-        onBlur: fk,
-        onKeyDown: kk => {
-          kk.stopPropagation(), "Enter" === kk.key ? fk() : "Escape" === kk.key && wk(null)
+        onBlur: Qb,
+        onKeyDown: bb => {
+          bb.stopPropagation(), "Enter" === bb.key ? Qb() : "Escape" === bb.key && Ib(null)
         }
-      }), "number" === Bk.kind && (0, Xk.jsx)("button", {
+      }), "number" === sb.kind && (0, Tb.jsx)("button", {
         className: "WorldCodeAiSecondaryButton WorldCodeAiStepper",
-        "aria-label": `More ${Vk}`,
-        disabled: !tk,
+        "aria-label": `More ${Mb}`,
+        disabled: !Wb,
         onClick: () => {
-          yk(Bk.value + Hd(Bk.value))
+          lb(sb.value + BH(sb.value))
         },
         children: "+"
       })]
-    }), dk && (0, Xk.jsx)("span", {
+    }), Hb && (0, Tb.jsx)("span", {
       className: "WorldCodeAiAboutError",
-      children: dk
-    }), ak && !dk && (0, Xk.jsx)("span", {
+      children: Hb
+    }), ab && !Hb && (0, Tb.jsx)("span", {
       className: "WorldCodeAiSettingDone",
       children: "\u2713 Changed in your code"
     })]
   })
 }
 
-function ys(kk) {
+function mf(bb) {
   let {
-    files: Fk,
-    onWrite: Bk,
-    onTryIt: Rk,
-    onUndo: tk,
-    before: ak
-  } = kk;
-  const bk = Object.entries(Fk).flatMap((kk => {
-    let [Fk, Bk] = kk;
-    const Rk = Sd(Bk);
-    return Rk.length > 0 ? [{
-      path: Fk,
-      fields: Rk
+    files: cb,
+    onWrite: sb,
+    onTryIt: kb,
+    onUndo: Wb,
+    before: ab
+  } = bb;
+  const Ub = Object.entries(cb).flatMap((bb => {
+    let [cb, sb] = bb;
+    const kb = JH(sb);
+    return kb.length > 0 ? [{
+      path: cb,
+      fields: kb
     }] : []
   }));
-  return (0, Xk.jsxs)("div", {
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiHistory WorldCodeAiSettings",
-    children: [(0, Xk.jsx)("div", {
+    children: [(0, Tb.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, Xk.jsx)("span", {
+      children: (0, Tb.jsx)("span", {
         children: "Settings of my game"
       })
-    }), 0 === bk.length ? (0, Xk.jsx)("p", {
+    }), 0 === Ub.length ? (0, Tb.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Your code has no settings yet. Settings are the numbers and messages at the top of your code, in CONFIG."
-    }) : (0, Xk.jsxs)(Xk.Fragment, {
-      children: [(0, Xk.jsx)("p", {
+    }) : (0, Tb.jsxs)(Tb.Fragment, {
+      children: [(0, Tb.jsx)("p", {
         className: "WorldCodeAiAboutNote",
         children: "Changes go into your code straight away. Try them in your world."
-      }), (Rk || tk) && (0, Xk.jsxs)("div", {
+      }), (kb || Wb) && (0, Tb.jsxs)("div", {
         className: "WorldCodeAiSettingActions",
-        children: [Rk && (0, Xk.jsx)("button", {
+        children: [kb && (0, Tb.jsx)("button", {
           className: "WorldCodeAiPrimaryButton",
-          onClick: Rk,
+          onClick: kb,
           children: "Try it in my world"
-        }), tk && (0, Xk.jsx)("button", {
+        }), Wb && (0, Tb.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          onClick: tk,
+          onClick: Wb,
           children: "Undo these changes"
         })]
-      }), bk.map((kk => {
+      }), Ub.map((bb => {
         let {
-          path: Fk,
-          fields: Rk
-        } = kk;
-        return (0, Xk.jsxs)("div", {
-          children: [bk.length > 1 && (0, Xk.jsx)("p", {
+          path: cb,
+          fields: kb
+        } = bb;
+        return (0, Tb.jsxs)("div", {
+          children: [Ub.length > 1 && (0, Tb.jsx)("p", {
             className: "WorldCodeAiAboutHeading",
-            children: Fk
-          }), (0, Xk.jsx)("ul", {
+            children: cb
+          }), (0, Tb.jsx)("ul", {
             className: "WorldCodeAiSettingList",
-            children: Rk.map((kk => {
-              const Rk = void 0 === (null === ak || void 0 === ak ? void 0 : ak[Fk]) ? void 0 : Sd(ak[Fk]).find((Fk => Fk.key === kk.key));
-              return (0, Xk.jsx)(es, {
-                isChanged: !!ak && (null === Rk || void 0 === Rk ? void 0 : Rk.value) !== kk.value,
-                path: Fk,
-                field: kk,
-                onWrite: Bk
-              }, kk.key)
+            children: kb.map((bb => {
+              const kb = void 0 === (null === ab || void 0 === ab ? void 0 : ab[cb]) ? void 0 : JH(ab[cb]).find((cb => cb.key === bb.key));
+              return (0, Tb.jsx)(nf, {
+                isChanged: !!ab && (null === kb || void 0 === kb ? void 0 : kb.value) !== bb.value,
+                path: cb,
+                field: bb,
+                onWrite: sb
+              }, bb.key)
             }))
           })]
-        }, Fk)
+        }, cb)
       }))]
     })]
   })
 }
-const fs = /<tool_call\b|<function=|```|^\s*\{|<\|/m;
-const ms = ["Reading your code", "Planning", "Writing", "Safety check"];
+const lf = /<tool_call\b|<function=|```|^\s*\{|<\|/m;
+const Qf = ["Reading your code", "Planning", "Writing", "Safety check"];
 
-function Ws(kk) {
-  if (kk <= 1e4) return "It starts in a few seconds.";
-  const Fk = 10 * Math.ceil(kk / 1e4);
-  return Fk >= 60 ? "It starts in about a minute." : `It starts in about ${Fk} seconds.`
+function ef(bb) {
+  if (bb <= 1e4) return "It starts in a few seconds.";
+  const cb = 10 * Math.ceil(bb / 1e4);
+  return cb >= 60 ? "It starts in about a minute." : `It starts in about ${cb} seconds.`
 }
-var vs = Bk(1733);
+var Cf = sb(1770);
 
-function is(kk, Fk) {
-  const Bk = new Map;
-  for (const tk of Dt(kk)) {
-    var Rk;
-    Bk.set(tk, (null !== (Rk = Bk.get(tk)) && void 0 !== Rk ? Rk : 0) + 1)
+function Nf(bb, cb) {
+  const sb = new Map;
+  for (const Wb of zW(bb)) {
+    var kb;
+    sb.set(Wb, (null !== (kb = sb.get(Wb)) && void 0 !== kb ? kb : 0) + 1)
   }
-  return Dt(Fk).filter((kk => {
-    var Fk;
-    const Rk = null !== (Fk = Bk.get(kk)) && void 0 !== Fk ? Fk : 0;
-    return Bk.set(kk, Rk - 1), Rk <= 0
+  return zW(cb).filter((bb => {
+    var cb;
+    const kb = null !== (cb = sb.get(bb)) && void 0 !== cb ? cb : 0;
+    return sb.set(bb, kb - 1), kb <= 0
   }))
 }
 
-function Ys(kk, Fk) {
-  return new Promise(((Bk, Rk) => {
-    if (null !== Fk && void 0 !== Fk && Fk.aborted) return void Rk((0, vs.e)(Fk));
-    const tk = setTimeout(Bk, kk);
-    null === Fk || void 0 === Fk || Fk.addEventListener("abort", (() => {
-      clearTimeout(tk), Rk((0, vs.e)(Fk))
+function Vf(bb, cb) {
+  return new Promise(((sb, kb) => {
+    if (null !== cb && void 0 !== cb && cb.aborted) return void kb((0, Cf.f)(cb));
+    const Wb = setTimeout(sb, bb);
+    null === cb || void 0 === cb || cb.addEventListener("abort", (() => {
+      clearTimeout(Wb), kb((0, Cf.f)(cb))
     }), {
       once: !0
     })
   }))
 }
-async function os(kk, Fk, Bk, Rk, tk) {
-  const ak = new Set;
-  for (; Date.now() < Bk;) {
-    var Xk;
-    const bk = gt.filter((kk => !ak.has(kk)));
-    if (0 === bk.length) return null;
-    const wk = ka.firstFreeAt(bk);
-    if (wk > Date.now()) {
-      if (wk > Bk) return null;
-      null === tk || void 0 === tk || tk(wk), await Ys(wk - Date.now(), Rk)
+async function Lf(bb, cb, sb, kb, Wb) {
+  const ab = new Set;
+  for (; Date.now() < sb;) {
+    var Tb;
+    const Ub = EW.filter((bb => !ab.has(bb)));
+    if (0 === Ub.length) return null;
+    const Ib = ca.firstFreeAt(Ub);
+    if (Ib > Date.now()) {
+      if (Ib > sb) return null;
+      null === Wb || void 0 === Wb || Wb(Ib), await Vf(Ib - Date.now(), kb)
     }
-    const dk = null !== (Xk = bk.find((kk => ka.freeAt(kk) <= Date.now()))) && void 0 !== Xk ? Xk : bk[0],
-      sk = await Da(dk, [{
+    const Hb = null !== (Tb = Ub.find((bb => ca.freeAt(bb) <= Date.now()))) && void 0 !== Tb ? Tb : Ub[0],
+      fb = await za(Hb, [{
         role: "user",
-        content: kk
+        content: bb
       }, {
         role: "assistant",
-        content: Fk
-      }], Rk);
-    if (null === sk) ak.add(dk);
-    else if ("busy" !== sk) return sk
+        content: cb
+      }], kb);
+    if (null === fb) ab.add(Hb);
+    else if ("busy" !== fb) return fb
   }
   return null
 }
-async function Ls(kk, Fk, Bk, Rk) {
-  const tk = function(kk) {
-    const Fk = [kk.text, ...kk.question ? [kk.question.question, ...kk.question.choices] : [], ...kk.plan, ...kk.notes, ...kk.actions.flatMap((kk => "switchToWorldCode" === kk.kind && kk.request ? [kk.request] : [])), ...kk.lookups.flatMap((kk => Object.values(kk.args).filter((kk => void 0 !== kk)))), ...kk.changes.flatMap((kk => {
-      var Fk, Bk;
-      return [...null !== (Fk = kk.why) && void 0 !== Fk ? Fk : [], ...(null !== (Bk = kk.parts) && void 0 !== Bk ? Bk : []).map((kk => kk.why)), ...is(kk.before, kk.after)]
-    })), ...kk.worldCode.flatMap((kk => Dt(kk)))];
-    return Fk.map((kk => kk.trim())).filter((kk => "" !== kk)).join("\n")
-  }(Fk);
-  if ("" === tk) return "ok";
-  const ak = Date.now() + 75e3;
-  for (const Xk of function(kk) {
-      const Fk = [];
-      let Bk = kk;
-      for (; Bk.length > Ut;) {
-        const kk = Bk.lastIndexOf("\n", Ut),
-          Rk = kk > 6e3 ? kk : Ut;
-        Fk.push(Bk.slice(0, Rk)), Bk = Bk.slice(Rk)
+async function uf(bb, cb, sb, kb) {
+  const Wb = function(bb) {
+    const cb = [bb.text, ...bb.question ? [bb.question.question, ...bb.question.choices] : [], ...bb.plan, ...bb.notes, ...bb.actions.flatMap((bb => "switchToWorldCode" === bb.kind && bb.request ? [bb.request] : [])), ...bb.lookups.flatMap((bb => Object.values(bb.args).filter((bb => void 0 !== bb)))), ...bb.changes.flatMap((bb => {
+      var cb, sb;
+      return [...null !== (cb = bb.why) && void 0 !== cb ? cb : [], ...(null !== (sb = bb.parts) && void 0 !== sb ? sb : []).map((bb => bb.why)), ...Nf(bb.before, bb.after)]
+    })), ...bb.worldCode.flatMap((bb => zW(bb)))];
+    return cb.map((bb => bb.trim())).filter((bb => "" !== bb)).join("\n")
+  }(cb);
+  if ("" === Wb) return "ok";
+  const ab = Date.now() + 75e3;
+  for (const Tb of function(bb) {
+      const cb = [];
+      let sb = bb;
+      for (; sb.length > iW;) {
+        const bb = sb.lastIndexOf("\n", iW),
+          kb = bb > 6e3 ? bb : iW;
+        cb.push(sb.slice(0, kb)), sb = sb.slice(kb)
       }
-      return [...Fk, Bk]
-    }(tk)) {
-    const Fk = await rt(Xk, (Fk => os(kk, Fk, ak, Bk, Rk)));
-    if ("ok" !== Fk) return Fk
+      return [...cb, sb]
+    }(Wb)) {
+    const cb = await ZW(Tb, (cb => Lf(bb, cb, ab, sb, kb)));
+    if ("ok" !== cb) return cb
   }
   return "ok"
 }
-const Os = "worldCodeAiAnswerTimes";
+const Yf = "worldCodeAiAnswerTimes";
 
-function Es(kk, Fk) {
-  var Bk;
-  const Rk = Fk && null !== (Bk = kk[Fk]) && void 0 !== Bk ? Bk : [],
-    tk = Rk.length >= 2 ? Rk : Object.values(kk).flat();
-  return tk.length < 2 ? "Usually under a minute." : `Usually ${function(kk){const Fk=Math.max(5,5*Math.round(kk/5e3));if(Fk<60)return`about ${Fk} seconds`;const Bk=10*Math.round(kk/1e4),Rk=Math.floor(Bk/60),tk=Bk%60,ak=`${Rk} ${1===Rk?"minute":"minutes"}`;return 0===tk?`about ${ak}`:`about ${ak} ${tk} seconds`}(function(kk){const Fk=[...kk].sort(((kk,Fk)=>kk-Fk)),Bk=Math.floor(Fk.length/2);return Fk.length%2===1?Fk[Bk]:(Fk[Bk-1]+Fk[Bk])/2}(tk))}.`
+function hf(bb, cb) {
+  var sb;
+  const kb = cb && null !== (sb = bb[cb]) && void 0 !== sb ? sb : [],
+    Wb = kb.length >= 2 ? kb : Object.values(bb).flat();
+  return Wb.length < 2 ? "Usually under a minute." : `Usually ${function(bb){const cb=Math.max(5,5*Math.round(bb/5e3));if(cb<60)return`about ${cb} seconds`;const sb=10*Math.round(bb/1e4),kb=Math.floor(sb/60),Wb=sb%60,ab=`${kb} ${1===kb?"minute":"minutes"}`;return 0===Wb?`about ${ab}`:`about ${ab} ${Wb} seconds`}(function(bb){const cb=[...bb].sort(((bb,cb)=>bb-cb)),sb=Math.floor(cb.length/2);return cb.length%2===1?cb[sb]:(cb[sb-1]+cb[sb])/2}(Wb))}.`
 }
-var Ss = Bk(36591);
+var Jf = sb(36494);
 
-function Ns(kk, Fk) {
-  const Bk = kk.split("\n"),
-    Rk = Fk.split("\n"),
-    tk = Rk.findIndex(((kk, Fk) => kk !== Bk[Fk]));
-  return (-1 === tk ? Math.min(Bk.length, Rk.length) - 1 : tk) + 1
+function gf(bb, cb) {
+  const sb = bb.split("\n"),
+    kb = cb.split("\n"),
+    Wb = kb.findIndex(((bb, cb) => bb !== sb[cb]));
+  return (-1 === Wb ? Math.min(sb.length, kb.length) - 1 : Wb) + 1
 }
 
-function Hs(kk, Fk) {
-  return kk.filter((kk => kk.path !== Fk)).map((kk => ({
-    path: kk.path,
-    line: Ns(kk.before, kk.after)
+function Bf(bb, cb) {
+  return bb.filter((bb => bb.path !== cb)).map((bb => ({
+    path: bb.path,
+    line: gf(bb.before, bb.after)
   })))
 }
 
-function us(kk) {
-  return `Moving to ${kk} code\u2026`
+function tf(bb) {
+  return `Moving to ${bb} code\u2026`
 }
 
-function Ms(kk) {
-  return kk.fromLine === kk.toLine ? `line ${kk.fromLine}` : `lines ${kk.fromLine}-${kk.toLine}`
+function yf(bb) {
+  return bb.fromLine === bb.toLine ? `line ${bb.fromLine}` : `lines ${bb.fromLine}-${bb.toLine}`
 }
 
-function gs(kk) {
-  const Fk = kk.text.length > 4e3 ? `${kk.text.slice(0,4e3)}\n...` : kk.text;
-  return `The part I picked (${kk.path}, ${Ms(kk)}):\n\`\`\`\n${Fk}\n\`\`\``
+function Pf(bb) {
+  const cb = bb.text.length > 4e3 ? `${bb.text.slice(0,4e3)}\n...` : bb.text;
+  return `The part I picked (${bb.path}, ${yf(bb)}):\n\`\`\`\n${cb}\n\`\`\``
 }
 
-function Us(kk) {
-  let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-  switch (kk.action) {
+function Df(bb) {
+  let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+  switch (bb.action) {
     case "explain":
-      return `Explain what this part of my code does, in 2 or 3 short sentences. Don't change any code.\n\n${gs(kk)}`;
+      return `Explain what this part of my code does, in 2 or 3 short sentences. Don't change any code.\n\n${Pf(bb)}`;
     case "fix":
-      return `Fix what is wrong in this part of my code. Change only what it needs.\n\n${gs(kk)}`;
+      return `Fix what is wrong in this part of my code. Change only what it needs.\n\n${Pf(bb)}`;
     case "change":
-      return `${Fk.trim()}\n\nChange only this part of my code, unless more is needed for it to work.\n\n${gs(kk)}`
+      return `${cb.trim()}\n\nChange only this part of my code, unless more is needed for it to work.\n\n${Pf(bb)}`
   }
 }
 
-function cs(kk) {
-  let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-  const Bk = Ms(kk);
-  switch (kk.action) {
+function Ef(bb) {
+  let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+  const sb = yf(bb);
+  switch (bb.action) {
     case "explain":
-      return `Explain ${Bk}`;
+      return `Explain ${sb}`;
     case "fix":
-      return `Fix ${Bk}`;
+      return `Fix ${sb}`;
     case "change":
-      return `${Fk.trim()} (${Bk})`
+      return `${cb.trim()} (${sb})`
   }
 }
-var Gs = Bk(40811),
-  Ts = Bk(4487),
-  rs = Bk(40792),
-  Ds = Bk(40802),
-  zs = Bk(40799);
+var Of = sb(40810),
+  Gf = sb(4482),
+  Kf = sb(40794),
+  Zf = sb(40804),
+  zf = sb(40801);
 
-function Ps(kk) {
-  return kk ? "/worldCodeAiCheck.ts" : "/worldCodeAiCheck.js"
+function qf(bb) {
+  return bb ? "/worldCodeAiCheck.ts" : "/worldCodeAiCheck.js"
 }
-const hs = new Set([2345, 2559, 2353, 2554, 2322, 2820]),
-  qs = new Set([2304, 2552]),
-  Cs = new Set(["Date", "isNaN", "isFinite", "parseInt", "parseFloat"]),
-  Zs = {};
+const df = new Set([2345, 2559, 2353, 2554, 2322, 2820]),
+  Af = new Set([2304, 2552]),
+  wf = new Set(["Date", "isNaN", "isFinite", "parseInt", "parseFloat"]),
+  rf = {};
 
-function ps() {
-  let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  const Fk = kk ? "codeBlock" : arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "worldCodeTs" : "worldCode";
-  let Bk = Zs[Fk];
-  if (!Bk) {
-    const Rk = Ps("worldCodeTs" === Fk),
-      tk = new Map(kk ? [
-        [Rk, "\n"],
-        ["/globals.d.ts", rs.d],
-        ["/lib.d.ts", Ds.d]
+function of() {
+  let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+  const cb = bb ? "codeBlock" : arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "worldCodeTs" : "worldCode";
+  let sb = rf[cb];
+  if (!sb) {
+    const kb = qf("worldCodeTs" === cb),
+      Wb = new Map(bb ? [
+        [kb, "\n"],
+        ["/globals.d.ts", Kf.e],
+        ["/lib.d.ts", Zf.e]
       ] : [
-        [Rk, "\n"],
-        ["/node_modules/@bloxd/index.d.ts", Ts.default],
-        ["/globals.d.ts", zs.b],
-        ["/lib.d.ts", Ds.d]
+        [kb, "\n"],
+        ["/node_modules/@bloxd/index.d.ts", Gf.default],
+        ["/globals.d.ts", zf.e],
+        ["/lib.d.ts", Zf.e]
       ]);
-    Bk = Gs.f(Gs.b(tk), [...tk.keys()], Ek(), {
+    sb = Of.d(Of.c(Wb), [...Wb.keys()], hb(), {
       allowJs: !0,
       checkJs: !0,
       noLib: !0,
       strict: !1,
-      module: Ek().ModuleKind.ESNext,
-      moduleResolution: Ek().ModuleResolutionKind.Bundler,
-      target: Ek().ScriptTarget.ES2015,
+      module: hb().ModuleKind.ESNext,
+      moduleResolution: hb().ModuleResolutionKind.Bundler,
+      target: hb().ScriptTarget.ES2015,
       allowUnreachableCode: !1,
       paths: {
         "@bloxd": ["/node_modules/@bloxd/index.d.ts"]
       }
-    }), Zs[Fk] = Bk
+    }), rf[cb] = sb
   }
-  return Bk
+  return sb
 }
 
-function Ks(kk, Fk, Bk) {
-  let Rk;
-  const tk = ak => {
-    Fk < ak.getStart(kk) || Fk >= ak.getEnd() || (Ek().isFunctionLike(ak) && Fk > ak.getStart(kk) && (Rk = void 0), Ek().isCallExpression(ak) && (Fk >= ak.expression.getEnd() || Bk <= ak.expression.getEnd()) && (Rk = ak), Ek().forEachChild(ak, tk))
+function Sf(bb, cb, sb) {
+  let kb;
+  const Wb = ab => {
+    cb < ab.getStart(bb) || cb >= ab.getEnd() || (hb().isFunctionLike(ab) && cb > ab.getStart(bb) && (kb = void 0), hb().isCallExpression(ab) && (cb >= ab.expression.getEnd() || sb <= ab.expression.getEnd()) && (kb = ab), hb().forEachChild(ab, Wb))
   };
-  return tk(kk), Rk && CB(Rk, kk) ? Rk : void 0
+  return Wb(bb), kb && ws(kb, bb) ? kb : void 0
 }
 
-function xs(kk, Fk, Bk) {
-  let Rk;
-  const tk = ak => {
-    Fk < ak.getStart(kk) || Bk > ak.getEnd() || (Rk = ak, Ek().forEachChild(ak, tk))
+function Rf(bb, cb, sb) {
+  let kb;
+  const Wb = ab => {
+    cb < ab.getStart(bb) || sb > ab.getEnd() || (kb = ab, hb().forEachChild(ab, Wb))
   };
-  return tk(kk), Rk
+  return Wb(bb), kb
 }
 
-function ls(kk) {
-  return kk.toLowerCase().replace(/[^a-z0-9]/g, "")
+function vf(bb) {
+  return bb.toLowerCase().replace(/[^a-z0-9]/g, "")
 }
 
-function ns(kk, Fk) {
-  const Bk = ls(kk);
-  if (!Bk) return;
-  const Rk = Fk.find((kk => ls(kk) === Bk));
-  if (Rk) return `"${Rk}"`;
-  const tk = Fk.filter((kk => {
-    const Fk = ls(kk);
-    return Fk.includes(Bk) || Bk.includes(Fk)
-  })).sort(((kk, Fk) => kk.length - Fk.length));
-  if (tk.length > 0) return tk.slice(0, 2).map((kk => `"${kk}"`)).join(" or ");
-  const ak = new Set(kk.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
-  let Xk;
-  for (const bk of Fk) {
-    const kk = bk.toLowerCase().split(/[^a-z0-9]+/).filter((kk => ak.has(kk))).length;
-    kk > 0 && (!Xk || kk > Xk.shared) && (Xk = {
-      option: bk,
-      shared: kk
+function Ff(bb, cb) {
+  const sb = vf(bb);
+  if (!sb) return;
+  const kb = cb.find((bb => vf(bb) === sb));
+  if (kb) return `"${kb}"`;
+  const Wb = cb.filter((bb => {
+    const cb = vf(bb);
+    return cb.includes(sb) || sb.includes(cb)
+  })).sort(((bb, cb) => bb.length - cb.length));
+  if (Wb.length > 0) return Wb.slice(0, 2).map((bb => `"${bb}"`)).join(" or ");
+  const ab = new Set(bb.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+  let Tb;
+  for (const Ub of cb) {
+    const bb = Ub.toLowerCase().split(/[^a-z0-9]+/).filter((bb => ab.has(bb))).length;
+    bb > 0 && (!Tb || bb > Tb.shared) && (Tb = {
+      option: Ub,
+      shared: bb
     })
   }
-  return Xk ? `"${Xk.option}"` : void 0
+  return Tb ? `"${Tb.option}"` : void 0
 }
 
-function Is(kk) {
-  for (let Fk = kk; Fk && !Ek().isSourceFile(Fk); Fk = Fk.parent)
-    if (Ek().isExpressionWithTypeArguments(Fk)) {
-      if (Ek().isHeritageClause(Fk.parent) && Fk.parent.token === Ek().SyntaxKind.ImplementsKeyword) return !0
-    } else if (Ek().isTypeNode(Fk)) return !0;
+function xf(bb) {
+  for (let cb = bb; cb && !hb().isSourceFile(cb); cb = cb.parent)
+    if (hb().isExpressionWithTypeArguments(cb)) {
+      if (hb().isHeritageClause(cb.parent) && cb.parent.token === hb().SyntaxKind.ImplementsKeyword) return !0
+    } else if (hb().isTypeNode(cb)) return !0;
   return !1
 }
 
-function Qs(kk) {
-  var Fk;
-  let Bk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    Rk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  const tk = Ps(Rk && !Bk),
-    ak = ps(Bk, Rk);
-  ak.updateFile(tk, kk || "\n");
-  const Xk = ak.getSourceFile(tk),
-    bk = null === (Fk = ak.languageService.getProgram()) || void 0 === Fk ? void 0 : Fk.getTypeChecker();
-  if (!Xk || !bk) return [];
-  const wk = new Set,
-    dk = ak.languageService.getSyntacticDiagnostics(tk)[0];
-  if (void 0 !== (null === dk || void 0 === dk ? void 0 : dk.start)) {
-    var sk, Vk;
-    const Fk = Xk.getLineAndCharacterOfPosition(dk.start).line,
-      Bk = null !== (sk = null === (Vk = kk.split("\n")[Fk]) || void 0 === Vk ? void 0 : Vk.trim()) && void 0 !== sk ? sk : "",
-      Rk = Bk.length > 40 ? `${Bk.slice(0,37)}...` : Bk,
-      tk = Ek().flattenDiagnosticMessageText(dk.messageText, " ").replace(/\.$/, "");
-    wk.add(`Line ${Fk+1} stops all of this code from running: "${Rk}" (${tk}).`)
+function jf(bb) {
+  var cb;
+  let sb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    kb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  const Wb = qf(kb && !sb),
+    ab = of(sb, kb);
+  ab.updateFile(Wb, bb || "\n");
+  const Tb = ab.getSourceFile(Wb),
+    Ub = null === (cb = ab.languageService.getProgram()) || void 0 === cb ? void 0 : cb.getTypeChecker();
+  if (!Tb || !Ub) return [];
+  const Ib = new Set,
+    Hb = ab.languageService.getSyntacticDiagnostics(Wb)[0];
+  if (void 0 !== (null === Hb || void 0 === Hb ? void 0 : Hb.start)) {
+    var fb, Mb;
+    const cb = Tb.getLineAndCharacterOfPosition(Hb.start).line,
+      sb = null !== (fb = null === (Mb = bb.split("\n")[cb]) || void 0 === Mb ? void 0 : Mb.trim()) && void 0 !== fb ? fb : "",
+      kb = sb.length > 40 ? `${sb.slice(0,37)}...` : sb,
+      Wb = hb().flattenDiagnosticMessageText(Hb.messageText, " ").replace(/\.$/, "");
+    Ib.add(`Line ${cb+1} stops all of this code from running: "${kb}" (${Wb}).`)
   }
-  const Jk = new Set;
-  for (const Tk of ak.languageService.getSemanticDiagnostics(tk)) {
-    var Ak, ek, yk, fk, mk, Wk, vk, ik;
-    if (7027 === Tk.code && void 0 !== Tk.start) {
-      var Yk, Lk;
-      const Fk = Xk.getLineAndCharacterOfPosition(Tk.start).line,
-        Bk = null !== (Yk = null === (Lk = kk.split("\n")[Fk]) || void 0 === Lk ? void 0 : Lk.trim()) && void 0 !== Yk ? Yk : "",
-        Rk = Bk.length > 40 ? `${Bk.slice(0,37)}...` : Bk;
-      wk.add(`Line ${Fk+1} never runs: "${Rk}" comes after a return, which ends the function first.`);
+  const Xb = new Set;
+  for (const Ob of ab.languageService.getSemanticDiagnostics(Wb)) {
+    var nb, mb, lb, Qb, eb, Cb, Nb, Vb;
+    if (7027 === Ob.code && void 0 !== Ob.start) {
+      var Lb, ub;
+      const cb = Tb.getLineAndCharacterOfPosition(Ob.start).line,
+        sb = null !== (Lb = null === (ub = bb.split("\n")[cb]) || void 0 === ub ? void 0 : ub.trim()) && void 0 !== Lb ? Lb : "",
+        kb = sb.length > 40 ? `${sb.slice(0,37)}...` : sb;
+      Ib.add(`Line ${cb+1} never runs: "${kb}" comes after a return, which ends the function first.`);
       continue
     }
-    if (qs.has(Tk.code) && void 0 !== Tk.start) {
-      var Ok, Sk;
-      const Fk = Tk.start + (null !== (Ok = Tk.length) && void 0 !== Ok ? Ok : 0),
-        Bk = kk.slice(Tk.start, Fk),
-        Rk = /^\s*\(/.test(kk.slice(Fk)),
-        tk = new RegExp(`^${Bk.replaceAll("$","\\$")}\\s*=[^=]`, "m").test(kk),
-        ak = kk.slice(0, Tk.start),
-        bk = ak.lastIndexOf("/*") > ak.lastIndexOf("*/") || ak.slice(ak.lastIndexOf("\n")).includes("//"),
-        sk = new RegExp(`//\\s*(?:const|let|var)\\s+${Bk.replaceAll("$","\\$")}\\b`).test(kk),
-        Vk = new RegExp(`typeof\\s+${Bk.replaceAll("$","\\$")}\\b`).test(kk);
-      if (Cs.has(Bk) || Jk.has(Bk) || Rk || tk || bk || sk || Vk || dk || Is(xs(Xk, Tk.start, Fk))) continue;
-      Jk.add(Bk);
-      const Ak = Xk.getLineAndCharacterOfPosition(Tk.start).line,
-        ek = null === (Sk = /Did you mean '([\w$]+)'\?/.exec(Ek().flattenDiagnosticMessageText(Tk.messageText, " "))) || void 0 === Sk ? void 0 : Sk[1];
-      wk.add(ek ? `Line ${Ak+1} uses "${Bk}", which is never set, so it throws there. Did you mean "${ek}"?` : `Line ${Ak+1} uses "${Bk}", which isn't set there, so it throws when that line runs.`);
+    if (Af.has(Ob.code) && void 0 !== Ob.start) {
+      var Yb, Jb;
+      const cb = Ob.start + (null !== (Yb = Ob.length) && void 0 !== Yb ? Yb : 0),
+        sb = bb.slice(Ob.start, cb),
+        kb = /^\s*\(/.test(bb.slice(cb)),
+        Wb = new RegExp(`^${sb.replaceAll("$","\\$")}\\s*=[^=]`, "m").test(bb),
+        ab = bb.slice(0, Ob.start),
+        Ub = ab.lastIndexOf("/*") > ab.lastIndexOf("*/") || ab.slice(ab.lastIndexOf("\n")).includes("//"),
+        fb = new RegExp(`//\\s*(?:const|let|var)\\s+${sb.replaceAll("$","\\$")}\\b`).test(bb),
+        Mb = new RegExp(`typeof\\s+${sb.replaceAll("$","\\$")}\\b`).test(bb);
+      if (wf.has(sb) || Xb.has(sb) || kb || Wb || Ub || fb || Mb || Hb || xf(Rf(Tb, Ob.start, cb))) continue;
+      Xb.add(sb);
+      const nb = Tb.getLineAndCharacterOfPosition(Ob.start).line,
+        mb = null === (Jb = /Did you mean '([\w$]+)'\?/.exec(hb().flattenDiagnosticMessageText(Ob.messageText, " "))) || void 0 === Jb ? void 0 : Jb[1];
+      Ib.add(mb ? `Line ${nb+1} uses "${sb}", which is never set, so it throws there. Did you mean "${mb}"?` : `Line ${nb+1} uses "${sb}", which isn't set there, so it throws when that line runs.`);
       continue
     }
-    if (!hs.has(Tk.code) || void 0 === Tk.start) continue;
-    const Fk = Ek().flattenDiagnosticMessageText(Tk.messageText, " ");
-    if (Fk.includes("'string | number'")) continue;
-    const Bk = Tk.start + (null !== (Ak = Tk.length) && void 0 !== Ak ? Ak : 0),
-      Rk = Ks(Xk, Tk.start, Bk);
-    if (!Rk) continue;
-    const tk = xs(Xk, Tk.start, Bk),
-      ak = Rk.expression.getText(Xk),
-      sk = null !== tk && void 0 !== tk && tk.parent && Ek().isPropertyAssignment(tk.parent) && tk.parent.name === tk ? tk.parent : void 0,
-      Vk = (sk ? sk.getText(Xk) : kk.slice(Tk.start, Bk)).replace(/\s+/g, " "),
-      rk = Vk.length > 40 ? `${Vk.slice(0,37)}...` : Vk;
-    if (2554 === Tk.code) {
-      var Nk, Hk, uk;
-      const kk = Fk.match(/Expected (\S+) arguments?, but got (\d+)/),
-        Bk = null !== (Nk = null === kk || void 0 === kk || null === (Hk = kk[1]) || void 0 === Hk ? void 0 : Hk.replace("-", " to ")) && void 0 !== Nk ? Nk : "a different number of",
-        tk = Number(null !== (uk = null === kk || void 0 === kk ? void 0 : kk[2]) && void 0 !== uk ? uk : Rk.arguments.length);
-      wk.add(`${ak} needs ${Bk} ${"1"===Bk?"value":"values"}, but this line gives it ${tk}.`);
+    if (!df.has(Ob.code) || void 0 === Ob.start) continue;
+    const cb = hb().flattenDiagnosticMessageText(Ob.messageText, " ");
+    if (cb.includes("'string | number'")) continue;
+    const sb = Ob.start + (null !== (nb = Ob.length) && void 0 !== nb ? nb : 0),
+      kb = Sf(Tb, Ob.start, sb);
+    if (!kb) continue;
+    const Wb = Rf(Tb, Ob.start, sb),
+      ab = kb.expression.getText(Tb),
+      fb = null !== Wb && void 0 !== Wb && Wb.parent && hb().isPropertyAssignment(Wb.parent) && Wb.parent.name === Wb ? Wb.parent : void 0,
+      Mb = (fb ? fb.getText(Tb) : bb.slice(Ob.start, sb)).replace(/\s+/g, " "),
+      Gb = Mb.length > 40 ? `${Mb.slice(0,37)}...` : Mb;
+    if (2554 === Ob.code) {
+      var gb, Bb, tb;
+      const bb = cb.match(/Expected (\S+) arguments?, but got (\d+)/),
+        sb = null !== (gb = null === bb || void 0 === bb || null === (Bb = bb[1]) || void 0 === Bb ? void 0 : Bb.replace("-", " to ")) && void 0 !== gb ? gb : "a different number of",
+        Wb = Number(null !== (tb = null === bb || void 0 === bb ? void 0 : bb[2]) && void 0 !== tb ? tb : kb.arguments.length);
+      Ib.add(`${ab} needs ${sb} ${"1"===sb?"value":"values"}, but this line gives it ${Wb}.`);
       continue
     }
-    if (2353 === Tk.code) {
-      var Mk, gk;
-      const kk = null !== (Mk = null === (gk = Fk.match(/'([^']*)' does not exist/)) || void 0 === gk ? void 0 : gk[1]) && void 0 !== Mk ? Mk : rk,
-        Bk = null !== tk && void 0 !== tk && tk.parent && Ek().isPropertyAssignment(tk.parent) ? tk.parent.parent : null === tk || void 0 === tk ? void 0 : tk.parent,
-        Rk = Bk && Ek().isObjectLiteralExpression(Bk) ? bk.getContextualType(Bk) : void 0,
-        Xk = ns(kk, Rk && !bk.isArrayType(bk.getNonNullableType(Rk)) ? bk.getPropertiesOfType(bk.getNonNullableType(Rk)).map((kk => kk.name)) : []),
-        dk = Rk ? ` It takes ${KB(bk,Rk)}.` : " Check Show Docs for its settings.";
-      wk.add(`${ak} has no setting called "${kk}".${Xk?` Did you mean ${Xk}?`:dk}`);
+    if (2353 === Ob.code) {
+      var yb, Pb;
+      const bb = null !== (yb = null === (Pb = cb.match(/'([^']*)' does not exist/)) || void 0 === Pb ? void 0 : Pb[1]) && void 0 !== yb ? yb : Gb,
+        sb = null !== Wb && void 0 !== Wb && Wb.parent && hb().isPropertyAssignment(Wb.parent) ? Wb.parent.parent : null === Wb || void 0 === Wb ? void 0 : Wb.parent,
+        kb = sb && hb().isObjectLiteralExpression(sb) ? Ub.getContextualType(sb) : void 0,
+        Tb = Ff(bb, kb && !Ub.isArrayType(Ub.getNonNullableType(kb)) ? Ub.getPropertiesOfType(Ub.getNonNullableType(kb)).map((bb => bb.name)) : []),
+        Hb = kb ? ` It takes ${Ss(Ub,kb)}.` : " Check Show Docs for its settings.";
+      Ib.add(`${ab} has no setting called "${bb}".${Tb?` Did you mean ${Tb}?`:Hb}`);
       continue
     }
-    const Dk = null !== (ek = null === sk || void 0 === sk ? void 0 : sk.initializer) && void 0 !== ek ? ek : tk,
-      zk = Dk && Ek().isExpression(Dk) ? bk.getContextualType(Dk) : void 0,
-      Pk = (null !== (Gk = zk) && void 0 !== Gk && Gk.isUnion() ? Gk.types : Gk ? [Gk] : []).filter((kk => kk.isStringLiteral())).map((kk => kk.value)),
-      hk = Fk.includes("keyof ") ? "setting" : "name",
-      qk = null !== (yk = null === Dk || void 0 === Dk ? void 0 : Dk.getText(Xk)) && void 0 !== yk ? yk : Vk,
-      Ck = Pk.length > 0 ? null === (fk = /^CONFIG\.([\w$]+)$/.exec(qk)) || void 0 === fk ? void 0 : fk[1] : void 0;
-    if (void 0 !== Ck) {
-      var Uk;
-      const Fk = null === (Uk = new RegExp(`(?:^|[{,])\\s*${Ck.replaceAll("$","\\$")}\\s*:\\s*(["'])([^"'\\n]*)\\1`, "m").exec(kk)) || void 0 === Uk ? void 0 : Uk[2];
-      if (void 0 !== Fk && !Pk.includes(Fk)) {
-        const kk = ns(Fk, Pk);
-        wk.add(`${ak} has no ${hk} called "${Fk}" (${qk}).${kk?` Did you mean ${kk}?`:""}`)
+    const Kb = null !== (mb = null === fb || void 0 === fb ? void 0 : fb.initializer) && void 0 !== mb ? mb : Wb,
+      Zb = Kb && hb().isExpression(Kb) ? Ub.getContextualType(Kb) : void 0,
+      zb = (null !== (ib = Zb) && void 0 !== ib && ib.isUnion() ? ib.types : ib ? [ib] : []).filter((bb => bb.isStringLiteral())).map((bb => bb.value)),
+      qb = cb.includes("keyof ") ? "setting" : "name",
+      db = null !== (lb = null === Kb || void 0 === Kb ? void 0 : Kb.getText(Tb)) && void 0 !== lb ? lb : Mb,
+      Ab = zb.length > 0 ? null === (Qb = /^CONFIG\.([\w$]+)$/.exec(db)) || void 0 === Qb ? void 0 : Qb[1] : void 0;
+    if (void 0 !== Ab) {
+      var Db;
+      const cb = null === (Db = new RegExp(`(?:^|[{,])\\s*${Ab.replaceAll("$","\\$")}\\s*:\\s*(["'])([^"'\\n]*)\\1`, "m").exec(bb)) || void 0 === Db ? void 0 : Db[2];
+      if (void 0 !== cb && !zb.includes(cb)) {
+        const bb = Ff(cb, zb);
+        Ib.add(`${ab} has no ${qb} called "${cb}" (${db}).${bb?` Did you mean ${bb}?`:""}`)
       }
       continue
     }
-    if (zk && Dk && xB(bk, bk.getTypeAtLocation(Dk), zk)) continue;
-    if (Pk.length > 0) {
-      const kk = Dk && Ek().isStringLiteral(Dk) ? Dk : void 0,
-        Fk = kk ? ns(kk.text, Pk) : void 0,
-        Bk = kk && !sk ? `${ak} has no ${hk} called ${ck=rk,ck.startsWith('"')?ck:`"${ck}"`}.` : `${ak} can't take ${rk} there.`;
-      wk.add(`${Bk}${Fk?` Did you mean ${Fk}?`:" Check Show Docs for what it takes."}`);
+    if (Zb && Kb && Rs(Ub, Ub.getTypeAtLocation(Kb), Zb)) continue;
+    if (zb.length > 0) {
+      const bb = Kb && hb().isStringLiteral(Kb) ? Kb : void 0,
+        cb = bb ? Ff(bb.text, zb) : void 0,
+        sb = bb && !fb ? `${ab} has no ${qb} called ${Eb=Gb,Eb.startsWith('"')?Eb:`"${Eb}"`}.` : `${ab} can't take ${Gb} there.`;
+      Ib.add(`${sb}${cb?` Did you mean ${cb}?`:" Check Show Docs for what it takes."}`);
       continue
     }
-    if (zk && Dk && pB(bk.getTypeAtLocation(Dk))) {
-      wk.add(`${ak} can't take ${rk} there: it takes ${KB(bk,zk)}.`);
+    if (Zb && Kb && os(Ub.getTypeAtLocation(Kb))) {
+      Ib.add(`${ab} can't take ${Gb} there: it takes ${Ss(Ub,Zb)}.`);
       continue
     }
-    const Zk = zk && bk.getNonNullableType(zk);
-    if (Zk && pB(Zk) && !bk.isArrayType(Zk) && !bk.isTupleType(Zk)) {
-      const kk = ZB(bk, zk);
-      wk.add(`${ak} needs settings in { } there${kk?`, like ${kk}`:""}, not ${rk}.`);
+    const wb = Zb && Ub.getNonNullableType(Zb);
+    if (wb && os(wb) && !Ub.isArrayType(wb) && !Ub.isTupleType(wb)) {
+      const bb = rs(Ub, Zb);
+      Ib.add(`${ab} needs settings in { } there${bb?`, like ${bb}`:""}, not ${Gb}.`);
       continue
     }
-    const pk = null === (mk = Fk.match(/parameter of type '([^']*)'/)) || void 0 === mk ? void 0 : mk[1],
-      Kk = Rk.arguments.findIndex((kk => kk.getStart(Xk) <= Tk.start && Tk.start < kk.getEnd())),
-      xk = null !== (Wk = null === (vk = bk.getResolvedSignature(Rk)) || void 0 === vk || null === (ik = vk.parameters[Kk]) || void 0 === ik ? void 0 : ik.name) && void 0 !== Wk ? Wk : "that part",
-      jk = tk ? bk.typeToString(bk.getTypeAtLocation(tk)) : "",
-      lk = "number" === jk ? "a number" : "string" === jk ? "text" : "something else";
-    "string" === pk ? wk.add(`${ak} needs ${xk} as text, but ${rk} is ${lk} here.`) : "number" === pk ? wk.add(`${ak} needs ${xk} as a number, but ${rk} is ${lk} here.`) : wk.add(`${ak} can't take ${rk} there${zk?`: it takes ${KB(bk,zk)}`:". Check Show Docs for what it takes"}.`)
+    const rb = null === (eb = cb.match(/parameter of type '([^']*)'/)) || void 0 === eb ? void 0 : eb[1],
+      ob = kb.arguments.findIndex((bb => bb.getStart(Tb) <= Ob.start && Ob.start < bb.getEnd())),
+      Sb = null !== (Cb = null === (Nb = Ub.getResolvedSignature(kb)) || void 0 === Nb || null === (Vb = Nb.parameters[ob]) || void 0 === Vb ? void 0 : Vb.name) && void 0 !== Cb ? Cb : "that part",
+      Rb = Wb ? Ub.typeToString(Ub.getTypeAtLocation(Wb)) : "",
+      vb = "number" === Rb ? "a number" : "string" === Rb ? "text" : "something else";
+    "string" === rb ? Ib.add(`${ab} needs ${Sb} as text, but ${Gb} is ${vb} here.`) : "number" === rb ? Ib.add(`${ab} needs ${Sb} as a number, but ${Gb} is ${vb} here.`) : Ib.add(`${ab} can't take ${Gb} there${Zb?`: it takes ${Ss(Ub,Zb)}`:". Check Show Docs for what it takes"}.`)
   }
-  var ck, Gk;
-  return [...wk, ...lB(Xk, bk)]
+  var Eb, ib;
+  return [...Ib, ...Fs(Tb, Ub)]
 }
 
-function kV(kk) {
-  return kk.replace(/^Line \d+ /, "")
+function pf(bb) {
+  return bb.replace(/^Line \d+ /, "")
 }
 
-function FV(kk) {
-  const Fk = new Map;
-  for (const tk of kk.split("\n")) {
-    var Bk;
-    const kk = /^(?:async\s+)?function\s*\*?\s*(\w+)\s*\(|^(\w+)\s*=\s*(?:async\s*)?(?:\([^()]*\)\s*=>|function\b|\w+\s*=>)/.exec(tk),
-      ak = null !== (Bk = null === kk || void 0 === kk ? void 0 : kk[1]) && void 0 !== Bk ? Bk : null === kk || void 0 === kk ? void 0 : kk[2];
-    var Rk;
-    if (ak) Fk.set(ak, (null !== (Rk = Fk.get(ak)) && void 0 !== Rk ? Rk : 0) + 1)
+function bM(bb) {
+  const cb = new Map;
+  for (const Wb of bb.split("\n")) {
+    var sb;
+    const bb = /^(?:async\s+)?function\s*\*?\s*(\w+)\s*\(|^(\w+)\s*=\s*(?:async\s*)?(?:\([^()]*\)\s*=>|function\b|\w+\s*=>)/.exec(Wb),
+      ab = null !== (sb = null === bb || void 0 === bb ? void 0 : bb[1]) && void 0 !== sb ? sb : null === bb || void 0 === bb ? void 0 : bb[2];
+    var kb;
+    if (ab) cb.set(ab, (null !== (kb = cb.get(ab)) && void 0 !== kb ? kb : 0) + 1)
   }
-  return [...Fk].flatMap((kk => {
-    let [Fk, Bk] = kk;
-    return Bk > 1 ? [`${Fk} is in the code ${Bk} times, so only the last one runs. Put them together in one ${Fk}.`] : []
+  return [...cb].flatMap((bb => {
+    let [cb, sb] = bb;
+    return sb > 1 ? [`${cb} is in the code ${sb} times, so only the last one runs. Put them together in one ${cb}.`] : []
   }))
 }
 
-function BV(kk, Fk) {
-  var Bk, Rk, tk, ak;
-  const Xk = Fk.after.split("\n"),
-    bk = kk => {
-      var Fk, Bk;
-      const Rk = null !== (Fk = null === (Bk = Xk[kk]) || void 0 === Bk ? void 0 : Bk.trim()) && void 0 !== Fk ? Fk : "";
-      return "" === Rk ? void 0 : {
-        line: kk + 1,
-        text: Rk.length > 50 ? `${Rk.slice(0,47)}...` : Rk
+function cM(bb, cb) {
+  var sb, kb, Wb, ab;
+  const Tb = cb.after.split("\n"),
+    Ub = bb => {
+      var cb, sb;
+      const kb = null !== (cb = null === (sb = Tb[bb]) || void 0 === sb ? void 0 : sb.trim()) && void 0 !== cb ? cb : "";
+      return "" === kb ? void 0 : {
+        line: bb + 1,
+        text: kb.length > 50 ? `${kb.slice(0,47)}...` : kb
       }
     },
-    wk = /^Line (\d+) /.exec(kk);
-  if (wk) return bk(Number(wk[1]) - 1);
-  const dk = /^([\w$]+) is in the code \d+ times\b/.exec(kk);
-  if (dk) {
-    const kk = dk[1].replaceAll("$", "\\$"),
-      Fk = new RegExp(`^(?:async\\s+)?function\\s*\\*?\\s*${kk}\\s*\\(|^${kk}\\s*=`),
-      Bk = Xk.findIndex((kk => Fk.test(kk)));
-    return Bk >= 0 ? bk(Bk) : void 0
+    Ib = /^Line (\d+) /.exec(bb);
+  if (Ib) return Ub(Number(Ib[1]) - 1);
+  const Hb = /^([\w$]+) is in the code \d+ times\b/.exec(bb);
+  if (Hb) {
+    const bb = Hb[1].replaceAll("$", "\\$"),
+      cb = new RegExp(`^(?:async\\s+)?function\\s*\\*?\\s*${bb}\\s*\\(|^${bb}\\s*=`),
+      sb = Tb.findIndex((bb => cb.test(bb)));
+    return sb >= 0 ? Ub(sb) : void 0
   }
-  const sk = null !== (Bk = null === (Rk = /"([^"]+)"/.exec(kk)) || void 0 === Rk ? void 0 : Rk[1]) && void 0 !== Bk ? Bk : null === (tk = /^api\.[\w$]+/.exec(kk)) || void 0 === tk ? void 0 : tk[0];
-  if (!sk) return;
-  const Vk = new Set(Fk.before.split("\n")),
-    Jk = Xk.flatMap(((kk, Fk) => kk.includes(sk) ? [Fk] : [])),
-    Ak = null !== (ak = Jk.find((kk => !Vk.has(Xk[kk])))) && void 0 !== ak ? ak : Jk[0];
-  return void 0 === Ak ? void 0 : bk(Ak)
+  const fb = null !== (sb = null === (kb = /"([^"]+)"/.exec(bb)) || void 0 === kb ? void 0 : kb[1]) && void 0 !== sb ? sb : null === (Wb = /^api\.[\w$]+/.exec(bb)) || void 0 === Wb ? void 0 : Wb[0];
+  if (!fb) return;
+  const Mb = new Set(cb.before.split("\n")),
+    Xb = Tb.flatMap(((bb, cb) => bb.includes(fb) ? [cb] : [])),
+    nb = null !== (ab = Xb.find((bb => !Mb.has(Tb[bb])))) && void 0 !== ab ? ab : Xb[0];
+  return void 0 === nb ? void 0 : Ub(nb)
 }
 
-function RV(kk) {
-  return /^Line \d+ stops all of this code from running: "/.test(kk)
+function sM(bb) {
+  return /^Line \d+ stops all of this code from running: "/.test(bb)
 }
 
-function tV(kk) {
-  return /^Line \d+ (?:stops all of this code from running|never runs): "/.test(kk)
+function kM(bb) {
+  return /^Line \d+ (?:stops all of this code from running|never runs): "/.test(bb)
 }
 
-function aV(kk) {
-  return kk.replace(/^Line \d+ (\w)/, ((kk, Fk) => Fk.toUpperCase()))
+function WM(bb) {
+  return bb.replace(/^Line \d+ (\w)/, ((bb, cb) => cb.toUpperCase()))
 }
-const XV = new Set([Ek().SyntaxKind.EqualsToken, Ek().SyntaxKind.QuestionQuestionEqualsToken, Ek().SyntaxKind.BarBarEqualsToken]);
+const aM = new Set([hb().SyntaxKind.EqualsToken, hb().SyntaxKind.QuestionQuestionEqualsToken, hb().SyntaxKind.BarBarEqualsToken]);
 
-function bV(kk) {
-  const Fk = Ek().createSourceFile("worldCode.js", kk, Ek().ScriptTarget.Latest, !0, Ek().ScriptKind.JS),
-    Bk = Fk.statements.flatMap((kk => Ek().isVariableStatement(kk) ? kk.declarationList.declarations.filter((kk => Ek().isIdentifier(kk.name) && "CONFIG" === kk.name.text)) : [])),
-    Rk = 1 === Bk.length ? Bk[0].initializer : void 0;
-  if (!Rk || !Ek().isObjectLiteralExpression(Rk)) return [];
-  const tk = new Set;
-  for (const wk of Rk.properties) {
-    if (!Ek().isPropertyAssignment(wk) && !Ek().isShorthandPropertyAssignment(wk) && !Ek().isMethodDeclaration(wk)) return [];
-    if (Ek().isComputedPropertyName(wk.name)) return [];
-    tk.add(wk.name.text)
+function TM(bb) {
+  const cb = hb().createSourceFile("worldCode.js", bb, hb().ScriptTarget.Latest, !0, hb().ScriptKind.JS),
+    sb = cb.statements.flatMap((bb => hb().isVariableStatement(bb) ? bb.declarationList.declarations.filter((bb => hb().isIdentifier(bb.name) && "CONFIG" === bb.name.text)) : [])),
+    kb = 1 === sb.length ? sb[0].initializer : void 0;
+  if (!kb || !hb().isObjectLiteralExpression(kb)) return [];
+  const Wb = new Set;
+  for (const Ib of kb.properties) {
+    if (!hb().isPropertyAssignment(Ib) && !hb().isShorthandPropertyAssignment(Ib) && !hb().isMethodDeclaration(Ib)) return [];
+    if (hb().isComputedPropertyName(Ib.name)) return [];
+    Wb.add(Ib.name.text)
   }
-  const ak = [],
-    Xk = kk => {
-      if (Ek().isPropertyAccessExpression(kk) && Ek().isIdentifier(kk.expression) && "CONFIG" === kk.expression.text) {
-        const Bk = kk.name.text,
-          Rk = kk.parent;
-        Ek().isBinaryExpression(Rk) && Rk.left === kk && XV.has(Rk.operatorToken.kind) ? tk.add(Bk) : ak.push({
-          name: Bk,
-          at: kk.getStart(Fk)
+  const ab = [],
+    Tb = bb => {
+      if (hb().isPropertyAccessExpression(bb) && hb().isIdentifier(bb.expression) && "CONFIG" === bb.expression.text) {
+        const sb = bb.name.text,
+          kb = bb.parent;
+        hb().isBinaryExpression(kb) && kb.left === bb && aM.has(kb.operatorToken.kind) ? Wb.add(sb) : ab.push({
+          name: sb,
+          at: bb.getStart(cb)
         })
       }
-      Ek().forEachChild(kk, Xk)
+      hb().forEachChild(bb, Tb)
     };
-  Xk(Fk);
-  const bk = new Set;
-  return ak.flatMap((kk => {
-    if (tk.has(kk.name) || bk.has(kk.name)) return [];
-    bk.add(kk.name);
-    return [`Line ${Fk.getLineAndCharacterOfPosition(kk.at).line+1} uses "CONFIG.${kk.name}", but CONFIG has no ${kk.name}, so it is undefined there. Add ${kk.name} to CONFIG.`]
+  Tb(cb);
+  const Ub = new Set;
+  return ab.flatMap((bb => {
+    if (Wb.has(bb.name) || Ub.has(bb.name)) return [];
+    Ub.add(bb.name);
+    return [`Line ${cb.getLineAndCharacterOfPosition(bb.at).line+1} uses "CONFIG.${bb.name}", but CONFIG has no ${bb.name}, so it is undefined there. Add ${bb.name} to CONFIG.`]
   }))
 }
 
-function wV(kk, Fk) {
-  var Bk;
-  const Rk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] && !(void 0 !== Fk.path && (0, ek.d)(Fk.path)),
-    tk = !0 === (null === (Bk = Fk.path) || void 0 === Bk ? void 0 : Bk.endsWith(".ts")),
-    ak = Fk => [...kk.codeWarnings(Fk, Rk), ...Qs(Fk, Rk, tk), ...FV(Fk), ...bV(Fk)],
-    Xk = new Set(ak(Fk.before).map(kV));
-  return ak(Fk.after).filter((kk => !Xk.has(kV(kk))))
+function UM(bb, cb) {
+  var sb;
+  const kb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] && !(void 0 !== cb.path && (0, mb.e)(cb.path)),
+    Wb = !0 === (null === (sb = cb.path) || void 0 === sb ? void 0 : sb.endsWith(".ts")),
+    ab = cb => [...bb.codeWarnings(cb, kb), ...jf(cb, kb, Wb), ...bM(cb), ...TM(cb)],
+    Tb = new Set(ab(cb.before).map(pf));
+  return ab(cb.after).filter((bb => !Tb.has(pf(bb))))
 }
-const dV = "Looking up";
+const IM = "Looking up";
 
-function sV(kk) {
+function HM(bb) {
   return {
-    ...kk,
+    ...bb,
     call: void 0
   }
 }
-const VV = 15e3,
-  JV = new Map;
-const AV = function(kk) {
-    let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "bloxd_worldCodeAi";
-    if ("undefined" === typeof indexedDB) return kk;
-    let Bk = "unknown",
-      Rk = null;
-    const tk = () => (Rk ??= new Promise(((kk, Bk) => {
-        const tk = indexedDB.open(Fk, 1);
-        tk.onupgradeneeded = () => {
-          tk.result.createObjectStore(td)
-        }, tk.onsuccess = () => {
-          const Fk = tk.result;
-          Fk.onversionchange = () => {
-            Fk.close(), Rk = null
-          }, Fk.onclose = () => {
-            Rk = null
-          }, kk(Fk)
-        }, tk.onerror = () => {
-          var kk;
-          Bk(null !== (kk = tk.error) && void 0 !== kk ? kk : new Error("IndexedDB didn't open"))
-        }, tk.onblocked = () => {
-          Bk(new Error("IndexedDB is blocked"))
+const fM = 15e3,
+  MM = new Map;
+const XM = function(bb) {
+    let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "bloxd_worldCodeAi";
+    if ("undefined" === typeof indexedDB) return bb;
+    let sb = "unknown",
+      kb = null;
+    const Wb = () => (kb ??= new Promise(((bb, sb) => {
+        const Wb = indexedDB.open(cb, 1);
+        Wb.onupgradeneeded = () => {
+          Wb.result.createObjectStore(WH)
+        }, Wb.onsuccess = () => {
+          const cb = Wb.result;
+          cb.onversionchange = () => {
+            cb.close(), kb = null
+          }, cb.onclose = () => {
+            kb = null
+          }, bb(cb)
+        }, Wb.onerror = () => {
+          var bb;
+          sb(null !== (bb = Wb.error) && void 0 !== bb ? bb : new Error("IndexedDB didn't open"))
+        }, Wb.onblocked = () => {
+          sb(new Error("IndexedDB is blocked"))
         }
-      })).catch((kk => {
-        throw Rk = null, kk
-      })), Rk),
-      ak = async kk => {
+      })).catch((bb => {
+        throw kb = null, bb
+      })), kb),
+      ab = async bb => {
         try {
-          return (await tk()).transaction(td, kk)
-        } catch (Fk) {
-          if ("indexedDB" !== Bk) throw Fk;
-          return Rk = null, (await tk()).transaction(td, kk)
+          return (await Wb()).transaction(WH, bb)
+        } catch (cb) {
+          if ("indexedDB" !== sb) throw cb;
+          return kb = null, (await Wb()).transaction(WH, bb)
         }
-      }, Xk = async () => {
-        if ("unknown" === Bk) try {
-          await tk(), Bk = "indexedDB"
+      }, Tb = async () => {
+        if ("unknown" === sb) try {
+          await Wb(), sb = "indexedDB"
         } catch {
-          Bk = "fallback"
+          sb = "fallback"
         }
-        return "indexedDB" === Bk
+        return "indexedDB" === sb
       };
     return {
-      getItem: async Fk => {
-        if (!await Xk()) return kk.getItem(Fk);
-        const Bk = await (async kk => {
-          const Fk = await ak("readonly"),
-            Bk = Fk.objectStore(td).get(kk);
-          return await ad(Fk), Bk.result
-        })(Fk);
-        return void 0 === Bk ? kk.getItem(Fk) : Bk
+      getItem: async cb => {
+        if (!await Tb()) return bb.getItem(cb);
+        const sb = await (async bb => {
+          const cb = await ab("readonly"),
+            sb = cb.objectStore(WH).get(bb);
+          return await aH(cb), sb.result
+        })(cb);
+        return void 0 === sb ? bb.getItem(cb) : sb
       },
-      setItem: async (Fk, Bk) => {
-        if (!await Xk()) return kk.setItem(Fk, Bk);
+      setItem: async (cb, sb) => {
+        if (!await Tb()) return bb.setItem(cb, sb);
         try {
-          const kk = await ak("readwrite");
-          return kk.objectStore(td).put(Bk, Fk), await ad(kk), !0
+          const bb = await ab("readwrite");
+          return bb.objectStore(WH).put(sb, cb), await aH(bb), !0
         } catch {
           return !1
         }
       },
-      update: async (Fk, Bk) => {
-        if (!await Xk()) throw new Error("No IndexedDB: read and write localforage instead");
-        const Rk = await kk.getItem(Fk).catch((() => null)),
-          tk = await ak("readwrite"),
-          bk = tk.objectStore(td);
-        let wk;
-        const dk = bk.get(Fk);
-        return dk.onsuccess = () => {
-          wk = Bk(void 0 === dk.result ? Rk : dk.result), bk.put(wk, Fk)
-        }, await ad(tk), wk
+      update: async (cb, sb) => {
+        if (!await Tb()) throw new Error("No IndexedDB: read and write localforage instead");
+        const kb = await bb.getItem(cb).catch((() => null)),
+          Wb = await ab("readwrite"),
+          Ub = Wb.objectStore(WH);
+        let Ib;
+        const Hb = Ub.get(cb);
+        return Hb.onsuccess = () => {
+          Ib = sb(void 0 === Hb.result ? kb : Hb.result), Ub.put(Ib, cb)
+        }, await aH(Wb), Ib
       }
     }
-  }(za.f),
-  eV = new class {
-    constructor(kk, Fk) {
-      this.store = kk, this.signal = Fk, this.lA = new Map
+  }(qa.d),
+  nM = new class {
+    constructor(bb, cb) {
+      this.store = bb, this.signal = cb, this.vn = new Map
     }
-    watch(kk, Fk) {
-      var Bk, Rk;
-      return null !== (Bk = null === (Rk = this.signal) || void 0 === Rk ? void 0 : Rk.listen((Bk => {
-        if (Bk !== kk) return;
-        const Rk = this.load(kk).then((async Fk => sd(Fk, await this.read(kk))));
-        this.lA.set(kk, Rk), Rk.then(Fk)
-      }))) && void 0 !== Bk ? Bk : () => {}
+    watch(bb, cb) {
+      var sb, kb;
+      return null !== (sb = null === (kb = this.signal) || void 0 === kb ? void 0 : kb.listen((sb => {
+        if (sb !== bb) return;
+        const kb = this.load(bb).then((async cb => fH(cb, await this.read(bb))));
+        this.vn.set(bb, kb), kb.then(cb)
+      }))) && void 0 !== sb ? sb : () => {}
     }
-    list(kk) {
-      return this.load(kk)
+    list(bb) {
+      return this.load(bb)
     }
-    async add(kk, Fk, Bk) {
-      let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Date.now(),
-        tk = arguments.length > 4 ? arguments[4] : void 0;
-      const ak = (kk, ak) => {
-          const Xk = sd(kk, ak),
-            bk = Xk[Xk.length - 1];
-          if (bk && function(kk, Fk) {
-              const Bk = Object.keys(kk);
-              return Bk.length === Object.keys(Fk).length && Bk.every((Bk => kk[Bk] === Fk[Bk]))
-            }(bk.files, Bk)) return Xk;
-          const wk = Math.max(Rk, ...Xk.map((kk => kk.id + 1)));
-          return [...Xk, {
-            id: wk,
-            at: Rk,
-            label: Fk,
-            ...tk ? {
-              did: tk
+    async add(bb, cb, sb) {
+      let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Date.now(),
+        Wb = arguments.length > 4 ? arguments[4] : void 0;
+      const ab = (bb, ab) => {
+          const Tb = fH(bb, ab),
+            Ub = Tb[Tb.length - 1];
+          if (Ub && function(bb, cb) {
+              const sb = Object.keys(bb);
+              return sb.length === Object.keys(cb).length && sb.every((sb => bb[sb] === cb[sb]))
+            }(Ub.files, sb)) return Tb;
+          const Ib = Math.max(kb, ...Tb.map((bb => bb.id + 1)));
+          return [...Tb, {
+            id: Ib,
+            at: kb,
+            label: cb,
+            ...Wb ? {
+              did: Wb
             } : {},
             files: {
-              ...Bk
+              ...sb
             }
           }].slice(-30)
         },
-        Xk = this.load(kk).then((async Fk => this.save(kk, (kk => ak(Fk, kk)))));
-      this.lA.set(kk, Xk.then((kk => {
+        Tb = this.load(bb).then((async cb => this.save(bb, (bb => ab(cb, bb)))));
+      this.vn.set(bb, Tb.then((bb => {
         let {
-          snapshots: Fk
-        } = kk;
-        return Fk
+          snapshots: cb
+        } = bb;
+        return cb
       })));
       const {
-        snapshots: bk,
-        isSaved: wk
-      } = await Xk;
-      var dk;
-      wk && (null === (dk = this.signal) || void 0 === dk || dk.post(kk));
-      return bk
+        snapshots: Ub,
+        isSaved: Ib
+      } = await Tb;
+      var Hb;
+      Ib && (null === (Hb = this.signal) || void 0 === Hb || Hb.post(bb));
+      return Ub
     }
-    async relabel(kk, Fk, Bk) {
-      const Rk = this.load(kk).then((async Rk => this.save(kk, (kk => sd(Rk, kk).map((kk => kk.id === Fk ? {
-        ...kk,
-        label: Bk
-      } : kk))))));
-      this.lA.set(kk, Rk.then((kk => {
+    async relabel(bb, cb, sb) {
+      const kb = this.load(bb).then((async kb => this.save(bb, (bb => fH(kb, bb).map((bb => bb.id === cb ? {
+        ...bb,
+        label: sb
+      } : bb))))));
+      this.vn.set(bb, kb.then((bb => {
         let {
-          snapshots: Fk
-        } = kk;
-        return Fk
+          snapshots: cb
+        } = bb;
+        return cb
       })));
       const {
-        snapshots: tk,
-        isSaved: ak
-      } = await Rk;
-      var Xk;
-      ak && (null === (Xk = this.signal) || void 0 === Xk || Xk.post(kk));
-      return tk
+        snapshots: Wb,
+        isSaved: ab
+      } = await kb;
+      var Tb;
+      ab && (null === (Tb = this.signal) || void 0 === Tb || Tb.post(bb));
+      return Wb
     }
-    async save(kk, Fk) {
+    async save(bb, cb) {
       if (this.store.update) try {
         return {
-          snapshots: await this.store.update(this.storeKey(kk), (kk => Fk(dd(kk) ? kk : null))),
+          snapshots: await this.store.update(this.storeKey(bb), (bb => cb(HH(bb) ? bb : null))),
           isSaved: !0
         }
       } catch {}
-      const Bk = Fk(await this.read(kk));
+      const sb = cb(await this.read(bb));
       return {
-        snapshots: Bk,
-        isSaved: await this.store.setItem(this.storeKey(kk), Bk).catch((() => !1))
+        snapshots: sb,
+        isSaved: await this.store.setItem(this.storeKey(bb), sb).catch((() => !1))
       }
     }
-    read(kk) {
-      return this.store.getItem(this.storeKey(kk)).then((kk => dd(kk) ? kk : null)).catch((() => null))
+    read(bb) {
+      return this.store.getItem(this.storeKey(bb)).then((bb => HH(bb) ? bb : null)).catch((() => null))
     }
-    load(kk) {
-      let Fk = this.lA.get(kk);
-      return Fk || (Fk = this.store.getItem(this.storeKey(kk)).then((kk => dd(kk) ? kk : [])).catch((() => [])), this.lA.set(kk, Fk)), Fk
+    load(bb) {
+      let cb = this.vn.get(bb);
+      return cb || (cb = this.store.getItem(this.storeKey(bb)).then((bb => HH(bb) ? bb : [])).catch((() => [])), this.vn.set(bb, cb)), cb
     }
-    storeKey(kk) {
-      return `worldCodeAiHistory:${kk}`
+    storeKey(bb) {
+      return `worldCodeAiHistory:${bb}`
     }
-  }(AV, wd("bloxd-worldCodeAiHistory")),
-  yV = new class {
-    constructor(kk, Fk) {
-      this.store = kk, this.signal = Fk, this.lA = new Map
+  }(XM, IH("bloxd-worldCodeAiHistory")),
+  mM = new class {
+    constructor(bb, cb) {
+      this.store = bb, this.signal = cb, this.vn = new Map
     }
-    watch(kk, Fk) {
-      var Bk, Rk;
-      return null !== (Bk = null === (Rk = this.signal) || void 0 === Rk ? void 0 : Rk.listen((Bk => {
-        if (Bk !== kk) return;
-        const Rk = this.load(kk).then((async Fk => {
-          var Bk;
-          return null !== (Bk = await this.read(kk)) && void 0 !== Bk ? Bk : Fk
+    watch(bb, cb) {
+      var sb, kb;
+      return null !== (sb = null === (kb = this.signal) || void 0 === kb ? void 0 : kb.listen((sb => {
+        if (sb !== bb) return;
+        const kb = this.load(bb).then((async cb => {
+          var sb;
+          return null !== (sb = await this.read(bb)) && void 0 !== sb ? sb : cb
         }));
-        this.lA.set(kk, Rk), Rk.then(Fk)
-      }))) && void 0 !== Bk ? Bk : () => {}
+        this.vn.set(bb, kb), kb.then(cb)
+      }))) && void 0 !== sb ? sb : () => {}
     }
-    list(kk) {
-      return this.load(kk)
+    list(bb) {
+      return this.load(bb)
     }
-    add(kk, Fk) {
-      return this.update(kk, (kk => kk.includes(Fk) || kk.length >= 8 ? kk : [...kk, Fk]))
+    add(bb, cb) {
+      return this.update(bb, (bb => bb.includes(cb) || bb.length >= 8 ? bb : [...bb, cb]))
     }
-    remove(kk, Fk) {
-      return this.update(kk, (kk => kk.filter((kk => kk !== Fk))))
+    remove(bb, cb) {
+      return this.update(bb, (bb => bb.filter((bb => bb !== cb))))
     }
-    async update(kk, Fk) {
-      var Bk;
-      const Rk = this.load(kk).then((async Bk => {
-        var Rk;
+    async update(bb, cb) {
+      var sb;
+      const kb = this.load(bb).then((async sb => {
+        var kb;
         if (this.store.update) try {
-          return await this.store.update(this.storeKey(kk), (kk => Fk(bF(kk) ? kk.slice(0, 8) : Bk)))
+          return await this.store.update(this.storeKey(bb), (bb => cb(Tc(bb) ? bb.slice(0, 8) : sb)))
         } catch {}
-        const tk = Fk(null !== (Rk = await this.read(kk)) && void 0 !== Rk ? Rk : Bk);
-        return await this.store.setItem(this.storeKey(kk), tk).catch((() => !1)), tk
+        const Wb = cb(null !== (kb = await this.read(bb)) && void 0 !== kb ? kb : sb);
+        return await this.store.setItem(this.storeKey(bb), Wb).catch((() => !1)), Wb
       }));
-      this.lA.set(kk, Rk);
-      const tk = await Rk;
-      return null === (Bk = this.signal) || void 0 === Bk || Bk.post(kk), tk
+      this.vn.set(bb, kb);
+      const Wb = await kb;
+      return null === (sb = this.signal) || void 0 === sb || sb.post(bb), Wb
     }
-    read(kk) {
-      return this.store.getItem(this.storeKey(kk)).then((kk => bF(kk) ? kk.slice(0, 8) : null)).catch((() => null))
+    read(bb) {
+      return this.store.getItem(this.storeKey(bb)).then((bb => Tc(bb) ? bb.slice(0, 8) : null)).catch((() => null))
     }
-    load(kk) {
-      let Fk = this.lA.get(kk);
-      return Fk || (Fk = this.read(kk).then((kk => null !== kk && void 0 !== kk ? kk : [])), this.lA.set(kk, Fk)), Fk
+    load(bb) {
+      let cb = this.vn.get(bb);
+      return cb || (cb = this.read(bb).then((bb => null !== bb && void 0 !== bb ? bb : [])), this.vn.set(bb, cb)), cb
     }
-    storeKey(kk) {
-      return `worldCodeAiNotes:${kk}`
+    storeKey(bb) {
+      return `worldCodeAiNotes:${bb}`
     }
-  }(AV, wd("bloxd-worldCodeAiNotes"));
-const fV = ["Next in line", "2nd in line", "3rd in line"];
-let mV = null;
+  }(XM, IH("bloxd-worldCodeAiNotes"));
+const lM = ["Next in line", "2nd in line", "3rd in line"];
+let QM = null;
 
-function WV() {
-  if (!mV) {
-    var kk, Fk, Bk, Rk;
-    const tk = kk => Ak.e.find((Fk => Fk.id === kk)),
-      ak = kk => {
-        var Fk, Bk;
-        return null !== (Fk = null === (Bk = tk(kk)) || void 0 === Bk ? void 0 : Bk.content) && void 0 !== Fk ? Fk : ""
+function eM() {
+  if (!QM) {
+    var bb, cb, sb, kb;
+    const Wb = bb => nb.c.find((cb => cb.id === bb)),
+      ab = bb => {
+        var cb, sb;
+        return null !== (cb = null === (sb = Wb(bb)) || void 0 === sb ? void 0 : sb.content) && void 0 !== cb ? cb : ""
       };
-    mV = new Ib({
-      apiReference: ak("apiReference"),
-      callbacks: ak("callbacks"),
-      clientOptions: ak("clientOptions"),
-      snippets: ak("snippets"),
-      howTo: ak("howTo"),
-      itemNames: null !== (kk = null === (Fk = tk("itemNames")) || void 0 === Fk ? void 0 : Fk.raw) && void 0 !== kk ? kk : "",
-      blockNames: null !== (Bk = null === (Rk = tk("blockNames")) || void 0 === Rk ? void 0 : Rk.raw) && void 0 !== Bk ? Bk : "",
-      mobSettings: ak("mobSettings")
+    QM = new pU({
+      apiReference: ab("apiReference"),
+      callbacks: ab("callbacks"),
+      clientOptions: ab("clientOptions"),
+      snippets: ab("snippets"),
+      howTo: ab("howTo"),
+      itemNames: null !== (bb = null === (cb = Wb("itemNames")) || void 0 === cb ? void 0 : cb.raw) && void 0 !== bb ? bb : "",
+      blockNames: null !== (sb = null === (kb = Wb("blockNames")) || void 0 === kb ? void 0 : kb.raw) && void 0 !== sb ? sb : "",
+      mobSettings: ab("mobSettings")
     })
   }
-  return mV
+  return QM
 }
-const vV = ["Welcome players when they join", "Give everyone a sword when they join", "Make a /spawn command", "Show a timer on the screen"],
-  iV = ["Give me a diamond sword", "Teleport me onto this block", "Make me jump really high", "Tell everyone I clicked it"],
-  YV = ["Explain these changes", "Make it simpler"],
-  oV = ["Make the change"],
-  LV = ["Explain how it works", "Add a sound or effect", "Make it harder to play"],
-  OV = ["It didn't work: nothing happened in my world.", "It didn't work: an error showed up.", "It didn't work: it did something different from what I asked."];
+const CM = ["Welcome players when they join", "Give everyone a sword when they join", "Make a /spawn command", "Show a timer on the screen"],
+  NM = ["Give me a diamond sword", "Teleport me onto this block", "Make me jump really high", "Tell everyone I clicked it"],
+  VM = ["Explain these changes", "Make it simpler"],
+  LM = ["Make the change"],
+  uM = ["Explain how it works", "Add a sound or effect", "Make it harder to play"],
+  YM = ["It didn't work: nothing happened in my world.", "It didn't work: an error showed up.", "It didn't work: it did something different from what I asked."];
 
-function EV(kk) {
+function hM(bb) {
   let {
-    requests: Fk,
-    onPick: Bk
-  } = kk;
-  const tk = (0, Rk.useRef)(null);
-  var ak;
-  return ak = tk, (0, Rk.useLayoutEffect)((() => {
-    const kk = ak.current,
-      Fk = null === kk || void 0 === kk ? void 0 : kk.closest(".WorldCodeAiMessages");
-    if (!kk || !Fk) return;
-    const Bk = () => {
-      const Bk = Fk.getBoundingClientRect().bottom;
-      for (const Fk of Array.from(kk.children)) {
-        const kk = Fk.getBoundingClientRect();
-        Fk.style.visibility = kk.top < Bk && kk.bottom > Bk + 1 ? "hidden" : ""
+    requests: cb,
+    onPick: sb
+  } = bb;
+  const Wb = (0, kb.useRef)(null);
+  var ab;
+  return ab = Wb, (0, kb.useLayoutEffect)((() => {
+    const bb = ab.current,
+      cb = null === bb || void 0 === bb ? void 0 : bb.closest(".WorldCodeAiMessages");
+    if (!bb || !cb) return;
+    const sb = () => {
+      const sb = cb.getBoundingClientRect().bottom;
+      for (const cb of Array.from(bb.children)) {
+        const bb = cb.getBoundingClientRect();
+        cb.style.visibility = bb.top < sb && bb.bottom > sb + 1 ? "hidden" : ""
       }
     };
-    Bk(), Fk.addEventListener("scroll", Bk, {
+    sb(), cb.addEventListener("scroll", sb, {
       passive: !0
     });
-    const Rk = "function" === typeof ResizeObserver ? new ResizeObserver(Bk) : null;
-    return null === Rk || void 0 === Rk || Rk.observe(Fk), null === Rk || void 0 === Rk || Rk.observe(kk), () => {
-      Fk.removeEventListener("scroll", Bk), null === Rk || void 0 === Rk || Rk.disconnect()
+    const kb = "function" === typeof ResizeObserver ? new ResizeObserver(sb) : null;
+    return null === kb || void 0 === kb || kb.observe(cb), null === kb || void 0 === kb || kb.observe(bb), () => {
+      cb.removeEventListener("scroll", sb), null === kb || void 0 === kb || kb.disconnect()
     }
-  }), [ak]), (0, Xk.jsx)("div", {
-    ref: tk,
+  }), [ab]), (0, Tb.jsx)("div", {
+    ref: Wb,
     className: "WorldCodeAiChips WorldCodeAiFollowUps",
-    children: Fk.map((kk => (0, Rk.createElement)("button", {
-      ...fw.h,
-      key: kk,
+    children: cb.map((bb => (0, kb.createElement)("button", {
+      ...eI.e,
+      key: bb,
       className: "WorldCodeAiChip",
       onClick: () => {
-        Bk(kk)
+        sb(bb)
       }
-    }, function(kk) {
-      const Fk = kk.replace(/^It didn't work: /, "").replace(/\.$/, "");
-      return Fk.charAt(0).toUpperCase() + Fk.slice(1)
-    }(kk))))
+    }, function(bb) {
+      const cb = bb.replace(/^It didn't work: /, "").replace(/\.$/, "");
+      return cb.charAt(0).toUpperCase() + cb.slice(1)
+    }(bb))))
   })
 }
 
-function SV(kk) {
+function JM(bb) {
   let {
-    useFree: Fk,
-    retryOf: Bk,
-    isAutoFix: Rk,
-    lookupOf: tk
-  } = kk;
-  return !0 !== Fk && (void 0 !== Bk || !0 !== Rk && void 0 === tk)
+    useFree: cb,
+    retryOf: sb,
+    isAutoFix: kb,
+    lookupOf: Wb
+  } = bb;
+  return !0 !== cb && (void 0 !== sb || !0 !== kb && void 0 === Wb)
 }
 
-function NV() {
+function gM() {
   return "The world's blocks can't be seen from here."
 }
 
-function HV() {
+function BM() {
   return "The world can't be seen from here."
 }
-const uV = "Try the missing change again",
-  MV = 1e4,
-  gV = "I can only help with your game's code. Try asking about something in your world.";
+const tM = "Try the missing change again",
+  yM = 1e4,
+  PM = "I can only help with your game's code. Try asking about something in your world.";
 
-function UV(kk) {
-  return kk ? "Apply this change first, then press Switch to World Code." : "Apply this change first, then ask me again to go to World Code."
+function DM(bb) {
+  return bb ? "Apply this change first, then press Switch to World Code." : "Apply this change first, then ask me again to go to World Code."
 }
-const cV = 1500;
+const EM = 1500;
 
-function GV(kk, Fk) {
-  var Bk;
-  return Object.entries(null !== (Bk = kk.leftFiles) && void 0 !== Bk ? Bk : {}).every((kk => {
-    var Bk;
-    let [Rk, tk] = kk;
-    return (null !== (Bk = Fk[Rk]) && void 0 !== Bk ? Bk : "") === tk
+function iM(bb, cb) {
+  var sb;
+  return Object.entries(null !== (sb = bb.leftFiles) && void 0 !== sb ? sb : {}).every((bb => {
+    var sb;
+    let [kb, Wb] = bb;
+    return (null !== (sb = cb[kb]) && void 0 !== sb ? sb : "") === Wb
   }))
 }
-const TV = "Check your code: go through my request part by part and play it in your head as each player, from the start: what do they see and when, and what happens the first time, the last time, and with things that shouldn't count? Only something that stops my request working is wrong: keep everything else as it is (numbers, starting values, how it works) and add no new rules or limits. If anything is wrong, send the fixed file, after playing the normal case through once more with your change. If it's all right, say in one sentence that you played it through and found no mistakes, that they should still try it in their world because you can miss things, and send no file.";
+const OM = "Check your code: go through my request part by part and play it in your head as each player, from the start: what do they see and when, and what happens the first time, the last time, and with things that shouldn't count? Only something that stops my request working is wrong: keep everything else as it is (numbers, starting values, how it works) and add no new rules or limits. If anything is wrong, send the fixed file, after playing the normal case through once more with your change. If it's all right, say in one sentence that you played it through and found no mistakes, that they should still try it in their world because you can miss things, and send no file.";
 
-function rV(kk) {
-  var Fk, Bk, tk, wk, dk, sk, Vk, Jk;
+function GM(bb) {
+  var cb, sb, Wb, Ib, Hb, fb, Mb, Xb;
   let {
-    entry: Ak,
-    isOutOfDate: ek = !1,
-    canEdit: yk,
-    onApply: fk,
-    onUndo: mk,
-    onTryIt: Wk,
-    isLatest: vk,
-    canUndo: ik,
-    onFixWarnings: Yk,
-    onCheck: Lk,
-    busy: Ok,
-    checkPicked: Ek,
-    onPickedChange: Sk,
-    request: Nk,
-    elsewhere: Hk,
-    defaultOpen: uk
-  } = kk;
-  const Mk = "offered" === Ak.status && ek ? "stale" : Ak.status,
-    [gk, Uk] = (0, Rk.useState)(uk),
-    [ck, Gk] = (0, Rk.useState)(!1),
-    Tk = null !== (Fk = Ak.warnings) && void 0 !== Fk ? Fk : [],
-    rk = vk && ("offered" === Mk || "applied" === Mk) && yk && Tk.length > 0 && !Ak.warningsSentBack,
-    Dk = "applied" === Mk,
-    zk = null !== (Bk = null === (tk = Ak.swappedTo) || void 0 === tk ? void 0 : tk[0]) && void 0 !== Bk ? Bk : rk ? null !== (wk = null === (dk = /"([^"]+)"/.exec(Tk[0])) || void 0 === dk ? void 0 : dk[1]) && void 0 !== wk ? wk : null === (sk = /^api\.[\w$]+/.exec(Tk[0])) || void 0 === sk ? void 0 : sk[0] : void 0,
-    Pk = Tk.every((kk => /never true|no block is ever called that/.test(kk))),
-    hk = (0, Rk.useMemo)((() => {
-      var kk;
-      const [Fk] = Ak.changes;
-      return new Map((null !== (kk = Ak.warnings) && void 0 !== kk ? kk : []).map((kk => [kk, 1 === Ak.changes.length && Fk ? BV(kk, Fk) : void 0])))
-    }), [Ak.warnings, Ak.changes]),
-    qk = 1 === Tk.length ? hk.get(Tk[0]) : void 0,
-    [Ck, Zk] = (0, Rk.useState)(new Set),
-    pk = Ck.size > 0;
-  (0, Rk.useEffect)((() => {
-    null === Sk || void 0 === Sk || Sk(pk)
-  }), [pk, Sk]), (0, Rk.useEffect)((() => {
-    Zk((kk => 0 === kk.size ? kk : new Set))
-  }), [Ak.changes]);
-  const Kk = "offered" === Mk && yk && Ak.id >= 0,
-    xk = (0, Rk.useMemo)((() => new Map(Ak.changes.map((kk => [kk.path, ts(kk, Nk)])))), [Ak.changes, Nk]),
-    jk = [...xk.values()].reduce(((kk, Fk) => kk + Fk.length), 0),
-    lk = Kk && jk >= 2,
-    [nk, Ik] = (0, Rk.useState)(!1),
-    Qk = "applied" === Mk && jk >= 2,
-    kF = jk - Ck.size,
-    FF = (0, Rk.useMemo)((() => {
-      if (0 !== Ck.size) return Ak.changes.flatMap((kk => {
-        var Fk;
-        const Bk = new Set((null !== (Fk = xk.get(kk.path)) && void 0 !== Fk ? Fk : []).filter((Fk => !Ck.has(`${kk.path}:${Fk.index}`))).map((kk => kk.index))),
-          Rk = function(kk, Fk) {
-            const Bk = xd(kk.before, kk.after),
-              Rk = Bk.flatMap((kk => "same" === kk.kind ? [kk.text] : Fk.has(kk.index) ? kk.added : kk.removed));
-            if (0 === Rk.length) return "";
-            const tk = (Bk.every((kk => "same" === kk.kind || Fk.has(kk.index))) ? kk.after : kk.before).endsWith("\n") ? "\n" : "";
-            return `${Rk.join("\n")}${tk}`
-          }(kk, Bk);
-        return Rk === kk.before ? [] : [{
-          ...kk,
-          after: Rk
+    entry: nb,
+    isOutOfDate: mb = !1,
+    canEdit: lb,
+    onApply: Qb,
+    onUndo: eb,
+    onTryIt: Cb,
+    isLatest: Nb,
+    canUndo: Vb,
+    onFixWarnings: Lb,
+    onCheck: ub,
+    busy: Yb,
+    checkPicked: hb,
+    onPickedChange: Jb,
+    request: gb,
+    elsewhere: Bb,
+    defaultOpen: tb
+  } = bb;
+  const yb = "offered" === nb.status && mb ? "stale" : nb.status,
+    [Pb, Db] = (0, kb.useState)(tb),
+    [Eb, ib] = (0, kb.useState)(!1),
+    Ob = null !== (cb = nb.warnings) && void 0 !== cb ? cb : [],
+    Gb = Nb && ("offered" === yb || "applied" === yb) && lb && Ob.length > 0 && !nb.warningsSentBack,
+    Kb = "applied" === yb,
+    Zb = null !== (sb = null === (Wb = nb.swappedTo) || void 0 === Wb ? void 0 : Wb[0]) && void 0 !== sb ? sb : Gb ? null !== (Ib = null === (Hb = /"([^"]+)"/.exec(Ob[0])) || void 0 === Hb ? void 0 : Hb[1]) && void 0 !== Ib ? Ib : null === (fb = /^api\.[\w$]+/.exec(Ob[0])) || void 0 === fb ? void 0 : fb[0] : void 0,
+    zb = Ob.every((bb => /never true|no block is ever called that/.test(bb))),
+    qb = (0, kb.useMemo)((() => {
+      var bb;
+      const [cb] = nb.changes;
+      return new Map((null !== (bb = nb.warnings) && void 0 !== bb ? bb : []).map((bb => [bb, 1 === nb.changes.length && cb ? cM(bb, cb) : void 0])))
+    }), [nb.warnings, nb.changes]),
+    db = 1 === Ob.length ? qb.get(Ob[0]) : void 0,
+    [Ab, wb] = (0, kb.useState)(new Set),
+    rb = Ab.size > 0;
+  (0, kb.useEffect)((() => {
+    null === Jb || void 0 === Jb || Jb(rb)
+  }), [rb, Jb]), (0, kb.useEffect)((() => {
+    wb((bb => 0 === bb.size ? bb : new Set))
+  }), [nb.changes]);
+  const ob = "offered" === yb && lb && nb.id >= 0,
+    Sb = (0, kb.useMemo)((() => new Map(nb.changes.map((bb => [bb.path, Wf(bb, gb)])))), [nb.changes, gb]),
+    Rb = [...Sb.values()].reduce(((bb, cb) => bb + cb.length), 0),
+    vb = ob && Rb >= 2,
+    [Fb, xb] = (0, kb.useState)(!1),
+    jb = "applied" === yb && Rb >= 2,
+    pb = Rb - Ab.size,
+    bc = (0, kb.useMemo)((() => {
+      if (0 !== Ab.size) return nb.changes.flatMap((bb => {
+        var cb;
+        const sb = new Set((null !== (cb = Sb.get(bb.path)) && void 0 !== cb ? cb : []).filter((cb => !Ab.has(`${bb.path}:${cb.index}`))).map((bb => bb.index))),
+          kb = function(bb, cb) {
+            const sb = SH(bb.before, bb.after),
+              kb = sb.flatMap((bb => "same" === bb.kind ? [bb.text] : cb.has(bb.index) ? bb.added : bb.removed));
+            if (0 === kb.length) return "";
+            const Wb = (sb.every((bb => "same" === bb.kind || cb.has(bb.index))) ? bb.after : bb.before).endsWith("\n") ? "\n" : "";
+            return `${kb.join("\n")}${Wb}`
+          }(bb, sb);
+        return kb === bb.before ? [] : [{
+          ...bb,
+          after: kb
         }]
       }))
-    }), [Ak.changes, xk, Ck]),
-    BF = (0, Rk.useMemo)((() => FF && Ek ? Ek(FF) : []), [FF, Ek]);
-  (0, Rk.useEffect)((() => {
-    "applied" === Mk && Uk(!1)
-  }), [Mk]);
-  const RF = !!Ak.editedInPlace;
-  (0, Rk.useEffect)((() => {
-    RF || "offered" !== Ak.status || Uk(!0)
-  }), [RF, Ak.status]);
-  const tF = Ak.changes.map((kk => kk.path)).join(", "),
-    aF = !RF || rk || BF.length > 0 || "undone" === Mk || "stale" === Mk;
-  return (0, Xk.jsxs)("div", {
+    }), [nb.changes, Sb, Ab]),
+    cc = (0, kb.useMemo)((() => bc && hb ? hb(bc) : []), [bc, hb]);
+  (0, kb.useEffect)((() => {
+    "applied" === yb && Db(!1)
+  }), [yb]);
+  const sc = !!nb.editedInPlace;
+  (0, kb.useEffect)((() => {
+    sc || "offered" !== nb.status || Db(!0)
+  }), [sc, nb.status]);
+  const kc = nb.changes.map((bb => bb.path)).join(", "),
+    Wc = !sc || Gb || cc.length > 0 || "undone" === yb || "stale" === yb;
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiToolCard",
-    children: [(0, Xk.jsx)(bk, {
+    children: [(0, Tb.jsx)(Ub, {
       className: "WorldCodeAiChangeLog",
-      title: RF ? `Editing code: ${tF}` : `Code change: ${tF}`,
+      title: sc ? `Editing code: ${kc}` : `Code change: ${kc}`,
       isCalm: !0,
-      isElsewhere: !!Hk,
-      isOpen: gk,
-      onToggle: Uk,
-      children: (0, Xk.jsx)("div", {
+      isElsewhere: !!Bb,
+      isOpen: Pb,
+      onToggle: Db,
+      children: (0, Tb.jsx)("div", {
         className: "WorldCodeAiChanges",
-        children: Ak.changes.map((kk => {
-          var Fk, Bk;
+        children: nb.changes.map((bb => {
+          var cb, sb;
           const {
-            added: Rk,
-            removed: tk
-          } = function(kk) {
-            let Fk = 0,
-              Bk = 0;
-            for (const Rk of xR(kk.before, kk.after)) "added" === Rk.kind ? Fk++ : "removed" === Rk.kind && Bk++;
+            added: kb,
+            removed: Wb
+          } = function(bb) {
+            let cb = 0,
+              sb = 0;
+            for (const kb of Fk(bb.before, bb.after)) "added" === kb.kind ? cb++ : "removed" === kb.kind && sb++;
             return {
-              added: Fk,
-              removed: Bk
+              added: cb,
+              removed: sb
             }
-          }(FF ? null !== (Fk = FF.find((Fk => Fk.path === kk.path))) && void 0 !== Fk ? Fk : {
-            ...kk,
-            after: kk.before
-          } : kk), ak = null !== (Bk = xk.get(kk.path)) && void 0 !== Bk ? Bk : [], bk = "offered" !== Mk && "applied" !== Mk || "" === kk.before ? [] : function(kk, Fk) {
-            const Bk = cd(Fk);
-            return [...cd(kk)].filter((kk => !Bk.has(kk)))
-          }(kk.before, kk.after);
-          return (0, Xk.jsxs)("div", {
+          }(bc ? null !== (cb = bc.find((cb => cb.path === bb.path))) && void 0 !== cb ? cb : {
+            ...bb,
+            after: bb.before
+          } : bb), ab = null !== (sb = Sb.get(bb.path)) && void 0 !== sb ? sb : [], Ub = "offered" !== yb && "applied" !== yb || "" === bb.before ? [] : function(bb, cb) {
+            const sb = EH(cb);
+            return [...EH(bb)].filter((bb => !sb.has(bb)))
+          }(bb.before, bb.after);
+          return (0, Tb.jsxs)("div", {
             className: "WorldCodeAiChange",
-            children: [(0, Xk.jsxs)("div", {
+            children: [(0, Tb.jsxs)("div", {
               className: "WorldCodeAiChangeHeader",
-              children: [(0, Xk.jsx)("span", {
+              children: [(0, Tb.jsx)("span", {
                 className: "WorldCodeAiChangePath",
-                children: kk.path
-              }), Rk > 0 && (0, Xk.jsx)("span", {
+                children: bb.path
+              }), kb > 0 && (0, Tb.jsx)("span", {
                 className: "WorldCodeAiAdded",
-                children: 1 === Rk ? "1 line added" : `${Rk} lines added`
-              }), tk > 0 && (0, Xk.jsxs)("span", {
+                children: 1 === kb ? "1 line added" : `${kb} lines added`
+              }), Wb > 0 && (0, Tb.jsxs)("span", {
                 className: "WorldCodeAiRemoved",
-                children: [tk, " removed"]
+                children: [Wb, " removed"]
               })]
-            }), lk && (0, Xk.jsx)("ul", {
+            }), vb && (0, Tb.jsx)("ul", {
               className: "WorldCodeAiHunks",
-              children: ak.map((Fk => {
-                const Bk = `${kk.path}:${Fk.index}`,
-                  Rk = [Fk.added.length > 0 ? `+${Fk.added.length}` : "", Fk.removed.length > 0 ? `\u2212${Fk.removed.length}` : ""].filter(Boolean).join(" "),
-                  tk = [Fk.added.length > 0 ? `${Fk.added.length} ${1===Fk.added.length?"line":"lines"} added` : "", Fk.removed.length > 0 ? `${Fk.removed.length} taken out` : ""].filter(Boolean).join(", ");
-                return (0, Xk.jsx)("li", {
-                  children: (0, Xk.jsxs)("label", {
-                    children: [(0, Xk.jsx)("input", {
+              children: ab.map((cb => {
+                const sb = `${bb.path}:${cb.index}`,
+                  kb = [cb.added.length > 0 ? `+${cb.added.length}` : "", cb.removed.length > 0 ? `\u2212${cb.removed.length}` : ""].filter(Boolean).join(" "),
+                  Wb = [cb.added.length > 0 ? `${cb.added.length} ${1===cb.added.length?"line":"lines"} added` : "", cb.removed.length > 0 ? `${cb.removed.length} taken out` : ""].filter(Boolean).join(", ");
+                return (0, Tb.jsx)("li", {
+                  children: (0, Tb.jsxs)("label", {
+                    children: [(0, Tb.jsx)("input", {
                       type: "checkbox",
-                      checked: !Ck.has(Bk),
-                      onChange: kk => {
-                        const Fk = new Set(Ck);
-                        kk.target.checked ? Fk.delete(Bk) : Fk.add(Bk), Zk(Fk)
+                      checked: !Ab.has(sb),
+                      onChange: bb => {
+                        const cb = new Set(Ab);
+                        bb.target.checked ? cb.delete(sb) : cb.add(sb), wb(cb)
                       }
-                    }), (0, Xk.jsxs)("span", {
-                      children: [Fk.also && (0, Xk.jsx)("span", {
+                    }), (0, Tb.jsxs)("span", {
+                      children: [cb.also && (0, Tb.jsx)("span", {
                         className: "WorldCodeAiHunkAlso",
                         title: "You didn't ask for this. Untick it to leave it out.",
-                        children: "adds" === Fk.also ? "Also adds" : "changes" === Fk.also ? "Also changes" : "Also takes out"
-                      }), Fk.label, Fk.codeNames.length > 0 && (0, Xk.jsx)("code", {
+                        children: "adds" === cb.also ? "Also adds" : "changes" === cb.also ? "Also changes" : "Also takes out"
+                      }), cb.label, cb.codeNames.length > 0 && (0, Tb.jsx)("code", {
                         className: "WorldCodeAiHunkCode",
-                        children: Fk.codeNames.join(", ")
-                      }), Fk.detail && (0, Xk.jsx)("span", {
+                        children: cb.codeNames.join(", ")
+                      }), cb.detail && (0, Tb.jsx)("span", {
                         className: "WorldCodeAiHunkDetail",
-                        children: Fk.detail
+                        children: cb.detail
                       })]
-                    }), (0, Xk.jsx)("span", {
+                    }), (0, Tb.jsx)("span", {
                       className: "WorldCodeAiHunkCount",
-                      title: tk,
-                      "aria-label": tk,
-                      children: `${Rk} ${Fk.added.length+Fk.removed.length===1?"line":"lines"}`
+                      title: Wb,
+                      "aria-label": Wb,
+                      children: `${kb} ${cb.added.length+cb.removed.length===1?"line":"lines"}`
                     })]
                   })
-                }, Bk)
+                }, sb)
               }))
-            }), lk && (ak.some((kk => void 0 !== kk.also)) ? (0, Xk.jsx)("p", {
+            }), vb && (ab.some((bb => void 0 !== bb.also)) ? (0, Tb.jsx)("p", {
               className: "WorldCodeAiHint WorldCodeAiHunksHint",
               children: 'You didn\'t ask for the parts marked "Also". Untick one to leave it out.'
-            }) : ak.some((kk => kk.takesOut.length > 0 || 0 === kk.added.length)) && (0, Xk.jsx)("p", {
+            }) : ab.some((bb => bb.takesOut.length > 0 || 0 === bb.added.length)) && (0, Tb.jsx)("p", {
               className: "WorldCodeAiHint WorldCodeAiHunksHint",
               children: "Untick a part to keep that bit of your code as it is."
-            })), Qk && ak.length >= 2 && (0, Xk.jsx)("button", {
+            })), jb && ab.length >= 2 && (0, Tb.jsx)("button", {
               className: "WorldCodeAiLinkButton WorldCodeAiPartsToggle",
               onClick: () => {
-                Ik(!nk)
+                xb(!Fb)
               },
-              children: nk ? `Hide the ${ak.length} parts` : `Show the ${ak.length} parts that went in`
-            }), Qk && nk && (0, Xk.jsx)("ul", {
+              children: Fb ? `Hide the ${ab.length} parts` : `Show the ${ab.length} parts that went in`
+            }), jb && Fb && (0, Tb.jsx)("ul", {
               className: "WorldCodeAiHunks WorldCodeAiHunks-done",
-              children: ak.map((Fk => (0, Xk.jsx)("li", {
-                children: (0, Xk.jsxs)("span", {
-                  children: [Fk.label, Fk.codeNames.length > 0 && (0, Xk.jsx)("code", {
+              children: ab.map((cb => (0, Tb.jsx)("li", {
+                children: (0, Tb.jsxs)("span", {
+                  children: [cb.label, cb.codeNames.length > 0 && (0, Tb.jsx)("code", {
                     className: "WorldCodeAiHunkCode",
-                    children: Fk.codeNames.join(", ")
-                  }), Fk.detail && (0, Xk.jsx)("span", {
+                    children: cb.codeNames.join(", ")
+                  }), cb.detail && (0, Tb.jsx)("span", {
                     className: "WorldCodeAiHunkDetail",
-                    children: Fk.detail
+                    children: cb.detail
                   })]
                 })
-              }, `${kk.path}:${Fk.index}`)))
-            }), kk.why && !lk && !(Qk && nk) && (0, Xk.jsx)("ul", {
+              }, `${bb.path}:${cb.index}`)))
+            }), bb.why && !vb && !(jb && Fb) && (0, Tb.jsx)("ul", {
               className: "WorldCodeAiChangeWhy",
-              children: kk.why.map((kk => (0, Xk.jsx)("li", {
-                children: kk.charAt(0).toUpperCase() + kk.slice(1)
-              }, kk)))
-            }), bk.length > 0 && !(lk && bk.every((kk => ak.some((Fk => Fk.takesOut.includes(kk)))))) && (0, Xk.jsxs)("p", {
+              children: bb.why.map((bb => (0, Tb.jsx)("li", {
+                children: bb.charAt(0).toUpperCase() + bb.slice(1)
+              }, bb)))
+            }), Ub.length > 0 && !(vb && Ub.every((bb => ab.some((cb => cb.takesOut.includes(bb)))))) && (0, Tb.jsxs)("p", {
               className: "WorldCodeAiChangeTakenOut",
-              children: ["applied" === Mk ? "It took out " : "It also takes out ", bk.slice(0, 6).map((kk => {
-                var Fk;
-                const Bk = null !== (Fk = hd(kk)) && void 0 !== Fk ? Fk : ks(kk);
-                return Bk.charAt(0).toLowerCase() + Bk.slice(1)
-              })).join(", "), bk.length > 6 ? ` and ${bk.length-6} more` : "", ".", " ", (0, Xk.jsx)("code", {
+              children: ["applied" === yb ? "It took out " : "It also takes out ", Ub.slice(0, 6).map((bb => {
+                var cb;
+                const sb = null !== (cb = qH(bb)) && void 0 !== cb ? cb : pH(bb);
+                return sb.charAt(0).toLowerCase() + sb.slice(1)
+              })).join(", "), Ub.length > 6 ? ` and ${Ub.length-6} more` : "", ".", " ", (0, Tb.jsx)("code", {
                 className: "WorldCodeAiHunkCode",
-                children: bk.slice(0, 6).join(", ")
+                children: Ub.slice(0, 6).join(", ")
               })]
-            }), (0, Xk.jsx)(bd, {
-              change: kk,
-              marked: zk
+            }), (0, Tb.jsx)(UH, {
+              change: bb,
+              marked: Zb
             })]
-          }, kk.path)
+          }, bb.path)
         }))
       })
-    }), aF && (0, Xk.jsxs)("div", {
-      className: ak()("WorldCodeAiChangeActions", vk && "WorldCodeAiChangeActions-sticky"),
-      children: [BF.length > 0 && (0, Xk.jsxs)("div", {
+    }), Wc && (0, Tb.jsxs)("div", {
+      className: ab()("WorldCodeAiChangeActions", Nb && "WorldCodeAiChangeActions-sticky"),
+      children: [cc.length > 0 && (0, Tb.jsxs)("div", {
         className: "WorldCodeAiWarning",
-        children: [(0, Xk.jsx)("p", {
+        children: [(0, Tb.jsx)("p", {
           className: "WorldCodeAiWarningTitle",
           children: "Leaving that part out breaks this:"
-        }), (0, Xk.jsx)("p", {
-          children: BF[0]
+        }), (0, Tb.jsx)("p", {
+          children: cc[0]
         })]
-      }), rk && (0, Xk.jsxs)("div", {
+      }), Gb && (0, Tb.jsxs)("div", {
         className: "WorldCodeAiWarning",
-        children: [(0, Xk.jsx)("p", {
+        children: [(0, Tb.jsx)("p", {
           className: "WorldCodeAiWarningTitle",
-          children: Pk ? 1 === Tk.length ? `${qk?`Line ${qk.line}`:"This line"} ${Dk?"will":"would"} never work:` : `${Tk.length} lines ${Dk?"will":"would"} never work:` : 1 === Tk.length ? `${qk?`Line ${qk.line}`:"This line"} ${Dk?"will":"would"} break:` : `${Tk.length} lines ${Dk?"will":"would"} break:`
-        }), (ck ? Tk : Tk.slice(0, 1)).map((kk => {
-          const Fk = hk.get(kk);
-          return (0, Xk.jsxs)(Rk.Fragment, {
-            children: [Fk && !tV(kk) && (0, Xk.jsxs)("p", {
+          children: zb ? 1 === Ob.length ? `${db?`Line ${db.line}`:"This line"} ${Kb?"will":"would"} never work:` : `${Ob.length} lines ${Kb?"will":"would"} never work:` : 1 === Ob.length ? `${db?`Line ${db.line}`:"This line"} ${Kb?"will":"would"} break:` : `${Ob.length} lines ${Kb?"will":"would"} break:`
+        }), (Eb ? Ob : Ob.slice(0, 1)).map((bb => {
+          const cb = qb.get(bb);
+          return (0, Tb.jsxs)(kb.Fragment, {
+            children: [cb && !kM(bb) && (0, Tb.jsxs)("p", {
               className: "WorldCodeAiWarningWhere",
-              children: [Tk.length > 1 && `Line ${Fk.line}: `, (0, Xk.jsx)("code", {
-                children: Fk.text
+              children: [Ob.length > 1 && `Line ${cb.line}: `, (0, Tb.jsx)("code", {
+                children: cb.text
               })]
-            }), (0, Xk.jsx)("p", {
-              children: !Fk || 1 !== Tk.length && tV(kk) ? kk : aV(kk)
+            }), (0, Tb.jsx)("p", {
+              children: !cb || 1 !== Ob.length && kM(bb) ? bb : WM(bb)
             })]
-          }, kk)
-        })), !ck && Tk.length > 1 && (0, Xk.jsxs)("button", {
+          }, bb)
+        })), !Eb && Ob.length > 1 && (0, Tb.jsxs)("button", {
           className: "WorldCodeAiLinkButton",
           onClick: () => {
-            Gk(!0)
+            ib(!0)
           },
-          children: ["Show ", Tk.length - 1, " more"]
+          children: ["Show ", Ob.length - 1, " more"]
         })]
-      }), rk && (0, Xk.jsx)("button", {
-        ...Vw(null !== (Vk = Ak.warnings) && void 0 !== Vk ? Vk : []) ? {} : fw.h,
+      }), Gb && (0, Tb.jsx)("button", {
+        ...XI(null !== (Mb = nb.warnings) && void 0 !== Mb ? Mb : []) ? {} : eI.e,
         className: "WorldCodeAiPrimaryButton",
-        disabled: Ok,
-        onClick: Yk,
-        children: 1 === (null === (Jk = Ak.warnings) || void 0 === Jk ? void 0 : Jk.length) ? "Fix this line" : "Fix these lines"
-      }), "offered" === Mk && yk && !RF && (0, Xk.jsx)("button", {
-        className: rk ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
-        disabled: lk && 0 === kF || !!Hk && Ok,
-        title: Hk && Ok ? "You can apply it once the AI is done." : void 0,
+        disabled: Yb,
+        onClick: Lb,
+        children: 1 === (null === (Xb = nb.warnings) || void 0 === Xb ? void 0 : Xb.length) ? "Fix this line" : "Fix these lines"
+      }), "offered" === yb && lb && !sc && (0, Tb.jsx)("button", {
+        className: Gb ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
+        disabled: vb && 0 === pb || !!Bb && Yb,
+        title: Bb && Yb ? "You can apply it once the AI is done." : void 0,
         onClick: () => {
-          fk(FF)
+          Qb(bc)
         },
-        children: Hk ? Hk.codeBlock ? "Apply in that code block" : "Apply in World Code" : lk && kF < jk ? `Apply ${kF} of ${jk} changes` : rk ? "Apply anyway" : "Apply to my code"
-      }), "offered" === Mk && !yk && (0, Xk.jsx)("span", {
+        children: Bb ? Bb.codeBlock ? "Apply in that code block" : "Apply in World Code" : vb && pb < Rb ? `Apply ${pb} of ${Rb} changes` : Gb ? "Apply anyway" : "Apply to my code"
+      }), "offered" === yb && !lb && (0, Tb.jsx)("span", {
         className: "WorldCodeAiHint",
-        children: null !== Hk && void 0 !== Hk && Hk.codeBlock ? "You can't edit that code block." : "You can't edit this world's code."
-      }), "applied" === Mk && !RF && (0, Xk.jsxs)("div", {
+        children: null !== Bb && void 0 !== Bb && Bb.codeBlock ? "You can't edit that code block." : "You can't edit this world's code."
+      }), "applied" === yb && !sc && (0, Tb.jsxs)("div", {
         className: "WorldCodeAiAppliedRow",
-        children: [(0, Xk.jsx)("span", {
+        children: [(0, Tb.jsx)("span", {
           className: "WorldCodeAiAppliedNote",
           children: "Applied."
-        }), vk && (0, Xk.jsx)("button", {
+        }), Nb && (0, Tb.jsx)("button", {
           className: "WorldCodeAiPrimaryButton",
-          onClick: Wk,
+          onClick: Cb,
           children: "Try it in my world"
-        }), vk && (0, Xk.jsx)("button", {
-          ...fw.h,
+        }), Nb && (0, Tb.jsx)("button", {
+          ...eI.e,
           className: "WorldCodeAiSecondaryButton",
-          disabled: Ok,
-          onClick: Lk,
+          disabled: Yb,
+          onClick: ub,
           children: "Check for mistakes"
-        }), ik && (0, Xk.jsx)("button", {
+        }), Vb && (0, Tb.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiUndoButton",
-          onClick: mk,
+          onClick: eb,
           children: "Undo"
         })]
-      }), "applied" === Mk && !RF && !ik && !Hk && (0, Xk.jsx)("span", {
+      }), "applied" === yb && !sc && !Vb && !Bb && (0, Tb.jsx)("span", {
         className: "WorldCodeAiHint WorldCodeAiUndoOff",
         children: "You've changed this code since, so Undo is off. History can still go back."
-      }), "undone" === Mk && (0, Xk.jsx)("span", {
+      }), "undone" === yb && (0, Tb.jsx)("span", {
         className: "WorldCodeAiHint",
-        children: Ak.wentBack ? "You went back, so this change is gone." : "Undone."
-      }), "stale" === Mk && (0, Xk.jsx)("span", {
+        children: nb.wentBack ? "You went back, so this change is gone." : "Undone."
+      }), "stale" === yb && (0, Tb.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "Your code changed since this answer, so ask again to get an up-to-date change."
       })]
@@ -13047,104 +13047,104 @@ function rV(kk) {
   })
 }
 
-function DV(kk) {
+function KM(bb) {
   let {
-    target: Fk,
-    isOpen: Bk
-  } = kk;
-  return (0, Xk.jsxs)("div", {
-    className: ak()("WorldCodeAiTargetLabel", Bk && "WorldCodeAiTargetLabel-open"),
-    children: [(0, Xk.jsx)("span", {
-      children: Fk.label
-    }), Bk && (0, Xk.jsx)("span", {
+    target: cb,
+    isOpen: sb
+  } = bb;
+  return (0, Tb.jsxs)("div", {
+    className: ab()("WorldCodeAiTargetLabel", sb && "WorldCodeAiTargetLabel-open"),
+    children: [(0, Tb.jsx)("span", {
+      children: cb.label
+    }), sb && (0, Tb.jsx)("span", {
       className: "WorldCodeAiTargetLabelNote",
       children: "Open now"
     })]
   })
 }
 
-function zV(kk) {
+function ZM(bb) {
   let {
-    code: Fk,
-    onSwitch: Bk,
-    defaultOpen: tk,
-    isElsewhere: ak
-  } = kk;
-  const [wk, dk] = (0, Rk.useState)(!1), sk = (0, Rk.useMemo)((() => ({
+    code: cb,
+    onSwitch: sb,
+    defaultOpen: Wb,
+    isElsewhere: ab
+  } = bb;
+  const [Ib, Hb] = (0, kb.useState)(!1), fb = (0, kb.useMemo)((() => ({
     path: "World Code",
     before: "",
-    after: Fk
-  })), [Fk]);
-  return (0, Xk.jsxs)("div", {
+    after: cb
+  })), [cb]);
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiToolCard WorldCodeAiWorldCodePart",
-    children: [(0, Xk.jsx)(bk, {
+    children: [(0, Tb.jsx)(Ub, {
       className: "WorldCodeAiChangeLog",
       title: "Code for World Code",
       isCalm: !0,
-      isElsewhere: ak,
-      defaultOpen: tk,
-      children: (0, Xk.jsx)("div", {
+      isElsewhere: ab,
+      defaultOpen: Wb,
+      children: (0, Tb.jsx)("div", {
         className: "WorldCodeAiChanges",
-        children: (0, Xk.jsx)(bd, {
-          change: sk
+        children: (0, Tb.jsx)(UH, {
+          change: fb
         })
       })
-    }), (0, Xk.jsxs)("div", {
+    }), (0, Tb.jsxs)("div", {
       className: "WorldCodeAiChangeActions",
-      children: [(0, Xk.jsx)("span", {
+      children: [(0, Tb.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "A code block only runs when clicked, so this part goes in World Code."
-      }), Bk && (0, Xk.jsx)("button", {
+      }), sb && (0, Tb.jsx)("button", {
         className: "WorldCodeAiPrimaryButton",
-        onClick: Bk,
+        onClick: sb,
         children: "Switch to World Code"
-      }), (0, Xk.jsx)("button", {
+      }), (0, Tb.jsx)("button", {
         className: "WorldCodeAiLinkButton",
         onClick: () => {
-          navigator.clipboard.writeText(Fk).then((() => {
-            dk(!0)
+          navigator.clipboard.writeText(cb).then((() => {
+            Hb(!0)
           })).catch((() => {}))
         },
-        children: wk ? "Copied" : "Copy"
+        children: Ib ? "Copied" : "Copy"
       })]
     })]
   })
 }
 
-function PV(kk) {
-  var Fk;
+function zM(bb) {
+  var cb;
   let {
-    failed: Bk,
-    nothingChanged: Rk,
-    onRetry: tk,
-    defaultOpen: ak,
-    isElsewhere: wk
-  } = kk;
-  const dk = null === (Fk = Bk.find((kk => null !== kk.closest))) || void 0 === Fk ? void 0 : Fk.closest;
-  return (0, Xk.jsxs)("div", {
+    failed: sb,
+    nothingChanged: kb,
+    onRetry: Wb,
+    defaultOpen: ab,
+    isElsewhere: Ib
+  } = bb;
+  const Hb = null === (cb = sb.find((bb => null !== bb.closest))) || void 0 === cb ? void 0 : cb.closest;
+  return (0, Tb.jsxs)("div", {
     className: "WorldCodeAiFailedEdits",
-    children: [(0, Xk.jsxs)(bk, {
-      title: Rk ? "That change didn't work, so your code is the same." : 1 === Bk.length ? "One part didn't work, so it's left out." : `${Bk.length} parts didn't work, so they're left out.`,
-      defaultOpen: ak,
-      isElsewhere: wk,
-      children: [dk && (0, Xk.jsxs)(Xk.Fragment, {
-        children: [(0, Xk.jsx)("p", {
+    children: [(0, Tb.jsxs)(Ub, {
+      title: kb ? "That change didn't work, so your code is the same." : 1 === sb.length ? "One part didn't work, so it's left out." : `${sb.length} parts didn't work, so they're left out.`,
+      defaultOpen: ab,
+      isElsewhere: Ib,
+      children: [Hb && (0, Tb.jsxs)(Tb.Fragment, {
+        children: [(0, Tb.jsx)("p", {
           children: "The closest bit in your code:"
-        }), (0, Xk.jsx)("pre", {
+        }), (0, Tb.jsx)("pre", {
           className: "WorldCodeAiFailedLines",
-          children: dk.text.split("\n").length > 4 ? `${dk.text.split("\n").slice(0,4).join("\n")}\n\u2026` : dk.text
+          children: Hb.text.split("\n").length > 4 ? `${Hb.text.split("\n").slice(0,4).join("\n")}\n\u2026` : Hb.text
         })]
-      }), !dk && (0, Xk.jsx)("p", {
+      }), !Hb && (0, Tb.jsx)("p", {
         children: "Try asking for it again, maybe in a different way."
       })]
-    }), tk && (0, Xk.jsxs)("div", {
+    }), Wb && (0, Tb.jsxs)("div", {
       className: "WorldCodeAiFailedRetry",
-      children: [(0, Xk.jsx)("button", {
-        ...fw.h,
+      children: [(0, Tb.jsx)("button", {
+        ...eI.e,
         className: "WorldCodeAiSecondaryButton",
-        onClick: tk,
+        onClick: Wb,
         children: "Ask the AI to try again"
-      }), (0, Xk.jsx)("span", {
+      }), (0, Tb.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "It asks the AI once more."
       })]
@@ -13152,1059 +13152,1059 @@ function PV(kk) {
   })
 }
 
-function hV(kk) {
+function qM(bb) {
   let {
-    lookups: Fk,
-    words: Bk,
-    defaultOpen: Rk,
-    isElsewhere: tk
-  } = kk;
-  return (0, Xk.jsxs)(bk, {
-    title: dV,
+    lookups: cb,
+    words: sb,
+    defaultOpen: kb,
+    isElsewhere: Wb
+  } = bb;
+  return (0, Tb.jsxs)(Ub, {
+    title: IM,
     isCalm: !0,
-    isElsewhere: tk,
-    defaultOpen: Rk,
-    children: [Bk && (0, Xk.jsx)("p", {
-      children: Bk
-    }), (0, Xk.jsx)("p", {
+    isElsewhere: Wb,
+    defaultOpen: kb,
+    children: [sb && (0, Tb.jsx)("p", {
+      children: sb
+    }), (0, Tb.jsx)("p", {
       children: "It looks at:"
-    }), (0, Xk.jsx)("ul", {
+    }), (0, Tb.jsx)("ul", {
       className: "WorldCodeAiLookupList",
-      children: Fk.map(((kk, Fk) => (0, Xk.jsx)("li", {
-        children: ot(kk)
-      }, Fk)))
+      children: cb.map(((bb, cb) => (0, Tb.jsx)("li", {
+        children: YW(bb)
+      }, cb)))
     })]
   })
 }
 
-function qV(kk) {
-  return `Add this to my World Code:\n\`\`\`js\n${kk.join("\n").replace(/\s*$/,"\n")}\`\`\``
+function dM(bb) {
+  return `Add this to my World Code:\n\`\`\`js\n${bb.join("\n").replace(/\s*$/,"\n")}\`\`\``
 }
 
-function CV(kk) {
-  const Fk = Math.ceil(kk / 1e3);
-  return `${Math.floor(Fk/60)}:${String(Fk%60).padStart(2,"0")}`
+function AM(bb) {
+  const cb = Math.ceil(bb / 1e3);
+  return `${Math.floor(cb/60)}:${String(cb%60).padStart(2,"0")}`
 }
 
-function ZV(kk) {
-  return "waiting" === kk.phase ? "You're next" : kk.playingThrough && "writing" !== kk.phase && "screening" !== kk.phase ? "Playing your code through as each player\u2026" : null
+function wM(bb) {
+  return "waiting" === bb.phase ? "You're next" : bb.playingThrough && "writing" !== bb.phase && "screening" !== bb.phase ? "Playing your code through as each player\u2026" : null
 }
 
-function pV(kk) {
-  var Fk;
+function rM(bb) {
+  var cb;
   let {
-    busy: Bk
-  } = kk;
-  const Rk = (tk = Bk.phase, bk = null !== (Fk = Bk.reasoningChars) && void 0 !== Fk ? Fk : 0, "screening" === tk ? 3 : "writing" === tk ? 2 : "thinking" === tk && bk >= 400 ? 1 : 0);
-  var tk, bk;
-  return (0, Xk.jsx)("ol", {
+    busy: sb
+  } = bb;
+  const kb = (Wb = sb.phase, Ub = null !== (cb = sb.reasoningChars) && void 0 !== cb ? cb : 0, "screening" === Wb ? 3 : "writing" === Wb ? 2 : "thinking" === Wb && Ub >= 400 ? 1 : 0);
+  var Wb, Ub;
+  return (0, Tb.jsx)("ol", {
     className: "WorldCodeAiSteps",
-    children: ms.map(((kk, Fk) => (0, Xk.jsx)("li", {
-      className: ak()(Fk < Rk && "WorldCodeAiStep-done", Fk === Rk && "WorldCodeAiStep-current"),
-      children: Fk < Rk ? `\u2713 ${kk}` : kk
-    }, kk)))
+    children: Qf.map(((bb, cb) => (0, Tb.jsx)("li", {
+      className: ab()(cb < kb && "WorldCodeAiStep-done", cb === kb && "WorldCodeAiStep-current"),
+      children: cb < kb ? `\u2713 ${bb}` : bb
+    }, bb)))
   })
 }
-const KV = (0, Rk.memo)((function(kk) {
-    var Fk, tk, Ak, Wk, ik, Yk, Lk, Ok, Ek, Sk, Nk, Hk, uk;
+const oM = (0, kb.memo)((function(bb) {
+    var cb, Wb, nb, Cb, Vb, Lb, ub, Yb, hb, Jb, gb, Bb, tb;
     let {
-      files: Mk,
-      activePath: gk,
-      canEdit: Uk,
-      errors: ck,
-      errorCount: Gk,
-      applyFiles: Tk,
-      submit: rk,
-      testRun: Dk,
-      close: zk,
-      goToLine: Pk,
-      target: hk,
-      chatKey: qk,
-      historyKey: Ck,
-      openWorldCode: Zk,
-      readWorldCode: pk,
-      viewChunk: Kk,
-      viewGameState: xk,
-      openTarget: jk,
-      isLoaded: lk = !0,
-      draft: nk,
-      onDraftUsed: Ik,
-      selection: Qk,
-      onSelectionUsed: kF
-    } = kk;
-    const BF = hk.codeBlock,
-      RF = hk.key,
-      aF = function(kk) {
-        let Fk = JV.get(kk);
-        return Fk || (Fk = {
+      files: yb,
+      activePath: Pb,
+      canEdit: Db,
+      errors: Eb,
+      errorCount: ib,
+      applyFiles: Ob,
+      submit: Gb,
+      testRun: Kb,
+      close: Zb,
+      goToLine: zb,
+      target: qb,
+      chatKey: db,
+      historyKey: Ab,
+      openWorldCode: wb,
+      readWorldCode: rb,
+      viewChunk: ob,
+      viewGameState: Sb,
+      openTarget: Rb,
+      isLoaded: vb = !0,
+      draft: Fb,
+      onDraftUsed: xb,
+      selection: jb,
+      onSelectionUsed: pb
+    } = bb;
+    const cc = qb.codeBlock,
+      sc = qb.key,
+      Wc = function(bb) {
+        let cb = MM.get(bb);
+        return cb || (cb = {
           entries: [],
           nextId: 1,
           dismissedErrorCounts: new Map,
-          turns: new FX
-        }, JV.set(kk, Fk)), Fk
-      }(qk),
-      [XF, bF] = (0, Rk.useState)((() => aF.entries)),
-      wF = (0, Rk.useRef)(!0),
-      dF = (0, Rk.useCallback)((kk => {
-        const Fk = "function" === typeof kk ? kk : () => kk;
-        wF.current ? bF(Fk) : aF.setEntries ? aF.setEntries(Fk) : aF.entries = Fk(aF.entries)
-      }), [aF]);
-    (0, Rk.useEffect)((() => (wF.current = !0, aF.setEntries = bF, () => {
-      wF.current = !1, aF.setEntries === bF && (aF.setEntries = void 0)
-    })), [aF]);
-    const [sF, VF] = (0, Rk.useState)(null), [JF, AF] = (0, Rk.useState)([]), [eF, yF] = (0, Rk.useState)(!1), [fF, mF] = (0, Rk.useState)([]), [WF, vF] = (0, Rk.useState)(!1), [iF, YF] = (0, Rk.useState)(!1), [oF, LF] = (0, Rk.useState)(null), [OF, EF] = (0, Rk.useState)(!1), SF = (0, Rk.useRef)("settings"), [NF, HF] = (0, Rk.useState)(null), uF = (0, Rk.useRef)(function() {
+          turns: new sT
+        }, MM.set(bb, cb)), cb
+      }(db),
+      [ac, Tc] = (0, kb.useState)((() => Wc.entries)),
+      Uc = (0, kb.useRef)(!0),
+      Ic = (0, kb.useCallback)((bb => {
+        const cb = "function" === typeof bb ? bb : () => bb;
+        Uc.current ? Tc(cb) : Wc.setEntries ? Wc.setEntries(cb) : Wc.entries = cb(Wc.entries)
+      }), [Wc]);
+    (0, kb.useEffect)((() => (Uc.current = !0, Wc.setEntries = Tc, () => {
+      Uc.current = !1, Wc.setEntries === Tc && (Wc.setEntries = void 0)
+    })), [Wc]);
+    const [Hc, fc] = (0, kb.useState)(null), [Mc, Xc] = (0, kb.useState)([]), [nc, mc] = (0, kb.useState)(!1), [lc, Qc] = (0, kb.useState)([]), [ec, Cc] = (0, kb.useState)(!1), [Nc, Vc] = (0, kb.useState)(!1), [Lc, uc] = (0, kb.useState)(null), [Yc, hc] = (0, kb.useState)(!1), Jc = (0, kb.useRef)("settings"), [gc, Bc] = (0, kb.useState)(null), tc = (0, kb.useRef)(function() {
       try {
-        var kk;
-        const Fk = JSON.parse(null !== (kk = localStorage.getItem(Os)) && void 0 !== kk ? kk : "{}");
-        return "object" !== typeof Fk || null === Fk ? {} : Object.fromEntries(Object.entries(Fk).filter((kk => {
-          let [, Fk] = kk;
-          return Array.isArray(Fk) && Fk.every((kk => "number" === typeof kk))
+        var bb;
+        const cb = JSON.parse(null !== (bb = localStorage.getItem(Yf)) && void 0 !== bb ? bb : "{}");
+        return "object" !== typeof cb || null === cb ? {} : Object.fromEntries(Object.entries(cb).filter((bb => {
+          let [, cb] = bb;
+          return Array.isArray(cb) && cb.every((bb => "number" === typeof bb))
         })))
       } catch {
         return {}
       }
-    }()), [MF, gF] = (0, Rk.useState)(Sw), UF = (0, Rk.useRef)(MF);
-    UF.current = MF;
-    const cF = MF && Uk,
-      GF = (0, Rk.useRef)(!1),
-      [TF, rF] = (0, Rk.useState)(null),
-      [DF, zF] = (0, Rk.useState)(""),
-      [PF, hF] = (0, Rk.useState)([]),
-      [qF, CF] = (0, Rk.useState)(null),
-      [ZF, pF] = (0, Rk.useState)(new Set),
-      [KF, xF] = (0, Rk.useState)(null !== (Fk = aF.dismissedErrorCounts.get(hk.key)) && void 0 !== Fk ? Fk : 0),
-      [jF, lF] = (0, Rk.useState)(!1),
-      [nF, IF] = (0, Rk.useState)(Date.now),
-      QF = (0, Rk.useRef)(null),
-      kB = (0, Rk.useRef)(null),
-      FB = (0, Rk.useRef)([]),
-      [BB, RB] = (0, Rk.useState)(0),
-      [tB, aB] = (0, Rk.useState)(null),
-      XB = (0, Xd.m)(qk),
-      bB = null !== tB && void 0 !== tB ? tB : null === XB || void 0 === XB ? void 0 : XB.entryId,
-      wB = XF.find((kk => kk.id === bB)),
-      dB = (null === wB || void 0 === wB ? void 0 : wB.target.key) === hk.key && (null !== tB || void 0 === (null === XB || void 0 === XB ? void 0 : XB.endedAt)),
-      sB = (kk, Fk) => {
-        const Bk = setTimeout((() => {
-          FB.current = FB.current.filter((kk => kk !== Bk)), RB(FB.current.length), kk()
-        }), Fk);
-        FB.current.push(Bk), RB(FB.current.length)
+    }()), [yc, Pc] = (0, kb.useState)(BI), Dc = (0, kb.useRef)(yc);
+    Dc.current = yc;
+    const Ec = yc && Db,
+      ic = (0, kb.useRef)(!1),
+      [Oc, Gc] = (0, kb.useState)(null),
+      [Kc, Zc] = (0, kb.useState)(""),
+      [zc, qc] = (0, kb.useState)([]),
+      [dc, Ac] = (0, kb.useState)(null),
+      [wc, rc] = (0, kb.useState)(new Set),
+      [oc, Sc] = (0, kb.useState)(null !== (cb = Wc.dismissedErrorCounts.get(qb.key)) && void 0 !== cb ? cb : 0),
+      [Rc, vc] = (0, kb.useState)(!1),
+      [Fc, xc] = (0, kb.useState)(Date.now),
+      jc = (0, kb.useRef)(null),
+      pc = (0, kb.useRef)(null),
+      bs = (0, kb.useRef)([]),
+      [cs, ss] = (0, kb.useState)(0),
+      [ks, Ws] = (0, kb.useState)(null),
+      as = (0, TH.q)(db),
+      Ts = null !== ks && void 0 !== ks ? ks : null === as || void 0 === as ? void 0 : as.entryId,
+      Us = ac.find((bb => bb.id === Ts)),
+      Is = (null === Us || void 0 === Us ? void 0 : Us.target.key) === qb.key && (null !== ks || void 0 === (null === as || void 0 === as ? void 0 : as.endedAt)),
+      Hs = (bb, cb) => {
+        const sb = setTimeout((() => {
+          bs.current = bs.current.filter((bb => bb !== sb)), ss(bs.current.length), bb()
+        }), cb);
+        bs.current.push(sb), ss(bs.current.length)
       },
-      JB = () => {
-        for (const kk of FB.current) clearTimeout(kk);
-        FB.current = [], RB(0), aB(null)
+      Ms = () => {
+        for (const bb of bs.current) clearTimeout(bb);
+        bs.current = [], ss(0), Ws(null)
       },
-      AB = (0, Rk.useRef)(null),
-      eB = (0, Rk.useRef)(null),
-      yB = () => aF.nextId++,
-      fB = (0, Rk.useRef)(0),
-      mB = (0, Rk.useRef)(Mk);
-    mB.current = Mk;
-    const WB = (0, Rk.useCallback)((kk => {
-        null === kk || void 0 === kk || kk.focus()
+      Xs = (0, kb.useRef)(null),
+      ns = (0, kb.useRef)(null),
+      ms = () => Wc.nextId++,
+      ls = (0, kb.useRef)(0),
+      Qs = (0, kb.useRef)(yb);
+    Qs.current = yb;
+    const es = (0, kb.useCallback)((bb => {
+        null === bb || void 0 === bb || bb.focus()
       }), []),
-      vB = (0, Rk.useRef)(Gk);
-    vB.current = Gk;
-    const iB = (0, Rk.useRef)(PF);
-    iB.current = PF;
-    const YB = (0, Rk.useRef)(XF.length);
-    (0, Rk.useEffect)((() => {
-      const kk = AB.current;
-      if (!kk) return;
-      if (eF) return void kk.scrollTo({
+      Cs = (0, kb.useRef)(ib);
+    Cs.current = ib;
+    const Ns = (0, kb.useRef)(zc);
+    Ns.current = zc;
+    const Vs = (0, kb.useRef)(ac.length);
+    (0, kb.useEffect)((() => {
+      const bb = Xs.current;
+      if (!bb) return;
+      if (nc) return void bb.scrollTo({
         top: 0
       });
-      if (oF) return;
-      const Fk = XF[XF.length - 1],
-        Bk = (null === Fk || void 0 === Fk ? void 0 : Fk.target.key) === RF;
-      XF.length > YB.current && "assistant" === (null === Fk || void 0 === Fk ? void 0 : Fk.role) && !Fk.isNotice && Bk && (aF.heldAnswerId = Fk.id), YB.current = XF.length;
-      const Rk = void 0 !== Fk && Bk && Fk.id === aF.heldAnswerId && "offered" === Fk.status && void 0 === Fk.trial,
-        tk = kk.querySelectorAll(".WorldCodeAiEntry"),
-        ak = tk[tk.length - 1];
-      if (Rk && ak) {
-        var Xk;
-        const Bk = kk.getBoundingClientRect().top,
-          Rk = Fk => kk.scrollTop + Fk.getBoundingClientRect().top - Bk;
-        let tk = Rk(ak);
-        const bk = ak.querySelector(".WorldCodeAiDiff-added, .WorldCodeAiDiff-removed"),
-          wk = ak.querySelector(".WorldCodeAiChangeHeader"),
-          dk = ak.querySelector(".WorldCodeAiChangeActions-sticky");
-        if (null !== (Xk = Fk.warnings) && void 0 !== Xk && Xk.length && bk && wk && dk) {
-          const Fk = ak.querySelector(".WorldCodeAiDiff-marked"),
-            Bk = bk.getBoundingClientRect().height,
-            Xk = Fk ? Rk(Fk) + 2 * Bk + dk.offsetHeight - kk.clientHeight : Rk(bk) + 3 * Bk + dk.offsetHeight - kk.clientHeight;
-          tk = Math.max(tk, Math.min(Xk, Fk ? Rk(Fk) - Bk : Rk(wk)))
-        } else if (wk && dk) {
-          const Fk = ak.querySelectorAll(".WorldCodeAiChangeWhy li"),
-            Bk = Fk[Fk.length - 1];
-          if (Bk) {
-            const Fk = Rk(Bk) + Bk.getBoundingClientRect().height + dk.offsetHeight - kk.clientHeight;
-            tk = Math.max(tk, Math.min(Fk, Rk(wk)))
+      if (Lc) return;
+      const cb = ac[ac.length - 1],
+        sb = (null === cb || void 0 === cb ? void 0 : cb.target.key) === sc;
+      ac.length > Vs.current && "assistant" === (null === cb || void 0 === cb ? void 0 : cb.role) && !cb.isNotice && sb && (Wc.heldAnswerId = cb.id), Vs.current = ac.length;
+      const kb = void 0 !== cb && sb && cb.id === Wc.heldAnswerId && "offered" === cb.status && void 0 === cb.trial,
+        Wb = bb.querySelectorAll(".WorldCodeAiEntry"),
+        ab = Wb[Wb.length - 1];
+      if (kb && ab) {
+        var Tb;
+        const sb = bb.getBoundingClientRect().top,
+          kb = cb => bb.scrollTop + cb.getBoundingClientRect().top - sb;
+        let Wb = kb(ab);
+        const Ub = ab.querySelector(".WorldCodeAiDiff-added, .WorldCodeAiDiff-removed"),
+          Ib = ab.querySelector(".WorldCodeAiChangeHeader"),
+          Hb = ab.querySelector(".WorldCodeAiChangeActions-sticky");
+        if (null !== (Tb = cb.warnings) && void 0 !== Tb && Tb.length && Ub && Ib && Hb) {
+          const cb = ab.querySelector(".WorldCodeAiDiff-marked"),
+            sb = Ub.getBoundingClientRect().height,
+            Tb = cb ? kb(cb) + 2 * sb + Hb.offsetHeight - bb.clientHeight : kb(Ub) + 3 * sb + Hb.offsetHeight - bb.clientHeight;
+          Wb = Math.max(Wb, Math.min(Tb, cb ? kb(cb) - sb : kb(Ib)))
+        } else if (Ib && Hb) {
+          const cb = ab.querySelectorAll(".WorldCodeAiChangeWhy li"),
+            sb = cb[cb.length - 1];
+          if (sb) {
+            const cb = kb(sb) + sb.getBoundingClientRect().height + Hb.offsetHeight - bb.clientHeight;
+            Wb = Math.max(Wb, Math.min(cb, kb(Ib)))
           }
         }
-        kk.scrollTo({
-          top: tk
+        bb.scrollTo({
+          top: Wb
         })
-      } else kk.scrollTo({
-        top: kk.scrollHeight
+      } else bb.scrollTo({
+        top: bb.scrollHeight
       })
-    }), [aF, XF, sF, eF, RF, oF]), (0, Rk.useEffect)((() => {
-      aF.entries = XF, aF.dismissedErrorCounts.set(hk.key, KF)
-    }), [aF, XF, KF, hk.key]), (0, Rk.useEffect)((() => () => {
-      var kk;
-      null === (kk = QF.current) || void 0 === kk || kk.abort(), JB(),
+    }), [Wc, ac, Hc, nc, sc, Lc]), (0, kb.useEffect)((() => {
+      Wc.entries = ac, Wc.dismissedErrorCounts.set(qb.key, oc)
+    }), [Wc, ac, oc, qb.key]), (0, kb.useEffect)((() => () => {
+      var bb;
+      null === (bb = jc.current) || void 0 === bb || bb.abort(), Ms(),
         function() {
-          var kk;
-          null === (kk = Ca) || void 0 === kk || kk.tearDownNotification()
+          var bb;
+          null === (bb = ra) || void 0 === bb || bb.tearDownNotification()
         }()
-    }), []), (0, Rk.useEffect)((() => {
-      var kk;
-      nk && (nk.send ? lk && (null === Ik || void 0 === Ik || Ik(), KB.current(nk.text, nk.text, {
+    }), []), (0, kb.useEffect)((() => {
+      var bb;
+      Fb && (Fb.send ? vb && (null === xb || void 0 === xb || xb(), Ss.current(Fb.text, Fb.text, {
         check: !1,
         useFree: !1
-      })) : (zF(nk.text), null === (kk = eB.current) || void 0 === kk || kk.focus(), null === Ik || void 0 === Ik || Ik()))
-    }), [nk, Ik, lk]), (0, Rk.useEffect)((() => function() {
-      let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      const Fk = setTimeout((() => {
-        ps(kk)
+      })) : (Zc(Fb.text), null === (bb = ns.current) || void 0 === bb || bb.focus(), null === xb || void 0 === xb || xb()))
+    }), [Fb, xb, vb]), (0, kb.useEffect)((() => function() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      const cb = setTimeout((() => {
+        of(bb)
       }), 1e3);
       return () => {
-        clearTimeout(Fk)
+        clearTimeout(cb)
       }
-    }(BF)), [BF]), (0, Rk.useEffect)((() => {
-      let kk = !0;
-      eV.list(Ck).then((Fk => {
-        kk && AF(Fk)
-      })).catch((kk => {
-        console.error("World Code AI: couldn't read the version history", kk)
+    }(cc)), [cc]), (0, kb.useEffect)((() => {
+      let bb = !0;
+      nM.list(Ab).then((cb => {
+        bb && Xc(cb)
+      })).catch((bb => {
+        console.error("World Code AI: couldn't read the version history", bb)
       }));
-      const Fk = eV.watch(Ck, AF);
+      const cb = nM.watch(Ab, Xc);
       return () => {
-        kk = !1, Fk()
+        bb = !1, cb()
       }
-    }), [Ck]), (0, Rk.useEffect)((() => {
-      let kk = !0;
-      yV.list(Ck).then((Fk => {
-        kk && mF(Fk)
-      })).catch((kk => {
-        console.error("World Code AI: couldn't read the notes about the game", kk)
+    }), [Ab]), (0, kb.useEffect)((() => {
+      let bb = !0;
+      mM.list(Ab).then((cb => {
+        bb && Qc(cb)
+      })).catch((bb => {
+        console.error("World Code AI: couldn't read the notes about the game", bb)
       }));
-      const Fk = yV.watch(Ck, mF);
+      const cb = mM.watch(Ab, Qc);
       return () => {
-        kk = !1, Fk()
+        bb = !1, cb()
       }
-    }), [Ck]);
-    const oB = null !== (tk = null === (Ak = XF.findLast((kk => kk.target.key === hk.key))) || void 0 === Ak ? void 0 : Ak.retryAt) && void 0 !== tk ? tk : 0,
-      LB = Ha(nF),
-      OB = null !== sF || oB > nF || LB > nF;
-    (0, Rk.useEffect)((() => {
-      if (!OB) return;
-      const kk = setInterval((() => {
-        IF(Date.now())
+    }), [Ab]);
+    const Ls = null !== (Wb = null === (nb = ac.findLast((bb => bb.target.key === qb.key))) || void 0 === nb ? void 0 : nb.retryAt) && void 0 !== Wb ? Wb : 0,
+      us = ya(Fc),
+      Ys = null !== Hc || Ls > Fc || us > Fc;
+    (0, kb.useEffect)((() => {
+      if (!Ys) return;
+      const bb = setInterval((() => {
+        xc(Date.now())
       }), 1e3);
       return () => {
-        clearInterval(kk)
+        clearInterval(bb)
       }
-    }), [OB]);
-    const EB = Gk > KF && ck.length > 0 ? ck[ck.length - 1] : null,
-      SB = (0, Rk.useMemo)((() => EB ? function(kk, Fk) {
-        var Bk;
-        let Rk;
-        for (const [tk, ak] of Object.entries(Fk)) {
+    }), [Ys]);
+    const hs = ib > oc && Eb.length > 0 ? Eb[Eb.length - 1] : null,
+      gs = (0, kb.useMemo)((() => hs ? function(bb, cb) {
+        var sb;
+        let kb;
+        for (const [Wb, ab] of Object.entries(cb)) {
           const {
-            text: Fk,
-            line: Bk
-          } = Qb(kk, ak);
-          if (void 0 !== Bk) {
-            if (Rk) return Qb(kk);
-            Rk = {
-              text: Fk,
-              path: tk,
-              line: Bk
+            text: cb,
+            line: sb
+          } = bI(bb, ab);
+          if (void 0 !== sb) {
+            if (kb) return bI(bb);
+            kb = {
+              text: cb,
+              path: Wb,
+              line: sb
             }
           }
         }
-        return null !== (Bk = Rk) && void 0 !== Bk ? Bk : Qb(kk)
-      }(EB, Mk) : {
+        return null !== (sb = kb) && void 0 !== sb ? sb : bI(bb)
+      }(hs, yb) : {
         text: ""
-      }), [EB, Mk]),
-      NB = function(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hk;
-        const Bk = yB();
-        return yF(!1), vF(!1), dF((Rk => [...Rk, {
-          ...kk,
-          id: Bk,
-          target: Fk
-        }])), Bk
+      }), [hs, yb]),
+      Bs = function(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qb;
+        const sb = ms();
+        return mc(!1), Cc(!1), Ic((kb => [...kb, {
+          ...bb,
+          id: sb,
+          target: cb
+        }])), sb
       },
-      HB = kk => kk.target.key === hk.key,
-      uB = (kk, Fk) => {
-        dF((Bk => Bk.map((Bk => Bk.id === kk ? {
-          ...Bk,
-          ...Fk
-        } : Bk))))
+      ts = bb => bb.target.key === qb.key,
+      ys = (bb, cb) => {
+        Ic((sb => sb.map((sb => sb.id === bb ? {
+          ...sb,
+          ...cb
+        } : sb))))
       },
-      MB = (kk, Fk) => {
-        uB(kk, {
-          status: Fk
+      Ps = (bb, cb) => {
+        ys(bb, {
+          status: cb
         })
       },
-      gB = wb();
+      Ds = HU();
 
-    function UB(kk) {
-      return !!yb(bb.getState()) && (Hb().then((Fk => {
-        Fk || kk()
+    function Es(bb) {
+      return !!QU(IU.getState()) && (yU().then((cb => {
+        cb || bb()
       })), !0)
     }
-    const cB = kk => {
-        !OF && UB(kk) || kk()
+    const is = bb => {
+        !Yc && Es(bb) || bb()
       },
-      GB = async function(kk, Fk) {
-        let Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      Os = async function(bb, cb) {
+        let kb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         const {
-          check: tk = void 0 === Fk,
-          about: ak = (null !== Fk && void 0 !== Fk ? Fk : kk.trim()),
-          planStep: Xk,
-          wordsOnly: bk = !1,
-          asked: wk,
-          failedEdits: dk,
-          isAutoFix: sk = !1,
-          autoFixRound: Vk = 0,
-          useFree: Jk,
-          retryOf: Ak,
-          continueFrom: yk,
-          lookups: fk = [],
-          lookupRound: Wk = 0,
-          worldCodeFiles: vk,
-          viewedPaths: ik = [],
-          lookupOf: Yk,
-          insertsInto: Lk,
-          guardWords: Ok
-        } = Rk, Ek = kk.trim();
-        if ("" === Ek || sF) return;
-        null === qa.get() && (Za || (Za = !0, (async () => {
+          check: Wb = void 0 === cb,
+          about: ab = (null !== cb && void 0 !== cb ? cb : bb.trim()),
+          planStep: Tb,
+          wordsOnly: Ub = !1,
+          asked: Ib,
+          failedEdits: Hb,
+          isAutoFix: fb = !1,
+          autoFixRound: Mb = 0,
+          useFree: Xb,
+          retryOf: nb,
+          continueFrom: lb,
+          lookups: Qb = [],
+          lookupRound: Cb = 0,
+          worldCodeFiles: Nb,
+          viewedPaths: Vb = [],
+          lookupOf: Lb,
+          insertsInto: ub,
+          guardWords: Yb
+        } = kb, hb = bb.trim();
+        if ("" === hb || Hc) return;
+        null === wa.get() && (oa || (oa = !0, (async () => {
           try {
-            if (null !== await qa.refresh() || null === qa.getPlayer()) return;
+            if (null !== await wa.refresh() || null === wa.getPlayer()) return;
             const {
-              NotificationProvider: kk
-            } = await Promise.resolve().then((() => Bk(1300)));
-            Ca = kk.showPromptPopup({
+              NotificationProvider: bb
+            } = await Promise.resolve().then((() => sb(1332)));
+            ra = bb.showPromptPopup({
               title: "aiHelperDataSharing:title",
               subtitle: "aiHelperDataSharing:subtitle",
               confirmText: "aiHelperDataSharing:yes",
               cancelText: "aiHelperDataSharing:no"
             });
-            const Fk = await Ca.getResult();
-            "notificationTornDown" !== Fk && qa.set(Fk ? "yes" : "no")
-          } catch (kk) {
-            console.warn("AI Helper: couldn't ask about sharing chats", kk)
+            const cb = await ra.getResult();
+            "notificationTornDown" !== cb && wa.set(cb ? "yes" : "no")
+          } catch (bb) {
+            console.warn("AI Helper: couldn't ask about sharing chats", bb)
           } finally {
-            Ca = null, Za = !1
+            ra = null, oa = !1
           }
         })()));
-        const Sk = null !== Jk && void 0 !== Jk ? Jk : OF && !sk && void 0 === Ak && void 0 === yk;
-        if (!Sk && SV(Rk) && UB((() => {
-            zB.current(kk, Fk, Rk)
+        const Jb = null !== Xb && void 0 !== Xb ? Xb : Yc && !fb && void 0 === nb && void 0 === lb;
+        if (!Jb && JM(kb) && Es((() => {
+            zs.current(bb, cb, kb)
           }))) return;
-        const Nk = null !== Lk && void 0 !== Lk ? Lk : gk;
-        void 0 === Jk && Sk && EF(!1), JB();
-        const Hk = lX.activeKey(),
-          uk = Sk ? null : Hk,
-          Mk = null !== uk,
-          Gk = null !== Hk && Sk,
-          Tk = !uk && !Sk && bb.isAnswering(),
-          rk = void 0 === Ak ? -1 : ((kk, Fk) => {
-            for (let Bk = kk.findIndex((kk => kk.id === Fk)) - 1; Bk >= 0; Bk--)
-              if ("user" === kk[Bk].role) return Bk;
+        const gb = null !== ub && void 0 !== ub ? ub : Pb;
+        void 0 === Xb && Jb && hc(!1), Ms();
+        const Bb = xT.activeKey(),
+          tb = Jb ? null : Bb,
+          yb = null !== tb,
+          ib = null !== Bb && Jb,
+          Ob = !tb && !Jb && IU.isAnswering(),
+          Gb = void 0 === nb ? -1 : ((bb, cb) => {
+            for (let sb = bb.findIndex((bb => bb.id === cb)) - 1; sb >= 0; sb--)
+              if ("user" === bb[sb].role) return sb;
             return -1
-          })(XF, Ak),
-          Dk = (rk < 0 ? XF : XF.slice(0, rk)).filter((kk => !kk.isNotice && !kk.leftOut && HB(kk))).slice(-4).map((kk => ({
-            role: kk.role,
-            text: kk.question ? `${kk.text}\n${kk.question.question}` : kk.text
+          })(ac, nb),
+          Kb = (Gb < 0 ? ac : ac.slice(0, Gb)).filter((bb => !bb.isNotice && !bb.leftOut && ts(bb))).slice(-4).map((bb => ({
+            role: bb.role,
+            text: bb.question ? `${bb.text}\n${bb.question.question}` : bb.text
           }))),
-          zk = void 0 === Fk,
-          hk = void 0 === wk ? void 0 === Fk ? Ek : void 0 : null !== wk && void 0 !== wk ? wk : void 0,
-          qk = void 0 !== Ak && void 0 !== yk,
-          Ck = qk ? XF.find((kk => kk.id === Ak)) : void 0;
-        let pk;
-        if (qk) pk = rk >= 0 ? XF[rk].id : -1;
-        else if (void 0 !== Yk && rk < 0) pk = Yk;
-        else if (rk >= 0) pk = XF[rk].id, dF((kk => kk.filter((kk => kk.id !== Ak)).map((kk => kk.id === pk ? {
-          ...kk,
+          Zb = void 0 === cb,
+          qb = void 0 === Ib ? void 0 === cb ? hb : void 0 : null !== Ib && void 0 !== Ib ? Ib : void 0,
+          db = void 0 !== nb && void 0 !== lb,
+          Ab = db ? ac.find((bb => bb.id === nb)) : void 0;
+        let rb;
+        if (db) rb = Gb >= 0 ? ac[Gb].id : -1;
+        else if (void 0 !== Lb && Gb < 0) rb = Lb;
+        else if (Gb >= 0) rb = ac[Gb].id, Ic((bb => bb.filter((bb => bb.id !== nb)).map((bb => bb.id === rb ? {
+          ...bb,
           isNotice: void 0
-        } : kk))));
+        } : bb))));
         else {
-          const kk = sk && Vk > 0;
-          pk = NB({
+          const bb = fb && Mb > 0;
+          rb = Bs({
             role: "user",
-            text: kk ? Ek : null !== Fk && void 0 !== Fk ? Fk : Ek,
+            text: bb ? hb : null !== cb && void 0 !== cb ? cb : hb,
             changes: [],
             status: "offered",
-            about: ak,
-            planStep: Xk,
-            ...hk ? {
-              asked: hk
+            about: ab,
+            planStep: Tb,
+            ...qb ? {
+              asked: qb
             } : {},
-            ...kk ? {
-              logTitle: dk ? "Part of the AI's change didn't go in, so it was asked to make it again" : "The AI's code had an error, so it was sent back to the AI to fix"
+            ...bb ? {
+              logTitle: Hb ? "Part of the AI's change didn't go in, so it was asked to make it again" : "The AI's code had an error, so it was sent back to the AI to fix"
             } : {}
           })
         }
-        const Kk = {
-            lookups: fk,
-            lookupRound: Wk,
-            worldCodeFiles: vk,
-            viewedPaths: ik
+        const ob = {
+            lookups: Qb,
+            lookupRound: Cb,
+            worldCodeFiles: Nb,
+            viewedPaths: Vb
           },
-          xk = {
-            retry: Ek,
-            retryShown: Fk,
+          Sb = {
+            retry: hb,
+            retryShown: cb,
             retryOptions: {
-              check: tk,
-              about: ak,
-              planStep: Xk,
-              wordsOnly: bk,
-              useFree: Sk,
-              asked: wk,
-              failedEdits: dk,
-              isAutoFix: sk,
-              autoFixRound: Vk,
-              insertsInto: Lk,
-              guardWords: Ok,
-              ...Kk
+              check: Wb,
+              about: ab,
+              planStep: Tb,
+              wordsOnly: Ub,
+              useFree: Jb,
+              asked: Ib,
+              failedEdits: Hb,
+              isAutoFix: fb,
+              autoFixRound: Mb,
+              insertsInto: ub,
+              guardWords: Yb,
+              ...ob
             }
           },
-          lk = new AbortController;
-        QF.current = lk;
-        const nk = aF.turns;
-        nk.requestStarted(pk, void 0 !== Yk);
-        const Ik = UF.current ? "direct" : "offer";
-        var Qk, kF, FF, RF, bF;
+          vb = new AbortController;
+        jc.current = vb;
+        const Fb = Wc.turns;
+        Fb.requestStarted(rb, void 0 !== Lb);
+        const xb = Dc.current ? "direct" : "offer";
+        var jb, pb, bc, sc, Tc;
         try {
-          var wF;
-          const kk = Date.now(),
-            Bk = Ek.startsWith(TV),
-            Rk = null === uk || void 0 === uk ? void 0 : uk.model.name;
-          IF(kk), VF(Tk ? {
+          var Uc;
+          const bb = Date.now(),
+            sb = hb.startsWith(OM),
+            kb = null === tb || void 0 === tb ? void 0 : tb.model.name;
+          xc(bb), fc(Ob ? {
             phase: "thinking",
-            startedAt: kk,
-            playingThrough: Bk,
+            startedAt: bb,
+            playingThrough: sb,
             isSuperBot: !0
           } : {
             phase: "checking",
-            startedAt: kk,
-            playingThrough: Bk,
-            keyModel: Rk
+            startedAt: bb,
+            playingThrough: sb,
+            keyModel: kb
           });
-          const wk = kk => {
-              uB(pk, {
+          const Ib = bb => {
+              ys(rb, {
                 isNotice: !0
-              }), NB({
+              }), Bs({
                 role: "assistant",
-                text: "personalInfo" === kk ? "Please don't share personal details like names, addresses or schools. Ask again without them." : gV,
+                text: "personalInfo" === bb ? "Please don't share personal details like names, addresses or schools. Ask again without them." : PM,
                 changes: [],
                 status: "offered",
                 isNotice: !0
               })
             },
-            Jk = async () => {
-              if (!tk && !uk) return null !== Ok && void 0 !== Ok ? Ok : Ek;
-              const kk = Date.now();
-              IF(kk), VF({
+            Xb = async () => {
+              if (!Wb && !tb) return null !== Yb && void 0 !== Yb ? Yb : hb;
+              const bb = Date.now();
+              xc(bb), fc({
                 phase: "checking",
-                startedAt: kk,
-                playingThrough: Bk,
-                keyModel: Rk
+                startedAt: bb,
+                playingThrough: sb,
+                keyModel: kb
               });
               const {
-                safety: Fk,
-                request: ak
-              } = await async function(kk, Fk) {
-                let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                const Rk = await ra(kk, Fk, Bk),
-                  tk = Ht(kk);
-                if ("unsafe" !== Rk || tk === kk) return {
-                  safety: Rk,
-                  request: kk
+                safety: cb,
+                request: ab
+              } = await async function(bb, cb) {
+                let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                const kb = await Za(bb, cb, sb),
+                  Wb = yW(bb);
+                if ("unsafe" !== kb || Wb === bb) return {
+                  safety: kb,
+                  request: bb
                 };
-                const ak = await ra(tk, Fk, !0);
-                return "unchecked" === ak ? {
-                  safety: Rk,
-                  request: kk
+                const ab = await Za(Wb, cb, !0);
+                return "unchecked" === ab ? {
+                  safety: kb,
+                  request: bb
                 } : {
-                  safety: ak,
-                  request: tk
+                  safety: ab,
+                  request: Wb
                 }
-              }(Ek, lk.signal, Mk);
-              return "unchecked" === Fk && uk ? (NB({
+              }(hb, vb.signal, yb);
+              return "unchecked" === cb && tb ? (Bs({
                 role: "assistant",
                 text: "",
                 changes: [],
                 status: "offered",
                 isNotice: !0,
-                ...xk,
+                ...Sb,
                 keyNotice: {
                   notice: "unchecked",
-                  model: uk.model.name,
-                  company: fX(uk.provider, uk.baseUrl, !0)
+                  model: tb.model.name,
+                  company: eT(tb.provider, tb.baseUrl, !0)
                 }
-              }), null) : "personalInfo" === Fk || "unsafe" === Fk ? (wk(Fk), null) : ak
+              }), null) : "personalInfo" === cb || "unsafe" === cb ? (Ib(cb), null) : ab
             };
-          let Hk = Tk ? null !== Ok && void 0 !== Ok ? Ok : Ek : await Jk();
-          if (null === Hk) return;
-          const gk = vk ? {
-              ...mB.current,
-              ...vk
-            } : mB.current,
-            hk = {
-              request: Ek,
-              files: gk,
-              activePath: Nk,
-              errors: ck.slice(-5),
-              history: Dk,
-              codeBlock: BF,
-              failedEdits: dk,
-              canAsk: zk,
-              lookups: fk,
-              canLookUp: Wk < 3 && !bk,
-              canChangeWorldCode: RR(Ik),
-              looksUpDocs: Mk,
-              about: BF ? void 0 : {
-                notes: fF,
-                outline: (bF = tF(gk, new Set(WV().callbackNames())), [bF.callbacks.length > 0 ? `Callbacks: ${bF.callbacks.join(", ")}` : "", bF.commands.length > 0 ? `Commands: ${bF.commands.join(", ")}` : "", bF.functions.length > 0 ? `Functions: ${bF.functions.join(", ")}` : ""].filter((kk => "" !== kk)).join("\n")),
-                canRemember: fF.length < 8
+          let Bb = Ob ? null !== Yb && void 0 !== Yb ? Yb : hb : await Xb();
+          if (null === Bb) return;
+          const Pb = Nb ? {
+              ...Qs.current,
+              ...Nb
+            } : Qs.current,
+            qb = {
+              request: hb,
+              files: Pb,
+              activePath: gb,
+              errors: Eb.slice(-5),
+              history: Kb,
+              codeBlock: cc,
+              failedEdits: Hb,
+              canAsk: Zb,
+              lookups: Qb,
+              canLookUp: Cb < 3 && !Ub,
+              canChangeWorldCode: Wk(xb),
+              looksUpDocs: yb,
+              about: cc ? void 0 : {
+                notes: lc,
+                outline: (Tc = kc(Pb, new Set(eM().callbackNames())), [Tc.callbacks.length > 0 ? `Callbacks: ${Tc.callbacks.join(", ")}` : "", Tc.commands.length > 0 ? `Commands: ${Tc.commands.join(", ")}` : "", Tc.functions.length > 0 ? `Functions: ${Tc.functions.join(", ")}` : ""].filter((bb => "" !== bb)).join("\n")),
+                canRemember: lc.length < 8
               }
             },
-            aF = new Map,
-            sF = kk => {
-              var Fk;
-              const Bk = `${kk.format} ${kk.nativeTools}`,
-                Rk = null !== (Fk = aF.get(Bk)) && void 0 !== Fk ? Fk : it(WV(), hk, kk);
-              return aF.set(Bk, Rk), Rk
+            Wc = new Map,
+            Hc = bb => {
+              var cb;
+              const sb = `${bb.format} ${bb.nativeTools}`,
+                kb = null !== (cb = Wc.get(sb)) && void 0 !== cb ? cb : LW(eM(), qb, bb);
+              return Wc.set(sb, kb), kb
             },
-            mF = kk => sF(wa(kk)),
-            WF = Wt(hk);
-          let vF = 0,
-            iF = null;
-          const YF = async () => {
-            const Fk = Ha();
-            var Rk, tk;
-            Fk > Date.now() && (IF(Date.now()), VF({
+            Qc = bb => Hc(Ha(bb)),
+            ec = NW(qb);
+          let Cc = 0,
+            Nc = null;
+          const Vc = async () => {
+            const cb = ya();
+            var kb, Wb;
+            cb > Date.now() && (xc(Date.now()), fc({
               phase: "waiting",
-              startedAt: kk,
-              until: Fk,
-              playingThrough: Bk
-            }), await (Rk = Fk - Date.now(), tk = lk.signal, new Promise(((kk, Fk) => {
-              const Bk = setTimeout(kk, Rk);
-              tk.addEventListener("abort", (() => {
-                clearTimeout(Bk), Fk(new DOMException("The World Code AI request was stopped", "AbortError"))
+              startedAt: bb,
+              until: cb,
+              playingThrough: sb
+            }), await (kb = cb - Date.now(), Wb = vb.signal, new Promise(((bb, cb) => {
+              const sb = setTimeout(bb, kb);
+              Wb.addEventListener("abort", (() => {
+                clearTimeout(sb), cb(new DOMException("The World Code AI request was stopped", "AbortError"))
               }), {
                 once: !0
               })
             }))));
-            const ak = Date.now();
-            return IF(ak), VF({
+            const ab = Date.now();
+            return xc(ab), fc({
               phase: "thinking",
-              startedAt: ak,
-              playingThrough: Bk
-            }), async function(kk) {
-              var Fk, Bk;
-              let Rk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const tk = Date.now(),
-                ak = new AbortController,
-                Xk = () => {
-                  ak.abort()
+              startedAt: ab,
+              playingThrough: sb
+            }), async function(bb) {
+              var cb, sb;
+              let kb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const Wb = Date.now(),
+                ab = new AbortController,
+                Tb = () => {
+                  ab.abort()
                 };
-              null !== (Fk = Rk.signal) && void 0 !== Fk && Fk.aborted && Xk(), null === (Bk = Rk.signal) || void 0 === Bk || Bk.addEventListener("abort", Xk, {
+              null !== (cb = kb.signal) && void 0 !== cb && cb.aborted && Tb(), null === (sb = kb.signal) || void 0 === sb || sb.addEventListener("abort", Tb, {
                 once: !0
               });
-              const bk = (0, mk.e)(3e4, ak.signal);
-              let wk = !1;
+              const Ub = (0, eb.b)(3e4, ab.signal);
+              let Ib = !1;
               try {
-                const Fk = await La(aa, Ta(da(kk, aa)), bk.signal, (kk => {
-                  if (!wk) {
-                    if (ca(kk.answer)) return wk = !0, void Xk();
-                    var Fk;
-                    (!0 === kk.isCalling || Ga(kk.answer)) && (null === (Fk = Rk.onProgress) || void 0 === Fk || Fk.call(Rk, kk))
+                const cb = await ha(Ta, Ka(fa(bb, Ta)), Ub.signal, (bb => {
+                  if (!Ib) {
+                    if (Oa(bb.answer)) return Ib = !0, void Tb();
+                    var cb;
+                    (!0 === bb.isCalling || Ga(bb.answer)) && (null === (cb = kb.onProgress) || void 0 === cb || cb.call(kb, bb))
                   }
-                }), Rk.tools);
-                if (oa(Fk) && !ca(Fk.answer)) {
-                  const Bk = !1 !== Rk.canNudge ? await Ua(aa, Ta(da(kk, aa)), Fk, ak.signal, (kk => {
-                    if (!wk) {
-                      if (ca(kk.answer)) return wk = !0, void Xk();
-                      var Fk;
-                      (!0 === kk.isCalling || Ga(kk.answer)) && (null === (Fk = Rk.onProgress) || void 0 === Fk || Fk.call(Rk, kk))
+                }), kb.tools);
+                if (Ya(cb) && !Oa(cb.answer)) {
+                  const sb = !1 !== kb.canNudge ? await ia(Ta, Ka(fa(bb, Ta)), cb, ab.signal, (bb => {
+                    if (!Ib) {
+                      if (Oa(bb.answer)) return Ib = !0, void Tb();
+                      var cb;
+                      (!0 === bb.isCalling || Ga(bb.answer)) && (null === (cb = kb.onProgress) || void 0 === cb || cb.call(kb, bb))
                     }
-                  }), Rk.tools, 3e4) : Fk;
-                  if (!ca(Bk.answer)) return {
-                    ...Bk,
-                    ms: Date.now() - tk
+                  }), kb.tools, 3e4) : cb;
+                  if (!Oa(sb.answer)) return {
+                    ...sb,
+                    ms: Date.now() - Wb
                   }
                 }
-              } catch (Vk) {
-                var dk;
-                if (null !== (dk = Rk.signal) && void 0 !== dk && dk.aborted) throw Vk;
-                wk || console.warn(`World Code AI: ${aa.name} couldn't be reached`, Vk)
+              } catch (Mb) {
+                var Hb;
+                if (null !== (Hb = kb.signal) && void 0 !== Hb && Hb.aborted) throw Mb;
+                Ib || console.warn(`World Code AI: ${Ta.name} couldn't be reached`, Mb)
               } finally {
-                var sk;
-                bk.clear(), null === (sk = Rk.signal) || void 0 === sk || sk.removeEventListener("abort", Xk)
+                var fb;
+                Ub.clear(), null === (fb = kb.signal) || void 0 === fb || fb.removeEventListener("abort", Tb)
               }
               return {
-                ...await ua(kk, Rk),
-                ms: Date.now() - tk
+                ...await Pa(bb, kb),
+                ms: Date.now() - Wb
               }
-            }(mF, {
-              signal: lk.signal,
-              tools: WF,
-              canNudge: !bk,
-              onProgress: kk => {
-                const Fk = Date.now(),
-                  Rk = kk.model !== iF;
-                if (iF = kk.model, !Rk && Fk - vF < 150) return;
-                vF = Fk;
-                const tk = function(kk, Fk) {
-                  const Bk = function(kk) {
-                      return kk.replace(/<think>[\s\S]*?(?:<\/think>|$)/g, "")
-                    }(kk),
-                    Rk = fs.exec(Bk);
-                  let tk = Rk ? Bk.slice(0, Rk.index) : Bk;
-                  tk = tk.replace(/<[\w_]*$/, "").trim();
-                  const ak = Bk.trimEnd(),
-                    Xk = VB(Bk, Fk).filter((kk => !/^<(?:tool_call|function=)/.test(kk.source) || /<\/(?:tool_call|invoke|function)>\s*$/.test(kk.source) || !ak.endsWith(kk.source.trimEnd()))),
-                    bk = Xk.flatMap((kk => {
-                      var Fk;
-                      const Bk = null === (Fk = kk.args.why) || void 0 === Fk ? void 0 : Fk.trim();
-                      return Bk ? [Bk.charAt(0).toUpperCase() + Bk.slice(1)] : []
+            }(Qc, {
+              signal: vb.signal,
+              tools: ec,
+              canNudge: !Ub,
+              onProgress: bb => {
+                const cb = Date.now(),
+                  kb = bb.model !== Nc;
+                if (Nc = bb.model, !kb && cb - Cc < 150) return;
+                Cc = cb;
+                const Wb = function(bb, cb) {
+                  const sb = function(bb) {
+                      return bb.replace(/<think>[\s\S]*?(?:<\/think>|$)/g, "")
+                    }(bb),
+                    kb = lf.exec(sb);
+                  let Wb = kb ? sb.slice(0, kb.index) : sb;
+                  Wb = Wb.replace(/<[\w_]*$/, "").trim();
+                  const ab = sb.trimEnd(),
+                    Tb = fs(sb, cb).filter((bb => !/^<(?:tool_call|function=)/.test(bb.source) || /<\/(?:tool_call|invoke|function)>\s*$/.test(bb.source) || !ab.endsWith(bb.source.trimEnd()))),
+                    Ub = Tb.flatMap((bb => {
+                      var cb;
+                      const sb = null === (cb = bb.args.why) || void 0 === cb ? void 0 : cb.trim();
+                      return sb ? [sb.charAt(0).toUpperCase() + sb.slice(1)] : []
                     }));
                   return {
-                    text: tk,
-                    whys: [...new Set(bk)],
-                    isWritingCode: null !== Rk,
-                    calls: Xk.length
+                    text: Wb,
+                    whys: [...new Set(Ub)],
+                    isWritingCode: null !== kb,
+                    calls: Tb.length
                   }
-                }(kk.answer, ba(kk.model));
-                VF({
-                  phase: "" !== tk.text || tk.isWritingCode ? "writing" : "thinking",
-                  startedAt: ak,
-                  playingThrough: Bk,
-                  reasoningChars: kk.reasoningChars,
-                  model: kk.model
+                }(bb.answer, Ia(bb.model));
+                fc({
+                  phase: "" !== Wb.text || Wb.isWritingCode ? "writing" : "thinking",
+                  startedAt: ab,
+                  playingThrough: sb,
+                  reasoningChars: bb.reasoningChars,
+                  model: bb.model
                 })
               }
             })
-          }, oF = (RF = null === (wF = bb.getState().status) || void 0 === wF ? void 0 : wF.provider, Bb[null !== RF && void 0 !== RF ? RF : "ovh"]), LF = kk => {
-            kB.current = null, nk.drop(pk), uB(pk, {
+          }, Lc = (sc = null === (Uc = IU.getState().status) || void 0 === Uc ? void 0 : Uc.provider, kU[null !== sc && void 0 !== sc ? sc : "ovh"]), uc = bb => {
+            pc.current = null, Fb.drop(rb), ys(rb, {
               isNotice: !0
-            }), NB({
+            }), Bs({
               role: "assistant",
-              text: "unsafe" === kk ? "That answer didn't pass Bloxd's safety check, so it isn't shown. Try again, or ask in a different way." : "Bloxd's safety check couldn't look at that answer, so it isn't shown. Try again in a minute.",
+              text: "unsafe" === bb ? "That answer didn't pass Bloxd's safety check, so it isn't shown. Try again, or ask in a different way." : "Bloxd's safety check couldn't look at that answer, so it isn't shown. Try again in a minute.",
               changes: [],
               status: "offered",
               isNotice: !0,
-              ...xk
+              ...Sb
             })
-          }, OF = async () => {
-            var kk;
-            const Fk = Date.now();
-            IF(Fk), VF({
+          }, Yc = async () => {
+            var bb;
+            const cb = Date.now();
+            xc(cb), fc({
               phase: "thinking",
-              startedAt: Fk,
-              playingThrough: Bk,
+              startedAt: cb,
+              playingThrough: sb,
               isSuperBot: !0
             });
-            const Rk = rk < 0 ? XF : XF.slice(0, rk),
-              ak = Rk.findLastIndex((kk => "assistant" === kk.role && !kk.isNotice && !kk.leftOut && HB(kk))),
-              Xk = Rk[ak],
-              bk = Rk.findIndex((kk => kk.id === Yk)),
-              sk = Rk.slice(0, Math.max(0, ak)).findLastIndex((kk => "user" === kk.role)),
-              Vk = void 0 === Ak && (void 0 === Yk || bk >= 0 && bk < ak && bk >= sk) && "object" === typeof(null === Xk || void 0 === Xk ? void 0 : Xk.answeredBy) && !0 === Xk.answeredBy.isSuperBot,
-              Jk = wa(oF),
-              ek = it(WV(), hk, Jk, {
+            const kb = Gb < 0 ? ac : ac.slice(0, Gb),
+              ab = kb.findLastIndex((bb => "assistant" === bb.role && !bb.isNotice && !bb.leftOut && ts(bb))),
+              Tb = kb[ab],
+              Ub = kb.findIndex((bb => bb.id === Lb)),
+              fb = kb.slice(0, Math.max(0, ab)).findLastIndex((bb => "user" === bb.role)),
+              Mb = void 0 === nb && (void 0 === Lb || Ub >= 0 && Ub < ab && Ub >= fb) && "object" === typeof(null === Tb || void 0 === Tb ? void 0 : Tb.answeredBy) && !0 === Tb.answeredBy.isSuperBot,
+              Xb = Ha(Lc),
+              mb = LW(eM(), qb, Xb, {
                 docsInTurn: !0
               }),
-              yk = Wt(hk, Jk.format),
-              fk = "deepseek" === Jk.format ? {
-                ws: it(WV(), hk, Jk, {
+              lb = NW(qb, Xb.format),
+              Qb = "deepseek" === Xb.format ? {
+                tQ: LW(eM(), qb, Xb, {
                   docsInTurn: !0,
-                  ws: !0
+                  tQ: !0
                 }).at(-1),
-                toolResults: [...(null !== dk && void 0 !== dk ? dk : []).flatMap((kk => kk.call ? [{
-                  ...kk.call,
-                  text: kt(kk)
-                }] : [])), ...(null !== (kk = hk.lookups) && void 0 !== kk ? kk : []).flatMap((kk => kk.call ? [{
-                  ...kk.call,
-                  text: `${kk.about}:\n${kk.text}`
+                toolResults: [...(null !== Hb && void 0 !== Hb ? Hb : []).flatMap((bb => bb.call ? [{
+                  ...bb.call,
+                  text: sW(bb)
+                }] : [])), ...(null !== (bb = qb.lookups) && void 0 !== bb ? bb : []).flatMap((bb => bb.call ? [{
+                  ...bb.call,
+                  text: `${bb.about}:\n${bb.text}`
                 }] : []))].slice(-20)
               } : {};
-            let mk;
+            let eb;
             try {
-              mk = await async function(kk, Fk, Bk, Rk, tk) {
-                var ak;
+              eb = await async function(bb, cb, sb, kb, Wb) {
+                var ab;
                 let {
-                  ws: Xk,
-                  toolResults: bk,
-                  request: wk,
-                  code: dk
+                  tQ: Tb,
+                  toolResults: Ub,
+                  request: Ib,
+                  code: Hb
                 } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-                const sk = Date.now(),
-                  Vk = "system" === (null === (ak = Fk[0]) || void 0 === ak ? void 0 : ak.role) ? Fk[0].content : "",
-                  Jk = JSON.stringify(Ya(Bk)),
-                  Ak = null !== Rk && Rk.system === Vk && Rk.toolsJson === Jk,
-                  ek = null !== Xk && void 0 !== Xk ? Xk : Fk[Fk.length - 1],
-                  yk = bk && bk.length > 0 ? {
-                    toolResults: bk
+                const fb = Date.now(),
+                  Mb = "system" === (null === (ab = cb[0]) || void 0 === ab ? void 0 : ab.role) ? cb[0].content : "",
+                  Xb = JSON.stringify(ua(sb)),
+                  nb = null !== kb && kb.system === Mb && kb.toolsJson === Xb,
+                  mb = null !== Tb && void 0 !== Tb ? Tb : cb[cb.length - 1],
+                  lb = Ub && Ub.length > 0 ? {
+                    toolResults: Ub
                   } : {},
-                  fk = {
-                    ...wk ? {
-                      request: wk
+                  Qb = {
+                    ...Ib ? {
+                      request: Ib
                     } : {},
-                    ...dk ? {
-                      code: dk
+                    ...Hb ? {
+                      code: Hb
                     } : {}
                   };
-                let mk = await ib(vb(Ak ? {
-                  chatId: Rk.chatId,
-                  messages: [ek],
-                  ...yk,
-                  ...fk
+                let eb = await LU(VU(nb ? {
+                  chatId: kb.chatId,
+                  messages: [mb],
+                  ...lb,
+                  ...Qb
                 } : {
-                  messages: Fk,
-                  toolsJson: Jk,
-                  ...fk
-                }), tk);
-                if ("newChat" === mk.outcome && Ak && (mk = await ib(vb({
-                    messages: Fk,
-                    toolsJson: Jk,
-                    ...fk
-                  }), tk)), "status" in mk && bb.setStatus(mk.status), "refused" === mk.outcome) return {
+                  messages: cb,
+                  toolsJson: Xb,
+                  ...Qb
+                }), Wb);
+                if ("newChat" === eb.outcome && nb && (eb = await LU(VU({
+                    messages: cb,
+                    toolsJson: Xb,
+                    ...Qb
+                  }), Wb)), "status" in eb && IU.setStatus(eb.status), "refused" === eb.outcome) return {
                   kind: "refused",
-                  safety: mk.safety
+                  safety: eb.safety
                 };
-                if ("blocked" === mk.outcome) return {
+                if ("blocked" === eb.outcome) return {
                   kind: "blocked",
-                  safety: mk.safety
+                  safety: eb.safety
                 };
-                if ("answered" !== mk.outcome) return {
-                  kind: "newChat" === mk.outcome ? "failed" : mk.outcome
+                if ("answered" !== eb.outcome) return {
+                  kind: "newChat" === eb.outcome ? "failed" : eb.outcome
                 };
-                const Wk = Oa(kk, mk.answer, mk.reasoning, mk.toolCalls, mk.isCutShort);
-                return null === Wk ? {
+                const Cb = Ja(bb, eb.answer, eb.reasoning, eb.toolCalls, eb.isCutShort);
+                return null === Cb ? {
                   kind: "failed"
                 } : {
                   kind: "answered",
                   reply: {
-                    ...Wk,
-                    ms: Date.now() - sk
+                    ...Cb,
+                    ms: Date.now() - fb
                   },
                   chat: {
-                    chatId: mk.chatId,
-                    system: Vk,
-                    toolsJson: Jk
+                    chatId: eb.chatId,
+                    system: Mb,
+                    toolsJson: Xb
                   }
                 }
-              }(oF, ek, yk, Vk ? kB.current : null, lk.signal, {
-                ...fk,
-                ...tk ? {
-                  request: Ek
+              }(Lc, mb, lb, Mb ? pc.current : null, vb.signal, {
+                ...Qb,
+                ...Wb ? {
+                  request: hb
                 } : {},
-                code: yt(hk, Jk.format)
+                code: QW(qb, Xb.format)
               })
-            } catch (ik) {
-              if (lk.signal.aborted) throw ik;
-              console.warn("AI Helper: Super Bot.xd couldn't be reached", ik), mk = {
+            } catch (Vb) {
+              if (vb.signal.aborted) throw Vb;
+              console.warn("AI Helper: Super Bot.xd couldn't be reached", Vb), eb = {
                 kind: "failed"
               }
             }
-            if ("answered" === mk.kind) return kB.current = mk.chat, {
-              ...mk.reply,
-              promptVersion: Ia(ek)
+            if ("answered" === eb.kind) return pc.current = eb.chat, {
+              ...eb.reply,
+              promptVersion: pa(mb)
             };
-            if ("refused" === mk.kind) return wk(mk.safety), "stopped";
-            if ("blocked" === mk.kind) return LF(mk.safety), "stopped";
-            kB.current = null, MF = "free";
-            const Wk = bb.getState(),
-              vk = "unavailable" === mk.kind && yb(Wk);
-            return vk && Hb(), {
-              fallbackNotice: vk ? "You don't have any Super Bot.xd usage left, so Bot.xd is answering this one." : Wb(mk.kind, Wk.status)
+            if ("refused" === eb.kind) return Ib(eb.safety), "stopped";
+            if ("blocked" === eb.kind) return uc(eb.safety), "stopped";
+            pc.current = null, yc = "free";
+            const Cb = IU.getState(),
+              Nb = "unavailable" === eb.kind && QU(Cb);
+            return Nb && yU(), {
+              fallbackNotice: Nb ? "You don't have any Super Bot.xd usage left, so Bot.xd is answering this one." : NU(eb.kind, Cb.status)
             }
           };
-          let EF, SF, NF, HF, MF = Sk || lX.getState().keys.length > 0 ? "free" : void 0,
-            gF = !1;
-          if (uk) {
-            const Fk = {
-              format: ma(uk.model.callFormat),
-              nativeTools: !0 === uk.model.nativeTools
+          let hc, Jc, gc, Bc, yc = Jb || xT.getState().keys.length > 0 ? "free" : void 0,
+            Pc = !1;
+          if (tb) {
+            const cb = {
+              format: Ca(tb.model.callFormat),
+              nativeTools: !0 === tb.model.nativeTools
             };
-            SF = Fk.format;
-            const tk = [...sF(Fk)];
-            var JF;
-            if (HF = {
+            Jc = cb.format;
+            const Wb = [...Hc(cb)];
+            var Mc;
+            if (Bc = {
                 responder: "key",
-                model: uk.model.name,
-                promptVersion: Ia(tk)
-              }, void 0 !== yk) "" !== yk && tk.push({
+                model: tb.model.name,
+                promptVersion: pa(Wb)
+              }, void 0 !== lb) "" !== lb && Wb.push({
               role: "assistant",
-              content: yk
-            }), tk.push({
+              content: lb
+            }), Wb.push({
               role: "user",
-              content: (FF = null === Ck || void 0 === Ck || null === (JF = Ck.cutShort) || void 0 === JF ? void 0 : JF.cutCall, "Your answer was cut short. Continue exactly where you stopped, from the next character: don't repeat anything or start again, and add nothing before it." + (FF ? ` Your ${FF.name} call${FF.path?` for ${FF.path}`:""} was cut off part way and didn't come through: make that call again in full.` : ""))
+              content: (bc = null === Ab || void 0 === Ab || null === (Mc = Ab.cutShort) || void 0 === Mc ? void 0 : Mc.cutCall, "Your answer was cut short. Continue exactly where you stopped, from the next character: don't repeat anything or start again, and add nothing before it." + (bc ? ` Your ${bc.name} call${bc.path?` for ${bc.path}`:""} was cut off part way and didn't come through: make that call again in full.` : ""))
             });
-            VF({
+            fc({
               phase: "thinking",
-              startedAt: kk,
-              playingThrough: Bk,
-              keyModel: Rk
+              startedAt: bb,
+              playingThrough: sb,
+              keyModel: kb
             });
-            const ak = Fk => {
-              VF({
-                phase: "" === Fk.answer ? "thinking" : "writing",
-                startedAt: kk,
-                playingThrough: Bk,
-                keyModel: Rk
+            const ab = cb => {
+              fc({
+                phase: "" === cb.answer ? "thinking" : "writing",
+                startedAt: bb,
+                playingThrough: sb,
+                keyModel: kb
               })
             };
             try {
-              const kk = await QX(uk, tk, {
-                signal: lk.signal,
-                onProgress: ak,
-                tools: WF,
-                continueFrom: yk
+              const bb = await bU(tb, Wb, {
+                signal: vb.signal,
+                onProgress: ab,
+                tools: ec,
+                continueFrom: lb
               });
-              EF = kk, MF = {
-                model: uk.name ? `${uk.name} \xb7 ${uk.model.name}` : uk.model.name
-              }, kk.isCutShort && (NF = function(kk, Fk, Bk) {
+              hc = bb, yc = {
+                model: tb.name ? `${tb.name} \xb7 ${tb.model.name}` : tb.model.name
+              }, bb.isCutShort && (gc = function(bb, cb, sb) {
                 return {
-                  request: Bk,
-                  written: Fk.written,
-                  cutCall: Fk.cutCall,
-                  keyId: kk.id,
-                  modelId: kk.model.id
+                  request: sb,
+                  written: cb.written,
+                  cutCall: cb.cutCall,
+                  keyId: bb.id,
+                  modelId: bb.model.id
                 }
-              }(uk, kk, Ek))
-            } catch (yF) {
-              if (!(yF instanceof mX) || lk.signal.aborted) throw yF;
-              return void TB(yF, uk, pk, xk)
+              }(tb, bb, hb))
+            } catch (mc) {
+              if (!(mc instanceof CT) || vb.signal.aborted) throw mc;
+              return void Gs(mc, tb, rb, Sb)
             }
           } else {
-            const kk = Tk ? await OF() : null;
-            if ("stopped" === kk) return;
-            if (kk && !("fallbackNotice" in kk)) {
-              var AF;
-              EF = kk, HF = {
+            const bb = Ob ? await Yc() : null;
+            if ("stopped" === bb) return;
+            if (bb && !("fallbackNotice" in bb)) {
+              var Xc;
+              hc = bb, Bc = {
                 responder: "super_bot_xd",
-                model: oF.name,
-                promptVersion: kk.promptVersion
-              }, SF = null !== (AF = oF.callFormat) && void 0 !== AF ? AF : "simple", MF = {
-                model: Fb,
+                model: Lc.name,
+                promptVersion: bb.promptVersion
+              }, Jc = null !== (Xc = Lc.callFormat) && void 0 !== Xc ? Xc : "simple", yc = {
+                model: sU,
                 isSuperBot: !0
-              }, gF = !0
+              }, Pc = !0
             } else {
-              if (Tk) {
-                const kk = await Jk();
-                if (null === kk) return;
-                Hk = kk
+              if (Ob) {
+                const bb = await Xb();
+                if (null === bb) return;
+                Bb = bb
               }
-              let Fk;
-              kk && "fallbackNotice" in kk && NB({
+              let cb;
+              bb && "fallbackNotice" in bb && Bs({
                 role: "assistant",
-                text: kk.fallbackNotice,
+                text: bb.fallbackNotice,
                 changes: [],
                 status: "offered",
                 isNotice: !0
               });
               try {
-                Fk = await YF()
-              } catch (yF) {
-                if (!(yF instanceof ea && "busy" === yF.reason)) throw yF;
-                Fk = await YF()
+                cb = await Vc()
+              } catch (mc) {
+                if (!(mc instanceof la && "busy" === mc.reason)) throw mc;
+                cb = await Vc()
               }
-              uF.current = function(kk, Fk, Bk) {
-                  var Rk;
-                  return !Number.isFinite(Bk) || Bk <= 0 ? kk : {
-                    ...kk,
-                    [Fk]: [...null !== (Rk = kk[Fk]) && void 0 !== Rk ? Rk : [], Bk].slice(-10)
+              tc.current = function(bb, cb, sb) {
+                  var kb;
+                  return !Number.isFinite(sb) || sb <= 0 ? bb : {
+                    ...bb,
+                    [cb]: [...null !== (kb = bb[cb]) && void 0 !== kb ? kb : [], sb].slice(-10)
                   }
-                }(uF.current, Fk.model, Fk.ms),
-                function(kk) {
+                }(tc.current, cb.model, cb.ms),
+                function(bb) {
                   try {
-                    localStorage.setItem(Os, JSON.stringify(kk))
+                    localStorage.setItem(Yf, JSON.stringify(bb))
                   } catch {}
-                }(uF.current), EF = Fk, SF = ba(Fk.model);
-              const Bk = Xa(Fk.model);
-              HF = {
+                }(tc.current), hc = cb, Jc = Ia(cb.model);
+              const sb = Ua(cb.model);
+              Bc = {
                 responder: "bot_xd",
-                model: Fk.model,
-                promptVersion: Bk ? Ia(mF(Bk)) : ""
+                model: cb.model,
+                promptVersion: sb ? pa(Qc(sb)) : ""
               }
             }
           }
-          const UF = WV(),
-            cF = KR(EF.answer, SF, gk, Nk, UF.callbackNames(), BF ? ek.c : void 0, Ik, new Set([At(gk, Nk, BF), Nk, ...ik, ...Object.keys(null !== vk && void 0 !== vk ? vk : {})].filter((kk => null !== kk))), UF.realName),
-            GF = bk ? {
-              ...cF,
+          const Dc = eM(),
+            Ec = vk(hc.answer, Jc, Pb, gb, Dc.callbackNames(), cc ? mb.d : void 0, xb, new Set([mW(Pb, gb, cc), gb, ...Vb, ...Object.keys(null !== Nb && void 0 !== Nb ? Nb : {})].filter((bb => null !== bb))), Dc.realName),
+            ic = Ub ? {
+              ...Ec,
               changes: [],
               failedEdits: [],
               inPlace: !1,
               worldCode: [],
               plan: [],
               actions: []
-            } : cF;
-          if (!gF) {
-            const kk = Date.now();
-            IF(kk), VF({
+            } : Ec;
+          if (!Pc) {
+            const bb = Date.now();
+            xc(bb), fc({
               phase: "screening",
-              startedAt: kk,
-              playingThrough: Bk,
-              keyModel: Rk
+              startedAt: bb,
+              playingThrough: sb,
+              keyModel: kb
             });
-            const Fk = await Ls(Hk, GF, lk.signal, (Fk => {
-              IF(Date.now()), VF({
+            const cb = await uf(Bb, ic, vb.signal, (cb => {
+              xc(Date.now()), fc({
                 phase: "screening",
-                startedAt: kk,
-                playingThrough: Bk,
-                keyModel: Rk,
-                until: Fk
+                startedAt: bb,
+                playingThrough: sb,
+                keyModel: kb,
+                until: cb
               })
             }));
-            if ("ok" !== Fk) return void LF(Fk)
+            if ("ok" !== cb) return void uc(cb)
           }
-          nk.answered(pk, {
-            input: hk,
-            responder: HF.responder,
-            promptVersion: HF.promptVersion
+          Fb.answered(rb, {
+            input: qb,
+            responder: Bc.responder,
+            promptVersion: Bc.promptVersion
           }, {
-            model: HF.model,
-            text: EF.answer
+            model: Bc.model,
+            text: hc.answer
           });
-          const TF = function(kk) {
-              let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BF;
-              return kk.flatMap((kk => wV(UF, kk, Fk && !(0, ek.d)(kk.path))))
+          const Oc = function(bb) {
+              let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : cc;
+              return bb.flatMap((bb => UM(Dc, bb, cb && !(0, mb.e)(bb.path))))
             },
-            rF = TF(GF.changes),
-            DF = "direct" === Ik ? function(kk) {
-              return kk.flatMap((kk => {
-                var Fk;
-                return null !== (Fk = sw(kk)) && void 0 !== Fk ? Fk : []
+            Gc = Oc(ic.changes),
+            Kc = "direct" === xb ? function(bb) {
+              return bb.flatMap((bb => {
+                var cb;
+                return null !== (cb = MI(bb)) && void 0 !== cb ? cb : []
               }))
-            }(rF) : [],
-            zF = DF.length > 0 ? {
-              ...GF,
-              changes: GF.changes.map((kk => ({
-                ...kk,
-                after: ew(kk.after, DF)
+            }(Gc) : [],
+            Zc = Kc.length > 0 ? {
+              ...ic,
+              changes: ic.changes.map((bb => ({
+                ...bb,
+                after: lI(bb.after, Kc)
               })))
-            } : GF,
-            PF = zF.changes.filter((kk => BF && (0, ek.d)(kk.path))).map((kk => ({
-              ...kk,
-              path: (0, ek.g)(kk.path)
+            } : ic,
+            zc = Zc.changes.filter((bb => cc && (0, mb.e)(bb.path))).map((bb => ({
+              ...bb,
+              path: (0, mb.g)(bb.path)
             }))),
-            qF = zF.changes.filter((kk => !BF || !(0, ek.d)(kk.path))),
-            CF = PF.length > 0 ? {
-              ...zF,
-              changes: qF,
-              inPlace: zF.inPlace && qF.length > 0
-            } : zF,
-            ZF = PF.length > 0 || DF.length > 0 ? TF(CF.changes) : rF,
-            pF = ZF.filter(RV),
-            KF = CF.inPlace && Uk && pF.length > 0 && Vk < 3 && !EF.isCutShort && !EF.hasCallsFromReasoning,
-            xF = "direct" === Ik && Uk,
-            jF = CF.failedEdits.filter((kk => "unread" === kk.reason)),
-            lF = !xF || bk || void 0 !== Lk || BF ? [] : jF.flatMap((kk => null !== kk.path && void 0 !== kk.code ? [{
-              path: kk.path,
-              code: kk.code
+            dc = Zc.changes.filter((bb => !cc || !(0, mb.e)(bb.path))),
+            Ac = zc.length > 0 ? {
+              ...Zc,
+              changes: dc,
+              inPlace: Zc.inPlace && dc.length > 0
+            } : Zc,
+            wc = zc.length > 0 || Kc.length > 0 ? Oc(Ac.changes) : Gc,
+            rc = wc.filter(sM),
+            oc = Ac.inPlace && Db && rc.length > 0 && Mb < 3 && !hc.isCutShort && !hc.hasCallsFromReasoning,
+            Sc = "direct" === xb && Db,
+            Rc = Ac.failedEdits.filter((bb => "unread" === bb.reason)),
+            vc = !Sc || Ub || void 0 !== ub || cc ? [] : Rc.flatMap((bb => null !== bb.path && void 0 !== bb.code ? [{
+              path: bb.path,
+              code: bb.code
             }] : [])),
-            nF = kk => "unread" === kk.reason && lF.some((Fk => Fk.path === kk.path)),
-            QF = CF.failedEdits.filter((kk => !nF(kk))),
-            FB = jF.filter((kk => !nF(kk))),
-            BB = RR(Ik) && CF.worldCode.length > 0 && !bk && 0 === PF.length,
-            RB = Wk < 3 && !bk && !EF.isCutShort,
-            tB = new Set([...WF.map((kk => kk.name)), ...FB.length > 0 ? ["view_file", "view_world_code"] : []]),
-            aB = !RB || lF.length > 0 || PF.length > 0 || KF ? [] : CF.lookups.filter((kk => tB.has(kk.name))),
-            XB = {
-              request: Ek,
-              shown: Fk,
-              userEntryId: pk,
+            Fc = bb => "unread" === bb.reason && vc.some((cb => cb.path === bb.path)),
+            jc = Ac.failedEdits.filter((bb => !Fc(bb))),
+            bs = Rc.filter((bb => !Fc(bb))),
+            cs = Wk(xb) && Ac.worldCode.length > 0 && !Ub && 0 === zc.length,
+            ss = Cb < 3 && !Ub && !hc.isCutShort,
+            ks = new Set([...ec.map((bb => bb.name)), ...bs.length > 0 ? ["view_file", "view_world_code"] : []]),
+            Ws = !ss || vc.length > 0 || zc.length > 0 || oc ? [] : Ac.lookups.filter((bb => ks.has(bb.name))),
+            as = {
+              request: hb,
+              shown: cb,
+              userEntryId: rb,
               options: {
                 check: !1,
-                about: ak,
-                planStep: Xk,
-                wordsOnly: bk,
-                useFree: Sk,
-                isAutoFix: sk,
-                autoFixRound: Vk,
-                failedEdits: [...(null !== dk && void 0 !== dk ? dk : []).map(sV), ...FB],
-                ...Kk,
-                lookupRound: Wk + 1,
-                lookupOf: pk,
-                insertsInto: Lk,
-                guardWords: Hk
+                about: ab,
+                planStep: Tb,
+                wordsOnly: Ub,
+                useFree: Jb,
+                isAutoFix: fb,
+                autoFixRound: Mb,
+                failedEdits: [...(null !== Hb && void 0 !== Hb ? Hb : []).map(HM), ...bs],
+                ...ob,
+                lookupRound: Cb + 1,
+                lookupOf: rb,
+                insertsInto: ub,
+                guardWords: Bb
               }
             },
-            bB = 0 === CF.changes.length && 0 === CF.worldCode.length,
-            wB = aB.length > 0 && ("direct" === Ik || Mk && bB && aB.every(Et)),
-            dB = wB && bB && 0 === CF.notes.length,
-            JB = zk ? CF.question : null,
-            AB = EF.isCutShort ? CF.text.replace(/(<tool_call|<function=|<\|channel\||\{\s*"jsonrpc")[\s\S]*$/, "").trim() : CF.text,
-            eB = EF.isCutShort && !NF ? "\n\nThe answer got too long and was cut off, so part of it is missing. Try asking for one thing at a time." : "",
-            fB = QF.length > 0 && CF.changes.length > 0 && !EF.isCutShort ? "\n\nPart of this answer couldn't go in, so it isn't in the change." : "",
-            WB = () => CF.changes.length > 0 ? "Here's a change for your code." : PF.length > 0 ? "This changes your World Code." : CF.worldCode.length > 0 ? "This needs World Code." : lF.length > 0 ? `I'll put it into ${lF.map((kk=>kk.path)).join(" and ")}.` : JB ? "Quick question before I build it:" : CF.plan.length > 0 ? "That's a big one, so here's a plan to build it a step at a time." : aB.length > 0 ? `I'll look at ${function(kk){var Fk;const Bk=kk.map(ot);return Bk.length<=1?null!==(Fk=Bk[0])&&void 0!==Fk?Fk:"":`${Bk.slice(0,-1).join(", ")} and ${Bk[Bk.length-1]}`}(aB)} first.` : CF.notes.length > 0 ? "Here's something to remember about your game." : CF.actions.length > 0 ? "Sure!" : EF.isCutShort ? "Sorry, that was too much for one answer." : "Sorry, I couldn't work that out. Try asking in a different way.",
-            vB = {
+            Ts = 0 === Ac.changes.length && 0 === Ac.worldCode.length,
+            Us = Ws.length > 0 && ("direct" === xb || yb && Ts && Ws.every(gW)),
+            Is = Us && Ts && 0 === Ac.notes.length,
+            Ms = Zb ? Ac.question : null,
+            Xs = hc.isCutShort ? Ac.text.replace(/(<tool_call|<function=|<\|channel\||\{\s*"jsonrpc")[\s\S]*$/, "").trim() : Ac.text,
+            ns = hc.isCutShort && !gc ? "\n\nThe answer got too long and was cut off, so part of it is missing. Try asking for one thing at a time." : "",
+            ls = jc.length > 0 && Ac.changes.length > 0 && !hc.isCutShort ? "\n\nPart of this answer couldn't go in, so it isn't in the change." : "",
+            es = () => Ac.changes.length > 0 ? "Here's a change for your code." : zc.length > 0 ? "This changes your World Code." : Ac.worldCode.length > 0 ? "This needs World Code." : vc.length > 0 ? `I'll put it into ${vc.map((bb=>bb.path)).join(" and ")}.` : Ms ? "Quick question before I build it:" : Ac.plan.length > 0 ? "That's a big one, so here's a plan to build it a step at a time." : Ws.length > 0 ? `I'll look at ${function(bb){var cb;const sb=bb.map(YW);return sb.length<=1?null!==(cb=sb[0])&&void 0!==cb?cb:"":`${sb.slice(0,-1).join(", ")} and ${sb[sb.length-1]}`}(Ws)} first.` : Ac.notes.length > 0 ? "Here's something to remember about your game." : Ac.actions.length > 0 ? "Sure!" : hc.isCutShort ? "Sorry, that was too much for one answer." : "Sorry, I couldn't work that out. Try asking in a different way.",
+            Cs = {
               role: "assistant",
-              text: (AB || WB()) + eB + fB,
-              changes: CF.changes,
+              text: (Xs || es()) + ns + ls,
+              changes: Ac.changes,
               status: "offered",
-              warnings: ZF,
-              worldCode: CF.worldCode.length > 0 && !BB ? CF.worldCode : void 0,
-              editedInPlace: CF.inPlace && !KF || void 0,
-              failedEdits: QF.length > 0 ? QF : void 0,
-              question: null !== JB && void 0 !== JB ? JB : void 0,
-              askedFor: JB ? {
-                request: Ek,
-                guardWords: Hk
+              warnings: wc,
+              worldCode: Ac.worldCode.length > 0 && !cs ? Ac.worldCode : void 0,
+              editedInPlace: Ac.inPlace && !oc || void 0,
+              failedEdits: jc.length > 0 ? jc : void 0,
+              question: null !== Ms && void 0 !== Ms ? Ms : void 0,
+              askedFor: Ms ? {
+                request: hb,
+                guardWords: Bb
               } : void 0,
-              note: CF.notes[0],
-              plan: CF.plan.length > 0 ? CF.plan : void 0,
-              noteStatus: CF.notes.length > 0 ? xF ? "pending" : "asked" : void 0,
-              answeredBy: MF,
-              oneOff: Gk || void 0,
-              cutShort: NF,
-              byItself: xF || void 0,
-              ...NF ? {
-                retryShown: xk.retryShown,
-                retryOptions: xk.retryOptions
+              note: Ac.notes[0],
+              plan: Ac.plan.length > 0 ? Ac.plan : void 0,
+              noteStatus: Ac.notes.length > 0 ? Sc ? "pending" : "asked" : void 0,
+              answeredBy: yc,
+              oneOff: ib || void 0,
+              cutShort: gc,
+              byItself: Sc || void 0,
+              ...gc ? {
+                retryShown: Sb.retryShown,
+                retryOptions: Sb.retryOptions
               } : {},
-              ...dB ? {
-                logTitle: dV,
+              ...Is ? {
+                logTitle: IM,
                 isCalm: !0
               } : {},
-              ...aB.length > 0 ? {
+              ...Ws.length > 0 ? {
                 lookups: {
-                  lookups: aB,
-                  followUp: XB
+                  lookups: Ws,
+                  followUp: as
                 },
-                lookedAt: wB || void 0
+                lookedAt: Us || void 0
               } : {}
             },
-            iB = qk && void 0 !== Ak ? (Qk = Ak, kF = vB, dF((kk => kk.map((kk => kk.id === Qk ? {
-              ...kF,
-              id: Qk,
-              target: kk.target
-            } : kk)))), Qk) : NB(vB),
-            YB = CF.inPlace && Uk && !KF && !EF.isCutShort && !EF.hasCallsFromReasoning,
-            oB = YB && await lB({
-              id: iB,
-              changes: CF.changes
-            }, ak);
-          !CF.inPlace || KF || oB || uB(iB, {
+            Ns = db && void 0 !== nb ? (jb = nb, pb = Cs, Ic((bb => bb.map((bb => bb.id === jb ? {
+              ...pb,
+              id: jb,
+              target: bb.target
+            } : bb)))), jb) : Bs(Cs),
+            Vs = Ac.inPlace && Db && !oc && !hc.isCutShort && !hc.hasCallsFromReasoning,
+            Ls = Vs && await Fs({
+              id: Ns,
+              changes: Ac.changes
+            }, ab);
+          !Ac.inPlace || oc || Ls || ys(Ns, {
             editedInPlace: void 0
           });
-          const LB = 0 === CF.changes.length && 0 === QF.length && 0 === lF.length && 0 === PF.length && 0 === CF.worldCode.length;
-          if (xF && void 0 !== vB.note && ((oB || KF || LB) && !lk.signal.aborted ? OR({
-              id: iB,
-              note: vB.note,
+          const us = 0 === Ac.changes.length && 0 === jc.length && 0 === vc.length && 0 === zc.length && 0 === Ac.worldCode.length;
+          if (Sc && void 0 !== Cs.note && ((Ls || oc || us) && !vb.signal.aborted ? Jk({
+              id: Ns,
+              note: Cs.note,
               changes: [],
               status: "applied"
-            }, !0) : YB && !lk.signal.aborted ? LR(iB, "declined") : LR(iB, "asked")), lk.signal.aborted) return void NB({
+            }, !0) : Vs && !vb.signal.aborted ? hk(Ns, "declined") : hk(Ns, "asked")), vb.signal.aborted) return void Bs({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14212,56 +14212,56 @@ const KV = (0, Rk.memo)((function(kk) {
             isNotice: !0,
             isCalm: !0
           });
-          KF && (uB(iB, {
+          oc && (ys(Ns, {
             warningsSentBack: !0
-          }), hF((kk => [{
-            id: yB(),
-            text: (0, Xd.s)(pF),
+          }), qc((bb => [{
+            id: ms(),
+            text: (0, TH.w)(rc),
             shown: "Fix this line",
             check: !1,
             isAutoFix: !0,
-            autoFixRound: Vk + 1
-          }, ...kk]))), oB && Hs(CF.changes, Nk).forEach(((kk, Fk) => {
-            const Bk = () => {
-              NB({
+            autoFixRound: Mb + 1
+          }, ...bb]))), Ls && Bf(Ac.changes, gb).forEach(((bb, cb) => {
+            const sb = () => {
+              Bs({
                 role: "assistant",
-                text: us(kk.path),
+                text: tf(bb.path),
                 changes: [],
                 status: "offered",
                 isNotice: !0,
                 isCalm: !0
-              }), Pk(kk.path, kk.line)
+              }), zb(bb.path, bb.line)
             };
-            0 === Fk ? Bk() : sB(Bk, 1200 * Fk)
+            0 === cb ? sb() : Hs(sb, 1200 * cb)
           }));
-          const OB = 0 === aB.length && CF.actions.some((kk => "exportGame" === kk.kind));
-          Uk && OB && "direct" === Ik ? kR(CF.changes.length > 0 && !oB) : Uk && (OB || lR(Hk) && !BF) && uB(iB, {
+          const Ys = 0 === Ws.length && Ac.actions.some((bb => "exportGame" === bb.kind));
+          Db && Ys && "direct" === xb ? ck(Ac.changes.length > 0 && !Ls) : Db && (Ys || jk(Bb) && !cc) && ys(Ns, {
             offerExport: !0
           });
-          const EB = 0 === aB.length ? CF.actions.find((kk => "switchToWorldCode" === kk.kind)) : void 0,
-            SB = CF.changes.length > 0 && !oB && Uk,
-            MB = oB ? CF.changes.map((kk => ({
-              path: kk.path,
-              text: kk.before
+          const hs = 0 === Ws.length ? Ac.actions.find((bb => "switchToWorldCode" === bb.kind)) : void 0,
+            gs = Ac.changes.length > 0 && !Ls && Db,
+            Ps = Ls ? Ac.changes.map((bb => ({
+              path: bb.path,
+              text: bb.before
             }))) : void 0,
-            gB = PF.length > 0 && xF && !!jk,
-            UB = gB && !SB;
-          if (PF.length > 0) {
-            const kk = NB({
+            Ds = zc.length > 0 && Sc && !!Rb,
+            Es = Ds && !gs;
+          if (zc.length > 0) {
+            const bb = Bs({
               role: "assistant",
               text: "This is the part of the change that goes in World Code.",
-              changes: PF,
+              changes: zc,
               status: "offered",
-              warnings: TF(PF, !1),
-              answeredBy: MF,
-              byItself: UB || void 0
-            }, Ss.i);
-            gB && BR(kk, SB)
+              warnings: Oc(zc, !1),
+              answeredBy: yc,
+              byItself: Es || void 0
+            }, Jf.g);
+            Ds && kk(bb, gs)
           }
-          if ("stopped" === (wB ? await aR(aB, XB, {
-              replaced: MB,
-              signal: lk.signal
-            }) : "none")) return void NB({
+          if ("stopped" === (Us ? await Tk(Ws, as, {
+              replaced: Ps,
+              signal: vb.signal
+            }) : "none")) return void Bs({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14269,108 +14269,108 @@ const KV = (0, Rk.memo)((function(kk) {
             isNotice: !0,
             isCalm: !0
           });
-          const cB = kk => ({
-            request: kk(Ek),
-            guardWords: kk(Hk)
+          const is = bb => ({
+            request: bb(hb),
+            guardWords: bb(Bb)
           });
-          lF.length > 0 && hF((kk => [...lF.map((kk => {
+          vc.length > 0 && qc((bb => [...vc.map((bb => {
             const {
-              request: Fk,
-              guardWords: Bk
-            } = cB((Fk => function(kk, Fk, Bk) {
-              return `They asked: "${kk}"\nYour last answer wrote this for ${Fk}, but you hadn't seen that file, so it didn't go in. ${Fk} is open now, its code above. Put your code into it, keeping everything it already has and changing only what the request needs:\n\`\`\`js\n${Bk.replace(/\s*$/,"")}\n\`\`\``
-            }(Fk, kk.path, kk.code)));
+              request: cb,
+              guardWords: sb
+            } = is((cb => function(bb, cb, sb) {
+              return `They asked: "${bb}"\nYour last answer wrote this for ${cb}, but you hadn't seen that file, so it didn't go in. ${cb} is open now, its code above. Put your code into it, keeping everything it already has and changing only what the request needs:\n\`\`\`js\n${sb.replace(/\s*$/,"")}\n\`\`\``
+            }(cb, bb.path, bb.code)));
             return {
-              id: yB(),
-              text: Fk,
+              id: ms(),
+              text: cb,
               shown: "Put the code in",
               followUp: {
                 check: !1,
-                about: ak,
-                planStep: Xk,
-                useFree: Sk,
-                lookupRound: Wk,
-                lookupOf: pk,
-                insertsInto: kk.path,
-                guardWords: Bk
+                about: ab,
+                planStep: Tb,
+                useFree: Jb,
+                lookupRound: Cb,
+                lookupOf: rb,
+                insertsInto: bb.path,
+                guardWords: sb
               },
-              opensPath: kk.path,
-              ...MB ? {
-                replaced: MB,
-                until: Date.now() + MV
+              opensPath: bb.path,
+              ...Ps ? {
+                replaced: Ps,
+                until: Date.now() + yM
               } : {}
             }
-          })), ...kk]));
-          const GB = xF && !!jk && BF && 0 === PF.length && (BB || "switchToWorldCode" === (null === EB || void 0 === EB ? void 0 : EB.kind) && !bk);
-          if (GB && SB) dF((kk => kk.map((kk => kk.id === iB && CF.worldCode.length > 0 ? {
-            ...kk,
-            worldCode: CF.worldCode
-          } : kk)))), NB({
+          })), ...bb]));
+          const Os = Sc && !!Rb && cc && 0 === zc.length && (cs || "switchToWorldCode" === (null === hs || void 0 === hs ? void 0 : hs.kind) && !Ub);
+          if (Os && gs) Ic((bb => bb.map((bb => bb.id === Ns && Ac.worldCode.length > 0 ? {
+            ...bb,
+            worldCode: Ac.worldCode
+          } : bb)))), Bs({
             role: "assistant",
-            text: UV(CF.worldCode.length > 0),
+            text: DM(Ac.worldCode.length > 0),
             changes: [],
             status: "offered",
             isNotice: !0
           });
-          else if (GB) {
-            var eF;
-            const kk = CF.worldCode.join("\n\n"),
-              Fk = "switchToWorldCode" === (null === EB || void 0 === EB ? void 0 : EB.kind) ? EB.request : null,
-              Bk = BB ? cB((Fk => function(kk, Fk) {
-                return `In a code block, they asked: "${kk}"\nThe code block's answer needs this part in World Code, which is open now, its code above. Put it in, keeping everything World Code already has: a callback it already defines is changed, with what it does kept, never defined twice:\n\`\`\`js\n${Fk.replace(/\s*$/,"")}\n\`\`\``
-              }(Fk, kk))) : null;
-            tR(null !== (eF = null === Bk || void 0 === Bk ? void 0 : Bk.request) && void 0 !== eF ? eF : Fk ? function(kk) {
-              return `In a code block, they asked for this in World Code, which is open now: ${kk}`
-            }(Fk) : null, {
+          else if (Os) {
+            var nc;
+            const bb = Ac.worldCode.join("\n\n"),
+              cb = "switchToWorldCode" === (null === hs || void 0 === hs ? void 0 : hs.kind) ? hs.request : null,
+              sb = cs ? is((cb => function(bb, cb) {
+                return `In a code block, they asked: "${bb}"\nThe code block's answer needs this part in World Code, which is open now, its code above. Put it in, keeping everything World Code already has: a callback it already defines is changed, with what it does kept, never defined twice:\n\`\`\`js\n${cb.replace(/\s*$/,"")}\n\`\`\``
+              }(cb, bb))) : null;
+            ak(null !== (nc = null === sb || void 0 === sb ? void 0 : sb.request) && void 0 !== nc ? nc : cb ? function(bb) {
+              return `In a code block, they asked for this in World Code, which is open now: ${bb}`
+            }(cb) : null, {
               check: !1,
-              about: ak,
-              useFree: Sk,
-              lookupOf: pk,
-              ...Bk ? {
-                guardWords: Bk.guardWords
+              about: ab,
+              useFree: Jb,
+              lookupOf: rb,
+              ...sb ? {
+                guardWords: sb.guardWords
               } : {}
-            }, BB ? kk : void 0)
+            }, cs ? bb : void 0)
           }
-          const rB = !!Zk && 0 === PF.length && !GB && ("switchToWorldCode" === (null === EB || void 0 === EB ? void 0 : EB.kind) || xF && CF.worldCode.length > 0);
-          if (rB) {
-            const kk = "switchToWorldCode" === (null === EB || void 0 === EB ? void 0 : EB.kind) ? EB.request : null;
-            FR(null !== kk && void 0 !== kk ? kk : CF.worldCode.length > 0 ? qV(CF.worldCode) : "", {
-              leavesChangeBehind: SB,
-              hasWorldCodePart: CF.worldCode.length > 0
+          const Ks = !!wb && 0 === zc.length && !Os && ("switchToWorldCode" === (null === hs || void 0 === hs ? void 0 : hs.kind) || Sc && Ac.worldCode.length > 0);
+          if (Ks) {
+            const bb = "switchToWorldCode" === (null === hs || void 0 === hs ? void 0 : hs.kind) ? hs.request : null;
+            sk(null !== bb && void 0 !== bb ? bb : Ac.worldCode.length > 0 ? dM(Ac.worldCode) : "", {
+              leavesChangeBehind: gs,
+              hasWorldCodePart: Ac.worldCode.length > 0
             })
           }
-          if (oB && ZF.length > 0 && Vk < 3 && (!(rB || gB || GB) || SB) && (uB(iB, {
+          if (Ls && wc.length > 0 && Mb < 3 && (!(Ks || Ds || Os) || gs) && (ys(Ns, {
               warningsSentBack: !0
-            }), hF((kk => [{
-              id: yB(),
-              text: (0, Xd.E)(ZF),
-              shown: 1 === ZF.length ? "Fix this line" : "Fix these lines",
+            }), qc((bb => [{
+              id: ms(),
+              text: (0, TH.F)(wc),
+              shown: 1 === wc.length ? "Fix this line" : "Fix these lines",
               check: !1,
               isAutoFix: !0,
-              autoFixRound: Vk + 1,
-              replaced: MB,
-              until: Date.now() + MV
-            }, ...kk]))), xF && QF.length > 0 && (oB || 0 === CF.changes.length && !EF.isCutShort && !KF && !EF.hasCallsFromReasoning) && !JB && 0 === ZF.length && 0 === aB.length && 0 === lF.length && Vk < 3 && !rB && !gB && !GB && hF((kk => [{
-              id: yB(),
-              text: Xd.p,
-              shown: uV,
-              replaced: MB,
-              until: Date.now() + MV,
+              autoFixRound: Mb + 1,
+              replaced: Ps,
+              until: Date.now() + yM
+            }, ...bb]))), Sc && jc.length > 0 && (Ls || 0 === Ac.changes.length && !hc.isCutShort && !oc && !hc.hasCallsFromReasoning) && !Ms && 0 === wc.length && 0 === Ws.length && 0 === vc.length && Mb < 3 && !Ks && !Ds && !Os && qc((bb => [{
+              id: ms(),
+              text: TH.u,
+              shown: tM,
+              replaced: Ps,
+              until: Date.now() + yM,
               followUp: {
                 check: !1,
-                about: ak,
-                planStep: Xk,
-                useFree: Sk,
+                about: ab,
+                planStep: Tb,
+                useFree: Jb,
                 isAutoFix: !0,
-                autoFixRound: Vk + 1,
-                failedEdits: QF
+                autoFixRound: Mb + 1,
+                failedEdits: jc
               }
-            }, ...kk])), oB && "direct" === Ik && 0 === ZF.length && 0 === QF.length && 0 === aB.length && 0 === lF.length && 0 === PF.length && !GB && !rB) {
-            const kk = Hs(CF.changes, Nk).length;
-            bR(iB, Vk, kk > 1 ? 1200 * (kk - 1) + 1500 : 0)
+            }, ...bb])), Ls && "direct" === xb && 0 === wc.length && 0 === jc.length && 0 === Ws.length && 0 === vc.length && 0 === zc.length && !Os && !Ks) {
+            const bb = Bf(Ac.changes, gb).length;
+            Ik(Ns, Mb, bb > 1 ? 1200 * (bb - 1) + 1500 : 0)
           }
-        } catch (yF) {
-          if (lk.signal.aborted) kB.current = null, NB({
+        } catch (mc) {
+          if (vb.signal.aborted) pc.current = null, Bs({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14379,356 +14379,356 @@ const KV = (0, Rk.memo)((function(kk) {
             isCalm: !0
           });
           else {
-            const kk = yF instanceof ea ? yF.reason : "failed";
-            NB({
+            const bb = mc instanceof la ? mc.reason : "failed";
+            Bs({
               role: "assistant",
-              text: ya(kk),
+              text: Qa(bb),
               changes: [],
               status: "offered",
               isNotice: !0,
-              ...xk,
-              retryAt: "busy" === kk ? Date.now() + 6e4 : void 0
-            }), IF(Date.now())
+              ...Sb,
+              retryAt: "busy" === bb ? Date.now() + 6e4 : void 0
+            }), xc(Date.now())
           }
         } finally {
-          QF.current = null, VF(null), nk.requestEnded(pk)
+          jc.current = null, fc(null), Fb.requestEnded(rb)
         }
-      }, TB = (kk, Fk, Bk, Rk) => {
-        const tk = function(kk, Fk) {
-          return "refused" === kk.problem ? null : {
-            notice: kk.problem,
-            model: Fk.model.name,
-            company: fX(Fk.provider, Fk.baseUrl, !0),
-            isServer: "custom" === Fk.provider,
-            detail: kk.detail && WX(kk.detail, Fk.key)
+      }, Gs = (bb, cb, sb, kb) => {
+        const Wb = function(bb, cb) {
+          return "refused" === bb.problem ? null : {
+            notice: bb.problem,
+            model: cb.model.name,
+            company: eT(cb.provider, cb.baseUrl, !0),
+            isServer: "custom" === cb.provider,
+            detail: bb.detail && NT(bb.detail, cb.key)
           }
-        }(kk, Fk);
-        if (!tk) return (kk => {
-          uB(kk, {
+        }(bb, cb);
+        if (!Wb) return (bb => {
+          ys(bb, {
             leftOut: !0
           })
-        })(Bk), void NB({
+        })(sb), void Bs({
           role: "assistant",
-          text: gV,
+          text: PM,
           changes: [],
           status: "offered",
           isNotice: !0
         });
-        NB({
+        Bs({
           role: "assistant",
           text: "",
           changes: [],
           status: "offered",
           isNotice: !0,
-          ...Rk,
-          keyNotice: tk
+          ...kb,
+          keyNotice: Wb
         })
-      }, rB = () => {
-        const kk = DF.trim();
-        if ("" === kk || sF && PF.length >= 3) return;
-        const Fk = OF && null !== DR;
-        if (Fk || !UB((() => {
-            DB.current()
+      }, Ks = () => {
+        const bb = Kc.trim();
+        if ("" === bb || Hc && zc.length >= 3) return;
+        const cb = Yc && null !== zk;
+        if (cb || !Es((() => {
+            Zs.current()
           }))) {
-          if (EF(!1), qF) return pB(Us(qF, kk), cs(qF, kk), {
+          if (hc(!1), dc) return os(Df(dc, bb), Ef(dc, bb), {
             check: !0,
-            useFree: Fk
-          }), CF(null), void zF("");
-          if (sF || null === cR || void 0 === cR || !cR.question) {
-            if (!sF) return zF(""), void GB(kk, void 0, {
-              useFree: Fk
+            useFree: cb
+          }), Ac(null), void Zc("");
+          if (Hc || null === Ok || void 0 === Ok || !Ok.question) {
+            if (!Hc) return Zc(""), void Os(bb, void 0, {
+              useFree: cb
             });
-            PF.length < 3 && (hF([...PF, {
-              id: yB(),
-              text: kk,
-              useFree: Fk
-            }]), zF(""))
+            zc.length < 3 && (qc([...zc, {
+              id: ms(),
+              text: bb,
+              useFree: cb
+            }]), Zc(""))
           } else {
-            var Bk, Rk, tk;
-            zF("");
-            const ak = null !== (Bk = null === (Rk = cR.askedFor) || void 0 === Rk ? void 0 : Rk.request) && void 0 !== Bk ? Bk : "",
-              Xk = Yd(ak, cR.question.question, kk);
-            GB(Xk, kk, {
+            var sb, kb, Wb;
+            Zc("");
+            const ab = null !== (sb = null === (kb = Ok.askedFor) || void 0 === kb ? void 0 : kb.request) && void 0 !== sb ? sb : "",
+              Tb = VH(ab, Ok.question.question, bb);
+            Os(Tb, bb, {
               check: !0,
-              about: null === (tk = cR.askedFor) || void 0 === tk ? void 0 : tk.request,
-              asked: `${ak} ${kk}`,
-              useFree: Fk
+              about: null === (Wb = Ok.askedFor) || void 0 === Wb ? void 0 : Wb.request,
+              asked: `${ab} ${bb}`,
+              useFree: cb
             })
           }
         }
-      }, DB = (0, Rk.useRef)(rB);
-    DB.current = rB;
-    const zB = (0, Rk.useRef)(GB);
-    zB.current = GB;
-    const PB = (0, Rk.useRef)(NB);
-    PB.current = NB;
-    const hB = (0, Rk.useRef)(null),
-      [qB, CB] = (0, Rk.useState)(null),
-      ZB = PF.filter((kk => void 0 === kk.followUp));
+      }, Zs = (0, kb.useRef)(Ks);
+    Zs.current = Ks;
+    const zs = (0, kb.useRef)(Os);
+    zs.current = Os;
+    const qs = (0, kb.useRef)(Bs);
+    qs.current = Bs;
+    const ds = (0, kb.useRef)(null),
+      [As, ws] = (0, kb.useState)(null),
+      rs = zc.filter((bb => void 0 === bb.followUp));
 
-    function pB(kk, Fk, Bk) {
-      if (sF) {
-        if (PF.length < 3) {
-          var Rk;
-          const tk = null !== (Rk = Bk.useFree) && void 0 !== Rk ? Rk : OF && null !== DR;
-          tk && EF(!1), hF([...PF, {
-            id: yB(),
-            text: kk,
-            shown: Fk,
-            ...Bk,
-            useFree: tk
+    function os(bb, cb, sb) {
+      if (Hc) {
+        if (zc.length < 3) {
+          var kb;
+          const Wb = null !== (kb = sb.useFree) && void 0 !== kb ? kb : Yc && null !== zk;
+          Wb && hc(!1), qc([...zc, {
+            id: ms(),
+            text: bb,
+            shown: cb,
+            ...sb,
+            useFree: Wb
           }])
         }
-      } else GB(kk, Fk, Bk)
-    }(0, Rk.useEffect)((() => {
-      var kk, Fk, Bk;
-      const [Rk, ...tk] = PF;
-      if (sF || !Rk || BB > 0) return;
-      const ak = null === (kk = Rk.followUp) || void 0 === kk ? void 0 : kk.lookupOf;
-      if (void 0 !== ak && !XF.some((kk => kk.id === ak))) return void hF(tk);
-      if (null === (Fk = Rk.replaced) || void 0 === Fk ? void 0 : Fk.some((kk => {
-          var Fk;
+      } else Os(bb, cb, sb)
+    }(0, kb.useEffect)((() => {
+      var bb, cb, sb;
+      const [kb, ...Wb] = zc;
+      if (Hc || !kb || cs > 0) return;
+      const ab = null === (bb = kb.followUp) || void 0 === bb ? void 0 : bb.lookupOf;
+      if (void 0 !== ab && !ac.some((bb => bb.id === ab))) return void qc(Wb);
+      if (null === (cb = kb.replaced) || void 0 === cb ? void 0 : cb.some((bb => {
+          var cb;
           let {
-            path: Bk,
-            text: Rk
-          } = kk;
-          return (null !== (Fk = Mk[Bk]) && void 0 !== Fk ? Fk : "") === Rk
+            path: sb,
+            text: kb
+          } = bb;
+          return (null !== (cb = yb[sb]) && void 0 !== cb ? cb : "") === kb
         }))) {
-        var Xk;
-        const kk = (null !== (Xk = Rk.until) && void 0 !== Xk ? Xk : 0) - Date.now();
-        if (kk <= 0) return void hF(tk);
-        const Fk = setTimeout((() => {
-          hF((kk => [...kk]))
-        }), kk);
+        var Tb;
+        const bb = (null !== (Tb = kb.until) && void 0 !== Tb ? Tb : 0) - Date.now();
+        if (bb <= 0) return void qc(Wb);
+        const cb = setTimeout((() => {
+          qc((bb => [...bb]))
+        }), bb);
         return () => {
-          clearTimeout(Fk)
+          clearTimeout(cb)
         }
       }
-      if (void 0 !== Rk.opensPath && Rk.opensPath !== gk) {
-        var bk;
-        (null === (bk = hB.current) || void 0 === bk ? void 0 : bk.id) !== Rk.id && (hB.current = {
-          id: Rk.id,
+      if (void 0 !== kb.opensPath && kb.opensPath !== Pb) {
+        var Ub;
+        (null === (Ub = ds.current) || void 0 === Ub ? void 0 : Ub.id) !== kb.id && (ds.current = {
+          id: kb.id,
           until: Date.now() + 3e3
-        }, PB.current({
+        }, qs.current({
           role: "assistant",
-          text: us(Rk.opensPath),
+          text: tf(kb.opensPath),
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), Pk(Rk.opensPath, 1));
-        const kk = hB.current.until - Date.now();
-        if (kk > 0) {
-          const Fk = setTimeout((() => {
-            hF((kk => [...kk]))
-          }), kk);
+        }), zb(kb.opensPath, 1));
+        const bb = ds.current.until - Date.now();
+        if (bb > 0) {
+          const cb = setTimeout((() => {
+            qc((bb => [...bb]))
+          }), bb);
           return () => {
-            clearTimeout(Fk)
+            clearTimeout(cb)
           }
         }
       }
-      const wk = null !== (Bk = Rk.followUp) && void 0 !== Bk ? Bk : {
-        ...void 0 === Rk.shown ? {} : {
-          check: Rk.check,
-          wordsOnly: Rk.wordsOnly,
-          isAutoFix: Rk.isAutoFix,
-          autoFixRound: Rk.autoFixRound
+      const Ib = null !== (sb = kb.followUp) && void 0 !== sb ? sb : {
+        ...void 0 === kb.shown ? {} : {
+          check: kb.check,
+          wordsOnly: kb.wordsOnly,
+          isAutoFix: kb.isAutoFix,
+          autoFixRound: kb.autoFixRound
         },
-        useFree: Rk.useFree
+        useFree: kb.useFree
       };
-      SV(wk) && yb(bb.getState()) ? qB !== Rk.id && (CB(Rk.id), Hb()) : (hF(tk), zB.current(Rk.text, Rk.shown, wk))
-    }), [sF, PF, BB, Mk, XF, gk, Pk, gB, qB]);
-    const KB = (0, Rk.useRef)(pB);
-    KB.current = pB, (0, Rk.useEffect)((() => {
-      if (Qk) {
-        var kk;
-        if (null === kF || void 0 === kF || kF(), "change" === Qk.action) return CF(Qk), void(null === (kk = eB.current) || void 0 === kk || kk.focus());
-        CF(null), KB.current(Us(Qk), cs(Qk), {
+      JM(Ib) && QU(IU.getState()) ? As !== kb.id && (ws(kb.id), yU()) : (qc(Wb), zs.current(kb.text, kb.shown, Ib))
+    }), [Hc, zc, cs, yb, ac, Pb, zb, Ds, As]);
+    const Ss = (0, kb.useRef)(os);
+    Ss.current = os, (0, kb.useEffect)((() => {
+      if (jb) {
+        var bb;
+        if (null === pb || void 0 === pb || pb(), "change" === jb.action) return Ac(jb), void(null === (bb = ns.current) || void 0 === bb || bb.focus());
+        Ac(null), Ss.current(Df(jb), Ef(jb), {
           check: !1,
-          wordsOnly: "explain" === Qk.action
+          wordsOnly: "explain" === jb.action
         })
       }
-    }), [Qk, kF]);
-    const xB = (kk, Fk, Bk) => {
-        eV.add(Ck, kk, Fk, Date.now(), Bk).then(AF).catch((kk => {
-          console.error("World Code AI: couldn't keep a version of the code", kk)
+    }), [jb, pb]);
+    const Rs = (bb, cb, sb) => {
+        nM.add(Ab, bb, cb, Date.now(), sb).then(Xc).catch((bb => {
+          console.error("World Code AI: couldn't keep a version of the code", bb)
         }))
       },
-      jB = (0, Rk.useRef)(new Set),
-      lB = async function(kk, Fk) {
+      vs = (0, kb.useRef)(new Set),
+      Fs = async function(bb, cb) {
         let {
-          tryAgainLater: Bk = !1
+          tryAgainLater: sb = !1
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Rk = mB.current;
-        if (kk.changes.some((kk => {
-            var Fk;
-            return (null !== (Fk = Rk[kk.path]) && void 0 !== Fk ? Fk : "") !== kk.before
-          }))) return MB(kk.id, "stale"), !1;
-        jB.current.add(kk.id);
-        if (!await Tk(kk.changes.map((kk => ({
-            path: kk.path,
-            text: kk.after
+        const kb = Qs.current;
+        if (bb.changes.some((bb => {
+            var cb;
+            return (null !== (cb = kb[bb.path]) && void 0 !== cb ? cb : "") !== bb.before
+          }))) return Ps(bb.id, "stale"), !1;
+        vs.current.add(bb.id);
+        if (!await Ob(bb.changes.map((bb => ({
+            path: bb.path,
+            text: bb.after
           })))).finally((() => {
-            jB.current.delete(kk.id)
-          }))) return Bk || MB(kk.id, "stale"), !1;
-        xB(function(kk) {
-          const Fk = kk.replace(/\s+/g, " ").trim();
-          return `Before "${Fk.length>200?`${Fk.slice(0,200).trimEnd()}\u2026`:Fk}"`
-        }(Fk), Rk, function(kk) {
-          const Fk = [...new Set(kk.flatMap((kk => {
-            var Fk;
-            return null !== (Fk = kk.why) && void 0 !== Fk ? Fk : []
+            vs.current.delete(bb.id)
+          }))) return sb || Ps(bb.id, "stale"), !1;
+        Rs(function(bb) {
+          const cb = bb.replace(/\s+/g, " ").trim();
+          return `Before "${cb.length>200?`${cb.slice(0,200).trimEnd()}\u2026`:cb}"`
+        }(cb), kb, function(bb) {
+          const cb = [...new Set(bb.flatMap((bb => {
+            var cb;
+            return null !== (cb = bb.why) && void 0 !== cb ? cb : []
           })))];
-          if (0 === Fk.length) return;
-          const Bk = Fk.map(((kk, Fk) => 0 === Fk ? kk.charAt(0).toUpperCase() + kk.slice(1) : kk.charAt(0).toLowerCase() + kk.slice(1))).join(", ");
-          return Bk.length > 400 ? `${Bk.slice(0,400).trimEnd()}\u2026` : Bk
-        }(kk.changes)), MB(kk.id, "applied"), kk.isPartial && uB(kk.id, {
-          changes: kk.changes
+          if (0 === cb.length) return;
+          const sb = cb.map(((bb, cb) => 0 === cb ? bb.charAt(0).toUpperCase() + bb.slice(1) : bb.charAt(0).toLowerCase() + bb.slice(1))).join(", ");
+          return sb.length > 400 ? `${sb.slice(0,400).trimEnd()}\u2026` : sb
+        }(bb.changes)), Ps(bb.id, "applied"), bb.isPartial && ys(bb.id, {
+          changes: bb.changes
         });
-        const tk = XF.find((Fk => Fk.id === kk.id && "pending" === Fk.noteStatus));
-        return tk && kk.isPartial ? LR(kk.id, "asked") : tk && OR({
-          ...tk,
+        const Wb = ac.find((cb => cb.id === bb.id && "pending" === cb.noteStatus));
+        return Wb && bb.isPartial ? hk(bb.id, "asked") : Wb && Jk({
+          ...Wb,
           status: "applied"
-        }, !0), dF((Fk => {
-          var Bk;
-          const Rk = null === (Bk = Fk.findLast((Fk => "user" === Fk.role && Fk.id < kk.id))) || void 0 === Bk ? void 0 : Bk.planStep;
-          return Rk ? Fk.map((kk => {
-            var Fk;
-            return kk.id === Rk.planId ? {
-              ...kk,
-              planDone: Math.max(null !== (Fk = kk.planDone) && void 0 !== Fk ? Fk : 0, Rk.index + 1)
-            } : kk
-          })) : Fk
-        })), fB.current = Date.now(), !0
-      }, nB = !sF && 0 === BB && (0 === PF.length || PF[0].id === qB), IB = (0, Rk.useRef)((() => Promise.resolve(!0)));
-    IB.current = async () => {
-      var kk;
-      const Fk = aF.pendingApply;
-      if (!Fk || Fk.targetKey !== hk.key) return !0;
-      const Bk = XF.find((kk => kk.id === Fk.entryId));
-      if (!Bk || "offered" !== Bk.status) return aF.pendingApply = void 0, !0;
-      const Rk = null !== (kk = Fk.picked) && void 0 !== kk ? kk : Bk.changes,
-        tk = lk && Uk && Rk.every((kk => {
-          var Fk;
-          return (null !== (Fk = mB.current[kk.path]) && void 0 !== Fk ? Fk : "") === kk.before
+        }, !0), Ic((cb => {
+          var sb;
+          const kb = null === (sb = cb.findLast((cb => "user" === cb.role && cb.id < bb.id))) || void 0 === sb ? void 0 : sb.planStep;
+          return kb ? cb.map((bb => {
+            var cb;
+            return bb.id === kb.planId ? {
+              ...bb,
+              planDone: Math.max(null !== (cb = bb.planDone) && void 0 !== cb ? cb : 0, kb.index + 1)
+            } : bb
+          })) : cb
+        })), ls.current = Date.now(), !0
+      }, xs = !Hc && 0 === cs && (0 === zc.length || zc[0].id === As), ps = (0, kb.useRef)((() => Promise.resolve(!0)));
+    ps.current = async () => {
+      var bb;
+      const cb = Wc.pendingApply;
+      if (!cb || cb.targetKey !== qb.key) return !0;
+      const sb = ac.find((bb => bb.id === cb.entryId));
+      if (!sb || "offered" !== sb.status) return Wc.pendingApply = void 0, !0;
+      const kb = null !== (bb = cb.picked) && void 0 !== bb ? bb : sb.changes,
+        Wb = vb && Db && kb.every((bb => {
+          var cb;
+          return (null !== (cb = Qs.current[bb.path]) && void 0 !== cb ? cb : "") === bb.before
         }));
-      if (Date.now() > Fk.until) return aF.pendingApply = void 0, tk && NB({
+      if (Date.now() > cb.until) return Wc.pendingApply = void 0, Wb && Bs({
         role: "assistant",
         text: "That change couldn't go in. Press Apply to try again.",
         changes: [],
         status: "offered",
         isNotice: !0
       }), !0;
-      if (!tk || jB.current.has(Bk.id)) return !1;
-      const ak = await lB({
-        id: Bk.id,
-        changes: Rk,
-        isPartial: void 0 !== Fk.picked
-      }, NR(Bk.id), {
+      if (!Wb || vs.current.has(sb.id)) return !1;
+      const ab = await Fs({
+        id: sb.id,
+        changes: kb,
+        isPartial: void 0 !== cb.picked
+      }, tk(sb.id), {
         tryAgainLater: !0
       });
-      ak && aF.pendingApply === Fk && (aF.pendingApply = void 0), ak && Fk.byItself && uB(Bk.id, {
+      ab && Wc.pendingApply === cb && (Wc.pendingApply = void 0), ab && cb.byItself && ys(sb.id, {
         editedInPlace: !0
       });
-      const Xk = Rk[0];
-      return ak && Xk && Pk(Xk.path, Ns(Xk.before, Xk.after)), ak
-    }, (0, Rk.useEffect)((() => {
-      var kk;
-      if ((null === (kk = aF.pendingApply) || void 0 === kk ? void 0 : kk.targetKey) !== hk.key) return;
-      const Fk = setInterval((() => {
-        IB.current().then((kk => {
-          kk && clearInterval(Fk)
+      const Tb = kb[0];
+      return ab && Tb && zb(Tb.path, gf(Tb.before, Tb.after)), ab
+    }, (0, kb.useEffect)((() => {
+      var bb;
+      if ((null === (bb = Wc.pendingApply) || void 0 === bb ? void 0 : bb.targetKey) !== qb.key) return;
+      const cb = setInterval((() => {
+        ps.current().then((bb => {
+          bb && clearInterval(cb)
         }))
       }), 250);
       return () => {
-        clearInterval(Fk)
+        clearInterval(cb)
       }
-    }), [aF, hk.key, lk, Mk]);
-    const QB = (0, Rk.useRef)((() => !0));
-    QB.current = () => {
-      const kk = aF.pendingInsert;
-      if (!kk || kk.targetKey !== hk.key) return !0;
-      if (Date.now() > kk.until) return aF.pendingInsert = void 0, NB({
+    }), [Wc, qb.key, vb, yb]);
+    const bk = (0, kb.useRef)((() => !0));
+    bk.current = () => {
+      const bb = Wc.pendingInsert;
+      if (!bb || bb.targetKey !== qb.key) return !0;
+      if (Date.now() > bb.until) return Wc.pendingInsert = void 0, Bs({
         role: "assistant",
-        text: void 0 === kk.code ? "World Code didn't open in time, so that wasn't asked here. Ask again." : "World Code didn't open in time, so the code block's World Code part isn't in. Here it is to add.",
+        text: void 0 === bb.code ? "World Code didn't open in time, so that wasn't asked here. Ask again." : "World Code didn't open in time, so the code block's World Code part isn't in. Here it is to add.",
         changes: [],
         status: "offered",
-        worldCode: void 0 === kk.code ? void 0 : [kk.code],
-        isNotice: void 0 === kk.code
+        worldCode: void 0 === bb.code ? void 0 : [bb.code],
+        isNotice: void 0 === bb.code
       }), !0;
-      const Fk = Object.values(mB.current).some((kk => "" !== kk.trim()));
-      return !(!lk || !Uk || !Fk && Date.now() < kk.readyBy) && (aF.pendingInsert = void 0, hF((Fk => [{
-        id: yB(),
-        text: kk.request,
+      const cb = Object.values(Qs.current).some((bb => "" !== bb.trim()));
+      return !(!vb || !Db || !cb && Date.now() < bb.readyBy) && (Wc.pendingInsert = void 0, qc((cb => [{
+        id: ms(),
+        text: bb.request,
         shown: "Put the code in",
         followUp: {
-          ...kk.options,
-          insertsInto: gk
+          ...bb.options,
+          insertsInto: Pb
         }
-      }, ...Fk])), !0)
-    }, (0, Rk.useEffect)((() => {
-      var kk;
-      if ((null === (kk = aF.pendingInsert) || void 0 === kk ? void 0 : kk.targetKey) !== hk.key) return;
-      const Fk = setInterval((() => {
-        QB.current() && clearInterval(Fk)
+      }, ...cb])), !0)
+    }, (0, kb.useEffect)((() => {
+      var bb;
+      if ((null === (bb = Wc.pendingInsert) || void 0 === bb ? void 0 : bb.targetKey) !== qb.key) return;
+      const cb = setInterval((() => {
+        bk.current() && clearInterval(cb)
       }), 250);
       return () => {
-        clearInterval(Fk)
+        clearInterval(cb)
       }
-    }), [aF, hk.key, lk, Mk]);
-    const kR = kk => {
-        sB((() => {
-          wk.gameBridge.send("sendChatMessage", {
-            UX: "//export",
+    }), [Wc, qb.key, vb, yb]);
+    const ck = bb => {
+        Hs((() => {
+          Ib.gameBridge.send("sendChatMessage", {
+            jT: "//export",
             channelName: null
           })
-        }), Math.max(0, fB.current + 600 - Date.now())), NB({
+        }), Math.max(0, ls.current + 600 - Date.now())), Bs({
           role: "assistant",
-          text: kk ? "Saving your game with //export, without this change. Apply it and ask me to save again to keep it too." : "Saving your game with //export. The chat says when it's saved.",
+          text: bb ? "Saving your game with //export, without this change. Apply it and ask me to save again to keep it too." : "Saving your game with //export. The chat says when it's saved.",
           changes: [],
           status: "offered",
           isNotice: !0,
-          isCalm: !kk || void 0
+          isCalm: !bb || void 0
         })
       },
-      FR = (kk, Fk) => {
+      sk = (bb, cb) => {
         let {
-          leavesChangeBehind: Bk,
-          hasWorldCodePart: Rk
-        } = Fk;
-        Bk ? NB({
+          leavesChangeBehind: sb,
+          hasWorldCodePart: kb
+        } = cb;
+        sb ? Bs({
           role: "assistant",
-          text: UV(Rk),
+          text: DM(kb),
           changes: [],
           status: "offered",
           isNotice: !0
-        }) : (NB({
+        }) : (Bs({
           role: "assistant",
           text: "Taking you to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), sB((() => {
-          null === Zk || void 0 === Zk || Zk(kk, !1)
-        }), cV))
+        }), Hs((() => {
+          null === wb || void 0 === wb || wb(bb, !1)
+        }), EM))
       },
-      BR = (kk, Fk) => {
-        !Fk && jk ? (NB({
+      kk = (bb, cb) => {
+        !cb && Rb ? (Bs({
           role: "assistant",
           text: "Moving to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), sB((() => {
-          aF.pendingApply = {
-            entryId: kk,
-            targetKey: Ss.i.key,
-            until: Date.now() + VV,
+        }), Hs((() => {
+          Wc.pendingApply = {
+            entryId: bb,
+            targetKey: Jf.g.key,
+            until: Date.now() + fM,
             byItself: !0
-          }, jk(Ss.i)
-        }), cV)) : NB({
+          }, Rb(Jf.g)
+        }), EM)) : Bs({
           role: "assistant",
           text: "Apply this change first, then apply the World Code part.",
           changes: [],
@@ -14736,1441 +14736,1441 @@ const KV = (0, Rk.memo)((function(kk) {
           isNotice: !0
         })
       },
-      RR = kk => BF && "direct" === kk && Uk && !!jk,
-      tR = (kk, Fk, Bk) => {
-        jk && (NB({
+      Wk = bb => cc && "direct" === bb && Db && !!Rb,
+      ak = (bb, cb, sb) => {
+        Rb && (Bs({
           role: "assistant",
           text: "Moving to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), sB((() => {
-          null !== kk && (aF.pendingInsert = {
-            targetKey: Ss.i.key,
-            request: kk,
-            options: Fk,
-            code: Bk,
+        }), Hs((() => {
+          null !== bb && (Wc.pendingInsert = {
+            targetKey: Jf.g.key,
+            request: bb,
+            options: cb,
+            code: sb,
             readyBy: Date.now() + 4e3,
-            until: Date.now() + VV
-          }), jk(Ss.i)
-        }), cV))
+            until: Date.now() + fM
+          }), Rb(Jf.g)
+        }), EM))
       },
-      aR = async function(kk, Fk) {
-        var Bk, Rk, tk;
+      Tk = async function(bb, cb) {
+        var sb, kb, Wb;
         let {
-          replaced: ak,
-          signal: Xk
+          replaced: ab,
+          signal: Tb
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const bk = await async function(kk, Fk) {
-          const Bk = [];
-          let Rk = null;
-          for (const ak of kk) {
-            var tk;
-            const kk = await St(ak, Fk);
-            Bk.push(ak.call ? {
-              ...kk.result,
-              call: ak.call
-            } : kk.result), Rk = null !== (tk = kk.worldCodeFiles) && void 0 !== tk ? tk : Rk
+        const Ub = await async function(bb, cb) {
+          const sb = [];
+          let kb = null;
+          for (const ab of bb) {
+            var Wb;
+            const bb = await BW(ab, cb);
+            sb.push(ab.call ? {
+              ...bb.result,
+              call: ab.call
+            } : bb.result), kb = null !== (Wb = bb.worldCodeFiles) && void 0 !== Wb ? Wb : kb
           }
           return {
-            results: Bk,
-            worldCodeFiles: Rk
+            results: sb,
+            worldCodeFiles: kb
           }
-        }(kk, {
-          files: mB.current,
-          docs: WV(),
-          errors: ck,
-          viewChunk: null !== Kk && void 0 !== Kk ? Kk : NV,
-          viewGameState: null !== xk && void 0 !== xk ? xk : HV,
-          readWorldCode: pk,
-          fetchDocsPage: kk => async function(kk, Fk, Bk) {
-            if ("" === kk.trim()) return `No url was given: give ${fk.j}, or a page it links to.`;
-            const Rk = vk(kk);
-            if (null === Rk) return kk.includes(fk.f) ? `${kk} is every page at once, too long to read: read ${fk.j}, then the page you need.` : `Only Bloxd's docs can be read: ${fk.j} and the pages it links to.`;
-            const tk = `There is no docs page at ${kk}. ${fk.j} lists every page with its link.`,
-              ak = `${kk} couldn't be read just now. Use get_docs instead.`,
-              Xk = (0, mk.e)(2e4, Bk);
-            let bk;
+        }(bb, {
+          files: Qs.current,
+          docs: eM(),
+          errors: Eb,
+          viewChunk: null !== ob && void 0 !== ob ? ob : gM,
+          viewGameState: null !== Sb && void 0 !== Sb ? Sb : BM,
+          readWorldCode: rb,
+          fetchDocsPage: bb => async function(bb, cb, sb) {
+            if ("" === bb.trim()) return `No url was given: give ${Qb.m}, or a page it links to.`;
+            const kb = Nb(bb);
+            if (null === kb) return bb.includes(Qb.h) ? `${bb} is every page at once, too long to read: read ${Qb.m}, then the page you need.` : `Only Bloxd's docs can be read: ${Qb.m} and the pages it links to.`;
+            const Wb = `There is no docs page at ${bb}. ${Qb.m} lists every page with its link.`,
+              ab = `${bb} couldn't be read just now. Use get_docs instead.`,
+              Tb = (0, eb.b)(2e4, sb);
+            let Ub;
             try {
-              var wk;
-              const kk = await fetch(`${Fk}${Rk}`, {
-                signal: Xk.signal
+              var Ib;
+              const bb = await fetch(`${cb}${kb}`, {
+                signal: Tb.signal
               });
-              if (404 === kk.status) return tk;
-              if (!kk.ok) return console.warn("AI Helper: a docs page couldn't be read", Rk, kk.status), ak;
-              if (null !== (wk = kk.headers.get("content-type")) && void 0 !== wk && wk.startsWith("text/html")) return tk;
-              bk = await kk.text()
-            } catch (sk) {
-              return !0 !== (null === Bk || void 0 === Bk ? void 0 : Bk.aborted) && console.warn("AI Helper: a docs page couldn't be read", Rk, sk), ak
+              if (404 === bb.status) return Wb;
+              if (!bb.ok) return console.warn("AI Helper: a docs page couldn't be read", kb, bb.status), ab;
+              if (null !== (Ib = bb.headers.get("content-type")) && void 0 !== Ib && Ib.startsWith("text/html")) return Wb;
+              Ub = await bb.text()
+            } catch (fb) {
+              return !0 !== (null === sb || void 0 === sb ? void 0 : sb.aborted) && console.warn("AI Helper: a docs page couldn't be read", kb, fb), ab
             } finally {
-              Xk.clear()
+              Tb.clear()
             }
-            const dk = (0, fk.A)(Rk);
-            return null !== dk && null === dk.part && bk.length > fk.c ? `${kk} is too long to read whole: read the part you need. Its parts start at ${yk.b}${(0,fk.t)(dk.name,0)}, and ${fk.j} says what each part has.` : bk.length <= 4e4 ? bk : (console.warn("AI Helper: a docs file is longer than any should be", Rk, bk.length), `${bk.slice(0,4e4)}\n\n(The rest of this page is cut off.)`)
-          }(kk, window.location.origin, Xk)
+            const Hb = (0, Qb.B)(kb);
+            return null !== Hb && null === Hb.part && Ub.length > Qb.e ? `${bb} is too long to read whole: read the part you need. Its parts start at ${lb.e}${(0,Qb.x)(Hb.name,0)}, and ${Qb.m} says what each part has.` : Ub.length <= 4e4 ? Ub : (console.warn("AI Helper: a docs file is longer than any should be", kb, Ub.length), `${Ub.slice(0,4e4)}\n\n(The rest of this page is cut off.)`)
+          }(bb, window.location.origin, Tb)
         });
-        if (null !== Xk && void 0 !== Xk && Xk.aborted) return "stopped";
-        const wk = bk.results,
-          dk = kk.flatMap((kk => "view_file" === kk.name && void 0 !== kk.args.path && kk.args.path in mB.current ? [kk.args.path] : [])),
-          sk = {
-            ...Fk.options,
-            lookups: [...(null !== (Bk = Fk.options.lookups) && void 0 !== Bk ? Bk : []).map(sV), ...wk],
-            worldCodeFiles: null !== (Rk = bk.worldCodeFiles) && void 0 !== Rk ? Rk : Fk.options.worldCodeFiles,
-            viewedPaths: [...null !== (tk = Fk.options.viewedPaths) && void 0 !== tk ? tk : [], ...dk]
+        if (null !== Tb && void 0 !== Tb && Tb.aborted) return "stopped";
+        const Ib = Ub.results,
+          Hb = bb.flatMap((bb => "view_file" === bb.name && void 0 !== bb.args.path && bb.args.path in Qs.current ? [bb.args.path] : [])),
+          fb = {
+            ...cb.options,
+            lookups: [...(null !== (sb = cb.options.lookups) && void 0 !== sb ? sb : []).map(HM), ...Ib],
+            worldCodeFiles: null !== (kb = Ub.worldCodeFiles) && void 0 !== kb ? kb : cb.options.worldCodeFiles,
+            viewedPaths: [...null !== (Wb = cb.options.viewedPaths) && void 0 !== Wb ? Wb : [], ...Hb]
           };
-        return hF((kk => [{
-          id: yB(),
-          text: Fk.request,
-          shown: Fk.shown,
-          followUp: sk,
-          ...ak ? {
-            replaced: ak,
-            until: Date.now() + MV
+        return qc((bb => [{
+          id: ms(),
+          text: cb.request,
+          shown: cb.shown,
+          followUp: fb,
+          ...ab ? {
+            replaced: ab,
+            until: Date.now() + yM
           } : {}
-        }, ...kk])), "asked"
-      }, XR = (kk, Fk, Bk) => {
-        dF((Rk => Rk.map((Rk => Rk.id === kk ? {
-          ...Rk,
-          trial: Fk,
-          trialErrors: null !== Bk && void 0 !== Bk ? Bk : Rk.trialErrors
-        } : Rk))))
-      }, bR = function(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        Dk && (aB(kk), sB((() => {
-          var Bk;
-          aB(null), QF.current || iB.current.length > 0 || null !== (Bk = eB.current) && void 0 !== Bk && Bk.value.trim() || (xF(vB.current), Dk({
-            chatKey: qk,
-            entryId: kk,
-            autoFixRound: Fk
+        }, ...bb])), "asked"
+      }, Uk = (bb, cb, sb) => {
+        Ic((kb => kb.map((kb => kb.id === bb ? {
+          ...kb,
+          trial: cb,
+          trialErrors: null !== sb && void 0 !== sb ? sb : kb.trialErrors
+        } : kb))))
+      }, Ik = function(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        Kb && (Ws(bb), Hs((() => {
+          var sb;
+          Ws(null), jc.current || Ns.current.length > 0 || null !== (sb = ns.current) && void 0 !== sb && sb.value.trim() || (Sc(Cs.current), Kb({
+            chatKey: db,
+            entryId: bb,
+            autoFixRound: cb
           }))
-        }), Math.max(Bk, fB.current + 1500 - Date.now())))
-      }, wR = () => {
-        JB(), (0, Xd.b)(qk)
+        }), Math.max(sb, ls.current + 1500 - Date.now())))
+      }, Hk = () => {
+        Ms(), (0, TH.b)(db)
       };
-    (0, Rk.useEffect)((() => {
-      if (!lk || void 0 === (null === XB || void 0 === XB ? void 0 : XB.endedAt) || (null === wB || void 0 === wB ? void 0 : wB.target.key) !== hk.key) return void(void 0 === (null === XB || void 0 === XB ? void 0 : XB.endedAt) || wB || (0, Xd.i)(qk));
-      const kk = (0, Xd.i)(qk);
-      if (!kk) return;
-      const Fk = (0, Xd.w)(kk);
-      PB.current({
+    (0, kb.useEffect)((() => {
+      if (!vb || void 0 === (null === as || void 0 === as ? void 0 : as.endedAt) || (null === Us || void 0 === Us ? void 0 : Us.target.key) !== qb.key) return void(void 0 === (null === as || void 0 === as ? void 0 : as.endedAt) || Us || (0, TH.m)(db));
+      const bb = (0, TH.m)(db);
+      if (!bb) return;
+      const cb = (0, TH.A)(bb);
+      qs.current({
         role: "assistant",
-        text: Fk.text,
+        text: cb.text,
         changes: [],
         status: "offered",
         isNotice: !0,
-        isCalm: 0 === kk.errors.length && void 0 !== kk.ranAt,
-        logTitle: Fk.title
-      }), void 0 !== kk.ranAt && (0 !== kk.errors.length ? kk.autoFixRound >= 3 || (xF(vB.current), hF((Fk => [{
-        id: yB(),
-        text: (0, Xd.t)(kk.errors),
-        shown: 1 === kk.errors.length ? "Fix the error" : "Fix these errors",
+        isCalm: 0 === bb.errors.length && void 0 !== bb.ranAt,
+        logTitle: cb.title
+      }), void 0 !== bb.ranAt && (0 !== bb.errors.length ? bb.autoFixRound >= 3 || (Sc(Cs.current), qc((cb => [{
+        id: ms(),
+        text: (0, TH.y)(bb.errors),
+        shown: 1 === bb.errors.length ? "Fix the error" : "Fix these errors",
         check: !1,
         isAutoFix: !0,
-        autoFixRound: kk.autoFixRound + 1
-      }, ...Fk]))) : XR(kk.entryId, "ask", vB.current))
-    }), [XB, lk, wB, hk.key, qk]);
-    const dR = async (kk, Fk) => {
-      if (uB(kk.id, {
-          forgetStatus: Fk ? "forgotten" : "lA"
-        }), Fk) try {
-        for (const Fk of null !== (Bk = kk.forgetNotes) && void 0 !== Bk ? Bk : []) {
-          var Bk;
-          mF(await yV.remove(Ck, Fk))
+        autoFixRound: bb.autoFixRound + 1
+      }, ...cb]))) : Uk(bb.entryId, "ask", Cs.current))
+    }), [as, vb, Us, qb.key, db]);
+    const fk = async (bb, cb) => {
+      if (ys(bb.id, {
+          forgetStatus: cb ? "forgotten" : "vn"
+        }), cb) try {
+        for (const cb of null !== (sb = bb.forgetNotes) && void 0 !== sb ? sb : []) {
+          var sb;
+          Qc(await mM.remove(Ab, cb))
         }
-      } catch (Rk) {
-        console.error("World Code AI: couldn't forget a note", Rk), uB(kk.id, {
+      } catch (kb) {
+        console.error("World Code AI: couldn't forget a note", kb), ys(bb.id, {
           forgetStatus: void 0
         })
       }
-    }, sR = (0, Rk.useCallback)((kk => kk.flatMap((kk => wV(WV(), kk, BF)))), [BF]), VR = (0, Rk.useRef)({}), JR = (0, Rk.useRef)({}), AR = (0, Rk.useRef)(Promise.resolve()), eR = (0, Rk.useRef)([]), yR = (0, Rk.useRef)(new Map), fR = (0, Rk.useRef)(new Map), mR = (0, Rk.useRef)(null), WR = () => {
-      GF.current = !1, eR.current = [], yR.current = new Map, fR.current = new Map, mR.current = null, VR.current = {}, JR.current = {}, rF(null)
-    }, vR = async () => {
-      if (!TF) return;
-      const kk = mB.current,
-        Fk = function(kk, Fk, Bk) {
-          return Object.entries(Fk).flatMap((Fk => {
-            var Rk;
-            let [tk, ak] = Fk;
-            const Xk = Bk[tk];
-            if (void 0 === Xk) return [];
-            const bk = new Map(Sd(null !== (Rk = kk[tk]) && void 0 !== Rk ? Rk : "").map((kk => [kk.key, kk.value]))),
-              wk = new Map(Sd(ak).map((kk => [kk.key, kk.value])));
-            let dk = Xk;
-            for (const [kk, Bk] of bk) {
-              var sk;
-              const Fk = Sd(dk).find((Fk => Fk.key === kk));
-              Fk && Fk.value !== Bk && wk.get(kk) === Fk.value && (dk = null !== (sk = Nd(dk, Fk, Bk)) && void 0 !== sk ? sk : dk)
+    }, Mk = (0, kb.useCallback)((bb => bb.flatMap((bb => UM(eM(), bb, cc)))), [cc]), Xk = (0, kb.useRef)({}), nk = (0, kb.useRef)({}), mk = (0, kb.useRef)(Promise.resolve()), lk = (0, kb.useRef)([]), Qk = (0, kb.useRef)(new Map), ek = (0, kb.useRef)(new Map), Ck = (0, kb.useRef)(null), Nk = () => {
+      ic.current = !1, lk.current = [], Qk.current = new Map, ek.current = new Map, Ck.current = null, Xk.current = {}, nk.current = {}, Gc(null)
+    }, Vk = async () => {
+      if (!Oc) return;
+      const bb = Qs.current,
+        cb = function(bb, cb, sb) {
+          return Object.entries(cb).flatMap((cb => {
+            var kb;
+            let [Wb, ab] = cb;
+            const Tb = sb[Wb];
+            if (void 0 === Tb) return [];
+            const Ub = new Map(JH(null !== (kb = bb[Wb]) && void 0 !== kb ? kb : "").map((bb => [bb.key, bb.value]))),
+              Ib = new Map(JH(ab).map((bb => [bb.key, bb.value])));
+            let Hb = Tb;
+            for (const [bb, sb] of Ub) {
+              var fb;
+              const cb = JH(Hb).find((cb => cb.key === bb));
+              cb && cb.value !== sb && Ib.get(bb) === cb.value && (Hb = null !== (fb = gH(Hb, cb, sb)) && void 0 !== fb ? fb : Hb)
             }
-            return dk === Xk ? [] : [{
-              path: tk,
-              text: dk
+            return Hb === Tb ? [] : [{
+              path: Wb,
+              text: Hb
             }]
           }))
-        }(TF, VR.current, kk);
-      if (Fk.length > 0) {
-        if (!await Tk(Fk)) return;
-        xB(function(kk) {
-          const Fk = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).filter((Fk => kk.includes(Fk.name))).map((kk => ({
-            name: kk.name,
-            from: kk.to,
-            to: kk.from
+        }(Oc, Xk.current, bb);
+      if (cb.length > 0) {
+        if (!await Ob(cb)) return;
+        Rs(function(bb) {
+          const cb = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).filter((cb => bb.includes(cb.name))).map((bb => ({
+            name: bb.name,
+            from: bb.to,
+            to: bb.from
           })));
-          return Fk.length > 0 ? gd(Fk, "undoing") : 0 === kk.length ? "Before undoing settings" : `Before undoing settings: ${(kk.length>3?[...kk.slice(0,3),kk.length-3+" more"]:kk).join(", ")}`
-        }(eR.current, [...yR.current.values()]), kk), fB.current = Date.now()
+          return cb.length > 0 ? PH(cb, "undoing") : 0 === bb.length ? "Before undoing settings" : `Before undoing settings: ${(bb.length>3?[...bb.slice(0,3),bb.length-3+" more"]:bb).join(", ")}`
+        }(lk.current, [...Qk.current.values()]), bb), ls.current = Date.now()
       }
-      WR()
-    }, iR = !BF && Object.values(Mk).some((kk => Sd(kk).length > 0)), YR = function(kk) {
+      Nk()
+    }, Lk = !cc && Object.values(yb).some((bb => JH(bb).length > 0)), uk = function(bb) {
       let {
-        codeBlock: Fk,
-        hasSettings: Bk,
-        canEdit: tk
-      } = kk;
-      return (0, Rk.useEffect)((() => {
-        (0, nw.E)("aiNotes", !Fk)
-      }), [Fk]), (0, Rk.useEffect)((() => {
-        (0, nw.E)("aiGameSettings", Bk)
-      }), [Bk]), (0, Rk.useEffect)((() => {
-        (0, nw.E)("aiEdits", tk)
-      }), [tk]), (0, Iw.h)("aiHelperOverview")
+        codeBlock: cb,
+        hasSettings: sb,
+        canEdit: Wb
+      } = bb;
+      return (0, kb.useEffect)((() => {
+        (0, xI.F)("aiNotes", !cb)
+      }), [cb]), (0, kb.useEffect)((() => {
+        (0, xI.F)("aiGameSettings", sb)
+      }), [sb]), (0, kb.useEffect)((() => {
+        (0, xI.F)("aiEdits", Wb)
+      }), [Wb]), (0, jI.i)("aiHelperOverview")
     }({
-      codeBlock: BF,
-      hasSettings: iR,
-      canEdit: Uk
+      codeBlock: cc,
+      hasSettings: Lk,
+      canEdit: Db
     });
-    (0, Rk.useEffect)((() => {
-      YR && (yF(!1), vF(!1), YF(!1), LF(null))
-    }), [YR]);
-    const oR = async kk => {
-      const Fk = FF(kk);
-      return null === Fk ? "Notes are only about your game, never personal details." : "ok" !== await ra(Fk) ? "This note can't be saved. Notes are only about your game." : (mF(await yV.add(Ck, Fk)), null)
-    }, LR = (kk, Fk) => {
-      uB(kk, {
-        noteStatus: Fk
+    (0, kb.useEffect)((() => {
+      uk && (mc(!1), Cc(!1), Vc(!1), uc(null))
+    }), [uk]);
+    const Yk = async bb => {
+      const cb = bc(bb);
+      return null === cb ? "Notes are only about your game, never personal details." : "ok" !== await Za(cb) ? "This note can't be saved. Notes are only about your game." : (Qc(await mM.add(Ab, cb)), null)
+    }, hk = (bb, cb) => {
+      ys(bb, {
+        noteStatus: cb
       })
-    }, OR = async (kk, Fk) => {
-      if (Fk && void 0 !== kk.note)
-        if (kk.changes.length > 0 && "offered" === kk.status) LR(kk.id, "pending");
+    }, Jk = async (bb, cb) => {
+      if (cb && void 0 !== bb.note)
+        if (bb.changes.length > 0 && "offered" === bb.status) hk(bb.id, "pending");
         else {
-          LR(kk.id, "checking");
+          hk(bb.id, "checking");
           try {
-            LR(kk.id, null === await oR(kk.note) ? "saved" : "refused")
-          } catch (Bk) {
-            console.error("World Code AI: couldn't keep a note", Bk), LR(kk.id, "asked")
+            hk(bb.id, null === await Yk(bb.note) ? "saved" : "refused")
+          } catch (sb) {
+            console.error("World Code AI: couldn't keep a note", sb), hk(bb.id, "asked")
           }
         }
-      else LR(kk.id, "declined")
-    }, ER = kk => {
-      var Fk;
-      const Bk = null === (Fk = XF.find((Fk => Fk.id === kk))) || void 0 === Fk ? void 0 : Fk.target.key;
-      return XF.findLast((Fk => "user" === Fk.role && Fk.id < kk && Fk.target.key === Bk))
-    }, SR = kk => {
-      var Fk;
-      return null === (Fk = ER(kk)) || void 0 === Fk ? void 0 : Fk.asked
-    }, NR = kk => {
-      var Fk, Bk;
-      const Rk = ER(kk);
-      return null !== (Fk = null !== (Bk = null === Rk || void 0 === Rk ? void 0 : Rk.about) && void 0 !== Bk ? Bk : null === Rk || void 0 === Rk ? void 0 : Rk.text) && void 0 !== Fk ? Fk : "a change"
-    }, HR = XF.filter(HB), uR = null === (Wk = HR[HR.length - 1]) || void 0 === Wk ? void 0 : Wk.id, MR = null !== (ik = null === (Yk = HR.findLast((kk => "user" === kk.role))) || void 0 === Yk ? void 0 : Yk.id) && void 0 !== ik ? ik : 0, gR = HR.length < XF.length, UR = HR[HR.length - 1], cR = null !== UR && void 0 !== UR && null !== (Lk = UR.question) && void 0 !== Lk && Lk.allowOther && !sF ? UR : void 0, GR = (0, Rk.useRef)(!1), TR = () => {
-      GR.current = !0, LF("settings")
-    }, rR = () => {
-      yF(!1), vF(!1), YF(!1), SF.current = null, HF(null), LF("addKey")
+      else hk(bb.id, "declined")
+    }, gk = bb => {
+      var cb;
+      const sb = null === (cb = ac.find((cb => cb.id === bb))) || void 0 === cb ? void 0 : cb.target.key;
+      return ac.findLast((cb => "user" === cb.role && cb.id < bb && cb.target.key === sb))
+    }, Bk = bb => {
+      var cb;
+      return null === (cb = gk(bb)) || void 0 === cb ? void 0 : cb.asked
+    }, tk = bb => {
+      var cb, sb;
+      const kb = gk(bb);
+      return null !== (cb = null !== (sb = null === kb || void 0 === kb ? void 0 : kb.about) && void 0 !== sb ? sb : null === kb || void 0 === kb ? void 0 : kb.text) && void 0 !== cb ? cb : "a change"
+    }, yk = ac.filter(ts), Pk = null === (Cb = yk[yk.length - 1]) || void 0 === Cb ? void 0 : Cb.id, Dk = null !== (Vb = null === (Lb = yk.findLast((bb => "user" === bb.role))) || void 0 === Lb ? void 0 : Lb.id) && void 0 !== Vb ? Vb : 0, Ek = yk.length < ac.length, ik = yk[yk.length - 1], Ok = null !== ik && void 0 !== ik && null !== (ub = ik.question) && void 0 !== ub && ub.allowOther && !Hc ? ik : void 0, Gk = (0, kb.useRef)(!1), Kk = () => {
+      Gk.current = !0, uc("settings")
+    }, Zk = () => {
+      mc(!1), Cc(!1), Vc(!1), Jc.current = null, Bc(null), uc("addKey")
     }, {
-      activeKey: DR,
-      cutShortActions: zR,
-      noticeActions: PR
-    } = function(kk) {
-      var Fk;
+      activeKey: zk,
+      cutShortActions: qk,
+      noticeActions: dk
+    } = function(bb) {
+      var cb;
       let {
-        entries: Bk,
-        busy: Rk,
-        send: tk,
-        onCheckKey: ak
-      } = kk;
+        entries: sb,
+        busy: kb,
+        send: Wb,
+        onCheckKey: ab
+      } = bb;
       const {
-        active: Xk
-      } = nX(), bk = null === (Fk = Bk.findLast((kk => "assistant" === kk.role && !kk.isNotice))) || void 0 === Fk ? void 0 : Fk.id;
+        active: Tb
+      } = jT(), Ub = null === (cb = sb.findLast((bb => "assistant" === bb.role && !bb.isNotice))) || void 0 === cb ? void 0 : cb.id;
       return {
-        activeKey: Xk,
-        cutShortActions: (kk, Fk) => ({
-          canFinish: !Rk && kk === bk && (null === Xk || void 0 === Xk ? void 0 : Xk.id) === Fk.keyId && Xk.model.id === Fk.modelId,
+        activeKey: Tb,
+        cutShortActions: (bb, cb) => ({
+          canFinish: !kb && bb === Ub && (null === Tb || void 0 === Tb ? void 0 : Tb.id) === cb.keyId && Tb.model.id === cb.modelId,
           onFinish: () => {
-            tk(Fk.request, {
-              retryOf: kk,
-              continueFrom: Fk.written
+            Wb(cb.request, {
+              retryOf: bb,
+              continueFrom: cb.written
             })
           }
         }),
-        noticeActions: (kk, Fk, Bk) => ({
-          notice: Bk.notice,
+        noticeActions: (bb, cb, sb) => ({
+          notice: sb.notice,
           onRetry: () => {
-            tk(Fk, {
-              retryOf: kk
+            Wb(cb, {
+              retryOf: bb
             })
           },
           onUseFree: () => {
-            tk(Fk, {
+            Wb(cb, {
               useFree: !0,
-              retryOf: kk
+              retryOf: bb
             })
           },
-          onCheckKey: ak
+          onCheckKey: ab
         })
       }
     }({
-      entries: HR,
-      busy: !!sF,
-      send: (kk, Fk) => {
+      entries: yk,
+      busy: !!Hc,
+      send: (bb, cb) => {
         let {
-          useFree: Bk,
-          retryOf: Rk,
-          continueFrom: tk
-        } = Fk;
-        const ak = XF.find((kk => kk.id === Rk));
-        return GB(kk, null === ak || void 0 === ak ? void 0 : ak.retryShown, {
-          ...null === ak || void 0 === ak ? void 0 : ak.retryOptions,
-          useFree: Bk,
-          retryOf: Rk,
-          continueFrom: tk
+          useFree: sb,
+          retryOf: kb,
+          continueFrom: Wb
+        } = cb;
+        const ab = ac.find((bb => bb.id === kb));
+        return Os(bb, null === ab || void 0 === ab ? void 0 : ab.retryShown, {
+          ...null === ab || void 0 === ab ? void 0 : ab.retryOptions,
+          useFree: sb,
+          retryOf: kb,
+          continueFrom: Wb
         })
       },
-      onCheckKey: TR
-    }), hR = eb(gB) ? gB.status : null, qR = null !== hR && void 0 !== hR && hR.isSuper ? hR.resetsAt : null, CR = (0, Rk.useRef)({
+      onCheckKey: Kk
+    }), Ak = lU(Ds) ? Ds.status : null, wk = null !== Ak && void 0 !== Ak && Ak.isSuper ? Ak.resetsAt : null, rk = (0, kb.useRef)({
       resetsAt: 0,
       count: 0,
       nextAt: 0
     });
-    (0, Rk.useEffect)((() => {
-      if (null === qR) return;
-      if (qR <= nF) {
-        CR.current.resetsAt !== qR && (CR.current = {
-          resetsAt: qR,
+    (0, kb.useEffect)((() => {
+      if (null === wk) return;
+      if (wk <= Fc) {
+        rk.current.resetsAt !== wk && (rk.current = {
+          resetsAt: wk,
           count: 0,
           nextAt: 0
         });
-        const kk = CR.current,
-          Fk = [15e3, 6e4, 24e4];
-        if (kk.count > Fk.length) return;
-        let Bk = !1;
-        const Rk = setTimeout((() => {
-          var Rk;
-          kk.nextAt = Date.now() + (null !== (Rk = Fk[kk.count]) && void 0 !== Rk ? Rk : 0), kk.count++, bb.refresh().then((() => {
-            Bk || IF(Date.now())
+        const bb = rk.current,
+          cb = [15e3, 6e4, 24e4];
+        if (bb.count > cb.length) return;
+        let sb = !1;
+        const kb = setTimeout((() => {
+          var kb;
+          bb.nextAt = Date.now() + (null !== (kb = cb[bb.count]) && void 0 !== kb ? kb : 0), bb.count++, IU.refresh().then((() => {
+            sb || xc(Date.now())
           }))
-        }), Math.max(0, kk.nextAt - Date.now()));
+        }), Math.max(0, bb.nextAt - Date.now()));
         return () => {
-          Bk = !0, clearTimeout(Rk)
+          sb = !0, clearTimeout(kb)
         }
       }
-      const kk = setTimeout((() => {
-        IF(Date.now())
-      }), Math.max(0, (qR - nF - 1) % 6e4 + 1 - (Date.now() - nF)));
+      const bb = setTimeout((() => {
+        xc(Date.now())
+      }), Math.max(0, (wk - Fc - 1) % 6e4 + 1 - (Date.now() - Fc)));
       return () => {
-        clearTimeout(kk)
+        clearTimeout(bb)
       }
-    }), [qR, nF]);
-    const ZR = DR ? `${DR.id}/${DR.model.id}` : null;
-    (0, Rk.useEffect)((() => {
-      EF(!1)
-    }), [ZR]);
-    const pR = Object.values(Mk).some((kk => "" !== kk.trim())),
-      xR = eF || WF || iF || null !== oF,
-      jR = "aiAnswer" === YR || ("aiNotes" === YR || "aiGameSettings" === YR || "aiGear" === YR) && xR ? YR : "aiPanel",
-      nR = (0, Rk.useRef)(null),
-      IR = (0, Rk.useRef)(null),
-      QR = (0, Rk.useRef)(oF);
-    (0, Rk.useEffect)((() => {
-      if (QR.current === oF) return;
-      QR.current = oF;
+    }), [wk, Fc]);
+    const Sk = zk ? `${zk.id}/${zk.model.id}` : null;
+    (0, kb.useEffect)((() => {
+      hc(!1)
+    }), [Sk]);
+    const Rk = Object.values(yb).some((bb => "" !== bb.trim())),
+      Fk = nc || ec || Nc || null !== Lc,
+      xk = "aiAnswer" === uk || ("aiNotes" === uk || "aiGameSettings" === uk || "aiGear" === uk) && Fk ? uk : "aiPanel",
+      pk = (0, kb.useRef)(null),
+      bW = (0, kb.useRef)(null),
+      cW = (0, kb.useRef)(Lc);
+    (0, kb.useEffect)((() => {
+      if (cW.current === Lc) return;
+      cW.current = Lc;
       if (!document.activeElement || document.activeElement === document.body) {
-        var kk;
-        null === (kk = (oF ? nR : IR).current) || void 0 === kk || kk.focus()
+        var bb;
+        null === (bb = (Lc ? pk : bW).current) || void 0 === bb || bb.focus()
       }
-    }), [oF]), (0, Rk.useEffect)((() => {
-      const kk = AB.current;
-      if (!oF || !kk) return;
-      kk.scrollTo({
+    }), [Lc]), (0, kb.useEffect)((() => {
+      const bb = Xs.current;
+      if (!Lc || !bb) return;
+      bb.scrollTo({
         top: 0
       });
-      const Fk = "settings" === oF && GR.current ? kk.querySelector(".WorldCodeAiModelRow.Selected") : null;
-      if (Fk && Fk.getBoundingClientRect().bottom > kk.getBoundingClientRect().bottom && !uw(kk, Fk)) {
-        const Bk = kk.getBoundingClientRect(),
-          Rk = Fk.getBoundingClientRect();
-        kk.scrollTop += Rk.top - Bk.top - (Bk.height - Rk.height) / 2
+      const cb = "settings" === Lc && Gk.current ? bb.querySelector(".WorldCodeAiModelRow.Selected") : null;
+      if (cb && cb.getBoundingClientRect().bottom > bb.getBoundingClientRect().bottom && !PI(bb, cb)) {
+        const sb = bb.getBoundingClientRect(),
+          kb = cb.getBoundingClientRect();
+        bb.scrollTop += kb.top - sb.top - (sb.height - kb.height) / 2
       }
       return () => {
-        kk.style.paddingBottom = ""
+        bb.style.paddingBottom = ""
       }
-    }), [oF]);
+    }), [Lc]);
     const {
-      disclosureRef: Ft,
-      gearLabelRef: Bt,
-      hasGearLabel: Rt
-    } = function(kk, Fk) {
-      const Bk = (0, Rk.useRef)(null),
-        tk = (0, Rk.useRef)(null),
-        ak = (0, Rk.useRef)(0),
-        [Xk, bk] = (0, Rk.useState)(!0);
-      return (0, Rk.useLayoutEffect)((() => {
-        const Fk = Bk.current;
-        if (!Fk || "undefined" === typeof ResizeObserver) return;
-        const Rk = () => {
-          const Bk = document.createRange();
-          if (Bk.selectNodeContents(Fk), "function" !== typeof Bk.getBoundingClientRect) return;
-          const Rk = Bk.getBoundingClientRect().width,
-            Xk = tk.current;
-          if (Xk) {
-            const Bk = kk.current,
-              tk = Bk && parseFloat(getComputedStyle(Bk).columnGap) || 0;
-            ak.current = Xk.getBoundingClientRect().width + tk, Rk > Fk.clientWidth + 1 && bk(!1)
-          } else Fk.clientWidth - Rk >= ak.current && bk(!0)
+      disclosureRef: kW,
+      gearLabelRef: WW,
+      hasGearLabel: aW
+    } = function(bb, cb) {
+      const sb = (0, kb.useRef)(null),
+        Wb = (0, kb.useRef)(null),
+        ab = (0, kb.useRef)(0),
+        [Tb, Ub] = (0, kb.useState)(!0);
+      return (0, kb.useLayoutEffect)((() => {
+        const cb = sb.current;
+        if (!cb || "undefined" === typeof ResizeObserver) return;
+        const kb = () => {
+          const sb = document.createRange();
+          if (sb.selectNodeContents(cb), "function" !== typeof sb.getBoundingClientRect) return;
+          const kb = sb.getBoundingClientRect().width,
+            Tb = Wb.current;
+          if (Tb) {
+            const sb = bb.current,
+              Wb = sb && parseFloat(getComputedStyle(sb).columnGap) || 0;
+            ab.current = Tb.getBoundingClientRect().width + Wb, kb > cb.clientWidth + 1 && Ub(!1)
+          } else cb.clientWidth - kb >= ab.current && Ub(!0)
         };
-        Rk();
-        const Xk = new ResizeObserver(Rk);
-        return Xk.observe(Fk), () => {
-          Xk.disconnect()
+        kb();
+        const Tb = new ResizeObserver(kb);
+        return Tb.observe(cb), () => {
+          Tb.disconnect()
         }
-      }), [kk, Fk]), {
-        disclosureRef: Bk,
-        gearLabelRef: tk,
-        hasGearLabel: Xk
+      }), [bb, cb]), {
+        disclosureRef: sb,
+        gearLabelRef: Wb,
+        hasGearLabel: Tb
       }
-    }(IR, xR), tt = () => {
-      var kk;
-      hF([]), null === (kk = QF.current) || void 0 === kk || kk.abort(), JB()
-    }, Xt = (0, Xk.jsxs)("div", {
-      className: ak()("WorldCodeAiPanel", oF && "WorldCodeAiPanel-aiView"),
-      children: [(0, Xk.jsxs)("div", {
+    }(bW, Fk), TW = () => {
+      var bb;
+      qc([]), null === (bb = jc.current) || void 0 === bb || bb.abort(), Ms()
+    }, UW = (0, Tb.jsxs)("div", {
+      className: ab()("WorldCodeAiPanel", Lc && "WorldCodeAiPanel-aiView"),
+      children: [(0, Tb.jsxs)("div", {
         className: "WorldCodeAiHeader",
-        children: [(0, Xk.jsx)("span", {
+        children: [(0, Tb.jsx)("span", {
           className: "WorldCodeAiTitle",
           children: "AI Helper"
-        }), (0, Xk.jsx)("span", {
-          ref: Ft,
+        }), (0, Tb.jsx)("span", {
+          ref: kW,
           className: "WorldCodeAiDisclosure",
           title: "AI can be wrong. Check its changes.",
           children: "AI can be wrong."
-        }), xR && (0, Xk.jsx)("button", {
-          ref: nR,
+        }), Fk && (0, Tb.jsx)("button", {
+          ref: pk,
           className: "WorldCodeAiLinkButton WorldCodeAiBackButton",
           onClick: () => {
-            yF(!1), vF(!1), YF(!1), LF("addKey" === oF ? SF.current : null)
+            mc(!1), Cc(!1), Vc(!1), uc("addKey" === Lc ? Jc.current : null)
           },
-          children: "addKey" === oF && SF.current ? "Back" : "Back to chat"
-        }), oF && (0, Xk.jsx)("h3", {
+          children: "addKey" === Lc && Jc.current ? "Back" : "Back to chat"
+        }), Lc && (0, Tb.jsx)("h3", {
           className: "WorldCodeAiViewTitle",
-          children: "settings" === oF ? "AI settings" : NF ? `Edit ${CX(NF)} key` : "Add an API key"
-        }), "settings" === oF && (0, Xk.jsxs)("span", {
+          children: "settings" === Lc ? "AI settings" : gc ? `Edit ${rT(gc)} key` : "Add an API key"
+        }), "settings" === Lc && (0, Tb.jsxs)("span", {
           className: "WorldCodeAiViewUsing",
-          children: [(0, Xk.jsxs)("span", {
+          children: [(0, Tb.jsxs)("span", {
             className: "WorldCodeAiViewUsingModel",
-            children: ["Using:", " ", DR ? OF ? "Bot.xd (free) for the next question" : Bd(DR) : hR ? Fb : "Bot.xd (free)"]
-          }), (0, Xk.jsxs)("span", {
+            children: ["Using:", " ", zk ? Yc ? "Bot.xd (free) for the next question" : sH(zk) : Ak ? sU : "Bot.xd (free)"]
+          }), (0, Tb.jsxs)("span", {
             className: "WorldCodeAiViewUsingEdits",
-            children: ["Edits: ", cF ? "On" : "Off"]
+            children: ["Edits: ", Ec ? "On" : "Off"]
           })]
-        }), xR && sF && (0, Xk.jsx)("button", {
+        }), Fk && Hc && (0, Tb.jsx)("button", {
           className: "WorldCodeAiStop WorldCodeAiHeaderStop",
-          onClick: tt,
+          onClick: TW,
           children: "Stop answer"
-        }), !xR && !BF && (0, Xk.jsx)(Qw, {
+        }), !Fk && !cc && (0, Tb.jsx)(pI, {
           step: "aiNotes",
           placement: "bottom",
-          children: (0, Xk.jsx)("button", {
-            className: ak()("WorldCodeAiLinkButton", WF && "WorldCodeAiLinkButton-active"),
-            "aria-pressed": WF,
+          children: (0, Tb.jsx)("button", {
+            className: ab()("WorldCodeAiLinkButton", ec && "WorldCodeAiLinkButton-active"),
+            "aria-pressed": ec,
             onClick: () => {
-              yF(!1), YF(!1), vF(!WF)
+              mc(!1), Vc(!1), Cc(!ec)
             },
             children: "AI notes"
           })
-        }), !xR && iR && (0, Xk.jsx)(Qw, {
+        }), !Fk && Lk && (0, Tb.jsx)(pI, {
           step: "aiGameSettings",
           placement: "bottom",
-          children: (0, Xk.jsx)("button", {
-            className: ak()("WorldCodeAiLinkButton", iF && "WorldCodeAiLinkButton-active"),
-            "aria-pressed": iF,
+          children: (0, Tb.jsx)("button", {
+            className: ab()("WorldCodeAiLinkButton", Nc && "WorldCodeAiLinkButton-active"),
+            "aria-pressed": Nc,
             onClick: () => {
-              WR(), yF(!1), vF(!1), YF(!iF)
+              Nk(), mc(!1), Cc(!1), Vc(!Nc)
             },
             children: "Game settings"
           })
-        }), !xR && JF.length > 0 && (0, Xk.jsx)("button", {
-          className: ak()("WorldCodeAiLinkButton", eF && "WorldCodeAiLinkButton-active"),
-          "aria-pressed": eF,
+        }), !Fk && Mc.length > 0 && (0, Tb.jsx)("button", {
+          className: ab()("WorldCodeAiLinkButton", nc && "WorldCodeAiLinkButton-active"),
+          "aria-pressed": nc,
           onClick: () => {
-            IF(Date.now()), vF(!1), YF(!1), yF(!eF)
+            xc(Date.now()), Cc(!1), Vc(!1), mc(!nc)
           },
           children: "History"
-        }), !xR && XF.length > 0 && (0, Xk.jsx)("button", {
+        }), !Fk && ac.length > 0 && (0, Tb.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          disabled: !!sF,
+          disabled: !!Hc,
           onClick: () => {
-            wR(), hF([]), dF([]), aF.turns = new FX
+            Hk(), qc([]), Ic([]), Wc.turns = new sT
           },
           children: "New chat"
-        }), !xR && (0, Xk.jsx)(Qw, {
+        }), !Fk && (0, Tb.jsx)(pI, {
           step: "aiGear",
           placement: "bottom",
-          children: (0, Xk.jsxs)("button", {
-            ref: IR,
+          children: (0, Tb.jsxs)("button", {
+            ref: bW,
             className: "WorldCodeAiLinkButton WorldCodeAiGear",
             "aria-label": "AI Helper settings",
             title: "AI Helper settings",
             onClick: () => {
-              GR.current = !1, LF("settings")
+              Gk.current = !1, uc("settings")
             },
-            children: [(0, Xk.jsx)(Jk.d, {
+            children: [(0, Tb.jsx)(Xb.b, {
               name: "gear"
-            }), Rt && (0, Xk.jsx)("span", {
-              ref: Bt,
+            }), aW && (0, Tb.jsx)("span", {
+              ref: WW,
               className: "WorldCodeAiGearLabel",
               children: "Settings"
             })]
           })
         })]
-      }), (0, Xk.jsxs)("div", {
+      }), (0, Tb.jsxs)("div", {
         className: "WorldCodeAiMessages",
-        ref: AB,
-        role: xR ? void 0 : "log",
-        "aria-live": xR ? void 0 : "polite",
-        children: [eF && (0, Xk.jsx)(yd, {
-          snapshots: JF,
-          files: Mk,
-          now: nF,
-          onRestore: Uk && !sF ? kk => {
-            (async kk => {
-              const Fk = mB.current,
-                Bk = Jd(kk, Fk);
-              if (0 === Bk.length) return;
-              if (!await Tk(Bk)) return;
-              xB("Before going back", Fk), yF(!1), null !== tB && wR();
-              const Rk = {};
-              for (const Xk of Bk) Rk[Xk.path] = Xk.text;
-              const tk = kk => HB(kk) && "applied" === kk.status && kk.changes.some((kk => kk.path in Rk && Rk[kk.path] !== kk.after)),
-                ak = XF.filter((kk => tk(kk) && "saved" === kk.noteStatus && void 0 !== kk.note && fF.includes(kk.note))).map((kk => {
-                  var Fk;
-                  return null !== (Fk = kk.note) && void 0 !== Fk ? Fk : ""
+        ref: Xs,
+        role: Fk ? void 0 : "log",
+        "aria-live": Fk ? void 0 : "polite",
+        children: [nc && (0, Tb.jsx)(lH, {
+          snapshots: Mc,
+          files: yb,
+          now: Fc,
+          onRestore: Db && !Hc ? bb => {
+            (async bb => {
+              const cb = Qs.current,
+                sb = XH(bb, cb);
+              if (0 === sb.length) return;
+              if (!await Ob(sb)) return;
+              Rs("Before going back", cb), mc(!1), null !== ks && Hk();
+              const kb = {};
+              for (const Tb of sb) kb[Tb.path] = Tb.text;
+              const Wb = bb => ts(bb) && "applied" === bb.status && bb.changes.some((bb => bb.path in kb && kb[bb.path] !== bb.after)),
+                ab = ac.filter((bb => Wb(bb) && "saved" === bb.noteStatus && void 0 !== bb.note && lc.includes(bb.note))).map((bb => {
+                  var cb;
+                  return null !== (cb = bb.note) && void 0 !== cb ? cb : ""
                 }));
-              dF((kk => kk.map((kk => tk(kk) ? {
-                ...kk,
+              Ic((bb => bb.map((bb => Wb(bb) ? {
+                ...bb,
                 status: "undone",
                 wentBack: !0,
-                noteStatus: "asked" === kk.noteStatus ? void 0 : kk.noteStatus
-              } : kk)))), NB({
+                noteStatus: "asked" === bb.noteStatus ? void 0 : bb.noteStatus
+              } : bb)))), Bs({
                 role: "assistant",
                 text: "Your code is back to how it was.",
                 changes: [],
                 status: "offered",
                 isNotice: !0,
                 isCalm: !0,
-                undoFiles: Fk,
-                leftFiles: Object.fromEntries(Bk.map((kk => [kk.path, kk.text]))),
-                forgetNotes: ak.length > 0 ? ak : void 0
+                undoFiles: cb,
+                leftFiles: Object.fromEntries(sb.map((bb => [bb.path, bb.text]))),
+                forgetNotes: ab.length > 0 ? ab : void 0
               })
-            })(kk)
+            })(bb)
           } : void 0
-        }), iF && (0, Xk.jsx)(ys, {
-          files: Mk,
-          before: TF,
-          onWrite: Uk ? (kk, Fk, Bk) => {
-            const Rk = AR.current.then((async () => {
-              var Rk, tk, ak, Xk;
-              const bk = mB.current,
-                wk = VR.current[kk],
-                dk = void 0 !== wk && (null !== (Rk = bk[kk]) && void 0 !== Rk ? Rk : "") === JR.current[kk] ? {
-                  ...bk,
-                  [kk]: wk
-                } : bk,
-                sk = Nd(null !== (tk = dk[kk]) && void 0 !== tk ? tk : "", Fk, Bk);
-              if (null === sk) return !1;
-              if (sk === dk[kk]) return !0;
-              if (!await Tk([{
-                  path: kk,
-                  text: sk
+        }), Nc && (0, Tb.jsx)(mf, {
+          files: yb,
+          before: Oc,
+          onWrite: Db ? (bb, cb, sb) => {
+            const kb = mk.current.then((async () => {
+              var kb, Wb, ab, Tb;
+              const Ub = Qs.current,
+                Ib = Xk.current[bb],
+                Hb = void 0 !== Ib && (null !== (kb = Ub[bb]) && void 0 !== kb ? kb : "") === nk.current[bb] ? {
+                  ...Ub,
+                  [bb]: Ib
+                } : Ub,
+                fb = gH(null !== (Wb = Hb[bb]) && void 0 !== Wb ? Wb : "", cb, sb);
+              if (null === fb) return !1;
+              if (fb === Hb[bb]) return !0;
+              if (!await Ob([{
+                  path: bb,
+                  text: fb
                 }])) return !1;
-              const Vk = ud(Fk),
-                Jk = `${kk}:${Fk.key}`,
-                Ak = null !== (ak = fR.current.get(Jk)) && void 0 !== ak ? ak : Fk.value;
-              fR.current.set(Jk, Ak), Ak === Bk ? yR.current.delete(Jk) : yR.current.set(Jk, {
-                name: Vk,
-                from: Md(Ak),
-                to: Md(Bk)
+              const Mb = tH(cb),
+                Xb = `${bb}:${cb.key}`,
+                nb = null !== (ab = ek.current.get(Xb)) && void 0 !== ab ? ab : cb.value;
+              ek.current.set(Xb, nb), nb === sb ? Qk.current.delete(Xb) : Qk.current.set(Xb, {
+                name: Mb,
+                from: yH(nb),
+                to: yH(sb)
               });
-              const ek = gd([...yR.current.values()]);
-              if (GF.current) {
-                var yk;
-                null === (yk = mR.current) || void 0 === yk || yk.then((async kk => {
-                  void 0 !== kk && AF(await eV.relabel(Ck, kk, ek))
-                })).catch((kk => {
-                  console.error("World Code AI: couldn't rename a version of the code", kk)
+              const mb = PH([...Qk.current.values()]);
+              if (ic.current) {
+                var lb;
+                null === (lb = Ck.current) || void 0 === lb || lb.then((async bb => {
+                  void 0 !== bb && Xc(await nM.relabel(Ab, bb, mb))
+                })).catch((bb => {
+                  console.error("World Code AI: couldn't rename a version of the code", bb)
                 }))
               } else {
-                GF.current = !0;
-                const kk = Date.now();
-                mR.current = eV.add(Ck, ek, dk, kk).then((Fk => {
-                  var Bk;
-                  return AF(Fk), null === (Bk = Fk.find((Fk => Fk.at === kk && Fk.label === ek))) || void 0 === Bk ? void 0 : Bk.id
-                })).catch((kk => {
-                  console.error("World Code AI: couldn't keep a version of the code", kk)
-                })), rF(dk)
+                ic.current = !0;
+                const bb = Date.now();
+                Ck.current = nM.add(Ab, mb, Hb, bb).then((cb => {
+                  var sb;
+                  return Xc(cb), null === (sb = cb.find((cb => cb.at === bb && cb.label === mb))) || void 0 === sb ? void 0 : sb.id
+                })).catch((bb => {
+                  console.error("World Code AI: couldn't keep a version of the code", bb)
+                })), Gc(Hb)
               }
-              return eR.current.includes(Vk) || eR.current.push(Vk), JR.current[kk] = null !== (Xk = dk[kk]) && void 0 !== Xk ? Xk : "", VR.current[kk] = sk, fB.current = Date.now(), !0
+              return lk.current.includes(Mb) || lk.current.push(Mb), nk.current[bb] = null !== (Tb = Hb[bb]) && void 0 !== Tb ? Tb : "", Xk.current[bb] = fb, ls.current = Date.now(), !0
             }));
-            return AR.current = Rk.catch((() => !1)), Rk
+            return mk.current = kb.catch((() => !1)), kb
           } : void 0,
-          onTryIt: TF ? () => {
-            sB(rk, Math.max(0, fB.current + 600 - Date.now()))
+          onTryIt: Oc ? () => {
+            Hs(Gb, Math.max(0, ls.current + 600 - Date.now()))
           } : void 0,
-          onUndo: TF && Uk ? () => {
-            vR()
+          onUndo: Oc && Db ? () => {
+            Vk()
           } : void 0
-        }), "settings" === oF && (0, Xk.jsx)(hw, {
-          allowEdits: MF,
-          onAllowEditsChange: Uk ? kk => {
-            gF(kk),
-              function(kk) {
+        }), "settings" === Lc && (0, Tb.jsx)(dI, {
+          allowEdits: yc,
+          onAllowEditsChange: Db ? bb => {
+            Pc(bb),
+              function(bb) {
                 try {
-                  localStorage.setItem(Ew, String(kk))
+                  localStorage.setItem(gI, String(bb))
                 } catch {}
-              }(kk)
+              }(bb)
           } : void 0,
           onAddKey: () => {
-            SF.current = "settings", HF(null), LF("addKey")
+            Jc.current = "settings", Bc(null), uc("addKey")
           },
-          onEditKey: kk => {
-            SF.current = "settings", HF(kk), LF("addKey")
+          onEditKey: bb => {
+            Jc.current = "settings", Bc(bb), uc("addKey")
           }
-        }), "addKey" === oF && (0, Xk.jsx)(jw, {
-          editing: null !== NF && void 0 !== NF ? NF : void 0,
+        }), "addKey" === Lc && (0, Tb.jsx)(vI, {
+          editing: null !== gc && void 0 !== gc ? gc : void 0,
           onAdded: () => {
-            GR.current = !0, LF(SF.current)
+            Gk.current = !0, uc(Jc.current)
           },
           onOpenSettings: () => {
-            GR.current = !1, LF("settings")
+            Gk.current = !1, uc("settings")
           }
-        }, null !== (Ok = null === NF || void 0 === NF ? void 0 : NF.id) && void 0 !== Ok ? Ok : "new"), WF && (0, Xk.jsx)(fd, {
-          notes: fF,
-          outline: tF(Mk, new Set(WV().callbackNames())),
-          Av: oR,
-          onDelete: kk => {
-            yV.remove(Ck, kk).then(mF).catch((kk => {
-              console.error("World Code AI: couldn't delete a note", kk)
+        }, null !== (Yb = null === gc || void 0 === gc ? void 0 : gc.id) && void 0 !== Yb ? Yb : "new"), ec && (0, Tb.jsx)(QH, {
+          notes: lc,
+          outline: kc(yb, new Set(eM().callbackNames())),
+          ZN: Yk,
+          onDelete: bb => {
+            mM.remove(Ab, bb).then(Qc).catch((bb => {
+              console.error("World Code AI: couldn't delete a note", bb)
             }))
           }
-        }), !xR && XF.map(((kk, Fk) => {
-          var Bk, tk, wk, sk, Vk, Jk, Ak, ek;
-          const yk = HB(kk),
-            fk = gR && (null === (Bk = XF[Fk - 1]) || void 0 === Bk ? void 0 : Bk.target.key) !== kk.target.key,
-            mk = 0 === kk.changes.length,
-            Wk = mk && !!kk.failedEdits && !kk.question && !kk.worldCode,
-            vk = kk.failedEdits && (0, Xk.jsx)(PV, {
-              failed: kk.failedEdits,
-              nothingChanged: mk,
-              defaultOpen: !kk.byItself,
-              isElsewhere: !yk,
-              onRetry: kk.id !== uR || sF || 0 !== PF.length ? void 0 : () => {
-                GB(Xd.p, uV, {
-                  about: NR(kk.id),
-                  failedEdits: kk.failedEdits
+        }), !Fk && ac.map(((bb, cb) => {
+          var sb, Wb, Ib, fb, Mb, Xb, nb, mb;
+          const lb = ts(bb),
+            Qb = Ek && (null === (sb = ac[cb - 1]) || void 0 === sb ? void 0 : sb.target.key) !== bb.target.key,
+            eb = 0 === bb.changes.length,
+            Cb = eb && !!bb.failedEdits && !bb.question && !bb.worldCode,
+            Nb = bb.failedEdits && (0, Tb.jsx)(zM, {
+              failed: bb.failedEdits,
+              nothingChanged: eb,
+              defaultOpen: !bb.byItself,
+              isElsewhere: !lb,
+              onRetry: bb.id !== Pk || Hc || 0 !== zc.length ? void 0 : () => {
+                Os(TH.u, tM, {
+                  about: tk(bb.id),
+                  failedEdits: bb.failedEdits
                 })
               }
             });
-          var ik;
-          return void 0 === kk.logTitle && (!kk.isNotice || "assistant" !== kk.role || "" === kk.text || void 0 !== kk.retry || kk.keyNotice || kk.undoFiles || kk.failedEdits || kk.cutShort || kk.question || kk.worldCode || 0 !== kk.changes.length) ? (0, Xk.jsxs)(Rk.Fragment, {
-            children: [fk && (0, Xk.jsx)(DV, {
-              target: kk.target,
-              isOpen: yk
-            }), (0, Xk.jsxs)("div", {
-              className: ak()("WorldCodeAiEntry", `WorldCodeAiEntry-${kk.role}`, {
-                "WorldCodeAiEntry-elsewhere": !yk,
-                WorldCodeAiNotice: kk.isNotice,
-                "WorldCodeAiNotice-calm": kk.isNotice && kk.isCalm,
-                "WorldCodeAiNotice-past": kk.isNotice && void 0 !== kk.retry && (kk.id !== uR || !!EB)
+          var Vb;
+          return void 0 === bb.logTitle && (!bb.isNotice || "assistant" !== bb.role || "" === bb.text || void 0 !== bb.retry || bb.keyNotice || bb.undoFiles || bb.failedEdits || bb.cutShort || bb.question || bb.worldCode || 0 !== bb.changes.length) ? (0, Tb.jsxs)(kb.Fragment, {
+            children: [Qb && (0, Tb.jsx)(KM, {
+              target: bb.target,
+              isOpen: lb
+            }), (0, Tb.jsxs)("div", {
+              className: ab()("WorldCodeAiEntry", `WorldCodeAiEntry-${bb.role}`, {
+                "WorldCodeAiEntry-elsewhere": !lb,
+                WorldCodeAiNotice: bb.isNotice,
+                "WorldCodeAiNotice-calm": bb.isNotice && bb.isCalm,
+                "WorldCodeAiNotice-past": bb.isNotice && void 0 !== bb.retry && (bb.id !== Pk || !!hs)
               }),
-              children: [mk && vk, Wk ? null : kk.isNotice && void 0 !== kk.retry && (kk.id !== uR || EB) ? (0, Xk.jsx)("p", {
-                children: kk.keyNotice ? Yw(kk.keyNotice) : void 0 !== kk.retryAt ? "Not answered: Bot.xd was busy." : "Not answered: the AI had a problem."
-              }) : kk.keyNotice ? (0, Xk.jsxs)(Xk.Fragment, {
-                children: [(0, Xk.jsx)("p", {
-                  children: iw(kk.keyNotice)
-                }), kk.keyNotice.detail && (0, Xk.jsx)(Ww, {
-                  detail: kk.keyNotice.detail
+              children: [eb && Nb, Cb ? null : bb.isNotice && void 0 !== bb.retry && (bb.id !== Pk || hs) ? (0, Tb.jsx)("p", {
+                children: bb.keyNotice ? uI(bb.keyNotice) : void 0 !== bb.retryAt ? "Not answered: Bot.xd was busy." : "Not answered: the AI had a problem."
+              }) : bb.keyNotice ? (0, Tb.jsxs)(Tb.Fragment, {
+                children: [(0, Tb.jsx)("p", {
+                  children: LI(bb.keyNotice)
+                }), bb.keyNotice.detail && (0, Tb.jsx)(NI, {
+                  detail: bb.keyNotice.detail
                 })]
-              }) : kk.undoFiles ? (0, Xk.jsxs)("div", {
+              }) : bb.undoFiles ? (0, Tb.jsxs)("div", {
                 className: "WorldCodeAiWentBack",
-                children: [(0, Xk.jsx)("span", {
-                  children: "undone" === kk.status ? "Undone: your code is as it was before going back." : kk.text
-                }), yk && "undone" !== kk.status && GV(kk, Mk) && Uk && (0, Xk.jsx)("button", {
+                children: [(0, Tb.jsx)("span", {
+                  children: "undone" === bb.status ? "Undone: your code is as it was before going back." : bb.text
+                }), lb && "undone" !== bb.status && iM(bb, yb) && Db && (0, Tb.jsx)("button", {
                   className: "WorldCodeAiLinkButton WorldCodeAiNoticeUndo",
-                  disabled: !!sF,
-                  title: sF ? "You can undo once the answer is in." : void 0,
+                  disabled: !!Hc,
+                  title: Hc ? "You can undo once the answer is in." : void 0,
                   onClick: () => {
-                    (async kk => {
-                      var Fk;
-                      const Bk = mB.current;
-                      if (!GV(kk, Bk)) return;
-                      const Rk = Jd({
+                    (async bb => {
+                      var cb;
+                      const sb = Qs.current;
+                      if (!iM(bb, sb)) return;
+                      const kb = XH({
                         id: 0,
                         at: 0,
                         label: "",
-                        files: null !== (Fk = kk.undoFiles) && void 0 !== Fk ? Fk : {}
-                      }, Bk).filter((Fk => void 0 !== kk.leftFiles && Fk.path in kk.leftFiles));
-                      if (Rk.length > 0) {
-                        if (!await Tk(Rk)) return;
-                        xB("Before undoing going back", Bk)
+                        files: null !== (cb = bb.undoFiles) && void 0 !== cb ? cb : {}
+                      }, sb).filter((cb => void 0 !== bb.leftFiles && cb.path in bb.leftFiles));
+                      if (kb.length > 0) {
+                        if (!await Ob(kb)) return;
+                        Rs("Before undoing going back", sb)
                       }
-                      const tk = {
-                        ...Bk
+                      const Wb = {
+                        ...sb
                       };
-                      for (const ak of Rk) tk[ak.path] = ak.text;
-                      dF((Fk => Fk.map((Fk => Fk.id === kk.id ? {
-                        ...Fk,
+                      for (const ab of kb) Wb[ab.path] = ab.text;
+                      Ic((cb => cb.map((cb => cb.id === bb.id ? {
+                        ...cb,
                         status: "undone"
-                      } : HB(Fk) && Fk.wentBack && Fk.changes.every((kk => {
-                        var Fk;
-                        return (null !== (Fk = tk[kk.path]) && void 0 !== Fk ? Fk : "") === kk.after
+                      } : ts(cb) && cb.wentBack && cb.changes.every((bb => {
+                        var cb;
+                        return (null !== (cb = Wb[bb.path]) && void 0 !== cb ? cb : "") === bb.after
                       })) ? {
-                        ...Fk,
+                        ...cb,
                         status: "applied",
                         wentBack: void 0
-                      } : Fk))))
-                    })(kk)
+                      } : cb))))
+                    })(bb)
                   },
-                  children: sF ? "Undo going back after this answer" : "Undo going back"
+                  children: Hc ? "Undo going back after this answer" : "Undo going back"
                 })]
-              }) : "assistant" === kk.role ? (0, Xk.jsx)(dk.e, {
-                markdown: "applied" !== kk.status && !kk.editedInPlace && (kk.changes.length > 0 || null !== (tk = kk.failedEdits) && void 0 !== tk && tk.length) ? As(kk.text) : kk.text
-              }) : (0, Xk.jsx)("p", {
-                children: kk.text
-              }), kk.answeredBy && (0, Xk.jsx)(vw, {
-                answeredBy: kk.answeredBy
-              }), kk.oneOff && DR && kk.id === uR && !sF && (0, Xk.jsxs)("p", {
+              }) : "assistant" === bb.role ? (0, Tb.jsx)(Hb.d, {
+                markdown: "applied" !== bb.status && !bb.editedInPlace && (bb.changes.length > 0 || null !== (Wb = bb.failedEdits) && void 0 !== Wb && Wb.length) ? Xf(bb.text) : bb.text
+              }) : (0, Tb.jsx)("p", {
+                children: bb.text
+              }), bb.answeredBy && (0, Tb.jsx)(VI, {
+                answeredBy: bb.answeredBy
+              }), bb.oneOff && zk && bb.id === Pk && !Hc && (0, Tb.jsxs)("p", {
                 className: "WorldCodeAiBackTo",
-                children: ["Your next question goes back to ", DR.model.name, "."]
-              }), kk.cutShort && (0, Xk.jsx)(Ow, {
-                hasCode: kk.changes.length > 0 || !!kk.worldCode,
-                ...zR(kk.id, kk.cutShort)
-              }), kk.forgetNotes && (0, Xk.jsx)("div", {
+                children: ["Your next question goes back to ", zk.model.name, "."]
+              }), bb.cutShort && (0, Tb.jsx)(JI, {
+                hasCode: bb.changes.length > 0 || !!bb.worldCode,
+                ...qk(bb.id, bb.cutShort)
+              }), bb.forgetNotes && (0, Tb.jsx)("div", {
                 className: "WorldCodeAiForget",
-                children: yk && void 0 === kk.forgetStatus && kk.id > MR ? (0, Xk.jsxs)(Xk.Fragment, {
-                  children: [(0, Xk.jsxs)("span", {
+                children: lb && void 0 === bb.forgetStatus && bb.id > Dk ? (0, Tb.jsxs)(Tb.Fragment, {
+                  children: [(0, Tb.jsxs)("span", {
                     className: "WorldCodeAiForgetAsk",
-                    children: [1 === kk.forgetNotes.length ? "Forget this note in AI notes too? " : "Forget these notes in AI notes too? ", (0, Xk.jsx)("span", {
+                    children: [1 === bb.forgetNotes.length ? "Forget this note in AI notes too? " : "Forget these notes in AI notes too? ", (0, Tb.jsx)("span", {
                       className: "WorldCodeAiForgetNote",
-                      children: kk.forgetNotes.map((kk => `"${kk}"`)).join(", ")
+                      children: bb.forgetNotes.map((bb => `"${bb}"`)).join(", ")
                     })]
-                  }), (0, Xk.jsxs)("div", {
+                  }), (0, Tb.jsxs)("div", {
                     className: "WorldCodeAiNoteButtons",
-                    children: [(0, Xk.jsx)("button", {
+                    children: [(0, Tb.jsx)("button", {
                       className: "WorldCodeAiSecondaryButton",
                       onClick: () => {
-                        dR(kk, !0)
+                        fk(bb, !0)
                       },
                       children: "Forget it"
-                    }), (0, Xk.jsx)("button", {
+                    }), (0, Tb.jsx)("button", {
                       className: "WorldCodeAiLinkButton",
                       onClick: () => {
-                        dR(kk, !1)
+                        fk(bb, !1)
                       },
                       children: "Keep it"
                     })]
                   })]
-                }) : (0, Xk.jsx)("span", {
+                }) : (0, Tb.jsx)("span", {
                   className: "WorldCodeAiHint",
-                  children: "forgotten" === kk.forgetStatus ? "Taken out of AI notes." : "Kept in AI notes."
+                  children: "forgotten" === bb.forgetStatus ? "Taken out of AI notes." : "Kept in AI notes."
                 })
-              }), kk.changes.length > 0 && (0, Xk.jsx)(rV, {
-                entry: kk,
-                defaultOpen: !kk.byItself,
-                elsewhere: yk ? void 0 : kk.target,
-                isOutOfDate: yk && !jB.current.has(kk.id) && kk.changes.some((kk => {
-                  var Fk;
-                  return (null !== (Fk = Mk[kk.path]) && void 0 !== Fk ? Fk : "") !== kk.before
+              }), bb.changes.length > 0 && (0, Tb.jsx)(GM, {
+                entry: bb,
+                defaultOpen: !bb.byItself,
+                elsewhere: lb ? void 0 : bb.target,
+                isOutOfDate: lb && !vs.current.has(bb.id) && bb.changes.some((bb => {
+                  var cb;
+                  return (null !== (cb = yb[bb.path]) && void 0 !== cb ? cb : "") !== bb.before
                 })),
-                canEdit: yk ? Uk : !!jk && (!kk.target.codeBlock || kk.target.canChangePos),
-                request: SR(kk.id),
-                onApply: Fk => {
-                  yk ? lB(Fk ? {
-                    id: kk.id,
-                    changes: Fk,
+                canEdit: lb ? Db : !!Rb && (!bb.target.codeBlock || bb.target.canChangePos),
+                request: Bk(bb.id),
+                onApply: cb => {
+                  lb ? Fs(cb ? {
+                    id: bb.id,
+                    changes: cb,
                     isPartial: !0
-                  } : kk, NR(kk.id)) : ((kk, Fk) => {
-                    jk && nB && (aF.pendingApply = {
-                      entryId: kk.id,
-                      targetKey: kk.target.key,
-                      picked: Fk,
-                      until: Date.now() + VV
-                    }, jk(kk.target))
-                  })(kk, Fk)
+                  } : bb, tk(bb.id)) : ((bb, cb) => {
+                    Rb && xs && (Wc.pendingApply = {
+                      entryId: bb.id,
+                      targetKey: bb.target.key,
+                      picked: cb,
+                      until: Date.now() + fM
+                    }, Rb(bb.target))
+                  })(bb, cb)
                 },
-                checkPicked: yk ? sR : void 0,
-                onPickedChange: Fk => {
-                  pF((Bk => {
-                    if (Bk.has(kk.id) === Fk) return Bk;
-                    const Rk = new Set(Bk);
-                    return Fk ? Rk.add(kk.id) : Rk.delete(kk.id), Rk
+                checkPicked: lb ? Mk : void 0,
+                onPickedChange: cb => {
+                  rc((sb => {
+                    if (sb.has(bb.id) === cb) return sb;
+                    const kb = new Set(sb);
+                    return cb ? kb.add(bb.id) : kb.delete(bb.id), kb
                   }))
                 },
                 onUndo: () => {
-                  (async kk => {
-                    const Fk = mB.current;
-                    if (kk.changes.some((kk => {
-                        var Bk;
-                        return (null !== (Bk = Fk[kk.path]) && void 0 !== Bk ? Bk : "") !== kk.after
+                  (async bb => {
+                    const cb = Qs.current;
+                    if (bb.changes.some((bb => {
+                        var sb;
+                        return (null !== (sb = cb[bb.path]) && void 0 !== sb ? sb : "") !== bb.after
                       }))) return;
-                    await Tk(kk.changes.map((kk => ({
-                      path: kk.path,
-                      text: kk.before
-                    })))) && (MB(kk.id, "undone"), null !== tB && wR())
-                  })(kk)
+                    await Ob(bb.changes.map((bb => ({
+                      path: bb.path,
+                      text: bb.before
+                    })))) && (Ps(bb.id, "undone"), null !== ks && Hk())
+                  })(bb)
                 },
                 onTryIt: () => {
-                  (kk => {
-                    const Fk = vB.current;
-                    xF(Fk), XR(kk.id, "ask", Fk), sB(rk, Math.max(0, fB.current + 600 - Date.now()))
-                  })(kk)
+                  (bb => {
+                    const cb = Cs.current;
+                    Sc(cb), Uk(bb.id, "ask", cb), Hs(Gb, Math.max(0, ls.current + 600 - Date.now()))
+                  })(bb)
                 },
-                isLatest: yk && kk.id > MR,
-                canUndo: yk && kk.changes.every((kk => {
-                  var Fk;
-                  return (null !== (Fk = Mk[kk.path]) && void 0 !== Fk ? Fk : "") === kk.after
+                isLatest: lb && bb.id > Dk,
+                canUndo: lb && bb.changes.every((bb => {
+                  var cb;
+                  return (null !== (cb = yb[bb.path]) && void 0 !== cb ? cb : "") === bb.after
                 })),
                 onFixWarnings: () => {
-                  (kk => {
-                    var Fk;
-                    const Bk = Vw(null !== (Fk = kk.warnings) && void 0 !== Fk ? Fk : []);
-                    var Rk;
-                    if (!Bk) return void GB(`Fix this in your change: ${null===(Rk=kk.warnings)||void 0===Rk?void 0:Rk.join(" ")}`);
-                    const tk = WV(),
-                      ak = kk.changes.map((Fk => ({
-                        ...Fk,
-                        before: "applied" === kk.status ? Fk.after : Fk.before,
-                        after: ew(Fk.after, Bk)
+                  (bb => {
+                    var cb;
+                    const sb = XI(null !== (cb = bb.warnings) && void 0 !== cb ? cb : []);
+                    var kb;
+                    if (!sb) return void Os(`Fix this in your change: ${null===(kb=bb.warnings)||void 0===kb?void 0:kb.join(" ")}`);
+                    const Wb = eM(),
+                      ab = bb.changes.map((cb => ({
+                        ...cb,
+                        before: "applied" === bb.status ? cb.after : cb.before,
+                        after: lI(cb.after, sb)
                       })));
-                    NB({
+                    Bs({
                       role: "user",
-                      text: 1 === Bk.length ? "Fix this line" : "Fix these lines",
+                      text: 1 === sb.length ? "Fix this line" : "Fix these lines",
                       changes: [],
                       status: "offered"
-                    }), NB({
+                    }), Bs({
                       role: "assistant",
-                      text: `Fixed without asking the AI: ${Bk.map(yw).join(" ")}`,
-                      changes: ak,
+                      text: `Fixed without asking the AI: ${sb.map(QI).join(" ")}`,
+                      changes: ab,
                       status: "offered",
-                      swappedTo: Bk.flatMap((kk => {
+                      swappedTo: sb.flatMap((bb => {
                         let {
-                          to: Fk
-                        } = kk;
-                        return Fk ? [Fk] : []
+                          to: cb
+                        } = bb;
+                        return cb ? [cb] : []
                       })),
-                      warnings: ak.flatMap((kk => wV(tk, kk, BF)))
+                      warnings: ab.flatMap((bb => UM(Wb, bb, cc)))
                     })
-                  })(kk)
+                  })(bb)
                 },
                 onCheck: () => {
-                  GB(function(kk) {
-                    const Fk = [...new Set(kk)];
-                    return Fk.length > 0 ? `${TV} These names were checked against the game and are right, so keep them: ${Fk.map((kk=>`"${kk}"`)).join(", ")}.` : TV
-                  }(HR.flatMap((kk => {
-                    var Fk;
-                    return null !== (Fk = kk.swappedTo) && void 0 !== Fk ? Fk : []
+                  Os(function(bb) {
+                    const cb = [...new Set(bb)];
+                    return cb.length > 0 ? `${OM} These names were checked against the game and are right, so keep them: ${cb.map((bb=>`"${bb}"`)).join(", ")}.` : OM
+                  }(yk.flatMap((bb => {
+                    var cb;
+                    return null !== (cb = bb.swappedTo) && void 0 !== cb ? cb : []
                   }))), "Check it for mistakes")
                 },
-                busy: yk ? !!sF : !nB
-              }), kk.question && (0, Xk.jsx)(od, {
+                busy: lb ? !!Hc : !xs
+              }), bb.question && (0, Tb.jsx)(LH, {
                 ownAnswerBelow: !0,
-                question: kk.question,
-                onAnswer: kk.id !== uR || sF ? void 0 : (Fk, Bk) => {
-                  var Rk, tk, ak, Xk, bk, wk, dk;
-                  const sk = null !== (Rk = null === (tk = kk.question) || void 0 === tk ? void 0 : tk.question) && void 0 !== Rk ? Rk : "",
-                    Vk = null !== (ak = null === (Xk = kk.askedFor) || void 0 === Xk ? void 0 : Xk.request) && void 0 !== ak ? ak : "";
-                  GB(Yd(Vk, sk, Fk), null !== Fk && void 0 !== Fk ? Fk : "Let the AI pick", {
-                    check: Bk,
-                    about: null === (bk = kk.askedFor) || void 0 === bk ? void 0 : bk.request,
-                    asked: Bk && Fk ? `${Vk} ${Fk}` : null,
-                    guardWords: Yd(null !== (wk = null === (dk = kk.askedFor) || void 0 === dk ? void 0 : dk.guardWords) && void 0 !== wk ? wk : "", sk, Fk)
+                question: bb.question,
+                onAnswer: bb.id !== Pk || Hc ? void 0 : (cb, sb) => {
+                  var kb, Wb, ab, Tb, Ub, Ib, Hb;
+                  const fb = null !== (kb = null === (Wb = bb.question) || void 0 === Wb ? void 0 : Wb.question) && void 0 !== kb ? kb : "",
+                    Mb = null !== (ab = null === (Tb = bb.askedFor) || void 0 === Tb ? void 0 : Tb.request) && void 0 !== ab ? ab : "";
+                  Os(VH(Mb, fb, cb), null !== cb && void 0 !== cb ? cb : "Let the AI pick", {
+                    check: sb,
+                    about: null === (Ub = bb.askedFor) || void 0 === Ub ? void 0 : Ub.request,
+                    asked: sb && cb ? `${Mb} ${cb}` : null,
+                    guardWords: VH(null !== (Ib = null === (Hb = bb.askedFor) || void 0 === Hb ? void 0 : Hb.guardWords) && void 0 !== Ib ? Ib : "", fb, cb)
                   })
                 }
-              }), yk && kk.offerExport && (0, Xk.jsx)("button", {
+              }), lb && bb.offerExport && (0, Tb.jsx)("button", {
                 className: "WorldCodeAiSecondaryButton WorldCodeAiSaveGame",
                 onClick: () => {
-                  uB(kk.id, {
+                  ys(bb.id, {
                     offerExport: !1
-                  }), kR("offered" === kk.status && kk.changes.length > 0)
+                  }), ck("offered" === bb.status && bb.changes.length > 0)
                 },
                 children: "Save my game"
-              }), kk.plan && (0, Xk.jsx)(vd, {
-                steps: kk.plan,
-                built: null !== (wk = kk.planBuilt) && void 0 !== wk ? wk : 0,
-                done: null !== (sk = kk.planDone) && void 0 !== sk ? sk : 0,
-                onBuild: yk && !sF && Uk ? Fk => {
-                  var Bk;
-                  const Rk = null !== (Bk = kk.plan) && void 0 !== Bk ? Bk : [];
-                  cB((() => {
-                    uB(kk.id, {
-                      planBuilt: Fk + 1
-                    }), zB.current(function(kk, Fk) {
-                      const Bk = kk.map(((kk, Bk) => `${Bk+1}. ${kk}${Bk<Fk?" (built)":""}`)).join("\n");
-                      return `Build step ${Fk+1} of our plan now: ${kk[Fk]}\nThe whole plan:\n${Bk}\nBuild only step ${Fk+1}, keeping what earlier steps built, so I can try it before the next.`
-                    }(Rk, Fk), `Build step ${Fk+1}: ${Rk[Fk]}`, {
-                      about: Rk[Fk],
-                      asked: Rk[Fk],
+              }), bb.plan && (0, Tb.jsx)(NH, {
+                steps: bb.plan,
+                built: null !== (Ib = bb.planBuilt) && void 0 !== Ib ? Ib : 0,
+                done: null !== (fb = bb.planDone) && void 0 !== fb ? fb : 0,
+                onBuild: lb && !Hc && Db ? cb => {
+                  var sb;
+                  const kb = null !== (sb = bb.plan) && void 0 !== sb ? sb : [];
+                  is((() => {
+                    ys(bb.id, {
+                      planBuilt: cb + 1
+                    }), zs.current(function(bb, cb) {
+                      const sb = bb.map(((bb, sb) => `${sb+1}. ${bb}${sb<cb?" (built)":""}`)).join("\n");
+                      return `Build step ${cb+1} of our plan now: ${bb[cb]}\nThe whole plan:\n${sb}\nBuild only step ${cb+1}, keeping what earlier steps built, so I can try it before the next.`
+                    }(kb, cb), `Build step ${cb+1}: ${kb[cb]}`, {
+                      about: kb[cb],
+                      asked: kb[cb],
                       planStep: {
-                        planId: kk.id,
-                        index: Fk
+                        planId: bb.id,
+                        index: cb
                       }
                     })
                   }))
                 } : void 0
-              }), yk && kk.note && kk.noteStatus && !(kk.wentBack && "saved" === kk.noteStatus) && (0, Xk.jsx)(Wd, {
-                note: kk.note,
-                status: kk.noteStatus,
-                isPartLeftOut: "offered" === kk.status && ZF.has(kk.id),
-                defaultOpen: !kk.byItself || "asked" === kk.noteStatus,
-                onAnswer: Fk => {
-                  OR(kk, Fk)
+              }), lb && bb.note && bb.noteStatus && !(bb.wentBack && "saved" === bb.noteStatus) && (0, Tb.jsx)(CH, {
+                note: bb.note,
+                status: bb.noteStatus,
+                isPartLeftOut: "offered" === bb.status && wc.has(bb.id),
+                defaultOpen: !bb.byItself || "asked" === bb.noteStatus,
+                onAnswer: cb => {
+                  Jk(bb, cb)
                 }
-              }, "asked" === kk.noteStatus ? "asked" : "lA"), !mk && vk, kk.lookups && (0, Xk.jsx)(hV, {
-                lookups: kk.lookups.lookups,
-                defaultOpen: !kk.lookedAt,
-                isElsewhere: !yk
-              }), yk && kk.lookups && !kk.lookedAt && (0, Xk.jsx)("div", {
+              }, "asked" === bb.noteStatus ? "asked" : "vn"), !eb && Nb, bb.lookups && (0, Tb.jsx)(qM, {
+                lookups: bb.lookups.lookups,
+                defaultOpen: !bb.lookedAt,
+                isElsewhere: !lb
+              }), lb && bb.lookups && !bb.lookedAt && (0, Tb.jsx)("div", {
                 className: "WorldCodeAiLookups",
-                children: (0, Xk.jsx)("button", {
+                children: (0, Tb.jsx)("button", {
                   className: "WorldCodeAiSecondaryButton",
-                  disabled: !!sF,
+                  disabled: !!Hc,
                   onClick: () => {
-                    (async kk => {
-                      if (!kk.lookups || kk.lookedAt || sF) return;
-                      uB(kk.id, {
+                    (async bb => {
+                      if (!bb.lookups || bb.lookedAt || Hc) return;
+                      ys(bb.id, {
                         lookedAt: !0
                       });
-                      const Fk = new AbortController;
-                      QF.current = Fk;
-                      const Bk = Date.now();
-                      IF(Bk), VF({
+                      const cb = new AbortController;
+                      jc.current = cb;
+                      const sb = Date.now();
+                      xc(sb), fc({
                         phase: "thinking",
-                        startedAt: Bk
+                        startedAt: sb
                       });
                       try {
-                        "stopped" === await aR(kk.lookups.lookups, kk.lookups.followUp, {
-                          signal: Fk.signal
-                        }) && uB(kk.id, {
+                        "stopped" === await Tk(bb.lookups.lookups, bb.lookups.followUp, {
+                          signal: cb.signal
+                        }) && ys(bb.id, {
                           lookedAt: !1
                         })
                       } finally {
-                        QF.current = null, VF(null)
+                        jc.current = null, fc(null)
                       }
-                    })(kk)
+                    })(bb)
                   },
                   children: "Let the AI look"
                 })
-              }), kk.worldCode && (0, Xk.jsx)(zV, {
-                code: kk.worldCode.join("\n"),
-                defaultOpen: !kk.byItself,
-                isElsewhere: !yk,
-                onSwitch: yk && Zk ? () => {
-                  var Fk;
-                  Zk(qV(null !== (Fk = kk.worldCode) && void 0 !== Fk ? Fk : []))
+              }), bb.worldCode && (0, Tb.jsx)(ZM, {
+                code: bb.worldCode.join("\n"),
+                defaultOpen: !bb.byItself,
+                isElsewhere: !lb,
+                onSwitch: lb && wb ? () => {
+                  var cb;
+                  wb(dM(null !== (cb = bb.worldCode) && void 0 !== cb ? cb : []))
                 } : void 0
-              }), yk && "ask" === kk.trial && kk.id > MR && Gk <= (null !== (Vk = kk.trialErrors) && void 0 !== Vk ? Vk : 0) && (0, Xk.jsxs)("div", {
+              }), lb && "ask" === bb.trial && bb.id > Dk && ib <= (null !== (Mb = bb.trialErrors) && void 0 !== Mb ? Mb : 0) && (0, Tb.jsxs)("div", {
                 className: "WorldCodeAiTrial",
-                children: [(0, Xk.jsx)("span", {
+                children: [(0, Tb.jsx)("span", {
                   children: "Did your world do what you wanted?"
-                }), (0, Xk.jsxs)("div", {
+                }), (0, Tb.jsxs)("div", {
                   className: "WorldCodeAiTrialButtons",
-                  children: [(0, Xk.jsx)("button", {
-                    ref: WB,
+                  children: [(0, Tb.jsx)("button", {
+                    ref: es,
                     className: "WorldCodeAiSecondaryButton",
                     onClick: () => {
-                      XR(kk.id, "worked")
+                      Uk(bb.id, "worked")
                     },
                     children: "Yes"
-                  }), (0, Xk.jsx)("button", {
+                  }), (0, Tb.jsx)("button", {
                     className: "WorldCodeAiSecondaryButton",
                     onClick: () => {
-                      var Fk;
-                      XR(kk.id, "notQuite"), zF("It didn't work because "), null === (Fk = eB.current) || void 0 === Fk || Fk.focus()
+                      var cb;
+                      Uk(bb.id, "notQuite"), Zc("It didn't work because "), null === (cb = ns.current) || void 0 === cb || cb.focus()
                     },
                     children: "Not quite"
                   })]
                 })]
-              }), yk && "worked" === kk.trial && kk.id > MR && (0, Xk.jsxs)("div", {
+              }), lb && "worked" === bb.trial && bb.id > Dk && (0, Tb.jsxs)("div", {
                 className: "WorldCodeAiTrial",
-                children: [(0, Xk.jsx)("span", {
+                children: [(0, Tb.jsx)("span", {
                   children: "Nice! What next?"
-                }), (0, Xk.jsx)(EV, {
-                  requests: LV,
-                  onPick: kk => {
-                    GB(kk, void 0, {
+                }), (0, Tb.jsx)(hM, {
+                  requests: uM,
+                  onPick: bb => {
+                    Os(bb, void 0, {
                       asked: null
                     })
                   }
                 })]
-              }), yk && "notQuite" === kk.trial && kk.id > MR && (0, Xk.jsxs)("div", {
+              }), lb && "notQuite" === bb.trial && bb.id > Dk && (0, Tb.jsxs)("div", {
                 className: "WorldCodeAiTrial WorldCodeAiTrial-wrong",
-                children: [(0, Xk.jsx)("span", {
+                children: [(0, Tb.jsx)("span", {
                   children: "What went wrong? Pick one, or say it in your own words below."
-                }), (0, Xk.jsx)(EV, {
-                  requests: OV,
-                  onPick: kk => {
-                    GB(kk, void 0, {
+                }), (0, Tb.jsx)(hM, {
+                  requests: YM,
+                  onPick: bb => {
+                    Os(bb, void 0, {
                       asked: null
                     })
                   }
                 })]
-              }), "assistant" === kk.role && kk.changes.length > 0 && "offered" === kk.status && kk.id === uR && !sF && (0, Xk.jsx)(EV, {
-                requests: YV,
-                onPick: kk => {
-                  GB(kk, void 0, {
+              }), "assistant" === bb.role && bb.changes.length > 0 && "offered" === bb.status && bb.id === Pk && !Hc && (0, Tb.jsx)(hM, {
+                requests: VM,
+                onPick: bb => {
+                  Os(bb, void 0, {
                     asked: null
                   })
                 }
-              }), "assistant" === kk.role && void 0 !== kk.answeredBy && "free" !== kk.answeredBy && 0 === kk.changes.length && !kk.worldCode && !kk.cutShort && kk.id === uR && !sF && ga(kk.text) && (0, Xk.jsx)(EV, {
-                requests: oV,
+              }), "assistant" === bb.role && void 0 !== bb.answeredBy && "free" !== bb.answeredBy && 0 === bb.changes.length && !bb.worldCode && !bb.cutShort && bb.id === Pk && !Hc && Ea(bb.text) && (0, Tb.jsx)(hM, {
+                requests: LM,
                 onPick: () => {
-                  GB("You said what you'd change but made no change. Make it now, with the code in full.", "Make the change", {
+                  Os("You said what you'd change but made no change. Make it now, with the code in full.", "Make the change", {
                     asked: null
                   })
                 }
-              }), kk.keyNotice && void 0 !== kk.retry && kk.id === uR && !sF && (0, Xk.jsx)(Lw, {
-                ...PR(kk.id, kk.retry, kk.keyNotice)
-              }), void 0 !== kk.retry && !kk.keyNotice && kk.id === uR && !sF && (0, Xk.jsxs)("div", {
+              }), bb.keyNotice && void 0 !== bb.retry && bb.id === Pk && !Hc && (0, Tb.jsx)(hI, {
+                ...dk(bb.id, bb.retry, bb.keyNotice)
+              }), void 0 !== bb.retry && !bb.keyNotice && bb.id === Pk && !Hc && (0, Tb.jsxs)("div", {
                 className: "WorldCodeAiRetry",
-                children: [(0, Xk.jsx)("button", {
-                  ...fw.h,
+                children: [(0, Tb.jsx)("button", {
+                  ...eI.e,
                   className: "WorldCodeAiSecondaryButton",
-                  disabled: (null !== (Jk = kk.retryAt) && void 0 !== Jk ? Jk : 0) > nF,
+                  disabled: (null !== (Xb = bb.retryAt) && void 0 !== Xb ? Xb : 0) > Fc,
                   onClick: () => {
-                    var Fk;
-                    GB(null !== (Fk = kk.retry) && void 0 !== Fk ? Fk : "", kk.retryShown, {
-                      ...kk.retryOptions,
-                      retryOf: kk.id
+                    var cb;
+                    Os(null !== (cb = bb.retry) && void 0 !== cb ? cb : "", bb.retryShown, {
+                      ...bb.retryOptions,
+                      retryOf: bb.id
                     })
                   },
-                  children: (null !== (Ak = kk.retryAt) && void 0 !== Ak ? Ak : 0) > nF ? `Try again in ${CV((null!==(ek=kk.retryAt)&&void 0!==ek?ek:0)-nF)}` : "Try again"
-                }), DR && (0, Xk.jsxs)("button", {
+                  children: (null !== (nb = bb.retryAt) && void 0 !== nb ? nb : 0) > Fc ? `Try again in ${AM((null!==(mb=bb.retryAt)&&void 0!==mb?mb:0)-Fc)}` : "Try again"
+                }), zk && (0, Tb.jsxs)("button", {
                   className: "WorldCodeAiPrimaryButton",
                   onClick: () => {
-                    var Fk;
-                    GB(null !== (Fk = kk.retry) && void 0 !== Fk ? Fk : "", kk.retryShown, {
-                      ...kk.retryOptions,
-                      retryOf: kk.id,
+                    var cb;
+                    Os(null !== (cb = bb.retry) && void 0 !== cb ? cb : "", bb.retryShown, {
+                      ...bb.retryOptions,
+                      retryOf: bb.id,
                       useFree: !1
                     })
                   },
-                  children: ["Ask ", DR.model.name, " instead"]
-                }), !DR && (0, Xk.jsx)("button", {
+                  children: ["Ask ", zk.model.name, " instead"]
+                }), !zk && (0, Tb.jsx)("button", {
                   className: "WorldCodeAiLinkButton",
-                  onClick: TR,
+                  onClick: Kk,
                   children: "Choose another AI"
                 })]
               })]
             })]
-          }, kk.id) : (0, Xk.jsxs)(Rk.Fragment, {
-            children: [fk && (0, Xk.jsx)(DV, {
-              target: kk.target,
-              isOpen: yk
-            }), kk.lookups && (0, Xk.jsx)(hV, {
-              lookups: kk.lookups.lookups,
-              words: kk.text,
-              defaultOpen: !kk.lookedAt,
-              isElsewhere: !yk
-            }), !kk.lookups && (0, Xk.jsx)(bk, {
-              title: null !== (ik = kk.logTitle) && void 0 !== ik ? ik : kk.isCalm ? "Update" : "Problem",
-              isCalm: kk.isCalm || "user" === kk.role,
-              isElsewhere: !yk,
-              children: (0, Xk.jsx)("p", {
-                children: kk.text
+          }, bb.id) : (0, Tb.jsxs)(kb.Fragment, {
+            children: [Qb && (0, Tb.jsx)(KM, {
+              target: bb.target,
+              isOpen: lb
+            }), bb.lookups && (0, Tb.jsx)(qM, {
+              lookups: bb.lookups.lookups,
+              words: bb.text,
+              defaultOpen: !bb.lookedAt,
+              isElsewhere: !lb
+            }), !bb.lookups && (0, Tb.jsx)(Ub, {
+              title: null !== (Vb = bb.logTitle) && void 0 !== Vb ? Vb : bb.isCalm ? "Update" : "Problem",
+              isCalm: bb.isCalm || "user" === bb.role,
+              isElsewhere: !lb,
+              children: (0, Tb.jsx)("p", {
+                children: bb.text
               })
             })]
-          }, kk.id)
-        })), !xR && gR && (null === (Ek = XF[XF.length - 1]) || void 0 === Ek ? void 0 : Ek.target.key) !== hk.key && (0, Xk.jsx)(DV, {
-          target: hk,
+          }, bb.id)
+        })), !Fk && Ek && (null === (hb = ac[ac.length - 1]) || void 0 === hb ? void 0 : hb.target.key) !== qb.key && (0, Tb.jsx)(KM, {
+          target: qb,
           isOpen: !0
-        }), !xR && 0 === HR.length && (0, Xk.jsxs)("div", {
+        }), !Fk && 0 === yk.length && (0, Tb.jsxs)("div", {
           className: "WorldCodeAiEmpty",
-          children: [(0, Xk.jsx)("p", {
-            children: BF ? "What should happen when someone clicks this block? Ask in your own words." : "What do you want your world to do? Ask in your own words."
-          }), (0, Xk.jsxs)("div", {
+          children: [(0, Tb.jsx)("p", {
+            children: cc ? "What should happen when someone clicks this block? Ask in your own words." : "What do you want your world to do? Ask in your own words."
+          }), (0, Tb.jsxs)("div", {
             className: "WorldCodeAiChips",
-            children: [pR && (0, Xk.jsx)("button", {
-              ...fw.h,
+            children: [Rk && (0, Tb.jsx)("button", {
+              ...eI.e,
               className: "WorldCodeAiChip",
               onClick: () => {
-                GB("Explain what my code does")
+                Os("Explain what my code does")
               },
               children: "Explain my code"
-            }), pR && !BF && !iR && Uk && (0, Xk.jsx)("button", {
-              ...fw.h,
+            }), Rk && !cc && !Lk && Db && (0, Tb.jsx)("button", {
+              ...eI.e,
               className: "WorldCodeAiChip",
               onClick: () => {
-                GB("Put the numbers and messages in my code that I might want to change (times, amounts, messages) in CONFIG settings at the top, and use them from there. Change nothing else.", "Make settings I can change")
+                Os("Put the numbers and messages in my code that I might want to change (times, amounts, messages) in CONFIG settings at the top, and use them from there. Change nothing else.", "Make settings I can change")
               },
               children: "Make settings I can change"
-            }), (Uk ? BF ? iV : vV : []).map((kk => (0, Rk.createElement)("button", {
-              ...fw.h,
-              key: kk,
+            }), (Db ? cc ? NM : CM : []).map((bb => (0, kb.createElement)("button", {
+              ...eI.e,
+              key: bb,
               className: "WorldCodeAiChip",
               onClick: () => {
-                GB(kk)
+                Os(bb)
               }
-            }, kk)))]
-          }), (0, Xk.jsxs)("p", {
+            }, bb)))]
+          }), (0, Tb.jsxs)("p", {
             className: "WorldCodeAiPrivacy",
-            children: [DR ? `Bloxd's safety check first makes sure your request is about your game, then it goes with your code to ${DR.model.name} with your key.` : hR ? "deepseek" === hR.provider ? "Your request and code go through Bloxd to Super Bot.xd, run by DeepSeek, which stores them on its servers in China." : "Your request and code go through Bloxd to Super Bot.xd." : "Your request and code go to Bot.xd, which doesn't keep them.", " ", "Never type personal details, like your name, address or school."]
-          }), !DR && (0, Xk.jsxs)("p", {
+            children: [zk ? `Bloxd's safety check first makes sure your request is about your game, then it goes with your code to ${zk.model.name} with your key.` : Ak ? "deepseek" === Ak.provider ? "Your request and code go through Bloxd to Super Bot.xd, run by DeepSeek, which stores them on its servers in China." : "Your request and code go through Bloxd to Super Bot.xd." : "Your request and code go to Bot.xd, which doesn't keep them.", " ", "Never type personal details, like your name, address or school."]
+          }), !zk && (0, Tb.jsxs)("p", {
             className: "WorldCodeAiPrivacy",
-            children: ["Want a stronger AI?", " ", (0, Xk.jsx)("button", {
+            children: ["Want a stronger AI?", " ", (0, Tb.jsx)("button", {
               className: "WorldCodeAiKeyLearnMore",
-              onClick: rR,
+              onClick: Zk,
               children: "Add your own API key"
             })]
           })]
-        }), !xR && sF && (0, Xk.jsx)("div", {
+        }), !Fk && Hc && (0, Tb.jsx)("div", {
           className: "WorldCodeAiEntry WorldCodeAiEntry-assistant WorldCodeAiBusyEntry",
-          children: (0, Xk.jsxs)("div", {
+          children: (0, Tb.jsxs)("div", {
             className: "WorldCodeAiBusy",
             role: "status",
-            children: [(0, Xk.jsx)("span", {
+            children: [(0, Tb.jsx)("span", {
               className: "WorldCodeAiSpinner"
-            }), (0, Xk.jsx)("span", {
+            }), (0, Tb.jsx)("span", {
               className: "WorldCodeAiBusyText",
-              children: (0, Xk.jsx)(bk, {
-                title: null !== (Sk = ZV(sF)) && void 0 !== Sk ? Sk : "Thinking\u2026",
+              children: (0, Tb.jsx)(Ub, {
+                title: null !== (Jb = wM(Hc)) && void 0 !== Jb ? Jb : "Thinking\u2026",
                 isCalm: !0,
-                children: "waiting" === sF.phase ? (0, Xk.jsxs)("span", {
+                children: "waiting" === Hc.phase ? (0, Tb.jsxs)("span", {
                   className: "WorldCodeAiBusyHint",
-                  children: [Ws((null !== (Nk = sF.until) && void 0 !== Nk ? Nk : nF) - nF), " Lots of people share Bot.xd."]
-                }) : (0, Xk.jsxs)(Xk.Fragment, {
-                  children: [(0, Xk.jsx)(pV, {
-                    busy: sF
-                  }), "screening" === sF.phase && (null !== (Hk = sF.until) && void 0 !== Hk ? Hk : 0) > nF && (0, Xk.jsxs)("span", {
+                  children: [ef((null !== (gb = Hc.until) && void 0 !== gb ? gb : Fc) - Fc), " Lots of people share Bot.xd."]
+                }) : (0, Tb.jsxs)(Tb.Fragment, {
+                  children: [(0, Tb.jsx)(rM, {
+                    busy: Hc
+                  }), "screening" === Hc.phase && (null !== (Bb = Hc.until) && void 0 !== Bb ? Bb : 0) > Fc && (0, Tb.jsxs)("span", {
                     className: "WorldCodeAiBusyHint",
-                    children: [Ws((null !== (uk = sF.until) && void 0 !== uk ? uk : nF) - nF), " Lots of people share the safety check."]
-                  }), "checking" !== sF.phase && "screening" !== sF.phase && (0, Xk.jsx)("span", {
+                    children: [ef((null !== (tb = Hc.until) && void 0 !== tb ? tb : Fc) - Fc), " Lots of people share the safety check."]
+                  }), "checking" !== Hc.phase && "screening" !== Hc.phase && (0, Tb.jsx)("span", {
                     className: "WorldCodeAiBusyHint",
-                    children: sF.keyModel ? `${sF.keyModel} is answering with your key.` : sF.isSuperBot ? `${Fb} is answering from your usage.` : Es(uF.current, sF.model)
+                    children: Hc.keyModel ? `${Hc.keyModel} is answering with your key.` : Hc.isSuperBot ? `${sU} is answering from your usage.` : hf(tc.current, Hc.model)
                   })]
                 })
               })
-            }), (0, Xk.jsx)("button", {
+            }), (0, Tb.jsx)("button", {
               className: "WorldCodeAiSecondaryButton WorldCodeAiStop",
-              onClick: tt,
+              onClick: TW,
               children: "Stop"
             })]
           })
-        }), !xR && !sF && dB && (0, Xk.jsx)("div", {
+        }), !Fk && !Hc && Is && (0, Tb.jsx)("div", {
           className: "WorldCodeAiEntry WorldCodeAiEntry-assistant WorldCodeAiBusyEntry",
-          children: (0, Xk.jsxs)("div", {
+          children: (0, Tb.jsxs)("div", {
             className: "WorldCodeAiBusy",
             role: "status",
-            children: [(0, Xk.jsx)("span", {
+            children: [(0, Tb.jsx)("span", {
               className: "WorldCodeAiSpinner"
-            }), (0, Xk.jsx)("span", {
+            }), (0, Tb.jsx)("span", {
               className: "WorldCodeAiBusyText",
-              children: (0, Xk.jsx)(bk, {
+              children: (0, Tb.jsx)(Ub, {
                 title: "Testing\u2026",
                 isCalm: !0,
-                children: (0, Xk.jsx)("span", {
+                children: (0, Tb.jsx)("span", {
                   className: "WorldCodeAiBusyHint",
-                  children: BF ? "Your code block runs once in your world, as if you clicked it. If it shows an error, the AI fixes it." : `Your change runs in your world for ${Xd.A/1e3} seconds. If it shows an error, the AI fixes it.`
+                  children: cc ? "Your code block runs once in your world, as if you clicked it. If it shows an error, the AI fixes it." : `Your change runs in your world for ${TH.D/1e3} seconds. If it shows an error, the AI fixes it.`
                 })
               })
-            }), (0, Xk.jsx)("button", {
+            }), (0, Tb.jsx)("button", {
               className: "WorldCodeAiSecondaryButton WorldCodeAiStop",
-              onClick: wR,
+              onClick: Hk,
               children: "Stop"
             })]
           })
-        }), !xR && ZB.map(((kk, Fk) => {
-          var Bk, Rk;
-          return (0, Xk.jsxs)("div", {
+        }), !Fk && rs.map(((bb, cb) => {
+          var sb, kb;
+          return (0, Tb.jsxs)("div", {
             className: "WorldCodeAiEntry WorldCodeAiEntry-user WorldCodeAiQueued",
-            children: [(0, Xk.jsx)("p", {
-              children: null !== (Bk = kk.shown) && void 0 !== Bk ? Bk : kk.text
-            }), (0, Xk.jsxs)("span", {
+            children: [(0, Tb.jsx)("p", {
+              children: null !== (sb = bb.shown) && void 0 !== sb ? sb : bb.text
+            }), (0, Tb.jsxs)("span", {
               className: "WorldCodeAiQueuedNote",
-              children: [kk.id === qB ? "Pick Bot.xd to send it" : null !== (Rk = fV[Fk]) && void 0 !== Rk ? Rk : "In line", (0, Xk.jsx)("button", {
+              children: [bb.id === As ? "Pick Bot.xd to send it" : null !== (kb = lM[cb]) && void 0 !== kb ? kb : "In line", (0, Tb.jsx)("button", {
                 className: "WorldCodeAiLinkButton",
                 onClick: () => {
-                  hF((Fk => Fk.filter((Fk => Fk.id !== kk.id))))
+                  qc((cb => cb.filter((cb => cb.id !== bb.id))))
                 },
                 children: "Delete"
               })]
             })]
-          }, kk.id)
+          }, bb.id)
         }))]
-      }), EB && !sF && (0, Xk.jsxs)("div", {
+      }), hs && !Hc && (0, Tb.jsxs)("div", {
         className: "WorldCodeAiErrorBanner",
-        children: [(0, Xk.jsxs)("div", {
+        children: [(0, Tb.jsxs)("div", {
           className: "WorldCodeAiErrorPlain",
-          children: [void 0 !== SB.line && (0, Xk.jsxs)(Xk.Fragment, {
-            children: [(0, Xk.jsxs)("button", {
+          children: [void 0 !== gs.line && (0, Tb.jsxs)(Tb.Fragment, {
+            children: [(0, Tb.jsxs)("button", {
               className: "WorldCodeAiLinkButton",
               title: "Show this line in your code",
               onClick: () => {
-                var kk, Fk;
-                Pk(null !== (kk = SB.path) && void 0 !== kk ? kk : gk, null !== (Fk = SB.line) && void 0 !== Fk ? Fk : 1), (0, Vk.h)() && zk()
+                var bb, cb;
+                zb(null !== (bb = gs.path) && void 0 !== bb ? bb : Pb, null !== (cb = gs.line) && void 0 !== cb ? cb : 1), (0, Mb.e)() && Zb()
               },
-              children: [SB.path && SB.path !== gk ? `${SB.path} line` : "Line", " ", SB.line]
+              children: [gs.path && gs.path !== Pb ? `${gs.path} line` : "Line", " ", gs.line]
             }), ":", " "]
-          }), SB.text]
-        }), jF && (0, Xk.jsx)("div", {
+          }), gs.text]
+        }), Rc && (0, Tb.jsx)("div", {
           className: "WorldCodeAiErrorText",
-          children: EB
-        }), (0, Xk.jsxs)("div", {
+          children: hs
+        }), (0, Tb.jsxs)("div", {
           className: "WorldCodeAiErrorActions",
-          children: [(0, Xk.jsx)("button", {
-            ...fw.h,
+          children: [(0, Tb.jsx)("button", {
+            ...eI.e,
             className: "WorldCodeAiPrimaryButton",
             onClick: () => {
-              cB((() => {
-                xF(Gk), zB.current(`Fix this error: ${EB}`)
+              is((() => {
+                Sc(ib), zs.current(`Fix this error: ${hs}`)
               }))
             },
             children: "Fix the error"
-          }), (0, Xk.jsx)("button", {
-            ...fw.h,
+          }), (0, Tb.jsx)("button", {
+            ...eI.e,
             className: "WorldCodeAiSecondaryButton",
             onClick: () => {
-              cB((() => {
-                xF(Gk), zB.current(`Explain this error in simple words, and where it is in my code: ${EB}`)
+              is((() => {
+                Sc(ib), zs.current(`Explain this error in simple words, and where it is in my code: ${hs}`)
               }))
             },
             children: "Explain it"
-          }), (0, Xk.jsx)("button", {
+          }), (0, Tb.jsx)("button", {
             className: "WorldCodeAiLinkButton",
             onClick: () => {
-              xF(Gk)
+              Sc(ib)
             },
             children: "Dismiss"
-          }), (0, Xk.jsx)("button", {
+          }), (0, Tb.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiErrorDetailsToggle",
             onClick: () => {
-              lF(!jF)
+              vc(!Rc)
             },
-            children: jF ? "Hide details" : "Show details"
+            children: Rc ? "Hide details" : "Show details"
           })]
-        }), (0, Xk.jsx)("div", {
+        }), (0, Tb.jsx)("div", {
           className: "WorldCodeAiErrorNote",
           children: "Fix the error and Explain it send this error and your code to the AI."
         })]
-      }), qF && (0, Xk.jsxs)("div", {
+      }), dc && (0, Tb.jsxs)("div", {
         className: "WorldCodeAiPicked",
-        children: [(0, Xk.jsxs)("span", {
-          children: ["Changing ", Ms(qF), " of ", qF.path]
-        }), (0, Xk.jsx)("button", {
+        children: [(0, Tb.jsxs)("span", {
+          children: ["Changing ", yf(dc), " of ", dc.path]
+        }), (0, Tb.jsx)("button", {
           className: "WorldCodeAiLinkButton",
           onClick: () => {
-            CF(null)
+            Ac(null)
           },
           children: "Cancel"
         })]
-      }), (0, Xk.jsx)(Qw, {
+      }), (0, Tb.jsx)(pI, {
         step: "aiAskBox",
-        children: (0, Xk.jsx)("form", {
+        children: (0, Tb.jsx)("form", {
           className: "WorldCodeAiInputRow",
-          onSubmit: kk => {
-            kk.preventDefault(), rB()
+          onSubmit: bb => {
+            bb.preventDefault(), Ks()
           },
-          children: (0, Xk.jsxs)("div", {
+          children: (0, Tb.jsxs)("div", {
             className: "WorldCodeAiAsk",
-            children: [(0, Xk.jsx)("textarea", {
-              ref: eB,
+            children: [(0, Tb.jsx)("textarea", {
+              ref: ns,
               className: "WorldCodeAiAskInput",
-              value: DF,
+              value: Kc,
               maxLength: 1e3,
               rows: 2,
-              placeholder: qF ? `How should ${Ms(qF)} change?` : cR ? "Or type your own answer here" : "Ask AI",
-              onChange: kk => {
-                zF(kk.target.value)
+              placeholder: dc ? `How should ${yf(dc)} change?` : Ok ? "Or type your own answer here" : "Ask AI",
+              onChange: bb => {
+                Zc(bb.target.value)
               },
-              onKeyDown: kk => {
-                kk.stopPropagation(), "Enter" !== kk.key || kk.shiftKey || kk.nativeEvent.isComposing || 229 === kk.nativeEvent.keyCode || (kk.preventDefault(), rB())
+              onKeyDown: bb => {
+                bb.stopPropagation(), "Enter" !== bb.key || bb.shiftKey || bb.nativeEvent.isComposing || 229 === bb.nativeEvent.keyCode || (bb.preventDefault(), Ks())
               }
-            }), (0, Xk.jsx)(sk.o, {
+            }), (0, Tb.jsx)(fb.n, {
               className: "WorldCodeAiSend",
               ariaLabel: "Send",
-              disabled: "" === DF.trim() || !!sF && PF.length >= 3,
-              onClick: rB,
-              children: (0, Xk.jsx)(Jk.d, {
+              disabled: "" === Kc.trim() || !!Hc && zc.length >= 3,
+              onClick: Ks,
+              children: (0, Tb.jsx)(Xb.b, {
                 name: "arrow-up"
               })
             })]
           })
         })
-      }), (0, Xk.jsx)(Qw, {
+      }), (0, Tb.jsx)(pI, {
         step: "aiModelChip",
-        children: (0, Xk.jsx)("div", {
-          className: ak()("WorldCodeAiLimit", sF && "WorldCodeAiLimit-busy"),
-          children: (0, Xk.jsx)(Rd, {
-            editsOn: Uk ? MF : null,
-            freeOnce: OF,
-            onFreeOnce: EF,
-            onAddKey: rR,
+        children: (0, Tb.jsx)("div", {
+          className: ab()("WorldCodeAiLimit", Hc && "WorldCodeAiLimit-busy"),
+          children: (0, Tb.jsx)(kH, {
+            editsOn: Db ? yc : null,
+            freeOnce: Yc,
+            onFreeOnce: hc,
+            onAddKey: Zk,
             children: (() => {
-              if (sF) return 0 === ZB.length ? "You can type your next request: it sends when this answer is done." : 1 === ZB.length ? "1 request waiting: it sends when this answer is done." : `${ZB.length} requests waiting: they send one at a time.`;
-              if (DR && OF) return `Your next question goes to Bot.xd, then back to ${DR.model.name}.`;
-              if (DR) return `Your question and code go to ${fX(DR.provider,DR.baseUrl,!0)}.`;
-              if (hR) {
-                const kk = null === qR ? null : function(kk, Fk) {
-                  return kk <= Fk ? null : `Limit resets in ${(0,kb.b)(Math.ceil((kk-Fk)/6e4))}`
-                }(qR, nF);
-                return null === kk ? fb(hR) : (0, Xk.jsxs)(Xk.Fragment, {
-                  children: [(0, Xk.jsx)("span", {
+              if (Hc) return 0 === rs.length ? "You can type your next request: it sends when this answer is done." : 1 === rs.length ? "1 request waiting: it sends when this answer is done." : `${rs.length} requests waiting: they send one at a time.`;
+              if (zk && Yc) return `Your next question goes to Bot.xd, then back to ${zk.model.name}.`;
+              if (zk) return `Your question and code go to ${eT(zk.provider,zk.baseUrl,!0)}.`;
+              if (Ak) {
+                const bb = null === wk ? null : function(bb, cb) {
+                  return bb <= cb ? null : `Limit resets in ${(0,cU.e)(Math.ceil((bb-cb)/6e4))}`
+                }(wk, Fc);
+                return null === bb ? eU(Ak) : (0, Tb.jsxs)(Tb.Fragment, {
+                  children: [(0, Tb.jsx)("span", {
                     className: "WorldCodeAiModelChipStatusLine",
-                    children: fb(hR)
-                  }), (0, Xk.jsx)("span", {
+                    children: eU(Ak)
+                  }), (0, Tb.jsx)("span", {
                     className: "WorldCodeAiModelChipStatusLine",
-                    children: kk
+                    children: bb
                   })]
                 })
               }
-              return LB > nF ? `Send now and it starts by itself. ${Ws(LB-nF)}` : null
+              return us > Fc ? `Send now and it starts by itself. ${ef(us-Fc)}` : null
             })()
           })
         })
       })]
     });
-    return (0, Xk.jsx)(Qw, {
-      step: jR,
-      onPrevious: "aiPanel" === jR ? zk : void 0,
-      children: Xt
+    return (0, Tb.jsx)(pI, {
+      step: xk,
+      onPrevious: "aiPanel" === xk ? Zb : void 0,
+      children: UW
     })
   })),
-  xV = KV
-}, 39199: (kk, Fk, Bk) => {
-  Bk.d(Fk, {
-    b: () => wk,
-    e: () => ak,
-    i: () => tk
+  SM = oM
+}, 39208: (bb, cb, sb) => {
+  sb.d(cb, {
+    c: () => Ib,
+    e: () => ab,
+    i: () => Wb
   });
-  const Rk = 6e3;
+  const kb = 6e3;
 
-  function tk(kk, Fk) {
-    return [Math.floor(kk[0] / Fk) * Fk, Math.floor(kk[1] / Fk) * Fk, Math.floor(kk[2] / Fk) * Fk]
+  function Wb(bb, cb) {
+    return [Math.floor(bb[0] / cb) * cb, Math.floor(bb[1] / cb) * cb, Math.floor(bb[2] / cb) * cb]
   }
 
-  function ak(kk) {
-    const Fk = (null !== kk && void 0 !== kk ? kk : "").match(/-?\d+(?:\.\d+)?/g);
-    return Fk && Fk.length >= 3 ? [Number(Fk[0]), Number(Fk[1]), Number(Fk[2])] : null
+  function ab(bb) {
+    const cb = (null !== bb && void 0 !== bb ? bb : "").match(/-?\d+(?:\.\d+)?/g);
+    return cb && cb.length >= 3 ? [Number(cb[0]), Number(cb[1]), Number(cb[2])] : null
   }
 
-  function Xk(kk, Fk) {
-    return kk === Fk ? String(kk) : `${kk}-${Fk}`
+  function Tb(bb, cb) {
+    return bb === cb ? String(bb) : `${bb}-${cb}`
   }
 
-  function bk(kk, Fk, Bk, Rk) {
-    const tk = [];
-    let ak = new Map;
-    for (let Xk = kk[2]; Xk < kk[2] + Fk; Xk++) {
-      const bk = new Map;
-      let wk = kk[0];
-      for (; wk < kk[0] + Fk;) {
-        const tk = Rk(wk, Bk, Xk);
-        let dk = wk;
-        for (; dk + 1 < kk[0] + Fk && Rk(dk + 1, Bk, Xk) === tk;) dk++;
-        if (null !== tk) {
-          const kk = `${wk} ${dk} ${tk}`,
-            Fk = ak.get(kk);
-          Fk ? (Fk.z1 = Xk, ak.delete(kk), bk.set(kk, Fk)) : bk.set(kk, {
-            x0: wk,
-            x1: dk,
-            z0: Xk,
-            z1: Xk,
-            name: tk
+  function Ub(bb, cb, sb, kb) {
+    const Wb = [];
+    let ab = new Map;
+    for (let Tb = bb[2]; Tb < bb[2] + cb; Tb++) {
+      const Ub = new Map;
+      let Ib = bb[0];
+      for (; Ib < bb[0] + cb;) {
+        const Wb = kb(Ib, sb, Tb);
+        let Hb = Ib;
+        for (; Hb + 1 < bb[0] + cb && kb(Hb + 1, sb, Tb) === Wb;) Hb++;
+        if (null !== Wb) {
+          const bb = `${Ib} ${Hb} ${Wb}`,
+            cb = ab.get(bb);
+          cb ? (cb.z1 = Tb, ab.delete(bb), Ub.set(bb, cb)) : Ub.set(bb, {
+            x0: Ib,
+            x1: Hb,
+            z0: Tb,
+            z1: Tb,
+            name: Wb
           })
         }
-        wk = dk + 1
+        Ib = Hb + 1
       }
-      tk.push(...ak.values()), ak = bk
+      Wb.push(...ab.values()), ab = Ub
     }
-    return tk.push(...ak.values()), tk.sort(((kk, Fk) => kk.z0 - Fk.z0 || kk.x0 - Fk.x0)).map((kk => `x${Xk(kk.x0,kk.x1)} z${Xk(kk.z0,kk.z1)} ${kk.name}`))
+    return Wb.push(...ab.values()), Wb.sort(((bb, cb) => bb.z0 - cb.z0 || bb.x0 - cb.x0)).map((bb => `x${Tb(bb.x0,bb.x1)} z${Tb(bb.z0,bb.z1)} ${bb.name}`))
   }
 
-  function wk(kk, Fk, Bk, tk) {
-    let ak = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Rk;
-    const wk = [kk[0] + Fk - 1, kk[1] + Fk - 1, kk[2] + Fk - 1],
-      dk = null !== tk && tk.every(((Fk, Bk) => Math.floor(Fk) >= kk[Bk] && Math.floor(Fk) <= wk[Bk])),
-      sk = [`The chunk from ${kk.join(" ")} to ${wk.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-    null !== tk && sk.push(`The player's feet are at ${tk.map(Math.floor).join(" ")}, ${dk?"in this chunk":"outside this chunk"}.`);
-    const Vk = [];
-    for (let Rk = kk[1]; Rk <= wk[1]; Rk++) {
-      const tk = bk(kk, Fk, Rk, Bk).join("; "),
-        ak = Vk[Vk.length - 1];
-      (null === ak || void 0 === ak ? void 0 : ak.boxes) === tk ? ak.to = Rk : Vk.push({
-        from: Rk,
-        to: Rk,
-        boxes: tk
+  function Ib(bb, cb, sb, Wb) {
+    let ab = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : kb;
+    const Ib = [bb[0] + cb - 1, bb[1] + cb - 1, bb[2] + cb - 1],
+      Hb = null !== Wb && Wb.every(((cb, sb) => Math.floor(cb) >= bb[sb] && Math.floor(cb) <= Ib[sb])),
+      fb = [`The chunk from ${bb.join(" ")} to ${Ib.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+    null !== Wb && fb.push(`The player's feet are at ${Wb.map(Math.floor).join(" ")}, ${Hb?"in this chunk":"outside this chunk"}.`);
+    const Mb = [];
+    for (let kb = bb[1]; kb <= Ib[1]; kb++) {
+      const Wb = Ub(bb, cb, kb, sb).join("; "),
+        ab = Mb[Mb.length - 1];
+      (null === ab || void 0 === ab ? void 0 : ab.boxes) === Wb ? ab.to = kb : Mb.push({
+        from: kb,
+        to: kb,
+        boxes: Wb
       })
     }
-    const Jk = Vk.filter((kk => "" !== kk.boxes));
-    0 === Jk.length && sk.push("It is all air.");
-    let Ak = sk.join("\n").length;
-    for (const Rk of Jk) {
-      const kk = `y${Xk(Rk.from,Rk.to)}: ${Rk.boxes}`;
-      if (Ak += kk.length + 1, Ak > ak) {
-        sk.push(`Cut short: the layers from y${Rk.from} up aren't shown, as there are too many blocks.`);
+    const Xb = Mb.filter((bb => "" !== bb.boxes));
+    0 === Xb.length && fb.push("It is all air.");
+    let nb = fb.join("\n").length;
+    for (const kb of Xb) {
+      const bb = `y${Tb(kb.from,kb.to)}: ${kb.boxes}`;
+      if (nb += bb.length + 1, nb > ab) {
+        fb.push(`Cut short: the layers from y${kb.from} up aren't shown, as there are too many blocks.`);
         break
       }
-      sk.push(kk)
+      fb.push(bb)
     }
-    return sk.join("\n")
+    return fb.join("\n")
   }
-}, 4553: (kk, Fk, Bk) => {
-  Bk.d(Fk, {
-    A: () => Ak,
-    c: () => tk,
-    f: () => wk,
-    i: () => ak,
-    j: () => Xk,
-    k: () => bk,
-    l: () => fk,
-    p: () => sk,
-    t: () => Vk,
-    w: () => yk
+}, 4545: (bb, cb, sb) => {
+  sb.d(cb, {
+    B: () => nb,
+    e: () => Wb,
+    h: () => Ib,
+    j: () => ab,
+    m: () => Tb,
+    n: () => Ub,
+    r: () => Qb,
+    v: () => fb,
+    x: () => Mb,
+    z: () => lb
   });
-  var Rk = Bk(1535);
-  const tk = 24e3,
-    ak = "/docs/llms.txt",
-    Xk = `${Rk.b}${ak}`,
-    bk = "/llms.txt",
-    wk = "/docs/llms-full.txt";
+  var kb = sb(1572);
+  const Wb = 24e3,
+    ab = "/docs/llms.txt",
+    Tb = `${kb.e}${ab}`,
+    Ub = "/llms.txt",
+    Ib = "/docs/llms-full.txt";
 
-  function dk(kk) {
-    return kk || "index"
+  function Hb(bb) {
+    return bb || "index"
   }
 
-  function sk(kk) {
-    return `/docs/${dk(kk)}.md`
+  function fb(bb) {
+    return `/docs/${Hb(bb)}.md`
   }
 
-  function Vk(kk, Fk) {
-    return `/docs/${dk(kk)}/${Fk+1}.md`
+  function Mb(bb, cb) {
+    return `/docs/${Hb(bb)}/${cb+1}.md`
   }
-  const Jk = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+  const Xb = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-  function Ak(kk) {
-    const Fk = Jk.exec(kk);
-    return null === Fk ? null : {
-      name: Fk[1],
-      part: void 0 === Fk[2] ? null : Number(Fk[2])
+  function nb(bb) {
+    const cb = Xb.exec(bb);
+    return null === cb ? null : {
+      name: cb[1],
+      part: void 0 === cb[2] ? null : Number(cb[2])
     }
   }
-  const ek = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+  const mb = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-  function yk(kk) {
-    const Fk = ek.exec(kk);
-    if (null === Fk) return null;
-    const [, Bk = "", Rk] = Fk;
-    return void 0 === Rk ? sk(Bk) : Vk(Bk, Number(Rk) - 1)
+  function lb(bb) {
+    const cb = mb.exec(bb);
+    if (null === cb) return null;
+    const [, sb = "", kb] = cb;
+    return void 0 === kb ? fb(sb) : Mb(sb, Number(kb) - 1)
   }
 
-  function fk(kk) {
-    return `/docsHtml/${dk(kk)}.html`
+  function Qb(bb) {
+    return `/docsHtml/${Hb(bb)}.html`
   }
 }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

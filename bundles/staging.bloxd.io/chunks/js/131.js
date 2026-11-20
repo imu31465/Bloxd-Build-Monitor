@@ -1,757 +1,757 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  6316: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      loadPageShaderPackCompiler: () => AF
+  6276: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      loadPageShaderPackCompiler: () => Xc
     });
-    var Rk = {};
-    Bk.r(Rk), Bk.d(Rk, {
-      qRk: () => tk,
-      N7: () => ak,
-      default: () => pk,
-      CRk: () => Xk,
-      ZRk: () => bk,
-      initSync: () => Zk,
-      uV: () => wk,
-      EBk: () => dk,
-      pRk: () => sk,
-      KRk: () => Vk,
-      nS: () => Jk,
-      xRk: () => Ak,
-      qS: () => ek,
-      jRk: () => yk
+    var kb = {};
+    sb.r(kb), sb.d(kb, {
+      Gkb: () => Wb,
+      N9: () => ab,
+      default: () => rb,
+      Kkb: () => Tb,
+      Zkb: () => Ub,
+      initSync: () => wb,
+      NM: () => Ib,
+      Nsb: () => Hb,
+      zkb: () => fb,
+      qkb: () => Mb,
+      VY: () => Xb,
+      dkb: () => nb,
+      lY: () => mb,
+      Akb: () => lb
     });
-    class tk {
-      static __wrap(kk) {
-        const Fk = Object.create(tk.prototype);
-        return Fk.__wbg_ptr = kk, mk.register(Fk, Fk.__wbg_ptr, Fk), Fk
+    class Wb {
+      static __wrap(bb) {
+        const cb = Object.create(Wb.prototype);
+        return cb.__wbg_ptr = bb, eb.register(cb, cb.__wbg_ptr, cb), cb
       }
       __destroy_into_raw() {
-        const kk = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, mk.unregister(this), kk
+        const bb = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, eb.unregister(this), bb
       }
       free() {
-        const kk = this.__destroy_into_raw();
-        hk.cOfe(kk, 0)
+        const bb = this.__destroy_into_raw();
+        qb.f3Cz(bb, 0)
       }
       get errorsJson() {
-        let kk, Fk;
+        let bb, cb;
         try {
-          const Bk = hk.laXO(this.__wbg_ptr);
-          return kk = Bk[0], Fk = Bk[1], Ok(Bk[0], Bk[1])
+          const sb = qb.xbmW(this.__wbg_ptr);
+          return bb = sb[0], cb = sb[1], Yb(sb[0], sb[1])
         } finally {
-          hk.FRHd(kk, Fk, 1)
+          qb.Svvl(bb, cb, 1)
         }
       }
       get features() {
-        const kk = hk.Yxau(this.__wbg_ptr);
-        var Fk = vk(kk[0], kk[1]);
-        return hk.FRHd(kk[0], 4 * kk[1], 4), Fk
+        const bb = qb.fQm1(this.__wbg_ptr);
+        var cb = Nb(bb[0], bb[1]);
+        return qb.Svvl(bb[0], 4 * bb[1], 4), cb
       }
       get hooks() {
-        const kk = hk.m5W2(this.__wbg_ptr);
-        var Fk = ik(kk[0], kk[1]).slice();
-        return hk.FRHd(kk[0], 1 * kk[1], 1), Fk
+        const bb = qb.BvYU(this.__wbg_ptr);
+        var cb = Vb(bb[0], bb[1]).slice();
+        return qb.Svvl(bb[0], 1 * bb[1], 1), cb
       }
-      mapValidationMessage(kk, Fk, Bk, Rk, tk) {
-        let ak, Xk;
+      mapValidationMessage(bb, cb, sb, kb, Wb) {
+        let ab, Tb;
         try {
-          const dk = hk.ktcZ(this.__wbg_ptr, kk, Fk, Bk, Wk(Rk), Wk(tk));
-          var bk = dk[0],
-            wk = dk[1];
-          if (dk[3]) throw bk = 0, wk = 0, ck(dk[2]);
-          return ak = bk, Xk = wk, Ok(bk, wk)
+          const Hb = qb.TIrW(this.__wbg_ptr, bb, cb, sb, Cb(kb), Cb(Wb));
+          var Ub = Hb[0],
+            Ib = Hb[1];
+          if (Hb[3]) throw Ub = 0, Ib = 0, Eb(Hb[2]);
+          return ab = Ub, Tb = Ib, Yb(Ub, Ib)
         } finally {
-          hk.FRHd(ak, Xk, 1)
+          qb.Svvl(ab, Tb, 1)
         }
       }
       get moduleCodes() {
-        const kk = hk.ZxGD(this.__wbg_ptr);
-        var Fk = vk(kk[0], kk[1]);
-        return hk.FRHd(kk[0], 4 * kk[1], 4), Fk
+        const bb = qb.exG7(this.__wbg_ptr);
+        var cb = Nb(bb[0], bb[1]);
+        return qb.Svvl(bb[0], 4 * bb[1], 4), cb
       }
       get offInStrictJson() {
-        let kk, Fk;
+        let bb, cb;
         try {
-          const Bk = hk.UkUD(this.__wbg_ptr);
-          return kk = Bk[0], Fk = Bk[1], Ok(Bk[0], Bk[1])
+          const sb = qb.TYzk(this.__wbg_ptr);
+          return bb = sb[0], cb = sb[1], Yb(sb[0], sb[1])
         } finally {
-          hk.FRHd(kk, Fk, 1)
+          qb.Svvl(bb, cb, 1)
         }
       }
       get reads() {
-        const kk = hk.cmzF(this.__wbg_ptr);
-        var Fk = vk(kk[0], kk[1]);
-        return hk.FRHd(kk[0], 4 * kk[1], 4), Fk
+        const bb = qb.QFK3(this.__wbg_ptr);
+        var cb = Nb(bb[0], bb[1]);
+        return qb.Svvl(bb[0], 4 * bb[1], 4), cb
       }
       get validationModuleCodes() {
-        const kk = hk.NyQa(this.__wbg_ptr);
-        var Fk = vk(kk[0], kk[1]);
-        return hk.FRHd(kk[0], 4 * kk[1], 4), Fk
+        const bb = qb.XVPl(this.__wbg_ptr);
+        var cb = Nb(bb[0], bb[1]);
+        return qb.Svvl(bb[0], 4 * bb[1], 4), cb
       }
       get validationModuleKeys() {
-        const kk = hk.bPTg(this.__wbg_ptr);
-        var Fk = ik(kk[0], kk[1]).slice();
-        return hk.FRHd(kk[0], 1 * kk[1], 1), Fk
+        const bb = qb.JVYT(this.__wbg_ptr);
+        var cb = Vb(bb[0], bb[1]).slice();
+        return qb.Svvl(bb[0], 1 * bb[1], 1), cb
       }
       get variantFlags() {
-        const kk = hk.Knus(this.__wbg_ptr);
-        var Fk = ik(kk[0], kk[1]).slice();
-        return hk.FRHd(kk[0], 1 * kk[1], 1), Fk
+        const bb = qb.o4ZU(this.__wbg_ptr);
+        var cb = Vb(bb[0], bb[1]).slice();
+        return qb.Svvl(bb[0], 1 * bb[1], 1), cb
       }
     }
 
-    function ak(kk, Fk, Bk, Rk, ak, Xk, bk) {
-      const wk = Uk(kk, hk.SWb9),
-        dk = qk,
-        sk = Uk(Fk, hk.SWb9),
-        Vk = qk,
-        Jk = Uk(Bk, hk.SWb9),
-        Ak = qk,
-        ek = gk(Rk, hk.SWb9),
-        yk = qk,
-        fk = Uk(ak, hk.SWb9),
-        mk = qk,
-        Wk = Uk(Xk, hk.SWb9),
-        vk = qk,
-        ik = Uk(bk, hk.SWb9),
-        Yk = qk,
-        Lk = hk.z2la(wk, dk, sk, Vk, Jk, Ak, ek, yk, fk, mk, Wk, vk, ik, Yk);
-      if (Lk[2]) throw ck(Lk[1]);
-      return tk.__wrap(Lk[0])
+    function ab(bb, cb, sb, kb, ab, Tb, Ub) {
+      const Ib = Db(bb, qb.pYUd),
+        Hb = db,
+        fb = Db(cb, qb.pYUd),
+        Mb = db,
+        Xb = Db(sb, qb.pYUd),
+        nb = db,
+        mb = Pb(kb, qb.pYUd),
+        lb = db,
+        Qb = Db(ab, qb.pYUd),
+        eb = db,
+        Cb = Db(Tb, qb.pYUd),
+        Nb = db,
+        Vb = Db(Ub, qb.pYUd),
+        Lb = db,
+        ub = qb.HkNI(Ib, Hb, fb, Mb, Xb, nb, mb, lb, Qb, eb, Cb, Nb, Vb, Lb);
+      if (ub[2]) throw Eb(ub[1]);
+      return Wb.__wrap(ub[0])
     }
 
-    function Xk() {
-      const kk = hk.jaEg();
-      var Fk = vk(kk[0], kk[1]);
-      return hk.FRHd(kk[0], 4 * kk[1], 4), Fk
+    function Tb() {
+      const bb = qb.Kpws();
+      var cb = Nb(bb[0], bb[1]);
+      return qb.Svvl(bb[0], 4 * bb[1], 4), cb
     }
 
-    function bk() {
-      const kk = hk.T8ib();
-      var Fk = vk(kk[0], kk[1]);
-      return hk.FRHd(kk[0], 4 * kk[1], 4), Fk
+    function Ub() {
+      const bb = qb.C18C();
+      var cb = Nb(bb[0], bb[1]);
+      return qb.Svvl(bb[0], 4 * bb[1], 4), cb
     }
 
-    function wk() {
-      hk.BB9p()
+    function Ib() {
+      qb.LClW()
     }
 
-    function dk(kk, Fk, Bk, Rk, tk) {
-      let ak, Xk;
+    function Hb(bb, cb, sb, kb, Wb) {
+      let ab, Tb;
       try {
-        const dk = Uk(kk, hk.SWb9),
-          sk = qk,
-          Vk = gk(Fk, hk.SWb9),
-          Jk = qk,
-          Ak = Uk(Bk, hk.SWb9),
-          ek = qk,
-          yk = gk(Rk, hk.SWb9),
-          fk = qk,
-          mk = function(kk, Fk) {
-            const Bk = Fk(1 * kk.length, 1) >>> 0;
-            return Nk().set(kk, Bk / 1), qk = kk.length, Bk
-          }(tk, hk.SWb9),
-          Wk = qk,
-          vk = hk.Wndl(dk, sk, Vk, Jk, Ak, ek, yk, fk, mk, Wk);
-        var bk = vk[0],
-          wk = vk[1];
-        if (vk[3]) throw bk = 0, wk = 0, ck(vk[2]);
-        return ak = bk, Xk = wk, Ok(bk, wk)
+        const Hb = Db(bb, qb.pYUd),
+          fb = db,
+          Mb = Pb(cb, qb.pYUd),
+          Xb = db,
+          nb = Db(sb, qb.pYUd),
+          mb = db,
+          lb = Pb(kb, qb.pYUd),
+          Qb = db,
+          eb = function(bb, cb) {
+            const sb = cb(1 * bb.length, 1) >>> 0;
+            return gb().set(bb, sb / 1), db = bb.length, sb
+          }(Wb, qb.pYUd),
+          Cb = db,
+          Nb = qb.YFeH(Hb, fb, Mb, Xb, nb, mb, lb, Qb, eb, Cb);
+        var Ub = Nb[0],
+          Ib = Nb[1];
+        if (Nb[3]) throw Ub = 0, Ib = 0, Eb(Nb[2]);
+        return ab = Ub, Tb = Ib, Yb(Ub, Ib)
       } finally {
-        hk.FRHd(ak, Xk, 1)
+        qb.Svvl(ab, Tb, 1)
       }
     }
 
-    function sk() {
-      let kk, Fk;
+    function fb() {
+      let bb, cb;
       try {
-        const Bk = hk.YLbA();
-        return kk = Bk[0], Fk = Bk[1], Ok(Bk[0], Bk[1])
+        const sb = qb.bkpi();
+        return bb = sb[0], cb = sb[1], Yb(sb[0], sb[1])
       } finally {
-        hk.FRHd(kk, Fk, 1)
+        qb.Svvl(bb, cb, 1)
       }
     }
 
-    function Vk(kk) {
-      let Fk, Bk;
+    function Mb(bb) {
+      let cb, sb;
       try {
-        const ak = hk.rwxx(kk);
-        var Rk = ak[0],
-          tk = ak[1];
-        if (ak[3]) throw Rk = 0, tk = 0, ck(ak[2]);
-        return Fk = Rk, Bk = tk, Ok(Rk, tk)
+        const ab = qb.I7GM(bb);
+        var kb = ab[0],
+          Wb = ab[1];
+        if (ab[3]) throw kb = 0, Wb = 0, Eb(ab[2]);
+        return cb = kb, sb = Wb, Yb(kb, Wb)
       } finally {
-        hk.FRHd(Fk, Bk, 1)
+        qb.Svvl(cb, sb, 1)
       }
     }
 
-    function Jk() {
-      return hk.PGld() >>> 0
+    function Xb() {
+      return qb.FIyR() >>> 0
     }
 
-    function Ak() {
-      let kk, Fk;
+    function nb() {
+      let bb, cb;
       try {
-        const Bk = hk.sJl4();
-        return kk = Bk[0], Fk = Bk[1], Ok(Bk[0], Bk[1])
+        const sb = qb.H5qB();
+        return bb = sb[0], cb = sb[1], Yb(sb[0], sb[1])
       } finally {
-        hk.FRHd(kk, Fk, 1)
+        qb.Svvl(bb, cb, 1)
       }
     }
 
-    function ek(kk, Fk) {
-      let Bk, Rk;
+    function mb(bb, cb) {
+      let sb, kb;
       try {
-        const Xk = Uk(kk, hk.SWb9),
-          bk = qk,
-          wk = gk(Fk, hk.SWb9),
-          dk = qk,
-          sk = hk.nclr(Xk, bk, wk, dk);
-        var tk = sk[0],
-          ak = sk[1];
-        if (sk[3]) throw tk = 0, ak = 0, ck(sk[2]);
-        return Bk = tk, Rk = ak, Ok(tk, ak)
+        const Tb = Db(bb, qb.pYUd),
+          Ub = db,
+          Ib = Pb(cb, qb.pYUd),
+          Hb = db,
+          fb = qb.z43B(Tb, Ub, Ib, Hb);
+        var Wb = fb[0],
+          ab = fb[1];
+        if (fb[3]) throw Wb = 0, ab = 0, Eb(fb[2]);
+        return sb = Wb, kb = ab, Yb(Wb, ab)
       } finally {
-        hk.FRHd(Bk, Rk, 1)
+        qb.Svvl(sb, kb, 1)
       }
     }
 
-    function yk(kk) {
-      let Fk, Bk;
+    function lb(bb) {
+      let cb, sb;
       try {
-        const ak = hk.Kmw1(Wk(kk));
-        var Rk = ak[0],
-          tk = ak[1];
-        if (ak[3]) throw Rk = 0, tk = 0, ck(ak[2]);
-        return Fk = Rk, Bk = tk, Ok(Rk, tk)
+        const ab = qb.Htbx(Cb(bb));
+        var kb = ab[0],
+          Wb = ab[1];
+        if (ab[3]) throw kb = 0, Wb = 0, Eb(ab[2]);
+        return cb = kb, sb = Wb, Yb(kb, Wb)
       } finally {
-        hk.FRHd(Fk, Bk, 1)
+        qb.Svvl(cb, sb, 1)
       }
     }
 
-    function fk() {
+    function Qb() {
       return {
         __proto__: null,
-        EqcT: {
+        aUB2: {
           __proto__: null,
-          PfTn: function(kk, Fk) {
-            return Wk(Error(Ok(kk, Fk)))
+          lZd6: function(bb, cb) {
+            return Cb(Error(Yb(bb, cb)))
           },
-          QA5S: function(kk) {
-            return null === Hk(kk)
+          kt38: function(bb) {
+            return null === Bb(bb)
           },
-          vAwY: function(kk) {
-            return "string" === typeof Hk(kk)
+          EtBj: function(bb) {
+            return "string" === typeof Bb(bb)
           },
-          eCuy: function(kk, Fk) {
-            const Bk = Hk(Fk),
-              Rk = "string" === typeof Bk ? Bk : void 0;
-            var tk, ak = void 0 === (tk = Rk) || null === tk ? 0 : function(kk, Fk, Bk) {
-                if (void 0 === Bk) {
-                  const Bk = Dk.encode(kk),
-                    Rk = Fk(Bk.length, 1) >>> 0;
-                  return Nk().subarray(Rk, Rk + Bk.length).set(Bk), qk = Bk.length, Rk
+          GcNp: function(bb, cb) {
+            const sb = Bb(cb),
+              kb = "string" === typeof sb ? sb : void 0;
+            var Wb, ab = void 0 === (Wb = kb) || null === Wb ? 0 : function(bb, cb, sb) {
+                if (void 0 === sb) {
+                  const sb = Kb.encode(bb),
+                    kb = cb(sb.length, 1) >>> 0;
+                  return gb().subarray(kb, kb + sb.length).set(sb), db = sb.length, kb
                 }
-                let Rk = kk.length,
-                  tk = Fk(Rk, 1) >>> 0;
-                const ak = Nk();
-                let Xk = 0;
-                for (; Xk < Rk; Xk++) {
-                  const Fk = kk.charCodeAt(Xk);
-                  if (Fk > 127) break;
-                  ak[tk + Xk] = Fk
+                let kb = bb.length,
+                  Wb = cb(kb, 1) >>> 0;
+                const ab = gb();
+                let Tb = 0;
+                for (; Tb < kb; Tb++) {
+                  const cb = bb.charCodeAt(Tb);
+                  if (cb > 127) break;
+                  ab[Wb + Tb] = cb
                 }
-                if (Xk !== Rk) {
-                  0 !== Xk && (kk = kk.slice(Xk)), tk = Bk(tk, Rk, Rk = Xk + 3 * kk.length, 1) >>> 0;
-                  const Fk = Nk().subarray(tk + Xk, tk + Rk);
-                  Xk += Dk.encodeInto(kk, Fk).written, tk = Bk(tk, Rk, Xk, 1) >>> 0
+                if (Tb !== kb) {
+                  0 !== Tb && (bb = bb.slice(Tb)), Wb = sb(Wb, kb, kb = Tb + 3 * bb.length, 1) >>> 0;
+                  const cb = gb().subarray(Wb + Tb, Wb + kb);
+                  Tb += Kb.encodeInto(bb, cb).written, Wb = sb(Wb, kb, Tb, 1) >>> 0
                 }
-                return qk = Xk, tk
-              }(Rk, hk.SWb9, hk.zw8W),
-              Xk = qk;
-            Lk().setInt32(kk + 4, Xk, !0), Lk().setInt32(kk + 0, ak, !0)
+                return db = Tb, Wb
+              }(kb, qb.pYUd, qb.lEKE),
+              Tb = db;
+            ub().setInt32(bb + 4, Tb, !0), ub().setInt32(bb + 0, ab, !0)
           },
-          YliL: function(kk, Fk) {
-            throw new Error(Ok(kk, Fk))
+          XbpR: function(bb, cb) {
+            throw new Error(Yb(bb, cb))
           },
-          wMoC: function(kk, Fk) {
-            return Hk(kk).charCodeAt(Fk >>> 0)
+          I0Ts: function(bb, cb) {
+            return Bb(bb).charCodeAt(cb >>> 0)
           },
-          LHPW: function(kk, Fk) {
-            console.error(Ok(kk, Fk))
+          tURV: function(bb, cb) {
+            console.error(Yb(bb, cb))
           },
-          TqRI: function(kk) {
-            return Hk(kk).length
+          UUGi: function(bb) {
+            return Bb(bb).length
           },
-          g8S5: function(kk, Fk) {
-            return Wk(Ok(kk, Fk))
+          hAMp: function(bb, cb) {
+            return Cb(Yb(bb, cb))
           },
-          hbuU: function(kk) {
-            ck(kk)
+          iWWD: function(bb) {
+            Eb(bb)
           }
         }
       }
     }
-    Symbol.dispose && (tk.prototype[Symbol.dispose] = tk.prototype.free);
-    const mk = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (Wb.prototype[Symbol.dispose] = Wb.prototype.free);
+    const eb = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((kk => hk.cOfe(kk, 1)));
+    } : new FinalizationRegistry((bb => qb.f3Cz(bb, 1)));
 
-    function Wk(kk) {
-      Mk === uk.length && uk.push(uk.length + 1);
-      const Fk = Mk;
-      return Mk = uk[Fk], uk[Fk] = kk, Fk
+    function Cb(bb) {
+      yb === tb.length && tb.push(tb.length + 1);
+      const cb = yb;
+      return yb = tb[cb], tb[cb] = bb, cb
     }
 
-    function vk(kk, Fk) {
-      kk >>>= 0;
-      const Bk = Lk(),
-        Rk = [];
-      for (let tk = kk; tk < kk + 4 * Fk; tk += 4) Rk.push(ck(Bk.getUint32(tk, !0)));
-      return Rk
+    function Nb(bb, cb) {
+      bb >>>= 0;
+      const sb = ub(),
+        kb = [];
+      for (let Wb = bb; Wb < bb + 4 * cb; Wb += 4) kb.push(Eb(sb.getUint32(Wb, !0)));
+      return kb
     }
 
-    function ik(kk, Fk) {
-      return kk >>>= 0, Nk().subarray(kk / 1, kk / 1 + Fk)
+    function Vb(bb, cb) {
+      return bb >>>= 0, gb().subarray(bb / 1, bb / 1 + cb)
     }
-    let Yk = null;
+    let Lb = null;
 
-    function Lk() {
-      return (null === Yk || !0 === Yk.buffer.detached || void 0 === Yk.buffer.detached && Yk.buffer !== hk.memory.buffer) && (Yk = new DataView(hk.memory.buffer)), Yk
+    function ub() {
+      return (null === Lb || !0 === Lb.buffer.detached || void 0 === Lb.buffer.detached && Lb.buffer !== qb.memory.buffer) && (Lb = new DataView(qb.memory.buffer)), Lb
     }
 
-    function Ok(kk, Fk) {
-      return function(kk, Fk) {
-        rk += Fk, rk >= Tk && (Gk = new TextDecoder("utf-8", {
+    function Yb(bb, cb) {
+      return function(bb, cb) {
+        Gb += cb, Gb >= Ob && (ib = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), Gk.decode(), rk = Fk);
-        return Gk.decode(Nk().subarray(kk, kk + Fk))
-      }(kk >>> 0, Fk)
+        }), ib.decode(), Gb = cb);
+        return ib.decode(gb().subarray(bb, bb + cb))
+      }(bb >>> 0, cb)
     }
-    let Ek = null;
-    let Sk = null;
+    let hb = null;
+    let Jb = null;
 
-    function Nk() {
-      return null !== Sk && 0 !== Sk.byteLength || (Sk = new Uint8Array(hk.memory.buffer)), Sk
-    }
-
-    function Hk(kk) {
-      return uk[kk]
-    }
-    let uk = new Array(1024).fill(void 0);
-    uk.push(void 0, null, !0, !1);
-    let Mk = uk.length;
-
-    function gk(kk, Fk) {
-      const Bk = Fk(4 * kk.length, 4) >>> 0;
-      return (null !== Ek && 0 !== Ek.byteLength || (Ek = new Uint32Array(hk.memory.buffer)), Ek).set(kk, Bk / 4), qk = kk.length, Bk
+    function gb() {
+      return null !== Jb && 0 !== Jb.byteLength || (Jb = new Uint8Array(qb.memory.buffer)), Jb
     }
 
-    function Uk(kk, Fk) {
-      const Bk = Fk(4 * kk.length, 4) >>> 0,
-        Rk = Lk();
-      for (let tk = 0; tk < kk.length; tk++) Rk.setUint32(Bk + 4 * tk, Wk(kk[tk]), !0);
-      return qk = kk.length, Bk
+    function Bb(bb) {
+      return tb[bb]
+    }
+    let tb = new Array(1024).fill(void 0);
+    tb.push(void 0, null, !0, !1);
+    let yb = tb.length;
+
+    function Pb(bb, cb) {
+      const sb = cb(4 * bb.length, 4) >>> 0;
+      return (null !== hb && 0 !== hb.byteLength || (hb = new Uint32Array(qb.memory.buffer)), hb).set(bb, sb / 4), db = bb.length, sb
     }
 
-    function ck(kk) {
-      const Fk = Hk(kk);
-      return function(kk) {
-        kk < 1028 || (uk[kk] = Mk, Mk = kk)
-      }(kk), Fk
+    function Db(bb, cb) {
+      const sb = cb(4 * bb.length, 4) >>> 0,
+        kb = ub();
+      for (let Wb = 0; Wb < bb.length; Wb++) kb.setUint32(sb + 4 * Wb, Cb(bb[Wb]), !0);
+      return db = bb.length, sb
     }
-    let Gk = new TextDecoder("utf-8", {
+
+    function Eb(bb) {
+      const cb = Bb(bb);
+      return function(bb) {
+        bb < 1028 || (tb[bb] = yb, yb = bb)
+      }(bb), cb
+    }
+    let ib = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    Gk.decode();
-    const Tk = 2146435072;
-    let rk = 0;
-    const Dk = new TextEncoder;
-    "encodeInto" in Dk || (Dk.encodeInto = function(kk, Fk) {
-      const Bk = Dk.encode(kk);
-      return Fk.set(Bk), {
-        read: kk.length,
-        written: Bk.length
+    ib.decode();
+    const Ob = 2146435072;
+    let Gb = 0;
+    const Kb = new TextEncoder;
+    "encodeInto" in Kb || (Kb.encodeInto = function(bb, cb) {
+      const sb = Kb.encode(bb);
+      return cb.set(sb), {
+        read: bb.length,
+        written: sb.length
       }
     });
-    let zk, Pk, hk, qk = 0;
+    let Zb, zb, qb, db = 0;
 
-    function Ck(kk, Fk) {
-      return Pk = kk, hk = kk.exports, zk = Fk, Yk = null, Ek = null, Sk = null, hk.IbZq(), hk
+    function Ab(bb, cb) {
+      return zb = bb, qb = bb.exports, Zb = cb, Lb = null, hb = null, Jb = null, qb.zT61(), qb
     }
 
-    function Zk(kk) {
-      if (void 0 !== hk) return hk;
-      void 0 !== kk && (Object.getPrototypeOf(kk) === Object.prototype ? ({
-        module: kk
-      } = kk) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const Fk = fk();
-      kk instanceof WebAssembly.Module || (kk = new WebAssembly.Module(kk));
-      return Ck(new WebAssembly.Instance(kk, Fk), kk)
+    function wb(bb) {
+      if (void 0 !== qb) return qb;
+      void 0 !== bb && (Object.getPrototypeOf(bb) === Object.prototype ? ({
+        module: bb
+      } = bb) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const cb = Qb();
+      bb instanceof WebAssembly.Module || (bb = new WebAssembly.Module(bb));
+      return Ab(new WebAssembly.Instance(bb, cb), bb)
     }
-    async function pk(kk) {
-      if (void 0 !== hk) return hk;
-      void 0 !== kk && (Object.getPrototypeOf(kk) === Object.prototype ? ({
-        module_or_path: kk
-      } = kk) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const Fk = fk();
-      ("string" === typeof kk || "function" === typeof Request && kk instanceof Request || "function" === typeof URL && kk instanceof URL) && (kk = fetch(kk));
+    async function rb(bb) {
+      if (void 0 !== qb) return qb;
+      void 0 !== bb && (Object.getPrototypeOf(bb) === Object.prototype ? ({
+        module_or_path: bb
+      } = bb) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const cb = Qb();
+      ("string" === typeof bb || "function" === typeof Request && bb instanceof Request || "function" === typeof URL && bb instanceof URL) && (bb = fetch(bb));
       const {
-        instance: Bk,
-        module: Rk
-      } = await async function(kk, Fk) {
-        if ("function" === typeof Response && kk instanceof Response) {
-          if (!kk.ok) throw new Error(`failed to fetch Wasm: ${kk.status} ${kk.statusText} fetching '${kk.url}'`);
+        instance: sb,
+        module: kb
+      } = await async function(bb, cb) {
+        if ("function" === typeof Response && bb instanceof Response) {
+          if (!bb.ok) throw new Error(`failed to fetch Wasm: ${bb.status} ${bb.statusText} fetching '${bb.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(kk, Fk)
-          } catch (Bk) {
-            if (! function(kk) {
-                switch (kk) {
+            return await WebAssembly.instantiateStreaming(bb, cb)
+          } catch (sb) {
+            if (! function(bb) {
+                switch (bb) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(kk.type) || "application/wasm" === kk.headers.get("Content-Type")) throw Bk;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", Bk)
+              }(bb.type) || "application/wasm" === bb.headers.get("Content-Type")) throw sb;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", sb)
           }
-          const Rk = await kk.arrayBuffer();
-          return await WebAssembly.instantiate(Rk, Fk)
+          const kb = await bb.arrayBuffer();
+          return await WebAssembly.instantiate(kb, cb)
         } {
-          const Bk = await WebAssembly.instantiate(kk, Fk);
-          return Bk instanceof WebAssembly.Instance ? {
-            instance: Bk,
-            module: kk
-          } : Bk
+          const sb = await WebAssembly.instantiate(bb, cb);
+          return sb instanceof WebAssembly.Instance ? {
+            instance: sb,
+            module: bb
+          } : sb
         }
-      }(await kk, Fk);
-      return Ck(Bk, Rk)
+      }(await bb, cb);
+      return Ab(sb, kb)
     }
-    var Kk = Bk(3506),
-      xk = Bk(6325);
-    class jk extends Error {
+    var ob = sb(3505),
+      Sb = sb(6285);
+    class Rb extends Error {
       stage;
-      constructor(kk, Fk) {
-        super((0, Kk.F)(kk, Fk), {
-          cause: Fk
-        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = kk
+      constructor(bb, cb) {
+        super((0, ob.x)(bb, cb), {
+          cause: cb
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = bb
       }
     }
-    let lk = null,
-      nk = null;
+    let vb = null,
+      Fb = null;
 
-    function Ik() {
-      return lk ? Promise.resolve(lk) : (nk || (nk = async function() {
-        let kk;
+    function xb() {
+      return vb ? Promise.resolve(vb) : (Fb || (Fb = async function() {
+        let bb;
         try {
-          kk = await (0, Kk.J)(new Bk.U(Bk(6332)), (0, xk.d)("bloxd_wasm_shader_pack"))
-        } catch (Fk) {
-          throw new jk((0, Kk.P)(Fk), Fk)
+          bb = await (0, ob.A)(new sb.U(sb(6293)), (0, Sb.d)("bloxd_wasm_shader_pack"))
+        } catch (cb) {
+          throw new Rb((0, ob.E)(cb), cb)
         }
         try {
-          await pk({
-            module_or_path: kk
+          await rb({
+            module_or_path: bb
           })
-        } catch (Fk) {
-          throw new jk("instantiate", Fk)
+        } catch (cb) {
+          throw new Rb("instantiate", cb)
         }
-        return lk = Rk, lk
-      }(), nk.then(void 0, (() => {
-        nk = null
-      }))), nk)
+        return vb = kb, vb
+      }(), Fb.then(void 0, (() => {
+        Fb = null
+      }))), Fb)
     }
-    var Qk = Bk(6343);
+    var jb = sb(6309);
 
-    function kF(kk) {
-      let [Fk, Bk, Rk, tk] = kk;
-      const ak = {
-        file: Fk,
-        line: Bk,
-        message: Rk
+    function pb(bb) {
+      let [cb, sb, kb, Wb] = bb;
+      const ab = {
+        file: cb,
+        line: sb,
+        message: kb
       };
-      return tk && (ak.variants = tk.map(Qk.g)), ak
+      return Wb && (ab.variants = Wb.map(jb.e)), ab
     }
 
-    function FF(kk) {
-      return JSON.parse(kk).map(kF)
+    function bc(bb) {
+      return JSON.parse(bb).map(pb)
     }
 
-    function BF(kk, Fk) {
-      if (!Number.isInteger(kk) || kk < 0 || kk > 4294967295) throw new Error(`${Fk} ${kk} is not a whole number from 0 to 4294967295`);
-      return kk
+    function cc(bb, cb) {
+      if (!Number.isInteger(bb) || bb < 0 || bb > 4294967295) throw new Error(`${cb} ${bb} is not a whole number from 0 to 4294967295`);
+      return bb
     }
 
-    function RF(kk) {
-      return [kk.named.map((kk => kk.name)), Uint32Array.from(kk.named, (kk => BF(kk.id, "Texture ID")))]
+    function sc(bb) {
+      return [bb.named.map((bb => bb.name)), Uint32Array.from(bb.named, (bb => cc(bb.id, "Texture ID")))]
     }
-    const tF = new WeakMap;
-    const aF = new WeakMap,
-      XF = new WeakSet;
+    const kc = new WeakMap;
+    const Wc = new WeakMap,
+      ac = new WeakSet;
 
-    function bF(kk, Fk) {
-      if (XF.has(kk)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+    function Tc(bb, cb) {
+      if (ac.has(bb)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
       try {
-        return Fk()
-      } catch (Bk) {
-        throw Bk instanceof WebAssembly.RuntimeError && XF.add(kk), Bk
+        return cb()
+      } catch (sb) {
+        throw sb instanceof WebAssembly.RuntimeError && ac.add(bb), sb
       }
     }
 
-    function wF(kk) {
-      let Fk = aF.get(kk);
-      if (!Fk) {
-        let Bk, Rk;
-        Fk = {
-          N7: (Fk, Bk) => bF(kk, (() => function(kk, Fk, Bk) {
-            const Rk = kk.N7(Fk.map((kk => kk.path)), Fk.map((kk => kk.source)), ...RF(Bk), Bk.aliases.map((kk => kk.name)), Bk.aliases.map((kk => kk.texture)), Bk.aliases.map((kk => kk.kind)));
-            let tk = !1;
+    function Uc(bb) {
+      let cb = Wc.get(bb);
+      if (!cb) {
+        let sb, kb;
+        cb = {
+          N9: (cb, sb) => Tc(bb, (() => function(bb, cb, sb) {
+            const kb = bb.N9(cb.map((bb => bb.path)), cb.map((bb => bb.source)), ...sc(sb), sb.aliases.map((bb => bb.name)), sb.aliases.map((bb => bb.texture)), sb.aliases.map((bb => bb.kind)));
+            let Wb = !1;
             try {
-              const kk = Rk.validationModuleCodes,
-                Fk = Array.from(Rk.validationModuleKeys, ((Fk, Bk) => ({
-                  key: (0, Qk.g)(Fk),
-                  code: kk[Bk]
+              const bb = kb.validationModuleCodes,
+                cb = Array.from(kb.validationModuleKeys, ((cb, sb) => ({
+                  key: (0, jb.e)(cb),
+                  code: bb[sb]
                 }))),
-                Bk = {
-                  errors: FF(Rk.errorsJson),
-                  offInStrict: FF(Rk.offInStrictJson),
-                  variants: (0, Qk.e)(Rk),
-                  validationModules: Fk,
-                  features: Rk.features
+                sb = {
+                  errors: bc(kb.errorsJson),
+                  offInStrict: bc(kb.offInStrictJson),
+                  variants: (0, jb.c)(kb),
+                  validationModules: cb,
+                  features: kb.features
                 };
-              return Fk.forEach(((kk, Fk) => {
-                tF.set(kk, {
-                  pack: Rk,
-                  index: Fk
+              return cb.forEach(((bb, cb) => {
+                kc.set(bb, {
+                  pack: kb,
+                  index: cb
                 })
-              })), tk = Fk.length > 0, Bk
+              })), Wb = cb.length > 0, sb
             } finally {
-              tk || Rk.free()
+              Wb || kb.free()
             }
-          }(kk, Fk, Bk))),
-          mapValidationMessage: (Fk, Bk) => {
-            const Rk = tF.get(Fk);
-            if (!Rk) throw new Error("mapValidationMessage takes a validation module this compiler made");
-            return kF(JSON.parse(bF(kk, (() => Rk.pack.mapValidationMessage(Rk.index, Bk.lineNum, Bk.linePos, Bk.message, Bk.type)))))
+          }(bb, cb, sb))),
+          mapValidationMessage: (cb, sb) => {
+            const kb = kc.get(cb);
+            if (!kb) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return pb(JSON.parse(Tc(bb, (() => kb.pack.mapValidationMessage(kb.index, sb.lineNum, sb.linePos, sb.message, sb.type)))))
           },
-          EBk: Fk => bF(kk, (() => function(kk, Fk) {
-            const Bk = new Int32Array(Fk.length),
-              Rk = [];
-            return Fk.forEach(((kk, Fk) => {
-              Bk[Fk] = kk.variants ? kk.variants.length : -1;
-              for (const Bk of kk.variants ?? []) Rk.push((0, Qk.f)(Bk))
-            })), FF(kk.EBk(Fk.map((kk => kk.file)), Uint32Array.from(Fk, (kk => BF(kk.line, "Diagnostic line"))), Fk.map((kk => kk.message)), Bk, Uint8Array.from(Rk)))
-          }(kk, Fk))),
-          qS: Fk => bF(kk, (() => kk.qS(...RF(Fk)))),
+          Nsb: cb => Tc(bb, (() => function(bb, cb) {
+            const sb = new Int32Array(cb.length),
+              kb = [];
+            return cb.forEach(((bb, cb) => {
+              sb[cb] = bb.variants ? bb.variants.length : -1;
+              for (const sb of bb.variants ?? []) kb.push((0, jb.d)(sb))
+            })), bc(bb.Nsb(cb.map((bb => bb.file)), Uint32Array.from(cb, (bb => cc(bb.line, "Diagnostic line"))), cb.map((bb => bb.message)), sb, Uint8Array.from(kb)))
+          }(bb, cb))),
+          lY: cb => Tc(bb, (() => bb.lY(...sc(cb)))),
           get SHADER_PACK_HEADER_VERSION() {
-            return Bk ??= bF(kk, (() => kk.xRk())), Bk
+            return sb ??= Tc(bb, (() => bb.dkb())), sb
           },
           get DEFAULT_SHADER_PACK_FILES() {
-            return Rk ??= bF(kk, (() => {
-              const Fk = kk.ZRk();
-              return kk.CRk().map(((kk, Bk) => ({
-                path: kk,
-                source: Fk[Bk]
+            return kb ??= Tc(bb, (() => {
+              const cb = bb.Zkb();
+              return bb.Kkb().map(((bb, sb) => ({
+                path: bb,
+                source: cb[sb]
               })))
-            })), Rk
+            })), kb
           },
-          jRk: Fk => bF(kk, (() => kk.jRk(Fk))),
-          resolveHeader: Fk => bF(kk, (() => kk.KRk((0, Qk.f)(Fk)))),
-          pRk: () => bF(kk, (() => kk.pRk()))
-        }, aF.set(kk, Fk)
+          Akb: cb => Tc(bb, (() => bb.Akb(cb))),
+          resolveHeader: cb => Tc(bb, (() => bb.qkb((0, jb.d)(cb)))),
+          zkb: () => Tc(bb, (() => bb.zkb()))
+        }, Wc.set(bb, cb)
       }
-      return Fk
+      return cb
     }
-    var dF = Bk(3029),
-      sF = Bk(6340);
-    const VF = "bloxdShaderPackWasmFailureReported";
-    let JF = null;
+    var Ic = sb(2982),
+      Hc = sb(6301);
+    const fc = "bloxdShaderPackWasmFailureReported";
+    let Mc = null;
 
-    function AF() {
-      return JF ??= async function() {
-        if ("undefined" === typeof WebAssembly) return eF("unsupported", "This browser has no WebAssembly"), null;
-        const kk = (0, sF.loadShaderPackTextures)().then((() => !0), (kk => (console.error("Could not load the shader pack textures, so shader packs can't run", kk), !1)));
+    function Xc() {
+      return Mc ??= async function() {
+        if ("undefined" === typeof WebAssembly) return nc("unsupported", "This browser has no WebAssembly"), null;
+        const bb = (0, Hc.loadShaderPackTextures)().then((() => !0), (bb => (console.error("Could not load the shader pack textures, so shader packs can't run", bb), !1)));
         try {
-          const Fk = await async function() {
-            let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ik;
-            return wF(await kk())
+          const cb = await async function() {
+            let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : xb;
+            return Uc(await bb())
           }();
-          return await kk ? Fk : null
-        } catch (Fk) {
-          const kk = Fk instanceof Error ? Fk.message : String(Fk);
-          return eF(dF.e[Fk instanceof jk ? Fk.stage : "instantiate"], kk), null
+          return await bb ? cb : null
+        } catch (cb) {
+          const bb = cb instanceof Error ? cb.message : String(cb);
+          return nc(Ic.b[cb instanceof Rb ? cb.stage : "instantiate"], bb), null
         }
-      }(), JF
+      }(), Mc
     }
 
-    function eF(kk, Fk) {
-      (0, dF.i)(VF, `Shader pack wasm ${kk}, so shader packs can't run: ${Fk}`, Fk, `shader_pack_${kk}`)
+    function nc(bb, cb) {
+      (0, Ic.f)(fc, `Shader pack wasm ${bb}, so shader packs can't run: ${cb}`, cb, `shader_pack_${bb}`)
     }
   },
-  6332: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/bloxd_wasm_shader_pack_bg.7ebd5584117c85b01497.wasm"
+  6293: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/bloxd_wasm_shader_pack_bg.e0c3446a5716409e6a9d.wasm"
   },
-  6325: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Xk
+  6285: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Tb
     });
-    var Rk = Bk(3506);
-    const tk = {
-      bloxd_wasm: () => "0a084eabef9950ab2a7e71c5d9de42289fbfae2d87a10d8ea83b0d640034d04e",
-      bloxd_wasm_client: () => "670064b0efa28d20ee2652f560d980392b14b8f575d78dbc148a398783212dd9",
-      bloxd_wasm_workers: () => "e54ffb745a3a64b4eff08d3acff88bafa819b4a1d24982975989975b8c465d7c",
-      bloxd_wasm_models: () => "3510593bc144c34047bb046244d4f79681313b64dc4db62f262e4940cf2ac935",
-      bloxd_wasm_webgpu: () => "7227c7fb095ae833899f1bc6083c6fd008f81638c2024bb597f02a7221b8b9f3",
-      bloxd_wasm_webgl: () => "5973cccff624afdd2d9ac129d6f0410128c5eb760d9c1d374fcacade730af5c8",
-      bloxd_wasm_webgl1: () => "2ea465bc1bd601e27e7b5fa0838d1029260ab0f8117b76b80379a1022f1bc97f",
-      bloxd_wasm_replay: () => "5250a6be4ccaa643dd55bed731d226b43b001447adaac84ccb3f3d6e643166e0",
-      bloxd_wasm_recorder: () => "c25abb16c2b998f3635848bcd240bb48a3dcf3a54feacc8db2b427a87519c394",
-      bloxd_wasm_anim: () => "f47375bb802972bde149d1e0bb1d06c729d525fa6881c46c5ac4757224208b36",
-      bloxd_wasm_textures: () => "a81b39f82de7af92548359d4ee9d763c26ee7b3342018c2571590a49dd51e093",
-      bloxd_wasm_shader_pack: () => "b47f8831d78bff4de588686f88a8db44a0115f8cadda219f585be50545eff9c2"
+    var kb = sb(3505);
+    const Wb = {
+      bloxd_wasm: () => "f2deac3a95fa77a1cc5890e21cb7e030da96c92da9c75cfa932f9a05cc40aedf",
+      bloxd_wasm_client: () => "c6edcc46054cb735afeff08b33217275937707f8ac70cb8b5c7fe62e431251e6",
+      bloxd_wasm_workers: () => "ee974f129bda12a85ed082f9b65c9090670a876bf96b379c144444c65ae2556f",
+      bloxd_wasm_models: () => "be9aa9cb71680943564eddd1ec021aeec179278909b015f5d2a33e60342d2293",
+      bloxd_wasm_webgpu: () => "1222801256cc2a9e528e331282389fe7d62a604e5a30a57b7e6ca38c959a97ce",
+      bloxd_wasm_webgl: () => "a247bd9c10bbe2122d8318fff093620ecc23a8410aefd142dee1eb8008d469d7",
+      bloxd_wasm_webgl1: () => "0cd01e4687f9eeba42a0db9058b3cf081f0505bd121d0557c726f14a96fb53d3",
+      bloxd_wasm_replay: () => "f83c21ccc0c7a81aefe9fb3e9a587eed0f5383826de96ef3a2a1c8e928043141",
+      bloxd_wasm_recorder: () => "277aa1b73dae5d8884eae1750f1cf9d8f869748ec3475a6969370783baa9a02b",
+      bloxd_wasm_anim: () => "f46cab251d1e83f32e96bf21fb33222f8a75cffb040d22ef03fa834808ad9e4a",
+      bloxd_wasm_textures: () => "907026c21e1eb3ae09c055455f18b265720f79b678cb47985a1937fd2ee774bc",
+      bloxd_wasm_shader_pack: () => "0e34d623eecc459030b0abc5924b121a8566443bf7626c416308af84f6e66a00"
     };
-    var ak = Bk(4425);
+    var ab = sb(4425);
 
-    function Xk(kk) {
-      const Fk = Object.prototype.hasOwnProperty.call(tk, kk) ? tk[kk]() : void 0;
-      if (void 0 !== Fk) return {
-        sha256: Fk,
-        onMismatch: ak.v
+    function Tb(bb) {
+      const cb = Object.prototype.hasOwnProperty.call(Wb, bb) ? Wb[bb]() : void 0;
+      if (void 0 !== cb) return {
+        sha256: cb,
+        onMismatch: ab.u
       };
-      throw new Rk.k(`${kk} has no release digest, so this build refuses it`)
+      throw new kb.j(`${bb} has no release digest, so this build refuses it`)
     }
   },
-  6343: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => ik,
-      e: () => Yk,
-      f: () => Wk,
-      g: () => mk
+  6309: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Vb,
+      c: () => Lb,
+      d: () => Cb,
+      e: () => eb
     });
-    var Rk = Bk(6349);
-    const tk = 6,
-      ak = 3,
-      Xk = 1,
-      bk = 2,
-      wk = 4,
-      dk = 8,
-      sk = 16,
-      Vk = 32,
-      Jk = 64,
-      Ak = 128,
-      ek = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var kb = sb(6312);
+    const Wb = 6,
+      ab = 3,
+      Tb = 1,
+      Ub = 2,
+      Ib = 4,
+      Hb = 8,
+      fb = 16,
+      Mb = 32,
+      Xb = 64,
+      nb = 128,
+      mb = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function yk(kk) {
-      if (!kk) return 0;
-      const Fk = ek.indexOf(kk);
-      if (Fk <= 0) throw new Error(`"${kk}" is not a shader pack hook function`);
-      return Fk
+    function lb(bb) {
+      if (!bb) return 0;
+      const cb = mb.indexOf(bb);
+      if (cb <= 0) throw new Error(`"${bb}" is not a shader pack hook function`);
+      return cb
     }
 
-    function fk(kk) {
-      if (0 === kk) return null;
-      const Fk = ek[kk];
-      if (void 0 === Fk) throw new Error(`${kk} is not a shader pack hook function id`);
-      return Fk
+    function Qb(bb) {
+      if (0 === bb) return null;
+      const cb = mb[bb];
+      if (void 0 === cb) throw new Error(`${bb} is not a shader pack hook function id`);
+      return cb
     }
 
-    function mk(kk) {
-      const Fk = Rk.d.length;
+    function eb(bb) {
+      const cb = kb.b.length;
       return {
-        strict: kk >= Fk,
-        program: Rk.d[kk % Fk]
+        strict: bb >= cb,
+        program: kb.b[bb % cb]
       }
     }
 
-    function Wk(kk) {
-      return Number(kk.strict) * Rk.d.length + Rk.d.indexOf(kk.program)
+    function Cb(bb) {
+      return Number(bb.strict) * kb.b.length + kb.b.indexOf(bb.program)
     }
 
-    function vk(kk) {
-      return "" === kk ? [] : kk.split(" ")
+    function Nb(bb) {
+      return "" === bb ? [] : bb.split(" ")
     }
 
-    function ik(kk) {
-      const Fk = {
-        variantFlags: new Uint8Array(tk),
-        hooks: new Uint8Array(tk * ak),
-        moduleCodes: Array(tk).fill(""),
-        reads: Array(2 * tk).fill("")
+    function Vb(bb) {
+      const cb = {
+        variantFlags: new Uint8Array(Wb),
+        hooks: new Uint8Array(Wb * ab),
+        moduleCodes: Array(Wb).fill(""),
+        reads: Array(2 * Wb).fill("")
       };
-      for (const Bk of kk) {
-        const kk = Wk(Bk.key),
-          Rk = (kk, Fk) => null === Bk.hooks.surface || Bk.reads.fragment.includes(kk) ? 0 : Fk;
-        Fk.variantFlags[kk] = (Bk.sceneDepth ? Xk : 0) | (Bk.movesVertices ? bk : 0) | (Bk.sunShadow ? wk : 0) | (Bk.airShadow ? dk : 0) | (Bk.discards ? sk : 0) | Rk("localPosition", Vk) | Rk("enchantSpeed", Jk) | Rk("enchantTier", Ak), Fk.hooks[kk * ak] = yk(Bk.hooks.vertex), Fk.hooks[kk * ak + 1] = yk(Bk.hooks.surface), Fk.hooks[kk * ak + 2] = yk(Bk.hooks.light), Fk.moduleCodes[kk] = Bk.moduleCode, Fk.reads[2 * kk] = Bk.reads.vertex.join(" "), Fk.reads[2 * kk + 1] = Bk.reads.fragment.join(" ")
+      for (const sb of bb) {
+        const bb = Cb(sb.key),
+          kb = (bb, cb) => null === sb.hooks.surface || sb.reads.fragment.includes(bb) ? 0 : cb;
+        cb.variantFlags[bb] = (sb.sceneDepth ? Tb : 0) | (sb.movesVertices ? Ub : 0) | (sb.sunShadow ? Ib : 0) | (sb.airShadow ? Hb : 0) | (sb.discards ? fb : 0) | kb("localPosition", Mb) | kb("enchantSpeed", Xb) | kb("enchantTier", nb), cb.hooks[bb * ab] = lb(sb.hooks.vertex), cb.hooks[bb * ab + 1] = lb(sb.hooks.surface), cb.hooks[bb * ab + 2] = lb(sb.hooks.light), cb.moduleCodes[bb] = sb.moduleCode, cb.reads[2 * bb] = sb.reads.vertex.join(" "), cb.reads[2 * bb + 1] = sb.reads.fragment.join(" ")
       }
-      return Fk
+      return cb
     }
 
-    function Yk(kk) {
+    function Lb(bb) {
       const {
-        hooks: Fk,
-        moduleCodes: Bk,
-        reads: Rk
-      } = kk;
-      return Array.from(kk.variantFlags, ((kk, tk) => {
-        const Vk = tk * ak;
+        hooks: cb,
+        moduleCodes: sb,
+        reads: kb
+      } = bb;
+      return Array.from(bb.variantFlags, ((bb, Wb) => {
+        const Mb = Wb * ab;
         return {
-          key: mk(tk),
+          key: eb(Wb),
           hooks: {
-            vertex: fk(Fk[Vk]),
-            surface: fk(Fk[Vk + 1]),
-            light: fk(Fk[Vk + 2])
+            vertex: Qb(cb[Mb]),
+            surface: Qb(cb[Mb + 1]),
+            light: Qb(cb[Mb + 2])
           },
-          moduleCode: Bk[tk],
-          sceneDepth: 0 !== (kk & Xk),
-          sunShadow: 0 !== (kk & wk),
-          airShadow: 0 !== (kk & dk),
-          movesVertices: 0 !== (kk & bk),
-          discards: 0 !== (kk & sk),
+          moduleCode: sb[Wb],
+          sceneDepth: 0 !== (bb & Tb),
+          sunShadow: 0 !== (bb & Ib),
+          airShadow: 0 !== (bb & Hb),
+          movesVertices: 0 !== (bb & Ub),
+          discards: 0 !== (bb & fb),
           reads: {
-            vertex: vk(Rk[2 * tk]),
-            fragment: vk(Rk[2 * tk + 1])
+            vertex: Nb(kb[2 * Wb]),
+            fragment: Nb(kb[2 * Wb + 1])
           }
         }
       }))
     }
   },
-  6349: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Rk,
-      g: () => Xk,
-      h: () => bk,
-      l: () => tk,
-      m: () => ak
+  6312: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => kb,
+      e: () => Tb,
+      f: () => Ub,
+      g: () => Wb,
+      k: () => ab
     });
-    const Rk = ["terrain", "liquid", "model"];
+    const kb = ["terrain", "liquid", "model"];
 
-    function tk() {
-      const kk = [];
-      for (const Fk of [!1, !0])
-        for (const Bk of Rk) kk.push({
-          strict: Fk,
-          program: Bk
+    function Wb() {
+      const bb = [];
+      for (const cb of [!1, !0])
+        for (const sb of kb) bb.push({
+          strict: cb,
+          program: sb
         });
-      return kk
+      return bb
     }
 
-    function ak(kk) {
-      return `${kk.strict?"strict":"allow"}.${kk.program}`
+    function ab(bb) {
+      return `${bb.strict?"strict":"allow"}.${bb.program}`
     }
 
-    function Xk(kk) {
-      return !kk.hooks.vertex && !kk.hooks.surface && !kk.hooks.light
+    function Tb(bb) {
+      return !bb.hooks.vertex && !bb.hooks.surface && !bb.hooks.light
     }
 
-    function bk(kk, Fk) {
-      return "off" !== Fk && (null === kk || kk.some((kk => kk.key.strict === ("strict" === Fk) && !Xk(kk))))
+    function Ub(bb, cb) {
+      return "off" !== cb && (null === bb || bb.some((bb => bb.key.strict === ("strict" === cb) && !Tb(bb))))
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

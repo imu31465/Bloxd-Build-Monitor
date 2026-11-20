@@ -1,30 +1,30 @@
 export const id = 51;
 export const ids = [51];
 export const modules = {
-  42800: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      startPageTexturePackFeed: () => Xk
+  42701: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      startPageTexturePackFeed: () => Tb
     });
-    var Rk = Bk(1154),
-      tk = Bk(42),
-      ak = Bk(42791);
+    var kb = sb(1208),
+      Wb = sb(37),
+      ab = sb(42683);
 
-    function Xk(kk, Fk) {
-      const Bk = new ak.d({
-        store: tk.f,
-        warn: kk,
-        oneShot: Fk,
-        fetchLatest: async kk => {
-          const Fk = await fetch(`${Rk.clientSideServerUrls.texturePackUrl}/${kk}.json`, {
+    function Tb(bb, cb) {
+      const sb = new ab.c({
+        store: Wb.d,
+        warn: bb,
+        oneShot: cb,
+        fetchLatest: async bb => {
+          const cb = await fetch(`${kb.clientSideServerUrls.texturePackUrl}/${bb}.json`, {
             cache: "reload"
           });
-          if (!Fk.ok) throw new Error(`fetching texture pack ${kk} answered HTTP ${Fk.status}`);
-          return await Fk.json()
+          if (!cb.ok) throw new Error(`fetching texture pack ${bb} answered HTTP ${cb.status}`);
+          return await cb.json()
         }
       });
-      return (0, ak.f)(Bk), Bk
+      return (0, ab.d)(sb), sb
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

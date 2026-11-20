@@ -1,167 +1,167 @@
 export const id = 132;
 export const ids = [132];
 export const modules = {
-  36019: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Xk,
-      f: () => ak,
-      j: () => wk
+  35945: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Tb,
+      g: () => ab,
+      h: () => Ib
     });
-    var Rk = Bk(36011);
-    const tk = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
+    var kb = sb(35941);
+    const Wb = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
 
-    function ak(kk) {
-      if (kk instanceof WebAssembly.RuntimeError) return !0;
-      const Fk = kk instanceof Error ? kk.stack : void 0;
-      return "string" === typeof Fk && tk.test(Fk)
+    function ab(bb) {
+      if (bb instanceof WebAssembly.RuntimeError) return !0;
+      const cb = bb instanceof Error ? bb.stack : void 0;
+      return "string" === typeof cb && Wb.test(cb)
     }
 
-    function Xk(kk, Fk, Bk) {
-      var ak;
-      const Xk = kk instanceof Error ? kk.name : "thrown",
-        bk = (kk instanceof Error && null !== (ak = kk.stack) && void 0 !== ak ? ak : "").split("\n").filter((kk => tk.test(kk))).slice(0, 8).map((kk => kk.trim())),
-        wk = null === Fk ? "wasm memory unknown" : `wasm memory ${Math.round(Fk/2**20)} MB`,
-        dk = null === Bk.panic ? "" : `, panic: ${(0,Rk.g)(Bk.panic)}`,
-        sk = `${Xk}: ${kk instanceof Error?kk.message:String(kk)}`;
-      return `${(0,Rk.n)(Bk.kind,Bk.refusedBytes)} ${sk} (${wk})${dk}${bk.length>0?` | ${bk.join(" < ")}`:""}`
+    function Tb(bb, cb, sb) {
+      var ab;
+      const Tb = bb instanceof Error ? bb.name : "thrown",
+        Ub = (bb instanceof Error && null !== (ab = bb.stack) && void 0 !== ab ? ab : "").split("\n").filter((bb => Wb.test(bb))).slice(0, 8).map((bb => bb.trim())),
+        Ib = null === cb ? "wasm memory unknown" : `wasm memory ${Math.round(cb/2**20)} MB`,
+        Hb = null === sb.panic ? "" : `, panic: ${(0,kb.k)(sb.panic)}`,
+        fb = `${Tb}: ${bb instanceof Error?bb.message:String(bb)}`;
+      return `${(0,kb.p)(sb.kind,sb.refusedBytes)} ${fb} (${Ib})${Hb}${Ub.length>0?` | ${Ub.join(" < ")}`:""}`
     }
-    const bk = 500;
+    const Ub = 500;
 
-    function wk(kk) {
-      let Fk = "[object Object]";
+    function Ib(bb) {
+      let cb = "[object Object]";
       try {
-        Fk = String(kk)
+        cb = String(bb)
       } catch {}
-      if ("[object Object]" !== Fk) return Fk;
+      if ("[object Object]" !== cb) return cb;
       try {
-        var Bk, Rk;
-        return null !== (Bk = null === (Rk = JSON.stringify(kk)) || void 0 === Rk ? void 0 : Rk.slice(0, bk)) && void 0 !== Bk ? Bk : Fk
+        var sb, kb;
+        return null !== (sb = null === (kb = JSON.stringify(bb)) || void 0 === kb ? void 0 : kb.slice(0, Ub)) && void 0 !== sb ? sb : cb
       } catch {
-        return Fk
+        return cb
       }
     }
   },
-  36046: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Nk,
-      d: () => Mk,
-      f: () => Sk
+  35976: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => gb,
+      f: () => yb,
+      j: () => Jb
     });
-    var Rk = Bk(3502),
-      tk = Bk(3508),
-      ak = Bk(6325),
-      Xk = Bk(4425),
-      bk = Bk(3506);
-    const wk = ".zst.bin",
-      dk = Reflect.apply,
-      sk = ArrayBuffer,
-      Vk = "undefined" === typeof Response ? void 0 : Response,
-      Jk = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      Ak = function() {
-        let kk;
-        void 0 !== Jk && new Jk({
+    var kb = sb(3500),
+      Wb = sb(3511),
+      ab = sb(6285),
+      Tb = sb(4425),
+      Ub = sb(3505);
+    const Ib = ".zst.bin",
+      Hb = Reflect.apply,
+      fb = ArrayBuffer,
+      Mb = "undefined" === typeof Response ? void 0 : Response,
+      Xb = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      nb = function() {
+        let bb;
+        void 0 !== Xb && new Xb({
           __proto__: null,
-          start(Fk) {
+          start(cb) {
             const {
-              enqueue: Bk,
-              close: Rk,
-              error: tk
-            } = Object.getPrototypeOf(Fk);
-            kk = {
-              enqueue: Bk,
-              close: Rk,
-              error: tk
+              enqueue: sb,
+              close: kb,
+              error: Wb
+            } = Object.getPrototypeOf(cb);
+            bb = {
+              enqueue: sb,
+              close: kb,
+              error: Wb
             }
           }
         }, {
           __proto__: null
         });
-        return kk
+        return bb
       }(),
-      ek = function() {
+      mb = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== Ak && (0, Xk.j)(Vk, "Response", !0) && (0, Xk.j)(Jk, "ReadableStream", !0) && (0, Xk.j)(Ak.enqueue, "enqueue") && (0, Xk.j)(Ak.close, "close") && (0, Xk.j)(Ak.error, "error") && (0, Xk.j)(bk.cb, "body") && (0, Xk.j)(bk.R, "getReader") && (0, Xk.j)(bk._, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== nb && (0, Tb.j)(Mb, "Response", !0) && (0, Tb.j)(Xb, "ReadableStream", !0) && (0, Tb.j)(nb.enqueue, "enqueue") && (0, Tb.j)(nb.close, "close") && (0, Tb.j)(nb.error, "error") && (0, Tb.j)(Ub.S, "body") && (0, Tb.j)(Ub.F, "getReader") && (0, Tb.j)(Ub.O, "read")
         } catch {
           return !1
         }
       }();
-    let yk = !1;
+    let lb = !1;
 
-    function fk(kk) {
-      for (const Fk of "bloxd_wasm_webgpu:4998106,bloxd_wasm_webgl:5289277,bloxd_wasm_webgl1:4758837,bloxd_wasm_workers:196044,bloxd_wasm_models:311680,bloxd_wasm_client:3667712"?.split(",") ?? []) {
-        const [Bk, Rk] = Fk.split(":");
-        if (Bk === kk) {
-          const kk = Number(Rk);
-          return Number.isInteger(kk) && kk > 0 ? kk : void 0
+    function Qb(bb) {
+      for (const cb of "bloxd_wasm_webgpu:4997811,bloxd_wasm_webgl:5288982,bloxd_wasm_webgl1:4758542,bloxd_wasm_workers:196044,bloxd_wasm_models:311680,bloxd_wasm_client:3667474"?.split(",") ?? []) {
+        const [sb, kb] = cb.split(":");
+        if (sb === bb) {
+          const bb = Number(kb);
+          return Number.isInteger(bb) && bb > 0 ? bb : void 0
         }
       }
     }
 
-    function mk(kk, Fk) {
-      let Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const ak = function(kk) {
-        const Fk = fk(kk.name);
-        if (void 0 !== Fk && ek && !yk) return {
-          href: `${kk.url().href}${wk}`,
-          length: Fk
+    function eb(bb, cb) {
+      let kb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const ab = function(bb) {
+        const cb = Qb(bb.name);
+        if (void 0 !== cb && mb && !lb) return {
+          href: `${bb.url().href}${Ib}`,
+          length: cb
         }
-      }(kk);
-      return void 0 !== ak ? async function(kk, Fk, Rk, ak) {
+      }(bb);
+      return void 0 !== ab ? async function(bb, cb, kb, ab) {
         let {
-          href: Xk,
-          length: wk
-        } = Fk;
+          href: Tb,
+          length: Ib
+        } = cb;
         try {
-          return await (0, bk.hb)(Xk, ((kk, Fk, ak) => async function(kk, Fk, Rk, ak, Xk, wk) {
-            const ek = new sk(Fk);
-            let fk;
-            vk ??= (0, bk.Y)(Bk.e(64).then((() => Bk(40615))));
+          return await (0, Ub.X)(Tb, ((bb, cb, ab) => async function(bb, cb, kb, ab, Tb, Ib) {
+            const mb = new fb(cb);
+            let Qb;
+            Nb ??= (0, Ub.N)(sb.e(64).then((() => sb(40600))));
             try {
-              fk = await fetch(kk, {
-                signal: Rk
+              Qb = await fetch(bb, {
+                signal: kb
               })
-            } catch (Gk) {
-              throw new Error(`Fetching ${kk} failed: ${Yk(Gk)}`)
+            } catch (ib) {
+              throw new Error(`Fetching ${bb} failed: ${Lb(ib)}`)
             }
             const {
-              ok: mk,
-              status: Wk,
-              body: Lk
-            } = function(kk, Fk) {
+              ok: eb,
+              status: Cb,
+              body: ub
+            } = function(bb, cb) {
               try {
                 const {
-                  ok: kk,
-                  status: Bk
-                } = Fk;
+                  ok: bb,
+                  status: sb
+                } = cb;
                 return {
-                  ok: kk,
-                  status: Bk,
-                  body: dk(bk.cb, Fk, [])
+                  ok: bb,
+                  status: sb,
+                  body: Hb(Ub.S, cb, [])
                 }
               } catch {
-                throw new Error(`${kk} came in a response a page script made`)
+                throw new Error(`${bb} came in a response a page script made`)
               }
-            }(kk, fk);
-            if (!mk) throw new Error(`Fetching ${kk} failed: HTTP ${Wk}`);
-            ak();
+            }(bb, Qb);
+            if (!eb) throw new Error(`Fetching ${bb} failed: HTTP ${Cb}`);
+            ab();
             const {
-              reader: Ok,
-              controller: Ek,
-              compiled: Sk
-            } = function(kk, Fk) {
-              let Bk;
+              reader: Yb,
+              controller: hb,
+              compiled: Jb
+            } = function(bb, cb) {
+              let sb;
               try {
-                let kk;
-                Bk = dk(bk.R, Fk, []);
-                const Rk = new Jk({
+                let bb;
+                sb = Hb(Ub.F, cb, []);
+                const kb = new Xb({
                     __proto__: null,
-                    start(Fk) {
-                      kk = Fk
+                    start(cb) {
+                      bb = cb
                     }
                   }, {
                     __proto__: null
                   }),
-                  tk = new Vk(Rk, {
+                  Wb = new Mb(kb, {
                     __proto__: null,
                     headers: {
                       __proto__: null,
@@ -169,269 +169,269 @@ export const modules = {
                     }
                   });
                 return {
-                  reader: Bk,
-                  controller: kk,
-                  compiled: (0, bk.Y)((0, bk.D)((0, bk.kb)(tk)))
+                  reader: sb,
+                  controller: bb,
+                  compiled: (0, Ub.N)((0, Ub.w)((0, Ub._)(Wb)))
                 }
-              } catch (Gk) {
-                throw void 0 !== Bk && ik(Bk), new Error(`${kk} could not be streamed into a compile: ${Yk(Gk)}`)
+              } catch (ib) {
+                throw void 0 !== sb && Vb(sb), new Error(`${bb} could not be streamed into a compile: ${Lb(ib)}`)
               }
-            }(kk, Lk), {
-              enqueue: Nk,
-              close: Hk,
-              error: uk
-            } = Ak, Mk = kk => {
+            }(bb, ub), {
+              enqueue: gb,
+              close: Bb,
+              error: tb
+            } = nb, yb = bb => {
               try {
-                dk(uk, Ek, [kk])
+                Hb(tb, hb, [bb])
               } catch {} finally {
-                ik(Ok)
+                Vb(Yb)
               }
             };
-            Rk.addEventListener("abort", (() => {
-              Mk(new Error(`${kk} stalled`))
+            kb.addEventListener("abort", (() => {
+              yb(new Error(`${bb} stalled`))
             }), {
               once: !0
             });
-            let gk = !1;
-            (0, tk.r)(Sk, (() => {}), (() => {
-              gk = !0, ik(Ok)
+            let Pb = !1;
+            (0, Wb.k)(Jb, (() => {}), (() => {
+              Pb = !0, Vb(Yb)
             }));
-            let Uk = 0;
+            let Db = 0;
             try {
-              let Bk;
+              let sb;
               try {
-                Bk = await vk
-              } catch (Gk) {
-                throw yk = !0, new Error(`The zstd decoder did not load: ${Yk(Gk)}`)
+                sb = await Nb
+              } catch (ib) {
+                throw lb = !0, new Error(`The zstd decoder did not load: ${Lb(ib)}`)
               }
               const {
-                ZstdFrameDecoder: Rk
-              } = Bk, tk = new Rk(Fk);
-              for (; !tk.done && !gk;) {
-                let Fk;
+                ZstdFrameDecoder: kb
+              } = sb, Wb = new kb(cb);
+              for (; !Wb.done && !Pb;) {
+                let cb;
                 try {
-                  Fk = await dk(bk._, Ok, [])
-                } catch (Gk) {
-                  throw new Error(`Downloading ${kk} failed: ${Yk(Gk)}`)
+                  cb = await Hb(Ub.O, Yb, [])
+                } catch (ib) {
+                  throw new Error(`Downloading ${bb} failed: ${Lb(ib)}`)
                 }
-                if (Fk.done || gk) break;
-                ak();
+                if (cb.done || Pb) break;
+                ab();
                 try {
-                  tk.push(Fk.value)
-                } catch (Gk) {
-                  throw new Error(`${kk} did not decode: ${Yk(Gk)}`)
+                  Wb.push(cb.value)
+                } catch (ib) {
+                  throw new Error(`${bb} did not decode: ${Lb(ib)}`)
                 }
                 const {
-                  output: Bk,
-                  decoded: Rk
-                } = tk;
-                if (null !== Bk && Rk !== Uk) {
-                  dk(bk.eb, new bk.n(ek), [Bk.subarray(Uk, Rk), Uk]);
+                  output: sb,
+                  decoded: kb
+                } = Wb;
+                if (null !== sb && kb !== Db) {
+                  Hb(Ub.U, new Ub.m(mb), [sb.subarray(Db, kb), Db]);
                   try {
-                    dk(Nk, Ek, [new bk.n(ek, Uk, Rk - Uk)])
+                    Hb(gb, hb, [new Ub.m(mb, Db, kb - Db)])
                   } catch {
-                    gk = !0
+                    Pb = !0
                   }
-                  Uk = Rk
+                  Db = kb
                 }
               }
-              if (Xk(), gk) throw await Sk, new Error(`${kk}'s compile stopped reading before its end`);
-              if (!tk.done) throw new Error(`${kk} ended before its module did`);
-              ik(Ok);
+              if (Tb(), Pb) throw await Jb, new Error(`${bb}'s compile stopped reading before its end`);
+              if (!Wb.done) throw new Error(`${bb} ended before its module did`);
+              Vb(Yb);
               try {
-                dk(Hk, Ek, [])
+                Hb(Bb, hb, [])
               } catch {}
-            } catch (Gk) {
-              throw Mk(Gk), Gk
+            } catch (ib) {
+              throw yb(ib), ib
             }
-            const ck = await Sk;
-            void 0 !== wk && await (0, bk.A)(kk, new bk.n(ek), {
-              sha256: wk.sha256,
+            const Eb = await Jb;
+            void 0 !== Ib && await (0, Ub.t)(bb, new Ub.m(mb), {
+              sha256: Ib.sha256,
               onMismatch: () => {}
             });
-            return ck
-          }(Xk, wk, kk, Fk, ak, Rk)))
-        } catch (fk) {
-          console.warn(`${Yk(fk)}: loading ${kk.href} instead`)
+            return Eb
+          }(Tb, Ib, bb, cb, ab, kb)))
+        } catch (Qb) {
+          console.warn(`${Lb(Qb)}: loading ${bb.href} instead`)
         }
-        const ek = await (0, bk.J)(kk, Rk, {
-          ...ak,
+        const mb = await (0, Ub.A)(bb, kb, {
+          ...ab,
           hideThen: !0
         });
-        return ek
-      }(kk.url(), ak, Fk, Rk): Wk(kk, Fk, Rk)
+        return mb
+      }(bb.url(), ab, cb, kb): Cb(bb, cb, kb)
     }
 
-    function Wk(kk, Fk, Bk) {
-      return (0, bk.J)(kk.url(), Fk, {
-        ...Bk,
-        hideThen: void 0 !== fk(kk.name)
+    function Cb(bb, cb, sb) {
+      return (0, Ub.A)(bb.url(), cb, {
+        ...sb,
+        hideThen: void 0 !== Qb(bb.name)
       })
     }
-    let vk = null;
+    let Nb = null;
 
-    function ik(kk) {
+    function Vb(bb) {
       try {
-        (0, bk.Y)(kk.cancel())
+        (0, Ub.N)(bb.cancel())
       } catch {}
     }
 
-    function Yk(kk) {
-      return kk instanceof Error ? kk.message : String(kk)
+    function Lb(bb) {
+      return bb instanceof Error ? bb.message : String(bb)
     }
-    let Lk = null,
-      Ok = !1;
-    const Ek = new Map;
+    let ub = null,
+      Yb = !1;
+    const hb = new Map;
 
-    function Sk(kk, Fk, Bk) {
-      return null === Lk ? Lk = Hk(kk, Fk) : kk !== Lk.build ? console.warn(`Bloxd wasm: ${kk.name} was asked for after ${Lk.build.name} started loading, which this thread keeps`) : Fk.name !== Lk.workers.name && console.warn(`Bloxd wasm: ${Fk.name} was asked for workers after ${Lk.workers.name}, which this thread keeps`), Bk?.reloadFailedDownload && !Ok && (0, Rk.X)() && (Ok = !0, Lk = Hk(Lk.build, Lk.workers)), Lk.loaded
+    function Jb(bb, cb, sb) {
+      return null === ub ? ub = Bb(bb, cb) : bb !== ub.build ? console.warn(`Bloxd wasm: ${bb.name} was asked for after ${ub.build.name} started loading, which this thread keeps`) : cb.name !== ub.workers.name && console.warn(`Bloxd wasm: ${cb.name} was asked for workers after ${ub.workers.name}, which this thread keeps`), sb?.reloadFailedDownload && !Yb && (0, kb.X)() && (Yb = !0, ub = Bb(ub.build, ub.workers)), ub.loaded
     }
 
-    function Nk(kk, Fk) {
-      if (null !== Lk) return (0, tk.e)([]);
-      const Bk = kk.filter((kk => !Ek.has(kk.name))).map((kk => {
-        const Bk = new AbortController,
-          Rk = {
-            compiled: Wk(kk, (0, ak.d)(kk.name), {
-              priority: Fk,
-              yB: Bk.signal,
+    function gb(bb, cb) {
+      if (null !== ub) return (0, Wb.f)([]);
+      const sb = bb.filter((bb => !hb.has(bb.name))).map((bb => {
+        const sb = new AbortController,
+          kb = {
+            compiled: Cb(bb, (0, ab.d)(bb.name), {
+              priority: cb,
+              Gs: sb.signal,
               onDownloaded: () => {
-                Rk.downloaded = !0
+                kb.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  Rk.downloaded = !1, null !== Lk && Bk.abort()
+                  kb.downloaded = !1, null !== ub && sb.abort()
                 }
               }
             }),
-            cancel: Bk,
+            cancel: sb,
             downloaded: !1
           };
-        return Ek.set(kk.name, Rk), (0, tk.f)((Fk => {
-          (0, tk.r)(Rk.compiled, (() => {
-            Rk.downloaded = !0, Fk()
-          }), (Rk => {
-            Bk.signal.aborted || console.warn(`Bloxd wasm: ${kk.name}'s compile ahead of the load failed: the load compiles it afresh`, Rk), Fk()
+        return hb.set(bb.name, kb), (0, Wb.g)((cb => {
+          (0, Wb.k)(kb.compiled, (() => {
+            kb.downloaded = !0, cb()
+          }), (kb => {
+            sb.signal.aborted || console.warn(`Bloxd wasm: ${bb.name}'s compile ahead of the load failed: the load compiles it afresh`, kb), cb()
           }))
         }))
       }));
-      return (0, tk.e)(Bk)
+      return (0, Wb.f)(sb)
     }
 
-    function Hk(kk, Fk) {
-      const Bk = (0, Rk.E)((async () => {
-        (0, Xk.x)();
-        const Bk = uk(kk),
-          Rk = Fk.name === kk.name ? Bk : uk(Fk);
+    function Bb(bb, cb) {
+      const sb = (0, kb.J)((async () => {
+        (0, Tb.v)();
+        const sb = tb(bb),
+          kb = cb.name === bb.name ? sb : tb(cb);
         for (const {
-            cancel: kk
+            cancel: bb
           }
-          of Ek.values()) kk.abort();
-        Ek.clear(), await (0, tk.e)([Bk, Rk]);
-        const ak = await Bk,
-          bk = await Rk;
-        return (0, Xk.x)(), {
-          module: ak,
-          workerModule: bk
+          of hb.values()) bb.abort();
+        hb.clear(), await (0, Wb.f)([sb, kb]);
+        const ab = await sb,
+          Ub = await kb;
+        return (0, Tb.v)(), {
+          module: ab,
+          workerModule: Ub
         }
-      }), kk);
+      }), bb);
       return {
-        build: kk,
-        workers: Fk,
-        loaded: Bk
+        build: bb,
+        workers: cb,
+        loaded: sb
       }
     }
 
-    function uk(kk) {
-      const Fk = Ek.get(kk.name);
-      return Fk?.downloaded ? (Ek.delete(kk.name), (0, tk.f)(((Bk, Rk) => {
-        (0, tk.r)(Fk.compiled, Bk, (() => {
-          (0, tk.r)(gk(kk), Bk, Rk)
+    function tb(bb) {
+      const cb = hb.get(bb.name);
+      return cb?.downloaded ? (hb.delete(bb.name), (0, Wb.g)(((sb, kb) => {
+        (0, Wb.k)(cb.compiled, sb, (() => {
+          (0, Wb.k)(Pb(bb), sb, kb)
         }))
-      }))) : gk(kk)
+      }))) : Pb(bb)
     }
-    async function Mk(kk, Fk) {
-      return gk(kk, {
-        retries: Fk
+    async function yb(bb, cb) {
+      return Pb(bb, {
+        retries: cb
       })
     }
 
-    function gk(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return mk(kk, (0, ak.d)(kk.name), Fk)
+    function Pb(bb) {
+      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return eb(bb, (0, ab.d)(bb.name), cb)
     }
   },
-  6325: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Xk
+  6285: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Tb
     });
-    var Rk = Bk(3506);
-    const tk = {
-      bloxd_wasm: () => "0a084eabef9950ab2a7e71c5d9de42289fbfae2d87a10d8ea83b0d640034d04e",
-      bloxd_wasm_client: () => "670064b0efa28d20ee2652f560d980392b14b8f575d78dbc148a398783212dd9",
-      bloxd_wasm_workers: () => "e54ffb745a3a64b4eff08d3acff88bafa819b4a1d24982975989975b8c465d7c",
-      bloxd_wasm_models: () => "3510593bc144c34047bb046244d4f79681313b64dc4db62f262e4940cf2ac935",
-      bloxd_wasm_webgpu: () => "7227c7fb095ae833899f1bc6083c6fd008f81638c2024bb597f02a7221b8b9f3",
-      bloxd_wasm_webgl: () => "5973cccff624afdd2d9ac129d6f0410128c5eb760d9c1d374fcacade730af5c8",
-      bloxd_wasm_webgl1: () => "2ea465bc1bd601e27e7b5fa0838d1029260ab0f8117b76b80379a1022f1bc97f",
-      bloxd_wasm_replay: () => "5250a6be4ccaa643dd55bed731d226b43b001447adaac84ccb3f3d6e643166e0",
-      bloxd_wasm_recorder: () => "c25abb16c2b998f3635848bcd240bb48a3dcf3a54feacc8db2b427a87519c394",
-      bloxd_wasm_anim: () => "f47375bb802972bde149d1e0bb1d06c729d525fa6881c46c5ac4757224208b36",
-      bloxd_wasm_textures: () => "a81b39f82de7af92548359d4ee9d763c26ee7b3342018c2571590a49dd51e093",
-      bloxd_wasm_shader_pack: () => "b47f8831d78bff4de588686f88a8db44a0115f8cadda219f585be50545eff9c2"
+    var kb = sb(3505);
+    const Wb = {
+      bloxd_wasm: () => "f2deac3a95fa77a1cc5890e21cb7e030da96c92da9c75cfa932f9a05cc40aedf",
+      bloxd_wasm_client: () => "c6edcc46054cb735afeff08b33217275937707f8ac70cb8b5c7fe62e431251e6",
+      bloxd_wasm_workers: () => "ee974f129bda12a85ed082f9b65c9090670a876bf96b379c144444c65ae2556f",
+      bloxd_wasm_models: () => "be9aa9cb71680943564eddd1ec021aeec179278909b015f5d2a33e60342d2293",
+      bloxd_wasm_webgpu: () => "1222801256cc2a9e528e331282389fe7d62a604e5a30a57b7e6ca38c959a97ce",
+      bloxd_wasm_webgl: () => "a247bd9c10bbe2122d8318fff093620ecc23a8410aefd142dee1eb8008d469d7",
+      bloxd_wasm_webgl1: () => "0cd01e4687f9eeba42a0db9058b3cf081f0505bd121d0557c726f14a96fb53d3",
+      bloxd_wasm_replay: () => "f83c21ccc0c7a81aefe9fb3e9a587eed0f5383826de96ef3a2a1c8e928043141",
+      bloxd_wasm_recorder: () => "277aa1b73dae5d8884eae1750f1cf9d8f869748ec3475a6969370783baa9a02b",
+      bloxd_wasm_anim: () => "f46cab251d1e83f32e96bf21fb33222f8a75cffb040d22ef03fa834808ad9e4a",
+      bloxd_wasm_textures: () => "907026c21e1eb3ae09c055455f18b265720f79b678cb47985a1937fd2ee774bc",
+      bloxd_wasm_shader_pack: () => "0e34d623eecc459030b0abc5924b121a8566443bf7626c416308af84f6e66a00"
     };
-    var ak = Bk(4425);
+    var ab = sb(4425);
 
-    function Xk(kk) {
-      const Fk = Object.prototype.hasOwnProperty.call(tk, kk) ? tk[kk]() : void 0;
-      if (void 0 !== Fk) return {
-        sha256: Fk,
-        onMismatch: ak.v
+    function Tb(bb) {
+      const cb = Object.prototype.hasOwnProperty.call(Wb, bb) ? Wb[bb]() : void 0;
+      if (void 0 !== cb) return {
+        sha256: cb,
+        onMismatch: ab.u
       };
-      throw new Rk.k(`${kk} has no release digest, so this build refuses it`)
+      throw new kb.j(`${bb} has no release digest, so this build refuses it`)
     }
   },
-  36011: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Rk,
-      e: () => ak,
-      g: () => wk,
-      j: () => Xk,
-      n: () => tk
+  35941: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => kb,
+      g: () => ab,
+      k: () => Ib,
+      m: () => Tb,
+      p: () => Wb
     });
-    const Rk = /^alloc_failed (\d+) bytes$/;
+    const kb = /^alloc_failed (\d+) bytes$/;
 
-    function tk(kk, Fk) {
-      return ak(kk, Fk) ? `trap=alloc_failed ${Fk} bytes` : `trap=${kk}`
+    function Wb(bb, cb) {
+      return ab(bb, cb) ? `trap=alloc_failed ${cb} bytes` : `trap=${bb}`
     }
 
-    function ak(kk, Fk) {
-      return "unreachable" === kk && Fk > 0
+    function ab(bb, cb) {
+      return "unreachable" === bb && cb > 0
     }
 
-    function Xk(kk, Fk, Bk) {
-      const Rk = function(kk) {
-        return kk instanceof WebAssembly.RuntimeError ? /unreachable/i.test(kk.message) ? "unreachable" : /out of bounds/i.test(kk.message) ? "out_of_bounds" : "runtime_error" : (kk instanceof RangeError || kk instanceof Error && "InternalError" === kk.name) && /call stack|recursion/i.test(kk.message) ? "stack_overflow" : "js_error"
-      }(kk);
-      if ("unreachable" !== Rk) return {
-        kind: Rk,
+    function Tb(bb, cb, sb) {
+      const kb = function(bb) {
+        return bb instanceof WebAssembly.RuntimeError ? /unreachable/i.test(bb.message) ? "unreachable" : /out of bounds/i.test(bb.message) ? "out_of_bounds" : "runtime_error" : (bb instanceof RangeError || bb instanceof Error && "InternalError" === bb.name) && /call stack|recursion/i.test(bb.message) ? "stack_overflow" : "js_error"
+      }(bb);
+      if ("unreachable" !== kb) return {
+        kind: kb,
         panic: null,
         refusedBytes: 0
       };
-      const tk = Fk(),
-        ak = Bk();
+      const Wb = cb(),
+        ab = sb();
       return {
-        kind: Rk,
-        panic: ak > 0 ? null : tk,
-        refusedBytes: ak
+        kind: kb,
+        panic: ab > 0 ? null : Wb,
+        refusedBytes: ab
       }
     }
-    const bk = 300;
+    const Ub = 300;
 
-    function wk(kk) {
-      return kk.replace(/\s*\n\s*/g, " / ").slice(0, bk)
+    function Ib(bb) {
+      return bb.replace(/\s*\n\s*/g, " / ").slice(0, Ub)
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

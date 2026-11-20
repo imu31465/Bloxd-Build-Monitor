@@ -1,308 +1,308 @@
 export const id = 86;
 export const ids = [86];
 export const modules = {
-  38401: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => ak,
-      f: () => wk,
-      j: () => dk,
-      l: () => bk,
-      n: () => Xk
+  38354: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => ab,
+      g: () => Ib,
+      i: () => Hb,
+      k: () => Ub,
+      l: () => Tb
     });
-    const Rk = "A valid external Instance reference no longer exists.",
-      tk = [
+    const kb = "A valid external Instance reference no longer exists.",
+      Wb = [
         [1e4, "<10s", "lt10s"],
         [6e4, "<1m", "lt1m"],
         [3e5, "<5m", "lt5m"],
         [18e5, "<30m", "lt30m"],
         [1 / 0, "30m+", "ge30m"]
       ];
-    const ak = {
+    const ab = {
       WebGPU: "WebGPU device lost",
       WebGL2: "WebGL2 context lost"
     };
 
-    function Xk(kk, Fk) {
-      return kk ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(kk) {
-        var Fk;
-        const Bk = null !== (Fk = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(kk)) && void 0 !== Fk ? Fk : /failed with ([A-Z][A-Z0-9_]+)/.exec(kk);
-        return Bk ? Bk[1] : kk.includes(Rk) ? "gpu_process_lost" : "other"
-      }(Fk)
+    function Tb(bb, cb) {
+      return bb ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(bb) {
+        var cb;
+        const sb = null !== (cb = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(bb)) && void 0 !== cb ? cb : /failed with ([A-Z][A-Z0-9_]+)/.exec(bb);
+        return sb ? sb[1] : bb.includes(kb) ? "gpu_process_lost" : "other"
+      }(cb)
     }
 
-    function bk(kk) {
-      return `${(null===kk||void 0===kk?void 0:kk.vendor)||"unknown vendor"} ${(null===kk||void 0===kk?void 0:kk.architecture)||"unknown architecture"}`
+    function Ub(bb) {
+      return `${(null===bb||void 0===bb?void 0:bb.vendor)||"unknown vendor"} ${(null===bb||void 0===bb?void 0:bb.architecture)||"unknown architecture"}`
     }
 
-    function wk(kk) {
-      return sk(kk)[1]
+    function Ib(bb) {
+      return fb(bb)[1]
     }
 
-    function dk(kk) {
-      return sk(kk)[2]
+    function Hb(bb) {
+      return fb(bb)[2]
     }
 
-    function sk(kk) {
-      var Fk;
-      return null !== (Fk = tk.find((Fk => {
-        let [Bk] = Fk;
-        return kk < Bk
-      }))) && void 0 !== Fk ? Fk : tk[tk.length - 1]
+    function fb(bb) {
+      var cb;
+      return null !== (cb = Wb.find((cb => {
+        let [sb] = cb;
+        return bb < sb
+      }))) && void 0 !== cb ? cb : Wb[Wb.length - 1]
     }
   },
-  38708: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Rk,
-      e: () => tk
+  38639: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => kb,
+      i: () => Wb
     });
-    const Rk = 45e3;
-    class tk extends Error {
+    const kb = 45e3;
+    class Wb extends Error {
       constructor() {
         super("The game server didn't answer in time"), this.name = "SeatRequestTimedOut"
       }
     }
   },
-  36217: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Rk,
-      e: () => tk,
-      f: () => ak
+  36139: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => kb,
+      h: () => Wb,
+      k: () => ab
     });
-    const Rk = 1024,
-      tk = 1024 * Rk;
+    const kb = 1024,
+      Wb = 1024 * kb;
 
-    function ak(kk) {
-      return (kk / tk).toFixed(1)
+    function ab(bb) {
+      return (bb / Wb).toFixed(1)
     }
   },
-  36209: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => ak,
-      e: () => bk,
-      f: () => Xk,
-      i: () => wk,
-      l: () => dk
+  36134: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => ab,
+      d: () => Ub,
+      e: () => Tb,
+      g: () => Ib,
+      h: () => Hb
     });
-    var Rk = Bk(182);
-    const tk = 32 * Bk(36217).e,
-      ak = 6144,
-      Xk = 4608,
-      bk = 512;
+    var kb = sb(223);
+    const Wb = 32 * sb(36139).h,
+      ab = 6144,
+      Tb = 4608,
+      Ub = 512;
 
-    function wk(kk) {
-      return Math.floor(tk * kk / ak)
+    function Ib(bb) {
+      return Math.floor(Wb * bb / ab)
     }
 
-    function dk(kk) {
-      const Fk = kk - Math.floor(kk / 6);
-      let Bk = Rk.h.maxChunkHorizAddDistance,
-        tk = Rk.h.maxChunkVertAddDistance;
-      if (sk(Bk + 1, tk + 1) <= Fk) return null;
-      for (; sk(Bk + 1, tk + 1) > Fk && (Bk > 0 || tk > 0);) Bk > tk ? Bk-- : tk--;
+    function Hb(bb) {
+      const cb = bb - Math.floor(bb / 6);
+      let sb = kb.e.maxChunkHorizAddDistance,
+        Wb = kb.e.maxChunkVertAddDistance;
+      if (fb(sb + 1, Wb + 1) <= cb) return null;
+      for (; fb(sb + 1, Wb + 1) > cb && (sb > 0 || Wb > 0);) sb > Wb ? sb-- : Wb--;
       return {
-        horizontal: Bk,
-        vertical: tk
+        horizontal: sb,
+        vertical: Wb
       }
     }
 
-    function sk(kk, Fk) {
-      const Bk = Math.max(kk, Fk);
-      let Rk = 0;
-      for (let tk = -Bk; tk <= Bk; tk++)
-        for (let ak = -Bk; ak <= Bk; ak++)
-          for (let Xk = -Bk; Xk <= Bk; Xk++) Vk(kk, Fk, tk, ak, Xk) && Rk++;
-      return Rk
+    function fb(bb, cb) {
+      const sb = Math.max(bb, cb);
+      let kb = 0;
+      for (let Wb = -sb; Wb <= sb; Wb++)
+        for (let ab = -sb; ab <= sb; ab++)
+          for (let Tb = -sb; Tb <= sb; Tb++) Mb(bb, cb, Wb, ab, Tb) && kb++;
+      return kb
     }
 
-    function Vk(kk, Fk, Bk, Rk, tk) {
-      const ak = Bk * Bk + tk * tk;
-      return kk === Fk ? ak + Rk * Rk <= kk * kk : kk > Fk ? Math.abs(Rk) <= Fk && ak + Rk * Rk <= kk * kk : ak <= kk * kk && ak + Rk * Rk <= Fk * Fk
+    function Mb(bb, cb, sb, kb, Wb) {
+      const ab = sb * sb + Wb * Wb;
+      return bb === cb ? ab + kb * kb <= bb * bb : bb > cb ? Math.abs(kb) <= cb && ab + kb * kb <= bb * bb : ab <= bb * bb && ab + kb * kb <= cb * cb
     }
   },
-  40280: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => tk,
-      e: () => ak,
-      f: () => bk,
-      g: () => sk,
-      j: () => wk,
-      l: () => Xk
+  40282: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Wb,
+      f: () => ab,
+      j: () => Ub,
+      m: () => fb,
+      p: () => Ib,
+      t: () => Tb
     });
-    var Rk = Bk(182);
-    const tk = 3e3,
-      ak = 15e3;
+    var kb = sb(223);
+    const Wb = 3e3,
+      ab = 15e3;
 
-    function Xk(kk) {
-      const Fk = kk.endsWith(Rk.p);
+    function Tb(bb) {
+      const cb = bb.endsWith(kb.j);
       return {
-        text: (Fk ? kk.slice(0, -Rk.p.length) : kk) || null,
-        dropsCache: Fk
+        text: (cb ? bb.slice(0, -kb.j.length) : bb) || null,
+        dropsCache: cb
       }
     }
-    const bk = "Either your internet isn't working or this is a bug.";
+    const Ub = "Either your internet isn't working or this is a bug.";
 
-    function wk(kk, Fk) {
-      const Bk = sk(kk);
-      return null !== Bk.name && "" === Rk.e[Bk.name].text && null !== Fk ? Fk : Bk.reason
+    function Ib(bb, cb) {
+      const sb = fb(bb);
+      return null !== sb.name && "" === kb.d[sb.name].text && null !== cb ? cb : sb.reason
     }
-    const dk = "You were removed from the game.";
+    const Hb = "You were removed from the game.";
 
-    function sk(kk) {
-      var Fk;
-      let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const tk = null !== (Fk = Object.keys(Rk.e).find((Fk => Rk.e[Fk].code === kk))) && void 0 !== Fk ? Fk : null;
-      if (null === tk) return {
-        code: kk,
-        name: tk,
-        reason: null !== Bk && void 0 !== Bk ? Bk : `${bk}\nCode: ${kk}`,
+    function fb(bb) {
+      var cb;
+      let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const Wb = null !== (cb = Object.keys(kb.d).find((cb => kb.d[cb].code === bb))) && void 0 !== cb ? cb : null;
+      if (null === Wb) return {
+        code: bb,
+        name: Wb,
+        reason: null !== sb && void 0 !== sb ? sb : `${Ub}\nCode: ${bb}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: ak,
-        canReconnect: Xk = !1
-      } = Rk.e[tk], wk = kk === Rk.e.outdatedVersion.code || kk === Rk.e.loadRecaptchaError.code;
+        text: ab,
+        canReconnect: Tb = !1
+      } = kb.d[Wb], Ib = bb === kb.d.outdatedVersion.code || bb === kb.d.loadRecaptchaError.code;
       return {
-        code: kk,
-        name: tk,
-        reason: "" !== ak ? ak : null !== Bk && void 0 !== Bk ? Bk : kk === Rk.e.gameOrPluginKick.code ? dk : `Code: ${kk}`,
-        canReconnect: Xk,
-        automaticallyReconnect: kk === Rk.e.customGameUpdated.code || kk === Rk.e.duplicateLobbyNameError.code,
-        requiresRefresh: wk
+        code: bb,
+        name: Wb,
+        reason: "" !== ab ? ab : null !== sb && void 0 !== sb ? sb : bb === kb.d.gameOrPluginKick.code ? Hb : `Code: ${bb}`,
+        canReconnect: Tb,
+        automaticallyReconnect: bb === kb.d.customGameUpdated.code || bb === kb.d.duplicateLobbyNameError.code,
+        requiresRefresh: Ib
       }
     }
   },
-  4524: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      A: () => Ik,
-      Ab: () => Hk,
-      B: () => Rk.g,
-      Bc: () => Rk.Fb,
-      C: () => dk,
-      Cb: () => Rk.G,
-      Cc: () => Rk.Jb,
-      Eb: () => gk,
-      Ec: () => Nk,
-      G: () => Rk.h,
-      Gc: () => Rk.Kb,
-      Hb: () => Yk,
-      I: () => Rk.i,
-      Ib: () => XF,
-      Jb: () => vk,
-      K: () => lk,
-      Kc: () => Rk.Lb,
-      Lc: () => Rk.Rb,
-      M: () => Rk.q,
-      Nb: () => VF,
-      Ob: () => tk.n,
-      P: () => Rk.t,
-      Pb: () => mk,
-      Pc: () => ak,
-      Qc: () => fk,
-      Rb: () => RF,
-      S: () => Rk.u,
-      Sb: () => Rk.O,
-      Sc: () => wF,
-      T: () => Vk,
-      Tc: () => Pk,
-      Ub: () => Rk.R,
-      Uc: () => qk,
-      V: () => Wk,
-      Wc: () => zk,
-      Xc: () => pk,
-      Yb: () => Rk.T,
-      Z: () => Rk.y,
-      Zb: () => Rk.X,
-      _b: () => Rk.$,
-      ab: () => Rk.z,
-      bb: () => hk,
-      cc: () => Rk.jb,
-      db: () => aF,
-      dc: () => eF,
-      dd: () => Ck,
-      e: () => FF,
-      ec: () => sF,
-      ed: () => xk,
-      fd: () => Kk,
-      g: () => yk,
-      gb: () => sk,
-      gd: () => bF,
-      hb: () => Rk.A,
-      hc: () => tF,
-      hd: () => yF,
-      i: () => ek,
-      ib: () => Zk,
-      ic: () => Rk.kb,
-      jb: () => nk,
-      jc: () => Rk.ob,
-      jd: () => ik,
-      k: () => dF,
-      kd: () => jk,
-      l: () => Sk,
-      m: () => Ok,
-      mb: () => kF,
-      mc: () => Rk.pb,
-      md: () => Tk,
-      nc: () => Qk,
-      o: () => Rk.d,
-      ob: () => BF,
-      od: () => Gk,
-      p: () => JF,
-      q: () => uk,
-      qb: () => tk.g,
-      qd: () => ck,
-      rb: () => Ek,
-      rc: () => Rk.tb,
-      rd: () => wk,
-      s: () => Xk,
-      sc: () => Rk.vb,
-      td: () => rk,
-      u: () => Uk,
-      ub: () => Dk,
-      wb: () => Mk,
-      wc: () => Rk.yb,
-      wd: () => fF,
-      xc: () => Rk.Db,
-      xd: () => Ak,
-      y: () => AF
+  4512: (bb, cb, sb) => {
+    sb.d(cb, {
+      $c: () => kb.sb,
+      $d: () => Sb,
+      Bb: () => cc,
+      Bc: () => kb._,
+      Bd: () => kb.Nb,
+      C: () => kb.f,
+      Cd: () => kb.Rb,
+      Ce: () => lc,
+      F: () => Hb,
+      Fb: () => Wb.e,
+      Fc: () => kb.ab,
+      Fe: () => nb,
+      Gd: () => kb.Xb,
+      Hc: () => kb.db,
+      Hd: () => ab,
+      I: () => kb.h,
+      Ib: () => hb,
+      K: () => kb.i,
+      Kd: () => Qb,
+      Lc: () => kb.jb,
+      Ld: () => Uc,
+      M: () => vb,
+      Mb: () => Kb,
+      Nc: () => nc,
+      Od: () => zb,
+      P: () => kb.n,
+      Pb: () => yb,
+      Pc: () => Hc,
+      Qd: () => db,
+      Sd: () => Zb,
+      T: () => kb.p,
+      Tb: () => Bb,
+      Tc: () => kc,
+      Vc: () => kb.nb,
+      Vd: () => rb,
+      W: () => kb.t,
+      Xb: () => kb.I,
+      Xc: () => kb.rb,
+      Zd: () => Ab,
+      _: () => Mb,
+      _b: () => Pb,
+      bb: () => Cb,
+      c: () => bc,
+      cb: () => kb.v,
+      cc: () => Lb,
+      cd: () => jb,
+      ce: () => ob,
+      f: () => lb,
+      fc: () => ac,
+      fd: () => kb.xb,
+      fe: () => Tc,
+      g: () => mb,
+      gb: () => kb.y,
+      ge: () => mc,
+      he: () => Vb,
+      i: () => Ic,
+      ib: () => qb,
+      id: () => kb.Ab,
+      jb: () => Wc,
+      jc: () => Nb,
+      ke: () => Rb,
+      lc: () => fc,
+      m: () => Jb,
+      mb: () => fb,
+      md: () => kb.Db,
+      n: () => Yb,
+      oe: () => Ob,
+      pc: () => Wb.i,
+      pd: () => kb.Gb,
+      q: () => kb.d,
+      qb: () => kb.B,
+      r: () => Mc,
+      rc: () => eb,
+      sc: () => sc,
+      se: () => ib,
+      t: () => tb,
+      tb: () => wb,
+      td: () => kb.Ib,
+      u: () => Tb,
+      ud: () => kb.Lb,
+      v: () => Db,
+      vb: () => Fb,
+      ve: () => Eb,
+      wc: () => kb.U,
+      x: () => Xc,
+      xd: () => gb,
+      xe: () => Ib,
+      yb: () => pb,
+      yc: () => kb.X,
+      z: () => xb,
+      ze: () => Gb
     });
-    var Rk = Bk(4531),
-      tk = Bk(2303);
-    const ak = Math.round(1e3 / Rk.Rb),
-      Xk = 4,
-      bk = 2;
+    var kb = sb(4517),
+      Wb = sb(2305);
+    const ab = Math.round(1e3 / kb.Xb),
+      Tb = 4,
+      Ub = 2;
 
-    function wk() {
-      return crypto.getRandomValues(new Uint32Array(bk))
+    function Ib() {
+      return crypto.getRandomValues(new Uint32Array(Ub))
     }
-    const dk = {
+    const Hb = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      sk = 16,
-      Vk = {
+      fb = 16,
+      Mb = {
         Draws: 1,
         NetAll: 2
       },
-      Jk = {
+      Xb = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function Ak(kk) {
-      return (kk.nametagsHidden ? Lk.NametagsHidden : 0) | (kk.crouchToggle ? Lk.CrouchToggle : 0) | (kk.bhopDisabled ? Lk.BhopDisabled : 0) | (kk.disableBobbing ? Lk.DisableBobbing : 0) | (kk.ezTowering ? Lk.EzTowering : 0) | (kk.ezBridging ? Lk.EzBridging : 0) | (kk.showChunkBorders ? Lk.ShowChunkBorders : 0)
+    function nb(bb) {
+      return (bb.nametagsHidden ? ub.NametagsHidden : 0) | (bb.crouchToggle ? ub.CrouchToggle : 0) | (bb.bhopDisabled ? ub.BhopDisabled : 0) | (bb.disableBobbing ? ub.DisableBobbing : 0) | (bb.ezTowering ? ub.EzTowering : 0) | (bb.ezBridging ? ub.EzBridging : 0) | (bb.showChunkBorders ? ub.ShowChunkBorders : 0)
     }
-    const ek = {
+    const mb = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      yk = {
+      lb = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -310,7 +310,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      fk = {
+      Qb = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -319,7 +319,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      mk = {
+      eb = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -328,20 +328,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      Wk = 5,
-      vk = 4294967295;
+      Cb = 5,
+      Nb = 4294967295;
 
-    function ik(kk) {
-      return (kk.showFog ? Jk.ShowFog : 0) | (kk.lighting ? Jk.Lighting : 0) | (kk.chunkFade ? Jk.ChunkFade : 0)
+    function Vb(bb) {
+      return (bb.showFog ? Xb.ShowFog : 0) | (bb.lighting ? Xb.Lighting : 0) | (bb.chunkFade ? Xb.ChunkFade : 0)
     }
-    const Yk = {
+    const Lb = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      Lk = {
+      ub = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -351,50 +351,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      Ok = {
+      Yb = {
         Release: 1,
         KeepTouches: 2
       },
-      Ek = {
+      hb = {
         Point: 1,
         Stamped: 2
       },
-      Sk = {
+      Jb = {
         Add: 1,
         Clear: 2
       },
-      Nk = 1,
-      Hk = 8,
-      uk = 16777215,
-      Mk = 4,
-      gk = {
+      gb = 1,
+      Bb = 8,
+      tb = 16777215,
+      yb = 4,
+      Pb = {
         Resume: 1
       },
-      Uk = {
+      Db = {
         Held: 1
       };
 
-    function ck(kk, Fk) {
-      return (kk | Fk << 8) >>> 0
+    function Eb(bb, cb) {
+      return (bb | cb << 8) >>> 0
     }
 
-    function Gk(kk) {
-      return 255 & kk
+    function ib(bb) {
+      return 255 & bb
     }
 
-    function Tk(kk) {
-      return kk >>> 8
+    function Ob(bb) {
+      return bb >>> 8
     }
 
-    function rk(kk) {
-      return kk + 3 & -4
+    function Gb(bb) {
+      return bb + 3 & -4
     }
-    const Dk = 16777216,
-      zk = 20;
-    const Pk = 8,
-      hk = 8,
-      qk = 16777216,
-      Ck = {
+    const Kb = 16777216,
+      Zb = 20;
+    const zb = 8,
+      qb = 8,
+      db = 16777216,
+      Ab = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -402,19 +402,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      Zk = {
+      wb = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      pk = 16,
-      Kk = {
+      rb = 16,
+      ob = {
         Lost: 0,
         Gone: 1
       },
-      xk = {
+      Sb = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -422,18 +422,18 @@ export const modules = {
         Retire: 5
       };
 
-    function jk(kk) {
-      return kk === xk.WorldgenSeed || kk === xk.Generate
+    function Rb(bb) {
+      return bb === Sb.WorldgenSeed || bb === Sb.Generate
     }
-    const lk = 4,
-      nk = 99,
-      Ik = {
+    const vb = 4,
+      Fb = 99,
+      xb = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      Qk = {
+      jb = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -441,40 +441,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      kF = 12,
-      FF = 16,
-      BF = 4,
-      RF = 12,
-      tF = {
+      pb = 12,
+      bc = 16,
+      cc = 4,
+      sc = 12,
+      kc = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      aF = 4,
-      XF = 8,
-      bF = 8,
-      wF = {
+      Wc = 4,
+      ac = 8,
+      Tc = 8,
+      Uc = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      dF = {
+      Ic = {
         Crit: 1,
         HitSelf: 2
       },
-      sF = {
+      Hc = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      VF = {
+      fc = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      JF = 12,
-      AF = {
+      Mc = 12,
+      Xc = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -483,80 +483,80 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      eF = 67108864;
+      nc = 67108864;
 
-    function yF(kk) {
-      for (const [Fk, Bk] of Object.entries(Rk.g))
-        if (Bk === kk) return Fk;
-      return `Unknown${kk}`
+    function mc(bb) {
+      for (const [cb, sb] of Object.entries(kb.f))
+        if (sb === bb) return cb;
+      return `Unknown${bb}`
     }
 
-    function fF(kk) {
+    function lc(bb) {
       return {
-        status: kk[Rk.z.Status],
-        lastError: kk[Rk.z.LastError],
-        lastErrorDetail: kk[Rk.z.LastErrorDetail],
-        errorCount: kk[Rk.z.ErrorCount],
-        frameIndex: kk[Rk.z.FrameIndex],
-        tickIndex: kk[Rk.z.TickIndex],
-        renderPending: kk[Rk.z.RenderPending],
-        firstView: kk[Rk.z.FirstView],
-        chunksCancelled: kk[Rk.z.ChunksCancelled]
+        status: bb[kb.y.Status],
+        lastError: bb[kb.y.LastError],
+        lastErrorDetail: bb[kb.y.LastErrorDetail],
+        errorCount: bb[kb.y.ErrorCount],
+        frameIndex: bb[kb.y.FrameIndex],
+        tickIndex: bb[kb.y.TickIndex],
+        renderPending: bb[kb.y.RenderPending],
+        firstView: bb[kb.y.FirstView],
+        chunksCancelled: bb[kb.y.ChunksCancelled]
       }
     }
   },
-  40065: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Rk,
-      f: () => Vk,
-      h: () => bk,
-      k: () => ak,
-      n: () => tk,
-      r: () => wk,
-      t: () => sk
+  40070: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => kb,
+      g: () => Mb,
+      i: () => Ub,
+      l: () => ab,
+      p: () => Wb,
+      t: () => Ib,
+      u: () => fb
     });
-    class Rk extends Error {
+    class kb extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function tk(kk) {
-      return kk instanceof RangeError && /call stack/i.test(kk.message) || kk instanceof Error && "InternalError" === kk.name && /recursion/i.test(kk.message)
+    function Wb(bb) {
+      return bb instanceof RangeError && /call stack/i.test(bb.message) || bb instanceof Error && "InternalError" === bb.name && /recursion/i.test(bb.message)
     }
 
-    function ak(kk) {
-      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(kk))
+    function ab(bb) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(bb))
     }
-    const Xk = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const Tb = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function bk(kk) {
-      var Fk;
-      return kk instanceof WebAssembly.RuntimeError || kk instanceof Rk || tk(kk) && Xk.test(null !== (Fk = kk.stack) && void 0 !== Fk ? Fk : "")
-    }
-
-    function wk(kk, Fk) {
-      if (bk(kk)) throw kk;
-      console.error(Fk, kk)
+    function Ub(bb) {
+      var cb;
+      return bb instanceof WebAssembly.RuntimeError || bb instanceof kb || Wb(bb) && Tb.test(null !== (cb = bb.stack) && void 0 !== cb ? cb : "")
     }
 
-    function dk(kk, Fk, Bk, tk, ak) {
-      if (Fk % tk !== 0 || Fk + Bk > kk.byteLength) throw new Rk(`${ak}: ${Bk} bytes at ${Fk}, ${tk}-aligned, outside ${kk.byteLength} bytes of memory`)
+    function Ib(bb, cb) {
+      if (Ub(bb)) throw bb;
+      console.error(cb, bb)
     }
 
-    function sk(kk, Fk, Bk, Rk, tk) {
-      return 0 === Bk ? null : (dk(Fk, Bk, Rk * kk.BYTES_PER_ELEMENT, kk.BYTES_PER_ELEMENT, tk), new kk(Fk, Bk, Rk))
+    function Hb(bb, cb, sb, Wb, ab) {
+      if (cb % Wb !== 0 || cb + sb > bb.byteLength) throw new kb(`${ab}: ${sb} bytes at ${cb}, ${Wb}-aligned, outside ${bb.byteLength} bytes of memory`)
     }
 
-    function Vk(kk, Fk, Bk, Rk, tk) {
-      return 0 === Fk ? null : (dk(kk, Fk, Bk, Rk, tk), new DataView(kk, Fk, Bk))
+    function fb(bb, cb, sb, kb, Wb) {
+      return 0 === sb ? null : (Hb(cb, sb, kb * bb.BYTES_PER_ELEMENT, bb.BYTES_PER_ELEMENT, Wb), new bb(cb, sb, kb))
+    }
+
+    function Mb(bb, cb, sb, kb, Wb) {
+      return 0 === cb ? null : (Hb(bb, cb, sb, kb, Wb), new DataView(bb, cb, sb))
     }
   },
-  40421: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => Rk
+  40415: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => kb
     });
-    const Rk = {
+    const kb = {
       destroy_stage_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYlWP8//8/IwMewIRPknQFjIyM/wmaYGdn9w9FE7IjYSagiFHsCwCM7A/Ccc+NjAAAAABJRU5ErkJggg==",
       destroy_stage_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQklEQVQYlYWPMQ4AIAgDOeO7+v9XWScMOGinpjmgYJt4aKQB/ASqKtwASeuGZxrbAEhyRJxe1JJ1debtRIZt6PfmBqYNG36KBWHbAAAAAElFTkSuQmCC",
       destroy_stage_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARUlEQVQYlYWPwQnAMAwDdaVr2ftPVfWVIBJC9DI6LMvYRpIAjzn1rMaq9wQAbwnd/SWUJNkmb1eVkx07zPK5PaLTu37xA3+wH3UI6vmHAAAAAElFTkSuQmCC",
@@ -569,251 +569,251 @@ export const modules = {
       destroy_stage_9: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAUElEQVQYlW2OyQ3AMAgEhyhtQfF2X9m8IKvIvBDMHkgKSQGQmcJGUtBAZsr3hm6Aqnr4zUBOt4vfJh8gIuTPtdZFK1ztXUbtcXvvz/nU3F1eyBpW2eqlL9QAAAAASUVORK5CYII="
     }
   },
-  40362: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => ek,
-      e: () => yk,
-      g: () => Jk,
-      k: () => Vk
+  40375: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => mb,
+      c: () => lb,
+      d: () => Xb,
+      f: () => Mb
     });
-    const Rk = 2e3,
-      tk = "unavailable";
-    let ak = () => Promise.resolve().then((() => Bk(3039))),
-      Xk = null,
-      bk = null,
-      wk = dk();
+    const kb = 2e3,
+      Wb = "unavailable";
+    let ab = () => Promise.resolve().then((() => sb(2989))),
+      Tb = null,
+      Ub = null,
+      Ib = Hb();
 
-    function dk() {
-      let kk = () => {};
+    function Hb() {
+      let bb = () => {};
       return {
-        promise: new Promise((Fk => {
-          kk = () => {
-            Fk(null)
+        promise: new Promise((cb => {
+          bb = () => {
+            cb(null)
           }
         })),
-        resolve: kk
+        resolve: bb
       }
     }
 
-    function sk() {
-      if (null === Xk) {
-        const kk = ak();
-        Xk = kk, kk.then((Fk => {
-          Xk === kk && (bk = Fk)
+    function fb() {
+      if (null === Tb) {
+        const bb = ab();
+        Tb = bb, bb.then((cb => {
+          Tb === bb && (Ub = cb)
         }), (() => {
-          Xk === kk && (Xk = null)
+          Tb === bb && (Tb = null)
         }))
       }
-      return Xk
+      return Tb
     }
 
-    function Vk() {
-      sk().catch((() => {}))
+    function Mb() {
+      fb().catch((() => {}))
     }
 
-    function Jk() {
-      wk.resolve()
+    function Xb() {
+      Ib.resolve()
     }
 
-    function Ak(kk, Fk, Bk, Rk) {
-      if (null === kk) return {
-        errorKind: Fk,
-        fingerprint: tk,
-        dedupe: `${Fk}|${Rk}`
+    function nb(bb, cb, sb, kb) {
+      if (null === bb) return {
+        errorKind: cb,
+        fingerprint: Wb,
+        dedupe: `${cb}|${kb}`
       };
       const {
-        fingerprint: ak
-      } = kk.clientErrorKey(Fk, Bk, Rk);
+        fingerprint: ab
+      } = bb.clientErrorKey(cb, sb, kb);
       return {
-        errorKind: Fk,
-        fingerprint: ak,
-        dedupe: ak
+        errorKind: cb,
+        fingerprint: ab,
+        dedupe: ab
       }
     }
 
-    function ek(kk, Fk, Bk, Rk) {
-      return null === bk ? Rk ? (Vk(), Ak(null, kk, Fk, Bk)) : null : Ak(bk, kk, Fk, Bk)
+    function mb(bb, cb, sb, kb) {
+      return null === Ub ? kb ? (Mb(), nb(null, bb, cb, sb)) : null : nb(Ub, bb, cb, sb)
     }
-    async function yk(kk, Fk, Bk) {
-      let tk;
-      const ak = new Promise((kk => {
-        tk = setTimeout((() => {
-          kk(null)
-        }), Rk)
+    async function lb(bb, cb, sb) {
+      let Wb;
+      const ab = new Promise((bb => {
+        Wb = setTimeout((() => {
+          bb(null)
+        }), kb)
       }));
       try {
-        return Ak(await Promise.race([sk(), ak, wk.promise]), kk, Fk, Bk)
+        return nb(await Promise.race([fb(), ab, Ib.promise]), bb, cb, sb)
       } catch {
-        return Ak(null, kk, Fk, Bk)
+        return nb(null, bb, cb, sb)
       } finally {
-        clearTimeout(tk)
+        clearTimeout(Wb)
       }
     }
   },
-  40355: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      BUILT_IN_ANIMATIONS_SITE: () => pk,
-      CORE_ERRORS_SITE: () => Gk,
-      EVENT_OVERFLOW_SITE: () => Zk,
-      FIRST_VIEW_SITE: () => xk,
-      JOIN_SITE: () => rk,
-      LEAVE_SITE: () => Dk,
-      MODEL_FEED_SITE: () => zk,
-      MODEL_POOL_SITE: () => Pk,
-      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => lk,
-      NON_FATAL_REPORTS_PER_SESSION: () => VF,
-      PREVIEW_ANIMATIONS_SITE: () => Ck,
-      RENDER_RELOAD_SITE: () => qk,
-      TEXTURE_NAMES_SITE: () => hk,
-      TEXTURE_PACK_FEED_SITE: () => Kk,
-      TurnstilePageError: () => zF,
-      WASM_LOAD_SITE: () => Tk,
-      crashError: () => fF,
-      crashReportsSettled: () => oF,
-      flushCrashReports: () => iF,
-      joinFailureCode: () => PF,
-      lokiTransport: () => Qk,
-      modelFailureCode: () => xF,
-      readTrap: () => EF,
-      renderLossDetail: () => JB,
-      renderReloadMessage: () => sB,
-      reportCoreErrors: () => OF,
-      reportCountedLoadFallback: () => rF,
-      reportCrash: () => mF,
-      reportDataLoadFailure: () => mB,
-      reportDisconnect: () => pF,
-      reportDracoDecoderFailure: () => IF,
-      reportEventOverflow: () => FB,
-      reportFirstViewNoTerrain: () => XB,
-      reportGpuFallback: () => GF,
-      reportGpuWasmPopulation: () => TF,
-      reportLightFault: () => RB,
-      reportMemoryShed: () => aB,
-      reportModelFailure: () => jF,
-      reportModelPoolFailure: () => lF,
-      reportModelsModuleRetry: () => nF,
-      reportPageJoinFailure: () => qF,
-      reportReconnectGaveUp: () => KF,
-      reportRenderReload: () => eB,
-      reportReplayFault: () => wB,
-      reportStaleBuildReload: () => vB,
-      reportStoppedCore: () => uF,
-      reportTerrainTextureFailure: () => yB,
-      reportTexturePackFeedLoadFailure: () => kB,
-      reportUnstreamedCoreLoad: () => DF,
-      reportUnsupportedFallback: () => UF,
-      reportUnusedSeat: () => ZF,
-      reportWorkerLost: () => BB,
-      reportWorkerStartTimeout: () => bB,
-      reportWorldgenGaveUp: () => tB,
-      reportWorldgenLoadFailure: () => QF,
-      resetCrashReports: () => LF,
-      setCrashBackend: () => XF,
-      setCrashScreen: () => tF,
-      setCrashTransport: () => BF,
-      showCrash: () => HF,
-      showJoinFailure: () => hF,
-      showUnsupported: () => gF
+  40373: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      BUILT_IN_ANIMATIONS_SITE: () => rb,
+      CORE_ERRORS_SITE: () => ib,
+      EVENT_OVERFLOW_SITE: () => wb,
+      FIRST_VIEW_SITE: () => Sb,
+      JOIN_SITE: () => Gb,
+      LEAVE_SITE: () => Kb,
+      MODEL_FEED_SITE: () => Zb,
+      MODEL_POOL_SITE: () => zb,
+      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => vb,
+      NON_FATAL_REPORTS_PER_SESSION: () => fc,
+      PREVIEW_ANIMATIONS_SITE: () => Ab,
+      RENDER_RELOAD_SITE: () => db,
+      TEXTURE_NAMES_SITE: () => qb,
+      TEXTURE_PACK_FEED_SITE: () => ob,
+      TurnstilePageError: () => Zc,
+      WASM_LOAD_SITE: () => Ob,
+      crashError: () => lc,
+      crashReportsSettled: () => Lc,
+      flushCrashReports: () => Nc,
+      joinFailureCode: () => zc,
+      lokiTransport: () => jb,
+      modelFailureCode: () => Sc,
+      readTrap: () => hc,
+      renderLossDetail: () => Ms,
+      renderReloadMessage: () => Hs,
+      reportCoreErrors: () => Yc,
+      reportCountedLoadFallback: () => Gc,
+      reportCrash: () => Qc,
+      reportDataLoadFailure: () => Qs,
+      reportDisconnect: () => rc,
+      reportDracoDecoderFailure: () => xc,
+      reportEventOverflow: () => bs,
+      reportFirstViewNoTerrain: () => as,
+      reportGpuFallback: () => ic,
+      reportGpuWasmPopulation: () => Oc,
+      reportLightFault: () => ss,
+      reportMemoryShed: () => Ws,
+      reportModelFailure: () => Rc,
+      reportModelPoolFailure: () => vc,
+      reportModelsModuleRetry: () => Fc,
+      reportPageJoinFailure: () => dc,
+      reportReconnectGaveUp: () => oc,
+      reportRenderReload: () => ns,
+      reportReplayFault: () => Us,
+      reportStaleBuildReload: () => Cs,
+      reportStoppedCore: () => tc,
+      reportTerrainTextureFailure: () => ms,
+      reportTexturePackFeedLoadFailure: () => pc,
+      reportUnstreamedCoreLoad: () => Kc,
+      reportUnsupportedFallback: () => Dc,
+      reportUnusedSeat: () => wc,
+      reportWorkerLost: () => cs,
+      reportWorkerStartTimeout: () => Ts,
+      reportWorldgenGaveUp: () => ks,
+      reportWorldgenLoadFailure: () => jc,
+      resetCrashReports: () => uc,
+      setCrashBackend: () => ac,
+      setCrashScreen: () => kc,
+      setCrashTransport: () => cc,
+      showCrash: () => Bc,
+      showJoinFailure: () => qc,
+      showUnsupported: () => Pc
     });
-    var Rk = Bk(1047),
-      tk = Bk(252),
-      ak = Bk(3044),
-      Xk = Bk(40362),
-      bk = Bk(4524),
-      wk = Bk(40364),
-      dk = Bk(3272),
-      sk = Bk(38401),
-      Vk = Bk(132),
-      Jk = Bk(670),
-      Ak = Bk(130),
-      ek = Bk(3276),
-      yk = Bk(38708),
-      fk = Bk(1698),
-      mk = Bk(40330),
-      Wk = Bk(40015),
-      vk = Bk(40284),
-      ik = Bk(40288),
-      Yk = Bk(40370),
-      Lk = Bk(3502),
-      Ok = Bk(3506),
-      Ek = Bk(40379),
-      Sk = Bk(40401),
-      Nk = Bk(40407),
-      Hk = Bk(36522),
-      uk = Bk(3052),
-      Mk = Bk(36011),
-      gk = Bk(40200),
-      Uk = Bk(36019);
-    const ck = "[bloxd-wasm-client]",
-      Gk = "coreErrors",
-      Tk = "wasmLoad",
-      rk = "join",
-      Dk = "leave",
-      zk = "modelFeed",
-      Pk = "modelWorkerPool",
-      hk = "textureNames",
-      qk = "renderReload",
-      Ck = "previewAnimations",
-      Zk = "eventOverflow",
-      pk = "builtInAnimations",
-      Kk = "texturePackFeed",
-      xk = "firstView",
-      jk = 300,
-      lk = 8;
-    let nk = 0;
-    const Ik = new Set,
-      Qk = (kk, Fk) => {
-        const Bk = bF[kk.kind];
-        if (null === Bk) return void kF(kk, Fk, aF, null);
-        const Rk = (0, Xk.d)(Bk, kk.message, kk.code, kk.fatal);
-        if (null !== Rk) return void kF(kk, Fk, aF, Rk);
-        const tk = aF;
-        vF("Loki", (async () => {
-          kF(kk, Fk, tk, await (0, Xk.e)(Bk, kk.message, kk.code))
+    var kb = sb(1058),
+      Wb = sb(301),
+      ab = sb(2998),
+      Tb = sb(40375),
+      Ub = sb(4512),
+      Ib = sb(40378),
+      Hb = sb(3243),
+      fb = sb(38354),
+      Mb = sb(167),
+      Xb = sb(701),
+      nb = sb(160),
+      mb = sb(3251),
+      lb = sb(38639),
+      Qb = sb(1753),
+      eb = sb(40350),
+      Cb = sb(40014),
+      Nb = sb(40291),
+      Vb = sb(40294),
+      Lb = sb(40383),
+      ub = sb(3500),
+      Yb = sb(3505),
+      hb = sb(40388),
+      Jb = sb(40402),
+      gb = sb(40406),
+      Bb = sb(36423),
+      tb = sb(3007),
+      yb = sb(35941),
+      Pb = sb(40221),
+      Db = sb(35945);
+    const Eb = "[bloxd-wasm-client]",
+      ib = "coreErrors",
+      Ob = "wasmLoad",
+      Gb = "join",
+      Kb = "leave",
+      Zb = "modelFeed",
+      zb = "modelWorkerPool",
+      qb = "textureNames",
+      db = "renderReload",
+      Ab = "previewAnimations",
+      wb = "eventOverflow",
+      rb = "builtInAnimations",
+      ob = "texturePackFeed",
+      Sb = "firstView",
+      Rb = 300,
+      vb = 8;
+    let Fb = 0;
+    const xb = new Set,
+      jb = (bb, cb) => {
+        const sb = Tc[bb.kind];
+        if (null === sb) return void pb(bb, cb, Wc, null);
+        const kb = (0, Tb.b)(sb, bb.message, bb.code, bb.fatal);
+        if (null !== kb) return void pb(bb, cb, Wc, kb);
+        const Wb = Wc;
+        Cc("Loki", (async () => {
+          pb(bb, cb, Wb, await (0, Tb.c)(sb, bb.message, bb.code))
         }))
       };
 
-    function kF(kk, Fk, Bk, tk) {
+    function pb(bb, cb, sb, Wb) {
       const {
-        kind: Xk,
-        code: bk,
-        site: wk,
-        fatal: dk,
-        details: sk
-      } = kk;
-      if (!dk)
-        if (null === tk || (0, ak.b)(tk.errorKind) || Ik.has(tk.dedupe)) {
-          if (nk >= lk) return;
-          nk++
-        } else Ik.add(tk.dedupe);
-      const Vk = {
-        ...sk,
-        kind: Xk,
-        code: bk,
-        site: wk,
-        fatal: String(dk),
-        backend: Bk
+        kind: Tb,
+        code: Ub,
+        site: Ib,
+        fatal: Hb,
+        details: fb
+      } = bb;
+      if (!Hb)
+        if (null === Wb || (0, ab.e)(Wb.errorKind) || xb.has(Wb.dedupe)) {
+          if (Fb >= vb) return;
+          Fb++
+        } else xb.add(Wb.dedupe);
+      const Mb = {
+        ...fb,
+        kind: Tb,
+        code: Ub,
+        site: Ib,
+        fatal: String(Hb),
+        backend: sb
       };
-      null !== tk && (Vk.errorKind = tk.errorKind, Vk.fingerprint = tk.fingerprint), Fk instanceof Error && "string" === typeof Fk.stack && (Vk.causeStack = Fk.stack.slice(0, 2e3)), (0, Rk.ly)(fF(kk, Fk), Vk)
+      null !== Wb && (Mb.errorKind = Wb.errorKind, Mb.fingerprint = Wb.fingerprint), cb instanceof Error && "string" === typeof cb.stack && (Mb.causeStack = cb.stack.slice(0, 2e3)), (0, kb.dl)(lc(bb, cb), Mb)
     }
-    let FF = Qk;
+    let bc = jb;
 
-    function BF(kk) {
-      const Fk = FF;
-      return FF = kk, Fk
+    function cc(bb) {
+      const cb = bc;
+      return bc = bb, cb
     }
-    let RF = () => {};
+    let sc = () => {};
 
-    function tF(kk) {
-      const Fk = RF;
-      return RF = kk, Fk
+    function kc(bb) {
+      const cb = sc;
+      return sc = bb, cb
     }
-    let aF = "unpicked";
+    let Wc = "unpicked";
 
-    function XF(kk) {
-      aF = kk
+    function ac(bb) {
+      Wc = bb
     }
-    const bF = {
+    const Tc = {
         crash: "wasm_load",
         unsupported: "wasm_load",
         model: "wasm_load",
@@ -836,187 +836,187 @@ export const modules = {
         staleBuild: "wasm_load",
         disconnect: "disconnect"
       },
-      wF = {
+      Uc = {
         coreError: "wasm_load",
         recovered: "wasm_load",
         unstreamedLoad: "wasm_load",
         noTerrain: "wasm_load",
         gpuFallback: "wasm_load"
       },
-      dF = new Set(["unstreamedLoad"]);
-    let sF = !1;
-    const VF = 20,
-      JF = new Map;
-    let AF = 0,
-      eF = 0;
-    const yF = new Set;
+      Ic = new Set(["unstreamedLoad"]);
+    let Hc = !1;
+    const fc = 20,
+      Mc = new Map;
+    let Xc = 0,
+      nc = 0;
+    const mc = new Set;
 
-    function fF(kk, Fk) {
-      const Bk = Object.assign(new Error(`${kk.code}: ${kk.message}`), {
+    function lc(bb, cb) {
+      const sb = Object.assign(new Error(`${bb.code}: ${bb.message}`), {
         name: "WasmClientCrash",
-        cause: null !== Fk && void 0 !== Fk ? Fk : void 0
+        cause: null !== cb && void 0 !== cb ? cb : void 0
       });
-      return Fk instanceof Error && Fk.stack && (Bk.stack = Fk.stack), Bk
+      return cb instanceof Error && cb.stack && (sb.stack = cb.stack), sb
     }
 
-    function mF(kk) {
-      var Fk, Rk;
+    function Qc(bb) {
+      var cb, kb;
       const {
-        kind: tk,
-        code: ak,
-        site: Xk,
-        fatal: bk,
-        message: wk,
-        error: dk
-      } = kk, sk = !1 !== kk.toTransport && !dF.has(tk), Vk = !bk && sk, Jk = {
-        kind: tk,
-        code: ak,
-        site: Xk,
-        fatal: bk,
-        message: wk,
-        details: null !== (Fk = kk.details) && void 0 !== Fk ? Fk : {}
-      }, Ak = `${ak}@${Xk}${void 0===kk.instance?"":`#${kk.instance}`}${bk?"!":""}`, ek = (null !== (Rk = JF.get(Ak)) && void 0 !== Rk ? Rk : 0) + 1;
-      if (JF.set(Ak, ek), ek > 1 ? 0 === (ek & ek - 1) && WF((() => {
-          console.warn(`${ck} ${ak} at ${Xk} reported ${ek} times`)
-        })) : Vk && AF >= VF ? WF((() => {
-          console.warn(`${ck} ${tk} ${ak} at ${Xk}: ${wk} (not sent: the session's ${VF} went)`, Jk.details, null !== dk && void 0 !== dk ? dk : "")
-        })) : (Vk && AF++, function(kk, Fk, Rk) {
-          var tk, ak;
+        kind: Wb,
+        code: ab,
+        site: Tb,
+        fatal: Ub,
+        message: Ib,
+        error: Hb
+      } = bb, fb = !1 !== bb.toTransport && !Ic.has(Wb), Mb = !Ub && fb, Xb = {
+        kind: Wb,
+        code: ab,
+        site: Tb,
+        fatal: Ub,
+        message: Ib,
+        details: null !== (cb = bb.details) && void 0 !== cb ? cb : {}
+      }, nb = `${ab}@${Tb}${void 0===bb.instance?"":`#${bb.instance}`}${Ub?"!":""}`, mb = (null !== (kb = Mc.get(nb)) && void 0 !== kb ? kb : 0) + 1;
+      if (Mc.set(nb, mb), mb > 1 ? 0 === (mb & mb - 1) && ec((() => {
+          console.warn(`${Eb} ${ab} at ${Tb} reported ${mb} times`)
+        })) : Mb && Xc >= fc ? ec((() => {
+          console.warn(`${Eb} ${Wb} ${ab} at ${Tb}: ${Ib} (not sent: the session's ${fc} went)`, Xb.details, null !== Hb && void 0 !== Hb ? Hb : "")
+        })) : (Mb && Xc++, function(bb, cb, kb) {
+          var Wb, ab;
           const {
-            kind: Xk,
-            code: bk,
-            site: wk,
-            fatal: dk,
-            message: sk,
-            details: Vk
-          } = kk;
-          WF((() => {
-            (dk ? console.error : console.warn)(`${ck} ${Xk} ${bk} at ${wk}: ${sk}`, Vk, null !== Fk && void 0 !== Fk ? Fk : "")
+            kind: Tb,
+            code: Ub,
+            site: Ib,
+            fatal: Hb,
+            message: fb,
+            details: Mb
+          } = bb;
+          ec((() => {
+            (Hb ? console.error : console.warn)(`${Eb} ${Tb} ${Ub} at ${Ib}: ${fb}`, Mb, null !== cb && void 0 !== cb ? cb : "")
           }));
-          const Jk = wF[Xk],
-            Ak = null !== (tk = null !== (ak = bF[Xk]) && void 0 !== ak ? ak : Jk) && void 0 !== tk ? tk : null;
-          null !== Ak && vF("counts", (async () => {
+          const Xb = Uc[Tb],
+            nb = null !== (Wb = null !== (ab = Tc[Tb]) && void 0 !== ab ? ab : Xb) && void 0 !== Wb ? Wb : null;
+          null !== nb && Cc("counts", (async () => {
             const {
-              peekVisitSessionId: kk
-            } = await Promise.resolve().then((() => Bk(633)));
-            if (null !== kk()) {
+              peekVisitSessionId: bb
+            } = await Promise.resolve().then((() => sb(667)));
+            if (null !== bb()) {
               const {
-                reportCappedWasmFailure: kk,
-                reportWasmFailure: Fk
-              } = await Bk.e(207).then((() => Bk(36003)));
-              (void 0 === Jk ? Fk : kk)(Ak, sk, bk), sF = !0
+                reportCappedWasmFailure: bb,
+                reportWasmFailure: cb
+              } = await sb.e(207).then((() => sb(35937)));
+              (void 0 === Xb ? cb : bb)(nb, fb, Ub), Hc = !0
             }
           }));
-          Rk && WF((() => {
-            FF(kk, Fk)
+          kb && ec((() => {
+            bc(bb, cb)
           }))
-        }(Jk, dk, sk)), bk) {
-        var yk;
-        const Fk = null !== (yk = kk.screen) && void 0 !== yk ? yk : {
-          text: (0, Hk.f)(Jk, !0),
+        }(Xb, Hb, fb)), Ub) {
+        var lb;
+        const cb = null !== (lb = bb.screen) && void 0 !== lb ? lb : {
+          text: (0, Bb.e)(Xb, !0),
           reload: !0
         };
-        WF((() => {
-          RF(Fk)
+        ec((() => {
+          sc(cb)
         }))
       }
-      return Jk
+      return Xb
     }
 
-    function WF(kk) {
+    function ec(bb) {
       try {
-        kk()
-      } catch (Fk) {
+        bb()
+      } catch (cb) {
         try {
-          console.warn(`${ck} could not send a report`, Fk)
+          console.warn(`${Eb} could not send a report`, cb)
         } catch {}
       }
     }
 
-    function vF(kk, Fk) {
+    function Cc(bb, cb) {
       try {
-        const Bk = Fk().catch((Fk => {
-          console.warn(`${ck} could not send the report to ${kk}`, Fk)
+        const sb = cb().catch((cb => {
+          console.warn(`${Eb} could not send the report to ${bb}`, cb)
         })).finally((() => {
-          yF.delete(Bk)
+          mc.delete(sb)
         }));
-        yF.add(Bk)
-      } catch (Bk) {
-        console.warn(`${ck} could not send the report to ${kk}`, Bk)
+        mc.add(sb)
+      } catch (sb) {
+        console.warn(`${Eb} could not send the report to ${bb}`, sb)
       }
     }
-    async function iF(kk) {
-      let Fk;
-      (0, Xk.g)();
-      const Bk = new Promise((Bk => {
-        Fk = setTimeout(Bk, kk)
+    async function Nc(bb) {
+      let cb;
+      (0, Tb.d)();
+      const sb = new Promise((sb => {
+        cb = setTimeout(sb, bb)
       }));
-      await Promise.race([YF(), Bk]), clearTimeout(Fk)
+      await Promise.race([Vc(), sb]), clearTimeout(cb)
     }
-    async function YF() {
-      if (await Promise.allSettled([...yF]), sF) try {
+    async function Vc() {
+      if (await Promise.allSettled([...mc]), Hc) try {
         const {
-          flushClientAnalyticsEvents: kk
-        } = await Promise.resolve().then((() => Bk(1437)));
-        await kk()
-      } catch (kk) {
-        console.warn(`${ck} could not send the counts`, kk)
+          flushClientAnalyticsEvents: bb
+        } = await Promise.resolve().then((() => sb(1471)));
+        await bb()
+      } catch (bb) {
+        console.warn(`${Eb} could not send the counts`, bb)
       }
     }
-    async function oF() {
-      for (; yF.size > 0;) await Promise.allSettled([...yF])
+    async function Lc() {
+      for (; mc.size > 0;) await Promise.allSettled([...mc])
     }
 
-    function LF() {
-      JF.clear(), AF = 0, sF = !1, nk = 0, Ik.clear(), eF = 0, (0, wk.l)()
+    function uc() {
+      Mc.clear(), Xc = 0, Hc = !1, Fb = 0, xb.clear(), nc = 0, (0, Ib.n)()
     }
 
-    function OF(kk, Fk, Bk, Rk) {
-      eF += Fk;
+    function Yc(bb, cb, sb, kb) {
+      nc += cb;
       for (const {
-          code: Xk,
-          detail: dk
+          code: Tb,
+          detail: Hb
         }
-        of kk) {
-        var tk, ak;
-        const kk = (0, bk.hd)(Xk),
-          Fk = (0, wk.e)(Xk, dk),
-          sk = null === Rk || void 0 === Rk ? void 0 : Rk(Xk, dk),
-          Vk = void 0 !== (null === Fk || void 0 === Fk ? void 0 : Fk.gpuDetails),
-          Jk = Vk ? null === (tk = (0, Ak.o)()) || void 0 === tk ? void 0 : tk.renderer : void 0,
-          ek = Vk ? ` ${(0,wk.h)()}` : "",
-          yk = Array.from([Jk && `gpu ${(0,wk.m)(Jk)}`, sk].filter(Boolean).join("; ")).slice(0, jk).join(""),
-          fk = `core error ${kk}${null!==(ak=null===Fk||void 0===Fk?void 0:Fk.words)&&void 0!==ak?ak:""}${ek}${yk?`: ${yk}`:""}`,
-          mk = {
-            errorCode: String(Xk),
-            detail: String(dk),
-            droppedBefore: String(eF),
-            wasmBuild: Bk.wasm,
-            clientVersion: Bk.client,
-            ...null === Fk || void 0 === Fk ? void 0 : Fk.gpuDetails
+        of bb) {
+        var Wb, ab;
+        const bb = (0, Ub.ge)(Tb),
+          cb = (0, Ib.d)(Tb, Hb),
+          fb = null === kb || void 0 === kb ? void 0 : kb(Tb, Hb),
+          Mb = void 0 !== (null === cb || void 0 === cb ? void 0 : cb.gpuDetails),
+          Xb = Mb ? null === (Wb = (0, nb.l)()) || void 0 === Wb ? void 0 : Wb.renderer : void 0,
+          mb = Mb ? ` ${(0,Ib.e)()}` : "",
+          lb = Array.from([Xb && `gpu ${(0,Ib.p)(Xb)}`, fb].filter(Boolean).join("; ")).slice(0, Rb).join(""),
+          Qb = `core error ${bb}${null!==(ab=null===cb||void 0===cb?void 0:cb.words)&&void 0!==ab?ab:""}${mb}${lb?`: ${lb}`:""}`,
+          eb = {
+            errorCode: String(Tb),
+            detail: String(Hb),
+            droppedBefore: String(nc),
+            wasmBuild: sb.wasm,
+            clientVersion: sb.client,
+            ...null === cb || void 0 === cb ? void 0 : cb.gpuDetails
           };
-        null !== Fk && (0, wk.k)(Fk) ? WF((() => {
-          console.warn(`${ck} coreError CORE-${kk}: ${fk} (not sent: the session's render warnings of its kind went)`, mk)
-        })) : mF({
-          kind: Xk === bk.B.JobsHeapGaveUp ? "meshHeap" : "coreError",
-          code: `CORE-${kk}`,
-          site: Gk,
+        null !== cb && (0, Ib.j)(cb) ? ec((() => {
+          console.warn(`${Eb} coreError CORE-${bb}: ${Qb} (not sent: the session's render warnings of its kind went)`, eb)
+        })) : Qc({
+          kind: Tb === Ub.C.JobsHeapGaveUp ? "meshHeap" : "coreError",
+          code: `CORE-${bb}`,
+          site: ib,
           fatal: !1,
-          message: fk,
-          details: mk,
-          instance: null === Fk || void 0 === Fk ? void 0 : Fk.instance
+          message: Qb,
+          details: eb,
+          instance: null === cb || void 0 === cb ? void 0 : cb.instance
         })
       }
     }
 
-    function EF(kk) {
-      return (0, Mk.j)(kk instanceof gk.d ? kk.trap : kk, Lk.C, Lk.Z)
+    function hc(bb) {
+      return (0, yb.m)(bb instanceof Pb.e ? bb.trap : bb, ub.I, ub.Y)
     }
-    const SF = "declined=js";
+    const Jc = "declined=js";
 
-    function NF(kk) {
-      return kk ? {
-        labels: [SF],
+    function gc(bb) {
+      return bb ? {
+        labels: [Jc],
         details: {
           declined: "js"
         }
@@ -1026,189 +1026,189 @@ export const modules = {
       }
     }
 
-    function HF(kk, Fk, Bk) {
-      return MF(kk, Fk, Bk, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
+    function Bc(bb, cb, sb) {
+      return yc(bb, cb, sb, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
     }
 
-    function uF(kk, Fk, Bk) {
-      return MF(kk, Fk, Bk, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
+    function tc(bb, cb, sb) {
+      return yc(bb, cb, sb, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
     }
 
-    function MF(kk, Fk, Bk, Rk, tk) {
+    function yc(bb, cb, sb, kb, Wb) {
       let {
-        memoryDetails: ak = {},
-        declined: Xk = !1
-      } = Rk;
+        memoryDetails: ab = {},
+        declined: Tb = !1
+      } = kb;
       const {
-        code: bk,
-        details: wk,
-        message: dk
-      } = (0, mk.H)(kk, Fk), sk = [];
-      null !== Bk && (wk.trapKind = Bk.kind, null !== Bk.panic && (wk.panic = (0, Mk.g)(Bk.panic)), Bk.refusedBytes > 0 && (wk.refusedAllocation = String(Bk.refusedBytes)), sk.push((0, Mk.n)(Bk.kind, Bk.refusedBytes)));
-      const Vk = NF(Xk);
-      return mF({
+        code: Ub,
+        details: Ib,
+        message: Hb
+      } = (0, eb.L)(bb, cb), fb = [];
+      null !== sb && (Ib.trapKind = sb.kind, null !== sb.panic && (Ib.panic = (0, yb.k)(sb.panic)), sb.refusedBytes > 0 && (Ib.refusedAllocation = String(sb.refusedBytes)), fb.push((0, yb.p)(sb.kind, sb.refusedBytes)));
+      const Mb = gc(Tb);
+      return Qc({
         kind: "crash",
-        code: bk,
-        site: kk.site,
-        fatal: tk,
-        message: [...sk, ...Vk.labels, dk].join("; "),
+        code: Ub,
+        site: bb.site,
+        fatal: Wb,
+        message: [...fb, ...Mb.labels, Hb].join("; "),
         details: {
-          ...wk,
-          ...Vk.details,
-          ...ak
+          ...Ib,
+          ...Mb.details,
+          ...ab
         },
-        error: kk.error
+        error: bb.error
       })
     }
 
-    function gF(kk, Fk, Bk) {
-      return mF({
+    function Pc(bb, cb, sb) {
+      return Qc({
         kind: "unsupported",
-        code: Fk,
-        site: Tk,
+        code: cb,
+        site: Ob,
         fatal: !0,
-        message: Bk,
+        message: sb,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: kk,
-          status: Fk
+          cause: bb,
+          status: cb
         },
         screen: {
-          text: (0, Hk.s)(kk),
-          reload: "download" === kk
+          text: (0, Bb.o)(bb),
+          reload: "download" === bb
         }
       })
     }
 
-    function UF(kk, Fk, Bk) {
-      return mF({
+    function Dc(bb, cb, sb) {
+      return Qc({
         kind: "unsupportedFallback",
-        code: "blockedAfterLoss" === Fk ? "blocked_after_loss" : "unsupported_js_fallback",
-        site: Tk,
+        code: "blockedAfterLoss" === cb ? "blocked_after_loss" : "unsupported_js_fallback",
+        site: Ob,
         fatal: !1,
-        message: Bk,
+        message: sb,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: kk,
+          cause: bb,
           status: "unsupported",
-          decline: Fk,
+          decline: cb,
           fallback: "js"
         }
       })
     }
-    const cF = "misdrawn_gpu_js_fallback";
+    const Ec = "misdrawn_gpu_js_fallback";
 
-    function GF(kk, Fk) {
-      return mF({
+    function ic(bb, cb) {
+      return Qc({
         kind: "gpuFallback",
-        code: cF,
-        site: Tk,
+        code: Ec,
+        site: Ob,
         fatal: !1,
-        message: `the renderer plays ${kk} on ${Fk} worse than the JS client`,
+        message: `the renderer plays ${bb} on ${cb} worse than the JS client`,
         details: {
-          gpuFamily: kk,
-          backend: Fk,
+          gpuFamily: bb,
+          backend: cb,
           fallback: "js"
         }
       })
     }
 
-    function TF(kk) {
-      vF("counts", (async () => {
-        await (0, Jk.b)(kk), sF = !0
+    function Oc(bb) {
+      Cc("counts", (async () => {
+        await (0, Xb.c)(bb), Hc = !0
       }))
     }
 
-    function rF(kk, Fk, Bk, Rk) {
-      const tk = NF(Rk);
-      return mF({
+    function Gc(bb, cb, sb, kb) {
+      const Wb = gc(kb);
+      return Qc({
         kind: "unsupported",
-        code: Fk,
-        site: Tk,
+        code: cb,
+        site: Ob,
         fatal: !1,
-        message: [...tk.labels, Bk].join("; "),
+        message: [...Wb.labels, sb].join("; "),
         details: {
-          cause: kk,
-          status: Fk,
+          cause: bb,
+          status: cb,
           fallback: "js",
-          ...tk.details
+          ...Wb.details
         }
       })
     }
 
-    function DF() {
+    function Kc() {
       const {
-        code: kk,
-        message: Fk
-      } = uk.b;
-      return mF({
+        code: bb,
+        message: cb
+      } = tb.b;
+      return Qc({
         kind: "unstreamedLoad",
-        code: kk,
-        site: Tk,
+        code: bb,
+        site: Ob,
         fatal: !1,
-        message: Fk
+        message: cb
       })
     }
-    class zF extends Error {
+    class Zc extends Error {
       constructor() {
         super("the shell's page can't run the Turnstile check: join from /play"), this.name = "TurnstilePageError"
       }
     }
 
-    function PF(kk) {
-      return kk instanceof vk.n ? 0 === kk.code ? "JOIN-matchmake" : `JOIN-${kk.code}` : kk instanceof vk.e ? 0 === kk.code ? `JOIN-${kk.stage}` : `JOIN-${kk.stage}-${kk.code}` : kk instanceof Wk.c ? "JOIN-gameCode" : kk instanceof zF ? "JOIN-turnstilePage" : kk instanceof vk.y ? "JOIN-trafficCheck" : kk instanceof yk.e ? "JOIN-timeout" : "JOIN-network"
+    function zc(bb) {
+      return bb instanceof Nb.k ? 0 === bb.code ? "JOIN-matchmake" : `JOIN-${bb.code}` : bb instanceof Nb.d ? 0 === bb.code ? `JOIN-${bb.stage}` : `JOIN-${bb.stage}-${bb.code}` : bb instanceof Cb.b ? "JOIN-gameCode" : bb instanceof Zc ? "JOIN-turnstilePage" : bb instanceof Nb.w ? "JOIN-trafficCheck" : bb instanceof lb.i ? "JOIN-timeout" : "JOIN-network"
     }
 
-    function hF(kk, Fk) {
-      const Bk = (0, Uk.j)(kk),
-        Rk = {
-          wasmBuild: Fk.wasm,
-          clientVersion: Fk.client
+    function qc(bb, cb) {
+      const sb = (0, Db.h)(bb),
+        kb = {
+          wasmBuild: cb.wasm,
+          clientVersion: cb.client
         },
-        tk = kk instanceof zF ? {
-          text: (0, Hk.l)(),
+        Wb = bb instanceof Zc ? {
+          text: (0, Bb.j)(),
           reload: !1
         } : void 0,
-        ak = (0, ik.h)(kk),
-        Xk = "expected" !== ak;
-      return mF({
+        ab = (0, Vb.c)(bb),
+        Tb = "expected" !== ab;
+      return Qc({
         kind: "join",
-        code: PF(kk),
-        site: rk,
+        code: zc(bb),
+        site: Gb,
         fatal: !0,
-        message: Bk,
-        details: Rk,
-        error: kk,
-        screen: tk,
-        toTransport: Xk,
-        instance: ak
+        message: sb,
+        details: kb,
+        error: bb,
+        screen: Wb,
+        toTransport: Tb,
+        instance: ab
       })
     }
 
-    function qF(kk, Fk, Bk) {
-      var Rk;
-      const tk = (0, ik.h)(kk),
-        ak = {
-          cause: (kk instanceof vk.e || kk instanceof vk.n) && null !== (Rk = kk.serverText) && void 0 !== Rk ? Rk : "",
-          sinceJoinStart: (0, ek.d)(Bk.sinceJoinStartMs),
-          game: Bk.game,
-          ...(0, ek.l)(),
-          wasmBuild: Fk.wasm,
-          clientVersion: Fk.client
+    function dc(bb, cb, sb) {
+      var kb;
+      const Wb = (0, Vb.c)(bb),
+        ab = {
+          cause: (bb instanceof Nb.d || bb instanceof Nb.k) && null !== (kb = bb.serverText) && void 0 !== kb ? kb : "",
+          sinceJoinStart: (0, mb.e)(sb.sinceJoinStartMs),
+          game: sb.game,
+          ...(0, mb.i)(),
+          wasmBuild: cb.wasm,
+          clientVersion: cb.client
         };
-      return mF({
+      return Qc({
         kind: "pageJoin",
-        code: PF(kk),
-        site: rk,
+        code: zc(bb),
+        site: Gb,
         fatal: !1,
-        message: (0, Uk.j)(kk),
-        details: ak,
-        error: kk,
-        toTransport: "unrecognised" === tk,
-        instance: tk
+        message: (0, Db.h)(bb),
+        details: ab,
+        error: bb,
+        toTransport: "unrecognised" === Wb,
+        instance: Wb
       })
     }
-    const CF = {
+    const Ac = {
       renewed: {
         code: "CORE-seatRenewed",
         message: "the early seat outlasted the room's hold, so the join reserved another"
@@ -1227,956 +1227,956 @@ export const modules = {
       }
     };
 
-    function ZF(kk, Fk) {
+    function wc(bb, cb) {
       let {
-        unused: Bk,
-        answered: Rk,
-        heldMs: tk
-      } = kk;
+        unused: sb,
+        answered: kb,
+        heldMs: Wb
+      } = bb;
       const {
-        code: ak,
-        message: Xk
-      } = CF[Bk], bk = {
-        unused: Bk,
-        answered: String(Rk),
-        heldMs: String(tk),
-        wasmBuild: Fk.wasm,
-        clientVersion: Fk.client
+        code: ab,
+        message: Tb
+      } = Ac[sb], Ub = {
+        unused: sb,
+        answered: String(kb),
+        heldMs: String(Wb),
+        wasmBuild: cb.wasm,
+        clientVersion: cb.client
       };
-      return mF({
+      return Qc({
         kind: "seat",
-        code: ak,
-        site: rk,
+        code: ab,
+        site: Gb,
         fatal: !1,
-        message: Xk,
-        details: bk
+        message: Tb,
+        details: Ub
       })
     }
 
-    function pF(kk, Fk, Bk) {
-      var Rk;
-      let tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (Rk = kk.name) && void 0 !== Rk ? Rk : String(kk.code);
-      const ak = {
-          closeCode: String(kk.code),
-          recognised: String(null !== kk.name),
-          closeReason: Bk.closeReason,
-          sinceJoined: (0, ek.d)(Bk.sinceJoinedMs),
-          game: Bk.game,
-          ...(0, ek.l)(),
-          wasmBuild: Fk.wasm,
-          clientVersion: Fk.client
+    function rc(bb, cb, sb) {
+      var kb;
+      let Wb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (kb = bb.name) && void 0 !== kb ? kb : String(bb.code);
+      const ab = {
+          closeCode: String(bb.code),
+          recognised: String(null !== bb.name),
+          closeReason: sb.closeReason,
+          sinceJoined: (0, mb.e)(sb.sinceJoinedMs),
+          game: sb.game,
+          ...(0, mb.i)(),
+          wasmBuild: cb.wasm,
+          clientVersion: cb.client
         },
-        Xk = null === kk.name && !(0, ek.h)(kk.code);
-      return mF({
+        Tb = null === bb.name && !(0, mb.g)(bb.code);
+      return Qc({
         kind: "disconnect",
-        code: tk,
-        site: Dk,
+        code: Wb,
+        site: Kb,
         fatal: !1,
         message: "Left room",
-        details: ak,
-        toTransport: Xk
+        details: ab,
+        toTransport: Tb
       })
     }
 
-    function KF(kk, Fk) {
-      const Bk = {
-        ...(0, dk.k)(kk),
-        wasmBuild: Fk.wasm,
-        clientVersion: Fk.client
+    function oc(bb, cb) {
+      const sb = {
+        ...(0, Hb.k)(bb),
+        wasmBuild: cb.wasm,
+        clientVersion: cb.client
       };
-      return mF({
+      return Qc({
         kind: "disconnect",
-        code: `reconnect-${kk.reason}`,
-        site: rk,
+        code: `reconnect-${bb.reason}`,
+        site: Gb,
         fatal: !1,
         message: "Reconnect failed",
-        details: Bk
+        details: sb
       })
     }
 
-    function xF(kk) {
-      return kk.error instanceof Ok.g ? `MODEL-${kk.error.status}` : kk.error instanceof Ek.k ? "MODEL-ring" : "MODEL-network"
+    function Sc(bb) {
+      return bb.error instanceof Yb.i ? `MODEL-${bb.error.status}` : bb.error instanceof hb.l ? "MODEL-ring" : "MODEL-network"
     }
 
-    function jF(kk, Fk) {
-      const Bk = xF(kk),
-        Rk = `model file ${kk.file} ${kk.startup?"(startup) ":""}could not load`,
-        tk = {
-          file: String(kk.file),
-          url: kk.url,
-          wasmBuild: Fk.wasm,
-          clientVersion: Fk.client
+    function Rc(bb, cb) {
+      const sb = Sc(bb),
+        kb = `model file ${bb.file} ${bb.startup?"(startup) ":""}could not load`,
+        Wb = {
+          file: String(bb.file),
+          url: bb.url,
+          wasmBuild: cb.wasm,
+          clientVersion: cb.client
         };
-      return mF({
-        kind: kk.startup ? "model" : "modelLate",
-        code: Bk,
-        site: zk,
-        fatal: kk.startup,
-        message: Rk,
-        details: tk,
-        error: kk.error
+      return Qc({
+        kind: bb.startup ? "model" : "modelLate",
+        code: sb,
+        site: Zb,
+        fatal: bb.startup,
+        message: kb,
+        details: Wb,
+        error: bb.error
       })
     }
 
-    function lF(kk, Fk) {
-      const Bk = {
-        wasmBuild: Fk.wasm,
-        clientVersion: Fk.client
+    function vc(bb, cb) {
+      const sb = {
+        wasmBuild: cb.wasm,
+        clientVersion: cb.client
       };
-      return mF({
+      return Qc({
         kind: "model",
         code: "CORE-modelWorkerPool",
-        site: Pk,
+        site: zb,
         fatal: !1,
         message: "the model workers could not start: no model can build",
-        details: Bk,
-        error: kk
+        details: sb,
+        error: bb
       })
     }
 
-    function nF(kk, Fk, Bk) {
-      const Rk = {
-        delayMs: String(Fk),
-        wasmBuild: Bk.wasm,
-        clientVersion: Bk.client
+    function Fc(bb, cb, sb) {
+      const kb = {
+        delayMs: String(cb),
+        wasmBuild: sb.wasm,
+        clientVersion: sb.client
       };
-      kk instanceof Ok.g && (Rk.status = String(kk.status));
-      return mF({
+      bb instanceof Yb.i && (kb.status = String(bb.status));
+      return Qc({
         kind: "recovered",
         code: "CORE-modelsModuleRetry",
-        site: Pk,
+        site: zb,
         fatal: !1,
         message: "the models module didn't download: fetching it again",
-        details: Rk,
-        error: kk
+        details: kb,
+        error: bb
       })
     }
 
-    function IF(kk, Fk) {
-      const Bk = {
-        wasmBuild: Fk.wasm,
-        clientVersion: Fk.client
+    function xc(bb, cb) {
+      const sb = {
+        wasmBuild: cb.wasm,
+        clientVersion: cb.client
       };
-      return mF({
+      return Qc({
         kind: "recovered",
         code: "CORE-dracoDecoder",
-        site: Pk,
+        site: zb,
         fatal: !1,
         message: "the Draco decoder did not load: the Draco files waiting on it failed",
-        details: Bk,
-        error: kk
+        details: sb,
+        error: bb
       })
     }
 
-    function QF(kk, Fk) {
-      const Bk = {
-        wasmBuild: Fk.wasm,
-        clientVersion: Fk.client
+    function jc(bb, cb) {
+      const sb = {
+        wasmBuild: cb.wasm,
+        clientVersion: cb.client
       };
-      return mF({
+      return Qc({
         kind: "worldgenLoad",
         code: "CORE-worldgenLoad",
-        site: mk.C,
+        site: eb.E,
         fatal: !1,
         message: "world-gen worker code could not load",
-        details: Bk,
-        error: kk
+        details: sb,
+        error: bb
       })
     }
 
-    function kB(kk, Fk) {
-      const Bk = {
-        wasmBuild: Fk.wasm,
-        clientVersion: Fk.client
+    function pc(bb, cb) {
+      const sb = {
+        wasmBuild: cb.wasm,
+        clientVersion: cb.client
       };
-      return mF({
+      return Qc({
         kind: "texturePackLoad",
         code: "CORE-texturePackLoad",
-        site: Kk,
+        site: ob,
         fatal: !1,
         message: "texture pack feed code could not load",
-        details: Bk,
-        error: kk
+        details: sb,
+        error: bb
       })
     }
 
-    function FB(kk, Fk) {
+    function bs(bb, cb) {
       const {
-        frames: Bk,
-        acks: Rk,
-        mask: tk,
-        outcome: ak
-      } = kk, Xk = {
-        frames: String(Bk),
-        acks: String(Rk),
-        mask: String(tk),
-        outcome: null !== ak && void 0 !== ak ? ak : "resynced",
-        wasmBuild: Fk.wasm,
-        clientVersion: Fk.client
+        frames: sb,
+        acks: kb,
+        mask: Wb,
+        outcome: ab
+      } = bb, Tb = {
+        frames: String(sb),
+        acks: String(kb),
+        mask: String(Wb),
+        outcome: null !== ab && void 0 !== ab ? ab : "resynced",
+        wasmBuild: cb.wasm,
+        clientVersion: cb.client
       };
-      return mF({
+      return Qc({
         kind: "recovered",
-        code: "rejoined" === ak ? "CORE-eventOverflowRejoin" : "failed" === ak ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
-        site: Zk,
+        code: "rejoined" === ab ? "CORE-eventOverflowRejoin" : "failed" === ab ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
+        site: wb,
         fatal: !1,
-        message: `the event buffer refused records in ${Bk} frames`,
-        details: Xk
+        message: `the event buffer refused records in ${sb} frames`,
+        details: Tb
       })
     }
 
-    function BB(kk, Fk, Bk) {
-      return mF({
+    function cs(bb, cb, sb) {
+      return Qc({
         kind: "recovered",
         code: "CORE-workerLost",
-        site: kk,
+        site: bb,
         fatal: !1,
-        message: `a ${kk} worker was lost`,
+        message: `a ${bb} worker was lost`,
         details: {
-          reason: Fk,
-          wasmBuild: Bk.wasm,
-          clientVersion: Bk.client
+          reason: cb,
+          wasmBuild: sb.wasm,
+          clientVersion: sb.client
         }
       })
     }
 
-    function RB(kk, Fk, Bk) {
-      const Rk = {
-        wasmBuild: Bk.wasm,
-        clientVersion: Bk.client
+    function ss(bb, cb, sb) {
+      const kb = {
+        wasmBuild: sb.wasm,
+        clientVersion: sb.client
       };
-      return mF({
+      return Qc({
         kind: "recovered",
-        code: kk,
-        site: mk.m,
+        code: bb,
+        site: eb.n,
         fatal: !1,
-        message: Fk,
-        details: Rk
+        message: cb,
+        details: kb
       })
     }
 
-    function tB(kk, Fk) {
-      const Bk = {
-        lastReason: kk,
-        wasmBuild: Fk.wasm,
-        clientVersion: Fk.client
+    function ks(bb, cb) {
+      const sb = {
+        lastReason: bb,
+        wasmBuild: cb.wasm,
+        clientVersion: cb.client
       };
-      return mF({
+      return Qc({
         kind: "recovered",
         code: "CORE-worldgenGaveUp",
-        site: mk.C,
+        site: eb.E,
         fatal: !1,
         message: "no world-gen worker generated: chunks come whole",
-        details: Bk
+        details: sb
       })
     }
 
-    function aB(kk, Fk, Bk) {
-      return mF({
+    function Ws(bb, cb, sb) {
+      return Qc({
         kind: "recovered",
         code: "CORE-memoryShed",
-        site: mk.k,
+        site: eb.k,
         fatal: !1,
-        message: (0, Yk.i)(kk) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
+        message: (0, Lb.h)(bb) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
         details: {
-          cause: kk,
-          ...Fk,
-          wasmBuild: Bk.wasm,
-          clientVersion: Bk.client
+          cause: bb,
+          ...cb,
+          wasmBuild: sb.wasm,
+          clientVersion: sb.client
         }
       })
     }
 
-    function XB(kk, Fk) {
-      const Bk = (0, wk.j)(),
-        Rk = {
-          game: kk,
-          renderWarned: String(Bk),
-          browser: (0, wk.h)(),
-          wasmBuild: Fk.wasm,
-          clientVersion: Fk.client
+    function as(bb, cb) {
+      const sb = (0, Ib.i)(),
+        kb = {
+          game: bb,
+          renderWarned: String(sb),
+          browser: (0, Ib.e)(),
+          wasmBuild: cb.wasm,
+          clientVersion: cb.client
         },
-        tk = `first view drew no whole terrain in ${Sk.g/1e3} s${Bk?", render warned":""}`;
-      return mF({
+        Wb = `first view drew no whole terrain in ${Jb.e/1e3} s${sb?", render warned":""}`;
+      return Qc({
         kind: "noTerrain",
         code: "CORE-firstViewNoTerrain",
-        site: xk,
+        site: Sb,
         fatal: !1,
-        message: tk,
-        details: Rk
+        message: Wb,
+        details: kb
       })
     }
 
-    function bB(kk, Fk, Bk) {
-      return mF({
+    function Ts(bb, cb, sb) {
+      return Qc({
         kind: "recovered",
         code: "CORE-workerStartTimeout",
-        site: kk,
+        site: bb,
         fatal: !1,
-        message: `a ${kk} worker did not start`,
+        message: `a ${bb} worker did not start`,
         details: {
-          waitedMs: String(Math.round(Fk)),
-          wasmBuild: Bk.wasm,
-          clientVersion: Bk.client
+          waitedMs: String(Math.round(cb)),
+          wasmBuild: sb.wasm,
+          clientVersion: sb.client
         }
       })
     }
 
-    function wB(kk, Fk, Bk) {
-      return mF({
+    function Us(bb, cb, sb) {
+      return Qc({
         kind: "recovered",
         code: "CORE-replayFault",
-        site: kk,
+        site: bb,
         fatal: !1,
-        message: `the replay's ${kk} failed`,
+        message: `the replay's ${bb} failed`,
         details: {
-          wasmBuild: Bk.wasm,
-          clientVersion: Bk.client
+          wasmBuild: sb.wasm,
+          clientVersion: sb.client
         },
-        error: Fk
+        error: cb
       })
     }
-    const dB = {
+    const Is = {
       lost: "render device was lost",
       frames_refused: "render device refused a frame",
       start_failed: "renderer couldn't start",
       pipeline_failed: "renderer's pipeline failed"
     };
 
-    function sB(kk, Fk, Bk) {
-      const Rk = "lost" === Fk && void 0 !== Bk ? ` (${Bk})` : "";
-      return `the ${kk} ${dB[Fk]}${Rk}`
+    function Hs(bb, cb, sb) {
+      const kb = "lost" === cb && void 0 !== sb ? ` (${sb})` : "";
+      return `the ${bb} ${Is[cb]}${kb}`
     }
-    const VB = {
+    const fs = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null
     };
 
-    function JB(kk, Fk, Bk) {
-      let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now();
-      const tk = null === Bk.boundAtMs ? "unbound" : `up${(0,sk.f)(Rk-Bk.boundAtMs)}`,
-        ak = null === Bk.adapter ? "no adapter" : (0, sk.l)(Bk.adapter),
-        Xk = `${(0,fk.j)()?"hidden":"visible"} ${tk} ${ak}${!0===Bk.indirectHangs?" ih":""}`;
-      if ("pipeline_failed" === kk) return `${kk} ${Xk}`;
-      const bk = null === Fk || void 0 === Fk ? void 0 : Fk.message;
-      return `${Fk instanceof fk.h?"timeout":(0,sk.n)("frames_refused"===kk,"string"===typeof bk?bk:"")} ${Xk}`
+    function Ms(bb, cb, sb) {
+      let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now();
+      const Wb = null === sb.boundAtMs ? "unbound" : `up${(0,fb.g)(kb-sb.boundAtMs)}`,
+        ab = null === sb.adapter ? "no adapter" : (0, fb.k)(sb.adapter),
+        Tb = `${(0,Qb.k)()?"hidden":"visible"} ${Wb} ${ab}${!0===sb.indirectHangs?" ih":""}`;
+      if ("pipeline_failed" === bb) return `${bb} ${Tb}`;
+      const Ub = null === cb || void 0 === cb ? void 0 : cb.message;
+      return `${cb instanceof Qb.g?"timeout":(0,fb.l)("frames_refused"===bb,"string"===typeof Ub?Ub:"")} ${Tb}`
     }
-    const AB = {
+    const Xs = {
       samples: null,
       sunShadows: null,
       renderDistance: null
     };
 
-    function eB(kk, Fk, Rk) {
-      var ak, Xk, bk, dk, Jk;
+    function ns(bb, cb, kb) {
+      var ab, Tb, Ub, Hb, Xb;
       let {
-        cause: Ak = "lost",
-        error: ek,
-        context: yk = VB,
-        session: fk = AB
+        cause: nb = "lost",
+        error: mb,
+        context: lb = fs,
+        session: Qb = Xs
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const mk = JB(Ak, ek, yk),
-        Wk = {
-          losses: String(Fk),
-          cause: Ak,
-          detail: mk,
-          vendor: null !== (ak = null === (Xk = yk.adapter) || void 0 === Xk ? void 0 : Xk.vendor) && void 0 !== ak ? ak : "",
-          architecture: null !== (bk = null === (dk = yk.adapter) || void 0 === dk ? void 0 : dk.architecture) && void 0 !== bk ? bk : "",
-          indirectHangs: String(yk.indirectHangs),
-          samples: String(fk.samples),
-          sunShadows: String(fk.sunShadows),
-          renderDistance: String(fk.renderDistance),
-          gpuFamily: null !== (Jk = (0, tk.c)()) && void 0 !== Jk ? Jk : "",
-          browser: (0, wk.h)(),
-          siteUsed: Vk.q,
-          wasmBuild: Rk.wasm,
-          clientVersion: Rk.client
+      const eb = Ms(nb, mb, lb),
+        Cb = {
+          losses: String(cb),
+          cause: nb,
+          detail: eb,
+          vendor: null !== (ab = null === (Tb = lb.adapter) || void 0 === Tb ? void 0 : Tb.vendor) && void 0 !== ab ? ab : "",
+          architecture: null !== (Ub = null === (Hb = lb.adapter) || void 0 === Hb ? void 0 : Hb.architecture) && void 0 !== Ub ? Ub : "",
+          indirectHangs: String(lb.indirectHangs),
+          samples: String(Qb.samples),
+          sunShadows: String(Qb.sunShadows),
+          renderDistance: String(Qb.renderDistance),
+          gpuFamily: null !== (Xb = (0, Wb.b)()) && void 0 !== Xb ? Xb : "",
+          browser: (0, Ib.e)(),
+          siteUsed: Mb.r,
+          wasmBuild: kb.wasm,
+          clientVersion: kb.client
         },
-        vk = sB(kk, Ak),
-        ik = mF({
+        Nb = Hs(bb, nb),
+        Vb = Qc({
           kind: "recovered",
           code: "CORE-renderLost",
-          site: qk,
+          site: db,
           fatal: !1,
-          message: vk,
-          details: Wk,
-          error: ek
+          message: Nb,
+          details: Cb,
+          error: mb
         });
-      return vF("ga", (async () => {
+      return Cc("ga", (async () => {
         const {
-          logError: Fk
-        } = await Promise.resolve().then((() => Bk(2728))), Rk = `${sk.c["webgpu"===kk?"WebGPU":"WebGL2"]}\n Error: ${mk}`;
-        Fk("warning", Rk), Fk("error", Rk)
-      })), ik
+          logError: cb
+        } = await Promise.resolve().then((() => sb(2697))), kb = `${fb.e["webgpu"===bb?"WebGPU":"WebGL2"]}\n Error: ${eb}`;
+        cb("warning", kb), cb("error", kb)
+      })), Vb
     }
 
-    function yB(kk, Fk) {
-      var Bk, Rk;
-      const tk = null === kk.name ? "TEXTURE-sources" : null === kk.url ? "TEXTURE-nourl" : kk.error instanceof Nk.d ? `TEXTURE-${kk.error.status}` : "TEXTURE-network",
-        ak = null === kk.name ? "terrain textures could not load" : `terrain texture ${kk.name} could not load`,
-        Xk = {
-          texture: null !== (Bk = kk.name) && void 0 !== Bk ? Bk : "",
-          url: null !== (Rk = kk.url) && void 0 !== Rk ? Rk : "",
-          wasmBuild: Fk.wasm,
-          clientVersion: Fk.client
+    function ms(bb, cb) {
+      var sb, kb;
+      const Wb = null === bb.name ? "TEXTURE-sources" : null === bb.url ? "TEXTURE-nourl" : bb.error instanceof gb.b ? `TEXTURE-${bb.error.status}` : "TEXTURE-network",
+        ab = null === bb.name ? "terrain textures could not load" : `terrain texture ${bb.name} could not load`,
+        Tb = {
+          texture: null !== (sb = bb.name) && void 0 !== sb ? sb : "",
+          url: null !== (kb = bb.url) && void 0 !== kb ? kb : "",
+          wasmBuild: cb.wasm,
+          clientVersion: cb.client
         };
-      return mF({
+      return Qc({
         kind: "terrainTexture",
-        code: tk,
-        site: mk.y,
+        code: Wb,
+        site: eb.C,
         fatal: !1,
-        message: ak,
-        details: Xk,
-        error: kk.error
+        message: ab,
+        details: Tb,
+        error: bb.error
       })
     }
-    const fB = {
+    const ls = {
       previewAnimations: {
-        site: Ck,
+        site: Ab,
         prefix: "ANIMS",
         name: "the previews' animations"
       },
       builtInAnimations: {
-        site: pk,
+        site: rb,
         prefix: "BUILTIN",
         name: "the built-in animations"
       }
     };
 
-    function mB(kk, Fk, Bk, Rk) {
+    function Qs(bb, cb, sb, kb) {
       const {
-        site: tk,
-        prefix: ak,
-        name: Xk
-      } = fB[kk], {
-        stage: bk,
-        error: wk
-      } = Bk;
-      return mF({
-        kind: kk,
-        code: "decode" === bk ? null === wk ? `${ak}-decode` : `${ak}-trap` : wk instanceof Ok.g ? `${ak}-${wk.status}` : `${ak}-network`,
-        site: tk,
+        site: Wb,
+        prefix: ab,
+        name: Tb
+      } = ls[bb], {
+        stage: Ub,
+        error: Ib
+      } = sb;
+      return Qc({
+        kind: bb,
+        code: "decode" === Ub ? null === Ib ? `${ab}-decode` : `${ab}-trap` : Ib instanceof Yb.i ? `${ab}-${Ib.status}` : `${ab}-network`,
+        site: Wb,
         fatal: !1,
-        message: "decode" === bk ? `${Xk} did not decode` : `${Xk} could not load`,
+        message: "decode" === Ub ? `${Tb} did not decode` : `${Tb} could not load`,
         details: {
-          url: Fk,
-          wasmBuild: Rk.wasm,
-          clientVersion: Rk.client
+          url: cb,
+          wasmBuild: kb.wasm,
+          clientVersion: kb.client
         },
-        error: wk
+        error: Ib
       })
     }
-    const WB = "staleBuild";
+    const es = "staleBuild";
 
-    function vB(kk, Fk, Bk) {
-      const Rk = {
-          failedSite: kk.site,
-          url: kk.url,
-          from: kk.from,
-          sameBuild: String(kk.from === Fk),
-          reloadMs: String(Math.max(0, Date.now() - kk.at)),
-          wasmBuild: Bk.wasm,
-          clientVersion: Bk.client
+    function Cs(bb, cb, sb) {
+      const kb = {
+          failedSite: bb.site,
+          url: bb.url,
+          from: bb.from,
+          sameBuild: String(bb.from === cb),
+          reloadMs: String(Math.max(0, Date.now() - bb.at)),
+          wasmBuild: sb.wasm,
+          clientVersion: sb.client
         },
-        tk = `reloaded into a newer build after ${kk.site} failed to load: ${kk.error}`;
-      return mF({
+        Wb = `reloaded into a newer build after ${bb.site} failed to load: ${bb.error}`;
+      return Qc({
         kind: "staleBuild",
         code: "CORE-staleBuild",
-        site: WB,
+        site: es,
         fatal: !1,
-        message: tk,
-        details: Rk
+        message: Wb,
+        details: kb
       })
     }
   },
-  40401: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => tk,
-      g: () => Rk
+  40402: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Wb,
+      e: () => kb
     });
-    const Rk = 3e4;
-    class tk {
-      constructor(kk) {
-        this.ve = kk, this.waitedMs = 0, this.lastMs = null
+    const kb = 3e4;
+    class Wb {
+      constructor(bb) {
+        this.lm = bb, this.waitedMs = 0, this.lastMs = null
       }
-      frame(kk, Fk) {
-        if (Fk) return !0;
-        const Bk = null === this.lastMs ? 0 : kk - this.lastMs;
-        return this.lastMs = kk, Bk <= 900 && (this.waitedMs += Bk), !(this.waitedMs < Rk) && (this.ve(), !0)
+      frame(bb, cb) {
+        if (cb) return !0;
+        const sb = null === this.lastMs ? 0 : bb - this.lastMs;
+        return this.lastMs = bb, sb <= 900 && (this.waitedMs += sb), !(this.waitedMs < kb) && (this.lm(), !0)
       }
     }
   },
-  4517: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Xk,
-      g: () => ak,
-      i: () => tk
+  4507: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Tb,
+      g: () => ab,
+      h: () => Wb
     });
-    var Rk = Bk(4524);
+    var kb = sb(4512);
 
-    function tk(kk) {
-      return "none" !== kk
+    function Wb(bb) {
+      return "none" !== bb
     }
 
-    function ak(kk, Fk) {
-      if (!kk) return "none";
-      switch (Fk) {
-        case Rk.S.Drawn:
+    function ab(bb, cb) {
+      if (!bb) return "none";
+      switch (cb) {
+        case kb.W.Drawn:
           return "drawn";
-        case Rk.S.Paced:
+        case kb.W.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function Xk(kk) {
-      return "drawn" === kk
+    function Tb(bb) {
+      return "drawn" === bb
     }
   },
-  40015: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Rk,
-      d: () => mk,
-      g: () => yk,
-      h: () => fk,
-      k: () => Jk,
-      l: () => Ak,
-      n: () => sk,
-      o: () => Vk,
-      r: () => ek
+  40014: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => kb,
+      e: () => eb,
+      h: () => lb,
+      l: () => Qb,
+      p: () => Xb,
+      q: () => nb,
+      s: () => fb,
+      w: () => Mb,
+      y: () => mb
     });
-    class Rk extends Error {
-      constructor(kk) {
-        super(`the join's code did not load: ${kk instanceof Error?kk.message:String(kk)}`, {
-          cause: kk
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === kk || void 0 === kk ? void 0 : kk.request
+    class kb extends Error {
+      constructor(bb) {
+        super(`the join's code did not load: ${bb instanceof Error?bb.message:String(bb)}`, {
+          cause: bb
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === bb || void 0 === bb ? void 0 : bb.request
       }
     }
-    let tk = null,
-      ak = null,
-      Xk = null;
-    const bk = [];
-    let wk = null;
+    let Wb = null,
+      ab = null,
+      Tb = null;
+    const Ub = [];
+    let Ib = null;
 
-    function dk(kk, Fk) {
+    function Hb(bb, cb) {
       try {
-        kk(Fk)
-      } catch (Bk) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", Bk)
+        bb(cb)
+      } catch (sb) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", sb)
       }
     }
 
-    function sk() {
-      return wk
+    function fb() {
+      return Ib
     }
 
-    function Vk(kk) {
-      bk.push(kk), null !== wk && dk(kk, wk)
+    function Mb(bb) {
+      Ub.push(bb), null !== Ib && Hb(bb, Ib)
     }
 
-    function Jk(kk) {
-      return tk ??= Promise.all([Bk.e(69), Bk.e(94), Bk.e(214), Bk.e(74), Bk.e(215), Bk.e(189), Bk.e(93), Bk.e(259), Bk.e(187), Bk.e(262), Bk.e(199), Bk.e(186), Bk.e(200), Bk.e(136), Bk.e(85), Bk.e(114), Bk.e(237), Bk.e(53)]).then((() => Bk(41991))).then((Fk => {
-        Fk.loadAudio(kk), wk = Fk;
-        for (const kk of bk) dk(kk, Fk);
-        return Fk
-      })).catch((kk => {
-        throw tk = null, kk
-      })), tk
+    function Xb(bb) {
+      return Wb ??= Promise.all([sb.e(69), sb.e(94), sb.e(214), sb.e(74), sb.e(215), sb.e(189), sb.e(93), sb.e(259), sb.e(187), sb.e(262), sb.e(199), sb.e(186), sb.e(200), sb.e(136), sb.e(85), sb.e(114), sb.e(237), sb.e(53)]).then((() => sb(41933))).then((cb => {
+        cb.loadAudio(bb), Ib = cb;
+        for (const bb of Ub) Hb(bb, cb);
+        return cb
+      })).catch((bb => {
+        throw Wb = null, bb
+      })), Wb
     }
-    async function Ak(kk, Fk) {
+    async function nb(bb, cb) {
       try {
-        const Bk = await Jk(kk);
-        await Bk.loadClientGame(Fk)
-      } catch (Bk) {
-        throw new Rk(Bk)
+        const sb = await Xb(bb);
+        await sb.loadClientGame(cb)
+      } catch (sb) {
+        throw new kb(sb)
       }
     }
 
-    function ek(kk, Fk) {
-      ak = {
-        running: kk,
-        shell: Fk
+    function mb(bb, cb) {
+      ab = {
+        running: bb,
+        shell: cb
       }
     }
 
-    function yk() {
-      return Xk
+    function lb() {
+      return Tb
     }
-    async function fk(kk) {
-      const Fk = ak;
-      if ((null === Fk || void 0 === Fk ? void 0 : Fk.running) !== kk) throw new Error("the core's session has ended");
-      const Bk = await Jk(Fk.shell.audio).catch((kk => {
-        throw new Rk(kk)
+    async function Qb(bb) {
+      const cb = ab;
+      if ((null === cb || void 0 === cb ? void 0 : cb.running) !== bb) throw new Error("the core's session has ended");
+      const sb = await Xb(cb.shell.audio).catch((bb => {
+        throw new kb(bb)
       }));
-      if (null !== Xk) return Xk;
-      if (ak !== Fk || kk.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (Xk = Bk.startGameHost(kk, Fk.shell), null === Xk) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return Xk
+      if (null !== Tb) return Tb;
+      if (ab !== cb || bb.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (Tb = sb.startGameHost(bb, cb.shell), null === Tb) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return Tb
     }
 
-    function mk() {
-      null !== Xk && (null !== wk ? wk.endGameHost(Xk) : Xk.closeGame()), Xk = null, ak = null
+    function eb() {
+      null !== Tb && (null !== Ib ? Ib.endGameHost(Tb) : Tb.closeGame()), Tb = null, ab = null
     }
   },
-  40284: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => dk,
-      i: () => ak,
-      j: () => Xk,
-      k: () => tk,
-      n: () => Ak,
-      r: () => sk,
-      t: () => wk,
-      u: () => Jk,
-      y: () => Vk,
-      z: () => bk
+  40291: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Hb,
+      e: () => ab,
+      g: () => Tb,
+      h: () => Wb,
+      k: () => nb,
+      o: () => fb,
+      r: () => Ib,
+      u: () => Xb,
+      w: () => Mb,
+      x: () => Ub
     });
-    var Rk = Bk(1705);
-    const tk = new Uint8Array([12]),
-      ak = 2e3,
-      Xk = 257;
+    var kb = sb(1758);
+    const Wb = new Uint8Array([12]),
+      ab = 2e3,
+      Tb = 257;
 
-    function bk(kk) {
-      const Fk = new Uint8Array(4);
-      return new DataView(Fk.buffer).setUint32(0, kk, !0), Fk
+    function Ub(bb) {
+      const cb = new Uint8Array(4);
+      return new DataView(cb.buffer).setUint32(0, bb, !0), cb
     }
-    class wk extends Error {
+    class Ib extends Error {
       constructor() {
         super("the game was left while it reconnected"), this.name = "AbortError"
       }
     }
-    class dk extends Error {
-      constructor(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        super(kk), this.stage = Fk, this.code = Bk, this.serverText = Rk, this.name = "JoinError"
+    class Hb extends Error {
+      constructor(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        super(bb), this.stage = cb, this.code = sb, this.serverText = kb, this.name = "JoinError"
       }
     }
-    class sk extends Error {
-      constructor(kk) {
-        super(kk), this.final = !0, this.name = "ResumeRefusedError"
+    class fb extends Error {
+      constructor(bb) {
+        super(bb), this.final = !0, this.name = "ResumeRefusedError"
       }
     }
-    class Vk extends Error {
-      constructor(kk) {
-        super((0, Rk.g)(kk), {
-          cause: kk
+    class Mb extends Error {
+      constructor(bb) {
+        super((0, kb.e)(bb), {
+          cause: bb
         }), this.name = "TrafficCheckError"
       }
     }
-    class Jk extends Error {
-      constructor(kk, Fk, Bk) {
-        super(kk, {
-          cause: Bk
-        }), this.networkLost = Fk, this.name = "SeatRequestError"
+    class Xb extends Error {
+      constructor(bb, cb, sb) {
+        super(bb, {
+          cause: sb
+        }), this.networkLost = cb, this.name = "SeatRequestError"
       }
     }
-    class Ak extends Error {
-      constructor(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(kk), this.code = Fk, this.serverText = Bk, this.name = "MatchmakeError"
+    class nb extends Error {
+      constructor(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(bb), this.code = cb, this.serverText = sb, this.name = "MatchmakeError"
       }
     }
   },
-  40288: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Jk,
-      h: () => Vk
+  40294: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Xb,
+      c: () => Mb
     });
-    var Rk = Bk(2466),
-      tk = Bk(3276),
-      ak = Bk(38708),
-      Xk = Bk(40280),
-      bk = Bk(40284),
-      wk = Bk(40290);
-    const dk = "seat reservation expired.",
-      sk = "early_leave";
+    var kb = sb(2459),
+      Wb = sb(3251),
+      ab = sb(38639),
+      Tb = sb(40282),
+      Ub = sb(40291),
+      Ib = sb(40301);
+    const Hb = "seat reservation expired.",
+      fb = "early_leave";
 
-    function Vk(kk) {
-      if (kk instanceof ak.e) return "expected";
-      if (kk instanceof bk.u) return kk.networkLost ? "expected" : "unrecognised";
-      if (kk instanceof bk.e) {
-        if ("closed" === kk.stage && (0 === kk.code || (0, tk.h)(kk.code))) return "expected";
-        if ("roomError" === kk.stage && (kk.serverText === dk || kk.serverText === sk)) return "expected"
+    function Mb(bb) {
+      if (bb instanceof ab.i) return "expected";
+      if (bb instanceof Ub.u) return bb.networkLost ? "expected" : "unrecognised";
+      if (bb instanceof Ub.d) {
+        if ("closed" === bb.stage && (0 === bb.code || (0, Wb.g)(bb.code))) return "expected";
+        if ("roomError" === bb.stage && (bb.serverText === Hb || bb.serverText === fb)) return "expected"
       }
-      return kk instanceof bk.e || kk instanceof bk.n ? null === (0, Xk.g)(kk.code).name ? "unrecognised" : "known" : (0, Rk.f)(kk) ? "expected" : kk instanceof bk.y || kk instanceof wk.e ? "known" : "unrecognised"
+      return bb instanceof Ub.d || bb instanceof Ub.k ? null === (0, Tb.m)(bb.code).name ? "unrecognised" : "known" : (0, kb.e)(bb) ? "expected" : bb instanceof Ub.w || bb instanceof Ib.f ? "known" : "unrecognised"
     }
 
-    function Jk(kk) {
-      return kk instanceof ak.e ? "timedOut" : "expected" !== Vk(kk) || (0, Rk.f)(kk) || kk instanceof bk.e && 1001 === kk.code ? void 0 : "failed"
+    function Xb(bb) {
+      return bb instanceof ab.i ? "timedOut" : "expected" !== Mb(bb) || (0, kb.e)(bb) || bb instanceof Ub.d && 1001 === bb.code ? void 0 : "failed"
     }
   },
-  40370: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Sk,
-      i: () => Vk,
-      j: () => Yk,
-      l: () => mk,
-      p: () => Ok
+  40383: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Jb,
+      h: () => Mb,
+      i: () => Lb,
+      k: () => eb,
+      l: () => Yb
     });
-    var Rk = Bk(36217),
-      tk = Bk(36209);
-    const ak = 64 * Rk.c,
-      Xk = 40 * Rk.e,
-      bk = 36 * Rk.e,
-      wk = 20 * Rk.e,
-      dk = 2 * Rk.e,
-      sk = 5 * Rk.e;
+    var kb = sb(36139),
+      Wb = sb(36134);
+    const ab = 64 * kb.d,
+      Tb = 40 * kb.h,
+      Ub = 36 * kb.h,
+      Ib = 20 * kb.h,
+      Hb = 2 * kb.h,
+      fb = 5 * kb.h;
 
-    function Vk(kk) {
-      return "footprint" !== kk
+    function Mb(bb) {
+      return "footprint" !== bb
     }
-    const Jk = 2 * Rk.e,
-      Ak = 4 * Rk.e,
-      ek = 35 * Rk.e + Jk + Ak,
-      yk = 6.5 * Rk.e,
-      fk = 132.5 * Rk.c;
+    const Xb = 2 * kb.h,
+      nb = 4 * kb.h,
+      mb = 35 * kb.h + Xb + nb,
+      lb = 6.5 * kb.h,
+      Qb = 132.5 * kb.d;
 
-    function mk(kk) {
-      const Fk = yk + (0, tk.i)(kk) + kk * fk;
-      return Math.ceil((2 * ek + Fk) / ak) * ak
+    function eb(bb) {
+      const cb = lb + (0, Wb.g)(bb) + bb * Qb;
+      return Math.ceil((2 * mb + cb) / ab) * ab
     }
-    const Wk = mk(tk.b),
-      vk = (Rk.e, Rk.e, Rk.e, {
-        targetBytes: Xk,
-        leastBytes: wk
+    const Cb = eb(Wb.c),
+      Nb = (kb.h, kb.h, kb.h, {
+        targetBytes: Tb,
+        leastBytes: Ib
       }),
-      ik = {
-        targetBytes: bk,
-        leastBytes: wk
+      Vb = {
+        targetBytes: Ub,
+        leastBytes: Ib
       };
 
-    function Yk(kk) {
-      return kk >= tk.b ? vk : ik
+    function Lb(bb) {
+      return bb >= Wb.c ? Nb : Vb
     }
-    const Lk = 2 * ak;
+    const ub = 2 * ab;
 
-    function Ok(kk, Fk, Bk) {
-      return kk + Fk + Lk > (null !== Bk && void 0 !== Bk ? Bk : Wk)
+    function Yb(bb, cb, sb) {
+      return bb + cb + ub > (null !== sb && void 0 !== sb ? sb : Cb)
     }
-    const Ek = {
+    const hb = {
       now: () => performance.now(),
-      requestIdle: "function" === typeof requestIdleCallback ? kk => {
-        requestIdleCallback(kk)
+      requestIdle: "function" === typeof requestIdleCallback ? bb => {
+        requestIdleCallback(bb)
       } : null
     };
-    class Sk {
-      constructor(kk, Fk, Bk) {
-        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Ek;
-        this.memory = kk, this.readPeakStoredChunks = Fk, this.onError = Bk, this.clock = Rk, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+    class Jb {
+      constructor(bb, cb, sb) {
+        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : hb;
+        this.memory = bb, this.readPeakStoredChunks = cb, this.onError = sb, this.clock = kb, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
           reserves: 0,
           allocations: 0
         }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null
       }
-      setShed(kk, Fk, Bk) {
+      setShed(bb, cb, sb) {
         this.shedding = {
-          shed: kk,
-          ve: Fk,
-          readDistanceInUse: Bk
+          shed: bb,
+          lm: cb,
+          readDistanceInUse: sb
         }
       }
       shedDistanceInUse() {
         return this.distanceInUse
       }
-      setFootprint(kk) {
-        this.footprint = kk
+      setFootprint(bb) {
+        this.footprint = bb
       }
-      setCeiling(kk) {
-        this.ceilingBytes = kk, this.call((() => {
-          this.memory.setCeiling(kk)
+      setCeiling(bb) {
+        this.ceilingBytes = bb, this.call((() => {
+          this.memory.setCeiling(bb)
         }), void 0)
       }
-      ceilingMayRefuse(kk) {
-        return Ok(this.memory.memoryBytes(), kk, this.ceilingBytes)
+      ceilingMayRefuse(bb) {
+        return Yb(this.memory.memoryBytes(), bb, this.ceilingBytes)
       }
-      reserveAtJoin(kk) {
+      reserveAtJoin(bb) {
         let {
-          targetBytes: Fk,
-          leastBytes: Bk
-        } = kk;
-        const Rk = this.memory.memoryBytes(),
-          tk = Rk + Bk,
-          ak = Math.max(Fk + (this.ballastOn() ? sk : 0), tk),
-          Xk = this.call((() => this.memory.reserveUpFront(ak) ? "target" : ak > tk && this.memory.reserveUpFront(tk) ? "least" : "none"), "none");
+          targetBytes: cb,
+          leastBytes: sb
+        } = bb;
+        const kb = this.memory.memoryBytes(),
+          Wb = kb + sb,
+          ab = Math.max(cb + (this.ballastOn() ? fb : 0), Wb),
+          Tb = this.call((() => this.memory.reserveUpFront(ab) ? "target" : ab > Wb && this.memory.reserveUpFront(Wb) ? "least" : "none"), "none");
         if (this.stopped) return !1;
-        if ("target" !== Xk) {
-          const kk = "least" === Xk ? `took ${tk} bytes instead` : "frames grow it in steps";
-          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${ak} bytes was refused at ${Rk} bytes; ${kk}`)
+        if ("target" !== Tb) {
+          const bb = "least" === Tb ? `took ${Wb} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${ab} bytes was refused at ${kb} bytes; ${bb}`)
         }
-        return this.joinReserveTaken = Xk, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== Xk && this.shedFor("joinReserve"), "none" !== Xk
+        return this.joinReserveTaken = Tb, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== Tb && this.shedFor("joinReserve"), "none" !== Tb
       }
       afterFrame() {
         if (this.stopped) return;
-        const kk = this.clock.now(),
-          Fk = null !== this.stepsHeldUntil && kk >= this.stepsHeldUntil;
-        if (Fk && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
-        if (null === this.stepsHeldUntil && kk >= this.ballastCheckAt && (this.takeBallast(kk), this.stopped)) return;
-        const Bk = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
-          Rk = Fk && "now" === Bk ? "none" : Bk,
+        const bb = this.clock.now(),
+          cb = null !== this.stepsHeldUntil && bb >= this.stepsHeldUntil;
+        if (cb && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && bb >= this.ballastCheckAt && (this.takeBallast(bb), this.stopped)) return;
+        const sb = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          kb = cb && "now" === sb ? "none" : sb,
           {
-            requestIdle: tk
+            requestIdle: Wb
           } = this.clock;
-        "now" === Rk || null !== this.pendingSince && kk - this.pendingSince >= 500 ? this.step() : "idle" === Rk && null === this.pendingSince && (null === tk ? this.step() : (this.pendingSince = kk, tk((() => {
+        "now" === kb || null !== this.pendingSince && bb - this.pendingSince >= 500 ? this.step() : "idle" === kb && null === this.pendingSince && (null === Wb ? this.step() : (this.pendingSince = bb, Wb((() => {
           null !== this.pendingSince && this.step()
-        })))), kk - this.statsAt >= 1e3 && (this.statsAt = kk, this.refreshStats(), this.checkFootprint())
+        })))), bb - this.statsAt >= 1e3 && (this.statsAt = bb, this.refreshStats(), this.checkFootprint())
       }
       refreshStats() {
         this.call((() => {
-          var kk, Fk;
-          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (Fk = this.shedding.readDistanceInUse()) && void 0 !== Fk ? Fk : this.distanceInUse);
-          null === (kk = this.footprint) || void 0 === kk || kk.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+          var bb, cb;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (cb = this.shedding.readDistanceInUse()) && void 0 !== cb ? cb : this.distanceInUse);
+          null === (bb = this.footprint) || void 0 === bb || bb.read(this.memory.memoryBytes() + this.workersMemoryBytes())
         }), void 0)
       }
       stop() {
         this.stopped = !0, this.pendingSince = null
       }
-      noteMeshWorker(kk, Fk) {
-        this.noteWorker(`Mesh${kk}`, Fk)
+      noteMeshWorker(bb, cb) {
+        this.noteWorker(`Mesh${bb}`, cb)
       }
-      meshWorkerGone(kk) {
-        this.workerGone(`Mesh${kk}`)
+      meshWorkerGone(bb) {
+        this.workerGone(`Mesh${bb}`)
       }
-      noteWorldgen(kk) {
-        this.noteWorker("Worldgen", kk)
+      noteWorldgen(bb) {
+        this.noteWorker("Worldgen", bb)
       }
       worldgenGone() {
         this.workerGone("Worldgen")
       }
-      noteWorker(kk, Fk) {
-        const Bk = this.workers.get(kk);
-        null !== Bk && void 0 !== Bk && Bk.gone && (this.replacedRefusals.reserves += Bk.stats.reservesRefused, this.replacedRefusals.allocations += Bk.stats.allocationsRefused), this.workers.set(kk, {
-          stats: Fk,
+      noteWorker(bb, cb) {
+        const sb = this.workers.get(bb);
+        null !== sb && void 0 !== sb && sb.gone && (this.replacedRefusals.reserves += sb.stats.reservesRefused, this.replacedRefusals.allocations += sb.stats.allocationsRefused), this.workers.set(bb, {
+          stats: cb,
           gone: !1
         })
       }
-      workerGone(kk) {
-        const Fk = this.workers.get(kk);
-        Fk && (Fk.gone = !0)
+      workerGone(bb) {
+        const cb = this.workers.get(bb);
+        cb && (cb.gone = !0)
       }
       details() {
-        var kk, Fk;
-        const Bk = {
-          wasmMemoryNow: `${(0,Rk.f)(this.memory.memoryBytes())} MiB`
+        var bb, cb;
+        const sb = {
+          wasmMemoryNow: `${(0,kb.k)(this.memory.memoryBytes())} MiB`
         };
-        null !== this.joinReserveTaken && (Bk.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (Bk.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
-        const tk = this.main;
-        if (tk) {
-          Bk.wasmMemoryMain = Nk(tk);
-          const kk = Math.max(0, tk.peakLiveBytes - this.ballastPeakBytes),
-            Fk = 0 === this.peakStoredChunks ? "-" : (kk / this.peakStoredChunks / Rk.c).toFixed(1);
-          Bk.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${Fk} KiB`
+        null !== this.joinReserveTaken && (sb.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (sb.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const Wb = this.main;
+        if (Wb) {
+          sb.wasmMemoryMain = gb(Wb);
+          const bb = Math.max(0, Wb.peakLiveBytes - this.ballastPeakBytes),
+            cb = 0 === this.peakStoredChunks ? "-" : (bb / this.peakStoredChunks / kb.d).toFixed(1);
+          sb.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${cb} KiB`
         }
-        for (const [Rk, {
-            stats: Xk,
-            gone: bk
-          }] of this.workers) Bk[`wasmMemory${Rk}`] = Nk(Xk) + (bk ? " (gone)" : "");
-        const ak = null !== (kk = null === (Fk = this.footprint) || void 0 === Fk ? void 0 : Fk.describe()) && void 0 !== kk ? kk : null;
-        return null !== ak && (Bk.wasmMemoryFootprint = ak), Bk
+        for (const [kb, {
+            stats: Tb,
+            gone: Ub
+          }] of this.workers) sb[`wasmMemory${kb}`] = gb(Tb) + (Ub ? " (gone)" : "");
+        const ab = null !== (bb = null === (cb = this.footprint) || void 0 === cb ? void 0 : cb.describe()) && void 0 !== bb ? bb : null;
+        return null !== ab && (sb.wasmMemoryFootprint = ab), sb
       }
       pageKillSnapshot() {
-        var kk, Fk, Bk, tk, ak;
-        let Xk = (null !== (kk = null === (Fk = this.main) || void 0 === Fk ? void 0 : Fk.reservesRefused) && void 0 !== kk ? kk : 0) + this.replacedRefusals.reserves,
-          bk = (null !== (Bk = null === (tk = this.main) || void 0 === tk ? void 0 : tk.allocationsRefused) && void 0 !== Bk ? Bk : 0) + this.replacedRefusals.allocations;
+        var bb, cb, sb, Wb, ab;
+        let Tb = (null !== (bb = null === (cb = this.main) || void 0 === cb ? void 0 : cb.reservesRefused) && void 0 !== bb ? bb : 0) + this.replacedRefusals.reserves,
+          Ub = (null !== (sb = null === (Wb = this.main) || void 0 === Wb ? void 0 : Wb.allocationsRefused) && void 0 !== sb ? sb : 0) + this.replacedRefusals.allocations;
         for (const {
-            stats: Rk
+            stats: kb
           }
-          of this.workers.values()) Xk += Rk.reservesRefused, bk += Rk.allocationsRefused;
+          of this.workers.values()) Tb += kb.reservesRefused, Ub += kb.allocationsRefused;
         return {
-          wasmMainMiB: Number((0, Rk.f)(this.memory.memoryBytes())),
-          wasmWorkersMiB: Number((0, Rk.f)(this.workersMemoryBytes())),
+          wasmMainMiB: Number((0, kb.k)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, kb.k)(this.workersMemoryBytes())),
           peakStoredChunks: this.peakStoredChunks,
-          refusedReserves: Xk,
-          refusedAllocations: bk,
+          refusedReserves: Tb,
+          refusedAllocations: Ub,
           sheds: this.sheds,
-          ...null === (ak = this.footprint) || void 0 === ak ? void 0 : ak.snapshot()
+          ...null === (ab = this.footprint) || void 0 === ab ? void 0 : ab.snapshot()
         }
       }
       workersMemoryBytes() {
-        let kk = 0;
+        let bb = 0;
         for (const {
-            stats: Fk,
-            gone: Bk
+            stats: cb,
+            gone: sb
           }
-          of this.workers.values()) kk += Bk ? 0 : Fk.memoryBytes;
-        return kk
+          of this.workers.values()) bb += sb ? 0 : cb.memoryBytes;
+        return bb
       }
       checkFootprint() {
         null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
       }
       step() {
-        this.pendingSince = null, this.call((() => this.memory.reserveAhead(dk)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(Hb)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
       }
       ballastOn() {
         return null !== this.shedding
       }
-      takeBallast(kk) {
+      takeBallast(bb) {
         if (!this.ballastOn() || null === this.joinReserveTaken) return;
-        this.ballastCheckAt = kk + 1e3;
-        const Fk = this.call((() => this.memory.takeBallast()), 0);
-        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, Fk)
+        this.ballastCheckAt = bb + 1e3;
+        const cb = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, cb)
       }
       takePressure() {
         return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
       }
-      stopSteps(kk) {
-        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${kk}: frames grow on demand from here`)
+      stopSteps(bb) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${bb}: frames grow on demand from here`)
       }
-      shedFor(kk) {
+      shedFor(bb) {
         const {
-          shedding: Fk
+          shedding: cb
         } = this;
-        if (null === Fk) return;
+        if (null === cb) return;
         this.pendingSince = null;
-        const Bk = this.call((() => Fk.shed(kk)), null);
-        this.stopped || (null !== Bk ? (this.sheds++, this.shedCap = Bk, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), Fk.ve(kk, this.sheds, this.details())) : Vk(kk) && this.stopSteps("nothing is left to shed"))
+        const sb = this.call((() => cb.shed(bb)), null);
+        this.stopped || (null !== sb ? (this.sheds++, this.shedCap = sb, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), cb.lm(bb, this.sheds, this.details())) : Mb(bb) && this.stopSteps("nothing is left to shed"))
       }
-      call(kk, Fk) {
-        if (this.stopped) return Fk;
+      call(bb, cb) {
+        if (this.stopped) return cb;
         try {
-          return kk()
-        } catch (Bk) {
-          return this.stop(), this.onError(Bk), Fk
+          return bb()
+        } catch (sb) {
+          return this.stop(), this.onError(sb), cb
         }
       }
     }
 
-    function Nk(kk) {
-      const Fk = (kk, Fk) => `${kk}/${(0,Rk.f)(Fk)}`;
-      return `memory ${(0,Rk.f)(kk.memoryBytes)} live ${(0,Rk.f)(kk.liveBytes)} peak ${(0,Rk.f)(kk.peakLiveBytes)} unused ${(0,Rk.f)(kk.unusedBytes)} ceiling ${(0,Rk.f)(kk.ceilingBytes)} MiB; grows upFront ${Fk(kk.grows.upFront,kk.grownBytes.upFront)} ahead ${Fk(kk.grows.ahead,kk.grownBytes.ahead)} inFrame ${Fk(kk.grows.onDemandInFrame,kk.grownBytes.onDemandInFrame)} other ${Fk(kk.grows.onDemand,kk.grownBytes.onDemand)}; refused reserves ${kk.reservesRefused} allocations ${kk.allocationsRefused}`
+    function gb(bb) {
+      const cb = (bb, cb) => `${bb}/${(0,kb.k)(cb)}`;
+      return `memory ${(0,kb.k)(bb.memoryBytes)} live ${(0,kb.k)(bb.liveBytes)} peak ${(0,kb.k)(bb.peakLiveBytes)} unused ${(0,kb.k)(bb.unusedBytes)} ceiling ${(0,kb.k)(bb.ceilingBytes)} MiB; grows upFront ${cb(bb.grows.upFront,bb.grownBytes.upFront)} ahead ${cb(bb.grows.ahead,bb.grownBytes.ahead)} inFrame ${cb(bb.grows.onDemandInFrame,bb.grownBytes.onDemandInFrame)} other ${cb(bb.grows.onDemand,bb.grownBytes.onDemand)}; refused reserves ${bb.reservesRefused} allocations ${bb.allocationsRefused}`
     }
   },
-  40379: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => wk,
-      f: () => dk,
-      i: () => Ak,
-      k: () => Vk
+  40388: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Ib,
+      f: () => Hb,
+      i: () => nb,
+      l: () => Mb
     });
-    var Rk = Bk(3506),
-      tk = Bk(4524),
-      ak = Bk(40387),
-      Xk = Bk(40393),
-      bk = Bk(36019);
-    const wk = 395,
-      dk = 2147483648,
-      sk = new Uint8Array(0);
-    class Vk extends Error {
+    var kb = sb(3505),
+      Wb = sb(4512),
+      ab = sb(40391),
+      Tb = sb(40396),
+      Ub = sb(35945);
+    const Ib = 395,
+      Hb = 2147483648,
+      fb = new Uint8Array(0);
+    class Mb extends Error {
       constructor() {
         super(...arguments), this.name = "ModelRingError"
       }
     }
-    class Jk extends Error {
+    class Xb extends Error {
       constructor() {
         super(...arguments), this.name = "ModelPackRefusedError"
       }
     }
-    class Ak {
-      constructor(kk, Fk, Bk) {
-        var Rk, tk, Xk, bk;
-        let wk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.files = kk, this.build = Fk, this.onFailure = Bk, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.lA = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (Rk = wk.fetchFile) && void 0 !== Rk ? Rk : kk => (0, ak.j)(kk), this.onWritten = null !== (tk = wk.onWritten) && void 0 !== tk ? tk : null, this.onTaken = null !== (Xk = wk.onTaken) && void 0 !== Xk ? Xk : null, this.onPackFileFailed = null !== (bk = wk.onPackFileFailed) && void 0 !== bk ? bk : null, this.startupLeft = new Set(kk.startup);
-        for (const ak of kk.startup) this.request(ak)
+    class nb {
+      constructor(bb, cb, sb) {
+        var kb, Wb, Tb, Ub;
+        let Ib = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.files = bb, this.build = cb, this.onFailure = sb, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.vn = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (kb = Ib.fetchFile) && void 0 !== kb ? kb : bb => (0, ab.j)(bb), this.onWritten = null !== (Wb = Ib.onWritten) && void 0 !== Wb ? Wb : null, this.onTaken = null !== (Tb = Ib.onTaken) && void 0 !== Tb ? Tb : null, this.onPackFileFailed = null !== (Ub = Ib.onPackFileFailed) && void 0 !== Ub ? Ub : null, this.startupLeft = new Set(bb.startup);
+        for (const ab of bb.startup) this.request(ab)
       }
       get startupDone() {
         return 0 === this.startupLeft.size
@@ -2196,361 +2196,361 @@ export const modules = {
       get keptBytes() {
         return this.keptTotal
       }
-      drawnUrl(kk) {
-        return this.drawn.get(kk)
+      drawnUrl(bb) {
+        return this.drawn.get(bb)
       }
-      request(kk) {
-        const Fk = this.pending.get(kk);
-        if (!0 === (null === Fk || void 0 === Fk ? void 0 : Fk.ask)) return;
-        const Bk = this.UA(kk, !0);
-        Bk.recheck = void 0 !== Fk;
-        const Rk = this.drawn.get(kk);
-        if (void 0 !== Rk) return Bk.Hb = !0, Bk.recheck = !0, void this.fetch(kk, Bk, Rk);
-        this.fetchWanted(kk, Bk)
+      request(bb) {
+        const cb = this.pending.get(bb);
+        if (!0 === (null === cb || void 0 === cb ? void 0 : cb.ask)) return;
+        const sb = this.Bn(bb, !0);
+        sb.recheck = void 0 !== cb;
+        const kb = this.drawn.get(bb);
+        if (void 0 !== kb) return sb.qU = !0, sb.recheck = !0, void this.fetch(bb, sb, kb);
+        this.fetchWanted(bb, sb)
       }
       async refresh() {
-        const kk = ++this.refreshes,
-          Fk = new Set;
-        for (const Xk of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
-          for (const kk of Xk) 0 === (kk & ak.h) && Fk.add(kk);
-        const Bk = [...Fk];
-        let Rk;
+        const bb = ++this.refreshes,
+          cb = new Set;
+        for (const Tb of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
+          for (const bb of Tb) 0 === (bb & ab.i) && cb.add(bb);
+        const sb = [...cb];
+        let kb;
         try {
-          Rk = await Promise.all(Bk.map((kk => this.wanted(kk))))
+          kb = await Promise.all(sb.map((bb => this.wanted(bb))))
         } catch {
           return null
         }
-        if (kk !== this.refreshes) return null;
-        const tk = {
+        if (bb !== this.refreshes) return null;
+        const Wb = {
           resent: 0,
           refetched: 0,
-          delivered: Bk.filter((kk => this.drawn.has(kk))).length
+          delivered: sb.filter((bb => this.drawn.has(bb))).length
         };
-        return Bk.forEach(((kk, Fk) => {
+        return sb.forEach(((bb, cb) => {
           const {
-            url: Bk,
-            inPlaceOf: ak
-          } = Rk[Fk], Xk = this.pending.get(kk);
-          if (void 0 !== Xk) {
-            if (Xk.Hb || void 0 === Xk.url) return void(Xk.recheck = !0);
-            if (Xk.url === Bk) return;
-            tk.refetched++;
-            const Fk = this.UA(kk, Xk.ask);
-            return Fk.recheck = Xk.recheck, void this.fetch(kk, Fk, Bk, ak)
+            url: sb,
+            inPlaceOf: ab
+          } = kb[cb], Tb = this.pending.get(bb);
+          if (void 0 !== Tb) {
+            if (Tb.qU || void 0 === Tb.url) return void(Tb.recheck = !0);
+            if (Tb.url === sb) return;
+            Wb.refetched++;
+            const cb = this.Bn(bb, Tb.ask);
+            return cb.recheck = Tb.recheck, void this.fetch(bb, cb, sb, ab)
           }
-          const bk = this.written.get(kk);
-          void 0 === bk ? this.drawn.get(kk) !== (null !== Bk && void 0 !== Bk ? Bk : void 0) && (tk.resent++, this.fetch(kk, this.UA(kk, !1), Bk, ak)) : bk.url !== (null !== Bk && void 0 !== Bk ? Bk : "") && (bk.attempt.recheck = !0)
-        })), tk
+          const Ub = this.written.get(bb);
+          void 0 === Ub ? this.drawn.get(bb) !== (null !== sb && void 0 !== sb ? sb : void 0) && (Wb.resent++, this.fetch(bb, this.Bn(bb, !1), sb, ab)) : Ub.url !== (null !== sb && void 0 !== sb ? sb : "") && (Ub.attempt.recheck = !0)
+        })), Wb
       }
-      taken(kk, Fk) {
-        const Bk = new Set,
-          Rk = new Set;
-        for (const tk of Array.from(Fk)) 0 === (tk & dk) ? Bk.add(tk) : Rk.add((tk & ~dk) >>> 0);
-        for (const [tk, ak] of this.written) ak.seq > kk || (this.written.delete(tk), Bk.has(ak.seq) ? this.refusedFile(tk, ak) : this.takenFile(tk, ak, !ak.empty && !Rk.has(ak.seq)))
+      taken(bb, cb) {
+        const sb = new Set,
+          kb = new Set;
+        for (const Wb of Array.from(cb)) 0 === (Wb & Hb) ? sb.add(Wb) : kb.add((Wb & ~Hb) >>> 0);
+        for (const [Wb, ab] of this.written) ab.seq > bb || (this.written.delete(Wb), sb.has(ab.seq) ? this.refusedFile(Wb, ab) : this.takenFile(Wb, ab, !ab.empty && !kb.has(ab.seq)))
       }
-      takenFile(kk, Fk, Bk) {
+      takenFile(bb, cb, sb) {
         const {
-          attempt: Rk
-        } = Fk;
-        if (Bk) {
-          var tk;
-          this.drawn.set(kk, Fk.url), this.undrawn.delete(kk), void 0 !== Rk.inPlaceOf ? this.refusedPack.set(kk, Rk.inPlaceOf) : Rk.Hb || this.refusedPack.delete(kk), null === (tk = this.onTaken) || void 0 === tk || tk.call(this, kk, !0);
-          const Bk = this.pending.get(kk);
-          if (!0 === (null === Bk || void 0 === Bk ? void 0 : Bk.Hb) && Bk.url !== Fk.url) {
-            const Bk = this.UA(kk, !0);
-            Bk.Hb = !0, Bk.recheck = !0, this.fetch(kk, Bk, Fk.url)
+          attempt: kb
+        } = cb;
+        if (sb) {
+          var Wb;
+          this.drawn.set(bb, cb.url), this.undrawn.delete(bb), void 0 !== kb.inPlaceOf ? this.refusedPack.set(bb, kb.inPlaceOf) : kb.qU || this.refusedPack.delete(bb), null === (Wb = this.onTaken) || void 0 === Wb || Wb.call(this, bb, !0);
+          const sb = this.pending.get(bb);
+          if (!0 === (null === sb || void 0 === sb ? void 0 : sb.qU) && sb.url !== cb.url) {
+            const sb = this.Bn(bb, !0);
+            sb.qU = !0, sb.recheck = !0, this.fetch(bb, sb, cb.url)
           }
         } else {
-          var ak;
-          this.drawn.has(kk) || this.undrawn.add(kk), null === (ak = this.onTaken) || void 0 === ak || ak.call(this, kk, !1)
+          var ab;
+          this.drawn.has(bb) || this.undrawn.add(bb), null === (ab = this.onTaken) || void 0 === ab || ab.call(this, bb, !1)
         }
-        Rk.recheck && this.resendIfChanged(kk)
+        kb.recheck && this.resendIfChanged(bb)
       }
-      refusedFile(kk, Fk) {
-        var Bk, Rk;
-        if (null === (Bk = this.onTaken) || void 0 === Bk || Bk.call(this, kk, !1), this.refusedPack.set(kk, Fk.url), this.pending.has(kk)) return void(null === (Rk = this.onPackFileFailed) || void 0 === Rk || Rk.call(this, kk, ek(Fk.url)));
-        const tk = this.UA(kk, Fk.attempt.ask);
-        tk.recheck = Fk.attempt.recheck, this.afterRefusal(kk, tk, Fk.url)
+      refusedFile(bb, cb) {
+        var sb, kb;
+        if (null === (sb = this.onTaken) || void 0 === sb || sb.call(this, bb, !1), this.refusedPack.set(bb, cb.url), this.pending.has(bb)) return void(null === (kb = this.onPackFileFailed) || void 0 === kb || kb.call(this, bb, mb(cb.url)));
+        const Wb = this.Bn(bb, cb.attempt.ask);
+        Wb.recheck = cb.attempt.recheck, this.afterRefusal(bb, Wb, cb.url)
       }
-      async afterRefusal(kk, Fk, Bk) {
-        var Rk;
-        let tk;
+      async afterRefusal(bb, cb, sb) {
+        var kb;
+        let Wb;
         try {
-          tk = await this.wanted(kk)
-        } catch (ak) {
-          return void(this.pending.get(kk) === Fk && this.giveUp(kk, Fk, Bk, ak))
+          Wb = await this.wanted(bb)
+        } catch (ab) {
+          return void(this.pending.get(bb) === cb && this.giveUp(bb, cb, sb, ab))
         }
-        this.pending.get(kk) === Fk && (tk.inPlaceOf !== Bk ? Fk.ask || (null !== (Rk = tk.url) && void 0 !== Rk ? Rk : void 0) !== this.drawn.get(kk) ? this.fetch(kk, Fk, tk.url, tk.inPlaceOf) : this.pending.delete(kk) : this.fallBack(kk, Fk, Bk, ek(Bk)))
+        this.pending.get(bb) === cb && (Wb.inPlaceOf !== sb ? cb.ask || (null !== (kb = Wb.url) && void 0 !== kb ? kb : void 0) !== this.drawn.get(bb) ? this.fetch(bb, cb, Wb.url, Wb.inPlaceOf) : this.pending.delete(bb) : this.fallBack(bb, cb, sb, mb(sb)))
       }
-      UA(kk, Fk) {
-        const Bk = {
+      Bn(bb, cb) {
+        const sb = {
           url: void 0,
-          ask: Fk,
-          Hb: !1,
+          ask: cb,
+          qU: !1,
           recheck: !1,
           inPlaceOf: void 0
         };
-        this.pending.set(kk, Bk);
-        for (let Rk = this.ready.length - 1; Rk >= 0; Rk--) this.ready[Rk].file === kk && this.ready.splice(Rk, 1);
-        return Bk
+        this.pending.set(bb, sb);
+        for (let kb = this.ready.length - 1; kb >= 0; kb--) this.ready[kb].file === bb && this.ready.splice(kb, 1);
+        return sb
       }
-      async wanted(kk) {
-        const Fk = await this.files.url(kk);
-        return null !== Fk && this.refusedPack.get(kk) === Fk ? {
-          url: await this.files.shippedUrl(kk),
-          inPlaceOf: Fk
+      async wanted(bb) {
+        const cb = await this.files.url(bb);
+        return null !== cb && this.refusedPack.get(bb) === cb ? {
+          url: await this.files.shippedUrl(bb),
+          inPlaceOf: cb
         } : {
-          url: Fk,
+          url: cb,
           inPlaceOf: void 0
         }
       }
-      fetchWanted(kk, Fk) {
-        const Bk = this.files.url(kk);
-        Bk instanceof Promise ? Bk.then((Bk => {
-          this.fetchFound(kk, Fk, Bk)
-        }), (Bk => {
-          this.pending.get(kk) === Fk && this.giveUp(kk, Fk, "", Bk)
-        })) : this.fetchFound(kk, Fk, Bk)
+      fetchWanted(bb, cb) {
+        const sb = this.files.url(bb);
+        sb instanceof Promise ? sb.then((sb => {
+          this.fetchFound(bb, cb, sb)
+        }), (sb => {
+          this.pending.get(bb) === cb && this.giveUp(bb, cb, "", sb)
+        })) : this.fetchFound(bb, cb, sb)
       }
-      fetchFound(kk, Fk, Bk) {
-        null !== Bk && this.refusedPack.get(kk) === Bk ? Promise.resolve(this.files.shippedUrl(kk)).then((Rk => {
-          this.fetch(kk, Fk, Rk, Bk)
-        }), (Rk => {
-          this.pending.get(kk) === Fk && this.giveUp(kk, Fk, Bk, Rk)
-        })) : this.fetch(kk, Fk, Bk)
+      fetchFound(bb, cb, sb) {
+        null !== sb && this.refusedPack.get(bb) === sb ? Promise.resolve(this.files.shippedUrl(bb)).then((kb => {
+          this.fetch(bb, cb, kb, sb)
+        }), (kb => {
+          this.pending.get(bb) === cb && this.giveUp(bb, cb, sb, kb)
+        })) : this.fetch(bb, cb, sb)
       }
-      fetch(kk, Fk, Bk, Rk) {
-        this.pending.get(kk) === Fk && (Fk.url = Bk, Fk.inPlaceOf = Rk, null !== Bk ? this.load(kk, Fk, Bk) : this.buildFile(kk, Fk, "", sk))
+      fetch(bb, cb, sb, kb) {
+        this.pending.get(bb) === cb && (cb.url = sb, cb.inPlaceOf = kb, null !== sb ? this.load(bb, cb, sb) : this.buildFile(bb, cb, "", fb))
       }
-      load(kk, Fk, Bk) {
-        const Rk = this.lA.get(kk);
-        (null === Rk || void 0 === Rk ? void 0 : Rk.url) !== Bk ? this.fetchFile(Bk).then((Rk => {
-          var tk, ak;
-          this.pending.get(kk) === Fk && (this.keptTotal += Rk.byteLength - (null !== (tk = null === (ak = this.lA.get(kk)) || void 0 === ak ? void 0 : ak.glb.byteLength) && void 0 !== tk ? tk : 0), this.lA.set(kk, {
-            url: Bk,
-            glb: Rk
-          }), this.buildFile(kk, Fk, Bk, Rk))
-        }), (Rk => {
-          this.pending.get(kk) === Fk && this.fallBack(kk, Fk, Bk, Rk)
-        })) : this.buildFile(kk, Fk, Bk, Rk.glb)
+      load(bb, cb, sb) {
+        const kb = this.vn.get(bb);
+        (null === kb || void 0 === kb ? void 0 : kb.url) !== sb ? this.fetchFile(sb).then((kb => {
+          var Wb, ab;
+          this.pending.get(bb) === cb && (this.keptTotal += kb.byteLength - (null !== (Wb = null === (ab = this.vn.get(bb)) || void 0 === ab ? void 0 : ab.glb.byteLength) && void 0 !== Wb ? Wb : 0), this.vn.set(bb, {
+            url: sb,
+            glb: kb
+          }), this.buildFile(bb, cb, sb, kb))
+        }), (kb => {
+          this.pending.get(bb) === cb && this.fallBack(bb, cb, sb, kb)
+        })) : this.buildFile(bb, cb, sb, kb.glb)
       }
-      buildFile(kk, Fk, Bk, Rk) {
-        let tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Xk = Rk.byteLength > 0 && (0, ak.l)(Bk) ? (kk | ak.e) >>> 0 : kk;
-        this.queueRecord(kk, Fk, Bk, Rk, this.build(Xk, Rk), tk)
+      buildFile(bb, cb, sb, kb) {
+        let Wb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const Tb = kb.byteLength > 0 && (0, ab.l)(sb) ? (bb | ab.e) >>> 0 : bb;
+        this.queueRecord(bb, cb, sb, kb, this.build(Tb, kb), Wb)
       }
-      queueRecord(kk, Fk, Bk, Rk, ak, bk) {
-        ak.then((ak => {
-          if (this.pending.get(kk) !== Fk) return;
-          if (tk.o + (0, tk.td)(ak.byteLength) > tk.dc) return void this.ringRefused(kk, Fk, Bk, new Vk(`${yk(Bk)}'s record is ${ak.byteLength-Xk.c} bytes, past the cmd ring's ${tk.dc}`), bk);
-          const wk = {
-            file: kk,
-            url: Bk,
-            payload: ak,
-            glb: Rk,
-            attempt: Fk
+      queueRecord(bb, cb, sb, kb, ab, Ub) {
+        ab.then((ab => {
+          if (this.pending.get(bb) !== cb) return;
+          if (Wb.q + (0, Wb.ze)(ab.byteLength) > Wb.Nc) return void this.ringRefused(bb, cb, sb, new Mb(`${lb(sb)}'s record is ${ab.byteLength-Tb.c} bytes, past the cmd ring's ${Wb.Nc}`), Ub);
+          const Ib = {
+            file: bb,
+            url: sb,
+            payload: ab,
+            glb: kb,
+            attempt: cb
           };
-          bk ? this.ready.unshift(wk) : this.ready.push(wk)
+          Ub ? this.ready.unshift(Ib) : this.ready.push(Ib)
         }))
       }
-      async fallBack(kk, Fk, Bk, Rk) {
-        var tk;
-        let ak = null,
-          Xk = Rk;
+      async fallBack(bb, cb, sb, kb) {
+        var Wb;
+        let ab = null,
+          Tb = kb;
         try {
-          ak = await this.files.shippedUrl(kk)
-        } catch (bk) {
-          Xk = bk
+          ab = await this.files.shippedUrl(bb)
+        } catch (Ub) {
+          Tb = Ub
         }
-        this.pending.get(kk) === Fk && (null !== ak && ak !== Bk ? (null === (tk = this.onPackFileFailed) || void 0 === tk || tk.call(this, kk, Rk), Fk.ask || this.drawn.get(kk) !== ak ? (Fk.url = ak, Fk.inPlaceOf = Bk, this.load(kk, Fk, ak)) : this.pending.delete(kk)) : this.giveUp(kk, Fk, Bk, Xk))
+        this.pending.get(bb) === cb && (null !== ab && ab !== sb ? (null === (Wb = this.onPackFileFailed) || void 0 === Wb || Wb.call(this, bb, kb), cb.ask || this.drawn.get(bb) !== ab ? (cb.url = ab, cb.inPlaceOf = sb, this.load(bb, cb, ab)) : this.pending.delete(bb)) : this.giveUp(bb, cb, sb, Tb))
       }
-      ringRefused(kk, Fk, Bk, Rk) {
-        let tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        (0, ak.l)(Bk) ? this.fallBack(kk, Fk, Bk, Rk): this.giveUp(kk, Fk, Bk, Rk, tk)
+      ringRefused(bb, cb, sb, kb) {
+        let Wb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        (0, ab.l)(sb) ? this.fallBack(bb, cb, sb, kb): this.giveUp(bb, cb, sb, kb, Wb)
       }
-      giveUp(kk, Fk, Bk, tk) {
-        let ak = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      giveUp(bb, cb, sb, Wb) {
+        let ab = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         this.onFailure({
-          file: kk,
-          url: yk(Bk),
-          error: tk,
-          startup: this.startupLeft.has(kk)
-        }), Fk.ask || !this.drawn.has(kk) ? (0, Rk.U)(tk) ? this.queueRecord(kk, Fk, Bk, sk, Promise.resolve((0, Xk.m)(kk, (0, bk.j)(tk))), ak) : this.buildFile(kk, Fk, Bk, sk, ak) : this.pending.delete(kk)
+          file: bb,
+          url: lb(sb),
+          error: Wb,
+          startup: this.startupLeft.has(bb)
+        }), cb.ask || !this.drawn.has(bb) ? (0, kb.J)(Wb) ? this.queueRecord(bb, cb, sb, fb, Promise.resolve((0, Tb.m)(bb, (0, Ub.h)(Wb))), ab) : this.buildFile(bb, cb, sb, fb, ab) : this.pending.delete(bb)
       }
-      async resendIfChanged(kk) {
-        var Fk;
-        if (0 !== (kk & ak.h)) return;
-        let Bk;
+      async resendIfChanged(bb) {
+        var cb;
+        if (0 !== (bb & ab.i)) return;
+        let sb;
         try {
-          Bk = await this.wanted(kk)
+          sb = await this.wanted(bb)
         } catch {
           return
-        }(null !== (Fk = Bk.url) && void 0 !== Fk ? Fk : void 0) === this.drawn.get(kk) || this.pending.has(kk) || this.written.has(kk) || this.fetch(kk, this.UA(kk, !1), Bk.url, Bk.inPlaceOf)
+        }(null !== (cb = sb.url) && void 0 !== cb ? cb : void 0) === this.drawn.get(bb) || this.pending.has(bb) || this.written.has(bb) || this.fetch(bb, this.Bn(bb, !1), sb.url, sb.inPlaceOf)
       }
-      drain(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null === kk) return;
-        let Bk = 0,
-          Rk = 0;
-        for (; Rk < this.ready.length && Bk < 262144;) {
-          const bk = this.ready[Rk];
-          if (this.written.has(bk.file)) {
-            Rk++;
+      drain(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null === bb) return;
+        let sb = 0,
+          kb = 0;
+        for (; kb < this.ready.length && sb < 262144;) {
+          const Ub = this.ready[kb];
+          if (this.written.has(Ub.file)) {
+            kb++;
             continue
           }
-          const sk = this.nextSeq;
-          new DataView(bk.payload.buffer, bk.payload.byteOffset, bk.payload.byteLength).setUint32(Xk.f, sk, !0);
-          const Jk = bk.attempt.Hb && bk.glb.byteLength > 0 && this.drawn.get(bk.file) === bk.url;
-          if (kk(wk, Jk ? 1 : 0, bk.payload)) {
-            if (this.nextSeq = sk >= dk - 1 ? 1 : sk + 1, this.ready.splice(Rk, 1), Bk += bk.payload.byteLength, this.pending.delete(bk.file), this.startupLeft.delete(bk.file), this.written.set(bk.file, {
-                seq: sk,
-                url: bk.url,
-                empty: 0 === bk.glb.byteLength,
-                attempt: bk.attempt
-              }), bk.glb.byteLength > 0) try {
-              var tk;
-              null === (tk = this.onWritten) || void 0 === tk || tk.call(this, bk.file, bk.glb)
-            } catch (ak) {
-              console.warn("ModelFeed: reading the file's images failed", ak)
+          const fb = this.nextSeq;
+          new DataView(Ub.payload.buffer, Ub.payload.byteOffset, Ub.payload.byteLength).setUint32(Tb.e, fb, !0);
+          const Xb = Ub.attempt.qU && Ub.glb.byteLength > 0 && this.drawn.get(Ub.file) === Ub.url;
+          if (bb(Ib, Xb ? 1 : 0, Ub.payload)) {
+            if (this.nextSeq = fb >= Hb - 1 ? 1 : fb + 1, this.ready.splice(kb, 1), sb += Ub.payload.byteLength, this.pending.delete(Ub.file), this.startupLeft.delete(Ub.file), this.written.set(Ub.file, {
+                seq: fb,
+                url: Ub.url,
+                empty: 0 === Ub.glb.byteLength,
+                attempt: Ub.attempt
+              }), Ub.glb.byteLength > 0) try {
+              var Wb;
+              null === (Wb = this.onWritten) || void 0 === Wb || Wb.call(this, Ub.file, Ub.glb)
+            } catch (ab) {
+              console.warn("ModelFeed: reading the file's images failed", ab)
             }
           } else {
-            if (null === Fk || 0 === bk.glb.byteLength || Fk(bk.payload.byteLength)) return;
-            this.ready.splice(Rk, 1);
-            const kk = new Vk(`${yk(bk.url)}'s record is ${bk.payload.byteLength-Xk.c} bytes, more than the cmd ring can grow to take`);
-            this.ringRefused(bk.file, bk.attempt, bk.url, kk, !0)
+            if (null === cb || 0 === Ub.glb.byteLength || cb(Ub.payload.byteLength)) return;
+            this.ready.splice(kb, 1);
+            const bb = new Mb(`${lb(Ub.url)}'s record is ${Ub.payload.byteLength-Tb.c} bytes, more than the cmd ring can grow to take`);
+            this.ringRefused(Ub.file, Ub.attempt, Ub.url, bb, !0)
           }
         }
       }
     }
 
-    function ek(kk) {
-      return new Jk(`presentation refused ${yk(kk)}`)
+    function mb(bb) {
+      return new Xb(`presentation refused ${lb(bb)}`)
     }
 
-    function yk(kk) {
-      return kk.startsWith("data:") ? `${kk.slice(0,Math.min(Math.max(kk.indexOf(","),5),64))},...` : kk
+    function lb(bb) {
+      return bb.startsWith("data:") ? `${bb.slice(0,Math.min(Math.max(bb.indexOf(","),5),64))},...` : bb
     }
   },
-  40387: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Xk,
-      h: () => ak,
-      j: () => sk,
-      l: () => bk,
-      o: () => dk,
-      r: () => wk
+  40391: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Tb,
+      i: () => ab,
+      j: () => fb,
+      l: () => Ub,
+      m: () => Hb,
+      n: () => Ib
     });
-    var Rk = Bk(3506),
-      tk = Bk(3007);
-    const ak = 2147483648,
-      Xk = 1073741824;
+    var kb = sb(3505),
+      Wb = sb(2959);
+    const ab = 2147483648,
+      Tb = 1073741824;
 
-    function bk(kk) {
-      return kk.startsWith("data:")
+    function Ub(bb) {
+      return bb.startsWith("data:")
     }
 
-    function wk(kk) {
+    function Ib(bb) {
       let {
-        onTableFailed: Fk,
-        packUrl: Bk
+        onTableFailed: cb,
+        packUrl: sb
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const Rk = dk();
-      Rk.catch((kk => {
-        null === Fk || void 0 === Fk || Fk(kk)
+      const kb = Hb();
+      kb.catch((bb => {
+        null === cb || void 0 === cb || cb(bb)
       }));
-      const tk = async Fk => (await Rk).fileUrl((Fk & ~ak) >>> 0, kk);
+      const Wb = async cb => (await kb).fileUrl((cb & ~ab) >>> 0, bb);
       return {
         startup: [],
-        url: async kk => {
-          if (Bk && 0 === (kk & ak)) {
-            const Fk = await Rk,
-              tk = Fk.filePackName(kk),
-              ak = null === tk || "lifeform" === Fk.fileSource(kk) ? null : Bk(tk);
-            if (null !== ak) return ak
+        url: async bb => {
+          if (sb && 0 === (bb & ab)) {
+            const cb = await kb,
+              Wb = cb.filePackName(bb),
+              ab = null === Wb || "lifeform" === cb.fileSource(bb) ? null : sb(Wb);
+            if (null !== ab) return ab
           }
-          return tk(kk)
+          return Wb(bb)
         },
-        shippedUrl: tk
+        shippedUrl: Wb
       }
     }
 
-    function dk() {
-      return Bk.e(41).then((() => Bk(42829)))
+    function Hb() {
+      return sb.e(41).then((() => sb(42734)))
     }
-    async function sk(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-      return kk.startsWith("data:") ? (0, tk.e)(kk.slice(kk.indexOf(",") + 1), Fk) : (0, Rk.N)(kk, {
-        spare: Fk
+    async function fb(bb) {
+      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+      return bb.startsWith("data:") ? (0, Wb.b)(bb.slice(bb.indexOf(",") + 1), cb) : (0, kb.C)(bb, {
+        spare: cb
       })
     }
   },
-  40393: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => dk,
-      f: () => sk,
-      i: () => Ak,
-      k: () => fk,
-      m: () => ek,
-      o: () => Jk,
-      p: () => yk
+  40396: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Hb,
+      e: () => fb,
+      h: () => nb,
+      k: () => Qb,
+      m: () => mb,
+      q: () => Xb,
+      t: () => lb
     });
-    const Rk = 826427981,
-      tk = 1,
-      ak = 2,
-      Xk = 44,
-      bk = 46,
-      wk = 58,
-      dk = 8,
-      sk = 4;
+    const kb = 826427981,
+      Wb = 1,
+      ab = 2,
+      Tb = 44,
+      Ub = 46,
+      Ib = 58,
+      Hb = 8,
+      fb = 4;
 
-    function Vk(kk, Fk, Bk) {
-      const tk = (new TextEncoder).encode(Bk),
-        ak = dk + 4 * (Fk.length + 2),
-        Xk = new Uint8Array(ak + (tk.byteLength + 3 & -4)),
-        bk = new DataView(Xk.buffer);
-      return bk.setUint32(0, kk, !0), bk.setUint32(dk, Rk, !0), Fk.forEach(((kk, Fk) => {
-        bk.setUint32(dk + 4 * (Fk + 1), kk, !0)
-      })), bk.setUint32(ak - 4, tk.byteLength, !0), Xk.set(tk, ak), Xk
+    function Mb(bb, cb, sb) {
+      const Wb = (new TextEncoder).encode(sb),
+        ab = Hb + 4 * (cb.length + 2),
+        Tb = new Uint8Array(ab + (Wb.byteLength + 3 & -4)),
+        Ub = new DataView(Tb.buffer);
+      return Ub.setUint32(0, bb, !0), Ub.setUint32(Hb, kb, !0), cb.forEach(((bb, cb) => {
+        Ub.setUint32(Hb + 4 * (cb + 1), bb, !0)
+      })), Ub.setUint32(ab - 4, Wb.byteLength, !0), Tb.set(Wb, ab), Tb
     }
 
-    function Jk(kk, Fk) {
-      return Vk(kk, [ak], Fk)
+    function Xb(bb, cb) {
+      return Mb(bb, [ab], cb)
     }
 
-    function Ak(kk, Fk) {
-      return Vk(kk, [tk, bk], Fk)
+    function nb(bb, cb) {
+      return Mb(bb, [Wb, Ub], cb)
     }
 
-    function ek(kk, Fk) {
-      return Vk(kk, [tk, wk], Fk)
+    function mb(bb, cb) {
+      return Mb(bb, [Wb, Ib], cb)
     }
 
-    function yk(kk, Fk) {
-      return Vk(kk, [tk, Xk], Fk)
+    function lb(bb, cb) {
+      return Mb(bb, [Wb, Tb], cb)
     }
 
-    function fk(kk) {
-      const Fk = dk;
-      if (kk.byteLength < Fk + 12) return !1;
-      const Bk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength);
-      return Bk.getUint32(Fk, !0) === Rk && Bk.getUint32(Fk + 4, !0) === tk && Bk.getUint32(Fk + 8, !0) === Xk
+    function Qb(bb) {
+      const cb = Hb;
+      if (bb.byteLength < cb + 12) return !1;
+      const sb = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
+      return sb.getUint32(cb, !0) === kb && sb.getUint32(cb + 4, !0) === Wb && sb.getUint32(cb + 8, !0) === Tb
     }
   },
-  40364: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Wk,
-      h: () => mk,
-      j: () => Lk,
-      k: () => Yk,
-      l: () => Ok,
-      m: () => yk
+  40378: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Cb,
+      e: () => eb,
+      i: () => ub,
+      j: () => Lb,
+      n: () => Yb,
+      p: () => lb
     });
-    var Rk = Bk(4531),
-      tk = Bk(40252);
-    const ak = 18,
-      Xk = 19,
-      bk = 20,
-      wk = {
+    var kb = sb(4517),
+      Wb = sb(40256);
+    const ab = 18,
+      Tb = 19,
+      Ub = 20,
+      Ib = {
         1: "link",
         2: "draw",
         3: "draw base vertex",
@@ -2564,24 +2564,24 @@ export const modules = {
         13: "draw short constant",
         15: "draw no zero buffer",
         16: "draw feedback loop",
-        [ak]: "retry linked",
-        [Xk]: "fallback linked",
-        [bk]: "fallback failed",
+        [ab]: "retry linked",
+        [Tb]: "fallback linked",
+        [Ub]: "fallback failed",
         32: "compile validation",
         33: "compile internal",
         34: "compile timeout"
       };
 
-    function dk(kk, Fk) {
-      return kk === ak ? "program retry" : kk === Xk || kk === bk ? `program fallback ${Fk}` : "program"
+    function Hb(bb, cb) {
+      return bb === ab ? "program retry" : bb === Tb || bb === Ub ? `program fallback ${cb}` : "program"
     }
-    const sk = {
+    const fb = {
         1: "renderer",
         2: "sky",
         3: "meshes",
         4: "terrain"
       },
-      Vk = {
+      Mb = {
         0: "transform",
         1: "object",
         2: "instance batch",
@@ -2594,14 +2594,14 @@ export const modules = {
         10: "text plane",
         11: "object chunk"
       },
-      Jk = {
+      Xb = {
         1: "mesh undecodable",
         2: "part refused",
         3: "terrain ids full",
         4: "unknown terrain id",
         5: "buffer failed"
       },
-      Ak = {
+      nb = {
         1: "view waited drained",
         2: "view waited capped",
         3: "none after view",
@@ -2610,7 +2610,7 @@ export const modules = {
         6: "no wait parallel links",
         7: "view shown unheld"
       },
-      ek = {
+      mb = {
         1280: "invalid enum",
         1281: "invalid value",
         1282: "invalid operation",
@@ -2619,78 +2619,78 @@ export const modules = {
         37442: "context lost"
       };
 
-    function yk(kk) {
-      return String(kk).replace(/\d/g, (kk => String.fromCharCode(97 + Number(kk))))
+    function lb(bb) {
+      return String(bb).replace(/\d/g, (bb => String.fromCharCode(97 + Number(bb))))
     }
 
-    function fk(kk, Fk) {
-      var Bk;
-      return null !== (Bk = kk[Fk]) && void 0 !== Bk ? Bk : yk(Fk)
+    function Qb(bb, cb) {
+      var sb;
+      return null !== (sb = bb[cb]) && void 0 !== sb ? sb : lb(cb)
     }
 
-    function mk() {
-      return yk((0, tk.e)())
+    function eb() {
+      return lb((0, Wb.c)())
     }
 
-    function Wk(kk, Fk) {
-      switch (kk) {
-        case Rk.g.RenderSceneRowNotDrawn:
+    function Cb(bb, cb) {
+      switch (bb) {
+        case kb.f.RenderSceneRowNotDrawn:
           return {
-            words: ` ${fk(Vk,Fk)}`, instance: String(Fk), group: String(kk)
+            words: ` ${Qb(Mb,cb)}`, instance: String(cb), group: String(bb)
           };
-        case Rk.g.RenderChunkMeshNotDrawn: {
-          const Bk = 0 === (128 & Fk) ? "" : " shortage",
-            Rk = Fk >>> 8;
+        case kb.f.RenderChunkMeshNotDrawn: {
+          const sb = 0 === (128 & cb) ? "" : " shortage",
+            kb = cb >>> 8;
           return {
-            words: ` ${fk(Jk,127&Fk)}${Bk}${0===Rk?"":` kind ${yk(Rk)}`}`,
-            instance: String(Fk),
-            group: String(kk)
+            words: ` ${Qb(Xb,127&cb)}${sb}${0===kb?"":` kind ${lb(kb)}`}`,
+            instance: String(cb),
+            group: String(bb)
           }
         }
-        case Rk.g.RenderInternal: {
-          const Bk = fk(sk, 255 & Fk),
-            Rk = Fk >>> 8 & 255;
-          if (0 === Rk) return {
-            words: ` ${Bk}`,
-            instance: String(Fk),
-            group: String(kk)
+        case kb.f.RenderInternal: {
+          const sb = Qb(fb, 255 & cb),
+            kb = cb >>> 8 & 255;
+          if (0 === kb) return {
+            words: ` ${sb}`,
+            instance: String(cb),
+            group: String(bb)
           };
-          const tk = fk(wk, Rk),
-            ak = Fk >>> 16;
+          const Wb = Qb(Ib, kb),
+            ab = cb >>> 16;
           return {
-            words: ` ${Bk} ${tk} program ${yk(ak)}`,
-            instance: `${Bk} ${tk}`,
-            group: dk(Rk, Bk),
+            words: ` ${sb} ${Wb} program ${lb(ab)}`,
+            instance: `${sb} ${Wb}`,
+            group: Hb(kb, sb),
             gpuDetails: {
-              programFailure: tk,
-              program: String(ak)
+              programFailure: Wb,
+              program: String(ab)
             }
           }
         }
-        case Rk.g.RenderSerialLinks: {
-          const Bk = fk(Ak, Fk);
+        case kb.f.RenderSerialLinks: {
+          const sb = Qb(nb, cb);
           return {
-            words: ` ${Bk}`,
-            instance: String(Fk),
-            group: String(kk),
+            words: ` ${sb}`,
+            instance: String(cb),
+            group: String(bb),
             gpuDetails: {
-              serialLinks: Bk
+              serialLinks: sb
             }
           }
         }
-        case Rk.g.RenderGlErrorAfterRestore: {
-          const Bk = fk(ek, 65535 & Fk),
-            Rk = Fk >>> 16,
-            tk = 65535 !== Rk;
+        case kb.f.RenderGlErrorAfterRestore: {
+          const sb = Qb(mb, 65535 & cb),
+            kb = cb >>> 16,
+            Wb = 65535 !== kb;
           return {
-            words: ` ${Bk}${tk?` program ${yk(Rk)}`:""}`,
-            instance: String(Fk),
-            group: String(kk),
-            gpuDetails: tk ? {
-              glError: Bk,
-              program: String(Rk)
+            words: ` ${sb}${Wb?` program ${lb(kb)}`:""}`,
+            instance: String(cb),
+            group: String(bb),
+            gpuDetails: Wb ? {
+              glError: sb,
+              program: String(kb)
             } : {
-              glError: Bk
+              glError: sb
             }
           }
         }
@@ -2698,533 +2698,533 @@ export const modules = {
           return null
       }
     }
-    const vk = 2,
-      ik = new Map;
+    const Nb = 2,
+      Vb = new Map;
 
-    function Yk(kk) {
+    function Lb(bb) {
       let {
-        group: Fk,
-        instance: Bk
-      } = kk, Rk = ik.get(Fk);
-      return void 0 === Rk && (Rk = [], ik.set(Fk, Rk)), !Rk.includes(Bk) && (Rk.length >= vk || (Rk.push(Bk), !1))
+        group: cb,
+        instance: sb
+      } = bb, kb = Vb.get(cb);
+      return void 0 === kb && (kb = [], Vb.set(cb, kb)), !kb.includes(sb) && (kb.length >= Nb || (kb.push(sb), !1))
     }
 
-    function Lk() {
-      return ik.size > 0
+    function ub() {
+      return Vb.size > 0
     }
 
-    function Ok() {
-      ik.clear()
+    function Yb() {
+      Vb.clear()
     }
   },
-  40290: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => mk,
-      e: () => Wk,
-      g: () => fk,
-      h: () => Lk
+  40301: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => eb,
+      f: () => Cb,
+      i: () => Qb,
+      m: () => ub
     });
-    var Rk = Bk(6349),
-      tk = Bk(29),
-      ak = Bk(4072),
-      Xk = Bk(4531),
-      bk = Bk(6343),
-      wk = Bk(40292);
+    var kb = sb(6312),
+      Wb = sb(26),
+      ab = sb(4087),
+      Tb = sb(4517),
+      Ub = sb(6309),
+      Ib = sb(40308);
 
-    function dk(kk, Fk) {
-      const Bk = (0, bk.b)(Fk.variants);
-      return kk.setShaderPack(Bk.variantFlags, Bk.hooks, Bk.moduleCodes, (0, wk.v)(Fk.layers), wk.m[Fk.aX], Fk.keepCircleShadows)
+    function Hb(bb, cb) {
+      const sb = (0, Ub.b)(cb.variants);
+      return bb.setShaderPack(sb.variantFlags, sb.hooks, sb.moduleCodes, (0, Ib.C)(cb.layers), Ib.l[cb.YT], cb.keepCircleShadows)
     }
-    const sk = 0,
-      Vk = 1,
-      Jk = 2,
-      Ak = "shaderPack:failedToCompile",
-      ek = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
-      yk = new Set(["not_requested", "off_after_loss", "gpu_class_webgl"]);
+    const fb = 0,
+      Mb = 1,
+      Xb = 2,
+      nb = "shaderPack:failedToCompile",
+      mb = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
+      lb = new Set(["not_requested", "off_after_loss", "gpu_class_webgl"]);
 
-    function fk(kk, Fk) {
-      var Bk;
-      const Rk = null !== (Bk = null === kk || void 0 === kk ? void 0 : kk.reason) && void 0 !== Bk ? Bk : "none";
-      return ek.has(Rk) ? {
-        messageKey: Fk ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
+    function Qb(bb, cb) {
+      var sb;
+      const kb = null !== (sb = null === bb || void 0 === bb ? void 0 : bb.reason) && void 0 !== sb ? sb : "none";
+      return mb.has(kb) ? {
+        messageKey: cb ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
         noAdapter: !0
-      } : "not_requested" === Rk && "override" === (null === kk || void 0 === kk ? void 0 : kk.source) ? {
+      } : "not_requested" === kb && "override" === (null === bb || void 0 === bb ? void 0 : bb.source) ? {
         messageKey: "shaderPack:failedRendererOverride",
         noAdapter: !1
       } : {
-        messageKey: yk.has(Rk) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
+        messageKey: lb.has(kb) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
         noAdapter: !1
       }
     }
-    const mk = {
+    const eb = {
       messageKey: "shaderPack:failedDeviceGraphics",
       noAdapter: !1
     };
-    class Wk extends Error {
-      constructor(kk) {
-        super(`the shader pack can't run in this game: ${kk}`), this.messageKey = kk, this.name = "ShaderPackJoinError"
+    class Cb extends Error {
+      constructor(bb) {
+        super(`the shader pack can't run in this game: ${bb}`), this.messageKey = bb, this.name = "ShaderPackJoinError"
       }
     }
-    const vk = "strict";
-    class ik {
-      constructor(kk) {
-        this.deps = kk, this.pagePack = void 0, this.loaded = null, this.aX = vk, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = kk.load().catch((Fk => (kk.warn("the shader pack could not load: the game draws without it", Fk), {
+    const Nb = "strict";
+    class Vb {
+      constructor(bb) {
+        this.deps = bb, this.pagePack = void 0, this.loaded = null, this.YT = Nb, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = bb.load().catch((cb => (bb.warn("the shader pack could not load: the game draws without it", cb), {
           status: "none"
-        }))).then((kk => (this.loaded = kk, "active" === kk.status && (this.handOverToPreviews(kk), null !== kk.harnessPolicy && (this.aX = kk.harnessPolicy, this.handOver())), kk)))
+        }))).then((bb => (this.loaded = bb, "active" === bb.status && (this.handOverToPreviews(bb), null !== bb.harnessPolicy && (this.YT = bb.harnessPolicy, this.handOver())), bb)))
       }
-      async join(kk) {
+      async join(bb) {
         this.leave();
-        const Fk = this.game,
-          [Bk, tk] = await Promise.all([this.pagePack, this.policyOf(kk)]);
-        if (Fk !== this.game || "none" === Bk.status) return null;
-        const ak = "active" === Bk.status ? Bk.pack.variants : Bk.variants,
-          Xk = (0, Rk.h)(ak, tk);
-        if (Xk && "active" === Bk.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
-        if (Xk) {
-          const kk = this.cantRun(Bk, tk);
-          if (null !== kk) return kk
-        } else if ("blocked" === Bk.status || null === this.deps.core) return null;
-        return this.aX = tk, this.handOver(), Xk && this.refused ? Ak : (this.joined = !0, this.offInThisGame = !Xk, null)
+        const cb = this.game,
+          [sb, Wb] = await Promise.all([this.pagePack, this.policyOf(bb)]);
+        if (cb !== this.game || "none" === sb.status) return null;
+        const ab = "active" === sb.status ? sb.pack.variants : sb.variants,
+          Tb = (0, kb.f)(ab, Wb);
+        if (Tb && "active" === sb.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
+        if (Tb) {
+          const bb = this.cantRun(sb, Wb);
+          if (null !== bb) return bb
+        } else if ("blocked" === sb.status || null === this.deps.core) return null;
+        return this.YT = Wb, this.handOver(), Tb && this.refused ? nb : (this.joined = !0, this.offInThisGame = !Tb, null)
       }
-      async replay(kk) {
-        const Fk = await this.join(kk);
-        null === Fk ? this.playable() : this.deps.failInGame(Fk)
+      async replay(bb) {
+        const cb = await this.join(bb);
+        null === cb ? this.playable() : this.deps.failInGame(cb)
       }
-      cantRun(kk, Fk) {
+      cantRun(bb, cb) {
         const {
-          core: Bk,
-          noWebGpu: Rk
+          core: sb,
+          noWebGpu: kb
         } = this.deps;
-        if ("blocked" === kk.status) {
-          return "shaderPack:failedUnchecked" === kk.messageKey && null === Bk && Rk.noAdapter ? Rk.messageKey : kk.messageKey
+        if ("blocked" === bb.status) {
+          return "shaderPack:failedUnchecked" === bb.messageKey && null === sb && kb.noAdapter ? kb.messageKey : bb.messageKey
         }
-        return this.refused || this.failedPolicies.has(Fk) ? Ak : null
+        return this.refused || this.failedPolicies.has(cb) ? nb : null
       }
       runsInJoinedGame() {
         return this.joined && !this.offInThisGame
       }
       reachInJoinedGame() {
-        var kk;
-        return this.runsInJoinedGame() && "active" === (null === (kk = this.loaded) || void 0 === kk ? void 0 : kk.status) ? function(kk, Fk) {
-          const Bk = kk.filter((kk => (0, Rk.h)([kk], Fk))),
-            tk = kk => Bk.some((Fk => Fk[kk]));
+        var bb;
+        return this.runsInJoinedGame() && "active" === (null === (bb = this.loaded) || void 0 === bb ? void 0 : bb.status) ? function(bb, cb) {
+          const sb = bb.filter((bb => (0, kb.f)([bb], cb))),
+            Wb = bb => sb.some((cb => cb[bb]));
           return {
-            sceneDepth: tk("sceneDepth"),
-            sunShadow: tk("sunShadow"),
-            airShadow: tk("airShadow")
+            sceneDepth: Wb("sceneDepth"),
+            sunShadow: Wb("sunShadow"),
+            airShadow: Wb("airShadow")
           }
-        }(this.loaded.pack.variants, this.aX) : null
+        }(this.loaded.pack.variants, this.YT) : null
       }
       couldntRunInJoinedGame() {
         return this.couldntRun
       }
       playable() {
-        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(Ak) : (null !== this.couldntRun ? this.notify(ak.d, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.aX) && this.notifyModelFallback()))
+        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(nb) : (null !== this.couldntRun ? this.notify(ab.d, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.YT) && this.notifyModelFallback()))
       }
       leave() {
         this.game++, this.joined = !1, this.playing = !1, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1
       }
-      coreErrors(kk) {
+      coreErrors(bb) {
         for (const {
-            code: Fk,
-            detail: Bk
+            code: cb,
+            detail: sb
           }
-          of kk)
-          if (Fk === Xk.g.RenderShaderPackNotRun) switch (255 & Bk) {
-            case sk:
+          of bb)
+          if (cb === Tb.f.RenderShaderPackNotRun) switch (255 & sb) {
+            case fb:
               this.refused = !0, this.failed();
               break;
-            case Vk:
-              this.failedPolicies.add(this.aX), this.failed();
+            case Mb:
+              this.failedPolicies.add(this.YT), this.failed();
               break;
-            case Jk:
-              this.failedModelPolicies.add(this.aX), this.playing && this.notifyModelFallback()
+            case Xb:
+              this.failedModelPolicies.add(this.YT), this.playing && this.notifyModelFallback()
           }
       }
       failed() {
-        this.joined && !this.offInThisGame && (this.playing ? this.fail(Ak) : this.failedWhileJoining = !0)
+        this.joined && !this.offInThisGame && (this.playing ? this.fail(nb) : this.failedWhileJoining = !0)
       }
-      fail(kk) {
-        this.leave(), this.deps.failInGame(kk)
+      fail(bb) {
+        this.leave(), this.deps.failInGame(bb)
       }
       notifyModelFallback() {
         this.modelsNotified || (this.modelsNotified = !0, this.notify("shaderPack:modelsWithoutPack"))
       }
-      notify(kk, Fk) {
-        const Bk = this.game;
-        this.deps.notify(kk, (() => Bk === this.game && this.joined), Fk)
+      notify(bb, cb) {
+        const sb = this.game;
+        this.deps.notify(bb, (() => sb === this.game && this.joined), cb)
       }
       handOver() {
-        var kk;
+        var bb;
         const {
-          core: Fk
+          core: cb
         } = this.deps;
-        null !== Fk && "active" === (null === (kk = this.loaded) || void 0 === kk ? void 0 : kk.status) && (dk(Fk, {
+        null !== cb && "active" === (null === (bb = this.loaded) || void 0 === bb ? void 0 : bb.status) && (Hb(cb, {
           ...this.loaded.pack,
-          aX: this.aX
+          YT: this.YT
         }) || (this.refused = !0, this.deps.warn("the core refused the shader pack: the games it runs in fail", null)))
       }
-      handOverToPreviews(kk) {
+      handOverToPreviews(bb) {
         let {
-          pack: Fk,
-          harnessPolicy: Bk
-        } = kk;
+          pack: cb,
+          harnessPolicy: sb
+        } = bb;
         const {
-          previews: Rk
+          previews: kb
         } = this.deps;
-        null !== Rk && dk(Rk, {
-          ...Fk,
-          aX: null !== Bk && void 0 !== Bk ? Bk : vk
+        null !== kb && Hb(kb, {
+          ...cb,
+          YT: null !== sb && void 0 !== sb ? sb : Nb
         })
       }
-      policyOf(kk) {
-        return this.deps.policyOf(kk).catch((kk => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", kk), vk)))
+      policyOf(bb) {
+        return this.deps.policyOf(bb).catch((bb => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", bb), Nb)))
       }
     }
-    const Yk = "wasmShaderPackNotice";
+    const Lb = "wasmShaderPackNotice";
 
-    function Lk(kk, Fk, Bk, Rk) {
-      return tk.o.subscribe(Yk, (kk => {
+    function ub(bb, cb, sb, kb) {
+      return Wb.j.subscribe(Lb, (bb => {
         let {
-          translationKey: Fk,
-          stillCurrent: Bk,
-          reasonKey: Rk
-        } = kk;
-        Bk() && tk.o.Hf("chat", (0, ak.k)(Fk, Rk))
-      })), new ik({
-        load: Ok,
-        policyOf: Ek,
-        core: kk,
-        previews: Fk,
-        noWebGpu: Bk,
-        notify: (kk, Fk, Bk) => {
-          const Rk = {
-            translationKey: kk,
-            stillCurrent: Fk,
-            reasonKey: Bk
+          translationKey: cb,
+          stillCurrent: sb,
+          reasonKey: kb
+        } = bb;
+        sb() && Wb.j.QQ("chat", (0, ab.i)(cb, kb))
+      })), new Vb({
+        load: Yb,
+        policyOf: hb,
+        core: bb,
+        previews: cb,
+        noWebGpu: sb,
+        notify: (bb, cb, sb) => {
+          const kb = {
+            translationKey: bb,
+            stillCurrent: cb,
+            reasonKey: sb
           };
-          tk.o.Hf(Yk, Rk, !0)
+          Wb.j.QQ(Lb, kb, !0)
         },
-        failInGame: kk => {
-          tk.o.Hf(ak.h, kk)
+        failInGame: bb => {
+          Wb.j.QQ(ab.g, bb)
         },
-        warn: Rk
+        warn: kb
       })
     }
-    async function Ok() {
+    async function Yb() {
       const [{
-        shaderPackPage: kk,
-        harnessShaderPackMode: Fk
+        shaderPackPage: bb,
+        harnessShaderPackMode: cb
       }, {
-        shaderPackTextures: Rk
-      }] = await Promise.all([Bk.e(129).then((() => Bk(38817))), Bk.e(130).then((() => Bk(6340)))]), tk = await kk.load();
-      return "active" !== tk.status ? tk : {
+        shaderPackTextures: kb
+      }] = await Promise.all([sb.e(129).then((() => sb(38787))), sb.e(130).then((() => sb(6301)))]), Wb = await bb.load();
+      return "active" !== Wb.status ? Wb : {
         status: "active",
         pack: {
-          variants: tk.pack.variants,
-          layers: Rk().layers,
-          keepCircleShadows: tk.pack.keepCircleShadows
+          variants: Wb.pack.variants,
+          layers: kb().layers,
+          keepCircleShadows: Wb.pack.keepCircleShadows
         },
-        harnessPolicy: Fk()
+        harnessPolicy: cb()
       }
     }
-    async function Ek(kk) {
-      var Fk;
+    async function hb(bb) {
+      var cb;
       const [{
-        harnessShaderPackMode: Rk
+        harnessShaderPackMode: kb
       }, {
-        getShaderPackPolicy: tk
-      }] = await Promise.all([Bk.e(129).then((() => Bk(38817))), Bk.e(89).then((() => Bk(40709)))]);
-      return null !== (Fk = Rk()) && void 0 !== Fk ? Fk : tk(kk)
+        getShaderPackPolicy: Wb
+      }] = await Promise.all([sb.e(129).then((() => sb(38787))), sb.e(89).then((() => sb(40700)))]);
+      return null !== (cb = kb()) && void 0 !== cb ? cb : Wb(bb)
     }
   },
-  40407: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => bk,
-      g: () => fk,
-      k: () => wk,
-      n: () => dk,
-      q: () => sk,
-      s: () => Jk
+  40406: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Ub,
+      c: () => Qb,
+      e: () => Ib,
+      h: () => Hb,
+      j: () => fb,
+      m: () => Xb
     });
-    var Rk = Bk(40413),
-      tk = Bk(40421);
-    const ak = "atlas:",
-      Xk = 3e4;
-    class bk extends Error {
-      constructor(kk, Fk) {
-        super(`fetching ${kk} answered HTTP ${Fk}`), this.url = kk, this.status = Fk, this.name = "TerrainTextureFetchError"
+    var kb = sb(40411),
+      Wb = sb(40415);
+    const ab = "atlas:",
+      Tb = 3e4;
+    class Ub extends Error {
+      constructor(bb, cb) {
+        super(`fetching ${bb} answered HTTP ${cb}`), this.url = bb, this.status = cb, this.name = "TerrainTextureFetchError"
       }
     }
 
-    function wk(kk) {
-      if (!kk.startsWith(ak)) return null;
-      const Fk = Number(kk.slice(ak.length));
-      return Number.isInteger(Fk) && Fk >= 0 ? Fk : null
+    function Ib(bb) {
+      if (!bb.startsWith(ab)) return null;
+      const cb = Number(bb.slice(ab.length));
+      return Number.isInteger(cb) && cb >= 0 ? cb : null
     }
-    async function dk() {
-      const kk = await Bk.e(201).then((() => Bk(34024)));
+    async function Hb() {
+      const bb = await sb.e(201).then((() => sb(33944)));
       return {
-        atlasSheets: kk.blockAtlasUrls,
-        texture: Fk => {
-          var Bk, Rk, ak;
-          return null !== (Bk = null !== (Rk = null !== (ak = kk.animatedBlockTextures[Fk]) && void 0 !== ak ? ak : kk.rotatedBlockTextures[Fk]) && void 0 !== Rk ? Rk : tk.b[Fk]) && void 0 !== Bk ? Bk : null
+        atlasSheets: bb.blockAtlasUrls,
+        texture: cb => {
+          var sb, kb, ab;
+          return null !== (sb = null !== (kb = null !== (ab = bb.animatedBlockTextures[cb]) && void 0 !== ab ? ab : bb.rotatedBlockTextures[cb]) && void 0 !== kb ? kb : Wb.d[cb]) && void 0 !== sb ? sb : null
         }
       }
     }
-    async function sk(kk) {
-      const Fk = new AbortController,
-        Bk = setTimeout((() => {
-          Fk.abort(new DOMException(`${kk} took over ${Xk} ms`, "TimeoutError"))
-        }), Xk);
-      let Rk;
+    async function fb(bb) {
+      const cb = new AbortController,
+        sb = setTimeout((() => {
+          cb.abort(new DOMException(`${bb} took over ${Tb} ms`, "TimeoutError"))
+        }), Tb);
+      let kb;
       try {
-        const Bk = await fetch(kk, {
-          signal: Fk.signal
+        const sb = await fetch(bb, {
+          signal: cb.signal
         });
-        if (!Bk.ok) throw new bk(kk, Bk.status);
-        Rk = await Bk.blob()
+        if (!sb.ok) throw new Ub(bb, sb.status);
+        kb = await sb.blob()
       } finally {
-        clearTimeout(Bk)
+        clearTimeout(sb)
       }
-      const tk = await createImageBitmap(Rk, {
+      const Wb = await createImageBitmap(kb, {
         premultiplyAlpha: "none",
         colorSpaceConversion: "none"
       });
       try {
-        return Jk(tk)
+        return Xb(Wb)
       } finally {
-        tk.close()
+        Wb.close()
       }
     }
-    const Vk = 8192;
+    const Mb = 8192;
 
-    function Jk(kk) {
+    function Xb(bb) {
       const {
-        width: Fk,
-        height: Bk
-      } = kk, tk = Math.max(1, Math.min(Bk, Vk)), ak = (0, Rk.f)(Fk, tk, {
+        width: cb,
+        height: sb
+      } = bb, Wb = Math.max(1, Math.min(sb, Mb)), ab = (0, kb.d)(cb, Wb, {
         willReadFrequently: !0
       });
-      if (!ak) throw new Error("no 2D context to read the texture back");
-      ak.globalCompositeOperation = "copy";
-      const Xk = new Uint8Array(Fk * Bk * 4);
-      for (let Rk = 0; Rk < Bk; Rk += tk) {
-        const bk = Math.min(tk, Bk - Rk);
-        ak.drawImage(kk, 0, Rk, Fk, bk, 0, 0, Fk, bk), Xk.set(ak.getImageData(0, 0, Fk, bk).data, Rk * Fk * 4)
+      if (!ab) throw new Error("no 2D context to read the texture back");
+      ab.globalCompositeOperation = "copy";
+      const Tb = new Uint8Array(cb * sb * 4);
+      for (let kb = 0; kb < sb; kb += Wb) {
+        const Ub = Math.min(Wb, sb - kb);
+        ab.drawImage(bb, 0, kb, cb, Ub, 0, 0, cb, Ub), Tb.set(ab.getImageData(0, 0, cb, Ub).data, kb * cb * 4)
       }
       return {
-        width: Fk,
-        height: Bk,
-        pixels: Xk
+        width: cb,
+        height: sb,
+        pixels: Tb
       }
     }
-    async function Ak(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : sk;
-      const Rk = [],
-        tk = await Promise.all(kk.map((async kk => {
-          var tk, Xk;
-          const bk = null !== (tk = null === (Xk = Fk.decoded) || void 0 === Xk ? void 0 : Xk.call(Fk, kk)) && void 0 !== tk ? tk : null,
-            dk = null === bk ? function(kk, Fk) {
-              if (kk.startsWith(ak)) {
-                var Bk;
-                const Rk = wk(kk);
-                return null === Rk ? null : null !== (Bk = Fk.atlasSheets[Rk]) && void 0 !== Bk ? Bk : null
+    async function nb(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : fb;
+      const kb = [],
+        Wb = await Promise.all(bb.map((async bb => {
+          var Wb, Tb;
+          const Ub = null !== (Wb = null === (Tb = cb.decoded) || void 0 === Tb ? void 0 : Tb.call(cb, bb)) && void 0 !== Wb ? Wb : null,
+            Hb = null === Ub ? function(bb, cb) {
+              if (bb.startsWith(ab)) {
+                var sb;
+                const kb = Ib(bb);
+                return null === kb ? null : null !== (sb = cb.atlasSheets[kb]) && void 0 !== sb ? sb : null
               }
-              return Fk.texture(kk)
-            }(kk, Fk) : null,
-            sk = null !== bk && void 0 !== bk ? bk : null === dk ? null : Bk(dk);
-          if (null === sk) return Rk.push({
-            name: kk,
-            url: dk,
-            error: new Error(`no URL for terrain texture ${kk}`)
+              return cb.texture(bb)
+            }(bb, cb) : null,
+            fb = null !== Ub && void 0 !== Ub ? Ub : null === Hb ? null : sb(Hb);
+          if (null === fb) return kb.push({
+            name: bb,
+            url: Hb,
+            error: new Error(`no URL for terrain texture ${bb}`)
           }), null;
           try {
-            const Fk = await sk;
-            if (Fk.pixels.byteLength !== Fk.width * Fk.height * 4) throw new Error(`decoded ${Fk.pixels.byteLength} bytes for ${Fk.width}x${Fk.height} texels`);
+            const cb = await fb;
+            if (cb.pixels.byteLength !== cb.width * cb.height * 4) throw new Error(`decoded ${cb.pixels.byteLength} bytes for ${cb.width}x${cb.height} texels`);
             return {
-              name: kk,
-              texture: Fk
+              name: bb,
+              texture: cb
             }
-          } catch (Vk) {
-            return Rk.push({
-              name: kk,
-              url: dk,
-              error: Vk
+          } catch (Mb) {
+            return kb.push({
+              name: bb,
+              url: Hb,
+              error: Mb
             }), null
           }
         }))),
-        Xk = tk.filter((kk => null !== kk)),
-        bk = new Uint32Array(2 * Xk.length);
-      Xk.forEach(((kk, Fk) => {
+        Tb = Wb.filter((bb => null !== bb)),
+        Ub = new Uint32Array(2 * Tb.length);
+      Tb.forEach(((bb, cb) => {
         let {
-          texture: Bk
-        } = kk;
-        bk[2 * Fk] = Bk.width, bk[2 * Fk + 1] = Bk.height
+          texture: sb
+        } = bb;
+        Ub[2 * cb] = sb.width, Ub[2 * cb + 1] = sb.height
       }));
       return {
         handOver: {
-          names: Xk.map((kk => {
+          names: Tb.map((bb => {
             let {
-              name: Fk
-            } = kk;
-            return Fk
+              name: cb
+            } = bb;
+            return cb
           })),
-          textures: Xk.map((kk => {
+          textures: Tb.map((bb => {
             let {
-              texture: Fk
-            } = kk;
-            return Fk.pixels
+              texture: cb
+            } = bb;
+            return cb.pixels
           })),
-          sizes: bk
+          sizes: Ub
         },
-        failures: Rk
+        failures: kb
       }
     }
-    const ek = [2e3, 1e4, 3e4, 6e4, 12e4];
+    const mb = [2e3, 1e4, 3e4, 6e4, 12e4];
 
-    function yk() {}
-    class fk {
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ek,
-          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
-        this.core = kk, this.retryMs = Fk, this.keepBelow = Bk, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
+    function lb() {}
+    class Qb {
+      constructor(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mb,
+          sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
+        this.core = bb, this.retryMs = cb, this.keepBelow = sb, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
       }
-      async swap(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dk,
-          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Rk = ++this.started,
-          tk = {
-            decode: Bk.decode,
-            wholeAtlas: Bk.wholeAtlas
+      async swap(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hb,
+          sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const kb = ++this.started,
+          Wb = {
+            decode: sb.decode,
+            wholeAtlas: sb.wholeAtlas
           };
-        return this.loadAndHandOver(Fk, tk, kk, (() => {
-          var kk;
-          return Rk < this.landed || !1 === (null === (kk = Bk.wanted) || void 0 === kk ? void 0 : kk.call(Bk))
+        return this.loadAndHandOver(cb, Wb, bb, (() => {
+          var bb;
+          return kb < this.landed || !1 === (null === (bb = sb.wanted) || void 0 === bb ? void 0 : bb.call(sb))
         }), {
-          onTaken: (kk, Bk) => {
-            this.landed = Rk, this.current = {
-              mine: Rk,
-              sources: Fk,
-              load: tk,
-              lA: kk,
-              failed: Bk
+          onTaken: (bb, sb) => {
+            this.landed = kb, this.current = {
+              mine: kb,
+              sources: cb,
+              load: Wb,
+              vn: bb,
+              failed: sb
             }
           }
         })
       }
-      restore(kk) {
-        var Fk;
-        const Bk = this.current;
-        if (null === Bk) return Promise.resolve(null);
-        if ((null === (Fk = this.restoring) || void 0 === Fk ? void 0 : Fk.mine) === Bk.mine) return this.restoring.done;
-        const Rk = {
-          mine: Bk.mine,
-          done: this.restoreLanded(Bk, kk).finally((() => {
-            this.restoring === Rk && (this.restoring = null)
+      restore(bb) {
+        var cb;
+        const sb = this.current;
+        if (null === sb) return Promise.resolve(null);
+        if ((null === (cb = this.restoring) || void 0 === cb ? void 0 : cb.mine) === sb.mine) return this.restoring.done;
+        const kb = {
+          mine: sb.mine,
+          done: this.restoreLanded(sb, bb).finally((() => {
+            this.restoring === kb && (this.restoring = null)
           }))
         };
-        return this.restoring = Rk, Rk.done
+        return this.restoring = kb, kb.done
       }
-      async restoreLanded(kk, Fk) {
-        const Bk = () => this.landed !== kk.mine,
+      async restoreLanded(bb, cb) {
+        const sb = () => this.landed !== bb.mine,
           {
-            lA: Rk
-          } = kk;
-        if (null !== Rk) return this.stopped() ? null : this.core.setTerrainTextures(Rk.names, Rk.textures, Rk.sizes);
-        let tk = Fk;
-        for (let ak = 0;; ak++) {
-          const Fk = this.retryMs.at(ak),
-            Rk = {
-              allOrNothingExcept: void 0 === Fk ? void 0 : kk.failed
+            vn: kb
+          } = bb;
+        if (null !== kb) return this.stopped() ? null : this.core.setTerrainTextures(kb.names, kb.textures, kb.sizes);
+        let Wb = cb;
+        for (let ab = 0;; ab++) {
+          const cb = this.retryMs.at(ab),
+            kb = {
+              allOrNothingExcept: void 0 === cb ? void 0 : bb.failed
             },
-            Xk = await this.loadAndHandOver(kk.sources, kk.load, tk, Bk, Rk);
-          if (!1 !== Xk || void 0 === Fk || this.stopped()) return Xk;
-          if (tk = yk, await new Promise((kk => {
-              setTimeout(kk, Fk)
-            })), Bk()) return null
+            Tb = await this.loadAndHandOver(bb.sources, bb.load, Wb, sb, kb);
+          if (!1 !== Tb || void 0 === cb || this.stopped()) return Tb;
+          if (Wb = lb, await new Promise((bb => {
+              setTimeout(bb, cb)
+            })), sb()) return null
         }
       }
       stopped() {
         return !0 === this.core.isStopped
       }
-      async loadAndHandOver(kk, Fk, Bk, Rk) {
-        let tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      async loadAndHandOver(bb, cb, sb, kb) {
+        let Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (this.stopped()) return null;
-        const ak = this.core.terrainTextureNames();
-        var Xk;
-        if (0 === ak.length) return null === (Xk = tk.onTaken) || void 0 === Xk || Xk.call(tk, null, new Set), !0;
-        let bk, dk;
+        const ab = this.core.terrainTextureNames();
+        var Tb;
+        if (0 === ab.length) return null === (Tb = Wb.onTaken) || void 0 === Tb || Tb.call(Wb, null, new Set), !0;
+        let Ub, Hb;
         try {
-          bk = await kk(), dk = await Ak(ak, bk, Fk.decode)
-        } catch (fk) {
-          return Rk() ? null : (Bk({
+          Ub = await bb(), Hb = await nb(ab, Ub, cb.decode)
+        } catch (Qb) {
+          return kb() ? null : (sb({
             name: null,
             url: null,
-            error: fk
+            error: Qb
           }), !1)
         }
-        if (Rk() || this.stopped()) return null;
-        for (const wk of dk.failures) Bk(wk);
-        const sk = tk.allOrNothingExcept;
-        if (void 0 !== sk && dk.failures.some((kk => {
+        if (kb() || this.stopped()) return null;
+        for (const Ib of Hb.failures) sb(Ib);
+        const fb = Wb.allOrNothingExcept;
+        if (void 0 !== fb && Hb.failures.some((bb => {
             let {
-              name: Fk
-            } = kk;
-            return null === Fk || !sk.has(Fk)
-          })) || !0 === Fk.wholeAtlas && dk.failures.some((kk => {
+              name: cb
+            } = bb;
+            return null === cb || !fb.has(cb)
+          })) || !0 === cb.wholeAtlas && Hb.failures.some((bb => {
             let {
-              name: Fk
-            } = kk;
-            return null === Fk || null !== wk(Fk)
+              name: cb
+            } = bb;
+            return null === cb || null !== Ib(cb)
           }))) return !1;
         const {
-          handOver: Vk
-        } = dk, Jk = function(kk) {
-          return kk.textures.reduce(((kk, Fk) => kk + Fk.byteLength), 0)
-        }(Vk) < this.keepBelow, ek = this.core.setTerrainTextures(Vk.names, Vk.textures, Vk.sizes, Jk ? void 0 : () => {
-          !async function(kk, Fk) {
-            await Fk;
+          handOver: Mb
+        } = Hb, Xb = function(bb) {
+          return bb.textures.reduce(((bb, cb) => bb + cb.byteLength), 0)
+        }(Mb) < this.keepBelow, mb = this.core.setTerrainTextures(Mb.names, Mb.textures, Mb.sizes, Xb ? void 0 : () => {
+          !async function(bb, cb) {
+            await cb;
             for (const {
-                buffer: Rk
+                buffer: kb
               }
-              of kk) {
-              const kk = Rk;
-              var Bk;
-              if (!kk.detached) null === (Bk = kk.transfer) || void 0 === Bk || Bk.call(kk, 0)
+              of bb) {
+              const bb = kb;
+              var sb;
+              if (!bb.detached) null === (sb = bb.transfer) || void 0 === sb || sb.call(bb, 0)
             }
-          }(Vk.textures, bk.heldUntil)
+          }(Mb.textures, Ub.heldUntil)
         });
-        if (ek) {
-          var yk;
-          const kk = new Set(dk.failures.flatMap((kk => {
+        if (mb) {
+          var lb;
+          const bb = new Set(Hb.failures.flatMap((bb => {
             let {
-              name: Fk
-            } = kk;
-            return null === Fk ? [] : [Fk]
+              name: cb
+            } = bb;
+            return null === cb ? [] : [cb]
           })));
-          null === (yk = tk.onTaken) || void 0 === yk || yk.call(tk, Jk ? Vk : null, kk)
+          null === (lb = Wb.onTaken) || void 0 === lb || lb.call(Wb, Xb ? Mb : null, bb)
         }
-        return ek
+        return mb
       }
     }
   },
-  36522: (kk, Fk, Bk) => {
-    function Rk(kk) {
-      return "fetch" === kk || "timeout" === kk || "integrity" === kk ? "download" : "browser"
+  36423: (bb, cb, sb) => {
+    function kb(bb) {
+      return "fetch" === bb || "timeout" === bb || "integrity" === bb ? "download" : "browser"
     }
-    Bk.d(Fk, {
-      d: () => tk,
-      f: () => Xk,
-      h: () => wk,
-      l: () => bk,
-      o: () => Rk,
-      s: () => ak
+    sb.d(cb, {
+      b: () => Wb,
+      e: () => Tb,
+      h: () => Ib,
+      j: () => Ub,
+      m: () => kb,
+      o: () => ab
     });
-    const tk = "https://discord.gg/playbloxd";
+    const Wb = "https://discord.gg/playbloxd";
 
-    function ak(kk) {
-      return "download" === kk ? {
+    function ab(bb) {
+      return "download" === bb ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -3243,21 +3243,21 @@ export const modules = {
       }
     }
 
-    function Xk(kk, Fk) {
+    function Tb(bb, cb) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: Fk ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: cb ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: kk.code
+          code: bb.code
         },
-        discordLink: Fk,
+        discordLink: cb,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function bk() {
+    function Ub() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -3269,146 +3269,146 @@ export const modules = {
       }
     }
 
-    function wk(kk, Fk, Bk) {
+    function Ib(bb, cb, sb) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: Bk ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: sb ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: kk.reason
+          reason: bb.reason
         },
-        discordLink: null === kk.name,
-        confirm: Fk ? "general:reconnect" : kk.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === bb.name,
+        confirm: cb ? "general:reconnect" : bb.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  6343: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => ik,
-      e: () => Yk,
-      f: () => Wk,
-      g: () => mk
+  6309: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Vb,
+      c: () => Lb,
+      d: () => Cb,
+      e: () => eb
     });
-    var Rk = Bk(6349);
-    const tk = 6,
-      ak = 3,
-      Xk = 1,
-      bk = 2,
-      wk = 4,
-      dk = 8,
-      sk = 16,
-      Vk = 32,
-      Jk = 64,
-      Ak = 128,
-      ek = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var kb = sb(6312);
+    const Wb = 6,
+      ab = 3,
+      Tb = 1,
+      Ub = 2,
+      Ib = 4,
+      Hb = 8,
+      fb = 16,
+      Mb = 32,
+      Xb = 64,
+      nb = 128,
+      mb = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function yk(kk) {
-      if (!kk) return 0;
-      const Fk = ek.indexOf(kk);
-      if (Fk <= 0) throw new Error(`"${kk}" is not a shader pack hook function`);
-      return Fk
+    function lb(bb) {
+      if (!bb) return 0;
+      const cb = mb.indexOf(bb);
+      if (cb <= 0) throw new Error(`"${bb}" is not a shader pack hook function`);
+      return cb
     }
 
-    function fk(kk) {
-      if (0 === kk) return null;
-      const Fk = ek[kk];
-      if (void 0 === Fk) throw new Error(`${kk} is not a shader pack hook function id`);
-      return Fk
+    function Qb(bb) {
+      if (0 === bb) return null;
+      const cb = mb[bb];
+      if (void 0 === cb) throw new Error(`${bb} is not a shader pack hook function id`);
+      return cb
     }
 
-    function mk(kk) {
-      const Fk = Rk.d.length;
+    function eb(bb) {
+      const cb = kb.b.length;
       return {
-        strict: kk >= Fk,
-        program: Rk.d[kk % Fk]
+        strict: bb >= cb,
+        program: kb.b[bb % cb]
       }
     }
 
-    function Wk(kk) {
-      return Number(kk.strict) * Rk.d.length + Rk.d.indexOf(kk.program)
+    function Cb(bb) {
+      return Number(bb.strict) * kb.b.length + kb.b.indexOf(bb.program)
     }
 
-    function vk(kk) {
-      return "" === kk ? [] : kk.split(" ")
+    function Nb(bb) {
+      return "" === bb ? [] : bb.split(" ")
     }
 
-    function ik(kk) {
-      const Fk = {
-        variantFlags: new Uint8Array(tk),
-        hooks: new Uint8Array(tk * ak),
-        moduleCodes: Array(tk).fill(""),
-        reads: Array(2 * tk).fill("")
+    function Vb(bb) {
+      const cb = {
+        variantFlags: new Uint8Array(Wb),
+        hooks: new Uint8Array(Wb * ab),
+        moduleCodes: Array(Wb).fill(""),
+        reads: Array(2 * Wb).fill("")
       };
-      for (const Bk of kk) {
-        const kk = Wk(Bk.key),
-          Rk = (kk, Fk) => null === Bk.hooks.surface || Bk.reads.fragment.includes(kk) ? 0 : Fk;
-        Fk.variantFlags[kk] = (Bk.sceneDepth ? Xk : 0) | (Bk.movesVertices ? bk : 0) | (Bk.sunShadow ? wk : 0) | (Bk.airShadow ? dk : 0) | (Bk.discards ? sk : 0) | Rk("localPosition", Vk) | Rk("enchantSpeed", Jk) | Rk("enchantTier", Ak), Fk.hooks[kk * ak] = yk(Bk.hooks.vertex), Fk.hooks[kk * ak + 1] = yk(Bk.hooks.surface), Fk.hooks[kk * ak + 2] = yk(Bk.hooks.light), Fk.moduleCodes[kk] = Bk.moduleCode, Fk.reads[2 * kk] = Bk.reads.vertex.join(" "), Fk.reads[2 * kk + 1] = Bk.reads.fragment.join(" ")
+      for (const sb of bb) {
+        const bb = Cb(sb.key),
+          kb = (bb, cb) => null === sb.hooks.surface || sb.reads.fragment.includes(bb) ? 0 : cb;
+        cb.variantFlags[bb] = (sb.sceneDepth ? Tb : 0) | (sb.movesVertices ? Ub : 0) | (sb.sunShadow ? Ib : 0) | (sb.airShadow ? Hb : 0) | (sb.discards ? fb : 0) | kb("localPosition", Mb) | kb("enchantSpeed", Xb) | kb("enchantTier", nb), cb.hooks[bb * ab] = lb(sb.hooks.vertex), cb.hooks[bb * ab + 1] = lb(sb.hooks.surface), cb.hooks[bb * ab + 2] = lb(sb.hooks.light), cb.moduleCodes[bb] = sb.moduleCode, cb.reads[2 * bb] = sb.reads.vertex.join(" "), cb.reads[2 * bb + 1] = sb.reads.fragment.join(" ")
       }
-      return Fk
+      return cb
     }
 
-    function Yk(kk) {
+    function Lb(bb) {
       const {
-        hooks: Fk,
-        moduleCodes: Bk,
-        reads: Rk
-      } = kk;
-      return Array.from(kk.variantFlags, ((kk, tk) => {
-        const Vk = tk * ak;
+        hooks: cb,
+        moduleCodes: sb,
+        reads: kb
+      } = bb;
+      return Array.from(bb.variantFlags, ((bb, Wb) => {
+        const Mb = Wb * ab;
         return {
-          key: mk(tk),
+          key: eb(Wb),
           hooks: {
-            vertex: fk(Fk[Vk]),
-            surface: fk(Fk[Vk + 1]),
-            light: fk(Fk[Vk + 2])
+            vertex: Qb(cb[Mb]),
+            surface: Qb(cb[Mb + 1]),
+            light: Qb(cb[Mb + 2])
           },
-          moduleCode: Bk[tk],
-          sceneDepth: 0 !== (kk & Xk),
-          sunShadow: 0 !== (kk & wk),
-          airShadow: 0 !== (kk & dk),
-          movesVertices: 0 !== (kk & bk),
-          discards: 0 !== (kk & sk),
+          moduleCode: sb[Wb],
+          sceneDepth: 0 !== (bb & Tb),
+          sunShadow: 0 !== (bb & Ib),
+          airShadow: 0 !== (bb & Hb),
+          movesVertices: 0 !== (bb & Ub),
+          discards: 0 !== (bb & fb),
           reads: {
-            vertex: vk(Rk[2 * tk]),
-            fragment: vk(Rk[2 * tk + 1])
+            vertex: Nb(kb[2 * Wb]),
+            fragment: Nb(kb[2 * Wb + 1])
           }
         }
       }))
     }
   },
-  40292: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      D: () => ek,
-      e: () => tk,
-      g: () => Rk,
-      h: () => Jk,
-      j: () => sk,
-      m: () => fk,
-      p: () => ak,
-      r: () => bk,
-      s: () => wk,
-      u: () => Xk,
-      v: () => yk,
-      z: () => Ak
+  40308: (bb, cb, sb) => {
+    sb.d(cb, {
+      A: () => Tb,
+      C: () => lb,
+      G: () => nb,
+      H: () => mb,
+      b: () => Wb,
+      d: () => kb,
+      h: () => Xb,
+      i: () => fb,
+      l: () => Qb,
+      p: () => ab,
+      s: () => Ub,
+      w: () => Ib
     });
-    const Rk = 3,
-      tk = 0,
-      ak = 1,
-      Xk = 2,
-      bk = {
+    const kb = 3,
+      Wb = 0,
+      ab = 1,
+      Tb = 2,
+      Ub = {
         uniform: 3,
-        jJ: 4,
+        zX: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      wk = 10,
-      dk = "BloxdPackInputs",
-      sk = "bloxdPackInputs",
-      Vk = [{
+      Ib = 10,
+      Hb = "BloxdPackInputs",
+      fb = "bloxdPackInputs",
+      Mb = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -3433,74 +3433,74 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      Jk = 80;
+      Xb = 80;
 
-    function Ak() {
-      const kk = Vk.map((kk => {
+    function nb() {
+      const bb = Mb.map((bb => {
         let {
-          name: Fk,
-          type: Bk
-        } = kk;
-        return `    ${Fk}: ${Bk},\n`
+          name: cb,
+          type: sb
+        } = bb;
+        return `    ${cb}: ${sb},\n`
       })).join("");
-      return `struct ${dk} {\n${kk}}\n@group(${Rk}) @binding(${tk}) var<uniform> ${sk}: ${dk};\n`
+      return `struct ${Hb} {\n${bb}}\n@group(${kb}) @binding(${Wb}) var<uniform> ${fb}: ${Hb};\n`
     }
 
-    function ek(kk, Fk) {
-      const Bk = new DataView(kk, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Jk),
-        [Rk, tk, ak, Xk, bk, wk] = Vk;
-      Bk.setFloat32(Rk.offset, Fk.seconds, !0), Bk.setUint32(tk.offset, Fk.lit ? 1 : 0, !0);
-      for (let dk = 0; dk < 3; dk++) Bk.setInt32(ak.offset + 4 * dk, Fk.renderOffset[dk], !0), Bk.setFloat32(Xk.offset + 4 * dk, Fk.w6[dk], !0), Bk.setFloat32(bk.offset + 4 * dk, Fk.eyePosition[dk], !0), Bk.setFloat32(wk.offset + 4 * dk, Fk.shadowDirection[dk], !0)
+    function mb(bb, cb) {
+      const sb = new DataView(bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Xb),
+        [kb, Wb, ab, Tb, Ub, Ib] = Mb;
+      sb.setFloat32(kb.offset, cb.seconds, !0), sb.setUint32(Wb.offset, cb.lit ? 1 : 0, !0);
+      for (let Hb = 0; Hb < 3; Hb++) sb.setInt32(ab.offset + 4 * Hb, cb.renderOffset[Hb], !0), sb.setFloat32(Tb.offset + 4 * Hb, cb.J9[Hb], !0), sb.setFloat32(Ub.offset + 4 * Hb, cb.eyePosition[Hb], !0), sb.setFloat32(Ib.offset + 4 * Hb, cb.shadowDirection[Hb], !0)
     }
 
-    function yk(kk) {
-      const Fk = new Uint32Array(Math.max(1, kk.length));
-      return kk.forEach(((kk, Bk) => {
+    function lb(bb) {
+      const cb = new Uint32Array(Math.max(1, bb.length));
+      return bb.forEach(((bb, sb) => {
         let {
-          id: Rk,
-          rotation: tk
-        } = kk;
-        Fk[Bk] = 65535 & Rk | (3 & tk) << 16
-      })), Fk
+          id: kb,
+          rotation: Wb
+        } = bb;
+        cb[sb] = 65535 & kb | (3 & Wb) << 16
+      })), cb
     }
-    const fk = {
+    const Qb = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6349: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Rk,
-      g: () => Xk,
-      h: () => bk,
-      l: () => tk,
-      m: () => ak
+  6312: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => kb,
+      e: () => Tb,
+      f: () => Ub,
+      g: () => Wb,
+      k: () => ab
     });
-    const Rk = ["terrain", "liquid", "model"];
+    const kb = ["terrain", "liquid", "model"];
 
-    function tk() {
-      const kk = [];
-      for (const Fk of [!1, !0])
-        for (const Bk of Rk) kk.push({
-          strict: Fk,
-          program: Bk
+    function Wb() {
+      const bb = [];
+      for (const cb of [!1, !0])
+        for (const sb of kb) bb.push({
+          strict: cb,
+          program: sb
         });
-      return kk
+      return bb
     }
 
-    function ak(kk) {
-      return `${kk.strict?"strict":"allow"}.${kk.program}`
+    function ab(bb) {
+      return `${bb.strict?"strict":"allow"}.${bb.program}`
     }
 
-    function Xk(kk) {
-      return !kk.hooks.vertex && !kk.hooks.surface && !kk.hooks.light
+    function Tb(bb) {
+      return !bb.hooks.vertex && !bb.hooks.surface && !bb.hooks.light
     }
 
-    function bk(kk, Fk) {
-      return "off" !== Fk && (null === kk || kk.some((kk => kk.key.strict === ("strict" === Fk) && !Xk(kk))))
+    function Ub(bb, cb) {
+      return "off" !== cb && (null === bb || bb.some((bb => bb.key.strict === ("strict" === cb) && !Tb(bb))))
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

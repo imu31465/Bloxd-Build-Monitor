@@ -1,119 +1,119 @@
 export const id = 261;
 export const ids = [261];
 export const modules = {
-  41039: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => fk,
-      h: () => bk,
-      i: () => Xk,
-      m: () => dk
+  41020: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Qb,
+      h: () => Ub,
+      k: () => Tb,
+      l: () => Hb
     });
-    var Rk = Bk(36911),
-      tk = Bk(38344),
-      ak = Bk(38339);
+    var kb = sb(36821),
+      Wb = sb(38313),
+      ab = sb(38304);
 
-    function Xk(kk, Fk, Bk, Rk) {
-      const tk = ak.l;
-      Fk.fill(0), kk.gravity.toArray(Fk, tk.gravity), kk.colorDead.toArray(Fk, tk.colorDead), Bk[tk.ramp] = kk.useRampGradients ? 1 : 0;
-      const Xk = kk.getColorGradients(),
-        bk = Jk(kk, Xk, "colour", Rk);
-      Bk[tk.colorCount] = bk;
-      for (let ak = 0; ak < bk; ak++) {
-        var wk;
-        const kk = Xk[Ak(Xk, ak)];
-        Fk[tk.colorPositions + ak] = kk.gradient, kk.color1.toArray(Fk, tk.color1 + 4 * ak), (null !== (wk = kk.color2) && void 0 !== wk ? wk : kk.color1).toArray(Fk, tk.color2 + 4 * ak)
+    function Tb(bb, cb, sb, kb) {
+      const Wb = ab.t;
+      cb.fill(0), bb.gravity.toArray(cb, Wb.gravity), bb.colorDead.toArray(cb, Wb.colorDead), sb[Wb.ramp] = bb.useRampGradients ? 1 : 0;
+      const Tb = bb.getColorGradients(),
+        Ub = Xb(bb, Tb, "colour", kb);
+      sb[Wb.colorCount] = Ub;
+      for (let ab = 0; ab < Ub; ab++) {
+        var Ib;
+        const bb = Tb[nb(Tb, ab)];
+        cb[Wb.colorPositions + ab] = bb.gradient, bb.color1.toArray(cb, Wb.color1 + 4 * ab), (null !== (Ib = bb.color2) && void 0 !== Ib ? Ib : bb.color1).toArray(cb, Wb.color2 + 4 * ab)
       }
-      const dk = kk.getVelocityGradients(),
-        sk = Jk(kk, dk, "bs", Rk);
-      Bk[tk.velocityCount] = sk;
-      for (let ak = 0; ak < sk; ak++) Wk(Fk, tk.bs + 4 * ak, dk[Ak(dk, ak)]);
-      const Vk = kk.useRampGradients ? kk.getColorRemapGradients() : null,
-        ek = Jk(kk, Vk, "colour remap", Rk);
-      Bk[tk.remapCount] = ek;
-      for (let ak = 0; ak < ek; ak++) Wk(Fk, tk.remap + 4 * ak, Vk[Ak(Vk, ak)])
+      const Hb = bb.getVelocityGradients(),
+        fb = Xb(bb, Hb, "BQ", kb);
+      sb[Wb.velocityCount] = fb;
+      for (let ab = 0; ab < fb; ab++) Cb(cb, Wb.BQ + 4 * ab, Hb[nb(Hb, ab)]);
+      const Mb = bb.useRampGradients ? bb.getColorRemapGradients() : null,
+        mb = Xb(bb, Mb, "colour remap", kb);
+      sb[Wb.remapCount] = mb;
+      for (let ab = 0; ab < mb; ab++) Cb(cb, Wb.remap + 4 * ab, Mb[nb(Mb, ab)])
     }
 
-    function bk() {
+    function Ub() {
       return {
         key: [],
-        texels: new Uint8Array(4 * ak.g)
+        texels: new Uint8Array(4 * ab.m)
       }
     }
-    const wk = [];
+    const Ib = [];
 
-    function dk(kk, Fk) {
-      return sk(kk, wk), !mk(wk, Fk.key) && (Fk.key.length = 0, Fk.key.push(...wk), Fk.key.length > 0 && function(kk, Fk) {
-        for (let Bk = 0; Bk < ak.g; Bk++) tk.i.GetCurrentGradient(Bk / ak.g, kk, ((kk, Fk, Bk) => {
-          Rk.Color3.LerpToRef(kk.color, Fk.color, Bk, Vk)
-        })), Fk[4 * Bk] = 255 * Vk.r, Fk[4 * Bk + 1] = 255 * Vk.g, Fk[4 * Bk + 2] = 255 * Vk.b, Fk[4 * Bk + 3] = 255
-      }(kk.getRampGradients(), Fk.texels), !0)
+    function Hb(bb, cb) {
+      return fb(bb, Ib), !eb(Ib, cb.key) && (cb.key.length = 0, cb.key.push(...Ib), cb.key.length > 0 && function(bb, cb) {
+        for (let sb = 0; sb < ab.m; sb++) Wb.i.GetCurrentGradient(sb / ab.m, bb, ((bb, cb, sb) => {
+          kb.Color3.LerpToRef(bb.color, cb.color, sb, Mb)
+        })), cb[4 * sb] = 255 * Mb.r, cb[4 * sb + 1] = 255 * Mb.g, cb[4 * sb + 2] = 255 * Mb.b, cb[4 * sb + 3] = 255
+      }(bb.getRampGradients(), cb.texels), !0)
     }
 
-    function sk(kk, Fk) {
-      Fk.length = 0;
-      const Bk = kk.useRampGradients ? kk.getRampGradients() : null;
-      if (null !== Bk && void 0 !== Bk && Bk.length) {
-        Fk.push(Bk.length);
-        for (const kk of Bk) Fk.push(kk.gradient, kk.color.r, kk.color.g, kk.color.b)
+    function fb(bb, cb) {
+      cb.length = 0;
+      const sb = bb.useRampGradients ? bb.getRampGradients() : null;
+      if (null !== sb && void 0 !== sb && sb.length) {
+        cb.push(sb.length);
+        for (const bb of sb) cb.push(bb.gradient, bb.color.r, bb.color.g, bb.color.b)
       }
     }
-    const Vk = new Rk.Color3;
+    const Mb = new kb.Color3;
 
-    function Jk(kk, Fk, Bk, Rk) {
-      return Fk ? Fk.length > ak.b ? (Rk(`particleStops:${Bk}`, `GPU particles use the first 2 and last ${ak.b-2} of more than ${ak.b} ${Bk} gradient stops (${kk.name})`), ak.b) : Fk.length : 0
+    function Xb(bb, cb, sb, kb) {
+      return cb ? cb.length > ab.e ? (kb(`particleStops:${sb}`, `GPU particles use the first 2 and last ${ab.e-2} of more than ${ab.e} ${sb} gradient stops (${bb.name})`), ab.e) : cb.length : 0
     }
 
-    function Ak(kk, Fk) {
-      return Fk < 2 || kk.length <= ak.b ? Fk : kk.length - ak.b + Fk
+    function nb(bb, cb) {
+      return cb < 2 || bb.length <= ab.e ? cb : bb.length - ab.e + cb
     }
-    const ek = new Float32Array(ak.i),
-      yk = new Uint32Array(ek.buffer);
+    const mb = new Float32Array(ab.n),
+      lb = new Uint32Array(mb.buffer);
 
-    function fk(kk, Fk, Bk) {
-      return Xk(kk, ek, yk, Bk), Fk && mk(yk, Fk) ? null : yk.slice()
+    function Qb(bb, cb, sb) {
+      return Tb(bb, mb, lb, sb), cb && eb(lb, cb) ? null : lb.slice()
     }
 
-    function mk(kk, Fk) {
-      if (kk.length !== Fk.length) return !1;
-      for (let Bk = 0; Bk < kk.length; Bk++)
-        if (kk[Bk] !== Fk[Bk]) return !1;
+    function eb(bb, cb) {
+      if (bb.length !== cb.length) return !1;
+      for (let sb = 0; sb < bb.length; sb++)
+        if (bb[sb] !== cb[sb]) return !1;
       return !0
     }
 
-    function Wk(kk, Fk, Bk) {
-      var Rk;
-      kk[Fk] = Bk.gradient, kk[Fk + 1] = Bk.factor1, kk[Fk + 2] = null !== (Rk = Bk.factor2) && void 0 !== Rk ? Rk : Bk.factor1
+    function Cb(bb, cb, sb) {
+      var kb;
+      bb[cb] = sb.gradient, bb[cb + 1] = sb.factor1, bb[cb + 2] = null !== (kb = sb.factor2) && void 0 !== kb ? kb : sb.factor1
     }
   },
-  41033: (kk, Fk, Bk) => {
-    function Rk() {
-      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const Fk = new Set;
-      return (Bk, Rk) => {
-        Fk.has(Bk) || (Fk.add(Bk), console.warn(kk + Rk))
+  41011: (bb, cb, sb) => {
+    function kb() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const cb = new Set;
+      return (sb, kb) => {
+        cb.has(sb) || (cb.add(sb), console.warn(bb + kb))
       }
     }
-    Bk.d(Fk, {
-      b: () => Rk
+    sb.d(cb, {
+      c: () => kb
     })
   },
-  41071: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      createLiteRendererAsync: () => uw,
-      liteBabylonBackend: () => Pk,
-      setPipelineFailureHook: () => xt
+  41049: (bb, cb, sb) => {
+    sb.d(cb, {
+      createLiteRendererAsync: () => PI,
+      liteBabylonBackend: () => zb,
+      setPipelineFailureHook: () => vW
     });
-    var Rk = Bk(36911),
-      tk = Bk(37274),
-      ak = Bk(37570),
-      Xk = Bk(36861),
-      bk = Bk(37583);
-    class wk extends bk.e {
+    var kb = sb(36821),
+      Wb = sb(37153),
+      ab = sb(37497),
+      Tb = sb(36769),
+      Ub = sb(37504);
+    class Ib extends Ub.e {
       constructor() {
-        for (var kk = arguments.length, Fk = new Array(kk), Bk = 0; Bk < kk; Bk++) Fk[Bk] = arguments[Bk];
-        super(...Fk), this.color = new Rk.Color3(1, 1, 1), this.alpha = 1, this.material = {
+        for (var bb = arguments.length, cb = new Array(bb), sb = 0; sb < bb; sb++) cb[sb] = arguments[sb];
+        super(...cb), this.color = new kb.Color3(1, 1, 1), this.alpha = 1, this.material = {
           name: "colorShader",
-          uniqueId: Fk[0].XN().getUniqueId(),
+          uniqueId: cb[0].EY().getUniqueId(),
           shaderPath: "color",
           fillMode: 4,
           sideOrientation: null,
@@ -127,7 +127,7 @@ export const modules = {
           zOffsetUnits: 0,
           disableColorWrite: !1,
           getClassName: () => "ShaderMaterial",
-          needAlphaBlendingForMesh: kk => kk.visibility < 1 || kk.hasVertexAlpha,
+          needAlphaBlendingForMesh: bb => bb.visibility < 1 || bb.hasVertexAlpha,
           needAlphaTestingForMesh: () => !1,
           dispose: () => {}
         }
@@ -136,46 +136,46 @@ export const modules = {
         return "LinesMesh"
       }
     }
-    const dk = ["VERTEXCOLOR", "VERTEXALPHA", "INSTANCES", "THIN_INSTANCES", "INSTANCESCOLOR", "FOG", "LITE_FRONT_LAYER"],
-      sk = kk => 1 << dk.indexOf(kk),
-      Vk = sk("VERTEXCOLOR"),
-      Jk = sk("INSTANCES"),
-      Ak = sk("THIN_INSTANCES"),
-      ek = sk("INSTANCESCOLOR"),
-      yk = sk("FOG"),
-      fk = sk("LITE_FRONT_LAYER");
+    const Hb = ["VERTEXCOLOR", "VERTEXALPHA", "INSTANCES", "THIN_INSTANCES", "INSTANCESCOLOR", "FOG", "LITE_FRONT_LAYER"],
+      fb = bb => 1 << Hb.indexOf(bb),
+      Mb = fb("VERTEXCOLOR"),
+      Xb = fb("INSTANCES"),
+      nb = fb("THIN_INSTANCES"),
+      mb = fb("INSTANCESCOLOR"),
+      lb = fb("FOG"),
+      Qb = fb("LITE_FRONT_LAYER");
 
-    function mk(kk, Fk, Bk, Rk) {
-      let tk = 0;
-      return kk.isVerticesDataPresent("color") && (tk |= Vk), "none" !== Fk && (tk |= Jk), "thin" === Fk && (tk |= Ak, kk.isVerticesDataPresent("instanceColor") && (tk |= ek)), Rk.fogEnabled && kk.applyFog && 0 !== Rk.fogMode && (tk |= yk), Bk >= 1 && (tk |= fk), tk
+    function eb(bb, cb, sb, kb) {
+      let Wb = 0;
+      return bb.isVerticesDataPresent("color") && (Wb |= Mb), "none" !== cb && (Wb |= Xb), "thin" === cb && (Wb |= nb, bb.isVerticesDataPresent("instanceColor") && (Wb |= mb)), kb.fogEnabled && bb.applyFog && 0 !== kb.fogMode && (Wb |= lb), sb >= 1 && (Wb |= Qb), Wb
     }
 
-    function Wk(kk, Fk) {
-      kk.updateColor4("color", Fk.color, Fk.alpha)
+    function Cb(bb, cb) {
+      bb.updateColor4("color", cb.color, cb.alpha)
     }
-    var vk = Bk(37533),
-      ik = Bk(37061),
-      Yk = Bk(36939),
-      Lk = Bk(36836),
-      Ok = Bk(37521),
-      Ek = Bk(37526),
-      Sk = Bk(36851),
-      Nk = Bk(36855),
-      Hk = Bk(36867);
-    const uk = Lk.e.GLSL;
-    class Mk {
-      constructor(kk, Fk) {
-        this.name = kk, this.ef = Fk, this.uniqueId = void 0, this.checkReadyOnlyOnce = !1, this._blockDirtyMechanism = !1, this.disposers = [], this.yN = {
-          addOnce: kk => {
-            this.disposers.push(kk)
+    var Nb = sb(37438),
+      Vb = sb(36974),
+      Lb = sb(36855),
+      ub = sb(36742),
+      Yb = sb(37428),
+      hb = sb(37435),
+      Jb = sb(36758),
+      gb = sb(36766),
+      Bb = sb(36772);
+    const tb = ub.e.GLSL;
+    class yb {
+      constructor(bb, cb) {
+        this.name = bb, this.aQ = cb, this.uniqueId = void 0, this.checkReadyOnlyOnce = !1, this._blockDirtyMechanism = !1, this.disposers = [], this.ZY = {
+          addOnce: bb => {
+            this.disposers.push(bb)
           }
-        }, this.uniqueId = Fk.getUniqueId()
+        }, this.uniqueId = cb.getUniqueId()
       }
       get isFrozen() {
         return this.checkReadyOnlyOnce
       }
-      XN() {
-        return this.ef
+      EY() {
+        return this.aQ
       }
       getClassName() {
         return "LiteMaterial"
@@ -190,92 +190,92 @@ export const modules = {
       get fillMode() {
         return this.model.fillMode
       }
-      needAlphaBlendingForMesh(kk) {
-        return (0, Sk.N)(this.model, kk.visibility, kk.hasVertexAlpha)
+      needAlphaBlendingForMesh(bb) {
+        return (0, Jb.P)(this.model, bb.visibility, bb.hasVertexAlpha)
       }
-      needAlphaTestingForMesh(kk) {
-        return (0, Sk.P)(this.model, kk.visibility, kk.hasVertexAlpha)
+      needAlphaTestingForMesh(bb) {
+        return (0, Jb.Q)(this.model, bb.visibility, bb.hasVertexAlpha)
       }
       dispose() {
-        (0, ik.o)(this);
-        for (const kk of this.disposers.splice(0)) kk()
+        (0, Vb.h)(this);
+        for (const bb of this.disposers.splice(0)) bb()
       }
       get model() {
-        return (0, Sk._)(this)
+        return (0, Jb.W)(this)
       }
     }
-    const gk = new WeakSet;
+    const Pb = new WeakSet;
 
-    function Uk(kk) {
-      return gk.has(kk)
+    function Db(bb) {
+      return Pb.has(bb)
     }
 
-    function ck(kk) {
-      gk.add(kk)
+    function Eb(bb) {
+      Pb.add(bb)
     }
-    const Gk = {
-      create: (kk, Fk) => ((0, Yk.r)(kk, new Mk(kk.name, Fk)), Nk.b.defines()),
+    const ib = {
+      create: (bb, cb) => ((0, Lb.u)(bb, new yb(bb.name, cb)), gb.d.defines()),
       write: () => {},
-      addFeature: (kk, Fk) => {
-        const Bk = kk.mirror;
-        Fk.feature === Ek.f && Fk.state.dirLightCount > 0 && (kk.disableLighting = !0, (0, Sk.X)(kk)), "BLOXD_LIGHTING" in Fk.defines && (0, ik.k)(Bk), Fk.feature === Ok.i && ((0, vk.g)(Fk.state, uk), function(kk, Fk) {
-          const Bk = kk.XN().ne();
-          Fk.textures.forEach(((Rk, tk) => {
+      addFeature: (bb, cb) => {
+        const sb = bb.mirror;
+        cb.feature === hb.j && cb.state.dirLightCount > 0 && (bb.disableLighting = !0, (0, Jb.U)(bb)), "BLOXD_LIGHTING" in cb.defines && (0, Vb.g)(sb), cb.feature === Yb.j && ((0, Nb.h)(cb.state, tb), function(bb, cb) {
+          const sb = bb.EY().Sm();
+          cb.textures.forEach(((kb, Wb) => {
             setTimeout((() => {
-              var ak, Xk;
+              var ab, Tb;
               const {
-                url: bk
-              } = Rk.source;
-              Bk.atlasArray(bk, null !== (ak = null === (Xk = Fk.sources.pixels) || void 0 === Xk ? void 0 : Xk[tk]) && void 0 !== ak ? ak : null, Fk.sources.layerWidth).then((Bk => {
-                (0, vk.b)(kk, Fk, tk, Bk, Bk.layerWidth, Bk.layers, uk)
-              })).catch((kk => {
-                console.error(`Failed to build texture array for atlas ${tk}`, kk)
+                url: Ub
+              } = kb.source;
+              sb.atlasArray(Ub, null !== (ab = null === (Tb = cb.sources.pixels) || void 0 === Tb ? void 0 : Tb[Wb]) && void 0 !== ab ? ab : null, cb.sources.layerWidth).then((sb => {
+                (0, Nb.c)(bb, cb, Wb, sb, sb.layerWidth, sb.layers, tb)
+              })).catch((bb => {
+                console.error(`Failed to build texture array for atlas ${Wb}`, bb)
               }))
             }))
           }))
-        }(Bk, Fk.state))
+        }(sb, cb.state))
       },
-      texture: (kk, Fk, Bk) => {
+      texture: (bb, cb, sb) => {
         let {
-          data: Rk,
-          sets: tk
-        } = Bk;
-        var ak;
-        (ck(kk), Rk) && (kk.uvSet = null !== (ak = null === tk || void 0 === tk ? void 0 : tk.coordinatesIndex) && void 0 !== ak ? ak : 0, (0, Yk.Z)(kk.matrix, null !== tk && void 0 !== tk ? tk : {}))
+          data: kb,
+          sets: Wb
+        } = sb;
+        var ab;
+        (Eb(bb), kb) && (bb.uvSet = null !== (ab = null === Wb || void 0 === Wb ? void 0 : Wb.coordinatesIndex) && void 0 !== ab ? ab : 0, (0, Lb.ib)(bb.matrix, null !== Wb && void 0 !== Wb ? Wb : {}))
       },
-      cube: ck,
-      canvas: (kk, Fk, Bk) => {
+      cube: Eb,
+      canvas: (bb, cb, sb) => {
         let {
-          width: Rk,
-          height: tk,
-          mipmaps: ak,
-          samplingMode: Xk = Hk.l.trilinear,
-          hasAlpha: bk = !1,
-          wrap: wk = Hk.e.clamp
-        } = Bk;
-        const dk = kk.ne().createCanvas(Rk, tk),
-          sk = new Hk.o("2d", {
+          width: kb,
+          height: Wb,
+          mipmaps: ab,
+          samplingMode: Tb = Bb.i.trilinear,
+          hasAlpha: Ub = !1,
+          wrap: Ib = Bb.c.clamp
+        } = sb;
+        const Hb = bb.Sm().createCanvas(kb, Wb),
+          fb = new Bb.l("2d", {
             kind: "canvas",
-            width: Rk,
-            height: tk,
-            canvas: dk
+            width: kb,
+            height: Wb,
+            canvas: Hb
           }, {
-            samplingMode: Xk,
-            wrapU: wk,
-            wrapV: wk,
-            noMipmap: !ak,
+            samplingMode: Tb,
+            wrapU: Ib,
+            wrapV: Ib,
+            noMipmap: !ab,
             invertY: !0
           });
-        return sk.hasAlpha = bk, ck(sk), sk
+        return fb.hasAlpha = Ub, Eb(fb), fb
       }
     };
-    var Tk = Bk(37085),
-      rk = Bk(36781);
-    class Dk {
-      constructor(kk, Fk, Bk) {
-        this.engine = kk, this.clearColor = Fk, this.ambientColor = Bk, this.onBeforeRenderObservable = new rk.e, this.onBeforeCameraRenderObservable = new rk.e, this.onAfterRenderObservable = new rk.e, this.activeCamera = null, this.useRightHandedSystem = !1, this.iblIntensity = 1, this.particlesEnabled = !0, this.meshes = [], this.materials = [], this.textures = [], this.transformNodes = [], this.fY = [], this.frustumPlanes = void 0, this.draw = () => {}, this.frameId = 0, this.animationRatio = 1, this.lastId = 0, this.pending = []
+    var Ob = sb(36994),
+      Gb = sb(36683);
+    class Kb {
+      constructor(bb, cb, sb) {
+        this.engine = bb, this.clearColor = cb, this.ambientColor = sb, this.onBeforeRenderObservable = new Gb.c, this.onBeforeCameraRenderObservable = new Gb.c, this.onAfterRenderObservable = new Gb.c, this.activeCamera = null, this.useRightHandedSystem = !1, this.iblIntensity = 1, this.particlesEnabled = !0, this.meshes = [], this.materials = [], this.textures = [], this.transformNodes = [], this.mV = [], this.frustumPlanes = void 0, this.draw = () => {}, this.frameId = 0, this.animationRatio = 1, this.lastId = 0, this.pending = []
       }
-      ne() {
+      Sm() {
         return this.engine
       }
       getUniqueId() {
@@ -287,11 +287,11 @@ export const modules = {
       getAnimationRatio() {
         return this.animationRatio
       }
-      addPendingData(kk) {
-        this.pending.push(kk)
+      addPendingData(bb) {
+        this.pending.push(bb)
       }
-      removePendingData(kk) {
-        const Fk = this.pending.indexOf(kk); - 1 !== Fk && this.pending.splice(Fk, 1)
+      removePendingData(bb) {
+        const cb = this.pending.indexOf(bb); - 1 !== cb && this.pending.splice(cb, 1)
       }
       getWaitingItemsCount() {
         return this.pending.length
@@ -307,170 +307,170 @@ export const modules = {
       }
     }
 
-    function zk() {
+    function Zb() {
       throw new Error("Lite has no WebGL engine, Babylon particles or Babylon picks")
     }
-    const Pk = {
-      ORk: zk,
-      oRk: (kk, Fk) => {
-        const Bk = new Dk(kk.engine, Rk.c.FromArray(Fk.clearColor), Rk.Color3.FromArray(Fk.ambientColor));
-        (0, Xk.b)(Gk, Bk), kk.ef = Bk,
-          function(kk, Fk) {
-            const Bk = Object.assign((0, Tk.e)(kk, "camera"), {
+    const zb = {
+      Vkb: Zb,
+      Ckb: (bb, cb) => {
+        const sb = new Kb(bb.engine, kb.e.FromArray(cb.clearColor), kb.Color3.FromArray(cb.ambientColor));
+        (0, Tb.d)(ib, sb), bb.aQ = sb,
+          function(bb, cb) {
+            const sb = Object.assign((0, Ob.h)(bb, "camera"), {
               layerMask: 268435455
             });
-            kk.model.nodes.setWorldSource(Bk.row, kk.model.view.worldMatrix), kk.camera = Fk.activeCamera = Bk
-          }(kk, Bk), (0, tk.g)(kk, ((kk, Fk, Bk) => (0, ak.h)(kk, Fk, Bk, bk.e)))
+            bb.model.nodes.setWorldSource(sb.row, bb.model.view.worldMatrix), bb.camera = cb.activeCamera = sb
+          }(bb, sb), (0, Wb.i)(bb, ((bb, cb, sb) => (0, ab.k)(bb, cb, sb, Ub.e)))
       },
-      WRk: () => {},
+      mkb: () => {},
       setBabylonFog: () => {},
-      ERk: zk,
-      HRk: () => {},
-      linesFromArrays: (kk, Fk, Bk) => (0, ak.h)(kk, Fk, Bk, wk),
-      yf: () => {},
-      NRk: zk
+      Lkb: Zb,
+      hkb: () => {},
+      linesFromArrays: (bb, cb, sb) => (0, ab.k)(bb, cb, sb, Ib),
+      TQ: () => {},
+      Ykb: Zb
     };
-    var hk = Bk(41127),
-      qk = Bk(41138);
-    class Ck {
-      constructor(kk) {
+    var qb = sb(41105),
+      db = sb(41121);
+    class Ab {
+      constructor(bb) {
         this.deviceLost = void 0, this.refusedFrames = 0, this.refused = void 0;
-        const Fk = new Promise((kk => {
-          this.refused = kk
+        const cb = new Promise((bb => {
+          this.refused = bb
         }));
-        this.deviceLost = Promise.race([kk, Fk])
+        this.deviceLost = Promise.race([bb, cb])
       }
       frameDrawn() {
         this.refusedFrames = 0
       }
-      frameFailed(kk) {
-        (function(kk) {
+      frameFailed(bb) {
+        (function(bb) {
           const {
-            name: Fk,
-            message: Bk
-          } = null !== kk && void 0 !== kk ? kk : {};
-          return "InvalidStateError" === Fk && "string" === typeof Bk && Bk.startsWith("GPUDevice.")
-        })(kk) && (this.refusedFrames++, 3 === this.refusedFrames && this.refused({
+            name: cb,
+            message: sb
+          } = null !== bb && void 0 !== bb ? bb : {};
+          return "InvalidStateError" === cb && "string" === typeof sb && sb.startsWith("GPUDevice.")
+        })(bb) && (this.refusedFrames++, 3 === this.refusedFrames && this.refused({
           reason: "unknown",
-          message: kk.message,
+          message: bb.message,
           framesRefused: !0
         }))
       }
     }
-    class Zk {
-      constructor(kk) {
-        this.resources = kk, this.matrixKey = {
-          KV: 0
+    class wb {
+      constructor(bb) {
+        this.resources = bb, this.matrixKey = {
+          GM: 0
         }, this.attributesKey = {
-          KV: 0
+          GM: 0
         }, this.inputs = Object.create(null);
-        for (let Fk = 0; Fk < 4; Fk++) this.inputs[`world${Fk}`] = new xk(this.matrixKey, 16 * Fk, 64, 4)
+        for (let cb = 0; cb < 4; cb++) this.inputs[`world${cb}`] = new Sb(this.matrixKey, 16 * cb, 64, 4)
       }
       release() {
         this.resources.bufferDeleted(this.matrixKey), this.resources.bufferDeleted(this.attributesKey)
       }
-      bind(kk, Fk) {
-        this.resources.vertexBufferCreated(this.matrixKey, kk, !0), Fk && this.resources.vertexBufferCreated(this.attributesKey, Fk, !0)
+      bind(bb, cb) {
+        this.resources.vertexBufferCreated(this.matrixKey, bb, !0), cb && this.resources.vertexBufferCreated(this.attributesKey, cb, !0)
       }
     }
-    class pk extends Zk {
-      constructor(kk, Fk, Bk) {
-        super(kk), this.mesh = Fk, this.rowStride = void 0, this.matrices = null, this.attributes = null;
-        const Rk = this.inputs;
-        let tk = 0;
+    class rb extends wb {
+      constructor(bb, cb, sb) {
+        super(bb), this.mesh = cb, this.rowStride = void 0, this.matrices = null, this.attributes = null;
+        const kb = this.inputs;
+        let Wb = 0;
         for (const {
-            size: Xk
+            size: Tb
           }
-          of Bk) tk += Xk;
+          of sb) Wb += Tb;
         for (const {
-            name: Xk,
-            offset: bk,
-            size: wk,
-            type: dk
+            name: Tb,
+            offset: Ub,
+            size: Ib,
+            type: Hb
           }
-          of Bk) Rk[Xk] = new xk(this.attributesKey, 4 * bk, 4 * tk, wk, !0, dk);
-        this.rowStride = tk, kk.K3.set(Fk, this);
-        const ak = Fk.isVerticesDataPresent;
-        Fk.isVerticesDataPresent = (kk, Bk) => kk in Rk || ak.call(Fk, kk, Bk)
+          of sb) kb[Tb] = new Sb(this.attributesKey, 4 * Ub, 4 * Wb, Ib, !0, Hb);
+        this.rowStride = Wb, bb.vF.set(cb, this);
+        const ab = cb.isVerticesDataPresent;
+        cb.isVerticesDataPresent = (bb, sb) => bb in kb || ab.call(cb, bb, sb)
       }
-      attach(kk, Fk) {
-        this.matrices = kk, this.attributes = Fk, this.bind(kk, Fk), this.mirror(kk, kk.length, kk.length / 16)
+      attach(bb, cb) {
+        this.matrices = bb, this.attributes = cb, this.bind(bb, cb), this.mirror(bb, bb.length, bb.length / 16)
       }
-      U_(kk) {
-        this.matrices && this.resources.vertexBufferUpdated(this.matrixKey, this.matrices, 0, kk ? 64 * kk : void 0)
+      K4(bb) {
+        this.matrices && this.resources.vertexBufferUpdated(this.matrixKey, this.matrices, 0, bb ? 64 * bb : void 0)
       }
-      T_() {
+      Z4() {
         this.attributes && this.resources.vertexBufferUpdated(this.attributesKey, this.attributes)
       }
-      matrixRows(kk, Fk) {
-        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 16 * kk, 16 * Fk)
+      matrixRows(bb, cb) {
+        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 16 * bb, 16 * cb)
       }
-      attributeRows(kk, Fk) {
-        this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, kk * this.rowStride, Fk * this.rowStride)
+      attributeRows(bb, cb) {
+        this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, bb * this.rowStride, cb * this.rowStride)
       }
       release() {
         super.release(), this.matrices = null, this.attributes = null, this.mirror(null, 512, 0)
       }
-      mirror(kk, Fk, Bk) {
-        const Rk = this.mesh._thinInstanceDataStorage;
-        Rk.matrixData = kk, Rk.matrixBufferSize = Fk, Rk.worldMatrices = null, Rk.instancesCount = Bk
+      mirror(bb, cb, sb) {
+        const kb = this.mesh._thinInstanceDataStorage;
+        kb.matrixData = bb, kb.matrixBufferSize = cb, kb.worldMatrices = null, kb.instancesCount = sb
       }
     }
-    class Kk extends Zk {
-      constructor(kk, Fk, Bk) {
-        var Rk, tk, ak, Xk;
-        super(kk), this.layout = void 0, this.offsets = void 0, this.rowStride = void 0, this.matrices = new Float32Array(512), this.attributes = void 0, this.frame = -1, this.count = 0, this.packedSource = null, this.packedBatch = null, this.layout = null !== (Rk = null === Bk || void 0 === Bk ? void 0 : Bk.interleavedKinds) && void 0 !== Rk ? Rk : null, this.offsets = null !== (tk = null === Bk || void 0 === Bk ? void 0 : Bk.interleavedOffsets) && void 0 !== tk ? tk : [], this.rowStride = null !== (ak = null === Bk || void 0 === Bk ? void 0 : Bk.interleavedRowStride) && void 0 !== ak ? ak : 0, null === (Xk = this.layout) || void 0 === Xk || Xk.forEach(((kk, Fk) => {
-          this.inputs[kk] = new xk(this.attributesKey, 4 * this.offsets[Fk], 4 * this.rowStride, Bk.strides[kk])
-        })), this.attributes = this.rowStride > 0 ? new Float32Array(32 * this.rowStride) : null, this.bind(this.matrices, this.attributes), kk.batchUploads.set(Fk, this), Fk.yN.addOnce((() => {
+    class ob extends wb {
+      constructor(bb, cb, sb) {
+        var kb, Wb, ab, Tb;
+        super(bb), this.layout = void 0, this.offsets = void 0, this.rowStride = void 0, this.matrices = new Float32Array(512), this.attributes = void 0, this.frame = -1, this.count = 0, this.packedSource = null, this.packedBatch = null, this.layout = null !== (kb = null === sb || void 0 === sb ? void 0 : sb.interleavedKinds) && void 0 !== kb ? kb : null, this.offsets = null !== (Wb = null === sb || void 0 === sb ? void 0 : sb.interleavedOffsets) && void 0 !== Wb ? Wb : [], this.rowStride = null !== (ab = null === sb || void 0 === sb ? void 0 : sb.interleavedRowStride) && void 0 !== ab ? ab : 0, null === (Tb = this.layout) || void 0 === Tb || Tb.forEach(((bb, cb) => {
+          this.inputs[bb] = new Sb(this.attributesKey, 4 * this.offsets[cb], 4 * this.rowStride, sb.strides[bb])
+        })), this.attributes = this.rowStride > 0 ? new Float32Array(32 * this.rowStride) : null, this.bind(this.matrices, this.attributes), bb.batchUploads.set(cb, this), cb.ZY.addOnce((() => {
           this.release()
         }))
       }
       get packedMatrices() {
         return this.matrices
       }
-      packedRowMesh(kk) {
-        const Fk = this.packedBatch;
-        return Fk.renderSelf ? 0 === kk ? this.packedSource : Fk.instances[kk - 1] : Fk.instances[kk]
+      packedRowMesh(bb) {
+        const cb = this.packedBatch;
+        return cb.renderSelf ? 0 === bb ? this.packedSource : cb.instances[bb - 1] : cb.instances[bb]
       }
       get packedAttributes() {
         return this.attributes
       }
-      pack(kk, Fk, Bk, Rk) {
-        const tk = (Fk.renderSelf ? 1 : 0) + Fk.rows.length;
-        if (this.frame = Rk, this.count = tk, this.packedSource = kk, this.packedBatch = Fk, 0 === tk) return;
-        if (kk.getWorldMatrix(), 16 * tk > this.matrices.length) {
-          let kk = this.matrices.length / 16;
-          for (; kk < tk;) kk *= 2;
-          this.matrices = new Float32Array(16 * kk), this.attributes &&= new Float32Array(kk * this.rowStride), this.bind(this.matrices, this.attributes)
+      pack(bb, cb, sb, kb) {
+        const Wb = (cb.renderSelf ? 1 : 0) + cb.rows.length;
+        if (this.frame = kb, this.count = Wb, this.packedSource = bb, this.packedBatch = cb, 0 === Wb) return;
+        if (bb.getWorldMatrix(), 16 * Wb > this.matrices.length) {
+          let bb = this.matrices.length / 16;
+          for (; bb < Wb;) bb *= 2;
+          this.matrices = new Float32Array(16 * bb), this.attributes &&= new Float32Array(bb * this.rowStride), this.bind(this.matrices, this.attributes)
         }
-        let ak = 0;
-        Fk.renderSelf && this.packRow(ak++, kk, Fk.row, Bk);
-        for (let Xk = 0; Xk < Fk.rows.length; Xk++) this.packRow(ak++, Fk.instances[Xk], Fk.rows[Xk], Bk);
-        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 0, 16 * tk), this.attributes && this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, 0, tk * this.rowStride)
+        let ab = 0;
+        cb.renderSelf && this.packRow(ab++, bb, cb.row, sb);
+        for (let Tb = 0; Tb < cb.rows.length; Tb++) this.packRow(ab++, cb.instances[Tb], cb.rows[Tb], sb);
+        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 0, 16 * Wb), this.attributes && this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, 0, Wb * this.rowStride)
       }
-      packRow(kk, Fk, Bk, Rk) {
-        const tk = this.matrices;
-        if (Bk < 0) tk.set(Fk.getWorldMatrix().m, 16 * kk);
+      packRow(bb, cb, sb, kb) {
+        const Wb = this.matrices;
+        if (sb < 0) Wb.set(cb.getWorldMatrix().m, 16 * bb);
         else
-          for (let dk = 0; dk < 16; dk++) tk[16 * kk + dk] = Rk[16 * Bk + dk];
-        const ak = this.attributes;
-        if (!ak) return;
-        const Xk = Fk.gH,
-          bk = this.layout;
-        for (let dk = 0; dk < bk.length; dk++) {
-          var wk;
-          const Fk = null !== (wk = Xk[bk[dk]]) && void 0 !== wk ? wk : 0,
-            Bk = kk * this.rowStride + this.offsets[dk];
-          Fk.toArray ? Fk.toArray(ak, Bk) : Fk.copyToArray ? Fk.copyToArray(ak, Bk) : ak[Bk] = Fk
+          for (let Hb = 0; Hb < 16; Hb++) Wb[16 * bb + Hb] = kb[16 * sb + Hb];
+        const ab = this.attributes;
+        if (!ab) return;
+        const Tb = cb.LJ,
+          Ub = this.layout;
+        for (let Hb = 0; Hb < Ub.length; Hb++) {
+          var Ib;
+          const cb = null !== (Ib = Tb[Ub[Hb]]) && void 0 !== Ib ? Ib : 0,
+            sb = bb * this.rowStride + this.offsets[Hb];
+          cb.toArray ? cb.toArray(ab, sb) : cb.copyToArray ? cb.copyToArray(ab, sb) : ab[sb] = cb
         }
       }
     }
-    class xk {
-      constructor(kk, Fk, Bk, Rk) {
-        let tk = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          ak = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5126,
-          Xk = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        this.key = kk, this.byteOffset = Fk, this.byteStride = Bk, this.size = Rk, this.instanced = tk, this.type = ak, this.normalized = Xk
+    class Sb {
+      constructor(bb, cb, sb, kb) {
+        let Wb = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5126,
+          Tb = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        this.key = bb, this.byteOffset = cb, this.byteStride = sb, this.size = kb, this.instanced = Wb, this.type = ab, this.normalized = Tb
       }
       getBuffer() {
         return this.key
@@ -482,57 +482,57 @@ export const modules = {
         return this.instanced
       }
     }
-    const jk = "CANVAS_ALPHA_ONE",
-      lk = `override ${jk}: bool = false;`,
-      nk = {
+    const Rb = "CANVAS_ALPHA_ONE",
+      vb = `override ${Rb}: bool = false;`,
+      Fb = {
         srcFactor: "zero",
         dstFactor: "one",
         operation: "add"
       };
 
-    function Ik(kk, Fk, Bk) {
-      var Rk;
-      let tk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const ak = null !== (Rk = Fk._colorFormat) && void 0 !== Rk ? Rk : "bgra8unorm",
-        Xk = tk ? 15 : 0;
-      return Bk ? {
-        ...kk,
+    function xb(bb, cb, sb) {
+      var kb;
+      let Wb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const ab = null !== (kb = cb._colorFormat) && void 0 !== kb ? kb : "bgra8unorm",
+        Tb = Wb ? 15 : 0;
+      return sb ? {
+        ...bb,
         targets: [{
-          format: ak,
+          format: ab,
           blend: {
-            color: Bk,
-            alpha: nk
+            color: sb,
+            alpha: Fb
           },
-          writeMask: Xk
+          writeMask: Tb
         }]
       } : {
-        ...kk,
+        ...bb,
         constants: {
-          ...kk.constants,
-          [jk]: 1
+          ...bb.constants,
+          [Rb]: 1
         },
         targets: [{
-          format: ak,
-          writeMask: Xk
+          format: ab,
+          writeMask: Tb
         }]
       }
     }
 
-    function Qk(kk, Fk) {
-      kk._renderables.push(Fk)
+    function jb(bb, cb) {
+      bb._renderables.push(cb)
     }
 
-    function kF(kk) {
-      var Fk, Bk;
-      return null !== (Fk = null === (Bk = kk._frameGraph) || void 0 === Bk ? void 0 : Bk._tasks) && void 0 !== Fk ? Fk : []
+    function pb(bb) {
+      var cb, sb;
+      return null !== (cb = null === (sb = bb._frameGraph) || void 0 === sb ? void 0 : sb._tasks) && void 0 !== cb ? cb : []
     }
 
-    function FF(kk) {
-      return kk._currentEncoder
+    function bc(bb) {
+      return bb._currentEncoder
     }
 
-    function BF(kk) {
-      return kk.createBindGroupLayout({
+    function cc(bb) {
+      return bb.createBindGroupLayout({
         label: "lite-scene-equivalent",
         entries: [{
           binding: 0,
@@ -549,98 +549,98 @@ export const modules = {
         }]
       })
     }
-    const RF = "greater-equal",
-      tF = 2e5,
-      aF = 1e5,
-      XF = new WeakMap;
+    const sc = "greater-equal",
+      kc = 2e5,
+      Wc = 1e5,
+      ac = new WeakMap;
 
-    function bF(kk, Fk) {
-      let Bk = XF.get(kk);
-      if (!Bk) {
-        Bk = {
-          module: kk.createShaderModule({
+    function Tc(bb, cb) {
+      let sb = ac.get(bb);
+      if (!sb) {
+        sb = {
+          module: bb.createShaderModule({
             label: "placeholder",
             code: "@vertex fn v() -> @builtin(position) vec4f { return vec4f(0.0, 0.0, 0.0, 1.0); }\n@fragment fn f() -> @location(0) vec4f { return vec4f(0.0); }"
           }),
           pipelines: new Map
-        }, XF.set(kk, Bk)
+        }, ac.set(bb, sb)
       }
-      const Rk = `${Fk._colorFormat}|${Fk._depthStencilFormat}|${Fk._sampleCount}`;
-      let tk = Bk.pipelines.get(Rk);
-      if (!tk) {
-        var ak;
+      const kb = `${cb._colorFormat}|${cb._depthStencilFormat}|${cb._sampleCount}`;
+      let Wb = sb.pipelines.get(kb);
+      if (!Wb) {
+        var ab;
         const {
-          module: Xk
-        } = Bk;
-        tk = kk.createRenderPipeline({
-          label: `placeholder ${Rk}`,
-          layout: kk.createPipelineLayout({
+          module: Tb
+        } = sb;
+        Wb = bb.createRenderPipeline({
+          label: `placeholder ${kb}`,
+          layout: bb.createPipelineLayout({
             bindGroupLayouts: []
           }),
           vertex: {
-            module: Xk,
+            module: Tb,
             entryPoint: "v"
           },
           fragment: {
-            module: Xk,
+            module: Tb,
             entryPoint: "f",
             targets: [{
-              format: null !== (ak = Fk._colorFormat) && void 0 !== ak ? ak : "bgra8unorm",
+              format: null !== (ab = cb._colorFormat) && void 0 !== ab ? ab : "bgra8unorm",
               writeMask: 0
             }]
           },
-          depthStencil: Fk._depthStencilFormat ? {
-            format: Fk._depthStencilFormat,
+          depthStencil: cb._depthStencilFormat ? {
+            format: cb._depthStencilFormat,
             depthCompare: "always",
             depthWriteEnabled: !1
           } : void 0,
           multisample: {
-            count: Fk._sampleCount
+            count: cb._sampleCount
           }
-        }), Bk.pipelines.set(Rk, tk)
+        }), sb.pipelines.set(kb, Wb)
       }
-      return tk
+      return Wb
     }
 
-    function wF(kk, Fk, Bk) {
-      const Rk = Fk.eye,
-        tk = Fk.viewMatrix;
-      kk[0] = Rk[0] + tk[2] * Bk, kk[1] = Rk[1] + tk[6] * Bk, kk[2] = Rk[2] + tk[10] * Bk
+    function Uc(bb, cb, sb) {
+      const kb = cb.eye,
+        Wb = cb.viewMatrix;
+      bb[0] = kb[0] + Wb[2] * sb, bb[1] = kb[1] + Wb[6] * sb, bb[2] = kb[2] + Wb[10] * sb
     }
-    var dF = Bk(37640),
-      sF = Bk(41033),
-      VF = Bk(36842);
-    const JF = Math.PI,
-      AF = JF / 1.95,
-      eF = [5e-4 / 94, 125e-7, 5e-4 / 18],
-      yF = [
+    var Ic = sb(37540),
+      Hc = sb(41011),
+      fc = sb(36752);
+    const Mc = Math.PI,
+      Xc = Mc / 1.95,
+      nc = [5e-4 / 94, 125e-7, 5e-4 / 18],
+      mc = [
         [68e-8, .686],
         [55e-8, .678],
         [45e-8, .666]
-      ].map((kk => {
-        let [Fk, Bk] = kk;
-        return .434 * JF * Math.pow(2 * JF / Fk, 2) * Bk
+      ].map((bb => {
+        let [cb, sb] = bb;
+        return .434 * Mc * Math.pow(2 * Mc / cb, 2) * sb
       }));
 
-    function fF(kk, Fk, Bk) {
+    function lc(bb, cb, sb) {
       const {
-        up: Rk,
-        mieDirectionalG: tk
-      } = kk, ak = 1 - vF(1 - Math.exp(Fk[1] / 45e4), 0, 1), Xk = kk.rayleigh - (1 - ak), bk = Math.hypot(Fk[0], Fk[1], Fk[2]), wk = bk > 0 ? 1 / bk : 0, dk = Bk.sunDir;
-      for (let Ak = 0; Ak < 3; Ak++) dk[Ak] = Fk[Ak] * wk;
-      const sk = dk[0] * Rk[0] + dk[1] * Rk[1] + dk[2] * Rk[2],
-        Vk = 1e3 * Math.max(0, 1 - Math.exp(-(AF - Math.acos(vF(sk, -1, 1))) / 1.5));
-      Bk.sunE = Vk;
-      const Jk = .2 * kk.turbidity * 1e-17 * kk.mieCoefficient;
-      for (let Ak = 0; Ak < 3; Ak++) {
-        const kk = eF[Ak] * Xk,
-          Fk = yF[Ak] * Jk,
-          Rk = Vk / (kk + Fk);
-        Bk.inScatterR[Ak] = kk * Rk, Bk.inScatterM[Ak] = Fk * Rk, Bk.extinctionBeta[Ak] = 8400 * kk + 1250 * Fk
+        up: kb,
+        mieDirectionalG: Wb
+      } = bb, ab = 1 - Cc(1 - Math.exp(cb[1] / 45e4), 0, 1), Tb = bb.rayleigh - (1 - ab), Ub = Math.hypot(cb[0], cb[1], cb[2]), Ib = Ub > 0 ? 1 / Ub : 0, Hb = sb.sunDir;
+      for (let nb = 0; nb < 3; nb++) Hb[nb] = cb[nb] * Ib;
+      const fb = Hb[0] * kb[0] + Hb[1] * kb[1] + Hb[2] * kb[2],
+        Mb = 1e3 * Math.max(0, 1 - Math.exp(-(Xc - Math.acos(Cc(fb, -1, 1))) / 1.5));
+      sb.sunE = Mb;
+      const Xb = .2 * bb.turbidity * 1e-17 * bb.mieCoefficient;
+      for (let nb = 0; nb < 3; nb++) {
+        const bb = nc[nb] * Tb,
+          cb = mc[nb] * Xb,
+          kb = Mb / (bb + cb);
+        sb.inScatterR[nb] = bb * kb, sb.inScatterM[nb] = cb * kb, sb.extinctionBeta[nb] = 8400 * bb + 1250 * cb
       }
-      return Bk.sunsetMix = vF(Math.pow(1 - sk, 5), 0, 1), Bk.sunDiscE = 19e3 * Vk, Bk.mieScale = (1 - tk * tk) / (4 * JF), Bk.mieBase = 1 + tk * tk, Bk.mieSlope = 2 * tk, Bk
+      return sb.sunsetMix = Cc(Math.pow(1 - fb, 5), 0, 1), sb.sunDiscE = 19e3 * Mb, sb.mieScale = (1 - Wb * Wb) / (4 * Mc), sb.mieBase = 1 + Wb * Wb, sb.mieSlope = 2 * Wb, sb
     }
-    const mF = {
+    const Qc = {
       A: .15,
       B: .5,
       C: .1,
@@ -648,599 +648,599 @@ export const modules = {
       E: .02,
       F: .3
     };
-    const WF = 1 / function(kk) {
+    const ec = 1 / function(bb) {
       const {
-        A: Fk,
-        B: Bk,
-        C: Rk,
-        D: tk,
-        E: ak,
-        F: Xk
-      } = mF;
-      return (kk * (Fk * kk + Rk * Bk) + tk * ak) / (kk * (Fk * kk + Bk) + tk * Xk) - ak / Xk
+        A: cb,
+        B: sb,
+        C: kb,
+        D: Wb,
+        E: ab,
+        F: Tb
+      } = Qc;
+      return (bb * (cb * bb + kb * sb) + Wb * ab) / (bb * (cb * bb + sb) + Wb * Tb) - ab / Tb
     }(1e3);
 
-    function vF(kk, Fk, Bk) {
-      return Math.min(Math.max(kk, Fk), Bk)
+    function Cc(bb, cb, sb) {
+      return Math.min(Math.max(bb, cb), sb)
     }
-    const iF = /^\s*#(ifdef|ifndef|if|elif|else|endif|define|undef)\b(.*)$/;
+    const Nc = /^\s*#(ifdef|ifndef|if|elif|else|endif|define|undef)\b(.*)$/;
 
-    function YF(kk, Fk) {
-      const Bk = new Map(Fk),
-        Rk = [],
-        tk = [],
-        ak = () => 0 === tk.length || tk[tk.length - 1].active;
-      let Xk = null;
-      const bk = () => {
-        const kk = [...Bk].filter((kk => {
-            let [, Fk] = kk;
-            return !0 !== Fk
+    function Vc(bb, cb) {
+      const sb = new Map(cb),
+        kb = [],
+        Wb = [],
+        ab = () => 0 === Wb.length || Wb[Wb.length - 1].active;
+      let Tb = null;
+      const Ub = () => {
+        const bb = [...sb].filter((bb => {
+            let [, cb] = bb;
+            return !0 !== cb
           })),
-          Fk = kk.map((kk => {
-            let [Fk] = kk;
-            return Fk
+          cb = bb.map((bb => {
+            let [cb] = bb;
+            return cb
           })).join("|");
-        Xk = kk.length ? new RegExp(`\\b(${Fk})\\b`, "g") : null
+        Tb = bb.length ? new RegExp(`\\b(${cb})\\b`, "g") : null
       };
-      bk();
-      for (const wk of kk.split("\n")) {
-        const kk = iF.exec(wk);
-        if (!kk) {
-          ak() && Rk.push(Xk ? oF(wk, Xk, Bk) : wk);
+      Ub();
+      for (const Ib of bb.split("\n")) {
+        const bb = Nc.exec(Ib);
+        if (!bb) {
+          ab() && kb.push(Tb ? Lc(Ib, Tb, sb) : Ib);
           continue
         }
-        const Fk = kk[1],
-          dk = kk[2].trim();
-        if ("ifdef" === Fk || "ifndef" === Fk || "if" === Fk) {
-          const kk = ak(),
-            Rk = "if" === Fk ? LF(dk, Bk) : Bk.has(dk) === ("ifdef" === Fk);
-          tk.push({
-            active: kk && Rk,
-            parentActive: kk,
-            taken: Rk
+        const cb = bb[1],
+          Hb = bb[2].trim();
+        if ("ifdef" === cb || "ifndef" === cb || "if" === cb) {
+          const bb = ab(),
+            kb = "if" === cb ? uc(Hb, sb) : sb.has(Hb) === ("ifdef" === cb);
+          Wb.push({
+            active: bb && kb,
+            parentActive: bb,
+            taken: kb
           })
-        } else if ("elif" === Fk || "else" === Fk) {
-          const kk = tk[tk.length - 1];
-          if (!kk) throw new Error(`#${Fk} without #if`);
-          const Rk = !kk.taken && ("else" === Fk || LF(dk, Bk));
-          kk.active = kk.parentActive && Rk, kk.taken = kk.taken || Rk
-        } else if ("endif" === Fk) {
-          if (!tk.pop()) throw new Error("#endif without #if")
-        } else if (ak()) {
-          const [kk, ...Rk] = dk.split(/\s+/);
-          "undef" === Fk ? Bk.delete(kk) : Bk.set(kk, !Rk.length || Rk.join(" ")), bk()
+        } else if ("elif" === cb || "else" === cb) {
+          const bb = Wb[Wb.length - 1];
+          if (!bb) throw new Error(`#${cb} without #if`);
+          const kb = !bb.taken && ("else" === cb || uc(Hb, sb));
+          bb.active = bb.parentActive && kb, bb.taken = bb.taken || kb
+        } else if ("endif" === cb) {
+          if (!Wb.pop()) throw new Error("#endif without #if")
+        } else if (ab()) {
+          const [bb, ...kb] = Hb.split(/\s+/);
+          "undef" === cb ? sb.delete(bb) : sb.set(bb, !kb.length || kb.join(" ")), Ub()
         }
       }
-      if (tk.length) throw new Error("Unterminated #if");
-      return Rk.join("\n")
+      if (Wb.length) throw new Error("Unterminated #if");
+      return kb.join("\n")
     }
 
-    function oF(kk, Fk, Bk) {
-      return kk.replace(Fk, (kk => {
-        const Fk = Bk.get(kk);
-        return "string" === typeof Fk ? Fk : kk
+    function Lc(bb, cb, sb) {
+      return bb.replace(cb, (bb => {
+        const cb = sb.get(bb);
+        return "string" === typeof cb ? cb : bb
       }))
     }
 
-    function LF(kk, Fk) {
-      var Bk;
-      const Rk = null !== (Bk = kk.match(/defined|\d+(\.\d+)?|\w+|&&|\|\||==|!=|>=|<=|[()!<>]/g)) && void 0 !== Bk ? Bk : [];
-      let tk = 0;
-      const ak = () => Rk[tk],
-        Xk = () => Rk[tk++],
-        bk = kk => {
-          const Bk = /^\d/.test(kk) ? kk : Fk.get(kk);
-          return "string" === typeof Bk ? parseInt(Bk) : Number.NaN
+    function uc(bb, cb) {
+      var sb;
+      const kb = null !== (sb = bb.match(/defined|\d+(\.\d+)?|\w+|&&|\|\||==|!=|>=|<=|[()!<>]/g)) && void 0 !== sb ? sb : [];
+      let Wb = 0;
+      const ab = () => kb[Wb],
+        Tb = () => kb[Wb++],
+        Ub = bb => {
+          const sb = /^\d/.test(bb) ? bb : cb.get(bb);
+          return "string" === typeof sb ? parseInt(sb) : Number.NaN
         },
-        wk = () => {
-          const kk = Xk();
-          if ("!" === kk) return !wk();
-          if ("(" === kk) {
-            const kk = sk();
-            return Xk(), kk
+        Ib = () => {
+          const bb = Tb();
+          if ("!" === bb) return !Ib();
+          if ("(" === bb) {
+            const bb = fb();
+            return Tb(), bb
           }
-          if ("defined" === kk) {
-            const kk = "(" === ak();
-            kk && Xk();
-            const Bk = Xk();
-            return kk && Xk(), Fk.has(Bk)
+          if ("defined" === bb) {
+            const bb = "(" === ab();
+            bb && Tb();
+            const sb = Tb();
+            return bb && Tb(), cb.has(sb)
           }
-          const Bk = ak();
-          if ("==" === Bk || "!=" === Bk || ">" === Bk || "<" === Bk || ">=" === Bk || "<=" === Bk) {
-            Xk();
-            const Fk = bk(kk),
-              Rk = bk(Xk());
-            if (Number.isNaN(Fk) || Number.isNaN(Rk)) return !1;
-            switch (Bk) {
+          const sb = ab();
+          if ("==" === sb || "!=" === sb || ">" === sb || "<" === sb || ">=" === sb || "<=" === sb) {
+            Tb();
+            const cb = Ub(bb),
+              kb = Ub(Tb());
+            if (Number.isNaN(cb) || Number.isNaN(kb)) return !1;
+            switch (sb) {
               case "==":
-                return Fk === Rk;
+                return cb === kb;
               case "!=":
-                return Fk !== Rk;
+                return cb !== kb;
               case ">":
-                return Fk > Rk;
+                return cb > kb;
               case "<":
-                return Fk < Rk;
+                return cb < kb;
               case ">=":
-                return Fk >= Rk;
+                return cb >= kb;
               default:
-                return Fk <= Rk
+                return cb <= kb
             }
           }
-          return Fk.has(kk)
+          return cb.has(bb)
         },
-        dk = () => {
-          let kk = wk();
+        Hb = () => {
+          let bb = Ib();
           for (;
-            "&&" === ak();) {
-            Xk();
-            const Fk = wk();
-            kk = kk && Fk
+            "&&" === ab();) {
+            Tb();
+            const cb = Ib();
+            bb = bb && cb
           }
-          return kk
+          return bb
         },
-        sk = () => {
-          let kk = dk();
+        fb = () => {
+          let bb = Hb();
           for (;
-            "||" === ak();) {
-            Xk();
-            const Fk = dk();
-            kk = kk || Fk
+            "||" === ab();) {
+            Tb();
+            const cb = Hb();
+            bb = bb || cb
           }
-          return kk
+          return bb
         },
-        Vk = sk();
-      if (tk !== Rk.length) throw new Error(`Cannot evaluate #if ${kk}`);
-      return Vk
+        Mb = fb();
+      if (Wb !== kb.length) throw new Error(`Cannot evaluate #if ${bb}`);
+      return Mb
     }
-    var OF = Bk(36838),
-      EF = Bk(37175),
-      SF = Bk(37180),
-      NF = Bk(40292),
-      HF = Bk(38386);
-    const uF = 32,
-      MF = [10, 3, 10],
-      gF = [21, 7, 21],
-      UF = gF[0] * gF[1] * gF[2],
-      cF = 0,
-      GF = 1,
-      TF = 2,
-      rF = 3,
-      DF = 64,
-      zF = 512,
-      PF = 4 * UF,
-      hF = 1536,
-      qF = PF + UF * hF,
-      CF = 1073741824,
-      ZF = qF + 1;
+    var Yc = sb(36749),
+      hc = sb(37071),
+      Jc = sb(37074),
+      gc = sb(40308),
+      Bc = sb(38348);
+    const tc = 32,
+      yc = [10, 3, 10],
+      Pc = [21, 7, 21],
+      Dc = Pc[0] * Pc[1] * Pc[2],
+      Ec = 0,
+      ic = 1,
+      Oc = 2,
+      Gc = 3,
+      Kc = 64,
+      Zc = 512,
+      zc = 4 * Dc,
+      qc = 1536,
+      dc = zc + Dc * qc,
+      Ac = 1073741824,
+      wc = dc + 1;
 
-    function pF(kk, Fk) {
-      const Bk = kk % Fk;
-      return Bk < 0 ? Bk + Fk : Bk
-    }
-
-    function KF(kk, Fk, Bk) {
-      return Rk = pF(kk, gF[0]), tk = pF(Fk, gF[1]), ak = pF(Bk, gF[2]), Rk + gF[0] * (tk + gF[1] * ak);
-      var Rk, tk, ak
+    function rc(bb, cb) {
+      const sb = bb % cb;
+      return sb < 0 ? sb + cb : sb
     }
 
-    function xF(kk, Fk, Bk) {
-      return kk + 8 * (Fk + 8 * Bk)
+    function oc(bb, cb, sb) {
+      return kb = rc(bb, Pc[0]), Wb = rc(cb, Pc[1]), ab = rc(sb, Pc[2]), kb + Pc[0] * (Wb + Pc[1] * ab);
+      var kb, Wb, ab
     }
 
-    function jF(kk, Fk, Bk) {
-      return kk + 4 * (Fk + 4 * Bk)
+    function Sc(bb, cb, sb) {
+      return bb + 8 * (cb + 8 * sb)
     }
-    const lF = 65535,
-      nF = 0,
-      IF = 1,
-      QF = 2,
-      kB = 3;
 
-    function FB(kk) {
-      return Math.ceil(kk * kk / 32)
+    function Rc(bb, cb, sb) {
+      return bb + 4 * (cb + 4 * sb)
     }
-    const BB = 8192,
-      RB = 1 << 18,
-      tB = 65536,
-      aB = 294912,
-      XB = 128,
-      bB = 4096,
-      wB = 16,
-      dB = 16385,
-      sB = 81921,
-      VB = 147457,
-      JB = 4194304;
-    const AB = [0, 0, 0],
-      eB = [0, 0, 0];
+    const vc = 65535,
+      Fc = 0,
+      xc = 1,
+      jc = 2,
+      pc = 3;
 
-    function yB(kk, Fk, Bk, Rk) {
-      ! function(kk, Fk, Bk) {
-        const [Rk, tk, ak] = [kk[0], kk[1], kk[2]];
-        let Xk, bk, wk;
-        Math.abs(tk) < .99 ? (Xk = ak, bk = 0, wk = -Rk) : (Xk = -tk, bk = Rk, wk = 0);
-        const dk = Math.hypot(Xk, bk, wk);
-        Fk[0] = Xk / dk, Fk[1] = bk / dk, Fk[2] = wk / dk, Bk[0] = tk * Fk[2] - ak * Fk[1], Bk[1] = ak * Fk[0] - Rk * Fk[2], Bk[2] = Rk * Fk[1] - tk * Fk[0]
-      }(Rk, AB, eB);
-      const tk = 1 / 32;
-      for (const [ak, Xk] of [
-          [0, AB],
-          [4, eB]
+    function bs(bb) {
+      return Math.ceil(bb * bb / 32)
+    }
+    const cs = 8192,
+      ss = 1 << 18,
+      ks = 65536,
+      Ws = 294912,
+      as = 128,
+      Ts = 4096,
+      Us = 16,
+      Is = 16385,
+      Hs = 81921,
+      fs = 147457,
+      Ms = 4194304;
+    const Xs = [0, 0, 0],
+      ns = [0, 0, 0];
+
+    function ms(bb, cb, sb, kb) {
+      ! function(bb, cb, sb) {
+        const [kb, Wb, ab] = [bb[0], bb[1], bb[2]];
+        let Tb, Ub, Ib;
+        Math.abs(Wb) < .99 ? (Tb = ab, Ub = 0, Ib = -kb) : (Tb = -Wb, Ub = kb, Ib = 0);
+        const Hb = Math.hypot(Tb, Ub, Ib);
+        cb[0] = Tb / Hb, cb[1] = Ub / Hb, cb[2] = Ib / Hb, sb[0] = Wb * cb[2] - ab * cb[1], sb[1] = ab * cb[0] - kb * cb[2], sb[2] = kb * cb[1] - Wb * cb[0]
+      }(kb, Xs, ns);
+      const Wb = 1 / 32;
+      for (const [ab, Tb] of [
+          [0, Xs],
+          [4, ns]
         ]) {
-        for (let Bk = 0; Bk < 3; Bk++) kk[Fk + ak + Bk] = Xk[Bk] * tk;
-        kk[Fk + ak + 3] = -(Xk[0] * Bk[0] + Xk[1] * Bk[1] + Xk[2] * Bk[2]) * tk
+        for (let sb = 0; sb < 3; sb++) bb[cb + ab + sb] = Tb[sb] * Wb;
+        bb[cb + ab + 3] = -(Tb[0] * sb[0] + Tb[1] * sb[1] + Tb[2] * sb[2]) * Wb
       }
     }
-    class fB {
+    class ls {
       constructor() {
-        this.words = new Uint32Array(VB), this.parts = 0, this.refs = 0, this.floats = new Float32Array(this.words.buffer), this.rects = new Int32Array(16384), this.counts = new Uint32Array(16384), this.inverse = new Float64Array(16), this.view = new Float32Array(8), this.viewAt = 0, this.light = [0, 1, 0]
+        this.words = new Uint32Array(fs), this.parts = 0, this.refs = 0, this.floats = new Float32Array(this.words.buffer), this.rects = new Int32Array(16384), this.counts = new Uint32Array(16384), this.inverse = new Float64Array(16), this.view = new Float32Array(8), this.viewAt = 0, this.light = [0, 1, 0]
       }
-      UA(kk, Fk) {
-        this.parts = 0, this.refs = 0, this.view = kk, this.viewAt = Fk;
-        const Bk = kk[Fk + 1] * kk[Fk + 6] - kk[Fk + 2] * kk[Fk + 5],
-          Rk = kk[Fk + 2] * kk[Fk + 4] - kk[Fk] * kk[Fk + 6],
-          tk = kk[Fk] * kk[Fk + 5] - kk[Fk + 1] * kk[Fk + 4],
-          ak = Math.hypot(Bk, Rk, tk) || 1;
-        this.light[0] = Bk / ak, this.light[1] = Rk / ak, this.light[2] = tk / ak
+      Bn(bb, cb) {
+        this.parts = 0, this.refs = 0, this.view = bb, this.viewAt = cb;
+        const sb = bb[cb + 1] * bb[cb + 6] - bb[cb + 2] * bb[cb + 5],
+          kb = bb[cb + 2] * bb[cb + 4] - bb[cb] * bb[cb + 6],
+          Wb = bb[cb] * bb[cb + 5] - bb[cb + 1] * bb[cb + 4],
+          ab = Math.hypot(sb, kb, Wb) || 1;
+        this.light[0] = sb / ab, this.light[1] = kb / ab, this.light[2] = Wb / ab
       }
-      add(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (this.parts >= bB || ! function(kk, Fk, Bk) {
-            const Rk = kk[Fk],
-              tk = kk[Fk + 1],
-              ak = kk[Fk + 2],
-              Xk = kk[Fk + 3],
-              bk = kk[Fk + 4],
-              wk = kk[Fk + 5],
-              dk = kk[Fk + 6],
-              sk = kk[Fk + 7],
-              Vk = kk[Fk + 8],
-              Jk = kk[Fk + 9],
-              Ak = kk[Fk + 10],
-              ek = kk[Fk + 11],
-              yk = kk[Fk + 12],
-              fk = kk[Fk + 13],
-              mk = kk[Fk + 14],
-              Wk = kk[Fk + 15],
-              vk = Rk * wk - tk * bk,
-              ik = Rk * dk - ak * bk,
-              Yk = Rk * sk - Xk * bk,
-              Lk = tk * dk - ak * wk,
-              Ok = tk * sk - Xk * wk,
-              Ek = ak * sk - Xk * dk,
-              Sk = Vk * fk - Jk * yk,
-              Nk = Vk * mk - Ak * yk,
-              Hk = Vk * Wk - ek * yk,
-              uk = Jk * mk - Ak * fk,
-              Mk = Jk * Wk - ek * fk,
-              gk = Ak * Wk - ek * mk,
-              Uk = vk * gk - ik * Mk + Yk * uk + Lk * Hk - Ok * Nk + Ek * Sk;
-            if (!(Math.abs(Uk) > 1e-12)) return !1;
-            const ck = 1 / Uk;
-            return Bk[0] = (wk * gk - dk * Mk + sk * uk) * ck, Bk[1] = (ak * Mk - tk * gk - Xk * uk) * ck, Bk[2] = (fk * Ek - mk * Ok + Wk * Lk) * ck, Bk[3] = (Ak * Ok - Jk * Ek - ek * Lk) * ck, Bk[4] = (dk * Hk - bk * gk - sk * Nk) * ck, Bk[5] = (Rk * gk - ak * Hk + Xk * Nk) * ck, Bk[6] = (mk * Yk - yk * Ek - Wk * ik) * ck, Bk[7] = (Vk * Ek - Ak * Yk + ek * ik) * ck, Bk[8] = (bk * Mk - wk * Hk + sk * Sk) * ck, Bk[9] = (tk * Hk - Rk * Mk - Xk * Sk) * ck, Bk[10] = (yk * Ok - fk * Yk + Wk * vk) * ck, Bk[11] = (Jk * Yk - Vk * Ok - ek * vk) * ck, Bk[12] = (wk * Nk - bk * uk - dk * Sk) * ck, Bk[13] = (Rk * uk - tk * Nk + ak * Sk) * ck, Bk[14] = (fk * ik - yk * Lk - mk * vk) * ck, Bk[15] = (Vk * Lk - Jk * ik + Ak * vk) * ck, !0
-          }(Fk, Bk, this.inverse)) return;
+      add(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (this.parts >= Ts || ! function(bb, cb, sb) {
+            const kb = bb[cb],
+              Wb = bb[cb + 1],
+              ab = bb[cb + 2],
+              Tb = bb[cb + 3],
+              Ub = bb[cb + 4],
+              Ib = bb[cb + 5],
+              Hb = bb[cb + 6],
+              fb = bb[cb + 7],
+              Mb = bb[cb + 8],
+              Xb = bb[cb + 9],
+              nb = bb[cb + 10],
+              mb = bb[cb + 11],
+              lb = bb[cb + 12],
+              Qb = bb[cb + 13],
+              eb = bb[cb + 14],
+              Cb = bb[cb + 15],
+              Nb = kb * Ib - Wb * Ub,
+              Vb = kb * Hb - ab * Ub,
+              Lb = kb * fb - Tb * Ub,
+              ub = Wb * Hb - ab * Ib,
+              Yb = Wb * fb - Tb * Ib,
+              hb = ab * fb - Tb * Hb,
+              Jb = Mb * Qb - Xb * lb,
+              gb = Mb * eb - nb * lb,
+              Bb = Mb * Cb - mb * lb,
+              tb = Xb * eb - nb * Qb,
+              yb = Xb * Cb - mb * Qb,
+              Pb = nb * Cb - mb * eb,
+              Db = Nb * Pb - Vb * yb + Lb * tb + ub * Bb - Yb * gb + hb * Jb;
+            if (!(Math.abs(Db) > 1e-12)) return !1;
+            const Eb = 1 / Db;
+            return sb[0] = (Ib * Pb - Hb * yb + fb * tb) * Eb, sb[1] = (ab * yb - Wb * Pb - Tb * tb) * Eb, sb[2] = (Qb * hb - eb * Yb + Cb * ub) * Eb, sb[3] = (nb * Yb - Xb * hb - mb * ub) * Eb, sb[4] = (Hb * Bb - Ub * Pb - fb * gb) * Eb, sb[5] = (kb * Pb - ab * Bb + Tb * gb) * Eb, sb[6] = (eb * Lb - lb * hb - Cb * Vb) * Eb, sb[7] = (Mb * hb - nb * Lb + mb * Vb) * Eb, sb[8] = (Ub * yb - Ib * Bb + fb * Jb) * Eb, sb[9] = (Wb * Bb - kb * yb - Tb * Jb) * Eb, sb[10] = (lb * Yb - Qb * Lb + Cb * Nb) * Eb, sb[11] = (Xb * Lb - Mb * Yb - mb * Nb) * Eb, sb[12] = (Ib * gb - Ub * tb - Hb * Jb) * Eb, sb[13] = (kb * tb - Wb * gb + ab * Jb) * Eb, sb[14] = (Qb * Vb - lb * ub - eb * Nb) * Eb, sb[15] = (Mb * ub - Xb * Vb + nb * Nb) * Eb, !0
+          }(cb, sb, this.inverse)) return;
         const {
-          view: Rk,
-          viewAt: tk
-        } = this, ak = Bk;
-        let Xk = 1 / 0,
-          bk = 1 / 0,
-          wk = -1 / 0,
-          dk = -1 / 0,
-          sk = -1 / 0;
-        const [Vk, Jk, Ak] = this.light;
-        for (let Yk = 0; Yk < 8; Yk++) {
-          const Bk = 1 & Yk ? kk.hi[0] : kk.lo[0],
-            ek = 2 & Yk ? kk.hi[1] : kk.lo[1],
-            yk = 4 & Yk ? kk.hi[2] : kk.lo[2],
-            fk = Bk * Fk[ak] + ek * Fk[ak + 4] + yk * Fk[ak + 8] + Fk[ak + 12],
-            mk = Bk * Fk[ak + 1] + ek * Fk[ak + 5] + yk * Fk[ak + 9] + Fk[ak + 13],
-            Wk = Bk * Fk[ak + 2] + ek * Fk[ak + 6] + yk * Fk[ak + 10] + Fk[ak + 14],
-            vk = Rk[tk] * fk + Rk[tk + 1] * mk + Rk[tk + 2] * Wk + Rk[tk + 3],
-            ik = Rk[tk + 4] * fk + Rk[tk + 5] * mk + Rk[tk + 6] * Wk + Rk[tk + 7];
-          Xk = Math.min(Xk, vk), bk = Math.min(bk, ik), wk = Math.max(wk, vk), dk = Math.max(dk, ik), sk = Math.max(sk, Vk * fk + Jk * mk + Ak * Wk)
+          view: kb,
+          viewAt: Wb
+        } = this, ab = sb;
+        let Tb = 1 / 0,
+          Ub = 1 / 0,
+          Ib = -1 / 0,
+          Hb = -1 / 0,
+          fb = -1 / 0;
+        const [Mb, Xb, nb] = this.light;
+        for (let Lb = 0; Lb < 8; Lb++) {
+          const sb = 1 & Lb ? bb.hi[0] : bb.lo[0],
+            mb = 2 & Lb ? bb.hi[1] : bb.lo[1],
+            lb = 4 & Lb ? bb.hi[2] : bb.lo[2],
+            Qb = sb * cb[ab] + mb * cb[ab + 4] + lb * cb[ab + 8] + cb[ab + 12],
+            eb = sb * cb[ab + 1] + mb * cb[ab + 5] + lb * cb[ab + 9] + cb[ab + 13],
+            Cb = sb * cb[ab + 2] + mb * cb[ab + 6] + lb * cb[ab + 10] + cb[ab + 14],
+            Nb = kb[Wb] * Qb + kb[Wb + 1] * eb + kb[Wb + 2] * Cb + kb[Wb + 3],
+            Vb = kb[Wb + 4] * Qb + kb[Wb + 5] * eb + kb[Wb + 6] * Cb + kb[Wb + 7];
+          Tb = Math.min(Tb, Nb), Ub = Math.min(Ub, Vb), Ib = Math.max(Ib, Nb), Hb = Math.max(Hb, Vb), fb = Math.max(fb, Mb * Qb + Xb * eb + nb * Cb)
         }
-        if (wk < -1 || dk < -1 || Xk >= 1 || bk >= 1) return;
-        const ek = this.parts++,
-          yk = this.rects;
-        yk[4 * ek] = mB(Xk), yk[4 * ek + 1] = mB(bk), yk[4 * ek + 2] = mB(wk), yk[4 * ek + 3] = mB(dk);
-        const fk = this.inverse,
+        if (Ib < -1 || Hb < -1 || Tb >= 1 || Ub >= 1) return;
+        const mb = this.parts++,
+          lb = this.rects;
+        lb[4 * mb] = Qs(Tb), lb[4 * mb + 1] = Qs(Ub), lb[4 * mb + 2] = Qs(Ib), lb[4 * mb + 3] = Qs(Hb);
+        const Qb = this.inverse,
           {
-            cell: mk,
-            dims: Wk,
-            lo: vk
-          } = kk,
-          ik = sB + ek * wB;
-        for (let Yk = 0; Yk < 3; Yk++) this.floats[ik + 4 * Yk] = fk[Yk] / mk, this.floats[ik + 4 * Yk + 1] = fk[4 + Yk] / mk, this.floats[ik + 4 * Yk + 2] = fk[8 + Yk] / mk, this.floats[ik + 4 * Yk + 3] = (fk[12 + Yk] - vk[Yk]) / mk;
-        this.words[ik + 12] = kk.at, this.floats[ik + 13] = sk + .001 * (1 + Math.abs(sk)), this.words[ik + 14] = Wk[0] | Wk[1] << 8 | Wk[2] << 16
+            cell: eb,
+            dims: Cb,
+            lo: Nb
+          } = bb,
+          Vb = Hs + mb * Us;
+        for (let Lb = 0; Lb < 3; Lb++) this.floats[Vb + 4 * Lb] = Qb[Lb] / eb, this.floats[Vb + 4 * Lb + 1] = Qb[4 + Lb] / eb, this.floats[Vb + 4 * Lb + 2] = Qb[8 + Lb] / eb, this.floats[Vb + 4 * Lb + 3] = (Qb[12 + Lb] - Nb[Lb]) / eb;
+        this.words[Vb + 12] = bb.at, this.floats[Vb + 13] = fb + .001 * (1 + Math.abs(fb)), this.words[Vb + 14] = Cb[0] | Cb[1] << 8 | Cb[2] << 16
       }
       finish() {
-        const kk = XB,
+        const bb = as,
           {
-            counts: Fk,
-            rects: Bk,
-            words: Rk
+            counts: cb,
+            rects: sb,
+            words: kb
           } = this;
-        Fk.fill(0);
-        let tk = 0,
-          ak = 0;
-        for (; ak < this.parts; ak++) {
-          const Rk = 4 * ak,
-            Xk = (Bk[Rk + 2] - Bk[Rk] + 1) * (Bk[Rk + 3] - Bk[Rk + 1] + 1);
-          if (tk + Xk > 65536) break;
-          tk += Xk;
-          for (let tk = Bk[Rk + 1]; tk <= Bk[Rk + 3]; tk++)
-            for (let ak = Bk[Rk]; ak <= Bk[Rk + 2]; ak++) Fk[tk * kk + ak]++
+        cb.fill(0);
+        let Wb = 0,
+          ab = 0;
+        for (; ab < this.parts; ab++) {
+          const kb = 4 * ab,
+            Tb = (sb[kb + 2] - sb[kb] + 1) * (sb[kb + 3] - sb[kb + 1] + 1);
+          if (Wb + Tb > 65536) break;
+          Wb += Tb;
+          for (let Wb = sb[kb + 1]; Wb <= sb[kb + 3]; Wb++)
+            for (let ab = sb[kb]; ab <= sb[kb + 2]; ab++) cb[Wb * bb + ab]++
         }
-        let Xk = 0;
-        for (let wk = 0; wk < 16384; wk++) Rk[wk] = Xk, Xk += Fk[wk], Fk[wk] = Rk[wk];
-        Rk[16384] = Xk;
-        for (let wk = 0; wk < ak; wk++) {
-          const tk = 4 * wk;
-          for (let ak = Bk[tk + 1]; ak <= Bk[tk + 3]; ak++)
-            for (let Xk = Bk[tk]; Xk <= Bk[tk + 2]; Xk++) Rk[dB + Fk[ak * kk + Xk]++] = wk
+        let Tb = 0;
+        for (let Ib = 0; Ib < 16384; Ib++) kb[Ib] = Tb, Tb += cb[Ib], cb[Ib] = kb[Ib];
+        kb[16384] = Tb;
+        for (let Ib = 0; Ib < ab; Ib++) {
+          const Wb = 4 * Ib;
+          for (let ab = sb[Wb + 1]; ab <= sb[Wb + 3]; ab++)
+            for (let Tb = sb[Wb]; Tb <= sb[Wb + 2]; Tb++) kb[Is + cb[ab * bb + Tb]++] = Ib
         }
-        const bk = this.floats;
-        for (let wk = 0; wk < 16384; wk++) {
-          const kk = dB + Rk[wk],
-            Fk = kk + Math.min(Rk[wk + 1] - Rk[wk], 64);
-          for (let Bk = kk + 1; Bk < Fk; Bk++) {
-            const Fk = Rk[Bk],
-              tk = bk[81934 + Fk * wB];
-            let ak = Bk - 1;
-            for (; ak >= kk && bk[81934 + Rk[ak] * wB] < tk; ak--) Rk[ak + 1] = Rk[ak];
-            Rk[ak + 1] = Fk
+        const Ub = this.floats;
+        for (let Ib = 0; Ib < 16384; Ib++) {
+          const bb = Is + kb[Ib],
+            cb = bb + Math.min(kb[Ib + 1] - kb[Ib], 64);
+          for (let sb = bb + 1; sb < cb; sb++) {
+            const cb = kb[sb],
+              Wb = Ub[81934 + cb * Us];
+            let ab = sb - 1;
+            for (; ab >= bb && Ub[81934 + kb[ab] * Us] < Wb; ab--) kb[ab + 1] = kb[ab];
+            kb[ab + 1] = cb
           }
         }
-        this.refs = tk
+        this.refs = Wb
       }
     }
 
-    function mB(kk) {
-      return Math.min(127, Math.max(0, Math.floor((.5 * kk + .5) * XB)))
+    function Qs(bb) {
+      return Math.min(127, Math.max(0, Math.floor((.5 * bb + .5) * as)))
     }
 
-    function WB(kk, Fk, Bk, Rk, tk) {
-      for (let ak = 0; ak < 4; ak++)
-        for (let Xk = 0; Xk < 4; Xk++) tk[4 * ak + Xk] = kk[Fk + 4 * ak] * Bk[Rk + Xk] + kk[Fk + 4 * ak + 1] * Bk[Rk + 4 + Xk] + kk[Fk + 4 * ak + 2] * Bk[Rk + 8 + Xk] + kk[Fk + 4 * ak + 3] * Bk[Rk + 12 + Xk]
+    function es(bb, cb, sb, kb, Wb) {
+      for (let ab = 0; ab < 4; ab++)
+        for (let Tb = 0; Tb < 4; Tb++) Wb[4 * ab + Tb] = bb[cb + 4 * ab] * sb[kb + Tb] + bb[cb + 4 * ab + 1] * sb[kb + 4 + Tb] + bb[cb + 4 * ab + 2] * sb[kb + 8 + Tb] + bb[cb + 4 * ab + 3] * sb[kb + 12 + Tb]
     }
 
-    function vB(kk, Fk, Bk, Rk, tk) {
-      const ak = kk[0] - Fk,
-        Xk = kk[1] - Bk,
-        bk = kk[2] - Rk,
-        wk = kk[3] - Fk,
-        dk = kk[4] - Bk,
-        sk = kk[5] - Rk,
-        Vk = kk[6] - Fk,
-        Jk = kk[7] - Bk,
-        Ak = kk[8] - Rk;
-      if (Math.min(ak, wk, Vk) > tk || Math.max(ak, wk, Vk) < -tk) return !1;
-      if (Math.min(Xk, dk, Jk) > tk || Math.max(Xk, dk, Jk) < -tk) return !1;
-      if (Math.min(bk, sk, Ak) > tk || Math.max(bk, sk, Ak) < -tk) return !1;
-      const ek = wk - ak,
-        yk = dk - Xk,
-        fk = sk - bk,
-        mk = Vk - wk,
-        Wk = Jk - dk,
-        vk = Ak - sk,
-        ik = yk * vk - fk * Wk,
-        Yk = fk * mk - ek * vk,
-        Lk = ek * Wk - yk * mk;
-      if (Math.abs(ik * ak + Yk * Xk + Lk * bk) > tk * (Math.abs(ik) + Math.abs(Yk) + Math.abs(Lk))) return !1;
-      const Ok = [ek, yk, fk, mk, Wk, vk, ak - Vk, Xk - Jk, bk - Ak];
-      for (let Ek = 0; Ek < 3; Ek++) {
-        const kk = Ok[3 * Ek],
-          Fk = Ok[3 * Ek + 1],
-          Bk = Ok[3 * Ek + 2];
-        for (let Rk = 0; Rk < 3; Rk++) {
-          const ek = 0 === Rk ? 0 : 1 === Rk ? Bk : -Fk,
-            yk = 0 === Rk ? -Bk : 1 === Rk ? 0 : kk,
-            fk = 0 === Rk ? Fk : 1 === Rk ? -kk : 0,
-            mk = ek * ak + yk * Xk + fk * bk,
-            Wk = ek * wk + yk * dk + fk * sk,
-            vk = ek * Vk + yk * Jk + fk * Ak,
-            ik = tk * (Math.abs(ek) + Math.abs(yk) + Math.abs(fk));
-          if (Math.min(mk, Wk, vk) > ik || Math.max(mk, Wk, vk) < -ik) return !1
+    function Cs(bb, cb, sb, kb, Wb) {
+      const ab = bb[0] - cb,
+        Tb = bb[1] - sb,
+        Ub = bb[2] - kb,
+        Ib = bb[3] - cb,
+        Hb = bb[4] - sb,
+        fb = bb[5] - kb,
+        Mb = bb[6] - cb,
+        Xb = bb[7] - sb,
+        nb = bb[8] - kb;
+      if (Math.min(ab, Ib, Mb) > Wb || Math.max(ab, Ib, Mb) < -Wb) return !1;
+      if (Math.min(Tb, Hb, Xb) > Wb || Math.max(Tb, Hb, Xb) < -Wb) return !1;
+      if (Math.min(Ub, fb, nb) > Wb || Math.max(Ub, fb, nb) < -Wb) return !1;
+      const mb = Ib - ab,
+        lb = Hb - Tb,
+        Qb = fb - Ub,
+        eb = Mb - Ib,
+        Cb = Xb - Hb,
+        Nb = nb - fb,
+        Vb = lb * Nb - Qb * Cb,
+        Lb = Qb * eb - mb * Nb,
+        ub = mb * Cb - lb * eb;
+      if (Math.abs(Vb * ab + Lb * Tb + ub * Ub) > Wb * (Math.abs(Vb) + Math.abs(Lb) + Math.abs(ub))) return !1;
+      const Yb = [mb, lb, Qb, eb, Cb, Nb, ab - Mb, Tb - Xb, Ub - nb];
+      for (let hb = 0; hb < 3; hb++) {
+        const bb = Yb[3 * hb],
+          cb = Yb[3 * hb + 1],
+          sb = Yb[3 * hb + 2];
+        for (let kb = 0; kb < 3; kb++) {
+          const mb = 0 === kb ? 0 : 1 === kb ? sb : -cb,
+            lb = 0 === kb ? -sb : 1 === kb ? 0 : bb,
+            Qb = 0 === kb ? cb : 1 === kb ? -bb : 0,
+            eb = mb * ab + lb * Tb + Qb * Ub,
+            Cb = mb * Ib + lb * Hb + Qb * fb,
+            Nb = mb * Mb + lb * Xb + Qb * nb,
+            Vb = Wb * (Math.abs(mb) + Math.abs(lb) + Math.abs(Qb));
+          if (Math.min(eb, Cb, Nb) > Vb || Math.max(eb, Cb, Nb) < -Vb) return !1
         }
       }
       return !0
     }
-    const iB = new Float32Array(1);
-    new Uint32Array(iB.buffer);
-    var YB = Bk(38395);
+    const Ns = new Float32Array(1);
+    new Uint32Array(Ns.buffer);
+    var Vs = sb(38351);
 
-    function oB(kk) {
-      const [Fk, Bk, Rk] = YB.u;
-      return `struct BloxdSpSunShadow {\n\teyeChunk: vec3i,\n\tstaleCount: u32,\n\tvolumeLo: vec3i,\n\tentityX: vec4f,\n\tentityY: vec4f,\n\tstale: array<vec4i, 4>,\n}\n@group(${kk.group}) @binding(${kk.uniform}) var<uniform> bloxdSpSunShadow: BloxdSpSunShadow;\nfn bloxdSpVolumeTexel(cell: vec3i) -> vec3i {\n\treturn cell & vec3i(${Fk-1}, ${Bk-1}, ${Rk-1});\n}\n`
+    function Ls(bb) {
+      const [cb, sb, kb] = Vs.r;
+      return `struct BloxdSpSunShadow {\n\teyeChunk: vec3i,\n\tstaleCount: u32,\n\tvolumeLo: vec3i,\n\tentityX: vec4f,\n\tentityY: vec4f,\n\tstale: array<vec4i, 4>,\n}\n@group(${bb.group}) @binding(${bb.uniform}) var<uniform> bloxdSpSunShadow: BloxdSpSunShadow;\nfn bloxdSpVolumeTexel(cell: vec3i) -> vec3i {\n\treturn cell & vec3i(${cb-1}, ${sb-1}, ${kb-1});\n}\n`
     }
 
-    function LB(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Rk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const [tk, ak, Xk] = gF, [bk, wk, dk] = MF, sk = Math.log2(uF), Vk = Rk ? "var<private> bloxdSpCrossed: bool;\n" : "", Jk = Rk ? "\t\t\tbloxdSpCrossed = true;\n" : "";
-      return `@group(${kk.group}) @binding(${kk.jJ}) var<storage, read> bloxdSpShadowVoxels: array<u32>;\n@group(${kk.group}) @binding(${kk.special}) var<storage, read> bloxdSpShadowSpecial: array<u32>;\n${Bk?"var<private> bloxdSpPlaneTolerance: f32;\n":""}${Vk}struct BloxdSpBoxExit {\n\tt: f32,\n\taxis: i32,\n\tcell: vec3i,\n}\n// inv: 1 / d, 0 where d is, taken once per ray rather than divided per exit\nfn bloxdSpExitBox(o: vec3f, d: vec3f, inv: vec3f, lo: vec3i, offset: vec3i, size: i32) -> BloxdSpBoxExit {\n\tlet low = vec3f(lo - offset);\n\tlet far = select(low, low + f32(size), d > vec3f(0.0));\n\tlet ta = select(vec3f(1e30), (far - o) * inv, d != vec3f(0.0));\n\tvar axis = 0;\n\tvar t = ta.x;\n\tif (ta.y < t) {\n\t\tt = ta.y;\n\t\taxis = 1;\n\t}\n\tif (ta.z < t) {\n\t\tt = ta.z;\n\t\taxis = 2;\n\t}\n\tlet inside = clamp(vec3i(floor(o + t * d)) + offset, lo, lo + vec3i(size - 1));\n\tlet beyond = select(lo - vec3i(1), lo + vec3i(size), d > vec3f(0.0));\n\t// select, not cell[axis] = beyond[axis]: dynamic indexing spills the vector to memory on some drivers (~9% of the frame on Mali)\n\tlet cell = select(inside, beyond, vec3<bool>(axis == 0, axis == 1, axis == 2));\n\treturn BloxdSpBoxExit(t, axis, cell);\n}\nfn bloxdSpMaskBit(word: u32, bit: u32) -> bool {\n\treturn ((bloxdSpShadowSpecial[word + (bit >> 5u)] >> (bit & 31u)) & 1u) == 1u;\n}\nfn bloxdSpCasterBlocks(caster: u32, o: vec3f, d: vec3f, cell: vec3i, offset: vec3i, t0: f32, t1: f32, axis: i32) -> bool {\n\tlet base = 0u + caster * 4u;\n\tlet kind = bloxdSpShadowSpecial[base];\n\tlet data = bloxdSpShadowSpecial[base + 1u];\n\t// Every loop here has a fixed bound, whatever the buffers hold: a GPU stuck in one loses the device\n\tlet count = min(bloxdSpShadowSpecial[base + 2u], 4u);\n\tlet size = bloxdSpShadowSpecial[base + 3u];\n\tlet q = o - vec3f(cell - offset);\n\tif (kind == ${IF}u) {\n\t\tlet qs = q * 8.0;\n\t\tlet ds = d * 8.0;\n\t\tlet invs = select(vec3f(0.0), 1.0 / ds, ds != vec3f(0.0));\n\t\tvar sub = clamp(vec3i(floor(qs + t0 * ds)), vec3i(0), vec3i(7));\n\t\tfor (var step = 0; step < 24; step++) {\n\t\t\tif (bloxdSpMaskBit(data, u32(sub.x + 8 * (sub.y + 8 * sub.z)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t\tlet exit = bloxdSpExitBox(qs, ds, invs, sub, vec3i(0), 1);\n\t\t\t// Only the axis it left by can be out of the shape\n\t\t\tif (exit.t >= t1 || any(exit.cell < vec3i(0)) || any(exit.cell >= vec3i(8))) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t\tsub = exit.cell;\n\t\t}\n\t\treturn false;\n\t}\n\tlet fs = f32(size);\n\tif (kind == ${QF}u) {\n\t\tfor (var p = 0u; p < count; p++) {\n\t\t\tlet plane = data + p * 4u;\n\t\t\tlet tx = bitcast<f32>(bloxdSpShadowSpecial[plane]);\n\t\t\tlet tz = bitcast<f32>(bloxdSpShadowSpecial[plane + 1u]);\n\t\t\tlet along = bitcast<f32>(bloxdSpShadowSpecial[plane + 2u]);\n\t\t\tlet dn = d.x * tz - d.z * tx;\n\t\t\tif (abs(dn) < 1e-6) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet t = (along - ((q.x - 0.5) * tz - (q.z - 0.5) * tx)) / dn;\n\t\t\t// Not a plane the trace starts on (SUN_SHADOW_PLANE_START), nor in its first cell one within depth's error of it\n\t\t\tif (t < select(t0, t0 + 0.0009765625, axis < 0) || t > t1${Bk?" || (axis < 0 && abs(t * dn) < bloxdSpPlaneTolerance)":""}) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet h = q + t * d;\n\t\t\tlet u = (h.x - 0.5) * tx + (h.z - 0.5) * tz + 0.5;\n\t\t\tlet v = 1.0 - h.y;\n\t\t\tif (u < 0.0 || u >= 1.0 || v < 0.0 || v >= 1.0) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tif (bloxdSpMaskBit(bloxdSpShadowSpecial[plane + 3u], u32(floor(u * fs)) + size * u32(floor(v * fs)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\t\treturn false;\n\t}\n\tif (kind == ${kB}u && axis >= 0) {\n\t\t// In through the +axis face going down the axis, else the -axis face; faces go +x, -x, +y, -y, +z, -z\n\t\tlet plusFace = d[axis] < 0.0;\n\t\tlet face = u32(2 * axis) + select(1u, 0u, plusFace);\n\t\tlet h = clamp(q + t0 * d, vec3f(0.0), vec3f(1.0));\n\t\t// As terrain samples faces (terrainShader.ts packedUv)\n\t\tvar uv = vec2f(select(h.x, 1.0 - h.x, plusFace), 1.0 - h.y);\n\t\tif (axis == 0) {\n\t\t\tuv = vec2f(select(1.0 - h.z, h.z, plusFace), 1.0 - h.y);\n\t\t} else if (axis == 1) {\n\t\t\tuv = vec2f(select(1.0 - h.x, h.x, plusFace), 1.0 - h.z);\n\t\t}\n\t\tlet texel = min(vec2u(floor(uv * fs)), vec2u(size - 1u));\n\t\treturn bloxdSpMaskBit(data + face * ((size * size + 31u) / 32u), texel.x + size * texel.y);\n\t}\n\treturn false;\n}\nfn bloxdSpWindowSlot(chunk: vec3i) -> u32 {\n\tlet window = vec3i(${tk}, ${ak}, ${Xk});\n\tlet r = chunk % window;\n\tlet s = select(r, r + window, r < vec3i(0));\n\treturn u32(s.x + ${tk} * (s.y + ${ak} * s.z));\n}\nfn bloxdSpWindowHas(chunk: vec3i) -> bool {\n\treturn all(abs(chunk - bloxdSpSunShadow.eyeChunk) <= vec3i(${bk}, ${wk}, ${dk}));\n}\nfn bloxdSpCellFull(cell: vec3i) -> bool {\n\tlet chunk = cell >> vec3u(${sk}u);\n\tif (!bloxdSpWindowHas(chunk)) {\n\t\treturn false;\n\t}\n\tlet slot = bloxdSpWindowSlot(chunk);\n\tlet record = slot * 4u;\n\tlet named = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\tlet state = bloxdSpShadowVoxels[record + 3u] & 255u;\n\tif (!named || state != ${rF}u) {\n\t\treturn named && state == ${TF}u;\n\t}\n\tlet local = cell - chunk * 32;\n\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\tlet brickBase = ${PF}u + slot * 1536u + brick * 3u;\n\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\tif (((bloxdSpShadowVoxels[brickBase + (bit >> 5u)] >> (bit & 31u)) & 1u) == 0u) {\n\t\treturn false;\n\t}\n\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\tif (pool == 0u) {\n\t\treturn true;\n\t}\n\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\treturn ((entry >> ((bit & 1u) * 16u)) & 0xffffu) == 65535u;\n}\n// ownCell: whether the caster in the cell it starts in can block it (sunShadowTrace.ts traceSunShadow)\nfn bloxdSpShadowMarch(o: vec3f, d: vec3f, offset: vec3i, maxSteps: i32, ownCell: bool) -> vec4f {\n\tvar cell = vec3i(floor(o)) + offset;\n\tvar t = 0.0;\n\tvar axis = -1;\n\tlet inv = select(vec3f(0.0), 1.0 / d, d != vec3f(0.0));\n\t// The chunk the slot and record were read for: they change only with it\n\tvar cached = vec3i(-2147483647);\n\tvar slot = 0u;\n\tvar named = false;\n\tvar state = 0u;\n\t// Rising above the window's highest cell that may block, it crosses nothing more (0: never written)\n\tlet windowWord = bloxdSpShadowVoxels[${qF}u];\n\tlet windowTop = select(2147483647, bitcast<i32>(windowWord) - 1073741824, d.y > 0.0 && windowWord != 0u);\n${Fk?"\tlet exits = bloxdSpRayFresh(o, d, offset);\n":""}\tfor (var step = 0; step < maxSteps; step++) {\n${Fk?`\t\tif (exits && step > 0 && step % ${SB} == 0 && bloxdSpVolumeOpenLit(o + t * d, offset)) {\n\t\t\treturn vec4f(o + t * d, -1.0);\n\t\t}\n`:""}\t\tif (cell.y > windowTop) {\n\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t}\n\t\tlet chunk = cell >> vec3u(${sk}u);\n\t\tif (any(chunk != cached)) {\n\t\t\tif (!bloxdSpWindowHas(chunk)) {\n\t\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t\t}\n\t\t\tcached = chunk;\n\t\t\tslot = bloxdSpWindowSlot(chunk);\n\t\t\tlet record = slot * 4u;\n\t\t\tnamed = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\t\t\tstate = bloxdSpShadowVoxels[record + 3u];\n\t\t}\n\t\tlet chunkLo = chunk * 32;\n\t\tlet kind = state & 255u;\n\t\t// Rising above its highest cell that may block, it crosses nothing more in the chunk\n\t\tif (!named || kind == ${cF}u || kind == ${GF}u || (d.y > 0.0 && cell.y - chunkLo.y > i32(state >> 8u))) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo, offset, 32);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tif (kind == ${TF}u) {\n\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t}\n\t\tlet local = cell - chunkLo;\n\t\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\t\tlet brickBase = ${PF}u + slot * 1536u + brick * 3u;\n\t\tlet low = bloxdSpShadowVoxels[brickBase];\n\t\tlet high = bloxdSpShadowVoxels[brickBase + 1u];\n\t\tif (low == 0u && high == 0u) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo + (local & vec3i(~3)), offset, 4);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\t\tlet exit = bloxdSpExitBox(o, d, inv, cell, offset, 1);\n\t\tif (((select(high, low, bit < 32u) >> (bit & 31u)) & 1u) == 1u) {\n\t\t\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\t\t\tif (pool == 0u) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n\t\t\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\t\t\tlet caster = (entry >> ((bit & 1u) * 16u)) & 0xffffu;\n\t\t\tif (caster == 65535u || ((ownCell || axis >= 0) && bloxdSpCasterBlocks(caster, o, d, cell, offset, t, exit.t, axis))) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n${Jk}\t\t}\n\t\tt = max(t, exit.t);\n\t\taxis = exit.axis;\n\t\tcell = exit.cell;\n\t}\n\treturn vec4f(o + t * d, -1.0);\n}\n`
+    function us(bb) {
+      let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        kb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const [Wb, ab, Tb] = Pc, [Ub, Ib, Hb] = yc, fb = Math.log2(tc), Mb = kb ? "var<private> bloxdSpCrossed: bool;\n" : "", Xb = kb ? "\t\t\tbloxdSpCrossed = true;\n" : "";
+      return `@group(${bb.group}) @binding(${bb.zX}) var<storage, read> bloxdSpShadowVoxels: array<u32>;\n@group(${bb.group}) @binding(${bb.special}) var<storage, read> bloxdSpShadowSpecial: array<u32>;\n${sb?"var<private> bloxdSpPlaneTolerance: f32;\n":""}${Mb}struct BloxdSpBoxExit {\n\tt: f32,\n\taxis: i32,\n\tcell: vec3i,\n}\n// inv: 1 / d, 0 where d is, taken once per ray rather than divided per exit\nfn bloxdSpExitBox(o: vec3f, d: vec3f, inv: vec3f, lo: vec3i, offset: vec3i, size: i32) -> BloxdSpBoxExit {\n\tlet low = vec3f(lo - offset);\n\tlet far = select(low, low + f32(size), d > vec3f(0.0));\n\tlet ta = select(vec3f(1e30), (far - o) * inv, d != vec3f(0.0));\n\tvar axis = 0;\n\tvar t = ta.x;\n\tif (ta.y < t) {\n\t\tt = ta.y;\n\t\taxis = 1;\n\t}\n\tif (ta.z < t) {\n\t\tt = ta.z;\n\t\taxis = 2;\n\t}\n\tlet inside = clamp(vec3i(floor(o + t * d)) + offset, lo, lo + vec3i(size - 1));\n\tlet beyond = select(lo - vec3i(1), lo + vec3i(size), d > vec3f(0.0));\n\t// select, not cell[axis] = beyond[axis]: dynamic indexing spills the vector to memory on some drivers (~9% of the frame on Mali)\n\tlet cell = select(inside, beyond, vec3<bool>(axis == 0, axis == 1, axis == 2));\n\treturn BloxdSpBoxExit(t, axis, cell);\n}\nfn bloxdSpMaskBit(word: u32, bit: u32) -> bool {\n\treturn ((bloxdSpShadowSpecial[word + (bit >> 5u)] >> (bit & 31u)) & 1u) == 1u;\n}\nfn bloxdSpCasterBlocks(caster: u32, o: vec3f, d: vec3f, cell: vec3i, offset: vec3i, t0: f32, t1: f32, axis: i32) -> bool {\n\tlet base = 0u + caster * 4u;\n\tlet kind = bloxdSpShadowSpecial[base];\n\tlet data = bloxdSpShadowSpecial[base + 1u];\n\t// Every loop here has a fixed bound, whatever the buffers hold: a GPU stuck in one loses the device\n\tlet count = min(bloxdSpShadowSpecial[base + 2u], 4u);\n\tlet size = bloxdSpShadowSpecial[base + 3u];\n\tlet q = o - vec3f(cell - offset);\n\tif (kind == ${xc}u) {\n\t\tlet qs = q * 8.0;\n\t\tlet ds = d * 8.0;\n\t\tlet invs = select(vec3f(0.0), 1.0 / ds, ds != vec3f(0.0));\n\t\tvar sub = clamp(vec3i(floor(qs + t0 * ds)), vec3i(0), vec3i(7));\n\t\tfor (var step = 0; step < 24; step++) {\n\t\t\tif (bloxdSpMaskBit(data, u32(sub.x + 8 * (sub.y + 8 * sub.z)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t\tlet exit = bloxdSpExitBox(qs, ds, invs, sub, vec3i(0), 1);\n\t\t\t// Only the axis it left by can be out of the shape\n\t\t\tif (exit.t >= t1 || any(exit.cell < vec3i(0)) || any(exit.cell >= vec3i(8))) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t\tsub = exit.cell;\n\t\t}\n\t\treturn false;\n\t}\n\tlet fs = f32(size);\n\tif (kind == ${jc}u) {\n\t\tfor (var p = 0u; p < count; p++) {\n\t\t\tlet plane = data + p * 4u;\n\t\t\tlet tx = bitcast<f32>(bloxdSpShadowSpecial[plane]);\n\t\t\tlet tz = bitcast<f32>(bloxdSpShadowSpecial[plane + 1u]);\n\t\t\tlet along = bitcast<f32>(bloxdSpShadowSpecial[plane + 2u]);\n\t\t\tlet dn = d.x * tz - d.z * tx;\n\t\t\tif (abs(dn) < 1e-6) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet t = (along - ((q.x - 0.5) * tz - (q.z - 0.5) * tx)) / dn;\n\t\t\t// Not a plane the trace starts on (SUN_SHADOW_PLANE_START), nor in its first cell one within depth's error of it\n\t\t\tif (t < select(t0, t0 + 0.0009765625, axis < 0) || t > t1${sb?" || (axis < 0 && abs(t * dn) < bloxdSpPlaneTolerance)":""}) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet h = q + t * d;\n\t\t\tlet u = (h.x - 0.5) * tx + (h.z - 0.5) * tz + 0.5;\n\t\t\tlet v = 1.0 - h.y;\n\t\t\tif (u < 0.0 || u >= 1.0 || v < 0.0 || v >= 1.0) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tif (bloxdSpMaskBit(bloxdSpShadowSpecial[plane + 3u], u32(floor(u * fs)) + size * u32(floor(v * fs)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\t\treturn false;\n\t}\n\tif (kind == ${pc}u && axis >= 0) {\n\t\t// In through the +axis face going down the axis, else the -axis face; faces go +x, -x, +y, -y, +z, -z\n\t\tlet plusFace = d[axis] < 0.0;\n\t\tlet face = u32(2 * axis) + select(1u, 0u, plusFace);\n\t\tlet h = clamp(q + t0 * d, vec3f(0.0), vec3f(1.0));\n\t\t// As terrain samples faces (terrainShader.ts packedUv)\n\t\tvar uv = vec2f(select(h.x, 1.0 - h.x, plusFace), 1.0 - h.y);\n\t\tif (axis == 0) {\n\t\t\tuv = vec2f(select(1.0 - h.z, h.z, plusFace), 1.0 - h.y);\n\t\t} else if (axis == 1) {\n\t\t\tuv = vec2f(select(1.0 - h.x, h.x, plusFace), 1.0 - h.z);\n\t\t}\n\t\tlet texel = min(vec2u(floor(uv * fs)), vec2u(size - 1u));\n\t\treturn bloxdSpMaskBit(data + face * ((size * size + 31u) / 32u), texel.x + size * texel.y);\n\t}\n\treturn false;\n}\nfn bloxdSpWindowSlot(chunk: vec3i) -> u32 {\n\tlet window = vec3i(${Wb}, ${ab}, ${Tb});\n\tlet r = chunk % window;\n\tlet s = select(r, r + window, r < vec3i(0));\n\treturn u32(s.x + ${Wb} * (s.y + ${ab} * s.z));\n}\nfn bloxdSpWindowHas(chunk: vec3i) -> bool {\n\treturn all(abs(chunk - bloxdSpSunShadow.eyeChunk) <= vec3i(${Ub}, ${Ib}, ${Hb}));\n}\nfn bloxdSpCellFull(cell: vec3i) -> bool {\n\tlet chunk = cell >> vec3u(${fb}u);\n\tif (!bloxdSpWindowHas(chunk)) {\n\t\treturn false;\n\t}\n\tlet slot = bloxdSpWindowSlot(chunk);\n\tlet record = slot * 4u;\n\tlet named = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\tlet state = bloxdSpShadowVoxels[record + 3u] & 255u;\n\tif (!named || state != ${Gc}u) {\n\t\treturn named && state == ${Oc}u;\n\t}\n\tlet local = cell - chunk * 32;\n\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\tlet brickBase = ${zc}u + slot * 1536u + brick * 3u;\n\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\tif (((bloxdSpShadowVoxels[brickBase + (bit >> 5u)] >> (bit & 31u)) & 1u) == 0u) {\n\t\treturn false;\n\t}\n\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\tif (pool == 0u) {\n\t\treturn true;\n\t}\n\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\treturn ((entry >> ((bit & 1u) * 16u)) & 0xffffu) == 65535u;\n}\n// ownCell: whether the caster in the cell it starts in can block it (sunShadowTrace.ts traceSunShadow)\nfn bloxdSpShadowMarch(o: vec3f, d: vec3f, offset: vec3i, maxSteps: i32, ownCell: bool) -> vec4f {\n\tvar cell = vec3i(floor(o)) + offset;\n\tvar t = 0.0;\n\tvar axis = -1;\n\tlet inv = select(vec3f(0.0), 1.0 / d, d != vec3f(0.0));\n\t// The chunk the slot and record were read for: they change only with it\n\tvar cached = vec3i(-2147483647);\n\tvar slot = 0u;\n\tvar named = false;\n\tvar state = 0u;\n\t// Rising above the window's highest cell that may block, it crosses nothing more (0: never written)\n\tlet windowWord = bloxdSpShadowVoxels[${dc}u];\n\tlet windowTop = select(2147483647, bitcast<i32>(windowWord) - 1073741824, d.y > 0.0 && windowWord != 0u);\n${cb?"\tlet exits = bloxdSpRayFresh(o, d, offset);\n":""}\tfor (var step = 0; step < maxSteps; step++) {\n${cb?`\t\tif (exits && step > 0 && step % ${gs} == 0 && bloxdSpVolumeOpenLit(o + t * d, offset)) {\n\t\t\treturn vec4f(o + t * d, -1.0);\n\t\t}\n`:""}\t\tif (cell.y > windowTop) {\n\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t}\n\t\tlet chunk = cell >> vec3u(${fb}u);\n\t\tif (any(chunk != cached)) {\n\t\t\tif (!bloxdSpWindowHas(chunk)) {\n\t\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t\t}\n\t\t\tcached = chunk;\n\t\t\tslot = bloxdSpWindowSlot(chunk);\n\t\t\tlet record = slot * 4u;\n\t\t\tnamed = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\t\t\tstate = bloxdSpShadowVoxels[record + 3u];\n\t\t}\n\t\tlet chunkLo = chunk * 32;\n\t\tlet kind = state & 255u;\n\t\t// Rising above its highest cell that may block, it crosses nothing more in the chunk\n\t\tif (!named || kind == ${Ec}u || kind == ${ic}u || (d.y > 0.0 && cell.y - chunkLo.y > i32(state >> 8u))) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo, offset, 32);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tif (kind == ${Oc}u) {\n\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t}\n\t\tlet local = cell - chunkLo;\n\t\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\t\tlet brickBase = ${zc}u + slot * 1536u + brick * 3u;\n\t\tlet low = bloxdSpShadowVoxels[brickBase];\n\t\tlet high = bloxdSpShadowVoxels[brickBase + 1u];\n\t\tif (low == 0u && high == 0u) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo + (local & vec3i(~3)), offset, 4);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\t\tlet exit = bloxdSpExitBox(o, d, inv, cell, offset, 1);\n\t\tif (((select(high, low, bit < 32u) >> (bit & 31u)) & 1u) == 1u) {\n\t\t\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\t\t\tif (pool == 0u) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n\t\t\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\t\t\tlet caster = (entry >> ((bit & 1u) * 16u)) & 0xffffu;\n\t\t\tif (caster == 65535u || ((ownCell || axis >= 0) && bloxdSpCasterBlocks(caster, o, d, cell, offset, t, exit.t, axis))) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n${Xb}\t\t}\n\t\tt = max(t, exit.t);\n\t\taxis = exit.axis;\n\t\tcell = exit.cell;\n\t}\n\treturn vec4f(o + t * d, -1.0);\n}\n`
     }
-    const OB = {
+    const Ys = {
       group: 0,
       uniform: 0,
-      jJ: 1,
+      zX: 1,
       special: 2,
       work: 3,
       volume: 4
     };
 
-    function EB() {
-      const kk = OB;
-      return `${oB(kk)}${LB(kk,!1,!1,!0)}struct BloxdSpVolumeBox {\n\tlo: vec3i,\n\tfirst: u32,\n\tsize: vec3u,\n}\nstruct BloxdSpVolumeWork {\n\tlight: vec3f,\n\tboxes: u32,\n\tbox: array<BloxdSpVolumeBox, ${YB.d}>,\n}\n@group(${kk.group}) @binding(${kk.work}) var<uniform> bloxdSpVolumeWork: BloxdSpVolumeWork;\n@group(${kk.group}) @binding(${kk.volume}) var bloxdSpVolumeOut: texture_storage_3d<rgba8unorm, write>;\n@compute @workgroup_size(${YB.n})\nfn main(@builtin(global_invocation_id) id: vec3u) {\n\tvar at = 0u;\n\tlet boxes = min(bloxdSpVolumeWork.boxes, ${YB.d}u);\n\tfor (var b = 1u; b < boxes; b++) {\n\t\tif (id.x >= bloxdSpVolumeWork.box[b].first) {\n\t\t\tat = b;\n\t\t}\n\t}\n\tlet box = bloxdSpVolumeWork.box[at];\n\tlet index = id.x - box.first;\n\tif (index >= box.size.x * box.size.y * box.size.z) {\n\t\treturn;\n\t}\n\tlet r = box.lo + vec3i(vec3u(index % box.size.x, (index / box.size.x) % box.size.y, index / (box.size.x * box.size.y)));\n\t// From the cell's centre, relative to the volume's corner: exact in f32\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet cell = lo + r;\n\tlet open = !bloxdSpCellFull(cell);\n\tvar lit = 0.0;\n\tbloxdSpCrossed = false;\n\tif (open) {\n\t\t// Past its own caster: a cell's light is what reaches it (sunShadowVolume.ts sunShadowVolumeCell)\n\t\tlet march = bloxdSpShadowMarch(vec3f(r) + vec3f(0.5), bloxdSpVolumeWork.light, lo, ${YB.h}, false);\n\t\tlit = select(march.w, 1.0, march.w < 0.0);\n\t}\n\ttextureStore(bloxdSpVolumeOut, bloxdSpVolumeTexel(cell), vec4f(lit, select(0.0, 1.0, open), select(0.0, 1.0, lit == 1.0 && !bloxdSpCrossed), 1.0));\n}\n`
+    function hs() {
+      const bb = Ys;
+      return `${Ls(bb)}${us(bb,!1,!1,!0)}struct BloxdSpVolumeBox {\n\tlo: vec3i,\n\tfirst: u32,\n\tsize: vec3u,\n}\nstruct BloxdSpVolumeWork {\n\tlight: vec3f,\n\tboxes: u32,\n\tbox: array<BloxdSpVolumeBox, ${Vs.c}>,\n}\n@group(${bb.group}) @binding(${bb.work}) var<uniform> bloxdSpVolumeWork: BloxdSpVolumeWork;\n@group(${bb.group}) @binding(${bb.volume}) var bloxdSpVolumeOut: texture_storage_3d<rgba8unorm, write>;\n@compute @workgroup_size(${Vs.l})\nfn main(@builtin(global_invocation_id) id: vec3u) {\n\tvar at = 0u;\n\tlet boxes = min(bloxdSpVolumeWork.boxes, ${Vs.c}u);\n\tfor (var b = 1u; b < boxes; b++) {\n\t\tif (id.x >= bloxdSpVolumeWork.box[b].first) {\n\t\t\tat = b;\n\t\t}\n\t}\n\tlet box = bloxdSpVolumeWork.box[at];\n\tlet index = id.x - box.first;\n\tif (index >= box.size.x * box.size.y * box.size.z) {\n\t\treturn;\n\t}\n\tlet r = box.lo + vec3i(vec3u(index % box.size.x, (index / box.size.x) % box.size.y, index / (box.size.x * box.size.y)));\n\t// From the cell's centre, relative to the volume's corner: exact in f32\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet cell = lo + r;\n\tlet open = !bloxdSpCellFull(cell);\n\tvar lit = 0.0;\n\tbloxdSpCrossed = false;\n\tif (open) {\n\t\t// Past its own caster: a cell's light is what reaches it (sunShadowVolume.ts sunShadowVolumeCell)\n\t\tlet march = bloxdSpShadowMarch(vec3f(r) + vec3f(0.5), bloxdSpVolumeWork.light, lo, ${Vs.e}, false);\n\t\tlit = select(march.w, 1.0, march.w < 0.0);\n\t}\n\ttextureStore(bloxdSpVolumeOut, bloxdSpVolumeTexel(cell), vec4f(lit, select(0.0, 1.0, open), select(0.0, 1.0, lit == 1.0 && !bloxdSpCrossed), 1.0));\n}\n`
     }
-    const SB = 2;
-    const NB = "fn bloxdSpNormalCode(n: vec3f) -> f32 {\n\tlet a = abs(n);\n\tif (a.x >= a.y && a.x >= a.z) {\n\t\treturn select(1.0, 0.0, n.x > 0.0);\n\t}\n\tif (a.y >= a.z) {\n\t\treturn select(3.0, 2.0, n.y > 0.0);\n\t}\n\treturn select(5.0, 4.0, n.z > 0.0);\n}\n";
+    const gs = 2;
+    const Bs = "fn bloxdSpNormalCode(n: vec3f) -> f32 {\n\tlet a = abs(n);\n\tif (a.x >= a.y && a.x >= a.z) {\n\t\treturn select(1.0, 0.0, n.x > 0.0);\n\t}\n\tif (a.y >= a.z) {\n\t\treturn select(3.0, 2.0, n.y > 0.0);\n\t}\n\treturn select(5.0, 4.0, n.z > 0.0);\n}\n";
 
-    function HB(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
-      const Rk = `var<private> bloxdSpShadowPosition: vec3f;\nfn bloxdSpShadowLight() -> vec4f {\n\t// Towards the sun or moon, as the CPU works it out (sunShadowLight)\n\tlet bloxdSpLight = -${Fk.shadowDirection};\n\treturn vec4f(bloxdSpLight, smoothstep(0.0, 0.1, bloxdSpLight.y));\n}\n`,
-        tk = "trace" === Bk || "lit" === Bk,
-        ak = "maskEdge" === Bk ? "bloxdSpMaskEdge()" : "textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0).r",
-        Xk = tk ? `\tlet bloxdSpOrigin = bloxdSpShadowPosition + bloxdSpShadowNormal * 0.25;\n\tlet bloxdSpMarch = bloxdSpShadowMarch(bloxdSpOrigin, bloxdSpLight.xyz, ${Fk.renderOffset}, 64, true);\n\tvar bloxdSpLit = bloxdSpMarch.w;\n\tif (bloxdSpLit < 0.0) {\n\t\t// Out of steps, or open and lit from here: on from the volume, from where it got to\n\t\tbloxdSpLit = bloxdSpVolumeAt(bloxdSpMarch.xyz, ${Fk.renderOffset});\n\t}\n\tif (bloxdSpLit > 0.0 && !bloxdSpShadowFirstPerson) {\n\t\t// Lifeforms and items, but not on the first-person held item, which the body you're in would shade as you turn\n\t\tbloxdSpLit *= bloxdSpEntityLight(bloxdSpShadowPosition, bloxdSpLight.xyz, bloxdSpFacingDot);\n\t}\n\treturn ${"lit"===Bk?"bloxdSpLit":"bloxdSpLight.w * bloxdSpFacing * bloxdSpLit"};\n` : `\treturn bloxdSpLight.w * bloxdSpFacing * ${ak};\n`;
-      return `${Rk}${kk.sunShadow?`var<private> bloxdSpShadowNormal: vec3f;\nvar<private> bloxdSpShadowEmissive: bool;\nvar<private> bloxdSpShadowFirstPerson: bool;\n${tk?function(){const[kk,Fk,Bk]=YB.u;return`fn bloxdSpRayFresh(o: vec3f, d: vec3f, offset: vec3i) -> bool {\n\tif (bloxdSpSunShadow.staleCount > 4u) {\n\t\treturn false;\n\t}\n\tlet inv = select(vec3f(1e30), 1.0 / d, d != vec3f(0.0));\n\tlet count = bloxdSpSunShadow.staleCount;\n\tfor (var b = 0u; b < count; b++) {\n\t\tlet lo = vec3f(bloxdSpSunShadow.stale[b].xyz - offset) - 1.0;\n\t\tlet a = (lo - o) * inv;\n\t\tlet z = (lo + 34.0 - o) * inv;\n\t\tlet near = max(max(min(a.x, z.x), min(a.y, z.y)), min(a.z, z.z));\n\t\tlet far = min(min(max(a.x, z.x), max(a.y, z.y)), max(a.z, z.z));\n\t\tif (far >= max(near, 0.0)) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\nfn bloxdSpVolumeOpenLit(p: vec3f, offset: vec3i) -> bool {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${kk}.0, ${Fk}.0, ${Bk}.0);\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.5)) || any(r > size - vec3f(0.5))) {\n\t\treturn false;\n\t}\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, (r + vec3f(bloxdSpVolumeTexel(lo))) / size, 0.0);\n\treturn sample.b >= 0.999;\n}\n`}():""}fn bloxdShadow() -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\t// A face lit by its own light\n\tif (bloxdSpShadowEmissive) {\n\t\treturn 1.0;\n\t}\n\tlet bloxdSpFacingDot = dot(bloxdSpShadowNormal, bloxdSpLight.xyz);\n\tlet bloxdSpFacing = smoothstep(0.0, 0.5, bloxdSpFacingDot);\n\tif (bloxdSpLight.w <= 0.0 || bloxdSpFacing <= 0.0) {\n\t\treturn 0.0;\n\t}\n${Xk}}\n`:""}${kk.airShadow?`fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\tlet bloxdSpAt = mix(${Fk.eyePosition}, bloxdSpShadowPosition, clamp(bloxdSpT, 0.0, 1.0));\n\treturn bloxdSpLight.w * bloxdSpVolumeAt(bloxdSpAt, ${Fk.renderOffset});\n}\n`:""}`
+    function ts(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
+      const kb = `var<private> bloxdSpShadowPosition: vec3f;\nfn bloxdSpShadowLight() -> vec4f {\n\t// Towards the sun or moon, as the CPU works it out (sunShadowLight)\n\tlet bloxdSpLight = -${cb.shadowDirection};\n\treturn vec4f(bloxdSpLight, smoothstep(0.0, 0.1, bloxdSpLight.y));\n}\n`,
+        Wb = "trace" === sb || "lit" === sb,
+        ab = "maskEdge" === sb ? "bloxdSpMaskEdge()" : "textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0).r",
+        Tb = Wb ? `\tlet bloxdSpOrigin = bloxdSpShadowPosition + bloxdSpShadowNormal * 0.25;\n\tlet bloxdSpMarch = bloxdSpShadowMarch(bloxdSpOrigin, bloxdSpLight.xyz, ${cb.renderOffset}, 64, true);\n\tvar bloxdSpLit = bloxdSpMarch.w;\n\tif (bloxdSpLit < 0.0) {\n\t\t// Out of steps, or open and lit from here: on from the volume, from where it got to\n\t\tbloxdSpLit = bloxdSpVolumeAt(bloxdSpMarch.xyz, ${cb.renderOffset});\n\t}\n\tif (bloxdSpLit > 0.0 && !bloxdSpShadowFirstPerson) {\n\t\t// Lifeforms and items, but not on the first-person held item, which the body you're in would shade as you turn\n\t\tbloxdSpLit *= bloxdSpEntityLight(bloxdSpShadowPosition, bloxdSpLight.xyz, bloxdSpFacingDot);\n\t}\n\treturn ${"lit"===sb?"bloxdSpLit":"bloxdSpLight.w * bloxdSpFacing * bloxdSpLit"};\n` : `\treturn bloxdSpLight.w * bloxdSpFacing * ${ab};\n`;
+      return `${kb}${bb.sunShadow?`var<private> bloxdSpShadowNormal: vec3f;\nvar<private> bloxdSpShadowEmissive: bool;\nvar<private> bloxdSpShadowFirstPerson: bool;\n${Wb?function(){const[bb,cb,sb]=Vs.r;return`fn bloxdSpRayFresh(o: vec3f, d: vec3f, offset: vec3i) -> bool {\n\tif (bloxdSpSunShadow.staleCount > 4u) {\n\t\treturn false;\n\t}\n\tlet inv = select(vec3f(1e30), 1.0 / d, d != vec3f(0.0));\n\tlet count = bloxdSpSunShadow.staleCount;\n\tfor (var b = 0u; b < count; b++) {\n\t\tlet lo = vec3f(bloxdSpSunShadow.stale[b].xyz - offset) - 1.0;\n\t\tlet a = (lo - o) * inv;\n\t\tlet z = (lo + 34.0 - o) * inv;\n\t\tlet near = max(max(min(a.x, z.x), min(a.y, z.y)), min(a.z, z.z));\n\t\tlet far = min(min(max(a.x, z.x), max(a.y, z.y)), max(a.z, z.z));\n\t\tif (far >= max(near, 0.0)) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\nfn bloxdSpVolumeOpenLit(p: vec3f, offset: vec3i) -> bool {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${bb}.0, ${cb}.0, ${sb}.0);\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.5)) || any(r > size - vec3f(0.5))) {\n\t\treturn false;\n\t}\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, (r + vec3f(bloxdSpVolumeTexel(lo))) / size, 0.0);\n\treturn sample.b >= 0.999;\n}\n`}():""}fn bloxdShadow() -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\t// A face lit by its own light\n\tif (bloxdSpShadowEmissive) {\n\t\treturn 1.0;\n\t}\n\tlet bloxdSpFacingDot = dot(bloxdSpShadowNormal, bloxdSpLight.xyz);\n\tlet bloxdSpFacing = smoothstep(0.0, 0.5, bloxdSpFacingDot);\n\tif (bloxdSpLight.w <= 0.0 || bloxdSpFacing <= 0.0) {\n\t\treturn 0.0;\n\t}\n${Tb}}\n`:""}${bb.airShadow?`fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\tlet bloxdSpAt = mix(${cb.eyePosition}, bloxdSpShadowPosition, clamp(bloxdSpT, 0.0, 1.0));\n\treturn bloxdSpLight.w * bloxdSpVolumeAt(bloxdSpAt, ${cb.renderOffset});\n}\n`:""}`
     }
-    const uB = "bloxdSpOwnTexture";
+    const ys = "bloxdSpOwnTexture";
 
-    function MB(kk) {
-      return `u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(${kk.texture}) - 1u)))`
+    function Ps(bb) {
+      return `u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(${bb.texture}) - 1u)))`
     }
-    const gB = `fn bloxdSpFlags(bloxdSpWord: u32) -> BloxdFlags {\n\tvar bloxdSpOut: BloxdFlags;\n${dF.d.map((kk=>{let[Fk,Bk]=kk;return`\tbloxdSpOut.${Fk} = (bloxdSpWord & ${Bk}u) != 0u;\n`})).join("")}\treturn bloxdSpOut;\n}\n`;
+    const Ds = `fn bloxdSpFlags(bloxdSpWord: u32) -> BloxdFlags {\n\tvar bloxdSpOut: BloxdFlags;\n${Ic.f.map((bb=>{let[cb,sb]=bb;return`\tbloxdSpOut.${cb} = (bloxdSpWord & ${sb}u) != 0u;\n`})).join("")}\treturn bloxdSpOut;\n}\n`;
 
-    function UB(kk) {
-      return `bloxdSpFlags(${kk})`
+    function Es(bb) {
+      return `bloxdSpFlags(${bb})`
     }
-    const cB = `${NF.j}.eyePosition`;
+    const is = `${gc.i}.eyePosition`;
 
-    function GB(kk, Fk, Bk, Rk, tk) {
-      const ak = kk.indexOf(Fk);
-      if (ak < 0 || kk.indexOf(Fk, ak + 1) >= 0) throw new Error(`Lite's ${tk} program changed at the shader pack ${Rk} hook: ${ak<0?"no":"more than one"} anchor (lite/${tk}ShaderPack.ts)`);
-      return kk.slice(0, ak) + Bk + kk.slice(ak + Fk.length)
-    }
-
-    function TB(kk) {
-      return kk.sunShadow || kk.airShadow
+    function Os(bb, cb, sb, kb, Wb) {
+      const ab = bb.indexOf(cb);
+      if (ab < 0 || bb.indexOf(cb, ab + 1) >= 0) throw new Error(`Lite's ${Wb} program changed at the shader pack ${kb} hook: ${ab<0?"no":"more than one"} anchor (lite/${Wb}ShaderPack.ts)`);
+      return bb.slice(0, ab) + sb + bb.slice(ab + cb.length)
     }
 
-    function rB(kk, Fk) {
-      return Fk && TB(kk)
+    function Gs(bb) {
+      return bb.sunShadow || bb.airShadow
     }
-    const DB = {
-      group: NF.g,
-      ...NF.r
+
+    function Ks(bb, cb) {
+      return cb && Gs(bb)
+    }
+    const Zs = {
+      group: gc.d,
+      ...gc.s
     };
 
-    function zB(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
-      if (!TB(kk)) return "";
-      if (Fk) {
-        const Fk = DB,
-          tk = "trace" === Bk || "lit" === Bk;
-        let ak = "";
-        kk.sunShadow && (ak = tk ? `${LB(Fk,!0,"lit"===Bk)}${Rk=Fk,`@group(${Rk.group}) @binding(${Rk.entities}) var<storage, read> bloxdSpShadowEntities: array<u32>;\n@group(${Rk.group}) @binding(${Rk.entityGrids}) var<storage, read> bloxdSpShadowEntityGrids: array<u32>;\nfn bloxdSpEntityRow(i: u32) -> vec4f {\n\treturn bitcast<vec4f>(vec4u(bloxdSpShadowEntities[i], bloxdSpShadowEntities[i + 1u], bloxdSpShadowEntities[i + 2u], bloxdSpShadowEntities[i + 3u]));\n}\nfn bloxdSpEntityLight(p: vec3f, light: vec3f, facing: f32) -> f32 {\n\tlet p4 = vec4f(p, 1.0);\n\tlet across = vec2f(dot(bloxdSpSunShadow.entityX, p4), dot(bloxdSpSunShadow.entityY, p4));\n\tif (any(abs(across) >= vec2f(1.0))) {\n\t\treturn 1.0;\n\t}\n\tlet bin = vec2u(clamp(vec2i(floor((across * 0.5 + 0.5) * 128.0)), vec2i(0), vec2i(127)));\n\tlet b = bin.y * 128u + bin.x;\n\tlet start = bloxdSpShadowEntities[b];\n\tlet count = min(bloxdSpShadowEntities[b + 1u] - start, 64u);\n\tlet along = dot(p, light);\n\tfor (var k = 0u; k < count; k++) {\n\t\tlet base = 81921u + bloxdSpShadowEntities[16385u + start + k] * 16u;\n\t\t// Ending before the fragment along the light, as do those after it: their rays can't meet them\n\t\tif (bitcast<f32>(bloxdSpShadowEntities[base + 13u]) < along) {\n\t\t\tbreak;\n\t\t}\n\t\tlet r0 = bloxdSpEntityRow(base);\n\t\tlet r1 = bloxdSpEntityRow(base + 4u);\n\t\tlet r2 = bloxdSpEntityRow(base + 8u);\n\t\tlet packed = bloxdSpShadowEntities[base + 14u];\n\t\tlet dims = vec3u(packed & 0xffu, (packed >> 8u) & 0xffu, packed >> 16u);\n\t\t// In cells from the grid's low corner, and per unit along the light\n\t\tlet q = vec3f(dot(r0, p4), dot(r1, p4), dot(r2, p4));\n\t\t// Its rows' least squared length: the square of 1 over its largest scale, in cells\n\t\tlet shortest = min(min(dot(r0.xyz, r0.xyz), dot(r1.xyz, r1.xyz)), dot(r2.xyz, r2.xyz));\n\t\tvar dq = vec3f(dot(r0.xyz, light), dot(r1.xyz, light), dot(r2.xyz, light));\n\t\tdq = select(dq, vec3f(1e-9), abs(dq) < vec3f(1e-9));\n\t\tlet inv = 1.0 / dq;\n\t\tlet size = vec3f(dims);\n\t\tlet ta = -q * inv;\n\t\tlet tb = (size - q) * inv;\n\t\tlet tlo = min(ta, tb);\n\t\tlet thi = max(ta, tb);\n\t\t// Off the face's plane, past the cells around its own surface: its largest cells, over how fast the light leaves the\n\t\t// plane (finite as the face turns away)\n\t\tlet t0 = max(max(tlo.x, tlo.y), max(tlo.z, 2.0 * inverseSqrt(shortest) / max(facing, 1e-3)));\n\t\tlet t1 = min(min(thi.x, thi.y), thi.z);\n\t\tif (t0 >= t1) {\n\t\t\tcontinue;\n\t\t}\n\t\tlet up = dq > vec3f(0.0);\n\t\tvar at = vec3i(clamp(floor(q + dq * t0), vec3f(0.0), size - 1.0));\n\t\tlet step = select(vec3i(-1), vec3i(1), up);\n\t\tlet delta = abs(inv);\n\t\tvar next = (vec3f(at) + select(vec3f(0.0), vec3f(1.0), up) - q) * inv;\n\t\tlet data = bloxdSpShadowEntities[base + 12u];\n\t\tfor (var s = 0; s < 198; s++) {\n\t\t\tlet index = u32(at.x) + dims.x * (u32(at.y) + dims.y * u32(at.z));\n\t\t\tif ((bloxdSpShadowEntityGrids[data + (index >> 5u)] & (1u << (index & 31u))) != 0u) {\n\t\t\t\treturn 0.0;\n\t\t\t}\n\t\t\tif (next.x <= next.y && next.x <= next.z) {\n\t\t\t\tat.x += step.x;\n\t\t\t\tnext.x += delta.x;\n\t\t\t} else if (next.y <= next.z) {\n\t\t\t\tat.y += step.y;\n\t\t\t\tnext.y += delta.y;\n\t\t\t} else {\n\t\t\t\tat.z += step.z;\n\t\t\t\tnext.z += delta.z;\n\t\t\t}\n\t\t\tif (any(at < vec3i(0)) || any(at >= vec3i(dims))) {\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn 1.0;\n}\n`}` : function(kk, Fk, Bk) {
-          const Rk = `@group(${kk}) @binding(${Fk}) var bloxdSpShadowMask: texture_2d<f32>;\nvar<private> bloxdSpShadowPixel: vec2i;\n`;
-          return Bk ? `${Rk}var<private> bloxdSpShadowZ: f32;\nvar<private> bloxdSpShadowDz: vec2f;\n${NB}fn bloxdSpMaskEdge() -> f32 {\n\tlet code = bloxdSpNormalCode(bloxdSpShadowNormal);\n\tlet tolerance = abs(bloxdSpShadowDz.x) + abs(bloxdSpShadowDz.y) + 1e-7;\n\tlet m = textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0);\n\tlet mCode = floor(m.r * 0.5);\n\tlet mError = select(1e30, abs(m.g - bloxdSpShadowZ), mCode == code);\n\tif (mError <= tolerance) {\n\t\treturn m.r - mCode * 2.0;\n\t}\n\tlet last = vec2i(textureDimensions(bloxdSpShadowMask)) - 1;\n\tvar lit = m.r - mCode * 2.0;\n\tvar error = mError;\n${["-1, 0","1, 0","0, -1","0, 1"].map((kk=>`\t{\n\t\tlet o = vec2i(${kk});\n\t\tlet q = textureLoad(bloxdSpShadowMask, clamp(bloxdSpShadowPixel + o, vec2i(0), last), 0);\n\t\tlet qCode = floor(q.r * 0.5);\n\t\tlet e = abs(q.g - (bloxdSpShadowZ + dot(vec2f(o), bloxdSpShadowDz)));\n\t\tif (qCode == code && e < error) {\n\t\t\terror = e;\n\t\t\tlit = q.r - qCode * 2.0;\n\t\t}\n\t}\n`)).join("")}\treturn lit;\n}\n` : Rk
-        }(Fk.group, NF.s, "maskEdge" === Bk));
-        const Xk = {
-          shadowDirection: `${NF.j}.shadowDirection`,
-          renderOffset: `${NF.j}.renderOffset`,
-          eyePosition: `${NF.j}.eyePosition`
+    function zs(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
+      if (!Gs(bb)) return "";
+      if (cb) {
+        const cb = Zs,
+          Wb = "trace" === sb || "lit" === sb;
+        let ab = "";
+        bb.sunShadow && (ab = Wb ? `${us(cb,!0,"lit"===sb)}${kb=cb,`@group(${kb.group}) @binding(${kb.entities}) var<storage, read> bloxdSpShadowEntities: array<u32>;\n@group(${kb.group}) @binding(${kb.entityGrids}) var<storage, read> bloxdSpShadowEntityGrids: array<u32>;\nfn bloxdSpEntityRow(i: u32) -> vec4f {\n\treturn bitcast<vec4f>(vec4u(bloxdSpShadowEntities[i], bloxdSpShadowEntities[i + 1u], bloxdSpShadowEntities[i + 2u], bloxdSpShadowEntities[i + 3u]));\n}\nfn bloxdSpEntityLight(p: vec3f, light: vec3f, facing: f32) -> f32 {\n\tlet p4 = vec4f(p, 1.0);\n\tlet across = vec2f(dot(bloxdSpSunShadow.entityX, p4), dot(bloxdSpSunShadow.entityY, p4));\n\tif (any(abs(across) >= vec2f(1.0))) {\n\t\treturn 1.0;\n\t}\n\tlet bin = vec2u(clamp(vec2i(floor((across * 0.5 + 0.5) * 128.0)), vec2i(0), vec2i(127)));\n\tlet b = bin.y * 128u + bin.x;\n\tlet start = bloxdSpShadowEntities[b];\n\tlet count = min(bloxdSpShadowEntities[b + 1u] - start, 64u);\n\tlet along = dot(p, light);\n\tfor (var k = 0u; k < count; k++) {\n\t\tlet base = 81921u + bloxdSpShadowEntities[16385u + start + k] * 16u;\n\t\t// Ending before the fragment along the light, as do those after it: their rays can't meet them\n\t\tif (bitcast<f32>(bloxdSpShadowEntities[base + 13u]) < along) {\n\t\t\tbreak;\n\t\t}\n\t\tlet r0 = bloxdSpEntityRow(base);\n\t\tlet r1 = bloxdSpEntityRow(base + 4u);\n\t\tlet r2 = bloxdSpEntityRow(base + 8u);\n\t\tlet packed = bloxdSpShadowEntities[base + 14u];\n\t\tlet dims = vec3u(packed & 0xffu, (packed >> 8u) & 0xffu, packed >> 16u);\n\t\t// In cells from the grid's low corner, and per unit along the light\n\t\tlet q = vec3f(dot(r0, p4), dot(r1, p4), dot(r2, p4));\n\t\t// Its rows' least squared length: the square of 1 over its largest scale, in cells\n\t\tlet shortest = min(min(dot(r0.xyz, r0.xyz), dot(r1.xyz, r1.xyz)), dot(r2.xyz, r2.xyz));\n\t\tvar dq = vec3f(dot(r0.xyz, light), dot(r1.xyz, light), dot(r2.xyz, light));\n\t\tdq = select(dq, vec3f(1e-9), abs(dq) < vec3f(1e-9));\n\t\tlet inv = 1.0 / dq;\n\t\tlet size = vec3f(dims);\n\t\tlet ta = -q * inv;\n\t\tlet tb = (size - q) * inv;\n\t\tlet tlo = min(ta, tb);\n\t\tlet thi = max(ta, tb);\n\t\t// Off the face's plane, past the cells around its own surface: its largest cells, over how fast the light leaves the\n\t\t// plane (finite as the face turns away)\n\t\tlet t0 = max(max(tlo.x, tlo.y), max(tlo.z, 2.0 * inverseSqrt(shortest) / max(facing, 1e-3)));\n\t\tlet t1 = min(min(thi.x, thi.y), thi.z);\n\t\tif (t0 >= t1) {\n\t\t\tcontinue;\n\t\t}\n\t\tlet up = dq > vec3f(0.0);\n\t\tvar at = vec3i(clamp(floor(q + dq * t0), vec3f(0.0), size - 1.0));\n\t\tlet step = select(vec3i(-1), vec3i(1), up);\n\t\tlet delta = abs(inv);\n\t\tvar next = (vec3f(at) + select(vec3f(0.0), vec3f(1.0), up) - q) * inv;\n\t\tlet data = bloxdSpShadowEntities[base + 12u];\n\t\tfor (var s = 0; s < 198; s++) {\n\t\t\tlet index = u32(at.x) + dims.x * (u32(at.y) + dims.y * u32(at.z));\n\t\t\tif ((bloxdSpShadowEntityGrids[data + (index >> 5u)] & (1u << (index & 31u))) != 0u) {\n\t\t\t\treturn 0.0;\n\t\t\t}\n\t\t\tif (next.x <= next.y && next.x <= next.z) {\n\t\t\t\tat.x += step.x;\n\t\t\t\tnext.x += delta.x;\n\t\t\t} else if (next.y <= next.z) {\n\t\t\t\tat.y += step.y;\n\t\t\t\tnext.y += delta.y;\n\t\t\t} else {\n\t\t\t\tat.z += step.z;\n\t\t\t\tnext.z += delta.z;\n\t\t\t}\n\t\t\tif (any(at < vec3i(0)) || any(at >= vec3i(dims))) {\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn 1.0;\n}\n`}` : function(bb, cb, sb) {
+          const kb = `@group(${bb}) @binding(${cb}) var bloxdSpShadowMask: texture_2d<f32>;\nvar<private> bloxdSpShadowPixel: vec2i;\n`;
+          return sb ? `${kb}var<private> bloxdSpShadowZ: f32;\nvar<private> bloxdSpShadowDz: vec2f;\n${Bs}fn bloxdSpMaskEdge() -> f32 {\n\tlet code = bloxdSpNormalCode(bloxdSpShadowNormal);\n\tlet tolerance = abs(bloxdSpShadowDz.x) + abs(bloxdSpShadowDz.y) + 1e-7;\n\tlet m = textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0);\n\tlet mCode = floor(m.r * 0.5);\n\tlet mError = select(1e30, abs(m.g - bloxdSpShadowZ), mCode == code);\n\tif (mError <= tolerance) {\n\t\treturn m.r - mCode * 2.0;\n\t}\n\tlet last = vec2i(textureDimensions(bloxdSpShadowMask)) - 1;\n\tvar lit = m.r - mCode * 2.0;\n\tvar error = mError;\n${["-1, 0","1, 0","0, -1","0, 1"].map((bb=>`\t{\n\t\tlet o = vec2i(${bb});\n\t\tlet q = textureLoad(bloxdSpShadowMask, clamp(bloxdSpShadowPixel + o, vec2i(0), last), 0);\n\t\tlet qCode = floor(q.r * 0.5);\n\t\tlet e = abs(q.g - (bloxdSpShadowZ + dot(vec2f(o), bloxdSpShadowDz)));\n\t\tif (qCode == code && e < error) {\n\t\t\terror = e;\n\t\t\tlit = q.r - qCode * 2.0;\n\t\t}\n\t}\n`)).join("")}\treturn lit;\n}\n` : kb
+        }(cb.group, gc.w, "maskEdge" === sb));
+        const Tb = {
+          shadowDirection: `${gc.i}.shadowDirection`,
+          renderOffset: `${gc.i}.renderOffset`,
+          eyePosition: `${gc.i}.eyePosition`
         };
-        return `${oB(Fk)}${ak}${function(kk){const[Fk,Bk,Rk]=YB.u;return`@group(${kk.group}) @binding(${kk.volume}) var bloxdSpShadowVolume: texture_3d<f32>;\n@group(${kk.group}) @binding(${kk.sampler}) var bloxdSpShadowVolumeSampler: sampler;\nfn bloxdSpVolumeAt(p: vec3f, offset: vec3i) -> f32 {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${Fk}.0, ${Bk}.0, ${Rk}.0);\n\t// From the volume's low corner, in whole blocks either side, so f32 keeps it exact\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.0)) || any(r > size)) {\n\t\treturn 1.0;\n\t}\n\t// Clear of the edges, where filtering would wrap onto the far side\n\tlet uvw = (clamp(r, vec3f(0.5), size - vec3f(0.5)) + vec3f(bloxdSpVolumeTexel(lo))) / size;\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, uvw, 0.0);\n\tif (sample.g < 0.03125) {\n\t\treturn 1.0;\n\t}\n\treturn min(sample.r / sample.g, 1.0);\n}\n`}(Fk)}${HB(kk,Xk,Bk)}`
+        return `${Ls(cb)}${ab}${function(bb){const[cb,sb,kb]=Vs.r;return`@group(${bb.group}) @binding(${bb.volume}) var bloxdSpShadowVolume: texture_3d<f32>;\n@group(${bb.group}) @binding(${bb.sampler}) var bloxdSpShadowVolumeSampler: sampler;\nfn bloxdSpVolumeAt(p: vec3f, offset: vec3i) -> f32 {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${cb}.0, ${sb}.0, ${kb}.0);\n\t// From the volume's low corner, in whole blocks either side, so f32 keeps it exact\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.0)) || any(r > size)) {\n\t\treturn 1.0;\n\t}\n\t// Clear of the edges, where filtering would wrap onto the far side\n\tlet uvw = (clamp(r, vec3f(0.5), size - vec3f(0.5)) + vec3f(bloxdSpVolumeTexel(lo))) / size;\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, uvw, 0.0);\n\tif (sample.g < 0.03125) {\n\t\treturn 1.0;\n\t}\n\treturn min(sample.r / sample.g, 1.0);\n}\n`}(cb)}${ts(bb,Tb,sb)}`
       }
-      var Rk;
-      return `${kk.sunShadow?"fn bloxdShadow() -> f32 {\n\treturn 1.0;\n}\n":""}${kk.airShadow?"fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\treturn 1.0;\n}\n":""}`
+      var kb;
+      return `${bb.sunShadow?"fn bloxdShadow() -> f32 {\n\treturn 1.0;\n}\n":""}${bb.airShadow?"fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\treturn 1.0;\n}\n":""}`
     }
 
-    function PB(kk, Fk, Bk, Rk) {
-      let tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "trace";
-      if (!Fk) return "";
-      const ak = (Xk = "fragmentInputs.vPositionW", bk = kk.sunShadow ? {
-        normal: Bk,
-        flags: Rk
-      } : null, `\n\tbloxdSpShadowPosition = ${Xk};\n${bk?`\tbloxdSpShadowNormal = normalize(${bk.normal});\n\tbloxdSpShadowEmissive = (${bk.flags} & ${dF.b.emissive}u) != 0u;\n\tbloxdSpShadowFirstPerson = (${bk.flags} & ${dF.g}u) != 0u;\n`:""}`);
-      var Xk, bk;
-      return kk.sunShadow && ("mask" === tk || "maskEdge" === tk) ? `${ak}${wk="fragmentInputs.position",dk="maskEdge"===tk,`\n\tbloxdSpShadowPixel = vec2i(${wk}.xy);\n${dk?`\tbloxdSpShadowZ = ${wk}.z;\n\tbloxdSpShadowDz = vec2f(dpdx(${wk}.z), dpdy(${wk}.z));\n`:""}`}` : ak;
-      var wk, dk
+    function qs(bb, cb, sb, kb) {
+      let Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "trace";
+      if (!cb) return "";
+      const ab = (Tb = "fragmentInputs.vPositionW", Ub = bb.sunShadow ? {
+        normal: sb,
+        flags: kb
+      } : null, `\n\tbloxdSpShadowPosition = ${Tb};\n${Ub?`\tbloxdSpShadowNormal = normalize(${Ub.normal});\n\tbloxdSpShadowEmissive = (${Ub.flags} & ${Ic.b.emissive}u) != 0u;\n\tbloxdSpShadowFirstPerson = (${Ub.flags} & ${Ic.h}u) != 0u;\n`:""}`);
+      var Tb, Ub;
+      return bb.sunShadow && ("mask" === Wb || "maskEdge" === Wb) ? `${ab}${Ib="fragmentInputs.position",Hb="maskEdge"===Wb,`\n\tbloxdSpShadowPixel = vec2i(${Ib}.xy);\n${Hb?`\tbloxdSpShadowZ = ${Ib}.z;\n\tbloxdSpShadowDz = vec2f(dpdx(${Ib}.z), dpdy(${Ib}.z));\n`:""}`}` : ab;
+      var Ib, Hb
     }
-    const hB = "bloxdSpTextureRotation",
-      qB = "bloxdSpTextureLayers",
-      CB = `@group(${NF.g}) @binding(${NF.u}) var<storage, read> ${qB}: array<u32>;\n`;
+    const ds = "bloxdSpTextureRotation",
+      As = "bloxdSpTextureLayers",
+      ws = `@group(${gc.d}) @binding(${gc.A}) var<storage, read> ${As}: array<u32>;\n`;
 
-    function ZB(kk) {
-      return `\tvertexOutputs.vPackTexture = ${qB}[min(u32(${kk}), arrayLength(&${qB}) - 1u)];\n`
-    }
-
-    function pB(kk) {
-      return void 0 !== kk.uv
+    function rs(bb) {
+      return `\tvertexOutputs.vPackTexture = ${As}[min(u32(${bb}), arrayLength(&${As}) - 1u)];\n`
     }
 
-    function KB(kk) {
-      if (!kk) return "fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn vec2u(1u);\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\treturn vec4f(1.0);\n}\n";
-      if (pB(kk)) return function(kk) {
+    function os(bb) {
+      return void 0 !== bb.uv
+    }
+
+    function Ss(bb) {
+      if (!bb) return "fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn vec2u(1u);\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\treturn vec4f(1.0);\n}\n";
+      if (os(bb)) return function(bb) {
         const {
-          texture: Fk,
-          cells: Bk,
-          layers: Rk
-        } = kk, tk = `textureDimensions(${Fk}, bloxdSpLevel)`, ak = Bk ? `max(vec2u(vec2f(${tk}) / ${Bk}), vec2u(1u))` : tk, Xk = Bk ? `fn bloxdSpOwnTexel(bloxdSpCellIndex: f32, bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${ak};\n\tlet bloxdSpIndex = u32(round(bloxdSpCellIndex));\n\tlet bloxdSpAcross = max(u32(round(${Bk}.x)), 1u);\n\tlet bloxdSpDown = max(u32(round(${Bk}.y)), 1u);\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\tlet bloxdSpCellAt = vec2u(bloxdSpIndex % bloxdSpAcross, bloxdSpIndex / bloxdSpAcross % bloxdSpDown);\n\treturn textureLoad(${Fk}, min(bloxdSpCellAt * bloxdSpSize + bloxdSpAt, ${tk} - 1u), bloxdSpLevel);\n}\n` : `fn bloxdSpOwnTexel(bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${ak};\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\treturn textureLoad(${Fk}, bloxdSpAt, bloxdSpLevel);\n}\n`;
-        let bk;
-        if (Bk)
-          if (1 === Rk.length) bk = `\treturn bloxdSpOwnTexel(${Rk[0]}, bloxdSpUv, bloxdSpLevel);\n`;
+          texture: cb,
+          cells: sb,
+          layers: kb
+        } = bb, Wb = `textureDimensions(${cb}, bloxdSpLevel)`, ab = sb ? `max(vec2u(vec2f(${Wb}) / ${sb}), vec2u(1u))` : Wb, Tb = sb ? `fn bloxdSpOwnTexel(bloxdSpCellIndex: f32, bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${ab};\n\tlet bloxdSpIndex = u32(round(bloxdSpCellIndex));\n\tlet bloxdSpAcross = max(u32(round(${sb}.x)), 1u);\n\tlet bloxdSpDown = max(u32(round(${sb}.y)), 1u);\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\tlet bloxdSpCellAt = vec2u(bloxdSpIndex % bloxdSpAcross, bloxdSpIndex / bloxdSpAcross % bloxdSpDown);\n\treturn textureLoad(${cb}, min(bloxdSpCellAt * bloxdSpSize + bloxdSpAt, ${Wb} - 1u), bloxdSpLevel);\n}\n` : `fn bloxdSpOwnTexel(bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${ab};\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\treturn textureLoad(${cb}, bloxdSpAt, bloxdSpLevel);\n}\n`;
+        let Ub;
+        if (sb)
+          if (1 === kb.length) Ub = `\treturn bloxdSpOwnTexel(${kb[0]}, bloxdSpUv, bloxdSpLevel);\n`;
           else {
-            const kk = Rk.length - 1;
-            bk = `\tvar bloxdSpColour = bloxdSpOwnTexel(${Rk[kk]}, bloxdSpUv, bloxdSpLevel);\n\tbloxdSpColour = vec4f(bloxdSpColour.rgb * bloxdSpColour.a, bloxdSpColour.a);\n`;
-            for (let Fk = kk - 1; Fk >= 0; Fk--) bk += `\t{\n\t\tlet bloxdSpLayer = bloxdSpOwnTexel(${Rk[Fk]}, bloxdSpUv, bloxdSpLevel);\n\t\tbloxdSpColour = vec4f(mix(bloxdSpColour.rgb, bloxdSpLayer.rgb, bloxdSpLayer.a), bloxdSpLayer.a + bloxdSpColour.a * (1.0 - bloxdSpLayer.a));\n\t}\n`;
-            bk += "\treturn vec4f(bloxdSpColour.rgb / max(bloxdSpColour.a, 0.001), bloxdSpColour.a);\n"
+            const bb = kb.length - 1;
+            Ub = `\tvar bloxdSpColour = bloxdSpOwnTexel(${kb[bb]}, bloxdSpUv, bloxdSpLevel);\n\tbloxdSpColour = vec4f(bloxdSpColour.rgb * bloxdSpColour.a, bloxdSpColour.a);\n`;
+            for (let cb = bb - 1; cb >= 0; cb--) Ub += `\t{\n\t\tlet bloxdSpLayer = bloxdSpOwnTexel(${kb[cb]}, bloxdSpUv, bloxdSpLevel);\n\t\tbloxdSpColour = vec4f(mix(bloxdSpColour.rgb, bloxdSpLayer.rgb, bloxdSpLayer.a), bloxdSpLayer.a + bloxdSpColour.a * (1.0 - bloxdSpLayer.a));\n\t}\n`;
+            Ub += "\treturn vec4f(bloxdSpColour.rgb / max(bloxdSpColour.a, 0.001), bloxdSpColour.a);\n"
           }
-        else bk = "\treturn bloxdSpOwnTexel(bloxdSpUv, bloxdSpLevel);\n";
-        return `${kk.id?`var<private> ${uB}: u32;\n`:""}${Xk}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\tlet bloxdSpLevel = ${MB(kk)};\n\treturn ${ak};\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId != ${kk.id?uB:"0u"}) {\n\t\treturn vec4f(1.0);\n\t}\n\tlet bloxdSpLevel = ${MB(kk)};\n${bk}}\n`
-      }(kk);
-      const Fk = kk,
-        Bk = kk => {
-          const Bk = kk > 0 ? `bloxdSpLayer - ${Fk.layers*kk}u` : "bloxdSpLayer";
-          return `return textureSampleLevel(textureAtlas${kk}, ${Fk.sampler}, bloxdSpTurned, ${Bk}, round(bloxdSpMipLevel));`
+        else Ub = "\treturn bloxdSpOwnTexel(bloxdSpUv, bloxdSpLevel);\n";
+        return `${bb.id?`var<private> ${ys}: u32;\n`:""}${Tb}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\tlet bloxdSpLevel = ${Ps(bb)};\n\treturn ${ab};\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId != ${bb.id?ys:"0u"}) {\n\t\treturn vec4f(1.0);\n\t}\n\tlet bloxdSpLevel = ${Ps(bb)};\n${Ub}}\n`
+      }(bb);
+      const cb = bb,
+        sb = bb => {
+          const sb = bb > 0 ? `bloxdSpLayer - ${cb.layers*bb}u` : "bloxdSpLayer";
+          return `return textureSampleLevel(textureAtlas${bb}, ${cb.sampler}, bloxdSpTurned, ${sb}, round(bloxdSpMipLevel));`
         };
-      let Rk = "";
-      for (let ak = 0; ak < Fk.count - 1; ak++) Rk += `\tif (bloxdSpLayer < ${Fk.layers*(ak+1)}u) {\n\t\t${Bk(ak)}\n\t}\n`;
-      const tk = Fk.frame ? `${Fk.frame("f32(bloxdSpTextureId - 1u)","let bloxdSpFrame = ")}\tlet bloxdSpLayer = u32(round(bloxdSpFrame));\n` : "\tlet bloxdSpLayer = bloxdSpTextureId - 1u;\n";
-      return `var<private> ${hB}: u32;\n${CB}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn textureDimensions(textureAtlas0, u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(textureAtlas0) - 1u))));\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId == 0u) {\n\t\treturn vec4f(1.0);\n\t}\n\t// Each quarter turn clockwise the face shows its texture at reads the unturned texture at (v, 1 - u)\n\tvar bloxdSpTurned = bloxdSpUv;\n\tif (${hB} == 1u) {\n\t\tbloxdSpTurned = vec2f(bloxdSpUv.y, 1.0 - bloxdSpUv.x);\n\t} else if (${hB} == 2u) {\n\t\tbloxdSpTurned = 1.0 - bloxdSpUv;\n\t} else if (${hB} == 3u) {\n\t\tbloxdSpTurned = vec2f(1.0 - bloxdSpUv.y, bloxdSpUv.x);\n\t}\n${tk}${Rk}\t${Bk(Fk.count-1)}\n}\n`
+      let kb = "";
+      for (let ab = 0; ab < cb.count - 1; ab++) kb += `\tif (bloxdSpLayer < ${cb.layers*(ab+1)}u) {\n\t\t${sb(ab)}\n\t}\n`;
+      const Wb = cb.frame ? `${cb.frame("f32(bloxdSpTextureId - 1u)","let bloxdSpFrame = ")}\tlet bloxdSpLayer = u32(round(bloxdSpFrame));\n` : "\tlet bloxdSpLayer = bloxdSpTextureId - 1u;\n";
+      return `var<private> ${ds}: u32;\n${ws}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn textureDimensions(textureAtlas0, u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(textureAtlas0) - 1u))));\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId == 0u) {\n\t\treturn vec4f(1.0);\n\t}\n\t// Each quarter turn clockwise the face shows its texture at reads the unturned texture at (v, 1 - u)\n\tvar bloxdSpTurned = bloxdSpUv;\n\tif (${ds} == 1u) {\n\t\tbloxdSpTurned = vec2f(bloxdSpUv.y, 1.0 - bloxdSpUv.x);\n\t} else if (${ds} == 2u) {\n\t\tbloxdSpTurned = 1.0 - bloxdSpUv;\n\t} else if (${ds} == 3u) {\n\t\tbloxdSpTurned = vec2f(1.0 - bloxdSpUv.y, bloxdSpUv.x);\n\t}\n${Wb}${kb}\t${sb(cb.count-1)}\n}\n`
     }
 
-    function xB(kk, Fk, Bk) {
-      return !!kk.surface && "bloxdDefaultSurface" !== kk.surface && function(kk, Fk) {
-        return "liquid" === Fk || !kk
-      }(Fk, Bk)
+    function Rs(bb, cb, sb) {
+      return !!bb.surface && "bloxdDefaultSurface" !== bb.surface && function(bb, cb) {
+        return "liquid" === cb || !bb
+      }(cb, sb)
     }
 
-    function jB(kk, Fk) {
-      return kk.vertex ? `\n\t{\n\t\tlet bloxdSpVertexIn = BloxdVertexIn(worldPos.xyz, vertexOutputs.vNormalW, ${Fk.vertexLocalPosition}, ${UB(Fk.vertexFlags)});\n\t\tlet bloxdSpVertex = ${kk.vertex}(bloxdSpVertexIn);\n\t\tworldPos = vec4f(bloxdSpVertex.position, worldPos.w);\n\t}\n` : ""
+    function vs(bb, cb) {
+      return bb.vertex ? `\n\t{\n\t\tlet bloxdSpVertexIn = BloxdVertexIn(worldPos.xyz, vertexOutputs.vNormalW, ${cb.vertexLocalPosition}, ${Es(cb.vertexFlags)});\n\t\tlet bloxdSpVertex = ${bb.vertex}(bloxdSpVertexIn);\n\t\tworldPos = vec4f(bloxdSpVertex.position, worldPos.w);\n\t}\n` : ""
     }
 
-    function lB(kk, Fk, Bk, Rk, tk) {
-      if (!kk.surface) return "";
-      const ak = (kk, Fk) => `\n\tlet bloxdSpTexelUV = ${kk};\n\tlet bloxdSpDdx = dpdx(bloxdSpTexelUV);\n\tlet bloxdSpDdy = dpdy(bloxdSpTexelUV);\n\tlet bloxdSpLod = 0.5 * log2(max(max(dot(bloxdSpDdx, bloxdSpDdx), dot(bloxdSpDdy, bloxdSpDdy)), 1e-10));\n\tlet bloxdSpMipLevel = clamp(bloxdSpLod, 0.0, f32(textureNumLevels(${Fk}) - 1u));`;
-      let Xk = "",
-        bk = "0u, 0u, vec2f(0.0), 0.0";
-      const wk = Rk && pB(Rk) ? Rk : null,
-        dk = Rk && !pB(Rk) ? Rk : null;
-      if (wk) {
-        Xk = `${wk.id?`\n\tlet bloxdSpTexture = ${wk.id};\n\t${uB} = bloxdSpTexture & 0xffffu;`:""}\n\tlet bloxdSpUv = ${wk.uv};${ak(function(kk,Fk){var Bk;return`${null!==(Bk=kk.levelUv)&&void 0!==Bk?Bk:kk.cells?`${Fk} / ${kk.cells}`:Fk} * vec2f(textureDimensions(${kk.texture}))`}(wk,"bloxdSpUv"),wk.texture)}`, bk = (wk.id ? `${uB}, bloxdSpTexture >> 16u` : "0u, 0u") + ", bloxdSpUv, bloxdSpMipLevel"
-      } else dk && (Xk = `\n\tlet bloxdSpTexture = fragmentInputs.vPackTexture;\n\t${hB} = bloxdSpTexture >> 16u;${ak(`fragmentInputs.vMainUV1 * ${(0,OF.fb)(dk.width)}`,"textureAtlas0")}`, bk = `bloxdSpTexture & 0xffffu, ${hB}, fragmentInputs.vMainUV1, bloxdSpMipLevel`);
-      const sk = tk.overlayColour,
-        Vk = sk ? "mix(bloxdSpSurface.colour, bloxdSpSurface.overlayColour.rgb, bloxdSpSurface.overlayColour.a)" : "bloxdSpSurface.colour",
-        Jk = "bloxdDefaultSurface" !== kk.surface || sk ? `\n\tbaseColor = vec4f(${Vk}, baseColor.a);` : "",
-        Ak = xB(kk, Fk, Bk) ? `\n\t${tk.alphaOut} = bloxdSpSurface.alpha;` : "";
-      return `${Xk}\n\tlet bloxdSpSurfaceIn = BloxdSurfaceIn(baseColor.rgb, ${tk.alpha}, ${tk.enchantTier}, ${tk.enchantColour}, ${tk.enchantSpeed}, ${null!==sk&&void 0!==sk?sk:"vec4f(0.0)"}, fragmentInputs.vPositionW, ${tk.normal}, ${tk.localPosition}, ${UB(tk.flags)}, ${bk});\n\tlet bloxdSpSurface = ${kk.surface}(bloxdSpSurfaceIn);${Jk}${Ak}\n`
+    function Fs(bb, cb, sb, kb, Wb) {
+      if (!bb.surface) return "";
+      const ab = (bb, cb) => `\n\tlet bloxdSpTexelUV = ${bb};\n\tlet bloxdSpDdx = dpdx(bloxdSpTexelUV);\n\tlet bloxdSpDdy = dpdy(bloxdSpTexelUV);\n\tlet bloxdSpLod = 0.5 * log2(max(max(dot(bloxdSpDdx, bloxdSpDdx), dot(bloxdSpDdy, bloxdSpDdy)), 1e-10));\n\tlet bloxdSpMipLevel = clamp(bloxdSpLod, 0.0, f32(textureNumLevels(${cb}) - 1u));`;
+      let Tb = "",
+        Ub = "0u, 0u, vec2f(0.0), 0.0";
+      const Ib = kb && os(kb) ? kb : null,
+        Hb = kb && !os(kb) ? kb : null;
+      if (Ib) {
+        Tb = `${Ib.id?`\n\tlet bloxdSpTexture = ${Ib.id};\n\t${ys} = bloxdSpTexture & 0xffffu;`:""}\n\tlet bloxdSpUv = ${Ib.uv};${ab(function(bb,cb){var sb;return`${null!==(sb=bb.levelUv)&&void 0!==sb?sb:bb.cells?`${cb} / ${bb.cells}`:cb} * vec2f(textureDimensions(${bb.texture}))`}(Ib,"bloxdSpUv"),Ib.texture)}`, Ub = (Ib.id ? `${ys}, bloxdSpTexture >> 16u` : "0u, 0u") + ", bloxdSpUv, bloxdSpMipLevel"
+      } else Hb && (Tb = `\n\tlet bloxdSpTexture = fragmentInputs.vPackTexture;\n\t${ds} = bloxdSpTexture >> 16u;${ab(`fragmentInputs.vMainUV1 * ${(0,Yc.ib)(Hb.width)}`,"textureAtlas0")}`, Ub = `bloxdSpTexture & 0xffffu, ${ds}, fragmentInputs.vMainUV1, bloxdSpMipLevel`);
+      const fb = Wb.overlayColour,
+        Mb = fb ? "mix(bloxdSpSurface.colour, bloxdSpSurface.overlayColour.rgb, bloxdSpSurface.overlayColour.a)" : "bloxdSpSurface.colour",
+        Xb = "bloxdDefaultSurface" !== bb.surface || fb ? `\n\tbaseColor = vec4f(${Mb}, baseColor.a);` : "",
+        nb = Rs(bb, cb, sb) ? `\n\t${Wb.alphaOut} = bloxdSpSurface.alpha;` : "";
+      return `${Tb}\n\tlet bloxdSpSurfaceIn = BloxdSurfaceIn(baseColor.rgb, ${Wb.alpha}, ${Wb.enchantTier}, ${Wb.enchantColour}, ${Wb.enchantSpeed}, ${null!==fb&&void 0!==fb?fb:"vec4f(0.0)"}, fragmentInputs.vPositionW, ${Wb.normal}, ${Wb.localPosition}, ${Es(Wb.flags)}, ${Ub});\n\tlet bloxdSpSurface = ${bb.surface}(bloxdSpSurfaceIn);${Xb}${nb}\n`
     }
-    const nB = "bloxdSpLightIn";
+    const xs = "bloxdSpLightIn";
 
-    function IB(kk, Fk, Bk, Rk) {
-      if (!kk.light) return "";
-      const tk = Fk ? `${OF.k}.rgb, ${OF.k}.w, uniforms.uAmbientLightColour, uniforms.uSkyLightColour, ${OF.g}` : "vec3f(0.0), 1.0, vec3f(1.0), vec3f(1.0), vec3f(0.0)",
+    function ps(bb, cb, sb, kb) {
+      if (!bb.light) return "";
+      const Wb = cb ? `${Yc.i}.rgb, ${Yc.i}.w, uniforms.uAmbientLightColour, uniforms.uSkyLightColour, ${Yc.h}` : "vec3f(0.0), 1.0, vec3f(1.0), vec3f(1.0), vec3f(0.0)",
         {
-          lambert: ak,
-          diffuse: Xk,
-          emissive: bk,
-          ambient: wk,
-          fogColour: dk,
-          fogAlpha: sk,
-          normal: Vk
-        } = Rk;
-      return `\tvar ${nB} = BloxdLightIn(vec3f(0.0), ${Bk?ak:"0.0"}, ${Xk}, ${bk}, ${wk}, ${tk}, ${dk}, ${sk}, fragmentInputs.vPositionW, ${Vk}, bloxdSpSurfaceIn.localPosition, bloxdSpSurfaceIn.flags, bloxdSpSurfaceIn.textureId, bloxdSpSurfaceIn.textureRotation, bloxdSpSurfaceIn.uv, bloxdSpSurfaceIn.mipLevel);\n\t${nB}.litColour = bloxdLitColour(bloxdSpSurface, ${nB});\n`
+          lambert: ab,
+          diffuse: Tb,
+          emissive: Ub,
+          ambient: Ib,
+          fogColour: Hb,
+          fogAlpha: fb,
+          normal: Mb
+        } = kb;
+      return `\tvar ${xs} = BloxdLightIn(vec3f(0.0), ${sb?ab:"0.0"}, ${Tb}, ${Ub}, ${Ib}, ${Wb}, ${Hb}, ${fb}, fragmentInputs.vPositionW, ${Mb}, bloxdSpSurfaceIn.localPosition, bloxdSpSurfaceIn.flags, bloxdSpSurfaceIn.textureId, bloxdSpSurfaceIn.textureRotation, bloxdSpSurfaceIn.uv, bloxdSpSurfaceIn.mipLevel);\n\t${xs}.litColour = bloxdLitColour(bloxdSpSurface, ${xs});\n`
     }
 
-    function QB(kk) {
-      return kk.light ? `\n\t{\n\t\tlet bloxdSpLight = ${kk.light}(bloxdSpSurface, ${nB});\n\t\tcolor = vec4f(bloxdSpLight.colour, color.a);\n\t}\n` : ""
+    function bk(bb) {
+      return bb.light ? `\n\t{\n\t\tlet bloxdSpLight = ${bb.light}(bloxdSpSurface, ${xs});\n\t\tcolor = vec4f(bloxdSpLight.colour, color.a);\n\t}\n` : ""
     }
-    const kR = "\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n",
-      FR = "\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n",
-      BR = "\treturn color;\n}",
-      RR = {
+    const ck = "\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n",
+      sk = "\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n",
+      kk = "\treturn color;\n}",
+      Wk = {
         vertexFlags: "vertexOutputs.vBlockFlags",
         vertexLocalPosition: "vec3f(0.0)",
         flags: "fragmentInputs.vBlockFlags",
@@ -1259,57 +1259,57 @@ export const modules = {
         localPosition: "vec3f(0.0)",
         overlayColour: null
       };
-    const tR = Object.freeze({});
+    const ak = Object.freeze({});
 
-    function aR(kk) {
-      var Fk;
-      return !(null === (Fk = (0, HF.f)(kk)) || void 0 === Fk || !Fk.sceneDepth)
+    function Tk(bb) {
+      var cb;
+      return !(null === (cb = (0, Bc.e)(bb)) || void 0 === cb || !cb.sceneDepth)
     }
 
-    function XR(kk) {
-      const Fk = (0, HF.f)(kk);
-      return !!Fk && xB(Fk.hooks, Fk.strict, Fk.program)
+    function Uk(bb) {
+      const cb = (0, Bc.e)(bb);
+      return !!cb && Rs(cb.hooks, cb.strict, cb.program)
     }
 
-    function bR(kk, Fk, Bk, Rk) {
-      return GB(kk, Fk, Bk, Rk, "terrain")
+    function Ik(bb, cb, sb, kb) {
+      return Os(bb, cb, sb, kb, "terrain")
     }
 
-    function wR(kk, Fk, Bk) {
-      let Rk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "none";
-      const ak = function(kk) {
-          return (0, HF.d)(kk.packVariant, kk.liquid ? "liquid" : "terrain")
-        }(kk),
+    function Hk(bb, cb, sb) {
+      let kb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "none";
+      const ab = function(bb) {
+          return (0, Bc.d)(bb.packVariant, bb.liquid ? "liquid" : "terrain")
+        }(bb),
         {
-          hooks: Xk
-        } = ak,
-        bk = rB(ak, Rk),
-        wk = "edge" === tk ? "maskEdge" : "plain" === tk ? "mask" : "trace",
-        dk = jB(Xk, RR);
-      dk && (Fk = bR(Fk, "\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n", `\tvar worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);${dk}\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n`, "vertex"));
-      const sk = "atlas" === kk.texture ? {
-          count: kk.atlasCount,
-          layers: kk.atlasLayers,
-          width: kk.Vl,
+          hooks: Tb
+        } = ab,
+        Ub = Ks(ab, kb),
+        Ib = "edge" === Wb ? "maskEdge" : "plain" === Wb ? "mask" : "trace",
+        Hb = vs(Tb, Wk);
+      Hb && (cb = Ik(cb, "\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n", `\tvar worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);${Hb}\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n`, "vertex"));
+      const fb = "atlas" === bb.texture ? {
+          count: bb.atlasCount,
+          layers: bb.atlasLayers,
+          width: bb.uR,
           sampler: "atlasSampler",
-          frame: kk.animated ? Bk : null
+          frame: bb.animated ? sb : null
         } : null,
-        Vk = `${ak.sceneDepth?"\n\tbloxdSpPixel = vec2i(fragmentInputs.position.xy);\n\tbloxdSpPositionW = fragmentInputs.vPositionW;\n":""}${PB(ak,bk,RR.normal,RR.flags,wk)}${lB(Xk,ak.strict,ak.program,sk,RR)}`;
-      Vk && (Fk = bR(Fk, kR, `${kR.slice(0,-1)}${Vk}`, "surface"));
-      const Jk = QB(Xk);
-      return Jk && (Fk = bR(Fk, FR, `${IB(Xk,kk.lighting,kk.dirLightCount>0,RR)}${FR}`, "light input"), Fk = bR(Fk, BR, `${Jk.slice(1)}${BR}`, "light")), `${(0,NF.z)()}${ak.sceneDepth?`@group(${NF.g}) @binding(${NF.p}) var bloxdSpSceneDepth: texture_2d<f32>;\nvar<private> bloxdSpPixel: vec2i;\nvar<private> bloxdSpPositionW: vec3f;\nfn bloxdOpaqueBehind() -> BloxdOpaqueBehind {\n\tlet bloxdSpZ = textureLoad(bloxdSpSceneDepth, bloxdSpPixel, 0).r;\n\tif (bloxdSpZ <= 0.0) {\n\t\treturn BloxdOpaqueBehind(false, vec3f(0.0), 0.0);\n\t}\n\tlet bloxdSpEye = ${cB};\n\tlet bloxdSpScale = max(bloxdSpZ / (scene.view * vec4f(bloxdSpPositionW, 1.0)).z, 1.0);\n\tlet bloxdSpBehind = bloxdSpEye + (bloxdSpPositionW - bloxdSpEye) * bloxdSpScale;\n\treturn BloxdOpaqueBehind(true, bloxdSpBehind, distance(bloxdSpBehind, bloxdSpEye));\n}\n`:""}${zB(ak,bk,wk)}${KB(sk)}${gB}fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * 0.5)) + bloxdRenderOffset();\n}\n${ak.code}${Fk}`
+        Mb = `${ab.sceneDepth?"\n\tbloxdSpPixel = vec2i(fragmentInputs.position.xy);\n\tbloxdSpPositionW = fragmentInputs.vPositionW;\n":""}${qs(ab,Ub,Wk.normal,Wk.flags,Ib)}${Fs(Tb,ab.strict,ab.program,fb,Wk)}`;
+      Mb && (cb = Ik(cb, ck, `${ck.slice(0,-1)}${Mb}`, "surface"));
+      const Xb = bk(Tb);
+      return Xb && (cb = Ik(cb, sk, `${ps(Tb,bb.lighting,bb.dirLightCount>0,Wk)}${sk}`, "light input"), cb = Ik(cb, kk, `${Xb.slice(1)}${kk}`, "light")), `${(0,gc.G)()}${ab.sceneDepth?`@group(${gc.d}) @binding(${gc.p}) var bloxdSpSceneDepth: texture_2d<f32>;\nvar<private> bloxdSpPixel: vec2i;\nvar<private> bloxdSpPositionW: vec3f;\nfn bloxdOpaqueBehind() -> BloxdOpaqueBehind {\n\tlet bloxdSpZ = textureLoad(bloxdSpSceneDepth, bloxdSpPixel, 0).r;\n\tif (bloxdSpZ <= 0.0) {\n\t\treturn BloxdOpaqueBehind(false, vec3f(0.0), 0.0);\n\t}\n\tlet bloxdSpEye = ${is};\n\tlet bloxdSpScale = max(bloxdSpZ / (scene.view * vec4f(bloxdSpPositionW, 1.0)).z, 1.0);\n\tlet bloxdSpBehind = bloxdSpEye + (bloxdSpPositionW - bloxdSpEye) * bloxdSpScale;\n\treturn BloxdOpaqueBehind(true, bloxdSpBehind, distance(bloxdSpBehind, bloxdSpEye));\n}\n`:""}${zs(ab,Ub,Ib)}${Ss(fb)}${Ds}fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * 0.5)) + bloxdRenderOffset();\n}\n${ab.code}${cb}`
     }
-    const dR = Lk.e.WGSL;
+    const fk = ub.e.WGSL;
 
-    function sR(kk) {
-      return void 0 !== kk.packVariant
+    function Mk(bb) {
+      return void 0 !== bb.packVariant
     }
-    const VR = {
-        uRk: 0,
-        MRk: 4,
-        gRk: 8,
-        cRk: 12,
+    const Xk = {
+        Jkb: 0,
+        gkb: 4,
+        Bkb: 8,
+        tkb: 12,
         fogInfos: 16,
         fogColour: 20,
         outputHeight: 23,
@@ -1317,19 +1317,19 @@ export const modules = {
         dirLights: 28,
         aoLevels: 44
       },
-      JR = VR.aoLevels + 4,
-      AR = {
+      nk = Xk.aoLevels + 4,
+      mk = {
         diffuse: 0,
         ambientAndCutoff: 4,
         emissiveAndLevel: 8,
         anim: 12
       },
-      eR = "\nstruct TerrainFrameUniforms {\n\tuHeldLightColour: vec4f,\n\tuHeldLightPos: vec4f,\n\tuSkyLightColour: vec3f,\n\tuAmbientLightColour: vec3f,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tsceneAmbient: vec3f,\n\tuDirLights: array<vec4f, 4>,\n\taoLevels: vec4f,\n}\n",
-      yR = "\nstruct TerrainMaterialUniforms {\n\tvDiffuseColor: vec4f,\n\tambientAndCutoff: vec4f,\n\temissiveAndLevel: vec4f,\n\tanim: vec4f,\n}\n",
-      fR = "\nstruct LiteSceneUniforms {\n\tviewProjection: mat4x4f,\n\tview: mat4x4f,\n\tvEyePosition: vec4f,\n}\n@group(0) @binding(0) var<uniform> scene: LiteSceneUniforms;\nfn liteWorldLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, clip.z * 0.5, clip.w);\n}\nfn liteFrontLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, (clip.z + clip.w) * 0.5, clip.w);\n}\n",
-      mR = "\n\tlet fading = fragmentInputs.vVisibility < 255.0 / 256.0;\n\tif (fading && fragmentInputs.vVisibility < bayerDither(vec2f(fragmentInputs.position.x, uniforms.outputHeight - fragmentInputs.position.y))) {\n\t\tdiscard;\n\t}\n",
-      WR = "\nfn calcFogFactor(fogDistance: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = uniforms.vFogInfos.y;\n\tlet fogEnd = uniforms.vFogInfos.z;\n\tlet fogDensity = uniforms.vFogInfos.w;\n\tlet dist = length(fogDistance);\n\tif (uniforms.vFogInfos.x == 3.0) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (uniforms.vFogInfos.x == 1.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (uniforms.vFogInfos.x == 2.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n",
-      vR = {
+      lk = "\nstruct TerrainFrameUniforms {\n\tuHeldLightColour: vec4f,\n\tuHeldLightPos: vec4f,\n\tuSkyLightColour: vec3f,\n\tuAmbientLightColour: vec3f,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tsceneAmbient: vec3f,\n\tuDirLights: array<vec4f, 4>,\n\taoLevels: vec4f,\n}\n",
+      Qk = "\nstruct TerrainMaterialUniforms {\n\tvDiffuseColor: vec4f,\n\tambientAndCutoff: vec4f,\n\temissiveAndLevel: vec4f,\n\tanim: vec4f,\n}\n",
+      ek = "\nstruct LiteSceneUniforms {\n\tviewProjection: mat4x4f,\n\tview: mat4x4f,\n\tvEyePosition: vec4f,\n}\n@group(0) @binding(0) var<uniform> scene: LiteSceneUniforms;\nfn liteWorldLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, clip.z * 0.5, clip.w);\n}\nfn liteFrontLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, (clip.z + clip.w) * 0.5, clip.w);\n}\n",
+      Ck = "\n\tlet fading = fragmentInputs.vVisibility < 255.0 / 256.0;\n\tif (fading && fragmentInputs.vVisibility < bayerDither(vec2f(fragmentInputs.position.x, uniforms.outputHeight - fragmentInputs.position.y))) {\n\t\tdiscard;\n\t}\n",
+      Nk = "\nfn calcFogFactor(fogDistance: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = uniforms.vFogInfos.y;\n\tlet fogEnd = uniforms.vFogInfos.z;\n\tlet fogDensity = uniforms.vFogInfos.w;\n\tlet dist = length(fogDistance);\n\tif (uniforms.vFogInfos.x == 3.0) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (uniforms.vFogInfos.x == 1.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (uniforms.vFogInfos.x == 2.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n",
+      Vk = {
         position: 0,
         normal: 1,
         color: 2,
@@ -1337,84 +1337,84 @@ export const modules = {
         packedLight: 5,
         blockFlagWords: 7
       },
-      iR = 0,
-      YR = 3,
-      oR = 4,
-      LR = 5,
-      OR = `\nfn packedNormal(dir: u32) -> vec4f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\treturn vec4f(select(0.0, s, axis == 0u), select(0.0, s, axis == 1u), select(0.0, s, axis == 2u), 0.0);\n}\nfn packedUv(p: vec3f, dir: u32, corner: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet du = select(-${EF.e}, ${EF.e}, corner == 0u || corner == 3u);\n\tlet dv = select(-${EF.e}, ${EF.e}, corner < 2u);\n\tif (axis == 0u) {\n\t\treturn vec2f(s * (p.z + du), -(p.y + dv));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(s * (p.x + dv), -(p.z + du));\n\t}\n\treturn vec2f(-s * (p.x + du), -(p.y + dv));\n}\n`,
-      ER = `\n@group(1) @binding(2) var<storage, read> quads: array<u32>;\n// A quad's light: its four slots' packed values as u16, two a word, the lower slot in the low half (liteTerrainArena.ts)\n@group(1) @binding(3) var<storage, read> quadLight: array<u32>;\nfn quadSlotLight(quad: u32, slot: u32) -> f32 {\n\tlet pair = quadLight[quad * 2u + (slot >> 1u)];\n\treturn f32((pair >> ((slot & 1u) * 16u)) & 0xffffu);\n}\nfn slotCorner(dir: u32, diagonal: u32, slot: u32) -> u32 {\n\tlet reversed = any(vec3u(dir) == vec3u(${[0,1,2,3,4,5].filter((kk=>SF.b>>kk&1)).join("u, ")}u));\n\treturn (diagonal + select(slot, 4u - slot, reversed)) & 3u;\n}\nfn quadCorner(r0: u32, axis: u32, corner: u32) -> vec3f {\n\tlet w = f32(((r0 >> 18u) & 63u) + 1u) * select(0.0, 1.0, corner == 1u || corner == 2u);\n\tlet h = f32(((r0 >> 24u) & 63u) + 1u) * select(0.0, 1.0, corner >= 2u);\n\tlet du = select(vec3f(0.0, 0.0, w), vec3f(w, 0.0, 0.0), axis == 2u);\n\tlet dv = select(vec3f(0.0, h, 0.0), vec3f(h, 0.0, 0.0), axis == 1u);\n\treturn vec3f(f32(r0 & 63u), f32((r0 >> 6u) & 63u), f32((r0 >> 12u) & 63u)) + du + dv;\n}\n`;
-    const SR = {
-      yJ: "material.anim.x",
+      Lk = 0,
+      uk = 3,
+      Yk = 4,
+      hk = 5,
+      Jk = `\nfn packedNormal(dir: u32) -> vec4f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\treturn vec4f(select(0.0, s, axis == 0u), select(0.0, s, axis == 1u), select(0.0, s, axis == 2u), 0.0);\n}\nfn packedUv(p: vec3f, dir: u32, corner: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet du = select(-${hc.c}, ${hc.c}, corner == 0u || corner == 3u);\n\tlet dv = select(-${hc.c}, ${hc.c}, corner < 2u);\n\tif (axis == 0u) {\n\t\treturn vec2f(s * (p.z + du), -(p.y + dv));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(s * (p.x + dv), -(p.z + du));\n\t}\n\treturn vec2f(-s * (p.x + du), -(p.y + dv));\n}\n`,
+      gk = `\n@group(1) @binding(2) var<storage, read> quads: array<u32>;\n// A quad's light: its four slots' packed values as u16, two a word, the lower slot in the low half (liteTerrainArena.ts)\n@group(1) @binding(3) var<storage, read> quadLight: array<u32>;\nfn quadSlotLight(quad: u32, slot: u32) -> f32 {\n\tlet pair = quadLight[quad * 2u + (slot >> 1u)];\n\treturn f32((pair >> ((slot & 1u) * 16u)) & 0xffffu);\n}\nfn slotCorner(dir: u32, diagonal: u32, slot: u32) -> u32 {\n\tlet reversed = any(vec3u(dir) == vec3u(${[0,1,2,3,4,5].filter((bb=>Jc.e>>bb&1)).join("u, ")}u));\n\treturn (diagonal + select(slot, 4u - slot, reversed)) & 3u;\n}\nfn quadCorner(r0: u32, axis: u32, corner: u32) -> vec3f {\n\tlet w = f32(((r0 >> 18u) & 63u) + 1u) * select(0.0, 1.0, corner == 1u || corner == 2u);\n\tlet h = f32(((r0 >> 24u) & 63u) + 1u) * select(0.0, 1.0, corner >= 2u);\n\tlet du = select(vec3f(0.0, 0.0, w), vec3f(w, 0.0, 0.0), axis == 2u);\n\tlet dv = select(vec3f(0.0, h, 0.0), vec3f(h, 0.0, 0.0), axis == 1u);\n\treturn vec3f(f32(r0 & 63u), f32((r0 >> 6u) & 63u), f32((r0 >> 12u) & 63u)) + du + dv;\n}\n`;
+    const Bk = {
+      aX: "material.anim.x",
       stride: "material.anim.y",
       count: "material.anim.z",
-      perTexture: kk => `animDataPerTex[${kk}]`
+      perTexture: bb => `animDataPerTex[${bb}]`
     };
 
-    function NR(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : SR;
-      return `\n\tlet atlasIdxIn = ${kk};\n\tlet animTick = ${Bk.yJ};\n\tlet animTickStride = ${Bk.stride};\n\tlet numAnimTextures = ${Bk.count};\n\t${(0,Ok.g)(Lk.e.WGSL,Bk.perTexture)}\n\t${Fk}animLayer;\n`
+    function tk(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Bk;
+      return `\n\tlet atlasIdxIn = ${bb};\n\tlet animTick = ${sb.aX};\n\tlet animTickStride = ${sb.stride};\n\tlet numAnimTextures = ${sb.count};\n\t${(0,Yb.f)(ub.e.WGSL,sb.perTexture)}\n\t${cb}animLayer;\n`
     }
 
-    function HR(kk) {
-      const Fk = (Fk, Bk) => {
-        const Rk = Fk > 0 ? `fragmentInputs.texAtlasIndex - ${kk.atlasLayers.toFixed(1)} * ${Fk.toFixed(1)}` : "fragmentInputs.texAtlasIndex";
-        return `${Bk?"textureSampleLevel":"textureSample"}(textureAtlas${Fk}, atlasSampler, fragmentInputs.vMainUV1, i32(round(${Rk}))${Bk?", atlasLod":""})`
+    function yk(bb) {
+      const cb = (cb, sb) => {
+        const kb = cb > 0 ? `fragmentInputs.texAtlasIndex - ${bb.atlasLayers.toFixed(1)} * ${cb.toFixed(1)}` : "fragmentInputs.texAtlasIndex";
+        return `${sb?"textureSampleLevel":"textureSample"}(textureAtlas${cb}, atlasSampler, fragmentInputs.vMainUV1, i32(round(${kb}))${sb?", atlasLod":""})`
       };
-      if (1 === kk.atlasCount) return `baseColor = ${Fk(0,!1)};`;
-      let Bk = `\n\tlet atlasTexelUV = fragmentInputs.vMainUV1 * ${(0,OF.fb)(kk.Vl)};\n\tlet atlasDdx = dpdx(atlasTexelUV);\n\tlet atlasDdy = dpdy(atlasTexelUV);\n\tlet atlasLod = 0.5 * log2(max(max(dot(atlasDdx, atlasDdx), dot(atlasDdy, atlasDdy)), 1e-10));\n`;
-      for (let Rk = 0; Rk < kk.atlasCount; Rk++) {
-        const tk = kk.atlasLayers * (Rk + 1) - .5;
-        Bk += `${Rk>0?" else ":"\n\t"}if (fragmentInputs.texAtlasIndex < ${(0,OF.fb)(tk)}) {\n\t\tbaseColor = ${Fk(Rk,!0)};\n\t}`
+      if (1 === bb.atlasCount) return `baseColor = ${cb(0,!1)};`;
+      let sb = `\n\tlet atlasTexelUV = fragmentInputs.vMainUV1 * ${(0,Yc.ib)(bb.uR)};\n\tlet atlasDdx = dpdx(atlasTexelUV);\n\tlet atlasDdy = dpdy(atlasTexelUV);\n\tlet atlasLod = 0.5 * log2(max(max(dot(atlasDdx, atlasDdx), dot(atlasDdy, atlasDdy)), 1e-10));\n`;
+      for (let kb = 0; kb < bb.atlasCount; kb++) {
+        const Wb = bb.atlasLayers * (kb + 1) - .5;
+        sb += `${kb>0?" else ":"\n\t"}if (fragmentInputs.texAtlasIndex < ${(0,Yc.ib)(Wb)}) {\n\t\tbaseColor = ${cb(kb,!0)};\n\t}`
       }
-      return Bk
+      return sb
     }
 
-    function uR(kk) {
-      return `terrain-${kk.texture}${"atlas"===kk.texture?kk.atlasCount:""}${kk.animated?"-anim":""}${kk.alphaTest?"-test":""}${kk.lighting?"-lit":""}-dir${kk.dirLightCount}${kk.packed?"-packed":""}${sR(kk)?`-sp${kk.packVariant}`:""}${kk.liquid?"-liquid":""}${kk.resting?"-rest":""}`
+    function Pk(bb) {
+      return `terrain-${bb.texture}${"atlas"===bb.texture?bb.atlasCount:""}${bb.animated?"-anim":""}${bb.alphaTest?"-test":""}${bb.lighting?"-lit":""}-dir${bb.dirLightCount}${bb.packed?"-packed":""}${Mk(bb)?`-sp${bb.packVariant}`:""}${bb.liquid?"-liquid":""}${bb.resting?"-rest":""}`
     }
 
-    function MR(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
-      const Rk = function(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "none";
-        const Bk = "none" !== kk.texture,
-          Rk = "atlas" === kk.texture,
-          tk = kk.dirLightCount > 0,
-          ak = sR(kk);
-        if (kk.dirLightCount > 4) throw new Error(`Terrain supports 4 directional lights, not ${kk.dirLightCount}`);
-        let Xk = 1,
-          bk = "@group(2) @binding(0) var<uniform> material: TerrainMaterialUniforms;\n";
-        if (Rk) {
-          kk.animated && (bk += `@group(2) @binding(${Xk++}) var<storage, read> animDataPerTex: array<f32>;\n`), bk += `@group(2) @binding(${Xk++}) var atlasSampler: sampler;\n`;
-          for (let Fk = 0; Fk < kk.atlasCount; Fk++) bk += `@group(2) @binding(${Xk++}) var textureAtlas${Fk}: texture_2d_array<f32>;\n`
-        } else "single" === kk.texture && (bk += `@group(2) @binding(${Xk++}) var diffuseSamplerSampler: sampler;\n`, bk += `@group(2) @binding(${Xk++}) var diffuseSampler: texture_2d<f32>;\n`);
-        const wk = function(kk) {
-            const Fk = vR,
-              Bk = "none" !== kk.texture,
-              Rk = "atlas" === kk.texture,
-              tk = sR(kk);
-            return kk.packed ? {
-              declarations: `\nstruct PackedVertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@builtin(vertex_index) vertexIndex: u32,\n}\nstruct VertexInputs {\n\tchunkSlot: u32,\n\tposition: vec3f,\n\tnormal: vec4f,\n\tcolor: vec4f,\n\t${Bk?"uv: vec2f,":""}\n\t${Rk?"texAtlasIndices: f32,":""}\n\t${kk.lighting?"aPackedLightLevels: f32,":""}\n\t${tk?"blockFlagWords: vec2u,":""}\n}\n${OR}\n${ER}\n${"single"===kk.texture?"\nfn packedFaceUvOffset(r0: u32, dir: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet x = f32(r0 & 63u);\n\tlet y = f32((r0 >> 6u) & 63u);\n\tlet z = f32((r0 >> 12u) & 63u);\n\tif (axis == 0u) {\n\t\treturn vec2f(-s * z, y + f32(((r0 >> 24u) & 63u) + 1u));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(-s * x, z + f32(((r0 >> 18u) & 63u) + 1u));\n\t}\n\treturn vec2f(s * x, y + f32(((r0 >> 24u) & 63u) + 1u));\n}\n":""}\n`,
+    function Dk(bb) {
+      let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
+      const kb = function(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "none";
+        const sb = "none" !== bb.texture,
+          kb = "atlas" === bb.texture,
+          Wb = bb.dirLightCount > 0,
+          ab = Mk(bb);
+        if (bb.dirLightCount > 4) throw new Error(`Terrain supports 4 directional lights, not ${bb.dirLightCount}`);
+        let Tb = 1,
+          Ub = "@group(2) @binding(0) var<uniform> material: TerrainMaterialUniforms;\n";
+        if (kb) {
+          bb.animated && (Ub += `@group(2) @binding(${Tb++}) var<storage, read> animDataPerTex: array<f32>;\n`), Ub += `@group(2) @binding(${Tb++}) var atlasSampler: sampler;\n`;
+          for (let cb = 0; cb < bb.atlasCount; cb++) Ub += `@group(2) @binding(${Tb++}) var textureAtlas${cb}: texture_2d_array<f32>;\n`
+        } else "single" === bb.texture && (Ub += `@group(2) @binding(${Tb++}) var diffuseSamplerSampler: sampler;\n`, Ub += `@group(2) @binding(${Tb++}) var diffuseSampler: texture_2d<f32>;\n`);
+        const Ib = function(bb) {
+            const cb = Vk,
+              sb = "none" !== bb.texture,
+              kb = "atlas" === bb.texture,
+              Wb = Mk(bb);
+            return bb.packed ? {
+              declarations: `\nstruct PackedVertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@builtin(vertex_index) vertexIndex: u32,\n}\nstruct VertexInputs {\n\tchunkSlot: u32,\n\tposition: vec3f,\n\tnormal: vec4f,\n\tcolor: vec4f,\n\t${sb?"uv: vec2f,":""}\n\t${kb?"texAtlasIndices: f32,":""}\n\t${bb.lighting?"aPackedLightLevels: f32,":""}\n\t${Wb?"blockFlagWords: vec2u,":""}\n}\n${Jk}\n${gk}\n${"single"===bb.texture?"\nfn packedFaceUvOffset(r0: u32, dir: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet x = f32(r0 & 63u);\n\tlet y = f32((r0 >> 6u) & 63u);\n\tlet z = f32((r0 >> 12u) & 63u);\n\tif (axis == 0u) {\n\t\treturn vec2f(-s * z, y + f32(((r0 >> 24u) & 63u) + 1u));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(-s * x, z + f32(((r0 >> 18u) & 63u) + 1u));\n\t}\n\treturn vec2f(s * x, y + f32(((r0 >> 24u) & 63u) + 1u));\n}\n":""}\n`,
               parameter: "packedInputs: PackedVertexInputs",
-              decode: `\n\tvar vertexInputs: VertexInputs;\n\tlet part = chunks[packedInputs.chunkSlot];\n\tlet drawn = packedInputs.vertexIndex >> 2u;\n\tlet quad = select(drawn, drawn - part.faceCount, drawn >= part.faceEnd);\n\tlet slot = packedInputs.vertexIndex & 3u;\n\tlet r2 = quads[quad * 3u + 2u];\n\tlet dir = r2 & 7u;\n\tlet corner = slotCorner(dir, (r2 >> 11u) & 1u, slot);\n\tlet position = quadCorner(quads[quad * 3u], dir >> 1u, corner);\n\tlet face = quads[quad * 3u + 1u];\n\t// A constant shift a slot, as render-shaders' terrain.wgsl decodes it\n\tlet aoBits = r2 >> 3u;\n\tlet ao = select(select(aoBits, aoBits >> 2u, slot == 1u), select(aoBits >> 4u, aoBits >> 6u, slot == 3u), slot >= 2u) & 3u;\n\tvertexInputs.chunkSlot = packedInputs.chunkSlot;\n\tvertexInputs.position = position;\n\tvertexInputs.normal = packedNormal(dir);\n\t// Packed parts are untinted, so the colour is the AO level's, as unorm8 decodes it; its alpha no program reads\n\tvertexInputs.color = vec4f(vec3f(uniforms.aoLevels[ao]), 1.0);\n\t${Bk?"vertexInputs.uv = packedUv(position, dir, corner);":""}\n\t${"single"===kk.texture?"vertexInputs.uv += packedFaceUvOffset(quads[quad * 3u], dir);":""}\n\t${Rk?"vertexInputs.texAtlasIndices = f32(face & 0xffffu);":""}\n\t${kk.lighting?"vertexInputs.aPackedLightLevels = quadSlotLight(quad, slot);":""}\n\t${tk?"vertexInputs.blockFlagWords = vec2u(face, face << 8u);":""}\n`
+              decode: `\n\tvar vertexInputs: VertexInputs;\n\tlet part = chunks[packedInputs.chunkSlot];\n\tlet drawn = packedInputs.vertexIndex >> 2u;\n\tlet quad = select(drawn, drawn - part.faceCount, drawn >= part.faceEnd);\n\tlet slot = packedInputs.vertexIndex & 3u;\n\tlet r2 = quads[quad * 3u + 2u];\n\tlet dir = r2 & 7u;\n\tlet corner = slotCorner(dir, (r2 >> 11u) & 1u, slot);\n\tlet position = quadCorner(quads[quad * 3u], dir >> 1u, corner);\n\tlet face = quads[quad * 3u + 1u];\n\t// A constant shift a slot, as render-shaders' terrain.wgsl decodes it\n\tlet aoBits = r2 >> 3u;\n\tlet ao = select(select(aoBits, aoBits >> 2u, slot == 1u), select(aoBits >> 4u, aoBits >> 6u, slot == 3u), slot >= 2u) & 3u;\n\tvertexInputs.chunkSlot = packedInputs.chunkSlot;\n\tvertexInputs.position = position;\n\tvertexInputs.normal = packedNormal(dir);\n\t// Packed parts are untinted, so the colour is the AO level's, as unorm8 decodes it; its alpha no program reads\n\tvertexInputs.color = vec4f(vec3f(uniforms.aoLevels[ao]), 1.0);\n\t${sb?"vertexInputs.uv = packedUv(position, dir, corner);":""}\n\t${"single"===bb.texture?"vertexInputs.uv += packedFaceUvOffset(quads[quad * 3u], dir);":""}\n\t${kb?"vertexInputs.texAtlasIndices = f32(face & 0xffffu);":""}\n\t${bb.lighting?"vertexInputs.aPackedLightLevels = quadSlotLight(quad, slot);":""}\n\t${Wb?"vertexInputs.blockFlagWords = vec2u(face, face << 8u);":""}\n`
             } : {
-              declarations: `\nstruct VertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@location(${Fk.position}) position: vec3f,\n\t@location(${Fk.normal}) normal: vec4f,\n\t@location(${Fk.color}) color: vec4f,\n\t${Bk?`@location(${Fk.uv}) uv: vec2f,`:""}\n\t${kk.lighting?`@location(${Fk.packedLight}) aPackedLightLevels: f32,`:""}\n\t${tk?`@location(${Fk.blockFlagWords}) blockFlagWords: vec2u,`:""}\n}\n`,
+              declarations: `\nstruct VertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@location(${cb.position}) position: vec3f,\n\t@location(${cb.normal}) normal: vec4f,\n\t@location(${cb.color}) color: vec4f,\n\t${sb?`@location(${cb.uv}) uv: vec2f,`:""}\n\t${bb.lighting?`@location(${cb.packedLight}) aPackedLightLevels: f32,`:""}\n\t${Wb?`@location(${cb.blockFlagWords}) blockFlagWords: vec2u,`:""}\n}\n`,
               parameter: "vertexInputs: VertexInputs",
               decode: ""
             }
-          }(kk),
-          dk = `\n${fR}\n${eR}\n${yR}\n@group(1) @binding(0) var<uniform> uniforms: TerrainFrameUniforms;\n/** Per chunk part, indexed by the draw's first instance (TERRAIN_CHUNK_SLOT_WORDS words). */\nstruct TerrainChunk {\n\t/** Into the render frame. */\n\ttranslation: vec3f,\n\t/** The fade-in. */\n\tvisibility: f32,\n\t/** Quad records only: where the part's faces end in its page, in records, and how many it has. */\n\tfaceEnd: u32,\n\tfaceCount: u32,\n}\n@group(1) @binding(1) var<storage, read> chunks: array<TerrainChunk>;\n${bk}\n${lk}\n${wk.declarations}\nstruct Varyings {\n\t${"none"===Fk?"":"// Invariant: at 1x the scene's pass draws over the pre-pass's depth with an equal test\n\t@invariant "}@builtin(position) position: vec4f,\n\t// Centroid, as an edge pixel's centre can lie past its face and packs floor this to find the block\n\t@location(0) @interpolate(perspective, centroid) vPositionW: vec3f,\n\t@location(1) vNormalW: vec3f,\n\t@location(2) vColor: vec3f,\n\t@location(3) vFogDistance: vec3f,\n\t${kk.resting?"":"@location(4) @interpolate(flat) vVisibility: f32,"}\n\t${tk?"@location(5) vTerrainLambert: f32,":""}\n\t${Bk?"@location(6) @interpolate(perspective, centroid) vMainUV1: vec2f,":""}\n\t${Rk?"@location(7) texAtlasIndex: f32,":""}\n\t${kk.lighting?"@location(8) vLightLevels: vec4f,":""}\n\t${ak?"@location(9) @interpolate(flat) vBlockFlags: u32,":""}\n\t${ak&&Rk?"@location(10) @interpolate(flat) vPackTexture: u32,":""}\n}\n\n${kk.resting?"":(0,OF.p)(dR)}\n${WR}\n\n@vertex\nfn mainVertex(${wk.parameter}) -> Varyings {\n\t${wk.decode}\n\tvar vertexOutputs: Varyings;\n\tlet chunk = chunks[vertexInputs.chunkSlot];\n\t${ak?`vertexOutputs.vBlockFlags = ((vertexInputs.blockFlagWords.x >> 24u) << 8u) | (vertexInputs.blockFlagWords.y >> 24u) | ${dF.b.placed}u;`:""}\n\t${ak&&Rk?ZB("vertexInputs.texAtlasIndices").trim():""}\n\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n\tvertexOutputs.vColor = vertexInputs.color.rgb;\n\tvertexOutputs.vFogDistance = (scene.view * worldPos).xyz;\n\t${kk.resting?"":"vertexOutputs.vVisibility = chunk.visibility;"}\n\t${Bk?"vertexOutputs.vMainUV1 = vertexInputs.uv;":""}\n\t${Rk?function(kk){return kk?NR("vertexInputs.texAtlasIndices","vertexOutputs.texAtlasIndex = "):"vertexOutputs.texAtlasIndex = vertexInputs.texAtlasIndices;"}(kk.animated):""}\n\t${"single"===kk.texture&&kk.animated?"\n\tlet frameTick = floor(material.anim.x / material.anim.z);\n\tlet animTexIndex = frameTick - material.anim.y * floor(frameTick / material.anim.y);\n\tvertexOutputs.vMainUV1.y = (vertexOutputs.vMainUV1.y + animTexIndex) / material.anim.y;\n":""}\n\t${(0,OF.U)(dR)}\n\t${(0,OF.B)(dR,kk.dirLightCount)}\n\treturn vertexOutputs;\n}\n\n@fragment\nfn mainFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${kk.resting?"":mR}\n\tvar baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${Rk?HR(kk):""}\n\t${"single"===kk.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${Bk?"alpha *= baseColor.a;\n\tbaseColor = vec4f(baseColor.rgb * material.emissiveAndLevel.w, baseColor.a);":""}\n\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n\t${kk.alphaTest?"if (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}\n\talpha = 1.0;":""}\n\tvar diffuseBase = vec3f(0.0);\n\t${tk?"diffuseBase += vec3f(fragmentInputs.vTerrainLambert);":""}\n\tlet ambient = material.ambientAndCutoff.xyz * uniforms.sceneAmbient;\n\tlet finalDiffuse = clamp(diffuseBase * material.vDiffuseColor.rgb + material.emissiveAndLevel.xyz + ambient, vec3f(0.0), vec3f(1.0)) * baseColor.rgb;\n\t// Nothing past here changes alpha: light, fog and a pack's light hook keep it\n\tvar color = vec4f(finalDiffuse, select(alpha, 1.0, ${jk}));\n\t${sR(kk)?(0,OF.bb)(Lk.e.WGSL):(0,OF.N)(dR)}\n\tcolor = vec4f(max(color.rgb, vec3f(0.0)), color.a);\n\tlet fog = calcFogFactor(fragmentInputs.vFogDistance);\n\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n\treturn color;\n}\n`,
-          sk = new Set;
-        kk.lighting && sk.add("BLOXD_LIGHTING");
-        tk && sk.add("BLOXD_TERRAIN_DIRECTIONAL");
-        return YF(dk, new Map([...sk].map((kk => [kk, !0]))))
-      }(kk, Bk);
-      if (!sR(kk)) return Rk;
-      const tk = wR(kk, Rk, NR, Fk, Bk);
-      return "none" === Bk ? tk : `${tk}${function(kk){const Fk="none"!==kk.texture&&kk.alphaTest;return`\n@fragment\nfn prepassFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${kk.resting?"":mR}\n\t${kk.alphaTest?`var baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${Fk&&"atlas"===kk.texture?HR(kk):""}\n\t${Fk&&"single"===kk.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${Fk?"alpha *= baseColor.a;":""}\n\tif (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}`:""}\n\tlet emissive = (fragmentInputs.vBlockFlags & ${dF.b.emissive}u) != 0u;\n\treturn vec4f(normalize(fragmentInputs.vNormalW) * 0.5 + 0.5, select(0.0, 1.0, emissive));\n}\n`}(kk)}`
+          }(bb),
+          Hb = `\n${ek}\n${lk}\n${Qk}\n@group(1) @binding(0) var<uniform> uniforms: TerrainFrameUniforms;\n/** Per chunk part, indexed by the draw's first instance (TERRAIN_CHUNK_SLOT_WORDS words). */\nstruct TerrainChunk {\n\t/** Into the render frame. */\n\ttranslation: vec3f,\n\t/** The fade-in. */\n\tvisibility: f32,\n\t/** Quad records only: where the part's faces end in its page, in records, and how many it has. */\n\tfaceEnd: u32,\n\tfaceCount: u32,\n}\n@group(1) @binding(1) var<storage, read> chunks: array<TerrainChunk>;\n${Ub}\n${vb}\n${Ib.declarations}\nstruct Varyings {\n\t${"none"===cb?"":"// Invariant: at 1x the scene's pass draws over the pre-pass's depth with an equal test\n\t@invariant "}@builtin(position) position: vec4f,\n\t// Centroid, as an edge pixel's centre can lie past its face and packs floor this to find the block\n\t@location(0) @interpolate(perspective, centroid) vPositionW: vec3f,\n\t@location(1) vNormalW: vec3f,\n\t@location(2) vColor: vec3f,\n\t@location(3) vFogDistance: vec3f,\n\t${bb.resting?"":"@location(4) @interpolate(flat) vVisibility: f32,"}\n\t${Wb?"@location(5) vTerrainLambert: f32,":""}\n\t${sb?"@location(6) @interpolate(perspective, centroid) vMainUV1: vec2f,":""}\n\t${kb?"@location(7) texAtlasIndex: f32,":""}\n\t${bb.lighting?"@location(8) vLightLevels: vec4f,":""}\n\t${ab?"@location(9) @interpolate(flat) vBlockFlags: u32,":""}\n\t${ab&&kb?"@location(10) @interpolate(flat) vPackTexture: u32,":""}\n}\n\n${bb.resting?"":(0,Yc.m)(fk)}\n${Nk}\n\n@vertex\nfn mainVertex(${Ib.parameter}) -> Varyings {\n\t${Ib.decode}\n\tvar vertexOutputs: Varyings;\n\tlet chunk = chunks[vertexInputs.chunkSlot];\n\t${ab?`vertexOutputs.vBlockFlags = ((vertexInputs.blockFlagWords.x >> 24u) << 8u) | (vertexInputs.blockFlagWords.y >> 24u) | ${Ic.b.placed}u;`:""}\n\t${ab&&kb?rs("vertexInputs.texAtlasIndices").trim():""}\n\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n\tvertexOutputs.vColor = vertexInputs.color.rgb;\n\tvertexOutputs.vFogDistance = (scene.view * worldPos).xyz;\n\t${bb.resting?"":"vertexOutputs.vVisibility = chunk.visibility;"}\n\t${sb?"vertexOutputs.vMainUV1 = vertexInputs.uv;":""}\n\t${kb?function(bb){return bb?tk("vertexInputs.texAtlasIndices","vertexOutputs.texAtlasIndex = "):"vertexOutputs.texAtlasIndex = vertexInputs.texAtlasIndices;"}(bb.animated):""}\n\t${"single"===bb.texture&&bb.animated?"\n\tlet frameTick = floor(material.anim.x / material.anim.z);\n\tlet animTexIndex = frameTick - material.anim.y * floor(frameTick / material.anim.y);\n\tvertexOutputs.vMainUV1.y = (vertexOutputs.vMainUV1.y + animTexIndex) / material.anim.y;\n":""}\n\t${(0,Yc.$)(fk)}\n\t${(0,Yc.F)(fk,bb.dirLightCount)}\n\treturn vertexOutputs;\n}\n\n@fragment\nfn mainFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${bb.resting?"":Ck}\n\tvar baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${kb?yk(bb):""}\n\t${"single"===bb.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${sb?"alpha *= baseColor.a;\n\tbaseColor = vec4f(baseColor.rgb * material.emissiveAndLevel.w, baseColor.a);":""}\n\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n\t${bb.alphaTest?"if (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}\n\talpha = 1.0;":""}\n\tvar diffuseBase = vec3f(0.0);\n\t${Wb?"diffuseBase += vec3f(fragmentInputs.vTerrainLambert);":""}\n\tlet ambient = material.ambientAndCutoff.xyz * uniforms.sceneAmbient;\n\tlet finalDiffuse = clamp(diffuseBase * material.vDiffuseColor.rgb + material.emissiveAndLevel.xyz + ambient, vec3f(0.0), vec3f(1.0)) * baseColor.rgb;\n\t// Nothing past here changes alpha: light, fog and a pack's light hook keep it\n\tvar color = vec4f(finalDiffuse, select(alpha, 1.0, ${Rb}));\n\t${Mk(bb)?(0,Yc.db)(ub.e.WGSL):(0,Yc.U)(fk)}\n\tcolor = vec4f(max(color.rgb, vec3f(0.0)), color.a);\n\tlet fog = calcFogFactor(fragmentInputs.vFogDistance);\n\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n\treturn color;\n}\n`,
+          fb = new Set;
+        bb.lighting && fb.add("BLOXD_LIGHTING");
+        Wb && fb.add("BLOXD_TERRAIN_DIRECTIONAL");
+        return Vc(Hb, new Map([...fb].map((bb => [bb, !0]))))
+      }(bb, sb);
+      if (!Mk(bb)) return kb;
+      const Wb = Hk(bb, kb, tk, cb, sb);
+      return "none" === sb ? Wb : `${Wb}${function(bb){const cb="none"!==bb.texture&&bb.alphaTest;return`\n@fragment\nfn prepassFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${bb.resting?"":Ck}\n\t${bb.alphaTest?`var baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${cb&&"atlas"===bb.texture?yk(bb):""}\n\t${cb&&"single"===bb.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${cb?"alpha *= baseColor.a;":""}\n\tif (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}`:""}\n\tlet emissive = (fragmentInputs.vBlockFlags & ${Ic.b.emissive}u) != 0u;\n\treturn vec4f(normalize(fragmentInputs.vNormalW) * 0.5 + 0.5, select(0.0, 1.0, emissive));\n}\n`}(bb)}`
     }
-    const gR = new Map([
+    const Ek = new Map([
       ["float", {
         wgsl: "f32",
         align: 1,
@@ -1442,40 +1442,40 @@ export const modules = {
       }]
     ]);
 
-    function UR(kk, Fk) {
-      const Bk = new Map;
-      let Rk = 0;
-      const tk = [],
-        ak = [],
-        Xk = [];
-      for (const dk of Fk) {
-        var bk, wk;
-        const Fk = null !== (bk = dk.type.trim().split(/\s+/).pop()) && void 0 !== bk ? bk : dk.type,
-          sk = gR.get(Fk);
-        if (!sk) throw new Error(`Lite: no uniform layout for ${dk.name}: ${dk.type}`);
-        const Vk = null !== (wk = dk.arraySize) && void 0 !== wk ? wk : 0,
-          Jk = Vk ? 4 : sk.align;
-        Rk = Math.ceil(Rk / Jk) * Jk;
-        const Ak = Vk ? 4 * Math.ceil(sk.floats / 4) : sk.floats;
-        if (Bk.set(dk.name, {
-            offset: Rk,
-            floats: sk.floats,
-            arraySize: Vk,
-            stride: Ak
-          }), Vk && sk.floats <= 2) {
-          const Fk = `${kk}_${Xk.length}_strided`;
-          ak.push(`struct ${Fk} {\n\t@size(16) el: ${sk.wgsl},\n}`), Xk.push(dk.name), tk.push(`\t@align(16) ${dk.name}: array<${Fk}, ${Vk}>,`)
-        } else Vk ? tk.push(`\t@align(16) ${dk.name}: array<${sk.wgsl}, ${Vk}>,`) : tk.push(`\t${dk.name}: ${sk.wgsl},`);
-        Rk += Vk ? Ak * Vk : sk.floats
+    function ik(bb, cb) {
+      const sb = new Map;
+      let kb = 0;
+      const Wb = [],
+        ab = [],
+        Tb = [];
+      for (const Hb of cb) {
+        var Ub, Ib;
+        const cb = null !== (Ub = Hb.type.trim().split(/\s+/).pop()) && void 0 !== Ub ? Ub : Hb.type,
+          fb = Ek.get(cb);
+        if (!fb) throw new Error(`Lite: no uniform layout for ${Hb.name}: ${Hb.type}`);
+        const Mb = null !== (Ib = Hb.arraySize) && void 0 !== Ib ? Ib : 0,
+          Xb = Mb ? 4 : fb.align;
+        kb = Math.ceil(kb / Xb) * Xb;
+        const nb = Mb ? 4 * Math.ceil(fb.floats / 4) : fb.floats;
+        if (sb.set(Hb.name, {
+            offset: kb,
+            floats: fb.floats,
+            arraySize: Mb,
+            stride: nb
+          }), Mb && fb.floats <= 2) {
+          const cb = `${bb}_${Tb.length}_strided`;
+          ab.push(`struct ${cb} {\n\t@size(16) el: ${fb.wgsl},\n}`), Tb.push(Hb.name), Wb.push(`\t@align(16) ${Hb.name}: array<${cb}, ${Mb}>,`)
+        } else Mb ? Wb.push(`\t@align(16) ${Hb.name}: array<${fb.wgsl}, ${Mb}>,`) : Wb.push(`\t${Hb.name}: ${fb.wgsl},`);
+        kb += Mb ? nb * Mb : fb.floats
       }
       return {
-        slots: Bk,
-        floats: Math.max(4, 4 * Math.ceil(Rk / 4)),
-        wgsl: `${ak.join("\n")}\nstruct ${kk} {\n${tk.join("\n")}\n}\n`,
-        stridedArrays: Xk
+        slots: sb,
+        floats: Math.max(4, 4 * Math.ceil(kb / 4)),
+        wgsl: `${ab.join("\n")}\nstruct ${bb} {\n${Wb.join("\n")}\n}\n`,
+        stridedArrays: Tb
       }
     }
-    const cR = [{
+    const Ok = [{
         name: "vDiffuseColor",
         type: "vec4"
       }, {
@@ -1503,14 +1503,14 @@ export const modules = {
         name: "reflectionMatrix",
         type: "mat4"
       }],
-      GR = [{
+      Gk = [{
         name: "vOpacityInfos",
         type: "vec2"
       }, {
         name: "opacityMatrix",
         type: "mat4"
       }],
-      TR = [{
+      Kk = [{
         name: "vEmissiveInfos",
         type: "vec2"
       }, {
@@ -1518,18 +1518,18 @@ export const modules = {
         type: "mat4"
       }];
 
-    function rR(kk, Fk) {
-      return `#if defined(${kk}) && ${kk}DIRECTUV == 0\nvarying v${Fk}UV: vec2f;\n#endif`
+    function Zk(bb, cb) {
+      return `#if defined(${bb}) && ${bb}DIRECTUV == 0\nvarying v${cb}UV: vec2f;\n#endif`
     }
 
-    function DR(kk, Fk, Bk) {
-      return `#if defined(${kk}) && ${kk}DIRECTUV == 0\nif (uniforms.v${Fk}Infos.x==0.)\n{vertexOutputs.v${Fk}UV= (uniforms.${Bk}Matrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.v${Fk}UV= (uniforms.${Bk}Matrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif`
+    function zk(bb, cb, sb) {
+      return `#if defined(${bb}) && ${bb}DIRECTUV == 0\nif (uniforms.v${cb}Infos.x==0.)\n{vertexOutputs.v${cb}UV= (uniforms.${sb}Matrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.v${cb}UV= (uniforms.${sb}Matrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif`
     }
 
-    function zR(kk, Fk, Bk) {
-      return `#ifdef ${kk}\n#if ${kk}DIRECTUV == 1\n#define v${Fk}UV vMainUV1\n#elif ${kk}DIRECTUV == 2\n#define v${Fk}UV vMainUV2\n#else\nvarying v${Fk}UV: vec2f;\n#endif\nvar ${Bk}SamplerSampler: sampler;\nvar ${Bk}Sampler: texture_2d<f32>;\n#endif`
+    function qk(bb, cb, sb) {
+      return `#ifdef ${bb}\n#if ${bb}DIRECTUV == 1\n#define v${cb}UV vMainUV1\n#elif ${bb}DIRECTUV == 2\n#define v${cb}UV vMainUV2\n#else\nvarying v${cb}UV: vec2f;\n#endif\nvar ${sb}SamplerSampler: sampler;\nvar ${sb}Sampler: texture_2d<f32>;\n#endif`
     }
-    const PR = {
+    const dk = {
         lights: 0,
         lightStride: 12,
         fogInfos: 96,
@@ -1538,90 +1538,90 @@ export const modules = {
         animTick: 104,
         timeMs: 105
       },
-      hR = 256,
-      qR = "\nstruct LiteLight {\n\tvLightData: vec4f,\n\tvLightDiffuse: vec4f,\n\tvLightSpecular: vec4f,\n}\nstruct LiteFrameUniforms {\n\tlights: array<LiteLight, 8>,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tanimTick: f32,\n\ttimeMs: f32,\n}\n@group(1) @binding(0) var<uniform> frame: LiteFrameUniforms;\nstruct Mesh {\n\tworld: mat4x4f,\n\tvisibility: f32,\n}\n@group(1) @binding(1) var<uniform> mesh: Mesh;\nstruct Internals {\n\tyFactor_: f32,\n\ttextureOutputHeight_: f32,\n}\nconst internals = Internals(1.0, 0.0);\n",
-      CR = "#ifdef INSTANCES\nattribute world0: vec4f;\nattribute world1: vec4f;\nattribute world2: vec4f;\nattribute world3: vec4f;\n#ifdef INSTANCESCOLOR\nattribute instanceColor: vec4f;\n#endif\n#endif",
-      ZR = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#ifdef THIN_INSTANCES\nfinalWorld=mesh.world*finalWorld;\n#endif\n#else\nvar finalWorld=mesh.world;\n#endif",
-      pR = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif",
-      KR = "#ifdef LITE_FRONT_LAYER\nvertexOutputs.position=liteFrontLayer(vertexOutputs.position);\n#else\nvertexOutputs.position=liteWorldLayer(vertexOutputs.position);\n#endif\nreturn vertexOutputs;",
-      xR = "#ifdef FOG\nfn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;\nvar fogStart: f32=frame.vFogInfos.y;\nvar fogEnd: f32=frame.vFogInfos.z;\nvar fogDensity: f32=frame.vFogInfos.w;\nvar fogDistance: f32=length(fragmentInputs.vFogDistance);\nif (3.==frame.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);\n}\nelse if (1.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDensity);\n}\nelse if (2.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDistance*fogDensity*fogDensity);\n}\nreturn clamp(fogCoeff,0.0,1.0);\n}\n#endif",
-      jR = "const LinearEncodePowerApprox: f32=2.2;\nconst GammaEncodePowerApprox: f32=1.0/LinearEncodePowerApprox;\nfn inverseMat3(inMatrix: mat3x3f)->mat3x3f {let a00: f32=inMatrix[0][0];let a01: f32=inMatrix[0][1];let a02: f32=inMatrix[0][2];let a10: f32=inMatrix[1][0];let a11: f32=inMatrix[1][1];let a12: f32=inMatrix[1][2];let a20: f32=inMatrix[2][0];let a21: f32=inMatrix[2][1];let a22: f32=inMatrix[2][2];let b01: f32=a22*a11-a12*a21;let b11: f32=-a22*a10+a12*a20;let b21: f32=a21*a10-a11*a20;let det: f32=a00*b01+a01*b11+a02*b21;return mat3x3f(b01/det,(-a22*a01+a02*a21)/det,(a12*a01-a02*a11)/det,\nb11/det,(a22*a00-a02*a20)/det,(-a12*a00+a02*a10)/det,\nb21/det,(-a21*a00+a01*a20)/det,(a11*a00-a01*a10)/det);}\nfn toLinearSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(LinearEncodePowerApprox));}\nfn toGammaSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(GammaEncodePowerApprox));}\nfn fromRGBD(rgbd: vec4<f32>)->vec3f {let rgb=toLinearSpaceVec3(rgbd.rgb);return rgb/rgbd.a;}",
-      lR = `\nattribute position: vec3f;\n#ifdef NORMAL\nattribute normal: vec3f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#ifdef UV2\nattribute uv2: vec2f;\n#endif\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${CR}\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nvarying vDiffuseUV: vec2f;\n#endif\n${rR("OPACITY","Opacity")}\n${rR("EMISSIVE","Emissive")}\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\n${jR}\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvar positionUpdated: vec3f=vertexInputs.position;\n#ifdef NORMAL\nvar normalUpdated: vec3f=vertexInputs.normal;\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvertexOutputs.vPositionUVW=positionUpdated;\n#endif\n#define CUSTOM_VERTEX_UPDATE_POSITION\n#define CUSTOM_VERTEX_UPDATE_NORMAL\n${ZR}\nvar worldPos: vec4f=finalWorld*vec4f(positionUpdated,1.0);\n#ifdef NORMAL\nvar normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);\n#if defined(INSTANCES) && defined(THIN_INSTANCES)\nvertexOutputs.vNormalW=normalUpdated/ vec3f(dot(normalWorld[0],normalWorld[0]),dot(normalWorld[1],normalWorld[1]),dot(normalWorld[2],normalWorld[2]));vertexOutputs.vNormalW=normalize(normalWorld*vertexOutputs.vNormalW);\n#else\n#ifdef NONUNIFORMSCALING\nnormalWorld=transpose(inverseMat3(normalWorld));\n#endif\nvertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#endif\n#endif\n#define CUSTOM_VERTEX_UPDATE_WORLDPOS\nvertexOutputs.position=scene.viewProjection*worldPos;\nvertexOutputs.vPositionW= worldPos.xyz;\n#ifndef UV1\nvar uvUpdated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV1\nvertexOutputs.vMainUV1=uvUpdated;\n#endif\n#ifndef UV2\nvar uv2Updated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV2\nvertexOutputs.vMainUV2=uv2Updated;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nif (uniforms.vDiffuseInfos.x==0.)\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif\n${DR("OPACITY","Opacity","opacity")}\n${DR("EMISSIVE","Emissive","emissive")}\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${pR}\n#define CUSTOM_VERTEX_MAIN_END\n${KR}\n}\n`;
-    const nR = `\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef DIFFUSE\n#if DIFFUSEDIRECTUV == 1\n#define vDiffuseUV vMainUV1\n#elif DIFFUSEDIRECTUV == 2\n#define vDiffuseUV vMainUV2\n#else\nvarying vDiffuseUV: vec2f;\n#endif\nvar diffuseSamplerSampler: sampler;\nvar diffuseSampler: texture_2d<f32>;\n#endif\n${zR("OPACITY","Opacity","opacity")}\n${zR("EMISSIVE","Emissive","emissive")}\nstruct lightingInfo\n{diffuse: vec3f,\n};\nfn computeLighting(viewDirectionW: vec3f,vNormal: vec3f,lightData: vec4f,diffuseColor: vec3f,specularColor: vec3f,range: f32,glossiness: f32)->lightingInfo {var result: lightingInfo;\nvar lightVectorW: vec3f;\nvar attenuation: f32=1.0;\nif (lightData.w==0.)\n{var direction: vec3f=lightData.xyz-fragmentInputs.vPositionW;\nattenuation=max(0.,1.0-length(direction)/range);\nlightVectorW=normalize(direction);\n}\nelse\n{lightVectorW=normalize(-lightData.xyz);\n}\nvar ndl: f32=max(0.,dot(vNormal,lightVectorW));\nresult.diffuse=ndl*diffuseColor*attenuation;\nreturn result;\n}\nfn TEXRD(t: texture_2d<f32>,ts: sampler,uv: vec2f)->vec4f {return textureSample(t,ts,uv);\n}\n#ifdef REFLECTION\nvar reflectionCubeSamplerSampler: sampler;var reflectionCubeSampler: texture_cube<f32>;\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\nfn computeSkyBoxCoords(positionW: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{return (reflectionMatrix* vec4f(positionW,1.)).xyz;}\nfn computeReflectionCoords(worldPos: vec4f,worldNormal: vec3f)->vec3f\n{\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(fragmentInputs.vPositionUVW,uniforms.reflectionMatrix);\n#else\nreturn vec3f(0.);\n#endif\n}\n#endif\n${jR}\n${xR}\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\nvar viewDirectionW: vec3f=normalize(scene.vEyePosition.xyz-fragmentInputs.vPositionW);var baseColor: vec4f= vec4f(1.,1.,1.,1.);var diffuseColor: vec3f=uniforms.vDiffuseColor.rgb;var alpha: f32=uniforms.vDiffuseColor.a;\n#ifdef NORMAL\nvar normalW: vec3f=normalize(fragmentInputs.vNormalW);\n#else\nvar normalW: vec3f=normalize(cross(dpdx(fragmentInputs.vPositionW),dpdy(fragmentInputs.vPositionW)));\nnormalW=select(-normalW,normalW,dot(normalW,viewDirectionW)>=0.0);\n#endif\n#ifdef TWOSIDEDLIGHTING\nnormalW=select(-normalW,normalW,fragmentInputs.frontFacing);\n#endif\nvar uvOffset: vec2f= vec2f(0.0,0.0);\n#ifdef DIFFUSE\nbaseColor=TEXRD(diffuseSampler,diffuseSamplerSampler,fragmentInputs.vDiffuseUV+uvOffset);\n#if defined(ALPHATEST) && !defined(ALPHATEST_AFTERALLALPHACOMPUTATIONS)\nif (baseColor.a<uniforms.alphaCutOff) {discard;}\n#endif\n#ifdef ALPHAFROMDIFFUSE\nalpha*=baseColor.a;\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_ALPHA\nbaseColor=vec4f(baseColor.rgb*uniforms.vDiffuseInfos.y,baseColor.a);\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nbaseColor=vec4f(baseColor.rgb*fragmentInputs.vColor.rgb,baseColor.a);\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_DIFFUSE\nvar baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n#define CUSTOM_FRAGMENT_BEFORE_LIGHTS\nvar glossiness: f32=uniforms.vSpecularColor.a;var specularColor: vec3f=uniforms.vSpecularColor.rgb;\nvar diffuseBase: vec3f= vec3f(0.,0.,0.);var info: lightingInfo;\nvar shadow: f32=1.;var aggShadow: f32=0.;var numLights: f32=0.;\n${Array.from({length:4},((kk,Fk)=>function(kk){const Fk=`
+      Ak = 256,
+      wk = "\nstruct LiteLight {\n\tvLightData: vec4f,\n\tvLightDiffuse: vec4f,\n\tvLightSpecular: vec4f,\n}\nstruct LiteFrameUniforms {\n\tlights: array<LiteLight, 8>,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tanimTick: f32,\n\ttimeMs: f32,\n}\n@group(1) @binding(0) var<uniform> frame: LiteFrameUniforms;\nstruct Mesh {\n\tworld: mat4x4f,\n\tvisibility: f32,\n}\n@group(1) @binding(1) var<uniform> mesh: Mesh;\nstruct Internals {\n\tyFactor_: f32,\n\ttextureOutputHeight_: f32,\n}\nconst internals = Internals(1.0, 0.0);\n",
+      rk = "#ifdef INSTANCES\nattribute world0: vec4f;\nattribute world1: vec4f;\nattribute world2: vec4f;\nattribute world3: vec4f;\n#ifdef INSTANCESCOLOR\nattribute instanceColor: vec4f;\n#endif\n#endif",
+      Sk = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#ifdef THIN_INSTANCES\nfinalWorld=mesh.world*finalWorld;\n#endif\n#else\nvar finalWorld=mesh.world;\n#endif",
+      Rk = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif",
+      vk = "#ifdef LITE_FRONT_LAYER\nvertexOutputs.position=liteFrontLayer(vertexOutputs.position);\n#else\nvertexOutputs.position=liteWorldLayer(vertexOutputs.position);\n#endif\nreturn vertexOutputs;",
+      Fk = "#ifdef FOG\nfn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;\nvar fogStart: f32=frame.vFogInfos.y;\nvar fogEnd: f32=frame.vFogInfos.z;\nvar fogDensity: f32=frame.vFogInfos.w;\nvar fogDistance: f32=length(fragmentInputs.vFogDistance);\nif (3.==frame.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);\n}\nelse if (1.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDensity);\n}\nelse if (2.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDistance*fogDensity*fogDensity);\n}\nreturn clamp(fogCoeff,0.0,1.0);\n}\n#endif",
+      xk = "const LinearEncodePowerApprox: f32=2.2;\nconst GammaEncodePowerApprox: f32=1.0/LinearEncodePowerApprox;\nfn inverseMat3(inMatrix: mat3x3f)->mat3x3f {let a00: f32=inMatrix[0][0];let a01: f32=inMatrix[0][1];let a02: f32=inMatrix[0][2];let a10: f32=inMatrix[1][0];let a11: f32=inMatrix[1][1];let a12: f32=inMatrix[1][2];let a20: f32=inMatrix[2][0];let a21: f32=inMatrix[2][1];let a22: f32=inMatrix[2][2];let b01: f32=a22*a11-a12*a21;let b11: f32=-a22*a10+a12*a20;let b21: f32=a21*a10-a11*a20;let det: f32=a00*b01+a01*b11+a02*b21;return mat3x3f(b01/det,(-a22*a01+a02*a21)/det,(a12*a01-a02*a11)/det,\nb11/det,(a22*a00-a02*a20)/det,(-a12*a00+a02*a10)/det,\nb21/det,(-a21*a00+a01*a20)/det,(a11*a00-a01*a10)/det);}\nfn toLinearSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(LinearEncodePowerApprox));}\nfn toGammaSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(GammaEncodePowerApprox));}\nfn fromRGBD(rgbd: vec4<f32>)->vec3f {let rgb=toLinearSpaceVec3(rgbd.rgb);return rgb/rgbd.a;}",
+      jk = `\nattribute position: vec3f;\n#ifdef NORMAL\nattribute normal: vec3f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#ifdef UV2\nattribute uv2: vec2f;\n#endif\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${rk}\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nvarying vDiffuseUV: vec2f;\n#endif\n${Zk("OPACITY","Opacity")}\n${Zk("EMISSIVE","Emissive")}\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\n${xk}\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvar positionUpdated: vec3f=vertexInputs.position;\n#ifdef NORMAL\nvar normalUpdated: vec3f=vertexInputs.normal;\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvertexOutputs.vPositionUVW=positionUpdated;\n#endif\n#define CUSTOM_VERTEX_UPDATE_POSITION\n#define CUSTOM_VERTEX_UPDATE_NORMAL\n${Sk}\nvar worldPos: vec4f=finalWorld*vec4f(positionUpdated,1.0);\n#ifdef NORMAL\nvar normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);\n#if defined(INSTANCES) && defined(THIN_INSTANCES)\nvertexOutputs.vNormalW=normalUpdated/ vec3f(dot(normalWorld[0],normalWorld[0]),dot(normalWorld[1],normalWorld[1]),dot(normalWorld[2],normalWorld[2]));vertexOutputs.vNormalW=normalize(normalWorld*vertexOutputs.vNormalW);\n#else\n#ifdef NONUNIFORMSCALING\nnormalWorld=transpose(inverseMat3(normalWorld));\n#endif\nvertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#endif\n#endif\n#define CUSTOM_VERTEX_UPDATE_WORLDPOS\nvertexOutputs.position=scene.viewProjection*worldPos;\nvertexOutputs.vPositionW= worldPos.xyz;\n#ifndef UV1\nvar uvUpdated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV1\nvertexOutputs.vMainUV1=uvUpdated;\n#endif\n#ifndef UV2\nvar uv2Updated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV2\nvertexOutputs.vMainUV2=uv2Updated;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nif (uniforms.vDiffuseInfos.x==0.)\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif\n${zk("OPACITY","Opacity","opacity")}\n${zk("EMISSIVE","Emissive","emissive")}\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${Rk}\n#define CUSTOM_VERTEX_MAIN_END\n${vk}\n}\n`;
+    const pk = `\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef DIFFUSE\n#if DIFFUSEDIRECTUV == 1\n#define vDiffuseUV vMainUV1\n#elif DIFFUSEDIRECTUV == 2\n#define vDiffuseUV vMainUV2\n#else\nvarying vDiffuseUV: vec2f;\n#endif\nvar diffuseSamplerSampler: sampler;\nvar diffuseSampler: texture_2d<f32>;\n#endif\n${qk("OPACITY","Opacity","opacity")}\n${qk("EMISSIVE","Emissive","emissive")}\nstruct lightingInfo\n{diffuse: vec3f,\n};\nfn computeLighting(viewDirectionW: vec3f,vNormal: vec3f,lightData: vec4f,diffuseColor: vec3f,specularColor: vec3f,range: f32,glossiness: f32)->lightingInfo {var result: lightingInfo;\nvar lightVectorW: vec3f;\nvar attenuation: f32=1.0;\nif (lightData.w==0.)\n{var direction: vec3f=lightData.xyz-fragmentInputs.vPositionW;\nattenuation=max(0.,1.0-length(direction)/range);\nlightVectorW=normalize(direction);\n}\nelse\n{lightVectorW=normalize(-lightData.xyz);\n}\nvar ndl: f32=max(0.,dot(vNormal,lightVectorW));\nresult.diffuse=ndl*diffuseColor*attenuation;\nreturn result;\n}\nfn TEXRD(t: texture_2d<f32>,ts: sampler,uv: vec2f)->vec4f {return textureSample(t,ts,uv);\n}\n#ifdef REFLECTION\nvar reflectionCubeSamplerSampler: sampler;var reflectionCubeSampler: texture_cube<f32>;\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\nfn computeSkyBoxCoords(positionW: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{return (reflectionMatrix* vec4f(positionW,1.)).xyz;}\nfn computeReflectionCoords(worldPos: vec4f,worldNormal: vec3f)->vec3f\n{\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(fragmentInputs.vPositionUVW,uniforms.reflectionMatrix);\n#else\nreturn vec3f(0.);\n#endif\n}\n#endif\n${xk}\n${Fk}\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\nvar viewDirectionW: vec3f=normalize(scene.vEyePosition.xyz-fragmentInputs.vPositionW);var baseColor: vec4f= vec4f(1.,1.,1.,1.);var diffuseColor: vec3f=uniforms.vDiffuseColor.rgb;var alpha: f32=uniforms.vDiffuseColor.a;\n#ifdef NORMAL\nvar normalW: vec3f=normalize(fragmentInputs.vNormalW);\n#else\nvar normalW: vec3f=normalize(cross(dpdx(fragmentInputs.vPositionW),dpdy(fragmentInputs.vPositionW)));\nnormalW=select(-normalW,normalW,dot(normalW,viewDirectionW)>=0.0);\n#endif\n#ifdef TWOSIDEDLIGHTING\nnormalW=select(-normalW,normalW,fragmentInputs.frontFacing);\n#endif\nvar uvOffset: vec2f= vec2f(0.0,0.0);\n#ifdef DIFFUSE\nbaseColor=TEXRD(diffuseSampler,diffuseSamplerSampler,fragmentInputs.vDiffuseUV+uvOffset);\n#if defined(ALPHATEST) && !defined(ALPHATEST_AFTERALLALPHACOMPUTATIONS)\nif (baseColor.a<uniforms.alphaCutOff) {discard;}\n#endif\n#ifdef ALPHAFROMDIFFUSE\nalpha*=baseColor.a;\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_ALPHA\nbaseColor=vec4f(baseColor.rgb*uniforms.vDiffuseInfos.y,baseColor.a);\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nbaseColor=vec4f(baseColor.rgb*fragmentInputs.vColor.rgb,baseColor.a);\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_DIFFUSE\nvar baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n#define CUSTOM_FRAGMENT_BEFORE_LIGHTS\nvar glossiness: f32=uniforms.vSpecularColor.a;var specularColor: vec3f=uniforms.vSpecularColor.rgb;\nvar diffuseBase: vec3f= vec3f(0.,0.,0.);var info: lightingInfo;\nvar shadow: f32=1.;var aggShadow: f32=0.;var numLights: f32=0.;\n${Array.from({length:4},((bb,cb)=>function(bb){const cb=`
     frame.lights[LITE_LIGHT$ {
-        kk
+        bb
       }
       _SLOT] `;return`
     #ifdef LIGHT$ {
-      kk
+      bb
     }\
     nvar diffuse$ {
-      kk
+      bb
     }: vec4f = $ {
-      Fk
+      cb
     }.vLightDiffuse;\
     n #define CUSTOM_LIGHT$ {
-      kk
+      bb
     }
     _COLOR\ ninfo = computeLighting(viewDirectionW, normalW, $ {
-      Fk
+      cb
     }.vLightData, diffuse$ {
-      kk
+      bb
     }.rgb, $ {
-      Fk
+      cb
     }.vLightSpecular.rgb, diffuse$ {
-      kk
+      bb
     }.a, glossiness);\
     nshadow = 1.;\
     naggShadow += shadow;\
     nnumLights += 1.0;\
     ndiffuseBase += info.diffuse * shadow;\
-    n #endif`}(Fk))).join("\n")}\naggShadow=aggShadow/numLights;var refractionColor: vec4f= vec4f(0.,0.,0.,1.);\nvar reflectionColor: vec4f= vec4f(0.,0.,0.,1.);\n#ifdef REFLECTION\nvar vReflectionUVW: vec3f=computeReflectionCoords( vec4f(fragmentInputs.vPositionW,1.0),normalW);\n#ifdef REFLECTIONMAP_OPPOSITEZ\nvReflectionUVW=vec3f(vReflectionUVW.x,vReflectionUVW.y,vReflectionUVW.z*-1.0);\n#endif\n#ifdef ROUGHNESS\nvar bias: f32=uniforms.vReflectionInfos.y;\nreflectionColor=textureSampleLevel(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW,bias);\n#else\nreflectionColor=textureSample(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW);\n#endif\n#ifdef LITE_REFLECTION_LUMINANCE\nreflectionColor=vec4f(reflectionColor.rrr,1.0);\n#endif\n#ifdef RGBDREFLECTION\nreflectionColor=vec4f(fromRGBD(reflectionColor),reflectionColor.a);\n#endif\n#ifdef IS_REFLECTION_LINEAR\nreflectionColor=vec4f(toGammaSpaceVec3(reflectionColor.rgb),reflectionColor.a);\n#endif\nreflectionColor=vec4f(reflectionColor.rgb*uniforms.vReflectionInfos.x,reflectionColor.a);\n#endif\n#ifdef OPACITY\nvar opacityMap: vec4f=TEXRD(opacitySampler,opacitySamplerSampler,fragmentInputs.vOpacityUV+uvOffset);\n#ifdef OPACITYRGB\nopacityMap=vec4f(opacityMap.rgb* vec3f(0.3,0.59,0.11),opacityMap.a);alpha*=(opacityMap.x+opacityMap.y+opacityMap.z)* uniforms.vOpacityInfos.y;\n#else\nalpha*=opacityMap.a*uniforms.vOpacityInfos.y;\n#endif\n#endif\n#if defined(VERTEXALPHA) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nalpha*=fragmentInputs.vColor.a;\n#endif\n#ifdef ALPHATEST\n#ifdef ALPHATEST_AFTERALLALPHACOMPUTATIONS\nif (alpha<uniforms.alphaCutOff) {discard;}\n#endif\n#ifndef ALPHABLEND\nalpha=1.0;\n#endif\n#endif\nvar emissiveColor: vec3f=uniforms.vEmissiveColor;\n#ifdef EMISSIVE\nemissiveColor+=TEXRD(emissiveSampler,emissiveSamplerSampler,fragmentInputs.vEmissiveUV+uvOffset).rgb*uniforms.vEmissiveInfos.y;\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\n#ifdef LINKEMISSIVEWITHDIFFUSE\nvar finalDiffuse: vec3f=clamp((diffuseBase+emissiveColor)*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+emissiveColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#endif\n#endif\nvar finalSpecular: vec3f= vec3f(0.0);\n#ifdef REFLECTIONOVERALPHA\nalpha=clamp(alpha+dot(reflectionColor.rgb, vec3f(0.3,0.59,0.11)),0.0,1.0);\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar color: vec4f= vec4f(clamp(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+emissiveColor+refractionColor.rgb,vec3f(0.0),vec3f(1.0)),alpha);\n#else\nvar color: vec4f= vec4f(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+refractionColor.rgb,alpha);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FOG\ncolor=vec4f(max(color.rgb,vec3f(0.)),color.a);\n#ifdef FOG\nvar fog: f32=CalcFogFactor();\ncolor= vec4f(mix(frame.vFogColor,color.rgb,fog),color.a);\n#endif\ncolor=vec4f(color.rgb,color.a*mesh.visibility);\n#ifdef PREMULTIPLYALPHA\ncolor=vec4f(color.rgb*color.a, color.a);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FRAGCOLOR\nfragmentOutputs.color=color;\n#define CUSTOM_FRAGMENT_MAIN_END\nreturn fragmentOutputs;\n}\n`, IR = /^([gimus]+)!/, QR = new Set;
+    n #endif`}(cb))).join("\n")}\naggShadow=aggShadow/numLights;var refractionColor: vec4f= vec4f(0.,0.,0.,1.);\nvar reflectionColor: vec4f= vec4f(0.,0.,0.,1.);\n#ifdef REFLECTION\nvar vReflectionUVW: vec3f=computeReflectionCoords( vec4f(fragmentInputs.vPositionW,1.0),normalW);\n#ifdef REFLECTIONMAP_OPPOSITEZ\nvReflectionUVW=vec3f(vReflectionUVW.x,vReflectionUVW.y,vReflectionUVW.z*-1.0);\n#endif\n#ifdef ROUGHNESS\nvar bias: f32=uniforms.vReflectionInfos.y;\nreflectionColor=textureSampleLevel(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW,bias);\n#else\nreflectionColor=textureSample(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW);\n#endif\n#ifdef LITE_REFLECTION_LUMINANCE\nreflectionColor=vec4f(reflectionColor.rrr,1.0);\n#endif\n#ifdef RGBDREFLECTION\nreflectionColor=vec4f(fromRGBD(reflectionColor),reflectionColor.a);\n#endif\n#ifdef IS_REFLECTION_LINEAR\nreflectionColor=vec4f(toGammaSpaceVec3(reflectionColor.rgb),reflectionColor.a);\n#endif\nreflectionColor=vec4f(reflectionColor.rgb*uniforms.vReflectionInfos.x,reflectionColor.a);\n#endif\n#ifdef OPACITY\nvar opacityMap: vec4f=TEXRD(opacitySampler,opacitySamplerSampler,fragmentInputs.vOpacityUV+uvOffset);\n#ifdef OPACITYRGB\nopacityMap=vec4f(opacityMap.rgb* vec3f(0.3,0.59,0.11),opacityMap.a);alpha*=(opacityMap.x+opacityMap.y+opacityMap.z)* uniforms.vOpacityInfos.y;\n#else\nalpha*=opacityMap.a*uniforms.vOpacityInfos.y;\n#endif\n#endif\n#if defined(VERTEXALPHA) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nalpha*=fragmentInputs.vColor.a;\n#endif\n#ifdef ALPHATEST\n#ifdef ALPHATEST_AFTERALLALPHACOMPUTATIONS\nif (alpha<uniforms.alphaCutOff) {discard;}\n#endif\n#ifndef ALPHABLEND\nalpha=1.0;\n#endif\n#endif\nvar emissiveColor: vec3f=uniforms.vEmissiveColor;\n#ifdef EMISSIVE\nemissiveColor+=TEXRD(emissiveSampler,emissiveSamplerSampler,fragmentInputs.vEmissiveUV+uvOffset).rgb*uniforms.vEmissiveInfos.y;\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\n#ifdef LINKEMISSIVEWITHDIFFUSE\nvar finalDiffuse: vec3f=clamp((diffuseBase+emissiveColor)*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+emissiveColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#endif\n#endif\nvar finalSpecular: vec3f= vec3f(0.0);\n#ifdef REFLECTIONOVERALPHA\nalpha=clamp(alpha+dot(reflectionColor.rgb, vec3f(0.3,0.59,0.11)),0.0,1.0);\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar color: vec4f= vec4f(clamp(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+emissiveColor+refractionColor.rgb,vec3f(0.0),vec3f(1.0)),alpha);\n#else\nvar color: vec4f= vec4f(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+refractionColor.rgb,alpha);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FOG\ncolor=vec4f(max(color.rgb,vec3f(0.)),color.a);\n#ifdef FOG\nvar fog: f32=CalcFogFactor();\ncolor= vec4f(mix(frame.vFogColor,color.rgb,fog),color.a);\n#endif\ncolor=vec4f(color.rgb,color.a*mesh.visibility);\n#ifdef PREMULTIPLYALPHA\ncolor=vec4f(color.rgb*color.a, color.a);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FRAGCOLOR\nfragmentOutputs.color=color;\n#define CUSTOM_FRAGMENT_MAIN_END\nreturn fragmentOutputs;\n}\n`, bW = /^([gimus]+)!/, cW = new Set;
 
-    function kt(kk) {
-      QR.has(kk) || (QR.add(kk), console.warn(`Lite: no place for plugin code at ${kk} in the standard shader: it is left out`))
+    function sW(bb) {
+      cW.has(bb) || (cW.add(bb), console.warn(`Lite: no place for plugin code at ${bb} in the standard shader: it is left out`))
     }
 
-    function Ft(kk, Fk) {
-      let Bk = kk;
-      const Rk = new Map;
-      for (const [ak, Xk] of Fk) {
-        var tk;
-        Rk.set(ak, `${null!==(tk=Rk.get(ak))&&void 0!==tk?tk:""}${Xk}\n`)
+    function kW(bb, cb) {
+      let sb = bb;
+      const kb = new Map;
+      for (const [ab, Tb] of cb) {
+        var Wb;
+        kb.set(ab, `${null!==(Wb=kb.get(ab))&&void 0!==Wb?Wb:""}${Tb}\n`)
       }
-      for (const [ak, Xk] of Rk) {
-        if (!ak.startsWith("!")) {
-          const kk = `#define ${ak}`;
-          if (!Bk.includes(kk)) {
-            kt(ak);
+      for (const [ab, Tb] of kb) {
+        if (!ab.startsWith("!")) {
+          const bb = `#define ${ab}`;
+          if (!sb.includes(bb)) {
+            sW(ab);
             continue
           }
-          Bk = Bk.replace(kk, (() => `\n${Xk}\n${kk}`));
+          sb = sb.replace(bb, (() => `\n${Tb}\n${bb}`));
           continue
         }
-        let kk = ak.substring(1),
-          Fk = "g";
-        if (kk.startsWith("!")) Fk = "", kk = kk.substring(1);
+        let bb = ab.substring(1),
+          cb = "g";
+        if (bb.startsWith("!")) cb = "", bb = bb.substring(1);
         else {
-          const Bk = IR.exec(kk);
-          Bk && (Fk = Bk[1], kk = kk.substring(Fk.length + 1))
+          const sb = bW.exec(bb);
+          sb && (cb = sb[1], bb = bb.substring(cb.length + 1))
         }
-        const Rk = new RegExp(kk, Fk.includes("g") ? Fk : `${Fk}g`);
-        let tk = Rk.exec(Bk);
-        for (tk || kt(ak); tk;) {
-          const kk = tk,
-            Fk = Xk.replace(/\$(\d+)/g, ((Fk, Bk) => Number(Bk) < kk.length ? kk[Number(Bk)] : ""));
-          Bk = Bk.substring(0, kk.index) + Fk + Bk.substring(kk.index + kk[0].length), Rk.lastIndex = kk.index + Fk.length, tk = Rk.exec(Bk)
+        const kb = new RegExp(bb, cb.includes("g") ? cb : `${cb}g`);
+        let Wb = kb.exec(sb);
+        for (Wb || sW(ab); Wb;) {
+          const bb = Wb,
+            cb = Tb.replace(/\$(\d+)/g, ((cb, sb) => Number(sb) < bb.length ? bb[Number(sb)] : ""));
+          sb = sb.substring(0, bb.index) + cb + sb.substring(bb.index + bb[0].length), kb.lastIndex = bb.index + cb.length, Wb = kb.exec(sb)
         }
       }
-      return Bk
+      return sb
     }
-    const Bt = /\b(?:(attribute|uniform)|(?:(flat|linear|perspective)\s+)?(?:(center|centroid|sample)\s+)?varying)\s+(\w+)\s*:\s*([\w<>, ]+?)\s*;/g,
-      Rt = /\bvar\s+(\w+)\s*:\s*sampler\s*;/g,
-      tt = /\bvar\s+(\w+)\s*:\s*(texture_\w+(?:<\s*f32\s*>)?)\s*;/g;
+    const WW = /\b(?:(attribute|uniform)|(?:(flat|linear|perspective)\s+)?(?:(center|centroid|sample)\s+)?varying)\s+(\w+)\s*:\s*([\w<>, ]+?)\s*;/g,
+      aW = /\bvar\s+(\w+)\s*:\s*sampler\s*;/g,
+      TW = /\bvar\s+(\w+)\s*:\s*(texture_\w+(?:<\s*f32\s*>)?)\s*;/g;
 
-    function Xt(kk) {
-      const Fk = {
+    function UW(bb) {
+      const cb = {
         attributes: [],
         varyings: [],
         uniforms: [],
@@ -1629,304 +1629,304 @@ export const modules = {
         samplers: new Set,
         body: ""
       };
-      let Bk = kk.replace(Bt, ((kk, Bk, Rk, tk, ak, Xk) => ("attribute" === Bk ? Fk.attributes.push({
-        name: ak,
-        type: Xk
-      }) : void 0 === Bk ? Fk.varyings.push({
-        name: ak,
-        type: Xk,
-        interpolation: wt(Xk, Rk, tk)
-      }) : Fk.uniforms.push({
-        name: ak,
-        type: bt(Xk)
+      let sb = bb.replace(WW, ((bb, sb, kb, Wb, ab, Tb) => ("attribute" === sb ? cb.attributes.push({
+        name: ab,
+        type: Tb
+      }) : void 0 === sb ? cb.varyings.push({
+        name: ab,
+        type: Tb,
+        interpolation: HW(Tb, kb, Wb)
+      }) : cb.uniforms.push({
+        name: ab,
+        type: IW(Tb)
       }), "")));
-      return Bk = Bk.replace(Rt, ((kk, Bk) => (Fk.samplers.add(Bk), ""))), Bk = Bk.replace(tt, ((kk, Bk, Rk) => (Fk.textures.push({
-        name: Bk,
-        type: Rk
-      }), ""))), Fk.body = Bk, Fk
+      return sb = sb.replace(aW, ((bb, sb) => (cb.samplers.add(sb), ""))), sb = sb.replace(TW, ((bb, sb, kb) => (cb.textures.push({
+        name: sb,
+        type: kb
+      }), ""))), cb.body = sb, cb
     }
 
-    function bt(kk) {
-      const Fk = kk.replace(/\s+/g, "").replace("vec2<f32>", "vec2f").replace("vec3<f32>", "vec3f").replace("vec4<f32>", "vec4f").replace("mat4x4<f32>", "mat4x4f"),
-        Bk = new Map([
+    function IW(bb) {
+      const cb = bb.replace(/\s+/g, "").replace("vec2<f32>", "vec2f").replace("vec3<f32>", "vec3f").replace("vec4<f32>", "vec4f").replace("mat4x4<f32>", "mat4x4f"),
+        sb = new Map([
           ["f32", "float"],
           ["vec2f", "vec2"],
           ["vec3f", "vec3"],
           ["vec4f", "vec4"],
           ["mat4x4f", "mat4"]
-        ]).get(Fk);
-      if (!Bk) throw new Error(`Lite: unsupported uniform type ${kk}`);
-      return Bk
+        ]).get(cb);
+      if (!sb) throw new Error(`Lite: unsupported uniform type ${bb}`);
+      return sb
     }
 
-    function wt(kk, Fk, Bk) {
-      return void 0 === Fk && void 0 === Bk ? /^(u32|i32|vec\du|vec\di|vec\d<[ui]32>)$/.test(kk.replace(/\s+/g, "")) ? "@interpolate(flat) " : "" : "flat" === Fk ? "@interpolate(flat) " : `@interpolate(${null!==Fk&&void 0!==Fk?Fk:"perspective"}, ${null!==Bk&&void 0!==Bk?Bk:"center"}) `
+    function HW(bb, cb, sb) {
+      return void 0 === cb && void 0 === sb ? /^(u32|i32|vec\du|vec\di|vec\d<[ui]32>)$/.test(bb.replace(/\s+/g, "")) ? "@interpolate(flat) " : "" : "flat" === cb ? "@interpolate(flat) " : `@interpolate(${null!==cb&&void 0!==cb?cb:"perspective"}, ${null!==sb&&void 0!==sb?sb:"center"}) `
     }
 
-    function dt(kk) {
-      return At({
-        defines: kk.defines,
-        vertex: Ft(lR, kk.vertexCode),
-        fragment: Ft(nR, kk.fragmentCode),
-        members: [...cR, ...kk.defines.has("OPACITY") ? GR : [], ...kk.defines.has("EMISSIVE") ? TR : [], ...kk.pluginUniforms],
+    function fW(bb) {
+      return mW({
+        defines: bb.defines,
+        vertex: kW(jk, bb.vertexCode),
+        fragment: kW(pk, bb.fragmentCode),
+        members: [...Ok, ...bb.defines.has("OPACITY") ? Gk : [], ...bb.defines.has("EMISSIVE") ? Kk : [], ...bb.pluginUniforms],
         structName: "StandardUniforms"
       })
     }
 
-    function st(kk) {
-      const Fk = kk.replace(/\breturn\s+fragmentOutputs\s*;/g, "return canvasOutputs();");
-      if (Fk === kk) throw new Error("Lite: fragment main has no return");
-      return Fk
+    function MW(bb) {
+      const cb = bb.replace(/\breturn\s+fragmentOutputs\s*;/g, "return canvasOutputs();");
+      if (cb === bb) throw new Error("Lite: fragment main has no return");
+      return cb
     }
-    const Vt = `\nattribute position: vec3f;\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${CR}\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n${ZR}\nvar worldPos: vec4f=finalWorld*vec4f(vertexInputs.position,1.0);\nvertexOutputs.position=scene.viewProjection*worldPos;\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${pR}\n${KR}\n}\n`,
-      Jt = `\nuniform color: vec4f;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n${xR}\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvar color: vec4f=fragmentInputs.vColor;\n#else\nvar color: vec4f=uniforms.color;\n#endif\n#ifdef FOG\ncolor=vec4f(mix(frame.vFogColor,color.rgb,CalcFogFactor()),color.a);\n#endif\nfragmentOutputs.color=color;\nreturn fragmentOutputs;\n}\n`;
+    const XW = `\nattribute position: vec3f;\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${rk}\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n${Sk}\nvar worldPos: vec4f=finalWorld*vec4f(vertexInputs.position,1.0);\nvertexOutputs.position=scene.viewProjection*worldPos;\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${Rk}\n${vk}\n}\n`,
+      nW = `\nuniform color: vec4f;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n${Fk}\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvar color: vec4f=fragmentInputs.vColor;\n#else\nvar color: vec4f=uniforms.color;\n#endif\n#ifdef FOG\ncolor=vec4f(mix(frame.vFogColor,color.rgb,CalcFogFactor()),color.a);\n#endif\nfragmentOutputs.color=color;\nreturn fragmentOutputs;\n}\n`;
 
-    function At(kk) {
-      const Fk = kk.defines,
-        Bk = Xt(YF(kk.vertex, Fk)),
-        Rk = Xt(YF(kk.fragment, Fk)),
-        tk = new Map;
-      for (const vk of [...Bk.varyings, ...Rk.varyings]) tk.has(vk.name) || tk.set(vk.name, vk);
-      const ak = [...tk.values()].map(((kk, Fk) => `\t@location(${Fk}) ${kk.interpolation}${kk.name}: ${kk.type},`)),
-        Xk = [...kk.members];
-      for (const vk of [...Bk.uniforms, ...Rk.uniforms]) Xk.some((kk => kk.name === vk.name)) || Xk.push(vk);
-      const bk = UR(kk.structName, Xk),
-        wk = [],
-        dk = [];
-      let sk = 1;
-      const Vk = new Set;
-      for (const vk of [...Bk.textures, ...Rk.textures]) {
-        if (Vk.has(vk.name)) continue;
-        Vk.add(vk.name);
-        const kk = `${vk.name}Sampler`,
-          Fk = sk++,
-          Bk = sk++,
-          Rk = vk.type.startsWith("texture_2d_array") ? "2d-array" : vk.type.startsWith("texture_cube") ? "cube" : "2d";
-        wk.push({
-          name: vk.name,
-          binding: Fk,
-          samplerBinding: Bk,
-          dimension: Rk
-        }), dk.push(`@group(2) @binding(${Fk}) var ${vk.name}: ${vk.type};`), dk.push(`@group(2) @binding(${Bk}) var ${kk}: sampler;`)
+    function mW(bb) {
+      const cb = bb.defines,
+        sb = UW(Vc(bb.vertex, cb)),
+        kb = UW(Vc(bb.fragment, cb)),
+        Wb = new Map;
+      for (const Nb of [...sb.varyings, ...kb.varyings]) Wb.has(Nb.name) || Wb.set(Nb.name, Nb);
+      const ab = [...Wb.values()].map(((bb, cb) => `\t@location(${cb}) ${bb.interpolation}${bb.name}: ${bb.type},`)),
+        Tb = [...bb.members];
+      for (const Nb of [...sb.uniforms, ...kb.uniforms]) Tb.some((bb => bb.name === Nb.name)) || Tb.push(Nb);
+      const Ub = ik(bb.structName, Tb),
+        Ib = [],
+        Hb = [];
+      let fb = 1;
+      const Mb = new Set;
+      for (const Nb of [...sb.textures, ...kb.textures]) {
+        if (Mb.has(Nb.name)) continue;
+        Mb.add(Nb.name);
+        const bb = `${Nb.name}Sampler`,
+          cb = fb++,
+          sb = fb++,
+          kb = Nb.type.startsWith("texture_2d_array") ? "2d-array" : Nb.type.startsWith("texture_cube") ? "cube" : "2d";
+        Ib.push({
+          name: Nb.name,
+          binding: cb,
+          samplerBinding: sb,
+          dimension: kb
+        }), Hb.push(`@group(2) @binding(${cb}) var ${Nb.name}: ${Nb.type};`), Hb.push(`@group(2) @binding(${sb}) var ${bb}: sampler;`)
       }
-      for (const vk of [...Bk.samplers, ...Rk.samplers])
-        if (!Vk.has(vk.replace(/Sampler$/, ""))) throw new Error(`Lite: sampler ${vk} has no texture`);
-      const Jk = [fR, qR, bk.wgsl, `@group(2) @binding(0) var<uniform> uniforms: ${kk.structName};`, ...dk].join("\n"),
-        Ak = Bk.attributes,
-        ek = ["struct VertexInputs {", "\t@builtin(vertex_index) vertexIndex: u32,", "\t@builtin(instance_index) instanceIndex: u32,", ...Bk.attributes.map(((kk, Fk) => `\t@location(${Fk}) ${kk.name}: ${kk.type},`)), "}", "var<private> vertexInputs: VertexInputs;"].join("\n"),
-        yk = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...ak, "}", "var<private> vertexOutputs: FragmentInputs;"].join("\n"),
-        fk = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...Rk.body.includes("fragmentInputs.frontFacing") ? ["\t@builtin(front_facing) frontFacing: bool,"] : [], ...ak, "}", "var<private> fragmentInputs: FragmentInputs;", "struct FragmentOutputs {", "\t@location(0) color: vec4f,", "}", "var<private> fragmentOutputs: FragmentOutputs;", lk, "fn canvasOutputs() -> FragmentOutputs {", `\tif (${jk}) {`, "\t\tfragmentOutputs.color.a = 1.0;", "\t}", "\treturn fragmentOutputs;", "}"].join("\n"),
-        mk = kk => {
-          for (const Fk of bk.stridedArrays) kk = kk.replace(new RegExp(`\\b${Fk}\\s*\\[(.*?)\\]`, "g"), `${Fk}[$1].el`);
-          return kk
+      for (const Nb of [...sb.samplers, ...kb.samplers])
+        if (!Mb.has(Nb.replace(/Sampler$/, ""))) throw new Error(`Lite: sampler ${Nb} has no texture`);
+      const Xb = [ek, wk, Ub.wgsl, `@group(2) @binding(0) var<uniform> uniforms: ${bb.structName};`, ...Hb].join("\n"),
+        nb = sb.attributes,
+        mb = ["struct VertexInputs {", "\t@builtin(vertex_index) vertexIndex: u32,", "\t@builtin(instance_index) instanceIndex: u32,", ...sb.attributes.map(((bb, cb) => `\t@location(${cb}) ${bb.name}: ${bb.type},`)), "}", "var<private> vertexInputs: VertexInputs;"].join("\n"),
+        lb = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...ab, "}", "var<private> vertexOutputs: FragmentInputs;"].join("\n"),
+        Qb = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...kb.body.includes("fragmentInputs.frontFacing") ? ["\t@builtin(front_facing) frontFacing: bool,"] : [], ...ab, "}", "var<private> fragmentInputs: FragmentInputs;", "struct FragmentOutputs {", "\t@location(0) color: vec4f,", "}", "var<private> fragmentOutputs: FragmentOutputs;", vb, "fn canvasOutputs() -> FragmentOutputs {", `\tif (${Rb}) {`, "\t\tfragmentOutputs.color.a = 1.0;", "\t}", "\treturn fragmentOutputs;", "}"].join("\n"),
+        eb = bb => {
+          for (const cb of Ub.stridedArrays) bb = bb.replace(new RegExp(`\\b${cb}\\s*\\[(.*?)\\]`, "g"), `${cb}[$1].el`);
+          return bb
         };
       return {
-        vertex: `${Jk}\n${ek}\n${yk}\n${mk(Bk.body)}`,
-        fragment: `diagnostic(off, derivative_uniformity);\n${Jk}\n${fk}\n${st((Wk=mk(Rk.body),Wk.includes("fragmentInputs.position")?Wk.replace("fragmentInputs = input;","fragmentInputs = input;\nfragmentInputs.position.y = frame.outputHeight - fragmentInputs.position.y;"):Wk))}`,
-        attributes: Ak,
-        material: bk,
-        textures: wk
+        vertex: `${Xb}\n${mb}\n${lb}\n${eb(sb.body)}`,
+        fragment: `diagnostic(off, derivative_uniformity);\n${Xb}\n${Qb}\n${MW((Cb=eb(kb.body),Cb.includes("fragmentInputs.position")?Cb.replace("fragmentInputs = input;","fragmentInputs = input;\nfragmentInputs.position.y = frame.outputHeight - fragmentInputs.position.y;"):Cb))}`,
+        attributes: nb,
+        material: Ub,
+        textures: Ib
       };
-      var Wk
+      var Cb
     }
-    const et = [6, 4, 5, 7, 6, 5, 0, 2, 3, 1, 0, 3, 5, 1, 3, 7, 5, 3, 0, 4, 6, 2, 0, 6, 3, 2, 6, 7, 3, 6, 0, 1, 5, 4, 0, 5],
-      yt = kk => ({
-        name: kk,
+    const lW = [6, 4, 5, 7, 6, 5, 0, 2, 3, 1, 0, 3, 5, 1, 3, 7, 5, 3, 0, 4, 6, 2, 0, 6, 3, 2, 6, 7, 3, 6, 0, 1, 5, 4, 0, 5],
+      QW = bb => ({
+        name: bb,
         type: "vec3"
       }),
-      ft = kk => ({
-        name: kk,
+      eW = bb => ({
+        name: bb,
         type: "float"
       }),
-      mt = UR("EarthSkyUniforms", [yt("viewFrom"), ft("exposureScale"), yt("zenithOffset"), ft("fogOn"), yt("up"), ft("ditherOn"), yt("sun"), ft("turbidity"), yt("tint"), ft("rayleigh"), yt("sunDir"), ft("mieStrength"), yt("inScatterR"), ft("mieFocus"), yt("inScatterM"), ft("sunE"), yt("extinctionBeta"), ft("sunsetMix"), ft("mieScale"), ft("mieBase"), ft("mieSlope"), ft("sunDiscE"), ft("exposure")]),
-      Wt = `${fR}\n${qR}\n${mt.wgsl}\n@group(2) @binding(0) var<uniform> sky: EarthSkyUniforms;\nstruct EarthSkyVarying {\n\t@builtin(position) position: vec4f,\n\t@location(0) worldPosition: vec3f,\n\t@location(1) fogDistance: vec3f,\n\t@location(2) tint: vec3f,\n}\n`,
-      vt = `\n@vertex\nfn main(@builtin(vertex_index) index: u32) -> EarthSkyVarying {\n\tlet corners = array<u32, 36>(${et.join(", ")});\n\tlet corner = corners[index];\n\tlet position = vec3f(f32(corner & 1u), f32((corner >> 1u) & 1u), f32(corner >> 2u)) - 0.5;\n\tvar out: EarthSkyVarying;\n\tout.position = liteWorldLayer(scene.viewProjection * mesh.world * vec4f(position, 1.0));\n\tlet worldPosition = mesh.world * vec4f(position, 1.0);\n\tout.worldPosition = worldPosition.xyz;\n\tout.fogDistance = (scene.view * worldPosition).xyz;\n\tout.tint = sky.tint;\n\treturn out;\n}\n`,
-      it = `\n${lk}\nconst PI: f32 = 3.141592653589793238462643383279502884197169;\nconst SUN_DISC_COS: f32 = 0.999956676946448443553574619906976478926848692873900859324;\n${Object.entries(mF).map((kk=>{let[Fk,Bk]=kk;return`const TONE_${Fk}: f32 = ${Bk};`})).join(" ")}\n\n// The rest of main's prelude, as it was, for sky pack overrides that use it; the default calls none of it\nconst WAVELENGTHS: vec3f = vec3f(680E-9, 550E-9, 450E-9);\nconst MIE_K: vec3f = vec3f(0.686, 0.678, 0.666);\nconst MIE_V: f32 = 4.0;\nconst RAYLEIGH_ZENITH_LENGTH: f32 = 8.4E3;\nconst MIE_ZENITH_LENGTH: f32 = 1.25E3;\nconst SUN_INTENSITY: f32 = 1000.0;\nconst SUN_CUTOFF: f32 = PI / 1.95;\nconst SUN_STEEPNESS: f32 = 1.5;\nconst TONE_WHITE: f32 = 1000.0;\n\nfn rayleighBeta() -> vec3f { return vec3f(0.0005) / vec3f(94, 40, 18); }\n\nfn rayleighPhase(cosTheta: f32) -> f32 { return (3.0 / (16.0 * PI)) * (1.0 + pow(cosTheta, 2.0)); }\n\nfn mieBeta(wavelengths: vec3f, k: vec3f, turbidity: f32) -> vec3f {\n\tvar c: f32 = (0.2 * turbidity) * 10E-18;\n\treturn 0.434 * c * PI * pow((2.0 * PI) / wavelengths, vec3f(MIE_V - 2.0)) * k;\n}\n\nfn henyeyGreenstein(cosTheta: f32, g: f32) -> f32 {\n\treturn (1.0 / (4.0 * PI)) * ((1.0 - pow(g, 2.0)) / pow(1.0 - 2.0 * g * cosTheta + pow(g, 2.0), 1.5));\n}\n\nfn sunIntensity(zenithAngleCos: f32) -> f32 {\n\treturn SUN_INTENSITY * max(0.0, 1.0 - exp((-(SUN_CUTOFF - acos(zenithAngleCos)) / SUN_STEEPNESS)));\n}\n\n// A sky shader pack can replace earthSkyRadiance (the scattering, over EarthSkyInput) or earthSkyColour (the tonemap) by\n// name. The prelude, EarthSkyInput and both signatures are main's, so a pack written against main compiles unchanged.\nstruct EarthSkyInput {\n\tview: vec3f, zenithView: vec3f, sun: vec3f, up: vec3f,\n\tturbidity: f32, rayleigh: f32, mieStrength: f32, mieFocus: f32,\n}\n\nfn filmic(x: vec3f) -> vec3f {\n\treturn ((x * (TONE_A * x + TONE_C * TONE_B) + TONE_D * TONE_E) / (x * (TONE_A * x + TONE_B) + TONE_D * TONE_F)) - TONE_E / TONE_F;\n}\n\n// The default reads input's view, zenithView and up, and the terms the CPU precomputes from the frame's uniforms\n// (earthSkyDerived.ts) straight from sky: they already include input's sun, turbidity, rayleigh, mieStrength and mieFocus.\nfn earthSkyRadiance(input: EarthSkyInput) -> vec3f {\n\t// cos(acos(x)) is x: the Rayleigh and Mie optical lengths share this denominator\n\tlet cosZenith = max(0.0, dot(input.up, input.zenithView));\n\tlet zenithAngle = acos(cosZenith);\n\tlet opticalLength = 1.0 / (cosZenith + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / PI), -1.253));\n\tlet extinction = exp(-sky.extinctionBeta * opticalLength);\n\tlet cosTheta = dot(input.view, sky.sunDir);\n\tlet rCos = cosTheta * 0.5 + 0.5;\n\tlet rPhase = (3.0 / (16.0 * PI)) * (1.0 + rCos * rCos);\n\tlet mBase = sky.mieBase - sky.mieSlope * cosTheta;\n\tlet mPhase = sky.mieScale * inverseSqrt(mBase) / mBase;\n\tlet scattered = sky.inScatterR * rPhase + sky.inScatterM * mPhase;\n\tlet lit = scattered * (1.0 - extinction);\n\tlet inScattered = lit * sqrt(lit) * mix(vec3f(1.0), sqrt(scattered * extinction), vec3f(sky.sunsetMix));\n\tlet sunDisc = smoothstep(SUN_DISC_COS, SUN_DISC_COS + 0.00002, cosTheta);\n\tlet night = (0.1 + sky.sunDiscE * sunDisc) * extinction;\n\treturn (inScattered + night) * 0.04 + vec3f(0.0, 0.001, 0.0025) * 0.3;\n}\n\n// The contract for overrides: exposure is SkyMaterial's luminance (main passes sky.exposure), as Babylon's tonemap reads it.\n// The default tonemaps with the frame's precomputed sky.exposureScale, its log2(2 / exposure^4), written together with it.\nfn earthSkyColour(radiance: vec3f, exposure: f32) -> vec3f {\n\treturn filmic(sky.exposureScale * radiance) * ${WF};\n}\n\nfn ditherOffset(seed: vec2f, variance: f32) -> f32 {\n\tlet rand: f32 = fract(sin(dot(seed.xy, vec2f(12.9898, 78.233))) * 43758.5453);\n\tlet normVariance: f32 = variance / 255.0;\n\treturn mix(-normVariance, normVariance, rand);\n}\n\nfn fogFactor(fromEye: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = frame.vFogInfos.y;\n\tlet fogEnd = frame.vFogInfos.z;\n\tlet fogDensity = frame.vFogInfos.w;\n\tlet dist = length(fromEye);\n\tif (3.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (1.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (2.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n\n@fragment\nfn main(input: EarthSkyVarying) -> @location(0) vec4f {\n\tlet toSky = input.worldPosition - sky.viewFrom;\n\tlet radiance = earthSkyRadiance(EarthSkyInput(normalize(toSky), normalize(toSky + sky.zenithOffset), sky.sun, sky.up, sky.turbidity, sky.rayleigh, sky.mieStrength, sky.mieFocus));\n\t// Parity: off, the dither and fog branches are skipped, as Babylon leaves them out with its defines; the dither reads the WebGL frag coord, as in Babylon\n\tvar dither = 0.0;\n\tif (sky.ditherOn != 0.0) { dither = ditherOffset(vec2f(input.position.x, frame.outputHeight - input.position.y), 0.5); }\n\tvar colour = clamp(vec4f(earthSkyColour(radiance, sky.exposure) * input.tint + dither, 1.0), vec4f(0.0), vec4f(1.0));\n\tif (sky.fogOn != 0.0) { colour = vec4f(mix(frame.vFogColor, colour.rgb, fogFactor(input.fogDistance)), colour.a); }\n\t// The canvas's alpha on the unblended pipeline it draws in (canvasFragment)\n\tif (${jk}) { colour.a = 1.0; }\n\treturn colour;\n}\n`;
-    var Yt = Bk(36754);
-    const ot = new Yt.Qe,
-      Lt = new Yt.Qe,
-      Ot = new Yt.Quaternion,
-      Et = new Float64Array(3),
-      St = new class {
+      CW = ik("EarthSkyUniforms", [QW("viewFrom"), eW("exposureScale"), QW("zenithOffset"), eW("fogOn"), QW("up"), eW("ditherOn"), QW("sun"), eW("turbidity"), QW("tint"), eW("rayleigh"), QW("sunDir"), eW("mieStrength"), QW("inScatterR"), eW("mieFocus"), QW("inScatterM"), eW("sunE"), QW("extinctionBeta"), eW("sunsetMix"), eW("mieScale"), eW("mieBase"), eW("mieSlope"), eW("sunDiscE"), eW("exposure")]),
+      NW = `${ek}\n${wk}\n${CW.wgsl}\n@group(2) @binding(0) var<uniform> sky: EarthSkyUniforms;\nstruct EarthSkyVarying {\n\t@builtin(position) position: vec4f,\n\t@location(0) worldPosition: vec3f,\n\t@location(1) fogDistance: vec3f,\n\t@location(2) tint: vec3f,\n}\n`,
+      VW = `\n@vertex\nfn main(@builtin(vertex_index) index: u32) -> EarthSkyVarying {\n\tlet corners = array<u32, 36>(${lW.join(", ")});\n\tlet corner = corners[index];\n\tlet position = vec3f(f32(corner & 1u), f32((corner >> 1u) & 1u), f32(corner >> 2u)) - 0.5;\n\tvar out: EarthSkyVarying;\n\tout.position = liteWorldLayer(scene.viewProjection * mesh.world * vec4f(position, 1.0));\n\tlet worldPosition = mesh.world * vec4f(position, 1.0);\n\tout.worldPosition = worldPosition.xyz;\n\tout.fogDistance = (scene.view * worldPosition).xyz;\n\tout.tint = sky.tint;\n\treturn out;\n}\n`,
+      LW = `\n${vb}\nconst PI: f32 = 3.141592653589793238462643383279502884197169;\nconst SUN_DISC_COS: f32 = 0.999956676946448443553574619906976478926848692873900859324;\n${Object.entries(Qc).map((bb=>{let[cb,sb]=bb;return`const TONE_${cb}: f32 = ${sb};`})).join(" ")}\n\n// The rest of main's prelude, as it was, for sky pack overrides that use it; the default calls none of it\nconst WAVELENGTHS: vec3f = vec3f(680E-9, 550E-9, 450E-9);\nconst MIE_K: vec3f = vec3f(0.686, 0.678, 0.666);\nconst MIE_V: f32 = 4.0;\nconst RAYLEIGH_ZENITH_LENGTH: f32 = 8.4E3;\nconst MIE_ZENITH_LENGTH: f32 = 1.25E3;\nconst SUN_INTENSITY: f32 = 1000.0;\nconst SUN_CUTOFF: f32 = PI / 1.95;\nconst SUN_STEEPNESS: f32 = 1.5;\nconst TONE_WHITE: f32 = 1000.0;\n\nfn rayleighBeta() -> vec3f { return vec3f(0.0005) / vec3f(94, 40, 18); }\n\nfn rayleighPhase(cosTheta: f32) -> f32 { return (3.0 / (16.0 * PI)) * (1.0 + pow(cosTheta, 2.0)); }\n\nfn mieBeta(wavelengths: vec3f, k: vec3f, turbidity: f32) -> vec3f {\n\tvar c: f32 = (0.2 * turbidity) * 10E-18;\n\treturn 0.434 * c * PI * pow((2.0 * PI) / wavelengths, vec3f(MIE_V - 2.0)) * k;\n}\n\nfn henyeyGreenstein(cosTheta: f32, g: f32) -> f32 {\n\treturn (1.0 / (4.0 * PI)) * ((1.0 - pow(g, 2.0)) / pow(1.0 - 2.0 * g * cosTheta + pow(g, 2.0), 1.5));\n}\n\nfn sunIntensity(zenithAngleCos: f32) -> f32 {\n\treturn SUN_INTENSITY * max(0.0, 1.0 - exp((-(SUN_CUTOFF - acos(zenithAngleCos)) / SUN_STEEPNESS)));\n}\n\n// A sky shader pack can replace earthSkyRadiance (the scattering, over EarthSkyInput) or earthSkyColour (the tonemap) by\n// name. The prelude, EarthSkyInput and both signatures are main's, so a pack written against main compiles unchanged.\nstruct EarthSkyInput {\n\tview: vec3f, zenithView: vec3f, sun: vec3f, up: vec3f,\n\tturbidity: f32, rayleigh: f32, mieStrength: f32, mieFocus: f32,\n}\n\nfn filmic(x: vec3f) -> vec3f {\n\treturn ((x * (TONE_A * x + TONE_C * TONE_B) + TONE_D * TONE_E) / (x * (TONE_A * x + TONE_B) + TONE_D * TONE_F)) - TONE_E / TONE_F;\n}\n\n// The default reads input's view, zenithView and up, and the terms the CPU precomputes from the frame's uniforms\n// (earthSkyDerived.ts) straight from sky: they already include input's sun, turbidity, rayleigh, mieStrength and mieFocus.\nfn earthSkyRadiance(input: EarthSkyInput) -> vec3f {\n\t// cos(acos(x)) is x: the Rayleigh and Mie optical lengths share this denominator\n\tlet cosZenith = max(0.0, dot(input.up, input.zenithView));\n\tlet zenithAngle = acos(cosZenith);\n\tlet opticalLength = 1.0 / (cosZenith + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / PI), -1.253));\n\tlet extinction = exp(-sky.extinctionBeta * opticalLength);\n\tlet cosTheta = dot(input.view, sky.sunDir);\n\tlet rCos = cosTheta * 0.5 + 0.5;\n\tlet rPhase = (3.0 / (16.0 * PI)) * (1.0 + rCos * rCos);\n\tlet mBase = sky.mieBase - sky.mieSlope * cosTheta;\n\tlet mPhase = sky.mieScale * inverseSqrt(mBase) / mBase;\n\tlet scattered = sky.inScatterR * rPhase + sky.inScatterM * mPhase;\n\tlet lit = scattered * (1.0 - extinction);\n\tlet inScattered = lit * sqrt(lit) * mix(vec3f(1.0), sqrt(scattered * extinction), vec3f(sky.sunsetMix));\n\tlet sunDisc = smoothstep(SUN_DISC_COS, SUN_DISC_COS + 0.00002, cosTheta);\n\tlet night = (0.1 + sky.sunDiscE * sunDisc) * extinction;\n\treturn (inScattered + night) * 0.04 + vec3f(0.0, 0.001, 0.0025) * 0.3;\n}\n\n// The contract for overrides: exposure is SkyMaterial's luminance (main passes sky.exposure), as Babylon's tonemap reads it.\n// The default tonemaps with the frame's precomputed sky.exposureScale, its log2(2 / exposure^4), written together with it.\nfn earthSkyColour(radiance: vec3f, exposure: f32) -> vec3f {\n\treturn filmic(sky.exposureScale * radiance) * ${ec};\n}\n\nfn ditherOffset(seed: vec2f, variance: f32) -> f32 {\n\tlet rand: f32 = fract(sin(dot(seed.xy, vec2f(12.9898, 78.233))) * 43758.5453);\n\tlet normVariance: f32 = variance / 255.0;\n\treturn mix(-normVariance, normVariance, rand);\n}\n\nfn fogFactor(fromEye: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = frame.vFogInfos.y;\n\tlet fogEnd = frame.vFogInfos.z;\n\tlet fogDensity = frame.vFogInfos.w;\n\tlet dist = length(fromEye);\n\tif (3.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (1.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (2.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n\n@fragment\nfn main(input: EarthSkyVarying) -> @location(0) vec4f {\n\tlet toSky = input.worldPosition - sky.viewFrom;\n\tlet radiance = earthSkyRadiance(EarthSkyInput(normalize(toSky), normalize(toSky + sky.zenithOffset), sky.sun, sky.up, sky.turbidity, sky.rayleigh, sky.mieStrength, sky.mieFocus));\n\t// Parity: off, the dither and fog branches are skipped, as Babylon leaves them out with its defines; the dither reads the WebGL frag coord, as in Babylon\n\tvar dither = 0.0;\n\tif (sky.ditherOn != 0.0) { dither = ditherOffset(vec2f(input.position.x, frame.outputHeight - input.position.y), 0.5); }\n\tvar colour = clamp(vec4f(earthSkyColour(radiance, sky.exposure) * input.tint + dither, 1.0), vec4f(0.0), vec4f(1.0));\n\tif (sky.fogOn != 0.0) { colour = vec4f(mix(frame.vFogColor, colour.rgb, fogFactor(input.fogDistance)), colour.a); }\n\t// The canvas's alpha on the unblended pipeline it draws in (canvasFragment)\n\tif (${Rb}) { colour.a = 1.0; }\n\treturn colour;\n}\n`;
+    var uW = sb(36654);
+    const YW = new uW.Fm,
+      hW = new uW.Fm,
+      JW = new uW.Quaternion,
+      gW = new Float64Array(3),
+      BW = new class {
         constructor() {
           this.sunDir = new Float64Array(3), this.sunE = 0, this.inScatterR = new Float64Array(3), this.inScatterM = new Float64Array(3), this.extinctionBeta = new Float64Array(3), this.sunsetMix = 0, this.sunDiscE = 0, this.mieScale = 0, this.mieBase = 0, this.mieSlope = 0
         }
       },
-      Nt = new Float64Array(16);
+      tW = new Float64Array(16);
 
-    function Ht(kk, Fk, Bk) {
-      const Rk = Bk.worldMatrix;
-      var tk;
-      kk.updateFloat3("viewFrom", Rk[12], Rk[13], Rk[14]), kk.updateFloatsFrom("zenithOffset", Fk.cameraOffset, 0, 3), kk.updateFloatsFrom("up", Fk.up, 0, 3), Fk.luminance > 0 && (kk.updateFloat("exposure", Fk.luminance), kk.updateFloat("exposureScale", (tk = Fk.luminance, Math.log2(2 / Math.pow(tk, 4))))), kk.updateFloat("turbidity", Fk.turbidity), kk.updateFloat("rayleigh", Fk.rayleigh), kk.updateFloat("mieStrength", Fk.mieCoefficient), kk.updateFloat("mieFocus", Fk.mieDirectionalG), kk.updateFloatsFrom("tint", Fk.tint, 0, 3), kk.updateFloat("fogOn", Fk.fog && Bk.fogEnabled && 0 !== Bk.fogMode ? 1 : 0), kk.updateFloat("ditherOn", Fk.dithering ? 1 : 0);
-      const ak = Fk.sunPosition;
-      if (ot.set(ak[0], ak[1], ak[2]), !Fk.useSunPosition) {
-        const kk = Math.PI * (Fk.inclination - .5),
-          Bk = 2 * Math.PI * (Fk.azimuth - .5);
-        ot.set(Fk.distance * Math.cos(Bk) * Math.cos(kk), Fk.distance * Math.sin(-kk), Fk.distance * Math.sin(Bk) * Math.cos(kk)), Yt.Quaternion.FromUnitVectorsToRef(Yt.Qe.UpReadOnly, Lt.set(Fk.up[0], Fk.up[1], Fk.up[2]), Ot), ot.rotateByQuaternionToRef(Ot, ot)
+    function yW(bb, cb, sb) {
+      const kb = sb.worldMatrix;
+      var Wb;
+      bb.updateFloat3("viewFrom", kb[12], kb[13], kb[14]), bb.updateFloatsFrom("zenithOffset", cb.cameraOffset, 0, 3), bb.updateFloatsFrom("up", cb.up, 0, 3), cb.luminance > 0 && (bb.updateFloat("exposure", cb.luminance), bb.updateFloat("exposureScale", (Wb = cb.luminance, Math.log2(2 / Math.pow(Wb, 4))))), bb.updateFloat("turbidity", cb.turbidity), bb.updateFloat("rayleigh", cb.rayleigh), bb.updateFloat("mieStrength", cb.mieCoefficient), bb.updateFloat("mieFocus", cb.mieDirectionalG), bb.updateFloatsFrom("tint", cb.tint, 0, 3), bb.updateFloat("fogOn", cb.fog && sb.fogEnabled && 0 !== sb.fogMode ? 1 : 0), bb.updateFloat("ditherOn", cb.dithering ? 1 : 0);
+      const ab = cb.sunPosition;
+      if (YW.set(ab[0], ab[1], ab[2]), !cb.useSunPosition) {
+        const bb = Math.PI * (cb.inclination - .5),
+          sb = 2 * Math.PI * (cb.azimuth - .5);
+        YW.set(cb.distance * Math.cos(sb) * Math.cos(bb), cb.distance * Math.sin(-bb), cb.distance * Math.sin(sb) * Math.cos(bb)), uW.Quaternion.FromUnitVectorsToRef(uW.Fm.UpReadOnly, hW.set(cb.up[0], cb.up[1], cb.up[2]), JW), YW.rotateByQuaternionToRef(JW, YW)
       }
-      kk.updateVector3("sun", ot), Et[0] = ot.x, Et[1] = ot.y, Et[2] = ot.z;
-      const Xk = fF(Fk, Et, St);
-      kk.updateFloatsFrom("sunDir", Xk.sunDir, 0, 3), kk.updateFloat("sunE", Xk.sunE), kk.updateFloatsFrom("inScatterR", Xk.inScatterR, 0, 3), kk.updateFloatsFrom("inScatterM", Xk.inScatterM, 0, 3), kk.updateFloatsFrom("extinctionBeta", Xk.extinctionBeta, 0, 3), kk.updateFloat("sunsetMix", Xk.sunsetMix), kk.updateFloat("sunDiscE", Xk.sunDiscE), kk.updateFloat("mieScale", Xk.mieScale), kk.updateFloat("mieBase", Xk.mieBase), kk.updateFloat("mieSlope", Xk.mieSlope)
+      bb.updateVector3("sun", YW), gW[0] = YW.x, gW[1] = YW.y, gW[2] = YW.z;
+      const Tb = lc(cb, gW, BW);
+      bb.updateFloatsFrom("sunDir", Tb.sunDir, 0, 3), bb.updateFloat("sunE", Tb.sunE), bb.updateFloatsFrom("inScatterR", Tb.inScatterR, 0, 3), bb.updateFloatsFrom("inScatterM", Tb.inScatterM, 0, 3), bb.updateFloatsFrom("extinctionBeta", Tb.extinctionBeta, 0, 3), bb.updateFloat("sunsetMix", Tb.sunsetMix), bb.updateFloat("sunDiscE", Tb.sunDiscE), bb.updateFloat("mieScale", Tb.mieScale), bb.updateFloat("mieBase", Tb.mieBase), bb.updateFloat("mieSlope", Tb.mieSlope)
     }
 
-    function ut(kk, Fk) {
-      const Bk = Nt;
-      Bk[0] = Fk.far, Bk[5] = Fk.far, Bk[10] = Fk.far, Bk[15] = 1;
-      const Rk = kk.infiniteDistance;
-      for (let tk = 0; tk < 3; tk++) Bk[12 + tk] = kk.position[tk] + (Rk ? Fk.worldMatrix[12 + tk] : 0);
-      return Nt
+    function PW(bb, cb) {
+      const sb = tW;
+      sb[0] = cb.far, sb[5] = cb.far, sb[10] = cb.far, sb[15] = 1;
+      const kb = bb.infiniteDistance;
+      for (let Wb = 0; Wb < 3; Wb++) sb[12 + Wb] = bb.position[Wb] + (kb ? cb.worldMatrix[12 + Wb] : 0);
+      return tW
     }
-    var Mt = Bk(38359);
+    var DW = sb(38322);
 
-    function gt(kk) {
-      return Math.max(4, 4 * Math.ceil(kk / 4))
+    function EW(bb) {
+      return Math.max(4, 4 * Math.ceil(bb / 4))
     }
 
-    function Ut(kk, Fk, Bk, Rk) {
-      const tk = kk.createBuffer({
-        label: Rk,
-        size: gt(Fk.byteLength),
-        usage: Bk,
+    function iW(bb, cb, sb, kb) {
+      const Wb = bb.createBuffer({
+        label: kb,
+        size: EW(cb.byteLength),
+        usage: sb,
         mappedAtCreation: !0
       });
-      return new Uint8Array(tk.getMappedRange(), 0, Fk.byteLength).set(new Uint8Array(Fk.buffer, Fk.byteOffset, Fk.byteLength)), tk.unmap(), tk
+      return new Uint8Array(Wb.getMappedRange(), 0, cb.byteLength).set(new Uint8Array(cb.buffer, cb.byteOffset, cb.byteLength)), Wb.unmap(), Wb
     }
 
-    function ct(kk, Fk) {
-      return Math.floor(Math.log2(Math.max(kk, Fk))) + 1
+    function OW(bb, cb) {
+      return Math.floor(Math.log2(Math.max(bb, cb))) + 1
     }
 
-    function Gt(kk, Fk, Bk, Rk, tk, ak) {
-      const Xk = kk.createTexture({
-          label: ak,
+    function GW(bb, cb, sb, kb, Wb, ab) {
+      const Tb = bb.createTexture({
+          label: ab,
           size: {
-            width: Bk,
-            height: Rk,
-            depthOrArrayLayers: tk
+            width: sb,
+            height: kb,
+            depthOrArrayLayers: Wb
           },
           format: "rgba8unorm",
-          mipLevelCount: ct(Bk, Rk),
+          mipLevelCount: OW(sb, kb),
           usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
         }),
-        bk = (Fk, Bk, Rk, ak) => {
-          kk.queue.writeTexture({
-            texture: Xk,
-            mipLevel: Bk
-          }, Fk, {
-            bytesPerRow: 4 * Rk,
-            rowsPerImage: ak
+        Ub = (cb, sb, kb, ab) => {
+          bb.queue.writeTexture({
+            texture: Tb,
+            mipLevel: sb
+          }, cb, {
+            bytesPerRow: 4 * kb,
+            rowsPerImage: ab
           }, {
-            width: Rk,
-            height: ak,
-            depthOrArrayLayers: tk
+            width: kb,
+            height: ab,
+            depthOrArrayLayers: Wb
           })
         };
-      bk(Fk, 0, Bk, Rk);
-      let wk = 1;
-      for (const dk of function*(kk, Fk, Bk, Rk) {
-          let tk = kk,
-            ak = Fk,
-            Xk = Bk;
-          for (; ak > 1 || Xk > 1;) {
-            const kk = Math.max(1, ak >> 1),
-              Fk = Math.max(1, Xk >> 1),
-              Bk = new Uint8Array(kk * Fk * Rk * 4),
-              bk = 4 * ak;
-            let wk = 0;
-            for (let dk = 0; dk < Rk; dk++) {
-              const Rk = dk * bk * Xk;
-              for (let dk = 0; dk < Fk; dk++) {
-                const Fk = Rk + Math.min(2 * dk, Xk - 1) * bk,
-                  sk = Rk + Math.min(2 * dk + 1, Xk - 1) * bk;
-                for (let Rk = 0; Rk < kk; Rk++) {
-                  const kk = 4 * Math.min(2 * Rk, ak - 1),
-                    Xk = 4 * Math.min(2 * Rk + 1, ak - 1);
-                  for (let Rk = 0; Rk < 4; Rk++) Bk[wk++] = tk[Fk + kk + Rk] + tk[Fk + Xk + Rk] + tk[sk + kk + Rk] + tk[sk + Xk + Rk] + 2 >> 2
+      Ub(cb, 0, sb, kb);
+      let Ib = 1;
+      for (const Hb of function*(bb, cb, sb, kb) {
+          let Wb = bb,
+            ab = cb,
+            Tb = sb;
+          for (; ab > 1 || Tb > 1;) {
+            const bb = Math.max(1, ab >> 1),
+              cb = Math.max(1, Tb >> 1),
+              sb = new Uint8Array(bb * cb * kb * 4),
+              Ub = 4 * ab;
+            let Ib = 0;
+            for (let Hb = 0; Hb < kb; Hb++) {
+              const kb = Hb * Ub * Tb;
+              for (let Hb = 0; Hb < cb; Hb++) {
+                const cb = kb + Math.min(2 * Hb, Tb - 1) * Ub,
+                  fb = kb + Math.min(2 * Hb + 1, Tb - 1) * Ub;
+                for (let kb = 0; kb < bb; kb++) {
+                  const bb = 4 * Math.min(2 * kb, ab - 1),
+                    Tb = 4 * Math.min(2 * kb + 1, ab - 1);
+                  for (let kb = 0; kb < 4; kb++) sb[Ib++] = Wb[cb + bb + kb] + Wb[cb + Tb + kb] + Wb[fb + bb + kb] + Wb[fb + Tb + kb] + 2 >> 2
                 }
               }
             }
             yield {
-              data: Bk,
-              width: kk,
-              height: Fk
-            }, tk = Bk, ak = kk, Xk = Fk
+              data: sb,
+              width: bb,
+              height: cb
+            }, Wb = sb, ab = bb, Tb = cb
           }
-        }(Fk, Bk, Rk, tk)) bk(dk.data, wk++, dk.width, dk.height);
-      return Xk
+        }(cb, sb, kb, Wb)) Ub(Hb.data, Ib++, Hb.width, Hb.height);
+      return Tb
     }
-    const Tt = {
+    const KW = {
       premultiplyAlpha: "none",
       colorSpaceConversion: "none"
     };
 
-    function rt(kk) {
-      if (kk.startsWith("data:")) {
-        const Fk = kk.search(/[;,]/);
-        return `data:${Fk>5?kk.slice(5,Fk):""} URL of ${kk.length} characters`
+    function ZW(bb) {
+      if (bb.startsWith("data:")) {
+        const cb = bb.search(/[;,]/);
+        return `data:${cb>5?bb.slice(5,cb):""} URL of ${bb.length} characters`
       }
-      return kk.length > 80 ? `${kk.slice(0,80)}...` : kk
+      return bb.length > 80 ? `${bb.slice(0,80)}...` : bb
     }
-    async function Dt(kk) {
-      const Fk = await fetch(kk);
-      if (!Fk.ok) throw new Error(`${rt(kk)}: ${Fk.status} ${Fk.statusText}`);
-      return createImageBitmap(await Fk.blob(), Tt)
+    async function zW(bb) {
+      const cb = await fetch(bb);
+      if (!cb.ok) throw new Error(`${ZW(bb)}: ${cb.status} ${cb.statusText}`);
+      return createImageBitmap(await cb.blob(), KW)
     }
-    async function zt(kk) {
-      const Fk = await Dt(kk),
-        Bk = new OffscreenCanvas(Fk.width, Fk.height),
-        Rk = Bk.getContext("2d", {
+    async function qW(bb) {
+      const cb = await zW(bb),
+        sb = new OffscreenCanvas(cb.width, cb.height),
+        kb = sb.getContext("2d", {
           willReadFrequently: !0
         });
-      if (!Rk) throw new Error("No 2D context to decode an image");
-      Rk.drawImage(Fk, 0, 0);
+      if (!kb) throw new Error("No 2D context to decode an image");
+      kb.drawImage(cb, 0, 0);
       const {
-        data: tk
-      } = Rk.getImageData(0, 0, Fk.width, Fk.height);
-      return Fk.close(), {
-        pixels: new Uint8Array(tk.buffer, tk.byteOffset, tk.byteLength),
-        width: Bk.width,
-        height: Bk.height
+        data: Wb
+      } = kb.getImageData(0, 0, cb.width, cb.height);
+      return cb.close(), {
+        pixels: new Uint8Array(Wb.buffer, Wb.byteOffset, Wb.byteLength),
+        width: sb.width,
+        height: sb.height
       }
     }
-    const Pt = new WeakMap;
+    const dW = new WeakMap;
 
-    function ht(kk, Fk, Bk, Rk) {
-      var tk;
-      const ak = null !== (tk = Pt.get(kk)) && void 0 !== tk ? tk : new Map;
-      Pt.set(kk, ak);
-      let Xk = ak.get(Fk);
-      return Xk || (Xk = (async tk => {
-        const ak = null !== (tk = function(kk, Fk) {
-          const Bk = kk ? new Uint8Array(kk.buffer, kk.byteOffset, kk.byteLength) : null;
-          return null !== Bk && void 0 !== Bk && Bk.byteLength && Fk && Bk.byteLength % (Fk * Fk * 4) === 0 ? {
-            pixels: Bk,
-            layerWidth: Fk,
-            layers: Bk.byteLength / (Fk * Fk * 4)
+    function AW(bb, cb, sb, kb) {
+      var Wb;
+      const ab = null !== (Wb = dW.get(bb)) && void 0 !== Wb ? Wb : new Map;
+      dW.set(bb, ab);
+      let Tb = ab.get(cb);
+      return Tb || (Tb = (async Wb => {
+        const ab = null !== (Wb = function(bb, cb) {
+          const sb = bb ? new Uint8Array(bb.buffer, bb.byteOffset, bb.byteLength) : null;
+          return null !== sb && void 0 !== sb && sb.byteLength && cb && sb.byteLength % (cb * cb * 4) === 0 ? {
+            pixels: sb,
+            layerWidth: cb,
+            layers: sb.byteLength / (cb * cb * 4)
           } : null
-        }(Bk, Rk)) && void 0 !== tk ? tk : await async function(kk) {
+        }(sb, kb)) && void 0 !== Wb ? Wb : await async function(bb) {
           const {
-            pixels: Fk,
-            width: Bk
-          } = await zt(kk);
+            pixels: cb,
+            width: sb
+          } = await qW(bb);
           return {
-            pixels: Fk,
-            layerWidth: Bk,
-            layers: Fk.byteLength / (Bk * Bk * 4)
+            pixels: cb,
+            layerWidth: sb,
+            layers: cb.byteLength / (sb * sb * 4)
           }
-        }(Fk), {
-          layerWidth: Xk,
-          layers: bk
-        } = ak;
+        }(cb), {
+          layerWidth: Tb,
+          layers: Ub
+        } = ab;
         return {
-          texture: Gt(kk, ak.pixels, Xk, Xk, bk, `atlas-${Fk}`),
-          layerWidth: Xk,
-          layers: bk
+          texture: GW(bb, ab.pixels, Tb, Tb, Ub, `atlas-${cb}`),
+          layerWidth: Tb,
+          layers: Ub
         }
-      })(), ak.set(Fk, Xk), Xk.catch((() => {
-        ak.delete(Fk)
-      }))), Xk
+      })(), ab.set(cb, Tb), Tb.catch((() => {
+        ab.delete(cb)
+      }))), Tb
     }
-    const qt = new Map([
+    const wW = new Map([
         [0, "zero"],
         [1, "one"],
         [768, "src"],
@@ -1939,7 +1939,7 @@ export const modules = {
         [775, "one-minus-dst"],
         [776, "src-alpha-saturated"]
       ]),
-      Ct = new Map([
+      rW = new Map([
         [1, [770, 1, "add"]],
         [2, [770, 771, "add"]],
         [3, [0, 769, "add"]],
@@ -1957,301 +1957,301 @@ export const modules = {
         [19, [1, 1, "max"]]
       ]);
 
-    function Zt(kk) {
-      for (const Fk of (0, Mt.m)(kk))
-        if (!Ct.has((0, Mt.j)(Fk))) return !1;
+    function oW(bb) {
+      for (const cb of (0, DW.i)(bb))
+        if (!rW.has((0, DW.h)(cb))) return !1;
       return !0
     }
 
-    function pt(kk) {
-      const Fk = Ct.get(kk);
-      if (!Fk) return null;
-      const [Bk, Rk, tk] = Fk;
+    function SW(bb) {
+      const cb = rW.get(bb);
+      if (!cb) return null;
+      const [sb, kb, Wb] = cb;
       return {
-        srcFactor: qt.get(Bk),
-        dstFactor: qt.get(Rk),
-        operation: tk
+        srcFactor: wW.get(sb),
+        dstFactor: wW.get(kb),
+        operation: Wb
       }
     }
-    let Kt = null;
+    let RW = null;
 
-    function xt(kk) {
-      Kt = kk
+    function vW(bb) {
+      RW = bb
     }
 
-    function jt(kk, Fk, Bk) {
-      var Rk;
-      null === (Rk = Kt) || void 0 === Rk || Rk(kk, Fk, Bk, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null)
+    function FW(bb, cb, sb) {
+      var kb;
+      null === (kb = RW) || void 0 === kb || kb(bb, cb, sb, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null)
     }
-    class lt {
+    class xW {
       constructor() {
         this.pipeline = null, this.materialGroup = null, this.packGroup = null, this.vertexBuffers = [], this.vertexOffsets = [], this.indexBuffer = null
       }
       reset() {
         this.pipeline = null, this.materialGroup = null, this.packGroup = null, this.vertexBuffers.length = 0, this.vertexOffsets.length = 0, this.indexBuffer = null
       }
-      bind(kk, Fk, Bk, Rk, tk) {
-        Bk !== this.pipeline && (kk.setPipeline(Bk), this.pipeline = Bk), kk.setBindGroup(1, Rk, [tk]);
-        const ak = Fk.material.bindGroup;
-        ak !== this.materialGroup && (kk.setBindGroup(2, ak), this.materialGroup = ak);
-        const Xk = Fk.program.packGroup;
-        Xk && Xk !== this.packGroup && (kk.setBindGroup(NF.g, Xk), this.packGroup = Xk);
+      bind(bb, cb, sb, kb, Wb) {
+        sb !== this.pipeline && (bb.setPipeline(sb), this.pipeline = sb), bb.setBindGroup(1, kb, [Wb]);
+        const ab = cb.material.bindGroup;
+        ab !== this.materialGroup && (bb.setBindGroup(2, ab), this.materialGroup = ab);
+        const Tb = cb.program.packGroup;
+        Tb && Tb !== this.packGroup && (bb.setBindGroup(gc.d, Tb), this.packGroup = Tb);
         const {
-          vertexBuffers: bk,
-          vertexOffsets: wk
+          vertexBuffers: Ub,
+          vertexOffsets: Ib
         } = this;
-        for (let dk = 0; dk < Fk.vertexBuffers.length; dk++) bk[dk] === Fk.vertexBuffers[dk] && wk[dk] === Fk.vertexOffsets[dk] || (kk.setVertexBuffer(dk, Fk.vertexBuffers[dk], Fk.vertexOffsets[dk]), bk[dk] = Fk.vertexBuffers[dk], wk[dk] = Fk.vertexOffsets[dk]);
-        Fk.indexBuffer && Fk.indexBuffer !== this.indexBuffer && (kk.setIndexBuffer(Fk.indexBuffer, Fk.indexFormat), this.indexBuffer = Fk.indexBuffer)
+        for (let Hb = 0; Hb < cb.vertexBuffers.length; Hb++) Ub[Hb] === cb.vertexBuffers[Hb] && Ib[Hb] === cb.vertexOffsets[Hb] || (bb.setVertexBuffer(Hb, cb.vertexBuffers[Hb], cb.vertexOffsets[Hb]), Ub[Hb] = cb.vertexBuffers[Hb], Ib[Hb] = cb.vertexOffsets[Hb]);
+        cb.indexBuffer && cb.indexBuffer !== this.indexBuffer && (bb.setIndexBuffer(cb.indexBuffer, cb.indexFormat), this.indexBuffer = cb.indexBuffer)
       }
     }
-    class nt {
-      constructor(kk, Fk, Bk, Rk) {
-        this.modelMeshes = kk, this.A_ = Fk, this.maker = Bk, this.warnOnce = Rk, this.skyDraws = [], this.opaqueDraws = [], this.transparentDraws = [], this.frontDraws = []
+    class jW {
+      constructor(bb, cb, sb, kb) {
+        this.modelMeshes = bb, this.f6 = cb, this.maker = sb, this.warnOnce = kb, this.skyDraws = [], this.opaqueDraws = [], this.transparentDraws = [], this.frontDraws = []
       }
       clear() {
         this.skyDraws.length = 0, this.opaqueDraws.length = 0, this.transparentDraws.length = 0, this.frontDraws.length = 0
       }
-      collect(kk) {
-        this.collectGroup(kk, -1, this.skyDraws, this.skyDraws, !0), this.collectGroup(kk, 0, this.opaqueDraws, this.transparentDraws, !1), this.collectGroup(kk, 1, this.frontDraws, this.frontDraws, !0);
-        for (const Fk of this.modelMeshes.groupIds())(Fk < -1 || Fk > 1) && this.warnOnce(`group:${Fk}`, `rendering group ${Fk} is not drawn`);
-        for (const Fk of this.A_.groupIds())(Fk < -1 || Fk > 1) && this.warnOnce(`group:${Fk}`, `rendering group ${Fk} is not drawn`);
-        this.opaqueDraws.sort(It), this.transparentDraws.sort(Qt)
+      collect(bb) {
+        this.collectGroup(bb, -1, this.skyDraws, this.skyDraws, !0), this.collectGroup(bb, 0, this.opaqueDraws, this.transparentDraws, !1), this.collectGroup(bb, 1, this.frontDraws, this.frontDraws, !0);
+        for (const cb of this.modelMeshes.groupIds())(cb < -1 || cb > 1) && this.warnOnce(`group:${cb}`, `rendering group ${cb} is not drawn`);
+        for (const cb of this.f6.groupIds())(cb < -1 || cb > 1) && this.warnOnce(`group:${cb}`, `rendering group ${cb} is not drawn`);
+        this.opaqueDraws.sort(pW), this.transparentDraws.sort(ba)
       }
-      collectGroup(kk, Fk, Bk, Rk, tk) {
-        const ak = this.modelMeshes.group(Fk),
-          Xk = this.A_.group(Fk),
-          bk = 0 === Fk ? null === Xk || void 0 === Xk ? void 0 : Xk.opaque : void 0;
-        this.collectList(kk, null === ak || void 0 === ak ? void 0 : ak.opaque, bk || null === Xk || void 0 === Xk ? void 0 : Xk.opaque, Fk, !1, Bk, tk), bk && (this.A_.drawn += this.maker.bundleDraws(kk, bk, Fk)), this.collectList(kk, null === ak || void 0 === ak ? void 0 : ak.alphaTest, void 0, Fk, !1, Bk, tk), this.collectList(kk, null === ak || void 0 === ak ? void 0 : ak.transparent, null === Xk || void 0 === Xk ? void 0 : Xk.transparent, Fk, !0, Rk, tk)
+      collectGroup(bb, cb, sb, kb, Wb) {
+        const ab = this.modelMeshes.group(cb),
+          Tb = this.f6.group(cb),
+          Ub = 0 === cb ? null === Tb || void 0 === Tb ? void 0 : Tb.opaque : void 0;
+        this.collectList(bb, null === ab || void 0 === ab ? void 0 : ab.opaque, Ub || null === Tb || void 0 === Tb ? void 0 : Tb.opaque, cb, !1, sb, Wb), Ub && (this.f6.drawn += this.maker.bundleDraws(bb, Ub, cb)), this.collectList(bb, null === ab || void 0 === ab ? void 0 : ab.alphaTest, void 0, cb, !1, sb, Wb), this.collectList(bb, null === ab || void 0 === ab ? void 0 : ab.transparent, null === Tb || void 0 === Tb ? void 0 : Tb.transparent, cb, !0, kb, Wb)
       }
-      collectList(kk, Fk, Bk, Rk, tk, ak, Xk) {
-        var bk;
-        const wk = ak.length;
-        Fk && this.maker.pushDraws(kk, Fk.units, Fk.units.length, Rk, tk, ak, Fk.rows), Bk && (this.A_.drawn += this.maker.pushDraws(kk, Bk, Bk.length, Rk, tk, ak));
-        const dk = tk ? null === (bk = this.modelMeshes.group(Rk)) || void 0 === bk ? void 0 : bk.text : void 0;
-        dk && this.maker.pushDraws(kk, dk.units, dk.units.length, Rk, !0, ak, dk.rows), Xk && ka(ak, wk)
-      }
-    }
-
-    function It(kk, Fk) {
-      return kk.program.id - Fk.program.id || kk.material.owner.uniqueId - Fk.material.owner.uniqueId
-    }
-
-    function Qt(kk, Fk) {
-      return kk.material.owner.uniqueId - Fk.material.owner.uniqueId
-    }
-
-    function ka(kk, Fk) {
-      for (let Bk = Fk + 1; Bk < kk.length; Bk++) {
-        const Rk = kk[Bk];
-        let tk = Bk - 1;
-        for (; tk >= Fk && Qt(kk[tk], Rk) > 0; tk--) kk[tk + 1] = kk[tk];
-        kk[tk + 1] = Rk
+      collectList(bb, cb, sb, kb, Wb, ab, Tb) {
+        var Ub;
+        const Ib = ab.length;
+        cb && this.maker.pushDraws(bb, cb.units, cb.units.length, kb, Wb, ab, cb.rows), sb && (this.f6.drawn += this.maker.pushDraws(bb, sb, sb.length, kb, Wb, ab));
+        const Hb = Wb ? null === (Ub = this.modelMeshes.group(kb)) || void 0 === Ub ? void 0 : Ub.text : void 0;
+        Hb && this.maker.pushDraws(bb, Hb.units, Hb.units.length, kb, !0, ab, Hb.rows), Tb && ca(ab, Ib)
       }
     }
-    const Fa = {};
 
-    function Ba(kk) {
-      return kk.hasThinInstances ? "thin" : kk.GRk || kk._userInstancedBuffersStorage ? "instanced" : "none"
+    function pW(bb, cb) {
+      return bb.program.id - cb.program.id || bb.material.owner.uniqueId - cb.material.owner.uniqueId
     }
 
-    function Ra(kk, Fk, Bk) {
-      return kk ? (Bk._needUVs = !0, kk.optimizeUVAllocation && (0, Hk.L)(kk.matrix) ? (Bk[`${Fk}DIRECTUV`] = kk.uvSet + 1, Bk[`MAINUV${kk.uvSet+1}`] = !0) : Bk[`${Fk}DIRECTUV`] = 0, !0) : (Bk[`${Fk}DIRECTUV`] = 0, !1)
+    function ba(bb, cb) {
+      return bb.material.owner.uniqueId - cb.material.owner.uniqueId
     }
 
-    function ta(kk) {
-      const Fk = new Map;
-      for (const Bk in kk) {
-        if (95 === Bk.charCodeAt(0)) continue;
-        const Rk = kk[Bk],
-          tk = typeof Rk;
-        "number" === tk || "string" === tk ? Fk.set(Bk, String(Rk)) : Rk && "function" !== tk && Fk.set(Bk, !0)
+    function ca(bb, cb) {
+      for (let sb = cb + 1; sb < bb.length; sb++) {
+        const kb = bb[sb];
+        let Wb = sb - 1;
+        for (; Wb >= cb && ba(bb[Wb], kb) > 0; Wb--) bb[Wb + 1] = bb[Wb];
+        bb[Wb + 1] = kb
       }
-      return Fk
+    }
+    const sa = {};
+
+    function ka(bb) {
+      return bb.hasThinInstances ? "thin" : bb.ykb || bb._userInstancedBuffersStorage ? "instanced" : "none"
     }
 
-    function aa(kk) {
-      const Fk = {
+    function Wa(bb, cb, sb) {
+      return bb ? (sb._needUVs = !0, bb.optimizeUVAllocation && (0, Bb.H)(bb.matrix) ? (sb[`${cb}DIRECTUV`] = bb.uvSet + 1, sb[`MAINUV${bb.uvSet+1}`] = !0) : sb[`${cb}DIRECTUV`] = 0, !0) : (sb[`${cb}DIRECTUV`] = 0, !1)
+    }
+
+    function aa(bb) {
+      const cb = new Map;
+      for (const sb in bb) {
+        if (95 === sb.charCodeAt(0)) continue;
+        const kb = bb[sb],
+          Wb = typeof kb;
+        "number" === Wb || "string" === Wb ? cb.set(sb, String(kb)) : kb && "function" !== Wb && cb.set(sb, !0)
+      }
+      return cb
+    }
+
+    function Ta(bb) {
+      const cb = {
         markAllAsDirty: () => {}
       };
       for (const {
-          defines: Bk
+          defines: sb
         }
-        of kk.features)
-        for (const kk in Bk) Fk[kk] = Bk[kk];
-      return Fk
+        of bb.features)
+        for (const bb in sb) cb[bb] = sb[bb];
+      return cb
     }
 
-    function Xa(kk) {
-      const Fk = kk.parts.geometry;
-      return null !== Fk && void 0 !== Fk && Fk.live ? Fk : null
+    function Ua(bb) {
+      const cb = bb.parts.geometry;
+      return null !== cb && void 0 !== cb && cb.live ? cb : null
     }
 
-    function ba(kk) {
-      var Fk;
-      return null !== (Fk = Xa(kk)) && void 0 !== Fk ? Fk : Fa
+    function Ia(bb) {
+      var cb;
+      return null !== (cb = Ua(bb)) && void 0 !== cb ? cb : sa
     }
-    class wa {
-      constructor(kk, Fk, Bk) {
-        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-        this.resources = kk, this.warnOnce = Fk, this.programWithModel = Bk, this.packFailed = Rk, this.drawStates = new WeakMap, this.view = void 0, this.modelPackVariant = 0
+    class Ha {
+      constructor(bb, cb, sb) {
+        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+        this.resources = bb, this.warnOnce = cb, this.programWithModel = sb, this.packFailed = kb, this.drawStates = new WeakMap, this.view = void 0, this.modelPackVariant = 0
       }
-      programFor(kk, Fk, Bk, Rk, tk) {
-        const ak = Fk.owner;
-        let Xk = this.drawStates.get(Fk);
-        if (!Xk) {
-          const kk = Fk.parts.materials[Fk.range];
-          if (!kk) return this.warnOnce("model", `${Bk.name} on ${ak.name} is not a model material, so it is not drawn on WebGPU (adoptModelMaterial); further ones are not reported`), null;
-          Xk = {
-            defines: aa(kk),
-            model: kk,
+      programFor(bb, cb, sb, kb, Wb) {
+        const ab = cb.owner;
+        let Tb = this.drawStates.get(cb);
+        if (!Tb) {
+          const bb = cb.parts.materials[cb.range];
+          if (!bb) return this.warnOnce("model", `${sb.name} on ${ab.name} is not a model material, so it is not drawn on WebGPU (adoptModelMaterial); further ones are not reported`), null;
+          Tb = {
+            defines: Ta(bb),
+            model: bb,
             modelVersion: -1,
             definesKey: "",
             program: null,
-            instancing: tk,
-            groupId: Rk,
+            instancing: Wb,
+            groupId: kb,
             geometry: null,
             instanceLayout: null,
             definesBits: 0,
             packVariant: 0
-          }, this.drawStates.set(Fk, Xk)
+          }, this.drawStates.set(cb, Tb)
         }
-        if (this.programCurrent(Xk, Fk, tk, Rk)) return Xk.program;
+        if (this.programCurrent(Tb, cb, Wb, kb)) return Tb.program;
         const {
-          model: bk
-        } = Xk, wk = ba(Fk), dk = this.instanceLayout(ak, tk), sk = this.definesBits(ak);
-        if (!this.prepareModelDefines(kk, ak, bk, Xk.defines, Rk, tk)) return null;
-        Xk.instancing = tk, Xk.groupId = Rk, Xk.modelVersion = bk.version, Xk.geometry = wk, Xk.instanceLayout = dk, Xk.definesBits = sk;
-        const Vk = function(kk) {
-          let Fk = "";
-          for (const [Bk, Rk] of kk) Fk += !0 === Rk ? `${Bk};` : `${Bk}=${Rk};`;
-          return Fk
-        }(ta(Xk.defines));
-        return Vk === Xk.definesKey && Xk.packVariant === this.modelPackVariant && Xk.program && !this.packFailed(Xk.program) || (Xk.definesKey = Vk, Xk.packVariant = this.modelPackVariant, Xk.program = this.programWithModel(bk, Xk.defines, Vk)), Xk.program
+          model: Ub
+        } = Tb, Ib = Ia(cb), Hb = this.instanceLayout(ab, Wb), fb = this.definesBits(ab);
+        if (!this.prepareModelDefines(bb, ab, Ub, Tb.defines, kb, Wb)) return null;
+        Tb.instancing = Wb, Tb.groupId = kb, Tb.modelVersion = Ub.version, Tb.geometry = Ib, Tb.instanceLayout = Hb, Tb.definesBits = fb;
+        const Mb = function(bb) {
+          let cb = "";
+          for (const [sb, kb] of bb) cb += !0 === kb ? `${sb};` : `${sb}=${kb};`;
+          return cb
+        }(aa(Tb.defines));
+        return Mb === Tb.definesKey && Tb.packVariant === this.modelPackVariant && Tb.program && !this.packFailed(Tb.program) || (Tb.definesKey = Mb, Tb.packVariant = this.modelPackVariant, Tb.program = this.programWithModel(Ub, Tb.defines, Mb)), Tb.program
       }
-      programCurrent(kk, Fk, Bk, Rk) {
-        return null !== kk.program && !this.packFailed(kk.program) && kk.instancing === Bk && kk.groupId === Rk && this.definesHold(kk, Fk, Bk)
+      programCurrent(bb, cb, sb, kb) {
+        return null !== bb.program && !this.packFailed(bb.program) && bb.instancing === sb && bb.groupId === kb && this.definesHold(bb, cb, sb)
       }
-      definesHold(kk, Fk, Bk) {
-        return kk.modelVersion === kk.model.version && kk.geometry === ba(Fk) && kk.instanceLayout === this.instanceLayout(Fk.owner, Bk) && kk.definesBits === this.definesBits(Fk.owner) && kk.packVariant === this.modelPackVariant
+      definesHold(bb, cb, sb) {
+        return bb.modelVersion === bb.model.version && bb.geometry === Ia(cb) && bb.instanceLayout === this.instanceLayout(cb.owner, sb) && bb.definesBits === this.definesBits(cb.owner) && bb.packVariant === this.modelPackVariant
       }
-      modelPackKind(kk) {
-        var Fk;
-        return 0 === this.modelPackVariant ? null : null !== (Fk = (0, Sk.z)(kk, Ek.f.name)) && void 0 !== Fk && Fk.active ? "placed" : kk.item ? "item" : kk.lifeform ? "lifeform" : kk.box ? "box" : null
+      modelPackKind(bb) {
+        var cb;
+        return 0 === this.modelPackVariant ? null : null !== (cb = (0, Jb.v)(bb, hb.j.name)) && void 0 !== cb && cb.active ? "placed" : bb.item ? "item" : bb.lifeform ? "lifeform" : bb.box ? "box" : null
       }
-      instanceLayout(kk, Fk) {
-        var Bk, Rk, tk;
-        return "thin" === Fk ? null !== (tk = this.resources.K3.get(kk)) && void 0 !== tk ? tk : null : "instanced" === Fk && null !== (Bk = null === (Rk = kk._userInstancedBuffersStorage) || void 0 === Rk ? void 0 : Rk.interleavedKinds) && void 0 !== Bk ? Bk : null
+      instanceLayout(bb, cb) {
+        var sb, kb, Wb;
+        return "thin" === cb ? null !== (Wb = this.resources.vF.get(bb)) && void 0 !== Wb ? Wb : null : "instanced" === cb && null !== (sb = null === (kb = bb._userInstancedBuffersStorage) || void 0 === kb ? void 0 : kb.interleavedKinds) && void 0 !== sb ? sb : null
       }
-      definesBits(kk) {
-        const Fk = this.view;
-        return (kk.visibility < 1 ? 1 : 0) | (kk.hasVertexAlpha ? 2 : 0) | (kk.applyFog ? 4 : 0) | (kk.useVertexColors ? 8 : 0) | (kk.nonUniformScaling ? 16 : 0) | (Fk.fogEnabled && 0 !== Fk.fogMode ? 32 : 0) | (Fk.lightsEnabled ? 64 : 0) | Fk.lightCount << 7
+      definesBits(bb) {
+        const cb = this.view;
+        return (bb.visibility < 1 ? 1 : 0) | (bb.hasVertexAlpha ? 2 : 0) | (bb.applyFog ? 4 : 0) | (bb.useVertexColors ? 8 : 0) | (bb.nonUniformScaling ? 16 : 0) | (cb.fogEnabled && 0 !== cb.fogMode ? 32 : 0) | (cb.lightsEnabled ? 64 : 0) | cb.lightCount << 7
       }
-      prepareLightDefines(kk, Fk, Bk) {
-        let Rk = 0;
-        if (this.view.lightsEnabled && !Fk) {
-          const Fk = Math.min(Bk, 4);
-          for (; Rk < this.view.lightCount && (kk[`LIGHT${Rk}`] = !0, kk[`LITE_LIGHT${Rk}_SLOT`] = Rk, Rk++, kk._needNormals = !0, Rk !== Fk););
+      prepareLightDefines(bb, cb, sb) {
+        let kb = 0;
+        if (this.view.lightsEnabled && !cb) {
+          const cb = Math.min(sb, 4);
+          for (; kb < this.view.lightCount && (bb[`LIGHT${kb}`] = !0, bb[`LITE_LIGHT${kb}_SLOT`] = kb, kb++, bb._needNormals = !0, kb !== cb););
         }
-        for (let tk = Rk; tk < 4; tk++) kk[`LIGHT${tk}`] = !1, kk[`LITE_LIGHT${tk}_SLOT`] = void 0
+        for (let Wb = kb; Wb < 4; Wb++) bb[`LIGHT${Wb}`] = !1, bb[`LITE_LIGHT${Wb}_SLOT`] = void 0
       }
-      prepareModelDefines(kk, Fk, Bk, Rk, tk, ak) {
+      prepareModelDefines(bb, cb, sb, kb, Wb, ab) {
         const {
-          features: Xk
-        } = Bk;
-        Rk._needNormals = !1, Rk._needUVs = !1;
-        const bk = this.view;
-        this.prepareLightDefines(Rk, Bk.disableLighting, Bk.maxSimultaneousLights), Rk.MAINUV1 = !1, Rk.MAINUV2 = !1;
-        const wk = Bk.diffuseTexture;
-        wk ? (Rk._needUVs = !0, Rk.DIFFUSE = !0, wk.optimizeUVAllocation && (0, Hk.L)(wk.matrix) ? (Rk.DIFFUSEDIRECTUV = wk.uvSet + 1, Rk[`MAINUV${wk.uvSet+1}`] = !0) : Rk.DIFFUSEDIRECTUV = 0, wk.uvSet > 1 && this.warnOnce(`uvset:${Bk.name}`, `${Bk.name} samples UV set ${wk.uvSet+1}, which is not supported`)) : (Rk.DIFFUSE = !1, Rk.DIFFUSEDIRECTUV = 0);
-        const dk = Bk.opacityTexture,
-          sk = Bk.emissiveTexture;
-        Rk.OPACITY = Ra(dk, "OPACITY", Rk), Rk.OPACITYRGB = null !== dk && dk.getAlphaFromRGB, Rk.EMISSIVE = Ra(sk, "EMISSIVE", Rk), (dk && dk.uvSet > 1 || sk && sk.uvSet > 1) && this.warnOnce(`uvset:${Bk.name}`, `${Bk.name} samples a UV set past 2, which is not supported`);
-        const Vk = Bk.reflectionTexture,
-          Jk = null !== Vk;
-        if (Jk) {
-          if (!this.resources.boundTexture(Vk)) return !1;
-          Rk._needNormals = !0
+          features: Tb
+        } = sb;
+        kb._needNormals = !1, kb._needUVs = !1;
+        const Ub = this.view;
+        this.prepareLightDefines(kb, sb.disableLighting, sb.maxSimultaneousLights), kb.MAINUV1 = !1, kb.MAINUV2 = !1;
+        const Ib = sb.diffuseTexture;
+        Ib ? (kb._needUVs = !0, kb.DIFFUSE = !0, Ib.optimizeUVAllocation && (0, Bb.H)(Ib.matrix) ? (kb.DIFFUSEDIRECTUV = Ib.uvSet + 1, kb[`MAINUV${Ib.uvSet+1}`] = !0) : kb.DIFFUSEDIRECTUV = 0, Ib.uvSet > 1 && this.warnOnce(`uvset:${sb.name}`, `${sb.name} samples UV set ${Ib.uvSet+1}, which is not supported`)) : (kb.DIFFUSE = !1, kb.DIFFUSEDIRECTUV = 0);
+        const Hb = sb.opacityTexture,
+          fb = sb.emissiveTexture;
+        kb.OPACITY = Wa(Hb, "OPACITY", kb), kb.OPACITYRGB = null !== Hb && Hb.getAlphaFromRGB, kb.EMISSIVE = Wa(fb, "EMISSIVE", kb), (Hb && Hb.uvSet > 1 || fb && fb.uvSet > 1) && this.warnOnce(`uvset:${sb.name}`, `${sb.name} samples a UV set past 2, which is not supported`);
+        const Mb = sb.reflectionTexture,
+          Xb = null !== Mb;
+        if (Xb) {
+          if (!this.resources.boundTexture(Mb)) return !1;
+          kb._needNormals = !0
         }
-        Rk.REFLECTION = Jk, Rk.REFLECTIONMAP_3D = Jk, Rk.REFLECTIONMAP_SKYBOX = Jk, Rk.REFLECTIONMAP_OPPOSITEZ = Jk && (kk.useRightHandedSystem ? !Vk.invertZ : Vk.invertZ), Rk.ROUGHNESS = Jk && Bk.roughness > 0, Rk.REFLECTIONOVERALPHA = Jk && Bk.useReflectionOverAlpha, Rk.LITE_REFLECTION_LUMINANCE = Jk && "cube" === Vk.source.kind && Vk.source.luminance, (Fk.skeleton || Fk.morphTargetManager) && this.warnOnce(`skin:${Fk.name}`, `${Fk.name} has bones or morph targets, which are not supported`), Rk.FOG = Bk.fogEnabled && Fk.applyFog && bk.fogEnabled && 0 !== bk.fogMode, Rk.NONUNIFORMSCALING = Fk.nonUniformScaling;
+        kb.REFLECTION = Xb, kb.REFLECTIONMAP_3D = Xb, kb.REFLECTIONMAP_SKYBOX = Xb, kb.REFLECTIONMAP_OPPOSITEZ = Xb && (bb.useRightHandedSystem ? !Mb.invertZ : Mb.invertZ), kb.ROUGHNESS = Xb && sb.roughness > 0, kb.REFLECTIONOVERALPHA = Xb && sb.useReflectionOverAlpha, kb.LITE_REFLECTION_LUMINANCE = Xb && "cube" === Mb.source.kind && Mb.source.luminance, (cb.skeleton || cb.morphTargetManager) && this.warnOnce(`skin:${cb.name}`, `${cb.name} has bones or morph targets, which are not supported`), kb.FOG = sb.fogEnabled && cb.applyFog && Ub.fogEnabled && 0 !== Ub.fogMode, kb.NONUNIFORMSCALING = cb.nonUniformScaling;
         const {
-          visibility: Ak,
-          hasVertexAlpha: ek
-        } = Fk;
-        Rk.ALPHATEST = (0, Sk.P)(Bk, Ak, ek), Rk.ALPHAFROMDIFFUSE = (0, Sk.fb)(Bk), Rk.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== Bk.transparencyMode, Rk.ALPHABLEND = null === Bk.transparencyMode || (0, Sk.N)(Bk, Ak, ek), Rk.PREMULTIPLYALPHA = 7 === Bk.alphaMode || 8 === Bk.alphaMode, Rk.EMISSIVEASILLUMINATION = Bk.useEmissiveAsIllumination, Rk.LINKEMISSIVEWITHDIFFUSE = Bk.linkEmissiveWithDiffuse, Rk.TWOSIDEDLIGHTING = !Bk.backFaceCulling && Bk.twoSidedLighting, Rk.INSTANCES = "none" !== ak, Rk.THIN_INSTANCES = "thin" === ak, Rk.LITE_FRONT_LAYER = tk >= 1;
+          visibility: nb,
+          hasVertexAlpha: mb
+        } = cb;
+        kb.ALPHATEST = (0, Jb.Q)(sb, nb, mb), kb.ALPHAFROMDIFFUSE = (0, Jb.gb)(sb), kb.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== sb.transparencyMode, kb.ALPHABLEND = null === sb.transparencyMode || (0, Jb.P)(sb, nb, mb), kb.PREMULTIPLYALPHA = 7 === sb.alphaMode || 8 === sb.alphaMode, kb.EMISSIVEASILLUMINATION = sb.useEmissiveAsIllumination, kb.LINKEMISSIVEWITHDIFFUSE = sb.linkEmissiveWithDiffuse, kb.TWOSIDEDLIGHTING = !sb.backFaceCulling && sb.twoSidedLighting, kb.INSTANCES = "none" !== ab, kb.THIN_INSTANCES = "thin" === ab, kb.LITE_FRONT_LAYER = Wb >= 1;
         for (const {
-            feature: Ok,
-            state: Ek,
-            active: Sk
+            feature: Yb,
+            state: hb,
+            active: Jb
           }
-          of Xk) {
-          var yk, fk;
-          if (Sk) null === (yk = (fk = (0, VF.j)(Ok)).prepareDefinesBeforeAttributes) || void 0 === yk || yk.call(fk, Ek, Rk, kk, Fk)
+          of Tb) {
+          var lb, Qb;
+          if (Jb) null === (lb = (Qb = (0, fc.g)(Yb)).prepareDefinesBeforeAttributes) || void 0 === lb || lb.call(Qb, hb, kb, bb, cb)
         }
-        this.modelPackKind(Bk) && (Rk._needNormals = !0), Rk.NORMAL = Rk._needNormals && Fk.isVerticesDataPresent("normal"), Rk.UV1 = Rk._needUVs && Fk.isVerticesDataPresent("uv"), Rk.UV2 = Rk._needUVs && Fk.isVerticesDataPresent("uv2");
-        const mk = Fk.useVertexColors && Fk.isVerticesDataPresent("color");
-        Rk.VERTEXCOLOR = mk, Rk.VERTEXALPHA = Fk.hasVertexAlpha && mk, Rk.INSTANCESCOLOR = "none" !== ak && Fk.isVerticesDataPresent("instanceColor");
+        this.modelPackKind(sb) && (kb._needNormals = !0), kb.NORMAL = kb._needNormals && cb.isVerticesDataPresent("normal"), kb.UV1 = kb._needUVs && cb.isVerticesDataPresent("uv"), kb.UV2 = kb._needUVs && cb.isVerticesDataPresent("uv2");
+        const eb = cb.useVertexColors && cb.isVerticesDataPresent("color");
+        kb.VERTEXCOLOR = eb, kb.VERTEXALPHA = cb.hasVertexAlpha && eb, kb.INSTANCESCOLOR = "none" !== ab && cb.isVerticesDataPresent("instanceColor");
         for (const {
-            feature: Ok,
-            state: Ek,
-            active: Sk
+            feature: Yb,
+            state: hb,
+            active: Jb
           }
-          of Xk) {
-          var Wk, vk;
-          if (Sk) null === (Wk = (vk = (0, VF.j)(Ok)).prepareDefines) || void 0 === Wk || Wk.call(vk, Ek, Rk, kk, Fk, Bk)
+          of Tb) {
+          var Cb, Nb;
+          if (Jb) null === (Cb = (Nb = (0, fc.g)(Yb)).prepareDefines) || void 0 === Cb || Cb.call(Nb, hb, kb, bb, cb, sb)
         }
-        const ik = kk.ne();
+        const Vb = bb.Sm();
         for (const {
-            feature: Ok,
-            state: Ek,
-            active: Sk
+            feature: Yb,
+            state: hb,
+            active: Jb
           }
-          of Xk) {
-          var Yk, Lk;
-          if (Sk && !1 === (null === (Yk = (Lk = (0, VF.j)(Ok)).isReadyForSubMesh) || void 0 === Yk ? void 0 : Yk.call(Lk, Ek, Rk, kk, ik))) return !1
+          of Tb) {
+          var Lb, ub;
+          if (Jb && !1 === (null === (Lb = (ub = (0, fc.g)(Yb)).isReadyForSubMesh) || void 0 === Lb ? void 0 : Lb.call(ub, hb, kb, bb, Vb))) return !1
         }
         return !0
       }
     }
 
-    function da(kk, Fk, Bk) {
-      return kk.codeVersion !== Fk.version && function(kk, Fk) {
-        const Bk = [],
-          Rk = [];
+    function fa(bb, cb, sb) {
+      return bb.codeVersion !== cb.version && function(bb, cb) {
+        const sb = [],
+          kb = [];
         for (const {
-            feature: Jk,
-            state: Ak,
-            active: ek
+            feature: Xb,
+            state: nb,
+            active: mb
           }
-          of Fk.features) {
-          var tk, ak, Xk, bk;
-          if (ek) sa(null === (tk = (ak = (0, VF.j)(Jk)).getCustomCode) || void 0 === tk ? void 0 : tk.call(ak, Ak, "vertex", Lk.e.WGSL), Bk), sa(null === (Xk = (bk = (0, VF.j)(Jk)).getCustomCode) || void 0 === Xk ? void 0 : Xk.call(bk, Ak, "fragment", Lk.e.WGSL), Rk)
+          of cb.features) {
+          var Wb, ab, Tb, Ub;
+          if (mb) Ma(null === (Wb = (ab = (0, fc.g)(Xb)).getCustomCode) || void 0 === Wb ? void 0 : Wb.call(ab, nb, "vertex", ub.e.WGSL), sb), Ma(null === (Tb = (Ub = (0, fc.g)(Xb)).getCustomCode) || void 0 === Tb ? void 0 : Tb.call(Ub, nb, "fragment", ub.e.WGSL), kb)
         }
-        const wk = [];
+        const Ib = [];
         for (const {
-            feature: Jk,
-            state: Ak
+            feature: Xb,
+            state: nb
           }
-          of Fk.features) {
-          var dk, sk;
-          const kk = null === (dk = (sk = (0, VF.j)(Jk)).getUniforms) || void 0 === dk ? void 0 : dk.call(sk, Ak, Lk.e.WGSL);
-          for (const Fk of null !== (Vk = null === kk || void 0 === kk ? void 0 : kk.ubo) && void 0 !== Vk ? Vk : []) {
-            var Vk;
-            Fk.size && Fk.type && wk.push({
-              name: Fk.name,
-              type: Fk.type,
-              arraySize: Fk.arraySize
+          of cb.features) {
+          var Hb, fb;
+          const bb = null === (Hb = (fb = (0, fc.g)(Xb)).getUniforms) || void 0 === Hb ? void 0 : Hb.call(fb, nb, ub.e.WGSL);
+          for (const cb of null !== (Mb = null === bb || void 0 === bb ? void 0 : bb.ubo) && void 0 !== Mb ? Mb : []) {
+            var Mb;
+            cb.size && cb.type && Ib.push({
+              name: cb.name,
+              type: cb.type,
+              arraySize: cb.arraySize
             })
           }
         }
-        kk.vertexCode = Bk, kk.fragmentCode = Rk, kk.pluginUniforms = wk, kk.codeKey = JSON.stringify([Bk, Rk, wk]), kk.codeVersion = Fk.version
-      }(kk, Fk), `${Bk}#${kk.codeKey}`
+        bb.vertexCode = sb, bb.fragmentCode = kb, bb.pluginUniforms = Ib, bb.codeKey = JSON.stringify([sb, kb, Ib]), bb.codeVersion = cb.version
+      }(bb, cb), `${sb}#${bb.codeKey}`
     }
 
-    function sa(kk, Fk) {
-      if (kk)
-        for (const Bk in kk) kk[Bk] && Fk.push([Bk, kk[Bk]])
+    function Ma(bb, cb) {
+      if (bb)
+        for (const sb in bb) bb[sb] && cb.push([sb, bb[sb]])
     }
-    const Va = new Map([
+    const Xa = new Map([
       [512, "never"],
       [513, "greater"],
       [514, "equal"],
@@ -2261,326 +2261,326 @@ export const modules = {
       [518, "less-equal"],
       [519, "always"]
     ]);
-    class Ja {
-      constructor(kk) {
-        this.warnOnce = kk, this.states = new Map
+    class na {
+      constructor(bb) {
+        this.warnOnce = bb, this.states = new Map
       }
-      renderState(kk, Fk, Bk, Rk) {
-        var tk;
-        let ak = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "triangle-list",
-          Xk = null !== (tk = kk.sideOrientation) && void 0 !== tk ? tk : Fk.sideOrientation;
-        Fk._getWorldMatrixDeterminant() < 0 && (Xk = 0 === Xk ? 1 : 0);
-        const bk = "triangle-list" === ak,
-          wk = Bk ? kk.alphaMode : 0,
-          dk = (!Bk || (0 === wk || kk.forceDepthWrite)) && !kk.disableDepthWrite,
-          sk = bk && kk.backFaceCulling ? kk.cullBackFaces ? "back" : "front" : "none",
-          Vk = bk && 0 !== Xk ? "ccw" : "cw",
-          Jk = kk.depthFunction,
-          Ak = bk ? kk.zOffset : 0,
-          ek = bk ? kk.zOffsetUnits : 0,
-          yk = !kk.disableColorWrite;
-        return Rk && Rk.alphaMode === wk && Rk.depthWrite === dk && Rk.depthFunction === Jk && Rk.cullMode === sk && Rk.frontFace === Vk && Rk.zOffset === Ak && Rk.zOffsetUnits === ek && Rk.colourWrite === yk && Rk.topology === ak ? Rk : this.stateFor(wk, dk, Jk, sk, Vk, Ak, ek, yk, ak)
+      renderState(bb, cb, sb, kb) {
+        var Wb;
+        let ab = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "triangle-list",
+          Tb = null !== (Wb = bb.sideOrientation) && void 0 !== Wb ? Wb : cb.sideOrientation;
+        cb._getWorldMatrixDeterminant() < 0 && (Tb = 0 === Tb ? 1 : 0);
+        const Ub = "triangle-list" === ab,
+          Ib = sb ? bb.alphaMode : 0,
+          Hb = (!sb || (0 === Ib || bb.forceDepthWrite)) && !bb.disableDepthWrite,
+          fb = Ub && bb.backFaceCulling ? bb.cullBackFaces ? "back" : "front" : "none",
+          Mb = Ub && 0 !== Tb ? "ccw" : "cw",
+          Xb = bb.depthFunction,
+          nb = Ub ? bb.zOffset : 0,
+          mb = Ub ? bb.zOffsetUnits : 0,
+          lb = !bb.disableColorWrite;
+        return kb && kb.alphaMode === Ib && kb.depthWrite === Hb && kb.depthFunction === Xb && kb.cullMode === fb && kb.frontFace === Mb && kb.zOffset === nb && kb.zOffsetUnits === mb && kb.colourWrite === lb && kb.topology === ab ? kb : this.stateFor(Ib, Hb, Xb, fb, Mb, nb, mb, lb, ab)
       }
-      stateFor(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk) {
-        const dk = `${kk}|${Fk}|${Bk}|${Rk}|${tk}|${ak}|${Xk}|${bk}|${wk}`;
-        let sk = this.states.get(dk);
-        if (!sk) {
-          var Vk;
-          const Jk = kk ? pt(kk) : null;
-          kk && !Jk && this.warnOnce(`alpha:${kk}`, `alpha mode ${kk} is not supported`), sk = {
-            key: dk,
-            alphaMode: kk,
-            depthFunction: Bk,
-            zOffset: ak,
-            zOffsetUnits: Xk,
-            topology: wk,
-            blend: Jk,
-            depthWrite: Fk,
-            depthCompare: Bk && null !== (Vk = Va.get(Bk)) && void 0 !== Vk ? Vk : null,
-            cullMode: Rk,
-            frontFace: tk,
-            depthBias: -Xk,
-            depthBiasSlopeScale: -ak,
-            colourWrite: bk
-          }, this.states.set(dk, sk)
+      stateFor(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib) {
+        const Hb = `${bb}|${cb}|${sb}|${kb}|${Wb}|${ab}|${Tb}|${Ub}|${Ib}`;
+        let fb = this.states.get(Hb);
+        if (!fb) {
+          var Mb;
+          const Xb = bb ? SW(bb) : null;
+          bb && !Xb && this.warnOnce(`alpha:${bb}`, `alpha mode ${bb} is not supported`), fb = {
+            key: Hb,
+            alphaMode: bb,
+            depthFunction: sb,
+            zOffset: ab,
+            zOffsetUnits: Tb,
+            topology: Ib,
+            blend: Xb,
+            depthWrite: cb,
+            depthCompare: sb && null !== (Mb = Xa.get(sb)) && void 0 !== Mb ? Mb : null,
+            cullMode: kb,
+            frontFace: Wb,
+            depthBias: -Tb,
+            depthBiasSlopeScale: -ab,
+            colourWrite: Ub
+          }, this.states.set(Hb, fb)
         }
-        return sk
+        return fb
       }
     }
-    var Aa = Bk(37071);
+    var ma = sb(36982);
 
-    function ea(kk) {
-      if (!kk.frozen) return -1;
-      let Fk = kk.version;
+    function la(bb) {
+      if (!bb.frozen) return -1;
+      let cb = bb.version;
       for (const {
-          feature: Bk,
-          state: Rk,
-          active: tk
+          feature: sb,
+          state: kb,
+          active: Wb
         }
-        of kk.features) {
-        if (!tk || !Bk.bind) continue;
-        const kk = (0, VF.j)(Bk).uniformsVersion;
-        if (!kk) return -1;
-        Fk += kk(Rk)
+        of bb.features) {
+        if (!Wb || !sb.bind) continue;
+        const bb = (0, fc.g)(sb).uniformsVersion;
+        if (!bb) return -1;
+        cb += bb(kb)
       }
-      return Fk
+      return cb
     }
-    class ya {
-      constructor(kk, Fk, Bk) {
-        this.slots = kk, this.data = Fk, this.textures = Bk, this.useUbo = !0, this.currentEffect = null, this.expected = new Set
+    class Qa {
+      constructor(bb, cb, sb) {
+        this.slots = bb, this.data = cb, this.textures = sb, this.useUbo = !0, this.currentEffect = null, this.expected = new Set
       }
-      updateFloat(kk, Fk) {
-        this.write4(kk, Fk, 0, 0, 0, 1)
+      updateFloat(bb, cb) {
+        this.write4(bb, cb, 0, 0, 0, 1)
       }
-      updateFloat2(kk, Fk, Bk) {
-        this.write4(kk, Fk, Bk, 0, 0, 2)
+      updateFloat2(bb, cb, sb) {
+        this.write4(bb, cb, sb, 0, 0, 2)
       }
-      updateFloat3(kk, Fk, Bk, Rk) {
-        this.write4(kk, Fk, Bk, Rk, 0, 3)
+      updateFloat3(bb, cb, sb, kb) {
+        this.write4(bb, cb, sb, kb, 0, 3)
       }
-      updateFloat4(kk, Fk, Bk, Rk, tk) {
-        this.write4(kk, Fk, Bk, Rk, tk, 4)
+      updateFloat4(bb, cb, sb, kb, Wb) {
+        this.write4(bb, cb, sb, kb, Wb, 4)
       }
-      updateVector3(kk, Fk) {
-        this.write4(kk, Fk.x, Fk.y, Fk.z, 0, 3)
+      updateVector3(bb, cb) {
+        this.write4(bb, cb.x, cb.y, cb.z, 0, 3)
       }
-      updateVector4(kk, Fk) {
-        this.write4(kk, Fk.x, Fk.y, Fk.z, Fk.w, 4)
+      updateVector4(bb, cb) {
+        this.write4(bb, cb.x, cb.y, cb.z, cb.w, 4)
       }
-      updateColor3(kk, Fk) {
-        this.write4(kk, Fk.r, Fk.g, Fk.b, 0, 3)
+      updateColor3(bb, cb) {
+        this.write4(bb, cb.r, cb.g, cb.b, 0, 3)
       }
-      updateColor4(kk, Fk, Bk) {
-        this.write4(kk, Fk.r, Fk.g, Fk.b, Bk, 4)
+      updateColor4(bb, cb, sb) {
+        this.write4(bb, cb.r, cb.g, cb.b, sb, 4)
       }
-      updateFloatsFrom(kk, Fk, Bk, Rk) {
-        const tk = this.slots.get(kk);
-        if (!tk) return;
-        const ak = this.data,
-          Xk = tk.offset;
-        for (let bk = 0; bk < Rk; bk++) ak[Xk + bk] = Fk[Bk + bk]
+      updateFloatsFrom(bb, cb, sb, kb) {
+        const Wb = this.slots.get(bb);
+        if (!Wb) return;
+        const ab = this.data,
+          Tb = Wb.offset;
+        for (let Ub = 0; Ub < kb; Ub++) ab[Tb + Ub] = cb[sb + Ub]
       }
-      updateFloat3TimesFloats(kk, Fk, Bk, Rk) {
-        const tk = this.slots.get(kk);
-        if (!tk) return;
-        const ak = this.data,
-          Xk = tk.offset;
-        ak[Xk] = Fk[Bk] * Rk[0], ak[Xk + 1] = Fk[Bk + 1] * Rk[1], ak[Xk + 2] = Fk[Bk + 2] * Rk[2]
+      updateFloat3TimesFloats(bb, cb, sb, kb) {
+        const Wb = this.slots.get(bb);
+        if (!Wb) return;
+        const ab = this.data,
+          Tb = Wb.offset;
+        ab[Tb] = cb[sb] * kb[0], ab[Tb + 1] = cb[sb + 1] * kb[1], ab[Tb + 2] = cb[sb + 2] * kb[2]
       }
-      M_(kk, Fk) {
-        const Bk = this.slots.get(kk);
-        Bk && this.data.set(Fk.m, Bk.offset)
+      O4(bb, cb) {
+        const sb = this.slots.get(bb);
+        sb && this.data.set(cb.m, sb.offset)
       }
-      updateMatrixFloats(kk, Fk) {
-        const Bk = this.slots.get(kk);
-        Bk && this.data.set(Fk, Bk.offset)
+      updateMatrixFloats(bb, cb) {
+        const sb = this.slots.get(bb);
+        sb && this.data.set(cb, sb.offset)
       }
-      updateFloatArray(kk, Fk) {
-        const Bk = this.slots.get(kk);
-        if (!Bk) return;
-        if (!Bk.arraySize || Bk.stride === Bk.floats) return void this.data.set(Fk, Bk.offset);
-        const Rk = Math.min(Fk.length, Bk.floats * Bk.arraySize);
-        for (let tk = 0; tk < Rk; tk++) this.data[Bk.offset + Math.floor(tk / Bk.floats) * Bk.stride + tk % Bk.floats] = Fk[tk]
+      updateFloatArray(bb, cb) {
+        const sb = this.slots.get(bb);
+        if (!sb) return;
+        if (!sb.arraySize || sb.stride === sb.floats) return void this.data.set(cb, sb.offset);
+        const kb = Math.min(cb.length, sb.floats * sb.arraySize);
+        for (let Wb = 0; Wb < kb; Wb++) this.data[sb.offset + Math.floor(Wb / sb.floats) * sb.stride + Wb % sb.floats] = cb[Wb]
       }
-      updateArray(kk, Fk) {
-        this.updateFloatArray(kk, Fk)
+      updateArray(bb, cb) {
+        this.updateFloatArray(bb, cb)
       }
-      setTexture(kk, Fk) {
-        this.textures.set(kk, Fk), this.expected.delete(kk)
+      setTexture(bb, cb) {
+        this.textures.set(bb, cb), this.expected.delete(bb)
       }
-      expectTexture(kk) {
-        this.textures.set(kk, null), this.expected.add(kk)
+      expectTexture(bb) {
+        this.textures.set(bb, null), this.expected.add(bb)
       }
-      write4(kk, Fk, Bk, Rk, tk, ak) {
-        const Xk = this.slots.get(kk);
-        if (!Xk) return;
-        const bk = this.data,
-          wk = Xk.offset;
-        bk[wk] = Fk, ak > 1 && (bk[wk + 1] = Bk), ak > 2 && (bk[wk + 2] = Rk), ak > 3 && (bk[wk + 3] = tk)
+      write4(bb, cb, sb, kb, Wb, ab) {
+        const Tb = this.slots.get(bb);
+        if (!Tb) return;
+        const Ub = this.data,
+          Ib = Tb.offset;
+        Ub[Ib] = cb, ab > 1 && (Ub[Ib + 1] = sb), ab > 2 && (Ub[Ib + 2] = kb), ab > 3 && (Ub[Ib + 3] = Wb)
       }
     }
 
-    function fa(kk, Fk) {
-      const Bk = PR,
-        Rk = Aa.h,
-        tk = kk.lights,
-        ak = Math.min(kk.lightCount, 8);
-      for (let Xk = 0; Xk < ak; Xk++) {
-        const kk = Bk.lights + Xk * Bk.lightStride,
-          ak = Xk * Aa.c;
-        Fk[kk] = tk[ak + Rk.vector], Fk[kk + 1] = tk[ak + Rk.vector + 1], Fk[kk + 2] = tk[ak + Rk.vector + 2], Fk[kk + 3] = tk[ak + Rk.kind] === Aa.g.directional ? 1 : 0, Fk[kk + 4] = tk[ak + Rk.diffuse], Fk[kk + 5] = tk[ak + Rk.diffuse + 1], Fk[kk + 6] = tk[ak + Rk.diffuse + 2], Fk[kk + 7] = tk[ak + Rk.range], Fk[kk + 8] = tk[ak + Rk.specular], Fk[kk + 9] = tk[ak + Rk.specular + 1], Fk[kk + 10] = tk[ak + Rk.specular + 2], Fk[kk + 11] = tk[ak + Rk.range]
+    function ea(bb, cb) {
+      const sb = dk,
+        kb = ma.j,
+        Wb = bb.lights,
+        ab = Math.min(bb.lightCount, 8);
+      for (let Tb = 0; Tb < ab; Tb++) {
+        const bb = sb.lights + Tb * sb.lightStride,
+          ab = Tb * ma.b;
+        cb[bb] = Wb[ab + kb.vector], cb[bb + 1] = Wb[ab + kb.vector + 1], cb[bb + 2] = Wb[ab + kb.vector + 2], cb[bb + 3] = Wb[ab + kb.kind] === ma.f.directional ? 1 : 0, cb[bb + 4] = Wb[ab + kb.diffuse], cb[bb + 5] = Wb[ab + kb.diffuse + 1], cb[bb + 6] = Wb[ab + kb.diffuse + 2], cb[bb + 7] = Wb[ab + kb.range], cb[bb + 8] = Wb[ab + kb.specular], cb[bb + 9] = Wb[ab + kb.specular + 1], cb[bb + 10] = Wb[ab + kb.specular + 2], cb[bb + 11] = Wb[ab + kb.range]
       }
-      Fk[Bk.fogInfos] = kk.fogMode, Fk[Bk.fogInfos + 1] = kk.fogStart, Fk[Bk.fogInfos + 2] = kk.fogEnd, Fk[Bk.fogInfos + 3] = kk.fogDensity, Fk[Bk.fogColour] = kk.fogColour[0], Fk[Bk.fogColour + 1] = kk.fogColour[1], Fk[Bk.fogColour + 2] = kk.fogColour[2], Fk[Bk.outputHeight] = kk.renderHeight, Fk[Bk.animTick] = kk.animTick, Fk[Bk.timeMs] = kk.timeMs
+      cb[sb.fogInfos] = bb.fogMode, cb[sb.fogInfos + 1] = bb.fogStart, cb[sb.fogInfos + 2] = bb.fogEnd, cb[sb.fogInfos + 3] = bb.fogDensity, cb[sb.fogColour] = bb.fogColour[0], cb[sb.fogColour + 1] = bb.fogColour[1], cb[sb.fogColour + 2] = bb.fogColour[2], cb[sb.outputHeight] = bb.renderHeight, cb[sb.animTick] = bb.animTick, cb[sb.timeMs] = bb.timeMs
     }
-    class ma {
-      constructor(kk) {
-        this.instancesOf = kk
+    class Ca {
+      constructor(bb) {
+        this.instancesOf = bb
       }
-      refreshModelUniforms(kk, Fk, Bk, Rk) {
-        const tk = ea(Bk);
-        if (tk >= 0 && tk === Fk.heldVersion && Fk.textures.get("diffuseSampler") === Bk.diffuseTexture && Fk.textures.get("reflectionCubeSampler") === Bk.reflectionTexture && Fk.textures.get("opacitySampler") === Bk.opacityTexture && Fk.textures.get("emissiveSampler") === Bk.emissiveTexture) return !0;
-        if (tk < 0)
-          for (const ak of this.instancesOf(Bk)) ak.heldVersion = -1;
-        return this.writeModelUniforms(kk, Fk, Bk, Rk), Fk.heldVersion = tk, !1
+      refreshModelUniforms(bb, cb, sb, kb) {
+        const Wb = la(sb);
+        if (Wb >= 0 && Wb === cb.heldVersion && cb.textures.get("diffuseSampler") === sb.diffuseTexture && cb.textures.get("reflectionCubeSampler") === sb.reflectionTexture && cb.textures.get("opacitySampler") === sb.opacityTexture && cb.textures.get("emissiveSampler") === sb.emissiveTexture) return !0;
+        if (Wb < 0)
+          for (const ab of this.instancesOf(sb)) ab.heldVersion = -1;
+        return this.writeModelUniforms(bb, cb, sb, kb), cb.heldVersion = Wb, !1
       }
-      writeModelUniforms(kk, Fk, Bk, Rk) {
+      writeModelUniforms(bb, cb, sb, kb) {
         const {
-          ubo: tk
-        } = Fk, ak = Bk.diffuseTexture, Xk = Bk.diffuseColor;
-        tk.updateFloat4("vDiffuseColor", Xk[0], Xk[1], Xk[2], Bk.alpha), ak && (tk.updateFloat2("vDiffuseInfos", ak.uvSet, ak.level), tk.updateMatrixFloats("diffuseMatrix", ak.matrix)), tk.updateFloat("alphaCutOff", Bk.alphaCutOff), tk.updateFloatsFrom("vEmissiveColor", Bk.emissiveColor, 0, 3), tk.updateFloat3TimesFloats("vAmbientColor", Rk.ambientColour, 0, Bk.ambientColor);
-        const bk = Bk.specularColor;
-        tk.updateFloat4("vSpecularColor", bk[0], bk[1], bk[2], Bk.specularPower), tk.setTexture("diffuseSampler", ak);
-        const wk = Bk.opacityTexture;
-        wk && (tk.updateFloat2("vOpacityInfos", wk.uvSet, wk.level), tk.updateMatrixFloats("opacityMatrix", wk.matrix)), tk.setTexture("opacitySampler", wk);
-        const dk = Bk.emissiveTexture;
-        dk && (tk.updateFloat2("vEmissiveInfos", dk.uvSet, dk.level), tk.updateMatrixFloats("emissiveMatrix", dk.matrix)), tk.setTexture("emissiveSampler", dk);
-        const sk = Bk.reflectionTexture;
-        sk && tk.updateMatrixFloats("reflectionMatrix", sk.matrix), tk.updateFloat2("vReflectionInfos", sk ? sk.level * kk.iblIntensity : 0, Bk.roughness), tk.setTexture("reflectionCubeSampler", sk);
-        const Vk = kk.ne();
+          ubo: Wb
+        } = cb, ab = sb.diffuseTexture, Tb = sb.diffuseColor;
+        Wb.updateFloat4("vDiffuseColor", Tb[0], Tb[1], Tb[2], sb.alpha), ab && (Wb.updateFloat2("vDiffuseInfos", ab.uvSet, ab.level), Wb.updateMatrixFloats("diffuseMatrix", ab.matrix)), Wb.updateFloat("alphaCutOff", sb.alphaCutOff), Wb.updateFloatsFrom("vEmissiveColor", sb.emissiveColor, 0, 3), Wb.updateFloat3TimesFloats("vAmbientColor", kb.ambientColour, 0, sb.ambientColor);
+        const Ub = sb.specularColor;
+        Wb.updateFloat4("vSpecularColor", Ub[0], Ub[1], Ub[2], sb.specularPower), Wb.setTexture("diffuseSampler", ab);
+        const Ib = sb.opacityTexture;
+        Ib && (Wb.updateFloat2("vOpacityInfos", Ib.uvSet, Ib.level), Wb.updateMatrixFloats("opacityMatrix", Ib.matrix)), Wb.setTexture("opacitySampler", Ib);
+        const Hb = sb.emissiveTexture;
+        Hb && (Wb.updateFloat2("vEmissiveInfos", Hb.uvSet, Hb.level), Wb.updateMatrixFloats("emissiveMatrix", Hb.matrix)), Wb.setTexture("emissiveSampler", Hb);
+        const fb = sb.reflectionTexture;
+        fb && Wb.updateMatrixFloats("reflectionMatrix", fb.matrix), Wb.updateFloat2("vReflectionInfos", fb ? fb.level * bb.iblIntensity : 0, sb.roughness), Wb.setTexture("reflectionCubeSampler", fb);
+        const Mb = bb.Sm();
         for (const {
-            feature: ek,
-            state: yk,
-            active: fk
+            feature: mb,
+            state: lb,
+            active: Qb
           }
-          of Bk.features) {
-          var Jk, Ak;
-          if (fk) null === (Jk = (Ak = (0, VF.j)(ek)).bind) || void 0 === Jk || Jk.call(Ak, yk, tk, kk, Vk)
+          of sb.features) {
+          var Xb, nb;
+          if (Qb) null === (Xb = (nb = (0, fc.g)(mb)).bind) || void 0 === Xb || Xb.call(nb, lb, Wb, bb, Mb)
         }
       }
     }
 
-    function Wa(kk) {
-      const Fk = kk.replace(/\s+/g, "");
-      return /u32|^vec\du$/.test(Fk) ? "u32" : /i32|^vec\di$/.test(Fk) ? "i32" : "f32"
+    function Na(bb) {
+      const cb = bb.replace(/\s+/g, "");
+      return /u32|^vec\du$/.test(cb) ? "u32" : /i32|^vec\di$/.test(cb) ? "i32" : "f32"
     }
 
-    function va(kk, Fk) {
-      const Bk = kk.getSize(),
-        Rk = Wa(Fk),
-        tk = kk => 4 === Bk ? `${kk}x4` : 2 === Bk ? `${kk}x2` : null;
-      if ("f32" === Rk) {
-        if (5126 === kk.type) return 1 === Bk ? "float32" : Bk >= 2 && Bk <= 4 ? `float32x${Bk}` : null;
-        if (!kk.normalized) return null;
-        switch (kk.type) {
+    function Va(bb, cb) {
+      const sb = bb.getSize(),
+        kb = Na(cb),
+        Wb = bb => 4 === sb ? `${bb}x4` : 2 === sb ? `${bb}x2` : null;
+      if ("f32" === kb) {
+        if (5126 === bb.type) return 1 === sb ? "float32" : sb >= 2 && sb <= 4 ? `float32x${sb}` : null;
+        if (!bb.normalized) return null;
+        switch (bb.type) {
           case 5121:
-            return tk("unorm8");
+            return Wb("unorm8");
           case 5120:
-            return tk("snorm8");
+            return Wb("snorm8");
           case 5123:
-            return tk("unorm16");
+            return Wb("unorm16");
           case 5122:
-            return tk("snorm16")
+            return Wb("snorm16")
         }
         return null
       }
-      const ak = "u32" === Rk ? "uint" : "sint";
-      switch (kk.type) {
+      const ab = "u32" === kb ? "uint" : "sint";
+      switch (bb.type) {
         case 5125:
         case 5124:
-          return 1 === Bk ? `${ak}32` : Bk <= 4 ? `${ak}32x${Bk}` : null;
+          return 1 === sb ? `${ab}32` : sb <= 4 ? `${ab}32x${sb}` : null;
         case 5121:
         case 5120:
-          return tk(`${ak}8`);
+          return Wb(`${ab}8`);
         case 5123:
         case 5122:
-          return tk(`${ak}16`)
+          return Wb(`${ab}16`)
       }
       return null
     }
 
-    function ia(kk) {
-      var Fk;
-      const Bk = /(8|16|32)(?:x(\d))?$/.exec(kk);
-      return Bk ? Number(Bk[1]) / 8 * Number(null !== (Fk = Bk[2]) && void 0 !== Fk ? Fk : 1) : 4
+    function La(bb) {
+      var cb;
+      const sb = /(8|16|32)(?:x(\d))?$/.exec(bb);
+      return sb ? Number(sb[1]) / 8 * Number(null !== (cb = sb[2]) && void 0 !== cb ? cb : 1) : 4
     }
-    class Ya {
-      constructor(kk, Fk, Bk) {
-        this.resources = kk, this.limits = Fk, this.warnOnce = Bk, this.layouts = new Map
+    class ua {
+      constructor(bb, cb, sb) {
+        this.resources = bb, this.limits = cb, this.warnOnce = sb, this.layouts = new Map
       }
-      resolveInputs(kk, Fk, Bk, Rk) {
-        const tk = [],
-          ak = Bk.program.attributes,
-          Xk = [];
-        for (let sk = 0; sk < ak.length; sk++) {
-          const Bk = ak[sk],
-            bk = Bk.optional ? null : this.resources.vertexInput(kk, Bk.name, Rk);
-          if (!bk) {
-            const kk = Wa(Bk.type),
-              Fk = "u32" === kk ? "uint32x4" : "i32" === kk ? "sint32x4" : "float32x4";
-            Xk.push(null);
-            const Rk = tk.find((kk => null === kk.data));
-            Rk ? Rk.attributes.push({
-              shaderLocation: sk,
+      resolveInputs(bb, cb, sb, kb) {
+        const Wb = [],
+          ab = sb.program.attributes,
+          Tb = [];
+        for (let fb = 0; fb < ab.length; fb++) {
+          const sb = ab[fb],
+            Ub = sb.optional ? null : this.resources.vertexInput(bb, sb.name, kb);
+          if (!Ub) {
+            const bb = Na(sb.type),
+              cb = "u32" === bb ? "uint32x4" : "i32" === bb ? "sint32x4" : "float32x4";
+            Tb.push(null);
+            const kb = Wb.find((bb => null === bb.data));
+            kb ? kb.attributes.push({
+              shaderLocation: fb,
               offset: 0,
-              format: Fk
-            }) : tk.push({
+              format: cb
+            }) : Wb.push({
               data: null,
               base: 0,
               stride: 0,
               step: "vertex",
               attributes: [{
-                shaderLocation: sk,
+                shaderLocation: fb,
                 offset: 0,
-                format: Fk
+                format: cb
               }]
             });
             continue
           }
-          const wk = bk.getBuffer();
-          Xk.push(bk);
-          const dk = va(bk, Bk.type);
-          if (!dk) return this.warnOnce(`format:${Fk}:${Bk.name}`, `${Fk}'s ${Bk.name} (type ${bk.type}, size ${bk.getSize()}) has no WebGPU vertex format`), null;
-          const Vk = bk.getIsInstanced() ? "instance" : "vertex",
-            Jk = bk.byteStride,
-            Ak = ia(dk),
-            ek = tk.find((kk => kk.data === wk && kk.stride === Jk && kk.step === Vk && bk.byteOffset >= kk.base && bk.byteOffset - kk.base + Ak <= Jk));
-          ek ? ek.attributes.push({
-            shaderLocation: sk,
-            offset: bk.byteOffset - ek.base,
-            format: dk
-          }) : tk.push({
-            data: wk,
-            base: bk.byteOffset,
-            stride: Jk,
-            step: Vk,
+          const Ib = Ub.getBuffer();
+          Tb.push(Ub);
+          const Hb = Va(Ub, sb.type);
+          if (!Hb) return this.warnOnce(`format:${cb}:${sb.name}`, `${cb}'s ${sb.name} (type ${Ub.type}, size ${Ub.getSize()}) has no WebGPU vertex format`), null;
+          const Mb = Ub.getIsInstanced() ? "instance" : "vertex",
+            Xb = Ub.byteStride,
+            nb = La(Hb),
+            mb = Wb.find((bb => bb.data === Ib && bb.stride === Xb && bb.step === Mb && Ub.byteOffset >= bb.base && Ub.byteOffset - bb.base + nb <= Xb));
+          mb ? mb.attributes.push({
+            shaderLocation: fb,
+            offset: Ub.byteOffset - mb.base,
+            format: Hb
+          }) : Wb.push({
+            data: Ib,
+            base: Ub.byteOffset,
+            stride: Xb,
+            step: Mb,
             attributes: [{
-              shaderLocation: sk,
+              shaderLocation: fb,
               offset: 0,
-              format: dk
+              format: Hb
             }]
           })
         }
-        if (tk.length > this.limits.maxVertexBuffers) return this.warnOnce(`slots:${Fk}`, `${Fk} needs ${tk.length} vertex buffers`), null;
-        let bk = "";
-        for (const sk of tk) {
-          bk += `${sk.stride}${"instance"===sk.step?"i":"v"}`;
-          for (const kk of sk.attributes) bk += `,${kk.shaderLocation}:${kk.offset}:${kk.format}`;
-          bk += ";"
+        if (Wb.length > this.limits.maxVertexBuffers) return this.warnOnce(`slots:${cb}`, `${cb} needs ${Wb.length} vertex buffers`), null;
+        let Ub = "";
+        for (const fb of Wb) {
+          Ub += `${fb.stride}${"instance"===fb.step?"i":"v"}`;
+          for (const bb of fb.attributes) Ub += `,${bb.shaderLocation}:${bb.offset}:${bb.format}`;
+          Ub += ";"
         }
-        let wk = this.layouts.get(bk);
-        wk || (wk = {
-          key: bk,
-          buffers: tk.map((kk => ({
-            arrayStride: kk.stride,
-            stepMode: kk.step,
-            attributes: kk.attributes
+        let Ib = this.layouts.get(Ub);
+        Ib || (Ib = {
+          key: Ub,
+          buffers: Wb.map((bb => ({
+            arrayStride: bb.stride,
+            stepMode: bb.step,
+            attributes: bb.attributes
           }))),
-          instanceEnds: tk.map((kk => {
-            let Fk = -1;
-            if ("instance" === kk.step)
-              for (const Bk of kk.attributes) Fk = Math.max(Fk, Bk.offset + ia(Bk.format));
-            return Fk
+          instanceEnds: Wb.map((bb => {
+            let cb = -1;
+            if ("instance" === bb.step)
+              for (const sb of bb.attributes) cb = Math.max(cb, sb.offset + La(sb.format));
+            return cb
           }))
-        }, this.layouts.set(bk, wk));
-        const dk = tk.map((kk => kk.base));
+        }, this.layouts.set(Ub, Ib));
+        const Hb = Wb.map((bb => bb.base));
         return {
-          program: Bk,
-          sources: Xk,
-          layout: wk,
-          slotData: tk.map((kk => kk.data)),
-          f_: dk,
+          program: sb,
+          sources: Tb,
+          layout: Ib,
+          slotData: Wb.map((bb => bb.data)),
+          Z6: Hb,
           buffers: [],
-          offsets: dk,
+          offsets: Hb,
           ends: [],
           state: null,
           pipelineKey: "",
@@ -2596,39 +2596,39 @@ export const modules = {
       }
     }
 
-    function oa(kk, Fk, Bk, Rk) {
-      const tk = Fk.program.program.attributes;
-      for (let ak = 0; ak < tk.length; ak++) {
-        if ((tk[ak].optional ? null : Bk.vertexInput(kk, tk[ak].name, Rk)) !== Fk.sources[ak]) return !1
+    function Ya(bb, cb, sb, kb) {
+      const Wb = cb.program.program.attributes;
+      for (let ab = 0; ab < Wb.length; ab++) {
+        if ((Wb[ab].optional ? null : sb.vertexInput(bb, Wb[ab].name, kb)) !== cb.sources[ab]) return !1
       }
       return !0
     }
-    const La = 64;
-    class Oa {
-      constructor(kk, Fk, Bk, Rk) {
-        this.device = kk, this.layout = Fk, this.frameBuffer = Bk, this.label = Rk, this.data = new Float32Array(4096), this.buffer = void 0, this.bindGroup = void 0, this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup()
+    const ha = 64;
+    class Ja {
+      constructor(bb, cb, sb, kb) {
+        this.device = bb, this.layout = cb, this.frameBuffer = sb, this.label = kb, this.data = new Float32Array(4096), this.buffer = void 0, this.bindGroup = void 0, this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup()
       }
-      ensure(kk) {
-        if (kk * La <= this.data.length) return !1;
-        let Fk = 2 * this.data.length;
-        for (; kk * La > Fk;) Fk *= 2;
-        const Bk = new Float32Array(Fk);
-        return Bk.set(this.data), this.data = Bk, this.buffer.destroy(), this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup(), !0
+      ensure(bb) {
+        if (bb * ha <= this.data.length) return !1;
+        let cb = 2 * this.data.length;
+        for (; bb * ha > cb;) cb *= 2;
+        const sb = new Float32Array(cb);
+        return sb.set(this.data), this.data = sb, this.buffer.destroy(), this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup(), !0
       }
-      write(kk, Fk, Bk) {
-        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const tk = this.data,
-          ak = kk * La;
-        let Xk = tk[ak + 16] !== Bk;
-        for (let bk = 0; bk < 16 && !Xk; bk++) Xk = tk[ak + bk] !== Fk[Rk + bk];
-        if (Xk) {
-          for (let kk = 0; kk < 16; kk++) tk[ak + kk] = Fk[Rk + kk];
-          tk[ak + 16] = Bk
+      write(bb, cb, sb) {
+        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const Wb = this.data,
+          ab = bb * ha;
+        let Tb = Wb[ab + 16] !== sb;
+        for (let Ub = 0; Ub < 16 && !Tb; Ub++) Tb = Wb[ab + Ub] !== cb[kb + Ub];
+        if (Tb) {
+          for (let bb = 0; bb < 16; bb++) Wb[ab + bb] = cb[kb + bb];
+          Wb[ab + 16] = sb
         }
-        return Xk
+        return Tb
       }
-      upload(kk, Fk) {
-        this.device.queue.writeBuffer(this.buffer, kk * hR, this.data, kk * La, (Fk - kk) * La)
+      upload(bb, cb) {
+        this.device.queue.writeBuffer(this.buffer, bb * Ak, this.data, bb * ha, (cb - bb) * ha)
       }
       createBuffer() {
         return this.device.createBuffer({
@@ -2657,122 +2657,122 @@ export const modules = {
       }
     }
 
-    function Ea(kk) {
-      return kk.gpu[Hk.i.lite] ??= kk.materials.map(((Fk, Bk) => ({
-        parts: kk,
-        range: Bk,
-        owner: kk.owner
+    function ga(bb) {
+      return bb.gpu[Bb.g.lite] ??= bb.materials.map(((cb, sb) => ({
+        parts: bb,
+        range: sb,
+        owner: bb.owner
       })))
     }
 
-    function Sa(kk) {
-      var Fk, Bk, Rk;
-      return null !== (Fk = null !== (Bk = null === (Rk = kk.parts.materials[kk.range]) || void 0 === Rk ? void 0 : Rk.mirror) && void 0 !== Bk ? Bk : kk.owner.material) && void 0 !== Fk ? Fk : null
+    function Ba(bb) {
+      var cb, sb, kb;
+      return null !== (cb = null !== (sb = null === (kb = bb.parts.materials[bb.range]) || void 0 === kb ? void 0 : kb.mirror) && void 0 !== sb ? sb : bb.owner.material) && void 0 !== cb ? cb : null
     }
-    const Na = ["opaque", "alphaTest", "transparent", "text"];
-    class Ha {
+    const ta = ["opaque", "alphaTest", "transparent", "text"];
+    class ya {
       constructor() {
-        this.selectedCount = 0, this.model = null, this.mirror = null, this.groups = new Map, this.batches = new WeakMap, this.rows = new Int32Array(0), this.frame = 0, this.warnOnce = (0, sF.b)("Lite: ")
+        this.selectedCount = 0, this.model = null, this.mirror = null, this.groups = new Map, this.batches = new WeakMap, this.rows = new Int32Array(0), this.frame = 0, this.warnOnce = (0, Hc.c)("Lite: ")
       }
-      attach(kk, Fk) {
-        this.model = kk, this.mirror = Fk
+      attach(bb, cb) {
+        this.model = bb, this.mirror = cb
       }
       get worlds() {
-        return this.model.nodes.iJ
+        return this.model.nodes.fX
       }
       get visibility() {
         return this.model.meshes.visibility
       }
-      group(kk) {
-        return this.groups.get(kk)
+      group(bb) {
+        return this.groups.get(bb)
       }
       groupIds() {
         return this.groups.keys()
       }
-      forEachSelected(kk) {
-        for (const [Fk, Bk] of this.groups)
-          for (const Rk of Na)
-            for (const tk of Bk[Rk].units) kk(tk.owner, "text" === Rk ? "transparent" : Rk, Fk)
+      forEachSelected(bb) {
+        for (const [cb, sb] of this.groups)
+          for (const kb of ta)
+            for (const Wb of sb[kb].units) bb(Wb.owner, "text" === kb ? "transparent" : kb, cb)
       }
-      select(kk, Fk) {
+      select(bb, cb) {
         this.frame++, this.selectedCount = 0;
-        for (const bk of this.groups.values())
-          for (const kk of Na) bk[kk].units.length = 0, bk[kk].rows.length = 0;
+        for (const Ub of this.groups.values())
+          for (const bb of ta) Ub[bb].units.length = 0, Ub[bb].rows.length = 0;
         const {
-          model: Bk,
-          mirror: Rk
+          model: sb,
+          mirror: kb
         } = this;
-        if (!Bk || !Rk || !kk) return;
-        this.rows.length < Bk.nodes.KV && (this.rows = new Int32Array(Bk.nodes.KV));
-        const tk = this.rows,
-          ak = Bk.meshes;
-        for (let bk = 0; bk < ak.looseCount; bk++) {
-          const kk = ak.loose[bk],
-            Bk = Rk.nodes[kk];
-          Bk && !Bk.isBlocked && Bk.isEnabled() && !Bk.ta.hasAZeroComponent && ak.selects(kk, Fk.frustum) && (this.activate(Bk, kk), this.selectedCount++)
+        if (!sb || !kb || !bb) return;
+        this.rows.length < sb.nodes.GM && (this.rows = new Int32Array(sb.nodes.GM));
+        const Wb = this.rows,
+          ab = sb.meshes;
+        for (let Ub = 0; Ub < ab.looseCount; Ub++) {
+          const bb = ab.loose[Ub],
+            sb = kb.nodes[bb];
+          sb && !sb.isBlocked && sb.isEnabled() && !sb.bl.hasAZeroComponent && ab.selects(bb, cb.frustum) && (this.activate(sb, bb), this.selectedCount++)
         }
-        const Xk = ak.selectTextPlanes(Fk.frustum, tk);
-        for (let bk = 0; bk < Xk; bk++) {
-          const Fk = tk[bk],
-            ak = Rk.nodes[Fk],
-            Xk = Bk.meshes.parts[Fk];
-          if (!ak.isVisible || !(ak.visibility > 0) || 0 === (ak.layerMask & kk.layerMask) || !Xk) continue;
-          const wk = this.groupOf(Bk.meshes.layer[Fk]).text;
-          for (const kk of Ea(Xk)) wk.units.push(kk), wk.rows.push(Fk);
+        const Tb = ab.selectTextPlanes(cb.frustum, Wb);
+        for (let Ub = 0; Ub < Tb; Ub++) {
+          const cb = Wb[Ub],
+            ab = kb.nodes[cb],
+            Tb = sb.meshes.parts[cb];
+          if (!ab.isVisible || !(ab.visibility > 0) || 0 === (ab.layerMask & bb.layerMask) || !Tb) continue;
+          const Ib = this.groupOf(sb.meshes.layer[cb]).text;
+          for (const bb of ga(Tb)) Ib.units.push(bb), Ib.rows.push(cb);
           this.selectedCount++
         }
       }
-      instanceBatch(kk) {
-        const Fk = this.batchOf(kk);
-        return Fk.dispatched || (Fk.dispatched = Fk.renderSelf = !0, Fk.row = this.rowOf(kk)), Fk
+      instanceBatch(bb) {
+        const cb = this.batchOf(bb);
+        return cb.dispatched || (cb.dispatched = cb.renderSelf = !0, cb.row = this.rowOf(bb)), cb
       }
-      rowOf(kk) {
-        return kk.row
+      rowOf(bb) {
+        return bb.row
       }
-      activate(kk, Fk) {
-        if (!kk.mN) {
-          const Bk = kk;
-          if (Bk.GRk) {
-            const kk = this.batchOf(Bk);
-            kk.dispatched = !0, kk.renderSelf = !0, kk.row = Fk
+      activate(bb, cb) {
+        if (!bb.qY) {
+          const sb = bb;
+          if (sb.ykb) {
+            const bb = this.batchOf(sb);
+            bb.dispatched = !0, bb.renderSelf = !0, bb.row = cb
           }
-          return void this.dispatch(Bk, Fk, Fk)
+          return void this.dispatch(sb, cb, cb)
         }
-        const Bk = kk,
-          Rk = Bk.rRk;
-        if (Rk._getWorldMatrixDeterminant() >= 0 !== Bk._getWorldMatrixDeterminant() >= 0) return void this.warnOnce(`mirrored:${Rk.name}`, `A mirrored InstancedMesh of ${Rk.name} is not drawn yet`);
-        const tk = this.batchOf(Rk);
-        tk.instances.push(Bk), tk.rows.push(Fk), tk.dispatched || (tk.dispatched = !0, this.dispatch(Rk, Fk, this.rowOf(Rk)))
+        const sb = bb,
+          kb = sb.Pkb;
+        if (kb._getWorldMatrixDeterminant() >= 0 !== sb._getWorldMatrixDeterminant() >= 0) return void this.warnOnce(`mirrored:${kb.name}`, `A mirrored InstancedMesh of ${kb.name} is not drawn yet`);
+        const Wb = this.batchOf(kb);
+        Wb.instances.push(sb), Wb.rows.push(cb), Wb.dispatched || (Wb.dispatched = !0, this.dispatch(kb, cb, this.rowOf(kb)))
       }
-      batchOf(kk) {
-        let Fk = this.batches.get(kk);
-        return Fk || (Fk = {
+      batchOf(bb) {
+        let cb = this.batches.get(bb);
+        return cb || (cb = {
           frame: 0,
           dispatched: !1,
           renderSelf: !1,
           row: -1,
           instances: [],
           rows: []
-        }, this.batches.set(kk, Fk)), Fk.frame !== this.frame && (Fk.frame = this.frame, Fk.dispatched = !1, Fk.renderSelf = !1, Fk.instances.length = 0, Fk.rows.length = 0), Fk
+        }, this.batches.set(bb, cb)), cb.frame !== this.frame && (cb.frame = this.frame, cb.dispatched = !1, cb.renderSelf = !1, cb.instances.length = 0, cb.rows.length = 0), cb
       }
-      dispatch(kk, Fk, Bk) {
+      dispatch(bb, cb, sb) {
         const {
-          layer: Rk,
-          parts: tk
+          layer: kb,
+          parts: Wb
         } = this.model.meshes;
-        if (!tk[Fk]) return;
-        const ak = this.groupOf(Rk[Fk]),
-          Xk = kk;
-        for (const bk of Ea(tk[Fk])) {
-          const kk = Sa(bk);
-          if (!kk) continue;
-          const Fk = kk.needAlphaBlendingForMesh(Xk) ? ak.transparent : kk.needAlphaTestingForMesh(Xk) ? ak.alphaTest : ak.opaque;
-          Fk.units.push(bk), Fk.rows.push(Bk)
+        if (!Wb[cb]) return;
+        const ab = this.groupOf(kb[cb]),
+          Tb = bb;
+        for (const Ub of ga(Wb[cb])) {
+          const bb = Ba(Ub);
+          if (!bb) continue;
+          const cb = bb.needAlphaBlendingForMesh(Tb) ? ab.transparent : bb.needAlphaTestingForMesh(Tb) ? ab.alphaTest : ab.opaque;
+          cb.units.push(Ub), cb.rows.push(sb)
         }
       }
-      groupOf(kk) {
-        let Fk = this.groups.get(kk);
-        return Fk || (Fk = {
+      groupOf(bb) {
+        let cb = this.groups.get(bb);
+        return cb || (cb = {
           opaque: {
             units: [],
             rows: []
@@ -2789,219 +2789,219 @@ export const modules = {
             units: [],
             rows: []
           }
-        }, this.groups.set(kk, Fk)), Fk
+        }, this.groups.set(bb, cb)), cb
       }
     }
-    class ua {
+    class Pa {
       constructor() {
-        this.Hb = new Map, this.enabled = [], this.groups = new Map, this.lA = [], this.warned = new Set, this.selected = 0, this.drawn = 0
+        this.qU = new Map, this.enabled = [], this.groups = new Map, this.vn = [], this.warned = new Set, this.selected = 0, this.drawn = 0
       }
-      add(kk) {
-        if (this.Hb.has(kk)) return;
-        const Fk = {
-          mesh: kk,
-          observer: kk.onEffectiveEnabledStateChangedObservable.add((kk => {
-            this.lY(Fk, kk)
+      add(bb) {
+        if (this.qU.has(bb)) return;
+        const cb = {
+          mesh: bb,
+          observer: bb.onEffectiveEnabledStateChangedObservable.add((bb => {
+            this.GV(cb, bb)
           })),
           index: -1,
           steady: null
         };
-        this.Hb.set(kk, Fk), this.lY(Fk, kk.isEnabled())
+        this.qU.set(bb, cb), this.GV(cb, bb.isEnabled())
       }
-      remove(kk) {
-        const Fk = this.Hb.get(kk);
-        Fk && (Fk.observer.remove(!0), this.lY(Fk, !1), this.Hb.delete(kk))
+      remove(bb) {
+        const cb = this.qU.get(bb);
+        cb && (cb.observer.remove(!0), this.GV(cb, !1), this.qU.delete(bb))
       }
-      base(kk) {
-        return this.Hb.get(kk)
+      base(bb) {
+        return this.qU.get(bb)
       }
       drawStats() {
         return {
           drawn: this.drawn,
           selected: this.selected,
-          Hb: this.Hb.size
+          qU: this.qU.size
         }
       }
-      forEachSelected(kk) {
-        for (const [Fk, Bk] of this.groups) {
-          for (const Rk of Bk.opaque) kk(Rk.owner, "opaque", Fk);
-          for (const Rk of Bk.transparent) kk(Rk.owner, "transparent", Fk)
+      forEachSelected(bb) {
+        for (const [cb, sb] of this.groups) {
+          for (const kb of sb.opaque) bb(kb.owner, "opaque", cb);
+          for (const kb of sb.transparent) bb(kb.owner, "transparent", cb)
         }
-        for (const Fk of this.lA) kk(Fk.mesh, "opaque", 0)
+        for (const cb of this.vn) bb(cb.mesh, "opaque", 0)
       }
-      group(kk) {
-        return this.groups.get(kk)
+      group(bb) {
+        return this.groups.get(bb)
       }
       groupIds() {
         return this.groups.keys()
       }
-      select(kk, Fk) {
-        this.drawn = 0, this.selected = 0, this.lA.length = 0;
-        for (const Rk of this.groups.values()) Rk.opaque.length = 0, Rk.transparent.length = 0;
-        if (!kk) return;
-        const Bk = this.enabled;
-        for (let Rk = 0; Rk < Bk.length; Rk++) {
-          const tk = Bk[Rk];
-          if (tk.steady && Fk(tk, kk)) {
-            this.selected++, this.lA.push(tk);
+      select(bb, cb) {
+        this.drawn = 0, this.selected = 0, this.vn.length = 0;
+        for (const kb of this.groups.values()) kb.opaque.length = 0, kb.transparent.length = 0;
+        if (!bb) return;
+        const sb = this.enabled;
+        for (let kb = 0; kb < sb.length; kb++) {
+          const Wb = sb[kb];
+          if (Wb.steady && cb(Wb, bb)) {
+            this.selected++, this.vn.push(Wb);
             continue
           }
-          const ak = tk.mesh;
-          if (ak.isBlocked || ak.ta.hasAZeroComponent) continue;
-          if (!ak.isVisible || ak.visibility <= 0 || 0 === (ak.layerMask & kk.layerMask)) continue;
-          if (ak.GRk) {
-            this.warned.has(ak.name) || (this.warned.add(ak.name), console.warn(`Lite: thin instance base ${ak.name} has InstancedMeshes and is not drawn`));
+          const ab = Wb.mesh;
+          if (ab.isBlocked || ab.bl.hasAZeroComponent) continue;
+          if (!ab.isVisible || ab.visibility <= 0 || 0 === (ab.layerMask & bb.layerMask)) continue;
+          if (ab.ykb) {
+            this.warned.has(ab.name) || (this.warned.add(ab.name), console.warn(`Lite: thin instance base ${ab.name} has InstancedMeshes and is not drawn`));
             continue
           }
           const {
-            parts: Xk
-          } = ak;
-          if (!Xk) continue;
-          ak.computeWorldMatrix(), this.selected++;
-          const bk = this.listsFor(ak.renderingGroupId);
-          for (const kk of Ea(Xk)) {
-            const Fk = Sa(kk);
-            Fk && (Fk.needAlphaBlendingForMesh(ak) ? bk.transparent.push(kk) : bk.opaque.push(kk))
+            parts: Tb
+          } = ab;
+          if (!Tb) continue;
+          ab.computeWorldMatrix(), this.selected++;
+          const Ub = this.listsFor(ab.renderingGroupId);
+          for (const bb of ga(Tb)) {
+            const cb = Ba(bb);
+            cb && (cb.needAlphaBlendingForMesh(ab) ? Ub.transparent.push(bb) : Ub.opaque.push(bb))
           }
         }
       }
-      lY(kk, Fk) {
-        if (Fk === kk.index >= 0) return;
-        kk.steady = null;
-        const Bk = this.enabled;
-        if (Fk) kk.index = Bk.length, Bk.push(kk);
+      GV(bb, cb) {
+        if (cb === bb.index >= 0) return;
+        bb.steady = null;
+        const sb = this.enabled;
+        if (cb) bb.index = sb.length, sb.push(bb);
         else {
-          const Fk = Bk.pop();
-          Fk !== kk && (Bk[kk.index] = Fk, Fk.index = kk.index), kk.index = -1
+          const cb = sb.pop();
+          cb !== bb && (sb[bb.index] = cb, cb.index = bb.index), bb.index = -1
         }
       }
-      listsFor(kk) {
-        let Fk = this.groups.get(kk);
-        return Fk || (Fk = {
+      listsFor(bb) {
+        let cb = this.groups.get(bb);
+        return cb || (cb = {
           opaque: [],
           transparent: []
-        }, this.groups.set(kk, Fk)), Fk
+        }, this.groups.set(bb, cb)), cb
       }
     }
-    var Ma = Bk(39144);
-    class ga {
+    var Da = sb(39159);
+    class Ea {
       constructor() {
-        this.bundle = null, this.stale = !0, this.Hb = new Set
+        this.bundle = null, this.stale = !0, this.qU = new Set
       }
     }
-    class Ua {
-      constructor(kk, Fk, Bk) {
-        this.device = kk, this.slots = Fk, this.host = Bk, this.records = new Map, this.freeSlots = [], this.slotCount = 0, this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1, this.args = new Uint32Array(320), this.argsBuffer = void 0, this.argsDirty = !1, this.main = new ga, this.WE = new ga, this.rangedEpoch = -1, this.bundles = [], this.recordedTarget = "", this.recordedSceneGroup = null, this.binder = new lt, this.frame = 0, this.drawn = 0, this.direct = void 0, this.directThisFrame = !1, this.argsBuffer = this.createArgsBuffer(), this.direct = function(kk) {
-          var Fk, Bk;
-          let Rk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null !== (Fk = null === (Bk = globalThis.navigator) || void 0 === Bk ? void 0 : Bk.userAgent) && void 0 !== Fk ? Fk : "";
-          const tk = kk.adapterInfo;
-          return "intel" === (null === tk || void 0 === tk ? void 0 : tk.vendor) && "gen-12lp" === tk.architecture && Rk.includes("Windows")
-        }(kk), (0, Ma.L)(this.direct)
+    class ia {
+      constructor(bb, cb, sb) {
+        this.device = bb, this.slots = cb, this.host = sb, this.records = new Map, this.freeSlots = [], this.slotCount = 0, this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1, this.args = new Uint32Array(320), this.argsBuffer = void 0, this.argsDirty = !1, this.main = new Ea, this.RL = new Ea, this.rangedEpoch = -1, this.bundles = [], this.recordedTarget = "", this.recordedSceneGroup = null, this.binder = new xW, this.frame = 0, this.drawn = 0, this.direct = void 0, this.directThisFrame = !1, this.argsBuffer = this.createArgsBuffer(), this.direct = function(bb) {
+          var cb, sb;
+          let kb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null !== (cb = null === (sb = globalThis.navigator) || void 0 === sb ? void 0 : sb.userAgent) && void 0 !== cb ? cb : "";
+          const Wb = bb.adapterInfo;
+          return "intel" === (null === Wb || void 0 === Wb ? void 0 : Wb.vendor) && "gen-12lp" === Wb.architecture && kb.includes("Windows")
+        }(bb), (0, Da.G)(this.direct)
       }
-      kY() {
-        this.frame++, this.drawn = 0, this.directThisFrame = this.direct, (0, Ma.L)(this.directThisFrame)
+      vN() {
+        this.frame++, this.drawn = 0, this.directThisFrame = this.direct, (0, Da.G)(this.directThisFrame)
       }
-      add(kk, Fk, Bk, Rk) {
-        let tk = this.records.get(kk);
-        return tk || (tk = this.createRecord(kk), this.records.set(kk, tk)), tk.recorded && Ga(tk, Fk) || (this.bundleOf(tk).stale = !0), this.place(tk, Fk, Bk, Rk), tk
+      add(bb, cb, sb, kb) {
+        let Wb = this.records.get(bb);
+        return Wb || (Wb = this.createRecord(bb), this.records.set(bb, Wb)), Wb.recorded && Ga(Wb, cb) || (this.bundleOf(Wb).stale = !0), this.place(Wb, cb, sb, kb), Wb
       }
-      bundleOf(kk) {
-        return kk.WE ? this.WE : this.main
+      bundleOf(bb) {
+        return bb.RL ? this.RL : this.main
       }
-      addAgain(kk, Fk, Bk, Rk) {
-        kk.recorded || (this.bundleOf(kk).stale = !0), this.place(kk, Fk, Bk, Rk)
+      addAgain(bb, cb, sb, kb) {
+        bb.recorded || (this.bundleOf(bb).stale = !0), this.place(bb, cb, sb, kb)
       }
-      place(kk, Fk, Bk, Rk) {
-        kk.seen = this.frame, kk.WE && null === kk.draw && (this.WE.stale = !0), kk.draw = Fk, this.drawn++, Bk && this.slots.write(kk.slot, Bk, Rk) && (this.slotsFrom = Math.min(this.slotsFrom, kk.slot), this.slotsTo = Math.max(this.slotsTo, kk.slot));
-        const tk = this.args,
-          ak = 5 * kk.slot;
-        tk[ak] === Fk.count && tk[ak + 1] === Fk.instances && tk[ak + 2] === Fk.first || (tk[ak] = Fk.count, tk[ak + 1] = Fk.instances, tk[ak + 2] = Fk.first, this.argsDirty = !0, this.WE.stale ||= kk.WE)
+      place(bb, cb, sb, kb) {
+        bb.seen = this.frame, bb.RL && null === bb.draw && (this.RL.stale = !0), bb.draw = cb, this.drawn++, sb && this.slots.write(bb.slot, sb, kb) && (this.slotsFrom = Math.min(this.slotsFrom, bb.slot), this.slotsTo = Math.max(this.slotsTo, bb.slot));
+        const Wb = this.args,
+          ab = 5 * bb.slot;
+        Wb[ab] === cb.count && Wb[ab + 1] === cb.instances && Wb[ab + 2] === cb.first || (Wb[ab] = cb.count, Wb[ab + 1] = cb.instances, Wb[ab + 2] = cb.first, this.argsDirty = !0, this.RL.stale ||= bb.RL)
       }
-      FY() {
-        for (const kk of this.records.values()) kk.seen !== this.frame && (kk.draw && (kk.draw = null, this.args[5 * kk.slot + 1] = 0, this.argsDirty = !0, this.WE.stale ||= kk.WE), this.frame - kk.seen > 120 && (this.records.delete(kk.unit), this.freeSlots.push(kk.slot), kk.recorded && (this.bundleOf(kk).stale = !0)));
+      pN() {
+        for (const bb of this.records.values()) bb.seen !== this.frame && (bb.draw && (bb.draw = null, this.args[5 * bb.slot + 1] = 0, this.argsDirty = !0, this.RL.stale ||= bb.RL), this.frame - bb.seen > 120 && (this.records.delete(bb.unit), this.freeSlots.push(bb.slot), bb.recorded && (this.bundleOf(bb).stale = !0)));
         this.argsDirty && !this.directThisFrame && (this.device.queue.writeBuffer(this.argsBuffer, 0, this.args, 0, 5 * this.slotCount), this.argsDirty = !1), this.slotsTo >= 0 && (this.slots.upload(this.slotsFrom, this.slotsTo + 1), this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1)
       }
-      forEachDrawn(kk) {
-        for (const Fk of this.records.values()) Fk.draw && Fk.seen === this.frame && !Fk.WE && kk(Fk.draw, this.slots.data, Fk.slot * hR / 4)
+      forEachDrawn(bb) {
+        for (const cb of this.records.values()) cb.draw && cb.seen === this.frame && !cb.RL && bb(cb.draw, this.slots.data, cb.slot * Ak / 4)
       }
-      resourceDestroyed(kk) {
-        this.main.stale ||= this.main.Hb.has(kk), this.WE.stale ||= this.WE.Hb.has(kk)
+      resourceDestroyed(bb) {
+        this.main.stale ||= this.main.qU.has(bb), this.RL.stale ||= this.RL.qU.has(bb)
       }
-      execute(kk, Fk, Bk) {
+      execute(bb, cb, sb) {
         if (0 === this.drawn) return 0;
-        if (this.directThisFrame) return this.encode(kk, Fk, Bk, "direct"), this.drawn;
-        const Rk = this.host.sceneGroup(Fk);
-        if (!Rk) return this.main.bundle = null, this.WE.bundle = null, this.recordedSceneGroup = null, this.encode(kk, Fk, Bk, "direct"), this.drawn;
-        this.recordedTarget === Bk && this.recordedSceneGroup === Rk || (this.recordedTarget = Bk, this.recordedSceneGroup = Rk, this.main.stale = !0, this.WE.stale = !0);
-        const tk = this.main,
-          ak = this.WE;
-        let Xk = !1;
-        !tk.stale && tk.bundle || (tk.bundle = this.record(Fk, Bk, Rk, "indirect"), Xk = !0);
-        const bk = (0, Ma.n)();
-        return (ak.stale || this.rangedEpoch !== bk) && (this.rangedEpoch = bk, ak.bundle = this.drawsRanged() ? this.record(Fk, Bk, Rk, "WE") : this.noRangedBundle(), Xk = !0), Xk && (this.bundles = ak.bundle ? [tk.bundle, ak.bundle] : [tk.bundle]), kk.executeBundles(this.bundles), kk.setBindGroup(0, Rk), this.drawn
+        if (this.directThisFrame) return this.encode(bb, cb, sb, "direct"), this.drawn;
+        const kb = this.host.sceneGroup(cb);
+        if (!kb) return this.main.bundle = null, this.RL.bundle = null, this.recordedSceneGroup = null, this.encode(bb, cb, sb, "direct"), this.drawn;
+        this.recordedTarget === sb && this.recordedSceneGroup === kb || (this.recordedTarget = sb, this.recordedSceneGroup = kb, this.main.stale = !0, this.RL.stale = !0);
+        const Wb = this.main,
+          ab = this.RL;
+        let Tb = !1;
+        !Wb.stale && Wb.bundle || (Wb.bundle = this.record(cb, sb, kb, "indirect"), Tb = !0);
+        const Ub = (0, Da.m)();
+        return (ab.stale || this.rangedEpoch !== Ub) && (this.rangedEpoch = Ub, ab.bundle = this.drawsRanged() ? this.record(cb, sb, kb, "RL") : this.noRangedBundle(), Tb = !0), Tb && (this.bundles = ab.bundle ? [Wb.bundle, ab.bundle] : [Wb.bundle]), bb.executeBundles(this.bundles), bb.setBindGroup(0, kb), this.drawn
       }
-      record(kk, Fk, Bk, Rk) {
-        const tk = this.device.createRenderBundleEncoder({
-          label: "WE" === Rk ? "thin-bases-ranged" : "thin-bases",
-          colorFormats: kk._colorFormat ? [kk._colorFormat] : [],
-          depthStencilFormat: kk._depthStencilFormat,
-          sampleCount: kk._sampleCount
+      record(bb, cb, sb, kb) {
+        const Wb = this.device.createRenderBundleEncoder({
+          label: "RL" === kb ? "thin-bases-ranged" : "thin-bases",
+          colorFormats: bb._colorFormat ? [bb._colorFormat] : [],
+          depthStencilFormat: bb._depthStencilFormat,
+          sampleCount: bb._sampleCount
         });
-        return tk.setBindGroup(0, Bk), this.encode(tk, kk, Fk, Rk), tk.finish()
+        return Wb.setBindGroup(0, sb), this.encode(Wb, bb, cb, kb), Wb.finish()
       }
       noRangedBundle() {
-        for (const kk of this.records.values()) kk.WE && (kk.recorded = !1);
-        return this.WE.Hb.clear(), this.WE.stale = !1, null
+        for (const bb of this.records.values()) bb.RL && (bb.recorded = !1);
+        return this.RL.qU.clear(), this.RL.stale = !1, null
       }
       drawsRanged() {
-        for (const kk of this.records.values())
-          if (kk.WE && kk.draw) return !0;
+        for (const bb of this.records.values())
+          if (bb.RL && bb.draw) return !0;
         return !1
       }
-      encode(kk, Fk, Bk, Rk) {
-        const tk = [];
-        for (const wk of this.records.values()) "direct" !== Rk && wk.WE !== ("WE" === Rk) || (wk.recorded = !1, wk.draw && tk.push(wk));
-        tk.sort(Ta);
-        const ak = "direct" === Rk ? null : "WE" === Rk ? this.WE : this.main;
-        null === ak || void 0 === ak || ak.Hb.clear(), this.binder.reset();
-        let Xk = !1;
-        for (const wk of tk) {
-          var bk;
-          const tk = wk.draw,
-            dk = this.host.pipelineFor(tk, Fk, Bk);
-          if (!dk) {
-            this.host.pipelineCompiling(tk, Bk) ? Xk = !0 : ak && this.keep(wk, tk, ak.Hb);
+      encode(bb, cb, sb, kb) {
+        const Wb = [];
+        for (const Ib of this.records.values()) "direct" !== kb && Ib.RL !== ("RL" === kb) || (Ib.recorded = !1, Ib.draw && Wb.push(Ib));
+        Wb.sort(Ka);
+        const ab = "direct" === kb ? null : "RL" === kb ? this.RL : this.main;
+        null === ab || void 0 === ab || ab.qU.clear(), this.binder.reset();
+        let Tb = !1;
+        for (const Ib of Wb) {
+          var Ub;
+          const Wb = Ib.draw,
+            Hb = this.host.pipelineFor(Wb, cb, sb);
+          if (!Hb) {
+            this.host.pipelineCompiling(Wb, sb) ? Tb = !0 : ab && this.keep(Ib, Wb, ab.qU);
             continue
           }
-          let sk;
-          if (wk.WE && "indirect" !== Rk) {
-            const kk = wk.unit.owner;
-            sk = "direct" === Rk && (0, Ma.v)(kk) || (0, Ma.p)(kk) || void 0
+          let fb;
+          if (Ib.RL && "indirect" !== kb) {
+            const bb = Ib.unit.owner;
+            fb = "direct" === kb && (0, Da.w)(bb) || (0, Da.o)(bb) || void 0
           }
-          if (ak && this.keep(wk, tk, ak.Hb), 0 === (null === (bk = sk) || void 0 === bk ? void 0 : bk.count)) continue;
-          this.binder.bind(kk, tk, dk, this.slots.bindGroup, wk.slot * hR);
-          const Vk = 5 * wk.slot;
-          if ("indirect" === Rk) {
-            tk.indexBuffer ? kk.drawIndexedIndirect(this.argsBuffer, 4 * Vk) : kk.drawIndirect(this.argsBuffer, 4 * Vk);
+          if (ab && this.keep(Ib, Wb, ab.qU), 0 === (null === (Ub = fb) || void 0 === Ub ? void 0 : Ub.count)) continue;
+          this.binder.bind(bb, Wb, Hb, this.slots.bindGroup, Ib.slot * Ak);
+          const Mb = 5 * Ib.slot;
+          if ("indirect" === kb) {
+            Wb.indexBuffer ? bb.drawIndexedIndirect(this.argsBuffer, 4 * Mb) : bb.drawIndirect(this.argsBuffer, 4 * Mb);
             continue
           }
-          const Jk = this.args;
-          sk ? ca(kk, null !== tk.indexBuffer, Jk, Vk, sk) : tk.indexBuffer ? kk.drawIndexed(Jk[Vk], Jk[Vk + 1], Jk[Vk + 2], 0, 0) : kk.draw(Jk[Vk], Jk[Vk + 1], Jk[Vk + 2], 0)
+          const Xb = this.args;
+          fb ? Oa(bb, null !== Wb.indexBuffer, Xb, Mb, fb) : Wb.indexBuffer ? bb.drawIndexed(Xb[Mb], Xb[Mb + 1], Xb[Mb + 2], 0, 0) : bb.draw(Xb[Mb], Xb[Mb + 1], Xb[Mb + 2], 0)
         }
-        ak && (ak.stale = Xk)
+        ab && (ab.stale = Tb)
       }
-      keep(kk, Fk, Bk) {
-        kk.recorded = !0, kk.pipelineKey = Fk.pipelineKey, kk.materialGroup = Fk.material.bindGroup, kk.vertexBuffers.length = 0, kk.vertexBuffers.push(...Fk.vertexBuffers), kk.vertexOffsets = Fk.vertexOffsets, kk.indexBuffer = Fk.indexBuffer, kk.indexFormat = Fk.indexFormat;
-        for (const Rk of Fk.vertexBuffers) Bk.add(Rk);
-        Fk.indexBuffer && Bk.add(Fk.indexBuffer), Bk.add(Fk.material.buffer);
-        for (const Rk of Fk.material.bound) Rk && Bk.add(Rk)
+      keep(bb, cb, sb) {
+        bb.recorded = !0, bb.pipelineKey = cb.pipelineKey, bb.materialGroup = cb.material.bindGroup, bb.vertexBuffers.length = 0, bb.vertexBuffers.push(...cb.vertexBuffers), bb.vertexOffsets = cb.vertexOffsets, bb.indexBuffer = cb.indexBuffer, bb.indexFormat = cb.indexFormat;
+        for (const kb of cb.vertexBuffers) sb.add(kb);
+        cb.indexBuffer && sb.add(cb.indexBuffer), sb.add(cb.material.buffer);
+        for (const kb of cb.material.bound) kb && sb.add(kb)
       }
-      createRecord(kk) {
-        let Fk = this.freeSlots.pop();
-        return void 0 === Fk && (Fk = this.slotCount++, this.grow()), {
-          unit: kk,
-          slot: Fk,
-          WE: void 0 !== (0, Ma.p)(kk.owner),
+      createRecord(bb) {
+        let cb = this.freeSlots.pop();
+        return void 0 === cb && (cb = this.slotCount++, this.grow()), {
+          unit: bb,
+          slot: cb,
+          RL: void 0 !== (0, Da.o)(bb.owner),
           seen: -1,
           draw: null,
           recorded: !1,
@@ -3014,9 +3014,9 @@ export const modules = {
         }
       }
       grow() {
-        if (this.slots.ensure(this.slotCount) && (this.slotsFrom = 0, this.slotsTo = this.slotCount - 1, this.main.stale = !0, this.WE.stale = !0), 5 * this.slotCount > this.args.length) {
-          const kk = new Uint32Array(2 * this.args.length);
-          kk.set(this.args), this.args = kk, this.argsBuffer.destroy(), this.argsBuffer = this.createArgsBuffer(), this.argsDirty = !0, this.main.stale = !0
+        if (this.slots.ensure(this.slotCount) && (this.slotsFrom = 0, this.slotsTo = this.slotCount - 1, this.main.stale = !0, this.RL.stale = !0), 5 * this.slotCount > this.args.length) {
+          const bb = new Uint32Array(2 * this.args.length);
+          bb.set(this.args), this.args = bb, this.argsBuffer.destroy(), this.argsBuffer = this.createArgsBuffer(), this.argsDirty = !0, this.main.stale = !0
         }
       }
       createArgsBuffer() {
@@ -3028,554 +3028,554 @@ export const modules = {
       }
     }
 
-    function ca(kk, Fk, Bk, Rk, tk) {
-      const ak = Bk[Rk + 1],
-        Xk = tk.data;
-      for (let bk = 0; bk < tk.count; bk++) {
-        const tk = Math.min(Xk[2 * bk], ak),
-          wk = Math.min(Xk[2 * bk + 1], ak - tk);
-        0 !== wk && (Fk ? kk.drawIndexed(Bk[Rk], wk, Bk[Rk + 2], 0, tk) : kk.draw(Bk[Rk], wk, Bk[Rk + 2], tk))
+    function Oa(bb, cb, sb, kb, Wb) {
+      const ab = sb[kb + 1],
+        Tb = Wb.data;
+      for (let Ub = 0; Ub < Wb.count; Ub++) {
+        const Wb = Math.min(Tb[2 * Ub], ab),
+          Ib = Math.min(Tb[2 * Ub + 1], ab - Wb);
+        0 !== Ib && (cb ? bb.drawIndexed(sb[kb], Ib, sb[kb + 2], 0, Wb) : bb.draw(sb[kb], Ib, sb[kb + 2], Wb))
       }
     }
 
-    function Ga(kk, Fk) {
-      if (kk.pipelineKey !== Fk.pipelineKey || kk.materialGroup !== Fk.material.bindGroup || kk.indexBuffer !== Fk.indexBuffer || kk.indexFormat !== Fk.indexFormat || kk.vertexOffsets !== Fk.vertexOffsets || kk.vertexBuffers.length !== Fk.vertexBuffers.length) return !1;
-      for (let Bk = 0; Bk < kk.vertexBuffers.length; Bk++)
-        if (kk.vertexBuffers[Bk] !== Fk.vertexBuffers[Bk]) return !1;
+    function Ga(bb, cb) {
+      if (bb.pipelineKey !== cb.pipelineKey || bb.materialGroup !== cb.material.bindGroup || bb.indexBuffer !== cb.indexBuffer || bb.indexFormat !== cb.indexFormat || bb.vertexOffsets !== cb.vertexOffsets || bb.vertexBuffers.length !== cb.vertexBuffers.length) return !1;
+      for (let sb = 0; sb < bb.vertexBuffers.length; sb++)
+        if (bb.vertexBuffers[sb] !== cb.vertexBuffers[sb]) return !1;
       return !0
     }
 
-    function Ta(kk, Fk) {
-      return It(kk.draw, Fk.draw)
+    function Ka(bb, cb) {
+      return pW(bb.draw, cb.draw)
     }
-    const ra = new WeakMap,
-      Da = {
+    const Za = new WeakMap,
+      za = {
         depth: !1,
         sunShadow: !1
       };
 
-    function za(kk, Fk) {
-      let Bk = ra.get(kk);
-      Bk || (Bk = new Map, ra.set(kk, Bk));
-      const Rk = `${Fk.depth?"-depth":""}${Fk.sunShadow?"-shadow":""}${Fk.shadowMask?"-mask":""}`;
-      let tk = Bk.get(Rk);
-      if (!tk) {
-        const ak = [{
-          binding: NF.e,
+    function qa(bb, cb) {
+      let sb = Za.get(bb);
+      sb || (sb = new Map, Za.set(bb, sb));
+      const kb = `${cb.depth?"-depth":""}${cb.sunShadow?"-shadow":""}${cb.shadowMask?"-mask":""}`;
+      let Wb = sb.get(kb);
+      if (!Wb) {
+        const ab = [{
+          binding: gc.b,
           visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
           buffer: {
             type: "uniform",
-            minBindingSize: NF.h
+            minBindingSize: gc.h
           }
         }, {
-          binding: NF.u,
+          binding: gc.A,
           visibility: GPUShaderStage.VERTEX,
           buffer: {
             type: "read-only-storage"
           }
         }];
-        Fk.depth && ak.push({
-          binding: NF.p,
+        cb.depth && ab.push({
+          binding: gc.p,
           visibility: GPUShaderStage.FRAGMENT,
           texture: {
             sampleType: "unfilterable-float"
           }
-        }), Fk.sunShadow && ak.push(... function() {
-          const kk = GPUShaderStage.FRAGMENT,
-            Fk = NF.r;
+        }), cb.sunShadow && ab.push(... function() {
+          const bb = GPUShaderStage.FRAGMENT,
+            cb = gc.s;
           return [{
-            binding: Fk.uniform,
-            visibility: kk,
+            binding: cb.uniform,
+            visibility: bb,
             buffer: {
               type: "uniform"
             }
           }, {
-            binding: Fk.jJ,
-            visibility: kk,
+            binding: cb.zX,
+            visibility: bb,
             buffer: {
               type: "read-only-storage"
             }
           }, {
-            binding: Fk.special,
-            visibility: kk,
+            binding: cb.special,
+            visibility: bb,
             buffer: {
               type: "read-only-storage"
             }
           }, {
-            binding: Fk.volume,
-            visibility: kk,
+            binding: cb.volume,
+            visibility: bb,
             texture: {
               sampleType: "float",
               viewDimension: "3d"
             }
           }, {
-            binding: Fk.sampler,
-            visibility: kk,
+            binding: cb.sampler,
+            visibility: bb,
             sampler: {
               type: "filtering"
             }
           }, {
-            binding: Fk.entities,
-            visibility: kk,
+            binding: cb.entities,
+            visibility: bb,
             buffer: {
               type: "read-only-storage"
             }
           }, {
-            binding: Fk.entityGrids,
-            visibility: kk,
+            binding: cb.entityGrids,
+            visibility: bb,
             buffer: {
               type: "read-only-storage"
             }
           }]
-        }()), Fk.shadowMask && ak.push({
-          binding: NF.s,
+        }()), cb.shadowMask && ab.push({
+          binding: gc.w,
           visibility: GPUShaderStage.FRAGMENT,
           texture: {
             sampleType: "unfilterable-float"
           }
-        }), tk = kk.createBindGroupLayout({
-          label: `${Fk.depth?"terrain-":""}shader-pack-inputs${Rk}`,
-          entries: ak
-        }), Bk.set(Rk, tk)
+        }), Wb = bb.createBindGroupLayout({
+          label: `${cb.depth?"terrain-":""}shader-pack-inputs${kb}`,
+          entries: ab
+        }), sb.set(kb, Wb)
       }
-      return tk
+      return Wb
     }
 
-    function Pa(kk) {
-      return za(kk, Da)
+    function da(bb) {
+      return qa(bb, za)
     }
 
-    function ha(kk, Fk) {
-      if (!Fk) return !1;
-      const Bk = (0, HF.f)(kk);
-      return !!Bk && rB(Bk, Fk)
+    function Aa(bb, cb) {
+      if (!cb) return !1;
+      const sb = (0, Bc.e)(bb);
+      return !!sb && Ks(sb, cb)
     }
 
-    function qa(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Rk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (!sR(Fk)) return [];
-      return [za(kk, {
-        depth: aR(Fk.packVariant),
-        sunShadow: ha(Fk.packVariant, Bk),
-        shadowMask: Rk
+    function wa(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        kb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (!Mk(cb)) return [];
+      return [qa(bb, {
+        depth: Tk(cb.packVariant),
+        sunShadow: Aa(cb.packVariant, sb),
+        shadowMask: kb
       })]
     }
-    class Ca {
-      constructor(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.device = kk, this.sunShadow = Bk, this.bindGroup = void 0, this.buffer = void 0, this.textures = void 0, this.data = new ArrayBuffer(NF.h), this.groups = new Map, this.depthView = null, this.maskView = null, this.buffer = kk.createBuffer({
+    class ra {
+      constructor(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.device = bb, this.sunShadow = sb, this.bindGroup = void 0, this.buffer = void 0, this.textures = void 0, this.data = new ArrayBuffer(gc.h), this.groups = new Map, this.depthView = null, this.maskView = null, this.buffer = bb.createBuffer({
           label: "shader-pack-inputs",
-          size: NF.h,
+          size: gc.h,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
         });
-        const Rk = (0, NF.v)(Fk);
-        this.textures = kk.createBuffer({
+        const kb = (0, gc.C)(cb);
+        this.textures = bb.createBuffer({
           label: "shader-pack-textures",
-          size: Rk.byteLength,
+          size: kb.byteLength,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), kk.queue.writeBuffer(this.textures, 0, Rk), this.bindGroup = kk.createBindGroup({
+        }), bb.queue.writeBuffer(this.textures, 0, kb), this.bindGroup = bb.createBindGroup({
           label: "shader-pack-inputs",
-          layout: Pa(kk),
+          layout: da(bb),
           entries: this.entries()
         })
       }
       entries() {
         return [{
-          binding: NF.e,
+          binding: gc.b,
           resource: {
             buffer: this.buffer
           }
         }, {
-          binding: NF.u,
+          binding: gc.A,
           resource: {
             buffer: this.textures
           }
         }]
       }
-      write(kk, Fk, Bk) {
-        (0, NF.D)(this.data, {
-          seconds: kk.seconds(),
-          lit: Bk,
-          renderOffset: kk.renderOffset(),
-          w6: kk.w6(),
-          eyePosition: Fk,
-          shadowDirection: kk.shadowDirection()
+      write(bb, cb, sb) {
+        (0, gc.H)(this.data, {
+          seconds: bb.seconds(),
+          lit: sb,
+          renderOffset: bb.renderOffset(),
+          J9: bb.J9(),
+          eyePosition: cb,
+          shadowDirection: bb.shadowDirection()
         }), this.device.queue.writeBuffer(this.buffer, 0, this.data)
       }
-      bindGroupFor(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const Rk = Fk ? this.sunShadow : null;
-        if ((Fk || Bk) && !Rk) throw new Error("A shader pack program binds sun shadows on a page without them");
-        if (!kk && !Rk) return this.bindGroup;
-        (kk && kk !== this.depthView || Bk && Bk !== this.maskView) && (this.depthView = null !== kk && void 0 !== kk ? kk : this.depthView, this.maskView = null !== Bk && void 0 !== Bk ? Bk : this.maskView, this.groups.clear());
-        const tk = (kk ? 1 : 0) | (Rk ? 2 : 0) | (Bk ? 4 : 0);
-        let ak = this.groups.get(tk);
-        if (!ak) {
-          const Fk = this.entries();
-          kk && Fk.push({
-            binding: NF.p,
-            resource: kk
-          }), Rk && Fk.push(...Rk.entries()), Bk && Fk.push({
-            binding: NF.s,
-            resource: Bk
-          }), ak = this.device.createBindGroup({
-            label: `${kk||Bk?"terrain-":""}shader-pack-inputs${kk?"-depth":""}${Rk?"-shadow":""}${Bk?"-mask":""}`,
-            layout: za(this.device, {
-              depth: !!kk,
-              sunShadow: !!Rk,
-              shadowMask: !!Bk
+      bindGroupFor(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const kb = cb ? this.sunShadow : null;
+        if ((cb || sb) && !kb) throw new Error("A shader pack program binds sun shadows on a page without them");
+        if (!bb && !kb) return this.bindGroup;
+        (bb && bb !== this.depthView || sb && sb !== this.maskView) && (this.depthView = null !== bb && void 0 !== bb ? bb : this.depthView, this.maskView = null !== sb && void 0 !== sb ? sb : this.maskView, this.groups.clear());
+        const Wb = (bb ? 1 : 0) | (kb ? 2 : 0) | (sb ? 4 : 0);
+        let ab = this.groups.get(Wb);
+        if (!ab) {
+          const cb = this.entries();
+          bb && cb.push({
+            binding: gc.p,
+            resource: bb
+          }), kb && cb.push(...kb.entries()), sb && cb.push({
+            binding: gc.w,
+            resource: sb
+          }), ab = this.device.createBindGroup({
+            label: `${bb||sb?"terrain-":""}shader-pack-inputs${bb?"-depth":""}${kb?"-shadow":""}${sb?"-mask":""}`,
+            layout: qa(this.device, {
+              depth: !!bb,
+              sunShadow: !!kb,
+              shadowMask: !!sb
             }),
-            entries: Fk
-          }), this.groups.set(tk, ak)
+            entries: cb
+          }), this.groups.set(Wb, ab)
         }
-        return ak
+        return ab
       }
-      bind(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        kk.setBindGroup(NF.g, this.bindGroupFor(Fk, Bk, Rk))
+      bind(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        bb.setBindGroup(gc.d, this.bindGroupFor(cb, sb, kb))
       }
     }
 
-    function Za(kk, Fk, Bk) {
-      if (kk.gpuVersion === Fk.gpuBuffersVersion) return !0;
-      let Rk;
+    function oa(bb, cb, sb) {
+      if (bb.gpuVersion === cb.gpuBuffersVersion) return !0;
+      let kb;
       do {
-        if (Rk = Fk.gpuBuffersVersion, !pa(kk, Fk, Bk)) return !1
-      } while (Fk.gpuBuffersVersion !== Rk);
-      return kk.gpuVersion = Rk, kk.fitInstances = 0, !0
+        if (kb = cb.gpuBuffersVersion, !Sa(bb, cb, sb)) return !1
+      } while (cb.gpuBuffersVersion !== kb);
+      return bb.gpuVersion = kb, bb.fitInstances = 0, !0
     }
 
-    function pa(kk, Fk, Bk) {
-      let Rk = null;
-      for (let ak = 0; ak < kk.slotData.length; ak++) {
-        var tk;
-        const Xk = kk.slotData[ak],
-          bk = Xk ? Fk.gpuBuffer(Xk) : Bk;
-        if (!bk) return !1;
-        Xk && kk.layout.instanceEnds[ak] < 0 && Fk.cover(Xk, Number.POSITIVE_INFINITY), kk.buffers[ak] = bk;
-        const wk = kk.f_[ak] + (Xk ? Fk.gpuOffset(Xk) : 0);
-        wk !== (null !== (tk = Rk) && void 0 !== tk ? tk : kk.offsets)[ak] && (Rk ??= kk.offsets.slice(), Rk[ak] = wk), kk.ends[ak] = Xk ? Fk.gpuEnd(Xk) : bk.size
+    function Sa(bb, cb, sb) {
+      let kb = null;
+      for (let ab = 0; ab < bb.slotData.length; ab++) {
+        var Wb;
+        const Tb = bb.slotData[ab],
+          Ub = Tb ? cb.gpuBuffer(Tb) : sb;
+        if (!Ub) return !1;
+        Tb && bb.layout.instanceEnds[ab] < 0 && cb.cover(Tb, Number.POSITIVE_INFINITY), bb.buffers[ab] = Ub;
+        const Ib = bb.Z6[ab] + (Tb ? cb.gpuOffset(Tb) : 0);
+        Ib !== (null !== (Wb = kb) && void 0 !== Wb ? Wb : bb.offsets)[ab] && (kb ??= bb.offsets.slice(), kb[ab] = Ib), bb.ends[ab] = Tb ? cb.gpuEnd(Tb) : Ub.size
       }
-      return Rk && (kk.offsets = Rk), !0
+      return kb && (bb.offsets = kb), !0
     }
 
-    function Ka(kk, Fk, Bk, Rk) {
-      if (Fk <= kk.fitInstances) return null;
+    function Ra(bb, cb, sb, kb) {
+      if (cb <= bb.fitInstances) return null;
       const {
-        layout: tk,
-        ends: ak,
-        offsets: Xk,
-        slotData: bk,
-        f_: wk
-      } = kk;
-      let dk = !1;
-      for (let sk = 0; sk < tk.buffers.length; sk++) {
-        const kk = tk.instanceEnds[sk];
-        if (kk < 0) continue;
-        const Rk = (Fk - 1) * tk.buffers[sk].arrayStride + kk;
-        if (ak[sk] - Xk[sk] < Rk) return {
-          index: sk,
-          needed: Rk
+        layout: Wb,
+        ends: ab,
+        offsets: Tb,
+        slotData: Ub,
+        Z6: Ib
+      } = bb;
+      let Hb = !1;
+      for (let fb = 0; fb < Wb.buffers.length; fb++) {
+        const bb = Wb.instanceEnds[fb];
+        if (bb < 0) continue;
+        const kb = (cb - 1) * Wb.buffers[fb].arrayStride + bb;
+        if (ab[fb] - Tb[fb] < kb) return {
+          index: fb,
+          needed: kb
         };
-        const Vk = bk[sk];
-        Vk && Bk.cover(Vk, wk[sk] + Rk) && (dk = !0)
+        const Mb = Ub[fb];
+        Mb && sb.cover(Mb, Ib[fb] + kb) && (Hb = !0)
       }
-      return dk && Za(kk, Bk, Rk), kk.fitInstances = Fk, null
+      return Hb && oa(bb, sb, kb), bb.fitInstances = cb, null
     }
-    var xa = Bk(37512),
-      ja = Bk(37540);
-    const la = "vertexOutputs.position=scene.viewProjection*worldPos;\n",
-      na = "var baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n",
-      Ia = "color=vec4f(color.rgb,color.a*mesh.visibility);\n",
-      Qa = `((vertexInputs.aPackedLightLevels >> 16u) | ${dF.b.placed}u)`,
-      kX = "u32(vertexInputs.aShaderPackItem.x)",
-      FX = `${dF.b.lifeform}u`;
+    var va = sb(37415),
+      Fa = sb(37441);
+    const xa = "vertexOutputs.position=scene.viewProjection*worldPos;\n",
+      ja = "var baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n",
+      pa = "color=vec4f(color.rgb,color.a*mesh.visibility);\n",
+      bT = `((vertexInputs.aPackedLightLevels >> 16u) | ${Ic.b.placed}u)`,
+      cT = "u32(vertexInputs.aShaderPackItem.x)",
+      sT = `${Ic.b.lifeform}u`;
 
-    function BX(kk) {
-      return "item" === kk.kind ? "bloxdSpItemLocalPosition(positionUpdated, vertexInputs.aShaderPackItem)" : "positionUpdated"
+    function kT(bb) {
+      return "item" === bb.kind ? "bloxdSpItemLocalPosition(positionUpdated, vertexInputs.aShaderPackItem)" : "positionUpdated"
     }
-    const RX = "bloxdSpEnchant",
-      tX = "floor(finalWorld[3].xyz)";
+    const WT = "bloxdSpEnchant",
+      aT = "floor(finalWorld[3].xyz)";
 
-    function aX(kk, Fk, Bk) {
-      return "placed" === Fk.kind && kk.reads[Bk].includes("bloxdFragmentBlockPosition")
-    }
-
-    function XX(kk, Fk) {
-      let [Bk, Rk] = kk;
-      return Bk === Fk.point && Rk === Fk.code
+    function TT(bb, cb, sb) {
+      return "placed" === cb.kind && bb.reads[sb].includes("bloxdFragmentBlockPosition")
     }
 
-    function bX(kk, Fk) {
-      var Bk, Rk, tk;
-      const ak = null === (Bk = kk.find((kk => kk.texture))) || void 0 === Bk ? void 0 : Bk.texture,
-        Xk = null === (Rk = kk.find((kk => kk.enchantTier))) || void 0 === Rk ? void 0 : Rk.enchantTier,
-        bk = null === (tk = kk.find((kk => kk.overlay))) || void 0 === tk ? void 0 : tk.overlay,
-        wk = bk ? Fk.filter((kk => XX(kk, bk))).length : 0;
-      return bk && 1 === wk ? {
-        texture: ak,
-        overlay: bk,
-        enchantTier: Xk
+    function UT(bb, cb) {
+      let [sb, kb] = bb;
+      return sb === cb.point && kb === cb.code
+    }
+
+    function IT(bb, cb) {
+      var sb, kb, Wb;
+      const ab = null === (sb = bb.find((bb => bb.texture))) || void 0 === sb ? void 0 : sb.texture,
+        Tb = null === (kb = bb.find((bb => bb.enchantTier))) || void 0 === kb ? void 0 : kb.enchantTier,
+        Ub = null === (Wb = bb.find((bb => bb.overlay))) || void 0 === Wb ? void 0 : Wb.overlay,
+        Ib = Ub ? cb.filter((bb => UT(bb, Ub))).length : 0;
+      return Ub && 1 === Ib ? {
+        texture: ab,
+        overlay: Ub,
+        enchantTier: Tb
       } : {
-        texture: ak,
-        enchantTier: Xk
+        texture: ab,
+        enchantTier: Tb
       }
     }
 
-    function wX(kk) {
-      if ("item" === kk.kind) {
+    function HT(bb) {
+      if ("item" === bb.kind) {
         return {
-          vertexFlags: `(${kX} & 0xffffu)`,
+          vertexFlags: `(${cT} & 0xffffu)`,
           varying: "vPackItem",
-          value: kX,
+          value: cT,
           flags: "(fragmentInputs.vPackItem & 0xffffu)",
           enchantTier: "(fragmentInputs.vPackItem >> 16u)"
         }
       }
-      return kk.defines.BLOXD_LIGHT_WORD ? {
-        vertexFlags: Qa,
+      return bb.defines.BLOXD_LIGHT_WORD ? {
+        vertexFlags: bT,
         varying: "vPackFlags",
-        value: Qa,
+        value: bT,
         flags: "fragmentInputs.vPackFlags",
         enchantTier: "0u"
       } : null
     }
 
-    function dX(kk) {
-      return "lifeform" === kk.kind ? FX : "0u"
+    function fT(bb) {
+      return "lifeform" === bb.kind ? sT : "0u"
     }
 
-    function sX(kk) {
-      return !!kk.BLOXD_PLUGIN_ENCHANTMENT
+    function MT(bb) {
+      return !!bb.BLOXD_PLUGIN_ENCHANTMENT
     }
 
-    function VX(kk, Fk) {
+    function XT(bb, cb) {
       const {
-        enchantTier: Bk
-      } = Fk;
-      return Bk && sX(Fk.defines) && "lifeform" === Fk.kind && mX(kk, "enchantTier") ? Bk : null
+        enchantTier: sb
+      } = cb;
+      return sb && MT(cb.defines) && "lifeform" === cb.kind && CT(bb, "enchantTier") ? sb : null
     }
 
-    function JX(kk, Fk) {
-      return sX(Fk.defines) && mX(kk, "enchantSpeed")
+    function nT(bb, cb) {
+      return MT(cb.defines) && CT(bb, "enchantSpeed")
     }
 
-    function AX(kk) {
+    function mT(bb) {
       const {
-        overlay: Fk,
-        defines: Bk
-      } = kk;
-      if (!Fk || !Bk.DIFFUSE) return null;
-      const Rk = Bk.VERTEXCOLOR || Bk.INSTANCESCOLOR && Bk.INSTANCES;
-      return `vec4f(${Fk.colour}.rgb * uniforms.vDiffuseInfos.y${Rk?" * fragmentInputs.vColor.rgb":""}, ${Fk.colour}.a)`
+        overlay: cb,
+        defines: sb
+      } = bb;
+      if (!cb || !sb.DIFFUSE) return null;
+      const kb = sb.VERTEXCOLOR || sb.INSTANCESCOLOR && sb.INSTANCES;
+      return `vec4f(${cb.colour}.rgb * uniforms.vDiffuseInfos.y${kb?" * fragmentInputs.vColor.rgb":""}, ${cb.colour}.a)`
     }
-    const eX = "fragmentInputs.vPackTexture";
+    const lT = "fragmentInputs.vPackTexture";
 
-    function yX(kk) {
+    function QT(bb) {
       const {
-        atlas: Fk,
-        defines: Bk,
-        texture: Rk
-      } = kk;
-      if (Fk || !Bk.DIFFUSE) return null;
-      if (Rk) return {
+        atlas: cb,
+        defines: sb,
+        texture: kb
+      } = bb;
+      if (cb || !sb.DIFFUSE) return null;
+      if (kb) return {
         texture: "diffuseSampler",
-        ...Rk
+        ...kb
       };
-      const tk = {
+      const Wb = {
         texture: "diffuseSampler",
         cells: null,
         layers: [],
-        uv: `fragmentInputs.${1===Bk.DIFFUSEDIRECTUV?"vMainUV1":2===Bk.DIFFUSEDIRECTUV?"vMainUV2":"vDiffuseUV"}`
+        uv: `fragmentInputs.${1===sb.DIFFUSEDIRECTUV?"vMainUV1":2===sb.DIFFUSEDIRECTUV?"vMainUV2":"vDiffuseUV"}`
       };
-      if ("box" !== kk.kind) return tk;
-      if (!Bk.BLOXD_PLUGIN_ANIMATED) return {
-        ...tk,
-        id: eX
+      if ("box" !== bb.kind) return Wb;
+      if (!sb.BLOXD_PLUGIN_ANIMATED) return {
+        ...Wb,
+        id: lT
       };
-      const ak = Lk.e.WGSL,
-        Xk = (0, Lk.Hb)(ak, "uAnimStatesNum"),
-        bk = (0, Lk.ib)(ak, (0, xa.f)(ak), Xk),
-        wk = "fragmentInputs.vMainUV1";
+      const ab = ub.e.WGSL,
+        Tb = (0, ub.sb)(ab, "uAnimStatesNum"),
+        Ub = (0, ub.bb)(ab, (0, va.g)(ab), Tb),
+        Ib = "fragmentInputs.vMainUV1";
       return {
         texture: "diffuseSampler",
-        cells: `vec2f(1.0, ${Xk})`,
-        layers: [bk],
-        uv: `vec2f(${wk}.x, ${wk}.y * ${Xk} - ${bk})`,
-        levelUv: wk,
-        id: eX
+        cells: `vec2f(1.0, ${Tb})`,
+        layers: [Ub],
+        uv: `vec2f(${Ib}.x, ${Ib}.y * ${Tb} - ${Ub})`,
+        levelUv: Ib,
+        id: lT
       }
     }
 
-    function fX(kk, Fk) {
-      return "box" === Fk.kind && !!kk.hooks.surface && null !== yX(Fk)
+    function eT(bb, cb) {
+      return "box" === cb.kind && !!bb.hooks.surface && null !== QT(cb)
     }
 
-    function mX(kk, Fk) {
-      return kk.reads.fragment.includes(Fk)
+    function CT(bb, cb) {
+      return bb.reads.fragment.includes(cb)
     }
 
-    function WX(kk) {
-      return !!kk.BLOXD_LIGHTING && !kk.BLOXD_UNLIT
+    function NT(bb) {
+      return !!bb.BLOXD_LIGHTING && !bb.BLOXD_UNLIT
     }
 
-    function vX(kk, Fk, Bk, Rk) {
-      const tk = kk.filter((kk => {
-        let [Bk, Rk] = kk;
-        return "CUSTOM_FRAGMENT_BEFORE_FOG" === Bk && Rk === Fk
+    function VT(bb, cb, sb, kb) {
+      const Wb = bb.filter((bb => {
+        let [sb, kb] = bb;
+        return "CUSTOM_FRAGMENT_BEFORE_FOG" === sb && kb === cb
       }));
-      if (1 !== tk.length) throw new Error(`A model program for shader packs has ${0===tk.length?"no":"more than one"} ${Rk} code before fog (lite/modelShaderPack.ts)`);
-      return kk.map((kk => kk === tk[0] ? [kk[0], Bk] : kk))
+      if (1 !== Wb.length) throw new Error(`A model program for shader packs has ${0===Wb.length?"no":"more than one"} ${kb} code before fog (lite/modelShaderPack.ts)`);
+      return bb.map((bb => bb === Wb[0] ? [bb[0], sb] : bb))
     }
 
-    function iX(kk, Fk, Bk, Rk) {
+    function LT(bb, cb, sb, kb) {
       const {
-        hooks: tk
-      } = kk, {
-        kind: ak,
-        defines: Xk
-      } = Fk, bk = [...Bk];
-      var wk;
-      Fk.atlas && tk.surface && bk.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", ZB("atlasIdxIn")]), "item" === ak && bk.push(["CUSTOM_VERTEX_DEFINITIONS", (0, Lk.i)(Lk.e.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "\nfn bloxdSpQuarterTurns(v: vec2f, quarters: u32) -> vec2f {\n    let c = select(select(0.0, -1.0, quarters == 2u), 1.0, quarters == 0u);\n    let s = select(select(0.0, -1.0, quarters == 3u), 1.0, quarters == 1u);\n    return vec2f(v.x * c - v.y * s, v.x * s + v.y * c);\n}\nfn bloxdSpItemLocalPosition(position: vec3f, item: vec4f) -> vec3f {\n    let p = position * item.y + vec3f(0.0, item.z, 0.0);\n    let turn = u32(item.w);\n    let yz = bloxdSpQuarterTurns(p.yz, turn >> 2u);\n    let zx = bloxdSpQuarterTurns(vec2f(yz.y, p.x), turn & 3u);\n    return vec3f(zx.y, yz.x, zx.x);\n}\n"]), fX(kk, Fk) && bk.push(["CUSTOM_VERTEX_DEFINITIONS", (0, Lk.i)(Lk.e.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", (wk = "vertexInputs.aShaderPackItem.x", `\tvertexOutputs.vPackTexture = select(0u, ${qB}[min(u32(${wk}) - 1u, arrayLength(&${qB}) - 1u)], ${wk} > 0.5);\n`)]);
-      const dk = wX(Fk);
-      dk && (tk.surface || tk.light) && bk.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${dk.varying}: u32;`], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.${dk.varying} = ${dk.value};`]);
-      let sk = Rk;
-      if (aX(kk, Fk, "fragment") && (bk.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackCell: vec3i;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackCell = vec3i(${tX});`]), sk = [...sk, ["CUSTOM_FRAGMENT_MAIN_BEGIN", "bloxdSpCell = vec3f(fragmentInputs.vPackCell);"]]), mX(kk, "localPosition") && bk.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackLocalPosition: vec3f;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackLocalPosition = ${BX(Fk)};`]), sX(Xk) && tk.surface) {
-        JX(kk, Fk) && bk.push(["CUSTOM_VERTEX_DEFINITIONS", "flat varying vPackEnchantSpeed: f32;"], ["CUSTOM_VERTEX_MAIN_END", "vertexOutputs.vPackEnchantSpeed = vertexInputs.aEnchantmentSpeed;"]);
-        const Bk = VX(kk, Fk);
-        Bk && bk.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackEnchantTier: u32;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackEnchantTier = u32(${Bk});`]);
-        const Rk = (0, Lk.rb)(Lk.e.WGSL, "color", "mix(color.xyz, bloxdSpSurface.enchantColour.rgb, bloxdSpSurface.enchantColour.a)");
-        sk = [...vX(sk, (0, ja.h)(Lk.e.WGSL), Rk, "enchantment"), ["CUSTOM_FRAGMENT_DEFINITIONS", (0, ja.b)(RX)]]
+        hooks: Wb
+      } = bb, {
+        kind: ab,
+        defines: Tb
+      } = cb, Ub = [...sb];
+      var Ib;
+      cb.atlas && Wb.surface && Ub.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", rs("atlasIdxIn")]), "item" === ab && Ub.push(["CUSTOM_VERTEX_DEFINITIONS", (0, ub.f)(ub.e.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "\nfn bloxdSpQuarterTurns(v: vec2f, quarters: u32) -> vec2f {\n    let c = select(select(0.0, -1.0, quarters == 2u), 1.0, quarters == 0u);\n    let s = select(select(0.0, -1.0, quarters == 3u), 1.0, quarters == 1u);\n    return vec2f(v.x * c - v.y * s, v.x * s + v.y * c);\n}\nfn bloxdSpItemLocalPosition(position: vec3f, item: vec4f) -> vec3f {\n    let p = position * item.y + vec3f(0.0, item.z, 0.0);\n    let turn = u32(item.w);\n    let yz = bloxdSpQuarterTurns(p.yz, turn >> 2u);\n    let zx = bloxdSpQuarterTurns(vec2f(yz.y, p.x), turn & 3u);\n    return vec3f(zx.y, yz.x, zx.x);\n}\n"]), eT(bb, cb) && Ub.push(["CUSTOM_VERTEX_DEFINITIONS", (0, ub.f)(ub.e.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", (Ib = "vertexInputs.aShaderPackItem.x", `\tvertexOutputs.vPackTexture = select(0u, ${As}[min(u32(${Ib}) - 1u, arrayLength(&${As}) - 1u)], ${Ib} > 0.5);\n`)]);
+      const Hb = HT(cb);
+      Hb && (Wb.surface || Wb.light) && Ub.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${Hb.varying}: u32;`], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.${Hb.varying} = ${Hb.value};`]);
+      let fb = kb;
+      if (TT(bb, cb, "fragment") && (Ub.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackCell: vec3i;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackCell = vec3i(${aT});`]), fb = [...fb, ["CUSTOM_FRAGMENT_MAIN_BEGIN", "bloxdSpCell = vec3f(fragmentInputs.vPackCell);"]]), CT(bb, "localPosition") && Ub.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackLocalPosition: vec3f;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackLocalPosition = ${kT(cb)};`]), MT(Tb) && Wb.surface) {
+        nT(bb, cb) && Ub.push(["CUSTOM_VERTEX_DEFINITIONS", "flat varying vPackEnchantSpeed: f32;"], ["CUSTOM_VERTEX_MAIN_END", "vertexOutputs.vPackEnchantSpeed = vertexInputs.aEnchantmentSpeed;"]);
+        const sb = XT(bb, cb);
+        sb && Ub.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackEnchantTier: u32;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackEnchantTier = u32(${sb});`]);
+        const kb = (0, ub.kb)(ub.e.WGSL, "color", "mix(color.xyz, bloxdSpSurface.enchantColour.rgb, bloxdSpSurface.enchantColour.a)");
+        fb = [...VT(fb, (0, Fa.e)(ub.e.WGSL), kb, "enchantment"), ["CUSTOM_FRAGMENT_DEFINITIONS", (0, Fa.b)(WT)]]
       }
       const {
-        overlay: Vk
-      } = Fk;
-      Vk && AX(Fk) && tk.surface && (sk = sk.filter((kk => !XX(kk, Vk))));
-      const Jk = tk.light ? function(kk) {
-        return "placed" === kk.kind ? {
+        overlay: Mb
+      } = cb;
+      Mb && mT(cb) && Wb.surface && (fb = fb.filter((bb => !UT(bb, Mb))));
+      const Xb = Wb.light ? function(bb) {
+        return "placed" === bb.kind ? {
           name: "terrain",
-          engine: (0, OF.N)(Lk.e.WGSL),
-          pack: (0, OF.bb)(Lk.e.WGSL)
-        } : kk.defines.BLOXD_PLUGIN_ENTITY_LIGHT ? {
+          engine: (0, Yc.U)(ub.e.WGSL),
+          pack: (0, Yc.db)(ub.e.WGSL)
+        } : bb.defines.BLOXD_PLUGIN_ENTITY_LIGHT ? {
           name: "entity",
-          engine: (0, OF.D)(Lk.e.WGSL),
-          pack: (0, OF.X)(Lk.e.WGSL)
+          engine: (0, Yc.J)(ub.e.WGSL),
+          pack: (0, Yc.bb)(ub.e.WGSL)
         } : null
-      }(Fk) : null;
-      if (Jk && (sk = vX(sk, Jk.engine, Jk.pack, `${Jk.name} light`), "placed" !== ak && WX(Xk))) {
-        const kk = Xk.BLOXD_UNIFORM_ENTITY_LIGHT ? (0, Lk.Hb)(Lk.e.WGSL, "uEntityLightLevels") : (0, Lk.Ob)(Lk.e.WGSL, "aLightLevels");
-        bk.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${OF.b}: vec4f;`], ["CUSTOM_VERTEX_MAIN_END", (0, OF._)(Lk.e.WGSL, kk)])
+      }(cb) : null;
+      if (Xb && (fb = VT(fb, Xb.engine, Xb.pack, `${Xb.name} light`), "placed" !== ab && NT(Tb))) {
+        const bb = Tb.BLOXD_UNIFORM_ENTITY_LIGHT ? (0, ub.sb)(ub.e.WGSL, "uEntityLightLevels") : (0, ub.Bb)(ub.e.WGSL, "aLightLevels");
+        Ub.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${Yc.b}: vec4f;`], ["CUSTOM_VERTEX_MAIN_END", (0, Yc.cb)(ub.e.WGSL, bb)])
       }
       return {
-        vertexCode: bk,
-        fragmentCode: sk
+        vertexCode: Ub,
+        fragmentCode: fb
       }
     }
 
-    function YX(kk, Fk, Bk, Rk) {
-      return GB(kk, Fk, Bk, Rk, "model")
+    function uT(bb, cb, sb, kb) {
+      return Os(bb, cb, sb, kb, "model")
     }
-    const oX = "\t@builtin(position) position: vec4f,\n";
+    const YT = "\t@builtin(position) position: vec4f,\n";
 
-    function LX(kk, Fk) {
-      const Bk = /^(?:(?:diagnostic|enable|requires)\b[^;]*;\n)*/.exec(kk)[0];
-      return `${Bk}${Fk}${kk.slice(Bk.length)}`
+    function hT(bb, cb) {
+      const sb = /^(?:(?:diagnostic|enable|requires)\b[^;]*;\n)*/.exec(bb)[0];
+      return `${sb}${cb}${bb.slice(sb.length)}`
     }
 
-    function OX(kk, Fk, Bk) {
-      let Rk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    function JT(bb, cb, sb) {
+      let kb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
       const {
-        hooks: tk
-      } = Fk, ak = rB(Fk, Rk), {
-        kind: Xk,
-        defines: bk
-      } = Bk, wk = function(kk, Fk) {
-        var Bk, Rk, tk;
+        hooks: Wb
+      } = cb, ab = Ks(cb, kb), {
+        kind: Tb,
+        defines: Ub
+      } = sb, Ib = function(bb, cb) {
+        var sb, kb, Wb;
         const {
-          defines: ak
-        } = Fk, Xk = wX(Fk), bk = !!ak.FOG, wk = sX(ak), dk = null !== (Bk = null === Xk || void 0 === Xk ? void 0 : Xk.enchantTier) && void 0 !== Bk ? Bk : VX(kk, Fk) ? "fragmentInputs.vPackEnchantTier" : "0u", sk = "lifeform" === Fk.kind && !ak.ALPHAFROMDIFFUSE;
+          defines: ab
+        } = cb, Tb = HT(cb), Ub = !!ab.FOG, Ib = MT(ab), Hb = null !== (sb = null === Tb || void 0 === Tb ? void 0 : Tb.enchantTier) && void 0 !== sb ? sb : XT(bb, cb) ? "fragmentInputs.vPackEnchantTier" : "0u", fb = "lifeform" === cb.kind && !ab.ALPHAFROMDIFFUSE;
         return {
-          vertexFlags: null !== (Rk = null === Xk || void 0 === Xk ? void 0 : Xk.vertexFlags) && void 0 !== Rk ? Rk : dX(Fk),
-          vertexLocalPosition: BX(Fk),
-          flags: null !== (tk = null === Xk || void 0 === Xk ? void 0 : Xk.flags) && void 0 !== tk ? tk : dX(Fk),
+          vertexFlags: null !== (kb = null === Tb || void 0 === Tb ? void 0 : Tb.vertexFlags) && void 0 !== kb ? kb : fT(cb),
+          vertexLocalPosition: kT(cb),
+          flags: null !== (Wb = null === Tb || void 0 === Tb ? void 0 : Tb.flags) && void 0 !== Wb ? Wb : fT(cb),
           normal: "normalW",
-          alpha: sk ? "alpha * baseColor.a" : "alpha",
-          alphaOut: sk ? "baseColor.a" : "alpha",
+          alpha: fb ? "alpha * baseColor.a" : "alpha",
+          alphaOut: fb ? "baseColor.a" : "alpha",
           lambert: "diffuseBase.r",
           diffuse: "diffuseColor",
           emissive: "emissiveColor",
           ambient: "uniforms.vAmbientColor",
-          fogColour: bk ? "frame.vFogColor" : "vec3f(0.0)",
-          fogAlpha: bk ? "1.0 - fog" : "0.0",
-          enchantTier: dk,
-          enchantColour: wk ? `${RX}(fragmentInputs.vEnchantRgbAndRotY, fragmentInputs.vPositionAndAnimTick, baseColor.rgb)` : "vec4f(0.0)",
-          enchantSpeed: JX(kk, Fk) ? "fragmentInputs.vPackEnchantSpeed" : "0.0",
-          localPosition: mX(kk, "localPosition") ? "fragmentInputs.vPackLocalPosition" : "vec3f(0.0)",
-          overlayColour: AX(Fk)
+          fogColour: Ub ? "frame.vFogColor" : "vec3f(0.0)",
+          fogAlpha: Ub ? "1.0 - fog" : "0.0",
+          enchantTier: Hb,
+          enchantColour: Ib ? `${WT}(fragmentInputs.vEnchantRgbAndRotY, fragmentInputs.vPositionAndAnimTick, baseColor.rgb)` : "vec4f(0.0)",
+          enchantSpeed: nT(bb, cb) ? "fragmentInputs.vPackEnchantSpeed" : "0.0",
+          localPosition: CT(bb, "localPosition") ? "fragmentInputs.vPackLocalPosition" : "vec3f(0.0)",
+          overlayColour: mT(cb)
         }
-      }(Fk, Bk), dk = kk.textures.filter((kk => /^textureAtlas\d+$/.test(kk.name))).length, sk = Bk.atlas && dk > 0 ? {
-        count: dk,
-        layers: Bk.atlas.layers,
-        width: Bk.atlas.width,
+      }(cb, sb), Hb = bb.textures.filter((bb => /^textureAtlas\d+$/.test(bb.name))).length, fb = sb.atlas && Hb > 0 ? {
+        count: Hb,
+        layers: sb.atlas.layers,
+        width: sb.atlas.width,
         sampler: "textureAtlas0Sampler",
-        frame: kk.material.slots.has("uAnimDataPerTex") ? (Fk, Bk) => NR(Fk, Bk, function(kk) {
-          const Fk = kk.material.stridedArrays.includes("uAnimDataPerTex") ? ".el" : "";
+        frame: bb.material.slots.has("uAnimDataPerTex") ? (cb, sb) => tk(cb, sb, function(bb) {
+          const cb = bb.material.stridedArrays.includes("uAnimDataPerTex") ? ".el" : "";
           return {
-            yJ: "frame.animTick",
+            aX: "frame.animTick",
             stride: "uniforms.uAnimData.y",
             count: "uniforms.uAnimData.z",
-            perTexture: kk => `uniforms.uAnimDataPerTex[${kk}]${Fk}`
+            perTexture: bb => `uniforms.uAnimDataPerTex[${bb}]${cb}`
           }
-        }(kk)) : null
-      } : null, Vk = "placed" === Xk ? "var<private> bloxdSpCell: vec3f;\nfn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\tlet bloxdSpBehind = bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0);\n\tlet bloxdSpInside = all(abs(bloxdSpBehind - bloxdSpCell - 0.5) <= vec3f(0.5 + 1.0 / 256.0));\n\treturn select(vec3i(floor(bloxdSpBehind)), vec3i(bloxdSpCell), bloxdSpInside) + bloxdRenderOffset();\n}\n" : "fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0))) + bloxdRenderOffset();\n}\n", Jk = null !== sk && void 0 !== sk ? sk : yX(Bk), Ak = function(kk, Bk) {
-        let Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        return `${(0,NF.z)()}${zB(Fk,Bk)}${Rk}${KB(kk)}${gB}${Vk}${Fk.code}`
+        }(bb)) : null
+      } : null, Mb = "placed" === Tb ? "var<private> bloxdSpCell: vec3f;\nfn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\tlet bloxdSpBehind = bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0);\n\tlet bloxdSpInside = all(abs(bloxdSpBehind - bloxdSpCell - 0.5) <= vec3f(0.5 + 1.0 / 256.0));\n\treturn select(vec3i(floor(bloxdSpBehind)), vec3i(bloxdSpCell), bloxdSpInside) + bloxdRenderOffset();\n}\n" : "fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0))) + bloxdRenderOffset();\n}\n", Xb = null !== fb && void 0 !== fb ? fb : QT(sb), nb = function(bb, sb) {
+        let kb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+        return `${(0,gc.G)()}${zs(cb,sb)}${kb}${Ss(bb)}${Ds}${Mb}${cb.code}`
       };
       let {
-        vertex: ek,
-        fragment: yk
-      } = kk;
-      const fk = jB(tk, wk);
-      if (fk) {
-        const kk = aX(Fk, Bk, "vertex") ? `\tbloxdSpCell = ${tX};\n` : "";
-        ek = YX(ek, la, `${kk}${fk.slice(1)}${la}`, "vertex")
+        vertex: mb,
+        fragment: lb
+      } = bb;
+      const Qb = vs(Wb, Ib);
+      if (Qb) {
+        const bb = TT(cb, sb, "vertex") ? `\tbloxdSpCell = ${aT};\n` : "";
+        mb = uT(mb, xa, `${bb}${Qb.slice(1)}${xa}`, "vertex")
       }
-      const mk = `${PB(Fk,ak,function(kk,Fk){return Fk.TWOSIDEDLIGHTING?kk:`select(-(${kk}), ${kk}, fragmentInputs.frontFacing)`}(wk.normal,bk),wk.flags)}${lB(tk,Fk.strict,Fk.program,Jk,wk)}`;
-      mk && (yk = YX(yk, na, `${mk.slice(1)}${na}`, "surface")), ak && Fk.sunShadow && !bk.TWOSIDEDLIGHTING && (yk = YX(yk, oX, `${oX}\t@builtin(front_facing) frontFacing: bool,\n`, "front facing"));
-      const Wk = QB(tk);
-      if (Wk) {
-        const kk = IB(tk, WX(bk), !0, wk);
-        yk = YX(yk, Ia, `${kk}${Wk.slice(1)}${Ia}`, "light")
+      const eb = `${qs(cb,ab,function(bb,cb){return cb.TWOSIDEDLIGHTING?bb:`select(-(${bb}), ${bb}, fragmentInputs.frontFacing)`}(Ib.normal,Ub),Ib.flags)}${Fs(Wb,cb.strict,cb.program,Xb,Ib)}`;
+      eb && (lb = uT(lb, ja, `${eb.slice(1)}${ja}`, "surface")), ab && cb.sunShadow && !Ub.TWOSIDEDLIGHTING && (lb = uT(lb, YT, `${YT}\t@builtin(front_facing) frontFacing: bool,\n`, "front facing"));
+      const Cb = bk(Wb);
+      if (Cb) {
+        const bb = ps(Wb, NT(Ub), !0, Ib);
+        lb = uT(lb, pa, `${bb}${Cb.slice(1)}${pa}`, "light")
       }
-      const vk = fX(Fk, Bk) ? CB : "";
+      const Nb = eT(cb, sb) ? ws : "";
       return {
-        ...kk,
-        vertex: LX(ek, Ak(sk, !1, vk)),
-        fragment: LX(yk, Ak(Jk, ak))
+        ...bb,
+        vertex: hT(mb, nb(fb, !1, Nb)),
+        fragment: hT(lb, nb(Xb, ab))
       }
     }
-    const EX = {
+    const gT = {
       name: "earthSky",
       uniqueId: -1
     };
-    class SX {
-      constructor(kk) {
-        this.resources = kk, this.instances = new Map, this.vertexCode = [], this.fragmentCode = [], this.pluginUniforms = [], this.codeKey = "", this.codeVersion = -1
+    class BT {
+      constructor(bb) {
+        this.resources = bb, this.instances = new Map, this.vertexCode = [], this.fragmentCode = [], this.pluginUniforms = [], this.codeKey = "", this.codeVersion = -1
       }
       release() {
-        for (const kk of this.instances.values()) kk.released = !0, this.resources.destroyBuffer(kk.buffer);
+        for (const bb of this.instances.values()) bb.released = !0, this.resources.destroyBuffer(bb.buffer);
         this.instances.clear()
       }
     }
 
-    function NX(kk) {
-      return kk.failed && null !== kk.packGroup
+    function tT(bb) {
+      return bb.failed && null !== bb.packGroup
     }
-    class HX {
-      constructor(kk, Fk, Bk) {
-        this.device = kk, this.resources = Fk, this.skyLastRenderable = void 0, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.frontRenderable = void 0, this.A_ = new ua, this.modelMeshes = new Ha, this.thinBundle = void 0, this.binder = new lt, this.sceneLayout = void 0, this.frameLayout = void 0, this.frameUniforms = new Float32Array(108), this.frameBuffer = void 0, this.meshSlots = void 0, this.zeroBuffer = void 0, this.programs = new Map, this.earthSkyProgram = null, this.earthSkyUniforms = null, this.earthSkyFrom = null, this.drawDefines = void 0, this.modelUniforms = new ma((kk => this.modelSlot(kk).instances.values())), this.vertexLayouts = void 0, this.inputs = new WeakMap, this.unbuildable = new Set, this.linePrograms = new Map, this.materials = new WeakMap, this.pipelines = new Map, this.compiling = 0, this.warnOnce = (0, sF.b)("Lite: "), this.renderStates = new Ja(this.warnOnce), this.nextProgramId = 0, this.frame = 0, this.packInputs = null, this.sunShadow = null, this.caster = {}, this.casterWorlds = new Float32Array(0), this.view = void 0, this.steadyPhase = 0, this.keepSteadyBase = (kk, Fk) => this.keepSteady(kk, Fk), this.lists = new nt(this.modelMeshes, this.A_, this, this.warnOnce), this.slotCount = 0, this.drawDefines = new wa(Fk, this.warnOnce, ((kk, Fk, Bk) => this.programWithModel(kk, Fk, Bk)), NX), this.vertexLayouts = new Ya(Fk, kk.limits, this.warnOnce), this.sceneLayout = BF(kk), this.frameLayout = kk.createBindGroupLayout({
+    class yT {
+      constructor(bb, cb, sb) {
+        this.device = bb, this.resources = cb, this.skyLastRenderable = void 0, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.frontRenderable = void 0, this.f6 = new Pa, this.modelMeshes = new ya, this.thinBundle = void 0, this.binder = new xW, this.sceneLayout = void 0, this.frameLayout = void 0, this.frameUniforms = new Float32Array(108), this.frameBuffer = void 0, this.meshSlots = void 0, this.zeroBuffer = void 0, this.programs = new Map, this.earthSkyProgram = null, this.earthSkyUniforms = null, this.earthSkyFrom = null, this.drawDefines = void 0, this.modelUniforms = new Ca((bb => this.modelSlot(bb).instances.values())), this.vertexLayouts = void 0, this.inputs = new WeakMap, this.unbuildable = new Set, this.linePrograms = new Map, this.materials = new WeakMap, this.pipelines = new Map, this.compiling = 0, this.warnOnce = (0, Hc.c)("Lite: "), this.renderStates = new na(this.warnOnce), this.nextProgramId = 0, this.frame = 0, this.packInputs = null, this.sunShadow = null, this.caster = {}, this.casterWorlds = new Float32Array(0), this.view = void 0, this.steadyPhase = 0, this.keepSteadyBase = (bb, cb) => this.keepSteady(bb, cb), this.lists = new jW(this.modelMeshes, this.f6, this, this.warnOnce), this.slotCount = 0, this.drawDefines = new Ha(cb, this.warnOnce, ((bb, cb, sb) => this.programWithModel(bb, cb, sb)), tT), this.vertexLayouts = new ua(cb, bb.limits, this.warnOnce), this.sceneLayout = cc(bb), this.frameLayout = bb.createBindGroupLayout({
           label: "meshes-frame",
           entries: [{
             binding: 0,
@@ -3592,91 +3592,91 @@ export const modules = {
               minBindingSize: 80
             }
           }]
-        }), this.frameBuffer = kk.createBuffer({
+        }), this.frameBuffer = bb.createBuffer({
           label: "meshes-frame",
           size: this.frameUniforms.byteLength,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.meshSlots = new Oa(kk, this.frameLayout, this.frameBuffer, "meshes-per-draw"), this.zeroBuffer = kk.createBuffer({
+        }), this.meshSlots = new Ja(bb, this.frameLayout, this.frameBuffer, "meshes-per-draw"), this.zeroBuffer = bb.createBuffer({
           label: "meshes-zero-attribute",
           size: 16,
           usage: GPUBufferUsage.VERTEX
-        }), this.thinBundle = new Ua(kk, new Oa(kk, this.frameLayout, this.frameBuffer, "thin-bases-slots"), {
-          pipelineFor: (kk, Fk, Bk) => this.pipelineFor(kk, Fk, Bk),
-          pipelineCompiling: (kk, Fk) => !kk.program.failed && !1 !== this.pipelines.get(`${kk.pipelineKey}|${Fk}`),
-          sceneGroup: kk => {
-            const Fk = Bk(kk);
-            return Fk || this.warnOnce("scene-group", "no render task draws to this target: thin bases are drawn without a bundle"), Fk
+        }), this.thinBundle = new ia(bb, new Ja(bb, this.frameLayout, this.frameBuffer, "thin-bases-slots"), {
+          pipelineFor: (bb, cb, sb) => this.pipelineFor(bb, cb, sb),
+          pipelineCompiling: (bb, cb) => !bb.program.failed && !1 !== this.pipelines.get(`${bb.pipelineKey}|${cb}`),
+          sceneGroup: bb => {
+            const cb = sb(bb);
+            return cb || this.warnOnce("scene-group", "no render task draws to this target: thin bases are drawn without a bundle"), cb
           }
-        }), Fk.onDestroy = kk => {
-          this.thinBundle.resourceDestroyed(kk)
+        }), cb.onDestroy = bb => {
+          this.thinBundle.resourceDestroyed(bb)
         }, this.skyLastRenderable = this.renderable(1e3, !1, this.lists.skyDraws), this.opaqueRenderable = this.renderable(150, !1, this.lists.opaqueDraws, this.thinBundle), this.transparentRenderable = this.renderable(300, !0, this.lists.transparentDraws), this.frontRenderable = this.renderable(400, !0, this.lists.frontDraws)
       }
-      renderable(kk, Fk, Bk) {
-        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const tk = {
-          order: kk,
-          isTransparent: Fk,
-          _direct: !Fk,
-          bind: (kk, Fk) => this.createBinding(tk, Fk, Bk, Rk)
+      renderable(bb, cb, sb) {
+        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        const Wb = {
+          order: bb,
+          isTransparent: cb,
+          _direct: !cb,
+          bind: (bb, cb) => this.createBinding(Wb, cb, sb, kb)
         };
-        return tk
+        return Wb
       }
       get pipelinesCompiling() {
         return this.compiling
       }
-      prepare(kk, Fk, Bk) {
-        var Rk;
-        let tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this.frame++, this.view = Fk, this.drawDefines.view = Fk, this.thinBundle.kY(), this.writeFrameUniforms();
-        const ak = null !== (Rk = null === tk || void 0 === tk ? void 0 : tk.defineFor("model")) && void 0 !== Rk ? Rk : 0;
-        this.drawDefines.modelPackVariant = ak, tk && 0 !== ak && (this.packInputs ??= new Ca(this.device, tk.textureLayers(), this.sunShadow), this.packInputs.write(tk, Fk.eye, tk.bf())), this.lists.clear(), this.slotCount = 0;
-        const Xk = kk.activeCamera;
-        this.A_.select(Xk, this.keepSteadyBase), this.modelMeshes.select(Xk, Fk), Bk && this.pushEarthSky(Bk), this.lists.collect(kk), this.thinBundle.FY(), this.uploadMeshSlots()
+      prepare(bb, cb, sb) {
+        var kb;
+        let Wb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this.frame++, this.view = cb, this.drawDefines.view = cb, this.thinBundle.vN(), this.writeFrameUniforms();
+        const ab = null !== (kb = null === Wb || void 0 === Wb ? void 0 : Wb.defineFor("model")) && void 0 !== kb ? kb : 0;
+        this.drawDefines.modelPackVariant = ab, Wb && 0 !== ab && (this.packInputs ??= new ra(this.device, Wb.textureLayers(), this.sunShadow), this.packInputs.write(Wb, cb.eye, Wb.bQ())), this.lists.clear(), this.slotCount = 0;
+        const Tb = bb.activeCamera;
+        this.f6.select(Tb, this.keepSteadyBase), this.modelMeshes.select(Tb, cb), sb && this.pushEarthSky(sb), this.lists.collect(bb), this.thinBundle.pN(), this.uploadMeshSlots()
       }
-      pushDraws(kk, Fk, Bk, Rk, tk, ak) {
-        let Xk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
-        const bk = ak.length;
-        for (let wk = 0; wk < Bk; wk++) {
-          const Bk = Fk[wk];
-          let bk = this.retainedDraw(kk, Bk, Rk, tk);
-          if (void 0 === bk && (bk = this.drawFor(kk, Bk, Rk, tk), this.retain(Bk, bk)), bk) {
-            const kk = Bk.owner,
-              Fk = Xk ? Xk[wk] : -1;
-            bk.slotOffset = Fk < 0 ? this.writeMeshSlot(kk.getWorldMatrix().m, kk.visibility) : this.writeMeshSlot(this.modelMeshes.worlds, this.modelMeshes.visibility[Fk], 16 * Fk), ak.push(bk)
+      pushDraws(bb, cb, sb, kb, Wb, ab) {
+        let Tb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
+        const Ub = ab.length;
+        for (let Ib = 0; Ib < sb; Ib++) {
+          const sb = cb[Ib];
+          let Ub = this.retainedDraw(bb, sb, kb, Wb);
+          if (void 0 === Ub && (Ub = this.drawFor(bb, sb, kb, Wb), this.retain(sb, Ub)), Ub) {
+            const bb = sb.owner,
+              cb = Tb ? Tb[Ib] : -1;
+            Ub.slotOffset = cb < 0 ? this.writeMeshSlot(bb.getWorldMatrix().m, bb.visibility) : this.writeMeshSlot(this.modelMeshes.worlds, this.modelMeshes.visibility[cb], 16 * cb), ab.push(Ub)
           }
         }
-        return ak.length - bk
+        return ab.length - Ub
       }
-      bundleDraws(kk, Fk, Bk) {
-        let Rk = 0;
-        for (const tk of Fk) {
-          let Fk = this.retainedDraw(kk, tk, Bk, !1);
-          const ak = void 0 !== Fk;
-          if (void 0 === Fk && (Fk = this.drawFor(kk, tk, Bk, !1), this.retain(tk, Fk)), Fk) {
-            const kk = tk.owner,
-              Bk = this.thinBundle.add(tk, Fk, kk.getWorldMatrix().m, kk.visibility);
-            ak && this.steadyFrom(tk, Fk, Bk), Rk++
+      bundleDraws(bb, cb, sb) {
+        let kb = 0;
+        for (const Wb of cb) {
+          let cb = this.retainedDraw(bb, Wb, sb, !1);
+          const ab = void 0 !== cb;
+          if (void 0 === cb && (cb = this.drawFor(bb, Wb, sb, !1), this.retain(Wb, cb)), cb) {
+            const bb = Wb.owner,
+              sb = this.thinBundle.add(Wb, cb, bb.getWorldMatrix().m, bb.visibility);
+            ab && this.steadyFrom(Wb, cb, sb), kb++
           }
         }
-        return Rk
+        return kb
       }
-      steadyFrom(kk, Fk, Bk) {
-        const Rk = kk.owner,
-          tk = this.A_.base(Rk),
-          ak = Rk.material,
+      steadyFrom(bb, cb, sb) {
+        const kb = bb.owner,
+          Wb = this.f6.base(kb),
+          ab = kb.material,
           {
-            drawState: Xk,
-            instance: bk
-          } = Fk.inputs.retained;
-        if (!tk || !ak || 1 !== kk.parts.materials.length || Sa(kk) !== ak) return;
-        const wk = tk.steady ??= {
-          unit: kk,
-          material: ak,
+            drawState: Tb,
+            instance: Ub
+          } = cb.inputs.retained;
+        if (!Wb || !ab || 1 !== bb.parts.materials.length || Ba(bb) !== ab) return;
+        const Ib = Wb.steady ??= {
+          unit: bb,
+          material: ab,
           visibility: 1,
-          draw: Fk,
-          record: Bk,
-          drawState: Xk,
-          instance: bk,
+          draw: cb,
+          record: sb,
+          drawState: Tb,
+          instance: Ub,
           bindGroup: null,
           gpuVersion: -1,
           fitInstances: 0,
@@ -3684,1239 +3684,1239 @@ export const modules = {
           handedFrame: -1,
           phase: this.steadyPhase++ % 8
         };
-        wk.unit = kk, wk.material = ak, wk.visibility = Rk.visibility, wk.draw = Fk, wk.record = Bk, wk.drawState = Xk, wk.instance = bk, wk.bindGroup = bk.bindGroup, wk.gpuVersion = this.resources.gpuBuffersVersion, wk.fitInstances = Fk.inputs.fitInstances, wk.worldFlag = Rk.getWorldMatrix().updateFlag, wk.handedFrame = this.frame
+        Ib.unit = bb, Ib.material = ab, Ib.visibility = kb.visibility, Ib.draw = cb, Ib.record = sb, Ib.drawState = Tb, Ib.instance = Ub, Ib.bindGroup = Ub.bindGroup, Ib.gpuVersion = this.resources.gpuBuffersVersion, Ib.fitInstances = cb.inputs.fitInstances, Ib.worldFlag = kb.getWorldMatrix().updateFlag, Ib.handedFrame = this.frame
       }
-      keepSteady(kk, Fk) {
-        const Bk = kk.steady;
-        if (Bk.handedFrame !== this.frame - 1 || (this.frame + Bk.phase) % 8 === 0) return !1;
-        const Rk = kk.mesh,
+      keepSteady(bb, cb) {
+        const sb = bb.steady;
+        if (sb.handedFrame !== this.frame - 1 || (this.frame + sb.phase) % 8 === 0) return !1;
+        const kb = bb.mesh,
           {
-            unit: tk,
-            draw: ak,
-            instance: Xk,
-            drawState: bk
-          } = Bk,
-          wk = Rk.forcedInstanceCount || Rk.i_;
-        if (!Rk.isVisible || Rk.GRk || Rk.visibility !== Bk.visibility || 0 === (Rk.layerMask & Fk.layerMask) || Rk.material !== Bk.material || 0 !== Rk.renderingGroupId || Rk.hasVertexAlpha || !this.drawDefines.definesHold(bk, tk, bk.instancing) || Bk.gpuVersion !== this.resources.gpuBuffersVersion || !this.inputsStamped(ak.inputs, tk, bk.instancing, ak.program) || ak.program.failed || Xk.released || wk <= 0 || wk > Bk.fitInstances) return !1;
-        if (Xk.frame !== this.frame && this.bindMaterial(Xk, this.modelUniforms.refreshModelUniforms(Rk.XN(), Xk, Xk.model, this.view)), !Xk.bindable || Xk.bindGroup !== Bk.bindGroup) return !1;
-        const dk = Rk.computeWorldMatrix(),
-          sk = dk.updateFlag !== Bk.worldFlag;
-        return Bk.worldFlag = dk.updateFlag, ak.instances = wk, this.thinBundle.addAgain(Bk.record, ak, sk ? dk.m : null, Bk.visibility), Bk.handedFrame = this.frame, this.A_.drawn++, !0
+            unit: Wb,
+            draw: ab,
+            instance: Tb,
+            drawState: Ub
+          } = sb,
+          Ib = kb.forcedInstanceCount || kb.W8;
+        if (!kb.isVisible || kb.ykb || kb.visibility !== sb.visibility || 0 === (kb.layerMask & cb.layerMask) || kb.material !== sb.material || 0 !== kb.renderingGroupId || kb.hasVertexAlpha || !this.drawDefines.definesHold(Ub, Wb, Ub.instancing) || sb.gpuVersion !== this.resources.gpuBuffersVersion || !this.inputsStamped(ab.inputs, Wb, Ub.instancing, ab.program) || ab.program.failed || Tb.released || Ib <= 0 || Ib > sb.fitInstances) return !1;
+        if (Tb.frame !== this.frame && this.bindMaterial(Tb, this.modelUniforms.refreshModelUniforms(kb.EY(), Tb, Tb.model, this.view)), !Tb.bindable || Tb.bindGroup !== sb.bindGroup) return !1;
+        const Hb = kb.computeWorldMatrix(),
+          fb = Hb.updateFlag !== sb.worldFlag;
+        return sb.worldFlag = Hb.updateFlag, ab.instances = Ib, this.thinBundle.addAgain(sb.record, ab, fb ? Hb.m : null, sb.visibility), sb.handedFrame = this.frame, this.f6.drawn++, !0
       }
-      retainedDraw(kk, Fk, Bk, Rk) {
-        const tk = this.inputs.get(Fk),
-          ak = null === tk || void 0 === tk ? void 0 : tk.retained;
-        if (!tk || !ak) return;
+      retainedDraw(bb, cb, sb, kb) {
+        const Wb = this.inputs.get(cb),
+          ab = null === Wb || void 0 === Wb ? void 0 : Wb.retained;
+        if (!Wb || !ab) return;
         const {
-          drawState: Xk,
-          program: bk,
-          instance: wk,
-          instancing: dk
-        } = ak, sk = Fk.owner;
-        if (Ba(sk) !== dk) return;
-        const Vk = this.instanceCount(sk, dk);
-        if (Vk <= 0) return null;
-        if (wk.released || bk.failed || Xk.program !== bk || !this.drawDefines.programCurrent(Xk, Fk, dk, Bk) || !this.inputsStamped(tk, Fk, dk, bk) || sk.isUnIndexed !== ak.unIndexed || this.indexKey(Fk) !== ak.indexData) return;
-        if (ak.indexBuffer && ak.gpuVersion !== this.resources.gpuBuffersVersion) {
-          const kk = this.resources.gpuBuffer(ak.indexData);
-          if (!kk) return;
-          ak.indexBuffer = kk, ak.gpuVersion = this.resources.gpuBuffersVersion
+          drawState: Tb,
+          program: Ub,
+          instance: Ib,
+          instancing: Hb
+        } = ab, fb = cb.owner;
+        if (ka(fb) !== Hb) return;
+        const Mb = this.instanceCount(fb, Hb);
+        if (Mb <= 0) return null;
+        if (Ib.released || Ub.failed || Tb.program !== Ub || !this.drawDefines.programCurrent(Tb, cb, Hb, sb) || !this.inputsStamped(Wb, cb, Hb, Ub) || fb.isUnIndexed !== ab.unIndexed || this.indexKey(cb) !== ab.indexData) return;
+        if (ab.indexBuffer && ab.gpuVersion !== this.resources.gpuBuffersVersion) {
+          const bb = this.resources.gpuBuffer(ab.indexData);
+          if (!bb) return;
+          ab.indexBuffer = bb, ab.gpuVersion = this.resources.gpuBuffersVersion
         }
-        let Jk = !1;
-        if (wk.frame !== this.frame && (Jk = this.modelUniforms.refreshModelUniforms(kk, wk, wk.model, this.view)), !this.bindMaterial(wk, Jk) || !this.withGpuBuffers(tk) || !this.instanceBuffersFit(sk.name, tk, Vk)) return null;
-        const Ak = this.makeDraw(bk, tk, this.renderStates.renderState(Xk.model, sk, Rk, tk.state), wk, Vk);
-        return this.setRange(Ak, Fk, ak.indexBuffer, ak.indexData), Ak
+        let Xb = !1;
+        if (Ib.frame !== this.frame && (Xb = this.modelUniforms.refreshModelUniforms(bb, Ib, Ib.model, this.view)), !this.bindMaterial(Ib, Xb) || !this.withGpuBuffers(Wb) || !this.instanceBuffersFit(fb.name, Wb, Mb)) return null;
+        const nb = this.makeDraw(Ub, Wb, this.renderStates.renderState(Tb.model, fb, kb, Wb.state), Ib, Mb);
+        return this.setRange(nb, cb, ab.indexBuffer, ab.indexData), nb
       }
-      retain(kk, Fk) {
-        const Bk = this.drawDefines.drawStates.get(kk);
-        if (!Fk || !Bk || Bk.program !== Fk.program) {
-          const Fk = this.inputs.get(kk);
-          return void(Fk && (Fk.retained = null))
+      retain(bb, cb) {
+        const sb = this.drawDefines.drawStates.get(bb);
+        if (!cb || !sb || sb.program !== cb.program) {
+          const cb = this.inputs.get(bb);
+          return void(cb && (cb.retained = null))
         }
-        const Rk = kk.owner,
-          tk = Bk.instancing,
-          ak = this.indexKey(kk),
-          Xk = Fk.inputs.retained;
-        Xk ? (Xk.drawState = Bk, Xk.instancing = tk, Xk.program = Fk.program, Xk.instance = Fk.material, Xk.indexData = ak, Xk.unIndexed = Rk.isUnIndexed, Xk.indexBuffer = Fk.indexBuffer, Xk.gpuVersion = this.resources.gpuBuffersVersion) : Fk.inputs.retained = {
-          drawState: Bk,
-          instancing: tk,
-          program: Fk.program,
-          instance: Fk.material,
-          indexData: ak,
-          unIndexed: Rk.isUnIndexed,
-          indexBuffer: Fk.indexBuffer,
+        const kb = bb.owner,
+          Wb = sb.instancing,
+          ab = this.indexKey(bb),
+          Tb = cb.inputs.retained;
+        Tb ? (Tb.drawState = sb, Tb.instancing = Wb, Tb.program = cb.program, Tb.instance = cb.material, Tb.indexData = ab, Tb.unIndexed = kb.isUnIndexed, Tb.indexBuffer = cb.indexBuffer, Tb.gpuVersion = this.resources.gpuBuffersVersion) : cb.inputs.retained = {
+          drawState: sb,
+          instancing: Wb,
+          program: cb.program,
+          instance: cb.material,
+          indexData: ab,
+          unIndexed: kb.isUnIndexed,
+          indexBuffer: cb.indexBuffer,
           gpuVersion: this.resources.gpuBuffersVersion
         }
       }
-      drawFor(kk, Fk, Bk, Rk) {
-        const tk = Fk.owner,
-          ak = Sa(Fk);
-        if (!ak) return null;
-        const Xk = ak.getClassName();
-        let bk = null;
-        if (function(kk) {
-            return "LinesMesh" === kk.getClassName()
-          }(tk)) {
-          if (! function(kk) {
-              return "ShaderMaterial" === kk.getClassName() && "color" === kk.shaderPath
-            }(ak)) return this.warnOnce(`lines:${Xk}`, `A LinesMesh with a ${Xk} is not drawn yet (${ak.name})`), null;
-          bk = tk
-        } else if ("StandardMaterial" !== Xk && "LiteMaterial" !== Xk) return this.warnOnce(`class:${Xk}`, `${Xk} is not drawn yet (${ak.name})`), null;
-        const wk = Ba(tk),
-          dk = this.instanceCount(tk, wk);
-        if (dk <= 0) return null;
-        const sk = bk ? this.lineProgramFor(tk, Bk, wk) : this.drawDefines.programFor(kk, Fk, ak, Bk, wk);
-        if (!sk || sk.failed) return null;
-        const Vk = bk ? null : this.drawDefines.drawStates.get(Fk).model,
-          Jk = Vk ? this.modelInstance(Vk, sk) : this.materialInstance(tk, sk);
-        let Ak = !1;
-        if (Jk.frame !== this.frame && (bk ? Wk(Jk.ubo, bk) : Ak = this.modelUniforms.refreshModelUniforms(kk, Jk, Jk.model, this.view)), !this.bindMaterial(Jk, Ak)) return null;
-        const ek = this.meshInputs(Fk, sk, wk);
-        if (!ek || !this.instanceBuffersFit(tk.name, ek, dk)) return null;
-        const yk = this.indexKey(Fk);
-        let fk = null;
-        if (yk && !tk.isUnIndexed && (fk = this.resources.gpuBuffer(yk), !fk)) return null;
-        const mk = this.renderStates.renderState(null !== Vk && void 0 !== Vk ? Vk : ak, tk, Rk, ek.state, bk ? "line-list" : "triangle-list"),
-          vk = this.makeDraw(sk, ek, mk, Jk, dk);
-        return this.setRange(vk, Fk, fk, yk), vk
+      drawFor(bb, cb, sb, kb) {
+        const Wb = cb.owner,
+          ab = Ba(cb);
+        if (!ab) return null;
+        const Tb = ab.getClassName();
+        let Ub = null;
+        if (function(bb) {
+            return "LinesMesh" === bb.getClassName()
+          }(Wb)) {
+          if (! function(bb) {
+              return "ShaderMaterial" === bb.getClassName() && "color" === bb.shaderPath
+            }(ab)) return this.warnOnce(`lines:${Tb}`, `A LinesMesh with a ${Tb} is not drawn yet (${ab.name})`), null;
+          Ub = Wb
+        } else if ("StandardMaterial" !== Tb && "LiteMaterial" !== Tb) return this.warnOnce(`class:${Tb}`, `${Tb} is not drawn yet (${ab.name})`), null;
+        const Ib = ka(Wb),
+          Hb = this.instanceCount(Wb, Ib);
+        if (Hb <= 0) return null;
+        const fb = Ub ? this.lineProgramFor(Wb, sb, Ib) : this.drawDefines.programFor(bb, cb, ab, sb, Ib);
+        if (!fb || fb.failed) return null;
+        const Mb = Ub ? null : this.drawDefines.drawStates.get(cb).model,
+          Xb = Mb ? this.modelInstance(Mb, fb) : this.materialInstance(Wb, fb);
+        let nb = !1;
+        if (Xb.frame !== this.frame && (Ub ? Cb(Xb.ubo, Ub) : nb = this.modelUniforms.refreshModelUniforms(bb, Xb, Xb.model, this.view)), !this.bindMaterial(Xb, nb)) return null;
+        const mb = this.meshInputs(cb, fb, Ib);
+        if (!mb || !this.instanceBuffersFit(Wb.name, mb, Hb)) return null;
+        const lb = this.indexKey(cb);
+        let Qb = null;
+        if (lb && !Wb.isUnIndexed && (Qb = this.resources.gpuBuffer(lb), !Qb)) return null;
+        const eb = this.renderStates.renderState(null !== Mb && void 0 !== Mb ? Mb : ab, Wb, kb, mb.state, Ub ? "line-list" : "triangle-list"),
+          Nb = this.makeDraw(fb, mb, eb, Xb, Hb);
+        return this.setRange(Nb, cb, Qb, lb), Nb
       }
-      indexKey(kk) {
-        const Fk = Xa(kk);
-        return Fk ? this.resources.modelIndex(Fk) : null
+      indexKey(bb) {
+        const cb = Ua(bb);
+        return cb ? this.resources.modelIndex(cb) : null
       }
-      setRange(kk, Fk, Bk, Rk) {
-        Bk && (kk.indexBuffer = Bk, kk.indexFormat = this.resources.indexFormat(Rk));
-        const tk = 4 * Fk.range + (Bk ? 0 : 2);
-        kk.unit = Fk, kk.first = Fk.parts.hb[tk], kk.count = Fk.parts.hb[tk + 1]
+      setRange(bb, cb, sb, kb) {
+        sb && (bb.indexBuffer = sb, bb.indexFormat = this.resources.indexFormat(kb));
+        const Wb = 4 * cb.range + (sb ? 0 : 2);
+        bb.unit = cb, bb.first = cb.parts.uQ[Wb], bb.count = cb.parts.uQ[Wb + 1]
       }
-      makeDraw(kk, Fk, Bk, Rk, tk) {
-        Fk.state !== Bk && (Fk.state = Bk, Fk.pipelineKey = `${kk.id}|${Fk.layout.key}|${Bk.key}`, Fk.pipeline = null);
-        const ak = Fk.draw ??= {
-          program: kk,
-          inputs: Fk,
+      makeDraw(bb, cb, sb, kb, Wb) {
+        cb.state !== sb && (cb.state = sb, cb.pipelineKey = `${bb.id}|${cb.layout.key}|${sb.key}`, cb.pipeline = null);
+        const ab = cb.draw ??= {
+          program: bb,
+          inputs: cb,
           pipelineKey: "",
-          layout: Fk.layout,
-          state: Bk,
-          material: Rk,
+          layout: cb.layout,
+          state: sb,
+          material: kb,
           slotOffset: 0,
-          vertexBuffers: Fk.buffers,
-          vertexOffsets: Fk.offsets,
+          vertexBuffers: cb.buffers,
+          vertexOffsets: cb.offsets,
           indexBuffer: null,
           indexFormat: "uint16",
           first: 0,
           count: 0,
-          instances: tk,
+          instances: Wb,
           unit: null
         };
-        return ak.program = kk, ak.pipelineKey = Fk.pipelineKey, ak.state = Bk, ak.material = Rk, ak.vertexOffsets = Fk.offsets, ak.indexBuffer = null, ak.instances = tk, ak
+        return ab.program = bb, ab.pipelineKey = cb.pipelineKey, ab.state = sb, ab.material = kb, ab.vertexOffsets = cb.offsets, ab.indexBuffer = null, ab.instances = Wb, ab
       }
-      instanceCount(kk, Fk) {
-        switch (Fk) {
+      instanceCount(bb, cb) {
+        switch (cb) {
           case "thin":
-            return kk.forcedInstanceCount || kk.i_;
+            return bb.forcedInstanceCount || bb.W8;
           case "instanced":
-            return this.prepareInstances(kk);
+            return this.prepareInstances(bb);
           case "none":
             return 1
         }
       }
-      prepareInstances(kk) {
-        const Fk = function(kk, Fk) {
-          const Bk = Fk._userInstancedBuffersStorage,
-            Rk = kk.batchUploads.get(Fk);
-          if (Rk) {
-            var tk;
-            if (Rk.layout === (null !== (tk = null === Bk || void 0 === Bk ? void 0 : Bk.interleavedKinds) && void 0 !== tk ? tk : null)) return Rk;
-            Rk.release()
+      prepareInstances(bb) {
+        const cb = function(bb, cb) {
+          const sb = cb._userInstancedBuffersStorage,
+            kb = bb.batchUploads.get(cb);
+          if (kb) {
+            var Wb;
+            if (kb.layout === (null !== (Wb = null === sb || void 0 === sb ? void 0 : sb.interleavedKinds) && void 0 !== Wb ? Wb : null)) return kb;
+            kb.release()
           }
-          return new Kk(kk, Fk, Bk)
-        }(this.resources, kk);
-        return Fk.frame !== this.frame && Fk.pack(kk, this.modelMeshes.instanceBatch(kk), this.modelMeshes.worlds, this.frame), Fk.count
+          return new ob(bb, cb, sb)
+        }(this.resources, bb);
+        return cb.frame !== this.frame && cb.pack(bb, this.modelMeshes.instanceBatch(bb), this.modelMeshes.worlds, this.frame), cb.count
       }
-      programWithModel(kk, Fk, Bk) {
-        const Rk = this.modelSlot(kk),
-          tk = da(Rk, kk, Bk),
-          ak = this.drawDefines.modelPackKind(kk),
-          Xk = ak ? function(kk, Fk, Bk, Rk) {
-            const tk = (0, Sk.z)(kk, Ok.i.name),
-              ak = [];
+      programWithModel(bb, cb, sb) {
+        const kb = this.modelSlot(bb),
+          Wb = fa(kb, bb, sb),
+          ab = this.drawDefines.modelPackKind(bb),
+          Tb = ab ? function(bb, cb, sb, kb) {
+            const Wb = (0, Jb.v)(bb, Yb.j.name),
+              ab = [];
             for (const {
-                feature: wk,
-                state: dk,
-                active: sk
+                feature: Ib,
+                state: Hb,
+                active: fb
               }
-              of kk.features) {
-              var Xk, bk;
-              const kk = sk ? null === (Xk = (bk = (0, VF.j)(wk)).ie) || void 0 === Xk ? void 0 : Xk.call(bk, dk) : void 0;
-              kk && ak.push(kk)
+              of bb.features) {
+              var Tb, Ub;
+              const bb = fb ? null === (Tb = (Ub = (0, fc.g)(Ib)).Qm) || void 0 === Tb ? void 0 : Tb.call(Ub, Hb) : void 0;
+              bb && ab.push(bb)
             }
             return {
-              kind: Fk,
-              atlas: null !== tk && void 0 !== tk && tk.active ? (0, Ok.d)(tk.state) : null,
-              defines: Bk,
-              ...bX(ak, Rk)
+              kind: cb,
+              atlas: null !== Wb && void 0 !== Wb && Wb.active ? (0, Yb.e)(Wb.state) : null,
+              defines: sb,
+              ...IT(ab, kb)
             }
-          }(kk, ak, Fk, Rk.fragmentCode) : null;
-        if (Xk && function(kk) {
-            const Fk = kk.defines;
-            return (null === kk.atlas || !!Fk.DIFFUSE && 1 === Fk.DIFFUSEDIRECTUV) && !!Fk.NORMAL && !Fk.REFLECTION && !Fk.EMISSIVEASILLUMINATION && !Fk.LINKEMISSIVEWITHDIFFUSE
-          }(Xk)) {
-          const Bk = this.modelPackProgram(kk, Fk, `${tk}#${ak}#sp${this.drawDefines.modelPackVariant}`, Rk, Xk);
-          if (Bk && !Bk.failed) return Bk
+          }(bb, ab, cb, kb.fragmentCode) : null;
+        if (Tb && function(bb) {
+            const cb = bb.defines;
+            return (null === bb.atlas || !!cb.DIFFUSE && 1 === cb.DIFFUSEDIRECTUV) && !!cb.NORMAL && !cb.REFLECTION && !cb.EMISSIVEASILLUMINATION && !cb.LINKEMISSIVEWITHDIFFUSE
+          }(Tb)) {
+          const sb = this.modelPackProgram(bb, cb, `${Wb}#${ab}#sp${this.drawDefines.modelPackVariant}`, kb, Tb);
+          if (sb && !sb.failed) return sb
         }
-        const bk = this.programs.get(tk);
-        if (bk || this.unbuildable.has(tk)) return null !== bk && void 0 !== bk ? bk : null;
-        let wk;
+        const Ub = this.programs.get(Wb);
+        if (Ub || this.unbuildable.has(Wb)) return null !== Ub && void 0 !== Ub ? Ub : null;
+        let Ib;
         try {
-          wk = dt({
-            defines: ta(Fk),
-            vertexCode: Rk.vertexCode,
-            fragmentCode: Rk.fragmentCode,
-            pluginUniforms: Rk.pluginUniforms
+          Ib = fW({
+            defines: aa(cb),
+            vertexCode: kb.vertexCode,
+            fragmentCode: kb.fragmentCode,
+            pluginUniforms: kb.pluginUniforms
           })
-        } catch (dk) {
-          return this.unbuildable.add(tk), this.warnOnce(`build:${tk}`, `could not build a program for ${kk.name}: ${String(dk)}`), null
+        } catch (Hb) {
+          return this.unbuildable.add(Wb), this.warnOnce(`build:${Wb}`, `could not build a program for ${bb.name}: ${String(Hb)}`), null
         }
-        return this.createProgram(tk, wk, "standard")
+        return this.createProgram(Wb, Ib, "standard")
       }
-      modelPackProgram(kk, Fk, Bk, Rk, tk) {
-        const ak = this.programs.get(Bk);
-        if (ak || this.unbuildable.has(Bk)) return null !== ak && void 0 !== ak ? ak : null;
-        const Xk = this.drawDefines.modelPackVariant;
-        let bk;
+      modelPackProgram(bb, cb, sb, kb, Wb) {
+        const ab = this.programs.get(sb);
+        if (ab || this.unbuildable.has(sb)) return null !== ab && void 0 !== ab ? ab : null;
+        const Tb = this.drawDefines.modelPackVariant;
+        let Ub;
         try {
-          const kk = function(kk) {
-              return (0, HF.d)(kk, "model")
-            }(Xk),
-            Bk = iX(kk, tk, Rk.vertexCode, Rk.fragmentCode);
-          bk = OX(dt({
-            defines: ta(Fk),
-            ...Bk,
-            pluginUniforms: Rk.pluginUniforms
-          }), kk, tk, !!this.sunShadow)
-        } catch (sk) {
-          return this.unbuildable.add(Bk), this.warnOnce(`build:${Bk}`, `could not build a shader pack program for ${kk.name}, which draws without the pack: ${String(sk)}`), null
+          const bb = function(bb) {
+              return (0, Bc.d)(bb, "model")
+            }(Tb),
+            sb = LT(bb, Wb, kb.vertexCode, kb.fragmentCode);
+          Ub = JT(fW({
+            defines: aa(cb),
+            ...sb,
+            pluginUniforms: kb.pluginUniforms
+          }), bb, Wb, !!this.sunShadow)
+        } catch (fb) {
+          return this.unbuildable.add(sb), this.warnOnce(`build:${sb}`, `could not build a shader pack program for ${bb.name}, which draws without the pack: ${String(fb)}`), null
         }
-        const wk = ha(Xk, !!this.sunShadow),
-          dk = {
-            group: this.packInputs.bindGroupFor(null, wk),
-            layout: za(this.device, {
+        const Ib = Aa(Tb, !!this.sunShadow),
+          Hb = {
+            group: this.packInputs.bindGroupFor(null, Ib),
+            layout: qa(this.device, {
               depth: !1,
-              sunShadow: wk
+              sunShadow: Ib
             })
           };
-        return this.createProgram(Bk, bk, function(kk) {
-          return `standard-sp${kk}`
-        }(Xk), dk)
+        return this.createProgram(sb, Ub, function(bb) {
+          return `standard-sp${bb}`
+        }(Tb), Hb)
       }
-      lineProgramFor(kk, Fk, Bk) {
-        const Rk = mk(kk, Bk, Fk, this.view);
-        let tk = this.linePrograms.get(Rk);
-        var ak;
-        return tk || (tk = this.createProgram(`lines#${Rk}`, (ak = function(kk) {
-          const Fk = new Map;
-          for (let Bk = 0; Bk < dk.length; Bk++) kk & 1 << Bk && Fk.set(dk[Bk], !0);
-          return Fk
-        }(Rk), At({
-          defines: ak,
-          vertex: Vt,
-          fragment: Jt,
+      lineProgramFor(bb, cb, sb) {
+        const kb = eb(bb, sb, cb, this.view);
+        let Wb = this.linePrograms.get(kb);
+        var ab;
+        return Wb || (Wb = this.createProgram(`lines#${kb}`, (ab = function(bb) {
+          const cb = new Map;
+          for (let sb = 0; sb < Hb.length; sb++) bb & 1 << sb && cb.set(Hb[sb], !0);
+          return cb
+        }(kb), mW({
+          defines: ab,
+          vertex: XW,
+          fragment: nW,
           members: [],
           structName: "MaterialUniforms"
-        })), "color"), this.linePrograms.set(Rk, tk)), tk
+        })), "color"), this.linePrograms.set(kb, Wb)), Wb
       }
-      createProgram(kk, Fk, Bk) {
-        var Rk;
-        let tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const ak = this.nextProgramId++,
-          Xk = `${Bk}-${ak}`,
-          bk = GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
-          wk = [{
+      createProgram(bb, cb, sb) {
+        var kb;
+        let Wb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        const ab = this.nextProgramId++,
+          Tb = `${sb}-${ab}`,
+          Ub = GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
+          Ib = [{
             binding: 0,
-            visibility: bk,
+            visibility: Ub,
             buffer: {
               type: "uniform"
             }
           }];
-        for (const Vk of Fk.textures) wk.push({
-          binding: Vk.binding,
-          visibility: bk,
+        for (const Mb of cb.textures) Ib.push({
+          binding: Mb.binding,
+          visibility: Ub,
           texture: {
-            viewDimension: Vk.dimension
+            viewDimension: Mb.dimension
           }
-        }), wk.push({
-          binding: Vk.samplerBinding,
-          visibility: bk,
+        }), Ib.push({
+          binding: Mb.samplerBinding,
+          visibility: Ub,
           sampler: {}
         });
-        const dk = this.device.createBindGroupLayout({
-            label: Xk,
-            entries: wk
+        const Hb = this.device.createBindGroupLayout({
+            label: Tb,
+            entries: Ib
           }),
-          sk = {
-            key: kk,
-            id: ak,
-            kind: Bk,
-            program: Fk,
+          fb = {
+            key: bb,
+            id: ab,
+            kind: sb,
+            program: cb,
             vertex: this.device.createShaderModule({
-              label: `${Xk}-vertex`,
-              code: Fk.vertex
+              label: `${Tb}-vertex`,
+              code: cb.vertex
             }),
             fragment: this.device.createShaderModule({
-              label: `${Xk}-fragment`,
-              code: Fk.fragment
+              label: `${Tb}-fragment`,
+              code: cb.fragment
             }),
-            materialLayout: dk,
+            materialLayout: Hb,
             pipelineLayout: this.device.createPipelineLayout({
-              label: Xk,
-              bindGroupLayouts: [this.sceneLayout, this.frameLayout, dk, ...tk ? [tk.layout] : []]
+              label: Tb,
+              bindGroupLayouts: [this.sceneLayout, this.frameLayout, Hb, ...Wb ? [Wb.layout] : []]
             }),
-            packGroup: null !== (Rk = null === tk || void 0 === tk ? void 0 : tk.group) && void 0 !== Rk ? Rk : null,
+            packGroup: null !== (kb = null === Wb || void 0 === Wb ? void 0 : Wb.group) && void 0 !== kb ? kb : null,
             failed: !1
           };
-        return this.programs.set(kk, sk), sk
+        return this.programs.set(bb, fb), fb
       }
       writeFrameUniforms() {
-        const kk = this.frameUniforms;
-        fa(this.view, kk), this.device.queue.writeBuffer(this.frameBuffer, 0, kk)
+        const bb = this.frameUniforms;
+        ea(this.view, bb), this.device.queue.writeBuffer(this.frameBuffer, 0, bb)
       }
-      materialInstance(kk, Fk) {
-        let Bk = this.materials.get(kk);
-        if (!Bk) {
-          const Fk = new Map;
-          this.materials.set(kk, Fk), kk.yN.addOnce((() => {
-            for (const kk of Fk.values()) kk.released = !0, this.resources.destroyBuffer(kk.buffer);
-            this.materials.delete(kk)
-          })), Bk = Fk
+      materialInstance(bb, cb) {
+        let sb = this.materials.get(bb);
+        if (!sb) {
+          const cb = new Map;
+          this.materials.set(bb, cb), bb.ZY.addOnce((() => {
+            for (const bb of cb.values()) bb.released = !0, this.resources.destroyBuffer(bb.buffer);
+            this.materials.delete(bb)
+          })), sb = cb
         }
-        let Rk = Bk.get(Fk.key);
-        return Rk || (Rk = this.newMaterialInstance(kk, null, Fk), Bk.set(Fk.key, Rk)), Rk
+        let kb = sb.get(cb.key);
+        return kb || (kb = this.newMaterialInstance(bb, null, cb), sb.set(cb.key, kb)), kb
       }
-      modelInstance(kk, Fk) {
-        const Bk = this.modelSlot(kk);
-        let Rk = Bk.instances.get(Fk.key);
-        return Rk || (Rk = this.newMaterialInstance(kk, kk, Fk), Bk.instances.set(Fk.key, Rk)), Rk
+      modelInstance(bb, cb) {
+        const sb = this.modelSlot(bb);
+        let kb = sb.instances.get(cb.key);
+        return kb || (kb = this.newMaterialInstance(bb, bb, cb), sb.instances.set(cb.key, kb)), kb
       }
-      modelSlot(kk) {
-        let Fk = kk.gpu[Hk.i.lite];
-        return Fk || (Fk = new SX(this.resources), kk.gpu[Hk.i.lite] = Fk), Fk
+      modelSlot(bb) {
+        let cb = bb.gpu[Bb.g.lite];
+        return cb || (cb = new BT(this.resources), bb.gpu[Bb.g.lite] = cb), cb
       }
-      newMaterialInstance(kk, Fk, Bk) {
-        const Rk = Bk.program.material.floats,
-          tk = new Float32Array(Rk),
-          ak = new Map;
+      newMaterialInstance(bb, cb, sb) {
+        const kb = sb.program.material.floats,
+          Wb = new Float32Array(kb),
+          ab = new Map;
         return {
-          owner: kk,
-          model: Fk,
-          program: Bk,
-          data: tk,
-          uploaded: new Float32Array(Rk).fill(Number.NaN),
+          owner: bb,
+          model: cb,
+          program: sb,
+          data: Wb,
+          uploaded: new Float32Array(kb).fill(Number.NaN),
           buffer: this.device.createBuffer({
-            label: `${kk.name}-uniforms`,
-            size: Math.max(16, 4 * Rk),
+            label: `${bb.name}-uniforms`,
+            size: Math.max(16, 4 * kb),
             usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
           }),
-          textures: ak,
-          ubo: new ya(Bk.program.material.slots, tk, ak),
+          textures: ab,
+          ubo: new Qa(sb.program.material.slots, Wb, ab),
           bindGroup: null,
-          bound: new Array(2 * Bk.program.textures.length).fill(null),
+          bound: new Array(2 * sb.program.textures.length).fill(null),
           frame: -1,
           bindable: !1,
           released: !1,
           heldVersion: -1
         }
       }
-      pushEarthSky(kk) {
-        var Fk;
-        const Bk = this.earthSkyProgram ??= this.createProgram("earthSky", {
-            vertex: Wt + vt,
-            fragment: Wt + it,
+      pushEarthSky(bb) {
+        var cb;
+        const sb = this.earthSkyProgram ??= this.createProgram("earthSky", {
+            vertex: NW + VW,
+            fragment: NW + LW,
             attributes: [],
-            material: mt,
+            material: CW,
             textures: []
           }, "earthSky"),
-          Rk = this.earthSkyUniforms ??= this.newMaterialInstance(EX, null, Bk);
-        this.earthSkyFrom !== kk && (this.earthSkyFrom = kk, Rk.data.fill(0)), Ht(Rk.ubo, kk, this.view);
-        const tk = this.vertexInputs(Bk, EX, "earthSky", Bk, null);
-        if (Bk.failed || !tk || !this.bindMaterial(Rk, !1)) return;
-        const ak = null !== (Fk = tk.state) && void 0 !== Fk ? Fk : this.renderStates.stateFor(0, !1, 0, "none", "cw", 0, 0, !0, "triangle-list"),
-          Xk = this.makeDraw(Bk, tk, ak, Rk, 1);
-        Xk.count = et.length;
-        const bk = ut(kk, this.view);
-        Xk.slotOffset = this.writeMeshSlot(bk, 1), this.lists.skyDraws.push(Xk)
+          kb = this.earthSkyUniforms ??= this.newMaterialInstance(gT, null, sb);
+        this.earthSkyFrom !== bb && (this.earthSkyFrom = bb, kb.data.fill(0)), yW(kb.ubo, bb, this.view);
+        const Wb = this.vertexInputs(sb, gT, "earthSky", sb, null);
+        if (sb.failed || !Wb || !this.bindMaterial(kb, !1)) return;
+        const ab = null !== (cb = Wb.state) && void 0 !== cb ? cb : this.renderStates.stateFor(0, !1, 0, "none", "cw", 0, 0, !0, "triangle-list"),
+          Tb = this.makeDraw(sb, Wb, ab, kb, 1);
+        Tb.count = lW.length;
+        const Ub = PW(bb, this.view);
+        Tb.slotOffset = this.writeMeshSlot(Ub, 1), this.lists.skyDraws.push(Tb)
       }
-      uploadIfChanged(kk) {
+      uploadIfChanged(bb) {
         const {
-          data: Fk,
-          uploaded: Bk
-        } = kk;
-        for (let Rk = 0; Rk < Fk.length; Rk++)
-          if (Fk[Rk] !== Bk[Rk]) return Bk.set(Fk), void this.device.queue.writeBuffer(kk.buffer, 0, Fk)
+          data: cb,
+          uploaded: sb
+        } = bb;
+        for (let kb = 0; kb < cb.length; kb++)
+          if (cb[kb] !== sb[kb]) return sb.set(cb), void this.device.queue.writeBuffer(bb.buffer, 0, cb)
       }
-      bindMaterial(kk, Fk) {
-        return kk.frame !== this.frame && (kk.frame = this.frame, Fk || this.uploadIfChanged(kk), kk.bindable = this.bindTextures(kk)), kk.bindable
+      bindMaterial(bb, cb) {
+        return bb.frame !== this.frame && (bb.frame = this.frame, cb || this.uploadIfChanged(bb), bb.bindable = this.bindTextures(bb)), bb.bindable
       }
-      bindTextures(kk) {
+      bindTextures(bb) {
         const {
-          program: Fk,
-          bound: Bk
-        } = kk, Rk = Fk.program.textures;
-        let tk = !kk.bindGroup,
-          ak = !0;
-        for (let Xk = 0; Xk < Rk.length; Xk++) {
-          const Fk = kk.textures.get(Rk[Xk].name),
-            bk = Fk ? this.resources.boundTexture(Fk) : null;
-          bk ? Bk[2 * Xk] === bk.view && Bk[2 * Xk + 1] === bk.sampler || (Bk[2 * Xk] = bk.view, Bk[2 * Xk + 1] = bk.sampler, tk = !0) : (Fk || kk.ubo.expected.has(Rk[Xk].name) || this.warnOnce(`texture:${kk.owner.name}:${Rk[Xk].name}`, `${kk.owner.name} has no ${Rk[Xk].name}`), ak = !1)
+          program: cb,
+          bound: sb
+        } = bb, kb = cb.program.textures;
+        let Wb = !bb.bindGroup,
+          ab = !0;
+        for (let Tb = 0; Tb < kb.length; Tb++) {
+          const cb = bb.textures.get(kb[Tb].name),
+            Ub = cb ? this.resources.boundTexture(cb) : null;
+          Ub ? sb[2 * Tb] === Ub.view && sb[2 * Tb + 1] === Ub.sampler || (sb[2 * Tb] = Ub.view, sb[2 * Tb + 1] = Ub.sampler, Wb = !0) : (cb || bb.ubo.expected.has(kb[Tb].name) || this.warnOnce(`texture:${bb.owner.name}:${kb[Tb].name}`, `${bb.owner.name} has no ${kb[Tb].name}`), ab = !1)
         }
-        if (!ak) return tk && (kk.bindGroup = null), !1;
-        if (tk) {
-          const tk = [{
+        if (!ab) return Wb && (bb.bindGroup = null), !1;
+        if (Wb) {
+          const Wb = [{
             binding: 0,
             resource: {
-              buffer: kk.buffer
+              buffer: bb.buffer
             }
           }];
-          for (let kk = 0; kk < Rk.length; kk++) tk.push({
-            binding: Rk[kk].binding,
-            resource: Bk[2 * kk]
-          }), tk.push({
-            binding: Rk[kk].samplerBinding,
-            resource: Bk[2 * kk + 1]
+          for (let bb = 0; bb < kb.length; bb++) Wb.push({
+            binding: kb[bb].binding,
+            resource: sb[2 * bb]
+          }), Wb.push({
+            binding: kb[bb].samplerBinding,
+            resource: sb[2 * bb + 1]
           });
-          kk.bindGroup = this.device.createBindGroup({
-            label: `${kk.owner.name}-material`,
-            layout: Fk.materialLayout,
-            entries: tk
+          bb.bindGroup = this.device.createBindGroup({
+            label: `${bb.owner.name}-material`,
+            layout: cb.materialLayout,
+            entries: Wb
           })
         }
         return !0
       }
-      writeMeshSlot(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return this.meshSlots.ensure(this.slotCount + 1), this.meshSlots.write(this.slotCount, kk, Fk, Bk), this.slotCount++ * hR
+      writeMeshSlot(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return this.meshSlots.ensure(this.slotCount + 1), this.meshSlots.write(this.slotCount, bb, cb, sb), this.slotCount++ * Ak
       }
       uploadMeshSlots() {
         this.slotCount > 0 && this.meshSlots.upload(0, this.slotCount)
       }
-      vertexInputs(kk, Fk, Bk, Rk, tk) {
-        let ak = this.inputs.get(kk);
-        if (!ak || ak.program !== Rk || !oa(Fk, ak, this.resources, tk)) {
-          var Xk;
-          if (ak = null !== (Xk = this.vertexLayouts.resolveInputs(Fk, Bk, Rk, tk)) && void 0 !== Xk ? Xk : void 0, !ak) return null;
-          this.inputs.set(kk, ak)
+      vertexInputs(bb, cb, sb, kb, Wb) {
+        let ab = this.inputs.get(bb);
+        if (!ab || ab.program !== kb || !Ya(cb, ab, this.resources, Wb)) {
+          var Tb;
+          if (ab = null !== (Tb = this.vertexLayouts.resolveInputs(cb, sb, kb, Wb)) && void 0 !== Tb ? Tb : void 0, !ab) return null;
+          this.inputs.set(bb, ab)
         }
-        return this.withGpuBuffers(ak)
+        return this.withGpuBuffers(ab)
       }
-      meshInputs(kk, Fk, Bk) {
-        const Rk = this.inputs.get(kk);
-        if (Rk && this.inputsStamped(Rk, kk, Bk, Fk)) return this.withGpuBuffers(Rk);
-        const tk = kk.owner,
-          ak = Xa(kk),
-          Xk = this.vertexInputs(kk, tk, tk.name, Fk, ak);
-        return Xk && (Xk.geometry = ba(kk), Xk.instanceLayout = this.drawDefines.instanceLayout(tk, Bk)), Xk
+      meshInputs(bb, cb, sb) {
+        const kb = this.inputs.get(bb);
+        if (kb && this.inputsStamped(kb, bb, sb, cb)) return this.withGpuBuffers(kb);
+        const Wb = bb.owner,
+          ab = Ua(bb),
+          Tb = this.vertexInputs(bb, Wb, Wb.name, cb, ab);
+        return Tb && (Tb.geometry = Ia(bb), Tb.instanceLayout = this.drawDefines.instanceLayout(Wb, sb)), Tb
       }
-      inputsStamped(kk, Fk, Bk, Rk) {
-        return function(kk, Fk, Bk, Rk) {
-          return kk.program === Bk && kk.geometry === ba(Fk) && kk.instanceLayout === Rk
-        }(kk, Fk, Rk, this.drawDefines.instanceLayout(Fk.owner, Bk))
+      inputsStamped(bb, cb, sb, kb) {
+        return function(bb, cb, sb, kb) {
+          return bb.program === sb && bb.geometry === Ia(cb) && bb.instanceLayout === kb
+        }(bb, cb, kb, this.drawDefines.instanceLayout(cb.owner, sb))
       }
-      withGpuBuffers(kk) {
-        return Za(kk, this.resources, this.zeroBuffer) ? kk : null
+      withGpuBuffers(bb) {
+        return oa(bb, this.resources, this.zeroBuffer) ? bb : null
       }
-      instanceBuffersFit(kk, Fk, Bk) {
-        const Rk = Ka(Fk, Bk, this.resources, this.zeroBuffer);
-        if (Rk) {
-          const tk = Fk.ends[Rk.index] - Fk.offsets[Rk.index] + Fk.f_[Rk.index];
-          return this.warnOnce(`overrun:${kk}`, `${kk} draws ${Bk} instances from a ${tk}-byte buffer (${Rk.needed} needed)`), !1
+      instanceBuffersFit(bb, cb, sb) {
+        const kb = Ra(cb, sb, this.resources, this.zeroBuffer);
+        if (kb) {
+          const Wb = cb.ends[kb.index] - cb.offsets[kb.index] + cb.Z6[kb.index];
+          return this.warnOnce(`overrun:${bb}`, `${bb} draws ${sb} instances from a ${Wb}-byte buffer (${kb.needed} needed)`), !1
         }
         return !0
       }
-      createBinding(kk, Fk, Bk, Rk) {
-        const tk = `${Fk._colorFormat}|${Fk._depthStencilFormat}|${Fk._depthCompare}|${Fk._sampleCount}`,
-          ak = bF(this.device, Fk);
-        if (kk === this.skyLastRenderable) {
-          let Bk = null;
+      createBinding(bb, cb, sb, kb) {
+        const Wb = `${cb._colorFormat}|${cb._depthStencilFormat}|${cb._depthCompare}|${cb._sampleCount}`,
+          ab = Tc(this.device, cb);
+        if (bb === this.skyLastRenderable) {
+          let sb = null;
           return {
-            renderable: kk,
-            pipeline: ak,
-            draw: kk => Bk ? this.drawSky(kk, Fk, tk, Bk) : 0,
-            update: kk => {
-              Bk = kk
+            renderable: bb,
+            pipeline: ab,
+            draw: bb => sb ? this.drawSky(bb, cb, Wb, sb) : 0,
+            update: bb => {
+              sb = bb
             }
           }
         }
         return {
-          renderable: kk,
-          pipeline: ak,
-          draw: kk => (Rk ? Rk.execute(kk, Fk, tk) : 0) + this.drawList(kk, Fk, tk, Bk)
+          renderable: bb,
+          pipeline: ab,
+          draw: bb => (kb ? kb.execute(bb, cb, Wb) : 0) + this.drawList(bb, cb, Wb, sb)
         }
       }
-      drawSky(kk, Fk, Bk, Rk) {
-        const tk = this.lists.skyDraws,
-          ak = tk.length > 0;
-        if (ak) {
-          var Xk;
-          const Bk = (null !== (Xk = Fk._depthCompare) && void 0 !== Xk ? Xk : RF).startsWith("greater") ? 0 : 1;
-          kk.setViewport(0, 0, Rk.targetWidth, Rk.targetHeight, Bk, Bk)
+      drawSky(bb, cb, sb, kb) {
+        const Wb = this.lists.skyDraws,
+          ab = Wb.length > 0;
+        if (ab) {
+          var Tb;
+          const sb = (null !== (Tb = cb._depthCompare) && void 0 !== Tb ? Tb : sc).startsWith("greater") ? 0 : 1;
+          bb.setViewport(0, 0, kb.targetWidth, kb.targetHeight, sb, sb)
         }
-        const bk = this.drawList(kk, Fk, Bk, tk);
-        return ak && kk.setViewport(0, 0, Rk.targetWidth, Rk.targetHeight, 0, 1), bk
+        const Ub = this.drawList(bb, cb, sb, Wb);
+        return ab && bb.setViewport(0, 0, kb.targetWidth, kb.targetHeight, 0, 1), Ub
       }
-      drawList(kk, Fk, Bk, Rk) {
-        let tk = 0;
-        const ak = this.binder;
-        ak.reset();
-        for (const Xk of Rk) {
-          const Rk = this.pipelineFor(Xk, Fk, Bk);
-          Rk && (ak.bind(kk, Xk, Rk, this.meshSlots.bindGroup, Xk.slotOffset), Xk.indexBuffer ? kk.drawIndexed(Xk.count, Xk.instances, Xk.first, 0, 0) : kk.draw(Xk.count, Xk.instances, Xk.first, 0), tk++)
+      drawList(bb, cb, sb, kb) {
+        let Wb = 0;
+        const ab = this.binder;
+        ab.reset();
+        for (const Tb of kb) {
+          const kb = this.pipelineFor(Tb, cb, sb);
+          kb && (ab.bind(bb, Tb, kb, this.meshSlots.bindGroup, Tb.slotOffset), Tb.indexBuffer ? bb.drawIndexed(Tb.count, Tb.instances, Tb.first, 0, 0) : bb.draw(Tb.count, Tb.instances, Tb.first, 0), Wb++)
         }
-        return tk
+        return Wb
       }
-      pipelineFor(kk, Fk, Bk) {
-        var Rk, tk;
-        if (kk.program.failed) return null;
-        const ak = kk.inputs;
-        if (ak.pipeline && ak.pipelineTarget === Bk) return ak.pipeline;
-        const Xk = `${kk.pipelineKey}|${Bk}`,
-          bk = this.pipelines.get(Xk);
-        if (void 0 !== bk) return bk && (ak.pipeline = bk, ak.pipelineTarget = Bk), bk || null;
-        this.pipelines.set(Xk, null);
+      pipelineFor(bb, cb, sb) {
+        var kb, Wb;
+        if (bb.program.failed) return null;
+        const ab = bb.inputs;
+        if (ab.pipeline && ab.pipelineTarget === sb) return ab.pipeline;
+        const Tb = `${bb.pipelineKey}|${sb}`,
+          Ub = this.pipelines.get(Tb);
+        if (void 0 !== Ub) return Ub && (ab.pipeline = Ub, ab.pipelineTarget = sb), Ub || null;
+        this.pipelines.set(Tb, null);
         const {
-          program: wk,
-          layout: dk,
-          state: sk
-        } = kk, Vk = {
-          label: `standard-${wk.id}`,
-          layout: wk.pipelineLayout,
+          program: Ib,
+          layout: Hb,
+          state: fb
+        } = bb, Mb = {
+          label: `standard-${Ib.id}`,
+          layout: Ib.pipelineLayout,
           vertex: {
-            module: wk.vertex,
+            module: Ib.vertex,
             entryPoint: "main",
-            buffers: dk.buffers
+            buffers: Hb.buffers
           },
-          fragment: Ik({
-            module: wk.fragment,
+          fragment: xb({
+            module: Ib.fragment,
             entryPoint: "main"
-          }, Fk, sk.blend, sk.colourWrite),
-          depthStencil: Fk._depthStencilFormat ? {
-            format: Fk._depthStencilFormat,
-            depthCompare: null !== (Rk = null !== (tk = sk.depthCompare) && void 0 !== tk ? tk : Fk._depthCompare) && void 0 !== Rk ? Rk : RF,
-            depthWriteEnabled: sk.depthWrite,
-            depthBias: sk.depthBias,
-            depthBiasSlopeScale: sk.depthBiasSlopeScale
+          }, cb, fb.blend, fb.colourWrite),
+          depthStencil: cb._depthStencilFormat ? {
+            format: cb._depthStencilFormat,
+            depthCompare: null !== (kb = null !== (Wb = fb.depthCompare) && void 0 !== Wb ? Wb : cb._depthCompare) && void 0 !== kb ? kb : sc,
+            depthWriteEnabled: fb.depthWrite,
+            depthBias: fb.depthBias,
+            depthBiasSlopeScale: fb.depthBiasSlopeScale
           } : void 0,
           multisample: {
-            count: Fk._sampleCount
+            count: cb._sampleCount
           },
           primitive: {
-            topology: sk.topology,
-            frontFace: sk.frontFace,
-            cullMode: sk.cullMode
+            topology: fb.topology,
+            frontFace: fb.frontFace,
+            cullMode: fb.cullMode
           }
         };
-        return this.compiling++, this.device.createRenderPipelineAsync(Vk).then((kk => {
-          this.compiling--, this.pipelines.set(Xk, kk)
-        }), (kk => {
-          this.compiling--, this.reportFailure(wk, Xk, kk)
+        return this.compiling++, this.device.createRenderPipelineAsync(Mb).then((bb => {
+          this.compiling--, this.pipelines.set(Tb, bb)
+        }), (bb => {
+          this.compiling--, this.reportFailure(Ib, Tb, bb)
         })), null
       }
-      forEachSunShadowCaster(kk) {
-        const Fk = this.caster,
-          Bk = (Bk, Rk, tk) => {
-            const ak = Bk.unit && function(kk) {
-              const Fk = kk.material.model;
-              return null !== Fk && (Fk.lifeform || Fk.item) && Fk.castsSunShadow && "triangle-list" === kk.state.topology
-            }(Bk) ? Xa(Bk.unit) : null;
-            if (!ak) return;
-            const Xk = Bk.unit.owner;
-            switch (Fk.geometry = ak, Fk.skip = Xk.noSunShadowVertices, Fk.indexed = null !== Bk.indexBuffer, Fk.first = Bk.first, Fk.count = Bk.count, Fk.iJ = Rk, Fk.worldAt = tk, Fk.instances = null, Fk.instanceCount = 1, Fk.thin = !1, Ba(Xk)) {
+      forEachSunShadowCaster(bb) {
+        const cb = this.caster,
+          sb = (sb, kb, Wb) => {
+            const ab = sb.unit && function(bb) {
+              const cb = bb.material.model;
+              return null !== cb && (cb.lifeform || cb.item) && cb.castsSunShadow && "triangle-list" === bb.state.topology
+            }(sb) ? Ua(sb.unit) : null;
+            if (!ab) return;
+            const Tb = sb.unit.owner;
+            switch (cb.geometry = ab, cb.skip = Tb.noSunShadowVertices, cb.indexed = null !== sb.indexBuffer, cb.first = sb.first, cb.count = sb.count, cb.fX = kb, cb.worldAt = Wb, cb.instances = null, cb.instanceCount = 1, cb.thin = !1, ka(Tb)) {
               case "thin": {
-                const kk = Xk._thinInstanceDataStorage.matrixData;
-                if (!kk) return;
-                Fk.instances = kk, Fk.instanceCount = Math.min(Bk.instances, kk.length / 16), Fk.thin = !0;
+                const bb = Tb._thinInstanceDataStorage.matrixData;
+                if (!bb) return;
+                cb.instances = bb, cb.instanceCount = Math.min(sb.instances, bb.length / 16), cb.thin = !0;
                 break
               }
               case "instanced": {
-                const kk = this.resources.batchUploads.get(Xk);
-                if (!kk || kk.frame !== this.frame || !this.writeBatchCasters(kk)) return;
+                const bb = this.resources.batchUploads.get(Tb);
+                if (!bb || bb.frame !== this.frame || !this.writeBatchCasters(bb)) return;
                 break
               }
             }
-            kk(Fk)
+            bb(cb)
           };
-        for (const Rk of this.lists.opaqueDraws) Bk(Rk, this.meshSlots.data, Rk.slotOffset / 4);
-        this.thinBundle.forEachDrawn(Bk)
+        for (const kb of this.lists.opaqueDraws) sb(kb, this.meshSlots.data, kb.slotOffset / 4);
+        this.thinBundle.forEachDrawn(sb)
       }
-      writeBatchCasters(kk) {
+      writeBatchCasters(bb) {
         const {
-          caster: Fk
-        } = this, Bk = kk.packedMatrices, Rk = kk.count;
-        Fk.instances = Bk, Fk.instanceCount = Rk;
-        let tk = -1;
-        for (let ak = 0; ak < Rk; ak++) {
-          const Fk = uX(kk.packedRowMesh(ak));
-          Fk && tk < 0 ? (this.casterWorlds.length < 16 * Rk && (this.casterWorlds = new Float32Array(Bk.length)), this.casterWorlds.set(Bk.subarray(0, 16 * ak)), tk = ak) : !Fk && tk >= 0 && (this.casterWorlds.set(Bk.subarray(16 * ak, 16 * ak + 16), 16 * tk), tk++)
+          caster: cb
+        } = this, sb = bb.packedMatrices, kb = bb.count;
+        cb.instances = sb, cb.instanceCount = kb;
+        let Wb = -1;
+        for (let ab = 0; ab < kb; ab++) {
+          const cb = PT(bb.packedRowMesh(ab));
+          cb && Wb < 0 ? (this.casterWorlds.length < 16 * kb && (this.casterWorlds = new Float32Array(sb.length)), this.casterWorlds.set(sb.subarray(0, 16 * ab)), Wb = ab) : !cb && Wb >= 0 && (this.casterWorlds.set(sb.subarray(16 * ab, 16 * ab + 16), 16 * Wb), Wb++)
         }
-        return tk >= 0 && (Fk.instances = this.casterWorlds, Fk.instanceCount = tk), Fk.instanceCount > 0
+        return Wb >= 0 && (cb.instances = this.casterWorlds, cb.instanceCount = Wb), cb.instanceCount > 0
       }
-      async reportFailure(kk, Fk, Bk) {
-        const Rk = [];
-        let tk = !0;
-        for (const [ak, Xk] of [
-            ["vertex", kk.vertex],
-            ["fragment", kk.fragment]
+      async reportFailure(bb, cb, sb) {
+        const kb = [];
+        let Wb = !0;
+        for (const [ab, Tb] of [
+            ["vertex", bb.vertex],
+            ["fragment", bb.fragment]
           ]) {
-          const kk = await Xk.getCompilationInfo();
-          for (const Fk of kk.messages) tk &&= "error" !== Fk.type, Rk.push(`${ak}:${Fk.lineNum}:${Fk.linePos} ${Fk.type}: ${Fk.message}`)
+          const bb = await Tb.getCompilationInfo();
+          for (const cb of bb.messages) Wb &&= "error" !== cb.type, kb.push(`${ab}:${cb.lineNum}:${cb.linePos} ${cb.type}: ${cb.message}`)
         }
-        if (tk && !kk.packGroup) return this.pipelines.set(Fk, !1), console.error(`Lite: pipeline ${Fk} failed`, Bk), void jt("mesh", kk.kind, Bk);
-        kk.failed || (kk.failed = !0, console.error(`Lite: program ${kk.id} failed`, Bk, Rk.join("\n"), {
-          program: kk.program,
-          key: kk.key
-        }), jt("mesh", kk.kind, Bk, tk ? null : Rk[0]))
+        if (Wb && !bb.packGroup) return this.pipelines.set(cb, !1), console.error(`Lite: pipeline ${cb} failed`, sb), void FW("mesh", bb.kind, sb);
+        bb.failed || (bb.failed = !0, console.error(`Lite: program ${bb.id} failed`, sb, kb.join("\n"), {
+          program: bb.program,
+          key: bb.key
+        }), FW("mesh", bb.kind, sb, Wb ? null : kb[0]))
       }
     }
 
-    function uX(kk) {
-      var Fk, Bk;
-      const Rk = null === (Fk = kk.gH) || void 0 === Fk || null === (Bk = Fk.aShaderPackItem) || void 0 === Bk ? void 0 : Bk.x;
-      return void 0 !== Rk && 0 !== (Rk & dF.g)
+    function PT(bb) {
+      var cb, sb;
+      const kb = null === (cb = bb.LJ) || void 0 === cb || null === (sb = cb.aShaderPackItem) || void 0 === sb ? void 0 : sb.x;
+      return void 0 !== kb && 0 !== (kb & Ic.h)
     }
-    var MX = Bk(41113),
-      gX = Bk(41117),
-      UX = Bk(41124),
-      cX = Bk(41077);
-    const GX = [0, 3, 1, 4, 2, 5];
+    var DT = sb(41097),
+      ET = sb(41099),
+      iT = sb(41102),
+      OT = sb(41058);
+    const GT = [0, 3, 1, 4, 2, 5];
 
-    function TX(kk, Fk, Bk, Rk, tk) {
-      const ak = Bk[0].width;
+    function KT(bb, cb, sb, kb, Wb) {
+      const ab = sb[0].width;
       try {
-        return tk ? function(kk, Fk, Bk) {
-          const Rk = (0, cX.d)(kk, Bk, Bk, 6);
-          for (let tk = 0; tk < 6; tk++)(0, cX.f)(kk, Rk, tk, Fk[GX[tk]], {
+        return Wb ? function(bb, cb, sb) {
+          const kb = (0, OT.d)(bb, sb, sb, 6);
+          for (let Wb = 0; Wb < 6; Wb++)(0, OT.e)(bb, kb, Wb, cb[GT[Wb]], {
             invertY: !1
           });
-          return Rk.texture
-        }(kk, Bk, ak) : function(kk, Fk, Bk, Rk) {
-          const tk = kk.createTexture({
+          return kb.texture
+        }(bb, sb, ab) : function(bb, cb, sb, kb) {
+          const Wb = bb.createTexture({
             label: "sink-cube",
             size: {
-              width: Bk,
-              height: Bk,
+              width: sb,
+              height: sb,
               depthOrArrayLayers: 6
             },
-            format: Rk,
+            format: kb,
             usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST | GPUTextureUsage.RENDER_ATTACHMENT
           });
-          for (let ak = 0; ak < 6; ak++) kk.queue.copyExternalImageToTexture({
-            source: Fk[GX[ak]]
+          for (let ab = 0; ab < 6; ab++) bb.queue.copyExternalImageToTexture({
+            source: cb[GT[ab]]
           }, {
-            texture: tk,
+            texture: Wb,
             origin: {
               x: 0,
               y: 0,
-              z: ak
+              z: ab
             }
           }, {
-            width: Bk,
-            height: Bk
+            width: sb,
+            height: sb
           });
-          return tk
-        }(Fk, Bk, ak, 1 === Rk ? "r8unorm" : "rgba8unorm")
+          return Wb
+        }(cb, sb, ab, 1 === kb ? "r8unorm" : "rgba8unorm")
       } finally {
-        rX(Bk)
+        ZT(sb)
       }
     }
 
-    function rX(kk) {
-      for (const Fk of null !== kk && void 0 !== kk ? kk : []) null === Fk || void 0 === Fk || Fk.close()
+    function ZT(bb) {
+      for (const cb of null !== bb && void 0 !== bb ? bb : []) null === cb || void 0 === cb || cb.close()
     }
-    async function DX(kk) {
-      const Fk = [],
-        Bk = [];
-      if (await Promise.all(kk.map(((kk, Rk) => (Fk[Rk] = null, kk.then((kk => {
-          Fk[Rk] = kk
-        }), (kk => {
-          Bk.push(kk)
-        })))))), Bk.length > 0) throw rX(Fk), Bk[0];
-      return Fk
+    async function zT(bb) {
+      const cb = [],
+        sb = [];
+      if (await Promise.all(bb.map(((bb, kb) => (cb[kb] = null, bb.then((bb => {
+          cb[kb] = bb
+        }), (bb => {
+          sb.push(bb)
+        })))))), sb.length > 0) throw ZT(cb), sb[0];
+      return cb
     }
-    class zX {
-      constructor(kk) {
-        this.KV = kk, this.starts = [], this.lengths = [], this.used = 0, kk > 0 && (this.starts.push(0), this.lengths.push(kk))
+    class qT {
+      constructor(bb) {
+        this.GM = bb, this.starts = [], this.lengths = [], this.used = 0, bb > 0 && (this.starts.push(0), this.lengths.push(bb))
       }
-      allocate(kk) {
+      allocate(bb) {
         const {
-          starts: Fk,
-          lengths: Bk
+          starts: cb,
+          lengths: sb
         } = this;
-        for (let Rk = 0; Rk < Fk.length; Rk++) {
-          if (Bk[Rk] < kk) continue;
-          const tk = Fk[Rk];
-          return Bk[Rk] === kk ? (Fk.splice(Rk, 1), Bk.splice(Rk, 1)) : (Fk[Rk] += kk, Bk[Rk] -= kk), this.used += kk, tk
+        for (let kb = 0; kb < cb.length; kb++) {
+          if (sb[kb] < bb) continue;
+          const Wb = cb[kb];
+          return sb[kb] === bb ? (cb.splice(kb, 1), sb.splice(kb, 1)) : (cb[kb] += bb, sb[kb] -= bb), this.used += bb, Wb
         }
         return -1
       }
-      free(kk, Fk) {
-        this.used -= Fk;
-        const Bk = Math.min(kk + Fk, this.KV);
-        Bk > kk && this.release(kk, Bk - kk)
+      free(bb, cb) {
+        this.used -= cb;
+        const sb = Math.min(bb + cb, this.GM);
+        sb > bb && this.release(bb, sb - bb)
       }
-      grow(kk) {
-        const Fk = this.KV;
-        this.KV = kk, this.release(Fk, kk - Fk)
+      grow(bb) {
+        const cb = this.GM;
+        this.GM = bb, this.release(cb, bb - cb)
       }
-      truncate(kk) {
+      truncate(bb) {
         const {
-          starts: Fk,
-          lengths: Bk
+          starts: cb,
+          lengths: sb
         } = this;
-        for (let Rk = Fk.length - 1; Rk >= 0 && Fk[Rk] + Bk[Rk] > kk; Rk--) Fk[Rk] >= kk ? (Fk.splice(Rk, 1), Bk.splice(Rk, 1)) : Bk[Rk] = kk - Fk[Rk];
-        this.KV = kk
+        for (let kb = cb.length - 1; kb >= 0 && cb[kb] + sb[kb] > bb; kb--) cb[kb] >= bb ? (cb.splice(kb, 1), sb.splice(kb, 1)) : sb[kb] = bb - cb[kb];
+        this.GM = bb
       }
-      release(kk, Fk) {
+      release(bb, cb) {
         const {
-          starts: Bk,
-          lengths: Rk
+          starts: sb,
+          lengths: kb
         } = this;
-        let tk = 0,
-          ak = Bk.length;
-        for (; tk < ak;) {
-          const Fk = tk + ak >> 1;
-          Bk[Fk] < kk ? tk = Fk + 1 : ak = Fk
+        let Wb = 0,
+          ab = sb.length;
+        for (; Wb < ab;) {
+          const cb = Wb + ab >> 1;
+          sb[cb] < bb ? Wb = cb + 1 : ab = cb
         }
-        const Xk = tk,
-          bk = Xk > 0 && Bk[Xk - 1] + Rk[Xk - 1] === kk,
-          wk = Xk < Bk.length && kk + Fk === Bk[Xk];
-        bk && wk ? (Rk[Xk - 1] += Fk + Rk[Xk], Bk.splice(Xk, 1), Rk.splice(Xk, 1)) : bk ? Rk[Xk - 1] += Fk : wk ? (Bk[Xk] = kk, Rk[Xk] += Fk) : (Bk.splice(Xk, 0, kk), Rk.splice(Xk, 0, Fk))
+        const Tb = Wb,
+          Ub = Tb > 0 && sb[Tb - 1] + kb[Tb - 1] === bb,
+          Ib = Tb < sb.length && bb + cb === sb[Tb];
+        Ub && Ib ? (kb[Tb - 1] += cb + kb[Tb], sb.splice(Tb, 1), kb.splice(Tb, 1)) : Ub ? kb[Tb - 1] += cb : Ib ? (sb[Tb] = bb, kb[Tb] += cb) : (sb.splice(Tb, 0, bb), kb.splice(Tb, 0, cb))
       }
     }
-    const PX = 256;
-    class hX {
-      constructor(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16384,
-          Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1048576;
-        this.device = kk, this.onReplaced = Fk, this.mergeGap = Bk, this.gpu = null, this.bytes = void 0, this.hb = void 0, this.dirtyStarts = [], this.dirtyEnds = [], this.order = [], this.replaced = [], this.retired = [], this.freed = [], this.holding = !0;
-        const tk = Math.max(PX, Math.ceil(Rk / PX) * PX);
-        this.bytes = new Uint8Array(tk), this.hb = new zX(tk / PX)
+    const dT = 256;
+    class AT {
+      constructor(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16384,
+          kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1048576;
+        this.device = bb, this.onReplaced = cb, this.mergeGap = sb, this.gpu = null, this.bytes = void 0, this.uQ = void 0, this.dirtyStarts = [], this.dirtyEnds = [], this.order = [], this.replaced = [], this.retired = [], this.freed = [], this.holding = !0;
+        const Wb = Math.max(dT, Math.ceil(kb / dT) * dT);
+        this.bytes = new Uint8Array(Wb), this.uQ = new qT(Wb / dT)
       }
       get buffer() {
         return this.gpu ??= this.createGpu(this.bytes.byteLength)
       }
-      static slotBytes(kk) {
-        return Math.max(1, Math.ceil(kk / PX)) * PX
+      static slotBytes(bb) {
+        return Math.max(1, Math.ceil(bb / dT)) * dT
       }
-      allocate(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : kk;
-        const Rk = hX.slotBytes(kk),
-          tk = Rk / PX;
-        let ak = this.hb.allocate(tk);
-        ak < 0 && (this.grow(this.hb.KV + tk), ak = this.hb.allocate(tk));
-        const Xk = ak * PX;
-        return this.growTo(Xk + Math.max(Bk, Rk)), this.gpu ??= this.createGpu(this.bytes.byteLength), this.bytes.fill(0, Xk, Xk + Rk), Fk && this.bytes.set(new Uint8Array(Fk.buffer, Fk.byteOffset, Math.min(Fk.byteLength, Rk)), Xk), this.markDirty(Xk, Xk + Rk), Xk
+      allocate(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bb;
+        const kb = AT.slotBytes(bb),
+          Wb = kb / dT;
+        let ab = this.uQ.allocate(Wb);
+        ab < 0 && (this.grow(this.uQ.GM + Wb), ab = this.uQ.allocate(Wb));
+        const Tb = ab * dT;
+        return this.growTo(Tb + Math.max(sb, kb)), this.gpu ??= this.createGpu(this.bytes.byteLength), this.bytes.fill(0, Tb, Tb + kb), cb && this.bytes.set(new Uint8Array(cb.buffer, cb.byteOffset, Math.min(cb.byteLength, kb)), Tb), this.markDirty(Tb, Tb + kb), Tb
       }
-      growTo(kk) {
-        const Fk = Math.ceil(kk / PX);
-        Fk > this.hb.KV && this.grow(Fk)
+      growTo(bb) {
+        const cb = Math.ceil(bb / dT);
+        cb > this.uQ.GM && this.grow(cb)
       }
-      free(kk, Fk) {
-        this.freed.push(kk, Fk)
+      free(bb, cb) {
+        this.freed.push(bb, cb)
       }
-      write(kk, Fk, Bk, Rk) {
-        let tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (Rk <= 0) return;
-        this.bytes.set(new Uint8Array(Fk.buffer, Bk, Rk), kk);
-        let ak = kk + Rk;
-        if (tk) {
-          const Fk = kk + 4 * Math.ceil(Rk / 4);
-          this.bytes.fill(0, ak, Fk), ak = Fk
+      write(bb, cb, sb, kb) {
+        let Wb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (kb <= 0) return;
+        this.bytes.set(new Uint8Array(cb.buffer, sb, kb), bb);
+        let ab = bb + kb;
+        if (Wb) {
+          const cb = bb + 4 * Math.ceil(kb / 4);
+          this.bytes.fill(0, ab, cb), ab = cb
         }
-        this.markDirty(kk, ak)
+        this.markDirty(bb, ab)
       }
-      move(kk, Fk, Bk) {
-        this.bytes.copyWithin(Fk, kk, kk + Bk), this.markDirty(Fk, Fk + Bk)
+      move(bb, cb, sb) {
+        this.bytes.copyWithin(cb, bb, bb + sb), this.markDirty(cb, cb + sb)
       }
       flush() {
-        for (const Fk of this.retired) this.onReplaced(Fk), Fk.destroy();
+        for (const cb of this.retired) this.onReplaced(cb), cb.destroy();
         this.retired.length = 0;
-        const kk = this.dirtyStarts.length;
-        if (kk > 0) {
+        const bb = this.dirtyStarts.length;
+        if (bb > 0) {
           const {
-            dirtyStarts: Fk,
-            dirtyEnds: Bk,
-            order: Rk
+            dirtyStarts: cb,
+            dirtyEnds: sb,
+            order: kb
           } = this;
-          Rk.length = kk;
-          for (let bk = 0; bk < kk; bk++) Rk[bk] = bk;
-          kk > 1 && Rk.sort(((kk, Bk) => Fk[kk] - Fk[Bk]));
-          const tk = this.mergeGap;
-          let ak = Fk[Rk[0]],
-            Xk = Bk[Rk[0]];
-          for (let bk = 1; bk < kk; bk++) {
-            const kk = Rk[bk];
-            Fk[kk] - Xk <= tk ? Xk = Math.max(Xk, Bk[kk]) : (this.send(ak, Xk), ak = Fk[kk], Xk = Bk[kk])
+          kb.length = bb;
+          for (let Ub = 0; Ub < bb; Ub++) kb[Ub] = Ub;
+          bb > 1 && kb.sort(((bb, sb) => cb[bb] - cb[sb]));
+          const Wb = this.mergeGap;
+          let ab = cb[kb[0]],
+            Tb = sb[kb[0]];
+          for (let Ub = 1; Ub < bb; Ub++) {
+            const bb = kb[Ub];
+            cb[bb] - Tb <= Wb ? Tb = Math.max(Tb, sb[bb]) : (this.send(ab, Tb), ab = cb[bb], Tb = sb[bb])
           }
-          this.send(ak, Xk), Fk.length = 0, Bk.length = 0
+          this.send(ab, Tb), cb.length = 0, sb.length = 0
         }
         this.holding = !1
       }
-      FY() {
+      pN() {
         this.holding = !0, this.retired.push(...this.replaced), this.replaced.length = 0;
-        const kk = this.freed;
-        for (let Fk = 0; Fk < kk.length; Fk += 2) this.hb.free(kk[Fk] / PX, kk[Fk + 1] / PX);
-        kk.length = 0
+        const bb = this.freed;
+        for (let cb = 0; cb < bb.length; cb += 2) this.uQ.free(bb[cb] / dT, bb[cb + 1] / dT);
+        bb.length = 0
       }
-      send(kk, Fk) {
-        this.device.queue.writeBuffer(this.gpu, kk, this.bytes.buffer, kk, Fk - kk);
-        for (const Bk of this.replaced) {
-          const Rk = Math.min(Fk, Bk.size);
-          Rk > kk && this.device.queue.writeBuffer(Bk, kk, this.bytes.buffer, kk, Rk - kk)
+      send(bb, cb) {
+        this.device.queue.writeBuffer(this.gpu, bb, this.bytes.buffer, bb, cb - bb);
+        for (const sb of this.replaced) {
+          const kb = Math.min(cb, sb.size);
+          kb > bb && this.device.queue.writeBuffer(sb, bb, this.bytes.buffer, bb, kb - bb)
         }
       }
-      markDirty(kk, Fk) {
-        kk &= -4, Fk = Fk + 3 & -4, this.holding ? (this.dirtyStarts.push(kk), this.dirtyEnds.push(Fk)) : this.send(kk, Fk)
+      markDirty(bb, cb) {
+        bb &= -4, cb = cb + 3 & -4, this.holding ? (this.dirtyStarts.push(bb), this.dirtyEnds.push(cb)) : this.send(bb, cb)
       }
-      grow(kk) {
-        const Fk = this.hb.KV,
-          Bk = Math.max(2 * Fk, kk),
-          Rk = new Uint8Array(Bk * PX);
-        Rk.set(this.bytes);
-        const tk = this.gpu;
-        this.gpu = this.createGpu(Rk.byteLength), this.bytes = Rk, this.hb.grow(Bk), tk && (this.replaced.push(tk), this.onReplaced(tk)), this.dirtyStarts.length = 0, this.dirtyEnds.length = 0, this.markDirty(0, Fk * PX)
+      grow(bb) {
+        const cb = this.uQ.GM,
+          sb = Math.max(2 * cb, bb),
+          kb = new Uint8Array(sb * dT);
+        kb.set(this.bytes);
+        const Wb = this.gpu;
+        this.gpu = this.createGpu(kb.byteLength), this.bytes = kb, this.uQ.grow(sb), Wb && (this.replaced.push(Wb), this.onReplaced(Wb)), this.dirtyStarts.length = 0, this.dirtyEnds.length = 0, this.markDirty(0, cb * dT)
       }
-      createGpu(kk) {
+      createGpu(bb) {
         return this.device.createBuffer({
           label: "sink-dynamic-arena",
-          size: kk,
+          size: bb,
           usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST
         })
       }
     }
 
-    function qX(kk) {
-      return Array.isArray(kk) ? new Float32Array(kk) : kk
+    function wT(bb) {
+      return Array.isArray(bb) ? new Float32Array(bb) : bb
     }
 
-    function CX(kk, Fk, Bk, Rk, tk) {
-      const ak = gt(tk),
-        Xk = Math.min(tk, Rk.byteLength);
-      if (ak === Xk && Rk.byteOffset % 4 === 0) return void kk.queue.writeBuffer(Fk, Bk, Rk.buffer, Rk.byteOffset, ak);
-      const bk = new Uint8Array(ak);
-      bk.set(new Uint8Array(Rk.buffer, Rk.byteOffset, Xk)), kk.queue.writeBuffer(Fk, Bk, bk)
+    function rT(bb, cb, sb, kb, Wb) {
+      const ab = EW(Wb),
+        Tb = Math.min(Wb, kb.byteLength);
+      if (ab === Tb && kb.byteOffset % 4 === 0) return void bb.queue.writeBuffer(cb, sb, kb.buffer, kb.byteOffset, ab);
+      const Ub = new Uint8Array(ab);
+      Ub.set(new Uint8Array(kb.buffer, kb.byteOffset, Tb)), bb.queue.writeBuffer(cb, sb, Ub)
     }
 
-    function ZX(kk, Fk, Bk) {
-      const Rk = "linear",
-        tk = "nearest";
-      let ak = tk,
-        Xk = tk,
-        bk = "nearest",
-        wk = !Fk;
-      switch (kk) {
+    function oT(bb, cb, sb) {
+      const kb = "linear",
+        Wb = "nearest";
+      let ab = Wb,
+        Tb = Wb,
+        Ub = "nearest",
+        Ib = !cb;
+      switch (bb) {
         case 11:
-          ak = Rk, Xk = Rk;
+          ab = kb, Tb = kb;
           break;
         case 3:
-          ak = Rk, Xk = Rk, bk = Fk ? "linear" : "nearest";
+          ab = kb, Tb = kb, Ub = cb ? "linear" : "nearest";
           break;
         case 8:
-          bk = Fk ? "linear" : "nearest";
+          Ub = cb ? "linear" : "nearest";
           break;
         case 4:
           break;
         case 5:
-          Xk = Rk;
+          Tb = kb;
           break;
         case 6:
-          Xk = Rk, bk = Fk ? "linear" : "nearest";
+          Tb = kb, Ub = cb ? "linear" : "nearest";
           break;
         case 7:
-          Xk = Rk, wk = !0;
+          Tb = kb, Ib = !0;
           break;
         case 9:
-          ak = Rk;
+          ab = kb;
           break;
         case 10:
-          ak = Rk, bk = Fk ? "linear" : "nearest";
+          ab = kb, Ub = cb ? "linear" : "nearest";
           break;
         case 2:
-          ak = Rk, Xk = Rk, Bk > 1 ? (bk = "linear", wk = !1) : wk = !0;
+          ab = kb, Tb = kb, sb > 1 ? (Ub = "linear", Ib = !1) : Ib = !0;
           break;
         case 12:
-          ak = Rk, wk = !0;
+          ab = kb, Ib = !0;
           break;
         default:
-          wk = !0
+          Ib = !0
       }
-      return Bk > 1 && !wk ? {
-        magFilter: Rk,
-        minFilter: Rk,
+      return sb > 1 && !Ib ? {
+        magFilter: kb,
+        minFilter: kb,
         mipmapFilter: "linear",
-        maxAnisotropy: Bk
+        maxAnisotropy: sb
       } : {
-        magFilter: ak,
-        minFilter: Xk,
-        mipmapFilter: bk,
-        ...wk ? {
+        magFilter: ab,
+        minFilter: Tb,
+        mipmapFilter: Ub,
+        ...Ib ? {
           lodMinClamp: 0,
           lodMaxClamp: 0
         } : {}
       }
     }
 
-    function pX(kk) {
-      return 0 === kk ? "clamp-to-edge" : 2 === kk ? "mirror-repeat" : "repeat"
+    function ST(bb) {
+      return 0 === bb ? "clamp-to-edge" : 2 === bb ? "mirror-repeat" : "repeat"
     }
-    class KX {
-      constructor(kk, Fk) {
+    class RT {
+      constructor(bb, cb) {
         let {
-          vertexArena: Bk = !0
+          vertexArena: sb = !0
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.engine = kk, this.device = Fk, this.buffers = new WeakMap, this.K3 = new WeakMap, this.batchUploads = new WeakMap, this.textures = new Map, this.samplers = new Map, this.atlasBindings = new WeakMap, this.gpuBuffersVersion = 0, this.onDestroy = null, this.pending = 0, this.firstBindDecodes = 0, this.arena = void 0, this.arena = Bk ? new hX(Fk, (kk => {
-          var Fk;
-          null === (Fk = this.onDestroy) || void 0 === Fk || Fk.call(this, kk), this.gpuBuffersVersion++
+        this.engine = bb, this.device = cb, this.buffers = new WeakMap, this.vF = new WeakMap, this.batchUploads = new WeakMap, this.textures = new Map, this.samplers = new Map, this.atlasBindings = new WeakMap, this.gpuBuffersVersion = 0, this.onDestroy = null, this.pending = 0, this.firstBindDecodes = 0, this.arena = void 0, this.arena = sb ? new AT(cb, (bb => {
+          var cb;
+          null === (cb = this.onDestroy) || void 0 === cb || cb.call(this, bb), this.gpuBuffersVersion++
         })) : null
       }
       flushUploads() {
-        var kk;
-        null === (kk = this.arena) || void 0 === kk || kk.flush()
+        var bb;
+        null === (bb = this.arena) || void 0 === bb || bb.flush()
       }
       endUploadFrame() {
-        var kk;
-        null === (kk = this.arena) || void 0 === kk || kk.FY()
+        var bb;
+        null === (bb = this.arena) || void 0 === bb || bb.pN()
       }
-      vertexBufferCreated(kk, Fk, Bk) {
-        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Bk ? "sink-dynamic-vertices" : "sink-vertices";
-        this.bufferDeleted(kk);
-        const tk = qX(Fk);
-        kk.KV = tk.byteLength, this.buffers.set(kk, {
+      vertexBufferCreated(bb, cb, sb) {
+        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : sb ? "sink-dynamic-vertices" : "sink-vertices";
+        this.bufferDeleted(bb);
+        const Wb = wT(cb);
+        bb.GM = Wb.byteLength, this.buffers.set(bb, {
           gpu: null,
           slot: -1,
           slotBytes: 0,
           size: 0,
-          arena: Bk && null !== this.arena,
-          pending: tk,
+          arena: sb && null !== this.arena,
+          pending: Wb,
           ownsPending: !1,
           usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC,
-          label: Rk
+          label: kb
         })
       }
-      vertexBufferUpdated(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Rk = arguments.length > 3 ? arguments[3] : void 0;
-        const tk = this.buffers.get(kk);
-        if (!tk) return;
-        const ak = qX(Fk),
-          Xk = void 0 === Rk ? ak.byteLength : Math.min(Rk, ak.byteLength);
-        this.update(tk, ak, Bk, Xk)
+      vertexBufferUpdated(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          kb = arguments.length > 3 ? arguments[3] : void 0;
+        const Wb = this.buffers.get(bb);
+        if (!Wb) return;
+        const ab = wT(cb),
+          Tb = void 0 === kb ? ab.byteLength : Math.min(kb, ab.byteLength);
+        this.update(Wb, ab, sb, Tb)
       }
-      vertexBufferFloatsUpdated(kk, Fk, Bk, Rk) {
-        const tk = this.buffers.get(kk);
-        if (!tk) return;
-        const ak = Bk * Float32Array.BYTES_PER_ELEMENT,
-          Xk = (Rk - Bk) * Float32Array.BYTES_PER_ELEMENT;
-        tk.slot >= 0 && Xk > 0 && ak + Xk <= tk.size ? this.writeSlot(tk, ak, Fk, Fk.byteOffset + ak, Xk, !1) : tk.gpu && Xk > 0 && ak + Xk <= tk.gpu.size ? this.device.queue.writeBuffer(tk.gpu, ak, Fk.buffer, Fk.byteOffset + ak, Xk) : this.update(tk, Fk.subarray(Bk, Rk), ak, Xk)
+      vertexBufferFloatsUpdated(bb, cb, sb, kb) {
+        const Wb = this.buffers.get(bb);
+        if (!Wb) return;
+        const ab = sb * Float32Array.BYTES_PER_ELEMENT,
+          Tb = (kb - sb) * Float32Array.BYTES_PER_ELEMENT;
+        Wb.slot >= 0 && Tb > 0 && ab + Tb <= Wb.size ? this.writeSlot(Wb, ab, cb, cb.byteOffset + ab, Tb, !1) : Wb.gpu && Tb > 0 && ab + Tb <= Wb.gpu.size ? this.device.queue.writeBuffer(Wb.gpu, ab, cb.buffer, cb.byteOffset + ab, Tb) : this.update(Wb, cb.subarray(sb, kb), ab, Tb)
       }
-      indexBufferCreated(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "sink-indices";
-        this.bufferDeleted(kk);
-        const Rk = function(kk) {
-          if (kk instanceof Uint16Array || kk instanceof Uint32Array) return kk;
-          for (let Fk = 0; Fk < kk.length; Fk++)
-            if (kk[Fk] >= 65535) return new Uint32Array(kk);
-          return new Uint16Array(kk)
-        }(Fk);
-        kk.is32Bits = 4 === Rk.BYTES_PER_ELEMENT, kk.KV = Rk.byteLength, this.buffers.set(kk, {
+      indexBufferCreated(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "sink-indices";
+        this.bufferDeleted(bb);
+        const kb = function(bb) {
+          if (bb instanceof Uint16Array || bb instanceof Uint32Array) return bb;
+          for (let cb = 0; cb < bb.length; cb++)
+            if (bb[cb] >= 65535) return new Uint32Array(bb);
+          return new Uint16Array(bb)
+        }(cb);
+        bb.is32Bits = 4 === kb.BYTES_PER_ELEMENT, bb.GM = kb.byteLength, this.buffers.set(bb, {
           gpu: null,
           slot: -1,
           slotBytes: 0,
           size: 0,
           arena: !1,
-          pending: Rk,
-          ownsPending: Rk !== Fk,
+          pending: kb,
+          ownsPending: kb !== cb,
           usage: GPUBufferUsage.INDEX | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC,
-          label: Bk
+          label: sb
         })
       }
-      bufferDeleted(kk) {
-        const Fk = this.buffers.get(kk);
-        null !== Fk && void 0 !== Fk && Fk.gpu ? (this.destroyBuffer(Fk.gpu), this.gpuBuffersVersion++) : Fk && Fk.slot >= 0 && (this.arena.free(Fk.slot, Fk.slotBytes), this.gpuBuffersVersion++), this.buffers.delete(kk)
+      bufferDeleted(bb) {
+        const cb = this.buffers.get(bb);
+        null !== cb && void 0 !== cb && cb.gpu ? (this.destroyBuffer(cb.gpu), this.gpuBuffersVersion++) : cb && cb.slot >= 0 && (this.arena.free(cb.slot, cb.slotBytes), this.gpuBuffersVersion++), this.buffers.delete(bb)
       }
-      update(kk, Fk, Bk, Rk) {
-        if (kk.slot >= 0) this.updateSlot(kk, Fk, Bk, Rk);
-        else if (kk.gpu) {
-          if (Bk + gt(Rk) > kk.gpu.size) {
-            const Fk = this.device.createBuffer({
-                label: kk.label,
-                size: gt(Math.max(2 * kk.gpu.size, Bk + Rk)),
-                usage: kk.usage | GPUBufferUsage.COPY_SRC
+      update(bb, cb, sb, kb) {
+        if (bb.slot >= 0) this.updateSlot(bb, cb, sb, kb);
+        else if (bb.gpu) {
+          if (sb + EW(kb) > bb.gpu.size) {
+            const cb = this.device.createBuffer({
+                label: bb.label,
+                size: EW(Math.max(2 * bb.gpu.size, sb + kb)),
+                usage: bb.usage | GPUBufferUsage.COPY_SRC
               }),
-              tk = this.device.createCommandEncoder();
-            tk.copyBufferToBuffer(kk.gpu, 0, Fk, 0, kk.gpu.size), this.device.queue.submit([tk.finish()]), this.destroyBuffer(kk.gpu), this.gpuBuffersVersion++, kk.gpu = Fk
+              Wb = this.device.createCommandEncoder();
+            Wb.copyBufferToBuffer(bb.gpu, 0, cb, 0, bb.gpu.size), this.device.queue.submit([Wb.finish()]), this.destroyBuffer(bb.gpu), this.gpuBuffersVersion++, bb.gpu = cb
           }
-          CX(this.device, kk.gpu, Bk, Fk, Rk)
+          rT(this.device, bb.gpu, sb, cb, kb)
         } else {
-          const ak = new Uint8Array(Fk.buffer, Fk.byteOffset, Rk),
-            Xk = kk.pending;
-          if (Xk && kk.ownsPending && Bk + Rk <= Xk.byteLength) new Uint8Array(Xk.buffer, Xk.byteOffset, Xk.byteLength).set(ak, Bk);
-          else if (Xk && 0 === Bk && Rk === Xk.byteLength && Fk.byteLength === Rk) kk.pending = Fk, kk.ownsPending = !1;
+          const ab = new Uint8Array(cb.buffer, cb.byteOffset, kb),
+            Tb = bb.pending;
+          if (Tb && bb.ownsPending && sb + kb <= Tb.byteLength) new Uint8Array(Tb.buffer, Tb.byteOffset, Tb.byteLength).set(ab, sb);
+          else if (Tb && 0 === sb && kb === Tb.byteLength && cb.byteLength === kb) bb.pending = cb, bb.ownsPending = !1;
           else {
-            var tk;
-            const Fk = new Uint8Array(Math.max(null !== (tk = null === Xk || void 0 === Xk ? void 0 : Xk.byteLength) && void 0 !== tk ? tk : 0, Bk + Rk));
-            Xk && Fk.set(new Uint8Array(Xk.buffer, Xk.byteOffset, Xk.byteLength)), Fk.set(ak, Bk), kk.pending = Fk, kk.ownsPending = !0
+            var Wb;
+            const cb = new Uint8Array(Math.max(null !== (Wb = null === Tb || void 0 === Tb ? void 0 : Tb.byteLength) && void 0 !== Wb ? Wb : 0, sb + kb));
+            Tb && cb.set(new Uint8Array(Tb.buffer, Tb.byteOffset, Tb.byteLength)), cb.set(ab, sb), bb.pending = cb, bb.ownsPending = !0
           }
         }
       }
-      updateSlot(kk, Fk, Bk, Rk) {
-        const tk = this.arena;
-        Bk + gt(Rk) > kk.size && (kk.size = gt(Math.max(2 * kk.size, Bk + Rk)), tk.growTo(kk.slot + kk.size), this.gpuBuffersVersion++), 0 === Rk ? this.writeSlot(kk, Bk, jX, 0, 4, !1) : this.writeSlot(kk, Bk, Fk, Fk.byteOffset, Rk, !0)
+      updateSlot(bb, cb, sb, kb) {
+        const Wb = this.arena;
+        sb + EW(kb) > bb.size && (bb.size = EW(Math.max(2 * bb.size, sb + kb)), Wb.growTo(bb.slot + bb.size), this.gpuBuffersVersion++), 0 === kb ? this.writeSlot(bb, sb, FT, 0, 4, !1) : this.writeSlot(bb, sb, cb, cb.byteOffset, kb, !0)
       }
-      writeSlot(kk, Fk, Bk, Rk, tk, ak) {
-        const Xk = Fk + (ak ? gt(tk) : tk);
-        Xk > kk.slotBytes && this.moveSlot(kk, Xk), this.arena.write(kk.slot + Fk, Bk, Rk, tk, ak)
+      writeSlot(bb, cb, sb, kb, Wb, ab) {
+        const Tb = cb + (ab ? EW(Wb) : Wb);
+        Tb > bb.slotBytes && this.moveSlot(bb, Tb), this.arena.write(bb.slot + cb, sb, kb, Wb, ab)
       }
-      moveSlot(kk, Fk) {
-        const Bk = this.arena,
-          Rk = hX.slotBytes(Math.max(Fk, Math.min(2 * kk.slotBytes, kk.size))),
-          tk = Bk.allocate(Rk, null, kk.size);
-        Bk.move(kk.slot, tk, kk.slotBytes), Bk.free(kk.slot, kk.slotBytes), kk.slot = tk, kk.slotBytes = Rk, this.gpuBuffersVersion++
+      moveSlot(bb, cb) {
+        const sb = this.arena,
+          kb = AT.slotBytes(Math.max(cb, Math.min(2 * bb.slotBytes, bb.size))),
+          Wb = sb.allocate(kb, null, bb.size);
+        sb.move(bb.slot, Wb, bb.slotBytes), sb.free(bb.slot, bb.slotBytes), bb.slot = Wb, bb.slotBytes = kb, this.gpuBuffersVersion++
       }
-      cover(kk, Fk) {
-        const Bk = this.buffers.get(kk);
-        if (!Bk || Bk.slot < 0) return !1;
-        const Rk = Math.min(Fk, Bk.size);
-        return !(Rk <= Bk.slotBytes) && (this.moveSlot(Bk, Rk), !0)
+      cover(bb, cb) {
+        const sb = this.buffers.get(bb);
+        if (!sb || sb.slot < 0) return !1;
+        const kb = Math.min(cb, sb.size);
+        return !(kb <= sb.slotBytes) && (this.moveSlot(sb, kb), !0)
       }
-      destroyBuffer(kk) {
-        var Fk;
-        null === (Fk = this.onDestroy) || void 0 === Fk || Fk.call(this, kk), kk.destroy()
+      destroyBuffer(bb) {
+        var cb;
+        null === (cb = this.onDestroy) || void 0 === cb || cb.call(this, bb), bb.destroy()
       }
-      gpuBuffer(kk) {
-        const Fk = this.buffers.get(kk);
-        if (!Fk) return null;
-        if (Fk.slot >= 0) return this.arena.buffer;
-        if (Fk.arena && Fk.pending) {
-          const kk = Fk.pending,
-            Bk = this.arena;
-          return Fk.size = gt(kk.byteLength), Fk.slotBytes = hX.slotBytes(function(kk) {
-            const Fk = new Uint8Array(kk.buffer, kk.byteOffset, kk.byteLength);
-            let Bk = Fk.length;
-            if (kk.byteOffset % 4 === 0) {
-              for (; Bk % 4 !== 0 && 0 === Fk[Bk - 1];) Bk--;
-              if (Bk % 4 === 0) {
-                const Fk = new Uint32Array(kk.buffer, kk.byteOffset, Bk / 4);
-                let Rk = Fk.length;
-                for (; Rk > 0 && 0 === Fk[Rk - 1];) Rk--;
-                Bk = 4 * Rk
+      gpuBuffer(bb) {
+        const cb = this.buffers.get(bb);
+        if (!cb) return null;
+        if (cb.slot >= 0) return this.arena.buffer;
+        if (cb.arena && cb.pending) {
+          const bb = cb.pending,
+            sb = this.arena;
+          return cb.size = EW(bb.byteLength), cb.slotBytes = AT.slotBytes(function(bb) {
+            const cb = new Uint8Array(bb.buffer, bb.byteOffset, bb.byteLength);
+            let sb = cb.length;
+            if (bb.byteOffset % 4 === 0) {
+              for (; sb % 4 !== 0 && 0 === cb[sb - 1];) sb--;
+              if (sb % 4 === 0) {
+                const cb = new Uint32Array(bb.buffer, bb.byteOffset, sb / 4);
+                let kb = cb.length;
+                for (; kb > 0 && 0 === cb[kb - 1];) kb--;
+                sb = 4 * kb
               }
             }
-            for (; Bk > 0 && 0 === Fk[Bk - 1];) Bk--;
-            return Bk
-          }(kk)), Fk.slot = Bk.allocate(Fk.slotBytes, kk, Fk.size), Fk.pending = null, Bk.buffer
+            for (; sb > 0 && 0 === cb[sb - 1];) sb--;
+            return sb
+          }(bb)), cb.slot = sb.allocate(cb.slotBytes, bb, cb.size), cb.pending = null, sb.buffer
         }
-        if (!Fk.gpu && Fk.pending) {
-          const kk = Fk.pending;
-          Fk.gpu = this.device.createBuffer({
-            label: Fk.label,
-            size: gt(kk.byteLength),
-            usage: Fk.usage
-          }), CX(this.device, Fk.gpu, 0, kk, kk.byteLength), Fk.pending = null
+        if (!cb.gpu && cb.pending) {
+          const bb = cb.pending;
+          cb.gpu = this.device.createBuffer({
+            label: cb.label,
+            size: EW(bb.byteLength),
+            usage: cb.usage
+          }), rT(this.device, cb.gpu, 0, bb, bb.byteLength), cb.pending = null
         }
-        return Fk.gpu
+        return cb.gpu
       }
-      gpuOffset(kk) {
-        var Fk, Bk;
-        const Rk = null !== (Fk = null === (Bk = this.buffers.get(kk)) || void 0 === Bk ? void 0 : Bk.slot) && void 0 !== Fk ? Fk : -1;
-        return Rk < 0 ? 0 : Rk
+      gpuOffset(bb) {
+        var cb, sb;
+        const kb = null !== (cb = null === (sb = this.buffers.get(bb)) || void 0 === sb ? void 0 : sb.slot) && void 0 !== cb ? cb : -1;
+        return kb < 0 ? 0 : kb
       }
-      gpuEnd(kk) {
-        var Fk, Bk;
-        const Rk = this.buffers.get(kk);
-        return Rk ? Rk.slot >= 0 ? Rk.slot + Rk.size : null !== (Fk = null === (Bk = Rk.gpu) || void 0 === Bk ? void 0 : Bk.size) && void 0 !== Fk ? Fk : 0 : 0
+      gpuEnd(bb) {
+        var cb, sb;
+        const kb = this.buffers.get(bb);
+        return kb ? kb.slot >= 0 ? kb.slot + kb.size : null !== (cb = null === (sb = kb.gpu) || void 0 === sb ? void 0 : sb.size) && void 0 !== cb ? cb : 0 : 0
       }
-      vertexInput(kk, Fk, Bk) {
-        var Rk, tk, ak, Xk;
-        return null !== (Rk = null !== (tk = Bk && this.modelInput(Bk, Fk)) && void 0 !== tk ? tk : null === (ak = null !== (Xk = this.K3.get(kk)) && void 0 !== Xk ? Xk : this.batchUploads.get(kk)) || void 0 === ak ? void 0 : ak.inputs[Fk]) && void 0 !== Rk ? Rk : null
+      vertexInput(bb, cb, sb) {
+        var kb, Wb, ab, Tb;
+        return null !== (kb = null !== (Wb = sb && this.modelInput(sb, cb)) && void 0 !== Wb ? Wb : null === (ab = null !== (Tb = this.vF.get(bb)) && void 0 !== Tb ? Tb : this.batchUploads.get(bb)) || void 0 === ab ? void 0 : ab.inputs[cb]) && void 0 !== kb ? kb : null
       }
-      modelInput(kk, Fk) {
-        const Bk = this.geometrySlot(kk);
-        let Rk = Bk.inputs.get(Fk);
-        if (void 0 === Rk) {
-          const tk = kk.vertexAttributes.find((kk => kk.kind === Fk));
-          Rk = tk ? new xk(this.modelKey(Bk, tk.data, !1), tk.offset, tk.stride, tk.components, !1, tk.glType, tk.isNormalized) : null, Bk.inputs.set(Fk, Rk)
+      modelInput(bb, cb) {
+        const sb = this.geometrySlot(bb);
+        let kb = sb.inputs.get(cb);
+        if (void 0 === kb) {
+          const Wb = bb.vertexAttributes.find((bb => bb.kind === cb));
+          kb = Wb ? new Sb(this.modelKey(sb, Wb.data, !1), Wb.offset, Wb.stride, Wb.components, !1, Wb.glType, Wb.isNormalized) : null, sb.inputs.set(cb, kb)
         }
-        return Rk
+        return kb
       }
-      modelIndex(kk) {
-        return kk.indexData && this.modelKey(this.geometrySlot(kk), kk.indexData, !0)
+      modelIndex(bb) {
+        return bb.indexData && this.modelKey(this.geometrySlot(bb), bb.indexData, !0)
       }
-      geometrySlot(kk) {
-        let Fk = kk.gpu[Hk.i.lite];
-        if (!Fk) {
-          const Bk = new Map,
-            Rk = () => {
-              for (const kk of Bk.values()) this.bufferDeleted(kk)
+      geometrySlot(bb) {
+        let cb = bb.gpu[Bb.g.lite];
+        if (!cb) {
+          const sb = new Map,
+            kb = () => {
+              for (const bb of sb.values()) this.bufferDeleted(bb)
             },
-            tk = kk => {
-              const Fk = Bk.get(kk);
-              Fk && this.vertexBufferUpdated(Fk, kk)
+            Wb = bb => {
+              const cb = sb.get(bb);
+              cb && this.vertexBufferUpdated(cb, bb)
             };
-          Fk = {
-            keys: Bk,
+          cb = {
+            keys: sb,
             inputs: new Map,
-            release: Rk,
-            updated: tk
-          }, kk.gpu[Hk.i.lite] = Fk
+            release: kb,
+            updated: Wb
+          }, bb.gpu[Bb.g.lite] = cb
         }
-        return Fk
+        return cb
       }
-      modelKey(kk, Fk, Bk) {
-        let Rk = kk.keys.get(Fk);
-        if (!Rk) {
-          if (Bk) {
-            const kk = {
-              KV: 0,
+      modelKey(bb, cb, sb) {
+        let kb = bb.keys.get(cb);
+        if (!kb) {
+          if (sb) {
+            const bb = {
+              GM: 0,
               is32Bits: !1
             };
-            this.indexBufferCreated(kk, Fk, "model-indices"), Rk = kk
-          } else Rk = {
-            KV: 0
-          }, this.vertexBufferCreated(Rk, Fk, !1, "model-vertices");
-          kk.keys.set(Fk, Rk)
+            this.indexBufferCreated(bb, cb, "model-indices"), kb = bb
+          } else kb = {
+            GM: 0
+          }, this.vertexBufferCreated(kb, cb, !1, "model-vertices");
+          bb.keys.set(cb, kb)
         }
-        return Rk
+        return kb
       }
-      indexFormat(kk) {
-        return kk.is32Bits ? "uint32" : "uint16"
+      indexFormat(bb) {
+        return bb.is32Bits ? "uint32" : "uint16"
       }
       get texturesLoading() {
         return this.pending
       }
-      releaseSlot(kk, Fk) {
-        --kk.refs > 0 || (this.releaseTexture(kk), rX(kk.images), null !== Fk && this.textures.delete(Fk))
+      releaseSlot(bb, cb) {
+        --bb.refs > 0 || (this.releaseTexture(bb), ZT(bb.images), null !== cb && this.textures.delete(cb))
       }
-      load(kk, Fk) {
-        const Bk = Fk.decoded = async function(kk) {
-          if ("cube" === kk.kind) return async function(kk) {
-            if (6 !== kk.length) throw new Error(`${kk.length} files where six faces were expected`);
-            const Fk = await DX(kk.map((kk => Dt(kk)))),
-              Bk = Fk[0].width;
-            return DX(Fk.map((async kk => {
-              if (kk.width === Bk && kk.height === Bk) return kk;
+      load(bb, cb) {
+        const sb = cb.decoded = async function(bb) {
+          if ("cube" === bb.kind) return async function(bb) {
+            if (6 !== bb.length) throw new Error(`${bb.length} files where six faces were expected`);
+            const cb = await zT(bb.map((bb => zW(bb)))),
+              sb = cb[0].width;
+            return zT(cb.map((async bb => {
+              if (bb.width === sb && bb.height === sb) return bb;
               try {
-                return await createImageBitmap(kk, {
-                  ...Tt,
-                  resizeWidth: Bk,
-                  resizeHeight: Bk
+                return await createImageBitmap(bb, {
+                  ...KW,
+                  resizeWidth: sb,
+                  resizeHeight: sb
                 })
               } finally {
-                kk.close()
+                bb.close()
               }
             })))
-          }(kk.files);
-          if ("data" === kk.kind && kk.data) return [await createImageBitmap(new Blob([kk.data]), Tt)];
-          return [await Dt(xX(kk))]
-        }(kk.source).then((kk => {
-          0 === Fk.refs ? rX(kk) : Fk.images = kk
+          }(bb.files);
+          if ("data" === bb.kind && bb.data) return [await createImageBitmap(new Blob([bb.data]), KW)];
+          return [await zW(vT(bb))]
+        }(bb.source).then((bb => {
+          0 === cb.refs ? ZT(bb) : cb.images = bb
         }));
-        this.track(Fk, xX(kk.source), Bk, (() => {
-          Fk.wanted && !Fk.failed && Fk.refs > 0 && this.upload(kk, Fk)
+        this.track(cb, vT(bb.source), sb, (() => {
+          cb.wanted && !cb.failed && cb.refs > 0 && this.upload(bb, cb)
         }))
       }
-      canvasUpdated(kk, Fk, Bk) {
+      canvasUpdated(bb, cb, sb) {
         const {
-          state: Rk
-        } = this.textureSlot(kk);
-        Rk.dynamicSource = {
-          invertY: Fk,
-          premultiplied: Bk
-        }, Rk.dynamic && this.pushDynamic(kk.source, Rk)
+          state: kb
+        } = this.textureSlot(bb);
+        kb.dynamicSource = {
+          invertY: cb,
+          premultiplied: sb
+        }, kb.dynamic && this.pushDynamic(bb.source, kb)
       }
-      async atlasArray(kk, Fk, Bk) {
-        const Rk = await ht(this.device, kk, Fk, Bk);
-        if (!this.atlasBindings.has(Rk)) {
-          const kk = (0, MX.e)(this.engine, {
+      async atlasArray(bb, cb, sb) {
+        const kb = await AW(this.device, bb, cb, sb);
+        if (!this.atlasBindings.has(kb)) {
+          const bb = (0, DT.b)(this.engine, {
             magFilter: "nearest",
             minFilter: "nearest",
             mipmapFilter: "linear",
             addressModeU: "repeat",
             addressModeV: "repeat"
           });
-          this.atlasBindings.set(Rk, {
-            view: Rk.texture.createView({
+          this.atlasBindings.set(kb, {
+            view: kb.texture.createView({
               dimension: "2d-array"
             }),
-            sampler: kk
+            sampler: bb
           })
         }
-        return Rk
+        return kb
       }
-      boundTexture(kk) {
-        const Fk = this.atlasBindings.get(kk);
-        if (Fk) return Fk;
-        const Bk = kk;
-        if (Bk.released) return null;
-        const Rk = this.textureSlot(Bk, !0),
+      boundTexture(bb) {
+        const cb = this.atlasBindings.get(bb);
+        if (cb) return cb;
+        const sb = bb;
+        if (sb.released) return null;
+        const kb = this.textureSlot(sb, !0),
           {
-            state: tk
-          } = Rk;
-        if (!tk.view && (tk.wanted = !0, tk.loading || tk.failed || this.upload(Bk, tk), !tk.view)) return null;
-        const ak = this.chosenSampler(Bk, Rk),
-          Xk = Rk.bound;
-        return Xk && Xk.view === tk.view && Xk.sampler === ak ? Xk : (Rk.bound = {
-          view: tk.view,
-          sampler: ak
-        }, Rk.bound)
+            state: Wb
+          } = kb;
+        if (!Wb.view && (Wb.wanted = !0, Wb.loading || Wb.failed || this.upload(sb, Wb), !Wb.view)) return null;
+        const ab = this.chosenSampler(sb, kb),
+          Tb = kb.bound;
+        return Tb && Tb.view === Wb.view && Tb.sampler === ab ? Tb : (kb.bound = {
+          view: Wb.view,
+          sampler: ab
+        }, kb.bound)
       }
-      textureLoaded(kk) {
-        var Fk, Bk;
-        return null !== (Fk = null === (Bk = kk.gpu[Hk.i.lite]) || void 0 === Bk ? void 0 : Bk.state.decoded) && void 0 !== Fk ? Fk : null
+      textureLoaded(bb) {
+        var cb, sb;
+        return null !== (cb = null === (sb = bb.gpu[Bb.g.lite]) || void 0 === sb ? void 0 : sb.state.decoded) && void 0 !== cb ? cb : null
       }
-      textureFailed(kk) {
-        var Fk;
-        return !0 === (null === (Fk = kk.gpu[Hk.i.lite]) || void 0 === Fk ? void 0 : Fk.state.failed)
+      textureFailed(bb) {
+        var cb;
+        return !0 === (null === (cb = bb.gpu[Bb.g.lite]) || void 0 === cb ? void 0 : cb.state.failed)
       }
-      chosenSampler(kk, Fk) {
+      chosenSampler(bb, cb) {
         const {
-          samplingMode: Bk,
-          wrapU: Rk,
-          wrapV: tk
-        } = kk.sampler, ak = Fk.state.hasMips, Xk = function(kk, Fk) {
+          samplingMode: sb,
+          wrapU: kb,
+          wrapV: Wb
+        } = bb.sampler, ab = cb.state.hasMips, Tb = function(bb, cb) {
           const {
-            bilinear: Bk,
-            trilinear: Rk
-          } = Hk.l;
-          return !Fk && kk !== Bk || 11 !== kk && kk !== Rk && kk !== Bk ? 1 : 4
-        }(Bk, ak), bk = Fk.sampler;
-        if (bk && bk.samplingMode === Bk && bk.hasMips === ak && bk.anisotropy === Xk && bk.wrapU === Rk && bk.wrapV === tk) return bk.sampler;
-        const wk = this.samplerFor(Bk, ak, Xk, Rk, tk);
-        return Fk.sampler = {
-          samplingMode: Bk,
-          hasMips: ak,
-          anisotropy: Xk,
-          wrapU: Rk,
-          wrapV: tk,
-          sampler: wk
-        }, wk
+            bilinear: sb,
+            trilinear: kb
+          } = Bb.i;
+          return !cb && bb !== sb || 11 !== bb && bb !== kb && bb !== sb ? 1 : 4
+        }(sb, ab), Ub = cb.sampler;
+        if (Ub && Ub.samplingMode === sb && Ub.hasMips === ab && Ub.anisotropy === Tb && Ub.wrapU === kb && Ub.wrapV === Wb) return Ub.sampler;
+        const Ib = this.samplerFor(sb, ab, Tb, kb, Wb);
+        return cb.sampler = {
+          samplingMode: sb,
+          hasMips: ab,
+          anisotropy: Tb,
+          wrapU: kb,
+          wrapV: Wb,
+          sampler: Ib
+        }, Ib
       }
-      releaseTexture(kk) {
-        var Fk, Bk;
-        kk.view && (null === (Bk = this.onDestroy) || void 0 === Bk || Bk.call(this, kk.view));
-        null === (Fk = kk.destroy) || void 0 === Fk || Fk.call(kk)
+      releaseTexture(bb) {
+        var cb, sb;
+        bb.view && (null === (sb = this.onDestroy) || void 0 === sb || sb.call(this, bb.view));
+        null === (cb = bb.destroy) || void 0 === cb || cb.call(bb)
       }
-      textureSlot(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const Bk = kk.gpu[Hk.i.lite];
-        if (Bk) return Bk;
-        const Rk = function(kk) {
+      textureSlot(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const sb = bb.gpu[Bb.g.lite];
+        if (sb) return sb;
+        const kb = function(bb) {
           let {
-            source: Fk,
-            sampler: Bk
-          } = kk;
-          return "canvas" === Fk.kind ? null : `${Fk.kind}|${xX(Fk)}|${Bk.noMipmap}|${Bk.samplingMode}|${Bk.invertY}`
-        }(kk);
-        let tk = null === Rk ? void 0 : this.textures.get(Rk);
-        tk || (tk = {
+            source: cb,
+            sampler: sb
+          } = bb;
+          return "canvas" === cb.kind ? null : `${cb.kind}|${vT(cb)}|${sb.noMipmap}|${sb.samplingMode}|${sb.invertY}`
+        }(bb);
+        let Wb = null === kb ? void 0 : this.textures.get(kb);
+        Wb || (Wb = {
           refs: 0,
           view: null,
           destroy: null,
@@ -4928,200 +4928,200 @@ export const modules = {
           images: null,
           dynamic: null,
           dynamicSource: null
-        }, null !== Rk && (this.textures.set(Rk, tk), this.load(kk, tk), Fk && this.firstBindDecodes++)), tk.refs++;
-        const ak = tk,
-          Xk = {
-            state: tk,
+        }, null !== kb && (this.textures.set(kb, Wb), this.load(bb, Wb), cb && this.firstBindDecodes++)), Wb.refs++;
+        const ab = Wb,
+          Tb = {
+            state: Wb,
             bound: null,
             sampler: null,
             release: () => {
-              this.releaseSlot(ak, Rk)
+              this.releaseSlot(ab, kb)
             }
           };
-        return kk.gpu[Hk.i.lite] = Xk, Xk
+        return bb.gpu[Bb.g.lite] = Tb, Tb
       }
-      samplerFor(kk, Fk, Bk, Rk, tk) {
-        const ak = `${kk}|${Fk}|${Bk}|${Rk}|${tk}`;
-        let Xk = this.samplers.get(ak);
-        if (!Xk) {
-          const bk = {
-            ...ZX(kk, Fk, Bk),
-            addressModeU: pX(Rk),
-            addressModeV: pX(tk)
+      samplerFor(bb, cb, sb, kb, Wb) {
+        const ab = `${bb}|${cb}|${sb}|${kb}|${Wb}`;
+        let Tb = this.samplers.get(ab);
+        if (!Tb) {
+          const Ub = {
+            ...oT(bb, cb, sb),
+            addressModeU: ST(kb),
+            addressModeV: ST(Wb)
           };
-          Xk = (0, MX.e)(this.engine, bk), this.samplers.set(ak, Xk)
+          Tb = (0, DT.b)(this.engine, Ub), this.samplers.set(ab, Tb)
         }
-        return Xk
+        return Tb
       }
-      upload(kk, Fk) {
+      upload(bb, cb) {
         const {
-          source: Bk,
-          sampler: Rk
-        } = kk;
-        Fk.hasMips = !Rk.noMipmap, "canvas" === Bk.kind ? this.createDynamic(Bk, Fk) : "cube" === Bk.kind ? this.uploadCube(Fk, Bk.luminance) : this.uploadImage(Fk, !0 === Rk.invertY, Bk.url)
+          source: sb,
+          sampler: kb
+        } = bb;
+        cb.hasMips = !kb.noMipmap, "canvas" === sb.kind ? this.createDynamic(sb, cb) : "cube" === sb.kind ? this.uploadCube(cb, sb.luminance) : this.uploadImage(cb, !0 === kb.invertY, sb.url)
       }
-      uploadImage(kk, Fk, Bk) {
-        const [Rk] = kk.images;
-        kk.images = null;
-        const tk = (0, gX.c)(this.engine, Rk, {
-          mipMaps: kk.hasMips,
-          invertY: Fk,
+      uploadImage(bb, cb, sb) {
+        const [kb] = bb.images;
+        bb.images = null;
+        const Wb = (0, ET.c)(this.engine, kb, {
+          mipMaps: bb.hasMips,
+          invertY: cb,
           srgb: !1
-        }).then((Fk => {
-          Rk.close(), 0 !== kk.refs ? (kk.view = Fk.view, kk.destroy = Fk.texture.destroy.bind(Fk.texture)) : Fk.texture.destroy()
+        }).then((cb => {
+          kb.close(), 0 !== bb.refs ? (bb.view = cb.view, bb.destroy = cb.texture.destroy.bind(cb.texture)) : cb.texture.destroy()
         }));
-        this.track(kk, Bk, tk)
+        this.track(bb, sb, Wb)
       }
-      track(kk, Fk, Bk, Rk) {
-        kk.loading = !0, this.pending++, Bk.catch((Bk => {
-          kk.failed = !0, console.warn(`Lite: could not load texture ${rt(Fk)}`, Bk)
+      track(bb, cb, sb, kb) {
+        bb.loading = !0, this.pending++, sb.catch((sb => {
+          bb.failed = !0, console.warn(`Lite: could not load texture ${ZW(cb)}`, sb)
         })).finally((() => {
-          kk.loading = !1, this.pending--, null === Rk || void 0 === Rk || Rk()
+          bb.loading = !1, this.pending--, null === kb || void 0 === kb || kb()
         }))
       }
-      uploadCube(kk, Fk) {
-        const Bk = kk.images;
-        kk.images = null;
-        const Rk = TX(this.engine, this.device, Bk, (0, Hk.A)(Fk), kk.hasMips);
-        kk.view = Rk.createView({
+      uploadCube(bb, cb) {
+        const sb = bb.images;
+        bb.images = null;
+        const kb = KT(this.engine, this.device, sb, (0, Bb.y)(cb), bb.hasMips);
+        bb.view = kb.createView({
           dimension: "cube"
-        }), kk.destroy = () => {
-          Rk.destroy()
+        }), bb.destroy = () => {
+          kb.destroy()
         }
       }
-      createDynamic(kk, Fk) {
+      createDynamic(bb, cb) {
         const {
-          canvas: Bk
-        } = kk, Rk = (0, UX.e)(this.engine, Math.max(1, Bk.width), Math.max(1, Bk.height), {
-          mipMaps: Fk.hasMips,
+          canvas: sb
+        } = bb, kb = (0, iT.d)(this.engine, Math.max(1, sb.width), Math.max(1, sb.height), {
+          mipMaps: cb.hasMips,
           srgb: !1
         });
-        Fk.dynamic = Rk, Fk.view = Rk.view, Fk.destroy = () => {
-          Rk.texture.destroy()
-        }, this.pushDynamic(kk, Fk)
+        cb.dynamic = kb, cb.view = kb.view, cb.destroy = () => {
+          kb.texture.destroy()
+        }, this.pushDynamic(bb, cb)
       }
-      pushDynamic(kk, Fk) {
-        const Bk = Fk.dynamicSource,
-          Rk = Fk.dynamic,
+      pushDynamic(bb, cb) {
+        const sb = cb.dynamicSource,
+          kb = cb.dynamic,
           {
-            canvas: tk
-          } = kk;
-        if (Bk && Rk && 0 !== tk.width && 0 !== tk.height) return tk.width !== Rk.width || tk.height !== Rk.height ? (this.releaseTexture(Fk), Fk.dynamic = null, Fk.view = null, void this.createDynamic(kk, Fk)) : void(0, UX.h)(this.engine, Rk, tk, {
-          invertY: Bk.invertY,
-          premultiplyAlpha: Bk.premultiplied
+            canvas: Wb
+          } = bb;
+        if (sb && kb && 0 !== Wb.width && 0 !== Wb.height) return Wb.width !== kb.width || Wb.height !== kb.height ? (this.releaseTexture(cb), cb.dynamic = null, cb.view = null, void this.createDynamic(bb, cb)) : void(0, iT.g)(this.engine, kb, Wb, {
+          invertY: sb.invertY,
+          premultiplyAlpha: sb.premultiplied
         })
       }
     }
 
-    function xX(kk) {
-      return "cube" === kk.kind ? kk.rootUrl : "canvas" === kk.kind ? "canvas" : kk.url
+    function vT(bb) {
+      return "cube" === bb.kind ? bb.rootUrl : "canvas" === bb.kind ? "canvas" : bb.url
     }
-    const jX = new Uint8Array(4);
+    const FT = new Uint8Array(4);
 
-    function lX(kk) {
-      const Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "store" : "discard";
-      kk._colorAttachment.storeOp = kk._targetSignature._sampleCount > 1 ? Fk : "store";
-      const Bk = kk._renderPassDescriptor.depthStencilAttachment;
-      Bk && (Bk.depthStoreOp = Fk, Bk.stencilStoreOp && (Bk.stencilStoreOp = Fk))
+    function xT(bb) {
+      const cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "store" : "discard";
+      bb._colorAttachment.storeOp = bb._targetSignature._sampleCount > 1 ? cb : "store";
+      const sb = bb._renderPassDescriptor.depthStencilAttachment;
+      sb && (sb.depthStoreOp = cb, sb.stencilStoreOp && (sb.stencilStoreOp = cb))
     }
-    var nX = Bk(37467),
-      IX = Bk(37519),
-      QX = Bk(37116),
-      kb = Bk(39148);
-    const Fb = new Float64Array([1, 1, 1]),
-      Bb = new Float64Array([0, 1, 0]),
-      Rb = new Float64Array(4),
-      tb = new Float32Array(16),
-      ab = new Float64Array(3),
-      Xb = new Float64Array(4);
+    var jT = sb(37368),
+      pT = sb(37422),
+      bU = sb(37021),
+      cU = sb(39168);
+    const sU = new Float64Array([1, 1, 1]),
+      kU = new Float64Array([0, 1, 0]),
+      WU = new Float64Array(4),
+      aU = new Float32Array(16),
+      TU = new Float64Array(3),
+      UU = new Float64Array(4);
 
-    function bb(kk, Fk, Bk) {
-      kk.fov = Fk.fov, kk.near = Fk.near, kk.far = Fk.far, kk.renderWidth = Bk.renderWidth, kk.renderHeight = Bk.renderHeight, (0, QX.t)(Fk.holderRotation, 0, Rb, 0), (0, QX.d)(Fb, 0, Rb, 0, Fk.holderPosition, 0, tb);
-      const Rk = Fk.bK;
-      ab[0] = Rk[0], ab[1] = Rk[1], ab[2] = Rk[2] + 1;
-      const tk = kk.viewMatrix;
-      (0, QX.m)(Rk, ab, Bb, tk), (0, QX.k)(tk, 0, tk), (0, QX.n)(tk, tb, 0, tk), (0, QX.k)(tk, 0, tk);
-      const ak = kk.worldMatrix;
-      (0, QX.k)(tk, 0, ak), kk.eye[0] = ak[12], kk.eye[1] = ak[13], kk.eye[2] = ak[14], Xb[0] = kk.fov, Xb[1] = kk.renderWidth / kk.renderHeight, Xb[2] = kk.near, Xb[3] = kk.far, (0, QX.q)(Xb, kk.projectionMatrix), (0, QX.n)(tk, kk.projectionMatrix, 0, kk.viewProjectionMatrix), (0, kb.h)(kk.viewProjectionMatrix, kk.frustum)
+    function IU(bb, cb, sb) {
+      bb.fov = cb.fov, bb.near = cb.near, bb.far = cb.far, bb.renderWidth = sb.renderWidth, bb.renderHeight = sb.renderHeight, (0, bU.s)(cb.holderRotation, 0, WU, 0), (0, bU.d)(sU, 0, WU, 0, cb.holderPosition, 0, aU);
+      const kb = cb.Iw;
+      TU[0] = kb[0], TU[1] = kb[1], TU[2] = kb[2] + 1;
+      const Wb = bb.viewMatrix;
+      (0, bU.l)(kb, TU, kU, Wb), (0, bU.i)(Wb, 0, Wb), (0, bU.p)(Wb, aU, 0, Wb), (0, bU.i)(Wb, 0, Wb);
+      const ab = bb.worldMatrix;
+      (0, bU.i)(Wb, 0, ab), bb.eye[0] = ab[12], bb.eye[1] = ab[13], bb.eye[2] = ab[14], UU[0] = bb.fov, UU[1] = bb.renderWidth / bb.renderHeight, UU[2] = bb.near, UU[3] = bb.far, (0, bU.q)(UU, bb.projectionMatrix), (0, bU.p)(Wb, bb.projectionMatrix, 0, bb.viewProjectionMatrix), (0, cU.e)(bb.viewProjectionMatrix, bb.frustum)
     }
 
-    function wb(kk, Fk) {
-      let Bk = kk.frustumPlanes;
-      Bk || (Bk = kk.frustumPlanes = Array.from({
+    function HU(bb, cb) {
+      let sb = bb.frustumPlanes;
+      sb || (sb = bb.frustumPlanes = Array.from({
         length: 6
-      }, (() => new nX.c(0, 0, 0, 0))));
-      for (let Rk = 0; Rk < 6; Rk++) {
-        const kk = Bk[Rk].normal;
-        kk._x = Fk[4 * Rk], kk._y = Fk[4 * Rk + 1], kk._z = Fk[4 * Rk + 2], kk._isDirty = !0, Bk[Rk].d = Fk[4 * Rk + 3]
+      }, (() => new jT.c(0, 0, 0, 0))));
+      for (let kb = 0; kb < 6; kb++) {
+        const bb = sb[kb].normal;
+        bb._x = cb[4 * kb], bb._y = cb[4 * kb + 1], bb._z = cb[4 * kb + 2], bb._isDirty = !0, sb[kb].d = cb[4 * kb + 3]
       }
     }
 
-    function db(kk, Fk) {
-      const Bk = Fk.clearColor;
-      kk.clearColour[0] = Bk.r, kk.clearColour[1] = Bk.g, kk.clearColour[2] = Bk.b, kk.clearColour[3] = Bk.a;
-      const Rk = Fk.ambientColor;
-      kk.ambientColour[0] = Rk.r, kk.ambientColour[1] = Rk.g, kk.ambientColour[2] = Rk.b, kk.animationRatio = Fk.animationRatio, kk.frameId = Fk.frameId, kk.version++
+    function fU(bb, cb) {
+      const sb = cb.clearColor;
+      bb.clearColour[0] = sb.r, bb.clearColour[1] = sb.g, bb.clearColour[2] = sb.b, bb.clearColour[3] = sb.a;
+      const kb = cb.ambientColor;
+      bb.ambientColour[0] = kb.r, bb.ambientColour[1] = kb.g, bb.ambientColour[2] = kb.b, bb.animationRatio = cb.animationRatio, bb.frameId = cb.frameId, bb.version++
     }
 
-    function sb(kk) {
-      const Fk = kk.model.view;
-      return Fk.animTick = (0, IX.g)(), Fk.timeMs = performance.now(), db(Fk, kk.ef), kk.model.update(Fk.frameId), Fk
+    function MU(bb) {
+      const cb = bb.model.view;
+      return cb.animTick = (0, pT.d)(), cb.timeMs = performance.now(), fU(cb, bb.aQ), bb.model.update(cb.frameId), cb
     }
 
-    function Vb(kk) {
-      const Fk = kk.ef,
+    function XU(bb) {
+      const cb = bb.aQ,
         {
-          view: Bk,
-          Qp: Rk
-        } = kk.model;
-      return bb(Bk, Rk, Fk.ne()), Fk.onBeforeRenderObservable.notifyObservers(Fk), wb(Fk, Bk.frustum), Fk.onBeforeCameraRenderObservable.notifyObservers(Fk.activeCamera), sb(kk)
+          view: sb,
+          rA: kb
+        } = bb.model;
+      return IU(sb, kb, cb.Sm()), cb.onBeforeRenderObservable.notifyObservers(cb), HU(cb, sb.frustum), cb.onBeforeCameraRenderObservable.notifyObservers(cb.activeCamera), MU(bb)
     }
-    var Jb = Bk(37065),
-      Ab = Bk(37194),
-      eb = Bk(37506);
+    var nU = sb(36978),
+      mU = sb(37093),
+      lU = sb(37407);
 
-    function yb(kk) {
-      var Fk, Bk;
-      const Rk = (0, Sk._)(kk);
-      if (!Rk || Rk.diffuseTexture && (0, eb.j)(kk)) return null;
-      const tk = null === (Fk = (0, Sk.z)(Rk, Ok.i.name)) || void 0 === Fk ? void 0 : Fk.state,
-        ak = null === (Bk = (0, Sk.z)(Rk, xa.e.name)) || void 0 === Bk ? void 0 : Bk.state,
-        Xk = new Float32Array(16);
-      return function(kk, Fk, Bk, Rk) {
-        var tk, ak;
-        const Xk = AR;
-        Rk.set(kk.diffuseColor, Xk.diffuse), Rk[Xk.diffuse + 3] = kk.alpha, Rk.set(kk.ambientColor, Xk.ambientAndCutoff), Rk[Xk.ambientAndCutoff + 3] = kk.alphaCutOff, Rk.set(kk.emissiveColor, Xk.emissiveAndLevel), Rk[Xk.emissiveAndLevel + 3] = null !== (tk = null === (ak = kk.diffuseTexture) || void 0 === ak ? void 0 : ak.level) && void 0 !== tk ? tk : 1, null !== Fk && void 0 !== Fk && Fk.animDataPerTex ? (Rk[Xk.anim + 1] = IX.c, Rk[Xk.anim + 2] = Fk.animDataPerTex.length / 3 - 1) : Bk && (Rk[Xk.anim + 1] = Bk.numAnimStates, Rk[Xk.anim + 2] = Bk.ticksPerAnimState)
-      }(Rk, tk, ak, Xk), {
-        model: Rk,
-        atlas: tk,
-        texture: tk ? "atlas" : Rk.diffuseTexture ? "single" : "none",
-        animated: tk ? !!tk.animDataPerTex : !!ak,
-        liquid: (0, eb.k)(kk),
-        customRenderMat: (0, eb.j)(kk),
-        uniformData: Xk
+    function QU(bb) {
+      var cb, sb;
+      const kb = (0, Jb.W)(bb);
+      if (!kb || kb.diffuseTexture && (0, lU.g)(bb)) return null;
+      const Wb = null === (cb = (0, Jb.v)(kb, Yb.j.name)) || void 0 === cb ? void 0 : cb.state,
+        ab = null === (sb = (0, Jb.v)(kb, va.e.name)) || void 0 === sb ? void 0 : sb.state,
+        Tb = new Float32Array(16);
+      return function(bb, cb, sb, kb) {
+        var Wb, ab;
+        const Tb = mk;
+        kb.set(bb.diffuseColor, Tb.diffuse), kb[Tb.diffuse + 3] = bb.alpha, kb.set(bb.ambientColor, Tb.ambientAndCutoff), kb[Tb.ambientAndCutoff + 3] = bb.alphaCutOff, kb.set(bb.emissiveColor, Tb.emissiveAndLevel), kb[Tb.emissiveAndLevel + 3] = null !== (Wb = null === (ab = bb.diffuseTexture) || void 0 === ab ? void 0 : ab.level) && void 0 !== Wb ? Wb : 1, null !== cb && void 0 !== cb && cb.animDataPerTex ? (kb[Tb.anim + 1] = pT.b, kb[Tb.anim + 2] = cb.animDataPerTex.length / 3 - 1) : sb && (kb[Tb.anim + 1] = sb.numAnimStates, kb[Tb.anim + 2] = sb.ticksPerAnimState)
+      }(kb, Wb, ab, Tb), {
+        model: kb,
+        atlas: Wb,
+        texture: Wb ? "atlas" : kb.diffuseTexture ? "single" : "none",
+        animated: Wb ? !!Wb.animDataPerTex : !!ab,
+        liquid: (0, lU.h)(bb),
+        customRenderMat: (0, lU.g)(bb),
+        uniformData: Tb
       }
     }
-    var fb = Bk(37048);
-    class mb {
-      constructor(kk) {
-        this.units = kk, this.buffer = void 0, this.twin = null, this.bufferReady = !1, this.twinReady = !1
+    var eU = sb(36964);
+    class CU {
+      constructor(bb) {
+        this.units = bb, this.buffer = void 0, this.twin = null, this.bufferReady = !1, this.twinReady = !1
       }
       get ready() {
         return this.bufferReady && (!this.twin || this.twinReady)
       }
       destroy() {
-        var kk;
-        this.buffer.destroy(), null === (kk = this.twin) || void 0 === kk || kk.destroy()
+        var bb;
+        this.buffer.destroy(), null === (bb = this.twin) || void 0 === bb || bb.destroy()
       }
     }
-    class Wb {
-      constructor(kk, Fk) {
-        this.arena = kk, this.hb = void 0, this.buffer = void 0, this.twin = null, this.usable = 0, this.backings = [], this.growable = !0, this.dropped = !1, this.hb = new zX(Fk);
-        const Bk = new mb(Fk);
-        Bk.buffer = this.createBuffer(Bk, !1), this.backings.push(Bk), this.refresh()
+    class NU {
+      constructor(bb, cb) {
+        this.arena = bb, this.uQ = void 0, this.buffer = void 0, this.twin = null, this.usable = 0, this.backings = [], this.growable = !0, this.dropped = !1, this.uQ = new qT(cb);
+        const sb = new CU(cb);
+        sb.buffer = this.createBuffer(sb, !1), this.backings.push(sb), this.refresh()
       }
-      get KV() {
-        return this.hb.KV
+      get GM() {
+        return this.uQ.GM
       }
       get canGrow() {
         return this.growable && !this.dropped
@@ -5133,286 +5133,286 @@ export const modules = {
         return null !== this.backings[this.backings.length - 1].twin
       }
       get allocatedBytes() {
-        let kk = 0;
-        for (const Fk of this.backings) kk += Fk.units * (this.arena.unitBytes + (Fk.twin ? this.arena.twinUnitBytes : 0));
-        return kk
+        let bb = 0;
+        for (const cb of this.backings) bb += cb.units * (this.arena.unitBytes + (cb.twin ? this.arena.twinUnitBytes : 0));
+        return bb
       }
-      holds(kk) {
-        return kk.start + kk.length <= this.usable
+      holds(bb) {
+        return bb.start + bb.length <= this.usable
       }
-      lost(kk) {
-        return this.dropped || kk.start + kk.length > this.KV
+      lost(bb) {
+        return this.dropped || bb.start + bb.length > this.GM
       }
-      write(kk, Fk) {
+      write(bb, cb) {
         const {
-          device: Bk,
-          unitBytes: Rk
+          device: sb,
+          unitBytes: kb
         } = this.arena;
-        for (const tk of this.backings) {
-          const ak = (tk.units - kk.start) * Rk;
-          ak > 0 && Bk.queue.writeBuffer(tk.buffer, kk.start * Rk, Fk, 0, Math.min(Fk.byteLength, ak))
+        for (const Wb of this.backings) {
+          const ab = (Wb.units - bb.start) * kb;
+          ab > 0 && sb.queue.writeBuffer(Wb.buffer, bb.start * kb, cb, 0, Math.min(cb.byteLength, ab))
         }
       }
-      writeLight(kk, Fk) {
+      writeLight(bb, cb) {
         const {
-          device: Bk,
-          twinUnitBytes: Rk,
-          verticesPerUnit: tk
+          device: sb,
+          twinUnitBytes: kb,
+          verticesPerUnit: Wb
         } = this.arena, {
-          light: ak,
-          count: Xk
-        } = this.arena.twinLight(Fk, Math.min(Fk.length, kk.length * tk));
-        for (const bk of this.backings) {
-          bk.twin || (bk.twin = this.createBuffer(bk, !0));
-          const Fk = (bk.units - kk.start) * tk;
-          Fk > 0 && Bk.queue.writeBuffer(bk.twin, kk.start * Rk, ak, 0, Math.min(Xk, Fk))
+          light: ab,
+          count: Tb
+        } = this.arena.twinLight(cb, Math.min(cb.length, bb.length * Wb));
+        for (const Ub of this.backings) {
+          Ub.twin || (Ub.twin = this.createBuffer(Ub, !0));
+          const cb = (Ub.units - bb.start) * Wb;
+          cb > 0 && sb.queue.writeBuffer(Ub.twin, bb.start * kb, ab, 0, Math.min(Tb, cb))
         }
       }
-      grow(kk) {
+      grow(bb) {
         this.arena.assertNotDrawing();
         const {
-          device: Fk,
-          unitBytes: Bk,
-          label: Rk
-        } = this.arena, tk = this.backings[this.backings.length - 1], ak = new mb(kk), Xk = Fk.createCommandEncoder({
-          label: `${Rk}-grow`
+          device: cb,
+          unitBytes: sb,
+          label: kb
+        } = this.arena, Wb = this.backings[this.backings.length - 1], ab = new CU(bb), Tb = cb.createCommandEncoder({
+          label: `${kb}-grow`
         });
-        ak.buffer = this.createBuffer(ak, !1), Xk.copyBufferToBuffer(tk.buffer, 0, ak.buffer, 0, tk.units * Bk), tk.twin && (ak.twin = this.createBuffer(ak, !0), Xk.copyBufferToBuffer(tk.twin, 0, ak.twin, 0, tk.units * this.arena.twinUnitBytes)), Fk.queue.submit([Xk.finish()]), this.backings.push(ak), this.hb.grow(kk)
+        ab.buffer = this.createBuffer(ab, !1), Tb.copyBufferToBuffer(Wb.buffer, 0, ab.buffer, 0, Wb.units * sb), Wb.twin && (ab.twin = this.createBuffer(ab, !0), Tb.copyBufferToBuffer(Wb.twin, 0, ab.twin, 0, Wb.units * this.arena.twinUnitBytes)), cb.queue.submit([Tb.finish()]), this.backings.push(ab), this.uQ.grow(bb)
       }
       drop() {
         if (!this.dropped) {
           this.dropped = !0;
-          for (const kk of this.backings) kk.destroy();
+          for (const bb of this.backings) bb.destroy();
           this.refresh(), this.arena.remove(this)
         }
       }
-      createBuffer(kk, Fk) {
+      createBuffer(bb, cb) {
         const {
-          device: Bk,
-          unitBytes: Rk,
-          twinUnitBytes: tk,
-          usage: ak,
-          label: Xk
+          device: sb,
+          unitBytes: kb,
+          twinUnitBytes: Wb,
+          usage: ab,
+          label: Tb
         } = this.arena;
-        Bk.pushErrorScope("out-of-memory");
-        const bk = Bk.createBuffer({
-          label: Fk ? `${Xk}-light` : Xk,
-          size: kk.units * (Fk ? tk : Rk),
-          usage: (Fk ? this.arena.twinUsage : ak) | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
+        sb.pushErrorScope("out-of-memory");
+        const Ub = sb.createBuffer({
+          label: cb ? `${Tb}-light` : Tb,
+          size: bb.units * (cb ? Wb : kb),
+          usage: (cb ? this.arena.twinUsage : ab) | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
         });
-        return this.arena.awaitingVerdict++, Bk.popErrorScope().then((Bk => {
-          this.arena.awaitingVerdict--, this.settle(kk, Fk, !Bk, !0)
-        }), (Bk => {
-          this.arena.awaitingVerdict--, this.arena.warnOnce("noVerdict", `no out-of-memory verdict for a ${Xk} buffer, taken as failed: ${String(Bk)}`), this.settle(kk, Fk, !1, !1)
-        })), bk
+        return this.arena.awaitingVerdict++, sb.popErrorScope().then((sb => {
+          this.arena.awaitingVerdict--, this.settle(bb, cb, !sb, !0)
+        }), (sb => {
+          this.arena.awaitingVerdict--, this.arena.warnOnce("noVerdict", `no out-of-memory verdict for a ${Tb} buffer, taken as failed: ${String(sb)}`), this.settle(bb, cb, !1, !1)
+        })), Ub
       }
-      settle(kk, Fk, Bk, Rk) {
-        const tk = this.backings.indexOf(kk);
-        if (!(this.dropped || tk < 0)) {
-          if (!Bk) {
-            if (Rk && this.arena.ranOutOfMemory(kk.units, kk.units * (Fk ? this.arena.twinUnitBytes : this.arena.unitBytes)), 0 === tk) return void this.drop();
-            for (const kk of this.backings.splice(tk)) kk.destroy();
-            return this.hb.truncate(this.backings[tk - 1].units), this.growable = !1, void this.promote()
+      settle(bb, cb, sb, kb) {
+        const Wb = this.backings.indexOf(bb);
+        if (!(this.dropped || Wb < 0)) {
+          if (!sb) {
+            if (kb && this.arena.ranOutOfMemory(bb.units, bb.units * (cb ? this.arena.twinUnitBytes : this.arena.unitBytes)), 0 === Wb) return void this.drop();
+            for (const bb of this.backings.splice(Wb)) bb.destroy();
+            return this.uQ.truncate(this.backings[Wb - 1].units), this.growable = !1, void this.promote()
           }
-          Fk ? kk.twinReady = !0 : (kk.bufferReady = !0, this.arena.allocatedBuffer(kk.units)), this.promote()
+          cb ? bb.twinReady = !0 : (bb.bufferReady = !0, this.arena.allocatedBuffer(bb.units)), this.promote()
         }
       }
       promote() {
         const {
-          backings: kk
+          backings: bb
         } = this;
-        let Fk = 0;
-        for (; Fk + 1 < kk.length && kk[Fk].ready && kk[Fk + 1].ready;) Fk++;
-        for (const Bk of kk.splice(0, Fk)) Bk.destroy();
+        let cb = 0;
+        for (; cb + 1 < bb.length && bb[cb].ready && bb[cb + 1].ready;) cb++;
+        for (const sb of bb.splice(0, cb)) sb.destroy();
         this.refresh()
       }
       refresh() {
-        const kk = this.backings[0];
-        this.buffer = kk.buffer, this.twin = kk.twinReady ? kk.twin : null, this.usable = !this.dropped && kk.bufferReady ? kk.units : 0
+        const bb = this.backings[0];
+        this.buffer = bb.buffer, this.twin = bb.twinReady ? bb.twin : null, this.usable = !this.dropped && bb.bufferReady ? bb.units : 0
       }
     }
-    class vb {
-      constructor(kk, Fk, Bk, Rk) {
+    class VU {
+      constructor(bb, cb, sb, kb) {
         let {
-          verticesPerUnit: tk = 1,
-          twinUsage: ak = GPUBufferUsage.VERTEX
+          verticesPerUnit: Wb = 1,
+          twinUsage: ab = GPUBufferUsage.VERTEX
         } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-        if (this.device = kk, this.unitBytes = Fk, this.usage = Bk, this.label = Rk, this.pages = [], this.drawing = !1, this.awaitingVerdict = 0, this.verticesPerUnit = void 0, this.twinUsage = void 0, this.twinValueBytes = void 0, this.twinUnitBytes = void 0, this.limit = -1, this.ceiling = -1, this.failed = 1 / 0, this.shortages = 0, this.forgetFailedAt = 0, this.shortageUntil = -1 / 0, this.warnOnce = (0, sF.b)("Lite terrain: "), this.padded = new Uint16Array(0), this.widened = new Float32Array(0), Fk % 4 !== 0) throw new Error(`${Rk}: ${Fk}-byte units cannot keep every range four-byte aligned`);
-        this.verticesPerUnit = tk, this.twinUsage = ak, this.twinValueBytes = tk > 1 ? 2 : 4, this.twinUnitBytes = this.twinValueBytes * tk
+        if (this.device = bb, this.unitBytes = cb, this.usage = sb, this.label = kb, this.pages = [], this.drawing = !1, this.awaitingVerdict = 0, this.verticesPerUnit = void 0, this.twinUsage = void 0, this.twinValueBytes = void 0, this.twinUnitBytes = void 0, this.limit = -1, this.ceiling = -1, this.failed = 1 / 0, this.shortages = 0, this.forgetFailedAt = 0, this.shortageUntil = -1 / 0, this.warnOnce = (0, Hc.c)("Lite terrain: "), this.padded = new Uint16Array(0), this.widened = new Float32Array(0), cb % 4 !== 0) throw new Error(`${kb}: ${cb}-byte units cannot keep every range four-byte aligned`);
+        this.verticesPerUnit = Wb, this.twinUsage = ab, this.twinValueBytes = Wb > 1 ? 2 : 4, this.twinUnitBytes = this.twinValueBytes * Wb
       }
-      twinLight(kk, Fk) {
-        if (4 === this.twinValueBytes) return this.widened.length < Fk && (this.widened = new Float32Array(Math.max(Fk, 2 * this.widened.length))), this.widened.set(kk.subarray(0, Fk)), {
+      twinLight(bb, cb) {
+        if (4 === this.twinValueBytes) return this.widened.length < cb && (this.widened = new Float32Array(Math.max(cb, 2 * this.widened.length))), this.widened.set(bb.subarray(0, cb)), {
           light: this.widened,
-          count: Fk
+          count: cb
         };
-        const Bk = Fk % this.verticesPerUnit;
-        if (0 === Bk) return {
-          light: kk,
-          count: Fk
+        const sb = cb % this.verticesPerUnit;
+        if (0 === sb) return {
+          light: bb,
+          count: cb
         };
-        const Rk = Fk - Bk + this.verticesPerUnit;
-        return this.padded.length < Rk && (this.padded = new Uint16Array(Math.max(Rk, 2 * this.padded.length))), this.padded.set(kk.subarray(0, Fk)), this.padded.fill(0, Fk, Rk), {
+        const kb = cb - sb + this.verticesPerUnit;
+        return this.padded.length < kb && (this.padded = new Uint16Array(Math.max(kb, 2 * this.padded.length))), this.padded.set(bb.subarray(0, cb)), this.padded.fill(0, cb, kb), {
           light: this.padded,
-          count: Rk
+          count: kb
         }
       }
-      allocate(kk) {
-        if (this.assertNotDrawing(), this.limit < 0 && (this.limit = this.ceiling = this.pageLimit()), kk > this.limit) return null;
+      allocate(bb) {
+        if (this.assertNotDrawing(), this.limit < 0 && (this.limit = this.ceiling = this.pageLimit()), bb > this.limit) return null;
         this.failed !== 1 / 0 && performance.now() >= this.forgetFailedAt && (this.failed = 1 / 0, this.ceiling = this.limit);
-        for (const tk of this.pages) {
-          const Fk = tk.hb.allocate(kk);
-          if (Fk >= 0) return {
-            page: tk,
-            start: Fk,
-            length: kk
+        for (const Wb of this.pages) {
+          const cb = Wb.uQ.allocate(bb);
+          if (cb >= 0) return {
+            page: Wb,
+            start: cb,
+            length: bb
           }
         }
-        const Fk = this.pages[this.pages.length - 1];
-        if (null !== Fk && void 0 !== Fk && Fk.canGrow) {
-          const Bk = Math.min(this.ceiling, Math.max(2 * Fk.KV, Fk.KV + kk));
-          if (Bk - Fk.KV >= kk) return Fk.grow(Bk), {
-            page: Fk,
-            start: Fk.hb.allocate(kk),
-            length: kk
+        const cb = this.pages[this.pages.length - 1];
+        if (null !== cb && void 0 !== cb && cb.canGrow) {
+          const sb = Math.min(this.ceiling, Math.max(2 * cb.GM, cb.GM + bb));
+          if (sb - cb.GM >= bb) return cb.grow(sb), {
+            page: cb,
+            start: cb.uQ.allocate(bb),
+            length: bb
           }
         }
-        Fk && Fk !== this.pages[0] && 0 === Fk.hb.used && Fk.drop();
-        const Bk = Math.floor(1048576 / this.unitBytes),
-          Rk = new Wb(this, Math.max(kk, Math.min(this.ceiling, Bk)));
-        return this.pages.push(Rk), {
-          page: Rk,
-          start: Rk.hb.allocate(kk),
-          length: kk
+        cb && cb !== this.pages[0] && 0 === cb.uQ.used && cb.drop();
+        const sb = Math.floor(1048576 / this.unitBytes),
+          kb = new NU(this, Math.max(bb, Math.min(this.ceiling, sb)));
+        return this.pages.push(kb), {
+          page: kb,
+          start: kb.uQ.allocate(bb),
+          length: bb
         }
       }
-      free(kk) {
+      free(bb) {
         this.assertNotDrawing();
         const {
-          page: Fk
-        } = kk;
-        Fk.hb.free(kk.start, kk.length), 0 === Fk.hb.used && Fk !== this.pages[0] && Fk !== this.pages[this.pages.length - 1] && Fk.drop()
+          page: cb
+        } = bb;
+        cb.uQ.free(bb.start, bb.length), 0 === cb.uQ.used && cb !== this.pages[0] && cb !== this.pages[this.pages.length - 1] && cb.drop()
       }
-      remove(kk) {
-        const Fk = this.pages.indexOf(kk);
-        Fk >= 0 && this.pages.splice(Fk, 1)
+      remove(bb) {
+        const cb = this.pages.indexOf(bb);
+        cb >= 0 && this.pages.splice(cb, 1)
       }
-      ranOutOfMemory(kk, Fk) {
-        this.warnOnce("outOfMemory", `out of GPU memory for a ${Fk}-byte ${this.label} buffer; its chunks are meshed again`), this.failed = Math.min(this.failed, kk), this.ceiling = Math.max(1, Math.floor(Math.min(this.ceiling, kk) / 2));
-        const Bk = performance.now();
-        Bk >= this.shortageUntil && (this.forgetFailedAt = Bk + Math.min(6e5, 3e4 * 2 ** this.shortages++), this.shortageUntil = Bk + 1e3)
+      ranOutOfMemory(bb, cb) {
+        this.warnOnce("outOfMemory", `out of GPU memory for a ${cb}-byte ${this.label} buffer; its chunks are meshed again`), this.failed = Math.min(this.failed, bb), this.ceiling = Math.max(1, Math.floor(Math.min(this.ceiling, bb) / 2));
+        const sb = performance.now();
+        sb >= this.shortageUntil && (this.forgetFailedAt = sb + Math.min(6e5, 3e4 * 2 ** this.shortages++), this.shortageUntil = sb + 1e3)
       }
-      allocatedBuffer(kk) {
-        kk >= this.failed && (this.failed = 1 / 0);
-        const Fk = Math.min(2 * kk, Math.floor((kk + this.failed) / 2));
-        this.ceiling = Math.min(this.limit, Math.max(this.ceiling, Fk))
+      allocatedBuffer(bb) {
+        bb >= this.failed && (this.failed = 1 / 0);
+        const cb = Math.min(2 * bb, Math.floor((bb + this.failed) / 2));
+        this.ceiling = Math.min(this.limit, Math.max(this.ceiling, cb))
       }
       stats() {
-        let kk = 0,
-          Fk = 0,
-          Bk = 0,
-          Rk = 0;
-        for (const tk of this.pages) kk += tk.KV, Fk += tk.hb.used, Bk += tk.hasTwin ? tk.KV * this.twinUnitBytes : 0, Rk += tk.allocatedBytes;
+        let bb = 0,
+          cb = 0,
+          sb = 0,
+          kb = 0;
+        for (const Wb of this.pages) bb += Wb.GM, cb += Wb.uQ.used, sb += Wb.hasTwin ? Wb.GM * this.twinUnitBytes : 0, kb += Wb.allocatedBytes;
         return {
           pages: this.pages.length,
-          capacityBytes: kk * this.unitBytes,
-          usedBytes: Fk * this.unitBytes,
-          twinBytes: Bk,
-          allocatedBytes: Rk
+          capacityBytes: bb * this.unitBytes,
+          usedBytes: cb * this.unitBytes,
+          twinBytes: sb,
+          allocatedBytes: kb
         }
       }
       assertNotDrawing() {}
       pageLimit() {
         const {
-          maxBufferSize: kk,
-          maxStorageBufferBindingSize: Fk
+          maxBufferSize: bb,
+          maxStorageBufferBindingSize: cb
         } = this.device.limits;
-        let Bk = Math.floor(Math.min(67108864, kk) / this.unitBytes);
-        return this.usage & GPUBufferUsage.STORAGE && (Bk = Math.min(Bk, Math.floor(Fk / this.unitBytes))), this.twinUsage & GPUBufferUsage.STORAGE && (Bk = Math.min(Bk, Math.floor(Fk / this.twinUnitBytes))), Bk
+        let sb = Math.floor(Math.min(67108864, bb) / this.unitBytes);
+        return this.usage & GPUBufferUsage.STORAGE && (sb = Math.min(sb, Math.floor(cb / this.unitBytes))), this.twinUsage & GPUBufferUsage.STORAGE && (sb = Math.min(sb, Math.floor(cb / this.twinUnitBytes))), sb
       }
     }
-    const ib = 16383;
+    const LU = 16383;
 
-    function Yb(kk, Fk, Bk, Rk, tk) {
-      let ak = 0;
-      for (let Xk = Bk; Xk < Rk; Xk += ib) kk.drawIndexed(6 * Math.min(ib, Rk - Xk), 1, 0, Fk + 4 * Xk, tk), ak++;
-      return ak
+    function uU(bb, cb, sb, kb, Wb) {
+      let ab = 0;
+      for (let Tb = sb; Tb < kb; Tb += LU) bb.drawIndexed(6 * Math.min(LU, kb - Tb), 1, 0, cb + 4 * Tb, Wb), ab++;
+      return ab
     }
-    class ob {
-      constructor(kk, Fk) {
-        this.recordsGroup = Fk, this.vertexArena = void 0, this.quadArena = void 0, this.quadPattern = void 0, this.fullSky = new Uint16Array(0), this.boundVertices = null, this.boundLight = null, this.boundRecords = null, this.boundRecordsLight = null, this.boundPattern = !1;
-        const Bk = EF.i.strideWithoutAtlas;
-        this.vertexArena = new vb(kk, Bk, GPUBufferUsage.VERTEX, `terrain-vertices-${Bk}`), this.quadArena = new vb(kk, Ab.d, GPUBufferUsage.STORAGE, "terrain-quads", {
+    class YU {
+      constructor(bb, cb) {
+        this.recordsGroup = cb, this.vertexArena = void 0, this.quadArena = void 0, this.quadPattern = void 0, this.fullSky = new Uint16Array(0), this.boundVertices = null, this.boundLight = null, this.boundRecords = null, this.boundRecordsLight = null, this.boundPattern = !1;
+        const sb = hc.d.strideWithoutAtlas;
+        this.vertexArena = new VU(bb, sb, GPUBufferUsage.VERTEX, `terrain-vertices-${sb}`), this.quadArena = new VU(bb, mU.e, GPUBufferUsage.STORAGE, "terrain-quads", {
           verticesPerUnit: 4,
           twinUsage: GPUBufferUsage.STORAGE
         });
-        const Rk = (0, SF.d)(new Uint16Array(98298), ib);
-        this.quadPattern = kk.createBuffer({
+        const kb = (0, Jc.h)(new Uint16Array(98298), LU);
+        this.quadPattern = bb.createBuffer({
           label: "terrain-quad-pattern",
-          size: Rk.byteLength,
+          size: kb.byteLength,
           usage: GPUBufferUsage.INDEX | GPUBufferUsage.COPY_DST
-        }), kk.queue.writeBuffer(this.quadPattern, 0, Rk)
+        }), bb.queue.writeBuffer(this.quadPattern, 0, kb)
       }
-      set(kk, Fk) {
-        const Bk = Fk.packedVertices,
-          Rk = Bk ? this.quadArena.allocate(kk.faceCount) : this.vertexArena.allocate(kk.vertexCount);
-        if (!Rk) return !1;
-        kk.vertices = Rk;
-        const tk = Bk ? new Uint8Array(Bk.buffer, Bk.byteOffset, Bk.byteLength) : new Uint8Array(Fk.vertices);
-        return Rk.page.write(Rk, tk), !0
+      set(bb, cb) {
+        const sb = cb.packedVertices,
+          kb = sb ? this.quadArena.allocate(bb.faceCount) : this.vertexArena.allocate(bb.vertexCount);
+        if (!kb) return !1;
+        bb.vertices = kb;
+        const Wb = sb ? new Uint8Array(sb.buffer, sb.byteOffset, sb.byteLength) : new Uint8Array(cb.vertices);
+        return kb.page.write(kb, Wb), !0
       }
-      setLight(kk, Fk) {
+      setLight(bb, cb) {
         const {
-          vertices: Bk
-        } = kk;
-        Bk && 0 !== Fk.length && Bk.page.live && (Fk.length < kk.vertexCount ? Bk.page.arena.warnOnce("shortLight", `a part's ${Fk.length} light values are fewer than its ${kk.vertexCount} vertices, so its light is left as it was`) : (Bk.page.writeLight(Bk, Fk), kk.lit = !0))
+          vertices: sb
+        } = bb;
+        sb && 0 !== cb.length && sb.page.live && (cb.length < bb.vertexCount ? sb.page.arena.warnOnce("shortLight", `a part's ${cb.length} light values are fewer than its ${bb.vertexCount} vertices, so its light is left as it was`) : (sb.page.writeLight(sb, cb), bb.lit = !0))
       }
-      lightFullSky(kk, Fk) {
-        this.fullSky.length < Fk && (this.fullSky = new Uint16Array(Math.max(Fk, 4096)).fill(fb.j));
-        for (const Bk of kk) {
-          const kk = Bk.vertices;
-          kk.page.live && (kk.page.writeLight(kk, this.fullSky), Bk.lit = !0)
+      lightFullSky(bb, cb) {
+        this.fullSky.length < cb && (this.fullSky = new Uint16Array(Math.max(cb, 4096)).fill(eU.j));
+        for (const sb of bb) {
+          const bb = sb.vertices;
+          bb.page.live && (bb.page.writeLight(bb, this.fullSky), sb.lit = !0)
         }
       }
-      backed(kk) {
+      backed(bb) {
         const {
-          vertices: Fk
-        } = kk;
-        return !!Fk && Fk.page.holds(Fk)
+          vertices: cb
+        } = bb;
+        return !!cb && cb.page.holds(cb)
       }
-      lost(kk) {
+      lost(bb) {
         const {
-          vertices: Fk
-        } = kk;
-        return !!Fk && Fk.page.lost(Fk)
+          vertices: cb
+        } = bb;
+        return !!cb && cb.page.lost(cb)
       }
-      release(kk) {
-        kk.vertices && kk.vertices.page.arena.free(kk.vertices), kk.vertices = null, kk.lit = !1
+      release(bb) {
+        bb.vertices && bb.vertices.page.arena.free(bb.vertices), bb.vertices = null, bb.lit = !1
       }
-      setDrawing(kk) {
+      setDrawing(bb) {
         this.forgetBound()
       }
-      draw(kk, Fk, Bk) {
-        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Fk.faceCount;
-        const ak = Fk.vertices,
-          Xk = ak.page,
-          bk = Bk ? Xk.twin : null;
-        if (!Xk.holds(ak) || Bk && !bk) return 0;
+      draw(bb, cb, sb) {
+        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : cb.faceCount;
+        const ab = cb.vertices,
+          Tb = ab.page,
+          Ub = sb ? Tb.twin : null;
+        if (!Tb.holds(ab) || sb && !Ub) return 0;
         const {
-          verticesPerUnit: wk
-        } = Xk.arena;
-        let dk = ak.start * wk;
-        this.boundPattern || (kk.setIndexBuffer(this.quadPattern, "uint16"), this.boundPattern = !0);
-        const sk = Rk + tk;
-        if (wk > 1) return Xk.buffer === this.boundRecords && bk === this.boundRecordsLight || (kk.setBindGroup(1, this.recordsGroup(Xk.buffer, bk)), this.boundRecords = Xk.buffer, this.boundRecordsLight = bk), Yb(kk, dk, Rk, sk, Fk.slot);
-        Xk.buffer !== this.boundVertices && (kk.setVertexBuffer(0, Xk.buffer), this.boundVertices = Xk.buffer), bk && bk !== this.boundLight && (kk.setVertexBuffer(1, bk), this.boundLight = bk);
-        const Vk = Fk.faceCount;
-        return sk <= Vk ? Yb(kk, dk, Rk, sk, Fk.slot) : Yb(kk, dk, Rk, Vk, Fk.slot) + Yb(kk, dk, Math.max(Rk, Vk) - Vk, sk - Vk, Fk.slot)
+          verticesPerUnit: Ib
+        } = Tb.arena;
+        let Hb = ab.start * Ib;
+        this.boundPattern || (bb.setIndexBuffer(this.quadPattern, "uint16"), this.boundPattern = !0);
+        const fb = kb + Wb;
+        if (Ib > 1) return Tb.buffer === this.boundRecords && Ub === this.boundRecordsLight || (bb.setBindGroup(1, this.recordsGroup(Tb.buffer, Ub)), this.boundRecords = Tb.buffer, this.boundRecordsLight = Ub), uU(bb, Hb, kb, fb, cb.slot);
+        Tb.buffer !== this.boundVertices && (bb.setVertexBuffer(0, Tb.buffer), this.boundVertices = Tb.buffer), Ub && Ub !== this.boundLight && (bb.setVertexBuffer(1, Ub), this.boundLight = Ub);
+        const Mb = cb.faceCount;
+        return fb <= Mb ? uU(bb, Hb, kb, fb, cb.slot) : uU(bb, Hb, kb, Mb, cb.slot) + uU(bb, Hb, Math.max(kb, Mb) - Mb, fb - Mb, cb.slot)
       }
       get buffersAwaitingVerdict() {
-        let kk = 0;
-        for (const Fk of this.arenas()) kk += Fk.awaitingVerdict;
-        return kk
+        let bb = 0;
+        for (const cb of this.arenas()) bb += cb.awaitingVerdict;
+        return bb
       }* arenas() {
         yield this.vertexArena, yield this.quadArena
       }
@@ -5420,117 +5420,117 @@ export const modules = {
         this.boundVertices = this.boundLight = this.boundRecords = this.boundRecordsLight = null, this.boundPattern = !1
       }
     }
-    class Lb {
-      constructor(kk, Fk, Bk, Rk) {
-        this.device = kk, this.splitBefore = Fk, this.wanted = !1, this.pipeline = null, this.building = !0, this.unprojectBuffer = void 0, this.unproject = new Float32Array(2), this.near = 0, this.far = 0, this.copy = null, this.retired = null, this.unprojectBuffer = kk.createBuffer({
+    class hU {
+      constructor(bb, cb, sb, kb) {
+        this.device = bb, this.splitBefore = cb, this.wanted = !1, this.pipeline = null, this.building = !0, this.unprojectBuffer = void 0, this.unproject = new Float32Array(2), this.near = 0, this.far = 0, this.copy = null, this.retired = null, this.unprojectBuffer = bb.createBuffer({
           label: "scene-depth-unproject",
           size: 8,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
         });
-        const tk = kk.createShaderModule({
+        const Wb = bb.createShaderModule({
           label: "scene-depth-copy",
-          code: (ak = Bk._targetSignature._sampleCount > 1, `\n@group(0) @binding(0) var depth: ${ak?"texture_depth_multisampled_2d":"texture_depth_2d"};\n@group(0) @binding(1) var<uniform> unproject: vec2f;\n\n@vertex\nfn copyVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn copyFragment(@builtin(position) pixel: vec4f) -> @location(0) f32 {\n\tlet d = textureLoad(depth, vec2i(pixel.xy), 0);\n\tif (d <= 0.0) {\n\t\treturn 0.0;\n\t}\n\treturn unproject.y / (2.0 * d + unproject.x);\n}\n`)
+          code: (ab = sb._targetSignature._sampleCount > 1, `\n@group(0) @binding(0) var depth: ${ab?"texture_depth_multisampled_2d":"texture_depth_2d"};\n@group(0) @binding(1) var<uniform> unproject: vec2f;\n\n@vertex\nfn copyVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn copyFragment(@builtin(position) pixel: vec4f) -> @location(0) f32 {\n\tlet d = textureLoad(depth, vec2i(pixel.xy), 0);\n\tif (d <= 0.0) {\n\t\treturn 0.0;\n\t}\n\treturn unproject.y / (2.0 * d + unproject.x);\n}\n`)
         });
-        var ak;
-        kk.createRenderPipelineAsync({
+        var ab;
+        bb.createRenderPipelineAsync({
           label: "scene-depth-copy",
           layout: "auto",
           vertex: {
-            module: tk,
+            module: Wb,
             entryPoint: "copyVertex"
           },
           fragment: {
-            module: tk,
+            module: Wb,
             entryPoint: "copyFragment",
             targets: [{
               format: "r32float"
             }]
           }
-        }).then((kk => {
-          this.pipeline = kk, this.building = !1
-        }), (kk => {
-          this.building = !1, console.error("Lite: the scene depth copy failed to build, so liquids find nothing behind them", kk)
-        })), Bk._executeWithTransmission = () => this.execute(Bk, Rk)
+        }).then((bb => {
+          this.pipeline = bb, this.building = !1
+        }), (bb => {
+          this.building = !1, console.error("Lite: the scene depth copy failed to build, so liquids find nothing behind them", bb)
+        })), sb._executeWithTransmission = () => this.execute(sb, kb)
       }
       get compiling() {
         return this.building
       }
-      setWanted(kk) {
-        this.wanted = kk
+      setWanted(bb) {
+        this.wanted = bb
       }
-      setPlanes(kk, Fk) {
-        kk === this.near && Fk === this.far || (this.near = kk, this.far = Fk, this.unproject[0] = kk / (Fk - kk), this.unproject[1] = Fk * kk / (Fk - kk), this.device.queue.writeBuffer(this.unprojectBuffer, 0, this.unproject))
+      setPlanes(bb, cb) {
+        bb === this.near && cb === this.far || (this.near = bb, this.far = cb, this.unproject[0] = bb / (cb - bb), this.unproject[1] = cb * bb / (cb - bb), this.device.queue.writeBuffer(this.unprojectBuffer, 0, this.unproject))
       }
       get view() {
-        var kk, Fk;
-        return null !== (kk = null === (Fk = this.copy) || void 0 === Fk ? void 0 : Fk.view) && void 0 !== kk ? kk : null
+        var bb, cb;
+        return null !== (bb = null === (cb = this.copy) || void 0 === cb ? void 0 : cb.view) && void 0 !== bb ? bb : null
       }
-      execute(kk, Fk) {
-        var Bk;
-        null === (Bk = this.retired) || void 0 === Bk || Bk.destroy(), this.retired = null;
-        const Rk = FF(Fk),
-          tk = kk._transparentBindings,
-          ak = this.wanted && this.pipeline ? this.splitIndex(tk) : -1,
-          Xk = kk._colorAttachment,
-          bk = Xk.resolveTarget;
-        ak >= 0 && (Xk.resolveTarget = void 0, lX(kk, !0));
-        let wk = Rk.beginRenderPass(kk._renderPassDescriptor);
-        wk.setBindGroup(0, kk._sceneBG);
-        let dk = this.drawList(wk, Fk, kk._opaqueBindings, 0, kk._opaqueBindings.length);
-        if (dk += this.drawList(wk, Fk, kk._directBindings, 0, kk._directBindings.length), dk += this.drawList(wk, Fk, tk, 0, ak >= 0 ? ak : tk.length), wk.end(), ak < 0) return dk;
-        lX(kk);
-        const sk = kk._renderPassDescriptor.depthStencilAttachment,
+      execute(bb, cb) {
+        var sb;
+        null === (sb = this.retired) || void 0 === sb || sb.destroy(), this.retired = null;
+        const kb = bc(cb),
+          Wb = bb._transparentBindings,
+          ab = this.wanted && this.pipeline ? this.splitIndex(Wb) : -1,
+          Tb = bb._colorAttachment,
+          Ub = Tb.resolveTarget;
+        ab >= 0 && (Tb.resolveTarget = void 0, xT(bb, !0));
+        let Ib = kb.beginRenderPass(bb._renderPassDescriptor);
+        Ib.setBindGroup(0, bb._sceneBG);
+        let Hb = this.drawList(Ib, cb, bb._opaqueBindings, 0, bb._opaqueBindings.length);
+        if (Hb += this.drawList(Ib, cb, bb._directBindings, 0, bb._directBindings.length), Hb += this.drawList(Ib, cb, Wb, 0, ab >= 0 ? ab : Wb.length), Ib.end(), ab < 0) return Hb;
+        xT(bb);
+        const fb = bb._renderPassDescriptor.depthStencilAttachment,
           {
-            depthLoadOp: Vk,
-            stencilLoadOp: Jk
-          } = sk,
-          Ak = Xk.loadOp;
-        Xk.resolveTarget = bk;
+            depthLoadOp: Mb,
+            stencilLoadOp: Xb
+          } = fb,
+          nb = Tb.loadOp;
+        Tb.resolveTarget = Ub;
         try {
-          this.copyDepth(Rk, kk), Xk.loadOp = "load", sk.depthLoadOp = "load", Jk && (sk.stencilLoadOp = "load"), wk = Rk.beginRenderPass(kk._renderPassDescriptor), wk.setBindGroup(0, kk._sceneBG), dk += this.drawList(wk, Fk, tk, ak, tk.length), wk.end()
+          this.copyDepth(kb, bb), Tb.loadOp = "load", fb.depthLoadOp = "load", Xb && (fb.stencilLoadOp = "load"), Ib = kb.beginRenderPass(bb._renderPassDescriptor), Ib.setBindGroup(0, bb._sceneBG), Hb += this.drawList(Ib, cb, Wb, ab, Wb.length), Ib.end()
         } finally {
-          Xk.loadOp = Ak, sk.depthLoadOp = Vk, sk.stencilLoadOp = Jk
+          Tb.loadOp = nb, fb.depthLoadOp = Mb, fb.stencilLoadOp = Xb
         }
-        return dk
+        return Hb
       }
-      splitIndex(kk) {
-        for (let Fk = 0; Fk < kk.length; Fk++)
-          if (kk[Fk].renderable === this.splitBefore) return Fk;
+      splitIndex(bb) {
+        for (let cb = 0; cb < bb.length; cb++)
+          if (bb[cb].renderable === this.splitBefore) return cb;
         return -1
       }
-      drawList(kk, Fk, Bk, Rk, tk) {
-        let ak = null,
-          Xk = 0;
-        for (let bk = Rk; bk < tk; bk++) {
-          const Rk = Bk[bk],
-            tk = Rk.renderable.mesh;
-          tk && !1 === tk.visible || (Rk.pipeline !== ak && (kk.setPipeline(Rk.pipeline), ak = Rk.pipeline), Xk += Rk.draw(kk, Fk))
+      drawList(bb, cb, sb, kb, Wb) {
+        let ab = null,
+          Tb = 0;
+        for (let Ub = kb; Ub < Wb; Ub++) {
+          const kb = sb[Ub],
+            Wb = kb.renderable.mesh;
+          Wb && !1 === Wb.visible || (kb.pipeline !== ab && (bb.setPipeline(kb.pipeline), ab = kb.pipeline), Tb += kb.draw(bb, cb))
         }
-        return Xk
+        return Tb
       }
-      copyDepth(kk, Fk) {
-        var Bk, Rk;
-        const tk = (null !== (Bk = Fk._config.depth) && void 0 !== Bk ? Bk : Fk._config.rt)._depthTexture,
-          ak = (null === (Rk = this.copy) || void 0 === Rk ? void 0 : Rk.source) === tk ? this.copy : this.remakeCopy(tk),
-          Xk = kk.beginRenderPass(ak.pass);
-        Xk.setPipeline(this.pipeline), Xk.setBindGroup(0, ak.bindGroup), Xk.draw(3), Xk.end()
+      copyDepth(bb, cb) {
+        var sb, kb;
+        const Wb = (null !== (sb = cb._config.depth) && void 0 !== sb ? sb : cb._config.rt)._depthTexture,
+          ab = (null === (kb = this.copy) || void 0 === kb ? void 0 : kb.source) === Wb ? this.copy : this.remakeCopy(Wb),
+          Tb = bb.beginRenderPass(ab.pass);
+        Tb.setPipeline(this.pipeline), Tb.setBindGroup(0, ab.bindGroup), Tb.draw(3), Tb.end()
       }
-      remakeCopy(kk) {
-        var Fk, Bk;
-        this.retired = null !== (Fk = null === (Bk = this.copy) || void 0 === Bk ? void 0 : Bk.texture) && void 0 !== Fk ? Fk : null;
-        const Rk = this.device.createTexture({
+      remakeCopy(bb) {
+        var cb, sb;
+        this.retired = null !== (cb = null === (sb = this.copy) || void 0 === sb ? void 0 : sb.texture) && void 0 !== cb ? cb : null;
+        const kb = this.device.createTexture({
             label: "scene-depth",
-            size: [kk.width, kk.height],
+            size: [bb.width, bb.height],
             format: "r32float",
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }),
-          tk = Rk.createView(),
-          ak = this.device.createBindGroup({
+          Wb = kb.createView(),
+          ab = this.device.createBindGroup({
             label: "scene-depth-copy",
             layout: this.pipeline.getBindGroupLayout(0),
             entries: [{
               binding: 0,
-              resource: kk.createView({
+              resource: bb.createView({
                 aspect: "depth-only"
               })
             }, {
@@ -5540,36 +5540,36 @@ export const modules = {
               }
             }]
           }),
-          Xk = {
+          Tb = {
             label: "scene-depth-copy",
             colorAttachments: [{
-              view: tk,
+              view: Wb,
               loadOp: "clear",
               storeOp: "store",
               clearValue: [0, 0, 0, 0]
             }]
           };
         return this.copy = {
-          source: kk,
-          texture: Rk,
-          view: tk,
-          bindGroup: ak,
-          pass: Xk
+          source: bb,
+          texture: kb,
+          view: Wb,
+          bindGroup: ab,
+          pass: Tb
         }, this.copy
       }
     }
-    const Ob = "rgba8unorm";
+    const JU = "rgba8unorm";
 
-    function Eb(kk) {
-      return kk ? 15 : 1
+    function gU(bb) {
+      return bb ? 15 : 1
     }
-    class Sb {
-      constructor(kk, Fk, Bk, Rk) {
-        this.device = kk, this.terrain = Rk, this.pipeline = null, this.building = !0, this.edge = void 0, this.layout = void 0, this.empty = void 0, this.cameraBuffer = void 0, this.camera = new Float32Array(16), this.targets = null, this.retired = null, this.edge = Fk._targetSignature._sampleCount > 1, this.cameraBuffer = kk.createBuffer({
+    class BU {
+      constructor(bb, cb, sb, kb) {
+        this.device = bb, this.terrain = kb, this.pipeline = null, this.building = !0, this.edge = void 0, this.layout = void 0, this.empty = void 0, this.cameraBuffer = void 0, this.camera = new Float32Array(16), this.targets = null, this.retired = null, this.edge = cb._targetSignature._sampleCount > 1, this.cameraBuffer = bb.createBuffer({
           label: "sun-shadow-mask-camera",
           size: 64,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.layout = kk.createBindGroupLayout({
+        }), this.layout = bb.createBindGroupLayout({
           label: "sun-shadow-mask",
           entries: [{
             binding: 0,
@@ -5591,158 +5591,158 @@ export const modules = {
             }
           }]
         });
-        const tk = kk.createBindGroupLayout({
+        const Wb = bb.createBindGroupLayout({
           label: "sun-shadow-mask-empty",
           entries: []
         });
-        this.empty = kk.createBindGroup({
+        this.empty = bb.createBindGroup({
           label: "sun-shadow-mask-empty",
-          layout: tk,
+          layout: Wb,
           entries: []
         });
-        const ak = kk.createShaderModule({
+        const ab = bb.createShaderModule({
           label: "sun-shadow-mask",
-          code: (Xk = this.edge, `${(0,NF.z)()}${zB({sunShadow:!0,airShadow:!1},!0,"lit")}\n@group(0) @binding(0) var bloxdSmDepth: texture_depth_2d;\nstruct BloxdSmCamera {\n\teye: vec3f,\n\ttolerance: f32,\n\tright: vec3f,\n\tdepthScale: f32,\n\tup: vec3f,\n\tdepthBias: f32,\n\tforward: vec3f,\n}\n@group(0) @binding(1) var<uniform> bloxdSmCamera: BloxdSmCamera;\n@group(0) @binding(2) var bloxdSmNormal: texture_2d<f32>;\n${Xk?NB:""}\n@vertex\nfn maskVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn maskFragment(@builtin(position) pixel: vec4f) -> @location(0) vec4f {\n\tlet at = vec2i(pixel.xy);\n\tlet d = textureLoad(bloxdSmDepth, at, 0);\n\tif (d <= 0.0) {\n\t\treturn vec4f(${Eb(Xk)}.0, 0.0, 0.0, 0.0);\n\t}\n\t// View z from the depth as it is, then along the pixel's ray: an inverse view-projection would round d against 1\n\tlet size = vec2f(textureDimensions(bloxdSmDepth));\n\tlet ndc = vec2f(pixel.x / size.x * 2.0 - 1.0, 1.0 - pixel.y / size.y * 2.0);\n\tlet z = bloxdSmCamera.depthScale / (2.0 * d + bloxdSmCamera.depthBias);\n\tlet packed = textureLoad(bloxdSmNormal, at, 0);\n\tbloxdSpShadowPosition = bloxdSmCamera.eye + z * (bloxdSmCamera.forward + ndc.x * bloxdSmCamera.right + ndc.y * bloxdSmCamera.up);\n\t// Capped well inside the quarter block origins start off their face: past it, a few pixels\n\tbloxdSpPlaneTolerance = min(z * z * bloxdSmCamera.tolerance, 0.125);\n\tbloxdSpShadowNormal = normalize(packed.xyz * 2.0 - 1.0);\n\tbloxdSpShadowEmissive = packed.w > 0.5;\n\treturn ${Xk?"vec4f(bloxdSpNormalCode(bloxdSpShadowNormal) * 2.0 + bloxdShadow(), d, 0.0, 0.0)":"vec4f(bloxdShadow())"};\n}\n`)
+          code: (Tb = this.edge, `${(0,gc.G)()}${zs({sunShadow:!0,airShadow:!1},!0,"lit")}\n@group(0) @binding(0) var bloxdSmDepth: texture_depth_2d;\nstruct BloxdSmCamera {\n\teye: vec3f,\n\ttolerance: f32,\n\tright: vec3f,\n\tdepthScale: f32,\n\tup: vec3f,\n\tdepthBias: f32,\n\tforward: vec3f,\n}\n@group(0) @binding(1) var<uniform> bloxdSmCamera: BloxdSmCamera;\n@group(0) @binding(2) var bloxdSmNormal: texture_2d<f32>;\n${Tb?Bs:""}\n@vertex\nfn maskVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn maskFragment(@builtin(position) pixel: vec4f) -> @location(0) vec4f {\n\tlet at = vec2i(pixel.xy);\n\tlet d = textureLoad(bloxdSmDepth, at, 0);\n\tif (d <= 0.0) {\n\t\treturn vec4f(${gU(Tb)}.0, 0.0, 0.0, 0.0);\n\t}\n\t// View z from the depth as it is, then along the pixel's ray: an inverse view-projection would round d against 1\n\tlet size = vec2f(textureDimensions(bloxdSmDepth));\n\tlet ndc = vec2f(pixel.x / size.x * 2.0 - 1.0, 1.0 - pixel.y / size.y * 2.0);\n\tlet z = bloxdSmCamera.depthScale / (2.0 * d + bloxdSmCamera.depthBias);\n\tlet packed = textureLoad(bloxdSmNormal, at, 0);\n\tbloxdSpShadowPosition = bloxdSmCamera.eye + z * (bloxdSmCamera.forward + ndc.x * bloxdSmCamera.right + ndc.y * bloxdSmCamera.up);\n\t// Capped well inside the quarter block origins start off their face: past it, a few pixels\n\tbloxdSpPlaneTolerance = min(z * z * bloxdSmCamera.tolerance, 0.125);\n\tbloxdSpShadowNormal = normalize(packed.xyz * 2.0 - 1.0);\n\tbloxdSpShadowEmissive = packed.w > 0.5;\n\treturn ${Tb?"vec4f(bloxdSpNormalCode(bloxdSpShadowNormal) * 2.0 + bloxdShadow(), d, 0.0, 0.0)":"vec4f(bloxdShadow())"};\n}\n`)
         });
-        var Xk;
-        kk.createRenderPipelineAsync({
+        var Tb;
+        bb.createRenderPipelineAsync({
           label: "sun-shadow-mask",
-          layout: kk.createPipelineLayout({
-            bindGroupLayouts: [this.layout, tk, tk, za(kk, {
+          layout: bb.createPipelineLayout({
+            bindGroupLayouts: [this.layout, Wb, Wb, qa(bb, {
               depth: !1,
               sunShadow: !0
             })]
           }),
           vertex: {
-            module: ak,
+            module: ab,
             entryPoint: "maskVertex"
           },
           fragment: {
-            module: ak,
+            module: ab,
             entryPoint: "maskFragment",
             targets: [{
               format: this.maskFormat
             }]
           }
-        }).then((kk => {
-          this.pipeline = kk, this.building = !1
-        }), (kk => {
-          this.building = !1, console.error("Lite: the sun shadow mask's trace failed to build, so terrain reading it is lit", kk)
+        }).then((bb => {
+          this.pipeline = bb, this.building = !1
+        }), (bb => {
+          this.building = !1, console.error("Lite: the sun shadow mask's trace failed to build, so terrain reading it is lit", bb)
         }));
-        const bk = Fk._executeWithTransmission;
-        Fk._executeWithTransmission = kk => this.execute(Fk, Bk, (() => bk ? bk(kk) : function(kk, Fk) {
-          const Bk = FF(Fk).beginRenderPass(kk._renderPassDescriptor);
-          Bk.setBindGroup(0, kk._sceneBG);
-          let Rk = Nb(Bk, Fk, kk._opaqueBindings);
-          return Rk += Nb(Bk, Fk, kk._directBindings), Rk += Nb(Bk, Fk, kk._transparentBindings), Bk.end(), Rk
-        }(Fk, Bk)))
+        const Ub = cb._executeWithTransmission;
+        cb._executeWithTransmission = bb => this.execute(cb, sb, (() => Ub ? Ub(bb) : function(bb, cb) {
+          const sb = bc(cb).beginRenderPass(bb._renderPassDescriptor);
+          sb.setBindGroup(0, bb._sceneBG);
+          let kb = tU(sb, cb, bb._opaqueBindings);
+          return kb += tU(sb, cb, bb._directBindings), kb += tU(sb, cb, bb._transparentBindings), sb.end(), kb
+        }(cb, sb)))
       }
       get compiling() {
         return this.building
       }
       get view() {
-        var kk, Fk;
-        return null !== (kk = null === (Fk = this.targets) || void 0 === Fk ? void 0 : Fk.maskView) && void 0 !== kk ? kk : null
+        var bb, cb;
+        return null !== (bb = null === (cb = this.targets) || void 0 === cb ? void 0 : cb.maskView) && void 0 !== bb ? bb : null
       }
       get maskFormat() {
         return this.edge ? "rg32float" : "r8unorm"
       }
-      prepare(kk) {
-        ! function(kk, Fk) {
-          const Bk = kk.worldMatrix,
-            Rk = kk.projectionMatrix,
-            tk = 1 / Rk[0],
-            ak = 1 / Rk[5],
-            Xk = kk.far * kk.near / (kk.far - kk.near);
-          Fk[0] = kk.eye[0], Fk[1] = kk.eye[1], Fk[2] = kk.eye[2], Fk[3] = 2 ** -23 / Xk, Fk[4] = Bk[0] * tk, Fk[5] = Bk[1] * tk, Fk[6] = Bk[2] * tk, Fk[7] = Xk, Fk[8] = Bk[4] * ak, Fk[9] = Bk[5] * ak, Fk[10] = Bk[6] * ak, Fk[11] = kk.near / (kk.far - kk.near), Fk[12] = Bk[8], Fk[13] = Bk[9], Fk[14] = Bk[10], Fk[15] = 0
-        }(kk, this.camera), this.device.queue.writeBuffer(this.cameraBuffer, 0, this.camera)
+      prepare(bb) {
+        ! function(bb, cb) {
+          const sb = bb.worldMatrix,
+            kb = bb.projectionMatrix,
+            Wb = 1 / kb[0],
+            ab = 1 / kb[5],
+            Tb = bb.far * bb.near / (bb.far - bb.near);
+          cb[0] = bb.eye[0], cb[1] = bb.eye[1], cb[2] = bb.eye[2], cb[3] = 2 ** -23 / Tb, cb[4] = sb[0] * Wb, cb[5] = sb[1] * Wb, cb[6] = sb[2] * Wb, cb[7] = Tb, cb[8] = sb[4] * ab, cb[9] = sb[5] * ab, cb[10] = sb[6] * ab, cb[11] = bb.near / (bb.far - bb.near), cb[12] = sb[8], cb[13] = sb[9], cb[14] = sb[10], cb[15] = 0
+        }(bb, this.camera), this.device.queue.writeBuffer(this.cameraBuffer, 0, this.camera)
       }
-      execute(kk, Fk, Bk) {
-        if (this.retire(), !this.terrain.readsMask) return Bk();
-        const Rk = this.targetsFor(kk),
-          tk = FF(Fk),
-          ak = kk._renderPassDescriptor.depthStencilAttachment;
-        this.edge || (Rk.prepass.depthStencilAttachment.view = ak.view);
-        const Xk = this.terrain.drawPrepass(tk, Rk.prepass, kk._sceneBG);
-        if (0 === Xk) return Bk();
-        if (this.trace(tk, Rk), this.edge) return Xk + 1 + Bk();
+      execute(bb, cb, sb) {
+        if (this.retire(), !this.terrain.readsMask) return sb();
+        const kb = this.targetsFor(bb),
+          Wb = bc(cb),
+          ab = bb._renderPassDescriptor.depthStencilAttachment;
+        this.edge || (kb.prepass.depthStencilAttachment.view = ab.view);
+        const Tb = this.terrain.drawPrepass(Wb, kb.prepass, bb._sceneBG);
+        if (0 === Tb) return sb();
+        if (this.trace(Wb, kb), this.edge) return Tb + 1 + sb();
         const {
-          depthLoadOp: bk,
-          stencilLoadOp: wk
-        } = ak;
-        ak.depthLoadOp = "load", wk && (ak.stencilLoadOp = "load");
+          depthLoadOp: Ub,
+          stencilLoadOp: Ib
+        } = ab;
+        ab.depthLoadOp = "load", Ib && (ab.stencilLoadOp = "load");
         try {
-          return Xk + 1 + Bk()
+          return Tb + 1 + sb()
         } finally {
-          ak.depthLoadOp = bk, ak.stencilLoadOp = wk
+          ab.depthLoadOp = Ub, ab.stencilLoadOp = Ib
         }
       }
-      trace(kk, Fk) {
-        const Bk = this.terrain.sunShadowGroup(),
-          Rk = kk.beginRenderPass(Fk.trace);
-        this.pipeline && Bk && (Rk.setPipeline(this.pipeline), Rk.setBindGroup(0, Fk.bindGroup), Rk.setBindGroup(1, this.empty), Rk.setBindGroup(2, this.empty), Rk.setBindGroup(3, Bk), Rk.draw(3)), Rk.end()
+      trace(bb, cb) {
+        const sb = this.terrain.sunShadowGroup(),
+          kb = bb.beginRenderPass(cb.trace);
+        this.pipeline && sb && (kb.setPipeline(this.pipeline), kb.setBindGroup(0, cb.bindGroup), kb.setBindGroup(1, this.empty), kb.setBindGroup(2, this.empty), kb.setBindGroup(3, sb), kb.draw(3)), kb.end()
       }
       retire() {
-        const kk = this.retired;
-        var Fk;
-        kk && (kk.mask.destroy(), kk.normals.destroy(), null === (Fk = kk.depth) || void 0 === Fk || Fk.destroy(), this.retired = null)
+        const bb = this.retired;
+        var cb;
+        bb && (bb.mask.destroy(), bb.normals.destroy(), null === (cb = bb.depth) || void 0 === cb || cb.destroy(), this.retired = null)
       }
-      targetsFor(kk) {
-        var Fk, Bk;
-        const Rk = (null !== (Fk = kk._config.depth) && void 0 !== Fk ? Fk : kk._config.rt)._depthTexture;
-        return (null === (Bk = this.targets) || void 0 === Bk ? void 0 : Bk.source) === Rk ? this.targets : this.remake(kk, Rk)
+      targetsFor(bb) {
+        var cb, sb;
+        const kb = (null !== (cb = bb._config.depth) && void 0 !== cb ? cb : bb._config.rt)._depthTexture;
+        return (null === (sb = this.targets) || void 0 === sb ? void 0 : sb.source) === kb ? this.targets : this.remake(bb, kb)
       }
-      remake(kk, Fk) {
-        var Bk;
+      remake(bb, cb) {
+        var sb;
         this.retired = this.targets;
-        const Rk = [Fk.width, Fk.height],
-          tk = this.device.createTexture({
+        const kb = [cb.width, cb.height],
+          Wb = this.device.createTexture({
             label: "sun-shadow-mask",
-            size: Rk,
+            size: kb,
             format: this.maskFormat,
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }),
-          ak = this.device.createTexture({
+          ab = this.device.createTexture({
             label: "sun-shadow-prepass-normals",
-            size: Rk,
-            format: Ob,
+            size: kb,
+            format: JU,
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }),
-          Xk = null !== (Bk = kk._targetSignature._depthStencilFormat) && void 0 !== Bk ? Bk : Fk.format,
-          bk = this.edge ? this.device.createTexture({
+          Tb = null !== (sb = bb._targetSignature._depthStencilFormat) && void 0 !== sb ? sb : cb.format,
+          Ub = this.edge ? this.device.createTexture({
             label: "sun-shadow-prepass-depth",
-            size: Rk,
-            format: Xk,
+            size: kb,
+            format: Tb,
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }) : null,
-          wk = kk._renderPassDescriptor.depthStencilAttachment,
-          dk = Xk.includes("stencil"),
-          sk = {
+          Ib = bb._renderPassDescriptor.depthStencilAttachment,
+          Hb = Tb.includes("stencil"),
+          fb = {
             label: "sun-shadow-prepass",
             colorAttachments: [{
-              view: ak.createView(),
+              view: ab.createView(),
               loadOp: "clear",
               storeOp: "store",
               clearValue: [.5, 1, .5, 0]
             }],
             depthStencilAttachment: {
-              view: bk ? bk.createView() : wk.view,
-              depthClearValue: wk.depthClearValue,
+              view: Ub ? Ub.createView() : Ib.view,
+              depthClearValue: Ib.depthClearValue,
               depthLoadOp: "clear",
               depthStoreOp: "store",
-              ...dk ? {
-                stencilClearValue: wk.stencilClearValue,
+              ...Hb ? {
+                stencilClearValue: Ib.stencilClearValue,
                 stencilLoadOp: "clear",
                 stencilStoreOp: "store"
               } : {}
             }
           },
-          Vk = this.device.createBindGroup({
+          Mb = this.device.createBindGroup({
             label: "sun-shadow-mask",
             layout: this.layout,
             entries: [{
               binding: 0,
-              resource: (null !== bk && void 0 !== bk ? bk : Fk).createView({
+              resource: (null !== Ub && void 0 !== Ub ? Ub : cb).createView({
                 aspect: "depth-only"
               })
             }, {
@@ -5752,213 +5752,213 @@ export const modules = {
               }
             }, {
               binding: 2,
-              resource: ak.createView()
+              resource: ab.createView()
             }]
           }),
-          Jk = {
+          Xb = {
             label: "sun-shadow-mask",
             colorAttachments: [{
-              view: tk.createView(),
+              view: Wb.createView(),
               loadOp: "clear",
               storeOp: "store",
-              clearValue: [Eb(this.edge), 0, 0, 0]
+              clearValue: [gU(this.edge), 0, 0, 0]
             }]
           };
         return this.targets = {
-          source: Fk,
-          mask: tk,
-          maskView: tk.createView(),
-          normals: ak,
-          depth: bk,
-          bindGroup: Vk,
-          prepass: sk,
-          trace: Jk
+          source: cb,
+          mask: Wb,
+          maskView: Wb.createView(),
+          normals: ab,
+          depth: Ub,
+          bindGroup: Mb,
+          prepass: fb,
+          trace: Xb
         }, this.targets
       }
     }
 
-    function Nb(kk, Fk, Bk) {
-      let Rk = null,
-        tk = 0;
-      for (const ak of Bk) {
-        const Bk = ak.renderable.mesh;
-        Bk && !1 === Bk.visible || (ak.pipeline !== Rk && (kk.setPipeline(ak.pipeline), Rk = ak.pipeline), tk += ak.draw(kk, Fk))
+    function tU(bb, cb, sb) {
+      let kb = null,
+        Wb = 0;
+      for (const ab of sb) {
+        const sb = ab.renderable.mesh;
+        sb && !1 === sb.visible || (ab.pipeline !== kb && (bb.setPipeline(ab.pipeline), kb = ab.pipeline), Wb += ab.draw(bb, cb))
       }
-      return tk
+      return Wb
     }
-    const Hb = 6e4,
-      ub = {
+    const yU = 6e4,
+      PU = {
         status: "ok"
       },
-      Mb = {
+      DU = {
         status: "skipped"
       };
-    async function gb(kk, Fk) {
+    async function EU(bb, cb) {
       const {
-        isCancelled: Bk
-      } = kk;
-      if (Bk()) return {
-        status: "yB"
+        isCancelled: sb
+      } = bb;
+      if (sb()) return {
+        status: "Gs"
       };
       const {
-        target: Rk
-      } = Fk;
-      if (!Rk) return console.warn("Shader pack: skipped the compile check, as Lite hasn't bound terrain yet"), {
+        target: kb
+      } = cb;
+      if (!kb) return console.warn("Shader pack: skipped the compile check, as Lite hasn't bound terrain yet"), {
         status: "skipped"
       };
-      const tk = [],
-        ak = Promise.all(Array.from(new Set(kk.materials), (async Bk => {
-          tk.push(await async function(kk, Fk, Bk, Rk) {
-            const tk = {
-              lighting: kk.lighting,
-              dirLightCount: Math.min(kk.dirLightCount, 4),
-              ie: kk.runtime
+      const Wb = [],
+        ab = Promise.all(Array.from(new Set(bb.materials), (async sb => {
+          Wb.push(await async function(bb, cb, sb, kb) {
+            const Wb = {
+              lighting: bb.lighting,
+              dirLightCount: Math.min(bb.dirLightCount, 4),
+              Qm: bb.runtime
             };
             try {
-              const ak = Fk.material(Rk);
-              return ak && sR(Fk.programKey(ak, !1, tk)) ? (await ak.ready, kk.isCancelled() ? ub : ak.bindGroupLayout ? await async function(kk, Fk, Bk, Rk) {
+              const ab = cb.material(kb);
+              return ab && Mk(cb.programKey(ab, !1, Wb)) ? (await ab.ready, bb.isCancelled() ? PU : ab.bindGroupLayout ? await async function(bb, cb, sb, kb) {
                 const {
-                  device: tk
-                } = kk;
-                let ak, Xk;
-                tk.pushErrorScope("validation");
+                  device: Wb
+                } = bb;
+                let ab, Tb;
+                Wb.pushErrorScope("validation");
                 try {
-                  ak = kk.pipelineBuild(Fk, Bk, Rk)
+                  ab = bb.pipelineBuild(cb, sb, kb)
                 } finally {
-                  Xk = tk.popErrorScope().catch((() => null))
+                  Tb = Wb.popErrorScope().catch((() => null))
                 }
-                const [bk, wk] = await Promise.all([Xk, ak.built.then((() => null), (kk => null !== kk && void 0 !== kk ? kk : new Error("pipeline failed")))]);
-                if (!bk && !wk) return ub;
-                const dk = await Ub(ak.module),
-                  sk = dk.length > 0 ? dk.map((kk => `${ak.name} ${kk.lineNum}:${kk.linePos}: ${kk.message}`)).join("\n") : `${ak.name}: ${cb(null!==wk&&void 0!==wk?wk:bk)}`;
+                const [Ub, Ib] = await Promise.all([Tb, ab.built.then((() => null), (bb => null !== bb && void 0 !== bb ? bb : new Error("pipeline failed")))]);
+                if (!Ub && !Ib) return PU;
+                const Hb = await iU(ab.module),
+                  fb = Hb.length > 0 ? Hb.map((bb => `${ab.name} ${bb.lineNum}:${bb.linePos}: ${bb.message}`)).join("\n") : `${ab.name}: ${OU(null!==Ib&&void 0!==Ib?Ib:Ub)}`;
                 return {
                   status: "failed",
-                  material: Fk.model.name,
-                  message: sk
+                  material: cb.model.name,
+                  message: fb
                 }
-              }(Fk, ak, Fk.programKey(ak, "none" !== ak.texture, tk), Bk): (console.warn(`Shader pack: skipped the compile check for "${Rk.name}", whose textures failed to load`), Mb)) : ub
-            } catch (ak) {
+              }(cb, ab, cb.programKey(ab, "none" !== ab.texture, Wb), sb): (console.warn(`Shader pack: skipped the compile check for "${kb.name}", whose textures failed to load`), DU)) : PU
+            } catch (ab) {
               return {
                 status: "failed",
-                material: Rk.name,
-                message: cb(ak)
+                material: kb.name,
+                message: OU(ab)
               }
             }
-          }(kk, Fk, Rk, Bk))
+          }(bb, cb, kb, sb))
         }))),
-        Xk = function(kk, Fk) {
-          let Bk, Rk, tk = !1;
-          const ak = new Promise((ak => {
-            var Xk;
-            Bk = setTimeout((() => {
-              ak("timeout")
-            }), null !== (Xk = Fk.timeoutMs) && void 0 !== Xk ? Xk : Hb), Rk = setInterval((() => {
-              Fk.isCancelled() && ak("yB")
-            }), 50), kk.lost.then((() => {
-              tk = !0, ak("lost")
+        Tb = function(bb, cb) {
+          let sb, kb, Wb = !1;
+          const ab = new Promise((ab => {
+            var Tb;
+            sb = setTimeout((() => {
+              ab("timeout")
+            }), null !== (Tb = cb.timeoutMs) && void 0 !== Tb ? Tb : yU), kb = setInterval((() => {
+              cb.isCancelled() && ab("Gs")
+            }), 50), bb.lost.then((() => {
+              Wb = !0, ab("lost")
             }))
           }));
           return {
-            signal: ak,
-            lost: () => tk,
+            signal: ab,
+            lost: () => Wb,
             dispose: () => {
-              clearTimeout(Bk), clearInterval(Rk)
+              clearTimeout(sb), clearInterval(kb)
             }
           }
-        }(Fk.device, kk);
-      let bk;
+        }(cb.device, bb);
+      let Ub;
       try {
-        bk = await Promise.race([ak.then((() => "done")), Xk.signal])
+        Ub = await Promise.race([ab.then((() => "done")), Tb.signal])
       } finally {
-        Xk.dispose()
+        Tb.dispose()
       }
-      if ("yB" === bk || Bk()) return {
-        status: "yB"
+      if ("Gs" === Ub || sb()) return {
+        status: "Gs"
       };
-      const wk = tk.find((kk => "failed" === kk.status));
-      return wk && "lost" !== bk && !Xk.lost() && await new Promise((kk => {
-        setTimeout(kk, 0)
-      })), "lost" === bk || Xk.lost() ? (console.warn("Shader pack: skipped the compile check, as the GPU device was lost"), {
+      const Ib = Wb.find((bb => "failed" === bb.status));
+      return Ib && "lost" !== Ub && !Tb.lost() && await new Promise((bb => {
+        setTimeout(bb, 0)
+      })), "lost" === Ub || Tb.lost() ? (console.warn("Shader pack: skipped the compile check, as the GPU device was lost"), {
         status: "skipped"
-      }) : wk ? {
+      }) : Ib ? {
         status: "failed",
         failure: {
-          material: wk.material,
-          message: wk.message
+          material: Ib.material,
+          message: Ib.message
         }
-      } : "timeout" === bk ? (console.warn(`Shader pack: skipped the compile check, which didn't finish in ${(null!==(dk=kk.timeoutMs)&&void 0!==dk?dk:Hb)/1e3} s`), {
+      } : "timeout" === Ub ? (console.warn(`Shader pack: skipped the compile check, which didn't finish in ${(null!==(Hb=bb.timeoutMs)&&void 0!==Hb?Hb:yU)/1e3} s`), {
         status: "skipped"
-      }) : tk.some((kk => "skipped" === kk.status)) ? {
+      }) : Wb.some((bb => "skipped" === bb.status)) ? {
         status: "skipped"
       } : {
         status: "ok"
       };
-      var dk
+      var Hb
     }
-    async function Ub(kk) {
-      if (!kk) return [];
+    async function iU(bb) {
+      if (!bb) return [];
       try {
-        return (await kk.getCompilationInfo()).messages.filter((kk => "error" === kk.type))
+        return (await bb.getCompilationInfo()).messages.filter((bb => "error" === bb.type))
       } catch {
         return []
       }
     }
 
-    function cb(kk) {
-      var Fk;
-      return null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.message) && void 0 !== Fk ? Fk : String(kk)
+    function OU(bb) {
+      var cb;
+      return null !== (cb = null === bb || void 0 === bb ? void 0 : bb.message) && void 0 !== cb ? cb : String(bb)
     }
 
-    function Gb(kk, Fk, Bk, Rk) {
-      sR(kk) ? Ub(Bk).then((kk => {
-        const [Bk] = kk;
-        jt("terrain", Fk, Rk, Bk ? `${Bk.lineNum}:${Bk.linePos} error: ${Bk.message}` : null)
-      })) : jt("terrain", Fk, Rk)
+    function GU(bb, cb, sb, kb) {
+      Mk(bb) ? iU(sb).then((bb => {
+        const [sb] = bb;
+        FW("terrain", cb, kb, sb ? `${sb.lineNum}:${sb.linePos} error: ${sb.message}` : null)
+      })) : FW("terrain", cb, kb)
     }
-    var Tb = Bk(37200),
-      rb = Bk(37214),
-      Db = Bk(37223),
-      zb = Bk(37151);
+    var KU = sb(37100),
+      ZU = sb(37104),
+      zU = sb(37115),
+      qU = sb(37048);
 
-    function Pb(kk, Fk, Bk, Rk, tk) {
-      const ak = Math.hypot(Bk[0], Bk[1], Bk[2]);
-      if (!(ak > 0)) return;
-      const Xk = [Bk[0] / ak, Bk[1] / ak, Bk[2] / ak],
-        bk = [Math.floor(Fk[0]), Math.floor(Fk[1]), Math.floor(Fk[2])],
-        wk = [0, 0, 0],
-        dk = [1 / 0, 1 / 0, 1 / 0],
-        sk = [1 / 0, 1 / 0, 1 / 0];
-      for (let Ak = 0; Ak < 3; Ak++) Xk[Ak] > 0 ? (wk[Ak] = 1, dk[Ak] = (bk[Ak] + 1 - Fk[Ak]) / Xk[Ak], sk[Ak] = 1 / Xk[Ak]) : Xk[Ak] < 0 && (wk[Ak] = -1, dk[Ak] = (bk[Ak] - Fk[Ak]) / Xk[Ak], sk[Ak] = -1 / Xk[Ak]);
+    function dU(bb, cb, sb, kb, Wb) {
+      const ab = Math.hypot(sb[0], sb[1], sb[2]);
+      if (!(ab > 0)) return;
+      const Tb = [sb[0] / ab, sb[1] / ab, sb[2] / ab],
+        Ub = [Math.floor(cb[0]), Math.floor(cb[1]), Math.floor(cb[2])],
+        Ib = [0, 0, 0],
+        Hb = [1 / 0, 1 / 0, 1 / 0],
+        fb = [1 / 0, 1 / 0, 1 / 0];
+      for (let nb = 0; nb < 3; nb++) Tb[nb] > 0 ? (Ib[nb] = 1, Hb[nb] = (Ub[nb] + 1 - cb[nb]) / Tb[nb], fb[nb] = 1 / Tb[nb]) : Tb[nb] < 0 && (Ib[nb] = -1, Hb[nb] = (Ub[nb] - cb[nb]) / Tb[nb], fb[nb] = -1 / Tb[nb]);
       const {
-        Ze: Vk
-      } = kk;
-      let Jk = kk.Yz(bk[0], bk[1], bk[2]);
+        qm: Mb
+      } = bb;
+      let Xb = bb.hG(Ub[0], Ub[1], Ub[2]);
       for (;;) {
-        const Fk = dk[0] < dk[1] ? dk[0] < dk[2] ? 0 : 2 : dk[1] < dk[2] ? 1 : 2;
-        if (dk[Fk] > Rk) return;
-        const Bk = wk[Fk] > 0 ? bk[Fk] + 1 : bk[Fk];
-        bk[Fk] += wk[Fk], dk[Fk] += sk[Fk];
-        const ak = kk.Yz(bk[0], bk[1], bk[2]),
-          Xk = ak !== Jk && !(kk.opaque[Jk] && kk.opaque[ak]);
-        if (Xk) {
-          const Rk = [bk[0], bk[1], bk[2]];
-          Rk[Fk] = Bk;
-          const ak = Math.floor(Rk[0] / Vk),
-            Xk = Math.floor(Rk[1] / Vk),
-            wk = Math.floor(Rk[2] / Vk);
-          !kk.isDrawn(ak, Xk, wk) && kk.hasParts(ak, Xk, wk) && tk.add(`${ak},${Xk},${wk}`)
+        const cb = Hb[0] < Hb[1] ? Hb[0] < Hb[2] ? 0 : 2 : Hb[1] < Hb[2] ? 1 : 2;
+        if (Hb[cb] > kb) return;
+        const sb = Ib[cb] > 0 ? Ub[cb] + 1 : Ub[cb];
+        Ub[cb] += Ib[cb], Hb[cb] += fb[cb];
+        const ab = bb.hG(Ub[0], Ub[1], Ub[2]),
+          Tb = ab !== Xb && !(bb.opaque[Xb] && bb.opaque[ab]);
+        if (Tb) {
+          const kb = [Ub[0], Ub[1], Ub[2]];
+          kb[cb] = sb;
+          const ab = Math.floor(kb[0] / Mb),
+            Tb = Math.floor(kb[1] / Mb),
+            Ib = Math.floor(kb[2] / Mb);
+          !bb.isDrawn(ab, Tb, Ib) && bb.hasParts(ab, Tb, Ib) && Wb.add(`${ab},${Tb},${Ib}`)
         }
-        if (Xk && kk.occluders[ak]) return;
-        Jk = ak
+        if (Tb && bb.occluders[ab]) return;
+        Xb = ab
       }
     }
 
-    function hb(kk, Fk) {
-      return kk.group - Fk.group || kk.nearest - Fk.nearest
+    function AU(bb, cb) {
+      return bb.group - cb.group || bb.nearest - cb.nearest
     }
-    class qb {
-      constructor(kk, Fk) {
-        this.device = kk, this.UW = Fk, this.data = new Float32Array(2048), this.words = new Uint32Array(this.data.buffer), this.buffer = void 0, this.free = [], this.next = 0, this.dirtyMin = 1 / 0, this.dirtyMax = -1, this.buffer = this.createBuffer()
+    class wU {
+      constructor(bb, cb) {
+        this.device = bb, this.pC = cb, this.data = new Float32Array(2048), this.words = new Uint32Array(this.data.buffer), this.buffer = void 0, this.free = [], this.next = 0, this.dirtyMin = 1 / 0, this.dirtyMax = -1, this.buffer = this.createBuffer()
       }
       createBuffer() {
         return this.device.createBuffer({
@@ -5968,57 +5968,57 @@ export const modules = {
         })
       }
       allocate() {
-        var kk;
-        const Fk = null !== (kk = this.free.pop()) && void 0 !== kk ? kk : this.next++;
-        if (8 * Fk >= this.data.length) {
-          const kk = new Float32Array(2 * this.data.length);
-          kk.set(this.data), this.data = kk, this.words = new Uint32Array(kk.buffer), this.buffer.destroy(), this.buffer = this.createBuffer(), this.markDirty(0, this.next - 1), this.UW()
+        var bb;
+        const cb = null !== (bb = this.free.pop()) && void 0 !== bb ? bb : this.next++;
+        if (8 * cb >= this.data.length) {
+          const bb = new Float32Array(2 * this.data.length);
+          bb.set(this.data), this.data = bb, this.words = new Uint32Array(bb.buffer), this.buffer.destroy(), this.buffer = this.createBuffer(), this.markDirty(0, this.next - 1), this.pC()
         }
-        return Fk
+        return cb
       }
-      release(kk) {
-        this.free.push(kk)
+      release(bb) {
+        this.free.push(bb)
       }
-      set(kk, Fk, Bk, Rk, tk) {
-        const ak = 8 * kk + iR;
-        this.data[ak] = Fk, this.data[ak + 1] = Bk, this.data[ak + 2] = Rk, this.setVisibility(kk, tk)
+      set(bb, cb, sb, kb, Wb) {
+        const ab = 8 * bb + Lk;
+        this.data[ab] = cb, this.data[ab + 1] = sb, this.data[ab + 2] = kb, this.setVisibility(bb, Wb)
       }
-      setVisibility(kk, Fk) {
-        this.data[8 * kk + YR] = Fk, this.markDirty(kk, kk)
+      setVisibility(bb, cb) {
+        this.data[8 * bb + uk] = cb, this.markDirty(bb, bb)
       }
-      setFaces(kk, Fk, Bk) {
-        const Rk = 8 * kk;
-        this.words[Rk + oR] = Fk, this.words[Rk + LR] = Bk, this.markDirty(kk, kk)
+      setFaces(bb, cb, sb) {
+        const kb = 8 * bb;
+        this.words[kb + Yk] = cb, this.words[kb + hk] = sb, this.markDirty(bb, bb)
       }
-      markDirty(kk, Fk) {
-        this.dirtyMin = Math.min(this.dirtyMin, kk), this.dirtyMax = Math.max(this.dirtyMax, Fk)
+      markDirty(bb, cb) {
+        this.dirtyMin = Math.min(this.dirtyMin, bb), this.dirtyMax = Math.max(this.dirtyMax, cb)
       }
       flush() {
         if (this.dirtyMax < this.dirtyMin) return;
         this.device.queue.writeBuffer(this.buffer, 8 * this.dirtyMin * 4, this.data, 8 * this.dirtyMin, 8 * (this.dirtyMax - this.dirtyMin + 1)), this.dirtyMin = 1 / 0, this.dirtyMax = -1
       }
     }
-    const Cb = vR,
-      Zb = !0;
-    const pb = {
+    const rU = Vk,
+      oU = !0;
+    const SU = {
         arrayStride: 4,
         stepMode: "vertex",
         attributes: [{
-          shaderLocation: Cb.packedLight,
+          shaderLocation: rU.packedLight,
           offset: 0,
           format: "float32"
         }]
       },
-      Kb = {
+      RU = {
         srcFactor: "src-alpha",
         dstFactor: "one-minus-src-alpha",
         operation: "add"
       };
-    class xb {
-      constructor(kk) {
-        this.device = kk, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.sceneDepth = null, this.sunShadow = null, this.shadowMask = null, this.chunks = new Map, this.materials = new Map, this.slots = void 0, this.sceneLayout = void 0, this.frameLayout = void 0, this.materialLayouts = new Map, this.frameUniforms = new Float32Array(JR), this.dirLightUniforms = this.frameUniforms.subarray(VR.dirLights, VR.aoLevels), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.recordsGroups = new WeakMap, this.modules = new Map, this.pipelines = new Map, this.prepassOf = new WeakMap, this.maskPipelines = 0, this.builds = new Map, this.target = null, this.compiling = 0, this.sampler = void 0, this.geometry = void 0, this.warnOnce = (0, sF.b)(), this.faceGroups = !0, this.visibilityGraph = Zb, this.visCull = Zb, this.visCheck = !1, this.visCullMinDistance = Db.i, this.visCheckFrame = 0, this.visCandidates = [], this.visCandidateBatches = [], this.visPassable = new Set, this.visBatchDraws = new Map, this.visDrawsMaterial = null, this.visDrawsBits = 0, this.visCulledParts = 0, this.visCulledTriangles = 0, this.visViolations = 0, this.visSweeps = 0, this.submittedTriangles = 0, this.chunkSorter = new Ib, this.opaqueBatches = [], this.transparent = [], this.unlit = [], this.lighting = !1, this.dirLightCount = 0, this.aoLevelsWritten = !1, this.originOffset = [0, 0, 0], this.eye = [0, 0, 0], this.faceRanges = new Int32Array(4), this.faceEpoch = 0, this.faceEye = [NaN, NaN, NaN], this.faceFocalPx = NaN, this.ie = null, this.shaderPackInputs = null, this.depthStandIn = null, this.geometry = new ob(kk, ((kk, Fk) => this.recordsGroup(kk, Fk))), this.slots = new qb(kk, (() => {
+    class vU {
+      constructor(bb) {
+        this.device = bb, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.sceneDepth = null, this.sunShadow = null, this.shadowMask = null, this.chunks = new Map, this.materials = new Map, this.slots = void 0, this.sceneLayout = void 0, this.frameLayout = void 0, this.materialLayouts = new Map, this.frameUniforms = new Float32Array(nk), this.dirLightUniforms = this.frameUniforms.subarray(Xk.dirLights, Xk.aoLevels), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.recordsGroups = new WeakMap, this.modules = new Map, this.pipelines = new Map, this.prepassOf = new WeakMap, this.maskPipelines = 0, this.builds = new Map, this.target = null, this.compiling = 0, this.sampler = void 0, this.geometry = void 0, this.warnOnce = (0, Hc.c)(), this.faceGroups = !0, this.visibilityGraph = oU, this.visCull = oU, this.visCheck = !1, this.visCullMinDistance = zU.f, this.visCheckFrame = 0, this.visCandidates = [], this.visCandidateBatches = [], this.visPassable = new Set, this.visBatchDraws = new Map, this.visDrawsMaterial = null, this.visDrawsBits = 0, this.visCulledParts = 0, this.visCulledTriangles = 0, this.visViolations = 0, this.visSweeps = 0, this.submittedTriangles = 0, this.chunkSorter = new pU, this.opaqueBatches = [], this.transparent = [], this.unlit = [], this.lighting = !1, this.dirLightCount = 0, this.aoLevelsWritten = !1, this.originOffset = [0, 0, 0], this.eye = [0, 0, 0], this.faceRanges = new Int32Array(4), this.faceEpoch = 0, this.faceEye = [NaN, NaN, NaN], this.faceFocalPx = NaN, this.Qm = null, this.shaderPackInputs = null, this.depthStandIn = null, this.geometry = new YU(bb, ((bb, cb) => this.recordsGroup(bb, cb))), this.slots = new wU(bb, (() => {
           this.frameBindGroup = this.createFrameBindGroup(), this.recordsGroups = new WeakMap
-        })), this.sceneLayout = BF(kk), this.frameLayout = kk.createBindGroupLayout({
+        })), this.sceneLayout = cc(bb), this.frameLayout = bb.createBindGroupLayout({
           label: "terrain-frame",
           entries: [{
             binding: 0,
@@ -6045,11 +6045,11 @@ export const modules = {
               type: "read-only-storage"
             }
           }]
-        }), this.frameBuffer = kk.createBuffer({
+        }), this.frameBuffer = bb.createBuffer({
           label: "terrain-frame",
           size: this.frameUniforms.byteLength,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.frameBindGroup = this.createFrameBindGroup(), this.sampler = kk.createSampler({
+        }), this.frameBindGroup = this.createFrameBindGroup(), this.sampler = bb.createSampler({
           label: "terrain",
           magFilter: "nearest",
           minFilter: "nearest",
@@ -6060,20 +6060,20 @@ export const modules = {
           order: 100,
           isTransparent: !1,
           _direct: !0,
-          bind: (kk, Fk) => this.createBinding(this.opaqueRenderable, Fk, !1)
+          bind: (bb, cb) => this.createBinding(this.opaqueRenderable, cb, !1)
         }, this.transparentRenderable = {
           order: 200,
           isTransparent: !0,
           _worldCenter: [0, 0, 0],
-          bind: (kk, Fk) => this.createBinding(this.transparentRenderable, Fk, !0)
+          bind: (bb, cb) => this.createBinding(this.transparentRenderable, cb, !0)
         }
       }
-      installSceneDepth(kk, Fk) {
-        this.sceneDepth = new Lb(this.device, this.transparentRenderable, kk, Fk)
+      installSceneDepth(bb, cb) {
+        this.sceneDepth = new hU(this.device, this.transparentRenderable, bb, cb)
       }
       createFrameBindGroup() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return this.device.createBindGroup({
           label: "terrain-frame",
           layout: this.frameLayout,
@@ -6090,28 +6090,28 @@ export const modules = {
           }, {
             binding: 2,
             resource: {
-              buffer: null !== kk && void 0 !== kk ? kk : this.slots.buffer
+              buffer: null !== bb && void 0 !== bb ? bb : this.slots.buffer
             }
           }, {
             binding: 3,
             resource: {
-              buffer: null !== Fk && void 0 !== Fk ? Fk : this.slots.buffer
+              buffer: null !== cb && void 0 !== cb ? cb : this.slots.buffer
             }
           }]
         })
       }
-      recordsGroup(kk, Fk) {
-        const Bk = null !== Fk && void 0 !== Fk ? Fk : kk;
-        let Rk = this.recordsGroups.get(Bk);
-        return Rk || (Rk = this.createFrameBindGroup(kk, Fk), this.recordsGroups.set(Bk, Rk)), Rk
+      recordsGroup(bb, cb) {
+        const sb = null !== cb && void 0 !== cb ? cb : bb;
+        let kb = this.recordsGroups.get(sb);
+        return kb || (kb = this.createFrameBindGroup(bb, cb), this.recordsGroups.set(sb, kb)), kb
       }
-      setChunkMesh(kk, Fk, Bk) {
-        var Rk;
-        let tk = this.chunks.get(kk);
-        tk ? this.geometry.release(tk) : (tk = {
-          mesh: kk,
+      setChunkMesh(bb, cb, sb) {
+        var kb;
+        let Wb = this.chunks.get(bb);
+        Wb ? this.geometry.release(Wb) : (Wb = {
+          mesh: bb,
           slot: this.slots.allocate(),
-          origin: [Bk[0], Bk[1], Bk[2]],
+          origin: [sb[0], sb[1], sb[2]],
           material: null,
           vertices: null,
           lit: !1,
@@ -6120,7 +6120,7 @@ export const modules = {
           packed: !1,
           lostRemeshes: 0,
           lostRetryAt: 0,
-          visibility: kk.visibility,
+          visibility: bb.visibility,
           distance: 0,
           faceGroups: null,
           planePX: 0,
@@ -6140,23 +6140,23 @@ export const modules = {
           cj: NaN,
           ck: NaN,
           key: NaN
-        }, this.chunks.set(kk, tk), this.writeSlot(tk)), tk.material = kk.material ? this.materialFor(kk.material) : null, tk.packed = !!Fk.packedVertices, tk.vertexCount = (0, Ab.e)(Fk), tk.faceCount = tk.vertexCount / 4;
-        const ak = null !== (Rk = Fk.faceGroups) && void 0 !== Rk ? Rk : null;
-        if (tk.faceGroups = ak, ak) {
-          const kk = Tb.o;
-          tk.planePX = ak[kk], tk.planeNX = ak[kk + 1], tk.planePY = ak[kk + 2], tk.planeNY = ak[kk + 3], tk.planePZ = ak[kk + 4], tk.planeNZ = ak[kk + 5]
+        }, this.chunks.set(bb, Wb), this.writeSlot(Wb)), Wb.material = bb.material ? this.materialFor(bb.material) : null, Wb.packed = !!cb.packedVertices, Wb.vertexCount = (0, mU.h)(cb), Wb.faceCount = Wb.vertexCount / 4;
+        const ab = null !== (kb = cb.faceGroups) && void 0 !== kb ? kb : null;
+        if (Wb.faceGroups = ab, ab) {
+          const bb = KU.i;
+          Wb.planePX = ab[bb], Wb.planeNX = ab[bb + 1], Wb.planePY = ab[bb + 2], Wb.planeNY = ab[bb + 3], Wb.planePZ = ab[bb + 4], Wb.planeNZ = ab[bb + 5]
         }
-        this.drawWhole(tk), 0 !== tk.faceCount && (this.geometry.set(tk, Fk) ? (tk.packed && this.slots.setFaces(tk.slot, tk.vertices.start + tk.faceCount, tk.faceCount), Fk.He && this.setChunkMeshLight(kk, Fk.He)) : this.warnOnce("tooBig", `Lite terrain: a chunk of ${tk.vertexCount} vertices is more than a buffer may hold, and is left out.`))
+        this.drawWhole(Wb), 0 !== Wb.faceCount && (this.geometry.set(Wb, cb) ? (Wb.packed && this.slots.setFaces(Wb.slot, Wb.vertices.start + Wb.faceCount, Wb.faceCount), cb.Jm && this.setChunkMeshLight(bb, cb.Jm)) : this.warnOnce("tooBig", `Lite terrain: a chunk of ${Wb.vertexCount} vertices is more than a buffer may hold, and is left out.`))
       }
-      setChunkMeshLight(kk, Fk) {
-        const Bk = this.chunks.get(kk);
-        Bk && this.geometry.setLight(Bk, Fk)
+      setChunkMeshLight(bb, cb) {
+        const sb = this.chunks.get(bb);
+        sb && this.geometry.setLight(sb, cb)
       }
       drawStats() {
-        let kk = this.transparent.length;
-        for (const Fk of this.opaqueBatches) kk += Fk.meshes.length;
+        let bb = this.transparent.length;
+        for (const cb of this.opaqueBatches) bb += cb.meshes.length;
         return {
-          drawn: kk,
+          drawn: bb,
           loaded: this.chunks.size,
           triangles: this.submittedTriangles,
           visCulled: this.visCulledParts,
@@ -6172,537 +6172,537 @@ export const modules = {
       get buffersAwaitingVerdict() {
         return this.geometry.buffersAwaitingVerdict
       }
-      removeChunkMesh(kk) {
-        const Fk = this.chunks.get(kk);
-        Fk && (this.geometry.release(Fk), this.slots.release(Fk.slot), this.chunks.delete(kk))
+      removeChunkMesh(bb) {
+        const cb = this.chunks.get(bb);
+        cb && (this.geometry.release(cb), this.slots.release(cb.slot), this.chunks.delete(bb))
       }
-      remeshLost(kk, Fk) {
-        this.geometry.release(Fk), Fk.lostRetryAt = performance.now() + Math.min(6e4, 1e3 * 2 ** Fk.lostRemeshes++);
-        const Bk = kk.iJ,
-          [Rk, tk, ak] = Bk.zRk(Fk.origin[0], Fk.origin[1], Fk.origin[2]),
-          Xk = Bk.Zy.py(Rk, tk, ak);
-        Xk && (Xk.qy = !0, Xk.ny = !0, Bk.Cy(Xk, !1))
+      remeshLost(bb, cb) {
+        this.geometry.release(cb), cb.lostRetryAt = performance.now() + Math.min(6e4, 1e3 * 2 ** cb.lostRemeshes++);
+        const sb = bb.fX,
+          [kb, Wb, ab] = sb.Ekb(cb.origin[0], cb.origin[1], cb.origin[2]),
+          Tb = sb.Gl.Kl(kb, Wb, ab);
+        Tb && (Tb.il = !0, Tb.Al = !0, sb.Ol(Tb, !1))
       }
-      chooseFaceRanges(kk, Fk, Bk) {
-        const Rk = this.faceRanges;
-        kk.faceMask = Bk, kk.rangeCount = (0, rb.p)(Fk, Bk, Rk), kk.first0 = Rk[0], kk.count0 = Rk[1], kk.first1 = Rk[2], kk.count1 = Rk[3]
+      chooseFaceRanges(bb, cb, sb) {
+        const kb = this.faceRanges;
+        bb.faceMask = sb, bb.rangeCount = (0, ZU.m)(cb, sb, kb), bb.first0 = kb[0], bb.count0 = kb[1], bb.first1 = kb[2], bb.count1 = kb[3]
       }
-      drawWhole(kk) {
-        kk.faceMask = -1, kk.faceEpoch = -1, kk.rangeCount = 1, kk.first0 = 0, kk.count0 = kk.faceCount
+      drawWhole(bb) {
+        bb.faceMask = -1, bb.faceEpoch = -1, bb.rangeCount = 1, bb.first0 = 0, bb.count0 = bb.faceCount
       }
-      writeSlot(kk) {
-        const [Fk, Bk, Rk] = this.originOffset;
-        this.slots.set(kk.slot, kk.origin[0] - Fk, kk.origin[1] - Bk, kk.origin[2] - Rk, kk.visibility)
+      writeSlot(bb) {
+        const [cb, sb, kb] = this.originOffset;
+        this.slots.set(bb.slot, bb.origin[0] - cb, bb.origin[1] - sb, bb.origin[2] - kb, bb.visibility)
       }
-      materialFor(kk) {
-        const Fk = this.materials.get(kk);
-        if (Fk) return Fk;
-        const Bk = yb(kk);
-        if (!Bk) return this.warnOnce(`material:${kk.name}`, `Lite terrain cannot draw material "${kk.name}"; its chunks are skipped.`), null;
+      materialFor(bb) {
+        const cb = this.materials.get(bb);
+        if (cb) return cb;
+        const sb = QU(bb);
+        if (!sb) return this.warnOnce(`material:${bb.name}`, `Lite terrain cannot draw material "${bb.name}"; its chunks are skipped.`), null;
         const {
-          model: Rk,
-          atlas: tk,
-          texture: ak,
-          animated: Xk,
-          uniformData: bk
-        } = Bk, wk = {
+          model: kb,
+          atlas: Wb,
+          texture: ab,
+          animated: Tb,
+          uniformData: Ub
+        } = sb, Ib = {
           id: this.materials.size,
-          model: Rk,
-          texture: ak,
-          animated: Xk,
-          uniformData: bk,
+          model: kb,
+          texture: ab,
+          animated: Tb,
+          uniformData: Ub,
           uniformBuffer: this.device.createBuffer({
-            label: `terrain-material-${kk.name}`,
-            size: bk.byteLength,
+            label: `terrain-material-${bb.name}`,
+            size: Ub.byteLength,
             usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
           }),
-          liquid: Bk.liquid,
-          customRenderMat: Bk.customRenderMat,
+          liquid: sb.liquid,
+          customRenderMat: sb.customRenderMat,
           atlasCount: 0,
-          Vl: 0,
+          uR: 0,
           atlasLayers: 0,
           bindGroup: null,
           bindGroupLayout: null,
           ready: Promise.resolve()
         };
-        return this.materials.set(kk, wk), this.device.queue.writeBuffer(wk.uniformBuffer, 0, bk), wk.ready = this.createMaterialBindGroup(wk, tk).catch((Fk => {
-          console.error(`Lite terrain failed to load the textures of material "${kk.name}"`, Fk)
-        })), wk
+        return this.materials.set(bb, Ib), this.device.queue.writeBuffer(Ib.uniformBuffer, 0, Ub), Ib.ready = this.createMaterialBindGroup(Ib, Wb).catch((cb => {
+          console.error(`Lite terrain failed to load the textures of material "${bb.name}"`, cb)
+        })), Ib
       }
-      materialLayout(kk) {
-        const Fk = function(kk) {
-            const Fk = ["uniforms"];
-            if ("atlas" === kk.texture) {
-              kk.animated && Fk.push("animData"), Fk.push("sampler");
-              for (let Bk = 0; Bk < kk.atlasCount; Bk++) Fk.push("textureArray")
-            } else "single" === kk.texture && Fk.push("sampler", "texture");
-            return Fk
-          }(kk),
-          Bk = Fk.join(",");
-        let Rk = this.materialLayouts.get(Bk);
-        if (!Rk) {
-          const kk = GPUShaderStage.FRAGMENT;
-          Rk = this.device.createBindGroupLayout({
-            label: `terrain-material-${Bk}`,
-            entries: Fk.map(((Fk, Bk) => {
-              switch (Fk) {
+      materialLayout(bb) {
+        const cb = function(bb) {
+            const cb = ["uniforms"];
+            if ("atlas" === bb.texture) {
+              bb.animated && cb.push("animData"), cb.push("sampler");
+              for (let sb = 0; sb < bb.atlasCount; sb++) cb.push("textureArray")
+            } else "single" === bb.texture && cb.push("sampler", "texture");
+            return cb
+          }(bb),
+          sb = cb.join(",");
+        let kb = this.materialLayouts.get(sb);
+        if (!kb) {
+          const bb = GPUShaderStage.FRAGMENT;
+          kb = this.device.createBindGroupLayout({
+            label: `terrain-material-${sb}`,
+            entries: cb.map(((cb, sb) => {
+              switch (cb) {
                 case "uniforms":
                   return {
-                    binding: Bk, visibility: GPUShaderStage.VERTEX | kk, buffer: {
+                    binding: sb, visibility: GPUShaderStage.VERTEX | bb, buffer: {
                       type: "uniform"
                     }
                   };
                 case "animData":
                   return {
-                    binding: Bk, visibility: GPUShaderStage.VERTEX | kk, buffer: {
+                    binding: sb, visibility: GPUShaderStage.VERTEX | bb, buffer: {
                       type: "read-only-storage"
                     }
                   };
                 case "sampler":
                   return {
-                    binding: Bk, visibility: kk, sampler: {
+                    binding: sb, visibility: bb, sampler: {
                       type: "filtering"
                     }
                   };
                 case "texture":
                   return {
-                    binding: Bk, visibility: kk, texture: {
+                    binding: sb, visibility: bb, texture: {
                       sampleType: "float",
                       viewDimension: "2d"
                     }
                   };
                 case "textureArray":
                   return {
-                    binding: Bk, visibility: kk, texture: {
+                    binding: sb, visibility: bb, texture: {
                       sampleType: "float",
                       viewDimension: "2d-array"
                     }
                   }
               }
             }))
-          }), this.materialLayouts.set(Bk, Rk)
+          }), this.materialLayouts.set(sb, kb)
         }
-        return Rk
+        return kb
       }
-      async createMaterialBindGroup(kk, Fk) {
-        const Bk = [{
-          buffer: kk.uniformBuffer
+      async createMaterialBindGroup(bb, cb) {
+        const sb = [{
+          buffer: bb.uniformBuffer
         }];
-        if (Fk) {
+        if (cb) {
           const {
-            urls: Rk,
-            pixels: tk,
-            layerWidth: ak
-          } = Fk.sources, Xk = await Promise.all(Rk.map(((kk, Fk) => {
-            var Bk;
-            return ht(this.device, kk, null !== (Bk = null === tk || void 0 === tk ? void 0 : tk[Fk]) && void 0 !== Bk ? Bk : null, ak)
+            urls: kb,
+            pixels: Wb,
+            layerWidth: ab
+          } = cb.sources, Tb = await Promise.all(kb.map(((bb, cb) => {
+            var sb;
+            return AW(this.device, bb, null !== (sb = null === Wb || void 0 === Wb ? void 0 : Wb[cb]) && void 0 !== sb ? sb : null, ab)
           })));
-          kk.atlasCount = Xk.length, kk.Vl = Xk[0].layerWidth, kk.atlasLayers = Xk[0].layers, Fk.animDataPerTex && Bk.push({
-            buffer: Ut(this.device, Float32Array.from(Fk.animDataPerTex), GPUBufferUsage.STORAGE, "terrain-anim")
-          }), Bk.push(this.sampler);
-          for (const kk of Xk) Bk.push(kk.texture.createView({
+          bb.atlasCount = Tb.length, bb.uR = Tb[0].layerWidth, bb.atlasLayers = Tb[0].layers, cb.animDataPerTex && sb.push({
+            buffer: iW(this.device, Float32Array.from(cb.animDataPerTex), GPUBufferUsage.STORAGE, "terrain-anim")
+          }), sb.push(this.sampler);
+          for (const bb of Tb) sb.push(bb.texture.createView({
             dimension: "2d-array"
           }))
-        } else if ("single" === kk.texture) {
+        } else if ("single" === bb.texture) {
           const {
-            url: Fk
-          } = kk.model.diffuseTexture.source, {
-            pixels: Rk,
-            width: tk,
-            height: ak
-          } = await zt(Fk);
-          Bk.push(this.sampler), Bk.push(Gt(this.device, Rk, tk, ak, 1, `terrain-${Fk}`).createView({
+            url: cb
+          } = bb.model.diffuseTexture.source, {
+            pixels: kb,
+            width: Wb,
+            height: ab
+          } = await qW(cb);
+          sb.push(this.sampler), sb.push(GW(this.device, kb, Wb, ab, 1, `terrain-${cb}`).createView({
             dimension: "2d"
           }))
         }
-        const Rk = this.materialLayout(this.programKey(kk, !1));
-        kk.bindGroupLayout = Rk, kk.bindGroup = this.device.createBindGroup({
-          label: `terrain-material-${kk.model.name}`,
-          layout: Rk,
-          entries: Bk.map(((kk, Fk) => ({
-            binding: Fk,
-            resource: kk
+        const kb = this.materialLayout(this.programKey(bb, !1));
+        bb.bindGroupLayout = kb, bb.bindGroup = this.device.createBindGroup({
+          label: `terrain-material-${bb.model.name}`,
+          layout: kb,
+          entries: sb.map(((bb, cb) => ({
+            binding: cb,
+            resource: bb
           })))
         })
       }
-      programKey(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const Rk = Bk ? Bk.lighting : this.lighting,
-          tk = Bk ? Bk.ie : this.ie,
-          ak = {
-            texture: kk.texture,
-            atlasCount: kk.atlasCount,
-            Vl: kk.Vl,
-            atlasLayers: kk.atlasLayers,
-            animated: kk.animated,
-            alphaTest: kk.model.transparencyMode === Sk.t.alphaTest,
-            lighting: Rk,
-            dirLightCount: Bk ? Bk.dirLightCount : this.dirLightCount,
-            packed: Fk
+      programKey(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const kb = sb ? sb.lighting : this.lighting,
+          Wb = sb ? sb.Qm : this.Qm,
+          ab = {
+            texture: bb.texture,
+            atlasCount: bb.atlasCount,
+            uR: bb.uR,
+            atlasLayers: bb.atlasLayers,
+            animated: bb.animated,
+            alphaTest: bb.model.transparencyMode === Jb.m.alphaTest,
+            lighting: kb,
+            dirLightCount: sb ? sb.dirLightCount : this.dirLightCount,
+            packed: cb
           };
-        if (!tk) return ak;
-        const Xk = this.shaderPackFields(kk, tk),
-          bk = "atlas" === kk.texture && kk.model.transparencyMode === Sk.t.opaque && XR(Xk.packVariant);
+        if (!Wb) return ab;
+        const Tb = this.shaderPackFields(bb, Wb),
+          Ub = "atlas" === bb.texture && bb.model.transparencyMode === Jb.m.opaque && Uk(Tb.packVariant);
         return {
-          ...ak,
-          ...Xk,
-          alphaTest: ak.alphaTest || bk
+          ...ab,
+          ...Tb,
+          alphaTest: ab.alphaTest || Ub
         }
       }
-      shaderPackFields(kk, Fk) {
-        return kk.customRenderMat ? tR : function(kk, Fk) {
-          if (!kk) return tR;
-          const Bk = kk.defineFor(Fk ? "liquid" : "terrain");
-          return 0 === Bk ? tR : {
-            packVariant: Bk,
-            liquid: Fk
+      shaderPackFields(bb, cb) {
+        return bb.customRenderMat ? ak : function(bb, cb) {
+          if (!bb) return ak;
+          const sb = bb.defineFor(cb ? "liquid" : "terrain");
+          return 0 === sb ? ak : {
+            packVariant: sb,
+            liquid: cb
           }
-        }(Fk, kk.liquid)
+        }(cb, bb.liquid)
       }
-      isBlended(kk) {
-        return kk.model.transparencyMode === Sk.t.alphaBlend
+      isBlended(bb) {
+        return bb.model.transparencyMode === Jb.m.alphaBlend
       }
-      shaderModule(kk, Fk) {
-        let Bk = this.modules.get(kk);
-        return Bk || (Bk = this.device.createShaderModule({
-          label: Fk,
-          code: kk
-        }), this.modules.set(kk, Bk)), Bk
+      shaderModule(bb, cb) {
+        let sb = this.modules.get(bb);
+        return sb || (sb = this.device.createShaderModule({
+          label: cb,
+          code: bb
+        }), this.modules.set(bb, sb)), sb
       }
-      pipelineFor(kk, Fk, Bk) {
-        let Rk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (!kk.bindGroupLayout) return null;
-        const tk = this.programKey(kk, Fk);
-        if (!Rk) return this.pipelineOf(kk, tk, Bk);
-        const ak = {
-            ...tk,
-            resting: Rk
+      pipelineFor(bb, cb, sb) {
+        let kb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (!bb.bindGroupLayout) return null;
+        const Wb = this.programKey(bb, cb);
+        if (!kb) return this.pipelineOf(bb, Wb, sb);
+        const ab = {
+            ...Wb,
+            resting: kb
           },
-          Xk = this.pipelineId(kk, ak, Bk),
-          bk = this.pipelines.get(Xk);
-        if (bk) return bk;
-        const wk = this.pipelineOf(kk, tk, Bk);
-        return wk && void 0 === bk && this.startPipeline(Xk, kk, ak, Bk), wk
+          Tb = this.pipelineId(bb, ab, sb),
+          Ub = this.pipelines.get(Tb);
+        if (Ub) return Ub;
+        const Ib = this.pipelineOf(bb, Wb, sb);
+        return Ib && void 0 === Ub && this.startPipeline(Tb, bb, ab, sb), Ib
       }
-      pipelineOf(kk, Fk, Bk) {
-        const Rk = this.pipelineId(kk, Fk, Bk),
-          tk = this.pipelines.get(Rk);
-        return void 0 !== tk ? tk : (this.startPipeline(Rk, kk, Fk, Bk), null)
+      pipelineOf(bb, cb, sb) {
+        const kb = this.pipelineId(bb, cb, sb),
+          Wb = this.pipelines.get(kb);
+        return void 0 !== Wb ? Wb : (this.startPipeline(kb, bb, cb, sb), null)
       }
-      pipelineId(kk, Fk, Bk) {
-        return jb(Fk, this.isBlended(kk), kk.model.backFaceCulling, Bk)
+      pipelineId(bb, cb, sb) {
+        return FU(cb, this.isBlended(bb), bb.model.backFaceCulling, sb)
       }
-      pipelineBuild(kk, Fk, Bk) {
-        var Rk;
-        const tk = this.pipelineId(kk, Fk, Bk);
-        return null !== (Rk = this.builds.get(tk)) && void 0 !== Rk ? Rk : this.startPipeline(tk, kk, Fk, Bk)
+      pipelineBuild(bb, cb, sb) {
+        var kb;
+        const Wb = this.pipelineId(bb, cb, sb);
+        return null !== (kb = this.builds.get(Wb)) && void 0 !== kb ? kb : this.startPipeline(Wb, bb, cb, sb)
       }
-      startPipeline(kk, Fk, Bk, Rk) {
-        var tk;
-        this.pipelines.set(kk, null);
-        const ak = uR(Bk),
-          Xk = this.isBlended(Fk),
-          bk = this.shadowMask && Rk._depthStencilFormat ? function(kk, Fk, Bk, Rk) {
-            if (void 0 === kk.packVariant || kk.liquid || Fk) return "none";
-            const tk = (0, HF.f)(kk.packVariant);
-            return null === tk || void 0 === tk || !tk.sunShadow || !rB(tk, Bk) || tk.discards || kk.alphaTest && XR(kk.packVariant) ? "none" : Rk ? "edge" : "plain"
-          }(Bk, Xk, !!this.sunShadow, Rk._sampleCount > 1) : "none";
-        let wk;
+      startPipeline(bb, cb, sb, kb) {
+        var Wb;
+        this.pipelines.set(bb, null);
+        const ab = Pk(sb),
+          Tb = this.isBlended(cb),
+          Ub = this.shadowMask && kb._depthStencilFormat ? function(bb, cb, sb, kb) {
+            if (void 0 === bb.packVariant || bb.liquid || cb) return "none";
+            const Wb = (0, Bc.e)(bb.packVariant);
+            return null === Wb || void 0 === Wb || !Wb.sunShadow || !Ks(Wb, sb) || Wb.discards || bb.alphaTest && Uk(bb.packVariant) ? "none" : kb ? "edge" : "plain"
+          }(sb, Tb, !!this.sunShadow, kb._sampleCount > 1) : "none";
+        let Ib;
         try {
-          wk = MR(Bk, !!this.sunShadow, bk)
-        } catch (fk) {
-          if (!sR(Bk)) throw fk;
-          return this.failedPackBuild(kk, Bk, ak, fk)
+          Ib = Dk(sb, !!this.sunShadow, Ub)
+        } catch (Qb) {
+          if (!Mk(sb)) throw Qb;
+          return this.failedPackBuild(bb, sb, ab, Qb)
         }
-        const dk = this.shaderModule(wk, ak),
-          sk = [];
-        Bk.packed || (sk.push(function(kk, Fk) {
-          const Bk = [{
-            shaderLocation: Cb.position,
-            offset: EF.i.mF,
+        const Hb = this.shaderModule(Ib, ab),
+          fb = [];
+        sb.packed || (fb.push(function(bb, cb) {
+          const sb = [{
+            shaderLocation: rU.position,
+            offset: hc.d.hc,
             format: "float32x3"
           }, {
-            shaderLocation: Cb.normal,
-            offset: EF.i.normalOffset,
+            shaderLocation: rU.normal,
+            offset: hc.d.normalOffset,
             format: "snorm8x4"
           }, {
-            shaderLocation: Cb.color,
-            offset: EF.i.colorOffset,
+            shaderLocation: rU.color,
+            offset: hc.d.colorOffset,
             format: "unorm8x4"
           }];
-          return kk && Bk.push({
-            shaderLocation: Cb.uv,
-            offset: EF.i.uvOffset,
+          return bb && sb.push({
+            shaderLocation: rU.uv,
+            offset: hc.d.uvOffset,
             format: "float32x2"
-          }), Fk && Bk.push({
-            shaderLocation: Cb.blockFlagWords,
-            offset: EF.i.normalOffset,
+          }), cb && sb.push({
+            shaderLocation: rU.blockFlagWords,
+            offset: hc.d.normalOffset,
             format: "uint32x2"
           }), {
-            arrayStride: EF.i.strideWithoutAtlas,
+            arrayStride: hc.d.strideWithoutAtlas,
             stepMode: "vertex",
-            attributes: Bk
+            attributes: sb
           }
-        }("none" !== Bk.texture, sR(Bk))), Bk.lighting && sk.push(pb));
-        const Vk = Fk.model.backFaceCulling,
-          Jk = {
-            label: ak,
+        }("none" !== sb.texture, Mk(sb))), sb.lighting && fb.push(SU));
+        const Mb = cb.model.backFaceCulling,
+          Xb = {
+            label: ab,
             layout: this.device.createPipelineLayout({
-              bindGroupLayouts: [this.sceneLayout, this.frameLayout, Fk.bindGroupLayout, ...qa(this.device, Bk, !!this.sunShadow, "none" !== bk)]
+              bindGroupLayouts: [this.sceneLayout, this.frameLayout, cb.bindGroupLayout, ...wa(this.device, sb, !!this.sunShadow, "none" !== Ub)]
             }),
             vertex: {
-              module: dk,
+              module: Hb,
               entryPoint: "mainVertex",
-              buffers: sk
+              buffers: fb
             },
-            fragment: Ik({
-              module: dk,
+            fragment: xb({
+              module: Hb,
               entryPoint: "mainFragment"
-            }, Rk, Xk ? Kb : null),
-            depthStencil: Rk._depthStencilFormat ? {
-              format: Rk._depthStencilFormat,
-              depthCompare: null !== (tk = Rk._depthCompare) && void 0 !== tk ? tk : RF,
+            }, kb, Tb ? RU : null),
+            depthStencil: kb._depthStencilFormat ? {
+              format: kb._depthStencilFormat,
+              depthCompare: null !== (Wb = kb._depthCompare) && void 0 !== Wb ? Wb : sc,
               depthWriteEnabled: !0
             } : void 0,
             multisample: {
-              count: Rk._sampleCount
+              count: kb._sampleCount
             },
             primitive: {
               topology: "triangle-list",
               frontFace: "ccw",
-              cullMode: Vk ? "back" : "none"
+              cullMode: Mb ? "back" : "none"
             }
           },
-          Ak = Bk.resting ? 0 : 1;
-        this.compiling += Ak;
-        const ek = "none" === bk ? this.device.createRenderPipelineAsync(Jk) : this.startMaskPipelines(dk, Jk, "edge" === bk);
-        ek.then((Fk => {
-          this.compiling -= Ak, this.pipelines.set(kk, Fk)
-        }), (kk => {
-          this.compiling -= Ak, console.error(`Lite terrain pipeline ${ak} failed`, kk), Gb(Bk, ak, dk, kk)
+          nb = sb.resting ? 0 : 1;
+        this.compiling += nb;
+        const mb = "none" === Ub ? this.device.createRenderPipelineAsync(Xb) : this.startMaskPipelines(Hb, Xb, "edge" === Ub);
+        mb.then((cb => {
+          this.compiling -= nb, this.pipelines.set(bb, cb)
+        }), (bb => {
+          this.compiling -= nb, console.error(`Lite terrain pipeline ${ab} failed`, bb), GU(sb, ab, Hb, bb)
         }));
-        const yk = {
-          name: ak,
-          module: dk,
-          built: ek
+        const lb = {
+          name: ab,
+          module: Hb,
+          built: mb
         };
-        return this.builds.set(kk, yk), yk
+        return this.builds.set(bb, lb), lb
       }
-      startMaskPipelines(kk, Fk, Bk) {
-        const Rk = Fk.depthStencil,
-          tk = this.device.createRenderPipelineAsync(Bk ? Fk : {
-            ...Fk,
+      startMaskPipelines(bb, cb, sb) {
+        const kb = cb.depthStencil,
+          Wb = this.device.createRenderPipelineAsync(sb ? cb : {
+            ...cb,
             depthStencil: {
-              ...Rk,
+              ...kb,
               depthCompare: "equal",
               depthWriteEnabled: !1
             }
           }),
-          ak = this.device.createRenderPipelineAsync({
-            ...Fk,
-            label: `${Fk.label}-prepass`,
+          ab = this.device.createRenderPipelineAsync({
+            ...cb,
+            label: `${cb.label}-prepass`,
             fragment: {
-              module: kk,
+              module: bb,
               entryPoint: "prepassFragment",
               targets: [{
-                format: Ob
+                format: JU
               }]
             },
             multisample: {
               count: 1
             }
           });
-        return Promise.all([tk, ak]).then((kk => {
-          let [Fk, Bk] = kk;
-          return this.prepassOf.set(Fk, Bk), this.maskPipelines++, Fk
+        return Promise.all([Wb, ab]).then((bb => {
+          let [cb, sb] = bb;
+          return this.prepassOf.set(cb, sb), this.maskPipelines++, cb
         }))
       }
-      failedPackBuild(kk, Fk, Bk, Rk) {
-        console.error(`Lite terrain pipeline ${Bk} failed`, Rk), Gb(Fk, Bk, null, Rk);
-        const tk = Promise.reject(Rk);
-        tk.catch((() => {}));
-        const ak = {
-          name: Bk,
+      failedPackBuild(bb, cb, sb, kb) {
+        console.error(`Lite terrain pipeline ${sb} failed`, kb), GU(cb, sb, null, kb);
+        const Wb = Promise.reject(kb);
+        Wb.catch((() => {}));
+        const ab = {
+          name: sb,
           module: null,
-          built: tk
+          built: Wb
         };
-        return this.builds.set(kk, ak), ak
+        return this.builds.set(bb, ab), ab
       }
-      checkShaderPack(kk) {
-        return gb(kk, {
+      checkShaderPack(bb) {
+        return EU(bb, {
           device: this.device,
           target: this.target,
-          material: kk => this.materialFor(kk),
-          programKey: (kk, Fk, Bk) => this.programKey(kk, Fk, Bk),
-          pipelineBuild: (kk, Fk, Bk) => this.pipelineBuild(kk, Fk, Bk)
+          material: bb => this.materialFor(bb),
+          programKey: (bb, cb, sb) => this.programKey(bb, cb, sb),
+          pipelineBuild: (bb, cb, sb) => this.pipelineBuild(bb, cb, sb)
         })
       }
-      createBinding(kk, Fk, Bk) {
-        return this.target = Fk, {
-          renderable: kk,
-          pipeline: bF(this.device, Fk),
-          draw: kk => {
+      createBinding(bb, cb, sb) {
+        return this.target = cb, {
+          renderable: bb,
+          pipeline: Tc(this.device, cb),
+          draw: bb => {
             this.geometry.setDrawing(!0);
             try {
-              return Bk ? this.drawTransparent(kk, Fk) : this.drawOpaque(kk, Fk)
+              return sb ? this.drawTransparent(bb, cb) : this.drawOpaque(bb, cb)
             } finally {
               this.geometry.setDrawing(!1)
             }
           }
         }
       }
-      prepare(kk, Fk) {
-        var Bk, Rk, tk, ak;
+      prepare(bb, cb) {
+        var sb, kb, Wb, ab;
         const {
-          SJ: Xk
-        } = kk;
-        this.lighting = kk.bf;
-        const bk = (0, Jb.s)(Fk);
-        this.dirLightCount = Math.min(bk, 4), this.ie = null !== (Bk = Xk.ie) && void 0 !== Bk ? Bk : null, bk > 4 && this.warnOnce("dirLights", "Lite terrain lights with the first 4 directional lights only."), this.writeFrameUniforms(kk, Fk), this.animateMaterials(Fk.animTick);
-        const wk = Xk.CJ,
-          dk = wk[0] !== this.originOffset[0] || wk[1] !== this.originOffset[1] || wk[2] !== this.originOffset[2];
-        dk && (this.originOffset[0] = wk[0], this.originOffset[1] = wk[1], this.originOffset[2] = wk[2]);
-        const sk = Fk.eye;
-        this.eye[0] = sk[0], this.eye[1] = sk[1], this.eye[2] = sk[2], this.writeShaderPackInputs();
-        const Vk = Fk.projectionMatrix,
-          Jk = 0 === Vk[15];
-        let Ak = 0;
-        (dk || this.eye[0] !== this.faceEye[0] || this.eye[1] !== this.faceEye[1] || this.eye[2] !== this.faceEye[2]) && (this.faceEpoch++, this.faceEye[0] = this.eye[0], this.faceEye[1] = this.eye[1], this.faceEye[2] = this.eye[2]);
+          eX: Tb
+        } = bb;
+        this.lighting = bb.bQ;
+        const Ub = (0, nU.s)(cb);
+        this.dirLightCount = Math.min(Ub, 4), this.Qm = null !== (sb = Tb.Qm) && void 0 !== sb ? sb : null, Ub > 4 && this.warnOnce("dirLights", "Lite terrain lights with the first 4 directional lights only."), this.writeFrameUniforms(bb, cb), this.animateMaterials(cb.animTick);
+        const Ib = Tb.iX,
+          Hb = Ib[0] !== this.originOffset[0] || Ib[1] !== this.originOffset[1] || Ib[2] !== this.originOffset[2];
+        Hb && (this.originOffset[0] = Ib[0], this.originOffset[1] = Ib[1], this.originOffset[2] = Ib[2]);
+        const fb = cb.eye;
+        this.eye[0] = fb[0], this.eye[1] = fb[1], this.eye[2] = fb[2], this.writeShaderPackInputs();
+        const Mb = cb.projectionMatrix,
+          Xb = 0 === Mb[15];
+        let nb = 0;
+        (Hb || this.eye[0] !== this.faceEye[0] || this.eye[1] !== this.faceEye[1] || this.eye[2] !== this.faceEye[2]) && (this.faceEpoch++, this.faceEye[0] = this.eye[0], this.faceEye[1] = this.eye[1], this.faceEye[2] = this.eye[2]);
         let {
-          faceEpoch: ek
+          faceEpoch: mb
         } = this;
-        wF(this.transparentRenderable._worldCenter, Fk, aF), this.resetBatches(Jk), this.transparent.length = 0, this.unlit.length = 0;
-        const yk = Xk.iJ.I9,
-          fk = yk / 2 * Math.sqrt(3);
-        let mk = 0;
-        const Wk = !!this.ie && aR(this.ie.defineFor("liquid"));
-        let vk = !1;
-        const ik = null !== (Rk = null === (tk = Xk.VY) || void 0 === tk ? void 0 : tk.visibility) && void 0 !== Rk ? Rk : null,
-          Yk = this.visCull && Jk && 0 === this.compiling && null !== ik && Xk.iJ.lBk[0] >= this.visCullMinDistance ? this.target : null,
-          Lk = this.visPassable,
-          Ok = this.visCandidates,
-          Ek = this.visCandidateBatches;
-        Lk.clear(), this.visBatchDraws.clear(), this.visDrawsMaterial = null;
-        let Sk = 0;
+        Uc(this.transparentRenderable._worldCenter, cb, Wc), this.resetBatches(Xb), this.transparent.length = 0, this.unlit.length = 0;
+        const lb = Tb.fX.h_,
+          Qb = lb / 2 * Math.sqrt(3);
+        let eb = 0;
+        const Cb = !!this.Qm && Tk(this.Qm.defineFor("liquid"));
+        let Nb = !1;
+        const Vb = null !== (kb = null === (Wb = Tb.HV) || void 0 === Wb ? void 0 : Wb.visibility) && void 0 !== kb ? kb : null,
+          Lb = this.visCull && Xb && 0 === this.compiling && null !== Vb && Tb.fX.osb[0] >= this.visCullMinDistance ? this.target : null,
+          ub = this.visPassable,
+          Yb = this.visCandidates,
+          hb = this.visCandidateBatches;
+        ub.clear(), this.visBatchDraws.clear(), this.visDrawsMaterial = null;
+        let Jb = 0;
         this.visCulledParts = 0, this.visCulledTriangles = 0;
-        let Nk = 0;
-        const Hk = (kk, Bk) => {
-          if (!Bk) return this.transparent.push(kk), void(Nk += 2 * kk.faceCount);
-          if (null !== kk.faceGroups && Bk.faceCull) {
-            if (0 === Ak && (Ak = (0, rb.b)(Vk, Fk.renderWidth, Fk.renderHeight), Ak !== this.faceFocalPx && (this.faceFocalPx = Ak, ek = ++this.faceEpoch)), kk.faceEpoch !== ek) {
-              kk.faceEpoch = ek;
-              const Fk = Math.sqrt(kk.distance) + fk,
-                Bk = (0, rb.h)(kk.planePX, kk.planeNX, kk.planePY, kk.planeNY, kk.planePZ, kk.planeNZ, this.eye[0] - (kk.origin[0] - this.originOffset[0]), this.eye[1] - (kk.origin[1] - this.originOffset[1]), this.eye[2] - (kk.origin[2] - this.originOffset[2]), (0, rb.e)(Fk, Ak));
-              Bk !== kk.faceMask && this.chooseFaceRanges(kk, kk.faceGroups, Bk)
+        let gb = 0;
+        const Bb = (bb, sb) => {
+          if (!sb) return this.transparent.push(bb), void(gb += 2 * bb.faceCount);
+          if (null !== bb.faceGroups && sb.faceCull) {
+            if (0 === nb && (nb = (0, ZU.d)(Mb, cb.renderWidth, cb.renderHeight), nb !== this.faceFocalPx && (this.faceFocalPx = nb, mb = ++this.faceEpoch)), bb.faceEpoch !== mb) {
+              bb.faceEpoch = mb;
+              const cb = Math.sqrt(bb.distance) + Qb,
+                sb = (0, ZU.j)(bb.planePX, bb.planeNX, bb.planePY, bb.planeNY, bb.planePZ, bb.planeNZ, this.eye[0] - (bb.origin[0] - this.originOffset[0]), this.eye[1] - (bb.origin[1] - this.originOffset[1]), this.eye[2] - (bb.origin[2] - this.originOffset[2]), (0, ZU.f)(cb, nb));
+              sb !== bb.faceMask && this.chooseFaceRanges(bb, bb.faceGroups, sb)
             }
-            if (0 === kk.rangeCount) return
-          } else - 1 !== kk.faceMask && this.drawWhole(kk);
-          Bk.meshes.push(kk), Nk += 2 * ((kk.rangeCount > 0 ? kk.count0 : 0) + (kk.rangeCount > 1 ? kk.count1 : 0))
+            if (0 === bb.rangeCount) return
+          } else - 1 !== bb.faceMask && this.drawWhole(bb);
+          sb.meshes.push(bb), gb += 2 * ((bb.rangeCount > 0 ? bb.count0 : 0) + (bb.rangeCount > 1 ? bb.count1 : 0))
         };
-        for (const Mk of this.chunks.values()) {
-          dk && this.writeSlot(Mk);
-          const kk = Mk.mesh.visibility;
-          kk !== Mk.visibility && (Mk.visibility = kk, this.slots.setVisibility(Mk.slot, kk));
+        for (const yb of this.chunks.values()) {
+          Hb && this.writeSlot(yb);
+          const bb = yb.mesh.visibility;
+          bb !== yb.visibility && (yb.visibility = bb, this.slots.setVisibility(yb.slot, bb));
           const {
-            material: Bk
-          } = Mk;
-          this.geometry.lost(Mk) && performance.now() >= Mk.lostRetryAt && this.remeshLost(Xk, Mk);
-          const Rk = !(null === Bk || void 0 === Bk || !Bk.bindGroup) && this.geometry.backed(Mk),
-            tk = Rk && this.lighting && !Mk.vertices.page.twin;
-          if (Yk && (Number.isNaN(Mk.key) && (Mk.ci = Math.floor(Mk.origin[0] / yk), Mk.cj = Math.floor(Mk.origin[1] / yk), Mk.ck = Math.floor(Mk.origin[2] / yk), Mk.key = (0, zb.k)(Mk.ci, Mk.cj, Mk.ck)), (!Rk || kk < 1 || tk || !this.batchDraws(Bk, Mk.packed, Yk)) && this.visSeeThrough(Mk, Yk) && Lk.add(Mk.key)), !Rk) continue;
-          tk || (Mk.lostRemeshes = 0);
-          const ak = Mk.origin[0] - this.originOffset[0],
-            bk = Mk.origin[1] - this.originOffset[1],
-            wk = Mk.origin[2] - this.originOffset[2];
-          if (!(0, kb.e)(Fk.frustum, ak, bk, wk, yk)) continue;
-          const sk = ak + yk / 2 - this.eye[0],
-            Vk = bk + yk / 2 - this.eye[1],
-            Ak = wk + yk / 2 - this.eye[2];
-          if (Mk.distance = sk * sk + Vk * Vk + Ak * Ak, this.lighting && !Mk.lit && (mk = Math.max(mk, Mk.vertexCount), this.unlit.push(Mk)), tk) continue;
-          const ek = this.isBlended(Bk) ? null : this.batchFor(Bk, Mk.packed, Mk.vertices.page, 1 === kk, Jk);
-          Yk ? (Ok[Sk] = Mk, Ek[Sk++] = ek) : Hk(Mk, ek)
+            material: sb
+          } = yb;
+          this.geometry.lost(yb) && performance.now() >= yb.lostRetryAt && this.remeshLost(Tb, yb);
+          const kb = !(null === sb || void 0 === sb || !sb.bindGroup) && this.geometry.backed(yb),
+            Wb = kb && this.lighting && !yb.vertices.page.twin;
+          if (Lb && (Number.isNaN(yb.key) && (yb.ci = Math.floor(yb.origin[0] / lb), yb.cj = Math.floor(yb.origin[1] / lb), yb.ck = Math.floor(yb.origin[2] / lb), yb.key = (0, qU.g)(yb.ci, yb.cj, yb.ck)), (!kb || bb < 1 || Wb || !this.batchDraws(sb, yb.packed, Lb)) && this.visSeeThrough(yb, Lb) && ub.add(yb.key)), !kb) continue;
+          Wb || (yb.lostRemeshes = 0);
+          const ab = yb.origin[0] - this.originOffset[0],
+            Ub = yb.origin[1] - this.originOffset[1],
+            Ib = yb.origin[2] - this.originOffset[2];
+          if (!(0, cU.c)(cb.frustum, ab, Ub, Ib, lb)) continue;
+          const fb = ab + lb / 2 - this.eye[0],
+            Mb = Ub + lb / 2 - this.eye[1],
+            nb = Ib + lb / 2 - this.eye[2];
+          if (yb.distance = fb * fb + Mb * Mb + nb * nb, this.lighting && !yb.lit && (eb = Math.max(eb, yb.vertexCount), this.unlit.push(yb)), Wb) continue;
+          const mb = this.isBlended(sb) ? null : this.batchFor(sb, yb.packed, yb.vertices.page, 1 === bb, Xb);
+          Lb ? (Yb[Jb] = yb, hb[Jb++] = mb) : Bb(yb, mb)
         }
-        const uk = Yk ? this.sweepVisibility(kk, Fk, ik) : null;
-        null === (ak = (0, Ma.z)(Xk)) || void 0 === ak || ak.update(Fk.frustum, this.originOffset, yk, uk);
-        for (let Mk = 0; Mk < Sk; Mk++) {
-          const kk = Ok[Mk];
-          !uk || uk.isDrawn(kk.ci, kk.cj, kk.ck) ? Hk(kk, Ek[Mk]) : (this.visCulledParts++, this.visCulledTriangles += 2 * kk.faceCount)
+        const tb = Lb ? this.sweepVisibility(bb, cb, Vb) : null;
+        null === (ab = (0, Da.z)(Tb)) || void 0 === ab || ab.update(cb.frustum, this.originOffset, lb, tb);
+        for (let yb = 0; yb < Jb; yb++) {
+          const bb = Yb[yb];
+          !tb || tb.isDrawn(bb.ci, bb.cj, bb.ck) ? Bb(bb, hb[yb]) : (this.visCulledParts++, this.visCulledTriangles += 2 * bb.faceCount)
         }
-        for (const Mk of this.transparent) vk ||= Wk && Mk.material.liquid && !Mk.material.customRenderMat;
-        this.submittedTriangles = Nk, uk && this.visCheck && ++this.visCheckFrame >= 60 && (this.visCheckFrame = 0, this.runVisCheck(kk, Fk, uk)), this.slots.flush(), this.sceneDepth ? this.sceneDepth.setWanted(vk) : vk && this.warnOnce("sceneDepth", "Lite: a shader pack reads scene depth on a page that didn't turn it on, so liquids find nothing behind them"), this.lighting && mk > 0 && this.geometry.lightFullSky(this.unlit, mk);
-        for (const Mk of this.opaqueBatches) this.chunkSorter.sort(Mk.meshes, 1) || Mk.meshes.sort(lb);
-        this.orderBatches(), this.chunkSorter.sort(this.transparent, -1) || this.transparent.sort(nb)
+        for (const yb of this.transparent) Nb ||= Cb && yb.material.liquid && !yb.material.customRenderMat;
+        this.submittedTriangles = gb, tb && this.visCheck && ++this.visCheckFrame >= 60 && (this.visCheckFrame = 0, this.runVisCheck(bb, cb, tb)), this.slots.flush(), this.sceneDepth ? this.sceneDepth.setWanted(Nb) : Nb && this.warnOnce("sceneDepth", "Lite: a shader pack reads scene depth on a page that didn't turn it on, so liquids find nothing behind them"), this.lighting && eb > 0 && this.geometry.lightFullSky(this.unlit, eb);
+        for (const yb of this.opaqueBatches) this.chunkSorter.sort(yb.meshes, 1) || yb.meshes.sort(xU);
+        this.orderBatches(), this.chunkSorter.sort(this.transparent, -1) || this.transparent.sort(jU)
       }
-      sweepVisibility(kk, Fk, Bk) {
+      sweepVisibility(bb, cb, sb) {
         const {
-          iJ: Rk
-        } = kk.SJ, tk = Rk.I9, ak = this.visPassable, Xk = this.eye[0] + this.originOffset[0], bk = this.eye[1] + this.originOffset[1], wk = this.eye[2] + this.originOffset[2];
-        if (!Bk.eyeClear(Xk, bk, wk, Fk.near, Fk.projectionMatrix, Rk)) return null;
-        const [dk, sk] = Rk.lBk, Vk = Bk.update(Xk, bk, wk, tk, dk, sk, ak);
-        return this.visSweeps = Bk.sweeps, Vk ? Bk : null
+          fX: kb
+        } = bb.eX, Wb = kb.h_, ab = this.visPassable, Tb = this.eye[0] + this.originOffset[0], Ub = this.eye[1] + this.originOffset[1], Ib = this.eye[2] + this.originOffset[2];
+        if (!sb.eyeClear(Tb, Ub, Ib, cb.near, cb.projectionMatrix, kb)) return null;
+        const [Hb, fb] = kb.osb, Mb = sb.update(Tb, Ub, Ib, Wb, Hb, fb, ab);
+        return this.visSweeps = sb.sweeps, Mb ? sb : null
       }
-      visSeeThrough(kk, Fk) {
+      visSeeThrough(bb, cb) {
         const {
-          material: Bk
-        } = kk;
-        return (!Bk || !this.isBlended(Bk)) && (kk.mesh.visibility < 1 || !(null !== Bk && void 0 !== Bk && Bk.bindGroup) || kk.faceCount > 0 && (!this.geometry.backed(kk) || this.lighting && !kk.vertices.page.twin) || !this.batchDraws(Bk, kk.packed, Fk))
+          material: sb
+        } = bb;
+        return (!sb || !this.isBlended(sb)) && (bb.mesh.visibility < 1 || !(null !== sb && void 0 !== sb && sb.bindGroup) || bb.faceCount > 0 && (!this.geometry.backed(bb) || this.lighting && !bb.vertices.page.twin) || !this.batchDraws(sb, bb.packed, cb))
       }
-      batchDraws(kk, Fk, Bk) {
-        var Rk;
-        const tk = Fk ? 2 : 0;
-        if (kk === this.visDrawsMaterial && function(kk, Fk) {
-            return 0 !== (kk & 1 << Fk)
-          }(this.visDrawsBits, tk)) return 0 !== (this.visDrawsBits & 2 << tk);
-        let ak = null !== (Rk = this.visBatchDraws.get(kk)) && void 0 !== Rk ? Rk : 0;
-        if (!(ak & 1 << tk)) {
-          ak |= 1 << tk | (!!kk.bindGroupLayout && this.canDraw(kk, Fk) && !!this.pipelines.get(this.pipelineId(kk, this.programKey(kk, Fk), Bk)) ? 2 << tk : 0), this.visBatchDraws.set(kk, ak)
+      batchDraws(bb, cb, sb) {
+        var kb;
+        const Wb = cb ? 2 : 0;
+        if (bb === this.visDrawsMaterial && function(bb, cb) {
+            return 0 !== (bb & 1 << cb)
+          }(this.visDrawsBits, Wb)) return 0 !== (this.visDrawsBits & 2 << Wb);
+        let ab = null !== (kb = this.visBatchDraws.get(bb)) && void 0 !== kb ? kb : 0;
+        if (!(ab & 1 << Wb)) {
+          ab |= 1 << Wb | (!!bb.bindGroupLayout && this.canDraw(bb, cb) && !!this.pipelines.get(this.pipelineId(bb, this.programKey(bb, cb), sb)) ? 2 << Wb : 0), this.visBatchDraws.set(bb, ab)
         }
-        return this.visDrawsMaterial = kk, this.visDrawsBits = ak, 0 !== (ak & 2 << tk)
+        return this.visDrawsMaterial = bb, this.visDrawsBits = ab, 0 !== (ab & 2 << Wb)
       }
-      runVisCheck(kk, Fk, Bk) {
+      runVisCheck(bb, cb, sb) {
         const {
-          SJ: Rk
-        } = kk, {
-          iJ: tk
-        } = Rk, ak = tk.I9, Xk = new Set;
-        for (const Ak of this.chunks.values()) Xk.add(Ak.key);
-        const bk = Yt.Matrix.FromArray(Fk.viewProjectionMatrix).invert(),
-          [wk, dk, sk] = this.originOffset,
-          Vk = new Yt.Qe,
-          Jk = function(kk, Fk, Bk, Rk) {
-            const tk = new Set;
-            for (let ak = 0; ak < 27; ak++)
-              for (let Xk = 0; Xk < 48; Xk++) {
-                const bk = Bk((Xk + .5) / 48 * 2 - 1, (ak + .5) / 27 * 2 - 1);
-                Pb(kk, Fk, [bk[0] - Fk[0], bk[1] - Fk[1], bk[2] - Fk[2]], Rk, tk)
+          eX: kb
+        } = bb, {
+          fX: Wb
+        } = kb, ab = Wb.h_, Tb = new Set;
+        for (const nb of this.chunks.values()) Tb.add(nb.key);
+        const Ub = uW.Matrix.FromArray(cb.viewProjectionMatrix).invert(),
+          [Ib, Hb, fb] = this.originOffset,
+          Mb = new uW.Fm,
+          Xb = function(bb, cb, sb, kb) {
+            const Wb = new Set;
+            for (let ab = 0; ab < 27; ab++)
+              for (let Tb = 0; Tb < 48; Tb++) {
+                const Ub = sb((Tb + .5) / 48 * 2 - 1, (ab + .5) / 27 * 2 - 1);
+                dU(bb, cb, [Ub[0] - cb[0], Ub[1] - cb[1], Ub[2] - cb[2]], kb, Wb)
               }
-            return tk
+            return Wb
           }({
-            Yz: (kk, Fk, Bk) => tk.Yz(kk, Fk, Bk),
-            occluders: Bk.occluders,
-            opaque: Bk.opaque,
-            Ze: ak,
-            isDrawn: (kk, Fk, Rk) => Bk.isDrawn(kk, Fk, Rk),
-            hasParts: (kk, Fk, Bk) => Xk.has((0, zb.k)(kk, Fk, Bk))
-          }, [this.eye[0] + wk, this.eye[1] + dk, this.eye[2] + sk], ((kk, Fk) => (Yt.Qe.TransformCoordinatesFromFloatsToRef(kk, Fk, .5, bk, Vk), [Vk.x + wk, Vk.y + dk, Vk.z + sk])), (tk.lBk[0] + 1) * ak);
-        this.visViolations = Jk.size;
-        for (const Ak of Jk) this.warnOnce(`vis:${Ak}`, `Lite terrain cave culling skipped chunk ${Ak}, which a ray from the eye reaches.`)
+            hG: (bb, cb, sb) => Wb.hG(bb, cb, sb),
+            occluders: sb.occluders,
+            opaque: sb.opaque,
+            qm: ab,
+            isDrawn: (bb, cb, kb) => sb.isDrawn(bb, cb, kb),
+            hasParts: (bb, cb, sb) => Tb.has((0, qU.g)(bb, cb, sb))
+          }, [this.eye[0] + Ib, this.eye[1] + Hb, this.eye[2] + fb], ((bb, cb) => (uW.Fm.TransformCoordinatesFromFloatsToRef(bb, cb, .5, Ub, Mb), [Mb.x + Ib, Mb.y + Hb, Mb.z + fb])), (Wb.osb[0] + 1) * ab);
+        this.visViolations = Xb.size;
+        for (const nb of Xb) this.warnOnce(`vis:${nb}`, `Lite terrain cave culling skipped chunk ${nb}, which a ray from the eye reaches.`)
       }
       writeShaderPackInputs() {
-        var kk;
-        null !== (kk = this.ie) && void 0 !== kk && kk.isRunning() && (this.shaderPackInputs ??= new Ca(this.device, this.ie.textureLayers(), this.sunShadow), this.shaderPackInputs.write(this.ie, this.eye, this.lighting))
+        var bb;
+        null !== (bb = this.Qm) && void 0 !== bb && bb.isRunning() && (this.shaderPackInputs ??= new ra(this.device, this.Qm.textureLayers(), this.sunShadow), this.shaderPackInputs.write(this.Qm, this.eye, this.lighting))
       }
-      bindShaderPackInputs(kk, Fk, Bk) {
-        var Rk, tk, ak, Xk;
-        let bk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      bindShaderPackInputs(bb, cb, sb) {
+        var kb, Wb, ab, Tb;
+        let Ub = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
         const {
-          packVariant: wk
-        } = this.shaderPackFields(Fk, Bk);
-        if (void 0 === wk) return;
-        this.shaderPackInputs || (this.shaderPackInputs = new Ca(this.device, Bk.textureLayers(), this.sunShadow), this.shaderPackInputs.write(Bk, this.eye, this.lighting));
-        const dk = aR(wk) ? null !== (Rk = null === (tk = this.sceneDepth) || void 0 === tk ? void 0 : tk.view) && void 0 !== Rk ? Rk : this.standIn() : null,
-          sk = bk ? null !== (ak = null === (Xk = this.shadowMask) || void 0 === Xk ? void 0 : Xk.view) && void 0 !== ak ? ak : this.standIn() : null;
-        this.shaderPackInputs.bind(kk, dk, ha(wk, !!this.sunShadow), sk)
+          packVariant: Ib
+        } = this.shaderPackFields(cb, sb);
+        if (void 0 === Ib) return;
+        this.shaderPackInputs || (this.shaderPackInputs = new ra(this.device, sb.textureLayers(), this.sunShadow), this.shaderPackInputs.write(sb, this.eye, this.lighting));
+        const Hb = Tk(Ib) ? null !== (kb = null === (Wb = this.sceneDepth) || void 0 === Wb ? void 0 : Wb.view) && void 0 !== kb ? kb : this.standIn() : null,
+          fb = Ub ? null !== (ab = null === (Tb = this.shadowMask) || void 0 === Tb ? void 0 : Tb.view) && void 0 !== ab ? ab : this.standIn() : null;
+        this.shaderPackInputs.bind(bb, Hb, Aa(Ib, !!this.sunShadow), fb)
       }
       standIn() {
         return this.depthStandIn ??= this.device.createTexture({
@@ -6713,774 +6713,774 @@ export const modules = {
         }).createView()
       }
       sunShadowGroup() {
-        var kk, Fk;
-        return null !== (kk = null === (Fk = this.shaderPackInputs) || void 0 === Fk ? void 0 : Fk.bindGroupFor(null, !0)) && void 0 !== kk ? kk : null
+        var bb, cb;
+        return null !== (bb = null === (cb = this.shaderPackInputs) || void 0 === cb ? void 0 : cb.bindGroupFor(null, !0)) && void 0 !== bb ? bb : null
       }
-      resetBatches(kk) {
-        const Fk = this.opaqueBatches;
-        let Bk = 0;
-        for (const Rk of Fk) Rk.meshes.length > 0 && (Rk.meshes.length = 0, Rk.faceCull = this.batchFaceCull(Rk.material, kk), Fk[Bk++] = Rk);
-        Fk.length = Bk
+      resetBatches(bb) {
+        const cb = this.opaqueBatches;
+        let sb = 0;
+        for (const kb of cb) kb.meshes.length > 0 && (kb.meshes.length = 0, kb.faceCull = this.batchFaceCull(kb.material, bb), cb[sb++] = kb);
+        cb.length = sb
       }
       orderBatches() {
-        const kk = this.opaqueBatches;
-        for (let Fk = 0; Fk < kk.length; Fk++) {
-          const Bk = kk[Fk];
-          Bk.group = Fk;
-          for (let Rk = 0; Rk < Fk; Rk++) {
-            const Fk = kk[Rk];
-            if (Fk.material === Bk.material && Fk.packed === Bk.packed) {
-              Bk.group = Fk.group;
+        const bb = this.opaqueBatches;
+        for (let cb = 0; cb < bb.length; cb++) {
+          const sb = bb[cb];
+          sb.group = cb;
+          for (let kb = 0; kb < cb; kb++) {
+            const cb = bb[kb];
+            if (cb.material === sb.material && cb.packed === sb.packed) {
+              sb.group = cb.group;
               break
             }
           }
-          Bk.nearest = Bk.meshes.length > 0 ? Bk.meshes[0].distance : 1 / 0
+          sb.nearest = sb.meshes.length > 0 ? sb.meshes[0].distance : 1 / 0
         }
-        kk.sort(hb)
+        bb.sort(AU)
       }
-      batchFor(kk, Fk, Bk, Rk, tk) {
-        for (const Xk of this.opaqueBatches)
-          if (Xk.material === kk && Xk.packed === Fk && Xk.page === Bk && Xk.resting === Rk) return Xk;
-        const ak = {
-          material: kk,
-          packed: Fk,
-          page: Bk,
-          resting: Rk,
+      batchFor(bb, cb, sb, kb, Wb) {
+        for (const Tb of this.opaqueBatches)
+          if (Tb.material === bb && Tb.packed === cb && Tb.page === sb && Tb.resting === kb) return Tb;
+        const ab = {
+          material: bb,
+          packed: cb,
+          page: sb,
+          resting: kb,
           meshes: [],
           group: 0,
           nearest: 0,
-          faceCull: this.batchFaceCull(kk, tk)
+          faceCull: this.batchFaceCull(bb, Wb)
         };
-        return this.opaqueBatches.push(ak), ak
+        return this.opaqueBatches.push(ab), ab
       }
-      batchFaceCull(kk, Fk) {
-        return !(!Fk || !(0, Tb.u)(kk.model)) && (!this.ie || ! function(kk) {
-          var Fk;
-          return !(null === (Fk = (0, HF.f)(kk)) || void 0 === Fk || !Fk.movesVertices)
-        }(this.shaderPackFields(kk, this.ie).packVariant))
+      batchFaceCull(bb, cb) {
+        return !(!cb || !(0, KU.n)(bb.model)) && (!this.Qm || ! function(bb) {
+          var cb;
+          return !(null === (cb = (0, Bc.e)(bb)) || void 0 === cb || !cb.movesVertices)
+        }(this.shaderPackFields(bb, this.Qm).packVariant))
       }
-      writeFrameUniforms(kk, Fk) {
-        const Bk = this.frameUniforms,
-          Rk = VR;
-        if ((0, Jb.v)(kk, Bk), Bk[Rk.fogInfos] = Fk.fogEnabled ? Fk.fogMode : 0, Bk[Rk.fogInfos + 1] = Fk.fogStart, Bk[Rk.fogInfos + 2] = Fk.fogEnd, Bk[Rk.fogInfos + 3] = Fk.fogDensity, Bk.set(Fk.fogColour, Rk.fogColour), Bk[Rk.outputHeight] = Fk.renderHeight, Bk.set(Fk.ambientColour, Rk.sceneAmbient), (0, Jb.p)(Fk, this.dirLightCount, this.dirLightUniforms), !this.aoLevelsWritten) {
-          const Fk = (0, Ab.f)(kk.Ey, kk.xe, kk.je);
-          for (let kk = 0; kk < 4; kk++) Bk[Rk.aoLevels + kk] = Fk[kk] / 255;
+      writeFrameUniforms(bb, cb) {
+        const sb = this.frameUniforms,
+          kb = Xk;
+        if ((0, nU.u)(bb, sb), sb[kb.fogInfos] = cb.fogEnabled ? cb.fogMode : 0, sb[kb.fogInfos + 1] = cb.fogStart, sb[kb.fogInfos + 2] = cb.fogEnd, sb[kb.fogInfos + 3] = cb.fogDensity, sb.set(cb.fogColour, kb.fogColour), sb[kb.outputHeight] = cb.renderHeight, sb.set(cb.ambientColour, kb.sceneAmbient), (0, nU.q)(cb, this.dirLightCount, this.dirLightUniforms), !this.aoLevelsWritten) {
+          const cb = (0, mU.j)(bb.Vl, bb.wm, bb.rm);
+          for (let bb = 0; bb < 4; bb++) sb[kb.aoLevels + bb] = cb[bb] / 255;
           this.aoLevelsWritten = !0
         }
-        this.device.queue.writeBuffer(this.frameBuffer, 0, Bk)
+        this.device.queue.writeBuffer(this.frameBuffer, 0, sb)
       }
-      animateMaterials(kk) {
-        const Fk = AR.anim;
-        for (const Bk of this.materials.values()) Bk.animated && (Bk.uniformData[Fk] = kk, this.device.queue.writeBuffer(Bk.uniformBuffer, 4 * Fk, Bk.uniformData, Fk, 1))
+      animateMaterials(bb) {
+        const cb = mk.anim;
+        for (const sb of this.materials.values()) sb.animated && (sb.uniformData[cb] = bb, this.device.queue.writeBuffer(sb.uniformBuffer, 4 * cb, sb.uniformData, cb, 1))
       }
-      canDraw(kk, Fk) {
-        return !("atlas" === kk.texture && !Fk) || (this.warnOnce(`stride:${kk.id}`, `Lite terrain: material "${kk.model.name}" samples the atlas but its mesh has no quad records, which hold its atlas indices.`), !1)
+      canDraw(bb, cb) {
+        return !("atlas" === bb.texture && !cb) || (this.warnOnce(`stride:${bb.id}`, `Lite terrain: material "${bb.model.name}" samples the atlas but its mesh has no quad records, which hold its atlas indices.`), !1)
       }
-      drawOpaque(kk, Fk) {
-        let Bk = 0;
-        kk.setBindGroup(1, this.frameBindGroup);
-        for (const Rk of this.opaqueBatches) {
-          if (!Rk.meshes.length || !this.canDraw(Rk.material, Rk.packed)) continue;
-          const tk = this.pipelineFor(Rk.material, Rk.packed, Fk, Rk.resting);
-          tk && (kk.setPipeline(tk), kk.setBindGroup(2, Rk.material.bindGroup), this.ie && this.bindShaderPackInputs(kk, Rk.material, this.ie, this.prepassOf.has(tk)), Bk += this.drawBatch(kk, Rk))
+      drawOpaque(bb, cb) {
+        let sb = 0;
+        bb.setBindGroup(1, this.frameBindGroup);
+        for (const kb of this.opaqueBatches) {
+          if (!kb.meshes.length || !this.canDraw(kb.material, kb.packed)) continue;
+          const Wb = this.pipelineFor(kb.material, kb.packed, cb, kb.resting);
+          Wb && (bb.setPipeline(Wb), bb.setBindGroup(2, kb.material.bindGroup), this.Qm && this.bindShaderPackInputs(bb, kb.material, this.Qm, this.prepassOf.has(Wb)), sb += this.drawBatch(bb, kb))
         }
-        return Bk
+        return sb
       }
       get readsMask() {
         return this.maskPipelines > 0
       }
-      drawPrepass(kk, Fk, Bk) {
-        const Rk = this.target,
-          tk = this.ie;
-        if (!Rk || !tk || 0 === this.maskPipelines) return 0;
-        let ak = 0,
-          Xk = null;
+      drawPrepass(bb, cb, sb) {
+        const kb = this.target,
+          Wb = this.Qm;
+        if (!kb || !Wb || 0 === this.maskPipelines) return 0;
+        let ab = 0,
+          Tb = null;
         this.geometry.setDrawing(!0);
         try {
-          for (const bk of this.opaqueBatches) {
-            if (!bk.meshes.length || !this.canDraw(bk.material, bk.packed)) continue;
-            const wk = this.pipelineFor(bk.material, bk.packed, Rk, bk.resting),
-              dk = wk && this.prepassOf.get(wk);
-            dk && (Xk || (Xk = kk.beginRenderPass(Fk), Xk.setBindGroup(0, Bk), Xk.setBindGroup(1, this.frameBindGroup)), Xk.setPipeline(dk), Xk.setBindGroup(2, bk.material.bindGroup), this.bindShaderPackInputs(Xk, bk.material, tk, !0), ak += this.drawBatch(Xk, bk))
+          for (const Ub of this.opaqueBatches) {
+            if (!Ub.meshes.length || !this.canDraw(Ub.material, Ub.packed)) continue;
+            const Ib = this.pipelineFor(Ub.material, Ub.packed, kb, Ub.resting),
+              Hb = Ib && this.prepassOf.get(Ib);
+            Hb && (Tb || (Tb = bb.beginRenderPass(cb), Tb.setBindGroup(0, sb), Tb.setBindGroup(1, this.frameBindGroup)), Tb.setPipeline(Hb), Tb.setBindGroup(2, Ub.material.bindGroup), this.bindShaderPackInputs(Tb, Ub.material, Wb, !0), ab += this.drawBatch(Tb, Ub))
           }
         } finally {
-          var bk;
-          null === (bk = Xk) || void 0 === bk || bk.end(), this.geometry.setDrawing(!1)
+          var Ub;
+          null === (Ub = Tb) || void 0 === Ub || Ub.end(), this.geometry.setDrawing(!1)
         }
-        return ak
+        return ab
       }
-      drawBatch(kk, Fk) {
-        let Bk = 0;
-        for (const Rk of Fk.meshes) {
+      drawBatch(bb, cb) {
+        let sb = 0;
+        for (const kb of cb.meshes) {
           const {
-            rangeCount: Fk
-          } = Rk;
-          Fk > 0 && (Bk += this.geometry.draw(kk, Rk, this.lighting, Rk.first0, Rk.count0), Fk > 1 && (Bk += this.geometry.draw(kk, Rk, this.lighting, Rk.first1, Rk.count1)))
+            rangeCount: cb
+          } = kb;
+          cb > 0 && (sb += this.geometry.draw(bb, kb, this.lighting, kb.first0, kb.count0), cb > 1 && (sb += this.geometry.draw(bb, kb, this.lighting, kb.first1, kb.count1)))
         }
-        return Bk
+        return sb
       }
-      drawTransparent(kk, Fk) {
-        let Bk = 0,
-          Rk = null,
-          tk = null;
-        kk.setBindGroup(1, this.frameBindGroup);
-        for (const ak of this.transparent) {
-          const Xk = ak.material;
-          if (!this.canDraw(Xk, ak.packed)) continue;
-          const bk = this.pipelineFor(Xk, ak.packed, Fk);
-          bk && (bk !== Rk && (kk.setPipeline(bk), Rk = bk, this.ie && this.bindShaderPackInputs(kk, Xk, this.ie)), Xk !== tk && (kk.setBindGroup(2, Xk.bindGroup), tk = Xk), Bk += this.geometry.draw(kk, ak, this.lighting))
+      drawTransparent(bb, cb) {
+        let sb = 0,
+          kb = null,
+          Wb = null;
+        bb.setBindGroup(1, this.frameBindGroup);
+        for (const ab of this.transparent) {
+          const Tb = ab.material;
+          if (!this.canDraw(Tb, ab.packed)) continue;
+          const Ub = this.pipelineFor(Tb, ab.packed, cb);
+          Ub && (Ub !== kb && (bb.setPipeline(Ub), kb = Ub, this.Qm && this.bindShaderPackInputs(bb, Tb, this.Qm)), Tb !== Wb && (bb.setBindGroup(2, Tb.bindGroup), Wb = Tb), sb += this.geometry.draw(bb, ab, this.lighting))
         }
-        return Bk
+        return sb
       }
     }
 
-    function jb(kk, Fk, Bk, Rk) {
-      return `${uR(kk)}|${kk.atlasLayers}|${kk.Vl}|${Fk}|${Bk}|${Rk._colorFormat}|${Rk._depthStencilFormat}|${Rk._sampleCount}`
+    function FU(bb, cb, sb, kb) {
+      return `${Pk(bb)}|${bb.atlasLayers}|${bb.uR}|${cb}|${sb}|${kb._colorFormat}|${kb._depthStencilFormat}|${kb._sampleCount}`
     }
 
-    function lb(kk, Fk) {
-      return kk.distance - Fk.distance
+    function xU(bb, cb) {
+      return bb.distance - cb.distance
     }
 
-    function nb(kk, Fk) {
-      return Fk.distance - kk.distance
+    function jU(bb, cb) {
+      return cb.distance - bb.distance
     }
-    class Ib {
+    class pU {
       constructor() {
         this.left = []
       }
-      sort(kk, Fk) {
-        for (let Bk = 0; Bk < kk.length; Bk++) {
-          const Fk = kk[Bk].distance;
-          if (Fk - Fk !== 0) return !1
+      sort(bb, cb) {
+        for (let sb = 0; sb < bb.length; sb++) {
+          const cb = bb[sb].distance;
+          if (cb - cb !== 0) return !1
         }
-        return this.sortRange(kk, 0, kk.length, Fk), !0
+        return this.sortRange(bb, 0, bb.length, cb), !0
       }
-      sortRange(kk, Fk, Bk, Rk) {
-        if (Bk - Fk <= 16) {
-          for (let tk = Fk + 1; tk < Bk; tk++) {
-            const Bk = kk[tk],
-              ak = Rk * Bk.distance;
-            let Xk = tk - 1;
-            for (; Xk >= Fk && Rk * kk[Xk].distance > ak; Xk--) kk[Xk + 1] = kk[Xk];
-            kk[Xk + 1] = Bk
+      sortRange(bb, cb, sb, kb) {
+        if (sb - cb <= 16) {
+          for (let Wb = cb + 1; Wb < sb; Wb++) {
+            const sb = bb[Wb],
+              ab = kb * sb.distance;
+            let Tb = Wb - 1;
+            for (; Tb >= cb && kb * bb[Tb].distance > ab; Tb--) bb[Tb + 1] = bb[Tb];
+            bb[Tb + 1] = sb
           }
           return
         }
-        const tk = Fk + Bk >>> 1;
-        if (this.sortRange(kk, Fk, tk, Rk), this.sortRange(kk, tk, Bk, Rk), Rk * kk[tk - 1].distance <= Rk * kk[tk].distance) return;
+        const Wb = cb + sb >>> 1;
+        if (this.sortRange(bb, cb, Wb, kb), this.sortRange(bb, Wb, sb, kb), kb * bb[Wb - 1].distance <= kb * bb[Wb].distance) return;
         const {
-          left: ak
-        } = this, Xk = tk - Fk;
-        for (let sk = 0; sk < Xk; sk++) ak[sk] = kk[Fk + sk];
-        let bk = 0,
-          wk = tk,
-          dk = Fk;
-        for (; bk < Xk && wk < Bk;) kk[dk++] = Rk * kk[wk].distance < Rk * ak[bk].distance ? kk[wk++] : ak[bk++];
-        for (; bk < Xk;) kk[dk++] = ak[bk++]
+          left: ab
+        } = this, Tb = Wb - cb;
+        for (let fb = 0; fb < Tb; fb++) ab[fb] = bb[cb + fb];
+        let Ub = 0,
+          Ib = Wb,
+          Hb = cb;
+        for (; Ub < Tb && Ib < sb;) bb[Hb++] = kb * bb[Ib].distance < kb * ab[Ub].distance ? bb[Ib++] : ab[Ub++];
+        for (; Ub < Tb;) bb[Hb++] = ab[Ub++]
       }
     }
-    const Qb = Math.ceil(102);
+    const bI = Math.ceil(102);
 
-    function kw(kk, Fk, Bk, Rk) {
-      let tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Fk;
-      const ak = Math.min(Fk, Bk),
-        Xk = new Uint32Array(FB(Rk));
-      for (let bk = 0; bk < Rk; bk++) {
-        const Fk = Math.floor(bk * ak / Rk),
-          Bk = Math.max(Fk + 1, Math.floor((bk + 1) * ak / Rk));
-        for (let wk = 0; wk < Rk; wk++) {
-          const dk = Math.floor(wk * ak / Rk),
-            sk = Math.max(dk + 1, Math.floor((wk + 1) * ak / Rk));
-          let Vk = 0;
-          for (let Rk = Fk; Rk < Bk; Rk++)
-            for (let Fk = dk; Fk < sk; Fk++) kk[Rk * tk + Fk] >= Qb && Vk++;
-          if (2 * Vk >= (Bk - Fk) * (sk - dk)) {
-            const kk = wk + Rk * bk;
-            Xk[kk >>> 5] |= 1 << (31 & kk)
+    function cI(bb, cb, sb, kb) {
+      let Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : cb;
+      const ab = Math.min(cb, sb),
+        Tb = new Uint32Array(bs(kb));
+      for (let Ub = 0; Ub < kb; Ub++) {
+        const cb = Math.floor(Ub * ab / kb),
+          sb = Math.max(cb + 1, Math.floor((Ub + 1) * ab / kb));
+        for (let Ib = 0; Ib < kb; Ib++) {
+          const Hb = Math.floor(Ib * ab / kb),
+            fb = Math.max(Hb + 1, Math.floor((Ib + 1) * ab / kb));
+          let Mb = 0;
+          for (let kb = cb; kb < sb; kb++)
+            for (let cb = Hb; cb < fb; cb++) bb[kb * Wb + cb] >= bI && Mb++;
+          if (2 * Mb >= (sb - cb) * (fb - Hb)) {
+            const bb = Ib + kb * Ub;
+            Tb[bb >>> 5] |= 1 << (31 & bb)
           }
         }
       }
-      return Xk
+      return Tb
     }
 
-    function Fw(kk) {
-      return Math.max(1, Math.min(16, kk))
+    function sI(bb) {
+      return Math.max(1, Math.min(16, bb))
     }
-    class Bw {
-      constructor(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : console.warn;
-        this.sink = kk, this.loadTexture = Fk, this.warn = Bk, this.blockCaster = new Uint16Array(1), this.builtVersion = -1, this.byKey = new Map, this.nextCaster = 1, this.nextMaskWord = 0, this.warned = new Set, this.textures = new Map, this.loads = [], this.pending = Promise.resolve(), this.planesLoading = 0
+    class kI {
+      constructor(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : console.warn;
+        this.sink = bb, this.loadTexture = cb, this.warn = sb, this.blockCaster = new Uint16Array(1), this.builtVersion = -1, this.byKey = new Map, this.nextCaster = 1, this.nextMaskWord = 0, this.warned = new Set, this.textures = new Map, this.loads = [], this.pending = Promise.resolve(), this.planesLoading = 0
       }
-      update(kk, Fk) {
-        return (kk.iG !== this.builtVersion || this.blockCaster.length !== Fk) && (this.build(kk, Fk), !0)
+      update(bb, cb) {
+        return (bb.nD !== this.builtVersion || this.blockCaster.length !== cb) && (this.build(bb, cb), !0)
       }
-      build(kk, Fk) {
-        this.builtVersion = kk.iG;
-        const Bk = new Uint16Array(Fk),
-          Rk = new Map;
-        for (let tk = 1; tk < Fk; tk++) {
-          const Fk = this.classify(kk, tk, Rk);
-          if (null === Fk || Fk === lF) {
-            Bk[tk] = null === Fk ? 0 : lF;
+      build(bb, cb) {
+        this.builtVersion = bb.nD;
+        const sb = new Uint16Array(cb),
+          kb = new Map;
+        for (let Wb = 1; Wb < cb; Wb++) {
+          const cb = this.classify(bb, Wb, kb);
+          if (null === cb || cb === vc) {
+            sb[Wb] = null === cb ? 0 : vc;
             continue
           }
-          let ak = this.byKey.get(Fk.key);
-          void 0 === ak && (ak = this.allocate(Fk), this.byKey.set(Fk.key, ak)), Bk[tk] = ak
+          let ab = this.byKey.get(cb.key);
+          void 0 === ab && (ab = this.allocate(cb), this.byKey.set(cb.key, ab)), sb[Wb] = ab
         }
-        this.blockCaster = Bk, this.pending = Promise.all(this.loads).then((() => {}))
+        this.blockCaster = sb, this.pending = Promise.all(this.loads).then((() => {}))
       }
-      option(kk, Fk) {
-        const Bk = kk.xI[Fk];
-        if ("function" !== typeof Bk) return Bk;
+      option(bb, cb) {
+        const sb = bb.lF[cb];
+        if ("function" !== typeof sb) return sb;
         try {
-          return Bk()
-        } catch (Rk) {
-          return this.warnOnce(`Sun shadows: no caster option for block ${Fk}: ${Rk instanceof Error?Rk.message:String(Rk)}`), null
+          return sb()
+        } catch (kb) {
+          return this.warnOnce(`Sun shadows: no caster option for block ${cb}: ${kb instanceof Error?kb.message:String(kb)}`), null
         }
       }
-      classify(kk, Fk, Bk) {
-        const Rk = this.option(kk, Fk);
-        if ("none" === Rk) return null;
-        if (Rk && Rk.planes.length > 0) {
-          const kk = Rk.planes.slice(0, 4);
+      classify(bb, cb, sb) {
+        const kb = this.option(bb, cb);
+        if ("none" === kb) return null;
+        if (kb && kb.planes.length > 0) {
+          const bb = kb.planes.slice(0, 4);
           return {
             kind: "planes",
-            key: `planes:${JSON.stringify(kk)}`,
-            planes: kk
+            key: `planes:${JSON.stringify(bb)}`,
+            planes: bb
           }
         }
-        if (kk.OA[Fk]) return null;
-        const tk = kk.SA[Fk] ? kk.rG(Fk) : null;
-        if (tk && tk.length >= 6) {
-          const kk = function(kk) {
-            const Fk = new Uint32Array(16);
-            for (let Bk = 0; Bk + 6 <= kk.length; Bk += 6) {
-              const Rk = [0, 1, 2].map((Fk => Math.max(0, Math.ceil(8 * kk[Bk + Fk] - .5)))),
-                tk = [0, 1, 2].map((Fk => Math.min(7, Math.floor(8 * kk[Bk + Fk + 3] - .5))));
-              for (let kk = Rk[2]; kk <= tk[2]; kk++)
-                for (let Bk = Rk[1]; Bk <= tk[1]; Bk++)
-                  for (let ak = Rk[0]; ak <= tk[0]; ak++) {
-                    const Rk = ak + 8 * (Bk + 8 * kk);
-                    Fk[Rk >>> 5] |= 1 << (31 & Rk)
+        if (bb.Cn[cb]) return null;
+        const Wb = bb.Vn[cb] ? bb.lD(cb) : null;
+        if (Wb && Wb.length >= 6) {
+          const bb = function(bb) {
+            const cb = new Uint32Array(16);
+            for (let sb = 0; sb + 6 <= bb.length; sb += 6) {
+              const kb = [0, 1, 2].map((cb => Math.max(0, Math.ceil(8 * bb[sb + cb] - .5)))),
+                Wb = [0, 1, 2].map((cb => Math.min(7, Math.floor(8 * bb[sb + cb + 3] - .5))));
+              for (let bb = kb[2]; bb <= Wb[2]; bb++)
+                for (let sb = kb[1]; sb <= Wb[1]; sb++)
+                  for (let ab = kb[0]; ab <= Wb[0]; ab++) {
+                    const kb = ab + 8 * (sb + 8 * bb);
+                    cb[kb >>> 5] |= 1 << (31 & kb)
                   }
             }
-            return Fk
-          }(tk);
-          return function(kk) {
-            return kk.every((kk => 4294967295 === kk))
-          }(kk) ? lF : kk.every((kk => 0 === kk)) ? null : {
+            return cb
+          }(Wb);
+          return function(bb) {
+            return bb.every((bb => 4294967295 === bb))
+          }(bb) ? vc : bb.every((bb => 0 === bb)) ? null : {
             kind: "shape",
-            key: `shape:${kk.join(",")}`,
-            mask: kk
+            key: `shape:${bb.join(",")}`,
+            mask: bb
           }
         }
-        if (kk.wT[Fk] || !kk.Sy[Fk]) return null;
-        const ak = [0, 1, 2, 3, 4, 5].map((Rk => {
-          const tk = kk.Ny[6 * Fk + Rk];
-          let ak = Bk.get(tk);
-          return void 0 === ak && (ak = function(kk) {
-            if (!kk || kk.Py) return null;
+        if (bb.rD[cb] || !bb.Ll[cb]) return null;
+        const ab = [0, 1, 2, 3, 4, 5].map((kb => {
+          const Wb = bb.ul[6 * cb + kb];
+          let ab = sb.get(Wb);
+          return void 0 === ab && (ab = function(bb) {
+            if (!bb || bb.Dl) return null;
             const {
-              Rl: Fk,
-              Vl: Bk,
-              Bl: Rk
-            } = kk;
-            if (!Fk || !Bk || !(Bk > 0) || void 0 === Rk || !(Rk >= 0)) return null;
-            const tk = Fk[0],
-              ak = Bk * Bk * 4;
-            if (!tk || tk.byteLength < ak) return null;
-            const Xk = Math.floor(tk.byteLength / ak),
-              bk = Fk[Math.floor(Rk / Xk)];
-            if (!bk) return null;
-            const wk = new Uint8Array(bk.buffer, bk.byteOffset, bk.byteLength),
-              dk = Rk % Xk * ak;
-            if (dk + ak > wk.length) return null;
-            const sk = new Uint8Array(Bk * Bk);
-            let Vk = !1;
-            for (let Jk = 0; Jk < sk.length; Jk++) sk[Jk] = wk[dk + 4 * Jk + 3], Vk ||= sk[Jk] < Qb;
-            return Vk ? {
-              alpha: sk,
-              width: Bk
+              fR: cb,
+              uR: sb,
+              kR: kb
+            } = bb;
+            if (!cb || !sb || !(sb > 0) || void 0 === kb || !(kb >= 0)) return null;
+            const Wb = cb[0],
+              ab = sb * sb * 4;
+            if (!Wb || Wb.byteLength < ab) return null;
+            const Tb = Math.floor(Wb.byteLength / ab),
+              Ub = cb[Math.floor(kb / Tb)];
+            if (!Ub) return null;
+            const Ib = new Uint8Array(Ub.buffer, Ub.byteOffset, Ub.byteLength),
+              Hb = kb % Tb * ab;
+            if (Hb + ab > Ib.length) return null;
+            const fb = new Uint8Array(sb * sb);
+            let Mb = !1;
+            for (let Xb = 0; Xb < fb.length; Xb++) fb[Xb] = Ib[Hb + 4 * Xb + 3], Mb ||= fb[Xb] < bI;
+            return Mb ? {
+              alpha: fb,
+              width: sb
             } : null
-          }(kk.zy(tk)), Bk.set(tk, ak)), ak
+          }(bb.Pl(Wb)), sb.set(Wb, ab)), ab
         }));
-        if (ak.every((kk => null === kk))) return lF;
-        const Xk = Fw(Math.max(...ak.map((kk => {
-            var Fk;
-            return null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.width) && void 0 !== Fk ? Fk : 1
+        if (ab.every((bb => null === bb))) return vc;
+        const Tb = sI(Math.max(...ab.map((bb => {
+            var cb;
+            return null !== (cb = null === bb || void 0 === bb ? void 0 : bb.width) && void 0 !== cb ? cb : 1
           })))),
-          bk = new Uint32Array(FB(Xk)).fill(4294967295),
-          wk = ak.map((kk => null === kk ? bk : kw(kk.alpha, kk.width, kk.width, Xk)));
+          Ub = new Uint32Array(bs(Tb)).fill(4294967295),
+          Ib = ab.map((bb => null === bb ? Ub : cI(bb.alpha, bb.width, bb.width, Tb)));
         return {
           kind: "cutout",
-          key: `cutout:${Xk}:${wk.map((kk=>kk.join(","))).join("|")}`,
-          size: Xk,
-          faces: wk
+          key: `cutout:${Tb}:${Ib.map((bb=>bb.join(","))).join("|")}`,
+          size: Tb,
+          faces: Ib
         }
       }
-      allocate(kk) {
-        if (this.nextCaster >= BB) return this.warnOnce("Sun shadows: more than 8191 casters; the rest cast nothing."), 0;
-        const Fk = this.nextCaster++;
-        if (this.writeCaster(Fk, nF, 0, 0, 0), "shape" === kk.kind) {
-          const Bk = this.allocateMask(kk.mask.length);
-          Bk >= 0 && (this.sink(Bk, kk.mask), this.writeCaster(Fk, IF, Bk, 0, 8))
-        } else if ("cutout" === kk.kind) {
-          const Bk = FB(kk.size),
-            Rk = this.allocateMask(6 * Bk);
-          if (Rk >= 0) {
-            const tk = new Uint32Array(6 * Bk);
-            kk.faces.forEach(((kk, Fk) => {
-              tk.set(kk, Fk * Bk)
-            })), this.sink(Rk, tk), this.writeCaster(Fk, kB, Rk, 0, kk.size)
+      allocate(bb) {
+        if (this.nextCaster >= cs) return this.warnOnce("Sun shadows: more than 8191 casters; the rest cast nothing."), 0;
+        const cb = this.nextCaster++;
+        if (this.writeCaster(cb, Fc, 0, 0, 0), "shape" === bb.kind) {
+          const sb = this.allocateMask(bb.mask.length);
+          sb >= 0 && (this.sink(sb, bb.mask), this.writeCaster(cb, xc, sb, 0, 8))
+        } else if ("cutout" === bb.kind) {
+          const sb = bs(bb.size),
+            kb = this.allocateMask(6 * sb);
+          if (kb >= 0) {
+            const Wb = new Uint32Array(6 * sb);
+            bb.faces.forEach(((bb, cb) => {
+              Wb.set(bb, cb * sb)
+            })), this.sink(kb, Wb), this.writeCaster(cb, pc, kb, 0, bb.size)
           }
-        } else this.planesLoading++, this.loads.push(this.loadPlanes(Fk, kk.planes).finally((() => {
+        } else this.planesLoading++, this.loads.push(this.loadPlanes(cb, bb.planes).finally((() => {
           this.planesLoading--
         })));
-        return Fk
+        return cb
       }
-      async loadPlanes(kk, Fk) {
-        const Bk = await Promise.all(Fk.map((kk => this.texture(kk.texture))));
-        if (Bk.some((kk => null === kk))) return;
-        const Rk = Bk,
-          tk = Fw(Math.max(...Rk.map((kk => Math.min(kk.width, kk.height))))),
-          ak = FB(tk),
-          Xk = this.allocateMask(Fk.length * (4 + ak));
-        if (Xk < 0) return;
-        const bk = new Uint32Array(Fk.length * (4 + ak)),
-          wk = 4 * Fk.length;
-        Fk.forEach(((kk, Fk) => {
-          const Bk = Xk + wk + Fk * ak;
-          bk.set(function(kk, Fk) {
-            const [Bk, Rk] = kk.tangent, tk = Math.hypot(Bk, Rk) || 1, ak = Bk / tk, Xk = Rk / tk, bk = kk.centre[0] * Xk - kk.centre[1] * ak, wk = new Uint32Array(4);
-            return new Float32Array(wk.buffer, 0, 3).set([ak, Xk, bk]), wk[3] = Fk, wk
-          }(kk, Bk), 4 * Fk), bk.set(kw(Rk[Fk].alpha, Rk[Fk].width, Rk[Fk].height, tk), wk + Fk * ak)
-        })), this.sink(Xk, bk), this.writeCaster(kk, QF, Xk, Fk.length, tk)
+      async loadPlanes(bb, cb) {
+        const sb = await Promise.all(cb.map((bb => this.texture(bb.texture))));
+        if (sb.some((bb => null === bb))) return;
+        const kb = sb,
+          Wb = sI(Math.max(...kb.map((bb => Math.min(bb.width, bb.height))))),
+          ab = bs(Wb),
+          Tb = this.allocateMask(cb.length * (4 + ab));
+        if (Tb < 0) return;
+        const Ub = new Uint32Array(cb.length * (4 + ab)),
+          Ib = 4 * cb.length;
+        cb.forEach(((bb, cb) => {
+          const sb = Tb + Ib + cb * ab;
+          Ub.set(function(bb, cb) {
+            const [sb, kb] = bb.tangent, Wb = Math.hypot(sb, kb) || 1, ab = sb / Wb, Tb = kb / Wb, Ub = bb.centre[0] * Tb - bb.centre[1] * ab, Ib = new Uint32Array(4);
+            return new Float32Array(Ib.buffer, 0, 3).set([ab, Tb, Ub]), Ib[3] = cb, Ib
+          }(bb, sb), 4 * cb), Ub.set(cI(kb[cb].alpha, kb[cb].width, kb[cb].height, Wb), Ib + cb * ab)
+        })), this.sink(Tb, Ub), this.writeCaster(bb, jc, Tb, cb.length, Wb)
       }
-      texture(kk) {
-        let Fk = this.textures.get(kk);
-        return Fk || (Fk = this.loadTexture(kk).catch((Fk => (this.warn(`Sun shadows: no mask for ${kk}: ${Fk instanceof Error?Fk.message:String(Fk)}`), null))), this.textures.set(kk, Fk)), Fk
+      texture(bb) {
+        let cb = this.textures.get(bb);
+        return cb || (cb = this.loadTexture(bb).catch((cb => (this.warn(`Sun shadows: no mask for ${bb}: ${cb instanceof Error?cb.message:String(cb)}`), null))), this.textures.set(bb, cb)), cb
       }
-      allocateMask(kk) {
-        if (this.nextMaskWord + kk > RB) return this.warnOnce("Sun shadows: casters' masks are over 262144 words; the rest cast nothing."), -1;
-        const Fk = 32768 + this.nextMaskWord;
-        return this.nextMaskWord += kk, Fk
+      allocateMask(bb) {
+        if (this.nextMaskWord + bb > ss) return this.warnOnce("Sun shadows: casters' masks are over 262144 words; the rest cast nothing."), -1;
+        const cb = 32768 + this.nextMaskWord;
+        return this.nextMaskWord += bb, cb
       }
-      writeCaster(kk, Fk, Bk, Rk, tk) {
-        this.sink(0 + 4 * kk, Uint32Array.of(Fk, Bk, Rk, tk))
+      writeCaster(bb, cb, sb, kb, Wb) {
+        this.sink(0 + 4 * bb, Uint32Array.of(cb, sb, kb, Wb))
       }
-      warnOnce(kk) {
-        this.warned.has(kk) || (this.warned.add(kk), this.warn(kk))
+      warnOnce(bb) {
+        this.warned.has(bb) || (this.warned.add(bb), this.warn(bb))
       }
     }
-    var Rw = Bk(37389);
+    var WI = sb(37300);
 
-    function tw(kk) {
-      return !kk.qy && !kk.PRk && !kk.ey
+    function aI(bb) {
+      return !bb.il && !bb.ikb && !bb.Hl
     }
 
-    function aw() {
+    function TI() {
       return {
-        bricks: new Uint32Array(hF),
+        bricks: new Uint32Array(qc),
         cells: new Uint16Array(32768),
-        special: new Uint8Array(zF)
+        special: new Uint8Array(Zc)
       }
     }
-    class Xw {
-      constructor(kk, Fk, Bk) {
-        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : console.warn;
-        this.casters = kk, this.writeVoxels = Fk, this.writePool = Bk, this.warn = Rk, this.eyeChunk = null, this.slotChunk = new Array(UF).fill(null), this.slotVersion = new Float64Array(UF).fill(-1), this.slotPool = new Array(UF).fill(null), this.starved = new Uint8Array(UF), this.queue = [], this.queued = new Uint8Array(UF), this.queueSorted = !0, this.freePool = new Uint32Array(tB), this.freeCount = tB, this.casterTable = null, this.warnedPool = !1, this.scratch = aw(), this.victimScratch = aw(), this.record = new Uint32Array(4), this.entry = new Uint32Array(32), this.records = new Int32Array(4 * UF), this.windowTopStale = !0, this.windowTop = new Uint32Array(1), this.encoded = null;
-        for (let tk = 0; tk < tB; tk++) this.freePool[tk] = 65535 - tk
+    class UI {
+      constructor(bb, cb, sb) {
+        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : console.warn;
+        this.casters = bb, this.writeVoxels = cb, this.writePool = sb, this.warn = kb, this.eyeChunk = null, this.slotChunk = new Array(Dc).fill(null), this.slotVersion = new Float64Array(Dc).fill(-1), this.slotPool = new Array(Dc).fill(null), this.starved = new Uint8Array(Dc), this.queue = [], this.queued = new Uint8Array(Dc), this.queueSorted = !0, this.freePool = new Uint32Array(ks), this.freeCount = ks, this.casterTable = null, this.warnedPool = !1, this.scratch = TI(), this.victimScratch = TI(), this.record = new Uint32Array(4), this.entry = new Uint32Array(32), this.records = new Int32Array(4 * Dc), this.windowTopStale = !0, this.windowTop = new Uint32Array(1), this.encoded = null;
+        for (let Wb = 0; Wb < ks; Wb++) this.freePool[Wb] = 65535 - Wb
       }
       get queuedCount() {
         return this.queue.length
       }
       get poolInUse() {
-        return tB - this.freeCount
+        return ks - this.freeCount
       }
-      chunkAdded(kk) {
-        if (null === this.eyeChunk || !this.inRadius(kk.i, kk.j, kk.k)) return;
-        const Fk = KF(kk.i, kk.j, kk.k);
-        this.slotChunk[Fk] = kk, this.slotVersion[Fk] = -1, this.enqueue(Fk)
+      chunkAdded(bb) {
+        if (null === this.eyeChunk || !this.inRadius(bb.i, bb.j, bb.k)) return;
+        const cb = oc(bb.i, bb.j, bb.k);
+        this.slotChunk[cb] = bb, this.slotVersion[cb] = -1, this.enqueue(cb)
       }
-      update(kk, Fk, Bk) {
-        const Rk = this.casters.blockCaster;
-        if (Rk !== this.casterTable) {
-          this.casterTable = Rk;
-          for (let kk = 0; kk < UF; kk++) this.slotVersion[kk] = -1, this.slotChunk[kk] && this.enqueue(kk)
+      update(bb, cb, sb) {
+        const kb = this.casters.blockCaster;
+        if (kb !== this.casterTable) {
+          this.casterTable = kb;
+          for (let bb = 0; bb < Dc; bb++) this.slotVersion[bb] = -1, this.slotChunk[bb] && this.enqueue(bb)
         }
-        const tk = Math.floor(kk[0] / 32),
-          ak = Math.floor(kk[1] / 32),
-          Xk = Math.floor(kk[2] / 32);
-        (null === this.eyeChunk || this.eyeChunk[0] !== tk || this.eyeChunk[1] !== ak || this.eyeChunk[2] !== Xk) && (this.eyeChunk = [tk, ak, Xk], this.follow(Fk), this.queueSorted = !1, this.requeueStarved(), this.windowTopStale = !0);
-        for (let bk = 0; bk < UF; bk++) {
-          const kk = this.slotChunk[bk];
-          kk && (kk.BBk || kk.Wy !== this.slotVersion[bk]) && this.enqueue(bk)
+        const Wb = Math.floor(bb[0] / 32),
+          ab = Math.floor(bb[1] / 32),
+          Tb = Math.floor(bb[2] / 32);
+        (null === this.eyeChunk || this.eyeChunk[0] !== Wb || this.eyeChunk[1] !== ab || this.eyeChunk[2] !== Tb) && (this.eyeChunk = [Wb, ab, Tb], this.follow(cb), this.queueSorted = !1, this.requeueStarved(), this.windowTopStale = !0);
+        for (let Ub = 0; Ub < Dc; Ub++) {
+          const bb = this.slotChunk[Ub];
+          bb && (bb.Scb || bb.Xl !== this.slotVersion[Ub]) && this.enqueue(Ub)
         }
-        this.drain(Bk), this.windowTopStale && this.writeWindowTop()
+        this.drain(sb), this.windowTopStale && this.writeWindowTop()
       }
-      writeRecord(kk, Fk) {
-        this.records.set(Fk, 4 * kk), this.windowTopStale = !0, this.writeVoxels(4 * kk, Fk)
+      writeRecord(bb, cb) {
+        this.records.set(cb, 4 * bb), this.windowTopStale = !0, this.writeVoxels(4 * bb, cb)
       }
       writeWindowTop() {
         this.windowTopStale = !1;
-        const kk = this.records;
-        let Fk = -1 / 0;
-        for (let Rk = 0; Rk < kk.length; Rk += 4) {
-          const Bk = 255 & kk[Rk + 3];
-          Bk !== TF && Bk !== rF || !this.inRadius(kk[Rk], kk[Rk + 1], kk[Rk + 2]) || (Fk = Math.max(Fk, kk[Rk + 1] * uF + (kk[Rk + 3] >>> 8)))
+        const bb = this.records;
+        let cb = -1 / 0;
+        for (let kb = 0; kb < bb.length; kb += 4) {
+          const sb = 255 & bb[kb + 3];
+          sb !== Oc && sb !== Gc || !this.inRadius(bb[kb], bb[kb + 1], bb[kb + 2]) || (cb = Math.max(cb, bb[kb + 1] * tc + (bb[kb + 3] >>> 8)))
         }
-        const Bk = Fk === -1 / 0 ? 1 : Fk + CF;
-        Bk !== this.windowTop[0] && (this.windowTop[0] = Bk, this.writeVoxels(qF, this.windowTop))
+        const sb = cb === -1 / 0 ? 1 : cb + Ac;
+        sb !== this.windowTop[0] && (this.windowTop[0] = sb, this.writeVoxels(dc, this.windowTop))
       }
-      follow(kk) {
-        const Fk = this.eyeChunk,
-          [Bk, Rk, tk] = MF;
-        for (let Xk = -tk; Xk <= tk; Xk++)
-          for (let tk = -Rk; tk <= Rk; tk++)
-            for (let Rk = -Bk; Rk <= Bk; Rk++) {
-              var ak;
-              const Bk = Fk[0] + Rk,
-                bk = Fk[1] + tk,
-                wk = Fk[2] + Xk,
-                dk = KF(Bk, bk, wk),
-                sk = this.slotChunk[dk];
-              if (sk && !sk.BBk && sk.i === Bk && sk.j === bk && sk.k === wk) continue;
-              const Vk = null !== (ak = kk(Bk, bk, wk)) && void 0 !== ak ? ak : null;
-              sk && (sk.i !== Bk || sk.j !== bk || sk.k !== wk) && this.slotPool[dk] && (this.release(dk), this.record.fill(0), this.writeRecord(dk, this.record)), this.slotChunk[dk] = Vk, this.slotVersion[dk] = -1, (Vk || sk) && this.enqueue(dk)
+      follow(bb) {
+        const cb = this.eyeChunk,
+          [sb, kb, Wb] = yc;
+        for (let Tb = -Wb; Tb <= Wb; Tb++)
+          for (let Wb = -kb; Wb <= kb; Wb++)
+            for (let kb = -sb; kb <= sb; kb++) {
+              var ab;
+              const sb = cb[0] + kb,
+                Ub = cb[1] + Wb,
+                Ib = cb[2] + Tb,
+                Hb = oc(sb, Ub, Ib),
+                fb = this.slotChunk[Hb];
+              if (fb && !fb.Scb && fb.i === sb && fb.j === Ub && fb.k === Ib) continue;
+              const Mb = null !== (ab = bb(sb, Ub, Ib)) && void 0 !== ab ? ab : null;
+              fb && (fb.i !== sb || fb.j !== Ub || fb.k !== Ib) && this.slotPool[Hb] && (this.release(Hb), this.record.fill(0), this.writeRecord(Hb, this.record)), this.slotChunk[Hb] = Mb, this.slotVersion[Hb] = -1, (Mb || fb) && this.enqueue(Hb)
             }
       }
       requeueStarved() {
-        for (let kk = 0; kk < UF; kk++) this.starved[kk] && this.slotChunk[kk] && this.enqueue(kk)
+        for (let bb = 0; bb < Dc; bb++) this.starved[bb] && this.slotChunk[bb] && this.enqueue(bb)
       }
-      enqueue(kk) {
-        this.queued[kk] || (this.queued[kk] = 1, this.queue.push(kk), this.queueSorted = !1)
+      enqueue(bb) {
+        this.queued[bb] || (this.queued[bb] = 1, this.queue.push(bb), this.queueSorted = !1)
       }
-      drain(kk) {
+      drain(bb) {
         if (0 === this.queue.length) return;
         if (!this.queueSorted) {
-          const kk = new Map;
-          for (const Fk of this.queue) kk.set(Fk, this.slotDistance(Fk));
-          this.queue.sort(((Fk, Bk) => kk.get(Bk) - kk.get(Fk))), this.queueSorted = !0
+          const bb = new Map;
+          for (const cb of this.queue) bb.set(cb, this.slotDistance(cb));
+          this.queue.sort(((cb, sb) => bb.get(sb) - bb.get(cb))), this.queueSorted = !0
         }
-        const Fk = performance.now();
-        let Bk = 0;
-        const Rk = [];
-        for (; this.queue.length > 0 && (0 === Bk || performance.now() - Fk < kk);) {
-          const kk = this.queue.pop(),
-            Fk = this.slotChunk[kk];
-          !Fk || Fk.BBk || tw(Fk) ? (this.queued[kk] = 0, this.encodeSlot(kk), Bk++) : Rk.push(kk)
+        const cb = performance.now();
+        let sb = 0;
+        const kb = [];
+        for (; this.queue.length > 0 && (0 === sb || performance.now() - cb < bb);) {
+          const bb = this.queue.pop(),
+            cb = this.slotChunk[bb];
+          !cb || cb.Scb || aI(cb) ? (this.queued[bb] = 0, this.encodeSlot(bb), sb++) : kb.push(bb)
         }
-        for (let tk = Rk.length - 1; tk >= 0; tk--) this.queue.push(Rk[tk])
+        for (let Wb = kb.length - 1; Wb >= 0; Wb--) this.queue.push(kb[Wb])
       }
-      slotDistance(kk) {
-        const Fk = this.slotChunk[kk],
-          Bk = this.eyeChunk;
-        return Fk ? Math.max(Math.abs(Fk.i - Bk[0]), Math.abs(Fk.j - Bk[1]), Math.abs(Fk.k - Bk[2])) : 0
+      slotDistance(bb) {
+        const cb = this.slotChunk[bb],
+          sb = this.eyeChunk;
+        return cb ? Math.max(Math.abs(cb.i - sb[0]), Math.abs(cb.j - sb[1]), Math.abs(cb.k - sb[2])) : 0
       }
-      inRadius(kk, Fk, Bk) {
-        const Rk = this.eyeChunk,
-          [tk, ak, Xk] = MF;
-        return Math.abs(kk - Rk[0]) <= tk && Math.abs(Fk - Rk[1]) <= ak && Math.abs(Bk - Rk[2]) <= Xk
+      inRadius(bb, cb, sb) {
+        const kb = this.eyeChunk,
+          [Wb, ab, Tb] = yc;
+        return Math.abs(bb - kb[0]) <= Wb && Math.abs(cb - kb[1]) <= ab && Math.abs(sb - kb[2]) <= Tb
       }
-      release(kk) {
-        const Fk = this.slotPool[kk];
-        if (Fk) {
-          for (let kk = Fk.length - 1; kk >= 0; kk--) this.freePool[this.freeCount++] = Fk[kk];
-          this.slotPool[kk] = null
+      release(bb) {
+        const cb = this.slotPool[bb];
+        if (cb) {
+          for (let bb = cb.length - 1; bb >= 0; bb--) this.freePool[this.freeCount++] = cb[bb];
+          this.slotPool[bb] = null
         }
       }
-      encodeSlot(kk) {
-        var Fk, Bk, Rk, tk, ak;
-        let Xk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.scratch,
-          bk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        const wk = null !== (Fk = null === (Bk = this.slotPool[kk]) || void 0 === Bk ? void 0 : Bk.length) && void 0 !== Fk ? Fk : 0;
-        this.release(kk), this.starved[kk] = 0;
-        const dk = this.slotChunk[kk],
-          sk = this.record;
-        if (!dk || dk.BBk || !dk.jJ) return this.slotChunk[kk] = null, this.slotVersion[kk] = -1, sk.fill(0), this.writeRecord(kk, sk), void(wk > 0 && this.requeueStarved());
-        this.slotVersion[kk] = dk.Wy;
-        const Vk = this.encodeBricks(dk, kk, Xk, bk);
-        sk[0] = dk.i, sk[1] = dk.j, sk[2] = dk.k, sk[3] = Vk, this.writeRecord(kk, sk), null === (Rk = this.encoded) || void 0 === Rk || Rk.call(this, dk), bk && (null !== (tk = null === (ak = this.slotPool[kk]) || void 0 === ak ? void 0 : ak.length) && void 0 !== tk ? tk : 0) < wk && this.requeueStarved()
+      encodeSlot(bb) {
+        var cb, sb, kb, Wb, ab;
+        let Tb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.scratch,
+          Ub = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        const Ib = null !== (cb = null === (sb = this.slotPool[bb]) || void 0 === sb ? void 0 : sb.length) && void 0 !== cb ? cb : 0;
+        this.release(bb), this.starved[bb] = 0;
+        const Hb = this.slotChunk[bb],
+          fb = this.record;
+        if (!Hb || Hb.Scb || !Hb.zX) return this.slotChunk[bb] = null, this.slotVersion[bb] = -1, fb.fill(0), this.writeRecord(bb, fb), void(Ib > 0 && this.requeueStarved());
+        this.slotVersion[bb] = Hb.Xl;
+        const Mb = this.encodeBricks(Hb, bb, Tb, Ub);
+        fb[0] = Hb.i, fb[1] = Hb.j, fb[2] = Hb.k, fb[3] = Mb, this.writeRecord(bb, fb), null === (kb = this.encoded) || void 0 === kb || kb.call(this, Hb), Ub && (null !== (Wb = null === (ab = this.slotPool[bb]) || void 0 === ab ? void 0 : ab.length) && void 0 !== Wb ? Wb : 0) < Ib && this.requeueStarved()
       }
-      encodeBricks(kk, Fk, Bk, Rk) {
-        if (kk.Me) return GF;
-        const tk = this.casters.blockCaster,
+      encodeBricks(bb, cb, sb, kb) {
+        if (bb.Bm) return ic;
+        const Wb = this.casters.blockCaster,
           {
-            data: ak,
-            stride: Xk,
-            offset: bk
-          } = kk.jJ,
-          [wk, dk, sk] = Xk,
-          Vk = uF,
+            data: ab,
+            stride: Tb,
+            offset: Ub
+          } = bb.zX,
+          [Ib, Hb, fb] = Tb,
+          Mb = tc,
           {
-            bricks: Jk,
-            cells: Ak,
-            special: ek
-          } = Bk;
-        Jk.fill(0), ek.fill(0);
-        let yk = 0,
-          fk = 0,
-          mk = 0;
-        for (let Wk = 0; Wk < Vk; Wk++) {
-          const Fk = Wk >> 2,
-            Bk = 3 & Wk,
-            Rk = kk.pA[Wk],
-            Xk = Rk === Rw.d ? -1 : Rk < tk.length ? tk[Rk] : 0;
-          if (0 !== Xk)
-            for (let kk = 0; kk < Vk; kk++) {
-              const Rk = kk >> 2,
-                vk = 3 & kk;
-              let ik = bk + kk * wk + Wk * dk;
-              for (let kk = 0; kk < Vk; kk++, ik += sk) {
-                let bk = Xk;
-                if (bk < 0) {
-                  const kk = ak[ik];
-                  if (bk = kk < tk.length ? tk[kk] : 0, 0 === bk) continue
+            bricks: Xb,
+            cells: nb,
+            special: mb
+          } = sb;
+        Xb.fill(0), mb.fill(0);
+        let lb = 0,
+          Qb = 0,
+          eb = 0;
+        for (let Cb = 0; Cb < Mb; Cb++) {
+          const cb = Cb >> 2,
+            sb = 3 & Cb,
+            kb = bb.dn[Cb],
+            Tb = kb === WI.e ? -1 : kb < Wb.length ? Wb[kb] : 0;
+          if (0 !== Tb)
+            for (let bb = 0; bb < Mb; bb++) {
+              const kb = bb >> 2,
+                Nb = 3 & bb;
+              let Vb = Ub + bb * Ib + Cb * Hb;
+              for (let bb = 0; bb < Mb; bb++, Vb += fb) {
+                let Ub = Tb;
+                if (Ub < 0) {
+                  const bb = ab[Vb];
+                  if (Ub = bb < Wb.length ? Wb[bb] : 0, 0 === Ub) continue
                 }
-                const wk = xF(Rk, Fk, kk >> 2),
-                  dk = jF(vk, Bk, 3 & kk);
-                Jk[3 * wk + (dk >>> 5)] |= 1 << (31 & dk), Ak[wk * DF + dk] = bk, yk++, mk = Wk, bk === lF ? fk++ : ek[wk] = 1
+                const Ib = Sc(kb, cb, bb >> 2),
+                  Hb = Rc(Nb, sb, 3 & bb);
+                Xb[3 * Ib + (Hb >>> 5)] |= 1 << (31 & Hb), nb[Ib * Kc + Hb] = Ub, lb++, eb = Cb, Ub === vc ? Qb++ : mb[Ib] = 1
               }
             }
         }
-        return 0 === yk ? GF : 32768 === fk ? TF | mk << 8 : (this.writePoolEntries(Fk, Bk, Rk), this.writeVoxels(PF + Fk * hF, Jk), rF | mk << 8)
+        return 0 === lb ? ic : 32768 === Qb ? Oc | eb << 8 : (this.writePoolEntries(cb, sb, kb), this.writeVoxels(zc + cb * qc, Xb), Gc | eb << 8)
       }
-      writePoolEntries(kk, Fk, Bk) {
+      writePoolEntries(bb, cb, sb) {
         const {
-          bricks: Rk,
-          cells: tk,
-          special: ak
-        } = Fk, Xk = this.entry;
-        let bk = 0;
-        for (let sk = 0; sk < zF; sk++) bk += ak[sk];
-        if (0 === bk) return;
-        Bk && this.freeCount < bk && this.evictBeyond(kk, bk);
-        const wk = new Uint32Array(Bk ? Math.min(bk, this.freeCount) : 0);
-        let dk = 0;
-        for (let sk = 0; sk < zF; sk++) {
-          if (!ak[sk]) continue;
-          const Bk = 3 * sk;
-          if (dk === wk.length) {
-            this.dropSpecials(Fk, sk), this.starved[kk] = 1;
+          bricks: kb,
+          cells: Wb,
+          special: ab
+        } = cb, Tb = this.entry;
+        let Ub = 0;
+        for (let fb = 0; fb < Zc; fb++) Ub += ab[fb];
+        if (0 === Ub) return;
+        sb && this.freeCount < Ub && this.evictBeyond(bb, Ub);
+        const Ib = new Uint32Array(sb ? Math.min(Ub, this.freeCount) : 0);
+        let Hb = 0;
+        for (let fb = 0; fb < Zc; fb++) {
+          if (!ab[fb]) continue;
+          const sb = 3 * fb;
+          if (Hb === Ib.length) {
+            this.dropSpecials(cb, fb), this.starved[bb] = 1;
             continue
           }
-          const bk = this.freePool[--this.freeCount];
-          wk[dk++] = bk;
-          for (let kk = 0; kk < DF; kk++) {
-            const Fk = Rk[Bk + (kk >>> 5)] >>> (31 & kk) & 1 ? tk[sk * DF + kk] : 0;
-            1 & kk ? Xk[kk >> 1] |= Fk << 16 : Xk[kk >> 1] = Fk
+          const Ub = this.freePool[--this.freeCount];
+          Ib[Hb++] = Ub;
+          for (let bb = 0; bb < Kc; bb++) {
+            const cb = kb[sb + (bb >>> 5)] >>> (31 & bb) & 1 ? Wb[fb * Kc + bb] : 0;
+            1 & bb ? Tb[bb >> 1] |= cb << 16 : Tb[bb >> 1] = cb
           }
-          Rk[Bk + 2] = bk + 1, this.writePool(aB + 32 * bk, Xk)
+          kb[sb + 2] = Ub + 1, this.writePool(Ws + 32 * Ub, Tb)
         }
-        wk.length > 0 && (this.slotPool[kk] = wk)
+        Ib.length > 0 && (this.slotPool[bb] = Ib)
       }
-      evictBeyond(kk, Fk) {
-        const Bk = this.slotDistance(kk),
-          Rk = [];
-        for (let tk = 0; tk < UF; tk++) tk !== kk && this.slotPool[tk] && this.slotDistance(tk) > Bk && Rk.push(tk);
-        Rk.sort(((kk, Fk) => this.slotDistance(Fk) - this.slotDistance(kk)));
-        for (const tk of Rk) {
-          if (this.freeCount >= Fk) return;
-          const kk = this.slotChunk[tk];
-          kk && !kk.BBk && kk.jJ && (kk.Wy === this.slotVersion[tk] || tw(kk)) && this.encodeSlot(tk, this.victimScratch, !1)
+      evictBeyond(bb, cb) {
+        const sb = this.slotDistance(bb),
+          kb = [];
+        for (let Wb = 0; Wb < Dc; Wb++) Wb !== bb && this.slotPool[Wb] && this.slotDistance(Wb) > sb && kb.push(Wb);
+        kb.sort(((bb, cb) => this.slotDistance(cb) - this.slotDistance(bb)));
+        for (const Wb of kb) {
+          if (this.freeCount >= cb) return;
+          const bb = this.slotChunk[Wb];
+          bb && !bb.Scb && bb.zX && (bb.Xl === this.slotVersion[Wb] || aI(bb)) && this.encodeSlot(Wb, this.victimScratch, !1)
         }
       }
-      dropSpecials(kk, Fk) {
+      dropSpecials(bb, cb) {
         this.warnedPool || (this.warnedPool = !0, this.warn("Sun shadows: the special pool's 65536 entries are in use; plants and shapes in the furthest chunks cast nothing."));
-        const Bk = 3 * Fk;
-        for (let Rk = 0; Rk < DF; Rk++) kk.cells[Fk * DF + Rk] !== lF && (kk.bricks[Bk + (Rk >>> 5)] &= ~(1 << (31 & Rk)))
+        const sb = 3 * cb;
+        for (let kb = 0; kb < Kc; kb++) bb.cells[cb * Kc + kb] !== vc && (bb.bricks[sb + (kb >>> 5)] &= ~(1 << (31 & kb)))
       }
     }
-    var bw = Bk(37131);
-    class ww {
-      constructor(kk) {
-        this.device = kk, this.frameBuffer = void 0, this.gridBuffer = void 0, this.frame = new fB, this.grids = new WeakMap, this.gridTop = 0, this.gridsFull = !1, this.uploadedEmpty = !1, this.iJ = new Float64Array(16), this.bakeDeadline = 0, this.frameBuffer = kk.createBuffer({
+    var II = sb(37029);
+    class HI {
+      constructor(bb) {
+        this.device = bb, this.frameBuffer = void 0, this.gridBuffer = void 0, this.frame = new ls, this.grids = new WeakMap, this.gridTop = 0, this.gridsFull = !1, this.uploadedEmpty = !1, this.fX = new Float64Array(16), this.bakeDeadline = 0, this.frameBuffer = bb.createBuffer({
           label: "sun-shadow-entities",
           size: 589828,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.gridBuffer = kk.createBuffer({
+        }), this.gridBuffer = bb.createBuffer({
           label: "sun-shadow-entity-grids",
           size: 16777216,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
         })
       }
-      update(kk, Fk, Bk) {
+      update(bb, cb, sb) {
         this.gridsFull && (this.gridsFull = !1, this.grids = new WeakMap, this.gridTop = 0), this.bakeDeadline = -1;
         const {
-          frame: Rk
+          frame: kb
         } = this;
-        Rk.UA(kk, Fk), Bk.forEachSunShadowCaster((kk => {
-          this.add(kk)
-        })), Rk.finish();
-        const tk = 0 === Rk.parts;
-        if (tk && this.uploadedEmpty) return;
-        this.uploadedEmpty = tk;
+        kb.Bn(bb, cb), sb.forEachSunShadowCaster((bb => {
+          this.add(bb)
+        })), kb.finish();
+        const Wb = 0 === kb.parts;
+        if (Wb && this.uploadedEmpty) return;
+        this.uploadedEmpty = Wb;
         const {
-          queue: ak
+          queue: ab
         } = this.device, {
-          words: Xk
-        } = Rk;
-        ak.writeBuffer(this.frameBuffer, 0, Xk, 0, 16385), Rk.refs > 0 && ak.writeBuffer(this.frameBuffer, 65540, Xk, dB, Rk.refs), tk || ak.writeBuffer(this.frameBuffer, 327684, Xk, sB, Rk.parts * wB)
+          words: Tb
+        } = kb;
+        ab.writeBuffer(this.frameBuffer, 0, Tb, 0, 16385), kb.refs > 0 && ab.writeBuffer(this.frameBuffer, 65540, Tb, Is, kb.refs), Wb || ab.writeBuffer(this.frameBuffer, 327684, Tb, Hs, kb.parts * Us)
       }
-      add(kk) {
-        const Fk = this.gridFor(kk);
-        if (!Fk) return;
+      add(bb) {
+        const cb = this.gridFor(bb);
+        if (!cb) return;
         const {
-          frame: Bk
+          frame: sb
         } = this, {
-          iJ: Rk,
-          worldAt: tk,
-          instances: ak,
-          instanceCount: Xk,
-          thin: bk
-        } = kk;
-        if (ak)
-          for (let wk = 0; wk < Xk; wk++) bk ? (WB(ak, 16 * wk, Rk, tk, this.iJ), Bk.add(Fk, this.iJ)) : Bk.add(Fk, ak, 16 * wk);
-        else Bk.add(Fk, Rk, tk)
+          fX: kb,
+          worldAt: Wb,
+          instances: ab,
+          instanceCount: Tb,
+          thin: Ub
+        } = bb;
+        if (ab)
+          for (let Ib = 0; Ib < Tb; Ib++) Ub ? (es(ab, 16 * Ib, kb, Wb, this.fX), sb.add(cb, this.fX)) : sb.add(cb, ab, 16 * Ib);
+        else sb.add(cb, kb, Wb)
       }
-      gridFor(kk) {
+      gridFor(bb) {
         let {
-          geometry: Fk,
-          indexed: Bk,
-          first: Rk,
-          count: tk,
-          skip: ak
-        } = kk, Xk = this.grids.get(Fk);
-        Xk || (Xk = new Map, this.grids.set(Fk, Xk));
-        const bk = `${Bk?Rk:-1-Rk}:${tk}:${null!==ak&&void 0!==ak?ak:""}`;
-        let wk = Xk.get(bk);
-        if (void 0 !== wk || this.gridsFull) return wk;
-        const dk = performance.now();
-        if (this.bakeDeadline < 0) this.bakeDeadline = dk + 2;
-        else if (dk > this.bakeDeadline) return;
-        return wk = this.bake(Fk, Bk, Rk, tk, ak), void 0 !== wk && Xk.set(bk, wk), wk
+          geometry: cb,
+          indexed: sb,
+          first: kb,
+          count: Wb,
+          skip: ab
+        } = bb, Tb = this.grids.get(cb);
+        Tb || (Tb = new Map, this.grids.set(cb, Tb));
+        const Ub = `${sb?kb:-1-kb}:${Wb}:${null!==ab&&void 0!==ab?ab:""}`;
+        let Ib = Tb.get(Ub);
+        if (void 0 !== Ib || this.gridsFull) return Ib;
+        const Hb = performance.now();
+        if (this.bakeDeadline < 0) this.bakeDeadline = Hb + 2;
+        else if (Hb > this.bakeDeadline) return;
+        return Ib = this.bake(cb, sb, kb, Wb, ab), void 0 !== Ib && Tb.set(Ub, Ib), Ib
       }
-      bake(kk, Fk, Bk, Rk, tk) {
-        const ak = kk.vertexAttributes.find((kk => "position" === kk.kind)),
-          Xk = ak ? function(kk, Fk, Bk, Rk) {
-            let tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-            const ak = kk => Fk ? Fk[Bk + kk] : Bk + kk,
-              Xk = kk => null !== tk && [0, 1, 2].some((Fk => {
-                const Bk = ak(kk + Fk);
-                return Bk >= tk[0] && Bk < tk[1]
+      bake(bb, cb, sb, kb, Wb) {
+        const ab = bb.vertexAttributes.find((bb => "position" === bb.kind)),
+          Tb = ab ? function(bb, cb, sb, kb) {
+            let Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+            const ab = bb => cb ? cb[sb + bb] : sb + bb,
+              Tb = bb => null !== Wb && [0, 1, 2].some((cb => {
+                const sb = ab(bb + cb);
+                return sb >= Wb[0] && sb < Wb[1]
               })),
-              bk = [1 / 0, 1 / 0, 1 / 0],
-              wk = [-1 / 0, -1 / 0, -1 / 0];
-            for (let Wk = 0; Wk + 2 < Rk; Wk += 3)
-              if (!Xk(Wk))
-                for (let Fk = 0; Fk < 3; Fk++) {
-                  const Bk = ak(Wk + Fk);
-                  for (let Fk = 0; Fk < 3; Fk++) bk[Fk] = Math.min(bk[Fk], kk[3 * Bk + Fk]), wk[Fk] = Math.max(wk[Fk], kk[3 * Bk + Fk])
+              Ub = [1 / 0, 1 / 0, 1 / 0],
+              Ib = [-1 / 0, -1 / 0, -1 / 0];
+            for (let Cb = 0; Cb + 2 < kb; Cb += 3)
+              if (!Tb(Cb))
+                for (let cb = 0; cb < 3; cb++) {
+                  const sb = ab(Cb + cb);
+                  for (let cb = 0; cb < 3; cb++) Ub[cb] = Math.min(Ub[cb], bb[3 * sb + cb]), Ib[cb] = Math.max(Ib[cb], bb[3 * sb + cb])
                 }
-            const dk = Math.max(wk[0] - bk[0], wk[1] - bk[1], wk[2] - bk[2]);
-            if (!(dk > 0)) return null;
-            const sk = dk / 64,
-              Vk = [0, 0, 0],
-              Jk = [0, 0, 0],
-              Ak = [0, 0, 0];
-            for (let Wk = 0; Wk < 3; Wk++) Vk[Wk] = Math.min(65, Math.ceil((wk[Wk] - bk[Wk]) / sk) + 1), Jk[Wk] = bk[Wk] - sk / 2, Ak[Wk] = Jk[Wk] + Vk[Wk] * sk;
-            const ek = new Uint32Array(Math.ceil(Vk[0] * Vk[1] * Vk[2] / 32)),
-              yk = new Float64Array(9),
-              fk = [0, 0, 0],
-              mk = [0, 0, 0];
-            for (let Wk = 0; Wk + 2 < Rk; Wk += 3)
-              if (!Xk(Wk)) {
-                for (let Fk = 0; Fk < 3; Fk++) {
-                  const Bk = ak(Wk + Fk);
-                  for (let Rk = 0; Rk < 3; Rk++) yk[3 * Fk + Rk] = kk[3 * Bk + Rk]
+            const Hb = Math.max(Ib[0] - Ub[0], Ib[1] - Ub[1], Ib[2] - Ub[2]);
+            if (!(Hb > 0)) return null;
+            const fb = Hb / 64,
+              Mb = [0, 0, 0],
+              Xb = [0, 0, 0],
+              nb = [0, 0, 0];
+            for (let Cb = 0; Cb < 3; Cb++) Mb[Cb] = Math.min(65, Math.ceil((Ib[Cb] - Ub[Cb]) / fb) + 1), Xb[Cb] = Ub[Cb] - fb / 2, nb[Cb] = Xb[Cb] + Mb[Cb] * fb;
+            const mb = new Uint32Array(Math.ceil(Mb[0] * Mb[1] * Mb[2] / 32)),
+              lb = new Float64Array(9),
+              Qb = [0, 0, 0],
+              eb = [0, 0, 0];
+            for (let Cb = 0; Cb + 2 < kb; Cb += 3)
+              if (!Tb(Cb)) {
+                for (let cb = 0; cb < 3; cb++) {
+                  const sb = ab(Cb + cb);
+                  for (let kb = 0; kb < 3; kb++) lb[3 * cb + kb] = bb[3 * sb + kb]
                 }
-                for (let kk = 0; kk < 3; kk++) {
-                  const Fk = Math.min(yk[kk], yk[3 + kk], yk[6 + kk]),
-                    Bk = Math.max(yk[kk], yk[3 + kk], yk[6 + kk]);
-                  fk[kk] = Math.max(0, Math.floor((Fk - Jk[kk]) / sk - 1e-6)), mk[kk] = Math.min(Vk[kk] - 1, Math.floor((Bk - Jk[kk]) / sk + 1e-6))
+                for (let bb = 0; bb < 3; bb++) {
+                  const cb = Math.min(lb[bb], lb[3 + bb], lb[6 + bb]),
+                    sb = Math.max(lb[bb], lb[3 + bb], lb[6 + bb]);
+                  Qb[bb] = Math.max(0, Math.floor((cb - Xb[bb]) / fb - 1e-6)), eb[bb] = Math.min(Mb[bb] - 1, Math.floor((sb - Xb[bb]) / fb + 1e-6))
                 }
-                for (let kk = fk[2]; kk <= mk[2]; kk++)
-                  for (let Fk = fk[1]; Fk <= mk[1]; Fk++)
-                    for (let Bk = fk[0]; Bk <= mk[0]; Bk++)
-                      if (vB(yk, Jk[0] + (Bk + .5) * sk, Jk[1] + (Fk + .5) * sk, Jk[2] + (kk + .5) * sk, sk / 2)) {
-                        const Rk = Bk + Vk[0] * (Fk + Vk[1] * kk);
-                        ek[Rk >>> 5] |= 1 << (31 & Rk)
+                for (let bb = Qb[2]; bb <= eb[2]; bb++)
+                  for (let cb = Qb[1]; cb <= eb[1]; cb++)
+                    for (let sb = Qb[0]; sb <= eb[0]; sb++)
+                      if (Cs(lb, Xb[0] + (sb + .5) * fb, Xb[1] + (cb + .5) * fb, Xb[2] + (bb + .5) * fb, fb / 2)) {
+                        const kb = sb + Mb[0] * (cb + Mb[1] * bb);
+                        mb[kb >>> 5] |= 1 << (31 & kb)
                       }
               } return {
-              words: ek,
-              lo: Jk,
-              hi: Ak,
-              cell: sk,
-              dims: Vk
+              words: mb,
+              lo: Xb,
+              hi: nb,
+              cell: fb,
+              dims: Mb
             }
-          }((0, bw.f)(ak, kk.vertexCount), Fk ? kk.indexData : null, Bk, Rk, tk) : null;
-        if (!Xk) return null;
+          }((0, II.h)(ab, bb.vertexCount), cb ? bb.indexData : null, sb, kb, Wb) : null;
+        if (!Tb) return null;
         const {
-          words: bk,
-          ...wk
-        } = Xk;
-        if (this.gridTop + bk.length > JB) return void(this.gridsFull = !0);
-        const dk = this.gridTop;
-        return this.gridTop += bk.length, this.device.queue.writeBuffer(this.gridBuffer, 4 * dk, bk), {
-          ...wk,
-          at: dk
+          words: Ub,
+          ...Ib
+        } = Tb;
+        if (this.gridTop + Ub.length > Ms) return void(this.gridsFull = !0);
+        const Hb = this.gridTop;
+        return this.gridTop += Ub.length, this.device.queue.writeBuffer(this.gridBuffer, 4 * Hb, Ub), {
+          ...Ib,
+          at: Hb
         }
       }
     }
-    const dw = Math.cos(1 * Math.PI / 180);
+    const fI = Math.cos(1 * Math.PI / 180);
 
-    function sw(kk, Fk) {
-      return kk[0] * Fk[0] + kk[1] * Fk[1] + kk[2] * Fk[2] < dw
+    function MI(bb, cb) {
+      return bb[0] * cb[0] + bb[1] * cb[1] + bb[2] * cb[2] < fI
     }
-    async function Vw(kk) {
+    async function XI(bb) {
       const {
-        pixels: Fk,
-        width: Bk,
-        height: Rk
-      } = await zt(kk), tk = new Uint8Array(Bk * Rk);
-      for (let ak = 0; ak < tk.length; ak++) tk[ak] = Fk[4 * ak + 3];
+        pixels: cb,
+        width: sb,
+        height: kb
+      } = await qW(bb), Wb = new Uint8Array(sb * kb);
+      for (let ab = 0; ab < Wb.length; ab++) Wb[ab] = cb[4 * ab + 3];
       return {
-        width: Bk,
-        height: Rk,
-        alpha: tk
+        width: sb,
+        height: kb,
+        alpha: Wb
       }
     }
-    class Jw {
-      constructor(kk, Fk) {
-        this.device = kk, this.uniform = void 0, this.voxelBuffer = void 0, this.special = void 0, this.volume = void 0, this.volumeView = void 0, this.volumeSampler = void 0, this.work = void 0, this.workData = new ArrayBuffer(YB.q), this.entities = void 0, this.entityStandIn = void 0, this.entitiesThisFrame = !1, this.window = null, this.casters = null, this.uniformData = new ArrayBuffer(128), this.uniformInts = new Int32Array(this.uniformData), this.uniformFloats = new Float32Array(this.uniformData), this.uniformWritten = null, this.eye = [0, 0, 0], this.warned = !1, this.volumePass = null, this.volumePassStarted = !1, this.volumePassFailed = !1, this.volumeHolds = null, this.slice = 0, this.sweepLeft = 0, this.written = !1, this.sweptChunk = [0, 0, 0], this.sweptLight = [0, 0, 0], this.stale = [], this.staleAll = !1, this.staleAllSwept = 0, this.castersWritten = !1, this.swept = 0, this.fastLeft = 0, this.paced = 0, this.staleNear = [0, 0, 0], this.uniform = kk.createBuffer({
+    class nI {
+      constructor(bb, cb) {
+        this.device = bb, this.uniform = void 0, this.voxelBuffer = void 0, this.special = void 0, this.volume = void 0, this.volumeView = void 0, this.volumeSampler = void 0, this.work = void 0, this.workData = new ArrayBuffer(Vs.p), this.entities = void 0, this.entityStandIn = void 0, this.entitiesThisFrame = !1, this.window = null, this.casters = null, this.uniformData = new ArrayBuffer(128), this.uniformInts = new Int32Array(this.uniformData), this.uniformFloats = new Float32Array(this.uniformData), this.uniformWritten = null, this.eye = [0, 0, 0], this.warned = !1, this.volumePass = null, this.volumePassStarted = !1, this.volumePassFailed = !1, this.volumeHolds = null, this.slice = 0, this.sweepLeft = 0, this.written = !1, this.sweptChunk = [0, 0, 0], this.sweptLight = [0, 0, 0], this.stale = [], this.staleAll = !1, this.staleAllSwept = 0, this.castersWritten = !1, this.swept = 0, this.fastLeft = 0, this.paced = 0, this.staleNear = [0, 0, 0], this.uniform = bb.createBuffer({
           label: "sun-shadow",
           size: 128,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.voxelBuffer = kk.createBuffer({
+        }), this.voxelBuffer = bb.createBuffer({
           label: "sun-shadow-voxels",
-          size: 4 * ZF,
+          size: 4 * wc,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.special = kk.createBuffer({
+        }), this.special = bb.createBuffer({
           label: "sun-shadow-special",
           size: 9568256,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
         });
-        const [Bk, Rk, tk] = YB.u;
-        this.volume = kk.createTexture({
+        const [sb, kb, Wb] = Vs.r;
+        this.volume = bb.createTexture({
           label: "sun-shadow-volume",
           size: {
-            width: Bk,
-            height: Rk,
-            depthOrArrayLayers: tk
+            width: sb,
+            height: kb,
+            depthOrArrayLayers: Wb
           },
           dimension: "3d",
           format: "rgba8unorm",
           usage: GPUTextureUsage.STORAGE_BINDING | GPUTextureUsage.TEXTURE_BINDING
         }), this.volumeView = this.volume.createView({
           label: "sun-shadow-volume"
-        }), this.volumeSampler = kk.createSampler({
+        }), this.volumeSampler = bb.createSampler({
           label: "sun-shadow-volume",
           magFilter: "linear",
           minFilter: "linear",
           addressModeU: "repeat",
           addressModeV: "repeat",
           addressModeW: "repeat"
-        }), this.work = kk.createBuffer({
+        }), this.work = bb.createBuffer({
           label: "sun-shadow-volume-work",
-          size: YB.q,
+          size: Vs.p,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.entities = Fk ? new ww(kk) : null, this.entityStandIn = Fk ? null : kk.createBuffer({
+        }), this.entities = cb ? new HI(bb) : null, this.entityStandIn = cb ? null : bb.createBuffer({
           label: "sun-shadow-entities-stand-in",
           size: 16,
           usage: GPUBufferUsage.STORAGE
@@ -7490,173 +7490,173 @@ export const modules = {
         return null !== this.entities
       }
       describePendingWork() {
-        var kk, Fk;
-        const Bk = [];
-        !this.volumePassStarted || this.volumePass || this.volumePassFailed || Bk.push("Lite sun shadow volume pipeline compiling");
-        const Rk = null !== (kk = null === (Fk = this.casters) || void 0 === Fk ? void 0 : Fk.planesLoading) && void 0 !== kk ? kk : 0;
-        return Rk > 0 && Bk.push(`${Rk} Lite sun shadow plane casters loading their textures`), Bk
+        var bb, cb;
+        const sb = [];
+        !this.volumePassStarted || this.volumePass || this.volumePassFailed || sb.push("Lite sun shadow volume pipeline compiling");
+        const kb = null !== (bb = null === (cb = this.casters) || void 0 === cb ? void 0 : cb.planesLoading) && void 0 !== bb ? bb : 0;
+        return kb > 0 && sb.push(`${kb} Lite sun shadow plane casters loading their textures`), sb
       }
       entries() {
-        var kk, Fk, Bk, Rk;
-        const tk = NF.r;
+        var bb, cb, sb, kb;
+        const Wb = gc.s;
         return [{
-          binding: tk.uniform,
+          binding: Wb.uniform,
           resource: {
             buffer: this.uniform
           }
         }, {
-          binding: tk.jJ,
+          binding: Wb.zX,
           resource: {
             buffer: this.voxelBuffer
           }
         }, {
-          binding: tk.special,
+          binding: Wb.special,
           resource: {
             buffer: this.special
           }
         }, {
-          binding: tk.volume,
+          binding: Wb.volume,
           resource: this.volumeView
         }, {
-          binding: tk.sampler,
+          binding: Wb.sampler,
           resource: this.volumeSampler
         }, {
-          binding: tk.entities,
+          binding: Wb.entities,
           resource: {
-            buffer: null !== (kk = null === (Fk = this.entities) || void 0 === Fk ? void 0 : Fk.frameBuffer) && void 0 !== kk ? kk : this.entityStandIn
+            buffer: null !== (bb = null === (cb = this.entities) || void 0 === cb ? void 0 : cb.frameBuffer) && void 0 !== bb ? bb : this.entityStandIn
           }
         }, {
-          binding: tk.entityGrids,
+          binding: Wb.entityGrids,
           resource: {
-            buffer: null !== (Bk = null === (Rk = this.entities) || void 0 === Rk ? void 0 : Rk.gridBuffer) && void 0 !== Bk ? Bk : this.entityStandIn
+            buffer: null !== (sb = null === (kb = this.entities) || void 0 === kb ? void 0 : kb.gridBuffer) && void 0 !== sb ? sb : this.entityStandIn
           }
         }]
       }
-      prepare(kk, Fk, Bk) {
-        var Rk;
+      prepare(bb, cb, sb) {
+        var kb;
         this.entitiesThisFrame = !1;
-        const tk = null !== (Rk = null === Bk || void 0 === Bk ? void 0 : Bk.sunShadowReach()) && void 0 !== Rk ? Rk : {
+        const Wb = null !== (kb = null === sb || void 0 === sb ? void 0 : sb.sunShadowReach()) && void 0 !== kb ? kb : {
           sunShadow: !1,
           airShadow: !1
         };
-        if (!Bk || !tk.sunShadow && !tk.airShadow) return void(this.volumeHolds = null);
-        if (kk.iJ.I9 !== uF) return void(this.warned || (this.warned = !0, console.warn(`Lite: sun shadows need chunks of 32 blocks, not ${kk.iJ.I9}; everything is lit.`)));
-        const ak = this.start(kk);
-        this.casters.update(kk.oA, kk.oA.SA.length);
-        const Xk = kk.CJ;
-        for (let Jk = 0; Jk < 3; Jk++) this.eye[Jk] = Fk[Jk] + Xk[Jk];
-        const bk = (0, YB.y)(this.eye);
-        this.staleNear = bk;
-        const wk = kk.iJ.Zy;
-        ak.update(this.eye, ((kk, Fk, Bk) => wk.py(kk, Fk, Bk)), 1);
-        const dk = (0, YB.w)(Bk.w6()),
-          sk = ak.eyeChunk,
-          Vk = this.uniformInts;
-        for (let Jk = 0; Jk < 3; Jk++) Vk[Jk] = sk[Jk], Vk[4 + Jk] = bk[Jk];
-        this.entitiesThisFrame = null !== this.entities && tk.sunShadow, this.entitiesThisFrame && yB(this.uniformFloats, 8, Fk, dk), null !== this.volumeHolds && (this.castersWritten || sw(dk, this.sweptLight)) && (this.staleAll = !0, this.staleAllSwept = this.swept), this.castersWritten = !1, this.writeStale(), this.writeUniform(), this.computeVolume(bk, dk, sk)
+        if (!sb || !Wb.sunShadow && !Wb.airShadow) return void(this.volumeHolds = null);
+        if (bb.fX.h_ !== tc) return void(this.warned || (this.warned = !0, console.warn(`Lite: sun shadows need chunks of 32 blocks, not ${bb.fX.h_}; everything is lit.`)));
+        const ab = this.start(bb);
+        this.casters.update(bb.Qn, bb.Qn.Vn.length);
+        const Tb = bb.iX;
+        for (let Xb = 0; Xb < 3; Xb++) this.eye[Xb] = cb[Xb] + Tb[Xb];
+        const Ub = (0, Vs.w)(this.eye);
+        this.staleNear = Ub;
+        const Ib = bb.fX.Gl;
+        ab.update(this.eye, ((bb, cb, sb) => Ib.Kl(bb, cb, sb)), 1);
+        const Hb = (0, Vs.s)(sb.J9()),
+          fb = ab.eyeChunk,
+          Mb = this.uniformInts;
+        for (let Xb = 0; Xb < 3; Xb++) Mb[Xb] = fb[Xb], Mb[4 + Xb] = Ub[Xb];
+        this.entitiesThisFrame = null !== this.entities && Wb.sunShadow, this.entitiesThisFrame && ms(this.uniformFloats, 8, cb, Hb), null !== this.volumeHolds && (this.castersWritten || MI(Hb, this.sweptLight)) && (this.staleAll = !0, this.staleAllSwept = this.swept), this.castersWritten = !1, this.writeStale(), this.writeUniform(), this.computeVolume(Ub, Hb, fb)
       }
-      markStale(kk) {
-        const Fk = this.staleNear,
-          Bk = uF,
-          Rk = [kk.i * Bk, kk.j * Bk, kk.k * Bk];
-        for (let ak = 0; ak < 3; ak++)
-          if (Rk[ak] + Bk <= Fk[ak] - Bk || Rk[ak] >= Fk[ak] + YB.u[ak] + Bk) return;
+      markStale(bb) {
+        const cb = this.staleNear,
+          sb = tc,
+          kb = [bb.i * sb, bb.j * sb, bb.k * sb];
+        for (let ab = 0; ab < 3; ab++)
+          if (kb[ab] + sb <= cb[ab] - sb || kb[ab] >= cb[ab] + Vs.r[ab] + sb) return;
         if (this.staleAll) return void(this.staleAllSwept = this.swept);
-        const tk = this.stale;
-        for (let ak = 0; ak < tk.length; ak += 4)
-          if (tk[ak] === kk.i && tk[ak + 1] === kk.j && tk[ak + 2] === kk.k) return void(tk[ak + 3] = this.swept);
-        if (16 === tk.length) return this.staleAll = !0, void(this.staleAllSwept = this.swept);
-        tk.push(kk.i, kk.j, kk.k, this.swept)
+        const Wb = this.stale;
+        for (let ab = 0; ab < Wb.length; ab += 4)
+          if (Wb[ab] === bb.i && Wb[ab + 1] === bb.j && Wb[ab + 2] === bb.k) return void(Wb[ab + 3] = this.swept);
+        if (16 === Wb.length) return this.staleAll = !0, void(this.staleAllSwept = this.swept);
+        Wb.push(bb.i, bb.j, bb.k, this.swept)
       }
       writeStale() {
-        const kk = this.swept,
-          Fk = this.stale;
-        this.staleAll && kk - this.staleAllSwept >= YB.l && (this.staleAll = !1, Fk.length = 0);
-        let Bk = 0;
-        for (let tk = 0; tk < Fk.length; tk += 4)
-          if (kk - Fk[tk + 3] < YB.l) {
-            for (let kk = 0; kk < 4; kk++) Fk[Bk + kk] = Fk[tk + kk];
-            Bk += 4
-          } Fk.length = Bk;
-        const Rk = this.uniformInts;
-        Rk[3] = this.staleAll ? 5 : Bk / 4;
-        for (let tk = 0; tk < 4; tk++)
-          for (let kk = 0; kk < 3; kk++) Rk[16 + 4 * tk + kk] = 4 * tk < Bk ? Fk[4 * tk + kk] * uF : 0
+        const bb = this.swept,
+          cb = this.stale;
+        this.staleAll && bb - this.staleAllSwept >= Vs.h && (this.staleAll = !1, cb.length = 0);
+        let sb = 0;
+        for (let Wb = 0; Wb < cb.length; Wb += 4)
+          if (bb - cb[Wb + 3] < Vs.h) {
+            for (let bb = 0; bb < 4; bb++) cb[sb + bb] = cb[Wb + bb];
+            sb += 4
+          } cb.length = sb;
+        const kb = this.uniformInts;
+        kb[3] = this.staleAll ? 5 : sb / 4;
+        for (let Wb = 0; Wb < 4; Wb++)
+          for (let bb = 0; bb < 3; bb++) kb[16 + 4 * Wb + bb] = 4 * Wb < sb ? cb[4 * Wb + bb] * tc : 0
       }
       writeUniform() {
-        const kk = this.uniformInts;
-        let Fk = this.uniformWritten;
-        if (Fk) {
-          let Bk = !0;
-          for (let Rk = 0; Rk < kk.length && Bk; Rk++) Bk = kk[Rk] === Fk[Rk];
-          if (Bk) return
+        const bb = this.uniformInts;
+        let cb = this.uniformWritten;
+        if (cb) {
+          let sb = !0;
+          for (let kb = 0; kb < bb.length && sb; kb++) sb = bb[kb] === cb[kb];
+          if (sb) return
         }
-        Fk ??= this.uniformWritten = new Int32Array(kk.length), Fk.set(kk), this.device.queue.writeBuffer(this.uniform, 0, this.uniformData)
+        cb ??= this.uniformWritten = new Int32Array(bb.length), cb.set(bb), this.device.queue.writeBuffer(this.uniform, 0, this.uniformData)
       }
-      traceEntities(kk) {
-        this.entitiesThisFrame && this.entities.update(this.uniformFloats, 8, kk)
+      traceEntities(bb) {
+        this.entitiesThisFrame && this.entities.update(this.uniformFloats, 8, bb)
       }
-      computeVolume(kk, Fk, Bk) {
-        const Rk = this.buildVolumePass();
-        if (!Rk) return void(this.volumeHolds = null);
-        const tk = (0, YB.x)(this.volumeHolds, kk);
-        this.volumeHolds = kk;
-        const ak = 1 === tk.length && tk[0].size.every(((kk, Fk) => kk === YB.u[Fk])),
-          Xk = this.sweptChunk,
-          bk = this.sweptLight,
-          wk = Fk[0] !== bk[0] || Fk[1] !== bk[1] || Fk[2] !== bk[2],
-          dk = Bk[0] !== Xk[0] || Bk[1] !== Xk[1] || Bk[2] !== Xk[2],
-          sk = wk && sw(Fk, bk);
-        if ((ak || this.written || dk || sk) && (this.fastLeft = YB.l), ak || this.written || wk || dk) {
+      computeVolume(bb, cb, sb) {
+        const kb = this.buildVolumePass();
+        if (!kb) return void(this.volumeHolds = null);
+        const Wb = (0, Vs.t)(this.volumeHolds, bb);
+        this.volumeHolds = bb;
+        const ab = 1 === Wb.length && Wb[0].size.every(((bb, cb) => bb === Vs.r[cb])),
+          Tb = this.sweptChunk,
+          Ub = this.sweptLight,
+          Ib = cb[0] !== Ub[0] || cb[1] !== Ub[1] || cb[2] !== Ub[2],
+          Hb = sb[0] !== Tb[0] || sb[1] !== Tb[1] || sb[2] !== Tb[2],
+          fb = Ib && MI(cb, Ub);
+        if ((ab || this.written || Hb || fb) && (this.fastLeft = Vs.h), ab || this.written || Ib || Hb) {
           this.written = !1;
-          for (let kk = 0; kk < 3; kk++) Xk[kk] = Bk[kk], bk[kk] = Fk[kk];
-          this.sweepLeft = ak ? 0 : YB.l
+          for (let bb = 0; bb < 3; bb++) Tb[bb] = sb[bb], Ub[bb] = cb[bb];
+          this.sweepLeft = ab ? 0 : Vs.h
         }
-        if (ak ? this.swept += YB.l : this.sweepLeft > 0 && (this.fastLeft > 0 || ++this.paced % 2 === 0) && (this.fastLeft = Math.max(this.fastLeft - 1, 0), this.sweepLeft--, tk.push(...(0, YB.B)(kk, this.slice)), this.slice = (this.slice + 1) % YB.l, this.swept++), 0 === tk.length) return;
-        const Vk = (0, YB.E)(this.workData, Fk, tk);
+        if (ab ? this.swept += Vs.h : this.sweepLeft > 0 && (this.fastLeft > 0 || ++this.paced % 2 === 0) && (this.fastLeft = Math.max(this.fastLeft - 1, 0), this.sweepLeft--, Wb.push(...(0, Vs.A)(bb, this.slice)), this.slice = (this.slice + 1) % Vs.h, this.swept++), 0 === Wb.length) return;
+        const Mb = (0, Vs.D)(this.workData, cb, Wb);
         this.device.queue.writeBuffer(this.work, 0, this.workData);
-        const Jk = this.device.createCommandEncoder({
+        const Xb = this.device.createCommandEncoder({
             label: "sun-shadow-volume"
           }),
-          Ak = Jk.beginComputePass({
+          nb = Xb.beginComputePass({
             label: "sun-shadow-volume"
           });
-        Ak.setPipeline(Rk.pipeline), Ak.setBindGroup(OB.group, Rk.bindGroup), Ak.dispatchWorkgroups(Math.ceil(Vk / YB.n)), Ak.end(), this.device.queue.submit([Jk.finish()])
+        nb.setPipeline(kb.pipeline), nb.setBindGroup(Ys.group, kb.bindGroup), nb.dispatchWorkgroups(Math.ceil(Mb / Vs.l)), nb.end(), this.device.queue.submit([Xb.finish()])
       }
       buildVolumePass() {
         if (this.volumePass || this.volumePassStarted) return this.volumePass;
         this.volumePassStarted = !0;
-        const kk = OB,
-          Fk = GPUShaderStage.COMPUTE,
-          Bk = this.device.createBindGroupLayout({
+        const bb = Ys,
+          cb = GPUShaderStage.COMPUTE,
+          sb = this.device.createBindGroupLayout({
             label: "sun-shadow-volume",
             entries: [{
-              binding: kk.uniform,
-              visibility: Fk,
+              binding: bb.uniform,
+              visibility: cb,
               buffer: {
                 type: "uniform"
               }
             }, {
-              binding: kk.jJ,
-              visibility: Fk,
+              binding: bb.zX,
+              visibility: cb,
               buffer: {
                 type: "read-only-storage"
               }
             }, {
-              binding: kk.special,
-              visibility: Fk,
+              binding: bb.special,
+              visibility: cb,
               buffer: {
                 type: "read-only-storage"
               }
             }, {
-              binding: kk.work,
-              visibility: Fk,
+              binding: bb.work,
+              visibility: cb,
               buffer: {
                 type: "uniform"
               }
             }, {
-              binding: kk.volume,
-              visibility: Fk,
+              binding: bb.volume,
+              visibility: cb,
               storageTexture: {
                 access: "write-only",
                 format: "rgba8unorm",
@@ -7664,31 +7664,31 @@ export const modules = {
               }
             }]
           }),
-          Rk = this.device.createBindGroup({
+          kb = this.device.createBindGroup({
             label: "sun-shadow-volume",
-            layout: Bk,
+            layout: sb,
             entries: [{
-              binding: kk.uniform,
+              binding: bb.uniform,
               resource: {
                 buffer: this.uniform
               }
             }, {
-              binding: kk.jJ,
+              binding: bb.zX,
               resource: {
                 buffer: this.voxelBuffer
               }
             }, {
-              binding: kk.special,
+              binding: bb.special,
               resource: {
                 buffer: this.special
               }
             }, {
-              binding: kk.work,
+              binding: bb.work,
               resource: {
                 buffer: this.work
               }
             }, {
-              binding: kk.volume,
+              binding: bb.volume,
               resource: this.volumeView
             }]
           });
@@ -7696,93 +7696,93 @@ export const modules = {
           label: "sun-shadow-volume",
           layout: this.device.createPipelineLayout({
             label: "sun-shadow-volume",
-            bindGroupLayouts: [Bk]
+            bindGroupLayouts: [sb]
           }),
           compute: {
             module: this.device.createShaderModule({
               label: "sun-shadow-volume",
-              code: EB()
+              code: hs()
             }),
             entryPoint: "main"
           }
-        }).then((kk => {
+        }).then((bb => {
           this.volumePass = {
-            pipeline: kk,
-            bindGroup: Rk
+            pipeline: bb,
+            bindGroup: kb
           }
-        }), (kk => {
-          this.volumePassFailed = !0, console.warn(`Lite: sun shadows' visibility volume didn't build, so air shadows and far traces are lit: ${String(kk)}`)
+        }), (bb => {
+          this.volumePassFailed = !0, console.warn(`Lite: sun shadows' visibility volume didn't build, so air shadows and far traces are lit: ${String(bb)}`)
         })), null
       }
-      start(kk) {
+      start(bb) {
         if (this.window) return this.window;
-        const Fk = (kk, Fk) => {
-          this.written = !0, this.device.queue.writeBuffer(this.special, 4 * kk, Fk)
+        const cb = (bb, cb) => {
+          this.written = !0, this.device.queue.writeBuffer(this.special, 4 * bb, cb)
         };
-        this.casters = new Bw(((kk, Bk) => {
-          this.castersWritten = !0, Fk(kk, Bk)
-        }), Vw);
-        const Bk = new Xw(this.casters, ((kk, Fk) => {
-          this.written = !0, this.device.queue.writeBuffer(this.voxelBuffer, 4 * kk, Fk)
-        }), Fk);
-        return Bk.encoded = kk => {
-          this.markStale(kk)
-        }, kk.iJ.on("chunkAdded", (kk => {
-          Bk.chunkAdded(kk)
-        })), this.window = Bk, Bk
+        this.casters = new kI(((bb, sb) => {
+          this.castersWritten = !0, cb(bb, sb)
+        }), XI);
+        const sb = new UI(this.casters, ((bb, cb) => {
+          this.written = !0, this.device.queue.writeBuffer(this.voxelBuffer, 4 * bb, cb)
+        }), cb);
+        return sb.encoded = bb => {
+          this.markStale(bb)
+        }, bb.fX.on("chunkAdded", (bb => {
+          sb.chunkAdded(bb)
+        })), this.window = sb, sb
       }
     }
-    var Aw = Bk(38334),
-      ew = Bk(38339);
-    const yw = 0,
-      fw = 3,
-      mw = 4,
-      Ww = 5;
+    var mI = sb(38297),
+      lI = sb(38304);
+    const QI = 0,
+      eI = 3,
+      CI = 4,
+      NI = 5;
 
-    function vw(kk, Fk, Bk, Rk) {
-      kk.drawOffset(Fk, Rk + yw), Fk[Rk + fw] = kk.drawTime(), Bk[Rk + mw] = kk.ring.drawStart(), Bk[Rk + Ww] = kk.ring.drawCount()
+    function VI(bb, cb, sb, kb) {
+      bb.drawOffset(cb, kb + QI), cb[kb + eI] = bb.drawTime(), sb[kb + CI] = bb.ring.drawStart(), sb[kb + NI] = bb.ring.drawCount()
     }
-    const iw = `\n${fR}\n\nconst MAX_STOPS = ${ew.b}u;\n\nstruct SystemUniforms {\n\tgravity: vec3f,\n\tcolorCount: u32,\n\tcolorDead: vec4f,\n\tvelocityCount: u32,\n\tremapCount: u32,\n\tramp: u32,\n\tcolorPositions: array<vec4f, ${ew.b/4}>,\n\tcolor1: array<vec4f, ${ew.b}>,\n\tcolor2: array<vec4f, ${ew.b}>,\n\t// Position, factor and factor2 per stop.\n\tvelocity: array<vec4f, ${ew.b}>,\n\t// Position, min and max per stop.\n\tremap: array<vec4f, ${ew.b}>,\n}\n\n// A particle as spawned: position relative to the frame offset and spawn time; direction times emit power and\n// lifetime; size, random seed and colour.\nstruct Particle {\n\tspawn: vec4f,\n\tvelocity: vec4f,\n\tsize: f32,\n\tseed: u32,\n\tcolour: vec4f,\n}\n\nstruct SystemFrame {\n\toffset: vec3f,\n\tnow: f32,\n\t// The slot drawn first (the oldest), and the slots in use.\n\tstart: u32,\n\tcount: u32,\n}\n\n@group(1) @binding(0) var<uniform> system: SystemUniforms;\n@group(1) @binding(1) var<storage, read> particles: array<Particle>;\n@group(1) @binding(2) var diffuseSampler: sampler;\n@group(1) @binding(3) var diffuseTexture: texture_2d<f32>;\n@group(1) @binding(4) var rampSampler: sampler;\n@group(1) @binding(5) var rampTexture: texture_2d<f32>;\n@group(2) @binding(0) var<uniform> frame: SystemFrame;\n\n// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\noverride MULTIPLY_PASS: bool = false;\n\nstruct VertexOutput {\n\t@builtin(position) position: vec4f,\n\t@location(0) uv: vec2f,\n\t@location(1) colour: vec4f,\n\t@location(2) remap: vec4f,\n}\n\nfn hash(v: u32) -> u32 {\n\tlet state = v * 747796405u + 2891336453u;\n\tlet word = ((state >> ((state >> 28u) + 4u)) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfn random(seed: u32, stop: u32) -> f32 {\n\treturn f32(hash(seed ^ (stop * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfn colourPosition(i: u32) -> f32 {\n\treturn system.colorPositions[i / 4u][i % 4u];\n}\n\nfn stopColour(i: u32, seed: u32) -> vec4f {\n\treturn mix(system.color1[i], system.color2[i], random(seed, i));\n}\n\nfn velocityFactor(i: u32, seed: u32) -> f32 {\n\tlet stop = system.velocity[i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\n// _ProcessColorGradients / _ProcessColor at the particle's age. Babylon's GetCurrentGradient picks stop 0's pair\n// below the first stop, where a particle keeps the colour it was given for the next stop (stop 1's pick); the first\n// segment containing the ratio; or else the last stop.\nfn colourAt(p: Particle, age: f32, ratio: f32, seed: u32) -> vec4f {\n\tlet n = system.colorCount;\n\tvar colour: vec4f;\n\tif (n == 0u) {\n\t\tcolour = mix(p.colour, system.colorDead, ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0u, seed);\n\t} else if (ratio < colourPosition(0u)) {\n\t\tcolour = stopColour(min(1u, n - 1u), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1u, seed);\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = colourPosition(i);\n\t\t\tlet b = colourPosition(i + 1u);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tlet scale = select(0.0, (ratio - a) / (b - a), b > a);\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1u, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\n// The integral of (alpha + beta s)(d + g s) over s0..s1: the distance travelled while the velocity factor is\n// alpha + beta s at age s and the direction d + g s.\nfn travel(alpha: f32, beta: f32, d: vec3f, g: vec3f, s0: f32, s1: f32) -> vec3f {\n\tlet ds = s1 - s0;\n\tlet ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tlet ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\n// Where the particle has moved by its age: each frame Babylon moves it by its direction times the step and the\n// velocity factor, then adds gravity times the step to the direction. The factor is piecewise linear in the age,\n// picked as colourAt picks colours.\nfn displacement(d: vec3f, age: f32, life: f32, seed: u32) -> vec3f {\n\tlet g = system.gravity;\n\tlet n = system.velocityCount;\n\tif (n == 0u) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvar total = vec3f(0.0);\n\tlet first = system.velocity[0u].x * life;\n\tlet beforeFirst = min(age, first);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1u, n - 1u), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (var i = 0u; i + 1u < n; i++) {\n\t\tlet a = system.velocity[i].x * life;\n\t\tlet b = system.velocity[i + 1u].x * life;\n\t\tlet lo = max(a, 0.0);\n\t\tlet hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tlet fa = velocityFactor(i, seed);\n\t\t\tlet beta = (velocityFactor(i + 1u, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tlet afterLast = max(system.velocity[n - 1u].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1u, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\n// _ProcessRemapGradients: the colour remap's min and range at the ratio; a new particle has (0, 1, 0, 1).\nfn remapAt(age: f32, ratio: f32) -> vec4f {\n\tlet n = system.remapCount;\n\tif (n == 0u || age == 0.0) {\n\t\treturn vec4f(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvar stop = system.remap[n - 1u].yz;\n\tif (ratio < system.remap[0u].x) {\n\t\tstop = system.remap[0u].yz;\n\t} else {\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = system.remap[i];\n\t\t\tlet b = system.remap[i + 1u];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, select(0.0, (ratio - a.x) / (b.x - a.x), b.x > a.x));\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4f(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\n@vertex\nfn mainVertex(@builtin(vertex_index) vertexIndex: u32, @builtin(instance_index) instanceIndex: u32) -> VertexOutput {\n\tvar out: VertexOutput;\n\tlet p = particles[(frame.start + instanceIndex) % frame.count];\n\tlet age = frame.now - p.spawn.w;\n\tlet life = p.velocity.w;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tout.position = vec4f(0.0, 0.0, 2.0, 1.0);\n\t\treturn out;\n\t}\n\tlet ratio = age / life;\n\tlet seed = p.seed;\n\tlet centre = frame.offset + p.spawn.xyz + displacement(p.velocity.xyz, age, life, seed);\n\t// ThinParticleSystem's billboard: the corner offset in view space, here along the camera's right and up.\n\tlet corner = vec2f(f32(vertexIndex & 1u), f32(vertexIndex >> 1u));\n\tlet offset = (corner - 0.5) * p.size;\n\tlet right = vec3f(scene.view[0][0], scene.view[1][0], scene.view[2][0]);\n\tlet up = vec3f(scene.view[0][1], scene.view[1][1], scene.view[2][1]);\n\tout.position = liteWorldLayer(scene.viewProjection * vec4f(centre + right * offset.x + up * offset.y, 1.0));\n\tout.uv = corner;\n\tout.colour = colourAt(p, age, ratio, seed);\n\tout.remap = remapAt(age, ratio);\n\treturn out;\n}\n\n// Babylon's particles.fragment with the default texture mask, without fog or image processing.\n@fragment\nfn mainFragment(in: VertexOutput) -> @location(0) vec4f {\n\tlet textureColour = textureSample(diffuseTexture, diffuseSampler, in.uv);\n\tvar colour = textureColour * in.colour;\n\tif (system.ramp != 0u) {\n\t\tlet index = clamp((colour.a - in.remap.x) / in.remap.y, 0.0, 1.0);\n\t\tlet rampColour = textureSample(rampTexture, rampSampler, vec2f(1.0 - index, 0.0));\n\t\tcolour = vec4f(colour.rgb * rampColour.rgb, clamp((colour.a * rampColour.a - in.remap.z) / in.remap.w, 0.0, 1.0));\n\t}\n\tif (MULTIPLY_PASS) {\n\t\tlet sourceAlpha = in.colour.a * textureColour.a;\n\t\tcolour = vec4f(colour.rgb * sourceAlpha + vec3f(1.0 - sourceAlpha), colour.a);\n\t}\n\treturn colour;\n}\n`;
-    var Yw = Bk(41039);
-    class ow {
-      constructor(kk, Fk, Bk, Rk) {
-        this.device = kk, this.system = Fk, this.frameIndex = Bk, this.bindings = Rk, this.ring = void 0, this.uniforms = void 0, this.uniformBits = null, this.rampTexels = (0, Yw.h)(), this.ramp = null, this.rampView = null, this.bindGroup = null, this.boundView = null, this.boundSampler = null, this.boundRamp = null, this.texture = null, this.pipelines = [], this.count = 0, this.upload = (kk, Fk) => {
-          this.device.queue.writeBuffer(this.ring, kk * ew.d * 4, this.system.ring.records, kk * ew.d, (Fk - kk) * ew.d)
+    const LI = `\n${ek}\n\nconst MAX_STOPS = ${lI.e}u;\n\nstruct SystemUniforms {\n\tgravity: vec3f,\n\tcolorCount: u32,\n\tcolorDead: vec4f,\n\tvelocityCount: u32,\n\tremapCount: u32,\n\tramp: u32,\n\tcolorPositions: array<vec4f, ${lI.e/4}>,\n\tcolor1: array<vec4f, ${lI.e}>,\n\tcolor2: array<vec4f, ${lI.e}>,\n\t// Position, factor and factor2 per stop.\n\tvelocity: array<vec4f, ${lI.e}>,\n\t// Position, min and max per stop.\n\tremap: array<vec4f, ${lI.e}>,\n}\n\n// A particle as spawned: position relative to the frame offset and spawn time; direction times emit power and\n// lifetime; size, random seed and colour.\nstruct Particle {\n\tspawn: vec4f,\n\tvelocity: vec4f,\n\tsize: f32,\n\tseed: u32,\n\tcolour: vec4f,\n}\n\nstruct SystemFrame {\n\toffset: vec3f,\n\tnow: f32,\n\t// The slot drawn first (the oldest), and the slots in use.\n\tstart: u32,\n\tcount: u32,\n}\n\n@group(1) @binding(0) var<uniform> system: SystemUniforms;\n@group(1) @binding(1) var<storage, read> particles: array<Particle>;\n@group(1) @binding(2) var diffuseSampler: sampler;\n@group(1) @binding(3) var diffuseTexture: texture_2d<f32>;\n@group(1) @binding(4) var rampSampler: sampler;\n@group(1) @binding(5) var rampTexture: texture_2d<f32>;\n@group(2) @binding(0) var<uniform> frame: SystemFrame;\n\n// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\noverride MULTIPLY_PASS: bool = false;\n\nstruct VertexOutput {\n\t@builtin(position) position: vec4f,\n\t@location(0) uv: vec2f,\n\t@location(1) colour: vec4f,\n\t@location(2) remap: vec4f,\n}\n\nfn hash(v: u32) -> u32 {\n\tlet state = v * 747796405u + 2891336453u;\n\tlet word = ((state >> ((state >> 28u) + 4u)) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfn random(seed: u32, stop: u32) -> f32 {\n\treturn f32(hash(seed ^ (stop * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfn colourPosition(i: u32) -> f32 {\n\treturn system.colorPositions[i / 4u][i % 4u];\n}\n\nfn stopColour(i: u32, seed: u32) -> vec4f {\n\treturn mix(system.color1[i], system.color2[i], random(seed, i));\n}\n\nfn velocityFactor(i: u32, seed: u32) -> f32 {\n\tlet stop = system.velocity[i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\n// _ProcessColorGradients / _ProcessColor at the particle's age. Babylon's GetCurrentGradient picks stop 0's pair\n// below the first stop, where a particle keeps the colour it was given for the next stop (stop 1's pick); the first\n// segment containing the ratio; or else the last stop.\nfn colourAt(p: Particle, age: f32, ratio: f32, seed: u32) -> vec4f {\n\tlet n = system.colorCount;\n\tvar colour: vec4f;\n\tif (n == 0u) {\n\t\tcolour = mix(p.colour, system.colorDead, ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0u, seed);\n\t} else if (ratio < colourPosition(0u)) {\n\t\tcolour = stopColour(min(1u, n - 1u), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1u, seed);\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = colourPosition(i);\n\t\t\tlet b = colourPosition(i + 1u);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tlet scale = select(0.0, (ratio - a) / (b - a), b > a);\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1u, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\n// The integral of (alpha + beta s)(d + g s) over s0..s1: the distance travelled while the velocity factor is\n// alpha + beta s at age s and the direction d + g s.\nfn travel(alpha: f32, beta: f32, d: vec3f, g: vec3f, s0: f32, s1: f32) -> vec3f {\n\tlet ds = s1 - s0;\n\tlet ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tlet ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\n// Where the particle has moved by its age: each frame Babylon moves it by its direction times the step and the\n// velocity factor, then adds gravity times the step to the direction. The factor is piecewise linear in the age,\n// picked as colourAt picks colours.\nfn displacement(d: vec3f, age: f32, life: f32, seed: u32) -> vec3f {\n\tlet g = system.gravity;\n\tlet n = system.velocityCount;\n\tif (n == 0u) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvar total = vec3f(0.0);\n\tlet first = system.velocity[0u].x * life;\n\tlet beforeFirst = min(age, first);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1u, n - 1u), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (var i = 0u; i + 1u < n; i++) {\n\t\tlet a = system.velocity[i].x * life;\n\t\tlet b = system.velocity[i + 1u].x * life;\n\t\tlet lo = max(a, 0.0);\n\t\tlet hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tlet fa = velocityFactor(i, seed);\n\t\t\tlet beta = (velocityFactor(i + 1u, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tlet afterLast = max(system.velocity[n - 1u].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1u, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\n// _ProcessRemapGradients: the colour remap's min and range at the ratio; a new particle has (0, 1, 0, 1).\nfn remapAt(age: f32, ratio: f32) -> vec4f {\n\tlet n = system.remapCount;\n\tif (n == 0u || age == 0.0) {\n\t\treturn vec4f(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvar stop = system.remap[n - 1u].yz;\n\tif (ratio < system.remap[0u].x) {\n\t\tstop = system.remap[0u].yz;\n\t} else {\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = system.remap[i];\n\t\t\tlet b = system.remap[i + 1u];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, select(0.0, (ratio - a.x) / (b.x - a.x), b.x > a.x));\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4f(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\n@vertex\nfn mainVertex(@builtin(vertex_index) vertexIndex: u32, @builtin(instance_index) instanceIndex: u32) -> VertexOutput {\n\tvar out: VertexOutput;\n\tlet p = particles[(frame.start + instanceIndex) % frame.count];\n\tlet age = frame.now - p.spawn.w;\n\tlet life = p.velocity.w;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tout.position = vec4f(0.0, 0.0, 2.0, 1.0);\n\t\treturn out;\n\t}\n\tlet ratio = age / life;\n\tlet seed = p.seed;\n\tlet centre = frame.offset + p.spawn.xyz + displacement(p.velocity.xyz, age, life, seed);\n\t// ThinParticleSystem's billboard: the corner offset in view space, here along the camera's right and up.\n\tlet corner = vec2f(f32(vertexIndex & 1u), f32(vertexIndex >> 1u));\n\tlet offset = (corner - 0.5) * p.size;\n\tlet right = vec3f(scene.view[0][0], scene.view[1][0], scene.view[2][0]);\n\tlet up = vec3f(scene.view[0][1], scene.view[1][1], scene.view[2][1]);\n\tout.position = liteWorldLayer(scene.viewProjection * vec4f(centre + right * offset.x + up * offset.y, 1.0));\n\tout.uv = corner;\n\tout.colour = colourAt(p, age, ratio, seed);\n\tout.remap = remapAt(age, ratio);\n\treturn out;\n}\n\n// Babylon's particles.fragment with the default texture mask, without fog or image processing.\n@fragment\nfn mainFragment(in: VertexOutput) -> @location(0) vec4f {\n\tlet textureColour = textureSample(diffuseTexture, diffuseSampler, in.uv);\n\tvar colour = textureColour * in.colour;\n\tif (system.ramp != 0u) {\n\t\tlet index = clamp((colour.a - in.remap.x) / in.remap.y, 0.0, 1.0);\n\t\tlet rampColour = textureSample(rampTexture, rampSampler, vec2f(1.0 - index, 0.0));\n\t\tcolour = vec4f(colour.rgb * rampColour.rgb, clamp((colour.a * rampColour.a - in.remap.z) / in.remap.w, 0.0, 1.0));\n\t}\n\tif (MULTIPLY_PASS) {\n\t\tlet sourceAlpha = in.colour.a * textureColour.a;\n\t\tcolour = vec4f(colour.rgb * sourceAlpha + vec3f(1.0 - sourceAlpha), colour.a);\n\t}\n\treturn colour;\n}\n`;
+    var uI = sb(41020);
+    class YI {
+      constructor(bb, cb, sb, kb) {
+        this.device = bb, this.system = cb, this.frameIndex = sb, this.bindings = kb, this.ring = void 0, this.uniforms = void 0, this.uniformBits = null, this.rampTexels = (0, uI.h)(), this.ramp = null, this.rampView = null, this.bindGroup = null, this.boundView = null, this.boundSampler = null, this.boundRamp = null, this.texture = null, this.pipelines = [], this.count = 0, this.upload = (bb, cb) => {
+          this.device.queue.writeBuffer(this.ring, bb * lI.h * 4, this.system.ring.records, bb * lI.h, (cb - bb) * lI.h)
         };
         const {
-          name: tk
-        } = Fk;
-        this.ring = kk.createBuffer({
-          label: `particles-${tk}`,
-          size: Fk.ring.records.byteLength,
+          name: Wb
+        } = cb;
+        this.ring = bb.createBuffer({
+          label: `particles-${Wb}`,
+          size: cb.ring.records.byteLength,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.uniforms = kk.createBuffer({
-          label: `particles-uniforms-${tk}`,
-          size: 4 * ew.i,
+        }), this.uniforms = bb.createBuffer({
+          label: `particles-uniforms-${Wb}`,
+          size: 4 * lI.n,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
         })
       }
-      writeUniforms(kk) {
-        const Fk = (0, Yw.e)(this.system, this.uniformBits, kk);
-        Fk && (this.uniformBits = Fk, this.device.queue.writeBuffer(this.uniforms, 0, Fk))
+      writeUniforms(bb) {
+        const cb = (0, uI.d)(this.system, this.uniformBits, bb);
+        cb && (this.uniformBits = cb, this.device.queue.writeBuffer(this.uniforms, 0, cb))
       }
       bind() {
         const {
-          system: kk
-        } = this, Fk = this.texture;
-        (0, Yw.m)(kk, this.rampTexels) && this.rampTexels.key.length > 0 && (this.ramp || (this.ramp = this.device.createTexture({
-          label: `particles-ramp-${kk.name}`,
-          size: [ew.g, 1],
+          system: bb
+        } = this, cb = this.texture;
+        (0, uI.l)(bb, this.rampTexels) && this.rampTexels.key.length > 0 && (this.ramp || (this.ramp = this.device.createTexture({
+          label: `particles-ramp-${bb.name}`,
+          size: [lI.m, 1],
           format: "rgba8unorm",
           usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
         }), this.rampView = this.ramp.createView()), this.device.queue.writeTexture({
           texture: this.ramp
         }, this.rampTexels.texels, {
-          bytesPerRow: 4 * ew.g
-        }, [ew.g, 1]));
-        const Bk = this.rampTexels.key.length > 0 && this.rampView ? this.rampView : this.bindings.whiteRamp;
-        this.bindGroup && this.boundView === Fk.view && this.boundSampler === Fk.sampler && this.boundRamp === Bk || (this.boundView = Fk.view, this.boundSampler = Fk.sampler, this.boundRamp = Bk, this.bindGroup = this.device.createBindGroup({
-          label: `particles-${kk.name}`,
+          bytesPerRow: 4 * lI.m
+        }, [lI.m, 1]));
+        const sb = this.rampTexels.key.length > 0 && this.rampView ? this.rampView : this.bindings.whiteRamp;
+        this.bindGroup && this.boundView === cb.view && this.boundSampler === cb.sampler && this.boundRamp === sb || (this.boundView = cb.view, this.boundSampler = cb.sampler, this.boundRamp = sb, this.bindGroup = this.device.createBindGroup({
+          label: `particles-${bb.name}`,
           layout: this.bindings.layout,
           entries: [{
             binding: 0,
@@ -7796,28 +7796,28 @@ export const modules = {
             }
           }, {
             binding: 2,
-            resource: Fk.sampler
+            resource: cb.sampler
           }, {
             binding: 3,
-            resource: Fk.view
+            resource: cb.view
           }, {
             binding: 4,
             resource: this.bindings.rampSampler
           }, {
             binding: 5,
-            resource: Bk
+            resource: sb
           }]
         }))
       }
       destroy() {
-        var kk;
-        this.ring.destroy(), this.uniforms.destroy(), null === (kk = this.ramp) || void 0 === kk || kk.destroy()
+        var bb;
+        this.ring.destroy(), this.uniforms.destroy(), null === (bb = this.ramp) || void 0 === bb || bb.destroy()
       }
     }
-    class Lw {
-      constructor(kk, Fk) {
-        this.device = kk, this.resources = Fk, this.renderable = void 0, this.systems = new Map, this.draws = [], this.bindings = void 0, this.frameLayout = void 0, this.pipelineLayout = void 0, this.module = void 0, this.pipelines = new Map, this.frameData = new Float32Array(4096), this.frameBits = new Uint32Array(this.frameData.buffer), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.freeFrameIndices = [], this.nextFrameIndex = 0, this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.warnOnce = (0, sF.b)();
-        const Bk = kk.createBindGroupLayout({
+    class hI {
+      constructor(bb, cb) {
+        this.device = bb, this.resources = cb, this.renderable = void 0, this.systems = new Map, this.draws = [], this.bindings = void 0, this.frameLayout = void 0, this.pipelineLayout = void 0, this.module = void 0, this.pipelines = new Map, this.frameData = new Float32Array(4096), this.frameBits = new Uint32Array(this.frameData.buffer), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.freeFrameIndices = [], this.nextFrameIndex = 0, this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.warnOnce = (0, Hc.c)();
+        const sb = bb.createBindGroupLayout({
           label: "particles-system",
           entries: [{
             binding: 0,
@@ -7857,7 +7857,7 @@ export const modules = {
             }
           }]
         });
-        this.frameLayout = kk.createBindGroupLayout({
+        this.frameLayout = bb.createBindGroupLayout({
           label: "particles-frame",
           entries: [{
             binding: 0,
@@ -7867,158 +7867,158 @@ export const modules = {
               hasDynamicOffset: !0
             }
           }]
-        }), this.pipelineLayout = kk.createPipelineLayout({
-          bindGroupLayouts: [BF(kk), Bk, this.frameLayout]
-        }), this.module = kk.createShaderModule({
+        }), this.pipelineLayout = bb.createPipelineLayout({
+          bindGroupLayouts: [cc(bb), sb, this.frameLayout]
+        }), this.module = bb.createShaderModule({
           label: "particles",
-          code: iw
+          code: LI
         });
-        const Rk = kk.createTexture({
+        const kb = bb.createTexture({
           label: "particles-no-ramp",
           size: [1, 1],
           format: "rgba8unorm",
           usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
         });
-        kk.queue.writeTexture({
-          texture: Rk
+        bb.queue.writeTexture({
+          texture: kb
         }, new Uint8Array([255, 255, 255, 255]), {
           bytesPerRow: 4
         }, [1, 1]), this.bindings = {
-          layout: Bk,
-          rampSampler: kk.createSampler({
+          layout: sb,
+          rampSampler: bb.createSampler({
             label: "particles-ramp",
             magFilter: "nearest",
             minFilter: "nearest",
             addressModeU: "repeat",
             addressModeV: "repeat"
           }),
-          whiteRamp: Rk.createView()
+          whiteRamp: kb.createView()
         }, this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup(), this.renderable = {
           order: 251,
           isTransparent: !0,
           _worldCenter: [0, 0, 0],
-          bind: (Fk, Bk) => (this.bindTarget(Bk), {
+          bind: (cb, sb) => (this.bindTarget(sb), {
             renderable: this.renderable,
-            pipeline: bF(kk, Bk),
-            draw: kk => Bk === this.preparedTarget ? this.draw(kk) : 0
+            pipeline: Tc(bb, sb),
+            draw: bb => sb === this.preparedTarget ? this.draw(bb) : 0
           })
         }
       }
-      get hRk() {
+      get Okb() {
         return this.systems.size
       }
       reset() {
-        for (const kk of this.systems.keys()) kk.reset()
+        for (const bb of this.systems.keys()) bb.reset()
       }
       describePendingWork() {
-        return (0, Aw.f)(this.systems.keys(), "Lite")
+        return (0, mI.f)(this.systems.keys(), "Lite")
       }
-      iH(kk, Fk) {
-        const Bk = new Aw.c(kk, Fk, this);
-        return this.systems.set(Bk, new ow(this.device, Bk, this.allocateFrameIndex(), this.bindings)), Bk
+      eJ(bb, cb) {
+        const sb = new mI.b(bb, cb, this);
+        return this.systems.set(sb, new YI(this.device, sb, this.allocateFrameIndex(), this.bindings)), sb
       }
-      Z2(kk, Fk) {
-        for (const Bk of this.systems.keys()) Bk.Z2(kk, Fk)
+      o3(bb, cb) {
+        for (const sb of this.systems.keys()) sb.o3(bb, cb)
       }
-      canDraw(kk) {
-        const Fk = this.systems.get(kk),
-          Bk = kk.texture ? this.resources.boundTexture(kk.texture) : null;
-        if (!Fk || !Bk || !this.targetPipelines) return !1;
-        if (Fk.texture = Bk, Fk.pipelines.length = 0, !Zt(kk.blendMode)) return this.warnOnce(`blend:${kk.blendMode}`, `particle blend mode ${kk.blendMode} is not drawn (${kk.name})`), !0;
-        const Rk = (0, Mt.m)(kk.blendMode);
-        for (const tk of Rk) {
-          const kk = this.pipelineFor(tk);
-          if (!1 === kk) return Fk.pipelines.length = 0, !0;
-          kk && Fk.pipelines.push(kk)
+      canDraw(bb) {
+        const cb = this.systems.get(bb),
+          sb = bb.texture ? this.resources.boundTexture(bb.texture) : null;
+        if (!cb || !sb || !this.targetPipelines) return !1;
+        if (cb.texture = sb, cb.pipelines.length = 0, !oW(bb.blendMode)) return this.warnOnce(`blend:${bb.blendMode}`, `particle blend mode ${bb.blendMode} is not drawn (${bb.name})`), !0;
+        const kb = (0, DW.i)(bb.blendMode);
+        for (const Wb of kb) {
+          const bb = this.pipelineFor(Wb);
+          if (!1 === bb) return cb.pipelines.length = 0, !0;
+          bb && cb.pipelines.push(bb)
         }
-        return Fk.pipelines.length === Rk.length
+        return cb.pipelines.length === kb.length
       }
-      disposeStopped(kk) {
-        kk.dispose()
+      disposeStopped(bb) {
+        bb.dispose()
       }
-      remove(kk) {
-        const Fk = this.systems.get(kk);
-        Fk && (this.systems.delete(kk), Fk.destroy(), this.freeFrameIndices.push(Fk.frameIndex))
+      remove(bb) {
+        const cb = this.systems.get(bb);
+        cb && (this.systems.delete(bb), cb.destroy(), this.freeFrameIndices.push(cb.frameIndex))
       }
-      prepare(kk) {
-        const Fk = kk.animationRatio || 1;
-        wF(this.renderable._worldCenter, kk, tF), this.preparedTarget = this.target, this.draws.length = 0;
-        let Bk = 0;
-        for (const Rk of this.systems.values()) {
-          const kk = Rk.system;
-          if (!kk.animateIfActive(Fk)) continue;
-          if (kk.ring.takeUploads(Rk.upload), !kk.hasLiveParticles() || 0 === Rk.pipelines.length) continue;
-          Rk.writeUniforms(this.warnOnce), Rk.bind();
-          const tk = 64 * Rk.frameIndex;
-          Rk.count = kk.ring.drawCount(), vw(kk, this.frameData, this.frameBits, tk), Bk = Math.max(Bk, tk + 64), this.draws.push(Rk)
+      prepare(bb) {
+        const cb = bb.animationRatio || 1;
+        Uc(this.renderable._worldCenter, bb, kc), this.preparedTarget = this.target, this.draws.length = 0;
+        let sb = 0;
+        for (const kb of this.systems.values()) {
+          const bb = kb.system;
+          if (!bb.animateIfActive(cb)) continue;
+          if (bb.ring.takeUploads(kb.upload), !bb.hasLiveParticles() || 0 === kb.pipelines.length) continue;
+          kb.writeUniforms(this.warnOnce), kb.bind();
+          const Wb = 64 * kb.frameIndex;
+          kb.count = bb.ring.drawCount(), VI(bb, this.frameData, this.frameBits, Wb), sb = Math.max(sb, Wb + 64), this.draws.push(kb)
         }
-        Bk > 0 && this.device.queue.writeBuffer(this.frameBuffer, 0, this.frameData, 0, Bk)
+        sb > 0 && this.device.queue.writeBuffer(this.frameBuffer, 0, this.frameData, 0, sb)
       }
-      draw(kk) {
-        let Fk = 0,
-          Bk = null;
-        for (const Rk of this.draws) {
-          kk.setBindGroup(1, Rk.bindGroup), kk.setBindGroup(2, this.frameBindGroup, [256 * Rk.frameIndex]);
-          for (const tk of Rk.pipelines) tk !== Bk && (kk.setPipeline(tk), Bk = tk), kk.draw(4, Rk.count), Fk++
+      draw(bb) {
+        let cb = 0,
+          sb = null;
+        for (const kb of this.draws) {
+          bb.setBindGroup(1, kb.bindGroup), bb.setBindGroup(2, this.frameBindGroup, [256 * kb.frameIndex]);
+          for (const Wb of kb.pipelines) Wb !== sb && (bb.setPipeline(Wb), sb = Wb), bb.draw(4, kb.count), cb++
         }
-        return Fk
+        return cb
       }
-      bindTarget(kk) {
-        this.target = kk;
-        const Fk = `${kk._colorFormat}|${kk._depthStencilFormat}|${kk._depthCompare}|${kk._sampleCount}`;
-        let Bk = this.pipelines.get(Fk);
-        Bk || (Bk = new Map, this.pipelines.set(Fk, Bk)), this.targetPipelines = Bk
+      bindTarget(bb) {
+        this.target = bb;
+        const cb = `${bb._colorFormat}|${bb._depthStencilFormat}|${bb._depthCompare}|${bb._sampleCount}`;
+        let sb = this.pipelines.get(cb);
+        sb || (sb = new Map, this.pipelines.set(cb, sb)), this.targetPipelines = sb
       }
-      pipelineFor(kk) {
-        var Fk;
-        const Bk = this.targetPipelines,
-          Rk = Bk.get(kk);
-        if (void 0 !== Rk) return Rk;
-        Bk.set(kk, null);
-        const tk = this.target,
-          ak = kk === Mt.d,
-          Xk = null !== (Fk = tk._depthCompare) && void 0 !== Fk ? Fk : RF;
+      pipelineFor(bb) {
+        var cb;
+        const sb = this.targetPipelines,
+          kb = sb.get(bb);
+        if (void 0 !== kb) return kb;
+        sb.set(bb, null);
+        const Wb = this.target,
+          ab = bb === DW.c,
+          Tb = null !== (cb = Wb._depthCompare) && void 0 !== cb ? cb : sc;
         return this.device.createRenderPipelineAsync({
-          label: `particles-${kk}`,
+          label: `particles-${bb}`,
           layout: this.pipelineLayout,
           vertex: {
             module: this.module,
             entryPoint: "mainVertex"
           },
-          fragment: Ik({
+          fragment: xb({
             module: this.module,
             entryPoint: "mainFragment",
             constants: {
-              MULTIPLY_PASS: ak ? 1 : 0
+              MULTIPLY_PASS: ab ? 1 : 0
             }
-          }, tk, pt((0, Mt.j)(kk))),
+          }, Wb, SW((0, DW.h)(bb))),
           primitive: {
             topology: "triangle-strip",
             cullMode: "none"
           },
-          depthStencil: tk._depthStencilFormat ? {
-            format: tk._depthStencilFormat,
-            depthCompare: Xk,
+          depthStencil: Wb._depthStencilFormat ? {
+            format: Wb._depthStencilFormat,
+            depthCompare: Tb,
             depthWriteEnabled: !1
           } : void 0,
           multisample: {
-            count: tk._sampleCount
+            count: Wb._sampleCount
           }
-        }).then((Fk => {
-          Bk.set(kk, Fk)
-        }), (Fk => {
-          Bk.set(kk, !1), console.error("Lite particle pipeline failed", Fk), jt("particles", `blend-${kk}`, Fk)
+        }).then((cb => {
+          sb.set(bb, cb)
+        }), (cb => {
+          sb.set(bb, !1), console.error("Lite particle pipeline failed", cb), FW("particles", `blend-${bb}`, cb)
         })), null
       }
       allocateFrameIndex() {
-        const kk = this.freeFrameIndices.pop();
-        if (void 0 !== kk) return kk;
-        const Fk = this.nextFrameIndex++;
-        if (64 * (Fk + 1) > this.frameData.length) {
-          const kk = new Float32Array(2 * this.frameData.length);
-          kk.set(this.frameData), this.frameData = kk, this.frameBits = new Uint32Array(kk.buffer), this.frameBuffer.destroy(), this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
+        const bb = this.freeFrameIndices.pop();
+        if (void 0 !== bb) return bb;
+        const cb = this.nextFrameIndex++;
+        if (64 * (cb + 1) > this.frameData.length) {
+          const bb = new Float32Array(2 * this.frameData.length);
+          bb.set(this.frameData), this.frameData = bb, this.frameBits = new Uint32Array(bb.buffer), this.frameBuffer.destroy(), this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
         }
-        return Fk
+        return cb
       }
       createFrameBuffer() {
         return this.device.createBuffer({
@@ -8041,15 +8041,15 @@ export const modules = {
         })
       }
     }
-    class Ow {
-      constructor(kk, Fk, Bk, Rk, tk) {
-        this.lite = kk, this.canvas = Fk, this.info = Bk, this.resources = tk, this.rBk = !1, this.needPOTTextures = !1, this.X3 = !0, this.renderWidth = void 0, this.renderHeight = void 0, this.performanceMonitor = {
+    class JI {
+      constructor(bb, cb, sb, kb, Wb) {
+        this.lite = bb, this.canvas = cb, this.info = sb, this.resources = Wb, this.Dsb = !1, this.needPOTTextures = !1, this.KF = !0, this.renderWidth = void 0, this.renderHeight = void 0, this.performanceMonitor = {
           reset: () => {
             this.lastFrameTime = null
           }
-        }, this.caps = void 0, this.deltaTime = 0, this.lastFrameTime = null, this.renderWidth = Fk.width, this.renderHeight = Fk.height, this.caps = {
-          maxTextureSize: Rk.maxTextureDimension2D,
-          texture2DArrayMaxLayerCount: Rk.maxTextureArrayLayers
+        }, this.caps = void 0, this.deltaTime = 0, this.lastFrameTime = null, this.renderWidth = cb.width, this.renderHeight = cb.height, this.caps = {
+          maxTextureSize: kb.maxTextureDimension2D,
+          texture2DArrayMaxLayerCount: kb.maxTextureArrayLayers
         }
       }
       getCaps() {
@@ -8064,24 +8064,24 @@ export const modules = {
       getHardwareScalingLevel() {
         return 1
       }
-      setSize(kk, Fk) {
-        if (this.renderWidth === kk && this.renderHeight === Fk) return !1;
-        const Bk = this.renderWidth,
-          Rk = this.renderHeight;
-        this.renderWidth = kk, this.renderHeight = Fk;
+      setSize(bb, cb) {
+        if (this.renderWidth === bb && this.renderHeight === cb) return !1;
+        const sb = this.renderWidth,
+          kb = this.renderHeight;
+        this.renderWidth = bb, this.renderHeight = cb;
         try {
-          (0, hk.s)(this.lite, kk, Fk)
-        } catch (tk) {
-          if (tk instanceof DOMException && "InvalidStateError" === tk.name) {
-            this.renderWidth = Bk, this.renderHeight = Rk;
+          (0, qb.p)(this.lite, bb, cb)
+        } catch (Wb) {
+          if (Wb instanceof DOMException && "InvalidStateError" === Wb.name) {
+            this.renderWidth = sb, this.renderHeight = kb;
             try {
-              (0, hk.s)(this.lite, Bk, Rk)
+              (0, qb.p)(this.lite, sb, kb)
             } catch {
-              this.canvas.width = Bk, this.canvas.height = Rk
+              this.canvas.width = sb, this.canvas.height = kb
             }
-            return console.warn("WebGPU could not allocate render targets for resize", kk, Fk, tk.message), !1
+            return console.warn("WebGPU could not allocate render targets for resize", bb, cb, Wb.message), !1
           }
-          throw tk
+          throw Wb
         }
         return !0
       }
@@ -8092,68 +8092,68 @@ export const modules = {
       getInfo() {
         return this.info
       }
-      kY() {
-        const kk = performance.now();
-        this.deltaTime = null === this.lastFrameTime ? 0 : kk - this.lastFrameTime, this.lastFrameTime = kk
+      vN() {
+        const bb = performance.now();
+        this.deltaTime = null === this.lastFrameTime ? 0 : bb - this.lastFrameTime, this.lastFrameTime = bb
       }
       getDeltaTime() {
         return this.deltaTime
       }
-      createCanvas(kk, Fk) {
-        const Bk = document.createElement("canvas");
-        return Bk.width = kk, Bk.height = Fk, Bk
+      createCanvas(bb, cb) {
+        const sb = document.createElement("canvas");
+        return sb.width = bb, sb.height = cb, sb
       }
-      K3(kk, Fk) {
-        var Bk;
-        return null !== (Bk = this.resources.K3.get(kk)) && void 0 !== Bk ? Bk : new pk(this.resources, kk, Fk)
+      vF(bb, cb) {
+        var sb;
+        return null !== (sb = this.resources.vF.get(bb)) && void 0 !== sb ? sb : new rb(this.resources, bb, cb)
       }
-      atlasArray(kk, Fk, Bk) {
-        return this.resources.atlasArray(kk, Fk, Bk)
+      atlasArray(bb, cb, sb) {
+        return this.resources.atlasArray(bb, cb, sb)
       }
     }
-    class Ew {
+    class gI {
       constructor() {
         this.fov = .8, this.nearPlane = 1, this.farPlane = 1e3, this.children = [], this.worldMatrix = new Float32Array(16), this.worldMatrixVersion = 0, this._viewCache = new Float32Array(16), this._projCache = new Float32Array(16), this._vpCache = new Float32Array(16)
       }
-      copyFromView(kk) {
-        this.fov = kk.fov, this.nearPlane = kk.near, this.farPlane = kk.far;
-        const Fk = kk.worldMatrix;
-        for (let Bk = 0; Bk < 16; Bk++)
-          if (this.worldMatrix[Bk] !== Fk[Bk]) return this.worldMatrix.set(Fk), void this.worldMatrixVersion++
+      copyFromView(bb) {
+        this.fov = bb.fov, this.nearPlane = bb.near, this.farPlane = bb.far;
+        const cb = bb.worldMatrix;
+        for (let sb = 0; sb < 16; sb++)
+          if (this.worldMatrix[sb] !== cb[sb]) return this.worldMatrix.set(cb), void this.worldMatrixVersion++
       }
     }
-    class Sw {
-      constructor(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk) {
-        let sk = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : null;
-        this.engine = kk, this.ef = Fk, this.sceneTask = Bk, this.gpuDevice = Rk, this.terrain = tk, this.meshes = ak, this.particles = Xk, this.resources = bk, this.sunShadow = sk, this.vFk = void 0, this.backendName = "WebGPU (Lite)", this.A_ = void 0, this.modelMeshes = void 0, this.camera = new Ew, this.lastFrameTime = 0, this.refusals = void 0, this.deviceLost = void 0, this.refusals = new Ck(Rk.lost), this.deviceLost = this.refusals.deviceLost, this.vFk = new Ow(kk, wk, dk, Rk.limits, bk), (0, Hk.I)({
-          Hb: kk => {
-            Uk(kk) && bk.textureSlot(kk)
+    class BI {
+      constructor(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb) {
+        let fb = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : null;
+        this.engine = bb, this.aQ = cb, this.sceneTask = sb, this.gpuDevice = kb, this.terrain = Wb, this.meshes = ab, this.particles = Tb, this.resources = Ub, this.sunShadow = fb, this.Icb = void 0, this.backendName = "WebGPU (Lite)", this.f6 = void 0, this.modelMeshes = void 0, this.camera = new gI, this.lastFrameTime = 0, this.refusals = void 0, this.deviceLost = void 0, this.refusals = new Ab(kb.lost), this.deviceLost = this.refusals.deviceLost, this.Icb = new JI(bb, Ib, Hb, kb.limits, Ub), (0, Bb.F)({
+          qU: bb => {
+            Db(bb) && Ub.textureSlot(bb)
           },
-          loaded: kk => Uk(kk) ? bk.textureLoaded(kk) : null,
-          canvasUpdated: (kk, Fk, Bk) => {
-            Uk(kk) && bk.canvasUpdated(kk, Fk, Bk)
+          loaded: bb => Db(bb) ? Ub.textureLoaded(bb) : null,
+          canvasUpdated: (bb, cb, sb) => {
+            Db(bb) && Ub.canvasUpdated(bb, cb, sb)
           }
-        }), this.A_ = ak.A_, this.modelMeshes = ak.modelMeshes, Fk.camera = this.camera
+        }), this.f6 = ab.f6, this.modelMeshes = ab.modelMeshes, cb.camera = this.camera
       }
       get castsEntitySunShadows() {
-        var kk, Fk;
-        return null !== (kk = null === (Fk = this.sunShadow) || void 0 === Fk ? void 0 : Fk.tracesEntities) && void 0 !== kk && kk
+        var bb, cb;
+        return null !== (bb = null === (cb = this.sunShadow) || void 0 === cb ? void 0 : cb.tracesEntities) && void 0 !== bb && bb
       }
       get sampleCount() {
         return this.engine.msaaSamples
       }
-      attach(kk) {
-        this.modelMeshes.attach(kk.model, kk.sceneMirror);
-        const Fk = kk.ef;
-        this.setClearColour(Fk.clearColor.r, Fk.clearColor.g, Fk.clearColor.b), Fk.draw = () => {
-          this.drawFrame(kk, Fk)
+      attach(bb) {
+        this.modelMeshes.attach(bb.model, bb.sceneMirror);
+        const cb = bb.aQ;
+        this.setClearColour(cb.clearColor.r, cb.clearColor.g, cb.clearColor.b), cb.draw = () => {
+          this.drawFrame(bb, cb)
         }
       }
-      render(kk) {
+      render(bb) {
         try {
-          this.vFk.kY(), kk.ef.render()
-        } catch (Fk) {
-          throw this.refusals.frameFailed(Fk), Fk
+          this.Icb.vN(), bb.aQ.render()
+        } catch (cb) {
+          throw this.refusals.frameFailed(cb), cb
         }
         this.refusals.frameDrawn()
       }
@@ -8161,154 +8161,154 @@ export const modules = {
         return this.engine.drawCallCount
       }
       describePendingWork() {
-        var kk, Fk, Bk, Rk;
-        const tk = [...this.particles.describePendingWork(), ...null !== (kk = null === (Fk = this.sunShadow) || void 0 === Fk ? void 0 : Fk.describePendingWork()) && void 0 !== kk ? kk : []],
-          ak = this.meshes.pipelinesCompiling + this.terrain.pipelinesCompiling + (null !== (Bk = this.terrain.sceneDepth) && void 0 !== Bk && Bk.compiling ? 1 : 0) + (null !== (Rk = this.terrain.shadowMask) && void 0 !== Rk && Rk.compiling ? 1 : 0);
-        ak > 0 && tk.push(`${ak} Lite pipelines compiling`);
-        const Xk = this.terrain.buffersAwaitingVerdict;
-        Xk > 0 && tk.push(`${Xk} Lite terrain buffers awaiting their out-of-memory verdict`);
-        const bk = this.resources.texturesLoading;
-        return bk > 0 && tk.push(`${bk} Lite textures loading`), tk
+        var bb, cb, sb, kb;
+        const Wb = [...this.particles.describePendingWork(), ...null !== (bb = null === (cb = this.sunShadow) || void 0 === cb ? void 0 : cb.describePendingWork()) && void 0 !== bb ? bb : []],
+          ab = this.meshes.pipelinesCompiling + this.terrain.pipelinesCompiling + (null !== (sb = this.terrain.sceneDepth) && void 0 !== sb && sb.compiling ? 1 : 0) + (null !== (kb = this.terrain.shadowMask) && void 0 !== kb && kb.compiling ? 1 : 0);
+        ab > 0 && Wb.push(`${ab} Lite pipelines compiling`);
+        const Tb = this.terrain.buffersAwaitingVerdict;
+        Tb > 0 && Wb.push(`${Tb} Lite terrain buffers awaiting their out-of-memory verdict`);
+        const Ub = this.resources.texturesLoading;
+        return Ub > 0 && Wb.push(`${Ub} Lite textures loading`), Wb
       }
-      prepareTexture(kk) {
-        return null !== this.resources.boundTexture(kk) || this.resources.textureFailed(kk)
+      prepareTexture(bb) {
+        return null !== this.resources.boundTexture(bb) || this.resources.textureFailed(bb)
       }
-      drawFrame(kk, Fk) {
-        var Bk, Rk, tk, ak, Xk, bk;
-        const wk = Vb(kk);
-        this.camera.copyFromView(wk), this.setClearColour(wk.clearColour[0], wk.clearColour[1], wk.clearColour[2]), null === (Bk = this.sunShadow) || void 0 === Bk || Bk.prepare(kk.SJ, wk.eye, null !== (Rk = kk.SJ.ie) && void 0 !== Rk ? Rk : null), this.terrain.prepare(kk, wk), null === (tk = this.terrain.sceneDepth) || void 0 === tk || tk.setPlanes(wk.near, wk.far), null === (ak = this.terrain.shadowMask) || void 0 === ak || ak.prepare(wk), lX(this.sceneTask), this.meshes.prepare(Fk, wk, kk.model.earthSky, null !== (Xk = kk.SJ.ie) && void 0 !== Xk ? Xk : null), this.particles.prepare(wk);
-        const dk = performance.now();
-        this.resources.flushUploads(), null === (bk = this.sunShadow) || void 0 === bk || bk.traceEntities(this.meshes);
+      drawFrame(bb, cb) {
+        var sb, kb, Wb, ab, Tb, Ub;
+        const Ib = XU(bb);
+        this.camera.copyFromView(Ib), this.setClearColour(Ib.clearColour[0], Ib.clearColour[1], Ib.clearColour[2]), null === (sb = this.sunShadow) || void 0 === sb || sb.prepare(bb.eX, Ib.eye, null !== (kb = bb.eX.Qm) && void 0 !== kb ? kb : null), this.terrain.prepare(bb, Ib), null === (Wb = this.terrain.sceneDepth) || void 0 === Wb || Wb.setPlanes(Ib.near, Ib.far), null === (ab = this.terrain.shadowMask) || void 0 === ab || ab.prepare(Ib), xT(this.sceneTask), this.meshes.prepare(cb, Ib, bb.model.earthSky, null !== (Tb = bb.eX.Qm) && void 0 !== Tb ? Tb : null), this.particles.prepare(Ib);
+        const Hb = performance.now();
+        this.resources.flushUploads(), null === (Ub = this.sunShadow) || void 0 === Ub || Ub.traceEntities(this.meshes);
         try {
-          (0, hk.r)(this.engine, this.lastFrameTime > 0 ? dk - this.lastFrameTime : 0)
+          (0, qb.n)(this.engine, this.lastFrameTime > 0 ? Hb - this.lastFrameTime : 0)
         } finally {
           this.resources.endUploadFrame()
         }
-        this.lastFrameTime = dk
+        this.lastFrameTime = Hb
       }
-      setClearColour(kk, Fk, Bk) {
-        const Rk = this.ef.clearColor;
-        Rk.r = kk, Rk.g = Fk, Rk.b = Bk, Rk.a = 1
+      setClearColour(bb, cb, sb) {
+        const kb = this.aQ.clearColor;
+        kb.r = bb, kb.g = cb, kb.b = sb, kb.a = 1
       }
     }
-    const Nw = "WebGPU device lost while Lite was starting";
+    const tI = "WebGPU device lost while Lite was starting";
 
-    function Hw(kk, Fk) {
-      return "object" === typeof kk && null !== kk ? Object.assign(kk, {
-        startStep: Fk
-      }) : kk
+    function yI(bb, cb) {
+      return "object" === typeof bb && null !== bb ? Object.assign(bb, {
+        startStep: cb
+      }) : bb
     }
-    async function uw(kk, Fk) {
-      const Bk = await navigator.gpu.requestAdapter({
+    async function PI(bb, cb) {
+      const sb = await navigator.gpu.requestAdapter({
         powerPreference: "high-performance"
       });
-      if (!Bk) throw Hw(new Error("No WebGPU adapter"), "no_adapter");
-      const Rk = Bk.info,
-        tk = {
-          vendor: (null === Rk || void 0 === Rk ? void 0 : Rk.vendor) || "unknown vendor",
-          renderer: (null === Rk || void 0 === Rk ? void 0 : Rk.architecture) || "unknown renderer",
-          version: (null === Rk || void 0 === Rk ? void 0 : Rk.description) || "unknown version"
+      if (!sb) throw yI(new Error("No WebGPU adapter"), "no_adapter");
+      const kb = sb.info,
+        Wb = {
+          vendor: (null === kb || void 0 === kb ? void 0 : kb.vendor) || "unknown vendor",
+          renderer: (null === kb || void 0 === kb ? void 0 : kb.architecture) || "unknown renderer",
+          version: (null === kb || void 0 === kb ? void 0 : kb.description) || "unknown version"
         },
-        ak = function(kk) {
-          const Fk = {};
-          for (const Bk in kk.limits) {
-            const Rk = kk.limits[Bk];
-            "number" === typeof Rk && (Fk[Bk] = Rk)
+        ab = function(bb) {
+          const cb = {};
+          for (const sb in bb.limits) {
+            const kb = bb.limits[sb];
+            "number" === typeof kb && (cb[sb] = kb)
           }
-          return Fk
-        }(Bk);
-      let Xk;
-      kk.style.background = "black";
+          return cb
+        }(sb);
+      let Tb;
+      bb.style.background = "black";
       try {
-        Xk = await (0, hk.h)(kk, {
-          msaaSamples: Fk.QFk ? 4 : 1,
-          requiredLimits: ak,
+        Tb = await (0, qb.i)(bb, {
+          msaaSamples: cb.dcb ? 4 : 1,
+          requiredLimits: ab,
           alphaMode: "premultiplied"
         })
-      } catch (sk) {
-        throw Hw(sk, "#47" === (null === (bk = sk) || void 0 === bk ? void 0 : bk.message) ? "no_adapter" : "device")
+      } catch (fb) {
+        throw yI(fb, "#47" === (null === (Ub = fb) || void 0 === Ub ? void 0 : Ub.message) ? "no_adapter" : "device")
       }
-      var bk;
-      const wk = function(kk) {
-        return kk._device
-      }(Xk);
-      let dk = null;
-      wk.lost.then((kk => {
-        dk = kk, console.error(`WebGPU device lost (${kk.reason}): ${kk.message}`)
+      var Ub;
+      const Ib = function(bb) {
+        return bb._device
+      }(Tb);
+      let Hb = null;
+      Ib.lost.then((bb => {
+        Hb = bb, console.error(`WebGPU device lost (${bb.reason}): ${bb.message}`)
       }));
       try {
-        const Bk = await async function(kk, Fk, Bk, Rk, tk, ak) {
-          const Xk = (0, qk.e)(kk),
-            bk = new KX(kk, Fk),
-            wk = new xb(Fk),
-            dk = new HX(Fk, bk, (kk => function(kk, Fk) {
-              for (const Rk of kF(kk)) {
-                var Bk;
-                if (Rk._targetSignature === Fk) return null !== (Bk = Rk._sceneBG) && void 0 !== Bk ? Bk : null
+        const sb = await async function(bb, cb, sb, kb, Wb, ab) {
+          const Tb = (0, db.d)(bb),
+            Ub = new RT(bb, cb),
+            Ib = new vU(cb),
+            Hb = new yT(cb, Ub, (bb => function(bb, cb) {
+              for (const kb of pb(bb)) {
+                var sb;
+                if (kb._targetSignature === cb) return null !== (sb = kb._sceneBG) && void 0 !== sb ? sb : null
               }
               return null
-            }(Xk, kk))),
-            sk = new Lw(Fk, bk);
-          for (const Ak of function(kk, Fk, Bk) {
-              return [Fk.opaqueRenderable, kk.opaqueRenderable, kk.skyLastRenderable, Bk.renderable, Fk.transparentRenderable, kk.transparentRenderable, kk.frontRenderable]
-            }(dk, wk, sk)) Qk(Xk, Ak);
-          const Vk = function(kk) {
-            for (const Fk of kF(kk))
-              if ("ef" === Fk.name) return Fk;
+            }(Tb, bb))),
+            fb = new hI(cb, Ub);
+          for (const nb of function(bb, cb, sb) {
+              return [cb.opaqueRenderable, bb.opaqueRenderable, bb.skyLastRenderable, sb.renderable, cb.transparentRenderable, bb.transparentRenderable, bb.frontRenderable]
+            }(Hb, Ib, fb)) jb(Tb, nb);
+          const Mb = function(bb) {
+            for (const cb of pb(bb))
+              if ("aQ" === cb.name) return cb;
             throw new Error("Lite: the scene has no render task named scene")
-          }(Xk);
-          tk && wk.installSceneDepth(Vk, kk);
-          const Jk = ak ? new Jw(Fk, ak.entities) : null;
-          wk.sunShadow = Jk, Jk && null !== ak && void 0 !== ak && ak.entities && (wk.shadowMask = new Sb(Fk, Vk, kk, wk));
-          return dk.sunShadow = Jk, await (0, qk.f)(Xk), new Sw(kk, Xk, Vk, Fk, wk, dk, sk, bk, Bk, Rk, Jk)
-        }(Xk, wk, kk, tk, Fk.sceneDepth, Fk.sunShadow);
-        if (null !== dk) {
+          }(Tb);
+          Wb && Ib.installSceneDepth(Mb, bb);
+          const Xb = ab ? new nI(cb, ab.entities) : null;
+          Ib.sunShadow = Xb, Xb && null !== ab && void 0 !== ab && ab.entities && (Ib.shadowMask = new BU(cb, Mb, bb, Ib));
+          return Hb.sunShadow = Xb, await (0, db.g)(Tb), new BI(bb, Tb, Mb, cb, Ib, Hb, fb, Ub, sb, kb, Xb)
+        }(Tb, Ib, bb, Wb, cb.sceneDepth, cb.sunShadow);
+        if (null !== Hb) {
           const {
-            reason: kk,
-            message: Fk
-          } = dk;
-          throw Object.assign(new Error(`${Nw} (${kk}): ${Fk}`), {
-            fallbackReason: Nw
+            reason: bb,
+            message: cb
+          } = Hb;
+          throw Object.assign(new Error(`${tI} (${bb}): ${cb}`), {
+            fallbackReason: tI
           })
         }
-        return Bk
-      } catch (sk) {
-        throw wk.destroy(), null === dk ? sk : Hw(sk, "device")
+        return sb
+      } catch (fb) {
+        throw Ib.destroy(), null === Hb ? fb : yI(fb, "device")
       }
     }
   },
-  40292: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      D: () => ek,
-      e: () => tk,
-      g: () => Rk,
-      h: () => Jk,
-      j: () => sk,
-      m: () => fk,
-      p: () => ak,
-      r: () => bk,
-      s: () => wk,
-      u: () => Xk,
-      v: () => yk,
-      z: () => Ak
+  40308: (bb, cb, sb) => {
+    sb.d(cb, {
+      A: () => Tb,
+      C: () => lb,
+      G: () => nb,
+      H: () => mb,
+      b: () => Wb,
+      d: () => kb,
+      h: () => Xb,
+      i: () => fb,
+      l: () => Qb,
+      p: () => ab,
+      s: () => Ub,
+      w: () => Ib
     });
-    const Rk = 3,
-      tk = 0,
-      ak = 1,
-      Xk = 2,
-      bk = {
+    const kb = 3,
+      Wb = 0,
+      ab = 1,
+      Tb = 2,
+      Ub = {
         uniform: 3,
-        jJ: 4,
+        zX: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      wk = 10,
-      dk = "BloxdPackInputs",
-      sk = "bloxdPackInputs",
-      Vk = [{
+      Ib = 10,
+      Hb = "BloxdPackInputs",
+      fb = "bloxdPackInputs",
+      Mb = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -8333,37 +8333,37 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      Jk = 80;
+      Xb = 80;
 
-    function Ak() {
-      const kk = Vk.map((kk => {
+    function nb() {
+      const bb = Mb.map((bb => {
         let {
-          name: Fk,
-          type: Bk
-        } = kk;
-        return `    ${Fk}: ${Bk},\n`
+          name: cb,
+          type: sb
+        } = bb;
+        return `    ${cb}: ${sb},\n`
       })).join("");
-      return `struct ${dk} {\n${kk}}\n@group(${Rk}) @binding(${tk}) var<uniform> ${sk}: ${dk};\n`
+      return `struct ${Hb} {\n${bb}}\n@group(${kb}) @binding(${Wb}) var<uniform> ${fb}: ${Hb};\n`
     }
 
-    function ek(kk, Fk) {
-      const Bk = new DataView(kk, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Jk),
-        [Rk, tk, ak, Xk, bk, wk] = Vk;
-      Bk.setFloat32(Rk.offset, Fk.seconds, !0), Bk.setUint32(tk.offset, Fk.lit ? 1 : 0, !0);
-      for (let dk = 0; dk < 3; dk++) Bk.setInt32(ak.offset + 4 * dk, Fk.renderOffset[dk], !0), Bk.setFloat32(Xk.offset + 4 * dk, Fk.w6[dk], !0), Bk.setFloat32(bk.offset + 4 * dk, Fk.eyePosition[dk], !0), Bk.setFloat32(wk.offset + 4 * dk, Fk.shadowDirection[dk], !0)
+    function mb(bb, cb) {
+      const sb = new DataView(bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Xb),
+        [kb, Wb, ab, Tb, Ub, Ib] = Mb;
+      sb.setFloat32(kb.offset, cb.seconds, !0), sb.setUint32(Wb.offset, cb.lit ? 1 : 0, !0);
+      for (let Hb = 0; Hb < 3; Hb++) sb.setInt32(ab.offset + 4 * Hb, cb.renderOffset[Hb], !0), sb.setFloat32(Tb.offset + 4 * Hb, cb.J9[Hb], !0), sb.setFloat32(Ub.offset + 4 * Hb, cb.eyePosition[Hb], !0), sb.setFloat32(Ib.offset + 4 * Hb, cb.shadowDirection[Hb], !0)
     }
 
-    function yk(kk) {
-      const Fk = new Uint32Array(Math.max(1, kk.length));
-      return kk.forEach(((kk, Bk) => {
+    function lb(bb) {
+      const cb = new Uint32Array(Math.max(1, bb.length));
+      return bb.forEach(((bb, sb) => {
         let {
-          id: Rk,
-          rotation: tk
-        } = kk;
-        Fk[Bk] = 65535 & Rk | (3 & tk) << 16
-      })), Fk
+          id: kb,
+          rotation: Wb
+        } = bb;
+        cb[sb] = 65535 & kb | (3 & Wb) << 16
+      })), cb
     }
-    const fk = {
+    const Qb = {
       off: 0,
       strict: 1,
       allow: 2
@@ -8371,4 +8371,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

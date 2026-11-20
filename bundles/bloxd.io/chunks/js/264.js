@@ -1,632 +1,632 @@
 export const id = 264;
 export const ids = [264];
 export const modules = {
-  40521: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => vk,
-      e: () => ck,
-      f: () => fk,
-      h: () => mk,
-      i: () => Jk,
-      k: () => yk,
-      m: () => ek,
-      q: () => Ak
+  40519: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Nb,
+      e: () => Eb,
+      g: () => Qb,
+      h: () => eb,
+      j: () => Xb,
+      m: () => lb,
+      o: () => mb,
+      s: () => nb
     });
-    var Rk = Bk(36758),
-      tk = Bk(36917),
-      ak = Bk(36790),
-      Xk = Bk(40527),
-      bk = Bk(39628),
-      wk = Bk(39408),
-      dk = Bk(39445),
-      sk = Bk(39414),
-      Vk = Bk(36798);
-    const Jk = Object.freeze(new Rk.e(0, 0, 0, 0)),
-      Ak = Object.freeze(Rk.s.Zero()),
-      ek = Object.freeze(Rk.p.Zero()),
-      yk = Object.freeze(wk.d.Zero()),
-      fk = Object.freeze(tk.e.Black()),
-      mk = Object.freeze(new tk.i(0, 0, 0, 0)),
-      Wk = {
+    var kb = sb(36656),
+      Wb = sb(36830),
+      ab = sb(36688),
+      Tb = sb(40523),
+      Ub = sb(39667),
+      Ib = sb(39433),
+      Hb = sb(39475),
+      fb = sb(39441),
+      Mb = sb(36698);
+    const Xb = Object.freeze(new kb.f(0, 0, 0, 0)),
+      nb = Object.freeze(kb.p.Zero()),
+      mb = Object.freeze(kb.n.Zero()),
+      lb = Object.freeze(Ib.c.Zero()),
+      Qb = Object.freeze(Wb.e.Black()),
+      eb = Object.freeze(new Wb.g(0, 0, 0, 0)),
+      Cb = {
         key: 0,
         repeatCount: 0,
-        Oa: 2
+        Aa: 2
       };
-    class vk {
-      static _PrepareAnimation(kk, Fk, Bk, ak, Xk, bk, dk, sk) {
-        let Vk;
-        if (!isNaN(parseFloat(Xk)) && isFinite(Xk) ? Vk = vk.ANIMATIONTYPE_FLOAT : Xk instanceof Rk.e ? Vk = vk.ANIMATIONTYPE_QUATERNION : Xk instanceof Rk.s ? Vk = vk.ANIMATIONTYPE_VECTOR3 : Xk instanceof Rk.p ? Vk = vk.ANIMATIONTYPE_VECTOR2 : Xk instanceof tk.e ? Vk = vk.ANIMATIONTYPE_COLOR3 : Xk instanceof tk.i ? Vk = vk.ANIMATIONTYPE_COLOR4 : Xk instanceof wk.d && (Vk = vk.ANIMATIONTYPE_SIZE), void 0 == Vk) return null;
-        const Jk = new vk(kk, Fk, Bk, Vk, dk),
-          Ak = [{
+    class Nb {
+      static _PrepareAnimation(bb, cb, sb, ab, Tb, Ub, Hb, fb) {
+        let Mb;
+        if (!isNaN(parseFloat(Tb)) && isFinite(Tb) ? Mb = Nb.ANIMATIONTYPE_FLOAT : Tb instanceof kb.f ? Mb = Nb.ANIMATIONTYPE_QUATERNION : Tb instanceof kb.p ? Mb = Nb.ANIMATIONTYPE_VECTOR3 : Tb instanceof kb.n ? Mb = Nb.ANIMATIONTYPE_VECTOR2 : Tb instanceof Wb.e ? Mb = Nb.ANIMATIONTYPE_COLOR3 : Tb instanceof Wb.g ? Mb = Nb.ANIMATIONTYPE_COLOR4 : Tb instanceof Ib.c && (Mb = Nb.ANIMATIONTYPE_SIZE), void 0 == Mb) return null;
+        const Xb = new Nb(bb, cb, sb, Mb, Hb),
+          nb = [{
             frame: 0,
-            value: Xk
+            value: Tb
           }, {
-            frame: ak,
-            value: bk
+            frame: ab,
+            value: Ub
           }];
-        return Jk.setKeys(Ak), void 0 !== sk && Jk.setEasingFunction(sk), Jk
+        return Xb.setKeys(nb), void 0 !== fb && Xb.setEasingFunction(fb), Xb
       }
       get runtimeAnimations() {
         return this._runtimeAnimations
       }
       get hasRunningRuntimeAnimations() {
-        for (const kk of this._runtimeAnimations)
-          if (!kk.isStopped()) return !0;
+        for (const bb of this._runtimeAnimations)
+          if (!bb.isStopped()) return !0;
         return !1
       }
-      constructor(kk, Fk, Bk, Rk, tk, ak) {
-        this.name = kk, this.targetProperty = Fk, this.framePerSecond = Bk, this.dataType = Rk, this.Oa = tk, this.enableBlending = ak, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = Fk.split("."), this.dataType = Rk, this.Oa = void 0 === tk ? vk.ANIMATIONLOOPMODE_CYCLE : tk, this.uniqueId = vk._UniqueIdGenerator++
+      constructor(bb, cb, sb, kb, Wb, ab) {
+        this.name = bb, this.targetProperty = cb, this.framePerSecond = sb, this.dataType = kb, this.Aa = Wb, this.enableBlending = ab, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = cb.split("."), this.dataType = kb, this.Aa = void 0 === Wb ? Nb.ANIMATIONLOOPMODE_CYCLE : Wb, this.uniqueId = Nb._UniqueIdGenerator++
       }
-      toString(kk) {
-        let Fk = "Name: " + this.name + ", property: " + this.targetProperty;
-        if (Fk += ", datatype: " + ["Float", "Qe", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], Fk += ", nKeys: " + (this._keys ? this._keys.length : "none"), Fk += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), kk) {
-          Fk += ", Ranges: {";
-          let kk = !0;
-          for (const Bk in this._ranges) kk || (Fk += ", "), kk = !1, Fk += Bk;
-          Fk += "}"
+      toString(bb) {
+        let cb = "Name: " + this.name + ", property: " + this.targetProperty;
+        if (cb += ", datatype: " + ["Float", "Fm", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], cb += ", nKeys: " + (this._keys ? this._keys.length : "none"), cb += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), bb) {
+          cb += ", Ranges: {";
+          let bb = !0;
+          for (const sb in this._ranges) bb || (cb += ", "), bb = !1, cb += sb;
+          cb += "}"
         }
-        return Fk
+        return cb
       }
-      addEvent(kk) {
-        this._events.push(kk), this._events.sort(((kk, Fk) => kk.frame - Fk.frame))
+      addEvent(bb) {
+        this._events.push(bb), this._events.sort(((bb, cb) => bb.frame - cb.frame))
       }
-      removeEvents(kk) {
-        for (let Fk = 0; Fk < this._events.length; Fk++) this._events[Fk].frame === kk && (this._events.splice(Fk, 1), Fk--)
+      removeEvents(bb) {
+        for (let cb = 0; cb < this._events.length; cb++) this._events[cb].frame === bb && (this._events.splice(cb, 1), cb--)
       }
       getEvents() {
         return this._events
       }
-      createRange(kk, Fk, Bk) {
-        this._ranges[kk] || (this._ranges[kk] = new Xk.c(kk, Fk, Bk))
+      createRange(bb, cb, sb) {
+        this._ranges[bb] || (this._ranges[bb] = new Tb.c(bb, cb, sb))
       }
-      deleteRange(kk) {
-        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const Bk = this._ranges[kk];
-        if (Bk) {
-          if (Fk) {
-            const kk = Bk.from,
-              Fk = Bk.to;
-            for (let Bk = this._keys.length - 1; Bk >= 0; Bk--) this._keys[Bk].frame >= kk && this._keys[Bk].frame <= Fk && this._keys.splice(Bk, 1)
+      deleteRange(bb) {
+        let cb = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const sb = this._ranges[bb];
+        if (sb) {
+          if (cb) {
+            const bb = sb.from,
+              cb = sb.to;
+            for (let sb = this._keys.length - 1; sb >= 0; sb--) this._keys[sb].frame >= bb && this._keys[sb].frame <= cb && this._keys.splice(sb, 1)
           }
-          this._ranges[kk] = null
+          this._ranges[bb] = null
         }
       }
-      getRange(kk) {
-        return this._ranges[kk]
+      getRange(bb) {
+        return this._ranges[bb]
       }
       getKeys() {
         return this._keys
       }
       getHighestFrame() {
-        let kk = 0;
-        for (let Fk = 0, Bk = this._keys.length; Fk < Bk; Fk++) kk < this._keys[Fk].frame && (kk = this._keys[Fk].frame);
-        return kk
+        let bb = 0;
+        for (let cb = 0, sb = this._keys.length; cb < sb; cb++) bb < this._keys[cb].frame && (bb = this._keys[cb].frame);
+        return bb
       }
       getEasingFunction() {
         return this._easingFunction
       }
-      setEasingFunction(kk) {
-        this._easingFunction = kk
+      setEasingFunction(bb) {
+        this._easingFunction = bb
       }
-      floatInterpolateFunction(kk, Fk, Bk) {
-        return (0, ak.Lerp)(kk, Fk, Bk)
+      floatInterpolateFunction(bb, cb, sb) {
+        return (0, ab.Lerp)(bb, cb, sb)
       }
-      floatInterpolateFunctionWithTangents(kk, Fk, Bk, Rk, tk) {
-        return (0, ak.Hermite)(kk, Fk, Bk, Rk, tk)
+      floatInterpolateFunctionWithTangents(bb, cb, sb, kb, Wb) {
+        return (0, ab.Hermite)(bb, cb, sb, kb, Wb)
       }
-      quaternionInterpolateFunction(kk, Fk, Bk) {
-        return Rk.e.Slerp(kk, Fk, Bk)
+      quaternionInterpolateFunction(bb, cb, sb) {
+        return kb.f.Slerp(bb, cb, sb)
       }
-      quaternionInterpolateFunctionWithTangents(kk, Fk, Bk, tk, ak) {
-        return Rk.e.Hermite(kk, Fk, Bk, tk, ak).normalize()
+      quaternionInterpolateFunctionWithTangents(bb, cb, sb, Wb, ab) {
+        return kb.f.Hermite(bb, cb, sb, Wb, ab).normalize()
       }
-      vector3InterpolateFunction(kk, Fk, Bk) {
-        return Rk.s.Lerp(kk, Fk, Bk)
+      vector3InterpolateFunction(bb, cb, sb) {
+        return kb.p.Lerp(bb, cb, sb)
       }
-      vector3InterpolateFunctionWithTangents(kk, Fk, Bk, tk, ak) {
-        return Rk.s.Hermite(kk, Fk, Bk, tk, ak)
+      vector3InterpolateFunctionWithTangents(bb, cb, sb, Wb, ab) {
+        return kb.p.Hermite(bb, cb, sb, Wb, ab)
       }
-      vector2InterpolateFunction(kk, Fk, Bk) {
-        return Rk.p.Lerp(kk, Fk, Bk)
+      vector2InterpolateFunction(bb, cb, sb) {
+        return kb.n.Lerp(bb, cb, sb)
       }
-      vector2InterpolateFunctionWithTangents(kk, Fk, Bk, tk, ak) {
-        return Rk.p.Hermite(kk, Fk, Bk, tk, ak)
+      vector2InterpolateFunctionWithTangents(bb, cb, sb, Wb, ab) {
+        return kb.n.Hermite(bb, cb, sb, Wb, ab)
       }
-      sizeInterpolateFunction(kk, Fk, Bk) {
-        return wk.d.Lerp(kk, Fk, Bk)
+      sizeInterpolateFunction(bb, cb, sb) {
+        return Ib.c.Lerp(bb, cb, sb)
       }
-      color3InterpolateFunction(kk, Fk, Bk) {
-        return tk.e.Lerp(kk, Fk, Bk)
+      color3InterpolateFunction(bb, cb, sb) {
+        return Wb.e.Lerp(bb, cb, sb)
       }
-      color3InterpolateFunctionWithTangents(kk, Fk, Bk, Rk, ak) {
-        return tk.e.Hermite(kk, Fk, Bk, Rk, ak)
+      color3InterpolateFunctionWithTangents(bb, cb, sb, kb, ab) {
+        return Wb.e.Hermite(bb, cb, sb, kb, ab)
       }
-      color4InterpolateFunction(kk, Fk, Bk) {
-        return tk.i.Lerp(kk, Fk, Bk)
+      color4InterpolateFunction(bb, cb, sb) {
+        return Wb.g.Lerp(bb, cb, sb)
       }
-      color4InterpolateFunctionWithTangents(kk, Fk, Bk, Rk, ak) {
-        return tk.i.Hermite(kk, Fk, Bk, Rk, ak)
+      color4InterpolateFunctionWithTangents(bb, cb, sb, kb, ab) {
+        return Wb.g.Hermite(bb, cb, sb, kb, ab)
       }
-      _getKeyValue(kk) {
-        return "function" === typeof kk ? kk() : kk
+      _getKeyValue(bb) {
+        return "function" === typeof bb ? bb() : bb
       }
-      evaluate(kk) {
-        return Wk.key = 0, this._interpolate(kk, Wk)
+      evaluate(bb) {
+        return Cb.key = 0, this._interpolate(bb, Cb)
       }
-      _interpolate(kk, Fk) {
-        let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (Fk.Oa === vk.ANIMATIONLOOPMODE_CONSTANT && Fk.repeatCount > 0) return Fk.highLimitValue.clone ? Fk.highLimitValue.clone() : Fk.highLimitValue;
-        const Rk = this._keys;
-        let tk;
-        if (this._coreAnimation) tk = this._coreAnimation._key;
+      _interpolate(bb, cb) {
+        let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (cb.Aa === Nb.ANIMATIONLOOPMODE_CONSTANT && cb.repeatCount > 0) return cb.highLimitValue.clone ? cb.highLimitValue.clone() : cb.highLimitValue;
+        const kb = this._keys;
+        let Wb;
+        if (this._coreAnimation) Wb = this._coreAnimation._key;
         else {
-          const ak = Rk.length;
-          for (tk = Fk.key; tk >= 0 && kk < Rk[tk].frame;) --tk;
-          for (; tk + 1 <= ak - 1 && kk >= Rk[tk + 1].frame;) ++tk;
-          if (Fk.key = tk, tk < 0) return Bk ? void 0 : this._getKeyValue(Rk[0].value);
-          if (tk + 1 > ak - 1) return Bk ? void 0 : this._getKeyValue(Rk[ak - 1].value);
-          this._key = tk
+          const ab = kb.length;
+          for (Wb = cb.key; Wb >= 0 && bb < kb[Wb].frame;) --Wb;
+          for (; Wb + 1 <= ab - 1 && bb >= kb[Wb + 1].frame;) ++Wb;
+          if (cb.key = Wb, Wb < 0) return sb ? void 0 : this._getKeyValue(kb[0].value);
+          if (Wb + 1 > ab - 1) return sb ? void 0 : this._getKeyValue(kb[ab - 1].value);
+          this._key = Wb
         }
-        const ak = Rk[tk],
-          Xk = Rk[tk + 1];
-        if (Bk && (kk === ak.frame || kk === Xk.frame)) return;
-        const bk = this._getKeyValue(ak.value),
-          wk = this._getKeyValue(Xk.value);
-        if (1 === ak.interpolation) return Xk.frame > kk ? bk : wk;
-        const dk = void 0 !== ak.outTangent && void 0 !== Xk.inTangent,
-          sk = Xk.frame - ak.frame;
-        let Vk = (kk - ak.frame) / sk;
-        const Wk = ak.easingFunction || this.getEasingFunction();
-        switch (Wk && (Vk = Wk.ease(Vk)), this.dataType) {
-          case vk.ANIMATIONTYPE_FLOAT: {
-            const kk = dk ? this.floatInterpolateFunctionWithTangents(bk, ak.outTangent * sk, wk, Xk.inTangent * sk, Vk) : this.floatInterpolateFunction(bk, wk, Vk);
-            switch (Fk.Oa) {
-              case vk.ANIMATIONLOOPMODE_CYCLE:
-              case vk.ANIMATIONLOOPMODE_CONSTANT:
-              case vk.ANIMATIONLOOPMODE_YOYO:
-                return kk;
-              case vk.ANIMATIONLOOPMODE_RELATIVE:
-              case vk.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return (Fk.offsetValue ?? 0) * Fk.repeatCount + kk
+        const ab = kb[Wb],
+          Tb = kb[Wb + 1];
+        if (sb && (bb === ab.frame || bb === Tb.frame)) return;
+        const Ub = this._getKeyValue(ab.value),
+          Ib = this._getKeyValue(Tb.value);
+        if (1 === ab.interpolation) return Tb.frame > bb ? Ub : Ib;
+        const Hb = void 0 !== ab.outTangent && void 0 !== Tb.inTangent,
+          fb = Tb.frame - ab.frame;
+        let Mb = (bb - ab.frame) / fb;
+        const Cb = ab.easingFunction || this.getEasingFunction();
+        switch (Cb && (Mb = Cb.ease(Mb)), this.dataType) {
+          case Nb.ANIMATIONTYPE_FLOAT: {
+            const bb = Hb ? this.floatInterpolateFunctionWithTangents(Ub, ab.outTangent * fb, Ib, Tb.inTangent * fb, Mb) : this.floatInterpolateFunction(Ub, Ib, Mb);
+            switch (cb.Aa) {
+              case Nb.ANIMATIONLOOPMODE_CYCLE:
+              case Nb.ANIMATIONLOOPMODE_CONSTANT:
+              case Nb.ANIMATIONLOOPMODE_YOYO:
+                return bb;
+              case Nb.ANIMATIONLOOPMODE_RELATIVE:
+              case Nb.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return (cb.offsetValue ?? 0) * cb.repeatCount + bb
             }
             break
           }
-          case vk.ANIMATIONTYPE_QUATERNION: {
-            const kk = dk ? this.quaternionInterpolateFunctionWithTangents(bk, ak.outTangent.scale(sk), wk, Xk.inTangent.scale(sk), Vk) : this.quaternionInterpolateFunction(bk, wk, Vk);
-            switch (Fk.Oa) {
-              case vk.ANIMATIONLOOPMODE_CYCLE:
-              case vk.ANIMATIONLOOPMODE_CONSTANT:
-              case vk.ANIMATIONLOOPMODE_YOYO:
-                return kk;
-              case vk.ANIMATIONLOOPMODE_RELATIVE:
-              case vk.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return kk.addInPlace((Fk.offsetValue || Jk).scale(Fk.repeatCount))
+          case Nb.ANIMATIONTYPE_QUATERNION: {
+            const bb = Hb ? this.quaternionInterpolateFunctionWithTangents(Ub, ab.outTangent.scale(fb), Ib, Tb.inTangent.scale(fb), Mb) : this.quaternionInterpolateFunction(Ub, Ib, Mb);
+            switch (cb.Aa) {
+              case Nb.ANIMATIONLOOPMODE_CYCLE:
+              case Nb.ANIMATIONLOOPMODE_CONSTANT:
+              case Nb.ANIMATIONLOOPMODE_YOYO:
+                return bb;
+              case Nb.ANIMATIONLOOPMODE_RELATIVE:
+              case Nb.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return bb.addInPlace((cb.offsetValue || Xb).scale(cb.repeatCount))
             }
-            return kk
+            return bb
           }
-          case vk.ANIMATIONTYPE_VECTOR3: {
-            const kk = dk ? this.vector3InterpolateFunctionWithTangents(bk, ak.outTangent.scale(sk), wk, Xk.inTangent.scale(sk), Vk) : this.vector3InterpolateFunction(bk, wk, Vk);
-            switch (Fk.Oa) {
-              case vk.ANIMATIONLOOPMODE_CYCLE:
-              case vk.ANIMATIONLOOPMODE_CONSTANT:
-              case vk.ANIMATIONLOOPMODE_YOYO:
-                return kk;
-              case vk.ANIMATIONLOOPMODE_RELATIVE:
-              case vk.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return kk.add((Fk.offsetValue || Ak).scale(Fk.repeatCount))
-            }
-            break
-          }
-          case vk.ANIMATIONTYPE_VECTOR2: {
-            const kk = dk ? this.vector2InterpolateFunctionWithTangents(bk, ak.outTangent.scale(sk), wk, Xk.inTangent.scale(sk), Vk) : this.vector2InterpolateFunction(bk, wk, Vk);
-            switch (Fk.Oa) {
-              case vk.ANIMATIONLOOPMODE_CYCLE:
-              case vk.ANIMATIONLOOPMODE_CONSTANT:
-              case vk.ANIMATIONLOOPMODE_YOYO:
-                return kk;
-              case vk.ANIMATIONLOOPMODE_RELATIVE:
-              case vk.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return kk.add((Fk.offsetValue || ek).scale(Fk.repeatCount))
+          case Nb.ANIMATIONTYPE_VECTOR3: {
+            const bb = Hb ? this.vector3InterpolateFunctionWithTangents(Ub, ab.outTangent.scale(fb), Ib, Tb.inTangent.scale(fb), Mb) : this.vector3InterpolateFunction(Ub, Ib, Mb);
+            switch (cb.Aa) {
+              case Nb.ANIMATIONLOOPMODE_CYCLE:
+              case Nb.ANIMATIONLOOPMODE_CONSTANT:
+              case Nb.ANIMATIONLOOPMODE_YOYO:
+                return bb;
+              case Nb.ANIMATIONLOOPMODE_RELATIVE:
+              case Nb.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return bb.add((cb.offsetValue || nb).scale(cb.repeatCount))
             }
             break
           }
-          case vk.ANIMATIONTYPE_SIZE:
-            switch (Fk.Oa) {
-              case vk.ANIMATIONLOOPMODE_CYCLE:
-              case vk.ANIMATIONLOOPMODE_CONSTANT:
-              case vk.ANIMATIONLOOPMODE_YOYO:
-                return this.sizeInterpolateFunction(bk, wk, Vk);
-              case vk.ANIMATIONLOOPMODE_RELATIVE:
-              case vk.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return this.sizeInterpolateFunction(bk, wk, Vk).add((Fk.offsetValue || yk).scale(Fk.repeatCount))
+          case Nb.ANIMATIONTYPE_VECTOR2: {
+            const bb = Hb ? this.vector2InterpolateFunctionWithTangents(Ub, ab.outTangent.scale(fb), Ib, Tb.inTangent.scale(fb), Mb) : this.vector2InterpolateFunction(Ub, Ib, Mb);
+            switch (cb.Aa) {
+              case Nb.ANIMATIONLOOPMODE_CYCLE:
+              case Nb.ANIMATIONLOOPMODE_CONSTANT:
+              case Nb.ANIMATIONLOOPMODE_YOYO:
+                return bb;
+              case Nb.ANIMATIONLOOPMODE_RELATIVE:
+              case Nb.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return bb.add((cb.offsetValue || mb).scale(cb.repeatCount))
+            }
+            break
+          }
+          case Nb.ANIMATIONTYPE_SIZE:
+            switch (cb.Aa) {
+              case Nb.ANIMATIONLOOPMODE_CYCLE:
+              case Nb.ANIMATIONLOOPMODE_CONSTANT:
+              case Nb.ANIMATIONLOOPMODE_YOYO:
+                return this.sizeInterpolateFunction(Ub, Ib, Mb);
+              case Nb.ANIMATIONLOOPMODE_RELATIVE:
+              case Nb.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return this.sizeInterpolateFunction(Ub, Ib, Mb).add((cb.offsetValue || lb).scale(cb.repeatCount))
             }
             break;
-          case vk.ANIMATIONTYPE_COLOR3: {
-            const kk = dk ? this.color3InterpolateFunctionWithTangents(bk, ak.outTangent.scale(sk), wk, Xk.inTangent.scale(sk), Vk) : this.color3InterpolateFunction(bk, wk, Vk);
-            switch (Fk.Oa) {
-              case vk.ANIMATIONLOOPMODE_CYCLE:
-              case vk.ANIMATIONLOOPMODE_CONSTANT:
-              case vk.ANIMATIONLOOPMODE_YOYO:
-                return kk;
-              case vk.ANIMATIONLOOPMODE_RELATIVE:
-              case vk.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return kk.add((Fk.offsetValue || fk).scale(Fk.repeatCount))
+          case Nb.ANIMATIONTYPE_COLOR3: {
+            const bb = Hb ? this.color3InterpolateFunctionWithTangents(Ub, ab.outTangent.scale(fb), Ib, Tb.inTangent.scale(fb), Mb) : this.color3InterpolateFunction(Ub, Ib, Mb);
+            switch (cb.Aa) {
+              case Nb.ANIMATIONLOOPMODE_CYCLE:
+              case Nb.ANIMATIONLOOPMODE_CONSTANT:
+              case Nb.ANIMATIONLOOPMODE_YOYO:
+                return bb;
+              case Nb.ANIMATIONLOOPMODE_RELATIVE:
+              case Nb.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return bb.add((cb.offsetValue || Qb).scale(cb.repeatCount))
             }
             break
           }
-          case vk.ANIMATIONTYPE_COLOR4: {
-            const kk = dk ? this.color4InterpolateFunctionWithTangents(bk, ak.outTangent.scale(sk), wk, Xk.inTangent.scale(sk), Vk) : this.color4InterpolateFunction(bk, wk, Vk);
-            switch (Fk.Oa) {
-              case vk.ANIMATIONLOOPMODE_CYCLE:
-              case vk.ANIMATIONLOOPMODE_CONSTANT:
-              case vk.ANIMATIONLOOPMODE_YOYO:
-                return kk;
-              case vk.ANIMATIONLOOPMODE_RELATIVE:
-              case vk.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return kk.add((Fk.offsetValue || mk).scale(Fk.repeatCount))
+          case Nb.ANIMATIONTYPE_COLOR4: {
+            const bb = Hb ? this.color4InterpolateFunctionWithTangents(Ub, ab.outTangent.scale(fb), Ib, Tb.inTangent.scale(fb), Mb) : this.color4InterpolateFunction(Ub, Ib, Mb);
+            switch (cb.Aa) {
+              case Nb.ANIMATIONLOOPMODE_CYCLE:
+              case Nb.ANIMATIONLOOPMODE_CONSTANT:
+              case Nb.ANIMATIONLOOPMODE_YOYO:
+                return bb;
+              case Nb.ANIMATIONLOOPMODE_RELATIVE:
+              case Nb.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return bb.add((cb.offsetValue || eb).scale(cb.repeatCount))
             }
             break
           }
-          case vk.ANIMATIONTYPE_MATRIX:
-            switch (Fk.Oa) {
-              case vk.ANIMATIONLOOPMODE_CYCLE:
-              case vk.ANIMATIONLOOPMODE_CONSTANT:
-              case vk.ANIMATIONLOOPMODE_YOYO:
-                return vk.AllowMatricesInterpolation ? this.matrixInterpolateFunction(bk, wk, Vk, Fk.workValue) : bk;
-              case vk.ANIMATIONLOOPMODE_RELATIVE:
-              case vk.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return bk
+          case Nb.ANIMATIONTYPE_MATRIX:
+            switch (cb.Aa) {
+              case Nb.ANIMATIONLOOPMODE_CYCLE:
+              case Nb.ANIMATIONLOOPMODE_CONSTANT:
+              case Nb.ANIMATIONLOOPMODE_YOYO:
+                return Nb.AllowMatricesInterpolation ? this.matrixInterpolateFunction(Ub, Ib, Mb, cb.workValue) : Ub;
+              case Nb.ANIMATIONLOOPMODE_RELATIVE:
+              case Nb.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return Ub
             }
         }
         return 0
       }
-      matrixInterpolateFunction(kk, Fk, Bk, tk) {
-        return vk.AllowMatrixDecomposeForInterpolation ? tk ? (Rk.c.DecomposeLerpToRef(kk, Fk, Bk, tk), tk) : Rk.c.DecomposeLerp(kk, Fk, Bk) : tk ? (Rk.c.LerpToRef(kk, Fk, Bk, tk), tk) : Rk.c.Lerp(kk, Fk, Bk)
+      matrixInterpolateFunction(bb, cb, sb, Wb) {
+        return Nb.AllowMatrixDecomposeForInterpolation ? Wb ? (kb.e.DecomposeLerpToRef(bb, cb, sb, Wb), Wb) : kb.e.DecomposeLerp(bb, cb, sb) : Wb ? (kb.e.LerpToRef(bb, cb, sb, Wb), Wb) : kb.e.Lerp(bb, cb, sb)
       }
       clone() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Fk = new vk(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.Oa);
-        if (Fk.enableBlending = this.enableBlending, Fk.blendingSpeed = this.blendingSpeed, this._keys && Fk.setKeys(this._keys, !1, kk), this._ranges) {
-          Fk._ranges = {};
-          for (const kk in this._ranges) {
-            const Bk = this._ranges[kk];
-            Bk && (Fk._ranges[kk] = Bk.clone())
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const cb = new Nb(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.Aa);
+        if (cb.enableBlending = this.enableBlending, cb.blendingSpeed = this.blendingSpeed, this._keys && cb.setKeys(this._keys, !1, bb), this._ranges) {
+          cb._ranges = {};
+          for (const bb in this._ranges) {
+            const sb = this._ranges[bb];
+            sb && (cb._ranges[bb] = sb.clone())
           }
         }
-        return Fk
+        return cb
       }
-      setKeys(kk) {
-        let Fk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = kk;
-        else if (this._keys = kk.slice(0), Fk)
-          for (let Bk = 0; Bk < this._keys.length; Bk++) {
-            const kk = this._keys[Bk];
-            this._keys[Bk] = {
-              frame: kk.frame,
-              value: kk.value.clone ? kk.value.clone() : kk.value,
-              inTangent: kk.inTangent && kk.inTangent.clone ? kk.inTangent.clone() : kk.inTangent,
-              outTangent: kk.outTangent && kk.outTangent.clone ? kk.outTangent.clone() : kk.outTangent,
-              interpolation: kk.interpolation,
-              lockedTangent: kk.lockedTangent,
-              easingFunction: kk.easingFunction
+      setKeys(bb) {
+        let cb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = bb;
+        else if (this._keys = bb.slice(0), cb)
+          for (let sb = 0; sb < this._keys.length; sb++) {
+            const bb = this._keys[sb];
+            this._keys[sb] = {
+              frame: bb.frame,
+              value: bb.value.clone ? bb.value.clone() : bb.value,
+              inTangent: bb.inTangent && bb.inTangent.clone ? bb.inTangent.clone() : bb.inTangent,
+              outTangent: bb.outTangent && bb.outTangent.clone ? bb.outTangent.clone() : bb.outTangent,
+              interpolation: bb.interpolation,
+              lockedTangent: bb.lockedTangent,
+              easingFunction: bb.easingFunction
             }
           }
       }
-      createKeyForFrame(kk) {
-        Wk.key = 0;
-        const Fk = this._interpolate(kk, Wk, !0);
-        if (!Fk) return this._keys[Wk.key].frame === kk ? Wk.key : Wk.key + 1;
-        const Bk = {
-          frame: kk,
-          value: Fk.clone ? Fk.clone() : Fk
+      createKeyForFrame(bb) {
+        Cb.key = 0;
+        const cb = this._interpolate(bb, Cb, !0);
+        if (!cb) return this._keys[Cb.key].frame === bb ? Cb.key : Cb.key + 1;
+        const sb = {
+          frame: bb,
+          value: cb.clone ? cb.clone() : cb
         };
-        return this._keys.splice(Wk.key + 1, 0, Bk), Wk.key + 1
+        return this._keys.splice(Cb.key + 1, 0, sb), Cb.key + 1
       }
       serialize() {
-        const kk = {};
-        kk.name = this.name, kk.property = this.targetProperty, kk.framePerSecond = this.framePerSecond, kk.dataType = this.dataType, kk.loopBehavior = this.Oa, kk.enableBlending = this.enableBlending, kk.blendingSpeed = this.blendingSpeed;
-        const Fk = this.dataType;
-        kk.keys = [];
-        const Bk = this.getKeys();
-        for (let Rk = 0; Rk < Bk.length; Rk++) {
-          const tk = Bk[Rk],
-            ak = {};
-          switch (ak.frame = tk.frame, Fk) {
-            case vk.ANIMATIONTYPE_FLOAT:
-              ak.values = [tk.value], void 0 !== tk.inTangent && ak.values.push(tk.inTangent), void 0 !== tk.outTangent && (void 0 === tk.inTangent && ak.values.push(void 0), ak.values.push(tk.outTangent)), void 0 !== tk.interpolation && (void 0 === tk.inTangent && ak.values.push(void 0), void 0 === tk.outTangent && ak.values.push(void 0), ak.values.push(tk.interpolation));
+        const bb = {};
+        bb.name = this.name, bb.property = this.targetProperty, bb.framePerSecond = this.framePerSecond, bb.dataType = this.dataType, bb.loopBehavior = this.Aa, bb.enableBlending = this.enableBlending, bb.blendingSpeed = this.blendingSpeed;
+        const cb = this.dataType;
+        bb.keys = [];
+        const sb = this.getKeys();
+        for (let kb = 0; kb < sb.length; kb++) {
+          const Wb = sb[kb],
+            ab = {};
+          switch (ab.frame = Wb.frame, cb) {
+            case Nb.ANIMATIONTYPE_FLOAT:
+              ab.values = [Wb.value], void 0 !== Wb.inTangent && ab.values.push(Wb.inTangent), void 0 !== Wb.outTangent && (void 0 === Wb.inTangent && ab.values.push(void 0), ab.values.push(Wb.outTangent)), void 0 !== Wb.interpolation && (void 0 === Wb.inTangent && ab.values.push(void 0), void 0 === Wb.outTangent && ab.values.push(void 0), ab.values.push(Wb.interpolation));
               break;
-            case vk.ANIMATIONTYPE_QUATERNION:
-            case vk.ANIMATIONTYPE_MATRIX:
-            case vk.ANIMATIONTYPE_VECTOR3:
-            case vk.ANIMATIONTYPE_COLOR3:
-            case vk.ANIMATIONTYPE_COLOR4:
-              ak.values = tk.value.PBk(), void 0 != tk.inTangent && ak.values.push(tk.inTangent.PBk()), void 0 != tk.outTangent && (void 0 === tk.inTangent && ak.values.push(void 0), ak.values.push(tk.outTangent.PBk())), void 0 !== tk.interpolation && (void 0 === tk.inTangent && ak.values.push(void 0), void 0 === tk.outTangent && ak.values.push(void 0), ak.values.push(tk.interpolation))
+            case Nb.ANIMATIONTYPE_QUATERNION:
+            case Nb.ANIMATIONTYPE_MATRIX:
+            case Nb.ANIMATIONTYPE_VECTOR3:
+            case Nb.ANIMATIONTYPE_COLOR3:
+            case Nb.ANIMATIONTYPE_COLOR4:
+              ab.values = Wb.value.Osb(), void 0 != Wb.inTangent && ab.values.push(Wb.inTangent.Osb()), void 0 != Wb.outTangent && (void 0 === Wb.inTangent && ab.values.push(void 0), ab.values.push(Wb.outTangent.Osb())), void 0 !== Wb.interpolation && (void 0 === Wb.inTangent && ab.values.push(void 0), void 0 === Wb.outTangent && ab.values.push(void 0), ab.values.push(Wb.interpolation))
           }
-          kk.keys.push(ak)
+          bb.keys.push(ab)
         }
-        kk.hb = [];
-        for (const Rk in this._ranges) {
-          const Fk = this._ranges[Rk];
-          if (!Fk) continue;
-          const Bk = {};
-          Bk.name = Rk, Bk.from = Fk.from, Bk.to = Fk.to, kk.hb.push(Bk)
+        bb.uQ = [];
+        for (const kb in this._ranges) {
+          const cb = this._ranges[kb];
+          if (!cb) continue;
+          const sb = {};
+          sb.name = kb, sb.from = cb.from, sb.to = cb.to, bb.uQ.push(sb)
         }
-        return kk
+        return bb
       }
-      static _UniversalLerp(kk, Fk, Bk) {
-        const Rk = kk.constructor;
-        return Rk.Lerp ? Rk.Lerp(kk, Fk, Bk) : Rk.Slerp ? Rk.Slerp(kk, Fk, Bk) : kk.toFixed ? kk * (1 - Bk) + Bk * Fk : Fk
+      static _UniversalLerp(bb, cb, sb) {
+        const kb = bb.constructor;
+        return kb.Lerp ? kb.Lerp(bb, cb, sb) : kb.Slerp ? kb.Slerp(bb, cb, sb) : bb.toFixed ? bb * (1 - sb) + sb * cb : cb
       }
     }
 
-    function ik(kk, Fk, Bk) {
-      let tk;
-      tk = "object" === typeof Fk ? Fk : {
-        referenceFrame: Fk ?? 0,
-        range: Bk,
+    function Vb(bb, cb, sb) {
+      let Wb;
+      Wb = "object" === typeof cb ? cb : {
+        referenceFrame: cb ?? 0,
+        range: sb,
         cloneOriginalAnimation: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         clonedAnimationName: arguments.length > 4 ? arguments[4] : void 0
       };
-      let ak = kk;
-      tk.cloneOriginalAnimation && (ak = kk.clone(), ak.name = tk.clonedAnimationName || ak.name);
-      const Xk = ak.getKeys();
-      if (!Xk.length) return ak;
-      const bk = tk.referenceFrame && tk.referenceFrame >= 0 ? tk.referenceFrame : 0;
-      let wk = 0;
-      const dk = Xk[0];
-      let sk = Xk.length - 1;
-      const Vk = Xk[sk],
-        Jk = {
-          referenceValue: dk.value,
-          referencePosition: Rk.l.Qe[0],
-          referenceQuaternion: Rk.l.Quaternion[0],
-          referenceScaling: Rk.l.Qe[1],
-          keyPosition: Rk.l.Qe[2],
-          keyQuaternion: Rk.l.Quaternion[1],
-          keyScaling: Rk.l.Qe[3]
+      let ab = bb;
+      Wb.cloneOriginalAnimation && (ab = bb.clone(), ab.name = Wb.clonedAnimationName || ab.name);
+      const Tb = ab.getKeys();
+      if (!Tb.length) return ab;
+      const Ub = Wb.referenceFrame && Wb.referenceFrame >= 0 ? Wb.referenceFrame : 0;
+      let Ib = 0;
+      const Hb = Tb[0];
+      let fb = Tb.length - 1;
+      const Mb = Tb[fb],
+        Xb = {
+          referenceValue: Hb.value,
+          referencePosition: kb.m.Fm[0],
+          referenceQuaternion: kb.m.Quaternion[0],
+          referenceScaling: kb.m.Fm[1],
+          keyPosition: kb.m.Fm[2],
+          keyQuaternion: kb.m.Quaternion[1],
+          keyScaling: kb.m.Fm[3]
         };
-      let Ak = dk.frame,
-        ek = Vk.frame;
-      if (tk.range) {
-        const kk = ak.getRange(tk.range);
-        kk && (Ak = kk.from, ek = kk.to)
-      } else Ak = tk.fromFrame ?? Ak, ek = tk.toFrame ?? ek;
-      Ak !== dk.frame && (wk = ak.createKeyForFrame(Ak)), ek !== Vk.frame && (sk = ak.createKeyForFrame(ek));
-      const yk = ak.getKeys();
-      if (1 === yk.length) {
-        const kk = ak._getKeyValue(yk[0].value);
-        Jk.referenceValue = kk.clone ? kk.clone() : kk
-      } else if (bk <= dk.frame) {
-        const kk = ak._getKeyValue(dk.value);
-        Jk.referenceValue = kk.clone ? kk.clone() : kk
-      } else if (bk >= Vk.frame) {
-        const kk = ak._getKeyValue(Vk.value);
-        Jk.referenceValue = kk.clone ? kk.clone() : kk
+      let nb = Hb.frame,
+        mb = Mb.frame;
+      if (Wb.range) {
+        const bb = ab.getRange(Wb.range);
+        bb && (nb = bb.from, mb = bb.to)
+      } else nb = Wb.fromFrame ?? nb, mb = Wb.toFrame ?? mb;
+      nb !== Hb.frame && (Ib = ab.createKeyForFrame(nb)), mb !== Mb.frame && (fb = ab.createKeyForFrame(mb));
+      const lb = ab.getKeys();
+      if (1 === lb.length) {
+        const bb = ab._getKeyValue(lb[0].value);
+        Xb.referenceValue = bb.clone ? bb.clone() : bb
+      } else if (Ub <= Hb.frame) {
+        const bb = ab._getKeyValue(Hb.value);
+        Xb.referenceValue = bb.clone ? bb.clone() : bb
+      } else if (Ub >= Mb.frame) {
+        const bb = ab._getKeyValue(Mb.value);
+        Xb.referenceValue = bb.clone ? bb.clone() : bb
       } else {
-        Wk.key = 0;
-        const kk = ak._interpolate(bk, Wk);
-        Jk.referenceValue = kk.clone ? kk.clone() : kk
+        Cb.key = 0;
+        const bb = ab._interpolate(Ub, Cb);
+        Xb.referenceValue = bb.clone ? bb.clone() : bb
       }
-      ak.dataType === vk.ANIMATIONTYPE_QUATERNION ? Jk.referenceValue.normalize().conjugateInPlace() : ak.dataType === vk.ANIMATIONTYPE_MATRIX && (Jk.referenceValue.decompose(Jk.referenceScaling, Jk.referenceQuaternion, Jk.referencePosition), Jk.referenceQuaternion.normalize().conjugateInPlace());
-      let fk = Number.MAX_VALUE;
-      const mk = tk.clipKeys ? [] : null;
-      for (let Wk = wk; Wk <= sk; Wk++) {
-        let kk = yk[Wk];
-        if ((mk || tk.cloneOriginalAnimation) && (kk = {
-            frame: kk.frame,
-            value: kk.value.clone ? kk.value.clone() : kk.value,
-            inTangent: kk.inTangent,
-            outTangent: kk.outTangent,
-            interpolation: kk.interpolation,
-            lockedTangent: kk.lockedTangent,
-            easingFunction: kk.easingFunction
-          }, mk && (fk === Number.MAX_VALUE && (fk = kk.frame), kk.frame -= fk, mk.push(kk))), !Wk || ak.dataType === vk.ANIMATIONTYPE_FLOAT || kk.value !== dk.value) switch (ak.dataType) {
-          case vk.ANIMATIONTYPE_MATRIX:
-            kk.value.decompose(Jk.keyScaling, Jk.keyQuaternion, Jk.keyPosition), Jk.keyPosition.wRk(Jk.referencePosition), Jk.keyScaling.divideInPlace(Jk.referenceScaling), Jk.referenceQuaternion.multiplyToRef(Jk.keyQuaternion, Jk.keyQuaternion), Rk.c.ComposeToRef(Jk.keyScaling, Jk.keyQuaternion, Jk.keyPosition, kk.value);
+      ab.dataType === Nb.ANIMATIONTYPE_QUATERNION ? Xb.referenceValue.normalize().conjugateInPlace() : ab.dataType === Nb.ANIMATIONTYPE_MATRIX && (Xb.referenceValue.decompose(Xb.referenceScaling, Xb.referenceQuaternion, Xb.referencePosition), Xb.referenceQuaternion.normalize().conjugateInPlace());
+      let Qb = Number.MAX_VALUE;
+      const eb = Wb.clipKeys ? [] : null;
+      for (let Cb = Ib; Cb <= fb; Cb++) {
+        let bb = lb[Cb];
+        if ((eb || Wb.cloneOriginalAnimation) && (bb = {
+            frame: bb.frame,
+            value: bb.value.clone ? bb.value.clone() : bb.value,
+            inTangent: bb.inTangent,
+            outTangent: bb.outTangent,
+            interpolation: bb.interpolation,
+            lockedTangent: bb.lockedTangent,
+            easingFunction: bb.easingFunction
+          }, eb && (Qb === Number.MAX_VALUE && (Qb = bb.frame), bb.frame -= Qb, eb.push(bb))), !Cb || ab.dataType === Nb.ANIMATIONTYPE_FLOAT || bb.value !== Hb.value) switch (ab.dataType) {
+          case Nb.ANIMATIONTYPE_MATRIX:
+            bb.value.decompose(Xb.keyScaling, Xb.keyQuaternion, Xb.keyPosition), Xb.keyPosition.Wkb(Xb.referencePosition), Xb.keyScaling.divideInPlace(Xb.referenceScaling), Xb.referenceQuaternion.multiplyToRef(Xb.keyQuaternion, Xb.keyQuaternion), kb.e.ComposeToRef(Xb.keyScaling, Xb.keyQuaternion, Xb.keyPosition, bb.value);
             break;
-          case vk.ANIMATIONTYPE_QUATERNION:
-            Jk.referenceValue.multiplyToRef(kk.value, kk.value);
+          case Nb.ANIMATIONTYPE_QUATERNION:
+            Xb.referenceValue.multiplyToRef(bb.value, bb.value);
             break;
-          case vk.ANIMATIONTYPE_VECTOR2:
-          case vk.ANIMATIONTYPE_VECTOR3:
-          case vk.ANIMATIONTYPE_COLOR3:
-          case vk.ANIMATIONTYPE_COLOR4:
-            kk.value.subtractToRef(Jk.referenceValue, kk.value);
+          case Nb.ANIMATIONTYPE_VECTOR2:
+          case Nb.ANIMATIONTYPE_VECTOR3:
+          case Nb.ANIMATIONTYPE_COLOR3:
+          case Nb.ANIMATIONTYPE_COLOR4:
+            bb.value.subtractToRef(Xb.referenceValue, bb.value);
             break;
-          case vk.ANIMATIONTYPE_SIZE:
-            kk.value.width -= Jk.referenceValue.width, kk.value.height -= Jk.referenceValue.height;
+          case Nb.ANIMATIONTYPE_SIZE:
+            bb.value.width -= Xb.referenceValue.width, bb.value.height -= Xb.referenceValue.height;
             break;
           default:
-            kk.value -= Jk.referenceValue
+            bb.value -= Xb.referenceValue
         }
       }
-      return mk && ak.setKeys(mk, !0), ak
+      return eb && ab.setKeys(eb, !0), ab
     }
 
-    function Yk(kk, Fk, Bk, Rk) {
-      const tk = new vk(kk + "Animation", kk, Bk, Fk, vk.ANIMATIONLOOPMODE_CONSTANT);
-      return tk.setEasingFunction(Rk), tk
+    function Lb(bb, cb, sb, kb) {
+      const Wb = new Nb(bb + "Animation", bb, sb, cb, Nb.ANIMATIONLOOPMODE_CONSTANT);
+      return Wb.setEasingFunction(kb), Wb
     }
 
-    function Lk(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk, sk) {
-      const Vk = vk._PrepareAnimation(kk, Bk, Rk, tk, ak, Xk, bk, wk);
-      return Vk ? (Fk.XN && (sk = Fk.XN()), sk ? sk.beginDirectAnimation(Fk, [Vk], 0, tk, Vk.Oa !== vk.ANIMATIONLOOPMODE_CONSTANT, 1, dk) : null) : null
+    function ub(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb, fb) {
+      const Mb = Nb._PrepareAnimation(bb, sb, kb, Wb, ab, Tb, Ub, Ib);
+      return Mb ? (cb.EY && (fb = cb.EY()), fb ? fb.beginDirectAnimation(cb, [Mb], 0, Wb, Mb.Aa !== Nb.ANIMATIONLOOPMODE_CONSTANT, 1, Hb) : null) : null
     }
 
-    function Ok(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk, sk) {
-      const Vk = vk._PrepareAnimation(kk, Rk, tk, ak, Xk, bk, wk, dk);
-      if (!Vk) return null;
-      return Fk.XN().beginDirectHierarchyAnimation(Fk, Bk, [Vk], 0, ak, 1 === Vk.Oa, 1, sk)
+    function Yb(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb, fb) {
+      const Mb = Nb._PrepareAnimation(bb, kb, Wb, ab, Tb, Ub, Ib, Hb);
+      if (!Mb) return null;
+      return cb.EY().beginDirectHierarchyAnimation(cb, sb, [Mb], 0, ab, 1 === Mb.Aa, 1, fb)
     }
 
-    function Ek(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk) {
-      const sk = vk._PrepareAnimation(kk, Bk, Rk, tk, ak, Xk, bk, wk);
-      return sk ? (Fk.animations.push(sk), Fk.XN().beginAnimation(Fk, 0, tk, 1 === sk.Oa, 1, dk)) : null
+    function hb(bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb) {
+      const fb = Nb._PrepareAnimation(bb, sb, kb, Wb, ab, Tb, Ub, Ib);
+      return fb ? (cb.animations.push(fb), cb.EY().beginAnimation(cb, 0, Wb, 1 === fb.Aa, 1, Hb)) : null
     }
 
-    function Sk(kk, Fk, Bk, Rk, tk, ak, Xk) {
-      let bk = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-        wk = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-        dk = arguments.length > 9 ? arguments[9] : void 0;
-      if (Xk <= 0) return Bk[kk] = Fk, bk && bk(), null;
-      const sk = tk * (Xk / 1e3);
-      ak.setKeys(dk ?? [{
+    function Jb(bb, cb, sb, kb, Wb, ab, Tb) {
+      let Ub = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        Ib = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+        Hb = arguments.length > 9 ? arguments[9] : void 0;
+      if (Tb <= 0) return sb[bb] = cb, Ub && Ub(), null;
+      const fb = Wb * (Tb / 1e3);
+      ab.setKeys(Hb ?? [{
         frame: 0,
-        value: Bk[kk].clone ? Bk[kk].clone() : Bk[kk]
+        value: sb[bb].clone ? sb[bb].clone() : sb[bb]
       }, {
-        frame: sk,
-        value: Fk
-      }]), Bk.animations || (Bk.animations = []), Bk.animations.push(ak);
-      return Rk.beginAnimation(Bk, 0, sk, !1, 1, bk ?? void 0, void 0, wk)
+        frame: fb,
+        value: cb
+      }]), sb.animations || (sb.animations = []), sb.animations.push(ab);
+      return kb.beginAnimation(sb, 0, fb, !1, 1, Ub ?? void 0, void 0, Ib)
     }
 
-    function Nk(kk, Fk) {
-      sk.c.AppendSerializedAnimations(kk, Fk)
+    function gb(bb, cb) {
+      fb.d.AppendSerializedAnimations(bb, cb)
     }
 
-    function Hk(kk) {
-      const Fk = new vk(kk.name, kk.property, kk.framePerSecond, kk.dataType, kk.loopBehavior),
-        Bk = kk.dataType,
-        ak = [];
-      let Xk, bk;
-      for (kk.enableBlending && (Fk.enableBlending = kk.enableBlending), kk.blendingSpeed && (Fk.blendingSpeed = kk.blendingSpeed), bk = 0; bk < kk.keys.length; bk++) {
-        const Fk = kk.keys[bk];
-        let wk, dk, sk;
-        switch (Bk) {
-          case vk.ANIMATIONTYPE_FLOAT:
-            Xk = Fk.values[0], Fk.values.length >= 2 && (wk = Fk.values[1]), Fk.values.length >= 3 && (dk = Fk.values[2]), Fk.values.length >= 4 && (sk = Fk.values[3]);
+    function Bb(bb) {
+      const cb = new Nb(bb.name, bb.property, bb.framePerSecond, bb.dataType, bb.loopBehavior),
+        sb = bb.dataType,
+        ab = [];
+      let Tb, Ub;
+      for (bb.enableBlending && (cb.enableBlending = bb.enableBlending), bb.blendingSpeed && (cb.blendingSpeed = bb.blendingSpeed), Ub = 0; Ub < bb.keys.length; Ub++) {
+        const cb = bb.keys[Ub];
+        let Ib, Hb, fb;
+        switch (sb) {
+          case Nb.ANIMATIONTYPE_FLOAT:
+            Tb = cb.values[0], cb.values.length >= 2 && (Ib = cb.values[1]), cb.values.length >= 3 && (Hb = cb.values[2]), cb.values.length >= 4 && (fb = cb.values[3]);
             break;
-          case vk.ANIMATIONTYPE_QUATERNION:
-            if (Xk = Rk.e.FromArray(Fk.values), Fk.values.length >= 8) {
-              const kk = Rk.e.FromArray(Fk.values.slice(4, 8));
-              kk.equals(Rk.e.Zero()) || (wk = kk)
+          case Nb.ANIMATIONTYPE_QUATERNION:
+            if (Tb = kb.f.FromArray(cb.values), cb.values.length >= 8) {
+              const bb = kb.f.FromArray(cb.values.slice(4, 8));
+              bb.equals(kb.f.Zero()) || (Ib = bb)
             }
-            if (Fk.values.length >= 12) {
-              const kk = Rk.e.FromArray(Fk.values.slice(8, 12));
-              kk.equals(Rk.e.Zero()) || (dk = kk)
+            if (cb.values.length >= 12) {
+              const bb = kb.f.FromArray(cb.values.slice(8, 12));
+              bb.equals(kb.f.Zero()) || (Hb = bb)
             }
-            Fk.values.length >= 13 && (sk = Fk.values[12]);
+            cb.values.length >= 13 && (fb = cb.values[12]);
             break;
-          case vk.ANIMATIONTYPE_MATRIX:
-            Xk = Rk.c.FromArray(Fk.values), Fk.values.length >= 17 && (sk = Fk.values[16]);
+          case Nb.ANIMATIONTYPE_MATRIX:
+            Tb = kb.e.FromArray(cb.values), cb.values.length >= 17 && (fb = cb.values[16]);
             break;
-          case vk.ANIMATIONTYPE_COLOR3:
-            Xk = tk.e.FromArray(Fk.values), Fk.values[3] && (wk = tk.e.FromArray(Fk.values[3])), Fk.values[4] && (dk = tk.e.FromArray(Fk.values[4])), Fk.values[5] && (sk = Fk.values[5]);
+          case Nb.ANIMATIONTYPE_COLOR3:
+            Tb = Wb.e.FromArray(cb.values), cb.values[3] && (Ib = Wb.e.FromArray(cb.values[3])), cb.values[4] && (Hb = Wb.e.FromArray(cb.values[4])), cb.values[5] && (fb = cb.values[5]);
             break;
-          case vk.ANIMATIONTYPE_COLOR4:
-            Xk = tk.i.FromArray(Fk.values), Fk.values[4] && (wk = tk.i.FromArray(Fk.values[4])), Fk.values[5] && (dk = tk.i.FromArray(Fk.values[5])), Fk.values[6] && (sk = Fk.values[6]);
+          case Nb.ANIMATIONTYPE_COLOR4:
+            Tb = Wb.g.FromArray(cb.values), cb.values[4] && (Ib = Wb.g.FromArray(cb.values[4])), cb.values[5] && (Hb = Wb.g.FromArray(cb.values[5])), cb.values[6] && (fb = cb.values[6]);
             break;
-          case vk.ANIMATIONTYPE_VECTOR3:
+          case Nb.ANIMATIONTYPE_VECTOR3:
           default:
-            Xk = Rk.s.FromArray(Fk.values), Fk.values[3] && (wk = Rk.s.FromArray(Fk.values[3])), Fk.values[4] && (dk = Rk.s.FromArray(Fk.values[4])), Fk.values[5] && (sk = Fk.values[5])
+            Tb = kb.p.FromArray(cb.values), cb.values[3] && (Ib = kb.p.FromArray(cb.values[3])), cb.values[4] && (Hb = kb.p.FromArray(cb.values[4])), cb.values[5] && (fb = cb.values[5])
         }
-        const Vk = {};
-        Vk.frame = Fk.frame, Vk.value = Xk, void 0 != wk && (Vk.inTangent = wk), void 0 != dk && (Vk.outTangent = dk), void 0 != sk && (Vk.interpolation = sk), ak.push(Vk)
+        const Mb = {};
+        Mb.frame = cb.frame, Mb.value = Tb, void 0 != Ib && (Mb.inTangent = Ib), void 0 != Hb && (Mb.outTangent = Hb), void 0 != fb && (Mb.interpolation = fb), ab.push(Mb)
       }
-      if (Fk.setKeys(ak), kk.hb)
-        for (bk = 0; bk < kk.hb.length; bk++) Xk = kk.hb[bk], Fk.createRange(Xk.name, Xk.from, Xk.to);
-      return Fk
+      if (cb.setKeys(ab), bb.uQ)
+        for (Ub = 0; Ub < bb.uQ.length; Ub++) Tb = bb.uQ[Ub], cb.createRange(Tb.name, Tb.from, Tb.to);
+      return cb
     }
-    async function uk(kk, Fk) {
-      return await new Promise(((Bk, Rk) => {
-        const tk = new dk.d;
-        tk.addEventListener("readystatechange", (() => {
-          if (4 == tk.readyState)
-            if (200 == tk.status) {
-              let Fk = JSON.parse(tk.responseText);
-              if (Fk.animations && (Fk = Fk.animations), Fk.length) {
-                const kk = [];
-                for (const Bk of Fk) kk.push(Hk(Bk));
-                Bk(kk)
+    async function tb(bb, cb) {
+      return await new Promise(((sb, kb) => {
+        const Wb = new Hb.c;
+        Wb.addEventListener("readystatechange", (() => {
+          if (4 == Wb.readyState)
+            if (200 == Wb.status) {
+              let cb = JSON.parse(Wb.responseText);
+              if (cb.animations && (cb = cb.animations), cb.length) {
+                const bb = [];
+                for (const sb of cb) bb.push(Bb(sb));
+                sb(bb)
               } else {
-                const Rk = Hk(Fk);
-                kk && (Rk.name = kk), Bk(Rk)
+                const kb = Bb(cb);
+                bb && (kb.name = bb), sb(kb)
               }
-            } else Rk("Unable to load the animation")
-        })), tk.open("GET", Fk), tk.send()
+            } else kb("Unable to load the animation")
+        })), Wb.open("GET", cb), Wb.send()
       }))
     }
-    async function Mk(kk) {
-      const Fk = this?.SnippetUrl ?? vk.SnippetUrl;
-      return await new Promise(((Bk, Rk) => {
-        const tk = new dk.d;
-        tk.addEventListener("readystatechange", (() => {
-          if (4 == tk.readyState)
-            if (200 == tk.status) {
-              const Fk = JSON.parse(JSON.parse(tk.responseText).jsonPayload);
-              if (Fk.animations) {
-                const Rk = JSON.parse(Fk.animations),
-                  tk = [];
-                for (const Fk of Rk.animations) {
-                  const Bk = Hk(Fk);
-                  Bk.snippetId = kk, tk.push(Bk)
+    async function yb(bb) {
+      const cb = this?.SnippetUrl ?? Nb.SnippetUrl;
+      return await new Promise(((sb, kb) => {
+        const Wb = new Hb.c;
+        Wb.addEventListener("readystatechange", (() => {
+          if (4 == Wb.readyState)
+            if (200 == Wb.status) {
+              const cb = JSON.parse(JSON.parse(Wb.responseText).jsonPayload);
+              if (cb.animations) {
+                const kb = JSON.parse(cb.animations),
+                  Wb = [];
+                for (const cb of kb.animations) {
+                  const sb = Bb(cb);
+                  sb.snippetId = bb, Wb.push(sb)
                 }
-                Bk(tk)
+                sb(Wb)
               } else {
-                const Rk = Hk(JSON.parse(Fk.animation));
-                Rk.snippetId = kk, Bk(Rk)
+                const kb = Bb(JSON.parse(cb.animation));
+                kb.snippetId = bb, sb(kb)
               }
-            } else Rk("Unable to load the snippet " + kk)
-        })), tk.open("GET", Fk + "/" + kk.replace(/#/g, "/")), tk.send()
+            } else kb("Unable to load the snippet " + bb)
+        })), Wb.open("GET", cb + "/" + bb.replace(/#/g, "/")), Wb.send()
       }))
     }
-    vk._UniqueIdGenerator = 0, vk.AllowMatricesInterpolation = !1, vk.AllowMatrixDecomposeForInterpolation = !0, vk.InheritOriginalValueFromActiveAnimations = !1, vk.SnippetUrl = "https://snippet.babylonjs.com", vk.ANIMATIONTYPE_FLOAT = 0, vk.ANIMATIONTYPE_VECTOR3 = 1, vk.ANIMATIONTYPE_QUATERNION = 2, vk.ANIMATIONTYPE_MATRIX = 3, vk.ANIMATIONTYPE_COLOR3 = 4, vk.ANIMATIONTYPE_COLOR4 = 7, vk.ANIMATIONTYPE_VECTOR2 = 5, vk.ANIMATIONTYPE_SIZE = 6, vk.ANIMATIONLOOPMODE_RELATIVE = 0, vk.ANIMATIONLOOPMODE_CYCLE = 1, vk.ANIMATIONLOOPMODE_CONSTANT = 2, vk.ANIMATIONLOOPMODE_YOYO = 4, vk.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
-    const gk = Mk;
-    let Uk = !1;
+    Nb._UniqueIdGenerator = 0, Nb.AllowMatricesInterpolation = !1, Nb.AllowMatrixDecomposeForInterpolation = !0, Nb.InheritOriginalValueFromActiveAnimations = !1, Nb.SnippetUrl = "https://snippet.babylonjs.com", Nb.ANIMATIONTYPE_FLOAT = 0, Nb.ANIMATIONTYPE_VECTOR3 = 1, Nb.ANIMATIONTYPE_QUATERNION = 2, Nb.ANIMATIONTYPE_MATRIX = 3, Nb.ANIMATIONTYPE_COLOR3 = 4, Nb.ANIMATIONTYPE_COLOR4 = 7, Nb.ANIMATIONTYPE_VECTOR2 = 5, Nb.ANIMATIONTYPE_SIZE = 6, Nb.ANIMATIONLOOPMODE_RELATIVE = 0, Nb.ANIMATIONLOOPMODE_CYCLE = 1, Nb.ANIMATIONLOOPMODE_CONSTANT = 2, Nb.ANIMATIONLOOPMODE_YOYO = 4, Nb.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
+    const Pb = yb;
+    let Db = !1;
 
-    function ck() {
-      Uk || (Uk = !0, vk.Parse = Hk, vk.ParseFromFileAsync = uk, vk.ParseFromSnippetAsync = Mk, vk.CreateFromSnippetAsync = gk, vk.CreateAnimation = Yk, vk.CreateAndStartAnimation = Lk, vk.CreateAndStartHierarchyAnimation = Ok, vk.CreateMergeAndStartAnimation = Ek, vk.MakeAnimationAdditive = ik, vk.TransitionTo = Sk, vk.AppendSerializedAnimations = Nk, (0, Vk.d)("BABYLON.Animation", vk), bk.b._AnimationRangeFactory = (kk, Fk, Bk) => new Xk.c(kk, Fk, Bk))
+    function Eb() {
+      Db || (Db = !0, Nb.Parse = Bb, Nb.ParseFromFileAsync = tb, Nb.ParseFromSnippetAsync = yb, Nb.CreateFromSnippetAsync = Pb, Nb.CreateAnimation = Lb, Nb.CreateAndStartAnimation = ub, Nb.CreateAndStartHierarchyAnimation = Yb, Nb.CreateMergeAndStartAnimation = hb, Nb.MakeAnimationAdditive = Vb, Nb.TransitionTo = Jb, Nb.AppendSerializedAnimations = gb, (0, Mb.h)("BABYLON.Animation", Nb), Ub.c._AnimationRangeFactory = (bb, cb, sb) => new Tb.c(bb, cb, sb))
     }
   },
-  40527: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Rk
+  40523: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => kb
     });
-    class Rk {
-      constructor(kk, Fk, Bk) {
-        this.name = kk, this.from = Fk, this.to = Bk
+    class kb {
+      constructor(bb, cb, sb) {
+        this.name = bb, this.from = cb, this.to = sb
       }
       clone() {
-        return new Rk(this.name, this.from, this.to)
+        return new kb(this.name, this.from, this.to)
       }
     }
   },
-  40583: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => Rk.d,
-      e: () => Rk.n
+  40567: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => kb.b,
+      f: () => kb.l
     });
-    var Rk = Bk(39541);
-    (0, Rk.h)()
+    var kb = sb(39576);
+    (0, kb.f)()
   },
-  40570: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Rk.f
+  40546: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => kb.e
     });
-    var Rk = Bk(39895);
-    (0, Rk.e)()
+    var kb = sb(39895);
+    (0, kb.b)()
   },
-  40541: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => Rk.b
+  40531: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => kb.e
     });
-    var Rk = Bk(39879);
-    (0, Rk.d)()
+    var kb = sb(39884);
+    (0, kb.i)()
   },
-  40592: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Rk.b
+  40574: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => kb.b
     });
-    var Rk = Bk(39817);
-    (0, Rk.d)()
+    var kb = sb(39835);
+    (0, kb.d)()
   },
-  40536: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Rk.e
+  40528: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => kb.c
     });
-    var Rk = Bk(39857);
-    (0, Rk.c)()
+    var kb = sb(39867);
+    (0, kb.b)()
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

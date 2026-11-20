@@ -1,174 +1,174 @@
 export const id = 249;
 export const ids = [249];
 export const modules = {
-  39668: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Jk
+  39706: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Xb
     });
-    var Rk = Bk(39397),
-      tk = Bk(39404),
-      ak = Bk(36758),
-      Xk = Bk(36917),
-      bk = Bk(39628),
-      wk = Bk(39530),
-      dk = Bk(36798),
-      sk = Bk(39606),
-      Vk = Bk(39414);
-    let Jk = (() => {
-      var kk, Fk;
-      let Bk, Jk, Ak, ek, yk, fk, mk, Wk, vk, ik, Yk, Lk, Ok, Ek = bk.b,
-        Sk = [],
-        Nk = [],
-        Hk = [],
-        uk = [],
-        Mk = [],
-        gk = [],
-        Uk = [],
-        ck = [],
-        Gk = [],
-        Tk = [],
-        rk = [],
-        Dk = [],
-        zk = [],
-        Pk = [],
-        hk = [],
-        qk = [],
-        Ck = [],
-        Zk = [],
-        pk = [],
-        Kk = [],
-        xk = [];
-      return kk = class extends Ek {
+    var kb = sb(39414),
+      Wb = sb(39418),
+      ab = sb(36656),
+      Tb = sb(36830),
+      Ub = sb(39667),
+      Ib = sb(39563),
+      Hb = sb(36698),
+      fb = sb(39647),
+      Mb = sb(39441);
+    let Xb = (() => {
+      var bb, cb;
+      let sb, Xb, nb, mb, lb, Qb, eb, Cb, Nb, Vb, Lb, ub, Yb, hb = Ub.c,
+        Jb = [],
+        gb = [],
+        Bb = [],
+        tb = [],
+        yb = [],
+        Pb = [],
+        Db = [],
+        Eb = [],
+        ib = [],
+        Ob = [],
+        Gb = [],
+        Kb = [],
+        Zb = [],
+        zb = [],
+        qb = [],
+        db = [],
+        Ab = [],
+        wb = [],
+        rb = [],
+        ob = [],
+        Sb = [];
+      return bb = class extends hb {
         get range() {
           return this._range
         }
-        set range(kk) {
-          this._range = kk, this._inverseSquaredRange = 1 / (this.range * this.range)
+        set range(bb) {
+          this._range = bb, this._inverseSquaredRange = 1 / (this.range * this.range)
         }
         get intensityMode() {
           return this._intensityMode
         }
-        set intensityMode(kk) {
-          this._intensityMode = kk, this._computePhotometricScale()
+        set intensityMode(bb) {
+          this._intensityMode = bb, this._computePhotometricScale()
         }
         get radius() {
           return this._radius
         }
-        set radius(kk) {
-          this._radius = kk, this._computePhotometricScale()
+        set radius(bb) {
+          this._radius = bb, this._computePhotometricScale()
         }
         get renderPriority() {
-          return (0, Rk.e)(this, Fk, "f")
+          return (0, kb.d)(this, cb, "f")
         }
-        set renderPriority(kk) {
-          (0, Rk.i)(this, Fk, kk, "f")
+        set renderPriority(bb) {
+          (0, kb.h)(this, cb, bb, "f")
         }
         get shadowEnabled() {
           return this._shadowEnabled
         }
-        set shadowEnabled(kk) {
-          this._shadowEnabled !== kk && (this._shadowEnabled = kk, this._markMeshesAsLightDirty())
+        set shadowEnabled(bb) {
+          this._shadowEnabled !== bb && (this._shadowEnabled = bb, this._markMeshesAsLightDirty())
         }
         get includedOnlyMeshes() {
           return this._includedOnlyMeshes
         }
-        set includedOnlyMeshes(kk) {
-          this._includedOnlyMeshes = kk, this._hookArrayForIncludedOnly(kk)
+        set includedOnlyMeshes(bb) {
+          this._includedOnlyMeshes = bb, this._hookArrayForIncludedOnly(bb)
         }
         get excludedMeshes() {
           return this._excludedMeshes
         }
-        set excludedMeshes(kk) {
-          this._excludedMeshes = kk, this._hookArrayForExcluded(kk)
+        set excludedMeshes(bb) {
+          this._excludedMeshes = bb, this._hookArrayForExcluded(bb)
         }
         get excludeWithLayerMask() {
           return this._excludeWithLayerMask
         }
-        set excludeWithLayerMask(kk) {
-          this._excludeWithLayerMask = kk, this._resyncMeshes()
+        set excludeWithLayerMask(bb) {
+          this._excludeWithLayerMask = bb, this._resyncMeshes()
         }
         get includeOnlyWithLayerMask() {
           return this._includeOnlyWithLayerMask
         }
-        set includeOnlyWithLayerMask(kk) {
-          this._includeOnlyWithLayerMask = kk, this._resyncMeshes()
+        set includeOnlyWithLayerMask(bb) {
+          this._includeOnlyWithLayerMask = bb, this._resyncMeshes()
         }
         get lightmapMode() {
           return this._lightmapMode
         }
-        set lightmapMode(kk) {
-          this._lightmapMode !== kk && (this._lightmapMode = kk, this._markMeshesAsLightDirty())
+        set lightmapMode(bb) {
+          this._lightmapMode !== bb && (this._lightmapMode = bb, this._markMeshesAsLightDirty())
         }
-        getViewMatrix(kk) {
+        getViewMatrix(bb) {
           return null
         }
-        getProjectionMatrix(kk, Fk) {
+        getProjectionMatrix(bb, cb) {
           return null
         }
-        constructor(Bk, tk, ak) {
-          super(Bk, tk, !1), this.diffuse = ((0, Rk.l)(this, Sk), (0, Rk.l)(this, Nk, new Xk.e(1, 1, 1))), this.specular = ((0, Rk.l)(this, Hk), (0, Rk.l)(this, uk, new Xk.e(1, 1, 1))), this.falloffType = ((0, Rk.l)(this, Mk), (0, Rk.l)(this, gk, kk.FALLOFF_DEFAULT)), this.intensity = ((0, Rk.l)(this, Uk), (0, Rk.l)(this, ck, 1)), this._range = ((0, Rk.l)(this, Gk), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = kk.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, Rk.l)(this, Tk, void 0), Fk.set(this, ((0, Rk.l)(this, rk), (0, Rk.l)(this, Dk, 0))), this._shadowEnabled = ((0, Rk.l)(this, zk), (0, Rk.l)(this, Pk, !0)), this._includedOnlyMeshes = (0, Rk.l)(this, hk), this._excludeWithLayerMask = (0, Rk.l)(this, qk, 0), this._includeOnlyWithLayerMask = ((0, Rk.l)(this, Ck), (0, Rk.l)(this, Zk, 0)), this._lightmapMode = ((0, Rk.l)(this, pk), (0, Rk.l)(this, Kk, 0)), this._shadowGenerators = ((0, Rk.l)(this, xk), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, ak || this.XN().addLight(this), this._uniformBuffer = new wk.e(this.XN().ne(), void 0, void 0, Bk), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], ak || this._resyncMeshes()
+        constructor(sb, Wb, ab) {
+          super(sb, Wb, !1), this.diffuse = ((0, kb.m)(this, Jb), (0, kb.m)(this, gb, new Tb.e(1, 1, 1))), this.specular = ((0, kb.m)(this, Bb), (0, kb.m)(this, tb, new Tb.e(1, 1, 1))), this.falloffType = ((0, kb.m)(this, yb), (0, kb.m)(this, Pb, bb.FALLOFF_DEFAULT)), this.intensity = ((0, kb.m)(this, Db), (0, kb.m)(this, Eb, 1)), this._range = ((0, kb.m)(this, ib), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = bb.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, kb.m)(this, Ob, void 0), cb.set(this, ((0, kb.m)(this, Gb), (0, kb.m)(this, Kb, 0))), this._shadowEnabled = ((0, kb.m)(this, Zb), (0, kb.m)(this, zb, !0)), this._includedOnlyMeshes = (0, kb.m)(this, qb), this._excludeWithLayerMask = (0, kb.m)(this, db, 0), this._includeOnlyWithLayerMask = ((0, kb.m)(this, Ab), (0, kb.m)(this, wb, 0)), this._lightmapMode = ((0, kb.m)(this, rb), (0, kb.m)(this, ob, 0)), this._shadowGenerators = ((0, kb.m)(this, Sb), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, ab || this.EY().addLight(this), this._uniformBuffer = new Ib.d(this.EY().Sm(), void 0, void 0, sb), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], ab || this._resyncMeshes()
         }
-        transferTexturesToEffect(kk, Fk) {
+        transferTexturesToEffect(bb, cb) {
           return this
         }
-        _bindLight(kk, Fk, Bk, Rk) {
-          let tk = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-          const ak = kk.toString();
-          let bk = !1;
-          if (this._uniformBuffer.bindToEffect(Bk, "Light" + ak), this._renderId !== Fk.getRenderId() || this._lastUseSpecular !== Rk || !this._uniformBuffer.useUbo) {
-            this._renderId = Fk.getRenderId(), this._lastUseSpecular = Rk;
-            const kk = this.getScaledIntensity();
-            this.transferToEffect(Bk, ak), this.diffuse.scaleToRef(kk, Xk.n.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", Xk.n.Color3[0], this.range, ak), Rk && (this.specular.scaleToRef(kk, Xk.n.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", Xk.n.Color3[1], this.radius, ak)), bk = !0
+        _bindLight(bb, cb, sb, kb) {
+          let Wb = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+          const ab = bb.toString();
+          let Ub = !1;
+          if (this._uniformBuffer.bindToEffect(sb, "Light" + ab), this._renderId !== cb.getRenderId() || this._lastUseSpecular !== kb || !this._uniformBuffer.useUbo) {
+            this._renderId = cb.getRenderId(), this._lastUseSpecular = kb;
+            const bb = this.getScaledIntensity();
+            this.transferToEffect(sb, ab), this.diffuse.scaleToRef(bb, Tb.m.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", Tb.m.Color3[0], this.range, ab), kb && (this.specular.scaleToRef(bb, Tb.m.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", Tb.m.Color3[1], this.radius, ab)), Ub = !0
           }
-          if (this.transferTexturesToEffect(Bk, ak), Fk.shadowsEnabled && this.shadowEnabled && tk) {
-            const kk = this.getShadowGenerator(Fk.activeCamera) ?? this.getShadowGenerator();
-            kk && (kk.bindShadowLight(ak, Bk), bk = !0)
+          if (this.transferTexturesToEffect(sb, ab), cb.shadowsEnabled && this.shadowEnabled && Wb) {
+            const bb = this.getShadowGenerator(cb.activeCamera) ?? this.getShadowGenerator();
+            bb && (bb.bindShadowLight(ab, sb), Ub = !0)
           }
-          bk ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
+          Ub ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
         }
         getClassName() {
           return "Light"
         }
-        toString(kk) {
-          let Fk = "Name: " + this.name;
-          if (Fk += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
-            for (let Bk = 0; Bk < this.animations.length; Bk++) Fk += ", animation[0]: " + this.animations[Bk].toString(kk);
-          return Fk
+        toString(bb) {
+          let cb = "Name: " + this.name;
+          if (cb += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
+            for (let sb = 0; sb < this.animations.length; sb++) cb += ", animation[0]: " + this.animations[sb].toString(bb);
+          return cb
         }
         _syncParentEnabledState() {
-          super._syncParentEnabledState(), this.BBk() || this._resyncMeshes()
+          super._syncParentEnabledState(), this.Scb() || this._resyncMeshes()
         }
-        lY(kk) {
-          super.lY(kk), this._resyncMeshes()
+        GV(bb) {
+          super.GV(bb), this._resyncMeshes()
         }
         getShadowGenerator() {
-          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return null === this._shadowGenerators ? null : this._shadowGenerators.get(kk) ?? null
+          let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return null === this._shadowGenerators ? null : this._shadowGenerators.get(bb) ?? null
         }
         getShadowGenerators() {
           return this._shadowGenerators
         }
         getAbsolutePosition() {
-          return ak.s.Zero()
+          return ab.p.Zero()
         }
-        canAffectMesh(kk) {
-          return !kk || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(kk)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(kk)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & kk.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & kk.layerMask)))
+        canAffectMesh(bb) {
+          return !bb || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(bb)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(bb)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & bb.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & bb.layerMask)))
         }
-        dispose(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        dispose(bb) {
+          let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
           if (this._shadowGenerators) {
-            const kk = this._shadowGenerators.values();
-            for (let Fk = kk.next(); !0 !== Fk.done; Fk = kk.next()) {
-              Fk.value.dispose()
+            const bb = this._shadowGenerators.values();
+            for (let cb = bb.next(); !0 !== cb.done; cb = bb.next()) {
+              cb.value.dispose()
             }
             this._shadowGenerators = null
           }
-          if (this.XN().stopAnimation(this), this._parentContainer) {
-            const kk = this._parentContainer.lights.indexOf(this);
-            kk > -1 && this._parentContainer.lights.splice(kk, 1), this._parentContainer = null
+          if (this.EY().stopAnimation(this), this._parentContainer) {
+            const bb = this._parentContainer.lights.indexOf(this);
+            bb > -1 && this._parentContainer.lights.splice(bb, 1), this._parentContainer = null
           }
-          for (const Bk of this.XN().meshes) Bk._removeLightSource(this, !0);
-          this._uniformBuffer.dispose(), this.XN().removeLight(this), super.dispose(kk, Fk)
+          for (const sb of this.EY().meshes) sb._removeLightSource(this, !0);
+          this._uniformBuffer.dispose(), this.EY().removeLight(this), super.dispose(bb, cb)
         }
         getTypeID() {
           return 0
@@ -176,127 +176,127 @@ export const modules = {
         getScaledIntensity() {
           return this._photometricScale * this.intensity
         }
-        clone(Fk) {
-          let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          const Rk = kk.GetConstructorFromName(this.getTypeID(), Fk, this.XN());
-          if (!Rk) return null;
-          const tk = Vk.c.Clone(Rk, this);
-          return Fk && (tk.name = Fk), Bk && (tk.parent = Bk), tk.lY(this.isEnabled()), this.onClonedObservable.notifyObservers(tk), tk
+        clone(cb) {
+          let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const kb = bb.GetConstructorFromName(this.getTypeID(), cb, this.EY());
+          if (!kb) return null;
+          const Wb = Mb.d.Clone(kb, this);
+          return cb && (Wb.name = cb), sb && (Wb.parent = sb), Wb.GV(this.isEnabled()), this.onClonedObservable.notifyObservers(Wb), Wb
         }
         serialize() {
-          const kk = Vk.c.Serialize(this);
-          if (kk.uniqueId = this.uniqueId, kk.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(kk), this.excludedMeshes.length > 0) {
-            kk.excludedMeshesIds = [];
-            for (const Fk of this.excludedMeshes) kk.excludedMeshesIds.push(Fk.id)
+          const bb = Mb.d.Serialize(this);
+          if (bb.uniqueId = this.uniqueId, bb.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(bb), this.excludedMeshes.length > 0) {
+            bb.excludedMeshesIds = [];
+            for (const cb of this.excludedMeshes) bb.excludedMeshesIds.push(cb.id)
           }
           if (this.includedOnlyMeshes.length > 0) {
-            kk.includedOnlyMeshesIds = [];
-            for (const Fk of this.includedOnlyMeshes) kk.includedOnlyMeshesIds.push(Fk.id)
+            bb.includedOnlyMeshesIds = [];
+            for (const cb of this.includedOnlyMeshes) bb.includedOnlyMeshesIds.push(cb.id)
           }
-          return Vk.c.AppendSerializedAnimations(this, kk), kk.hb = this.serializeAnimationRanges(), kk.isEnabled = this.isEnabled(), kk
+          return Mb.d.AppendSerializedAnimations(this, bb), bb.uQ = this.serializeAnimationRanges(), bb.isEnabled = this.isEnabled(), bb
         }
-        static GetConstructorFromName(kk, Fk, Bk) {
-          const Rk = bk.b.Construct("Light_Type_" + kk, Fk, Bk);
-          return Rk || null
+        static GetConstructorFromName(bb, cb, sb) {
+          const kb = Ub.c.Construct("Light_Type_" + bb, cb, sb);
+          return kb || null
         }
-        static Parse(Fk, Bk) {
-          let Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const tk = kk.GetConstructorFromName(Fk.type, Fk.name, Bk);
-          if (!tk) return null;
-          const ak = Vk.c.Parse(tk, Fk, Bk, Rk);
-          if (Fk.excludedMeshesIds && (ak._excludedMeshesIds = Fk.excludedMeshesIds), Fk.includedOnlyMeshesIds && (ak._includedOnlyMeshesIds = Fk.includedOnlyMeshesIds), void 0 !== Fk.parentId && (ak._waitingParentId = Fk.parentId), void 0 !== Fk.parentInstanceIndex && (ak._waitingParentInstanceIndex = Fk.parentInstanceIndex), void 0 !== Fk.falloffType && (ak.falloffType = Fk.falloffType), void 0 !== Fk.lightmapMode && (ak.lightmapMode = Fk.lightmapMode), Fk.animations) {
-            for (let kk = 0; kk < Fk.animations.length; kk++) {
-              const Bk = Fk.animations[kk],
-                Rk = (0, dk.c)("BABYLON.Animation");
-              Rk && ak.animations.push(Rk.Parse(Bk))
+        static Parse(cb, sb) {
+          let kb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const Wb = bb.GetConstructorFromName(cb.type, cb.name, sb);
+          if (!Wb) return null;
+          const ab = Mb.d.Parse(Wb, cb, sb, kb);
+          if (cb.excludedMeshesIds && (ab._excludedMeshesIds = cb.excludedMeshesIds), cb.includedOnlyMeshesIds && (ab._includedOnlyMeshesIds = cb.includedOnlyMeshesIds), void 0 !== cb.parentId && (ab._waitingParentId = cb.parentId), void 0 !== cb.parentInstanceIndex && (ab._waitingParentInstanceIndex = cb.parentInstanceIndex), void 0 !== cb.falloffType && (ab.falloffType = cb.falloffType), void 0 !== cb.lightmapMode && (ab.lightmapMode = cb.lightmapMode), cb.animations) {
+            for (let bb = 0; bb < cb.animations.length; bb++) {
+              const sb = cb.animations[bb],
+                kb = (0, Hb.e)("BABYLON.Animation");
+              kb && ab.animations.push(kb.Parse(sb))
             }
-            bk.b.ParseAnimationRanges(ak, Fk, Bk)
+            Ub.c.ParseAnimationRanges(ab, cb, sb)
           }
-          return Fk.autoAnimate && Bk.beginAnimation(ak, Fk.autoAnimateFrom, Fk.autoAnimateTo, Fk.autoAnimateLoop, Fk.autoAnimateSpeed || 1), void 0 !== Fk.isEnabled && ak.lY(Fk.isEnabled), ak._onParsed(Fk, Bk, Rk), ak
+          return cb.autoAnimate && sb.beginAnimation(ab, cb.autoAnimateFrom, cb.autoAnimateTo, cb.autoAnimateLoop, cb.autoAnimateSpeed || 1), void 0 !== cb.isEnabled && ab.GV(cb.isEnabled), ab._onParsed(cb, sb, kb), ab
         }
-        _onParsed(kk, Fk) {}
-        _hookArrayForExcluded(kk) {
-          var Fk = this;
-          const Bk = kk.push;
-          kk.push = function() {
-            for (var Rk = arguments.length, tk = new Array(Rk), ak = 0; ak < Rk; ak++) tk[ak] = arguments[ak];
-            const Xk = Bk.apply(kk, tk);
-            if (Fk._clusteredContainer) return Xk;
-            for (const kk of tk) kk._resyncLightSource(Fk);
-            return Xk
+        _onParsed(bb, cb) {}
+        _hookArrayForExcluded(bb) {
+          var cb = this;
+          const sb = bb.push;
+          bb.push = function() {
+            for (var kb = arguments.length, Wb = new Array(kb), ab = 0; ab < kb; ab++) Wb[ab] = arguments[ab];
+            const Tb = sb.apply(bb, Wb);
+            if (cb._clusteredContainer) return Tb;
+            for (const bb of Wb) bb._resyncLightSource(cb);
+            return Tb
           };
-          const Rk = kk.splice;
-          kk.splice = (Fk, Bk) => {
-            const tk = Rk.call(kk, Fk, Bk ?? kk.length);
-            if (this._clusteredContainer) return tk;
-            for (const kk of tk) kk._resyncLightSource(this);
-            return tk
+          const kb = bb.splice;
+          bb.splice = (cb, sb) => {
+            const Wb = kb.call(bb, cb, sb ?? bb.length);
+            if (this._clusteredContainer) return Wb;
+            for (const bb of Wb) bb._resyncLightSource(this);
+            return Wb
           }, this._resyncMeshes()
         }
-        _hookArrayForIncludedOnly(kk) {
-          var Fk = this;
-          const Bk = kk.push;
-          kk.push = function() {
-            for (var Rk = arguments.length, tk = new Array(Rk), ak = 0; ak < Rk; ak++) tk[ak] = arguments[ak];
-            const Xk = Bk.apply(kk, tk);
-            return Fk._resyncMeshes(), Xk
+        _hookArrayForIncludedOnly(bb) {
+          var cb = this;
+          const sb = bb.push;
+          bb.push = function() {
+            for (var kb = arguments.length, Wb = new Array(kb), ab = 0; ab < kb; ab++) Wb[ab] = arguments[ab];
+            const Tb = sb.apply(bb, Wb);
+            return cb._resyncMeshes(), Tb
           };
-          const Rk = kk.splice;
-          kk.splice = (Fk, Bk) => {
-            const tk = Rk.call(kk, Fk, Bk ?? kk.length);
-            return this._resyncMeshes(), tk
+          const kb = bb.splice;
+          bb.splice = (cb, sb) => {
+            const Wb = kb.call(bb, cb, sb ?? bb.length);
+            return this._resyncMeshes(), Wb
           }, this._resyncMeshes()
         }
         _resyncMeshes() {
           if (!this._clusteredContainer)
-            for (const kk of this.XN().meshes) kk._resyncLightSource(this)
+            for (const bb of this.EY().meshes) bb._resyncLightSource(this)
         }
         _markMeshesAsLightDirty() {
-          for (const kk of this.XN().meshes) - 1 !== kk.lightSources.indexOf(this) && kk._markSubMeshesAsLightDirty()
+          for (const bb of this.EY().meshes) - 1 !== bb.lightSources.indexOf(this) && bb._markSubMeshesAsLightDirty()
         }
         _computePhotometricScale() {
-          this._photometricScale = this._getPhotometricScale(), this.XN().resetCachedMaterial()
+          this._photometricScale = this._getPhotometricScale(), this.EY().resetCachedMaterial()
         }
         _getPhotometricScale() {
-          let Fk = 0;
-          const Bk = this.getTypeID();
-          let Rk = this.intensityMode;
-          switch (Rk === kk.INTENSITYMODE_AUTOMATIC && (Rk = Bk === kk.LIGHTTYPEID_DIRECTIONALLIGHT ? kk.INTENSITYMODE_ILLUMINANCE : kk.INTENSITYMODE_LUMINOUSINTENSITY), Bk) {
-            case kk.LIGHTTYPEID_POINTLIGHT:
-            case kk.LIGHTTYPEID_SPOTLIGHT:
-              switch (Rk) {
-                case kk.INTENSITYMODE_LUMINOUSPOWER:
-                  Fk = 1 / (4 * Math.PI);
+          let cb = 0;
+          const sb = this.getTypeID();
+          let kb = this.intensityMode;
+          switch (kb === bb.INTENSITYMODE_AUTOMATIC && (kb = sb === bb.LIGHTTYPEID_DIRECTIONALLIGHT ? bb.INTENSITYMODE_ILLUMINANCE : bb.INTENSITYMODE_LUMINOUSINTENSITY), sb) {
+            case bb.LIGHTTYPEID_POINTLIGHT:
+            case bb.LIGHTTYPEID_SPOTLIGHT:
+              switch (kb) {
+                case bb.INTENSITYMODE_LUMINOUSPOWER:
+                  cb = 1 / (4 * Math.PI);
                   break;
-                case kk.INTENSITYMODE_LUMINOUSINTENSITY:
-                  Fk = 1;
+                case bb.INTENSITYMODE_LUMINOUSINTENSITY:
+                  cb = 1;
                   break;
-                case kk.INTENSITYMODE_LUMINANCE:
-                  Fk = this.radius * this.radius
+                case bb.INTENSITYMODE_LUMINANCE:
+                  cb = this.radius * this.radius
               }
               break;
-            case kk.LIGHTTYPEID_DIRECTIONALLIGHT:
-              switch (Rk) {
-                case kk.INTENSITYMODE_ILLUMINANCE:
-                  Fk = 1;
+            case bb.LIGHTTYPEID_DIRECTIONALLIGHT:
+              switch (kb) {
+                case bb.INTENSITYMODE_ILLUMINANCE:
+                  cb = 1;
                   break;
-                case kk.INTENSITYMODE_LUMINANCE: {
-                  let kk = this.radius;
-                  kk = Math.max(kk, .001);
-                  Fk = 2 * Math.PI * (1 - Math.cos(kk));
+                case bb.INTENSITYMODE_LUMINANCE: {
+                  let bb = this.radius;
+                  bb = Math.max(bb, .001);
+                  cb = 2 * Math.PI * (1 - Math.cos(bb));
                   break
                 }
               }
               break;
-            case kk.LIGHTTYPEID_HEMISPHERICLIGHT:
-            case kk.LIGHTTYPEID_RECT_AREALIGHT:
-              Fk = 1
+            case bb.LIGHTTYPEID_HEMISPHERICLIGHT:
+            case bb.LIGHTTYPEID_RECT_AREALIGHT:
+              cb = 1
           }
-          return Fk
+          return cb
         }
         _reorderLightsInScene() {
-          const kk = this.XN();
-          0 != this._renderPriority && (kk.requireLightSorting = !0), this.XN().sortLightsByPriority()
+          const bb = this.EY();
+          0 != this._renderPriority && (bb.requireLightSorting = !0), this.EY().sortLightsByPriority()
         }
         areLightTexturesReady() {
           return !0
@@ -304,215 +304,215 @@ export const modules = {
         _isReady() {
           return !0
         }
-      }, Fk = new WeakMap, (() => {
-        const Fk = "function" === typeof Symbol && Symbol.metadata ? Object.create(Ek[Symbol.metadata] ?? null) : void 0;
-        Bk = [(0, tk.l)()], Jk = [(0, tk.l)()], Ak = [(0, tk.M)()], ek = [(0, tk.M)()], yk = [(0, tk.M)()], fk = [(0, tk.M)()], mk = [(0, tk.M)()], Wk = [(0, tk.M)()], vk = [(0, tk.d)("_reorderLightsInScene")], ik = [(0, tk.M)("shadowEnabled")], Yk = [(0, tk.M)("excludeWithLayerMask")], Lk = [(0, tk.M)("includeOnlyWithLayerMask")], Ok = [(0, tk.M)("lightmapMode")], (0, Rk.j)(kk, null, yk, {
+      }, cb = new WeakMap, (() => {
+        const cb = "function" === typeof Symbol && Symbol.metadata ? Object.create(hb[Symbol.metadata] ?? null) : void 0;
+        sb = [(0, Wb.o)()], Xb = [(0, Wb.o)()], nb = [(0, Wb.E)()], mb = [(0, Wb.E)()], lb = [(0, Wb.E)()], Qb = [(0, Wb.E)()], eb = [(0, Wb.E)()], Cb = [(0, Wb.E)()], Nb = [(0, Wb.f)("_reorderLightsInScene")], Vb = [(0, Wb.E)("shadowEnabled")], Lb = [(0, Wb.E)("excludeWithLayerMask")], ub = [(0, Wb.E)("includeOnlyWithLayerMask")], Yb = [(0, Wb.E)("lightmapMode")], (0, kb.j)(bb, null, lb, {
           kind: "getter",
           name: "range",
           static: !1,
           private: !1,
           access: {
-            has: kk => "range" in kk,
-            get: kk => kk.range
+            has: bb => "range" in bb,
+            get: bb => bb.range
           },
-          metadata: Fk
-        }, null, Sk), (0, Rk.j)(kk, null, fk, {
+          metadata: cb
+        }, null, Jb), (0, kb.j)(bb, null, Qb, {
           kind: "getter",
           name: "intensityMode",
           static: !1,
           private: !1,
           access: {
-            has: kk => "intensityMode" in kk,
-            get: kk => kk.intensityMode
+            has: bb => "intensityMode" in bb,
+            get: bb => bb.intensityMode
           },
-          metadata: Fk
-        }, null, Sk), (0, Rk.j)(kk, null, mk, {
+          metadata: cb
+        }, null, Jb), (0, kb.j)(bb, null, eb, {
           kind: "getter",
           name: "radius",
           static: !1,
           private: !1,
           access: {
-            has: kk => "radius" in kk,
-            get: kk => kk.radius
+            has: bb => "radius" in bb,
+            get: bb => bb.radius
           },
-          metadata: Fk
-        }, null, Sk), (0, Rk.j)(kk, null, vk, {
+          metadata: cb
+        }, null, Jb), (0, kb.j)(bb, null, Nb, {
           kind: "accessor",
           name: "renderPriority",
           static: !1,
           private: !1,
           access: {
-            has: kk => "renderPriority" in kk,
-            get: kk => kk.renderPriority,
-            set: (kk, Fk) => {
-              kk.renderPriority = Fk
+            has: bb => "renderPriority" in bb,
+            get: bb => bb.renderPriority,
+            set: (bb, cb) => {
+              bb.renderPriority = cb
             }
           },
-          metadata: Fk
-        }, Dk, zk), (0, Rk.j)(null, null, Bk, {
+          metadata: cb
+        }, Kb, Zb), (0, kb.j)(null, null, sb, {
           kind: "field",
           name: "diffuse",
           static: !1,
           private: !1,
           access: {
-            has: kk => "diffuse" in kk,
-            get: kk => kk.diffuse,
-            set: (kk, Fk) => {
-              kk.diffuse = Fk
+            has: bb => "diffuse" in bb,
+            get: bb => bb.diffuse,
+            set: (bb, cb) => {
+              bb.diffuse = cb
             }
           },
-          metadata: Fk
-        }, Nk, Hk), (0, Rk.j)(null, null, Jk, {
+          metadata: cb
+        }, gb, Bb), (0, kb.j)(null, null, Xb, {
           kind: "field",
           name: "specular",
           static: !1,
           private: !1,
           access: {
-            has: kk => "specular" in kk,
-            get: kk => kk.specular,
-            set: (kk, Fk) => {
-              kk.specular = Fk
+            has: bb => "specular" in bb,
+            get: bb => bb.specular,
+            set: (bb, cb) => {
+              bb.specular = cb
             }
           },
-          metadata: Fk
-        }, uk, Mk), (0, Rk.j)(null, null, Ak, {
+          metadata: cb
+        }, tb, yb), (0, kb.j)(null, null, nb, {
           kind: "field",
           name: "falloffType",
           static: !1,
           private: !1,
           access: {
-            has: kk => "falloffType" in kk,
-            get: kk => kk.falloffType,
-            set: (kk, Fk) => {
-              kk.falloffType = Fk
+            has: bb => "falloffType" in bb,
+            get: bb => bb.falloffType,
+            set: (bb, cb) => {
+              bb.falloffType = cb
             }
           },
-          metadata: Fk
-        }, gk, Uk), (0, Rk.j)(null, null, ek, {
+          metadata: cb
+        }, Pb, Db), (0, kb.j)(null, null, mb, {
           kind: "field",
           name: "intensity",
           static: !1,
           private: !1,
           access: {
-            has: kk => "intensity" in kk,
-            get: kk => kk.intensity,
-            set: (kk, Fk) => {
-              kk.intensity = Fk
+            has: bb => "intensity" in bb,
+            get: bb => bb.intensity,
+            set: (bb, cb) => {
+              bb.intensity = cb
             }
           },
-          metadata: Fk
-        }, ck, Gk), (0, Rk.j)(null, null, Wk, {
+          metadata: cb
+        }, Eb, ib), (0, kb.j)(null, null, Cb, {
           kind: "field",
           name: "_renderPriority",
           static: !1,
           private: !1,
           access: {
-            has: kk => "_renderPriority" in kk,
-            get: kk => kk._renderPriority,
-            set: (kk, Fk) => {
-              kk._renderPriority = Fk
+            has: bb => "_renderPriority" in bb,
+            get: bb => bb._renderPriority,
+            set: (bb, cb) => {
+              bb._renderPriority = cb
             }
           },
-          metadata: Fk
-        }, Tk, rk), (0, Rk.j)(null, null, ik, {
+          metadata: cb
+        }, Ob, Gb), (0, kb.j)(null, null, Vb, {
           kind: "field",
           name: "_shadowEnabled",
           static: !1,
           private: !1,
           access: {
-            has: kk => "_shadowEnabled" in kk,
-            get: kk => kk._shadowEnabled,
-            set: (kk, Fk) => {
-              kk._shadowEnabled = Fk
+            has: bb => "_shadowEnabled" in bb,
+            get: bb => bb._shadowEnabled,
+            set: (bb, cb) => {
+              bb._shadowEnabled = cb
             }
           },
-          metadata: Fk
-        }, Pk, hk), (0, Rk.j)(null, null, Yk, {
+          metadata: cb
+        }, zb, qb), (0, kb.j)(null, null, Lb, {
           kind: "field",
           name: "_excludeWithLayerMask",
           static: !1,
           private: !1,
           access: {
-            has: kk => "_excludeWithLayerMask" in kk,
-            get: kk => kk._excludeWithLayerMask,
-            set: (kk, Fk) => {
-              kk._excludeWithLayerMask = Fk
+            has: bb => "_excludeWithLayerMask" in bb,
+            get: bb => bb._excludeWithLayerMask,
+            set: (bb, cb) => {
+              bb._excludeWithLayerMask = cb
             }
           },
-          metadata: Fk
-        }, qk, Ck), (0, Rk.j)(null, null, Lk, {
+          metadata: cb
+        }, db, Ab), (0, kb.j)(null, null, ub, {
           kind: "field",
           name: "_includeOnlyWithLayerMask",
           static: !1,
           private: !1,
           access: {
-            has: kk => "_includeOnlyWithLayerMask" in kk,
-            get: kk => kk._includeOnlyWithLayerMask,
-            set: (kk, Fk) => {
-              kk._includeOnlyWithLayerMask = Fk
+            has: bb => "_includeOnlyWithLayerMask" in bb,
+            get: bb => bb._includeOnlyWithLayerMask,
+            set: (bb, cb) => {
+              bb._includeOnlyWithLayerMask = cb
             }
           },
-          metadata: Fk
-        }, Zk, pk), (0, Rk.j)(null, null, Ok, {
+          metadata: cb
+        }, wb, rb), (0, kb.j)(null, null, Yb, {
           kind: "field",
           name: "_lightmapMode",
           static: !1,
           private: !1,
           access: {
-            has: kk => "_lightmapMode" in kk,
-            get: kk => kk._lightmapMode,
-            set: (kk, Fk) => {
-              kk._lightmapMode = Fk
+            has: bb => "_lightmapMode" in bb,
+            get: bb => bb._lightmapMode,
+            set: (bb, cb) => {
+              bb._lightmapMode = cb
             }
           },
-          metadata: Fk
-        }, Kk, xk), Fk && Object.defineProperty(kk, Symbol.metadata, {
+          metadata: cb
+        }, ob, Sb), cb && Object.defineProperty(bb, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Fk
+          value: cb
         })
-      })(), kk.FALLOFF_DEFAULT = sk.e.FALLOFF_DEFAULT, kk.FALLOFF_PHYSICAL = sk.e.FALLOFF_PHYSICAL, kk.FALLOFF_GLTF = sk.e.FALLOFF_GLTF, kk.FALLOFF_STANDARD = sk.e.FALLOFF_STANDARD, kk.LIGHTMAP_DEFAULT = sk.e.LIGHTMAP_DEFAULT, kk.LIGHTMAP_SPECULAR = sk.e.LIGHTMAP_SPECULAR, kk.LIGHTMAP_SHADOWSONLY = sk.e.LIGHTMAP_SHADOWSONLY, kk.INTENSITYMODE_AUTOMATIC = sk.e.INTENSITYMODE_AUTOMATIC, kk.INTENSITYMODE_LUMINOUSPOWER = sk.e.INTENSITYMODE_LUMINOUSPOWER, kk.INTENSITYMODE_LUMINOUSINTENSITY = sk.e.INTENSITYMODE_LUMINOUSINTENSITY, kk.INTENSITYMODE_ILLUMINANCE = sk.e.INTENSITYMODE_ILLUMINANCE, kk.INTENSITYMODE_LUMINANCE = sk.e.INTENSITYMODE_LUMINANCE, kk.LIGHTTYPEID_POINTLIGHT = sk.e.LIGHTTYPEID_POINTLIGHT, kk.LIGHTTYPEID_DIRECTIONALLIGHT = sk.e.LIGHTTYPEID_DIRECTIONALLIGHT, kk.LIGHTTYPEID_SPOTLIGHT = sk.e.LIGHTTYPEID_SPOTLIGHT, kk.LIGHTTYPEID_HEMISPHERICLIGHT = sk.e.LIGHTTYPEID_HEMISPHERICLIGHT, kk.LIGHTTYPEID_RECT_AREALIGHT = sk.e.LIGHTTYPEID_RECT_AREALIGHT, kk
+      })(), bb.FALLOFF_DEFAULT = fb.b.FALLOFF_DEFAULT, bb.FALLOFF_PHYSICAL = fb.b.FALLOFF_PHYSICAL, bb.FALLOFF_GLTF = fb.b.FALLOFF_GLTF, bb.FALLOFF_STANDARD = fb.b.FALLOFF_STANDARD, bb.LIGHTMAP_DEFAULT = fb.b.LIGHTMAP_DEFAULT, bb.LIGHTMAP_SPECULAR = fb.b.LIGHTMAP_SPECULAR, bb.LIGHTMAP_SHADOWSONLY = fb.b.LIGHTMAP_SHADOWSONLY, bb.INTENSITYMODE_AUTOMATIC = fb.b.INTENSITYMODE_AUTOMATIC, bb.INTENSITYMODE_LUMINOUSPOWER = fb.b.INTENSITYMODE_LUMINOUSPOWER, bb.INTENSITYMODE_LUMINOUSINTENSITY = fb.b.INTENSITYMODE_LUMINOUSINTENSITY, bb.INTENSITYMODE_ILLUMINANCE = fb.b.INTENSITYMODE_ILLUMINANCE, bb.INTENSITYMODE_LUMINANCE = fb.b.INTENSITYMODE_LUMINANCE, bb.LIGHTTYPEID_POINTLIGHT = fb.b.LIGHTTYPEID_POINTLIGHT, bb.LIGHTTYPEID_DIRECTIONALLIGHT = fb.b.LIGHTTYPEID_DIRECTIONALLIGHT, bb.LIGHTTYPEID_SPOTLIGHT = fb.b.LIGHTTYPEID_SPOTLIGHT, bb.LIGHTTYPEID_HEMISPHERICLIGHT = fb.b.LIGHTTYPEID_HEMISPHERICLIGHT, bb.LIGHTTYPEID_RECT_AREALIGHT = fb.b.LIGHTTYPEID_RECT_AREALIGHT, bb
     })()
   },
-  39628: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => Vk
+  39667: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Mb
     });
-    var Rk = Bk(39397),
-      tk = Bk(36758),
-      ak = Bk(39404),
-      Xk = Bk(36781),
-      bk = Bk(36772),
-      wk = Bk(39296),
-      dk = Bk(39414);
-    class sk {
+    var kb = sb(39414),
+      Wb = sb(36656),
+      ab = sb(39418),
+      Tb = sb(36683),
+      Ub = sb(36677),
+      Ib = sb(39296),
+      Hb = sb(39441);
+    class fb {
       constructor() {
-        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new Xk.e, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new Xk.e, this._inheritVisibility = !1, this._isVisible = !0
+        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new Tb.c, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new Tb.c, this._inheritVisibility = !1, this._isVisible = !0
       }
     }
-    let Vk = (() => {
-      var kk;
-      let Fk, Bk, Vk, Jk, Ak, ek = [],
-        yk = [],
-        fk = [],
-        mk = [],
-        Wk = [],
-        vk = [],
-        ik = [],
-        Yk = [],
-        Lk = [],
-        Ok = [];
-      return kk = class {
-        static AddNodeConstructor(kk, Fk) {
-          this._NodeConstructors[kk] = Fk
+    let Mb = (() => {
+      var bb;
+      let cb, sb, Mb, Xb, nb, mb = [],
+        lb = [],
+        Qb = [],
+        eb = [],
+        Cb = [],
+        Nb = [],
+        Vb = [],
+        Lb = [],
+        ub = [],
+        Yb = [];
+      return bb = class {
+        static AddNodeConstructor(bb, cb) {
+          this._NodeConstructors[bb] = cb
         }
-        static Construct(kk, Fk, Bk, Rk) {
-          const tk = this._NodeConstructors[kk];
-          return tk ? tk(Fk, Bk, Rk) : null
+        static Construct(bb, cb, sb, kb) {
+          const Wb = this._NodeConstructors[bb];
+          return Wb ? Wb(cb, sb, kb) : null
         }
-        set accessibilityTag(kk) {
-          this._accessibilityTag = kk, this.onAccessibilityTagChangedObservable.notifyObservers(kk)
+        set accessibilityTag(bb) {
+          this._accessibilityTag = bb, this.onAccessibilityTagChangedObservable.notifyObservers(bb)
         }
         get accessibilityTag() {
           return this._accessibilityTag
@@ -520,19 +520,19 @@ export const modules = {
         get doNotSerialize() {
           return !!this._nodeDataStorage._doNotSerialize || !!this._parentNode && this._parentNode.doNotSerialize
         }
-        set doNotSerialize(kk) {
-          this._nodeDataStorage._doNotSerialize = kk
+        set doNotSerialize(bb) {
+          this._nodeDataStorage._doNotSerialize = bb
         }
-        BBk() {
+        Scb() {
           return this._nodeDataStorage._isDisposed
         }
-        set parent(kk) {
-          if (this._parentNode === kk) return;
-          const Fk = this._parentNode;
+        set parent(bb) {
+          if (this._parentNode === bb) return;
+          const cb = this._parentNode;
           if (this._parentNode && void 0 !== this._parentNode._children && null !== this._parentNode._children) {
-            const Fk = this._parentNode._children.indexOf(this); - 1 !== Fk && this._parentNode._children.splice(Fk, 1), kk || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
+            const cb = this._parentNode._children.indexOf(this); - 1 !== cb && this._parentNode._children.splice(cb, 1), bb || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
           }
-          this._parentNode = kk, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), Fk || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
+          this._parentNode = bb, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), cb || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
         }
         get parent() {
           return this._parentNode
@@ -540,77 +540,77 @@ export const modules = {
         get inheritVisibility() {
           return this._nodeDataStorage._inheritVisibility
         }
-        set inheritVisibility(kk) {
-          this._nodeDataStorage._inheritVisibility = kk
+        set inheritVisibility(bb) {
+          this._nodeDataStorage._inheritVisibility = bb
         }
         get isVisible() {
           return !(this.inheritVisibility && this._parentNode && !this._parentNode.isVisible) && this._nodeDataStorage._isVisible
         }
-        set isVisible(kk) {
-          this._nodeDataStorage._isVisible = kk
+        set isVisible(bb) {
+          this._nodeDataStorage._isVisible = bb
         }
-        _serializeAsParent(kk) {
-          kk.parentId = this.uniqueId
+        _serializeAsParent(bb) {
+          bb.parentId = this.uniqueId
         }
         _addToSceneRootNodes() {
           -1 === this._nodeDataStorage._sceneRootNodesIndex && (this._nodeDataStorage._sceneRootNodesIndex = this._scene.rootNodes.length, this._scene.rootNodes.push(this))
         }
         _removeFromSceneRootNodes() {
           if (-1 !== this._nodeDataStorage._sceneRootNodesIndex) {
-            const kk = this._scene.rootNodes,
-              Fk = kk.length - 1;
-            kk[this._nodeDataStorage._sceneRootNodesIndex] = kk[Fk], kk[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
+            const bb = this._scene.rootNodes,
+              cb = bb.length - 1;
+            bb[this._nodeDataStorage._sceneRootNodesIndex] = bb[cb], bb[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
           }
         }
         get animationPropertiesOverride() {
           return this._animationPropertiesOverride ? this._animationPropertiesOverride : this._scene.animationPropertiesOverride
         }
-        set animationPropertiesOverride(kk) {
-          this._animationPropertiesOverride = kk
+        set animationPropertiesOverride(bb) {
+          this._animationPropertiesOverride = bb
         }
         getClassName() {
           return "Node"
         }
-        set onDispose(kk) {
-          this._onDisposeObserver && this.yN.remove(this._onDisposeObserver), this._onDisposeObserver = this.yN.add(kk)
+        set onDispose(bb) {
+          this._onDisposeObserver && this.ZY.remove(this._onDisposeObserver), this._onDisposeObserver = this.ZY.add(bb)
         }
         get onEnabledStateChangedObservable() {
           return this._nodeDataStorage._onEnabledStateChangedObservable
         }
         get onEffectiveEnabledStateChangedObservable() {
-          var kk;
-          return (kk = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (kk._onEffectiveEnabledStateChangedObservable = new Xk.e)
+          var bb;
+          return (bb = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (bb._onEffectiveEnabledStateChangedObservable = new Tb.c)
         }
         get onClonedObservable() {
           return this._nodeDataStorage._onClonedObservable
         }
-        constructor(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            Bk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-          this._isDirty = !1, this._nodeDataStorage = new sk, this.name = (0, Rk.l)(this, ek, void 0), this.id = ((0, Rk.l)(this, yk), (0, Rk.l)(this, fk, void 0)), this.uniqueId = ((0, Rk.l)(this, mk), (0, Rk.l)(this, Wk, void 0)), this.state = ((0, Rk.l)(this, vk), (0, Rk.l)(this, ik, "")), this.metadata = ((0, Rk.l)(this, Yk), (0, Rk.l)(this, Lk, null)), this._internalMetadata = (0, Rk.l)(this, Ok), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new Xk.e, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = tk.c.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.yN = new Xk.e, this._onDisposeObserver = null, this._behaviors = new Array, this.name = kk, this.id = kk, this._scene = Fk || bk.c.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), Bk && this._addToSceneRootNodes()
+        constructor(bb) {
+          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+            sb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+          this._isDirty = !1, this._nodeDataStorage = new fb, this.name = (0, kb.m)(this, mb, void 0), this.id = ((0, kb.m)(this, lb), (0, kb.m)(this, Qb, void 0)), this.uniqueId = ((0, kb.m)(this, eb), (0, kb.m)(this, Cb, void 0)), this.state = ((0, kb.m)(this, Nb), (0, kb.m)(this, Vb, "")), this.metadata = ((0, kb.m)(this, Lb), (0, kb.m)(this, ub, null)), this._internalMetadata = (0, kb.m)(this, Yb), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new Tb.c, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = Wb.e.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.ZY = new Tb.c, this._onDisposeObserver = null, this._behaviors = new Array, this.name = bb, this.id = bb, this._scene = cb || Ub.d.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), sb && this._addToSceneRootNodes()
         }
-        XN() {
+        EY() {
           return this._scene
         }
-        ne() {
-          return this._scene.ne()
+        Sm() {
+          return this._scene.Sm()
         }
-        addBehavior(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return -1 !== this._behaviors.indexOf(kk) || (kk.init(), this._scene.isLoading && !Fk ? this._scene.onDataLoadedObservable.addOnce((() => {
-            this._behaviors.includes(kk) && kk.attach(this)
-          })) : kk.attach(this), this._behaviors.push(kk)), this
+        addBehavior(bb) {
+          let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return -1 !== this._behaviors.indexOf(bb) || (bb.init(), this._scene.isLoading && !cb ? this._scene.onDataLoadedObservable.addOnce((() => {
+            this._behaviors.includes(bb) && bb.attach(this)
+          })) : bb.attach(this), this._behaviors.push(bb)), this
         }
-        removeBehavior(kk) {
-          const Fk = this._behaviors.indexOf(kk);
-          return -1 === Fk || (this._behaviors.splice(Fk, 1), kk.detach()), this
+        removeBehavior(bb) {
+          const cb = this._behaviors.indexOf(bb);
+          return -1 === cb || (this._behaviors.splice(cb, 1), bb.detach()), this
         }
         get behaviors() {
           return this._behaviors
         }
-        getBehaviorByName(kk) {
-          for (const Fk of this._behaviors)
-            if (Fk.name === kk) return Fk;
+        getBehaviorByName(bb) {
+          for (const cb of this._behaviors)
+            if (cb.name === bb) return cb;
           return null
         }
         getWorldMatrix() {
@@ -625,13 +625,13 @@ export const modules = {
         _initCache() {
           this._cache = {}
         }
-        updateCache(kk) {
-          !kk && this.isSynchronized() || this._updateCache()
+        updateCache(bb) {
+          !bb && this.isSynchronized() || this._updateCache()
         }
-        _getActionManagerForTrigger(kk) {
-          return this.parent ? this.parent._getActionManagerForTrigger(kk, !1) : null
+        _getActionManagerForTrigger(bb) {
+          return this.parent ? this.parent._getActionManagerForTrigger(bb, !1) : null
         }
-        _updateCache(kk) {}
+        _updateCache(bb) {}
         _isSynchronized() {
           return !0
         }
@@ -647,238 +647,238 @@ export const modules = {
         isReady() {
           return this._nodeDataStorage._isReady
         }
-        mFk(kk) {
+        Tcb(bb) {
           return this._currentRenderId = Number.MAX_VALUE, this._isDirty = !0, this
         }
         isEnabled() {
           return !1 === (!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) ? this._nodeDataStorage._isEnabled : !!this._nodeDataStorage._isEnabled && this._nodeDataStorage._isParentEnabled
         }
         _hasEffectiveEnabledStateObservers() {
-          const kk = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
-          return !!kk && kk.hasObservers()
+          const bb = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
+          return !!bb && bb.hasObservers()
         }
         _syncParentEnabledState() {
-          const kk = this._hasEffectiveEnabledStateObservers(),
-            Fk = kk ? this.isEnabled() : null;
+          const bb = this._hasEffectiveEnabledStateObservers(),
+            cb = bb ? this.isEnabled() : null;
           if (this._nodeDataStorage._isParentEnabled = !this._parentNode || this._parentNode.isEnabled(), this._children)
-            for (const Bk of this._children) Bk._syncParentEnabledState();
-          if (kk) {
-            const kk = this.isEnabled();
-            kk !== Fk && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(kk)
+            for (const sb of this._children) sb._syncParentEnabledState();
+          if (bb) {
+            const bb = this.isEnabled();
+            bb !== cb && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(bb)
           }
         }
-        lY(kk) {
-          if (this._nodeDataStorage._isEnabled === kk) return;
-          const Fk = this._hasEffectiveEnabledStateObservers(),
-            Bk = Fk ? this.isEnabled() : null;
-          if (this._nodeDataStorage._isEnabled = kk, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(kk), Fk) {
-            const kk = this.isEnabled();
-            kk !== Bk && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(kk)
+        GV(bb) {
+          if (this._nodeDataStorage._isEnabled === bb) return;
+          const cb = this._hasEffectiveEnabledStateObservers(),
+            sb = cb ? this.isEnabled() : null;
+          if (this._nodeDataStorage._isEnabled = bb, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(bb), cb) {
+            const bb = this.isEnabled();
+            bb !== sb && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(bb)
           }
         }
-        isDescendantOf(kk) {
-          return !!this.parent && (this.parent === kk || this.parent.isDescendantOf(kk))
+        isDescendantOf(bb) {
+          return !!this.parent && (this.parent === bb || this.parent.isDescendantOf(bb))
         }
-        _getDescendants(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            Bk = arguments.length > 2 ? arguments[2] : void 0;
+        _getDescendants(bb) {
+          let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            sb = arguments.length > 2 ? arguments[2] : void 0;
           if (this._children)
-            for (let Rk = 0; Rk < this._children.length; Rk++) {
-              const tk = this._children[Rk];
-              Bk && !Bk(tk) || kk.push(tk), Fk || tk._getDescendants(kk, !1, Bk)
+            for (let kb = 0; kb < this._children.length; kb++) {
+              const Wb = this._children[kb];
+              sb && !sb(Wb) || bb.push(Wb), cb || Wb._getDescendants(bb, !1, sb)
             }
         }
-        getDescendants(kk, Fk) {
-          const Bk = [];
-          return this._getDescendants(Bk, kk, Fk), Bk
+        getDescendants(bb, cb) {
+          const sb = [];
+          return this._getDescendants(sb, bb, cb), sb
         }
-        getChildMeshes(kk, Fk) {
-          const Bk = [];
-          return this._getDescendants(Bk, kk, (kk => (!Fk || Fk(kk)) && void 0 !== kk.cullingStrategy)), Bk
+        getChildMeshes(bb, cb) {
+          const sb = [];
+          return this._getDescendants(sb, bb, (bb => (!cb || cb(bb)) && void 0 !== bb.cullingStrategy)), sb
         }
-        getChildren(kk) {
-          let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          return this.getDescendants(Fk, kk)
+        getChildren(bb) {
+          let cb = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          return this.getDescendants(cb, bb)
         }
-        _setReady(kk) {
-          kk !== this._nodeDataStorage._isReady && (kk ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
+        _setReady(bb) {
+          bb !== this._nodeDataStorage._isReady && (bb ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
         }
-        getAnimationByName(kk) {
-          for (let Fk = 0; Fk < this.animations.length; Fk++) {
-            const Bk = this.animations[Fk];
-            if (Bk.name === kk) return Bk
+        getAnimationByName(bb) {
+          for (let cb = 0; cb < this.animations.length; cb++) {
+            const sb = this.animations[cb];
+            if (sb.name === bb) return sb
           }
           return null
         }
-        createAnimationRange(Fk, Bk, Rk) {
-          if (!this._ranges[Fk]) {
-            this._ranges[Fk] = kk._AnimationRangeFactory(Fk, Bk, Rk);
-            for (let kk = 0, tk = this.animations.length; kk < tk; kk++) this.animations[kk] && this.animations[kk].createRange(Fk, Bk, Rk)
+        createAnimationRange(cb, sb, kb) {
+          if (!this._ranges[cb]) {
+            this._ranges[cb] = bb._AnimationRangeFactory(cb, sb, kb);
+            for (let bb = 0, Wb = this.animations.length; bb < Wb; bb++) this.animations[bb] && this.animations[bb].createRange(cb, sb, kb)
           }
         }
-        deleteAnimationRange(kk) {
-          let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          for (let Bk = 0, Rk = this.animations.length; Bk < Rk; Bk++) this.animations[Bk] && this.animations[Bk].deleteRange(kk, Fk);
-          this._ranges[kk] = null
+        deleteAnimationRange(bb) {
+          let cb = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          for (let sb = 0, kb = this.animations.length; sb < kb; sb++) this.animations[sb] && this.animations[sb].deleteRange(bb, cb);
+          this._ranges[bb] = null
         }
-        getAnimationRange(kk) {
-          return this._ranges[kk] || null
+        getAnimationRange(bb) {
+          return this._ranges[bb] || null
         }
-        clone(Fk, Bk, Rk) {
-          const tk = dk.c.Clone((() => new kk(Fk, this.XN())), this);
-          if (Bk && (tk.parent = Bk), !Rk) {
-            const kk = this.getDescendants(!0);
-            for (let Bk = 0; Bk < kk.length; Bk++) {
-              const Rk = kk[Bk];
-              Rk.clone(Fk + "." + Rk.name, tk)
+        clone(cb, sb, kb) {
+          const Wb = Hb.d.Clone((() => new bb(cb, this.EY())), this);
+          if (sb && (Wb.parent = sb), !kb) {
+            const bb = this.getDescendants(!0);
+            for (let sb = 0; sb < bb.length; sb++) {
+              const kb = bb[sb];
+              kb.clone(cb + "." + kb.name, Wb)
             }
           }
-          return tk
+          return Wb
         }
         getAnimationRanges() {
-          const kk = [];
-          let Fk;
-          for (Fk in this._ranges) kk.push(this._ranges[Fk]);
-          return kk
+          const bb = [];
+          let cb;
+          for (cb in this._ranges) bb.push(this._ranges[cb]);
+          return bb
         }
-        beginAnimation(kk, Fk, Bk, Rk) {
-          const tk = this.getAnimationRange(kk);
-          return tk ? this._scene.beginAnimation(this, tk.from, tk.to, Fk, Bk, Rk) : null
+        beginAnimation(bb, cb, sb, kb) {
+          const Wb = this.getAnimationRange(bb);
+          return Wb ? this._scene.beginAnimation(this, Wb.from, Wb.to, cb, sb, kb) : null
         }
         serializeAnimationRanges() {
-          const kk = [];
-          for (const Fk in this._ranges) {
-            const Bk = this._ranges[Fk];
-            if (!Bk) continue;
-            const Rk = {};
-            Rk.name = Fk, Rk.from = Bk.from, Rk.to = Bk.to, kk.push(Rk)
+          const bb = [];
+          for (const cb in this._ranges) {
+            const sb = this._ranges[cb];
+            if (!sb) continue;
+            const kb = {};
+            kb.name = cb, kb.from = sb.from, kb.to = sb.to, bb.push(kb)
           }
-          return kk
+          return bb
         }
-        computeWorldMatrix(kk) {
-          return this._worldMatrix || (this._worldMatrix = tk.c.Identity()), this._worldMatrix
+        computeWorldMatrix(bb) {
+          return this._worldMatrix || (this._worldMatrix = Wb.e.Identity()), this._worldMatrix
         }
-        dispose(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._nodeDataStorage._isDisposed = !0, !kk) {
-            const Bk = this.getDescendants(!0);
-            for (const Rk of Bk) Rk.dispose(kk, Fk)
+        dispose(bb) {
+          let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._nodeDataStorage._isDisposed = !0, !bb) {
+            const sb = this.getDescendants(!0);
+            for (const kb of sb) kb.dispose(bb, cb)
           }
-          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.yN.notifyObservers(this), this.yN.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
-          for (const Bk of this._behaviors) Bk.detach();
+          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.ZY.notifyObservers(this), this.ZY.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
+          for (const sb of this._behaviors) sb.detach();
           this._behaviors.length = 0, this.metadata = null
         }
-        static ParseAnimationRanges(kk, Fk, Bk) {
-          if (Fk.hb)
-            for (let Rk = 0; Rk < Fk.hb.length; Rk++) {
-              const Bk = Fk.hb[Rk];
-              kk.createAnimationRange(Bk.name, Bk.from, Bk.to)
+        static ParseAnimationRanges(bb, cb, sb) {
+          if (cb.uQ)
+            for (let kb = 0; kb < cb.uQ.length; kb++) {
+              const sb = cb.uQ[kb];
+              bb.createAnimationRange(sb.name, sb.from, sb.to)
             }
         }
         getHierarchyBoundingVectors() {
-          let kk, Fk, Bk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-            Rk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          this.XN().incrementRenderId(), this.computeWorldMatrix(!0);
-          const ak = this;
-          if (ak.ZH && ak.AY) {
-            const Bk = ak.ZH();
-            kk = Bk.boundingBox.minimumWorld.clone(), Fk = Bk.boundingBox.maximumWorld.clone()
-          } else kk = new tk.s(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), Fk = new tk.s(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-          if (Bk) {
-            const Bk = this.getDescendants(!1);
-            for (const ak of Bk) {
-              const Bk = ak;
-              if (Bk.computeWorldMatrix(!0), Rk && !Rk(Bk)) continue;
-              if (!Bk.ZH || 0 === Bk.getTotalVertices()) continue;
-              const Xk = Bk.ZH().boundingBox,
-                bk = Xk.minimumWorld,
-                wk = Xk.maximumWorld;
-              tk.s.CheckExtends(bk, kk, Fk), tk.s.CheckExtends(wk, kk, Fk)
+          let bb, cb, sb = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+            kb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          this.EY().incrementRenderId(), this.computeWorldMatrix(!0);
+          const ab = this;
+          if (ab.PJ && ab.XV) {
+            const sb = ab.PJ();
+            bb = sb.boundingBox.minimumWorld.clone(), cb = sb.boundingBox.maximumWorld.clone()
+          } else bb = new Wb.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), cb = new Wb.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+          if (sb) {
+            const sb = this.getDescendants(!1);
+            for (const ab of sb) {
+              const sb = ab;
+              if (sb.computeWorldMatrix(!0), kb && !kb(sb)) continue;
+              if (!sb.PJ || 0 === sb.getTotalVertices()) continue;
+              const Tb = sb.PJ().boundingBox,
+                Ub = Tb.minimumWorld,
+                Ib = Tb.maximumWorld;
+              Wb.p.CheckExtends(Ub, bb, cb), Wb.p.CheckExtends(Ib, bb, cb)
             }
           }
           return {
-            min: kk,
-            max: Fk
+            min: bb,
+            max: cb
           }
         }
       }, (() => {
-        const tk = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Fk = [(0, ak.M)()], Bk = [(0, ak.M)()], Vk = [(0, ak.M)()], Jk = [(0, ak.M)()], Ak = [(0, ak.M)()], (0, Rk.j)(null, null, Fk, {
+        const Wb = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        cb = [(0, ab.E)()], sb = [(0, ab.E)()], Mb = [(0, ab.E)()], Xb = [(0, ab.E)()], nb = [(0, ab.E)()], (0, kb.j)(null, null, cb, {
           kind: "field",
           name: "name",
           static: !1,
           private: !1,
           access: {
-            has: kk => "name" in kk,
-            get: kk => kk.name,
-            set: (kk, Fk) => {
-              kk.name = Fk
+            has: bb => "name" in bb,
+            get: bb => bb.name,
+            set: (bb, cb) => {
+              bb.name = cb
             }
           },
-          metadata: tk
-        }, ek, yk), (0, Rk.j)(null, null, Bk, {
+          metadata: Wb
+        }, mb, lb), (0, kb.j)(null, null, sb, {
           kind: "field",
           name: "id",
           static: !1,
           private: !1,
           access: {
-            has: kk => "id" in kk,
-            get: kk => kk.id,
-            set: (kk, Fk) => {
-              kk.id = Fk
+            has: bb => "id" in bb,
+            get: bb => bb.id,
+            set: (bb, cb) => {
+              bb.id = cb
             }
           },
-          metadata: tk
-        }, fk, mk), (0, Rk.j)(null, null, Vk, {
+          metadata: Wb
+        }, Qb, eb), (0, kb.j)(null, null, Mb, {
           kind: "field",
           name: "uniqueId",
           static: !1,
           private: !1,
           access: {
-            has: kk => "uniqueId" in kk,
-            get: kk => kk.uniqueId,
-            set: (kk, Fk) => {
-              kk.uniqueId = Fk
+            has: bb => "uniqueId" in bb,
+            get: bb => bb.uniqueId,
+            set: (bb, cb) => {
+              bb.uniqueId = cb
             }
           },
-          metadata: tk
-        }, Wk, vk), (0, Rk.j)(null, null, Jk, {
+          metadata: Wb
+        }, Cb, Nb), (0, kb.j)(null, null, Xb, {
           kind: "field",
           name: "state",
           static: !1,
           private: !1,
           access: {
-            has: kk => "state" in kk,
-            get: kk => kk.state,
-            set: (kk, Fk) => {
-              kk.state = Fk
+            has: bb => "state" in bb,
+            get: bb => bb.state,
+            set: (bb, cb) => {
+              bb.state = cb
             }
           },
-          metadata: tk
-        }, ik, Yk), (0, Rk.j)(null, null, Ak, {
+          metadata: Wb
+        }, Vb, Lb), (0, kb.j)(null, null, nb, {
           kind: "field",
           name: "metadata",
           static: !1,
           private: !1,
           access: {
-            has: kk => "metadata" in kk,
-            get: kk => kk.metadata,
-            set: (kk, Fk) => {
-              kk.metadata = Fk
+            has: bb => "metadata" in bb,
+            get: bb => bb.metadata,
+            set: (bb, cb) => {
+              bb.metadata = cb
             }
           },
-          metadata: tk
-        }, Lk, Ok), tk && Object.defineProperty(kk, Symbol.metadata, {
+          metadata: Wb
+        }, ub, Yb), Wb && Object.defineProperty(bb, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: tk
+          value: Wb
         })
-      })(), kk._AnimationRangeFactory = (kk, Fk, Bk) => {
-        throw (0, wk.i)("AnimationRange")
-      }, kk._NodeConstructors = {}, kk
+      })(), bb._AnimationRangeFactory = (bb, cb, sb) => {
+        throw (0, Ib.i)("AnimationRange")
+      }, bb._NodeConstructors = {}, bb
     })()
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

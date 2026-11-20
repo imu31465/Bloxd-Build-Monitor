@@ -1,319 +1,319 @@
 export const id = 216;
 export const ids = [216];
 export const modules = {
-  39203: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Rk,
-      e: () => tk
+  39213: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => kb,
+      f: () => Wb
     });
-    const Rk = "The world isn't loaded, so no blocks can be seen.",
-      tk = "The world isn't loaded, so nothing in it can be seen."
+    const kb = "The world isn't loaded, so no blocks can be seen.",
+      Wb = "The world isn't loaded, so nothing in it can be seen."
   },
-  36480: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => ak,
-      g: () => tk
+  36388: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => ab,
+      g: () => Wb
     });
-    let Rk = () => null;
+    let kb = () => null;
 
-    function tk(kk) {
-      Rk = kk
+    function Wb(bb) {
+      kb = bb
     }
 
-    function ak(kk, Fk) {
-      return Rk(kk, Fk)
+    function ab(bb, cb) {
+      return kb(bb, cb)
     }
   },
-  40023: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => yk,
-      f: () => vk,
-      g: () => Wk,
-      j: () => fk
+  40026: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => lb,
+      f: () => Nb,
+      h: () => Cb,
+      j: () => Qb
     });
-    var Rk = Bk(29),
-      tk = Bk(40029),
-      ak = Bk(40015),
-      Xk = Bk(40037),
-      bk = Bk(40021),
-      wk = Bk(40043),
-      dk = Bk(40063);
+    var kb = sb(26),
+      Wb = sb(40035),
+      ab = sb(40014),
+      Tb = sb(40043),
+      Ub = sb(40020),
+      Ib = sb(40047),
+      Hb = sb(40066);
 
-    function sk(kk) {
-      var Fk, Bk;
-      const Rk = (0, ak.g)();
-      return Rk ? null === (Fk = (0, tk.c)(Rk.api, kk[0], kk[1], kk[2])) || void 0 === Fk || null === (Bk = Fk.persisted) || void 0 === Bk ? void 0 : Bk.shared : void 0
+    function fb(bb) {
+      var cb, sb;
+      const kb = (0, ab.h)();
+      return kb ? null === (cb = (0, Wb.e)(kb.api, bb[0], bb[1], bb[2])) || void 0 === cb || null === (sb = cb.persisted) || void 0 === sb ? void 0 : sb.shared : void 0
     }
 
-    function Vk(kk) {
-      return `${kk[0]},${kk[1]},${kk[2]}`
+    function Mb(bb) {
+      return `${bb[0]},${bb[1]},${bb[2]}`
     }
-    const Jk = new Map;
-    let Ak = null,
-      ek = 0;
+    const Xb = new Map;
+    let nb = null,
+      mb = 0;
 
-    function yk() {
-      return ek
+    function lb() {
+      return mb
     }
 
-    function fk(kk) {
-      const Fk = null !== Ak && Ak.key === Vk(kk.pos) ? Ak.type : null;
-      if (null === Fk) return kk;
-      let Bk = null;
-      if ("Iron" === Fk) {
+    function Qb(bb) {
+      const cb = null !== nb && nb.key === Mb(bb.pos) ? nb.type : null;
+      if (null === cb) return bb;
+      let sb = null;
+      if ("Iron" === cb) {
         const {
-          cachedPasskey: Fk,
-          ...Rk
-        } = mk(kk.pos);
-        Bk = {
-          Gd: null !== Fk && void 0 !== Fk ? Fk : [0, 0, 0, 0],
-          ...Rk
+          cachedPasskey: cb,
+          ...kb
+        } = eb(bb.pos);
+        sb = {
+          OH: null !== cb && void 0 !== cb ? cb : [0, 0, 0, 0],
+          ...kb
         }
       }
       return {
-        ...kk,
-        type: Fk,
-        ironChest: Bk
+        ...bb,
+        type: cb,
+        ironChest: sb
       }
     }
 
-    function mk(kk) {
-      const Fk = sk(kk),
-        Bk = null === Fk || void 0 === Fk ? void 0 : Fk.ownerDbId,
-        Rk = function(kk) {
-          var Fk;
-          let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : sk(kk);
-          const Rk = Vk(kk),
-            tk = Jk.get(Rk);
-          return tk ? tk.lastOpened < (null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.passkeyLastUpdated) && void 0 !== Fk ? Fk : 0) ? (Jk.delete(Rk), null) : [...tk.Gd] : null
-        }(kk, Fk);
-      return void 0 === Bk ? {
-        cachedPasskey: Rk
+    function eb(bb) {
+      const cb = fb(bb),
+        sb = null === cb || void 0 === cb ? void 0 : cb.ownerDbId,
+        kb = function(bb) {
+          var cb;
+          let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fb(bb);
+          const kb = Mb(bb),
+            Wb = Xb.get(kb);
+          return Wb ? Wb.lastOpened < (null !== (cb = null === sb || void 0 === sb ? void 0 : sb.passkeyLastUpdated) && void 0 !== cb ? cb : 0) ? (Xb.delete(kb), null) : [...Wb.OH] : null
+        }(bb, cb);
+      return void 0 === sb ? {
+        cachedPasskey: kb
       } : {
-        ownerDbId: Bk,
-        cachedPasskey: Rk
+        ownerDbId: sb,
+        cachedPasskey: kb
       }
-    }(0, dk.k)(Xk.b, (kk => {
-      const Fk = (0, wk.f)(Xk.b, kk);
-      if (!(0, wk.e)(Fk) || Fk.la) return;
-      if (ek++, !Fk.Ca || null === Fk.xa) return void(Ak = null);
-      const Bk = Vk(Fk.xa);
-      Ak = {
-        key: Bk,
-        type: Fk.Ka
-      }, null !== Fk.ja && Jk.set(Bk, {
-        Gd: [...Fk.ja],
+    }(0, Hb.k)(Tb.e, (bb => {
+      const cb = (0, Ib.g)(Tb.e, bb);
+      if (!(0, Ib.c)(cb) || cb.mT) return;
+      if (mb++, !cb.HT || null === cb.XT) return void(nb = null);
+      const sb = Mb(cb.XT);
+      nb = {
+        key: sb,
+        type: cb.MT
+      }, null !== cb.nT && Xb.set(sb, {
+        OH: [...cb.nT],
         lastOpened: Date.now()
       })
-    })), (0, dk.d)((() => {
-      Jk.clear(), Ak = null, ek++
-    })), (0, dk.g)((() => {
-      null !== Ak && (Ak = null, ek++, Rk.o.Hf("chestToggleFromServer", !1, !0))
+    })), (0, Hb.g)((() => {
+      Xb.clear(), nb = null, mb++
+    })), (0, Hb.j)((() => {
+      null !== nb && (nb = null, mb++, kb.j.QQ("chestToggleFromServer", !1, !0))
     }));
-    const Wk = {
+    const Cb = {
         boardEditRequested: {
-          watch: kk => (0, Rk.p)("EditBoard", (Fk => {
+          watch: bb => (0, kb.l)("EditBoard", (cb => {
             let {
-              pos: Bk
-            } = Fk;
-            if (null === Bk) return void kk(null);
-            const Rk = (0, ak.g)(),
-              tk = (0, ak.n)();
-            Rk && tk && kk(tk.readBoardToEdit(Rk.api, Rk.chunks, Bk))
+              pos: sb
+            } = cb;
+            if (null === sb) return void bb(null);
+            const kb = (0, ab.h)(),
+              Wb = (0, ab.s)();
+            kb && Wb && bb(Wb.readBoardToEdit(kb.api, kb.chunks, sb))
           }))
         },
         ironChestOpenRequested: {
-          watch: kk => (0, Rk.p)("OpenIronChest", (Fk => {
+          watch: bb => (0, kb.l)("OpenIronChest", (cb => {
             let {
-              pos: Bk
-            } = Fk;
-            kk(function(kk) {
+              pos: sb
+            } = cb;
+            bb(function(bb) {
               return {
-                pos: kk,
-                ...mk(kk)
+                pos: bb,
+                ...eb(bb)
               }
-            }(Bk))
+            }(sb))
           }))
         }
       },
-      vk = {
-        writeOnBoard(kk) {
-          var Fk;
+      Nb = {
+        writeOnBoard(bb) {
+          var cb;
           let {
-            pos: Bk,
-            text: Rk,
-            textSize: tk
-          } = kk;
-          null === (Fk = (0, ak.g)()) || void 0 === Fk || Fk.send(bk.b.UpdateBoard, (0, bk.S)({
-            yX: Bk,
-            fX: Rk,
-            mX: tk
+            pos: sb,
+            text: kb,
+            textSize: Wb
+          } = bb;
+          null === (cb = (0, ab.h)()) || void 0 === cb || cb.send(Ub.c.UpdateBoard, (0, Ub.X)({
+            iT: sb,
+            OT: kb,
+            GT: Wb
           }))
         },
-        writeBook(kk) {
-          var Fk;
+        writeBook(bb) {
+          var cb;
           let {
-            pages: Bk,
-            title: Rk,
-            published: tk
-          } = kk;
-          null === (Fk = (0, ak.g)()) || void 0 === Fk || Fk.send(bk.b.UpdateBook, (0, bk.T)({
-            Ob: Bk,
-            Eb: Rk,
-            Sb: tk
+            pages: sb,
+            title: kb,
+            published: Wb
+          } = bb;
+          null === (cb = (0, ab.h)()) || void 0 === cb || cb.send(Ub.c.UpdateBook, (0, Ub.Z)({
+            GU: sb,
+            KU: kb,
+            ZU: Wb
           }))
         },
-        writeNameTag(kk) {
-          var Fk;
-          null === (Fk = (0, ak.g)()) || void 0 === Fk || Fk.send(bk.b.UpdateNameTag, kk)
+        writeNameTag(bb) {
+          var cb;
+          null === (cb = (0, ab.h)()) || void 0 === cb || cb.send(Ub.c.UpdateNameTag, bb)
         },
-        setCustomLobbyBlock(kk) {
+        setCustomLobbyBlock(bb) {
           let {
-            pos: Fk,
-            blockName: Bk
-          } = kk;
-          const Rk = (0, ak.n)(),
-            tk = (0, ak.g)();
-          Rk && tk && tk.send(bk.b.SetCustomLobbyBlock, (0, bk.G)({
-            Ts: Rk.blockIdOf(Bk),
-            Gs: Fk
+            pos: cb,
+            blockName: sb
+          } = bb;
+          const kb = (0, ab.s)(),
+            Wb = (0, ab.h)();
+          kb && Wb && Wb.send(Ub.c.SetCustomLobbyBlock, (0, Ub.J)({
+            Jf: kb.blockIdOf(sb),
+            hf: cb
           }))
         }
       }
   },
-  40073: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => wk,
-      e: () => Xk,
-      f: () => bk
+  40083: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Ib,
+      i: () => Tb,
+      l: () => Ub
     });
-    var Rk = Bk(4e4),
-      tk = Bk(4511),
-      ak = Bk(40015);
+    var kb = sb(40002),
+      Wb = sb(4498),
+      ab = sb(40014);
 
-    function Xk() {
-      var kk;
-      const Fk = null === (kk = (0, ak.g)()) || void 0 === kk ? void 0 : kk.api.localId;
-      return void 0 === Fk || Fk === Rk.Yc ? null : String(Fk)
+    function Tb() {
+      var bb;
+      const cb = null === (bb = (0, ab.h)()) || void 0 === bb ? void 0 : bb.api.localId;
+      return void 0 === cb || cb === kb.ad ? null : String(cb)
     }
 
-    function bk(kk) {
-      const Fk = (0, ak.g)();
-      if (null !== Fk) return kk(Fk);
-      let Bk = null;
-      const Rk = (0, tk.t)((() => {
-        const Fk = (0, ak.g)();
-        null !== Fk && null === Bk && (Rk(), Bk = kk(Fk))
+    function Ub(bb) {
+      const cb = (0, ab.h)();
+      if (null !== cb) return bb(cb);
+      let sb = null;
+      const kb = (0, Wb.y)((() => {
+        const cb = (0, ab.h)();
+        null !== cb && null === sb && (kb(), sb = bb(cb))
       }));
       return () => {
-        var kk;
-        Rk(), null === (kk = Bk) || void 0 === kk || kk()
+        var bb;
+        kb(), null === (bb = sb) || void 0 === bb || bb()
       }
     }
 
-    function wk(kk, Fk, Bk) {
+    function Ib(bb, cb, sb) {
       return {
         current: () => {
-          const Bk = (0, ak.g)();
-          return null === Bk ? Fk : kk(Bk)()
+          const sb = (0, ab.h)();
+          return null === sb ? cb : bb(sb)()
         },
-        watch: Fk => bk((Rk => {
-          const tk = kk(Rk);
-          let ak = tk();
-          return Fk(ak), Bk((() => {
-            const kk = tk();
-            kk !== ak && (ak = kk, Fk(kk))
+        watch: cb => Ub((kb => {
+          const Wb = bb(kb);
+          let ab = Wb();
+          return cb(ab), sb((() => {
+            const bb = Wb();
+            bb !== ab && (ab = bb, cb(bb))
           }))
         }))
       }
     }
   },
-  40070: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => dk
+  40076: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Hb
     });
-    var Rk = Bk(40015),
-      tk = Bk(40073),
-      ak = Bk(40077);
+    var kb = sb(40014),
+      Wb = sb(40083),
+      ab = sb(40090);
 
-    function Xk() {
-      var kk, Fk;
-      return null !== (kk = null === (Fk = (0, Rk.g)()) || void 0 === Fk ? void 0 : Fk.itemBridgeSources) && void 0 !== kk ? kk : ak.d
+    function Tb() {
+      var bb, cb;
+      return null !== (bb = null === (cb = (0, kb.h)()) || void 0 === cb ? void 0 : cb.itemBridgeSources) && void 0 !== bb ? bb : ab.b
     }
 
-    function bk(kk) {
+    function Ub(bb) {
       return {
-        current: () => Xk().states[kk].current(),
-        watch: Fk => (0, tk.f)((Bk => {
-          const Rk = Bk.itemBridgeSources.states[kk];
-          return Fk(Rk.current()), Rk.watch(Fk)
+        current: () => Tb().states[bb].current(),
+        watch: cb => (0, Wb.l)((sb => {
+          const kb = sb.itemBridgeSources.states[bb];
+          return cb(kb.current()), kb.watch(cb)
         }))
       }
     }
 
-    function wk(kk) {
+    function Ib(bb) {
       return {
-        watch: Fk => (0, tk.f)((Bk => Bk.itemBridgeSources.events[kk].watch(Fk)))
+        watch: cb => (0, Wb.l)((sb => sb.itemBridgeSources.events[bb].watch(cb)))
       }
     }
-    const dk = {
+    const Hb = {
       states: {
-        inventory: bk("inventory"),
-        hotbar: bk("hotbar"),
-        crafting: bk("crafting"),
-        heldItemAim: bk("heldItemAim")
+        inventory: Ub("inventory"),
+        hotbar: Ub("hotbar"),
+        crafting: Ub("crafting"),
+        heldItemAim: Ub("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: wk("hotbarSlotRequested"),
-        hotbarScrolled: wk("hotbarScrolled"),
-        numberKeyPressed: wk("numberKeyPressed"),
-        inventoryDropRequested: wk("inventoryDropRequested"),
-        chestToggled: wk("chestToggled"),
-        chestRefreshed: wk("chestRefreshed"),
-        inventorySynced: wk("inventorySynced"),
-        enchantingTableOpened: wk("enchantingTableOpened")
+        hotbarSlotRequested: Ib("hotbarSlotRequested"),
+        hotbarScrolled: Ib("hotbarScrolled"),
+        numberKeyPressed: Ib("numberKeyPressed"),
+        inventoryDropRequested: Ib("inventoryDropRequested"),
+        chestToggled: Ib("chestToggled"),
+        chestRefreshed: Ib("chestRefreshed"),
+        inventorySynced: Ib("inventorySynced"),
+        enchantingTableOpened: Ib("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: kk => Xk().commands.selectHotbarSlot(kk),
-        removeInventoryItem: kk => Xk().commands.removeInventoryItem(kk),
-        swapInventorySlots: kk => Xk().commands.swapInventorySlots(kk),
-        moveInventoryItem: kk => Xk().commands.moveInventoryItem(kk),
-        quickMoveInventoryItem: kk => Xk().commands.quickMoveInventoryItem(kk),
-        closeChest: kk => Xk().commands.closeChest(kk),
-        focusCrafting: kk => Xk().commands.focusCrafting(kk),
-        craftRecipe: kk => Xk().commands.craftRecipe(kk),
-        salvageItem: kk => Xk().commands.salvageItem(kk),
-        enchantItem: kk => Xk().commands.enchantItem(kk)
+        selectHotbarSlot: bb => Tb().commands.selectHotbarSlot(bb),
+        removeInventoryItem: bb => Tb().commands.removeInventoryItem(bb),
+        swapInventorySlots: bb => Tb().commands.swapInventorySlots(bb),
+        moveInventoryItem: bb => Tb().commands.moveInventoryItem(bb),
+        quickMoveInventoryItem: bb => Tb().commands.quickMoveInventoryItem(bb),
+        closeChest: bb => Tb().commands.closeChest(bb),
+        focusCrafting: bb => Tb().commands.focusCrafting(bb),
+        craftRecipe: bb => Tb().commands.craftRecipe(bb),
+        salvageItem: bb => Tb().commands.salvageItem(bb),
+        enchantItem: bb => Tb().commands.enchantItem(bb)
       },
       queries: {
-        enchantingOffer: kk => Xk().queries.enchantingOffer(kk)
+        enchantingOffer: bb => Tb().queries.enchantingOffer(bb)
       }
     }
   },
-  40077: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => bk
+  40090: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Ub
     });
-    var Rk = Bk(39203);
+    var kb = sb(39213);
 
-    function tk(kk) {
+    function Wb(bb) {
       return {
-        current: () => kk,
+        current: () => bb,
         watch: () => () => {}
       }
     }
 
-    function ak() {}
-    const Xk = Object.freeze([0, 0, 0]),
-      bk = {
+    function ab() {}
+    const Tb = Object.freeze([0, 0, 0]),
+      Ub = {
         states: {
-          health: tk({
+          health: Wb({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: tk({
+          inventory: Wb({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -321,63 +321,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: tk({
+          hotbar: Wb({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: tk({
+          stationItems: Wb({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: tk({}),
-          creativeVisibility: tk({
+          itemInfo: Wb({}),
+          creativeVisibility: Wb({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: tk(null),
-          heldItemAim: tk({
+          aura: Wb(null),
+          heldItemAim: Wb({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: tk(!1),
-          gliderBoostFuel: tk(0),
-          flight: tk({
+          crouching: Wb(!1),
+          gliderBoostFuel: Wb(0),
+          flight: Wb({
             canFly: !1,
             flying: !1
           }),
-          crafting: tk({
+          crafting: Wb({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: tk({
+          players: Wb({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: tk({}),
-          fullInventory: tk(!1),
-          crosshairTarget: tk({
+          lobbyLeaderboardRows: Wb({}),
+          fullInventory: Wb(!1),
+          crosshairTarget: Wb({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: tk(!0),
-          freeCamera: tk({
+          localPlayerAlive: Wb(!0),
+          freeCamera: Wb({
             allowed: !1,
             movesFly: !1
           }),
-          replay: tk(null),
-          replayEdits: tk(null),
-          replayRecorder: tk({
+          replay: Wb(null),
+          replayEdits: Wb(null),
+          replayRecorder: Wb({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: tk(!1)
+          replayVideoExporting: Wb(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -439,86 +439,86 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: ak,
+          selectHotbarSlot: ab,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: ak,
-          setInventoryOpen: ak,
-          changeIronChestPasskey: ak,
-          dragReplayCamera: ak,
-          applyTemporaryThirdPerson: ak,
-          holdEmoteWheel: ak,
-          recordFlyingMiddleText: ak,
-          focusCrafting: ak,
+          closeChest: ab,
+          setInventoryOpen: ab,
+          changeIronChestPasskey: ab,
+          dragReplayCamera: ab,
+          applyTemporaryThirdPerson: ab,
+          holdEmoteWheel: ab,
+          recordFlyingMiddleText: ab,
+          focusCrafting: ab,
           craftRecipe: () => ({
-            Ps: 0,
-            fV: null,
+            tf: 0,
+            TM: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: ak,
-          setShopOpen: ak,
-          buyShopItem: ak,
-          sendChatMessage: ak,
-          ignorePlayer: ak,
-          reportPlayer: ak,
-          reportWorldCodeChat: ak,
-          requestDiscordReportKey: ak,
-          reportLobbyOrGame: ak,
-          playEmote: ak,
-          updateMyCosmetic: ak,
-          writeOnBoard: ak,
-          writeBook: ak,
-          writeNameTag: ak,
-          setCustomLobbyBlock: ak,
-          openIronChest: ak,
-          sendCodeCollab: ak,
-          clickCodeBlock: ak,
-          bindCustomButtonKeys: ak,
-          pressCustomButton: ak,
-          moveReplayFreecam: ak,
-          holdReplayFreecamVertical: ak,
-          respawn: ak,
-          wakeUp: ak,
-          requestLeaderboard: ak,
-          completeTask: ak,
-          setServerCookie: ak,
-          answerUiRequest: ak,
-          chooseRewardedAd: ak,
-          setCameraZoom: ak,
-          setFreeCameraMovesFly: ak,
-          setBlockHighlight: ak,
-          setCrosshairInteractPrompt: ak,
-          setLookSensitivity: ak,
-          replayAction: ak,
-          setReplayPlaying: ak,
-          seekReplay: ak,
-          setReplayCameraMode: ak,
-          syncReplayCameraMode: ak,
-          setReplayCameraKeyframe: ak,
-          moveReplayCameraKeyframe: ak,
-          deleteReplayCameraKeyframes: ak,
-          setReplayPlaybackMark: ak,
+          enchantItem: ab,
+          setShopOpen: ab,
+          buyShopItem: ab,
+          sendChatMessage: ab,
+          ignorePlayer: ab,
+          reportPlayer: ab,
+          reportWorldCodeChat: ab,
+          requestDiscordReportKey: ab,
+          reportLobbyOrGame: ab,
+          playEmote: ab,
+          updateMyCosmetic: ab,
+          writeOnBoard: ab,
+          writeBook: ab,
+          writeNameTag: ab,
+          setCustomLobbyBlock: ab,
+          openIronChest: ab,
+          sendCodeCollab: ab,
+          clickCodeBlock: ab,
+          bindCustomButtonKeys: ab,
+          pressCustomButton: ab,
+          moveReplayFreecam: ab,
+          holdReplayFreecamVertical: ab,
+          respawn: ab,
+          wakeUp: ab,
+          requestLeaderboard: ab,
+          completeTask: ab,
+          setServerCookie: ab,
+          answerUiRequest: ab,
+          chooseRewardedAd: ab,
+          setCameraZoom: ab,
+          setFreeCameraMovesFly: ab,
+          setBlockHighlight: ab,
+          setCrosshairInteractPrompt: ab,
+          setLookSensitivity: ab,
+          replayAction: ab,
+          setReplayPlaying: ab,
+          seekReplay: ab,
+          setReplayCameraMode: ab,
+          syncReplayCameraMode: ab,
+          setReplayCameraKeyframe: ab,
+          moveReplayCameraKeyframe: ab,
+          deleteReplayCameraKeyframes: ab,
+          setReplayPlaybackMark: ab,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: ak,
-          exportReplayVideo: ak,
-          toggleRecording: ak,
-          saveClip: ak,
-          setRecorderPrefs: ak,
-          setReplayViewerOpen: ak
+          holdReplayForShaderPackFailure: ab,
+          exportReplayVideo: ab,
+          toggleRecording: ab,
+          saveClip: ab,
+          setRecorderPrefs: ab,
+          setReplayViewerOpen: ab
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => Rk.d,
-          worldCodeAiGameState: () => Rk.e
+          worldCodeAiChunk: () => kb.e,
+          worldCodeAiGameState: () => kb.f
         },
         lookups: {
-          localPos: () => Xk,
+          localPos: () => Tb,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -536,321 +536,321 @@ export const modules = {
         }
       }
   },
-  40007: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Sk,
-      g: () => Ek,
-      k: () => Nk,
-      m: () => Ok,
-      p: () => Yk
+  40005: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Jb,
+      f: () => hb,
+      j: () => gb,
+      l: () => Yb,
+      o: () => Lb
     });
-    var Rk = Bk(38841),
-      tk = Bk(1173),
-      ak = Bk(1863),
-      Xk = Bk(1873),
-      bk = Bk(3090),
-      wk = Bk(36480),
-      dk = Bk(1267),
-      sk = Bk(40015),
-      Vk = Bk(4546),
-      Jk = Bk(2303),
-      Ak = Bk(40021),
-      ek = Bk(40023),
-      yk = Bk(40070);
-    let fk = null;
+    var kb = sb(38801),
+      Wb = sb(1235),
+      ab = sb(1895),
+      Tb = sb(1907),
+      Ub = sb(3050),
+      Ib = sb(36388),
+      Hb = sb(1312),
+      fb = sb(40014),
+      Mb = sb(4536),
+      Xb = sb(2305),
+      nb = sb(40020),
+      mb = sb(40026),
+      lb = sb(40076);
+    let Qb = null;
 
-    function mk(kk) {
-      const Fk = new Map,
-        Bk = Bk => {
-          if ("string" !== typeof Bk) return;
-          let Rk = Fk.get(Bk);
-          return void 0 === Rk && (Rk = kk(Bk), void 0 !== Rk && Fk.set(Bk, Rk)), Rk
+    function eb(bb) {
+      const cb = new Map,
+        sb = sb => {
+          if ("string" !== typeof sb) return;
+          let kb = cb.get(sb);
+          return void 0 === kb && (kb = bb(sb), void 0 !== kb && cb.set(sb, kb)), kb
         };
       return new Proxy({}, {
-        get: (kk, Fk) => Bk(Fk),
-        has: (kk, Fk) => void 0 !== Bk(Fk)
+        get: (bb, cb) => sb(cb),
+        has: (bb, cb) => void 0 !== sb(cb)
       })
     }
 
-    function Wk(kk) {
-      const Fk = (0, bk.c)(kk);
-      return void 0 !== Fk && (0, bk.f)(Fk) === kk
+    function Cb(bb) {
+      const cb = (0, Ub.b)(bb);
+      return void 0 !== cb && (0, Ub.f)(cb) === bb
     }
 
-    function vk(kk) {
-      var Fk;
-      const Bk = null === (Fk = (0, sk.g)()) || void 0 === Fk ? void 0 : Fk.tables;
-      if (void 0 === Bk || !Wk(kk)) return;
-      const Rk = {
-          displayName: Bk.getDisplayName(kk)
+    function Nb(bb) {
+      var cb;
+      const sb = null === (cb = (0, fb.h)()) || void 0 === cb ? void 0 : cb.tables;
+      if (void 0 === sb || !Cb(bb)) return;
+      const kb = {
+          displayName: sb.getDisplayName(bb)
         },
-        tk = Bk.getItemStat(kk, "description");
-      void 0 !== tk && null !== tk && (Rk.description = tk);
+        Wb = sb.getItemStat(bb, "description");
+      void 0 !== Wb && null !== Wb && (kb.description = Wb);
       const {
-        rootName: ak
-      } = Bk.getMetaInfo(kk);
-      ak !== kk && (Rk.rootName = ak);
-      const Xk = Bk.getItemStat(kk, "armourReduction");
-      return void 0 !== Xk && null !== Xk && (Rk.armourReduction = Xk), Rk
-    }(0, sk.o)((kk => {
-      fk = kk
+        rootName: ab
+      } = sb.getMetaInfo(bb);
+      ab !== bb && (kb.rootName = ab);
+      const Tb = sb.getItemStat(bb, "armourReduction");
+      return void 0 !== Tb && null !== Tb && (kb.armourReduction = Tb), kb
+    }(0, fb.w)((bb => {
+      Qb = bb
     }));
-    const ik = (0, Xk.h)("DisplayName", "Description");
+    const Vb = (0, Tb.g)("DisplayName", "Description");
 
-    function Yk() {
-      return Boolean(ak.b.get("useInventory") && ak.b.get("useFullInventory"))
+    function Lb() {
+      return Boolean(ab.e.get("useInventory") && ab.e.get("useFullInventory"))
     }
-    let Lk = null;
-    const Ok = {
+    let ub = null;
+    const Yb = {
         inventory: function() {
-          const kk = yk.d.states.inventory;
-          let Fk = null;
-          const Bk = kk => {
-            var Bk;
-            return null === kk.chest ? kk : ((null === (Bk = Fk) || void 0 === Bk ? void 0 : Bk.from) === kk && Fk.chestVersion === (0, ek.d)() || (Fk = {
-              from: kk,
-              chestVersion: (0, ek.d)(),
+          const bb = lb.c.states.inventory;
+          let cb = null;
+          const sb = bb => {
+            var sb;
+            return null === bb.chest ? bb : ((null === (sb = cb) || void 0 === sb ? void 0 : sb.from) === bb && cb.chestVersion === (0, mb.e)() || (cb = {
+              from: bb,
+              chestVersion: (0, mb.e)(),
               view: {
-                ...kk,
-                chest: (0, ek.j)(kk.chest)
+                ...bb,
+                chest: (0, mb.j)(bb.chest)
               }
-            }), Fk.view)
+            }), cb.view)
           };
           return {
-            current: () => Bk(kk.current()),
-            watch: Fk => kk.watch((kk => {
-              Fk(Bk(kk))
+            current: () => sb(bb.current()),
+            watch: cb => bb.watch((bb => {
+              cb(sb(bb))
             }))
           }
         }(),
-        crafting: yk.d.states.crafting,
+        crafting: lb.c.states.crafting,
         stationItems: {
           current() {
-            var kk;
-            return (null === (kk = Lk) || void 0 === kk ? void 0 : kk.namesVersion) !== (0, bk.h)() && (Lk = {
-              namesVersion: (0, bk.h)(),
+            var bb;
+            return (null === (bb = ub) || void 0 === bb ? void 0 : bb.namesVersion) !== (0, Ub.h)() && (ub = {
+              namesVersion: (0, Ub.h)(),
               items: {
-                enchantable: mk((kk => {
-                  const Fk = (0, bk.c)(kk);
-                  return void 0 !== Fk && null !== fk && fk.enchantmentPerksOf(Fk).length > 0 || void 0
+                enchantable: eb((bb => {
+                  const cb = (0, Ub.b)(bb);
+                  return void 0 !== cb && null !== Qb && Qb.enchantmentPerksOf(cb).length > 0 || void 0
                 })),
-                salvageable: mk((kk => !(!Wk(kk) || null === (0, wk.c)(kk)) || void 0))
+                salvageable: eb((bb => !(!Cb(bb) || null === (0, Ib.e)(bb)) || void 0))
               }
-            }), Lk.items
+            }), ub.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let kk = null;
-          const Fk = () => {
-            var Fk;
-            return (null === (Fk = kk) || void 0 === Fk ? void 0 : Fk.namesVersion) !== (0, bk.h)() && (kk = {
-              namesVersion: (0, bk.h)(),
-              infos: mk(vk)
-            }), kk.infos
+          let bb = null;
+          const cb = () => {
+            var cb;
+            return (null === (cb = bb) || void 0 === cb ? void 0 : cb.namesVersion) !== (0, Ub.h)() && (bb = {
+              namesVersion: (0, Ub.h)(),
+              infos: eb(Nb)
+            }), bb.infos
           };
           return {
-            current: Fk,
-            watch: Bk => (0, Xk.r)((Rk => {
-              Rk.some(ik) && (kk = null, Bk(Fk()))
+            current: cb,
+            watch: sb => (0, Tb.p)((kb => {
+              kb.some(Vb) && (bb = null, sb(cb()))
             }))
           }
         }(),
-        creativeVisibility: (0, Xk.n)((function() {
-          const kk = {};
-          for (const tk of null !== (Fk = null === (Bk = fk) || void 0 === Bk ? void 0 : Bk.creativeItemIds()) && void 0 !== Fk ? Fk : []) {
-            var Fk, Bk, Xk, wk;
-            const dk = (0, bk.f)(tk);
-            if (void 0 === dk) continue;
-            const sk = null !== (Xk = ak.b.get((0, Rk.h)(dk, "showInCreativeInven"))) && void 0 !== Xk ? Xk : null === (wk = fk) || void 0 === wk ? void 0 : wk.showInCreativeInvenOf(tk);
-            "boolean" === typeof sk && (kk[dk] = sk)
+        creativeVisibility: (0, Tb.k)((function() {
+          const bb = {};
+          for (const Wb of null !== (cb = null === (sb = Qb) || void 0 === sb ? void 0 : sb.creativeItemIds()) && void 0 !== cb ? cb : []) {
+            var cb, sb, Tb, Ib;
+            const Hb = (0, Ub.f)(Wb);
+            if (void 0 === Hb) continue;
+            const fb = null !== (Tb = ab.e.get((0, kb.f)(Hb, "showInCreativeInven"))) && void 0 !== Tb ? Tb : null === (Ib = Qb) || void 0 === Ib ? void 0 : Ib.showInCreativeInvenOf(Wb);
+            "boolean" === typeof fb && (bb[Hb] = fb)
           }
           return {
-            publicLobby: (0, tk.N)((0, dk.e)().lobbyName),
-            shownInGame: kk
+            publicLobby: (0, Wb.F)((0, Hb.d)().lobbyName),
+            shownInGame: bb
           }
-        }), ["connectedGameChanged"], (0, Xk.h)("ShowInCreativeInven")),
-        fullInventory: (0, Xk.n)(Yk, [], (0, Xk.k)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, Tb.g)("ShowInCreativeInven")),
+        fullInventory: (0, Tb.k)(Lb, [], (0, Tb.j)("useInventory", "useFullInventory"))
       },
-      Ek = {
-        inventoryDropRequested: yk.d.events.inventoryDropRequested,
-        chestToggled: yk.d.events.chestToggled,
-        chestRefreshed: yk.d.events.chestRefreshed,
-        inventorySynced: yk.d.events.inventorySynced,
-        enchantingTableOpened: yk.d.events.enchantingTableOpened
+      hb = {
+        inventoryDropRequested: lb.c.events.inventoryDropRequested,
+        chestToggled: lb.c.events.chestToggled,
+        chestRefreshed: lb.c.events.chestRefreshed,
+        inventorySynced: lb.c.events.inventorySynced,
+        enchantingTableOpened: lb.c.events.enchantingTableOpened
       },
-      Sk = {
-        removeInventoryItem: yk.d.commands.removeInventoryItem,
-        swapInventorySlots: yk.d.commands.swapInventorySlots,
-        moveInventoryItem: yk.d.commands.moveInventoryItem,
-        quickMoveInventoryItem: yk.d.commands.quickMoveInventoryItem,
-        closeChest: yk.d.commands.closeChest,
-        setInventoryOpen(kk) {
-          (0, Vk.i)(Jk.A.InventoryOpen, kk ? Jk.A.InventoryOpen : 0)
+      Jb = {
+        removeInventoryItem: lb.c.commands.removeInventoryItem,
+        swapInventorySlots: lb.c.commands.swapInventorySlots,
+        moveInventoryItem: lb.c.commands.moveInventoryItem,
+        quickMoveInventoryItem: lb.c.commands.quickMoveInventoryItem,
+        closeChest: lb.c.commands.closeChest,
+        setInventoryOpen(bb) {
+          (0, Mb.d)(Xb.z.InventoryOpen, bb ? Xb.z.InventoryOpen : 0)
         },
-        focusCrafting: yk.d.commands.focusCrafting,
-        craftRecipe: yk.d.commands.craftRecipe,
-        salvageItem: yk.d.commands.salvageItem,
-        enchantItem: yk.d.commands.enchantItem,
-        changeIronChestPasskey(kk) {
-          var Fk;
+        focusCrafting: lb.c.commands.focusCrafting,
+        craftRecipe: lb.c.commands.craftRecipe,
+        salvageItem: lb.c.commands.salvageItem,
+        enchantItem: lb.c.commands.enchantItem,
+        changeIronChestPasskey(bb) {
+          var cb;
           let {
-            pos: Bk,
-            Gd: Rk
-          } = kk;
-          null === (Fk = (0, sk.g)()) || void 0 === Fk || Fk.send(Ak.b.ChangeIronChestPasskey, (0, Ak.g)({
-            xa: Bk,
-            Gd: Rk
+            pos: sb,
+            OH: kb
+          } = bb;
+          null === (cb = (0, fb.h)()) || void 0 === cb || cb.send(nb.c.ChangeIronChestPasskey, (0, nb.i)({
+            XT: sb,
+            OH: kb
           }))
         },
-        openIronChest(kk) {
-          var Fk;
+        openIronChest(bb) {
+          var cb;
           let {
-            pos: Bk,
-            Gd: Rk
-          } = kk;
-          null === (Fk = (0, sk.g)()) || void 0 === Fk || Fk.send(Ak.b.OpenIronChest, (0, Ak.A)({
-            xa: Bk,
-            Gd: Rk
+            pos: sb,
+            OH: kb
+          } = bb;
+          null === (cb = (0, fb.h)()) || void 0 === cb || cb.send(nb.c.OpenIronChest, (0, nb.B)({
+            XT: sb,
+            OH: kb
           }))
         }
       },
-      Nk = {
-        enchantingOffer: yk.d.queries.enchantingOffer
+      gb = {
+        enchantingOffer: lb.c.queries.enchantingOffer
       }
   },
-  40065: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Rk,
-      f: () => Vk,
-      h: () => bk,
-      k: () => ak,
-      n: () => tk,
-      r: () => wk,
-      t: () => sk
+  40070: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => kb,
+      g: () => Mb,
+      i: () => Ub,
+      l: () => ab,
+      p: () => Wb,
+      t: () => Ib,
+      u: () => fb
     });
-    class Rk extends Error {
+    class kb extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function tk(kk) {
-      return kk instanceof RangeError && /call stack/i.test(kk.message) || kk instanceof Error && "InternalError" === kk.name && /recursion/i.test(kk.message)
+    function Wb(bb) {
+      return bb instanceof RangeError && /call stack/i.test(bb.message) || bb instanceof Error && "InternalError" === bb.name && /recursion/i.test(bb.message)
     }
 
-    function ak(kk) {
-      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(kk))
+    function ab(bb) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(bb))
     }
-    const Xk = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const Tb = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function bk(kk) {
-      var Fk;
-      return kk instanceof WebAssembly.RuntimeError || kk instanceof Rk || tk(kk) && Xk.test(null !== (Fk = kk.stack) && void 0 !== Fk ? Fk : "")
-    }
-
-    function wk(kk, Fk) {
-      if (bk(kk)) throw kk;
-      console.error(Fk, kk)
+    function Ub(bb) {
+      var cb;
+      return bb instanceof WebAssembly.RuntimeError || bb instanceof kb || Wb(bb) && Tb.test(null !== (cb = bb.stack) && void 0 !== cb ? cb : "")
     }
 
-    function dk(kk, Fk, Bk, tk, ak) {
-      if (Fk % tk !== 0 || Fk + Bk > kk.byteLength) throw new Rk(`${ak}: ${Bk} bytes at ${Fk}, ${tk}-aligned, outside ${kk.byteLength} bytes of memory`)
+    function Ib(bb, cb) {
+      if (Ub(bb)) throw bb;
+      console.error(cb, bb)
     }
 
-    function sk(kk, Fk, Bk, Rk, tk) {
-      return 0 === Bk ? null : (dk(Fk, Bk, Rk * kk.BYTES_PER_ELEMENT, kk.BYTES_PER_ELEMENT, tk), new kk(Fk, Bk, Rk))
+    function Hb(bb, cb, sb, Wb, ab) {
+      if (cb % Wb !== 0 || cb + sb > bb.byteLength) throw new kb(`${ab}: ${sb} bytes at ${cb}, ${Wb}-aligned, outside ${bb.byteLength} bytes of memory`)
     }
 
-    function Vk(kk, Fk, Bk, Rk, tk) {
-      return 0 === Fk ? null : (dk(kk, Fk, Bk, Rk, tk), new DataView(kk, Fk, Bk))
+    function fb(bb, cb, sb, kb, Wb) {
+      return 0 === sb ? null : (Hb(cb, sb, kb * bb.BYTES_PER_ELEMENT, bb.BYTES_PER_ELEMENT, Wb), new bb(cb, sb, kb))
+    }
+
+    function Mb(bb, cb, sb, kb, Wb) {
+      return 0 === cb ? null : (Hb(bb, cb, sb, kb, Wb), new DataView(bb, cb, sb))
     }
   },
-  40015: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Rk,
-      d: () => mk,
-      g: () => yk,
-      h: () => fk,
-      k: () => Jk,
-      l: () => Ak,
-      n: () => sk,
-      o: () => Vk,
-      r: () => ek
+  40014: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => kb,
+      e: () => eb,
+      h: () => lb,
+      l: () => Qb,
+      p: () => Xb,
+      q: () => nb,
+      s: () => fb,
+      w: () => Mb,
+      y: () => mb
     });
-    class Rk extends Error {
-      constructor(kk) {
-        super(`the join's code did not load: ${kk instanceof Error?kk.message:String(kk)}`, {
-          cause: kk
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === kk || void 0 === kk ? void 0 : kk.request
+    class kb extends Error {
+      constructor(bb) {
+        super(`the join's code did not load: ${bb instanceof Error?bb.message:String(bb)}`, {
+          cause: bb
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === bb || void 0 === bb ? void 0 : bb.request
       }
     }
-    let tk = null,
-      ak = null,
-      Xk = null;
-    const bk = [];
-    let wk = null;
+    let Wb = null,
+      ab = null,
+      Tb = null;
+    const Ub = [];
+    let Ib = null;
 
-    function dk(kk, Fk) {
+    function Hb(bb, cb) {
       try {
-        kk(Fk)
-      } catch (Bk) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", Bk)
+        bb(cb)
+      } catch (sb) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", sb)
       }
     }
 
-    function sk() {
-      return wk
+    function fb() {
+      return Ib
     }
 
-    function Vk(kk) {
-      bk.push(kk), null !== wk && dk(kk, wk)
+    function Mb(bb) {
+      Ub.push(bb), null !== Ib && Hb(bb, Ib)
     }
 
-    function Jk(kk) {
-      return tk ??= Promise.all([Bk.e(69), Bk.e(94), Bk.e(214), Bk.e(74), Bk.e(215), Bk.e(189), Bk.e(93), Bk.e(259), Bk.e(187), Bk.e(262), Bk.e(199), Bk.e(186), Bk.e(200), Bk.e(136), Bk.e(85), Bk.e(114), Bk.e(237), Bk.e(53)]).then((() => Bk(41991))).then((Fk => {
-        Fk.loadAudio(kk), wk = Fk;
-        for (const kk of bk) dk(kk, Fk);
-        return Fk
-      })).catch((kk => {
-        throw tk = null, kk
-      })), tk
+    function Xb(bb) {
+      return Wb ??= Promise.all([sb.e(69), sb.e(94), sb.e(214), sb.e(74), sb.e(215), sb.e(189), sb.e(93), sb.e(259), sb.e(187), sb.e(262), sb.e(199), sb.e(186), sb.e(200), sb.e(136), sb.e(85), sb.e(114), sb.e(237), sb.e(53)]).then((() => sb(41933))).then((cb => {
+        cb.loadAudio(bb), Ib = cb;
+        for (const bb of Ub) Hb(bb, cb);
+        return cb
+      })).catch((bb => {
+        throw Wb = null, bb
+      })), Wb
     }
-    async function Ak(kk, Fk) {
+    async function nb(bb, cb) {
       try {
-        const Bk = await Jk(kk);
-        await Bk.loadClientGame(Fk)
-      } catch (Bk) {
-        throw new Rk(Bk)
+        const sb = await Xb(bb);
+        await sb.loadClientGame(cb)
+      } catch (sb) {
+        throw new kb(sb)
       }
     }
 
-    function ek(kk, Fk) {
-      ak = {
-        running: kk,
-        shell: Fk
+    function mb(bb, cb) {
+      ab = {
+        running: bb,
+        shell: cb
       }
     }
 
-    function yk() {
-      return Xk
+    function lb() {
+      return Tb
     }
-    async function fk(kk) {
-      const Fk = ak;
-      if ((null === Fk || void 0 === Fk ? void 0 : Fk.running) !== kk) throw new Error("the core's session has ended");
-      const Bk = await Jk(Fk.shell.audio).catch((kk => {
-        throw new Rk(kk)
+    async function Qb(bb) {
+      const cb = ab;
+      if ((null === cb || void 0 === cb ? void 0 : cb.running) !== bb) throw new Error("the core's session has ended");
+      const sb = await Xb(cb.shell.audio).catch((bb => {
+        throw new kb(bb)
       }));
-      if (null !== Xk) return Xk;
-      if (ak !== Fk || kk.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (Xk = Bk.startGameHost(kk, Fk.shell), null === Xk) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return Xk
+      if (null !== Tb) return Tb;
+      if (ab !== cb || bb.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (Tb = sb.startGameHost(bb, cb.shell), null === Tb) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return Tb
     }
 
-    function mk() {
-      null !== Xk && (null !== wk ? wk.endGameHost(Xk) : Xk.closeGame()), Xk = null, ak = null
+    function eb() {
+      null !== Tb && (null !== Ib ? Ib.endGameHost(Tb) : Tb.closeGame()), Tb = null, ab = null
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

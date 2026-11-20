@@ -1,397 +1,397 @@
 export const id = 97;
 export const ids = [97, 185];
 export const modules = {
-  8887: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      EverythingMenu: () => Bb
+  8815: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      EverythingMenu: () => kU
     });
-    var Rk = Bk(61),
-      tk = Bk(1020),
-      ak = Bk.n(tk),
-      Xk = Bk(1149),
-      bk = Bk(1028),
-      wk = Bk(1970),
-      dk = Bk(1083),
-      sk = Bk(1069);
+    var kb = sb(64),
+      Wb = sb(1033),
+      ab = sb.n(Wb),
+      Tb = sb(1197),
+      Ub = sb(1039),
+      Ib = sb(2001),
+      Hb = sb(1104),
+      fb = sb(1087);
 
-    function Vk(kk) {
+    function Mb(bb) {
       let {
-        items: Fk,
-        onClick: Bk,
-        selectedItemId: Rk,
-        className: tk,
-        padStartsOnTab: Vk = !0
-      } = kk;
+        items: cb,
+        onClick: sb,
+        selectedItemId: kb,
+        className: Wb,
+        padStartsOnTab: Mb = !0
+      } = bb;
       const {
-        t: Jk
-      } = (0, Xk.x)(), Ak = (0, dk.m)(), ek = [];
-      for (const ak of Fk) {
-        var yk;
-        const kk = ek[ek.length - 1];
-        var fk;
-        if (kk && kk.title === (null !== (yk = ak.section) && void 0 !== yk ? yk : null)) kk.items.push(ak);
-        else ek.push({
-          title: null !== (fk = ak.section) && void 0 !== fk ? fk : null,
-          items: [ak]
+        t: Xb
+      } = (0, Tb.E)(), nb = (0, Hb.j)(), mb = [];
+      for (const ab of cb) {
+        var lb;
+        const bb = mb[mb.length - 1];
+        var Qb;
+        if (bb && bb.title === (null !== (lb = ab.section) && void 0 !== lb ? lb : null)) bb.items.push(ab);
+        else mb.push({
+          title: null !== (Qb = ab.section) && void 0 !== Qb ? Qb : null,
+          items: [ab]
         })
       }
-      return (0, sk.jsx)("div", {
-        className: ak()("MenuSideBarBody", tk),
+      return (0, fb.jsx)("div", {
+        className: ab()("MenuSideBarBody", Wb),
         "data-pad-tabs": "2",
-        children: ek.map(((kk, Fk) => {
-          var tk;
-          return (0, sk.jsxs)("div", {
+        children: mb.map(((bb, cb) => {
+          var Wb;
+          return (0, fb.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [kk.title && (0, sk.jsx)("div", {
+            children: [bb.title && (0, fb.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: Jk(kk.title)
-            }), kk.items.map((kk => {
-              var Fk;
-              const tk = !!kk.iconElement || !!kk.faIcon;
-              return (0, sk.jsxs)("div", {
+              children: Xb(bb.title)
+            }), bb.items.map((bb => {
+              var cb;
+              const Wb = !!bb.iconElement || !!bb.faIcon;
+              return (0, fb.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": Rk === kk.id ? "true" : void 0,
-                "data-pad-default-focus": Vk && Rk === kk.id || void 0,
-                className: ak()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: Rk === kk.id
+                "data-pad-selected": kb === bb.id ? "true" : void 0,
+                "data-pad-default-focus": Mb && kb === bb.id || void 0,
+                className: ab()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: kb === bb.id
                 }),
                 onClick: () => {
-                  Bk(kk.id)
+                  sb(bb.id)
                 },
-                children: [tk && (0, sk.jsx)("div", {
+                children: [Wb && (0, fb.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (Fk = kk.iconElement) && void 0 !== Fk ? Fk : (0, sk.jsx)(bk.d, {
-                    name: kk.faIcon
+                  children: null !== (cb = bb.iconElement) && void 0 !== cb ? cb : (0, fb.jsx)(Ub.b, {
+                    name: bb.faIcon
                   })
-                }), (!Ak || !tk) && (0, sk.jsx)("div", {
-                  children: Jk(kk.title)
-                }), kk.redDot && (0, sk.jsx)(wk.d, {
+                }), (!nb || !Wb) && (0, fb.jsx)("div", {
+                  children: Xb(bb.title)
+                }), bb.redDot && (0, fb.jsx)(Ib.b, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, kk.id)
+              }, bb.id)
             }))]
-          }, null !== (tk = kk.title) && void 0 !== tk ? tk : Fk)
+          }, null !== (Wb = bb.title) && void 0 !== Wb ? Wb : cb)
         }))
       })
     }
-    var Jk = Bk(2789),
-      Ak = Bk(1096),
-      ek = Bk(2320),
-      yk = Bk(1090),
-      fk = Bk(1389),
-      mk = Bk(98),
-      Wk = Bk(1847),
-      vk = Bk(2159),
-      ik = Bk(2163),
-      Yk = Bk(1620),
-      Lk = Bk(1288),
-      Ok = Bk(4688),
-      Ek = Bk(22),
-      Sk = Bk(8891);
+    var Xb = sb(2749),
+      nb = sb(1117),
+      mb = sb(2337),
+      lb = sb(1113),
+      Qb = sb(1431),
+      eb = sb(117),
+      Cb = sb(1870),
+      Nb = sb(2168),
+      Vb = sb(2173),
+      Lb = sb(1664),
+      ub = sb(1327),
+      Yb = sb(4703),
+      hb = sb(19),
+      Jb = sb(8819);
 
-    function Nk(kk) {
+    function gb(bb) {
       let {
-        setApplySettingsCallback: Fk
-      } = kk;
+        setApplySettingsCallback: cb
+      } = bb;
       const {
-        clientEscMenuOptions: Bk
-      } = (0, Ek.h)(["clientEscMenuOptions"]), [tk, ak] = (0, Rk.useState)(!1), [Xk, bk] = (0, Rk.useState)(!1), [wk, dk] = (0, Rk.useState)(6400), [Vk, Jk] = (0, Rk.useState)(3600), [Ak, ek] = (0, Rk.useState)(!1), [yk, mk] = (0, Rk.useState)(!1);
+        clientEscMenuOptions: sb
+      } = (0, hb.p)(["clientEscMenuOptions"]), [Wb, ab] = (0, kb.useState)(!1), [Tb, Ub] = (0, kb.useState)(!1), [Ib, Hb] = (0, kb.useState)(6400), [Mb, Xb] = (0, kb.useState)(3600), [nb, mb] = (0, kb.useState)(!1), [lb, eb] = (0, kb.useState)(!1);
 
-      function Wk(kk) {
-        const Fk = "screenshot" === kk ? bk : ak;
-        Fk(!0);
-        const Bk = Ak ? "normals" : yk ? "depth" : null;
-        Sk.devTools.downloadScene(kk, {
-          width: wk,
-          height: Vk,
-          colouring: Bk
-        }).catch((kk => {
-          console.error("Couldn't download the scene", kk)
+      function Cb(bb) {
+        const cb = "screenshot" === bb ? Ub : ab;
+        cb(!0);
+        const sb = nb ? "normals" : lb ? "depth" : null;
+        Jb.devTools.downloadScene(bb, {
+          width: Ib,
+          height: Mb,
+          colouring: sb
+        }).catch((bb => {
+          console.error("Couldn't download the scene", bb)
         })).finally((() => {
-          Fk(!1)
+          cb(!1)
         }))
       }
-      return (0, sk.jsxs)("div", {
+      return (0, fb.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, sk.jsx)(Ok.e, {
+        children: [(0, fb.jsx)(Yb.d, {
           label: "Disable Ambient Occlusion",
-          checked: Bk.disableAmbientOcclusion,
-          onClick: kk => {
-            Ek.c.setClientEscMenuOptions({
-              disableAmbientOcclusion: kk
-            }), Fk((() => Ok.m))
+          checked: sb.disableAmbientOcclusion,
+          onClick: bb => {
+            hb.d.setClientEscMenuOptions({
+              disableAmbientOcclusion: bb
+            }), cb((() => Yb.m))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), Sk.devTools.supports("ambientLight") && (0, sk.jsx)(Ok.l, {
+        }), Jb.devTools.supports("ambientLight") && (0, fb.jsx)(Yb.i, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: Bk.ambientLightIntensity,
-          onChange: kk => {
-            Sk.devTools.setAmbientLightIntensity(kk).then((() => {
-              Ek.c.setClientEscMenuOptions({
-                ambientLightIntensity: kk
+          initValue: sb.ambientLightIntensity,
+          onChange: bb => {
+            Jb.devTools.setAmbientLightIntensity(bb).then((() => {
+              hb.d.setClientEscMenuOptions({
+                ambientLightIntensity: bb
               })
-            })).catch((kk => {
-              console.error("Couldn't set the ambient light", kk)
+            })).catch((bb => {
+              console.error("Couldn't set the ambient light", bb)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), Sk.devTools.supports("weaponRaycasts") && (0, sk.jsx)(Ok.e, {
+        }), Jb.devTools.supports("weaponRaycasts") && (0, fb.jsx)(Yb.d, {
           label: "Show Weapon Raycasts",
-          checked: Bk.showWeaponRaycasts,
-          onClick: kk => {
-            Ek.c.setClientEscMenuOptions({
-              showWeaponRaycasts: kk
+          checked: sb.showWeaponRaycasts,
+          onClick: bb => {
+            hb.d.setClientEscMenuOptions({
+              showWeaponRaycasts: bb
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), Sk.devTools.supports("sceneDownload") && (0, sk.jsxs)("div", {
+        }), Jb.devTools.supports("sceneDownload") && (0, fb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, sk.jsxs)("div", {
+          children: [(0, fb.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, sk.jsx)(Ok.e, {
+            children: [(0, fb.jsx)(Yb.d, {
               label: "Apply normal-based coloring",
-              checked: Ak,
-              onClick: kk => {
-                ek(kk), kk && mk(!1)
+              checked: nb,
+              onClick: bb => {
+                mb(bb), bb && eb(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, sk.jsx)(Ok.e, {
+            }), (0, fb.jsx)(Yb.d, {
               label: "Apply depth-based coloring",
-              checked: yk,
-              onClick: kk => {
-                mk(kk), kk && ek(!1)
+              checked: lb,
+              onClick: bb => {
+                eb(bb), bb && mb(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, sk.jsxs)("div", {
+            }), (0, fb.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, sk.jsx)("div", {
+              children: [(0, fb.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, sk.jsx)(Yk.e, {
+              }), (0, fb.jsx)(Lb.c, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (kk, Fk) => {
-                  const Bk = parseInt(kk) || 6400;
-                  dk(Bk)
+                onValueChange: (bb, cb) => {
+                  const sb = parseInt(bb) || 6400;
+                  Hb(sb)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: wk.toString()
-              }), (0, sk.jsx)("span", {
+                defaultValue: Ib.toString()
+              }), (0, fb.jsx)("span", {
                 children: "X"
-              }), (0, sk.jsx)(Yk.e, {
+              }), (0, fb.jsx)(Lb.c, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (kk, Fk) => {
-                  const Bk = parseInt(kk) || 3600;
-                  Jk(Bk)
+                onValueChange: (bb, cb) => {
+                  const sb = parseInt(bb) || 3600;
+                  Xb(sb)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: Vk.toString()
+                defaultValue: Mb.toString()
               })]
-            }), (0, sk.jsxs)("div", {
+            }), (0, fb.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, sk.jsxs)(fk.g, {
+              children: [(0, fb.jsxs)(Qb.d, {
                 onClick: () => {
-                  Wk("screenshot")
+                  Cb("screenshot")
                 },
-                disabled: Xk,
-                children: [Xk && (0, sk.jsx)(Lk.b, {}), "Download Screenshot"]
-              }), (0, sk.jsxs)(fk.g, {
+                disabled: Tb,
+                children: [Tb && (0, fb.jsx)(ub.d, {}), "Download Screenshot"]
+              }), (0, fb.jsxs)(Qb.d, {
                 onClick: () => {
-                  Wk("glb")
+                  Cb("glb")
                 },
-                disabled: tk,
-                children: [tk && (0, sk.jsx)(Lk.b, {}), "Download GLB"]
+                disabled: Wb,
+                children: [Wb && (0, fb.jsx)(ub.d, {}), "Download GLB"]
               })]
             })]
-          }), (0, sk.jsx)("div", {
+          }), (0, fb.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var Hk = Bk(132),
-      uk = Bk(1101),
-      Mk = Bk(1154),
-      gk = Bk(2795),
-      Uk = Bk(1459),
-      ck = Bk(1219),
-      Gk = Bk(1183),
-      Tk = Bk(2883),
-      rk = Bk(1945),
-      Dk = Bk(1441),
-      zk = Bk(291),
-      Pk = Bk(2170),
-      hk = Bk(2182),
-      qk = Bk(2553),
-      Ck = Bk(1594),
-      Zk = Bk(2855),
-      pk = Bk(2824),
-      Kk = Bk(2885),
-      xk = Bk(194);
+    var Bb = sb(167),
+      tb = sb(1126),
+      yb = sb(1208),
+      Pb = sb(2752),
+      Db = sb(1495),
+      Eb = sb(1271),
+      ib = sb(1246),
+      Ob = sb(2832),
+      Gb = sb(1974),
+      Kb = sb(1474),
+      Zb = sb(344),
+      zb = sb(2180),
+      qb = sb(2195),
+      db = sb(2539),
+      Ab = sb(1629),
+      wb = sb(2811),
+      rb = sb(2785),
+      ob = sb(2840),
+      Sb = sb(232);
 
-    function jk(kk) {
+    function Rb(bb) {
       const {
-        t: Fk,
-        selectedLanguage: Bk
-      } = (0, Xk.x)(), {
-        userContext: tk
-      } = (0, Ak.e)(), {
-        superRankInfo: ak
-      } = tk, bk = kk && ((0, zk.Dc)(ak) || tk.ranksMayChange) && (0, hk.purchasesAllowed)(), {
-        accountId: wk,
-        data: dk
-      } = (0, qk.h)(Zk.b, bk);
-      if ((0, Rk.useEffect)((() => {
-          if (bk) return Zk.b.watchAccount(), Ck.b.addRefetchListener("billing", (kk => {
-            "reconnected" === kk ? Zk.b.refreshAfterReconnect() : Zk.b.refresh()
+        t: cb,
+        selectedLanguage: sb
+      } = (0, Tb.E)(), {
+        userContext: Wb
+      } = (0, nb.c)(), {
+        superRankInfo: ab
+      } = Wb, Ub = bb && ((0, Zb.Ac)(ab) || Wb.ranksMayChange) && (0, qb.purchasesAllowed)(), {
+        accountId: Ib,
+        data: Hb
+      } = (0, db.l)(wb.c, Ub);
+      if ((0, kb.useEffect)((() => {
+          if (Ub) return wb.c.watchAccount(), Ab.c.addRefetchListener("billing", (bb => {
+            "reconnected" === bb ? wb.c.refreshAfterReconnect() : wb.c.refresh()
           }))
-        }), [bk]), !bk || !(0, zk.Dc)(ak) || null === dk || wk !== tk.whamm) return null;
-      const sk = function(kk, Fk, Bk) {
-        const Rk = Kk.g[(0, Kk.c)(Kk.g, Fk)],
-          tk = void 0 === Rk ? void 0 : (0, xk.d)(kk.entitlements, Rk.entitlementId);
-        return void 0 === tk || null === tk.expiresAt || (0, pk.c)(tk) <= Bk ? null : tk.willRenew && null === tk.billingIssueDetectedAt ? {
+        }), [Ub]), !Ub || !(0, Zb.Ac)(ab) || null === Hb || Ib !== Wb.whamm) return null;
+      const fb = function(bb, cb, sb) {
+        const kb = ob.e[(0, ob.b)(ob.e, cb)],
+          Wb = void 0 === kb ? void 0 : (0, Sb.e)(bb.entitlements, kb.entitlementId);
+        return void 0 === Wb || null === Wb.expiresAt || (0, rb.f)(Wb) <= sb ? null : Wb.willRenew && null === Wb.billingIssueDetectedAt ? {
           renews: !0,
-          at: Math.max(tk.expiresAt, Bk)
+          at: Math.max(Wb.expiresAt, sb)
         } : {
           renews: !1,
-          at: (0, pk.c)(tk)
+          at: (0, rb.f)(Wb)
         }
-      }(dk, ak.tier, Date.now());
-      if (null === sk) return null;
-      const Vk = sk.renews ? "store:renewsOn" : "store:endsOn";
-      return Fk(Vk, {
-        date: new Date(sk.at).toLocaleDateString((0, Xk.j)(Bk.code, Vk), {
+      }(Hb, ab.tier, Date.now());
+      if (null === fb) return null;
+      const Mb = fb.renews ? "store:renewsOn" : "store:endsOn";
+      return cb(Mb, {
+        date: new Date(fb.at).toLocaleDateString((0, Tb.m)(sb.code, Mb), {
           year: "numeric",
           month: "short",
           day: "numeric"
         })
       })
     }
-    var lk = Bk(1312),
-      nk = Bk(1160),
-      Ik = Bk(4599),
-      Qk = Bk(1418),
-      kF = Bk(3458),
-      FF = Bk(2144);
+    var vb = sb(1341),
+      Fb = sb(1222),
+      xb = sb(4600),
+      jb = sb(1454),
+      pb = sb(3444),
+      bc = sb(2158);
 
-    function BF(kk) {
+    function cc(bb) {
       let {
-        showing: Fk
-      } = kk;
+        showing: cb
+      } = bb;
       const {
-        t: Bk
-      } = (0, Xk.x)(), {
-        data: Rk,
-        failed: tk
-      } = (0, qk.h)(kF.d, Fk);
-      return 0 === (null === Rk || void 0 === Rk ? void 0 : Rk.length) || null === Rk && !tk ? null : (0, sk.jsxs)("div", {
+        t: sb
+      } = (0, Tb.E)(), {
+        data: kb,
+        failed: Wb
+      } = (0, db.l)(pb.d, cb);
+      return 0 === (null === kb || void 0 === kb ? void 0 : kb.length) || null === kb && !Wb ? null : (0, fb.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, sk.jsx)("div", {
+        children: [(0, fb.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: Bk("paymentHistory:title")
-        }), null === Rk && tk && (0, sk.jsx)("div", {
+          children: sb("paymentHistory:title")
+        }), null === kb && Wb && (0, fb.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: Bk("paymentHistory:loadFailed")
-        }), null !== Rk && (0, sk.jsx)("ul", {
+          children: sb("paymentHistory:loadFailed")
+        }), null !== kb && (0, fb.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: Rk.map((kk => (0, sk.jsxs)("li", {
+          children: kb.map((bb => (0, fb.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, sk.jsx)(FF.e, {
-              entry: kk
-            }), (0, sk.jsxs)("div", {
+            children: [(0, fb.jsx)(bc.e, {
+              entry: bb
+            }), (0, fb.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, sk.jsx)("div", {
-                children: (0, FF.k)(Bk, kk)
-              }), (0, sk.jsxs)("div", {
+              children: [(0, fb.jsx)("div", {
+                children: (0, bc.i)(sb, bb)
+              }), (0, fb.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(kk.at).toLocaleDateString(), "number" === typeof kk.orderId && ` \xb7 ${Bk("paymentHistory:order",{orderId:kk.orderId})}`]
+                children: [new Date(bb.at).toLocaleDateString(), "number" === typeof bb.orderId && ` \xb7 ${sb("paymentHistory:order",{orderId:bb.orderId})}`]
               })]
             })]
-          }, (0, kF.c)(kk))))
+          }, (0, pb.b)(bb))))
         })]
       })
     }
-    var RF = Bk(1802),
-      tF = Bk(1195),
-      aF = Bk(1300),
-      XF = Bk(1259),
-      bF = Bk(1698),
-      wF = Bk(2807);
-    async function dF() {
+    var sc = sb(1826),
+      kc = sb(1255),
+      Wc = sb(1332),
+      ac = sb(1302),
+      Tc = sb(1753),
+      Uc = sb(2775);
+    async function Ic() {
       try {
-        return function(kk) {
-          const Fk = new Map;
+        return function(bb) {
+          const cb = new Map;
           for (const {
-              store: Bk,
-              status: Rk,
-              autoRenewStatus: tk,
-              managementUrl: ak
+              store: sb,
+              status: kb,
+              autoRenewStatus: Wb,
+              managementUrl: ab
             }
-            of Object.values(kk.subscriptions)) !(0, pk.g)(Bk) || (0, pk.k)(Rk) || "willNotRenew" === tk || Fk.has(Bk) || Fk.set(Bk, null !== ak && void 0 !== ak ? ak : pk.m[Bk]);
-          return Array.from(Fk, (kk => {
-            let [Fk, Bk] = kk;
+            of Object.values(bb.subscriptions)) !(0, rb.j)(sb) || (0, rb.n)(kb) || "willNotRenew" === Wb || cb.has(sb) || cb.set(sb, null !== ab && void 0 !== ab ? ab : rb.q[sb]);
+          return Array.from(cb, (bb => {
+            let [cb, sb] = bb;
             return {
-              store: Fk,
-              managementUrl: Bk
+              store: cb,
+              managementUrl: sb
             }
           }))
-        }(await (0, bF.m)((0, wF.f)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (kk) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", kk), null
+        }(await (0, Tc.m)((0, Uc.e)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (bb) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", bb), null
       }
     }
-    var sF = Bk(279),
-      VF = Bk(2376);
-    const JF = {
+    var Hc = sb(334),
+      fc = sb(2383);
+    const Mc = {
       appStore: {
         name: "App Store",
-        ...sF.Ub.appStore
+        ...Hc.$b.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...sF.Ub.googlePlay
+        ...Hc.$b.googlePlay
       },
       discord: {
         name: "Discord",
-        ...sF.Ub.discord
+        ...Hc.$b.discord
       }
     };
 
-    function AF(kk) {
+    function Xc(bb) {
       let {
-        warning: Fk,
-        subscriptions: Bk
-      } = kk;
+        warning: cb,
+        subscriptions: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, Xk.x)();
-      return null !== Bk && 0 === Bk.length ? (0, sk.jsx)(sk.Fragment, {
-        children: Rk(Fk)
-      }) : (0, sk.jsxs)("div", {
+        t: kb
+      } = (0, Tb.E)();
+      return null !== sb && 0 === sb.length ? (0, fb.jsx)(fb.Fragment, {
+        children: kb(cb)
+      }) : (0, fb.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [Rk(Fk), null === Bk && (0, sk.jsx)("div", {
+        children: [kb(cb), null === sb && (0, fb.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: Rk("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== Bk && (0, sk.jsxs)(sk.Fragment, {
-          children: [(0, sk.jsx)("div", {
+          children: kb("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== sb && (0, fb.jsxs)(fb.Fragment, {
+          children: [(0, fb.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: Rk("auth:deleteAccountStoreSubscriptions")
-          }), (0, sk.jsx)(VF.d, {
+            children: kb("auth:deleteAccountStoreSubscriptions")
+          }), (0, fb.jsx)(fc.b, {
             className: "DeleteAccountSubtitleLinks",
-            links: Bk.map((kk => {
+            links: sb.map((bb => {
               let {
-                store: Fk,
-                managementUrl: Bk
-              } = kk;
+                store: cb,
+                managementUrl: sb
+              } = bb;
               return {
-                ...JF[Fk],
-                url: Bk
+                ...Mc[cb],
+                url: sb
               }
             }))
           })]
@@ -399,703 +399,703 @@ export const modules = {
       })
     }
 
-    function eF(kk) {
+    function nc(bb) {
       let {
-        showing: Fk
-      } = kk;
+        showing: cb
+      } = bb;
       const {
-        userContext: Bk,
-        isUserContextUpdating: tk
-      } = (0, Ak.e)(), {
-        t: ak
-      } = (0, Xk.x)(), [bk, wk] = (0, Rk.useState)(!1), [dk, Vk] = (0, Rk.useState)(null), Jk = (0, Rk.useRef)(Fk);
-      (0, Rk.useEffect)((() => (Jk.current = Fk, () => {
-        Jk.current = !1
-      })), [Fk]);
-      const ek = tk || bk;
-      async function yk() {
-        const kk = function(kk) {
-            if ((0, Hk.c)()) return "auth:discordActivityDeleteAccountWarning";
-            return kk ? "auth:deleteAccountWarning" : "auth:deleteGuestAccountWarning"
-          }(Bk.isLoggedIn()),
-          Fk = (0, RF.b)(Bk.availableUserContextTypes) ? await dF() : [];
-        if (!Jk.current) return tF.c.ok();
-        if (!0 !== await aF.NotificationProvider.showPromptPopup({
+        userContext: sb,
+        isUserContextUpdating: Wb
+      } = (0, nb.c)(), {
+        t: ab
+      } = (0, Tb.E)(), [Ub, Ib] = (0, kb.useState)(!1), [Hb, Mb] = (0, kb.useState)(null), Xb = (0, kb.useRef)(cb);
+      (0, kb.useEffect)((() => (Xb.current = cb, () => {
+        Xb.current = !1
+      })), [cb]);
+      const mb = Wb || Ub;
+      async function lb() {
+        const bb = function(bb) {
+            if ((0, Bb.b)()) return "auth:discordActivityDeleteAccountWarning";
+            return bb ? "auth:deleteAccountWarning" : "auth:deleteGuestAccountWarning"
+          }(sb.isLoggedIn()),
+          cb = (0, sc.c)(sb.availableUserContextTypes) ? await Ic() : [];
+        if (!Xb.current) return kc.d.ok();
+        if (!0 !== await Wc.NotificationProvider.showPromptPopup({
             title: "auth:deleteAccountPopupTitleNamed",
             textOpts: {
               title: {
-                playerName: (0, ck.d)(Bk.getPlayerName(), !mk.featureFlags.canSeeRealPlayerNames)
+                playerName: (0, Eb.d)(sb.getPlayerName(), !eb.featureFlags.canSeeRealPlayerNames)
               }
             },
-            subtitle: (0, sk.jsx)(AF, {
-              warning: kk,
-              subscriptions: Fk
+            subtitle: (0, fb.jsx)(Xc, {
+              warning: bb,
+              subscriptions: cb
             }),
             confirmText: "auth:deleteAccount",
             destructive: !0,
             confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
             cancelText: "general:cancel",
             cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-          }).getResult()) return tF.c.ok();
-        const Rk = await (0, uk.postJsonWithMetricsCookiesAndJsonResponse)(`${Mk.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-          gameState: Ek.c.get("gameState")
+          }).getResult()) return kc.d.ok();
+        const kb = await (0, tb.postJsonWithMetricsCookiesAndJsonResponse)(`${yb.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+          gameState: hb.d.get("gameState")
         }, {
           retries: 3
-        }, Bk.getMetricsCookies());
-        if (Rk.error) return tF.c.error(Rk.error);
-        if ((0, Hk.c)()) {
-          (await XF.j.discordActivity()).exit("User deleted their account")
+        }, sb.getMetricsCookies());
+        if (kb.error) return kc.d.error(kb.error);
+        if ((0, Bb.b)()) {
+          (await ac.k.discordActivity()).exit("User deleted their account")
         }
-        return (0, uk.forgetStoredGuestAccount)(Bk.whamm), (0, uk.forceGlobalSignOut)(!0), tF.c.ok()
+        return (0, tb.forgetStoredGuestAccount)(sb.whamm), (0, tb.forceGlobalSignOut)(!0), kc.d.ok()
       }
-      return (0, sk.jsxs)("div", {
+      return (0, fb.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, sk.jsxs)(fk.J, {
+        children: [(0, fb.jsxs)(Qb.G, {
           onClick: async function() {
-            if (!bk) {
-              wk(!0);
+            if (!Ub) {
+              Ib(!0);
               try {
-                const kk = await yk(),
-                  Fk = kk.isError() ? kk.asError().message : null;
-                Vk(Fk)
-              } catch (kk) {
-                console.error("Failed to delete account:", kk), Vk(ak("auth:genericDeleteAccountError"))
+                const bb = await lb(),
+                  cb = bb.isError() ? bb.asError().message : null;
+                Mb(cb)
+              } catch (bb) {
+                console.error("Failed to delete account:", bb), Mb(ab("auth:genericDeleteAccountError"))
               }
-              wk(!1)
+              Ib(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: ek,
-          children: [ek && (0, sk.jsx)("div", {
+          disabled: mb,
+          children: [mb && (0, fb.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, sk.jsx)(Lk.b, {})
-          }), ak("auth:deleteAccount")]
-        }), dk && (0, sk.jsx)("div", {
+            children: (0, fb.jsx)(ub.d, {})
+          }), ab("auth:deleteAccount")]
+        }), Hb && (0, fb.jsx)("div", {
           className: "DeleteAccountError",
-          children: dk
+          children: Hb
         })]
       })
     }
-    var yF = Bk(3387),
-      fF = Bk(3405),
-      mF = Bk(3397);
+    var mc = sb(3379),
+      lc = sb(3392),
+      Qc = sb(3388);
 
-    function WF(kk) {
+    function ec(bb) {
       let {
-        showing: Fk
-      } = kk;
+        showing: cb
+      } = bb;
       const {
-        t: Bk
-      } = (0, Xk.x)(), {
-        data: Rk,
-        failed: tk
-      } = (0, qk.h)(yF.e, Fk), ak = null === Rk ? null : (0, yF.h)(Rk);
-      return (0, sk.jsxs)("div", {
+        t: sb
+      } = (0, Tb.E)(), {
+        data: kb,
+        failed: Wb
+      } = (0, db.l)(mc.c, cb), ab = null === kb ? null : (0, mc.e)(kb);
+      return (0, fb.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, sk.jsx)("div", {
+        children: [(0, fb.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: Bk("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === ak && !tk && (0, sk.jsx)(Lk.b, {}), null === ak && tk && (0, sk.jsxs)("div", {
+          children: sb("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === ab && !Wb && (0, fb.jsx)(ub.d, {}), null === ab && Wb && (0, fb.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [Bk("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, sk.jsx)(fk.g, {
+          children: [sb("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, fb.jsx)(Qb.d, {
             className: "SmallTextLight",
             onClick: () => {
-              yF.e.refresh()
+              mc.c.refresh()
             },
-            children: Bk("general:tryAgain")
+            children: sb("general:tryAgain")
           })]
-        }), 0 === (null === ak || void 0 === ak ? void 0 : ak.length) && (0, sk.jsx)("div", {
+        }), 0 === (null === ab || void 0 === ab ? void 0 : ab.length) && (0, fb.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: Bk("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== ak && ak.length > 0 && (0, sk.jsx)("ul", {
+          children: sb("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== ab && ab.length > 0 && (0, fb.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: ak.map((kk => {
+          children: ab.map((bb => {
             let {
-              name: Fk,
-              exclusion: Rk
-            } = kk;
-            const tk = mF.e[Rk];
-            return (0, sk.jsxs)("li", {
+              name: cb,
+              exclusion: kb
+            } = bb;
+            const Wb = Qc.f[kb];
+            return (0, fb.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, sk.jsx)("div", {
+              children: [(0, fb.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: Fk
-              }), (0, sk.jsx)(fk.j, {
+                children: cb
+              }), (0, fb.jsx)(Qb.h, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, fF.d)(tk, Fk, {
+                  (0, lc.g)(Wb, cb, {
                     chatMessage: null
                   })
                 },
-                children: Bk(mF.f[tk].text)
+                children: sb(Qc.i[Wb].text)
               })]
-            }, Fk)
+            }, cb)
           }))
         })]
       })
     }
-    const vF = (0, Rk.memo)((function(kk) {
-      var Fk;
+    const Cc = (0, kb.memo)((function(bb) {
+      var cb;
       let {
-        showing: Bk,
-        inGame: tk
-      } = kk;
+        showing: sb,
+        inGame: Wb
+      } = bb;
       const {
-        t: wk,
-        selectedLanguage: dk
-      } = (0, Xk.x)(), {
-        hideSocialLocationFrom: Vk
-      } = (0, Ek.h)(["hideSocialLocationFrom"]), ek = (0, Jk.b)(), {
-        userContext: yk,
-        isUserContextUpdating: Wk
-      } = (0, Ak.e)(), [vk, ik] = (0, Rk.useState)(null !== (Fk = yk.getPlayerName()) && void 0 !== Fk ? Fk : ""), [Sk, Nk] = (0, Rk.useState)(null), {
-        purchasing: qk,
-        outcome: Ck,
-        purchase: Zk
-      } = (0, gk.d)("/super-rank-welcome"), pk = (0, zk.ic)((0, Xk.j)(dk.code, "general:timeLeft"), yk.superRankInfo), Kk = jk(Bk), xk = pk ? wk("general:timeLeft", {
-        time: pk
-      }) : Kk, [kF, FF] = (0, Rk.useState)(!1), [RF, tF] = (0, Rk.useState)(!1), aF = (0, Rk.useRef)(null), XF = (0, Rk.useRef)(null), bF = (0, rk.e)({
+        t: Ib,
+        selectedLanguage: Hb
+      } = (0, Tb.E)(), {
+        hideSocialLocationFrom: Mb
+      } = (0, hb.p)(["hideSocialLocationFrom"]), mb = (0, Xb.b)(), {
+        userContext: lb,
+        isUserContextUpdating: Cb
+      } = (0, nb.c)(), [Nb, Vb] = (0, kb.useState)(null !== (cb = lb.getPlayerName()) && void 0 !== cb ? cb : ""), [Jb, gb] = (0, kb.useState)(null), {
+        purchasing: db,
+        outcome: Ab,
+        purchase: wb
+      } = (0, Pb.b)("/super-rank-welcome"), rb = (0, Zb.hc)((0, Tb.m)(Hb.code, "general:timeLeft"), lb.superRankInfo), ob = Rb(sb), Sb = rb ? Ib("general:timeLeft", {
+        time: rb
+      }) : ob, [pb, bc] = (0, kb.useState)(!1), [sc, kc] = (0, kb.useState)(!1), Wc = (0, kb.useRef)(null), ac = (0, kb.useRef)(null), Tc = (0, Gb.f)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), wF = null === bF, dF = null !== bF && void 0 !== bF ? bF : [], sF = yk !== uk.NULL_USER_CONTEXT && !yk.isLoggedIn(), VF = sF && 0 !== (null === bF || void 0 === bF ? void 0 : bF.length), [JF, AF] = (0, Rk.useState)([]), [yF, fF] = (0, Rk.useState)(!1), mF = yk.playerHasRank("youtuber"), vF = (0, Rk.useCallback)((() => Dk.b.getPlayerProfile(yk, {
-        lowerCaseName: yk.getPlayerName().toLowerCase()
-      }).then((kk => {
-        AF(kk.socialLinks)
-      })).catch((kk => {
-        console.error("Failed to refresh social links", kk)
-      }))), [yk]);
+      }), Uc = null === Tc, Ic = null !== Tc && void 0 !== Tc ? Tc : [], Hc = lb !== tb.NULL_USER_CONTEXT && !lb.isLoggedIn(), fc = Hc && 0 !== (null === Tc || void 0 === Tc ? void 0 : Tc.length), [Mc, Xc] = (0, kb.useState)([]), [mc, lc] = (0, kb.useState)(!1), Qc = lb.playerHasRank("youtuber"), Cc = (0, kb.useCallback)((() => Kb.b.getPlayerProfile(lb, {
+        lowerCaseName: lb.getPlayerName().toLowerCase()
+      }).then((bb => {
+        Xc(bb.socialLinks)
+      })).catch((bb => {
+        console.error("Failed to refresh social links", bb)
+      }))), [lb]);
 
-      function YF(kk) {
-        kk !== vk && ((0, ck.m)(kk) ? (kk = (0, ck.q)(kk), Nk("Only letters, numbers, and _")) : Nk(null), aF.current && (aF.current.value = kk), ik(kk))
+      function Vc(bb) {
+        bb !== Nb && ((0, Eb.q)(bb) ? (bb = (0, Eb.t)(bb), gb("Only letters, numbers, and _")) : gb(null), Wc.current && (Wc.current.value = bb), Vb(bb))
       }
-      return (0, Rk.useEffect)((() => (!0 === Bk ? (clearInterval(XF.current), XF.current = setInterval(ek, 1e3)) : clearInterval(XF.current), () => {
-        clearInterval(XF.current)
-      })), [Bk, ek]), (0, Rk.useEffect)((() => {
-        var kk;
-        ik(null !== (kk = yk.getPlayerName()) && void 0 !== kk ? kk : "")
-      }), [yk]), (0, Rk.useEffect)((() => {
-        if (!Bk || !mF || Wk) return;
-        let kk = !1;
-        return fF(!0), AF([]), Dk.b.getPlayerProfile(yk, {
-          lowerCaseName: yk.getPlayerName().toLowerCase()
-        }).then((Fk => {
-          kk || AF(Fk.socialLinks)
-        })).catch((kk => {
-          console.error("Failed to load social links", kk)
+      return (0, kb.useEffect)((() => (!0 === sb ? (clearInterval(ac.current), ac.current = setInterval(mb, 1e3)) : clearInterval(ac.current), () => {
+        clearInterval(ac.current)
+      })), [sb, mb]), (0, kb.useEffect)((() => {
+        var bb;
+        Vb(null !== (bb = lb.getPlayerName()) && void 0 !== bb ? bb : "")
+      }), [lb]), (0, kb.useEffect)((() => {
+        if (!sb || !Qc || Cb) return;
+        let bb = !1;
+        return lc(!0), Xc([]), Kb.b.getPlayerProfile(lb, {
+          lowerCaseName: lb.getPlayerName().toLowerCase()
+        }).then((cb => {
+          bb || Xc(cb.socialLinks)
+        })).catch((bb => {
+          console.error("Failed to load social links", bb)
         })).finally((() => {
-          kk || fF(!1)
+          bb || lc(!1)
         })), () => {
-          kk = !0
+          bb = !0
         }
-      }), [Bk, mF, Wk, yk]), (0, sk.jsxs)("div", {
-        className: ak()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: tk
+      }), [sb, Qc, Cb, lb]), (0, fb.jsxs)("div", {
+        className: ab()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: Wb
         }),
-        children: [tk && (0, sk.jsx)("div", {
+        children: [Wb && (0, fb.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: wk("settingsMenu:accountSettingsInGameWarning")
-        }), (0, sk.jsxs)("div", {
+          children: Ib("settingsMenu:accountSettingsInGameWarning")
+        }), (0, fb.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, sk.jsxs)("div", {
+          children: [(0, fb.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [wk("homePage:discordNamePopupTitle"), (0, sk.jsxs)(Uk.LinkPreserveSearch, {
+            children: [Ib("homePage:discordNamePopupTitle"), (0, fb.jsxs)(Db.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, Gk.j)({
-                name: yk.getPlayerName()
+              to: (0, ib.k)({
+                name: lb.getPlayerName()
               }),
               onClick: () => {
-                Ek.c.set({
+                hb.d.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, sk.jsx)(bk.d, {
+              children: [(0, fb.jsx)(Ub.b, {
                 name: "arrow-up-right-from-square"
-              }), " ", wk("profileCard:viewProfile")]
+              }), " ", Ib("profileCard:viewProfile")]
             })]
-          }), (0, sk.jsxs)("div", {
+          }), (0, fb.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, sk.jsxs)("div", {
+            children: [(0, fb.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [mk.featureFlags.canChangeName && (0, sk.jsx)(Yk.e, {
+              children: [eb.featureFlags.canChangeName && (0, fb.jsx)(Lb.c, {
                 className: "EnterName",
-                placeholderText: wk("homePage:enterName"),
-                maxLength: ck.f,
-                defaultValue: vk,
-                onValueChange: kk => {
-                  YF(kk)
+                placeholderText: Ib("homePage:enterName"),
+                maxLength: Eb.l,
+                defaultValue: Nb,
+                onValueChange: bb => {
+                  Vc(bb)
                 },
-                forcedText: kF || !mk.featureFlags.canChangeName ? vk : null,
+                forcedText: pb || !eb.featureFlags.canChangeName ? Nb : null,
                 blurOnEnter: !0,
-                domRef: aF
-              }), (0, sk.jsx)(fk.g, {
+                domRef: Wc
+              }), (0, fb.jsx)(Qb.d, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  YF((0, ck.e)())
+                  Vc((0, Eb.h)())
                 },
-                children: (0, sk.jsx)(bk.d, {
+                children: (0, fb.jsx)(Ub.b, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !mk.featureFlags.canChangeName && (0, sk.jsx)("div", {
+              }), !eb.featureFlags.canChangeName && (0, fb.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, ck.d)(vk, !mk.featureFlags.canSeeRealPlayerNames)
+                children: (0, Eb.d)(Nb, !eb.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, sk.jsx)(fk.g, {
+            }), (0, fb.jsx)(Qb.d, {
               className: "ChooseNameButton",
-              disabled: kF || vk === yk.getPlayerName(),
+              disabled: pb || Nb === lb.getPlayerName(),
               onClick: () => {
-                vk.length < ck.j ? Nk(wk("homePage:changeNameMinLengthError", {
-                  length: ck.j
-                })) : vk.length > ck.f ? Nk(wk("homePage:changeNameMaxLengthError", {
-                  length: ck.f
-                })) : (FF(!0), Nk(null), async function(kk, Fk, Bk, Rk) {
-                  const tk = await (0, uk.postJsonWithMetricsCookiesAndJsonResponse)(`${Mk.clientSideServerUrls.indexUrl}/index/name/update`, {
-                    name: kk
+                Nb.length < Eb.n ? gb(Ib("homePage:changeNameMinLengthError", {
+                  length: Eb.n
+                })) : Nb.length > Eb.l ? gb(Ib("homePage:changeNameMaxLengthError", {
+                  length: Eb.l
+                })) : (bc(!0), gb(null), async function(bb, cb, sb, kb) {
+                  const Wb = await (0, tb.postJsonWithMetricsCookiesAndJsonResponse)(`${yb.clientSideServerUrls.indexUrl}/index/name/update`, {
+                    name: bb
                   }, {
                     retries: 3
-                  }, Fk.getMetricsCookies()).catch((kk => (console.error("Bad response from the server when trying to update name:", kk), {
+                  }, cb.getMetricsCookies()).catch((bb => (console.error("Bad response from the server when trying to update name:", bb), {
                     err: "An error occurred trying to change your name! Please report on discord what steps you took to get this error message."
                   })));
-                  tk.err ? (console.error("Error when trying to get with new name from DB", tk.err), Rk(tk.err)) : !0 === tk.nameExists ? Rk("Name is already taken") : Bk(kk)
-                }(vk, yk, (kk => {
-                  yk.setPlayerName(kk), FF(!1)
-                }), (kk => {
-                  Nk(kk), FF(!1)
+                  Wb.err ? (console.error("Error when trying to get with new name from DB", Wb.err), kb(Wb.err)) : !0 === Wb.nameExists ? kb("Name is already taken") : sb(bb)
+                }(Nb, lb, (bb => {
+                  lb.setPlayerName(bb), bc(!1)
+                }), (bb => {
+                  gb(bb), bc(!1)
                 })))
               },
-              children: wk("general:choose")
+              children: Ib("general:choose")
             })]
-          }), Sk && (0, sk.jsx)("div", {
+          }), Jb && (0, fb.jsx)("div", {
             className: "ChooseAccNameError",
-            children: Sk
+            children: Jb
           })]
-        }), (0, sk.jsx)(Ok.e, {
+        }), (0, fb.jsx)(Yb.d, {
           label: (() => {
-            if ((0, nk.q)(Vk)) {
-              const kk = (0, Xk.j)(dk.code, "general:timeLeft"),
-                Fk = (0, zk.gb)(kk, Date.now(), Vk + nk.m);
-              return `${wk("settingsMenu:hideSocialLocation")} (${wk("general:timeLeft",{time:Fk})})`
+            if ((0, Fb.k)(Mb)) {
+              const bb = (0, Tb.m)(Hb.code, "general:timeLeft"),
+                cb = (0, Zb.db)(bb, Date.now(), Mb + Fb.j);
+              return `${Ib("settingsMenu:hideSocialLocation")} (${Ib("general:timeLeft",{time:cb})})`
             }
-            return wk("settingsMenu:hideSocialLocation")
+            return Ib("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const kk = !(0, nk.q)(Vk);
-            (0, Qk.reportAnalyticsClick)({
+            const bb = !(0, Fb.k)(Mb);
+            (0, jb.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: kk ? "on" : "off"
-            }), tF(!0), Dk.b.setHideSocialLocation(yk, kk).then((() => {
-              Ek.c.set({
-                hideSocialLocationFrom: kk ? Date.now() : null
+              value: bb ? "on" : "off"
+            }), kc(!0), Kb.b.setHideSocialLocation(lb, bb).then((() => {
+              hb.d.set({
+                hideSocialLocationFrom: bb ? Date.now() : null
               })
             })).finally((() => {
-              tF(!1)
+              kc(!1)
             }))
           },
-          checked: (0, nk.q)(Vk),
-          disabled: RF
-        }), mF && (0, sk.jsxs)("div", {
+          checked: (0, Fb.k)(Mb),
+          disabled: sc
+        }), Qc && (0, fb.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, sk.jsx)("div", {
+          children: [(0, fb.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: wk("settingsMenu:socialLinks")
-          }), yF && (0, sk.jsx)(Lk.b, {}), !yF && (0, sk.jsx)(Ik.d, {
-            socialLinks: JF,
+            children: Ib("settingsMenu:socialLinks")
+          }), mc && (0, fb.jsx)(ub.d, {}), !mc && (0, fb.jsx)(xb.d, {
+            socialLinks: Mc,
             editable: !0,
-            userContext: yk,
-            onLinksUpdated: vF
+            userContext: lb,
+            onLinksUpdated: Cc
           })]
-        }), (0, sk.jsxs)("div", {
+        }), (0, fb.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, sk.jsx)("div", {
+          children: [(0, fb.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: wk(VF ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), wF && (0, sk.jsx)(Lk.b, {}), !wF && 0 === dF.length && (0, sk.jsx)("div", {
+            children: Ib(fc ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), Uc && (0, fb.jsx)(ub.d, {}), !Uc && 0 === Ic.length && (0, fb.jsx)("div", {
             className: "NoLoginOptions",
-            children: wk("auth:noLoginOptions")
-          }), !wF && dF.length > 0 && "crazygames" !== Hk.q && (0, sk.jsx)("div", {
+            children: Ib("auth:noLoginOptions")
+          }), !Uc && Ic.length > 0 && "crazygames" !== Bb.r && (0, fb.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: dF
-          }), !wF && dF.length > 0 && "crazygames" === Hk.q && (0, sk.jsxs)("div", {
+            children: Ic
+          }), !Uc && Ic.length > 0 && "crazygames" === Bb.r && (0, fb.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [dF[0], dF.length > 1 && (0, sk.jsxs)(sk.Fragment, {
-              children: [(0, sk.jsxs)("div", {
+            children: [Ic[0], Ic.length > 1 && (0, fb.jsxs)(fb.Fragment, {
+              children: [(0, fb.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, sk.jsx)("span", {
+                children: [(0, fb.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: wk("auth:legacyLoginOptions")
-                }), (0, sk.jsx)(lk.b, {
+                  children: Ib("auth:legacyLoginOptions")
+                }), (0, fb.jsx)(vb.c, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: wk("auth:legacyLoginOptionsInfo")
+                  hoverInfo: Ib("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, sk.jsx)("div", {
+              }), (0, fb.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: dF.slice(1)
+                children: Ic.slice(1)
               })]
             })]
-          }), mk.featureFlags.useLogin && (null !== yk.loggedInInfo || yk.isLoggedIn()) && (0, sk.jsxs)(sk.Fragment, {
-            children: [(0, sk.jsx)("div", {
+          }), eb.featureFlags.useLogin && (null !== lb.loggedInInfo || lb.isLoggedIn()) && (0, fb.jsxs)(fb.Fragment, {
+            children: [(0, fb.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, sk.jsxs)(fk.J, {
+            }), (0, fb.jsxs)(Qb.G, {
               onClick: () => {
-                (0, uk.forceGlobalSignOut)()
+                (0, tb.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, sk.jsx)(bk.d, {
+              children: [(0, fb.jsx)(Ub.b, {
                 name: "right-from-bracket"
-              }), wk("auth:signOut")]
+              }), Ib("auth:signOut")]
             })]
           })]
-        }), !yk.playerHasRank("super") && (0, hk.purchasesAllowed)() && (0, sk.jsxs)("div", {
+        }), !lb.playerHasRank("super") && (0, qb.purchasesAllowed)() && (0, fb.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, sk.jsxs)("div", {
+          children: [(0, fb.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, sk.jsx)(bk.d, {
+            children: [(0, fb.jsx)(Ub.b, {
               name: "bolt"
-            }), wk("homePage:superRank")]
-          }), (0, sk.jsxs)("div", {
+            }), Ib("homePage:superRank")]
+          }), (0, fb.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, sk.jsxs)(fk.o, {
+            children: [(0, fb.jsxs)(Qb.n, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Pk.m)({
+                (0, zb.o)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, sk.jsx)(bk.d, {
+              children: [(0, fb.jsx)(Ub.b, {
                 name: "bolt"
-              }), wk("homePage:getSuperRank")]
-            }), (0, sk.jsxs)(fk.o, {
+              }), Ib("homePage:getSuperRank")]
+            }), (0, fb.jsxs)(Qb.n, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Pk.m)({
+                (0, zb.o)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, sk.jsx)(bk.d, {
+              children: [(0, fb.jsx)(Ub.b, {
                 name: "bolt"
-              }), wk("homePage:giftSuperRank")]
+              }), Ib("homePage:giftSuperRank")]
             })]
           })]
-        }), yk.playerHasRank("super") && (0, sk.jsxs)("div", {
+        }), lb.playerHasRank("super") && (0, fb.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, sk.jsxs)("div", {
+          children: [(0, fb.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, sk.jsx)(bk.d, {
+            children: [(0, fb.jsx)(Ub.b, {
               name: "bolt"
-            }), wk("homePage:superRank"), xk && (0, sk.jsxs)("div", {
+            }), Ib("homePage:superRank"), Sb && (0, fb.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", xk, ")"]
+              children: ["(", Sb, ")"]
             })]
-          }), (0, hk.purchasesAllowed)() && (0, sk.jsxs)("div", {
+          }), (0, qb.purchasesAllowed)() && (0, fb.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, zk.Dc)(yk.superRankInfo) && (0, sk.jsxs)(fk.o, {
+            children: [!(0, Zb.Ac)(lb.superRankInfo) && (0, fb.jsxs)(Qb.n, {
               className: "AccountSettingsSuperRankProlong",
-              loading: qk,
+              loading: db,
               onClick: () => {
-                Zk(Tk.n.id, null)
+                wb(Ob.i.id, null)
               },
-              children: [(0, sk.jsx)(bk.d, {
+              children: [(0, fb.jsx)(Ub.b, {
                 name: "bolt"
-              }), wk("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: Tk.n.product.days,
-                price: Tk.n.price
+              }), Ib("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: Ob.i.product.days,
+                price: Ob.i.price
               })]
-            }), (0, sk.jsxs)(fk.o, {
+            }), (0, fb.jsxs)(Qb.n, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Pk.m)({
+                (0, zb.o)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, sk.jsx)(bk.d, {
+              children: [(0, fb.jsx)(Ub.b, {
                 name: "bolt"
-              }), wk("homePage:giftSuperRank")]
+              }), Ib("homePage:giftSuperRank")]
             })]
-          }), Ck && (0, sk.jsx)("div", {
+          }), Ab && (0, fb.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: wk(Ck.translationKey)
+            children: Ib(Ab.translationKey)
           })]
-        }), (0, sk.jsx)(BF, {
-          showing: Bk
-        }), mk.featureFlags.useSocialFeatures && (0, sk.jsx)(WF, {
-          showing: Bk
-        }), (0, sk.jsxs)("div", {
+        }), (0, fb.jsx)(cc, {
+          showing: sb
+        }), eb.featureFlags.useSocialFeatures && (0, fb.jsx)(ec, {
+          showing: sb
+        }), (0, fb.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, sk.jsxs)("div", {
+          children: [(0, fb.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, sk.jsx)("div", {
+            children: [(0, fb.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: wk(iF(sF, VF))
-            }), (0, Hk.c)() && (0, sk.jsx)("div", {
+              children: Ib(Nc(Hc, fc))
+            }), (0, Bb.b)() && (0, fb.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: wk("auth:discordActivityKickWarning")
-            }), (0, sk.jsx)(eF, {
-              showing: Bk
+              children: Ib("auth:discordActivityKickWarning")
+            }), (0, fb.jsx)(nc, {
+              showing: sb
             })]
-          }), (0, sk.jsx)("div", {
+          }), (0, fb.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: wk("auth:deleteAccountWarning")
+            children: Ib("auth:deleteAccountWarning")
           })]
         })]
       })
     }));
 
-    function iF(kk, Fk) {
-      return kk ? Fk ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function Nc(bb, cb) {
+      return bb ? cb ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var YF = Bk(8900),
-      oF = Bk(2926),
-      LF = Bk(1203),
-      OF = Bk(1379);
-    const EF = (0, Rk.memo)((function(kk) {
+    var Vc = sb(8829),
+      Lc = sb(2889),
+      uc = sb(1258),
+      Yc = sb(1412);
+    const hc = (0, kb.memo)((function(bb) {
         let {
-          inGame: Fk
-        } = kk;
+          inGame: cb
+        } = bb;
         const {
-          t: Bk,
-          selectedLanguage: Rk
-        } = (0, Xk.x)(), {
-          clientEscMenuOptions: tk,
-          showDebugOverlay: ak
-        } = (0, Ek.h)(["clientEscMenuOptions", "showDebugOverlay"]), bk = (0, ek.j)("hideCoordinates");
-        let wk = "settingsMenu:showCoordinates",
-          dk = "settingsMenu:showChunkCoordinates";
+          t: sb,
+          selectedLanguage: kb
+        } = (0, Tb.E)(), {
+          clientEscMenuOptions: Wb,
+          showDebugOverlay: ab
+        } = (0, hb.p)(["clientEscMenuOptions", "showDebugOverlay"]), Ub = (0, mb.d)("hideCoordinates");
+        let Ib = "settingsMenu:showCoordinates",
+          Hb = "settingsMenu:showChunkCoordinates";
 
-        function Vk(kk) {
-          const Fk = new Intl.DisplayNames([kk], {
+        function Mb(bb) {
+          const cb = new Intl.DisplayNames([bb], {
             type: "language"
-          }).of(kk);
-          return Fk.charAt(0).toUpperCase() + Fk.slice(1)
+          }).of(bb);
+          return cb.charAt(0).toUpperCase() + cb.slice(1)
         }
-        return bk && (wk = "settingsMenu:showCoordinatesHidden", dk = "settingsMenu:showChunkCoordinatesHidden"), (0, sk.jsxs)("div", {
+        return Ub && (Ib = "settingsMenu:showCoordinatesHidden", Hb = "settingsMenu:showChunkCoordinatesHidden"), (0, fb.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [Fk && mk.featureFlags.canUseInviteLinks && (0, sk.jsxs)("div", {
+          children: [cb && eb.featureFlags.canUseInviteLinks && (0, fb.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, sk.jsx)("div", {
+            children: [(0, fb.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: Bk("settingsMenu:inviteLink")
-            }), (0, sk.jsx)(YF.g, {})]
-          }), (0, sk.jsxs)("div", {
+              children: sb("settingsMenu:inviteLink")
+            }), (0, fb.jsx)(Vc.h, {})]
+          }), (0, fb.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, sk.jsx)("div", {
+            children: [(0, fb.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: Bk("settingsMenu:language")
-            }), (0, sk.jsx)(oF.c, {
-              options: Object.entries(Xk.g).map((kk => {
-                let [Fk, Bk] = kk;
+              children: sb("settingsMenu:language")
+            }), (0, fb.jsx)(Lc.e, {
+              options: Object.entries(Tb.g).map((bb => {
+                let [cb, sb] = bb;
                 return {
-                  label: (0, sk.jsxs)("div", {
+                  label: (0, fb.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, sk.jsx)("img", {
-                      src: Bk.flagImg,
+                    children: [(0, fb.jsx)("img", {
+                      src: sb.flagImg,
                       alt: "flag"
-                    }), (0, sk.jsxs)("span", {
-                      children: [Vk(Fk), " ", (0, sk.jsxs)("span", {
+                    }), (0, fb.jsxs)("span", {
+                      children: [Mb(cb), " ", (0, fb.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", Fk, ")"]
+                        children: ["(", cb, ")"]
                       })]
                     })]
                   }),
-                  value: Fk
+                  value: cb
                 }
               })),
-              value: Rk.code,
-              onChange: kk => {
-                LF.c.get().setCurrentLanguage(kk.value)
+              value: kb.code,
+              onChange: bb => {
+                uc.e.get().setCurrentLanguage(bb.value)
               }
             })]
-          }), !(0, mk.isMobileApp)() && (0, OF.h)() && mk.featureFlags.useForceRotateForceFullscreenOverlay && (0, sk.jsx)(Ok.e, {
-            label: Bk("settingsMenu:disableFullscreenMode"),
-            checked: tk.disableFullscreen,
-            onClick: kk => {
-              Ek.c.setClientEscMenuOptions({
-                disableFullscreen: kk
+          }), !(0, eb.isMobileApp)() && (0, Yc.h)() && eb.featureFlags.useForceRotateForceFullscreenOverlay && (0, fb.jsx)(Yb.d, {
+            label: sb("settingsMenu:disableFullscreenMode"),
+            checked: Wb.disableFullscreen,
+            onClick: bb => {
+              hb.d.setClientEscMenuOptions({
+                disableFullscreen: bb
               })
             }
-          }), (0, sk.jsx)(Ok.e, {
-            label: Bk(wk),
-            checked: tk.showCoordinates,
-            onClick: kk => {
-              Ek.c.setClientEscMenuOptions({
-                showCoordinates: kk
+          }), (0, fb.jsx)(Yb.d, {
+            label: sb(Ib),
+            checked: Wb.showCoordinates,
+            onClick: bb => {
+              hb.d.setClientEscMenuOptions({
+                showCoordinates: bb
               })
             },
-            disabled: bk
-          }), (0, sk.jsx)(Ok.e, {
-            label: Bk(dk),
-            checked: tk.showChunkCoordinates,
-            onClick: kk => {
-              Ek.c.setClientEscMenuOptions({
-                showChunkCoordinates: kk
+            disabled: Ub
+          }), (0, fb.jsx)(Yb.d, {
+            label: sb(Hb),
+            checked: Wb.showChunkCoordinates,
+            onClick: bb => {
+              hb.d.setClientEscMenuOptions({
+                showChunkCoordinates: bb
               })
             },
-            disabled: bk
-          }), (0, sk.jsx)(Ok.e, {
-            label: Bk("settingsMenu:showFps"),
-            checked: tk.showFPS,
-            onClick: kk => {
-              Ek.c.setClientEscMenuOptions({
-                showFPS: kk
+            disabled: Ub
+          }), (0, fb.jsx)(Yb.d, {
+            label: sb("settingsMenu:showFps"),
+            checked: Wb.showFPS,
+            onClick: bb => {
+              hb.d.setClientEscMenuOptions({
+                showFPS: bb
               })
             }
-          }), (0, sk.jsx)(Ok.e, {
-            label: Bk("settingsMenu:disableBunnyHopping"),
-            checked: tk.disableBunnyHopping,
-            onClick: kk => {
-              Ek.c.setClientEscMenuOptions({
-                disableBunnyHopping: kk
+          }), (0, fb.jsx)(Yb.d, {
+            label: sb("settingsMenu:disableBunnyHopping"),
+            checked: Wb.disableBunnyHopping,
+            onClick: bb => {
+              hb.d.setClientEscMenuOptions({
+                disableBunnyHopping: bb
               })
             }
-          }), (0, XF.x)() && (0, sk.jsx)(Ok.e, {
-            label: Bk("settingsMenu:showChat"),
-            checked: tk.showChat,
-            onClick: kk => {
-              Ek.c.setClientEscMenuOptions({
-                showChat: kk
+          }), (0, ac.w)() && (0, fb.jsx)(Yb.d, {
+            label: sb("settingsMenu:showChat"),
+            checked: Wb.showChat,
+            onClick: bb => {
+              hb.d.setClientEscMenuOptions({
+                showChat: bb
               })
             }
-          }), (0, sk.jsx)(Ok.e, {
-            label: Bk("settingsMenu:showDebugOverlay"),
-            checked: ak,
-            onClick: kk => {
-              Ek.c.set({
-                showDebugOverlay: kk
+          }), (0, fb.jsx)(Yb.d, {
+            label: sb("settingsMenu:showDebugOverlay"),
+            checked: ab,
+            onClick: bb => {
+              hb.d.set({
+                showDebugOverlay: bb
               })
             }
-          }), mk.featureFlags.useSocialFeatures && (0, sk.jsx)(Ok.e, {
-            label: Bk("settingsMenu:showFriendOnlineToasts"),
-            checked: tk.showFriendOnlineToasts,
-            onClick: kk => {
-              Ek.c.setClientEscMenuOptions({
-                showFriendOnlineToasts: kk
+          }), eb.featureFlags.useSocialFeatures && (0, fb.jsx)(Yb.d, {
+            label: sb("settingsMenu:showFriendOnlineToasts"),
+            checked: Wb.showFriendOnlineToasts,
+            onClick: bb => {
+              hb.d.setClientEscMenuOptions({
+                showFriendOnlineToasts: bb
               })
             }
-          }), (0, sk.jsx)(Ok.e, {
-            label: Bk("settingsMenu:showNewItemIndicator"),
-            checked: tk.showNewItemIndicator,
-            onClick: kk => {
-              Ek.c.setClientEscMenuOptions({
-                showNewItemIndicator: kk
+          }), (0, fb.jsx)(Yb.d, {
+            label: sb("settingsMenu:showNewItemIndicator"),
+            checked: Wb.showNewItemIndicator,
+            onClick: bb => {
+              hb.d.setClientEscMenuOptions({
+                showNewItemIndicator: bb
               })
             }
           })]
         })
       })),
-      SF = (0, Rk.memo)((function() {
+      Jc = (0, kb.memo)((function() {
         const {
-          t: kk
-        } = (0, Xk.x)(), {
-          soundVolume: Fk,
-          musicVolume: Bk
-        } = (0, Ek.h)(["soundVolume", "musicVolume"]);
-        return (0, sk.jsxs)("div", {
+          t: bb
+        } = (0, Tb.E)(), {
+          soundVolume: cb,
+          musicVolume: sb
+        } = (0, hb.p)(["soundVolume", "musicVolume"]);
+        return (0, fb.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, sk.jsx)(Ok.l, {
-            name: kk("settingsMenu:musicVolume"),
+          children: [(0, fb.jsx)(Yb.i, {
+            name: bb("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: Bk,
-            onChange: kk => {
-              Ek.c.set({
-                musicVolume: Math.round(100 * kk) / 100
+            initValue: sb,
+            onChange: bb => {
+              hb.d.set({
+                musicVolume: Math.round(100 * bb) / 100
               })
             },
-            format: kk => kk.toFixed(2)
-          }), (0, sk.jsx)(Ok.l, {
-            name: kk("settingsMenu:soundEffectsVolume"),
+            format: bb => bb.toFixed(2)
+          }), (0, fb.jsx)(Yb.i, {
+            name: bb("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: Fk,
-            onChange: kk => {
-              Ek.c.set({
-                soundVolume: Math.round(100 * kk) / 100
+            initValue: cb,
+            onChange: bb => {
+              hb.d.set({
+                soundVolume: Math.round(100 * bb) / 100
               })
             },
-            format: kk => kk.toFixed(2)
+            format: bb => bb.toFixed(2)
           })]
         })
       }));
-    var NF = Bk(683),
-      HF = Bk(1387),
-      uF = Bk(3462),
-      MF = Bk(8903),
-      gF = Bk(3294);
-    const UF = {
+    var gc = sb(718),
+      Bc = sb(1423),
+      tc = sb(3452),
+      yc = sb(8836),
+      Pc = sb(3281);
+    const Dc = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function cF() {
+    function Ec() {
       const {
-        t: kk
-      } = (0, Xk.x)(), Fk = (0, gF.d)(), {
-        mobilePushNotificationsCanAsk: Bk
-      } = (0, Ek.h)(["mobilePushNotificationsCanAsk"]), [tk, ak] = (0, Rk.useState)(null), [bk, wk] = (0, Rk.useState)(!1), [dk, Vk] = (0, Rk.useState)(null), [Jk, Ak] = (0, Rk.useState)(!1), ek = (0, Rk.useCallback)((() => {
-        (0, uF.c)().then((kk => {
-          Fk.current && (ak(kk), wk(!1))
-        })).catch((kk => {
-          console.error("Failed to load push notification targets:", kk), Fk.current && wk(!0)
+        t: bb
+      } = (0, Tb.E)(), cb = (0, Pc.e)(), {
+        mobilePushNotificationsCanAsk: sb
+      } = (0, hb.p)(["mobilePushNotificationsCanAsk"]), [Wb, ab] = (0, kb.useState)(null), [Ub, Ib] = (0, kb.useState)(!1), [Hb, Mb] = (0, kb.useState)(null), [Xb, nb] = (0, kb.useState)(!1), mb = (0, kb.useCallback)((() => {
+        (0, tc.c)().then((bb => {
+          cb.current && (ab(bb), Ib(!1))
+        })).catch((bb => {
+          console.error("Failed to load push notification targets:", bb), cb.current && Ib(!0)
         }))
-      }), [Fk]), yk = (0, Rk.useCallback)((() => {
-        (0, MF.e)().then((kk => {
-          Fk.current && Vk((() => kk))
+      }), [cb]), lb = (0, kb.useCallback)((() => {
+        (0, yc.c)().then((bb => {
+          cb.current && Mb((() => bb))
         }))
-      }), [Fk]);
-      (0, Rk.useEffect)((() => {
-        ek()
-      }), [ek]), (0, Rk.useEffect)((() => {
-        yk()
-      }), [yk, Bk]), (0, HF.f)(uF.e, ek);
-      const mk = null === tk ? [] : Object.keys(UF).filter((kk => tk[kk] > 0));
-      return (0, sk.jsxs)("div", {
+      }), [cb]);
+      (0, kb.useEffect)((() => {
+        mb()
+      }), [mb]), (0, kb.useEffect)((() => {
+        lb()
+      }), [lb, sb]), (0, Bc.f)(tc.h, mb);
+      const eb = null === Wb ? [] : Object.keys(Dc).filter((bb => Wb[bb] > 0));
+      return (0, fb.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, sk.jsx)("div", {
+        children: [(0, fb.jsx)("div", {
           className: "SliderText",
-          children: kk("notificationSettings:pushNotifications")
-        }), null === tk && bk && (0, sk.jsx)("div", {
+          children: bb("notificationSettings:pushNotifications")
+        }), null === Wb && Ub && (0, fb.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: kk("notificationSettings:pushTargetsLoadFailed")
-        }), null !== tk && 0 === mk.length && (0, sk.jsx)("div", {
+          children: bb("notificationSettings:pushTargetsLoadFailed")
+        }), null !== Wb && 0 === eb.length && (0, fb.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: kk("notificationSettings:pushTargetsNone")
-        }), mk.length > 0 && (0, sk.jsx)("ul", {
+          children: bb("notificationSettings:pushTargetsNone")
+        }), eb.length > 0 && (0, fb.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: mk.map((Fk => {
-            var Bk;
-            return (0, sk.jsx)("li", {
-              children: kk(UF[Fk], {
-                count: null !== (Bk = null === tk || void 0 === tk ? void 0 : tk[Fk]) && void 0 !== Bk ? Bk : 0
+          children: eb.map((cb => {
+            var sb;
+            return (0, fb.jsx)("li", {
+              children: bb(Dc[cb], {
+                count: null !== (sb = null === Wb || void 0 === Wb ? void 0 : Wb[cb]) && void 0 !== sb ? sb : 0
               })
-            }, Fk)
+            }, cb)
           }))
-        }), null !== dk && (0, sk.jsx)(fk.g, {
+        }), null !== Hb && (0, fb.jsx)(Qb.d, {
           className: "PushNotificationSettingsButton",
-          loading: Jk,
+          loading: Xb,
           onClick: () => {
-            Ak(!0), dk().catch((kk => {
-              console.error("Failed to turn on push notifications:", kk)
+            nb(!0), Hb().catch((bb => {
+              console.error("Failed to turn on push notifications:", bb)
             })).finally((() => {
-              Fk.current && (Ak(!1), yk())
+              cb.current && (nb(!1), lb())
             }))
           },
-          children: kk("notificationSettings:pushTurnOn")
+          children: bb("notificationSettings:pushTurnOn")
         })]
       })
     }
-    const GF = {
+    const ic = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1109,337 +1109,337 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      TF = (0, Rk.memo)((function() {
+      Oc = (0, kb.memo)((function() {
         const {
-          t: kk
-        } = (0, Xk.x)(), {
-          clientEscMenuOptions: Fk
-        } = (0, Ek.h)(["clientEscMenuOptions"]);
-        return (0, sk.jsxs)("div", {
+          t: bb
+        } = (0, Tb.E)(), {
+          clientEscMenuOptions: cb
+        } = (0, hb.p)(["clientEscMenuOptions"]);
+        return (0, fb.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, sk.jsx)(Ok.i, {
-            label: kk("notificationSettings:friendRequests"),
-            options: NF.b.map((Fk => ({
-              value: Fk,
-              label: kk(GF[Fk].label)
+          children: [(0, fb.jsx)(Yb.g, {
+            label: bb("notificationSettings:friendRequests"),
+            options: gc.e.map((cb => ({
+              value: cb,
+              label: bb(ic[cb].label)
             }))),
-            value: Fk.friendRequestNotifications,
-            onChange: kk => {
-              Ek.c.setClientEscMenuOptions({
-                friendRequestNotifications: kk
+            value: cb.friendRequestNotifications,
+            onChange: bb => {
+              hb.d.setClientEscMenuOptions({
+                friendRequestNotifications: bb
               })
             },
-            circleInfoText: (0, sk.jsx)("div", {
+            circleInfoText: (0, fb.jsx)("div", {
               className: "NotificationSettingLevelsInfo",
-              children: NF.b.map((Fk => (0, sk.jsxs)("div", {
-                children: [(0, sk.jsx)("b", {
-                  children: kk(GF[Fk].label)
-                }), ": ", kk(GF[Fk].info)]
-              }, Fk)))
+              children: gc.e.map((cb => (0, fb.jsxs)("div", {
+                children: [(0, fb.jsx)("b", {
+                  children: bb(ic[cb].label)
+                }), ": ", bb(ic[cb].info)]
+              }, cb)))
             })
-          }), (0, sk.jsx)(cF, {})]
+          }), (0, fb.jsx)(Ec, {})]
         })
       }));
-    var rF = Bk(4249),
-      DF = Bk(182),
-      zF = Bk(267),
-      PF = Bk(6361),
-      hF = Bk(3255),
-      qF = Bk(8910),
-      CF = Bk(606),
-      ZF = Bk(29);
-    var pF = Bk(624),
-      KF = Bk(42),
-      xF = Bk(4126);
-    const jF = new Map([
+    var Gc = sb(4241),
+      Kc = sb(223),
+      Zc = sb(312),
+      zc = sb(6328),
+      qc = sb(3222),
+      dc = sb(8840),
+      Ac = sb(628),
+      wc = sb(26);
+    var rc = sb(649),
+      oc = sb(37),
+      Sc = sb(4134);
+    const Rc = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function lF(kk) {
-      return jF.has(kk) ? Wk.gameBridge.lookup("jW", null) : null
+    function vc(bb) {
+      return Rc.has(bb) ? Cb.gameBridge.lookup("yN", null) : null
     }
 
-    function nF(kk) {
-      if (!(0, CF.F)(Ek.c.get("clientEscMenuOptions")[kk])) return Ek.c.get("clientEscMenuOptions")[kk];
-      const Fk = lF(kk);
-      return null !== Fk ? Fk[jF.get(kk)] : KF.i.getItem(kk)
+    function Fc(bb) {
+      if (!(0, Ac.L)(hb.d.get("clientEscMenuOptions")[bb])) return hb.d.get("clientEscMenuOptions")[bb];
+      const cb = vc(bb);
+      return null !== cb ? cb[Rc.get(bb)] : oc.h.getItem(bb)
     }
 
-    function IF(kk, Fk) {
-      if ("useTouchControls" === kk) return void(0, xF.d)(Fk);
-      kk in Ek.c.get("clientEscMenuOptions") && Ek.c.setClientEscMenuOptions({
-        [kk]: Fk
+    function xc(bb, cb) {
+      if ("useTouchControls" === bb) return void(0, Sc.e)(cb);
+      bb in hb.d.get("clientEscMenuOptions") && hb.d.setClientEscMenuOptions({
+        [bb]: cb
       });
-      const Bk = lF(kk);
-      null !== Bk && Wk.gameBridge.send("setChunkAddDistance", {
-        ...Bk,
-        [jF.get(kk)]: Fk
-      }), KF.i.setItem(kk, Fk)
+      const sb = vc(bb);
+      null !== sb && Cb.gameBridge.send("setChunkAddDistance", {
+        ...sb,
+        [Rc.get(bb)]: cb
+      }), oc.h.setItem(bb, cb)
     }
-    var QF = Bk(4163),
-      kB = Bk(8918),
-      FB = Bk(8926),
-      BB = Bk(4242);
+    var jc = sb(4167),
+      pc = sb(8847),
+      bs = sb(8849),
+      cs = sb(4239);
 
-    function RB(kk) {
-      var Fk, tk, bk, wk;
+    function ss(bb) {
+      var cb, Wb, Ub, Ib;
       let {
-        minChunkAddDist: dk,
-        getValue: Vk,
-        onChange: Jk,
-        setApplySettingsCallback: Ak
-      } = kk;
+        minChunkAddDist: Hb,
+        getValue: Mb,
+        onChange: Xb,
+        setApplySettingsCallback: nb
+      } = bb;
       const {
-        t: yk
-      } = (0, Xk.x)(), {
-        clientEscMenuOptions: fk
-      } = (0, Ek.h)(["clientEscMenuOptions", "showDistantNametags"]), Wk = (0, Rk.useRef)(Vk("showFog")), vk = (0, Rk.useRef)(fk.antiAliasing), ik = (0, Rk.useRef)(fk.useWebGpu), [Yk, Lk] = (0, Rk.useState)(null), [Nk, Hk] = (0, Rk.useState)((() => (0, hF.c)(mk.featureFlags.settings.canUseShaderPacks))), [uk] = (0, Rk.useState)((() => Ek.c.isWebGpuDefaultOff())), [Mk] = (0, Rk.useState)(zF.c);
-      (0, Rk.useEffect)((() => {
-        let kk = !1;
-        return (0, mk.hasUsableWebGpuAdapter)().then((Fk => {
-          kk || Lk(Fk)
-        })), (0, hF.i)(mk.featureFlags.settings.canUseShaderPacks) && (0, PF.e)().then((async Fk => {
-          const Rk = null !== Fk && await async function(kk) {
+        t: lb
+      } = (0, Tb.E)(), {
+        clientEscMenuOptions: Qb
+      } = (0, hb.p)(["clientEscMenuOptions", "showDistantNametags"]), Cb = (0, kb.useRef)(Mb("showFog")), Nb = (0, kb.useRef)(Qb.antiAliasing), Vb = (0, kb.useRef)(Qb.useWebGpu), [Lb, ub] = (0, kb.useState)(null), [gb, Bb] = (0, kb.useState)((() => (0, qc.e)(eb.featureFlags.settings.canUseShaderPacks))), [tb] = (0, kb.useState)((() => hb.d.isWebGpuDefaultOff())), [yb] = (0, kb.useState)(Zc.g);
+      (0, kb.useEffect)((() => {
+        let bb = !1;
+        return (0, eb.hasUsableWebGpuAdapter)().then((cb => {
+          bb || ub(cb)
+        })), (0, qc.j)(eb.featureFlags.settings.canUseShaderPacks) && (0, zc.d)().then((async cb => {
+          const kb = null !== cb && await async function(bb) {
             const [{
-              isShaderPackActive: Fk
+              isShaderPackActive: cb
             }, {
-              loadPageShaderPackCompiler: Rk
-            }] = await Promise.all([Bk.e(127).then((() => Bk(6358))), Promise.all([Bk.e(74), Bk.e(131), Bk.e(130)]).then((() => Bk(6316)))]);
-            return Fk(kk, await Rk())
-          }(Fk);
-          kk || Hk(Rk)
+              loadPageShaderPackCompiler: kb
+            }] = await Promise.all([sb.e(127).then((() => sb(6321))), Promise.all([sb.e(74), sb.e(131), sb.e(130)]).then((() => sb(6276)))]);
+            return cb(bb, await kb())
+          }(cb);
+          bb || Bb(kb)
         })), () => {
-          kk = !0
+          bb = !0
         }
       }), []);
-      const gk = function(kk, Fk, Bk, Rk, tk) {
-          return (0, qF.d)(Bk, Rk) && !0 === Fk ? {
+      const Pb = function(bb, cb, sb, kb, Wb) {
+          return (0, dc.c)(sb, kb) && !0 === cb ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== Fk ? "settingsMenu:newWebGpu" : tk ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: kk && !1 !== Fk,
-            disabled: !0 !== Fk
+            translationKey: !1 !== cb ? "settingsMenu:newWebGpu" : Wb ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: bb && !1 !== cb,
+            disabled: !0 !== cb
           }
-        }(fk.useWebGpu, Yk, Nk, uk, Mk),
-        Uk = (fk.useWebGpu || (0, qF.d)(Nk, uk)) && Nk && !0 === Yk,
-        ck = (0, ek.j)("lightingOverride"),
-        Gk = !(0, CF.F)(ck);
-      let Tk = "settingsMenu:enableLighting";
-      Gk && (Tk = ck ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const rk = kk => {
-          var Fk, Bk, Rk;
-          const tk = null !== (Fk = kk.showFog) && void 0 !== Fk ? Fk : Vk("showFog"),
-            ak = null !== (Bk = kk.antiAliasing) && void 0 !== Bk ? Bk : fk.antiAliasing,
-            Xk = null !== (Rk = kk.useWebGpu) && void 0 !== Rk ? Rk : fk.useWebGpu,
-            bk = !pF.p && tk !== Wk.current || ak !== vk.current || Xk !== ik.current;
-          Ak(bk ? () => Ok.m : null)
+        }(Qb.useWebGpu, Lb, gb, tb, yb),
+        Db = (Qb.useWebGpu || (0, dc.c)(gb, tb)) && gb && !0 === Lb,
+        Eb = (0, mb.d)("lightingOverride"),
+        ib = !(0, Ac.L)(Eb);
+      let Ob = "settingsMenu:enableLighting";
+      ib && (Ob = Eb ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const Gb = bb => {
+          var cb, sb, kb;
+          const Wb = null !== (cb = bb.showFog) && void 0 !== cb ? cb : Mb("showFog"),
+            ab = null !== (sb = bb.antiAliasing) && void 0 !== sb ? sb : Qb.antiAliasing,
+            Tb = null !== (kb = bb.useWebGpu) && void 0 !== kb ? kb : Qb.useWebGpu,
+            Ub = !rc.s && Wb !== Cb.current || ab !== Nb.current || Tb !== Vb.current;
+          nb(Ub ? () => Yb.m : null)
         },
-        Dk = (0, ek.j)("fogChunkDistanceOverride"),
-        zk = (0, ek.j)("fogBlockDistanceOverride"),
-        Pk = !(0, CF.F)(Dk) || !(0, CF.F)(zk),
-        hk = Pk ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [qk, Ck] = (0, rF.g)(dk),
-        [Zk, pk] = (0, BB.d)(dk),
-        Kk = yk("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        xk = Zk < qk,
-        jk = Math.min(null !== (Fk = Vk("chunkHorizAddDist")) && void 0 !== Fk ? Fk : dk[0], Zk),
-        lk = !Pk && function(kk, Fk) {
-          return !0 === kk.showFog && kk.fogChunkDistance > Fk
-        }(fk, jk);
-      return (0, sk.jsxs)("div", {
+        Kb = (0, mb.d)("fogChunkDistanceOverride"),
+        Zb = (0, mb.d)("fogBlockDistanceOverride"),
+        zb = !(0, Ac.L)(Kb) || !(0, Ac.L)(Zb),
+        qb = zb ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [db, Ab] = (0, Gc.f)(Hb),
+        [wb, rb] = (0, cs.b)(Hb),
+        ob = lb("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        Sb = wb < db,
+        Rb = Math.min(null !== (cb = Mb("chunkHorizAddDist")) && void 0 !== cb ? cb : Hb[0], wb),
+        vb = !zb && function(bb, cb) {
+          return !0 === bb.showFog && bb.fogChunkDistance > cb
+        }(Qb, Rb);
+      return (0, fb.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, sk.jsx)(Ok.l, {
-          name: yk("settingsMenu:horizontalChunkLoadDistance"),
-          min: dk[0],
-          max: qk,
-          selectableMax: Zk,
-          cappedNote: Kk,
+        children: [(0, fb.jsx)(Yb.i, {
+          name: lb("settingsMenu:horizontalChunkLoadDistance"),
+          min: Hb[0],
+          max: db,
+          selectableMax: wb,
+          cappedNote: ob,
           step: 1,
-          initValue: jk,
-          onChange: kk => {
-            !0 === Vk("showFog") && kk < Vk("fogChunkDistance") && Jk("fogChunkDistance", kk), Jk("chunkHorizAddDist", kk), ZF.o.Hf("updatedChunkLoadDist")
+          initValue: Rb,
+          onChange: bb => {
+            !0 === Mb("showFog") && bb < Mb("fogChunkDistance") && Xb("fogChunkDistance", bb), Xb("chunkHorizAddDist", bb), wc.j.QQ("updatedChunkLoadDist")
           },
-          circleInfoText: yk("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, sk.jsx)(Ok.l, {
-          name: yk("settingsMenu:verticalChunkLoadDistance"),
-          min: dk[1],
-          max: Ck,
-          selectableMax: pk,
-          cappedNote: xk ? void 0 : Kk,
+          circleInfoText: lb("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, fb.jsx)(Yb.i, {
+          name: lb("settingsMenu:verticalChunkLoadDistance"),
+          min: Hb[1],
+          max: Ab,
+          selectableMax: rb,
+          cappedNote: Sb ? void 0 : ob,
           step: 1,
-          initValue: Math.min(null !== (tk = Vk("chunkVertAddDist")) && void 0 !== tk ? tk : dk[1], pk),
-          onChange: kk => {
-            Jk("chunkVertAddDist", kk), ZF.o.Hf("updatedChunkLoadDist")
+          initValue: Math.min(null !== (Wb = Mb("chunkVertAddDist")) && void 0 !== Wb ? Wb : Hb[1], rb),
+          onChange: bb => {
+            Xb("chunkVertAddDist", bb), wc.j.QQ("updatedChunkLoadDist")
           },
-          circleInfoText: yk("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: lb("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, sk.jsx)(Ok.e, {
-          label: yk("settingsMenu:chunkFadeIn"),
-          checked: fk.chunkFadeIn,
-          onClick: kk => {
-            Ek.c.setClientEscMenuOptions({
-              chunkFadeIn: kk
+        }), (0, fb.jsx)(Yb.d, {
+          label: lb("settingsMenu:chunkFadeIn"),
+          checked: Qb.chunkFadeIn,
+          onClick: bb => {
+            hb.d.setClientEscMenuOptions({
+              chunkFadeIn: bb
             })
           },
-          circleInfoText: yk("settingsMenu:chunkFadeInInfo")
-        }), Sk.devTools.supports("chunkBorders") && (0, sk.jsx)(Ok.e, {
-          label: yk("settingsMenu:showChunkBorders"),
-          checked: fk.showChunkBorders,
-          onClick: kk => {
-            Ek.c.setClientEscMenuOptions({
-              showChunkBorders: kk
+          circleInfoText: lb("settingsMenu:chunkFadeInInfo")
+        }), Jb.devTools.supports("chunkBorders") && (0, fb.jsx)(Yb.d, {
+          label: lb("settingsMenu:showChunkBorders"),
+          checked: Qb.showChunkBorders,
+          onClick: bb => {
+            hb.d.setClientEscMenuOptions({
+              showChunkBorders: bb
             })
           },
-          circleInfoText: yk("settingsMenu:showChunkBordersInfo")
-        }), (0, sk.jsx)(Ok.e, {
-          label: yk(Tk),
-          checked: fk.enableLighting,
-          onClick: kk => {
-            Ek.c.setClientEscMenuOptions({
-              enableLighting: kk
+          circleInfoText: lb("settingsMenu:showChunkBordersInfo")
+        }), (0, fb.jsx)(Yb.d, {
+          label: lb(Ob),
+          checked: Qb.enableLighting,
+          onClick: bb => {
+            hb.d.setClientEscMenuOptions({
+              enableLighting: bb
             })
           },
-          disabled: Gk
-        }), (0, sk.jsxs)("div", {
+          disabled: ib
+        }), (0, fb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, sk.jsx)(Ok.e, {
-            label: yk(hk),
-            checked: fk.showFog,
-            onClick: kk => {
-              rk({
-                showFog: kk
-              }), Ek.c.setClientEscMenuOptions({
-                showFog: kk
+          children: [(0, fb.jsx)(Yb.d, {
+            label: lb(qb),
+            checked: Qb.showFog,
+            onClick: bb => {
+              Gb({
+                showFog: bb
+              }), hb.d.setClientEscMenuOptions({
+                showFog: bb
               })
             },
-            disabled: Pk,
-            className: ak()({
-              SettingBoxWarning: lk
+            disabled: zb,
+            className: ab()({
+              SettingBoxWarning: vb
             })
-          }), (0, sk.jsx)(Ok.l, {
-            name: yk("settingsMenu:fogChunkDistance"),
-            min: dk[0],
-            max: DF.h.maxChunkHorizAddDistance,
+          }), (0, fb.jsx)(Yb.i, {
+            name: lb("settingsMenu:fogChunkDistance"),
+            min: Hb[0],
+            max: Kc.e.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (bk = fk.fogChunkDistance) && void 0 !== bk ? bk : dk[0],
-            onChange: kk => {
-              Ek.c.setClientEscMenuOptions({
-                fogChunkDistance: kk
-              }), ZF.o.Hf("fogChunkDistanceChanged", kk)
+            initValue: null !== (Ub = Qb.fogChunkDistance) && void 0 !== Ub ? Ub : Hb[0],
+            onChange: bb => {
+              hb.d.setClientEscMenuOptions({
+                fogChunkDistance: bb
+              }), wc.j.QQ("fogChunkDistanceChanged", bb)
             },
-            circleInfoText: yk("settingsMenu:fogChunkDistanceInfo"),
-            disabled: Pk || !1 === Vk("showFog"),
-            className: ak()({
-              SettingBoxWarning: lk
+            circleInfoText: lb("settingsMenu:fogChunkDistanceInfo"),
+            disabled: zb || !1 === Mb("showFog"),
+            className: ab()({
+              SettingBoxWarning: vb
             })
-          }), lk && (0, sk.jsx)("div", {
+          }), vb && (0, fb.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: yk("settingsMenu:fogChunkDistanceInfo")
+            children: lb("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !pF.p && (0, sk.jsx)(Ok.e, {
-          label: yk(Uk ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !Uk && fk.disableTexAtlas,
-          onClick: kk => {
-            Ek.c.setClientEscMenuOptions({
-              disableTexAtlas: kk
+        }), !rc.s && (0, fb.jsx)(Yb.d, {
+          label: lb(Db ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !Db && Qb.disableTexAtlas,
+          onClick: bb => {
+            hb.d.setClientEscMenuOptions({
+              disableTexAtlas: bb
             })
           },
-          circleInfoText: yk("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: Uk
-        }), (0, sk.jsx)(Ok.l, {
-          name: yk("settingsMenu:fieldOfView"),
+          circleInfoText: lb("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: Db
+        }), (0, fb.jsx)(Yb.i, {
+          name: lb("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: fk.cameraFOV,
-          onChange: kk => {
-            Ek.c.setClientEscMenuOptions({
-              cameraFOV: kk
+          initValue: Qb.cameraFOV,
+          onChange: bb => {
+            hb.d.setClientEscMenuOptions({
+              cameraFOV: bb
             })
           }
-        }), (0, sk.jsx)(Ok.e, {
-          label: yk("settingsMenu:disableViewBobbing"),
-          checked: fk.disableBobbing,
-          onClick: kk => {
-            Ek.c.setClientEscMenuOptions({
-              disableBobbing: kk
+        }), (0, fb.jsx)(Yb.d, {
+          label: lb("settingsMenu:disableViewBobbing"),
+          checked: Qb.disableBobbing,
+          onClick: bb => {
+            hb.d.setClientEscMenuOptions({
+              disableBobbing: bb
             })
           },
-          circleInfoText: yk("settingsMenu:disableViewBobbingInfo")
-        }), (0, sk.jsx)(Ok.e, {
-          label: yk("settingsMenu:antiAliasing"),
-          checked: fk.antiAliasing,
-          onClick: kk => {
-            rk({
-              antiAliasing: kk
-            }), (0, QF.d)("antiAliasing"), Ek.c.setClientEscMenuOptions({
-              antiAliasing: kk
+          circleInfoText: lb("settingsMenu:disableViewBobbingInfo")
+        }), (0, fb.jsx)(Yb.d, {
+          label: lb("settingsMenu:antiAliasing"),
+          checked: Qb.antiAliasing,
+          onClick: bb => {
+            Gb({
+              antiAliasing: bb
+            }), (0, jc.d)("antiAliasing"), hb.d.setClientEscMenuOptions({
+              antiAliasing: bb
             })
           },
-          circleInfoText: yk("settingsMenu:antiAliasingInfo")
-        }), (0, sk.jsx)(Ok.l, {
-          name: yk("settingsMenu:pixelScale"),
+          circleInfoText: lb("settingsMenu:antiAliasingInfo")
+        }), (0, fb.jsx)(Yb.i, {
+          name: lb("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (wk = fk.pixelScale) && void 0 !== wk ? wk : 1,
-          onChange: kk => {
-            (kk !== Ek.c.get("clientEscMenuOptions").pixelScale || (0, FB.m)()) && (0, QF.d)("pixelScale"), Ek.c.setClientEscMenuOptions({
-              pixelScale: kk
+          initValue: null !== (Ib = Qb.pixelScale) && void 0 !== Ib ? Ib : 1,
+          onChange: bb => {
+            (bb !== hb.d.get("clientEscMenuOptions").pixelScale || (0, bs.p)()) && (0, jc.d)("pixelScale"), hb.d.setClientEscMenuOptions({
+              pixelScale: bb
             })
           },
-          circleInfoText: yk("settingsMenu:pixelScaleInfo"),
-          format: kk => `${kk}x`
-        }), (0, sk.jsx)(Ok.e, {
-          label: yk("settingsMenu:pixelSmoothing"),
-          checked: fk.pixelSmoothing,
-          onClick: kk => {
-            Ek.c.setClientEscMenuOptions({
-              pixelSmoothing: kk
+          circleInfoText: lb("settingsMenu:pixelScaleInfo"),
+          format: bb => `${bb}x`
+        }), (0, fb.jsx)(Yb.d, {
+          label: lb("settingsMenu:pixelSmoothing"),
+          checked: Qb.pixelSmoothing,
+          onClick: bb => {
+            hb.d.setClientEscMenuOptions({
+              pixelSmoothing: bb
             })
           },
-          circleInfoText: yk("settingsMenu:pixelSmoothingInfo")
-        }), pF.p && (0, sk.jsx)(Ok.e, {
-          label: yk("settingsMenu:distantNametags"),
-          checked: (0, kB.c)(),
-          onClick: kk => {
-            Ek.c.set({
-              showDistantNametags: kk
+          circleInfoText: lb("settingsMenu:pixelSmoothingInfo")
+        }), rc.s && (0, fb.jsx)(Yb.d, {
+          label: lb("settingsMenu:distantNametags"),
+          checked: (0, pc.e)(),
+          onClick: bb => {
+            hb.d.set({
+              showDistantNametags: bb
             })
           },
-          circleInfoText: yk("settingsMenu:distantNametagsInfo")
-        }), (0, sk.jsx)(Ok.e, {
-          label: yk(gk.translationKey),
-          checked: gk.checked,
-          onClick: kk => {
-            rk({
-              useWebGpu: kk
-            }), Ek.c.setClientEscMenuOptions({
-              useWebGpu: kk
+          circleInfoText: lb("settingsMenu:distantNametagsInfo")
+        }), (0, fb.jsx)(Yb.d, {
+          label: lb(Pb.translationKey),
+          checked: Pb.checked,
+          onClick: bb => {
+            Gb({
+              useWebGpu: bb
+            }), hb.d.setClientEscMenuOptions({
+              useWebGpu: bb
             })
           },
-          circleInfoText: yk("settingsMenu:newWebGpuInfo"),
-          disabled: gk.disabled
+          circleInfoText: lb("settingsMenu:newWebGpuInfo"),
+          disabled: Pb.disabled
         })]
       })
     }
-    var tB = Bk(4154),
-      aB = Bk(8540),
-      XB = Bk(8941),
-      bB = Bk(8556),
-      wB = Bk(8949);
-    const dB = {
+    var ks = sb(4161),
+      Ws = sb(8478),
+      as = sb(8867),
+      Ts = sb(8485),
+      Us = sb(8871);
+    const Is = {
         color: 16777215,
         name: "white"
       },
-      sB = {
+      Hs = {
         color: 0,
         name: "black"
       },
-      VB = [dB, {
+      fs = [Is, {
         color: 5046092,
         name: "green"
       }, {
@@ -1454,73 +1454,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, sB],
-      JB = [sB, dB];
+      }, Hs],
+      Ms = [Hs, Is];
 
-    function AB(kk) {
-      return `${kk} px`
+    function Xs(bb) {
+      return `${bb} px`
     }
 
-    function eB(kk) {
-      return `${kk}%`
+    function ns(bb) {
+      return `${bb}%`
     }
 
-    function yB(kk) {
+    function ms(bb) {
       let {
-        label: Fk,
-        value: Bk,
-        swatches: Rk,
-        onChange: tk
-      } = kk;
+        label: cb,
+        value: sb,
+        swatches: kb,
+        onChange: Wb
+      } = bb;
       const {
-        t: bk
-      } = (0, Xk.x)(), wk = !Rk.some((kk => kk.color === Bk));
-      return (0, sk.jsxs)("div", {
+        t: Ub
+      } = (0, Tb.E)(), Ib = !kb.some((bb => bb.color === sb));
+      return (0, fb.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, sk.jsx)("div", {
+        children: [(0, fb.jsx)("div", {
           className: "SliderText",
-          children: Fk
-        }), (0, sk.jsxs)("div", {
+          children: cb
+        }), (0, fb.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": Fk,
-          children: [Rk.map((kk => {
+          "aria-label": cb,
+          children: [kb.map((bb => {
             let {
-              color: Fk,
-              name: Rk
-            } = kk;
-            return (0, sk.jsx)("button", {
+              color: cb,
+              name: kb
+            } = bb;
+            return (0, fb.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": Fk === Bk,
-              "aria-label": bk(`crosshairSettings:color_${Rk}`),
+              "aria-checked": cb === sb,
+              "aria-label": Ub(`crosshairSettings:color_${kb}`),
               "data-pad-focusable": !0,
-              className: ak()("CrosshairSwatch", {
-                Selected: Fk === Bk
+              className: ab()("CrosshairSwatch", {
+                Selected: cb === sb
               }),
               style: {
-                background: (0, wB.j)(Fk)
+                background: (0, Us.n)(cb)
               },
               onClick: () => {
-                tk(Fk)
+                Wb(cb)
               }
-            }, Fk)
-          })), (0, sk.jsx)("label", {
-            className: ak()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: wk
+            }, cb)
+          })), (0, fb.jsx)("label", {
+            className: ab()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: Ib
             }),
-            style: wk ? {
-              background: (0, wB.j)(Bk)
+            style: Ib ? {
+              background: (0, Us.n)(sb)
             } : void 0,
-            title: bk("crosshairSettings:customColor"),
+            title: Ub("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, sk.jsx)("input", {
+            children: (0, fb.jsx)("input", {
               type: "color",
-              "aria-label": bk("crosshairSettings:customColor"),
-              value: (0, wB.j)(Bk),
-              onChange: kk => {
-                const Fk = (0, wB.o)(kk.target.value);
-                null !== Fk && tk(Fk)
+              "aria-label": Ub("crosshairSettings:customColor"),
+              value: (0, Us.n)(sb),
+              onChange: bb => {
+                const cb = (0, Us.q)(bb.target.value);
+                null !== cb && Wb(cb)
               }
             })
           })]
@@ -1528,119 +1528,119 @@ export const modules = {
       })
     }
 
-    function fB(kk) {
+    function ls(bb) {
       let {
-        settings: Fk,
-        onChange: Bk
-      } = kk;
+        settings: cb,
+        onChange: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, Xk.x)(), tk = (kk, Rk) => {
-        Bk((0, wB.t)(Fk, kk, Rk))
-      }, ak = function(kk, Bk) {
-        let Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AB;
+        t: kb
+      } = (0, Tb.E)(), Wb = (bb, kb) => {
+        sb((0, Us.u)(cb, bb, kb))
+      }, ab = function(bb, sb) {
+        let kb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Xs;
         const {
-          min: ak,
-          max: Xk,
-          step: bk
-        } = wB.d[kk];
-        return (0, sk.jsx)(Ok.l, {
-          name: Bk,
-          min: ak,
-          max: Xk,
-          step: bk,
-          initValue: Fk[kk],
-          format: Rk,
-          onChange: Fk => {
-            tk(kk, Fk)
+          min: ab,
+          max: Tb,
+          step: Ub
+        } = Us.c[bb];
+        return (0, fb.jsx)(Yb.i, {
+          name: sb,
+          min: ab,
+          max: Tb,
+          step: Ub,
+          initValue: cb[bb],
+          format: kb,
+          onChange: cb => {
+            Wb(bb, cb)
           }
-        }, kk)
-      }, bk = ["lines", "dot", "circle"].filter((kk => Fk[kk])), wk = (kk, Bk, Rk) => (0, sk.jsx)(Ok.e, {
-        label: Bk,
-        checked: Fk[kk],
-        disabled: 1 === bk.length && bk[0] === kk,
-        circleInfoText: Rk,
-        onClick: Fk => {
-          tk(kk, Fk)
+        }, bb)
+      }, Ub = ["lines", "dot", "circle"].filter((bb => cb[bb])), Ib = (bb, sb, kb) => (0, fb.jsx)(Yb.d, {
+        label: sb,
+        checked: cb[bb],
+        disabled: 1 === Ub.length && Ub[0] === bb,
+        circleInfoText: kb,
+        onClick: cb => {
+          Wb(bb, cb)
         }
-      }, kk), dk = "shapes" === Fk.style;
-      return (0, sk.jsxs)(sk.Fragment, {
-        children: [(0, sk.jsx)(Ok.i, {
-          label: Rk("crosshairSettings:style"),
+      }, bb), Hb = "shapes" === cb.style;
+      return (0, fb.jsxs)(fb.Fragment, {
+        children: [(0, fb.jsx)(Yb.g, {
+          label: kb("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: Rk("crosshairSettings:styleClassic")
+            label: kb("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: Rk("crosshairSettings:styleShapes")
+            label: kb("crosshairSettings:styleShapes")
           }],
-          value: Fk.style,
-          onChange: kk => {
-            tk("style", kk)
+          value: cb.style,
+          onChange: bb => {
+            Wb("style", bb)
           }
-        }), (0, sk.jsx)(yB, {
-          label: Rk("crosshairSettings:color"),
-          value: Fk.color,
-          swatches: VB,
-          onChange: kk => {
-            tk("color", kk)
+        }), (0, fb.jsx)(ms, {
+          label: kb("crosshairSettings:color"),
+          value: cb.color,
+          swatches: fs,
+          onChange: bb => {
+            Wb("color", bb)
           }
-        }), ak("opacity", Rk("crosshairSettings:opacity"), eB), !dk && ak("size", Rk("crosshairSettings:size"), eB), dk && (0, sk.jsxs)("div", {
+        }), ab("opacity", kb("crosshairSettings:opacity"), ns), !Hb && ab("size", kb("crosshairSettings:size"), ns), Hb && (0, fb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [wk("lines", Rk("crosshairSettings:lines")), Fk.lines && ak("lineLength", Rk("crosshairSettings:lineLength")), Fk.lines && ak("lineThickness", Rk("crosshairSettings:lineThickness")), Fk.lines && ak("gap", Rk("crosshairSettings:gap")), Fk.lines && wk("tStyle", Rk("crosshairSettings:tStyle"))]
-        }), dk && (0, sk.jsxs)("div", {
+          children: [Ib("lines", kb("crosshairSettings:lines")), cb.lines && ab("lineLength", kb("crosshairSettings:lineLength")), cb.lines && ab("lineThickness", kb("crosshairSettings:lineThickness")), cb.lines && ab("gap", kb("crosshairSettings:gap")), cb.lines && Ib("tStyle", kb("crosshairSettings:tStyle"))]
+        }), Hb && (0, fb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [wk("dot", Rk("crosshairSettings:dot")), Fk.dot && ak("dotSize", Rk("crosshairSettings:dotSize"))]
-        }), dk && (0, sk.jsxs)("div", {
+          children: [Ib("dot", kb("crosshairSettings:dot")), cb.dot && ab("dotSize", kb("crosshairSettings:dotSize"))]
+        }), Hb && (0, fb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [wk("circle", Rk("crosshairSettings:circle")), Fk.circle && ak("circleRadius", Rk("crosshairSettings:circleRadius")), Fk.circle && ak("circleThickness", Rk("crosshairSettings:circleThickness"))]
-        }), (0, sk.jsxs)("div", {
+          children: [Ib("circle", kb("crosshairSettings:circle")), cb.circle && ab("circleRadius", kb("crosshairSettings:circleRadius")), cb.circle && ab("circleThickness", kb("crosshairSettings:circleThickness"))]
+        }), (0, fb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [ak("outline", Rk("crosshairSettings:outline"), (kk => kk > 0 ? AB(kk) : Rk("crosshairSettings:off"))), Fk.outline > 0 && (0, sk.jsx)(yB, {
-            label: Rk("crosshairSettings:outlineColor"),
-            value: Fk.outlineColor,
-            swatches: JB,
-            onChange: kk => {
-              tk("outlineColor", kk)
+          children: [ab("outline", kb("crosshairSettings:outline"), (bb => bb > 0 ? Xs(bb) : kb("crosshairSettings:off"))), cb.outline > 0 && (0, fb.jsx)(ms, {
+            label: kb("crosshairSettings:outlineColor"),
+            value: cb.outlineColor,
+            swatches: Ms,
+            onChange: bb => {
+              Wb("outlineColor", bb)
             }
           })]
-        }), wk("growOnClick", Rk("crosshairSettings:growOnClick")), dk && wk("forGuns", Rk("crosshairSettings:forGuns"), Rk("crosshairSettings:forGunsInfo"))]
+        }), Ib("growOnClick", kb("crosshairSettings:growOnClick")), Hb && Ib("forGuns", kb("crosshairSettings:forGuns"), kb("crosshairSettings:forGunsInfo"))]
       })
     }
-    var mB = Bk(67),
-      WB = Bk(1230),
-      vB = Bk(8955),
-      iB = Bk(8957),
-      YB = Bk(8962),
-      oB = Bk(8970);
-    const LB = ["sky", "grass", "stone", "sand", "snow", "night"],
-      OB = "4rem";
+    var Qs = sb(89),
+      es = sb(1278),
+      Cs = sb(8873),
+      Ns = sb(8875),
+      Vs = sb(8878),
+      Ls = sb(8886);
+    const us = ["sky", "grass", "stone", "sand", "snow", "night"],
+      Ys = "4rem";
 
-    function EB(kk) {
+    function hs(bb) {
       return {
-        backgroundImage: `url(${kk})`,
-        backgroundSize: `${OB} ${OB}`,
+        backgroundImage: `url(${bb})`,
+        backgroundSize: `${Ys} ${Ys}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function SB(kk) {
+    function gs(bb) {
       return {
         ...(() => {
-          switch (kk) {
+          switch (bb) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return EB(vB);
+              return hs(Cs);
             case "stone":
-              return EB(iB);
+              return hs(Ns);
             case "sand":
-              return EB(YB);
+              return hs(Vs);
             case "snow":
-              return EB(oB);
+              return hs(Ls);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1651,21 +1651,21 @@ export const modules = {
       }
     }
 
-    function NB(kk) {
+    function Bs(bb) {
       return Object.freeze({
-        ...wB.f,
+        ...Us.g,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...kk
+        ...bb
       })
     }
-    const HB = [{
+    const ts = [{
         id: "default",
-        settings: wB.f
+        settings: Us.g
       }, {
         id: "cross",
-        settings: NB({
+        settings: Bs({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1674,7 +1674,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: NB({
+        settings: Bs({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1685,13 +1685,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: NB({
+        settings: Bs({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: NB({
+        settings: Bs({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1700,7 +1700,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: NB({
+        settings: Bs({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -1710,7 +1710,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: NB({
+        settings: Bs({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -1719,7 +1719,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: NB({
+        settings: Bs({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -1727,571 +1727,571 @@ export const modules = {
           outline: 1.5
         })
       }],
-      uB = ["growOnClick", "forGuns"];
-    var MB = Bk(8974);
+      ys = ["growOnClick", "forGuns"];
+    var Ps = sb(8888);
 
-    function gB(kk) {
+    function Ds(bb) {
       let {
-        label: Fk,
-        selected: Bk,
-        onClick: Rk,
-        className: tk,
-        style: Xk,
-        children: bk
-      } = kk;
-      return (0, sk.jsx)("button", {
+        label: cb,
+        selected: sb,
+        onClick: kb,
+        className: Wb,
+        style: Tb,
+        children: Ub
+      } = bb;
+      return (0, fb.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": Bk,
-        title: Fk,
-        "aria-label": Fk,
+        "aria-checked": sb,
+        title: cb,
+        "aria-label": cb,
         "data-pad-focusable": !0,
-        className: ak()("CrosshairBackdropSwatch", tk, {
-          Selected: Bk
+        className: ab()("CrosshairBackdropSwatch", Wb, {
+          Selected: sb
         }),
-        style: Xk,
-        onClick: Rk,
-        children: bk
+        style: Tb,
+        onClick: kb,
+        children: Ub
       })
     }
 
-    function UB(kk) {
+    function Es(bb) {
       let {
-        backdrop: Fk,
-        onChange: Bk,
-        game: Rk
-      } = kk;
+        backdrop: cb,
+        onChange: sb,
+        game: kb
+      } = bb;
       const {
-        t: tk
-      } = (0, Xk.x)();
-      return (0, sk.jsxs)("div", {
+        t: Wb
+      } = (0, Tb.E)();
+      return (0, fb.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": tk("crosshairSettings:background"),
-        children: [Rk && (0, sk.jsx)(gB, {
-          label: tk("crosshairSettings:bg_game"),
-          selected: Rk.selected,
-          onClick: Rk.onSelect,
+        "aria-label": Wb("crosshairSettings:background"),
+        children: [kb && (0, fb.jsx)(Ds, {
+          label: Wb("crosshairSettings:bg_game"),
+          selected: kb.selected,
+          onClick: kb.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, sk.jsx)(bk.d, {
+          children: (0, fb.jsx)(Ub.b, {
             name: "cube"
           })
-        }), LB.map((kk => (0, sk.jsx)(gB, {
-          label: tk(`crosshairSettings:bg_${kk}`),
-          selected: !(null !== Rk && void 0 !== Rk && Rk.selected) && kk === Fk,
-          style: SB(kk),
+        }), us.map((bb => (0, fb.jsx)(Ds, {
+          label: Wb(`crosshairSettings:bg_${bb}`),
+          selected: !(null !== kb && void 0 !== kb && kb.selected) && bb === cb,
+          style: gs(bb),
           onClick: () => {
-            Bk(kk)
+            sb(bb)
           }
-        }, kk)))]
+        }, bb)))]
       })
     }
 
-    function cB(kk) {
+    function is(bb) {
       let {
-        settings: Fk,
-        touch: Bk,
-        backdrop: Rk,
-        onChange: tk
-      } = kk;
+        settings: cb,
+        touch: sb,
+        backdrop: kb,
+        onChange: Wb
+      } = bb;
       const {
-        t: bk
-      } = (0, Xk.x)(), wk = function(kk) {
-        var Fk;
-        return null !== (Fk = HB.find((Fk => (0, wB.r)(Fk.settings, kk, uB)))) && void 0 !== Fk ? Fk : null
-      }(Fk);
-      return (0, sk.jsx)("div", {
+        t: Ub
+      } = (0, Tb.E)(), Ib = function(bb) {
+        var cb;
+        return null !== (cb = ts.find((cb => (0, Us.r)(cb.settings, bb, ys)))) && void 0 !== cb ? cb : null
+      }(cb);
+      return (0, fb.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": bk("crosshairSettings:presets"),
-        children: HB.map((kk => {
-          const Xk = (null === wk || void 0 === wk ? void 0 : wk.id) === kk.id;
-          return (0, sk.jsxs)("button", {
+        "aria-label": Ub("crosshairSettings:presets"),
+        children: ts.map((bb => {
+          const Tb = (null === Ib || void 0 === Ib ? void 0 : Ib.id) === bb.id;
+          return (0, fb.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": Xk,
+            "aria-checked": Tb,
             "data-pad-focusable": !0,
-            className: ak()("CrosshairPreset", {
-              Selected: Xk
+            className: ab()("CrosshairPreset", {
+              Selected: Tb
             }),
             onClick: () => {
-              tk(function(kk, Fk) {
+              Wb(function(bb, cb) {
                 return {
-                  ...Fk.settings,
-                  growOnClick: kk.growOnClick,
-                  forGuns: kk.forGuns
+                  ...cb.settings,
+                  growOnClick: bb.growOnClick,
+                  forGuns: bb.forGuns
                 }
-              }(Fk, kk))
+              }(cb, bb))
             },
-            children: [(0, sk.jsx)("div", {
+            children: [(0, fb.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: SB(Rk),
-              children: (0, sk.jsx)(MB.c, {
-                settings: kk.settings,
-                touch: Bk,
+              style: gs(kb),
+              children: (0, fb.jsx)(Ps.b, {
+                settings: bb.settings,
+                touch: sb,
                 inPreview: !0
               })
-            }), (0, sk.jsx)("div", {
+            }), (0, fb.jsx)("div", {
               className: "CrosshairPresetName",
-              children: bk(`crosshairSettings:preset_${kk.id}`)
+              children: Ub(`crosshairSettings:preset_${bb.id}`)
             })]
-          }, kk.id)
+          }, bb.id)
         }))
       })
     }
-    var GB = Bk(1617);
+    var Os = sb(1657);
 
-    function TB(kk, Fk) {
-      const [Bk, tk] = (0, Rk.useState)(!1), ak = () => {
-        tk(!1)
-      }, [Xk, bk] = (0, Rk.useState)(!1), wk = (0, Rk.useRef)({
-        growOnClick: kk.growOnClick,
-        forGuns: kk.forGuns
+    function Gs(bb, cb) {
+      const [sb, Wb] = (0, kb.useState)(!1), ab = () => {
+        Wb(!1)
+      }, [Tb, Ub] = (0, kb.useState)(!1), Ib = (0, kb.useRef)({
+        growOnClick: bb.growOnClick,
+        forGuns: bb.forGuns
       });
-      (0, Rk.useEffect)((() => {
-        const Fk = wk.current;
-        wk.current = {
-          growOnClick: kk.growOnClick,
-          forGuns: kk.forGuns
-        }, (kk.growOnClick && !Fk.growOnClick || kk.forGuns && !Fk.forGuns) && bk(!0)
-      }), [kk.growOnClick, kk.forGuns]), (0, Rk.useEffect)((() => {
-        if (!Xk) return;
-        const kk = setTimeout((() => {
-          bk(!1)
+      (0, kb.useEffect)((() => {
+        const cb = Ib.current;
+        Ib.current = {
+          growOnClick: bb.growOnClick,
+          forGuns: bb.forGuns
+        }, (bb.growOnClick && !cb.growOnClick || bb.forGuns && !cb.forGuns) && Ub(!0)
+      }), [bb.growOnClick, bb.forGuns]), (0, kb.useEffect)((() => {
+        if (!Tb) return;
+        const bb = setTimeout((() => {
+          Ub(!1)
         }), 600);
         return () => {
-          clearTimeout(kk)
+          clearTimeout(bb)
         }
-      }), [Xk]);
-      const dk = Bk || Xk;
+      }), [Tb]);
+      const Hb = sb || Tb;
       return {
         view: {
-          pressed: dk,
-          spread: dk && kk.forGuns && !kk.growOnClick ? 6 : 0
+          pressed: Hb,
+          spread: Hb && bb.forGuns && !bb.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: kk => {
-            !kk.target.closest(Fk) && (0, GB.e)(kk.currentTarget, kk.pointerId) && tk(!0)
+          onPointerDown: bb => {
+            !bb.target.closest(cb) && (0, Os.c)(bb.currentTarget, bb.pointerId) && Wb(!0)
           },
-          onPointerUp: ak,
-          onPointerCancel: ak,
-          onLostPointerCapture: ak
+          onPointerUp: ab,
+          onPointerCancel: ab,
+          onLostPointerCapture: ab
         }
       }
     }
 
-    function rB(kk) {
+    function Ks(bb) {
       let {
-        settings: Fk,
-        touch: Bk,
-        backdrop: Rk,
-        className: tk,
-        children: Xk,
-        label: bk
-      } = kk;
-      const wk = TB(Fk, ".CrosshairStageControls");
-      return (0, sk.jsxs)("div", {
-        className: ak()("CrosshairStage", tk),
-        style: SB(Rk),
-        ...wk.handlers,
-        children: [(0, sk.jsx)("div", {
+        settings: cb,
+        touch: sb,
+        backdrop: kb,
+        className: Wb,
+        children: Tb,
+        label: Ub
+      } = bb;
+      const Ib = Gs(cb, ".CrosshairStageControls");
+      return (0, fb.jsxs)("div", {
+        className: ab()("CrosshairStage", Wb),
+        style: gs(kb),
+        ...Ib.handlers,
+        children: [(0, fb.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": bk,
-          children: (0, sk.jsx)(MB.c, {
-            settings: Fk,
-            touch: Bk,
+          "aria-label": Ub,
+          children: (0, fb.jsx)(Ps.b, {
+            settings: cb,
+            touch: sb,
             inPreview: !0,
-            ...wk.view
+            ...Ib.view
           })
-        }), Xk]
+        }), Tb]
       })
     }
-    const DB = "crosshairFullScreen";
+    const Zs = "crosshairFullScreen";
 
-    function zB(kk) {
+    function zs(bb) {
       let {
-        settings: Fk,
-        touch: Bk,
-        backdrop: tk,
-        onBackdrop: wk,
-        inGame: dk,
-        onChange: Vk,
-        onClose: Jk
-      } = kk;
+        settings: cb,
+        touch: sb,
+        backdrop: Wb,
+        onBackdrop: Ib,
+        inGame: Hb,
+        onChange: Mb,
+        onClose: Xb
+      } = bb;
       const {
-        t: Ak
-      } = (0, Xk.x)(), ek = (0, Rk.useRef)(null);
-      (0, WB.s)("popup", ek, Jk),
-      function(kk) {
-        const Fk = (0, Rk.useRef)(kk);
-        Fk.current = kk, (0, Rk.useEffect)((() => {
+        t: nb
+      } = (0, Tb.E)(), mb = (0, kb.useRef)(null);
+      (0, es.o)("popup", mb, Xb),
+      function(bb) {
+        const cb = (0, kb.useRef)(bb);
+        cb.current = bb, (0, kb.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [DB]: !0
+            [Zs]: !0
           }, "");
-          let kk = !1;
-          const Bk = () => {
-            kk = !0, Fk.current()
+          let bb = !1;
+          const sb = () => {
+            bb = !0, cb.current()
           };
-          return window.addEventListener("popstate", Bk), () => {
-            var Fk;
-            window.removeEventListener("popstate", Bk), !kk && null !== (Fk = window.history.state) && void 0 !== Fk && Fk[DB] && window.history.back()
+          return window.addEventListener("popstate", sb), () => {
+            var cb;
+            window.removeEventListener("popstate", sb), !bb && null !== (cb = window.history.state) && void 0 !== cb && cb[Zs] && window.history.back()
           }
         }), [])
-      }(Jk);
-      const yk = (0, Rk.useRef)(Jk);
-      yk.current = Jk, (0, Rk.useEffect)((() => {
-        function kk(kk) {
-          "Escape" === kk.key && (kk.stopPropagation(), yk.current())
+      }(Xb);
+      const lb = (0, kb.useRef)(Xb);
+      lb.current = Xb, (0, kb.useEffect)((() => {
+        function bb(bb) {
+          "Escape" === bb.key && (bb.stopPropagation(), lb.current())
         }
-        return window.addEventListener("keydown", kk, !0), () => {
-          window.removeEventListener("keydown", kk, !0)
+        return window.addEventListener("keydown", bb, !0), () => {
+          window.removeEventListener("keydown", bb, !0)
         }
       }), []);
-      const mk = TB(Fk, ".CrosshairFullScreenPanel"),
-        [Wk, vk] = (0, Rk.useState)(!0),
-        ik = Wk && dk;
-      (0, Rk.useEffect)((() => {
-        if (ik) return Ek.c.set({
+      const eb = Gs(cb, ".CrosshairFullScreenPanel"),
+        [Cb, Nb] = (0, kb.useState)(!0),
+        Vb = Cb && Hb;
+      (0, kb.useEffect)((() => {
+        if (Vb) return hb.d.set({
           crosshairGameView: !0
         }), () => {
-          Ek.c.set({
+          hb.d.set({
             crosshairGameView: !1
           })
         }
-      }), [ik]);
-      const [Yk, Lk] = (0, Rk.useState)(!0);
-      return (0, mB.createPortal)((0, sk.jsxs)("div", {
-        ref: ek,
+      }), [Vb]);
+      const [Lb, ub] = (0, kb.useState)(!0);
+      return (0, Qs.createPortal)((0, fb.jsxs)("div", {
+        ref: mb,
         className: "CrosshairFullScreen",
-        style: ik ? void 0 : SB(tk),
-        ...mk.handlers,
-        children: [(0, sk.jsx)(MB.c, {
-          settings: Fk,
-          touch: Bk,
+        style: Vb ? void 0 : gs(Wb),
+        ...eb.handlers,
+        children: [(0, fb.jsx)(Ps.b, {
+          settings: cb,
+          touch: sb,
           inEditor: !0,
-          ...mk.view
-        }), (0, sk.jsxs)("div", {
-          className: ak()("CrosshairFullScreenPanel", {
-            Collapsed: !Yk
+          ...eb.view
+        }), (0, fb.jsxs)("div", {
+          className: ab()("CrosshairFullScreenPanel", {
+            Collapsed: !Lb
           }),
-          children: [(0, sk.jsxs)("div", {
+          children: [(0, fb.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, sk.jsx)(UB, {
-              backdrop: tk,
-              onChange: kk => {
-                vk(!1), wk(kk)
+            children: [(0, fb.jsx)(Es, {
+              backdrop: Wb,
+              onChange: bb => {
+                Nb(!1), Ib(bb)
               },
-              game: dk ? {
-                selected: ik,
+              game: Hb ? {
+                selected: Vb,
                 onSelect: () => {
-                  vk(!0)
+                  Nb(!0)
                 }
               } : void 0
-            }), (0, sk.jsx)(fk.O, {
+            }), (0, fb.jsx)(Qb.M, {
               className: "CrosshairPanelToggle",
-              ariaLabel: Ak(Yk ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: nb(Lb ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                Lk(!Yk)
+                ub(!Lb)
               },
-              children: (0, sk.jsx)(bk.d, {
-                name: Yk ? "caret-up" : "pen"
+              children: (0, fb.jsx)(Ub.b, {
+                name: Lb ? "caret-up" : "pen"
               })
-            }), (0, sk.jsx)(fk.g, {
+            }), (0, fb.jsx)(Qb.d, {
               className: "CrosshairFullScreenDone",
-              onClick: Jk,
+              onClick: Xb,
               padDefaultFocus: !0,
-              children: Ak("crosshairSettings:done")
+              children: nb("crosshairSettings:done")
             })]
-          }), Yk && (0, sk.jsxs)("div", {
+          }), Lb && (0, fb.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, sk.jsx)(cB, {
-              settings: Fk,
-              touch: Bk,
-              backdrop: tk,
-              onChange: Vk
-            }), (0, sk.jsx)(fB, {
-              settings: Fk,
-              onChange: Vk
+            children: [(0, fb.jsx)(is, {
+              settings: cb,
+              touch: sb,
+              backdrop: Wb,
+              onChange: Mb
+            }), (0, fb.jsx)(ls, {
+              settings: cb,
+              onChange: Mb
             })]
           })]
         })]
       }), document.body)
     }
-    var PB = Bk(2531),
-      hB = Bk(8987);
+    var qs = sb(2519),
+      ds = sb(8897);
 
-    function qB(kk) {
+    function As(bb) {
       let {
-        settings: Fk,
-        onChange: Bk
-      } = kk;
+        settings: cb,
+        onChange: sb
+      } = bb;
       const {
-        t: tk
-      } = (0, Xk.x)(), wk = (0, hB.g)(Fk), [dk, Vk] = (0, PB.i)(), [Jk, Ak] = (0, Rk.useState)(!1), ek = (0, Rk.useRef)(null), [yk, mk] = (0, PB.i)(), [Wk, vk] = (0, Rk.useState)(!1);
-      return (0, sk.jsxs)("div", {
+        t: Wb
+      } = (0, Tb.E)(), Ib = (0, ds.i)(cb), [Hb, Mb] = (0, qs.j)(), [Xb, nb] = (0, kb.useState)(!1), mb = (0, kb.useRef)(null), [lb, eb] = (0, qs.j)(), [Cb, Nb] = (0, kb.useState)(!1);
+      return (0, fb.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, sk.jsxs)("div", {
+        children: [(0, fb.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, sk.jsxs)(fk.O, {
-            className: ak()("CrosshairCopy", {
-              ActiveSecondaryButton: dk
+          children: [(0, fb.jsxs)(Qb.M, {
+            className: ab()("CrosshairCopy", {
+              ActiveSecondaryButton: Hb
             }),
             onClick: () => {
-              (0, PB.f)(wk, {
+              (0, qs.g)(Ib, {
                 useShareSheet: !1,
-                onOutcome: kk => {
-                  Ak("failed" === kk), "copied" === kk && Vk()
+                onOutcome: bb => {
+                  nb("failed" === bb), "copied" === bb && Mb()
                 }
               })
             },
-            children: [(0, sk.jsx)(bk.d, {
-              name: dk ? "check" : "copy"
-            }), " ", tk(dk ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, sk.jsx)(Yk.e, {
+            children: [(0, fb.jsx)(Ub.b, {
+              name: Hb ? "check" : "copy"
+            }), " ", Wb(Hb ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, fb.jsx)(Lb.c, {
             className: "CrosshairPaste",
-            domRef: ek,
-            ariaLabel: tk("crosshairSettings:paste"),
-            placeholderText: tk("crosshairSettings:paste"),
-            onValueChange: kk => {
-              const Fk = (0, hB.e)(kk);
-              vk(!Fk && kk.trim().length >= hB.d), Fk && (Bk(Fk), ek.current.value = "", mk())
+            domRef: mb,
+            ariaLabel: Wb("crosshairSettings:paste"),
+            placeholderText: Wb("crosshairSettings:paste"),
+            onValueChange: bb => {
+              const cb = (0, ds.f)(bb);
+              Nb(!cb && bb.trim().length >= ds.c), cb && (sb(cb), mb.current.value = "", eb())
             }
           })]
-        }), Jk && (0, sk.jsx)("input", {
+        }), Xb && (0, fb.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: wk,
-          "aria-label": tk("crosshairSettings:copy"),
-          onFocus: kk => {
-            kk.currentTarget.select()
+          value: Ib,
+          "aria-label": Wb("crosshairSettings:copy"),
+          onFocus: bb => {
+            bb.currentTarget.select()
           }
-        }), (0, sk.jsxs)("div", {
+        }), (0, fb.jsxs)("div", {
           "aria-live": "polite",
-          children: [Wk && (0, sk.jsx)("div", {
+          children: [Cb && (0, fb.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: tk("crosshairSettings:pasteInvalid")
-          }), yk && !Wk && (0, sk.jsx)("div", {
+            children: Wb("crosshairSettings:pasteInvalid")
+          }), lb && !Cb && (0, fb.jsx)("div", {
             className: "CrosshairShareNote",
-            children: tk("crosshairSettings:applied")
+            children: Wb("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var CB = Bk(8990);
-    let ZB = "sky";
+    var ws = sb(8905);
+    let rs = "sky";
 
-    function pB(kk) {
+    function os(bb) {
       let {
-        showing: Fk
-      } = kk;
+        showing: cb
+      } = bb;
       const {
-        t: Bk
-      } = (0, Xk.x)(), {
-        isTouchScreen: tk,
-        gameState: ak,
-        clientEscMenuOptions: wk
-      } = (0, Ek.h)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), dk = (0, CB.g)(), [Vk, Jk] = (0, Rk.useState)(ZB), Ak = kk => {
-        ZB = kk, Jk(kk)
-      }, [ek, yk] = (0, Rk.useState)(!1);
-      return (0, Rk.useEffect)((() => {
-        Fk || yk(!1)
-      }), [Fk]), (0, sk.jsxs)("div", {
+        t: sb
+      } = (0, Tb.E)(), {
+        isTouchScreen: Wb,
+        gameState: ab,
+        clientEscMenuOptions: Ib
+      } = (0, hb.p)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), Hb = (0, ws.e)(), [Mb, Xb] = (0, kb.useState)(rs), nb = bb => {
+        rs = bb, Xb(bb)
+      }, [mb, lb] = (0, kb.useState)(!1);
+      return (0, kb.useEffect)((() => {
+        cb || lb(!1)
+      }), [cb]), (0, fb.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, sk.jsx)("div", {
+        children: [(0, fb.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, sk.jsx)(rB, {
+          children: (0, fb.jsx)(Ks, {
             className: "CrosshairPreviewStage",
-            settings: dk,
-            touch: tk,
-            backdrop: Vk,
-            label: Bk("crosshairSettings:preview"),
-            children: (0, sk.jsxs)("div", {
+            settings: Hb,
+            touch: Wb,
+            backdrop: Mb,
+            label: sb("crosshairSettings:preview"),
+            children: (0, fb.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, sk.jsx)(UB, {
-                backdrop: Vk,
-                onChange: Ak
-              }), (0, sk.jsxs)(fk.O, {
+              children: [(0, fb.jsx)(Es, {
+                backdrop: Mb,
+                onChange: nb
+              }), (0, fb.jsxs)(Qb.M, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  yk(!0)
+                  lb(!0)
                 },
-                children: [(0, sk.jsx)(bk.d, {
+                children: [(0, fb.jsx)(Ub.b, {
                   name: "expand"
-                }), " ", Bk("crosshairSettings:fullScreen")]
+                }), " ", sb("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, sk.jsx)("div", {
+        }), (0, fb.jsx)("div", {
           className: "SettingBox",
-          children: (0, sk.jsx)(cB, {
-            settings: dk,
-            touch: tk,
-            backdrop: Vk,
-            onChange: CB.d
+          children: (0, fb.jsx)(is, {
+            settings: Hb,
+            touch: Wb,
+            backdrop: Mb,
+            onChange: ws.b
           })
-        }), (0, sk.jsx)(qB, {
-          settings: dk,
-          onChange: CB.d
-        }), tk && (0, sk.jsx)(bB.d, {
-          note: (0, XB.g)(tk, wk.touchActionButtons) ? Bk("crosshairSettings:touchNote") : void 0
-        }), (0, sk.jsx)(fB, {
-          settings: dk,
-          onChange: CB.d
-        }), ek && (0, sk.jsx)(zB, {
-          settings: dk,
-          touch: tk,
-          backdrop: Vk,
-          onBackdrop: Ak,
-          inGame: "inGame" === ak,
-          onChange: CB.d,
+        }), (0, fb.jsx)(As, {
+          settings: Hb,
+          onChange: ws.b
+        }), Wb && (0, fb.jsx)(Ts.e, {
+          note: (0, as.f)(Wb, Ib.touchActionButtons) ? sb("crosshairSettings:touchNote") : void 0
+        }), (0, fb.jsx)(ls, {
+          settings: Hb,
+          onChange: ws.b
+        }), mb && (0, fb.jsx)(zs, {
+          settings: Hb,
+          touch: Wb,
+          backdrop: Mb,
+          onBackdrop: nb,
+          inGame: "inGame" === ab,
+          onChange: ws.b,
           onClose: () => {
-            yk(!1)
+            lb(!1)
           }
         })]
       })
     }
-    var KB = Bk(8548),
-      xB = Bk(1349),
-      jB = Bk(4686),
-      lB = Bk(8996),
-      nB = Bk(1876),
-      IB = Bk(4044),
-      QB = Bk(1879),
-      kR = Bk(685);
-    const FR = (0, Rk.memo)((function() {
+    var Ss = sb(8481),
+      Rs = sb(1379),
+      vs = sb(4694),
+      Fs = sb(8910),
+      xs = sb(1912),
+      ps = sb(4060),
+      bk = sb(1915),
+      ck = sb(725);
+    const sk = (0, kb.memo)((function() {
       const {
-        clientEscMenuOptions: kk
-      } = (0, Ek.h)(["clientEscMenuOptions"]), {
-        recording: Fk,
-        clipping: Bk,
-        hasClipBuffer: tk
-      } = (0, nB.h)("replayRecorder"), Xk = (0, nB.f)("connectedGame", (kk => kk.replay)), bk = (0, IB.j)(), wk = !1 === (0, ek.j)("canRecordReplays");
-      (0, Rk.useEffect)((() => {
-        Wk.gameBridge.send("setRecorderPrefs", {
-          clipping: kk.enableClipping,
-          clipSeconds: kk.clipDurationSeconds
+        clientEscMenuOptions: bb
+      } = (0, hb.p)(["clientEscMenuOptions"]), {
+        recording: cb,
+        clipping: sb,
+        hasClipBuffer: Wb
+      } = (0, xs.f)("replayRecorder"), Tb = (0, xs.e)("connectedGame", (bb => bb.replay)), Ub = (0, ps.n)(), Ib = !1 === (0, mb.d)("canRecordReplays");
+      (0, kb.useEffect)((() => {
+        Cb.gameBridge.send("setRecorderPrefs", {
+          clipping: bb.enableClipping,
+          clipSeconds: bb.clipDurationSeconds
         })
-      }), [kk.enableClipping, kk.clipDurationSeconds]);
-      const dk = bk || Xk,
-        Vk = !dk && !wk,
-        Jk = Fk || Vk,
-        Ak = Vk,
-        yk = Ak && Bk && !Fk;
+      }), [bb.enableClipping, bb.clipDurationSeconds]);
+      const Hb = Ub || Tb,
+        Mb = !Hb && !Ib,
+        Xb = cb || Mb,
+        nb = Mb,
+        lb = nb && sb && !cb;
 
-      function mk() {
-        Jk && Wk.gameBridge.send("toggleRecording", null)
+      function eb() {
+        Xb && Cb.gameBridge.send("toggleRecording", null)
       }
-      return (0, sk.jsxs)("div", {
+      return (0, fb.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, sk.jsxs)("div", {
+        children: [(0, fb.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, sk.jsx)("div", {
+          children: [(0, fb.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: Fk ? (0, sk.jsxs)(sk.Fragment, {
-              children: [(0, sk.jsxs)(fk.J, {
+            children: cb ? (0, fb.jsxs)(fb.Fragment, {
+              children: [(0, fb.jsxs)(Qb.G, {
                 className: "ReplayViewerCategoryButton",
-                onClick: mk,
-                disabled: !Jk,
-                children: [(0, sk.jsx)("span", {
+                onClick: eb,
+                disabled: !Xb,
+                children: [(0, fb.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, sk.jsx)(QB.c, {
+                }), (0, fb.jsx)(bk.d, {
                   noaAction: "recordGame"
                 })]
-              }), (0, sk.jsx)(lB.e, {
+              }), (0, fb.jsx)(Fs.e, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, sk.jsxs)(fk.g, {
+            }) : (0, fb.jsxs)(Qb.d, {
               className: "ReplayViewerCategoryButton",
-              onClick: mk,
-              disabled: !Jk,
-              children: [(0, sk.jsx)("span", {
+              onClick: eb,
+              disabled: !Xb,
+              children: [(0, fb.jsx)("span", {
                 children: "Start Recording"
-              }), (0, sk.jsx)(QB.c, {
+              }), (0, fb.jsx)(bk.d, {
                 noaAction: "recordGame"
               })]
             })
-          }), wk && (0, sk.jsx)("div", {
+          }), Ib && (0, fb.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), dk && !Fk && (0, sk.jsx)("div", {
+          }), Hb && !cb && (0, fb.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, sk.jsxs)("div", {
+        }), (0, fb.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, sk.jsx)(Ok.e, {
+          children: [(0, fb.jsx)(Yb.d, {
             label: "Enable clipping",
-            checked: kk.enableClipping,
-            disabled: !Ak,
-            onClick: function(kk) {
-              Ak && Ek.c.setClientEscMenuOptions({
-                enableClipping: kk
+            checked: bb.enableClipping,
+            disabled: !nb,
+            onClick: function(bb) {
+              nb && hb.d.setClientEscMenuOptions({
+                enableClipping: bb
               })
             },
-            className: ak()({
-              SettingBoxDisabled: !Ak
+            className: ab()({
+              SettingBoxDisabled: !nb
             })
-          }), (0, sk.jsx)(Ok.l, {
+          }), (0, fb.jsx)(Yb.i, {
             name: "Clip duration (seconds)",
-            min: kR.k,
-            max: kR.h,
-            step: kR.d,
-            initValue: kk.clipDurationSeconds,
-            onChange: function(kk) {
-              Ek.c.setClientEscMenuOptions({
-                clipDurationSeconds: kk
+            min: ck.g,
+            max: ck.f,
+            step: ck.b,
+            initValue: bb.clipDurationSeconds,
+            onChange: function(bb) {
+              hb.d.setClientEscMenuOptions({
+                clipDurationSeconds: bb
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !Ak || !kk.enableClipping
+            disabled: !nb || !bb.enableClipping
           })]
-        }), (0, sk.jsxs)("div", {
+        }), (0, fb.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, sk.jsxs)(fk.g, {
+          children: [(0, fb.jsxs)(Qb.d, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              yk && Wk.gameBridge.send("saveClip", null)
+              lb && Cb.gameBridge.send("saveClip", null)
             },
-            disabled: !yk,
-            children: [(0, sk.jsx)("span", {
+            disabled: !lb,
+            children: [(0, fb.jsx)("span", {
               children: "Record clip"
-            }), (0, sk.jsx)(QB.c, {
+            }), (0, fb.jsx)(bk.d, {
               noaAction: "recordClip"
             })]
-          }), kk.enableClipping && !tk && Ak && !Fk && (0, sk.jsx)("div", {
+          }), bb.enableClipping && !Wb && nb && !cb && (0, fb.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), Fk && (0, sk.jsx)("div", {
+          }), cb && (0, fb.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, sk.jsxs)("div", {
+        }), (0, fb.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, sk.jsxs)(fk.g, {
+          children: [(0, fb.jsxs)(Qb.d, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, IB.f)(!0), Ek.c.set({
+              (0, ps.j)(!0), hb.d.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: bk,
-            children: [(0, sk.jsx)("span", {
+            disabled: Ub,
+            children: [(0, fb.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, sk.jsx)(QB.c, {
+            }), (0, fb.jsx)(bk.d, {
               noaAction: "replayViewerOpen"
             })]
-          }), bk && (0, sk.jsx)("div", {
+          }), Ub && (0, fb.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, sk.jsxs)("div", {
+        }), (0, fb.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, sk.jsx)("div", {
+          children: [(0, fb.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, sk.jsx)("iframe", {
+          }), (0, fb.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2302,8 +2302,8 @@ export const modules = {
         })]
       })
     }));
-    var BR = Bk(1808);
-    const RR = {
+    var kk = sb(1832);
+    const Wk = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2325,11 +2325,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, sk.jsx)("svg", {
+        icon: () => (0, fb.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, sk.jsx)("path", {
+          children: (0, fb.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2348,7 +2348,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      ie: {
+      Qm: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2374,280 +2374,280 @@ export const modules = {
       }
     };
 
-    function tR() {
-      return Promise.all([Bk.e(74), Bk.e(131), Bk.e(125), Bk.e(122)]).then((() => Bk(40497))).then((kk => ({
-        default: kk.ShaderPackCategory
-      })), (kk => (console.error("Failed to load the shader pack settings", kk), {
-        default: aR
+    function ak() {
+      return Promise.all([sb.e(74), sb.e(131), sb.e(125), sb.e(122)]).then((() => sb(40501))).then((bb => ({
+        default: bb.ShaderPackCategory
+      })), (bb => (console.error("Failed to load the shader pack settings", bb), {
+        default: Tk
       })))
     }
 
-    function aR() {
+    function Tk() {
       const {
-        t: kk
-      } = (0, Xk.x)();
-      return (0, sk.jsx)("div", {
+        t: bb
+      } = (0, Tb.E)();
+      return (0, fb.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: kk("shaderPack:tabLoadFailed")
+        children: bb("shaderPack:tabLoadFailed")
       })
     }
-    var XR = Bk(1344);
-    const bR = (0, Rk.lazy)((() => Bk.e(263).then((() => Bk(40483))).then((kk => ({
-        default: kk.BloxdInformation
+    var Uk = sb(1371);
+    const Ik = (0, kb.lazy)((() => sb.e(263).then((() => sb(40490))).then((bb => ({
+        default: bb.BloxdInformation
       }))))),
-      wR = (0, Rk.lazy)(tR);
+      Hk = (0, kb.lazy)(ak);
 
-    function dR(kk) {
-      return kk ? "general" : "account"
+    function fk(bb) {
+      return bb ? "general" : "account"
     }
-    const sR = new Map,
-      VR = (0, Rk.memo)((function(kk) {
+    const Mk = new Map,
+      Xk = (0, kb.memo)((function(bb) {
         let {
-          show: Fk,
-          setBeforeResumeCallback: Bk
-        } = kk;
-        (0, yk.c)();
+          show: cb,
+          setBeforeResumeCallback: sb
+        } = bb;
+        (0, lb.c)();
         const {
-          gameState: tk,
-          openSettingsCategory: ak
-        } = (0, Ek.h)(["gameState", "openSettingsCategory"]), {
-          userContext: wk
-        } = (0, Ak.e)(), {
-          t: dk
-        } = (0, Xk.x)(), Yk = (0, Jk.b)(), Lk = (0, ek.j)("minChunkAddDist"), Ok = "inGame" === tk, [Sk, uk] = (0, Rk.useState)(dR(Ok)), [Mk, gk] = (0, Rk.useState)(null), [Uk, ck] = (0, Rk.useState)([]), Gk = (0, Rk.useRef)(function() {
-          const kk = new Date,
-            Fk = 6 * (kk.getMonth() + kk.getDate()) % sF.w.length;
-          return [...sF.w, ...sF.w].slice(Fk, Fk + 6)
-        }()), Tk = (0, Rk.useRef)(null), rk = (0, HF.g)(xB.h, (0, xB.b)()), Dk = Object.keys(RR).filter((kk => {
-          switch (kk) {
+          gameState: Wb,
+          openSettingsCategory: ab
+        } = (0, hb.p)(["gameState", "openSettingsCategory"]), {
+          userContext: Ib
+        } = (0, nb.c)(), {
+          t: Hb
+        } = (0, Tb.E)(), Lb = (0, Xb.b)(), ub = (0, mb.d)("minChunkAddDist"), Yb = "inGame" === Wb, [Jb, tb] = (0, kb.useState)(fk(Yb)), [yb, Pb] = (0, kb.useState)(null), [Db, Eb] = (0, kb.useState)([]), ib = (0, kb.useRef)(function() {
+          const bb = new Date,
+            cb = 6 * (bb.getMonth() + bb.getDate()) % Hc.A.length;
+          return [...Hc.A, ...Hc.A].slice(cb, cb + 6)
+        }()), Ob = (0, kb.useRef)(null), Gb = (0, Bc.h)(Rs.j, (0, Rs.b)()), Kb = Object.keys(Wk).filter((bb => {
+          switch (bb) {
             case "replayViewer":
-              return Ok;
+              return Yb;
             case "developerTools":
-              return wk.playerHasRank("developer") || !1;
+              return Ib.playerHasRank("developer") || !1;
             case "texturePack":
-              return mk.featureFlags.settings.canChangeTexturePack;
-            case "ie":
-              return mk.featureFlags.settings.canUseShaderPacks;
+              return eb.featureFlags.settings.canChangeTexturePack;
+            case "Qm":
+              return eb.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return mk.featureFlags.useSocialFeatures;
+              return eb.featureFlags.useSocialFeatures;
             case "alternativeDomains":
-              return "crazygames" !== Hk.q;
+              return "crazygames" !== Bb.r;
             case "controller":
-              return mk.featureFlags.useControllerSupport && (rk || "controller" === Sk);
+              return eb.featureFlags.useControllerSupport && (Gb || "controller" === Jb);
             default:
               return !0
           }
         }));
-        (0, HF.f)("toggleFullCoordinateOverlay", (() => {
-          const kk = nF("showCoordinates") && nF("showChunkCoordinates") && nF("showFPS");
-          IF("showCoordinates", !kk), IF("showChunkCoordinates", !kk), IF("showFPS", !kk), Yk()
-        })), (0, HF.f)("updatedChunkLoadDist", (() => {
-          Yk()
-        })), (0, Rk.useEffect)((() => {
-          if (gk(null), null === Ek.c.get("openSettingsCategory")) {
-            const kk = (0, XR.h)() ? sR.get(Ok) : void 0;
-            uk(kk && Dk.includes(kk) ? kk : dR(Ok))
+        (0, Bc.f)("toggleFullCoordinateOverlay", (() => {
+          const bb = Fc("showCoordinates") && Fc("showChunkCoordinates") && Fc("showFPS");
+          xc("showCoordinates", !bb), xc("showChunkCoordinates", !bb), xc("showFPS", !bb), Lb()
+        })), (0, Bc.f)("updatedChunkLoadDist", (() => {
+          Lb()
+        })), (0, kb.useEffect)((() => {
+          if (Pb(null), null === hb.d.get("openSettingsCategory")) {
+            const bb = (0, Uk.g)() ? Mk.get(Yb) : void 0;
+            tb(bb && Kb.includes(bb) ? bb : fk(Yb))
           }
-        }), [Fk]), (0, Rk.useEffect)((() => {
-          null !== ak && (uk(ak), sR.set(Ok, ak), Ek.c.set({
+        }), [cb]), (0, kb.useEffect)((() => {
+          null !== ab && (tb(ab), Mk.set(Yb, ab), hb.d.set({
             openSettingsCategory: null
           }))
-        }), [ak, Ok]), (0, Rk.useLayoutEffect)((() => {
-          Tk.current && (Tk.current.scrollTop = 0)
-        }), [Sk, Fk]), (0, Rk.useEffect)((() => {
-          "updateLog" === Sk && (0, ik.e)().then(ck)
-        }), [Sk]), (0, Rk.useEffect)((() => {
-          if ((0, CF.F)(Lk)) return;
-          const [kk, Fk] = (0, tB.g)(), [Bk, Rk] = (0, rF.g)(Lk), tk = (0, BR.e)(Lk[0], kk, Bk), ak = (0, BR.e)(Lk[1], Fk, Rk);
-          Wk.gameBridge.send("setChunkAddDistance", {
-            horizontal: tk,
-            vertical: ak
+        }), [ab, Yb]), (0, kb.useLayoutEffect)((() => {
+          Ob.current && (Ob.current.scrollTop = 0)
+        }), [Jb, cb]), (0, kb.useEffect)((() => {
+          "updateLog" === Jb && (0, Vb.d)().then(Eb)
+        }), [Jb]), (0, kb.useEffect)((() => {
+          if ((0, Ac.L)(ub)) return;
+          const [bb, cb] = (0, ks.d)(), [sb, kb] = (0, Gc.f)(ub), Wb = (0, kk.d)(ub[0], bb, sb), ab = (0, kk.d)(ub[1], cb, kb);
+          Cb.gameBridge.send("setChunkAddDistance", {
+            horizontal: Wb,
+            vertical: ab
           })
-        }), [Lk]);
-        const zk = (0, Rk.useCallback)((async () => {
-          Mk && (await Mk(), gk(null))
-        }), [Mk]);
+        }), [ub]);
+        const Zb = (0, kb.useCallback)((async () => {
+          yb && (await yb(), Pb(null))
+        }), [yb]);
 
-        function Pk() {
-          Ek.c.set({
+        function zb() {
+          hb.d.set({
             openEverythingMenuName: null
           })
         }
-        return (0, Rk.useEffect)((() => {
-          Bk((() => zk))
-        }), [zk, Bk]), (0, sk.jsxs)("div", {
+        return (0, kb.useEffect)((() => {
+          sb((() => Zb))
+        }), [Zb, sb]), (0, fb.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: Fk ? {} : {
+          style: cb ? {} : {
             display: "none"
           },
-          children: [(0, sk.jsx)("div", {
+          children: [(0, fb.jsx)("div", {
             className: "MenuSideBar",
-            children: (0, sk.jsx)("div", {
+            children: (0, fb.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, sk.jsx)(Vk, {
-                items: Dk.map((kk => {
-                  const Fk = RR[kk].icon;
+              children: (0, fb.jsx)(Mb, {
+                items: Kb.map((bb => {
+                  const cb = Wk[bb].icon;
                   return {
-                    id: kk,
-                    faIcon: "string" === typeof Fk ? Fk : void 0,
-                    iconElement: "string" === typeof Fk ? void 0 : (0, sk.jsx)(Fk, {}),
-                    title: dk(RR[kk].displayName),
+                    id: bb,
+                    faIcon: "string" === typeof cb ? cb : void 0,
+                    iconElement: "string" === typeof cb ? void 0 : (0, fb.jsx)(cb, {}),
+                    title: Hb(Wk[bb].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: Sk,
-                onClick: kk => {
-                  !async function(kk) {
-                    await zk(), uk(kk), sR.set(Ok, kk)
-                  }(kk)
+                selectedItemId: Jb,
+                onClick: bb => {
+                  !async function(bb) {
+                    await Zb(), tb(bb), Mk.set(Yb, bb)
+                  }(bb)
                 }
               })
             })
-          }), (0, sk.jsxs)("div", {
-            ref: Tk,
+          }), (0, fb.jsxs)("div", {
+            ref: Ob,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === Sk && (0, sk.jsx)(vF, {
-              showing: Fk,
-              inGame: Ok
-            }), "general" === Sk && (0, sk.jsx)(EF, {
-              inGame: Ok
-            }), "audio" === Sk && (0, sk.jsx)(SF, {}), "notifications" === Sk && (0, sk.jsx)(TF, {}), "graphics" === Sk && (0, sk.jsx)(RB, {
-              minChunkAddDist: null !== Lk && void 0 !== Lk ? Lk : [2, 2],
-              getValue: nF,
-              onChange: IF,
-              setApplySettingsCallback: gk
-            }), "controls" === Sk && (0, sk.jsx)(aB.e, {}), "crosshair" === Sk && (0, sk.jsx)(pB, {
-              showing: Fk
-            }), "controller" === Sk && mk.featureFlags.useControllerSupport && (0, sk.jsx)(KB.c, {}), mk.featureFlags.settings.canChangeTexturePack && "texturePack" === Sk && (0, sk.jsx)(jB.b, {
-              setApplySettingsCallback: gk
-            }), mk.featureFlags.settings.canUseShaderPacks && "ie" === Sk && (0, sk.jsx)(Rk.Suspense, {
+            children: ["account" === Jb && (0, fb.jsx)(Cc, {
+              showing: cb,
+              inGame: Yb
+            }), "general" === Jb && (0, fb.jsx)(hc, {
+              inGame: Yb
+            }), "audio" === Jb && (0, fb.jsx)(Jc, {}), "notifications" === Jb && (0, fb.jsx)(Oc, {}), "graphics" === Jb && (0, fb.jsx)(ss, {
+              minChunkAddDist: null !== ub && void 0 !== ub ? ub : [2, 2],
+              getValue: Fc,
+              onChange: xc,
+              setApplySettingsCallback: Pb
+            }), "controls" === Jb && (0, fb.jsx)(Ws.f, {}), "crosshair" === Jb && (0, fb.jsx)(os, {
+              showing: cb
+            }), "controller" === Jb && eb.featureFlags.useControllerSupport && (0, fb.jsx)(Ss.c, {}), eb.featureFlags.settings.canChangeTexturePack && "texturePack" === Jb && (0, fb.jsx)(vs.d, {
+              setApplySettingsCallback: Pb
+            }), eb.featureFlags.settings.canUseShaderPacks && "Qm" === Jb && (0, fb.jsx)(kb.Suspense, {
               fallback: null,
-              children: (0, sk.jsx)(wR, {
-                setApplySettingsCallback: gk
+              children: (0, fb.jsx)(Hk, {
+                setApplySettingsCallback: Pb
               })
-            }), "updateLog" === Sk && (0, sk.jsx)("div", {
+            }), "updateLog" === Jb && (0, fb.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, sk.jsx)("div", {
+              children: (0, fb.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: Uk.map(((kk, Fk) => (0, sk.jsx)(vk.c, {
-                  updateLog: kk,
-                  index: Fk,
-                  close: Pk
-                }, Fk)))
+                children: Db.map(((bb, cb) => (0, fb.jsx)(Nb.c, {
+                  updateLog: bb,
+                  index: cb,
+                  close: zb
+                }, cb)))
               })
-            }), "information" === Sk && (0, sk.jsx)("div", {
+            }), "information" === Jb && (0, fb.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, sk.jsx)(Rk.Suspense, {
+              children: (0, fb.jsx)(kb.Suspense, {
                 fallback: null,
-                children: (0, sk.jsx)(bR, {})
+                children: (0, fb.jsx)(Ik, {})
               })
-            }), "alternativeDomains" === Sk && (0, sk.jsxs)("div", {
+            }), "alternativeDomains" === Jb && (0, fb.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, sk.jsx)("div", {
+              children: [(0, fb.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: dk("settingsMenu:unblockedDomainsDescription")
-              }), (0, sk.jsx)("div", {
+                children: Hb("settingsMenu:unblockedDomainsDescription")
+              }), (0, fb.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: Gk.current.map((kk => (0, sk.jsxs)(fk.g, {
+                children: ib.current.map((bb => (0, fb.jsxs)(Qb.d, {
                   onClick: () => {
-                    window.open(`https://${kk}`)
+                    window.open(`https://${bb}`)
                   },
-                  children: [(0, sk.jsx)(bk.d, {
+                  children: [(0, fb.jsx)(Ub.b, {
                     name: "arrow-up-right-from-square"
-                  }), " ", kk]
-                }, kk)))
+                  }), " ", bb]
+                }, bb)))
               })]
-            }), "replayViewer" === Sk && (0, sk.jsx)(FR, {}), "developerTools" === Sk && (0, sk.jsx)("div", {
+            }), "replayViewer" === Jb && (0, fb.jsx)(sk, {}), "developerTools" === Jb && (0, fb.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, sk.jsx)(Nk, {
-                setApplySettingsCallback: gk
+              children: (0, fb.jsx)(gb, {
+                setApplySettingsCallback: Pb
               })
-            }), null !== Mk && (0, sk.jsx)("div", {
+            }), null !== yb && (0, fb.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, sk.jsx)(fk.g, {
+              children: (0, fb.jsx)(Qb.d, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: zk,
-                children: dk("general:apply")
+                onClick: Zb,
+                children: Hb("general:apply")
               })
             })]
           })]
         })
       }));
-    var JR = Bk(2466);
-    const AR = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
-      eR = (0, Rk.lazy)((() => Promise.resolve().then((() => Bk(4391))).then((kk => {
-        kk.needGameClientAfterPaint();
-        const Fk = kk.matchmakingLibrariesPromise.then((kk => (0, JR.e)(kk.loadCharacterCustomisationUI(), (kk => kk.CharacterCustomisationUI))));
-        return Promise.all([kk.ensureGameSetup(), Fk]).then((kk => {
-          let [, Fk] = kk;
-          return Fk
+    var nk = sb(2459);
+    const mk = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
+      lk = (0, kb.lazy)((() => Promise.resolve().then((() => sb(4389))).then((bb => {
+        bb.needGameClientAfterPaint();
+        const cb = bb.matchmakingLibrariesPromise.then((bb => (0, nk.c)(bb.loadCharacterCustomisationUI(), (bb => bb.CharacterCustomisationUI))));
+        return Promise.all([bb.ensureGameSetup(), cb]).then((bb => {
+          let [, cb] = bb;
+          return cb
         }))
       }))));
 
-    function yR(kk) {
+    function Qk(bb) {
       let {
-        show: Fk
-      } = kk;
+        show: cb
+      } = bb;
       const {
-        userContext: Bk
-      } = (0, Ak.e)(), [tk, ak] = (0, Rk.useState)("characters");
-      if (!Fk) return null;
-      const Xk = AR.filter((kk => "cape" !== kk && "nameColour" !== kk || Bk.getPlayerRanks().includes("super") || (0, hk.purchasesAllowed)())).map((kk => ({
-        id: kk,
-        faIcon: sF.F[kk],
-        title: sF.G[kk],
+        userContext: sb
+      } = (0, nb.c)(), [Wb, ab] = (0, kb.useState)("characters");
+      if (!cb) return null;
+      const Tb = mk.filter((bb => "cape" !== bb && "nameColour" !== bb || sb.getPlayerRanks().includes("super") || (0, qb.purchasesAllowed)())).map((bb => ({
+        id: bb,
+        faIcon: Hc.I[bb],
+        title: Hc.K[bb],
         redDot: !1
       })));
-      return (0, sk.jsxs)("div", {
+      return (0, fb.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, sk.jsx)("div", {
+        children: [(0, fb.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, sk.jsx)(Vk, {
-            items: Xk,
-            selectedItemId: tk,
-            onClick: kk => {
-              ak(kk)
+          children: (0, fb.jsx)(Mb, {
+            items: Tb,
+            selectedItemId: Wb,
+            onClick: bb => {
+              ab(bb)
             }
           })
-        }), (0, sk.jsx)("div", {
+        }), (0, fb.jsx)("div", {
           className: "MenuBody",
-          children: (0, sk.jsx)(Rk.Suspense, {
-            fallback: (0, sk.jsx)("div", {
+          children: (0, fb.jsx)(kb.Suspense, {
+            fallback: (0, fb.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, sk.jsx)(Lk.b, {})
+              children: (0, fb.jsx)(ub.d, {})
             }),
-            children: (0, sk.jsx)(eR, {
-              selectedTab: tk
+            children: (0, fb.jsx)(lk, {
+              selectedTab: Wb
             })
           })
         })]
       })
     }
-    var fR = Bk(1408),
-      mR = Bk(9004),
-      WR = Bk(4268),
-      vR = Bk(3216),
-      iR = Bk(3265),
-      YR = Bk(9029),
-      oR = Bk(8445),
-      LR = Bk(9006),
-      OR = Bk(9018),
-      ER = Bk(1835),
-      SR = Bk(1812),
-      NR = Bk(4612),
-      HR = Bk(1213),
-      uR = Bk(1173),
-      MR = Bk(1614),
-      gR = Bk(8521);
+    var ek = sb(1442),
+      Ck = sb(8917),
+      Nk = sb(4270),
+      Vk = sb(3191),
+      Lk = sb(3234),
+      uk = sb(8947),
+      Yk = sb(8389),
+      hk = sb(8924),
+      Jk = sb(8937),
+      gk = sb(1858),
+      Bk = sb(1839),
+      tk = sb(4615),
+      yk = sb(1269),
+      Pk = sb(1235),
+      Dk = sb(1651),
+      Ek = sb(8466);
 
-    function UR(kk) {
-      return kk ? Object.keys(kk).sort(((Fk, Bk) => {
-        var Rk, tk, ak, Xk;
-        const bk = (null !== (Rk = null === (tk = kk[Bk]) || void 0 === tk ? void 0 : tk.sortPriority) && void 0 !== Rk ? Rk : 0) - (null !== (ak = null === (Xk = kk[Fk]) || void 0 === Xk ? void 0 : Xk.sortPriority) && void 0 !== ak ? ak : 0);
-        return 0 !== bk ? bk : Fk.localeCompare(Bk)
+    function ik(bb) {
+      return bb ? Object.keys(bb).sort(((cb, sb) => {
+        var kb, Wb, ab, Tb;
+        const Ub = (null !== (kb = null === (Wb = bb[sb]) || void 0 === Wb ? void 0 : Wb.sortPriority) && void 0 !== kb ? kb : 0) - (null !== (ab = null === (Tb = bb[cb]) || void 0 === Tb ? void 0 : Tb.sortPriority) && void 0 !== ab ? ab : 0);
+        return 0 !== Ub ? Ub : cb.localeCompare(sb)
       })) : []
     }
-    const cR = [{
+    const Ok = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -2661,241 +2661,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function GR(kk) {
+    function Gk(bb) {
       for (const {
-          threshold: Fk,
-          suffix: Bk
+          threshold: cb,
+          suffix: sb
         }
-        of cR)
-        if (kk >= Fk) {
-          const Rk = kk / Fk;
-          return Rk >= 100 ? `${Math.floor(Rk)}${Bk}` : Rk >= 10 ? `${Rk.toFixed(1).replace(/\.0$/,"")}${Bk}` : `${Rk.toFixed(2).replace(/\.?0+$/,"")}${Bk}`
-        } return String(kk)
+        of Ok)
+        if (bb >= cb) {
+          const kb = bb / cb;
+          return kb >= 100 ? `${Math.floor(kb)}${sb}` : kb >= 10 ? `${kb.toFixed(1).replace(/\.0$/,"")}${sb}` : `${kb.toFixed(2).replace(/\.?0+$/,"")}${sb}`
+        } return String(bb)
     }
-    var TR = Bk(4712);
-    const rR = {
+    var Kk = sb(4728);
+    const Zk = {
         normal: "0.8em",
         big: "1em"
       },
-      DR = (0, Rk.memo)((function(kk) {
+      zk = (0, kb.memo)((function(bb) {
         let {
-          item: Fk,
-          amount: Bk = 0,
-          size: Rk = "normal",
-          tier: tk = null
-        } = kk;
-        return (0, sk.jsx)("div", {
-          className: ak()("SmpSlot", `SmpSlot-${Rk}`),
-          children: Fk && (0, sk.jsx)(ER.e, {
-            itemName: Fk,
-            amount: Bk > 1 ? Bk : 0,
-            amountFontSize: rR[Rk],
-            enchantmentTier: tk
+          item: cb,
+          amount: sb = 0,
+          size: kb = "normal",
+          tier: Wb = null
+        } = bb;
+        return (0, fb.jsx)("div", {
+          className: ab()("SmpSlot", `SmpSlot-${kb}`),
+          children: cb && (0, fb.jsx)(gk.d, {
+            itemName: cb,
+            amount: sb > 1 ? sb : 0,
+            amountFontSize: Zk[kb],
+            enchantmentTier: Wb
           })
         })
       }));
 
-    function zR(kk) {
+    function qk(bb) {
       let {
-        amount: Fk,
-        exact: Bk = !1,
-        className: Rk
-      } = kk;
-      return (0, sk.jsxs)("span", {
-        className: ak()("SmpGold", Rk),
-        children: [(0, sk.jsx)("span", {
+        amount: cb,
+        exact: sb = !1,
+        className: kb
+      } = bb;
+      return (0, fb.jsxs)("span", {
+        className: ab()("SmpGold", kb),
+        children: [(0, fb.jsx)("span", {
           className: "SmpCoin",
-          children: (0, sk.jsx)(ER.e, {
+          children: (0, fb.jsx)(gk.d, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), Bk ? Fk.toLocaleString("en-US") : GR(Fk)]
+        }), sb ? cb.toLocaleString("en-US") : Gk(cb)]
       })
     }
 
-    function PR(kk) {
+    function dk(bb) {
       let {
-        count: Fk = 5,
-        grid: Bk = !1
-      } = kk;
-      return (0, sk.jsx)("div", {
-        className: Bk ? "SmpCardGrid" : "SmpList",
+        count: cb = 5,
+        grid: sb = !1
+      } = bb;
+      return (0, fb.jsx)("div", {
+        className: sb ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: Fk
-        }, ((kk, Fk) => (0, sk.jsxs)("div", {
-          className: ak()(Bk ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, sk.jsx)("div", {
-            className: ak()("SmpSlot", Bk ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, sk.jsxs)("div", {
+          length: cb
+        }, ((bb, cb) => (0, fb.jsxs)("div", {
+          className: ab()(sb ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, fb.jsx)("div", {
+            className: ab()("SmpSlot", sb ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, fb.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, sk.jsx)("b", {}), (0, sk.jsx)("small", {})]
-          }), (0, sk.jsx)("div", {
+            children: [(0, fb.jsx)("b", {}), (0, fb.jsx)("small", {})]
+          }), (0, fb.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, Fk)))
+        }, cb)))
       })
     }
 
-    function hR(kk) {
+    function Ak(bb) {
       let {
-        title: Fk,
-        children: Bk
-      } = kk;
-      return (0, sk.jsxs)("div", {
+        title: cb,
+        children: sb
+      } = bb;
+      return (0, fb.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, sk.jsx)("b", {
-          children: Fk
-        }), Bk && (0, sk.jsx)("small", {
-          children: Bk
+        children: [(0, fb.jsx)("b", {
+          children: cb
+        }), sb && (0, fb.jsx)("small", {
+          children: sb
         })]
       })
     }
 
-    function qR(kk) {
+    function wk(bb) {
       let {
-        entry: Fk
-      } = kk;
-      return (0, sk.jsx)(hR, {
-        title: (0, sk.jsx)(SR.d, {
-          text: Fk.item.customTitle
+        entry: cb
+      } = bb;
+      return (0, fb.jsx)(Ak, {
+        title: (0, fb.jsx)(Bk.d, {
+          text: cb.item.customTitle
         }),
-        children: (0, sk.jsx)(SR.d, {
-          text: Fk.item.description
+        children: (0, fb.jsx)(Bk.d, {
+          text: cb.item.description
         })
       })
     }
 
-    function CR(kk) {
-      return (0, sk.jsx)(TR.b, {
-        ...kk,
-        className: ak()("SmpChoice", kk.className),
+    function rk(bb) {
+      return (0, fb.jsx)(Kk.e, {
+        ...bb,
+        className: ab()("SmpChoice", bb.className),
         reselectable: !0
       })
     }
 
-    function ZR() {
-      return (0, sk.jsx)("span", {
+    function Sk() {
+      return (0, fb.jsx)("span", {
         className: "SmpLoader",
-        children: (0, sk.jsx)(Lk.b, {})
+        children: (0, fb.jsx)(ub.d, {})
       })
     }
 
-    function pR(kk) {
+    function Rk(bb) {
       let {
-        value: Fk,
-        onChange: Bk,
-        min: tk = 1,
-        max: ak,
-        step: Xk = 1,
-        label: bk
-      } = kk;
-      const wk = (0, Rk.useRef)(null),
-        dk = (0, Rk.useRef)(Fk);
-      dk.current = Fk;
-      const [Vk, Jk] = (0, Rk.useState)(null), Ak = kk => Math.max(tk, Math.min(ak, Math.floor(kk))), ek = kk => {
-        const Fk = dk.current,
-          Rk = "function" === typeof Xk ? Xk(Fk, kk) : Xk,
-          tk = Ak(Fk + Rk * kk);
-        dk.current = tk, Bk(tk)
+        value: cb,
+        onChange: sb,
+        min: Wb = 1,
+        max: ab,
+        step: Tb = 1,
+        label: Ub
+      } = bb;
+      const Ib = (0, kb.useRef)(null),
+        Hb = (0, kb.useRef)(cb);
+      Hb.current = cb;
+      const [Mb, Xb] = (0, kb.useState)(null), nb = bb => Math.max(Wb, Math.min(ab, Math.floor(bb))), mb = bb => {
+        const cb = Hb.current,
+          kb = "function" === typeof Tb ? Tb(cb, bb) : Tb,
+          Wb = nb(cb + kb * bb);
+        Hb.current = Wb, sb(Wb)
       };
-      (0, Rk.useEffect)((() => {
-        if (null === Vk) return;
-        let kk;
-        const Fk = () => {
-            Jk(null)
+      (0, kb.useEffect)((() => {
+        if (null === Mb) return;
+        let bb;
+        const cb = () => {
+            Xb(null)
           },
-          Bk = setTimeout((() => {
-            kk = setInterval((() => {
-              ek(Vk);
-              const kk = dk.current;
-              (Vk > 0 ? kk >= ak : kk <= tk) && Fk()
+          sb = setTimeout((() => {
+            bb = setInterval((() => {
+              mb(Mb);
+              const bb = Hb.current;
+              (Mb > 0 ? bb >= ab : bb <= Wb) && cb()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", Fk), window.addEventListener("pointercancel", Fk), window.addEventListener("blur", Fk), () => {
-          clearTimeout(Bk), clearInterval(kk), window.removeEventListener("pointerup", Fk), window.removeEventListener("pointercancel", Fk), window.removeEventListener("blur", Fk)
+        return window.addEventListener("pointerup", cb), window.addEventListener("pointercancel", cb), window.addEventListener("blur", cb), () => {
+          clearTimeout(sb), clearInterval(bb), window.removeEventListener("pointerup", cb), window.removeEventListener("pointercancel", cb), window.removeEventListener("blur", cb)
         }
-      }), [Vk]), (0, Rk.useEffect)((() => {
-        const kk = wk.current;
-        kk && document.activeElement !== kk && kk.value !== String(Fk) && (kk.value = String(Fk))
-      }), [Fk]), (0, Rk.useEffect)((() => {
-        const kk = wk.current;
-        if (!kk) return;
-        const Fk = () => {
-          kk.value = String(dk.current)
+      }), [Mb]), (0, kb.useEffect)((() => {
+        const bb = Ib.current;
+        bb && document.activeElement !== bb && bb.value !== String(cb) && (bb.value = String(cb))
+      }), [cb]), (0, kb.useEffect)((() => {
+        const bb = Ib.current;
+        if (!bb) return;
+        const cb = () => {
+          bb.value = String(Hb.current)
         };
-        return kk.addEventListener("blur", Fk), () => {
-          kk.removeEventListener("blur", Fk)
+        return bb.addEventListener("blur", cb), () => {
+          bb.removeEventListener("blur", cb)
         }
       }), []);
-      const yk = kk => (0, sk.jsx)("button", {
+      const lb = bb => (0, fb.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${kk>0?"More":"Less"} ${bk}`,
-        disabled: kk > 0 ? Fk >= ak : Fk <= tk,
-        onPointerDown: Fk => {
-          0 === Fk.button && (ek(kk), Jk(kk))
+        "aria-label": `${bb>0?"More":"Less"} ${Ub}`,
+        disabled: bb > 0 ? cb >= ab : cb <= Wb,
+        onPointerDown: cb => {
+          0 === cb.button && (mb(bb), Xb(bb))
         },
-        onKeyDown: Fk => {
-          "Enter" !== Fk.key && " " !== Fk.key || ek(kk)
+        onKeyDown: cb => {
+          "Enter" !== cb.key && " " !== cb.key || mb(bb)
         },
-        onContextMenu: kk => {
-          kk.preventDefault()
+        onContextMenu: bb => {
+          bb.preventDefault()
         },
-        children: kk > 0 ? "+" : "\u2212"
+        children: bb > 0 ? "+" : "\u2212"
       });
-      return (0, sk.jsxs)("div", {
+      return (0, fb.jsxs)("div", {
         className: "SmpStepper",
-        children: [yk(-1), (0, sk.jsx)(Yk.e, {
+        children: [lb(-1), (0, fb.jsx)(Lb.c, {
           className: "SmpStepperInput",
-          domRef: wk,
-          defaultValue: String(Fk),
-          ariaLabel: bk,
+          domRef: Ib,
+          defaultValue: String(cb),
+          ariaLabel: Ub,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: kk => {
-            const Fk = kk.replace(/[^\d]/g, "");
-            wk.current && Fk !== kk && (wk.current.value = Fk), "" !== Fk && Bk(Ak(Number(Fk)))
+          onValueChange: bb => {
+            const cb = bb.replace(/[^\d]/g, "");
+            Ib.current && cb !== bb && (Ib.current.value = cb), "" !== cb && sb(nb(Number(cb)))
           }
-        }), yk(1)]
+        }), lb(1)]
       })
     }
 
-    function KR(kk) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, kk))) - 1))
+    function vk(bb) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, bb))) - 1))
     }
-    var xR = Bk(9022),
-      jR = Bk(1192);
-    const lR = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    jR.u, zk.Kc.length;
+    var Fk = sb(8942),
+      xk = sb(1253);
+    const jk = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    xk.t, Zb.Hc.length;
     new Map;
-    var nR = Bk(3090);
+    var pk = sb(3050);
 
-    function IR(kk, Fk) {
-      var Bk;
-      return Fk && (null === (Bk = kk[Fk]) || void 0 === Bk ? void 0 : Bk.smp) || null
+    function bW(bb, cb) {
+      var sb;
+      return cb && (null === (sb = bb[cb]) || void 0 === sb ? void 0 : sb.smp) || null
     }
 
-    function QR(kk, Fk) {
-      const Bk = [];
-      for (const tk of UR(kk)) {
-        var Rk;
-        const ak = kk[tk];
-        (null === (Rk = ak.smp) || void 0 === Rk ? void 0 : Rk.kind) === Fk && Bk.push({
-          key: tk,
-          item: ak,
-          meta: ak.smp
+    function cW(bb, cb) {
+      const sb = [];
+      for (const Wb of ik(bb)) {
+        var kb;
+        const ab = bb[Wb];
+        (null === (kb = ab.smp) || void 0 === kb ? void 0 : kb.kind) === cb && sb.push({
+          key: Wb,
+          item: ab,
+          meta: ab.smp
         })
       }
-      return Bk
+      return sb
     }
 
-    function kt(kk, Fk) {
-      var Bk;
-      return null !== (Bk = QR(kk, Fk)[0]) && void 0 !== Bk ? Bk : null
+    function sW(bb, cb) {
+      var sb;
+      return null !== (sb = cW(bb, cb)[0]) && void 0 !== sb ? sb : null
     }
-    const Ft = "50% 0% 50% 0%",
-      Bt = [{
+    const kW = "50% 0% 50% 0%",
+      WW = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -2909,746 +2909,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function Rt(kk) {
-      const Fk = kk - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function aW(bb) {
+      const cb = bb - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: Bk,
-          suffix: Rk
+          divisor: sb,
+          suffix: kb
         }
-        of Bt)
-        if (Fk >= Bk) return `${Math.floor(Fk/Bk)}${Rk}`;
+        of WW)
+        if (cb >= sb) return `${Math.floor(cb/sb)}${kb}`;
       return "<1s"
     }
 
-    function tt(kk) {
-      const Fk = kk.map(oR.g),
-        Bk = [];
-      return Fk.forEach(((kk, Rk) => {
-        const tk = function(kk) {
-            const Fk = kk.match(/\d+/);
-            return Fk ? Number(Fk[0]) : 0
-          }(kk),
-          ak = Rk === Fk.length - 1;
-        (ak || 1 === tk || 10 === tk || 100 === tk) && Bk.push({
-          label: kk,
-          quantity: tk,
-          isAll: ak
+    function TW(bb) {
+      const cb = bb.map(Yk.g),
+        sb = [];
+      return cb.forEach(((bb, kb) => {
+        const Wb = function(bb) {
+            const cb = bb.match(/\d+/);
+            return cb ? Number(cb[0]) : 0
+          }(bb),
+          ab = kb === cb.length - 1;
+        (ab || 1 === Wb || 10 === Wb || 100 === Wb) && sb.push({
+          label: bb,
+          quantity: Wb,
+          isAll: ab
         })
-      })), Bk
+      })), sb
     }
-    let Xt = null;
+    let UW = null;
 
-    function bt(kk, Fk) {
-      const Bk = Fk.trim().toLowerCase();
-      if (!Bk) return [];
-      const Rk = kk => {
-          if (kk === Bk) return 0;
-          if (kk.startsWith(Bk)) return 1;
-          const Fk = kk.indexOf(Bk);
-          return -1 === Fk ? -1 : 2 + Fk
+    function IW(bb, cb) {
+      const sb = cb.trim().toLowerCase();
+      if (!sb) return [];
+      const kb = bb => {
+          if (bb === sb) return 0;
+          if (bb.startsWith(sb)) return 1;
+          const cb = bb.indexOf(sb);
+          return -1 === cb ? -1 : 2 + cb
         },
-        tk = [];
-      for (const bk of kk) {
-        const kk = [Rk(bk.lowerLabel), Rk(bk.lowerName)].filter((kk => -1 !== kk));
-        kk.length && tk.push({
-          item: bk,
-          rank: Math.min(...kk)
+        Wb = [];
+      for (const Ub of bb) {
+        const bb = [kb(Ub.lowerLabel), kb(Ub.lowerName)].filter((bb => -1 !== bb));
+        bb.length && Wb.push({
+          item: Ub,
+          rank: Math.min(...bb)
         })
       }
-      if (tk.length > 0) return tk.sort(((kk, Fk) => kk.rank - Fk.rank)).map((kk => kk.item));
-      const ak = [...Bk],
-        Xk = kk => {
-          let Fk = 0;
-          for (const Bk of ak) {
-            if (Fk = kk.indexOf(Bk, Fk), -1 === Fk) return !1;
-            Fk++
+      if (Wb.length > 0) return Wb.sort(((bb, cb) => bb.rank - cb.rank)).map((bb => bb.item));
+      const ab = [...sb],
+        Tb = bb => {
+          let cb = 0;
+          for (const sb of ab) {
+            if (cb = bb.indexOf(sb, cb), -1 === cb) return !1;
+            cb++
           }
           return !0
         };
-      return kk.filter((kk => Xk(kk.lowerLabel) || Xk(kk.lowerName)))
+      return bb.filter((bb => Tb(bb.lowerLabel) || Tb(bb.lowerName)))
     }
 
-    function wt(kk, Fk) {
-      var Bk;
-      return null !== (Bk = null === kk || void 0 === kk ? void 0 : kk[Fk]) && void 0 !== Bk ? Bk : Fk
+    function HW(bb, cb) {
+      var sb;
+      return null !== (sb = null === bb || void 0 === bb ? void 0 : bb[cb]) && void 0 !== sb ? sb : cb
     }
 
-    function dt(kk, Fk) {
-      const Bk = kk.userInput;
-      return void 0 !== Fk && "dropdown" === (null === Bk || void 0 === Bk ? void 0 : Bk.type) && Bk.dropdownOptions.map(oR.g).includes(Fk) ? Fk : function(kk) {
-        const Fk = kk.userInput;
-        if ("dropdown" !== (null === Fk || void 0 === Fk ? void 0 : Fk.type) || 0 === Fk.dropdownOptions.length) return null;
-        const Bk = Fk.dropdownOptions.map(oR.g);
-        return Fk.initialValue && Bk.includes(Fk.initialValue) ? Fk.initialValue : Bk[Bk.length - 1]
-      }(kk)
+    function fW(bb, cb) {
+      const sb = bb.userInput;
+      return void 0 !== cb && "dropdown" === (null === sb || void 0 === sb ? void 0 : sb.type) && sb.dropdownOptions.map(Yk.g).includes(cb) ? cb : function(bb) {
+        const cb = bb.userInput;
+        if ("dropdown" !== (null === cb || void 0 === cb ? void 0 : cb.type) || 0 === cb.dropdownOptions.length) return null;
+        const sb = cb.dropdownOptions.map(Yk.g);
+        return cb.initialValue && sb.includes(cb.initialValue) ? cb.initialValue : sb[sb.length - 1]
+      }(bb)
     }
 
-    function st(kk) {
-      return void 0 === kk ? "" : JSON.stringify(kk)
+    function MW(bb) {
+      return void 0 === bb ? "" : JSON.stringify(bb)
     }
-    const Vt = (0, Rk.createContext)(null);
+    const XW = (0, kb.createContext)(null);
 
-    function Jt() {
-      return (0, Rk.useContext)(Vt)
+    function nW() {
+      return (0, kb.useContext)(XW)
     }
-    var At = Bk(2563);
-    const et = (0, Rk.memo)((function(kk) {
+    var mW = sb(2546);
+    const lW = (0, kb.memo)((function(bb) {
         let {
-          name: Fk,
-          label: Bk,
-          onPick: Rk
-        } = kk;
-        return (0, sk.jsxs)("button", {
+          name: cb,
+          label: sb,
+          onPick: kb
+        } = bb;
+        return (0, fb.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: Bk,
+          title: sb,
           onClick: () => {
-            Rk(Fk)
+            kb(cb)
           },
-          children: [(0, sk.jsx)(DR, {
-            item: Fk,
+          children: [(0, fb.jsx)(zk, {
+            item: cb,
             size: "big"
-          }), (0, sk.jsx)("span", {
-            children: Bk
+          }), (0, fb.jsx)("span", {
+            children: sb
           })]
         })
       })),
-      yt = (0, Rk.memo)((function(kk) {
+      QW = (0, kb.memo)((function(bb) {
         let {
-          items: Fk,
-          query: Bk,
-          onPick: tk
-        } = kk;
+          items: cb,
+          query: sb,
+          onPick: Wb
+        } = bb;
         const {
-          t: ak
-        } = (0, Xk.x)(), [bk, wk] = (0, Rk.useState)(new Set), dk = (0, Rk.useMemo)((() => function(kk) {
-          const Fk = new Map;
-          for (const Bk of kk) {
-            let kk = Fk.get(Bk.category);
-            kk || (kk = [], Fk.set(Bk.category, kk)), kk.push(Bk)
+          t: ab
+        } = (0, Tb.E)(), [Ub, Ib] = (0, kb.useState)(new Set), Hb = (0, kb.useMemo)((() => function(bb) {
+          const cb = new Map;
+          for (const sb of bb) {
+            let bb = cb.get(sb.category);
+            bb || (bb = [], cb.set(sb.category, bb)), bb.push(sb)
           }
-          return [...lR, "other"].filter((kk => Fk.has(kk))).map((kk => ({
-            category: kk,
-            items: Fk.get(kk)
+          return [...jk, "other"].filter((bb => cb.has(bb))).map((bb => ({
+            category: bb,
+            items: cb.get(bb)
           })))
-        }(Fk)), [Fk]), Vk = (0, Rk.useMemo)((() => bt(Fk, Bk).slice(0, 60)), [Fk, Bk]);
-        return Bk.trim() ? 0 === Vk.length ? (0, sk.jsx)(hR, {
-          title: ak("smpShop:noItemsFound", {
-            query: Bk.trim()
+        }(cb)), [cb]), Mb = (0, kb.useMemo)((() => IW(cb, sb).slice(0, 60)), [cb, sb]);
+        return sb.trim() ? 0 === Mb.length ? (0, fb.jsx)(Ak, {
+          title: ab("smpShop:noItemsFound", {
+            query: sb.trim()
           }),
-          children: ak("smpShop:tryShorterName")
-        }) : (0, sk.jsx)(At.c, {
+          children: ab("smpShop:tryShorterName")
+        }) : (0, fb.jsx)(mW.b, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: Ft,
-          observerUpdateDeps: [Bk],
-          children: Vk.map((kk => (0, sk.jsx)(et, {
-            name: kk.name,
-            label: kk.label,
-            onPick: tk
-          }, kk.name)))
-        }) : (0, sk.jsx)(sk.Fragment, {
-          children: dk.map((kk => {
+          rootMargin: kW,
+          observerUpdateDeps: [sb],
+          children: Mb.map((bb => (0, fb.jsx)(lW, {
+            name: bb.name,
+            label: bb.label,
+            onPick: Wb
+          }, bb.name)))
+        }) : (0, fb.jsx)(fb.Fragment, {
+          children: Hb.map((bb => {
             let {
-              category: Fk,
-              items: Bk
-            } = kk;
-            const Rk = bk.has(Fk) || Bk.length <= 48,
-              Xk = Rk ? Bk : Bk.slice(0, 48);
-            return (0, sk.jsxs)("section", {
+              category: cb,
+              items: sb
+            } = bb;
+            const kb = Ub.has(cb) || sb.length <= 48,
+              Tb = kb ? sb : sb.slice(0, 48);
+            return (0, fb.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, sk.jsxs)("h4", {
-                children: [ak("other" === Fk ? "smpShop:otherItems" : `creativeInventory:${Fk}`), !Rk && (0, sk.jsx)("button", {
+              children: [(0, fb.jsxs)("h4", {
+                children: [ab("other" === cb ? "smpShop:otherItems" : `creativeInventory:${cb}`), !kb && (0, fb.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    wk(new Set([...bk, Fk]))
+                    Ib(new Set([...Ub, cb]))
                   },
-                  children: ak("smpShop:showAll", {
-                    count: Bk.length
+                  children: ab("smpShop:showAll", {
+                    count: sb.length
                   })
                 })]
-              }), (0, sk.jsx)(At.c, {
+              }), (0, fb.jsx)(mW.b, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: Ft,
-                observerUpdateDeps: [Rk],
-                children: Xk.map((kk => (0, sk.jsx)(et, {
-                  name: kk.name,
-                  label: kk.label,
-                  onPick: tk
-                }, kk.name)))
+                rootMargin: kW,
+                observerUpdateDeps: [kb],
+                children: Tb.map((bb => (0, fb.jsx)(lW, {
+                  name: bb.name,
+                  label: bb.label,
+                  onPick: Wb
+                }, bb.name)))
               })]
-            }, Fk)
+            }, cb)
           }))
         })
       }));
 
-    function ft(kk, Fk) {
+    function eW(bb, cb) {
       const {
-        searched: Bk,
-        shown: tk,
-        searchFor: ak,
-        loading: Xk
-      } = function(kk, Fk) {
-        var Bk;
-        const tk = Jt(),
-          [ak, Xk] = (0, Rk.useState)(void 0),
-          bk = (0, Rk.useRef)(void 0),
-          wk = (0, Rk.useRef)(0),
-          dk = (0, Rk.useRef)(void 0),
-          sk = null !== (Bk = null === kk || void 0 === kk ? void 0 : kk.meta.item) && void 0 !== Bk ? Bk : null,
-          Vk = !!kk && tk.isPending(kk.key);
-        (0, Rk.useEffect)((() => {
-          if (!kk || Vk || !Fk || void 0 === ak || ak === sk) return;
-          const Bk = ak === bk.current && tk.gaveUpAt(kk.key) > wk.current && dk.current !== ak;
-          (ak !== bk.current || Bk) && tk.act(kk.key, null !== ak && void 0 !== ak ? ak : "*", Bk) && (Bk && (dk.current = ak), bk.current = ak, wk.current = Date.now())
-        }), [kk, Vk, Fk, ak, sk, tk]);
-        const Jk = (0, Rk.useCallback)((kk => {
-            bk.current = void 0, dk.current = void 0, Xk(kk)
+        searched: sb,
+        shown: Wb,
+        searchFor: ab,
+        loading: Tb
+      } = function(bb, cb) {
+        var sb;
+        const Wb = nW(),
+          [ab, Tb] = (0, kb.useState)(void 0),
+          Ub = (0, kb.useRef)(void 0),
+          Ib = (0, kb.useRef)(0),
+          Hb = (0, kb.useRef)(void 0),
+          fb = null !== (sb = null === bb || void 0 === bb ? void 0 : bb.meta.item) && void 0 !== sb ? sb : null,
+          Mb = !!bb && Wb.isPending(bb.key);
+        (0, kb.useEffect)((() => {
+          if (!bb || Mb || !cb || void 0 === ab || ab === fb) return;
+          const sb = ab === Ub.current && Wb.gaveUpAt(bb.key) > Ib.current && Hb.current !== ab;
+          (ab !== Ub.current || sb) && Wb.act(bb.key, null !== ab && void 0 !== ab ? ab : "*", sb) && (sb && (Hb.current = ab), Ub.current = ab, Ib.current = Date.now())
+        }), [bb, Mb, cb, ab, fb, Wb]);
+        const Xb = (0, kb.useCallback)((bb => {
+            Ub.current = void 0, Hb.current = void 0, Tb(bb)
           }), []),
-          Ak = void 0 !== ak && ak !== sk && (Vk || bk.current !== ak);
+          nb = void 0 !== ab && ab !== fb && (Mb || Ub.current !== ab);
         return {
-          searched: sk,
-          shown: Ak ? ak : sk,
-          searchFor: Jk,
-          loading: Ak || Vk || null !== sk && !Fk
+          searched: fb,
+          shown: nb ? ab : fb,
+          searchFor: Xb,
+          loading: nb || Mb || null !== fb && !cb
         }
-      }(kk, Fk), bk = (0, Rk.useMemo)((() => function() {
-        var kk;
-        let Fk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const tk = `${(0,nR.h)()}\x1f${Fk.join("\x1e")}\x1f${Bk.join("\x1e")}\x1f${JSON.stringify(Rk)}`;
-        if ((null === (kk = Xt) || void 0 === kk ? void 0 : kk.key) === tk) return Xt.items;
-        const ak = new Set(Bk),
-          Xk = new Set,
-          bk = [],
-          wk = (kk, Fk) => {
-            var Bk;
-            if (!kk || Xk.has(kk) || ak.has(kk)) return;
-            Xk.add(kk);
-            const tk = null !== (Bk = Rk[kk]) && void 0 !== Bk ? Bk : kk;
-            bk.push({
-              name: kk,
-              label: tk,
-              lowerLabel: tk.toLowerCase(),
-              lowerName: kk.toLowerCase(),
-              category: Fk
+      }(bb, cb), Ub = (0, kb.useMemo)((() => function() {
+        var bb;
+        let cb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          kb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Wb = `${(0,pk.h)()}\x1f${cb.join("\x1e")}\x1f${sb.join("\x1e")}\x1f${JSON.stringify(kb)}`;
+        if ((null === (bb = UW) || void 0 === bb ? void 0 : bb.key) === Wb) return UW.items;
+        const ab = new Set(sb),
+          Tb = new Set,
+          Ub = [],
+          Ib = (bb, cb) => {
+            var sb;
+            if (!bb || Tb.has(bb) || ab.has(bb)) return;
+            Tb.add(bb);
+            const Wb = null !== (sb = kb[bb]) && void 0 !== sb ? sb : bb;
+            Ub.push({
+              name: bb,
+              label: Wb,
+              lowerLabel: Wb.toLowerCase(),
+              lowerName: bb.toLowerCase(),
+              category: cb
             })
           };
-        for (const sk of (0, xR.creativeItemIds)()) {
-          var dk;
-          (0, xR.itemIsDisabled)(sk, !0, !0, !1) || (0, xR.showOnlyInCreativeSearch)(sk) || wk((0, nR.f)(sk), null !== (dk = (0, xR.creativeCategoryOf)(sk)) && void 0 !== dk ? dk : "other")
+        for (const fb of (0, Fk.creativeItemIds)()) {
+          var Hb;
+          (0, Fk.itemIsDisabled)(fb, !0, !0, !1) || (0, Fk.showOnlyInCreativeSearch)(fb) || Ib((0, pk.f)(fb), null !== (Hb = (0, Fk.creativeCategoryOf)(fb)) && void 0 !== Hb ? Hb : "other")
         }
-        for (const sk of Fk) wk(sk, "other");
-        return Xt = {
-          key: tk,
-          items: bk
-        }, bk
-      }(null === kk || void 0 === kk ? void 0 : kk.meta.extra, null === kk || void 0 === kk ? void 0 : kk.meta.excluded, null === kk || void 0 === kk ? void 0 : kk.meta.names)), [null === kk || void 0 === kk ? void 0 : kk.meta.extra, null === kk || void 0 === kk ? void 0 : kk.meta.excluded, null === kk || void 0 === kk ? void 0 : kk.meta.names]), [wk, dk] = (0, Rk.useState)(""), [sk, Vk] = (0, Rk.useState)(0), [Jk, Ak] = (0, Rk.useState)("recent"), ek = (0, Rk.useCallback)((kk => {
-        dk(""), Vk((kk => kk + 1)), ak(kk)
-      }), [ak]), yk = "browse" === Jk || "" !== wk.trim();
+        for (const fb of cb) Ib(fb, "other");
+        return UW = {
+          key: Wb,
+          items: Ub
+        }, Ub
+      }(null === bb || void 0 === bb ? void 0 : bb.meta.extra, null === bb || void 0 === bb ? void 0 : bb.meta.excluded, null === bb || void 0 === bb ? void 0 : bb.meta.names)), [null === bb || void 0 === bb ? void 0 : bb.meta.extra, null === bb || void 0 === bb ? void 0 : bb.meta.excluded, null === bb || void 0 === bb ? void 0 : bb.meta.names]), [Ib, Hb] = (0, kb.useState)(""), [fb, Mb] = (0, kb.useState)(0), [Xb, nb] = (0, kb.useState)("recent"), mb = (0, kb.useCallback)((bb => {
+        Hb(""), Mb((bb => bb + 1)), ab(bb)
+      }), [ab]), lb = "browse" === Xb || "" !== Ib.trim();
       return {
-        searched: Bk,
-        shown: tk,
-        searchFor: ak,
-        loading: Xk,
-        catalogue: bk,
-        names: null === kk || void 0 === kk ? void 0 : kk.meta.names,
-        query: wk,
-        setQuery: dk,
-        searchBoxKey: sk,
-        pickItem: ek,
-        setView: Ak,
-        browsing: yk
+        searched: sb,
+        shown: Wb,
+        searchFor: ab,
+        loading: Tb,
+        catalogue: Ub,
+        names: null === bb || void 0 === bb ? void 0 : bb.meta.names,
+        query: Ib,
+        setQuery: Hb,
+        searchBoxKey: fb,
+        pickItem: mb,
+        setView: nb,
+        browsing: lb
       }
     }
 
-    function mt(kk) {
+    function CW(bb) {
       let {
-        browser: Fk,
-        children: Bk
-      } = kk;
+        browser: cb,
+        children: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, Xk.x)(), tk = Jt();
-      return (0, sk.jsxs)("div", {
+        t: kb
+      } = (0, Tb.E)(), Wb = nW();
+      return (0, fb.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, sk.jsx)("div", {
+        children: [(0, fb.jsx)("div", {
           className: "SmpSearch",
-          children: (0, sk.jsx)(Yk.e, {
+          children: (0, fb.jsx)(Lb.c, {
             className: "SmpSearchInput",
-            placeholderText: Rk("smpShop:searchPlaceholder"),
-            defaultValue: Fk.query,
-            onValueChange: kk => {
-              Fk.setQuery(kk), Fk.searched && kk.trim() && Fk.searchFor(null)
+            placeholderText: kb("smpShop:searchPlaceholder"),
+            defaultValue: cb.query,
+            onValueChange: bb => {
+              cb.setQuery(bb), cb.searched && bb.trim() && cb.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const kk = bt(Fk.catalogue, Fk.query)[0];
-              kk ? Fk.pickItem(kk.name) : Fk.query.trim() && tk.notify(Rk("smpShop:noItemsFound", {
-                query: Fk.query.trim()
+              const bb = IW(cb.catalogue, cb.query)[0];
+              bb ? cb.pickItem(bb.name) : cb.query.trim() && Wb.notify(kb("smpShop:noItemsFound", {
+                query: cb.query.trim()
               }))
             }
-          }, Fk.searchBoxKey)
-        }), Bk]
+          }, cb.searchBoxKey)
+        }), sb]
       })
     }
 
-    function Wt(kk) {
+    function NW(bb) {
       let {
-        browser: Fk,
-        recentLabel: Bk,
-        children: Rk
-      } = kk;
+        browser: cb,
+        recentLabel: sb,
+        children: kb
+      } = bb;
       const {
-        t: tk
-      } = (0, Xk.x)();
-      return (0, sk.jsxs)("div", {
+        t: Wb
+      } = (0, Tb.E)();
+      return (0, fb.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, sk.jsx)(CR, {
+        children: [(0, fb.jsx)(rk, {
           options: [{
             value: "recent",
-            label: Bk
+            label: sb
           }, {
             value: "browse",
-            label: tk("smpShop:browseItems")
+            label: Wb("smpShop:browseItems")
           }],
-          value: Fk.browsing ? "browse" : "recent",
-          onChange: Fk.setView,
-          ariaLabel: tk("smpShop:show")
-        }), !Fk.browsing && Rk]
+          value: cb.browsing ? "browse" : "recent",
+          onChange: cb.setView,
+          ariaLabel: Wb("smpShop:show")
+        }), !cb.browsing && kb]
       })
     }
 
-    function vt(kk) {
+    function VW(bb) {
       let {
-        item: Fk,
-        names: Bk,
-        summary: Rk,
-        onBack: tk,
-        children: ak
-      } = kk;
+        item: cb,
+        names: sb,
+        summary: kb,
+        onBack: Wb,
+        children: ab
+      } = bb;
       const {
-        t: bk
-      } = (0, Xk.x)();
-      return (0, sk.jsxs)("div", {
+        t: Ub
+      } = (0, Tb.E)();
+      return (0, fb.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, sk.jsx)(fk.c, {
+        children: [(0, fb.jsx)(Qb.b, {
           className: "SmpBackButton",
-          onClick: tk,
-          children: bk("general:back")
-        }), (0, sk.jsx)(DR, {
-          item: Fk,
+          onClick: Wb,
+          children: Ub("general:back")
+        }), (0, fb.jsx)(zk, {
+          item: cb,
           size: "big"
-        }), (0, sk.jsxs)("div", {
+        }), (0, fb.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, sk.jsx)("b", {
-            children: wt(Bk, Fk)
-          }), Rk && (0, sk.jsx)("small", {
-            children: Rk
+          children: [(0, fb.jsx)("b", {
+            children: HW(sb, cb)
+          }), kb && (0, fb.jsx)("small", {
+            children: kb
           })]
-        }), ak]
+        }), ab]
       })
     }
 
-    function it(kk) {
+    function LW(bb) {
       let {
-        browser: Fk,
-        className: Bk,
-        action: Rk,
-        above: tk,
-        list: Xk,
-        summary: bk,
-        recentLabel: wk,
-        listControls: dk,
-        onBack: Vk
-      } = kk;
-      return (0, sk.jsxs)("div", {
-        className: ak()("SmpScreen", Bk),
-        children: [(0, sk.jsx)(mt, {
-          browser: Fk,
-          children: Rk
-        }), Fk.shown && (0, sk.jsx)(vt, {
-          item: Fk.shown,
-          names: Fk.names,
-          summary: !Fk.loading && bk,
+        browser: cb,
+        className: sb,
+        action: kb,
+        above: Wb,
+        list: Tb,
+        summary: Ub,
+        recentLabel: Ib,
+        listControls: Hb,
+        onBack: Mb
+      } = bb;
+      return (0, fb.jsxs)("div", {
+        className: ab()("SmpScreen", sb),
+        children: [(0, fb.jsx)(CW, {
+          browser: cb,
+          children: kb
+        }), cb.shown && (0, fb.jsx)(VW, {
+          item: cb.shown,
+          names: cb.names,
+          summary: !cb.loading && Ub,
           onBack: () => {
-            null === Vk || void 0 === Vk || Vk(), Fk.searchFor(null)
+            null === Mb || void 0 === Mb || Mb(), cb.searchFor(null)
           },
-          children: dk
-        }), tk, Fk.shown ? Xk : (0, sk.jsxs)(sk.Fragment, {
-          children: [(0, sk.jsx)(Wt, {
-            browser: Fk,
-            recentLabel: wk,
-            children: dk
-          }), Fk.browsing ? (0, sk.jsx)(yt, {
-            items: Fk.catalogue,
-            query: Fk.query,
-            onPick: Fk.pickItem
-          }) : Xk]
+          children: Hb
+        }), Wb, cb.shown ? Tb : (0, fb.jsxs)(fb.Fragment, {
+          children: [(0, fb.jsx)(NW, {
+            browser: cb,
+            recentLabel: Ib,
+            children: Hb
+          }), cb.browsing ? (0, fb.jsx)(QW, {
+            items: cb.catalogue,
+            query: cb.query,
+            onPick: cb.pickItem
+          }) : Tb]
         })]
       })
     }
 
-    function Yt(kk, Fk) {
-      const Bk = kk.map((kk => {
+    function uW(bb, cb) {
+      const sb = bb.map((bb => {
         let {
-          meta: Fk
-        } = kk;
-        return Fk.pricePerItem
+          meta: cb
+        } = bb;
+        return cb.pricePerItem
       }));
-      return "min" === Fk ? Math.min(...Bk) : Math.max(...Bk)
+      return "min" === cb ? Math.min(...sb) : Math.max(...sb)
     }
-    var ot = Bk(6267);
-    const Lt = (0, Rk.memo)((function(kk) {
-      var Fk;
+    var YW = sb(6226);
+    const hW = (0, kb.memo)((function(bb) {
+      var cb;
       const {
-        t: Bk
-      } = (0, Xk.x)(), Rk = null === kk.seller, tk = kk.quantity * kk.pricePerItem;
-      return (0, sk.jsxs)("div", {
-        className: kk.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, sk.jsx)(DR, {
-          item: kk.item,
-          amount: kk.quantity,
-          size: kk.grid ? "big" : "normal",
-          tier: kk.tier
-        }), (0, sk.jsxs)("div", {
+        t: sb
+      } = (0, Tb.E)(), kb = null === bb.seller, Wb = bb.quantity * bb.pricePerItem;
+      return (0, fb.jsxs)("div", {
+        className: bb.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, fb.jsx)(zk, {
+          item: bb.item,
+          amount: bb.quantity,
+          size: bb.grid ? "big" : "normal",
+          tier: bb.tier
+        }), (0, fb.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, sk.jsx)("b", {
-            children: (0, sk.jsx)(SR.d, {
-              text: null !== (Fk = kk.title) && void 0 !== Fk ? Fk : `${kk.quantity}x ${kk.item}`
+          children: [(0, fb.jsx)("b", {
+            children: (0, fb.jsx)(Bk.d, {
+              text: null !== (cb = bb.title) && void 0 !== cb ? cb : `${bb.quantity}x ${bb.item}`
             })
-          }), (0, sk.jsxs)("small", {
+          }), (0, fb.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, sk.jsx)("span", {
-              children: Rk ? Bk("smpShop:you") : (0, sk.jsx)(SR.d, {
+            children: [(0, fb.jsx)("span", {
+              children: kb ? sb("smpShop:you") : (0, fb.jsx)(Bk.d, {
                 text: [{
-                  entityName: kk.seller
+                  entityName: bb.seller
                 }]
               })
-            }), (0, sk.jsx)("span", {
-              children: Bk("smpShop:timeLeft", {
-                time: Rt(kk.expiresAt)
+            }), (0, fb.jsx)("span", {
+              children: sb("smpShop:timeLeft", {
+                time: aW(bb.expiresAt)
               })
             })]
           })]
-        }), (0, sk.jsxs)("div", {
+        }), (0, fb.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, sk.jsx)(zR, {
-            amount: kk.pricePerItem
-          }), (0, sk.jsx)("small", {
-            children: Bk("smpShop:each")
+          children: [(0, fb.jsx)(qk, {
+            amount: bb.pricePerItem
+          }), (0, fb.jsx)("small", {
+            children: sb("smpShop:each")
           })]
-        }), (0, sk.jsx)(fk.g, {
+        }), (0, fb.jsx)(Qb.d, {
           className: "SmpBuyButton",
-          disabled: Rk || !kk.canAfford && !kk.busy,
-          loading: kk.busy,
+          disabled: kb || !bb.canAfford && !bb.busy,
+          loading: bb.busy,
           onClick: () => {
-            kk.onBuy(kk.itemKey)
+            bb.onBuy(bb.itemKey)
           },
-          children: Rk ? Bk("smpShop:yours") : (0, sk.jsx)(zR, {
-            amount: tk
+          children: kb ? sb("smpShop:yours") : (0, fb.jsx)(qk, {
+            amount: Wb
           })
         })]
       })
     }));
 
-    function Ot(kk) {
+    function JW(bb) {
       let {
-        view: Fk,
-        onChange: Bk
-      } = kk;
+        view: cb,
+        onChange: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, Xk.x)();
-      return (0, sk.jsx)(TR.b, {
+        t: kb
+      } = (0, Tb.E)();
+      return (0, fb.jsx)(Kk.e, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: Rk("smpShop:layout"),
+        ariaLabel: kb("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, sk.jsx)(bk.d, {
+          label: (0, fb.jsx)(Ub.b, {
             name: "list"
           }),
-          ariaLabel: Rk("smpShop:listView")
+          ariaLabel: kb("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, sk.jsx)(bk.d, {
+          label: (0, fb.jsx)(Ub.b, {
             name: "grid-2"
           }),
-          ariaLabel: Rk("smpShop:gridView")
+          ariaLabel: kb("smpShop:gridView")
         }],
-        value: Fk,
-        onChange: Bk
+        value: cb,
+        onChange: sb
       })
     }
 
-    function Et(kk) {
+    function gW(bb) {
       let {
-        entries: Fk,
-        view: Bk
-      } = kk;
+        entries: cb,
+        view: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, Xk.x)(), tk = Jt(), ak = "grid" === Bk;
-      return (0, sk.jsxs)(sk.Fragment, {
-        children: [!ak && (0, sk.jsxs)("div", {
+        t: kb
+      } = (0, Tb.E)(), Wb = nW(), ab = "grid" === sb;
+      return (0, fb.jsxs)(fb.Fragment, {
+        children: [!ab && (0, fb.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, sk.jsx)("span", {}), (0, sk.jsx)("span", {
-            children: Rk("smpShop:columnItem")
-          }), (0, sk.jsx)("span", {
-            children: Rk("smpShop:columnPriceEach")
-          }), (0, sk.jsx)("span", {
-            children: Rk("smpShop:columnTotal")
+          children: [(0, fb.jsx)("span", {}), (0, fb.jsx)("span", {
+            children: kb("smpShop:columnItem")
+          }), (0, fb.jsx)("span", {
+            children: kb("smpShop:columnPriceEach")
+          }), (0, fb.jsx)("span", {
+            children: kb("smpShop:columnTotal")
           })]
-        }), (0, sk.jsx)(At.c, {
-          lazyLoadedClassName: ak ? "SmpCardGrid" : "SmpList",
+        }), (0, fb.jsx)(mW.b, {
+          lazyLoadedClassName: ab ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: Ft,
-          observerUpdateDeps: [Fk.length],
-          children: Fk.map((kk => {
-            var Fk, Bk;
+          rootMargin: kW,
+          observerUpdateDeps: [cb.length],
+          children: cb.map((bb => {
+            var cb, sb;
             let {
-              key: Rk,
-              item: Xk,
-              meta: bk
-            } = kk;
-            const wk = bk.quantity * bk.pricePerItem;
-            return (0, sk.jsx)(Lt, {
-              itemKey: Rk,
-              item: bk.item,
-              title: Xk.customTitle,
-              quantity: bk.quantity,
-              pricePerItem: bk.pricePerItem,
-              seller: bk.seller,
-              expiresAt: bk.expiresAt,
-              tier: null !== (Fk = null === (Bk = Xk.enchant) || void 0 === Bk ? void 0 : Bk.tier) && void 0 !== Fk ? Fk : null,
-              busy: tk.isPending(Rk) || null !== bk.seller && !1 === Xk.canBuy,
-              canAfford: tk.canAfford(Xk, wk),
-              grid: ak,
-              onBuy: tk.act
-            }, Rk)
+              key: kb,
+              item: Tb,
+              meta: Ub
+            } = bb;
+            const Ib = Ub.quantity * Ub.pricePerItem;
+            return (0, fb.jsx)(hW, {
+              itemKey: kb,
+              item: Ub.item,
+              title: Tb.customTitle,
+              quantity: Ub.quantity,
+              pricePerItem: Ub.pricePerItem,
+              seller: Ub.seller,
+              expiresAt: Ub.expiresAt,
+              tier: null !== (cb = null === (sb = Tb.enchant) || void 0 === sb ? void 0 : sb.tier) && void 0 !== cb ? cb : null,
+              busy: Wb.isPending(kb) || null !== Ub.seller && !1 === Tb.canBuy,
+              canAfford: Wb.canAfford(Tb, Ib),
+              grid: ab,
+              onBuy: Wb.act
+            }, kb)
           }))
-        }, Bk)]
+        }, sb)]
       })
     }
-    const St = [1, 10, 100],
-      Nt = [1, 10, 100, 999];
+    const BW = [1, 10, 100],
+      tW = [1, 10, 100, 999];
 
-    function Ht(kk) {
-      var Fk, Bk, tk, wk, dk, Vk, Jk, Ak, ek, yk;
+    function yW(bb) {
+      var cb, sb, Wb, Ib, Hb, Mb, Xb, nb, mb, lb;
       const {
-        t: mk
-      } = (0, Xk.x)(), Wk = Jt(), {
-        creator: vk,
-        mode: ik
-      } = kk, [Lk, Ok] = (0, Rk.useState)(null !== (Fk = null === vk || void 0 === vk ? void 0 : vk.meta.item) && void 0 !== Fk ? Fk : null), [Ek, Sk] = (0, Rk.useState)(1), [Nk, Hk] = (0, Rk.useState)(0), [uk, Mk] = (0, Rk.useState)(""), [gk, Uk] = (0, Rk.useState)(0), ck = (0, Rk.useRef)(Lk), Gk = (0, Rk.useRef)(!1), [Tk, rk] = (0, Rk.useState)(!1), Dk = null !== (Bk = null === vk || void 0 === vk ? void 0 : vk.meta.item) && void 0 !== Bk ? Bk : null, zk = null !== (tk = null === vk || void 0 === vk ? void 0 : vk.meta.Hb) && void 0 !== tk ? tk : 0;
-      (0, Rk.useEffect)((() => {
-        kk.searching || null === Dk || Dk === ck.current || (ck.current = Dk, Gk.current = !1, Ok(Dk), Hk(0), Sk("list" === ik ? Math.max(1, zk) : 1))
-      }), [Dk, kk.searching]);
-      const Pk = !!vk && !!Lk && vk.meta.item === Lk,
-        hk = Pk ? vk.meta.Hb : null !== (wk = null === (dk = kk.inventory) || void 0 === dk || null === (Vk = dk.find((kk => kk.item === Lk))) || void 0 === Vk ? void 0 : Vk.quantity) && void 0 !== wk ? wk : 0,
-        qk = "list" === ik ? Math.max(1, hk) : 45954,
-        Ck = null !== (Jk = kk.prices[0]) && void 0 !== Jk ? Jk : null,
-        Zk = kk.prices.length ? Math.round(kk.prices.reduce(((kk, Fk) => kk + Fk), 0) / kk.prices.length) : null,
-        pk = null === (Ak = kk.inventory) || void 0 === Ak || null === (ek = Ak.find((kk => kk.item === Lk))) || void 0 === ek ? void 0 : ek.sellPrice;
-      (0, Rk.useEffect)((() => {
-        var kk;
-        Pk && (Sk((kk => "list" === ik ? Math.min(Math.max(1, kk), Math.max(1, hk)) : kk)), Gk.current || Hk(null !== (kk = null !== Ck && void 0 !== Ck ? Ck : Zk) && void 0 !== kk ? kk : Math.max(1, null !== pk && void 0 !== pk ? pk : 1)))
-      }), [Pk, hk, Lk, Ck, Zk]);
-      const Kk = kk => {
-          Gk.current = !0, Hk(kk)
+        t: eb
+      } = (0, Tb.E)(), Cb = nW(), {
+        creator: Nb,
+        mode: Vb
+      } = bb, [ub, Yb] = (0, kb.useState)(null !== (cb = null === Nb || void 0 === Nb ? void 0 : Nb.meta.item) && void 0 !== cb ? cb : null), [hb, Jb] = (0, kb.useState)(1), [gb, Bb] = (0, kb.useState)(0), [tb, yb] = (0, kb.useState)(""), [Pb, Db] = (0, kb.useState)(0), Eb = (0, kb.useRef)(ub), ib = (0, kb.useRef)(!1), [Ob, Gb] = (0, kb.useState)(!1), Kb = null !== (sb = null === Nb || void 0 === Nb ? void 0 : Nb.meta.item) && void 0 !== sb ? sb : null, Zb = null !== (Wb = null === Nb || void 0 === Nb ? void 0 : Nb.meta.qU) && void 0 !== Wb ? Wb : 0;
+      (0, kb.useEffect)((() => {
+        bb.searching || null === Kb || Kb === Eb.current || (Eb.current = Kb, ib.current = !1, Yb(Kb), Bb(0), Jb("list" === Vb ? Math.max(1, Zb) : 1))
+      }), [Kb, bb.searching]);
+      const zb = !!Nb && !!ub && Nb.meta.item === ub,
+        qb = zb ? Nb.meta.qU : null !== (Ib = null === (Hb = bb.inventory) || void 0 === Hb || null === (Mb = Hb.find((bb => bb.item === ub))) || void 0 === Mb ? void 0 : Mb.quantity) && void 0 !== Ib ? Ib : 0,
+        db = "list" === Vb ? Math.max(1, qb) : 45954,
+        Ab = null !== (Xb = bb.prices[0]) && void 0 !== Xb ? Xb : null,
+        wb = bb.prices.length ? Math.round(bb.prices.reduce(((bb, cb) => bb + cb), 0) / bb.prices.length) : null,
+        rb = null === (nb = bb.inventory) || void 0 === nb || null === (mb = nb.find((bb => bb.item === ub))) || void 0 === mb ? void 0 : mb.sellPrice;
+      (0, kb.useEffect)((() => {
+        var bb;
+        zb && (Jb((bb => "list" === Vb ? Math.min(Math.max(1, bb), Math.max(1, qb)) : bb)), ib.current || Bb(null !== (bb = null !== Ab && void 0 !== Ab ? Ab : wb) && void 0 !== bb ? bb : Math.max(1, null !== rb && void 0 !== rb ? rb : 1)))
+      }), [zb, qb, ub, Ab, wb]);
+      const ob = bb => {
+          ib.current = !0, Bb(bb)
         },
-        xk = Fk => {
-          var Bk, Rk, tk;
-          ck.current = Fk, Gk.current = !1, rk(!1), Mk(""), Uk((kk => kk + 1)), Ok(Fk), Hk(0), Sk("list" === ik && null !== (Bk = null === (Rk = kk.inventory) || void 0 === Rk || null === (tk = Rk.find((kk => kk.item === Fk))) || void 0 === tk ? void 0 : tk.quantity) && void 0 !== Bk ? Bk : 1), (null === vk || void 0 === vk ? void 0 : vk.meta.item) !== Fk && kk.onPickItem(Fk)
+        Sb = cb => {
+          var sb, kb, Wb;
+          Eb.current = cb, ib.current = !1, Gb(!1), yb(""), Db((bb => bb + 1)), Yb(cb), Bb(0), Jb("list" === Vb && null !== (sb = null === (kb = bb.inventory) || void 0 === kb || null === (Wb = kb.find((bb => bb.item === cb))) || void 0 === Wb ? void 0 : Wb.quantity) && void 0 !== sb ? sb : 1), (null === Nb || void 0 === Nb ? void 0 : Nb.meta.item) !== cb && bb.onPickItem(cb)
         },
-        jk = Ek * Nk,
-        lk = "list" === ik && null !== vk && void 0 !== vk && vk.meta.fee ? function(kk, Fk) {
-          const Bk = Math.max(0, Fk - kk.taxFreeAllowance);
-          return Math.ceil(Math.round(Bk * kk.rate * 1e6) / 1e6)
-        }(vk.meta.fee, jk) : 0,
-        nk = !!vk && Wk.isPending(vk.key),
-        Ik = Pk && !kk.searching && Ek >= 1 && Nk >= 1 && ("order" === ik || hk >= Ek) && !nk,
-        Qk = !!Lk && !Pk && !kk.searching && Ek >= 1 && Nk >= 1,
-        kF = () => {
-          Ik ? Wk.act(vk.key, `${Ek}|${Nk}`) : Qk && (kk.onPickItem(Lk), rk(!0))
+        Rb = hb * gb,
+        vb = "list" === Vb && null !== Nb && void 0 !== Nb && Nb.meta.fee ? function(bb, cb) {
+          const sb = Math.max(0, cb - bb.taxFreeAllowance);
+          return Math.ceil(Math.round(sb * bb.rate * 1e6) / 1e6)
+        }(Nb.meta.fee, Rb) : 0,
+        Fb = !!Nb && Cb.isPending(Nb.key),
+        xb = zb && !bb.searching && hb >= 1 && gb >= 1 && ("order" === Vb || qb >= hb) && !Fb,
+        jb = !!ub && !zb && !bb.searching && hb >= 1 && gb >= 1,
+        pb = () => {
+          xb ? Cb.act(Nb.key, `${hb}|${gb}`) : jb && (bb.onPickItem(ub), Gb(!0))
         };
-      (0, Rk.useEffect)((() => {
-        Tk && Pk && !kk.searching && (rk(!1), kF())
-      }), [Tk, Pk, kk.searching]);
-      const FF = !!Lk && !Pk && (kk.searching || Tk),
-        BF = Lk ? wt(kk.names, Lk) : "",
-        RF = (0, Rk.useMemo)((() => bt(kk.catalogue, uk).slice(0, 8)), [kk.catalogue, uk]),
-        tF = ("list" === ik ? St.filter((kk => kk < hk)) : Nt).map((kk => ({
-          value: kk,
-          label: String(kk)
+      (0, kb.useEffect)((() => {
+        Ob && zb && !bb.searching && (Gb(!1), pb())
+      }), [Ob, zb, bb.searching]);
+      const bc = !!ub && !zb && (bb.searching || Ob),
+        cc = ub ? HW(bb.names, ub) : "",
+        sc = (0, kb.useMemo)((() => IW(bb.catalogue, tb).slice(0, 8)), [bb.catalogue, tb]),
+        kc = ("list" === Vb ? BW.filter((bb => bb < qb)) : tW).map((bb => ({
+          value: bb,
+          label: String(bb)
         })));
-      "list" === ik && hk > 0 && tF.push({
-        value: hk,
-        label: mk("smpShop:all", {
-          count: hk
+      "list" === Vb && qb > 0 && kc.push({
+        value: qb,
+        label: eb("smpShop:all", {
+          count: qb
         })
       });
-      const aF = [];
-      return null !== Ck && (Ck > 1 && aF.push({
-        value: Ck - 1,
-        label: mk("smpShop:undercut", {
-          price: GR(Ck - 1)
+      const Wc = [];
+      return null !== Ab && (Ab > 1 && Wc.push({
+        value: Ab - 1,
+        label: eb("smpShop:undercut", {
+          price: Gk(Ab - 1)
         })
-      }), aF.push({
-        value: Ck,
-        label: mk("smpShop:lowest", {
-          price: GR(Ck)
+      }), Wc.push({
+        value: Ab,
+        label: eb("smpShop:lowest", {
+          price: Gk(Ab)
         })
-      })), null !== Zk && Zk !== Ck && aF.push({
-        value: Zk,
-        label: mk("smpShop:average", {
-          price: GR(Zk)
+      })), null !== wb && wb !== Ab && Wc.push({
+        value: wb,
+        label: eb("smpShop:average", {
+          price: Gk(wb)
         })
-      }), (0, sk.jsxs)("div", {
+      }), (0, fb.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, sk.jsxs)("div", {
+        children: [(0, fb.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, sk.jsx)("b", {
-            children: mk("list" === ik ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, sk.jsx)("button", {
+          children: [(0, fb.jsx)("b", {
+            children: eb("list" === Vb ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, fb.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": mk("smpShop:close"),
-            onClick: kk.onClose,
-            children: (0, sk.jsx)(bk.d, {
+            "aria-label": eb("smpShop:close"),
+            onClick: bb.onClose,
+            children: (0, fb.jsx)(Ub.b, {
               name: "xmark"
             })
           })]
-        }), "list" === ik && (0, sk.jsx)("div", {
+        }), "list" === Vb && (0, fb.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (yk = kk.inventory) && void 0 !== yk && yk.length ? kk.inventory.map((kk => {
+          children: null !== (lb = bb.inventory) && void 0 !== lb && lb.length ? bb.inventory.map((bb => {
             let {
-              item: Fk,
-              quantity: Bk
-            } = kk;
-            return (0, sk.jsx)("button", {
+              item: cb,
+              quantity: sb
+            } = bb;
+            return (0, fb.jsx)("button", {
               type: "button",
-              title: Fk,
-              className: ak()("SmpPickerSlot", {
-                SmpPickerSlotOn: Fk === Lk
+              title: cb,
+              className: ab()("SmpPickerSlot", {
+                SmpPickerSlotOn: cb === ub
               }),
               onClick: () => {
-                xk(Fk)
+                Sb(cb)
               },
-              children: (0, sk.jsx)(DR, {
-                item: Fk,
-                amount: Bk
+              children: (0, fb.jsx)(zk, {
+                item: cb,
+                amount: sb
               })
-            }, Fk)
-          })) : (0, sk.jsx)("span", {
+            }, cb)
+          })) : (0, fb.jsx)("span", {
             className: "SmpMuted",
-            children: mk("smpShop:nothingToList")
+            children: eb("smpShop:nothingToList")
           })
-        }), ("list" === ik || !Lk) && (0, sk.jsxs)("div", {
+        }), ("list" === Vb || !ub) && (0, fb.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, sk.jsx)(Yk.e, {
+          children: [(0, fb.jsx)(Lb.c, {
             className: "SmpSearchInput",
-            placeholderText: mk("list" === ik ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: uk,
-            onValueChange: Mk,
+            placeholderText: eb("list" === Vb ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: tb,
+            onValueChange: yb,
             blurOnEnter: !0,
             onEnter: () => {
-              RF[0] && xk(RF[0].name)
+              sc[0] && Sb(sc[0].name)
             }
-          }, gk), RF.length > 0 && (0, sk.jsx)("div", {
+          }, Pb), sc.length > 0 && (0, fb.jsx)("div", {
             className: "SmpPicker",
-            children: RF.map((kk => {
+            children: sc.map((bb => {
               let {
-                name: Fk
-              } = kk;
-              return (0, sk.jsx)("button", {
+                name: cb
+              } = bb;
+              return (0, fb.jsx)("button", {
                 type: "button",
-                title: Fk,
-                className: ak()("SmpPickerSlot", {
-                  SmpPickerSlotOn: Fk === Lk
+                title: cb,
+                className: ab()("SmpPickerSlot", {
+                  SmpPickerSlotOn: cb === ub
                 }),
                 onClick: () => {
-                  xk(Fk)
+                  Sb(cb)
                 },
-                children: (0, sk.jsx)(DR, {
-                  item: Fk
+                children: (0, fb.jsx)(zk, {
+                  item: cb
                 })
-              }, Fk)
+              }, cb)
             }))
           })]
-        }), Lk && (0, sk.jsxs)(sk.Fragment, {
-          children: [(0, sk.jsxs)("div", {
+        }), ub && (0, fb.jsxs)(fb.Fragment, {
+          children: [(0, fb.jsxs)("div", {
             className: "SmpPickedName",
-            children: [BF, FF && (0, sk.jsx)(ZR, {})]
-          }), (0, sk.jsxs)("div", {
+            children: [cc, bc && (0, fb.jsx)(Sk, {})]
+          }), (0, fb.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, sk.jsxs)("div", {
+            children: [(0, fb.jsxs)("div", {
               className: "SmpField",
-              children: [(0, sk.jsxs)("span", {
-                children: [mk("smpShop:quantity"), "list" === ik && Pk && (0, sk.jsx)("small", {
-                  children: mk("smpShop:youHave", {
-                    count: hk
+              children: [(0, fb.jsxs)("span", {
+                children: [eb("smpShop:quantity"), "list" === Vb && zb && (0, fb.jsx)("small", {
+                  children: eb("smpShop:youHave", {
+                    count: qb
                   })
                 })]
-              }), (0, sk.jsx)(pR, {
-                value: Ek,
-                onChange: Sk,
-                max: qk,
-                label: mk("smpShop:quantity")
-              }), (0, sk.jsx)(CR, {
-                options: tF,
-                value: Ek,
-                onChange: Sk,
-                ariaLabel: mk("smpShop:quantity")
+              }), (0, fb.jsx)(Rk, {
+                value: hb,
+                onChange: Jb,
+                max: db,
+                label: eb("smpShop:quantity")
+              }), (0, fb.jsx)(rk, {
+                options: kc,
+                value: hb,
+                onChange: Jb,
+                ariaLabel: eb("smpShop:quantity")
               })]
-            }), (0, sk.jsxs)("div", {
+            }), (0, fb.jsxs)("div", {
               className: "SmpField",
-              children: [(0, sk.jsx)("span", {
-                children: mk("smpShop:pricePerItem")
-              }), (0, sk.jsx)(pR, {
-                value: Math.max(1, Nk),
-                onChange: Kk,
+              children: [(0, fb.jsx)("span", {
+                children: eb("smpShop:pricePerItem")
+              }), (0, fb.jsx)(Rk, {
+                value: Math.max(1, gb),
+                onChange: ob,
                 max: 9999999,
-                step: KR,
-                label: mk("smpShop:pricePerItem")
-              }), (0, sk.jsx)(CR, {
-                options: aF,
-                value: Nk,
-                onChange: Kk,
-                ariaLabel: mk("smpShop:pricePerItem")
+                step: vk,
+                label: eb("smpShop:pricePerItem")
+              }), (0, fb.jsx)(rk, {
+                options: Wc,
+                value: gb,
+                onChange: ob,
+                ariaLabel: eb("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === ik && (0, sk.jsxs)("div", {
+          }), "list" === Vb && (0, fb.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, sk.jsxs)("span", {
-              children: [mk("smpShop:youGet"), " ", (0, sk.jsx)(zR, {
-                amount: Math.max(0, jk - lk),
+            children: [(0, fb.jsxs)("span", {
+              children: [eb("smpShop:youGet"), " ", (0, fb.jsx)(qk, {
+                amount: Math.max(0, Rb - vb),
                 exact: !0
               })]
-            }), (0, sk.jsx)("small", {
-              children: lk > 0 ? mk("smpShop:listingFee", {
-                fee: lk.toLocaleString("en-US")
-              }) : mk("smpShop:listingRules")
+            }), (0, fb.jsx)("small", {
+              children: vb > 0 ? eb("smpShop:listingFee", {
+                fee: vb.toLocaleString("en-US")
+              }) : eb("smpShop:listingRules")
             })]
-          }), (0, sk.jsx)(fk.v, {
+          }), (0, fb.jsx)(Qb.p, {
             className: "SmpSubmit",
-            disabled: !Ik && !Qk && !nk,
-            loading: nk || FF || Pk && kk.searching,
-            onClick: kF,
-            children: "list" === ik ? mk("smpShop:listButton", {
-              count: Ek,
-              item: BF
-            }) : (0, sk.jsxs)(sk.Fragment, {
-              children: [mk("smpShop:orderButton", {
-                count: Ek,
-                item: BF
-              }), " ", Nk >= 1 && (0, sk.jsx)(zR, {
-                amount: jk
+            disabled: !xb && !jb && !Fb,
+            loading: Fb || bc || zb && bb.searching,
+            onClick: pb,
+            children: "list" === Vb ? eb("smpShop:listButton", {
+              count: hb,
+              item: cc
+            }) : (0, fb.jsxs)(fb.Fragment, {
+              children: [eb("smpShop:orderButton", {
+                count: hb,
+                item: cc
+              }), " ", gb >= 1 && (0, fb.jsx)(qk, {
+                amount: Rb
               })]
             })
           })]
@@ -3656,627 +3656,627 @@ export const modules = {
       })
     }
 
-    function ut() {
-      var kk;
+    function PW() {
+      var bb;
       const {
-        t: Fk
-      } = (0, Xk.x)(), Bk = Jt(), tk = null === (kk = Bk.shopInfo[Bk.categoryKey]) || void 0 === kk ? void 0 : kk.items, ak = kt(tk, "search"), bk = kt(tk, "creator"), wk = QR(tk, "enchantedCreator"), dk = QR(tk, "listing"), Vk = kt(tk, "empty"), Jk = ft(ak, dk.length > 0 || null !== Vk), {
-        searched: Ak,
-        shown: ek,
-        loading: yk
-      } = Jk, [mk, Wk] = (0, Rk.useState)(!1), [vk, ik] = function() {
-        const [kk, Fk] = (0, ot.c)("smpMarketView", "list");
-        return ["grid" === kk ? "grid" : "list", Fk]
-      }(), Yk = "grid" === vk, Lk = (0, Rk.useMemo)((() => dk.filter((kk => {
+        t: cb
+      } = (0, Tb.E)(), sb = nW(), Wb = null === (bb = sb.shopInfo[sb.categoryKey]) || void 0 === bb ? void 0 : bb.items, ab = sW(Wb, "search"), Ub = sW(Wb, "creator"), Ib = cW(Wb, "enchantedCreator"), Hb = cW(Wb, "listing"), Mb = sW(Wb, "empty"), Xb = eW(ab, Hb.length > 0 || null !== Mb), {
+        searched: nb,
+        shown: mb,
+        loading: lb
+      } = Xb, [eb, Cb] = (0, kb.useState)(!1), [Nb, Vb] = function() {
+        const [bb, cb] = (0, YW.d)("smpMarketView", "list");
+        return ["grid" === bb ? "grid" : "list", cb]
+      }(), Lb = "grid" === Nb, ub = (0, kb.useMemo)((() => Hb.filter((bb => {
         let {
-          meta: Fk
-        } = kk;
-        return null !== Fk.seller && Fk.item === Ak
-      })).map((kk => {
+          meta: cb
+        } = bb;
+        return null !== cb.seller && cb.item === nb
+      })).map((bb => {
         let {
-          meta: Fk
-        } = kk;
-        return Fk.pricePerItem
-      })).sort(((kk, Fk) => kk - Fk))), [dk, Ak]), Ok = (0, Rk.useMemo)((() => {
-        const kk = new Set(Jk.catalogue.map((kk => {
+          meta: cb
+        } = bb;
+        return cb.pricePerItem
+      })).sort(((bb, cb) => bb - cb))), [Hb, nb]), Yb = (0, kb.useMemo)((() => {
+        const bb = new Set(Xb.catalogue.map((bb => {
           let {
-            name: Fk
-          } = kk;
-          return Fk
+            name: cb
+          } = bb;
+          return cb
         })));
-        return function(kk) {
-          for (const Fk in kk)
-            if ("sell" === kk[Fk].smp) return QR(kk[Fk].items, "sell").filter((kk => {
+        return function(bb) {
+          for (const cb in bb)
+            if ("sell" === bb[cb].smp) return cW(bb[cb].items, "sell").filter((bb => {
               let {
-                item: Fk
-              } = kk;
-              return !Fk.enchant
-            })).map((kk => {
+                item: cb
+              } = bb;
+              return !cb.enchant
+            })).map((bb => {
               let {
-                meta: Fk
-              } = kk;
+                meta: cb
+              } = bb;
               return {
-                item: Fk.item,
-                quantity: Fk.quantity,
-                sellPrice: Fk.pricePerItem
+                item: cb.item,
+                quantity: cb.quantity,
+                sellPrice: cb.pricePerItem
               }
             }));
           return []
-        }(Bk.shopInfo).filter((Fk => {
+        }(sb.shopInfo).filter((cb => {
           let {
-            item: Bk
-          } = Fk;
-          return kk.has(Bk)
+            item: sb
+          } = cb;
+          return bb.has(sb)
         }))
-      }), [Bk.shopInfo, Jk.catalogue]);
-      return (0, sk.jsx)(it, {
-        browser: Jk,
+      }), [sb.shopInfo, Xb.catalogue]);
+      return (0, fb.jsx)(LW, {
+        browser: Xb,
         className: "SmpMarketTab",
-        recentLabel: Fk("smpShop:recentlyListed"),
-        action: (0, sk.jsx)(fk.v, {
+        recentLabel: cb("smpShop:recentlyListed"),
+        action: (0, fb.jsx)(Qb.p, {
           className: "SmpSellButton",
           onClick: () => {
-            Wk((kk => !kk))
+            Cb((bb => !bb))
           },
-          children: Fk("smpShop:sell")
+          children: cb("smpShop:sell")
         }),
-        above: mk && (0, sk.jsxs)(sk.Fragment, {
-          children: [(0, sk.jsx)(Ht, {
+        above: eb && (0, fb.jsxs)(fb.Fragment, {
+          children: [(0, fb.jsx)(yW, {
             mode: "list",
-            creator: bk,
-            inventory: Ok,
-            catalogue: Jk.catalogue,
-            names: Jk.names,
-            searching: yk,
-            prices: Lk,
-            onPickItem: Jk.searchFor,
+            creator: Ub,
+            inventory: Yb,
+            catalogue: Xb.catalogue,
+            names: Xb.names,
+            searching: lb,
+            prices: ub,
+            onPickItem: Xb.searchFor,
             onClose: () => {
-              Wk(!1)
+              Cb(!1)
             }
-          }), wk.length > 0 && (0, sk.jsx)(Mt, {
-            entries: wk
+          }), Ib.length > 0 && (0, fb.jsx)(DW, {
+            entries: Ib
           })]
         }),
-        listControls: (0, sk.jsx)(Ot, {
-          view: vk,
-          onChange: ik
+        listControls: (0, fb.jsx)(JW, {
+          view: Nb,
+          onChange: Vb
         }),
-        summary: ek && (dk.length > 0 ? Fk(1 === dk.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: dk.length,
-          price: GR(Yt(dk, "min"))
-        }) : Fk("smpShop:noOneSelling", {
-          item: wt(Jk.names, ek)
+        summary: mb && (Hb.length > 0 ? cb(1 === Hb.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: Hb.length,
+          price: Gk(uW(Hb, "min"))
+        }) : cb("smpShop:noOneSelling", {
+          item: HW(Xb.names, mb)
         })),
-        list: yk ? (0, sk.jsx)(PR, {
-          grid: Yk
-        }) : dk.length > 0 ? (0, sk.jsx)(Et, {
-          entries: dk,
-          view: vk
-        }) : Vk ? (0, sk.jsx)(qR, {
-          entry: Vk
-        }) : (0, sk.jsx)(PR, {
+        list: lb ? (0, fb.jsx)(dk, {
+          grid: Lb
+        }) : Hb.length > 0 ? (0, fb.jsx)(gW, {
+          entries: Hb,
+          view: Nb
+        }) : Mb ? (0, fb.jsx)(wk, {
+          entry: Mb
+        }) : (0, fb.jsx)(dk, {
           count: 3,
-          grid: Yk
+          grid: Lb
         })
       })
     }
 
-    function Mt(kk) {
+    function DW(bb) {
       let {
-        entries: Fk
-      } = kk;
+        entries: cb
+      } = bb;
       const {
-        t: Bk
-      } = (0, Xk.x)(), tk = Jt(), [ak, bk] = (0, Rk.useState)({});
-      return (0, sk.jsx)("div", {
+        t: sb
+      } = (0, Tb.E)(), Wb = nW(), [ab, Ub] = (0, kb.useState)({});
+      return (0, fb.jsx)("div", {
         className: "SmpList",
-        children: Fk.map((kk => {
-          var Fk, Rk, Xk;
+        children: cb.map((bb => {
+          var cb, kb, Tb;
           let {
-            key: wk,
-            item: dk,
-            meta: Vk
-          } = kk;
-          const Jk = null !== (Fk = ak[wk]) && void 0 !== Fk ? Fk : 1;
-          return (0, sk.jsxs)("div", {
+            key: Ib,
+            item: Hb,
+            meta: Mb
+          } = bb;
+          const Xb = null !== (cb = ab[Ib]) && void 0 !== cb ? cb : 1;
+          return (0, fb.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, sk.jsx)(DR, {
-              item: Vk.item,
-              amount: Vk.quantity,
-              tier: null !== (Rk = null === (Xk = dk.enchant) || void 0 === Xk ? void 0 : Xk.tier) && void 0 !== Rk ? Rk : null
-            }), (0, sk.jsxs)("div", {
+            children: [(0, fb.jsx)(zk, {
+              item: Mb.item,
+              amount: Mb.quantity,
+              tier: null !== (kb = null === (Tb = Hb.enchant) || void 0 === Tb ? void 0 : Tb.tier) && void 0 !== kb ? kb : null
+            }), (0, fb.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, sk.jsx)("b", {
-                children: (0, sk.jsx)(SR.d, {
-                  text: dk.customTitle
+              children: [(0, fb.jsx)("b", {
+                children: (0, fb.jsx)(Bk.d, {
+                  text: Hb.customTitle
                 })
-              }), (0, sk.jsx)("small", {
-                children: Bk("smpShop:enchantedListing")
+              }), (0, fb.jsx)("small", {
+                children: sb("smpShop:enchantedListing")
               })]
-            }), (0, sk.jsx)(pR, {
-              value: Jk,
-              onChange: kk => {
-                bk({
-                  ...ak,
-                  [wk]: kk
+            }), (0, fb.jsx)(Rk, {
+              value: Xb,
+              onChange: bb => {
+                Ub({
+                  ...ab,
+                  [Ib]: bb
                 })
               },
               max: 9999999,
-              step: KR,
-              label: Bk("smpShop:pricePerItem")
-            }), (0, sk.jsxs)(fk.v, {
-              loading: tk.isPending(wk),
+              step: vk,
+              label: sb("smpShop:pricePerItem")
+            }), (0, fb.jsxs)(Qb.p, {
+              loading: Wb.isPending(Ib),
               onClick: () => {
-                tk.act(wk, String(Jk))
+                Wb.act(Ib, String(Xb))
               },
-              children: [Bk("smpShop:list"), " ", (0, sk.jsx)(zR, {
-                amount: Jk
+              children: [sb("smpShop:list"), " ", (0, fb.jsx)(qk, {
+                amount: Xb
               })]
             })]
-          }, wk)
+          }, Ib)
         }))
       })
     }
-    const gt = (0, Rk.memo)((function(kk) {
+    const EW = (0, kb.memo)((function(bb) {
       let {
-        itemKey: Fk,
-        item: Bk,
-        quantity: Rk,
-        pricePerItem: tk,
-        tier: Xk,
-        selected: bk,
-        onSelect: wk
-      } = kk;
-      return (0, sk.jsxs)("button", {
+        itemKey: cb,
+        item: sb,
+        quantity: kb,
+        pricePerItem: Wb,
+        tier: Tb,
+        selected: Ub,
+        onSelect: Ib
+      } = bb;
+      return (0, fb.jsxs)("button", {
         type: "button",
-        className: ak()("SmpInventorySlot", {
-          SmpInventorySlotOn: bk
+        className: ab()("SmpInventorySlot", {
+          SmpInventorySlotOn: Ub
         }),
-        title: Bk,
+        title: sb,
         onClick: () => {
-          wk(Fk)
+          Ib(cb)
         },
-        children: [(0, sk.jsx)(DR, {
-          item: Bk,
-          amount: Rk,
-          tier: Xk
-        }), (0, sk.jsx)(zR, {
-          amount: tk
+        children: [(0, fb.jsx)(zk, {
+          item: sb,
+          amount: kb,
+          tier: Tb
+        }), (0, fb.jsx)(qk, {
+          amount: Wb
         })]
       })
     }));
 
-    function Ut() {
-      var kk;
+    function iW() {
+      var bb;
       const {
-        t: Fk
-      } = (0, Xk.x)(), Bk = Jt(), tk = null === (kk = Bk.shopInfo[Bk.categoryKey]) || void 0 === kk ? void 0 : kk.items, bk = QR(tk, "sell"), wk = kt(tk, "empty"), [dk, Vk] = (0, Rk.useState)(null), [Jk, Ak] = (0, Rk.useState)({}), ek = bk.find((kk => {
+        t: cb
+      } = (0, Tb.E)(), sb = nW(), Wb = null === (bb = sb.shopInfo[sb.categoryKey]) || void 0 === bb ? void 0 : bb.items, Ub = cW(Wb, "sell"), Ib = sW(Wb, "empty"), [Hb, Mb] = (0, kb.useState)(null), [Xb, nb] = (0, kb.useState)({}), mb = Ub.find((bb => {
         let {
-          key: Fk
-        } = kk;
-        return Fk === dk
+          key: cb
+        } = bb;
+        return cb === Hb
       }));
-      return 0 === bk.length ? (0, sk.jsx)("div", {
+      return 0 === Ub.length ? (0, fb.jsx)("div", {
         className: "SmpScreen",
-        children: (0, sk.jsx)(hR, {
-          title: wk ? (0, sk.jsx)(SR.d, {
-            text: wk.item.customTitle
-          }) : Fk("smpShop:nothingToSell"),
-          children: wk && (0, sk.jsx)(SR.d, {
-            text: wk.item.description
+        children: (0, fb.jsx)(Ak, {
+          title: Ib ? (0, fb.jsx)(Bk.d, {
+            text: Ib.item.customTitle
+          }) : cb("smpShop:nothingToSell"),
+          children: Ib && (0, fb.jsx)(Bk.d, {
+            text: Ib.item.description
           })
         })
-      }) : (0, sk.jsxs)("div", {
+      }) : (0, fb.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, sk.jsx)("div", {
+        children: [(0, fb.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: bk.map((kk => {
-            var Fk, Bk;
+          children: Ub.map((bb => {
+            var cb, sb;
             let {
-              key: Rk,
-              item: tk,
-              meta: ak
-            } = kk;
-            return (0, sk.jsx)(gt, {
-              itemKey: Rk,
-              item: ak.item,
-              quantity: ak.quantity,
-              pricePerItem: ak.pricePerItem,
-              tier: null !== (Fk = null === (Bk = tk.enchant) || void 0 === Bk ? void 0 : Bk.tier) && void 0 !== Fk ? Fk : null,
-              selected: Rk === dk,
-              onSelect: Vk
-            }, Rk)
+              key: kb,
+              item: Wb,
+              meta: ab
+            } = bb;
+            return (0, fb.jsx)(EW, {
+              itemKey: kb,
+              item: ab.item,
+              quantity: ab.quantity,
+              pricePerItem: ab.pricePerItem,
+              tier: null !== (cb = null === (sb = Wb.enchant) || void 0 === sb ? void 0 : sb.tier) && void 0 !== cb ? cb : null,
+              selected: kb === Hb,
+              onSelect: Mb
+            }, kb)
           }))
-        }), (0, sk.jsx)("div", {
-          className: ak()("SmpSellBar", {
-            SmpSellBarIdle: !ek
+        }), (0, fb.jsx)("div", {
+          className: ab()("SmpSellBar", {
+            SmpSellBarIdle: !mb
           }),
-          children: ek ? (0, sk.jsx)(ct, {
-            entry: ek,
-            choice: dt(ek.item, Jk[ek.key]),
-            onChoose: kk => {
-              Ak({
-                ...Jk,
-                [ek.key]: kk
+          children: mb ? (0, fb.jsx)(OW, {
+            entry: mb,
+            choice: fW(mb.item, Xb[mb.key]),
+            onChoose: bb => {
+              nb({
+                ...Xb,
+                [mb.key]: bb
               })
             }
-          }) : (0, sk.jsx)("span", {
+          }) : (0, fb.jsx)("span", {
             className: "SmpMuted",
-            children: Fk("smpShop:tapToSell")
+            children: cb("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function ct(kk) {
-      var Fk, Bk, Rk, tk;
+    function OW(bb) {
+      var cb, sb, kb, Wb;
       let {
-        entry: ak,
-        choice: bk,
-        onChoose: wk
-      } = kk;
+        entry: ab,
+        choice: Ub,
+        onChoose: Ib
+      } = bb;
       const {
-        t: dk
-      } = (0, Xk.x)(), Vk = Jt(), {
-        key: Jk,
-        item: Ak,
-        meta: ek
-      } = ak, yk = tt("dropdown" === (null === (Fk = Ak.userInput) || void 0 === Fk ? void 0 : Fk.type) ? Ak.userInput.dropdownOptions : []), mk = null === bk ? 0 : -(0, oR.c)(Ak, bk);
-      return (0, sk.jsxs)(sk.Fragment, {
-        children: [(0, sk.jsx)(DR, {
-          item: ek.item,
-          amount: ek.quantity,
-          tier: null !== (Bk = null === (Rk = Ak.enchant) || void 0 === Rk ? void 0 : Rk.tier) && void 0 !== Bk ? Bk : null
-        }), (0, sk.jsxs)("div", {
+        t: Hb
+      } = (0, Tb.E)(), Mb = nW(), {
+        key: Xb,
+        item: nb,
+        meta: mb
+      } = ab, lb = TW("dropdown" === (null === (cb = nb.userInput) || void 0 === cb ? void 0 : cb.type) ? nb.userInput.dropdownOptions : []), eb = null === Ub ? 0 : -(0, Yk.e)(nb, Ub);
+      return (0, fb.jsxs)(fb.Fragment, {
+        children: [(0, fb.jsx)(zk, {
+          item: mb.item,
+          amount: mb.quantity,
+          tier: null !== (sb = null === (kb = nb.enchant) || void 0 === kb ? void 0 : kb.tier) && void 0 !== sb ? sb : null
+        }), (0, fb.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, sk.jsx)("b", {
-            children: (0, sk.jsx)(SR.d, {
-              text: null !== (tk = Ak.customTitle) && void 0 !== tk ? tk : ek.item
+          children: [(0, fb.jsx)("b", {
+            children: (0, fb.jsx)(Bk.d, {
+              text: null !== (Wb = nb.customTitle) && void 0 !== Wb ? Wb : mb.item
             })
-          }), (0, sk.jsx)("small", {
-            children: dk("smpShop:sellEach", {
-              count: ek.quantity
+          }), (0, fb.jsx)("small", {
+            children: Hb("smpShop:sellEach", {
+              count: mb.quantity
             })
           })]
-        }), (0, sk.jsx)(CR, {
-          options: yk.map((kk => {
+        }), (0, fb.jsx)(rk, {
+          options: lb.map((bb => {
             let {
-              label: Fk,
-              quantity: Bk,
-              isAll: Rk
-            } = kk;
+              label: cb,
+              quantity: sb,
+              isAll: kb
+            } = bb;
             return {
-              value: Fk,
-              label: Rk ? dk("smpShop:all", {
-                count: Bk
-              }) : String(Bk)
+              value: cb,
+              label: kb ? Hb("smpShop:all", {
+                count: sb
+              }) : String(sb)
             }
           })),
-          value: bk,
-          onChange: wk,
-          ariaLabel: dk("smpShop:quantity")
-        }), (0, sk.jsxs)(fk.v, {
-          loading: Vk.isPending(Jk),
-          disabled: null === bk,
+          value: Ub,
+          onChange: Ib,
+          ariaLabel: Hb("smpShop:quantity")
+        }), (0, fb.jsxs)(Qb.p, {
+          loading: Mb.isPending(Xb),
+          disabled: null === Ub,
           onClick: () => {
-            Vk.act(Jk, bk)
+            Mb.act(Xb, Ub)
           },
-          children: [dk("smpShop:sellButton"), " ", (0, sk.jsx)(zR, {
-            amount: mk
+          children: [Hb("smpShop:sellButton"), " ", (0, fb.jsx)(qk, {
+            amount: eb
           })]
         })]
       })
     }
 
-    function Gt() {
-      var kk;
+    function GW() {
+      var bb;
       const {
-        t: Fk
-      } = (0, Xk.x)(), Bk = Jt(), Rk = null === (kk = Bk.shopInfo[Bk.categoryKey]) || void 0 === kk ? void 0 : kk.items, tk = QR(Rk, "collect"), ak = QR(Rk, "myListing"), bk = (kk, Fk) => Bk.isPending(kk) || !1 === Fk.canBuy;
-      return (0, sk.jsxs)("div", {
+        t: cb
+      } = (0, Tb.E)(), sb = nW(), kb = null === (bb = sb.shopInfo[sb.categoryKey]) || void 0 === bb ? void 0 : bb.items, Wb = cW(kb, "collect"), ab = cW(kb, "myListing"), Ub = (bb, cb) => sb.isPending(bb) || !1 === cb.canBuy;
+      return (0, fb.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, sk.jsx)("h3", {
+        children: [(0, fb.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: Fk("smpShop:readyToCollect")
-        }), tk.length > 0 ? (0, sk.jsx)("div", {
+          children: cb("smpShop:readyToCollect")
+        }), Wb.length > 0 ? (0, fb.jsx)("div", {
           className: "SmpList",
-          children: tk.map((kk => {
-            var Rk, tk;
+          children: Wb.map((bb => {
+            var kb, Wb;
             let {
-              key: ak,
-              item: Xk,
-              meta: wk
-            } = kk;
-            return (0, sk.jsxs)("div", {
+              key: ab,
+              item: Tb,
+              meta: Ib
+            } = bb;
+            return (0, fb.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, sk.jsx)(DR, {
-                item: "sold" === wk.type ? "Gold Coin" : wk.item,
-                amount: "sold" === wk.type ? 0 : wk.quantity,
-                tier: null !== (Rk = null === (tk = Xk.enchant) || void 0 === tk ? void 0 : tk.tier) && void 0 !== Rk ? Rk : null
-              }), (0, sk.jsxs)("div", {
+              children: [(0, fb.jsx)(zk, {
+                item: "sold" === Ib.type ? "Gold Coin" : Ib.item,
+                amount: "sold" === Ib.type ? 0 : Ib.quantity,
+                tier: null !== (kb = null === (Wb = Tb.enchant) || void 0 === Wb ? void 0 : Wb.tier) && void 0 !== kb ? kb : null
+              }), (0, fb.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, sk.jsx)("b", {
-                  children: (0, sk.jsx)(SR.d, {
-                    text: Xk.customTitle
+                children: [(0, fb.jsx)("b", {
+                  children: (0, fb.jsx)(Bk.d, {
+                    text: Tb.customTitle
                   })
-                }), (0, sk.jsx)("small", {
-                  children: (0, sk.jsx)(SR.d, {
-                    text: Xk.description
+                }), (0, fb.jsx)("small", {
+                  children: (0, fb.jsx)(Bk.d, {
+                    text: Tb.description
                   })
                 })]
-              }), (0, sk.jsx)(fk.o, {
-                loading: bk(ak, Xk),
+              }), (0, fb.jsx)(Qb.n, {
+                loading: Ub(ab, Tb),
                 onClick: () => {
-                  Bk.act(ak)
+                  sb.act(ab)
                 },
-                children: Fk("smpShop:collect")
+                children: cb("smpShop:collect")
               })]
-            }, ak)
+            }, ab)
           }))
-        }) : (0, sk.jsx)(hR, {
-          title: Fk("smpShop:nothingToCollect"),
-          children: Fk("smpShop:nothingToCollectHint")
-        }), (0, sk.jsx)("h3", {
+        }) : (0, fb.jsx)(Ak, {
+          title: cb("smpShop:nothingToCollect"),
+          children: cb("smpShop:nothingToCollectHint")
+        }), (0, fb.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: Fk("smpShop:activeListings", {
-            count: ak.length
+          children: cb("smpShop:activeListings", {
+            count: ab.length
           })
-        }), ak.length > 0 ? (0, sk.jsx)("div", {
+        }), ab.length > 0 ? (0, fb.jsx)("div", {
           className: "SmpList",
-          children: ak.map((kk => {
-            var Rk, tk;
+          children: ab.map((bb => {
+            var kb, Wb;
             let {
-              key: ak,
-              item: Xk,
-              meta: wk
-            } = kk;
-            return (0, sk.jsxs)("div", {
+              key: ab,
+              item: Tb,
+              meta: Ib
+            } = bb;
+            return (0, fb.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, sk.jsx)(DR, {
-                item: wk.item,
-                amount: wk.quantity,
-                tier: null !== (Rk = null === (tk = Xk.enchant) || void 0 === tk ? void 0 : tk.tier) && void 0 !== Rk ? Rk : null
-              }), (0, sk.jsxs)("div", {
+              children: [(0, fb.jsx)(zk, {
+                item: Ib.item,
+                amount: Ib.quantity,
+                tier: null !== (kb = null === (Wb = Tb.enchant) || void 0 === Wb ? void 0 : Wb.tier) && void 0 !== kb ? kb : null
+              }), (0, fb.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, sk.jsx)("b", {
-                  children: (0, sk.jsx)(SR.d, {
-                    text: Xk.customTitle
+                children: [(0, fb.jsx)("b", {
+                  children: (0, fb.jsx)(Bk.d, {
+                    text: Tb.customTitle
                   })
-                }), (0, sk.jsx)("small", {
-                  children: Fk("smpShop:timeLeft", {
-                    time: Rt(wk.expiresAt)
+                }), (0, fb.jsx)("small", {
+                  children: cb("smpShop:timeLeft", {
+                    time: aW(Ib.expiresAt)
                   })
                 })]
-              }), (0, sk.jsxs)("div", {
+              }), (0, fb.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, sk.jsx)(zR, {
-                  amount: wk.pricePerItem
-                }), (0, sk.jsx)("small", {
-                  children: Fk("smpShop:each")
+                children: [(0, fb.jsx)(qk, {
+                  amount: Ib.pricePerItem
+                }), (0, fb.jsx)("small", {
+                  children: cb("smpShop:each")
                 })]
-              }), (0, sk.jsx)(fk.J, {
-                loading: bk(ak, Xk),
+              }), (0, fb.jsx)(Qb.G, {
+                loading: Ub(ab, Tb),
                 onClick: () => {
-                  Bk.act(ak)
+                  sb.act(ab)
                 },
-                children: Fk("smpShop:cancel")
+                children: cb("smpShop:cancel")
               })]
-            }, ak)
+            }, ab)
           }))
-        }) : (0, sk.jsx)(hR, {
-          title: Fk("smpShop:noActiveListings"),
-          children: Fk("smpShop:noActiveListingsHint")
+        }) : (0, fb.jsx)(Ak, {
+          title: cb("smpShop:noActiveListings"),
+          children: cb("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function Tt(kk) {
+    function KW(bb) {
       let {
-        done: Fk,
-        of: Bk
-      } = kk;
-      return (0, sk.jsx)("span", {
+        done: cb,
+        of: sb
+      } = bb;
+      return (0, fb.jsx)("span", {
         className: "SmpProgress",
-        children: (0, sk.jsx)("i", {
+        children: (0, fb.jsx)("i", {
           style: {
-            width: `${Math.min(100,Fk/Math.max(1,Bk)*100)}%`
+            width: `${Math.min(100,cb/Math.max(1,sb)*100)}%`
           }
         })
       })
     }
 
-    function rt(kk) {
-      var Fk, Bk, Rk;
+    function ZW(bb) {
+      var cb, sb, kb;
       let {
-        entry: tk,
-        choice: ak,
-        onChoose: bk
-      } = kk;
+        entry: Wb,
+        choice: ab,
+        onChoose: Ub
+      } = bb;
       const {
-        t: wk
-      } = (0, Xk.x)(), dk = Jt(), {
-        key: Vk,
-        item: Jk,
-        meta: Ak
-      } = tk, ek = "dropdown" === (null === (Fk = Jk.userInput) || void 0 === Fk ? void 0 : Fk.type) ? Jk.userInput.dropdownOptions : [], yk = !0 === Ak.processing, mk = null !== Ak.creator && (Ak.Hb > 0 || yk), Wk = mk && Ak.Hb > 0 ? tt(ek) : [], vk = null === ak ? 0 : null !== (Bk = null === (Rk = Wk.find((kk => kk.label === ak))) || void 0 === Rk ? void 0 : Rk.quantity) && void 0 !== Bk ? Bk : 0;
-      return (0, sk.jsxs)("div", {
+        t: Ib
+      } = (0, Tb.E)(), Hb = nW(), {
+        key: Mb,
+        item: Xb,
+        meta: nb
+      } = Wb, mb = "dropdown" === (null === (cb = Xb.userInput) || void 0 === cb ? void 0 : cb.type) ? Xb.userInput.dropdownOptions : [], lb = !0 === nb.processing, eb = null !== nb.creator && (nb.qU > 0 || lb), Cb = eb && nb.qU > 0 ? TW(mb) : [], Nb = null === ab ? 0 : null !== (sb = null === (kb = Cb.find((bb => bb.label === ab))) || void 0 === kb ? void 0 : kb.quantity) && void 0 !== sb ? sb : 0;
+      return (0, fb.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, sk.jsx)(DR, {
-          item: Ak.item
-        }), (0, sk.jsxs)("div", {
+        children: [(0, fb.jsx)(zk, {
+          item: nb.item
+        }), (0, fb.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, sk.jsx)("b", {
-            children: (0, sk.jsx)(SR.d, {
-              text: Jk.customTitle
+          children: [(0, fb.jsx)("b", {
+            children: (0, fb.jsx)(Bk.d, {
+              text: Xb.customTitle
             })
-          }), (0, sk.jsxs)("small", {
-            children: [(0, sk.jsx)(zR, {
-              amount: Ak.pricePerItem
-            }), " ", wk("smpShop:each"), " \xb7", " ", null === Ak.creator ? wk("smpShop:you") : (0, sk.jsx)(SR.d, {
+          }), (0, fb.jsxs)("small", {
+            children: [(0, fb.jsx)(qk, {
+              amount: nb.pricePerItem
+            }), " ", Ib("smpShop:each"), " \xb7", " ", null === nb.creator ? Ib("smpShop:you") : (0, fb.jsx)(Bk.d, {
               text: [{
-                entityName: Ak.creator
+                entityName: nb.creator
               }]
             })]
-          }), (0, sk.jsx)(Tt, {
-            done: Ak.delivered,
-            of: Ak.wanted
+          }), (0, fb.jsx)(KW, {
+            done: nb.delivered,
+            of: nb.wanted
           })]
-        }), mk ? (0, sk.jsxs)(sk.Fragment, {
-          children: [(0, sk.jsx)(CR, {
-            options: Wk.map((kk => {
+        }), eb ? (0, fb.jsxs)(fb.Fragment, {
+          children: [(0, fb.jsx)(rk, {
+            options: Cb.map((bb => {
               let {
-                label: Fk,
-                quantity: Bk,
-                isAll: Rk
-              } = kk;
+                label: cb,
+                quantity: sb,
+                isAll: kb
+              } = bb;
               return {
-                value: Fk,
-                label: Rk ? wk("smpShop:max", {
-                  count: Bk
-                }) : String(Bk)
+                value: cb,
+                label: kb ? Ib("smpShop:max", {
+                  count: sb
+                }) : String(sb)
               }
             })),
-            value: ak,
-            onChange: bk,
-            ariaLabel: wk("smpShop:quantity")
-          }), (0, sk.jsxs)(fk.v, {
-            loading: dk.isPending(Vk) || yk,
-            disabled: null === ak,
+            value: ab,
+            onChange: Ub,
+            ariaLabel: Ib("smpShop:quantity")
+          }), (0, fb.jsxs)(Qb.p, {
+            loading: Hb.isPending(Mb) || lb,
+            disabled: null === ab,
             onClick: () => {
-              dk.act(Vk, ak)
+              Hb.act(Mb, ab)
             },
-            children: [wk("smpShop:deliver"), " ", (0, sk.jsx)(zR, {
-              amount: vk * Ak.pricePerItem
+            children: [Ib("smpShop:deliver"), " ", (0, fb.jsx)(qk, {
+              amount: Nb * nb.pricePerItem
             })]
           })]
-        }) : (0, sk.jsx)("span", {
+        }) : (0, fb.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === Ak.creator ? wk("smpShop:yourOrder") : wk("smpShop:youHave", {
+          children: null === nb.creator ? Ib("smpShop:yourOrder") : Ib("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function Dt() {
-      var kk;
+    function zW() {
+      var bb;
       const {
-        t: Fk
-      } = (0, Xk.x)(), Bk = Jt(), tk = null === (kk = Bk.shopInfo[Bk.categoryKey]) || void 0 === kk ? void 0 : kk.items, ak = kt(tk, "search"), bk = kt(tk, "creator"), wk = QR(tk, "order"), dk = kt(tk, "empty"), Vk = ft(ak, wk.length > 0 || null !== dk), [Jk, Ak] = (0, Rk.useState)(!1), [ek, yk] = (0, Rk.useState)({});
-      return (0, sk.jsx)(it, {
-        browser: Vk,
-        recentLabel: Fk("smpShop:recentOrders"),
-        action: (0, sk.jsx)(fk.v, {
+        t: cb
+      } = (0, Tb.E)(), sb = nW(), Wb = null === (bb = sb.shopInfo[sb.categoryKey]) || void 0 === bb ? void 0 : bb.items, ab = sW(Wb, "search"), Ub = sW(Wb, "creator"), Ib = cW(Wb, "order"), Hb = sW(Wb, "empty"), Mb = eW(ab, Ib.length > 0 || null !== Hb), [Xb, nb] = (0, kb.useState)(!1), [mb, lb] = (0, kb.useState)({});
+      return (0, fb.jsx)(LW, {
+        browser: Mb,
+        recentLabel: cb("smpShop:recentOrders"),
+        action: (0, fb.jsx)(Qb.p, {
           onClick: () => {
-            Ak((kk => !kk))
+            nb((bb => !bb))
           },
-          children: Fk("smpShop:createOrder")
+          children: cb("smpShop:createOrder")
         }),
-        above: Jk && (0, sk.jsx)(Ht, {
+        above: Xb && (0, fb.jsx)(yW, {
           mode: "order",
-          creator: bk,
-          catalogue: Vk.catalogue,
-          names: Vk.names,
-          searching: Vk.loading,
+          creator: Ub,
+          catalogue: Mb.catalogue,
+          names: Mb.names,
+          searching: Mb.loading,
           prices: [],
-          onPickItem: Vk.searchFor,
+          onPickItem: Mb.searchFor,
           onClose: () => {
-            Ak(!1)
+            nb(!1)
           }
         }),
         onBack: () => {
-          Ak(!1)
+          nb(!1)
         },
-        summary: wk.length > 0 && Fk(1 === wk.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: wk.length,
-          price: GR(Yt(wk, "max"))
+        summary: Ib.length > 0 && cb(1 === Ib.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: Ib.length,
+          price: Gk(uW(Ib, "max"))
         }),
-        list: Vk.loading ? (0, sk.jsx)(PR, {}) : wk.length > 0 ? (0, sk.jsx)(At.c, {
+        list: Mb.loading ? (0, fb.jsx)(dk, {}) : Ib.length > 0 ? (0, fb.jsx)(mW.b, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: Ft,
-          observerUpdateDeps: [wk.length],
-          children: wk.map((kk => (0, sk.jsx)(rt, {
-            entry: kk,
-            choice: dt(kk.item, ek[kk.key]),
-            onChoose: Fk => {
-              yk({
-                ...ek,
-                [kk.key]: Fk
+          rootMargin: kW,
+          observerUpdateDeps: [Ib.length],
+          children: Ib.map((bb => (0, fb.jsx)(ZW, {
+            entry: bb,
+            choice: fW(bb.item, mb[bb.key]),
+            onChoose: cb => {
+              lb({
+                ...mb,
+                [bb.key]: cb
               })
             }
-          }, kk.key)))
-        }) : dk ? (0, sk.jsx)(qR, {
-          entry: dk
-        }) : (0, sk.jsx)(PR, {
+          }, bb.key)))
+        }) : Hb ? (0, fb.jsx)(wk, {
+          entry: Hb
+        }) : (0, fb.jsx)(dk, {
           count: 3
         })
       })
     }
 
-    function zt() {
-      var kk;
+    function qW() {
+      var bb;
       const {
-        t: Fk
-      } = (0, Xk.x)(), Bk = Jt(), Rk = QR(null === (kk = Bk.shopInfo[Bk.categoryKey]) || void 0 === kk ? void 0 : kk.items, "myOrder");
-      return 0 === Rk.length ? (0, sk.jsx)("div", {
+        t: cb
+      } = (0, Tb.E)(), sb = nW(), kb = cW(null === (bb = sb.shopInfo[sb.categoryKey]) || void 0 === bb ? void 0 : bb.items, "myOrder");
+      return 0 === kb.length ? (0, fb.jsx)("div", {
         className: "SmpScreen",
-        children: (0, sk.jsx)(hR, {
-          title: Fk("smpShop:noOrders"),
-          children: Fk("smpShop:noOrdersHint")
+        children: (0, fb.jsx)(Ak, {
+          title: cb("smpShop:noOrders"),
+          children: cb("smpShop:noOrdersHint")
         })
-      }) : (0, sk.jsx)("div", {
+      }) : (0, fb.jsx)("div", {
         className: "SmpScreen",
-        children: (0, sk.jsx)("div", {
+        children: (0, fb.jsx)("div", {
           className: "SmpList",
-          children: Rk.map((kk => {
+          children: kb.map((bb => {
             let {
-              key: Rk,
-              item: tk,
-              meta: ak
-            } = kk;
-            const Xk = Bk.isPending(Rk) || !1 === tk.canBuy;
-            return (0, sk.jsxs)("div", {
+              key: kb,
+              item: Wb,
+              meta: ab
+            } = bb;
+            const Tb = sb.isPending(kb) || !1 === Wb.canBuy;
+            return (0, fb.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, sk.jsx)(DR, {
-                item: ak.item,
-                amount: ak.collectable
-              }), (0, sk.jsxs)("div", {
+              children: [(0, fb.jsx)(zk, {
+                item: ab.item,
+                amount: ab.collectable
+              }), (0, fb.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, sk.jsx)("b", {
-                  children: (0, sk.jsx)(SR.d, {
-                    text: tk.customTitle
+                children: [(0, fb.jsx)("b", {
+                  children: (0, fb.jsx)(Bk.d, {
+                    text: Wb.customTitle
                   })
-                }), (0, sk.jsxs)("small", {
-                  children: [(0, sk.jsx)(zR, {
-                    amount: ak.pricePerItem
-                  }), " ", Fk("smpShop:each"), ak.collectable > 0 && ` \xb7 ${Fk("smpShop:readyCount",{count:ak.collectable})}`]
-                }), (0, sk.jsx)(Tt, {
-                  done: ak.delivered,
-                  of: ak.wanted
+                }), (0, fb.jsxs)("small", {
+                  children: [(0, fb.jsx)(qk, {
+                    amount: ab.pricePerItem
+                  }), " ", cb("smpShop:each"), ab.collectable > 0 && ` \xb7 ${cb("smpShop:readyCount",{count:ab.collectable})}`]
+                }), (0, fb.jsx)(KW, {
+                  done: ab.delivered,
+                  of: ab.wanted
                 })]
-              }), ak.collectable > 0 ? (0, sk.jsx)(fk.o, {
-                loading: Xk,
+              }), ab.collectable > 0 ? (0, fb.jsx)(Qb.n, {
+                loading: Tb,
                 onClick: () => {
-                  Bk.act(Rk)
+                  sb.act(kb)
                 },
-                children: Fk("smpShop:collectCount", {
-                  count: ak.collectable
+                children: cb("smpShop:collectCount", {
+                  count: ab.collectable
                 })
-              }) : (0, sk.jsx)(fk.J, {
-                loading: Xk,
+              }) : (0, fb.jsx)(Qb.G, {
+                loading: Tb,
                 onClick: () => {
-                  Bk.act(Rk)
+                  sb.act(kb)
                 },
-                children: Fk("smpShop:cancel")
+                children: cb("smpShop:cancel")
               })]
-            }, Rk)
+            }, kb)
           }))
         })
       })
     }
-    const Pt = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      ht = {
+    const dW = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      AW = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4284,764 +4284,764 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function qt(kk, Fk) {
-      let Bk = !1;
-      const Rk = {};
-      for (const tk in kk) Fk(tk, kk[tk]) ? Rk[tk] = kk[tk] : Bk = !0;
-      return Bk ? Rk : kk
+    function wW(bb, cb) {
+      let sb = !1;
+      const kb = {};
+      for (const Wb in bb) cb(Wb, bb[Wb]) ? kb[Wb] = bb[Wb] : sb = !0;
+      return sb ? kb : bb
     }
 
-    function Ct(kk) {
-      var Fk, Bk, tk, wk;
+    function rW(bb) {
+      var cb, sb, Wb, Ib;
       const {
-        show: dk,
-        shopInfo: Vk,
-        selectedCategoryKey: Jk
-      } = kk, {
-        t: Ak
-      } = (0, Xk.x)(), ek = null !== Jk && void 0 !== Jk ? Jk : "", yk = IR(Vk, ek), fk = null === (Fk = Vk[ek]) || void 0 === Fk ? void 0 : Fk.items, mk = null !== yk, [Wk, vk] = (0, Rk.useState)({}), [ik, Yk] = (0, Rk.useState)([]), [Lk, Ok] = (0, Rk.useState)(!1), [Ek, Sk] = (0, Rk.useState)(null), [, Nk] = (0, Rk.useState)(0), Hk = (0, Rk.useRef)(0), uk = (0, Rk.useRef)({}), Mk = (0, Rk.useRef)({
-        items: fk,
-        pending: Wk,
-        shopInfo: Vk,
-        active: mk,
-        canAfford: kk.canAfford,
-        buy: kk.buy
+        show: Hb,
+        shopInfo: Mb,
+        selectedCategoryKey: Xb
+      } = bb, {
+        t: nb
+      } = (0, Tb.E)(), mb = null !== Xb && void 0 !== Xb ? Xb : "", lb = bW(Mb, mb), Qb = null === (cb = Mb[mb]) || void 0 === cb ? void 0 : cb.items, eb = null !== lb, [Cb, Nb] = (0, kb.useState)({}), [Vb, Lb] = (0, kb.useState)([]), [ub, Yb] = (0, kb.useState)(!1), [hb, Jb] = (0, kb.useState)(null), [, gb] = (0, kb.useState)(0), Bb = (0, kb.useRef)(0), tb = (0, kb.useRef)({}), yb = (0, kb.useRef)({
+        items: Qb,
+        pending: Cb,
+        shopInfo: Mb,
+        active: eb,
+        canAfford: bb.canAfford,
+        buy: bb.buy
       });
-      Mk.current = {
-        items: fk,
-        pending: Wk,
-        shopInfo: Vk,
-        active: mk,
-        canAfford: kk.canAfford,
-        buy: kk.buy
+      yb.current = {
+        items: Qb,
+        pending: Cb,
+        shopInfo: Mb,
+        active: eb,
+        canAfford: bb.canAfford,
+        buy: bb.buy
       };
-      const gk = (0, Rk.useCallback)((kk => {
-        Hk.current++;
-        const Fk = Hk.current;
-        Yk((Bk => [{
-          id: Fk,
-          text: kk
-        }, ...Bk].slice(0, 8))), Sk(Fk)
+      const Pb = (0, kb.useCallback)((bb => {
+        Bb.current++;
+        const cb = Bb.current;
+        Lb((sb => [{
+          id: cb,
+          text: bb
+        }, ...sb].slice(0, 8))), Jb(cb)
       }), []);
-      (0, Rk.useEffect)((() => {
-        if (null === Ek) return;
-        const kk = setTimeout((() => {
-          Sk(null)
+      (0, kb.useEffect)((() => {
+        if (null === hb) return;
+        const bb = setTimeout((() => {
+          Jb(null)
         }), 3e3);
         return () => {
-          clearTimeout(kk)
+          clearTimeout(bb)
         }
-      }), [Ek]), (0, Rk.useEffect)((() => {
-        const Fk = kk.message;
-        if (!Fk) return;
+      }), [hb]), (0, kb.useEffect)((() => {
+        const cb = bb.message;
+        if (!cb) return;
         const {
-          shopInfo: Bk,
-          active: Rk,
-          items: tk
-        } = Mk.current, ak = null !== Fk.categoryKey ? null !== IR(Bk, Fk.categoryKey) : Rk;
-        (ak || Rk) && gk(Fk.text), ak && vk((kk => qt(kk, (kk => {
-          var Fk, Bk;
-          return !Pt.has(null === tk || void 0 === tk || null === (Fk = tk[kk]) || void 0 === Fk || null === (Bk = Fk.smp) || void 0 === Bk ? void 0 : Bk.kind)
+          shopInfo: sb,
+          active: kb,
+          items: Wb
+        } = yb.current, ab = null !== cb.categoryKey ? null !== bW(sb, cb.categoryKey) : kb;
+        (ab || kb) && Pb(cb.text), ab && Nb((bb => wW(bb, (bb => {
+          var cb, sb;
+          return !dW.has(null === Wb || void 0 === Wb || null === (cb = Wb[bb]) || void 0 === cb || null === (sb = cb.smp) || void 0 === sb ? void 0 : sb.kind)
         }))))
-      }), [kk.message, gk]), (0, Rk.useEffect)((() => {
-        vk((kk => qt(kk, ((kk, Fk) => st(null === fk || void 0 === fk ? void 0 : fk[kk]) === Fk.snapshot))))
-      }), [Vk, fk]);
-      const Uk = Object.keys(Wk).length > 0;
-      (0, Rk.useEffect)((() => {
-        if (!Uk) return;
-        const kk = setInterval((() => {
-          Nk((kk => kk + 1));
-          const kk = Date.now(),
+      }), [bb.message, Pb]), (0, kb.useEffect)((() => {
+        Nb((bb => wW(bb, ((bb, cb) => MW(null === Qb || void 0 === Qb ? void 0 : Qb[bb]) === cb.snapshot))))
+      }), [Mb, Qb]);
+      const Db = Object.keys(Cb).length > 0;
+      (0, kb.useEffect)((() => {
+        if (!Db) return;
+        const bb = setInterval((() => {
+          gb((bb => bb + 1));
+          const bb = Date.now(),
             {
-              pending: Fk,
-              items: Bk
-            } = Mk.current,
-            Rk = Object.keys(Fk).filter((Bk => kk - Fk[Bk].at >= 12e3));
-          if (0 === Rk.length) return;
-          const tk = Rk.some((kk => {
-            var Rk, tk;
-            return "search" !== (null === Bk || void 0 === Bk || null === (Rk = Bk[kk]) || void 0 === Rk || null === (tk = Rk.smp) || void 0 === tk ? void 0 : tk.kind) || Fk[kk].resend
+              pending: cb,
+              items: sb
+            } = yb.current,
+            kb = Object.keys(cb).filter((sb => bb - cb[sb].at >= 12e3));
+          if (0 === kb.length) return;
+          const Wb = kb.some((bb => {
+            var kb, Wb;
+            return "search" !== (null === sb || void 0 === sb || null === (kb = sb[bb]) || void 0 === kb || null === (Wb = kb.smp) || void 0 === Wb ? void 0 : Wb.kind) || cb[bb].resend
           }));
-          for (const ak of Rk) uk.current[ak] = kk;
-          vk((kk => qt(kk, (kk => !Rk.includes(kk))))), tk && gk(Ak("smpShop:noAnswer"))
+          for (const ab of kb) tb.current[ab] = bb;
+          Nb((bb => wW(bb, (bb => !kb.includes(bb))))), Wb && Pb(nb("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(kk)
+          clearInterval(bb)
         }
-      }), [Uk]), (0, Rk.useEffect)((() => {
-        vk({})
-      }), [ek]), (0, Rk.useEffect)((() => {
-        dk || Ok(!1)
-      }), [dk]);
-      const ck = (0, Rk.useCallback)((function(kk, Fk) {
-          let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [Db]), (0, kb.useEffect)((() => {
+        Nb({})
+      }), [mb]), (0, kb.useEffect)((() => {
+        Hb || Yb(!1)
+      }), [Hb]);
+      const Eb = (0, kb.useCallback)((function(bb, cb) {
+          let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: Rk,
-            pending: tk,
-            canAfford: ak,
-            buy: Xk
-          } = Mk.current, bk = null === Rk || void 0 === Rk ? void 0 : Rk[kk];
-          if (!bk || kk in tk || !1 === bk.canBuy) return !1;
-          if (!ak(bk, (0, oR.c)(bk, Fk))) return !1;
-          Xk(kk, bk, Fk);
-          const wk = {
-            snapshot: st(bk),
+            items: kb,
+            pending: Wb,
+            canAfford: ab,
+            buy: Tb
+          } = yb.current, Ub = null === kb || void 0 === kb ? void 0 : kb[bb];
+          if (!Ub || bb in Wb || !1 === Ub.canBuy) return !1;
+          if (!ab(Ub, (0, Yk.e)(Ub, cb))) return !1;
+          Tb(bb, Ub, cb);
+          const Ib = {
+            snapshot: MW(Ub),
             at: Date.now(),
-            resend: Bk
+            resend: sb
           };
-          return Mk.current.pending = {
-            ...Mk.current.pending,
-            [kk]: wk
-          }, vk((Fk => ({
-            ...Fk,
-            [kk]: wk
+          return yb.current.pending = {
+            ...yb.current.pending,
+            [bb]: Ib
+          }, Nb((cb => ({
+            ...cb,
+            [bb]: Ib
           }))), !0
         }), []),
-        Gk = (0, Rk.useMemo)((() => ({
-          shopInfo: Vk,
-          categoryKey: ek,
-          canAfford: kk.canAfford,
-          isPending: kk => kk in Wk,
-          gaveUpAt: kk => {
-            var Fk;
-            return null !== (Fk = uk.current[kk]) && void 0 !== Fk ? Fk : 0
+        ib = (0, kb.useMemo)((() => ({
+          shopInfo: Mb,
+          categoryKey: mb,
+          canAfford: bb.canAfford,
+          isPending: bb => bb in Cb,
+          gaveUpAt: bb => {
+            var cb;
+            return null !== (cb = tb.current[bb]) && void 0 !== cb ? cb : 0
           },
-          act: ck,
-          notify: gk
-        })), [Vk, ek, kk.canAfford, Wk, ck, gk]),
-        Tk = Math.min(...Object.values(Wk).map((kk => kk.at))),
-        rk = Uk && Date.now() - Tk > 1500,
-        Dk = ik.length > 1,
-        zk = null !== (Bk = null === (tk = Vk[ek]) || void 0 === tk ? void 0 : tk.customTitle) && void 0 !== Bk ? Bk : ek,
-        Pk = null === (wk = Vk[ek]) || void 0 === wk ? void 0 : wk.description;
-      let hk = null;
-      return "market" === yk ? hk = (0, sk.jsx)(ut, {}) : "sell" === yk ? hk = (0, sk.jsx)(Ut, {}) : "collect" === yk ? hk = (0, sk.jsx)(Gt, {}) : "orders" === yk ? hk = (0, sk.jsx)(Dt, {}) : "myOrders" === yk && (hk = (0, sk.jsx)(zt, {})), (0, sk.jsx)(Vt.Provider, {
-        value: Gk,
-        children: (0, sk.jsx)("div", {
+          act: Eb,
+          notify: Pb
+        })), [Mb, mb, bb.canAfford, Cb, Eb, Pb]),
+        Ob = Math.min(...Object.values(Cb).map((bb => bb.at))),
+        Gb = Db && Date.now() - Ob > 1500,
+        Kb = Vb.length > 1,
+        Zb = null !== (sb = null === (Wb = Mb[mb]) || void 0 === Wb ? void 0 : Wb.customTitle) && void 0 !== sb ? sb : mb,
+        zb = null === (Ib = Mb[mb]) || void 0 === Ib ? void 0 : Ib.description;
+      let qb = null;
+      return "market" === lb ? qb = (0, fb.jsx)(PW, {}) : "sell" === lb ? qb = (0, fb.jsx)(iW, {}) : "collect" === lb ? qb = (0, fb.jsx)(GW, {}) : "orders" === lb ? qb = (0, fb.jsx)(zW, {}) : "myOrders" === lb && (qb = (0, fb.jsx)(qW, {})), (0, fb.jsx)(XW.Provider, {
+        value: ib,
+        children: (0, fb.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !mk,
-          children: (0, sk.jsxs)("div", {
+          hidden: !eb,
+          children: (0, fb.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, sk.jsx)("header", {
+            children: [(0, fb.jsx)("header", {
               className: "SmpHeader",
-              children: (0, sk.jsxs)("div", {
+              children: (0, fb.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, sk.jsxs)("h2", {
-                  children: [yk && (0, sk.jsx)(bk.d, {
-                    name: ht[yk]
-                  }), Ak(zk)]
-                }), Pk && (0, sk.jsx)("p", {
-                  children: (0, sk.jsx)(SR.d, {
-                    text: Pk
+                children: [(0, fb.jsxs)("h2", {
+                  children: [lb && (0, fb.jsx)(Ub.b, {
+                    name: AW[lb]
+                  }), nb(Zb)]
+                }), zb && (0, fb.jsx)("p", {
+                  children: (0, fb.jsx)(Bk.d, {
+                    text: zb
                   })
                 })]
               })
-            }), (0, sk.jsx)("main", {
+            }), (0, fb.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: dk && hk
-            }), (0, sk.jsxs)("button", {
+              children: Hb && qb
+            }), (0, fb.jsxs)("button", {
               type: "button",
-              className: ak()("SmpStatus", {
-                SmpStatusWaiting: Uk,
-                SmpStatusFresh: !Uk && null !== Ek,
-                SmpStatusHasHistory: Dk
+              className: ab()("SmpStatus", {
+                SmpStatusWaiting: Db,
+                SmpStatusFresh: !Db && null !== hb,
+                SmpStatusHasHistory: Kb
               }),
               "aria-live": "polite",
-              "aria-expanded": Dk ? Lk : void 0,
+              "aria-expanded": Kb ? ub : void 0,
               onClick: () => {
-                Dk && Ok((kk => !kk))
+                Kb && Yb((bb => !bb))
               },
-              children: [Uk ? (0, sk.jsxs)("span", {
+              children: [Db ? (0, fb.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, sk.jsx)(ZR, {}), Ak(rk ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : ik[0] ? (0, sk.jsx)("span", {
+                children: [(0, fb.jsx)(Sk, {}), nb(Gb ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : Vb[0] ? (0, fb.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, sk.jsx)(SR.d, {
-                  text: ik[0].text
+                children: (0, fb.jsx)(Bk.d, {
+                  text: Vb[0].text
                 })
-              }, ik[0].id) : (0, sk.jsx)("span", {
+              }, Vb[0].id) : (0, fb.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: Ak("smpShop:ready")
-              }), Dk && (0, sk.jsx)("small", {
-                children: Ak("smpShop:recentMessages", {
-                  count: ik.length
+                children: nb("smpShop:ready")
+              }), Kb && (0, fb.jsx)("small", {
+                children: nb("smpShop:recentMessages", {
+                  count: Vb.length
                 })
               })]
-            }), Lk && Dk && (0, sk.jsx)("div", {
+            }), ub && Kb && (0, fb.jsx)("div", {
               className: "SmpStatusHistory",
-              children: ik.map((kk => (0, sk.jsx)("div", {
-                children: (0, sk.jsx)(SR.d, {
-                  text: kk.text
+              children: Vb.map((bb => (0, fb.jsx)("div", {
+                children: (0, fb.jsx)(Bk.d, {
+                  text: bb.text
                 })
-              }, kk.id)))
+              }, bb.id)))
             })]
           })
         })
       })
     }
-    class Zt {
-      constructor(kk) {
-        this.info = kk
+    class oW {
+      constructor(bb) {
+        this.info = bb
       }
-      static fromShopInfo(kk) {
-        const Fk = {};
-        for (const Bk in kk) {
-          const Rk = !0 === kk[Bk].redDot && !0 !== kk[Bk].forceRemoveRedDot;
-          Fk[Bk] = {
-            redDot: Rk,
+      static fromShopInfo(bb) {
+        const cb = {};
+        for (const sb in bb) {
+          const kb = !0 === bb[sb].redDot && !0 !== bb[sb].forceRemoveRedDot;
+          cb[sb] = {
+            redDot: kb,
             items: {}
           };
-          for (const tk in kk[Bk].items) {
-            const Rk = kk[Bk].items[tk],
-              ak = !0 === Rk.redDot && !0 !== Rk.forceRemoveRedDot;
-            Fk[Bk].items[tk] = {
-              redDot: ak
+          for (const Wb in bb[sb].items) {
+            const kb = bb[sb].items[Wb],
+              ab = !0 === kb.redDot && !0 !== kb.forceRemoveRedDot;
+            cb[sb].items[Wb] = {
+              redDot: ab
             }
           }
         }
-        return new Zt(Fk)
+        return new oW(cb)
       }
       anyCategoryHasRedDots() {
-        for (const kk in this.info)
-          if (this.categoryHasRedDot(kk)) return !0;
+        for (const bb in this.info)
+          if (this.categoryHasRedDot(bb)) return !0;
         return !1
       }
-      doesCategoryExist(kk) {
-        return !(0, CF.F)(this.info[kk])
+      doesCategoryExist(bb) {
+        return !(0, Ac.L)(this.info[bb])
       }
-      categoryHasRedDot(kk) {
-        return !0 === this.info[kk].redDot
+      categoryHasRedDot(bb) {
+        return !0 === this.info[bb].redDot
       }
-      updateCategoryRedDot(kk, Fk) {
-        this.info[kk].redDot = Fk
+      updateCategoryRedDot(bb, cb) {
+        this.info[bb].redDot = cb
       }
-      doesItemExist(kk, Fk) {
-        return this.doesCategoryExist(kk) && !(0, CF.F)(this.info[kk].items[Fk])
+      doesItemExist(bb, cb) {
+        return this.doesCategoryExist(bb) && !(0, Ac.L)(this.info[bb].items[cb])
       }
-      itemHasRedDot(kk, Fk) {
-        return !0 === this.info[kk].items[Fk].redDot
+      itemHasRedDot(bb, cb) {
+        return !0 === this.info[bb].items[cb].redDot
       }
-      updateItemRedDot(kk, Fk, Bk) {
-        this.info[kk].items[Fk].redDot = Bk
+      updateItemRedDot(bb, cb, sb) {
+        this.info[bb].items[cb].redDot = sb
       }
       shallowCopy() {
-        return new Zt(this.info)
+        return new oW(this.info)
       }
     }
 
-    function pt(kk, Fk) {
-      return `${kk}\x1f${Fk}`
+    function SW(bb, cb) {
+      return `${bb}\x1f${cb}`
     }
 
-    function Kt(kk, Fk) {
-      return !(0, CF.F)(Fk) && !(0, CF.F)(kk) && Fk in kk
+    function RW(bb, cb) {
+      return !(0, Ac.L)(cb) && !(0, Ac.L)(bb) && cb in bb
     }
-    const xt = (0, Rk.memo)((function(kk) {
-      var Fk, Bk;
+    const vW = (0, kb.memo)((function(bb) {
+      var cb, sb;
       let {
-        show: tk
-      } = kk;
-      const Xk = (0, nB.f)("players", ka),
-        bk = (0, nB.f)("players", Fa),
-        [dk, Jk] = (0, Rk.useState)({
+        show: Wb
+      } = bb;
+      const Tb = (0, xs.e)("players", ca),
+        Ub = (0, xs.e)("players", sa),
+        [Hb, Xb] = (0, kb.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: Zt.fromShopInfo({}),
+          redDotInfo: oW.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        Ak = (0, Rk.useRef)(""),
-        yk = (0, Rk.useRef)(null),
-        mk = (0, Rk.useRef)(null),
-        vk = (0, Rk.useRef)(0),
-        ik = (0, Rk.useRef)(void 0),
-        Yk = (0, Rk.useRef)(null),
-        Lk = (0, Rk.useRef)(dk),
-        Ok = dk.redDotInfo.anyCategoryHasRedDots(),
-        [Sk, Nk] = (0, Rk.useState)(null),
-        uk = (0, Rk.useRef)(!1);
-      let Mk = !1,
-        gk = 0,
-        Uk = 0;
-      if (dk.currencyAmounts) {
-        for (const kk in dk.currencyAmounts) {
-          var ck;
-          const Fk = dk.currencyAmounts[kk];
-          Fk.hidden || (gk++, (null === (ck = Fk.subtext) || void 0 === ck ? void 0 : ck.length) > 0 && Uk++)
+        nb = (0, kb.useRef)(""),
+        lb = (0, kb.useRef)(null),
+        eb = (0, kb.useRef)(null),
+        Nb = (0, kb.useRef)(0),
+        Vb = (0, kb.useRef)(void 0),
+        Lb = (0, kb.useRef)(null),
+        ub = (0, kb.useRef)(Hb),
+        Yb = Hb.redDotInfo.anyCategoryHasRedDots(),
+        [Jb, gb] = (0, kb.useState)(null),
+        tb = (0, kb.useRef)(!1);
+      let yb = !1,
+        Pb = 0,
+        Db = 0;
+      if (Hb.currencyAmounts) {
+        for (const bb in Hb.currencyAmounts) {
+          var Eb;
+          const cb = Hb.currencyAmounts[bb];
+          cb.hidden || (Pb++, (null === (Eb = cb.subtext) || void 0 === Eb ? void 0 : Eb.length) > 0 && Db++)
         }
-        Mk = gk + Uk > 4
-      }(0, Rk.useEffect)((() => {
-        ZF.o.Hf("showShopIconRedDot", Ok, !0)
-      }), [Ok]), (0, Rk.useEffect)((() => {
-        Wk.gameBridge.send("setShopOpen", tk), tk || (clearTimeout(ik.current), Jk((kk => kk.awaitingPurchase ? {
-          ...kk,
+        yb = Pb + Db > 4
+      }(0, kb.useEffect)((() => {
+        wc.j.QQ("showShopIconRedDot", Yb, !0)
+      }), [Yb]), (0, kb.useEffect)((() => {
+        Cb.gameBridge.send("setShopOpen", Wb), Wb || (clearTimeout(Vb.current), Xb((bb => bb.awaitingPurchase ? {
+          ...bb,
           awaitingPurchase: !1
-        } : kk)))
-      }), [tk]), (0, Rk.useEffect)((() => () => {
-        Wk.gameBridge.send("setShopOpen", !1), clearTimeout(ik.current)
-      }), []), (0, Rk.useEffect)((() => {
-        Lk.current = dk
-      }), [dk]), (0, Rk.useEffect)((() => {
-        if (null === Sk) return;
-        return (0, MR.e)("pointerdown", (kk => {
-          const Fk = kk.target;
-          null !== Fk && void 0 !== Fk && Fk.closest(".ShopItem") || Nk(null)
+        } : bb)))
+      }), [Wb]), (0, kb.useEffect)((() => () => {
+        Cb.gameBridge.send("setShopOpen", !1), clearTimeout(Vb.current)
+      }), []), (0, kb.useEffect)((() => {
+        ub.current = Hb
+      }), [Hb]), (0, kb.useEffect)((() => {
+        if (null === Jb) return;
+        return (0, Dk.e)("pointerdown", (bb => {
+          const cb = bb.target;
+          null !== cb && void 0 !== cb && cb.closest(".ShopItem") || gb(null)
         }))
-      }), [Sk]);
-      const Gk = kk => {
-          Jk((Fk => ({
-            ...Fk,
-            ...kk
+      }), [Jb]);
+      const ib = bb => {
+          Xb((cb => ({
+            ...cb,
+            ...bb
           })))
         },
-        Tk = kk => {
-          var Fk;
-          clearTimeout(null === (Fk = dk.onBoughtInfo) || void 0 === Fk ? void 0 : Fk.timeout);
-          const Bk = setTimeout((() => {
-            Gk({
+        Ob = bb => {
+          var cb;
+          clearTimeout(null === (cb = Hb.onBoughtInfo) || void 0 === cb ? void 0 : cb.timeout);
+          const sb = setTimeout((() => {
+            ib({
               onBoughtInfo: null
             })
           }), 3e3);
-          Ak.current = kk, Gk({
+          nb.current = bb, ib({
             onBoughtInfo: {
-              text: kk,
-              timeout: Bk,
-              categoryKey: yk.current
+              text: bb,
+              timeout: sb,
+              categoryKey: lb.current
             }
           })
         },
-        rk = kk => {
+        Gb = bb => {
           const {
-            shopInfo: Fk,
-            userInputsPerItem: Bk,
-            redDotInfo: Rk,
-            autoSelectCategory: ak
-          } = function(kk, Fk, Bk, Rk, tk, ak) {
-            if ((0, CF.F)(kk) || 0 === Object.keys(kk).length) return {
+            shopInfo: cb,
+            userInputsPerItem: sb,
+            redDotInfo: kb,
+            autoSelectCategory: ab
+          } = function(bb, cb, sb, kb, Wb, ab) {
+            if ((0, Ac.L)(bb) || 0 === Object.keys(bb).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: Zt.fromShopInfo({}),
+              redDotInfo: oW.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const Xk = Hk.l[Hk.q].adConfig.showRewardedAds,
-              bk = {};
-            let wk = null;
-            for (const fk in kk) {
-              const Fk = kk[fk],
-                Bk = {};
-              let Rk = !1;
-              for (const kk in Fk.items) {
-                const tk = Fk.items[kk];
-                (0, oR.k)(tk, Xk) && (Bk[kk] = tk, Rk = !0)
+            const Tb = Bb.n[Bb.r].adConfig.showRewardedAds,
+              Ub = {};
+            let Ib = null;
+            for (const Qb in bb) {
+              const cb = bb[Qb],
+                sb = {};
+              let kb = !1;
+              for (const bb in cb.items) {
+                const Wb = cb.items[bb];
+                (0, Yk.o)(Wb, Tb) && (sb[bb] = Wb, kb = !0)
               }
-              Rk && (bk[fk] = {
-                ...Fk,
-                items: Bk
-              }, !0 === Fk.autoSelectCategory && (wk = fk))
+              kb && (Ub[Qb] = {
+                ...cb,
+                items: sb
+              }, !0 === cb.autoSelectCategory && (Ib = Qb))
             }
-            const dk = {},
-              sk = (kk, Fk, Rk, Xk) => {
-                var bk, wk;
-                const sk = pt(kk, Fk),
-                  Vk = null !== (bk = Bk[sk]) && void 0 !== bk ? bk : Bk[Fk];
-                if (null !== (wk = Xk.userInput) && void 0 !== wk && wk.type) switch (Xk.userInput.type) {
+            const Hb = {},
+              fb = (bb, cb, kb, Tb) => {
+                var Ub, Ib;
+                const fb = SW(bb, cb),
+                  Mb = null !== (Ub = sb[fb]) && void 0 !== Ub ? Ub : sb[cb];
+                if (null !== (Ib = Tb.userInput) && void 0 !== Ib && Ib.type) switch (Tb.userInput.type) {
                   case "dropdown": {
-                    var Jk;
-                    const kk = !Vk || !Xk.userInput.dropdownOptions.some((kk => (0, oR.g)(kk) === Vk)),
-                      Fk = Xk.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === Rk || void 0 === Rk || null === (Jk = Rk.userInput) || void 0 === Jk ? void 0 : Jk.type) || JSON.stringify(Rk.userInput.dropdownOptions) !== JSON.stringify(Xk.userInput.dropdownOptions)),
-                      Bk = Xk.userInput,
-                      tk = !(0, CF.F)(Bk.initialValue) && Bk.dropdownOptions.some((kk => (0, oR.g)(kk) === Bk.initialValue));
-                    var Ak;
-                    return void(kk || Fk ? tk ? dk[sk] = null !== (Ak = Xk.userInput.initialValue) && void 0 !== Ak ? Ak : null : Xk.userInput.dropdownOptions.length > 0 ? dk[sk] = (0, oR.g)(Xk.userInput.dropdownOptions[0]) : dk[sk] = null : dk[sk] = Vk)
+                    var Xb;
+                    const bb = !Mb || !Tb.userInput.dropdownOptions.some((bb => (0, Yk.g)(bb) === Mb)),
+                      cb = Tb.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === kb || void 0 === kb || null === (Xb = kb.userInput) || void 0 === Xb ? void 0 : Xb.type) || JSON.stringify(kb.userInput.dropdownOptions) !== JSON.stringify(Tb.userInput.dropdownOptions)),
+                      sb = Tb.userInput,
+                      Wb = !(0, Ac.L)(sb.initialValue) && sb.dropdownOptions.some((bb => (0, Yk.g)(bb) === sb.initialValue));
+                    var nb;
+                    return void(bb || cb ? Wb ? Hb[fb] = null !== (nb = Tb.userInput.initialValue) && void 0 !== nb ? nb : null : Tb.userInput.dropdownOptions.length > 0 ? Hb[fb] = (0, Yk.g)(Tb.userInput.dropdownOptions[0]) : Hb[fb] = null : Hb[fb] = Mb)
                   }
                   case "text":
                   case "number":
-                    var ek, yk, fk;
-                    return void((null === Rk || void 0 === Rk ? void 0 : Rk.userInput) !== Xk.userInput ? dk[sk] = null !== (ek = null !== (yk = Xk.userInput.initialValue) && void 0 !== yk ? yk : Vk) && void 0 !== ek ? ek : "" : dk[sk] = null !== (fk = null !== Vk && void 0 !== Vk ? Vk : Xk.userInput.initialValue) && void 0 !== fk ? fk : "");
+                    var mb, lb, Qb;
+                    return void((null === kb || void 0 === kb ? void 0 : kb.userInput) !== Tb.userInput ? Hb[fb] = null !== (mb = null !== (lb = Tb.userInput.initialValue) && void 0 !== lb ? lb : Mb) && void 0 !== mb ? mb : "" : Hb[fb] = null !== (Qb = null !== Mb && void 0 !== Mb ? Mb : Tb.userInput.initialValue) && void 0 !== Qb ? Qb : "");
                   case "color":
-                    var mk, Wk, vk;
-                    return void((null === Rk || void 0 === Rk ? void 0 : Rk.userInput) !== Xk.userInput ? dk[sk] = null !== (mk = null !== (Wk = Xk.userInput.initialValue) && void 0 !== Wk ? Wk : Vk) && void 0 !== mk ? mk : "#000000" : dk[sk] = null !== (vk = null !== Vk && void 0 !== Vk ? Vk : Xk.userInput.initialValue) && void 0 !== vk ? vk : "#000000");
+                    var eb, Cb, Nb;
+                    return void((null === kb || void 0 === kb ? void 0 : kb.userInput) !== Tb.userInput ? Hb[fb] = null !== (eb = null !== (Cb = Tb.userInput.initialValue) && void 0 !== Cb ? Cb : Mb) && void 0 !== eb ? eb : "#000000" : Hb[fb] = null !== (Nb = null !== Mb && void 0 !== Mb ? Mb : Tb.userInput.initialValue) && void 0 !== Nb ? Nb : "#000000");
                   case "player": {
-                    const kk = (0, oR.i)(tk, ak, Xk.userInput);
-                    return void(Vk && kk.includes(Vk) ? dk[sk] = Vk : dk[sk] = kk.length > 0 ? kk[0] : null)
+                    const bb = (0, Yk.k)(Wb, ab, Tb.userInput);
+                    return void(Mb && bb.includes(Mb) ? Hb[fb] = Mb : Hb[fb] = bb.length > 0 ? bb[0] : null)
                   }
                 }
               };
-            for (const fk in bk)
-              for (const kk in bk[fk].items) {
-                var Vk;
-                const Bk = bk[fk].items[kk];
-                sk(fk, kk, null === (Vk = Fk[fk]) || void 0 === Vk ? void 0 : Vk.items[kk], Bk)
+            for (const Qb in Ub)
+              for (const bb in Ub[Qb].items) {
+                var Mb;
+                const sb = Ub[Qb].items[bb];
+                fb(Qb, bb, null === (Mb = cb[Qb]) || void 0 === Mb ? void 0 : Mb.items[bb], sb)
               }
-            const Jk = Zt.fromShopInfo(bk);
-            for (const fk in bk) {
-              var Ak;
-              if (Rk.doesCategoryExist(fk)) {
-                (null === (Ak = Fk[fk]) || void 0 === Ak ? void 0 : Ak.redDot) === bk[fk].redDot && Jk.updateCategoryRedDot(fk, Rk.categoryHasRedDot(fk));
-                for (const kk in bk[fk].items) {
-                  var ek, yk;
-                  Rk.doesItemExist(fk, kk) && (null === (ek = Fk[fk]) || void 0 === ek || null === (yk = ek.items[kk]) || void 0 === yk ? void 0 : yk.redDot) === bk[fk].items[kk].redDot && Jk.updateItemRedDot(fk, kk, Rk.itemHasRedDot(fk, kk))
+            const Xb = oW.fromShopInfo(Ub);
+            for (const Qb in Ub) {
+              var nb;
+              if (kb.doesCategoryExist(Qb)) {
+                (null === (nb = cb[Qb]) || void 0 === nb ? void 0 : nb.redDot) === Ub[Qb].redDot && Xb.updateCategoryRedDot(Qb, kb.categoryHasRedDot(Qb));
+                for (const bb in Ub[Qb].items) {
+                  var mb, lb;
+                  kb.doesItemExist(Qb, bb) && (null === (mb = cb[Qb]) || void 0 === mb || null === (lb = mb.items[bb]) || void 0 === lb ? void 0 : lb.redDot) === Ub[Qb].items[bb].redDot && Xb.updateItemRedDot(Qb, bb, kb.itemHasRedDot(Qb, bb))
                 }
               }
             }
             return {
-              shopInfo: bk,
-              userInputsPerItem: dk,
-              redDotInfo: Jk,
-              autoSelectCategory: wk
+              shopInfo: Ub,
+              userInputsPerItem: Hb,
+              redDotInfo: Xb,
+              autoSelectCategory: Ib
             }
-          }(kk, dk.shopInfo, dk.userInputsPerItem, dk.redDotInfo, Xk, bk), wk = {
-            shopInfo: Fk,
-            userInputsPerItem: Bk,
-            redDotInfo: Rk
+          }(bb, Hb.shopInfo, Hb.userInputsPerItem, Hb.redDotInfo, Tb, Ub), Ib = {
+            shopInfo: cb,
+            userInputsPerItem: sb,
+            redDotInfo: kb
           };
-          if (null === ak || tk)
-            if (Fk[dk.selectedCategoryKey]) wk.selectedCategoryKey = dk.selectedCategoryKey;
+          if (null === ab || Wb)
+            if (cb[Hb.selectedCategoryKey]) Ib.selectedCategoryKey = Hb.selectedCategoryKey;
             else {
-              const kk = UR(Fk);
-              wk.selectedCategoryKey = kk.length > 0 ? kk[0] : null
+              const bb = ik(cb);
+              Ib.selectedCategoryKey = bb.length > 0 ? bb[0] : null
             }
-          else wk.selectedCategoryKey = ak;
-          return 0 === Object.keys(Fk).length && tk && Ek.c.set({
+          else Ib.selectedCategoryKey = ab;
+          return 0 === Object.keys(cb).length && Wb && hb.d.set({
             openEverythingMenuName: null
-          }), wk
+          }), Ib
         },
-        Dk = (kk, Fk, Bk) => {
-          const Rk = dk.selectedCategoryKey,
-            tk = pt(Rk, kk),
-            ak = null !== Bk && void 0 !== Bk ? Bk : dk.userInputsPerItem[tk],
-            Xk = {
-              categoryKey: Rk,
-              itemKey: kk,
-              userInput: ak
+        Kb = (bb, cb, sb) => {
+          const kb = Hb.selectedCategoryKey,
+            Wb = SW(kb, bb),
+            ab = null !== sb && void 0 !== sb ? sb : Hb.userInputsPerItem[Wb],
+            Tb = {
+              categoryKey: kb,
+              itemKey: bb,
+              userInput: ab
             };
-          if (yk.current = Rk, Fk.isRewardedAd) {
-            if (Date.now() - vk.current < 5e3) return;
-            (0, XF.Q)((() => {
-              var Bk, Rk, ak;
+          if (lb.current = kb, cb.isRewardedAd) {
+            if (Date.now() - Nb.current < 5e3) return;
+            (0, ac.ab)((() => {
+              var sb, kb, ab;
               console.log("bought rewarded ad");
-              const bk = Xk.categoryKey ? null === (Bk = Lk.current.shopInfo[Xk.categoryKey]) || void 0 === Bk ? void 0 : Bk.items[kk] : null;
-              if (!bk || !bk.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (Rk = Fk.userInput) || void 0 === Rk ? void 0 : Rk.type) === (null === bk || void 0 === bk || null === (ak = bk.userInput) || void 0 === ak ? void 0 : ak.type) ? (Xk.userInput = Lk.current.userInputsPerItem[tk], Wk.gameBridge.send("buyShopItem", Xk), Fk.onBoughtMessage && Tk(Fk.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), vk.current = Date.now()
+              const Ub = Tb.categoryKey ? null === (sb = ub.current.shopInfo[Tb.categoryKey]) || void 0 === sb ? void 0 : sb.items[bb] : null;
+              if (!Ub || !Ub.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (kb = cb.userInput) || void 0 === kb ? void 0 : kb.type) === (null === Ub || void 0 === Ub || null === (ab = Ub.userInput) || void 0 === ab ? void 0 : ab.type) ? (Tb.userInput = ub.current.userInputsPerItem[Wb], Cb.gameBridge.send("buyShopItem", Tb), cb.onBoughtMessage && Ob(cb.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), Nb.current = Date.now()
           } else {
-            Wk.gameBridge.send("buyShopItem", Xk), Gk({
+            Cb.gameBridge.send("buyShopItem", Tb), ib({
               awaitingPurchase: !0
-            }), clearTimeout(ik.current), ik.current = setTimeout((() => {
-              Yk.current = null, Gk({
+            }), clearTimeout(Vb.current), Vb.current = setTimeout((() => {
+              Lb.current = null, ib({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const kk = (0, oR.c)(Fk, ak);
-            if (Yk.current = null, !isNaN(kk) && Kt(dk.currencyAmounts, Fk.currency)) {
-              0 !== kk && (Yk.current = {
-                currency: Fk.currency,
-                amountBefore: dk.currencyAmounts[Fk.currency].amount
+            const bb = (0, Yk.e)(cb, ab);
+            if (Lb.current = null, !isNaN(bb) && RW(Hb.currencyAmounts, cb.currency)) {
+              0 !== bb && (Lb.current = {
+                currency: cb.currency,
+                amountBefore: Hb.currencyAmounts[cb.currency].amount
               });
-              const Bk = {
-                ...dk.currencyAmounts
+              const sb = {
+                ...Hb.currencyAmounts
               };
-              Bk[Fk.currency].amount -= kk, Gk({
-                currencyAmounts: Bk
+              sb[cb.currency].amount -= bb, ib({
+                currencyAmounts: sb
               })
             }
-            Fk.onBoughtMessage && Tk(Fk.onBoughtMessage)
+            cb.onBoughtMessage && Ob(cb.onBoughtMessage)
           }
         },
-        Pk = (kk, Fk) => {
-          if (null === Fk || !kk.shopInfo[Fk]) return kk;
-          let Bk = kk.redDotInfo;
-          return Bk.categoryHasRedDot(Fk) && (Bk.updateCategoryRedDot(Fk, !1), Bk = Bk.shallowCopy()), {
-            ...kk,
-            selectedCategoryKey: Fk,
-            redDotInfo: Bk
+        zb = (bb, cb) => {
+          if (null === cb || !bb.shopInfo[cb]) return bb;
+          let sb = bb.redDotInfo;
+          return sb.categoryHasRedDot(cb) && (sb.updateCategoryRedDot(cb, !1), sb = sb.shallowCopy()), {
+            ...bb,
+            selectedCategoryKey: cb,
+            redDotInfo: sb
           }
         },
-        hk = kk => {
-          Jk((Fk => Pk(Fk, kk)))
+        qb = bb => {
+          Xb((cb => zb(cb, bb)))
         };
-      (0, HF.f)(gR.j, (() => {
-        Jk((kk => {
-          const Fk = (0, gR.m)(UR(kk.shopInfo), kk.selectedCategoryKey, (Fk => (0, gR.f)(kk.shopInfo[Fk].items)));
-          return Fk === kk.selectedCategoryKey ? kk : Pk(kk, Fk)
+      (0, Bc.f)(Ek.h, (() => {
+        Xb((bb => {
+          const cb = (0, Ek.i)(ik(bb.shopInfo), bb.selectedCategoryKey, (cb => (0, Ek.e)(bb.shopInfo[cb].items)));
+          return cb === bb.selectedCategoryKey ? bb : zb(bb, cb)
         }))
-      })), (0, HF.f)("showShopFromServer", (kk => {
+      })), (0, Bc.f)("showShopFromServer", (bb => {
         let {
-          toggle: Fk,
-          eF: Bk
-        } = kk;
-        Bk && hk(Bk), 0 === Object.keys(dk.shopInfo).length || Fk && tk ? Ek.c.set({
+          toggle: cb,
+          Lc: sb
+        } = bb;
+        sb && qb(sb), 0 === Object.keys(Hb.shopInfo).length || cb && Wb ? hb.d.set({
           openEverythingMenuName: null
-        }) : Ek.c.set({
-          openEverythingMenuName: sF.p.SHOP
+        }) : hb.d.set({
+          openEverythingMenuName: Hc.r.SHOP
         })
-      })), (0, HF.f)("closeShopOnDamaged", (() => {
-        tk && Ek.c.set({
+      })), (0, Bc.f)("closeShopOnDamaged", (() => {
+        Wb && hb.d.set({
           openEverythingMenuName: null
         })
-      })), (0, HF.f)("overShopInfo", (kk => {
-        Tk(kk)
-      })), (0, ek.f)("currencyAmounts", (kk => {
-        var Fk;
-        const Bk = Yk.current;
-        Bk && (null === kk || void 0 === kk || null === (Fk = kk[Bk.currency]) || void 0 === Fk ? void 0 : Fk.amount) === Bk.amountBefore ? Gk({
-          currencyAmounts: kk
-        }) : (Yk.current = null, Gk({
-          currencyAmounts: kk,
+      })), (0, Bc.f)("overShopInfo", (bb => {
+        Ob(bb)
+      })), (0, mb.c)("currencyAmounts", (bb => {
+        var cb;
+        const sb = Lb.current;
+        sb && (null === bb || void 0 === bb || null === (cb = bb[sb.currency]) || void 0 === cb ? void 0 : cb.amount) === sb.amountBefore ? ib({
+          currencyAmounts: bb
+        }) : (Lb.current = null, ib({
+          currencyAmounts: bb,
           awaitingPurchase: !1
         }))
-      })), (0, ek.f)("shopInfo", (kk => {
-        Gk({
-          ...rk(kk),
+      })), (0, mb.c)("shopInfo", (bb => {
+        ib({
+          ...Gb(bb),
           awaitingPurchase: !1
         })
       }));
-      const qk = (0, Rk.useRef)({
-        playerIds: Xk,
-        localPlayerId: bk
+      const db = (0, kb.useRef)({
+        playerIds: Tb,
+        localPlayerId: Ub
       });
-      (0, Rk.useEffect)((() => {
-        qk.current.playerIds === Xk && qk.current.localPlayerId === bk || (qk.current = {
-          playerIds: Xk,
-          localPlayerId: bk
-        }, Jk((kk => {
-          const Fk = rk(kk.shopInfo);
+      (0, kb.useEffect)((() => {
+        db.current.playerIds === Tb && db.current.localPlayerId === Ub || (db.current = {
+          playerIds: Tb,
+          localPlayerId: Ub
+        }, Xb((bb => {
+          const cb = Gb(bb.shopInfo);
           return {
-            ...kk,
-            ...Fk
+            ...bb,
+            ...cb
           }
         })))
-      }), [Xk, bk]);
-      const Ck = dk.selectedCategoryKey,
-        Zk = (kk, Fk) => {
-          var Bk, Rk;
-          return (isNaN(Fk) || (0, CF.F)(kk.currency) || Kt(dk.currencyAmounts, kk.currency) && Fk <= dk.currencyAmounts[kk.currency].amount) && (null === (Bk = kk.canBuy) || void 0 === Bk || Bk) && !(null !== (Rk = kk.hidden) && void 0 !== Rk && Rk)
+      }), [Tb, Ub]);
+      const Ab = Hb.selectedCategoryKey,
+        wb = (bb, cb) => {
+          var sb, kb;
+          return (isNaN(cb) || (0, Ac.L)(bb.currency) || RW(Hb.currencyAmounts, bb.currency) && cb <= Hb.currencyAmounts[bb.currency].amount) && (null === (sb = bb.canBuy) || void 0 === sb || sb) && !(null !== (kb = bb.hidden) && void 0 !== kb && kb)
         },
-        pk = (kk, Fk) => {
-          var Bk, Rk, tk;
-          const Xk = pt(Ck, kk),
-            bk = dk.shopInfo[Ck].items[kk],
-            Vk = dk.userInputsPerItem[Xk],
-            Jk = (0, oR.c)(bk, Vk),
-            Ak = Zk(bk, Jk),
-            ek = bk.enchant,
-            yk = ek ? (0, zk.xb)(null !== (Bk = bk.customTitle) && void 0 !== Bk ? Bk : kk, {
-              colour: zk.tb[ek.tier]
-            }) : null !== (Rk = bk.customTitle) && void 0 !== Rk ? Rk : kk,
-            mk = Fk => {
-              const Bk = null !== Fk && void 0 !== Fk ? Fk : Vk,
-                Rk = void 0 !== Fk ? (0, oR.c)(bk, Fk) : Jk;
-              Zk(bk, Rk) && null !== Bk && Dk(kk, bk, Fk);
-              let tk = dk.redDotInfo;
-              tk.itemHasRedDot(Ck, kk) && (tk.updateItemRedDot(Ck, kk, !1), tk = tk.shallowCopy()), Gk({
-                redDotInfo: tk
+        rb = (bb, cb) => {
+          var sb, kb, Wb;
+          const Tb = SW(Ab, bb),
+            Ub = Hb.shopInfo[Ab].items[bb],
+            Mb = Hb.userInputsPerItem[Tb],
+            Xb = (0, Yk.e)(Ub, Mb),
+            nb = wb(Ub, Xb),
+            mb = Ub.enchant,
+            lb = mb ? (0, Zb.ub)(null !== (sb = Ub.customTitle) && void 0 !== sb ? sb : bb, {
+              colour: Zb.nb[mb.tier]
+            }) : null !== (kb = Ub.customTitle) && void 0 !== kb ? kb : bb,
+            eb = cb => {
+              const sb = null !== cb && void 0 !== cb ? cb : Mb,
+                kb = void 0 !== cb ? (0, Yk.e)(Ub, cb) : Xb;
+              wb(Ub, kb) && null !== sb && Kb(bb, Ub, cb);
+              let Wb = Hb.redDotInfo;
+              Wb.itemHasRedDot(Ab, bb) && (Wb.updateItemRedDot(Ab, bb, !1), Wb = Wb.shallowCopy()), ib({
+                redDotInfo: Wb
               })
             };
-          return (0, sk.jsxs)("div", {
-            className: ak()("ShopItem", {
-              ShopItemNoInput: !bk.userInput,
-              ShopItemNoInputCanBuy: !bk.userInput && Ak,
-              ShopItemNoInputSelected: bk.isSelected,
-              ShopItemEnchant: !!ek
+          return (0, fb.jsxs)("div", {
+            className: ab()("ShopItem", {
+              ShopItemNoInput: !Ub.userInput,
+              ShopItemNoInputCanBuy: !Ub.userInput && nb,
+              ShopItemNoInputSelected: Ub.isSelected,
+              ShopItemEnchant: !!mb
             }),
-            "data-pad-focusable": !bk.userInput || void 0,
-            "data-pad-unavailable": !bk.userInput && !Ak || void 0,
-            "data-pad-repeat": null !== (tk = (0, gR.b)(bk)) && void 0 !== tk ? tk : void 0,
-            "data-pad-repeat-wait": dk.awaitingPurchase || void 0,
+            "data-pad-focusable": !Ub.userInput || void 0,
+            "data-pad-unavailable": !Ub.userInput && !nb || void 0,
+            "data-pad-repeat": null !== (Wb = (0, Ek.b)(Ub)) && void 0 !== Wb ? Wb : void 0,
+            "data-pad-repeat-wait": Hb.awaitingPurchase || void 0,
             onClick: () => {
-              if (ek && uk.current) {
-                if (Sk !== Xk) return void Nk(Xk);
-                Nk(null)
+              if (mb && tb.current) {
+                if (Jb !== Tb) return void gb(Tb);
+                gb(null)
               }
-              bk.userInput || mk()
+              Ub.userInput || eb()
             },
-            onPointerDown: kk => {
-              ek && (uk.current = (0, OR.r)(kk))
+            onPointerDown: bb => {
+              mb && (tb.current = (0, Jk.u)(bb))
             },
-            onPointerEnter: kk => {
-              ek && !(0, OR.r)(kk) && Nk(Xk)
+            onPointerEnter: bb => {
+              mb && !(0, Jk.u)(bb) && gb(Tb)
             },
-            onPointerLeave: kk => {
-              ek && !(0, OR.r)(kk) && Nk((kk => kk === Xk ? null : kk))
+            onPointerLeave: bb => {
+              mb && !(0, Jk.u)(bb) && gb((bb => bb === Tb ? null : bb))
             },
             style: {
-              zIndex: Object.keys(dk.shopInfo[Ck].items).length - Fk
+              zIndex: Object.keys(Hb.shopInfo[Ab].items).length - cb
             },
-            children: [dk.redDotInfo.itemHasRedDot(Ck, kk) && (0, sk.jsx)(wk.d, {
+            children: [Hb.redDotInfo.itemHasRedDot(Ab, bb) && (0, fb.jsx)(Ib.b, {
               top: "-6px",
               right: "-6px"
-            }), bk.badge && (0, sk.jsx)("div", {
+            }), Ub.badge && (0, fb.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, sk.jsx)("div", {
-                className: ak()("ShopBadgeMain", bk.badge.type),
-                children: (0, sk.jsx)(SR.d, {
-                  text: bk.badge.text
+              children: (0, fb.jsx)("div", {
+                className: ab()("ShopBadgeMain", Ub.badge.type),
+                children: (0, fb.jsx)(Bk.d, {
+                  text: Ub.badge.text
                 })
               })
-            }), (0, sk.jsx)("div", {
+            }), (0, fb.jsx)("div", {
               className: "ShopItemLeft",
-              children: bk.image && (0, sk.jsx)(jt, {
-                item: bk,
+              children: Ub.image && (0, fb.jsx)(FW, {
+                item: Ub,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, sk.jsxs)("div", {
+            }), (0, fb.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, sk.jsxs)("div", {
+              children: [(0, fb.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, sk.jsx)("div", {
+                children: [(0, fb.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, sk.jsx)(SR.d, {
-                    text: yk
+                  children: (0, fb.jsx)(Bk.d, {
+                    text: lb
                   })
-                }), (0, sk.jsx)("div", {
+                }), (0, fb.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, sk.jsx)(SR.d, {
-                    text: bk.description
+                  children: (0, fb.jsx)(Bk.d, {
+                    text: Ub.description
                   })
                 })]
-              }), bk.userInput && (0, sk.jsxs)("div", {
+              }), Ub.userInput && (0, fb.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: kk => {
-                  kk.stopPropagation()
+                onClick: bb => {
+                  bb.stopPropagation()
                 },
-                children: [(0, sk.jsx)(It, {
-                  item: bk,
-                  currInput: Vk,
-                  updateInput: Fk => {
-                    ((kk, Fk, Bk) => {
-                      const Rk = pt(kk, Fk),
-                        tk = {
-                          ...dk.userInputsPerItem
+                children: [(0, fb.jsx)(pW, {
+                  item: Ub,
+                  currInput: Mb,
+                  updateInput: cb => {
+                    ((bb, cb, sb) => {
+                      const kb = SW(bb, cb),
+                        Wb = {
+                          ...Hb.userInputsPerItem
                         };
-                      tk[Rk] = Bk, Gk({
-                        userInputsPerItem: tk
+                      Wb[kb] = sb, ib({
+                        userInputsPerItem: Wb
                       })
-                    })(Ck, kk, Fk)
+                    })(Ab, bb, cb)
                   },
-                  onSubmit: kk => {
-                    mk(kk)
+                  onSubmit: bb => {
+                    eb(bb)
                   }
-                }), ("dropdown" !== bk.userInput.type || !bk.userInput.autoSubmit) && (0, sk.jsx)(fk.g, {
+                }), ("dropdown" !== Ub.userInput.type || !Ub.userInput.autoSubmit) && (0, fb.jsx)(Qb.d, {
                   className: "ItemCostButton",
-                  disabled: !Ak && null !== Vk,
+                  disabled: !nb && null !== Mb,
                   onClick: () => {
-                    mk()
+                    eb()
                   },
-                  children: (0, sk.jsx)(nt, {
-                    item: bk,
-                    cost: Jk,
-                    currencyAmounts: dk.currencyAmounts
+                  children: (0, fb.jsx)(jW, {
+                    item: Ub,
+                    cost: Xb,
+                    currencyAmounts: Hb.currencyAmounts
                   })
                 })]
               })]
-            }), !bk.userInput && (0, sk.jsx)("div", {
+            }), !Ub.userInput && (0, fb.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, sk.jsx)(nt, {
-                item: bk,
-                cost: Jk,
-                currencyAmounts: dk.currencyAmounts
+              children: (0, fb.jsx)(jW, {
+                item: Ub,
+                cost: Xb,
+                currencyAmounts: Hb.currencyAmounts
               })
-            }), ek && Sk === Xk && (0, sk.jsxs)("div", {
+            }), mb && Jb === Tb && (0, fb.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, sk.jsx)(SR.d, {
-                text: yk
-              }), (0, sk.jsx)("div", {
+              children: [(0, fb.jsx)(Bk.d, {
+                text: lb
+              }), (0, fb.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, sk.jsx)(SR.d, {
-                  text: (0, LR.b)("", ek.enchantments, ek.enchantmentData)
+                children: (0, fb.jsx)(Bk.d, {
+                  text: (0, hk.e)("", mb.enchantments, mb.enchantmentData)
                 })
               })]
             })]
-          }, Xk)
+          }, Tb)
         },
-        Kk = function(kk) {
-          for (const Fk in kk)
-            if (kk[Fk].smp) return !0;
+        ob = function(bb) {
+          for (const cb in bb)
+            if (bb[cb].smp) return !0;
           return !1
-        }(dk.shopInfo),
-        xk = IR(dk.shopInfo, Ck);
-      return (0, sk.jsx)(vR.c, {
+        }(Hb.shopInfo),
+        Sb = bW(Hb.shopInfo, Ab);
+      return (0, fb.jsx)(Vk.c, {
         className: "Menu ShopBody",
-        show: tk,
-        children: 0 !== Object.keys(dk.shopInfo).length && (0, sk.jsxs)(sk.Fragment, {
-          children: [(0, sk.jsxs)("div", {
+        show: Wb,
+        children: 0 !== Object.keys(Hb.shopInfo).length && (0, fb.jsxs)(fb.Fragment, {
+          children: [(0, fb.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, sk.jsx)(Vk, {
-              items: UR(dk.shopInfo).map((kk => {
-                var Fk;
+            children: [(0, fb.jsx)(Mb, {
+              items: ik(Hb.shopInfo).map((bb => {
+                var cb;
                 return {
-                  id: kk,
-                  title: null !== (Fk = dk.shopInfo[kk].customTitle) && void 0 !== Fk ? Fk : kk,
-                  redDot: dk.redDotInfo.categoryHasRedDot(kk)
+                  id: bb,
+                  title: null !== (cb = Hb.shopInfo[bb].customTitle) && void 0 !== cb ? cb : bb,
+                  redDot: Hb.redDotInfo.categoryHasRedDot(bb)
                 }
               })),
-              selectedItemId: Ck,
-              onClick: hk,
-              padStartsOnTab: (0, gR.d)(Ck)
-            }), (0, sk.jsx)("div", {
+              selectedItemId: Ab,
+              onClick: qb,
+              padStartsOnTab: (0, Ek.c)(Ab)
+            }), (0, fb.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: dk.currencyAmounts && Object.keys(dk.currencyAmounts).map((kk => {
-                var Fk;
-                const Bk = dk.currencyAmounts[kk];
-                return Bk.hidden ? null : (0, sk.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (Mk ? "SmallText" : ""),
-                  children: [(0, sk.jsxs)("div", {
+              children: Hb.currencyAmounts && Object.keys(Hb.currencyAmounts).map((bb => {
+                var cb;
+                const sb = Hb.currencyAmounts[bb];
+                return sb.hidden ? null : (0, fb.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (yb ? "SmallText" : ""),
+                  children: [(0, fb.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, sk.jsx)("div", {
+                    children: [(0, fb.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: Bk.iconColour
+                        color: sb.iconColour
                       },
-                      children: (0, sk.jsx)(Ba, {
-                        iconName: Bk.icon
+                      children: (0, fb.jsx)(ka, {
+                        iconName: sb.icon
                       })
-                    }), "\xa0", (0, YR.e)(Bk.amount, 6)]
-                  }), (null === (Fk = Bk.subtext) || void 0 === Fk ? void 0 : Fk.length) > 0 && (0, sk.jsx)("div", {
+                    }), "\xa0", (0, uk.e)(sb.amount, 6)]
+                  }), (null === (cb = sb.subtext) || void 0 === cb ? void 0 : cb.length) > 0 && (0, fb.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, sk.jsx)(SR.d, {
-                      text: Bk.subtext
+                    children: (0, fb.jsx)(Bk.d, {
+                      text: sb.subtext
                     })
                   })]
-                }, kk)
+                }, bb)
               }))
             })]
-          }), (0, sk.jsxs)("div", {
+          }), (0, fb.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [Kk && (0, sk.jsx)(Ct, {
-              show: tk,
-              shopInfo: dk.shopInfo,
-              selectedCategoryKey: Ck,
-              buy: (kk, Fk, Bk) => {
-                Dk(kk, Fk, Bk)
+            children: [ob && (0, fb.jsx)(rW, {
+              show: Wb,
+              shopInfo: Hb.shopInfo,
+              selectedCategoryKey: Ab,
+              buy: (bb, cb, sb) => {
+                Kb(bb, cb, sb)
               },
-              canAfford: Zk,
-              message: dk.onBoughtInfo
-            }), null === xk && (0, sk.jsxs)(sk.Fragment, {
-              children: [(0, sk.jsx)("div", {
-                className: ak()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== dk.onBoughtInfo
+              canAfford: wb,
+              message: Hb.onBoughtInfo
+            }), null === Sb && (0, fb.jsxs)(fb.Fragment, {
+              children: [(0, fb.jsx)("div", {
+                className: ab()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== Hb.onBoughtInfo
                 }),
-                children: (0, sk.jsx)(SR.d, {
-                  text: Ak.current
+                children: (0, fb.jsx)(Bk.d, {
+                  text: nb.current
                 })
-              }), (0, sk.jsx)("div", {
+              }), (0, fb.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, sk.jsxs)("div", {
+                children: (0, fb.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (Fk = dk.shopInfo[Ck]) || void 0 === Fk ? void 0 : Fk.description) && (0, sk.jsx)("div", {
+                  children: [(null === (cb = Hb.shopInfo[Ab]) || void 0 === cb ? void 0 : cb.description) && (0, fb.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, sk.jsx)(SR.d, {
-                      text: dk.shopInfo[Ck].description
+                    children: (0, fb.jsx)(Bk.d, {
+                      text: Hb.shopInfo[Ab].description
                     })
-                  }), tk && (0, sk.jsx)("div", {
+                  }), Wb && (0, fb.jsx)("div", {
                     className: "ShopItems",
-                    ref: mk,
+                    ref: eb,
                     "data-pad-initial-area": !0,
-                    children: UR(null === (Bk = dk.shopInfo[Ck]) || void 0 === Bk ? void 0 : Bk.items).map(((kk, Fk) => pk(kk, Fk)))
+                    children: ik(null === (sb = Hb.shopInfo[Ab]) || void 0 === sb ? void 0 : sb.items).map(((bb, cb) => rb(bb, cb)))
                   })]
                 })
               })]
@@ -5051,777 +5051,777 @@ export const modules = {
       })
     }));
 
-    function jt(kk) {
+    function FW(bb) {
       let {
-        item: Fk,
-        minWidth: Bk,
-        minHeight: Rk
-      } = kk;
+        item: cb,
+        minWidth: sb,
+        minHeight: kb
+      } = bb;
       const {
-        image: tk,
-        schematicId: ak,
-        imageColour: Xk
-      } = Fk;
-      if (ak) return (0, sk.jsx)("div", {
+        image: Wb,
+        schematicId: ab,
+        imageColour: Tb
+      } = cb;
+      if (ab) return (0, fb.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${Bk}rem`,
-          height: `${Rk}rem`
+          width: `${sb}rem`,
+          height: `${kb}rem`
         },
-        children: (0, sk.jsx)(NR.c, {
+        children: (0, fb.jsx)(tk.c, {
           game: {
-            schematicId: ak
+            schematicId: ab
           }
         })
       });
-      var wk, dk;
-      if ((0, ER.f)(tk)) return (0, sk.jsx)("div", {
+      var Ib, Hb;
+      if ((0, gk.e)(Wb)) return (0, fb.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${Bk}rem`,
+          minWidth: `${sb}rem`,
           height: "0",
-          minHeight: `${Rk}rem`
+          minHeight: `${kb}rem`
         },
-        children: (0, sk.jsx)(ER.e, {
-          itemName: tk,
-          amount: null !== (wk = Fk.amount) && void 0 !== wk ? wk : 0,
-          amountFontSize: Rk / 4 + "rem",
-          enchantmentTier: null === (dk = Fk.enchant) || void 0 === dk ? void 0 : dk.tier
+        children: (0, fb.jsx)(gk.d, {
+          itemName: Wb,
+          amount: null !== (Ib = cb.amount) && void 0 !== Ib ? Ib : 0,
+          amountFontSize: kb / 4 + "rem",
+          enchantmentTier: null === (Hb = cb.enchant) || void 0 === Hb ? void 0 : Hb.tier
         })
       });
-      const Vk = tk.slice(-4);
-      return ".jpg" === Vk || ".png" === Vk ? (0, sk.jsx)(lt, {
-        image: tk,
-        minWidth: Bk
-      }) : (0, sk.jsx)(bk.d, {
-        name: tk,
+      const Mb = Wb.slice(-4);
+      return ".jpg" === Mb || ".png" === Mb ? (0, fb.jsx)(xW, {
+        image: Wb,
+        minWidth: sb
+      }) : (0, fb.jsx)(Ub.b, {
+        name: Wb,
         className: "SelectedItemImage",
         style: {
-          color: Xk
+          color: Tb
         }
       })
     }
 
-    function lt(kk) {
+    function xW(bb) {
       let {
-        image: Fk,
-        minWidth: Bk
-      } = kk;
+        image: cb,
+        minWidth: sb
+      } = bb;
       const {
-        gameNameWithVariation: Rk
-      } = (0, nB.h)("connectedGame"), tk = Fk.endsWith(".jpg");
-      return (0, sk.jsx)("img", {
-        className: ak()({
-          ShopPixelImage: !tk
+        gameNameWithVariation: kb
+      } = (0, xs.f)("connectedGame"), Wb = cb.endsWith(".jpg");
+      return (0, fb.jsx)("img", {
+        className: ab()({
+          ShopPixelImage: !Wb
         }),
         style: {
-          width: `${tk?1.6*Bk:Bk}rem`,
+          width: `${Wb?1.6*sb:sb}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,zk.Vb)(Rk)}/${Fk}`,
-        alt: Fk,
+        src: `/textures/games/${(0,Zb.Wb)(kb)}/${cb}`,
+        alt: cb,
         draggable: !1
       })
     }
 
-    function nt(kk) {
+    function jW(bb) {
       let {
-        item: Fk,
-        cost: Bk,
-        currencyAmounts: Rk
-      } = kk;
-      const tk = !isNaN(Bk) && 0 !== Bk && Kt(Rk, Fk.currency);
-      let ak = null;
-      return Fk.buyButtonText ? ak = Fk.buyButtonText : tk ? (ak = Bk, Fk.sell && (ak = -1 * Bk), ak = ak.toString()) : 0 === Bk ? ak = "Free" : Fk.isRewardedAd && (ak = "Watch ad"), (0, CF.F)(ak) || " " === ak ? null : (0, sk.jsxs)("div", {
+        item: cb,
+        cost: sb,
+        currencyAmounts: kb
+      } = bb;
+      const Wb = !isNaN(sb) && 0 !== sb && RW(kb, cb.currency);
+      let ab = null;
+      return cb.buyButtonText ? ab = cb.buyButtonText : Wb ? (ab = sb, cb.sell && (ab = -1 * sb), ab = ab.toString()) : 0 === sb ? ab = "Free" : cb.isRewardedAd && (ab = "Watch ad"), (0, Ac.L)(ab) || " " === ab ? null : (0, fb.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [tk && (0, sk.jsx)("div", {
+        children: [Wb && (0, fb.jsx)("div", {
           style: {
-            color: Rk[Fk.currency].iconColour
+            color: kb[cb.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, sk.jsx)(Ba, {
-            iconName: Rk[Fk.currency].icon
+          children: (0, fb.jsx)(ka, {
+            iconName: kb[cb.currency].icon
           })
-        }), (0, sk.jsx)("div", {
+        }), (0, fb.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, sk.jsx)(SR.d, {
-            text: ak
+          children: (0, fb.jsx)(Bk.d, {
+            text: ab
           })
         })]
       })
     }
 
-    function It(kk) {
+    function pW(bb) {
       let {
-        item: Fk,
-        currInput: Bk,
-        updateInput: tk,
-        onSubmit: ak
-      } = kk;
+        item: cb,
+        currInput: sb,
+        updateInput: Wb,
+        onSubmit: ab
+      } = bb;
       const {
-        t: bk
-      } = (0, Xk.x)(), wk = (0, Rk.useRef)(null);
-      if ((0, Rk.useEffect)((() => {
-          const kk = wk.current;
-          kk && kk.value !== Bk && document.activeElement !== kk && (kk.value = null !== Bk && void 0 !== Bk ? Bk : "")
-        }), [Bk]), !Fk.userInput) return null;
-      let dk = Fk.userInput;
-      if (mk.featureFlags.sanitizeShopInput && "text" === Fk.userInput.type && (dk = {
+        t: Ub
+      } = (0, Tb.E)(), Ib = (0, kb.useRef)(null);
+      if ((0, kb.useEffect)((() => {
+          const bb = Ib.current;
+          bb && bb.value !== sb && document.activeElement !== bb && (bb.value = null !== sb && void 0 !== sb ? sb : "")
+        }), [sb]), !cb.userInput) return null;
+      let Hb = cb.userInput;
+      if (eb.featureFlags.sanitizeShopInput && "text" === cb.userInput.type && (Hb = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === dk.type || "number" === dk.type) {
-        var Vk, Jk;
-        console.assert(void 0 !== Bk, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Fk)}`);
-        const kk = "text" === dk.type && dk.wordCharsOnly;
-        return (0, sk.jsx)("div", {
+        }), "text" === Hb.type || "number" === Hb.type) {
+        var Mb, Xb;
+        console.assert(void 0 !== sb, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(cb)}`);
+        const bb = "text" === Hb.type && Hb.wordCharsOnly;
+        return (0, fb.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, sk.jsx)(Yk.e, {
+          children: (0, fb.jsx)(Lb.c, {
             className: "ShopItemUserInputText",
-            placeholderText: bk(dk.placeholderText),
-            defaultValue: Bk,
-            domRef: wk,
-            onValueChange: (Fk, Bk) => {
-              !0 === kk && (Fk = (0, uR.ib)(Fk)), wk.current.value = Fk, tk(Fk)
+            placeholderText: Ub(Hb.placeholderText),
+            defaultValue: sb,
+            domRef: Ib,
+            onValueChange: (cb, sb) => {
+              !0 === bb && (cb = (0, Pk.bb)(cb)), Ib.current.value = cb, Wb(cb)
             },
-            onEnter: ak,
-            type: dk.type
-          }, (null !== (Vk = dk.initialValue) && void 0 !== Vk ? Vk : "") + (null !== (Jk = dk.placeholderText) && void 0 !== Jk ? Jk : ""))
+            onEnter: ab,
+            type: Hb.type
+          }, (null !== (Mb = Hb.initialValue) && void 0 !== Mb ? Mb : "") + (null !== (Xb = Hb.placeholderText) && void 0 !== Xb ? Xb : ""))
         })
       }
-      if ("dropdown" === dk.type) {
-        console.assert(void 0 !== Bk, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Fk)}`);
-        const kk = dk.autoSubmit;
-        return (0, sk.jsx)("div", {
+      if ("dropdown" === Hb.type) {
+        console.assert(void 0 !== sb, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(cb)}`);
+        const bb = Hb.autoSubmit;
+        return (0, fb.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, sk.jsx)(oF.c, {
-            options: dk.dropdownOptions.map((kk => (0, oR.g)(kk))),
-            value: Bk,
-            onChange: Fk => {
+          children: (0, fb.jsx)(Lc.e, {
+            options: Hb.dropdownOptions.map((bb => (0, Yk.g)(bb))),
+            value: sb,
+            onChange: cb => {
               let {
-                value: Bk
-              } = Fk;
-              tk(Bk), kk && ak(Bk)
+                value: sb
+              } = cb;
+              Wb(sb), bb && ab(sb)
             }
           })
         })
       }
-      return "player" === dk.type ? (0, sk.jsx)(Qt, {
-        userInput: dk,
-        currInput: Bk,
-        updateInput: tk
-      }) : "color" === dk.type ? (0, sk.jsx)("div", {
+      return "player" === Hb.type ? (0, fb.jsx)(ba, {
+        userInput: Hb,
+        currInput: sb,
+        updateInput: Wb
+      }) : "color" === Hb.type ? (0, fb.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, sk.jsx)("input", {
+        children: (0, fb.jsx)("input", {
           type: "color",
-          value: Bk,
-          onChange: kk => {
-            tk(kk.target.value)
+          value: sb,
+          onChange: bb => {
+            Wb(bb.target.value)
           }
         })
       }) : null
     }
 
-    function Qt(kk) {
+    function ba(bb) {
       let {
-        userInput: Fk,
-        currInput: Bk,
-        updateInput: Rk
-      } = kk;
-      const tk = (0, nB.h)("players"),
-        ak = (0, nB.h)("hiddenPlayerNames"),
-        Xk = (0, oR.i)(tk.ids, tk.localId, Fk);
-      return (0, sk.jsx)("div", {
+        userInput: cb,
+        currInput: sb,
+        updateInput: kb
+      } = bb;
+      const Wb = (0, xs.f)("players"),
+        ab = (0, xs.f)("hiddenPlayerNames"),
+        Tb = (0, Yk.k)(Wb.ids, Wb.localId, cb);
+      return (0, fb.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, sk.jsx)(oF.c, {
-          options: Xk.map((kk => {
+        children: (0, fb.jsx)(Lc.e, {
+          options: Tb.map((bb => {
             const {
-              name: Fk
-            } = tk.byId[kk];
+              name: cb
+            } = Wb.byId[bb];
             return {
-              value: kk,
-              label: null === Fk ? "" : (0, HR.i)(Fk, ak)
+              value: bb,
+              label: null === cb ? "" : (0, yk.e)(cb, ab)
             }
           })),
-          value: Bk,
-          onChange: kk => {
+          value: sb,
+          onChange: bb => {
             let {
-              value: Fk
-            } = kk;
-            Rk(Fk)
+              value: cb
+            } = bb;
+            kb(cb)
           }
         })
       })
     }
 
-    function ka(kk) {
+    function ca(bb) {
       let {
-        ids: Fk
-      } = kk;
-      return Fk
+        ids: cb
+      } = bb;
+      return cb
     }
 
-    function Fa(kk) {
+    function sa(bb) {
       let {
-        localId: Fk
-      } = kk;
-      return Fk
+        localId: cb
+      } = bb;
+      return cb
     }
 
-    function Ba(kk) {
+    function ka(bb) {
       let {
-        iconName: Fk
-      } = kk;
-      return Wk.gameBridge.lookup("isItemName", Fk) ? (0, sk.jsx)(ER.e, {
-        itemName: Fk,
+        iconName: cb
+      } = bb;
+      return Cb.gameBridge.lookup("isItemName", cb) ? (0, fb.jsx)(gk.d, {
+        itemName: cb,
         amount: 1
-      }) : (0, sk.jsx)(bk.d, {
-        name: Fk,
+      }) : (0, fb.jsx)(Ub.b, {
+        name: cb,
         className: "2x"
       })
     }
-    var Ra = Bk(1585);
-    const ta = (0, Bk(1355).g)((kk => kk.PadLobbyShortcuts)),
-      aa = (0, Rk.lazy)((() => Promise.resolve().then((() => Bk(4391))).then((kk => ({
-        default: kk.Lobbyleaderboard
+    var Wa = sb(1626);
+    const aa = (0, sb(1381).i)((bb => bb.PadLobbyShortcuts)),
+      Ta = (0, kb.lazy)((() => Promise.resolve().then((() => sb(4389))).then((bb => ({
+        default: bb.Lobbyleaderboard
       })))));
 
-    function Xa(kk) {
+    function Ua(bb) {
       let {
-        show: Fk
-      } = kk;
-      return Fk ? (0, sk.jsxs)(sk.Fragment, {
-        children: [(0, sk.jsx)(ta, {}), (0, sk.jsx)(Rk.Suspense, {
-          fallback: (0, sk.jsx)("div", {
+        show: cb
+      } = bb;
+      return cb ? (0, fb.jsxs)(fb.Fragment, {
+        children: [(0, fb.jsx)(aa, {}), (0, fb.jsx)(kb.Suspense, {
+          fallback: (0, fb.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, sk.jsx)(Lk.b, {})
+            children: (0, fb.jsx)(ub.d, {})
           }),
-          children: (0, sk.jsx)(aa, {})
+          children: (0, fb.jsx)(Ta, {})
         })]
       }) : null
     }
-    var ba = Bk(1506),
-      wa = Bk(2801),
-      da = Bk(1650),
-      sa = Bk(2869),
-      Va = Bk(2546),
-      Ja = Bk(1437),
-      Aa = Bk(1396),
-      ea = Bk(2785),
-      ya = Bk(2798),
-      fa = Bk(2241);
-    const ma = "storeRecentGiftRecipients",
-      Wa = new Map;
+    var Ia = sb(1542),
+      Ha = sb(2769),
+      fa = sb(1704),
+      Ma = sb(2824),
+      Xa = sb(2532),
+      na = sb(1471),
+      ma = sb(1436),
+      la = sb(2742),
+      Qa = sb(2761),
+      ea = sb(2246);
+    const Ca = "storeRecentGiftRecipients",
+      Na = new Map;
 
-    function va() {
+    function Va() {
       try {
-        const kk = KF.i.getItem(ma);
-        return Array.isArray(kk) ? kk.filter((kk => "string" === typeof(null === kk || void 0 === kk ? void 0 : kk.name) && kk.name.length > 0)).map((kk => ({
-          name: kk.name,
-          cosmetics: kk.cosmetics && "object" === typeof kk.cosmetics ? kk.cosmetics : null
+        const bb = oc.h.getItem(Ca);
+        return Array.isArray(bb) ? bb.filter((bb => "string" === typeof(null === bb || void 0 === bb ? void 0 : bb.name) && bb.name.length > 0)).map((bb => ({
+          name: bb.name,
+          cosmetics: bb.cosmetics && "object" === typeof bb.cosmetics ? bb.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function ia(kk) {
-      var Fk;
-      const [Bk, tk] = (0, Rk.useState)(""), [ak, Xk] = (0, Rk.useState)("search"), [bk, wk] = (0, Rk.useState)(null), [dk, sk] = (0, Rk.useState)(null), Vk = (0, Rk.useRef)(null), Jk = (0, Rk.useRef)(null);
-      (0, Rk.useEffect)((() => () => {
-        Vk.current && clearTimeout(Vk.current)
+    function La(bb) {
+      var cb;
+      const [sb, Wb] = (0, kb.useState)(""), [ab, Tb] = (0, kb.useState)("search"), [Ub, Ib] = (0, kb.useState)(null), [Hb, fb] = (0, kb.useState)(null), Mb = (0, kb.useRef)(null), Xb = (0, kb.useRef)(null);
+      (0, kb.useEffect)((() => () => {
+        Mb.current && clearTimeout(Mb.current)
       }), []);
-      const Ak = null !== (Fk = null === bk || void 0 === bk ? void 0 : bk.name) && void 0 !== Fk ? Fk : null;
+      const nb = null !== (cb = null === Ub || void 0 === Ub ? void 0 : Ub.name) && void 0 !== cb ? cb : null;
 
-      function ek() {
-        Vk.current && (clearTimeout(Vk.current), Vk.current = null)
-      }(0, Rk.useEffect)((() => {
-        if (null === Ak || kk === uk.NULL_USER_CONTEXT) return;
-        const Fk = Ak.toLowerCase();
-        if (Fk === kk.getPlayerName().toLowerCase()) return void sk({
-          name: Ak,
+      function mb() {
+        Mb.current && (clearTimeout(Mb.current), Mb.current = null)
+      }(0, kb.useEffect)((() => {
+        if (null === nb || bb === tb.NULL_USER_CONTEXT) return;
+        const cb = nb.toLowerCase();
+        if (cb === bb.getPlayerName().toLowerCase()) return void fb({
+          name: nb,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const Bk = Wa.get(Fk);
-        if (Bk) return void sk({
-          name: Ak,
-          result: Bk
+        const sb = Na.get(cb);
+        if (sb) return void fb({
+          name: nb,
+          result: sb
         });
-        let Rk = !1;
-        return async function(kk, Fk) {
+        let kb = !1;
+        return async function(bb, cb) {
           try {
-            const Bk = await (0, uk.postJsonWithMetricsCookiesAndJsonResponse)(`${Mk.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: Fk
+            const sb = await (0, tb.postJsonWithMetricsCookiesAndJsonResponse)(`${yb.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: cb
             }, {
               retries: 1
-            }, kk.getMetricsCookies());
-            if ("boolean" !== typeof(null === Bk || void 0 === Bk ? void 0 : Bk.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(Bk)}`);
-            return Bk
-          } catch (Bk) {
-            return console.error("Failed to look up gift recipient:", Bk), {
+            }, bb.getMetricsCookies());
+            if ("boolean" !== typeof(null === sb || void 0 === sb ? void 0 : sb.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(sb)}`);
+            return sb
+          } catch (sb) {
+            return console.error("Failed to look up gift recipient:", sb), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(kk, Ak).catch((kk => (console.error("Gift recipient lookup failed:", kk), {
+        }(bb, nb).catch((bb => (console.error("Gift recipient lookup failed:", bb), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((kk => {
-          !0 !== kk.giftRecipientFound && "store:giftRecipientLookupFailed" === kk.giftRecipientError || Wa.set(Fk, kk), Rk || sk({
-            name: Ak,
-            result: kk
+        }))).then((bb => {
+          !0 !== bb.giftRecipientFound && "store:giftRecipientLookupFailed" === bb.giftRecipientError || Na.set(cb, bb), kb || fb({
+            name: nb,
+            result: bb
           })
         })), () => {
-          Rk = !0
+          kb = !0
         }
-      }), [Ak, kk]);
-      const yk = (0, Rk.useMemo)((() => {
-        const kk = Bk.trim();
-        if (!kk) return {
+      }), [nb, bb]);
+      const lb = (0, kb.useMemo)((() => {
+        const bb = sb.trim();
+        if (!bb) return {
           status: "none"
         };
-        if (!bk || bk.name !== kk || (null === dk || void 0 === dk ? void 0 : dk.name) !== bk.name) return {
+        if (!Ub || Ub.name !== bb || (null === Hb || void 0 === Hb ? void 0 : Hb.name) !== Ub.name) return {
           status: "pending",
-          name: kk
+          name: bb
         };
-        const Fk = dk.result;
-        return !1 === Fk.giftRecipientFound ? {
+        const cb = Hb.result;
+        return !1 === cb.giftRecipientFound ? {
           status: "error",
-          name: bk.name,
-          error: Fk.giftRecipientError
+          name: Ub.name,
+          error: cb.giftRecipientError
         } : {
           status: "found",
-          name: Fk.giftRecipientName,
-          ownedPacks: Fk.giftRecipientOwnedPacks,
-          hasSuperRank: Fk.giftRecipientHasSuperRank,
-          isSubscriber: Fk.giftRecipientIsSubscriber
+          name: cb.giftRecipientName,
+          ownedPacks: cb.giftRecipientOwnedPacks,
+          hasSuperRank: cb.giftRecipientHasSuperRank,
+          isSubscriber: cb.giftRecipientIsSubscriber
         }
-      }), [Bk, bk, dk]);
-      (0, Rk.useEffect)((() => {
-        "found" === yk.status && "typed" === (null === bk || void 0 === bk ? void 0 : bk.source) && Jk.current !== yk.name && (Jk.current = yk.name, (0, Qk.reportAnalyticsClick)({
+      }), [sb, Ub, Hb]);
+      (0, kb.useEffect)((() => {
+        "found" === lb.status && "typed" === (null === Ub || void 0 === Ub ? void 0 : Ub.source) && Xb.current !== lb.name && (Xb.current = lb.name, (0, jb.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [yk, bk]);
-      const fk = (null === dk || void 0 === dk ? void 0 : dk.name) === (null === bk || void 0 === bk ? void 0 : bk.name) ? null === dk || void 0 === dk ? void 0 : dk.result : null,
-        mk = !0 === (null === fk || void 0 === fk ? void 0 : fk.giftRecipientFound) ? fk.giftRecipientCosmetics : null;
+      }), [lb, Ub]);
+      const Qb = (null === Hb || void 0 === Hb ? void 0 : Hb.name) === (null === Ub || void 0 === Ub ? void 0 : Ub.name) ? null === Hb || void 0 === Hb ? void 0 : Hb.result : null,
+        eb = !0 === (null === Qb || void 0 === Qb ? void 0 : Qb.giftRecipientFound) ? Qb.giftRecipientCosmetics : null;
       return {
-        query: Bk,
-        via: ak,
-        recipient: yk,
-        recipientCosmetics: mk,
-        type: function(kk) {
-          tk(kk), Xk("search"), ek();
-          const Fk = kk.trim();
-          Fk ? Vk.current = setTimeout((() => {
-            wk({
-              name: Fk,
+        query: sb,
+        via: ab,
+        recipient: lb,
+        recipientCosmetics: eb,
+        type: function(bb) {
+          Wb(bb), Tb("search"), mb();
+          const cb = bb.trim();
+          cb ? Mb.current = setTimeout((() => {
+            Ib({
+              name: cb,
               source: "typed"
             })
-          }), 400) : wk(null)
+          }), 400) : Ib(null)
         },
-        choose: function(kk, Fk) {
-          ek(), tk(kk), Xk("typed" === Fk ? "search" : "prefilled" === Fk ? "prefilled" : "suggestion"), wk({
-            name: kk,
-            source: Fk
-          }), "typed" !== Fk && "prefilled" !== Fk && (0, Qk.reportAnalyticsClick)({
+        choose: function(bb, cb) {
+          mb(), Wb(bb), Tb("typed" === cb ? "search" : "prefilled" === cb ? "prefilled" : "suggestion"), Ib({
+            name: bb,
+            source: cb
+          }), "typed" !== cb && "prefilled" !== cb && (0, jb.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: Fk
+            value: cb
           })
         },
         clear: function() {
-          ek(), tk(""), Xk("search"), wk(null)
+          mb(), Wb(""), Tb("search"), Ib(null)
         },
-        recordGift: function(kk, Fk) {
-          ! function(kk) {
-            Wa.delete(kk.toLowerCase())
-          }(kk), sk((Bk => {
-            if (!Bk || Bk.name.toLowerCase() !== kk.toLowerCase() || !0 !== Bk.result.giftRecipientFound || "superRank" === Fk) return Bk;
-            const Rk = Bk.result.giftRecipientOwnedPacks;
+        recordGift: function(bb, cb) {
+          ! function(bb) {
+            Na.delete(bb.toLowerCase())
+          }(bb), fb((sb => {
+            if (!sb || sb.name.toLowerCase() !== bb.toLowerCase() || !0 !== sb.result.giftRecipientFound || "superRank" === cb) return sb;
+            const kb = sb.result.giftRecipientOwnedPacks;
             return {
-              ...Bk,
+              ...sb,
               result: {
-                ...Bk.result,
-                giftRecipientOwnedPacks: Rk.includes(Fk) ? Rk : [...Rk, Fk]
+                ...sb.result,
+                giftRecipientOwnedPacks: kb.includes(cb) ? kb : [...kb, cb]
               }
             }
           }))
         }
       }
     }
-    var Ya = Bk(2232),
-      oa = Bk(4393),
-      La = Bk(236),
-      Oa = Bk(2906);
-    const Ea = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var Sa = Bk(2179),
-      Na = Bk(586),
-      Ha = Bk(2274),
-      ua = Bk(2436);
+    var ua = sb(2240),
+      Ya = sb(4391),
+      ha = sb(287),
+      Ja = sb(2867);
+    const ga = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var Ba = sb(2189),
+      ta = sb(613),
+      ya = sb(2279),
+      Pa = sb(2441);
 
-    function Ma(kk) {
+    function Da(bb) {
       let {
-        cosmetics: Fk
-      } = kk;
-      return (0, sk.jsx)("span", {
+        cosmetics: cb
+      } = bb;
+      return (0, fb.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, sk.jsx)(Ha.c, {
-          cosmetics: Fk
+        children: (0, fb.jsx)(ya.b, {
+          cosmetics: cb
         })
       })
     }
 
-    function ga(kk, Fk) {
-      var Bk, Rk;
-      const tk = null !== (Bk = kk.friend) && void 0 !== Bk ? Bk : {
+    function Ea(bb, cb) {
+      var sb, kb;
+      const Wb = null !== (sb = bb.friend) && void 0 !== sb ? sb : {
         isError: !1,
-        name: kk.name,
+        name: bb.name,
         ranks: [],
-        cosmetics: null !== (Rk = kk.cosmetics) && void 0 !== Rk ? Rk : {},
-        nameColour: Na.b,
+        cosmetics: null !== (kb = bb.cosmetics) && void 0 !== kb ? kb : {},
+        nameColour: ta.c,
         location: {
           status: "noGamePlayed"
         }
       };
-      return Fk ? {
-        ...tk,
-        cosmetics: Fk
-      } : tk
+      return cb ? {
+        ...Wb,
+        cosmetics: cb
+      } : Wb
     }
 
-    function Ua(kk) {
+    function ia(bb) {
       let {
-        recipient: Fk
-      } = kk;
-      return "pending" === Fk.status ? (0, sk.jsx)("span", {
+        recipient: cb
+      } = bb;
+      return "pending" === cb.status ? (0, fb.jsx)("span", {
         className: "StoreRecipientStatus",
-        children: (0, sk.jsx)(Lk.b, {})
-      }) : "found" === Fk.status ? (0, sk.jsx)(bk.d, {
+        children: (0, fb.jsx)(ub.d, {})
+      }) : "found" === cb.status ? (0, fb.jsx)(Ub.b, {
         name: "check",
         className: "StoreRecipientStatus StoreRecipientStatusFound"
       }) : null
     }
 
-    function ca(kk) {
-      var Fk;
+    function Oa(bb) {
+      var cb;
       let {
-        selfName: Bk,
-        giftRecipient: tk,
-        suggestionsVersion: wk,
-        pulseSignal: dk,
-        disabled: Vk
-      } = kk;
+        selfName: sb,
+        giftRecipient: Wb,
+        suggestionsVersion: Ib,
+        pulseSignal: Hb,
+        disabled: Mb
+      } = bb;
       const {
-        t: Jk
-      } = (0, Xk.x)(), Ak = (0, Ck.i)(), ek = (0, Rk.useRef)(null), yk = (0, Rk.useRef)(null), {
-        query: Wk,
-        via: vk,
-        recipient: ik,
-        recipientCosmetics: Lk
-      } = tk, Ok = (0, fa.o)(Wk), Ek = (0, Rk.useMemo)((() => {
-        const kk = mk.featureFlags.useSocialFeatures ? Ak.friends.filter((kk => !kk.isError)) : [];
-        return (0, fa.j)({
-          onlineFriends: (0, Ck.e)(kk),
-          recentRecipients: va(),
-          friends: kk,
-          selfName: Bk,
+        t: Xb
+      } = (0, Tb.E)(), nb = (0, Ab.k)(), mb = (0, kb.useRef)(null), lb = (0, kb.useRef)(null), {
+        query: Cb,
+        via: Nb,
+        recipient: Vb,
+        recipientCosmetics: ub
+      } = Wb, Yb = (0, ea.r)(Cb), hb = (0, kb.useMemo)((() => {
+        const bb = eb.featureFlags.useSocialFeatures ? nb.friends.filter((bb => !bb.isError)) : [];
+        return (0, ea.l)({
+          onlineFriends: (0, Ab.e)(bb),
+          recentRecipients: Va(),
+          friends: bb,
+          selfName: sb,
           max: 8
         })
-      }), [Ak.friends, Bk, wk]), Sk = Wk.trim().toLowerCase(), Nk = "search" !== vk && Sk ? Ek.find((kk => kk.name.toLowerCase() === Sk)) : void 0, Hk = Nk && "prefilled" === vk ? [Nk, ...Ek.filter((kk => kk !== Nk))] : Ek, uk = "" !== Sk && !Nk, Mk = uk ? Wk : "", gk = Hk.length > 0;
-      (0, Rk.useEffect)((() => {
-        ek.current && ek.current.value !== Mk && (ek.current.value = Mk)
-      }), [Mk]), (0, Rk.useEffect)((() => {
-        ek.current && (ek.current.disabled = Vk)
-      }), [Vk, dk]);
-      const Uk = (0, Rk.useRef)(0);
+      }), [nb.friends, sb, Ib]), Jb = Cb.trim().toLowerCase(), gb = "search" !== Nb && Jb ? hb.find((bb => bb.name.toLowerCase() === Jb)) : void 0, Bb = gb && "prefilled" === Nb ? [gb, ...hb.filter((bb => bb !== gb))] : hb, tb = "" !== Jb && !gb, yb = tb ? Cb : "", Pb = Bb.length > 0;
+      (0, kb.useEffect)((() => {
+        mb.current && mb.current.value !== yb && (mb.current.value = yb)
+      }), [yb]), (0, kb.useEffect)((() => {
+        mb.current && (mb.current.disabled = Mb)
+      }), [Mb, Hb]);
+      const Db = (0, kb.useRef)(0);
 
-      function Gk() {
-        "self" !== Ok && (0, Qk.reportAnalyticsClick)({
+      function ib() {
+        "self" !== Yb && (0, jb.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), tk.clear()
+        }), Wb.clear()
       }
 
-      function Tk(kk) {
-        var Fk, Bk;
-        if (Vk) return;
-        if (" " === kk.key || "Enter" === kk.key) return kk.preventDefault(), void kk.currentTarget.click();
-        const Rk = Array.from(null !== (Fk = null === (Bk = yk.current) || void 0 === Bk ? void 0 : Bk.querySelectorAll("[role=radio]")) && void 0 !== Fk ? Fk : []),
-          tk = Rk.indexOf(kk.currentTarget);
-        let ak;
-        "ArrowRight" === kk.key || "ArrowDown" === kk.key ? ak = Rk[(tk + 1) % Rk.length] : "ArrowLeft" === kk.key || "ArrowUp" === kk.key ? ak = Rk[(tk - 1 + Rk.length) % Rk.length] : "Home" === kk.key ? ak = Rk[0] : "End" === kk.key && (ak = Rk[Rk.length - 1]), ak && (kk.preventDefault(), ak.focus(), ak.click())
-      }(0, Rk.useEffect)((() => {
-        var kk;
-        dk > Uk.current && !Vk && (Uk.current = dk, null === (kk = ek.current) || void 0 === kk || kk.focus())
-      }), [dk, Vk]);
-      const rk = "self" === Ok,
-        Dk = null !== (Fk = null === Nk || void 0 === Nk ? void 0 : Nk.name) && void 0 !== Fk ? Fk : null,
-        zk = "error" === ik.status ? ik.error : null,
-        Pk = "store:giftRecipientLookupFailed" === zk;
-      return (0, sk.jsxs)("div", {
-        className: ak()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: Vk,
-          StoreRecipientStripNoChips: !gk
+      function Ob(bb) {
+        var cb, sb;
+        if (Mb) return;
+        if (" " === bb.key || "Enter" === bb.key) return bb.preventDefault(), void bb.currentTarget.click();
+        const kb = Array.from(null !== (cb = null === (sb = lb.current) || void 0 === sb ? void 0 : sb.querySelectorAll("[role=radio]")) && void 0 !== cb ? cb : []),
+          Wb = kb.indexOf(bb.currentTarget);
+        let ab;
+        "ArrowRight" === bb.key || "ArrowDown" === bb.key ? ab = kb[(Wb + 1) % kb.length] : "ArrowLeft" === bb.key || "ArrowUp" === bb.key ? ab = kb[(Wb - 1 + kb.length) % kb.length] : "Home" === bb.key ? ab = kb[0] : "End" === bb.key && (ab = kb[kb.length - 1]), ab && (bb.preventDefault(), ab.focus(), ab.click())
+      }(0, kb.useEffect)((() => {
+        var bb;
+        Hb > Db.current && !Mb && (Db.current = Hb, null === (bb = mb.current) || void 0 === bb || bb.focus())
+      }), [Hb, Mb]);
+      const Gb = "self" === Yb,
+        Kb = null !== (cb = null === gb || void 0 === gb ? void 0 : gb.name) && void 0 !== cb ? cb : null,
+        Zb = "error" === Vb.status ? Vb.error : null,
+        zb = "store:giftRecipientLookupFailed" === Zb;
+      return (0, fb.jsxs)("div", {
+        className: ab()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: Mb,
+          StoreRecipientStripNoChips: !Pb
         }),
-        children: [(0, sk.jsx)("span", {
+        children: [(0, fb.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: Jk("store:buyingFor")
-        }), (0, sk.jsxs)("div", {
-          ref: yk,
+          children: Xb("store:buyingFor")
+        }), (0, fb.jsxs)("div", {
+          ref: lb,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": Jk("store:whoIsItFor"),
-          children: [(0, sk.jsxs)("div", {
+          "aria-label": Xb("store:whoIsItFor"),
+          children: [(0, fb.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": rk,
-            tabIndex: Vk || !rk && null !== Dk ? -1 : 0,
-            className: ak()("StoreRecipientMe", {
-              StoreRecipientChecked: rk
+            "aria-checked": Gb,
+            tabIndex: Mb || !Gb && null !== Kb ? -1 : 0,
+            className: ab()("StoreRecipientMe", {
+              StoreRecipientChecked: Gb
             }),
             onClick: () => {
-              Vk || Gk()
+              Mb || ib()
             },
-            onKeyDown: Tk,
-            children: [(0, sk.jsx)(bk.d, {
+            onKeyDown: Ob,
+            children: [(0, fb.jsx)(Ub.b, {
               name: "user"
-            }), " ", Jk("store:me")]
-          }), gk && (0, sk.jsx)("div", {
+            }), " ", Xb("store:me")]
+          }), Pb && (0, fb.jsx)("div", {
             className: "StoreRecipientChips",
-            children: Hk.map((kk => {
-              const Fk = kk === Nk;
-              return (0, sk.jsx)("div", {
+            children: Bb.map((bb => {
+              const cb = bb === gb;
+              return (0, fb.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": Fk,
-                tabIndex: !Vk && Fk ? 0 : -1,
-                title: kk.name,
-                className: ak()("StoreRecipientChip", {
-                  StoreRecipientChecked: Fk
+                "aria-checked": cb,
+                tabIndex: !Mb && cb ? 0 : -1,
+                title: bb.name,
+                className: ab()("StoreRecipientChip", {
+                  StoreRecipientChecked: cb
                 }),
                 onClick: () => {
-                  Vk || function(kk) {
-                    "gift" !== Ok && (0, Qk.reportAnalyticsClick)({
+                  Mb || function(bb) {
+                    "gift" !== Yb && (0, jb.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), tk.choose(kk.name, kk.kind)
-                  }(kk)
+                    }), Wb.choose(bb.name, bb.kind)
+                  }(bb)
                 },
-                onKeyDown: Tk,
-                children: (0, sk.jsx)(ua.d, {
-                  playerSocialPreview: ga(kk, Fk ? Lk : null),
+                onKeyDown: Ob,
+                children: (0, fb.jsx)(Pa.h, {
+                  playerSocialPreview: Ea(bb, cb ? ub : null),
                   opensProfileCard: !1,
-                  isFriend: null !== kk.friend,
+                  isFriend: null !== bb.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== kk.friend,
-                  status: null === kk.friend ? null : void 0,
-                  trailing: Fk ? (0, sk.jsx)(Ua, {
-                    recipient: ik
+                  showLocation: null !== bb.friend,
+                  status: null === bb.friend ? null : void 0,
+                  trailing: cb ? (0, fb.jsx)(ia, {
+                    recipient: Vb
                   }) : void 0
                 })
-              }, kk.name)
+              }, bb.name)
             }))
           })]
-        }), (0, sk.jsxs)("div", {
-          className: ak()("StoreRecipientSearch", {
-            StoreRecipientChecked: uk,
-            StoreRecipientSearchPulse: dk > 0 && !uk,
-            StoreRecipientSearchError: null !== zk && !Pk
+        }), (0, fb.jsxs)("div", {
+          className: ab()("StoreRecipientSearch", {
+            StoreRecipientChecked: tb,
+            StoreRecipientSearchPulse: Hb > 0 && !tb,
+            StoreRecipientSearchError: null !== Zb && !zb
           }),
           onClick: () => {
-            var kk;
-            null === (kk = ek.current) || void 0 === kk || kk.focus()
+            var bb;
+            null === (bb = mb.current) || void 0 === bb || bb.focus()
           },
-          children: [uk && "found" === ik.status && Lk && (0, sk.jsx)(Ma, {
-            cosmetics: Lk
-          }), !(uk && "found" === ik.status && Lk) && (0, sk.jsx)(bk.d, {
+          children: [tb && "found" === Vb.status && ub && (0, fb.jsx)(Da, {
+            cosmetics: ub
+          }), !(tb && "found" === Vb.status && ub) && (0, fb.jsx)(Ub.b, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, sk.jsx)(Yk.e, {
+          }), (0, fb.jsx)(Lb.c, {
             className: "StoreRecipientSearchInput",
-            domRef: ek,
-            placeholderText: Jk("store:searchName"),
-            defaultValue: Mk,
-            maxLength: ck.f,
-            onValueChange: function(kk) {
-              "gift" !== Ok && kk.trim() && (0, Qk.reportAnalyticsClick)({
+            domRef: mb,
+            placeholderText: Xb("store:searchName"),
+            defaultValue: yb,
+            maxLength: Eb.l,
+            onValueChange: function(bb) {
+              "gift" !== Yb && bb.trim() && (0, jb.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), tk.type(kk)
+              }), Wb.type(bb)
             },
             onEnter: () => {
-              var kk;
-              const Fk = null === (kk = ek.current) || void 0 === kk ? void 0 : kk.value.trim();
-              Fk && tk.choose(Fk, "typed")
+              var bb;
+              const cb = null === (bb = mb.current) || void 0 === bb ? void 0 : bb.value.trim();
+              cb && Wb.choose(cb, "typed")
             },
             blurOnEnter: !0
-          }), uk && (0, sk.jsx)(Ua, {
-            recipient: ik
-          }), uk && (0, sk.jsx)("div", {
-            ...(0, fk.R)({
-              disabled: Vk
+          }), tb && (0, fb.jsx)(ia, {
+            recipient: Vb
+          }), tb && (0, fb.jsx)("div", {
+            ...(0, Qb.U)({
+              disabled: Mb
             }),
-            "aria-label": Jk("store:clearRecipient"),
-            title: Jk("store:clearRecipient"),
+            "aria-label": Xb("store:clearRecipient"),
+            title: Xb("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: kk => {
-              kk.stopPropagation(), Vk || Gk()
+            onClick: bb => {
+              bb.stopPropagation(), Mb || ib()
             },
-            children: (0, sk.jsx)(bk.d, {
+            children: (0, fb.jsx)(Ub.b, {
               name: "xmark"
             })
           })]
-        }, dk), zk && (0, sk.jsx)("div", {
-          className: ak()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: Pk
+        }, Hb), Zb && (0, fb.jsx)("div", {
+          className: ab()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: zb
           }),
           role: "status",
-          children: Jk(zk)
+          children: Xb(Zb)
         })]
       })
     }
-    var Ga = Bk(2228),
-      Ta = Bk(2151),
-      ra = Bk(3379),
-      Da = Bk(2910),
-      za = Bk(2190);
-    const Pa = Bk.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var Ga = sb(2236),
+      Ka = sb(2161),
+      Za = sb(3371),
+      za = sb(2876),
+      qa = sb(2199);
+    const da = sb.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function ha() {
-      (0, za.i)(Pa, {
+    function Aa() {
+      (0, qa.i)(da, {
         lowPriority: !1
       })
     }
 
-    function qa(kk) {
+    function wa(bb) {
       let {
-        onBack: Fk,
-        cta: Bk,
-        recipient: tk,
-        afterCta: ak
-      } = kk;
+        onBack: cb,
+        cta: sb,
+        recipient: Wb,
+        afterCta: ab
+      } = bb;
       const {
-        t: wk
-      } = (0, Xk.x)(), [dk, Vk] = (0, Rk.useState)("starting"), Jk = (0, Rk.useRef)(null), Ak = (0, gF.d)(), ek = (0, Rk.useRef)(null), yk = (0, Rk.useCallback)((() => {
-        const kk = Jk.current;
-        null !== kk.error && kk.load();
-        const Fk = kk.play();
-        ek.current = Fk, Fk.catch((kk => {
-          (0, ra.e)("Failed to play Super Rank video", kk), Ak.current && ek.current === Fk && Vk("failed")
+        t: Ib
+      } = (0, Tb.E)(), [Hb, Mb] = (0, kb.useState)("starting"), Xb = (0, kb.useRef)(null), nb = (0, Pc.e)(), mb = (0, kb.useRef)(null), lb = (0, kb.useCallback)((() => {
+        const bb = Xb.current;
+        null !== bb.error && bb.load();
+        const cb = bb.play();
+        mb.current = cb, cb.catch((bb => {
+          (0, Za.b)("Failed to play Super Rank video", bb), nb.current && mb.current === cb && Mb("failed")
         }))
-      }), [Ak]);
-      return (0, Rk.useEffect)((() => {
-        const kk = Jk.current;
-        let Fk;
+      }), [nb]);
+      return (0, kb.useEffect)((() => {
+        const bb = Xb.current;
+        let cb;
 
-        function Bk() {
-          clearTimeout(Fk), Fk = setTimeout(yk, 3e3)
+        function sb() {
+          clearTimeout(cb), cb = setTimeout(lb, 3e3)
         }
-        return yk(), kk.addEventListener("ended", Bk), () => {
-          clearTimeout(Fk), kk.removeEventListener("ended", Bk)
+        return lb(), bb.addEventListener("ended", sb), () => {
+          clearTimeout(cb), bb.removeEventListener("ended", sb)
         }
-      }), [yk]), (0, sk.jsxs)("div", {
+      }), [lb]), (0, fb.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, sk.jsxs)("div", {
+        children: [(0, fb.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, sk.jsx)(fk.c, {
+          children: [(0, fb.jsx)(Qb.b, {
             className: "StoreDetailBackButton",
-            onClick: Fk,
+            onClick: cb,
             padBack: !0,
-            children: wk("general:back")
-          }), (0, sk.jsxs)("div", {
+            children: Ib("general:back")
+          }), (0, fb.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, sk.jsx)(bk.d, {
+            children: [(0, fb.jsx)(Ub.b, {
               name: "bolt"
-            }), " ", wk("homePage:superRank")]
-          }), tk]
-        }), (0, sk.jsxs)("div", {
+            }), " ", Ib("homePage:superRank")]
+          }), Wb]
+        }), (0, fb.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, sk.jsxs)("div", {
+          children: [(0, fb.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, sk.jsx)("video", {
-              ref: Jk,
-              src: `${Mk.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: Pa,
+            children: [(0, fb.jsx)("video", {
+              ref: Xb,
+              src: `${yb.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: da,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === dk,
+              controls: "playing" === Hb,
               onPlaying: () => {
-                Vk("playing")
+                Mb("playing")
               },
               onError: () => {
-                Vk("failed")
+                Mb("failed")
               }
-            }), ("failed" === dk || "loading" === dk) && (0, sk.jsx)("div", {
+            }), ("failed" === Hb || "loading" === Hb) && (0, fb.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, sk.jsx)(fk.g, {
-                ariaLabel: wk("general:play"),
-                loading: "loading" === dk,
+              children: (0, fb.jsx)(Qb.d, {
+                ariaLabel: Ib("general:play"),
+                loading: "loading" === Hb,
                 onClick: () => {
-                  Vk("loading"), yk()
+                  Mb("loading"), lb()
                 },
                 touchPressOn: "pointerup",
-                children: (0, sk.jsx)(bk.d, {
+                children: (0, fb.jsx)(Ub.b, {
                   name: "play"
                 })
               })
             })]
-          }), (0, sk.jsxs)("div", {
+          }), (0, fb.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, sk.jsx)("div", {
+            children: [(0, fb.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, sk.jsx)(Da.c, {})
-            }), (0, sk.jsxs)("div", {
+              children: (0, fb.jsx)(za.b, {})
+            }), (0, fb.jsxs)("div", {
               className: "StoreTileActions",
-              children: [Bk, ak]
+              children: [sb, ab]
             })]
           })]
         })]
       })
     }
-    var Ca = Bk(2457),
-      Za = Bk(3344),
-      pa = Bk(2895),
-      Ka = Bk(2897);
-    const xa = [Na.k.yellow, Na.k.green, Na.k.aqua, Na.k.blue, Na.k.purple, Na.k.red];
+    var ra = sb(2455),
+      oa = sb(3333),
+      Sa = sb(2856),
+      Ra = sb(2862);
+    const va = [ta.s.yellow, ta.s.green, ta.s.aqua, ta.s.blue, ta.s.purple, ta.s.red];
 
-    function ja(kk) {
-      return "needsRecipient" === kk || "lookingUp" === kk || "gift" === kk || "recipientOwns" === kk || "recipientSharesOwned" === kk || "recipientSubscribed" === kk
+    function Fa(bb) {
+      return "needsRecipient" === bb || "lookingUp" === bb || "gift" === bb || "recipientOwns" === bb || "recipientSharesOwned" === bb || "recipientSubscribed" === bb
     }
 
-    function la(kk) {
+    function xa(bb) {
       const {
-        onKeyDown: Fk,
-        ...Bk
-      } = (0, fk.R)();
+        onKeyDown: cb,
+        ...sb
+      } = (0, Qb.U)();
       return {
-        ...Bk,
-        "aria-label": kk,
-        onKeyDown: kk => {
-          kk.target === kk.currentTarget && (null === Fk || void 0 === Fk || Fk(kk))
+        ...sb,
+        "aria-label": bb,
+        onKeyDown: bb => {
+          bb.target === bb.currentTarget && (null === cb || void 0 === cb || cb(bb))
         }
       }
     }
 
-    function na(kk) {
+    function ja(bb) {
       let {
-        text: Fk
-      } = kk;
-      return (0, sk.jsx)("span", {
+        text: cb
+      } = bb;
+      return (0, fb.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(Fk).map(((kk, Fk) => (0, sk.jsx)("span", {
+        children: Array.from(cb).map(((bb, cb) => (0, fb.jsx)("span", {
           style: {
-            color: xa[Fk % xa.length]
+            color: va[cb % va.length]
           },
-          children: kk
-        }, Fk)))
+          children: bb
+        }, cb)))
       })
     }
-    const Ia = {
+    const pa = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -5829,67 +5829,67 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function Qa(kk) {
+    function bT(bb) {
       let {
-        state: Fk,
-        item: Bk,
-        price: Rk,
-        busy: tk,
-        highlight: wk = !1,
-        onAct: dk,
-        onNeedRecipient: Vk,
-        onLogin: Jk
-      } = kk;
+        state: cb,
+        item: sb,
+        price: kb,
+        busy: Wb,
+        highlight: Ib = !1,
+        onAct: Hb,
+        onNeedRecipient: Mb,
+        onLogin: Xb
+      } = bb;
       const {
-        t: Ak
-      } = (0, Xk.x)(), ek = "superRank" === Bk ? Tk.n.product.days : null, yk = kk => null === ek ? Ak(kk ? "general:gift" : "general:buy") : Ak(kk ? "store:giftDays" : "store:buyDays", {
-        days: ek
-      }), mk = (kk, Fk) => (0, sk.jsxs)(sk.Fragment, {
-        children: [Fk && (0, sk.jsx)("span", {
+        t: nb
+      } = (0, Tb.E)(), mb = "superRank" === sb ? Ob.i.product.days : null, lb = bb => null === mb ? nb(bb ? "general:gift" : "general:buy") : nb(bb ? "store:giftDays" : "store:buyDays", {
+        days: mb
+      }), eb = (bb, cb) => (0, fb.jsxs)(fb.Fragment, {
+        children: [cb && (0, fb.jsx)("span", {
           className: "StoreCtaIcon",
-          children: Fk
-        }), null === kk && (0, sk.jsx)("span", {
+          children: cb
+        }), null === bb && (0, fb.jsx)("span", {
           className: "StoreCtaLabel StoreCtaLabelPending"
-        }), null !== kk && (0, sk.jsx)("span", {
+        }), null !== bb && (0, fb.jsx)("span", {
           className: "StoreCtaLabel",
-          title: kk,
-          children: kk
-        }), (0, sk.jsxs)("span", {
+          title: bb,
+          children: bb
+        }), (0, fb.jsxs)("span", {
           className: "StoreCtaPrice",
-          children: ["\xb7", (0, sk.jsx)(Ta.d, {
-            amount: Rk
+          children: ["\xb7", (0, fb.jsx)(Ka.d, {
+            amount: kb
           })]
         })]
       });
-      let Wk;
-      switch (Fk) {
+      let Cb;
+      switch (cb) {
         case "pending":
-          Wk = (0, sk.jsx)(fk.o, {
+          Cb = (0, fb.jsx)(Qb.n, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: mk(null)
+            children: eb(null)
           });
           break;
         case "login":
-          Wk = (0, sk.jsx)(fk.o, {
+          Cb = (0, fb.jsx)(Qb.n, {
             className: "StoreCtaButton",
-            onClick: Jk,
-            children: mk(yk(!1))
+            onClick: Xb,
+            children: eb(lb(!1))
           });
           break;
         case "owned":
-          Wk = (0, sk.jsx)(fk.j, {
+          Cb = (0, fb.jsx)(Qb.h, {
             className: "StoreCtaButton",
             onClick: () => {
-              Ek.c.set({
-                openEverythingMenuName: sF.p.CUSTOMISATION
+              hb.d.set({
+                openEverythingMenuName: Hc.r.CUSTOMISATION
               })
             },
-            children: (0, sk.jsxs)("span", {
+            children: (0, fb.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, sk.jsx)(bk.d, {
+              children: [(0, fb.jsx)(Ub.b, {
                 name: "shirt"
-              }), " ", Ak("store:equip")]
+              }), " ", nb("store:equip")]
             })
           });
           break;
@@ -5898,205 +5898,205 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          Wk = (0, sk.jsx)(fk.o, {
+          Cb = (0, fb.jsx)(Qb.n, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, sk.jsx)("span", {
+            children: (0, fb.jsx)("span", {
               className: "StoreCtaLabel",
-              children: Ak(Ia[Fk])
+              children: nb(pa[cb])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          Wk = (0, sk.jsx)(fk.o, {
+          Cb = (0, fb.jsx)(Qb.n, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === Fk || null === Rk,
-            loading: "lookingUp" === Fk || tk,
-            onClick: dk,
+            disabled: "needsRecipient" === cb || null === kb,
+            loading: "lookingUp" === cb || Wb,
+            onClick: Hb,
             analyticsClick: {
               id: "store.gift",
-              value: Bk
+              value: sb
             },
-            children: mk(yk(!0), fa.e)
+            children: eb(lb(!0), ea.d)
           });
           break;
         case "buy":
         case "recharge":
-          Wk = (0, sk.jsx)(fk.o, {
+          Cb = (0, fb.jsx)(Qb.n, {
             className: "StoreCtaButton",
-            loading: tk,
-            disabled: null === Rk,
-            onClick: dk,
+            loading: Wb,
+            disabled: null === kb,
+            onClick: Hb,
             analyticsClick: {
               id: "store.buy",
-              value: Bk
+              value: sb
             },
-            children: mk(yk(!1))
+            children: eb(lb(!1))
           })
       }
-      return (0, sk.jsx)("div", {
-        className: ak()("StoreCta", {
-          StoreCtaHighlight: wk
+      return (0, fb.jsx)("div", {
+        className: ab()("StoreCta", {
+          StoreCtaHighlight: Ib
         }),
-        onClick: kk => {
-          kk.stopPropagation(), "needsRecipient" === Fk && Vk()
+        onClick: bb => {
+          bb.stopPropagation(), "needsRecipient" === cb && Mb()
         },
-        children: Wk
+        children: Cb
       })
     }
 
-    function kX() {
+    function cT() {
       const {
-        t: kk
-      } = (0, Xk.x)();
-      return (0, sk.jsxs)("ul", {
+        t: bb
+      } = (0, Tb.E)();
+      return (0, fb.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, sk.jsxs)("li", {
-          children: [(0, sk.jsx)(bk.d, {
+        children: [(0, fb.jsxs)("li", {
+          children: [(0, fb.jsx)(Ub.b, {
             name: "check"
-          }), (0, sk.jsx)(na, {
-            text: kk("store:colourfulNames")
+          }), (0, fb.jsx)(ja, {
+            text: bb("store:colourfulNames")
           })]
-        }), (0, sk.jsxs)("li", {
-          children: [(0, sk.jsx)(bk.d, {
+        }), (0, fb.jsxs)("li", {
+          children: [(0, fb.jsx)(Ub.b, {
             name: "check"
-          }), kk("store:perkCapes")]
-        }), (0, sk.jsxs)("li", {
-          children: [(0, sk.jsx)(bk.d, {
+          }), bb("store:perkCapes")]
+        }), (0, fb.jsxs)("li", {
+          children: [(0, fb.jsx)(Ub.b, {
             name: "check"
-          }), kk("store:perkNoAdverts")]
-        }), (0, sk.jsxs)("li", {
-          children: [(0, sk.jsx)(bk.d, {
+          }), bb("store:perkNoAdverts")]
+        }), (0, fb.jsxs)("li", {
+          children: [(0, fb.jsx)(Ub.b, {
             name: "check"
-          }), kk("store:perkFriends", {
-            count: (0, nk.e)(["super"])
+          }), bb("store:perkFriends", {
+            count: (0, Fb.d)(["super"])
           })]
         })]
       })
     }
 
-    function FX(kk) {
+    function sT(bb) {
       let {
-        daysLeft: Fk,
-        totalDays: Bk,
-        urgent: Rk
-      } = kk;
+        daysLeft: cb,
+        totalDays: sb,
+        urgent: kb
+      } = bb;
       const {
-        t: tk
-      } = (0, Xk.x)(), bk = Bk > 0 ? Math.min(1, Math.max(.03, Fk / Bk)) : 1;
-      return (0, sk.jsxs)("div", {
-        className: ak()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: Rk
+        t: Wb
+      } = (0, Tb.E)(), Ub = sb > 0 ? Math.min(1, Math.max(.03, cb / sb)) : 1;
+      return (0, fb.jsxs)("div", {
+        className: ab()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: kb
         }),
-        children: [(0, sk.jsx)("span", {
+        children: [(0, fb.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === Fk ? tk("store:oneDayLeft") : tk("store:daysLeft", {
-            days: Fk
+          children: 1 === cb ? Wb("store:oneDayLeft") : Wb("store:daysLeft", {
+            days: cb
           })
-        }), (0, sk.jsx)("div", {
+        }), (0, fb.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, sk.jsx)("i", {
+          children: (0, fb.jsx)("i", {
             style: {
-              width: 100 * bk + "%"
+              width: 100 * Ub + "%"
             }
           })
         })]
       })
     }
 
-    function BX(kk) {
+    function kT(bb) {
       let {
-        state: Fk,
-        urgent: Bk,
-        daysLeft: Rk,
-        totalDays: tk,
-        recipientHasSuperRank: wk,
-        busy: dk,
-        highlight: Vk,
-        onOpen: Jk,
-        onAct: Ak,
-        onNeedRecipient: ek,
-        onLogin: yk
-      } = kk;
+        state: cb,
+        urgent: sb,
+        daysLeft: kb,
+        totalDays: Wb,
+        recipientHasSuperRank: Ib,
+        busy: Hb,
+        highlight: Mb,
+        onOpen: Xb,
+        onAct: nb,
+        onNeedRecipient: mb,
+        onLogin: lb
+      } = bb;
       const {
-        t: fk
-      } = (0, Xk.x)(), mk = ja(Fk), {
-        days: Wk
-      } = Tk.n.product, vk = fk("store:recipientHasSuperRank", {
-        giftDays: Wk
-      }), ik = jk("subscribed" === Fk);
-      return (0, sk.jsxs)("div", {
-        className: ak()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: mk,
-          StoreSuperRankTileUrgent: "recharge" === Fk && Bk,
-          StoreSuperRankTileWithChip: wk,
-          StoreSuperRankTileGiftReady: "gift" === Fk
+        t: Qb
+      } = (0, Tb.E)(), eb = Fa(cb), {
+        days: Cb
+      } = Ob.i.product, Nb = Qb("store:recipientHasSuperRank", {
+        giftDays: Cb
+      }), Vb = Rb("subscribed" === cb);
+      return (0, fb.jsxs)("div", {
+        className: ab()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: eb,
+          StoreSuperRankTileUrgent: "recharge" === cb && sb,
+          StoreSuperRankTileWithChip: Ib,
+          StoreSuperRankTileGiftReady: "gift" === cb
         }),
-        ...la(fk("homePage:superRank")),
+        ...xa(Qb("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: ha,
-        onFocus: ha,
-        onClick: Jk,
-        children: [(0, sk.jsx)("div", {
+        onPointerEnter: Aa,
+        onFocus: Aa,
+        onClick: Xb,
+        children: [(0, fb.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${Sa.g})`
+            backgroundImage: `url(${Ba.g})`
           }
-        }), mk && (0, sk.jsx)("div", {
+        }), eb && (0, fb.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, sk.jsxs)("div", {
+        }), (0, fb.jsxs)("div", {
           className: "StoreTileContent",
-          children: [wk && (0, sk.jsx)("span", {
+          children: [Ib && (0, fb.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: vk,
-            children: vk
-          }), (0, sk.jsxs)("div", {
+            title: Nb,
+            children: Nb
+          }), (0, fb.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, sk.jsx)(bk.d, {
+            children: [(0, fb.jsx)(Ub.b, {
               name: "bolt"
-            }), " ", fk("homePage:superRank")]
-          }), mk && (0, sk.jsx)("div", {
+            }), " ", Qb("homePage:superRank")]
+          }), eb && (0, fb.jsx)("div", {
             className: "StoreTilePitch",
-            children: fk("store:giftPitch", {
-              days: Wk
+            children: Qb("store:giftPitch", {
+              days: Cb
             })
-          }), "recharge" === Fk && (0, sk.jsx)(FX, {
-            daysLeft: Rk,
-            totalDays: tk,
-            urgent: Bk
-          }), ik && (0, sk.jsx)("div", {
+          }), "recharge" === cb && (0, fb.jsx)(sT, {
+            daysLeft: kb,
+            totalDays: Wb,
+            urgent: sb
+          }), Vb && (0, fb.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, sk.jsx)("span", {
+            children: (0, fb.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: ik
+              children: Vb
             })
-          }), (0, sk.jsx)(kX, {}), (0, sk.jsxs)("div", {
+          }), (0, fb.jsx)(cT, {}), (0, fb.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, sk.jsx)(Qa, {
-              state: Fk,
+            children: [(0, fb.jsx)(bT, {
+              state: cb,
               item: "superRank",
-              price: Tk.n.price,
-              busy: dk,
-              highlight: Vk,
-              onAct: Ak,
-              onNeedRecipient: ek,
-              onLogin: yk
-            }), "needsRecipient" === Fk && (0, sk.jsx)("span", {
+              price: Ob.i.price,
+              busy: Hb,
+              highlight: Mb,
+              onAct: nb,
+              onNeedRecipient: mb,
+              onLogin: lb
+            }), "needsRecipient" === cb && (0, fb.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: fk("store:pickRecipientFirst")
-            }), "recharge" === Fk && Bk && (0, sk.jsx)("span", {
+              children: Qb("store:pickRecipientFirst")
+            }), "recharge" === cb && sb && (0, fb.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === Rk ? fk("store:endsInOneDay") : fk("store:endsInDays", {
-                days: Rk
+              children: 1 === kb ? Qb("store:endsInOneDay") : Qb("store:endsInDays", {
+                days: kb
               })
             })]
           })]
         })]
       })
     }
-    const RX = {
+    const WT = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6104,403 +6104,403 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function tX(kk) {
-      var Fk;
+    function aT(bb) {
+      var cb;
       let {
-        pack: Bk,
-        state: tk,
-        busy: wk,
-        onOpen: dk,
-        onAct: Vk,
-        onNeedRecipient: Jk,
-        onLogin: Ak
-      } = kk;
+        pack: sb,
+        state: Wb,
+        busy: Ib,
+        onOpen: Hb,
+        onAct: Mb,
+        onNeedRecipient: Xb,
+        onLogin: nb
+      } = bb;
       const {
-        t: ek
-      } = (0, Xk.x)(), yk = ba.d[Bk], fk = ea.n[Bk], mk = (0, Sa.o)(Bk), Wk = (0, Rk.useRef)(null);
-      (0, pa.g)(Bk, Wk);
-      const vk = ja(tk),
-        ik = null !== (Fk = yk.displayName) && void 0 !== Fk ? Fk : Bk,
-        Yk = (0, Za.e)((() => {
-          (0, Ca.c)();
-          const kk = (0, pa.d)(Bk);
-          void 0 !== kk && (0, za.i)((0, pa.b)(kk))
+        t: mb
+      } = (0, Tb.E)(), lb = Ia.e[sb], Qb = la.g[sb], eb = (0, Ba.l)(sb), Cb = (0, kb.useRef)(null);
+      (0, Sa.j)(sb, Cb);
+      const Nb = Fa(Wb),
+        Vb = null !== (cb = lb.displayName) && void 0 !== cb ? cb : sb,
+        Lb = (0, oa.d)((() => {
+          (0, ra.d)();
+          const bb = (0, Sa.e)(sb);
+          void 0 !== bb && (0, qa.i)((0, Sa.c)(bb))
         })),
-        [Lk] = (0, Rk.useState)(Oa.j);
-      return (0, sk.jsxs)("div", {
-        className: ak()("StoreTile StorePackTile", RX[yk.tier], {
-          StorePackTileOwned: "owned" === tk,
-          StorePackTileRecipientOwns: "recipientOwns" === tk,
-          StoreTileGift: vk
+        [ub] = (0, kb.useState)(Ja.j);
+      return (0, fb.jsxs)("div", {
+        className: ab()("StoreTile StorePackTile", WT[lb.tier], {
+          StorePackTileOwned: "owned" === Wb,
+          StorePackTileRecipientOwns: "recipientOwns" === Wb,
+          StoreTileGift: Nb
         }),
-        ...la(ik),
-        ref: Wk,
-        "data-store-item": Bk,
-        onClick: dk,
-        onPointerMove: kk => {
-          "mouse" !== kk.pointerType || 0 === kk.movementX && 0 === kk.movementY || Lk || Yk.start()
+        ...xa(Vb),
+        ref: Cb,
+        "data-store-item": sb,
+        onClick: Hb,
+        onPointerMove: bb => {
+          "mouse" !== bb.pointerType || 0 === bb.movementX && 0 === bb.movementY || ub || Lb.start()
         },
-        onPointerLeave: Yk.cancel,
-        children: [fk && (0, sk.jsx)(fk, {}), (0, sk.jsx)("div", {
+        onPointerLeave: Lb.cancel,
+        children: [Qb && (0, fb.jsx)(Qb, {}), (0, fb.jsx)("div", {
           className: "StorePackCharacters",
-          children: mk.map((kk => (0, sk.jsx)("div", {
+          children: eb.map((bb => (0, fb.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,Sa.h)(kk)})`
+              backgroundImage: `url(${(0,Ba.i)(bb)})`
             }
-          }, kk)))
-        }), (0, sk.jsx)("div", {
+          }, bb)))
+        }), (0, fb.jsx)("div", {
           className: "StoreTileScrim"
-        }), vk && (0, sk.jsx)("div", {
+        }), Nb && (0, fb.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, sk.jsxs)("div", {
+        }), (0, fb.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, sk.jsx)("div", {
+          children: [(0, fb.jsx)("div", {
             className: "StoreTileTitle",
-            children: ik
-          }), (0, sk.jsxs)("div", {
+            children: Vb
+          }), (0, fb.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, sk.jsx)(Ka.b, {
-              tier: yk.tier
-            }), " \xb7 ", ek("store:itemCount", {
-              count: (0, Ga.h)(Bk)
-            }), "owned" === tk && (0, sk.jsxs)("span", {
+            children: [(0, fb.jsx)(Ra.b, {
+              tier: lb.tier
+            }), " \xb7 ", mb("store:itemCount", {
+              count: (0, Ga.d)(sb)
+            }), "owned" === Wb && (0, fb.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, sk.jsx)(bk.d, {
+              children: [" \xb7 ", (0, fb.jsx)(Ub.b, {
                 name: "check"
-              }), " ", ek("general:owned")]
+              }), " ", mb("general:owned")]
             })]
-          }), (0, sk.jsx)(Qa, {
-            state: tk,
-            item: Bk,
-            price: (0, Tk.h)(Bk),
-            busy: wk,
-            onAct: Vk,
-            onNeedRecipient: Jk,
-            onLogin: Ak
+          }), (0, fb.jsx)(bT, {
+            state: Wb,
+            item: sb,
+            price: (0, Ob.d)(sb),
+            busy: Ib,
+            onAct: Mb,
+            onNeedRecipient: Xb,
+            onLogin: nb
           })]
         })]
       })
     }
-    var aX = Bk(2875),
-      XX = Bk(1499),
-      bX = Bk(1402),
-      wX = Bk(3364);
+    var TT = sb(2828),
+      UT = sb(1538),
+      IT = sb(1438),
+      HT = sb(3358);
 
-    function dX() {
-      return (0, sk.jsx)("span", {
+    function fT() {
+      return (0, fb.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var sX = Bk(1297),
-      VX = Bk(1512),
-      JX = Bk(9039);
+    var MT = sb(1330),
+      XT = sb(1544),
+      nT = sb(8956);
 
-    function AX(kk) {
+    function mT(bb) {
       let {
-        character: Fk,
-        drawn: Bk,
-        onDrawn: tk
-      } = kk;
-      const Xk = (0, Rk.useRef)(null),
-        bk = (0, JX.f)(Fk);
-      return (0, sk.jsx)("div", {
-        className: ak()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: Bk
+        character: cb,
+        drawn: sb,
+        onDrawn: Wb
+      } = bb;
+      const Tb = (0, kb.useRef)(null),
+        Ub = (0, nT.g)(cb);
+      return (0, fb.jsx)("div", {
+        className: ab()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: sb
         }),
-        children: (0, sk.jsx)(Rk.Suspense, {
+        children: (0, fb.jsx)(kb.Suspense, {
           fallback: null,
-          children: (0, sk.jsx)(Ca.b, {
-            ref: Xk,
+          children: (0, fb.jsx)(ra.b, {
+            ref: Tb,
             framing: "store",
-            turntableFromYaw: Bk ? bk.yaw : null,
+            turntableFromYaw: sb ? Ub.yaw : null,
             onReady: () => {
-              var kk, Bk;
-              null === (kk = Xk.current) || void 0 === kk || kk.setOrbit(bk), null === (Bk = Xk.current) || void 0 === Bk || Bk.setAllCosmetics(VX.d[Fk].cosmetics)
+              var bb, sb;
+              null === (bb = Tb.current) || void 0 === bb || bb.setOrbit(Ub), null === (sb = Tb.current) || void 0 === sb || sb.setAllCosmetics(XT.b[cb].cosmetics)
             },
-            onDrawn: tk
+            onDrawn: Wb
           })
         })
       })
     }
-    const eX = {
+    const lT = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      yX = new Set(["wildSpirits"]);
+      QT = new Set(["wildSpirits"]);
 
-    function fX(kk) {
-      var Fk;
+    function eT(bb) {
+      var cb;
       let {
-        tile: Bk,
-        design: tk,
-        canGoLive: wk,
-        live: dk,
-        busy: Vk,
-        highlight: Jk,
-        onLiveStart: Ak,
-        onLiveEnd: ek,
-        onOpen: yk,
-        onAct: fk,
-        onNeedRecipient: mk,
-        onLogin: Wk
-      } = kk;
+        tile: sb,
+        design: Wb,
+        canGoLive: Ib,
+        live: Hb,
+        busy: Mb,
+        highlight: Xb,
+        onLiveStart: nb,
+        onLiveEnd: mb,
+        onOpen: lb,
+        onAct: Qb,
+        onNeedRecipient: eb,
+        onLogin: Cb
+      } = bb;
       const {
-        t: vk
-      } = (0, Xk.x)(), {
-        pack: ik,
-        state: Yk
-      } = Bk, Lk = ba.d[ik], Ok = (0, ba.g)(ik), Ek = (0, Sa.k)(ik), Sk = ea.n[Ek], Nk = yX.has(Ek), {
-        tier: Hk
-      } = Lk, uk = "legendary" === Hk || "mythic" === Hk, Mk = (0, Rk.useRef)(null);
-      (0, sX.c)(Mk, "epic" === Hk || uk || Nk);
-      const [gk, ck] = (0, Rk.useState)(!1);
-      return !dk && gk && ck(!1), (0, sk.jsxs)("div", {
-        ref: Mk,
-        className: ak()("StoreCharacterCard", `StoreCharacterCard${tk}`, eX[Hk], {
-          StoreCharacterCardOwned: "owned" === Yk || "recipientOwns" === Yk,
-          StoreCharacterCardGift: ja(Yk),
-          StoreCharacterCardItem: void 0 === Ok
+        t: Nb
+      } = (0, Tb.E)(), {
+        pack: Vb,
+        state: Lb
+      } = sb, ub = Ia.e[Vb], Yb = (0, Ia.f)(Vb), hb = (0, Ba.k)(Vb), Jb = la.g[hb], gb = QT.has(hb), {
+        tier: Bb
+      } = ub, tb = "legendary" === Bb || "mythic" === Bb, yb = (0, kb.useRef)(null);
+      (0, MT.c)(yb, "epic" === Bb || tb || gb);
+      const [Pb, Eb] = (0, kb.useState)(!1);
+      return !Hb && Pb && Eb(!1), (0, fb.jsxs)("div", {
+        ref: yb,
+        className: ab()("StoreCharacterCard", `StoreCharacterCard${Wb}`, lT[Bb], {
+          StoreCharacterCardOwned: "owned" === Lb || "recipientOwns" === Lb,
+          StoreCharacterCardGift: Fa(Lb),
+          StoreCharacterCardItem: void 0 === Yb
         }),
-        onPointerMove: kk => {
-          "mouse" !== kk.pointerType || 0 === kk.movementX && 0 === kk.movementY || !wk || dk || void 0 === Ok || Ak()
+        onPointerMove: bb => {
+          "mouse" !== bb.pointerType || 0 === bb.movementX && 0 === bb.movementY || !Ib || Hb || void 0 === Yb || nb()
         },
-        onPointerLeave: ek,
-        children: [(0, sk.jsx)("div", {
+        onPointerLeave: mb,
+        children: [(0, fb.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: Sk && (0, sk.jsx)(Sk, {
+          children: Jb && (0, fb.jsx)(Jb, {
             simple: !0
           })
-        }), uk && (0, sk.jsx)("div", {
+        }), tb && (0, fb.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, sk.jsxs)(Uk.LinkPreserveSearch, {
+        }), (0, fb.jsxs)(Db.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, XX.g)({
+          to: (0, UT.g)({
             kind: "pack",
-            pack: ik
+            pack: Vb
           }),
-          "data-store-item": ik,
-          onClick: kk => {
-            (0, bX.e)(kk) && (kk.preventDefault(), yk())
+          "data-store-item": Vb,
+          onClick: bb => {
+            (0, IT.b)(bb) && (bb.preventDefault(), lb())
           },
-          children: [(0, sk.jsxs)("div", {
+          children: [(0, fb.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, sk.jsx)("div", {
+            children: [(0, fb.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, sk.jsx)("div", {
-              className: ak()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: gk
+            }), (0, fb.jsx)("div", {
+              className: ab()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: Pb
               }),
               style: {
-                backgroundImage: `url(${(0,Sa.r)(ik)})`
+                backgroundImage: `url(${(0,Ba.p)(Vb)})`
               }
-            }), dk && void 0 !== Ok && (0, sk.jsx)(AX, {
-              character: Ok,
-              drawn: gk,
+            }), Hb && void 0 !== Yb && (0, fb.jsx)(mT, {
+              character: Yb,
+              drawn: Pb,
               onDrawn: () => {
-                ck(!0)
+                Eb(!0)
               }
             })]
-          }), (0, sk.jsx)("div", {
+          }), (0, fb.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (Fk = Lk.displayName) && void 0 !== Fk ? Fk : ik
-          }), (0, sk.jsx)(Ka.b, {
-            tier: Hk,
+            children: null !== (cb = ub.displayName) && void 0 !== cb ? cb : Vb
+          }), (0, fb.jsx)(Ra.b, {
+            tier: Bb,
             className: "StoreCharacterTier"
           })]
-        }), (0, sk.jsx)("div", {
+        }), (0, fb.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), Nk && (0, sk.jsx)("span", {
+        }), gb && (0, fb.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, sk.jsx)(dX, {})
-        }), "owned" === Yk && (0, sk.jsx)("span", {
+          children: (0, fb.jsx)(fT, {})
+        }), "owned" === Lb && (0, fb.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: vk("general:owned"),
-          "aria-label": vk("general:owned"),
-          children: (0, sk.jsx)(bk.d, {
+          title: Nb("general:owned"),
+          "aria-label": Nb("general:owned"),
+          children: (0, fb.jsx)(Ub.b, {
             name: "check"
           })
-        }), (0, sk.jsx)("div", {
+        }), (0, fb.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, sk.jsx)(Qa, {
-            state: Yk,
-            item: ik,
-            price: (0, Tk.h)(ik),
-            busy: Vk,
-            highlight: Jk,
-            onAct: fk,
-            onNeedRecipient: mk,
-            onLogin: Wk
+          children: (0, fb.jsx)(bT, {
+            state: Lb,
+            item: Vb,
+            price: (0, Ob.d)(Vb),
+            busy: Mb,
+            highlight: Xb,
+            onAct: Qb,
+            onNeedRecipient: eb,
+            onLogin: Cb
           })
         })]
       })
     }
 
-    function mX(kk) {
+    function CT(bb) {
       let {
-        tiles: Fk,
-        busy: Bk,
-        highlightItem: tk,
-        onOpen: ak,
-        onAct: Xk,
-        onNeedRecipient: bk,
-        onLogin: wk
-      } = kk;
-      const dk = (0, wX.j)("storeCharacterCardFoil"),
-        Vk = (0, wX.j)("storeCharacterCardSpotlight"),
-        Jk = dk ? "Foil" : Vk ? "Spotlight" : "Showcase",
-        [Ak] = (0, Rk.useState)(Oa.j),
-        [ek, yk] = (0, Rk.useState)(null);
-      return (0, sk.jsx)("div", {
+        tiles: cb,
+        busy: sb,
+        highlightItem: Wb,
+        onOpen: ab,
+        onAct: Tb,
+        onNeedRecipient: Ub,
+        onLogin: Ib
+      } = bb;
+      const Hb = (0, HT.i)("storeCharacterCardFoil"),
+        Mb = (0, HT.i)("storeCharacterCardSpotlight"),
+        Xb = Hb ? "Foil" : Mb ? "Spotlight" : "Showcase",
+        [nb] = (0, kb.useState)(Ja.j),
+        [mb, lb] = (0, kb.useState)(null);
+      return (0, fb.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: Fk.map((kk => (0, sk.jsx)(fX, {
-          tile: kk,
-          design: Jk,
-          canGoLive: !Ak,
-          live: ek === kk.pack,
-          busy: Bk,
-          highlight: tk === kk.pack,
+        children: cb.map((bb => (0, fb.jsx)(eT, {
+          tile: bb,
+          design: Xb,
+          canGoLive: !nb,
+          live: mb === bb.pack,
+          busy: sb,
+          highlight: Wb === bb.pack,
           onLiveStart: () => {
-            yk(kk.pack)
+            lb(bb.pack)
           },
           onLiveEnd: () => {
-            yk((Fk => Fk === kk.pack ? null : Fk))
+            lb((cb => cb === bb.pack ? null : cb))
           },
           onOpen: () => {
-            ak(kk.pack)
+            ab(bb.pack)
           },
           onAct: () => {
-            Xk(kk.pack)
+            Tb(bb.pack)
           },
-          onNeedRecipient: bk,
+          onNeedRecipient: Ub,
           onLogin: () => {
-            wk(kk.pack)
+            Ib(bb.pack)
           }
-        }, kk.pack)))
+        }, bb.pack)))
       })
     }
-    var WX = Bk(9051);
+    var NT = sb(8967);
 
-    function vX(kk) {
+    function VT(bb) {
       let {
-        title: Fk
-      } = kk;
-      return (0, sk.jsx)("h2", {
+        title: cb
+      } = bb;
+      return (0, fb.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, sk.jsx)("span", {
+        children: (0, fb.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: Fk
+          children: cb
         })
       })
     }
 
-    function iX(kk) {
+    function LT(bb) {
       let {
-        mountAtOnce: Fk,
-        children: Bk
-      } = kk;
-      const tk = (0, Rk.useRef)(null),
-        [ak, Xk] = (0, Rk.useState)(Fk),
-        bk = (0, WX.c)();
-      return (0, Rk.useLayoutEffect)((() => {
-        const kk = tk.current;
-        kk && kk.getBoundingClientRect().top < kk.parentElement.getBoundingClientRect().bottom && Xk(!0)
-      }), []), ak || bk ? (0, sk.jsx)(sk.Fragment, {
-        children: Bk
-      }) : (0, sk.jsx)("div", {
-        ref: tk
+        mountAtOnce: cb,
+        children: sb
+      } = bb;
+      const Wb = (0, kb.useRef)(null),
+        [ab, Tb] = (0, kb.useState)(cb),
+        Ub = (0, NT.b)();
+      return (0, kb.useLayoutEffect)((() => {
+        const bb = Wb.current;
+        bb && bb.getBoundingClientRect().top < bb.parentElement.getBoundingClientRect().bottom && Tb(!0)
+      }), []), ab || Ub ? (0, fb.jsx)(fb.Fragment, {
+        children: sb
+      }) : (0, fb.jsx)("div", {
+        ref: Wb
       })
     }
 
-    function YX(kk) {
+    function uT(bb) {
       let {
-        layout: Fk,
-        mountAtOnce: Bk,
-        bundleGift: Rk,
-        superRankTotalDays: tk,
-        busy: ak,
-        highlightItem: bk,
-        onOpen: wk,
-        onAct: dk,
-        onNeedRecipient: Vk,
-        onLogin: Jk
-      } = kk;
+        layout: cb,
+        mountAtOnce: sb,
+        bundleGift: kb,
+        superRankTotalDays: Wb,
+        busy: ab,
+        highlightItem: Ub,
+        onOpen: Ib,
+        onAct: Hb,
+        onNeedRecipient: Mb,
+        onLogin: Xb
+      } = bb;
       const {
-        t: Ak
-      } = (0, Xk.x)(), ek = Fk.packs.filter((kk => void 0 === (0, ba.g)(kk.pack) && !(0, ba.m)(kk.pack))), yk = Fk.packs.filter((kk => void 0 !== (0, ba.g)(kk.pack))), fk = Fk.packs.filter((kk => (0, ba.m)(kk.pack)));
-      return (0, sk.jsxs)(sk.Fragment, {
-        children: [(0, sk.jsx)(aX.c, {
+        t: nb
+      } = (0, Tb.E)(), mb = cb.packs.filter((bb => void 0 === (0, Ia.f)(bb.pack) && !(0, Ia.l)(bb.pack))), lb = cb.packs.filter((bb => void 0 !== (0, Ia.f)(bb.pack))), Qb = cb.packs.filter((bb => (0, Ia.l)(bb.pack)));
+      return (0, fb.jsxs)(fb.Fragment, {
+        children: [(0, fb.jsx)(TT.e, {
           className: "StoreSuperGems",
-          gift: Rk,
-          highlightSku: bk
-        }), (0, sk.jsx)(vX, {
-          title: Ak("store:rank")
-        }), (0, sk.jsx)(BX, {
-          state: Fk.superRank.state,
-          urgent: Fk.superRank.urgent,
-          daysLeft: Fk.superRankDaysLeft,
-          totalDays: tk,
-          recipientHasSuperRank: Fk.recipientHasSuperRank,
-          busy: ak,
-          highlight: "superRank" === bk,
+          gift: kb,
+          highlightSku: Ub
+        }), (0, fb.jsx)(VT, {
+          title: nb("store:rank")
+        }), (0, fb.jsx)(kT, {
+          state: cb.superRank.state,
+          urgent: cb.superRank.urgent,
+          daysLeft: cb.superRankDaysLeft,
+          totalDays: Wb,
+          recipientHasSuperRank: cb.recipientHasSuperRank,
+          busy: ab,
+          highlight: "superRank" === Ub,
           onOpen: () => {
-            wk("superRank")
+            Ib("superRank")
           },
           onAct: () => {
-            dk("superRank")
+            Hb("superRank")
           },
-          onNeedRecipient: Vk,
+          onNeedRecipient: Mb,
           onLogin: () => {
-            Jk("superRank")
+            Xb("superRank")
           }
-        }), (0, sk.jsxs)(iX, {
-          mountAtOnce: Bk,
-          children: [(0, sk.jsx)(vX, {
-            title: Ak("store:bundles")
-          }), (0, sk.jsx)("div", {
+        }), (0, fb.jsxs)(LT, {
+          mountAtOnce: sb,
+          children: [(0, fb.jsx)(VT, {
+            title: nb("store:bundles")
+          }), (0, fb.jsx)("div", {
             className: "StorePackGrid",
-            children: ek.map((kk => (0, sk.jsx)(tX, {
-              pack: kk.pack,
-              state: kk.state,
-              busy: ak,
+            children: mb.map((bb => (0, fb.jsx)(aT, {
+              pack: bb.pack,
+              state: bb.state,
+              busy: ab,
               onOpen: () => {
-                wk(kk.pack)
+                Ib(bb.pack)
               },
               onAct: () => {
-                dk(kk.pack)
+                Hb(bb.pack)
               },
-              onNeedRecipient: Vk,
+              onNeedRecipient: Mb,
               onLogin: () => {
-                Jk(kk.pack)
+                Xb(bb.pack)
               }
-            }, kk.pack)))
-          }), (0, sk.jsxs)(iX, {
-            mountAtOnce: Bk,
-            children: [(0, sk.jsx)(vX, {
-              title: Ak("store:characters")
-            }), (0, sk.jsx)(mX, {
-              tiles: yk,
-              busy: ak,
-              highlightItem: bk,
-              onOpen: wk,
-              onAct: dk,
-              onNeedRecipient: Vk,
-              onLogin: Jk
-            }), fk.length > 0 && (0, sk.jsxs)(sk.Fragment, {
-              children: [(0, sk.jsx)(vX, {
-                title: Ak("store:premiumItems")
-              }), (0, sk.jsx)(mX, {
-                tiles: fk,
-                busy: ak,
-                highlightItem: bk,
-                onOpen: wk,
-                onAct: dk,
-                onNeedRecipient: Vk,
-                onLogin: Jk
+            }, bb.pack)))
+          }), (0, fb.jsxs)(LT, {
+            mountAtOnce: sb,
+            children: [(0, fb.jsx)(VT, {
+              title: nb("store:characters")
+            }), (0, fb.jsx)(CT, {
+              tiles: lb,
+              busy: ab,
+              highlightItem: Ub,
+              onOpen: Ib,
+              onAct: Hb,
+              onNeedRecipient: Mb,
+              onLogin: Xb
+            }), Qb.length > 0 && (0, fb.jsxs)(fb.Fragment, {
+              children: [(0, fb.jsx)(VT, {
+                title: nb("store:premiumItems")
+              }), (0, fb.jsx)(CT, {
+                tiles: Qb,
+                busy: ab,
+                highlightItem: Ub,
+                onOpen: Ib,
+                onAct: Hb,
+                onNeedRecipient: Mb,
+                onLogin: Xb
               })]
             })]
           })]
@@ -6508,780 +6508,780 @@ export const modules = {
       })
     }
 
-    function oX(kk) {
+    function YT(bb) {
       let {
-        state: Fk,
-        mode: Bk,
-        giftName: Rk,
-        busy: tk,
-        highlight: ak,
-        purchaseError: bk,
-        onBack: wk,
-        onChooseRecipient: dk,
-        onAct: Vk,
-        onLogin: Jk
-      } = kk;
+        state: cb,
+        mode: sb,
+        giftName: kb,
+        busy: Wb,
+        highlight: ab,
+        purchaseError: Ub,
+        onBack: Ib,
+        onChooseRecipient: Hb,
+        onAct: Mb,
+        onLogin: Xb
+      } = bb;
       const {
-        t: Ak
-      } = (0, Xk.x)(), ek = jk("gift" !== Bk);
-      return (0, sk.jsx)(qa, {
-        onBack: wk,
-        recipient: "gift" === Bk && (0, sk.jsxs)(sk.Fragment, {
-          children: [Rk && (0, sk.jsxs)("span", {
+        t: nb
+      } = (0, Tb.E)(), mb = Rb("gift" !== sb);
+      return (0, fb.jsx)(wa, {
+        onBack: Ib,
+        recipient: "gift" === sb && (0, fb.jsxs)(fb.Fragment, {
+          children: [kb && (0, fb.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: Ak("store:giftFor", {
-              name: Rk
+            title: nb("store:giftFor", {
+              name: kb
             }),
-            children: [fa.e, " ", Ak("store:giftFor", {
-              name: Rk
+            children: [ea.d, " ", nb("store:giftFor", {
+              name: kb
             })]
-          }), !Rk && (0, sk.jsxs)("div", {
-            ...(0, fk.R)(),
+          }), !kb && (0, fb.jsxs)("div", {
+            ...(0, Qb.U)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: dk,
-            children: [fa.e, " ", Ak("store:chooseRecipient")]
+            onClick: Hb,
+            children: [ea.d, " ", nb("store:chooseRecipient")]
           })]
         }),
-        cta: (0, sk.jsx)(Qa, {
-          state: Fk,
+        cta: (0, fb.jsx)(bT, {
+          state: cb,
           item: "superRank",
-          price: Tk.n.price,
-          busy: tk,
-          highlight: ak,
-          onAct: Vk,
-          onNeedRecipient: dk,
-          onLogin: Jk
+          price: Ob.i.price,
+          busy: Wb,
+          highlight: ab,
+          onAct: Mb,
+          onNeedRecipient: Hb,
+          onLogin: Xb
         }),
-        afterCta: (0, sk.jsxs)(sk.Fragment, {
-          children: [ek && (0, sk.jsx)("span", {
+        afterCta: (0, fb.jsxs)(fb.Fragment, {
+          children: [mb && (0, fb.jsx)("span", {
             className: "StoreTileNote",
-            children: ek
-          }), bk && (0, sk.jsx)("span", {
+            children: mb
+          }), Ub && (0, fb.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: Ak(bk)
+            children: nb(Ub)
           })]
         })
       })
     }
-    var LX = Bk(137);
-    const OX = LX.m("kind", [LX.C({
-      kind: LX.u("refused"),
-      heldTierId: LX.T(),
-      until: LX.A()
-    }), LX.C({
-      kind: LX.u("refund"),
-      tierId: LX.T(),
-      refundedMs: LX.A(),
-      forfeitedMs: LX.A(),
-      premiumCurrency: LX.A()
-    }), LX.C({
-      kind: LX.u("none")
+    var hT = sb(182);
+    const JT = hT.l("kind", [hT.G({
+      kind: hT.v("refused"),
+      heldTierId: hT.W(),
+      until: hT.C()
+    }), hT.G({
+      kind: hT.v("refund"),
+      tierId: hT.W(),
+      refundedMs: hT.C(),
+      forfeitedMs: hT.C(),
+      premiumCurrency: hT.C()
+    }), hT.G({
+      kind: hT.v("none")
     })]);
-    async function EX(kk) {
-      const Fk = await (0, uk.postJsonWithMetricsCookiesAndJsonResponse)(`${Mk.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
-        productId: kk
+    async function gT(bb) {
+      const cb = await (0, tb.postJsonWithMetricsCookiesAndJsonResponse)(`${yb.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
+        productId: bb
       }, {
         retries: 1
       });
-      return OX.parse(Fk)
+      return JT.parse(cb)
     }
-    var SX = Bk(2838),
-      NX = Bk(2877);
+    var BT = sb(2797),
+      tT = sb(2830);
 
-    function HX(kk, Fk) {
-      const Bk = Math.max(1, Math.round(Fk / zk.f));
-      return [1 === Bk ? `${kk}OneDay` : kk, {
-        days: Bk.toLocaleString()
+    function yT(bb, cb) {
+      const sb = Math.max(1, Math.round(cb / Zb.j));
+      return [1 === sb ? `${bb}OneDay` : bb, {
+        days: sb.toLocaleString()
       }]
     }
 
-    function uX() {
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, hk.purchasesAllowed)() ? (0, sk.jsx)(MX, {}) : null
+    function PT() {
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, qb.purchasesAllowed)() ? (0, fb.jsx)(DT, {}) : null
     }
 
-    function MX() {
+    function DT() {
       const {
-        t: kk
-      } = (0, Xk.x)(), {
-        userContext: Fk
-      } = (0, Ak.e)(), {
-        purchaseUnderWay: Bk,
-        notice: tk,
-        subscribe: ak
-      } = (0, SX.e)(), [bk, wk] = (0, Rk.useState)(null), [dk, Vk] = (0, Rk.useState)(0), [Jk, ek] = (0, Rk.useState)(!1), yk = (0, Rk.useRef)(!0), mk = Fk !== uk.NULL_USER_CONTEXT, Wk = null !== bk && bk.loadedFor === Fk ? bk.offer : null, vk = null === tk || void 0 === tk ? void 0 : tk.pendingIntentId, ik = (0, Rk.useRef)(vk);
+        t: bb
+      } = (0, Tb.E)(), {
+        userContext: cb
+      } = (0, nb.c)(), {
+        purchaseUnderWay: sb,
+        notice: Wb,
+        subscribe: ab
+      } = (0, BT.b)(), [Ub, Ib] = (0, kb.useState)(null), [Hb, Mb] = (0, kb.useState)(0), [Xb, mb] = (0, kb.useState)(!1), lb = (0, kb.useRef)(!0), eb = cb !== tb.NULL_USER_CONTEXT, Cb = null !== Ub && Ub.loadedFor === cb ? Ub.offer : null, Nb = null === Wb || void 0 === Wb ? void 0 : Wb.pendingIntentId, Vb = (0, kb.useRef)(Nb);
 
-      function Yk() {
-        Vk((kk => kk + 1))
+      function Lb() {
+        Mb((bb => bb + 1))
       }
-      async function Lk(kk) {
-        ek(!1), await ak(kk), yk.current && Yk()
+      async function ub(bb) {
+        mb(!1), await ab(bb), lb.current && Lb()
       }
-      if ((0, Rk.useEffect)((() => (yk.current = !0, () => {
-          yk.current = !1
-        })), []), (0, Rk.useEffect)((() => {
-          void 0 !== ik.current && void 0 === vk && Yk(), ik.current = vk
-        }), [vk]), (0, Rk.useEffect)((() => {
-          if (!mk) return;
-          let kk = !1;
-          return ek(!1), async function() {
+      if ((0, kb.useEffect)((() => (lb.current = !0, () => {
+          lb.current = !1
+        })), []), (0, kb.useEffect)((() => {
+          void 0 !== Vb.current && void 0 === Nb && Lb(), Vb.current = Nb
+        }), [Nb]), (0, kb.useEffect)((() => {
+          if (!eb) return;
+          let bb = !1;
+          return mb(!1), async function() {
             const {
-              offering: kk
-            } = await (0, wF.f)().getOfferings("superRankPage"), Fk = null === kk || void 0 === kk ? void 0 : kk.packages.find((kk => null !== kk.price));
-            return void 0 === Fk ? {
+              offering: bb
+            } = await (0, Uc.e)().getOfferings("superRankPage"), cb = null === bb || void 0 === bb ? void 0 : bb.packages.find((bb => null !== bb.price));
+            return void 0 === cb ? {
               kind: "unavailable"
             } : {
               kind: "loaded",
-              pkg: Fk,
-              preview: await EX(Fk.productId)
+              pkg: cb,
+              preview: await gT(cb.productId)
             }
-          }().catch((kk => (console.error("Billing: loading the Super Rank subscription or its preview failed:", kk), {
+          }().catch((bb => (console.error("Billing: loading the Super Rank subscription or its preview failed:", bb), {
             kind: "loadFailed"
-          }))).then((Bk => {
-            kk || wk((kk => "loadFailed" === Bk.kind && (null === kk || void 0 === kk ? void 0 : kk.loadedFor) === Fk ? kk : {
-              loadedFor: Fk,
-              offer: Bk
+          }))).then((sb => {
+            bb || Ib((bb => "loadFailed" === sb.kind && (null === bb || void 0 === bb ? void 0 : bb.loadedFor) === cb ? bb : {
+              loadedFor: cb,
+              offer: sb
             }))
           })), () => {
-            kk = !0
+            bb = !0
           }
-        }), [Fk, mk, dk]), null === Wk) return null;
-      if ("loaded" !== Wk.kind) return (0, sk.jsx)(NX.f, {
+        }), [cb, eb, Hb]), null === Cb) return null;
+      if ("loaded" !== Cb.kind) return (0, fb.jsx)(tT.h, {
         notice: {
           kind: "error",
-          key: "unavailable" === Wk.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === Cb.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: Ok,
-        preview: Ek
-      } = Wk;
-      if ("refused" === Ek.kind) return (0, sk.jsx)(NX.f, {
+        pkg: Yb,
+        preview: hb
+      } = Cb;
+      if ("refused" === hb.kind) return (0, fb.jsx)(tT.h, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(Ek.until).toLocaleDateString()
+            date: new Date(hb.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const Sk = (0, aX.d)(Ok.price);
-      if (Jk && "refund" === Ek.kind) {
+      const Jb = (0, TT.f)(Yb.price);
+      if (Xb && "refund" === hb.kind) {
         const {
-          refundedMs: Fk,
-          forfeitedMs: Rk,
-          premiumCurrency: tk
-        } = Ek, ak = Rk + (0 === tk ? Fk : 0), [Xk, bk] = HX("payments:subscribeRefundsGemRank", Fk), [wk, dk] = HX("payments:subscribeForfeitsGemRank", ak);
-        return (0, sk.jsxs)("div", {
+          refundedMs: cb,
+          forfeitedMs: kb,
+          premiumCurrency: Wb
+        } = hb, ab = kb + (0 === Wb ? cb : 0), [Tb, Ub] = yT("payments:subscribeRefundsGemRank", cb), [Ib, Hb] = yT("payments:subscribeForfeitsGemRank", ab);
+        return (0, fb.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, sk.jsx)("div", {
-            children: kk("payments:subscribeEndsGemRank")
-          }), tk > 0 && (0, sk.jsx)("div", {
-            children: kk(Xk, {
-              ...bk,
-              amount: tk.toLocaleString()
+          children: [(0, fb.jsx)("div", {
+            children: bb("payments:subscribeEndsGemRank")
+          }), Wb > 0 && (0, fb.jsx)("div", {
+            children: bb(Tb, {
+              ...Ub,
+              amount: Wb.toLocaleString()
             })
-          }), ak > 0 && (0, sk.jsx)("div", {
-            children: kk(wk, dk)
-          }), (0, sk.jsxs)("div", {
+          }), ab > 0 && (0, fb.jsx)("div", {
+            children: bb(Ib, Hb)
+          }), (0, fb.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, sk.jsx)(fk.j, {
+            children: [(0, fb.jsx)(Qb.h, {
               onClick: () => {
-                ek(!1)
+                mb(!1)
               },
-              children: kk("general:cancel")
-            }), (0, sk.jsx)(fk.o, {
+              children: bb("general:cancel")
+            }), (0, fb.jsx)(Qb.n, {
               onClick: () => {
-                Lk(Ok)
+                ub(Yb)
               },
-              loading: Bk,
-              children: kk("payments:subscribeContinue", {
-                price: Sk
+              loading: sb,
+              children: bb("payments:subscribeContinue", {
+                price: Jb
               })
             })]
           })]
         })
       }
-      return (0, sk.jsxs)("div", {
+      return (0, fb.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, sk.jsx)(NX.f, {
-          notice: tk,
+        children: [(0, fb.jsx)(tT.h, {
+          notice: Wb,
           className: "SmallTextBold"
-        }), (0, sk.jsx)(NX.b, {
+        }), (0, fb.jsx)(tT.d, {
           className: "SmallTextBold"
-        }), (0, sk.jsx)(fk.o, {
+        }), (0, fb.jsx)(Qb.n, {
           onClick: () => {
-            "refund" === Ek.kind ? ek(!0) : Lk(Ok)
+            "refund" === hb.kind ? mb(!0) : ub(Yb)
           },
-          disabled: void 0 !== vk,
-          loading: Bk,
-          children: kk("payments:subscribeToSuperRank", {
-            price: Sk
+          disabled: void 0 !== Nb,
+          loading: sb,
+          children: bb("payments:subscribeToSuperRank", {
+            price: Jb
           })
         })]
       })
     }
-    const gX = {
+    const ET = {
       kind: "board"
     };
-    let UX = !1;
+    let iT = !1;
 
-    function cX(kk) {
-      return "found" === kk.status || "error" === kk.status && "store:giftRecipientLookupFailed" === kk.error ? kk.name : null
-    }(0, Pk.u)(wa.prefetchBillingOfferings);
-    const GX = (0, Rk.memo)((function(kk) {
-      var Fk;
+    function OT(bb) {
+      return "found" === bb.status || "error" === bb.status && "store:giftRecipientLookupFailed" === bb.error ? bb.name : null
+    }(0, zb.s)(Ha.prefetchBillingOfferings);
+    const GT = (0, kb.memo)((function(bb) {
+      var cb;
       let {
-        show: tk
-      } = kk;
+        show: Wb
+      } = bb;
       const {
-        t: bk
-      } = (0, Xk.x)(), {
-        userContext: wk
-      } = (0, Ak.e)(), dk = wk !== uk.NULL_USER_CONTEXT, Vk = ia(wk), [Jk, ek] = (0, yk.c)(), {
-        page: fk,
-        urlMode: mk,
-        goTo: Wk
-      } = (0, Ya.f)(), vk = function(kk) {
-        return "superRank" === kk.kind ? "superRank" : "pack" === kk.kind ? kk.pack : null
-      }(fk), {
-        openEverythingMenuName: ik,
-        gameState: Yk
-      } = (0, Ek.h)(["openEverythingMenuName", "gameState"]), Lk = null !== ik;
-      ! function(kk, Fk) {
-        const [tk] = (0, Rk.useState)(Oa.j), [ak, Xk] = (0, Rk.useState)(!1);
-        tk && Fk && !ak && Xk(!0);
-        const bk = (0, XR.o)(),
-          wk = tk && ak && kk && !bk;
-        (0, Rk.useEffect)((() => {
-          if (!wk) return;
-          let kk = null,
-            Fk = null,
-            Rk = null;
-          const tk = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, wF.f)().purchaseUnderWay,
-            ak = () => {
-              var Bk;
-              null === (Bk = Rk) || void 0 === Bk || Bk(), Rk = null, null !== kk && (clearTimeout(kk), kk = null), null !== Fk && (clearTimeout(Fk), Fk = null)
+        t: Ub
+      } = (0, Tb.E)(), {
+        userContext: Ib
+      } = (0, nb.c)(), Hb = Ib !== tb.NULL_USER_CONTEXT, Mb = La(Ib), [Xb, mb] = (0, lb.c)(), {
+        page: Qb,
+        urlMode: eb,
+        goTo: Cb
+      } = (0, ua.f)(), Nb = function(bb) {
+        return "superRank" === bb.kind ? "superRank" : "pack" === bb.kind ? bb.pack : null
+      }(Qb), {
+        openEverythingMenuName: Vb,
+        gameState: Lb
+      } = (0, hb.p)(["openEverythingMenuName", "gameState"]), ub = null !== Vb;
+      ! function(bb, cb) {
+        const [Wb] = (0, kb.useState)(Ja.j), [ab, Tb] = (0, kb.useState)(!1);
+        Wb && cb && !ab && Tb(!0);
+        const Ub = (0, Uk.l)(),
+          Ib = Wb && ab && bb && !Ub;
+        (0, kb.useEffect)((() => {
+          if (!Ib) return;
+          let bb = null,
+            cb = null,
+            kb = null;
+          const Wb = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, Uc.e)().purchaseUnderWay,
+            ab = () => {
+              var sb;
+              null === (sb = kb) || void 0 === sb || sb(), kb = null, null !== bb && (clearTimeout(bb), bb = null), null !== cb && (clearTimeout(cb), cb = null)
             },
-            Xk = () => {
-              (0, oa.l)(!1), (0, oa.h)(!1), ak(), kk = setTimeout((() => {
-                kk = null, Rk = (0, La.b)((() => {
-                  Rk = null, tk() ? Xk() : ((0, oa.l)(!0), Fk = setTimeout((() => {
-                    Fk = null, Rk = (0, La.b)((() => {
-                      Rk = null, tk() ? Xk() : (0, oa.h)(!0)
+            Tb = () => {
+              (0, Ya.n)(!1), (0, Ya.m)(!1), ab(), bb = setTimeout((() => {
+                bb = null, kb = (0, ha.b)((() => {
+                  kb = null, Wb() ? Tb() : ((0, Ya.n)(!0), cb = setTimeout((() => {
+                    cb = null, kb = (0, ha.b)((() => {
+                      kb = null, Wb() ? Tb() : (0, Ya.m)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => Bk(4391))).then((kk => {
-                    kk.startBackgroundGameSetup()
-                  }), (kk => {
-                    console.warn("Background game setup: its chunk failed to load", kk)
+                  }), 3e3), Promise.resolve().then((() => sb(4389))).then((bb => {
+                    bb.startBackgroundGameSetup()
+                  }), (bb => {
+                    console.warn("Background game setup: its chunk failed to load", bb)
                   })))
                 }))
               }), 2e3)
             };
-          for (const Bk of Ea) window.addEventListener(Bk, Xk, {
+          for (const sb of ga) window.addEventListener(sb, Tb, {
             capture: !0,
             passive: !0
           });
-          return Xk(), () => {
-            for (const kk of Ea) window.removeEventListener(kk, Xk, {
+          return Tb(), () => {
+            for (const bb of ga) window.removeEventListener(bb, Tb, {
               capture: !0
             });
-            ak(), (0, oa.l)(!1), (0, oa.h)(!1)
+            ab(), (0, Ya.n)(!1), (0, Ya.m)(!1)
           }
-        }), [wk])
-      }(tk && Lk, "pack" === fk.kind);
-      const Ok = "landingPage" === Yk;
-      (0, Rk.useEffect)((() => {
-        Lk && (0, wa.prefetchBillingOfferings)()
-      }), [Lk]), (0, Rk.useEffect)((() => {
-        Lk && !tk && Ok && (0, Sa.u)()
-      }), [Lk, tk, Ok]);
-      const [Sk, Nk] = (0, Rk.useState)(0), [Hk, Mk] = (0, Rk.useState)(null), [gk, Uk] = (0, Rk.useState)(null), [ck, Gk] = (0, Rk.useState)(null), [rk, Dk] = (0, Rk.useState)(null), zk = (0, Rk.useRef)(null), qk = (0, Rk.useRef)(null), Ck = (0, Rk.useRef)(!1), Zk = (0, Pk.C)(), pk = (0, Rk.useRef)(0), Kk = (0, Rk.useRef)(!1);
+        }), [Ib])
+      }(Wb && ub, "pack" === Qb.kind);
+      const Yb = "landingPage" === Lb;
+      (0, kb.useEffect)((() => {
+        ub && (0, Ha.prefetchBillingOfferings)()
+      }), [ub]), (0, kb.useEffect)((() => {
+        ub && !Wb && Yb && (0, Ba.s)()
+      }), [ub, Wb, Yb]);
+      const [Jb, gb] = (0, kb.useState)(0), [Bb, yb] = (0, kb.useState)(null), [Pb, Db] = (0, kb.useState)(null), [Eb, ib] = (0, kb.useState)(null), [Gb, Kb] = (0, kb.useState)(null), Zb = (0, kb.useRef)(null), db = (0, kb.useRef)(null), Ab = (0, kb.useRef)(!1), wb = (0, zb.z)(), rb = (0, kb.useRef)(0), ob = (0, kb.useRef)(!1);
 
-      function xk() {
-        Nk((kk => kk + 1))
-      }(0, Rk.useEffect)((() => {
-        if (tk) {
-          if (UX = !0, (0, Pk.j)(), Zk && Zk.seq !== pk.current) {
-            var kk;
-            pk.current = Zk.seq, "loginResume" !== Zk.source && (0, Pk.B)();
-            const Fk = (0, Pk.e)(Zk);
-            mk || Wk(Fk), Dk(null !== (kk = Zk.highlight) && void 0 !== kk ? kk : null), Uk(null), "gift" === Zk.mode && Zk.giftRecipientName ? Vk.choose(Zk.giftRecipientName, "prefilled") : "current" !== Zk.mode && Vk.clear(), "gift" !== Zk.mode || Zk.giftRecipientName || xk(), (0, Qk.reportAnalyticsClick)({
+      function Sb() {
+        gb((bb => bb + 1))
+      }(0, kb.useEffect)((() => {
+        if (Wb) {
+          if (iT = !0, (0, zb.m)(), wb && wb.seq !== rb.current) {
+            var bb;
+            rb.current = wb.seq, "loginResume" !== wb.source && (0, zb.x)();
+            const cb = (0, zb.e)(wb);
+            eb || Cb(cb), Kb(null !== (bb = wb.highlight) && void 0 !== bb ? bb : null), Db(null), "gift" === wb.mode && wb.giftRecipientName ? Mb.choose(wb.giftRecipientName, "prefilled") : "current" !== wb.mode && Mb.clear(), "gift" !== wb.mode || wb.giftRecipientName || Sb(), (0, jb.reportAnalyticsClick)({
               id: "store.open",
-              value: Zk.source
+              value: wb.source
             })
-          } else Kk.current || (0, Qk.reportAnalyticsClick)({
+          } else ob.current || (0, jb.reportAnalyticsClick)({
             id: "store.open",
             value: "menuTab"
           });
-          Kk.current = !0
-        } else Kk.current = !1
-      }), [tk, Zk]), (0, Rk.useEffect)((() => {
-        if (!rk) return;
-        const kk = setTimeout((() => {
-          Dk(null)
+          ob.current = !0
+        } else ob.current = !1
+      }), [Wb, wb]), (0, kb.useEffect)((() => {
+        if (!Gb) return;
+        const bb = setTimeout((() => {
+          Kb(null)
         }), 4e3);
         return () => {
-          clearTimeout(kk)
+          clearTimeout(bb)
         }
-      }), [rk]), (0, Rk.useEffect)((() => {
-        const kk = zk.current;
-        var Fk;
-        if (tk && kk) {
-          if (vk) qk.current = vk, null === (Fk = kk.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === Fk || Fk.focus();
-          else if (qk.current) {
-            var Bk;
-            null === (Bk = kk.querySelector(`[data-store-item="${qk.current}"]`)) || void 0 === Bk || Bk.focus(), qk.current = null
+      }), [Gb]), (0, kb.useEffect)((() => {
+        const bb = Zb.current;
+        var cb;
+        if (Wb && bb) {
+          if (Nb) db.current = Nb, null === (cb = bb.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === cb || cb.focus();
+          else if (db.current) {
+            var sb;
+            null === (sb = bb.querySelector(`[data-store-item="${db.current}"]`)) || void 0 === sb || sb.focus(), db.current = null
           }
-        } else qk.current = null
-      }), [vk, tk]), (0, Rk.useEffect)((() => {
-        Uk(null)
-      }), [Vk.query]), (0, Rk.useEffect)((() => {
-        if (!ck) return;
-        const kk = setTimeout((() => {
-          Gk(null)
+        } else db.current = null
+      }), [Nb, Wb]), (0, kb.useEffect)((() => {
+        Db(null)
+      }), [Mb.query]), (0, kb.useEffect)((() => {
+        if (!Eb) return;
+        const bb = setTimeout((() => {
+          ib(null)
         }), 8e3);
         return () => {
-          clearTimeout(kk)
+          clearTimeout(bb)
         }
-      }), [ck]);
-      const jk = wk.superRankInfo,
-        lk = wk.isLoggedIn() || (0, hk.guestsMayBuy)(),
-        nk = wk.getOwnedCosmeticPacks(),
-        Ik = (0, fa.o)(Vk.query),
-        kF = (0, fa.i)({
-          mode: Ik,
-          loggedIn: dk ? lk : null,
-          superRankInfo: jk,
+      }), [Eb]);
+      const Rb = Ib.superRankInfo,
+        vb = Ib.isLoggedIn() || (0, qb.guestsMayBuy)(),
+        Fb = Ib.getOwnedCosmeticPacks(),
+        xb = (0, ea.r)(Mb.query),
+        pb = (0, ea.h)({
+          mode: xb,
+          loggedIn: Hb ? vb : null,
+          superRankInfo: Rb,
           now: Date.now(),
-          ownedPacks: nk,
-          packs: ba.v,
-          recipient: Vk.recipient
+          ownedPacks: Fb,
+          packs: Ia.q,
+          recipient: Mb.recipient
         });
-      (0, Rk.useEffect)((() => {
-        if (!lk || !tk) return;
-        const kk = (0, Pk.B)(),
-          Fk = kk && (0, fa.k)(kk, ba.v);
-        kk && Fk && ((0, Qk.reportAnalyticsClick)({
+      (0, kb.useEffect)((() => {
+        if (!vb || !Wb) return;
+        const bb = (0, zb.x)(),
+          cb = bb && (0, ea.p)(bb, Ia.q);
+        bb && cb && ((0, jb.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: kk.item
-        }), (0, Pk.m)(Fk))
-      }), [lk, tk]);
-      const FF = (0, fa.r)({
-        superRankDaysLeft: kF.superRankDaysLeft,
-        openedThisSession: UX || tk,
-        seenNewItems: (0, Pk.i)()
+          value: bb.item
+        }), (0, zb.o)(cb))
+      }), [vb, Wb]);
+      const bc = (0, ea.u)({
+        superRankDaysLeft: pb.superRankDaysLeft,
+        openedThisSession: iT || Wb,
+        seenNewItems: (0, zb.k)()
       });
-      if ((0, Rk.useEffect)((() => {
-          (0, Pk.y)(FF)
-        }), [FF]), !tk || !(0, hk.purchasesAllowed)()) return null;
-      const BF = ek > Jk && Jk <= 700,
-        RF = !BF && ek <= 420,
-        tF = "gift" === Ik ? cX(Vk.recipient) : null,
-        aF = null !== Hk;
+      if ((0, kb.useEffect)((() => {
+          (0, zb.u)(bc)
+        }), [bc]), !Wb || !(0, qb.purchasesAllowed)()) return null;
+      const cc = mb > Xb && Xb <= 700,
+        sc = !cc && mb <= 420,
+        kc = "gift" === xb ? OT(Mb.recipient) : null,
+        Wc = null !== Bb;
 
-      function XF(kk) {
-        (0, sa.d)(kk, "gift" === Ik ? Vk.query.trim() : null)
+      function ac(bb) {
+        (0, Ma.c)(bb, "gift" === xb ? Mb.query.trim() : null)
       }
 
-      function bF(kk, Fk) {
-        (0, Qk.reportAnalyticsClick)({
+      function Tc(bb, cb) {
+        (0, jb.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${Fk?"gift":"self"}:${kk}`
-        }), Fk && (Vk.recordGift(Fk.name, kk), dF(Fk))
+          value: `${cb?"gift":"self"}:${bb}`
+        }), cb && (Mb.recordGift(cb.name, bb), Ic(cb))
       }
 
-      function dF(kk) {
-        ! function(kk) {
+      function Ic(bb) {
+        ! function(bb) {
           try {
-            KF.i.setItem(ma, (0, fa.B)(va(), kk))
+            oc.h.setItem(Ca, (0, ea.B)(Va(), bb))
           } catch {}
         }({
-          name: kk.name,
-          cosmetics: kk.cosmetics
-        }), Wk(gX), Gk((Fk => {
-          var Bk;
+          name: bb.name,
+          cosmetics: bb.cosmetics
+        }), Cb(ET), ib((cb => {
+          var sb;
           return {
-            name: kk.name,
-            seq: (null !== (Bk = null === Fk || void 0 === Fk ? void 0 : Fk.seq) && void 0 !== Bk ? Bk : 0) + 1
+            name: bb.name,
+            seq: (null !== (sb = null === cb || void 0 === cb ? void 0 : cb.seq) && void 0 !== sb ? sb : 0) + 1
           }
         }))
       }
-      async function sF(kk) {
-        var Fk, Bk;
-        if (Ck.current) return;
-        if (!lk) return void XF(kk);
-        Uk(null), Dk(null);
-        const Rk = "gift" === Ik ? {
-          name: cX(Vk.recipient),
-          cosmetics: Vk.recipientCosmetics
+      async function Hc(bb) {
+        var cb, sb;
+        if (Ab.current) return;
+        if (!vb) return void ac(bb);
+        Db(null), Kb(null);
+        const kb = "gift" === xb ? {
+          name: OT(Mb.recipient),
+          cosmetics: Mb.recipientCosmetics
         } : null;
-        if (Rk && !Rk.name) return void xk();
-        const tk = "superRank" === kk ? Tk.n.id : (0, Tk.e)(kk);
-        Ck.current = !0;
-        const ak = await (0, ya.e)(tk, null !== (Fk = null === Rk || void 0 === Rk ? void 0 : Rk.name) && void 0 !== Fk ? Fk : null);
-        if (Ck.current = !1, !ak) return;
-        Mk(kk);
-        const Xk = await Va.b.purchase(tk, null !== (Bk = null === Rk || void 0 === Rk ? void 0 : Rk.name) && void 0 !== Bk ? Bk : null);
-        Mk(null), Xk ? Uk(Xk) : (bF(kk, Rk), Rk || (await (0, Ja.flushClientAnalyticsEvents)(), (0, da.refreshWithoutConfirmation)("superRank" === kk ? "/super-rank-welcome" : `/pack-welcome/${kk}`)))
+        if (kb && !kb.name) return void Sb();
+        const Wb = "superRank" === bb ? Ob.i.id : (0, Ob.c)(bb);
+        Ab.current = !0;
+        const ab = await (0, Qa.e)(Wb, null !== (cb = null === kb || void 0 === kb ? void 0 : kb.name) && void 0 !== cb ? cb : null);
+        if (Ab.current = !1, !ab) return;
+        yb(bb);
+        const Tb = await Xa.e.purchase(Wb, null !== (sb = null === kb || void 0 === kb ? void 0 : kb.name) && void 0 !== sb ? sb : null);
+        yb(null), Tb ? Db(Tb) : (Tc(bb, kb), kb || (await (0, na.flushClientAnalyticsEvents)(), (0, fa.refreshWithoutConfirmation)("superRank" === bb ? "/super-rank-welcome" : `/pack-welcome/${bb}`)))
       }
-      const VF = ak()("Store", {
-        StoreGift: "gift" === Ik,
-        StorePortrait: BF,
-        StoreCompact: RF
+      const fc = ab()("Store", {
+        StoreGift: "gift" === xb,
+        StorePortrait: cc,
+        StoreCompact: sc
       });
-      if ("pack" === fk.kind) {
-        const kk = fk.pack,
-          Fk = kF.packs.find((Fk => Fk.pack === kk));
-        return (0, sk.jsx)("div", {
-          ref: zk,
+      if ("pack" === Qb.kind) {
+        const bb = Qb.pack,
+          cb = pb.packs.find((cb => cb.pack === bb));
+        return (0, fb.jsx)("div", {
+          ref: Zb,
           className: "CosmeticShopContainer",
-          children: (0, sk.jsx)(ea.h, {
-            pack: kk,
+          children: (0, fb.jsx)(la.e, {
+            pack: bb,
             onBack: () => {
-              Wk(gX)
+              Cb(ET)
             },
-            onPurchased: Fk => {
-              bF(kk, Fk ? {
-                name: Fk,
+            onPurchased: cb => {
+              Tc(bb, cb ? {
+                name: cb,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === Ik && tF && Fk && (0, sk.jsxs)(sk.Fragment, {
-              children: [(0, sk.jsx)(Qa, {
-                state: Fk.state,
-                item: kk,
-                price: (JF = kk, "superRank" === JF ? Tk.n.price : (0, Tk.h)(JF)),
-                busy: aF,
+            giftCta: "gift" === xb && kc && cb && (0, fb.jsxs)(fb.Fragment, {
+              children: [(0, fb.jsx)(bT, {
+                state: cb.state,
+                item: bb,
+                price: (Mc = bb, "superRank" === Mc ? Ob.i.price : (0, Ob.d)(Mc)),
+                busy: Wc,
                 onAct: () => {
-                  sF(kk)
+                  Hc(bb)
                 },
                 onNeedRecipient: () => {
-                  Wk(gX), xk()
+                  Cb(ET), Sb()
                 },
                 onLogin: () => {
-                  XF(kk)
+                  ac(bb)
                 },
-                highlight: rk === kk
-              }), gk && (0, sk.jsx)("span", {
+                highlight: Gb === bb
+              }), Pb && (0, fb.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: bk(gk)
+                children: Ub(Pb)
               })]
             }),
-            ownedPacks: nk,
-            startAsGift: "gift" === Ik,
-            initialGiftRecipient: "gift" === Ik ? null !== tF && void 0 !== tF ? tF : Vk.query.trim() : "",
-            highlightCta: rk === kk
-          }, kk)
+            ownedPacks: Fb,
+            startAsGift: "gift" === xb,
+            initialGiftRecipient: "gift" === xb ? null !== kc && void 0 !== kc ? kc : Mb.query.trim() : "",
+            highlightCta: Gb === bb
+          }, bb)
         })
       }
-      var JF;
-      return "superRank" === fk.kind ? (0, sk.jsx)("div", {
-        ref: zk,
-        className: ak()(VF, "StoreDetailView"),
-        children: (0, sk.jsx)(oX, {
-          state: kF.superRank.state,
-          mode: Ik,
-          giftName: tF,
-          busy: aF,
-          highlight: "superRank" === rk,
-          purchaseError: gk,
+      var Mc;
+      return "superRank" === Qb.kind ? (0, fb.jsx)("div", {
+        ref: Zb,
+        className: ab()(fc, "StoreDetailView"),
+        children: (0, fb.jsx)(YT, {
+          state: pb.superRank.state,
+          mode: xb,
+          giftName: kc,
+          busy: Wc,
+          highlight: "superRank" === Gb,
+          purchaseError: Pb,
           onBack: () => {
-            Wk(gX)
+            Cb(ET)
           },
           onChooseRecipient: () => {
-            Wk(gX), xk()
+            Cb(ET), Sb()
           },
           onAct: () => {
-            sF("superRank")
+            Hc("superRank")
           },
           onLogin: () => {
-            XF("superRank")
+            ac("superRank")
           }
         })
-      }) : (0, sk.jsxs)("div", {
-        ref: zk,
-        className: VF,
-        children: [(0, sk.jsx)("div", {
+      }) : (0, fb.jsxs)("div", {
+        ref: Zb,
+        className: fc,
+        children: [(0, fb.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, sk.jsx)(ca, {
-            selfName: dk ? wk.getPlayerName() : "",
-            giftRecipient: Vk,
-            suggestionsVersion: null !== (Fk = null === ck || void 0 === ck ? void 0 : ck.seq) && void 0 !== Fk ? Fk : 0,
-            pulseSignal: Sk,
-            disabled: aF || !dk
+          children: (0, fb.jsx)(Oa, {
+            selfName: Hb ? Ib.getPlayerName() : "",
+            giftRecipient: Mb,
+            suggestionsVersion: null !== (cb = null === Eb || void 0 === Eb ? void 0 : Eb.seq) && void 0 !== cb ? cb : 0,
+            pulseSignal: Jb,
+            disabled: Wc || !Hb
           })
-        }), ck && (0, sk.jsxs)("div", {
+        }), Eb && (0, fb.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            Gk(null)
+            ib(null)
           },
-          children: [(0, sk.jsx)(Aa.d, {
-            showSignal: ck.seq
-          }), fa.e, " ", bk("store:giftSent", {
-            name: ck.name
+          children: [(0, fb.jsx)(ma.e, {
+            showSignal: Eb.seq
+          }), ea.d, " ", Ub("store:giftSent", {
+            name: Eb.name
           })]
-        }, ck.seq), !ck && gk && (0, sk.jsx)("div", {
+        }, Eb.seq), !Eb && Pb && (0, fb.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: bk(gk)
-        }), (0, sk.jsx)(YX, {
-          layout: kF,
-          mountAtOnce: null !== qk.current,
-          bundleGift: "gift" === Ik ? {
-            recipientName: tF,
-            lookingUp: "pending" === Vk.recipient.status,
-            busy: aF,
-            onNeedRecipient: xk,
-            onSent: kk => {
-              (0, Qk.reportAnalyticsClick)({
+          children: Ub(Pb)
+        }), (0, fb.jsx)(uT, {
+          layout: pb,
+          mountAtOnce: null !== db.current,
+          bundleGift: "gift" === xb ? {
+            recipientName: kc,
+            lookingUp: "pending" === Mb.recipient.status,
+            busy: Wc,
+            onNeedRecipient: Sb,
+            onSent: bb => {
+              (0, jb.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), dF({
-                name: kk,
-                cosmetics: Vk.recipientCosmetics
+              }), Ic({
+                name: bb,
+                cosmetics: Mb.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, fa.u)(jk),
-          busy: aF,
-          highlightItem: rk,
-          onOpen: function(kk) {
-            (0, Qk.reportAnalyticsClick)({
+          superRankTotalDays: (0, ea.v)(Rb),
+          busy: Wc,
+          highlightItem: Gb,
+          onOpen: function(bb) {
+            (0, jb.reportAnalyticsClick)({
               id: "store.item_open",
-              value: kk
-            }), Wk((0, Pk.h)(kk))
+              value: bb
+            }), Cb((0, zb.i)(bb))
           },
-          onAct: sF,
-          onNeedRecipient: xk,
-          onLogin: XF
-        }), "gift" !== Ik && (0, sk.jsx)(uX, {})]
+          onAct: Hc,
+          onNeedRecipient: Sb,
+          onLogin: ac
+        }), "gift" !== xb && (0, fb.jsx)(PT, {})]
       })
     }));
-    var TX = Bk(2540),
-      rX = Bk(8519),
-      DX = Bk(2605),
-      zX = Bk(2424),
-      PX = Bk(2488),
-      hX = Bk(2496),
-      qX = Bk(2505),
-      CX = Bk(2597),
-      ZX = Bk(2572),
-      pX = Bk(2261),
-      KX = Bk(2290),
-      xX = Bk(2276),
-      jX = Bk(1936),
-      lX = Bk(2507),
-      nX = Bk(2299);
+    var KT = sb(2525),
+      ZT = sb(8457),
+      zT = sb(2593),
+      qT = sb(2429),
+      dT = sb(2474),
+      AT = sb(2488),
+      wT = sb(2496),
+      rT = sb(2578),
+      oT = sb(2560),
+      ST = sb(2260),
+      RT = sb(2301),
+      vT = sb(2284),
+      FT = sb(1968),
+      xT = sb(2498),
+      jT = sb(2303);
 
-    function IX(kk) {
+    function pT(bb) {
       let {
-        show: Fk
-      } = kk;
-      return Fk ? (0, sk.jsx)(QX, {}) : null
+        show: cb
+      } = bb;
+      return cb ? (0, fb.jsx)(bU, {}) : null
     }
 
-    function QX() {
+    function bU() {
       const {
-        t: kk
-      } = (0, Xk.x)(), {
-        followsLeader: Fk
-      } = (0, zX.g)(), {
-        loading: Bk,
-        friends: tk,
-        requests: wk,
-        invites: dk
-      } = (0, Ck.i)(), {
-        userContext: Vk
-      } = (0, Ak.e)(), [Jk, ek] = (0, Rk.useState)(nX.m);
-      (0, Rk.useEffect)((() => {
-        (0, nX.c)()
+        t: bb
+      } = (0, Tb.E)(), {
+        followsLeader: cb
+      } = (0, qT.e)(), {
+        loading: sb,
+        friends: Wb,
+        requests: Ib,
+        invites: Hb
+      } = (0, Ab.k)(), {
+        userContext: Mb
+      } = (0, nb.c)(), [Xb, mb] = (0, kb.useState)(jT.i);
+      (0, kb.useEffect)((() => {
+        (0, jT.c)()
       }), []);
-      const yk = wk.map((kk => kk.name)),
+      const lb = Ib.map((bb => bb.name)),
         {
-          state: mk,
-          recentRequesters: Wk
-        } = (0, ZX.n)(),
-        vk = new Map([...("loaded" === mk.status ? mk.recentPlayers : []).map((kk => [kk.preview.name, kk])), ...Wk.map((kk => [kk.name, kk]))]),
-        ik = (0, Rk.useRef)(null),
-        [Ok, Ek] = (0, Rk.useState)(""),
-        [Sk, Nk] = (0, Rk.useState)("Enter"),
-        [Hk, uk] = (0, Rk.useState)(null);
+          state: eb,
+          recentRequesters: Cb
+        } = (0, oT.o)(),
+        Nb = new Map([...("loaded" === eb.status ? eb.recentPlayers : []).map((bb => [bb.preview.name, bb])), ...Cb.map((bb => [bb.name, bb]))]),
+        Vb = (0, kb.useRef)(null),
+        [Yb, hb] = (0, kb.useState)(""),
+        [Jb, gb] = (0, kb.useState)("Enter"),
+        [Bb, tb] = (0, kb.useState)(null);
 
-      function Mk() {
-        Ok && (Nk("Loading"), (0, xX.k)(Ok, "social_menu").then((kk => {
-          if (ik.current) switch (kk.kind) {
+      function yb() {
+        Yb && (gb("Loading"), (0, vT.k)(Yb, "social_menu").then((bb => {
+          if (Vb.current) switch (bb.kind) {
             case "sent":
-              Nk("Success");
+              gb("Success");
               break;
             case "becameFriends":
-              Nk("BecameFriends");
+              gb("BecameFriends");
               break;
             case "failed":
-              uk(kk.message), Nk("Error")
+              tb(bb.message), gb("Error")
           }
         })))
       }
-      return (0, Rk.useEffect)((() => {
-        if ("Enter" === Sk || "Loading" === Sk) return;
-        const kk = setTimeout((() => {
-          ik.current.value = "", Ek(""), Nk("Enter")
-        }), "Success" === Sk ? 1e3 : 4e3);
+      return (0, kb.useEffect)((() => {
+        if ("Enter" === Jb || "Loading" === Jb) return;
+        const bb = setTimeout((() => {
+          Vb.current.value = "", hb(""), gb("Enter")
+        }), "Success" === Jb ? 1e3 : 4e3);
         return () => {
-          clearTimeout(kk)
+          clearTimeout(bb)
         }
-      }), [Sk]), (0, sk.jsx)("div", {
+      }), [Jb]), (0, fb.jsx)("div", {
         className: "SocialMenu",
-        children: (0, sk.jsxs)("div", {
+        children: (0, fb.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, sk.jsxs)("div", {
+          children: [(0, fb.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, sk.jsxs)("div", {
+            children: [(0, fb.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, sk.jsx)(qX.b, {
-                label: kk("socialBar:addFriend")
-              }), (0, sk.jsxs)("div", {
+              children: [(0, fb.jsx)(wT.b, {
+                label: bb("socialBar:addFriend")
+              }), (0, fb.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, sk.jsxs)("div", {
-                  className: ak()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${Sk}`]: !0
+                children: [(0, fb.jsxs)("div", {
+                  className: ab()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${Jb}`]: !0
                   }),
-                  children: ["Loading" === Sk && (0, sk.jsx)(Lk.b, {}), "Success" === Sk && (0, sk.jsx)(bk.d, {
+                  children: ["Loading" === Jb && (0, fb.jsx)(ub.d, {}), "Success" === Jb && (0, fb.jsx)(Ub.b, {
                     name: "check"
-                  }), "BecameFriends" === Sk && (0, sk.jsx)(sk.Fragment, {
-                    children: kk("socialBar:nowFriends", {
-                      playerName: Ok
+                  }), "BecameFriends" === Jb && (0, fb.jsx)(fb.Fragment, {
+                    children: bb("socialBar:nowFriends", {
+                      playerName: Yb
                     })
-                  }), "Error" === Sk && Hk && (0, sk.jsx)(sk.Fragment, {
-                    children: kk(Hk.translationKey, Hk.params)
+                  }), "Error" === Jb && Bb && (0, fb.jsx)(fb.Fragment, {
+                    children: bb(Bb.translationKey, Bb.params)
                   })]
-                }), (0, sk.jsxs)("div", {
+                }), (0, fb.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, sk.jsx)(Yk.e, {
+                  children: [(0, fb.jsx)(Lb.c, {
                     className: "PlayerSearchInput",
-                    placeholderText: kk("socialBar:enterPlayerName"),
-                    domRef: ik,
-                    onValueChange: kk => {
-                      Ek((0, ck.q)(kk)), ik.current.value = (0, ck.q)(kk)
+                    placeholderText: bb("socialBar:enterPlayerName"),
+                    domRef: Vb,
+                    onValueChange: bb => {
+                      hb((0, Eb.t)(bb)), Vb.current.value = (0, Eb.t)(bb)
                     },
                     onEnter: () => {
-                      Ok && (0, Qk.reportAnalyticsClick)({
+                      Yb && (0, jb.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), Mk()
+                      }), yb()
                     }
-                  }), (0, sk.jsxs)(fk.g, {
+                  }), (0, fb.jsxs)(Qb.d, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      Mk()
+                      yb()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, sk.jsx)(bk.d, {
+                    children: [(0, fb.jsx)(Ub.b, {
                       name: "user-plus"
-                    }), " ", kk("socialBar:sendRequest")]
+                    }), " ", bb("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, sk.jsx)(lX.d, {
+              }), (0, fb.jsx)(xT.d, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), dk.length > 0 && (0, sk.jsxs)("div", {
+            }), Hb.length > 0 && (0, fb.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, sk.jsx)(qX.b, {
-                label: kk("socialBar:invites"),
-                meta: dk.length
-              }), dk.map((Fk => (0, sk.jsxs)("div", {
+              children: [(0, fb.jsx)(wT.b, {
+                label: bb("socialBar:invites"),
+                meta: Hb.length
+              }), Hb.map((cb => (0, fb.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, sk.jsx)("div", {
+                children: [(0, fb.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, sk.jsx)(pX.e, {
-                    invite: Fk
+                  children: (0, fb.jsx)(ST.b, {
+                    invite: cb
                   })
-                }), (0, sk.jsx)("div", {
+                }), (0, fb.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, sk.jsx)(pX.h, {
-                    invite: Fk
+                  children: (0, fb.jsx)(ST.c, {
+                    invite: cb
                   })
-                }), (0, sk.jsx)(fk.o, {
+                }), (0, fb.jsx)(Qb.n, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, KX.d)(Fk)
+                    (0, RT.h)(cb)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${Fk.destination.kind}`
+                    value: `social_menu:${cb.destination.kind}`
                   },
-                  children: kk("general:join")
-                }), (0, sk.jsx)(lk.d, {
-                  tooltipInner: (0, sk.jsx)(sk.Fragment, {
-                    children: kk("general:decline")
+                  children: bb("general:join")
+                }), (0, fb.jsx)(vb.f, {
+                  tooltipInner: (0, fb.jsx)(fb.Fragment, {
+                    children: bb("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, sk.jsx)(fk.j, {
+                  children: (0, fb.jsx)(Qb.h, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === Jk || void 0 === Jk ? void 0 : Jk.kind) && Jk.inviteId === Fk.id,
+                    padDefaultFocus: "invite" === (null === Xb || void 0 === Xb ? void 0 : Xb.kind) && Xb.inviteId === cb.id,
                     onClick: () => {
-                      Ck.b.declineInvite(Fk.id)
+                      Ab.c.declineInvite(cb.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${Fk.destination.kind}`
+                      value: `social_menu:${cb.destination.kind}`
                     },
-                    children: (0, sk.jsx)(bk.d, {
+                    children: (0, fb.jsx)(Ub.b, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, Fk.id)))]
-            }), (0, sk.jsxs)("div", {
-              className: ak()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !Bk && 0 === wk.length
+              }, cb.id)))]
+            }), (0, fb.jsxs)("div", {
+              className: ab()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !sb && 0 === Ib.length
               }),
-              children: [(0, sk.jsx)(qX.b, {
-                label: (0, sk.jsxs)(sk.Fragment, {
-                  children: [(0, sk.jsx)(bk.d, {
-                    name: jX.d
-                  }), " ", kk("socialBar:requests")]
+              children: [(0, fb.jsx)(wT.b, {
+                label: (0, fb.jsxs)(fb.Fragment, {
+                  children: [(0, fb.jsx)(Ub.b, {
+                    name: FT.h
+                  }), " ", bb("socialBar:requests")]
                 }),
-                meta: (0, sk.jsxs)(sk.Fragment, {
-                  children: [wk.length, wk.length === nk.t && (0, sk.jsx)("span", {
+                meta: (0, fb.jsxs)(fb.Fragment, {
+                  children: [Ib.length, Ib.length === Fb.o && (0, fb.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: kk("socialBar:limitReached")
+                    children: bb("socialBar:limitReached")
                   })]
                 })
-              }), Bk && (0, sk.jsx)("div", {
+              }), sb && (0, fb.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, sk.jsx)(Lk.b, {})
-              }), !Bk && 0 === wk.length && (0, sk.jsx)("div", {
+                children: (0, fb.jsx)(ub.d, {})
+              }), !sb && 0 === Ib.length && (0, fb.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: kk("socialBar:noFriendRequests")
-              }), !Bk && wk.length > 0 && (0, sk.jsx)("div", {
+                children: bb("socialBar:noFriendRequests")
+              }), !sb && Ib.length > 0 && (0, fb.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, sk.jsx)(At.c, {
+                children: (0, fb.jsx)(mW.b, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [wk],
-                  children: wk.map(((Fk, Bk) => {
-                    const Rk = vk.get(Fk.name);
-                    return (0, sk.jsxs)(hX.h, {
-                      playerSocialPreview: Fk,
-                      zIndex: wk.length - Bk,
-                      padDefaultFocus: (0, nX.k)(Jk, Fk.name, Bk),
-                      status: Rk && (0, sk.jsx)(CX.b, {
-                        gameNameWithVariation: Rk.gameNameWithVariation,
-                        isPrivateLobby: Rk.isPrivateLobby
+                  observerUpdateDeps: [Ib],
+                  children: Ib.map(((cb, sb) => {
+                    const kb = Nb.get(cb.name);
+                    return (0, fb.jsxs)(AT.f, {
+                      playerSocialPreview: cb,
+                      zIndex: Ib.length - sb,
+                      padDefaultFocus: (0, jT.f)(Xb, cb.name, sb),
+                      status: kb && (0, fb.jsx)(rT.b, {
+                        gameNameWithVariation: kb.gameNameWithVariation,
+                        isPrivateLobby: kb.isPrivateLobby
                       }),
-                      children: [(0, sk.jsx)(lk.d, {
-                        tooltipInner: (0, sk.jsx)(sk.Fragment, {
-                          children: kk("general:accept")
+                      children: [(0, fb.jsx)(vb.f, {
+                        tooltipInner: (0, fb.jsx)(fb.Fragment, {
+                          children: bb("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, sk.jsx)(fk.g, {
+                        children: (0, fb.jsx)(Qb.d, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            ek((0, nX.g)(yk, Bk)), (0, xX.i)(Fk.name, !0, {
+                            mb((0, jT.d)(lb, sb)), (0, vT.g)(cb.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -7290,19 +7290,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, sk.jsx)(bk.d, {
+                          children: (0, fb.jsx)(Ub.b, {
                             name: "check"
                           })
                         })
-                      }), (0, sk.jsx)(lk.d, {
-                        tooltipInner: (0, sk.jsx)(sk.Fragment, {
-                          children: kk("general:decline")
+                      }), (0, fb.jsx)(vb.f, {
+                        tooltipInner: (0, fb.jsx)(fb.Fragment, {
+                          children: bb("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, sk.jsx)(fk.j, {
+                        children: (0, fb.jsx)(Qb.h, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            ek((0, nX.g)(yk, Bk)), (0, xX.i)(Fk.name, !1, {
+                            mb((0, jT.d)(lb, sb)), (0, vT.g)(cb.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -7310,62 +7310,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, sk.jsx)(bk.d, {
+                          children: (0, fb.jsx)(Ub.b, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${Fk.name}_${Fk.isError}`)
+                    }, `${cb.name}_${cb.isError}`)
                   }))
                 })
               })]
-            }), (0, sk.jsx)(CX.g, {})]
-          }), (0, sk.jsxs)("div", {
+            }), (0, fb.jsx)(rT.e, {})]
+          }), (0, fb.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, sk.jsxs)("div", {
+            children: [(0, fb.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, sk.jsx)(qX.b, {
-                label: kk("socialBar:party")
-              }), (0, sk.jsx)(PX.b, {})]
-            }), (0, sk.jsxs)("div", {
+              children: [(0, fb.jsx)(wT.b, {
+                label: bb("socialBar:party")
+              }), (0, fb.jsx)(dT.b, {})]
+            }), (0, fb.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, sk.jsx)(qX.b, {
-                label: (0, sk.jsxs)(sk.Fragment, {
-                  children: [(0, sk.jsx)(bk.d, {
-                    name: jX.b
-                  }), " ", kk("socialBar:friends")]
+              children: [(0, fb.jsx)(wT.b, {
+                label: (0, fb.jsxs)(fb.Fragment, {
+                  children: [(0, fb.jsx)(Ub.b, {
+                    name: FT.e
+                  }), " ", bb("socialBar:friends")]
                 }),
-                meta: (0, sk.jsxs)(sk.Fragment, {
-                  children: [tk.length, tk.length >= (0, nk.e)(Vk.getPlayerRanks()) && (0, sk.jsx)("span", {
+                meta: (0, fb.jsxs)(fb.Fragment, {
+                  children: [Wb.length, Wb.length >= (0, Fb.d)(Mb.getPlayerRanks()) && (0, fb.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: kk("socialBar:limitReached")
+                    children: bb("socialBar:limitReached")
                   })]
                 })
-              }), Bk && (0, sk.jsx)("div", {
+              }), sb && (0, fb.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, sk.jsx)(Lk.b, {})
-              }), !Bk && 0 === tk.length && (0, sk.jsx)("div", {
+                children: (0, fb.jsx)(ub.d, {})
+              }), !sb && 0 === Wb.length && (0, fb.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: kk("socialBar:noFriends")
-              }), !Bk && tk.length > 0 && (0, sk.jsx)("div", {
+                children: bb("socialBar:noFriends")
+              }), !sb && Wb.length > 0 && (0, fb.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, sk.jsx)(At.c, {
+                children: (0, fb.jsx)(mW.b, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [tk],
-                  children: tk.map(((kk, Bk) => (0, sk.jsx)(hX.h, {
-                    playerSocialPreview: kk,
+                  observerUpdateDeps: [Wb],
+                  children: Wb.map(((bb, sb) => (0, fb.jsx)(AT.f, {
+                    playerSocialPreview: bb,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: kk => {
-                      Ck.b.removeFriendFromState(kk)
+                    onFriendRemoved: bb => {
+                      Ab.c.removeFriendFromState(bb)
                     },
-                    zIndex: tk.length - Bk,
-                    children: (0, sk.jsx)(hX.d, {
-                      friend: kk,
-                      followsLeader: Fk,
+                    zIndex: Wb.length - sb,
+                    children: (0, fb.jsx)(AT.b, {
+                      friend: bb,
+                      followsLeader: cb,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${kk.name}_${kk.isError}`)))
+                  }, `${bb.name}_${bb.isError}`)))
                 })
               })]
             })]
@@ -7373,231 +7373,231 @@ export const modules = {
         })
       })
     }
-    var kb = Bk(2408);
-    const Fb = kk => {
+    var cU = sb(2409);
+    const sU = bb => {
         let {
-          action: Fk,
-          padAction: Bk
-        } = kk;
+          action: cb,
+          padAction: sb
+        } = bb;
         const {
-          isTouchScreen: Rk
-        } = (0, Ek.h)(["isTouchScreen"]), tk = (0, XR.o)();
-        return Rk && !tk ? null : (0, sk.jsx)(QB.c, {
+          isTouchScreen: kb
+        } = (0, hb.p)(["isTouchScreen"]), Wb = (0, Uk.l)();
+        return kb && !Wb ? null : (0, fb.jsx)(bk.d, {
           className: "EverythingMenuTabKey",
-          noaAction: Fk,
+          noaAction: cb,
           padHidesKey: !0,
-          padMenuShortcut: Bk
+          padMenuShortcut: sb
         })
       },
-      Bb = (0, Rk.memo)((function() {
+      kU = (0, kb.memo)((function() {
         const {
-          t: kk
-        } = (0, Xk.x)(), {
-          gameState: Fk,
-          openEverythingMenuName: Bk,
-          initSdkSelectorFinished: tk,
-          crosshairGameView: bk
-        } = (0, Ek.h)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
-          userContext: wk
-        } = (0, Ak.e)(), dk = (0, hk.purchasesAllowed)(), Vk = (0, Pk.D)(), Jk = (kk, Fk) => (0, sk.jsx)(Fb, {
-          action: kk,
-          padAction: Fk
-        }), [ek, yk] = (0, Rk.useState)(null), Wk = (0, Rk.useRef)(null), vk = {
-          ..."inGame" === Fk ? {} : (0, fk.R)({
+          t: bb
+        } = (0, Tb.E)(), {
+          gameState: cb,
+          openEverythingMenuName: sb,
+          initSdkSelectorFinished: Wb,
+          crosshairGameView: Ub
+        } = (0, hb.p)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
+          userContext: Ib
+        } = (0, nb.c)(), Hb = (0, qb.purchasesAllowed)(), Mb = (0, zb.C)(), Xb = (bb, cb) => (0, fb.jsx)(sU, {
+          action: bb,
+          padAction: cb
+        }), [mb, lb] = (0, kb.useState)(null), Cb = (0, kb.useRef)(null), Nb = {
+          ..."inGame" === cb ? {} : (0, Qb.U)({
             focusOnClick: !1
           }),
-          ...fR.g
-        }, ik = null !== Bk, Yk = Bk !== sF.p.COSMETIC_SHOP && !bk;
-        async function Lk() {
+          ...ek.d
+        }, Vb = null !== sb, Lb = sb !== Hc.r.COSMETIC_SHOP && !Ub;
+        async function ub() {
           await async function() {
-            if (!ek) return;
-            await ek(), yk(null)
-          }(), Ek.c.set({
+            if (!mb) return;
+            await mb(), lb(null)
+          }(), hb.d.set({
             openEverythingMenuName: null
           })
         }
-        const Ok = (0, Rk.useMemo)((() => "inGame" === Fk ? {
-          text: kk("settingsMenu:exitGame"),
+        const Yb = (0, kb.useMemo)((() => "inGame" === cb ? {
+          text: bb("settingsMenu:exitGame"),
           onClick: () => {
-            (0, rX.b)()
+            (0, ZT.c)()
           }
-        } : (0, Hk.c)() ? {
-          text: kk("settingsMenu:exitGame"),
+        } : (0, Bb.b)() ? {
+          text: bb("settingsMenu:exitGame"),
           onClick: () => {
-            XF.j.discordActivity().then((kk => {
-              kk.exit("User exited the game")
+            ac.k.discordActivity().then((bb => {
+              bb.exit("User exited the game")
             }))
           }
-        } : null), [Fk, kk]);
-        const Sk = (0, sk.jsx)("div", {
+        } : null), [cb, bb]);
+        const Jb = (0, fb.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
           onClick: () => {
-            Lk()
+            ub()
           },
-          children: (0, sk.jsx)(fk.k, {
+          children: (0, fb.jsx)(Qb.j, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, sk.jsx)(mR.d, {
-          showing: ik,
+        return (0, fb.jsx)(Ck.b, {
+          showing: Vb,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: Bk === sF.p.SHOP,
-          doGameplayStartStopOnShow: "inGame" === Fk,
-          children: (0, sk.jsx)(vR.c, {
+          keepsMovement: sb === Hc.r.SHOP,
+          doGameplayStartStopOnShow: "inGame" === cb,
+          children: (0, fb.jsx)(Vk.c, {
             className: "EverythingMenuContainer",
-            show: ik && !bk,
-            children: (0, sk.jsx)(WR.e, {
+            show: Vb && !Ub,
+            children: (0, fb.jsx)(Nk.c, {
               close: () => {
-                Lk()
+                ub()
               },
               togglePointerLock: !1,
-              children: (0, sk.jsxs)("div", {
+              children: (0, fb.jsxs)("div", {
                 className: "EverythingMenu",
-                children: [!(0, Ra.k)(Bk) && (0, sk.jsxs)("div", {
+                children: [!(0, Wa.k)(sb) && (0, fb.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, sk.jsxs)("div", {
+                  children: [(0, fb.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [Ok && (0, sk.jsx)(fk.c, {
+                    children: [Yb && (0, fb.jsx)(Qb.b, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        Ok.onClick()
+                        Yb.onClick()
                       },
-                      children: Ok.text
-                    }), ik && dk && (0, sk.jsx)("div", {
-                      ...vk,
+                      children: Yb.text
+                    }), Vb && Hb && (0, fb.jsx)("div", {
+                      ...Nb,
                       className: "EverythingMenuWallet",
-                      title: kk("homePage:getPremiumCurrency"),
+                      title: bb("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, Pk.m)({
+                        (0, zb.o)({
                           mode: "current",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, sk.jsx)(TX.d, {})
+                      children: (0, fb.jsx)(KT.g, {})
                     })]
-                  }), (0, sk.jsxs)("div", {
+                  }), (0, fb.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
                     "data-pad-tabs": "1",
-                    children: [(0, sk.jsxs)("div", {
-                      ...vk,
+                    children: [(0, fb.jsxs)("div", {
+                      ...Nb,
                       "data-pad-tab": !0,
-                      "data-pad-selected": Bk === sF.p.SETTINGS ? "true" : void 0,
-                      className: ak()("EverythingMenuTab", {
-                        EverythingMenuTabActive: Bk === sF.p.SETTINGS
+                      "data-pad-selected": sb === Hc.r.SETTINGS ? "true" : void 0,
+                      className: ab()("EverythingMenuTab", {
+                        EverythingMenuTabActive: sb === Hc.r.SETTINGS
                       }),
                       onClick: () => {
-                        Ek.c.set({
-                          openEverythingMenuName: sF.p.SETTINGS
+                        hb.d.set({
+                          openEverythingMenuName: Hc.r.SETTINGS
                         })
                       },
-                      children: [kk("general:settings"), Jk("OpenSettings", "pause")]
-                    }), (0, sk.jsxs)("div", {
-                      ...vk,
+                      children: [bb("general:settings"), Xb("OpenSettings", "pause")]
+                    }), (0, fb.jsxs)("div", {
+                      ...Nb,
                       "data-pad-tab": !0,
-                      "data-pad-selected": Bk === sF.p.CUSTOMISATION ? "true" : void 0,
-                      className: ak()("EverythingMenuTab", {
-                        EverythingMenuTabActive: Bk === sF.p.CUSTOMISATION
+                      "data-pad-selected": sb === Hc.r.CUSTOMISATION ? "true" : void 0,
+                      className: ab()("EverythingMenuTab", {
+                        EverythingMenuTabActive: sb === Hc.r.CUSTOMISATION
                       }),
                       onClick: () => {
-                        Ek.c.set({
-                          openEverythingMenuName: sF.p.CUSTOMISATION
+                        hb.d.set({
+                          openEverythingMenuName: Hc.r.CUSTOMISATION
                         })
                       },
-                      children: [kk("general:player"), Jk("OpenCharacterCustomization")]
-                    }), mk.featureFlags.useSocialFeatures && (0, sk.jsxs)("div", {
-                      ...vk,
+                      children: [bb("general:player"), Xb("OpenCharacterCustomization")]
+                    }), eb.featureFlags.useSocialFeatures && (0, fb.jsxs)("div", {
+                      ...Nb,
                       "data-pad-tab": !0,
-                      "data-pad-selected": Bk === sF.p.SOCIAL ? "true" : void 0,
-                      className: ak()("EverythingMenuTab", {
-                        EverythingMenuTabActive: Bk === sF.p.SOCIAL
+                      "data-pad-selected": sb === Hc.r.SOCIAL ? "true" : void 0,
+                      className: ab()("EverythingMenuTab", {
+                        EverythingMenuTabActive: sb === Hc.r.SOCIAL
                       }),
-                      ...(0, Qk.e)({
+                      ...(0, jb.d)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, Bk === sF.p.SOCIAL),
+                      }, sb === Hc.r.SOCIAL),
                       onClick: () => {
-                        Ek.c.set({
-                          openEverythingMenuName: sF.p.SOCIAL
+                        hb.d.set({
+                          openEverythingMenuName: Hc.r.SOCIAL
                         })
                       },
-                      children: [kk("socialBar:social"), (0, sk.jsx)(kb.d, {})]
-                    }), dk && (0, sk.jsxs)("div", {
-                      ...vk,
+                      children: [bb("socialBar:social"), (0, fb.jsx)(cU.b, {})]
+                    }), Hb && (0, fb.jsxs)("div", {
+                      ...Nb,
                       "data-pad-tab": !0,
-                      "data-pad-selected": Bk === sF.p.COSMETIC_SHOP ? "true" : void 0,
-                      className: ak()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: Bk === sF.p.COSMETIC_SHOP
+                      "data-pad-selected": sb === Hc.r.COSMETIC_SHOP ? "true" : void 0,
+                      className: ab()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: sb === Hc.r.COSMETIC_SHOP
                       }),
                       onClick: () => {
-                        Ek.c.set({
-                          openEverythingMenuName: sF.p.COSMETIC_SHOP
+                        hb.d.set({
+                          openEverythingMenuName: Hc.r.COSMETIC_SHOP
                         })
                       },
-                      children: [(0, sk.jsx)("span", {
+                      children: [(0, fb.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: kk("store:title")
-                      }), "new" === Vk && (0, sk.jsx)(dX, {}), "dot" === Vk && (0, sk.jsx)("span", {
+                        children: bb("store:title")
+                      }), "new" === Mb && (0, fb.jsx)(fT, {}), "dot" === Mb && (0, fb.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === Fk && (0, sk.jsxs)("div", {
-                      ...vk,
+                    }), "inGame" === cb && (0, fb.jsxs)("div", {
+                      ...Nb,
                       "data-pad-tab": !0,
-                      "data-pad-selected": Bk === sF.p.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: ak()("EverythingMenuTab", {
-                        EverythingMenuTabActive: Bk === sF.p.LOBBY_LEADERBOARD
+                      "data-pad-selected": sb === Hc.r.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: ab()("EverythingMenuTab", {
+                        EverythingMenuTabActive: sb === Hc.r.LOBBY_LEADERBOARD
                       }),
                       onClick: () => {
-                        Ek.c.set({
-                          openEverythingMenuName: sF.p.LOBBY_LEADERBOARD
+                        hb.d.set({
+                          openEverythingMenuName: Hc.r.LOBBY_LEADERBOARD
                         })
                       },
-                      children: [kk("general:lobby"), Jk("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [bb("general:lobby"), Xb("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, sk.jsx)("div", {
+                  }), (0, fb.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: Sk
+                    children: Jb
                   })]
-                }), (0, Ra.k)(Bk) && Sk, (0, sk.jsxs)("div", {
+                }), (0, Wa.k)(sb) && Jb, (0, fb.jsxs)("div", {
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === Fk ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === cb ? "0.85" : "1"
                   },
-                  children: [(0, sk.jsx)(VR, {
-                    show: Bk === sF.p.SETTINGS,
-                    setBeforeResumeCallback: yk
-                  }), (0, sk.jsx)(yR, {
-                    show: Bk === sF.p.CUSTOMISATION
-                  }), (0, sk.jsx)(Rk.Suspense, {
+                  children: [(0, fb.jsx)(Xk, {
+                    show: sb === Hc.r.SETTINGS,
+                    setBeforeResumeCallback: lb
+                  }), (0, fb.jsx)(Qk, {
+                    show: sb === Hc.r.CUSTOMISATION
+                  }), (0, fb.jsx)(kb.Suspense, {
                     fallback: null,
-                    children: (0, sk.jsx)(xt, {
-                      show: Bk === sF.p.SHOP
+                    children: (0, fb.jsx)(vW, {
+                      show: sb === Hc.r.SHOP
                     })
-                  }), (0, sk.jsx)(Xa, {
-                    show: Bk === sF.p.LOBBY_LEADERBOARD
-                  }), (0, sk.jsx)(GX, {
-                    show: Bk === sF.p.COSMETIC_SHOP
-                  }), (0, sk.jsx)(IX, {
-                    show: Bk === sF.p.SOCIAL
+                  }), (0, fb.jsx)(Ua, {
+                    show: sb === Hc.r.LOBBY_LEADERBOARD
+                  }), (0, fb.jsx)(GT, {
+                    show: sb === Hc.r.COSMETIC_SHOP
+                  }), (0, fb.jsx)(pT, {
+                    show: sb === Hc.r.SOCIAL
                   })]
-                }), !(0, mk.isMobileApp)() && (0, iR.g)(wk.getPlayerRanks()) && (0, sk.jsx)(vR.c, {
-                  ref: Wk,
+                }), !(0, eb.isMobileApp)() && (0, Lk.f)(Ib.getPlayerRanks()) && (0, fb.jsx)(Vk.c, {
+                  ref: Cb,
                   className: "EverythingMenuBannerDiv",
-                  show: Yk,
+                  show: Lb,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, sk.jsx)(DX.c, {
+                  children: (0, fb.jsx)(zT.e, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: Wk
+                      parentRef: Cb
                     },
-                    showing: ik && Yk,
+                    showing: Vb && Lb,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -7609,135 +7609,135 @@ export const modules = {
         })
       }))
   },
-  9006: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => ak
+  8924: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => ab
     });
-    var Rk = Bk(291),
-      tk = Bk(9015);
+    var kb = sb(344),
+      Wb = sb(8930);
 
-    function ak(kk, Fk, Bk) {
-      const ak = Object.entries(Fk).sort(((kk, Fk) => Fk[1] - kk[1])),
-        Xk = (0, Rk.xb)(kk);
-      Xk.push(kk ? "\n\n" : "\n");
-      for (const [tk, ek] of ak) {
-        var bk, wk, dk;
-        const kk = null !== (bk = null === Bk || void 0 === Bk || null === (wk = Bk[tk]) || void 0 === wk ? void 0 : wk.icon) && void 0 !== bk ? bk : `${tk} Enchantment`;
-        Xk.push({
-          icon: kk,
+    function ab(bb, cb, sb) {
+      const ab = Object.entries(cb).sort(((bb, cb) => cb[1] - bb[1])),
+        Tb = (0, kb.ub)(bb);
+      Tb.push(bb ? "\n\n" : "\n");
+      for (const [Wb, mb] of ab) {
+        var Ub, Ib, Hb;
+        const bb = null !== (Ub = null === sb || void 0 === sb || null === (Ib = sb[Wb]) || void 0 === Ib ? void 0 : Ib.icon) && void 0 !== Ub ? Ub : `${Wb} Enchantment`;
+        Tb.push({
+          icon: bb,
           style: {
             fontSize: "1.5rem"
           }
-        }), Xk.push({
-          str: `${tk} ${null!==(dk=(0,Rk.V)(ek))&&void 0!==dk?dk:ek}\n`
+        }), Tb.push({
+          str: `${Wb} ${null!==(Hb=(0,kb.Q)(mb))&&void 0!==Hb?Hb:mb}\n`
         })
       }
-      Xk.push({
+      Tb.push({
         str: "\n"
       });
-      for (const [Rk, ek] of ak) {
-        var sk, Vk, Jk, Ak;
-        const kk = null !== (sk = null === Bk || void 0 === Bk || null === (Vk = Bk[Rk]) || void 0 === Vk ? void 0 : Vk.icon) && void 0 !== sk ? sk : `${Rk} Enchantment`,
-          Fk = null !== (Jk = null === Bk || void 0 === Bk || null === (Ak = Bk[Rk]) || void 0 === Ak ? void 0 : Ak.description) && void 0 !== Jk ? Jk : (0, tk.l)(Rk);
-        Xk.push({
-          icon: kk,
+      for (const [kb, mb] of ab) {
+        var fb, Mb, Xb, nb;
+        const bb = null !== (fb = null === sb || void 0 === sb || null === (Mb = sb[kb]) || void 0 === Mb ? void 0 : Mb.icon) && void 0 !== fb ? fb : `${kb} Enchantment`,
+          cb = null !== (Xb = null === sb || void 0 === sb || null === (nb = sb[kb]) || void 0 === nb ? void 0 : nb.description) && void 0 !== Xb ? Xb : (0, Wb.n)(kb);
+        Tb.push({
+          icon: bb,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), Xk.push({
-          str: Fk,
+        }), Tb.push({
+          str: cb,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), Xk.push({
+        }), Tb.push({
           str: "\n"
         })
       }
-      return Xk
+      return Tb
     }
   },
-  9018: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => dk,
-      f: () => Wk,
-      g: () => fk,
-      i: () => wk,
-      l: () => mk,
-      n: () => sk,
-      r: () => Jk,
-      u: () => yk,
-      y: () => Vk
+  8937: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Hb,
+      g: () => Cb,
+      i: () => Qb,
+      m: () => Ib,
+      o: () => eb,
+      q: () => fb,
+      u: () => Xb,
+      v: () => lb,
+      z: () => Mb
     });
-    var Rk = Bk(279),
-      tk = Bk(606),
-      ak = Bk(291),
-      Xk = Bk(3985),
-      bk = Bk(9006);
+    var kb = sb(334),
+      Wb = sb(628),
+      ab = sb(344),
+      Tb = sb(4011),
+      Ub = sb(8924);
 
-    function wk(kk, Fk) {
-      var Bk;
+    function Ib(bb, cb) {
+      var sb;
       let {
-        player: Rk,
-        chestOrCreative: tk
-      } = kk;
-      var ak;
-      return Fk < Rk.length ? null !== (ak = Rk[Fk]) && void 0 !== ak ? ak : null : null !== (Bk = tk[Fk - Rk.length]) && void 0 !== Bk ? Bk : null
+        player: kb,
+        chestOrCreative: Wb
+      } = bb;
+      var ab;
+      return cb < kb.length ? null !== (ab = kb[cb]) && void 0 !== ab ? ab : null : null !== (sb = Wb[cb - kb.length]) && void 0 !== sb ? sb : null
     }
 
-    function dk(kk) {
-      var Fk;
-      return null !== (Fk = kk.amount) && void 0 !== Fk ? Fk : 0
+    function Hb(bb) {
+      var cb;
+      return null !== (cb = bb.amount) && void 0 !== cb ? cb : 0
     }
 
-    function sk(kk) {
-      return 0 === kk.button || void 0 === kk.button
+    function fb(bb) {
+      return 0 === bb.button || void 0 === bb.button
     }
 
-    function Vk(kk) {
-      return !!kk.shiftKey
+    function Mb(bb) {
+      return !!bb.shiftKey
     }
 
-    function Jk(kk) {
-      return "touches" in kk || "touch" === kk.pointerType || "pen" === kk.pointerType
+    function Xb(bb) {
+      return "touches" in bb || "touch" === bb.pointerType || "pen" === bb.pointerType
     }
-    const Ak = new Set,
-      ek = 50;
+    const nb = new Set,
+      mb = 50;
 
-    function yk(kk, Fk) {
-      var Bk;
-      const Rk = null === (Bk = kk[Fk]) || void 0 === Bk ? void 0 : Bk.displayName;
-      return (0, tk.F)(Rk) ? "string" !== typeof Fk ? "" : (!Ak.has(Fk) && Ak.size < ek && (Ak.add(Fk), console.warn(`No item called "${Fk}", so its hover shows the name as given`)), Fk) : Rk
+    function lb(bb, cb) {
+      var sb;
+      const kb = null === (sb = bb[cb]) || void 0 === sb ? void 0 : sb.displayName;
+      return (0, Wb.L)(kb) ? "string" !== typeof cb ? "" : (!nb.has(cb) && nb.size < mb && (nb.add(cb), console.warn(`No item called "${cb}", so its hover shows the name as given`)), cb) : kb
     }
 
-    function fk(kk, Fk, Bk) {
-      var wk, dk, sk, Vk, Jk, Ak, ek, fk, mk, Wk, vk, ik, Yk, Lk;
-      const Ok = kk.attributes,
-        Ek = null !== (wk = null === (dk = Fk[kk.name]) || void 0 === dk ? void 0 : dk.rootName) && void 0 !== wk ? wk : kk.name,
-        Sk = null !== (sk = null !== (Vk = Ok.customDisplayName) && void 0 !== Vk ? Vk : null === (Jk = Fk[kk.name]) || void 0 === Jk ? void 0 : Jk.displayName) && void 0 !== sk ? sk : yk(Fk, Ek);
-      let Nk = Sk;
-      const Hk = null === (Ak = Ok.customAttributes) || void 0 === Ak ? void 0 : Ak.enchantmentTier;
-      Hk && (Nk = (0, ak.xb)(Sk, {
-        colour: ak.tb[Hk]
+    function Qb(bb, cb, sb) {
+      var Ib, Hb, fb, Mb, Xb, nb, mb, Qb, eb, Cb, Nb, Vb, Lb, ub;
+      const Yb = bb.attributes,
+        hb = null !== (Ib = null === (Hb = cb[bb.name]) || void 0 === Hb ? void 0 : Hb.rootName) && void 0 !== Ib ? Ib : bb.name,
+        Jb = null !== (fb = null !== (Mb = Yb.customDisplayName) && void 0 !== Mb ? Mb : null === (Xb = cb[bb.name]) || void 0 === Xb ? void 0 : Xb.displayName) && void 0 !== fb ? fb : lb(cb, hb);
+      let gb = Jb;
+      const Bb = null === (nb = Yb.customAttributes) || void 0 === nb ? void 0 : nb.enchantmentTier;
+      Bb && (gb = (0, ab.ub)(Jb, {
+        colour: ab.nb[Bb]
       }));
-      const uk = null !== (ek = null !== (fk = null !== (mk = function(kk, Fk) {
-        var Bk;
-        if (void 0 === kk || null !== (Bk = Fk.customAttributes) && void 0 !== Bk && Bk.author) return kk;
-        const tk = (0, Rk.bc)(kk);
-        return tk.every((kk => "string" === typeof kk)) ? kk : tk.map((kk => "string" === typeof kk ? kk : {
-          icon: kk.icon,
+      const tb = null !== (mb = null !== (Qb = null !== (eb = function(bb, cb) {
+        var sb;
+        if (void 0 === bb || null !== (sb = cb.customAttributes) && void 0 !== sb && sb.author) return bb;
+        const Wb = (0, kb.ic)(bb);
+        return Wb.every((bb => "string" === typeof bb)) ? bb : Wb.map((bb => "string" === typeof bb ? bb : {
+          icon: bb.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(Ok.customDescription, Ok)) && void 0 !== mk ? mk : null === (Wk = Fk[kk.name]) || void 0 === Wk ? void 0 : Wk.description) && void 0 !== fk ? fk : null === (vk = Fk[Ek]) || void 0 === vk ? void 0 : vk.description) && void 0 !== ek ? ek : "";
-      let Mk = uk;
-      if (null !== (ik = Ok.customAttributes) && void 0 !== ik && ik.enchantments) Mk = (0, bk.b)(uk, Ok.customAttributes.enchantments, Ok.customAttributes.enchantmentData);
-      else if (Bk[Ek]) Mk = (0, ak.xb)(uk), Mk.push({
+      }(Yb.customDescription, Yb)) && void 0 !== eb ? eb : null === (Cb = cb[bb.name]) || void 0 === Cb ? void 0 : Cb.description) && void 0 !== Qb ? Qb : null === (Nb = cb[hb]) || void 0 === Nb ? void 0 : Nb.description) && void 0 !== mb ? mb : "";
+      let yb = tb;
+      if (null !== (Vb = Yb.customAttributes) && void 0 !== Vb && Vb.enchantments) yb = (0, Ub.e)(tb, Yb.customAttributes.enchantments, Yb.customAttributes.enchantmentData);
+      else if (sb[hb]) yb = (0, ab.ub)(tb), yb.push({
         str: "\n"
-      }), Mk.push({
+      }), yb.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -7745,373 +7745,373 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (Yk = Ok.customAttributes) && void 0 !== Yk && Yk.mobSettings) {
-        var gk, Uk;
-        const kk = Ok.customAttributes.mobSettings;
-        var ck, Gk;
-        if (Mk = [], (0, tk.F)(Ok.customAttributes.health) || (Mk.push({
+      else if (null !== (Lb = Yb.customAttributes) && void 0 !== Lb && Lb.mobSettings) {
+        var Pb, Db;
+        const bb = Yb.customAttributes.mobSettings;
+        var Eb, ib;
+        if (yb = [], (0, Wb.L)(Yb.customAttributes.health) || (yb.push({
             str: "\n"
-          }), Mk.push({
+          }), yb.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), Mk.push({
+          }), yb.push({
             str: " "
-          }), Mk.push({
-            str: Ok.customAttributes.health.toString()
-          }), (0, tk.F)(kk.maxHealth) || (Mk.push({
+          }), yb.push({
+            str: Yb.customAttributes.health.toString()
+          }), (0, Wb.L)(bb.maxHealth) || (yb.push({
             str: "/"
-          }), Mk.push({
-            str: kk.maxHealth.toString()
-          }))), !(0, tk.F)(kk.attackDamage) && kk.attackDamage > 0 && (Mk.push({
+          }), yb.push({
+            str: bb.maxHealth.toString()
+          }))), !(0, Wb.L)(bb.attackDamage) && bb.attackDamage > 0 && (yb.push({
             str: "\n"
-          }), Mk.push({
+          }), yb.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), Mk.push({
+          }), yb.push({
             str: " "
-          }), Mk.push({
-            str: kk.attackDamage.toString()
-          })), !(0, tk.F)(kk.secondaryAttackDamage) && kk.secondaryAttackDamage > 0 && (Mk.push({
+          }), yb.push({
+            str: bb.attackDamage.toString()
+          })), !(0, Wb.L)(bb.secondaryAttackDamage) && bb.secondaryAttackDamage > 0 && (yb.push({
             str: "\n"
-          }), Mk.push({
+          }), yb.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), Mk.push({
+          }), yb.push({
             str: " "
-          }), Mk.push({
-            str: kk.secondaryAttackDamage.toString()
-          })), (0, tk.F)(kk.baseRunningSpeed) || (Mk.push({
+          }), yb.push({
+            str: bb.secondaryAttackDamage.toString()
+          })), (0, Wb.L)(bb.baseRunningSpeed) || (yb.push({
             str: "\n"
-          }), Mk.push({
+          }), yb.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), Mk.push({
+          }), yb.push({
             str: " "
-          }), Mk.push({
-            str: kk.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === kk.metaInfo) Mk.push({
+          }), yb.push({
+            str: bb.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === bb.metaInfo) yb.push({
           str: "\n"
-        }), Mk.push({
+        }), yb.push({
           str: {
             translationKey: "general:has"
           }
-        }), Mk.push({
+        }), yb.push({
           str: " "
-        }), Mk.push({
-          icon: null !== (ck = null === (Gk = kk.tameInfo) || void 0 === Gk ? void 0 : Gk.saddleItemName) && void 0 !== ck ? ck : "Saddle",
+        }), yb.push({
+          icon: null !== (Eb = null === (ib = bb.tameInfo) || void 0 === ib ? void 0 : ib.saddleItemName) && void 0 !== Eb ? Eb : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (Mk.push({
+        if (yb.push({
             str: "\n"
-          }), Mk.push({
+          }), yb.push({
             str: "\n"
-          }), kk.petInfo && null !== (gk = kk.tameInfo) && void 0 !== gk && gk.supportsFriendship) {
-          const Fk = Xk.d.getIconsFromFriendshipPoints(kk.petInfo.friendshipPoints);
-          for (const kk of Fk) Mk.push({
-            icon: kk,
+          }), bb.petInfo && null !== (Pb = bb.tameInfo) && void 0 !== Pb && Pb.supportsFriendship) {
+          const cb = Tb.b.getIconsFromFriendshipPoints(bb.petInfo.friendshipPoints);
+          for (const bb of cb) yb.push({
+            icon: bb,
             style: {
               fontSize: "1.5em"
             }
           });
-          Mk.push({
+          yb.push({
             str: "\n"
           });
-          const Bk = Xk.d.getMobHungerLevel(kk.petInfo.lastFedAt);
-          for (const kk of Xk.d.hungerLevelIcons[Bk]) Mk.push({
-            icon: kk,
+          const sb = Tb.b.getMobHungerLevel(bb.petInfo.lastFedAt);
+          for (const bb of Tb.b.hungerLevelIcons[sb]) yb.push({
+            icon: bb,
             style: {
               fontSize: "1.5em"
             }
           });
-          Mk.push({
+          yb.push({
             str: " "
-          }), Mk.push({
-            str: Xk.d.hungerLevelTranslations[Bk],
+          }), yb.push({
+            str: Tb.b.hungerLevelTranslations[sb],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (kk.tameInfo && null !== (Uk = kk.tameInfo) && void 0 !== Uk && Uk.supportsFriendship) {
-          var Tk, rk;
-          let Fk = null !== (Tk = kk.tameInfo.likedFoods) && void 0 !== Tk ? Tk : [];
-          Mk.push({
+        if (bb.tameInfo && null !== (Db = bb.tameInfo) && void 0 !== Db && Db.supportsFriendship) {
+          var Ob, Gb;
+          let cb = null !== (Ob = bb.tameInfo.likedFoods) && void 0 !== Ob ? Ob : [];
+          yb.push({
             str: "\n"
-          }), Mk.push({
+          }), yb.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Xk.d.feedTextColours[Xk.d.MobFoodType.Superliked]
+              color: Tb.b.feedTextColours[Tb.b.MobFoodType.Superliked]
             }
-          }), Mk.push({
+          }), yb.push({
             str: " "
-          }), null !== (rk = kk.petInfo) && void 0 !== rk && rk.superlikedFoodKnown ? (Mk.push({
-            icon: kk.petInfo.superlikedFood,
+          }), null !== (Gb = bb.petInfo) && void 0 !== Gb && Gb.superlikedFoodKnown ? (yb.push({
+            icon: bb.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), Fk = Fk.filter((Fk => Fk !== kk.petInfo.superlikedFood))) : Mk.push({
+          }), cb = cb.filter((cb => cb !== bb.petInfo.superlikedFood))) : yb.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), Mk.push({
+          }), yb.push({
             str: "\n"
-          }), Mk.push({
+          }), yb.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Xk.d.feedTextColours[Xk.d.MobFoodType.Liked]
+              color: Tb.b.feedTextColours[Tb.b.MobFoodType.Liked]
             }
-          }), Mk.push({
+          }), yb.push({
             str: " "
           });
-          for (const kk of Fk) Mk.push({
-            icon: kk,
+          for (const bb of cb) yb.push({
+            icon: bb,
             style: {
               fontSize: "1.5em"
             }
           });
-          Mk.push({
+          yb.push({
             str: "\n"
-          }), Mk.push({
+          }), yb.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Xk.d.feedTextColours[Xk.d.MobFoodType.Neutral]
+              color: Tb.b.feedTextColours[Tb.b.MobFoodType.Neutral]
             }
-          }), Mk.push({
+          }), yb.push({
             str: " "
           });
-          for (const Bk of null !== (Dk = kk.tameInfo.neutralFoods) && void 0 !== Dk ? Dk : []) {
-            var Dk;
-            Mk.push({
-              icon: Bk,
+          for (const sb of null !== (Kb = bb.tameInfo.neutralFoods) && void 0 !== Kb ? Kb : []) {
+            var Kb;
+            yb.push({
+              icon: sb,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          Mk.push({
+          yb.push({
             str: "\n"
-          }), Mk.push({
+          }), yb.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Xk.d.feedTextColours[Xk.d.MobFoodType.Disliked]
+              color: Tb.b.feedTextColours[Tb.b.MobFoodType.Disliked]
             }
-          }), Mk.push({
+          }), yb.push({
             str: " "
           });
-          for (const Bk of null !== (zk = kk.tameInfo.dislikedFoods) && void 0 !== zk ? zk : []) {
-            var zk;
-            Mk.push({
-              icon: Bk,
+          for (const sb of null !== (Zb = bb.tameInfo.dislikedFoods) && void 0 !== Zb ? Zb : []) {
+            var Zb;
+            yb.push({
+              icon: sb,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        Mk.length > 0 ? (Mk.shift(), Mk.unshift(...(0, ak.xb)(uk))) : Mk = (0, ak.xb)(uk)
+        yb.length > 0 ? (yb.shift(), yb.unshift(...(0, ab.ub)(tb))) : yb = (0, ab.ub)(tb)
       }
       return {
-        name: Nk,
-        desc: Mk,
-        fontStyle: null !== (Lk = Ok.customAttributes) && void 0 !== Lk && Lk.author ? "italic" : "normal"
+        name: gb,
+        desc: yb,
+        fontStyle: null !== (ub = Yb.customAttributes) && void 0 !== ub && ub.author ? "italic" : "normal"
       }
     }
 
-    function mk(kk, Fk, Bk, Rk) {
-      const tk = wk(kk, Bk),
-        ak = wk(kk, Rk);
-      if (!tk) return !1;
-      const Xk = Fk[tk.name].armourReduction,
-        bk = Fk[ak.name].armourReduction;
-      if (bk === Xk) {
-        var dk, sk, Vk, Jk;
-        const kk = null !== (dk = null === (sk = tk.attributes.customAttributes) || void 0 === sk ? void 0 : sk.enchantmentTier) && void 0 !== dk ? dk : "Tier 0",
-          Fk = null !== (Vk = null === (Jk = ak.attributes.customAttributes) || void 0 === Jk ? void 0 : Jk.enchantmentTier) && void 0 !== Vk ? Vk : "Tier 0";
-        return parseInt(kk.replace("Tier ", "")) >= parseInt(Fk.replace("Tier ", ""))
+    function eb(bb, cb, sb, kb) {
+      const Wb = Ib(bb, sb),
+        ab = Ib(bb, kb);
+      if (!Wb) return !1;
+      const Tb = cb[Wb.name].armourReduction,
+        Ub = cb[ab.name].armourReduction;
+      if (Ub === Tb) {
+        var Hb, fb, Mb, Xb;
+        const bb = null !== (Hb = null === (fb = Wb.attributes.customAttributes) || void 0 === fb ? void 0 : fb.enchantmentTier) && void 0 !== Hb ? Hb : "Tier 0",
+          cb = null !== (Mb = null === (Xb = ab.attributes.customAttributes) || void 0 === Xb ? void 0 : Xb.enchantmentTier) && void 0 !== Mb ? Mb : "Tier 0";
+        return parseInt(bb.replace("Tier ", "")) >= parseInt(cb.replace("Tier ", ""))
       }
-      return Xk > bk
+      return Tb > Ub
     }
 
-    function Wk(kk) {
-      let Fk;
-      if ("number" === typeof kk) {
-        const Bk = document.querySelector(`[data-inven-idx="${kk}"]`);
-        if (!Bk) return null;
-        Fk = Bk.getBoundingClientRect()
-      } else Fk = kk.getBoundingClientRect();
+    function Cb(bb) {
+      let cb;
+      if ("number" === typeof bb) {
+        const sb = document.querySelector(`[data-inven-idx="${bb}"]`);
+        if (!sb) return null;
+        cb = sb.getBoundingClientRect()
+      } else cb = bb.getBoundingClientRect();
       return {
-        x: Fk.left + Fk.width / 2,
-        y: Fk.top + Fk.height / 2
+        x: cb.left + cb.width / 2,
+        y: cb.top + cb.height / 2
       }
     }
   },
-  8900: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Ak,
-      g: () => ek,
-      h: () => yk
+  8829: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => nb,
+      h: () => mb,
+      i: () => lb
     });
-    var Rk = Bk(1389),
-      tk = Bk(61),
-      ak = Bk(1259),
-      Xk = Bk(4268),
-      bk = Bk(2265),
-      wk = Bk(1149),
-      dk = Bk(98),
-      sk = Bk(1876),
-      Vk = Bk(1288),
-      Jk = Bk(1069);
+    var kb = sb(1431),
+      Wb = sb(64),
+      ab = sb(1302),
+      Tb = sb(4270),
+      Ub = sb(2262),
+      Ib = sb(1197),
+      Hb = sb(117),
+      fb = sb(1912),
+      Mb = sb(1327),
+      Xb = sb(1087);
 
-    function Ak(kk) {
+    function nb(bb) {
       let {
-        show: Fk,
-        onClose: Bk
-      } = kk;
+        show: cb,
+        onClose: sb
+      } = bb;
       const {
-        requestedGameNameWithVariation: Rk,
-        lobbyName: tk,
-        shownLobbyName: ak
-      } = (0, sk.h)("connectedGame"), wk = (0, bk.b)(Rk, tk, !1);
-      return dk.featureFlags.canUseInviteLinks && (0, Jk.jsx)(Xk.e, {
-        show: Fk,
-        close: Bk,
+        requestedGameNameWithVariation: kb,
+        lobbyName: Wb,
+        shownLobbyName: ab
+      } = (0, fb.f)("connectedGame"), Ib = (0, Ub.c)(kb, Wb, !1);
+      return Hb.featureFlags.canUseInviteLinks && (0, Xb.jsx)(Tb.c, {
+        show: cb,
+        close: sb,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, Jk.jsxs)("div", {
+        children: (0, Xb.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, Jk.jsx)("div", {
+          children: [(0, Xb.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, Jk.jsxs)("div", {
+          }), (0, Xb.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, Jk.jsx)("div", {
+            children: [(0, Xb.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === wk ? (0, Jk.jsx)(Vk.b, {}) : wk, (0, Jk.jsx)("br", {}), "Lobby Name: ", ak, (0, Jk.jsx)("br", {}), (0, Jk.jsx)("br", {}), (0, Jk.jsx)("br", {}), (0, Jk.jsx)("div", {
+            }), "Game: ", null === Ib ? (0, Xb.jsx)(Mb.d, {}) : Ib, (0, Xb.jsx)("br", {}), "Lobby Name: ", ab, (0, Xb.jsx)("br", {}), (0, Xb.jsx)("br", {}), (0, Xb.jsx)("br", {}), (0, Xb.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, Jk.jsx)(ek, {})]
+          }), (0, Xb.jsx)(mb, {})]
         })
       })
     }
 
-    function ek() {
-      var kk;
+    function mb() {
+      var bb;
       const {
-        t: Fk
-      } = (0, wk.x)(), Bk = null !== (kk = yk(dk.featureFlags.canUseInviteLinks)) && void 0 !== kk ? kk : "Loading Link...", [ak, Xk] = (0, tk.useState)(0), [bk, sk] = (0, tk.useReducer)((kk => kk + 1), 0);
-      return (0, tk.useEffect)((() => {
-        const kk = setTimeout((() => {
-          sk()
+        t: cb
+      } = (0, Ib.E)(), sb = null !== (bb = lb(Hb.featureFlags.canUseInviteLinks)) && void 0 !== bb ? bb : "Loading Link...", [ab, Tb] = (0, Wb.useState)(0), [Ub, fb] = (0, Wb.useReducer)((bb => bb + 1), 0);
+      return (0, Wb.useEffect)((() => {
+        const bb = setTimeout((() => {
+          fb()
         }), 1100);
         return () => {
-          clearTimeout(kk)
+          clearTimeout(bb)
         }
-      }), [ak]), dk.featureFlags.canUseInviteLinks && (0, Jk.jsxs)("div", {
+      }), [ab]), Hb.featureFlags.canUseInviteLinks && (0, Xb.jsxs)("div", {
         className: "InviteLinkInnerWrapper",
-        children: [(0, Jk.jsx)("div", {
+        children: [(0, Xb.jsx)("div", {
           className: "InviteLinkInner",
-          children: Bk
-        }), (0, Jk.jsx)(Rk.g, {
+          children: sb
+        }), (0, Xb.jsx)(kb.d, {
           className: "InviteLinkCopyButton",
           onClick: () => {
-            navigator.clipboard.writeText(Bk).catch((kk => {
-              console.error("Failed to copy invite link:", kk)
-            })), Xk(Date.now())
+            navigator.clipboard.writeText(sb).catch((bb => {
+              console.error("Failed to copy invite link:", bb)
+            })), Tb(Date.now())
           },
-          disabled: Date.now() - ak < 1e3,
-          children: Date.now() - ak < 1e3 ? Fk("general:copied") : Fk("general:copy")
+          disabled: Date.now() - ab < 1e3,
+          children: Date.now() - ab < 1e3 ? cb("general:copied") : cb("general:copy")
         })]
       })
     }
 
-    function yk(kk) {
-      const [Fk, Bk] = (0, tk.useState)(null);
-      return (0, tk.useEffect)((() => {
-        if (!kk) return;
-        let Fk = !0;
-        return (0, ak.z)().then((kk => {
-          Fk && Bk(kk)
-        })).catch((kk => {
-          console.error("Failed to get invite link:", kk)
+    function lb(bb) {
+      const [cb, sb] = (0, Wb.useState)(null);
+      return (0, Wb.useEffect)((() => {
+        if (!bb) return;
+        let cb = !0;
+        return (0, ab.x)().then((bb => {
+          cb && sb(bb)
+        })).catch((bb => {
+          console.error("Failed to get invite link:", bb)
         })), () => {
-          Fk = !1
+          cb = !1
         }
-      }), [kk]), Fk
+      }), [bb]), cb
     }
   },
-  8996: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => dk
+  8910: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Hb
     });
-    var Rk = Bk(61),
-      tk = Bk(1020),
-      ak = Bk.n(tk),
-      Xk = Bk(1876),
-      bk = Bk(1069);
+    var kb = sb(64),
+      Wb = sb(1033),
+      ab = sb.n(Wb),
+      Tb = sb(1912),
+      Ub = sb(1087);
 
-    function wk(kk) {
-      const Fk = Math.floor(kk / 3600),
-        Bk = Math.floor(kk % 3600 / 60),
-        Rk = Math.floor(kk % 60),
-        tk = `${Bk.toString().padStart(2,"0")}:${Rk.toString().padStart(2,"0")}`;
-      return Fk > 0 ? `${Fk}:${tk}` : tk
+    function Ib(bb) {
+      const cb = Math.floor(bb / 3600),
+        sb = Math.floor(bb % 3600 / 60),
+        kb = Math.floor(bb % 60),
+        Wb = `${sb.toString().padStart(2,"0")}:${kb.toString().padStart(2,"0")}`;
+      return cb > 0 ? `${cb}:${Wb}` : Wb
     }
-    const dk = (0, Rk.memo)((function(kk) {
+    const Hb = (0, kb.memo)((function(bb) {
       let {
-        className: Fk
-      } = kk;
+        className: cb
+      } = bb;
       const {
-        recording: Bk,
-        seconds: Rk
-      } = (0, Xk.h)("replayRecorder");
-      return Bk ? (0, bk.jsxs)("div", {
-        className: ak()("RecordingIndicator", Fk),
-        children: [(0, bk.jsx)("span", {
+        recording: sb,
+        seconds: kb
+      } = (0, Tb.f)("replayRecorder");
+      return sb ? (0, Ub.jsxs)("div", {
+        className: ab()("RecordingIndicator", cb),
+        children: [(0, Ub.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, bk.jsx)("span", {
+        }), (0, Ub.jsx)("span", {
           className: "RecordingIndicatorLabel",
           children: "REC"
-        }), (0, bk.jsx)("span", {
+        }), (0, Ub.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: wk(Rk)
+          children: Ib(kb)
         })]
       }) : null
     }))
   },
-  4599: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => fk
+  4600: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Qb
     });
-    var Rk = Bk(1020),
-      tk = Bk.n(Rk),
-      ak = Bk(4380),
-      Xk = Bk(1149),
-      bk = Bk(1028),
-      wk = Bk(1389),
-      dk = Bk(1441),
-      sk = Bk(1300),
-      Vk = Bk(2384),
-      Jk = Bk(1069);
-    const Ak = {
+    var kb = sb(1033),
+      Wb = sb.n(kb),
+      ab = sb(4384),
+      Tb = sb(1197),
+      Ub = sb(1039),
+      Ib = sb(1431),
+      Hb = sb(1474),
+      fb = sb(1332),
+      Mb = sb(2391),
+      Xb = sb(1087);
+    const nb = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -8139,354 +8139,354 @@ export const modules = {
       }
     };
 
-    function ek(kk) {
+    function mb(bb) {
       let {
-        platform: Fk
-      } = kk;
-      const Bk = "youtube" === Fk;
-      return (0, Jk.jsxs)("span", {
-        className: tk()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: Bk
+        platform: cb
+      } = bb;
+      const sb = "youtube" === cb;
+      return (0, Xb.jsxs)("span", {
+        className: Wb()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: sb
         }),
-        children: [Bk && (0, Jk.jsx)(Vk.e, {
+        children: [sb && (0, Xb.jsx)(Mb.b, {
           variant: "white"
-        }), !Bk && (0, Jk.jsx)(bk.d, {
-          name: Ak[Fk].icon,
+        }), !sb && (0, Xb.jsx)(Ub.b, {
+          name: nb[cb].icon,
           kit: "brands"
         })]
       })
     }
 
-    function yk(kk) {
+    function lb(bb) {
       let {
-        platform: Fk,
-        link: Bk,
-        editable: Rk,
-        userContext: tk,
-        onLinksUpdated: Vk
-      } = kk;
+        platform: cb,
+        link: sb,
+        editable: kb,
+        userContext: Wb,
+        onLinksUpdated: Mb
+      } = bb;
       const {
-        t: yk
-      } = (0, Xk.x)(), fk = Ak[Fk];
-      if (!Bk && !Rk) return null;
+        t: lb
+      } = (0, Tb.E)(), Qb = nb[cb];
+      if (!sb && !kb) return null;
 
-      function mk() {
-        var kk;
-        if (!tk || !Vk) return;
-        sk.NotificationProvider.showInputPopup({
+      function eb() {
+        var bb;
+        if (!Wb || !Mb) return;
+        fb.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: fk.name
+              platform: Qb.name
             }
           },
-          prefixText: ak.A[Fk],
+          prefixText: ab.y[cb],
           placeholderText: "playBloxd",
-          initialValue: null !== (kk = null === Bk || void 0 === Bk ? void 0 : Bk.handle) && void 0 !== kk ? kk : "",
+          initialValue: null !== (bb = null === sb || void 0 === sb ? void 0 : sb.handle) && void 0 !== bb ? bb : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: Bk ? "general:remove" : void 0
-        }).getResult().then((async kk => {
-          if ("notificationTornDown" !== kk && null !== kk) try {
-            "submit" === kk.type ? await dk.b.setSocialLink(tk, Fk, kk.value) : await dk.b.clearSocialLink(tk, Fk), Vk()
-          } catch (Bk) {
-            console.error("Failed to update social link", Bk), sk.NotificationProvider.showAlertPopup({
-              title: Bk.errorMessageForUser,
+          secondaryButtonText: sb ? "general:remove" : void 0
+        }).getResult().then((async bb => {
+          if ("notificationTornDown" !== bb && null !== bb) try {
+            "submit" === bb.type ? await Hb.b.setSocialLink(Wb, cb, bb.value) : await Hb.b.clearSocialLink(Wb, cb), Mb()
+          } catch (sb) {
+            console.error("Failed to update social link", sb), fb.NotificationProvider.showAlertPopup({
+              title: sb.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (Bk) {
-        const kk = `@${Bk.handle}`;
-        return (0, Jk.jsxs)("a", {
+      if (sb) {
+        const bb = `@${sb.handle}`;
+        return (0, Xb.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: fk.color
+            background: Qb.color
           },
-          href: Bk.profileUrl,
+          href: sb.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, Jk.jsxs)("div", {
+          children: [(0, Xb.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, Jk.jsx)(ek, {
-              platform: Fk
-            }), (0, Jk.jsx)("span", {
+            children: [(0, Xb.jsx)(mb, {
+              platform: cb
+            }), (0, Xb.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, Jk.jsx)("span", {
+              children: (0, Xb.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: kk
+                children: bb
               })
             })]
-          }), Rk && (0, Jk.jsx)("button", {
+          }), kb && (0, Xb.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, wk.R)({
+            ...(0, Ib.U)({
               stopPropagation: !0
             }),
-            onClick: kk => {
-              kk.stopPropagation(), kk.preventDefault(), mk()
+            onClick: bb => {
+              bb.stopPropagation(), bb.preventDefault(), eb()
             },
-            children: (0, Jk.jsx)(bk.d, {
+            children: (0, Xb.jsx)(Ub.b, {
               name: "pen-to-square"
             })
-          }), !Rk && (0, Jk.jsx)("span", {
+          }), !kb && (0, Xb.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, Jk.jsx)(bk.d, {
+            children: (0, Xb.jsx)(Ub.b, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, Jk.jsxs)("button", {
+      return (0, Xb.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: fk.color
+          background: Qb.color
         },
-        ...(0, wk.R)(),
+        ...(0, Ib.U)(),
         onClick: () => {
-          mk()
+          eb()
         },
-        children: [(0, Jk.jsx)(ek, {
-          platform: Fk
-        }), (0, Jk.jsxs)("span", {
+        children: [(0, Xb.jsx)(mb, {
+          platform: cb
+        }), (0, Xb.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, Jk.jsx)("span", {
+          children: [(0, Xb.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: fk.name
-          }), (0, Jk.jsx)("span", {
+            children: Qb.name
+          }), (0, Xb.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: yk("homePage:profileSocialLinkAdd")
+            children: lb("homePage:profileSocialLinkAdd")
           })]
-        }), (0, Jk.jsx)("span", {
+        }), (0, Xb.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, Jk.jsx)(bk.d, {
+          children: (0, Xb.jsx)(Ub.b, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function fk(kk) {
+    function Qb(bb) {
       let {
-        socialLinks: Fk,
-        editable: Bk = !1,
-        userContext: Rk,
-        onLinksUpdated: tk
-      } = kk;
-      if (!Bk && 0 === Fk.length) return null;
-      const Xk = new Map(Fk.map((kk => [kk.platform, kk]))),
-        bk = Bk ? ak.w : Fk.map((kk => kk.platform));
-      return (0, Jk.jsx)("div", {
+        socialLinks: cb,
+        editable: sb = !1,
+        userContext: kb,
+        onLinksUpdated: Wb
+      } = bb;
+      if (!sb && 0 === cb.length) return null;
+      const Tb = new Map(cb.map((bb => [bb.platform, bb]))),
+        Ub = sb ? ab.w : cb.map((bb => bb.platform));
+      return (0, Xb.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, Jk.jsx)("div", {
+        children: (0, Xb.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: bk.map((kk => (0, Jk.jsx)(yk, {
-            platform: kk,
-            link: Xk.get(kk),
-            editable: Bk,
-            userContext: Rk,
-            onLinksUpdated: tk
-          }, kk)))
+          children: Ub.map((bb => (0, Xb.jsx)(lb, {
+            platform: bb,
+            link: Tb.get(bb),
+            editable: sb,
+            userContext: kb,
+            onLinksUpdated: Wb
+          }, bb)))
         })
       })
     }
   },
-  9004: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => ak
+  8917: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => ab
     });
-    var Rk = Bk(4277),
-      tk = Bk(4283);
+    var kb = sb(4275),
+      Wb = sb(4282);
 
-    function ak(kk) {
+    function ab(bb) {
       let {
-        children: Fk,
-        showing: Bk,
-        globallyUniqueKey: ak,
-        alwaysMountChildren: Xk = !1,
-        doGameplayStartStopOnShow: bk = !0,
-        keepsMovement: wk = !1
-      } = kk;
-      return (0, tk.d)(!0, Bk, ak, wk), (0, Rk.e)(bk, Bk), Bk || Xk ? Fk : null
+        children: cb,
+        showing: sb,
+        globallyUniqueKey: ab,
+        alwaysMountChildren: Tb = !1,
+        doGameplayStartStopOnShow: Ub = !0,
+        keepsMovement: Ib = !1
+      } = bb;
+      return (0, Wb.d)(!0, sb, ab, Ib), (0, kb.e)(Ub, sb), sb || Tb ? cb : null
     }
   },
-  9051: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => ak
+  8967: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => ab
     });
-    var Rk = Bk(61),
-      tk = Bk(3374);
+    var kb = sb(64),
+      Wb = sb(3369);
 
-    function ak() {
-      const [kk, Fk] = (0, Rk.useState)(!1);
-      return (0, Rk.useLayoutEffect)((() => {
-        let kk = !0;
-        return (0, tk.d)().then((() => {
-          kk && Fk(!0)
+    function ab() {
+      const [bb, cb] = (0, kb.useState)(!1);
+      return (0, kb.useLayoutEffect)((() => {
+        let bb = !0;
+        return (0, Wb.e)().then((() => {
+          bb && cb(!0)
         })), () => {
-          kk = !1
+          bb = !1
         }
-      }), []), kk
+      }), []), bb
     }
   },
-  6267: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => ak
+  6226: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => ab
     });
-    var Rk = Bk(61),
-      tk = Bk(42);
+    var kb = sb(64),
+      Wb = sb(37);
 
-    function ak(kk, Fk) {
-      var Bk;
-      const [ak, Xk] = (0, Rk.useState)(null !== (Bk = tk.i.getItem(kk)) && void 0 !== Bk ? Bk : Fk);
-      return [ak, Fk => {
-        tk.i.setItem(kk, Fk), Xk(Fk)
+    function ab(bb, cb) {
+      var sb;
+      const [ab, Tb] = (0, kb.useState)(null !== (sb = Wb.h.getItem(bb)) && void 0 !== sb ? sb : cb);
+      return [ab, cb => {
+        Wb.h.setItem(bb, cb), Tb(cb)
       }]
     }
   },
-  8974: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Jk,
-      e: () => Vk
+  8888: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Xb,
+      f: () => Mb
     });
-    Bk(8979);
-    var Rk = Bk(1020),
-      tk = Bk.n(Rk),
-      ak = Bk(61),
-      Xk = Bk(8949);
+    sb(8895);
+    var kb = sb(1033),
+      Wb = sb.n(kb),
+      ab = sb(64),
+      Tb = sb(8871);
 
-    function bk(kk, Fk) {
-      return Math.max(1, Math.round(kk * Fk))
+    function Ub(bb, cb) {
+      return Math.max(1, Math.round(bb * cb))
     }
 
-    function wk(kk, Fk, Bk) {
-      const Rk = 2 * Bk >= Fk - 1;
+    function Ib(bb, cb, sb) {
+      const kb = 2 * sb >= cb - 1;
       return {
-        x: kk,
-        y: kk,
-        size: Fk,
-        border: Math.min(Bk, Math.floor(Fk / 2)),
-        filled: Rk
+        x: bb,
+        y: bb,
+        size: cb,
+        border: Math.min(sb, Math.floor(cb / 2)),
+        filled: kb
       }
     }
-    var dk = Bk(1069);
-    const sk = 1.4;
+    var Hb = sb(1087);
+    const fb = 1.4;
 
-    function Vk(kk, Fk) {
-      return kk && Fk ? `scale(${sk})` : "scale(1)"
+    function Mb(bb, cb) {
+      return bb && cb ? `scale(${fb})` : "scale(1)"
     }
 
-    function Jk(kk) {
-      return "classic" === kk.settings.style ? (0, dk.jsx)(yk, {
-        ...kk
-      }) : (0, dk.jsx)(Lk, {
-        ...kk
+    function Xb(bb) {
+      return "classic" === bb.settings.style ? (0, Hb.jsx)(lb, {
+        ...bb
+      }) : (0, Hb.jsx)(ub, {
+        ...bb
       })
     }
-    const Ak = .125;
+    const nb = .125;
 
-    function ek(kk, Fk) {
-      const Bk = {};
-      if (kk.color !== Xk.f.color && (Bk.color = (0, Xk.j)(kk.color)), kk.opacity !== Xk.f.opacity && (Bk.opacity = kk.opacity / 100), kk.outline !== Xk.f.outline || kk.outlineColor !== Xk.f.outlineColor) {
-        const Fk = kk.outline,
-          Rk = (0, Xk.j)(kk.outlineColor);
-        Bk.textShadow = Fk > 0 ? `-${Fk}px 0 ${Rk}, 0 ${Fk}px ${Rk}, ${Fk}px 0 ${Rk}, 0 -${Fk}px ${Rk}` : "none"
+    function mb(bb, cb) {
+      const sb = {};
+      if (bb.color !== Tb.g.color && (sb.color = (0, Tb.n)(bb.color)), bb.opacity !== Tb.g.opacity && (sb.opacity = bb.opacity / 100), bb.outline !== Tb.g.outline || bb.outlineColor !== Tb.g.outlineColor) {
+        const cb = bb.outline,
+          kb = (0, Tb.n)(bb.outlineColor);
+        sb.textShadow = cb > 0 ? `-${cb}px 0 ${kb}, 0 ${cb}px ${kb}, ${cb}px 0 ${kb}, 0 -${cb}px ${kb}` : "none"
       }
-      if (kk.size !== Xk.f.size) {
-        const Rk = kk.size / 100;
-        Bk.fontSize = Fk ? `calc(max(1.3rem, 18px) * ${Rk})` : `calc(1.3rem * ${Rk})`, Bk.marginTop = `-${Ak}em`, Bk.transformOrigin = `50% calc(50% + ${Ak}em)`
+      if (bb.size !== Tb.g.size) {
+        const kb = bb.size / 100;
+        sb.fontSize = cb ? `calc(max(1.3rem, 18px) * ${kb})` : `calc(1.3rem * ${kb})`, sb.marginTop = `-${nb}em`, sb.transformOrigin = `50% calc(50% + ${nb}em)`
       }
-      return Bk
+      return sb
     }
 
-    function yk(kk) {
+    function lb(bb) {
       let {
-        settings: Fk,
-        touch: Bk,
-        inPreview: Rk,
-        inEditor: ak,
-        pressed: Xk = !1,
-        pressRef: bk
-      } = kk;
-      return (0, dk.jsx)("div", {
-        className: tk()("Crosshair", {
-          Touch: Bk,
-          CrosshairInPreview: Rk,
-          CrosshairInEditor: ak || Rk
+        settings: cb,
+        touch: sb,
+        inPreview: kb,
+        inEditor: ab,
+        pressed: Tb = !1,
+        pressRef: Ub
+      } = bb;
+      return (0, Hb.jsx)("div", {
+        className: Wb()("Crosshair", {
+          Touch: sb,
+          CrosshairInPreview: kb,
+          CrosshairInEditor: ab || kb
         }),
-        ref: bk,
+        ref: Ub,
         style: {
-          transform: Vk(Xk, Fk.growOnClick),
-          ...ek(Fk, Bk)
+          transform: Mb(Tb, cb.growOnClick),
+          ...mb(cb, sb)
         },
         children: "+"
       })
     }
 
-    function fk(kk, Fk) {
-      return kk / Fk + "px"
+    function Qb(bb, cb) {
+      return bb / cb + "px"
     }
 
-    function mk(kk, Fk, Bk, Rk) {
+    function eb(bb, cb, sb, kb) {
       return {
-        ...ik(kk, Fk, Bk),
-        width: fk(kk.w, Bk),
-        height: fk(kk.h, Bk),
-        background: Rk
+        ...Vb(bb, cb, sb),
+        width: Qb(bb.w, sb),
+        height: Qb(bb.h, sb),
+        background: kb
       }
     }
 
-    function Wk(kk, Fk, Bk) {
+    function Cb(bb, cb, sb) {
       return {
-        left: fk(kk.x, Fk),
-        top: fk(kk.y, Fk),
-        width: fk(kk.size, Fk),
-        height: fk(kk.size, Fk),
-        borderWidth: fk(kk.border, Fk),
-        borderColor: Bk,
-        background: kk.filled ? Bk : void 0
+        left: Qb(bb.x, cb),
+        top: Qb(bb.y, cb),
+        width: Qb(bb.size, cb),
+        height: Qb(bb.size, cb),
+        borderWidth: Qb(bb.border, cb),
+        borderColor: sb,
+        background: bb.filled ? sb : void 0
       }
     }
-    const vk = {
+    const Nb = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function ik(kk, Fk, Bk) {
-      const [Rk, tk] = kk.arm ? vk[kk.arm] : [0, 0], ak = Math.round(Fk * Bk);
+    function Vb(bb, cb, sb) {
+      const [kb, Wb] = bb.arm ? Nb[bb.arm] : [0, 0], ab = Math.round(cb * sb);
       return {
-        left: fk(kk.x + Rk * ak, Bk),
-        top: fk(kk.y + tk * ak, Bk)
+        left: Qb(bb.x + kb * ab, sb),
+        top: Qb(bb.y + Wb * ab, sb)
       }
     }
 
-    function Yk(kk) {
-      return kk.arm ? {
-        "data-arm": kk.arm,
-        "data-x": kk.x,
-        "data-y": kk.y
+    function Lb(bb) {
+      return bb.arm ? {
+        "data-arm": bb.arm,
+        "data-x": bb.x,
+        "data-y": bb.y
       } : {}
     }
 
-    function Lk(kk) {
+    function ub(bb) {
       let {
-        settings: Fk,
-        inPreview: Bk,
-        inEditor: Rk,
-        pressed: Vk = !1,
-        spread: Jk,
-        spreadRef: Ak
-      } = kk;
-      const ek = (0, ak.useRef)(null),
+        settings: cb,
+        inPreview: sb,
+        inEditor: kb,
+        pressed: Mb = !1,
+        spread: Xb,
+        spreadRef: nb
+      } = bb;
+      const mb = (0, ab.useRef)(null),
         {
-          box: yk,
-          dpr: fk
-        } = function(kk) {
-          const [Fk, Bk] = (0, ak.useState)({
+          box: lb,
+          dpr: Qb
+        } = function(bb) {
+          const [cb, sb] = (0, ab.useState)({
             box: {
               left: 0,
               top: 0,
@@ -8495,282 +8495,282 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, ak.useLayoutEffect)((() => {
-            const Fk = kk.current;
-            if (!Fk) return;
-            const Rk = () => {
-              const kk = Fk.getBoundingClientRect(),
-                Rk = window.devicePixelRatio || 1;
-              Bk((Fk => Fk.dpr === Rk && Fk.box.left === kk.left && Fk.box.top === kk.top && Fk.box.width === kk.width && Fk.box.height === kk.height ? Fk : {
+          return (0, ab.useLayoutEffect)((() => {
+            const cb = bb.current;
+            if (!cb) return;
+            const kb = () => {
+              const bb = cb.getBoundingClientRect(),
+                kb = window.devicePixelRatio || 1;
+              sb((cb => cb.dpr === kb && cb.box.left === bb.left && cb.box.top === bb.top && cb.box.width === bb.width && cb.box.height === bb.height ? cb : {
                 box: {
-                  left: kk.left,
-                  top: kk.top,
-                  width: kk.width,
-                  height: kk.height
+                  left: bb.left,
+                  top: bb.top,
+                  width: bb.width,
+                  height: bb.height
                 },
-                dpr: Rk
+                dpr: kb
               }))
             };
-            Rk();
-            const tk = new ResizeObserver(Rk);
-            return tk.observe(Fk), window.addEventListener("resize", Rk), window.addEventListener("scroll", Rk, !0), () => {
-              tk.disconnect(), window.removeEventListener("resize", Rk), window.removeEventListener("scroll", Rk, !0)
+            kb();
+            const Wb = new ResizeObserver(kb);
+            return Wb.observe(cb), window.addEventListener("resize", kb), window.addEventListener("scroll", kb, !0), () => {
+              Wb.disconnect(), window.removeEventListener("resize", kb), window.removeEventListener("scroll", kb, !0)
             }
-          }), [kk]), Fk
-        }(ek),
-        vk = (0, ak.useRef)(fk);
-      vk.current = fk;
-      const Lk = function(kk, Fk) {
-          const Bk = bk(kk.lineThickness, Fk),
-            Rk = bk(kk.lineLength, Fk),
-            tk = Math.round(kk.gap * Fk),
-            ak = bk(kk.dotSize, Fk),
-            Xk = kk.outline > 0 ? bk(kk.outline, Fk) : 0,
-            dk = bk(kk.circleThickness, Fk),
-            sk = kk.circle ? Math.round(kk.circleRadius * Fk * 2 + dk) : 0,
-            Vk = function(kk, Fk, Bk, Rk) {
-              return kk.lines ? Fk : kk.dot ? Bk : kk.circle && Rk % 2 === 0 ? 2 : 1
-            }(kk, Bk, ak, sk),
-            Jk = [];
-          if (kk.lines && (Jk.push({
-              x: Vk + tk,
+          }), [bb]), cb
+        }(mb),
+        Nb = (0, ab.useRef)(Qb);
+      Nb.current = Qb;
+      const ub = function(bb, cb) {
+          const sb = Ub(bb.lineThickness, cb),
+            kb = Ub(bb.lineLength, cb),
+            Wb = Math.round(bb.gap * cb),
+            ab = Ub(bb.dotSize, cb),
+            Tb = bb.outline > 0 ? Ub(bb.outline, cb) : 0,
+            Hb = Ub(bb.circleThickness, cb),
+            fb = bb.circle ? Math.round(bb.circleRadius * cb * 2 + Hb) : 0,
+            Mb = function(bb, cb, sb, kb) {
+              return bb.lines ? cb : bb.dot ? sb : bb.circle && kb % 2 === 0 ? 2 : 1
+            }(bb, sb, ab, fb),
+            Xb = [];
+          if (bb.lines && (Xb.push({
+              x: Mb + Wb,
               y: 0,
-              w: Rk,
-              h: Bk,
+              w: kb,
+              h: sb,
               arm: "right"
-            }), Jk.push({
-              x: -tk - Rk,
+            }), Xb.push({
+              x: -Wb - kb,
               y: 0,
-              w: Rk,
-              h: Bk,
+              w: kb,
+              h: sb,
               arm: "left"
-            }), Jk.push({
+            }), Xb.push({
               x: 0,
-              y: Vk + tk,
-              w: Bk,
-              h: Rk,
+              y: Mb + Wb,
+              w: sb,
+              h: kb,
               arm: "down"
-            }), kk.tStyle || Jk.push({
+            }), bb.tStyle || Xb.push({
               x: 0,
-              y: -tk - Rk,
-              w: Bk,
-              h: Rk,
+              y: -Wb - kb,
+              w: sb,
+              h: kb,
               arm: "up"
-            }), 0 === tk && Jk.push({
+            }), 0 === Wb && Xb.push({
               x: 0,
               y: 0,
-              w: Bk,
-              h: Bk
-            })), kk.dot) {
-            const kk = Math.floor((Vk - ak) / 2);
-            Jk.push({
-              x: kk,
-              y: kk,
-              w: ak,
-              h: ak
+              w: sb,
+              h: sb
+            })), bb.dot) {
+            const bb = Math.floor((Mb - ab) / 2);
+            Xb.push({
+              x: bb,
+              y: bb,
+              w: ab,
+              h: ab
             })
           }
-          const Ak = Jk.map((kk => ({
-            ...kk,
-            x: kk.x - Xk,
-            y: kk.y - Xk,
-            w: kk.w + 2 * Xk,
-            h: kk.h + 2 * Xk
+          const nb = Xb.map((bb => ({
+            ...bb,
+            x: bb.x - Tb,
+            y: bb.y - Tb,
+            w: bb.w + 2 * Tb,
+            h: bb.h + 2 * Tb
           })));
-          let ek = null,
-            yk = null;
-          if (kk.circle) {
-            const kk = sk + ((sk - Vk) % 2 === 0 ? 0 : 1),
-              Fk = (Vk - kk) / 2;
-            ek = wk(Fk, kk, dk), Xk > 0 && (yk = wk(Fk - Xk, kk + 2 * Xk, dk + 2 * Xk))
+          let mb = null,
+            lb = null;
+          if (bb.circle) {
+            const bb = fb + ((fb - Mb) % 2 === 0 ? 0 : 1),
+              cb = (Mb - bb) / 2;
+            mb = Ib(cb, bb, Hb), Tb > 0 && (lb = Ib(cb - Tb, bb + 2 * Tb, Hb + 2 * Tb))
           }
           return {
-            cell: Vk,
-            fills: Jk,
-            outlines: Xk > 0 ? Ak : [],
-            ring: ek,
-            ringOutline: yk
+            cell: Mb,
+            fills: Xb,
+            outlines: Tb > 0 ? nb : [],
+            ring: mb,
+            ringOutline: lb
           }
-        }(Vk && Fk.growOnClick ? function(kk, Fk) {
+        }(Mb && cb.growOnClick ? function(bb, cb) {
           return {
-            ...kk,
-            outline: kk.outline * Fk,
-            lineLength: kk.lineLength * Fk,
-            lineThickness: kk.lineThickness * Fk,
-            gap: kk.gap * Fk,
-            dotSize: kk.dotSize * Fk,
-            circleRadius: kk.circleRadius * Fk,
-            circleThickness: kk.circleThickness * Fk
+            ...bb,
+            outline: bb.outline * cb,
+            lineLength: bb.lineLength * cb,
+            lineThickness: bb.lineThickness * cb,
+            gap: bb.gap * cb,
+            dotSize: bb.dotSize * cb,
+            circleRadius: bb.circleRadius * cb,
+            circleThickness: bb.circleThickness * cb
           }
-        }(Fk, sk) : Fk, fk),
-        Ok = function(kk, Fk, Bk) {
-          const Rk = Math.round((kk.left + kk.width / 2) * Bk - Fk / 2),
-            tk = Math.round((kk.top + kk.height / 2) * Bk - Fk / 2);
+        }(cb, fb) : cb, Qb),
+        Yb = function(bb, cb, sb) {
+          const kb = Math.round((bb.left + bb.width / 2) * sb - cb / 2),
+            Wb = Math.round((bb.top + bb.height / 2) * sb - cb / 2);
           return {
-            x: Rk / Bk - kk.left,
-            y: tk / Bk - kk.top
+            x: kb / sb - bb.left,
+            y: Wb / sb - bb.top
           }
-        }(yk, Lk.cell, fk),
-        Ek = (0, Xk.j)(Fk.color),
-        Sk = (0, Xk.j)(Fk.outlineColor),
-        Nk = (0, ak.useRef)(0);
-      (0, ak.useLayoutEffect)((() => {
-        if (Ak) return Ak.current = kk => {
-          var Fk;
-          Nk.current = kk, null === (Fk = ek.current) || void 0 === Fk || Fk.querySelectorAll("[data-arm]").forEach((Fk => {
-            Object.assign(Fk.style, ik(function(kk) {
+        }(lb, ub.cell, Qb),
+        hb = (0, Tb.n)(cb.color),
+        Jb = (0, Tb.n)(cb.outlineColor),
+        gb = (0, ab.useRef)(0);
+      (0, ab.useLayoutEffect)((() => {
+        if (nb) return nb.current = bb => {
+          var cb;
+          gb.current = bb, null === (cb = mb.current) || void 0 === cb || cb.querySelectorAll("[data-arm]").forEach((cb => {
+            Object.assign(cb.style, Vb(function(bb) {
               return {
-                x: Number(kk.dataset.x),
-                y: Number(kk.dataset.y),
-                arm: kk.dataset.arm
+                x: Number(bb.dataset.x),
+                y: Number(bb.dataset.y),
+                arm: bb.dataset.arm
               }
-            }(Fk), kk, vk.current))
+            }(cb), bb, Nb.current))
           }))
         }, () => {
-          Ak.current = null
+          nb.current = null
         }
-      }), [Ak]);
-      const Hk = null !== Jk && void 0 !== Jk ? Jk : Nk.current;
-      return (0, dk.jsx)("div", {
-        ref: ek,
-        className: tk()("CrosshairShapes", {
-          CrosshairInPreview: Bk,
-          CrosshairInEditor: Rk || Bk,
-          CrosshairSpreads: void 0 !== Ak
+      }), [nb]);
+      const Bb = null !== Xb && void 0 !== Xb ? Xb : gb.current;
+      return (0, Hb.jsx)("div", {
+        ref: mb,
+        className: Wb()("CrosshairShapes", {
+          CrosshairInPreview: sb,
+          CrosshairInEditor: kb || sb,
+          CrosshairSpreads: void 0 !== nb
         }),
-        children: (0, dk.jsx)("div", {
+        children: (0, Hb.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: Ok.x,
-            top: Ok.y,
-            opacity: Fk.opacity / 100
+            left: Yb.x,
+            top: Yb.y,
+            opacity: cb.opacity / 100
           },
-          children: (0, dk.jsxs)("div", {
+          children: (0, Hb.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [Lk.ringOutline && (0, dk.jsx)("div", {
+            children: [ub.ringOutline && (0, Hb.jsx)("div", {
               className: "CrosshairRing",
-              style: Wk(Lk.ringOutline, fk, Sk)
-            }), Lk.outlines.map(((kk, Fk) => (0, dk.jsx)("div", {
+              style: Cb(ub.ringOutline, Qb, Jb)
+            }), ub.outlines.map(((bb, cb) => (0, Hb.jsx)("div", {
               className: "CrosshairPart",
-              ...Yk(kk),
-              style: mk(kk, Hk, fk, Sk)
-            }, `o${Fk}`))), Lk.ring && (0, dk.jsx)("div", {
+              ...Lb(bb),
+              style: eb(bb, Bb, Qb, Jb)
+            }, `o${cb}`))), ub.ring && (0, Hb.jsx)("div", {
               className: "CrosshairRing",
-              style: Wk(Lk.ring, fk, Ek)
-            }), Lk.fills.map(((kk, Fk) => (0, dk.jsx)("div", {
+              style: Cb(ub.ring, Qb, hb)
+            }), ub.fills.map(((bb, cb) => (0, Hb.jsx)("div", {
               className: "CrosshairPart",
-              ...Yk(kk),
-              style: mk(kk, Hk, fk, Ek)
-            }, `f${Fk}`)))]
+              ...Lb(bb),
+              style: eb(bb, Bb, Qb, hb)
+            }, `f${cb}`)))]
           })
         })
       })
     }
   },
-  8987: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => sk,
-      e: () => fk,
-      g: () => yk
+  8897: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => fb,
+      f: () => Qb,
+      i: () => lb
     });
-    var Rk = Bk(8949);
-    const tk = "XH1-",
-      ak = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      Xk = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      bk = ["color", "outlineColor"],
-      wk = 1 + 3 * bk.length + Xk.length + 1,
-      dk = Math.ceil(8 * wk / Math.log2(62)),
-      sk = tk.length + dk;
+    var kb = sb(8871);
+    const Wb = "XH1-",
+      ab = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      Tb = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      Ub = ["color", "outlineColor"],
+      Ib = 1 + 3 * Ub.length + Tb.length + 1,
+      Hb = Math.ceil(8 * Ib / Math.log2(62)),
+      fb = Wb.length + Hb;
 
-    function Vk(kk) {
-      let Fk = 90;
-      for (const Bk of kk) Fk = 31 * Fk + Bk & 255;
-      return Fk
+    function Mb(bb) {
+      let cb = 90;
+      for (const sb of bb) cb = 31 * cb + sb & 255;
+      return cb
     }
-    const Jk = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      Ak = BigInt(Jk.length);
+    const Xb = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      nb = BigInt(Xb.length);
 
-    function ek(kk, Fk) {
-      let Bk = 0n;
-      for (const tk of kk) {
-        const kk = Jk.indexOf(tk);
-        if (kk < 0) return null;
-        Bk = Bk * Ak + BigInt(kk)
+    function mb(bb, cb) {
+      let sb = 0n;
+      for (const Wb of bb) {
+        const bb = Xb.indexOf(Wb);
+        if (bb < 0) return null;
+        sb = sb * nb + BigInt(bb)
       }
-      if (Bk >> BigInt(8 * Fk) !== 0n) return null;
-      const Rk = [];
-      for (let tk = 0; tk < Fk; tk++) Rk.unshift(Number(0xffn & Bk)), Bk >>= 8n;
-      return Rk
+      if (sb >> BigInt(8 * cb) !== 0n) return null;
+      const kb = [];
+      for (let Wb = 0; Wb < cb; Wb++) kb.unshift(Number(0xffn & sb)), sb >>= 8n;
+      return kb
     }
 
-    function yk(kk) {
-      let Fk = "shapes" === kk.style ? 1 : 0;
-      ak.forEach(((Bk, Rk) => {
-        kk[Bk] && (Fk |= 1 << Rk + 1)
+    function lb(bb) {
+      let cb = "shapes" === bb.style ? 1 : 0;
+      ab.forEach(((sb, kb) => {
+        bb[sb] && (cb |= 1 << kb + 1)
       }));
-      const Bk = [Fk];
-      for (const tk of bk) {
-        const Fk = (0, Rk.i)(tk, kk[tk]);
-        Bk.push(Fk >> 16 & 255, Fk >> 8 & 255, 255 & Fk)
+      const sb = [cb];
+      for (const Wb of Ub) {
+        const cb = (0, kb.k)(Wb, bb[Wb]);
+        sb.push(cb >> 16 & 255, cb >> 8 & 255, 255 & cb)
       }
-      for (const tk of Xk) {
+      for (const Wb of Tb) {
         const {
-          min: Fk,
-          step: ak
-        } = Rk.d[tk];
-        Bk.push(Math.round(((0, Rk.i)(tk, kk[tk]) - Fk) / ak))
+          min: cb,
+          step: ab
+        } = kb.c[Wb];
+        sb.push(Math.round(((0, kb.k)(Wb, bb[Wb]) - cb) / ab))
       }
-      return Bk.push(Vk(Bk)), tk + function(kk, Fk) {
-        let Bk = 0n;
-        for (const tk of kk) Bk = Bk << 8n | BigInt(tk);
-        let Rk = "";
-        for (let tk = 0; tk < Fk; tk++) Rk = Jk[Number(Bk % Ak)] + Rk, Bk /= Ak;
-        return Rk
-      }(Bk, dk)
+      return sb.push(Mb(sb)), Wb + function(bb, cb) {
+        let sb = 0n;
+        for (const Wb of bb) sb = sb << 8n | BigInt(Wb);
+        let kb = "";
+        for (let Wb = 0; Wb < cb; Wb++) kb = Xb[Number(sb % nb)] + kb, sb /= nb;
+        return kb
+      }(sb, Hb)
     }
 
-    function fk(kk) {
-      for (const Fk of kk.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${dk}})`, "gi"))) {
-        const kk = mk(ek(Fk[1], wk));
-        if (kk) return kk
+    function Qb(bb) {
+      for (const cb of bb.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Hb}})`, "gi"))) {
+        const bb = eb(mb(cb[1], Ib));
+        if (bb) return bb
       }
       return null
     }
 
-    function mk(kk) {
-      if (!kk || kk.length !== wk || Vk(kk.slice(0, -1)) !== kk[kk.length - 1]) return null;
-      const Fk = kk[0],
-        Bk = {
-          ...Rk.f,
-          style: 1 & Fk ? "shapes" : "classic"
+    function eb(bb) {
+      if (!bb || bb.length !== Ib || Mb(bb.slice(0, -1)) !== bb[bb.length - 1]) return null;
+      const cb = bb[0],
+        sb = {
+          ...kb.g,
+          style: 1 & cb ? "shapes" : "classic"
         };
-      ak.forEach(((kk, Rk) => {
-        Bk[kk] = 0 !== (Fk & 1 << Rk + 1)
+      ab.forEach(((bb, kb) => {
+        sb[bb] = 0 !== (cb & 1 << kb + 1)
       }));
-      let tk = 1;
-      for (const Rk of bk) Bk[Rk] = kk[tk] << 16 | kk[tk + 1] << 8 | kk[tk + 2], tk += 3;
-      for (const ak of Xk) {
+      let Wb = 1;
+      for (const kb of Ub) sb[kb] = bb[Wb] << 16 | bb[Wb + 1] << 8 | bb[Wb + 2], Wb += 3;
+      for (const ab of Tb) {
         const {
-          min: Fk,
-          step: Xk
-        } = Rk.d[ak];
-        Bk[ak] = (0, Rk.i)(ak, Fk + kk[tk] * Xk), tk++
+          min: cb,
+          step: Tb
+        } = kb.c[ab];
+        sb[ab] = (0, kb.k)(ab, cb + bb[Wb] * Tb), Wb++
       }
-      return Bk
+      return sb
     }
   },
-  8949: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Rk,
-      f: () => tk,
-      i: () => ak,
-      j: () => dk,
-      l: () => wk,
-      o: () => sk,
-      r: () => bk,
-      t: () => Xk
+  8871: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => kb,
+      g: () => Wb,
+      k: () => ab,
+      n: () => Hb,
+      p: () => Ib,
+      q: () => fb,
+      r: () => Ub,
+      u: () => Tb
     });
-    const Rk = {
+    const kb = {
         opacity: {
           min: 5,
           max: 100,
@@ -8827,7 +8827,7 @@ export const modules = {
           step: 1
         }
       },
-      tk = Object.freeze({
+      Wb = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -8848,271 +8848,271 @@ export const modules = {
         forGuns: !1
       });
 
-    function ak(kk, Fk) {
-      var Bk;
+    function ab(bb, cb) {
+      var sb;
       const {
-        min: ak,
-        max: Xk,
-        step: bk
-      } = Rk[kk];
-      if (!Number.isFinite(Fk)) return tk[kk];
-      const wk = (null !== (Bk = String(bk).split(".")[1]) && void 0 !== Bk ? Bk : "").length,
-        dk = Number((Math.round(Fk / bk) * bk).toFixed(wk));
-      return Math.min(Xk, Math.max(ak, dk))
+        min: ab,
+        max: Tb,
+        step: Ub
+      } = kb[bb];
+      if (!Number.isFinite(cb)) return Wb[bb];
+      const Ib = (null !== (sb = String(Ub).split(".")[1]) && void 0 !== sb ? sb : "").length,
+        Hb = Number((Math.round(cb / Ub) * Ub).toFixed(Ib));
+      return Math.min(Tb, Math.max(ab, Hb))
     }
 
-    function Xk(kk, Fk, Bk) {
-      const Rk = "number" === typeof Bk ? ak(Fk, Bk) : Bk;
+    function Tb(bb, cb, sb) {
+      const kb = "number" === typeof sb ? ab(cb, sb) : sb;
       return {
-        ...kk,
-        [Fk]: Rk
+        ...bb,
+        [cb]: kb
       }
     }
 
-    function bk(kk, Fk) {
-      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(tk).every((Rk => Bk.includes(Rk) || kk[Rk] === Fk[Rk]))
+    function Ub(bb, cb) {
+      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(Wb).every((kb => sb.includes(kb) || bb[kb] === cb[kb]))
     }
 
-    function wk(kk) {
-      return bk(kk, tk)
+    function Ib(bb) {
+      return Ub(bb, Wb)
     }
 
-    function dk(kk) {
-      return `#${kk.toString(16).padStart(6,"0")}`
+    function Hb(bb) {
+      return `#${bb.toString(16).padStart(6,"0")}`
     }
 
-    function sk(kk) {
-      const Fk = /^#?([0-9a-f]{6})$/i.exec(kk.trim());
-      return Fk ? parseInt(Fk[1], 16) : null
+    function fb(bb) {
+      const cb = /^#?([0-9a-f]{6})$/i.exec(bb.trim());
+      return cb ? parseInt(cb[1], 16) : null
     }
   },
-  8990: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => Vk,
-      g: () => Jk
+  8905: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Mb,
+      e: () => Xb
     });
-    var Rk = Bk(61),
-      tk = Bk(42),
-      ak = Bk(8987),
-      Xk = Bk(8949);
-    const bk = "crosshairCode";
-    let wk = null;
-    const dk = new Set;
+    var kb = sb(64),
+      Wb = sb(37),
+      ab = sb(8897),
+      Tb = sb(8871);
+    const Ub = "crosshairCode";
+    let Ib = null;
+    const Hb = new Set;
 
-    function sk() {
-      if (null === wk) {
-        var kk;
-        const Fk = tk.i.getItem(bk);
-        wk = null !== (kk = "string" === typeof Fk ? (0, ak.e)(Fk) : null) && void 0 !== kk ? kk : Xk.f
+    function fb() {
+      if (null === Ib) {
+        var bb;
+        const cb = Wb.h.getItem(Ub);
+        Ib = null !== (bb = "string" === typeof cb ? (0, ab.f)(cb) : null) && void 0 !== bb ? bb : Tb.g
       }
-      return wk
+      return Ib
     }
 
-    function Vk(kk) {
-      wk = kk, (0, Xk.l)(kk) ? tk.i.removeItem(bk) : tk.i.setItem(bk, (0, ak.g)(kk));
-      for (const Fk of dk) Fk()
+    function Mb(bb) {
+      Ib = bb, (0, Tb.p)(bb) ? Wb.h.removeItem(Ub) : Wb.h.setItem(Ub, (0, ab.i)(bb));
+      for (const cb of Hb) cb()
     }
 
-    function Jk() {
-      const [kk, Fk] = (0, Rk.useState)(sk);
-      return (0, Rk.useEffect)((() => {
-        const kk = () => {
-          Fk(sk())
+    function Xb() {
+      const [bb, cb] = (0, kb.useState)(fb);
+      return (0, kb.useEffect)((() => {
+        const bb = () => {
+          cb(fb())
         };
-        return kk(), Bk = kk, dk.add(Bk), () => {
-          dk.delete(Bk)
+        return bb(), sb = bb, Hb.add(sb), () => {
+          Hb.delete(sb)
         };
-        var Bk
-      }), []), kk
+        var sb
+      }), []), bb
     }
   },
-  8567: (kk, Fk, Bk) => {
-    function Rk(kk) {
+  8496: (bb, cb, sb) => {
+    function kb(bb) {
       return {
-        x: (kk.left + kk.right) / 2,
-        y: (kk.top + kk.bottom) / 2
+        x: (bb.left + bb.right) / 2,
+        y: (bb.top + bb.bottom) / 2
       }
     }
 
-    function tk(kk) {
-      return 0 === kk.length ? null : kk.reduce(((kk, Fk) => ({
-        left: Math.min(kk.left, Fk.left),
-        top: Math.min(kk.top, Fk.top),
-        right: Math.max(kk.right, Fk.right),
-        bottom: Math.max(kk.bottom, Fk.bottom)
+    function Wb(bb) {
+      return 0 === bb.length ? null : bb.reduce(((bb, cb) => ({
+        left: Math.min(bb.left, cb.left),
+        top: Math.min(bb.top, cb.top),
+        right: Math.max(bb.right, cb.right),
+        bottom: Math.max(bb.bottom, cb.bottom)
       })))
     }
 
-    function ak(kk, Fk) {
-      const Bk = Math.max(0, (Fk - (kk.right - kk.left)) / 2),
-        Rk = Math.max(0, (Fk - (kk.bottom - kk.top)) / 2);
+    function ab(bb, cb) {
+      const sb = Math.max(0, (cb - (bb.right - bb.left)) / 2),
+        kb = Math.max(0, (cb - (bb.bottom - bb.top)) / 2);
       return {
-        left: kk.left - Bk,
-        top: kk.top - Rk,
-        right: kk.right + Bk,
-        bottom: kk.bottom + Rk
+        left: bb.left - sb,
+        top: bb.top - kb,
+        right: bb.right + sb,
+        bottom: bb.bottom + kb
       }
     }
 
-    function Xk(kk, Fk) {
-      return Fk.x >= kk.left && Fk.x <= kk.right && Fk.y >= kk.top && Fk.y <= kk.bottom
+    function Tb(bb, cb) {
+      return cb.x >= bb.left && cb.x <= bb.right && cb.y >= bb.top && cb.y <= bb.bottom
     }
 
-    function bk(kk, Fk, Bk) {
-      let tk = null,
-        bk = 1 / 0;
+    function Ub(bb, cb, sb) {
+      let Wb = null,
+        Ub = 1 / 0;
       for (const {
-          id: Rk,
-          box: ak
+          id: kb,
+          box: ab
         }
-        of Fk) {
-        const Fk = (ak.right - ak.left) * (ak.bottom - ak.top);
-        Xk(ak, kk) && Fk < bk && (bk = Fk, tk = Rk)
+        of cb) {
+        const cb = (ab.right - ab.left) * (ab.bottom - ab.top);
+        Tb(ab, bb) && cb < Ub && (Ub = cb, Wb = kb)
       }
-      if (null !== tk) return tk;
-      let wk = 1 / 0;
+      if (null !== Wb) return Wb;
+      let Ib = 1 / 0;
       for (const {
-          id: dk,
-          box: sk
+          id: Hb,
+          box: fb
         }
-        of Fk) {
-        if (!Xk(ak(sk, Bk), kk)) continue;
-        const Fk = Rk(sk),
-          bk = Math.hypot(kk.x - Fk.x, kk.y - Fk.y);
-        bk < wk && (wk = bk, tk = dk)
+        of cb) {
+        if (!Tb(ab(fb, sb), bb)) continue;
+        const cb = kb(fb),
+          Ub = Math.hypot(bb.x - cb.x, bb.y - cb.y);
+        Ub < Ib && (Ib = Ub, Wb = Hb)
       }
-      return tk
+      return Wb
     }
 
-    function wk(kk, Fk, Bk) {
+    function Ib(bb, cb, sb) {
       return {
-        left: Bk.left,
-        top: Bk.top,
-        right: kk - Bk.right,
-        bottom: Fk - Bk.bottom
+        left: sb.left,
+        top: sb.top,
+        right: bb - sb.right,
+        bottom: cb - sb.bottom
       }
     }
 
-    function dk(kk, Fk, Bk, Rk) {
-      const tk = (kk, Fk, Bk) => Math.max(Math.min(Fk, 0), Math.min(Math.max(Bk, 0), kk));
+    function Hb(bb, cb, sb, kb) {
+      const Wb = (bb, cb, sb) => Math.max(Math.min(cb, 0), Math.min(Math.max(sb, 0), bb));
       return {
-        x: tk(Fk, Rk.left - kk.left, Rk.right - kk.right),
-        y: tk(Bk, Rk.top - kk.top, Rk.bottom - kk.bottom)
+        x: Wb(cb, kb.left - bb.left, kb.right - bb.right),
+        y: Wb(sb, kb.top - bb.top, kb.bottom - bb.bottom)
       }
     }
 
-    function sk(kk, Fk, Bk, Rk, tk) {
-      const ak = kk.dx * Rk + Fk,
-        Xk = kk.dy * tk + Bk,
-        bk = kk => Math.max(-1, Math.min(1, kk));
+    function fb(bb, cb, sb, kb, Wb) {
+      const ab = bb.dx * kb + cb,
+        Tb = bb.dy * Wb + sb,
+        Ub = bb => Math.max(-1, Math.min(1, bb));
       return {
-        dx: bk(ak / Rk),
-        dy: bk(Xk / tk)
+        dx: Ub(ab / kb),
+        dy: Ub(Tb / Wb)
       }
     }
 
-    function Vk(kk, Fk, Bk, Rk) {
-      return Fk <= 0 || Bk <= 0 ? 1 : Math.max(.05, Math.min(1, kk / Fk, Rk / Bk))
+    function Mb(bb, cb, sb, kb) {
+      return cb <= 0 || sb <= 0 ? 1 : Math.max(.05, Math.min(1, bb / cb, kb / sb))
     }
 
-    function Jk(kk, Fk, Bk) {
-      return Math.min(kk.right, Fk.right) - Math.max(kk.left, Fk.left) > Bk && Math.min(kk.bottom, Fk.bottom) - Math.max(kk.top, Fk.top) > Bk
+    function Xb(bb, cb, sb) {
+      return Math.min(bb.right, cb.right) - Math.max(bb.left, cb.left) > sb && Math.min(bb.bottom, cb.bottom) - Math.max(bb.top, cb.top) > sb
     }
 
-    function Ak(kk, Fk) {
-      const Bk = (kk, Fk, Bk, Rk) => Fk - kk > Rk - Bk ? Bk - kk > Fk - Rk ? Rk - Fk : Bk - kk : kk < Bk ? Bk - kk : Fk > Rk ? Rk - Fk : 0;
+    function nb(bb, cb) {
+      const sb = (bb, cb, sb, kb) => cb - bb > kb - sb ? sb - bb > cb - kb ? kb - cb : sb - bb : bb < sb ? sb - bb : cb > kb ? kb - cb : 0;
       return {
-        x: Bk(kk.left, kk.right, Fk.left, Fk.right),
-        y: Bk(kk.top, kk.bottom, Fk.top, Fk.bottom)
+        x: sb(bb.left, bb.right, cb.left, cb.right),
+        y: sb(bb.top, bb.bottom, cb.top, cb.bottom)
       }
     }
 
-    function ek(kk, Fk) {
+    function mb(bb, cb) {
       let {
-        avoid: Bk = null,
-        bounds: Rk = null
-      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, tk = 0, ak = 1 / 0;
-      return kk.forEach(((kk, Xk) => {
-        const bk = Fk.filter((Fk => Jk(kk, Fk, 0))).length,
-          wk = null !== Rk && (kk.left < Rk.left || kk.top < Rk.top || kk.right > Rk.right || kk.bottom > Rk.bottom),
-          dk = bk + (Bk && Jk(kk, Bk, 0) ? 1e3 : 0) + (wk ? 1e6 : 0);
-        dk < ak && (tk = Xk, ak = dk)
-      })), tk
+        avoid: sb = null,
+        bounds: kb = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, Wb = 0, ab = 1 / 0;
+      return bb.forEach(((bb, Tb) => {
+        const Ub = cb.filter((cb => Xb(bb, cb, 0))).length,
+          Ib = null !== kb && (bb.left < kb.left || bb.top < kb.top || bb.right > kb.right || bb.bottom > kb.bottom),
+          Hb = Ub + (sb && Xb(bb, sb, 0) ? 1e3 : 0) + (Ib ? 1e6 : 0);
+        Hb < ab && (Wb = Tb, ab = Hb)
+      })), Wb
     }
-    Bk.d(Fk, {
-      B: () => wk,
-      D: () => Ak,
-      E: () => tk,
-      e: () => Rk,
-      h: () => Xk,
-      k: () => Jk,
-      o: () => dk,
-      q: () => ak,
-      s: () => ek,
-      u: () => sk,
-      v: () => bk,
-      x: () => Vk
+    sb.d(cb, {
+      B: () => Ib,
+      E: () => nb,
+      F: () => Wb,
+      d: () => kb,
+      f: () => Tb,
+      j: () => Xb,
+      l: () => Hb,
+      n: () => ab,
+      q: () => mb,
+      t: () => fb,
+      x: () => Ub,
+      y: () => Mb
     })
   },
-  8941: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => ak,
-      g: () => tk
+  8867: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => ab,
+      f: () => Wb
     });
-    var Rk = Bk(22);
+    var kb = sb(19);
 
-    function tk(kk, Fk) {
-      return kk && !Fk
+    function Wb(bb, cb) {
+      return bb && !cb
     }
 
-    function ak() {
-      return tk(Rk.c.get("isTouchScreen"), Rk.c.get("clientEscMenuOptions").touchActionButtons)
+    function ab() {
+      return Wb(kb.d.get("isTouchScreen"), kb.d.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  8894: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Rk
+  8827: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => kb
     });
-    const Rk = new Set(["chunkBorders"])
+    const kb = new Set(["chunkBorders"])
   },
-  8891: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      ALL_DEV_TOOLS: () => Xk,
-      coreDevTools: () => dk,
-      devTools: () => wk
+  8819: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      ALL_DEV_TOOLS: () => Tb,
+      coreDevTools: () => Hb,
+      devTools: () => Ib
     });
-    var Rk = Bk(624),
-      tk = Bk(1245),
-      ak = Bk(8894);
-    const Xk = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function bk() {
+    var kb = sb(649),
+      Wb = sb(1291),
+      ab = sb(8827);
+    const Tb = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function Ub() {
       const {
-        noaDevTools: kk
-      } = await Bk.e(230).then((() => Bk(40492)));
-      return kk
+        noaDevTools: bb
+      } = await sb.e(230).then((() => sb(40495)));
+      return bb
     }
-    const wk = new class {
+    const Ib = new class {
         constructor() {
-          this.loadHost = bk, this.tools = Xk
+          this.loadHost = Ub, this.tools = Tb
         }
-        setHost(kk) {
-          this.tools = null === kk ? Xk : kk.tools, this.loadHost = null === kk ? bk : async () => kk
+        setHost(bb) {
+          this.tools = null === bb ? Tb : bb.tools, this.loadHost = null === bb ? Ub : async () => bb
         }
-        supports(kk) {
-          return this.tools.has(kk)
+        supports(bb) {
+          return this.tools.has(bb)
         }
-        async downloadScene(kk, Fk) {
-          const Bk = await this.loadHost();
-          await Bk.downloadScene(kk, Fk)
+        async downloadScene(bb, cb) {
+          const sb = await this.loadHost();
+          await sb.downloadScene(bb, cb)
         }
-        async setAmbientLightIntensity(kk) {
-          const Fk = await this.loadHost();
-          await Fk.setAmbientLightIntensity(kk)
+        async setAmbientLightIntensity(bb) {
+          const cb = await this.loadHost();
+          await cb.setAmbientLightIntensity(bb)
         }
       },
-      dk = {
-        tools: ak.e,
+      Hb = {
+        tools: ab.c,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -9120,121 +9120,121 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    Rk.p && wk.setHost(dk), (0, tk.o)((() => {
-      wk.setHost(dk)
+    kb.s && Ib.setHost(Hb), (0, Wb.o)((() => {
+      Ib.setHost(Hb)
     }))
   },
-  9045: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => Xk,
-      f: () => tk,
-      i: () => sk
+  8960: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Tb,
+      e: () => Wb,
+      h: () => fb
     });
-    var Rk = Bk(1512);
+    var kb = sb(1544);
 
-    function tk(kk) {
-      var Fk;
+    function Wb(bb) {
+      var cb;
       return {
-        ...Xk.store,
-        yaw: Xk.store.yaw + (null !== (Fk = Rk.d[kk].previewYaw) && void 0 !== Fk ? Fk : 0)
+        ...Tb.store,
+        yaw: Tb.store.yaw + (null !== (cb = kb.b[bb].previewYaw) && void 0 !== cb ? cb : 0)
       }
     }
-    const ak = {
+    const ab = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      Xk = {
-        player: ak,
+      Tb = {
+        player: ab,
         store: {
-          ...ak,
+          ...ab,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function bk(kk, Fk) {
-      kk instanceof Promise ? kk.then(Fk).catch((kk => {
-        console.error("Couldn't open the preview", kk)
-      })) : Fk(kk)
+    function Ub(bb, cb) {
+      bb instanceof Promise ? bb.then(cb).catch((bb => {
+        console.error("Couldn't open the preview", bb)
+      })) : cb(bb)
     }
-    class wk {
-      constructor(kk) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, bk(kk, (kk => {
-          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height), null !== this.view && kk.show(this.view))
+    class Ib {
+      constructor(bb) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, Ub(bb, (bb => {
+          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height), null !== this.view && bb.show(this.view))
         }))
       }
-      show(kk) {
-        var Fk;
-        this.view = kk, null === (Fk = this.opened) || void 0 === Fk || Fk.show(kk)
+      show(bb) {
+        var cb;
+        this.view = bb, null === (cb = this.opened) || void 0 === cb || cb.show(bb)
       }
-      resize(kk, Fk) {
-        var Bk;
+      resize(bb, cb) {
+        var sb;
         this.size = {
-          width: kk,
-          height: Fk
-        }, null === (Bk = this.opened) || void 0 === Bk || Bk.resize(kk, Fk)
+          width: bb,
+          height: cb
+        }, null === (sb = this.opened) || void 0 === sb || sb.resize(bb, cb)
       }
       close() {
-        var kk;
-        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
+        var bb;
+        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
       }
     }
-    class dk {
-      constructor(kk) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(kk).then((kk => kk.ready)), bk(kk, (kk => {
-          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height))
+    class Hb {
+      constructor(bb) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(bb).then((bb => bb.ready)), Ub(bb, (bb => {
+          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var kk, Fk;
-        return null !== (kk = null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.isReady()) && void 0 !== kk && kk
+        var bb, cb;
+        return null !== (bb = null === (cb = this.opened) || void 0 === cb ? void 0 : cb.isReady()) && void 0 !== bb && bb
       }
-      setCosmetic(kk, Fk) {
-        var Bk;
-        null === (Bk = this.opened) || void 0 === Bk || Bk.setCosmetic(kk, Fk)
+      setCosmetic(bb, cb) {
+        var sb;
+        null === (sb = this.opened) || void 0 === sb || sb.setCosmetic(bb, cb)
       }
-      playEmote(kk) {
-        var Fk;
-        null === (Fk = this.opened) || void 0 === Fk || Fk.playEmote(kk)
+      playEmote(bb) {
+        var cb;
+        null === (cb = this.opened) || void 0 === cb || cb.playEmote(bb)
       }
-      setOrbit(kk) {
-        var Fk;
-        null === (Fk = this.opened) || void 0 === Fk || Fk.setOrbit(kk)
+      setOrbit(bb) {
+        var cb;
+        null === (cb = this.opened) || void 0 === cb || cb.setOrbit(bb)
       }
       resetCamera() {
-        var kk;
-        null === (kk = this.opened) || void 0 === kk || kk.resetCamera()
+        var bb;
+        null === (bb = this.opened) || void 0 === bb || bb.resetCamera()
       }
-      async untilDrawn(kk) {
-        var Fk;
-        await this.ready, await (null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.untilDrawn(kk))
+      async untilDrawn(bb) {
+        var cb;
+        await this.ready, await (null === (cb = this.opened) || void 0 === cb ? void 0 : cb.untilDrawn(bb))
       }
-      resize(kk, Fk) {
-        var Bk;
+      resize(bb, cb) {
+        var sb;
         this.size = {
-          width: kk,
-          height: Fk
-        }, null === (Bk = this.opened) || void 0 === Bk || Bk.resize(kk, Fk)
+          width: bb,
+          height: cb
+        }, null === (sb = this.opened) || void 0 === sb || sb.resize(bb, cb)
       }
       close() {
-        var kk;
-        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
+        var bb;
+        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
       }
     }
-    const sk = new class {
+    const fb = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(kk) {
-        this.host = kk
+      setHost(bb) {
+        this.host = bb
       }
-      setDefaultHost(kk) {
-        this.makeDefault = kk
+      setDefaultHost(bb) {
+        this.makeDefault = bb
       }
       current() {
         if (null === this.host) {
@@ -9243,99 +9243,99 @@ export const modules = {
         }
         return this.host
       }
-      openMob(kk) {
-        return new wk(this.current().openMob(kk))
+      openMob(bb) {
+        return new Ib(this.current().openMob(bb))
       }
-      openPet(kk) {
-        return new wk(this.current().openPet(kk))
+      openPet(bb) {
+        return new Ib(this.current().openPet(bb))
       }
-      openMobLineup(kk) {
-        return new wk(this.current().openMobLineup(kk))
+      openMobLineup(bb) {
+        return new Ib(this.current().openMobLineup(bb))
       }
-      openCharacter(kk, Fk) {
-        return new dk(this.current().openCharacter(kk, Fk))
+      openCharacter(bb, cb) {
+        return new Hb(this.current().openCharacter(bb, cb))
       }
     }
   },
-  9039: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Rk.b,
-      f: () => Rk.f,
-      h: () => Rk.i
+  8956: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => kb.c,
+      g: () => kb.e,
+      h: () => kb.h
     });
-    var Rk = Bk(9045);
-    class tk {
-      constructor(kk) {
-        this.load = kk, this.loaded = null, this.loading = null
+    var kb = sb(8960);
+    class Wb {
+      constructor(bb) {
+        this.load = bb, this.loaded = null, this.loading = null
       }
-      run(kk) {
-        return null !== this.loaded ? kk(this.loaded) : (this.loading ??= this.load().then((kk => (this.loaded = kk, kk)), (kk => {
-          throw this.loading = null, kk
-        })), this.loading.then(kk))
+      run(bb) {
+        return null !== this.loaded ? bb(this.loaded) : (this.loading ??= this.load().then((bb => (this.loaded = bb, bb)), (bb => {
+          throw this.loading = null, bb
+        })), this.loading.then(bb))
       }
     }
-    class ak {
+    class ab {
       constructor() {
-        this.mobScene = new tk((() => Promise.all([Bk.e(69), Bk.e(226), Bk.e(225), Bk.e(244), Bk.e(94), Bk.e(245), Bk.e(72), Bk.e(71), Bk.e(242), Bk.e(70), Bk.e(252), Bk.e(246), Bk.e(251), Bk.e(249), Bk.e(241), Bk.e(218), Bk.e(264), Bk.e(222), Bk.e(236), Bk.e(247), Bk.e(250), Bk.e(74), Bk.e(196), Bk.e(215), Bk.e(219), Bk.e(93), Bk.e(113), Bk.e(234), Bk.e(73), Bk.e(112), Bk.e(153)]).then((() => Bk(40499))))), this.characterScene = new tk((() => Promise.all([Bk.e(69), Bk.e(226), Bk.e(225), Bk.e(244), Bk.e(94), Bk.e(245), Bk.e(72), Bk.e(71), Bk.e(242), Bk.e(70), Bk.e(252), Bk.e(246), Bk.e(251), Bk.e(249), Bk.e(241), Bk.e(218), Bk.e(264), Bk.e(222), Bk.e(236), Bk.e(247), Bk.e(250), Bk.e(74), Bk.e(196), Bk.e(215), Bk.e(219), Bk.e(93), Bk.e(113), Bk.e(234), Bk.e(73), Bk.e(112), Bk.e(152)]).then((() => Bk(40612)))))
+        this.mobScene = new Wb((() => Promise.all([sb.e(69), sb.e(226), sb.e(225), sb.e(244), sb.e(94), sb.e(245), sb.e(72), sb.e(71), sb.e(242), sb.e(70), sb.e(252), sb.e(246), sb.e(251), sb.e(249), sb.e(241), sb.e(218), sb.e(264), sb.e(222), sb.e(236), sb.e(247), sb.e(250), sb.e(74), sb.e(196), sb.e(215), sb.e(219), sb.e(93), sb.e(113), sb.e(234), sb.e(73), sb.e(112), sb.e(153)]).then((() => sb(40505))))), this.characterScene = new Wb((() => Promise.all([sb.e(69), sb.e(226), sb.e(225), sb.e(244), sb.e(94), sb.e(245), sb.e(72), sb.e(71), sb.e(242), sb.e(70), sb.e(252), sb.e(246), sb.e(251), sb.e(249), sb.e(241), sb.e(218), sb.e(264), sb.e(222), sb.e(236), sb.e(247), sb.e(250), sb.e(74), sb.e(196), sb.e(215), sb.e(219), sb.e(93), sb.e(113), sb.e(234), sb.e(73), sb.e(112), sb.e(152)]).then((() => sb(40593)))))
       }
-      openMob(kk) {
-        return this.mobScene.run((Fk => Fk.openMobPreview(kk)))
+      openMob(bb) {
+        return this.mobScene.run((cb => cb.openMobPreview(bb)))
       }
-      openPet(kk) {
-        return this.mobScene.run((Fk => Fk.openPetPreview(kk)))
+      openPet(bb) {
+        return this.mobScene.run((cb => cb.openPetPreview(bb)))
       }
-      openMobLineup(kk) {
-        return this.mobScene.run((Fk => Fk.openMobLineupPreview(kk)))
+      openMobLineup(bb) {
+        return this.mobScene.run((cb => cb.openMobLineupPreview(bb)))
       }
-      openCharacter(kk, Fk) {
-        return this.characterScene.run((Bk => Bk.openCharacterPreview(kk, Fk)))
+      openCharacter(bb, cb) {
+        return this.characterScene.run((sb => sb.openCharacterPreview(bb, cb)))
       }
     }
-    Rk.i.setDefaultHost((() => new ak))
+    kb.h.setDefaultHost((() => new ab))
   },
-  6361: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => tk,
-      e: () => ak
+  6328: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Wb,
+      d: () => ab
     });
-    var Rk = Bk(42);
-    const tk = "shaderPack";
-    async function ak() {
-      var kk;
-      let Fk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (kk = await Rk.f.getItem(tk, Fk)) && void 0 !== kk ? kk : null
+    var kb = sb(37);
+    const Wb = "shaderPack";
+    async function ab() {
+      var bb;
+      let cb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (bb = await kb.d.getItem(Wb, cb)) && void 0 !== bb ? bb : null
     }
   },
-  8910: (kk, Fk, Bk) => {
-    function Rk(kk, Fk) {
-      return kk && !Fk
+  8840: (bb, cb, sb) => {
+    function kb(bb, cb) {
+      return bb && !cb
     }
-    Bk.d(Fk, {
-      d: () => Rk
+    sb.d(cb, {
+      c: () => kb
     })
   },
-  8939: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => ak
+  8862: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => ab
     });
-    var Rk = Bk(1047);
+    var kb = sb(1058);
 
-    function tk() {
-      var kk, Fk;
-      return null !== (kk = null === (Fk = screen.orientation) || void 0 === Fk ? void 0 : Fk.type) && void 0 !== kk ? kk : innerWidth > innerHeight ? "landscape" : "portrait"
+    function Wb() {
+      var bb, cb;
+      return null !== (bb = null === (cb = screen.orientation) || void 0 === cb ? void 0 : cb.type) && void 0 !== bb ? bb : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const ak = new class {
+    const ab = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && tk() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && Wb() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = tk(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, Rk.ly)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = Wb(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, kb.dl)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -9343,34 +9343,34 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const kk of this.resizers) kk()
+            for (const bb of this.resizers) bb()
           }
         }), 1e3)
       }
-      heldSizer(kk) {
-        let Fk = !1;
+      heldSizer(bb) {
+        let cb = !1;
         return () => {
-          if (Fk && this.isHeld()) return null;
-          const Bk = kk();
-          return Fk ||= null !== Bk, Bk
+          if (cb && this.isHeld()) return null;
+          const sb = bb();
+          return cb ||= null !== sb, sb
         }
       }
-      onRelease(kk) {
-        return this.resizers.add(kk), () => {
-          this.resizers.delete(kk)
+      onRelease(bb) {
+        return this.resizers.add(bb), () => {
+          this.resizers.delete(bb)
         }
       }
     }
   },
-  8565: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => bk,
-      e: () => wk
+  8487: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Ub,
+      f: () => Ib
     });
-    var Rk = Bk(22),
-      tk = Bk(1267),
-      ak = Bk(98);
-    const Xk = {
+    var kb = sb(19),
+      Wb = sb(1312),
+      ab = sb(117);
+    const Tb = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -9413,111 +9413,111 @@ export const modules = {
       }
     };
 
-    function bk() {
-      return (0, ak.isMobile)() && "function" === typeof navigator.vibrate
+    function Ub() {
+      return (0, ab.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const wk = new class {
-      constructor(kk) {
-        this.deps = kk, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const Ib = new class {
+      constructor(bb) {
+        this.deps = bb, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(kk, Fk) {
-        var Bk;
+      play(bb, cb) {
+        var sb;
         if (!this.deps.enabled()) return;
-        const Rk = Xk[kk],
-          tk = null !== Fk && void 0 !== Fk ? Fk : Rk.pattern;
-        if (null === tk) return void console.warn("No vibration pattern for", kk);
-        const ak = this.deps.now();
-        ak - this.lastAnyAt < 40 && Rk.priority < this.playingPriority || ak - (null !== (Bk = this.lastAt.get(kk)) && void 0 !== Bk ? Bk : -1 / 0) < Rk.minGapMs || ak < this.playingUntil && Rk.priority < this.playingPriority || (this.lastAt.set(kk, ak), this.lastAnyAt = ak, this.playingUntil = ak + tk.reduce(((kk, Fk) => kk + Fk), 0), this.playingPriority = Rk.priority, this.deps.vibrate(tk))
+        const kb = Tb[bb],
+          Wb = null !== cb && void 0 !== cb ? cb : kb.pattern;
+        if (null === Wb) return void console.warn("No vibration pattern for", bb);
+        const ab = this.deps.now();
+        ab - this.lastAnyAt < 40 && kb.priority < this.playingPriority || ab - (null !== (sb = this.lastAt.get(bb)) && void 0 !== sb ? sb : -1 / 0) < kb.minGapMs || ab < this.playingUntil && kb.priority < this.playingPriority || (this.lastAt.set(bb, ab), this.lastAnyAt = ab, this.playingUntil = ab + Wb.reduce(((bb, cb) => bb + cb), 0), this.playingPriority = kb.priority, this.deps.vibrate(Wb))
       }
     }({
-      vibrate: kk => {
-        navigator.vibrate([...kk])
+      vibrate: bb => {
+        navigator.vibrate([...bb])
       },
       now: () => performance.now(),
-      enabled: () => bk() && Rk.c.get("isTouchScreen") && Rk.c.get("clientEscMenuOptions").vibration && !(0, tk.i)()
+      enabled: () => Ub() && kb.d.get("isTouchScreen") && kb.d.get("clientEscMenuOptions").vibration && !(0, Wb.h)()
     })
   },
-  8903: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Ak,
-      g: () => Jk
+  8836: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => nb,
+      e: () => Xb
     });
-    var Rk = Bk(22),
-      tk = Bk(1625),
-      ak = Bk(42),
-      Xk = Bk(1300),
-      bk = Bk(3460),
-      wk = Bk(1418),
-      dk = Bk(1344);
-    const sk = 2592e5,
-      Vk = "notificationOptInLastPromptedAt";
-    async function Jk() {
-      var kk;
-      const Fk = await Ak();
-      if (null === Fk) return;
-      const Bk = null !== (kk = ak.i.getItem(Vk)) && void 0 !== kk ? kk : 0;
-      if (Date.now() - Bk < sk) return;
-      if ((0, dk.h)()) return;
-      const Rk = await Xk.NotificationProvider.showPromptPopup({
+    var kb = sb(19),
+      Wb = sb(1670),
+      ab = sb(37),
+      Tb = sb(1332),
+      Ub = sb(3447),
+      Ib = sb(1454),
+      Hb = sb(1371);
+    const fb = 2592e5,
+      Mb = "notificationOptInLastPromptedAt";
+    async function Xb() {
+      var bb;
+      const cb = await nb();
+      if (null === cb) return;
+      const sb = null !== (bb = ab.h.getItem(Mb)) && void 0 !== bb ? bb : 0;
+      if (Date.now() - sb < fb) return;
+      if ((0, Hb.g)()) return;
+      const kb = await Tb.NotificationProvider.showPromptPopup({
         icon: "bell",
         title: "mobilePushNotifications:optInTitle",
-        subtitle: tk.d.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
+        subtitle: Wb.b.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
         confirmText: "mobilePushNotifications:optInConfirm",
         cancelText: "mobilePushNotifications:optInCancel",
         padStartsOn: "cancel"
       }).getResult();
-      "notificationTornDown" !== Rk && (ak.i.setItem(Vk, Date.now()), (0, wk.reportAnalyticsClick)({
-        id: !0 === Rk ? "push.allow" : "push.deny",
-        value: tk.d.supports("notifications") ? "app" : "browser"
-      }), !0 === Rk && Fk().catch((kk => {
-        console.error("Failed to ask for push notifications:", kk)
+      "notificationTornDown" !== kb && (ab.h.setItem(Mb, Date.now()), (0, Ib.reportAnalyticsClick)({
+        id: !0 === kb ? "push.allow" : "push.deny",
+        value: Wb.b.supports("notifications") ? "app" : "browser"
+      }), !0 === kb && cb().catch((bb => {
+        console.error("Failed to ask for push notifications:", bb)
       })))
     }
-    async function Ak() {
-      return await tk.d.ready, tk.d.supports("notifications") ? Rk.c.get("mobilePushNotificationsCanAsk") ? async () => {
-        tk.d.request("notifications.requestPermission", {}).then((kk => {
+    async function nb() {
+      return await Wb.b.ready, Wb.b.supports("notifications") ? kb.d.get("mobilePushNotificationsCanAsk") ? async () => {
+        Wb.b.request("notifications.requestPermission", {}).then((bb => {
           let {
-            canAsk: Fk
-          } = kk;
-          Rk.c.set({
-            mobilePushNotificationsCanAsk: Fk
+            canAsk: cb
+          } = bb;
+          kb.d.set({
+            mobilePushNotificationsCanAsk: cb
           })
-        }), (kk => {
-          console.error("The app couldn't ask for push notifications:", kk)
+        }), (bb => {
+          console.error("The app couldn't ask for push notifications:", bb)
         }))
-      }: null: await bk.d.canAsk() ? () => bk.d.requestPermission() : null
+      }: null: await Ub.b.canAsk() ? () => Ub.b.requestPermission() : null
     }
   },
-  8918: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => bk,
-      e: () => wk
+  8847: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Ub,
+      f: () => Ib
     });
-    var Rk = Bk(22);
-    const tk = 24,
-      ak = "farNametags",
-      Xk = 1e5;
+    var kb = sb(19);
+    const Wb = 24,
+      ab = "farNametags",
+      Tb = 1e5;
 
-    function bk() {
-      var kk;
-      return null === (kk = Rk.c.get("showDistantNametags")) || void 0 === kk || kk
+    function Ub() {
+      var bb;
+      return null === (bb = kb.d.get("showDistantNametags")) || void 0 === bb || bb
     }
 
-    function wk() {
-      var kk;
-      return null !== (kk = function() {
-        const kk = new URLSearchParams(window.location.search).get(ak),
-          Fk = null === kk || "" === kk ? NaN : Number(kk);
-        return Number.isFinite(Fk) && Fk >= 0 ? Math.min(Fk, Xk) : null
-      }()) && void 0 !== kk ? kk : bk() ? 0 : tk
+    function Ib() {
+      var bb;
+      return null !== (bb = function() {
+        const bb = new URLSearchParams(window.location.search).get(ab),
+          cb = null === bb || "" === bb ? NaN : Number(bb);
+        return Number.isFinite(cb) && cb >= 0 ? Math.min(cb, Tb) : null
+      }()) && void 0 !== bb ? bb : Ub() ? 0 : Wb
     }
   },
-  9029: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => tk,
-      f: () => Xk
+  8947: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => Wb,
+      g: () => Tb
     });
-    const Rk = [{
+    const kb = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -9699,79 +9699,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function tk(kk) {
-      let Fk, Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof kk) {
-        if (!Number.isFinite(kk)) return "0";
-        if (Math.abs(kk) < 100) {
-          const Fk = kk < 0 ? "-" : "",
-            Bk = Math.abs(kk);
-          return Bk >= 10 ? `${Fk}${Bk.toFixed(1).replace(/\.0$/,"")}` : `${Fk}${Bk.toFixed(2).replace(/\.?0+$/,"")}`
+    function Wb(bb) {
+      let cb, sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof bb) {
+        if (!Number.isFinite(bb)) return "0";
+        if (Math.abs(bb) < 100) {
+          const cb = bb < 0 ? "-" : "",
+            sb = Math.abs(bb);
+          return sb >= 10 ? `${cb}${sb.toFixed(1).replace(/\.0$/,"")}` : `${cb}${sb.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        Fk = BigInt(Math.floor(kk))
-      } else Fk = kk;
-      const tk = Fk < 0n ? -Fk : Fk,
-        ak = Fk < 0n ? "-" : "",
-        Xk = tk.toString();
-      if (Xk.length <= Bk) return `${ak}${Xk}`;
-      const bk = 3 * Math.floor((Xk.length - 1) / 3);
-      if (bk < 3) return `${ak}${Xk}`;
-      if (bk > 3 * Rk.length) {
-        const kk = Xk[0],
-          Fk = Xk.slice(1, 3).replace(/0+$/, "");
-        return `${ak}${Fk?`${kk}.${Fk}`:kk}e${Xk.length-1}`
+        cb = BigInt(Math.floor(bb))
+      } else cb = bb;
+      const Wb = cb < 0n ? -cb : cb,
+        ab = cb < 0n ? "-" : "",
+        Tb = Wb.toString();
+      if (Tb.length <= sb) return `${ab}${Tb}`;
+      const Ub = 3 * Math.floor((Tb.length - 1) / 3);
+      if (Ub < 3) return `${ab}${Tb}`;
+      if (Ub > 3 * kb.length) {
+        const bb = Tb[0],
+          cb = Tb.slice(1, 3).replace(/0+$/, "");
+        return `${ab}${cb?`${bb}.${cb}`:bb}e${Tb.length-1}`
       }
       const {
-        threshold: wk,
-        suffix: dk
-      } = Rk[Rk.length - bk / 3], sk = tk / wk, Vk = Number(1000n * (tk % wk) / wk), Jk = Number(sk) + Vk / 1e3;
-      let Ak;
-      return Ak = Jk >= 100 ? Math.floor(Jk).toString() : Jk >= 10 ? Jk.toFixed(1).replace(/\.0$/, "") : Jk.toFixed(2).replace(/\.?0+$/, ""), `${ak}${Ak}${dk}`
+        threshold: Ib,
+        suffix: Hb
+      } = kb[kb.length - Ub / 3], fb = Wb / Ib, Mb = Number(1000n * (Wb % Ib) / Ib), Xb = Number(fb) + Mb / 1e3;
+      let nb;
+      return nb = Xb >= 100 ? Math.floor(Xb).toString() : Xb >= 10 ? Xb.toFixed(1).replace(/\.0$/, "") : Xb.toFixed(2).replace(/\.?0+$/, ""), `${ab}${nb}${Hb}`
     }
-    const ak = Rk.map((kk => {
+    const ab = kb.map((bb => {
       let {
-        threshold: Fk,
-        suffix: Bk
-      } = kk;
+        threshold: cb,
+        suffix: sb
+      } = bb;
       return {
-        threshold: Number(Fk),
-        suffix: Bk
+        threshold: Number(cb),
+        suffix: sb
       }
-    })).filter((kk => {
+    })).filter((bb => {
       let {
-        threshold: Fk
-      } = kk;
-      return Number.isFinite(Fk)
+        threshold: cb
+      } = bb;
+      return Number.isFinite(cb)
     }));
 
-    function Xk(kk) {
-      const Fk = Math.abs(kk),
-        Bk = kk < 0 ? "-" : "";
+    function Tb(bb) {
+      const cb = Math.abs(bb),
+        sb = bb < 0 ? "-" : "";
       for (const {
-          threshold: Rk,
-          suffix: tk
+          threshold: kb,
+          suffix: Wb
         }
-        of ak)
-        if (Fk >= Rk) {
-          const kk = Fk / Rk;
-          if (kk >= 1e3) return `${Bk}${Fk.toExponential(2).replace("e+","e")}`;
-          let ak;
-          return ak = kk >= 100 ? Math.floor(kk).toString() : kk >= 10 ? kk.toFixed(1).replace(/\.0$/, "") : kk.toFixed(2).replace(/\.?0+$/, ""), `${Bk}${ak}${tk}`
-        } return `${Bk}${Fk}`
+        of ab)
+        if (cb >= kb) {
+          const bb = cb / kb;
+          if (bb >= 1e3) return `${sb}${cb.toExponential(2).replace("e+","e")}`;
+          let ab;
+          return ab = bb >= 100 ? Math.floor(bb).toString() : bb >= 10 ? bb.toFixed(1).replace(/\.0$/, "") : bb.toFixed(2).replace(/\.?0+$/, ""), `${sb}${ab}${Wb}`
+        } return `${sb}${cb}`
     }
   },
-  9015: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => sk,
-      e: () => Jk,
-      i: () => Vk,
-      l: () => Xk,
-      n: () => dk,
-      r: () => wk
+  8930: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => fb,
+      g: () => Xb,
+      j: () => Mb,
+      n: () => Tb,
+      q: () => Hb,
+      u: () => Ib
     });
-    var Rk = Bk(291);
-    const tk = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      ak = {
+    var kb = sb(344);
+    const Wb = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      ab = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -9846,13 +9846,13 @@ export const modules = {
         }
       };
 
-    function Xk(kk) {
-      var Fk;
-      return null !== (Fk = ak[kk]) && void 0 !== Fk ? Fk : {
+    function Tb(bb) {
+      var cb;
+      return null !== (cb = ab[bb]) && void 0 !== cb ? cb : {
         translationKey: ""
       }
     }
-    const bk = {
+    const Ub = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -9905,107 +9905,107 @@ export const modules = {
       }]
     };
 
-    function wk(kk) {
-      return tk.includes(kk)
+    function Ib(bb) {
+      return Wb.includes(bb)
     }
 
-    function dk(kk) {
-      var Fk;
-      return !0 === (null === kk || void 0 === kk || null === (Fk = kk.customAttributes) || void 0 === Fk ? void 0 : Fk.cannotEnchant)
+    function Hb(bb) {
+      var cb;
+      return !0 === (null === bb || void 0 === bb || null === (cb = bb.customAttributes) || void 0 === cb ? void 0 : cb.cannotEnchant)
     }
 
-    function sk(kk, Fk) {
+    function fb(bb, cb) {
       const {
-        max: Bk
-      } = bk[kk].at(-1);
-      return Fk <= Bk
+        max: sb
+      } = Ub[bb].at(-1);
+      return cb <= sb
     }
 
-    function Vk(kk) {
-      const Fk = Math.sin(kk / 80),
-        Bk = kk => {
-          if (kk <= 0) return 0;
-          if (kk > 1) return 1;
-          let Fk = 0;
-          const Bk = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let Rk = 0; Rk < Bk.length; Rk++) {
-            Fk += (Rk % 2 === 0 ? 1 : -1) * Bk[Rk] * Math.pow(kk, 2 + Rk) / (2 + Rk)
+    function Mb(bb) {
+      const cb = Math.sin(bb / 80),
+        sb = bb => {
+          if (bb <= 0) return 0;
+          if (bb > 1) return 1;
+          let cb = 0;
+          const sb = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let kb = 0; kb < sb.length; kb++) {
+            cb += (kb % 2 === 0 ? 1 : -1) * sb[kb] * Math.pow(bb, 2 + kb) / (2 + kb)
           }
-          return 72 * Fk
+          return 72 * cb
         },
-        Rk = .3 - .78 * Fk,
-        tk = .5 - .78 * Fk,
-        ak = .6 - .7 * Fk,
-        Xk = .8 - .6 * Fk;
-      let bk = Bk(Rk),
-        wk = Bk(tk) - bk,
-        dk = Bk(ak) - wk - bk,
-        sk = Bk(Xk) - dk - wk - bk;
-      Rk < .041 && (wk /= 1 - bk, dk /= 1 - bk, sk /= 1 - bk, bk = 0), tk < .041 && (bk /= 1 - wk, dk /= 1 - wk, sk /= 1 - wk, wk = 0), ak < .041 && (bk /= 1 - dk, wk /= 1 - dk, sk /= 1 - dk, dk = 0), Xk < .041 && (bk /= 1 - sk, wk /= 1 - sk, dk /= 1 - sk, sk = 0);
+        kb = .3 - .78 * cb,
+        Wb = .5 - .78 * cb,
+        ab = .6 - .7 * cb,
+        Tb = .8 - .6 * cb;
+      let Ub = sb(kb),
+        Ib = sb(Wb) - Ub,
+        Hb = sb(ab) - Ib - Ub,
+        fb = sb(Tb) - Hb - Ib - Ub;
+      kb < .041 && (Ib /= 1 - Ub, Hb /= 1 - Ub, fb /= 1 - Ub, Ub = 0), Wb < .041 && (Ub /= 1 - Ib, Hb /= 1 - Ib, fb /= 1 - Ib, Ib = 0), ab < .041 && (Ub /= 1 - Hb, Ib /= 1 - Hb, fb /= 1 - Hb, Hb = 0), Tb < .041 && (Ub /= 1 - fb, Ib /= 1 - fb, Hb /= 1 - fb, fb = 0);
       return {
-        commonProb: bk,
-        uncommonProb: wk,
-        rareProb: dk,
-        epicProb: sk,
-        legendaryProb: 1 - (sk + dk + wk + bk)
+        commonProb: Ub,
+        uncommonProb: Ib,
+        rareProb: Hb,
+        epicProb: fb,
+        legendaryProb: 1 - (fb + Hb + Ib + Ub)
       }
     }
 
-    function Jk(kk, Fk) {
+    function Xb(bb, cb) {
       const {
-        min: Bk,
-        max: tk
-      } = bk[kk][Fk], ak = Rk.b.sampleUniformIntDistribution(Bk, tk, "includeMax");
+        min: sb,
+        max: Wb
+      } = Ub[bb][cb], ab = kb.d.sampleUniformIntDistribution(sb, Wb, "includeMax");
       return {
-        ...Vk(ak),
-        level: ak
+        ...Mb(ab),
+        level: ab
       }
     }
   },
-  8445: (kk, Fk, Bk) => {
-    function Rk(kk, Fk) {
-      return !kk.hidden && (Fk || !kk.isRewardedAd)
+  8389: (bb, cb, sb) => {
+    function kb(bb, cb) {
+      return !bb.hidden && (cb || !bb.isRewardedAd)
     }
 
-    function tk(kk) {
-      return "object" === typeof kk ? kk.option : kk
+    function Wb(bb) {
+      return "object" === typeof bb ? bb.option : bb
     }
 
-    function ak(kk, Fk) {
-      var Bk;
-      if ("dropdown" === (null === (Bk = kk.userInput) || void 0 === Bk ? void 0 : Bk.type) && "object" === typeof kk.userInput.dropdownOptions[0]) {
-        for (const Bk of kk.userInput.dropdownOptions)
-          if (tk(Bk) === Fk) return "object" === typeof Bk ? Bk.cost : kk.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", kk, "input:", Fk)
+    function ab(bb, cb) {
+      var sb;
+      if ("dropdown" === (null === (sb = bb.userInput) || void 0 === sb ? void 0 : sb.type) && "object" === typeof bb.userInput.dropdownOptions[0]) {
+        for (const sb of bb.userInput.dropdownOptions)
+          if (Wb(sb) === cb) return "object" === typeof sb ? sb.cost : bb.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", bb, "input:", cb)
       }
-      return kk.cost
+      return bb.cost
     }
 
-    function Xk(kk, Fk, Bk) {
-      var Rk;
-      const tk = null !== (Rk = Bk.excludedPlayers) && void 0 !== Rk ? Rk : [Fk];
-      return kk.filter((kk => !tk.includes(kk)))
+    function Tb(bb, cb, sb) {
+      var kb;
+      const Wb = null !== (kb = sb.excludedPlayers) && void 0 !== kb ? kb : [cb];
+      return bb.filter((bb => !Wb.includes(bb)))
     }
-    Bk.d(Fk, {
-      c: () => ak,
-      g: () => tk,
-      i: () => Xk,
-      k: () => Rk
+    sb.d(cb, {
+      e: () => ab,
+      g: () => Wb,
+      k: () => Tb,
+      o: () => kb
     })
   },
-  8979: () => {},
-  8955: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  8895: () => {},
+  8873: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  8957: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  8875: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  8962: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  8878: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  8970: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  8886: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

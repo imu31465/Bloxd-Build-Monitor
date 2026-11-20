@@ -1,282 +1,282 @@
 export const id = 14;
 export const ids = [14];
 export const modules = {
-  36555: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => Ek,
-      d: () => Lk,
-      f: () => Ok,
-      h: () => ek
+  36452: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => hb,
+      e: () => ub,
+      g: () => Yb,
+      i: () => mb
     });
-    var Rk = Bk(1020),
-      tk = Bk.n(Rk),
-      ak = Bk(61),
-      Xk = Bk(67),
-      bk = Bk(1319),
-      wk = Bk(1389),
-      dk = Bk(1312),
-      sk = Bk(1230),
-      Vk = Bk(1149),
-      Jk = Bk(36563),
-      Ak = Bk(1069);
+    var kb = sb(1033),
+      Wb = sb.n(kb),
+      ab = sb(64),
+      Tb = sb(89),
+      Ub = sb(1350),
+      Ib = sb(1431),
+      Hb = sb(1341),
+      fb = sb(1278),
+      Mb = sb(1197),
+      Xb = sb(36455),
+      nb = sb(1087);
 
-    function ek(kk) {
-      const [Fk, Bk] = (0, ak.useState)((() => (0, Jk.p)(kk)));
-      return (0, ak.useEffect)((() => (Bk((0, Jk.p)(kk)), (0, Jk.G)((() => {
-        Bk((0, Jk.p)(kk))
-      })))), [kk]), Fk
+    function mb(bb) {
+      const [cb, sb] = (0, ab.useState)((() => (0, Xb.h)(bb)));
+      return (0, ab.useEffect)((() => (sb((0, Xb.h)(bb)), (0, Xb.J)((() => {
+        sb((0, Xb.h)(bb))
+      })))), [bb]), cb
     }
 
-    function yk(kk, Fk) {
-      "function" === typeof kk ? kk(Fk) : kk && (kk.current = Fk)
+    function lb(bb, cb) {
+      "function" === typeof bb ? bb(cb) : bb && (bb.current = cb)
     }
 
-    function fk(kk) {
+    function Qb(bb) {
       let {
-        tutorial: Fk,
-        step: Bk,
-        enabled: Rk = !0
-      } = kk;
-      const tk = ek(Fk);
-      return Rk && tk === Bk
+        tutorial: cb,
+        step: sb,
+        enabled: kb = !0
+      } = bb;
+      const Wb = mb(cb);
+      return kb && Wb === sb
     }
 
-    function mk(kk, Fk) {
-      const Bk = (0, Jk.r)(kk),
-        Rk = Bk.indexOf(Fk);
-      return !Bk.slice(Rk + 1).some((Fk => (0, Jk.y)(kk, Fk)))
+    function eb(bb, cb) {
+      const sb = (0, Xb.k)(bb),
+        kb = sb.indexOf(cb);
+      return !sb.slice(kb + 1).some((cb => (0, Xb.v)(bb, cb)))
     }
 
-    function Wk(kk, Fk, Bk, Rk) {
+    function Cb(bb, cb, sb, kb) {
       let {
-        tutorial: tk,
-        step: ak,
-        waitForClick: Xk = !1,
-        onPrevious: bk
-      } = kk;
-      const wk = Fk && (0, Jk.w)(tk, ak),
-        dk = Fk && !mk(tk, ak),
-        Vk = Xk ? Rk : Bk;
-      let Ak = null;
-      wk ? Ak = () => {
-        null === bk || void 0 === bk || bk(), (0, Jk.u)(tk, ak)
-      } : dk && (Ak = () => {
-        (0, Jk.l)(tk)
-      }), (0, sk.s)("popup", null !== Vk && void 0 !== Vk ? Vk : Bk, Ak, Fk && null !== Vk, null, wk ? void 0 : "controller:menusSkipTutorial")
+        tutorial: Wb,
+        step: ab,
+        waitForClick: Tb = !1,
+        onPrevious: Ub
+      } = bb;
+      const Ib = cb && (0, Xb.s)(Wb, ab),
+        Hb = cb && !eb(Wb, ab),
+        Mb = Tb ? kb : sb;
+      let nb = null;
+      Ib ? nb = () => {
+        null === Ub || void 0 === Ub || Ub(), (0, Xb.o)(Wb, ab)
+      } : Hb && (nb = () => {
+        (0, Xb.g)(Wb)
+      }), (0, fb.o)("popup", null !== Mb && void 0 !== Mb ? Mb : sb, nb, cb && null !== Mb, null, Ib ? void 0 : "controller:menusSkipTutorial")
     }
 
-    function vk(kk) {
+    function Nb(bb) {
       let {
-        tutorial: Fk,
-        step: Bk,
-        text: Rk,
-        waitForClick: tk = !1,
-        onPrevious: ak
-      } = kk;
+        tutorial: cb,
+        step: sb,
+        text: kb,
+        waitForClick: Wb = !1,
+        onPrevious: ab
+      } = bb;
       const {
-        t: Xk
-      } = (0, Vk.x)(), bk = mk(Fk, Bk);
-      return (0, Ak.jsxs)(Ak.Fragment, {
-        children: [(0, Ak.jsx)("div", {
+        t: Tb
+      } = (0, Mb.E)(), Ub = eb(cb, sb);
+      return (0, nb.jsxs)(nb.Fragment, {
+        children: [(0, nb.jsx)("div", {
           className: "TutorialStepText",
-          children: Rk
-        }), (0, Ak.jsxs)("div", {
+          children: kb
+        }), (0, nb.jsxs)("div", {
           className: "TutorialStepButtons",
-          children: [(0, Jk.w)(Fk, Bk) && (0, Ak.jsx)(wk.j, {
+          children: [(0, Xb.s)(cb, sb) && (0, nb.jsx)(Ib.h, {
             className: "TutorialStepButton",
             onClick: () => {
-              null === ak || void 0 === ak || ak(), (0, Jk.u)(Fk, Bk)
+              null === ab || void 0 === ab || ab(), (0, Xb.o)(cb, sb)
             },
-            children: Xk("tutorial:back")
-          }), !tk && (0, Ak.jsx)(wk.g, {
+            children: Tb("tutorial:back")
+          }), !Wb && (0, nb.jsx)(Ib.d, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, Jk.g)(Bk)
+              (0, Xb.e)(sb)
             },
             padDefaultFocus: !0,
-            children: Xk(bk ? "tutorial:done" : "tutorial:next")
-          }), !bk && (0, Ak.jsx)(wk.j, {
+            children: Tb(Ub ? "tutorial:done" : "tutorial:next")
+          }), !Ub && (0, nb.jsx)(Ib.h, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, Jk.l)(Fk)
+              (0, Xb.g)(cb)
             },
-            children: Xk("tutorial:skip")
+            children: Tb("tutorial:skip")
           })]
         })]
       })
     }
-    const ik = 6;
+    const Vb = 6;
 
-    function Yk(kk) {
+    function Lb(bb) {
       let {
-        rect: Fk,
-        margin: Bk
-      } = kk;
-      const Rk = Math.max(0, Fk.top - Bk),
-        tk = Fk.bottom + Bk,
-        ak = Math.max(0, Fk.left - Bk),
-        Xk = Fk.right + Bk;
-      return (0, Ak.jsxs)(Ak.Fragment, {
-        children: [(0, Ak.jsx)("div", {
+        rect: cb,
+        margin: sb
+      } = bb;
+      const kb = Math.max(0, cb.top - sb),
+        Wb = cb.bottom + sb,
+        ab = Math.max(0, cb.left - sb),
+        Tb = cb.right + sb;
+      return (0, nb.jsxs)(nb.Fragment, {
+        children: [(0, nb.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
             top: 0,
             left: 0,
             right: 0,
-            height: Rk
+            height: kb
           }
-        }), (0, Ak.jsx)("div", {
+        }), (0, nb.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: tk,
+            top: Wb,
             left: 0,
             right: 0,
             bottom: 0
           }
-        }), (0, Ak.jsx)("div", {
+        }), (0, nb.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: Rk,
+            top: kb,
             left: 0,
-            width: ak,
-            height: tk - Rk
+            width: ab,
+            height: Wb - kb
           }
-        }), (0, Ak.jsx)("div", {
+        }), (0, nb.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: Rk,
-            left: Xk,
+            top: kb,
+            left: Tb,
             right: 0,
-            height: tk - Rk
+            height: Wb - kb
           }
         })]
       })
     }
 
-    function Lk(kk) {
+    function ub(bb) {
       let {
-        target: Fk,
-        placement: Bk,
-        boxRef: Rk,
-        className: wk,
-        spotlightMargin: sk = ik,
-        children: Vk
-      } = kk;
+        target: cb,
+        placement: sb,
+        boxRef: kb,
+        className: Ib,
+        spotlightMargin: fb = Vb,
+        children: Mb
+      } = bb;
       const {
-        getArrowProps: Jk,
-        getTooltipProps: ek,
-        setTooltipRef: yk,
-        setTriggerRef: fk
-      } = (0, bk.c)({
-        placement: Bk,
+        getArrowProps: Xb,
+        getTooltipProps: mb,
+        setTooltipRef: lb,
+        setTriggerRef: Qb
+      } = (0, Ub.c)({
+        placement: sb,
         trigger: null,
         visible: !0,
         interactive: !0,
         closeOnOutsideClick: !1,
-        offset: [0, sk]
+        offset: [0, fb]
       });
-      (0, ak.useLayoutEffect)((() => {
-        fk(Fk)
-      }), [Fk, fk]);
-      const mk = function(kk, Fk) {
-        const [Bk, Rk] = (0, ak.useState)(null);
-        return (0, ak.useEffect)((() => {
-          if (!Fk || !kk) return void Rk(null);
-          let Bk = 0,
-            tk = null;
-          const ak = () => {
-            const Fk = kk.getBoundingClientRect();
-            tk && Fk.left === tk.left && Fk.top === tk.top && Fk.width === tk.width && Fk.height === tk.height || (tk = Fk, Rk(Fk)), Bk = requestAnimationFrame(ak)
+      (0, ab.useLayoutEffect)((() => {
+        Qb(cb)
+      }), [cb, Qb]);
+      const eb = function(bb, cb) {
+        const [sb, kb] = (0, ab.useState)(null);
+        return (0, ab.useEffect)((() => {
+          if (!cb || !bb) return void kb(null);
+          let sb = 0,
+            Wb = null;
+          const ab = () => {
+            const cb = bb.getBoundingClientRect();
+            Wb && cb.left === Wb.left && cb.top === Wb.top && cb.width === Wb.width && cb.height === Wb.height || (Wb = cb, kb(cb)), sb = requestAnimationFrame(ab)
           };
-          return ak(), () => {
-            cancelAnimationFrame(Bk)
+          return ab(), () => {
+            cancelAnimationFrame(sb)
           }
-        }), [kk, Fk]), Bk
-      }(Fk, !0);
-      (0, ak.useEffect)((() => {
-        null === Fk || void 0 === Fk || Fk.scrollIntoView({
+        }), [bb, cb]), sb
+      }(cb, !0);
+      (0, ab.useEffect)((() => {
+        null === cb || void 0 === cb || cb.scrollIntoView({
           block: "nearest",
           inline: "nearest"
         })
-      }), [Fk]);
-      const Wk = (0, ak.useCallback)((kk => {
-        yk(kk), Rk && (Rk.current = kk)
-      }), [yk, Rk]);
-      return (0, Xk.createPortal)((0, Ak.jsxs)(Ak.Fragment, {
-        children: [mk && (0, Ak.jsx)(Yk, {
-          rect: mk,
-          margin: sk
-        }), (0, Ak.jsxs)("div", {
-          ref: Wk,
-          ...ek({
-            className: tk()("tooltip-container SmallTextLight TutorialStep", wk)
+      }), [cb]);
+      const Cb = (0, ab.useCallback)((bb => {
+        lb(bb), kb && (kb.current = bb)
+      }), [lb, kb]);
+      return (0, Tb.createPortal)((0, nb.jsxs)(nb.Fragment, {
+        children: [eb && (0, nb.jsx)(Lb, {
+          rect: eb,
+          margin: fb
+        }), (0, nb.jsxs)("div", {
+          ref: Cb,
+          ...mb({
+            className: Wb()("tooltip-container SmallTextLight TutorialStep", Ib)
           }),
-          children: [Vk, (0, Ak.jsx)("div", {
-            ...Jk({
+          children: [Mb, (0, nb.jsx)("div", {
+            ...Xb({
               className: "tooltip-arrow"
             })
           })]
         })]
-      }), (0, dk.e)())
+      }), (0, Hb.i)())
     }
-    const Ok = (0, ak.forwardRef)((function(kk, Fk) {
+    const Yb = (0, ab.forwardRef)((function(bb, cb) {
       let {
-        placement: Bk = "right",
-        children: Rk,
-        ...tk
-      } = kk;
-      const Xk = fk(tk),
-        bk = (0, ak.useRef)(null),
-        wk = (0, ak.useRef)(null);
-      Wk(tk, Xk, bk, wk);
-      const [dk, sk] = (0, ak.useState)(null), Vk = Rk.ref, Jk = (0, ak.useCallback)((kk => {
-        wk.current = kk, sk(kk), yk(Fk, kk), yk(Vk, kk)
-      }), [Fk, Vk]);
-      return (0, Ak.jsxs)(Ak.Fragment, {
-        children: [(0, ak.cloneElement)(Rk, {
-          ref: Jk
-        }), Xk && (0, Ak.jsx)(Lk, {
-          target: dk,
-          placement: Bk,
-          boxRef: bk,
-          children: (0, Ak.jsx)(vk, {
-            ...tk
+        placement: sb = "right",
+        children: kb,
+        ...Wb
+      } = bb;
+      const Tb = Qb(Wb),
+        Ub = (0, ab.useRef)(null),
+        Ib = (0, ab.useRef)(null);
+      Cb(Wb, Tb, Ub, Ib);
+      const [Hb, fb] = (0, ab.useState)(null), Mb = kb.ref, Xb = (0, ab.useCallback)((bb => {
+        Ib.current = bb, fb(bb), lb(cb, bb), lb(Mb, bb)
+      }), [cb, Mb]);
+      return (0, nb.jsxs)(nb.Fragment, {
+        children: [(0, ab.cloneElement)(kb, {
+          ref: Xb
+        }), Tb && (0, nb.jsx)(ub, {
+          target: Hb,
+          placement: sb,
+          boxRef: Ub,
+          children: (0, nb.jsx)(Nb, {
+            ...Wb
           })
         })]
       })
     }));
 
-    function Ek(kk) {
-      const Fk = fk(kk),
-        Bk = (0, ak.useRef)(null);
-      return Wk(kk, Fk, Bk, null), Fk ? (0, Xk.createPortal)((0, Ak.jsx)("div", {
+    function hb(bb) {
+      const cb = Qb(bb),
+        sb = (0, ab.useRef)(null);
+      return Cb(bb, cb, sb, null), cb ? (0, Tb.createPortal)((0, nb.jsx)("div", {
         className: "TutorialCentreBackdrop",
-        children: (0, Ak.jsx)("div", {
-          ref: Bk,
+        children: (0, nb.jsx)("div", {
+          ref: sb,
           className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
-          children: (0, Ak.jsx)(vk, {
-            ...kk
+          children: (0, nb.jsx)(Nb, {
+            ...bb
           })
         })
-      }), (0, dk.e)()) : null
+      }), (0, Hb.i)()) : null
     }
   },
-  38188: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      b: () => Xk
+  38152: (bb, cb, sb) => {
+    sb.d(cb, {
+      b: () => Tb
     });
-    const Rk = 4,
-      tk = 12e3,
-      ak = 1e3;
-    class Xk {
+    const kb = 4,
+      Wb = 12e3,
+      ab = 1e3;
+    class Tb {
       constructor() {
         let {
-          limit: kk = Rk,
-          windowMs: Fk = tk,
-          spacingMs: Bk = ak,
-          now: Xk = Date.now
+          limit: bb = kb,
+          windowMs: cb = Wb,
+          spacingMs: sb = ab,
+          now: Tb = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = kk, this.windowMs = Fk, this.spacingMs = Bk, this.now = Xk
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = bb, this.windowMs = cb, this.spacingMs = sb, this.now = Tb
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -285,139 +285,139 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const kk of this.priority) kk.flush();
+        for (const bb of this.priority) bb.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const kk = this.now();
-        this.sent.push(kk), this.lastSentAt = kk, this.schedule(), this.notify()
+        const bb = this.now();
+        this.sent.push(bb), this.lastSentAt = bb, this.schedule(), this.notify()
       }
-      addPriority(kk) {
-        return this.priority.add(kk), () => {
-          this.priority.delete(kk)
+      addPriority(bb) {
+        return this.priority.add(bb), () => {
+          this.priority.delete(bb)
         }
       }
-      subscribe(kk) {
-        return this.listeners.add(kk), () => {
-          this.listeners.delete(kk)
+      subscribe(bb) {
+        return this.listeners.add(bb), () => {
+          this.listeners.delete(bb)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const kk of this.priority)
-          if (kk.waiting()) return !0;
+        for (const bb of this.priority)
+          if (bb.waiting()) return !0;
         return !1
       }
       prune() {
-        const kk = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= kk;) this.sent.shift()
+        const bb = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= bb;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const kk = this.now(),
-          Fk = this.lastSentAt + this.spacingMs,
-          Bk = Math.min(Fk > kk ? Fk : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        Bk !== 1 / 0 && (this.timer = setTimeout((() => {
+        const bb = this.now(),
+          cb = this.lastSentAt + this.spacingMs,
+          sb = Math.min(cb > bb ? cb : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        sb !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, Bk - kk)))
+        }), Math.max(0, sb - bb)))
       }
       notify() {
-        for (const kk of this.listeners) kk()
+        for (const bb of this.listeners) bb()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  36340: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      C: () => ek,
-      G: () => Wk,
-      d: () => ak,
-      h: () => yk,
-      l: () => fk,
-      p: () => bk,
-      s: () => Jk,
-      u: () => mk,
-      w: () => Vk,
-      z: () => vk
+  36247: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => ab,
+      g: () => lb,
+      i: () => Qb,
+      l: () => Ub,
+      n: () => Xb,
+      o: () => eb,
+      q: () => Mb,
+      s: () => Nb,
+      v: () => mb,
+      z: () => Cb
     });
-    var Rk = Bk(22),
-      tk = Bk(29);
-    const ak = "clientGameInventoryButtonsChanged",
-      Xk = new Map;
+    var kb = sb(19),
+      Wb = sb(26);
+    const ab = "clientGameInventoryButtonsChanged",
+      Tb = new Map;
 
-    function bk() {
-      return [...Xk.values()].sort(((kk, Fk) => {
-        var Bk, Rk;
-        return (null !== (Bk = kk.order) && void 0 !== Bk ? Bk : 0) - (null !== (Rk = Fk.order) && void 0 !== Rk ? Rk : 0)
+    function Ub() {
+      return [...Tb.values()].sort(((bb, cb) => {
+        var sb, kb;
+        return (null !== (sb = bb.order) && void 0 !== sb ? sb : 0) - (null !== (kb = cb.order) && void 0 !== kb ? kb : 0)
       }))
     }
-    let wk = null;
+    let Ib = null;
 
-    function dk(kk) {
-      wk = kk
+    function Hb(bb) {
+      Ib = bb
     }
-    let sk = !1;
+    let fb = !1;
 
-    function Vk(kk) {
-      sk = !0;
+    function Mb(bb) {
+      fb = !0;
       try {
-        kk.onClick()
+        bb.onClick()
       } finally {
-        sk = !1
+        fb = !1
       }
-      kk.panel && "clientGame" === Rk.c.get("openInGameMenuName") && dk(kk.id)
+      bb.panel && "clientGame" === kb.d.get("openInGameMenuName") && Hb(bb.id)
     }
 
-    function Jk() {
-      return sk
+    function Xb() {
+      return fb
     }
 
-    function Ak() {
-      return bk().filter((kk => kk.panel && !kk.disabled))
+    function nb() {
+      return Ub().filter((bb => bb.panel && !bb.disabled))
     }
 
-    function ek(kk) {
-      const Fk = Ak(),
-        Bk = Fk.findIndex((kk => kk.id === wk));
-      return !(Bk < 0 || Fk.length < 2) && (Vk(Fk[(Bk + kk + Fk.length) % Fk.length]), !0)
+    function mb(bb) {
+      const cb = nb(),
+        sb = cb.findIndex((bb => bb.id === Ib));
+      return !(sb < 0 || cb.length < 2) && (Mb(cb[(sb + bb + cb.length) % cb.length]), !0)
     }
 
-    function yk() {
-      return null !== wk && Ak().length > 1
+    function lb() {
+      return null !== Ib && nb().length > 1
     }
 
-    function fk() {
-      dk(null)
+    function Qb() {
+      Hb(null)
     }
 
-    function mk() {
-      "inventory" !== Rk.c.get("openInGameMenuName") && dk(null)
+    function eb() {
+      "inventory" !== kb.d.get("openInGameMenuName") && Hb(null)
     }
 
-    function Wk() {
-      const kk = wk;
-      return dk(null), kk
+    function Cb() {
+      const bb = Ib;
+      return Hb(null), bb
     }
 
-    function vk(kk) {
-      return Xk.set(kk.id, kk), tk.o.Hf(ak, bk(), !0), () => {
-        Xk.get(kk.id) === kk && (Xk.delete(kk.id), tk.o.Hf(ak, bk()))
+    function Nb(bb) {
+      return Tb.set(bb.id, bb), Wb.j.QQ(ab, Ub(), !0), () => {
+        Tb.get(bb.id) === bb && (Tb.delete(bb.id), Wb.j.QQ(ab, Ub()))
       }
     }
   },
-  38166: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      e: () => Rk
+  38135: (bb, cb, sb) => {
+    sb.d(cb, {
+      e: () => kb
     });
-    class Rk {
-      constructor(kk, Fk, Bk) {
-        this.Hf = kk, this.beforeOpen = Fk, this.afterClose = Bk, this.open = !1, this.Te = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.Te && (this.open = !0, this.beforeOpen(this), this.emit())
+    class kb {
+      constructor(bb, cb, sb) {
+        this.QQ = bb, this.beforeOpen = cb, this.afterClose = sb, this.open = !1, this.Em = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.Em && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -430,300 +430,300 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(kk) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(kk)
+      closePanel(bb) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(bb)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.Te = !0
+        this.open = !1, this.emit(), this.Em = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.Te || (this.snapshot = this.buildSnapshot(), this.Hf(this.snapshot))
+        this.Em || (this.snapshot = this.buildSnapshot(), this.QQ(this.snapshot))
       }
     }
   },
-  36332: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      c: () => bk,
-      f: () => fk,
-      i: () => mk,
-      l: () => Jk,
-      o: () => dk,
-      q: () => yk,
-      s: () => Ak,
-      w: () => sk
+  36240: (bb, cb, sb) => {
+    sb.d(cb, {
+      c: () => Ub,
+      e: () => Qb,
+      g: () => eb,
+      i: () => Xb,
+      l: () => Hb,
+      m: () => lb,
+      p: () => nb,
+      s: () => fb
     });
-    var Rk = Bk(22),
-      tk = Bk(29),
-      ak = Bk(1239),
-      Xk = Bk(36340);
-    const bk = "clientGameUiChanged";
-    let wk = null;
+    var kb = sb(19),
+      Wb = sb(26),
+      ab = sb(1287),
+      Tb = sb(36247);
+    const Ub = "clientGameUiChanged";
+    let Ib = null;
 
-    function dk() {
-      return wk
+    function Hb() {
+      return Ib
     }
 
-    function sk(kk, Fk) {
-      const Bk = {
-        content: kk,
-        menu: Fk
+    function fb(bb, cb) {
+      const sb = {
+        content: bb,
+        menu: cb
       };
-      return wk = Bk, tk.o.Hf(bk, wk, !0), () => {
-        wk === Bk && (wk = null, ek = !1, fk(), tk.o.Hf(bk, null))
+      return Ib = sb, Wb.j.QQ(Ub, Ib, !0), () => {
+        Ib === sb && (Ib = null, mb = !1, Qb(), Wb.j.QQ(Ub, null))
       }
     }
-    let Vk = null;
+    let Mb = null;
 
-    function Jk() {
-      return Vk
+    function Xb() {
+      return Mb
     }
 
-    function Ak(kk) {
-      return Vk = kk, () => {
-        Vk === kk && (Vk = null)
+    function nb(bb) {
+      return Mb = bb, () => {
+        Mb === bb && (Mb = null)
       }
     }
-    let ek = !1;
+    let mb = !1;
 
-    function yk() {
-      const kk = Rk.c.get("openInGameMenuName");
-      "clientGame" !== kk && (ek = "inventory" === kk), (0, Xk.s)() || (0, Xk.l)(), (0, ak.m)(ak.e), Rk.c.set({
+    function lb() {
+      const bb = kb.d.get("openInGameMenuName");
+      "clientGame" !== bb && (mb = "inventory" === bb), (0, Tb.n)() || (0, Tb.i)(), (0, ab.n)(ab.b), kb.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function fk() {
-      Wk(!1)
+    function Qb() {
+      Cb(!1)
     }
 
-    function mk() {
-      Wk(ek)
+    function eb() {
+      Cb(mb)
     }
 
-    function Wk(kk) {
-      "clientGame" === Rk.c.get("openInGameMenuName") && Rk.c.set({
-        openInGameMenuName: kk ? "inventory" : null
-      }), kk || (0, Xk.l)(), ek = !1
+    function Cb(bb) {
+      "clientGame" === kb.d.get("openInGameMenuName") && kb.d.set({
+        openInGameMenuName: bb ? "inventory" : null
+      }), bb || (0, Tb.i)(), mb = !1
     }
   },
-  38890: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      default: () => VB
+  38855: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      default: () => fs
     });
-    var Rk = Bk(61);
-    var tk = Bk(22),
-      ak = Bk(1826),
-      Xk = Bk(29),
-      bk = Bk(36332),
-      wk = Bk(1020),
-      dk = Bk.n(wk),
-      sk = Bk(1387),
-      Vk = Bk(1149),
-      Jk = Bk(4268),
-      Ak = Bk(1297),
-      ek = Bk(1389),
-      yk = Bk(1835),
-      fk = Bk(1312),
-      mk = Bk(1812),
-      Wk = Bk(1876),
-      vk = Bk(194);
-    const ik = Bk(38894),
-      Yk = Object.fromEntries(ik.keys().map((kk => [kk.replace(/^\.\/(.*)\.webp$/, "$1"), ik(kk)]))),
-      Lk = new Set;
+    var kb = sb(64);
+    var Wb = sb(19),
+      ab = sb(1851),
+      Tb = sb(26),
+      Ub = sb(36240),
+      Ib = sb(1033),
+      Hb = sb.n(Ib),
+      fb = sb(1423),
+      Mb = sb(1197),
+      Xb = sb(4270),
+      nb = sb(1330),
+      mb = sb(1431),
+      lb = sb(1858),
+      Qb = sb(1341),
+      eb = sb(1839),
+      Cb = sb(1912),
+      Nb = sb(232);
+    const Vb = sb(38864),
+      Lb = Object.fromEntries(Vb.keys().map((bb => [bb.replace(/^\.\/(.*)\.webp$/, "$1"), Vb(bb)]))),
+      ub = new Set;
 
-    function Ok(kk, Fk) {
-      const Bk = Fk ? kk : `${kk}-uncaught`,
-        Rk = (0, vk.d)(Yk, Bk);
-      return void 0 !== Rk || Lk.has(Bk) || (Lk.add(Bk), console.warn(`Containment Breach has no mugshot ${Bk}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), Rk
+    function Yb(bb, cb) {
+      const sb = cb ? bb : `${bb}-uncaught`,
+        kb = (0, Nb.e)(Lb, sb);
+      return void 0 !== kb || ub.has(sb) || (ub.add(sb), console.warn(`Containment Breach has no mugshot ${sb}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), kb
     }
-    var Ek = Bk(1069);
-    const Sk = "containmentBreach",
-      Nk = "Gold Coin";
+    var hb = sb(1087);
+    const Jb = "containmentBreach",
+      gb = "Gold Coin";
 
-    function Hk(kk) {
+    function Bb(bb) {
       let {
-        open: Fk,
-        onDismiss: Bk,
-        title: Rk,
-        className: tk,
-        decor: ak,
-        headerExtra: Xk,
-        status: bk,
-        statusRefused: wk = !1,
-        children: sk
-      } = kk;
-      const Vk = `${tk}Title`;
-      return (0, Ek.jsx)(Jk.e, {
-        show: Fk,
-        close: Bk,
+        open: cb,
+        onDismiss: sb,
+        title: kb,
+        className: Wb,
+        decor: ab,
+        headerExtra: Tb,
+        status: Ub,
+        statusRefused: Ib = !1,
+        children: fb
+      } = bb;
+      const Mb = `${Wb}Title`;
+      return (0, hb.jsx)(Xb.c, {
+        show: cb,
+        close: sb,
         togglePointerLock: !1,
         className: "ContainmentBoardOverlay",
-        children: (0, Ek.jsxs)("section", {
-          className: dk()("ContainmentBoardPanel", tk),
+        children: (0, hb.jsxs)("section", {
+          className: Hb()("ContainmentBoardPanel", Wb),
           role: "dialog",
           "aria-modal": "true",
-          "aria-labelledby": Vk,
-          children: [ak && (0, Ek.jsx)("div", {
+          "aria-labelledby": Mb,
+          children: [ab && (0, hb.jsx)("div", {
             className: "BoardDecor",
             "aria-hidden": "true",
-            children: ak
-          }), (0, Ek.jsxs)("header", {
+            children: ab
+          }), (0, hb.jsxs)("header", {
             className: "BoardHeader",
-            children: [(0, Ek.jsx)("h2", {
-              id: Vk,
+            children: [(0, hb.jsx)("h2", {
+              id: Mb,
               className: "VisuallyHidden",
-              children: Rk
-            }), Xk, (0, Ek.jsx)(ek.k, {
-              onClick: Bk
+              children: kb
+            }), Tb, (0, hb.jsx)(mb.j, {
+              onClick: sb
             })]
-          }), (0, Ek.jsx)("div", {
+          }), (0, hb.jsx)("div", {
             className: "BoardBody",
-            children: sk
-          }), void 0 !== bk && (0, Ek.jsx)("footer", {
-            className: dk()("BoardStatus", {
-              Refused: wk
+            children: fb
+          }), void 0 !== Ub && (0, hb.jsx)("footer", {
+            className: Hb()("BoardStatus", {
+              Refused: Ib
             }),
-            children: bk
+            children: Ub
           })]
         })
       })
     }
 
-    function uk(kk) {
+    function tb(bb) {
       let {
-        itemName: Fk
-      } = kk;
-      return (0, Ek.jsx)(yk.e, {
-        itemName: Fk,
+        itemName: cb
+      } = bb;
+      return (0, hb.jsx)(lb.d, {
+        itemName: cb,
         amount: 0
       })
     }
 
-    function Mk(kk) {
+    function yb(bb) {
       let {
-        anomalyId: Fk,
-        caught: Bk
-      } = kk;
-      const tk = (0, Rk.useRef)(null);
-      return (0, Ak.c)(tk, !Bk), (0, Ek.jsx)("span", {
-        ref: tk,
-        className: dk()("BoardMugshot", {
-          Uncaught: !Bk
+        anomalyId: cb,
+        caught: sb
+      } = bb;
+      const Wb = (0, kb.useRef)(null);
+      return (0, nb.c)(Wb, !sb), (0, hb.jsx)("span", {
+        ref: Wb,
+        className: Hb()("BoardMugshot", {
+          Uncaught: !sb
         }),
-        children: (0, Ek.jsx)("img", {
-          src: Ok(Fk, Bk),
+        children: (0, hb.jsx)("img", {
+          src: Yb(cb, sb),
           alt: "",
           draggable: !1
         })
       })
     }
 
-    function gk(kk) {
+    function Pb(bb) {
       let {
-        itemName: Fk,
-        amount: Bk,
-        Hb: Rk,
-        inTile: tk = !1
-      } = kk;
-      return (0, Ek.jsx)(fk.d, {
+        itemName: cb,
+        amount: sb,
+        qU: kb,
+        inTile: Wb = !1
+      } = bb;
+      return (0, hb.jsx)(Qb.f, {
         delayShow: 200,
-        hoverOnly: tk,
+        hoverOnly: Wb,
         placement: "top",
         tooltipClassName: "BoardChipTooltipBox",
-        tooltipInner: (0, Ek.jsx)(ck, {
-          itemName: Fk,
-          amount: Bk,
-          Hb: Rk
+        tooltipInner: (0, hb.jsx)(Eb, {
+          itemName: cb,
+          amount: sb,
+          qU: kb
         }),
-        children: (0, Ek.jsxs)("span", {
-          className: dk()("BoardChip", {
-            Short: void 0 !== Rk && Rk < Bk
+        children: (0, hb.jsxs)("span", {
+          className: Hb()("BoardChip", {
+            Short: void 0 !== kb && kb < sb
           }),
-          children: [(0, Ek.jsx)("span", {
+          children: [(0, hb.jsx)("span", {
             className: "BoardChipIcon",
-            children: (0, Ek.jsx)(uk, {
-              itemName: Fk
+            children: (0, hb.jsx)(tb, {
+              itemName: cb
             })
-          }), Bk.toLocaleString()]
+          }), sb.toLocaleString()]
         })
       })
     }
-    const Uk = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
+    const Db = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
 
-    function ck(kk) {
-      var Fk;
+    function Eb(bb) {
+      var cb;
       let {
-        itemName: Bk,
-        amount: Rk,
-        Hb: tk
-      } = kk;
+        itemName: sb,
+        amount: kb,
+        qU: Wb
+      } = bb;
       const {
-        t: ak
-      } = (0, Vk.x)(), Xk = (0, Wk.f)("itemInfo", (kk => kk[Bk])), {
-        lore: bk,
-        droppedBy: wk
-      } = function(kk) {
-        if ("string" !== typeof kk) return {
-          lore: kk,
+        t: ab
+      } = (0, Mb.E)(), Tb = (0, Cb.e)("itemInfo", (bb => bb[sb])), {
+        lore: Ub,
+        droppedBy: Ib
+      } = function(bb) {
+        if ("string" !== typeof bb) return {
+          lore: bb,
           droppedBy: null
         };
-        const Fk = Uk.exec(kk);
-        return null === Fk ? {
-          lore: kk,
+        const cb = Db.exec(bb);
+        return null === cb ? {
+          lore: bb,
           droppedBy: null
         } : {
-          lore: "" === Fk[1] ? void 0 : Fk[1],
-          droppedBy: Fk[2]
+          lore: "" === cb[1] ? void 0 : cb[1],
+          droppedBy: cb[2]
         }
-      }(null === Xk || void 0 === Xk ? void 0 : Xk.description);
-      return (0, Ek.jsxs)("div", {
+      }(null === Tb || void 0 === Tb ? void 0 : Tb.description);
+      return (0, hb.jsxs)("div", {
         className: "BoardChipTooltip",
-        children: [(0, Ek.jsxs)("div", {
+        children: [(0, hb.jsxs)("div", {
           className: "BoardChipTooltipHeader",
-          children: [(0, Ek.jsx)("span", {
+          children: [(0, hb.jsx)("span", {
             className: "BoardChipTooltipIcon",
-            children: (0, Ek.jsx)(uk, {
-              itemName: Bk
+            children: (0, hb.jsx)(tb, {
+              itemName: sb
             })
-          }), (0, Ek.jsx)(mk.d, {
-            text: null !== (Fk = null === Xk || void 0 === Xk ? void 0 : Xk.displayName) && void 0 !== Fk ? Fk : Bk,
+          }), (0, hb.jsx)(eb.d, {
+            text: null !== (cb = null === Tb || void 0 === Tb ? void 0 : Tb.displayName) && void 0 !== cb ? cb : sb,
             className: "BoardChipTooltipName"
           })]
-        }), (void 0 !== bk || null !== wk) && (0, Ek.jsxs)("div", {
+        }), (void 0 !== Ub || null !== Ib) && (0, hb.jsxs)("div", {
           className: "BoardChipTooltipBody",
-          children: [void 0 !== bk && (0, Ek.jsx)(mk.d, {
-            text: bk,
+          children: [void 0 !== Ub && (0, hb.jsx)(eb.d, {
+            text: Ub,
             className: "BoardChipTooltipDescription"
-          }), null !== wk && (0, Ek.jsxs)("span", {
+          }), null !== Ib && (0, hb.jsxs)("span", {
             className: "BoardChipTooltipSource",
-            children: [(0, Ek.jsx)("span", {
+            children: [(0, hb.jsx)("span", {
               className: "BoardChipTooltipLabel",
-              children: ak(`${Sk}:chipDroppedBy`)
-            }), wk]
+              children: ab(`${Jb}:chipDroppedBy`)
+            }), Ib]
           })]
-        }), void 0 !== tk && (0, Ek.jsxs)("div", {
-          className: dk()("BoardChipTooltipHeld", {
-            Short: tk < Rk
+        }), void 0 !== Wb && (0, hb.jsxs)("div", {
+          className: Hb()("BoardChipTooltipHeld", {
+            Short: Wb < kb
           }),
-          children: [(0, Ek.jsx)("span", {
+          children: [(0, hb.jsx)("span", {
             className: "BoardChipTooltipLabel",
-            children: ak(`${Sk}:chipYouHave`)
-          }), (0, Ek.jsxs)("span", {
+            children: ab(`${Jb}:chipYouHave`)
+          }), (0, hb.jsxs)("span", {
             className: "BoardChipTooltipCount",
-            children: [(0, Ek.jsx)("span", {
+            children: [(0, hb.jsx)("span", {
               className: "BoardChipTooltipHeldAmount",
-              children: tk.toLocaleString()
-            }), ` / ${Rk.toLocaleString()}`]
-          }), (0, Ek.jsx)("span", {
+              children: Wb.toLocaleString()
+            }), ` / ${kb.toLocaleString()}`]
+          }), (0, hb.jsx)("span", {
             className: "BoardChipTooltipMeter",
-            children: (0, Ek.jsx)("span", {
+            children: (0, hb.jsx)("span", {
               style: {
-                width: (Rk > 0 ? 100 * Math.min(1, tk / Rk) : 100) + "%"
+                width: (kb > 0 ? 100 * Math.min(1, Wb / kb) : 100) + "%"
               }
             })
           })]
@@ -731,81 +731,81 @@ export const modules = {
       })
     }
 
-    function Gk(kk) {
+    function ib(bb) {
       let {
-        icon: Fk,
-        name: Bk,
-        selected: Rk,
-        locked: tk,
-        className: ak,
-        buttonRef: Xk,
-        onSelect: bk,
-        children: wk
-      } = kk;
-      return (0, Ek.jsxs)("button", {
-        ref: Xk,
+        icon: cb,
+        name: sb,
+        selected: kb,
+        locked: Wb,
+        className: ab,
+        buttonRef: Tb,
+        onSelect: Ub,
+        children: Ib
+      } = bb;
+      return (0, hb.jsxs)("button", {
+        ref: Tb,
         type: "button",
-        className: dk()("BoardTile", ak, {
-          Selected: Rk,
-          Locked: tk
+        className: Hb()("BoardTile", ab, {
+          Selected: kb,
+          Locked: Wb
         }),
-        onClick: bk,
-        children: [(0, Ek.jsx)("span", {
+        onClick: Ub,
+        children: [(0, hb.jsx)("span", {
           className: "BoardTileIcon",
-          children: Fk
-        }), (0, Ek.jsx)("span", {
+          children: cb
+        }), (0, hb.jsx)("span", {
           className: "BoardTileName",
-          children: Bk
-        }), wk]
+          children: sb
+        }), Ib]
       })
     }
 
-    function Tk(kk) {
+    function Ob(bb) {
       let {
-        icon: Fk,
-        name: Bk,
-        children: Rk
-      } = kk;
-      return (0, Ek.jsxs)("header", {
+        icon: cb,
+        name: sb,
+        children: kb
+      } = bb;
+      return (0, hb.jsxs)("header", {
         className: "BoardDetailHeader",
-        children: [(0, Ek.jsx)("span", {
+        children: [(0, hb.jsx)("span", {
           className: "BoardDetailIcon",
-          children: Fk
-        }), (0, Ek.jsxs)("div", {
+          children: cb
+        }), (0, hb.jsxs)("div", {
           className: "BoardDetailHeading",
-          children: [(0, Ek.jsx)("h3", {
-            children: Bk
-          }), (0, Ek.jsx)("span", {
+          children: [(0, hb.jsx)("h3", {
+            children: sb
+          }), (0, hb.jsx)("span", {
             className: "BoardDetailStatus",
-            children: Rk
+            children: kb
           })]
         })]
       })
     }
 
-    function rk(kk) {
+    function Gb(bb) {
       let {
-        coins: Fk,
-        children: Bk
-      } = kk;
-      return (0, Ek.jsxs)("div", {
+        coins: cb,
+        children: sb
+      } = bb;
+      return (0, hb.jsxs)("div", {
         className: "BoardWallet",
-        children: [(0, Ek.jsx)(gk, {
-          itemName: Nk,
-          amount: Fk
-        }), Bk]
+        children: [(0, hb.jsx)(Pb, {
+          itemName: gb,
+          amount: cb
+        }), sb]
       })
     }
-    var Dk = Bk(38166);
-    const zk = "containmentCodexView";
-    class Pk extends Dk.e {
+    var Kb = sb(38135);
+    const Zb = "containmentCodexView";
+    class zb extends Kb.e {
       constructor() {
-        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = kk => {
-          this.selectedId = kk, this.emit()
+        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = bb => {
+          this.selectedId = bb, this.emit()
         }
       }
-      he(kk) {
-        this.entries = kk.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
+      Km(bb) {
+        this.entries = bb.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
       }
       buildSnapshot() {
         return {
@@ -815,55 +815,55 @@ export const modules = {
         }
       }
     }
-    const hk = {
-        codexAnyDifficulty: `${Sk}:codexNeedsAny`,
-        codexNormalOnly: `${Sk}:codexNeedsNormal`,
-        codexHardOnly: `${Sk}:codexNeedsHard`
+    const qb = {
+        codexAnyDifficulty: `${Jb}:codexNeedsAny`,
+        codexNormalOnly: `${Jb}:codexNeedsNormal`,
+        codexHardOnly: `${Jb}:codexNeedsHard`
       },
-      qk = {
+      db = {
         codexContained: "Contained",
         codexEncountered: "Sighted",
         codexUnidentified: "Unknown"
       },
-      Ck = {
-        codexContained: `${Sk}:codexContainedBadge`,
-        codexEncountered: `${Sk}:codexEncounteredBadge`,
-        codexUnidentified: `${Sk}:codexUnidentifiedBadge`
+      Ab = {
+        codexContained: `${Jb}:codexContainedBadge`,
+        codexEncountered: `${Jb}:codexEncounteredBadge`,
+        codexUnidentified: `${Jb}:codexUnidentifiedBadge`
       },
-      Zk = ["94%", "81%", "88%", "46%", "72%"];
+      wb = ["94%", "81%", "88%", "46%", "72%"];
 
-    function pk(kk) {
+    function rb(bb) {
       let {
-        entry: Fk
-      } = kk;
+        entry: cb
+      } = bb;
       const {
-        t: Bk
-      } = (0, Vk.x)();
-      return (0, Ek.jsx)("span", {
-        className: dk()("BoardBadge", qk[Fk.codexEntryState]),
-        children: Bk(Ck[Fk.codexEntryState])
+        t: sb
+      } = (0, Mb.E)();
+      return (0, hb.jsx)("span", {
+        className: Hb()("BoardBadge", db[cb.codexEntryState]),
+        children: sb(Ab[cb.codexEntryState])
       })
     }
 
-    function Kk(kk) {
+    function ob(bb) {
       const {
-        t: Fk
-      } = (0, Vk.x)();
-      return "codexUnidentified" === kk.codexEntryState ? Fk(`${Sk}:codexUnidentifiedName`) : kk.codexEntryName
+        t: cb
+      } = (0, Mb.E)();
+      return "codexUnidentified" === bb.codexEntryState ? cb(`${Jb}:codexUnidentifiedName`) : bb.codexEntryName
     }
 
-    function xk(kk) {
+    function Sb(bb) {
       let {
-        entry: Fk
-      } = kk;
-      return "codexUnidentified" === Fk.codexEntryState ? (0, Ek.jsx)(uk, {
+        entry: cb
+      } = bb;
+      return "codexUnidentified" === cb.codexEntryState ? (0, hb.jsx)(tb, {
         itemName: "Book"
-      }) : (0, Ek.jsxs)("span", {
+      }) : (0, hb.jsxs)("span", {
         className: "CodexPhoto",
-        children: [(0, Ek.jsx)(Mk, {
-          anomalyId: Fk.codexEntryId,
-          caught: "codexContained" === Fk.codexEntryState
-        }), (0, Ek.jsx)("img", {
+        children: [(0, hb.jsx)(yb, {
+          anomalyId: cb.codexEntryId,
+          caught: "codexContained" === cb.codexEntryState
+        }), (0, hb.jsx)("img", {
           className: "CodexPaperclip",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGNggIIXb97/X7V57/+Wvtn/GZDBqs17UQTgClahScBATHrlf5ySeHWimo9NMbokCp9OkmD/oasGCaJLAAC5ZUIBS85GiAAAAABJRU5ErkJggg==",
           alt: "",
@@ -872,27 +872,27 @@ export const modules = {
       })
     }
 
-    function jk(kk) {
+    function Rb(bb) {
       let {
-        entry: Fk,
-        selected: Bk,
-        onSelect: Rk
-      } = kk;
-      const tk = "codexUnidentified" === Fk.codexEntryState;
-      return (0, Ek.jsxs)(Gk, {
-        icon: (0, Ek.jsx)(xk, {
-          entry: Fk
+        entry: cb,
+        selected: sb,
+        onSelect: kb
+      } = bb;
+      const Wb = "codexUnidentified" === cb.codexEntryState;
+      return (0, hb.jsxs)(ib, {
+        icon: (0, hb.jsx)(Sb, {
+          entry: cb
         }),
-        name: Kk(Fk),
-        selected: Bk,
-        locked: tk,
-        className: dk()("CodexFolder", qk[Fk.codexEntryState]),
+        name: ob(cb),
+        selected: sb,
+        locked: Wb,
+        className: Hb()("CodexFolder", db[cb.codexEntryState]),
         onSelect: () => {
-          Rk(Fk.codexEntryId)
+          kb(cb.codexEntryId)
         },
-        children: [!tk && (0, Ek.jsx)(pk, {
-          entry: Fk
-        }), tk && (0, Ek.jsx)("img", {
+        children: [!Wb && (0, hb.jsx)(rb, {
+          entry: cb
+        }), Wb && (0, hb.jsx)("img", {
           className: "CodexSeal",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVR4nGNggIIGHp7/MAzjw+TAnMf+/mB8RkQEjOGKYZLIgsiK4AqQJZA1gBXAOHgVwCRQJJEdCVOEYj8yQPciTAEAz0hgyamUqskAAAAASUVORK5CYII=",
           alt: "",
@@ -901,176 +901,176 @@ export const modules = {
       })
     }
 
-    function lk(kk) {
+    function vb(bb) {
       let {
-        count: Fk
-      } = kk;
-      const Bk = [];
-      for (let Rk = Math.min(Fk, 25); Rk > 0; Rk -= 5) Bk.push(Math.min(Rk, 5));
-      return (0, Ek.jsx)("span", {
+        count: cb
+      } = bb;
+      const sb = [];
+      for (let kb = Math.min(cb, 25); kb > 0; kb -= 5) sb.push(Math.min(kb, 5));
+      return (0, hb.jsx)("span", {
         className: "CodexTallyMarks",
         "aria-hidden": "true",
-        children: Bk.map(((kk, Fk) => (0, Ek.jsx)("span", {
-          className: dk()("CodexTallyGroup", {
-            Gate: 5 === kk
+        children: sb.map(((bb, cb) => (0, hb.jsx)("span", {
+          className: Hb()("CodexTallyGroup", {
+            Gate: 5 === bb
           }),
           children: Array.from({
-            length: Math.min(kk, 4)
-          }, ((kk, Fk) => (0, Ek.jsx)("span", {
+            length: Math.min(bb, 4)
+          }, ((bb, cb) => (0, hb.jsx)("span", {
             className: "CodexTallyMark"
-          }, Fk)))
-        }, Fk)))
+          }, cb)))
+        }, cb)))
       })
     }
 
-    function nk(kk) {
+    function Fb(bb) {
       let {
-        contained: Fk,
-        total: Bk
-      } = kk;
+        contained: cb,
+        total: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, Vk.x)();
-      return (0, Ek.jsxs)("div", {
+        t: kb
+      } = (0, Mb.E)();
+      return (0, hb.jsxs)("div", {
         className: "CodexProgress",
-        children: [Rk(`${Sk}:codexProgress`, {
-          contained: String(Fk),
-          total: String(Bk)
-        }), (0, Ek.jsx)("span", {
+        children: [kb(`${Jb}:codexProgress`, {
+          contained: String(cb),
+          total: String(sb)
+        }), (0, hb.jsx)("span", {
           className: "CodexProgressMeter",
-          children: (0, Ek.jsx)("span", {
+          children: (0, hb.jsx)("span", {
             style: {
-              width: Fk / Bk * 100 + "%"
+              width: cb / sb * 100 + "%"
             }
           })
         })]
       })
     }
 
-    function Ik(kk) {
+    function xb(bb) {
       let {
-        entry: Fk,
-        fileNumber: Bk
-      } = kk;
+        entry: cb,
+        fileNumber: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, Vk.x)(), tk = "codexContained" === Fk.codexEntryState;
-      return (0, Ek.jsx)("section", {
+        t: kb
+      } = (0, Mb.E)(), Wb = "codexContained" === cb.codexEntryState;
+      return (0, hb.jsx)("section", {
         className: "BoardDetail",
-        children: (0, Ek.jsxs)("article", {
-          className: dk()("CodexDossier", qk[Fk.codexEntryState]),
-          children: [(0, Ek.jsx)("span", {
+        children: (0, hb.jsxs)("article", {
+          className: Hb()("CodexDossier", db[cb.codexEntryState]),
+          children: [(0, hb.jsx)("span", {
             className: "CodexFileNumber",
-            children: Rk(`${Sk}:codexFileNumber`, {
-              number: String(Bk).padStart(3, "0")
+            children: kb(`${Jb}:codexFileNumber`, {
+              number: String(sb).padStart(3, "0")
             })
-          }), (0, Ek.jsx)(Tk, {
-            icon: (0, Ek.jsx)(xk, {
-              entry: Fk
+          }), (0, hb.jsx)(Ob, {
+            icon: (0, hb.jsx)(Sb, {
+              entry: cb
             }),
-            name: Kk(Fk),
-            children: (0, Ek.jsx)(pk, {
-              entry: Fk
+            name: ob(cb),
+            children: (0, hb.jsx)(rb, {
+              entry: cb
             })
-          }), tk && (0, Ek.jsxs)(Ek.Fragment, {
-            children: [(0, Ek.jsx)("p", {
+          }), Wb && (0, hb.jsxs)(hb.Fragment, {
+            children: [(0, hb.jsx)("p", {
               className: "BoardDescription",
-              children: Fk.codexEntryLore
-            }), (0, Ek.jsxs)("p", {
+              children: cb.codexEntryLore
+            }), (0, hb.jsxs)("p", {
               className: "CodexTally",
-              children: [Rk(`${Sk}:codexContainments`, {
-                count: String(Fk.codexEntryContainedCount)
-              }), (0, Ek.jsx)(lk, {
-                count: Fk.codexEntryContainedCount
+              children: [kb(`${Jb}:codexContainments`, {
+                count: String(cb.codexEntryContainedCount)
+              }), (0, hb.jsx)(vb, {
+                count: cb.codexEntryContainedCount
               })]
-            }), (0, Ek.jsx)("span", {
+            }), (0, hb.jsx)("span", {
               className: "CodexClosedStamp",
               "aria-hidden": "true",
-              children: Rk(`${Sk}:codexContainedBadge`)
+              children: kb(`${Jb}:codexContainedBadge`)
             })]
-          }), !tk && (0, Ek.jsxs)(Ek.Fragment, {
-            children: [(0, Ek.jsxs)("div", {
+          }), !Wb && (0, hb.jsxs)(hb.Fragment, {
+            children: [(0, hb.jsxs)("div", {
               className: "CodexRedaction",
-              children: [Zk.map((kk => (0, Ek.jsx)("span", {
+              children: [wb.map((bb => (0, hb.jsx)("span", {
                 className: "CodexRedactedLine",
                 style: {
-                  width: kk
+                  width: bb
                 }
-              }, kk))), (0, Ek.jsx)("p", {
+              }, bb))), (0, hb.jsx)("p", {
                 className: "CodexRedacted",
-                children: Rk(`${Sk}:codexRedacted`)
+                children: kb(`${Jb}:codexRedacted`)
               })]
-            }), "" !== Fk.codexEntryHint && (0, Ek.jsxs)("aside", {
+            }), "" !== cb.codexEntryHint && (0, hb.jsxs)("aside", {
               className: "CodexNote",
-              children: [(0, Ek.jsx)("h4", {
-                children: Rk(`${Sk}:codexHintLabel`)
-              }), (0, Ek.jsx)("p", {
-                children: Fk.codexEntryHint
+              children: [(0, hb.jsx)("h4", {
+                children: kb(`${Jb}:codexHintLabel`)
+              }), (0, hb.jsx)("p", {
+                children: cb.codexEntryHint
               })]
-            }), (0, Ek.jsx)("p", {
+            }), (0, hb.jsx)("p", {
               className: "CodexClearance",
-              children: Rk(hk[Fk.codexEntryDifficulty])
+              children: kb(qb[cb.codexEntryDifficulty])
             })]
           })]
         })
       })
     }
 
-    function Qk(kk) {
+    function jb(bb) {
       let {
-        controller: Fk
-      } = kk;
-      const Bk = (0, sk.g)(zk, Fk.getSnapshot()),
+        controller: cb
+      } = bb;
+      const sb = (0, fb.h)(Zb, cb.getSnapshot()),
         {
-          t: Rk
-        } = (0, Vk.x)();
-      if (0 === Bk.entries.length) return null;
-      const tk = Bk.entries.find((kk => kk.codexEntryId === Bk.selectedId)),
-        ak = Bk.entries.filter((kk => "codexContained" === kk.codexEntryState)).length,
-        Xk = Bk.entries.map((kk => kk.codexEntryId)).sort().indexOf(tk.codexEntryId) + 1;
-      return (0, Ek.jsxs)(Hk, {
-        open: Bk.open,
-        onDismiss: Fk.dismiss,
-        title: Rk(`${Sk}:codexTitle`),
+          t: kb
+        } = (0, Mb.E)();
+      if (0 === sb.entries.length) return null;
+      const Wb = sb.entries.find((bb => bb.codexEntryId === sb.selectedId)),
+        ab = sb.entries.filter((bb => "codexContained" === bb.codexEntryState)).length,
+        Tb = sb.entries.map((bb => bb.codexEntryId)).sort().indexOf(Wb.codexEntryId) + 1;
+      return (0, hb.jsxs)(Bb, {
+        open: sb.open,
+        onDismiss: cb.dismiss,
+        title: kb(`${Jb}:codexTitle`),
         className: "ContainmentCodexPanel",
-        headerExtra: (0, Ek.jsx)(nk, {
-          contained: ak,
-          total: Bk.entries.length
+        headerExtra: (0, hb.jsx)(Fb, {
+          contained: ab,
+          total: sb.entries.length
         }),
-        children: [(0, Ek.jsx)("div", {
+        children: [(0, hb.jsx)("div", {
           className: "BoardTiles",
-          children: Bk.entries.map((kk => (0, Ek.jsx)(jk, {
-            entry: kk,
-            selected: kk === tk,
-            onSelect: Fk.select
-          }, kk.codexEntryId)))
-        }), (0, Ek.jsx)(Ik, {
-          entry: tk,
-          fileNumber: Xk
+          children: sb.entries.map((bb => (0, hb.jsx)(Rb, {
+            entry: bb,
+            selected: bb === Wb,
+            onSelect: cb.select
+          }, bb.codexEntryId)))
+        }), (0, hb.jsx)(xb, {
+          entry: Wb,
+          fileNumber: Tb
         })]
       })
     }
-    var kF = Bk(291);
-    class FF extends Dk.e {
-      constructor(kk, Fk, Bk, Rk, tk, ak) {
-        super(kk, Fk, Bk), this.pacer = Rk, this.command = tk, this.predict = ak, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = kk => {
-          this.selectedId = kk, this.emit()
-        }, this.act = (kk, Fk) => {
-          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${kk} ${Fk}`, this.rollBack)) return;
-          const Bk = this.predict(this.board, kk, Fk);
-          null !== Bk && (this.board = Bk.board, this.notice = Bk.notice, this.emit())
+    var pb = sb(344);
+    class bc extends Kb.e {
+      constructor(bb, cb, sb, kb, Wb, ab) {
+        super(bb, cb, sb), this.pacer = kb, this.command = Wb, this.predict = ab, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = bb => {
+          this.selectedId = bb, this.emit()
+        }, this.act = (bb, cb) => {
+          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${bb} ${cb}`, this.rollBack)) return;
+          const sb = this.predict(this.board, bb, cb);
+          null !== sb && (this.board = sb.board, this.notice = sb.notice, this.emit())
         }, this.rollBack = () => {
           this.board !== this.confirmed && (this.board = this.confirmed, this.notice = null)
-        }, this.unsubscribePacer = Rk.subscribe((() => {
+        }, this.unsubscribePacer = kb.subscribe((() => {
           this.emit()
         }))
       }
-      he(kk) {
-        const Fk = this.messageOpens(kk);
-        if (Fk && this.open) return this.board === this.confirmed && (this.board = kk), this.confirmed = kk, void this.emit();
-        if (this.board = kk, this.confirmed = kk, this.pacer.onReply(), Fk) return this.notice = null, this.selectedId = this.openingSelection(kk), void this.show();
-        const Bk = this.messageNotice(kk);
-        null !== Bk && (this.notice = Bk), this.emit()
+      Km(bb) {
+        const cb = this.messageOpens(bb);
+        if (cb && this.open) return this.board === this.confirmed && (this.board = bb), this.confirmed = bb, void this.emit();
+        if (this.board = bb, this.confirmed = bb, this.pacer.onReply(), cb) return this.notice = null, this.selectedId = this.openingSelection(bb), void this.show();
+        const sb = this.messageNotice(bb);
+        null !== sb && (this.notice = sb), this.emit()
       }
       dispose() {
         this.unsubscribePacer(), super.dispose()
@@ -1080,153 +1080,153 @@ export const modules = {
       }
     }
 
-    function BF(kk, Fk) {
-      return kk.loadoutCoins >= Fk.loadoutCostCoins && Fk.loadoutCostParts.every((Fk => function(kk, Fk) {
-        return RF(kk, Fk).loadoutHeldPartAmount
-      }(kk, Fk.loadoutPartCurrency) >= Fk.loadoutPartAmount))
+    function cc(bb, cb) {
+      return bb.loadoutCoins >= cb.loadoutCostCoins && cb.loadoutCostParts.every((cb => function(bb, cb) {
+        return sc(bb, cb).loadoutHeldPartAmount
+      }(bb, cb.loadoutPartCurrency) >= cb.loadoutPartAmount))
     }
 
-    function RF(kk, Fk) {
-      return kk.loadoutHeldParts.find((kk => kk.loadoutHeldPartCurrency === Fk))
+    function sc(bb, cb) {
+      return bb.loadoutHeldParts.find((bb => bb.loadoutHeldPartCurrency === cb))
     }
 
-    function tF(kk, Fk) {
-      return kk.loadoutSlots.find((kk => kk.loadoutSlotKind === Fk))
+    function kc(bb, cb) {
+      return bb.loadoutSlots.find((bb => bb.loadoutSlotKind === cb))
     }
 
-    function aF(kk) {
-      return kk.loadoutPerks.filter((kk => kk.loadoutPerkEquipped)).length >= kk.loadoutMaxPerks
+    function Wc(bb) {
+      return bb.loadoutPerks.filter((bb => bb.loadoutPerkEquipped)).length >= bb.loadoutMaxPerks
     }
 
-    function XF(kk, Fk, Bk) {
-      for (const tk of kk.loadoutSlots) {
-        const Rk = tk.loadoutSlotOptions.find((kk => kk.loadoutOptionId === Bk));
-        if (Rk) return "loadoutArmour" === tk.loadoutSlotKind ? wF(kk, tk, Rk, Fk) : bF(kk, tk, Rk, Fk)
+    function ac(bb, cb, sb) {
+      for (const Wb of bb.loadoutSlots) {
+        const kb = Wb.loadoutSlotOptions.find((bb => bb.loadoutOptionId === sb));
+        if (kb) return "loadoutArmour" === Wb.loadoutSlotKind ? Uc(bb, Wb, kb, cb) : Tc(bb, Wb, kb, cb)
       }
-      const Rk = kk.loadoutPerks.find((kk => kk.loadoutPerkId === Bk));
-      return Rk ? function(kk, Fk, Bk) {
-        const Rk = Fk.loadoutPerkOwned,
-          tk = Fk.loadoutPerkEquipped,
-          ak = Fk.loadoutPerkName,
-          Xk = aF(kk);
-        if ("loadoutUnlock" === Bk) {
-          if (Rk || !BF(kk, Fk.loadoutPerkCost)) return null;
-          const Bk = {
-            ...Fk,
+      const kb = bb.loadoutPerks.find((bb => bb.loadoutPerkId === sb));
+      return kb ? function(bb, cb, sb) {
+        const kb = cb.loadoutPerkOwned,
+          Wb = cb.loadoutPerkEquipped,
+          ab = cb.loadoutPerkName,
+          Tb = Wc(bb);
+        if ("loadoutUnlock" === sb) {
+          if (kb || !cc(bb, cb.loadoutPerkCost)) return null;
+          const sb = {
+            ...cb,
             loadoutPerkOwned: !0,
-            loadoutPerkEquipped: !Xk
+            loadoutPerkEquipped: !Tb
           };
           return {
-            board: sF(VF(kk, Fk.loadoutPerkCost), Bk),
-            notice: JF(Xk ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", ak)
+            board: Hc(fc(bb, cb.loadoutPerkCost), sb),
+            notice: Mc(Tb ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", ab)
           }
         }
-        if ("loadoutUpgrade" === Bk || !Rk || "loadoutEquip" === Bk === tk || !tk && Xk) return null;
+        if ("loadoutUpgrade" === sb || !kb || "loadoutEquip" === sb === Wb || !Wb && Tb) return null;
         return {
-          board: sF(kk, {
-            ...Fk,
-            loadoutPerkEquipped: !tk
+          board: Hc(bb, {
+            ...cb,
+            loadoutPerkEquipped: !Wb
           }),
-          notice: JF(tk ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", ak)
+          notice: Mc(Wb ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", ab)
         }
-      }(kk, Rk, Fk) : null
+      }(bb, kb, cb) : null
     }
 
-    function bF(kk, Fk, Bk, Rk) {
-      const tk = Bk.loadoutOptionOwnedTier,
-        ak = Bk.loadoutOptionName;
-      if ("loadoutEquip" === Rk) return 0 === tk ? null : {
-        board: dF(kk, Fk, Bk.loadoutOptionId, null),
-        notice: JF("loadoutNoticeEquipped", ak)
+    function Tc(bb, cb, sb, kb) {
+      const Wb = sb.loadoutOptionOwnedTier,
+        ab = sb.loadoutOptionName;
+      if ("loadoutEquip" === kb) return 0 === Wb ? null : {
+        board: Ic(bb, cb, sb.loadoutOptionId, null),
+        notice: Mc("loadoutNoticeEquipped", ab)
       };
-      const Xk = "loadoutUnlock" === Rk;
-      if (Xk && 0 !== tk || "loadoutUpgrade" === Rk && (0 === tk || tk >= Bk.loadoutOptionTiers.length) || "loadoutUnequip" === Rk) return null;
-      const bk = Bk.loadoutOptionTiers[tk].loadoutTierCost;
-      if (!BF(kk, bk)) return null;
-      const wk = {
-          ...Bk,
-          loadoutOptionOwnedTier: tk + 1
+      const Tb = "loadoutUnlock" === kb;
+      if (Tb && 0 !== Wb || "loadoutUpgrade" === kb && (0 === Wb || Wb >= sb.loadoutOptionTiers.length) || "loadoutUnequip" === kb) return null;
+      const Ub = sb.loadoutOptionTiers[Wb].loadoutTierCost;
+      if (!cc(bb, Ub)) return null;
+      const Ib = {
+          ...sb,
+          loadoutOptionOwnedTier: Wb + 1
         },
-        dk = Xk ? Bk.loadoutOptionId : Fk.loadoutSlotEquippedId;
+        Hb = Tb ? sb.loadoutOptionId : cb.loadoutSlotEquippedId;
       return {
-        board: dF(VF(kk, bk), Fk, dk, wk),
-        notice: Xk ? JF("loadoutNoticeUnlocked", ak) : JF("loadoutNoticeUpgraded", ak, tk + 1)
+        board: Ic(fc(bb, Ub), cb, Hb, Ib),
+        notice: Tb ? Mc("loadoutNoticeUnlocked", ab) : Mc("loadoutNoticeUpgraded", ab, Wb + 1)
       }
     }
 
-    function wF(kk, Fk, Bk, Rk) {
-      const tk = Bk.loadoutOptionOwnedTier > 0,
-        ak = Bk.loadoutOptionName;
-      if ("loadoutEquip" === Rk && tk) return {
-        board: dF(kk, Fk, Bk.loadoutOptionId, null),
-        notice: JF("loadoutNoticeEquipped", ak)
+    function Uc(bb, cb, sb, kb) {
+      const Wb = sb.loadoutOptionOwnedTier > 0,
+        ab = sb.loadoutOptionName;
+      if ("loadoutEquip" === kb && Wb) return {
+        board: Ic(bb, cb, sb.loadoutOptionId, null),
+        notice: Mc("loadoutNoticeEquipped", ab)
       };
-      const Xk = Bk.loadoutOptionTiers[0].loadoutTierCost;
-      return "loadoutUnlock" !== Rk || tk || !BF(kk, Xk) ? null : {
-        board: dF(VF(kk, Xk), Fk, Bk.loadoutOptionId, {
-          ...Bk,
+      const Tb = sb.loadoutOptionTiers[0].loadoutTierCost;
+      return "loadoutUnlock" !== kb || Wb || !cc(bb, Tb) ? null : {
+        board: Ic(fc(bb, Tb), cb, sb.loadoutOptionId, {
+          ...sb,
           loadoutOptionOwnedTier: 1
         }),
-        notice: JF("loadoutNoticeUnlocked", ak)
+        notice: Mc("loadoutNoticeUnlocked", ab)
       }
     }
 
-    function dF(kk, Fk, Bk, Rk) {
-      const tk = {
-        ...Fk,
-        loadoutSlotEquippedId: Bk,
-        loadoutSlotOptions: Fk.loadoutSlotOptions.map((kk => null !== Rk && kk.loadoutOptionId === Rk.loadoutOptionId ? Rk : kk))
+    function Ic(bb, cb, sb, kb) {
+      const Wb = {
+        ...cb,
+        loadoutSlotEquippedId: sb,
+        loadoutSlotOptions: cb.loadoutSlotOptions.map((bb => null !== kb && bb.loadoutOptionId === kb.loadoutOptionId ? kb : bb))
       };
       return {
-        ...kk,
-        loadoutSlots: kk.loadoutSlots.map((kk => kk === Fk ? tk : kk))
+        ...bb,
+        loadoutSlots: bb.loadoutSlots.map((bb => bb === cb ? Wb : bb))
       }
     }
 
-    function sF(kk, Fk) {
+    function Hc(bb, cb) {
       return {
-        ...kk,
-        loadoutPerks: kk.loadoutPerks.map((kk => kk.loadoutPerkId === Fk.loadoutPerkId ? Fk : kk))
+        ...bb,
+        loadoutPerks: bb.loadoutPerks.map((bb => bb.loadoutPerkId === cb.loadoutPerkId ? cb : bb))
       }
     }
 
-    function VF(kk, Fk) {
+    function fc(bb, cb) {
       return {
-        ...kk,
-        loadoutCoins: kk.loadoutCoins - Fk.loadoutCostCoins,
-        loadoutHeldParts: kk.loadoutHeldParts.map((kk => {
-          const Bk = Fk.loadoutCostParts.find((Fk => Fk.loadoutPartCurrency === kk.loadoutHeldPartCurrency));
-          return Bk ? {
-            ...kk,
-            loadoutHeldPartAmount: kk.loadoutHeldPartAmount - Bk.loadoutPartAmount
-          } : kk
+        ...bb,
+        loadoutCoins: bb.loadoutCoins - cb.loadoutCostCoins,
+        loadoutHeldParts: bb.loadoutHeldParts.map((bb => {
+          const sb = cb.loadoutCostParts.find((cb => cb.loadoutPartCurrency === bb.loadoutHeldPartCurrency));
+          return sb ? {
+            ...bb,
+            loadoutHeldPartAmount: bb.loadoutHeldPartAmount - sb.loadoutPartAmount
+          } : bb
         }))
       }
     }
 
-    function JF(kk, Fk) {
+    function Mc(bb, cb) {
       return {
-        loadoutNoticeKey: kk,
+        loadoutNoticeKey: bb,
         loadoutNoticeRefused: !1,
-        loadoutNoticeName: Fk,
+        loadoutNoticeName: cb,
         loadoutNoticeTier: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0
       }
     }
-    const AF = "containmentLoadoutView";
-    class eF extends FF {
-      constructor(kk, Fk, Bk, Rk) {
-        super(kk, Fk, Bk, Rk, "loadout", XF), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = kk => {
-          this.slot = kk, this.selectedId = yF(this.board, kk), this.emit()
+    const Xc = "containmentLoadoutView";
+    class nc extends bc {
+      constructor(bb, cb, sb, kb) {
+        super(bb, cb, sb, kb, "loadout", ac), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = bb => {
+          this.slot = bb, this.selectedId = mc(this.board, bb), this.emit()
         }
       }
-      messageOpens(kk) {
-        return kk.loadoutMessageOpens
+      messageOpens(bb) {
+        return bb.loadoutMessageOpens
       }
-      messageNotice(kk) {
-        return kk.loadoutNotice
+      messageNotice(bb) {
+        return bb.loadoutNotice
       }
-      openingSelection(kk) {
-        return yF(kk, this.slot)
+      openingSelection(bb) {
+        return mc(bb, this.slot)
       }
       buildSnapshot() {
         return {
@@ -1240,765 +1240,765 @@ export const modules = {
       }
     }
 
-    function yF(kk, Fk) {
-      if ("loadoutPerks" === Fk) {
-        var Bk;
-        const Fk = kk.loadoutPerks;
-        return (null !== (Bk = Fk.find((kk => kk.loadoutPerkEquipped))) && void 0 !== Bk ? Bk : Fk[0]).loadoutPerkId
+    function mc(bb, cb) {
+      if ("loadoutPerks" === cb) {
+        var sb;
+        const cb = bb.loadoutPerks;
+        return (null !== (sb = cb.find((bb => bb.loadoutPerkEquipped))) && void 0 !== sb ? sb : cb[0]).loadoutPerkId
       }
-      return tF(kk, Fk).loadoutSlotEquippedId
+      return kc(bb, cb).loadoutSlotEquippedId
     }
-    const fF = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
-    var mF = Bk(36555),
-      WF = Bk(1230);
-    const vF = {
-        loadoutPrimary: `${Sk}:loadoutSlotPrimary`,
-        loadoutSecondary: `${Sk}:loadoutSlotSecondary`,
-        loadoutOffensive: `${Sk}:loadoutSlotOffensive`,
-        loadoutSelfHelp: `${Sk}:loadoutSlotSelfHelp`,
-        loadoutArmour: `${Sk}:loadoutSlotArmour`,
-        loadoutPerks: `${Sk}:loadoutSlotPerks`
+    const lc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
+    var Qc = sb(36452),
+      ec = sb(1278);
+    const Cc = {
+        loadoutPrimary: `${Jb}:loadoutSlotPrimary`,
+        loadoutSecondary: `${Jb}:loadoutSlotSecondary`,
+        loadoutOffensive: `${Jb}:loadoutSlotOffensive`,
+        loadoutSelfHelp: `${Jb}:loadoutSlotSelfHelp`,
+        loadoutArmour: `${Jb}:loadoutSlotArmour`,
+        loadoutPerks: `${Jb}:loadoutSlotPerks`
       },
-      iF = {
+      Nc = {
         section: "right",
-        AA: "bottom",
+        Wn: "bottom",
         act: "top"
       },
-      YF = (0, Rk.createContext)({
+      Vc = (0, kb.createContext)({
         step: null,
         targetRef: () => {}
       });
 
-    function oF() {
+    function Lc() {
       const {
-        step: kk,
-        targetRef: Fk
-      } = (0, Rk.useContext)(YF);
-      return (Bk, Rk) => (null === kk || void 0 === kk ? void 0 : kk.kind) === Bk && kk.id === Rk ? Fk : void 0
+        step: bb,
+        targetRef: cb
+      } = (0, kb.useContext)(Vc);
+      return (sb, kb) => (null === bb || void 0 === bb ? void 0 : bb.kind) === sb && bb.id === kb ? cb : void 0
     }
 
-    function LF(kk, Fk) {
-      const Bk = Fk.loadoutTargetId;
-      if ("loadoutPerks" === Fk.loadoutTargetSection) {
-        const Fk = kk.loadoutPerks.find((kk => kk.loadoutPerkId === Bk));
+    function uc(bb, cb) {
+      const sb = cb.loadoutTargetId;
+      if ("loadoutPerks" === cb.loadoutTargetSection) {
+        const cb = bb.loadoutPerks.find((bb => bb.loadoutPerkId === sb));
         return {
-          name: Fk.loadoutPerkName,
-          owned: Fk.loadoutPerkOwned,
-          equipped: Fk.loadoutPerkEquipped
+          name: cb.loadoutPerkName,
+          owned: cb.loadoutPerkOwned,
+          equipped: cb.loadoutPerkEquipped
         }
       }
-      const Rk = tF(kk, Fk.loadoutTargetSection),
-        tk = Rk.loadoutSlotOptions.find((kk => kk.loadoutOptionId === Bk));
+      const kb = kc(bb, cb.loadoutTargetSection),
+        Wb = kb.loadoutSlotOptions.find((bb => bb.loadoutOptionId === sb));
       return {
-        name: tk.loadoutOptionName,
-        owned: tk.loadoutOptionOwnedTier > 0,
-        equipped: Rk.loadoutSlotEquippedId === Bk
+        name: Wb.loadoutOptionName,
+        owned: Wb.loadoutOptionOwnedTier > 0,
+        equipped: kb.loadoutSlotEquippedId === sb
       }
     }
 
-    function OF(kk, Fk, Bk, Rk) {
-      const [tk, ak] = kk(`${Sk}:${Fk}`, {
-        [Bk]: "\x01"
+    function Yc(bb, cb, sb, kb) {
+      const [Wb, ab] = bb(`${Jb}:${cb}`, {
+        [sb]: "\x01"
       }).split("\x01");
-      return (0, Ek.jsxs)(Ek.Fragment, {
-        children: [tk, (0, Ek.jsx)("span", {
+      return (0, hb.jsxs)(hb.Fragment, {
+        children: [Wb, (0, hb.jsx)("span", {
           className: "LoadoutWalkthroughName",
-          children: Rk
-        }), ak]
+          children: kb
+        }), ab]
       })
     }
 
-    function EF(kk) {
+    function hc(bb) {
       let {
-        view: Fk,
-        onDismiss: Bk,
-        children: tk
-      } = kk;
+        view: cb,
+        onDismiss: sb,
+        children: Wb
+      } = bb;
       const {
-        t: ak
-      } = (0, Vk.x)(), Xk = Fk.loadout, bk = Fk.open ? Xk.loadoutWalkthrough.map((kk => ({
-        target: kk,
-        info: LF(Xk, kk)
-      }))).find((kk => {
+        t: ab
+      } = (0, Mb.E)(), Tb = cb.loadout, Ub = cb.open ? Tb.loadoutWalkthrough.map((bb => ({
+        target: bb,
+        info: uc(Tb, bb)
+      }))).find((bb => {
         let {
-          info: Fk
-        } = kk;
-        return !Fk.equipped
+          info: cb
+        } = bb;
+        return !cb.equipped
       })) : void 0;
-      let wk = null,
-        dk = null;
-      if (void 0 !== bk) {
+      let Ib = null,
+        Hb = null;
+      if (void 0 !== Ub) {
         const {
-          target: kk,
-          info: Bk
-        } = bk;
-        Fk.slot !== kk.loadoutTargetSection ? (wk = {
+          target: bb,
+          info: sb
+        } = Ub;
+        cb.slot !== bb.loadoutTargetSection ? (Ib = {
           kind: "section",
-          id: kk.loadoutTargetSection
-        }, dk = OF(ak, "loadoutWalkthroughSection", "section", ak(vF[kk.loadoutTargetSection]))) : Fk.selectedId !== kk.loadoutTargetId ? (wk = {
-          kind: "AA",
-          id: kk.loadoutTargetId
-        }, dk = OF(ak, "loadoutWalkthroughPick", "name", Bk.name)) : (wk = {
+          id: bb.loadoutTargetSection
+        }, Hb = Yc(ab, "loadoutWalkthroughSection", "section", ab(Cc[bb.loadoutTargetSection]))) : cb.selectedId !== bb.loadoutTargetId ? (Ib = {
+          kind: "Wn",
+          id: bb.loadoutTargetId
+        }, Hb = Yc(ab, "loadoutWalkthroughPick", "name", sb.name)) : (Ib = {
           kind: "act",
-          id: kk.loadoutTargetId
-        }, dk = OF(ak, Bk.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", Bk.name))
+          id: bb.loadoutTargetId
+        }, Hb = Yc(ab, sb.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", sb.name))
       }
-      const sk = null === wk ? null : function(kk) {
-          return `${kk.kind}:${kk.id}`
-        }(wk),
-        [Jk, Ak] = (0, Rk.useState)(null),
-        ek = (0, Rk.useCallback)((kk => {
-          Ak((Fk => null !== kk ? {
-            key: sk,
-            node: kk
-          } : (null === Fk || void 0 === Fk ? void 0 : Fk.key) === sk ? null : Fk))
-        }), [sk]),
-        yk = null !== sk && (null === Jk || void 0 === Jk ? void 0 : Jk.key) === sk ? Jk.node : null;
-      return (0, Ek.jsxs)(YF.Provider, {
+      const fb = null === Ib ? null : function(bb) {
+          return `${bb.kind}:${bb.id}`
+        }(Ib),
+        [Xb, nb] = (0, kb.useState)(null),
+        mb = (0, kb.useCallback)((bb => {
+          nb((cb => null !== bb ? {
+            key: fb,
+            node: bb
+          } : (null === cb || void 0 === cb ? void 0 : cb.key) === fb ? null : cb))
+        }), [fb]),
+        lb = null !== fb && (null === Xb || void 0 === Xb ? void 0 : Xb.key) === fb ? Xb.node : null;
+      return (0, hb.jsxs)(Vc.Provider, {
         value: {
-          step: wk,
-          targetRef: ek
+          step: Ib,
+          targetRef: mb
         },
-        children: [tk, null !== wk && null !== yk && (0, Ek.jsx)(SF, {
-          target: yk,
-          placement: iF[wk.kind],
-          onDismiss: Bk,
-          children: dk
-        }, sk)]
+        children: [Wb, null !== Ib && null !== lb && (0, hb.jsx)(Jc, {
+          target: lb,
+          placement: Nc[Ib.kind],
+          onDismiss: sb,
+          children: Hb
+        }, fb)]
       })
     }
 
-    function SF(kk) {
+    function Jc(bb) {
       let {
-        target: Fk,
-        placement: Bk,
-        onDismiss: tk,
-        children: ak
-      } = kk;
+        target: cb,
+        placement: sb,
+        onDismiss: Wb,
+        children: ab
+      } = bb;
       const {
-        t: Xk
-      } = (0, Vk.x)(), bk = (0, Rk.useRef)(Fk);
-      return bk.current = Fk, (0, WF.s)("popup", bk, tk), (0, Ek.jsxs)(mF.d, {
-        target: Fk,
-        placement: Bk,
+        t: Tb
+      } = (0, Mb.E)(), Ub = (0, kb.useRef)(cb);
+      return Ub.current = cb, (0, ec.o)("popup", Ub, Wb), (0, hb.jsxs)(Qc.e, {
+        target: cb,
+        placement: sb,
         className: "LoadoutWalkthroughStep",
         spotlightMargin: 10,
-        children: [(0, Ek.jsxs)("div", {
+        children: [(0, hb.jsxs)("div", {
           className: "LoadoutWalkthroughHeader",
-          children: [(0, Ek.jsx)("img", {
+          children: [(0, hb.jsx)("img", {
             className: "LoadoutWalkthroughPortrait",
-            src: fF,
+            src: lc,
             alt: "",
             draggable: !1
-          }), (0, Ek.jsx)("span", {
+          }), (0, hb.jsx)("span", {
             className: "LoadoutWalkthroughSpeaker",
-            children: Xk(`${Sk}:operatorName`)
-          }), (0, Ek.jsx)(ek.k, {
-            onClick: tk,
-            ariaLabel: Xk(`${Sk}:loadoutWalkthroughClose`),
+            children: Tb(`${Jb}:operatorName`)
+          }), (0, hb.jsx)(mb.j, {
+            onClick: Wb,
+            ariaLabel: Tb(`${Jb}:loadoutWalkthroughClose`),
             padIgnore: !0
           })]
-        }), (0, Ek.jsx)("p", {
+        }), (0, hb.jsx)("p", {
           className: "LoadoutWalkthroughText",
-          children: ak
+          children: ab
         })]
       })
     }
-    const NF = new Set(["loadoutStatReload", "loadoutStatResupply"]);
+    const gc = new Set(["loadoutStatReload", "loadoutStatResupply"]);
 
-    function HF(kk) {
+    function Bc(bb) {
       let {
-        cost: Fk,
-        loadout: Bk
-      } = kk;
+        cost: cb,
+        loadout: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, Vk.x)();
-      return Fk.loadoutCostCoins <= 0 && 0 === Fk.loadoutCostParts.length ? (0, Ek.jsx)("span", {
+        t: kb
+      } = (0, Mb.E)();
+      return cb.loadoutCostCoins <= 0 && 0 === cb.loadoutCostParts.length ? (0, hb.jsx)("span", {
         className: "LoadoutCost",
-        children: Rk(`${Sk}:loadoutFree`)
-      }) : (0, Ek.jsxs)("span", {
+        children: kb(`${Jb}:loadoutFree`)
+      }) : (0, hb.jsxs)("span", {
         className: "LoadoutCost",
-        children: [Fk.loadoutCostCoins > 0 && (0, Ek.jsx)(gk, {
-          itemName: Nk,
-          amount: Fk.loadoutCostCoins,
-          Hb: Bk.loadoutCoins
-        }), Fk.loadoutCostParts.map((kk => {
-          const Fk = RF(Bk, kk.loadoutPartCurrency);
-          return (0, Ek.jsx)(gk, {
-            itemName: Fk.loadoutHeldPartItem,
-            amount: kk.loadoutPartAmount,
-            Hb: Fk.loadoutHeldPartAmount
-          }, kk.loadoutPartCurrency)
+        children: [cb.loadoutCostCoins > 0 && (0, hb.jsx)(Pb, {
+          itemName: gb,
+          amount: cb.loadoutCostCoins,
+          qU: sb.loadoutCoins
+        }), cb.loadoutCostParts.map((bb => {
+          const cb = sc(sb, bb.loadoutPartCurrency);
+          return (0, hb.jsx)(Pb, {
+            itemName: cb.loadoutHeldPartItem,
+            amount: bb.loadoutPartAmount,
+            qU: cb.loadoutHeldPartAmount
+          }, bb.loadoutPartCurrency)
         }))]
       })
     }
-    const uF = {
-      loadoutStatFireRate: `${Sk}:loadoutUnitPerMinute`,
-      loadoutStatReload: `${Sk}:loadoutUnitSeconds`,
-      loadoutStatResupply: `${Sk}:loadoutUnitSeconds`
+    const tc = {
+      loadoutStatFireRate: `${Jb}:loadoutUnitPerMinute`,
+      loadoutStatReload: `${Jb}:loadoutUnitSeconds`,
+      loadoutStatResupply: `${Jb}:loadoutUnitSeconds`
     };
 
-    function MF(kk) {
-      return "loadoutStatPotency" === kk.loadoutStatKind ? (0, kF.V)(kk.loadoutStatValue) : String(kk.loadoutStatValue)
+    function yc(bb) {
+      return "loadoutStatPotency" === bb.loadoutStatKind ? (0, pb.Q)(bb.loadoutStatValue) : String(bb.loadoutStatValue)
     }
 
-    function gF(kk) {
-      var Fk;
+    function Pc(bb) {
+      var cb;
       let {
-        option: Bk
-      } = kk;
+        option: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, Vk.x)(), tk = Bk.loadoutOptionTiers, ak = null === (Fk = tk[0]) || void 0 === Fk ? void 0 : Fk.loadoutTierStats.map((kk => kk.loadoutStatKind));
-      if (!ak || 0 === ak.length) return null;
-      const Xk = Bk.loadoutOptionOwnedTier,
-        bk = (kk, Fk) => {
-          var Bk;
-          return null === (Bk = tk[kk]) || void 0 === Bk ? void 0 : Bk.loadoutTierStats.find((kk => kk.loadoutStatKind === Fk))
+        t: kb
+      } = (0, Mb.E)(), Wb = sb.loadoutOptionTiers, ab = null === (cb = Wb[0]) || void 0 === cb ? void 0 : cb.loadoutTierStats.map((bb => bb.loadoutStatKind));
+      if (!ab || 0 === ab.length) return null;
+      const Tb = sb.loadoutOptionOwnedTier,
+        Ub = (bb, cb) => {
+          var sb;
+          return null === (sb = Wb[bb]) || void 0 === sb ? void 0 : sb.loadoutTierStats.find((bb => bb.loadoutStatKind === cb))
         };
-      return (0, Ek.jsxs)("table", {
+      return (0, hb.jsxs)("table", {
         className: "LoadoutTierTable",
-        children: [(0, Ek.jsx)("thead", {
-          children: (0, Ek.jsxs)("tr", {
-            children: [(0, Ek.jsx)("th", {}), tk.map(((kk, Fk) => (0, Ek.jsx)("th", {
-              className: dk()({
-                Current: Fk + 1 === Xk,
-                Next: Fk === Xk
+        children: [(0, hb.jsx)("thead", {
+          children: (0, hb.jsxs)("tr", {
+            children: [(0, hb.jsx)("th", {}), Wb.map(((bb, cb) => (0, hb.jsx)("th", {
+              className: Hb()({
+                Current: cb + 1 === Tb,
+                Next: cb === Tb
               }),
-              children: Rk(`${Sk}:loadoutTier`, {
-                tier: (0, kF.V)(Fk + 1)
+              children: kb(`${Jb}:loadoutTier`, {
+                tier: (0, pb.Q)(cb + 1)
               })
-            }, Fk)))]
+            }, cb)))]
           })
-        }), (0, Ek.jsx)("tbody", {
-          children: ak.map((kk => {
-            const Fk = uF[kk];
-            return (0, Ek.jsxs)("tr", {
-              children: [(0, Ek.jsxs)("th", {
+        }), (0, hb.jsx)("tbody", {
+          children: ab.map((bb => {
+            const cb = tc[bb];
+            return (0, hb.jsxs)("tr", {
+              children: [(0, hb.jsxs)("th", {
                 scope: "row",
-                children: [Rk(`${Sk}:${kk}`), Fk && (0, Ek.jsx)("span", {
+                children: [kb(`${Jb}:${bb}`), cb && (0, hb.jsx)("span", {
                   className: "LoadoutStatUnit",
-                  children: Rk(Fk)
+                  children: kb(cb)
                 })]
-              }), tk.map(((Fk, Bk) => {
-                const Rk = bk(Bk, kk),
-                  tk = Bk > 0 ? bk(Bk - 1, kk) : void 0,
-                  ak = Rk && tk ? Rk.loadoutStatValue - tk.loadoutStatValue : 0,
-                  wk = NF.has(kk) ? ak < 0 : ak > 0,
-                  sk = Bk === Xk;
-                return (0, Ek.jsxs)("td", {
-                  className: dk()({
-                    Current: Bk + 1 === Xk,
-                    Next: sk,
-                    Gain: wk,
-                    Owned: Bk < Xk
+              }), Wb.map(((cb, sb) => {
+                const kb = Ub(sb, bb),
+                  Wb = sb > 0 ? Ub(sb - 1, bb) : void 0,
+                  ab = kb && Wb ? kb.loadoutStatValue - Wb.loadoutStatValue : 0,
+                  Ib = gc.has(bb) ? ab < 0 : ab > 0,
+                  fb = sb === Tb;
+                return (0, hb.jsxs)("td", {
+                  className: Hb()({
+                    Current: sb + 1 === Tb,
+                    Next: fb,
+                    Gain: Ib,
+                    Owned: sb < Tb
                   }),
-                  children: [sk && wk && (0, Ek.jsx)("span", {
+                  children: [fb && Ib && (0, hb.jsx)("span", {
                     className: "LoadoutGainArrow",
                     "aria-hidden": "true",
-                    children: ak < 0 ? "\u25bc" : "\u25b2"
-                  }), Rk ? MF(Rk) : "-"]
-                }, Bk)
+                    children: ab < 0 ? "\u25bc" : "\u25b2"
+                  }), kb ? yc(kb) : "-"]
+                }, sb)
               }))]
-            }, kk)
+            }, bb)
           }))
         })]
       })
     }
 
-    function UF(kk) {
+    function Dc(bb) {
       let {
-        view: Fk,
-        controller: Bk,
-        slot: Rk,
-        option: tk
-      } = kk;
+        view: cb,
+        controller: sb,
+        slot: kb,
+        option: Wb
+      } = bb;
       const {
-        t: ak
-      } = (0, Vk.x)(), Xk = Fk.loadout, bk = tk.loadoutOptionOwnedTier, wk = tk.loadoutOptionTiers.length, dk = Rk.loadoutSlotEquippedId === tk.loadoutOptionId, sk = bk < wk ? tk.loadoutOptionTiers[bk].loadoutTierCost : null, Jk = null !== sk && BF(Xk, sk), Ak = tk.loadoutOptionId, yk = oF();
-      return (0, Ek.jsxs)(Ek.Fragment, {
-        children: [(0, Ek.jsx)(GF, {
-          icon: tk.loadoutOptionIcon,
-          name: tk.loadoutOptionName,
-          status: 0 === bk ? ak(`${Sk}:loadoutLocked`) : wk > 1 ? ak(`${Sk}:loadoutTier`, {
-            tier: (0, kF.V)(bk)
+        t: ab
+      } = (0, Mb.E)(), Tb = cb.loadout, Ub = Wb.loadoutOptionOwnedTier, Ib = Wb.loadoutOptionTiers.length, Hb = kb.loadoutSlotEquippedId === Wb.loadoutOptionId, fb = Ub < Ib ? Wb.loadoutOptionTiers[Ub].loadoutTierCost : null, Xb = null !== fb && cc(Tb, fb), nb = Wb.loadoutOptionId, lb = Lc();
+      return (0, hb.jsxs)(hb.Fragment, {
+        children: [(0, hb.jsx)(ic, {
+          icon: Wb.loadoutOptionIcon,
+          name: Wb.loadoutOptionName,
+          status: 0 === Ub ? ab(`${Jb}:loadoutLocked`) : Ib > 1 ? ab(`${Jb}:loadoutTier`, {
+            tier: (0, pb.Q)(Ub)
           }) : null,
-          locked: 0 === bk,
-          equipped: dk
-        }), (0, Ek.jsx)("p", {
+          locked: 0 === Ub,
+          equipped: Hb
+        }), (0, hb.jsx)("p", {
           className: "BoardDescription",
-          children: tk.loadoutOptionDescription
-        }), (0, Ek.jsx)(gF, {
-          option: tk
-        }), (0, Ek.jsxs)("div", {
-          ref: yk("act", Ak),
+          children: Wb.loadoutOptionDescription
+        }), (0, hb.jsx)(Pc, {
+          option: Wb
+        }), (0, hb.jsxs)("div", {
+          ref: lb("act", nb),
           className: "BoardActions",
-          children: [null !== sk && (0, Ek.jsxs)("div", {
+          children: [null !== fb && (0, hb.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, Ek.jsx)(HF, {
-              cost: sk,
-              loadout: Xk
-            }), (0, Ek.jsx)(ek.o, {
-              disabled: !Jk || Fk.pending,
+            children: [(0, hb.jsx)(Bc, {
+              cost: fb,
+              loadout: Tb
+            }), (0, hb.jsx)(mb.n, {
+              disabled: !Xb || cb.pending,
               onClick: () => {
-                Bk.act(0 === bk ? "loadoutUnlock" : "loadoutUpgrade", Ak)
+                sb.act(0 === Ub ? "loadoutUnlock" : "loadoutUpgrade", nb)
               },
-              children: 0 === bk ? ak(`${Sk}:loadoutUnlock`) : ak(`${Sk}:loadoutUpgrade`, {
-                tier: (0, kF.V)(bk + 1)
+              children: 0 === Ub ? ab(`${Jb}:loadoutUnlock`) : ab(`${Jb}:loadoutUpgrade`, {
+                tier: (0, pb.Q)(Ub + 1)
               })
             })]
-          }), null === sk && wk > 1 && (0, Ek.jsx)("span", {
+          }), null === fb && Ib > 1 && (0, hb.jsx)("span", {
             className: "BoardHint",
-            children: ak(`${Sk}:loadoutMaxed`)
-          }), bk > 0 && !dk && (0, Ek.jsx)(ek.g, {
-            disabled: Fk.pending,
+            children: ab(`${Jb}:loadoutMaxed`)
+          }), Ub > 0 && !Hb && (0, hb.jsx)(mb.d, {
+            disabled: cb.pending,
             onClick: () => {
-              Bk.act("loadoutEquip", Ak)
+              sb.act("loadoutEquip", nb)
             },
-            children: ak(`${Sk}:loadoutEquip`)
+            children: ab(`${Jb}:loadoutEquip`)
           })]
         })]
       })
     }
 
-    function cF(kk) {
+    function Ec(bb) {
       let {
-        view: Fk,
-        controller: Bk,
-        perk: Rk
-      } = kk;
+        view: cb,
+        controller: sb,
+        perk: kb
+      } = bb;
       const {
-        t: tk
-      } = (0, Vk.x)(), ak = Fk.loadout, Xk = aF(ak), bk = Rk.loadoutPerkId, wk = oF();
-      return (0, Ek.jsxs)(Ek.Fragment, {
-        children: [(0, Ek.jsx)(GF, {
-          icon: Rk.loadoutPerkIcon,
-          name: Rk.loadoutPerkName,
-          status: Rk.loadoutPerkOwned ? null : tk(`${Sk}:loadoutLocked`),
-          locked: !Rk.loadoutPerkOwned,
-          equipped: Rk.loadoutPerkEquipped
-        }), (0, Ek.jsx)("p", {
+        t: Wb
+      } = (0, Mb.E)(), ab = cb.loadout, Tb = Wc(ab), Ub = kb.loadoutPerkId, Ib = Lc();
+      return (0, hb.jsxs)(hb.Fragment, {
+        children: [(0, hb.jsx)(ic, {
+          icon: kb.loadoutPerkIcon,
+          name: kb.loadoutPerkName,
+          status: kb.loadoutPerkOwned ? null : Wb(`${Jb}:loadoutLocked`),
+          locked: !kb.loadoutPerkOwned,
+          equipped: kb.loadoutPerkEquipped
+        }), (0, hb.jsx)("p", {
           className: "BoardDescription",
-          children: Rk.loadoutPerkDescription
-        }), (0, Ek.jsxs)("div", {
-          ref: wk("act", bk),
+          children: kb.loadoutPerkDescription
+        }), (0, hb.jsxs)("div", {
+          ref: Ib("act", Ub),
           className: "BoardActions",
-          children: [!Rk.loadoutPerkOwned && (0, Ek.jsxs)("div", {
+          children: [!kb.loadoutPerkOwned && (0, hb.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, Ek.jsx)(HF, {
-              cost: Rk.loadoutPerkCost,
-              loadout: ak
-            }), (0, Ek.jsx)(ek.o, {
-              disabled: !BF(ak, Rk.loadoutPerkCost) || Fk.pending,
+            children: [(0, hb.jsx)(Bc, {
+              cost: kb.loadoutPerkCost,
+              loadout: ab
+            }), (0, hb.jsx)(mb.n, {
+              disabled: !cc(ab, kb.loadoutPerkCost) || cb.pending,
               onClick: () => {
-                Bk.act("loadoutUnlock", bk)
+                sb.act("loadoutUnlock", Ub)
               },
-              children: tk(`${Sk}:loadoutUnlock`)
+              children: Wb(`${Jb}:loadoutUnlock`)
             })]
-          }), Rk.loadoutPerkOwned && !Rk.loadoutPerkEquipped && (0, Ek.jsx)(ek.g, {
-            disabled: Xk || Fk.pending,
+          }), kb.loadoutPerkOwned && !kb.loadoutPerkEquipped && (0, hb.jsx)(mb.d, {
+            disabled: Tb || cb.pending,
             onClick: () => {
-              Bk.act("loadoutEquip", bk)
+              sb.act("loadoutEquip", Ub)
             },
-            children: tk(`${Sk}:loadoutEquip`)
-          }), Rk.loadoutPerkOwned && !Rk.loadoutPerkEquipped && Xk && (0, Ek.jsx)("span", {
+            children: Wb(`${Jb}:loadoutEquip`)
+          }), kb.loadoutPerkOwned && !kb.loadoutPerkEquipped && Tb && (0, hb.jsx)("span", {
             className: "BoardHint",
-            children: tk(`${Sk}:loadoutSocketsFullHint`)
-          }), Rk.loadoutPerkEquipped && (0, Ek.jsx)(ek.O, {
-            disabled: Fk.pending,
+            children: Wb(`${Jb}:loadoutSocketsFullHint`)
+          }), kb.loadoutPerkEquipped && (0, hb.jsx)(mb.M, {
+            disabled: cb.pending,
             onClick: () => {
-              Bk.act("loadoutUnequip", bk)
+              sb.act("loadoutUnequip", Ub)
             },
-            children: tk(`${Sk}:loadoutUnequip`)
+            children: Wb(`${Jb}:loadoutUnequip`)
           })]
         })]
       })
     }
 
-    function GF(kk) {
+    function ic(bb) {
       let {
-        icon: Fk,
-        name: Bk,
-        status: Rk,
-        locked: tk,
-        equipped: ak
-      } = kk;
+        icon: cb,
+        name: sb,
+        status: kb,
+        locked: Wb,
+        equipped: ab
+      } = bb;
       const {
-        t: Xk
-      } = (0, Vk.x)();
-      return (0, Ek.jsxs)(Tk, {
-        icon: (0, Ek.jsx)(uk, {
-          itemName: Fk
+        t: Tb
+      } = (0, Mb.E)();
+      return (0, hb.jsxs)(Ob, {
+        icon: (0, hb.jsx)(tb, {
+          itemName: cb
         }),
-        name: Bk,
-        children: [null !== Rk && (0, Ek.jsx)("span", {
-          className: dk()("LoadoutStatusText", {
-            Locked: tk
+        name: sb,
+        children: [null !== kb && (0, hb.jsx)("span", {
+          className: Hb()("LoadoutStatusText", {
+            Locked: Wb
           }),
-          children: Rk
-        }), ak && (0, Ek.jsx)("span", {
+          children: kb
+        }), ab && (0, hb.jsx)("span", {
           className: "BoardBadge",
-          children: Xk(`${Sk}:loadoutEquippedBadge`)
+          children: Tb(`${Jb}:loadoutEquippedBadge`)
         })]
       })
     }
 
-    function TF(kk) {
+    function Oc(bb) {
       let {
-        view: Fk,
-        controller: Bk
-      } = kk;
-      const Rk = Fk.loadout;
-      if ("loadoutPerks" === Fk.slot) {
-        const kk = Rk.loadoutPerks.find((kk => kk.loadoutPerkId === Fk.selectedId));
-        return (0, Ek.jsx)("section", {
+        view: cb,
+        controller: sb
+      } = bb;
+      const kb = cb.loadout;
+      if ("loadoutPerks" === cb.slot) {
+        const bb = kb.loadoutPerks.find((bb => bb.loadoutPerkId === cb.selectedId));
+        return (0, hb.jsx)("section", {
           className: "BoardDetail",
-          children: kk && (0, Ek.jsx)(cF, {
-            view: Fk,
-            controller: Bk,
-            perk: kk
+          children: bb && (0, hb.jsx)(Ec, {
+            view: cb,
+            controller: sb,
+            perk: bb
           })
         })
       }
-      const tk = tF(Rk, Fk.slot),
-        ak = tk.loadoutSlotOptions.find((kk => kk.loadoutOptionId === Fk.selectedId));
-      return (0, Ek.jsx)("section", {
+      const Wb = kc(kb, cb.slot),
+        ab = Wb.loadoutSlotOptions.find((bb => bb.loadoutOptionId === cb.selectedId));
+      return (0, hb.jsx)("section", {
         className: "BoardDetail",
-        children: ak && (0, Ek.jsx)(UF, {
-          view: Fk,
-          controller: Bk,
-          slot: tk,
-          option: ak
+        children: ab && (0, hb.jsx)(Dc, {
+          view: cb,
+          controller: sb,
+          slot: Wb,
+          option: ab
         })
       })
     }
 
-    function rF(kk) {
+    function Gc(bb) {
       let {
-        owned: Fk,
-        total: Bk
-      } = kk;
-      return Bk <= 1 ? null : (0, Ek.jsx)("span", {
+        owned: cb,
+        total: sb
+      } = bb;
+      return sb <= 1 ? null : (0, hb.jsx)("span", {
         className: "LoadoutPips",
         children: Array.from({
-          length: Bk
-        }, ((kk, Bk) => (0, Ek.jsx)("span", {
-          className: dk()("LoadoutPip", {
-            Filled: Bk < Fk
+          length: sb
+        }, ((bb, sb) => (0, hb.jsx)("span", {
+          className: Hb()("LoadoutPip", {
+            Filled: sb < cb
           })
-        }, Bk)))
+        }, sb)))
       })
     }
 
-    function DF(kk) {
+    function Kc(bb) {
       let {
-        view: Fk,
-        controller: Bk
-      } = kk;
+        view: cb,
+        controller: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, Vk.x)(), tk = Fk.loadout, ak = oF();
-      return (0, Ek.jsxs)("nav", {
+        t: kb
+      } = (0, Mb.E)(), Wb = cb.loadout, ab = Lc();
+      return (0, hb.jsxs)("nav", {
         className: "LoadoutKit",
-        "aria-label": Rk(`${Sk}:loadoutKit`),
-        children: [tk.loadoutSlots.map((kk => {
-          const tk = kk.loadoutSlotOptions.find((Fk => Fk.loadoutOptionId === kk.loadoutSlotEquippedId));
-          return (0, Ek.jsxs)("button", {
-            ref: ak("section", kk.loadoutSlotKind),
+        "aria-label": kb(`${Jb}:loadoutKit`),
+        children: [Wb.loadoutSlots.map((bb => {
+          const Wb = bb.loadoutSlotOptions.find((cb => cb.loadoutOptionId === bb.loadoutSlotEquippedId));
+          return (0, hb.jsxs)("button", {
+            ref: ab("section", bb.loadoutSlotKind),
             type: "button",
-            className: dk()("LoadoutKitSlot", {
-              Selected: Fk.slot === kk.loadoutSlotKind
+            className: Hb()("LoadoutKitSlot", {
+              Selected: cb.slot === bb.loadoutSlotKind
             }),
             onClick: () => {
-              Bk.selectSlot(kk.loadoutSlotKind)
+              sb.selectSlot(bb.loadoutSlotKind)
             },
-            children: [(0, Ek.jsx)("span", {
+            children: [(0, hb.jsx)("span", {
               className: "LoadoutKitIcon",
-              children: tk && (0, Ek.jsx)(uk, {
-                itemName: tk.loadoutOptionIcon
+              children: Wb && (0, hb.jsx)(tb, {
+                itemName: Wb.loadoutOptionIcon
               })
-            }), (0, Ek.jsxs)("span", {
+            }), (0, hb.jsxs)("span", {
               className: "LoadoutKitText",
-              children: [(0, Ek.jsxs)("span", {
+              children: [(0, hb.jsxs)("span", {
                 className: "LoadoutKitTop",
-                children: [(0, Ek.jsx)("span", {
+                children: [(0, hb.jsx)("span", {
                   className: "LoadoutKitLabel",
-                  children: Rk(vF[kk.loadoutSlotKind])
-                }), tk && (0, Ek.jsx)(rF, {
-                  owned: tk.loadoutOptionOwnedTier,
-                  total: tk.loadoutOptionTiers.length
+                  children: kb(Cc[bb.loadoutSlotKind])
+                }), Wb && (0, hb.jsx)(Gc, {
+                  owned: Wb.loadoutOptionOwnedTier,
+                  total: Wb.loadoutOptionTiers.length
                 })]
-              }), (0, Ek.jsx)("span", {
+              }), (0, hb.jsx)("span", {
                 className: "LoadoutKitName",
-                children: null === tk || void 0 === tk ? void 0 : tk.loadoutOptionName
+                children: null === Wb || void 0 === Wb ? void 0 : Wb.loadoutOptionName
               })]
             })]
-          }, kk.loadoutSlotKind)
-        })), (0, Ek.jsx)(zF, {
-          view: Fk,
-          controller: Bk
+          }, bb.loadoutSlotKind)
+        })), (0, hb.jsx)(Zc, {
+          view: cb,
+          controller: sb
         })]
       })
     }
 
-    function zF(kk) {
+    function Zc(bb) {
       let {
-        view: Fk,
-        controller: Bk
-      } = kk;
+        view: cb,
+        controller: sb
+      } = bb;
       const {
-        t: Rk
-      } = (0, Vk.x)(), tk = Fk.loadout, ak = tk.loadoutPerks.filter((kk => kk.loadoutPerkEquipped)), Xk = oF();
-      return (0, Ek.jsxs)("button", {
-        ref: Xk("section", "loadoutPerks"),
+        t: kb
+      } = (0, Mb.E)(), Wb = cb.loadout, ab = Wb.loadoutPerks.filter((bb => bb.loadoutPerkEquipped)), Tb = Lc();
+      return (0, hb.jsxs)("button", {
+        ref: Tb("section", "loadoutPerks"),
         type: "button",
-        className: dk()("LoadoutKitSlot", "LoadoutPerks", {
-          Selected: "loadoutPerks" === Fk.slot
+        className: Hb()("LoadoutKitSlot", "LoadoutPerks", {
+          Selected: "loadoutPerks" === cb.slot
         }),
         onClick: () => {
-          Bk.selectSlot("loadoutPerks")
+          sb.selectSlot("loadoutPerks")
         },
-        children: [(0, Ek.jsxs)("span", {
+        children: [(0, hb.jsxs)("span", {
           className: "LoadoutKitTop",
-          children: [(0, Ek.jsx)("span", {
+          children: [(0, hb.jsx)("span", {
             className: "LoadoutKitLabel",
-            children: Rk(vF.loadoutPerks)
-          }), (0, Ek.jsx)("span", {
+            children: kb(Cc.loadoutPerks)
+          }), (0, hb.jsx)("span", {
             className: "LoadoutPerkCount",
-            children: Rk(`${Sk}:loadoutPerkCount`, {
-              equipped: String(ak.length),
-              max: String(tk.loadoutMaxPerks)
+            children: kb(`${Jb}:loadoutPerkCount`, {
+              equipped: String(ab.length),
+              max: String(Wb.loadoutMaxPerks)
             })
           })]
-        }), (0, Ek.jsx)("span", {
+        }), (0, hb.jsx)("span", {
           className: "LoadoutSockets",
           children: Array.from({
-            length: tk.loadoutMaxPerks
-          }, ((kk, Fk) => {
-            const Bk = ak[Fk];
-            return (0, Ek.jsxs)("span", {
-              className: dk()("LoadoutSocket", {
-                Filled: Bk,
-                Empty: !Bk
+            length: Wb.loadoutMaxPerks
+          }, ((bb, cb) => {
+            const sb = ab[cb];
+            return (0, hb.jsxs)("span", {
+              className: Hb()("LoadoutSocket", {
+                Filled: sb,
+                Empty: !sb
               }),
-              children: [(0, Ek.jsx)("span", {
+              children: [(0, hb.jsx)("span", {
                 className: "LoadoutSocketWell",
-                children: Bk && (0, Ek.jsx)(uk, {
-                  itemName: Bk.loadoutPerkIcon
+                children: sb && (0, hb.jsx)(tb, {
+                  itemName: sb.loadoutPerkIcon
                 })
-              }), (0, Ek.jsx)("span", {
+              }), (0, hb.jsx)("span", {
                 className: "LoadoutSocketName",
-                children: Bk ? Bk.loadoutPerkName : Rk(`${Sk}:loadoutPerkSocketEmpty`)
+                children: sb ? sb.loadoutPerkName : kb(`${Jb}:loadoutPerkSocketEmpty`)
               })]
-            }, Fk)
+            }, cb)
           }))
         })]
       })
     }
 
-    function PF(kk) {
+    function zc(bb) {
       let {
-        icon: Fk,
-        name: Bk,
-        selected: Rk,
-        equipped: tk,
-        locked: ak,
-        ownedTier: Xk,
-        tiers: bk,
-        buttonRef: wk,
-        onSelect: dk
-      } = kk;
+        icon: cb,
+        name: sb,
+        selected: kb,
+        equipped: Wb,
+        locked: ab,
+        ownedTier: Tb,
+        tiers: Ub,
+        buttonRef: Ib,
+        onSelect: Hb
+      } = bb;
       const {
-        t: sk
-      } = (0, Vk.x)();
-      return (0, Ek.jsxs)(Gk, {
-        icon: (0, Ek.jsx)(uk, {
-          itemName: Fk
+        t: fb
+      } = (0, Mb.E)();
+      return (0, hb.jsxs)(ib, {
+        icon: (0, hb.jsx)(tb, {
+          itemName: cb
         }),
-        name: Bk,
-        selected: Rk,
-        locked: ak,
-        buttonRef: wk,
-        onSelect: dk,
-        children: [tk && (0, Ek.jsx)("span", {
+        name: sb,
+        selected: kb,
+        locked: ab,
+        buttonRef: Ib,
+        onSelect: Hb,
+        children: [Wb && (0, hb.jsx)("span", {
           className: "BoardBadge",
-          children: sk(`${Sk}:loadoutEquippedBadge`)
-        }), ak && (0, Ek.jsx)("span", {
+          children: fb(`${Jb}:loadoutEquippedBadge`)
+        }), ab && (0, hb.jsx)("span", {
           className: "BoardBadge Muted",
-          children: sk(`${Sk}:loadoutLocked`)
-        }), !ak && (0, Ek.jsx)(rF, {
-          owned: Xk,
-          total: bk
+          children: fb(`${Jb}:loadoutLocked`)
+        }), !ab && (0, hb.jsx)(Gc, {
+          owned: Tb,
+          total: Ub
         })]
       })
     }
 
-    function hF(kk) {
+    function qc(bb) {
       let {
-        view: Fk,
-        controller: Bk
-      } = kk;
-      const Rk = Fk.loadout,
-        tk = oF();
-      if ("loadoutPerks" === Fk.slot) return (0, Ek.jsx)("div", {
+        view: cb,
+        controller: sb
+      } = bb;
+      const kb = cb.loadout,
+        Wb = Lc();
+      if ("loadoutPerks" === cb.slot) return (0, hb.jsx)("div", {
         className: "BoardTiles",
-        children: Rk.loadoutPerks.map((kk => (0, Ek.jsx)(PF, {
-          icon: kk.loadoutPerkIcon,
-          name: kk.loadoutPerkName,
-          selected: Fk.selectedId === kk.loadoutPerkId,
-          equipped: kk.loadoutPerkEquipped,
-          locked: !kk.loadoutPerkOwned,
+        children: kb.loadoutPerks.map((bb => (0, hb.jsx)(zc, {
+          icon: bb.loadoutPerkIcon,
+          name: bb.loadoutPerkName,
+          selected: cb.selectedId === bb.loadoutPerkId,
+          equipped: bb.loadoutPerkEquipped,
+          locked: !bb.loadoutPerkOwned,
           ownedTier: 0,
           tiers: 0,
-          buttonRef: tk("AA", kk.loadoutPerkId),
+          buttonRef: Wb("Wn", bb.loadoutPerkId),
           onSelect: () => {
-            Bk.select(kk.loadoutPerkId)
+            sb.select(bb.loadoutPerkId)
           }
-        }, kk.loadoutPerkId)))
+        }, bb.loadoutPerkId)))
       });
-      const ak = tF(Rk, Fk.slot);
-      return (0, Ek.jsx)("div", {
+      const ab = kc(kb, cb.slot);
+      return (0, hb.jsx)("div", {
         className: "BoardTiles",
-        children: ak.loadoutSlotOptions.map((kk => (0, Ek.jsx)(PF, {
-          icon: kk.loadoutOptionIcon,
-          name: kk.loadoutOptionName,
-          selected: Fk.selectedId === kk.loadoutOptionId,
-          equipped: ak.loadoutSlotEquippedId === kk.loadoutOptionId,
-          locked: 0 === kk.loadoutOptionOwnedTier,
-          ownedTier: kk.loadoutOptionOwnedTier,
-          tiers: kk.loadoutOptionTiers.length,
-          buttonRef: tk("AA", kk.loadoutOptionId),
+        children: ab.loadoutSlotOptions.map((bb => (0, hb.jsx)(zc, {
+          icon: bb.loadoutOptionIcon,
+          name: bb.loadoutOptionName,
+          selected: cb.selectedId === bb.loadoutOptionId,
+          equipped: ab.loadoutSlotEquippedId === bb.loadoutOptionId,
+          locked: 0 === bb.loadoutOptionOwnedTier,
+          ownedTier: bb.loadoutOptionOwnedTier,
+          tiers: bb.loadoutOptionTiers.length,
+          buttonRef: Wb("Wn", bb.loadoutOptionId),
           onSelect: () => {
-            Bk.select(kk.loadoutOptionId)
+            sb.select(bb.loadoutOptionId)
           }
-        }, kk.loadoutOptionId)))
+        }, bb.loadoutOptionId)))
       })
     }
 
-    function qF(kk) {
+    function dc(bb) {
       let {
-        loadout: Fk
-      } = kk;
-      return (0, Ek.jsx)(rk, {
-        coins: Fk.loadoutCoins,
-        children: Fk.loadoutHeldParts.filter((kk => kk.loadoutHeldPartAmount > 0)).map((kk => (0, Ek.jsx)(gk, {
-          itemName: kk.loadoutHeldPartItem,
-          amount: kk.loadoutHeldPartAmount
-        }, kk.loadoutHeldPartCurrency)))
+        loadout: cb
+      } = bb;
+      return (0, hb.jsx)(Gb, {
+        coins: cb.loadoutCoins,
+        children: cb.loadoutHeldParts.filter((bb => bb.loadoutHeldPartAmount > 0)).map((bb => (0, hb.jsx)(Pb, {
+          itemName: bb.loadoutHeldPartItem,
+          amount: bb.loadoutHeldPartAmount
+        }, bb.loadoutHeldPartCurrency)))
       })
     }
 
-    function CF(kk) {
+    function Ac(bb) {
       let {
-        controller: Fk
-      } = kk;
-      const Bk = (0, sk.g)(AF, Fk.getSnapshot()),
+        controller: cb
+      } = bb;
+      const sb = (0, fb.h)(Xc, cb.getSnapshot()),
         {
-          t: Rk
-        } = (0, Vk.x)();
-      if (null === Bk.loadout) return null;
-      const tk = Bk.notice;
-      return (0, Ek.jsx)(EF, {
-        view: Bk,
-        onDismiss: Fk.dismiss,
-        children: (0, Ek.jsxs)(Hk, {
-          open: Bk.open,
-          onDismiss: Fk.dismiss,
-          title: Rk(`${Sk}:loadoutTitle`),
+          t: kb
+        } = (0, Mb.E)();
+      if (null === sb.loadout) return null;
+      const Wb = sb.notice;
+      return (0, hb.jsx)(hc, {
+        view: sb,
+        onDismiss: cb.dismiss,
+        children: (0, hb.jsxs)(Bb, {
+          open: sb.open,
+          onDismiss: cb.dismiss,
+          title: kb(`${Jb}:loadoutTitle`),
           className: "ContainmentLoadoutPanel",
-          headerExtra: (0, Ek.jsx)(qF, {
-            loadout: Bk.loadout
+          headerExtra: (0, hb.jsx)(dc, {
+            loadout: sb.loadout
           }),
-          statusRefused: null === tk || void 0 === tk ? void 0 : tk.loadoutNoticeRefused,
-          status: (0, Ek.jsxs)(Ek.Fragment, {
-            children: [(0, Ek.jsx)("span", {
+          statusRefused: null === Wb || void 0 === Wb ? void 0 : Wb.loadoutNoticeRefused,
+          status: (0, hb.jsxs)(hb.Fragment, {
+            children: [(0, hb.jsx)("span", {
               className: "LoadoutRadioBadge",
-              children: Rk(`${Sk}:loadoutRadioBadge`)
-            }), null !== tk && Rk(`${Sk}:${tk.loadoutNoticeKey}`, {
-              name: tk.loadoutNoticeName,
-              tier: (0, kF.V)(tk.loadoutNoticeTier),
-              max: String(Bk.loadout.loadoutMaxPerks)
+              children: kb(`${Jb}:loadoutRadioBadge`)
+            }), null !== Wb && kb(`${Jb}:${Wb.loadoutNoticeKey}`, {
+              name: Wb.loadoutNoticeName,
+              tier: (0, pb.Q)(Wb.loadoutNoticeTier),
+              max: String(sb.loadout.loadoutMaxPerks)
             })]
           }),
-          children: [(0, Ek.jsx)(DF, {
-            view: Bk,
-            controller: Fk
-          }), (0, Ek.jsx)(hF, {
-            view: Bk,
-            controller: Fk
-          }), (0, Ek.jsx)(TF, {
-            view: Bk,
-            controller: Fk
+          children: [(0, hb.jsx)(Kc, {
+            view: sb,
+            controller: cb
+          }), (0, hb.jsx)(qc, {
+            view: sb,
+            controller: cb
+          }), (0, hb.jsx)(Oc, {
+            view: sb,
+            controller: cb
           })]
         })
       })
     }
 
-    function ZF(kk, Fk, Bk) {
-      const Rk = kk.locatorEntries.find((kk => kk.locatorEntryId === Bk));
-      if (!Rk) return null;
-      const tk = Rk.locatorEntryName;
-      if ("locatorDisarm" === Fk) return Rk.locatorEntryArmed ? {
-        board: pF(kk, null),
-        notice: KF("locatorNoticeDisarmed", tk)
+    function wc(bb, cb, sb) {
+      const kb = bb.locatorEntries.find((bb => bb.locatorEntryId === sb));
+      if (!kb) return null;
+      const Wb = kb.locatorEntryName;
+      if ("locatorDisarm" === cb) return kb.locatorEntryArmed ? {
+        board: rc(bb, null),
+        notice: oc("locatorNoticeDisarmed", Wb)
       } : null;
-      if ("locatorArm" === Fk) return Rk.locatorEntryOwned && !Rk.locatorEntryArmed ? {
-        board: pF(kk, Bk),
-        notice: KF("locatorNoticeArmed", tk)
+      if ("locatorArm" === cb) return kb.locatorEntryOwned && !kb.locatorEntryArmed ? {
+        board: rc(bb, sb),
+        notice: oc("locatorNoticeArmed", Wb)
       } : null;
-      if (Rk.locatorEntryOwned || kk.locatorCoins < Rk.locatorEntryPrice) return null;
-      const ak = pF({
-        ...kk,
-        locatorCoins: kk.locatorCoins - Rk.locatorEntryPrice
-      }, Bk);
+      if (kb.locatorEntryOwned || bb.locatorCoins < kb.locatorEntryPrice) return null;
+      const ab = rc({
+        ...bb,
+        locatorCoins: bb.locatorCoins - kb.locatorEntryPrice
+      }, sb);
       return {
         board: {
-          ...ak,
-          locatorEntries: ak.locatorEntries.map((kk => kk.locatorEntryId === Bk ? {
-            ...kk,
+          ...ab,
+          locatorEntries: ab.locatorEntries.map((bb => bb.locatorEntryId === sb ? {
+            ...bb,
             locatorEntryOwned: !0
-          } : kk))
+          } : bb))
         },
-        notice: KF("locatorNoticeBought", tk)
+        notice: oc("locatorNoticeBought", Wb)
       }
     }
 
-    function pF(kk, Fk) {
+    function rc(bb, cb) {
       return {
-        ...kk,
-        locatorEntries: kk.locatorEntries.map((kk => {
-          const Bk = kk.locatorEntryId === Fk;
-          return kk.locatorEntryArmed === Bk ? kk : {
-            ...kk,
-            locatorEntryArmed: Bk
+        ...bb,
+        locatorEntries: bb.locatorEntries.map((bb => {
+          const sb = bb.locatorEntryId === cb;
+          return bb.locatorEntryArmed === sb ? bb : {
+            ...bb,
+            locatorEntryArmed: sb
           }
         }))
       }
     }
 
-    function KF(kk, Fk) {
+    function oc(bb, cb) {
       return {
-        locatorNoticeKey: kk,
+        locatorNoticeKey: bb,
         locatorNoticeRefused: !1,
-        locatorNoticeName: Fk
+        locatorNoticeName: cb
       }
     }
-    const xF = "containmentLocatorView";
-    class jF extends FF {
-      constructor(kk, Fk, Bk, Rk) {
-        super(kk, Fk, Bk, Rk, "locator", ZF), this.snapshot = this.buildSnapshot()
+    const Sc = "containmentLocatorView";
+    class Rc extends bc {
+      constructor(bb, cb, sb, kb) {
+        super(bb, cb, sb, kb, "locator", wc), this.snapshot = this.buildSnapshot()
       }
-      messageOpens(kk) {
-        return kk.locatorMessageOpens
+      messageOpens(bb) {
+        return bb.locatorMessageOpens
       }
-      messageNotice(kk) {
-        return kk.locatorNotice
+      messageNotice(bb) {
+        return bb.locatorNotice
       }
-      openingSelection(kk) {
-        var Fk;
-        const Bk = kk.locatorEntries;
-        return (null !== (Fk = Bk.find((kk => kk.locatorEntryArmed))) && void 0 !== Fk ? Fk : Bk[0]).locatorEntryId
+      openingSelection(bb) {
+        var cb;
+        const sb = bb.locatorEntries;
+        return (null !== (cb = sb.find((bb => bb.locatorEntryArmed))) && void 0 !== cb ? cb : sb[0]).locatorEntryId
       }
       buildSnapshot() {
         return {
@@ -2010,245 +2010,245 @@ export const modules = {
         }
       }
     }
-    const lF = {
-        locatorContained: `${Sk}:locatorFlavourContained`,
-        locatorEncountered: `${Sk}:locatorFlavourEncountered`,
-        locatorUnseen: `${Sk}:locatorFlavourUnseen`
+    const vc = {
+        locatorContained: `${Jb}:locatorFlavourContained`,
+        locatorEncountered: `${Jb}:locatorFlavourEncountered`,
+        locatorUnseen: `${Jb}:locatorFlavourUnseen`
       },
-      nF = {
+      Fc = {
         codexAnyDifficulty: null,
-        codexNormalOnly: `${Sk}:locatorAttunedNormal`,
-        codexHardOnly: `${Sk}:locatorAttunedHard`
+        codexNormalOnly: `${Jb}:locatorAttunedNormal`,
+        codexHardOnly: `${Jb}:locatorAttunedHard`
       };
 
-    function IF() {
-      return (0, Ek.jsx)(Ek.Fragment, {
+    function xc() {
+      return (0, hb.jsx)(hb.Fragment, {
         children: Array.from({
           length: 5
-        }, ((kk, Fk) => (0, Ek.jsx)("span", {
+        }, ((bb, cb) => (0, hb.jsx)("span", {
           className: "LocatorFly",
-          children: (0, Ek.jsx)("img", {
+          children: (0, hb.jsx)("img", {
             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoBboMlb5LyUjD8YgNtHyJ6/d+Q/CILa1lz9YAbo4DCDLYxjQv3gt3AYQG90AdHkUQ/qhkjAb0BURkgcDmAQMo7sSXR7deyiGoIvDvIOsGasB+ACyBmTNACS0go3ibhumAAAAAElFTkSuQmCC",
             alt: "",
             draggable: !1
           })
-        }, Fk)))
+        }, cb)))
       })
     }
 
-    function QF(kk) {
+    function jc(bb) {
       let {
-        entry: Fk
-      } = kk;
+        entry: cb
+      } = bb;
       const {
-        t: Bk
-      } = (0, Vk.x)();
-      return Fk.locatorEntryArmed ? (0, Ek.jsx)("span", {
+        t: sb
+      } = (0, Mb.E)();
+      return cb.locatorEntryArmed ? (0, hb.jsx)("span", {
         className: "BoardBadge Armed",
-        children: Bk(`${Sk}:locatorArmedBadge`)
-      }) : Fk.locatorEntryOwned ? (0, Ek.jsx)("span", {
+        children: sb(`${Jb}:locatorArmedBadge`)
+      }) : cb.locatorEntryOwned ? (0, hb.jsx)("span", {
         className: "BoardBadge",
-        children: Bk(`${Sk}:locatorOwnedBadge`)
+        children: sb(`${Jb}:locatorOwnedBadge`)
       }) : null
     }
 
-    function kB(kk) {
+    function pc(bb) {
       let {
-        entry: Fk,
-        coins: Bk,
-        inTile: Rk = !1
-      } = kk;
-      return (0, Ek.jsx)(gk, {
-        itemName: Nk,
-        amount: Fk.locatorEntryPrice,
-        Hb: Bk,
-        inTile: Rk
+        entry: cb,
+        coins: sb,
+        inTile: kb = !1
+      } = bb;
+      return (0, hb.jsx)(Pb, {
+        itemName: gb,
+        amount: cb.locatorEntryPrice,
+        qU: sb,
+        inTile: kb
       })
     }
 
-    function FB(kk) {
+    function bs(bb) {
       let {
-        view: Fk,
-        controller: Bk,
-        entry: Rk
-      } = kk;
+        view: cb,
+        controller: sb,
+        entry: kb
+      } = bb;
       const {
-        t: tk
-      } = (0, Vk.x)(), ak = Rk.locatorEntryId, Xk = Fk.locators.locatorEntries.find((kk => kk.locatorEntryArmed && kk !== Rk));
-      return (0, Ek.jsxs)("div", {
+        t: Wb
+      } = (0, Mb.E)(), ab = kb.locatorEntryId, Tb = cb.locators.locatorEntries.find((bb => bb.locatorEntryArmed && bb !== kb));
+      return (0, hb.jsxs)("div", {
         className: "BoardActions",
-        children: [Rk.locatorEntryArmed && (0, Ek.jsx)(ek.O, {
-          disabled: Fk.pending,
+        children: [kb.locatorEntryArmed && (0, hb.jsx)(mb.M, {
+          disabled: cb.pending,
           onClick: () => {
-            Bk.act("locatorDisarm", ak)
+            sb.act("locatorDisarm", ab)
           },
-          children: tk(`${Sk}:locatorDisarm`)
-        }), Rk.locatorEntryOwned && !Rk.locatorEntryArmed && (0, Ek.jsx)(ek.g, {
-          disabled: Fk.pending,
+          children: Wb(`${Jb}:locatorDisarm`)
+        }), kb.locatorEntryOwned && !kb.locatorEntryArmed && (0, hb.jsx)(mb.d, {
+          disabled: cb.pending,
           onClick: () => {
-            Bk.act("locatorArm", ak)
+            sb.act("locatorArm", ab)
           },
-          children: tk(`${Sk}:locatorArm`)
-        }), !Rk.locatorEntryOwned && (0, Ek.jsxs)("div", {
+          children: Wb(`${Jb}:locatorArm`)
+        }), !kb.locatorEntryOwned && (0, hb.jsxs)("div", {
           className: "LocatorBuy",
-          children: [(0, Ek.jsx)(kB, {
-            entry: Rk,
-            coins: Fk.locators.locatorCoins
-          }), (0, Ek.jsx)(ek.o, {
-            disabled: Fk.locators.locatorCoins < Rk.locatorEntryPrice || Fk.pending,
+          children: [(0, hb.jsx)(pc, {
+            entry: kb,
+            coins: cb.locators.locatorCoins
+          }), (0, hb.jsx)(mb.n, {
+            disabled: cb.locators.locatorCoins < kb.locatorEntryPrice || cb.pending,
             onClick: () => {
-              Bk.act("locatorBuy", ak)
+              sb.act("locatorBuy", ab)
             },
-            children: tk(`${Sk}:locatorBuy`)
+            children: Wb(`${Jb}:locatorBuy`)
           })]
-        }), Xk && !Rk.locatorEntryArmed && (0, Ek.jsx)("span", {
+        }), Tb && !kb.locatorEntryArmed && (0, hb.jsx)("span", {
           className: "BoardHint",
-          children: tk(`${Sk}:locatorReplacesHint`, {
-            name: Xk.locatorEntryName
+          children: Wb(`${Jb}:locatorReplacesHint`, {
+            name: Tb.locatorEntryName
           })
         })]
       })
     }
 
-    function BB(kk) {
+    function cs(bb) {
       let {
-        entry: Fk
-      } = kk;
-      return "locatorUnseen" === Fk.locatorEntryStanding ? (0, Ek.jsx)(uk, {
+        entry: cb
+      } = bb;
+      return "locatorUnseen" === cb.locatorEntryStanding ? (0, hb.jsx)(tb, {
         itemName: "Compass"
-      }) : (0, Ek.jsx)(Mk, {
-        anomalyId: Fk.locatorEntryId,
-        caught: "locatorContained" === Fk.locatorEntryStanding
+      }) : (0, hb.jsx)(yb, {
+        anomalyId: cb.locatorEntryId,
+        caught: "locatorContained" === cb.locatorEntryStanding
       })
     }
 
-    function RB(kk) {
+    function ss(bb) {
       let {
-        view: Fk,
-        controller: Bk,
-        entry: Rk
-      } = kk;
+        view: cb,
+        controller: sb,
+        entry: kb
+      } = bb;
       const {
-        t: tk
-      } = (0, Vk.x)(), ak = nF[Rk.locatorEntryDifficulty];
-      return (0, Ek.jsxs)("section", {
+        t: Wb
+      } = (0, Mb.E)(), ab = Fc[kb.locatorEntryDifficulty];
+      return (0, hb.jsxs)("section", {
         className: "BoardDetail",
-        children: [(0, Ek.jsxs)("div", {
-          className: dk()("LocatorLabel", {
-            Armed: Rk.locatorEntryArmed
+        children: [(0, hb.jsxs)("div", {
+          className: Hb()("LocatorLabel", {
+            Armed: kb.locatorEntryArmed
           }),
-          children: [(0, Ek.jsx)(Tk, {
-            icon: (0, Ek.jsx)(BB, {
-              entry: Rk
+          children: [(0, hb.jsx)(Ob, {
+            icon: (0, hb.jsx)(cs, {
+              entry: kb
             }),
-            name: tk(`${Sk}:locatorName`, {
-              name: Rk.locatorEntryName
+            name: Wb(`${Jb}:locatorName`, {
+              name: kb.locatorEntryName
             }),
-            children: (0, Ek.jsx)(QF, {
-              entry: Rk
+            children: (0, hb.jsx)(jc, {
+              entry: kb
             })
-          }), (0, Ek.jsx)("p", {
+          }), (0, hb.jsx)("p", {
             className: "BoardDescription",
-            children: tk(Rk.locatorEntryArmed ? `${Sk}:locatorFlavourArmed` : lF[Rk.locatorEntryStanding])
-          }), null !== ak && (0, Ek.jsx)("p", {
+            children: Wb(kb.locatorEntryArmed ? `${Jb}:locatorFlavourArmed` : vc[kb.locatorEntryStanding])
+          }), null !== ab && (0, hb.jsx)("p", {
             className: "LocatorAttuned",
-            children: tk(ak)
-          }), (0, Ek.jsx)("p", {
+            children: Wb(ab)
+          }), (0, hb.jsx)("p", {
             className: "BoardDescription LocatorUsage",
-            children: tk(`${Sk}:locatorUsage`)
+            children: Wb(`${Jb}:locatorUsage`)
           })]
-        }), (0, Ek.jsx)(FB, {
-          view: Fk,
-          controller: Bk,
-          entry: Rk
+        }), (0, hb.jsx)(bs, {
+          view: cb,
+          controller: sb,
+          entry: kb
         })]
       })
     }
 
-    function tB(kk) {
+    function ks(bb) {
       let {
-        controller: Fk
-      } = kk;
-      const Bk = (0, sk.g)(xF, Fk.getSnapshot()),
+        controller: cb
+      } = bb;
+      const sb = (0, fb.h)(Sc, cb.getSnapshot()),
         {
-          t: Rk
-        } = (0, Vk.x)(),
-        tk = Bk.locators;
-      if (null === tk) return null;
-      const ak = tk.locatorEntries.find((kk => kk.locatorEntryId === Bk.selectedId)),
-        Xk = Bk.notice;
-      return (0, Ek.jsxs)(Hk, {
-        open: Bk.open,
-        onDismiss: Fk.dismiss,
-        title: Rk(`${Sk}:locatorTitle`),
+          t: kb
+        } = (0, Mb.E)(),
+        Wb = sb.locators;
+      if (null === Wb) return null;
+      const ab = Wb.locatorEntries.find((bb => bb.locatorEntryId === sb.selectedId)),
+        Tb = sb.notice;
+      return (0, hb.jsxs)(Bb, {
+        open: sb.open,
+        onDismiss: cb.dismiss,
+        title: kb(`${Jb}:locatorTitle`),
         className: "ContainmentLocatorPanel",
-        decor: (0, Ek.jsx)(IF, {}),
-        headerExtra: (0, Ek.jsx)(rk, {
-          coins: tk.locatorCoins
+        decor: (0, hb.jsx)(xc, {}),
+        headerExtra: (0, hb.jsx)(Gb, {
+          coins: Wb.locatorCoins
         }),
-        statusRefused: null === Xk || void 0 === Xk ? void 0 : Xk.locatorNoticeRefused,
-        status: (0, Ek.jsxs)(Ek.Fragment, {
-          children: [(0, Ek.jsx)("span", {
+        statusRefused: null === Tb || void 0 === Tb ? void 0 : Tb.locatorNoticeRefused,
+        status: (0, hb.jsxs)(hb.Fragment, {
+          children: [(0, hb.jsx)("span", {
             className: "LocatorKeeperBadge",
-            children: Rk(`${Sk}:locatorKeeperName`)
-          }), null !== Xk && Rk(`${Sk}:${Xk.locatorNoticeKey}`, {
-            name: Xk.locatorNoticeName
+            children: kb(`${Jb}:locatorKeeperName`)
+          }), null !== Tb && kb(`${Jb}:${Tb.locatorNoticeKey}`, {
+            name: Tb.locatorNoticeName
           })]
         }),
-        children: [(0, Ek.jsx)("div", {
+        children: [(0, hb.jsx)("div", {
           className: "BoardTiles",
-          children: tk.locatorEntries.map((kk => (0, Ek.jsxs)(Gk, {
-            icon: (0, Ek.jsx)(BB, {
-              entry: kk
+          children: Wb.locatorEntries.map((bb => (0, hb.jsxs)(ib, {
+            icon: (0, hb.jsx)(cs, {
+              entry: bb
             }),
-            name: kk.locatorEntryName,
-            selected: kk === ak,
+            name: bb.locatorEntryName,
+            selected: bb === ab,
             locked: !1,
-            className: dk()("LocatorTag", {
-              Armed: kk.locatorEntryArmed
+            className: Hb()("LocatorTag", {
+              Armed: bb.locatorEntryArmed
             }),
             onSelect: () => {
-              Fk.select(kk.locatorEntryId)
+              cb.select(bb.locatorEntryId)
             },
-            children: [(0, Ek.jsx)(QF, {
-              entry: kk
-            }), !kk.locatorEntryOwned && (0, Ek.jsx)(kB, {
-              entry: kk,
-              coins: tk.locatorCoins,
+            children: [(0, hb.jsx)(jc, {
+              entry: bb
+            }), !bb.locatorEntryOwned && (0, hb.jsx)(pc, {
+              entry: bb,
+              coins: Wb.locatorCoins,
               inTile: !0
             })]
-          }, kk.locatorEntryId)))
-        }), (0, Ek.jsx)(RB, {
-          view: Bk,
-          controller: Fk,
-          entry: ak
+          }, bb.locatorEntryId)))
+        }), (0, hb.jsx)(ss, {
+          view: sb,
+          controller: cb,
+          entry: ab
         })]
       })
     }
 
-    function aB(kk) {
+    function Ws(bb) {
       let {
-        loadout: Fk,
-        codex: Bk,
-        locator: Rk
-      } = kk;
-      return (0, Ek.jsxs)(Ek.Fragment, {
-        children: [(0, Ek.jsx)(CF, {
-          controller: Fk
-        }), (0, Ek.jsx)(Qk, {
-          controller: Bk
-        }), (0, Ek.jsx)(tB, {
-          controller: Rk
+        loadout: cb,
+        codex: sb,
+        locator: kb
+      } = bb;
+      return (0, hb.jsxs)(hb.Fragment, {
+        children: [(0, hb.jsx)(Ac, {
+          controller: cb
+        }), (0, hb.jsx)(jb, {
+          controller: sb
+        }), (0, hb.jsx)(ks, {
+          controller: kb
         })]
       })
     }
-    var XB = Bk(38188);
-    class bB {
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.sendCommand = kk, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new XB.b({
+    var as = sb(38152);
+    class Ts {
+      constructor(bb) {
+        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.sendCommand = bb, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new as.b({
           spacingMs: 0,
-          now: Fk
+          now: cb
         }), this.budget.subscribe((() => {
           this.notify()
         }))
@@ -2256,17 +2256,17 @@ export const modules = {
       isPending() {
         return this.awaitingReply || this.budget.isPacing()
       }
-      send(kk, Fk) {
+      send(bb, cb) {
         return !this.isPending() && (this.awaitingReply = !0, this.replyTimer = setTimeout((() => {
-          this.replyTimer = null, this.awaitingReply = !1, Fk(), this.notify()
-        }), 8e3), this.budget.start(), this.sendCommand(kk), !0)
+          this.replyTimer = null, this.awaitingReply = !1, cb(), this.notify()
+        }), 8e3), this.budget.start(), this.sendCommand(bb), !0)
       }
       onReply() {
         this.awaitingReply = !1, this.clearReplyTimer()
       }
-      subscribe(kk) {
-        return this.listeners.add(kk), () => {
-          this.listeners.delete(kk)
+      subscribe(bb) {
+        return this.listeners.add(bb), () => {
+          this.listeners.delete(bb)
         }
       }
       dispose() {
@@ -2276,340 +2276,340 @@ export const modules = {
         null !== this.replyTimer && (clearTimeout(this.replyTimer), this.replyTimer = null)
       }
       notify() {
-        for (const kk of this.listeners) kk()
+        for (const bb of this.listeners) bb()
       }
     }
-    var wB = Bk(38182);
-    const dB = new Map([
-      ["npc_general", fF],
-      ["npc_tentacle_guy", wB]
+    var Us = sb(38146);
+    const Is = new Map([
+      ["npc_general", lc],
+      ["npc_tentacle_guy", Us]
     ]);
 
-    function sB(kk) {
-      const Fk = dB.get(kk);
-      if (void 0 === Fk) return null;
-      const Bk = document.createElement("img");
-      return Bk.src = Fk, Bk.alt = "", Bk.draggable = !1, Bk.style.imageRendering = "pixelated", Bk
+    function Hs(bb) {
+      const cb = Is.get(bb);
+      if (void 0 === cb) return null;
+      const sb = document.createElement("img");
+      return sb.src = cb, sb.alt = "", sb.draggable = !1, sb.style.imageRendering = "pixelated", sb
     }
-    const VB = function() {
-      let kk, Fk = !1,
-        Bk = null,
-        wk = null;
-      const dk = [],
-        sk = kk => {
-          for (const Fk of dk) Fk !== kk && Fk.close();
-          (0, bk.q)()
+    const fs = function() {
+      let bb, cb = !1,
+        sb = null,
+        Ib = null;
+      const Hb = [],
+        fb = bb => {
+          for (const cb of Hb) cb !== bb && cb.close();
+          (0, Ub.m)()
         },
-        Vk = kk => {
-          kk && (0, bk.i)()
+        Mb = bb => {
+          bb && (0, Ub.g)()
         },
-        Jk = new bB((Fk => {
-          kk.sendCommand(Fk)
+        Xb = new Ts((cb => {
+          bb.sendCommand(cb)
         })),
-        Ak = new eF((kk => {
-          Xk.o.Hf(AF, kk, !0)
-        }), sk, Vk, Jk),
-        ek = new Pk((kk => {
-          Xk.o.Hf(zk, kk, !0)
-        }), sk, Vk),
-        yk = new jF((kk => {
-          Xk.o.Hf(xF, kk, !0)
-        }), sk, Vk, Jk);
-      dk.push(Ak, ek, yk);
+        nb = new nc((bb => {
+          Tb.j.QQ(Xc, bb, !0)
+        }), fb, Mb, Xb),
+        mb = new zb((bb => {
+          Tb.j.QQ(Zb, bb, !0)
+        }), fb, Mb),
+        lb = new Rc((bb => {
+          Tb.j.QQ(Sc, bb, !0)
+        }), fb, Mb, Xb);
+      Hb.push(nb, mb, lb);
       return {
-        onCreate: Fk => {
-          kk = Fk, Bk = (0, bk.w)(null, {
-            content: (0, Rk.createElement)(aB, {
-              loadout: Ak,
-              codex: ek,
-              locator: yk
+        onCreate: cb => {
+          bb = cb, sb = (0, Ub.s)(null, {
+            content: (0, kb.createElement)(Ws, {
+              loadout: nb,
+              codex: mb,
+              locator: lb
             }),
             onClose: () => {
-              for (const kk of dk) kk.close()
+              for (const bb of Hb) bb.close()
             }
-          }), wk = (0, ak.e)(sB)
+          }), Ib = (0, ab.f)(Hs)
         },
-        onReceivedMessageFromServer: (kk, Fk) => {
-          "containmentLoadout" === kk ? Ak.he(Fk) : "containmentLoadoutClose" === kk ? Ak.isOpen() && (Ak.close(), (0, bk.f)()) : "containmentCodex" === kk ? ek.he(Fk) : "containmentLocator" === kk && yk.he(Fk)
+        onReceivedMessageFromServer: (bb, cb) => {
+          "containmentLoadout" === bb ? nb.Km(cb) : "containmentLoadoutClose" === bb ? nb.isOpen() && (nb.close(), (0, Ub.e)()) : "containmentCodex" === bb ? mb.Km(cb) : "containmentLocator" === bb && lb.Km(cb)
         },
-        yJ: () => {
-          Fk || tk.c.get("loadingOverlayVisible") || (Fk = !0, kk.sendCommand("containmentEntered"))
+        aX: () => {
+          cb || Wb.d.get("loadingOverlayVisible") || (cb = !0, bb.sendCommand("containmentEntered"))
         },
         onClose: () => {
-          var kk, Fk;
-          null === (kk = Bk) || void 0 === kk || kk(), Bk = null, null === (Fk = wk) || void 0 === Fk || Fk(), wk = null;
-          for (const Bk of dk) Bk.dispose();
-          Jk.dispose()
+          var bb, cb;
+          null === (bb = sb) || void 0 === bb || bb(), sb = null, null === (cb = Ib) || void 0 === cb || cb(), Ib = null;
+          for (const sb of Hb) sb.dispose();
+          Xb.dispose()
         }
       }
     }
   },
-  36563: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      A: () => Tk,
-      C: () => rk,
-      E: () => Dk,
-      F: () => Gk,
-      G: () => zk,
-      c: () => wk,
-      g: () => uk,
-      h: () => bk,
-      l: () => ck,
-      p: () => Nk,
-      r: () => Lk,
-      u: () => Uk,
-      w: () => gk,
-      y: () => Sk
+  36455: (bb, cb, sb) => {
+    sb.d(cb, {
+      B: () => Gb,
+      F: () => Kb,
+      I: () => ib,
+      J: () => Zb,
+      b: () => Ib,
+      e: () => tb,
+      f: () => Ub,
+      g: () => Eb,
+      h: () => gb,
+      k: () => ub,
+      o: () => Db,
+      s: () => Pb,
+      v: () => Jb,
+      z: () => Ob
     });
-    var Rk = Bk(42);
-    const tk = {
+    var kb = sb(37);
+    const Wb = {
         codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
         worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
       },
-      ak = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
-      Xk = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
-      bk = ak.filter((kk => "docsButton" !== kk)),
-      wk = Xk.filter((kk => "aiHelperButton" !== kk)),
-      dk = "codeEditorTutorials",
-      sk = {
+      ab = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      Tb = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      Ub = ab.filter((bb => "docsButton" !== bb)),
+      Ib = Tb.filter((bb => "aiHelperButton" !== bb)),
+      Hb = "codeEditorTutorials",
+      fb = {
         codeBlockIntro: "codeBlockIntroShown",
         worldCodeIntro: "worldCodeIntroShown"
       },
-      Vk = {
+      Mb = {
         welcome: "welcomeComplete",
         docsOverview: "docsOverviewComplete",
         aiHelperOverview: "aiHelperOverviewComplete"
       };
-    let Jk = null,
-      Ak = null;
-    const ek = new Set,
-      yk = new Set;
-    let fk = null;
-    const mk = new Set,
-      Wk = new Set;
+    let Xb = null,
+      nb = null;
+    const mb = new Set,
+      lb = new Set;
+    let Qb = null;
+    const eb = new Set,
+      Cb = new Set;
 
-    function vk() {
-      Wk.forEach((kk => {
-        kk()
+    function Nb() {
+      Cb.forEach((bb => {
+        bb()
       }))
     }
 
-    function ik() {
-      if (!Jk) {
-        const kk = Rk.i.getItem(dk);
-        Jk = {
+    function Vb() {
+      if (!Xb) {
+        const bb = kb.h.getItem(Hb);
+        Xb = {
           codeBlockIntroShown: !1,
           worldCodeIntroShown: !1,
           welcomeComplete: !1,
           docsOverviewComplete: !1,
           aiHelperOverviewComplete: !1,
-          ..."object" === typeof kk && null !== kk ? kk : {}
+          ..."object" === typeof bb && null !== bb ? bb : {}
         }
       }
-      return Jk
+      return Xb
     }
 
-    function Yk(kk) {
-      const Fk = ik();
-      Fk[kk] || (Jk = {
-        ...Fk,
-        [kk]: !0
-      }, Rk.i.setItem(dk, Jk))
+    function Lb(bb) {
+      const cb = Vb();
+      cb[bb] || (Xb = {
+        ...cb,
+        [bb]: !0
+      }, kb.h.setItem(Hb, Xb))
     }
 
-    function Lk(kk) {
-      return "docsOverview" === kk ? ak : "aiHelperOverview" === kk ? Xk : Ak ? tk[Ak] : []
+    function ub(bb) {
+      return "docsOverview" === bb ? ab : "aiHelperOverview" === bb ? Tb : nb ? Wb[nb] : []
     }
 
-    function Ok(kk) {
-      return ("worldCodeButton" !== kk || !ik().worldCodeIntroShown) && !mk.has(kk)
+    function Yb(bb) {
+      return ("worldCodeButton" !== bb || !Vb().worldCodeIntroShown) && !eb.has(bb)
     }
 
-    function Ek(kk) {
-      var Fk;
-      return (null === (Fk = fk) || void 0 === Fk ? void 0 : Fk.name) === kk ? fk.stepsDone : ek
+    function hb(bb) {
+      var cb;
+      return (null === (cb = Qb) || void 0 === cb ? void 0 : cb.name) === bb ? Qb.stepsDone : mb
     }
 
-    function Sk(kk, Fk) {
-      if (! function(kk) {
-          return fk ? fk.name === kk : "welcome" === kk
-        }(kk) || !Ok(Fk) || Ek(kk).has(Fk)) return !1;
-      if (fk) return !0;
-      const Bk = sk[Fk];
-      return Bk ? !ik()[Bk] || yk.has(Fk) : !ik()[Vk[kk]]
+    function Jb(bb, cb) {
+      if (! function(bb) {
+          return Qb ? Qb.name === bb : "welcome" === bb
+        }(bb) || !Yb(cb) || hb(bb).has(cb)) return !1;
+      if (Qb) return !0;
+      const sb = fb[cb];
+      return sb ? !Vb()[sb] || lb.has(cb) : !Vb()[Mb[bb]]
     }
 
-    function Nk(kk) {
-      var Fk;
-      return null !== (Fk = Lk(kk).find((Fk => Sk(kk, Fk)))) && void 0 !== Fk ? Fk : null
+    function gb(bb) {
+      var cb;
+      return null !== (cb = ub(bb).find((cb => Jb(bb, cb)))) && void 0 !== cb ? cb : null
     }
 
-    function Hk(kk) {
-      var Fk;
-      Yk(Vk[kk]), (null === (Fk = fk) || void 0 === Fk ? void 0 : Fk.name) === kk && (fk = null)
+    function Bb(bb) {
+      var cb;
+      Lb(Mb[bb]), (null === (cb = Qb) || void 0 === cb ? void 0 : cb.name) === bb && (Qb = null)
     }
 
-    function uk(kk) {
-      const Fk = (fk ? [fk.name] : ["welcome", "docsOverview"]).find((Fk => Nk(Fk) === kk));
-      if (!Fk) return;
-      Ek(Fk).add(kk);
-      const Bk = sk[kk];
-      Bk && (Yk(Bk), fk || yk.add(kk)), null === Nk(Fk) && Hk(Fk), vk()
+    function tb(bb) {
+      const cb = (Qb ? [Qb.name] : ["welcome", "docsOverview"]).find((cb => gb(cb) === bb));
+      if (!cb) return;
+      hb(cb).add(bb);
+      const sb = fb[bb];
+      sb && (Lb(sb), Qb || lb.add(bb)), null === gb(cb) && Bb(cb), Nb()
     }
 
-    function Mk(kk, Fk) {
-      const Bk = Lk(kk),
-        Rk = Ek(kk);
-      for (let tk = Bk.indexOf(Fk) - 1; tk >= 0; tk--)
-        if (Rk.has(Bk[tk]) && Ok(Bk[tk])) return Bk[tk];
+    function yb(bb, cb) {
+      const sb = ub(bb),
+        kb = hb(bb);
+      for (let Wb = sb.indexOf(cb) - 1; Wb >= 0; Wb--)
+        if (kb.has(sb[Wb]) && Yb(sb[Wb])) return sb[Wb];
       return null
     }
 
-    function gk(kk, Fk) {
-      return null !== Mk(kk, Fk)
+    function Pb(bb, cb) {
+      return null !== yb(bb, cb)
     }
 
-    function Uk(kk, Fk) {
-      const Bk = Mk(kk, Fk);
-      Bk && (Ek(kk).delete(Bk), vk())
+    function Db(bb, cb) {
+      const sb = yb(bb, cb);
+      sb && (hb(bb).delete(sb), Nb())
     }
 
-    function ck(kk) {
-      Hk(kk), "welcome" === kk && Lk("welcome").forEach((kk => {
-        const Fk = sk[kk];
-        Fk && Yk(Fk)
-      })), vk()
+    function Eb(bb) {
+      Bb(bb), "welcome" === bb && ub("welcome").forEach((bb => {
+        const cb = fb[bb];
+        cb && Lb(cb)
+      })), Nb()
     }
 
-    function Gk(kk) {
-      fk = {
-        name: kk,
+    function ib(bb) {
+      Qb = {
+        name: bb,
         stepsDone: new Set
-      }, vk()
+      }, Nb()
     }
 
-    function Tk() {
-      (fk || 0 !== ek.size || 0 !== yk.size) && (fk = null, ek.clear(), yk.clear(), vk())
+    function Ob() {
+      (Qb || 0 !== mb.size || 0 !== lb.size) && (Qb = null, mb.clear(), lb.clear(), Nb())
     }
 
-    function rk(kk, Fk) {
-      const Bk = Fk ? kk : Ak === kk ? null : Ak;
-      Bk !== Ak && (Ak = Bk, vk())
+    function Gb(bb, cb) {
+      const sb = cb ? bb : nb === bb ? null : nb;
+      sb !== nb && (nb = sb, Nb())
     }
 
-    function Dk(kk, Fk) {
-      mk.has(kk) === Fk && (Fk ? mk.delete(kk) : mk.add(kk), vk())
+    function Kb(bb, cb) {
+      eb.has(bb) === cb && (cb ? eb.delete(bb) : eb.add(bb), Nb())
     }
 
-    function zk(kk) {
-      return Wk.add(kk), () => {
-        Wk.delete(kk)
+    function Zb(bb) {
+      return Cb.add(bb), () => {
+        Cb.delete(bb)
       }
     }
   },
-  38894: (kk, Fk, Bk) => {
-    var Rk = {
-      "./breach-zero-uncaught.webp": 38897,
-      "./breach-zero.webp": 38899,
-      "./brood-father-uncaught.webp": 38901,
-      "./brood-father.webp": 38906,
-      "./carousel-uncaught.webp": 38910,
-      "./carousel.webp": 38912,
-      "./deadlock-uncaught.webp": 38915,
-      "./deadlock.webp": 38922,
-      "./frost-revenant-uncaught.webp": 38924,
-      "./frost-revenant.webp": 38931,
-      "./hollow-choir-uncaught.webp": 38939,
-      "./hollow-choir.webp": 38941,
-      "./magma-warden-uncaught.webp": 38945,
-      "./magma-warden.webp": 38952,
-      "./patient-zero-uncaught.webp": 38961,
-      "./patient-zero.webp": 38967,
-      "./siege-engine-uncaught.webp": 38971,
-      "./siege-engine.webp": 38977,
-      "./warp-stalker-uncaught.webp": 38982,
-      "./warp-stalker.webp": 38987
+  38864: (bb, cb, sb) => {
+    var kb = {
+      "./breach-zero-uncaught.webp": 38868,
+      "./breach-zero.webp": 38870,
+      "./brood-father-uncaught.webp": 38877,
+      "./brood-father.webp": 38886,
+      "./carousel-uncaught.webp": 38888,
+      "./carousel.webp": 38895,
+      "./deadlock-uncaught.webp": 38902,
+      "./deadlock.webp": 38906,
+      "./frost-revenant-uncaught.webp": 38915,
+      "./frost-revenant.webp": 38918,
+      "./hollow-choir-uncaught.webp": 38921,
+      "./hollow-choir.webp": 38928,
+      "./magma-warden-uncaught.webp": 38931,
+      "./magma-warden.webp": 38938,
+      "./patient-zero-uncaught.webp": 38943,
+      "./patient-zero.webp": 38952,
+      "./siege-engine-uncaught.webp": 38960,
+      "./siege-engine.webp": 38968,
+      "./warp-stalker-uncaught.webp": 38976,
+      "./warp-stalker.webp": 38983
     };
 
-    function tk(kk) {
-      var Fk = ak(kk);
-      return Bk(Fk)
+    function Wb(bb) {
+      var cb = ab(bb);
+      return sb(cb)
     }
 
-    function ak(kk) {
-      if (!Bk.o(Rk, kk)) {
-        var Fk = new Error("Cannot find module '" + kk + "'");
-        throw Fk.code = "MODULE_NOT_FOUND", Fk
+    function ab(bb) {
+      if (!sb.o(kb, bb)) {
+        var cb = new Error("Cannot find module '" + bb + "'");
+        throw cb.code = "MODULE_NOT_FOUND", cb
       }
-      return Rk[kk]
+      return kb[bb]
     }
-    tk.keys = function() {
-      return Object.keys(Rk)
-    }, tk.resolve = ak, kk.exports = tk, tk.id = 38894
+    Wb.keys = function() {
+      return Object.keys(kb)
+    }, Wb.resolve = ab, bb.exports = Wb, Wb.id = 38864
   },
-  38897: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
+  38868: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
   },
-  38899: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
+  38870: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
   },
-  38901: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
+  38877: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
   },
-  38906: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/brood-father.e48391955a574c1155fa.webp"
+  38886: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/brood-father.e48391955a574c1155fa.webp"
   },
-  38910: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
+  38888: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
   },
-  38912: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
+  38895: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
   },
-  38915: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
+  38902: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
   },
-  38922: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
+  38906: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
   },
-  38924: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
+  38915: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
   },
-  38931: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
+  38918: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
   },
-  38939: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
+  38921: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
   },
-  38941: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
+  38928: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
   },
-  38945: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
+  38931: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
   },
-  38952: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
+  38938: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
   },
-  38961: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
+  38943: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
   },
-  38967: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
+  38952: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
   },
-  38971: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
+  38960: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
   },
-  38977: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
+  38968: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
   },
-  38982: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
+  38976: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
   },
-  38987: (kk, Fk, Bk) => {
-    kk.exports = Bk.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  38983: (bb, cb, sb) => {
+    bb.exports = sb.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
   },
-  38182: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  38146: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);

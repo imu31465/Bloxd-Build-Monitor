@@ -1,341 +1,341 @@
 export const id = 95;
 export const ids = [95];
 export const modules = {
-  4589: (kk, Fk, Bk) => {
-    Bk.r(Fk), Bk.d(Fk, {
-      default: () => Zk
+  4591: (bb, cb, sb) => {
+    sb.r(cb), sb.d(cb, {
+      default: () => wb
     });
-    var Rk = Bk(61),
-      tk = Bk(1473),
-      ak = Bk(291),
-      Xk = Bk(1183),
-      bk = Bk(1563),
-      wk = Bk(1219),
-      dk = Bk(1490),
-      sk = Bk(1441),
-      Vk = Bk(2524);
-    const Jk = {
+    var kb = sb(64),
+      Wb = sb(1511),
+      ab = sb(344),
+      Tb = sb(1246),
+      Ub = sb(1603),
+      Ib = sb(1271),
+      Hb = sb(1534),
+      fb = sb(1474),
+      Mb = sb(2510);
+    const Xb = {
       retries: 2,
       minTimeout: 2e3
     };
-    var Ak = Bk(1083),
-      ek = Bk(1556),
-      yk = Bk(1096),
-      fk = Bk(1812),
-      mk = Bk(1149),
-      Wk = Bk(1173),
-      vk = Bk(3284),
-      ik = Bk(1288),
-      Yk = Bk(1389),
-      Lk = Bk(1459),
-      Ok = Bk(2457),
-      Ek = Bk(2475),
-      Sk = Bk(4592),
-      Nk = Bk(2049),
-      Hk = Bk(1020),
-      uk = Bk.n(Hk),
-      Mk = Bk(1028),
-      gk = Bk(4599),
-      Uk = Bk(22),
-      ck = Bk(1847),
-      Gk = Bk(3439),
-      Tk = Bk(1929),
-      rk = Bk(3395),
-      Dk = Bk(98),
-      zk = Bk(4291),
-      Pk = Bk(1069);
-    const hk = [Sk];
+    var nb = sb(1104),
+      mb = sb(1599),
+      lb = sb(1117),
+      Qb = sb(1839),
+      eb = sb(1197),
+      Cb = sb(1235),
+      Nb = sb(3263),
+      Vb = sb(1327),
+      Lb = sb(1431),
+      ub = sb(1495),
+      Yb = sb(2455),
+      hb = sb(2464),
+      Jb = sb(4598),
+      gb = sb(2084),
+      Bb = sb(1033),
+      tb = sb.n(Bb),
+      yb = sb(1039),
+      Pb = sb(4600),
+      Db = sb(19),
+      Eb = sb(1870),
+      ib = sb(3430),
+      Ob = sb(1960),
+      Gb = sb(3381),
+      Kb = sb(117),
+      Zb = sb(4293),
+      zb = sb(1087);
+    const qb = [Jb];
 
-    function qk(kk) {
+    function db(bb) {
       let {
-        icon: Fk,
-        label: Bk,
-        value: Rk
-      } = kk;
-      return (0, Pk.jsxs)("div", {
+        icon: cb,
+        label: sb,
+        value: kb
+      } = bb;
+      return (0, zb.jsxs)("div", {
         className: "PlayerProfileStat",
-        children: [(0, Pk.jsx)(Mk.d, {
-          name: Fk,
+        children: [(0, zb.jsx)(yb.b, {
+          name: cb,
           className: "PlayerProfileStatIcon"
-        }), (0, Pk.jsxs)("div", {
+        }), (0, zb.jsxs)("div", {
           className: "PlayerProfileStatText",
-          children: [(0, Pk.jsx)("div", {
+          children: [(0, zb.jsx)("div", {
             className: "PlayerProfileStatLabel SmallTextLight",
-            children: Bk
-          }), (0, Pk.jsx)("div", {
+            children: sb
+          }), (0, zb.jsx)("div", {
             className: "PlayerProfileStatValue",
-            children: Rk
+            children: kb
           })]
         })]
       })
     }
 
-    function Ck(kk) {
+    function Ab(bb) {
       let {
-        profile: Fk
-      } = kk;
+        profile: cb
+      } = bb;
       const {
-        t: Bk,
-        selectedLanguage: Rk
-      } = (0, mk.x)();
-      let tk = Bk("homePage:profileUnknown");
-      if (Fk.lastOnline) {
-        const kk = (0, mk.j)(Rk.code, "homePage:profileTimeAgo");
-        tk = Bk("homePage:profileTimeAgo", {
-          time: (0, ak.gb)(kk, Fk.lastOnline, Date.now())
+        t: sb,
+        selectedLanguage: kb
+      } = (0, eb.E)();
+      let Wb = sb("homePage:profileUnknown");
+      if (cb.lastOnline) {
+        const bb = (0, eb.m)(kb.code, "homePage:profileTimeAgo");
+        Wb = sb("homePage:profileTimeAgo", {
+          time: (0, ab.db)(bb, cb.lastOnline, Date.now())
         })
       }
-      let Xk = Bk("homePage:profileUnknown");
-      return Fk.accountCreatedAt && (Xk = new Date(Fk.accountCreatedAt).toLocaleDateString(void 0, {
+      let Tb = sb("homePage:profileUnknown");
+      return cb.accountCreatedAt && (Tb = new Date(cb.accountCreatedAt).toLocaleDateString(void 0, {
         year: "numeric",
         month: "short",
         day: "numeric"
-      })), (0, Pk.jsxs)("div", {
+      })), (0, zb.jsxs)("div", {
         className: "PlayerProfileStats",
-        children: [(0, Pk.jsx)(qk, {
+        children: [(0, zb.jsx)(db, {
           icon: "hourglass",
-          label: Bk("homePage:profileTimePlayed"),
-          value: (0, Gk.b)(Fk.totalPlayMinutes)
-        }), (0, Pk.jsx)(qk, {
+          label: sb("homePage:profileTimePlayed"),
+          value: (0, ib.e)(cb.totalPlayMinutes)
+        }), (0, zb.jsx)(db, {
           icon: "wifi",
-          label: Bk("homePage:profileLastOnline"),
-          value: tk
-        }), (0, Pk.jsx)(qk, {
+          label: sb("homePage:profileLastOnline"),
+          value: Wb
+        }), (0, zb.jsx)(db, {
           icon: "calendar",
-          label: Bk("homePage:profileJoined"),
-          value: Xk
+          label: sb("homePage:profileJoined"),
+          value: Tb
         })]
       })
     }
 
-    function Zk() {
+    function wb() {
       const {
-        t: kk
-      } = (0, mk.x)(), Fk = (0, Lk.useNavigatePreserveSearch)(), Bk = (0, Ak.m)(), {
-        playerName: Sk,
-        playerUrlName: Hk
-      } = (0, tk.x)(), Gk = (0, tk.s)(), qk = (0, Xk.i)(Gk.pathname), Zk = qk && ("urlId" in qk ? `urlId:${qk.urlId}` : `name:${qk.lowerCaseName}`), pk = (0, Rk.useRef)(Zk);
-      pk.current = Zk;
+        t: bb
+      } = (0, eb.E)(), cb = (0, ub.useNavigatePreserveSearch)(), sb = (0, nb.j)(), {
+        playerName: Jb,
+        playerUrlName: Bb
+      } = (0, Wb.D)(), ib = (0, Wb.r)(), db = (0, Tb.i)(ib.pathname), wb = db && ("urlId" in db ? `urlId:${db.urlId}` : `name:${db.lowerCaseName}`), rb = (0, kb.useRef)(wb);
+      rb.current = wb;
       const {
-        userContext: Kk,
-        isUserContextUpdating: xk
-      } = (0, yk.e)(), jk = (0, Rk.useRef)(null), lk = (0, Rk.useRef)(null), nk = (0, Rk.useRef)(null), Ik = (0, Rk.useRef)(!1), Qk = (0, Rk.useRef)((0, ak.dc)(hk)), [kF, FF] = (0, Rk.useState)((() => {
-        const kk = qk && Ek.b.peek(Kk, qk);
-        return kk ? {
+        userContext: ob,
+        isUserContextUpdating: Sb
+      } = (0, lb.c)(), Rb = (0, kb.useRef)(null), vb = (0, kb.useRef)(null), Fb = (0, kb.useRef)(null), xb = (0, kb.useRef)(!1), jb = (0, kb.useRef)((0, ab.cc)(qb)), [pb, bc] = (0, kb.useState)((() => {
+        const bb = db && hb.d.peek(ob, db);
+        return bb ? {
           status: "loaded",
-          profile: kk,
-          playerKey: Zk
+          profile: bb,
+          playerKey: wb
         } : {
           status: "loading"
         }
-      })), [BF, RF] = (0, Rk.useState)(0);
-      (0, Rk.useEffect)(Ok.c, []), (0, Rk.useEffect)((() => {
-        ck.gameBridge.send("leaveGame", {
+      })), [cc, sc] = (0, kb.useState)(0);
+      (0, kb.useEffect)(Yb.d, []), (0, kb.useEffect)((() => {
+        Eb.gameBridge.send("leaveGame", {
           reloadPath: null
-        }), Uk.c.set({
+        }), Db.d.set({
           gameState: "landingPage",
           openEverythingMenuName: null,
           openInGameMenuName: null
         })
-      }), [Gk.key]);
-      const tF = () => {
-        const kk = (0, Lk.getPreviousLocation)();
-        null === kk || kk.startsWith("/play") ? (0, Lk.navigateToHomePage)() : Fk(-1)
+      }), [ib.key]);
+      const kc = () => {
+        const bb = (0, ub.getPreviousLocation)();
+        null === bb || bb.startsWith("/play") ? (0, ub.navigateToHomePage)() : cb(-1)
       };
-      (0, zk.d)(tF), (0, Rk.useEffect)((() => {
-        var kk;
-        if (xk) return;
-        if (!qk) return void FF({
+      (0, Zb.d)(kc), (0, kb.useEffect)((() => {
+        var bb;
+        if (Sb) return;
+        if (!db) return void bc({
           status: "notFound",
-          playerKey: Zk
+          playerKey: wb
         });
-        const Fk = "urlId" in qk && (null === (kk = lk.current) || void 0 === kk ? void 0 : kk.urlId) === qk.urlId && nk.current === Kk;
-        if (Fk && Ik.current) return;
-        const Bk = Fk ? null : Ek.b.peek(Kk, qk);
-        let Rk = !1;
-        const tk = kk => "loaded" === kk.status && (kk.playerKey === Zk || "urlId" in qk && kk.profile.urlId === qk.urlId);
-        return Bk ? (nk.current = Kk, Ik.current = !1, FF({
+        const cb = "urlId" in db && (null === (bb = vb.current) || void 0 === bb ? void 0 : bb.urlId) === db.urlId && Fb.current === ob;
+        if (cb && xb.current) return;
+        const sb = cb ? null : hb.d.peek(ob, db);
+        let kb = !1;
+        const Wb = bb => "loaded" === bb.status && (bb.playerKey === wb || "urlId" in db && bb.profile.urlId === db.urlId);
+        return sb ? (Fb.current = ob, xb.current = !1, bc({
           status: "loaded",
-          profile: Bk,
-          playerKey: Zk
-        }), Ek.b.invalidate(qk)) : FF((kk => tk(kk) ? kk : {
+          profile: sb,
+          playerKey: wb
+        }), hb.d.invalidate(db)) : bc((bb => Wb(bb) ? bb : {
           status: "loading"
-        })), async function(kk, Fk) {
-          if ("lowerCaseName" in Fk && Fk.lowerCaseName.length > wk.f) return {
+        })), async function(bb, cb) {
+          if ("lowerCaseName" in cb && cb.lowerCaseName.length > Ib.l) return {
             status: "notFound"
           };
           try {
             return {
               status: "loaded",
-              profile: await sk.b.getPlayerProfile(kk, Fk, Jk)
+              profile: await fb.b.getPlayerProfile(bb, cb, Xb)
             }
-          } catch (Bk) {
-            return (0, Vk.c)(Bk) ? {
+          } catch (sb) {
+            return (0, Mb.c)(sb) ? {
               status: "notFound"
-            } : (console.error("Failed to load user profile", Bk), {
+            } : (console.error("Failed to load user profile", sb), {
               status: "failed"
             })
           }
-        }(Kk, qk).then((kk => {
-          Rk || ("loaded" === kk.status && (nk.current = Kk, Ik.current = !0), FF((Fk => "failed" === kk.status && tk(Fk) ? Fk : {
-            ...kk,
-            playerKey: Zk
+        }(ob, db).then((bb => {
+          kb || ("loaded" === bb.status && (Fb.current = ob, xb.current = !0), bc((cb => "failed" === bb.status && Wb(cb) ? cb : {
+            ...bb,
+            playerKey: wb
           })))
         })), () => {
-          Rk = !0
+          kb = !0
         }
-      }), [xk, Zk, Kk, BF]);
-      const aF = "loading" === kF.status || kF.playerKey === Zk || "loaded" === kF.status && !!qk && "urlId" in qk && kF.profile.urlId === qk.urlId ? kF : {
+      }), [Sb, wb, ob, cc]);
+      const Wc = "loading" === pb.status || pb.playerKey === wb || "loaded" === pb.status && !!db && "urlId" in db && pb.profile.urlId === db.urlId ? pb : {
           status: "loading"
         },
-        XF = "loaded" === aF.status ? aF.profile : null,
-        bF = "loading" === aF.status ? null : function(kk) {
-          if ("loaded" === kk.status) {
+        ac = "loaded" === Wc.status ? Wc.profile : null,
+        Tc = "loading" === Wc.status ? null : function(bb) {
+          if ("loaded" === bb.status) {
             const {
-              profile: Fk
-            } = kk;
-            return (0, dk.T)({
-              urlId: Fk.urlId,
-              name: Fk.player.name,
-              ranks: Fk.player.ranks,
-              socialLinks: Fk.socialLinks
+              profile: cb
+            } = bb;
+            return (0, Hb.Q)({
+              urlId: cb.urlId,
+              name: cb.player.name,
+              ranks: cb.player.ranks,
+              socialLinks: cb.socialLinks
             })
           }
-          return "notFound" === kk.status ? (0, dk.ab)() : null
-        }(aF),
-        wF = null !== XF && void 0 !== XF && XF.urlId ? (0, Xk.j)({
-          urlId: XF.urlId,
-          name: XF.player.name
+          return "notFound" === bb.status ? (0, Hb.W)() : null
+        }(Wc),
+        Uc = null !== ac && void 0 !== ac && ac.urlId ? (0, Tb.k)({
+          urlId: ac.urlId,
+          name: ac.player.name
         }) : null;
-      (0, ek.e)(wF);
-      const dF = null !== XF && void 0 !== XF && XF.player.cosmetics.profileEffect ? Nk.f[XF.player.cosmetics.profileEffect] : void 0,
-        sF = null !== XF && !xk && Kk.getPlayerName().toLowerCase() === XF.player.name.toLowerCase(),
-        VF = (0, Tk.e)(null === XF || void 0 === XF ? void 0 : XF.player.name),
-        JF = sF && Kk.playerHasRank("youtuber");
-      lk.current = XF;
-      const AF = (0, Rk.useCallback)((() => {
-          qk && (Ek.b.invalidate(qk), Ek.b.get(Kk, qk).then((kk => {
-            pk.current === Zk && (Ik.current = !0, FF({
+      (0, mb.g)(Uc);
+      const Ic = null !== ac && void 0 !== ac && ac.player.cosmetics.profileEffect ? gb.h[ac.player.cosmetics.profileEffect] : void 0,
+        Hc = null !== ac && !Sb && ob.getPlayerName().toLowerCase() === ac.player.name.toLowerCase(),
+        fc = (0, Ob.e)(null === ac || void 0 === ac ? void 0 : ac.player.name),
+        Mc = Hc && ob.playerHasRank("youtuber");
+      vb.current = ac;
+      const Xc = (0, kb.useCallback)((() => {
+          db && (hb.d.invalidate(db), hb.d.get(ob, db).then((bb => {
+            rb.current === wb && (xb.current = !0, bc({
               status: "loaded",
-              profile: kk,
-              playerKey: Zk
+              profile: bb,
+              playerKey: wb
             }))
-          })).catch((kk => {
-            console.error("Failed to refresh user profile", kk)
+          })).catch((bb => {
+            console.error("Failed to refresh user profile", bb)
           })))
-        }), [Zk, Kk]),
-        eF = (0, Rk.useCallback)((() => {
-          var kk;
-          const Fk = lk.current;
-          return !(!Fk || null === (kk = jk.current) || void 0 === kk || !kk.isReady()) && (jk.current.setAllCosmetics(Fk.player.cosmetics), !0)
+        }), [wb, ob]),
+        nc = (0, kb.useCallback)((() => {
+          var bb;
+          const cb = vb.current;
+          return !(!cb || null === (bb = Rb.current) || void 0 === bb || !bb.isReady()) && (Rb.current.setAllCosmetics(cb.player.cosmetics), !0)
         }), []);
-      return (0, Rk.useEffect)((() => {
-        if (!XF) return;
-        let kk, Fk = !1;
-        const Bk = () => {
-          Fk || eF() || (kk = setTimeout(Bk, 100))
+      return (0, kb.useEffect)((() => {
+        if (!ac) return;
+        let bb, cb = !1;
+        const sb = () => {
+          cb || nc() || (bb = setTimeout(sb, 100))
         };
-        return Bk(), () => {
-          Fk = !0, clearTimeout(kk)
+        return sb(), () => {
+          cb = !0, clearTimeout(bb)
         }
-      }), [XF, eF]), (0, Pk.jsxs)("div", {
-        className: uk()("PlayerProfile", {
-          PlayerProfilePortrait: Bk
+      }), [ac, nc]), (0, zb.jsxs)("div", {
+        className: tb()("PlayerProfile", {
+          PlayerProfilePortrait: sb
         }),
-        children: [bF && (0, Pk.jsx)(bk.e, {
-          meta: bF
-        }), (0, Pk.jsxs)("div", {
+        children: [Tc && (0, zb.jsx)(Ub.e, {
+          meta: Tc
+        }), (0, zb.jsxs)("div", {
           className: "PlayerProfileBackgroundContainer",
-          children: [dF && (0, Pk.jsx)(dF, {}), !dF && (0, Pk.jsx)("div", {
+          children: [Ic && (0, zb.jsx)(Ic, {}), !Ic && (0, zb.jsx)("div", {
             className: "PlayerProfileBackground",
             style: {
-              backgroundImage: `url(${Qk.current})`
+              backgroundImage: `url(${jb.current})`
             }
           })]
-        }), (0, Pk.jsxs)("div", {
+        }), (0, zb.jsxs)("div", {
           className: "PlayerProfileHeader",
-          children: [(0, Pk.jsx)(Yk.c, {
-            onClick: tF,
-            children: kk("general:back")
-          }), XF && !xk && !sF && Dk.featureFlags.useSocialFeatures && (0, Pk.jsx)("div", {
+          children: [(0, zb.jsx)(Lb.b, {
+            onClick: kc,
+            children: bb("general:back")
+          }), ac && !Sb && !Hc && Kb.featureFlags.useSocialFeatures && (0, zb.jsx)("div", {
             className: "PlayerProfileExclusionActions",
-            children: (0, Pk.jsx)(rk.d, {
-              playerName: XF.player.name,
+            children: (0, zb.jsx)(Gb.e, {
+              playerName: ac.player.name,
               className: "SmallTextLight"
             })
           })]
-        }), "loading" === aF.status && (0, Pk.jsx)("div", {
+        }), "loading" === Wc.status && (0, zb.jsx)("div", {
           className: "PlayerProfileCentredMessage",
-          children: (0, Pk.jsx)(ik.b, {})
-        }), ("notFound" === aF.status || "failed" === aF.status) && (0, Pk.jsxs)("div", {
+          children: (0, zb.jsx)(Vb.d, {})
+        }), ("notFound" === Wc.status || "failed" === Wc.status) && (0, zb.jsxs)("div", {
           className: "PlayerProfileCentredMessage PlayerProfileError",
-          children: [(0, Pk.jsx)(Mk.d, {
+          children: [(0, zb.jsx)(yb.b, {
             name: "face-dizzy"
-          }), (0, Pk.jsx)("div", {
+          }), (0, zb.jsx)("div", {
             className: "PlayerProfileErrorText",
-            children: "notFound" === aF.status ? kk("socialBar:playerNotFound", {
-              playerName: null !== Hk && void 0 !== Hk ? Hk : Sk
-            }) : kk("playerProfile:loadFailed")
-          }), "failed" === aF.status && (0, Pk.jsx)(Yk.g, {
+            children: "notFound" === Wc.status ? bb("socialBar:playerNotFound", {
+              playerName: null !== Bb && void 0 !== Bb ? Bb : Jb
+            }) : bb("playerProfile:loadFailed")
+          }), "failed" === Wc.status && (0, zb.jsx)(Lb.d, {
             onClick: () => {
-              RF((kk => kk + 1))
+              sc((bb => bb + 1))
             },
-            children: kk("general:tryAgain")
+            children: bb("general:tryAgain")
           })]
-        }), XF && (0, Pk.jsxs)("div", {
+        }), ac && (0, zb.jsxs)("div", {
           className: "PlayerProfileContent",
-          children: [(0, Pk.jsxs)("div", {
+          children: [(0, zb.jsxs)("div", {
             className: "PlayerProfileLeft",
-            children: [(0, Pk.jsx)("div", {
+            children: [(0, zb.jsx)("div", {
               className: "PlayerProfileName FullyFancyText",
-              children: (0, Pk.jsx)(fk.d, {
-                text: (0, Wk.y)(XF.player.ranks, XF.player.name, XF.player.nameColour),
-                friendBadgeFor: VF ? XF.player.name : void 0
+              children: (0, zb.jsx)(Qb.d, {
+                text: (0, Cb.t)(ac.player.ranks, ac.player.name, ac.player.nameColour),
+                friendBadgeFor: fc ? ac.player.name : void 0
               })
-            }), (0, Pk.jsx)("div", {
+            }), (0, zb.jsx)("div", {
               className: "PlayerProfileModel",
-              children: (0, Pk.jsx)(Rk.Suspense, {
-                fallback: (0, Pk.jsx)("div", {
+              children: (0, zb.jsx)(kb.Suspense, {
+                fallback: (0, zb.jsx)("div", {
                   className: "PlayerProfileModelLoading",
-                  children: (0, Pk.jsx)(ik.b, {})
+                  children: (0, zb.jsx)(Vb.d, {})
                 }),
-                children: (0, Pk.jsx)(Ok.b, {
-                  ref: jk,
+                children: (0, zb.jsx)(Yb.b, {
+                  ref: Rb,
                   onReady: () => {
-                    eF()
+                    nc()
                   }
                 })
               })
             })]
-          }), (0, Pk.jsxs)("div", {
+          }), (0, zb.jsxs)("div", {
             className: "PlayerProfileRight",
-            children: [(0, Pk.jsx)(Ck, {
-              profile: XF
-            }), (XF.socialLinks.length > 0 || JF) && (0, Pk.jsx)(gk.d, {
-              socialLinks: XF.socialLinks,
-              editable: JF,
-              userContext: Kk,
-              onLinksUpdated: AF
-            }), (0, Pk.jsxs)("div", {
+            children: [(0, zb.jsx)(Ab, {
+              profile: ac
+            }), (ac.socialLinks.length > 0 || Mc) && (0, zb.jsx)(Pb.d, {
+              socialLinks: ac.socialLinks,
+              editable: Mc,
+              userContext: ob,
+              onLinksUpdated: Xc
+            }), (0, zb.jsxs)("div", {
               className: "PlayerProfileGames",
-              children: [(0, Pk.jsx)("div", {
+              children: [(0, zb.jsx)("div", {
                 className: "PlayerProfileGamesTitle SmallTextBold",
-                children: kk("homePage:profileReleasedGames")
-              }), 0 === XF.releasedGames.length && (0, Pk.jsx)("div", {
+                children: bb("homePage:profileReleasedGames")
+              }), 0 === ac.releasedGames.length && (0, zb.jsx)("div", {
                 className: "PlayerProfileNoGames",
-                children: kk("homePage:profileNoReleasedGames")
-              }), XF.releasedGames.length > 0 && (0, Pk.jsx)("div", {
+                children: bb("homePage:profileNoReleasedGames")
+              }), ac.releasedGames.length > 0 && (0, zb.jsx)("div", {
                 className: "PlayerProfileGamesGrid",
-                children: XF.releasedGames.map((kk => (0, Pk.jsx)(vk.g, {
+                children: ac.releasedGames.map((bb => (0, zb.jsx)(Nb.h, {
                   source: {
                     type: "preview",
-                    preview: kk
+                    preview: bb
                   },
                   gameWidth: "100%",
                   useLongRatio: !0,
                   hideFavourites: !0,
                   entrySource: "other"
-                }, kk.schematicId)))
+                }, bb.schematicId)))
               })]
             })]
           })]
@@ -343,21 +343,21 @@ export const modules = {
       })
     }
   },
-  4599: (kk, Fk, Bk) => {
-    Bk.d(Fk, {
-      d: () => fk
+  4600: (bb, cb, sb) => {
+    sb.d(cb, {
+      d: () => Qb
     });
-    var Rk = Bk(1020),
-      tk = Bk.n(Rk),
-      ak = Bk(4380),
-      Xk = Bk(1149),
-      bk = Bk(1028),
-      wk = Bk(1389),
-      dk = Bk(1441),
-      sk = Bk(1300),
-      Vk = Bk(2384),
-      Jk = Bk(1069);
-    const Ak = {
+    var kb = sb(1033),
+      Wb = sb.n(kb),
+      ab = sb(4384),
+      Tb = sb(1197),
+      Ub = sb(1039),
+      Ib = sb(1431),
+      Hb = sb(1474),
+      fb = sb(1332),
+      Mb = sb(2391),
+      Xb = sb(1087);
+    const nb = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -385,163 +385,163 @@ export const modules = {
       }
     };
 
-    function ek(kk) {
+    function mb(bb) {
       let {
-        platform: Fk
-      } = kk;
-      const Bk = "youtube" === Fk;
-      return (0, Jk.jsxs)("span", {
-        className: tk()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: Bk
+        platform: cb
+      } = bb;
+      const sb = "youtube" === cb;
+      return (0, Xb.jsxs)("span", {
+        className: Wb()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: sb
         }),
-        children: [Bk && (0, Jk.jsx)(Vk.e, {
+        children: [sb && (0, Xb.jsx)(Mb.b, {
           variant: "white"
-        }), !Bk && (0, Jk.jsx)(bk.d, {
-          name: Ak[Fk].icon,
+        }), !sb && (0, Xb.jsx)(Ub.b, {
+          name: nb[cb].icon,
           kit: "brands"
         })]
       })
     }
 
-    function yk(kk) {
+    function lb(bb) {
       let {
-        platform: Fk,
-        link: Bk,
-        editable: Rk,
-        userContext: tk,
-        onLinksUpdated: Vk
-      } = kk;
+        platform: cb,
+        link: sb,
+        editable: kb,
+        userContext: Wb,
+        onLinksUpdated: Mb
+      } = bb;
       const {
-        t: yk
-      } = (0, Xk.x)(), fk = Ak[Fk];
-      if (!Bk && !Rk) return null;
+        t: lb
+      } = (0, Tb.E)(), Qb = nb[cb];
+      if (!sb && !kb) return null;
 
-      function mk() {
-        var kk;
-        if (!tk || !Vk) return;
-        sk.NotificationProvider.showInputPopup({
+      function eb() {
+        var bb;
+        if (!Wb || !Mb) return;
+        fb.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: fk.name
+              platform: Qb.name
             }
           },
-          prefixText: ak.A[Fk],
+          prefixText: ab.y[cb],
           placeholderText: "playBloxd",
-          initialValue: null !== (kk = null === Bk || void 0 === Bk ? void 0 : Bk.handle) && void 0 !== kk ? kk : "",
+          initialValue: null !== (bb = null === sb || void 0 === sb ? void 0 : sb.handle) && void 0 !== bb ? bb : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: Bk ? "general:remove" : void 0
-        }).getResult().then((async kk => {
-          if ("notificationTornDown" !== kk && null !== kk) try {
-            "submit" === kk.type ? await dk.b.setSocialLink(tk, Fk, kk.value) : await dk.b.clearSocialLink(tk, Fk), Vk()
-          } catch (Bk) {
-            console.error("Failed to update social link", Bk), sk.NotificationProvider.showAlertPopup({
-              title: Bk.errorMessageForUser,
+          secondaryButtonText: sb ? "general:remove" : void 0
+        }).getResult().then((async bb => {
+          if ("notificationTornDown" !== bb && null !== bb) try {
+            "submit" === bb.type ? await Hb.b.setSocialLink(Wb, cb, bb.value) : await Hb.b.clearSocialLink(Wb, cb), Mb()
+          } catch (sb) {
+            console.error("Failed to update social link", sb), fb.NotificationProvider.showAlertPopup({
+              title: sb.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (Bk) {
-        const kk = `@${Bk.handle}`;
-        return (0, Jk.jsxs)("a", {
+      if (sb) {
+        const bb = `@${sb.handle}`;
+        return (0, Xb.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: fk.color
+            background: Qb.color
           },
-          href: Bk.profileUrl,
+          href: sb.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, Jk.jsxs)("div", {
+          children: [(0, Xb.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, Jk.jsx)(ek, {
-              platform: Fk
-            }), (0, Jk.jsx)("span", {
+            children: [(0, Xb.jsx)(mb, {
+              platform: cb
+            }), (0, Xb.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, Jk.jsx)("span", {
+              children: (0, Xb.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: kk
+                children: bb
               })
             })]
-          }), Rk && (0, Jk.jsx)("button", {
+          }), kb && (0, Xb.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, wk.R)({
+            ...(0, Ib.U)({
               stopPropagation: !0
             }),
-            onClick: kk => {
-              kk.stopPropagation(), kk.preventDefault(), mk()
+            onClick: bb => {
+              bb.stopPropagation(), bb.preventDefault(), eb()
             },
-            children: (0, Jk.jsx)(bk.d, {
+            children: (0, Xb.jsx)(Ub.b, {
               name: "pen-to-square"
             })
-          }), !Rk && (0, Jk.jsx)("span", {
+          }), !kb && (0, Xb.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, Jk.jsx)(bk.d, {
+            children: (0, Xb.jsx)(Ub.b, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, Jk.jsxs)("button", {
+      return (0, Xb.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: fk.color
+          background: Qb.color
         },
-        ...(0, wk.R)(),
+        ...(0, Ib.U)(),
         onClick: () => {
-          mk()
+          eb()
         },
-        children: [(0, Jk.jsx)(ek, {
-          platform: Fk
-        }), (0, Jk.jsxs)("span", {
+        children: [(0, Xb.jsx)(mb, {
+          platform: cb
+        }), (0, Xb.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, Jk.jsx)("span", {
+          children: [(0, Xb.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: fk.name
-          }), (0, Jk.jsx)("span", {
+            children: Qb.name
+          }), (0, Xb.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: yk("homePage:profileSocialLinkAdd")
+            children: lb("homePage:profileSocialLinkAdd")
           })]
-        }), (0, Jk.jsx)("span", {
+        }), (0, Xb.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, Jk.jsx)(bk.d, {
+          children: (0, Xb.jsx)(Ub.b, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function fk(kk) {
+    function Qb(bb) {
       let {
-        socialLinks: Fk,
-        editable: Bk = !1,
-        userContext: Rk,
-        onLinksUpdated: tk
-      } = kk;
-      if (!Bk && 0 === Fk.length) return null;
-      const Xk = new Map(Fk.map((kk => [kk.platform, kk]))),
-        bk = Bk ? ak.w : Fk.map((kk => kk.platform));
-      return (0, Jk.jsx)("div", {
+        socialLinks: cb,
+        editable: sb = !1,
+        userContext: kb,
+        onLinksUpdated: Wb
+      } = bb;
+      if (!sb && 0 === cb.length) return null;
+      const Tb = new Map(cb.map((bb => [bb.platform, bb]))),
+        Ub = sb ? ab.w : cb.map((bb => bb.platform));
+      return (0, Xb.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, Jk.jsx)("div", {
+        children: (0, Xb.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: bk.map((kk => (0, Jk.jsx)(yk, {
-            platform: kk,
-            link: Xk.get(kk),
-            editable: Bk,
-            userContext: Rk,
-            onLinksUpdated: tk
-          }, kk)))
+          children: Ub.map((bb => (0, Xb.jsx)(lb, {
+            platform: bb,
+            link: Tb.get(bb),
+            editable: sb,
+            userContext: kb,
+            onLinksUpdated: Wb
+          }, bb)))
         })
       })
     }
   },
-  4592: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
+  4598: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const bb in modules) Object.freeze(modules[bb]);
